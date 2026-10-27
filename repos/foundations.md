@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p471` — **🔴 TWO FOUNDATION-TIER PLATFORMS THIS SHELF REFUSED FOR WANT OF A GRANT ARE GRANTED, and one of them is published as ungranted on the SELL shelf: `particify/arsnova-server` serves **GPL-3.0** at `core/LICENSE` and `formalms/formalms` serves **GPL-2.0** at `html/license.txt`, both read first-hand. 🟢 And foundation selection gains a screen that costs one command and runs BEFORE any licence is read: partition risk is monotonic in tree size, 0.0 % under 25 paths to 66.7 % over 2 000.**
+
+🔵 Gate not attested (`Gap 446-A`); checks re-implemented in-session and green. Every grant read
+first-hand from `raw.githubusercontent.com` at the resolved ref, written to a file and the file
+measured (`Gap 468-A`). Star counts from the MCP `search_repositories` channel, `2026-10-27`.
+
+### 🔴 The two recoveries, and what they cost this shelf
+
+🔵 Both were refused by a **root-path** probe. Both are granted below the root. Neither is a new
+discovery — they are rows this base already carried, with the wrong verdict on them.
+
+| platform | repo | ref | grant found below the root | ★ | what it is |
+|---|---|---|---|---|---|
+| **forma.lms** | [`formalms/formalms`](https://github.com/formalms/formalms) | `master` `446a77a9b9cb` | 🟢 **GPL-2.0** · `html/license.txt` · 18 346 B · `4e63feff285d`; a second copy at `html/lib/System/license/license_english.txt` · 15 146 B · `81688a796b2f`, with **9 further language translations** beside it | 37 | PHP corporate-training LMS, mirror repository |
+| **ARSnova** | [`particify/arsnova-server`](https://github.com/particify/arsnova-server) | `master` `424b2ef60517` | 🟢 **GPL-3.0** · `core/LICENSE` · **35 147 B · `8ceb4b9ee5ad`** | 67 | Kotlin audience-response-system backend; most-forked unlicensed row this shelf carried (44 forks, created 2013) |
+
+🟢 **The ARSnova digest is a cross-pass control passing.** `35 147 B · 8ceb4b9ee5ad` is **this
+base's own canonical stock-FSF GPL-3.0 cell** — the value these shelves record for
+`moodle/moodle`'s `COPYING.txt` and for Chamilo. It reproduces exactly, from a repository this base
+had never read for GPL, which is the strongest evidence available that the payload is the real
+licence text and not a fragment.
+
+🔴 **And ARSnova carries a reservation as well as a grant.** `formatting/LICENSE` is **133 B**:
+*"Copyright (c) 2020-present Particify — Gerhardt, Mauß, Käsler GbR, Gießen, Germany. All rights
+reserved."* Copyright line, reservation, **no permission sentence** — against a BSD-3 body of
+~1.5 KB, so the base's own "All rights reserved is BSD boilerplate" warning was checked and does not
+apply here. 🔴 **A studio vendoring `arsnova-server` wholesale would ship a module whose author has
+reserved all rights.** The usable boundary is `core/` under GPL-3.0, with `formatting/` excluded.
+
+🟡 **The bound, stated with the claim.** A GPL payload carries the **FSF's** copyright, not the
+project's, so nothing in `core/LICENSE` names Particify. That it grants the `core` module is read
+from the subtree's position, not from the payload — registered as `Gap 471-C` on `agents/top.md`.
+`formatting/`'s reservation, by contrast, names Particify outright and is certain.
+
+### 🟢 The foundation screen this pass contributes — one command, before any licence read
+
+🔵 `Gap 470-A` established that a root read establishes the root tree only. The question a
+foundation choice actually asks is *when is a root read sufficient?* Measured over **229** shelf
+addresses:
+
+| tree size (`git ls-files \| wc -l`) | n | carry a grant below the root | rate |
+|---|---|---|---|
+| < 25 | 44 | 0 | **0.0 %** |
+| 25–99 | 82 | 4 | **4.9 %** |
+| 100–499 | 58 | 6 | **10.3 %** |
+| 500–1 999 | 27 | 11 | **40.7 %** |
+| ≥ 2 000 | 18 | 12 | **66.7 %** |
+
+🟢 **Monotonic across all five bands.** Shelf-wide **33 of 229 (14.4 %)** are partitioned, across
+**580** anchored licence paths. For this shelf specifically — which carries the large platforms — the
+reading is blunt: **every foundation-tier platform here sits in the top two bands, where a root read
+is more likely wrong than right.** The six largest trees on the shelf confirm it:
+
+| platform | subtree licence paths found |
+|---|---|
+| `moodle/moodle` | **149** |
+| `openedx/openedx-platform` | **148** |
+| `openedx/edx-platform` | **148** |
+| `ILIAS-eLearning/ILIAS` | **64** |
+| `instructure/canvas-lms` | **56** |
+| `chamilo/chamilo-lms` | **27** |
+
+🔵 These counts are **not** 149 separate grants on Moodle — they are overwhelmingly vendored
+third-party dependencies, the `V` class on `agents/top.md`. The number is a **work estimate**, not a
+licence finding: it says how many payloads a genuine pre-vendoring audit of that platform has to
+read, and for the deployed world's default LMS that number is 149.
+
+### 🟢 The instrument, so the next pass can re-run it
+
+🔵 No API access is needed and none was used — the GitHub API refuses these repositories outright
+(`agents/top.md`, channel matrix):
+
+```
+git clone --depth 1 --filter=blob:none https://github.com/OWNER/REPO d
+git -C d ls-files | grep -Ei '(^|/)(LICEN[CS]E|COPYING|COPYRIGHT|NOTICE|EULA|THIRD[-_]PARTY)([._-][A-Za-z0-9.+-]{1,20})?$'
+```
+
+🔴 **The anchoring is load-bearing, not cosmetic.** The unanchored form of that pattern produced a
+**44.4 % false-positive rate** on this pass's first run (464 of 1 044 matches), counting
+`NoticeTaskController.java` as a licence grant. The `([._-]…)?$` tail is what makes the numbers
+above trustworthy.
+
+### 🔵 No new foundation row is added, and the reason is measured
+
+🔵 The general-vocabulary discovery legs returned **14 candidates, 0 of 14 unshelved** — including
+`withmarbleapp/os-taxonomy`, which the trending channel named as the week's most education-specific
+riser and which these shelves already carry **correctly graded `ODbL-1.0` + `CC BY-SA 4.0`**, a
+grant that is not permissive software supply. The two rows this pass does add are rubric components
+rather than substrate and are filed on `agents/top.md`.
+
 ## 🆕 `p470` — **🟢 THE GOVERNANCE SUBSTRATE THESE SHELVES HAVE BEEN SHORT OF IS FOUND, GRANTED AND APACHE-2.0: `panaversity/ksor` (232★) builds one authoritative knowledge record for humans and agents, and names education institutions in its own opening. 🔴 And the foundation question this shelf answers best is a warning: a permissive root grant does not make a repository permissive — `edukors_graph` is MIT at the root and GPL-3.0-or-later two directories down.**
 
 🔵 **Gate posture:** `make hooks` not attempted (KB cloned outside the harness repo). Nothing here
@@ -2759,3 +2849,4 @@ LMS + copyleft SIS, copyleft LMS + permissive courseware, or **copyleft LMS + a 
 whose education modules you build**. The trade is written out on
 [`verticals/solutions.md`](../verticals/solutions.md) — and none of the three bases ships an
 education module, so the third route is a **build**, costed as one.
+

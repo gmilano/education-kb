@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p471` — `2026-10-27` — **the week's movement is not a repository at all: the discovery channel this base has called blocked for 470 passes is per-repository authorised, and one of its tools is unscoped**
+
+🔵 **Append-only.** The `p470` body and all prior passes stand unchanged below this section. Star
+counts are from the MCP `search_repositories` channel on **2026-10-27**. Every address resolved
+first-hand this pass by `git ls-remote --symref` or by blobless shallow clone, with a licence-payload
+read at `HEAD` from `raw.githubusercontent.com`.
+
+### 🔴 The channel correction, because it changes what every future pass can see
+
+| channel | prior record | this pass |
+|---|---|---|
+| `api.github.com` direct | *"403, blocked"* for 470 passes | 🟢 **Per-repository authorised.** 200 with full payload on an **attached** repo; 403 with *"Use `add_repo` to request access"* on an unattached one |
+| `api.github.com/search/repositories` | — | 🔴 **403** — *"sessions are bound to their configured repositories"* |
+| MCP `github` → `get_file_contents` | assumed usable | 🔴 **Scoped** to the session's two repositories |
+| MCP `github` → `search_repositories` | *"working, star counts"* | 🟢 **Unscoped** — `q=moodle` → `total_count` **35 732** with live stars, forks, `pushed_at`, `archived`, `default_branch` on third-party repos |
+| `git clone --depth 1 --filter=blob:none` | never sampled | 🟢 **Works unscoped** — **229 of 237** third-party education repos cloned this pass |
+
+🔴 **Two traps inside that, both of which this pass walked into and caught.** `api.github.com/`
+returns **200 with a 2-byte `{}` proxy stub**, so a root-status liveness probe reports the channel up
+while it is unusable (`Gap 471-A`). And a `search_repositories` leg with four free-text terms
+returned `total_count: 0` with `incomplete_results: false` and **no error** — indistinguishable from
+a dead channel, and it is **free-text arity** rather than the `stars:`/`pushed:` qualifiers that
+drives it to zero (`Gap 471-B`): 4 terms → **0**, 3 → 11, 2 → **1 075**, 1 → **35 732**.
+
+### 🟢 New to these shelves this week — granted, read first-hand
+
+🔵 Two rows. Both arrived on a **licence-filtered rubric leg**; the general education-vocabulary legs
+returned **14 candidates of which 0 were unshelved**.
+
+| repo | grant (first-hand) | bytes · digest | ★ | ref | region | first seen |
+|---|---|---|---|---|---|---|
+| [`TREMA-UNH/rubric-grading-workbench`](https://github.com/TREMA-UNH/rubric-grading-workbench) | **MIT** | 1 068 B · `3f68bfcd4ec5` | 15 | `main` `13aaed5161ec` | **North America** | created 2024-02-08 |
+| [`ChantillyAn/homework-grader`](https://github.com/ChantillyAn/homework-grader) | **MIT** | 1 068 B · `8755221656d4` | 7 | `master` `5e9aab47822f` | Global | created 2026-02-22 |
+
+### 🔴 Grant corrections on rows these shelves already carried
+
+| repo | shelf said | payload says, first-hand | class |
+|---|---|---|---|
+| [`particify/arsnova-server`](https://github.com/particify/arsnova-server) | 🔴 NO GRANT at 10 paths | 🟢 **GPL-3.0** at `core/LICENSE` · 35 147 B · `8ceb4b9ee5ad`; 🔴 **"All rights reserved"** at `formatting/LICENSE` · 133 B · `747c3a657b2b` | recovered **and** restricted |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 refused, no payload at 10 paths | 🟢 **GPL-2.0** at `html/license.txt` · 18 346 B · `4e63feff285d` | recovered; resolves a contradiction between two of these shelves |
+| [`Chloris-Blaxk/inno-agent-hub`](https://github.com/Chloris-Blaxk/inno-agent-hub) | 🔴 ungranted on all paths | 🟡 **37 subtree grants, every one naming a THIRD PARTY** — `© ChantillyAn`, `© Artem` | `Gap 395-D` closed; hub grants nothing, upstreams do |
+| [`mgarlabx/edukors_graph`](https://github.com/mgarlabx/edukors_graph) | 🟡 three licence paths (`p470`) | 🟢 **four** — a fourth at `plugin/edukorsplayer/vendor/edukors/LICENSE.md`, **1 087 B · `625342dc4d3d`, byte-identical to the root MIT** | three grant layers, not two |
+
+### 🟡 Movement on carried rows, from the newly-proved star channel
+
+| repo | ★ this pass | shelf carried | reading |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **7 549** | 7 548 (`repos/foundations.md`), 7 543 (`agents/top.md`) | 🟢 +1 and +6 — consistent drift, no correction needed; the star channel agrees with the shelves |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29 550** | carried | still the most-starred education agent in the index |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | **1 315** | carried | — |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **914** | carried, `CC-BY-SA-4.0` (`p466`) | 🔴 unchanged verdict: not a software licence, not build-on supply |
+| [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) | ~5 900 (relayed) | carried, **ODbL-1.0 + CC BY-SA 4.0** | 🟢 named by the trending channel as the week's most education-specific riser; **already correctly graded here**, and not permissive software supply |
+
+### 🔴 Refused this week — stated, because a silent refusal reads like a miss
+
+| candidate | probe at `HEAD` | why refused |
+|---|---|---|
+| [`cobibean/soul-grader-skill`](https://github.com/cobibean/soul-grader-skill) | `main` `56fdda5c57e2` · **MIT** · 1 065 B · `f1319ce8b6ac` · **60★** | 🔴 **Off-class.** Grades `SOUL.md` agent-identity files, not student work — the highest-starred thing the rubric leg returned and not an education asset |
+| [`Takamatsu-Hikaru/AI-Research-Guide`](https://github.com/Takamatsu-Hikaru/AI-Research-Guide) | `8df0f4d42d8d` · MIT at `…/wiki/vendor/LICENSE.txt` **© 2022 Luca Ongaro** | 🔴 **Refusal STANDS.** The only licence in the tree is a vendored third party's. A naive subtree reader would have recovered this row and been wrong |
+
+### 🔵 The governance tier, re-measured on the new channel
+
+🔵 `education governance license:mit` → **61 repositories total, maximum 16★**, five of the top eight
+off-class (DeFi/web3, a climate atlas). 🟢 Same conclusion as `p468` and `p470` — the governance
+shortfall is an absence of **supply** — now with a ceiling attached and on an independent channel.
+
 ## 🆕 `p470` — `2026-10-27` — **the week's movement is a grant moving INSIDE a repository, and twenty granted novel rows of which sixteen are at 5★ or below**
 
 🔵 Append-only. The `p469` body and all prior passes stand unchanged below this section. Star counts
@@ -51859,5 +51925,6 @@ Los star counts de ciclos anteriores estaban inflados por el pipeline, no medido
 
 ---
 *Historia conservada. Append-only: agregar arriba, nunca sobrescribir.*
+
 
 

@@ -1,0 +1,3 @@
+matcher	total_matches	repos_affected	false_positives	fp_rate_pct	example
+naive unanchored substring	1044	23	464	44.4	jude-miller-dev/Milky-institute-online: NoticeTaskController.java, NoticeTemplateDTO.java counted as licence grants
+anchored basename	580	0	0	0.0	basename must BE the token, optionally + extension or licence-name suffix

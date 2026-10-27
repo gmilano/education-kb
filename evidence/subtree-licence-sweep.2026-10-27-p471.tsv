@@ -1,0 +1,238 @@
+addr	tier	status	head	total_paths	naive_lic	anchored_lic	root_lic	subtree_lic	subtree_paths
+1EdTech/lti-1-3-php-library	at-risk	OK	3a192de99f3783d76caea462b0d04db28569c123	29	1	1	1	0	
+A-R007/Multi-Agent-Study-Assistant	at-risk	OK	3c1c88b95a9d13408bd62b6b686737eb6a135983	19	0	0	0	0	
+ADORSYS-GIS/moodle-aiprovider_openaicompatible	at-risk	OK	371278b0ebd6d253cd74799189302652f01503d2	39	0	0	0	0	
+AnonymousOnyx22/google-classroom-student-mcp	at-risk	OK	e0a76a332078f339bd5589237a7e3e1dabd619b0	32	1	1	1	0	
+AnonymousOnyx22/brightspace-d2l-mcp	at-risk	OK	20b04204860a86ab41101362c29b4c5981dbf1bc	144	1	1	1	0	
+AbdelStark/eu-ai-act-toolkit	control	OK	fff58f6e890648947ba9f9a8caeb94bd566c4651	186	1	1	1	0	
+098765d/ai_tutor	control	OK	e7503b7c95dedeb2f276a1aca517042dac86cc10	29	1	1	1	0	
+BxnIceLemon/minerva-mcp	at-risk	OK	2cf7bd9476bf67005700c968aeaf7b1ede8b7dce	33	1	1	1	0	
+CarlSvejstrup/dtu-learn-mcp	at-risk	OK	9444a1fd51999d4a0d27d4067d8df2a9a3ea7716	43	1	1	1	0	
+BaronCyrus/dsh-aha-tutor	control	OK	9dbc4bc15f314f82306ecb0073e894aea1c39550	198	2	2	2	0	
+Arudchayan/adam-mcp	at-risk	OK	853ed8e3eadaab9450d17c1dea2140ef78ac9f32	259	2	2	2	0	
+ArnaudGuiovanna/tutor-mcp	at-risk	OK	c94a41e014224b3a50d40e969f5123bf42acc914	1104	33	27	1	26	client/scripts/notices-supplements/alloc-stdlib-0.3.0/LICENSE;client/scripts/notices-supplements/bitcoin-io-0.1.3/LICENSE;client/scripts/notices-supplements/bitcoin_hashes-0.14.0/LICENSE;client/scripts/notices-supplements/codex-0.160.1/LICENSE;client/scripts/notices-supplements/codex-0.160.1/NOTICE;client/scripts/notices-supplements/microsoft-webview2-sdk-1.0.3800.47/LICENSE.txt;client/scripts/notices-supplements/microsoft-webview2-sdk-1.0.3800.47/NOTICE.txt;client/scripts/notices-supplements/nostr-0.44.8/LICENSE;client/scripts/notices-supplements/nsis-3.13/COPYING;client/scripts/notices-supplements/nsis-3.13/Docs/Modern UI 2/License.txt;client/scripts/notices-supplements/nsis-3.13/Docs/Modern UI/License.txt;client/scripts/notices-supplements/nsis-3.13/Docs/NSISdl/License.txt;client/scripts/notices-supplements/nsis-3.13/Docs/makensisw/License.txt;client/scripts/notices-supplements/nsis-tauri-utils-0.5.3/LICENSE_APACHE-2.0;client/scripts/notices-supplements/nsis-tauri-utils-0.5.3/LICENSE_MIT;client/scripts/notices-supplements/selectors-0.38.0/LICENSE-MPL-2.0;client/scripts/notices-supplements/standardwebhooks-1.1.1/LICENSE;client/scripts/notices-supplements/tauri-plugin-2.7.2/LICENSE-APACHE-2.0;client/scripts/notices-supplements/tauri-plugin-2.7.2/LICENSE-MIT;client/scripts/notices-supplements/webview2-com-0.39.1/LICENSE;client/scripts/notices-supplements/webview2-com-macros-0.8.1/LICENSE;client/scripts/notices-supplements/webview2-com-sys-0.39.1/LICENSE;docs/assets/logos/LICENSE;scripts/third_party_notices.py;ui/site/out/logos/LICENSE;ui/site/public/logos/LICENSE
+AI-First-Community/Bodhi	control	OK	ff4d6309e81d813d8040dc0cb31ce7f1a4bfafcb	211	1	1	1	0	
+DMontgomery40/mcp-canvas-lms	at-risk	OK	c0646ba10ac207d45cc2122d80b3b98e12b497d0	36	0	0	0	0	
+Cvmcosta/ltijs	at-risk	OK	41f150c0693b8c60810be6881af6f1de9d2d5409	199	1	1	1	0	
+Dathis/swiss-moodle-mcp	at-risk	OK	cdb11c034de0147f8365d391a5f875a6aa5ac614	89	1	1	1	0	
+DavidLMS/learnmcp-xapi	at-risk	OK	fbf609142c3c39abf86620df10a6f81b829beff4	79	1	1	1	0	
+CENIA-DEV/multilingual-translator-app	at-risk	OK	2405fac50625116d35f2fbbb3d7bd8c4649c0f8a	494	2	2	1	1	Scripts/seed-vc/LICENSE
+FiredMosquito831/ase-moodle-mcp	at-risk	OK	55f6f62d0ef279b70dbefc46c9ed6de4a2ccb902	80	4	4	2	2	npm/LICENSE;npm/NOTICE
+Ed-Fi-Exchange-OSS/LMS-Toolkit	control	OK	b1266b721cba2239023b4524faf201f35b1403b1	763	2	1	1	0	
+Fireiscoolsolo/canvas-lms-mcp-local	at-risk	OK	c7e5725211b942061c199066365024de8792519f	17	1	1	1	0	
+Fireiscoolsolo/canvas-lms-mcp-server	at-risk	OK	3f9cf02b43c47c14cc8d41a1f38999ab21ee9144	17	1	1	1	0	
+Chloris-Blaxk/inno-agent-hub	control	OK	b01d114055eb7af166b51091997244f8ad212a80	1327	37	37	0	37	skill-library/Exam2Knowledge/LICENSE;skill-library/algorithmic-art/LICENSE.txt;skill-library/canvas-design/LICENSE.txt;skill-library/claude-api/LICENSE.txt;skill-library/comment-on-docx/LICENSE;skill-library/docx/LICENSE.txt;skill-library/frontend-design/LICENSE.txt;skill-library/frontend-slides/LICENSE;skill-library/homework-grader/LICENSE;skill-library/ian-xiaohei-illustrations/LICENSE;skill-library/ian-xiaohei-illustrations/NOTICE.md;skill-library/k12-lesson-differentiation/LICENSE;skill-library/k12-lesson-differentiation/references/NOTICE;skill-library/k12-lesson-planning/LICENSE;skill-library/k12-lesson-planning/references/NOTICE;skill-library/learning-opportunities/LICENSE;skill-library/math-tutor/LICENSE;skill-library/mcp-builder/LICENSE.txt;skill-library/paper-to-dialogue-video/LICENSE;skill-library/paper-to-xhs/LICENSE;skill-library/pdf/LICENSE.txt;skill-library/pptx/LICENSE.txt;skill-library/skill-creator/LICENSE.txt;skill-library/smart-illustrator/LICENSE;skill-library/socratic-tutor/LICENSE;skill-library/storm-research/LICENSE;skill-library/theme-factory/LICENSE.txt;skill-library/tutor/LICENSE;skill-library/web-artifacts-builder/LICENSE.txt;skill-library/webapp-testing/LICENSE.txt;skill-library/xlsx/LICENSE.txt;workspace-templates/knowledge-explain/.skills/pptx/LICENSE.txt;workspace-templates/ppt-creation/.skills/pptx/LICENSE.txt;workspace-templates/teaching-webpage-en/.skills/claude-design/LICENSE;workspace-templates/teaching-webpage-en/.skills/visual-explainer/LICENSE;workspace-templates/teaching-webpage/.skills/claude-design/LICENSE;workspace-templates/teaching-webpage/.skills/visual-explainer/LICENSE
+Git-Kaushal/AI-Teacher-Training	control	OK	0315e49d3912bf4b5f34b2b5d274345c8ebe4f08	8	1	1	1	0	
+G36maid/moodle-mcp	at-risk	OK	18bd1777eb0b85fc3b302c8e13edebb214e20f41	103	1	1	1	0	
+Django-CRM/Django-CRM	control	OK	cd4b33825735b45d559d1ec022a376737a703ac6	2527	1	1	1	0	
+Harvard-University-iCommons/django-lti-dynamic-registration	at-risk	OK	2873d2f020ebb959765f5a89300adc3c90c5f11d	9	1	1	1	0	
+HugeCatLab/ChatTutor	control	OK	7d9e9052bc5abc5239f3a44f4754b3082f765317	351	1	1	1	0	
+Future-House/paper-qa	control	OK	c692d0dfeac4a0296599f7fe21a253a58b7ac12a	184	5	5	1	4	packages/paper-qa-docling/LICENSE;packages/paper-qa-nemotron/LICENSE;packages/paper-qa-pymupdf/LICENSE;packages/paper-qa-pypdf/LICENSE
+IMSGlobal/lti-1-3-php-library	at-risk	OK	3a192de99f3783d76caea462b0d04db28569c123	29	1	1	1	0	
+IndexFlowing/MandarinClips-mcp	at-risk	OK	2ad95186ee87f3508e673352a6315c638dcc44f3	17	1	1	1	0	
+Harikeshav-R/canvas-mcp	at-risk	OK	db979a5ab5d7a2f3f7e2368ecd2fb9a906849f7c	472	1	1	1	0	
+Jawadh-Salih/moodle-mcp-server	at-risk	OK	a65aefa6d26eb37ec7bd891882c12ea551b47507	37	1	1	1	0	
+Kaiji-Z/dsh-plugin-lookatstudy	at-risk	OK	d7d86c48c1af8f402fe6bdf3a935bc8ed1076f74	218	1	1	1	0	
+JhostinAleck/brightspace-mcp	at-risk	OK	1b85c44fce9eb0d392961f52998a19e8571fdbf6	548	1	1	1	0	
+Kretiandpleti/skola-24-haos-integration	at-risk	OK	032ac16f60c0d0ccb0b15a054020ad8e2a2bc64f	19	1	1	1	0	
+Kuria-Mbatia/Canvas-MCP-server	at-risk	OK	c2fee6cb2fc00b1445af48c680350062020ec057	88	1	1	1	0	
+LabSirius/TutorIA	control	OK	032b5aa520ea9ae4711ca1f95263f7e92053db23	12	1	1	1	0	
+Loganxgreaves/blackboard-mcp	at-risk	OK	c2629aee9a136c4d076d790306d12237c01a5666	20	1	1	1	0	
+DFE-Digital/teaching-vacancies	control	OK	6b38324d1c456e1982262dfdcc814452737c44a6	2870	1	1	1	0	
+Jacob-Met/canvaspilot	at-risk	OK	e75196e94c6c68bdc738d87d4b522429156d4a93	1817	1	1	1	0	
+Mattlo0546/blackboard-mcp	at-risk	OK	9ad0878fbbeb1ca3dc6cac856cc2e8d4b02df280	14	1	1	1	0	
+ClassroomIO/ClassroomIO	control	OK	eb7b7a09d479a6067fa135f762be3bea17847581	5632	18	15	1	14	apps/api/src/middlewares/license.ts;apps/api/src/routes/license.ts;apps/dashboard/src/lib/features/license/api/license.svelte.ts;packages/core/src/services/license.ts;skills/animation-vocabulary/LICENSE;skills/apple-design/LICENSE;skills/emil-design-eng/LICENSE;skills/find-animation-opportunities/LICENSE;skills/humanizer/LICENSE;skills/i-have-adhd/LICENSE;skills/improve-animations/LICENSE;skills/pick-ui-library/LICENSE;skills/prototype/LICENSE;skills/review-animations/LICENSE
+Mattlo0546/canvas-mcp	at-risk	OK	b6c26ba52c1437d3ae7075b12c81eb95ee5c8787	13	1	1	1	0	
+Maicarons/RubricSpan	control	OK	e9299b4c678faffb9d9a8c5557e0767bbc35489a	230	2	1	1	0	
+Mattlo0546/classroom-mcp	at-risk	OK	46e4ff4195b60944bda5b35cf9146eb5ef718c05	8	1	1	1	0	
+Mugen-Ibi/Classroom-MCP	at-risk	OK	5f746bdae197b1b396c4f8c86d745b67b07cc4c9	42	1	1	1	0	
+MauroDruwel/Smartschool-MCP	at-risk	OK	ab3fa81f857feb1fe3a72eee1cc4cb0e71624d60	39	1	1	1	0	
+NelsonSpencer/canvas-mcp	at-risk	OK	92b7fbc9cd3399ade9f082a4e9c34d98a57c067f	218	1	1	1	0	
+Mcp-Brasil/mcp-brasil	at-risk	OK	2efb258370b125bbf190884283ae10f209b9d335	898	2	2	2	0	
+OutBlade/kit-campus-mcp	at-risk	OK	3eb583791f4a46d2dbca1ad8592c1246611a3f0f	22	0	0	0	0	
+Pedrosasouza/AcademicFlow-Agent	control	OK	8e341c21f7896d3c61ee512e65cabade20e0bcf8	36	0	0	0	0	
+OmarZen/scholarship-navigator	control	OK	f6281d855960430ea161f1be8612de28024d57bf	135	1	1	1	0	
+PrahanG/Google-Classroom-MCP	at-risk	OK	5c675c96b901f7757d6fb36cd9e7dd5efa4efe56	26	1	1	1	0	
+Jeremy-xuan/SocraticNovel	control	OK	29fd550435b6090b72b4476d549cd541d29f031b	1255	3	3	1	2	clients/classroom-stage-warm/assets/l2d/vendor/soullink/LICENSE;clients/classroom-stage-warm/assets/l2d/vendor/soullink/NOTICE
+RobertLMcCrary/D2L-MCP	at-risk	OK	1244d84268032114a4459a6090bd0657e869a96f	78	2	2	2	0	
+Queena34/StudyPilot	control	OK	abe229cb120b050f71b7eda36e1c5529e6fb2188	292	1	1	1	0	
+SaadRahman01/moodle-mcp	at-risk	OK	2260553aaee05d259364651030e205670b2544c6	30	1	1	1	0	
+RohanMuppa/brightspace-mcp-server	at-risk	OK	78adccf756e3affc1a50153d00800a7f62625f3e	329	1	1	1	0	
+Shashwatpog/poke-canvas-mcp	at-risk	OK	4917cf253ef75bfc1f833ae224945fe8893ba8dc	7	1	1	1	0	
+Shiv-D-Coder/google-mcp-agent	at-risk	OK	206bff862a0e73a47ae4debf9c7a57498cb38723	9	1	1	1	0	
+Snaw80/moodle-mcp	at-risk	OK	4fc83d0af28db70c35b2ac3dfddcd63d98025459	10	1	1	1	0	
+Ryfter/canvas-toolchain	at-risk	OK	7ad4010b0c119df3b2936f839fef8308f0d76e29	1520	3	2	1	1	packages/command-and-control/src/channel/notice_state.ts
+StevenWeathers/peregrine-lti	at-risk	OK	a442a55a9ab9cb2928ddca6be9481670c99ced93	25	1	1	1	0	
+StudentSuite/awesome-study-resources	control	OK	74d5a7bbf17b8816a19dcb2108ae8372a748ae10	47	1	1	1	0	
+SuperPiTT/moodle-rag	at-risk	OK	a3334150c7a5fa30eec65235378dc1131b35498d	81	1	1	1	0	
+NSoiffer/MathCAT	control	OK	d1deb55b5500ea56bd4e45a311f347392368aa78	822	1	1	1	0	
+Teci-AI/moodle-mcp-connector	at-risk	OK	2318b9927da56cd1edd7a0e511f0ded18bacaffd	32	1	1	1	0	
+UKplus8HRS/bb-mcp	at-risk	OK	d639765bc267d116740171e55032db7ea2b26ac1	9	1	1	1	0	
+TovTechOrg/Tov-learn	control	OK	290af750671abf35342fc2c4ee131f0e0db89130	127	1	1	1	0	
+UOC/java-lti-1.3-core	at-risk	OK	6db9889a45bbd5239cb583415293e14dde7ae3ed	53	1	1	1	0	
+Utdanningsdirektoratet/PAS2-Public	control	OK	489129c42c9d8290d3ec86c2909286f09d6d3971	6	1	1	1	0	
+a-ariff/canvas-mcp	at-risk	OK	28496f9ca41462c7dc1a1ad8a9c163f6f9d13896	13	1	1	1	0	
+a-r007/multi-agent-study-assistant	at-risk	OK	3c1c88b95a9d13408bd62b6b686737eb6a135983	19	0	0	0	0	
+ZeKaiNie/universal-examprep-skill	control	OK	e01d2f7647b0917172ae8ad5fb788b404e977cae	582	4	4	1	3	full/LICENSE;full/tests/fixtures/ingestion_gold/LICENSE;skills/universal-exam-cram-coach/LICENSE
+academic-innovation/django-lti	at-risk	OK	993ab6ec4bc33cb2c6be6fb90f05c624e45d4d16	61	1	1	1	0	
+ably-labs/realtime-quiz-framework	at-risk	OK	c4c0cb0b30b5b32e386550705bfa6d0a0a5d1e62	51	1	1	1	0	
+adereksisusanto/dapodik-api-php	control	OK	633093f0b5d91db32c15d11ac249a549fe7a2790	32	1	1	1	0	
+ale-alejandro/beadkit	control	CLONE_FAIL		0	0	0	0	0	
+adorsys-gis/moodle-aiprovider_openaicompatible	at-risk	OK	371278b0ebd6d253cd74799189302652f01503d2	39	0	0	0	0	
+alanwtom/blackboard-mcp	at-risk	OK	5c7462019957a049a7a4bdcf0a59e4923dbcb81d	108	1	1	1	0	
+angelonrevelo/bettercanvasmcp	at-risk	OK	1f5a5969e50271e0b462bff34fbfa0aef8042930	25	1	1	1	0	
+andres-tovar-purdue/ai-grader	control	OK	139bfffc16e72d473e41e4958fb3d54f8a45332e	88	0	0	0	0	
+appliedrelevance/frappe_mcp_server	control	CLONE_FAIL		0	0	0	0	0	
+ankimcp/anki-mcp-server	at-risk	OK	e0e347f7f39960422ee5ccb973db3d403af64cd0	271	1	1	1	0	
+anonymousonyx22/canvas-lms-student-mcp	at-risk	OK	55a1fea8343ecc6944dee1d12215c3af8096b029	36	1	1	1	0	
+ark-forge/mcp-eu-ai-act	at-risk	OK	933e56da71e7c39cedf74a42fa6b968abee1d464	90	1	1	1	0	
+arthurcuri/mcp-instructure-canvas	at-risk	OK	fc3c813e76d028c2cfb4ae8df7303349f51129f2	91	1	1	1	0	
+astiusa/lti	at-risk	OK	6f980746162bba40c85385db6d8223f6f83721f2	18	1	1	1	0	
+Selleo/mentingo	control	OK	e137ca47cbecf55aa46a2f49d10bbfecb0c2e55d	5356	4	2	1	1	.github/workflows/license-new.yml
+ashleycribb/learnmcp-xapi	at-risk	OK	816d8b80e805d5070aa844188c65c753550dbca5	82	1	1	1	0	
+Takamatsu-Hikaru/AI-Research-Guide	control	OK	8df0f4d42d8da484a23a1a754c823c0cc2fb1643	466	1	1	0	1	public/blog/guide/wiki/vendor/LICENSE.txt
+av-leschinskiy/moodle-mcp	at-risk	OK	69c36847e7add17f7e6dc1d45b6691af3f34ce77	139	1	1	1	0	
+bain3/pronotepy	control	OK	34e1486d0cef3517cf73cf66ecfdcd585ebcac91	40	1	1	1	0	
+barzoj/somtoday-mcp	at-risk	OK	95f929a45e7870774ff17ad514239a0de5e5b83e	134	1	1	1	0	
+bibo242/blackboard-mcp	at-risk	OK	1fd96db0378dc0f6d7c97ee6293da3f62c54edd3	47	1	1	1	0	
+bartmassey-upstream/canvas-mcp	at-risk	OK	b62e1ec8abd648e3164071edaf196f20d58fcfff	490	1	1	1	0	
+blend-ed/openedx-mcp	at-risk	OK	1c5424da9de3ab5b413ef751753df05bf67cb329	64	1	1	1	0	
+blend-ed/tutor-contrib-openedxmcp	at-risk	OK	77fe4e42e81ab54e3a3272cd14709e65db2dd3de	32	1	1	1	0	
+bncc-dev/bncc-pacotes	control	OK	e9b4985adf838a521facf56a33b967d4c6164551	94	6	6	3	3	packages/bncc/LICENSE.md;packages/mcp/LICENSE.md;python/LICENSE.md
+boyuchengz/canvas-mcp	at-risk	OK	a91eeb98b5f3069d320ee387350c10f422ed3ea0	38	1	1	1	0	
+ILIAS-eLearning/ILIAS	at-risk	OK	f2e6e33402eb6ace9f880eb2b60526bdab10cb51	17089	65	7	1	6	components/ILIAS/Chatroom/chat/Model/Messages/Notice.js;components/ILIAS/MetaData/classes/Services/CopyrightHelper/Copyright.php;components/ILIAS/UI/resources/images/license.txt;components/ILIAS/UI/resources/ui-examples/images/Image/licence_images.txt;scripts/Copyright-Checker/copyright-checker.sh;scripts/Copyright-Checker/copyright.js
+chamilo/chamilo	at-risk	CLONE_FAIL		0	0	0	0	0	
+bycs-lp/moodle-block_ai_chat	at-risk	OK	b018f406e4bac3c97cdfca64a1ce4f577f878ad9	143	0	0	0	0	
+cabbage2000-lab/textbook-writer-skills	control	OK	e2b825072ba5d82235575656f4ff9d2016b84896	66	1	1	1	0	
+bruchris/canvas-lms-mcp	at-risk	OK	6ee99c18c99fe5f7e673df2c85849b5694af357b	501	1	1	1	0	
+bycs-lp/moodle-local_ai_manager	at-risk	OK	fd57c216e7bf8b0732e53418ccaf96f28b3ecf5e	330	0	0	0	0	
+caleb-media-studio/canvas-mcp	at-risk	OK	c40b5a3b03171929107261319ec1e889dc7aac44	35	1	1	1	0	
+chenning42/iserv-mcp	at-risk	OK	8afdea14fbcdd159448f3bd47dc1e88cf883a32a	26	2	2	2	0	
+chrischall/canvas-parent-mcp	at-risk	OK	d8a673e677a7f90869bbde69d546284b86af965b	86	1	1	1	0	
+christophblessing/quiz-recap	control	OK	0927b556d2e4838c4976dd37edbc90cffb76cc06	57	1	1	1	0	
+chrischall/infinitecampus-mcp	at-risk	OK	d52ec752674f6fe1c60e0c430670516e55e8aff0	92	1	1	1	0	
+cran/catR	control	OK	112a2efb6621fed446a5df4b1467e4bfe937ab81	64	0	0	0	0	
+danieltyukov/tudelft-mcp	at-risk	OK	3c680e019d870b04fd758a16c96301345b897c00	174	1	1	1	0	
+csmediapro/moodle-mcp-server	at-risk	OK	9d7e300dfc8f24acf5abc4590ce76114b6d4c85a	107	1	1	1	0	
+davepacheco/node-extsprintf	control	OK	0faac1e42c71249731f93f720d98c21e55591b4b	15	1	1	1	0	
+dmitry-viskov/pylti1.3	at-risk	OK	d8fa43e1ace2885e84dfa4067f0f7379aaa86826	91	1	1	1	0	
+asherlc/dofek	control	OK	b9f3744dbaf51fbcfbeee30ca4dc55ca7313fe01	5696	16	16	1	15	packages/eight-sleep/LICENSE;packages/mobile/modules/whoop-ble/LICENSE;packages/mountain-project-client/LICENSE;packages/peloton-client/LICENSE;packages/provider-http/LICENSE;packages/scoring/LICENSE;packages/trainerroad-client/LICENSE;packages/training/LICENSE;packages/trainingpeaks-connect/LICENSE;packages/whoop-whoop/LICENSE;packages/xert-client/LICENSE;packages/zepp-client/LICENSE;packages/zones/LICENSE;packages/zwift-client/LICENSE;vendor/image-size/LICENSE
+e9x/blackboard-mcp	at-risk	CLONE_FAIL		0	0	0	0	0	
+eastarctica/canvas-mcp	at-risk	CLONE_FAIL		0	0	0	0	0	
+dmontgomery40/mcp-canvas-lms	at-risk	OK	c0646ba10ac207d45cc2122d80b3b98e12b497d0	36	0	0	0	0	
+davidpesce/moodle-logstore_xapi	at-risk	OK	c1395c023716d8b6e70883ce4eec9f72deb15881	1177	1	1	1	0	
+drop-project-edu/java-lti-1.3-core-for-dp	at-risk	OK	a09996530630a2abe8a40b903cc355c96b117e5e	53	1	1	1	0	
+ernestosrf/sigaa-horarios-extension	control	OK	acd839df7a3c036f60c8d0fcffe6b8842cfb2b86	9	0	0	0	0	
+faizan45640/google-classroom-mcp-server	at-risk	OK	e8be6cce49c453aef74a52517a5c4a4f2050c27e	8	1	1	1	0	
+edrys-org/edrys	control	OK	9aae4c801f1b1912961d842ff5f6165bacd449c0	115	2	1	1	0	
+fangyuan-3149/book-learning-tutor	control	OK	5d6137296349fd9d73d5e236952f8724e5e7a969	42	1	1	1	0	
+felipedias-ie/blackboard-mcp	at-risk	OK	fb057928ae200364ac3cda48d10779d33f5a4bb7	55	1	1	1	0	
+edx/ease	at-risk	OK	056da0adc6f351789d8e477b5ebec4f6db610c36	2058	1	1	1	0	
+general-mudkip/d2l-mcp-server	at-risk	OK	219205f1b36cb6a030f0f9403f33a49d15a0778b	54	0	0	0	0	
+ghwmelite-dotcom/AfriLab	control	OK	f808cf603007d2c1efb04fb234b97e1fa1bb4c62	232	1	1	1	0	
+falkenslab/moodle-mcp	at-risk	OK	d2a5718842626e6375f5190b2c57fd490f0bcd5c	412	1	1	1	0	
+imazhar101/mcp-canvas-server	at-risk	CLONE_FAIL		0	0	0	0	0	
+ifrn-oficial/cliente_suap_django	control	OK	07542cd45391ecdb57fe89fd5808b295136f18d8	21	0	0	0	0	
+henriquegpb/gradesinteli	control	OK	2ded74019bb24b4b03259ca99dc339c3714bf0bb	211	0	0	0	0	
+gygy-open/question-bank	control	OK	aba4510778ff8e6d88d089e02608104c8384751b	1171	4	4	1	3	backend/app/services/importing/mathtype/LICENSE;backend/app/services/importing/mathtype/NOTICE;backend/app/services/importing/mathtype/xslt/xsl/fontmaps/LICENSE
+instructure/ims-lti	at-risk	OK	724f1ae453156128bd5fdf24641a968e33aff9f1	189	1	1	1	0	
+jibberswrld/fcps-school-mcp	at-risk	OK	7e9aeef8b55546d58f14426b95e0f014b1ebab9e	19	1	1	1	0	
+jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada	control	OK	70d84fe09623bf5280e15e7fff45128a6ccd6628	238	1	1	1	0	
+jpmanson/siu-guarani-mcp	at-risk	OK	248366400624b24a773979eec7d0762a78145675	28	1	1	1	0	
+jupyterhub/ltiauthenticator	at-risk	OK	c0c3bf3a7a12f81fe09ad858a102a3d6a17fe5d7	65	1	1	1	0	
+jude-miller-dev/Milky-institute-online	control	OK	74827f56d16d0825fe43a4bea38ed55ec75f74dd	786	18	0	0	0	
+jupyterlite/jupyterlite	control	OK	e851060d83a820cb6f315c1792818c389ca25cb0	507	5	4	1	3	.github/workflows/license-header.yml;py/jupyterlite-core/LICENSE;py/jupyterlite/LICENSE
+kaushikgunasekaren/canvas-grader-mcp	at-risk	OK	c47e8b3ac2ae5860c81b0845921573dc469d41f4	21	1	1	1	0	
+ipti/br.tag	control	OK	4105188833dcafa16c784d0cc1e3a22e12afd0c7	2428	5	1	1	0	
+krzysztofbury/librus-mcp	at-risk	OK	0bfecc4b3e61ce4401c368ff80f9c6de377d27f1	122	3	3	2	1	legacy_reference/LICENSE
+lanis-mobile/liblanis-for-python	control	OK	ed4234613fe2a36eb6a8cbc5effc042fc9ccb09a	16	1	1	1	0	
+docling-project/docling	control	OK	7bc06ef8b059922170d3444171157d5038fc09b9	1898	3	3	1	2	.agents/skills/dignified-python/LICENSE;.github/license-header.txt
+krzysztofbury/librus-python-api	control	OK	8687e297bd7564648321d037d5cee6a335cb7a0f	269	1	1	1	0	
+formalms/formalms	control	OK	446a77a9b9cbb20dacf008a2d53b2658fb5f5634	5321	20	19	0	19	html/addons/jquery/malihu-custom-scrollbar-plugin/LICENSE.txt;html/appCore/addons/swfheader/LICENSE.txt;html/lib/System/license/license_bosnian.txt;html/lib/System/license/license_croatian.txt;html/lib/System/license/license_english.txt;html/lib/System/license/license_french.txt;html/lib/System/license/license_german.txt;html/lib/System/license/license_italian.txt;html/lib/System/license/license_portuguese.txt;html/lib/System/license/license_spanish.txt;html/lib/System/license/license_tamil.txt;html/license.txt;html/templates/standard/images/social/license.txt;vendor/composer/LICENSE;vendor/symfony/polyfill-ctype/LICENSE;vendor/symfony/polyfill-mbstring/LICENSE;vendor/symfony/polyfill-php72/LICENSE;vendor/twig/extensions/LICENSE;vendor/twig/twig/LICENSE
+liuliu667/cram-engine	control	OK	982cd31cc68e66fa19c534e6b578d9220b6bac04	17	1	1	1	0	
+lmgveerhoek/brightspace-mcp-server	at-risk	OK	f5a081beeec0e776638ceb8f1b259f2d727d4ba8	71	1	1	1	0	
+lmscloud-io/moodle-aiprovider_openaicompatible	at-risk	OK	040b74d5b13e799d19385dc2a86a69132be2e0b5	34	0	0	0	0	
+lmscloud-io/moodle-mcp-server	at-risk	OK	4b11494d65221a9f024baf4ec95f1a96475fd487	11	1	1	1	0	
+loyaniu/moodle-mcp	at-risk	OK	22cc56c7ce57789eeea08a1333145891d3a93da3	13	0	0	0	0	
+lti-tool/lti-tool	at-risk	OK	7eebe4ae34360589dd9af7911edc6db31622bf9b	219	1	1	1	0	
+lukecarroll15/blackboard-mcp	at-risk	OK	1aeb80b98a733da0be663be9deb6e1d686e6d971	54	1	1	1	0	
+longhornteacher/canvasexpert-se	at-risk	OK	8e2831c059d035303e20e0902ecd5dc34abb3078	521	2	2	2	0	
+macewan-cs/lti	at-risk	OK	9ab95e5f3eb81cda87e19524aefe94e437d95697	18	1	1	1	0	
+luizpicolo/code	control	OK	9a08401be15c269846200b1836dd3c3785b015da	197	1	1	1	0	
+macielti/sigaa-cli	at-risk	OK	85b9a51f56037e259a355a6d90f9fc5af9664107	25	1	1	1	0	
+marcusgreen/moodle-qtype_aitext	at-risk	OK	e7c8bb652a91f3510325a2b9c34035dd0cdbf8e4	73	0	0	0	0	
+matthewliu10/brightspace-mcp-server	at-risk	OK	03f17efd7ddc809a4542c049295eca052999fce4	112	1	1	1	0	
+mdweaver/canvas-mcp	at-risk	OK	739f07f6bb1878182bdc8e5e0d29072fff245be1	35	1	1	1	0	
+mdestafadilah/proctoring.js	control	OK	c49b41cee6547e5d2b81d8c7315ebd2123cfe1f5	94	2	2	1	1	src/detectors/third-party.js
+maplexrain/unyra	control	OK	ebec6b22918d502d614f7f796d9a3c7d5fefb213	913	14	5	1	4	docs/notice.md;server/routes/notice.ts;src/lib/notice.ts;tests/notice.test.ts
+moarshy/mcp-tutor	at-risk	OK	cc5ca79c7704ff4d5b7c9d0989d5c145e3d1d32a	155	0	0	0	0	
+moocupv/lti-ai-grader	at-risk	OK	fba24bc730944b93a29b7546872a123d35d50e28	42	1	1	1	0	
+mtgibbs/canvas-lms-mcp	at-risk	OK	9b7efdccca663e8cafc31c622ed57e8091eb091b	115	1	1	1	0	
+mukulyadav0118/india-school-education-analytics	control	OK	9e99619cda00b929210e6498a09b2ef58192190b	3	0	0	0	0	
+naorpeled/aitutor	control	OK	880ef6bde8f4abafce4996b62cdda730f4c5a98b	85	1	1	1	0	
+learningequality/kolibri	control	OK	f72936bd41e59f1300fde4f5810509e601ecd30d	6040	10	9	1	8	platforms/android/LICENSE;platforms/apt-repo/keyring/debian/copyright;platforms/debian-server/debian/copyright;platforms/debian/LICENSE;platforms/debian/debian/copyright;platforms/desktop-app/LICENSE;platforms/flatpak-app/LICENSE;python_packages/kolibri-sync-extras-plugin/LICENSE
+nitsuah/bb-mcp	at-risk	OK	55f1737e62490e480d22f018772fe6de61855056	155	1	1	1	0	
+oliverhruby/edupage-mcp	at-risk	OK	b35ce653d2c98173d9792a1c26e3339e99c1a59f	63	1	1	1	0	
+microsoft/autogen	control	OK	004749e6b7102c8fd317b9b1499ce5807223c278	1837	14	14	2	12	python/packages/agbench/LICENSE-CODE;python/packages/autogen-agentchat/LICENSE-CODE;python/packages/autogen-core/LICENSE-CODE;python/packages/autogen-ext/LICENSE-CODE;python/packages/autogen-magentic-one/LICENSE-CODE;python/packages/autogen-studio/LICENSE-CODE;python/packages/autogen-test-utils/LICENSE-CODE;python/packages/component-schema-gen/LICENSE-CODE;python/packages/magentic-one-cli/LICENSE-CODE;python/packages/pyautogen/LICENSE-CODE;python/samples/gitty/LICENSE;python/templates/new-package/{{cookiecutter.package_name}}/LICENSE-CODE
+onbirdev/moodle-webservice_mcp	at-risk	OK	198246e5d7121b7658e72e44549006753136ac70	20	0	0	0	0	
+omerfarooq223/AutoGrader-Agent	control	OK	9c4bddb0537a560e5597bdcefe8695a795bc238f	35	1	1	1	0	
+oaknational/oak-ai-lesson-assistant	control	OK	c6871efa8f08b68e87d2053803b76f78bd24f01a	1838	1	1	1	0	
+openedx/XBlock	at-risk	OK	4b3f5246f43ff37f93556f904f9dfbff339e3950	193	2	2	2	0	
+openedx-unsupported/ease	at-risk	OK	056da0adc6f351789d8e477b5ebec4f6db610c36	2058	1	1	1	0	
+openedx/ease	at-risk	OK	056da0adc6f351789d8e477b5ebec4f6db610c36	2058	1	1	1	0	
+openedx/edx-proctoring	at-risk	OK	0106f7400ea131e9a7d1e23ae2042370ac0c943e	374	2	2	1	1	edx_proctoring/backends/LICENSE.txt
+openedx/edx-ora2	at-risk	OK	96b4ad10b1f1d6108b4440fe0f3b7df0bdb11c34	903	1	1	1	0	
+openedx/openedx-mcp	at-risk	CLONE_FAIL		0	0	0	0	0	
+openedx/openedx-ai-extensions	at-risk	OK	66d0792c2a9e19f6694573740c16bfc538b6b862	359	1	1	1	0	
+openedx/openedx-learning	at-risk	OK	6dd06c7788e0d810a5563e11c1776c1a90be2102	483	1	1	1	0	
+opencast/opencast	control	OK	4ea4e5bd9fafdde7f3971f0a36646bced0a3cc58	3964	4	2	1	1	docs/guides/developer/docs/license.md
+openedx/xblock-lti-consumer	at-risk	OK	abc6b6f41fe11f71e154514ec4b9912d3e5b84d3	237	2	2	2	0	
+openedx/xblock-sdk	at-risk	OK	43ff3da646ecba5f3f4fa49d8a3b69dc5c89f258	124	1	1	1	0	
+chamilo/chamilo-lms	at-risk	OK	cd27c720ee18eb305b70246b5051bdc6aeac06c5	13508	29	29	2	27	public/documentation/license.html;public/documentation/license.txt;public/fonts/Harmattan/LICENSE.txt;public/fonts/opensans/LICENSE.txt;public/main/inc/lib/javascript/badge-studio/LICENSE;public/main/inc/lib/javascript/highlight/LICENSE;public/main/inc/lib/kses-0.2.2/COPYING;public/main/inc/lib/xajax/LICENSE.txt;public/plugin/CStudio/editor/LICENSE;public/plugin/CStudio/resources/interfaces/xapi/tincanjs/build/doc/LICENSE;public/plugin/CStudio/resources/interfaces/xapi/tincanjs/build/doc/NOTICE;public/plugin/CStudio/vendor/dompdf/LICENSE.LGPL;public/plugin/CStudio/vendor/jspdf/LICENSE;public/plugin/CStudio/vendor/jspdf/examples/PDF.js/web/cmaps/LICENSE;public/plugin/CStudio/vendor/jspdf/src/license.js;public/plugin/CStudio/vendor/jspdf/test/reference/fonts/Roboto/LICENSE.txt;public/plugin/CStudio/vendor/tinymce/js/tinymce/license.txt;public/plugin/CardGame/LICENSE.txt;public/plugin/ExerciseMonitoring/assets/js/webcamjs-1.0.6/LICENSE;public/plugin/ExtraMenuFromWebservice/LICENSE.txt;public/plugin/H5pImport/LICENSE.txt;public/plugin/Onlyoffice/LICENSE.txt;public/plugin/Onlyoffice/assets/LICENSE.txt;public/plugin/Pens/COPYING;public/plugin/Pens/lib/COPYING;public/plugin/XApi/php-xapi/lrs-bundle/LICENSE;public/plugin/XApi/php-xapi/repository-doctrine-orm/LICENSE
+openfun/django-lti-toolbox	at-risk	OK	22c6f2f468ab569cfa5aa5107bdac35399b61161	53	1	1	1	0	
+parkseokjune/unist-blackboard-mcp	at-risk	CLONE_FAIL		0	0	0	0	0	
+packbackbooks/lti-1-3-php-library	at-risk	OK	66d8e4e4b9bd32820282a952b0f3417ac6c05ea1	230	12	3	1	2	src/Claims/Notice.php;src/Messages/Notice.php
+pacewisdomhq/TutorLoom	control	OK	ef4bca4c9b3494f69564e56d205ae48aee2c0e0f	897	5	2	2	0	
+pdg6/bc-curriculum-mcp-server	at-risk	OK	687c55b7ed3c7e7ee83bdba851a8f440f1e9acf0	20	1	1	1	0	
+peancor/moodle-mcp-server	at-risk	OK	666f12222ed6cffc9051455eb4799bb2ac8608ce	7	1	1	1	0	
+particify/arsnova-server	control	OK	424b2ef605172ac7313ebac272bb67fc1363a393	1457	2	2	0	2	core/LICENSE;formatting/LICENSE
+pipeworx-io/mcp-education-data	at-risk	OK	55218a84167c7e1934d7456c9d8e9fd7894d2dc4	10	1	1	1	0	
+pipeworx-io/mcp-estat-japan	at-risk	OK	19c1c062e8a47952517216b8e7a7c1e1124d27f1	10	1	1	1	0	
+pengusto/google-classroom-mcp	at-risk	OK	3609bf6c537231def680682e2be3abf483e74dc3	41	2	1	1	0	
+praisethefacts/dsh-plugin-google-classroom	at-risk	OK	4115d38621e4d7e7d53df0d8877c0e5650f52cf6	8	1	1	1	0	
+plastic-labs/tutor-gpt	control	OK	5c2f92416c042fae89ef7b957b4076418b39c26f	158	1	1	1	0	
+pruettlazaro143-a11y/smc-ai-tutor	control	OK	0787a0e29bd23653f1f4eade12dde95d935dfb9f	153	1	1	1	0	
+r-huijts/canvas-mcp	at-risk	OK	711549f163ef4f8b49c1adff8a2aec8ce2dbd67c	31	1	1	1	0	
+raccoongang/openedx-ai-extensions	at-risk	OK	0dbf7a11491310d789910bb810e938ffb8a5fd57	320	1	1	1	0	
+roVeloupe/essay-grader	control	OK	f124b665d881033fa1e14ef9b1bfc198594194d0	82	0	0	0	0	
+sakethbachu/OMR-scanner	control	OK	b59c9f5a388322a5886841fe1c1f9214ccf1f73e	6	0	0	0	0	
+scollovati/awesome-lti	at-risk	OK	f2279c4191d8544ad3060dd22fda62f8763ced7c	4	1	1	1	0	
+openedx/edx-platform	at-risk	OK	03698e2b6ff46fb335a77f8c356d1074c1fff82f	9284	149	20	1	19	cms/static/js/models/license.js;cms/static/js/spec/models/license_spec.js;cms/static/js/spec/views/license_spec.js;cms/static/js/views/license.js;cms/templates/js/license-selector.underscore;common/static/css/vendor/pdfjs/cmaps/LICENSE;common/static/js/vendor/pdfjs/LICENSE;common/static/js/vendor/pdfjs/web/cmaps/LICENSE;common/static/js/vendor/pdfjs/web/iccs/LICENSE;common/static/js/vendor/pdfjs/web/standard_fonts/LICENSE_FOXIT;common/static/js/vendor/pdfjs/web/standard_fonts/LICENSE_LIBERATION;common/static/js/vendor/pdfjs/web/wasm/LICENSE_JBIG2;common/static/js/vendor/pdfjs/web/wasm/LICENSE_OPENJPEG;common/static/js/vendor/pdfjs/web/wasm/LICENSE_QCMS;common/static/js/vendor/tinymce/js/tinymce/license.txt;common/test/db_fixtures/third_party_auth.json;openedx/core/djangoapps/cache_toolbox/COPYING;openedx/core/lib/license/templates/license.html;openedx/core/lib/license/templates/license_wrapper.html
+scriptology/open-course-cli	control	OK	99f761f44d731ba98545d22d5561c4ccb3085ef4	156	2	2	2	0	
+rudra496/StealthHumanizer	control	OK	c727cd6774f7f37af3ff54ef6462c27430ac2862	283	1	1	1	0	
+sebassg/sia-unal-mcp	at-risk	OK	529e017f264cda92640a2add27bce9dfb6ed610f	35	0	0	0	0	
+semyonfox/canvas-mcp	at-risk	OK	57b7a4e0be3848a977ff106b259b5cabe4d979f3	74	1	1	1	0	
+sinh-x/personal-google-mcp	at-risk	OK	6e6a98d957e04f78aca3d4b0bc7c3bdade05e761	17	1	1	1	0	
+shenquan520/reading-analysis	control	OK	a63f496bc1ec86f52a402291c16a289f8c2203f4	167	1	1	1	0	
+sjgant80-hub/fall-euaiact	control	OK	5d8d27b65f68fe02921e6f624c0dc104c1f22e65	54	2	2	1	1	sdk/LICENSE
+openedx/openedx-platform	at-risk	OK	03698e2b6ff46fb335a77f8c356d1074c1fff82f	9284	149	20	1	19	cms/static/js/models/license.js;cms/static/js/spec/models/license_spec.js;cms/static/js/spec/views/license_spec.js;cms/static/js/views/license.js;cms/templates/js/license-selector.underscore;common/static/css/vendor/pdfjs/cmaps/LICENSE;common/static/js/vendor/pdfjs/LICENSE;common/static/js/vendor/pdfjs/web/cmaps/LICENSE;common/static/js/vendor/pdfjs/web/iccs/LICENSE;common/static/js/vendor/pdfjs/web/standard_fonts/LICENSE_FOXIT;common/static/js/vendor/pdfjs/web/standard_fonts/LICENSE_LIBERATION;common/static/js/vendor/pdfjs/web/wasm/LICENSE_JBIG2;common/static/js/vendor/pdfjs/web/wasm/LICENSE_OPENJPEG;common/static/js/vendor/pdfjs/web/wasm/LICENSE_QCMS;common/static/js/vendor/tinymce/js/tinymce/license.txt;common/test/db_fixtures/third_party_auth.json;openedx/core/djangoapps/cache_toolbox/COPYING;openedx/core/lib/license/templates/license.html;openedx/core/lib/license/templates/license_wrapper.html
+studoo-app/ecole-directe-api	control	OK	ce5757c1dce22c75e076ce1ee467f172287ca607	61	1	1	1	0	
+saylordotorg/moodle-local_ai_course_assistant	at-risk	OK	dc6a10ed7fc6f4d1364e0ecf994c2ddd6dff84dc	1372	1	1	1	0	
+supachai-j/google-classroom-mcp-project	at-risk	OK	9490c0fc068b9b2a8786b1fcc5015a3c34cc7d17	21	1	1	1	0	
+suap-ava-suite/moodle-local_suap	at-risk	OK	1eb3ebf0c35867c9d9d8f7279f57d1631f68c277	94	1	1	1	0	
+sweeden-ttu/canvas-lms-mcp	at-risk	OK	13f357361fe84ee86e68656a3c331e43e0f1a29c	138	1	1	1	0	
+tcpassos/moodle-student-mcp	at-risk	OK	0fb8a36a8431a7f97604d14db4615b158f11d55e	40	1	1	1	0	
+thiagoudweb/techTutor	control	OK	6202933fd0ca227e873d52367fe56b27fa536efe	28	1	1	1	0	
+vTanco/google-classroom-mcp	at-risk	OK	9ba0070eff2fa4674bf411535b2658feda868573	36	1	1	1	0	
+vijju9019/GradeAI	control	OK	56b8819e0c90faba690d5156c5238862743e8a1a	89	1	1	1	0	
+triffon/moodle-mcp	at-risk	OK	d2b362e9a9dd425b537c12f42d3dee48b1391b3f	592	1	1	1	0	
+tutors-sdk/tutors	control	OK	3f578d9362e6d1d0148b15665a534e335df90dc1	384	1	1	1	0	
+yedidiaklein/moodle-local_aiquestions	at-risk	OK	bde25249090900928f690692177969ece778c1f0	34	1	1	1	0	
+yarikleto/claude-teacher-plugin	at-risk	OK	bc6abdd00edab6091d48c5509c66280e427b0d7d	44	1	1	1	0	
+vishalsachdev/canvas-mcp	at-risk	OK	becd181c0c11d45e66d2390031059a111554816a	511	1	1	1	0	
+yetanalytics/lrs-test-runner	control	OK	830a4b27eeff23887ecee9a5731e1b83f4d72951	12	1	1	1	0	
+zaikaman/SGU-Academic-MCP	at-risk	OK	d5209305d13e0242db9c74fb6fa3e9996b67dccc	37	1	1	1	0	
+walkinglabs/modern-llm-notebook	control	OK	03715769cb94cade16e343016472576e69a6dae9	199	3	1	1	0	
+zijinz456/OpenTutor	control	OK	039bfb9102f1aafc7fcc617a1f5a0ff7ae478613	901	1	1	1	0	
+instructure/canvas-lms	at-risk	OK	1c9f0bb8013ed69c4f2efe11fd483025469b7e6c	22662	58	28	2	26	app/models/lti/notice_handler.rb;app/models/lti/pns/notice_builder.rb;app/models/lti/pns/notice_types.rb;config/copyright-template.js;doc/copyright.md;doc/images/eula.png;gems/activesupport-suspend_callbacks/LICENSE.txt;gems/attachment_fu/LICENSE;gems/canvas_breach_mitigation/LICENSE.txt;gems/canvas_crummy/LICENSE.txt;gems/canvas_mimetype_fu/LICENSE.txt;gems/canvas_partman/LICENSE.txt;gems/canvas_quiz_statistics/LICENSE.txt;gems/canvas_stringex/LICENSE.txt;gems/lti-advantage/LICENSE.txt;gems/lti-advantage/lib/lti_advantage/messages/eula_request.rb;gems/lti_outbound/LICENSE.txt;gems/tatl_tael/lib/tatl_tael/linters/copyright_linter.rb;gems/turnitin_api/LICENSE.txt;lib/lti/messages/eula_request.rb;packages/babel-preset-pretranslated-translations-package-format-message/LICENSE;packages/browserslist-config-canvas-lms/LICENSE;packages/canvas-rce/LICENSE;packages/date-js/LICENSE.txt;packages/k5uploader/LICENSE;public/images/cc/copyright.png
+moodle/moodle	at-risk	OK	46c042e7da65f8cb2ec7dc19f46566ce61a393e1	67630	150	98	1	97	lib/bundles/fontawesome/LICENSE.txt;public/admin/settings/license.php;public/admin/tool/brickfield/LICENSE_QUAIL.txt;public/admin/tool/licensemanager/tests/behat/license_manager.feature;public/admin/tool/mfa/factor/totp/extlib/OTPHP/LICENSE;public/admin/tool/mfa/factor/totp/extlib/ParagonIE/ConstantTime/LICENSE.txt;public/enrol/lti/ims-blti/LICENSE.txt;public/h5p/h5plib/v128/joubel/core/LICENSE.txt;public/h5p/h5plib/v128/joubel/core/fonts/inter/LICENSE.txt;public/h5p/h5plib/v128/joubel/editor/ckeditor5/LICENSE.md;public/lang/en/license.php;public/lib/adodb/LICENSE.md;public/lib/aws-sdk/LICENSE;public/lib/aws-sdk/NOTICE;public/lib/aws-sdk/THIRD-PARTY-LICENSES;public/lib/bennu/COPYRIGHT.txt;public/lib/bennu/LICENSE.txt;public/lib/composer/pcre/LICENSE;public/lib/editor/tiny/js/tinymce/license.md;public/lib/editor/tiny/plugins/html/amd/src/beautify/LICENSE;public/lib/geopattern-php/LICENSE;public/lib/giggsey/libphonenumber-for-php-lite/LICENSE;public/lib/giggsey/libphonenumber-for-php-lite/LICENSE.txt;public/lib/google/LICENSE;public/lib/google2-auth/LICENSE;public/lib/google2-service/LICENSE;public/lib/google2-service/src/Compute/License.php;public/lib/google2-service/src/ContainerAnalysis/License.php;public/lib/google2-service/src/DomainsRDAP/Notice.php;public/lib/google2-service/src/OnDemandScanning/License.php;public/lib/google2-service/src/WorkloadManager/Notice.php;public/lib/google2/LICENSE;public/lib/guzzlehttp/guzzle/LICENSE;public/lib/guzzlehttp/kevinrob/guzzlecache/LICENSE;public/lib/guzzlehttp/promises/LICENSE;public/lib/guzzlehttp/psr7/LICENSE;public/lib/htmlpurifier/LICENSE;public/lib/jmespath/LICENSE;public/lib/jquery/ui-1.14.1/LICENSE.txt;public/lib/laravel/serializable-closure/LICENSE.md;public/lib/lti1p3/LICENSE.md;public/lib/ltiprovider/LICENSE;public/lib/markdown/License.md;public/lib/maxmind/GeoIp2/LICENSE;public/lib/maxmind/MaxMind/LICENSE;public/lib/minify/matthiasmullie-minify/LICENSE;public/lib/minify/matthiasmullie-pathconverter/LICENSE;public/lib/monolog/LICENSE;public/lib/mustache/LICENSE;public/lib/nikic/fast-route/LICENSE;public/lib/openspout/LICENSE;public/lib/openspout/LICENSE-for-cc42c1d;public/lib/php-css-parser/LICENSE;public/lib/php-di/invoker/LICENSE;public/lib/php-di/php-di/LICENSE;public/lib/php-jwt/LICENSE;public/lib/phpmailer/LICENSE;public/lib/phpspreadsheet/markbaker/complex/license.md;public/lib/phpspreadsheet/markbaker/matrix/license.md;public/lib/phpspreadsheet/phpspreadsheet/LICENSE;public/lib/phpxmlrpc/license.txt;public/lib/plist/LICENSE.md;public/lib/psr/cache/LICENSE.txt;public/lib/psr/clock/LICENSE;public/lib/psr/container/LICENSE;public/lib/psr/event-dispatcher/LICENSE;public/lib/psr/http-client/LICENSE;public/lib/psr/http-factory/LICENSE;public/lib/psr/http-message/LICENSE;public/lib/psr/http-server-handler/LICENSE;public/lib/psr/http-server-middleware/LICENSE;public/lib/psr/log/LICENSE;public/lib/psr/simple-cache/LICENSE.md;public/lib/ralouphie/getallheaders/LICENSE;public/lib/requirejs/LICENSE;public/lib/rtlcss/LICENSE;public/lib/scssphp/LICENSE.md;public/lib/simplepie/LICENSE.txt;public/lib/simplepie/src/Copyright.php;public/lib/slim/slim/LICENSE.md;public/lib/spatie/php-cloneable/LICENSE.md;public/lib/symfony/deprecation-contracts/LICENSE;public/lib/tcpdf/LICENSE.TXT;public/lib/tcpdf/fonts/freefont-20120503/COPYING;public/lib/webauthn/LICENSE;public/lib/xhprof/LICENSE;public/lib/yui/license.txt;public/lib/zipstream/LICENSE;public/media/player/videojs/ogvjs/COPYING;public/media/player/videojs/ogvjs/COPYING-dav1d.txt;public/media/player/videojs/ogvjs/COPYING-ogg.txt;public/media/player/videojs/ogvjs/COPYING-opus.txt;public/media/player/videojs/ogvjs/COPYING-theora.txt;public/media/player/videojs/ogvjs/COPYING-vorbis.txt;public/media/player/videojs/ogvjs/LICENSE-nestegg.txt;public/media/player/videojs/ogvjs/LICENSE-vpx.txt;public/mod/assign/feedback/editpdf/fpdi/LICENSE.txt

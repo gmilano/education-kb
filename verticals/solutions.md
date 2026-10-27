@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p471` — **🔴 TWO ROWS ON THIS SHELF WERE PUBLISHED AS UNGRANTED AND ARE GRANTED. ARSnova (67★) serves GPL-3.0 at `core/LICENSE` and forma.lms (37★) serves GPL-2.0 at `html/license.txt` — both corrected in place above. 🔴 And ARSnova carries the opposite finding in the same tree: `formatting/LICENSE` is 133 bytes of "All rights reserved" naming Particify, so the repository is part-copyleft and part-proprietary and a wholesale vendoring ships the proprietary half.**
+
+🔵 Gate not attested (`Gap 446-A`); checks re-implemented in-session and green. Every grant below
+read first-hand from `raw.githubusercontent.com` at the resolved ref.
+
+### 🔴 What was wrong, and why it was wrong for the same reason twice
+
+🔵 Both rows were graded by a **root-path** licence probe — the instrument this base refined over
+five passes to thirteen paths, all of them at the repository root. Both platforms put their grant
+**in-tree**. The probe was working correctly and the verdict was still wrong, because the question
+it answers is narrower than the question this shelf asks.
+
+| platform | shelf said | payload says | where |
+|---|---|---|---|
+| **ARSnova** | 🔴 *"NO GRANT at 10 paths"* | 🟢 **GPL-3.0** · 35 147 B · `8ceb4b9ee5ad` | `core/LICENSE` |
+| **ARSnova** | — *(not seen at all)* | 🔴 **All rights reserved**, 133 B · `747c3a657b2b` | `formatting/LICENSE` |
+| **forma.lms** | 🔴 *"no grant at 10 paths"* | 🟢 **GPL-2.0** · 18 346 B · `4e63feff285d` | `html/license.txt` |
+
+🟢 **The ARSnova digest is a control passing, not a lone read.** `35 147 B · 8ceb4b9ee5ad` is the
+value these shelves already record for `moodle/moodle`'s `COPYING.txt` and for Chamilo — the stock
+FSF GPL-3.0 text, reproduced exactly from a repository this base had never read for GPL.
+
+### 🟡 What a studio can now do with each, and the boundary in both
+
+- **ARSnova** — 🟡 **integrate, do not vendor wholesale.** `core/` is GPL-3.0: a Kotlin
+  audience-response backend with a containerised deployment and thirteen years of history, reachable
+  over its API from a separately-licensed product. 🔴 **Exclude `formatting/`** from every
+  deliverable: its author has reserved all rights, and that is the one module in the tree a licence
+  audit would otherwise wave through because the repository "has a LICENSE".
+- **forma.lms** — 🔴 **read, do not vendor.** GPL-2.0 is real, and the secondary roundups calling it
+  Apache-2.0 are refuted from the payload. 🔵 GPL-2.0 is **not** compatible with GPL-3.0-only code,
+  which matters here specifically: a studio composing forma.lms with Moodle plugin code (GPL-3.0)
+  cannot merge the two into one binary.
+
+🟡 **The bound on the ARSnova recovery.** A GPL payload carries the **FSF's** copyright, so nothing
+in `core/LICENSE` names Particify. That the grant covers the `core` module is read from the
+subtree's position, not from the payload (`Gap 471-C`). The `formatting/` reservation names Particify
+directly and is certain. Where the two readings disagree, the reservation is the safer one to build
+against.
+
+### 🔵 The standing consequence for every platform row on this shelf
+
+🔵 Measured over 229 shelf addresses this pass, the chance a repository hides a grant below its root
+rises monotonically with tree size — **0.0 %** under 25 paths, **40.7 %** at 500–1 999, **66.7 %**
+above 2 000. 🔴 **Every platform on this shelf sits in the top two bands.** A "has a LICENSE at the
+root" screen is therefore weakest exactly where this shelf is strongest, and the pre-vendoring audit
+for the largest rows is substantial rather than nominal: 149 licence payloads inside `moodle/moodle`,
+148 inside Open edX, 64 inside ILIAS, 56 inside `instructure/canvas-lms`, 27 inside Chamilo.
+
+🔵 Those counts are **work estimates, not licence findings** — the great majority are vendored
+third-party dependencies, each carrying its upstream's own grant. The number says how many payloads
+a real audit must read before a platform ships inside a client deliverable.
+
 ## 🆕 `p470` — **🔴 THE MOODLE PLUGIN IS WHERE PERMISSIVE EDUCATION PROJECTS GO COPYLEFT, AND THIS PASS CAUGHT IT MID-REPOSITORY: `edukors_graph` is MIT at its root and GPL-3.0-or-later inside `plugin/edukorsplayer/`, both payloads read first-hand. 🟢 And two granted course-tier platforms are added, both GPL-3.0, both APAC.**
 
 🔵 **Gate posture:** `make hooks` not attempted (KB cloned outside the harness repo). Nothing here
@@ -96,7 +149,7 @@ channel the same day.
 | **Frappe Learning** | [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · `license.txt` 33 893 B · `db1a87ba81e8` | 3 350 | Python/TypeScript | 🔴 **the corrected row.** See below |
 | **RosarioSIS** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 · `LICENSE` 15 214 B · `d954e14e5c75` | — | PHP | 🔴 K-12 **student information system** — enrolment, scheduling, grades, attendance, billing. Default ref is **`mobile`** `fa5f4b66caf4`, which is unusual and worth knowing before a clone |
 | **i-Educar** | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | GPL-2.0 · `LICENSE` 18 092 B · `8177f9751321` | 720 | PHP/Laravel | 🔴 🟢 **LATAM-specific SIS.** Brazil's largest free school-management system, published as *software público*; municipal secretariats are its installed base |
-| **forma.lms** | [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **no grant at 10 paths** @ `master` `446a77a9b9cb` | 37 | PHP | 🔴 **refused.** Roundups split between Apache-2.0 and GPL; the repository — its own description calls it a *mirror* — serves no licence payload at all. Unusable until a grant is readable |
+| **forma.lms** | [`formalms/formalms`](https://github.com/formalms/formalms) | 🟢 **CORRECTED `p471` — GPL-2.0**, read first-hand at `html/license.txt` · 18 346 B · `4e63feff285d` @ `master` `446a77a9b9cb`; a second copy at `html/lib/System/license/license_english.txt` · 15 146 B · `81688a796b2f` with 9 further language translations. The grant is in-tree, never at the root | 37 | PHP | 🔴 **Read, do not vendor.** The roundups that called it Apache-2.0 are refuted from the payload; GPL-2.0 is real and is **not** compatible with GPL-3.0-only code. Integrate over its interface. Prior verdict ("no grant at 10 paths") was a root-path artefact |
 
 🔵 Ten platforms, ten first-hand grants or refusals. **Two permissive** (OpenOlat, Kolibri), one
 weak-copyleft, six strong-copyleft, one ungranted.
@@ -669,7 +722,7 @@ adds three rows and flags two of them.
 |---|---|---|---|---|---|
 | **TutorLoom** | [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | 🟢 **Apache-2.0** · 11 362 B `a89039268428` | 49 | Multi-tenant LMS for institutes and training teams: course builder, batch enrolment, trainer and student portals, grading, progress. Django + React, Flutter client | 🟢 **Build-on.** Permissive and multi-tenant in the same row |
 | **Vacademy** | [`Vacademy-io/vacademy_edtech_platform`](https://github.com/Vacademy-io/vacademy_edtech_platform) | 🔴 **AGPL-3.0** · 34 523 B `0d96a4ff68ad` | 23 | Topics itself `erp` + `crm` + `lms`: content delivery, learner tracking, assessment management | 🔴 **Read, do not host.** Network copyleft — a hosted multi-tenant deployment triggers source disclosure |
-| **ARSnova** | [`particify/arsnova-server`](https://github.com/particify/arsnova-server) | 🔴 **NO GRANT** at 10 paths, **none in `build.gradle.kts` or `gradle.properties`** | **67** | Audience-response-system backend, Kotlin, containerised, created **2013** | 🔴 **Refused.** Needs a written grant from Particify before a line is vendored |
+| **ARSnova** | [`particify/arsnova-server`](https://github.com/particify/arsnova-server) | 🟡 **CORRECTED `p471` — partitioned.** 🟢 **GPL-3.0** at `core/LICENSE` · 35 147 B · `8ceb4b9ee5ad` (this base's canonical stock-FSF digest, reproduced). 🔴 **All rights reserved** at `formatting/LICENSE` · 133 B · `747c3a657b2b`, naming Particify. No grant at the root — which is why 10 root paths read as none | **67** | Audience-response-system backend, Kotlin, containerised, created **2013** | 🟡 **Integrate, do not vendor wholesale.** `core/` is GPL-3.0: build beside it over its API. 🔴 `formatting/` is proprietary and must be excluded from any deliverable. Prior verdict ("NO GRANT … refused") was a root-path artefact |
 
 ### 🟢 Why `TutorLoom` is worth a line of its own on this shelf
 
@@ -2366,3 +2419,4 @@ An informed gap, recorded so silence is not mistaken for coverage:
   advice flips from *"we cannot build this"* to **"we can build this, and here is what it commits you
   to"** — see [`compose/patterns.md`](../compose/patterns.md) `Pattern Y`. Full rows on
   [`repos/foundations.md`](../repos/foundations.md).
+

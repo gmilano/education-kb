@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p471` — `2026-10-27` — **the trending signal is a screen, not a repository: partition risk is monotonic in tree size across five bands, 0.0 % under 25 paths to 66.7 % above 2 000, measured on 229 addresses**
+
+🔵 **Append-only.** The `p470` body and all prior passes stand unchanged below this section. Star
+counts from the MCP `search_repositories` channel, **2026-10-27**. Every grant read first-hand from
+`raw.githubusercontent.com`, written to a file and the file measured (`Gap 468-A`).
+`api.github.com` is **not** blocked as 470 passes recorded — it is per-repository authorised; see
+`agents/top.md` for the channel matrix.
+
+### 🟢 The measurement this pass contributes
+
+🔵 `Gap 470-A` said a root read establishes the root tree only. The useful follow-on question is
+*when does that matter?* — and it has a computable answer that needs no licence read at all.
+
+| tree size (`git ls-files \| wc -l`) | n | carry a grant below root | rate |
+|---|---|---|---|
+| < 25 | 44 | 0 | **0.0 %** |
+| 25–99 | 82 | 4 | **4.9 %** |
+| 100–499 | 58 | 6 | **10.3 %** |
+| 500–1 999 | 27 | 11 | **40.7 %** |
+| ≥ 2 000 | 18 | 12 | **66.7 %** |
+
+🟢 **Monotonic, no exceptions.** Shelf-wide **33 of 229 (14.4 %)**, across **580** anchored licence
+paths.
+
+### 🔴 The prediction this pass registered first, and lost
+
+🔵 Declared before the run: repositories whose **names** carry the plugin/integration vocabulary
+(`moodle|canvas|plugin|lti|integration|vendor|connector|mcp|edx|chamilo|ilias`) would partition at
+**≥ 15 %**, the control at **≤ 5 %**.
+
+| tier | n | partitioned | rate | verdict |
+|---|---|---|---|---|
+| at-risk (name-based) | 152 | 13 | **8.6 %** | 🔴 refuted |
+| control (every 7th shelf address) | 77 | 20 | **26.0 %** | 🔴 refuted, **inverted** |
+
+🔴 **The name-based heuristic is anti-predictive**, and the mechanism is selection: ~130 of the 152
+at-risk addresses are single-endpoint MCP connectors with one root `LICENSE` and 20-odd files. The
+name says "integration"; the tree says there is nothing to partition. 🔵 This matters because
+`Gap 470-A` itself proposed the README's licence heading as the index to which subtrees to check —
+a name/prose heuristic of the same family as the one refuted here.
+
+### 🔴 This pass's own matcher, at a 44.4 % false-positive rate
+
+| matcher | matches | repos affected | false positives | rate |
+|---|---|---|---|---|
+| naive, unanchored substring | 1 044 | 23 | **464** | 🔴 **44.4 %** |
+| anchored basename | **580** | 0 | 0 | 🟢 0.0 % |
+
+🔴 On `jude-miller-dev/Milky-institute-online` the naive form returned **18 grants** that are Java
+and XML sources — `NoticeTaskController.java`, `NoticeTemplateDTO.java` — because `NOTICE` prefixes
+`NoticeTask`. Every figure above is the anchored one; both are kept in
+`evidence/matcher-false-positive.2026-10-27-p471.tsv`.
+
+### 🟢 The trees that carry the most, and what the number is not
+
+| repo | subtree licence paths | ★ |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **149** | 7 549 |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | **148** | — |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **148** | — |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **64** | — |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | **56** | — |
+| [`Chloris-Blaxk/inno-agent-hub`](https://github.com/Chloris-Blaxk/inno-agent-hub) | **37** | 13 |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **27** | — |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | **19** | 37 |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | **12** | — |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **9** | — |
+
+🔵 **These are work estimates, not licence findings.** The great majority are vendored third-party
+dependencies carrying their upstreams' own grants — not 149 separate grants on Moodle. The number
+says how many payloads a genuine pre-vendoring audit must read.
+
+### 🔴 Trending-channel cross-check: the week's named riser is already shelved
+
+🔵 The trending channel named [`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy)
+(1 590-topic curriculum graph, 3 221 prerequisite edges, ~5 900★ relayed) as the week's most
+education-specific riser. 🟢 These shelves **already carry it, already correctly graded
+`ODbL-1.0` + `CC BY-SA 4.0`** at `LICENSE` 25 289 B — a data licence, not permissive software supply.
+Also named and already carried: `skyzh/tiny-llm`, `NirDiamant/RAG_Techniques`, DeepTutor. 🔵 Of 14
+candidates across the general-vocabulary legs, **0 were unshelved** — the saturation these shelves
+have published six times, reproduced once more on a channel now proved alive rather than one recorded
+as dead.
+
+### 🟢 Reproduce it
+
+```
+git clone --depth 1 --filter=blob:none https://github.com/OWNER/REPO d
+git -C d ls-files | wc -l                      # the screen
+git -C d ls-files | grep -Ei '(^|/)(LICEN[CS]E|COPYING|COPYRIGHT|NOTICE|EULA|THIRD[-_]PARTY)([._-][A-Za-z0-9.+-]{1,20})?$'
+```
+
+🔵 No API access is needed and none is available: the GitHub API refuses these repositories outright.
+The blobless clone pulls no file bodies, so the whole 229-repository sweep cost no payload transfer.
+
 ## 🆕 `p470` — `2026-10-27` — **the trending signal is a licence-filtered leg answering a question four passes called unanswerable: ten MIT curriculum graphs exist, and the largest is 17★**
 
 🔵 Append-only. The `p469` body and all prior passes stand unchanged below this section. Star counts
@@ -40601,5 +40695,6 @@ Adyacentes que aparecieron en trending de educación AI sin que pudiéramos veri
 
 ---
 *Historia conservada. Append-only: agregar arriba, nunca sobrescribir.*
+
 
 

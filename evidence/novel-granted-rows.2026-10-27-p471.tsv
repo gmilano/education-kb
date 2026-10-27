@@ -1,0 +1,4 @@
+repo	head	grant	bytes	digest	stars	default_branch	region	class	note
+ChantillyAn/homework-grader	5e9aab47822f	MIT	1068	8755221656d4	7	master	Global	🟢 GRANTED	rubric-driven homework grading, CoT + bias mitigation + PDCA; single root grant, no subtree partition. Its LICENSE is BYTE-IDENTICAL to the copy vendored in inno-agent-hub, which identifies the upstream from the digest alone
+TREMA-UNH/rubric-grading-workbench	13aaed5161ec	MIT	1068	3f68bfcd4ec5	15	main	North America	🟢 GRANTED	autograding workbench for retrieve/generate systems, Univ. of New Hampshire; the only academic-provenance rubric row on these shelves
+cobibean/soul-grader-skill	56fdda5c57e2	MIT	1065	f1319ce8b6ac	60	main	Global	🔴 REFUSED — OFF-CLASS	grades SOUL.md agent-identity files against a rubric, not student work. Granted and live, but not an education asset

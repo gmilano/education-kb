@@ -1,0 +1,18 @@
+channel	probe	result	bytes	verdict	note
+api.github.com (direct)	GET /	200	2	🔴 FALSE POSITIVE	payload is the 2-byte proxy stub `{}`; a root liveness probe reads UP on an unusable channel
+api.github.com (direct)	GET /repos/gmilano/education-kb (ATTACHED)	200	6055	🟢 WORKS	full payload incl. stargazers_count, default_branch, pushed_at
+api.github.com (direct)	GET /repos/panaversity/ksor (UNATTACHED)	403	378	🔴 SCOPED	"GitHub access to this repository is not enabled for this session. Use add_repo"
+api.github.com (direct)	GET /search/repositories	403	249	🔴 REFUSED	"sessions are bound to their configured repositories"
+MCP github get_file_contents	particify/arsnova-server	denied	0	🔴 SCOPED	"repository is not configured for this session"
+MCP github search_repositories	q=moodle	200	-	🟢 UNSCOPED	total_count 35732, live stargazers_count/forks/pushed on THIRD-PARTY repos
+MCP github search_repositories	q=education AI tutor agent stars:>50 pushed:>2026-09-01	200	-	🔴 SILENT ZERO	total_count 0, incomplete_results false, NO error
+MCP github search_repositories	q=AI tutor education stars:>50	200	-	🟢 WORKS	total_count 11
+MCP github search_repositories	q=education agent pushed:>2026-09-01	200	-	🟢 WORKS	total_count 1075
+MCP github search_repositories	q=repo:a/b repo:c/d (5 repos)	200	-	🟢 WORKS	repo: OR-form returns exactly 5, one call for many star counts
+raw.githubusercontent.com	licence payloads at HEAD	200	11342	🟢 WORKS	every grant in this pass read through it
+git ls-remote --symref	third-party repos	ok	-	🟢 WORKS	unscoped; resolves HEAD on repos the API refuses
+git clone --depth 1 --filter=blob:none	third-party repos	ok	-	🟢 WORKS	229/237 succeeded; the instrument behind this pass's subtree sweep
+eur-lex.europa.eu	GET /	000	0	🔴 DNS FAIL	second consecutive pass; Gap 470-D still unclosable first-hand
+education.ec.europa.eu	GET /	000	0	🔴 DNS FAIL	returned by the EMEA web leg but unreachable from this host
+digital-strategy.ec.europa.eu	GET /	000	0	🔴 DNS FAIL	same
+artificialintelligenceact.eu	GET /	000	0	🔴 DNS FAIL	same

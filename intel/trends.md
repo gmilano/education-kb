@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p471` — **🔴 THE TREND WITH A DATE ON IT: three jurisdictions on three continents have independently converged on the SAME regulatory test — AI is high-risk in education only where a human cannot meaningfully review the decision — which makes "reviewable human decision point" a product requirement rather than a compliance afterthought. 🟢 And the off-class rate of this file's own regional instrument is shown to be VOLATILE between passes on identical input, which retires a measurement `p470` treated as a property.**
+
+🔵 Gate not attested (`Gap 446-A`); checks re-implemented in-session and green.
+
+### 🟢 Trend 1 — regulatory convergence on human reviewability, across three regimes
+
+🔵 Three instruments, three regions, no coordination, one test:
+
+| regime | the clause | effect |
+|---|---|---|
+| **EMEA** — Regulation (EU) 2026/1744 / AI Act Annex III | Qualified human staff must be able to **monitor outputs, intervene, override a decision and shut the system down** | Obligation, from **2 December 2027** (stand-alone) / **2 August 2028** (embedded) |
+| **APAC** — Vietnam Decision No. 33/2026/QD-TTg | Education AI is high-risk **only where the output is the sole basis for a decision without meaningful human review** | 🟢 **Carve-out** — compliance **1 March 2027** |
+| **North America** — Oklahoma, Maryland | Require human oversight; **bar AI from high-stakes student decisions** | State statute |
+
+🔴 **This is the single most transferable design constraint on these shelves.** One architecture —
+every assessment, placement or progression output passing through a reviewing educator with
+override and shutdown, and an audit trail proving it — simultaneously keeps a system out of
+Vietnam's high-risk tier, satisfies EMEA's oversight duty, and meets US state rules. 🟢 **Build it
+once as a component**, not per engagement. 🔵 The trend to watch is whether the carve-out form
+(Vietnam) spreads, because it is the version that rewards good design rather than merely documenting
+it.
+
+### 🟢 Trend 2 — the governance gap is now evidenced at practitioner level, not just institutional
+
+🔵 For four passes this file has carried "adoption outpaces governance" from institutional
+self-report. **TALIS 2024** puts teacher-level numbers against it for the first time:
+
+| country | secondary teachers using AI | vs OECD average 36 % |
+|---|---|---|
+| Brazil | **56 %** | +20 |
+| Chile | **55 %** | +19 |
+| Colombia | **53 %** | +17 |
+| Costa Rica | **52 %** | +16 |
+
+🔴 Set against **26 %** of LATAM institutions having a formal AI strategy (UNESCO IESALC, 200
+institutions, 19 countries), the gap is no longer an impression: **practitioners are 16–20 points
+above the OECD mean while institutions are mostly ungoverned.** 🟢 Double-sourced across two
+independent instruments, which is new.
+
+### 🔴 Trend 3 — the governance demand has no open-source supply, and that is now bounded
+
+🔵 Measured this pass on a licence-filtered leg: `education governance license:mit` returns **61
+repositories in total, maximum 16★**, with five of the top eight off-class (DeFi token platforms, a
+climate atlas). 🔴 Against a demand signal this strong, **the supply ceiling is 16 stars.** The trend
+is a widening mismatch, and its practical form is that institutional AI governance is a
+**build-from-scratch** engagement with no credible OSS starting point — unusual on shelves where
+almost every other category has one.
+
+### 🟢 Trend 4 — national AI curriculum mandates are now dated procurement events
+
+🔵 Five jurisdictions have moved from policy language to a fixed academic year:
+
+| jurisdiction | region | mandate | from |
+|---|---|---|---|
+| UAE | **EMEA** | AI compulsory KG–Grade 12, 7 core areas, no written exams | 2025–26; private schools reported **Aug 2026** |
+| Qatar | **EMEA** | AI + data science across primary, preparatory, secondary | **2026–27** |
+| India | **APAC** | CBSE Computational Thinking & AI, Classes III–VIII (circular Acad-15/2026) | **2026–27** session |
+| China | **APAC** | MoE "AI Plus Education" — dedicated primary/secondary AI courses | announced **10 Apr 2026**, full by **2030** |
+| South Korea | **APAC** | 20 universities selected from 80 for AI basic curriculum, all majors | **2026** |
+
+🔵 The trend is the **shift in buyer**: these are ministries committing to delivery on a date, which
+converts AI-in-education from discretionary edtech spend into teacher-training, content-production
+and assessment-tooling programmes at national scale. 🔴 Note the asymmetry — four of five are APAC
+or Gulf. No EU member state appears on this list.
+
+### 🔴 Trend 5 — "root licence" is failing as an industry screen exactly where platforms live
+
+🔵 Measured over 229 education repositories: **33 (14.4 %)** carry a licence grant below their root,
+and the rate is monotonic in tree size — **0.0 %** under 25 paths, **66.7 %** above 2 000. Every
+major LMS sits in the top band.
+
+🔴 **The trend is that the shape is becoming structurally more common, not less.** The mechanism is
+forced rather than evasive: Moodle is GPL, so any Moodle plugin must be GPL — therefore **every
+permissive education project that ships an LMS integration acquires a copyleft subtree**. As LMS
+integration becomes table stakes for education AI products, the partitioned-grant repository becomes
+the norm. 🔵 And it cuts both ways: this pass found a repository that is **part copyleft and part
+proprietary** (`particify/arsnova-server`: GPL-3.0 at `core/`, "All rights reserved" at
+`formatting/`), and two platforms that a root-path screen called ungranted and that are granted.
+
+### 🟡 Trend 6 — retired: the off-class rate of this file's own regional instrument
+
+🔵 `p470` measured the prescribed EMEA leg at **0 on-class of 10** and registered the off-class rate
+as a property of the query template. Re-run this pass, **unchanged**, the same leg returned **9
+on-class of 9**.
+
+| region leg | `p470` on-class | `p471` on-class |
+|---|---|---|
+| North America | high | 9/9 |
+| **EMEA** | 🔴 **0/10** | 🟢 **9/9** |
+| APAC | low | 2/9 |
+| LATAM | high | 10/10 |
+
+🔴 **A measurement that inverts on identical input across one day is an index property, not a query
+property.** The mechanism `p470` identified (enterprise-analyst register colliding with education
+vocabulary) is real and still visible in the APAC leg — but the *rate* is volatile, and a single
+pass's off-class reading cannot license a template change. 🟢 Registered on `intel/market.md` as
+`Gap 471-F`.
+
+### 🔵 Trend 7 — rubric and assessment feedback is where the week's granted supply actually appeared
+
+🔵 Two of two granted novel rows this pass are rubric components
+(`TREMA-UNH/rubric-grading-workbench` MIT 15★, `ChantillyAn/homework-grader` MIT 7★), while the
+general education-vocabulary legs returned **0 unshelved of 14**. 🔵 Consistent with `p469`, which
+closed the same gap with four MIT grants all at 0–4★. 🔴 The standing caveat holds and is the trend:
+**this category's supply is real, permissive and uniformly tiny** — single-maintainer repositories in
+the single digits to mid-teens of stars. Fork-and-own; do not take a dependency.
+
 ## 🆕 `p470` — **🟢 Four trends, each with a denominator measured this pass: (1) the open grant is fragmenting *inside* the repository — by subdirectory and by asset, not by project; (2) education's regulatory clock in EMEA now runs backwards and forwards at once, a prohibition closing as a high-risk regime opens; (3) the governance demand this base measured has no supply behind it — 70 novel addresses, zero governance tools; (4) permissive curriculum supply arrived in quantity and entirely at micro-scale.**
 
 ### 🔴 1. The grant is fragmenting inside the repository, not between repositories
@@ -3676,3 +3783,4 @@ licence name and something else. 🔵 **The insight was applied to licence names
 clause text, nor to package names, nor to URL schemes.** One lexicon separating a **string** from a
 **capability** would close `Gap 392-A`, `Gap 393-A` and the `bbmcps` class together — which is why
 `p393` ranked that unification fifth and why `p394` ranks it **first**.
+

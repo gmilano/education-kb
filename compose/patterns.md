@@ -4,6 +4,165 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p471` — **🟢 THE PATTERN THIS PASS CONTRIBUTES IS A GATE EVERY OTHER RECIPE ON THIS FILE NOW PASSES THROUGH: before a repo enters a deliverable, enumerate its licence paths at every depth — because 14.4 % of these shelves' repositories grant below the root, 66.7 % above 2 000 paths, and one of them is PROPRIETARY inside an otherwise-open tree. 🟢 And the human-review checkpoint that three regimes independently require is specified here as a component, not as advice.**
+
+🔵 Gate not attested (`Gap 446-A`); checks re-implemented in-session and green. Every grant named
+below was read first-hand at `HEAD` this pass or is carried with its `p`-number.
+
+### 🟢 Pattern `P471-1` — the pre-vendoring licence gate (run this before every other pattern)
+
+🔵 **Problem.** Every recipe on this file names repositories to compose. A root-path licence read —
+which is what this base used for 470 passes, and what a client's own counsel will do — establishes
+the grant on the **root tree only**. Measured this pass: **33 of 229** education repositories
+(14.4 %) carry a grant below the root; above 2 000 paths it is **66.7 %**.
+
+**Wiring.** Two commands per repository, no API access needed (the GitHub API refuses these repos):
+
+```bash
+# 1. the screen — decides whether step 2 is needed at all
+git clone --depth 1 --filter=blob:none https://github.com/OWNER/REPO d
+git -C d ls-files | wc -l
+
+# 2. the enumeration — every licence path at any depth
+git -C d ls-files | grep -Ei '(^|/)(LICEN[CS]E|COPYING|COPYRIGHT|NOTICE|EULA|THIRD[-_]PARTY)([._-][A-Za-z0-9.+-]{1,20})?$'
+
+# 3. for each path found, read the payload and the COPYRIGHT LINE
+curl -sS "https://raw.githubusercontent.com/OWNER/REPO/$(git -C d rev-parse HEAD)/PATH" -o p.txt
+wc -c < p.txt; sha256sum p.txt; grep -iE 'copyright' p.txt | head -2
+```
+
+🔴 **Three decision rules, each earned from a real row this pass:**
+
+| what step 2 returns | classify as | what to do |
+|---|---|---|
+| grant below root, **copyright = the project** | **R — recovered** | 🟢 The repo *is* granted. `formalms/formalms` → **GPL-2.0** at `html/license.txt`; both these shelves had it refused |
+| grant below root, **copyright = a third party** | **V — vendored** | 🔴 The repo grants **nothing**. Vendor from the **upstream** instead — the licence digest identifies it. `Chloris-Blaxk/inno-agent-hub`'s 37 subtree grants all name `© ChantillyAn` or `© Artem` |
+| **"All rights reserved"**, no permission sentence | **X — reservation** | 🔴 **Exclude that subtree from the deliverable.** `particify/arsnova-server` → `formatting/LICENSE`, 133 B, names Particify |
+
+🟡 **The one limit, stated so the gate is not over-trusted:** a **copyleft** payload carries the
+FSF's copyright, not the project's, so rule R's copyright test is unavailable for GPL/AGPL texts.
+For those, read the project's own `README`/`COPYRIGHT` notice to establish the grant's **scope**
+(`Gap 471-C`).
+
+🔴 **Do not substitute a name-based heuristic for step 1.** Screening on repository names containing
+`plugin`/`integration`/`moodle`/`canvas`/`mcp` was tested this pass and is **anti-predictive**:
+8.6 % against the control's 26.0 %. Use the path count.
+
+### 🟢 Pattern `P471-2` — rubric-graded assignment feedback with a reviewable human checkpoint
+
+🔵 **Problem.** The clearest LATAM opportunity on `intel/market.md` (teacher AI use 16–20 points
+above the OECD average against 26 % institutional strategy) and the one architecture that clears
+three regulatory regimes at once.
+
+**Wiring:**
+
+1. **Grading core** — [`ChantillyAn/homework-grader`](https://github.com/ChantillyAn/homework-grader)
+   (**MIT**, 1 068 B · `8755221656d4`, 7★, `master` `5e9aab47822f`). Rubric-driven scoring with
+   chain-of-thought, explicit bias mitigation and a PDCA quality cycle. 🟢 26 paths, single root
+   grant — `P471-1` clears it in one step.
+2. **Evaluation harness** — [`TREMA-UNH/rubric-grading-workbench`](https://github.com/TREMA-UNH/rubric-grading-workbench)
+   (**MIT**, 1 068 B · `3f68bfcd4ec5`, 15★, `main` `13aaed5161ec`). University of New Hampshire
+   autograding workbench: use it to measure the grader rather than asserting it works. 🟢 The only
+   academic-provenance rubric component on these shelves.
+3. **Human checkpoint — the regulated part.** Every score is a **proposal** until an educator
+   accepts, edits or rejects it. Persist reviewer identity, timestamp, the pre-review score, the
+   post-review score and the override reason.
+4. **LMS delivery** — over Canvas or Moodle **interfaces**, never by forking. Moodle is GPL-3.0
+   (`COPYING.txt` 35 147 B · `8ceb4b9ee5ad`); a Moodle plugin you ship is GPL-3.0 by force.
+
+🔴 **Why step 3 is the product and not a feature.** Vietnam's Decision 33/2026/QD-TTg classes
+education AI high-risk **only where the output is the sole basis for a decision without meaningful
+human review** — so step 3 keeps the system *out* of the high-risk tier there. The EU AI Act's
+Annex III duties require staff able to monitor, intervene, override and shut down — step 3 *is* that
+duty. Oklahoma and Maryland bar AI from high-stakes student decisions — step 3 is the evidence.
+🟢 **One component, three regimes.** Build it once and reuse it across engagements.
+
+🟡 **Both grading repos are single-maintainer and under 20★. Fork and own them**; do not take a
+runtime dependency on either.
+
+### 🟢 Pattern `P471-3` — curriculum-graph tutoring with the grant boundary drawn correctly
+
+🔵 **Problem.** `p470` found `mgarlabx/edukors_graph` is MIT at the root and GPL-3.0-or-later in its
+Moodle plugin. This pass found a **third** layer, and it is the one that makes the pattern shippable.
+
+**The three layers, all read at `6bc743c6a5fe`:**
+
+| subtree | grant | ship it? |
+|---|---|---|
+| root — JSON Schema, standalone player, original resources | **MIT** · 1 087 B · `625342dc4d3d` | 🟢 **Yes**, vendor freely |
+| `plugin/edukorsplayer/` — the Moodle integration | **GPL-3.0-or-later** · 35 151 B · `e79e9c8a0c85` | 🔴 Ships as GPL-3.0-or-later. Forced: Moodle is GPL |
+| 🟢 `plugin/edukorsplayer/vendor/edukors/` | **MIT** · 1 087 B · `625342dc4d3d` — byte-identical to root | 🟢 **Yes** — extractable under MIT despite its position inside the GPL subtree |
+
+**Wiring:**
+
+1. **Course structure** — `edukors_graph`'s MIT JSON Schema: a course as nodes and prerequisite
+   edges in one file. Vendor the **root** and the **vendored `edukors` component**; leave
+   `plugin/edukorsplayer/` out of any proprietary deliverable.
+2. **Concept graph** — [`AI-First-Community/Bodhi`](https://github.com/AI-First-Community/Bodhi)
+   (MIT, 1 095 B · `967480f4f094`, `p470`) for typed concept connections.
+3. **Retention** — [`Garuda8887/recall`](https://github.com/Garuda8887/recall) (MIT, 1 099 B ·
+   `0bfc98ccf58b`, `p470`): SM-2 spaced repetition over the graph.
+4. **Textbook ingestion + Socratic questioning** — [`MXC-CKK/huoshu`](https://github.com/MXC-CKK/huoshu)
+   (MIT, 1 059 B · `a005f12beb1c`, `p470`), which already wires RAG.
+5. 🔴 **Do not reach for `withmarbleapp/os-taxonomy`** for the graph itself — 1 590 topics and 3 221
+   prerequisite edges, and **ODbL-1.0 + CC BY-SA 4.0** at `LICENSE` 25 289 B. A **data** licence with
+   share-alike: usable as a reference corpus, not vendorable into a client deliverable.
+
+### 🟢 Pattern `P471-4` — audience response and formative assessment, with a module excluded by name
+
+🔵 **Problem.** `verticals/solutions.md` carried ARSnova as *"NO GRANT — refused"* for several
+passes. It is granted. It is also partly proprietary, and the two facts live in the same repository.
+
+**Wiring:**
+
+1. **Backend** — [`particify/arsnova-server`](https://github.com/particify/arsnova-server) (67★,
+   Kotlin, containerised, created 2013), **`core/` under GPL-3.0** · 35 147 B · `8ceb4b9ee5ad`.
+   Integrate **over its API** from a separately-licensed product; do not fork into a deliverable.
+2. 🔴 **Exclude `formatting/`.** 133 B, *"Copyright (c) 2020-present Particify … All rights
+   reserved."* No permission sentence of any kind. This is the module a "repo has a LICENSE" audit
+   waves through.
+3. **Feed results into `P471-2`'s rubric layer** for formative feedback, keeping the human checkpoint.
+4. **Offline/low-connectivity delivery** —
+   [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (9 subtree licence
+   paths, run `P471-1` before vendoring) where the estate is intermittently connected.
+
+🟡 **Licence-compatibility trap inside this pattern.** If the same deliverable also composes
+**forma.lms** (**GPL-2.0**, `html/license.txt` 18 346 B · `4e63feff285d`), note that GPL-2.0 and
+GPL-3.0-only code **cannot be merged into one binary**. Keep ARSnova and forma.lms as separate
+services behind interfaces.
+
+### 🟢 Pattern `P471-5` — institutional AI-governance product (build, because there is nothing to compose)
+
+🔵 **Problem.** The strongest demand signal on these shelves with the weakest supply. LATAM: 87 % of
+institutions using AI, **26 %** with a formal strategy, teachers 16–20 points above the OECD average.
+Supply: `education governance license:mit` → **61 repositories, maximum 16★**, five of the top eight
+off-class.
+
+🔴 **This is a build-from-scratch engagement.** Stated plainly because every other pattern on this
+file starts from an existing repo and this one cannot.
+
+**Wiring — the one granted substrate, plus own IP:**
+
+1. **Knowledge substrate** — [`panaversity/ksor`](https://github.com/panaversity/ksor)
+   (**Apache-2.0**, 11 342 B · `2f538e0b9e84`, 232★, `p470`): one authoritative knowledge record for
+   humans and agents, naming education institutions in its own opening. 🟢 The only granted
+   governance-layer component on these shelves — re-read first-hand this pass, 11 342 B confirmed.
+2. **Own IP — the four artefacts the survey gap implies:** an institutional AI-use policy register;
+   a per-course disclosure record (what AI was used, by whom, for what); assessment-integrity rules
+   bound to the curriculum; and the **audit trail from `P471-2` step 3**, which is the same component
+   again.
+3. **Regulatory mapping** — drive the ruleset from `intel/market.md`'s dated obligations: EMEA
+   2 Dec 2027 / 2 Aug 2028, Vietnam 1 Mar 2027, Brazil PL 2.338/2023 and Chile pre-statute,
+   Colombia CONPES 4144.
+4. 🔴 **EMEA deployments: audit every generative capability before 2 December 2026.** The
+   non-consensual intimate imagery and CSAM prohibition applies from that date, schools are a
+   primary venue for that harm, and a **prohibition has no conformity route** — the capability is
+   prevented or it is unlawful.
+
+🟢 **Why this is the best own-IP opportunity on these shelves:** a 16★ supply ceiling means there is
+no incumbent open-source project for a client to adopt instead, and the regulatory deadlines give
+the buyer a date.
+
 ## 🆕 `p470` — **three recipes, every component's grant read first-hand at `HEAD` this pass, and each one specified so the licence boundary falls where the deliverable splits rather than inside it**
 
 🔵 Every component named below was read first-hand on **2026-10-27**: default ref by
@@ -5818,3 +5977,4 @@ repository is **one squashed commit** with HEAD **2 d**. 🟢 It is university-a
 ministry-scale platform, there is no multi-tenancy claim this base has verified, and an engagement
 that needs one should read `Pattern O`'s tenancy discussion first. 🔵 Propose it as a pilot with a
 named exit, and say so to the client in the first meeting rather than the third.
+

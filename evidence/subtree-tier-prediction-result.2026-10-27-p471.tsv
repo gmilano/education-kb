@@ -1,0 +1,3 @@
+tier	basis	n	partitioned	rate_pct	prediction	verdict
+at-risk	name matches moodle|canvas|plugin|lti|integration|vendor|connector|mcp|edx|chamilo|ilias	152	13	8.6	>=15%	🔴 REFUTED
+control	every 7th remaining shelf address	77	20	26.0	<=5%	🔴 REFUTED, INVERTED

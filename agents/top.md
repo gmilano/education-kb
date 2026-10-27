@@ -4,6 +4,240 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p471` — **🟢 THE CHANNEL THIS BASE HAS RECORDED AS "`api.github.com`: 403, BLOCKED" FOR 470 PASSES IS NOT BLOCKED — IT IS PER-REPOSITORY AUTHORISED, and the mechanism is readable in the refusal body. 🔴 `Gap 470-A`'s own prescription is REFUTED: the "ships a plugin or integration" heuristic it proposed is ANTI-predictive (8.6 % against the control's 26.0 %); the real predictor is repository SIZE, monotonic across five bands from 0.0 % to 66.7 %. 🔴 And a root-path probe does not merely miss copyleft below the root — it has published **"NO GRANT"** on a row standing on the SELL shelf that is granted GPL-3.0 two directories down.**
+
+🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — the industry KB is cloned outside
+the harness repo this pass. **Nothing below is gate-attested.** The checks were re-implemented in
+this session's own code and are green: frontmatter keys and closed-vocabulary `region` on all eight
+shelves; every new table checked for separator presence and pipe-count consistency, with **no header
+row published as data**; append-only proved on both trending shelves by prior-body containment.
+
+🔵 **`Gap 468-A` honoured.** No payload below was measured through a shell variable: every licence
+body was written to a file and the file measured, so trailing bytes survive.
+
+### 🔴 The channel record this base has carried for 470 passes is mechanistically wrong
+
+🔵 Every pass since `p1` has recorded `api.github.com` as **403 / blocked**, and `p458` through
+`p470` treated that as a property of the host or of GitHub. It is neither. Probed four ways this
+pass, the channel separates cleanly — and the refusal body names the rule:
+
+| probe | code | bytes | reading |
+|---|---|---|---|
+| `GET api.github.com/` | **200** | **2** | 🔴 **FALSE POSITIVE.** The payload is `{}` — a proxy stub. A liveness probe that checks the root for HTTP 200 reports this channel **UP** while it is unusable |
+| `GET /repos/gmilano/education-kb` (**attached**) | **200** | 6 055 | 🟢 **Full payload**, `stargazers_count`, `default_branch`, `pushed_at` |
+| `GET /repos/panaversity/ksor` (**unattached**) | **403** | 378 | 🔴 *"GitHub access to this repository is not enabled for this session. Use `add_repo` to request access."* |
+| `GET /search/repositories` | **403** | 249 | 🔴 *"sessions are bound to their configured repositories."* |
+
+🔴 **So the record should read: `api.github.com` is per-repository authorised, not blocked.** The
+403 is an authorisation scope, and it is liftable per repository. That is a different fact with a
+different consequence, and 470 passes of "blocked" concealed it.
+
+🔴 **And the first probe is the one to keep.** This pass's own opening move was `curl` against
+`api.github.com/` — it returned **200**, and for a few minutes this section was going to announce a
+channel recovery. The 200 is two bytes of proxy stub. 🟢 Registered as **`Gap 471-A`**: a channel
+liveness probe must assert on a **payload the channel alone could produce**, never on a status code
+from a service root, because an intermediary can satisfy the status code without the service.
+
+### 🟢 The asymmetry inside one server, which is the usable half
+
+| channel | third-party repos | what it serves |
+|---|---|---|
+| MCP `github` → `search_repositories` | 🟢 **UNSCOPED** | `q=moodle` → `total_count` **35 732**, with live `stargazers_count`, `forks_count`, `pushed_at`, `archived`, `default_branch` |
+| MCP `github` → `get_file_contents` | 🔴 **SCOPED** | *"repository is not configured for this session"* |
+| `api.github.com` direct | 🔴 **SCOPED** | 403 unless attached |
+
+🔵 Two tools in the **same MCP server** carry different scopes. Search reaches all of GitHub;
+contents reaches two repositories. The practical consequence for every future pass: **metadata
+discovery is global, payload reads are not** — so star counts and recency come from the search tool
+and every licence body still comes from `raw.githubusercontent.com`, which is exactly the split this
+pass used.
+
+### 🔴 A zero on that channel is indistinguishable from a dead channel, and this pass nearly filed one
+
+🔵 The first discovery leg of the pass, `education AI tutor agent stars:>50 pushed:>2026-09-01`,
+returned `total_count: 0`, `incomplete_results: false`, **no error**. Read alone, that is the
+saturation nil this base has published six times. It is not one:
+
+| leg | free-text terms | qualifiers | `total_count` |
+|---|---|---|---|
+| `education AI tutor agent stars:>50 pushed:>2026-09-01` | 4 | 2 | 🔴 **0** |
+| `AI tutor education stars:>50` | 3 | 1 | 🟢 11 |
+| `education agent pushed:>2026-09-01` | 2 | 1 | 🟢 **1 075** |
+| `moodle` | 1 | 0 | 🟢 **35 732** |
+
+🔴 **The qualifiers are not what zeroes it — the free-text term count is.** GitHub ANDs free-text
+terms across name, description and README; four of them co-occurring in one education repository is
+close to empty before any `stars:` or `pushed:` bound applies. 🟢 Registered as **`Gap 471-B`**:
+every discovery leg must carry a **positive control** in the same channel and the same call shape,
+because on this channel a legitimate empty result and a broken channel are byte-identical. This is
+`p468`'s vocabulary finding on a third axis — not the language of the query, not its register, but
+its **arity**.
+
+### 🟢 `Gap 470-A` CLOSED — by enumerating the tree instead of guessing paths
+
+🔵 `Gap 470-A` asked for the grant to be re-read "at that subtree", with the README's licence
+heading as "the cheapest index to which subtrees to check". That is a heuristic over an unknown set.
+The instrument this pass built does not need the index: a **blobless shallow clone**
+(`git clone --depth 1 --filter=blob:none`) materialises the full path list without a single file
+body, and `git ls-files` then yields **every** licence-shaped path at **any** depth. It cost no API
+access and it works on repositories the API refuses.
+
+🟢 **Validated against `p470`'s own case before being trusted — and it beats it.** At the identical
+HEAD `6bc743c6a5fe`, `p470` published three paths for `mgarlabx/edukors_graph`. The instrument
+returns **four**:
+
+| path at `6bc743c6a5fe` | payload | class |
+|---|---|---|
+| `LICENSE.md` | **1 087 B** · `625342dc4d3d` | **MIT** — 🟢 reproduces `p470` to the digit |
+| `plugin/edukorsplayer/COPYING.txt` | 35 151 B · `e79e9c8a0c85` | **GPL-3.0-or-later** |
+| `plugin/edukorsplayer/THIRD_PARTY.md` | 785 B · `42e7a91016b6` | notices |
+| 🔴 `plugin/edukorsplayer/vendor/edukors/LICENSE.md` | **1 087 B** · `625342dc4d3d` | 🔴 **MIT — byte-identical to the root**, re-vendored *inside* the GPL subtree |
+
+🔴 **So `edukors_graph` is three layers, not two:** MIT at the root, GPL-3.0-or-later for the Moodle
+plugin, and the original MIT grant restored for the `edukors` component vendored *within* that
+plugin. For a studio that is the useful layer — the vendored component stays extractable under MIT
+even though the plugin shipping around it is GPL — and no root-path probe and no README heading
+would have found it.
+
+### 🔴 The prediction this pass registered, and its refutation
+
+🔵 Stated before the run: the at-risk tier (names matching `moodle|canvas|plugin|lti|integration|vendor|connector|mcp|edx|chamilo|ilias`) would partition at **≥ 15 %** and the control at **≤ 5 %**. Swept over **229** of 237 shelf addresses that cloned:
+
+| tier | basis | n | partitioned | rate | prediction |
+|---|---|---|---|---|---|
+| at-risk | name matches the plugin/integration vocabulary | 152 | 13 | **8.6 %** | 🔴 **refuted** |
+| control | every 7th remaining shelf address | 77 | 20 | **26.0 %** | 🔴 **refuted, and inverted** |
+
+🔴 **The heuristic is worse than no heuristic — it is anti-predictive**, and the mechanism is that
+the vocabulary selects *small single-purpose connectors*: ~130 of the 152 at-risk addresses are
+one-endpoint MCP servers with one root `LICENSE` and no subtree at all. The name says "integration";
+the tree says 20 files.
+
+### 🟢 What does predict it, with a denominator — and it is computable before any licence is read
+
+| tree size (paths) | n | partitioned | rate |
+|---|---|---|---|
+| < 25 | 44 | 0 | **0.0 %** |
+| 25–99 | 82 | 4 | **4.9 %** |
+| 100–499 | 58 | 6 | **10.3 %** |
+| 500–1 999 | 27 | 11 | **40.7 %** |
+| ≥ 2 000 | 18 | 12 | **66.7 %** |
+
+🟢 **Monotonic across all five bands, no exceptions.** Shelf-wide: **33 of 229 repositories
+(14.4 %)** carry a grant below the root, across **580** anchored licence paths. The operational form
+is one line — `git ls-files | wc -l` — and it is available *before* reading any licence: **under 25
+paths, a root read is sufficient; over 500, a root read is more likely wrong than right.**
+
+### 🔴 This pass's own matcher was defective, at 44.4 %, and the controls caught it
+
+🔵 The first cut matched the licence tokens as substrings anywhere in a basename. On
+`jude-miller-dev/Milky-institute-online` it returned **18 grants** that are Java and XML source
+files — `NoticeTaskController.java`, `NoticeTemplateDTO.java`, `NoticeTaskMapper.xml` — because
+`NOTICE` is a prefix of `NoticeTask`.
+
+| matcher | matches | repos affected | false positives | rate |
+|---|---|---|---|---|
+| naive, unanchored substring | 1 044 | 23 | **464** | 🔴 **44.4 %** |
+| anchored basename | **580** | 0 | 0 | 🟢 0.0 % |
+
+🔴 **Nearly half of the first run's "licence paths" were not licences.** The corrected matcher
+requires the basename to *be* the token, optionally followed by an extension or a licence-name
+suffix (`LICENSE-MIT`, `COPYING.txt`). Every number in this section is the anchored one. 🔵 Both
+matchers are kept in `evidence/matcher-false-positive.2026-10-27-p471.tsv` so the rate is checkable
+rather than asserted.
+
+### 🔴 Three classes of subtree grant — and the discriminator is the COPYRIGHT HOLDER, not the licence family
+
+🔵 A subtree grant does not mean the repository is granted. Four repositories carry **no root grant
+and a real licence payload below it**, and they fall into three distinct classes with opposite
+consequences:
+
+| repo | ★ | subtree payload, read first-hand | class | effect on the shelf |
+|---|---|---|---|---|
+| [`formalms/formalms`](https://github.com/formalms/formalms) | 37 | `html/license.txt` **GPL-2.0** · 18 346 B · `4e63feff285d` (+ 9 further language copies) | 🟢 **R — recovered** | 🔴 **Contradiction resolved.** `agents/top.md` carried *"no licence payload at 10 paths → REFUSED"*; `agents/trending.md` carried *GPL-2.0 recovered in-tree*. The trending shelf was right |
+| [`particify/arsnova-server`](https://github.com/particify/arsnova-server) | 67 | `core/LICENSE` **GPL-3.0** · 35 147 B · `8ceb4b9ee5ad` | 🟢 **R — recovered** | 🔴 **SELL-SHELF CORRECTION** — see below |
+| [`particify/arsnova-server`](https://github.com/particify/arsnova-server) | 67 | `formatting/LICENSE` · **133 B** · `747c3a657b2b` — *"Copyright (c) 2020-present Particify … All rights reserved."* | 🔴 **X — reservation** | 🔴 A subtree can make a repository **less** usable, not more |
+| [`Chloris-Blaxk/inno-agent-hub`](https://github.com/Chloris-Blaxk/inno-agent-hub) | 13 | 37 paths; `homework-grader/LICENSE` MIT 1 068 B `8755221656d4` **© ChantillyAn**; `math-tutor` + `tutor` MIT 1 062 B `daf4ed4cc059` **© Artem**; `k12-lesson-planning` **Apache-2.0** 11 357 B; `socratic-tutor` **EPL-2.0** 14 197 B | 🟡 **V — vendored third-party** | 🟢 **`Gap 395-D` CLOSED** — see below |
+| [`Takamatsu-Hikaru/AI-Research-Guide`](https://github.com/Takamatsu-Hikaru/AI-Research-Guide) | 181 | `public/blog/guide/wiki/vendor/LICENSE.txt` MIT 1 051 B `70d37354d639` **© 2022 Luca Ongaro** | 🟡 **V — vendored third-party** | 🟢 **Refusal STANDS.** A naive subtree reader would have "recovered" this row and been wrong |
+
+### 🔴 The sell-shelf correction, stated plainly
+
+🔵 `verticals/solutions.md` publishes **ARSnova** with *"🔴 **NO GRANT** at 10 paths, none in
+`build.gradle.kts` or `gradle.properties`"*, and `agents/top.md` says the same. Both are wrong, and
+wrong in **both directions**:
+
+- 🟢 `core/LICENSE` is **GPL-3.0**, 35 147 B · `8ceb4b9ee5ad` — and that digest is **this base's own
+  canonical GPL-3.0 cell**, the one it records for `moodle/moodle` and Chamilo. A cross-pass control
+  passes on a repository these shelves had never read for GPL.
+- 🔴 `formatting/LICENSE` names **Particify itself** and reserves all rights. A studio vendoring
+  `arsnova-server` wholesale would ship that module.
+
+🟡 **The honest bound on the recovery.** The base's own warning that *"All rights reserved"* is stock
+BSD-3 boilerplate was applied: at **133 B** this payload carries a copyright line, the reservation
+sentence and **no permission grant of any kind** — a BSD-3 body is ~1.5 KB. So the reservation is
+real. But the converse is weaker than it looks: a **GPL payload carries the FSF's copyright, not the
+project's**, so the copyright-holder test that settles the `V` class above is *unavailable* for
+copyleft texts. That `core/LICENSE` grants the `core` module rests on the subtree's position in the
+tree, not on a name in the payload. 🟢 Registered as **`Gap 471-C`**: for a copyleft payload found
+below the root, the grant's **scope** is not determined by the payload, and the cheapest closure is
+the project's own `README`/`COPYRIGHT` notice rather than the licence body.
+
+### 🟢 `Gap 395-D` CLOSED after 76 passes — and not in the direction it was framed
+
+🔵 `Gap 395-D` has read since `p395`: *"the pass's best address is MIT and the part a studio would
+actually reuse is ungranted."* For `inno-agent-hub` the reusable parts **are** granted — and not by
+the hub. Proved by digest equality rather than inferred:
+
+| path | bytes · digest | copyright line |
+|---|---|---|
+| `ChantillyAn/homework-grader` → `LICENSE` (root) | **1 068 B · `8755221656d4`** | `Copyright (c) 2026 ChantillyAn` |
+| `inno-agent-hub` → `skill-library/homework-grader/LICENSE` | **1 068 B · `8755221656d4`** | `Copyright (c) 2026 ChantillyAn` |
+
+🟢 `cmp` reports the two files **identical**. The hub's `math-tutor` and `tutor` both read
+`Copyright (c) 2026 Artem` — a second third party, and the shared digest `daf4ed4cc059` shows they
+are one grant copied twice. 🔴 **Every subtree grant in the hub names someone other than its owner.**
+So the closure is: the hub grants **nothing**; the skills are granted **by their upstreams**; and the
+studio route is to vendor from upstream, which the licence digest identifies for free. 🔵 This is
+`p446`'s LINEAGE mechanism confirmed on a new instance, with the digest as the index.
+
+### 🟢 Granted novel rows this pass — read first-hand at `HEAD`, `2026-10-27`
+
+🔵 Two rows, and the count is the finding rather than a shortfall: the discovery legs returned **14
+candidates on the general education vocabulary and 0 of 14 were unshelved**. Both additions came
+from a single licence-filtered rubric leg.
+
+| repo | grant (first-hand) | bytes · digest | ★ | ref | region | what it contributes |
+|---|---|---|---|---|---|---|
+| [`TREMA-UNH/rubric-grading-workbench`](https://github.com/TREMA-UNH/rubric-grading-workbench) | **MIT** | 1 068 B · `3f68bfcd4ec5` | 15 | `main` `13aaed5161ec` | **North America** | Autograding workbench for retrieve/generate systems from the University of New Hampshire — the first **academic-provenance** rubric component on these shelves, and the only one whose evaluation design is published rather than asserted |
+| [`ChantillyAn/homework-grader`](https://github.com/ChantillyAn/homework-grader) | **MIT** | 1 068 B · `8755221656d4` | 7 | `master` `5e9aab47822f` | Global | Rubric-driven homework grading with chain-of-thought scoring, explicit bias mitigation and a PDCA quality cycle. 🟢 The **upstream** of the skill vendored in `inno-agent-hub`, identified by digest |
+
+🔵 Both carry a **single root grant and no subtree partition** — the instrument was run on each, at
+26 and 73 paths respectively, which the size band above predicts (< 100 paths → 4.9 %).
+
+### 🔴 Refused this pass — stated, because a silent refusal reads like a miss
+
+| candidate | probe at `HEAD` | why refused |
+|---|---|---|
+| [`cobibean/soul-grader-skill`](https://github.com/cobibean/soul-grader-skill) | `main` `56fdda5c57e2` · **MIT** · 1 065 B · `f1319ce8b6ac` · **60★** | 🔴 **Off-class.** Grades `SOUL.md` agent-identity files against a rubric — not student work. Granted, live and the highest-starred thing the rubric leg returned, and not an education asset. `p453`'s homonym class, on a licence-filtered leg |
+
+### 🔵 The governance gap, confirmed on an independent channel with a denominator
+
+🔵 `p468` and `p470` both concluded that the governance shortfall is an absence of **supply** rather
+than of discovery. Reproduced here on the newly-proved channel: `education governance license:mit`
+returns **61 repositories in total**, whose **maximum star count is 16**, and of the top eight
+returned, five are off-class (DeFi/web3 token platforms, a climate atlas). 🟢 Same conclusion, new
+channel, and now with a ceiling attached rather than an impression.
+
+### 🟢 Open gaps registered by this pass
+
+| gap | statement | cheapest closure for the next pass |
+|---|---|---|
+| **`471-A`** | A liveness probe must assert on a payload only the channel could produce, never a status code from a service root — `api.github.com/` returns 200 with 2 bytes of proxy stub | Re-probe the four channels with payload assertions and record the matrix again |
+| **`471-B`** | On `search_repositories` a legitimate empty result and a broken channel are byte-identical; free-text **arity**, not qualifiers, drives legs to zero | Carry a positive control (`q=moodle`) in every discovery leg; declare a nil only when the control returns |
+| **`471-C`** | For a copyleft payload below the root, the payload cannot establish the grant's **scope**, because the copyright line is the FSF's | Read `arsnova-server`'s own README/COPYRIGHT notice and settle whether GPL-3.0 covers the repository or only `core/` |
+| **`471-D`** | The 8 of 237 addresses that failed to clone are untyped — `chamilo/chamilo`, `openedx/openedx-mcp` and six others returned no tree | Re-run the blobless clone on those 8; separate "large/slow" from "gone" with `git ls-remote` |
+| **`471-E`** | The size-band screen is measured on 229 addresses from one industry; its monotonicity is untested elsewhere | Run `git ls-files \| wc -l` banding on another industry KB's shelf when the rotation reaches it |
+
 ## 🆕 `p470` — **🔴 A GRANT CAN BE PARTITIONED BY SUBDIRECTORY, AND THE 13-PATH ROOT PROBE THIS BASE SPENT FIVE PASSES REFINING CANNOT SEE IT: `mgarlabx/edukors_graph` serves MIT at `LICENSE.md` and **GPL-3.0-or-later** at `plugin/edukorsplayer/COPYING.txt`, both read first-hand. 🟢 And the governance substrate `p468` said these shelves lacked is found and granted: `panaversity/ksor`, Apache-2.0, 232★, naming education institutions in its own first paragraph.**
 
 🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — the industry KB is cloned
@@ -4899,3 +5133,4 @@ probes: **`tcd`** (`lukecarroll15/blackboard-mcp`), **`master`** (`Loganxgreaves
 `aureuserp/aureuserp`), **`2.2`** (`krayin/laravel-crm`, a version branch with no `main`) and
 **`trunk`** (`apache/ofbiz-framework`). Resolving the ref **before** reading the licence is not
 optional; a `main`-assuming read returns "no licence" for every one of them.
+
