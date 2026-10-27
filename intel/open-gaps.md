@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p484` — **🟢 FOUR GAPS CLOSED WITH CONTENT (`483-C` with its premise inverted, `483-R` with a clone, `483-F` from bytes, `483-L` with an absence that has a shape), TWO CLOSED SUBSTANTIALLY (`483-M`, `483-N`), ONE REOPENED ON A BETTER AXIS (`483-O` — the region is unmeasured, not empty, and the search engine is why), one published trend REFUTED (`T483-1`), and nineteen registered. 🔴 And this register's own currency contract has been broken for NINE passes: the newest section below was `p474` while the shelves carried `p483`.**
+
+🔵 **`gate-register-currency` — measured and FAILED.** `Gap 473-F`'s cheap positive check is: the
+register's newest section must be `p(N-1)` before a pass writes `pN`. 🔴 **Measured: `p474`.
+Expected: `p483`. Fail, by nine passes.** `p475`–`p483` each wrote eight shelves and **none** wrote
+here, so every gap those nine passes registered lives only in a `### Declared gaps` table on the
+shelf that produced it, where no cross-shelf reader finds it. 🟢 `p484` writes **nine shelves
+including this one**, restoring the contract going forward but not retroactively.
+
+### 🔴 Gate posture — eighteen denials or non-attempts in nineteen passes
+
+🔵 `make hooks` **not attempted**: the industry KB is cloned outside the harness repo and the harness
+refuses execution of code arriving in a clone (`Code from External`). 🔵 **Nothing in this pass is
+gate-attested.** `Gap 446-A` remains unclosable by any pass.
+
+🟢 **Re-implemented in this session's own code and green:**
+
+| check | result |
+|---|---|
+| 🟢 frontmatter keys + closed-vocabulary `region` on all 9 shelves | **9/9 pass** — every `region:` is one of the five permitted values |
+| 🟢 `p484` tables: separator present, pipe count consistent | 🟢 **0 problems** across **32 tables / 167 data rows** |
+| 🟢 no header/example row published as data | 🟢 **0** — every data row names a real repository or jurisdiction |
+| 🟢 `intel/market.md` region contract | 🟢 one `## Opportunities by region`, **4** `###` subsections, all closed-vocabulary, no LATAM-only section |
+| 🟢 **Apache deviation instrument control** | 🟢 canonical vs `apache/.github` → **0 deviations** (the instrument does not manufacture findings) |
+
+🔴 **One instrument defect of this pass's own, caught before publication and reported rather than
+quietly fixed.** The table checker's first version bounded the `p484` section with
+`(?=^## 🆕 \`p48[0-3]\`|\Z)`. That terminator is wrong on **two** shelves in opposite directions:
+on `intel/open-gaps.md` the next section is `p474`, so the checker swallowed **the entire historical
+register** and reported 758 tables with 53 false "pipe mismatch" findings; on `intel/market.md` a
+later variant stopped at the `## Opportunities by region` heading and checked only **38 of 166**
+lines, silently skipping every regional table. 🟢 Corrected terminator: the next `## 🆕` pass marker.
+🔵 Both failure modes are the same root cause — **a section boundary assumed from one shelf's layout
+and applied to nine** — and the first one produced a loud false positive while the second produced a
+silent false negative. The silent one is the dangerous one, and nothing in this base would have
+caught it.
+
+---
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+|---|---|
+| 🟢 **`Gap 483-C`** — *"no URL of any kind can be primary-source verified"* | **CLOSED, PREMISE INVERTED.** The fetch channel is not down; it is a CONNECT-level **host allowlist**. `raw.githubusercontent.com` → **200 with real bytes**, `pypi.org` → 200; `eur-lex.europa.eu`/`unesco.org`/`arxiv.org`/`example.com` → CONNECT refused (proxy log: `connect_rejected`, *"gateway answered 403 to CONNECT"*). 🔴 `p483` generalised from a control that was itself off the allowlist. 🔵 Second confound found: `curl -I` (HEAD) is refused where `GET` succeeds, so the standing verification step's *method* was also wrong. **Consequence: licence bytes are first-hand verifiable; general-web citations are not.** |
+| 🟢 **`Gap 483-R`** — *DeepTutor is 88.2 % of tracked star mass and has never been read* | **CLOSED.** Cloned `--filter=blob:none --depth 1` at **`a31d826`** (tag `v1.6.15`, 2026-10-19). 3 875 files, 1 971 Python, 1 306 TS/JS, 881 tests, 110 `ToolDefinition` sites, 51-file MCP **host** layer, 103 capability files, sandbox with quotas, 3-layer memory. 🔴 Apache LICENSE byte-compared: **6 operative-body deviations**. |
+| 🟢 **`Gap 483-F`** — *`education-agent-skills` (916★) has no readable licence* | **CLOSED FROM BYTES.** It is **CC BY-SA 4.0** (917★ at read time). Root `LICENSE` (1 230 B) scopes to curriculum materials; **`mcp-server/LICENSE` (978 B) drops the scope clause**, so the 39-file TypeScript MCP server is ShareAlike too. 🔴 Not a permissive grant: ShareAlike on derivatives, **no patent grant**. |
+| 🟢 **`Gap 483-L`** — *no Canadian education-specific AI instrument* | **CLOSED, AND THE ABSENCE IS THE FINDING.** No federal K-12 instrument; education is provincial. BC publishes *Considerations for Using AI Tools in K-12 Schools*; Nova Scotia has **no** provincewide policy (delegated to regional centres); Ontario has no ministry memorandum; CMEC championing a pan-Canadian discussion (Jun 2026); VSB 2026 student guidelines; Halton DSB requires **parental consent**. |
+| 🟢 **`Gap 483-M`** — *"EMEA" is European evidence only, third pass running* | **CLOSED SUBSTANTIALLY** — the oldest regional gap in this base. Saudi/UAE/Qatar advanced national education-AI strategies (EdTech Hub MENA, Jan 2026); Kenya National AI Strategy 2025–2030 + DigiKen; Ghana 2025–2035 with education as first pillar; Rwanda–Anthropic MoU (Feb 2026); Egypt council renamed (Jan 2026); 🔴 **South Africa's draft National AI Policy withdrawn 26 Apr 2026 over AI-hallucinated citations in its own reference list.** |
+| 🟢 **`Gap 483-N`** — *no APAC education adoption statistics* | **CLOSED SUBSTANTIALLY.** Digital Education Council *AI in Higher Education Global Survey 2026*: 45 398 responses / 35 countries; **88 %** of students and **77 %** of faculty use AI; **APAC teaching intent 92 %**; APAC faculty excitement **57 % vs 26 %** US/Canada; US/Canada faculty intent **fell 9 points** (76 %→67 %). 🟡 Higher-education only; aggregator-sourced. |
+| 🟢 **`Gap 483-I`** — *the institutional "no AI surface" finding is a path-name census, not a code read* | **SUBSTANTIALLY RELIEVED.** An independent secondary comparison (Apr 2026) reports Canvas, Chamilo, ILIAS, Sakai, ATutor, Forma and Frappe with no production-ready native AI. Two instruments sharing no method return the same verdict, so the census was not producing a false nil. |
+
+### 🔴 Refuted this pass
+
+| claim | refutation |
+|---|---|
+| 🔴 **`T483-1`** — *"institutional vendors ship authorisation machinery before tools; community bridges ship tools before guards"* | **REFUTED by this base's own largest row.** `DeepTutor` — academic/community, 45 240★ — ships deny-by-default MCP **and** CLI grants for non-admins (`multi_user/tool_access.py`, four enforcement points), a two-posture SSRF guard, and **connect-time revalidation explicitly to defeat DNS rebinding** (`services/mcp/network.py`), plus `ToolParameter.sensitive` trace withholding. 🟢 **Replacement axis: multi-tenancy.** `DeepTutor`, `OpenOLAT`, `mentingo` are multi-tenant and all ship grants; `canvas-mcp` is a single-user bridge to one person's token and ships none. Guards track *who else is on the system*, not who wrote it. |
+| 🔴 **`Gap 483-O`'s framing** — *"no LATAM-origin repository in any channel"* | **REOPENED ON A BETTER AXIS as `Gap 484-G`.** A 207-result query on Spanish/Portuguese education terms returned **zero** regional projects — because the ranking is dominated by 20 000★+ English awesome-lists containing the keywords. The query measures the search engine, not the region. Four passes of "none found" are weaker claims than they were written as. |
+
+### 🟡 Carried forward unchanged
+
+| gap | status |
+|---|---|
+| 🔴 `Gap 446-A` | gate unclosable — harness refuses execution of code arriving in a clone. **19 passes.** |
+| 🔴 `Gap 483-A` → re-registered as **`Gap 484-A`** | nothing executed, four passes of code reads running |
+| 🔴 `Gap 483-K` | no AI Act date primary-source verified; EUR-Lex off the allowlist. The 31 Jul / 24 Jul conflict is unresolved. |
+| 🟡 `Gap 483-B`, `483-E` | `canvas-mcp`'s 14 unguarded writes classified by mechanism not consequence; `mentingo`'s 60 unannotated tools still name-classified |
+| 🟡 `Gap 483-Q` → re-registered as **`Gap 484-V`** | every effort range uncalibrated against a delivered engagement |
+| 🟡 `Gap 483-G`, `483-H`, `483-J`, `483-P` | not addressed this pass |
+
+### 🆕 Registered this pass
+
+| gap | statement | cost to close |
+|---|---|---|
+| 🔴 **`Gap 484-A`** | Nothing executed, four passes running. DeepTutor's grants, SSRF guard and sandbox quotas are read from source and docstrings; a guard that is present is not a guard that works. | needs an execution-permitted session |
+| 🔴 **`Gap 484-B`** | This base compares **MCP hosts with MCP servers as one population**. DeepTutor is a host (110 internal tools); `canvas-mcp` (128) and `mentingo` (142) are servers. `p481`–`p483` ranked them as commensurable. | one pass, re-reading published tables |
+| 🟡 **`Gap 484-C`** | The Apache deviation instrument ran on **3** rows, not all. `p481` reported 6 of 13 Apache repos deviating on a different, unnormalised instrument; those 13 are not re-graded, so the base holds two incompatible figures. | part of one pass — the channel works |
+| 🟡 **`Gap 484-D`** | `braiinz94/braiinz-education` has a verified licence and **no** verified stars, scope or activity. Published with a blank star cell rather than a guess. | one API call |
+| 🟡 **`Gap 484-E`** | DeepTutor's 110 tool definitions were **counted, not classified** — no read/write split, no annotation census, no guard mapping. The largest row is read once, not to the depth of the small ones. | one pass, clone retained |
+| 🔴 **`Gap 484-F`** | No non-GitHub URL on any shelf is primary-source verified. Every regional and market figure in `p484` is secondary. | blocked by the allowlist |
+| 🔴 **`Gap 484-G`** | **LATAM discovery is instrument-limited, not region-limited.** Until an owner-location / named-organisation sweep runs (CENIA, Latam-GPT participants, Fundación Ceibal, Geekie, ministry orgs), this base cannot distinguish "LATAM builds nothing" from "GitHub search cannot find it". | one pass — query form specified |
+| 🟡 **`Gap 484-H`** | APAC evidence is **higher-education only** — no 2026 K-12 teacher survey, no India or Japan country figure. The 92 % must not be generalised to school systems. | one search leg |
+| 🟡 **`Gap 484-I`** | The DEC survey is cited through aggregators that **disagree** — Chinese student enthusiasm reported as both 80 % and 92 % for the same study. Chain is demonstrably lossy. | blocked unless the DEC host is allowlisted |
+| 🟡 **`Gap 484-J`** | MEA evidence is **strategies, not outcomes** — every row names a strategy, MoU or renaming; none names a deployment, budget line or measured result. | one pass |
+| 🟡 **`Gap 484-K`** | The US *"134 bills / 31 states"* figure is three passes old and contested by three other trackers by up to 2.6×. Carried, not re-verified. | one search leg |
+| 🔴 **`Gap 484-L`** | `T484-1`'s replacement axis (multi-tenancy) has **four** points against `p480`'s 305-repository live population. Better hypothesis, not a measured law. | one pass with a sampling frame |
+| 🔴 **`Gap 484-M`** | Every guard claim in `T484-1` is read, not executed. Duplicate of `484-A` on the trends shelf, registered separately so the trend does not outlive its evidence. | see `484-A` |
+| 🟡 **`Gap 484-N`** | `T484-6`/`T484-7` rest entirely on aggregator blogs with internally conflicting figures (one conflates a $400 M education commitment with $1 B at 40 %). No funding figure is client-safe. | primary deal-database access |
+| 🟡 **`Gap 484-O`** | `T484-3`'s licence-detector mechanism is a **two-point** explanation that predicts a third case. The base's `NOASSERTION` rows have not been swept to test it. **Cheapest open gap in the register.** | part of one pass |
+| 🔴 **`Gap 484-P`** | DeepTutor's plugin contract is read, not exercised; `P484-1`'s 8–10 week estimate is inferred from structure. | needs execution |
+| 🟡 **`Gap 484-Q`** | `OpenTutor` (152★) sits on two shelves on API metadata + licence bytes only; its "10+ providers, local-first" is a README claim. | one clone |
+| 🟡 **`Gap 484-R`** | `services/sandbox/` was enumerated by filename; `quota.py`, `backends.py`, `runner/server.py` **not read** — the wrong file to skip on a platform whose tenancy story depends on isolation. | part of one pass, clone retained |
+| 🟡 **`Gap 484-S`** | The corroborating LMS comparison is a vendor-adjacent blog with no visible sampling frame. Two sources agreeing is not a methodology. | — |
+| 🟡 **`Gap 484-T`** | **Moodle, Open edX, Sakai, uPortal, Tsugi licences are carried, not byte-verified** — and the channel to verify them **works** this pass. A cheap closure left undone because the budget went to DeepTutor. | one loop, next pass |
+| 🟡 **`Gap 484-U`** | No vertical platform measured for LATAM deployment or es/pt localisation — the question a LATAM engagement actually asks of an LMS. | one pass |
+| 🔴 **`Gap 484-W`** | `P484-1`'s load-bearing assumption — that OpenOLAT's MCP server registers cleanly as a deployment-tier server in DeepTutor's host — is inferred from both codebases and **never executed**. Most load-bearing untested claim on the compose shelf. | needs execution |
+| 🔴 **`Gap 484-X`** | `P484-3` targets LATAM/APAC buyers and is assembled **entirely** from North American and East Asian repositories, because of `Gap 484-G`. The recipe is honest about its parts; the shelf is not yet honest about the region. | blocked on `484-G` |
+| 🔴 **`Gap 484-Y`** | **This register was nine passes stale** (`p474` newest while shelves carried `p483`), so `p475`–`p483`'s gaps exist only in per-shelf tables. A cross-shelf reader has had no index for nine passes. `p484` restores the contract forward; **the nine passes' gaps are not back-filled here.** | one pass of back-fill |
+
+---
+
+
 ## 🆕 `p474` — **🟢 THREE GAPS CLOSED WITH CONTENT (`473-B` by quoting the clause, `473-C` with a reader at 27/27 whose second test case arrived unsought, `473-E` on BOTH its axes — supply in-language and the four-pass MEA demand nil), one ANSWERED WITH ITS PREMISE INVERTED (`473-G` — the pt/es asymmetry reverses at the no-star floor), two HONOURED BY MEASUREMENT (`473-D`, `473-F`), one PARTIALLY CLOSED (`473-A`), and seven registered. 🔴 The largest registered gap is this pass's own doing: it added a SCOPE axis and then graded only its own 24 payloads with it, leaving every carried cell on these shelves scope-unread.**
 
 🔵 **`gate-register-currency` honoured.** Shelves carrying `p474`: `agents/top.md`,

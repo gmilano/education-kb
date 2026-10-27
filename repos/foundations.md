@@ -3,6 +3,68 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+
+## 🆕 `p484` — `2026-10-27` — **🟢 THE FOUNDATION ROW THIS SHELF NEVER EXAMINED IS NOW EXAMINED: `HKUDS/DeepTutor` is not only the star leader, it is a **plugin-extensible agent platform** — 110 tool definitions, a 51-file MCP host layer, a quota'd sandbox and a three-layer memory — which makes it a *foundation* in this shelf's sense and not merely an application. 🔴 Its Apache-2.0 text is non-canonical in six operative lines.**
+
+🔵 Measured first-hand at commit **`a31d826`** (tag `v1.6.15`, 2026-10-19), cloned
+`--filter=blob:none --depth 1`: **3 875 tracked files**, 1 971 Python, 1 306 TS/JS, **881 test
+files**. 🟢 Licence bytes fetched from `raw.githubusercontent.com`, which is reachable this pass
+(`Gap 483-C` corrected — see [`intel/market.md`](../intel/market.md)).
+
+### 🟢 Why DeepTutor belongs on the foundations shelf, not only the agents shelf
+
+🔵 This shelf's test is whether a repository is something **others build on**. DeepTutor passes it on
+structure, not on reputation:
+
+| foundation property | evidence at `a31d826` |
+|---|---|
+| documented tool contract | `deeptutor/core/tool_protocol.py` — `BaseTool` ABC, `ToolDefinition`, `ToolParameter` with a `sensitive` flag and provider-strictness handling for Gemini/Anthropic array schemas |
+| plugin system | `deeptutor/plugins/` (12 files); *"Every tool — built-in or contributed via plugin — implements `BaseTool`"* |
+| capability packaging | **103 files** across 13 capability packages (`reading`, `solve`, `mastery`, `obsidian`, `marginnote4`, `subagent`, `course_study`, `partner_*`, …) |
+| **MCP host layer** | **51 files** — catalog + loader, OAuth, secret store, per-user config, network guard, session state |
+| provider abstraction | `services/llm/provider_core/` — Anthropic, Azure OpenAI, local; plus `runtime/providers/{allowlist,authorize,scope}.py` |
+| execution isolation | `services/sandbox/` — `backends.py`, `quota.py`, `runner/server.py`, `spec.py`, `artifacts.py` |
+| multi-tenancy | `deeptutor/multi_user/` (20 files) — grants, per-user tool access, context |
+| memory | three-layer memory graph; `api/routers/memory.py`, `runtime/coordination/memory.py`, `memory_probe.py` |
+
+🟢 **The distinction that matters for an engagement:** a studio adopting DeepTutor is adopting a
+*platform with a plugin contract and a tenancy model*, which is a 4–6 week integration, not a
+2-week fork of an application. That is a different line item and no prior pass could say it.
+
+### 🔴 The licence caveat that now attaches to this shelf's largest row
+
+🔴 Apache-2.0 confirmed from bytes (11 408 B) — but **6 operative-body deviations** against a
+normalised canonical instrument (control green), including §4(d) `excluding any notices` where
+canonical reads `excluding those notices`, with §4(c) three lines above still reading `those`.
+Comparators `braiinz94/braiinz-education` and `towardsai/ai-tutor-app` score **0**. Full analysis on
+[`agents/top.md`](../agents/top.md).
+🔵 **Grant clauses §2, §3, §5, §7–§9 are byte-identical to canonical** — the copyright and patent
+grants Globant relies on are intact. This is diligence, not a blocker.
+
+### 🟢 The foundations panel — licence column verified from bytes this pass
+
+| repository | role | licence (bytes, `2026-10-27`) | read depth |
+|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | agent platform: plugin contract, MCP host, sandbox, tenancy | 🔴 Apache-2.0 · 11 408 B · **6 operative deviations** | 🟢 cloned `a31d826` |
+| [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | institutional LMS with 4-provider AI SPI + 66-file native MCP server | 🟢 Apache-2.0 (bytes; API says `NOASSERTION`) | 🟢 cloned `96546d9` (`p483`) |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | LMS bridge — 128 tools over Canvas | 🟢 MIT · 1 071 B | 🟢 cloned `becd181` (`p483`) |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | AI-native LMS — 142 MCP tools, Postgres RLS tenancy | 🟢 MIT · 1 062 B | 🟢 cloned `e137ca4` (`p483`) |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | block-based local-first adaptive workspace; 10+ LLM providers | 🟢 MIT · 1 068 B | 🟡 API + licence bytes |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 173 teacher skill definitions + hosted MCP server | 🔴 **CC BY-SA 4.0** (ShareAlike, code included) | 🟢 cloned `135d627` |
+
+🔵 **Six rows, all real, all licence-verified from bytes.** The shelf minimum is five; this is six
+and no row is padding. 🔴 One of the six (`education-agent-skills`) is **not permissively licensed**
+and is listed with that marked, because a foundation a studio cannot build on commercially without
+ShareAlike obligations is still a foundation the studio needs to know about.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 484-P`** | **DeepTutor's plugin contract is read, not exercised.** No plugin was written against `BaseTool`; the 4–6 week integration estimate above is inferred from structure and is uncalibrated (`Gap 483-Q` applies). |
+| 🟡 **`Gap 484-Q`** | **`OpenTutor` (152★) is on this shelf on API metadata and licence bytes only.** It is described as local-first with 10+ providers; nothing was cloned, so its provider abstraction is a README claim, not a measurement. |
+| 🟡 **`Gap 484-R`** | **The sandbox is the least-examined part of the most-examined row.** `services/sandbox/` was enumerated by filename; `quota.py`, `backends.py` and `runner/server.py` were not read. For a platform whose tenancy story depends on isolation, that is the wrong file to have skipped. |
+
 ## 🆕 `p483` — `2026-10-27` — **🟢 `Gap 482-C` CLOSED, AND IT IS THE FIND OF THE CYCLE: `OpenOLAT` — the institutional Java LMS this base graded "on its grant alone" — ships a **four-provider AI SPI including a local-ONNX backend**, a **66-file native MCP server on the official MCP Java SDK 2.1.0**, and an AI essay-grading pipeline with **five pre-filters and a plausibility check**. 🔴 It also exposes GitHub's licence field as an unreliable instrument: the API says `NOASSERTION`, the LICENSE bytes and every source header say Apache-2.0.**
 
 🔵 Measured first-hand at commit **`96546d9`**, cloned `--filter=blob:none --depth 1` (26,015 files in tree,

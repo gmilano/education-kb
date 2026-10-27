@@ -3,6 +3,57 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+
+## 🆕 `p484` — `2026-10-27` — **🟢 `p483`'s FIRST-HAND VERDICT NOW HAS INDEPENDENT CORROBORATION: a secondary comparison reaching seven institutional LMS platforms finds **none** with production-ready native AI — which is the same answer `p483` got by censusing module paths, from a channel sharing no method with it. 🔴 And the largest teacher-tooling product on this shelf turns out to be **ShareAlike**.**
+
+🔵 This shelf's brief is *"real systems that can be customized with AI on top"*. Two things changed
+this pass: one claim was independently reproduced, and one licence was read for the first time.
+
+### 🟢 The institutional-LMS nil, reproduced on a second instrument
+
+🔵 `p483` measured by **path-name census** over cloned trees (tokens: `ai`, `llm`, `mcp`, `genai`,
+`openai`, `anthropic`, `ollama`, `chatbot`) and found no AI surface in Sakai, uPortal, Tsugi or
+Opencast — with `Gap 483-I` honestly flagging that a differently-named module would be missed.
+
+🟢 **An independent secondary comparison (April 2026) reports Canvas, Chamilo, ILIAS, Sakai, ATutor,
+Forma and Frappe with no production-ready native AI features**, AI arriving via third-party plugins,
+and Moodle's 4.5 AI subsystem characterised as early-stage. 🔵 Two instruments sharing no method —
+one reading code, one reading the market — return the same verdict. 🟢 `Gap 483-I`'s worry was
+reasonable and is now substantially relieved: the path-name census was not producing a false nil.
+
+### The shelf, as it stands after two passes of measurement
+
+| platform | licence | AI surface | verdict for an engagement |
+|---|---|---|---|
+| [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 (bytes; API `NOASSERTION`) | 🟢 **4-provider AI SPI incl. local ONNX; 66-file native MCP server; AI essay grading with 5 pre-filters** | 🟢 **The only permissively-licensed institutional LMS that ships both.** Engagement = oversight configuration, not construction. |
+| [Moodle](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | 🟡 AI subsystem since 4.5, early-stage | 🟡 largest install base; copyleft; AI is a roadmap signal |
+| [Open edX](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 | 🟡 community plugins (Tutor AI), not production-standard | 🟡 AGPL is the blocker for most product work |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 MIT · 1 062 B | 🟢 142 MCP tools; 44 RLS enablements / 204 tenant policy clauses | 🟢 AI-native and permissive, but **99★** — small |
+| [Sakai](https://github.com/sakaiproject/sakai) · [uPortal](https://github.com/uPortal-Project/uPortal) · [Tsugi](https://github.com/tsugiproject/tsugi) · Opencast | mixed | 🔴 **none** (two instruments) | 🔴 institutional and AI-less — integration, not customisation |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🔴 **CC BY-SA 4.0** | 🟢 173 skill definitions + hosted MCP server (OAuth, access gating) | 🔴 **ShareAlike — see below** |
+
+### 🔴 The teacher-tooling row is not reusable on this shelf's usual terms
+
+🟢 `Gap 483-F` is closed from bytes: `education-agent-skills` (917★, 130 forks) is **CC BY-SA 4.0**,
+not an unknown. 🔴 Its root `LICENSE` scopes the grant to *"educational skills, documentation,
+examples, and curriculum materials"*, but **`mcp-server/LICENSE` drops the scope clause**, so the
+39-file hosted MCP server — OAuth `authorize`/`register`/`token`, `.well-known` discovery,
+`access.ts`, `tool-handler.ts` — is granted on the **same ShareAlike terms**.
+
+🔴 **What that means at proposal time:** a client deliverable derived from these skills *or this
+server* must itself be published under CC BY-SA 4.0. There is **no patent grant**. For a studio
+engagement with a proprietary deliverable this row is a **reference to read, not a base to fork** —
+the opposite of what its 917★ and `NOASSERTION` field suggested for the two passes it sat here
+unreadable.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🟡 **`Gap 484-S`** | **The corroborating comparison is a vendor-adjacent blog, not a study.** It agrees with `p483`'s code census, which is why it is reported — but two sources agreeing is not a methodology, and the secondary one has no visible sampling frame. |
+| 🟡 **`Gap 484-T`** | **Moodle, Open edX, Sakai, uPortal and Tsugi licences on this shelf are carried, not byte-verified.** `raw.githubusercontent.com` is reachable this pass and these five were **not** probed — a cheap closure left undone because the pass spent its budget on DeepTutor. One loop, next pass. |
+| 🟡 **`Gap 484-U`** | **No vertical platform on this shelf has been measured for LATAM deployment or Spanish/Portuguese localisation**, which is the question a LATAM engagement actually asks of an LMS. |
+
 ## 🆕 `p483` — `2026-10-27` — **🟢 THE VERTICAL QUESTION THIS SHELF EXISTS TO ANSWER NOW HAS AN ANSWER: of every permissively-licensed institutional LMS this base tracks, exactly **one** ships both an AI provider abstraction and a native MCP server — `OpenOLAT`. Everything else is either AI-native-and-small (`mentingo`, 99★) or institutional-and-AI-less (`Sakai`, `uPortal`, `Tsugi`).**
 
 🔵 The shelf's standing brief is "real systems that can be customized with AI on top". That phrasing assumes

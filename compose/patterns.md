@@ -3,6 +3,117 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+
+## 🆕 `p484` — `2026-10-27` — **🟢 FOUR RECIPES, EVERY NAMED COMPONENT LICENCE-VERIFIED FROM BYTES THIS PASS. The pattern that changed: `P484-1` can now be written at all, because the platform at its centre was finally read — and it carries a licence caveat no earlier pass could have stated.**
+
+🔵 Every repository named below was cloned at a stated commit this pass or in `p483`, or had its
+`LICENSE` fetched from `raw.githubusercontent.com` this pass. 🔴 Effort ranges remain **uncalibrated
+estimates** (`Gap 483-Q`) — relative ordering, not quotes.
+
+---
+
+### `P484-1` — Self-hosted tutoring platform with per-tenant tool governance
+
+🔵 **For:** a university or ministry that wants an AI tutor it operates itself, with defensible
+limits on what the agent may touch per user.
+
+| layer | component | licence (verified) |
+|---|---|---|
+| platform | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) `a31d826` | 🔴 Apache-2.0, **6 operative deviations** |
+| tenancy | DeepTutor `multi_user/tool_access.py` — grant v2, deny-by-default MCP + CLI | — |
+| egress control | DeepTutor `services/mcp/network.py` — two postures, connect-time revalidation | — |
+| isolation | DeepTutor `services/sandbox/` — `quota.py`, `backends.py`, `runner/server.py` | — |
+| institutional data | [OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) `96546d9` MCP server as the LMS-side tool source | 🟢 Apache-2.0 (bytes) |
+
+🟢 **Wiring:** run DeepTutor as the MCP **host**; register OpenOLAT's native MCP server as a
+deployment-tier server in `mcp.json` (deployment tier keeps the permissive network posture — it is
+your own LMS); grant each cohort an explicit MCP tool whitelist, because for non-admin users an
+absent grant means **no MCP tools are listed or loadable at all**. Students get read tools;
+instructors get the write set; nobody gets the ungranted remainder by default.
+🔵 **Why these two and not a build:** DeepTutor supplies the plugin contract, tenancy and sandbox;
+OpenOLAT supplies the institutional record and its own MCP surface. Neither half is written here.
+🔴 **Diligence item to raise before signing:** DeepTutor's LICENSE deviates from canonical
+Apache-2.0 in six operative lines, one inside §4(d)'s NOTICE obligation. The grant clauses
+themselves are byte-identical, so this is a review note, not a blocker — but it is **counsel's call,
+and it must reach counsel**, which it would not have done before this pass.
+🔵 **Effort:** 8–10 weeks. 🟡 Uncalibrated.
+
+---
+
+### `P484-2` — Teacher co-pilot on an existing LMS, without forking the LMS
+
+🔵 **For:** a school system on Canvas that wants teacher-facing AI without touching the LMS.
+
+| layer | component | licence (verified) |
+|---|---|---|
+| LMS bridge | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) `becd181` — 128 tools | 🟢 MIT · 1 071 B |
+| pedagogy content | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) `135d627` — 173 skills | 🔴 **CC BY-SA 4.0** |
+| host | any MCP client; or DeepTutor for multi-user deployments | see `P484-1` |
+
+🔴 **The licence shapes this recipe, so it is stated before the wiring.** The skills **and** the
+bundled MCP server are ShareAlike with no patent grant. 🟢 **Use them as authored, with
+attribution** — that costs nothing. 🔴 **Do not derive a proprietary skill pack from them**: that
+triggers CC BY-SA 4.0 on your deliverable. If the client needs proprietary skills, author them fresh
+against the same MCP interface and keep the two sets in separate directories with separate licences.
+🔴 **Second control, from `p483`:** of `canvas-mcp`'s 51 write tools, **14 carry none of its three
+write-safety mechanisms**, and one of those writes a grade. Gate those 14 behind the host's grant
+layer, or exclude them from the teacher whitelist.
+🔵 **Effort:** 4–6 weeks. 🟡 Uncalibrated.
+
+---
+
+### `P484-3` — Grounded exam-prep and revision, cheap enough to run at cohort scale
+
+🔵 **For:** a LATAM or APAC institution with real cost pressure and material in slides and PDFs.
+
+| layer | component | licence (verified) |
+|---|---|---|
+| coach | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 MIT · 1 065 B |
+| self-hosted workspace | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) — local-first, 10+ providers | 🟢 MIT · 1 068 B |
+| RAG reference | [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) — LangGraph + FastAPI + Next.js | 🟢 Apache-2.0 · 0 deviations |
+
+🟢 **Wiring:** OpenTutor as the self-hosted workspace (local-first keeps student material on
+institutional infrastructure, which is the posture LATAM and MEA buyers ask for); the exam-prep
+skill as the study loop — it is built to run on **small cheap models** and cites source pages, which
+is the anti-hallucination control the pedagogy requires; `ai-tutor-app`'s LangGraph topology as the
+reference for grounding retrieval in a curated corpus rather than the open web.
+🟢 **Every component MIT or clean Apache** — this is the recipe with no licence caveat, and that is
+why it is the one to lead with when the deliverable must be proprietary.
+🔵 **Effort:** 4–5 weeks. 🟡 Uncalibrated.
+
+---
+
+### `P484-4` — Governance-first pilot for a jurisdiction writing its own policy
+
+🔵 **For:** a Canadian board, a MENA ministry or any buyer with **no template above them** — the
+situation `Gap 483-L` showed Canada to be in and the EMEA table shows across MEA.
+
+| layer | component | licence (verified) |
+|---|---|---|
+| platform | DeepTutor `a31d826` — grants, SSRF postures, sandbox quotas | 🔴 Apache-2.0, 6 deviations |
+| audit surface | DeepTutor `ToolParameter.sensitive` (secret withholding in traces) + `tool_call_stream.py` | — |
+| policy artefact | the deployment's own grant matrix, exported per cohort | deliverable |
+
+🟢 **The insight this pass supplies:** the four multi-tenant education repositories measured by this
+base all spend their engineering on **authorisation, isolation and egress** — not on model quality.
+A pilot that configures and *documents* those three, then hands the board the grant matrix as its
+acceptable-use policy, delivers the artefact the jurisdiction is missing. In Canada there is no
+provincial template to copy; in MEA there is a national strategy with nothing beneath it.
+🔴 **Do not sell this as compliance with a named instrument.** The EU dates this base holds are not
+primary-source verified (`Gap 483-K`), and no MEA jurisdiction in the EMEA table has a published
+education-AI procurement standard to comply with.
+🔵 **Effort:** 6–8 weeks. 🟡 Uncalibrated.
+
+---
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🟡 **`Gap 484-V`** | **Every effort range above is uncalibrated** — `Gap 483-Q` carries forward unchanged. No pattern in any pass has been checked against a delivered engagement. |
+| 🔴 **`Gap 484-W`** | **No recipe here has been built.** `P484-1`'s central claim — that OpenOLAT's MCP server registers cleanly as a deployment-tier server in DeepTutor's host — is inferred from both codebases' structure and **has not been executed** (`Gap 484-A`). It is the single most load-bearing untested assumption on this shelf. |
+| 🔴 **`Gap 484-X`** | **Still zero LATAM-origin components.** `P484-3` is aimed at LATAM and APAC buyers and is assembled entirely from North American and East Asian repositories, because `Gap 484-G` shows this base cannot currently *find* regional ones. The recipe is honest about its parts; the shelf is not yet honest about the region. |
+
 ## 🆕 `p483` — `2026-10-27` — **🟢 FOUR RECIPES, ALL BUILT FROM REPOSITORIES READ FIRST-HAND THIS PASS. The pattern that changed: `P483-3` no longer builds an AI assessment pipeline — `OpenOLAT` ships one, so the engagement is oversight configuration plus a FRIA, not construction.**
 
 🔵 Every repository named below was cloned and parsed at a stated commit, or read through the authenticated

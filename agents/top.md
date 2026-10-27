@@ -3,6 +3,135 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+
+## 🆕 `p484` — `2026-10-27` — **🟢 `Gap 483-R` IS CLOSED AND IT COST ONE CLONE: `HKUDS/DeepTutor` — 88.2 % of this base's star mass, never once read — is now measured at `a31d826`, and its Apache-2.0 grant is **NOT the canonical text**. Six deviations sit in the *operative body*, one of them inside the §4(d) NOTICE obligation. 🟢 `Gap 483-F` is closed from bytes: `education-agent-skills` (917★) is **CC BY-SA 4.0** — ShareAlike, code included. 🔴 And `T483-1`'s institutional-vs-community axis is refuted by this base's own largest row.**
+
+🔵 **Why this pass could read what `p483` could not:** `Gap 483-C` declared the fetch channel down
+session-wide. It is not — it is a **host allowlist**, and `raw.githubusercontent.com` is on it. The
+full census is on [`intel/market.md`](../intel/market.md). Every licence figure below is **bytes
+fetched this pass**, not an API field.
+
+🔵 **Gate posture, unchanged from `p475`–`p483` (`Gap 446-A`):** `make hooks` **not attempted** — the
+industry KB is cloned outside the harness repo and the harness refuses execution of code arriving in
+a clone (`Code from External`). Nothing here is gate-attested. Frontmatter keys and closed-vocabulary
+`region` were re-checked by hand on all nine shelves: **9/9 pass**.
+
+### 🟢 `Gap 483-R` closed — the largest row in this base, read for the first time
+
+🟢 Cloned `--filter=blob:none --depth 1` at commit **`a31d826`**, tag **`v1.6.15`** (2026-10-19).
+
+| axis | measured |
+|---|---|
+| tracked files | **3 875** |
+| Python / TS+JS | **1 971** / **1 306** |
+| test files | **881** |
+| `ToolDefinition(` call sites (non-test) | **110** |
+| MCP surface | **51 files** — `services/mcp/{catalog,oauth,secrets,network,manager,session_state,user_config}` |
+| capability packages | **103 files** under `deeptutor/capabilities/` (reading, solve, mastery, obsidian, marginnote4, subagent, …) |
+| agent packages | **106 files** under `deeptutor/agents/` |
+| sandbox | `services/sandbox/` — `quota.py`, `backends.py`, `runner/server.py`, `spec.py` |
+
+🔵 **The architectural fact that reframes every comparison on this shelf:** DeepTutor is an MCP
+**host**, not an MCP server. Its 51 MCP files are *client-side* — a catalog, an OAuth flow, a secret
+store, per-user server config. `canvas-mcp` and `mentingo` are servers. Counting "tools" across the
+two kinds is not one population, and this base has been doing it. See `Gap 484-B`.
+
+### 🔴 The Apache-2.0 grant is not the canonical text — six operative-body deviations
+
+🔵 **Instrument.** Candidate LICENSE normalised (leading blanks stripped, truncated at
+`END OF TERMS AND CONDITIONS` → **176 operative lines**), diffed against the canonical Apache-2.0
+body. Reference: `kubernetes/kubernetes@master` LICENSE. 🟢 **Control: canonical vs
+`apache/.github` LICENSE → 0 deviations.** The instrument does not manufacture findings.
+
+| repository | licence bytes | operative-body deviations |
+|---|---|---|
+| [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) | 11 356 B | 🟢 **0** — appendix copyright fill-in only |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 11 386 B | 🟢 **0** — appendix fill-in + trailing newline |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 11 408 B | 🔴 **6** |
+
+🔴 **The three changed operative lines, quoted:**
+
+| § | canonical | DeepTutor `a31d826` |
+|---|---|---|
+| §1 *Contribution* | `submitted to Licensor for inclusion` | `submitted to the Licensor for inclusion` |
+| §1 *Contributor* | `received by Licensor and` | `received by the Licensor and` |
+| **§4(d)** NOTICE | `excluding those notices that do not` | **`excluding any notices that do not`** |
+
+🔴 **§4(d) is the one that is not cosmetic**, and the proof that it is unintentional is three lines
+above it: **§4(c) still reads `excluding those notices`**. The file disagrees with itself inside a
+single section. A drafted variation does not do that; a paraphrase pass over the file does.
+
+🔴 **Corroborating evidence that such a pass happened.** The APPENDIX boilerplate — non-operative, but
+diagnostic — has been replaced with text that is not Apache's and not anyone's:
+
+> `Please also get an "Alarm or alarm" copyright header and make that the reference to the Apache`
+> `License and the Disclaimer of Warranty (Alarm is the umbrella trademark for a collection of Open`
+> `Source projects).`
+
+🔵 **What this does and does not mean for reuse.** The grant clauses (§2 copyright, §3 patent, §5
+contributions, §7–§9 warranty/liability) are **byte-identical to canonical**. 🟢 The permissions
+Globant relies on are intact. 🔴 What is not intact is the assumption that *"the API says Apache-2.0"*
+means *"the Apache-2.0 text"* — on the biggest row in this base, it does not. Appendix copyright:
+`Copyright 2025 Data Intelligence Lab, The University of Hong Kong`.
+
+### 🟢 `Gap 483-F` closed — and the answer is a reuse constraint, not a formality
+
+🔴 `p483` could not read [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+(917★, 130 forks, pushed 2026-10-22) and filed it unusable. **It is `CC BY-SA 4.0`.**
+
+🔵 The scope question had to be asked twice, and the first answer would have been wrong. The **root**
+`LICENSE` (1 230 B) grants *"the educational skills, documentation, examples, and curriculum
+materials in this repository"* — wording that does not obviously reach source code, and the repo
+ships **28 TypeScript files**. 🟢 But `mcp-server/LICENSE` (978 B) exists and **drops the scope
+clause entirely**. The code is granted. It is granted **ShareAlike**.
+
+| component | files | grant |
+|---|---|---|
+| skill definitions | **173** `.md` under `skills/` | CC BY-SA 4.0 |
+| MCP server (OAuth `authorize`/`register`/`token`, `.well-known`, `access.ts`, `tool-handler.ts`) | **39** files under `mcp-server/` | CC BY-SA 4.0 |
+
+🔴 **Consequence for an engagement:** a derivative skill pack *or a derivative of the server* must be
+released under CC BY-SA 4.0. CC licences carry **no patent grant**, and Creative Commons itself
+advises against applying them to software. This row is **not** interchangeable with the MIT/Apache
+rows on this shelf, and no prior pass said so because no prior pass could read the file.
+
+### 🟢 Two NOASSERTIONs, one mechanism — the licence-field defect is now explained
+
+🔵 `p483` found `OpenOLAT`: API `NOASSERTION`, bytes Apache-2.0. `p484` finds
+`education-agent-skills`: API `NOASSERTION`, bytes CC BY-SA 4.0. Two points, **same direction**
+(under-report), and now a **named cause**: both ship a *human-readable notice* that links to the
+legalcode (`…/legalcode`, `apache.org/licenses/`) instead of embedding it, which is precisely what
+GitHub's licence detector cannot match. 🟢 This is a mechanism, not a correlation — and it predicts
+where the next false `NOASSERTION` will be found.
+
+### The panel — every licence below verified from bytes this pass
+
+| repository | ★ | licence (bytes, fetched `2026-10-27`) | read depth |
+|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 45,240 | 🔴 Apache-2.0 · 11 408 B · **6 operative deviations** | 🟢 cloned `a31d826` |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 917 | 🔴 **CC BY-SA 4.0** · 1 230 B + 978 B | 🟢 cloned `135d627` |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 355 | 🟢 MIT · 1 065 B | 🟡 API + licence bytes |
+| [AkshitIreddy/AI-Powered-Video-Tutorial-Generator](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 317 | 🟢 MIT · 1 070 B | 🟡 API + licence bytes |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 308 | 🟢 MIT · 1 071 B | 🟢 cloned `becd181` (`p483`) |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 152 | 🟢 MIT · 1 068 B | 🟡 API + licence bytes |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 99 | 🟢 MIT · 1 062 B | 🟢 cloned `e137ca4` (`p483`) |
+| [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | 33 | 🟢 Apache-2.0 · 11 386 B · **0 deviations** | 🟡 API + licence bytes |
+| [braiinz94/braiinz-education](https://github.com/braiinz94/braiinz-education) | — | 🟢 Apache-2.0 · 11 356 B · **0 deviations** | 🟡 licence bytes only |
+
+🔵 **Nine rows, all real, all licence-verified from bytes.** Two are new to this shelf this pass
+(`OpenTutor`, `AI-Powered-Video-Tutorial-Generator`); `braiinz-education` carries no star figure
+because the API read that would supply it was not run for this row — recorded rather than guessed.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 484-A`** | **Still nothing executed** — `Gap 483-A` carries forward unchanged. DeepTutor was cloned and parsed; it was not run. Whether `services/mcp/network.py` actually rejects a rebinding DNS record, whether `multi_user/tool_access.py` actually denies a non-admin an ungranted MCP tool, and whether the sandbox quota holds are **unverified behaviourally**. Four passes have now read code and none has run any. |
+| 🔴 **`Gap 484-B`** | **This shelf compares MCP hosts with MCP servers as one population.** DeepTutor is a host (51 client-side files, 110 internal tool definitions); `canvas-mcp` (128 tools) and `mentingo` (142) are servers. Tool counts across the two are **not commensurable**, and `p481`–`p483` ranked them as if they were. The panel above does not repeat that; the prose on older sections still does. |
+| 🟡 **`Gap 484-C`** | **The Apache deviation instrument has been run on 3 of this base's Apache rows, not all of them.** `p481` reported 6 of 13 Apache repositories carrying non-canonical text on a different (unnormalised) instrument. Those 13 have **not** been re-graded on the normalised 176-line instrument with its green control, so the base currently holds two incompatible deviation figures. |
+| 🟡 **`Gap 484-D`** | **`braiinz94/braiinz-education` has a verified licence and no verified popularity, scope or activity.** It entered via a search result and was licence-probed only. It is published with a blank star cell rather than omitted, but it is the least-measured row on the shelf. |
+| 🟡 **`Gap 484-E`** | **DeepTutor's 110 `ToolDefinition` call sites were counted, not classified.** No read/write split, no annotation census, no guard mapping — the three things this base has for `canvas-mcp` and `mentingo`. The largest row is now read once; it is not yet read to the depth of the small ones. |
+
 ## 🆕 `p483` — `2026-10-27` — **🔴 `Gap 482-B` RESTS ON A FALSE PREMISE: `Selleo/mentingo` DOES annotate its MCP tools — **50 tools declare `readOnlyHint: true`, 21 declare `destructiveHint: true`** — so this base's published claim that its tools are "classified by name, not by reading them" describes the *reader*, not the repository. 🔴 The population is **142 unique tools, not 104**. 🟢 And `Gap 482-E` is closed: the 51 `CANVAS_WRITE` tools in `canvas-mcp` resolve to **three** distinct write-safety mechanisms, with **14** carrying none of them — one of which writes a grade.**
 
 🔵 **Gate posture, unchanged from `p475`–`p482` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is

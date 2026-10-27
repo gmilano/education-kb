@@ -3,6 +3,172 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+
+## 🆕 `p484` — `2026-10-27` — **🔴 `Gap 483-C` IS WRONG IN THE DIRECTION THAT MATTERS: the fetch channel is **not** down session-wide. It is a CONNECT-level **host allowlist**, and `raw.githubusercontent.com` is *on* it — so licence bytes were primary-source verified this pass while `eur-lex.europa.eu` stayed unreachable. 🟢 `Gap 483-M` (Middle East / Africa, open four passes) and `Gap 483-N` (APAC adoption) both close with content. 🟢 `Gap 483-L` closes: Canada has **no** federal K-12 AI instrument, and that absence is the finding. 🔴 `Gap 483-O` (LATAM supply) does **not** close — but the nil is now measured, and the instrument is the thing that is broken.**
+
+---
+
+### 🔴 The instrument correction, first — every claim below inherits it
+
+🔴 `p483` published: *"The fetch channel is down session-wide, so **no URL of any kind** can be
+primary-source verified this pass."* That generalised from a set of failures that happened to share
+a cause, and it is **false**. The failures are a **proxy allowlist decision at CONNECT time**, not a
+transport fault, and the allowlist has GitHub's raw content host on it.
+
+🟢 **Measured this pass, every host probed directly:**
+
+| host | result | consequence for this base |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200**, real bytes (11 408 B returned) | 🟢 **Licence text is first-hand verifiable.** |
+| `pypi.org` | 🟢 **200** | 🟢 reachable (sits in the proxy's `noProxy` set) |
+| `api.github.com/rate_limit` | 🟢 **200** | 🟡 host resolves |
+| `api.github.com/repos/{owner}/{repo}` | 🔴 **403** | 🔴 unauthenticated API reads refused — use the authenticated tool |
+| `codeload.github.com` | 🔴 **403** | 🔴 tarball fetch refused; `git clone` works instead |
+| `github.com` (HTML) | 🔴 **403** | 🔴 no page scraping |
+| `gitlab.com` | 🔴 **429** | 🔴 non-GitHub forges effectively closed |
+| `eur-lex.europa.eu` · `unesco.org` · `arxiv.org` · `example.com` | 🔴 **CONNECT refused** | 🔴 no general-web primary sourcing |
+
+🔵 The proxy's own failure log names the mechanism rather than leaving it to inference:
+`connect_rejected` — *"gateway answered 403 to CONNECT (policy denial or upstream failure)"*. 🔵
+`example.com` failing identically to EUR-Lex is what misled `p483`: a control that is *also* off the
+allowlist proves nothing about transport.
+
+🟢 **The standing `curl -sI` verification step is executable again — for GitHub-hosted artefacts.**
+Note that `-I` (HEAD) is itself refused where `GET` succeeds, so the standing step's *method* was a
+second confound. 🔴 **Unchanged:** every non-GitHub citation on every shelf, including every figure
+in the regional sections below, remains a **secondary source**. The EU dates still are not
+primary-source verified (`Gap 483-K` carries forward untouched).
+
+---
+
+## Opportunities by region
+
+### North America
+
+🟢 **`Gap 483-L` closes, and the answer is an absence with a shape.** Canada has **no federal K-12
+AI instrument**. Education is a provincial competence, and the provinces have not converged:
+
+| jurisdiction | posture (2026) |
+|---|---|
+| British Columbia | publishes *Considerations for Using AI Tools in K-12 Schools*; explicitly expects district-level variation |
+| Nova Scotia | 🔴 **no provincewide policy**; delegated to regional centres for education |
+| Ontario | no ministry AI memorandum; board guidance ranges from a full document to a single sentence |
+| Vancouver School Board | 2026 student guidelines: approved tools, verify outputs, disclose AI use |
+| Halton DSB | **parental consent required** before generative-AI classroom use |
+
+🔵 Federally, the Council of Ministers of Education, Canada (CMEC) is championing a pan-Canadian
+discussion as of June 2026, and the Canadian Teachers' Federation has asked for national guidance
+co-developed with teachers. 🟡 All of this is secondary-source.
+
+🔵 **The engagement shape this implies is different from the US one.** In the US the buyer is
+navigating a dense and contested state-law surface; in Canada the buyer is a **district or board
+writing its own policy with no provincial template**. A Globant offer that includes the governance
+artefact — acceptable-use policy, disclosure rules, consent handling — is doing work the province
+has not done, not duplicating it.
+
+🔴 The US figure *"134 bills across 31 states"* carried from `p483` is **still one tracker**, and
+`p455` recorded three other trackers disagreeing by up to 2.6×. Not re-verified this pass; do not
+quote it as settled.
+
+### EMEA
+
+🟢 **`Gap 483-M` closes with content after four passes.** This base has carried "EMEA" while holding
+only European evidence. The Middle East and Africa now have named instruments:
+
+| country | instrument / event | date |
+|---|---|---|
+| Saudi Arabia, UAE, Qatar | advanced national AI strategies with large-scale **education** initiatives (EdTech Hub MENA brief) | Jan 2026 |
+| Kenya | National AI Strategy 2025–2030 — AI literacy embedded in education; DigiKen innovation hubs as curriculum anchors | Mar 2025 |
+| Ghana | National AI Strategy 2025–2035 — **education named as the first pillar** | 2025 |
+| Rwanda | three-year MoU with Anthropic covering health, **education** and public sector | Feb 2026 |
+| Egypt | council renamed *National Council for AI, Quantum Computing and Emerging Technologies* | Jan 2026 |
+| Egypt, Morocco, Jordan | capacity-building via public–private partnerships | 2026 |
+| 🔴 South Africa | draft National AI Policy **withdrawn 26 Apr 2026** after fake, AI-hallucinated citations were found in its reference list | Apr 2026 |
+
+🔴 **The South African withdrawal is the most instructive item in this table** and belongs in any
+public-sector pitch: an AI policy document was retracted because of an AI failure inside its own
+drafting process. It is the cheapest available argument for provenance and citation-verification
+controls as a deliverable rather than a nicety. 🟡 Secondary-source (encyclopedia entry); verify
+before putting it in front of a client.
+
+🔵 **Europe unchanged this pass.** Regulation (EU) 2026/1744 moving stand-alone high-risk education
+systems to 2 December 2027, the 24 July 2026 OJ date, and the unmoved 2 August 2026 Art. 50
+transparency date all stand on three independent secondary sources and **no primary text** — EUR-Lex
+is off the allowlist (see the census above). `Gap 483-K` is untouched.
+
+🔵 **Opportunity.** The MEA set is strategy-rich and implementation-poor — national strategies naming
+education, with no published procurement or reference architecture behind them. That is the gap a
+studio fills, and it is a materially less crowded field than the EU AI Act compliance market.
+
+### APAC
+
+🟢 **`Gap 483-N` closes — the region has adoption numbers, not just regulation.** The Digital
+Education Council's *AI in Higher Education Global Survey 2026* reports **45 398 responses across 35
+countries**:
+
+| measure | value |
+|---|---|
+| students using AI in their learning | **88 %** |
+| faculty using AI in their teaching | **77 %** |
+| 🟢 **APAC** intent to use AI in teaching | **92 %** |
+| 🟢 **APAC** faculty excitement about AI | **57 %** vs **26 %** US/Canada |
+
+🔴 **The APAC/North-America excitement gap is 31 points, and it reverses the usual assumption** that
+adoption pressure originates in North America. A second figure points the same way: faculty intent
+in the US and Canada **fell 9 points**, 76 % → 67 %, between the 2025 and 2026 surveys, while APAC
+intent sits at 92 %.
+
+🟡 **Caveat, stated rather than buried:** the DEC report itself could not be fetched — its host is
+off the allowlist — so every figure above is read through aggregators. Those aggregators **disagree**
+on at least one sub-figure (Chinese student enthusiasm is reported as both 80 % and 92 % for the
+same survey), which is direct evidence that the chain is lossy. Treat the headline 88/77 and the
+APAC 92 % as well-corroborated; treat country splits as unverified.
+
+🔴 Still missing: **no 2026 APAC K-12 teacher survey** was located, and no country-level figure for
+India or Japan. The APAC numbers this base holds are **higher-education only**.
+
+### LATAM
+
+🔴 **`Gap 483-O` does not close — but it is no longer an unexplained silence, it is a measured nil
+with a diagnosed cause.** Two discovery queries were run against GitHub this pass:
+
+| query | result |
+|---|---|
+| Spanish/Portuguese education-tutor terms · `language:Python` · `stars:>5` · `pushed:>2026-01-01` | **1 repository**: `EonCyber/tutoria-ia-2.0` (6★) — **course material for an AI tutoring class, not tooling** |
+| `tutor OR educación OR educativo OR ensino OR escola` · `stars:>3` · `topic:ai` · `pushed:>2026-06-01` | **207 results, zero LATAM-origin education projects** |
+
+🔴 **The second query is the finding.** 207 hits and not one of them regional: the result set is
+dominated by large English-language *awesome-lists* that merely contain the keywords somewhere in a
+README. **GitHub full-text relevance is not a discriminating instrument for non-English education
+terms**, which means four passes of "no LATAM repository found" have been measuring the search
+engine, not the region. That is a different claim from "LATAM produces no education AI", and this
+base has been publishing the wrong one.
+
+🟢 **Remedy for the next pass, concrete:** stop querying by language keyword. Query by **owner
+location** and by **known regional organisations** (CENIA, Latam-GPT participants, Fundación Ceibal,
+Geekie, national ministries' GitHub orgs), and probe those owners' repository lists directly.
+
+🔵 **Demand-side, carried and not re-verified this pass:** Linux Foundation reporting puts open-source
+AI use at **38 %** of LATAM organisations, led by **Mexico 65 %** and **Brazil 46 %**, with open
+models costing materially less than proprietary alternatives — the argument that makes permissive
+licensing a regional procurement issue and not only an engineering one. 🟡 Secondary-source.
+🔵 Regionally, Brazil's PL 2.338/2023 remains the most developed framework; Colombia runs on policy
+(CONPES 4144, Feb 2025) rather than statute; **Mexico still has no enacted AI law**. 🔴 Education-side
+reporting continues to describe adoption in LATAM school systems as *"very limited"* with the digital
+divide and teacher digital skills as the named barriers — i.e. the regional opportunity remains
+**capacity-building, not tool supply**.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 484-F`** | **No non-GitHub URL on any shelf is primary-source verified, and now the reason is precise.** `Gap 483-C` is corrected but its *consequence* stands for everything outside `raw.githubusercontent.com` and `pypi.org`. Every regional figure in this section is secondary. |
+| 🔴 **`Gap 484-G`** | **`Gap 483-O` is reopened on a new axis: the discovery channel, not the region.** 207 results with zero regional hits proves the query is non-discriminating. Until an owner-location or named-organisation sweep is run, this base cannot distinguish "LATAM builds nothing" from "GitHub search cannot find it". |
+| 🟡 **`Gap 484-H`** | **APAC evidence is higher-education only.** No 2026 K-12 teacher survey, no India or Japan country figure. The 92 % intent number should not be generalised to school systems. |
+| 🟡 **`Gap 484-I`** | **The DEC survey is cited through aggregators that demonstrably disagree.** The 88 %/77 % headline is corroborated across sources; the country splits are not, and one sub-figure differs by 12 points between two reports of the same study. |
+| 🟡 **`Gap 484-J`** | **MEA evidence is strategy documents, not outcomes.** Every row in the EMEA table names a strategy, an MoU or a renaming. None names a deployment, a budget line or a measured result. The South Africa withdrawal is the only item with a verifiable event behind it, and it is sourced to an encyclopedia entry. |
+| 🟡 **`Gap 484-K`** | **The US "134 bills / 31 states" figure is three passes old and contested by three other trackers.** Carried, not re-verified, and flagged here so it is not quoted as settled. |
+
 ## 🆕 `p483` — `2026-10-27` — **🔴 `Gap 482-F`'s DIAGNOSIS IS WRONG AND THE CORRECTION MATTERS MORE THAN THE DATE: EUR-Lex is not "DNS-blocked at the proxy". **Every host tried this pass fails identically** — including a US commercial news site and a non-governmental AI-Act tracker. The fetch channel is down session-wide, so **no URL of any kind can be primary-source verified this pass**. 🟢 Separately, a third independent source now corroborates Regulation (EU) 2026/1744 **and** dates its Official Journal publication to 24 July 2026. 🟢 And NA governance is now countable: **134 bills across 31 states**, with four states mandating district-level policy.**
 
 ---

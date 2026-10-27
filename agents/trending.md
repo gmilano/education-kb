@@ -3,6 +3,47 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+
+## 🆕 `p484` — `2026-10-27T16:50Z` — two rows enter the panel with licences verified from **bytes** rather than API fields, and the leader is measured from source for the first time in its history on this shelf
+
+🔵 Discovery this pass ran through the **authenticated GitHub API** (search), with every licence
+claim then verified independently by fetching `LICENSE` from `raw.githubusercontent.com` — a channel
+`Gap 483-C` declared unavailable and which **works** (host census on
+[`intel/market.md`](../intel/market.md)). Two queries, 4 and 207 results respectively.
+
+### 🟢 Entering the panel this pass
+
+| repository | ★ | licence (bytes) | why it enters |
+|---|---|---|---|
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 355 | 🟢 MIT · 1 065 B | Exam-prep coach as an **agent skill** rather than an app — targets Claude Code, Cursor, Codex, Antigravity. Slide-grounded with page citations and figure cropping; explicitly built to run on small cheap models. Pushed **2026-10-27**. |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 152 | 🟢 MIT · 1 068 B | Block-based adaptive workspace, **local-first/self-hosted**, 10+ LLM providers, knowledge graph + spaced repetition. 36 forks, 53 open issues — live. |
+| [AkshitIreddy/AI-Powered-Video-Tutorial-Generator](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 317 | 🟢 MIT · 1 070 B | Desktop tutorial-video generator — illustrated lessons, presenters, timeline; local models *and* cloud providers. Pushed 2026-10-27. |
+| [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | 33 | 🟢 Apache-2.0 · 11 386 B · **0 deviations** | Small, but the clearest **agentic-RAG reference implementation** on this shelf: LangGraph agent, FastAPI + Next.js, grounded in a curated corpus. |
+
+### 🔴 The leader, measured instead of counted
+
+🔵 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) has appeared on this shelf for many passes
+as a star figure. 🟢 This pass it was **cloned** (`a31d826`, tag `v1.6.15`, 2026-10-19): 3 875 files,
+110 tool definitions, 51 MCP-host files, 881 test files. 🔴 Its Apache-2.0 text carries **6
+operative-body deviations**, including inside the §4(d) NOTICE obligation. Full read on
+[`agents/top.md`](top.md).
+
+🔵 **Trend reading, stated narrowly:** three of the four entrants above ship **local or self-hosted
+execution** (`OpenTutor` local-first, the video generator with local models, the exam-prep skill
+tuned for small models). The fourth is a RAG reference. 🟡 Four repositories is a direction, not a
+measurement — but it is the same direction `p483` saw from the guard side.
+
+### 🔴 What this pass did **not** find, recorded so the silence is not mistaken for coverage
+
+🔴 **No LATAM-origin education repository, for the fifth consecutive interval** — and this pass
+established *why*: a 207-result query on Spanish/Portuguese education terms returned **zero**
+regional projects because GitHub full-text relevance surfaces large English awesome-lists instead.
+The channel is non-discriminating; the region is unmeasured, not empty. See `Gap 484-G`.
+🔴 **No star deltas this pass.** The panel's velocity column (`p483`'s 13-row comparison) was **not**
+recomputed — discovery spend went to first-hand source reads instead. Velocity resumes next pass.
+
+---
+
 ## 🆕 `p483` — `2026-10-27T15:58Z` — `Gap 482-D`/`481-E` CLOSED: the four repositories this base lost for four passes are re-read, and the panel is **13 rows, not 4** — DeepTutor decelerates for the first time in five intervals
 
 🔵 Read through the **authenticated GitHub API** with `repo:` qualifiers, 14 repositories across two queries

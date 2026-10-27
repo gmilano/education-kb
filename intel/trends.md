@@ -3,6 +3,115 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+
+## 🆕 `p484` — `2026-10-27` — **🔴 `T483-1` IS REFUTED BY THIS BASE'S OWN LARGEST ROW. The axis `p483` published — institutional vendors ship authorisation machinery, community projects ship tools — does not survive contact with `DeepTutor`: an academic/community project that ships deny-by-default tool grants, two-posture SSRF guards and connect-time DNS-rebinding revalidation. 🟢 The axis that *does* hold the four measured points is **multi-tenancy**, not provenance.**
+
+🔵 Eight trends. Those resting on first-hand code measurement are marked 🟢; those resting on
+secondary sources are marked 🟡. 🟢 Unlike `p483`, this pass **could** verify URLs — for
+GitHub-hosted artefacts only (see the host census on [`intel/market.md`](market.md)).
+
+### 🔴 `T484-1` — the guard-posture axis was provenance; it is actually multi-tenancy
+
+🔵 `T483-1` compared three repositories and concluded: *institutional ships guards before tools
+(`OpenOLAT`: 66 MCP files, one tool), community ships tools before guards (`canvas-mcp`: 128 tools,
+14 unguarded writes)*. 🟢 `Gap 483-P` correctly flagged that three points are a hypothesis. **The
+fourth point breaks it.**
+
+🟢 `HKUDS/DeepTutor` at `a31d826` — a university lab project, the most "community" row this base
+has by star count — ships:
+
+| mechanism | file | what it does |
+|---|---|---|
+| **deny-by-default tool grants** | `deeptutor/multi_user/tool_access.py` (113 lines) | For non-admin users an absent MCP grant means **no MCP tools listed or loadable**. Same posture for installed CLI apps, *"for the same reason: an installed app runs third-party code inside the sandbox."* Four named enforcement points. |
+| **SSRF guard, two trust postures** | `deeptutor/services/mcp/network.py` (185 lines) | Deployment servers lose link-local/metadata/`0.0.0.0/8`; **self-service** user-supplied servers additionally lose loopback and RFC1918. |
+| **DNS-rebinding defence** | same file | *"Validation is deliberately re-run at connect time, not only when a server is saved: a check that happens once at save time is defeated by a DNS record that changes afterwards."* |
+| **secret withholding** | `deeptutor/core/tool_protocol.py` | `ToolParameter.sensitive` keeps values out of trace events. |
+| OAuth + secret store | `services/mcp/{oauth,secrets}.py` | per-user remote MCP credentials |
+
+🔴 **That is a stronger authorisation posture than `p483` attributed to the institutional tier**, and
+it comes from the community tier. The provenance axis is dead.
+
+🟢 **The axis that fits all four points is whether the project serves multiple tenants.**
+`DeepTutor` (multi-user deployments), `OpenOLAT` (institutional LMS) and `mentingo` (44 RLS
+enablements, 204 tenant policy clauses) all run multi-tenant and all ship grant machinery.
+`canvas-mcp` is a **single-user bridge to one person's Canvas token** — and ships none. Guards track
+*who else is on the system*, not who wrote it.
+
+🔵 **A precision note so the next pass does not inflate this.** `deeptutor/runtime/agentic/tool_arg_guard.py`
+(225 lines) reads like a guard and is **not** one: it catches models emitting empty `arguments`
+(issue #779) and returns a corrective message. That is **reliability, not authorisation**. Counting
+it would overstate DeepTutor's posture by a file.
+
+### 🔴 `T484-2` — "the API says Apache-2.0" is not "the Apache-2.0 text", proved on the biggest row
+
+🟢 DeepTutor's LICENSE carries **6 operative-body deviations** from canonical Apache-2.0 on a
+normalised 176-line instrument with a green control, including **§4(d) `any notices` where canonical
+says `those notices`** — while §4(c) three lines above still says `those`. Two comparator Apache rows
+(`braiinz-education`, `ai-tutor-app`) score **0**. Full table on [`agents/top.md`](../agents/top.md).
+🔵 The grant clauses themselves are byte-identical, so this is a **diligence** finding, not a
+blocker — but it means the licence *field* and the licence *text* are different instruments, and
+this base has been treating them as one.
+
+### 🟢 `T484-3` — GitHub's licence detector under-reports, and the mechanism is now named
+
+🟢 Two `NOASSERTION` rows resolved from bytes in two passes, both **under**-reported: `OpenOLAT`
+(really Apache-2.0, `p483`) and `education-agent-skills` (really CC BY-SA 4.0, `p484`). 🟢 Shared
+cause: both ship a **human-readable notice linking to the legalcode** rather than the legalcode
+itself, which the detector cannot match. 🔵 This predicts the next false negative rather than merely
+describing the last two.
+
+### 🔴 `T484-4` — the permissive assumption fails at the top of the teacher-tooling tier
+
+🟢 The largest teacher-facing skill collection this base tracks —
+[`education-agent-skills`](https://github.com/GarethManning/education-agent-skills), 917★, 173 skill
+files — is **CC BY-SA 4.0**, and its `mcp-server/LICENSE` drops the content-scope clause so the
+**28-file TypeScript MCP server is ShareAlike too**. 🔴 Derivatives must be released under the same
+licence; CC grants **no patent rights**; Creative Commons advises against CC for software. 🔵 The
+shelf brief is *"MIT / Apache 2.0 / BSD — the ones Globant can build on"*. The biggest row in this
+category is none of them, and that was invisible while the licence was unreadable.
+
+### 🟢 `T484-5` — the fetch channel is an allowlist, and that changes what this base can assert
+
+🟢 `raw.githubusercontent.com` → 200 with real bytes; `eur-lex.europa.eu`, `unesco.org`, `arxiv.org`
+→ CONNECT refused. 🔵 The operational consequence: **licence and source claims can be made
+first-hand; regulatory and market claims cannot.** Those are different confidence tiers and this
+base should stop presenting them in the same voice. 🔴 `p483`'s "nothing is verifiable" was a
+generalisation from a control that was itself off the allowlist.
+
+### 🟡 `T484-6` — funding has narrowed to applications with a measurable task
+
+🟡 EdTech venture funding reported at **~$1 B in H1 2026, down 26 % YoY**, with investors backing
+**tutoring, grading, language learning and workforce skills** over generic education chatbots. 🔵
+That is the same selection pressure this base sees in the repository population: the rows that grow
+are the ones bound to a specific task (exam prep, grading, note generation), not the ones offering a
+general assistant. 🟡 Aggregator-sourced.
+
+### 🟡 `T484-7` — agents are deployed in pilots, not in operations
+
+🟡 *Bridges 2026* reporting finds **relatively few districts and colleges have AI agents in
+day-to-day operations**, against near-universal stated intent (APAC 92 %, students 88 %). 🔵 The
+intent/production gap is this industry's version of the pattern `technology` recorded as
+*"the gap is the business"* — and in education the blocker is visibly governance, because the four
+multi-tenant repositories measured above all spend their engineering on grants and isolation.
+
+### 🟡 `T484-8` — institutional LMS AI is still plugin-shaped, now corroborated independently
+
+🟡 A secondary comparison (Apr 2026) reports **Canvas, Chamilo, ILIAS, Sakai, ATutor, Forma and
+Frappe with no production-ready native AI features**, with capabilities arriving through third-party
+plugins; Moodle's 4.5 AI subsystem is characterised as early-stage. 🟢 This **independently
+corroborates `p483`'s first-hand path-name census**, which found no AI surface in Sakai, uPortal,
+Tsugi or Opencast, and leaves `OpenOLAT` as the single permissively-licensed institutional LMS with
+both an AI provider abstraction and a native MCP server.
+
+### 🔴 Declared gaps
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 484-L`** | **`T484-1`'s replacement axis has four points, which is one more than the hypothesis it replaced.** Multi-tenancy fits `DeepTutor`, `OpenOLAT`, `mentingo` and `canvas-mcp`, but four repositories are not the 305-repository live population `p480` counted. It is a better hypothesis, not a measured law. |
+| 🔴 **`Gap 484-M`** | **Every guard claim in `T484-1` is read from source and docstrings; none is executed** (`Gap 484-A`). A guard that is present is not a guard that works. |
+| 🟡 **`Gap 484-N`** | **`T484-6` and `T484-7` rest entirely on aggregator blogs** whose dates and figures conflict internally — one conflates a $400 M education commitment with a $1 B total at 40 %. No funding figure here should be quoted to a client without a primary check. |
+| 🟡 **`Gap 484-O`** | **`T484-3` is a two-point mechanism.** It explains both observed cases and predicts a third, but no pass has yet swept the base's `NOASSERTION` rows to test the prediction. That sweep is cheap and has not been run. |
+
 ## 🆕 `p483` — `2026-10-27` — **🟢 THE TREND THIS PASS CAN DEFEND FROM CODE: the differentiator in education AI has moved from *what the agent can do* to *what it is prevented from doing* — and the two postures are now measurable in the same units. Institutional vendors ship authorisation machinery before tools (`OpenOLAT`: 66 MCP files, scope model, permission exception, **one** tool). Community bridges ship tools before guards (`canvas-mcp`: 128 tools, 51 writes, **14 unguarded**).**
 
 🔵 Eight trends. Those resting on first-hand measurement are marked 🟢; those resting on secondary sources

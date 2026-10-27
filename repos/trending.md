@@ -3,6 +3,47 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+
+## 🆕 `p484` — `2026-10-27T16:50Z` — the discovery channel itself was measured this pass, and for non-English education terms it **does not work**
+
+🔵 Two GitHub searches were run, and the second is reported here as an **instrument result** rather
+than a result list, because that is what it turned out to be.
+
+| # | query | hits | education-relevant | LATAM-origin |
+|---|---|---|---|---|
+| 1 | `education AI tutor` · `language:Python` · `stars:>20` · `pushed:>2026-08-01` · `topic:education` | **4** | 4 | 0 |
+| 2 | `tutor OR educación OR educativo OR ensino OR escola` · `stars:>3` · `topic:ai` · `pushed:>2026-06-01` | **207** | ~0 | **0** |
+
+🔴 **Query 2 is the finding.** 207 hits, and the top of the ranking is
+`ai-engineering-from-scratch` (74 624★), `GenAI_Agents` (24 707★), `easy-vibe` (20 214★),
+`awesome-langchain`, `ai-collection` — large **English-language** curated lists that happen to
+contain the keywords somewhere in a README. Not one regional education project surfaced.
+
+🟢 **Diagnosis:** GitHub full-text relevance ranks by repository prominence, so a Spanish or
+Portuguese keyword inside a 20 000★ English list outranks an entire 50★ Spanish-language project.
+**The query measures the search engine, not the region** — which means this base's four prior
+"no LATAM repository found" entries are weaker claims than they were written as.
+
+🟢 **Replacement channel specified for the next pass:** query by **owner** rather than by keyword —
+CENIA, Latam-GPT participant institutions, Fundación Ceibal, Geekie, ministry GitHub organisations —
+and enumerate those owners' repositories directly. `p483`'s `org:apereo` result (30 repositories,
+not one of them an LMS) is precedent that owner-enumeration returns different, and more honest,
+answers than star-ranked discovery.
+
+### 🟢 Query 1 — the four, all licence-verified from bytes
+
+| repository | ★ | licence (bytes) | note |
+|---|---|---|---|
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 355 | 🟢 MIT · 1 065 B | pushed 2026-10-27; agent-skill form factor |
+| [AkshitIreddy/AI-Powered-Video-Tutorial-Generator](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | 317 | 🟢 MIT · 1 070 B | pushed 2026-10-27; Tauri desktop, local + cloud models |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 152 | 🟢 MIT · 1 068 B | local-first, 10+ providers, 36 forks |
+| [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | 33 | 🟢 Apache-2.0 · 11 386 B · 0 deviations | LangGraph + FastAPI + Next.js agentic RAG |
+
+🔵 **Four rows, four real repositories, stated as four** — the query returned four and the shelf is
+not padded to a round number.
+
+---
+
 ## 🆕 `p483` — `2026-10-27T15:58Z` — `Gap 482-H` CLOSED WITH A MECHANISM: star-ranked discovery misses institutional edtech because **the foundation's name is not its GitHub organisation** — `org:apereo` returns 30 repositories and **not one of them is an LMS, a portal or a lecture-capture system**
 
 🔵 `Gap 482-H` said star-ranked discovery is "a known blind spot with no replacement" and named the untried
