@@ -1,0 +1,104 @@
+addr	stars	head12	branch	path	bytes	sha256_12	family	grant_class	version	line1	sellable	basis
+ArnaudGuiovanna/tutor-mcp	56	8790a39f254b	main	LICENSE	1073	1e05c9440068	MIT	PERMISSIVE		1	1	first non-blank line
+24kchengYe/human-skill-tree	584	be589ddd04c9	master	LICENSE	1134	3fb8cda58638	AGPL-3.0	NETWORK_COPYLEFT	3.0	1	0	first non-blank line
+AarambhDevHub/exam-cheating-detection	47	a11879bf7d84	main	LICENSE	1068	98b6493d3452	MIT	PERMISSIVE		1	1	first non-blank line
+HKUDS/DeepTutor	43794	a31d82624c27	main	LICENSE	11408	cd2f54e1e506	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+DozenTwelve/Papermorph	957	7f5cda65c83f	main	LICENSE	1069	41857092247a	MIT	PERMISSIVE		1	1	first non-blank line
+GarethManning/education-agent-skills	914	135d6275e7db	main	LICENSE	1230	f952182df4eb	CC-BY-SA	CONTENT_NOT_SOFTWARE	4.0	1	0	first non-blank line
+Fazmin/AILearningGuide	233	81945284a546	main	LICENSE	1081	e29ef713b542	MIT	PERMISSIVE		1	1	first non-blank line
+CaviraOSS/PageLM	2049	a6646794661b	main	LICENSE.md	8563	c834209c5f33	NOT-OSI (# PageLM Community License)	UNSELLABLE		0	0	bespoke title recites a permissive grant form then restricts its scope
+Halleck45/OpenPronounce	163	74bc17ea406e	main	LICENSE	1113	6f4d9645aa9f	MIT	PERMISSIVE		1	1	first non-blank line
+HugeCatLab/ChatTutor	1315	7d9e9052bc5a	main	LICENSE	34522	20b067f86de3	AGPL-3.0	NETWORK_COPYLEFT	3.0	1	0	first non-blank line
+Jeremy-xuan/SocraticNovel	32	29fd550435b6	main	LICENSE	1227	593122cbd00b	CC-BY-NC-SA	UNSELLABLE	4.0	1	0	first non-blank line
+JudgePeach/math-question-bank	350	8fa17f28bd60	main	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	NETWORK_COPYLEFT	3.0	1	0	first non-blank line
+HumphreySun98/Smart-Study-Agent	57	1f0ab5c160f1	main	LICENSE	1067	ca229b6dc765	MIT	PERMISSIVE		1	1	first non-blank line
+KeWang0622/kaogong-skill	204	2af2115291bd	main	LICENSE	1083	a6943096ffde	MIT	PERMISSIVE		1	1	first non-blank line
+Li-Evan/Bloom	293	68788b5e7d34	main	LICENSE	1069	7d574cf3632e	MIT	PERMISSIVE		1	1	first non-blank line
+NickScherbakov/codementor-ai-platform	22	a0a33cd6d4f8	main	LICENSE	1072	7893452d41e0	MIT	PERMISSIVE		1	1	first non-blank line
+Kaustubh-Natuskar/moreThanFAANGM	5255	b2ce2c5df83a	main	LICENSE.txt	1082	fd290b160d8b	MIT	PERMISSIVE		1	1	first non-blank line
+Miaotofu01/Study-Mate	1219	d8114f383632	main	LICENSE	1064	dc1997d82189	MIT	PERMISSIVE		1	1	first non-blank line
+PapillonApp/papillon-v6	117	0550b47d7538	development	LICENSE	35149	3972dc9744f6	GPL	STRONG_COPYLEFT	3.0-or-later	1	0	first non-blank line
+PrepLabsAI/InterviewMentor	115	0dcc68a9da99	main	LICENSE	1071	aeb634f7110b	MIT	PERMISSIVE		1	1	first non-blank line
+SJRiz/pytogether	261	52021a40fdff	main	LICENSE	1073	7d90ce36bb2a	MIT	PERMISSIVE		1	1	first non-blank line
+A-R007/Multi-Agent-Study-Assistant	64	3c1c88b95a9d	main	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path
+Seeed-Studio/Seeed_Studio_Courses	78	e07138e1e630	main	LICENSE	1069	20d9e7381152	MIT	PERMISSIVE		1	1	first non-blank line
+SenmuuuuW/universal-diagnostic-tutor-skill	250	075c1895d255	main	LICENSE	1102	a9ca00bcc7a5	MIT	PERMISSIVE		1	1	first non-blank line
+Selleo/mentingo	98	e137ca47cbec	main	LICENSE	1062	ceb97717de1f	MIT	PERMISSIVE		1	1	first non-blank line
+SimonsTang/feifei-companion	109	c9c6295d220c	main	LICENSE	10227	59a378bf23a0	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+Sri-Krishna-V/awesome-adk-agents	351	5e7b580016a6	main	LICENSE	11357	c71d239df917	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+TovTechOrg/Tov-learn	36	290af750671a	master	LICENSE	1064	092d389ac156	MIT	PERMISSIVE		1	1	first non-blank line
+DAMO-NLP-SG/M3Exam	105	832a49585d1e	main	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path
+ZeKaiNie/universal-examprep-skill	320	3a979e3bead9	main	LICENSE	1065	21f44893f051	MIT	PERMISSIVE		1	1	first non-blank line
+Zenglian990/AI_Tutor_Release	72	904c0e4a367e	master	LICENSE	1068	695941afdd1f	MIT	PERMISSIVE		1	1	first non-blank line
+Wakoma/nimble	110	315910f164c0	master	LICENSE.txt	13419	d6475a84171f	CERN-OHL-S	STRONG_COPYLEFT	2	1	0	first non-blank line
+ably-labs/realtime-quiz-framework	77	c4c0cb0b30b5	main	LICENSE	11357	c71d239df917	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+aaryansamanta/nextgen-ai	491	50fd69681e2b	main	LICENSE	1327	31d2ea3bba94	MIT	PERMISSIVE		1	1	first non-blank line
+ahmedEid1/lumen	91	07635d3c81ad	main	LICENSE	35149	3972dc9744f6	GPL	STRONG_COPYLEFT	3.0-or-later	1	0	first non-blank line
+aieducations/edumcp	156	8b5122b865bb	main	LICENSE	11357	c71d239df917	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+Imboyeong/Fact-vs-Fiction-LLM-Test-	93	0e902dc6137e	main	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path
+ai-shifu/ai-shifu	329	172602693ac6	main	LICENSE.txt	11342	c00cbb6a47a7	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+aimclub/ai-competency-model	30	b593668833fd	main	LICENSE.md	1531	bbbc8f2f3ed4	BSD	PERMISSIVE		1	1	first non-blank line
+ankimcp/anki-mcp-server	535	e0e347f7f399	main	LICENSE	1074	0ef87fdb98da	MIT	PERMISSIVE		1	1	first non-blank line
+artcc/freelingo	208	269feb00c09a	main	LICENSE	34514	ea94d5765c59	AGPL-3.0	NETWORK_COPYLEFT	3.0	1	0	first non-blank line
+ashishpatel26/500-AI-Agents-Projects	39048	9beeb721c2af	main	LICENSE	1070	2108a479cb7f	MIT	PERMISSIVE		1	1	first non-blank line
+beltromatti/get-it	1135	ae0fa999f352	main	LICENSE	11359	d0622ead9e49	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+brycewang-stanford/Auto-Empirical-Research-Skills	4786	371a40e488c5	main	LICENSE	620	22401c14e67f	CC-BY-SA	CONTENT_NOT_SOFTWARE	4.0	1	0	first non-blank line
+assafkip/claudemy	465	438a6288fa74	main	LICENSE	1069	262b47ee1fff	MIT	PERMISSIVE		1	1	first non-blank line
+canyongbs/advisingapp	340	c79803f21cb8	main	LICENSE	3860	48255018b41f	Elastic-2.0	UNSELLABLE		1	0	first non-blank line
+chipmates/agoracosmica	149	8f829d9364e2	main	LICENSE	34523	8486a10c4393	AGPL-3.0	NETWORK_COPYLEFT	3.0	1	0	first non-blank line
+classroomio/classroomio	1732	eb7b7a09d479	main	LICENSE	34523	8486a10c4393	AGPL-3.0	NETWORK_COPYLEFT	3.0	1	0	first non-blank line
+clduab11/thinkrank	28	f289b2b07ecc	main	LICENSE	1071	699170d0cb87	MIT	PERMISSIVE		1	1	first non-blank line
+cuic19053-hue/awesome-student-ai-skills	131	476db72e06c9	main	LICENSE	1070	6fb44efa600b	MIT	PERMISSIVE		1	1	first non-blank line
+codeXsidd/Studivexa	72	6ac279946ca9	main	LICENSE	1068	58f77360830f	MIT	PERMISSIVE		1	1	first non-blank line
+edrys-org/edrys	334	9aae4c801f1b	main	LICENSE	16725	1f256ecad192	MPL-2.0	WEAK_COPYLEFT	2.0	1	0	first non-blank line
+dvbs2000/visible-ai	49	6c42da1869a1	main	LICENSE	1458	4b5ffb7babc5	CC-BY-NC	UNSELLABLE	4.0	0	0	body grant form, title names no family
+codeforlife-education/aimmo	117	c80bb3326d12	master	LICENSE.md	115	f406d19420ea	POINTER_CROSS_REPO (ocadotechnology/codeforlife-workspace@main/LICENSE.md)	POINTER_CROSS_REPO		0	0	short payload names the grant elsewhere
+g3i/lxHive	79	cffee6d90ca9	master	LICENSE	18092	8177f9751321	GPL	STRONG_COPYLEFT	2.0-or-later	1	0	first non-blank line
+aaryansamanta/ai-ethos	498	9acaafc718f2	main	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path
+elmsln/elmsln	253	41f22f98b16f	master	LICENSE.md	35193	0e6d22ed58b6	GPL	STRONG_COPYLEFT	3.0-or-later	1	0	first non-blank line
+iblai/lms	208	18f76c220561	main	LICENSE	1063	f1269b7b2313	MIT	PERMISSIVE		1	1	first non-blank line
+haxtheweb/haxcms-php	130	248f42c494a7	master	LICENSE.md	11362	b662f44e55e8	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+flysheep-ai/education-skills	118	b4c935210206	main	LICENSE	1068	23b91d7c0aef	MIT	PERMISSIVE		1	1	first non-blank line
+jcputney/scorm-again	359	86ab328f0e5b	master	LICENSE	1072	383b85b370e8	MIT	PERMISSIVE		1	1	first non-blank line
+kalvilabs/kalvi	116	24fb777175af	master	LICENSE	34523	8486a10c4393	AGPL-3.0	NETWORK_COPYLEFT	3.0	1	0	first non-blank line
+kirill-markin/flashcards-open-source-app	102	b4745e786376	main	LICENSE	1070	0e319ca9aaa9	MIT	PERMISSIVE		1	1	first non-blank line
+karanb192/algo-sensei	298	25ea970f82c5	main	LICENSE	1081	3b2ca73e81ad	MIT	PERMISSIVE		1	1	first non-blank line
+langx/langx	109	e8531c844a98	main	LICENSE	1520	19ec8f98fa19	BSD	PERMISSIVE		1	1	first non-blank line
+learning-commons-org/evaluators	87	b9d47891c1b8	main	LICENSE.md	1615	86c7be78af8b	COMPOSITE_PER_ASSET (MIT code + NonCommercial content)	COMPOSITE_PER_ASSET		0	0	permissive code grant plus a NonCommercial content asset
+learningequality/kolibri	1161	f72936bd41e5	develop	LICENSE	1097	3c056b34a476	MIT	PERMISSIVE		1	1	first non-blank line
+learning-commons-org/knowledge-graph	164	a7547180c47d	main	LICENSE.md	5789	d849ffef4f98	COMPOSITE_PER_ASSET	COMPOSITE_PER_ASSET		0	0	payload grants code and each data asset separately
+liuliu667/cram-engine	176	982cd31cc68e	main	LICENSE	1064	c33ea68946e4	MIT	PERMISSIVE		1	1	first non-blank line
+menthorlabs/menthor	582	94cedd7d4e02	main	LICENSE	11337	36d6788503b8	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+mytechnotalent/HNN	31	71bed70f1980	main	LICENSE	11357	c71d239df917	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+mytechnotalent/RE-GPT	29	233f60d1d8a2	main	LICENSE	11357	c71d239df917	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+hkalant/awesome-edtech-tools	216	4a12a9a535da	master	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path
+nichochar/ari	209	3b6ce8b76cee	main	LICENSE	1073	9234cc62970c	MIT	PERMISSIVE		1	1	first non-blank line
+onemnemo/mnemo	123	6dce04a20fbc	main	LICENSE	11326	62e02db7f9a1	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+jaltekruse/Free-Math	74	abaa2188a1f5	master	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path
+opena2a-org/damn-vulnerable-ai-agent	146	a7184bcc16a4	main	LICENSE	11358	cfc7749b96f6	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+pguso/agents-from-scratch	1062	da3f9df28a9c	main	LICENSE	1091	f78cc6bf1d57	MIT	PERMISSIVE		1	1	first non-blank line
+jude-miller-dev/Milky-institute-online	364	74827f56d16d	master	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path
+senjun-team/senjun-courses	161	525bb43f31a4	main	LICENSE	35149	3972dc9744f6	GPL	STRONG_COPYLEFT	3.0-or-later	1	0	first non-blank line
+sgaofen/vibe-schooling	80	7c2f87a4641b	main	LICENSE	1064	e0f7d73d5770	MIT	PERMISSIVE		1	1	first non-blank line
+scollovati/awesome-lti	79	f2279c4191d8	main	LICENSE	20131	7abe19ec9bb7	CC-BY-SA	CONTENT_NOT_SOFTWARE	4.0	1	0	first non-blank line
+shigella520/MindTrain	128	7115c484c77e	main	LICENSE	1067	8078815070f9	MIT	PERMISSIVE		1	1	first non-blank line
+sitor-ai/frametell	410	683b3e5e8cfa	main	LICENSE	34523	0d96a4ff68ad	AGPL-3.0	NETWORK_COPYLEFT	3.0	1	0	first non-blank line
+sagefy/sagefy	120	bff53f150282	master	LICENSE.txt	10174	0d542e0c8804	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+minicoohei/ai-agent-camp	345	048ba4cfff8e	main	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path
+steveyeow/Feynman	161	849c336c378c	main	LICENSE	1217	aa8325eadd7f	MIT	PERMISSIVE		1	1	first non-blank line
+mahseema/aibooks	95	0d714022e7f6	master	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path
+timothywarner-org/az104-cert-buddy	24	ef41da046b1c	main	LICENSE	1084	351277f4eed2	MIT	PERMISSIVE		1	1	first non-blank line
+tutors-sdk/tutors	125	3f578d9362e6	development	LICENSE	1088	4800b7fa4014	MIT	PERMISSIVE		1	1	first non-blank line
+tsugiproject/tsugi	377	d48c2a6ae053	master	LICENSE	10273	73ba74dfaa52	Apache-2.0	PERMISSIVE	2.0	1	1	first non-blank line
+studentinsights/studentinsights	135	c749ed8030c3	master	LICENSE	1083	53f12859c8a3	MIT	PERMISSIVE		1	1	first non-blank line
+ucfopen/Obojobo	72	26580f26ca4e	master	LICENSE	34520	76a97c878c9c	AGPL-3.0	NETWORK_COPYLEFT	3.0	1	0	first non-blank line
+ucfopen/UDOIT	117	36e2333484ff	main	LICENSE	35147	8ceb4b9ee5ad	GPL	STRONG_COPYLEFT	3.0-or-later	1	0	first non-blank line
+vanderbilt-data-science/knowledge-spaces	30	08e7aef8dd32	main	LICENSE	1090	ed2ed868dffc	MIT	PERMISSIVE		1	1	first non-blank line
+virgiliojr94/book-to-skill	36190	a24e62f4d8ca	master	LICENSE.md	1068	be9b04bccfb4	MIT	PERMISSIVE		1	1	first non-blank line
+wenflow-org/wenflow	59	1c86890946a3	main	LICENSE	1067	b6fac57d4710	MIT	PERMISSIVE		1	1	first non-blank line
+yh2072/edgameclaw	72	4d92b73121d6	main	LICENSE	34523	8486a10c4393	AGPL-3.0	NETWORK_COPYLEFT	3.0	1	0	first non-blank line
+wombats-writing-code/xoces	74	a6c11ab5e002	master	LICENSE	1082	1115d8b49039	MIT	PERMISSIVE		1	1	first non-blank line
+xiaoyang111222/cn-math-taxonomy	4027	cf262d886821	main	LICENSE	19347	41003d4a7474	CC-BY-NC	UNSELLABLE	4.0	1	0	first non-blank line
+zijinz456/OpenTutor	152	039bfb9102f1	main	LICENSE	1068	5352b4967982	MIT	PERMISSIVE		1	1	first non-blank line
+shychee/py_ai_tutorial	22	8330c83d7d4e	main	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path
+vincenzo-afk/KingstonConnect	41	37fc644cc947	main	NO-ROOT-GRANT	0		NO-ROOT-GRANT	NO_GRANT		0	0	no payload at any root path

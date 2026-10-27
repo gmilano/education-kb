@@ -1,7 +1,132 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-26
+updated: 2026-10-27
+---
+
+## 🆕 `p467` — **🔴 ALL FOUR REGION LEGS RETURNED MATERIAL THIS BASE ALREADY CARRIES — four for four, declared rather than padded. 🟢 And the North America leg returned, unprompted, the exact figure `p466` RETIRED: "134 bills / 31 states" came back as the top result, which makes it the dominant relayed number in the channel and confirms the retirement was the load-bearing decision, not a footnote. 🟢 The one NEW measurement on this file is a SUPPLY-side region distribution: LATAM is one row in 103.**
+
+🔵 **Reads 2026-10-26 → 2026-10-27.** Region legs run exactly as the ingest brief prescribes:
+`AI education {region} 2026 adoption regulation players`, once per region, plus the global trends
+leg.
+
+### 🔴 The region legs, each with what it returned and whether it was new
+
+| leg | what the channel returned | 🔴 verdict |
+|---|---|---|
+| **global** · `AI education industry trends 2026` | pilots → embedded infrastructure; 1EdTech "experimentation → governance"; HolonIQ evidence-of-learning demands; agentic planning/assessment; digital credentials; K12 Academics ≈ $6B (2024) → ≈ $32B (2030) | 🔴 **all carried.** 🟡 The K12 Academics pair is the **only** item worth a cell, and only because it is *arithmetically consistent* — see below |
+| **North America** · adoption / regulation / players | 🔴 **"134 bills across 31 states"**; H.R. 8747 K-12 AI Literacy & Readiness Act (House cttee, 21 Jul); Canada "AI for All" (4 Jun 2026), no statute; Mexico bills without a regulator; NA 36 % market share; 60 % of US K-12 teachers used AI in 2024–25, 32 % weekly; NYC moratorium through grade 8; AASA student-authored framework | 🔴 **all carried, and the headline figure is a RETIRED one** |
+| **EMEA** · adoption / regulation / players | `Regulation (EU) 2026/1744` Digital Omnibus moving Annex III education to **2027-12-02**; Art. 50 transparency live **2026-08-02**; Art. 5(1)(f) emotion-inference prohibition in force since 2025-02-02; schools as deployers with AI-literacy duties; FRIA for public bodies; UNESCO GenAI guidance; Council of Europe 4-of-23 (dated) | 🔴 **all carried** — this base has carried `2026/1744` since `p380` across 39 files, and uses it to disqualify `ark-forge/mcp-eu-ai-act` as a date oracle |
+| **APAC** · adoption / regulation / players | Korea AI Basic Act in force 2026-01-22; China mandatory registration; Japan voluntary; Vietnam decree naming education high-risk with a six-month grace for systems live before 2026-08-15; Singapore AI Verify; Australia voluntary; Ipsos Education Monitor 2026 ban-support split (ANZ high, Asian markets low); Google/Microsoft/IBM/Pearson/Byju's, Riiid, Squirrel AI, Alef | 🔴 **all carried.** 🟡 The Ipsos ban-support contrast is the one framing not already phrased this way here |
+| **LATAM** · adoption / regulation / players | UNESCO IESALC: 200 institutions / 19 countries, 87 % using AI, 74 % in teaching, **26 % with a formal strategy**; UNESCO LAC Observatory launched 14 Apr 2026 (Santiago, ECLAC Forum) with Tec de Monterrey; Uruguay first CoE Framework Convention signatory; Colombia CONPES 4144; Mexico Senate bill; ILIA 2025/26 compute-and-adoption gap; Teachy / Ummia / RDV.IA | 🔴 **all carried**, including the 87 / 74 / 26 triple and the Observatory date |
+
+🔵 **Four legs, four nils. That is the finding, and it is not a failure of the legs.** It is the
+same saturation these shelves have measured seven times on the supply side, now reproduced on the
+**intelligence** side: a 466-pass base has absorbed the open macro channel for this industry. 🟢
+The implication for the next pass is the same as for supply — **change the axis, not the effort**:
+a country leg beats a region leg (`Gap 445-F` already prescribed this for EMEA), and a
+primary-source leg (EUR-Lex, a ministry gazette, a national statistics office) beats a search leg.
+
+### 🔴 `Gap 466-F`'s retirement is vindicated by the channel itself
+
+🔵 `p455` retired *"134 bills / 31 states"* because three other trackers disagree by up to **2.6×**,
+and `Gap 466-F` generalised the rule: **no forecast or count is publishable here without its basis
+recorded, so the next pass can recompute it.** 🔴 This pass's North America leg returned that very
+figure as its lead statistic, from a tracker blog, with no methodology. 🟢 **A retired number that
+keeps coming back is not a settled number — it is a popular one.** The cell stays retired; the
+honest statement remains that US AI-in-education legislation is **state-level, numerous and
+counted differently by every tracker**, and any specific count must name its tracker and its
+inclusion rule.
+
+🟡 **The one new figure that survives the `466-F` test.** K12 Academics' ≈ **$6B (2024) → ≈ $32B
+(2030)** implies a **32.2 %** CAGR, which is internally consistent and sits *inside* the
+`$6.4B`–`$11.4B` 2026 range this base already publishes across four firms. 🟢 It is therefore
+carried as a **corroborating low-end anchor**, with its base year, horizon and implied CAGR
+recorded as `466-F` requires — and explicitly **not** as a replacement for the range.
+
+### 🟢 The new measurement this pass contributes: supply by region, with a denominator
+
+🔵 Every region cell on this file is an *adoption* or *regulation* claim. None has ever been a
+**supply** claim, and an engagement is staffed against supply. Measured first-hand over the
+103-address population on [`agents/top.md`](../agents/top.md), by the language a project documents
+itself in (instrument and limits:
+[`region_signal.py`](../compose/code/p467-grant-class/region_signal.py),
+[`agents/trending.md`](../agents/trending.md)):
+
+| region signal | repositories | share | 🟢 sellable | 🔴 what it means for staffing an engagement |
+|---|---|---|---|---|
+| `UNPLACED` (English) | 76 | 0.74 | 48 | 🔴 **North America is not separable from this bucket** on a language axis, and is not claimed |
+| **APAC** | 22 | 0.21 | 12 | 🟢 A real, permissive **agent** tier — and a **closed content tier** (all 3 `*-NC` rows are Chinese-language) |
+| **EMEA** | 4 | 0.04 | 2 | 🟡 Thin on this axis because EMEA projects document in English; the forge axis places EMEA better (AGPL on GitLab) |
+| **LATAM** | **1** | **0.01** | 1 | 🔴 **One row in 103**, and it is archived |
+
+🔴 **This is the number behind this file's standing LATAM finding.** `p463` recorded LATAM's
+92 %-student / 19 %-faculty assignment-feedback split as *"the clearest opportunity shape on this
+file"*, and `p464`/`p466` then found the matching repositories **ungranted**, twice. 🟢 The
+denominator now explains both: **visible LATAM open-source education supply is ~1 % of the
+population**, so the opportunity is real and the local supply to serve it is effectively absent.
+🔵 That is a *buy-vs-build* conclusion, not a sourcing one — see
+[`compose/patterns.md`](../compose/patterns.md).
+
+## Opportunities by region
+
+### North America
+
+🟡 **Shape: compliance-grade human review, sold as a feature.** Oklahoma and Maryland have moved to
+require **human oversight of high-stakes decisions about students**, and the AASA student-authored
+framework asks for **appeal rights and human review of AI decisions**. 🟢 The build-on supply for
+this is on these shelves and permissive: `tomdxb0004/eu-ai-act-risk-checker` (MIT) for obligation
+triage, `ucfopen/UDOIT` (GPL-3.0-or-later) for accessibility conformance inside the LMS, and
+`scorm-again` + `tsugi` (MIT / Apache-2.0) as the carriers into an existing estate. 🔴 **The
+regulatory count is contested** (see `466-F`), so scope the engagement to the *mechanism* —
+reviewable, appealable, logged decisions — not to a bill number.
+
+### EMEA
+
+🟢 **Shape: sovereignty-shaped delivery, and the licence is a feature.** Annex III education
+obligations land **2027-12-02** and Art. 50 transparency is already live; Art. 5(1)(f)'s
+**emotion-inference prohibition** has been in force since 2025-02-02 with no consent exception.
+🟢 Two first-hand supply facts from this pass make the pitch concrete: GitLab-sourced EMEA
+platforms are **AGPL-3.0** — which *fits* a ministry or public university that self-hosts — and
+there is now **one permissive EMEA platform** read first-hand,
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) (MIT, Polish), for the cases where the
+client needs to resell. 🔵 The FRIA duty for public bodies is the billable artefact.
+
+### APAC
+
+🟢 **Shape: compose the agents, license or build the content.** The permissive **agent** tier is
+genuinely strong — 12 of 22 placed APAC rows are `PERMISSIVE`, led by `DeepTutor` (Apache-2.0,
+43 794★) and a dense exam-prep/tutoring skill layer. 🔴 **The content tier is commercially closed:**
+all three NonCommercial rows in the population are Chinese-language, including the window's richest
+curriculum graph (`cn-math-taxonomy`, `CC-BY-NC`, 1 644 knowledge points / 2 403 prerequisite
+edges). 🔵 Regulatory shape is **per-jurisdiction and binding in three of them** (Korea's AI Basic
+Act, China's registration regime, Vietnam's education-naming high-risk decree with its
+2026-08-15 grace cutoff), so a multi-country APAC programme carries **policy as a per-market
+configuration**, not a global setting. 🔴 Declared gap: `gitee.com` is DNS-unreachable from this
+environment, so every APAC supply figure here is a **floor**.
+
+### LATAM
+
+🔴 **Shape: build and localise — do not expect to source locally.** The demand signal is the
+strongest on this file (UNESCO IESALC **87 %** adoption against **26 %** with a formal strategy;
+92 %-student / 19 %-faculty on assignment feedback; ~30 % of universities with a published AI
+policy) and the local open-source supply is **1 row in 103, archived**. 🟢 So the engagement is a
+**build on globally-sourced permissive components with Portuguese/Spanish localisation and a
+governance deliverable** — the governance half being exactly the 26 %-with-a-strategy gap. 🔵
+`menthorlabs/menthor` (Apache-2.0) remains usable as a *reference* for Portuguese-language
+pedagogy structure; it is archived and not a dependency.
+
+### Global
+
+🟢 **Shape: the grant-class audit itself is billable.** This pass measured that **sellability is
+flat across every star band** (0.53–0.68) while grant presence rises with stars — so an
+institution's own "we'll use the popular open-source one" screen has **no information** about
+whether the thing can be delivered. 🔴 Of 103 visible education repositories, **5 are
+`UNSELLABLE`**, **3 are content-not-software**, **2 grant per-asset**, **1 points at another
+repository** and **11 have no grant at all** — i.e. **22 of 103 (21 %)** cannot be used as a client
+screen would assume. A short licence-clearance engagement ahead of any platform build pays for
+itself on the first `*-NC` corpus it catches.
+
 ---
 
 ## 🆕 `p466` — **🔴 THIS BASE'S OWN HEADLINE FORECAST FAILS AN ARITHMETIC CHECK AGAINST ITS SOURCE'S LONGER HORIZON: the carried `$9.58B → $42.48B (2030)` implies a 45.1 % CAGR, while the same firm's 2035 forecast from the SAME 2026 base implies 34.5 % — and 34.52 % compounded to 2030 gives `$31.4B`, not `$42.48B`. 🟢 Two regulatory deadlines land within FIVE WEEKS of this pass: EU Art. 50 content-marking (2026-12-02) and Chile's Ley 21.719 (2026-12-01). 🟢 `Gap 465-D` is CLOSED — the Kenya leg returns four named instruments.**

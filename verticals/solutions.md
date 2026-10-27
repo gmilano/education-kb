@@ -1,7 +1,47 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-26
+updated: 2026-10-27
+---
+
+## 🆕 `p467` — **🟢 The permissive platform row the EMEA tier has been short of is read first-hand and PLACED: a Polish AI-native LMS under MIT, against four AGPL platforms. 🔴 And the pass's most-starred platform candidate is REFUSED on a grant that reads MIT until you get to its fourth clause — a 2 049★ self-hosted NotebookLM alternative that requires a REVENUE-SHARING AGREEMENT before any commercial deployment.**
+
+### 🔴 Refused as build-on supply — and the refusal is not visible from the licence family
+
+| platform | ★ | grant read first-hand | why it is refused |
+|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2 049** | 🔴 **"PageLM Community License"** · `LICENSE.md` 8 563 B · `c834209c5f33` @ HEAD `a6646794661b` | 🔴 **The single most saleable platform shape in this window and it cannot be delivered.** A self-hosted NotebookLM alternative that turns study material into quizzes, flashcards, notes and podcasts — i.e. exactly the "upload the course, get the assets" product a university or publisher asks for. Its payload **opens with MIT's grant sentence verbatim**, then: use limited to *"personal, educational, or non-commercial research purposes"*; **redistribution "strictly prohibited"** (§2); no commercial use without a separate agreement (§3); a **revenue-sharing agreement required before any commercial deployment**, with disgorgement of profits on breach (§4); and a **partial-use clause** making *"any portion, code snippet, algorithm, design pattern"* in a commercial product a Commercial Use (§7). 🔵 The §7 clause is the decisive one for Globant: it reaches a *pattern copied by an engineer who read the repo*. 🟢 Retained as a **product-scope reference**; refused as a codebase |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340 | 🔴 `Elastic-2.0` · 3 860 B · `48255018b41f` @ HEAD `c79803f21cb8` | 🔴 **Reproduced byte-, digest- and HEAD-identical to `p466`.** Higher-ed student-success CRM with an AI assistant. Elastic-2.0 forbids providing the software as a hosted or managed service — the delivery model for a university CRM engagement. Design reference only |
+
+### 🟢 Platform rows added this pass, with `grant_class`, forge and region
+
+| platform | ★ | `grant_class` · grant · `sha256₁₂` | forge · region | what it gives an engagement |
+|---|---|---|---|---|
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 98 | 🟢 **`PERMISSIVE` · MIT** · 1 062 B · `ceb97717de1f` @ HEAD `e137ca47cbec` | GitHub · 🟢 **EMEA** (Polish orthography in its own README, first-hand) | 🟢 **The permissive EMEA platform this tier was missing.** An AI-native LMS with an AI mentor and role-play scenarios, SCORM + xAPI, white-label, self-hosted, positioned explicitly as a Moodle / Open edX / Docebo alternative. 🔵 Against this base's four AGPL EMEA platforms, this is the one that can be **relicensed into a client deliverable** and run multi-tenant. 🔴 102 open issues — young, not yet proven at estate scale |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 1 732 | 🟡 `NETWORK_COPYLEFT` · AGPL-3.0 · **34 523 B** · `8486a10c4393` @ HEAD `eb7b7a09d479` | GitHub · `UNPLACED` | A full classroom/course platform (SvelteKit + Supabase) — the most-starred AGPL education platform in the population. Fits a self-hosted institutional buyer; wrong for multi-tenant SaaS |
+| [`iblai/lms`](https://github.com/iblai/lms) | 208 | 🟢 `PERMISSIVE` · **MIT** · 1 063 B · `f1269b7b2313` @ HEAD `18f76c220561` | GitHub · `UNPLACED` | A **skills-intelligence** front end — competencies, digital credentials, workforce development on Next.js. 🟢 The credentialing half of 1EdTech's skills-based-hiring trend, under a grant that permits resale (**MIT**, read first-hand — not the Apache-2.0 its ecosystem is usually assumed to carry) |
+| [`edrys-org/edrys`](https://github.com/edrys-org/edrys) | 334 | 🟡 `WEAK_COPYLEFT` · MPL-2.0 · 16 725 B · `1f256ecad192` @ HEAD `9aae4c801f1b` | GitHub · `UNPLACED` | A modular remote-teaching platform ("live LMS"). 🟡 MPL is file-level copyleft: new modules can stay proprietary, modified Edrys files cannot. The most permissive copyleft shape at this tier |
+| [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) | 130 | 🟢 `PERMISSIVE` · Apache-2.0 · 11 362 B · `b662f44e55e8` @ HEAD `248f42c494a7` | GitHub · `UNPLACED` | Web-component authoring and microsite publishing for course content; the authoring surface that pairs with `scorm-again` as the carrier |
+
+### 🟡 The per-asset platform problem, stated once for this tier
+
+🔵 Two rows in this pass's population ([`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph),
+[`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)) grant
+**MIT to their code and something else to each data asset** — in `evaluators`' case a
+`CC BY-NC-SA 4.0` corpus sitting inside an otherwise MIT repository. 🔴 At the platform tier this
+matters more than at the library tier: a platform is **shipped with its seed content**, so a clean
+code licence does not clear the deliverable. 🟢 The practical rule, now carried as a grant class:
+**clear the content inventory separately from the code**, and treat a `COMPOSITE_PER_ASSET` row as
+two procurement items, not one.
+
+### 🔵 What this tier looks like once the grant is read rather than assumed
+
+| delivery model the client wants | 🟢 build on | 🔴 refuse |
+|---|---|---|
+| multi-tenant SaaS the client resells | `Selleo/mentingo` (MIT) · `iblai/lms` (MIT) · `haxtheweb/haxcms-php` (Apache-2.0) | `classroomio` (AGPL) · `advisingapp` (Elastic-2.0) · `PageLM` (bespoke NC) |
+| institution self-hosts, source disclosure acceptable or desirable | all of the above **plus** `classroomio`, `Openki`, `DD-workspace/DD` (AGPL) | `advisingapp` · `PageLM` |
+| module added to an existing estate | `edrys` (MPL-2.0, file-level) · `scorm-again` + `tsugi` as carriers | — |
+
 ---
 
 ## 🆕 `p466` — **🟢 THREE PLATFORMS ADDED FROM A FORGE THIS BASE HAS NEVER SAMPLED, all AGPL-3.0 and all EMEA-placed — including the deployable artefact of a Barcelona digital-sovereignty programme. 🔴 And one 340★ platform that reads as the pass's best vertical find is REFUSED: `Elastic-2.0` forbids exactly the hosted-service delivery Globant sells.**

@@ -1,7 +1,96 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-26
+updated: 2026-10-27
+---
+
+## 🆕 `p467` — **🟢 `Gap 466-C` IS CLOSED IN THE STRONG FORM: the size screen is not merely replaced, it is GONE — no verdict in this pass's reader branches on payload bytes, and 41/41 controls hold without them. 🔴 And the re-grade the gap prescribed found that the base's own standing reader carries a defect the size screen was hiding: it returns `MIT` for a payload that recites MIT and then forbids commercial use.**
+
+### 🟢 What the gap asked for, and what was actually built
+
+🔵 `Gap 466-C`: *"replace the size screen with a first-non-blank-line match against the SPDX title
+strings, keep size and digest as provenance only, and re-grade every carried cell that asserts a
+licence family from a size."*
+
+| the prescription | 🟢 delivered as |
+|---|---|
+| first-non-blank-line match against SPDX titles | [`grant_class.py::TITLE_RULES`](../compose/code/p467-grant-class/grant_class.py) — 26 title patterns, matched on the first non-blank line, **AGPL before GPL** and the NC-bearing CC variants before plain `CC-BY` |
+| size and digest as provenance only | 🟢 **no code path reads `bytes`.** `bytes` and `sha256₁₂` are carried per row so a later pass can prove it read the same payload, and nothing else |
+| re-grade cells asserting a family from a size | 🟢 103 addresses probed, graded and published: [`evidence/grant-class.2026-10-26-p467.tsv`](../evidence/grant-class.2026-10-26-p467.tsv) |
+
+### 🟢 Why a size screen could never have worked — the two-sided demonstration
+
+🔵 `p466` showed the divergent side: AGPL-3.0 at **7** live byte values spanning 1 116 B. This pass
+measured the **convergent** side, which is the half that produces false *positives*:
+
+| payload | bytes | `sha256₁₂` | carried by |
+|---|---|---|---|
+| Apache-2.0, variant A | **11 357** | `c71d239df917` | `ably-labs/realtime-quiz-framework`, `mytechnotalent/HNN` |
+| Apache-2.0, variant B | **11 408** | `cd2f54e1e506` | `HKUDS/DeepTutor` (the base's headline control) |
+
+🔴 **Two Apache-2.0 payloads 51 B apart, and two unrelated projects byte-identical at 11 357 B.** A
+size screen reading 11 357 against a carried 11 408 would report a disagreement where there is
+none, and would report agreement between any two licences that happen to land on the same count.
+🟢 Both are graded `Apache-2.0 / PERMISSIVE` here from their title line, and the 51 B is recorded
+as provenance and used for nothing.
+
+🔴 **And the collision is not hypothetical — it is live on these shelves at MIT:**
+
+| payload | bytes | `sha256₁₂` |
+|---|---|---|
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) `LICENSE` | **1 073** | `1e05c9440068` |
+| [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) `LICENSE` | **1 073** | `b7b08f330649` |
+
+🔴 **Two MIT payloads at the IDENTICAL byte count with DIFFERENT digests** — the copyright line
+differs, the grant does not. 🟢 So size is simultaneously **over-sensitive** (51 B apart, same
+licence) and **under-sensitive** (0 B apart, different text): it is not a weak screen, it is not a
+screen at all. 🔵 The digest, by contrast, does its one job — proving a later pass read the same
+bytes — and `eu-ai-act-risk-checker` reproduces `p437`'s record **byte-, digest- and
+HEAD-identical** (1 073 B · `b7b08f330649` @ HEAD `41da87feb238`), a **fifth** cross-pass control
+this pass.
+
+### 🔴 The defect the size screen was hiding, and it is in this base's standing reader
+
+🔵 Re-grading on the title axis surfaced a class a size axis structurally cannot see: a payload
+whose **bytes and family are both unremarkable** and whose **terms are not**.
+
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) — 2 049★, `LICENSE.md` **8 563 B**
+`c834209c5f33` @ HEAD `a6646794661b` — is titled *"PageLM Community License"*, opens with MIT's
+grant sentence verbatim, and then restricts it to *"personal, educational, or non-commercial
+research purposes"* with a **revenue-sharing requirement** and a **redistribution prohibition**.
+🔴 [`family_title.py`](../compose/code/p456-ref-resolution/family_title.py) — the reader `p454`
+built and this base has relied on for thirteen passes — grades it
+**`MIT (body form, no title)`**, because its `PERMISSIVE_GRANT` arm suppresses the bespoke-licence
+check whenever the body recites a permissive grant form. 🔵 Full account and remedy on
+[`agents/top.md`](../agents/top.md) as **`Gap 467-A`**; the remedy is a **restriction override**
+that runs after the body layer and outranks it.
+
+### 🟢 Foundational rows re-graded on the new axis, all read first-hand this pass
+
+🔵 These are the infrastructure-tier rows in this pass's population — the ones an engagement builds
+*on* rather than composes. Every grant below is from the payload's own title line unless `line1=0`
+is noted.
+
+| repository | ★ | `grant_class` · grant · `sha256₁₂` | what it is foundational for |
+|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 161 | 🟢 `PERMISSIVE` · MIT · 1 097 B · `3c056b34a476` @ HEAD `f72936bd41e5`, `br=develop` | 🟢 The offline-first learning platform for low-connectivity deployment. Confirmed MIT at root, reproducing this base's `DEPENDENCY-SCOPED` reading against the GPL fragments in its tree |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 36 190 | 🟢 `PERMISSIVE` · MIT · 1 068 B · `be9b04bccfb4` · `LICENSE.md` @ HEAD `a24e62f4d8ca` | The skill *compiler* — the largest education-adjacent artefact in this window, and a build step rather than an app |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 359 | 🟢 `PERMISSIVE` · MIT · 1 072 B · `383b85b370e8` @ HEAD `86ab328f0e5b` | 🟢 **The SCORM/xAPI runtime.** The carrier that lets agent-generated content run inside an estate's existing LMS without touching the LMS |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 377 | 🟢 `PERMISSIVE` · Apache-2.0 · 10 273 B · `73ba74dfaa52` @ HEAD `d48c2a6ae053` | LTI tool hosting — the standards-side counterpart to `scorm-again` |
+| [`g3i/lxHive`](https://github.com/g3i/lxHive) | 79 | 🟡 `STRONG_COPYLEFT` · **GPL-3.0-or-later** | A lightweight xAPI Learning Record Store. 🟡 **GPL *2.0*-or-later**, read from the payload: the version axis `p455` built is what separates it from the GPL-3.0 rows, and the `or-later` election is read, not assumed — per `p455`'s version axis |
+| [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 117 | 🟡 `STRONG_COPYLEFT` · **GPL-3.0-or-later** · 35 147 B · `8ceb4b9ee5ad` | 🟢 **Accessibility conformance scanning inside the LMS** (Canvas/LTI, Section 508/WCAG) — the compliance component the EU and US accessibility duties on [`intel/market.md`](../intel/market.md) actually require |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 164 | 🟡 **`COMPOSITE_PER_ASSET`** · 5 789 B · `d849ffef4f98` @ HEAD `a7547180c47d` | 🟢 Standards-aligned curriculum data as a layer for educational AI — **code MIT, datasets per-asset**, two of three access tiers not open. The first *sellable-in-part* answer to `p466`'s `CC-BY-NC` curriculum-data finding |
+| [`Wakoma/nimble`](https://github.com/Wakoma/nimble) | 110 | 🟡 `STRONG_COPYLEFT` · **CERN-OHL-S** · 13 419 B · `d6475a84171f` @ HEAD `315910f164c0` | 🆕 **A licence class this base has never carried.** Deployable offline wireless mesh — the *physical* layer under Kolibri. Hardware derivatives must ship design sources |
+
+🔵 **Eight rows, each with a first-hand grant and a stated role.** Not a minimum — the count is what
+the population at this tier yielded.
+
+### 🔴 Gap this pass registers at this tier
+
+| gap | statement | how the next pass closes it |
+|---|---|---|
+| 🟡 **`Gap 467-I`** | **This base has no foundational row for the LRS/analytics tier under a permissive grant.** The only Learning Record Store carried (`g3i/lxHive`) is GPL-3.0-or-later, so an engagement needing xAPI analytics inside a proprietary deliverable has no build-on option on these shelves. | Probe the xAPI/LRS and `caliper` vocabulary specifically — a token set this base has not run — and grade every hit; if the tier is genuinely copyleft-only, publish that as a measured finding rather than leaving the tier silent |
+
 ---
 
 ## 🆕 `p466` — **🟢 `Gap 465-A` IS CLOSED WITH FIXTURES — AND THE CONTRACT IT PROPOSED IS NOT SUFFICIENT. Declaring "raw bytes" fixes the convention defect but does NOT fix the comparison, because TWO legitimate canonical texts of Apache-2.0 circulate ~1.1 KB apart, and that — not tampering — is what explains the three different Apache-2.0 sizes this base carries. 🔴 AGPL-3.0 now has SIX observed live byte-values, so any size-based licence screen misclassifies.**

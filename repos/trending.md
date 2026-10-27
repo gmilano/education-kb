@@ -1,7 +1,98 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-26
+updated: 2026-10-27
+---
+
+## 🆕 `2026-10-26` · `p467` — **🔴 `p466`'s GitLab headline DOES NOT SURVIVE AN INDEPENDENT RUN: the "~2.5× novel education supply" is a TOKEN COLLISION — GitLab's search matches "tutor" inside "tutorial", and 69 of 80 novel-by-address rows are programming courses, a Godot tutorial and a Lineage 2 server emulator. Usable education-AI supply: ZERO. 🟢 And a forge the base has never sampled is REACHABLE BUT NOT DISCOVERABLE, which is a better answer than "unreachable".**
+
+🔵 **Append-only shelf.** This section is prepended; every prior dated section below is retained
+unaltered, and containment against `HEAD` was checked before writing.
+
+### 🟢 Forge reachability, re-measured this pass per `Gap 466-D`
+
+🔵 The gap asks that forge reachability be recorded **every pass**, so a GitHub-only census is never
+read as a market census. Evidence:
+[`evidence/forge-reachability.2026-10-26-p467.tsv`](../evidence/forge-reachability.2026-10-26-p467.tsv).
+
+| forge | HTTPS | discovery API | verdict | vs `p466` |
+|---|---|---|---|---|
+| `github.com` | `400` root · 🔴 **`403` on repo pages for live AND nonexistent addresses** | MCP search index: stars, SPDX id, `pushed_at`, default branch | 🟢 **reachable + discoverable** | 🔴 **seventh reproduction** that the ingest brief's prescribed `curl -sI` probe yields **zero bits** |
+| `gitlab.com` | `301` | API v4 `/projects?search=` → `200` | 🟢 reachable + discoverable | 🟢 reproduced |
+| `bitbucket.org` | **`200`** | 🔴 `/2.0/repositories` → **404** · `/2.0/workspaces` → **404** · 🟢 `/2.0/repositories/{workspace}` → **200** | 🟡 **REACHABLE, NOT DISCOVERABLE** | 🆕 **never sampled by this base** |
+| `codeberg.org` · `git.sr.ht` · `framagit.org` | `000` | — | 🔴 DNS-unreachable | 🟢 reproduced (3/3) |
+| `gitee.com` | `000` | — | 🔴 DNS-unreachable | 🆕 measured for the first time |
+
+🟡 **Bitbucket is the more interesting result, and it is not the one `Gap 466-D` anticipated.** The
+gap framed the missing forges as a *network* artifact. Bitbucket is **not** a network artifact: it
+answers, and a known workspace can be read (`/2.0/repositories/atlassian` → `200`). What it does
+not offer is **global discovery** — there is no unauthenticated endpoint that enumerates public
+repositories or workspaces. 🔵 So Bitbucket cannot be added to this base's census *even though it
+is reachable*: you can only read it if you already know the workspace name. That is a **structural**
+limit on the census, not a proxy limit, and it means adding forges cannot close `Gap 466-D` by
+itself. Registered as **`Gap 467-G`**.
+
+🔴 **`gitee.com` unreachable is the costlier line.** It is China's dominant forge, and
+[`agents/trending.md`](../agents/trending.md) measures this pass that **21 of 103** visible
+education repositories are Chinese-language. 🔵 Any APAC supply statement on these shelves is
+therefore **GitHub-and-GitLab-only**, and the APAC share it reports is a **floor, not an estimate**.
+
+### 🔴 The GitLab leg, run per `Gap 466-E` — and it refutes the claim it was meant to accumulate
+
+🔵 `Gap 466-E` prescribed running the GitLab leg **every pass until n ≥ 30**. Run: four token sets
+(`ai tutor`, `education ai`, `lms ai`, `adaptive learning`), `order_by=star_count`, 20 per page,
+**80 unique projects**, all coverage-checked against this entire base. Evidence:
+[`evidence/gitlab-leg.2026-10-26-p467.tsv`](../evidence/gitlab-leg.2026-10-26-p467.tsv).
+
+| measure | value |
+|---|---|
+| unique projects returned | **80** |
+| already carried by this base | 11 |
+| novel **by address** | **69** |
+| 🔴 rows whose description is a programming tutorial, course or unrelated software | **69** |
+| 🔴 **usable education-AI build-on supply** | **0** |
+| 🟡 arguably education at all | **1** — `jmattheij/pianojacq` (32★, browser piano tutoring) |
+| max ★ in the whole set | 296 — `nanuchi/youtube-tutorial-series` |
+
+🔴 **`p466` published that GitLab "yields novel education supply at ~2.5× the GitHub rate". That
+figure is an artifact of the query, not a property of the forge.** GitLab's `search=` parameter
+matches substrings in name and description, so **`tutor` matches `tutorial`** — and the top of the
+result set is `xavki/tutorials-kubernetes`, `wikibooks-opengl/modern-tutorials`,
+`fbb-git/cppannotations`, `menip/godot-multiplayer-tutorials`, `Athamaxy/telegram-bot-tutorial`,
+`MobiusDevelopment/L2J_Mobius`. 🔵 They are novel to an education KB for the plainest possible
+reason: **they are not education supply.** A novel-address count is not a yield unless relevance is
+graded, and `p466`'s rate was not. 🟢 What *does* survive `p466`'s claim is the licence half: the
+two genuine education platforms GitLab returns (`Openki/Openki`, `DD-workspace/DD`) are both
+**AGPL-3.0** and both already carried. Registered as **`Gap 467-H`**.
+
+### 🟢 The one GitLab row worth publishing, and it is a licence class these shelves have never had
+
+| project | ★ | grant read first-hand | verdict |
+|---|---|---|---|
+| [`jmattheij/pianojacq`](https://gitlab.com/jmattheij/pianojacq) | 32 | 🔴 **`RESERVED_UNDECIDED`** · `LICENSE` 724 B · `ce0fedea93e4` @ HEAD `2774961206a9`, `br=master` | A browser-based piano tutoring program driven from a MIDI keyboard — real adaptive-practice supply. Its payload reads, in full force: *"I haven't decided on whether to release this as open source or not so for now this software is (C) Jacques Mattheij, The Modular Company BV, **All rights reserved**."* |
+
+🟢 **Why this earns its own class rather than `UNSTATED` or `NO_GRANT`.** `UNSTATED` means the
+reader matched nothing; `NO_GRANT` means no payload exists. This payload exists, withholds
+permission, **and states that the decision is open** — so the action is neither "discard" nor
+"treat as unusable": it is **ask the author**. 🔵 That is the only one of the three classes where a
+single email can convert the row into supply, and the distinction is now carried in the instrument
+([`grant_class.py`](../compose/code/p467-grant-class/grant_class.py), control 41/41).
+
+### 🔵 Forge as a recorded dimension, per `Gap 466-E` — running totals
+
+| forge | granted rows read first-hand, cumulative | permissive | copyleft | unsellable / unresolved |
+|---|---|---|---|---|
+| GitHub (`p467` leg) | 92 of 103 probed | **63** | 18 | 11 |
+| GitLab (`p466` + `p467` legs) | 6 | 🔴 **0** | 5 (AGPL-3.0 ×4, GPL ×1) | 1 (`RESERVED_UNDECIDED`) |
+
+🟢 **`Gap 466-E`'s substantive claim holds and is now two-pass:** the forge selects the licence
+family, and therefore the delivery model. GitHub supplies **permissive** components (0.61 sellable
+at n = 103); GitLab has supplied **zero permissive rows in two passes**. 🔵 AGPL fits the
+self-hosted institutional buyer — an EMEA ministry, a LATAM public university — and is wrong for
+multi-tenant SaaS. A base sampling one forge advises half the market; a base that samples both must
+record which one each row came from, which the sell-shelf rows on
+[`agents/top.md`](../agents/top.md) now do.
+
 ---
 
 ## 🆕 `2026-10-26` · `p466` — **🟢 A FORGE THIS BASE HAS NEVER SAMPLED IS REACHABLE, AND IT IS NOT SATURATED: the GitLab API v4 answers, returns novel education supply at ~2.5× the GitHub rate — and every granted row it returned is AGPL-3.0. 🔴 Three OTHER forges are DNS-unreachable from this environment, so the base's GitHub-only supply picture is partly a NETWORK ARTIFACT, not a fact about supply.**

@@ -1,0 +1,10 @@
+forge	https_code	discovery_api	verdict
+github.com	400 (root); 403 on repo pages for live AND nonexistent	MCP search index (stars+license+pushed)	REACHABLE + DISCOVERABLE
+gitlab.com	301	API v4 /projects?search= 200	REACHABLE + DISCOVERABLE
+bitbucket.org	200	/2.0/repositories 404; /2.0/workspaces 404; /2.0/repositories/{ws} 200	REACHABLE, NOT DISCOVERABLE
+codeberg.org	000	-	DNS-UNREACHABLE
+git.sr.ht	000	-	DNS-UNREACHABLE
+framagit.org	000	-	DNS-UNREACHABLE
+gitee.com	000	-	DNS-UNREACHABLE
+api.github.com	403	session-scoped refusal	BLOCKED (raw git + MCP only)
+repos.ecosyste.ms	000	egress proxy connect_rejected	BLOCKED

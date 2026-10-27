@@ -1,7 +1,90 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-26
+updated: 2026-10-27
+---
+
+## 🆕 `p467` — **🟢 Four trends, each with a denominator and each measured this pass: (1) the licence screen the whole industry uses — stars plus "has a LICENSE" — carries ZERO information about whether software can be delivered; (2) permissive grant TEXT is now being used as cover for restrictive terms; (3) the grant is migrating from the repository to the ASSET; (4) visible education supply is 21 % APAC, 1 % LATAM.**
+
+### 🔴 Trend 1 — The industry's default licence screen is uninformative, and now it is measured
+
+🔵 **Measured at n = 103**, every pair read first-hand
+([`evidence/grant-class.2026-10-26-p467.tsv`](../evidence/grant-class.2026-10-26-p467.tsv)):
+grant *presence* rises with popularity (**1.00** at ≥ 1 000★ against **0.82** below 100★), while
+grant *permission* is **flat: 0.62 / 0.53 / 0.68 / 0.58**.
+
+🔴 **So "popular and it has a LICENSE file" — the screen almost every buyer and most vendors
+actually apply — predicts nothing about deliverability.** 🟢 It also refutes `Gap 466-B`'s own
+premise, which generalised from a single 498★ ungranted row: star-ordered probing does **not** waste
+effort on ungranted supply. 🔵 The operational rule is the inverse of what the gap prescribed:
+**the grant-class read can never be skipped on a high-star row** — the three rows that forced this
+whole axis into existence were 914★, 340★ and 4 000★. Full table and the registered gap on
+[`agents/top.md`](../agents/top.md) (`Gap 467-C`).
+
+### 🔴 Trend 2 — Permissive grant TEXT as cover: the "community licence"
+
+🔵 **Measured:** [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) — 2 049★, the
+most-starred education *platform* in this window — serves a payload that **opens with MIT's grant
+sentence verbatim** and restricts it, in the same sentence, to *"personal, educational, or
+non-commercial research purposes"*, then prohibits redistribution, requires a **revenue-sharing
+agreement** before any commercial deployment, and extends Commercial Use to *"any portion, code
+snippet, algorithm, design pattern"*.
+
+🔴 **This is a new rung on a ladder these shelves have been climbing for ten passes.** `p457` found
+a project **relicensing** to a commercial licence (`pengusto/google-classroom-mcp`). `p466` found
+that **a present grant is not a permissive grant** (`Elastic-2.0`, `CC-BY-NC`). This pass finds
+that **a permissive grant *form* is not a permissive grant** — the restrictive instrument now wears
+MIT's words. 🔵 It defeats not just the naive screen but **both licence readers on this base**, and
+the remedy (a restriction override that outranks the body-form layer) is implemented and
+controlled. 🟡 Direction to watch: "community licence", "fair-source" and revenue-share clauses
+attached to otherwise ordinary open-source projects — a packaging choice, not a legal novelty, and
+cheap to copy.
+
+### 🟢 Trend 3 — The grant is moving from the repository to the asset
+
+🔵 **Measured:** 2 of 103 rows grant **code and data separately inside one payload**, and both are
+infrastructure-tier candidates, not curiosities:
+
+| row | ★ | what the one payload actually grants |
+|---|---|---|
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 164 | code **MIT**; datasets *"not all licensed the same way"*, labelled **Open / Open+Gated / Gated**, with the latter two *"not covered by CC BY 4.0, CC0, or any other open license"* |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 87 | code **MIT**; content **CC BY 4.0**; and the bundled Annotated CLEAR Corpus **CC BY-NC-SA 4.0** |
+
+🔴 **A repository-level `licence` cell cannot express either of these**, which is why they graded
+`UNSTATED` until this pass gave them a class. 🟡 The trend direction is clear and it is economic,
+not legal: as education AI's value moves into **curriculum graphs, rubrics, item banks and
+annotated corpora**, the permissive grant stays on the code — which is cheap — and the restriction
+moves to the data, which is not. 🟢 `p466` saw the first instance (the most-starred *data* asset in
+the window being NonCommercial); this pass shows it happening **inside** otherwise-permissive
+repositories. 🔵 Consequence for delivery: **clear the content inventory separately from the code**,
+and treat such a row as two procurement items.
+
+### 🟢 Trend 4 — Visible education supply is 21 % APAC and 1 % LATAM
+
+🔵 **Measured** over the same 103 rows by documentation language, with language ≠ domicile stated
+plainly and English yielding `UNPLACED` by construction (0.74):
+
+| region signal | share | 🟢 sellable | the shape |
+|---|---|---|---|
+| **APAC** | **0.21** | 0.55 | 🟢 permissive **agent** tier (12 of 22), 🔴 closed **content** tier (3 of 3 `*-NC` rows are Chinese-language) |
+| **EMEA** | 0.04 | 0.50 | 🟡 under-counted on this axis — EMEA documents in English; the **forge** axis places it better (AGPL via GitLab) |
+| **LATAM** | **0.01** | 1.00 | 🔴 **one row, archived**, against the strongest demand signal on [`intel/market.md`](market.md) |
+
+🔴 **The APAC split is the actionable half:** compose the agents, license or build the content. 🔴
+**The LATAM number reframes a finding this base has repeated three times:** the LATAM gap is not
+mainly that the supply is ungranted — it is that **the supply is nearly absent**, so LATAM
+engagements are build-and-localise, not select-and-integrate.
+
+### 🔵 Carried trends — status this pass
+
+| trend | status |
+|---|---|
+| 🟢 Education AI ships as a *skill*, not an application (`p466`, 23 %) | 🟢 **reproduced in passing** — the star-ordered population is dense with skill artefacts (`book-to-skill` 36 190★ MIT, `universal-examprep-skill`, `cram-engine`, `education-skills`, `kaogong-skill`, `awesome-student-ai-skills`), and the pattern's largest member remains a skill **compiler** |
+| 🟢 The forge selects the licence family — GitHub permissive, GitLab AGPL (`p466`) | 🟢 **holds, now two-pass**: GitHub 63/92 permissive; GitLab **0 permissive in two passes**. 🔴 But `p466`'s *yield* claim for GitLab does **not** survive — see `Gap 467-H` on [`repos/trending.md`](../repos/trending.md) |
+| 🟢 Regulation converging on DETERMINISTIC-AND-REVIEWABLE (`p466`) | 🟢 **holds** — this pass's North America leg adds Oklahoma/Maryland human-oversight requirements and the AASA appeal-rights framework to the same shape |
+| 🟡 Market-size trajectory | 🟡 **unchanged and still a range** (`$6.4B`–`$11.4B` for 2026 across four firms). One new corroborating low-end anchor that passes the `466-F` arithmetic test; the retired `$42.48B`-by-2030 cell stays retired |
+| 🔴 The macro intelligence channel is saturated | 🆕 **new this pass**: four region legs, four nils, all material already carried. The axis must change — country legs and primary sources, not region legs |
+
 ---
 
 ## 🆕 `p466` — **🟢 Four trends with denominators this pass, not adjectives: (1) 23 % of visible education supply ships as an agent SKILL with no runtime; (2) the forge selects the licence family — GitHub permissive, GitLab AGPL; (3) regulation is converging on a shape, DETERMINISTIC-AND-REVIEWABLE, from four unrelated jurisdictions; (4) the content/data layer is where the commercial closure is — the most-starred data asset found is NonCommercial.**

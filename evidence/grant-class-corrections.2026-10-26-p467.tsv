@@ -1,0 +1,8 @@
+addr	stars	v1_family	v1_class	v2_family	v2_class	defect
+CaviraOSS/PageLM	2049	MIT	PERMISSIVE	NOT-OSI (# PageLM Community License)	UNSELLABLE
+Jeremy-xuan/SocraticNovel	32	CC-BY-NC	UNSELLABLE	CC-BY-NC-SA	UNSELLABLE
+Wakoma/nimble	110	NOT-OSI (CERN Open Hardware Licence Version 2 - Strongly Reciprocal)	UNSELLABLE	CERN-OHL-S	STRONG_COPYLEFT
+codeforlife-education/aimmo	117	NOT-OSI (# License)	UNSELLABLE	POINTER_CROSS_REPO (ocadotechnology/codeforlife-workspace@main/LICENSE.md)	POINTER_CROSS_REPO
+learning-commons-org/evaluators	87	UNSTATED	UNSTATED	COMPOSITE_PER_ASSET (MIT code + NonCommercial content)	COMPOSITE_PER_ASSET
+learning-commons-org/knowledge-graph	164	UNSTATED	UNSTATED	COMPOSITE_PER_ASSET	COMPOSITE_PER_ASSET
+scollovati/awesome-lti	79	UNSTATED	UNSTATED	CC-BY-SA	CONTENT_NOT_SOFTWARE

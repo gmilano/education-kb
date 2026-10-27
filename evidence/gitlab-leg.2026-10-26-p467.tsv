@@ -1,0 +1,81 @@
+path_with_namespace	stars	default_branch	description_90
+nanuchi/youtube-tutorial-series	296	master	
+polloloco/vgpu-proxmox	186	master	Tutorial for setting up vGPU Unlock on PVE 8.x
+xavki/xavki-tutorials-index	124	master	Master index of all Xavki tutorial repositories. Start here to navigate the full course ca
+xavki/tutorials-ansible	93	master	Complete Ansible course: install, SSH keys, config, CLI, modules, inventories, variables, 
+pavel.krupala/pyqt-node-editor	61	master	This is the node editor in Python using PyQt5 - tutorials can be found on my website: http
+oer/emacs-reveal	53	main	Generate and publish [reveal.js](https://revealjs.com/) presentations with audio explanati
+menip/godot-multiplayer-tutorials	49	master	
+wikibooks-opengl/modern-tutorials	46	master	Code for OpenGL Wikibook tutorials http://en.wikibooks.org/wiki/OpenGL_Programming
+fbb-git/cppannotations	45	master	Extensive tutorial and documentation about C++
+xavki/tutorials-kubernetes	43	master	Original Kubernetes course: minikube, prerequisites, cluster install, kubectl basics, serv
+Athamaxy/telegram-bot-tutorial	41	main	
+MobiusDevelopment/L2J_Mobius	38	master	This repository is updated regularly with the latest releases and shares made at the proje
+Openki/Openki	35	dev	Course-Organization-Platform: A tool to build up and collaboratively organize local commun
+jmattheij/pianojacq	32	master	A - for now - browser based piano tutoring program that allows you to use a midi keyboard 
+johandurancerdas/gitlab-cicd-tutorial	28	master	
+Lipovsky/tinyfiber	26	master	Toy fiber library written for educational purposes
+xavki/infrastructure-cloud-infomaniak	24	main	Full cloud infrastructure on Infomaniak Public Cloud: Terraform, OpenStack CLI, networking
+xavki/become-devops-s01	24	master	Become a DevOps engineer — Season 1: full pipeline lab with Vagrant servers, BDD, Docker r
+asacolips-projects/foundry-mods/foundryvtt-system-tutorial	23	master	Create custom systems for FoundryVTT!
+jadijadi/gittutorial	21	master	
+introcienciadedados/tutoriais	20	master	Tutoriais para a disciplina de ciência de dados
+xavki/tutorials-gitlab-v2	19	master	Modern GitLab course: install, GUI, users, repos, issues, labels, wiki, repo flow, merge r
+xavki/tutorials-prometheus-grafana	19	master	Prometheus + Grafana monitoring stack: install, queries, exporters (HAProxy, Nginx, Postgr
+shabinder/soundbound	17	main	Educational (Disclaimer): Exp. Sources for Soundbound Application, Pls see disclaimer. 
+Javaru/frc-intellij-idea-plugin	15	main	An IntelliJ IDEA plugin for FIRST Robotics Competition (FRC) robot development in Java & K
+qworld/qresearch/qintern2021/12_educational-material-development-for-quantum-annealing	14	master	
+kevin.solovjov/realms-of-exether	13	main	
+DD-workspace/DD	12	main	DD is the education workspace generated within the framework of Xnet's Democratic Digitali
+infogram/neos	11	master	nEOS - Epic Online Services emulator (for educational purposes)
+gitlab-com/infra-standards/hackystack	10	main	HackyStack provides the web UI and API for managing your infrastructure. Created by Jeff M
+saxionnl/42/lms42	10	master	Learning Management System for the Associate degree Software Development at Saxion. 
+hifis/hifis-workshops/make-your-code-ready-for-publication/workshop-materials	10	master	[This repository has moved](https://gitlab.hzdr.de/hifis/software/education/hifis-workshop
+rrs301/codebox-educational-app-react-native	9	main	
+iot110/iot110-student	9	master	University of Washington Professional and Continuing Education Internet of Things: Foundat
+tangram-vision/oss/fov-visualizer	8	main	Educational tool/playground for visualizing the FOV+Range (frustum) of sensors
+flywheel-io/public/flywheel-tutorials	8	master	This repository hosts educational assets, mostly in the form of Jupyter notebooks, and con
+ones-ai/eval-quant-llms	7	main	
+unicat.se/education	6	master	Collection of all lectures and materials that used for Junior Developer Education.
+cma-public-projects/aotearoa-connection-network	6	production	R code and associated Shiny app for analysis and visualisation of employment and education
+obestwalter/pico-pytest	6	master	A minimalistic re-implementation of pytest core functionality for educational purposes
+malbareda/GraphicBoard	6	master	GUI for education purposes that converts a Matrix into a Graphic Board.
+Taro94/realms	5	master	
+itm301lms/lms-f2	4	main	
+rogs/forge-llm	4	master	forge-llm is an Emacs package that integrates Large Language Models (LLMs) with Forge, enh
+tangibleai/community/convohub	4	staging	Django application to build and maintain chatbots that combine the best of LLMs and rule-b
+qkitchen/silver-educational-materials	4	master	Silver-level educational materials The person responsible: Özlem Salehi Köken Contributo
+hifis/hifis-workshops/introduction-to-git-and-gitlab/workshop-material	4	master	This is an deprecated version of our workshop material.  The repository has moved to: ht
+terceranexus6/speak-out-loud	4	master	The speeches I've given in (mostly) Spain, Vienna, Switzerland and Belgium. Most of them a
+devolved-ai1/institutional-ai-developer-version	3	main	 The Institutional AI LLM Fine-Tuning Developer Version is an advanced AI framework desig
+reswild/opigno-lms-d10	3	3348860-drupal-constraint	Drupal 10 version of Opigno LMS
+olatorg/openolat-starter	3	main	OpenOlat Starter is an extension to the open source learning managements system (LMS) Open
+LMSAL_HUB/iris_hub/irispy-lmsal	3	main	Moved to https://github.com/LM-SAL/irispy  Please open issues or pull requests there.
+particify/dev/foss/arsnova-lms-connector	3	master	
+MagmaTV/magmatv	3	master	Command-line tool for managing and playing television series and films from RSS feeds. 
+cmsa/manifest-driven-llms	2	main	
+toxy4ny/redteam-ai-benchmark	2	main	Red Team AI Benchmark: Evaluating LLMs for authorized offensive-security tasks. Red Team A
+integrated-semantics/flexible-graphrag	2	main	Flexible GraphRAG: Python, LlamaIndex (LangChain also coming) Docker Compose: 8 Property G
+KudoAI/bravegpt	2	main	AI chat & search summaries in Brave Search, powered by the latest LLMs
+amrron/flmsg-viewer	2	main	
+mavit/lms-pipewire	2	main	`lms-pipewire` is a plugin for [Lyrion Music Server](https://lyrion.org/).  You can use it
+zhaoqing-wang/SlimR	1	main	SlimR: Adaptive Machine Learning-Powered, Context-Matching Tool for Single-Cell and Spatia
+adaptive-learning-engine/adlete-packages	1	master	This adaptive learning technologies (adlete) repository is a mono-repository which contain
+emilykuck/mae-5280	1	main	Adaptive and Learning Systems
+CompressiveLearning/mean-nystroem-embeddings-for-adaptive-compressive-learning-source-code-aistats-2022	1	main	This repository contains the code to generate the results of the AISTATS 2022 paper "Mean 
+neutron-nuaa/dfrl	1	master	A distributed-force-feedback-based reflex with online learning (DFRL) for adaptive quadrup
+majid.ghasemi/an-adaptive-type-2-fuzzy-dictionary-learning	1	master	This project has developed by Matlab 2017b.
+kush05bhardwaj/Online-Learning-Platform-with-Adaptive-Learning	0	master	A full-stack web application designed to manage students, courses, and track their adaptiv
+CodelikeC/AIC-Education	0	main	AIC-Education = Human Alignment & Adaptive Learning Infrastructure | @AdaptiveIntelligence
+raosamarth22/ruflo	0	main	🌊 The leading agent meta-harness for Claude. Deploy intelligent multi-agent swarms, coordi
+Sallami.sch/Adaptive-Learning-Tutor	0	main	AI Tutor
+Sallami.sch/multicheck	0	main	Adaptive learning coach for Multicheck Attest (EBA) exam prep
+Roxanne_Ardary/thoughtbridge	0	main	ThoughtBridge is a modular, multi-agent AI specification designed to help turn ideas into 
+Roxanne_Ardary/omniscientia	0	main	OmniScientia is a modular AI framework for scientific discovery that helps learners explor
+Roxanne_Ardary/earthroot-network	0	main	EarthRoot Network is an open-source, AI-assisted infrastructure design system that generat
+Roxanne_Ardary/flexiprice	0	main	FlexiPrice is an open-source, modular dynamic pricing platform that helps businesses, orga
+shahTanya/eduforge	0	main	EduForge is an AI-powered adaptive learning platform that monitors at‑risk students and de
+Amonite11/gnome-swift-adaptive-learing-platform	0	main	
+shray77/vetlearn-concurs	0	main	VetLearn Concurs - AI-powered personalized veterinary learning platform for competition. B
+Roxanne_Ardary/instantindex	0	main	InstantIndex is a privacy-first, locally hosted search engine that combines ultra-fast cra
+Roxanne_Ardary/cnccompanion	0	main	CNC Companion is an open-source AI tutor for apprentice machinists. It provides step-by-st

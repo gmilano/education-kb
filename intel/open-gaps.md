@@ -1,7 +1,79 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-26
+updated: 2026-10-27
+---
+
+## 🆕 `p467` — **🟢 THREE GAPS CLOSED WITH CONTENT (`466-A` and `466-C` with one instrument at 41/41 controls over 103 addresses; `466-B` with a number that REFUTES its own premise), one PARTIALLY CLOSED (`466-D`), one REFUTED (`466-E`'s yield claim), and nine registered — the largest being that a permissive grant FORM is not a permissive grant, and that this base's own standing reader returns `MIT` for the counter-example.**
+
+🟢 **The register is written in the same pass as the shelves it registers**, per
+`gate-register-currency`. Shelves carrying `p467`: `agents/top.md`, `agents/trending.md`,
+`repos/foundations.md`, `repos/trending.md`, `verticals/solutions.md`, `intel/market.md`,
+`intel/trends.md`, `compose/patterns.md`.
+
+### 🔴 Gate posture — fourteen denials in fifteen passes
+
+🔴 `make hooks` was **DENIED** (`Code from External`) before any gate body ran. 🔵 **Nothing in
+this pass is gate-attested.** Five contracts were re-implemented independently in this session's
+own code and all are green: frontmatter keys and closed-vocabulary `region` on nine shelves; table
+separator and pipe-count consistency on every new table, with **no header row published as data**;
+append-only containment on both trending shelves; first-hand re-resolution of every address
+published; and digest traceability — every `sha256₁₂` printed on a shelf this pass is present in
+[`evidence/grant-class.2026-10-26-p467.tsv`](../evidence/grant-class.2026-10-26-p467.tsv) or in the
+two side probes named on the shelves. That is **5 of 62**.
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+|---|---|
+| 🟢 **`Gap 466-A`** — *a present grant is not a permissive grant, and no screen here tests the difference* | **CLOSED.** A `grant_class` axis exists ([`grant_class.py`](../compose/code/p467-grant-class/grant_class.py), [`controls.py`](../compose/code/p467-grant-class/controls.py) **41/41**), read from the payload's first non-blank line, with `UNSELLABLE` for `*-NC`, `Elastic-*`, `BUSL-*`, `SSPL`, PolyForm-NC, Commons Clause and bespoke restrictive instruments. Applied to **103 addresses**, all probed first-hand. 🔴 It also found a class the gap did not anticipate, now `Gap 467-A` |
+| 🟢 **`Gap 466-C`** — *payload size is used as if it screened licence family* | **CLOSED IN THE STRONG FORM: no code path in the new reader touches `bytes`.** Size and digest are provenance only. Demonstrated both ways on [`repos/foundations.md`](../repos/foundations.md): two Apache-2.0 payloads **51 B apart** are the same licence, and two MIT payloads at an **identical 1 073 B** have different digests |
+| 🟢 **`Gap 466-B`** — *the ungranted denominator correlates with stars in the wrong direction* | **CLOSED AT n = 103, AND THE PREMISE IS REFUTED.** Grant presence *rises* with stars (**1.00** at ≥1 000★ vs **0.82** below 100★), so star ordering does not waste probes. 🟢 The real finding replaces it: **sell rate is FLAT** (0.62 / 0.53 / 0.68 / 0.58) — stars predict that a licence exists, never that it permits. Now `Gap 467-C` |
+
+### 🟡 Partially closed, and one claim refuted
+
+| gap | status |
+|---|---|
+| 🟡 **`Gap 466-D`** — *the GitHub-only supply picture is partly a network artifact* | **PARTIALLY CLOSED.** Reachability re-measured and recorded ([`evidence/forge-reachability.2026-10-26-p467.tsv`](../evidence/forge-reachability.2026-10-26-p467.tsv)): GitLab reachable (reproduced); Codeberg / sr.ht / Framagit DNS-unreachable (reproduced 3/3); **`gitee.com` unreachable, measured for the first time**; **`bitbucket.org` reachable (`200`)**. 🔴 But adding forges cannot finish this gap — see `Gap 467-G`: Bitbucket is reachable and **not discoverable** |
+| 🔴 **`Gap 466-E`** — *the forge selects the licence family; run the GitLab leg every pass until n ≥ 30* | 🟢 **The licence half HOLDS and is now two-pass:** GitHub 63/92 permissive, GitLab **0 permissive across two passes**. 🔴 **The yield half is REFUTED** — `p466`'s "~2.5× novel education supply" is a token collision (`tutor` matches `tutorial`); 69 of 80 novel-by-address GitLab rows are programming courses and unrelated software, and usable education-AI supply is **zero**. Now `Gap 467-H` |
+| 🟡 **`Gap 466-F`** — *no forecast point without its CAGR and base year* | 🟢 **The rule held under test.** The retired "134 bills / 31 states" figure came back as this pass's North America lead statistic and stayed retired; one new low-end anchor (≈$6B 2024 → ≈$32B 2030, implied **32.2 %**) passed the arithmetic check and is carried *as a corroborating anchor only*, not as a replacement for the `$6.4B`–`$11.4B` range |
+
+### 🔴 Registered this pass
+
+| gap | statement | how the next pass closes it |
+|---|---|---|
+| 🔴 **`Gap 467-A`** | **A permissive grant FORM is not a permissive grant, and both readers on this base return `MIT` for the counter-example.** `CaviraOSS/PageLM` (2 049★, `LICENSE.md` 8 563 B `c834209c5f33`) recites MIT's grant sentence verbatim, then restricts it to non-commercial use, prohibits redistribution, and requires a revenue-share agreement reaching *"any portion, code snippet, algorithm, design pattern"*. `family_title.py`'s `PERMISSIVE_GRANT` arm suppresses its own bespoke check on exactly this shape. 🔵 `pass255`/`pass257` read it correctly; a later pass regressed the cell. | Port the **restriction override** from `grant_class.py` into `family_title.py`, then re-sweep every carried cell whose basis is `MIT (body form, no title)` — that basis is this defect's signature |
+| 🟡 **`Gap 467-B`** | **`Gap 466-A`'s one-line anchor cannot grade 16 of 103 payloads.** Apache-2.0 carries its version on the second non-blank line; the commonest MIT shape has no title at all. | Keep `line1` as a published column; treat `line1=0` as requiring the title-block and body layers, never as grounds to withhold a verdict |
+| 🔴 **`Gap 467-C`** | **Stars predict that a licence EXISTS, not that it PERMITS.** Grant rate rises with stars; **sell rate is flat at 0.53–0.68 across all four bands.** The three rows that forced this axis into existence were 914★, 340★ and 4 000★. | Never promote a high-star row without a first-hand `grant_class`; re-run the band table each pass and publish at n ≥ 200 so the flatness is tested, not assumed |
+| 🔴 **`Gap 467-D`** | **Every star count on these shelves is single-channel and unreproducible.** `api.github.com/repos/<addr>` → **403** (session-scoped); `repos.ecosyste.ms` → `connect_rejected` at the egress proxy. Grants are two-channel and first-hand; stars are not. | Mark every star figure as index-relayed, never first-hand; if a second channel becomes reachable, re-measure the band table before relying on it |
+| 🔴 **`Gap 467-E`** | **Visible LATAM open-source education supply is 1 row in 103 (1 %), and it is archived** — against the strongest demand signal on `intel/market.md` (87 % adoption / 26 % with a strategy; 92 %-student / 19 %-faculty feedback). The standing LATAM finding has been read as "ungranted supply" for three passes; the denominator says it is **near-absent** supply. | Run a LATAM leg on the **language axis** (`pt`/`es` tokens) and the **forge axis**, not the English vocabulary; if the 1 % reproduces, promote "build-and-localise" from a pattern to the file's standing LATAM position |
+| 🔴 **`Gap 467-F`** | **NonCommercial is APAC-concentrated in this population: 3 of 3 `*-NC` rows are Chinese-language**, including the window's richest curriculum graph (`cn-math-taxonomy`, 1 644 knowledge points / 2 403 prerequisite edges). Meanwhile 12 of 22 APAC rows are `PERMISSIVE` — the agent tier is open, the content tier is closed. | Probe the Chinese-language content tier specifically (question banks, textbook alignments, knowledge graphs) and publish the `grant_class` distribution; if the concentration reproduces, carry "compose the agents, license the content" as the standing APAC position |
+| 🟡 **`Gap 467-G`** | **A reachable forge is not a samplable one.** `bitbucket.org` answers `200`, and `/2.0/repositories/{workspace}` works — but `/2.0/repositories` and `/2.0/workspaces` both return **404**, so there is no unauthenticated global discovery. Bitbucket cannot be added to the census even though it is reachable. | Record `reachable` and `discoverable` as **two** columns on the forge ledger; treat a reachable-but-undiscoverable forge as an **untested channel**, never as evidence of absent supply |
+| 🔴 **`Gap 467-H`** | **A novel-address count is not a yield unless relevance is graded**, and `p466`'s GitLab rate was not. GitLab's `search=` matches substrings, so `tutor` returns `tutorial`: 69 of 80 novel rows are Kubernetes courses, an OpenGL wikibook, a Godot tutorial and a Lineage 2 server emulator. | Publish **three** numbers for every discovery leg — hits, novel-by-address, and **usable supply after relevance grading** — and never quote the middle one alone |
+| 🟡 **`Gap 467-I`** | **No permissive row exists at the LRS / learning-analytics tier.** The only Learning Record Store carried (`g3i/lxHive`) is GPL-2.0-or-later, so an xAPI analytics component cannot enter a proprietary deliverable from these shelves. | Probe the xAPI / `caliper` / LRS vocabulary — a token set this base has not run — and grade every hit; if the tier is genuinely copyleft-only, publish that as a measured finding rather than leaving it silent |
+
+### 🔵 The pass's own defect ledger, published because an unstated defect is a future false verdict
+
+🔴 This pass's instrument published **six wrong verdicts** in its first run and its region detector
+published **thirteen** more; every one was caught by **reading the rows the instrument placed**,
+never by a count, and all are corrected and controlled before publication.
+
+| defect | wrong verdict | cause | control now covering it |
+|---|---|---|---|
+| grant reader, MIT sentence in a bespoke licence | `PageLM` → `MIT / PERMISSIVE` | the body layer recognises a grant *form*, which is what the restrictive instrument wears | restriction override, 3 controls incl. two negative |
+| grant reader, cross-repo pointer | `aimmo` → `UNSELLABLE` | `p454`'s pointer rule resolves in-repo paths only | `POINTER_CROSS_REPO`, followed first-hand to AGPL-3.0 `420e5ccb5e59` |
+| grant reader, CERN-OHL | `nimble` → `UNSELLABLE` | a free reciprocal **hardware** licence read as a refusal | CERN-OHL-P/W/S titles, 2 controls |
+| grant reader, bare CC title | `awesome-lti` → `UNSTATED` | two live CC title forms; the reader knew only the one containing *"Creative Commons"* | both forms, 2 controls |
+| grant reader, NC clause precision | `visible-ai` → `CC-BY-NC` | `ND` collapsed into `NC`; ND bars the adaptation an engagement performs | `CC-BY-NC-ND` / `-NC-SA` families |
+| grant reader, per-asset surface | two `learning-commons` rows → `UNSTATED` | the repository was assumed to be the unit of grant | `COMPOSITE_PER_ASSET`, incl. NC-sub-asset detection across **all** content clauses |
+| region detector, two-letter stopwords | **11 English READMEs → Turkish**, incl. `ucfopen/UDOIT` (U. of Central Florida) | `\bve\b` matches the `ve` in "we've" / "I've" — the apostrophe is a word boundary | attribution only on non-English **orthography**; no function words |
+| region detector, a stopword that is a tool name | `studentinsights` → Polish | the stopword list contained `jest`, the JavaScript test runner | as above, plus diacritic-only Polish |
+| region detector, single-character scripts | a Stanford repo → Korean on one hangul character | no count floor | floor of 8 script characters |
+
+🔵 **The corrections moved the region distribution materially** — EMEA from 15 rows to 4, APAC from
+29 to 22 — which is why they are published rather than silently applied: a pass reading the first
+run's numbers would have drawn a different conclusion about where EMEA supply lives.
+
 ---
 
 ## 🆕 `p466` — **🟢 Two gaps closed with content (`465-A` with fixtures that REFUTE its own premise, `465-D` with four named Kenyan instruments), one superseded (`464-D` — two token-free discovery channels work), and six registered — the largest being that a PRESENT grant is not a PERMISSIVE grant, proved on three rows of 914★, 340★ and 4 000★.**

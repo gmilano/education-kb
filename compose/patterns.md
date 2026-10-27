@@ -1,7 +1,90 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-26
+updated: 2026-10-27
+---
+
+## 🆕 `p467` — **🟢 Three recipes, every component's grant read FIRST-HAND this pass and stated with its `grant_class`, so each recipe names the delivery model it can legally be sold under. 🔴 And one recipe is a REPLACEMENT: the obvious build for a curriculum-aligned tutor uses a 4 000★ knowledge graph that cannot be used in any paid engagement, so the substitute is specified instead.**
+
+🔵 **Rule for this file, now enforceable:** no component is named below unless its
+`grant_class` was read from its payload this pass
+([`evidence/grant-class.2026-10-26-p467.tsv`](../evidence/grant-class.2026-10-26-p467.tsv)), and no
+recipe mixes a class its delivery model forbids.
+
+### 🔴 `Pattern BL` — Curriculum-aligned adaptive tutor **without the unsellable graph** (8–10 wk)
+
+🔵 **Buyer:** a K-12 publisher, ministry or tutoring provider that wants a tutor which teaches
+*against a curriculum*, with prerequisites and diagnostics — the single most-requested education AI
+shape, and the one with a licence trap directly in its path.
+
+🔴 **The trap, stated first.** The obvious substrate is
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) — 4 027★,
+1 644 knowledge points, 2 403 prerequisite edges, 6 723 items, curriculum-aligned, with adaptive
+prerequisite diagnostics. It is **`CC-BY-NC-4.0`** (19 347 B · `41003d4a7474`, reproduced
+byte-identical to `p466`). **NonCommercial bars every Globant engagement.** Do not plan around it;
+it is a *design reference* for graph shape only.
+
+🟢 **The substitute, and what it costs you.**
+
+| layer | component | `grant_class` · grant read first-hand | why this one |
+|---|---|---|---|
+| curriculum graph | [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 🟡 `COMPOSITE_PER_ASSET` · code **MIT** · 5 789 B `d849ffef4f98` | Standards-aligned instructional content built as a data layer for educational AI. 🔴 **Clear each dataset separately** — `Open` tiers are usable, `Open+Gated` and `Gated` are not covered by any open licence. Budget a licence-clearance task, not an assumption |
+| knowledge tracing | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 `PERMISSIVE` · MIT | The reference KT library (BKT/DKT/SAKT and successors); the mastery estimate the tutor sequences against |
+| tutoring loop | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `PERMISSIVE` · Apache-2.0 · 11 408 B `cd2f54e1e506` @ HEAD `a31d82624c27` | Lifelong personalised tutoring with persistent learner state. 🟢 Four-pass byte-identical control — the most stable high-star row on these shelves |
+| ITS discipline over any LLM | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 `PERMISSIVE` · MIT · 1 073 B `1e05c9440068` @ HEAD `8790a39f254b` | An MCP server that imposes intelligent-tutoring-system structure (BKT) on a plain model — the cheapest way to make the loop pedagogically accountable |
+| graph rendering | [`wombats-writing-code/xoces`](https://github.com/wombats-writing-code/xoces) | 🟢 `PERMISSIVE` · MIT · 1 082 B `1115d8b49039` | Chord/tree widgets for hierarchical connected data — renders the prerequisite graph for teachers. 🔴 Dormant since 2025-11; vendor the component, do not depend on the project |
+| delivery into the estate | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) + [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 `PERMISSIVE` · MIT · 1 072 B `383b85b370e8` · Apache-2.0 · 10 273 B `73ba74dfaa52` | SCORM/xAPI runtime and LTI hosting: the tutor runs inside the client's existing LMS with no LMS change |
+
+🟢 **Delivery model this is sellable under: all of them.** Every code component is `PERMISSIVE`;
+the only encumbrance is per-dataset content clearance. 🔵 **Wiring:** `knowledge-graph` datasets →
+prerequisite DAG; `pykt` mastery estimates per node; `DeepTutor` owns the session and learner
+memory; `tutor-mcp` constrains each turn to an ITS move; `xoces` renders progress; `scorm-again`
+packages, `tsugi` launches.
+
+### 🟢 `Pattern BM` — EMEA institutional LMS modernisation, with the licence chosen to match the buyer (10–12 wk)
+
+🔵 **Buyer:** an EU/EEA university, region or ministry, self-hosting, under the Annex III
+**2027-12-02** education deadline with Art. 50 transparency already live.
+
+| layer | component | `grant_class` · grant | the licence decision |
+|---|---|---|---|
+| platform — **resale case** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 `PERMISSIVE` · MIT · 1 062 B `ceb97717de1f` | 🟢 The EMEA-placed permissive platform this base lacked (Polish, first-hand). Choose this when the client resells or runs multi-tenant |
+| platform — **sovereign case** | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🟡 `NETWORK_COPYLEFT` · AGPL-3.0 · 34 523 B `8486a10c4393` | 🟢 AGPL is a **feature** for a public body: source availability to users is often a procurement requirement. Never for multi-tenant SaaS |
+| module boundary | [`edrys-org/edrys`](https://github.com/edrys-org/edrys) | 🟡 `WEAK_COPYLEFT` · MPL-2.0 · 16 725 B `1f256ecad192` | 🟡 File-level copyleft: new modules stay proprietary, modified Edrys files do not. The safest copyleft to extend |
+| accessibility conformance | [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) | 🟡 `STRONG_COPYLEFT` · GPL-3.0-or-later · 35 147 B `8ceb4b9ee5ad` | 🔴 Run as a **service alongside**, never vendored into a proprietary deliverable. Produces the accessibility evidence EU and US duties require |
+| obligation triage | [`tomdxb0004/eu-ai-act-risk-checker`](https://github.com/tomdxb0004/eu-ai-act-risk-checker) | 🟢 `PERMISSIVE` · MIT · 1 073 B `b7b08f330649` @ HEAD `41da87feb238` — 🟢 **reproduces `p437` byte-, digest- and HEAD-identical** | 🟢 The one carried tool whose encoded Annex III date is **2027-12-02** citing Reg. (EU) 2026/1744. 🔴 Not `ark-forge/mcp-eu-ai-act`, which hardcodes the superseded 2026-08-02 |
+| offline / low-connectivity sites | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) + [`Wakoma/nimble`](https://github.com/Wakoma/nimble) | 🟢 MIT · 1 097 B `3c056b34a476` + 🟡 **CERN-OHL-S** · 13 419 B `d6475a84171f` | 🟡 **New capability, new obligation:** `nimble` gives the physical mesh under Kolibri, and CERN-OHL-S is **strongly reciprocal** — hardware derivatives must publish design sources. Fine for a public buyer, a decision for a commercial one |
+
+🔴 **The one thing this recipe must not do:** mix the AGPL platform with a proprietary multi-tenant
+deliverable. Pick the platform row from the delivery model **first**, then build — that is the whole
+point of carrying `grant_class` on the row.
+
+### 🟢 `Pattern BN` — LATAM: build-and-localise, because there is nothing to source (6–8 wk)
+
+🔵 **Buyer:** a LATAM university system, ministry or edtech, facing UNESCO IESALC's **87 %**
+adoption against **26 %** with a formal AI strategy, and the 92 %-student / 19 %-faculty
+assignment-feedback split.
+
+🔴 **Why this recipe is shaped differently from every other on this file.** Measured this pass:
+**visible LATAM open-source education supply is 1 row in 103 (1 %)**, and that row
+([`menthorlabs/menthor`](https://github.com/menthorlabs/menthor), Apache-2.0, 582★) is
+**archived**. 🔴 Two independent passes (`p464`, `p466`) found the repositories matching the
+feedback opportunity **ungranted**. 🟢 So this is not a sourcing exercise: **build on
+globally-sourced permissive components, localise, and sell the governance deliverable** — the
+governance half being precisely the 26 %-with-a-strategy gap.
+
+| layer | component | `grant_class` | the LATAM-specific decision |
+|---|---|---|---|
+| rubric-based feedback engine | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🔴 `COMPOSITE_PER_ASSET (MIT code + NonCommercial content)` · 1 615 B `86c7be78af8b` | 🟢 **Use the MIT code — research-backed rubric evaluation is exactly the feedback gap.** 🔴 **Do NOT ship the bundled Annotated CLEAR Corpus**: it is `CC BY-NC-SA 4.0`. Substitute client-owned exemplars, which a university has and wants used |
+| tutoring / feedback loop | `HKUDS/DeepTutor` | 🟢 `PERMISSIVE` · Apache-2.0 · `cd2f54e1e506` | Localise prompts and learner-model copy to pt-BR / es; the loop itself is language-agnostic |
+| ITS structure | `ArnaudGuiovanna/tutor-mcp` | 🟢 `PERMISSIVE` · MIT · `1e05c9440068` | Keeps feedback pedagogical rather than generative-chatty — the faculty-trust blocker behind the 19 % |
+| offline / low-bandwidth | `learningequality/kolibri` | 🟢 `PERMISSIVE` · MIT · `3c056b34a476` | Public-university campuses and rural sites; the deployment profile the region actually has |
+| pedagogy reference (pt) | `menthorlabs/menthor` | 🟢 `PERMISSIVE` · Apache-2.0 · 11 337 B `36d6788503b8` | 🔴 **Archived — reference only.** Portuguese-language course structure and pedagogy vocabulary, not a dependency |
+| governance deliverable | `tomdxb0004/eu-ai-act-risk-checker` as a **template** | 🟢 `PERMISSIVE` · MIT · `b7b08f330649` | 🟡 The EU obligation set is not LATAM law, but the *artefact shape* — risk tier, duty-holder, per-obligation date — is what a 26 %-strategy institution is missing. Re-point it at Brazil's Marco Legal, Colombia CONPES 4144 and Chile's Ley 21.719 |
+
+🟢 **Delivery model: fully sellable**, provided the NC corpus is excluded — which is a
+five-minute decision if `grant_class` is on the row and an expensive discovery if it is not.
+
 ---
 
 ## 🆕 `p466` — **🟢 Three recipes, each built only from rows whose grant was read FIRST-HAND this pass, and each matched to a delivery model by its licence family rather than in spite of it: an AGPL sovereign stack for EMEA institutions, a deterministic-and-reviewable assessment spine that satisfies four jurisdictions' converging requirement, and an LTI/SCORM carrier that turns the 23 % skill supply into something an estate can actually run.**

@@ -1,7 +1,242 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-26
+updated: 2026-10-27
+---
+
+## 🆕 `p467` — **🟢 `Gap 466-A` AND `Gap 466-C` ARE CLOSED BY ONE INSTRUMENT, 41/41 controls, applied to 103 addresses — and the closure's OWN FIRST RUN published SIX WRONG VERDICTS, every one caught by reading the payload behind the verdict. 🔴 The headline is the worst of them, and it inverts `Gap 466-A` one further turn: a PERMISSIVE GRANT FORM IS NOT A PERMISSIVE GRANT. A 2 049★ platform opens with MIT's grant sentence verbatim and then restricts it to non-commercial use with a revenue-share clause. 🟢 And a licence class this base has never carried is read first-hand: CERN-OHL-S.**
+
+🔴 **Gate posture, stated first per `Gap 446-A`: `make hooks` was DENIED** (`Code from External`)
+before any gate body ran — **fourteen denials in fifteen passes**. 🔵 **Nothing below is
+gate-attested.** The checks were re-implemented in this session's own code and all are green:
+frontmatter keys and closed-vocabulary `region` on all nine shelves; every new table checked for
+separator presence and pipe-count consistency, with **no header row published as data**;
+append-only proved on both trending shelves by prior-body containment; every address below
+re-resolved first-hand this pass.
+
+### 🟢 Four cross-pass controls, reproduced HEAD-, byte- AND digest-identical to `p466`
+
+| control | grant · bytes · `sha256₁₂` | HEAD | vs `p466` |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 · 11 408 B · `cd2f54e1e506` | `a31d82624c27` | 🟢 identical on all four axes |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `CC-BY-SA` · 1 230 B · `f952182df4eb` | `135d6275e7db` | 🟢 identical |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `Elastic-2.0` · 3 860 B · `48255018b41f` | `c79803f21cb8` | 🟢 identical |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `CC-BY-NC` · 19 347 B · `41003d4a7474` | `cf262d886821` | 🟢 identical |
+
+🔵 `p465` found its own instrument off by −1 byte at unchanged HEADs and diagnosed it. This pass
+reproduces all three of `p466`'s licence re-grades plus the standing headline control exactly, so
+the −1 defect is **confirmed fixed at population scale**, not just on the one row.
+
+### 🔴 THE PASS'S HEADLINE: a permissive grant FORM is not a permissive grant
+
+🔵 `Gap 466-A` said *a present grant is not a permissive one*. This row says something strictly
+worse, because it defeats the remedy as well as the screen:
+
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) — **2 049★**, a self-hosted NotebookLM
+alternative, the most-starred education *platform* in this window — serves **"PageLM Community
+License"** (8 563 B · `c834209c5f33` @ HEAD `a6646794661b`). Its first grant sentence is MIT's,
+word for word:
+
+> *"Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+> and associated documentation files (the "Software"), to use, copy, modify, and run the Software
+> for **personal, educational, or non-commercial research purposes**…"*
+
+🔴 Then: **redistribution "strictly prohibited"** (§2); **no commercial use** without a separate
+agreement (§3); a **revenue-sharing agreement required before any commercial deployment**, breach
+terminating the licence and exposing *"disgorgement of profits"* (§4); and a **partial-use clause**
+making *"any portion, code snippet, algorithm, design pattern"* in a commercial product a
+Commercial Use (§7).
+
+🔴 **This pass's own v1 reader graded it `MIT / PERMISSIVE`.** So does this base's standing
+reader: [`family_title.py`](../compose/code/p456-ref-resolution/family_title.py)'s
+`PERMISSIVE_GRANT` arm **suppresses its bespoke-licence check** whenever the body recites a
+permissive grant form — which is exactly what this payload does — and then returns
+`MIT (body form, no title)`. 🟢 **The base is not wrong about this row and never was:** `pass255`
+caught it *"only because PageLM recites the MIT grant verbatim"*, `pass257` recorded it, and the
+8 563 B / `c834209c5f33` digest read first-hand today is **identical to that record**. A later pass
+regressed the cell to `MIT`; the shelves' own history held the correct reading. 🔵 Registered as
+**`Gap 467-A`**, and the remedy is in the instrument below as a **restriction override** that
+outranks the body layer.
+
+### 🟢 The instrument: a `grant_class` axis, which is what both gaps asked for
+
+[`compose/code/p467-grant-class/`](../compose/code/p467-grant-class/) —
+[`grant_class.py`](../compose/code/p467-grant-class/grant_class.py) ·
+[`controls.py`](../compose/code/p467-grant-class/controls.py) **41/41 pass** ·
+[`probe.sh`](../compose/code/p467-grant-class/probe.sh) ·
+[`sweep.py`](../compose/code/p467-grant-class/sweep.py).
+
+| class | what it means for a Globant engagement | n in this pass's population |
+|---|---|---|
+| 🟢 `PERMISSIVE` | build on, ship, relicense into a deliverable | **63** |
+| 🟢 `PUBLIC_DOMAIN` | as above, no attribution obligation | 0 |
+| 🟡 `WEAK_COPYLEFT` | link, do not vendor modified sources | 1 |
+| 🟡 `STRONG_COPYLEFT` | derivative works carry the grant | 7 |
+| 🟡 `NETWORK_COPYLEFT` | fits a self-hosted institutional buyer, wrong for multi-tenant SaaS | 10 |
+| 🟡 `CONTENT_NOT_SOFTWARE` | usable as *content* with attribution; ShareAlike propagates | 3 |
+| 🔴 `UNSELLABLE` | **barred from a paid engagement** — `*-NC`, `Elastic-*`, `BUSL-*`, `SSPL`, bespoke restrictive | **5** |
+| 🔴 `NO_GRANT` | no payload at any of 10 root paths | 11 |
+| 🟡 `COMPOSITE_PER_ASSET` | the repository is **not** the unit of grant — clear per asset | 2 |
+| 🟡 `POINTER_CROSS_REPO` | the grant lives in **another repository**; follow it | 1 |
+| 🟡 `RESERVED_UNDECIDED` | payload says the licence is undecided — **ask the author** | 0 here, 1 on GitLab |
+
+🟢 **`Gap 466-C` is closed in the strong form: NO verdict in this instrument reads payload size.**
+`bytes` and `sha256₁₂` are carried as provenance only, so a later pass can prove it read the same
+payload. 🔵 The gap's own evidence — AGPL-3.0 at **7** live byte values spanning 1 116 B — is what
+makes size unusable, and nothing here depends on it.
+
+🟡 **`Gap 466-A`'s prescription is UNDER-SPECIFIED, and the number is published rather than
+smoothed over.** It asks for the class to be read from *"the payload's first non-blank line"*.
+**87 of 103** families can be: the other **16** cannot, because Apache-2.0 puts "Version 2.0" on
+its *second* non-blank line and the commonest MIT shape in the wild opens on a bare copyright line
+with no title at all. Every such row is published `line1=0` and never silently promoted. Registered
+as **`Gap 467-B`**.
+
+### 🔴 The six wrong verdicts this pass's own instrument published, and what each one cost
+
+🔵 Each was found by reading the payload behind the verdict — never by the verdict, and never by a
+count. Full ledger:
+[`evidence/grant-class-corrections.2026-10-26-p467.tsv`](../evidence/grant-class-corrections.2026-10-26-p467.tsv).
+
+| address | ★ | v1 said | 🟢 v2 says, read first-hand | the defect |
+|---|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 2 049 | 🔴 `MIT / PERMISSIVE` | 🔴 **`NOT-OSI (PageLM Community License)` / `UNSELLABLE`** · 8 563 B `c834209c5f33` | the MIT grant **sentence** inside a bespoke restrictive licence. Remedy: a restriction override running **after** the body layer and outranking it |
+| [`codeforlife-education/aimmo`](https://github.com/codeforlife-education/aimmo) | 117 | 🔴 `NOT-OSI / UNSELLABLE` | 🟡 **`POINTER_CROSS_REPO`** → `ocadotechnology/codeforlife-workspace@main/LICENSE.md`, followed first-hand: **AGPL-3.0** · 32 920 B · `420e5ccb5e59` | a 115 B pointer condemned as a refusal. `p454`'s reader has a pointer rule but resolves **in-repo paths only**; this target is another repository |
+| [`Wakoma/nimble`](https://github.com/Wakoma/nimble) | 110 | 🔴 `NOT-OSI / UNSELLABLE` | 🟢 **`CERN-OHL-S` / `STRONG_COPYLEFT`** · 13 419 B · `d6475a84171f` @ HEAD `315910f164c0`, `br=master` | a **free reciprocal** licence read as a refusal. Commercial use is permitted under reciprocity |
+| [`scollovati/awesome-lti`](https://github.com/scollovati/awesome-lti) | 79 | 🔴 `UNSTATED` | 🟡 **`CC-BY-SA` / `CONTENT_NOT_SOFTWARE`** · 20 131 B · `7abe19ec9bb7` | the payload's first line is **"Attribution-ShareAlike 4.0 International"** — the words *Creative Commons* appear **nowhere on it**. Two live title forms per CC family; v1 knew one |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 164 | 🔴 `UNSTATED` | 🟡 **`COMPOSITE_PER_ASSET`** · 5 789 B · `d849ffef4f98` | the grant is a property of **each dataset**, not of the repository — see below |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 87 | 🔴 `UNSTATED` | 🔴 **`COMPOSITE_PER_ASSET (MIT code + NonCommercial content)`** · 1 615 B · `86c7be78af8b` | **MIT code, CC BY 4.0 content, and a CC BY-NC-SA 4.0 corpus inside one payload.** A reader taking the first content clause reads `CC BY 4.0` and misses the NC half two sentences later |
+
+🟡 One further correction, same class, lesser cost:
+[`Jeremy-xuan/SocraticNovel`](https://github.com/Jeremy-xuan/SocraticNovel) is **`CC-BY-NC-SA`**,
+not `CC-BY-NC` — same `UNSELLABLE` verdict, and the ShareAlike clause is a second obligation on top
+of the commercial bar.
+
+### 🟢 The per-asset grant surface — a class these shelves have never had a verdict for
+
+🔵 [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph)
+(164★) is the shape `intel/market.md`'s curriculum-alignment opportunity most wants: standards-aligned
+instructional content as a data layer for educational AI. Its payload, read first-hand:
+
+> *"Knowledge Graph code is licensed under **MIT**. … Knowledge Graph datasets are **not all
+> licensed the same way**. Each dataset … is labeled with an access type … **Open + Gated** and
+> **Gated** content **are not covered by CC BY 4.0, CC0, or any other open license** referenced
+> here."*
+
+🟢 **Operationally this is good news and the first sellable answer to `p466`'s `CC-BY-NC` data
+finding** — the *code* is MIT and build-on. 🔴 But the **data must be cleared per dataset**, and
+two of its three access tiers are affirmatively not open. A row like this cannot carry a single
+`licence` cell at all, which is why it gets its own class rather than a family name.
+
+### 🟢 Sell-shelf rows added this pass — with `grant_class`, forge and region, per `Gap 466-A`/`466-E`
+
+🔵 **Four rows. Not a minimum, a count.** 103 addresses were coverage-checked across four GitHub
+index channels; **99 were already carried** by this base and **4 were novel by address**. All four
+are published, including the two that are not education supply, because a silent omission looks
+like absence.
+
+| repository | ★ | `grant_class` · grant · `sha256₁₂` | forge | region signal · basis | what it actually is |
+|---|---|---|---|---|---|
+| [`Wakoma/nimble`](https://github.com/Wakoma/nimble) | 110 | 🟡 `STRONG_COPYLEFT` · **CERN-OHL-S** · `d6475a84171f` · 13 419 B | GitHub | `UNPLACED` · 🔴 English README, no orthographic signal | 🟢 **A licence class this base has never carried.** A rapidly-deployable offline wireless mesh network — *hardware* — for community and school connectivity. Pairs with `learningequality/kolibri` (MIT, 1 161★) as the **physical** layer of an offline-first estate. 🔴 CERN-OHL-S is **strongly reciprocal**: hardware derivatives must ship their design sources. @ HEAD `315910f164c0` |
+| [`wombats-writing-code/xoces`](https://github.com/wombats-writing-code/xoces) | 74 | 🟢 `PERMISSIVE` · MIT · `1115d8b49039` · 1 082 B | GitHub | `UNPLACED` | JS widgets for chord and tree visualisation of hierarchical, connected data — i.e. a renderer for the prerequisite graphs this base's curriculum rows emit. 🔴 **Last touched 2025-11-28**; shelved as a component, not a dependency |
+| [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 77 | 🟢 `PERMISSIVE` · Apache-2.0 · `c71d239df917` · 11 357 B | GitHub | `UNPLACED` | A realtime quiz backbone (Vue + Node). 🔴 **ARCHIVED** and vendor-coupled to Ably's pub/sub. Reference only |
+| [`mytechnotalent/HNN`](https://github.com/mytechnotalent/HNN) | 31 | 🟢 `PERMISSIVE` · Apache-2.0 · `c71d239df917` · 11 357 B | GitHub | `UNPLACED` | A hand-worked neural-network walkthrough notebook. AI-literacy *content*, not platform supply |
+
+🔵 **Two of those four serve the identical Apache-2.0 payload** (`c71d239df917`, 11 357 B) — which
+is 51 B away from `DeepTutor`'s 11 408 B `cd2f54e1e506`. 🟢 That is `Gap 466-C`'s point made once
+more, from the other direction: **two byte-values 51 B apart are the same licence, and nothing here
+branches on the difference.**
+
+### 🔴 The discovery nil, on a channel stronger than the one the ingest brief prescribes
+
+🔵 The brief prescribes web search. `p462` measured that channel's novel-repository yield at
+**zero** over 36 tokens. This pass ran a **different and strictly stronger** channel: GitHub's own
+search index through the session's MCP tools, which returns `stargazers_count`, `license.spdx_id`,
+`pushed_at` and `default_branch` per hit — so candidates can be ordered and filtered before a
+single probe is spent.
+
+| channel | tokens / filters | hits | already carried | novel by address | 🔴 usable education-AI build-on supply |
+|---|---|---|---|---|---|
+| GitHub index, `topic:ai-tutor stars:>50` | 1 | 25 | 25 | 0 | 0 |
+| GitHub index, `education AI agent stars:>100` | 1 | 13 | 13 | 0 | 0 |
+| GitHub index, `topic:edtech stars:>30` | 1 | 50 | 48 | 2 | 0 |
+| GitHub index, `topic:ai-education stars:>20` | 1 | 29 | 29 | 0 | 0 |
+| **union, de-duplicated** | 4 | **103** | **99 (96 %)** | **4** | 🔴 **0** |
+
+🔴 **Seventh independent reproduction of the saturation nil**, and the first with this denominator:
+96 % of a star-ordered, four-channel sweep of GitHub's own index was already on these shelves, and
+the 4 novel addresses are one hardware project, one archived vendor demo, one 2025-dormant widget
+library and one tutorial notebook. 🟢 **The conclusion is not "search harder" — it is that
+discovery on this base's carried vocabulary is finished, and only a change of AXIS (forge,
+recency, language, or an adjacent subdomain) can yield supply.** Both axis legs run this pass are
+on [`repos/trending.md`](../repos/trending.md).
+
+### 🟢 `Gap 466-B` is CLOSED WITH A NUMBER — and the number REFUTES the gap's own premise
+
+🔵 `Gap 466-B` asserted that *"the ungranted denominator correlates with star count in the wrong
+direction"* and that *"a pass that prioritises candidates by stars will spend its probes on
+ungranted supply"*. It prescribed recording `(★, grant-present)` for every probed address and
+publishing the correlation at **n ≥ 60**. 🟢 Done at **n = 103**, every pair read first-hand:
+[`evidence/grant-class.2026-10-26-p467.tsv`](../evidence/grant-class.2026-10-26-p467.tsv).
+
+| star band | n | grant present | grant rate | 🟢 **sellable** | **sell rate** |
+|---|---|---|---|---|---|
+| ≥ 1 000 ★ | 13 | 13 | **1.00** | 8 | 0.62 |
+| 300–999 ★ | 19 | 16 | 0.84 | 10 | 0.53 |
+| 100–299 ★ | 38 | 36 | 0.95 | 26 | 0.68 |
+| < 100 ★ | 33 | 27 | 0.82 | 19 | 0.58 |
+| **all** | **103** | **92** | **0.89** | **63** | **0.61** |
+
+🔴 **The gap is refuted on its own axis.** Grant presence *rises* with stars — **1.00** in the top
+band against **0.82** in the bottom — so star ordering does **not** waste probes on ungranted
+supply. `p466` generalised from one row (`ai-ethos`, 498★, ungranted); at n = 103 that row is an
+exception, not a trend.
+
+🟢 **And the finding that replaces it is sharper, because it is the one that costs money.**
+**Sellability is FLAT across every band: 0.62 / 0.53 / 0.68 / 0.58.** Stars predict that a licence
+*exists*; they carry **no information whatever** about whether it *permits*. 🔵 That is precisely
+`Gap 466-A`'s three rows restated as a population law — 914★, 340★ and 4 000★ all had a grant and
+none could be sold — and it means **the grant-class read can never be skipped on a high-star row**,
+which is the opposite of the candidate-ordering reform the gap prescribed. Registered as
+**`Gap 467-C`**.
+
+🔴 **One measurement the gap asked for CANNOT be made from this host, and it is declared.** The
+star figures above come from GitHub's search index via this session's MCP tools. The two
+independent star channels are both **blocked**: `api.github.com/repos/<addr>` returns **403**
+(*"GitHub access to this repository is not enabled for this session"*) and `repos.ecosyste.ms`
+is refused by the egress proxy (`connect_rejected`). 🔵 So every star count on these shelves is
+**single-channel and unreproducible by a second instrument**, where every *grant* is two-channel
+and first-hand. Registered as **`Gap 467-D`**.
+
+### 🔴 The ungranted denominator, published in full
+
+🔵 **11 of 103 (10.7 %)** serve no licence payload at any of ten root paths
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENCE.md`, `COPYING`, `COPYING.md`,
+`LICENSE.rst`, `license`, `License.md`).
+
+| address | ★ | note |
+|---|---|---|
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | 498 | 🔴 reproduces `p466` — a 501(c)(3) delivering multilingual tutoring to underserved and neurodiverse learners, mission-aligned and legally unusable |
+| [`jude-miller-dev/Milky-institute-online`](https://github.com/jude-miller-dev/Milky-institute-online) | 364 | production-grade Spring Cloud adult-education platform with a course-recommendation agent · `zh` / APAC |
+| [`minicoohei/ai-agent-camp`](https://github.com/minicoohei/ai-agent-camp) | 345 | non-engineer AI-agent curriculum · `zh` / APAC |
+| [`hkalant/awesome-edtech-tools`](https://github.com/hkalant/awesome-edtech-tools) | 216 | curated instructional-design tool list |
+| [`DAMO-NLP-SG/M3Exam`](https://github.com/DAMO-NLP-SG/M3Exam) | 105 | 🔴 multilingual/multimodal/multilevel exam **benchmark** — an evaluation asset with no grant |
+| [`mahseema/aibooks`](https://github.com/mahseema/aibooks) | 95 | AI/ML book list |
+| [`Imboyeong/Fact-vs-Fiction-LLM-Test-`](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-) | 93 | Korean LLM-accuracy study hub · `ko` / APAC |
+| [`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) | 74 | offline digital maths-homework grading |
+| [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 64 | six-agent study platform |
+| [`vincenzo-afk/KingstonConnect`](https://github.com/vincenzo-afk/KingstonConnect) | 41 | Indian college-management platform with portal integration |
+| [`shychee/py_ai_tutorial`](https://github.com/shychee/py_ai_tutorial) | 22 | Python AI course, 17 industry projects · `zh` / APAC |
+
+### 🔴 Gaps this pass registers
+
+| gap | statement | how the next pass closes it |
+|---|---|---|
+| 🔴 **`Gap 467-A`** | **A permissive grant FORM is not a permissive grant, and both readers on this base return `MIT` for the counter-example.** `CaviraOSS/PageLM` (2 049★) recites MIT's grant sentence verbatim and restricts it in the same sentence to non-commercial use, prohibits redistribution, and requires a revenue-share agreement. `family_title.py`'s `PERMISSIVE_GRANT` arm suppresses its own bespoke check on exactly this shape. | Port the **restriction override** from [`grant_class.py`](../compose/code/p467-grant-class/grant_class.py) into `family_title.py`, then re-sweep every carried cell whose basis is `MIT (body form, no title)` — that basis is the exact signature of this defect |
+| 🟡 **`Gap 467-B`** | **`Gap 466-A`'s one-line anchor cannot grade 16 of 103 payloads.** Apache-2.0 carries its version on the second non-blank line; the commonest MIT shape has no title at all. | Keep `line1` as a published column on every graded row, and treat `line1=0` as requiring the title-block + body layers — never as grounds to withhold a verdict |
+| 🔴 **`Gap 467-C`** | **Stars predict that a licence EXISTS, not that it PERMITS.** At n = 103 the grant rate rises with stars (1.00 vs 0.82, refuting `Gap 466-B`) while the **sell rate is flat at 0.53–0.68 across all four bands**. | Never promote a high-star row without a first-hand `grant_class`; re-run the band table each pass and publish it when n ≥ 200 so the flatness is tested rather than assumed |
+| 🔴 **`Gap 467-D`** | **Every star count on these shelves is single-channel.** `api.github.com` → 403 (session-scoped), `repos.ecosyste.ms` → `connect_rejected`. Grants are two-channel and first-hand; stars are not reproducible by any second instrument from this host. | Mark every star figure as index-relayed, never first-hand; if a second channel becomes reachable, re-measure the band table before relying on it |
+
 ---
 
 ## 🆕 `p466` — **🔴 THREE HIGH-VISIBILITY ROWS THIS BASE CARRIES ARE NOT BUILD-ON SUPPLY, and every one of them would pass a star-count and "has-a-LICENSE" screen: a 914★ teacher-skills library is `CC-BY-SA-4.0` (not a software licence), a 340★ higher-ed advising platform is `Elastic-2.0` (not OSI), and a 4 000★ maths knowledge graph is `CC-BY-NC-4.0` — NonCommercial, so it is unusable in any Globant client engagement. 🟢 And a FORGE this base has never sampled is reachable and NOT saturated: GitLab yields novel education supply at ~2.5× the GitHub rate — all of it AGPL-3.0.**

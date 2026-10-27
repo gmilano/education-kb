@@ -1,7 +1,87 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-26
+updated: 2026-10-27
+---
+
+## 🆕 `2026-10-26` · `p467` — **🟢 A REGION DISTRIBUTION MEASURED OVER A SUPPLY POPULATION, which no pass here has done: 21 % of 103 education repositories document themselves in a non-English APAC language, 4 % EMEA — and LATAM is ONE ROW IN 103. 🔴 And all three NonCommercial rows in the population are Chinese-language, so the richest curriculum data in APAC is the part that cannot be sold.**
+
+🔵 **Append-only shelf.** This section is prepended; every prior dated section below is retained
+unaltered, and containment against `HEAD` was checked before writing.
+
+### 🟢 The region signal, with its limits stated before its numbers
+
+🔵 The ingest brief is explicit that an unplaced finding is worth less than a placed one, and this
+base's region cells are mostly argued from prose. This pass measures one axis that can be read
+first-hand from bytes already fetched: **the script and language a project documents itself in**,
+over the 103-address population of
+[`agents/top.md`](top.md). Instrument:
+[`region_signal.py`](../compose/code/p467-grant-class/region_signal.py) · evidence:
+[`evidence/region-signal.2026-10-26-p467.tsv`](../evidence/region-signal.2026-10-26-p467.tsv).
+
+🔴 **What this is NOT: language is not domicile.** A Chinese-language README does not prove a
+Chinese maintainer, English does not prove North America, and a multinational documents itself in
+English wherever it sits. English therefore yields **`UNPLACED`**, by construction the largest
+bucket, and these numbers are a **signal with a denominator, never a market share**. Their one
+defensible use is the direction the brief cares about: where **non-English** supply concentrates,
+and which regions return nothing.
+
+| region signal | n | share | 🟢 sellable | sell rate |
+|---|---|---|---|---|
+| `UNPLACED` (English, no orthographic signal) | 76 | 0.74 | 48 | 0.63 |
+| 🟢 **APAC** (21 × `zh`, 1 × `ko`) | **22** | **0.21** | 12 | 0.55 |
+| 🟡 **EMEA** (2 × `ru`, 1 × `fr`, 1 × `pl`) | **4** | **0.04** | 2 | 0.50 |
+| 🔴 **LATAM** (1 × `pt`) | **1** | **0.01** | 1 | 1.00 |
+| 🔴 **North America** | — | — | — | 🔴 **not separable from `UNPLACED` on this axis, and said so** |
+
+### 🔴 LATAM is one row in 103, and that reframes this base's standing LATAM finding
+
+🔵 `p464` and `p466` both found the repository matching `intel/market.md`'s clearest LATAM
+opportunity — rubric-based assignment feedback — and found it **ungranted**, twice, and registered
+a reproduced pattern. 🟢 **This pass adds the denominator that explains it:** the issue is not
+primarily that LATAM education supply is ungranted, it is that **LATAM supply is nearly absent from
+the visible population at all** — one row in 103, and the one row
+([`menthorlabs/menthor`](https://github.com/menthorlabs/menthor), 582★, Apache-2.0, 🔴 **archived**)
+is a programming-teaching platform, not feedback. 🔵 A LATAM engagement therefore cannot be served
+by *selecting* from this supply; it has to be served by **building on globally-sourced permissive
+components and localising**, which is what [`compose/patterns.md`](../compose/patterns.md)'s LATAM
+recipe does. Registered as **`Gap 467-E`**.
+
+### 🔴 NonCommercial is an APAC-concentrated choice in this population — 3 of 3
+
+| address | ★ | grant read first-hand | region signal |
+|---|---|---|---|
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 4 027 | 🔴 `CC-BY-NC-4.0` · 19 347 B · `41003d4a7474` | `zh` · 1 558 han |
+| [`dvbs2000/visible-ai`](https://github.com/dvbs2000/visible-ai) | 49 | 🔴 **`CC-BY-NC-ND-4.0`** · 1 458 B · `4b5ffb7babc5` — NonCommercial **and NoDerivatives**, declared bilingually; the author *"reserves all rights … including commercial publication, authorized translation, and derivative works"* | `zh` · 1 060 han |
+| [`Jeremy-xuan/SocraticNovel`](https://github.com/Jeremy-xuan/SocraticNovel) | 32 | 🔴 **`CC-BY-NC-SA-4.0`** · 1 227 B · `593122cbd00b` | `zh` · 2 090 han |
+
+🔴 **Every `*-NC` row in a 103-address population is Chinese-language, and the largest is the
+single richest curriculum data asset in the window** (1 644 knowledge points, 2 403 prerequisite
+edges, 6 723 items, aligned to the Chinese national curriculum standard). 🔵 For an APAC
+engagement this is directly operational: **the deepest curriculum graphs and learning content in
+this market tend to be commercially closed, while the APAC *agent* tier is permissive** — 12 of the
+22 APAC rows are `PERMISSIVE`, including `DeepTutor` (Apache-2.0, 43 794★),
+[`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) (MIT, 1 219★) and five
+exam-prep and tutoring skills. 🟢 So in APAC you may compose the agents and must license or build
+the content. Registered as **`Gap 467-F`**.
+
+### 🟡 The `ND` clause is the one that bars the engagement outright
+
+🔵 `p466` graded the content tier on the commercial axis. `visible-ai` adds a second axis this base
+has not carried: **NoDerivatives**. A `CC-BY-NC` corpus cannot be *sold*; a `CC-BY-NC-ND` corpus
+cannot be **adapted at all** — no translation, no re-levelling, no re-sequencing — which is most of
+what an education engagement does to content even in a non-commercial pilot. 🔵 Recorded on the
+grant-class axis as a distinct family (`CC-BY-NC-ND`) rather than collapsed into `CC-BY-NC`, which
+is the correction v1 of this pass's reader needed.
+
+### 🟢 Three rows whose region placement is first-hand and not inferred from language
+
+| address | ★ | grant | placement basis |
+|---|---|---|---|
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 98 | 🟢 MIT · `PERMISSIVE` | **EMEA** — 4 Polish-orthography hits in its own README; an AI-native LMS with an AI mentor and role-play, positioned as a self-hosted Moodle/Open edX alternative. 🟢 The permissive EMEA platform row this base's EMEA tier has been short of, against four AGPL ones |
+| [`PapillonApp/papillon-v6`](https://github.com/PapillonApp/papillon-v6) | 117 | 🟡 GPL-3.0-or-later | **EMEA** — 47 French-orthography hits; a community client for French *vie scolaire* systems. 🔴 **Archived**; the live successor is not on this axis |
+| [`aimclub/ai-competency-model`](https://github.com/aimclub/ai-competency-model) | 30 | 🟢 MIT · `PERMISSIVE` | **EMEA** — 1 557 Cyrillic characters; a professional AI-competency model, i.e. a **skills taxonomy** rather than a platform |
+
 ---
 
 ## 🆕 `2026-10-26` · `p466` — **🟢 MEASURED, NOT ASSERTED: 9 of the 39 distinct education repositories in the top-20s of two GitHub topic channels ship as a SKILL or MCP artefact for a host agent rather than as a runnable application — and they carry the channel's star mass, led by a 36 200★ skill compiler. 🔴 The most-starred artefact in the pattern is `CC-BY-SA`, not MIT.**
