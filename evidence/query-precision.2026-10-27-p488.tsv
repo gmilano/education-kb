@@ -1,0 +1,5 @@
+query	quoting	star_floor	total_count	sampled	education_domain_hits	precision_at_n	top_result
+"intelligent tutoring" OR "ai tutor" in:name,description pushed:>2026-08-01	quoted phrases	none	4094	12	11	0.92	Exorust/TorchLeet (2592 stars, MCP AI tutor + autograder)
+"lesson plan" OR "grading" OR "curriculum" agent in:name,description pushed:>2026-09-01 stars:>5	bare terms	stars:>5	31185	12	0	0.00	morluto/rea (reverse-engineering agent - not education)
+AI tutor OR tutoring agent in:name,description stars:>15 pushed:>2026-10-01	bare terms	stars:>15	6570	14	0	0.00	sudosubin/agents.nix (nixpkgs overlay - not education)
+educación OR educativa in:name,description stars:>2 pushed:>2026-01-01	bare terms	stars:>2	32	15	11	0.73	cortega26/chile-hub (135 stars, Chile public data incl. education)

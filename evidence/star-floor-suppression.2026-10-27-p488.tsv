@@ -1,0 +1,9 @@
+token	language	region	form	qualifier	total_count	suppression_vs_unfloored	source_pass_claim
+educación	Spanish	LATAM	in:name,description	none	5882	1.0x	-
+educación	Spanish	LATAM	in:name,description	stars:>3	26	226.2x	p475 recorded 17 (same form, earlier read)
+educación	Spanish	LATAM	in:name,description,readme	stars:>3	568	10.4x	p487 recorded 434 (readme-scoped)
+pendidikan	Indonesian	APAC	in:name,description	none	4251	1.0x	-
+pendidikan	Indonesian	APAC	in:name,description	stars:>3	8	531.4x	p475 recorded 8 - reproduces exactly
+pendidikan	Indonesian	APAC	in:name,description,readme	none	214	19.9x	p487 recorded 214 - reproduces exactly
+शिक्षा	Hindi	APAC	in:name,description	none	113	1.0x	p475 recorded TRUE ZERO - REFUTED
+शिक्षा	Hindi	APAC	in:name,description,readme	none	3	37.7x	p487 recorded 3 - itself 37.7x low

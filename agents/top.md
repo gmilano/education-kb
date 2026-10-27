@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p488` — `2026-10-27` — **🔴 Two of the twenty-nine licence payloads read this pass have been EDITED — one has a word deleted from AGPL-3.0 §11, and the largest row on this shelf ships an Apache-2.0 whose appendix has been overwritten with text about an "Alarm" trademark. 🟢 Thirteen agent rows re-read at pinned commits. 🔴 And `LICENSE` is not the code grant on a Microsoft row this shelf carries.**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED** (`Code from
+External`) before any gate body ran — **fourteen denials in fourteen passes**. 🔵 Nothing here is
+gate-attested. Six contracts were re-implemented in this pass's own code and are reported at the
+foot of this section; that is **6 of 62**.
+
+🔵 Every licence below: default ref resolved by `git ls-remote --symref`, bytes from
+`raw.githubusercontent.com` **at the resolved commit SHA**, family read from the **title block**,
+and — new this pass — the legally operative span compared against a canonical after normalising the
+axes proved inert in [`gnu-operative-equivalence`](../evidence/gnu-operative-equivalence.2026-10-27-p488.tsv).
+Evidence: [`verified-repos`](../evidence/verified-repos.2026-10-27-p488.tsv),
+[`apache-deviation-recheck`](../evidence/apache-deviation-recheck.2026-10-27-p488.tsv),
+[`operative-body-deviation`](../evidence/operative-body-deviation.2026-10-27-p488.tsv).
+
+### 🟢 The shelf — thirteen rows, every licence read at a pinned commit
+
+| agent | ★ | licence @ pinned commit | region | what it actually is |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | ~45 240 | 🔴 **Apache-2.0, 3 operative deviations** · 11 408 B @ `a31d82624c27` | APAC · Hong Kong | The base's largest row. MCP **host** with 110 tool definitions, 51-file MCP layer, deny-by-default grants, 3-layer memory, sandbox quotas. 🔴 Its licence body is edited — see below. |
+| [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | **2 592** | 🟢 MIT · 1 106 B @ `c0375feaa5bf` | Global | 65 ML/AI interview problems from real interviews, Jupyter notebooks, **an auto-grader and an MCP tutor**. The clearest assessment-plus-tutor pairing on the shelf. |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 293 | 🟢 MIT · 1 069 B @ `68788b5e7d34` | APAC · China | Bloom's **2-sigma** research as a Claude Code skill **and** a self-hostable web app. Socratic, 中文优先. Both an agent skill and a deployable product. |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 272 | 🟢 MIT · 1 105 B @ `e24c8456e5f7` | North America · US | UC Berkeley. Intelligent tutoring with **Bayesian Knowledge Tracing** — the only row here with a published learner model rather than a prompt. |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 251 | 🟢 MIT · 1 102 B @ `075c1895d255` | Global | Diagnosis-first tutor skill, **no mode or command menu** — it picks the next teaching step and checks understanding itself. |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 209 | 🔴 **AGPL-3.0 (modified text)** · 34 514 B @ `269feb00c09a` | EMEA · Spain | Self-hosted language learning: local or cloud LLMs, CEFR plans, voice, spaced repetition. 🔴 A word is deleted from §11 — see below. |
+| [`zuhairhalawa/studyai`](https://github.com/zuhairhalawa/studyai) | 234 | 🟢 MIT · 1 069 B @ `fb4a7ea98500` | Global | 🆕 **Nine days old.** Local-first lecture platform: PowerPoint ingest, spaced repetition, exams, optional tutor on the **Gemini free tier** — a pilot that costs nothing to stand up. |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 134 | 🟢 **CC0-1.0** · 7 048 B @ `79fc182c5d80` | APAC | **WWW '25 Oral.** LLM multi-agent framework for goal-oriented learning in an ITS. 🟢 A public-domain dedication — the most permissive grant on this shelf, and the only CC0. |
+| [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 79 | 🟢 MIT · 1 074 B @ `73005fd8cac8` | North America · US | 🆕 **The simulated learner.** Trains and evaluates models that stand in for a student so tutoring methods can be tested before human subjects. **The test harness every other row on this shelf lacks.** |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 74 | 🟢 MIT · 1 068 B @ `2987df2be268` | APAC · China | `EduAgent` — RAG tutor scoped to **grades 1–9**, LanceDB, DeepSeek/Gemini, Socratic. Grade-banded, not a general chatbot. |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | ~30 000 | 🟢 Apache-2.0 · 11 357 B @ `96f33faaf028` | EMEA · France | 🟢 **Byte-identical to the canonical Apache payload** — the cleanest grant read this pass. Minimal code-first agent loop; the usual harness under education demos here. |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | ~60 000 | 🟡 **MIT — at `LICENSE-CODE`** · 1 141 B @ `004749e6b710` | North America · US | Multi-agent conversation framework. 🔴 Its `LICENSE` file is **CC BY 4.0** (18 650 B); the code grant is a *different file*. See below. |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | ~12 000 | 🟢 MIT · 1 092 B @ `38adb1e9459d` | APAC · India | Content generation — questions, lesson plans, YouTube-to-course. The generation half of a pipeline whose tutoring half is above. |
+
+🔵 Thirteen rows, five grant types, four regions. 🟢 Eleven are permissive (MIT / Apache-2.0 / CC0)
+and buildable; one is network copyleft with a defect; one needs the right file read.
+
+### 🔴 `microsoft/autogen` — `LICENSE` is not the code grant
+
+| file | bytes | grant |
+|---|---|---|
+| `LICENSE` | 18 650 B | 🔴 **Attribution 4.0 International (CC BY 4.0)** |
+| `LICENSE-CODE` | 1 141 B | 🟢 **MIT** |
+
+🟢 This shelf's carried value — *AutoGen, MIT* — **is correct for the code.** 🔴 But every probe this
+base has ever run takes the **first** matching path, and `LICENSE` sorts before `LICENSE-CODE`. A
+reader that stops at the first hit grades AutoGen `CC-BY-4.0`: a content licence with **no patent
+grant and an attribution obligation on derivatives**, which is a refusal for most studio work.
+🔵 It is a Microsoft-wide convention, so it is a class, not a row. (Checked: `StudentSim` carries
+MIT at plain `LICENSE` and is unaffected.)
+
+🔵 This is the **fourth** structural reason a licence is missed on these shelves, and all four were
+found in the last two passes: `frappe/lms` — **case** (`license.txt`); `INGInious` — **position**
+(title block below a wrapper); `sakai` — **vocabulary** (a licence family nobody had a pattern for);
+`autogen` — **path precedence** (`LICENSE` is not the grant). 🟢 A probe must therefore enumerate
+*all* matching paths and reconcile them, not return the first.
+
+### 🔴 The two edited payloads — and why no instrument here would have caught either
+
+🔴 **`artcc/freelingo`, AGPL-3.0 §11 Patents, final paragraph** — one word deleted:
+
+> canonical: *…any implied license or other defenses to infringement that may otherwise be available
+> to you under applicable **patent** law.*
+> 🔴 served: *…available to you under applicable law.*
+
+🔵 Also `perpetuity` → `perpetity` in §6, which proves the text was retyped rather than copied.
+🔴 At **34 514 B** it sits inside the same near-miss size cluster as two dozen authentic payloads, so
+a byte-size reader calls it an FSF reprint variant.
+
+🔴 **`HKUDS/DeepTutor`, Apache-2.0** — three insertions inside `TERMS AND CONDITIONS`
+(`submitted to **the** Licensor` in §1's *Contribution*; `received by **the** Licensor` in §1's
+*Contributor*; `excluding **any** notices` for `excluding **those** notices` in §4's NOTICE clause),
+and an appendix that has been overwritten outright:
+
+> canonical: *We also recommend that a file or class name and description of purpose be included on
+> the same "printed page" as the copyright notice…*
+> 🔴 served: *Please also get an **"Alarm or alarm"** copyright header and make that the reference to
+> the Apache License and the Disclaimer of Warranty (**Alarm** is the umbrella trademark for a
+> collection of Open Source projects).*
+
+🔵 `Alarm` where `Apache` belongs, in the sentence that names the trademark — the signature of a
+careless global replace or a generated rewrite. 🟡 The three operative insertions are each a single
+word and none plainly changes an obligation; the appendix is instructional text, not a term. 🟢 So
+this is **not** a reason to drop the row — DeepTutor stays the shelf's anchor. 🔴 It *is* a reason to
+stop treating "family detected = grant verified": the file is not the Apache licence.
+
+🟢 **This vindicates `p484` against this pass's own expectation.** `Gap 483-R` recorded *"Apache
+LICENSE byte-compared: 6 operative-body deviations"* on DeepTutor, and after `p481`'s
+"6 of 13 Apache repos deviating" resolved to **zero** on three education rows, the natural reading
+was that the DeepTutor figure was the same artefact. 🔴 It is not. Re-measured on the normalised
+instrument: canonical, `smolagents`, `Open-Security-Labs` and `study-cybercirujas` → **0 deviations**;
+DeepTutor → **3 plus the appendix**. 🔵 The instrument is silent where nothing is wrong and loud
+where something is, which is the only property that made the distinction visible.
+
+### 🔴 Refused — the highest-star candidate found this pass
+
+| repo | ★ | why |
+|---|---|---|
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | 🔴 **498** | No licence file at **10 candidate paths** at `9acaafc718f2`. A 501(c)(3) serving 1 500+ underserved learners in 7 languages — the most mission-aligned candidate this pass found, and unusable. |
+| [`towardsai/ai-tutor-rag-system`](https://github.com/towardsai/ai-tutor-rag-system) | 244 | No licence at 10 paths at `89776d8511f6`. |
+
+### 🟢 Contracts re-implemented and run in this pass's own code — 6 of 62
+
+| check | result |
+|---|---|
+| 🟢 frontmatter keys + closed-vocabulary `region` on all 9 shelves | reported in `intel/open-gaps.md` |
+| 🟢 `p488` tables: separator present, pipe count consistent | reported in `intel/open-gaps.md` |
+| 🟢 no header or example row published as data | reported in `intel/open-gaps.md` |
+| 🟢 `intel/market.md` single-`## Opportunities by region` contract | reported in `intel/open-gaps.md` |
+| 🟢 **operative-body instrument control** — canonical vs `apache/.github` and vs `smolagents` → **0 deviations** (the instrument does not manufacture findings) | 🟢 pass |
+| 🟢 **licence-path enumeration** — all matching paths listed, not the first | 🟢 pass (found `autogen`'s two files, `frappe`'s 11th path) |
+
 ## 🆕 `p487` — `2026-10-27` — **🔴 THE RULE THIS BASE ADOPTED AT `p450` TO STOP ONE LICENCE FALSE POSITIVE MANUFACTURES TWO MORE, AND THE EXPENSIVE ONE TURNS A HOSTABLE `GPL-3.0` ROW INTO A NETWORK-COPYLEFT REFUSAL. 🟢 `Gap 486-B` CLOSED with a reader that pins a commit SHA before it reads a byte — and its first run corrects the byte cell of two rows on this shelf. 🟢 Four new rows, every licence read at a pinned commit.**
 
 🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED** (`Code from

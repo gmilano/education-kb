@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p488` — `2026-10-27` — **🔴 `Sakai` is NOT Apache-2.0 and has never been on this shelf correctly: it is ECL-2.0, whose §3 withholds the patent grant on any contribution an employed academic was not personally the inventor of — the one grant on these shelves that is weaker than it looks precisely where a university wrote the code. 🟢 Eleven platforms re-graded at pinned commits; three carried values corrected.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — **fourteen denials in fourteen passes.** Nothing
+below is gate-attested. Every grant read from bytes at a **pinned commit SHA**. Evidence:
+[`gnu-operative-equivalence`](../evidence/gnu-operative-equivalence.2026-10-27-p488.tsv),
+[`verified-repos`](../evidence/verified-repos.2026-10-27-p488.tsv).
+
+### 🔴 `Sakai` — ECL-2.0, and the clause that matters is §3
+
+🔵 This base has carried *Sakai (Apache-2.0)* since the first `education` cycle. 🟢 Read at
+`master` @ `6fd8652da3f0`, `LICENSE`, **11 120 B**: the title block reads **“Educational Community
+License, Version 2.0 (ECL-2.0)”**. It is Apache-2.0-derived — same structure, same §4
+redistribution, same §7 warranty disclaimer — with **one substantive change**, in the patent grant:
+
+> **ECL-2.0 §3, final sentence:** *Any patent license granted hereby with respect to contributions by
+> an individual employed by an institution or organization is **limited to patent claims where the
+> individual that is the author of the Work is also the inventor of the patent claims licensed**, and
+> where the organization or institution **has the right to grant such license under applicable grant
+> and research funding agreements**. No other express or implied licenses are granted.*
+
+🔴 **Apache-2.0 has no such limitation.** Under Apache-2.0 a corporate contributor's patent grant
+reaches the claims its contribution infringes, full stop. Under ECL-2.0, where the contributor is a
+university employee, the grant reaches only claims that **same individual invented**, and only where
+the institution's **research-funding agreements** permit the grant.
+
+🔵 Why this licence exists in exactly this form: Sakai is a university consortium product, and
+universities hold patents through funded research whose terms they do not unilaterally control.
+🔴 The practical consequence for a studio is narrow and real: **ECL-2.0 does not deliver the patent
+peace a client's procurement team believes it is getting when it reads "Apache-derived."** On a
+deal where patent indemnity is a term, Sakai needs its own line.
+
+🟡 Unchanged by this: ECL-2.0 is an OSI-approved permissive licence with **no copyleft**, so Sakai
+remains buildable and redistributable — it is one of only **two** permissive institutional platforms
+on these shelves. The correction is to the *patent* analysis, not the build.
+
+### 🟢 The platform shelf, re-graded at pinned commits
+
+| platform | grant @ pinned commit | default ref | layer | note |
+|---|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🟡 GPL-3.0 · 35 147 B @ `46c042e7da65` · `COPYING.txt` | `main` | LMS | 🟢 Licence payload **byte-identical** (blob `94a9ed024d38`) to Chamilo and ILIAS. Grant read from `COPYING.txt`, not `LICENSE`. |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 **AGPL-3.0** · 35 136 B @ `d9aaee456069` | `master` | LMS | §13 binds a hosted fork. |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** · 34 520 B @ `1c9f0bb8013e` | `master` | LMS | §13. |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · 33 893 B @ `6054772c0426` · **`license.txt`** | `develop` | LMS | 🔴 **Correction.** Found only at the **11th** path probed — lowercase `license.txt`, after a 10-path probe returned nothing. Previously carried GNU-family with the path unresolved. |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** · 11 120 B @ `6fd8652da3f0` | `master` | LMS | 🔴 **Correction** — not Apache-2.0. See §3 above. |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 GPL-3.0 · 35 147 B @ `06629ed3a21d` | `master` | LMS | blob `94a9ed024d38`. |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 GPL-3.0 · 35 147 B @ `db9582e3cd3e` | **`release_11`** | LMS | 🔵 Default ref is neither `main` nor `master`. |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** · 1 097 B @ `dbe14ef6c499` | `develop` | delivery | 🟢 The only permissive LMS-class row with no patent caveat. **Offline-first.** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 LGPL-3.0 · 8 241 B @ `46a5d7d40082` | **`19.0`** | **ERP / SIS** | 🔵 The Odoo-equivalent for education — the row the brief's "like Odoo for ERP" asks for. Default ref is a version number. |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🟡 LGPL-3.0 · 7 652 B @ `c8a7010d97ce` | **`v4.0.x-develop`** | synchronous | LGPL linking terms, not GPL. |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🟡 GPL-2.0 · 15 214 B @ `fa5f4b66caf4` | **`mobile`** | **SIS** | 🔵 `p487` corrected the secondary channel's "MIT, Python" to **GPL-2.0 PHP**; this pass reproduces GPL-2.0 independently. 🔴 Its payload is the **pre-1999 FSF printing** — see below. |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 GPL-2.0 · 18 092 B @ `435649b0474f` | **`2.12`** | **SIS · 🇧🇷** | Municipal SIS in production in Brazil. |
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | 🟡 **AGPL-3.0, scoped** · 34 764 B @ `efa1b09d62ca` | `main` | autograding | 🔴 **Correction** — see below. |
+| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🔴 AGPL-3.0 · 34 523 B @ `8479aee5ccaf` | `main` | authoring | |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 🔴 AGPL-3.0 · 34 523 B @ `ab9d226c61e0` | `main` | LMS (modern) | |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🟡 GPL-3.0 · 35 146 B @ `1e21b7a2da4a` · `LICENSE.txt` | `master` | interactive content | |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🟡 GPL-3.0 · 35 121 B @ `65f86bf061fa` | **`v31.0.00`** | **SIS** | Default ref is a release tag. |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🟡 GPL-3.0 · 35 141 B @ `5fec948a823e` | `master` | **xAPI LRS** | The learning-record store under any analytics recipe here. |
+| [`edu-sharing/Edu-Sharing`](https://github.com/edu-sharing/Edu-Sharing) | 🟡 GPL-3.0 · 35 148 B @ `f6e74c5195b9` · `LICENSE.txt` | **`maven/fixes/10.0`** | repository | 🟢 Its "one byte short" is a **missing final newline**, not drift. 🔴 `p455`'s separate finding stands: npm metadata declares **GPL v2** while the served payload is **GPL-3.0** — a real version disagreement, unaffected by this pass. |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **NONE READABLE** @ `446a77a9b9cb` | `master` | LMS | 🔴 **No licence file at 22 candidate paths.** A carried vertical row with no grant. |
+
+🔵 **Eight of twenty default refs are neither `main` nor `master`** — `release_11`, `19.0`, `2.12`,
+`v31.0.00`, `mobile`, `develop`, `v4.0.x-develop`, `maven/fixes/10.0`. 🟢 `p487` found three and
+called it *"`p450`'s false-negative class, concentrated precisely in the institutional tier these
+shelves sell"*. 🟢 Resolving the symref first makes the whole class disappear, and it cost one
+`ls-remote` per repo.
+
+### 🔴 `INGInious` — AGPL-3.0, but not over the whole tree
+
+🟢 Three lines sit **above** the title block, which is why a title-block reader returns no family at
+all on this payload:
+
+> *Most of the files in INGInious are distributed under the GNU AGPL v3 licence, which follows.*
+> *If it is not the case, this is clearly indicated in the files.*
+
+🔴 So the repository-level grant is **"most of the files"**, with per-file exceptions the licence
+itself declines to enumerate. 🔵 For an autograder — code that by design executes submitted work and
+is a natural candidate to embed in a client platform — "which files, exactly" is not a pedantic
+question. 🟡 A per-file grant census is one pass's work and has not been done.
+
+### 🟡 `rosariosis` — a 27-year-old licence printing
+
+🟢 Its GPL-2.0 operative body matches `i-educar` and `br.tag` exactly after normalisation. 🔵 But the
+payload is the **pre-1999 FSF printing**: it names the *"GNU **Library** General Public License"*
+(renamed *Lesser* in 1999), carries the old *"51 Franklin St"* address, and its *How to Apply*
+appendix is **truncated** — 276 lines against 339. 🟡 No obligation differs. 🔵 It does mean the
+licence file has not been touched since before the project's own history, which is worth knowing
+before asking the maintainer about a relicence.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 488-L`** | `formalms` has been carried as a vertical platform across multiple passes with **no readable grant anywhere** (22 paths). It should be marked unusable on the shelf itself, not only in a pass note. |
+| 🟡 **`Gap 488-M`** | `INGInious`'s per-file carve-outs are unenumerated. The grant covers "most of the files" and nobody has established which. |
+| 🟡 **`Gap 488-N`** | **No platform row on this shelf has an AI-surface read newer than the Apr-2026 secondary comparison** cited at `Gap 483-I`. Every "no native AI" verdict here is now six months old, in the fastest-moving half of the sector. |
+
 ## 🆕 `p487` — `2026-10-27` — **🔴 THE SECONDARY CHANNEL NAMED A PERMISSIVE SIS FOR THIS SHELF AND IT IS WRONG ON THE LICENCE *AND* THE LANGUAGE: `RosarioSIS` is **GPL-2.0 PHP**, not "MIT, Python". 🟢 This shelf's own carried value was right all along, and reproducing it exactly is the second time the web channel has been scored against first-hand reads — and the second time it has failed.**
 
 🔴 `make hooks` **DENIED** (`Code from External`), **thirteen in thirteen**. Licences below are read

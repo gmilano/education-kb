@@ -1,0 +1,10 @@
+relation	family	detail	repos
+SAME-SIZE-DIFFERENT-BYTES	AGPL-3.0	34520 B / 2 distinct blobs	Chocobozzz/PeerTube, instructure/canvas-lms
+SAME-SIZE-DIFFERENT-BYTES	AGPL-3.0	34523 B / 2 distinct blobs	classroomio/classroomio, exelearning/exelearning
+BYTE-IDENTICAL-ACROSS-REPOS	GPL-3.0	blob 94a9ed024d38 / 35147 B	ILIAS-eLearning/ILIAS, chamilo/chamilo-lms, moodle/moodle
+BYTE-IDENTICAL-ACROSS-REPOS	GPL-3.0	blob f288702d2fa1 / 35149 B	ahmedEid1/lumen, datauy/ElijoEstudiar, wanrabbae/api-sekolah-indonesia
+ONE-OPERATIVE-BODY-MANY-SIZES	AGPL-3.0	op 074dc27cf996 / sizes [33893, 34520, 34523, 34764, 35136]	Chocobozzz/PeerTube, INGInious/INGInious, classroomio/classroomio, exelearning/exelearning, frappe/lms, instructure/canvas-lms, openedx/edx-platform
+ONE-OPERATIVE-BODY-MANY-SIZES	AGPL-3.0	op 4f7d7f217d39 / sizes [34514]	artcc/freelingo
+ONE-OPERATIVE-BODY-MANY-SIZES	ECL-2.0	op bd7b19c717ba / sizes [11120]	sakaiproject/sakai
+ONE-OPERATIVE-BODY-MANY-SIZES	GPL-2.0	op 9af69bf02249 / sizes [15214, 18027, 18092]	francoisjacquet/rosariosis, ipti/br.tag, portabilis/i-educar
+ONE-OPERATIVE-BODY-MANY-SIZES	GPL-3.0	op 51142ae71da6 / sizes [35121, 35141, 35146, 35147, 35148, 35149]	GibbonEdu/core, ILIAS-eLearning/ILIAS, LearningLocker/learninglocker, ahmedEid1/lumen, chamilo/chamilo-lms, datauy/ElijoEstudiar, edu-sharing/Edu-Sharing, h5p/h5p-php-library, moodle/moodle, wanrabbae/api-sekolah-indonesia

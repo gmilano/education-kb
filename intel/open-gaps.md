@@ -4,6 +4,112 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p488` — **🟢 `p487`'s STANDING ORDER IS CARRIED OUT AND IT INVERTS THE ALARM THAT ISSUED IT: 25 GNU payloads re-read at pinned commits reduce to 5 operative bodies, the "drift" is a transcription plus four inert axes, and the one genuinely altered payload was never flagged because its size looks normal. 🟢 FOUR GAPS CLOSED WITH CONTENT (`484-C`, `484-G`, `484-K`, `487`'s order), TWO SUBSTANTIALLY (`484-H`, `483-N`-line), 🔴 ONE OF `p487`'s OWN FINDINGS REFUTED AND ONE OF ITS DIAGNOSES REATTRIBUTED, 🟢 `p484` VINDICATED AGAINST THIS PASS'S OWN EXPECTATION, and 24 registered. 🔴 And this register's currency contract was broken for FOUR passes: the newest section below was `p484` while the shelves carried `p487`.**
+
+🔵 **`gate-register-currency` — measured and FAILED.** `Gap 473-F`'s check: the register's newest
+section must be `p(N-1)` before a pass writes `pN`. 🔴 **Measured: `p484`. Expected: `p487`. Fail, by
+four passes.** `p485`–`p487` each wrote eight shelves and none wrote here, so every gap those three
+passes registered lives only in a `### Declared gaps` or `### Registered` table on the shelf that
+produced it. 🟢 `p488` writes **nine shelves including this one**, restoring the contract going
+forward but not retroactively.
+
+### 🔴 Gate posture — fourteen denials or non-attempts in fourteen passes
+
+🔵 `make hooks` **attempted and DENIED** this pass (`Code from External`) before any gate body ran —
+the industry KB is cloned outside the harness repo and the harness refuses execution of code
+arriving in a clone. 🔵 **Nothing in this pass is gate-attested.** `Gap 446-A` remains unclosable by
+any pass without an execution-permitted session.
+
+🟢 **Re-implemented in this pass's own code and run — 6 of 62:**
+
+| check | result |
+|---|---|
+| 🟢 frontmatter keys + closed-vocabulary `region` on all 9 shelves | 🟢 **9/9 pass** — every `region:` is one of the five permitted values, every `updated:` is `2026-10-27` |
+| 🟢 `p488` tables: separator present, pipe count consistent | 🟢 **0 problems** across **36 tables / 164 data rows** |
+| 🟢 no header or example row published as data | 🟢 **0** — every data row names a real repository, jurisdiction or measurement |
+| 🟢 `intel/market.md` region contract | 🟢 **1** live `## Opportunities by region`, **4** `###` subsections, all closed-vocabulary, no LATAM-only section, 27 superseded blocks retained in place |
+| 🟢 **operative-body instrument control, both directions** | 🟢 canonical vs `apache/.github` → **0**; canonical vs `smolagents` → **0**; vs `freelingo` and `DeepTutor` → **finds both**. The instrument neither manufactures nor suppresses findings. |
+| 🟢 **licence-path enumeration** (all matching paths, not the first) | 🟢 pass — found `autogen`'s two grants and `frappe/lms`'s 11th-path `license.txt` |
+
+🔴 **One instrument defect of this pass's own, caught by this pass's own checker before publication
+and reported rather than quietly fixed.** `p488`'s first draft of `intel/market.md` put its
+`### 🆕 Registered` subsection **inside** the live `## Opportunities by region` block, so the region
+contract measured **5** `###` subsections, the fifth named `🆕 Registered`. 🔴 A compiler selecting
+regions by `###` under that heading would have emitted a region entity literally called
+"🆕 registered" — the same defect class as the header-row-as-data failure this base has hit
+repeatedly, reached by a different route. 🟢 Corrected by promoting it to `##`, which closes the
+block. 🔵 The lesson is narrow: **a section's extent is defined by what follows it, so adding a
+subsection to the end of a contracted block silently joins the block.**
+
+---
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+|---|---|
+| 🟢 **`p487`'s standing order** — *"every GNU digest here must be re-read before any drift verdict is issued against the new baseline"* | **CARRIED OUT, AND IT INVERTS THE ALARM.** 25 GNU-family payloads read at pinned commit SHAs: **14 distinct byte sizes → 5 operative bodies**, one per family/version. All size variation is four inert axes (FSF `http`→`https` reprint + `why-not-lgpl` path move; trailing newline; *How to Apply* placeholder style `<year>` vs `{year}`; title centring). 🟢 **Zero operative deviations in GPL-3.0 (10 repos), GPL-2.0 (3) and Apache-2.0 (4).** There was no drift to verdict on. |
+| 🟢 **`Gap 484-C`** — *the Apache deviation instrument ran on 3 rows, and this base holds two incompatible figures (`p481`: 6 of 13 deviating)* | **CLOSED.** On the normalised instrument across 4 Apache payloads spanning `10 765`→`11 371 B`: operative body `af7a31ce3ca7` in all four, **0 deviations**. `study-cybercirujas` is 592 B short of canonical — the entire *APPENDIX* — and still byte-identical in the operative span. 🔴 `p481`'s "6 of 13" was an unnormalised-reader artefact. 🟢 **But see the refutation below: DeepTutor is not.** |
+| 🟢 **`Gap 484-G`** — *LATAM discovery is instrument-limited; this base cannot distinguish "LATAM builds nothing" from "search cannot find it"* | **CLOSED IN THE REGION'S FAVOUR, AND THE INSTRUMENT IS NAMED.** Dropping the star floor surfaces six verified LATAM rows across four countries, three permissive: `cortega26/chile-hub` (🇨🇱 **MIT**, 135★), `Open-Security-Labs` (🇦🇷 **Apache-2.0**), `study-cybercirujas` (🇦🇷 **Apache-2.0**), `i-educar` (🇧🇷 GPL-2.0, municipal SIS in production), `br.tag` (🇧🇷 GPL-2.0), `datauy/ElijoEstudiar` (🇺🇾 GPL-3.0). 🔴 `unidades_educativas_bolivia` (🇧🇴) refused — no licence at 10 paths. 🔵 **No new channel was needed; the old one had a popularity filter on it.** |
+| 🟢 **`Gap 484-K`** — *the US "134 bills / 31 states" figure is three passes old and contested by three trackers by up to 2.6×* | **CLOSED, FIGURE HOLDS, SOURCE UPGRADED.** A **New Mexico Legislature** policy brief (ALESC, May 2026) corroborates 134 bills across 31 states in 2026 and supplies the surrounding counts: **35 states + DC + PR** introduced, **24** enacted, **35+** published guidance. 🟢 Three binding mandates with dates: Ohio HB 96 (🔴 **1 Jul 2026 — now past**), Utah HB 273 (1 Jul 2027), Tennessee PC 550 (in force). A legislative staff brief beats the vendor trackers the figure rested on. |
+| 🟢 **`Gap 484-H`** — *APAC evidence is higher-education only; no India or Japan country figure* | **CLOSED SUBSTANTIALLY.** Ipsos *Education Monitor 2026* gives country-level ban-support: Indonesia 23 %, Thailand 25 %, **India 26 %**, Singapore 28 %, **Japan 29 %**, Malaysia 29 %, South Korea 31 %, 🔴 **NZ 47 %, Australia 52 %**. 🔴 **ANZ is ~2× the rest of APAC and the gap exceeds every intra-Asian difference** — "APAC" as one market is the aggregation to stop using. 🟡 Narrows rather than vanishes: these are public attitudes, not teacher adoption. |
+| 🟢 **`Gap 486-B` line / default-ref false negatives** | **CLOSED AS AN INSTRUMENT, CHEAPLY.** `git ls-remote --symref` resolves the default ref *and* the commit SHA in one call, so `p487`'s three-of-three non-`main` finding costs nothing. 🔵 Measured here: **8 of 20** platform rows have a default ref that is neither `main` nor `master` (`release_11`, `19.0`, `2.12`, `v31.0.00`, `mobile`, `develop`, `v4.0.x-develop`, `maven/fixes/10.0`). |
+
+### 🔴 Refuted and reattributed this pass
+
+| claim | refutation |
+|---|---|
+| 🔴 **`p487`** — *`lumen` is `35 148 B · 8b1ba204bb69`, **one byte short** of canonical, and every GNU digest must be re-read before any drift verdict* | **REFUTED AS A MIS-CARRY.** Read at pinned `main` @ `07635d3c81ad`, `lumen` is **`35 149 B`, blob `f288702d2fa1`** — byte-identical to the canonical. 🔴 `8b1ba204bb69` is **`Edu-Sharing`'s** digest, recorded against `Edu-Sharing` by `p455` eighteen passes earlier. One row's cell was written into another's. 🟢 And `Edu-Sharing`'s own one-byte deficit is a **missing final newline** (`\ No newline at end of file`) — not truncation. |
+| 🔴 **`p487`'s diagnosis** — *"the African nil was never a supply problem — the instrument was the English language"*, and the per-language denominators are 7–36× low because of `readme` scope | **REATTRIBUTED, NOT REFUTED. The dominant qualifier is `stars:>3`, not language or `readme` scope.** Same query, same form: `educación in:name,description` → **5 882**; with `stars:>3` → **26**. 🔴 **226×**, against **10×** for the readme axis. 🔵 `p487`'s finding is real and secondary; its *cause* is a popularity filter, and regional education software is low-star by construction (institutional, non-viral, one ministry or school per repo). |
+| 🔴 **`p475`'s `TRUE ZERO` for Hindi, and `p487`'s refutation of it** | **BOTH WRONG, IN THE SAME DIRECTION.** `शिक्षा in:name,description` with **no star floor** → **113**. `p475` published `TRUE ZERO`; `p487` refuted it with **3** (readme-scoped). 🔴 `p487`'s refutation was itself **37× low**. 🟢 `pendidikan` reproduces both prior readings exactly (**8** at `p475`'s floor, **214** readme-scoped) against **4 251** unfloored — which identifies the executed queries beyond argument. |
+| 🔴 **This pass's own expectation** — *that `Gap 483-R`'s "6 operative-body deviations" on DeepTutor was the same artefact as `p481`'s "6 of 13"* | **🟢 `p484` VINDICATED.** After three education Apache rows re-graded to **0**, the natural reading was that the DeepTutor figure was also phantom. 🔴 It is not: re-measured on the normalised instrument, `HKUDS/DeepTutor` (`11 408 B` @ `a31d82624c27`) carries **3 one-word insertions inside `TERMS AND CONDITIONS`** (§1 *Contribution*, §1 *Contributor*, §4 NOTICE) **plus an overwritten appendix** referencing an *"Alarm or alarm"* copyright header, `Alarm` standing where `Apache` belongs. 🟢 The instrument distinguishes the two cases, which is the only reason the distinction is visible. |
+| 🔴 **The byte-size axis itself** — *that equal size implies equal bytes* | **REFUTED IN BOTH DIRECTIONS.** `canvas-lms`/`PeerTube` (both `34 520 B`) and `classroomio`/`exelearning` (both `34 523 B`) differ in bytes — a line-wrap moving `by` across a newline, which preserves the count. 🟢 Conversely `moodle`/`chamilo`/`ILIAS` share blob `94a9ed024d38` and `lumen`/`api-sekolah-indonesia`/`ElijoEstudiar` share `f288702d2fa1`. **A git blob SHA-1 is content-addressed; equal blob proves equal bytes with nothing to compute.** |
+
+### 🟡 Carried forward unchanged
+
+| gap | status |
+|---|---|
+| 🔴 `Gap 446-A` | gate unclosable — harness refuses execution of code arriving in a clone. **22 passes.** |
+| 🔴 `Gap 484-A` | nothing executed; **five passes** of code and licence reads running. Bounds every effort range on `compose/patterns.md`. |
+| 🔴 `Gap 483-K` | no EU AI Act date primary-source verified; EUR-Lex off the fetch allowlist. The 31 Jul / 24 Jul conflict is unresolved. |
+| 🔴 `Gap 484-F` | no non-GitHub URL primary-source verified. **Every regional and market figure in `p488` is secondary**, including the Ipsos, Uniandes and NM Legislature readings. |
+| 🟡 `Gap 484-B` | MCP **hosts** and **servers** still compared as one population (`DeepTutor` is a host; `canvas-mcp`, `mentingo` are servers). Not addressed. |
+| 🟡 `Gap 484-D` | `braiinz94/braiinz-education` still has a verified licence and no verified stars/scope/activity. |
+| 🟡 `Gap 484-E` | DeepTutor's 110 tool definitions counted, not classified — no read/write split, no guard mapping. |
+| 🟡 `Gap 484-I` | DEC survey cited through aggregators that disagree (Chinese student enthusiasm as both 80 % and 92 %). |
+| 🟡 `Gap 484-J` | MEA evidence is **strategies, not outcomes** — not re-verified this pass. |
+| 🟡 `Gap 484-V` | every effort range uncalibrated against a delivered engagement. |
+| 🟡 `Gap 483-B`, `483-E`, `483-G`, `483-H`, `483-J`, `483-P` | not addressed this pass. |
+| 🟡 `Gap 483-I` | the "no native AI surface" verdict on institutional platforms now rests on an **Apr-2026** secondary comparison — six months old in the fastest-moving half of the sector (re-registered as `Gap 488-N`). |
+
+### 🆕 Registered this pass — 24
+
+| gap | statement | cost to close |
+|---|---|---|
+| 🔴 **`Gap 488-A`** | Every GNU/Apache **byte-size cell** published before this pass is a size, now shown neither necessary nor sufficient for identity. They invite exactly the verdict `p487` reached and should be reissued as blob SHAs or deleted. | one pass over published tables |
+| 🔴 **`Gap 488-B`** | `freelingo`'s defect was found only because 25 payloads were compared. **A lone payload read in one pass cannot be checked this way** — a single AGPL row with a word deleted from §11 passes every instrument here. | needs a retained canonical set |
+| 🟡 **`Gap 488-C`** | The LGPL-3.0 rows (`bigbluebutton` `7 652 B`, `openeducat_erp` `8 241 B`) have **no `TERMS AND CONDITIONS` span** — LGPL-3.0 is an addendum to GPL-3.0 — so the operative instrument cannot grade them. **Ungraded, not clean.** | one pass, needs an LGPL anchor |
+| 🟡 **`Gap 488-D`** | `rosariosis` ships the **pre-1999 FSF printing** of GPL-2.0 (*"Library"* GPL, old Franklin St address) with the appendix truncated (276 lines vs 339). Operative body matches; nobody has asked why it is 27 years stale. | one issue to the maintainer |
+| 🔴 **`Gap 488-E`** | **Every "region X supplies nothing" verdict on this base was produced by a popularity filter.** `p475`–`p487` made at least four such calls. They are measurements of GitHub's star distribution, not of regional supply. | one pass re-running the four calls |
+| 🟡 **`Gap 488-F`** | Precision@N was judged by this pass from repo descriptions, by one reader, at N=12–15. Direction unambiguous (`0.00` vs `0.92`); figures not independently graded. | one pass, second reader |
+| 🟡 **`Gap 488-G`** | `5 882` unfloored `educación` hits is a **ceiling**, not regional supply — it includes any repo with the token in name or description. Neither bound is the quantity a studio wants and **nobody has sampled the middle.** | one pass, stratified sample |
+| 🟡 **`Gap 488-H`** | `ai-ethos` (498★), `ai-tutor-rag-system` (244★) and the Bolivian registry are all refused for a **missing licence file**, and no pass has ever opened an issue asking a maintainer to add one. The cheapest intervention on these shelves is untried. | three issues |
+| 🔴 **`Gap 488-I`** | **No pass has stated the AGPL §13 consequence in a proposal-facing form** until `P488-5`. Eight platform rows carry it, including all three most likely to be hosted for a client. Older recipes on `compose/patterns.md` still build on them silently. | one pass auditing older recipes |
+| 🟡 **`Gap 488-J`** | The two Brazilian rows are **GPL-2.0** with the *or-later* election unread. `p455` built a version axis for exactly this and never ran it on them. Until read, neither combines with GPL-3.0 code. | one read, channel works |
+| 🟡 **`Gap 488-K`** | `kolibri` is the **only permissive institutional platform** on these shelves and has never been read — no code read, no AI-surface census, no star or activity figure. The one row the brief's licence preference points to is the least examined. | one pass |
+| 🔴 **`Gap 488-L`** | `formalms` has been carried as a vertical platform across passes with **no readable grant at 22 paths**. It should be marked unusable on the shelf itself. | one edit |
+| 🟡 **`Gap 488-M`** | `INGInious`'s AGPL covers *"most of the files"* with per-file exceptions it declines to enumerate. For an autograder that executes submitted work, "which files" is load-bearing. | one pass, per-file census |
+| 🟡 **`Gap 488-N`** | No platform row has an **AI-surface read newer than Apr 2026**. Every "no native AI" verdict here is six months old. | one pass |
+| 🔴 **`Gap 488-O`** | **EMEA is now the weakest region on this base.** Its leg returned one vendor blog (`openeducat.org`) replicated across seven language paths and counted as seven results — and that vendor is on this base's own vertical shelf. | one pass, named-source list |
+| 🔴 **`Gap 488-P`** | The carried **`$9.58 B → $42.48 B`** figure is still written on older blocks of `intel/market.md` and in the rotation status. Five publishers put 2026 at **$3.7 B–$9.0 B** and forecasts 8× apart. Replace with range + publisher, or delete. | one pass |
+| 🟡 **`Gap 488-Q`** | Ipsos APAC figures are **ban support**, an attitude. No 2026 APAC *teacher adoption* figure exists here, so the ANZ-vs-Asia split is measured on sentiment and may not transfer to procurement. | one search leg |
+| 🟡 **`Gap 488-R`** | The LATAM **716 instruments / 23 countries** count is one project's database read through a single PDF; its definition of "instrument" is unexamined here. | one pass |
+| 🟡 **`Gap 488-S`** | **Ohio's 1 Jul 2026 deadline has passed and nobody has measured compliance.** Whether districts actually adopted policies is the difference between a live market and a notional one. | one search leg |
+| 🔴 **`Gap 488-T`** | `T488-1`'s **2-of-29 licence-edit rate** is measured on this base's own unusually well-checked shelves. The sector-wide rate is unknown and the measurement is cheap. | one pass over any education corpus |
+| 🟡 **`Gap 488-U`** | `T487-1` (whole-body readers misgrade GPL-3.0 as AGPL via §13) is **carried unverified** — consistent with everything found here, not re-measured. | part of one pass |
+| 🟡 **`Gap 488-V`** | `StudentSim` is cited from its description; **its code is unread**, so "simulates student responses" is the repository's claim. It is the row `T488-8` and `P488-1` both rest on. | one clone and read |
+| 🟡 **`Gap 488-W`** | All six `p488` recipes are composed from licence and description reads, **not from running the components together**. | needs an execution-permitted session |
+| 🔴 **`Gap 488-X`** | **`LICENSE` is not always the code grant** (`microsoft/autogen`: `LICENSE` = CC BY 4.0, `LICENSE-CODE` = MIT). This is a Microsoft-wide convention, so it is a **class**, and every first-hit path probe this base has ever run is exposed to it. No pass has re-probed carried rows for a second grant file. | one pass, all rows |
+
 ## 🆕 `p484` — **🟢 FOUR GAPS CLOSED WITH CONTENT (`483-C` with its premise inverted, `483-R` with a clone, `483-F` from bytes, `483-L` with an absence that has a shape), TWO CLOSED SUBSTANTIALLY (`483-M`, `483-N`), ONE REOPENED ON A BETTER AXIS (`483-O` — the region is unmeasured, not empty, and the search engine is why), one published trend REFUTED (`T483-1`), and nineteen registered. 🔴 And this register's own currency contract has been broken for NINE passes: the newest section below was `p474` while the shelves carried `p483`.**
 
 🔵 **`gate-register-currency` — measured and FAILED.** `Gap 473-F`'s cheap positive check is: the

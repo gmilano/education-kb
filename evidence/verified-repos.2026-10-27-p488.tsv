@@ -1,0 +1,25 @@
+repo	stars	default_ref	commit_sha12	licence_path	licence_bytes	blob_sha12	spdx_from_title_block	region	country	verdict
+Exorust/TorchLeet	2592	main	c0375feaa5bf	LICENSE	1106	7e1963de22b9	MIT	Global	-	ACCEPTED
+aaryansamanta/ai-ethos	498	main	9acaafc718f2	-	-	-	-	North America	US	REFUSED-NO-LICENCE-10-PATHS
+Li-Evan/Bloom	293	main	68788b5e7d34	LICENSE	1069	c8351ac37830	MIT	APAC	China	ACCEPTED
+CAHLR/OATutor	272	main	e24c8456e5f7	LICENSE	1105	7cb404425d82	MIT	North America	US	ACCEPTED
+SenmuuuuW/universal-diagnostic-tutor-skill	251	main	075c1895d255	LICENSE	1102	b5c46c4fb03c	MIT	Global	-	ACCEPTED
+towardsai/ai-tutor-rag-system	244	main	89776d8511f6	-	-	-	-	Global	-	REFUSED-NO-LICENCE-10-PATHS
+zuhairhalawa/studyai	234	main	fb4a7ea98500	LICENSE	1069	df4c8912c038	MIT	Global	-	ACCEPTED-NEW-THIS-WEEK
+artcc/freelingo	209	main	269feb00c09a	LICENSE	34514	128919466b58	AGPL-3.0	EMEA	Spain	ACCEPTED-WITH-DEFECT-MODIFIED-LICENCE-TEXT
+cortega26/chile-hub	135	main	cf5a2c02aca0	LICENSE	1070	77399f6776f0	MIT	LATAM	Chile	ACCEPTED
+GeminiLight/gen-mentor	134	main	79fc182c5d80	LICENSE	7048	0e259d42c996	CC0-1.0	APAC	-	ACCEPTED
+nothinx/naskah-id	84	main	e18d574c6b93	LICENSE	1162	f55dbd9ef30b	MIT	APAC	Indonesia	ACCEPTED-REPRODUCES-p487
+microsoft/StudentSim	79	main	73005fd8cac8	LICENSE	1074	22aed37e650b	MIT	North America	US	ACCEPTED
+Zenglian990/AI_Tutor_Release	74	master	2987df2be268	LICENSE	1068	ad1acdaca9f2	MIT	APAC	China	ACCEPTED
+ValentinTorassa/Open-Security-Labs	42	main	939878bb22ff	LICENSE	11371	aab47c7b7cf6	Apache-2.0	LATAM	Argentina	ACCEPTED
+villadalmine/study-cybercirujas	37	main	e4405caba437	LICENSE	10765	191068cbe6b4	Apache-2.0	LATAM	Argentina	ACCEPTED
+mauforonda/unidades_educativas_bolivia	5	master	1388643e81c7	-	-	-	-	LATAM	Bolivia	REFUSED-NO-LICENCE-10-PATHS
+frappe/lms	-	develop	6054772c0426	license.txt	33893	6bb5339778ba	AGPL-3.0	APAC	India	CORRECTION-FOUND-AT-11TH-PATH
+sakaiproject/sakai	-	master	6fd8652da3f0	LICENSE	11120	2d2098a91927	ECL-2.0	North America	US	CORRECTION-NOT-APACHE-2.0
+INGInious/INGInious	-	main	efa1b09d62ca	LICENSE	34764	d7b109950d4d	AGPL-3.0	EMEA	Belgium	CORRECTION-SCOPED-GRANT-MOST-OF-THE-FILES
+formalms/formalms	-	master	446a77a9b9cb	-	-	-	-	EMEA	Italy	REFUSED-NO-LICENCE-22-PATHS
+HKUDS/DeepTutor	-	main	a31d82624c27	LICENSE	11408	-	Apache-2.0	APAC	Hong Kong	ACCEPTED-WITH-3-OPERATIVE-DEVIATIONS
+huggingface/smolagents	-	main	96f33faaf028	LICENSE	11357	-	Apache-2.0	EMEA	France	ACCEPTED-BYTE-IDENTICAL-TO-CANONICAL
+satvik314/educhain	-	main	38adb1e9459d	LICENSE	1092	-	MIT	APAC	India	ACCEPTED
+microsoft/autogen	-	main	004749e6b710	LICENSE-CODE	1141	-	MIT	North America	US	CORRECTION-LICENSE-IS-CC-BY-4.0-CODE-IS-MIT

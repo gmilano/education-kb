@@ -1,0 +1,4 @@
+repo	ref	commit_sha12	raw_bytes	operative_sha12	deviations_vs_canonical	note
+apache/.github (canonical)	HEAD	-	11357	af7a31ce3ca7	0	reference payload
+ValentinTorassa/Open-Security-Labs	main	939878bb22ff	11371	af7a31ce3ca7	0	+14 B vs canonical, all outside operative body
+villadalmine/study-cybercirujas	main	e4405caba437	10765	af7a31ce3ca7	0	-592 B vs canonical (APPENDIX trimmed), operative body identical

@@ -1,0 +1,7 @@
+repo	commit_sha12	raw_bytes	operative_sha12	operative_deviations	deviation_detail
+apache/.github (canonical)	-	11357	af7a31ce3ca7	0	reference
+huggingface/smolagents	96f33faaf028	11357	af7a31ce3ca7	0	byte-identical to canonical
+ValentinTorassa/Open-Security-Labs	939878bb22ff	11371	af7a31ce3ca7	0	+14 B outside operative body
+villadalmine/study-cybercirujas	e4405caba437	10765	af7a31ce3ca7	0	APPENDIX trimmed (-592 B), operative body identical
+HKUDS/DeepTutor	a31d82624c27	11408	c52d889efc99	3	L52 §1 Contribution: "submitted to Licensor" -> "submitted to the Licensor"; L64 §1 Contributor: "received by Licensor" -> "received by the Licensor"; L110 §4 Redistribution NOTICE: "excluding those notices" -> "excluding any notices"
+HKUDS/DeepTutor (appendix)	a31d82624c27	11408	c52d889efc99	appendix	APPENDIX how-to-apply text replaced: canonical "We also recommend that a file or class name and description of purpose be included..." -> "Please also get an \"Alarm or alarm\" copyright header and make that the reference to the Apache License and the Disclaimer of Warranty (Alarm is the umbrella trademark for a collection of Open Source projects)"

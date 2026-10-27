@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p488` — `2026-10-27T20:55Z` — **🟢 `p487`'s order is carried out — every GNU digest on these shelves re-read at a pinned commit — and it inverts the alarm that ordered it. 🔴 Twenty-five payloads, fourteen distinct byte sizes, **five** operative bodies: the drift this base has been chasing since `p450` does not exist. 🔴 And the one payload that *is* altered inside the operative body was never flagged, because its size looks exactly like the others.**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED** (`Code from
+External`) before any gate body ran — **fourteen denials in fourteen passes**. 🔵 Nothing in this
+pass is gate-attested. Every number below was re-measured in this pass's own code and the controls
+are reported with it.
+
+🔵 Channel: default ref resolved with `git ls-remote --symref` (which also answers `p487`'s
+three-of-three non-`main` default-ref finding without probing), bytes from
+`raw.githubusercontent.com` **at the resolved commit SHA**. Evidence:
+[`gnu-operative-equivalence`](../evidence/gnu-operative-equivalence.2026-10-27-p488.tsv),
+[`bytes-not-identity`](../evidence/bytes-not-identity.2026-10-27-p488.tsv),
+[`operative-body-deviation`](../evidence/operative-body-deviation.2026-10-27-p488.tsv),
+[`apache-operative-equivalence`](../evidence/apache-operative-equivalence.2026-10-27-p488.tsv).
+
+### 🔴 `p487`'s "one byte short" is a mis-carry, and it is checkable in one read
+
+🔵 `p487` closed with a standing order: *"every GNU digest here must be re-read before any drift
+verdict is issued against the new baseline"*, naming two cells **one byte short** of its canonical
+`35 149 B · 3972dc9744f6` — `lumen` at `35 148 B · 8b1ba204bb69` and `Edu-Sharing` at `35 148 B`.
+
+🟢 **Read at a pinned commit, `lumen` is not short:**
+
+| | `p487` recorded | 🟢 `p488` read at pinned commit |
+|---|---|---|
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 🔴 `35 148 B · 8b1ba204bb69` | 🟢 **`35 149 B`** · `main` @ `07635d3c81ad` · blob **`f288702d2fa1`** |
+| [`edu-sharing/Edu-Sharing`](https://github.com/edu-sharing/Edu-Sharing) | `35 148 B` | 🟢 `35 148 B` · `maven/fixes/10.0` @ `f6e74c5195b9` · blob `e72bfddabc15` |
+
+🔴 **`8b1ba204bb69` is `Edu-Sharing`'s digest, not `lumen`'s** — `p455` recorded exactly that string
+against `Edu-Sharing` eighteen passes ago. One row's cell was written into the other's, and the
+"drift" that ordered a full re-read was a transcription.
+
+🟢 **And `Edu-Sharing`'s own one-byte deficit is a missing final newline.** `diff` against the
+canonical reports a single difference: `\ No newline at end of file`. Not truncation, not an edit —
+the last byte of the file.
+
+### 🟢 The census `p487` ordered: 25 payloads, 14 sizes, 5 operative bodies
+
+🔵 Method: isolate the legally operative text (`TERMS AND CONDITIONS` … `END OF TERMS AND
+CONDITIONS`), then normalise the four axes proved below to be inert, then hash. Everything outside
+that span — the FSF copyright line, the *"How to Apply These Terms"* appendix — is where licence
+payloads legitimately differ and where no obligation lives.
+
+| family | repos | distinct raw sizes | 🟢 operative bodies | deviations |
+|---|---|---|---|---|
+| **GPL-3.0** | 10 | 6 — `35 121` → `35 149` | 🟢 **1** (`51142ae71da6`) | 🟢 **0** |
+| **AGPL-3.0** | 8 | 6 — `33 893` → `35 136` | 🔴 **2** (`074dc27cf996` + one defect) | 🔴 **1** |
+| **GPL-2.0** | 3 | 3 — `15 214` / `18 027` / `18 092` | 🟢 **1** (`9af69bf02249`) | 🟢 **0** |
+| **Apache-2.0** | 3 + canonical | 3 — `10 765` → `11 371` | 🟢 **1** (`af7a31ce3ca7`) | 🟢 **0** |
+| **ECL-2.0** | 1 | 1 — `11 120` | 🟢 1 (`bd7b19c717ba`) | — |
+
+🟢 **Ten GPL-3.0 payloads spanning 28 bytes of size variation are the identical FSF grant.** The
+four axes that produce all of it:
+
+| axis | example | size effect |
+|---|---|---|
+| 🔵 **FSF reprint** — `http`→`https` on `fsf.org` and `gnu.org`, plus `why-not-lgpl.html` moving from `/philosophy/` to `/licenses/` | `moodle` `35 147` vs `lumen` `35 149` | **+2 B**, zero operative change |
+| 🔵 **trailing newline** | `Edu-Sharing` `35 148` | **−1 B** |
+| 🔵 **appendix placeholder style** — `<year>` vs `{year}` in *How to Apply* | `learninglocker` `35 141`, `GibbonEdu/core` `35 121` | −8 / −28 B |
+| 🔵 **title-line centring** | `GibbonEdu/core` | part of the −28 B |
+
+### 🔴 Byte size is neither necessary nor sufficient for identity — both directions measured
+
+🔴 **Two same-size pairs are different bytes.** The difference is a line-wrap of the *How to Apply*
+notice that moves the word `by` across a newline — which preserves the byte count exactly:
+
+| size | repos | differ by |
+|---|---|---|
+| `34 520 B` | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) · [`Chocobozzz/PeerTube`](https://github.com/Chocobozzz/PeerTube) | 🔴 `…as published by / the Free Software Foundation` vs `…as published / by the Free Software Foundation` |
+| `34 523 B` | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) · [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🔴 the same wrap, **in the opposite orientation** |
+
+🟢 **And byte-identity across repositories is provable without computing any digest**, because a git
+blob SHA-1 is content-addressed by construction:
+
+| blob | size | repos |
+|---|---|---|
+| 🟢 `f288702d2fa1` | `35 149 B` | `ahmedEid1/lumen` · `wanrabbae/api-sekolah-indonesia` · [`datauy/ElijoEstudiar`](https://github.com/datauy/ElijoEstudiar) — **three repositories, three continents** |
+| 🟢 `94a9ed024d38` | `35 147 B` | [`moodle/moodle`](https://github.com/moodle/moodle) · [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) · [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) — **the three largest institutional LMSes on these shelves** |
+
+🔵 `p487` proved byte-identity by matching a size and its own digest. The blob SHA makes that step
+unnecessary and removes the truncation risk `p487` was worried about: **equal blob, equal bytes, no
+computation and no near-miss.** It is also already published by every GitHub tree listing.
+
+### 🔴 The one real defect — and the instrument would have missed it
+
+🔴 [`artcc/freelingo`](https://github.com/artcc/freelingo) (209★, AGPL-3.0, `main` @ `269feb00c09a`,
+`34 514 B`, blob `128919466b58`) is the **only** payload in the census whose operative body does not
+match its family. Two differences, both inside `TERMS AND CONDITIONS`:
+
+| line | canonical AGPL-3.0 | 🔴 served | where |
+|---|---|---|---|
+| 526 | `…may otherwise be available to you under applicable **patent** law.` | 🔴 `…under applicable law.` | **§11 Patents, final paragraph** — the word `patent` is deleted |
+| 309 | `…transferred to the recipient in **perpetuity** or for a…` | 🔴 `…in **perpetity** or for a…` | §6 Conveying Non-Source Forms |
+
+🔵 The typo matters only as proof of mechanism: this payload was retyped or hand-edited, not copied.
+🔴 The deletion is in the sentence that preserves implied patent licences and infringement defences,
+and broadening it from `patent law` to `law` changes what the clause reserves.
+
+🔴 **`34 514 B` sits comfortably inside the same near-miss cluster as the twenty-four authentic
+payloads.** A byte-size reader classifies it as one more FSF reprint variant. **The instrument was
+loud on twenty-four files where nothing was wrong and silent on the one that was altered** — which
+is the whole case for retiring it.
+
+🟡 Practical consequence for a studio: `freelingo` is a modified licence text, so the standard AGPL-3.0
+analysis does not straightforwardly apply and the FSF's own terms do not permit modified copies of
+the licence. 🟢 It stays on the shelves with the defect named, not removed — the code is real and the
+grant is plainly intended to be AGPL-3.0. **Ask the maintainer to restore the verbatim text before
+building on it.**
+
+### 🟢 `Gap 484-C` closed — and `p481`'s Apache figure was the same artefact
+
+🔵 `Gap 484-C` recorded that this base holds two incompatible Apache figures: `p481` reported
+**6 of 13** Apache repos deviating on an unnormalised instrument, and `p484` re-graded only 3.
+
+🟢 On the normalised instrument, across three Apache payloads and the canonical, spanning
+`10 765` → `11 371 B`: **operative body `af7a31ce3ca7` in all four, 0 deviations.**
+🔵 `study-cybercirujas` is **592 B short** of canonical — the entire *APPENDIX: How to apply the
+Apache License* — and its operative body is still byte-identical after normalisation. 🔴 `p481`'s
+"6 of 13" is the same phantom as the GNU drift, from the same cause.
+
+### 🟢 Three licence corrections on carried rows
+
+| repo | this base carried | 🟢 read at a pinned commit | why it matters |
+|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | GNU-family, path unresolved | 🔴 **AGPL-3.0**, `license.txt` **lowercase**, `33 893 B`, `develop` @ `6054772c0426` | **Found on the 11th path after a 10-path probe returned nothing.** AGPL §13's network clause binds a *hosted* LMS — the single most consequential grant on these shelves to get wrong. |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🔴 `Apache-2.0` (carried since the `education` cycle-1 status) | 🟢 **ECL-2.0** — *Educational Community License, Version 2.0*, `11 120 B` @ `6fd8652da3f0` | Apache-derived, but §3 narrows the patent grant — see `verticals/solutions.md`. Not an Apache row. |
+| [`INGInious/INGInious`](https://github.com/INGInious/INGInious) | `AGPL-3.0` | 🟡 **AGPL-3.0 with a scoping wrapper** | Three lines **above** the title block read *"**Most** of the files in INGInious are distributed under the GNU AGPL v3 licence, which follows. If it is not the case, this is clearly indicated in the files."* A per-file carve-out; the tree is not uniformly AGPL. |
+
+🔵 All three were invisible to a title-block reader for the same structural reason: `frappe` because
+the path probe was case-sensitive, `sakai` because its title block names a licence this base had no
+pattern for, `INGInious` because its title block is not the first thing in the file.
+
+🔴 **Refused this pass:** [`formalms/formalms`](https://github.com/formalms/formalms) — **no licence
+file at 22 candidate paths** at `446a77a9b9cb`. A carried vertical row with no readable grant.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 488-A`** | Every GNU/Apache byte-size cell published before this pass is a *size*, and sizes are now shown to be neither necessary nor sufficient for identity. They should be reissued as blob SHAs or deleted; until then they invite exactly the verdict `p487` reached. |
+| 🔴 **`Gap 488-B`** | `freelingo`'s defect was found because 25 payloads were compared. **No payload read in a single pass can be checked this way** — a lone AGPL row with a deleted word in §11 still passes every instrument this base owns. |
+| 🟡 **`Gap 488-C`** | The LGPL-3.0 rows (`bigbluebutton` `7 652 B`, `openeducat_erp` `8 241 B`) have **no `TERMS AND CONDITIONS` span** — LGPL-3.0 is an addendum to GPL-3.0 — so the operative-body instrument cannot grade them at all. They are ungraded, not clean. |
+| 🟡 **`Gap 488-D`** | `rosariosis`'s GPL-2.0 is the **pre-1999 FSF printing** (*"GNU Library General Public License"*, old Franklin St address) with the *How to Apply* appendix truncated — 276 lines against 339. Operative body matches; the printing is 27 years old and nobody has looked at why. |
+
 ## 🆕 `p487` — `2026-10-27T19:55Z` — **the institution-registry tier arrives from a single country, through a single non-English query, and the row with the best data is the one a studio may not freely combine**
 
 🔵 Discovery through the authenticated GitHub search channel; licences from

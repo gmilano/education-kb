@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p488` — `2026-10-27` — **🔴 The trend with the most money attached is still not about education: open-source licence *payloads* in this sector are being edited, and every automated reader in the supply chain is built to detect a licence **family**, which is exactly the thing an edit leaves intact. Two of twenty-nine payloads read first-hand this pass are altered — one with a word deleted from AGPL-3.0 §11. 🟢 And a popularity filter, not a language, was hiding regional supply.**
+
+🔵 Eight trends. 🟢 marks those resting on first-hand measurement in this pass; 🟡 those resting on
+secondary sources. 🔴 `make hooks` **DENIED** — **fourteen denials in fourteen passes**; nothing is
+gate-attested.
+
+### 🟢 `T488-1` — licence payloads are being edited, and family detection cannot see it
+
+🟢 **Measured, not argued.** Twenty-nine licence payloads read at pinned commit SHAs; the operative
+span (`TERMS AND CONDITIONS` … `END OF TERMS AND CONDITIONS`) compared against canonicals after
+normalising four axes proved inert. **Two carry edits:**
+
+| repo | grant | edit |
+|---|---|---|
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | AGPL-3.0 | 🔴 **§11 Patents, final paragraph: the word `patent` is deleted** — *"available to you under applicable law"* for *"under applicable **patent** law"*. Plus `perpetuity`→`perpetity` in §6. |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 🔴 Three one-word insertions inside §1 and §4, **and an appendix rewritten** to reference an *"Alarm or alarm"* copyright header, *"Alarm* is the umbrella trademark for a collection of Open Source projects"* — `Alarm` standing where `Apache` belongs. |
+
+🔵 **Both repositories declare their family correctly**, both pass every title-block and SPDX
+detector, and neither is flagged by any scanner in ordinary use. 🔴 **A licence-family reader
+answers "which licence is this called", and the question a studio needs answered is "what does this
+file actually say".** Those came apart in 2 of 29 cases — roughly **7 %** — on shelves where every
+row was already licence-checked by thirteen prior passes.
+
+🔵 Mechanism for the DeepTutor case is visible in the text: `Apache`→`Alarm` is the signature of a
+careless global replace or a generated rewrite. 🔵 As LLM-assisted repo scaffolding becomes normal,
+**licence files are now generated artefacts like any other**, and nothing in the toolchain treats
+them as text to verify. 🟢 Commercial consequence: the remedy is cheap and nobody runs it — compare
+the operative span against a canonical, which is one normalisation and one hash.
+
+### 🟢 `T488-2` — byte-size licence comparison is actively harmful, in both directions
+
+🟢 **The instrument this base built over thirteen passes produced phantom drift on 24 authentic
+payloads and silence on the 1 altered one.** Twenty-five GNU-family payloads span **14 distinct byte
+sizes** and reduce to **5 operative bodies** — one per family/version, plus `freelingo`'s defect. All
+size variation comes from the FSF's own `http`→`https` reprint, a trailing newline, *How to Apply*
+placeholder style (`<year>` vs `{year}`), and title centring.
+
+🔴 And size is **not sufficient** either: `canvas-lms`/`PeerTube` (both `34 520 B`) and
+`classroomio`/`exelearning` (both `34 523 B`) differ in bytes — a line-wrap that moves `by` across a
+newline and preserves the count exactly.
+
+🟢 **The fix costs nothing and is already published:** a git blob SHA-1 is content-addressed, so
+equal blob means equal bytes, provably, with no digest to compute. Three repositories on three
+continents share blob `f288702d2fa1`; Moodle, Chamilo and ILIAS share `94a9ed024d38`.
+🔵 Industry-wide relevance: SBOM and licence-compliance tooling is now a procurement gate, and the
+ones that fingerprint by size or fuzzy-hash inherit both failure modes.
+
+### 🟢 `T488-3` — a star floor is a popularity filter, and the sector it suppresses is this one
+
+🟢 `educación in:name,description` → **5 882**. The same query with `stars:>3` → **26**. 🔴 **226×**,
+against the **10×** attributable to the readme-scope defect `p487` identified. Hindi `शिक्षा`
+returns **113** unfloored where `p475` published **`TRUE ZERO`** and `p487`'s refutation said **3**.
+
+🔵 **Why education specifically.** Institutional education software is non-viral by construction: it
+serves one ministry, district or school, its users are not its developers, and nobody stars a
+gradebook. A star count measures developer-audience size, and this sector's audience is
+administrators. 🔴 **Every "region X supplies nothing" verdict on this base was produced by this
+filter.**
+
+🔴 Worse, a floor does not merely shrink the result — it **changes the subject**. Two education
+queries with floors returned 6 570 and 31 185 hits and **zero** education repositories in their top
+results; the top rows were `rea`, `superpowers`, `hermes-agent`, `opencode`, `dify` at 150 000★–400 000★.
+🟢 Quoting the phrase and dropping the floor moved precision from `0.00` to `0.92` on the same shelf.
+
+### 🟢 `T488-4` — the education foundation tier is copyleft, and a third of it is network copyleft
+
+🟢 Nineteen named institutional platforms, grants read first-hand: **2 permissive** (`kolibri` MIT,
+`sakai` ECL-2.0), **8 AGPL-3.0**, 6 GPL-3.0, 2 GPL-2.0, 2 LGPL-3.0, 1 with no readable licence.
+🔴 The three platforms a client is most likely to ask to have hosted — **Open edX, Canvas,
+`frappe/lms`** — are all AGPL-3.0.
+
+🔵 This is the structural fact underneath every engagement in the sector: **§13 obliges a hosted
+modified version to offer source to its network users.** Entirely workable, done daily — but it is a
+disclosure and a price, and it is the opposite of what a brief preferring MIT/Apache/BSD assumes is
+available. 🟢 The permissive rows exist in the *adjacent* layers — harness, evaluation, learner
+model, data — not in the platform layer.
+
+### 🟡 `T488-5` — the market has no size, only a range
+
+🟡 Five publishers, same market, year 2026: **$3.7 B to $9.0 B** (2.4×); forecasts $14.1 B (2033) to
+$112.3 B (2034) — **8×**; CAGRs 21 % to 45 %. 🔵 The divergence is definitional, not arithmetic.
+🔴 Any single figure quoted from this sector — including the `$9.58 B → $42.48 B` this base carried
+for four cycles — is a publisher's boundary choice presented as a measurement.
+
+### 🟢 `T488-6` — regulation is now the product, and it splits the regions cleanly
+
+🟢 **North America sells compliance against deadlines.** Ohio HB 96 required every district to adopt
+an AI policy by **1 Jul 2026 — now past**; Utah HB 273 by Jul 2027; Tennessee PC 550 in force;
+35 states + DC + PR legislating, 24 enacted (NM Legislature brief, May 2026). The pattern repeats
+across states — district policy, educator supervision, limits on high-stakes automated decisions,
+parent disclosure, AI literacy — so one package resells.
+
+🔴 **LATAM is the mirror image: 716 instruments across 23 countries, and under 14 % with
+AI-*specific* regulation.** Dense activity, almost no binding sectoral rule. There the product is
+not compliance but **governance authoring**, and five countries hold 85 % of the instruments.
+
+🟡 **EMEA is the AI Act's high-risk classification** (education access and assessment: admissions,
+evaluation, exam scoring), phased 2026–27, still unverified against primary text here.
+
+### 🟡 `T488-7` — APAC is not one market, and the split is bigger than anything inside Asia
+
+🟡 Ipsos Education Monitor 2026, support for banning AI in schools: Indonesia **23 %**, Thailand 25 %,
+India **26 %**, Singapore 28 %, Japan 29 %, Malaysia 29 %, South Korea 31 % — against **New Zealand
+47 %** and **Australia 52 %**. 🔴 ANZ is roughly double, and the ANZ-vs-Asia gap exceeds every
+intra-Asian difference.
+
+🟢 Supply agrees with demand in Asia specifically: four of this pass's accepted rows are
+China/Indonesia-origin, plus `DeepTutor` from Hong Kong — the largest row on these shelves. 🔵 APAC
+is the only region where this base's supply and demand evidence point the same direction, and
+"APAC" as a single market segment is the one aggregation to stop using.
+
+### 🟢 `T488-8` — the simulated learner arrives, and it is the missing half of every tutoring claim
+
+🟢 [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) (79★, MIT @ `73005fd8cac8`) is a
+research framework for models that **simulate how a student responds to material**, so a tutoring
+method can be tested before human subjects are involved.
+
+🔵 Why this is a trend and not a row: every tutoring agent on these shelves — `DeepTutor`, `Bloom`,
+`OATutor`, `gen-mentor`, `AI_Tutor_Release` — makes a **pedagogical** claim, and this base has never
+held an instrument that could falsify one. 🔴 `Bloom` cites the 2-sigma result in its own name;
+nothing here could check it. 🟢 A simulated learner plus `OATutor`'s Bayesian Knowledge Tracing gives
+a measurable learner model and a test harness in the same stack, both MIT. 🟡 Research-stage, one
+repo, no third-party replication — the trend is the category appearing, not the category being
+settled.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 488-T`** | `T488-1`'s 2-of-29 edit rate is **this base's own shelves**, which are unusually well-checked. The sector-wide rate is unknown and the measurement is cheap — any corpus of education repos, one normalisation, one hash. |
+| 🟡 **`Gap 488-U`** | `T487-1` (whole-body licence readers misgrade GPL-3.0 as AGPL via §13) is **carried unverified** this pass. It is consistent with everything found here but was not re-measured. |
+| 🟡 **`Gap 488-V`** | `StudentSim` is cited from its description. **No pass has read its code**, so "simulates student responses" is the repository's claim, not a verified capability — and it is the row `T488-8` rests on. |
+
 ## 🆕 `p487` — `2026-10-27` — **🔴 THE TREND WITH THE MOST COMMERCIAL WEIGHT THIS PASS IS NOT ABOUT EDUCATION AT ALL: the open-source licence *readers* the whole industry leans on can misgrade a plain `GPL-3.0` as network copyleft, because the grant's own §13 names the Affero licence. 🟢 And the "regional supply nil" this base has reported for twelve passes was a missing search qualifier, not a missing corpus.**
 
 🔵 Eight trends. Those resting on first-hand measurement this pass are marked 🟢; those resting on

@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p488` — `2026-10-27` — **🔴 The brief this base serves asks for MIT / Apache / BSD foundations. In the institutional education tier they very nearly do not exist: of nineteen named platforms read at pinned commits, **two** carry a permissive grant, and **eight** are network copyleft. 🟢 That is an informed gap, and it is worth more than another table of copyleft rows presented as buildable.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — **fourteen denials in fourteen passes.** Nothing
+below is gate-attested. Every grant is read from bytes at a **pinned commit SHA**, with the default
+ref resolved first by `git ls-remote --symref` (which is why none of the three non-`main` default
+refs `p487` found cost a probe this pass). Evidence:
+[`gnu-operative-equivalence`](../evidence/gnu-operative-equivalence.2026-10-27-p488.tsv),
+[`verified-repos`](../evidence/verified-repos.2026-10-27-p488.tsv).
+
+### 🔴 The grant census — the number a studio has to price before it picks a foundation
+
+🔵 Nineteen platforms, chosen **by name recognition in the institutional tier** — not by licence —
+and every grant read first-hand:
+
+| grant | n | platforms |
+|---|---|---|
+| 🟢 **MIT** | **1** | `learningequality/kolibri` |
+| 🟢 **ECL-2.0** (Apache-derived) | **1** | `sakaiproject/sakai` — 🔴 but see the patent carve-out in `verticals/solutions.md` |
+| 🔴 **AGPL-3.0** (network copyleft) | **8** | `openedx/edx-platform` · `instructure/canvas-lms` · `frappe/lms` · `classroomio` · `exelearning` · `INGInious` · `Chocobozzz/PeerTube` · `artcc/freelingo` |
+| 🟡 **GPL-3.0** | **6** | `moodle` · `chamilo-lms` · `ILIAS` · `GibbonEdu/core` · `h5p-php-library` · `LearningLocker` |
+| 🟡 **GPL-2.0** | **2** | `francoisjacquet/rosariosis` · `portabilis/i-educar` |
+| 🟡 **LGPL-3.0** | **2** | `bigbluebutton` · `openeducat_erp` |
+| 🔴 **none readable** | **1** | `formalms/formalms` — no licence at **22** candidate paths @ `446a77a9b9cb` |
+
+🔴 **Two of nineteen.** 🔴 **Eight carry §13**, and all three of the platforms a studio is most likely
+to be asked to host — Open edX, Canvas, `frappe/lms` — are among them.
+
+🔵 **Why that is the whole commercial point.** AGPL §13 obliges a hosted modified version to offer
+its source to every *user over the network*. A studio that forks Canvas or Open edX for a client and
+runs it as a service owes that offer. 🟢 It is entirely workable — it is how these platforms are
+deployed every day — but it has to be **priced and disclosed at proposal time**, not discovered at
+delivery. 🔴 Nothing on these shelves has ever said so in one place.
+
+🟡 **Stated against this pass's own figure:** the wider census of 25 payloads is **92 % copyleft**,
+but that sample was drawn from rows these shelves had *already graded GNU-family*, so it is biased by
+construction and must not be quoted as an estimate of the tier. 🟢 The nineteen above were selected
+by name, which is why that is the table published.
+
+### 🟢 The foundation tier that is permissive — and it is not the platforms
+
+🔵 Where the grants are clean, the rows are **data, harnesses and content**, not platforms:
+
+| repo | ★ | licence @ pinned commit | layer | why it is a foundation |
+|---|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | — | 🟢 MIT · 1 097 B @ `dbe14ef6c499` | **delivery** | The one permissively-licensed institutional platform found. **Offline-first** — the only row here that works where connectivity does not, which is the binding constraint across most of LATAM, MEA and rural APAC. |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | ~30 000 | 🟢 Apache-2.0 · 11 357 B @ `96f33faaf028` | **harness** | 🟢 Byte-identical to the canonical Apache text. Minimal code-first agent loop — the harness to put *under* a tutoring layer. |
+| [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 79 | 🟢 MIT · 1 074 B @ `73005fd8cac8` | **evaluation** | 🆕 A simulated learner to test a tutor against **before** human subjects. The foundation tier has never carried an evaluation row; every tutoring recipe here has been unfalsifiable. |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 134 | 🟢 **CC0-1.0** · 7 048 B @ `79fc182c5d80` | **method** | WWW '25 Oral — a peer-reviewed multi-agent ITS architecture, dedicated to the public domain. No attribution obligation at all. |
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | **135** | 🟢 MIT · 1 070 B @ `cf5a2c02aca0` | **identifier / reachability** | 🟢 **LATAM · Chile.** Curated, normalised and validated Chilean public data — geography, demography, **education**, electoral districts — loadable in one line into Polars/DuckDB/SQLite/Excel. |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 272 | 🟢 MIT · 1 105 B @ `e24c8456e5f7` | **learner model** | Bayesian Knowledge Tracing, UC Berkeley. The only published learner model on these shelves that is not a prompt. |
+
+🟢 **Six permissive foundation rows across four layers** — delivery, harness, evaluation, method,
+data, learner model. 🔵 That is a usable stack. 🔴 What it is *not* is an LMS: the moment a client
+needs gradebooks, enrolment and SIS integration, the choice is copyleft.
+
+### 🟢 `Gap 484-G` closed with content — LATAM supplies a foundation tier, and it always did
+
+🔵 `Gap 484-G` stood as: *"LATAM discovery is instrument-limited, not region-limited. This base
+cannot distinguish 'LATAM builds nothing' from 'GitHub search cannot find it'."* 🟢 Closed, in the
+region's favour. Dropping the star floor (see `agents/trending.md`) surfaces a real tier:
+
+| repo | ★ | licence @ pinned commit | country | layer |
+|---|---|---|---|---|
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | **135** | 🟢 MIT · 1 070 B @ `cf5a2c02aca0` | 🇨🇱 Chile | national open-data, education included |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | — | 🟡 GPL-2.0 · 18 092 B @ `435649b0474f` | 🇧🇷 Brazil | **municipal SIS in production** — default ref `2.12`, not `main` |
+| [`ipti/br.tag`](https://github.com/ipti/br.tag) | — | 🟡 GPL-2.0 · 18 027 B @ `5758efb76754` | 🇧🇷 Brazil | school-census / SIS tooling |
+| [`datauy/ElijoEstudiar`](https://github.com/datauy/ElijoEstudiar) | — | 🟡 GPL-3.0 · 35 149 B @ `ed306fef95c5` | 🇺🇾 Uruguay | study-choice guidance — 🟢 its licence payload is **byte-identical** (blob `f288702d2fa1`) to two repos on two other continents |
+| [`ValentinTorassa/Open-Security-Labs`](https://github.com/ValentinTorassa/Open-Security-Labs) | 42 | 🟢 Apache-2.0 · 11 371 B @ `939878bb22ff` | 🇦🇷 Argentina | Spanish-language courseware with **executable** labs |
+| [`villadalmine/study-cybercirujas`](https://github.com/villadalmine/study-cybercirujas) | 37 | 🟢 Apache-2.0 · 10 765 B @ `e4405caba437` | 🇦🇷 Argentina | AI-generated LPI/CNCF cert content + executable labs |
+
+🔵 Identifier, SIS, guidance, courseware — **four layers, four countries, three permissive grants.**
+🔴 Two of the three Brazilian/Uruguayan rows are copyleft and both Brazilian ones are GPL-2.0, which
+cannot be combined with GPL-3.0 code in one derivative unless the project elected *or-later*.
+
+🔴 **Refused:** [`mauforonda/unidades_educativas_bolivia`](https://github.com/mauforonda/unidades_educativas_bolivia)
+— Bolivian school registry, **no licence at 10 paths** @ `1388643e81c7`. The institution-registry
+tier `p487` opened, in a fifth country, unusable.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 488-I`** | **No pass has ever stated the AGPL §13 consequence in a proposal-facing form.** Eight platform rows carry it, including all three most likely to be hosted for a client, and `compose/patterns.md` has recipes built on them that do not mention it. |
+| 🟡 **`Gap 488-J`** | The two Brazilian rows are **GPL-2.0** with the *or-later* election unread. `p455` built a version axis precisely for this and it has never been run on them. Until it is, neither can be safely combined with GPL-3.0 code. |
+| 🟡 **`Gap 488-K`** | `kolibri` is the single permissive institutional platform on these shelves and has **never been read** — no code read, no AI-surface census, no star or activity figure. The one row the brief's licence preference actually points to is the least examined. |
+
 ## 🆕 `p487` — `2026-10-27` — **🟢 THE FOUNDATION TIER THIS SHELF HAS NEVER CARRIED IS THE *INSTITUTION REGISTRY*, AND APAC SUPPLIES THREE OF THEM AT ONCE — but the one with the best data is `GPL-3.0`, not the permissive grant a first reading of it claimed. 🟢 A canonical `GPL-3.0` reference finally exists here, proved byte-identical across two continents.**
 
 🔴 `make hooks` **DENIED** (`Code from External`) — **thirteen denials in thirteen passes**. Nothing

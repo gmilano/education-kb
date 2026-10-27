@@ -4,6 +4,168 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p488` — `2026-10-27` — **🟢 Six recipes, every component read at a pinned commit this pass. 🆕 `P488-1` is the first pattern on this base that can be **falsified before a pilot** — a simulated learner plus a published learner model. 🔴 And `P488-5` finally writes down the AGPL §13 obligation that three existing recipes build on and none mention.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — fourteen in fourteen; no recipe below is
+gate-attested or delivery-calibrated (`Gap 484-V` stands: **every effort range on this base is
+uncalibrated against a delivered engagement**). 🔵 Ranges are planning estimates, not quotes.
+
+### 🆕 `P488-1` — The falsifiable tutor · Global · 🟢 fully permissive
+
+🔵 **The problem it fixes:** every tutoring recipe on these shelves asserts a pedagogical outcome
+and none can be tested before a client's students are the test.
+
+| component | grant @ pinned commit | role |
+|---|---|---|
+| [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 🟢 MIT · `73005fd8cac8` | simulated learner — the test subject |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT · `e24c8456e5f7` | Bayesian Knowledge Tracing — the **measurable** learner model |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 Apache-2.0 · `96f33faaf028` | agent loop around the tutoring policy |
+| [`LearningLocker/learninglocker`](https://github.com/LearningLocker/learninglocker) | 🟡 GPL-3.0 · `5fec948a823e` | xAPI LRS — statement store for both simulated and real runs |
+
+🟢 **Wiring.** Express the tutoring policy as a `smolagents` loop whose state is OATutor's BKT
+mastery vector, not a conversation transcript. Emit one xAPI statement per interaction into
+Learning Locker. Run the loop against `StudentSim` cohorts **first**, and keep the identical
+statement schema when you switch the learner to a human — so the pilot's numbers are comparable to
+the simulation's. 🔵 BKT gives a per-skill mastery probability, which is what makes "did it teach"
+answerable rather than rhetorical.
+
+🔴 **Licence posture:** Learning Locker is GPL-3.0, so keep it as a **separate service behind its
+API** — never linked into client application code. The other three are permissive.
+🟢 **Effort:** 5–7 weeks. 🟡 Uncalibrated.
+
+### 🆕 `P488-2` — North America district AI-policy compliance · 🟢 sells against a passed deadline
+
+🔵 **The trigger is legal, not appetite.** Ohio HB 96 required **every** district, community school
+and STEM school to adopt a formal AI policy by **1 Jul 2026 — now behind us**. Utah HB 273 lands
+1 Jul 2027; Tennessee PC 550 requires boards to adopt **and enforce**.
+
+🟢 **Wiring.** The recurring obligations across these laws are the same five: district policy,
+educator supervision, restrictions on high-stakes automated decisions, parent disclosure, AI
+literacy in curriculum. Build **one** package against those five and resell per district:
+
+1. Policy instrument from the state's own template, mapped to the five obligations.
+2. **Technical enforcement**, not a PDF — use [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)'s
+   `multi_user/tool_access.py` deny-by-default grant model (🔴 Apache-2.0 **with 3 operative
+   deviations** — read `agents/top.md` before vendoring) as the reference architecture for
+   "educator supervision" and "no high-stakes automated decision" as *code*.
+3. Parent-disclosure surface + an audit log in Learning Locker (xAPI).
+4. AI-literacy curriculum — [`ValentinTorassa/Open-Security-Labs`](https://github.com/ValentinTorassa/Open-Security-Labs)
+   (🟢 Apache-2.0) is executable-lab courseware that adapts; it is Spanish-first, which also serves
+   US bilingual districts.
+
+🔵 The US DoE guidance (20 Aug 2026) asks schools to justify technology **by the learning problem it
+addresses** — so lead the proposal with the problem statement, which is also the procurement form.
+🟢 **Effort:** 4–6 weeks for the package, 1–2 weeks per district thereafter. 🟡 Uncalibrated, and
+🔴 `Gap 488-S`: nobody has measured whether Ohio districts actually complied.
+
+### 🆕 `P488-3` — LATAM governance authoring on an open-data spine · 🇨🇱 Chile first
+
+🔵 **The mirror image of `P488-2`.** 716 AI instruments across 23 LAC countries, but **under 14 %**
+with AI-specific regulation — so the client has no template to comply with and must author its own.
+
+| component | grant @ pinned commit | role |
+|---|---|---|
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | 🟢 MIT · `cf5a2c02aca0` | national education/demographic data spine, one-line load to DuckDB |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🟡 GPL-2.0 · `435649b0474f` (ref `2.12`) | 🇧🇷 municipal SIS **already in production** — the enrolment/identity source |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 MIT · `dbe14ef6c499` | **offline-first** delivery where connectivity is the binding constraint |
+| [`villadalmine/study-cybercirujas`](https://github.com/villadalmine/study-cybercirujas) | 🟢 Apache-2.0 · `e4405caba437` | 🇦🇷 AI-generated certification content + executable labs |
+
+🟢 **Wiring.** `chile-hub` supplies the denominators a ministry conversation needs (which schools,
+which districts, which populations) in a form that loads in one line — so the governance framework
+is drafted against real coverage data rather than assumptions. `i-educar` or the client's SIS
+supplies learner identity. Kolibri delivers where the network does not reach. 🔵 Sequence Chile
+first: oldest national AI policy (2021), a bill in flight, and the region's highest-star permissive
+open-data row.
+
+🔴 **Licence trap, specific and load-bearing:** `i-educar` and `br.tag` are **GPL-2.0**, and the
+*or-later* election has never been read on either (`Gap 488-J`). 🔴 **Until it is, neither can be
+combined with GPL-3.0 code in one derivative.** Keep them as services behind APIs.
+🟢 **Effort:** 8–10 weeks. 🟡 Uncalibrated.
+
+### 🆕 `P488-4` — In-language tutor for APAC · 🟢 permissive throughout
+
+🔵 **Placed, not generic:** APAC ban-support runs 23–31 % across Asia against **52 % in Australia**,
+so this recipe is for Asian markets specifically.
+
+| component | grant @ pinned commit | role |
+|---|---|---|
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 🟢 **CC0-1.0** · `79fc182c5d80` | peer-reviewed (WWW '25 Oral) multi-agent goal-oriented ITS **architecture** — no attribution obligation at all |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 MIT · `68788b5e7d34` | Socratic tutor, 中文优先, ships as both a skill and a self-hostable app |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 MIT · `2987df2be268` | RAG tutor **scoped to grades 1–9**, LanceDB |
+| [`nothinx/naskah-id`](https://github.com/nothinx/naskah-id) | 🟢 MIT · `e18d574c6b93` | 🇮🇩 academic writing gated on **EYD V orthography + the KBBI dictionary** |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 Apache-2.0 · `96f33faaf028` | harness |
+
+🟢 **Wiring.** Take `gen-mentor`'s goal-decomposition architecture as the control plane — it is CC0,
+so it can be copied outright — and put a per-market tutor underneath: `Bloom` for China, `naskah-id`
+for Indonesia, `AI_Tutor_Release` where grade-banding matters. 🔵 **The in-language component is not
+localisation.** `naskah-id` enforces a *national language standard* (EYD V, KBBI); that is a
+correctness criterion a translated English tutor does not have and cannot fake.
+🟢 **Effort:** 6–8 weeks per market, control plane reused. 🟡 Uncalibrated.
+
+### 🆕 `P488-5` — Hosting an AGPL LMS for a client without contaminating their code
+
+🔴 **Written down because three existing recipes on this shelf build on AGPL platforms and none
+mentions §13.** Open edX, Canvas and `frappe/lms` are **all AGPL-3.0**, and they are the three a
+client is most likely to ask to have hosted.
+
+| platform | grant @ pinned commit |
+|---|---|
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 · `d9aaee456069` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0 · `1c9f0bb8013e` |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 AGPL-3.0 · `6054772c0426` (grant at **`license.txt`**) |
+
+🟢 **The obligation, stated plainly:** if you modify one of these and run it so users interact with
+it **over a network**, §13 requires you to offer those users the **Corresponding Source** of your
+modified version. 🔵 It is triggered by *hosting a modification*, not by distributing software.
+
+🟢 **Wiring that keeps it workable:**
+1. **Decide deliberately whether you modify the platform at all.** Deploying it unmodified triggers
+   no §13 source offer for your changes, because there are none.
+2. Put client-proprietary logic in **separate services the platform calls** over HTTP/LTI/xAPI — not
+   in forked platform modules, not as linked code.
+3. Where the platform must change, prefer its **own plugin interfaces** (Open edX XBlocks, Frappe
+   apps) and keep each plugin's licence decision explicit and isolated.
+4. **Write the source offer into the engagement** — a published repo or an in-product link — and
+   price its maintenance. It is a deliverable, not an afterthought.
+5. 🔴 Disclose §13 **at proposal time.** A client discovering it at delivery is a commercial problem,
+   not a legal one.
+
+🟡 **Not legal advice**, and nothing on this base is: this is the engagement shape, and the client's
+counsel decides. 🟢 **Effort:** +1–2 weeks of structuring on any AGPL platform engagement.
+
+### 🆕 `P488-6` — A licence-integrity gate for the studio's own delivery
+
+🔵 **This pass's instrument, productised** — because it found a deleted word in an AGPL §11 that
+thirteen prior licence-checking passes missed.
+
+🟢 **Wiring**, four steps, no dependencies beyond `git` and `curl`:
+1. `git ls-remote --symref <repo> HEAD` → **resolve the default ref and commit SHA first.** 🔵 Eight
+   of twenty platform rows here have a default ref that is neither `main` nor `master`; a one-path
+   probe at `/main/LICENSE` 404s them.
+2. **Enumerate every matching licence path, not the first.** 🔴 `LICENSE` is CC BY 4.0 on
+   `microsoft/autogen` while the code grant is MIT at `LICENSE-CODE`; `frappe/lms`'s grant is at
+   lowercase `license.txt`, found on the 11th path.
+3. Read the family from the **title block**, and scan the whole payload for a **wrapper above it**
+   (`INGInious` scopes its AGPL to *"most of the files"* in three lines above the title).
+4. **Compare the operative span** (`TERMS AND CONDITIONS` … `END OF TERMS AND CONDITIONS`) against a
+   canonical after normalising: `http`→`https` on `fsf.org`/`gnu.org`, the `why-not-lgpl` path move,
+   the FSF street address, the Library/Lesser rename, and all whitespace. 🟢 Record the **git blob
+   SHA-1** — content-addressed, so equality proves byte-identity with nothing to compute.
+
+🟢 **Control it in both directions before trusting it:** canonical vs `apache/.github` → 0
+deviations; canonical vs `smolagents` → 0; against `freelingo` and `DeepTutor` → finds both.
+🔵 Run it in CI over every dependency a delivery vendors. 🟢 **Effort:** 3–5 days.
+🟢 Reference implementation and controls:
+[`gnu-operative-equivalence`](../evidence/gnu-operative-equivalence.2026-10-27-p488.tsv),
+[`apache-deviation-recheck`](../evidence/apache-deviation-recheck.2026-10-27-p488.tsv).
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🟡 **`Gap 488-W`** | All six recipes are **composed from licence and description reads, not from running the components together.** `Gap 484-A` (nothing executed) now spans five passes and bounds every effort range here. |
+| 🟡 **`Gap 488-X`** | `P488-1` depends on `StudentSim` behaving as described; its code is unread (`Gap 488-V`). The pattern's novelty rests entirely on that one unverified row. |
+
 ## 🆕 `p487` — `2026-10-27` — **three recipes. 🟢 `P487-1` is the first on this base that can be sited in a ministry rather than a classroom, because the registry layer it needs now exists. 🔴 `P487-2` exists because a compliance scanner will block a component this base recommends, and the fix is a config line rather than a different component.**
 
 🔵 Every component below carries a licence read from bytes **at a pinned commit SHA**

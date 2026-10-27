@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p488` — `2026-10-27T20:55Z` — **🔴 `p487` found the right defect and named the wrong cause. The qualifier suppressing regional discovery on this base is not `readme` scope and not the English language — it is `stars:>3`, and on the same query it is worth **226×** where the readme axis is worth 10×. 🟢 Hindi's `TRUE ZERO` is **113**, and `p487`'s own refutation of it was 37× low.**
+
+🔴 **`make hooks` DENIED** (`Code from External`) — **fourteen denials in fourteen passes.** Nothing
+here is gate-attested; every count below was run in this pass through the authenticated search
+channel. Evidence:
+[`star-floor-suppression`](../evidence/star-floor-suppression.2026-10-27-p488.tsv),
+[`query-precision`](../evidence/query-precision.2026-10-27-p488.tsv),
+[`verified-repos`](../evidence/verified-repos.2026-10-27-p488.tsv).
+
+### 🔴 The star floor, measured against the readme axis on one token
+
+🔵 `p487` reproduced `p475`'s `educación` census at **17** under `in:name,description` and found
+**434** with `readme` in scope, concluding *"the instrument was the English language"* and that every
+per-language denominator here is 7–36× low. 🟢 The reproduction was sound. 🔴 The attribution was not.
+
+🟢 **The same query form, with and without the star floor:**
+
+| query | `total_count` | vs unfloored |
+|---|---|---|
+| `educación in:name,description` | 🟢 **5 882** | — |
+| `educación in:name,description` **`stars:>3`** | 🔴 **26** | 🔴 **226×** |
+| `educación in:name,description,readme stars:>3` | 568 | 10× |
+
+🔴 **226× against 10×.** The readme qualifier `p487` identified is real and secondary; `stars:>3`
+is the dominant suppressor, and it has been in every census this base has run.
+
+🟢 It generalises, and one leg reproduces `p475` exactly — which identifies the executed query
+beyond argument:
+
+| token | language · region | 🟢 `in:name,description`, **no floor** | `p475` (`stars:>3`) | `p487` (`+readme`) |
+|---|---|---|---|---|
+| `educación` | Spanish · LATAM | 🟢 **5 882** | 17 | 434 |
+| `pendidikan` | Indonesian · APAC | 🟢 **4 251** | 🔵 **8 — reproduces exactly** | 🔵 **214 — reproduces exactly** |
+| `शिक्षा` | Hindi · APAC | 🟢 **113** | 🔴 **`TRUE ZERO`** | 🔴 3 |
+
+🔴 **Hindi is the case that settles it.** `p475` published `TRUE ZERO`. `p487` refuted it with **3**
+and called the cause the README qualifier. 🟢 The narrow form with **no star floor** returns
+**113** — so `p487`'s refutation was itself **37× low**, and it diagnosed a corpus that was never
+missing. 🔵 Mechanism, and it is not subtle: **regional education software is low-star by nature** —
+it is institutional, non-viral, and often serves one ministry, one district or one school. A star
+floor is a popularity filter, and applying one to a supply census guarantees a nil.
+
+### 🔴 Worse: a star floor on an education query does not rank education repos — it changes the subject
+
+🟢 Measured as precision@N over the top results, same domain, four query forms:
+
+| query | floor | hits | 🟢 education-domain in top N | precision |
+|---|---|---|---|---|
+| `"intelligent tutoring" OR "ai tutor" in:name,description pushed:>2026-08-01` | 🟢 none | 4 094 | 🟢 **11 / 12** | 🟢 **0.92** |
+| `educación OR educativa in:name,description stars:>2 pushed:>2026-01-01` | `>2` | 32 | 11 / 15 | 0.73 |
+| `AI tutor OR tutoring agent in:name,description stars:>15 pushed:>2026-10-01` | `>15` | 6 570 | 🔴 **0 / 14** | 🔴 **0.00** |
+| `"lesson plan" OR "grading" OR "curriculum" agent in:name,description stars:>5` | `>5` | 31 185 | 🔴 **0 / 12** | 🔴 **0.00** |
+
+🔴 **Two forms return tens of thousands of hits and no education at all.** The top rows of the last
+one are `morluto/rea`, `obra/superpowers`, `NousResearch/hermes-agent`, `anomalyco/opencode`,
+`langgenius/dify` — the generic agent population, at 150 000★–400 000★, swamping a domain whose
+largest row is four orders of magnitude smaller.
+
+🔵 Two independent causes, and both are fixable in the query: **bare multi-term `OR` matches the
+common token** (`agent`, `AI`) rather than the phrase, and **a star floor then sorts the generic
+population to the top**. 🟢 Quoting the phrase and dropping the floor moves precision from `0.00` to
+`0.92` on the same shelf. **Quoting is load-bearing**, which no pass here had written down.
+
+### 🟢 New this week — nine rows, every licence read at a pinned commit
+
+| repo | ★ | licence @ pinned commit | region | note |
+|---|---|---|---|---|
+| [`zuhairhalawa/studyai`](https://github.com/zuhairhalawa/studyai) | **234** | 🟢 MIT · 1 069 B @ `fb4a7ea98500` | Global | 🆕 **Nine days old.** Local-first university study platform: PowerPoint ingest, spaced repetition, exams, optional tutor on the Gemini free tier. **The free-tier default is the finding** — it prices a pilot at zero. |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 293 | 🟢 MIT · 1 069 B @ `68788b5e7d34` | APAC · China | Bloom's **2-sigma** research shipped as a Claude Code skill *and* a self-hostable web app, Socratic, 中文优先. The only row here that is simultaneously an agent skill and a deployable product. |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 251 | 🟢 MIT · 1 102 B @ `075c1895d255` | Global | **Diagnosis-first, no mode or command menu** — it decides the next teaching step itself. A pedagogy claim expressed as an interface refusal. |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 209 | 🔴 **AGPL-3.0 (modified text)** · 34 514 B @ `269feb00c09a` | EMEA · Spain | Self-hosted CEFR language learning, local or cloud LLMs, voice. 🔴 **Its licence body has a word deleted in §11** — see `repos/trending.md`. |
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | **135** | 🟢 MIT · 1 070 B @ `cf5a2c02aca0` | **LATAM · Chile** | Curated, normalised Chilean public data **including education**, one-line load into Polars/DuckDB/SQLite. 🟢 The highest-star permissively-licensed LATAM row this base has found. |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 134 | 🟢 **CC0-1.0** · 7 048 B @ `79fc182c5d80` | APAC | **WWW '25 Oral.** LLM multi-agent goal-oriented ITS. 🟢 **CC0 is a public-domain dedication — a more permissive grant than MIT**, and the first on these shelves. A first read graded it `CC-?`, one letter from an NC verdict that would have barred commercial use; it has **zero** non-commercial markers. |
+| [`microsoft/StudentSim`](https://github.com/microsoft/StudentSim) | 79 | 🟢 MIT · 1 074 B @ `73005fd8cac8` | North America · US | 🆕 **A new category on this base: the simulated learner.** Trains and evaluates models that stand in for a student, so tutoring methods can be tested *before* human subjects. The missing test harness for every tutor row here. |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 74 | 🟢 MIT · 1 068 B @ `2987df2be268` | APAC · China | `EduAgent` — RAG tutor scoped to **grades 1–9**, LanceDB + DeepSeek/Gemini, Socratic. Grade-banded scope, not a general chatbot. |
+| [`ValentinTorassa/Open-Security-Labs`](https://github.com/ValentinTorassa/Open-Security-Labs) | 42 | 🟢 Apache-2.0 · 11 371 B @ `939878bb22ff` | **LATAM · Argentina** | Spanish-language open courseware with **executable** labs — Linux, networking, cloud, security. |
+
+🔵 Also verified and carried: [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) (2 592★,
+🟢 MIT · 1 106 B @ `c0375feaa5bf`) — 65 ML interview problems with an auto-grader **and an MCP
+tutor**; and [`villadalmine/study-cybercirujas`](https://github.com/villadalmine/study-cybercirujas)
+(37★, 🟢 Apache-2.0 · 10 765 B @ `e4405caba437`, LATAM · Argentina) — AI-generated LPI/CNCF
+certification content with executable labs.
+
+### 🔴 Refused this pass — and the biggest one out-ranks seven accepted rows
+
+| repo | ★ | why refused |
+|---|---|---|
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | 🔴 **498** | **No licence file at 10 candidate paths** at `9acaafc718f2`. A 501(c)(3) delivering multilingual tutoring to underserved learners — 1 500+ students, 7 languages — and the most *mission-aligned* row found this pass. 🔴 Popularity and purpose are not a grant. |
+| [`towardsai/ai-tutor-rag-system`](https://github.com/towardsai/ai-tutor-rag-system) | 244 | No licence file at 10 candidate paths at `89776d8511f6`. |
+| [`mauforonda/unidades_educativas_bolivia`](https://github.com/mauforonda/unidades_educativas_bolivia) | 5 | No licence at 10 paths at `1388643e81c7`. 🔴 A **Bolivian national school registry** — the exact institution-registry tier `p487` opened — and unusable. |
+
+🔵 `nothinx/naskah-id` (84★, Indonesia) was re-read independently this pass and returns **MIT ·
+1 162 B @ `e18d574c6b93`** — `p487`'s cell exactly, SHA included. 🟢 Two readers sharing no code
+agree, which is the first cross-validation of the pinned-commit reader.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 488-E`** | **Every "region X supplies nothing" verdict on this base was produced by a popularity filter.** `p475`–`p487` ran at least four such calls. They are not weak claims — they are measurements of GitHub's star distribution. |
+| 🟡 **`Gap 488-F`** | Precision@N here was judged by this pass from repo descriptions, by one reader, at N=12–15. The direction is unambiguous (`0.00` vs `0.92`); the exact figures are not independently graded. |
+| 🟡 **`Gap 488-G`** | `5 882` unfloored `educación` hits is a *ceiling*, not regional supply — it includes any repo with the token in name or description, including Spanish-language non-education projects. Neither bound is the quantity a studio wants. **Nobody has sampled the middle.** |
+| 🟡 **`Gap 488-H`** | `ai-ethos` (498★), `ai-tutor-rag-system` (244★) and the Bolivian registry are all refused for the same reason, and **no pass has ever opened an issue asking a maintainer to add a licence.** The cheapest possible intervention on these shelves is untried. |
+
 ## 🆕 `p487` — `2026-10-27T19:55Z` — **the in-language lever `p486` found pays twice more, in Hindi and Indonesian — and the reason those channels read as empty for twelve passes is not language at all, it is a qualifier that `p475` wrote down and never ran**
 
 🔵 Discovery through the **authenticated GitHub search channel**; every licence then read from
