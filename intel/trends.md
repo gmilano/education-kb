@@ -4,6 +4,128 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p472` — `2026-10-27` — **🔴 THE BINDING CONSTRAINT ON THE EDUCATION-AI SHELF IS NO LONGER CAPABILITY OR COST — IT IS THE GRANT, and the correlation runs the wrong way: of the five most-starred education-AI repositories live this window, THREE cannot enter a paid deliverable. Star rank is anti-predictive of usability at the top of this market.**
+
+🔵 Eight trends. Each is stated as a claim, with the measurement or source that supports it and the
+consequence for an engagement. Where a trend is a reversal of a prior pass's reading, that is said.
+
+### 🔴 `T1` — Licence, not capability, is what stops an education-AI engagement
+
+🔵 Measured this pass across the 14 live top-tier agents, every grant read by payload:
+**42.9 % permissive** (6), **21.4 % copyleft** (3), **14.3 % CC BY-SA** (2), **7.1 % non-commercial**
+(1), **14.3 % ungranted** (2). 🔴 Ranked by stars, positions **1–5** are Apache-2.0, MIT,
+**UNGRANTED** (29,550★), **CC BY-SA** (4,788★), **CC BY-NC** (4,086★).
+
+🟢 **Consequence.** A studio that shortlists by stars shortlists an unusable repository three times
+in five. The shortlist must be **licence-first, star-second** — which is the ordering
+`agents/top.md` now publishes in.
+
+### 🔴 `T2` — The richest new curriculum assets are deliberately not licensable
+
+🔵 The two most substantial curriculum-structure artefacts of this window and the last are
+[cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) (**CC BY-NC 4.0**;
+1,644 knowledge points, 2,403 prerequisite edges, 6,723 items, 4,086★ in nine days) and
+`withmarbleapp/os-taxonomy` (**ODbL**, recorded `p384`; 1,590 topics, 3,221 prerequisite edges).
+
+🔴 **The primitive the market is converging on exists, and a consultancy may not sell it.** Both are
+database/content licences chosen to exclude commercial reuse or to force share-alike.
+
+🟢 **Consequence.** Curriculum graphs must be **generated from the client's own curriculum**, not
+imported. The permissive tool for that is
+[lineage-skill](https://github.com/JuneYaooo/lineage-skill) (Apache-2.0) — recipe `P5`.
+
+### 🟢 `T3` — The unit of education AI is now the agent skill, not the application or the LMS plugin
+
+🔵 Evidence, all live this window: `book-to-skill` (**36,206★**, MIT),
+`Auto-Empirical-Research-Skills` (4,788★, 23,000+ skills), `education-agent-skills` (914★, 165
+skills), `claudemy` (466★), `lineage-skill` (463★), `Papermorph` (961★). Every one ships as a
+**skill mounted into a coding-agent harness**. None is an LMS plugin.
+
+🟢 **Consequence.** The integration target has moved. A 2024-vintage proposal integrated with
+Moodle's plugin API; a 2026 one mounts skills in a harness and reports results back over
+**SCORM/LTI** — which is why `scorm-again` (MIT) is on `repos/foundations.md` as a seam, not a
+nicety.
+
+### 🟢 `T4` — APAC leads the open-source education build, not North America
+
+🔵 The largest education repository on this shelf is **DeepTutor** (HKU Data Intelligence Lab,
+Apache-2.0, **44,177★**, 5,586 forks). APAC-origin rows also include `ai-shifu` (Apache-2.0),
+`ChatTutor` (AGPL-3.0), `lineage-skill` (Apache-2.0), `frappe/lms` (AGPL-3.0, India),
+`cn-math-taxonomy` (CC BY-NC) and `DeepTutor-AILearning` (Apache-2.0).
+
+🔴 North America's two most distinctive rows this window are both **ungranted**
+(`Mr.-Ranedeer-AI-Tutor`, `ai-ethos`).
+
+🟢 **Consequence.** For an education engagement the permissive technical base is **APAC-sourced**,
+while the paying demand and the regulatory pressure are NA/EMEA. That asymmetry is a sourcing
+advantage, not a problem — the licences permit it.
+
+### 🔴 `T5` — The LMS core a client already runs is almost certainly copyleft
+
+🔵 Of the four most likely incumbents, **all four** are copyleft and **three are AGPL**:
+Moodle **GPL-3.0**, Canvas **AGPL-3.0**, Open edX / Tutor **AGPL-3.0**, `frappe/lms` **AGPL-3.0**.
+AGPL reaches **network use**, so hosting a modified build for the client's users triggers
+disclosure to those users.
+
+🟢 **Consequence, and it is the reversal worth recording.** The permissive alternatives exist and are
+**absent from the market literature**: the vendor LMS comparison read this pass names seven
+platforms and **never states that Sakai is permissive** (ECL-2.0), while omitting OpenOLAT
+(Apache-2.0), Oppia (Apache-2.0), Kolibri (MIT) and Academico (MIT) entirely. The permissive
+shortlist is a differentiator precisely because the market does not publish it.
+
+### 🟢 `T6` — Analysts have turned against general-purpose AI in education
+
+🔵 The **OECD 2026 Digital Education Outlook** argues for **purpose-built educational AI over
+general-purpose tools**. Independent commentary this pass calls the move away from generic AI tools
+toward education-specific platforms *"the defining trend"*. 1EdTech names **digital credentials** as
+a core mechanism for skills-based learning and hiring. Multiple sources report education systems now
+**demanding evidence** that a product improves learning quality, persistence, well-being or
+job-relevant skills.
+
+🟢 **Consequence.** The analyst position favours a **studio build over a licence-and-rollout**, and
+the evidence demand means an engagement must ship **measurement**, not just a tutor. 🔴 Which
+collides with the standing gap below.
+
+### 🔴 `T7` — Governance, not capability, is the gate — and the gap is measurable
+
+🔵 **Experimentation → governance** is the one claim every source class in this pass agrees on. The
+hard numbers: **87 % of LAC institutions use AI, 26 % have a strategy** (UNESCO IESALC/UNU-IAS, 200
+institutions, 19 countries); **134 AI-education bills across 31 states** in the US in 2026; the
+**EU AI Act** classes admissions, evaluation and exam scoring as **high-risk**; **Korea's AI Basic
+Act** in force 22 January 2026; **Vietnam** classes education AI high-risk.
+
+🟢 **Consequence.** The **61-point adoption-governance gap** is the most saleable finding on this
+shelf, and it is a **strategy and assurance** engagement before it is a build one — recipe `P6`.
+🔵 Three regimes (Oklahoma/Maryland, the EU AI Act, Vietnam) independently require a **human in the
+loop on consequential decisions**, which makes human sign-off a **component to build**, not advice
+to give — recipe `P4`.
+
+### 🔴 `T8` — The measurement layer this market now demands does not exist in open source
+
+🔵 Searched this window at every star floor — `education agent`, `topic:edtech`,
+`topic:education-ai`, `topic:lms`, `grading topic:education`, `topic:curriculum`: **no open-source
+education-AI evaluation or observability harness surfaced.** Carried unfilled from prior passes.
+
+🔴 **This is the sharpest contradiction on the shelf.** `T6` says systems are demanding rigorous
+evidence of learning gains; there is **no permissive, maintained harness for producing it**. The
+nearest components are psychometric libraries ([inuyasha2012/pypsy](https://github.com/inuyasha2012/pypsy), **MIT** — `master/LICENSE`,
+1,068 B, 241★ — IRT, CAT, cognitive diagnostic models, factor analysis, SEM) and the autograders (`Autolab` Apache-2.0, `Submitty` BSD-3-Clause), none of which
+evaluates an *agent*.
+
+🟢 **Consequence — and this is the build-vs-buy call.** Globant cannot buy this layer and cannot
+fork it, so an engagement that promises learning-gain evidence must **cost the measurement harness
+as original work**. 🔵 Stated as an opportunity rather than only a gap: it is the one piece of this
+stack with no incumbent.
+
+### 🔵 Honest statement of what this pass could not establish
+
+- 🔴 **No Middle East or Africa education-AI evidence** beyond the UAE compulsory-subject mandate —
+  no Gulf programmes, no Saudi initiatives, no African policy, no repository at any star floor.
+- 🔴 **No live LATAM-origin education repository** — the one found is archived.
+- 🔴 **Market sizing is incoherent across sources** and one widely circulated North America figure is
+  arithmetically impossible as published (`intel/market.md`). No single market number should be
+  quoted from this shelf.
+
 ## 🆕 `p471` — **🔴 THE TREND WITH A DATE ON IT: three jurisdictions on three continents have independently converged on the SAME regulatory test — AI is high-risk in education only where a human cannot meaningfully review the decision — which makes "reviewable human decision point" a product requirement rather than a compliance afterthought. 🟢 And the off-class rate of this file's own regional instrument is shown to be VOLATILE between passes on identical input, which retires a measurement `p470` treated as a property.**
 
 🔵 Gate not attested (`Gap 446-A`); checks re-implemented in-session and green.

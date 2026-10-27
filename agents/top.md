@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p472` — `2026-10-27` — **🔴 THE VERIFICATION CHANNEL THE STANDING TASK PRESCRIBES IS A UNIFORM FALSE-NEGATIVE GENERATOR: `curl -sI https://github.com/<repo>` returned 403 on 31 of 31 repositories verified-live this pass, and its single non-403 was the proxy's own `Connection Established` line, not GitHub's. 🔴 And on the live top tier only 6 of 14 agents are build-on-able — the single most-starred AI tutor on GitHub (29,550★) carries NO GRANT AT ALL, and a 2,049★ repo that reads open ships a bespoke NON-COMMERCIAL licence.**
+
+🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — the industry KB is cloned outside
+the harness repo this pass. **Nothing below is gate-attested.** Frontmatter keys and
+closed-vocabulary `region` verified on all eight shelves; every table below checked for separator
+presence and pipe-count consistency, with **no header row published as data**; append-only preserved
+on both trending shelves and on these six by prepend-only edit.
+
+🔵 **`Gap 468-A` honoured.** No licence payload below was measured through a shell variable: each
+body was written to a file and the file measured.
+
+### 🔴 `Gap 472-A` — the prescribed `curl -sI` URL check cannot verify anything on this harness
+
+🔵 The standing task says *"Verify every URL before writing it (`curl -sI`)"*. Run against the 31
+repositories this pass verified live by payload, it returns **403 for all 31**. The one call that
+did not return 403 is worse than the ones that did:
+
+| probe | result | reading |
+|---|---|---|
+| `curl -sI https://github.com/<any of 31 live repos>` | **403** × 31 | 🔴 **UNIFORM FALSE NEGATIVE.** A pass that obeyed the instruction literally would have deleted every real row on this shelf as a 404-class failure |
+| `curl -sI https://github.com/openedx/edx-platform` | `HTTP/1.1 200 Connection Established` | 🔴 **FALSE POSITIVE, and not even GitHub's.** That status line is the **proxy's CONNECT response**. A checker grepping for `200` passes this repo on a header the origin never sent |
+| `GET raw.githubusercontent.com/openedx/edx-platform/master/README.rst` | **200**, payload | 🟢 Existence proved by a byte only the origin could serve |
+
+🔴 **So the instruction's channel is unusable here and its failure mode is silent in both
+directions.** 🟢 Registered as **`Gap 472-A`**: on this harness a repository address is verified by
+**MCP `search_repositories`** (live `html_url`, `stargazers_count`, `archived`, `pushed_at`,
+unscoped per `Gap 471`) for metadata and by a **`raw.githubusercontent.com` GET** for payload. Both
+channels were used for every row below. `curl -sI` against `github.com` is to be recorded as dead
+for this purpose, not retried.
+
+### 🔴 The live top tier, licence-first — 6 of 14 are build-on-able
+
+🔵 Stars from MCP `search_repositories`, **2026-10-27**. Licence column names the **path read
+first-hand** and its measured byte count. 🔴 Sorted by what Globant may build on, not by stars.
+
+| Agent | Repo | Licence (path read, bytes) | Stars | Region | What it is |
+|---|---|---|---|---|---|
+| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** — `main/LICENSE`, 11,408 B | **44,177** | APAC | Multi-agent lifelong personalised tutoring over graph-RAG; HKU Data Intelligence Lab. 🔴 **Now the largest education repository this base has ever carried**, and it is APAC-origin |
+| **book-to-skill** | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT** — `master/LICENSE.md`, 1,068 B | **36,206** | Global | Turns a technical book PDF into an agent skill with retrievable structure; created 2026-05-01 |
+| **get-it** | [beltromatti/get-it](https://github.com/beltromatti/get-it) | 🟢 **Apache-2.0** — `main/LICENSE`, 11,359 B | 1,135 | EMEA | Feynman-technique study agent over a knowledge graph; built at **GDG AI Hack Milan 2026**, Italy |
+| **Papermorph** | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 🟢 **MIT** — `main/LICENSE`, 1,069 B | 961 | Global | Turns books into animated, narrated interactive web lessons; emits SCORM |
+| **claudemy** | [assafkip/claudemy](https://github.com/assafkip/claudemy) | 🟢 **MIT** — `main/LICENSE`, 1,069 B | 466 | Global | Researches a topic and builds a course of 2-minute cited audio lessons |
+| **ai-shifu** | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | 🟢 **Apache-2.0** — `main/LICENSE.txt`, 11,342 B | 329 | APAC | Conversational teaching agent, China-origin; multilingual teaching loop |
+| **tutor-gpt** | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | 🟡 **GPL-3.0** — `main/LICENSE`, 35,149 B | 932 | North America | Theory-of-Mind reasoning tutor. Copyleft: service-side use is fine, redistribution is not |
+| **ChatTutor** | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | 🟡 **AGPL-3.0** — `main/LICENSE`, 34,522 B | 1,315 | APAC | Visual, interactive STEM tutor. 🔴 AGPL reaches **network use** — hosting it for a client triggers source disclosure |
+| **frametell** | [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | 🟡 **AGPL-3.0** — `main/LICENSE`, 34,523 B | 412 | Global | Local-first explainer-video director agent, any model |
+| **education-agent-skills** | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🟡 **CC BY-SA 4.0** — `main/LICENSE`, 1,230 B | 914 | EMEA | 165 evidence-grounded teaching skills. 🔴 **A content licence, not a code grant**: commercial use allowed, but derivatives must ship CC BY-SA |
+| **Auto-Empirical-Research-Skills** | [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 🟡 **CC BY-SA 4.0** — `main/LICENSE`, 620 B | 4,788 | North America | 23,000+ empirical-research skills across 8 social-science disciplines; Stanford REAP / CoPaper.AI |
+| **PageLM** | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🔴 **"PageLM Community License" — NON-COMMERCIAL** — `main/LICENSE.md`, 8,563 B | 2,049 | Global | Community NotebookLM: quizzes, flashcards, notes, podcasts. 🔴 **Bespoke licence inside an otherwise open-looking repo.** Its own text bars *"use in software-as-a-service offerings"* and any revenue-generating use. **Unusable in a paid engagement** |
+| **Mr.-Ranedeer-AI-Tutor** | [JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **UNGRANTED** — no licence at 6 root paths; `package.json` 404, `pyproject.toml` 404; no grant in `README.md` | **29,550** | Global | 🔴 **The most-starred AI tutor on GitHub carries no licence at all.** Default copyright: no right to copy, modify or deploy |
+| **ai-ethos** | [aaryansamanta/ai-ethos](https://github.com/aaryansamanta/ai-ethos) | 🔴 **UNGRANTED** — no licence at 6 root paths | 498 | North America | 501(c)(3) multilingual tutoring for underserved learners, 7 languages. 🔴 Describes itself as open-source; grants nothing |
+
+### 🔴 The census, stated as a number
+
+| licence class | agents | share | Globant can build on it? |
+|---|---|---|---|
+| 🟢 Permissive (MIT / Apache-2.0) | 6 | **42.9 %** | Yes |
+| 🟡 Copyleft (GPL-3.0 / AGPL-3.0) | 3 | 21.4 % | Only with a licence-boundary design — see `compose/patterns.md` `P2` |
+| 🟡 CC BY-SA 4.0 (content, no code grant) | 2 | 14.3 % | Commercially yes, but derivatives ship share-alike |
+| 🔴 Non-commercial | 1 | 7.1 % | **No** |
+| 🔴 Ungranted | 2 | **14.3 %** | **No** |
+
+🔴 **The two headline numbers of this shelf are 29,550 and 2,049, and neither is usable.** 🟢 The
+operative finding for an engagement: **capability is not the constraint on this shelf — the grant
+is**, and star rank is anti-correlated with usability at the top. A studio that picks the
+best-known education agent by stars picks an ungranted one twice over.
+
+### 🔵 Declared gaps on this shelf
+
+- 🔴 **No LATAM-origin education agent surfaced.** The only LATAM-origin education repository found
+  in this window is [menthorlabs/menthor](https://github.com/menthorlabs/menthor) (Brazil,
+  Apache-2.0 `main/LICENSE` 11,337 B, 582★) and it is **archived / read-only**. Recorded as an
+  informed gap, not as coverage.
+- 🔵 **No open-source education-AI evaluation harness surfaced** at any star floor — searched
+  `education agent`, `topic:edtech`, `topic:education-ai`, `topic:lms`, `grading topic:education`.
+  Carried forward from prior passes; still unfilled.
+
 ## 🆕 `p471` — **🟢 THE CHANNEL THIS BASE HAS RECORDED AS "`api.github.com`: 403, BLOCKED" FOR 470 PASSES IS NOT BLOCKED — IT IS PER-REPOSITORY AUTHORISED, and the mechanism is readable in the refusal body. 🔴 `Gap 470-A`'s own prescription is REFUTED: the "ships a plugin or integration" heuristic it proposed is ANTI-predictive (8.6 % against the control's 26.0 %); the real predictor is repository SIZE, monotonic across five bands from 0.0 % to 66.7 %. 🔴 And a root-path probe does not merely miss copyleft below the root — it has published **"NO GRANT"** on a row standing on the SELL shelf that is granted GPL-3.0 two directories down.**
 
 🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — the industry KB is cloned outside

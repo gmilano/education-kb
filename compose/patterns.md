@@ -4,6 +4,170 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p472` — `2026-10-27` — **🟢 SIX RECIPES, EVERY COMPONENT GRANT-VERIFIED BY PAYLOAD THIS PASS, AND EACH ONE NAMED WITH THE LICENCE THAT LETS IT SHIP. 🔴 `P5` exists because the two best curriculum graphs in open source are NonCommercial and ODbL — the recipe is how to get the same asset licitly. 🔴 And `P7` is costed as original work because the measurement layer three regimes and every analyst now demand HAS NO OPEN-SOURCE IMPLEMENTATION.**
+
+🔵 **Component gate, per `p471` and extended by `Gap 472-A`/`Gap 472-B`:** before a repository enters
+a deliverable, read its grant **by payload** from `raw.githubusercontent.com` at the default branch,
+trying **lowercase `license.txt` / `license.md` and `COPYING.txt`** as well as the usual paths —
+`frappe/lms` grants at `develop/license.txt` and Moodle at `main/COPYING.txt`, and a `LICENSE*`-only
+probe publishes NO GRANT on both. 🔴 **Do not use `curl -sI https://github.com/…` as the existence
+check**: it returned 403 on 31 of 31 live repositories this pass.
+
+### 🟢 `P1` — Permissive AI tutor, zero copyleft, zero NonCommercial · 8–10 weeks
+
+🔵 **For:** a client that must keep its modifications closed and cannot accept AGPL network
+disclosure. Every component below is MIT, Apache-2.0, BSD-3 or ECL-2.0.
+
+| Layer | Component | Licence (path read) | Wiring |
+|---|---|---|---|
+| Tutoring loop | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 — `main/LICENSE`, 11,408 B | Multi-agent tutoring; the engine |
+| Retrieval | [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) | 🟢 MIT — `main/LICENSE`, 1,070 B | Graph-RAG over course material. **Same lab as DeepTutor** — licence-compatible and designed to pair |
+| Ingestion | [HKUDS/RAG-Anything](https://github.com/HKUDS/RAG-Anything) | 🟢 MIT — `main/LICENSE`, 1,088 B | PDFs, slides, figures → the retrieval graph |
+| Delivery | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 MIT — `develop/LICENSE`, 1,097 B | Offline-first learner client |
+| SIS of record | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 MIT — `main/LICENSE`, 1,094 B | Enrolment, cohorts, staff |
+| LMS reporting seam | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 MIT — `master/LICENSE`, 1,072 B | Completion + score into whatever LMS the client runs |
+
+🟢 **Reference implementation for the commercial shape:**
+[3yangyang9/DeepTutor-AILearning](https://github.com/3yangyang9/DeepTutor-AILearning) (Apache-2.0,
+`main/LICENSE` **byte-identical to upstream's 11,408 B**) already adds **multi-tenancy and metering**
+over DeepTutor — platform → institution → campus → teacher → student, with coursebook assessment,
+gap diagnosis and points-based billing — and does the attribution correctly: its `README.md` states
+it *"is not an official HKUDS/DeepTutor distribution"* and points at `CITATION.cff` and
+`THIRD_PARTY_NOTICES.md`. 🔵 **Copy that compliance pattern verbatim** when Globant ships a
+DeepTutor derivative.
+
+### 🟡 `P2` — Licence-boundary integration for a client already on Moodle, Canvas or Open edX · 4–6 weeks
+
+🔵 **For:** the common case. The incumbent LMS is **GPL or AGPL** and the client will not disclose
+source. The deliverable is as much the **boundary memo** as the code.
+
+1. **Leave the LMS unmodified.** No fork, no patched core, no plugin that links LMS internals —
+   any of those create a derivative work.
+2. **Integrate over the standard seams only**: **LTI 1.3** for launch and identity, **LMS web
+   services / REST** for data, **SCORM 1.2 / 2004** via [scorm-again](https://github.com/jcputney/scorm-again)
+   (MIT) for completion and scores. These are protocol boundaries, not linkage.
+3. **Put every AI component in a separate service** under a permissive licence — DeepTutor
+   (Apache-2.0) and LightRAG (MIT) from `P1`.
+4. **Write the boundary memo**: which repository carries which grant, where the process boundary
+   sits, and why no derivative of the GPL/AGPL work is distributed. 🔴 For **Canvas** and
+   **Open edX/Tutor** state the **AGPL network-use** clause explicitly, because hosting a modified
+   build for the client's users would disclose to those users.
+
+🔵 Incumbent grants, all read this pass: Moodle **GPL-3.0** (`main/COPYING.txt`), Canvas
+**AGPL-3.0** (`master/LICENSE`, 34,520 B), Open edX **AGPL-3.0** (`master/LICENSE`, 35,136 B),
+Tutor **AGPL-3.0** (`release/LICENSE.txt`, 34,523 B), `frappe/lms` **AGPL-3.0**
+(`develop/license.txt`).
+
+### 🟢 `P3` — Auto-graded assessment with AI feedback · 6–8 weeks
+
+🔵 **For:** programming or STEM courses where grading is the cost centre.
+
+| Layer | Component | Licence (path read) | Role |
+|---|---|---|---|
+| Grader | [autolab/Autolab](https://github.com/autolab/Autolab) | 🟢 Apache-2.0 — `master/LICENSE`, 11,324 B | Autograding + course management; **modifiable** |
+| or Grader | [Submitty/Submitty](https://github.com/Submitty/Submitty) | 🟢 BSD-3-Clause — `main/LICENSE.md`, 1,542 B | Submission + autograding + TA grading |
+| Feedback | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | Turns a failing test into a diagnosed misconception and a next exercise |
+| Misconception branching | [oppia/oppia](https://github.com/oppia/oppia) | 🟢 Apache-2.0 — `develop/LICENSE`, 11,358 B | Explorations with explicit misconception paths |
+| Report-back | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 MIT | Scores into the client LMS |
+
+🔴 **Do not modify [INGInious](https://github.com/INGInious/INGInious)** (AGPL-3.0, `main/LICENSE`,
+34,764 B) if the grader needs changing — use it unmodified behind its LTI seam, or pick Autolab or
+Submitty, which are permissive.
+
+### 🟢 `P4` — High-risk assessment pipeline with a built human-in-the-loop · 10–12 weeks
+
+🔵 **For:** EMEA under the **EU AI Act** (admissions, student evaluation and exam scoring are
+**high-risk**), North America under **Oklahoma** and **Maryland** human-oversight statutes, and APAC
+under **Vietnam's** high-risk classification of automated assessment. 🟢 **Three regimes
+independently require the same thing, so build it once as a component — not as a policy document.**
+
+| Layer | Component | Licence (path read) | Role |
+|---|---|---|---|
+| Gradebook of record | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** — `master/LICENSE`, 11,120 B | The **only permissive LMS with a gradebook of record** |
+| or, EMEA-native | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 — `master/LICENSE`, 10,982 B | QTI assessment, SCORM, certification first-class |
+| Advisory AI only | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | 🔴 Emits a **recommendation**, never a grade write |
+| Psychometric defence | [inuyasha2012/pypsy](https://github.com/inuyasha2012/pypsy) | 🟢 MIT — `master/LICENSE`, 1,068 B | IRT / CAT / cognitive diagnostic models — the statistical justification an auditor will ask for |
+
+🔵 **The component to build** (no open-source equivalent found): a **sign-off gate** that holds every
+AI-proposed outcome in a pending state, requires a named human decision, and writes an immutable
+record of *who* decided, *when*, *what the AI proposed*, and *whether the human agreed*. 🟢 That
+record is simultaneously the EU AI Act audit artefact, the Oklahoma/Maryland oversight evidence, and
+the Vietnam compliance trace. 🔴 **Age-gate it too**: NYC's moratorium bars student-facing AI through
+eighth grade, so the pipeline needs a per-cohort switch, not a global one.
+
+### 🟢 `P5` — Curriculum knowledge graph without the NonCommercial licence · 6–8 weeks
+
+🔵 **For:** adaptive learning paths. 🔴 **Why this recipe exists:** the two best curriculum graphs in
+open source **cannot be sold** — [cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy)
+is **CC BY-NC 4.0** (`main/LICENSE`, 19,347 B; 1,644 knowledge points, 2,403 prerequisite edges,
+6,723 items) and `withmarbleapp/os-taxonomy` is **ODbL** (recorded `p384`). Shipping either in a paid
+engagement is a licence breach. 🟢 **Build the equivalent from the client's own curriculum instead,
+and it is better anyway, because it is aligned to their standard.**
+
+1. **Distil the client's material** — [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill)
+   (🟢 Apache-2.0, `main/LICENSE`, 11,358 B) turns videos, PDFs, transcripts and notes into
+   **source-backed teacher skills**, retaining the citation to the client's own source.
+2. **Ingest the long-form material** — [RAG-Anything](https://github.com/HKUDS/RAG-Anything) (MIT) for
+   multimodal documents into [LightRAG](https://github.com/HKUDS/LightRAG) (MIT) as the graph store.
+3. **Model prerequisites in the client's own data.** Use the **shape** the NC graphs demonstrate —
+   knowledge points, prerequisite edges, items per node, a prerequisite diagnostic — as a design
+   reference. 🟢 **A schema is not a licensed work; the dataset is.** Copy the structure, never the
+   rows.
+4. **Serve adaptive paths** through [oppia/oppia](https://github.com/oppia/oppia) (Apache-2.0)
+   explorations, with DeepTutor driving the next-step choice.
+5. **Deliverable:** the graph is **the client's asset under their own copyright**, which is a better
+   commercial outcome than a dependency on a third party's NC dataset.
+
+### 🟢 `P6` — LATAM strategy-first engagement · 6–8 weeks assessment, then build · 8–10 weeks
+
+🔵 **For:** the region's actual condition, which is **not** a tool gap. UNESCO IESALC/UNU-IAS across
+200 institutions in 19 countries: **87 % use AI, 74 % in teaching and learning, 26 % have a
+strategy** — adoption driven by individuals, not institutions. 🔴 **Selling a tutor into a 26 %-strategy
+institution builds shadow AI faster.** Sequence it:
+
+1. **Assessment first.** Benchmark the institution against the **UNESCO Observatory on AI in
+   Education for LAC** (launched 14 April at ECLAC, Santiago) and **ILIA 2025** (3rd edition, 20
+   economies). Output: where the institution's actual, individual-driven usage sits versus its stated
+   policy.
+2. **Governance artefact.** The human-sign-off gate from `P4`, plus a data-boundary statement — the
+   instrument to cite differs by country: **Uruguay** (Council of Europe Framework Convention
+   signatory), **Peru** (regulatory sandboxes), **Colombia** (CONPES 4144), **Mexico** (bill pending,
+   no regulator), **Brazil** (Marco Legal da IA, carried from prior passes).
+3. **Build respecting the compute constraint.** ILIA 2025 and Intelligent CIO (23 October 2026) both
+   name **computing infrastructure** as the binding obstacle, with inequality widening. So:
+   [Kolibri](https://github.com/learningequality/kolibri) (🟢 MIT) as the **offline-first** delivery
+   core — not a cloud tutor — with [ai-shifu](https://github.com/ai-shifu/ai-shifu) (🟢 Apache-2.0)
+   for the Spanish/Portuguese conversational loop.
+4. **Expect [Chamilo](https://github.com/chamilo/chamilo-lms)** (🟡 GPL-3.0, `master/LICENSE`,
+   35,147 B) as the incumbent in public education, and apply `P2`'s boundary discipline to it.
+5. 🔴 **Do not propose a LATAM-origin open-source base.** There is none live: the only one found this
+   window, [menthorlabs/menthor](https://github.com/menthorlabs/menthor) (Brazil, Apache-2.0, 582★),
+   is **archived**. Say so in the proposal — it is an argument for the engagement, not against it.
+
+### 🔴 `P7` — The learning-gain measurement harness: costed as original work
+
+🔵 **Why it is a recipe and not a component list.** Searched at every star floor this window
+(`education agent`, `topic:edtech`, `topic:education-ai`, `topic:lms`, `grading topic:education`,
+`topic:curriculum`): **no open-source education-AI evaluation or observability harness exists.**
+Meanwhile the **OECD 2026 Digital Education Outlook** argues for purpose-built educational AI, and
+multiple sources report systems now **demanding evidence** of improvement in learning quality,
+persistence, well-being or job-relevant skills.
+
+🟢 **So the gap is the opportunity — the one layer of this stack with no incumbent.** What can be
+assembled, and what must be written:
+
+| Piece | Status | Component |
+|---|---|---|
+| Item-level psychometrics | 🟢 **exists** | [pypsy](https://github.com/inuyasha2012/pypsy) — MIT, `master/LICENSE`, 1,068 B: IRT, CAT, cognitive diagnostic models, factor analysis, SEM |
+| Deterministic outcome signal | 🟢 **exists** | [Autolab](https://github.com/autolab/Autolab) (Apache-2.0) / [Submitty](https://github.com/Submitty/Submitty) (BSD-3) — objective pass/fail per attempt |
+| Misconception taxonomy | 🟢 **exists** | [oppia/oppia](https://github.com/oppia/oppia) (Apache-2.0) explorations already encode misconception branches |
+| Transport of results | 🟢 **exists** | [scorm-again](https://github.com/jcputney/scorm-again) (MIT) — SCORM 1.2 / 2004 |
+| **Agent-level evaluation** | 🔴 **DOES NOT EXIST** | Trace capture per tutoring turn, counterfactual cohorting, learning-gain attribution to agent behaviour. **Original work.** |
+
+🔵 **Cost it honestly in the proposal.** Globant cannot buy or fork this layer, so any engagement
+promising learning-gain evidence must carry it as new build. 🟢 Conversely, it is the single piece
+of the education-AI stack where there is nothing to be second to.
+
 ## 🆕 `p471` — **🟢 THE PATTERN THIS PASS CONTRIBUTES IS A GATE EVERY OTHER RECIPE ON THIS FILE NOW PASSES THROUGH: before a repo enters a deliverable, enumerate its licence paths at every depth — because 14.4 % of these shelves' repositories grant below the root, 66.7 % above 2 000 paths, and one of them is PROPRIETARY inside an otherwise-open tree. 🟢 And the human-review checkpoint that three regimes independently require is specified here as a component, not as advice.**
 
 🔵 Gate not attested (`Gap 446-A`); checks re-implemented in-session and green. Every grant named

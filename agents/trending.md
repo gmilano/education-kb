@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p472` — `2026-10-27` — **the week's movement is a 9-day-old curriculum knowledge graph at 4,086★ that nobody may sell, and the fact that `curl -sI` — the check this base is instructed to verify URLs with — returns 403 on every live repository**
+
+🔵 **Append-only.** The `p471` body and all prior passes stand unchanged below this section. Star
+counts from the MCP `search_repositories` channel, **2026-10-27**. Every grant read first-hand from
+`raw.githubusercontent.com`, written to a file and the file measured (`Gap 468-A`).
+🔴 **`curl -sI https://github.com/<repo>` is dead for verification on this harness** — 403 on 31 of
+31 live repositories, see `Gap 472-A` in `agents/top.md`. Metadata here comes from MCP search,
+payload from `raw`.
+
+### 🟢 New this window — created or first-surfaced inside 30 days
+
+| Repo | Created | Stars | Licence (path read, bytes) | Region | Why it moved |
+|---|---|---|---|---|---|
+| [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | **2026-10-18** | **4,086** | 🔴 **CC BY-NC 4.0** — `main/LICENSE`, 19,347 B | APAC | 🔴 **4,086★ and 1,028 forks in nine days.** A curriculum knowledge graph for Chinese K-12 maths, English and junior-high physics: **1,644 knowledge points, 2,403 prerequisite edges, 6,723 items**, aligned to the national curriculum standard, with an adaptive prerequisite diagnostic. **NonCommercial — cannot ship in a paid engagement** |
+| [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 2026-10-03 | 961 | 🟢 **MIT** — `main/LICENSE`, 1,069 B | Global | Books → animated, narrated, interactive web lessons, **emitting SCORM** — i.e. it targets the LMS runtime, not a new app |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | 2026-10-14 | 466 | 🟢 **MIT** — `main/LICENSE`, 1,069 B | Global | Topic in, a course of 2-minute **cited** audio lessons out; positioned against Udemy/Coursera |
+| [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | 2026-10-10 | 412 | 🟡 **AGPL-3.0** — `main/LICENSE`, 34,523 B | Global | Local-first explainer-video director agent, model-agnostic |
+| [3yangyang9/DeepTutor-AILearning](https://github.com/3yangyang9/DeepTutor-AILearning) | 2026-10-09 | 130 | 🟢 **Apache-2.0** — `main/LICENSE`, **11,408 B** | APAC | 🟢 **The commercialisation reference this base has been missing.** A declared, correctly-attributed derivative of `HKUDS/DeepTutor` that adds **multi-tenancy and billing** on top of the upstream engine: platform → institution → campus → teacher → student, plus coursebook assessment, gap diagnosis and **points-based metering**. Its `LICENSE` is **byte-identical to upstream's 11,408 B**, and `README.md` states plainly it *"is not an official HKUDS/DeepTutor distribution"*, pointing at `CITATION.cff` and `THIRD_PARTY_NOTICES.md`. 🔵 **This is what Apache-2.0 downstream compliance looks like done right** — see `compose/patterns.md` `P1` |
+
+### 🔵 Movement on rows this base already carries
+
+| Repo | Stars now | Licence | Note this window |
+|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | **44,177** | 🟢 Apache-2.0 | 🟢 **Largest education repository this base has ever recorded.** 5,586 forks, 230 open issues, pushed within the hour of this read. Carries a GitHub *Trending Repository of the Day* badge in `README.md` |
+| [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | **36,206** | 🟢 MIT | 3,835 forks; the agent-skill packaging route rather than an LMS plugin |
+| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 4,788 | 🟡 CC BY-SA 4.0 | 23,000+ skills across 8 social-science disciplines; Stanford REAP / CoPaper.AI |
+| [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 2,049 | 🔴 **NON-COMMERCIAL** | 🔴 **Correction to any prior reading of this row as open source.** `main/LICENSE.md` is a bespoke *"PageLM Community License"* that bars commercial use, SaaS hosting and any revenue-generating use |
+| [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | 1,315 | 🟡 AGPL-3.0 | Network-use copyleft; hosting for a client discloses source |
+| [JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29,550** | 🔴 **UNGRANTED** | 🔴 Still no licence file, no manifest, no README grant. Highest-starred education-AI row on this shelf and legally unusable |
+| [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 463 | 🟢 **Apache-2.0** — `main/LICENSE`, 11,358 B | 🟢 Distils videos, PDFs, transcripts and notes into **source-backed teacher skills**. The permissive substitute for the NC curriculum graphs — see `compose/patterns.md` `P5` |
+| [menthorlabs/menthor](https://github.com/menthorlabs/menthor) | 582 | 🟢 Apache-2.0 | 🔴 **ARCHIVED / read-only.** The only LATAM-origin (Brazil) education repository surfaced this window, and it is no longer maintained |
+
+### 🔴 The shape of the week, stated once
+
+🔵 Two of the three fastest-moving education repositories in this window are **knowledge graphs and
+skill libraries, not applications** — `cn-math-taxonomy` (4,086★ in 9 days) and `book-to-skill`
+(36,206★). The build is moving **below** the tutor: into curriculum structure and distilled
+teaching skills that any harness can mount.
+
+🔴 **And the licence is moving the wrong way with it.** The two richest new curriculum assets of
+this window and the last — `cn-math-taxonomy` (CC BY-NC 4.0) and `withmarbleapp/os-taxonomy`
+(ODbL, `p384`) — are both **non-commercial or share-alike database licences**. The primitive the
+market is converging on exists and **is not licensable by a consultancy**. That is this window's
+single most consequential finding for Globant, and the recipe written against it is `P5`.
+
+### 🔵 Declared nils for this window
+
+- 🔴 **LATAM: nothing live.** One archived repository (above). Searched `topic:edtech`,
+  `topic:education`, `education agent` with `pushed:>2026-09-01`. An informed gap, not coverage.
+- 🔴 **Middle East / Africa: no repository surfaced at any star floor** in the education-agent
+  searches this window, despite the UAE's compulsory school AI subject (see `intel/market.md`).
+  Policy without a visible open-source build.
+- 🔵 **No education-AI evaluation harness** surfaced, again.
+
 ## 🆕 `p471` — `2026-10-27` — **the week's movement is not a repository at all: the discovery channel this base has called blocked for 470 passes is per-repository authorised, and one of its tools is unscoped**
 
 🔵 **Append-only.** The `p470` body and all prior passes stand unchanged below this section. Star

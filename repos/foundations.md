@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p472` — `2026-10-27` — **🔴 THE EDUCATION STACK'S LOAD-BEARING CORE IS COPYLEFT AND ITS PERMISSIVE ALTERNATIVES ARE UNDER-KNOWN: Moodle GPL-3.0, Canvas AGPL-3.0, Open edX AGPL-3.0, `frappe/lms` AGPL-3.0 — while Sakai (ECL-2.0), OpenOLAT (Apache-2.0), Oppia (Apache-2.0) and Kolibri (MIT) sit permissive and unmentioned in every vendor comparison searched this pass. 🔴 And `frappe/lms` grants at `develop/license.txt` — a NINTH path, lowercase, absent from the seven-path probe set this base has used for 471 passes.**
+
+🔵 Stars from MCP `search_repositories`, **2026-10-27**. Licence column names the **path read
+first-hand** from `raw.githubusercontent.com` and its measured byte count (`Gap 468-A`).
+🔴 `curl -sI` not used — dead on this harness, see `Gap 472-A` in `agents/top.md`.
+
+### 🟢 Permissive foundations — what Globant can build on and modify freely
+
+| Repo | Licence (path read, bytes) | Stars | Region | Role in an education build |
+|---|---|---|---|---|
+| [oppia/oppia](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** — `develop/LICENSE`, 11,358 B | **6,944** | Global | Interactive **explorations** engine with built-in misconception handling; the only permissive full learning platform at this scale. 5,855 forks |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** — `master/LICENSE`, 11,120 B | 1,240 | Global | Full higher-ed LMS incl. **gradebook of record**. 🔵 Educational Community License 2.0 is an **Apache-2.0 derivative, OSI-approved and permissive** — the one copyleft-free LMS core with a gradebook |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** — `develop/LICENSE`, 1,097 B | 1,162 | Global | **Offline-first** learning platform for low-connectivity deployment. 🟢 Directly answers the LATAM compute/connectivity gap in `intel/market.md` |
+| [autolab/Autolab](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0** — `master/LICENSE`, 11,324 B | 808 | North America | Auto-graded programming assignments with course management; CMU-origin |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** — `main/LICENSE.md`, 1,542 B | 804 | North America | Homework submission + automated grading + TA grading. 1,119 forks |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** — `master/LICENSE`, 10,982 B | 448 | EMEA | LMS with **QTI assessment, SCORM, curriculum management, certification**. Swiss-origin, used across DACH higher ed |
+| [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** — `main/LICENSE`, 1,094 B | 409 | EMEA | 🟢 **A permissive student information system.** Laravel/Filament school-management platform. Directly fills the gap the vendor comparison searched this pass declared unfillable — *"the results don't identify an open-source SIS under MIT or Apache"* |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT** — `master/LICENSE`, 1,072 B | 359 | Global | Modern SCORM 1.2 / 2004 JS runtime, offline-first. 🔵 **The integration seam**: lets an AI layer report completion and scores into any SCORM-consuming LMS without touching the LMS source |
+| [openfun/richie](https://github.com/openfun/richie) | 🟢 **MIT** — `master/LICENSE`, 1,079 B | 316 | EMEA | Django CMS for education **portals and catalogues**, front-ends Open edX / Moodle. France Université Numérique-origin |
+| [HKUDS/LightRAG](https://github.com/HKUDS/LightRAG) | 🟢 **MIT** — `main/LICENSE`, 1,070 B | — | APAC | Graph-RAG retrieval engine from the lab that ships DeepTutor. 🟢 **Same-lab licence-compatible retrieval layer** under an AI tutor |
+| [HKUDS/RAG-Anything](https://github.com/HKUDS/RAG-Anything) | 🟢 **MIT** — `main/LICENSE`, 1,088 B | — | APAC | Multimodal document ingestion (PDF, slides, figures) feeding the same retrieval layer |
+| [tutors-sdk/tutors](https://github.com/tutors-sdk/tutors) | 🟢 **MIT** — `development/LICENSE`, 1,088 B | — | EMEA | Markdown-native course publishing toolchain; Ireland-origin *(carried, re-verified `p472`)* |
+
+### 🟡 Copyleft foundations — real, dominant, and a design constraint
+
+| Repo | Licence (path read, bytes) | Stars | Region | Constraint it imposes |
+|---|---|---|---|---|
+| [moodle/moodle](https://github.com/moodle/moodle) | 🟡 **GPL-3.0** — `main/COPYING.txt` | **7,549** | Global | The world's most-deployed LMS, 7,684 forks. 🔵 Grant is at **`COPYING.txt`, not `LICENSE`** — a root-path probe that only tries `LICENSE*` publishes NO GRANT on the largest LMS on earth |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🟡 **AGPL-3.0** — `master/LICENSE`, 34,520 B | **6,889** | North America | 🔴 **Network-use copyleft.** Hosting a modified Canvas for a client triggers source disclosure to that client's users |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🟡 **AGPL-3.0** — `master/LICENSE`, 35,136 B | — | North America | MIT/Harvard-origin, now Axim Collaborative. 🔵 **Search anomaly recorded honestly:** MCP `search_repositories` returns this address for neither `repo:openedx/edx-platform` nor `edx-platform in:name` (which returns only forks). Existence and grant proved by payload: `master/README.rst` → 200, `master/LICENSE` → 35,136 B AGPL-3.0. **No star count claimed, because none was read** |
+| [frappe/lms](https://github.com/frappe/lms) | 🟡 **AGPL-3.0** — 🔴 **`develop/license.txt`** | **3,351** | APAC | 🔴 **A ninth licence path, and a lowercase one.** Absent from all seven root paths this base probes and from the six tried first this pass; `LICENSE.txt`, `LICENSE.md` and `COPYING` all 404. India-origin (Frappe), 1,562 forks. Registered as **`Gap 472-B`**: the probe set must include **lowercase `license.txt` / `license.md`**, because a case-sensitive object store does not fold them |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | 🟡 **AGPL-3.0** — `release/LICENSE.txt`, 34,523 B | 1,131 | EMEA | The Docker/Kubernetes Open edX distribution — the practical way to run Open edX. France-origin |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🟡 **GPL-3.0** — `master/LICENSE`, 35,147 B | 1,020 | EMEA + LATAM | Accessibility-focused LMS with **strong Spanish-speaking and LATAM deployment base** |
+| [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 **GPL-3.0** — `release_11/LICENSE`, 35,147 B | 505 | EMEA | German-origin LMS, heavy public-sector and university use |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🟡 **AGPL-3.0** — `dev/LICENSE`, 34,523 B | 2,424 | Global | AI-oriented next-gen learning platform; headless API |
+| [classroomio/classroomio](https://github.com/classroomio/classroomio) | 🟡 **AGPL-3.0** — `main/LICENSE`, 34,523 B | 1,732 | Global | Customer-training platform shape (SaaS companies teaching their users) |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🟡 **AGPL-3.0** — `main/LICENSE`, 34,764 B | 243 | EMEA | Secure automated exercise assessment with an LTI seam to an existing LMS. Belgium (UCLouvain)-origin |
+
+### 🔴 The finding that matters for a proposal
+
+🔵 Of the four LMS cores a client is most likely to already run — Moodle, Canvas, Open edX,
+`frappe/lms` — **all four are GPL or AGPL**. Two of them (Canvas, Open edX, plus Tutor) are
+**AGPL**, where merely *hosting* a modified build for the client's users triggers disclosure.
+
+🟢 **The permissive escape routes exist and are not in the comparisons.** The vendor LMS comparison
+surfaced by this pass's search names Moodle, Open edX, Sakai, ILIAS, Canvas, Chamilo and OpenEduCat
+— and **does not state that Sakai is permissive**, nor mention OpenOLAT, Oppia, Kolibri or
+Academico at all. For a client that needs to keep modifications closed, the shortlist is
+**Sakai (ECL-2.0) · OpenOLAT (Apache-2.0) · Oppia (Apache-2.0) · Kolibri (MIT) · Academico (MIT)**,
+and that shortlist appears nowhere in the market literature read this pass.
+
+🔵 **12 permissive foundations and 10 copyleft ones are published above — all 22 grant-verified by
+payload this pass.** No row is carried on a prior pass's word except the three marked as carried and
+re-verified.
+
 ## 🆕 `p471` — **🔴 TWO FOUNDATION-TIER PLATFORMS THIS SHELF REFUSED FOR WANT OF A GRANT ARE GRANTED, and one of them is published as ungranted on the SELL shelf: `particify/arsnova-server` serves **GPL-3.0** at `core/LICENSE` and `formalms/formalms` serves **GPL-2.0** at `html/license.txt`, both read first-hand. 🟢 And foundation selection gains a screen that costs one command and runs BEFORE any licence is read: partition risk is monotonic in tree size, 0.0 % under 25 paths to 66.7 % over 2 000.**
 
 🔵 Gate not attested (`Gap 446-A`); checks re-implemented in-session and green. Every grant read

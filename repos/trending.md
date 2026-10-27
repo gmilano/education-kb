@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p472` — `2026-10-27` — **the trending education repo of this window is a nine-day-old curriculum knowledge graph with 1,028 forks and a NonCommercial licence, and the verification channel this base is instructed to use returns 403 on every live address**
+
+🔵 **Append-only.** The `p471` body and all prior passes stand unchanged below this section. Star
+counts from the MCP `search_repositories` channel, **2026-10-27**. Every grant read first-hand from
+`raw.githubusercontent.com`, body written to a file and the file measured (`Gap 468-A`).
+🔴 **`curl -sI https://github.com/<repo>` is not a usable check here** — 403 on 31 of 31 live
+repositories, and its one non-403 was the proxy's own `Connection Established` line. See
+`Gap 472-A` in `agents/top.md`.
+
+### 🔴 Top of the board — education, this window
+
+| Repo | Created | Stars | Forks | Licence (path read, bytes) | Region | Signal |
+|---|---|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 2025-12-28 | **44,177** | 5,586 | 🟢 **Apache-2.0** — `main/LICENSE`, 11,408 B | APAC | 🟢 **The largest education repository this base has ever carried, and the only one at this scale that is permissively licensed.** HKU Data Intelligence Lab; pushed within the hour of this read |
+| [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 2026-05-01 | **36,206** | 3,835 | 🟢 **MIT** — `master/LICENSE.md`, 1,068 B | Global | Book PDF → agent skill. **The packaging shift**: education capability shipped as a skill for a coding-agent harness, not as an LMS plugin |
+| [JushBJJ/Mr.-Ranedeer-AI-Tutor](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 2023-03-31 | **29,550** | 3,249 | 🔴 **UNGRANTED** | Global | 🔴 Third-largest on the board, **no grant of any kind**. Still updated (2026-10-27) and still unusable |
+| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 2026-04-03 | 4,788 | 559 | 🟡 **CC BY-SA 4.0** — `main/LICENSE`, 620 B | North America | 23,000+ research skills, 8 social-science disciplines; Stanford REAP |
+| [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | **2026-10-18** | **4,086** | **1,028** | 🔴 **CC BY-NC 4.0** — `main/LICENSE`, 19,347 B | APAC | 🔴 **The movement of the window: 4,086★ and 1,028 forks in nine days.** 1,644 knowledge points · 2,403 prerequisite edges · 6,723 items, curriculum-standard-aligned, with an adaptive prerequisite diagnostic. **NonCommercial** |
+| [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 2025-08-31 | 2,049 | 278 | 🔴 **NON-COMMERCIAL** — `main/LICENSE.md`, 8,563 B | Global | 🔴 Bespoke *"PageLM Community License"*: bars commercial use, SaaS hosting, any revenue model |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 2022-05-10 | 2,424 | 588 | 🟡 **AGPL-3.0** — `dev/LICENSE`, 34,523 B | Global | AI-native learning platform, headless |
+| [classroomio/classroomio](https://github.com/classroomio/classroomio) | 2023-11-01 | 1,732 | 405 | 🟡 **AGPL-3.0** — `main/LICENSE`, 34,523 B | Global | Customer-training platform shape |
+| [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | 2025-11-05 | 1,315 | 189 | 🟡 **AGPL-3.0** — `main/LICENSE`, 34,522 B | APAC | Visual interactive STEM tutor |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 2016-01-19 | 1,162 | 1,012 | 🟢 **MIT** — `develop/LICENSE`, 1,097 B | Global | Offline-first; **1,012 forks against 1,162 stars** — a deployment-heavy, not star-heavy, profile |
+| [beltromatti/get-it](https://github.com/beltromatti/get-it) | 2026-05-09 | 1,135 | 135 | 🟢 **Apache-2.0** — `main/LICENSE`, 11,359 B | EMEA | Built at **GDG AI Hack Milan 2026**, *"Learn Different"* track. The one EMEA-origin new agent on the board |
+| [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | **2026-10-03** | 961 | 133 | 🟢 **MIT** — `main/LICENSE`, 1,069 B | Global | Books → interactive lessons, **SCORM out** |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 2026-03-01 | 914 | 129 | 🟡 **CC BY-SA 4.0** — `main/LICENSE`, 1,230 B | EMEA | 165 evidence-grounded teaching skills; UK-origin |
+| [autolab/Autolab](https://github.com/autolab/Autolab) | 2014-10-25 | 808 | 234 | 🟢 **Apache-2.0** — `master/LICENSE`, 11,324 B | North America | Auto-grading, CMU-origin |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | 2014-01-25 | 804 | **1,119** | 🟢 **BSD-3-Clause** — `main/LICENSE.md`, 1,542 B | North America | More forks than stars — institutional deployment pattern |
+| [menthorlabs/menthor](https://github.com/menthorlabs/menthor) | 2023-04-16 | 582 | 35 | 🟢 **Apache-2.0** — `main/LICENSE`, 11,337 B | **LATAM** | 🔴 **ARCHIVED.** The only LATAM-origin education repository on this board, read-only |
+| [aaryansamanta/ai-ethos](https://github.com/aaryansamanta/ai-ethos) | 2025-12-01 | 498 | 0 | 🔴 **UNGRANTED** | North America | Multilingual tutoring nonprofit, 7 languages, **0 forks**; calls itself open source and grants nothing |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | **2026-10-14** | 466 | 57 | 🟢 **MIT** — `main/LICENSE`, 1,069 B | Global | Topic → cited audio course |
+| [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 2026-06-01 | 463 | 70 | 🟢 **Apache-2.0** — `main/LICENSE`, 11,358 B | APAC | 🟢 Distils source material into **source-backed teacher skills** — the permissive route to a curriculum graph |
+| [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | **2026-10-10** | 412 | 83 | 🟡 **AGPL-3.0** — `main/LICENSE`, 34,523 B | Global | Local-first explainer-video agent |
+| [academico-sis/academico](https://github.com/academico-sis/academico) | 2018-12-16 | 409 | 151 | 🟢 **MIT** — `main/LICENSE`, 1,094 B | EMEA | 🟢 **A permissively licensed SIS** — the gap the market literature declared unfillable |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 2019-11-10 | 359 | 85 | 🟢 **MIT** — `master/LICENSE`, 1,072 B | Global | SCORM 1.2 / 2004 runtime — the LMS integration seam |
+| [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | 2024-07-23 | 329 | 126 | 🟢 **Apache-2.0** — `main/LICENSE.txt`, 11,342 B | APAC | Conversational teaching agent, China-origin |
+| [3yangyang9/DeepTutor-AILearning](https://github.com/3yangyang9/DeepTutor-AILearning) | **2026-10-09** | 130 | 1 | 🟢 **Apache-2.0** — `main/LICENSE`, 11,408 B | APAC | 🟢 **Multi-tenant commercialisation of DeepTutor done compliantly** — byte-identical upstream licence, explicit *"not an official distribution"* notice, `THIRD_PARTY_NOTICES.md` |
+
+🔵 **24 rows, every address resolved and every grant read by payload this pass.** No header row is
+published as data.
+
+### 🔴 What the board says that a star ranking does not
+
+🔵 **Forks beat stars as the deployment signal on this shelf.** Kolibri (1,012 forks / 1,162 stars),
+Submitty (1,119 / 804), `frappe/lms` (1,562 / 3,351) and Moodle (7,684 / 7,549) all carry
+fork-to-star ratios near or above 1 — the signature of software **institutions stand up and run**,
+not software developers admire. Every agent row on the board is the opposite shape
+(DeepTutor 5,586 / 44,177 ≈ 0.13). 🟢 For an engagement, the fork-heavy rows are where a client's
+existing estate actually sits.
+
+🔴 **And the top of the board is not buildable.** Ranked by stars, positions 1–5 are Apache-2.0,
+MIT, **UNGRANTED**, **CC BY-SA**, **CC BY-NC**. Three of the top five cannot enter a paid
+deliverable.
+
+### 🔵 Declared nils for this window
+
+- 🔴 **LATAM: one archived repository, nothing live.**
+- 🔴 **Middle East / Africa: no repository at any star floor**, against live UAE policy.
+- 🔵 **No education-AI evaluation or observability harness**, at any floor, again.
+
 ## 🆕 `p471` — `2026-10-27` — **the trending signal is a screen, not a repository: partition risk is monotonic in tree size across five bands, 0.0 % under 25 paths to 66.7 % above 2 000, measured on 229 addresses**
 
 🔵 **Append-only.** The `p470` body and all prior passes stand unchanged below this section. Star

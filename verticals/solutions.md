@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p472` — `2026-10-27` — **🟢 THE PERMISSIVE SHORTLIST, NAMED: for a client that must keep its modifications closed, the education vertical has exactly five viable cores — Sakai (ECL-2.0), OpenOLAT (Apache-2.0), Oppia (Apache-2.0), Kolibri (MIT), Academico (MIT) — and NOT ONE of them appears in the vendor LMS comparison this pass searched, which lists seven platforms and never states that Sakai is permissive.**
+
+🔵 Every grant below read first-hand from `raw.githubusercontent.com` this pass, body written to a
+file and the file measured (`Gap 468-A`). Stars from MCP `search_repositories`, **2026-10-27**.
+🔴 `curl -sI` not used — dead on this harness (`Gap 472-A`).
+
+### 🟢 Customisable cores by licence class — the decision table
+
+| Platform | Repo | Licence (path read) | Stars | Region strength | What it is, and when to pick it |
+|---|---|---|---|---|---|
+| **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** — `master/LICENSE`, 11,120 B | 1,240 | Global higher ed | 🟢 **The only permissive LMS with a gradebook of record.** Educational Community License 2.0 is an Apache-2.0 derivative, OSI-approved. **Pick it when AI output must touch grades and the client cannot disclose source** |
+| **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** — `master/LICENSE`, 10,982 B | 448 | EMEA (DACH) | QTI assessment, SCORM, curriculum management, certification, roll-call. **Pick it for EMEA public-sector and university work under the EU AI Act** — permissive, and assessment is first-class |
+| **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** — `develop/LICENSE`, 11,358 B | **6,944** | Global, SDG-4 | Interactive **explorations** with explicit misconception branching. **Pick it when the deliverable is adaptive practice rather than course delivery** |
+| **Kolibri** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** — `develop/LICENSE`, 1,097 B | 1,162 | LATAM · Africa · rural APAC | **Offline-first** by design. 1,012 forks. 🟢 **Pick it wherever connectivity or compute is the binding constraint** — which is precisely what the ILIA 2025 and Intelligent CIO findings in `intel/market.md` say about LATAM |
+| **Academico** | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** — `main/LICENSE`, 1,094 B | 409 | EMEA | 🟢 **A permissively licensed student information system** (Laravel + Filament), for small and medium institutions. The market literature searched this pass states no MIT/Apache SIS exists; it does |
+| **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | 🟡 **GPL-3.0** — `main/COPYING.txt` | **7,549** | Global — the default incumbent | 1,800+ plugins, 7,684 forks, **no integrated SIS**. 🔵 Grant lives at `COPYING.txt`. **Expect to find it already installed**; integrate over LTI/web services rather than forking — see `compose/patterns.md` `P2` |
+| **Canvas LMS** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🟡 **AGPL-3.0** — `master/LICENSE`, 34,520 B | **6,889** | North America — dominant in US higher ed | 🔴 **Open-core with network copyleft.** Hosting a modified build for the client's users triggers disclosure to those users |
+| **Open edX** | [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🟡 **AGPL-3.0** — `master/LICENSE`, 35,136 B | — | Global MOOC + corporate training | MIT/Harvard-origin, now **Axim Collaborative**. Run it via **Tutor** ([overhangio/tutor](https://github.com/overhangio/tutor), AGPL-3.0 `release/LICENSE.txt`, 1,131★) — the Docker/Kubernetes distribution |
+| **frappe/lms** | [frappe/lms](https://github.com/frappe/lms) | 🟡 **AGPL-3.0** — 🔴 `develop/license.txt` | **3,351** | APAC (India) | Sits on the Frappe/ERPNext stack, so it composes with an ERP the client may already run. 🔴 Grant is at a **lowercase ninth path** — `Gap 472-B` |
+| **Chamilo** | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🟡 **GPL-3.0** — `master/LICENSE`, 35,147 B | 1,020 | **LATAM + EMEA** | Accessibility-first, with a genuine Spanish-speaking and LATAM install base. 🟢 **The incumbent to expect in a LATAM public-education engagement** |
+| **ILIAS** | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 **GPL-3.0** — `release_11/LICENSE`, 35,147 B | 505 | EMEA (German-speaking) | Heavy public-sector and university use |
+| **LearnHouse** | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🟡 **AGPL-3.0** — `dev/LICENSE`, 34,523 B | 2,424 | Global | Headless, AI-oriented; API-first if the client wants its own front end |
+| **ClassroomIO** | [classroomio/classroomio](https://github.com/classroomio/classroomio) | 🟡 **AGPL-3.0** — `main/LICENSE`, 34,523 B | 1,732 | Global | Customer-training shape — SaaS companies teaching their own users |
+
+### 🟢 Assessment and integration components that are safe to modify
+
+| Component | Repo | Licence (path read) | Stars | Use |
+|---|---|---|---|---|
+| **Autolab** | [autolab/Autolab](https://github.com/autolab/Autolab) | 🟢 Apache-2.0 — `master/LICENSE`, 11,324 B | 808 | Auto-graded programming assignments + course management |
+| **Submitty** | [Submitty/Submitty](https://github.com/Submitty/Submitty) | 🟢 BSD-3-Clause — `main/LICENSE.md`, 1,542 B | 804 | Submission, automated grading, TA grading. 1,119 forks |
+| **scorm-again** | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 MIT — `master/LICENSE`, 1,072 B | 359 | 🟢 **The licence firewall.** SCORM 1.2 / 2004 runtime: an AI layer reports completion and scores into a GPL/AGPL LMS **without linking to or modifying it** |
+| **Richie** | [openfun/richie](https://github.com/openfun/richie) | 🟢 MIT — `master/LICENSE`, 1,079 B | 316 | Course catalogue / portal CMS fronting Open edX or Moodle |
+| **INGInious** | [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🟡 AGPL-3.0 — `main/LICENSE`, 34,764 B | 243 | Secure exercise assessment with an **LTI** seam. 🔴 Use unmodified over LTI; modifying it triggers AGPL |
+
+### 🔴 What this shelf will not tell you, stated plainly
+
+- 🔴 **OpenEduCat**, the vendor whose comparison page dominated this pass's platform search, is
+  described there as an *"integrated education-ERP"* and **its own page does not state its
+  licence**. No repository address was surfaced for it by the MCP channel in this window.
+  **Not published as a row** — an unlicensed, unaddressed platform is not a finding.
+- 🔵 **No LATAM-origin education platform** appears above except Chamilo's install base (the project
+  itself is EMEA-origin). The one LATAM-origin repository found this window,
+  [menthorlabs/menthor](https://github.com/menthorlabs/menthor) (Brazil, Apache-2.0, 582★), is
+  **archived** and is therefore not offered as a core.
+- 🔵 **No Middle East or Africa-origin platform** surfaced, against live UAE school-AI policy.
+
 ## 🆕 `p471` — **🔴 TWO ROWS ON THIS SHELF WERE PUBLISHED AS UNGRANTED AND ARE GRANTED. ARSnova (67★) serves GPL-3.0 at `core/LICENSE` and forma.lms (37★) serves GPL-2.0 at `html/license.txt` — both corrected in place above. 🔴 And ARSnova carries the opposite finding in the same tree: `formatting/LICENSE` is 133 bytes of "All rights reserved" naming Particify, so the repository is part-copyleft and part-proprietary and a wholesale vendoring ships the proprietary half.**
 
 🔵 Gate not attested (`Gap 446-A`); checks re-implemented in-session and green. Every grant below
