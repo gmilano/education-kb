@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p475` — `2026-10-27` — **🔴 The new education-AI tier that appeared this window is copyleft: the three highest-starred education-AI repos created or surfaced since `p470` (Echo Loop 4,522★, penecho 2,503★, LearnHouse 2,424★) are ALL AGPL-3.0, read first-hand. 🟢 And the APAC supply that `Gap 474-F` could only find by accident is now found on purpose — in-language.**
+
+🔵 Append-only shelf. This section is prepended; everything below it is retained history.
+
+### 🔴 What moved this week
+
+| repo | ★ (first-hand) | created | grant (read first-hand) | why it is on this shelf |
+|---|---|---|---|---|
+| [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | 4,522 | 2026-05-07 | AGPL-3.0 · 34,523 B · `0d96a4ff68ad` | Fastest-rising education-AI repo in the window; Chinese-language, Flutter, spaced-repetition speech training |
+| [penecho/penecho](https://github.com/penecho/penecho) | 2,503 | **2026-07-14** | AGPL-3.0 · 34,523 B · `0d96a4ff68ad` | 2,503★ in ~15 weeks from creation; spatial/handwriting canvas rather than a chat box |
+| [mohi-devhub/antivibe](https://github.com/mohi-devhub/antivibe) | 1,129 | 2026-04-10 | MIT · 1,065 B · `a9e5355735ea` | **The permissive one.** Pedagogy layered on a coding agent: explains what the AI wrote |
+| [jin-zi-xuan/kaobuddy-pwa](https://github.com/jin-zi-xuan/kaobuddy-pwa) | 392 | 2026-05-30 | 🔴 UNGRANTED | Chinese exam-cram PWA; BYOK; rising but unusable downstream |
+| [walkinglabs/modern-llm-notebook](https://github.com/walkinglabs/modern-llm-notebook) | 272 | 2026-05-17 | grant not read this pass | Teaching-grade LLM internals course, PyTorch, runnable notebooks |
+
+🔴 **The pattern, stated plainly:** of the five risers, **one is permissive**. Three of the five are
+APAC-origin by language of authorship (two Chinese, and see the census below). A studio that wants to
+*build on* this week's momentum can build on exactly one of them.
+
+### 🟢 `Gap 474-F`'s "APAC supply found only by accident" — found on purpose this pass
+
+🔵 `p474` found [Eyedot](https://github.com/Simon-zj1/eyedot) by accident and said so. 🟢 Running the
+sweep **in-language** instead of in English surfaces APAC supply deliberately:
+`Echo-Loop` and `kaobuddy-pwa` (Chinese), `EduPintarIPAS` (Indonesian, MIT),
+`LuyenChuTieuHoc` (Vietnamese, ungranted). Full census and its controls:
+[`evidence/lang-supply-census.2026-10-27-p475.tsv`](../evidence/lang-supply-census.2026-10-27-p475.tsv).
+
+### 🔴 Declared gaps on this shelf
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 475-E`** | **"Trending" here is still a star *level*, not a star *velocity*.** The authenticated channel returns a current count, not a time series, and this base has never stored a per-pass star snapshot it could difference. "Fastest-rising" above is inferred from creation date against current count — a rate, not a measured delta. 🔵 The fix is cheap and was not done: write a dated `repo,stars` snapshot each pass and difference it next pass. |
+| 🟡 **`Gap 475-F`** | **GitHub's own Trending page was not read this pass**, and the brief names it. The authenticated search channel has no trending endpoint, and the HTML page is not reachable through the proxy on the `curl -sI` evidence of `Gap 472-A`. So this shelf is "what the star-ordered sweep surfaced", not "what GitHub calls trending". |
+
+
 ## 🆕 `p474` — `2026-10-27` — **the window's movement is a licence SHAPE, not a repository: three education-AI assets published this year license different subtrees differently from a single file, and the newest of them RETRACTS ITS OWN EARLIER GRANT in the payload — an open-source project publicly correcting a licence claim it had no right to make**
 
 🔵 Append-only honoured: this section is prepended, the full history below is untouched.

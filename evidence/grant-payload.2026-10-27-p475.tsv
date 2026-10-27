@@ -1,0 +1,31 @@
+# p475 first-hand grant reads. HEAD resolved by `git ls-remote --symref`; payload fetched from
+# raw.githubusercontent.com at the resolved default branch, written to a file, and the FILE measured.
+# stars_firsthand = authenticated MCP /search/repositories on 2026-10-27 (NOT web-relayed).
+repo	stars_firsthand	default_branch	head_sha12	grant_path	bytes	digest12	grant_read	build_on_able
+HKUDS/DeepTutor	44441	main	a31d82624c27	main/LICENSE	11408	cd2f54e1e506	Apache-2.0	YES
+echo-loop/Echo-Loop	4522	main	68334adab38a	main/LICENSE	34523	0d96a4ff68ad	AGPL-3.0	NO (network copyleft)
+frappe/lms	3351	develop	11b6244724b7	develop/license.txt	33893	db1a87ba81e8	AGPL-3.0	NO (network copyleft)
+penecho/penecho	2503	main	341e34d6cf29	main/LICENSE	34523	0d96a4ff68ad	AGPL-3.0	NO (network copyleft)
+learnhouse/learnhouse	2424	dev	2d75337273ac	dev/LICENSE	34523	8486a10c4393	AGPL-3.0	NO (network copyleft)
+CaviraOSS/PageLM	2049	main	a6646794661b	main/LICENSE.md	8563	c834209c5f33	PageLM Community License (bespoke, non-commercial)	NO
+learningequality/kolibri	1162	develop	f72936bd41e5	develop/LICENSE	1097	3c056b34a476	MIT	YES
+mohi-devhub/antivibe	1129	main	9991d12ec52b	main/LICENSE	1065	a9e5355735ea	MIT	YES
+OpenOLAT/OpenOLAT	448	master	aac489d1d429	master/LICENSE	10982	6dbc5b605ed0	Apache-2.0	YES
+jin-zi-xuan/kaobuddy-pwa	392	main	1526ab973dc3	NO_GRANT (10 root paths probed)	0	-	UNGRANTED	NO
+ai-shifu/ai-shifu	329	main	e098392fef92	main/LICENSE.txt	11342	c00cbb6a47a7	Apache-2.0	YES
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	316	main	9c260890214d	main/LICENSE	1070	deffdff30dfd	MIT	YES
+RozhakDev/EduPintarIPAS	20	main	e6d415f13662	main/LICENSE	1092	0fc419538e54	MIT	YES
+langmaninternet/LuyenChuTieuHoc	12	master	0b6bc81bd988	NO_GRANT (10 root paths probed)	0	-	UNGRANTED	NO
+moodle/moodle	-	main	46c042e7da65	main/COPYING.txt	35147	8ceb4b9ee5ad	GPL-3.0	NO (copyleft)
+openedx/edx-platform	-	master	03698e2b6ff4	master/LICENSE	35136	e12d78569742	AGPL-3.0	NO (network copyleft)
+instructure/canvas-lms	-	master	1c9f0bb8013e	master/LICENSE	34520	57c8ff33c9c0	AGPL-3.0	NO (network copyleft)
+h5p/h5p-php-library	-	master	1e21b7a2da4a	master/LICENSE.txt	35146	c53a65c2fd56	GPL-3.0	NO (copyleft)
+sakaiproject/sakai	-	master	849cc0d9f991	master/LICENSE	11120	0688f62d04f1	ECL-2.0	YES (narrowed patent grant, see p474)
+bigbluebutton/bigbluebutton	-	v4.0.x-develop	4eabedfb8045	v4.0.x-develop/LICENSE	7652	e3a994d82e64	LGPL-3.0	PARTIAL (weak copyleft)
+openeducat/openeducat_erp	-	19.0	46a5d7d40082	19.0/LICENSE	8241	528f84036800	LGPL-3.0 (SPLIT_SCOPE: bundled libs disclaimed)	PARTIAL
+# PROBE-PATH NOTE: moodle/moodle and frappe/lms BOTH read NO_GRANT on a 5-path probe
+# (LICENSE, LICENSE.md, LICENSE.txt, COPYING, LICENCE) and BOTH resolved on a 10-path probe that
+# added COPYING.txt and license.txt. The grant was present the whole time; the probe was short.
+# DEFAULT-BRANCH NOTE: 6 of 20 repos do NOT default to main/master
+# (develop x3, dev x1, v4.0.x-develop x1, master-vs-main varies). A reader that hardcodes
+# main/ or master/ in a raw.githubusercontent URL silently 404s and publishes UNGRANTED.

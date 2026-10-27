@@ -1,0 +1,11 @@
+# p475 control: is "any later version" present in the STOCK GPL-family payload regardless of a project's election?
+# Method: fetch the grant payload first-hand from raw.githubusercontent.com, count occurrences of the literal string.
+# If the count is non-zero for every payload, then grading or-later FROM THE PAYLOAD is a uniform false positive.
+repo	grant_path	family	occurrences_of_any_later_version	verdict
+openedx/edx-platform	master/LICENSE	AGPL-3.0	3	string present in stock text
+h5p/h5p-php-library	master/LICENSE.txt	GPL-3.0	3	string present in stock text
+instructure/canvas-lms	master/LICENSE	AGPL-3.0	3	string present in stock text
+# RESULT: 3 of 3. The string lives in the preamble and in the "How to Apply These Terms" appendix,
+# which are part of the stock licence text and are NOT the project's election.
+# The real election lives in per-source-file headers (e.g. "either version 3 ... or (at your option) any later version"
+# as applied by the project) or in packaging metadata -- NOT in the LICENSE payload.

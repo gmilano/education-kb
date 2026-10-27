@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p475` — `2026-10-27` — **three recipes whose every component's grant was read first-hand at a resolved HEAD this pass, each one specified so the licence boundary AND the regulatory boundary fall where they actually fall**
+
+🔵 Component grants are the first-hand reads in
+[`evidence/grant-payload.2026-10-27-p475.tsv`](../evidence/grant-payload.2026-10-27-p475.tsv).
+🔴 No recipe below uses an AGPL-3.0 or bespoke-licensed component in a position where a client would
+need to keep modifications closed. Where a copyleft component is used, it is **deployed, not linked**,
+and that is stated in the recipe.
+
+---
+
+### 🟢 P1 — "Article 50 retrofit": machine-readable AI disclosure across an existing EU school estate
+
+🔵 **Why now:** EU Article 50 transparency has applied since **2 Aug 2026**, and systems already on the
+market must carry **machine-readable content marking by 2 Dec 2026** — ~5 weeks from this pass. This is
+the nearest hard deadline in this KB.
+
+| part | component | grant | role |
+|---|---|---|---|
+| LMS of record | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 · `main/COPYING.txt` · 35,147 B | 🔴 **Deployed, not linked.** The marking layer is a separate service; nothing is statically bound into Moodle |
+| Marking + disclosure service | new, studio-owned | client's own | Stamps provenance metadata on AI-generated teaching material; renders the "you are interacting with AI" disclosure on chat surfaces |
+| Content type layer | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | GPL-3.0 · 35,146 B | Interactive content; marking applies at render time |
+| Tutoring surface (optional) | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · 11,408 B · `cd2f54e1e506` | The one high-star tutor a client can embed in proprietary code |
+
+🔵 **Wiring:** Moodle emits content events → marking service attaches C2PA-style provenance and a
+disclosure flag → H5P render hook and DeepTutor chat surface both read the flag and display disclosure.
+🔴 **Boundary:** Moodle and H5P are GPL-3.0 and stay **out-of-process**; the marking service talks to
+them over HTTP and the plugin shim stays GPL-3.0 and is published. 🟢 DeepTutor is Apache-2.0 and may
+be embedded directly. **Estimated 4–6 weeks** for a single-estate retrofit.
+
+---
+
+### 🟢 P2 — "One codebase, four regions": removable grading-autonomy and biometric modules
+
+🔵 **Why:** the EU bans emotion recognition in education outright; Vietnam regulates biometric
+monitoring as high-risk with a **1 Sep 2027** retrofit deadline; US states restrict AI from *replacing*
+a licensed educator in grading. One product, three incompatible defaults.
+
+| part | component | grant | role |
+|---|---|---|---|
+| LMS core | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · `master/LICENSE` · 10,982 B · `6dbc5b605ed0` | 🟢 The permissive full LMS — client modifications stay closed |
+| Low-connectivity edge | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** · `develop/LICENSE` · 1,097 B | Offline-first deployments; 🟢 **no biometric surface at all** |
+| Assistant | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | 🟢 **Apache-2.0** · `main/LICENSE.txt` · 11,342 B | Script-driven teaching agent, embeddable |
+| Grading autonomy | **feature flag**, studio-owned | client's own | `SUGGEST_ONLY` (US default) · `SUGGEST_ONLY` + logged human sign-off (EU/VN) · `AUTONOMOUS` (unregulated markets) |
+| Biometric/affect | **build-time module**, studio-owned | client's own | 🔴 **Absent from the EU build.** Not a runtime flag — compiled out, because the EU position is prohibition, not conformity |
+
+🔵 **Wiring:** OpenOLAT assessment hooks call a policy gate before any grade is written; the gate reads
+a per-deployment region profile (`NA` / `EMEA` / `APAC` / `LATAM`) and either writes, queues for human
+sign-off, or refuses. The biometric module is excluded by build profile, not configuration, so an EU
+artefact cannot be mis-flagged into compliance. 🔴 **Boundary:** every component is Apache-2.0 or MIT —
+**no copyleft anywhere in this recipe**, deliberately, because the whole point is a closed client build.
+**Estimated 10–12 weeks.**
+
+---
+
+### 🟢 P3 — "Policy instrumentation for LATAM institutions": the 87 %-adoption / 26 %-strategy gap
+
+🔵 **Why:** UNESCO IESALC measured 87 % of LATAM higher-education institutions already using AI against
+26 % with a formal AI strategy. The deliverable is not compliance against a statute — there mostly
+isn't one yet — it is the institutional policy and the instrumentation that evidences it.
+
+| part | component | grant | role |
+|---|---|---|---|
+| SIS / ERP of record | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 · `19.0/LICENSE` · 8,241 B · 🔴 `SPLIT_SCOPE` | Admissions, enrolment, fees. 🔴 **Weak copyleft + bundled libraries disclaimed — walk the tree before shipping** |
+| LMS | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | ECL-2.0 · 11,120 B · `0688f62d04f1` | 🟡 Consortium-friendly; patent grant narrowed to the contributor's own contributions (`p474`) |
+| Virtual classroom | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 · `v4.0.x-develop/LICENSE` · 7,652 B | 🔴 Deploy **with engagement analytics off** — it is the module that would make this high-risk in EU/VN if the institution later operates cross-border |
+| Tool inventory + attestation | new, studio-owned | client's own | Which AI tools are in use, by which faculty, against which policy clause; produces the annual disclosure artefact |
+| Tutoring | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 · 11,408 B | Embeddable without licence contamination |
+
+🔵 **Wiring:** OpenEduCat is the identity and enrolment spine; Sakai and BigBlueButton register their
+AI-touching features with the inventory service; the attestation layer renders an institutional AI
+strategy document populated from live tool registrations rather than a questionnaire. 🔴 **Boundary:**
+OpenEduCat and BigBlueButton are LGPL-3.0 — link dynamically, keep studio code in separate modules, and
+**enumerate OpenEduCat's bundled-library terms before delivery** (`Gap 475-N`). **Estimated 8–10 weeks.**
+
+---
+
+### 🔴 Gaps these recipes carry
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 475-V`** | **No recipe here has been built or run.** Every one is a composition of components whose *grants* and *addresses* were verified first-hand this pass; **no integration was executed**, no version compatibility was tested, and the week estimates are judgement, not measurement. |
+| 🔴 **`Gap 475-W`** | **P1's 2 Dec 2026 deadline and P2's regional profiles rest on secondary legal sources** (`Gap 475-L`, `Gap 475-R`). A client deliverable must re-read EUR-Lex and Decision 33's annex first-hand. The engineering boundaries (out-of-process GPL, build-time exclusion) are sound regardless of the dates; the **urgency** claim is not. |
+| 🟡 **`Gap 475-X`** | **P3 ships an `SPLIT_SCOPE` component knowingly.** OpenEduCat is the only open education ERP this base has found, so the recipe uses it and flags it rather than omitting the SIS layer — but the bundled-library enumeration is **unperformed work inside the recipe**, not a caveat about it. |
+
+
 ## 🆕 `p474` — `2026-10-27` — **three recipes whose parts were all grant-verified by payload read this pass: the evidence dossier North America and Europe are both legislating toward, the Brazilian public-education stack with its two AGPL triggers held outside the AI layer, and a national-curriculum agent built on the one country that has published curriculum, interface and benchmark together.**
 
 🔵 Every repository named below was address-resolved by `git ls-remote --symref` and grant-verified

@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p475` — `2026-10-27` — **🟢 `p471` SAID THREE JURISDICTIONS ON THREE CONTINENTS HAD CONVERGED ON THE SAME REGULATORY SHAPE. A FOURTH HAS NOW ARRIVED INDEPENDENTLY AND NAMES THE SAME TWO FEATURES — automated grading and biometric monitoring — with a deadline NINE MONTHS AHEAD of the EU's. 🔴 Meanwhile the open-source supply moved the other way: the three highest-starred new education-AI repos of this window are all AGPL-3.0.**
+
+### 🟢 T1 — Regulatory convergence is now a four-point line, and it converges on *features*, not on *AI*
+
+🔵 Legislatures that share no legal tradition keep landing on the same two education features:
+
+| jurisdiction | instrument | automated grading / ranking | biometric or emotion monitoring | deadline that binds |
+|---|---|---|---|---|
+| EU | AI Act Annex III pt 3, as amended by Reg. (EU) 2026/1744 | 🔴 High-risk | 🔴 Emotion recognition **prohibited** since 2 Feb 2025 | **2 Dec 2027** (Annex III) |
+| Vietnam | Decision 33/2026/QĐ-TTg | 🔴 High-risk | 🔴 High-risk (facial recognition, eye tracking) | **1 Sep 2027** (existing systems) |
+| South Korea | AI Framework Act | 🟡 Economy-wide, not education-specific | 🟡 Economy-wide | In force **22 Jan 2026** |
+| US states | Idaho S.B. 1227, Oklahoma, Ohio H.B. 96, Maryland S.B. 720, North Carolina | 🔴 Restricted — AI may not **replace a licensed educator** in grading | 🟡 Largely unaddressed | Rolling, **1 Jul 2026 → 30 Jun 2028** |
+
+🔵 **The trend is the convergence on the feature list, not the count of laws.** Two of these name
+*the same pair* with deadlines nine months apart. 🔴 But note what the fourth column shows: the US
+regulates **autonomy** (a human must grade), the EU and Vietnam regulate **sensing and
+classification**. A product compliant in Ohio can still be unshippable in Frankfurt.
+
+### 🔴 T2 — The new high-star education-AI tier is copyleft, and that is a reversal
+
+🔵 Measured, not impressed upon: the three highest-starred education-AI repositories to surface in this
+window are [Echo Loop](https://github.com/echo-loop/Echo-Loop) (4,522★),
+[penecho](https://github.com/penecho/penecho) (2,503★) and
+[LearnHouse](https://github.com/learnhouse/learnhouse) (2,424★) — **all AGPL-3.0**, all read
+first-hand. The fourth, [PageLM](https://github.com/CaviraOSS/PageLM) (2,049★), is a **bespoke
+non-commercial** grant. The most permissive thing in the top five is
+[antivibe](https://github.com/mohi-devhub/antivibe) (MIT, 1,129★) — which is a *coding-agent skill*,
+not an education platform.
+
+🔴 **For a studio this inverts the usual advice.** "Start from the most popular open-source project"
+now selects, four times out of five, something a client cannot ship in a proprietary product.
+🟢 The permissive education foundation tier is the *old* tier — OpenOLAT (Apache-2.0, 448★),
+Kolibri (MIT, 1,162★), Sakai (ECL-2.0) — two orders of magnitude less popular and far more boring.
+
+### 🔴 T3 — Adoption has decoupled from governance, and LATAM is where the gap is widest
+
+🔵 **87 % of LATAM higher-education institutions use AI; 26 % have a formal AI strategy** (UNESCO
+IESALC, 200 institutions, 19 countries). Teacher-level use in the region runs **~16-20 points above
+the OECD average** (Brazil 56 %, Chile 55 %, Colombia 53 %, Costa Rica 52 % vs OECD 36 %).
+🔴 The spread runs the opposite way from EMEA, where the statute arrived before the adoption.
+🟢 **So the same product does not serve both.** EMEA buys conformance against a dated obligation;
+LATAM buys the institutional policy that does not yet exist.
+
+### 🟡 T4 — The measurement instruments are failing faster than the subject is moving
+
+🔵 This is a trend about this base, and it has now recurred for six consecutive passes. `p471` found
+`api.github.com` was per-repository, not blocked. `p472` found `curl -sI` is a uniform false-negative
+generator. `p473` found title readers are English-keyed. `p474` found grants have *scope*. `p475`
+finds that **`or-later` cannot be read from the payload at all** (3/3 control), that **digest identity
+has a false-negative mode** (a line-wrap), that a **short probe path publishes granted repos as
+ungranted** (Moodle, Frappe LMS), and that **7 of 20 repos do not default to `main`**.
+
+🔴 **Every one of these was a silent error producing confident output.** The trend worth naming:
+in this domain the dominant error mode is not missing data, it is **data that arrives looking correct**.
+🟢 The countermeasure that keeps working is the cheap control — a high-frequency token in the same
+script, a known payload re-measured each pass, a diff instead of a digest comparison.
+
+### 🔴 Declared trend gaps, stated so silence is not read as coverage
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 475-S`** | **No trend here is quantified over time.** Every claim is a single-pass cross-section — including "the new tier is copyleft", which compares *this window's* risers against an older permissive tier without a measured time series. `Gap 475-E`'s star snapshot would fix this and was not built. |
+| 🟡 **`Gap 475-T`** | **T3 rests on a single study.** The UNESCO IESALC figures (87 %/26 %/74 %) come from one survey of 200 institutions and are reported here through secondary coverage; the TALIS 2024 teacher figures are a different instrument with a different population, and the two are juxtaposed, not reconciled. |
+| 🟡 **`Gap 475-U`** | **No African education-AI trend is recorded, in this pass or any prior one.** `Gap 473-E`/`474-C` asked for the MEA leg in-language on both axes; the supply half ran (Arabic, n=4, zero education software), the demand half did not. The honest statement is that this base has **no African trend data at all**, not that there is no trend. |
+
+
 ## 🆕 `p474` — `2026-10-27` — **🟢 `p473` predicted the market would demand demonstrable evidence; this pass found the INSTITUTION BUILDING THE DEMAND — the Council of Europe is working on a European evaluation framework for educational technology. 🔴 And the matching trend on the supply side is the one that will bite: the education-AI corpora now being packaged for evaluation are NOT THE PACKAGERS' TO LICENSE, and the best of them says so in its own LICENSE file.**
 
 🔵 Every trend below is attributed to the body that stated it, with source class named. 🔴 Vendor

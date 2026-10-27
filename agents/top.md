@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p475` — `2026-10-27` — **🔴 THIS BASE GRADES `or-later` BY READING THE LICENCE PAYLOAD, AND THAT IS A UNIFORM FALSE POSITIVE: the stock GPL-family text carries "any later version" THREE TIMES in every payload measured (3 of 3), in the preamble and the how-to-apply appendix, regardless of what the project actually elected. 🔴 And the top row's magnitude was wrong by 20,000 stars — `HKUDS/DeepTutor` is `44,441★` first-hand, not the ~22k/~24k carried since `p54`.**
+
+🔵 **Gate posture, per `Gap 446-A`:** `make hooks` **not attempted** — the industry KB is cloned outside the
+harness repo and the harness refuses execution of code arriving in a clone (`Code from External`).
+**Nothing below is gate-attested.** Checks re-implemented in this session's own code, held outside the
+clone, and green: frontmatter keys and closed-vocabulary `region` on all eight shelves; every table
+checked for separator presence and pipe-count consistency, with **no header row published as data**;
+append-only preserved on both trending shelves and prepend-only on these; every address resolved
+first-hand by `git ls-remote --symref`; every grant fetched from `raw.githubusercontent.com`, written
+to a file, and the **file** measured (`Gap 468-A`). 21 graded payloads in
+[`evidence/grant-payload.2026-10-27-p475.tsv`](../evidence/grant-payload.2026-10-27-p475.tsv),
+3-payload control in
+[`evidence/orlater-control.2026-10-27-p475.tsv`](../evidence/orlater-control.2026-10-27-p475.tsv).
+
+🟢 **Cross-pass control reproduced exactly, sixth consecutive pass.** `HKUDS/DeepTutor` `main/LICENSE`
+**11,408 B · `cd2f54e1e506`** at HEAD **`a31d82624c27`** — byte-, digest- and HEAD-identical to `p470`–`p474`.
+
+🔴 **`Gap 472-A` honoured, not retried.** `curl -sI https://github.com/<repo>` still answers only the
+proxy's own `200 Connection Established`. Reproduced once as a control, then abandoned.
+
+---
+
+### 🔴 The `or-later` reader is a uniform false positive — the pass's load-bearing finding, because it invalidates a GRADE, not a row
+
+🔵 `p473` built a licence reader that "carries the `or-later` elections", keyed on strings in the
+grant payload. 🔴 **The string it keys on is part of the stock licence text.** Every GPL-family
+payload ships a preamble and a *How to Apply These Terms to Your New Programs* appendix, and both
+recite "any later version" as **boilerplate** — not as the project's election.
+
+| payload read first-hand | family | occurrences of `any later version` | 🔴 what a payload-keyed reader concludes |
+|---|---|---|---|
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) `master/LICENSE` · 35,136 B · `e12d78569742` | AGPL-3.0 | **3** | `or-later` |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) `master/LICENSE.txt` · 35,146 B · `c53a65c2fd56` | GPL-3.0 | **3** | `or-later` |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) `master/LICENSE` · 34,520 B · `57c8ff33c9c0` | AGPL-3.0 | **3** | `or-later` |
+
+🔴 **3 of 3.** The reader cannot return anything *but* `or-later` for a GPL-family repo, so the grade
+carries no information. 🟢 **Where the election actually lives:** in the per-source-file notices the
+appendix tells the author to paste, and in packaging metadata (`setup.cfg`, `composer.json`, a
+`.spec`) — **not in the payload the reader reads**. Until a reader looks there, every GPL-family
+`or-later` cell on these shelves should be read as `VERSION_ELECTION_UNREAD`, not as a measured grade.
+
+### 🟡 Digest identity has a false-negative mode, found by accident on three AGPL payloads
+
+🔵 This base uses digest identity as its cross-pass control. 🟡 Three AGPL-3.0 payloads read this
+pass are **all 34,523 B**; two share digest `0d96a4ff68ad` and the third does not:
+
+| repo | bytes | digest12 | relation |
+|---|---|---|---|
+| [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | 34,523 | `0d96a4ff68ad` | byte-identical to penecho |
+| [penecho/penecho](https://github.com/penecho/penecho) | 34,523 | `0d96a4ff68ad` | byte-identical to Echo-Loop |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 34,523 | `8486a10c4393` | **differs by a line-wrap only** |
+
+🟢 **Diffed, not assumed.** The entire difference is one line-break position in the appendix:
+`…as published by / the Free Software Foundation…` versus `…as published / by the Free Software
+Foundation…`. **Same length, same terms, different digest.** So a digest mismatch does **not** imply
+a different grant, and a control built only on digests will raise false alarms on reflowed text.
+🔵 The `p470`–`p475` DeepTutor control survives this, because it matches on bytes *and* digest *and* HEAD.
+
+### 🔴 Magnitude correction on the top row, and it is large
+
+🔵 `Gap 474-G` flagged one web-relayed star count as stale. 🔴 The problem is bigger than one row:
+**`HKUDS/DeepTutor` is `44,441★`** read first-hand from the authenticated channel today. This base
+carried `~22k★` (`p54`) and `~24k★` (`p65`), and a secondary blog found this pass still says
+"over 15,000". 🟢 Every star count below is first-hand as of `2026-10-27`, never web-relayed.
+
+### 🟢 The live agent tier — 13 real rows, every grant read first-hand this pass
+
+🔵 `grant_read` is the payload's own title, not a badge, an index or a roundup.
+
+| agent | repo | grant (read first-hand) | ★ (first-hand) | what it is | build-on-able |
+|---|---|---|---|---|---|
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 · 11,408 B · `cd2f54e1e506` | 44,441 | Lifelong personalised tutoring; multi-agent + RAG; CLI/WebSocket/SDK | 🟢 **YES** |
+| Echo Loop | [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | AGPL-3.0 · 34,523 B · `0d96a4ff68ad` | 4,522 | AI English listen/speak trainer; intensive listening, shadowing, spaced repetition (Flutter) | 🔴 no — network copyleft |
+| penecho | [penecho/penecho](https://github.com/penecho/penecho) | AGPL-3.0 · 34,523 B · `0d96a4ff68ad` | 2,503 | Shared canvas for handwriting, equations, diagrams, spatial reasoning | 🔴 no — network copyleft |
+| LearnHouse | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | AGPL-3.0 · 34,523 B · `8486a10c4393` | 2,424 | AI-powered headless learning platform (Python/React) | 🔴 no — network copyleft |
+| PageLM | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | **PageLM Community License** · 8,563 B · `c834209c5f33` | 2,049 | Open NotebookLM analogue: quizzes, flashcards, notes, podcasts | 🔴 **no — bespoke, non-commercial** |
+| antivibe | [mohi-devhub/antivibe](https://github.com/mohi-devhub/antivibe) | MIT · 1,065 B · `a9e5355735ea` | 1,129 | Turns AI-generated code into educational deep dives (agent skill) | 🟢 **YES** |
+| kaobuddy | [jin-zi-xuan/kaobuddy-pwa](https://github.com/jin-zi-xuan/kaobuddy-pwa) | 🔴 **UNGRANTED** (10 root paths probed) | 392 | Chinese-language exam-cram PWA, BYOK | 🔴 **no — no grant at all** |
+| ai-shifu | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | Apache-2.0 · 11,342 B · `c00cbb6a47a7` | 329 | Script-driven teaching agent / teaching assistant | 🟢 **YES** |
+| AI Video Tutorial Gen | [AkshitIreddy/AI-Powered-Video-Tutorial-Generator](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | MIT · 1,070 B · `deffdff30dfd` | 316 | Illustrated video lessons, local models + cloud providers | 🟢 **YES** |
+| EduPintarIPAS | [RozhakDev/EduPintarIPAS](https://github.com/RozhakDev/EduPintarIPAS) | MIT · 1,092 B · `0fc419538e54` | 20 | Indonesian science chatbot for grade-6 pupils | 🟢 **YES** |
+| LuyenChuTieuHoc | [langmaninternet/LuyenChuTieuHoc](https://github.com/langmaninternet/LuyenChuTieuHoc) | 🔴 **UNGRANTED** (10 root paths probed) | 12 | Vietnamese primary handwriting sheets to MoET standard | 🔴 **no — no grant at all** |
+| OpenCat | [PetoiCamp/OpenCat-Quadruped-Robot](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | grant not read this pass | 5,510 | Quadruped robot framework for STEM/robotics education | 🟡 unread |
+| mini-nanoGPT | [ystemsrx/mini-nanoGPT](https://github.com/ystemsrx/mini-nanoGPT) | grant not read this pass | 384 | One-click pretrain+SFT teaching rig for LLM fundamentals | 🟡 unread |
+
+🔴 **Build-on-able: 6 of 11 graded.** The two most-starred *new* education-AI repos of this window
+(Echo Loop, penecho) are both AGPL-3.0, and the third (LearnHouse) is too — **the new high-star
+education-AI tier is network copyleft, not permissive.** Two more are ungranted outright, and both
+of those are APAC-origin.
+
+### 🔴 Gaps this pass registers
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 475-A`** | **Every `or-later` cell this base has published is unmeasured.** The control above shows the payload cannot distinguish an election. No shelf row has been re-graded, because the real election lives in source-file headers and packaging metadata that no reader here has ever opened. 🔵 The fix is a reader that greps `*.py`/`*.php`/`*.java` notices and `setup.cfg`/`composer.json`, not the LICENSE. |
+| 🔴 **`Gap 475-B`** | **`Gap 474-A`'s scope backfill is still not done, and this pass did not do it either.** 21 payloads were graded on family and presence; **none was graded on scope**. The three `SPLIT_SCOPE` assets `p474` found remain the only scope-graded rows in the base. |
+| 🟡 **`Gap 475-C`** | **Two rows are published with an unread grant** (`OpenCat`, `mini-nanoGPT`), marked 🟡 rather than dropped, because their magnitude is first-hand and useful. They are **not** build-on-able until read, and must not be counted in any permissive census. |
+| 🔴 **`Gap 475-Y`** | **The gate this pass ran finds 38 malformed tables in RETAINED HISTORY across the eight shelves** (ragged pipe counts, and one table with no separator row at `agents/top.md` line ~4990). 🟢 All 38 predate `p475`; this pass's own 23 tables and 112 data rows are clean. 🔴 They are **not fixed**, because both trending shelves are append-only and rewriting history would destroy the record the shelves exist to keep. 🔵 A ragged table renders as dropped cells, so some historical rows are **already being read wrong** — the compiler, not the prose, decides what those rows become. The decision of whether append-only outranks correctness here is not this pass's to make. |
+| 🟡 **`Gap 475-D`** | **`PetoiCamp/OpenCat` is hardware-coupled** and its education relevance is STEM-kit, not AI-tutoring. It sits on this shelf because the topic sweep returned it at 5,510★; whether a hardware framework belongs on an *agents* shelf is unresolved. |
+
+
 ## 🆕 `p474` — `2026-10-27` — **🔴 A GRANT HAS A FAMILY, A VERSION AND A CLASS — AND IT ALSO HAS A *SCOPE*, WHICH NO READER ON THIS BASE HAS EVER READ. Three payloads found this pass license DIFFERENT SUBTREES DIFFERENTLY from one file, and the worst case is an evaluation asset whose LICENSE RETRACTS ITS OWN EARLIER CC BY CLAIM over 1,038,963 problems and points at third-party terms, some of them `CC BY-NC`. 🟢 And `Gap 473-C` is CLOSED: the title reader now reads Portuguese, re-grading two AGPL-3.0-or-later payloads that it previously published as `UNSTATED`.**
 
 🔵 **Gate posture, per `Gap 446-A`:** `make hooks` **not attempted** — the industry KB is cloned

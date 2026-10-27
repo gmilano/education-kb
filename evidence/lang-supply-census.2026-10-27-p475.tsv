@@ -1,0 +1,15 @@
+# p475 in-language supply census, GitHub /search/repositories via authenticated MCP channel, 2026-10-27.
+# WHAT IS COUNTED: repositories whose name/description/readme metadata carries the token, at stars:>=5.
+# This is NOT a count of education software, and NOT a count of a country's output.
+# control_token = a high-frequency token in the SAME script, run to test whether the script is indexed at all.
+token	script	language	region	total_count	incomplete_results	control_token	control_count	reading
+教育	Han	Chinese/Japanese	APAC	411	TRUE	-	-	FLOOR_ONLY: search timed out; 411 is a lower bound, not a count
+교육	Hangul	Korean	APAC	47	FALSE	-	-	COMPLETE
+eğitim	Latin	Turkish	EMEA	162	FALSE	-	-	COMPLETE
+educação	Latin	Portuguese	LATAM	65	FALSE	-	-	COMPLETE
+educación	Latin	Spanish	LATAM	17	FALSE	-	-	COMPLETE
+pendidikan	Latin	Indonesian	APAC	8	FALSE	-	-	COMPLETE
+giáo dục	Latin	Vietnamese	APAC	5	FALSE	-	-	COMPLETE (quoted phrase)
+تعليم	Arabic	Arabic	EMEA	4	FALSE	برمجة	21	COMPLETE; script IS indexed; education nil is REAL
+शिक्षा	Devanagari	Hindi	APAC	0	FALSE	हिंदी	3	TRUE ZERO, but control=3 => whole Devanagari corpus is near-nil; says nothing about India
+การศึกษา	Thai	Thai	APAC	0	FALSE	ภาษาไทย	10	TRUE ZERO; script IS indexed (control=10); nil is REAL

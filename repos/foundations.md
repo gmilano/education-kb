@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p475` — `2026-10-27` — **🔴 THE EDUCATION FOUNDATION TIER IS 8-OF-10 COPYLEFT WHEN YOU READ THE PAYLOADS INSTEAD OF THE BADGES, and the two permissive exceptions are the two smallest. 🟢 Every grant below was fetched, written to a file and measured this pass; two of them had been readable all along at filenames this base's probe never asked for.**
+
+🔵 Same gate posture as the agents shelf: `make hooks` **not attempted** (`Code from External`);
+checks re-implemented in session-local code and green. Evidence:
+[`evidence/grant-payload.2026-10-27-p475.tsv`](../evidence/grant-payload.2026-10-27-p475.tsv).
+
+### 🟢 The foundation tier, 10 real rows, every grant read first-hand at a resolved HEAD
+
+| repo | default branch · HEAD | grant path · bytes · digest | grant read | 🟢/🔴 build-on-able |
+|---|---|---|---|---|
+| [moodle/moodle](https://github.com/moodle/moodle) | `main` · `46c042e7da65` | `main/COPYING.txt` · 35,147 B · `8ceb4b9ee5ad` | **GPL-3.0** | 🔴 copyleft |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | `master` · `03698e2b6ff4` | `master/LICENSE` · 35,136 B · `e12d78569742` | **AGPL-3.0** | 🔴 network copyleft |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | `master` · `1c9f0bb8013e` | `master/LICENSE` · 34,520 B · `57c8ff33c9c0` | **AGPL-3.0** | 🔴 network copyleft |
+| [frappe/lms](https://github.com/frappe/lms) | `develop` · `11b6244724b7` | `develop/license.txt` · 33,893 B · `db1a87ba81e8` | **AGPL-3.0** | 🔴 network copyleft |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | `master` · `1e21b7a2da4a` | `master/LICENSE.txt` · 35,146 B · `c53a65c2fd56` | **GPL-3.0** | 🔴 copyleft |
+| [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | `v4.0.x-develop` · `4eabedfb8045` | `…/LICENSE` · 7,652 B · `e3a994d82e64` | **LGPL-3.0** | 🟡 weak copyleft |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | `19.0` · `46a5d7d40082` | `19.0/LICENSE` · 8,241 B · `528f84036800` | **LGPL-3.0**, 🔴 `SPLIT_SCOPE` | 🟡 weak copyleft, bundled libs disclaimed |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | `master` · `849cc0d9f991` | `master/LICENSE` · 11,120 B · `0688f62d04f1` | **ECL-2.0** | 🟢 **YES** (narrowed patent grant, `p474`) |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | `develop` · `f72936bd41e5` | `develop/LICENSE` · 1,097 B · `3c056b34a476` | **MIT** | 🟢 **YES** |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | `master` · `aac489d1d429` | `master/LICENSE` · 10,982 B · `6dbc5b605ed0` | **Apache-2.0** | 🟢 **YES** |
+
+🔴 **The census, stated as a number:** 10 platforms, **3 build-on-able without a copyleft obligation**
+(Sakai ECL-2.0, Kolibri MIT, OpenOLAT Apache-2.0), 2 weak-copyleft, 5 strong or network copyleft.
+🟢 This **confirms** `p469`'s permissive-foundation census on re-measurement, and `p469`'s exact star
+figures reproduce first-hand: `OpenOLAT` **448★** (`p469`: 448★) and `frappe/lms` **3,351★** (`p469`: 3,350★).
+
+### 🔵 Where the permissive three actually differ, because "permissive" is not one thing
+
+| platform | grant | the real constraint a studio hits |
+|---|---|---|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 | 🟢 Cleanest. Express patent grant, no copyleft. Java/JEE — the cost is operational, not legal |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT | 🟢 Cleanest legally, **but no patent grant at all** — MIT is silent on patents. Offline-first is its real differentiator |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | ECL-2.0 | 🟡 Apache-2.0 **with the patent grant narrowed** to the contributor's own contributions (`p474`, `Gap 473-B`) — the narrowing bites exactly where a university consortium contributes back |
+
+### 🔴 Gaps this pass registers
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 475-J`** | **Nine of these ten rows are graded `WHOLE_WORK` by assumption, not by reading.** Only `openeducat_erp` was scope-read this pass, and it came back `SPLIT_SCOPE` on the first look — a **1-for-1 hit rate** on the only row examined. That is the strongest available evidence that `Gap 474-A`'s backfill matters, and it still has not been run across the shelf. |
+| 🟡 **`Gap 475-K`** | **No star count is published for 7 of these 10 rows.** The authenticated channel returns stars only for repos named in a `repo:` query, and this pass spent that budget on the agents shelf. Magnitude for the foundation tier is therefore **unmeasured this pass**, not estimated — no web-relayed figure was substituted. |
+
+
 ## 🆕 `p474` — `2026-10-27` — **🔴 LATIN AMERICA'S PUBLIC-SECTOR EDUCATION DATA IS PUBLISHED WITHOUT A GRANT: a municipal education secretariat and a national education ministry both ship their open data UNGRANTED at all 14 probed paths, so the most authoritative education data in the region is the data an engagement may not use. 🟢 And the Brazilian school-management vendor stack is now mapped end to end — four components, THREE DIFFERENT COPYLEFT TRIGGERS, one of them rendered in Portuguese.**
 
 🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — KB cloned outside the harness

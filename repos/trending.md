@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p475` — `2026-10-27` — **🔴 A SHORT PROBE PATH PUBLISHES A GRANTED REPO AS UNGRANTED: `moodle/moodle` and `frappe/lms` BOTH read `NO_GRANT` on a 5-path root probe and BOTH resolved on a 10-path probe. Moodle's GPL-3.0 sits at `COPYING.txt` and Frappe LMS's AGPL-3.0 at `license.txt` — two filenames the shorter probe never asked for.**
+
+🔵 Append-only shelf. This section is prepended; everything below it is retained history.
+
+### 🔴 The probe-path finding, measured on two platforms this base already carries
+
+| repo | 5-path probe (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`) | 10-path probe | grant actually present |
+|---|---|---|---|
+| [moodle/moodle](https://github.com/moodle/moodle) | 🔴 `NO_GRANT` | 🟢 `main/COPYING.txt` · 35,147 B · `8ceb4b9ee5ad` | **GPL-3.0** |
+| [frappe/lms](https://github.com/frappe/lms) | 🔴 `NO_GRANT` | 🟢 `develop/license.txt` · 33,893 B · `db1a87ba81e8` | **AGPL-3.0** |
+
+🔴 **Both were granted the whole time.** `p469` already caught a roundup putting an MIT label on
+`frappe/lms`; this pass shows the opposite error is just as easy to make **from inside this base's
+own method** — the repo reads ungranted because nobody asked for `license.txt` in lower case.
+🟢 Probe path set now used: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `LICENCE.txt`,
+`COPYING`, `COPYING.txt`, `copying.txt`, `license.txt`, `License.txt`, `license.md`.
+
+### 🔴 The default-branch finding, which breaks the same URL a different way
+
+🔵 A grant fetch is `raw.githubusercontent.com/<repo>/<branch>/<path>` — and **the branch is as wrong
+as the path can be**. Of 20 repos resolved by `git ls-remote --symref` this pass, **7 do not default
+to `main`**, one of them a bare version number:
+
+| repo | default branch | a reader that hardcodes `main/` gets |
+|---|---|---|
+| [frappe/lms](https://github.com/frappe/lms) | `develop` | 404 → published `UNGRANTED` |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | `develop` | 404 → published `UNGRANTED` |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | `dev` | 404 → published `UNGRANTED` |
+| [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | `v4.0.x-develop` | 404 → published `UNGRANTED` |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | `master` | 404 → published `UNGRANTED` |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | `master` | 404 → published `UNGRANTED` |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | **`19.0`** | 404 → published `UNGRANTED` |
+
+🟢 **Resolve the branch first, always.** `git ls-remote --symref` answers in one round trip and is the
+one channel that has never failed in this base (`api.github.com` → 403; `curl -sI` → proxy CONNECT only).
+
+### 🔴 Declared gaps on this shelf
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 475-G`** | **The probe is still root-only.** `p470` found grants partitioned by subdirectory and `p474` found three `SPLIT_SCOPE` payloads; a root-path probe — at any width — cannot see either. The 10-path probe fixes a *filename* blind spot, not the *depth* blind spot. |
+| 🟢 **`Gap 475-H` — opened and closed in the same pass** | **The address this base has carried since `p54` is wrong, and the repo is fine.** `openeducat/openeducat` does not resolve at all; the project lives at [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp), default branch **`19.0`**, HEAD `46a5d7d40082`. Grant read first-hand: `19.0/LICENSE` · **8,241 B** · `528f84036800`. |
+| 🔴 **`Gap 475-I`** | **That grant is `SPLIT_SCOPE`, and it is a backfill of `Gap 474-A`.** OpenEduCat's payload opens *"For copyright information, please see the COPYRIGHT file."* — a **pointer, not a title**, which defeats the title-keyed reader `p473`/`p474` built. Inside, it declares **LGPL-3.0** and then states: *"Some external libraries and contributions bundled with OpenEduCat may be published under other GPL-compatible licenses. For these, please refer to the relevant source files and/or license files, in the source code tree."* 🔴 So one licence cell is unsound for this repo, exactly as `p474` predicted — and this is a shelf row this base has carried for 421 passes without reading. |
+
+
 ## 🆕 `p474` — `2026-10-27` — **the discovery result this week is a NORMALISER, not a repository: Arabic-language education supply looks like a nil until you measure Arabic's TOTAL GitHub presence, and then the education share turns out to be 89 % of Turkish's — the education tier is not thin, the language's presence is**
 
 🔵 Append-only honoured: prepended section, history below untouched. All counts from MCP

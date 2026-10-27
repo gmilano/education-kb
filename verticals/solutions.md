@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p475` — `2026-10-27` — **🟢 THE VERTICAL SHELF NOW HAS A REGULATORY COLUMN, BECAUSE THE GRANT IS NO LONGER THE ONLY THING THAT DECIDES WHAT YOU CAN SHIP: Vietnam's Decision 33/2026/QĐ-TTg (in force 15 Aug 2026) and EU Annex III both classify AUTOMATED GRADING and BIOMETRIC PROCTORING as high-risk — so the same LMS feature is a conformity-assessment event in two regions and nothing in a third.**
+
+🔵 Gate posture unchanged (`Code from External`; session-local checks green). Grants below are the
+first-hand reads recorded in
+[`evidence/grant-payload.2026-10-27-p475.tsv`](../evidence/grant-payload.2026-10-27-p475.tsv).
+
+### 🟢 Real platforms a studio can customise, with the grant AND the regulatory exposure named
+
+🔵 "High-risk feature" = a feature that, if enabled, pulls the deployment into EU AI Act Annex III
+point 3 and/or Vietnam Decision 33's education entries. The platform is not high-risk; **the feature is**.
+
+| platform | what it is | grant (read first-hand) | 🔴 features that trigger high-risk classification |
+|---|---|---|---|
+| [moodle/moodle](https://github.com/moodle/moodle) | The default LMS of public education worldwide | GPL-3.0 · 35,147 B | Quiz auto-grading, competency-based progression; any proctoring plugin |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | MOOC-scale platform, consortium-grade | AGPL-3.0 · 35,136 B | Auto-graded assessment, cohort placement, proctoring integrations |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | The dominant HE LMS in North America | AGPL-3.0 · 34,520 B | SpeedGrader automation, outcomes-based placement |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **The permissive full LMS** (`p469`) | Apache-2.0 · 10,982 B | QTI auto-assessment, curriculum progression |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | University consortium LMS | ECL-2.0 · 11,120 B | Gradebook automation, assignment auto-review |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 Offline-first, low-connectivity deployments | MIT · 1,097 B | Mastery/practice progression; 🟢 **no biometric surface** |
+| [frappe/lms](https://github.com/frappe/lms) | Lightweight LMS on the Frappe stack | AGPL-3.0 · 33,893 B | Quiz grading, certification issuance |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🟢 **The education ERP/SIS** (admissions, fees, timetabling) | LGPL-3.0 · 8,241 B, 🔴 `SPLIT_SCOPE` | 🔴 **Admissions scoring — the single clearest Annex III point 3 trigger** |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | Interactive content type library, embeds in all of the above | GPL-3.0 · 35,146 B | Scored interactions when they count toward a grade |
+| [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | Virtual classroom / conferencing | LGPL-3.0 · 7,652 B | 🔴 Attention/engagement analytics; recording + any emotion inference |
+
+### 🔴 The sentence that changes a build plan
+
+🔵 **EU:** emotion recognition in education has been **prohibited outright since 2 Feb 2025** — not
+high-risk, *banned*. 🔴 So a BigBlueButton "engagement detection" module and any Moodle proctoring
+plugin that infers affect are **not shippable into the EU at any conformity cost**.
+🔵 **Vietnam:** Decision 33 names *"monitoring learner behaviour with biometric data, such as facial
+recognition or eye tracking"* as high-risk — **regulated, not banned** — with existing education
+systems due to comply by **1 Sep 2027**.
+🔵 **North America:** no federal equivalent; the constraint is **state** law and it runs the other way
+— several states prohibit AI from *replacing* a licensed educator in grading, which restricts the
+autonomy of the feature rather than its sensing.
+
+🔴 **One codebase, three incompatible defaults.** This is the strongest argument on this shelf for
+building the proctoring/affect surface as a **removable module** rather than a core feature.
+
+### 🔴 Declared gaps on this shelf
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 475-L`** | **The high-risk feature column is this pass's reading of two legal texts, not a compliance determination**, and neither text was read in full — the EU side is from secondary guidance (vendor and law-firm commentary) and the Vietnam side from an official-text excerpt plus law-firm summaries. 🔵 The Annex III point 3 wording and Decision 33's education annex both need a primary read before any client deliverable cites them. |
+| 🟡 **`Gap 475-M`** | **No Latin-American or African vertical platform is on this shelf**, in any pass. Every row is EU- or US-origin. The in-language census this pass ran ([`evidence/lang-supply-census…`](../evidence/lang-supply-census.2026-10-27-p475.tsv)) suggests why — but suggests it, and did not test it for *platforms* specifically. |
+| 🟡 **`Gap 475-N`** | **`openeducat_erp`'s `SPLIT_SCOPE` is declared, not enumerated.** The payload says bundled libraries may differ and points at the source tree; this pass did not walk the tree, so **which** modules carry **which** terms is unknown — and admissions scoring, the highest-risk feature on this shelf, lives in exactly that codebase. |
+
+
 ## 🆕 `p474` — `2026-10-27` — **🔴 `Gap 473-B` CLOSED BY PUBLISHING THE SENTENCE: ECL-2.0's patent grant is narrowed exactly where a university is the contributor — it reaches only claims whose INVENTOR IS ALSO THE AUTHOR and only where the institution's own RESEARCH FUNDING AGREEMENTS let it grant, and it closes with "No other express or implied licenses are granted." 🟡 Copyright-wise Sakai and OpenLRW stay Apache-shaped and permissive; patent-wise they are a different instrument from the Apache-2.0 a client's counsel approved.**
 
 🔵 **Gate posture, per `Gap 446-A`:** `make hooks` not attempted — KB cloned outside the harness
