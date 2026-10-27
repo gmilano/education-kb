@@ -7,3 +7,11 @@ fangyuan-3149/book-learning-tutor	12	main	LICENSE	1503	54ceeac19921	MIT + append
 BaronCyrus/dsh-aha-tutor	6	main	LICENSE	1067	c83a57edd27c	MIT	Skill for DeepSeek Harness — a HOST this base had not recorded. Handwritten-blackboard teaching. Created 2026-10-18.
 gregor-dietrich/aimathtutor	5	main	LICENSE.md	1105	812510aa6963	MIT	Java/Quarkus + Vaadin, Graspable Math integration. Only JVM row on this base.
 RobinaMirbahar/Python-Learning-Assistant	5	main	LICENSE	11357	c71d239df917	Apache-2.0 (GitHub template payload)	Streamlit + Gemini Python tutor. Its licence payload is what established the baseline PAIR above.
+# CORRECTION, cross-base. globant-kb rotation.json v65-cycle3 (2026-08-01) carried
+# adaptive-knowledge-graph as "Apache2,~350*". Exhaustive probe at main this pass:
+# LICENSE 200 1094 B 2c4797226a30 "MIT License"; NOTICE 200 3316 B 3f86430bdc85;
+# LICENSE.md/.txt/COPYING/LICENSE-APACHE/LICENSE-MIT all 404. The served grant contains
+# "apache" ZERO times. Stars: 18, not ~350 (~19x inflated).
+# LIKELY CAUSE: the repo ships a NOTICE file -- an Apache-2.0 S4(d) convention -- beside an
+# MIT grant. A classifier keying on the PRESENCE of NOTICE rather than the TEXT of the grant
+# calls it Apache. An Apache-shaped artifact next to an MIT grant is a false-positive shape.

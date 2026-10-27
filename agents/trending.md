@@ -82,11 +82,40 @@ enough to crowd lusophone Africa out of its own language channel.
 | repository | ★ | licence (bytes) | why it enters |
 |---|---|---|---|
 | [Selleo/mentingo](https://github.com/Selleo/mentingo) | **99** | 🟢 MIT · 1 062 B `ceb97717de1f` | 🟢 **The first AI-native LMS on this base, and it is MIT.** AI Mentor + role-play, SCORM **and** xAPI, white-label, self-hosted — it names Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX as what it replaces. 🔵 Every incumbent it names is **GPL, AGPL or proprietary**; see `T486-2`. 31 forks, 103 open issues. |
-| [MysterionRise/adaptive-knowledge-graph](https://github.com/MysterionRise/adaptive-knowledge-graph) | 18 | 🟢 MIT · 1 094 B `2c4797226a30` | 🟢 **Second BKT implementer on this base** — and the first to pair **IRT *and* BKT** with a Neo4j knowledge graph and local LLMs. 🔴 Unread (`Gap 486-F`). 66 open issues against 18★. |
+| [MysterionRise/adaptive-knowledge-graph](https://github.com/MysterionRise/adaptive-knowledge-graph) | 18 | 🟢 MIT · 1 094 B `2c4797226a30` | 🟢 **Second BKT implementer on these shelves** — and the first to pair **IRT *and* BKT** with a Neo4j knowledge graph and local LLMs. 🔴 Unread (`Gap 486-F`). 66 open issues against 18★. 🔴 **Not actually new — see the correction below.** |
 | [fangyuan-3149/book-learning-tutor](https://github.com/fangyuan-3149/book-learning-tutor) | 12 | 🟡 MIT · **1 503 B** `54ceeac19921` | Agent skill turning a local book into a course. 🔵 Enters for its **licence**, not its size — see `T486-3`: the payload carries **402 non-ASCII bytes** of appended Chinese, and this is the *safe* form of `p485`'s translated-licence failure. |
 | [BaronCyrus/dsh-aha-tutor](https://github.com/BaronCyrus/dsh-aha-tutor) | 6 | 🟢 MIT · 1 067 B `c83a57edd27c` | 🟢 **A host this base had not recorded: DeepSeek Harness.** Created **2026-10-18** — nine days old. Teaches on a handwritten blackboard with spaced repetition. Small, but it is the evidence that `T485-1`'s skill form is spreading to **new hosts**, not just new authors. |
 | [gregor-dietrich/aimathtutor](https://github.com/gregor-dietrich/aimathtutor) | 5 | 🟢 MIT · 1 105 B `812510aa6963` | The **only JVM row** on this base — Java/Quarkus/Vaadin — and it integrates **Graspable Math**, a real algebra-manipulation engine rather than an LLM asked to do algebra. |
 | [RobinaMirbahar/Python-Learning-Assistant](https://github.com/RobinaMirbahar/Python-Learning-Assistant) | 5 | 🟢 Apache-2.0 · **11 357 B** `c71d239df917` | 🔵 Enters for **methodological** reasons: its licence payload is byte-identical to `apache/.github`'s, which is what established this base's Apache baseline **pair**. Streamlit + Gemini. |
+
+### 🔴 A correction that came from outside these shelves — and the NOTICE file is the likely cause
+
+🔴 `adaptive-knowledge-graph` enters above as a new row, and on these shelves it is. 🔴 **But the
+upstream rotation log in `globant-kb` recorded it on 2026-08-01 (`v65-cycle3`) as
+`adaptive-knowledge-graph(Apache2,~350★,IRT+BKT+privacy)`** — the description matches exactly, so it
+is the same repository, carried for nearly three months at **the wrong licence and a star count
+inflated roughly 19×.**
+
+🟢 **Read from bytes this pass, exhaustively.** Seven licence-shaped paths were probed at `main`:
+
+| path | result |
+|---|---|
+| `LICENSE` | 🟢 **200 · 1 094 B · `2c4797226a30` · `MIT License`** |
+| `NOTICE` | 🟡 **200 · 3 316 B · `3f86430bdc85`** |
+| `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENSE-APACHE`, `LICENSE-MIT` | 🔴 all **404** |
+
+🟢 **The served grant contains the string `apache` zero times**, and there is no dual-licence pair.
+It is MIT, and only MIT.
+
+🟡 **The likely mechanism is worth more than the correction.** The repository ships a **`NOTICE`
+file** — which is an **Apache-2.0 §4(d) convention**, not an MIT one. 🔴 A classifier that keys on the
+*presence of `NOTICE`* rather than on the *text of the grant* will call this repository Apache-2.0,
+which is exactly the value the upstream log carried. 🟢 This base reads grants from bytes and so got
+it right; the point is that **an Apache-shaped artifact next to an MIT grant is a known false-positive
+shape**, and it is now named.
+
+🔵 Recorded here rather than silently fixed because the wrong value lives in a **different
+repository** (`gmilano/globant-kb`'s `rotation.json`), where this pass has also noted it.
 
 ### 🔴 The secondary channel, measured against first-hand reads — and it is wrong by 2.7×
 
