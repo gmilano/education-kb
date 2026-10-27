@@ -3,6 +3,132 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p482` — `2026-10-27` — **🔴 THREE OF THIS BASE'S OWN PUBLISHED NUMBERS FOR ITS BEST-DOCUMENTED ROW ARE WRONG, AND THE CORRECTION COMES FROM THREE AGREEING INSTRUMENTS: `vishalsachdev/canvas-mcp` registers **128** tools at `becd181`, not 130 — the figure `p481` published under a class table that summed to 129. 🟢 And the property `p481` filed as unverifiable without execution is verified **by construction**: the set of registered tool names and the set of policy keys are **equal**, 0 unclassified, 0 stale. 🟢 `Gap 481-C` is closed on code: `mentingo` enforces tenant isolation in **Postgres RLS — 44 enablements, 204 policy clauses** — not in application code.**
+
+🔵 **Gate posture, unchanged from `p475`–`p481` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is
+cloned outside the harness repo. **Nothing below is gate-attested.** Checks re-implemented in this session's own
+code, held outside the clones and run with `python3 -I` on paths passed as arguments: frontmatter keys and
+closed-vocabulary `region` on all eight shelves; every table checked for separator presence and pipe-count
+consistency, with **no header row published as data**; append-only preserved on both trending shelves and
+prepend-only on these; every grant fetched to a file and the **file** measured (`Gap 468-A`).
+
+---
+
+### 🔴 The tool count: four numbers circulate, three instruments agree, and `p481` picked the one none support
+
+`p481` and `p480` disagreed with each other (130 vs 136) at the **same commit**. Both are artefacts of the
+instrument, not the repository. Measured at `becd181`, cloned first-hand this pass:
+
+| instrument | value | verdict |
+|---|---|---|
+| `grep -c '@mcp.tool'` over `src/**/*.py` | 136 | counts decorator **lines**, incl. multi-line continuations — **overcount** |
+| `grep -A2 '@mcp.tool' \| grep 'def '` | 114 | misses defs whose decorator args span >2 lines — **undercount** |
+| GitHub repo **description** field | 102 | repository metadata, never read from source — **stale** |
+| `README.md` body, 2 occurrences | **128** | the project's own published claim |
+| `ast`: functions carrying an `mcp.tool*` decorator | **128** | unique names, **0 duplicates** |
+| `ast`: `len(TOOL_EFFECTS)` in `core/tool_policy.py` | **128** | dict literal parsed, **0 duplicate keys** |
+
+🔵 Three independent instruments land on **128**. Evidence:
+[`evidence/canvas-mcp-tool-census.2026-10-27-p482.tsv`](../evidence/canvas-mcp-tool-census.2026-10-27-p482.tsv).
+
+### 🔴 The effect-class table, corrected
+
+| `Effect` class | `p481` published | `p482` measured | note |
+|---|---|---|---|
+| `READ` | 72 | **72** | agrees — and still matches the 72 `read_only_hint=True` annotations counted separately |
+| `CANVAS_WRITE` | 52 | **51** | `p481` overcounted by one |
+| `LOCAL_WRITE` | 4 | **4** | agrees |
+| `CODE_EXEC` | 1 | **1** | `execute_typescript` |
+| **total** | 129, under a headline of 130 | **128** | the only total that two other instruments corroborate |
+
+🔵 Also corrected: `p481` reported "**60+** files under `tests/security/`". The directory holds **45** `.py`
+files. The security posture `p481` described is real; the count attached to it was not.
+
+### 🟢 `Gap 481-A` is partly discharged — without executing anything
+
+`Gap 481-A` said the policy is verified to be *written* but not to *hold*, because no test was run. One of the
+properties `tests/security/test_tool_policy.py` asserts does not need to be run — it can be **measured**:
+
+| property the test asserts | how `p482` checked it | result |
+|---|---|---|
+| every registered tool has an `Effect` class | set difference: registered names − policy keys | **∅ — 0 unclassified** |
+| `TOOL_EFFECTS` names no tool that no longer exists | set difference: policy keys − registered names | **∅ — 0 stale** |
+| the two sets are the same size | 128 vs 128 | **set equality: True** |
+
+🔵 So the **coverage** property holds by construction at `becd181`. 🔴 What is still unverified is everything
+*behavioural*: the allowlist resolution, the HMAC token lifecycle, the 300 s TTL, the HTTP read-only default.
+Those need execution. This pass **did not execute third-party code from a clone** — and that is a choice of
+sandbox hygiene, not a harness refusal, which **corrects `p481`'s framing**: cloning arbitrary public
+repositories works here, and `p482` cloned two, so "the harness refuses" is not what is stopping a test run.
+
+### 🟢 `Gap 481-B` answered — the two exemplars guard at **different layers**, and neither has the other's control
+
+`Gap 481-B` said the guard model is one repository's. Here is the second, measured the same way
+([`evidence/mentingo-guard-model.2026-10-27-p482.tsv`](../evidence/mentingo-guard-model.2026-10-27-p482.tsv)):
+
+| control | `vishalsachdev/canvas-mcp` | `Selleo/mentingo` |
+|---|---|---|
+| tools | **128** unique | **142** unique (154 call sites; 12 names registered on two surfaces) |
+| explicit per-tool effect taxonomy | 🟢 **yes** — 4 classes in code, test-enforced | 🔴 **none** — no analogue of `tool_policy.py` exists |
+| per-tool read/write signal | annotation, **explicitly distrusted** in favour of the policy | `annotations.readOnlyHint` — **the only signal there is** |
+| that signal's completeness | 72 annotations agree with 72 `READ` entries | 🔴 50 annotated read, **104 unannotated**, of which **3 are plainly reads** (`get_platform_customization`, `get_platform_registration_form`, `list_platform_login_documents`) |
+| operator allowlist over write tools | 🟢 `ALLOWED_WRITE_TOOLS`; read-only is the hosted default | 🔴 absent |
+| human approval | 🔴 confirmation token the model can redeem itself | 🟢 **OAuth consent**: `POST /oauth/authorize` with `decision=approve\|deny`, rejected unless `consent.userId === user.userId` |
+| data isolation | per-caller Canvas token | 🟢 **Postgres RLS**, 44 enablements, 204 policy clauses |
+| MCP vs REST permission parity | not asserted | 🟢 a dedicated spec asserts it |
+
+🔵 The honest reading: **the annotation error is one-directional.** Of 142 tools, 3 reads are missing an
+annotation and **0** writes are falsely annotated as reads. Under-applied, never over-applied — which is the
+safe direction to be wrong in, but it means a studio cannot derive a read-only surface from `mentingo`'s
+annotations the way it can from `canvas-mcp`'s policy.
+
+### 🟢 The clone tier — 2 repos re-read as source this pass, 11 in this base's history
+
+| repo | ★ `t4` | grant | read this pass | what the source shows |
+|---|---|---|---|---|
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 308 | 🟢 MIT · 1,071 B | 🟢 re-cloned `becd181` | **128** tools (3 instruments); `TOOL_EFFECTS` 72/51/4/1; **21** `ConfirmationGuard`; **45** security test files; set equality with the policy **True** |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 99 | 🟢 MIT · 1,062 B | 🟢 re-cloned `e137ca4` | **142** MCP tools, 104 unannotated; OAuth consent bound to `userId`; **44** RLS enablements / **204** tenant policy clauses; refresh-token scope applied before grant consumption |
+
+### 🟡 Velocity, interval `t4` — the leader accelerated and the concentration snapped back
+
+`t3` is `p481`'s own 13:55:31Z read; `t4` is this pass's 15:06Z read through the same authenticated channel
+(`total_count: 9`, `incomplete_results: false`). Interval **1.175 h**.
+
+| repo | `t3` | `t4` | Δ | ★/h |
+|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 45,069 | **45,240** | **+171** | 🟢 **145.5** |
+| [nichochar/ari](https://github.com/nichochar/ari) | 210 | 210 | **+0** | 0.0 |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 354 | 355 | +1 | 0.85 |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,235 | 1,235 | **+0** | 0.0 |
+
+DeepTutor across four consecutive hours: 94.0 → 114.6 → 117.7 → **145.5 ★/h**. 🔵 `p481` reported the
+concentration ratio *narrowing* to 19.8 : 1 and called it "the first time". It did not hold for one interval:
+the rest of the panel moved **+1 in total**, so the ratio is back above 100 : 1. The narrowing was noise on
+two small repositories, which is what `p481`'s own caution said it might be.
+
+🟢 **`Gap 481-D` is partly closed on `ari`.** `p481` had one timestamp and a metadata delta ("210★ in 9 days").
+This pass supplies the second: **210 → 210 over 1.175 h.** The 9-day climb is real history; it is not
+currently in motion. Evidence:
+[`evidence/star-velocity.2026-10-27-p482.tsv`](../evidence/star-velocity.2026-10-27-p482.tsv).
+
+### 🔴 A measurement-channel warning this base must not repeat as a finding
+
+The `topic:ai-tutor` ≥50★ census returned **`total_count: 21` with `incomplete_results: TRUE`** this pass,
+against `p481`'s **25 with `incomplete_results: false`**. 🔴 That is **not** a census of 21 and **not** a drop
+of 4: `incomplete_results: true` means the search index timed out and the count is a **floor**. Rows known to
+qualify — `nichochar/ari` (210★), `ArnaudGuiovanna/tutor-mcp` (56★) — were absent from the truncated response
+and present when queried directly. **No census figure is published for this pass.** Any pass that reads this
+field as a population has published an artefact of a timeout.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 482-A`** | **Nothing has been executed, and the reason is now correctly attributed.** `Gap 481-A`'s behavioural half stands: allowlist resolution, HMAC token lifecycle, TTL and the HTTP read-only default in `canvas-mcp`, and every RLS policy in `mentingo`, are read and not exercised. `p481` attributed this to a harness refusal; cloning plainly works, so the cause is this pass's own decision not to run third-party code, and a future pass that wants runtime attestation must decide that question deliberately. |
+| 🔴 **`Gap 482-B`** | **`mentingo`'s 104 unannotated tools are classified by name, not by reading them.** The 3 named reads were found by pattern (`get_*`/`list_*`); the remaining 101 are *assumed* to write because their names say so. **No tool body was read** to confirm it mutates, and no `mentingo` write path was traced to a guard. The comparison table above is therefore sound on what each project *declares* and unproven on what each project *does*. |
+| 🟡 **`Gap 482-C`** | **`OpenOLAT` is graded on its grant alone.** Its Apache-2.0 text is measured first-hand and the grant body is verbatim (see `repos/foundations.md`), but the repository was **not cloned**: LOC, test count, release cadence, AI surface and whether any MCP/agent integration exists are all unread. It enters the shelves as a licence finding, not as a capability claim. |
+| 🟡 **`Gap 482-D`** | **`Gap 481-E` is not discharged and has worsened.** The velocity panel is still 4 rows. Of `p479`'s eight, `dmoshehun-prog/learn-from-materials`, `DozenTwelve/Papermorph`, `assafkip/claudemy` and `GarethManning/education-agent-skills` have now gone **three** passes without a re-read, and the census channel that would have swept them returned a truncated result this pass. |
+| 🟡 **`Gap 482-E`** | **`canvas-mcp`'s 21 guards are counted, not mapped.** `p481`'s grouping (messaging 6, deletes 9, calendar 3, syllabus/rubric 2, submission 1 = 21) was not re-derived this pass; only the total was confirmed. Whether each of the 51 `CANVAS_WRITE` tools is reachable without a guard is **unmeasured** — 21 guards against 51 write tools is a ratio this base has never explained. |
 ## 🆕 `p481` — `2026-10-27` — **🟢 `Gap 480-F` IS CLOSED AND IT OVERTURNS ITS OWN FRAMING: the write surface this base has been warning about for two passes is **the most carefully guarded artefact on this shelf**. `vishalsachdev/canvas-mcp` carries an operator-controlled allowlist, 21 single-use content-bound confirmation guards, an explicit four-class effect taxonomy over all 130 tools, and a published advisory (**GHSA-hmr8-mvr2-mvw5**) naming the exact prompt-injection path. 🟢 It also states, in its own source, the thing this base kept guessing at: **a confirmation token does not prove a human approved anything.** 🟢 Five repositories cloned and read first-hand this pass, taking the base's all-time clone tier from 4 to 9.**
 
 🔵 **Gate posture, unchanged from `p475`–`p480` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is

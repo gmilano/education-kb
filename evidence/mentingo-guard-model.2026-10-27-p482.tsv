@@ -1,0 +1,21 @@
+# p482: Selleo/mentingo @ e137ca4, cloned and read first-hand 2026-10-27T15:06Z. Closes Gap 481-C.
+# p481 read this repo at profile depth and flagged that no tool was audited and the OAuth consent
+# controller was unread, with multi-tenant isolation "asserted by filename".
+property	measured	where	instrument
+MCP tools, registerTool call sites	154	apps/api/src/mcp/*.ts	regex over registerTool( "name"
+MCP tools, unique names	142	same	12 names registered twice (student surface + mcp-http.service.ts)
+tools carrying annotations.readOnlyHint=true	50	same	regex within each tool's option object
+tools with NO readOnlyHint=true	104	same	complement
+of those 104, names that are plainly reads (get_*/list_*)	3	mcp-customization-tools.ts	get_platform_customization, get_platform_registration_form, list_platform_login_documents
+annotated read whose name implies a write	0	-	annotation is under-applied, never over-applied
+explicit effect/allowlist policy over tools	NONE	-	no analogue of canvas-mcp core/tool_policy.py exists
+OAuth consent: approval endpoint	POST /oauth/authorize with decision=approve|deny	mcp/mcp-oauth.controller.ts	route decorators
+OAuth consent: binding to a human	consent.userId !== user.userId is rejected (2 call sites)	mcp/mcp-oauth.service.ts:216,252	read
+OAuth consent: read-only details endpoint	GET /oauth/consent/:consent, Cache-Control no-store	mcp/mcp-consent.controller.ts	full file, 30 lines
+refresh-token escalation guard	scope change applied before grant consumption	mcp/mcp-oauth.service.ts:327	in-source comment + code order
+tenant isolation mechanism	SELECT set_config('app.tenant_id', $1, true) per transaction	storage/db/tenant-db-runner.service.ts:54	read; third arg true = transaction-local
+tenant isolation enforcement	Postgres ROW LEVEL SECURITY	storage/migrations/*.sql	44 ENABLE ROW LEVEL SECURITY statements
+tenant RLS policy clauses referencing the setting	204	storage/migrations/*.sql	count of current_setting('app.tenant_id'
+what tenant-aware-session.spec.ts actually asserts	transaction ROUTING only, 3 unit tests, mocked sessions	storage/db/tenant-aware-session.spec.ts	read; it does NOT assert cross-tenant denial
+architectural risk	depends on Drizzle 0.31 INTERNAL PgSession boundary	storage/db/tenant-aware-session.ts:23-28	in-source comment: "Drizzle 0.31 has no supported global execution middleware"
+MCP/REST permission parity	asserted by a dedicated spec	mcp/mcp-tool-rest-permission-parity.spec.ts	describe("MCP tool / REST endpoint permission parity")

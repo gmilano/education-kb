@@ -1,0 +1,18 @@
+# p482: WHERE the Apache-2.0 deviations fall. p481 measured a word-count delta vs the canonical text and
+# classed 6 of 13 education repositories "operative-text ALTERED". A count cannot say whether a deviation
+# touches the rights granted. This pass re-fetched the SAME six artefacts (byte counts reproduce p481's
+# record exactly) and located every change positionally.
+# Instrument: operative text = file truncated at "APPENDIX", whitespace-tokenised. Reproduces the canonical
+# reference exactly: 11358 B, sha256_16 cfc7749b96f63bd3, 1413 operative tokens - the same instrument as p481.
+# The grant body is canonical tokens[0:1408]; tokens[1408:1413] are "END OF TERMS AND CONDITIONS".
+# Canonical section starts (token index): 1.Definitions=15 2.Copyright=482 3.Patent=535 4.Redistribution=677
+# 5.Submission=1002 6.Trademarks=1066 7.Disclaimer=1111 8.Liability=1195 9.Accepting=1309
+repo	bytes	operative_tokens	delta_vs_canonical	first_change_token	changed_positions_INSIDE_grant	sections_touched	what_changed	narrows_rights
+ANFAIA/SkillNet	10758	1496	+83	349	3	1 (Definitions), 4 (Redistribution)	inserts "the" before Licensor at 349 and 475; "excluding those notices"->"excluding any notices" at 829	NO
+HKUDS/DeepTutor	11408	1415	+2	349	3	1 (Definitions), 4 (Redistribution)	identical 3-change signature to SkillNet and feifei-companion	NO
+SimonsTang/feifei-companion	10227	1422	+9	235	12	1 (Definitions), 4 (Redistribution)	same 3-change signature PLUS "work (an example is provided in the Appendix below)."->"work." at 235	NO
+beltromatti/get-it	11359	1408	-5	1092	5	6 (Trademarks)	DELETES "reasonable and customary use in" - the trademark exception loses its qualifier	NO - it WIDENS the exception
+onemnemo/mnemo	11326	1413	0	1220	5	8 (Limitation of Liability)	parentheses converted to commas at 4 positions; zero words added or removed	NO
+tsugiproject/tsugi	10273	1409	-4	712	4	4 (Redistribution)	list enumerators "(a)" "(b)" "(c)" "(d)" removed; all four conditions' text intact	NO
+OpenOLAT/OpenOLAT	10982	1512	+99	1408	0	none	first change lands exactly where the grant ends; +99 tokens are trailing OLAT/OpenOLAT provenance prose	NO - GRANT VERBATIM
+APACHE-CANONICAL (apache.org)	11358	1413	0	-	-	-	reference, fetched HTTP 200 2026-10-27T15:2xZ, sha256_16 cfc7749b96f63bd3	-

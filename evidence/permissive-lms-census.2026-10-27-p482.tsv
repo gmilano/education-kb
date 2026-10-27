@@ -1,0 +1,10 @@
+# p482: does a permissively-licensed, platform-scale LMS exist? This base argued NO from p478, and p481
+# announced Selleo/mentingo (MIT, 99 stars, first commit 2024-08-01) as the FIRST such row.
+# Every grant below was fetched to a file and the FILE measured. Two long-standing permissive platforms exist.
+repo	grant_file_fetched	bytes	license	permissive	first_release_or_repo_created	stars_2026-10-27T15:06Z	verdict_vs_p481_claim
+OpenOLAT/OpenOLAT	LICENSE@master	10982	Apache-2.0, grant body WORD-IDENTICAL to canonical (see apache-grant-localisation)	YES	GitHub repo 2018-03-29; descends from OLAT 7.1, project predates it by a decade	OVERTURNS "first" - Apache-2.0, platform-scale, Java, QTI/SCORM/curriculum
+sakaiproject/sakai	LICENSE@master	11120	ECL-2.0 (Educational Community License 2.0; OSI-approved, Apache-2.0 derivative)	YES	GitHub repo 2014-12-29	OVERTURNS "first" - permissive and platform-scale
+Selleo/mentingo	LICENSE (clone e137ca4)	1062	MIT	YES	2024-08-01	99	still the newest and the only MIT one; NOT the first permissive LMS
+frappe/lms	license.txt@develop	33893	AGPL-3.0	NO	2021-02-15	3351	CORRECTION: a widely-cited 2026 comparison lists this as MIT. The grant file is AGPL-3.0.
+frappe/frappe (framework, not the LMS)	LICENSE@develop	1118	MIT	YES	2011-06-08	11006	the MIT grant belongs to the FRAMEWORK; the LMS app on top of it is AGPL-3.0
+openeducat/openeducat_erp	LICENSE@19.0	8241	defers to a COPYRIGHT file; reported LGPL-3.0	NO (weak copyleft)	2013-05-02	899	only row combining LMS+SIS on one database; not permissive

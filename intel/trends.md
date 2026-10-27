@@ -3,6 +3,107 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p482` — `2026-10-27` — **🔴 THE TREND THIS PASS RETIRES IS THIS BASE'S OWN, FOR THE SECOND PASS RUNNING: `p481` corrected "non-canonical Apache-2.0 is circulating" to "half true"; `p482` finds the licence-supply alarm **not supported at all** — of 6 deviating education grants, **0 narrow the rights granted**, and the one real edit **widens** a clause. 🟢 The genuine supply-side trend is the opposite of scarcity: permissive platform-scale LMSs have existed for a decade and this base had simply never measured their grants. 🔴 And the instrument lesson is now unavoidable: **three of this base's published counts for its single best-documented repository were wrong**, each from a grep where an AST was needed.**
+
+---
+
+### 🔴 Trend retired: "the Apache licence supply is degrading"
+
+| pass | claim | status after `p482` |
+|---|---|---|
+| `p480` | non-canonical Apache-2.0 is circulating in education repos | 🟢 **true** — byte-distinct texts are real and common |
+| `p481` | 7 of 13 verbatim, **6 are not**; "one has had a clause narrowed"; "cuts into the permissive half this base has been relying on" | 🟡 counts hold · 🔴 **"narrowed" is wrong** · 🔴 **"cuts into" is unsupported** |
+| `p482` | all 6 deviate from canonical **bytes**; **0 of 6** narrow the grant; 5 are stylistic; 1 (`get-it`, §6 Trademarks) **widens** the exception | 🟢 the question is settled for this corpus |
+
+🔵 **Why two passes got it wrong in the same direction.** Both measured a **distance** — bytes, then token
+count — and treated distance from canonical as risk. Distance is not direction. `onemnemo/mnemo` has a token
+delta of **exactly 0** and five changed positions (parentheses → commas in §8); `OpenOLAT` has a delta of
+**+99** and **zero** changes inside the grant. Neither number predicts whether a term moved. **Only positional
+alignment against the end of the grant body does**, and that instrument is cheap: truncate at `APPENDIX`,
+tokenise, align, and ask whether any opcode starts before token 1408.
+
+🟢 **The by-product is the better finding.** `ANFAIA/SkillNet`, `HKUDS/DeepTutor` and
+`SimonsTang/feifei-companion` carry the **same three changes at the same offsets** across files differing by
+650 bytes. The education corpus is not accumulating independent licence edits — it is **propagating one
+variant copy**. That is a supply-chain observation, and it is reassuring rather than alarming: one upstream to
+check, not N.
+
+### 🟢 Trend established: permissive platform-scale education software is not scarce — the shelf's instrument was
+
+| what this base believed | what the grant files say |
+|---|---|
+| "no permissively-licensed LMS or SIS exists" (`p478`–`p480`) | 🔴 false — **OpenOLAT** is Apache-2.0 with a **verbatim grant body**; **Sakai** is ECL-2.0 |
+| "`mentingo` is the first permissively-licensed platform-scale row" (`p481`) | 🔴 false — it is the **newest**, and the only **MIT** one |
+| the incumbents are "all AGPL-3.0" | 🟡 true of Moodle (GPL-3.0), Canvas (AGPL-3.0-only) and Open edX (AGPL-3.0) — but those three were never the whole population |
+
+🔵 The error was never in the reading of any one licence; it was a **population** error. The shelf measured
+grants only for repositories that arrived through `topic:` searches and star thresholds, and OpenOLAT (448★)
+and Sakai (1,240★) do not surface that way. 🔴 **Star-ranked discovery systematically hides institutionally
+deployed software**, and this base's entire foundations shelf is built on star-ranked discovery.
+
+### 🔴 Trend: the measurement crisis is in this base's own instruments, not in the industry
+
+Three published figures for `vishalsachdev/canvas-mcp` were wrong, at a commit this base had already cloned:
+
+| figure | published | measured at the same SHA | instrument that failed |
+|---|---|---|---|
+| tool count | `p480` 136 · `p481` 130 | **128** | `grep -c` counted decorator **lines** (136); an `-A2` window missed long decorators (114) |
+| `CANVAS_WRITE` tools | 52 | **51** | regex over `Effect.` mentions, which also catches the enum declaration |
+| `tests/security/` files | "60+" | **45** | not re-counted |
+
+🟢 **The pattern is one-directional: greps overcount capability surfaces.** Decorator-line counting inflates
+tool inventories, and effect-mention counting inflates write surfaces. Every "N tools, M writes" figure in
+this base that came from a grep is **an upper bound**, and a studio quoting one to a client is overstating the
+attack surface it is proposing to guard. 🔵 The fix is an AST, and it is a ten-line script.
+
+### 🟢 Trend: the agent-safety frontier has moved from *confirmation* to *consent* — and the two exemplars prove it by disagreeing
+
+`p481` established, from `canvas-mcp`'s own source, that a confirmation token **does not prove a human
+approved anything** — the model receives the token and can redeem it. `p482` reads the second exemplar and
+finds the control that does:
+
+| layer | `canvas-mcp` (MIT, 128 tools) | `mentingo` (MIT, 142 tools) |
+|---|---|---|
+| what a write tool *is* | 🟢 declared: 4-class policy, **set-equal** to the registered tools (0 unclassified, 0 stale) | 🔴 undeclared: `readOnlyHint` only, and **3 plain reads carry no annotation** |
+| whether a write tool **exists** | 🟢 operator allowlist, runtime-immutable; **read-only is the hosted default** | 🔴 no allowlist |
+| who **approved** the action | 🔴 HMAC token the model can redeem itself | 🟢 **OAuth consent**, refused unless `consent.userId === user.userId` |
+| what the agent **can reach** | per-caller Canvas token | 🟢 **Postgres RLS** — 44 enablements, 204 policy clauses |
+| agent privilege vs human privilege | not asserted | 🟢 **MCP/REST permission parity spec** |
+
+🔵 **Neither project has the other's control, and the industry has no row that has both.** The emerging
+standard is visible in the gap between them: *declare* effects (canvas-mcp), *gate* existence by operator
+policy (canvas-mcp), *bind approval to an authenticated human* (mentingo), and *enforce reach in the database*
+(mentingo). 🟡 `mentingo`'s annotation error is at least **safe-direction** — 3 reads under-annotated, **0**
+writes mislabelled as reads — but it means a read-only surface cannot be derived from its annotations.
+
+### 🔵 Trend: assessment integrity is abandoning detection, and the agentic LMS is why
+
+Sources this pass converge on detection-first approaches losing ground, with reported detector
+**false-positive rates of 5–20%** falling disproportionately on non-native and neurodiverse students. The
+shift is to **process evidence** — draft history, keystroke patterns — plus oral examination and tiered AI-use
+policies, with a return to secure in-person assessment anticipated by 2027. 🔴 The mechanism naming the problem
+is on these shelves: an agent with LMS write tools can **complete coursework inside the platform**, which is a
+verification gap no proctoring tool closes. `mentingo`'s 142 tools include `create_quiz_lesson`,
+`update_content_lesson` and `request_authoring_upload`; `canvas-mcp` classifies **51** tools as
+`CANVAS_WRITE` **including submission**. 🟢 This is the strongest argument yet for the allowlist pattern, and
+it is an argument from *this base's own source reads*, not from a vendor blog.
+
+### 🔵 Trend: the regulatory calendar inverted — APAC now leads EMEA on education AI
+
+Vietnam's education obligations land **1 Mar 2027**; the EU's moved to **2 Dec 2027** via Regulation (EU)
+2026/1744. India's Class-3 AI mandate is phasing in from **AY 2026–27**; China targets a national AI-literacy
+infrastructure by **2030** with AI already in teacher qualification exams. 🔴 "The EU regulates first" is
+**false for education** as of this pass — though every date here is **secondary-source only**, because EUR-Lex
+is unreachable from this session (`Gap 482-F`).
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 482-F`** | **No AI Act date in this base is primary-source verified.** EUR-Lex failed at DNS (`getaddrinfo ENOTFOUND eur-lex.europa.eu`) — not a 404, not a redirect, so no retry or alternate path was available through this session's proxy. Regulation (EU) 2026/1744, the 2 Dec 2027 date and the unmoved 2 Aug 2026 Art. 50 date are corroborated across independent secondary sources and **nothing more**. Vietnam's 1 Mar 2027 inherits the same status from `p481`. |
+| 🟡 **`Gap 482-G`** | **The Apache finding covers 13 repositories, not the corpus.** `p480` put the live education-AI population at **305** repositories and this base has cited 3,198. The 6-of-13 result is a sample of the Apache-licensed rows this shelf already carried; whether the one circulating variant is dominant across 305 is **unmeasured**, and the shared-signature finding makes that the obvious next measurement. |
+| 🟡 **`Gap 482-H`** | **Star-ranked discovery is now a known blind spot with no replacement.** OpenOLAT and Sakai were missed for four-plus passes because they do not surface through `topic:` plus star thresholds. No alternative discovery channel — package registries, institutional procurement lists, Apache/Sakai foundation rosters — has been tried, so this base cannot say what **else** it is not seeing. |
+| 🟡 **`Gap 482-I`** | **The assessment-integrity trend rests on secondary sources.** The 5–20% false-positive range, the 2027 secure-assessment expectation and the tiered-policy shift come from vendor blogs and commentary reached by search. The *mechanism* half — that LMS write tools can complete coursework — is first-hand from two source reads, but **no detector was tested and no false-positive rate was independently measured**. |
 ## 🆕 `p481` — `2026-10-27` — **🟢 THE TREND THIS PASS CORRECTS IS ONE THIS BASE CREATED: "non-canonical Apache-2.0 is circulating" is **half true and half an artefact of the wrong instrument**. Measured against the licensor's own text at word level, **7 of 13** education Apache repositories grant exactly the canonical terms despite differing byte counts; **6** do not, and **one has a clause narrowed**. 🟢 And the deeper trend is in agent safety: the best-guarded repository on this shelf publishes, in its own source, that the control pattern this base has been recommending **does not do what this base said it does**.**
 
 🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from

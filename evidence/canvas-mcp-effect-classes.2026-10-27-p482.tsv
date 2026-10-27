@@ -1,0 +1,9 @@
+# p482 correction of p481's effect-class table for vishalsachdev/canvas-mcp @ becd181.
+# Measured by ast over core/tool_policy.py TOOL_EFFECTS (128 entries, no duplicate keys).
+# p481 published READ 72 / CANVAS_WRITE 52 / LOCAL_WRITE 4 / CODE_EXEC 1 = 129, under a headline of "130 tools".
+effect_class	p481_published	p482_measured	delta	note
+Effect.READ	72	72	0	matches the 72 read_only_hint=True annotations counted independently - both passes agree
+Effect.CANVAS_WRITE	52	51	-1	p481 overcounted by one
+Effect.LOCAL_WRITE	4	4	0	agree
+Effect.CODE_EXEC	1	1	1 tool: execute_typescript	agree
+TOTAL	129 (headline said 130)	128	-1 vs table, -2 vs headline	128 is corroborated by README and by the ast count of registrations

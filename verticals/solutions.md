@@ -3,6 +3,74 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p482` — `2026-10-27` — **🔴 THIS SHELF OVERTURNED ITS "LONGEST-STANDING NEGATIVE FINDING" ONE PASS AGO AND GOT THE REPLACEMENT WRONG TOO: the permissive LMS gap did not open on 2026-10-27 with a 99★ project — it was **never real**. `OpenOLAT` is Apache-2.0 with a verbatim grant and `Sakai` is ECL-2.0, and both are platform-scale systems a decade older than `mentingo`. 🟢 What `mentingo` genuinely is: the only **MIT** one, and the only one that ships its agent surface **inside** the platform with an OAuth consent flow and Postgres RLS behind it.**
+
+---
+
+### 🔴 The customisable-platform shelf, with the permissive column finally measured
+
+Every licence below was fetched to a file and the **file** measured. Nothing here is inferred from a badge, a
+comparison site or a repository description.
+
+| platform | repo | licence (measured) | permissive | scope | AI/agent surface |
+|---|---|---|---|---|---|
+| **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** · 10,982 B · grant body **verbatim** | 🟢 YES | LMS: QTI assessment, SCORM, curriculum management, lectures, surveys | 🟡 **unread** — see `Gap 482-C` |
+| **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** · 11,120 B | 🟢 YES | LMS/VLE for teaching, research and collaboration; Java | 🟡 unread this pass |
+| **Mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** · 1,062 B | 🟢 YES | multi-tenant LMS: courses · chapters · lessons · groups · certificates · quiz · SCORM · xAPI | 🟢 **native**: 142 MCP tools, AI Mentor, AI judge |
+| **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | 🔴 no | LMS, the sector's install base | plugin ecosystem |
+| **Open edX** | [openedx/frontend-app-learning](https://github.com/openedx/frontend-app-learning) (attested); `openedx/edx-platform` 🔴 **not verifiable this pass** | 🟡 AGPL-3.0 **reported, not measured** | 🔴 no | MOOC/LMS at scale | XBlock |
+| **Canvas LMS** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 AGPL-3.0-only | 🔴 no | LMS, dominant in US higher ed | 🟢 strongest **third-party** MCP surface (`canvas-mcp`) |
+| **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🟡 defers to `COPYRIGHT`; reported LGPL-3.0 · 8,241 B | 🔴 no | 🟢 **the only LMS + SIS on one database** | Odoo module ecosystem |
+| **Frappe LMS** | [frappe/lms](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · 33,893 B | 🔴 no | LMS on the Frappe framework | — |
+
+🔴 **A verification note that belongs on this shelf, not in a footnote.** `openedx/edx-platform` could not be
+confirmed through either working channel this pass: the authenticated search returned it in **neither** of two
+`repo:`-qualified queries, and `raw.githubusercontent.com` answered its `LICENSE` with **HTTP 200 carrying a
+14-byte body reading `404: Not Found`**. 🔵 That is precisely why this base measures the **file** and not the
+status code (`Gap 468-A`) — a 200 is not a grant. Open edX's AGPL-3.0 licence is carried here as **reported**,
+and the row above is linked to a repository that *is* attested.
+
+🔴 **The `frappe/lms` trap, stated plainly for anyone scoping an engagement:** the **framework**
+([frappe/frappe](https://github.com/frappe/frappe)) is MIT at 1,118 B; the **LMS application** is AGPL-3.0 at
+33,893 B. A 2026 open-source-LMS comparison published the framework's licence as the product's. Build a
+client's platform on that reading and the copyleft obligation arrives with the product, not the framework.
+
+### 🟢 What makes `mentingo` the right pick anyway — and it is not the licence alone
+
+`p481` recommended `mentingo` on its MIT grant. Having read the source, the stronger argument is architectural
+— it answers the human-approval problem that this shelf's own patterns got wrong:
+
+| concern | how `mentingo` handles it | first-hand evidence |
+|---|---|---|
+| **who approved this agent action** | OAuth authorization-code consent: `GET /oauth/authorize` renders a page, `POST /oauth/authorize` carries `decision=approve\|deny`, and the grant is **refused unless `consent.userId === user.userId`** | `mcp/mcp-oauth.service.ts:216,252,260,270` |
+| **tenant data separation** | `SELECT set_config('app.tenant_id', $1, true)` per transaction — the third argument `true` makes it **transaction-local** — with **Postgres RLS** enforcing it | `storage/db/tenant-db-runner.service.ts:54`; **44** `ENABLE ROW LEVEL SECURITY`, **204** policy clauses in `storage/migrations/*.sql` |
+| **agent privilege ≤ human privilege** | a dedicated spec asserts MCP/REST permission parity | `mcp/mcp-tool-rest-permission-parity.spec.ts` |
+| **scope escalation on refresh** | scope change applied **before** the grant is consumed, so an escalation attempt cannot spend a valid grant | `mcp/mcp-oauth.service.ts:327` |
+
+🔴 **Two cautions a studio must carry into a proposal, both from the source:**
+
+1. **Tenant isolation rides a Drizzle internal.** `tenant-aware-session.ts` wraps Drizzle's internal
+   `PgSession` prepared-query boundary, and says why in its own comment: *"Drizzle 0.31 has no supported global
+   execution middleware."* Pinning a security boundary to a library's private API is a **version-upgrade
+   risk** that belongs in the risk register, not the appendix.
+2. **The spec `p481` was right to doubt proves less than its filename.** `tenant-aware-session.spec.ts` is
+   **3 unit tests with mocked sessions** asserting that queries are **routed** through a tenant transaction.
+   It does **not** assert that tenant A cannot read tenant B's rows. The isolation evidence is the 44 RLS
+   enablements and 204 policies in SQL — which is stronger, and is a different artefact than the one the
+   filename pointed at.
+
+🔵 Evidence:
+[`evidence/mentingo-guard-model.2026-10-27-p482.tsv`](../evidence/mentingo-guard-model.2026-10-27-p482.tsv).
+
+### 🟡 Selection guidance, corrected
+
+| if the engagement needs… | pick | why |
+|---|---|---|
+| permissive licence **and** a native agent surface | **Mentingo** (MIT) | only row with both; accept the 99★ maturity risk and the Drizzle-internals caveat |
+| permissive licence **and** institutional maturity | **OpenOLAT** (Apache-2.0) or **Sakai** (ECL-2.0) | decade-plus deployments, QTI/SCORM; agent layer must be **built**, not inherited |
+| LMS **and** SIS on one database | **OpenEduCat** | the only one — but LGPL-3.0, so scope the copyleft before committing |
+| to meet an existing Canvas estate where it is | **Canvas LMS** + [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | the platform is AGPL-3.0-only; the **MCP server is MIT** and is the best-guarded agent surface on these shelves |
+| the sector's largest install base | **Moodle** | GPL-3.0; plugin route only |
 ## 🆕 `p481` — `2026-10-27` — **🟢 THIS SHELF'S LONGEST-STANDING NEGATIVE FINDING IS OVERTURNED: a permissively-licensed, actively-maintained, platform-scale LMS exists. `Selleo/mentingo` is **MIT**, 584,229 LOC, multi-tenant, pushed today, and ships its agent integration **inside** the platform — with an OAuth consent controller, which is a different and stronger answer to the human-approval problem than the confirmation tokens this base has been recommending.**
 
 🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — harness refuses `Code from

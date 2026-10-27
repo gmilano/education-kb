@@ -3,6 +3,160 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p482` — `2026-10-27` — **🟢 THE CONTROL SET THESE PATTERNS NEED EXISTS — BUT NO SINGLE REPOSITORY HAS IT, SO THE RECIPES BELOW ARE EXPLICITLY **COMPOSITE**: `canvas-mcp` contributes the declared effect policy and the operator allowlist; `mentingo` contributes the thing `p481` correctly said a confirmation token is not — **an OAuth consent bound to an authenticated user id** — plus Postgres RLS. 🔴 And `P4` is retracted and rebuilt: its licence gate was a token-count diff, which this pass proved cannot tell a widened trademark clause from a reflowed parenthesis. 🟢 Plus a new EMEA pattern, now that an Apache-2.0 platform-scale LMS is on the shelves.**
+
+🔵 Every repository named below was read as source by this base (`p480`–`p482`) or had its grant file fetched
+and measured this pass. Nothing here is composed from a description.
+
+---
+
+### 🟢 `P1` — The four-control agent surface over an existing LMS (**the reference pattern**)
+
+**Use when:** a client has a Canvas/Moodle estate and wants instructor- or student-facing agents without
+replacing the platform. **Effort: 8–10 weeks.**
+
+| control | from | concretely |
+|---|---|---|
+| 1. **declare** what each tool does | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) `core/tool_policy.py` | a `TOOL_EFFECTS` dict mapping **every** tool to `READ`/`WRITE`/`LOCAL_WRITE`/`CODE_EXEC`; measured set-equal to registrations at `becd181` — **0 unclassified, 0 stale** |
+| 2. **gate existence** by operator policy | same, `ALLOWED_WRITE_TOOLS` | env-var allowlist; **unset on HTTP ⇒ read-only default**; accepts `all`, `none`, or names. A write tool not on the list **is never registered**, so no prompt injection can reach it |
+| 3. **bind approval to a human** | [Selleo/mentingo](https://github.com/Selleo/mentingo) `mcp/mcp-oauth.service.ts` | OAuth authorization-code consent: `POST /oauth/authorize` with `decision=approve\|deny`, **refused unless `consent.userId === user.userId`** |
+| 4. **enforce reach in the database** | same, `storage/db/tenant-db-runner.service.ts:54` | `SELECT set_config('app.tenant_id', $1, true)` per transaction + **RLS** (44 enablements, 204 policy clauses) |
+
+**Wiring:** fork `canvas-mcp`; keep its policy and allowlist intact. Replace layer 3 — **do not keep the
+`ConfirmationGuard` as your approval story.** Its own source says: *"It does NOT prove that a person saw or
+approved the preview. The model receives the token and can redeem it itself."* Put `mentingo`'s consent
+pattern in front: an authenticated consent record, a rendered authorization page, a `decision` POST, and the
+`userId` equality check. Keep the 21 guards as **change-detection** (a changed recipient, body or target voids
+the token) — which is what they are genuinely good for — not as human oversight.
+
+🔴 **Do not ship layers 1–2 alone and call it human-in-the-loop.** That is the mislabelling `p481` identified
+and this base had published for several passes.
+
+### 🟢 `P2` — EMEA sovereign deployment on a **permissive** platform (**new — the pieces only became available this pass**)
+
+**Use when:** a European university, school network or public body needs self-hosted, auditable, non-copyleft
+AI-assisted learning ahead of **2 December 2027**. **Effort: 10–12 weeks.**
+
+**Stack:**
+- **Platform:** [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) — **Apache-2.0**, grant body
+  **word-identical to canonical through all 1,408 operative tokens** (measured this pass). QTI assessment,
+  SCORM, curriculum management already in institutional use. 🟡 Its AI surface is **unread** (`Gap 482-C`), so
+  budget the agent layer as **greenfield**.
+- **Alternative platform:** [Selleo/mentingo](https://github.com/Selleo/mentingo) — **MIT**, ships the agent
+  layer **inside** the product. Pick this when time-to-demo beats maturity; pick OpenOLAT when the client
+  procures on institutional track record.
+- **Agent surface:** build to `P1`'s four controls.
+- **Compliance artefact:** the **Art. 27 FRIA**, which Annex III puts on the **deployer** — the institution,
+  not the vendor.
+
+**Why this sells before the deadline:** Art. 4 AI-literacy and Art. 50 transparency duties arrive
+**2 August 2026**, and emotion recognition in schools has been prohibited since **February 2025**. The FRIA
+and the literacy obligation are billable **now**; the platform work follows them.
+
+🔵 **The oversight argument, concretely:** Art. 14 human oversight is an argument you can only win by pointing
+at a mechanism. Point at the allowlist (which write tools exist at all), the consent record (which human
+approved, bound to their user id) and the RLS policy (what the agent could reach even if it tried). 🔴 Do
+**not** point at a confirmation token.
+
+### 🟢 `P3` — APAC multi-jurisdiction routing (**one deployment, five legal postures**)
+
+**Use when:** a regional education group operates across countries whose rules do not agree.
+**Effort: 12–14 weeks.**
+
+The calendar is now **inverted** — Vietnam's education obligations land **1 Mar 2027**, nine months before the
+EU's **2 Dec 2027**, and India's Class-3 AI mandate phases in from **AY 2026–27**. So build the jurisdiction
+switch first, not last.
+
+**Wiring:** one `canvas-mcp`-derived server per jurisdiction, differing **only** in `ALLOWED_WRITE_TOOLS`:
+
+| jurisdiction | allowlist posture | driver |
+|---|---|---|
+| 🇻🇳 Vietnam | no automated-assessment or behaviour-monitoring write tools registered | education on the high-risk list, **1 Mar 2027** |
+| 🇨🇳 China | content-generation tools registered; AI-literacy curriculum delivery in scope | MoE action plan; **≥8 class hours** in Beijing; AI in teacher qualification exams |
+| 🇮🇳 India | curriculum and teacher-training surfaces registered | NEP 2020 Class-3 mandate; **₹500 crore** CoE |
+| 🇸🇬 Singapore | full surface, with AI Verify evidence collection switched on | voluntary frameworks as de-facto buyer requirements |
+| 🇯🇵 Japan | full surface; emphasise human-centred framing in documentation | AI Promotion Act, no penalties |
+
+🔵 Because the allowlist is **operator-set and runtime-immutable**, the jurisdiction posture is a deployment
+artefact an auditor can read — not application logic a reviewer has to trust.
+
+### 🟢 `P4` — **RETRACTED AND REBUILT**: the licence-diligence gate
+
+🔴 **`p481`'s gate is withdrawn.** It compared operative **token counts** against the canonical Apache text and
+failed the build on a non-zero delta. This pass proved that gate both over- and under-fires: `OpenOLAT` has a
+delta of **+99** and **zero** changes inside the grant, while `onemnemo/mnemo` has a delta of **exactly 0** and
+five changed positions. **A distance cannot tell you whether a term moved.**
+
+**The rebuilt gate — positional, and it fits in a CI step:**
+
+1. Fetch the dependency's grant **to a file**; measure the **file** (`Gap 468-A`). Never read a badge, a
+   repository description or a comparison table.
+2. Fetch the canonical text from the licensor (`https://www.apache.org/licenses/LICENSE-2.0.txt`) and assert
+   the reference: **11,358 B · `sha256_16 cfc7749b96f63bd3` · 1,413 operative tokens**. If your tokeniser does
+   not reproduce 1,413, **your instrument is wrong** — fix it before judging anyone's licence.
+3. Operative text = file truncated at `APPENDIX`, split on whitespace.
+4. Align candidate against canonical with a sequence matcher and take the opcodes.
+5. **Fail only if an opcode starts before canonical token 1408** (the grant body; `[1408:1413]` is
+   `END OF TERMS AND CONDITIONS`). Changes at or after 1408 are trailing prose — that is all OpenOLAT's +99
+   tokens are.
+6. On an in-grant hit, report the **canonical section** from the start table
+   (§1=15 · §2=482 · §3=535 · §4=677 · §5=1002 · §6=1066 · §7=1111 · §8=1195 · §9=1309) and route **only
+   those** to counsel.
+
+🟡 **Expected false-alarm reduction on this base's own corpus: 6 flagged → 1 worth a lawyer's time**
+(`beltromatti/get-it`, §6 Trademarks, where `reasonable and customary use in` is deleted — and even that
+**widens** the exception).
+
+🔴 **The MIT/AGPL trap this gate also catches:** [frappe/frappe](https://github.com/frappe/frappe) is **MIT**
+(1,118 B); [frappe/lms](https://github.com/frappe/lms), the application on top of it, is **AGPL-3.0**
+(33,893 B). A 2026 comparison site published the framework's licence as the product's. Step 1 catches this in
+one `curl`; a dependency manifest never will.
+
+### 🟡 `P5` — Assessment integrity under an agentic LMS (**the verification-gap pattern**)
+
+**Use when:** an institution is deploying agents into a platform that also receives graded work.
+**Effort: 6–8 weeks.**
+
+🔴 **The threat is structural, and it comes from this base's own source reads, not a vendor blog.**
+`canvas-mcp` classifies **51** tools as `CANVAS_WRITE` **including submission**; `mentingo` exposes
+`create_quiz_lesson`, `update_content_lesson` and `request_authoring_upload` among its 142. An agent holding
+those tools can **complete coursework inside the platform** — a verification gap no proctoring product closes,
+because nothing was proctored.
+
+**Wiring:**
+1. **Split the surface.** Two deployments from one codebase: a student-facing server whose
+   `ALLOWED_WRITE_TOOLS` is **unset** (read-only by default on HTTP), and an instructor-facing server with a
+   named write list. These are different processes with different credentials, **not** roles inside one.
+2. **Bind every write to a consent record** per `P1` layer 3, so each mutation carries an authenticated
+   `userId`.
+3. **Keep the audit trail** — `canvas-mcp` already ships audit logging and FERPA tests among its **45**
+   security test files.
+4. **Shift the assessment design**, because the controls above cannot verify authorship: process evidence
+   (draft history, keystroke patterns), oral examination, tiered AI-use policy.
+
+🔴 **State the limit to the client in writing:** detection does not work. Reported detector false-positive
+rates run **5–20%** and fall disproportionately on non-native and neurodiverse students. 🟡 Sell the
+assessment redesign, not a detector — and note that these integrity figures are **secondary-source**
+(`Gap 482-I`), while the write-surface counts are first-hand.
+
+### 🔵 `P6` — The instrument discipline every pattern above depends on
+
+🔴 This base published **three** wrong counts for the repository it had already cloned: 136 and then 130 tools
+where there are **128**; 52 `CANVAS_WRITE` where there are **51**; "60+" security test files where there are
+**45**. Every one came from a grep.
+
+**The rule, for any capability claim that reaches a client:**
+
+| never | always |
+|---|---|
+| `grep -c '@mcp.tool'` | an **AST** walk for decorated function definitions — it gave 128, and the README and the policy dict both agree |
+| `grep -oE 'Effect\.[A-Z_]+' \| uniq -c` | parse the **dict literal** — the regex also counts the enum declaration, which is where the extra `CANVAS_WRITE` came from |
+| trusting a repository's **description** field | read the **README body** and the **source**; the description still said 102 tools |
+| reading `total_count` as a population | check **`incomplete_results`** first — it was `true` this pass, so the census was a timeout, not a count of 21 |
+
+🟢 **And one property you do not need to execute code to verify:** set equality between registered tool names
+and policy keys. It is the coverage property `tests/security/test_tool_policy.py` asserts, and measuring both
+sets settles it — **0 unclassified, 0 stale, True** — without running a line of third-party code.
 ## 🆕 `p481` — `2026-10-27` — **🔴 RECIPE CORRECTION, AND IT AFFECTS EVERY PATTERN ON THIS SHELF THAT CLAIMED A HUMAN IN THE LOOP: a preview→confirm token does **not** constitute human approval. The source of the best-guarded repository on this shelf says so explicitly — the model receives the token and can redeem it itself. 🟢 The control that actually stops a prompt injection is an **operator-set allowlist of which write tools exist**, and the patterns below are rewritten around it. 🟢 Plus a new permissive-stack recipe, now that an MIT LMS exists, and a licence-diligence gate built from this pass's own instrument.**
 
 🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted**. **No pattern below has been

@@ -1,0 +1,11 @@
+# p482: four circulating counts for vishalsachdev/canvas-mcp at the SAME commit becd181, and which instrument
+# produces each. Clone read first-hand by this pass (cloned 2026-10-27T15:06Z, becd181).
+# The three strict instruments AGREE on 128. p481 published 130 with a class table summing to 129.
+instrument	value	how_measured	verdict
+grep -c '@mcp.tool' over src/**/*.py	136	counts decorator LINES incl. multi-line decorator continuations	OVERCOUNT - rejected
+grep -A2 '@mcp.tool' | grep 'def '	114	misses defs whose decorator args span >2 lines	UNDERCOUNT - rejected
+GitHub repo description field	102	repository metadata string, not read from source	STALE METADATA - rejected
+README.md body ("up to 128 tools", 2 occurrences)	128	project's own published claim	AGREES
+ast: FunctionDef/AsyncFunctionDef with mcp.tool* decorator	128	Python ast over src/, unique names, 0 duplicates	AUTHORITATIVE
+ast: len(TOOL_EFFECTS) in core/tool_policy.py	128	dict literal parsed via ast, 0 duplicate keys	AUTHORITATIVE
+set equality: registered tool names == TOOL_EFFECTS keys	True	0 unclassified, 0 stale	AUTHORITATIVE

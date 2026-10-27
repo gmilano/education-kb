@@ -3,6 +3,41 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p482` — `2026-10-27T15:06Z` — DeepTutor accelerates to 145.5 ★/h while the rest of the panel moves +1 in total; the census channel returns a truncated count that must not be read as a population
+
+🔵 Read through the authenticated GitHub search channel with a `repo:` qualifier, 9 repositories in one query
+(`total_count: 9`, `incomplete_results: false`), at **2026-10-27T15:06Z**. The `t3` endpoint is `p481`'s own
+13:55:31Z read, so both ends of the interval belong to this base. Interval **1.175 h**.
+
+| repo | `t3` 13:55:31Z | `t4` 15:06Z | Δ | ★/h | note |
+|---|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 45,069 | **45,240** | **+171** | 🟢 **145.5** | 4th consecutive interval: 94.0 → 114.6 → 117.7 → **145.5** |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,235 | 1,235 | **+0** | 0.0 | 🔴 stalled; moved +4 in the `p481` interval |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 354 | 355 | +1 | 0.85 | slowing for a second interval |
+| [nichochar/ari](https://github.com/nichochar/ari) | 210 | 210 | **+0** | 0.0 | 🟢 **this base's first re-read** of the row `p481` added |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 99 | 99 | +0 | 0.0 | `pushed_at` **15:02:57Z** — code moving, stars flat |
+| [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 152 | 152 | +0 | 0.0 | unchanged |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 308 | 308 | +0 | 0.0 | unchanged |
+| [boyuchengz/canvas-mcp](https://github.com/boyuchengz/canvas-mcp) | — | **115** | — | — | created **2026-10-25**; 115★ in 2 days |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | 56 | +0 | 0.0 | 🔴 **0 delta across `p479`–`p482`**, four passes |
+
+**What changed in the reading, not just the numbers:**
+
+🔴 `p481` reported the concentration ratio *narrowing* from 24.6 : 1 to 19.8 : 1 and called it "the first
+time". One interval later the rest of the panel moved **+1 in total** against DeepTutor's +171. The narrowing
+was noise on two sub-1,500★ repositories, exactly as `p481`'s own Poisson caution allowed. **A one-hour delta
+on a small repository is not a trend**, and this base has now published it as one twice.
+
+🟢 `nichochar/ari` — `p481` added it at 210★ on a metadata delta ("210★ in 9 days") with a single timestamp.
+The second timestamp is now in: **210 → 210**. The 9-day climb is real history; the row is not currently
+moving. That is `Gap 481-D` partly closed.
+
+🔴 **Channel warning.** The `topic:ai-tutor` ≥50★ census returned **`total_count: 21`, `incomplete_results:
+TRUE`**, against `p481`'s **25 / false**. This is a search-index timeout, so 21 is a **floor, not a
+population** — `ari` (210★) and `tutor-mcp` (56★) both qualify and were both missing from it, then returned
+when queried directly. **No census figure is published for `p482`.**
+
+---
 ## 🆕 `p481` — `2026-10-27T13:55Z` — new to this base: a Go MCP tutor server, an MIT LMS with OAuth-consented MCP, and a 9-day-old row at 210★
 
 🔵 **Instrument:** authenticated repository search (`incomplete_results: false`) for membership and ★;

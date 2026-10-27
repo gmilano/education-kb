@@ -3,6 +3,54 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p482` — `2026-10-27T15:06Z` — the Apache deviations, located: 6 of 6 differ from canonical bytes, 0 of 6 narrow the grant — and a permissive platform-scale LMS turns out to have existed all along
+
+🔵 `p481` left this shelf with "7 of 13 are verbatim where it counts, 6 are not". This pass re-fetched the
+**same six artefacts** — every byte count reproduces `p481`'s record — and asked the question a count cannot
+answer: **where does the deviation fall, and does it touch the rights granted?**
+
+Instrument reproduced and validated against the canonical text (**11,358 B · `sha256_16 cfc7749b96f63bd3` ·
+1,413 operative tokens** — identical to `p481`'s reference). Grant body = tokens `[0:1408]`.
+
+| repo | bytes | Δ tokens | first change | in-grant changes | section | narrows rights? |
+|---|---|---|---|---|---|---|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 10,982 | +99 | **1408** | **0** | none | 🟢 **NO — verbatim grant** |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 11,408 | +2 | 349 | 3 | §1, §4 | 🟢 NO |
+| [ANFAIA/SkillNet](https://github.com/ANFAIA/SkillNet) | 10,758 | +83 | 349 | 3 | §1, §4 | 🟢 NO |
+| [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | 10,227 | +9 | 235 | 12 | §1, §4 | 🟢 NO |
+| [beltromatti/get-it](https://github.com/beltromatti/get-it) | 11,359 | −5 | 1092 | 5 | §6 Trademarks | 🟡 NO — **widens** it |
+| [onemnemo/mnemo](https://github.com/onemnemo/mnemo) | 11,326 | 0 | 1220 | 5 | §8 Liability | 🟢 NO |
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | 10,273 | −4 | 712 | 4 | §4 Redistribution | 🟢 NO |
+
+**The three findings worth carrying forward:**
+
+🟢 **One variant, three repositories.** `SkillNet`, `DeepTutor` and `feifei-companion` carry the **same three
+changes at the same token offsets** — `"the"` inserted before `Licensor` at 349 and 475, and
+`excluding those notices` → `excluding any notices` at 829 — while differing by **650 bytes** in file size.
+That is a single circulating variant being copied, not three independent edits. A byte count or a token count
+could never have shown it; only positional alignment does.
+
+🟡 **The one genuine operative edit runs the licensee's way.** `beltromatti/get-it` deletes
+`reasonable and customary use in` from §6, so the trademark exception reads "except as required for describing
+the origin of the Work" — the qualifier is gone. This base's `p481` entry said "one has had a clause
+narrowed"; the clause was **widened**.
+
+🟢 **Cosmetic deviations dominate.** `mnemo` converts parentheses to commas in §8 with **zero words added or
+removed** (Δ tokens = 0). `tsugi` drops the `(a) (b) (c) (d)` labels from §4 while **all four conditions'
+text remains**. Both would be flagged by any byte- or token-based check, and neither changes a term.
+
+🔴 **And the shelf's licence map was wrong in the other direction.** `OpenOLAT` is **Apache-2.0 with a verbatim
+grant body**, `sakaiproject/sakai` is **ECL-2.0**, and both are platform-scale LMSs that predate
+`Selleo/mentingo` by a decade. `p481`'s "first permissively-licensed platform-scale row" does not hold.
+Separately, [frappe/lms](https://github.com/frappe/lms) is **AGPL-3.0** (33,893 B) while
+[frappe/frappe](https://github.com/frappe/frappe) is **MIT** (1,118 B) — a 2026 comparison site published the
+framework's grant as the product's.
+
+🔵 Evidence:
+[`evidence/apache-grant-localisation.2026-10-27-p482.tsv`](../evidence/apache-grant-localisation.2026-10-27-p482.tsv) ·
+[`evidence/permissive-lms-census.2026-10-27-p482.tsv`](../evidence/permissive-lms-census.2026-10-27-p482.tsv)
+
+---
 ## 🆕 `p481` — `2026-10-27T13:55Z` — the Apache-2.0 population, measured: 7 of 13 are verbatim where it counts, 6 are not
 
 🔵 **Instrument, new this pass:** the canonical Apache-2.0 text fetched from the licensor

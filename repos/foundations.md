@@ -3,6 +3,73 @@ industry: education
 region: Global
 updated: 2026-10-27
 ---
+## 🆕 `p482` — `2026-10-27` — **🔴 THIS SHELF'S HEADLINE FROM ONE PASS AGO IS WRONG: `Selleo/mentingo` is **not** "the foundations shelf's first permissively-licensed platform-scale row". `OpenOLAT` has been **Apache-2.0** the whole time, and its grant body is **word-identical to the canonical Apache text through all 1,408 operative tokens** — measured, not asserted. `sakaiproject/sakai` is **ECL-2.0**, also permissive. Both predate `mentingo` by a decade. 🟢 And the Apache alarm `p481` raised is **not supported once the deviations are located**: of the 6 repositories it classed "operative-text ALTERED", **none narrows the rights granted**.**
+
+---
+
+### 🔴 The "first permissive platform-scale LMS" claim, retracted
+
+This base argued from `p478` that no permissively-licensed LMS or SIS exists, and `p481` announced `mentingo`
+as the first. The claim was never tested against the mature platforms, only against the four this shelf
+already carried. Grants fetched to files and the **files** measured:
+
+| repo | grant file | bytes | licence | permissive | verdict |
+|---|---|---|---|---|---|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | `LICENSE@master` | 10,982 | 🟢 **Apache-2.0**, grant body **verbatim** | 🟢 YES | **overturns "first"** — Java LMS with QTI, SCORM, curriculum management; descends from OLAT 7.1 |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | `LICENSE@master` | 11,120 | 🟢 **ECL-2.0** (OSI-approved, Apache-2.0 derivative) | 🟢 YES | **overturns "first"** — repo on GitHub since 2014-12-29 |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | `LICENSE` (clone `e137ca4`) | 1,062 | 🟢 MIT | 🟢 YES | still the **newest** and the only **MIT** one — not the first permissive one |
+| [frappe/lms](https://github.com/frappe/lms) | `license.txt@develop` | 33,893 | 🔴 **AGPL-3.0** | 🔴 NO | **a widely-cited 2026 LMS comparison lists this as MIT. The grant file is AGPL-3.0.** |
+| [frappe/frappe](https://github.com/frappe/frappe) | `LICENSE@develop` | 1,118 | 🟢 MIT | 🟢 YES | the MIT grant belongs to the **framework**; the LMS app on top of it does not inherit it |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | `LICENSE@19.0` | 8,241 | 🟡 defers to a `COPYRIGHT` file; reported LGPL-3.0 | 🔴 no (weak copyleft) | the only row combining **LMS + SIS on one database** |
+
+🔵 Evidence:
+[`evidence/permissive-lms-census.2026-10-27-p482.tsv`](../evidence/permissive-lms-census.2026-10-27-p482.tsv).
+🔴 `frappe/lms` is the sharpest lesson on this shelf: the framework is MIT, the application is AGPL-3.0, and a
+comparison site reading "Frappe" as one thing published the framework's licence for the product. A studio that
+took that at face value would have mis-scoped a client's obligations.
+
+### 🟢 The Apache instrument, refined — a word count cannot tell you whether rights changed
+
+`p481` compared operative **token counts** against the canonical text and classed **6 of 13** education
+repositories "operative-text ALTERED", concluding that "the supply-side refinement cuts into the permissive
+half this base has been relying on". This pass re-fetched the **same six artefacts** — every byte count
+reproduces `p481`'s record exactly — and located each change positionally.
+
+🔵 Instrument, reproduced from `p481` and validated: operative text = file truncated at `APPENDIX`,
+whitespace-tokenised. On the canonical text it returns **11,358 B, `sha256_16 cfc7749b96f63bd3`, 1,413 tokens** —
+identical to `p481`'s reference, so the two passes are using the same ruler. The **grant body** is
+tokens `[0:1408]`; tokens `[1408:1413]` are `END OF TERMS AND CONDITIONS`.
+
+| repo | Δ tokens | first change | changes **inside** the grant | section | what actually changed | narrows rights? |
+|---|---|---|---|---|---|---|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | +99 | **1408** | **0** | none | +99 tokens of trailing OLAT/OpenOLAT provenance prose, after the terms end | 🟢 **NO — grant verbatim** |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | +2 | 349 | 3 | §1, §4 | `"the"` inserted before `Licensor` ×2; `excluding those notices` → `excluding any notices` | 🟢 NO |
+| [ANFAIA/SkillNet](https://github.com/ANFAIA/SkillNet) | +83 | 349 | 3 | §1, §4 | **the identical 3-change signature** | 🟢 NO |
+| [SimonsTang/feifei-companion](https://github.com/SimonsTang/feifei-companion) | +9 | 235 | 12 | §1, §4 | same signature, plus `(an example is provided in the Appendix below)` dropped | 🟢 NO |
+| [beltromatti/get-it](https://github.com/beltromatti/get-it) | −5 | 1092 | 5 | **§6 Trademarks** | **deletes** `reasonable and customary use in` | 🟡 NO — it **widens** the exception |
+| [onemnemo/mnemo](https://github.com/onemnemo/mnemo) | 0 | 1220 | 5 | §8 Liability | parentheses → commas at 4 positions; **zero words added or removed** | 🟢 NO |
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | −4 | 712 | 4 | §4 Redistribution | list labels `(a) (b) (c) (d)` removed; **all four conditions' text intact** | 🟢 NO |
+
+🟢 **The corrected conclusion: all six do deviate from the canonical bytes, and none of the six narrows what a
+licensee may do.** Five are stylistic — two definite articles, a determiner, some parentheses, four list
+labels. The sixth, `get-it`, is a genuine edit to §6 and it runs in the **licensee's favour**. `p481`'s
+direction ("not canonical") was right; its inference ("cuts into the permissive half") does not survive
+reading where the cuts fall.
+
+🔵 The most useful by-product: `SkillNet`, `DeepTutor` and `feifei-companion` carry the **same three changes
+at the same token offsets** while differing by 650 bytes in file size. That is **one circulating variant text
+being copied**, not three projects editing a licence. The byte count was never going to show that.
+Evidence: [`evidence/apache-grant-localisation.2026-10-27-p482.tsv`](../evidence/apache-grant-localisation.2026-10-27-p482.tsv).
+
+### 🔵 What this means for the shelf's licence posture
+
+| claim this base has published | status after `p482` |
+|---|---|
+| "no permissively-licensed platform-scale LMS exists" (`p478`–`p480`) | 🔴 **false** — OpenOLAT (Apache-2.0) and Sakai (ECL-2.0) |
+| "`mentingo` is the first permissively-licensed platform-scale row" (`p481`) | 🔴 **false** — it is the newest, and the only MIT one |
+| "6 of 13 Apache education repos do not carry canonical operative text" (`p481`) | 🟢 **true as stated**, and now localised |
+| "one has had a clause narrowed" (`p481`) | 🔴 **not supported** — the one real edit widens §6 |
+| "the Apache finding cuts into the permissive half" (`p481`) | 🔴 **not supported** |
 ## 🆕 `p481` — `2026-10-27` — **🟢 THE FOUNDATIONS SHELF GAINS ITS FIRST PERMISSIVELY-LICENSED PLATFORM-SCALE ROW, READ AS SOURCE: `Selleo/mentingo` — **MIT**, 584,229 LOC, 794 test files, multi-tenant, with a native MCP surface and an OAuth consent controller — against a shelf whose three incumbent platforms are all AGPL-3.0. 🟢 And the canonical Apache-2.0 text is now held in this base as a measured reference (11,358 B · 1,413 operative word tokens), which turns "is this really Apache-2.0?" from a judgement into a diff.**
 
 🔵 **Gate posture, unchanged (`Gap 446-A`):** `make hooks` **not attempted** — the harness refuses execution of

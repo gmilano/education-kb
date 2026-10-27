@@ -1,0 +1,14 @@
+# p482 star velocity, 2026-10-27. t4 read by this pass via the authenticated GitHub search channel
+# (repo: qualifier, 9 repos in one query, total_count=9, incomplete_results=false) at 2026-10-27T15:06Z.
+# t3 endpoint is p481's own read at 2026-10-27T13:55:31Z. Interval = 1.175 h.
+# CAUTION: small event counts. The SIGN is reliable; the per-hour magnitude for the sub-1k rows is noise-dominated.
+repo	t3_2026-10-27T13:55:31Z	t4_2026-10-27T15:06:00Z	delta	interval_h	stars_per_hour	note
+HKUDS/DeepTutor	45069	45240	+171	1.175	145.5	4th consecutive interval: p479=94.0, p480=114.6, p481=117.7, p482=145.5 - accelerating
+Miaotofu01/Study-Mate	1235	1235	+0	1.175	0.0	STALLED this interval; moved +4 in p481
+ZeKaiNie/universal-examprep-skill	354	355	+1	1.175	0.85	slowed vs p481 (+2)
+nichochar/ari	210	210	+0	1.175	0.0	FIRST second-hand-free re-read by this base; p481 had only one timestamp. 210 is now confirmed static over 1.175 h
+Selleo/mentingo	99	99	+0	1.175	0.0	pushed_at 2026-10-27T15:02:57Z - code moving, stars flat
+zijinz456/OpenTutor	152	152	+0	1.175	0.0	unchanged
+vishalsachdev/canvas-mcp	308	308	+0	1.175	0.0	unchanged
+boyuchengz/canvas-mcp	115	115	+0	1.175	0.0	created 2026-10-25; 115 stars in 2 days, flat this interval
+ArnaudGuiovanna/tutor-mcp	56	56	+0	1.175	0.0	unchanged across p479-p482 (4 passes, 0 delta)
