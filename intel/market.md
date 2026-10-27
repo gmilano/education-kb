@@ -4,6 +4,213 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p476` — `2026-10-27` — **🔴 THE MARKET FIGURE THIS BASE CARRIED FOR 400+ PASSES IS ARITHMETICALLY IMPOSSIBLE, AND THE PROOF IS ONE LINE OF MULTIPLICATION: `$9.58B → $42.48B by 2030 at 41.5 % CAGR` cannot all be true, because `$9.58B × 1.415⁴ = $38.41B`, not `$42.48B`. The figure is a SPLICE of two incompatible vendor series. 🟢 `Gap 475-U` and the African half of `Gap 475-P` are CLOSED — the Africa leg has now been run on both axes, supply in Swahili and demand in French.**
+
+🔵 Evidence: [`evidence/accent-control.2026-10-27-p476.tsv`](../evidence/accent-control.2026-10-27-p476.tsv),
+[`evidence/star-snapshot.2026-10-27-p476.tsv`](../evidence/star-snapshot.2026-10-27-p476.tsv).
+
+---
+
+### 🔴 `Gap 475-O` closed, and the figure it asked about should never be restored as written
+
+🔵 `Gap 475-O`: *"No market size figure is published this pass, for any region. Earlier cycles carried
+`$9.58B→$42.48B (2030, 41.5 % CAGR)`; none was re-sourced."* 🟢 It is re-sourced now — and the carried
+figure fails an internal-consistency test that needs no source at all.
+
+| test | result |
+|---|---|
+| `$10.6B × 1.415⁴` | **`$42.49B`** — matches the `$42.48B` target to within `$0.01B` 🟢 |
+| `$9.58B × 1.415⁴` | **`$38.41B`** — misses the target by `$4.07B` 🔴 |
+| CAGR actually implied by `$9.58B → $42.48B` over 4 years | **45.11 %**, not 41.5 % 🔴 |
+
+🔴 **So the `41.5 %` CAGR and the `$42.48B` target belong to a `$10.6B` base, and `$9.58B` is a different
+vendor's base.** The carried figure took Precedence Research's 2026 base, Research and Markets' 2030 target
+and Research and Markets' CAGR and presented them as one series. 🟢 **Arithmetic, not opinion** — which is
+why this one is safe to act on where a sourcing dispute would not be.
+
+🔵 **What the vendors actually say, each kept whole:**
+
+| source | 2026 base | horizon | CAGR | note |
+|---|---|---|---|---|
+| Research and Markets | **$10.6B** | $42.48B by 2030 | 41.5 % | internally consistent 🟢; report dated Feb 2026 |
+| Precedence Research | **$9.58B** | $136.79B by 2035 | 34.52 % | the origin of the `$9.58B` this base carried |
+| Grand View Research | **$11.4B** | $57.2B by 2033 | 25.9 % | values 2025 at $8.3B |
+| Global Growth Insights | **$2.21B** | $6.47B by 2035 | 12.7 % | 🔴 low outlier, ~5× below the cluster |
+| Technavio | — | +$3.37B incremental 2025–2030 | ~45 % | 🔴 **incremental growth, not market size** — not comparable |
+| Future Market Insights (K-12 only) | $0.7B | $18.47B by 2036 | 38.1 % | segment, not full market |
+| The Business Research Company (higher-ed only) | $4.09B | $13.46B by 2030 | 34.7 % | segment, not full market |
+
+🔴 **The honest headline is the spread, not a number.** Full-market 2026 estimates cluster at **$9.5B–11.4B**
+with one outlier at **$2.21B** — a **5× range for the same year**. The disagreement between vendors exceeds
+any single vendor's claimed annual growth, because *AI in education* is a market that is **defined**, not
+measured: the spread is mostly about whether embedded AI revenue inside an LMS subscription counts.
+🔵 **Usable form for a studio:** quote the range and the definition, never a point estimate, and never a
+CAGR detached from the base it was computed on.
+
+🟡 **Regional splits exist but are weaker than the global ones.** North America is put at **36 % share,
+$3.68B in 2026**, and Europe at **$2.64B in 2026**; both come from vendor aggregators with thin sourcing and
+neither reconciles to a named full-market base above. Recorded as directional only.
+
+### 🟢 `Gap 475-Q` closed — the accent control was run, and the hypothesis was wrong in DIRECTION
+
+🔵 `Gap 475-Q` suspected the search index of **folding** accents, depressing the Spanish count. 🟢 Three
+language pairs were run at `p475`'s exact query form (`<token> stars:>=5`):
+
+| pair | accented | unaccented | ratio |
+|---|---|---|---|
+| Spanish `educación` / `educacion` | **12** | **42** | **3.50×** |
+| Portuguese `educação` / `educacao` | 65 | 87 | 1.34× |
+| Turkish `eğitim` / `egitim` | 162 | 277 | 1.71× |
+
+🔴 **The index does not fold diacritics symmetrically; the unaccented token is the larger set in 3 of 3
+pairs.** An unaccented query matches accented text, but an accented query does not reach unaccented text.
+🔴 **Therefore every in-language count this base has published from an accented token is a LOWER BOUND,
+understated by 1.34×–3.50×** — a correction to the *instrument*, not to one leg.
+
+🔴 **And `p475`'s Spanish figure does not reproduce.** `p475` published **17**; this pass read **12**, with
+`incomplete_results = TRUE`. The accented Spanish leg is both the smallest and the only unstable one. 🟢 The
+Portuguese accented leg reproduced **65 exactly** with `incomplete_results = FALSE`. 🔵 So the LATAM supply
+signal was depressed by **query construction**, not by a small developer population — and the defensible
+LATAM figures are the unaccented ones: Spanish **42**, Portuguese **87**.
+
+🟡 **One language cannot be measured this way at all.** French `éducation stars:>=5` returns **2,585**,
+dominated by English-language repositories — the top hit is `ossu/computer-science` at 210,397★. Because
+*éducation* ≈ *education*, the French token cannot be isolated from English on this channel, and no French
+supply figure is published here.
+
+### 🟢 `Gap 475-U` and the African half of `Gap 475-P` — closed, both axes
+
+🔵 `Gap 475-U`: *"No African education-AI trend is recorded, in this pass or any prior one… the supply half
+ran (Arabic, n=4, zero education software), the demand half did not."* 🟢 Both halves ran this pass.
+
+**Supply, in-language:** `elimu` (Swahili) `stars:>=5` → **4 repositories, and unlike the Arabic leg they are
+real education software**: the `elimu-ai` organisation (66 repos, every grant read **MIT**, targeting
+Tanzania and South Africa against EGRA/EGMA), plus an ungranted Kenyan tutoring platform. Carried in full on
+the verticals shelf. 🟢 Arabic `تعليم` re-run as a control: **n=4, reproducing `p475` exactly**, still zero
+education software.
+
+**Demand and policy, run in French:**
+
+| jurisdiction | instrument | education's place in it |
+|---|---|---|
+| **African Union** | Continental AI Strategy | **education is 1 of 3 priority sectors**, with agriculture and health |
+| **Kenya** | National strategy on emerging technologies and AI, **2025–2030**, built with UNESCO | education a priority; competency-based digital curriculum |
+| **Nigeria** | **National EdTech Strategy 2025–2030** | includes AI governance mechanisms; explicit focus on rural schools and inclusion |
+| **Côte d'Ivoire** | National AI Policy Declaration, signed at **Impact IA 2026** | education 1 of 5 priority sectors |
+| **Zambia** | national AI strategy | education named a priority sector |
+| **Ghana** | agreement concluded **September 2026** | responsible-AI learning from kindergarten to end of secondary |
+| **Francophone Africa** | UNESCO + GPE KIX Afrique 21, **Saly, Senegal, 16–18 June 2026** | finalised **national AI and digital competency frameworks for teachers and learners** |
+
+🟢 **The African pattern is the inverse of every other region's: policy arrived before supply.** Seven
+instruments naming education, against a measured in-language open-source supply of **four repositories**.
+🔵 Senegal's education minister framed the requirement as sovereignty — AI adapted to African **languages and
+cultures** with data control — which is a specification, not a sentiment, and it points at exactly the
+offline-first, locally-assessed stack the verticals shelf now carries.
+
+### 🟢 Regional demand and regulatory picture, measured this pass
+
+**North America.** 🔴 Regulation is state-driven and fast: **134 AI-in-education bills across 31 states** in
+2026. **California AB 1159** bars using student data to train AI models. **Four states** — Maryland, Idaho,
+Oklahoma, Virginia — have 2026 laws requiring both state guidance **and** mandatory district-level AI policy.
+Federally the **K-12 AI Literacy and Readiness Act (H.R. 8747)** advanced in committee on a largely
+party-line vote; there is no federal statute. **Canada has no AI statute** — its *AI for All* strategy
+(4 June 2026) is a literacy commitment with no legislative date. Adoption: **60 % of US K-12 teachers** used
+AI tools in 2024–25, **32 % weekly**. Players include the **AFT's National Academy for AI Instruction** with
+Microsoft, OpenAI and Anthropic.
+
+**EMEA.** The EU AI Act as amended by **Regulation (EU) 2026/1744** (OJ 24 July 2026, in force 27 July 2026)
+puts admissions, assessment and proctoring in **Annex III point 3**. 🟢 **Independently corroborated this
+pass across several sources, confirming `p469`/`p470`:** stand-alone Annex III duties apply from
+**2 December 2027**, embedded-in-product from **2 August 2028**. 🟢 **Two dates new to this base:** Article 50
+transparency duties **have applied since August 2026**, and the national regulatory **sandbox** obligation
+moved to **2 August 2027**. 🔴 The **2 December 2026** prohibition on non-consensual intimate imagery and CSAM
+is unchanged and is **five weeks out**. Leading K-12 integration is reported in **Finland, Estonia and the
+Netherlands**; the **UK** put £4M into AI lesson-planning and marking tools. The **OECD 2026 Digital
+Education Outlook** recommends moving off general-purpose AI onto purpose-built educational AI. 🟢 EMEA now
+has an African leg (above), so this section is no longer only a Europe section — `Gap 475-P` is closed on
+Africa. 🔴 **The Middle East remains unrun on the demand axis.**
+
+**APAC.** **Vietnam's Decision 33/2026/QĐ-TTg** (issued 30 June 2026, effective **15 August 2026**, under the
+AI Law and Decree 142/2026/ND-CP) lists **46 high-risk AI systems across 6 sectors**, education among them,
+naming **automated grading** and **behavioural monitoring**. 🟢 **The deadline structure is more precise than
+`p475` could state:** systems already running before 15 Aug 2026 have until **1 September 2027** (`p475`'s
+date, correct for legacy systems), while systems launched after it fall under **1 March 2027** — so a *new*
+studio build faces the **earlier** date. 🟢 **And the scoping qualifier matters more than either date:** many
+listed systems are high-risk **only where the AI output is the sole basis for a decision without meaningful
+human review**. **South Korea's** AI Basic Act entered force **22 January 2026**; **Taiwan** passed its AI
+Basic Act in **December 2025**; **Japan** has a principles law with no penalties; **Singapore** issues
+guidance, not law; **China** is the most binding, covering the full system lifecycle. Market reports name
+Google, Microsoft, IBM, Pearson and Byju's as APAC players, with China, India and Japan dominating.
+
+**LATAM.** 🟢 **The UNESCO IESALC study is now read at source rather than through secondary coverage**
+(`Gap 475-T`): a survey of **200 higher-education institutions across 19 countries** finds **87 %** using AI
+in at least one area, **74 %** in teaching and learning, but only **26 %** with a formal AI strategy — and
+adoption is **grassroots**, driven by individual academics and students rather than institutional strategy,
+with private institutions better placed for governance. 🔴 **No LATAM jurisdiction has a binding
+education-specific AI rule.** **Uruguay** became the first in the region to sign the Council of Europe
+Framework Convention on AI (2025); **Colombia** adopted national AI policy **CONPES 4144** (Feb 2025);
+**Mexico** has a risk-based federal AI bill in the Senate proposing an oversight authority — 🟢 a change from
+the "Mexico: no AI law" this base carried. **UNESCO launched the Observatory on AI in Education for Latin
+America and the Caribbean on 14 April 2026 in Santiago, Chile**; **Tecnológico de Monterrey** has a UNESCO
+agreement; **OEI** and **Fundación Profuturo** report with Uruguay's **Plan Ceibal**. The **Latin American AI
+Index (ILIA)** finds school-level AI education still exceptional and names **compute infrastructure,
+enterprise adoption and policy-to-programme conversion** as the binding constraints.
+
+### 🔴 Gaps this pass registers
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 476-L`** | **No market figure here is first-hand.** Every number is vendor-published and reached through secondary coverage; no vendor report was purchased or read. The arithmetic refutation is sound because it is arithmetic, but the inputs to it are still relayed. The 5× spread is the finding; any point estimate in this table would not be. |
+| 🔴 **`Gap 476-M`** | **The Middle East is still unrun on the demand axis**, so `Gap 475-P` is closed on Africa only. The Arabic supply leg (n=4) covers script, not geography, and no Gulf or Levant education-AI policy source was read in any pass. |
+| 🔴 **`Gap 476-N`** | **The LATAM supply census must be re-run before its absence means anything.** Accented tokens understate by 1.34×–3.50×, the Spanish leg returned `incomplete_results=TRUE`, and `p475`'s 17 did not reproduce. Every prior pass's LATAM supply conclusion rests on the depressed form of the query. |
+| 🟡 **`Gap 476-O`** | **Regional market splits do not reconcile.** NA at 36 %/$3.68B and Europe at $2.64B come from aggregators that name no compatible full-market base; 3.68 ÷ 0.36 implies a ~$10.2B global market, which is inside the cluster but matches no vendor's published base exactly. Treated as directional, not summed. |
+| 🟡 **`Gap 476-P`** | **`Gap 475-T` is half-closed.** The UNESCO IESALC figures are now attributed to their own study (200 institutions, 19 countries) rather than to secondary coverage, but it is still **one survey**, and the TALIS teacher figures `p475` juxtaposed with it remain a different instrument on a different population. |
+
+## Opportunities by region
+
+### North America
+
+🟢 **Governance-first LMS work, not model work.** The constraint is not capability but **134 bills across 31
+states** plus four states mandating district-level policy. The sellable unit is a **policy-to-configuration
+layer**: mapping a district's adopted AI policy onto actual Canvas/Open edX settings, data-retention rules
+and audit logs. 🔴 **California AB 1159 makes "we do not train on student data" a contractual requirement**,
+which favours self-hosted inference over API relay — and both Open edX (8,211★, AGPL-3.0) and Canvas
+(6,890★, AGPL-3.0) are network copyleft, so the hosting boundary has to be designed deliberately, not
+discovered at delivery.
+
+### EMEA
+
+🟢 **Sixteen months of runway on Annex III, five weeks on a prohibition.** Education's high-risk duties bind
+**2 December 2027**, but the **2 December 2026** NCII/CSAM prohibition has no risk tier to argue and no
+conformity route to buy. 🔵 The immediate, dateable engagement is an **audit of every generative capability
+in a learner-facing estate** before December 2026; the 2027 work is conformity-assessment preparation for
+grading and proctoring. 🟢 **Africa is a distinct opportunity inside the same region field:** seven
+jurisdictions have education in national AI strategy against an in-language open-source supply of four
+repositories, and the only platform found — **elimu.ai, entirely MIT** — is permissive enough to build on
+without a copyleft conversation. 🔴 Its biometric sign-in must be the first thing re-scoped.
+
+### APAC
+
+🟢 **The earliest hard deadline anywhere is here: 1 March 2027** for newly launched education AI in Vietnam
+— nine months ahead of the EU. 🟢 **And the cheapest compliance lever found this pass is architectural:**
+keep a human in the decision loop and a system may fall outside the high-risk tier entirely, because the
+classification turns on the AI output being the **sole basis** for a decision. A studio that ships
+teacher-confirms-the-suggestion by default sells the same product into Vietnam, Korea and the EU with one
+design. 🔴 Both ungranted repositories on the agents shelf are APAC-origin, so local supply needs licence
+diligence before reuse, not after.
+
+### LATAM
+
+🔴 **The gap is governance, not adoption: 87 % using AI, 26 % with a strategy.** That 61-point spread is the
+engagement, and it is an institutional one — policy, data boundaries, procurement rules and staff training —
+not a build. 🟢 **Adoption being grassroots makes it tractable**: the AI is already in use, so the work
+starts from an inventory of what academics and students are actually doing rather than from a pilot. 🔵 With
+no binding education-specific rule in any LATAM jurisdiction, the **EU Annex III shape is the safest design
+target**, since Brazil's PL 2.338/2023 and Mexico's Senate bill both follow the risk-based model. 🔴 **No
+LATAM open-source education platform has been found in any pass** — and the supply census that concluded
+this is now known to have been understated by up to 3.5×, so that absence is not yet a finding.
+
+
 ## 🆕 `p475` — `2026-10-27` — **🟢 `Gap 474-F` IS CLOSED AND THE APAC EDUCATION-DEMAND NIL WAS NEVER REAL: Vietnam's Decision 33/2026/QĐ-TTg names THREE education AI systems as high-risk, in force since 15 Aug 2026, with a 1 Sep 2027 compliance deadline. 🔴 And `Gap 474-D`'s "Arabic floor of 480" is refuted by measurement — the complete, non-truncated leg returns FOUR repositories, and p474's Arabic-vs-Turkish ratio compared across a SCRIPT boundary, which is what the gap actually was.**
 
 🔵 Evidence: [`evidence/lang-supply-census.2026-10-27-p475.tsv`](../evidence/lang-supply-census.2026-10-27-p475.tsv).

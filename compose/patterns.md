@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p476` — `2026-10-27` — **two new recipes and one upgraded, each built only from components whose grant, version election and address were read first-hand this pass — plus the correction that `Gap 475-X`'s "unperformed work inside the recipe" HAS NOW BEEN PERFORMED: OpenEduCat's bundled-library enumeration came back clean, 14 of 14 modules LGPL-3**
+
+🔵 Component grants are the first-hand reads in
+[`evidence/grant-payload.2026-10-27-p476.tsv`](../evidence/grant-payload.2026-10-27-p476.tsv); version
+elections in [`evidence/version-election.2026-10-27-p476.tsv`](../evidence/version-election.2026-10-27-p476.tsv);
+the depth probe in [`evidence/openeducat-depth.2026-10-27-p476.tsv`](../evidence/openeducat-depth.2026-10-27-p476.tsv).
+🔴 No recipe below uses an AGPL-3.0 or bespoke-licensed component in a position where a client would need to
+keep modifications closed. Where a copyleft component is used it is **deployed, not linked**, and that is
+stated in the recipe.
+
+🔴 **Address correction that touches every earlier recipe on this shelf.** Any recipe below or in retained
+history naming `openedx/edx-platform` should read **`openedx/openedx-platform`**. Same repository, same HEAD,
+same grant — the old address resolves on git and raw but is dead to the search index.
+
+---
+
+### 🟢 P7 — Offline-first primary literacy platform for African deployments, fully permissive, biometrics designed OUT
+
+🔵 **Why this is now buildable:** `Gap 475-M` was closed this pass — there is an African education platform
+and its entire stack is **MIT**, the first time this base has had a permissive vertical to build on rather
+than a copyleft LMS to work around.
+
+| # | component | repo | grant (read first-hand) | role |
+|---|---|---|---|---|
+| 1 | platform / CMS / REST API | [elimu-ai/webapp](https://github.com/elimu-ai/webapp) | **MIT** · 1,065 B · `45fc137a7066` | Java/Spring content and app host; the system of record |
+| 2 | device shell | [elimu-ai/launcher](https://github.com/elimu-ai/launcher) | **MIT** · 1,065 B · `45fc137a7066` | locked Android launcher giving a fixed instructional path; EGRA/EGMA framing |
+| 3 | content distribution | [elimu-ai/appstore](https://github.com/elimu-ai/appstore) | **MIT** · 1,065 B · `45fc137a7066` | pulls/updates APKs and content — **the offline-first hinge** |
+| 4 | shared domain model | [elimu-ai/model](https://github.com/elimu-ai/model) | **MIT** · 1,065 B · `45fc137a7066` | one Java library across webapp and Android |
+| 5 | reading-level inference | [elimu-ai/ml-storybook-reading-level](https://github.com/elimu-ai/ml-storybook-reading-level) | **MIT** · 1,065 B · `6af12447a42c` | TensorFlow model grading storybook difficulty; on-device capable |
+| 6 | tutoring agent | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** · 11,408 B · `cd2f54e1e506` | multi-agent + RAG tutoring; **run as a service behind the webapp**, not linked into it |
+| 7 | 🔴 **a hard exclusion, not a component** | ~~[elimu-ai/ml-authentication](https://github.com/elimu-ai/ml-authentication)~~ | MIT · `203d7d837ceb` | **DO NOT SHIP.** Face recognition on pupils is biometric identification — EU Annex III high-risk from 2 Dec 2027 and high-risk under Vietnam's Decision 33. Replace with a class-roster PIN or teacher-selected pupil list. |
+
+🟢 **Licence boundary: there isn't one to manage.** Every component is MIT or Apache-2.0, so client
+modifications may stay closed and nothing has to be isolated out-of-process for licence reasons. 🔵 DeepTutor
+is kept behind a service boundary for **operational** reasons (model hosting, cost control), not legal ones.
+🔴 **Regulatory boundary: component 7 is the whole of it.** Dropping it takes the estate out of the biometric
+category in both jurisdictions; adding it back makes the deployment a conformity-assessment event in the EU
+and a third-party-certification event in Vietnam. **Estimated 8–10 weeks** to a deployable pilot on existing
+Android hardware.
+
+🔴 **What a client must be told up front:** the top repo has **41★** and its bus factor is unmeasured
+(`Gap 476-J`). This is a small project with the right architecture and the right licence — adopting it means
+accepting maintenance exposure that Moodle would not carry.
+
+### 🟢 P8 — The human-in-the-loop grading gate: one design that satisfies Vietnam's 1 Mar 2027, the EU's 2 Dec 2027 and US state rules at once
+
+🔵 **Why this is now specifiable:** the scoping qualifier found this pass. Vietnam's Decision 33 treats
+listed systems as high-risk **only where the AI output is the sole basis for a decision without meaningful
+human review** — so the gate is not a mitigation, it is the thing that decides the risk tier.
+
+| # | component | repo | grant · election (first-hand) | role |
+|---|---|---|---|---|
+| 1 | LMS of record | [moodle/moodle](https://github.com/moodle/moodle) | **GPL-3.0**, 🟢 `or-later` **elected** (`composer.json` + source notices) | gradebook, roster, audit surface. 🔴 **Deployed, not linked** — no client code compiled against it |
+| 2 | grading agent | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | **Apache-2.0** · 11,342 B · `c00cbb6a47a7` | script-driven teaching/marking assistant; client logic lives **here**, in the permissive component |
+| 3 | content/assessment authoring | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | **GPL-3.0**, 🟡 bare id — no election | interactive items. **Deployed as a Moodle plugin**, never linked into client code |
+| 4 | 🟢 **the gate itself** | — (client-built, in component 2) | — | every AI mark enters the gradebook as a **draft** that a named teacher must confirm or override; the confirm/override event is logged with teacher identity and timestamp |
+| 5 | evidence store | client-built | — | retains, per mark: model version, input, draft output, teacher decision, latency. **This is the conformity-assessment artefact** |
+
+🟢 **Why one design covers three regimes.** Vietnam: the AI output is not the sole basis, by construction.
+EU: Annex III high-risk duties centre on human oversight, and components 4–5 are that oversight plus its
+evidence. North America: the same log answers state transparency rules, and keeping inference self-hosted
+answers **California AB 1159**'s bar on training against student data. 🔴 **It does not make the EU
+obligations disappear** — grading stays Annex III-listed; the gate and the log are what a conformity
+assessment is assessed *on*. **Estimated 6–8 weeks**, plus 2 weeks if self-hosted inference is in scope.
+
+🔴 **The failure mode to design against is auto-confirm.** A gate that teachers clear in bulk with one click
+restores "sole basis" in substance while appearing compliant. The log must make bulk-confirm visible —
+confirm-rate and dwell-time per teacher are the metrics that show whether the gate is real.
+
+### 🟢 P3 upgraded — `Gap 475-X` discharged: the OpenEduCat enumeration is done, and it came back clean
+
+🔵 `Gap 475-X`: *"P3 ships a `SPLIT_SCOPE` component knowingly… the bundled-library enumeration is
+**unperformed work inside the recipe**."* 🟢 It was performed this pass, by shallow clone at HEAD
+`46a5d7d400820d471b67b8c019997bfa5d3c873e`.
+
+| question `Gap 475-N`/`475-X` asked | 🟢 measured answer |
+|---|---|
+| which modules carry which terms? | **14 of 14 declare `LGPL-3`** — uniform, no exceptions |
+| what does `openeducat_admission` (the highest-risk module) carry? | **`LGPL-3`**, same as every sibling |
+| how many licence files exist below the root? | **zero** — exactly one in the whole 17 MB tree |
+| is the `SPLIT_SCOPE` real? | 🟢 **declared, not instantiated** — a forward-looking disclaimer nothing in the tree exercises |
+| version election? | 🟢 **`LGPL-3.0-or-later`**, from per-source-file notices in **187 of 209** `.py` files |
+
+🟢 **Effect on the recipe: the pre-delivery blocker is cleared.** P3 may ship
+[openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) (899★, `19.0`, LGPL-3.0-or-later)
+as its SIS layer with the enumeration **done** rather than pending. LGPL weak copyleft still means
+**deploy the modules, do not statically link client code into them**; Odoo-style module boundaries make that
+the natural shape anyway. 🔴 **Two residual defects to carry into delivery docs:** the payload points at a
+`COPYRIGHT` file that **does not exist in the tree**, and `openeducat_timetable` declares a malformed version
+string (`19.0.1.1.0`). Neither changes the terms; both will confuse an automated licence scanner.
+
+### 🔴 Gaps this pass registers
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 476-T`** | **No recipe here has been built or run** — `Gap 475-V` carried forward unchanged. P7 and P8 are compositions of components whose grants, elections and addresses were verified first-hand; **no integration was executed**, no version compatibility tested, and the week estimates are judgement, not measurement. |
+| 🔴 **`Gap 476-U`** | **P8's entire premise rests on secondary legal summaries.** The "sole basis / meaningful human review" qualifier is the load-bearing element of the recipe and it was read from law-firm commentary, **not from Decision 33's annex** (`Gap 476-H`). If the annex scopes it differently, P8 is a good design that does not change the risk tier. A client deliverable must read the annex and EUR-Lex first-hand. |
+| 🟡 **`Gap 476-V`** | **P7's exclusion of `ml-authentication` assumes the rest of the stack carries no other biometric or monitoring surface.** Only repository descriptions were read; no component was cloned or code-reviewed, so an attention-tracking or camera feature elsewhere in the 66-repo org would be missed (`Gap 476-I`). |
+| 🟡 **`Gap 476-W`** | **P8 names `ai-shifu` (329★) as the component carrying client logic** — chosen because it is Apache-2.0 and purpose-built for scripted teaching, not because it was benchmarked against alternatives. No grading-quality evaluation of any agent on this shelf has ever been run here. |
+
 ## 🆕 `p475` — `2026-10-27` — **three recipes whose every component's grant was read first-hand at a resolved HEAD this pass, each one specified so the licence boundary AND the regulatory boundary fall where they actually fall**
 
 🔵 Component grants are the first-hand reads in

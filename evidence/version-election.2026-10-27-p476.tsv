@@ -1,0 +1,20 @@
+# p476 version-election reader, 2026-10-27. Built to answer Gap 475-A, which established that the
+# licence PAYLOAD cannot reveal a GPL-family version election ("any later version" is stock boilerplate,
+# 3 of 3 payloads) and named two places the election actually lives: packaging metadata and per-source-file
+# notices. This reader looks in both. Every file was fetched from raw.githubusercontent.com at the
+# ls-remote-resolved HEAD, written to disk, and the FILE measured (Gap 468-A).
+# channel_meta  = licence/SPDX field in packaging metadata, verbatim; NO_FIELD = file fetched, no licence key.
+# channel_src   = per-source-file notice; counted multi-line-aware (the FSF notice wraps across lines).
+# verdict: ELECTED_OR_LATER | ELECTED_ONLY | BARE_ID_NO_ELECTION | UNREADABLE_ALL_CHANNELS
+repo	branch	head12	meta_path	channel_meta	src_paths_probed	channel_src	verdict
+moodle/moodle	main	46c042e7da65	composer.json	GPL-3.0-or-later	public/lib/moodlelib.php, public/version.php, config-dist.php	or-later notice present 3/3	ELECTED_OR_LATER
+frappe/lms	develop	11b6244724b7	package.json	AGPL-3.0-or-later	lms/__init__.py, lms/hooks.py	no per-file notice 0/2	ELECTED_OR_LATER
+openeducat/openeducat_erp	19.0	46a5d7d40082	14x __manifest__.py	LGPL-3 (bare, all 14 modules)	209 .py files in shallow clone	or-later notice present 187/209	ELECTED_OR_LATER
+penecho/penecho	main	341e34d6cf29	package.json	AGPL-3.0-only	README.md	no per-file notice	ELECTED_ONLY
+instructure/canvas-lms	master	1c9f0bb8013e	package.json	AGPL-3.0	Gemfile, config/application.rb, app/models/user.rb	no per-file notice 0/3	BARE_ID_NO_ELECTION
+h5p/h5p-php-library	master	1e21b7a2da4a	composer.json	GPL-3.0	h5p.classes.php, h5p-default-storage.class.php	no per-file notice 0/2	BARE_ID_NO_ELECTION
+openedx/openedx-platform	master	03698e2b6ff4	pyproject.toml (48283 B), package.json (5540 B)	NO_FIELD in either	lms/__init__.py, cms/__init__.py, lms/envs/common.py, openedx/core/__init__.py, manage.py	no per-file notice 0/5	UNREADABLE_ALL_CHANNELS
+echo-loop/Echo-Loop	main	68334adab38a	pubspec.yaml	NO_FIELD	lib/main.dart, README.md	no per-file notice 0/2	UNREADABLE_ALL_CHANNELS
+# --- non-GPL controls: method must not manufacture signal where the grant is already unambiguous ---
+sakaiproject/sakai	master	-	pom.xml	Educational Community License, Version 2.0	-	not probed	CONTROL_AGREES_WITH_PAYLOAD
+learningequality/kolibri	develop	-	package.json	MIT	-	not probed	CONTROL_AGREES_WITH_PAYLOAD

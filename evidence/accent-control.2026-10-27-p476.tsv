@@ -1,0 +1,9 @@
+# p476 accent-folding control, 2026-10-27. Closes Gap 475-Q, which asked for the unaccented control that
+# p475 did not run. Query form is p475's exactly: "<token> stars:>=5" on the authenticated search channel.
+# READING: the index does NOT fold diacritics symmetrically. The UNACCENTED token returns the LARGER set in
+# 3 of 3 language pairs (1.34x-3.50x). An unaccented query matches accented text; an accented query does not
+# match unaccented text. Therefore every in-language count published from an ACCENTED token is a LOWER BOUND.
+language	region	accented_token	accented_count	unaccented_token	unaccented_count	ratio_unacc_over_acc	note
+Spanish	LATAM	educación	12	educacion	42	3.50	p475 published 17 for the accented leg; this pass read 12 with incomplete_results=TRUE. The accented Spanish leg is both smaller AND unstable.
+Portuguese	LATAM	educação	65	educacao	87	1.34	accented leg reproduces p475's 65 exactly, incomplete_results=FALSE
+Turkish	EMEA	eğitim	162	egitim	277	1.71	same top repo returned by both legs

@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p476` — `2026-10-27` — **🟢 TWO TRENDS ON THIS SHELF ARE NOW QUANTIFIED RATHER THAN ASSERTED, which is what `Gap 475-S` asked for: open-source attention in education AI is concentrated at 95.7 % in a SINGLE repository, and one education-AI agent outstars the entire open-source education PLATFORM tier by 1.14×. 🔴 And the copyleft trend `p475` called is hardening, not softening — `penecho` elects `AGPL-3.0-only`, closing even the future-version escape.**
+
+🔵 `Gap 475-S` stands against most of what follows: these remain single-pass cross-sections. What changed is
+that two of them are now **ratios between measured quantities** rather than impressions, and a star snapshot
+exists for the next pass to difference —
+[`evidence/star-snapshot.2026-10-27-p476.tsv`](../evidence/star-snapshot.2026-10-27-p476.tsv).
+
+### 🟢 T1 — The version election is readable on only half the copyleft tier, and `or-later` is not the default
+
+🔵 `p475` proved the licence payload cannot reveal a GPL-family version election. This pass read the two
+channels where it actually lives, across 8 repos
+([`evidence/version-election.2026-10-27-p476.tsv`](../evidence/version-election.2026-10-27-p476.tsv)):
+
+| verdict | count | repos |
+|---|---|---|
+| 🟢 `or-later` genuinely elected | **3** | `moodle/moodle`, `frappe/lms`, `openeducat/openeducat_erp` |
+| 🔴 `only` elected — the opposite of the payload reading | **1** | `penecho/penecho` |
+| 🟡 bare deprecated id, no election recorded | **2** | `instructure/canvas-lms`, `h5p/h5p-php-library` |
+| 🔴 unreadable on every reachable channel | **2** | `openedx/openedx-platform`, `echo-loop/Echo-Loop` |
+
+🔴 **The trend: the ecosystem does not record its own version elections consistently.** Half of this tier
+cannot tell a downstream user whether a future GPL applies, and the single most deployed open-source
+higher-education platform — Open edX — records it **nowhere** reachable: not in the payload, not in a 48 KB
+`pyproject.toml`, not in five source files. 🔵 This is a licensing-hygiene gap in the *projects*, not in this
+base's reading, and it is the kind of thing that only surfaces when someone looks in the right place.
+
+### 🟢 T2 — Attention is concentrated in one repository, measurably
+
+| measure | value |
+|---|---|
+| agent-shelf rows re-measured | 13 |
+| rows that moved at all | **4** |
+| rows that did not move by a single star | **9** |
+| `HKUDS/DeepTutor` share of all movement | **95.7 %** (+90 of +94) |
+
+🔴 **"Education AI is growing" is not supported; "one project is growing" is.** 🔵 The interval is a single
+calendar day, so this is a snapshot of concentration, not a growth rate (`Gap 476-D`). But concentration is
+itself the decision-relevant quantity: a studio betting on the tier is really betting on one repository
+ten months old.
+
+### 🟢 T3 — The platform tier and the agent tier are inverted, and stars are the wrong instrument for one of them
+
+| tier | total ★ |
+|---|---|
+| ten open-source education platforms (Moodle, Open edX, Canvas, BBB, Frappe, Sakai, Kolibri, OpenEduCat, OpenOLAT, H5P) | **39,158** |
+| `HKUDS/DeepTutor`, alone | **44,531** |
+
+🔴 **Moodle has 7,550★ and a large share of the world's institutional LMS installs. DeepTutor has 44,531★ and
+is ten months old.** 🟢 The reading is not that agents matter more — it is that **stars measure developer
+attention and say nothing about installed base**, and the two tiers sit at opposite ends of that mismatch.
+🔵 For a studio: the systems a client already runs are systematically *under*-represented in open-source
+attention metrics, so a shelf ranked by stars will always under-weight the thing the engagement actually has
+to integrate with.
+
+### 🟢 T4 — In Africa, policy arrived before supply — the inverse of every other region
+
+| axis | measured |
+|---|---|
+| jurisdictions with education named in national AI or EdTech strategy | **7** (African Union, Kenya, Nigeria, Côte d'Ivoire, Zambia, Ghana, francophone bloc via UNESCO/KIX) |
+| in-language open-source education supply (`elimu`, Swahili, `stars:>=5`) | **4 repositories** |
+| of which real education software | the `elimu-ai` org — **66 repos, every grant MIT** |
+
+🔴 **Everywhere else this base has measured, supply ran ahead of rules.** Africa is the opposite: continental
+and national strategy naming education as a top-three priority sector, against four repositories. 🟢 The
+stated requirement is sovereignty-shaped — AI adapted to African **languages and cultures**, with data
+control — and the one platform found already matches it architecturally: **offline-first, EGRA/EGMA-aligned,
+MIT**. 🔵 This is the clearest supply-demand asymmetry on any shelf in this base.
+
+### 🟢 T5 — Regulatory convergence is on FEATURES, and the lever is procedural, not technical
+
+🔵 `p475`'s four-point convergence line holds and is corroborated. 🟢 What this pass adds is the **exit**:
+
+| jurisdiction | the two features named | 🟢 the scoping qualifier |
+|---|---|---|
+| EU (Annex III pt 3, Reg. (EU) 2026/1744) | automated grading/ranking; biometric and emotion monitoring | binds **2 Dec 2027** stand-alone |
+| Vietnam (Decision 33/2026/QĐ-TTg) | automated grading; behavioural monitoring | 🟢 **high-risk only where AI output is the SOLE basis for a decision without meaningful human review** |
+| South Korea (AI Basic Act, in force 22 Jan 2026) | comprehensive statute | — |
+| North America (state level) | student-data use, classroom use | 134 bills / 31 states; no federal statute |
+
+🟢 **The trend worth acting on: the binding question is increasingly "is a human deciding?", not "is there a
+model?"** Vietnam states it explicitly, and the EU's high-risk obligations centre on human oversight. A
+teacher-confirms-the-suggestion default is therefore a **compliance architecture**, not a UX preference —
+and it is portable across all four jurisdictions at once. 🔴 Read from secondary legal summaries, not from
+Decision 33's annex (`Gap 476-H`).
+
+### 🔴 T6 — The copyleft turn in new education AI is hardening, not softening
+
+🔵 `p475` found the three highest-starred new education-AI repos all AGPL-3.0. 🟢 Re-measured, the shape
+holds — and the version elections make it stricter than `p475` could see:
+
+| repo | ★ | grant | election | what it means downstream |
+|---|---|---|---|---|
+| [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | 4,524 | AGPL-3.0 | 🔴 unreadable | network copyleft, future-version status unknown |
+| [penecho/penecho](https://github.com/penecho/penecho) | 2,504 | **AGPL-3.0-only** | 🔴 **`only`** | network copyleft **with no future-version escape** |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 2,424 | AGPL-3.0 | not probed | network copyleft |
+| [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 2,049 | **bespoke community licence** | n/a | 🔴 non-commercial — not open source at all |
+
+🟢 **Against this, the permissive tier grew by reading, not by events:** `OpenCat` and `mini-nanoGPT` both
+read **MIT** this pass, taking the agents shelf to 7 build-on-able of 13. 🔵 The distinction matters — nothing
+in the ecosystem became more permissive this window; this base simply had two fewer blind spots.
+
+### 🔴 T7 — Published addresses decay silently, and the decay is measurable
+
+🟢 **22 live addresses swept, 1 stale** (`openedx/edx-platform` → `openedx/openedx-platform`). 🔴 The reason
+no earlier pass caught it: git and raw **forward renames transparently and answer 200**, so every integrity
+control this base runs — HEAD resolution, payload bytes, payload digest — reported the row healthy, and it
+was healthy. Only absence from the search index fires. 🔵 A 1-in-22 rate on addresses republished every pass
+implies retained history carries more (`Gap 476-E`), and address rot is now a named maintenance category
+rather than an accident.
+
+### 🔴 Gaps this pass registers
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 476-Q`** | **T1, T4, T5, T6 and T7 remain single-pass cross-sections.** Only T2 and T3 are ratios between quantities measured in the same pass, and T2's interval is one day. `Gap 475-S` is narrowed, not closed, and will stay open until a second snapshot exists to difference. |
+| 🔴 **`Gap 476-R`** | **T4's asymmetry compares a 7-item policy count against a 4-item supply count measured by completely different instruments** — one a French-language policy read, the other a Swahili token census at `stars:>=5`. The direction is strong; the magnitudes are not commensurable and should not be ratioed. |
+| 🟡 **`Gap 476-S`** | **T3's inversion uses stars as a proxy for attention and a qualitative claim for installed base.** No deployment figure was measured for any platform in any pass — not a Moodle install count, not an Open edX site count. The inversion's left-hand side is measured; its right-hand side is asserted. |
+
 ## 🆕 `p475` — `2026-10-27` — **🟢 `p471` SAID THREE JURISDICTIONS ON THREE CONTINENTS HAD CONVERGED ON THE SAME REGULATORY SHAPE. A FOURTH HAS NOW ARRIVED INDEPENDENTLY AND NAMES THE SAME TWO FEATURES — automated grading and biometric monitoring — with a deadline NINE MONTHS AHEAD of the EU's. 🔴 Meanwhile the open-source supply moved the other way: the three highest-starred new education-AI repos of this window are all AGPL-3.0.**
 
 ### 🟢 T1 — Regulatory convergence is now a four-point line, and it converges on *features*, not on *AI*

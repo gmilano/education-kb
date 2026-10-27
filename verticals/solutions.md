@@ -4,6 +4,120 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p476` — `2026-10-27` — **🟢 `Gap 475-M` IS CLOSED: there IS an African education platform, it is a complete offline-first literacy stack, and it is the MOST PERMISSIVE thing on any shelf in this base — `elimu.ai`, 66 repositories, every grant read MIT. 🔴 And it ships FACE RECOGNITION to authenticate pupils, which is the one feature both the EU AI Act and Vietnam's Decision 33 put in their highest risk tier. 🟢 `Gap 475-N` is closed by a depth probe: OpenEduCat's `SPLIT_SCOPE` is DECLARED but NOT INSTANTIATED — 14 of 14 modules are uniformly LGPL-3.**
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).
+Grants are the first-hand reads in
+[`evidence/grant-payload.2026-10-27-p476.tsv`](../evidence/grant-payload.2026-10-27-p476.tsv); the depth
+probe is [`evidence/openeducat-depth.2026-10-27-p476.tsv`](../evidence/openeducat-depth.2026-10-27-p476.tsv).
+
+---
+
+### 🟢 `Gap 475-M` closed — the first non-EU/US vertical platform this base has ever carried
+
+🔵 `Gap 475-M`: *"No Latin-American or African vertical platform is on this shelf, in any pass. Every row is
+EU- or US-origin."* 🟢 It was found by running the supply census **in Swahili** — `elimu` is Swahili for
+*education*, and the token had never been queried here.
+
+| what | measured |
+|---|---|
+| organisation | [`elimu-ai`](https://github.com/elimu-ai), 66 repositories |
+| grant across the 6 repositories read | **MIT on every one**, 1,065 B each, three digest groups differing only by copyright year |
+| target countries, from the project's own wiki | **Tanzania** (Swahili) and **South Africa** (Xhosa), cited against out-of-school primary-age population |
+| region field | **EMEA** (the closed vocabulary has no "Africa"; the country belongs in prose) |
+| instructional standard | **EGRA / EGMA** — Early Grade Reading and Mathematics Assessment, the standard instruments in African primary education |
+| architecture | Android launcher → appstore → Spring webapp/CMS, **offline-first**, plus two ML models |
+| activity | `ml-storybook-reading-level` pushed **2026-10-26**; webapp and appstore within the last 3 weeks |
+
+🟢 **Why this matters more than its star counts (41★ top repo).** It is the only education platform on this
+shelf that is (a) permissively licensed end to end, (b) designed for intermittent connectivity, and (c) built
+around an assessment standard African ministries already use. 🔴 **Its magnitude is tiny** — a studio would
+be adopting a small project, not a Moodle-scale ecosystem, and `Gap 476-J` records what that costs.
+
+### 🔴 The collision: the one African platform found ships the one feature two jurisdictions flag
+
+🔵 [`elimu-ai/ml-authentication`](https://github.com/elimu-ai/ml-authentication) is, in its own description,
+*"Android application for authenticating the current student using face recognition."*
+
+| instrument | how it classes biometric identification of pupils | date that binds |
+|---|---|---|
+| EU AI Act, Annex III (as amended by Regulation (EU) 2026/1744) | **high-risk**; conformity assessment before deployment | **2 December 2027** for stand-alone Annex III systems |
+| Vietnam, Decision 33/2026/QĐ-TTg | **high-risk**; education is 1 of 6 sectors in a 46-system list | **1 March 2027** for systems launched after 15 Aug 2026; **1 September 2027** for systems already running before it |
+| North America | no federal statute; state-level student-data rules (e.g. California AB 1159 bars training on student data) | varies by state |
+
+🟢 **The design lever, and it is new to this base.** Vietnam's decision treats many listed systems as
+high-risk **only where the AI output is the sole basis for a decision without meaningful human review**. A
+face-recognition sign-in that gates attendance automatically is in scope; the same model surfacing a
+suggestion a teacher confirms may not be. 🔴 This is read from secondary legal summaries, not the decision's
+annex, and `Gap 476-H` says so — but it is an engineering choice with a regulatory consequence, which is
+exactly the kind of thing a recipe can be built around, and `compose/patterns.md` now does.
+
+### 🟢 `Gap 475-N` closed — OpenEduCat's `SPLIT_SCOPE`, enumerated at depth
+
+🔵 `Gap 475-N`: the payload *"says bundled libraries may differ and points at the source tree; this pass did
+not walk the tree, so which modules carry which terms is unknown — and admissions scoring, the highest-risk
+module, is the one that matters."* 🟢 The tree was walked this pass, by shallow clone at HEAD
+`46a5d7d400820d471b67b8c019997bfa5d3c873e` — identical to the `ls-remote` HEAD, two channels agreeing.
+🔴 The REST tree endpoint could not be used: `api.github.com` is **403** for non-session repositories here.
+
+| measured in the 17 MB tree | result |
+|---|---|
+| module manifests (`__manifest__.py`) | 14 |
+| modules declaring `LGPL-3` | **14 of 14 — uniform** |
+| modules declaring anything else | **0** |
+| licence files at **any** depth | **exactly 1** — the root `LICENSE`, 8,241 B · `528f84036800`, byte- and digest-identical to `p475` |
+| `openeducat_admission` (the module `p475` flagged highest-risk) | **`LGPL-3`, same as every sibling** |
+| per-source-file election | **`or-later` in 187 of 209 `.py` files** → `LGPL-3.0-or-later` |
+
+🟢 **`SPLIT_SCOPE` is declared, not instantiated.** The payload warns that *"some external libraries and
+contributions bundled with OpenEduCat may be published under other GPL-compatible licenses"* — a
+forward-looking disclaimer. Nothing in the tree exercises it. 🔵 For delivery this **downgrades** the risk
+`p475` and the P3 recipe carried: the enumeration is done and it came back clean.
+
+🔴 **Two defects found in the payload while reading it.** Its first line is *"For copyright information,
+please see the COPYRIGHT file."* — and **there is no `COPYRIGHT` file anywhere in the tree.** A dangling
+pointer, which is also why `p473`/`p474`'s title-keyed reader failed on this repo: the payload opens with a
+reference, not a licence title. 🟡 Separately, `openeducat_timetable` declares version `19.0.1.1.0`, four
+dot-separated groups where all thirteen siblings have three.
+
+### 🟢 Real platforms a studio can customise — grant, version election, and regulatory exposure
+
+| platform | repo | ★ | grant (first-hand) | version election (`p476`) | high-risk features it ships | region of origin |
+|---|---|---|---|---|---|---|
+| Moodle | [moodle/moodle](https://github.com/moodle/moodle) | 7,550 | **GPL-3.0** | 🟢 **`or-later` elected** (2 channels) | automated grading; proctoring via plugins | EMEA |
+| Open edX | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 8,211 | **AGPL-3.0** | 🔴 unreadable, all channels | automated grading; proctoring | North America |
+| Canvas LMS | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 6,890 | **AGPL-3.0** | 🟡 bare id, no election | automated grading | North America |
+| BigBlueButton | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 9,255 | **LGPL-3.0** | not probed | webcam/attention monitoring if enabled | North America |
+| Frappe LMS | [frappe/lms](https://github.com/frappe/lms) | 3,351 | **AGPL-3.0** | 🟢 **`or-later` elected** (1 channel) | assessment | APAC (India) |
+| Sakai | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 1,240 | **ECL-2.0** | 🟢 `pom.xml` agrees | assessment | North America |
+| Kolibri | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 1,162 | **MIT** | 🟢 `package.json` agrees | none by default; offline-first | North America |
+| OpenEduCat | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 899 | **LGPL-3.0** | 🟢 **`or-later` elected** (187/209 files) | **admissions scoring** (`openeducat_admission`) | APAC (India) |
+| OpenOLAT | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 448 | **Apache-2.0** | unprobed (`Gap 476-G`) | assessment, QTI | EMEA |
+| H5P | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | 152 | **GPL-3.0** | 🟡 bare id, no election | none — content library | EMEA |
+| 🟢 **elimu.ai** | [elimu-ai/webapp](https://github.com/elimu-ai/webapp) | 41 | **MIT** | n/a — permissive | 🔴 **biometric pupil authentication** (separate repo) | **EMEA (Tanzania, South Africa)** |
+
+🔴 **Still no Latin-American vertical platform, in any pass.** `Gap 475-M` is closed only on its African
+half. The Spanish-language supply census is now known to have been *understated* (see `intel/market.md`), so
+the next pass has a concrete reason to re-run the LATAM leg rather than conclude absence.
+
+### 🟢 A version fact worth carrying: Moodle's tree moved, and a stale path probe 404s
+
+🔵 Measured first-hand on the raw channel: `lib/moodlelib.php` and `version.php` **404 at the repository
+root**, while `public/lib/moodlelib.php` and `public/version.php` return 200. Moodle has moved its web root
+into `public/`. `public/version.php` reads `$release = '6.0dev (Build: 20261021)'`, `$branch = '600'`.
+🟡 `composer.json` still declares `"provide": {"moodle/lms": "5.3"}` — so the two files disagree, and
+`version.php` is the one to trust for release. 🔵 Any probe or integration written against pre-5.x Moodle
+paths will silently 404 on `main`.
+
+### 🔴 Gaps this pass registers
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 476-H`** | **The regulatory column remains a reading of secondary sources, not a compliance determination.** The EU dates come from law-firm and compliance-vendor commentary (independently corroborated this pass across several, and consistent with `p470`'s instrument number); the Vietnam dates and the "sole basis / meaningful human review" qualifier come from law-firm summaries of Decision 33, **not from its annex**. `Gap 475-L`'s requirement to read EUR-Lex and the annex first-hand is **not discharged**. |
+| 🟡 **`Gap 476-I`** | **`elimu.ai`'s biometric exposure is read from repository descriptions, not from the code.** `ml-authentication` was not cloned and its model, data flows and retention were not examined; whether face templates leave the device is **unknown**, and that is the question that decides the EU analysis. |
+| 🟡 **`Gap 476-J`** | **elimu.ai is small and its bus factor is unmeasured.** Top repo 41★; contributor count, release cadence and funding were not examined this pass. "Most permissive platform on the shelf" is a licence statement, not a sustainability one. |
+| 🟡 **`Gap 476-K`** | **`bigbluebutton` has no root packaging file**, so its version election is unprobed and its multi-module tree unwalked — the only live foundation row with no election evidence of any kind. |
+
 ## 🆕 `p475` — `2026-10-27` — **🟢 THE VERTICAL SHELF NOW HAS A REGULATORY COLUMN, BECAUSE THE GRANT IS NO LONGER THE ONLY THING THAT DECIDES WHAT YOU CAN SHIP: Vietnam's Decision 33/2026/QĐ-TTg (in force 15 Aug 2026) and EU Annex III both classify AUTOMATED GRADING and BIOMETRIC PROCTORING as high-risk — so the same LMS feature is a conformity-assessment event in two regions and nothing in a third.**
 
 🔵 Gate posture unchanged (`Code from External`; session-local checks green). Grants below are the

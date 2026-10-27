@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p476` — `2026-10-27` — **🔴 THIS BASE HAS BEEN PUBLISHING A STALE ADDRESS FOR OPEN edX SINCE ITS EARLIEST PASSES: the project is `openedx/openedx-platform`, not `openedx/edx-platform`. The old address still serves git and raw — GitHub forwards renames transparently on both — so every prior pass's content was CORRECT while its link was WRONG. 🟢 `Gap 475-K` is closed: all ten foundation rows now carry a first-hand star count, and the tier is far smaller than the agent tier.**
+
+🔵 Gate posture unchanged from the agents shelf (`Code from External`; `make hooks` not attempted;
+session-local checks green). Grants and metadata are the first-hand reads in
+[`evidence/grant-payload.2026-10-27-p476.tsv`](../evidence/grant-payload.2026-10-27-p476.tsv) and
+[`evidence/version-election.2026-10-27-p476.tsv`](../evidence/version-election.2026-10-27-p476.tsv).
+
+---
+
+### 🔴 The address correction, and the new instrument that caught it
+
+🔵 `Gap 475-H` found a wrong address by **non-resolution** (`openeducat/openeducat` did not resolve at all).
+That instrument cannot catch a *rename*, because a renamed repository resolves perfectly at its old address.
+🟢 This pass caught one with a different instrument: **absence from the search index.**
+
+| channel | `openedx/edx-platform` (the carried address) | `openedx/openedx-platform` (the real one) |
+|---|---|---|
+| `git ls-remote --symref` | 🟢 resolves — `master` · `03698e2b6ff4` | 🟢 resolves — `master` · `03698e2b6ff4` |
+| `raw.githubusercontent.com` `master/LICENSE` | 🟢 200 — 35,136 B · `e12d78569742` | 🟢 200 — 35,136 B · `e12d78569742` |
+| authenticated search, `repo:` qualifier | 🔴 **Validation Failed** — *"the listed repositories cannot be searched"* | 🟢 returns the repo — **8,211★** |
+| `org:openedx edx-platform in:name` | 🔴 **0 results** | 🟢 returned as `openedx/openedx-platform` |
+
+🟢 **The proof the two addresses are one repository: identical HEAD and a byte-identical grant payload at
+both**, and `e12d78569742` is the exact digest `p475` recorded. 🔴 **The proof the carried address is stale:**
+git and raw forward renames silently, the search index does not. An `org:openedx` listing returns 175
+repositories and the platform is in it under the **`openedx-platform`** name only.
+
+🔵 **This generalises into a cheap, repeatable check, and it was run as a sweep this pass:** every address on
+the agents and foundation shelves was put through the `repo:` qualifier. **22 addresses swept, exactly 1
+stale.** A repository that resolves on git but is unsearchable has been renamed; a repository that resolves
+on neither is gone. 🔴 Neither `curl -sI` (blocked, `Gap 472-A`) nor `ls-remote` can distinguish these, which
+is why two passes missed this one.
+
+### 🟢 The foundation tier — 10 real rows, every grant and every star read first-hand
+
+🔵 `★` read `2026-10-27` from the authenticated channel. **Default branches re-resolved this pass: all ten
+match `p475`.** 🟡 **HEADs are a different matter — `sakaiproject/sakai` moved** from `849cc0d9f991` to
+`9962d2bc808b` between the two passes. Its grant was re-fetched at the new HEAD and is **unchanged**
+(`master/LICENSE` · 11,120 B · `0688f62d04f1`), so the row below carries the **new** HEAD and a grant
+verified against it. The other nine HEADs reproduce `p475` exactly.
+
+| repo | ★ (first-hand) | default branch · HEAD | grant path · bytes · digest | grant read | version election (`p476`) | build-on-able |
+|---|---|---|---|---|---|---|
+| [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 9,255 | `v4.0.x-develop` · `4eabedfb8045` | `…/LICENSE` · 7,652 B · `e3a994d82e64` | **LGPL-3.0** | not probed (no root packaging file) | 🟡 weak copyleft |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 8,211 | `master` · `03698e2b6ff4` | `master/LICENSE` · 35,136 B · `e12d78569742` | **AGPL-3.0** | 🔴 **UNREADABLE, all channels** | 🔴 network copyleft |
+| [moodle/moodle](https://github.com/moodle/moodle) | 7,550 | `main` · `46c042e7da65` | `main/COPYING.txt` · 35,147 B · `8ceb4b9ee5ad` | **GPL-3.0** | 🟢 **`GPL-3.0-or-later` elected** (2 channels) | 🔴 copyleft |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 6,890 | `master` · `1c9f0bb8013e` | `master/LICENSE` · 34,520 B · `57c8ff33c9c0` | **AGPL-3.0** | 🟡 bare id, no election | 🔴 network copyleft |
+| [frappe/lms](https://github.com/frappe/lms) | 3,351 | `develop` · `11b6244724b7` | `develop/license.txt` · 33,893 B · `db1a87ba81e8` | **AGPL-3.0** | 🟢 **`AGPL-3.0-or-later` elected** (1 channel) | 🔴 network copyleft |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 1,240 | `master` · `9962d2bc808b` | `master/LICENSE` · 11,120 B · `0688f62d04f1` | **ECL-2.0** | 🟢 `pom.xml` agrees with payload | 🟢 **YES** (narrowed patent grant, `p474`) |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 1,162 | `develop` · `f72936bd41e5` | `develop/LICENSE` · 1,097 B · `3c056b34a476` | **MIT** | 🟢 `package.json` agrees with payload | 🟢 **YES** |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 899 | `19.0` · `46a5d7d40082` | `19.0/LICENSE` · 8,241 B · `528f84036800` | **LGPL-3.0** | 🟢 **`LGPL-3.0-or-later` elected** (187 of 209 files) | 🟡 weak copyleft |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 448 | `master` · `aac489d1d429` | `master/LICENSE` · 10,982 B · `6dbc5b605ed0` | **Apache-2.0** | `pom.xml` carries no extractable licence name | 🟢 **YES** |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | 152 | `master` · `1e21b7a2da4a` | `master/LICENSE.txt` · 35,146 B · `c53a65c2fd56` | **GPL-3.0** | 🟡 bare id, no election | 🔴 copyleft |
+
+🔴 **The tier is 8-of-10 copyleft, unchanged from `p475` — reading the elections did not make any row more
+permissive.** What the elections changed is the *shape* of the copyleft: three rows are now known to be
+`or-later` (a downstream user may move to a future GPL/AGPL/LGPL), two carry bare deprecated ids, and
+Open edX's is unrecorded anywhere reachable.
+
+### 🟢 A structural fact `Gap 475-K` was blocking, now measurable
+
+| tier | total ★ | rows |
+|---|---|---|
+| all ten foundation platforms combined | **39,158** | 10 |
+| `HKUDS/DeepTutor` alone | **44,531** | 1 |
+
+🟢 **One education-AI agent outstars the entire open-source education platform tier by 1.14×.** 🔴 **Stars
+measure developer attention, not deployment**, and this comparison is the clearest available proof: Moodle
+has 7,550★ and runs a large share of the world's institutional LMS installs, while DeepTutor has 44,531★ and
+is ten months old. 🔵 For a studio the inversion is the point — the platforms a client already runs are
+*under*-represented in open-source attention, and the agents are *over*-represented relative to installed
+base. Neither number is a demand signal on its own.
+
+### 🔴 Gaps this pass registers
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 476-E`** | **Every other address in retained history is unswept.** 22 addresses on the two live shelves were put through the rename detector; the hundreds of addresses in history below were not. Given a 1-in-22 hit rate on the *current* shelves, history likely carries more stale addresses, and nothing here has measured how many. |
+| 🔴 **`Gap 476-F`** | **`Gap 475-J` is only partly answered.** `p475` graded 9 of 10 foundation rows `WHOLE_WORK` by assumption. This pass scope-probed exactly one further repo (`openeducat_erp`, by clone) and read packaging metadata for four more; **`bigbluebutton` was not scope-probed at all** (no root packaging file found), and seven rows still have no depth probe. The `SPLIT_SCOPE` hit rate remains 1 of 2 examined. |
+| 🟡 **`Gap 476-G`** | **`OpenOLAT`'s `pom.xml` yielded no licence name** to the extractor used here, so its Apache-2.0 is payload-only and its election is unprobed. The extractor, not the project, is the likely limitation — a Maven POM can declare the licence in a parent POM this pass did not follow. |
+| 🟢 **`Gap 475-K` closed** | All ten rows carry a first-hand star count, read `2026-10-27`. |
+
 ## 🆕 `p475` — `2026-10-27` — **🔴 THE EDUCATION FOUNDATION TIER IS 8-OF-10 COPYLEFT WHEN YOU READ THE PAYLOADS INSTEAD OF THE BADGES, and the two permissive exceptions are the two smallest. 🟢 Every grant below was fetched, written to a file and measured this pass; two of them had been readable all along at filenames this base's probe never asked for.**
 
 🔵 Same gate posture as the agents shelf: `make hooks` **not attempted** (`Code from External`);

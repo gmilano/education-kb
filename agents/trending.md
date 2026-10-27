@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p476` — `2026-10-27` — **🔴 NOTHING NEW ARRIVED AT THE TOP OF THIS SHELF THIS WINDOW, AND THAT IS A MEASUREMENT, NOT A SILENCE: zero education-AI repositories created since 1 Aug 2026 have reached 100★ (n=0, measured), and the only new ≥500★ entrant in the `education`+`ai` topic intersection is an ESP32 sibling of a row this base already carries. 🟢 The first measured star deltas in this base's history are below.**
+
+🔵 Append-only shelf. This section is prepended; everything below it is retained history.
+
+### 🔴 The declared nil — the queries that returned nothing, written down
+
+🔵 `Gap 475-F` stands: GitHub's own Trending **page** is still unreachable (the authenticated search channel
+has no trending endpoint, and the HTML page is not retrievable through the proxy on `Gap 472-A`'s evidence).
+So "trending" here remains a star **level** plus a creation date, not a star velocity — `Gap 475-E` is only
+half-closed. 🟢 What this pass can do that no prior pass could: say precisely what the discovery queries
+returned, including when the answer was zero.
+
+| query run on the authenticated channel | result | reading |
+|---|---|---|
+| `education AI tutor created:>2026-08-01 stars:>=100` | 🔴 **0 repositories** | No education-AI project created in the last ~12 weeks has reached 100★. The window produced no new entrant at that threshold at all. |
+| `topic:education topic:ai pushed:>2026-10-01 stars:>=500` | **5 repositories** | 4 of the 5 are already on the agents shelf (Echo Loop, penecho, LearnHouse, PageLM). Exactly **one** was new to this base. |
+| `repo:` sweep over all 13 agent-shelf addresses | **12 of 12 resolved** (13th measured separately) | No stale or renamed address anywhere in the agent tier. |
+
+🔵 **An informed nil is worth recording because silence and coverage look identical.** The absence above is
+consistent with what the agents shelf measured independently: of 13 rows, **9 did not move by a single star**
+in the re-read, and 95.7 % of all movement was one repository.
+
+### 🟢 The one new entrant, grant read first-hand before publication
+
+| repo | ★ (first-hand) | created | grant (read first-hand) | why it is on this shelf |
+|---|---|---|---|---|
+| [PetoiCamp/OpenCatEsp32-Quadruped-Robot](https://github.com/PetoiCamp/OpenCatEsp32-Quadruped-Robot) | 515 | 2021-02-19 | **MIT** · 1,069 B · `2b8d26b3aa82` | Only repo ≥500★ in the `education`+`ai` topic intersection not already carried. 🔴 **Not a new project** — an ESP32 port of `OpenCat-Quadruped-Robot` (5,511★), from the same org, created 2021. It is new *to this base*, not new *to the world*. |
+
+🔴 **Named as an address, not sold as a trend.** A 2021 repository surfacing in a 2026 trending query is an
+artefact of this base's own coverage having been incomplete, and `Gap 475-D`'s question — whether a hardware
+robotics framework belongs on an education-AI shelf at all — applies to this row twice over.
+
+### 🟢 First measured star deltas in this base's history
+
+🔵 Full snapshot: [`evidence/star-snapshot.2026-10-27-p476.tsv`](../evidence/star-snapshot.2026-10-27-p476.tsv).
+🔴 The interval is **the same calendar day** as `p475`, so these are not weekly figures and not a velocity.
+
+| repo | `p475` ★ | `p476` ★ | Δ | lifetime ★/day |
+|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 44,441 | **44,531** | **+90** | 147.0 over 303 days |
+| [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | 4,522 | 4,524 | +2 | 26.2 over 173 days |
+| [penecho/penecho](https://github.com/penecho/penecho) | 2,503 | 2,504 | +1 | 23.8 over 105 days |
+| [PetoiCamp/OpenCat-Quadruped-Robot](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | 5,510 | 5,511 | +1 | 2.6 over 2,123 days |
+| 9 further rows (LearnHouse, PageLM, antivibe, kaobuddy, mini-nanoGPT, ai-shifu, AI Video Tutorial Gen, EduPintarIPAS, LuyenChuTieuHoc) | — | unchanged | **0** | see evidence file |
+
+🟢 **The useful finding is the concentration, not the magnitude.** +90 of +94 total movement is one
+repository; nine of thirteen rows did not move at all. 🔵 For a studio this is the difference between "the
+education-AI agent space is growing" and "one project is growing and the rest of the shelf is flat" — and
+only the second statement is supported by measurement.
+
+### 🟢 The supply census gained a region this window — Swahili, run for the first time
+
+🔵 Full census and method: [`evidence/accent-control.2026-10-27-p476.tsv`](../evidence/accent-control.2026-10-27-p476.tsv)
+and `intel/market.md` below. The Swahili leg (`elimu`, n=4) is the first African in-language supply leg this
+base has ever run, and unlike the Arabic leg it returned **real education software**, not incidental matches:
+the `elimu-ai` organisation, 66 repositories, **entirely MIT**, carried onto the verticals shelf this pass.
+
 ## 🆕 `p475` — `2026-10-27` — **🔴 The new education-AI tier that appeared this window is copyleft: the three highest-starred education-AI repos created or surfaced since `p470` (Echo Loop 4,522★, penecho 2,503★, LearnHouse 2,424★) are ALL AGPL-3.0, read first-hand. 🟢 And the APAC supply that `Gap 474-F` could only find by accident is now found on purpose — in-language.**
 
 🔵 Append-only shelf. This section is prepended; everything below it is retained history.

@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p476` — `2026-10-27` — **🔴 A RENAMED REPOSITORY IS INVISIBLE TO EVERY PROBE THIS BASE OWNS EXCEPT ONE: git and raw forward a rename silently and answer 200 at the dead address, so `ls-remote` and payload digests both say "fine". Only absence from the SEARCH INDEX reveals it — and that is how `openedx/edx-platform` was caught after 400+ passes. 🟢 22 addresses swept, exactly 1 stale.**
+
+🔵 Append-only shelf. This section is prepended; everything below it is retained history.
+
+### 🔴 The rename detector, stated so any later pass can re-run it
+
+🔵 `p475` widened the grant probe from 5 filename paths to 10 and closed a *filename* blind spot. This pass
+closes a different one: an **address** blind spot that no filename width can reach.
+
+| probe | renamed repo (old address) | deleted repo | reading |
+|---|---|---|---|
+| `git ls-remote --symref` | 🔴 **200, correct HEAD** | resolves nothing | cannot distinguish rename from health |
+| `raw.githubusercontent.com` payload | 🔴 **200, byte-identical grant** | 404 | cannot distinguish rename from health |
+| `curl -sI https://github.com/<repo>` | 🔴 unusable — proxy answers `200 Connection Established` (`Gap 472-A`) | same | no signal at all |
+| `api.github.com/repos/<repo>` | 🔴 unusable — **HTTP 403** for every non-session repo | same | measured this pass; the REST channel is closed here |
+| **authenticated search, `repo:` qualifier** | 🟢 **`Validation Failed`** | `Validation Failed` | 🟢 **the only probe that fires** |
+
+🔴 **The failure mode this creates is the dangerous kind: a correct grant at a wrong address.** Open edX's
+payload digest `e12d78569742` reproduced exactly across passes, so every integrity control this base runs
+said the row was healthy. The row was healthy. The *link a studio would click* was not.
+
+🟡 **The detector has a known false-positive mode and it must be controlled for.** `Validation Failed` also
+fires for a private repo, a deleted repo and a typo. The confirmation is positive, not negative: search the
+owning org and find the repository under its current name — `org:openedx` returned 175 repositories with the
+platform among them as **`openedx-platform`**, 8,211★. Without that second step the probe says only
+"something is wrong here".
+
+### 🟢 Sweep result, all 22 live addresses
+
+| shelf | addresses swept | stale found |
+|---|---|---|
+| agents (13 rows) | 13 | **0** |
+| foundations (10 rows) | 10 | **1** — `openedx/edx-platform` → `openedx/openedx-platform` |
+| 🔵 overlap counted once | 22 distinct | **1** |
+
+🔵 **A 1-in-22 hit rate on addresses that have been republished every pass for months.** `Gap 476-E` records
+that retained history below is unswept.
+
+### 🟢 Discovery this window, including what returned nothing
+
+| query | result |
+|---|---|
+| `education AI tutor created:>2026-08-01 stars:>=100` | 🔴 **0 repositories** — no new education-AI project in ~12 weeks has reached 100★ |
+| `topic:education topic:ai pushed:>2026-10-01 stars:>=500` | 5; one new to this base — [PetoiCamp/OpenCatEsp32-Quadruped-Robot](https://github.com/PetoiCamp/OpenCatEsp32-Quadruped-Robot), **MIT** · 1,069 B · `2b8d26b3aa82`, 515★, created 2021 |
+| `elimu stars:>=5` (Swahili, **first African leg ever run here**) | 🟢 4 — surfaced the `elimu-ai` org, **66 repositories, all MIT**; carried to the verticals shelf |
+| `تعليم stars:>=5` (Arabic) | 4 — **reproduces `p475`'s n=4 exactly**; top hit is a cyber-security lab, confirming `p475`'s "zero education software" reading |
+| `pendidikan stars:>=5` (Indonesian) | 8 |
+
+### 🟢 The African stack, grants read first-hand before publication
+
+🔵 Addresses resolved by `ls-remote`; grants fetched, written to file, measured. Full rows in
+[`evidence/grant-payload.2026-10-27-p476.tsv`](../evidence/grant-payload.2026-10-27-p476.tsv).
+
+| repo | ★ | grant (read first-hand) | what it is |
+|---|---|---|---|
+| [elimu-ai/webapp](https://github.com/elimu-ai/webapp) | 41 | **MIT** · 1,065 B · `45fc137a7066` | Java/Spring CMS + REST API hosting Android apps and OER content — the platform tier |
+| [elimu-ai/appstore](https://github.com/elimu-ai/appstore) | 29 | **MIT** · 1,065 B · `45fc137a7066` | Kotlin Android client that downloads/installs/updates APKs from the platform |
+| [elimu-ai/ml-authentication](https://github.com/elimu-ai/ml-authentication) | 16 | **MIT** · 1,065 B · `203d7d837ceb` | 🔴 Android **face recognition to authenticate the current student** — biometric |
+| [elimu-ai/launcher](https://github.com/elimu-ai/launcher) | 9 | **MIT** · 1,065 B · `45fc137a7066` | Custom Android launcher giving a fixed instructional path; EGRA/EGMA literacy+numeracy |
+| [elimu-ai/ml-storybook-reading-level](https://github.com/elimu-ai/ml-storybook-reading-level) | 8 | **MIT** · 1,065 B · `6af12447a42c` | Python/TensorFlow model predicting a storybook's reading level; pushed 2026-10-26 |
+| [elimu-ai/model](https://github.com/elimu-ai/model) | 4 | **MIT** · 1,065 B · `45fc137a7066` | Shared Java library between webapp and the Android apps |
+| [mwakidenis/Elimu-Sasa](https://github.com/mwakidenis/Elimu-Sasa) | 15 | 🔴 **UNGRANTED** (10 root paths probed) | Kenyan-curriculum online tutoring platform; no grant at any probed path |
+
+🟢 **A third cause of digest divergence at identical byte length, measured and diffed.** `p475` found
+line-wrapping (same length, same terms, different digest). Here three MIT payloads are all **1,065 B** in
+three digest groups, and the entire difference is the **copyright year** — `2020` / `2022` / `2024`, same
+holder `elimu.ai`, confirmed by a one-line `diff`. 🔵 So digest divergence now has two measured innocent
+causes, and a control built on digests alone will keep raising false alarms on both.
+
 ## 🆕 `p475` — `2026-10-27` — **🔴 A SHORT PROBE PATH PUBLISHES A GRANTED REPO AS UNGRANTED: `moodle/moodle` and `frappe/lms` BOTH read `NO_GRANT` on a 5-path root probe and BOTH resolved on a 10-path probe. Moodle's GPL-3.0 sits at `COPYING.txt` and Frappe LMS's AGPL-3.0 at `license.txt` — two filenames the shorter probe never asked for.**
 
 🔵 Append-only shelf. This section is prepended; everything below it is retained history.

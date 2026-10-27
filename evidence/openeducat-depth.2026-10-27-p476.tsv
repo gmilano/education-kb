@@ -1,0 +1,23 @@
+# p476 depth probe of openeducat/openeducat_erp, 2026-10-27. Closes Gap 475-N (SPLIT_SCOPE declared but not
+# enumerated) and addresses Gap 475-G's depth blind spot. Instrument: shallow clone (git clone --depth 1) at
+# HEAD 46a5d7d400820d471b67b8c019997bfa5d3c873e, which equals the ls-remote HEAD read on the raw channel --
+# two independent channels agreeing on the same HEAD. The GitHub REST API is 403 for non-session repos here,
+# so the tree could not be walked over HTTP; the clone is what made depth reachable.
+# FINDING: SPLIT_SCOPE is DECLARED in the root payload but NOT INSTANTIATED anywhere in the tree.
+# Licence files at ANY depth in the 17 MB tree: exactly 1 (the root LICENSE, 8241 B, digest 528f84036800,
+# byte- and digest-identical to p475's read). Modules carrying terms other than LGPL-3: 0 of 14.
+module	declared_license	module_version	note
+openeducat_activity	LGPL-3	19.0.1.0	
+openeducat_admission	LGPL-3	19.0.1.0	p475 called this the highest-risk module (admissions scoring). Its terms are LGPL-3, same as every other.
+openeducat_assignment	LGPL-3	19.0.1.0	
+openeducat_attendance	LGPL-3	19.0.1.0	
+openeducat_classroom	LGPL-3	19.0.1.0	
+openeducat_core	LGPL-3	19.0.1.0	
+openeducat_erp	LGPL-3	19.0.1.0	
+openeducat_exam	LGPL-3	19.0.1.0	
+openeducat_facility	LGPL-3	19.0.1.0	
+openeducat_fees	LGPL-3	19.0.1.0	
+openeducat_library	LGPL-3	19.0.1.0	
+openeducat_parent	LGPL-3	19.0.1.0	
+openeducat_timetable	LGPL-3	19.0.1.1.0	version string is malformed (four dot-separated groups where every sibling has three)
+theme_web_openeducat	LGPL-3	19.0.1.0	

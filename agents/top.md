@@ -4,6 +4,166 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p476` — `2026-10-27` — **🟢 `Gap 475-A` IS ANSWERED: the version election IS readable, it lives in packaging metadata and per-source-file notices exactly as `p475` predicted — and on one row it is the OPPOSITE of what the payload reader concluded. `penecho/penecho` elects `AGPL-3.0-only`. 🔴 But the election is readable on only 4 of 8 GPL-family repos; for the other 4 it is not merely unread, it is UNREADABLE on every channel this base can reach.**
+
+🔵 **Gate posture, unchanged from `p475` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is
+cloned outside the harness repo and the harness refuses execution of code arriving in a clone
+(`Code from External`). **Nothing below is gate-attested.** Checks re-implemented in this session's own
+code, held outside the clone, and green: frontmatter keys and closed-vocabulary `region` on all eight
+shelves; every table checked for separator presence and pipe-count consistency, with **no header row
+published as data**; append-only preserved on both trending shelves and prepend-only on these; every
+address resolved first-hand by `git ls-remote --symref`; every grant and metadata file fetched from
+`raw.githubusercontent.com`, written to a file, and the **file** measured (`Gap 468-A`).
+
+🟢 **Cross-pass control reproduced exactly, seventh consecutive pass, measured this pass and not carried.**
+`HKUDS/DeepTutor` `main/LICENSE` **11,408 B · `cd2f54e1e506`** at HEAD **`a31d82624c27`** — byte-, digest-
+and HEAD-identical to `p470`–`p475`.
+
+🔴 **`Gap 472-A` honoured, not retried.** `curl -sI https://github.com/<repo>` still answers only the
+proxy's own `200 Connection Established`. 🔴 **New channel limit measured this pass:** `api.github.com` returns
+**HTTP 403** for every repository not attached to this session, so the REST tree endpoint is unavailable — this
+is why the depth probe below had to use a shallow clone instead.
+
+---
+
+### 🟢 The version-election reader `Gap 475-A` asked for, built and run on 8 GPL-family repos
+
+🔵 `p475` proved the licence **payload** carries no election (`any later version` appears 3× in every
+GPL-family payload as preamble and appendix boilerplate, 3 of 3) and named where the election actually
+lives: **per-source-file notices and packaging metadata**. This pass reads both. Evidence:
+[`evidence/version-election.2026-10-27-p476.tsv`](../evidence/version-election.2026-10-27-p476.tsv).
+
+| repo | 🔴 payload reader (`p475`) said | 🟢 packaging metadata, read first-hand | 🟢 per-source-file notice | verdict |
+|---|---|---|---|---|
+| [moodle/moodle](https://github.com/moodle/moodle) | `or-later` | `composer.json` → **`GPL-3.0-or-later`** | present, 3 of 3 files | 🟢 **`or-later` GENUINELY ELECTED** |
+| [frappe/lms](https://github.com/frappe/lms) | `or-later` | `package.json` → **`AGPL-3.0-or-later`** | none, 0 of 2 files | 🟢 **`or-later` ELECTED** (one channel only) |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | `or-later` | 14 × `__manifest__.py` → `LGPL-3` (bare) | present, **187 of 209** `.py` files | 🟢 **`or-later` ELECTED** (by source notice) |
+| [penecho/penecho](https://github.com/penecho/penecho) | `or-later` | `package.json` → **`AGPL-3.0-only`** | none | 🔴 **`only` ELECTED — reader REFUTED** |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | `or-later` | `package.json` → `AGPL-3.0` (bare) | none, 0 of 3 files | 🟡 bare id, **no election** |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | `or-later` | `composer.json` → `GPL-3.0` (bare) | none, 0 of 2 files | 🟡 bare id, **no election** |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | `or-later` | **no licence field** in `pyproject.toml` (48,283 B) or `package.json` | none, 0 of 5 files | 🔴 **UNREADABLE, all channels** |
+| [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | `or-later` | **no licence field** in `pubspec.yaml` | none, 0 of 2 files | 🔴 **UNREADABLE, all channels** |
+
+🔴 **Score the payload reader against measurement: right 3 of 8, wrong 1 of 8, unknowable 4 of 8.** The one
+it got wrong matters most — `penecho` declares `AGPL-3.0-only`, so a future AGPLv4 is **not** available to a
+downstream user, which is the exact opposite of the permission `or-later` implies. 🔵 `p475`'s instruction to
+read every GPL-family `or-later` cell as `VERSION_ELECTION_UNREAD` was right; this pass upgrades half of
+them to a measured grade and the other half to `UNREADABLE` — a stronger statement than `UNREAD`, because
+it says further reading on these channels will not help.
+
+🟡 **A bare SPDX id is not an election to `only`.** `AGPL-3.0` and `GPL-3.0` without a suffix are
+**deprecated** SPDX identifiers, deprecated precisely because they do not say which. Canvas and H5P are
+recorded as *no election*, not as `only`.
+
+🟢 **Two non-GPL controls run so the method cannot be accused of manufacturing signal:**
+`sakaiproject/sakai` `pom.xml` declares *Educational Community License, Version 2.0* and
+`learningequality/kolibri` `package.json` declares `MIT` — both agree with the payload already on the
+foundation shelf, and neither produced a spurious election.
+
+🟡 **A measurement caveat found in this pass's own first attempt.** The FSF notice **wraps across lines**
+(`…either version 3 of the` / `License, or (at your option) any later version`), so a single-line `grep`
+undercounts it — the first run of this reader scored openeducat `0 of 209` before the multi-line-aware
+re-grep scored it `187 of 209`. This is the same class of defect as `p475`'s line-wrap digest false
+negative, and any future reader on this channel must normalise whitespace before matching.
+
+### 🟢 `Gap 475-C` is closed — both unread grants read first-hand, and both are permissive
+
+| repo | grant path | bytes | digest12 | grant read | build-on-able |
+|---|---|---|---|---|---|
+| [PetoiCamp/OpenCat-Quadruped-Robot](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | `main/LICENSE` | 1,069 | `517ad70869fe` | **MIT** | 🟢 **YES** |
+| [ystemsrx/mini-nanoGPT](https://github.com/ystemsrx/mini-nanoGPT) | `master/LICENSE` | 1,063 | `703b1fc21029` | **MIT** | 🟢 **YES** |
+
+🟢 **Every row on this shelf now carries a first-hand grant. There are no `🟡 unread` rows left**, so for the
+first time this shelf's permissive census is complete rather than partial.
+
+### 🟢 `Gap 475-E`'s instrument now exists — the first per-pass star snapshot stored in this base
+
+🔵 `Gap 475-E`: *"this base has never stored a per-pass star snapshot it could difference."* It has one now:
+[`evidence/star-snapshot.2026-10-27-p476.tsv`](../evidence/star-snapshot.2026-10-27-p476.tsv), 13 rows.
+
+🔴 **It is a SAME-DAY delta and therefore NOT a velocity** — `p475` ran on this same calendar date. What it
+establishes is narrower and still worth having: **`p475`'s magnitudes are real.** Every one of the 13 rows
+reproduces within `+90`, which is what a correct first-hand read looks like, and nothing like the
+20,000-star error `p475` found in the carried values.
+
+| measure | value |
+|---|---|
+| rows re-measured | 13 of 13 |
+| rows that moved at all | **4** |
+| total movement across all 13 rows | **+94★** |
+| `HKUDS/DeepTutor` share of that movement | **+90★ = 95.7 %** |
+
+🔵 **Attention is concentrated in one row, not spread across a tier.** The honest velocity figure available
+today is a **lifetime average** (`stars ÷ days since creation`), recorded per row in the evidence file:
+DeepTutor **147.0★/day** over 303 days, Echo Loop **26.2★/day** over 173 days, penecho **23.8★/day** over
+105 days, antivibe **5.6★/day**, PageLM **4.9★/day**. 🔴 A lifetime average is not a current rate and must
+not be read as one; the next pass can finally difference a real interval against this snapshot.
+
+### 🟢 The live agent tier — 13 real rows, every grant first-hand, every star first-hand
+
+🔵 `grant_read` is the payload's own title, not a badge, an index or a roundup. `★` read
+`2026-10-27` from the authenticated channel, never web-relayed.
+
+| agent | repo | grant (read first-hand) | ★ (first-hand) | Δ vs `p475` | what it is | build-on-able |
+|---|---|---|---|---|---|---|
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 · 11,408 B · `cd2f54e1e506` | 44,531 | +90 | Lifelong personalised tutoring; multi-agent + RAG; CLI/WebSocket/SDK | 🟢 **YES** |
+| OpenCat | [PetoiCamp/OpenCat-Quadruped-Robot](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | **MIT** · 1,069 B · `517ad70869fe` | 5,511 | +1 | Quadruped robot framework for STEM/robotics education | 🟢 **YES** (newly graded) |
+| Echo Loop | [echo-loop/Echo-Loop](https://github.com/echo-loop/Echo-Loop) | AGPL-3.0 · 34,523 B · `0d96a4ff68ad` · 🔴 election unreadable | 4,524 | +2 | AI English listen/speak trainer; shadowing, spaced repetition (Flutter) | 🔴 no — network copyleft |
+| penecho | [penecho/penecho](https://github.com/penecho/penecho) | **AGPL-3.0-only** · 34,523 B · `0d96a4ff68ad` | 2,504 | +1 | Shared canvas for handwriting, equations, diagrams, spatial reasoning (Electron) | 🔴 no — network copyleft, **and no `or-later` escape** |
+| LearnHouse | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | AGPL-3.0 · 34,523 B · `8486a10c4393` | 2,424 | 0 | AI-powered headless learning platform (Python/React) | 🔴 no — network copyleft |
+| PageLM | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | **PageLM Community License** · `main/LICENSE.md` · 8,563 B · `c834209c5f33` | 2,049 | 0 | Open NotebookLM analogue: quizzes, flashcards, notes, podcasts | 🔴 **no — bespoke, non-commercial** |
+| antivibe | [mohi-devhub/antivibe](https://github.com/mohi-devhub/antivibe) | MIT · 1,065 B · `a9e5355735ea` | 1,129 | 0 | Turns AI-generated code into educational deep dives (agent skill) | 🟢 **YES** |
+| kaobuddy | [jin-zi-xuan/kaobuddy-pwa](https://github.com/jin-zi-xuan/kaobuddy-pwa) | 🔴 **UNGRANTED** (10 root paths probed) | 392 | 0 | Chinese-language exam-cram PWA, BYOK | 🔴 **no — no grant at all** |
+| mini-nanoGPT | [ystemsrx/mini-nanoGPT](https://github.com/ystemsrx/mini-nanoGPT) | **MIT** · 1,063 B · `703b1fc21029` | 384 | 0 | One-click pretrain+SFT teaching rig for LLM fundamentals | 🟢 **YES** (newly graded) |
+| ai-shifu | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | Apache-2.0 · `main/LICENSE.txt` · 11,342 B · `c00cbb6a47a7` | 329 | 0 | Script-driven teaching agent / teaching assistant | 🟢 **YES** |
+| AI Video Tutorial Gen | [AkshitIreddy/AI-Powered-Video-Tutorial-Generator](https://github.com/AkshitIreddy/AI-Powered-Video-Tutorial-Generator) | MIT · 1,070 B · `deffdff30dfd` | 316 | 0 | Illustrated video lessons, local models + cloud providers | 🟢 **YES** |
+| EduPintarIPAS | [RozhakDev/EduPintarIPAS](https://github.com/RozhakDev/EduPintarIPAS) | MIT · 1,092 B · `0fc419538e54` | 20 | 0 | Indonesian science chatbot for grade-6 pupils | 🟢 **YES** |
+| LuyenChuTieuHoc | [langmaninternet/LuyenChuTieuHoc](https://github.com/langmaninternet/LuyenChuTieuHoc) | 🔴 **UNGRANTED** (10 root paths probed) | 12 | 0 | Vietnamese primary handwriting sheets to MoET standard | 🔴 **no — no grant at all** |
+
+🟢 **Build-on-able: 7 of 13, and 13 of 13 are graded.** 🔴 The shape `p475` reported survives re-measurement:
+the three highest-starred *new* education-AI projects (Echo Loop, penecho, LearnHouse) are all network
+copyleft, two rows are ungranted outright, and both ungranted rows are APAC-origin. 🟢 What changed is the
+permissive side: the two newly-read grants are both MIT, so the permissive tier is larger than `p475` could
+state — but it grew by **reading**, not by anything happening in the ecosystem.
+
+### 🔴 Every grant above was re-fetched at TODAY's HEAD — and doing so reproduced `p475`'s short-probe finding against this pass's own first attempt
+
+🔵 `p475`'s digests were recorded earlier the same day. 🟡 **Eight of thirteen HEADs had nevertheless moved
+by the time this pass read them**, so carrying a digest forward — even by hours — is not the same as reading
+one. All thirteen were re-fetched at the HEAD resolved today.
+
+| what was re-measured | result |
+|---|---|
+| grants re-fetched at today's HEAD | **13 of 13** |
+| digests reproducing `p475` exactly | **11 of 11 previously recorded** — every one |
+| HEADs that moved between `p475` and `p476` | **8 of 13** (PageLM, ai-shifu, antivibe, kaobuddy, EduPintarIPAS, LuyenChuTieuHoc, AI Video Tutorial Gen, and Sakai on the foundation shelf) |
+| ungranted rows re-probed at their new HEADs | **2 of 2 — still ungranted** at 10 root paths |
+
+🔴 **The self-inflicted finding, recorded because it is the same defect `p475` documented and it caught this
+pass too.** The first re-read used a **one-path probe** (`LICENSE` only) and returned `HTTP 404` for
+`CaviraOSS/PageLM` and `ai-shifu/ai-shifu` — two repositories this base has published as granted for many
+passes. Both grants are present and intact; they simply are not at `LICENSE`:
+
+| repo | one-path probe (`LICENSE`) | where the grant actually is | digest |
+|---|---|---|---|
+| [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🔴 **404** | `main/LICENSE.md` · 8,563 B | `c834209c5f33` — reproduces `p475` |
+| [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | 🔴 **404** | `main/LICENSE.txt` · 11,342 B | `c00cbb6a47a7` — reproduces `p475` |
+
+🟢 **So `p475`'s widening from 5 paths to 10 is independently vindicated, by a pass that briefly regressed to
+1 and immediately published two false negatives.** 🔵 The grant **path** is now recorded in the table above
+for both rows, not just the bytes and digest — because the path is the part that breaks.
+
+### 🔴 Gaps this pass registers
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 476-A`** | **4 of 8 GPL-family repos have an UNREADABLE version election** (`openedx/openedx-platform`, `echo-loop/Echo-Loop` on every channel; `canvas-lms`, `h5p-php-library` carry bare deprecated ids). For these the question is not "has anyone read it" but "is it recorded anywhere" — and on packaging metadata, source notices and payload, it is not. Resolving them needs a channel this base does not have: release artefacts, `.spec`/distro packaging, or the maintainers. |
+| 🔴 **`Gap 476-B`** | **The `or-later` backfill across RETAINED HISTORY is still not done.** This pass graded 8 repos. Every other GPL-family `or-later` cell in history below remains `VERSION_ELECTION_UNREAD`, and `Gap 475-A`/`Gap 475-B` are therefore narrowed, not closed. |
+| 🟡 **`Gap 476-C`** | **`frappe/lms` and `penecho` elections rest on ONE channel each** (packaging metadata), with no corroborating source notice. Only `moodle` (metadata + 3 files) and `openeducat` (187 files) are corroborated across two channels. A single-channel election is a maintainer's declaration in one file, and a `package.json` licence field is routinely wrong in ways a `LICENSE` file is not. |
+| 🔴 **`Gap 476-D`** | **The star snapshot's delta is same-day and cannot measure velocity** (`Gap 475-E` is half-closed: the instrument exists, the time series does not). The lifetime-average rates published above are averages over 105–303 days and say nothing about this week. |
+| 🟡 **`Gap 475-D` carried forward unresolved** | **`PetoiCamp/OpenCat` is hardware-coupled** and its education relevance is STEM-kit, not AI-tutoring. Its grant is now read (MIT), so it is no longer *unread* — but whether a hardware framework belongs on an *agents* shelf is still unresolved, and this pass did not resolve it. |
+| 🔴 **`Gap 475-Y` carried forward untouched** | **38 malformed tables in RETAINED HISTORY** across the eight shelves (ragged pipe counts; one table with no separator row at `agents/top.md` line ~4990). All 38 predate `p475`. This pass's own tables are clean; **no history was repaired**, because rewriting history is what the append-only rule forbids and a separate corrections shelf has never been agreed. |
+
 ## 🆕 `p475` — `2026-10-27` — **🔴 THIS BASE GRADES `or-later` BY READING THE LICENCE PAYLOAD, AND THAT IS A UNIFORM FALSE POSITIVE: the stock GPL-family text carries "any later version" THREE TIMES in every payload measured (3 of 3), in the preamble and the how-to-apply appendix, regardless of what the project actually elected. 🔴 And the top row's magnitude was wrong by 20,000 stars — `HKUDS/DeepTutor` is `44,441★` first-hand, not the ~22k/~24k carried since `p54`.**
 
 🔵 **Gate posture, per `Gap 446-A`:** `make hooks` **not attempted** — the industry KB is cloned outside the

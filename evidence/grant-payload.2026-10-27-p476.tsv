@@ -1,0 +1,30 @@
+# p476 grants read first-hand, 2026-10-27. Every payload fetched from raw.githubusercontent.com at the
+# ls-remote-resolved HEAD, written to a file, and the FILE measured (Gap 468-A). 10 root paths probed per repo:
+# LICENSE, LICENSE.md, LICENSE.txt, COPYING, COPYING.txt, LICENCE, LICENCE.md, license, license.txt, LICENSE-MIT.
+repo	branch	head12	grant_path	bytes	digest12	grant_read	note
+PetoiCamp/OpenCat-Quadruped-Robot	main	24563ca2e021	LICENSE	1069	517ad70869fe	MIT	closes Gap 475-C: carried as "grant not read this pass" by p475
+ystemsrx/mini-nanoGPT	master	1b4765e06fe4	LICENSE	1063	703b1fc21029	MIT	closes Gap 475-C: carried as "grant not read this pass" by p475
+elimu-ai/webapp	main	ef266355c4fc	LICENSE	1065	45fc137a7066	MIT	Copyright (c) 2020 elimu.ai
+elimu-ai/appstore	main	65a7ab4e8d50	LICENSE	1065	45fc137a7066	MIT	Copyright (c) 2020 elimu.ai
+elimu-ai/launcher	main	b50a175a7056	LICENSE	1065	45fc137a7066	MIT	Copyright (c) 2020 elimu.ai
+elimu-ai/model	main	9b08c866a0bf	LICENSE	1065	45fc137a7066	MIT	Copyright (c) 2020 elimu.ai
+elimu-ai/ml-authentication	main	0a7a6bb02ab6	LICENSE	1065	203d7d837ceb	MIT	Copyright (c) 2022 elimu.ai -- digest differs from the 2020 group by the YEAR ONLY (diffed, one line)
+elimu-ai/ml-storybook-reading-level	main	4e3f897bc39d	LICENSE	1065	6af12447a42c	MIT	Copyright (c) 2024 elimu.ai -- digest differs by the YEAR ONLY
+PetoiCamp/OpenCatEsp32-Quadruped-Robot	main	f5aba6b9cb7e	LICENSE	1069	2b8d26b3aa82	MIT	ESP32 sibling of the OpenCat row; only new >=500-star entrant in the education+ai topic intersection
+mwakidenis/Elimu-Sasa	main	c1f9389e6955	NO_GRANT_10_PATHS	0	-	UNGRANTED	Kenyan-curriculum tutoring platform, 15 stars; no grant at any of 10 root paths
+# --- cross-pass controls reproduced this pass ---
+HKUDS/DeepTutor	main	a31d82624c27	main/LICENSE	11408	cd2f54e1e506	Apache-2.0	seventh consecutive pass byte-, digest- and HEAD-identical (p470-p476)
+openeducat/openeducat_erp	19.0	46a5d7d40082	19.0/LICENSE	8241	528f84036800	LGPL-3.0	byte- and digest-identical to p475
+openedx/openedx-platform	master	03698e2b6ff4	master/LICENSE	35136	e12d78569742	AGPL-3.0	digest reproduces p475 EXACTLY, but at the CORRECTED address (see repos/foundations.md)
+# --- agents-shelf re-reads at TODAY'S HEAD (8 of 13 HEADs had moved since p475; all digests reproduce) ---
+echo-loop/Echo-Loop	main	68334adab38a	main/LICENSE	34523	0d96a4ff68ad	AGPL-3.0	reproduces p475
+penecho/penecho	main	341e34d6cf29	main/LICENSE	34523	0d96a4ff68ad	AGPL-3.0	reproduces p475; election AGPL-3.0-only per package.json
+learnhouse/learnhouse	dev	2d75337273ac	dev/LICENSE	34523	8486a10c4393	AGPL-3.0	reproduces p475
+CaviraOSS/PageLM	main	a6646794661b	main/LICENSE.md	8563	c834209c5f33	PageLM Community License	HEAD MOVED. 1-path probe on `LICENSE` returned 404; grant is at LICENSE.md. Digest reproduces p475.
+ai-shifu/ai-shifu	main	e098392fef92	main/LICENSE.txt	11342	c00cbb6a47a7	Apache-2.0	HEAD MOVED. 1-path probe on `LICENSE` returned 404; grant is at LICENSE.txt. Digest reproduces p475.
+mohi-devhub/antivibe	main	9991d12ec52b	main/LICENSE	1065	a9e5355735ea	MIT	HEAD MOVED; digest reproduces p475
+AkshitIreddy/AI-Powered-Video-Tutorial-Generator	main	9c260890214d	main/LICENSE	1070	deffdff30dfd	MIT	HEAD MOVED; digest reproduces p475
+RozhakDev/EduPintarIPAS	main	e6d415f13662	main/LICENSE	1092	0fc419538e54	MIT	HEAD MOVED; digest reproduces p475
+sakaiproject/sakai	master	9962d2bc808b	master/LICENSE	11120	0688f62d04f1	ECL-2.0	HEAD MOVED from p475's 849cc0d9f991; grant UNCHANGED at the new HEAD
+jin-zi-xuan/kaobuddy-pwa	main	1526ab973dc3	NO_GRANT_10_PATHS	0	-	UNGRANTED	HEAD MOVED; re-probed at new HEAD, still ungranted
+langmaninternet/LuyenChuTieuHoc	master	0b6bc81bd988	NO_GRANT_10_PATHS	0	-	UNGRANTED	HEAD MOVED; re-probed at new HEAD, still ungranted
