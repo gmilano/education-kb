@@ -1,0 +1,16 @@
+# p477 search-channel calibration, 2026-10-27. Discovered while running the Gap 476-E sweep.
+# The authenticated search channel SILENTLY TRUNCATES a batched `repo:` query: it returns
+# incomplete_results=TRUE and a SHORT item list, with no error. A reader that does not check the flag
+# scores every missing address as stale. This is the false-"stale" mechanism, and it is a 15/20 error rate
+# on the one query that hit it. Batch size 10 did not truncate on any query this pass (9 of 9 complete).
+batch	qualifiers_requested	items_returned	total_count	incomplete_results	reading
+batch-00	20	19	19	FALSE	complete; the 1 missing address is genuinely absent (openedx/edx-platform)
+batch-01	20	1	5	TRUE	TRUNCATED - would have scored 15 live addresses as stale
+batch-01a	10	10	10	FALSE	complete; same addresses as the first half of batch-01, all live
+batch-01b	10	10	10	FALSE	complete; same addresses as the second half of batch-01, all live
+batch-02	20	20	20	FALSE	complete
+batch-03a	10	10	10	FALSE	complete
+batch-03b	10	9	9	FALSE	complete; missing address is a FORK, not stale
+batch-04a	10	10	10	FALSE	complete
+batch-06a	10	9	9	FALSE	complete; missing address is a genuine rename
+batch-08a	10	10	10	FALSE	complete

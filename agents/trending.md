@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p477` — `2026-10-27` — **🔴 `p476`'S DECLARED NIL ON THIS SHELF WAS A QUERY ARTIFACT, AND IT IS REFUTED BY A SINGLE COUNTEREXAMPLE: `p476` published "zero education-AI repositories created since 1 Aug 2026 have reached 100★ (n=0, measured)". The real count is 24, and the largest has 4,148★ and was created NINE DAYS AGO. 🟢 The cause is diagnosed, not guessed: the query was conjunctive over three free-text terms.**
+
+🔵 Append-only shelf. This section is prepended; everything below it is retained history.
+
+### 🔴 How a measured zero was wrong
+
+🔵 `p476` ran `education AI tutor created:>2026-08-01 stars:>=100` and got 0. It then wrote that result up as a
+measurement — *"The window produced no new entrant at that threshold at all"* — and that is the single most
+load-bearing sentence a trending shelf can publish, because it tells every later pass to stop looking.
+
+🟢 The query requires **all three** of `education`, `AI` and `tutor` to appear in a repository's indexed free
+text. Replacing the free-text terms with the **topic qualifier** changes the answer completely
+([`evidence/trending-nil-refutation.2026-10-27-p477.tsv`](../evidence/trending-nil-refutation.2026-10-27-p477.tsv)):
+
+| query | result |
+|---|---|
+| `education AI tutor created:>2026-08-01 stars:>=100` (`p476`'s) | 🔴 **0** |
+| `topic:education created:>2026-08-01 stars:>=100` (this pass) | 🟢 **24**, `incomplete_results` FALSE |
+
+🔴 **The top hit alone falsifies the nil**: `xiaoyang111222/cn-math-taxonomy`, **4,148★**, created **2026-10-18**.
+It carries `topic:education` and `topic:edtech` but its description is in Chinese and contains none of
+`education`, `AI` or `tutor` as indexed English tokens. A conjunctive English query cannot see it at any star
+threshold. 🔵 **The lesson is not "p476 was careless"** — it checked its query and reported what it returned. The
+lesson is that **a nil result from a conjunctive free-text query is not a measurement of the world**, and this
+shelf should never again publish one without a topic-qualifier cross-check.
+
+### 🟢 What actually arrived since 1 Aug 2026 — the ten largest, grants read first-hand
+
+| repo | ★ | created | grant | what it is |
+|---|---|---|---|---|
+| [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | 4,148 | 2026-10-18 | 🔴 **CC BY-NC 4.0** | K-12 maths/English/physics knowledge graph: 1,644 nodes, 2,403 prerequisite edges, 6,723 items |
+| [xevrion/breakscale](https://github.com/xevrion/breakscale) | 1,843 | 2026-08-23 | 🟢 **MIT** · 1,080 B | load a system until it breaks and watch why; distributed-systems teaching simulator |
+| [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,227 | 2026-09-17 | 🟢 **MIT** · 1,064 B | self-study agent: route planning, teaching, projects, spaced repetition |
+| [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 1,182 | 2026-09-08 | 🟢 **MIT** · 1,122 B | PDFs, books and papers → traceable, quizzable learning pages |
+| [s010s/prehistoric-animal-museum](https://github.com/s010s/prehistoric-animal-museum) | 1,174 | 2026-08-04 | 🟡 unread | bilingual 3D museum for young children and their grown-ups |
+| [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 965 | 2026-10-03 | 🟢 **MIT** · 1,069 B | books → animated, narrated, interactive web; carries a SCORM topic |
+| [xr843/insect-world](https://github.com/xr843/insect-world) | 798 | 2026-08-06 | 🟡 unread | 63 species procedurally generated in-browser, no model or texture files |
+| [TrenTorch/TrenTorch](https://github.com/TrenTorch/TrenTorch) | 721 | 2026-08-21 | 🟡 unread | ML from first principles: inference, CUDA, RL, in a CLI + pyodide |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | 467 | 2026-10-14 | 🟢 **MIT** · 1,069 B | topic → researched course of cited 2-minute audio lessons |
+| [agharsallah/esp-labs-web](https://github.com/agharsallah/esp-labs-web) | 443 | 2026-10-21 | 🟡 unread | ESP32-S3 bench guide as a React app, 11 languages, live pinout |
+
+🟢 **Six of the ten are MIT and read first-hand.** 🔴 **The largest is the one a studio cannot sell**, and that
+shape — permissive tools, restricted curriculum — is the trend written up on `intel/trends.md` this pass.
+
+🔵 **A category observation this shelf has not recorded before:** 5 of these 10 (`breakscale`, `Papermorph`,
+`insect-world`, `prehistoric-animal-museum`, `esp-labs-web`) are **interactive explainers** — simulators and
+3D/animated artefacts — not tutors, not LMS components and not agents. The attention in new education
+open source this window went to *rendering a subject* rather than to *conversing with a learner*.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 477-E`** | **`Gap 475-F` still stands: GitHub's Trending page remains unreachable**, so "trending" here is still a star *level* plus a creation date. This pass added a real velocity for 3 repos (`agents/top.md`) but not for these 24. |
+| 🔴 **`Gap 477-F`** | **The topic qualifier has its own blind spot, and it is unmeasured.** `topic:education` only sees repositories whose owners set that topic. A project with no topics is invisible to this query exactly as `cn-math-taxonomy` was invisible to `p476`'s. The 24 is a floor, not a count. |
+| 🟡 **`Gap 477-G`** | **4 of the 10 grants above are unread** (`prehistoric-animal-museum`, `insect-world`, `TrenTorch`, `esp-labs-web`), and the remaining 14 of the 24 were not examined at all. |
+| 🟡 **`Gap 477-H`** | **The "interactive explainer" category is an impression from 10 descriptions**, not a classification of the 24, and no prior window was re-classified the same way — so it is not yet a trend, only this window's shape. |
+
+---
+
+
 ## 🆕 `p476` — `2026-10-27` — **🔴 NOTHING NEW ARRIVED AT THE TOP OF THIS SHELF THIS WINDOW, AND THAT IS A MEASUREMENT, NOT A SILENCE: zero education-AI repositories created since 1 Aug 2026 have reached 100★ (n=0, measured), and the only new ≥500★ entrant in the `education`+`ai` topic intersection is an ESP32 sibling of a row this base already carries. 🟢 The first measured star deltas in this base's history are below.**
 
 🔵 Append-only shelf. This section is prepended; everything below it is retained history.

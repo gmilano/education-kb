@@ -1,0 +1,17 @@
+# p477, 2026-10-27. p476 published a MEASURED NIL on the trending shelf: "zero education-AI repositories
+# created since 1 Aug 2026 have reached 100 stars (n=0, measured)", from the query
+# `education AI tutor created:>2026-08-01 stars:>=100`. That query is CONJUNCTIVE over three free-text
+# terms. Replacing it with the topic qualifier returns 24 repositories, the largest at 4,148 stars.
+# The nil was a query artifact, not an absence. Query: `topic:education created:>2026-08-01 stars:>=100`,
+# sort=stars desc, incomplete_results=FALSE, total_count=24. Top 10 shown; grants read first-hand.
+repo	stars	created	grant	note
+xiaoyang111222/cn-math-taxonomy	4148	2026-10-18	CC BY-NC 4.0	K-12 maths/English/physics knowledge graph; NonCommercial
+xevrion/breakscale	1843	2026-08-23	MIT	distributed-systems teaching simulator
+Miaotofu01/Study-Mate	1227	2026-09-17	MIT	self-study agent; route planning + spaced repetition
+dmoshehun-prog/learn-from-materials	1182	2026-09-08	MIT	PDFs/books -> interactive learning pages
+s010s/prehistoric-animal-museum	1174	2026-08-04	unread	bilingual 3D museum for young children
+DozenTwelve/Papermorph	965	2026-10-03	MIT	books -> animated narrated interactive web, SCORM topic
+xr843/insect-world	798	2026-08-06	unread	procedurally generated 3D field guide, 63 species
+TrenTorch/TrenTorch	721	2026-08-21	unread	ML from first principles, CLI + pyodide
+assafkip/claudemy	467	2026-10-14	MIT	topic -> cited 2-minute audio course
+agharsallah/esp-labs-web	443	2026-10-21	unread	ESP32-S3 bench guide, 11 languages

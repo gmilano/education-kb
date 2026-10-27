@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p477` — `2026-10-27` — **🟢 BOTH REMAINING ELECTION GAPS ARE CLOSED, AND `Gap 476-G`'s CAUSE IS NOT THE ONE IT GUESSED: OpenOLAT has NO parent POM, its root POM DOES declare the licence, and p476's extractor failed because the project MISSPELLS its own licence name as `L6icense`. 🟢 BigBlueButton's election is found in a module `build.sbt` — a bare `LGPL-3.0`. 🔴 And the tier below the platforms turns out to be the opposite shape: 10 of 12 infrastructure repos are permissive while 8 of 11 platforms are copyleft.**
+
+🔵 Gate posture unchanged from the agents shelf (`Code from External`; `make hooks` not attempted;
+session-local checks green). Grants are the first-hand reads in
+[`evidence/grant-payload.2026-10-27-p477.tsv`](../evidence/grant-payload.2026-10-27-p477.tsv) (27 rows this
+pass); elections in
+[`evidence/version-election.2026-10-27-p477.tsv`](../evidence/version-election.2026-10-27-p477.tsv).
+
+---
+
+### 🟢 `Gap 476-G` closed — and the diagnosis is a typo in the project, not a limit in the reader
+
+🔵 `Gap 476-G` supposed two things: that the extractor was the limitation, and that *"a Maven POM can declare the
+licence in a parent POM this pass did not follow"*. 🔴 **Both are wrong**, and one `grep` settles it.
+
+| question | measured on `OpenOLAT/OpenOLAT` `master/pom.xml` (86,049 B) |
+|---|---|
+| is there a `<parent>` to follow? | 🔴 **`grep -c '<parent>'` → 0.** There is no parent POM. |
+| does the root POM declare a licence? | 🟢 **Yes** — a full `<licenses><license>` block with the Apache-2.0 URL. |
+| what is the declared `<name>`? | 🔴 **`Apache 2.0 Open Source L6icense`** — *sic*, digit `6` where the letter `l` belongs. |
+| is there an election to read? | 🟢 **N/A.** Apache-2.0 has no `or-later`/`only` concept. |
+
+🟢 **So the row was never unprobed — it was unmatchable.** Any extractor looking for the token `License` cannot
+match `L6icense`. 🔵 The practical lesson for this base's readers: **match on the licence URL, not the licence
+name**, because the URL is machine-generated and the name is typed by a human. OpenOLAT's
+`http://www.apache.org/licenses/LICENSE-2.0` was correct all along.
+
+### 🟢 `Gap 476-K` closed — BigBlueButton's election exists, one module deep
+
+🔵 `Gap 476-K`: *"`bigbluebutton` has no root packaging file, so its version election is unprobed — the only live
+foundation row with no election evidence of any kind."* 🟢 The premise checks out and the conclusion does not.
+
+| channel | result |
+|---|---|
+| root `build.gradle` · `build.sbt` · `pom.xml` · `package.json` | 🔴 **all 404** — `Gap 476-K`'s premise confirmed |
+| `LICENSE` payload (7,652 B) | **GNU LESSER GENERAL PUBLIC LICENSE Version 3** — names v3, silent on future versions |
+| 🟢 `bbb-common-web/build.sbt` line 99 | `licenses := Seq("LGPL-3.0" -> url(...))` — 🟡 **bare deprecated id, no election** |
+| per-source-file notice | 🔴 2 candidate paths probed, both 404 — path guessing failed (`api.github.com` is 403, so no tree listing) |
+
+🔵 **Tally moved:** the *"bare deprecated id, no election recorded"* bucket is now **3** — `canvas-lms`,
+`h5p-php-library` and **`bigbluebutton`** — and the *"unreadable on every channel"* bucket stays at 2
+(`openedx-platform`, `echo-loop/Echo-Loop`). OpenOLAT leaves the unprobed set as **N/A**, not unknown.
+
+### 🔴 The structural finding: the platforms are copyleft, the tier beneath them is not
+
+🔵 This base has always tabulated education platforms. It has never tabulated the **infrastructure and
+standards** tier those platforms sit on. Twelve such repos, every grant read first-hand this pass:
+
+| repo | ★ | grant (payload, first-hand) | bytes | role |
+|---|---|---|---|---|
+| [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | 8,360 | 🟢 **BSD-3-Clause** | 1,475 | multi-user notebook server — the CS-teaching backbone |
+| [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | 4,117 | 🟢 **MIT** | 1,079 | FSRS scheduler — the state of the art in spaced repetition |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | 1,374 | 🟢 **BSD-3-Clause** | 1,512 | assign and autograde notebooks |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 1,143 | Apache-2.0 (carried) | — | ERP/CRM substrate for institutional back office |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | 1,131 | 🔴 **AGPL-3.0** | 34,523 | the Docker Open edX distribution — *the* way Open edX is deployed |
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | 822 | 🟢 **MIT** | 1,091 | interactive exercises with automated feedback (TUM) |
+| [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 452 | 🟢 **MIT** | 1,066 | deep knowledge-tracing benchmark library |
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 373 | 🟢 **Apache-2.0** | 11,361 | LTI 1.3 tool provider — how anything plugs into an LMS |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 359 | 🟢 **MIT** | 1,072 | modern SCORM runtime (1.2 / 2004) |
+| [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | 355 | 🟢 **MIT** | 1,084 | source-code plagiarism detection |
+| [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) | 291 | 🟢 **MIT** | 1,132 | Bayesian Knowledge Tracing (UC Berkeley) |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 144 | 🟢 **Apache-2.0** | 11,357 | SQL Learning Record Store — xAPI storage |
+
+🟢 **10 of 12 are MIT / Apache-2.0 / BSD-3-Clause.** Set that against the platform tier, where 8 of 11 rows are
+GPL/AGPL/LGPL. 🔴 **The one trap in this tier is `overhangio/tutor` at AGPL-3.0** — and it is the component most
+likely to be reached for first, because it is how Open edX actually gets deployed.
+
+🔵 **What this changes for a studio:** the layer where a client's differentiating code lives — tracing, scheduling,
+grading, LTI plumbing, record storage — is permissive end to end. The copyleft sits in the *platform* and in the
+*deployment wrapper*, both of which are **deployed, not linked**. That is the licensing basis for every recipe on
+`compose/patterns.md`, and it is now measured rather than assumed.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 477-N`** | **No election was probed for any of the 12 new infrastructure rows.** Permissive grants make the `or-later` question moot for 10 of them, but `overhangio/tutor`'s AGPL-3.0 election is **unread**, and it is the one row in the tier where the answer would matter. |
+| 🔴 **`Gap 477-O`** | **`Gap 476-F` is still open: 7 platform rows have no depth probe.** This pass scope-probed none. The `SPLIT_SCOPE` hit rate remains 1 of 2 examined, and the 12 new rows were graded `WHOLE_WORK` by assumption — exactly the assumption `Gap 475-J` objected to. |
+| 🔴 **`Gap 477-P`** | **BigBlueButton's per-source-file notice is still unread**, so its election rests on one module's `build.sbt`. `Gap 476-C`'s objection — that a single-channel election is one declaration in one file, and a packaging licence field is routinely wrong in ways a `LICENSE` file is not — now applies to BBB too. |
+| 🟡 **`Gap 477-Q`** | **The 12 infrastructure rows carry no HEAD or digest**, unlike the platform rows above them. Their grants were read and measured; their addresses were resolved; but no byte-level control was stored, so next pass cannot difference them. |
+| 🟡 **`Gap 477-R`** | **"10 of 12 permissive vs 8 of 11 copyleft" compares two sets this base chose**, not two populations. The infrastructure tier was assembled this pass from addresses already in history; a differently drawn tier could give a different ratio. |
+
+---
+
+
 ## 🆕 `p476` — `2026-10-27` — **🔴 THIS BASE HAS BEEN PUBLISHING A STALE ADDRESS FOR OPEN edX SINCE ITS EARLIEST PASSES: the project is `openedx/openedx-platform`, not `openedx/edx-platform`. The old address still serves git and raw — GitHub forwards renames transparently on both — so every prior pass's content was CORRECT while its link was WRONG. 🟢 `Gap 475-K` is closed: all ten foundation rows now carry a first-hand star count, and the tier is far smaller than the agent tier.**
 
 🔵 Gate posture unchanged from the agents shelf (`Code from External`; `make hooks` not attempted;

@@ -1,0 +1,30 @@
+# p477 grant payloads, 2026-10-27. Each fetched from raw.githubusercontent.com to a FILE; the FILE measured.
+# "grant" is the licence NAME found inside the payload, not a repo-metadata field. UNNAMED = no SPDX-style
+# name line matched; those two were identified by hand and are recorded in licence-identification below.
+repo	branch	path	http	bytes	digest12	grant
+xiaoyang111222/cn-math-taxonomy	main	LICENSE	200	19347	41003d4a7474	UNNAMED
+THU-MAIC/OpenMAIC	main	LICENSE	200	1065	ba2525637432	MIT License
+withmarbleapp/os-taxonomy	main	LICENSE	200	25289	77d2692c3d64	UNNAMED
+virgiliojr94/book-to-skill	master	LICENSE.md	200	1068	be9b04bccfb4	MIT License
+Miaotofu01/Study-Mate	main	LICENSE	200	1064	dc1997d82189	MIT License
+sitor-ai/frametell	main	LICENSE	200	34523	0d96a4ff68ad	GNU AFFERO GENERAL PUBLIC LICENSE
+LibreChat-AI/LibreChat	main	LICENSE	200	1066	1ce5c9d51e5a	MIT License
+elimu-ai/ml-authentication	main	LICENSE	200	1065	203d7d837ceb	MIT License
+bigbluebutton/bigbluebutton	v4.0.x-develop	LICENSE	200	7652	e3a994d82e64	GNU LESSER GENERAL PUBLIC LICENSE
+OpenOLAT/OpenOLAT	master	LICENSE	200	10982	6dbc5b605ed0	Apache License
+dmoshehun-prog/learn-from-materials	main	LICENSE.md	200	1122	15ce43afa44a	MIT License
+assafkip/claudemy	main	LICENSE	200	1069	262b47ee1fff	MIT License
+DozenTwelve/Papermorph	main	LICENSE	200	1069	41857092247a	MIT License
+xevrion/breakscale	main	LICENSE	200	1080	33ea9e6b8b96	MIT License
+jupyterhub/jupyterhub	main	LICENSE	1475	7069c7e8d60e	Copyright 2014-, Jupyter Development Team
+open-spaced-repetition/fsrs4anki	main	LICENSE	1079	2ec9e6e61ed8	MIT License
+overhangio/tutor	release	LICENSE.txt	34523	0d96a4ff68ad	GNU AFFERO GENERAL PUBLIC LICENSE
+jupyter/nbgrader	main	LICENSE	1512	3a83d5b8e22c	Copyright (c) 2014 Project Jupyter ContributorsAll righ
+ls1intum/Artemis	develop	LICENSE	1091	63a0a2b4d6d9	MIT License
+jcputney/scorm-again	master	LICENSE	1072	383b85b370e8	MIT License
+Cvmcosta/ltijs	master	LICENSE	11361	d5fcb264ff39	Apache License
+yetanalytics/lrsql	main	LICENSE	11357	c71d239df917	Apache License
+pykt-team/pykt-toolkit	main	LICENSE	1066	f5f955194636	MIT License
+CAHLR/pyBKT	master	LICENSE	1132	ad0c7a38bf01	MIT License
+dodona-edu/dolos	main	LICENSE	1084	881163366572	MIT License
+oppia/oppia	develop	LICENSE	11358	cfc7749b96f6	Apache License

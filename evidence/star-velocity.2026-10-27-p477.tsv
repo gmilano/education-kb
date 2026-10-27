@@ -1,0 +1,16 @@
+# p477 star velocity, 2026-10-27. Gap 476-D asked for an interval long enough to be a velocity rather than a
+# same-day delta. Method: TWO first-hand reads of the SAME channel (authenticated search, repo: qualifier)
+# at two times recorded by this pass, so both endpoints are ours and the interval is known exactly.
+# t1 = 2026-10-27T09:44:26Z, t2 = 2026-10-27T09:49:47Z, interval = 321 s = 5.35 min.
+# CAUTION: these are small event counts. A Poisson 95% interval on 8 events is roughly 3.5-15.8, so the
+# per-hour figure for DeepTutor is 47-177/h. The SIGN is reliable; the magnitude is one decimal place at best.
+repo	stars_t1	stars_t2	delta	interval_min	stars_per_hour	lifetime_avg_per_day	implied_per_day	ratio_to_lifetime
+HKUDS/DeepTutor	44630	44638	+8	5.35	89.7	147.0	2152	14.6x
+THU-MAIC/OpenMAIC	41603	41603	0	5.35	0.0	n/a	0	n/a
+xiaoyang111222/cn-math-taxonomy	4147	4148	+1	5.35	11.2	460.9	269	0.6x
+#
+# Cross-check against p476's PUBLISHED figure (different method, longer interval, weaker because p476's own
+# read time inside its pass is unknown; its commit at 09:07:27Z bounds the interval at >= 42.3 min):
+# HKUDS/DeepTutor  p476=44531 -> p477(t2)=44638  delta=+107  interval >= 42.3 min  =>  rate <= 152/h
+# The two methods agree on order of magnitude (90/h direct, <=152/h bound). Both say the CURRENT rate is
+# roughly an order of magnitude above the 147/day lifetime average, i.e. this repo is still accelerating.

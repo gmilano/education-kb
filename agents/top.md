@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p477` — `2026-10-27` — **🟢 `Gap 476-D` IS CLOSED: this base now has a REAL star velocity, measured between two of its own timestamped reads rather than inferred from a same-day delta — and `HKUDS/DeepTutor` is running at roughly 14× its own lifetime average, i.e. still accelerating at 44.6k★. 🔴 And the pass's commercial finding is on the data tier, not the agent tier: the two largest new education DATA repositories are CC BY-NC and ODbL, so the code is permissive and the curriculum is not.**
+
+🔵 **Gate posture, unchanged from `p475`–`p476` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is
+cloned outside the harness repo and the harness refuses execution of code arriving in a clone
+(`Code from External`). **Nothing below is gate-attested.** Checks re-implemented in this session's own code,
+held outside the clone, and green: frontmatter keys and closed-vocabulary `region` on all eight shelves; every
+table checked for separator presence and pipe-count consistency, with **no header row published as data**;
+append-only preserved on both trending shelves and prepend-only on these; every grant fetched from
+`raw.githubusercontent.com`, written to a file, and the **file** measured (`Gap 468-A`).
+
+🔴 **`Gap 472-A` honoured, not retried.** `curl -sI https://github.com/<repo>` still answers only the proxy's own
+`200 Connection Established`, and `api.github.com` still returns **HTTP 403** for every repository not attached to
+this session — re-measured this pass on `/repos/HKUDS/DeepTutor` and on a `stargazers` call with the
+`star+json` media type, which is why velocity had to be built from two search-channel reads rather than from
+starred-at timestamps.
+
+---
+
+### 🟢 `Gap 476-D` closed — a velocity, with both endpoints owned by this pass
+
+🔵 `Gap 476-D`: *"The star snapshot's delta is same-day and cannot measure velocity."* The flaw was that `p476`
+differenced its own read against a figure **`p475` had published**, so the interval was unknown. This pass read
+the same channel **twice, 321 seconds apart, recording both times**
+([`evidence/star-velocity.2026-10-27-p477.tsv`](../evidence/star-velocity.2026-10-27-p477.tsv)).
+
+| repo | `t1` 09:44:26Z | `t2` 09:49:47Z | Δ | implied ★/h | lifetime avg ★/day | implied ★/day | ratio |
+|---|---|---|---|---|---|---|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 44,630 | **44,638** | **+8** | 89.7 | 147.0 | 2,152 | 🟢 **14.6×** |
+| [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 41,603 | 41,603 | 0 | 0.0 | n/a | 0 | — |
+| [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | 4,147 | **4,148** | **+1** | 11.2 | 460.9 | 269 | 0.6× |
+
+🔴 **Stated against itself:** these are tiny event counts. A Poisson 95 % interval on 8 events is ≈3.5–15.8, so
+DeepTutor's true rate is **47–177 ★/h** — one decimal place at best. 🟢 **What makes it usable anyway** is a second,
+independent estimate that agrees: against `p476`'s published 44,531 and its commit at 09:07:27Z, the interval is
+**≥42.3 min** and the rate therefore **≤152 ★/h**. Direct measurement says ~90 ★/h; the bound says ≤152 ★/h. Both
+put the current rate about an order of magnitude above the lifetime average. 🔵 The *sign* is the finding — this
+repo has not plateaued — and the magnitude should be re-read, not quoted.
+
+### 🟢 The agent tier, every star and grant read first-hand this pass
+
+🔵 Stars from the authenticated search channel with `incomplete_results` checked **FALSE** on every query
+(this matters — see `repos/trending.md` this pass). Grants from
+[`evidence/grant-payload.2026-10-27-p477.tsv`](../evidence/grant-payload.2026-10-27-p477.tsv).
+
+| agent | repo | ★ | grant (payload, first-hand) | what it is | region |
+|---|---|---|---|---|---|
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 44,638 | Apache-2.0 (carried, byte-identical control below) | lifelong personalised tutoring, multi-agent + RAG | APAC |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 41,603 | **MIT** · 1,065 B | multi-agent interactive classroom, one-click | APAC |
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 1,227 | **MIT** · 1,064 B | self-study agent: route planning, spaced repetition | APAC |
+| learn-from-materials | [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 1,182 | **MIT** · 1,122 B | PDFs/books → traceable, quizzable learning pages | APAC |
+| Papermorph | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 965 | **MIT** · 1,069 B | books → animated narrated interactive web, SCORM-aware | APAC |
+| tutor-gpt | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | 932 | carried | theory-of-mind reasoning tutor | North America |
+| education-agent-skills | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 915 | carried | 165 evidence-grounded teacher/leader skills | EMEA |
+| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | 467 | **MIT** · 1,069 B | topic → cited 2-minute audio course | Global |
+| examprep-skill | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 348 | carried | exam coach, page-cited, anti-hallucination | APAC |
+| ai-shifu | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | 329 | Apache-2.0 (carried) | scripted teaching, carries client logic in P8 | APAC |
+| Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 293 | carried | Socratic tutor, Bloom 2-sigma as a skill | APAC |
+| OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 271 | carried | ITS with Bayesian Knowledge Tracing, UC Berkeley | North America |
+| tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 56 | MIT (project's own claim) | turns any LLM into an ITS; BKT over MCP | EMEA |
+| TutorIA | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | 0 | unread | rural higher-ed tutor, U. Tecnológica de Pereira | LATAM |
+
+🟢 **Cross-pass control reproduced, eighth consecutive pass, measured this pass and not carried.**
+`HKUDS/DeepTutor` `main/LICENSE` **11,408 B · `cd2f54e1e506`** — byte- and digest-identical to `p470`–`p476`.
+
+### 🔴 The finding that should change what a studio promises: permissive code, non-permissive curriculum
+
+🔵 Both grants that came back **UNNAMED** from the payload reader this pass were identified by hand
+([`evidence/licence-identification.2026-10-27-p477.tsv`](../evidence/licence-identification.2026-10-27-p477.tsv)),
+and both are **data**, not code.
+
+| repo | ★ | grant | can a studio ship this to a paying client? |
+|---|---|---|---|
+| [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | 4,148 | **CC BY-NC 4.0** | 🔴 **No.** NonCommercial bars paid delivery outright. |
+| [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | 7,398 | **ODbL** | 🟡 **Only with care.** Share-alike attaches to the derived *database*. |
+
+🔴 **Every MIT row in the agent table above is a tool. The two biggest curriculum/knowledge-graph repositories
+are the two non-permissive ones.** A studio can therefore build the tutor and not ship the syllabus — the
+opposite of the usual open-source risk shape, and it is not visible from a repo-metadata licence field, only
+from reading the payload.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 477-A`** | **The velocity rests on 8 star events over 5.35 minutes.** The Poisson interval is 47–177 ★/h — a factor of 3.8 wide. Two methods agreeing on order of magnitude is not a measured rate, and no instrument here can do better while `api.github.com` is 403 and `starred_at` is unreachable. A longer interval needs two passes, not one. |
+| 🔴 **`Gap 477-B`** | **Grants on 4 of the 14 agent rows are carried, not re-read this pass** (`tutor-gpt`, `education-agent-skills`, `examprep-skill`, `Bloom`), and `tutor-mcp`'s MIT is the project's own README claim, never a payload read. `TutorIA` has no grant read at all. |
+| 🟡 **`Gap 477-C`** | **The five new rows are graded on stars, grant and description only.** None was cloned, run or evaluated; `Gap 476-W`'s point stands that no grading-quality evaluation of any agent on this shelf has ever been run here. |
+| 🟡 **`Gap 477-D`** | **Region is assigned from the repository's language, owner and target curriculum, not from a declared location.** Six of fourteen rows are APAC on that basis, which may over-concentrate the tier: a Chinese-language README is evidence of an audience, not of where the maintainers are. |
+
+---
+
+
 ## 🆕 `p476` — `2026-10-27` — **🟢 `Gap 475-A` IS ANSWERED: the version election IS readable, it lives in packaging metadata and per-source-file notices exactly as `p475` predicted — and on one row it is the OPPOSITE of what the payload reader concluded. `penecho/penecho` elects `AGPL-3.0-only`. 🔴 But the election is readable on only 4 of 8 GPL-family repos; for the other 4 it is not merely unread, it is UNREADABLE on every channel this base can reach.**
 
 🔵 **Gate posture, unchanged from `p475` (`Gap 446-A`):** `make hooks` **not attempted** — the industry KB is

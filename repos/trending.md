@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p477` — `2026-10-27` — **🟢 `Gap 476-E` IS CLOSED — the stale-address rate in RETAINED HISTORY is now measured, not guessed: 269 addresses swept, 5 dead and 2 renamed. 🔴 And the detector `p476` built has a FALSE-POSITIVE MODE it did not know about: GitHub repo search excludes forks by default, so a live fork looks exactly like a rename. One of this pass's three hits was a fork, caught only by a `fork:true` control.**
+
+🔵 Append-only shelf. This section is prepended; everything below it is retained history.
+
+### 🟢 `Gap 476-E` closed — the sweep, and the rate
+
+🔵 `Gap 476-E`: *"Given a 1-in-22 hit rate on the current shelves, history likely carries more stale addresses,
+and nothing here has measured how many."* 🟢 Measured now
+([`evidence/address-sweep.2026-10-27-p477.tsv`](../evidence/address-sweep.2026-10-27-p477.tsv)).
+
+🔵 **Population and sampling, stated so the draw is reproducible.** 3,217 distinct `github.com/<owner>/<repo>`
+addresses on the eight live shelves after cleaning GitHub *URL paths* (`search/`, `topics/`, `trending/`, …) out
+of the extraction — a filter that matters, because three of the first four "dead" hits were artefacts of that
+kind, not repositories. Tier A = **all 193** addresses republished ≥10 times (the load-bearing set). Tier B =
+**80** drawn from the <10 tail with `shuf --random-source=<(yes p477)`, so any later pass can redraw the same 80.
+
+| axis | channel | run on | result |
+|---|---|---|---|
+| resolves at all | `git ls-remote --symref` | **269** (all) | 🔴 **5 dead** — 1.86 % |
+| present in search index | authenticated search, `repo:` | **110** | 🔴 **2 renamed** — 1.8 % · 🟡 1 false positive |
+
+| address | ×published | tier | verdict |
+|---|---|---|---|
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | 47 | A | 🔴 **RENAMED** → `openedx/openedx-platform` (same repo id `10391073`) — `p476`'s find, reproduced |
+| [danny-avila/LibreChat](https://github.com/danny-avila/LibreChat) | 13 | A | 🔴 **RENAMED** → **`LibreChat-AI/LibreChat`**, 46,367★ — **NEW this pass**, absent even with `fork:true` |
+| [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | 19 | A | 🟡 **NOT STALE — a FORK.** The detector's false positive |
+| `1EdTech/caliper-js` | 11 | A | 🔴 **DEAD** — does not resolve on git |
+| `ale-alejandro/beadkit` | 9 | B | 🔴 **DEAD** — does not resolve on git |
+| `projectremedy-ai/remedy-canvas-lti` | 1 | B | 🔴 **DEAD** — does not resolve on git |
+| `gregmontalvo/badgie` | 1 | B | 🔴 **DEAD** — does not resolve on git |
+| `sanity-labs/ai-literacy-framework` | 1 | B | 🔴 **DEAD** — does not resolve on git |
+
+🔵 **The distribution is the useful part.** 1 of the 5 dead addresses is in tier A (**0.5 %** of the load-bearing
+set) and 4 are in tier B (**5.0 %** of the tail). The addresses this base republishes every pass are *better*
+maintained than the ones it mentioned once from a search dump — which is the opposite of the worry `Gap 476-E`
+expressed, and it means the maintenance cost of address rot is concentrated in history nobody cites.
+
+### 🔴 The correction to `p476`'s instrument: forks are invisible to the index
+
+🔵 `p476`'s detector is *"resolves on git AND absent from the search index ⇒ stale"*. 🔴 **GitHub repository search
+excludes forks unless the query says `fork:true`.** So a perfectly healthy fork satisfies both halves of that
+test and is scored as a rename.
+
+| address | default `repo:` query | with `fork:true` | truth |
+|---|---|---|---|
+| `packbackbooks/lti-1-3-php-library` | 🔴 absent | 🟢 **returned**, `"fork": true`, 54★ | 🟡 **live fork** — a false positive |
+| `danny-avila/LibreChat` | 🔴 absent | 🔴 **still absent** | 🔴 **genuine rename** |
+
+🟢 **The corrected detector, for every later pass:** absence from the default index is a *candidate*, not a
+verdict. Re-query the candidate with `fork:true`; only absence under *both* is a rename or a transfer. Without
+this control, 1 of this pass's 3 hits — **33 %** — would have been published as a stale address.
+
+### 🔴 A second instrument defect found while sweeping: the channel truncates silently
+
+🔵 Batching `repo:` qualifiers is what made a 269-address sweep affordable. It also has a failure mode that
+produces exactly the wrong answer
+([`evidence/search-truncation.2026-10-27-p477.tsv`](../evidence/search-truncation.2026-10-27-p477.tsv)).
+
+| batch | qualifiers asked | items returned | `incomplete_results` | reading |
+|---|---|---|---|---|
+| `batch-00` | 20 | 19 | FALSE | 🟢 complete; the 1 missing address is genuinely absent |
+| `batch-01` | 20 | **1** | 🔴 **TRUE** | 🔴 **truncated** — would have scored **15 live addresses as stale** |
+| `batch-01a` + `batch-01b` | 10 + 10 | 10 + 10 | FALSE | 🟢 same addresses, split in two: **all 20 live** |
+
+🔴 **A 15-of-20 error rate on the one query that hit it, with no error raised** — just a short list and a flag the
+reader has to know to check. 🟢 **Rule adopted:** batch at **10**, and treat `incomplete_results=TRUE` as "no
+result", never as "absent". Batch 10 did not truncate on any of the 9 queries run at that size this pass.
+
+🔵 **This almost certainly explains `Gap 476-N`.** That gap reported accented LATAM tokens "understating by
+1.34×–3.50×" and told later passes to re-run every prior LATAM conclusion. This pass measured the accent effect
+directly and it is **1.018× and 1.004×** — GitHub folds diacritics (`intel/market.md` this pass). Truncation,
+which is real and large, is the far likelier cause of a 1.34×–3.50× discrepancy than diacritics, which are not.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 477-I`** | **The index axis covered 110 of 269 addresses, not all of them.** The remaining 159 have been proved to *resolve* but not to be *canonical*, so the 1.8 % rename rate rests on 110 observations and the dead-address rate on 269. Renames in the unswept 159 are not counted. |
+| 🔴 **`Gap 477-J`** | **The 3,217-address population was sampled, not swept.** Tier B is 80 of ~3,024 tail addresses (2.6 %). The 5.0 % tail rate has a 95 % interval of roughly 1.4–12.3 % on 4 hits in 80 — direction solid, magnitude loose. |
+| 🔴 **`Gap 477-K`** | **No dead address has been repaired in history.** All 8 non-live addresses above are still published as-is in retained history below, and `openedx/edx-platform` still appears 47 times. This pass measured the rot; it did not fix it. |
+| 🟡 **`Gap 477-L`** | **A transfer and a rename are not distinguished.** `LibreChat-AI/LibreChat` carries repo id `600596928`, which is consistent with the owner moving the repo to an org, but no channel here reports a rename event, so "renamed or transferred" is as precise as this gets. |
+| 🟡 **`Gap 477-M`** | **`fork:true` was run only on the 2 candidates**, not as a blanket control. Whether any *other* shelf row is a fork quietly standing in for its upstream is unmeasured — and a fork is a real maintenance risk even when the address is live. |
+
+---
+
+
 ## 🆕 `p476` — `2026-10-27` — **🔴 A RENAMED REPOSITORY IS INVISIBLE TO EVERY PROBE THIS BASE OWNS EXCEPT ONE: git and raw forward a rename silently and answer 200 at the dead address, so `ls-remote` and payload digests both say "fine". Only absence from the SEARCH INDEX reveals it — and that is how `openedx/edx-platform` was caught after 400+ passes. 🟢 22 addresses swept, exactly 1 stale.**
 
 🔵 Append-only shelf. This section is prepended; everything below it is retained history.

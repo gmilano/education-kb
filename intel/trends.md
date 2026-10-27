@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p477` — `2026-10-27` — **🔴 THE TREND THIS PASS WOULD STAKE A CLIENT ENGAGEMENT ON: in education AI the CODE is permissive and the CURRICULUM is not. Every one of the 11 MIT/Apache/BSD rows read first-hand this pass is a tool; the two largest knowledge-graph repositories are CC BY-NC and ODbL. 🟢 And three of this base's own published trends were instrument artefacts — a measured zero, an accent effect and a stale-address rate — all three corrected here.**
+
+🔵 `Gap 476-Q` stands against most of what follows: these remain single-pass cross-sections. What changed is that
+T1 is a licence census with every payload read first-hand, and T2 is the first **measured velocity** in this
+base's history ([`evidence/star-velocity.2026-10-27-p477.tsv`](../evidence/star-velocity.2026-10-27-p477.tsv)).
+
+### 🔴 T1 — Permissive tools, restricted curriculum: the split that decides what a studio can sell
+
+🔵 26 grant payloads read first-hand this pass, each fetched to a file and the file measured.
+
+| tier | permissive (MIT / Apache-2.0 / BSD-3) | restricted |
+|---|---|---|
+| **agents and tools** | 🟢 `OpenMAIC`, `Study-Mate`, `learn-from-materials`, `Papermorph`, `claudemy`, `breakscale`, `book-to-skill`, `dolos`, `scorm-again`, `pyBKT`, `pykt-toolkit`, `fsrs4anki`, `Artemis`, `ltijs`, `lrsql`, `jupyterhub`, `nbgrader` | 🔴 `frametell` (**AGPL-3.0**), `overhangio/tutor` (**AGPL-3.0**) |
+| **curriculum and knowledge data** | 🟡 `bncc-dev/bncc-dados` (Brazil's BNCC, open data) | 🔴 **`cn-math-taxonomy` (CC BY-NC 4.0, 4,148★)**, **`withmarbleapp/os-taxonomy` (ODbL, 7,398★)** |
+| **platforms** | 🟢 `Kolibri` (MIT), `Oppia` (Apache-2.0), `OpenOLAT` (Apache-2.0), `Sakai` (ECL-2.0) | 🔴 `Moodle`, `Open edX`, `Canvas`, `Frappe LMS`, `Chamilo`, `ILIAS`, `Gibbon`, `i-educar`, `RosarioSIS`, `OpenEduCat`, `BigBlueButton`, `H5P` |
+
+🔴 **This is the inverse of the usual open-source risk shape.** The reflex is to worry about the licence on the
+code you ship and treat data as inert. In education the code is clean and **the data is where the restriction
+lives** — and it is invisible to a metadata licence field: both restricted grants returned **UNNAMED** from an
+SPDX-style name reader and needed a hand read. 🔵 **Operational consequence:** a licence-clearance pass over
+curriculum assets belongs *before* an engagement is scoped, not at delivery.
+
+### 🟢 T2 — DeepTutor has not plateaued: measured at ~14× its own lifetime average
+
+🔵 Two first-hand reads 321 s apart, both times recorded here: 44,630 → **44,638**, i.e. ~90 ★/h against a
+lifetime average of 147 ★/day. An independent bound against `p476`'s figure and commit time gives ≤152 ★/h.
+🔴 **Stated against itself:** 8 events gives a Poisson 95 % interval of 47–177 ★/h. The *sign* is the trend — at
+44.6k★ and ten months old this repo is still accelerating — and the magnitude is one decimal place
+(`Gap 477-A`).
+
+### 🔴 T3 — Attention moved to rendering subjects, not conversing with learners
+
+🔵 Of the 10 largest education repositories created since 1 Aug 2026, **5 are interactive explainers** —
+`breakscale` (load a system till it breaks), `Papermorph` (books → animated web), `insect-world` (63 procedurally
+generated species), `prehistoric-animal-museum`, `esp-labs-web` — not tutors, not LMS components, not agents.
+🔵 Only 3 of the 10 are conversational tutors. 🟡 A one-window shape, not yet a trend (`Gap 477-H`).
+
+### 🟢 T4 — One jurisdiction now regulates education AI by name, and the EU's deadline moved
+
+🔵 **South Korea's AI Basic Act, in force 22 January 2026**, names education among its "high-impact" domains — the
+only statute found in any region that does so explicitly. 🔴 Meanwhile the **Digital Omnibus (Regulation (EU)
+2026/1744, in force 27 July 2026)** pushed stand-alone Annex III education systems from 2026 to **2 December
+2027**. 🔵 **The direction: the binding edge of education-AI regulation has moved from EMEA to APAC for the next
+13 months**, while the EU's two non-deferred duties — the emotion-recognition prohibition (2 Feb 2025) and
+Article 50 chatbot disclosure (2 Aug 2026) — are the only ones that bite today.
+
+### 🔴 T5 — Three of this base's own trends were instrument artefacts
+
+🔵 Not a trend about education. A trend about **this base**, and the most consequential thing in the pass.
+
+| published as a measurement | actually | mechanism |
+|---|---|---|
+| *"zero education-AI repos created since 1 Aug 2026 reached 100★ (n=0, measured)"* — `p476` | 🔴 **24**, largest 4,148★ | conjunctive free-text query; `topic:` qualifier sees them |
+| *"accented tokens understate LATAM supply by 1.34×–3.50×"* — `Gap 476-N` | 🔴 **1.018× / 1.004×** | GitHub folds diacritics; the discrepancy was **truncation** |
+| *"1-in-22 stale addresses, detector: resolves on git + absent from index"* — `p476` | 🟡 detector has a **33 % false-positive rate** here | repo search **excludes forks** unless `fork:true` |
+
+🔴 **The common mechanism in all three: a query that returns fewer rows than reality, read as a fact about the
+world.** Truncation returns a short list with `incomplete_results=TRUE` and no error; a conjunctive query returns
+zero; the fork exclusion returns an absence. 🟢 **Three controls adopted:** batch `repo:` at 10 and never above;
+cross-check any nil with a `topic:` qualifier; re-query every absent address with `fork:true` before calling it
+stale. 🔵 **The general form, for every later pass: an absence is a claim about an instrument until it is proved
+to be a claim about the world.**
+
+### 🔴 T6 — Regulated features sit in the coldest code
+
+🔵 `elimu-ai/ml-authentication` ships face recognition to authenticate pupils — the one feature both the EU AI
+Act and Vietnam's Decision 33 put in their highest tier — and its **last commit is 2025-02-25, 20 months cold**,
+with 40 open issues. The org around it is active; `p476` read that activity from a sibling repo pushed the day
+before. 🔴 **Org-level liveness does not transfer to a component**, and here the component carrying the regulated
+surface is the abandoned one. 🔵 A due-diligence rule follows: date the **component**, never the organisation.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 477-AC`** | **T1, T3, T4 and T6 are single-pass cross-sections.** Only T2 is a ratio between quantities measured in the same pass, and its interval is 5.35 minutes. `Gap 475-S`/`Gap 476-Q` are narrowed, not closed, and stay open until a second snapshot exists to difference. |
+| 🔴 **`Gap 477-AD`** | **T1's census covers the 26 payloads this pass read, not the tier.** Rows whose grants are carried from earlier passes are counted in the table but were not re-read, and no curriculum repository beyond the three named was examined — so "the data is where the restriction lives" rests on **2 restricted finds**, not on a survey of education datasets. |
+| 🔴 **`Gap 477-AE`** | **T4 compares a statute's scope against a deferral, both read from secondary commentary** (`Gap 477-Y`). Whether Korea's "high-impact" designation actually imposes more on an education deployment than Annex III does is **not analysed** — only that Korea names education and the EU's clock moved. |
+| 🟡 **`Gap 477-AF`** | **T5 is a self-audit of three findings, not of the base.** Hundreds of other published measurements in retained history have not been re-run against the three controls now adopted, so how far the artefact pattern extends is unmeasured. |
+| 🟡 **`Gap 477-AG`** | **T6 generalises from one repository.** "Regulated features sit in the coldest code" is one observation; no other component carrying a high-risk feature was dated this pass. |
+
+---
+
+
 ## 🆕 `p476` — `2026-10-27` — **🟢 TWO TRENDS ON THIS SHELF ARE NOW QUANTIFIED RATHER THAN ASSERTED, which is what `Gap 475-S` asked for: open-source attention in education AI is concentrated at 95.7 % in a SINGLE repository, and one education-AI agent outstars the entire open-source education PLATFORM tier by 1.14×. 🔴 And the copyleft trend `p475` called is hardening, not softening — `penecho` elects `AGPL-3.0-only`, closing even the future-version escape.**
 
 🔵 `Gap 475-S` stands against most of what follows: these remain single-pass cross-sections. What changed is

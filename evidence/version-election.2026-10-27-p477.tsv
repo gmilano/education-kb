@@ -1,0 +1,19 @@
+# p477 version-election probe, 2026-10-27. Closes Gap 476-K (bigbluebutton) and Gap 476-G (OpenOLAT),
+# the last two live foundation/vertical rows with no election evidence of any kind.
+repo	channel	path	found	election	verdict
+bigbluebutton/bigbluebutton	payload	LICENSE (7,652 B)	GNU LESSER GENERAL PUBLIC LICENSE Version 3	none in payload	payload names v3, says nothing about future versions
+bigbluebutton/bigbluebutton	packaging(root)	build.gradle / build.sbt / pom.xml / package.json	ALL 404	n/a	Gap 476-K's premise confirmed: there IS no root packaging file
+bigbluebutton/bigbluebutton	packaging(module)	bbb-common-web/build.sbt line 99	licenses := Seq("LGPL-3.0" -> url(...))	BARE DEPRECATED ID	no election: "LGPL-3.0" alone, neither -only nor -or-later
+bigbluebutton/bigbluebutton	source notice	2 candidate source paths probed	both 404	unread	path guessing failed; a tree listing is needed (api.github.com is 403)
+OpenOLAT/OpenOLAT	packaging	pom.xml (86,049 B)	<licenses><license><name>Apache 2.0 Open Source L6icence</name>	N/A for Apache-2.0	DECLARED - and the extractor's failure is explained below
+OpenOLAT/OpenOLAT	parent POM	grep -c '<parent>' pom.xml	0 occurrences	n/a	Gap 476-G's "parent POM this pass did not follow" does NOT exist; there is no parent
+OpenOLAT/OpenOLAT	payload	LICENSE (10,982 B)	Apache License	N/A for Apache-2.0	consistent with the POM
+#
+# Gap 476-G ROOT CAUSE: OpenOLAT's own pom.xml MISSPELLS the word, as "L6icense" (sic, digit 6 for the
+# letter l). p476 supposed the extractor was the limitation and that a parent POM held the real licence.
+# Neither is so: there is no parent POM, and the declaration is present in the root POM. A name-matching
+# extractor looking for "License" cannot match "L6icense". The defect is a typo in the PROJECT.
+# Apache-2.0 has no or-later/only election concept, so OpenOLAT's election is N/A, not unread.
+#
+# TALLY MOVED: bigbluebutton joins canvas-lms and h5p-php-library in "bare deprecated id, no election
+# recorded". That bucket is now 3, not 2. OpenOLAT leaves the unprobed set as N/A rather than unknown.

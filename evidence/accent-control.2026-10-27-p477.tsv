@@ -1,0 +1,15 @@
+# p477 diacritic control, 2026-10-27. Gap 476-N asserted that accented tokens understate the LATAM supply
+# census by 1.34x-3.50x and told later passes to re-run every prior LATAM conclusion on that basis.
+# This pass tested the claim directly: same qualifiers, same stars floor, accented vs unaccented ONLY.
+# Channel: authenticated search, total_count, perPage=1. incomplete_results checked FALSE on all four.
+query	total_count	incomplete_results
+educacion in:name,description,readme stars:>=5	442	FALSE
+educación in:name,description,readme stars:>=5	434	FALSE
+educacao in:name,description,readme stars:>=5	751	FALSE
+educação in:name,description,readme stars:>=5	748	FALSE
+#
+# ratio unaccented/accented, Spanish  : 442/434 = 1.018
+# ratio unaccented/accented, Portuguese: 751/748 = 1.004
+# VERDICT: GitHub's search index FOLDS DIACRITICS. The effect is 1.8% and 0.4%, not 134%-350%.
+# Gap 476-N's premise is REFUTED at this measurement point. The 1.34x-3.50x it reported is far more likely
+# to be the TRUNCATION artifact demonstrated in search-truncation below than anything to do with accents.

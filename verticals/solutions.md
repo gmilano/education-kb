@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p477` — `2026-10-27` — **🟢 `Gap 476-I` IS ANSWERED DEFINITIVELY, FROM THE CODE: elimu.ai's face templates NEVER LEAVE THE DEVICE — there are ZERO upload paths in the entire repository and both HTTP classes are GET-only. 🔴 But the answer that matters is the one nobody asked: the templates are written to SHARED EXTERNAL STORAGE under `targetSdkVersion 23`, so they are readable by any other app on the device and over USB. The risk was never transfer. It is storage. 🔴 And the repo's last commit is 2025-02-25 — 20 months cold.**
+
+🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).
+`elimu-ai/ml-authentication` was **cloned** this pass (81 MB, `0a7a6bb02ab6`) and read, which is what
+`Gap 476-I` asked for. Grants in
+[`evidence/grant-payload.2026-10-27-p477.tsv`](../evidence/grant-payload.2026-10-27-p477.tsv).
+
+---
+
+### 🟢 `Gap 476-I` closed — the data-flow question, settled by reading the code
+
+🔵 `Gap 476-I`: *"`ml-authentication` was not cloned and its model, data flows and retention were not examined;
+whether face templates leave the device is **unknown**, and that is the question that decides the EU analysis."*
+
+| question | method | answer |
+|---|---|---|
+| is there any upload path at all? | `grep` for `POST`, `multipart`, `RequestBody` across all Java | 🟢 **ZERO files.** No POST anywhere in the repository. |
+| what do the only two HTTP classes do? | read `JsonLoader`, `MultimediaDownloader` | 🟢 both `setRequestMethod("GET")` — **download only** |
+| does it hold `INTERNET` permission? | manifest | 🟡 **yes** — plus `CAMERA`, `RECORD_AUDIO`, `WRITE_EXTERNAL_STORAGE`, `WRITE_SECURE_SETTINGS` |
+| where do face crops go? | `StudentImageCollectionActivity:233` | 🔴 **`Environment.getExternalStorageDirectory() + "/.literacyapp/face_recognition/dataset_collection/"`** |
+| is recognition trained on-device? | `TrainingThread:152`, `:222` | 🟢 **yes** — `vgg_faces.pb` loaded locally, `trainClassifier()` runs on the handset |
+| where does the model come from? | `TrainingThread:293` | 🟡 **not in the repo** — a `download_link.txt` is written with `MODEL_DOWNLOAD_LINK` for manual copy |
+
+🟢 **So the transfer question is answered, and the answer is good: no face template is ever sent anywhere.**
+
+### 🔴 The real exposure, which is storage and not transfer
+
+🔵 `app/build.gradle` declares **`targetSdkVersion 23`** (`minSdkVersion 21`, `compileSdkVersion 23`). Android 6.0.
+
+🔴 **Scoped storage does not apply below `targetSdk 29`.** A biometric dataset written to
+`Environment.getExternalStorageDirectory()` under `targetSdk 23` therefore sits in **shared** storage, where:
+
+- any other installed app holding `READ_EXTERNAL_STORAGE` can read every face crop;
+- the directory is reachable over USB/MTP by anyone with physical access to the handset;
+- the leading `.` makes it invisible to a gallery scan — which hides it from a **teacher**, not from an attacker.
+
+🔵 **This inverts the compliance analysis the previous passes were building.** Under GDPR a face template is
+Article 9 special-category data, and the question `Gap 476-I` framed — does it cross a network boundary? — is
+the *transfer* question. The answer is no. 🔴 **The Article 32 "security of processing" question is the live one,
+and it fails on its face:** special-category data at rest, world-readable on the device, no encryption in the
+path that writes it. For a school deployment the practical consequence is that **one shared tablet carries every
+pupil's face template in a directory any app can read.**
+
+🟡 **Supply chain, noted as a second-order finding:** the TensorFlow model is fetched out of band from
+`MODEL_DOWNLOAD_LINK` rather than committed, so the artefact that performs the recognition is not covered by the
+repository's MIT grant and its provenance is unverified by anything in the tree.
+
+### 🔴 `Gap 476-J` — the bus factor, partly measured and worse than the org-level view suggested
+
+| measure | value |
+|---|---|
+| last commit on `ml-authentication` | 🔴 **2025-02-25** — 20 months cold |
+| `pushed_at` from the search channel | 🔴 **2025-02-25T15:10:55Z** — agrees |
+| ★ / forks / open issues | 16 ★ · 16 forks · **40 open issues** |
+| distinct author emails | 🟡 **1** — but the clone was `--depth 1`, so this is a shallow-clone artefact, **not** a bus factor |
+
+🔵 **A correction to how `p476` read this org.** `p476` reported elimu.ai as active, citing
+`ml-storybook-reading-level` pushed 2026-10-26. That is true of *that* repo and not of this one. 🔴 **Org-level
+activity does not transfer to a component**, and the component carrying the regulated feature is the cold one.
+
+### The vertical tier, with this pass's two election rows corrected
+
+| platform | repo | ★ | grant (first-hand) | version election | high-risk features it ships | region |
+|---|---|---|---|---|---|---|
+| BigBlueButton | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 9,255 | **LGPL-3.0** | 🟡 **bare id, no election** (`build.sbt`, new this pass) | webcam/attention monitoring if enabled | North America |
+| Open edX | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 8,211 | **AGPL-3.0** | 🔴 unreadable, all channels | automated grading; proctoring | North America |
+| Moodle | [moodle/moodle](https://github.com/moodle/moodle) | 7,550 | **GPL-3.0** | 🟢 `or-later` elected (2 channels) | automated grading; proctoring via plugins | EMEA |
+| Oppia | [oppia/oppia](https://github.com/oppia/oppia) | 6,945 | 🟢 **Apache-2.0** · 11,358 B | N/A — permissive | none by default; lesson authoring | North America |
+| Canvas LMS | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 6,890 | **AGPL-3.0** | 🟡 bare id, no election | automated grading | North America |
+| Frappe LMS | [frappe/lms](https://github.com/frappe/lms) | 3,351 | **AGPL-3.0** | 🟢 `or-later` elected (1 channel) | assessment | APAC (India) |
+| Sakai | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 1,240 | **ECL-2.0** | 🟢 `pom.xml` agrees | assessment | North America |
+| Kolibri | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 1,162 | **MIT** | 🟢 `package.json` agrees | none by default; offline-first | North America |
+| Chamilo | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 1,020 | GPL-3.0 (carried) | unprobed | assessment | EMEA |
+| OpenEduCat | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 899 | **LGPL-3.0** | 🟢 `or-later` elected (187/209 files) | **admissions scoring** | APAC (India) |
+| i-educar | [portabilis/i-educar](https://github.com/portabilis/i-educar) | 721 | GPL-2.0 (carried) | unprobed | municipal SIS; enrolment | **LATAM (Brazil)** |
+| RosarioSIS | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 647 | GPL-2.0 (carried) | unprobed | SIS; gradebook | EMEA |
+| Gibbon | [GibbonEdu/core](https://github.com/GibbonEdu/core) | 637 | GPL-3.0 (carried) | unprobed | school management | APAC (Hong Kong) |
+| ILIAS | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 505 | GPL-3.0 (carried) | unprobed | assessment | EMEA (Germany) |
+| OpenOLAT | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 448 | **Apache-2.0** | 🟢 **N/A — declared in root POM** (new this pass) | assessment, QTI | EMEA |
+| Academico | [academico-sis/academico](https://github.com/academico-sis/academico) | 409 | unread | unprobed | SIS for small institutions | EMEA |
+| H5P | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | 152 | **GPL-3.0** | 🟡 bare id, no election | none — content library | EMEA |
+| elimu.ai | [elimu-ai/webapp](https://github.com/elimu-ai/webapp) | 41 | **MIT** | N/A — permissive | 🔴 **biometric pupil auth** (separate repo, analysed above) | **EMEA (Tanzania, South Africa)** |
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 477-S`** | **`Gap 476-H` is NOT discharged and this pass did not attempt it.** The regulatory readings on this shelf remain law-firm and compliance-vendor commentary. EUR-Lex and Vietnam's Decision 33 annex have still never been read first-hand here, and the GDPR Article 9 / Article 32 framing above is this pass's own reasoning from the statute's structure, **not** a compliance determination. |
+| 🔴 **`Gap 477-T`** | **The storage finding is read from source, not observed at runtime.** No APK was built, installed or instrumented; file permissions on a real device were not inspected. `targetSdk 23` ⇒ legacy external storage is correct as Android policy, but the actual on-disk mode was not measured. |
+| 🔴 **`Gap 477-U`** | **`Gap 476-V` stands, narrowed.** Only `ml-authentication` was cloned. Whether another of elimu.ai's 66 repositories carries a camera, attention-tracking or monitoring surface is still read from descriptions only. |
+| 🟡 **`Gap 477-V`** | **8 of 18 vertical rows carry a grant that is carried, not re-read**, and 2 (`academico`, and `i-educar`'s election) have no first-hand grant read in any pass. 10 of 18 elections are unprobed. |
+| 🟡 **`Gap 477-W`** | **The elimu.ai bus factor is still unmeasured.** The single author email is a `--depth 1` artefact; contributor count, release cadence and funding were not examined, so `Gap 476-J` is only half-closed — the staleness is measured, the sustainability is not. |
+
+---
+
+
 ## 🆕 `p476` — `2026-10-27` — **🟢 `Gap 475-M` IS CLOSED: there IS an African education platform, it is a complete offline-first literacy stack, and it is the MOST PERMISSIVE thing on any shelf in this base — `elimu.ai`, 66 repositories, every grant read MIT. 🔴 And it ships FACE RECOGNITION to authenticate pupils, which is the one feature both the EU AI Act and Vietnam's Decision 33 put in their highest risk tier. 🟢 `Gap 475-N` is closed by a depth probe: OpenEduCat's `SPLIT_SCOPE` is DECLARED but NOT INSTANTIATED — 14 of 14 modules are uniformly LGPL-3.**
 
 🔵 Gate posture unchanged (`Code from External`; `make hooks` not attempted; session-local checks green).

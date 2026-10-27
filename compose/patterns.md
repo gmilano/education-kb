@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p477` — `2026-10-27` — **two new recipes built only from components whose grant was read first-hand THIS pass, plus a correction that touches every recipe in retained history: any recipe naming `danny-avila/LibreChat` must read `LibreChat-AI/LibreChat`, and `P7`'s biometric exclusion is now justified by READ CODE rather than by repository descriptions**
+
+🔵 Component grants are the first-hand reads in
+[`evidence/grant-payload.2026-10-27-p477.tsv`](../evidence/grant-payload.2026-10-27-p477.tsv) (27 rows);
+elections in [`evidence/version-election.2026-10-27-p477.tsv`](../evidence/version-election.2026-10-27-p477.tsv).
+🔴 No recipe below uses an AGPL-3.0 or NonCommercial component in a position where a client would need to keep
+modifications closed or ship the asset. Where a copyleft component is used it is **deployed, not linked**, and the
+recipe says so.
+
+🔴 **Address correction that touches retained history.** Any recipe below or above naming
+**`danny-avila/LibreChat`** should read **[`LibreChat-AI/LibreChat`](https://github.com/LibreChat-AI/LibreChat)**
+(46,367★, MIT, 1,066 B, read this pass). Same repository, moved to an organisation; the old address still resolves
+on git and raw but is **absent from the search index even with `fork:true`**. This is the second such correction
+in two passes — `openedx/edx-platform` → `openedx/openedx-platform` was the first.
+
+🟢 **`Gap 476-V` discharged for P7, and it changes the recipe.** P7 excluded `elimu-ai/ml-authentication` on the
+strength of a repository description. The component was **cloned and read** this pass: there is no upload path
+anywhere in it, so the biometric data never crosses a network boundary — but face crops are written to
+`Environment.getExternalStorageDirectory()` under `targetSdkVersion 23`, i.e. **shared storage readable by any
+other app on the handset**. 🔴 **P7's exclusion of the component therefore stands and its justification changes
+from "we cannot verify the data flow" to "the data flow is verified and the at-rest exposure is the problem."**
+
+---
+
+### 🟢 P9 — Auditable AI tutoring for a US district facing a policy deadline
+
+🔵 **Why this is buildable now:** `intel/market.md` this pass measured the opening — Ohio compels every district to
+adopt an AI policy by **1 July 2026** and Oklahoma before 2027–28, while reviewers of the 2026 state bills note
+that proposals **do not require vendors to supply auditable interaction records**. The district owes evidence and
+no product supplies it. Target region: **North America**.
+
+| # | component | repo | grant (read first-hand) | role |
+|---|---|---|---|---|
+| 1 | LTI 1.3 entry point | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** · 11,361 B | launches the tutor from inside Canvas as a certified tool |
+| 2 | learning record store | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** · 11,357 B | immutable xAPI statement store — **the audit artefact** |
+| 3 | agent → LRS bridge | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | MIT (carried, `Gap 477-AH`) | every tutor turn written as an xAPI statement over MCP |
+| 4 | mastery model | [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) | 🟢 **MIT** · 1,132 B | Bayesian Knowledge Tracing — defensible mastery claims |
+| 5 | scheduler | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** · 1,079 B | FSRS review scheduling |
+| 6 | LMS of record | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 🔴 **deployed, not linked** — reached only over LTI/REST |
+
+🔵 **Wiring.** Canvas launches the tutor through `ltijs` (LTI 1.3 Resource Link); the tutor's mastery state comes
+from `pyBKT` and its review queue from FSRS; **every** learner-facing turn — prompt, response, model id,
+timestamp, learner id — is emitted as an xAPI statement through `learnmcp-xapi` into `lrsql`. The district's
+policy evidence is then a query against the LRS, not a vendor report. 🟢 **Licensing:** items 1–5 are permissive
+and carry the client's code; Canvas is a deployed system reached across a process boundary, so AGPL-3.0 never
+reaches the studio's work. 🔵 **Estimate 7–9 weeks** — judgement, not measurement (`Gap 477-AI`).
+
+### 🟢 P10 — BNCC-aligned tutor for a LATAM ministry, curriculum licence cleared up front
+
+🔵 **Why this recipe exists:** `intel/market.md` this pass found that APAC's best curriculum graph —
+`cn-math-taxonomy`, 4,148★ — is **CC BY-NC 4.0** and so cannot be shipped to a paying client, while LATAM's
+equivalent is **open data with per-record provenance**. The region usually treated as the thin one holds the asset
+that is actually deliverable. Target region: **LATAM**.
+
+| # | component | repo | grant (read first-hand) | role |
+|---|---|---|---|---|
+| 1 | curriculum spine | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | open data, provenance per record (`Gap 477-AH`) | **1,721 BNCC learning objectives** in JSON/SQLite/CSV |
+| 2 | curriculum access | [bncc-dev/bncc-pacotes](https://github.com/bncc-dev/bncc-pacotes) | carried | npm/PyPI packages + MCP server — the spine in one line |
+| 3 | tutor runtime | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **MIT** · 1,065 B | multi-agent interactive classroom, 41,603★ |
+| 4 | mastery model | [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) | 🟢 **MIT** · 1,132 B | per-objective mastery against BNCC codes |
+| 5 | SIS of record | [portabilis/i-educar](https://github.com/portabilis/i-educar) | GPL-2.0 (carried) | 🔴 **deployed, not linked** — already live in Brazilian municipalities |
+| 6 | record store | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** · 11,357 B | xAPI evidence, same audit role as P9 |
+
+🔵 **Wiring.** `bncc-pacotes` serves the BNCC graph to `OpenMAIC` over MCP, so every generated activity carries a
+real BNCC objective code rather than a model's guess at one; `pyBKT` tracks mastery **per objective code**, which
+is what a secretariat reports on; `i-educar` stays the enrolment and gradebook system of record and is reached only
+over its own interfaces. 🟢 **Licensing:** the curriculum is open data with provenance, the tutor and mastery model
+are MIT, the SIS is deployed. **Nothing in the deliverable is NonCommercial.** 🔵 **Estimate 8–10 weeks**
+(`Gap 477-AI`).
+
+🔴 **The guardrail that makes this sellable in LATAM specifically:** `intel/market.md` records commentary that
+classroom AI is spreading there *"often without oversight or guidelines"*, with Brazil's PL 2338 still in the
+Chamber of Deputies and Mexico having approved nothing. Arriving with the xAPI audit trail and BNCC traceability
+already built is differentiation, not compliance cost — the opposite posture to EMEA, where the Annex III clock
+drives the sale.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 477-AH`** | **Three components are named on carried or unread grants:** `learnmcp-xapi` (MIT, carried), `bncc-pacotes` (carried), and `bncc-dados`'s grant was **never read first-hand in any pass** — it is described as open data from its own README. P10's entire licensing argument rests on item 1, and item 1 is the one row in it with no payload read. |
+| 🔴 **`Gap 477-AI`** | **Neither recipe has been built or run** — `Gap 476-T`/`Gap 475-V` carried forward unchanged. No integration was executed, no version compatibility tested, no xAPI profile validated against `lrsql`, and both week estimates are judgement. |
+| 🔴 **`Gap 477-AJ`** | **P9's premise that no vendor supplies auditable records is read from commentary on the state bills**, not from a procurement review. If Canvas or a major vendor already emits a compliant xAPI trail, P9 rebuilds something a district can buy. |
+| 🟡 **`Gap 477-AK`** | **`OpenMAIC` is chosen for P10 on stars and grant, not on capability.** It was not run, and no grading- or teaching-quality evaluation of any agent on these shelves has ever been performed here (`Gap 476-W`). Its Chinese-language origin against a Portuguese-language curriculum is an **unassessed** localisation risk. |
+| 🟡 **`Gap 477-AL`** | **"Deployed, not linked" is asserted per recipe, not verified per component.** Whether a given integration genuinely crosses a process boundary — rather than importing an AGPL/GPL library in passing — was not checked by reading either platform's plugin API this pass. |
+
+---
+
+
 ## 🆕 `p476` — `2026-10-27` — **two new recipes and one upgraded, each built only from components whose grant, version election and address were read first-hand this pass — plus the correction that `Gap 475-X`'s "unperformed work inside the recipe" HAS NOW BEEN PERFORMED: OpenEduCat's bundled-library enumeration came back clean, 14 of 14 modules LGPL-3**
 
 🔵 Component grants are the first-hand reads in

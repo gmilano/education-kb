@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-27
 ---
 
+## 🆕 `p477` — `2026-10-27` — **🔴 `Gap 476-N` IS REFUTED, NOT CLOSED: the "accent depression" that this base told future passes to re-run every LATAM conclusion against DOES NOT EXIST — GitHub folds diacritics, and the measured effect is 1.018× and 1.004×, not 1.34×–3.50×. 🟢 `Gap 476-M` IS CLOSED: the Middle East demand leg is run for the first time in this base's history, and the UAE has made AI a KG–G12 school subject. 🟢 All four regions plus the Gulf are placed below.**
+
+🔵 Evidence: [`evidence/accent-control.2026-10-27-p477.tsv`](../evidence/accent-control.2026-10-27-p477.tsv),
+[`evidence/search-truncation.2026-10-27-p477.tsv`](../evidence/search-truncation.2026-10-27-p477.tsv),
+[`evidence/star-velocity.2026-10-27-p477.tsv`](../evidence/star-velocity.2026-10-27-p477.tsv).
+
+---
+
+### 🔴 `Gap 476-N` refuted — the accent effect is 1.8 %, and the real culprit is truncation
+
+🔵 `Gap 476-N`: *"Accented tokens understate by 1.34×–3.50× … Every prior pass's LATAM supply conclusion rests on
+the depressed form of the query."* 🟢 Tested directly: same qualifiers, same star floor, **accent the only variable**.
+
+| query | `total_count` | `incomplete_results` |
+|---|---|---|
+| `educacion in:name,description,readme stars:>=5` | **442** | FALSE |
+| `educación in:name,description,readme stars:>=5` | **434** | FALSE |
+| `educacao in:name,description,readme stars:>=5` | **751** | FALSE |
+| `educação in:name,description,readme stars:>=5` | **748** | FALSE |
+
+🔴 **Spanish ratio 1.018. Portuguese ratio 1.004.** The index folds diacritics; the effect is noise. A directive
+to re-run months of LATAM work on this basis would have spent the next several passes chasing nothing.
+
+🟢 **And the likely real cause is now identified and measured:** the authenticated search channel **silently
+truncates**, returning `incomplete_results=TRUE` with a short list and no error — a 15-of-20 error rate on the
+one query that hit it this pass (`repos/trending.md`). `Gap 476-N` itself records that its Spanish leg *"returned
+`incomplete_results=TRUE`"*. 🔵 **That is the bug.** It was read as evidence about accents when it was evidence
+about the instrument.
+
+### 🟢 `Gap 476-M` closed — the Middle East demand leg, run for the first time here
+
+🔵 `Gap 476-M`: *"The Middle East is still unrun on the demand axis … no Gulf or Levant education-AI policy source
+was read in any pass."* Run now. 🔵 **Region field is `EMEA`** — the closed vocabulary has no "Middle East", and the
+country belongs in prose.
+
+| country | what is in force or announced |
+|---|---|
+| **UAE** | 🟢 **AI as a school subject, KG–Grade 12, public schools, from the 2025–26 academic year** — the most concrete education mandate found in any region this pass. **Federal Authority for AI and Data** announced 14 June 2026, consolidating federal AI/data bodies under the Cabinet. Abu Dhabi's AIATC sits under Law No. 3 of 2024. Free zones, including DIFC, are outside these laws. 2026 designated "Year of AI" — a programme, not regulation. |
+| **Saudi Arabia** | 🟡 **No general AI law.** SDAIA governs via the Personal Data Protection Law plus AI regulatory documents; its **AI Ethics Principles are non-binding and SDAIA registration is optional**. STEM/AI learning programmes run, but no curriculum mandate was found. |
+| **Qatar** | 🟡 National AI strategy names **education as its first pillar**; no binding instrument found. |
+
+🔴 **A caution carried from the sources themselves:** one governance guide warns that claims of a "UAE AI Act" or
+of mandatory SDAIA registration **cannot be traced to any government source**. Both are therefore excluded above.
+
+### The demand picture by region, as measured this pass
+
+| region | regulation | adoption signal |
+|---|---|---|
+| **North America** | 🟢 **134+ bills across 31 states**; **33–35 states + Puerto Rico** have issued guidance (up from ~28 in early 2025). Binding district mandates: **Ohio** — every district to adopt an AI policy by **1 July 2026**; **Oklahoma** — before the 2027–28 year, with teacher review and parent opt-out. **Idaho SB 1227** prohibits AI replacing human teachers. **Illinois** requires AI literacy instruction, grades 6–12, from **1 Aug 2026**. **California AB 1159** (proposed) would bar training on student data unless it directly benefits the school. | Guidance is the default instrument; mandates are the exception. Reviewers flag that most proposals **do not require vendors to supply auditable interaction records**. |
+| **EMEA** | 🔴 **The high-risk deadline MOVED.** The **Digital Omnibus, Regulation (EU) 2026/1744**, in force **27 July 2026**, pushed stand-alone Annex III education systems to **2 December 2027** (embedded-in-product: 2 August 2028). Admissions, grading, placement and proctoring are Annex III. **Emotion recognition in education has been prohibited since 2 February 2025.** Article 50 chatbot disclosure applies from **2 August 2026**. The Omnibus **softened Article 4 AI literacy** to staff operating AI for the institution rather than students. | Schools using commercial tools are **deployers** with their own duties. The deferral buys procurement time; the prohibition and the disclosure duty do not move. |
+| **APAC** | 🟢 **South Korea's AI Basic Act in force since 22 January 2026** and it names **education** among its "high-impact" domains — the only instrument found in any region that regulates education AI by name. **China**: no general law; AI-content labelling since 1 Sep 2025. **Japan**: promotion-first, voluntary guidelines, proposed voluntary training-content disclosure. **India**: no AI law; DPDP rules notified Nov 2025 phasing to May 2027; AI-content labelling from 20 Feb 2026. | **China's State Council "AI+" targets: >70 % adoption by 2027, >90 % by 2030.** Japan's framing is explicitly about closing an adoption gap. |
+| **LATAM** | 🟡 **Brazil PL 2338/2023** passed the Senate 10 Dec 2024, now in the Chamber of Deputies — text can still change. **Mexico**: ≥6 initiatives 2022–2025, **none approved**; a Feb 2026 bill proposes a risk-classifying regulator. **ECLAC 2024 Digital Agenda** endorsed by all 33 member states. | 🔴 Commentary reports classroom AI being adopted **"often without oversight or guidelines"** — the inverse of EMEA, where the rules lead the deployments. |
+
+🔴 **No market-size figure is published this pass.** `p476` proved by arithmetic that the base's long-carried
+`$9.58B → $42.48B (2030, 41.5 % CAGR)` is a splice of two vendor series, and this pass found the spread no
+narrower: 2026 estimates encountered range **$3.7B to $10.6B** — a 2.9× spread across vendor marketing pages, with
+North America put at ~42 % share and APAC called fastest-growing at 24.8 % CAGR 2026–2033 by one source whose
+base is incompatible with the others. 🔵 **The spread is the finding.** A point estimate here would be invention.
+
+### 🔵 The supply axis, per region, from the census this pass actually ran
+
+🔵 Unaccented and accented queries agree (above), so these counts stand without an accent correction.
+
+| region | what the supply census returned |
+|---|---|
+| **APAC** | 🟢 **Dominant, by a distance.** 6 of 14 agent-shelf rows and 7 of the 10 largest new entrants since Aug 2026. The single largest new education repository in the window — `cn-math-taxonomy`, 4,148★, 9 days old — is a Chinese K-12 knowledge graph. |
+| **LATAM** | 🔴 **Present but differently shaped.** `educacao OR educacion inteligencia artificial stars:>=20 pushed:>2026-06-01` → **15 repos**, and on inspection almost all are **courses teaching AI**, not **AI tooling for education delivery**. The real LATAM education software on this base's shelves is civic rather than agentic: `portabilis/i-educar` (721★, Brazilian municipal SIS), `bncc-dev/bncc-dados` (22★, Brazil's BNCC curriculum as verified open data), `bncc-dev/bncc-pacotes` (9★), `LabSirius/TutorIA` (0★, Universidad Tecnológica de Pereira, Colombia). |
+| **EMEA** | 🟡 **Institutional, not startup.** `ls1intum/Artemis` (822★, TUM, MIT), `OpenOLAT` (448★, Apache-2.0), `ILIAS` (505★), `dodona-edu/dolos` (355★, MIT), `openfun/richie` + `openfun/ralph` (France Université Numérique), `elimu.ai` (Tanzania/South Africa, MIT). Universities and ministries ship here; venture-backed agents do not. |
+| **North America** | 🟡 **Platforms and research, thin on new agents.** Open edX, Canvas, Sakai, Kolibri, Oppia, `jupyterhub`/`nbgrader`, `CAHLR/pyBKT` and `OATutor` (UC Berkeley). Only 2 of 14 agent rows. |
+| **Global** | `assafkip/claudemy` (467★, MIT) is the one new entrant with no regional reading. |
+
+🔴 **An asymmetry worth naming, carefully.** The region writing the most education-AI *code* (APAC) and the region
+writing the most education-AI *rules* (North America by volume, EMEA by force) are not the same. 🔵 Stated as a
+direction only — `Gap 476-R`'s objection applies and is repeated at `Gap 477-Z` below: a bill count and a
+repository count are not commensurable quantities and must not be ratioed.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The auditability gap is a product.** Reviewers of the 2026 state bills note that proposals **do not require
+vendors to supply auditable records of AI interactions** — while Ohio (1 July 2026) and Oklahoma (2027–28) compel
+districts to adopt policies they must then evidence. A district has a deadline and no instrument. Build the
+instrument: `yetanalytics/lrsql` (Apache-2.0) + `DavidLMS/learnmcp-xapi` for an xAPI record of every tutor
+interaction, behind `Cvmcosta/ltijs` (Apache-2.0) into Canvas. Every component permissive; Canvas deployed, not
+linked. **Illinois's grades 6–12 AI literacy mandate (1 Aug 2026)** is a second, dated opening for curriculum work.
+
+### EMEA
+
+🟢 **The Omnibus deferral to 2 December 2027 is a 13-month procurement window, and the two duties that did not
+move are the ones to design for.** Emotion recognition in education is **prohibited outright** (since 2 Feb 2025)
+and Article 50 chatbot disclosure **applies now** (2 Aug 2026). The sellable engagement is a conformity-ready
+build on the institutional stack already here — `OpenOLAT` (Apache-2.0, declared in its root POM this pass) or
+Moodle deployed — with emotion inference designed **out** and disclosure designed **in**. For the Gulf: the UAE's
+**KG–G12 AI curriculum** is a content-and-teacher-training engagement, not a platform one, and the absence of a
+general AI law in the UAE and Saudi Arabia means procurement is driven by ministry programmes, not compliance.
+
+### APAC
+
+🟢 **South Korea is the only jurisdiction on earth that names education in its AI statute** (AI Basic Act, in force
+22 Jan 2026, "high-impact" domains). That makes Korea the reference market for high-impact education AI
+governance, and a Korean conformity engagement is reusable as EMEA Annex III preparation. 🔴 **The licensing trap
+is here too:** the region's best curriculum assets are the restricted ones — `cn-math-taxonomy` is **CC BY-NC**,
+so a studio may study its 1,644-node graph and may not ship it. Build on `THU-MAIC/OpenMAIC` and
+`Miaotofu01/Study-Mate` (both MIT, read first-hand) and source curriculum data separately.
+
+### LATAM
+
+🟢 **The region's gap is governance, and its asset is public-sector data.** Classroom AI is reported as spreading
+*without* oversight while Brazil's PL 2338 is still in the Chamber and Mexico has approved nothing — so a
+ministry or state-secretariat engagement that arrives with the guardrails already built is differentiated rather
+than compliance-driven. The substrate exists and is specific to the region: `portabilis/i-educar` (721★,
+municipal SIS already deployed across Brazilian municipalities) and `bncc-dev/bncc-dados` — **1,721 BNCC learning
+objectives as verified open data with per-record provenance**, which is exactly the curriculum alignment layer
+that APAC's equivalent withholds under NonCommercial. 🔵 **Build the tutor against BNCC, not against a licence
+you cannot ship.**
+
+### Global
+
+🟢 **The permissive-tool / restricted-curriculum split (`agents/top.md` this pass) is region-independent and it is
+a reusable methodology asset:** a licence-clearance pass over curriculum data, run before a tutoring engagement
+is scoped, that no vendor datasheet surfaces because the restriction lives in the payload and not in a metadata
+field. Both of this pass's non-permissive finds — CC BY-NC and ODbL — returned **UNNAMED** from an SPDX-style
+name reader and took a hand read to identify.
+
+### Declared gaps
+
+| gap | what is not known |
+|---|---|
+| 🔴 **`Gap 477-X`** | **No market figure here is first-hand, and none is published.** `Gap 476-L` stands unchanged: every number encountered is vendor-published and reached through secondary coverage. The 2.9× spread is the finding; any point estimate would not be. |
+| 🔴 **`Gap 477-Y`** | **Every regulatory line above is secondary.** The Digital Omnibus citation (Regulation (EU) 2026/1744), the 2 Dec 2027 date, Korea's AI Basic Act scope and the UAE curriculum are all read from law-firm, vendor and press summaries. **No primary instrument has been read first-hand in any pass** — not EUR-Lex, not the Korean statute, not a UAE ministry circular. `Gap 476-H` is unchanged. |
+| 🔴 **`Gap 477-Z`** | **The supply/rules asymmetry is not a measured ratio.** Bill counts and repository counts come from different instruments on different populations; `Gap 476-R`'s objection applies in full and the direction is all that should be carried. |
+| 🟡 **`Gap 477-AA`** | **The LATAM supply reading rests on one query returning 15 rows.** The "courses teaching AI, not AI for education" characterisation is a hand inspection of 10 of those 15, not a classification, and the Spanish/Portuguese census was not re-run at other star floors. |
+| 🟡 **`Gap 477-AB`** | **Africa was not re-run this pass on either axis.** `p476` closed it with a Swahili supply census and a French policy read; neither was reproduced here, and no Levant source was read, so "Middle East" above is Gulf-only — UAE, Saudi Arabia, Qatar. |
+
+---
+
+
 ## 🆕 `p476` — `2026-10-27` — **🔴 THE MARKET FIGURE THIS BASE CARRIED FOR 400+ PASSES IS ARITHMETICALLY IMPOSSIBLE, AND THE PROOF IS ONE LINE OF MULTIPLICATION: `$9.58B → $42.48B by 2030 at 41.5 % CAGR` cannot all be true, because `$9.58B × 1.415⁴ = $38.41B`, not `$42.48B`. The figure is a SPLICE of two incompatible vendor series. 🟢 `Gap 475-U` and the African half of `Gap 475-P` are CLOSED — the Africa leg has now been run on both axes, supply in Swahili and demand in French.**
 
 🔵 Evidence: [`evidence/accent-control.2026-10-27-p476.tsv`](../evidence/accent-control.2026-10-27-p476.tsv),
