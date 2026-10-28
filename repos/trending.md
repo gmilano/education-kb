@@ -3,6 +3,87 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p501` — `2026-10-28` — **🟢 `Gap 499-D` CLOSED, AND THE WEAKER CHECK IT ASKED FOR WOULD HAVE PASSED FOREVER WITHOUT MEASURING ANYTHING: a pinned URL carries a commit SHA and cannot drift, so re-fetching the pin proves RETENTION and is blind to upstream AMENDMENT. Both checks are now run. 🟢 12/12 retention PASS, 11/11 amendment PASS, negative control fires on exactly the tampered rows. 🔵 `spdx/license-list-data` HEAD is STILL the commit `p499` pinned. 🔴 And the first run reported `www.apache.org` unreachable — it is not; the retained manifest carries PROSE in a column documented as a URL.**
+
+Reads: [`canonical-reresolve.2026-10-28-p501.tsv`](../evidence/canonical-reresolve.2026-10-28-p501.tsv),
+[`canonical-reresolve.NEGATIVE-CONTROL-2026-10-28-p501.tsv`](../evidence/canonical-reresolve.NEGATIVE-CONTROL-2026-10-28-p501.tsv).
+Instrument: [`compose/code/p501-abstention-and-reresolve/`](../compose/code/p501-abstention-and-reresolve/).
+
+### 🟢 The retained canonical set is verified, both ways
+
+`Gap 499-D` read: *"`MANIFEST.tsv` pins the SPDX payloads at commit `f715b366`; nothing re-resolves
+them. If SPDX amends a text the retained set drifts silently — the exact failure the set was built to
+prevent."* 🔴 **The gap's own remedy — "one assertion per pass" against the pinned URL — could not
+have detected what it feared.** A URL containing a commit SHA is immutable; re-fetching it proves
+the bytes were retained, never that the publisher still agrees with them.
+
+| check | what it reads | result |
+|---|---|---|
+| **A — retention** | pinned URL → bytes + git blob SHA-1 vs `MANIFEST.tsv` | 🟢 **12/12 PASS** |
+| **B — amendment** | **same path at the publisher's moving ref** → operative words vs the pin | 🟢 **11/11 PASS** (the `apache.org` row is not an SPDX path; skipped, not counted as a pass) |
+| negative control | manifest with one blob SHA and one byte count tampered | 🟢 **`DRIFT` on exactly those two rows**, PASS elsewhere |
+
+Both runs print `rows_in=12 rows_out=12 ASSERT PASS` (`Gap 498-L`).
+
+🔵 **`spdx/license-list-data` HEAD resolves to `f715b3660bb164c3d0b81cba9ce94e3c558c4048`** — the
+commit `p499` pinned, unchanged. So check B is **true today and vacuous today**: it establishes a
+working oracle, it has not yet been exercised against a real amendment. A later pass should not read
+`11/11 PASS` as *"amendment detection is proven"*.
+
+### 🔴 The manifest's URL column is not always a URL
+
+The first live run returned `UNRESOLVED(0)` for `Apache-2.0.apache-org` and this pass very nearly
+published the conclusion *"Apache-2.0 is single-sourced now too, so `Gap 499-C` has widened to the
+whole set"*. 🔴 **False.** `https://www.apache.org/licenses/LICENSE-2.0.txt` answered **`200` on
+3/3 direct probes.** The manifest cell reads:
+
+```
+https://www.apache.org/licenses/LICENSE-2.0.txt (apache.org, the steward itself)
+```
+
+— a URL followed by prose, in the column every instrument reads as the URL. 🔵 **A
+"source unreachable" result is a claim about the fetcher before it is a claim about the world**, and
+this one was one unchecked `curl` away from becoming a published regression. The script now parses
+the first whitespace-delimited token. The manifest is left byte-unchanged — it is `p499`'s attested
+artefact — and the parse rule is recorded in the instrument instead. Registered as `Gap 501-D`.
+
+### 🔵 `Gap 499-C` re-probed and unchanged
+
+| steward | probe | result |
+|---|---|---|
+| `www.apache.org/licenses/LICENSE-2.0.txt` | 3× | 🟢 **200, 200, 200** |
+| `www.gnu.org/licenses/gpl-3.0.txt` | 1× | 🔴 **000** |
+| `opensource.org/license/mit` | 1× | 🔴 **000** |
+| `raw.githubusercontent.com/.../MIT.txt` (control) | 1× | 🟢 **200** |
+
+🔴 **`Gap 499-C` stands exactly as written:** Apache-2.0 is two-sourced; **GPL, LGPL and AGPL remain
+single-sourced from SPDX** because `gnu.org` does not resolve through this session's network policy.
+The control rules out a dead fetcher. **This needs a network policy change, not another pass.**
+
+### 🔴 Operative word counts are instrument artefacts, not licence properties
+
+Three instruments on this base now report three different operative-word counts for the **same**
+Apache-2.0/SPDX payload:
+
+| instrument | operative words |
+|---|---|
+| `p499` `sweep_operative.py` | 1 426 |
+| `p500` `grade.sh` | 1 431 |
+| `p501` `reresolve_canonical.py` | **1 408** |
+
+🔵 Each is internally consistent and **none is comparable to the others** — the number is a property
+of where the cut falls, which is why **no shelf row should ever quote an operative-word count as a
+fact about a licence.** Only *within-run* deltas (pinned vs HEAD, payload vs canonical) carry
+meaning. Registered as `Gap 501-C`.
+
+### 🔴 Discovery channel: the listing serves 20 and states 128
+
+`topic:ai-in-education` reports **128 repositories** and renders **20**, the rest behind
+*"Load more"*. This pass read the 20 it was served and **says so rather than implying coverage**:
+108 rows are unread on this axis. 🔵 Same silent-truncation class as `Gap 498-L`'s `perPage:50`
+window against a 52-row result, on a channel that had not previously been used here. Registered
+with the axis problem as `Gap 501-A`.
+
 ## 🆕 `p500` — `2026-10-28` — **🟢 THE `topic:edtech` 50–400★ AXIS IS EXHAUSTED AND THIS IS THE USEFUL RESULT: of 31 rows still unshelved, **25 are blocked by licence or dormancy, not by curator attention** — 11 copyleft, 6 with no grant at any root path, 9 untouched since 2024. 🔴 The band's largest unresolved row, `canyongbs/advisingapp` (340★), is **Elastic License 2.0** — source-available, not open source, and GitHub's `NOASSERTION` hid it. 🟢 One new permissive interoperability row shelved (`ably-labs/realtime-quiz-framework`, Apache-2.0, operative-IDENTICAL to the steward's own form). 🔴 And every Apache verdict on these shelves predating this pass may carry a **−19 phantom deviation**.**
 
 Full reads: [`residual-promotion.2026-10-28-p500.tsv`](../evidence/residual-promotion.2026-10-28-p500.tsv),

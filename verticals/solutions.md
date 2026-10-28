@@ -554,3 +554,84 @@ this repository as `NOASSERTION`, so the restriction is invisible from the API.
 | 🟢 **Live classroom response / quizzing** | [realtime-quiz-framework](https://github.com/ably-labs/realtime-quiz-framework) | **Apache-2.0** | 77 | Permissive base for synchronous whole-class response: fan-out, mid-round joins, scoring. Pair with an LMS for roster and gradebook. |
 | 🟡 **AI output QA against rubrics** | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | 🟢 code **MIT** / 🔴 corpora **CC BY-NC-SA 4.0** | 87 | Rubric-based QA for generated instructional content (Text Complexity, Feedback, Standards Alignment, Durable Skills). Deploy the **code**; the shipped annotated corpora are **non-commercial** (`Gap 500-E`). |
 
+
+## 🆕 `p501` — `2026-10-28` — **🔴 THE 6-PATH LICENCE PROBE THIS FILE REASONS WITH PRODUCES FALSE "NO GRANT" VERDICTS, AND THE PROOF IS THE BIGGEST PLATFORM IN THE ERP LAYER: [`frappe/erpnext`](https://github.com/frappe/erpnext) reads `NONE-OF-6-PATHS` and ships **GPL-3.0 at `license.txt`** — lowercase name, lowercase extension, a combination the probe set omits. 🟢 The alumni / advancement CRM layer gains its first row (**CiviCRM, AGPL-3.0, read from bytes**). 🔴 A dedicated query for an **MIT or Apache education ERP** returns none, and the one Apache-2.0 candidate named cannot be resolved to a repository, so it is REFUSED rather than recorded. 🔴 And a published ERPNext version figure is stale by twenty minor releases.**
+
+Reads: [`wide-probe.2026-10-28-p501.tsv`](../evidence/wide-probe.2026-10-28-p501.tsv),
+[`licence-bytes-verticals.2026-10-28-p501.tsv`](../evidence/licence-bytes-verticals.2026-10-28-p501.tsv).
+
+### 🔴 The probe, first — because it invalidates verdicts already in this file
+
+| repo | 6-path verdict | 22-path verdict |
+|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 `NONE-OF-6-PATHS` | 🟢 **GPL-3.0**, `license.txt`, **35 149 B**, blob `f288702d2fa1`, at `9afbfa0a67d2` |
+| [`0xff-r4bbit/watchmetype`](https://github.com/0xff-r4bbit/watchmetype) | `NONE` | 🔴 **`NONE` confirmed** across 22 forms |
+| [`choudaryhussainali/MCQ_Grading_Bot`](https://github.com/choudaryhussainali/MCQ_Grading_Bot) | `NONE` | 🔴 **`NONE` confirmed** across 22 forms |
+
+The missing combination is **`license.txt`** — this base probed `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `COPYING`, `LICENCE` and bare `license`, i.e. it varied *case* and *extension*
+**separately but never together**.
+
+🔴 **This file carries at least one verdict reached with the narrow set:**
+[`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) is recorded as
+*"**No root grant at any of six probed paths**"* and placed in the unusable tier on that basis.
+🔵 **That verdict is now unsafe** — not refuted, unsafe. 🔵 Probe width has also varied: an earlier
+pass on [`repos/trending.md`](../repos/trending.md) records a row probed at **ten** paths
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `COPYING`, each on `main` **and** `master`) —
+🔴 **and `license.txt` is in neither the six-path nor the ten-path set.** A 22-path re-probe of every
+`NONE` row is `Gap 501-F`, and until it runs, *"no grant"* on this base means *"no grant at whichever
+width that pass happened to use"*, which no file records. 🔵 **The rule:** a negative result from a probe is a statement about the probe's coverage
+first.
+
+### 🟢 The alumni / advancement CRM layer — first row
+
+| platform | repo | licence (read at SHA) | layer |
+|---|---|---|---|
+| **CiviCRM** | [`civicrm/civicrm-core`](https://github.com/civicrm/civicrm-core) | 🔴 **AGPL-3.0**, 34 524 B, blob `1489b7244859`, at `8c7822486842` | constituent / alumni / donor CRM — **the layer above the SIS**, where advancement, alumni events and donor campaigns live |
+
+🔵 **Why it belongs in an education KB:** the layer it occupies is the one a university actually buys
+after the LMS and SIS are settled, and this file had **nothing** in it. 🔴 **AGPL-3.0 is the hardest
+constraint in this file.** It reaches across the network: hosting a modified CiviCRM for a client
+triggers source obligations toward that client's users. `T2`'s re-scoping does **not** rescue this
+one — a CRM is not reached over LTI, so there is no arm's-length integration boundary to hide
+behind. **Customise it for a client who will host it themselves and accept the grant; do not build a
+hosted commercial derivative.**
+
+### 🔴 There is no MIT or Apache education ERP, and the one candidate is refused
+
+A dedicated query (`open source platform education ERP CRM SIS MIT Apache 2026`) returned the layer
+this file already holds, and **confirmed the licence posture rather than changing it**:
+
+| platform | licence as returned | already on this file |
+|---|---|---|
+| OpenEduCat | **LGPL-3.0** | 🟢 yes |
+| Frappe Education | **GPL-3.0** | 🟢 yes |
+| RosarioSIS | **GPL-2.0** | 🟢 yes |
+| Gibbon | **GPL-3.0** | 🟢 yes |
+| Dolibarr (not education-specific) | **GPL-3.0** | 🟢 yes |
+| ERPNext | **GPL-3.0** 🟢 *now read from bytes this pass* | 🟢 yes |
+| CiviCRM | **AGPL-3.0** 🟢 *read from bytes this pass* | 🆕 added above |
+
+🔴 **One Apache-2.0 candidate was named and is REFUSED, not recorded.** The search returned a
+*"University Management System (UMS), Apache-2.0, Java desktop and client-server university
+administration"* — fees, teacher assignment, exam records. 🔴 **No owner/repo slug was given and
+none was resolvable**, and this base does not write a row it cannot pin to a SHA. 🔵 Guessing a slug
+is how a 404 becomes a KB entity. Registered as `Gap 501-J`: a named platform with a plausible
+licence and no resolvable address is a **lead**, not a finding.
+
+🟢 **So the standing answer on this file is confirmed by a query aimed squarely at overturning it:
+the education ERP/SIS layer is copyleft, with no permissive option at the platform tier.** The
+permissive work is **above** it — the LTI and integration layer `p499` established (`tsugi`
+Apache-2.0, `scorm-again` MIT) and the practice-level agents on
+[`agents/top.md`](../agents/top.md). 🔵 That is `T20` holding for a third pass.
+
+### 🔴 A version figure in circulation is stale by twenty minor releases
+
+The query returned ERPNext's *"most recent stable release… August 2026 (v16.32.3)"*. 🔴 **Measured
+from the repository's own tags this pass: `v16.52.0`, `v16.52.1` — the `v16.52.x` line.** The cited
+figure is **twenty minor versions behind**.
+
+🔵 **Consequence for this file's version floors:** `P498-1` and `P499-2` pin Kolibri to a release
+after `Gap 498-G`; the same discipline has to apply to every platform row, and the channel to use is
+`git ls-remote --tags`, **not** a search result. A search-sourced version number has no shelf life.
+

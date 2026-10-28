@@ -3,6 +3,145 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p501` — `2026-10-28` — **🔴 THIS BASE'S DISCOVERY HAS BEEN AXIS-BOUND FOR ELEVEN PASSES, AND `Gap 498-A`'s REFUTATION IS THE EVIDENCE: `p499` measured **19.2%** novelty on `topic:edtech` and concluded the supply was largely read. 🔴 Measured this pass on `topic:ai-in-education` — an axis this base has **never** swept — **13 of 20 rows are NEW, 65%, 3.4× `p499`'s figure.** 🟢 One of them, [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach), is **Apache-2.0 at 438★ / 57 forks** and opens a layer with **zero prior coverage on any shelf here: social-emotional learning.** 🟢 `Gap 499-B` and `Gap 499-D` CLOSED with validated instruments. 🔴 Two unlicensed rows and one **NonCommercial** row found among the new supply. 🔴 And the notice-line rule `p499` ADOPTED after discarding three wrong ones has a failure mode of its own, caught by executed code on a live payload.**
+
+Full reads: [`aie-axis-overlap.2026-10-28-p501.tsv`](../evidence/aie-axis-overlap.2026-10-28-p501.tsv),
+[`licence-bytes.2026-10-28-p501.tsv`](../evidence/licence-bytes.2026-10-28-p501.tsv),
+[`abstention-gate.2026-10-28-p501.tsv`](../evidence/abstention-gate.2026-10-28-p501.tsv),
+[`abstention-gate-newrows.2026-10-28-p501.tsv`](../evidence/abstention-gate-newrows.2026-10-28-p501.tsv),
+[`canonical-reresolve.2026-10-28-p501.tsv`](../evidence/canonical-reresolve.2026-10-28-p501.tsv).
+Instrument: [`compose/code/p501-abstention-and-reresolve/`](../compose/code/p501-abstention-and-reresolve/).
+
+### 🔴 The axis, not the depth, was the limit
+
+`Gap 498-A` asked whether the 50–400★ `topic:edtech` band was unread. `p499` enumerated 52 rows,
+found **41 already in this base's narratives**, and closed the gap *"BY REFUTATION"* — novelty
+**19.2%**, *"3.6× lower than the 69.2% the gap feared"*. `p500` then re-read the residual and called
+it a **licence wall, not a promotion backlog**.
+
+🔴 **Both conclusions are sound about `topic:edtech` and neither is sound about the sector.** The
+same measurement on `topic:ai-in-education`, page 1 (20 rows of a stated **128**):
+
+| | n | share |
+|---|---|---|
+| rows read | **20** | |
+| 🟢 **NEW to this base** | **13** | **65.0%** |
+| known, narrative only | 5 | 25.0% |
+| known, on a curated shelf | 2 | 10.0% |
+
+🔵 **`p499`'s 19.2% was a property of the axis it swept, not of the supply.** `topic:edtech` had
+been worked for eleven passes; `topic:ai-in-education` had never been opened. The two populations
+barely intersect — `SocialCoach` carries `ai-in-education`, `personalized-learning`,
+`social-emotional-learning` and **not `edtech`**, so no `edtech` sweep could ever have returned it.
+
+🔴 **And the page itself states 128 repositories while serving 20.** 108 rows are unread behind
+*"Load more"* — the same silent-truncation class as `Gap 498-L`'s `perPage` window, on a new
+channel. Registered as `Gap 501-A`.
+
+### 🟢 Promoted to [`agents/top.md`](top.md) — one row
+
+| repo | ★ | forks | licence | read |
+|---|---|---|---|---|
+| [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) | **438** | **57** | **Apache-2.0**, 11 358 B, blob `d645695673…`, graded **`0/0` operative** | `84f67257f5aa` |
+
+Role-play scenarios for conflict handling and communication with personalised feedback; 239
+commits; TypeScript per its own README. 🟢 **Its licence payload is byte-identical to apache.org's
+own copy** — an independent third instance of the form `p500` proved the single-canonical grader
+scored as a phantom `−19`. 🔴 **No release, no tag.** 239 commits on `main` and nothing cut;
+`Gap 499-H`'s caveat applies — a pass that treats this as a deployable product will be wrong.
+
+🔵 **Why this row matters beyond its star count.** `social-emotional` and *"social emotional"*
+returned **0 hits across `agents/top.md`, `agents/trending.md`, `intel/trends.md` and
+`verticals/solutions.md`** before this pass. Every tutoring row this base holds is **cognitive** —
+knowledge tracing (`OATutor`), content generation (`educhain`, `Skill-Anything`), lesson planning
+(`k12-teacher-skills`, `Shiksha-Copilot`), classroom simulation (`OpenMAIC`). An engagement that
+says *"AI tutor"* and means *soft skills, interview practice, conflict resolution or SEL* was, until
+this pass, served by nothing on these shelves. See `T23`.
+
+### 🆕 The other twelve new rows, every licence read at a pinned SHA
+
+🔵 All are below this base's shelf floor and stay here, not on [`top.md`](top.md). Stars are from
+the **topic listing**, not a repo-page read — a weaker channel, and labelled as such.
+
+| repo | ★ | licence (read at SHA) | SHA | what it is |
+|---|---|---|---|---|
+| [`0xff-r4bbit/watchmetype`](https://github.com/0xff-r4bbit/watchmetype) | 25 | 🔴 **NONE — re-probed across 22 path forms** (case, extension, `docs/`, `.github/`), all 404 | `46504047d56f` | macOS app simulating human typing to test AI-detection. 🔴 Unusable: no grant. |
+| [`rithinch/pareto-optimal-student-supervisor-allocation`](https://github.com/rithinch/pareto-optimal-student-supervisor-allocation) | 24 | MIT, 1 073 B, `d00e6dedaecc`, **`0/0`** | `cbfec0dad469` | Multi-objective genetic allocation of students to dissertation supervisors. Notice dated **2019** — the oldest grant in this batch. |
+| [`7-an/ai-study-path-triage`](https://github.com/7-an/ai-study-path-triage) | 7 | MIT, 1 079 B, `ce98cceb9448`, **`0/0`** | `46a479e53f97` | Study-path triage for secondary students on a 7-day framework. |
+| [`choudaryhussainali/MCQ_Grading_Bot`](https://github.com/choudaryhussainali/MCQ_Grading_Bot) | 5 | 🔴 **NONE — re-probed across the same 22 path forms**, all 404 | `f782620f8502` | Grades scanned MCQ sheets with a vision model in a Gradio UI. 🔴 No grant. |
+| [`KaynXu/awesome-ai-education`](https://github.com/KaynXu/awesome-ai-education) | 5 | MIT, 1 091 B, `e9d418d1eaa6`, **`0/0`** | `7f84ed2bbb27` | Curated, evidence-backed index of AI-in-education tooling. An index, not an agent. |
+| [`FurkanHuman/Student_Exam_Generator_And_Analyzer`](https://github.com/FurkanHuman/Student_Exam_Generator_And_Analyzer) | 5 | Apache-2.0, **11 344 B**, `ec82e4eebe9b`, **`0/0`** | `7d77bcb2aa57` | Self-hosted exam generation, management and analysis. 🔵 **14 bytes short of the steward's copy and operatively identical** — `p499`'s point that byte size has no discriminating power, with a fresh instance. |
+| [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 4 | MIT, 1 154 B, `7a6aec07ec3a`, **`+5/−0`** | `f8f72a86bd74` | Pre-registered audit of LLM judges with difference-in-differences. 🔴 **The `+5` is this base's instrument, not the repo** — see the defect below. |
+| [`khayyam-math/khayyam-math`](https://github.com/khayyam-math/khayyam-math) | 4 | MIT, 1 079 B, `6d29ccb3ef65`, **`0/0`** | `230e4e4b92d6` | Voice-narrated maths figures from one-line prompts, with a live tutor. |
+| [`PhongKiemThu/deep-reading-analyst-skill`](https://github.com/PhongKiemThu/deep-reading-analyst-skill) | 4 | MIT, 1 068 B, `43f4b4752ac7`, **`0/0`** | `96e572a8c198` | Text-analysis skill applying 10+ frameworks. 🔴 **The notice reads `Copyright (c) 2025 [Your Name]`** — the grant is operatively clean and **names no licensor**. A conveyance defect, not a text defect. |
+| [`xiajiadi/verilecture-v3`](https://github.com/xiajiadi/verilecture-v3) | 3 | MIT, 1 066 B, `39aa5c897a87`, **`0/0`** | `246f551589c8` | Local-first desktop app turning lecture recordings into review points anchored to source audio. |
+| [`xiajiadi/dc-designer-core`](https://github.com/xiajiadi/dc-designer-core) | 3 | MIT, 1 086 B, `cfb516f56133`, **`0/0`** | `ff995453e22e` | Turns 🇨🇳 China K-12 curriculum standards into Dick-Carey instructional designs. 🔵 **APAC-placed supply**, which this base has little of. |
+| [`spogoda-lab/gcse-QLA-Intervention-System`](https://github.com/spogoda-lab/gcse-QLA-Intervention-System) | 3 | 🔴 **CC-BY-NC-4.0**, 1 748 B, `ae969935e0ca` | `138375c91d25` | 🇬🇧 GCSE Computer Science question-level analysis and intervention planning. 🔴 **NonCommercial — Globant cannot build a client deliverable on this**, and it is not an OSI licence. |
+| [`porroto/Agentic-Education`](https://github.com/porroto/Agentic-Education) | 3 | MIT, 1 064 B, `d3e01ac34e50`, **`0/0`** | `ed3d2d52b439` | Human-governed agents for K-12 proof-of-learning, community-validated. |
+
+🔵 **Supply quality on this axis, stated plainly: 10 of 13 permissive, 2 with no grant at all, 1
+NonCommercial.** The licence wall `p500` found on `topic:edtech` is **not** what this axis looks
+like — but the rows are an order of magnitude smaller, so the two findings are about different
+populations and neither transfers.
+
+### 🟢 `Gap 499-B` CLOSED — the grader can now decline
+
+`p499` fed [`Wakoma/nimble`](https://github.com/Wakoma/nimble)'s **CERN-OHL-S-2.0** payload to a
+nearest-neighbour matcher and got `BSD-2-Clause, −90/+1947`. One clause fixes it:
+
+```
+rel = (insertions + deletions) / canonical_operative_words
+label if rel <= 0.15 ; else ABSTAIN, naming the nearest family and its rel
+```
+
+| input | class | verdict |
+|---|---|---|
+| `Wakoma/nimble` CERN-OHL-S-2.0, 13 419 B | known-bad, outside the set | 🟢 **`ABSTAIN`** (nearest `LGPL-3.0-only`, `rel=1.27`) |
+| `spogoda-lab/…` **CC-BY-NC-4.0**, 1 748 B | known-bad, **live**, outside the set | 🟢 **`ABSTAIN`** (nearest `LGPL-3.0-only`, `rel=1.02`) |
+| `GeminiLight/SocialCoach` Apache-2.0 | known-good | 🟢 `Apache-2.0`, `0/0` |
+| canonical `MIT.txt` **minus its warranty clause** | over-abstention control | 🟢 still **`MIT`**, `rel=0.079` |
+
+🔵 The last row is the one that makes it a guard rather than a broken grader: a band that refuses
+everything unfamiliar would have "passed" the two known-bads for the wrong reason. 🔴 `BAND = 0.15`
+is **chosen, not derived** (`Gap 501-B`), and `ABSTAIN` is **not** an identification — `nimble` is
+CERN-OHL-S-2.0 because its title block says so.
+
+### 🔴 The notice-line rule `p499` adopted fails too — found by code, on a live payload
+
+`bydeng01/ability-levels-audit` graded **`+5` operative words against canonical MIT**. The diff:
+
+| inserted | why |
+|---|---|
+| `Chenyang Li, Hongyang Zhang` (4 words) | 🔴 **the copyright notice wraps onto a second line**, and the rule is line-based: only the line *beginning* `Copyright` is dropped, so the continuation is graded as operative text |
+| `OF` (1 word) | a single word inside the all-caps warranty clause |
+
+🔵 `p499` discarded three forms of the notice-line rule and adopted a fourth. **This is a failure
+of the adopted form, and it is the same structural defect as `Gap 499-E`:** a cut driven by line
+prefixes or literal markers cannot see that a notice is a *paragraph*. It fires on any repository with enough
+authors to wrap — which is most academic ones, and this row **is** an academic audit with six
+authors. Registered as `Gap 501-E`.
+
+🔴 **Consequence for anything already published from this instrument family:** a small positive
+residual on a multi-author repository is this base's artefact until re-measured with a
+paragraph-aware cut. It is not evidence of an edited licence.
+
+### 🟢 `DeepTutor` — fourth consecutive pass with an unchanged HEAD
+
+`a31d82624c27`, unchanged since `p491`. **47,000★** read from the repo page this pass (`p493` read
+45,900), 5.9k forks, 2,935 commits, newest release **`v1.6.15`** dated `2026-10-19` — unchanged, so
+the star growth is attention, not shipping. 🔵 Both figures are the page's **rounded** display;
+`api.github.com` remains 403 for arbitrary repositories.
+
+### Declared gaps — `p501`
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 501-A`** | Discovery is **axis-bound and the axis set is undeclared.** `topic:ai-in-education` returns **65%** novelty against `topic:edtech`'s 19.2%, and the listing states **128 rows while serving 20** — 108 unread behind pagination. No file in this repo lists which discovery axes have been swept, so no pass can tell whether a 19.2% reading means *saturated* or *one axis deep*. **Cost: one pass to enumerate the axes and record them; several to sweep.** |
+| 🔴 **`Gap 501-B`** | `BAND = 0.15` in the abstention guard is **chosen, not derived.** Four controls show it separates these inputs; nothing shows it is the right threshold, and no payload in the corpus sits between `rel=0.08` and `rel=1.02` — the band is **untested in its middle**. **Cost: one pass, a corpus of deliberately graded mutations.** |
+| 🔴 **`Gap 501-E`** | The notice-line cut is **line-based and notices are paragraphs.** Confirmed on `bydeng01/ability-levels-audit` (+4 phantom words from a wrapped six-author notice). Predicts false positives on every multi-author repository. **Cost: one pass, a paragraph-aware cut plus a multi-author control.** |
+| 🔴 **`Gap 501-F`** | 🔴 **The 6-path licence probe in use on this base produces FALSE `NONE` results, and this pass proved it on a live platform row:** [`frappe/erpnext`](https://github.com/frappe/erpnext) read `NONE-OF-6-PATHS` and carries **GPL-3.0 at `license.txt`** (lowercase name, lowercase extension — a combination the 6-path set omits), 35 149 B, blob `f288702d2fa1`. 🟢 The two unlicensed rows above were re-probed across **22** path forms and survive. 🔴 **Probe width is inconsistent across this base's history and every `NONE` verdict has to be re-read against the width that produced it:** `ictinnovations/ICTSchool` on [`verticals/solutions.md`](../verticals/solutions.md) is recorded at **six** paths, while an earlier pass on this very file records a row probed at **ten** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `COPYING` × `main`/`master`). 🔴 **Neither width includes `license.txt`**, which is the one that mattered. **Cost: one pass, re-probe every `NONE` row at 22 paths and count.** |
+| 🟡 **`Gap 501-G`** | Stars for twelve of thirteen rows come from the **topic listing**, a channel this base has never calibrated against repo-page reads. `p468` calibrated a second star channel; this is a third. **Cost: one pass, re-read ten of them on the repo page and compare.** |
+
 ## 🆕 `p500` — `2026-10-28` — **🔴 THIS KB'S APACHE GRADER HAS A −19 PHANTOM BUILT INTO IT: the two legitimate canonical forms of Apache-2.0 differ by exactly 19 operative words, and `p499` graded against only one of them. `ably-labs/realtime-quiz-framework` scored **−19 DEVIANT** and is **word-identical to the steward's own copy**; `DeepTutor`'s recorded **−17** is really **+2**. 🟢 `Gap 499-A` IS RE-MEASURED AND ITS PREMISE IS OVERTAKEN: `p499` promoted 20 rows in its own pass, so the band is **21/52 shelved**, and of the **31** that remain only **4** are permissive-and-live. The residual is a **LICENCE WALL, not a promotion backlog.** 🟢 Four rows promoted, three of them MIT and operative-IDENTICAL. 🔴 `canyongbs/advisingapp` (340★, the largest unresolved row) is **Elastic License 2.0 — not open source at all.** 🟢 And `git ls-remote` is established as a working pinned-SHA oracle where `api.github.com` is 403.**
 
 Full reads: [`residual-promotion.2026-10-28-p500.tsv`](../evidence/residual-promotion.2026-10-28-p500.tsv),

@@ -6,6 +6,25 @@ updated: 2026-10-28
 
 # Foundational education repos
 
+> 🟢 **`p501` (`2026-10-28`) — the retained canonical licence set is now VERIFIED INFRASTRUCTURE, not
+> just retained bytes.** [`evidence/canonical/`](../evidence/canonical/)'s 12 payloads were
+> re-resolved this pass: **12/12 byte-and-blob-SHA identical to `MANIFEST.tsv`**, and **11/11
+> operatively identical to the same paths at the publisher's current ref**, with a negative control
+> that fires on tampered expectations. 🔵 `spdx/license-list-data` HEAD is still the exact commit
+> `p499` pinned (`f715b366…`), so the pin is the publisher's current state. 🔴 Two caveats a later
+> pass must carry: amendment detection is **established but untested** (nothing has drifted yet), and
+> **`MANIFEST.tsv`'s last column carries prose after the URL on one row** — parse the first token,
+> never the whole cell (`Gap 501-D`). 🔴 `www.gnu.org` and `opensource.org` still return `000`, so
+> every GNU-family canonical here remains **single-sourced from SPDX** (`Gap 499-C`, unmoved).
+> Instrument: [`compose/code/p501-abstention-and-reresolve/`](../compose/code/p501-abstention-and-reresolve/);
+> reads: [`canonical-reresolve.2026-10-28-p501.tsv`](../evidence/canonical-reresolve.2026-10-28-p501.tsv).
+>
+> 🔴 **And the discovery axis under every "foundational repo" claim on this shelf is one axis wide.**
+> `topic:ai-in-education` returned **65% rows new to this base** against `topic:edtech`'s 19.2%
+> (`Gap 501-A`). Nothing on this shelf is withdrawn — but *"foundational for education AI"* here means
+> *"foundational among what `topic:edtech` and this base's named-project queries surfaced"*, and that
+> is a narrower claim than the heading makes.
+
 **Pass `p491` — reads of 2026-10-27.** `p490` (earlier the same day) rewrote this file; `p491`
 **extends** it: **two new platform rows** read from bytes, **Fedena finally resolved**, and an
 **arithmetic correction to p490's own census**. Pre-p490 sections remain in

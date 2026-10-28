@@ -1,0 +1,7 @@
+label_input	payload_bytes	payload_words	best_family	best_form	ins	del	rel	verdict
+KNOWN-BAD Wakoma/nimble CERN-OHL-S-2.0	13419	1977	LGPL-3.0-only	LGPL-3.0-only.txt	1848	6298	1.2675	ABSTAIN(nearest=LGPL-3.0-only rel=1.27)
+KNOWN-GOOD GeminiLight/SocialCoach Apache	11358	1408	Apache-2.0	Apache-2.0.apache-org.txt	0	0	0.0000	Apache-2.0
+FurkanHuman/Student_Exam_Generator Apache	11344	1408	Apache-2.0	Apache-2.0.apache-org.txt	0	0	0.0000	Apache-2.0
+porroto/Agentic-Education MIT	1064	164	MIT	MIT.txt	0	0	0.0000	MIT
+CONTROL canonical MIT unmutated	1078	164	MIT	MIT.txt	0	0	0.0000	MIT
+CONTROL MIT minus warranty clause	1004	151	MIT	MIT.txt	0	13	0.0793	MIT

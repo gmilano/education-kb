@@ -6,6 +6,19 @@ updated: 2026-10-28
 
 # Education AI agents — build-on-able shelf
 
+> 🟢 **`p501` (`2026-10-28`) — ONE PROMOTION, AND THE REASON IT WAS MISSED IS WORTH MORE THAN THE ROW.**
+> [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) is **Apache-2.0 at 438★ with
+> 57 forks** — the **fourth-largest education-specific permissive repository** this base holds, and it
+> was invisible to eleven passes of discovery because it carries **`topic:ai-in-education`, not
+> `topic:edtech`**. `p499` measured novelty at **19.2%** on the `edtech` axis and `Gap 498-A` read that
+> as *"the supply is largely read"*. 🔴 **Measured this pass on the `ai-in-education` axis: 13 of 20 rows
+> are NEW to this base — 65%, 3.4× `p499`'s figure.** The refutation of `Gap 498-A` was **axis-bound**,
+> not sector-wide (`T22`, `Gap 501-A`). Reads:
+> [`aie-axis-overlap.2026-10-28-p501.tsv`](../evidence/aie-axis-overlap.2026-10-28-p501.tsv),
+> [`licence-bytes.2026-10-28-p501.tsv`](../evidence/licence-bytes.2026-10-28-p501.tsv).
+> 🟢 `DeepTutor`'s HEAD is **unchanged for a fourth consecutive pass** (`a31d82624c27`); its star cell
+> is refreshed to **47,000** and `v1.6.15` (`2026-10-19`) is still its newest release.
+
 > 🔴 **`p493` (`2026-10-28`) — READ THIS BEFORE THE TABLES.** `p493` found that **eight
 > repositories earlier passes recorded as promoted are absent from this file**, dropped by
 > `p490`'s full-file rewrite without leaving a marker. They are **restored into the tables below**,
@@ -46,7 +59,7 @@ see the reader defect recorded below. Evidence:
 
 ## Permissive — Globant can build on these
 
-**Sixteen rows**, MIT / Apache-2.0 / BSD-3-Clause, each license read from bytes at the SHA shown.
+**Seventeen rows** (🟢 `p501` promoted `SocialCoach`), MIT / Apache-2.0 / BSD-3-Clause, each license read from bytes at the SHA shown.
 🟢 **`p493` restored seven of them** (`OpenMAIC`, `k12-teacher-skills`, `dolos`, `open-tutor-ai-CE`,
 `agent-skills`, `rumi-platform`, `Shiksha-Copilot`) after finding they had been promoted by earlier
 passes and then dropped by `p490`'s full-file rewrite. 🔵 **`p492` added no row here** — the one new
@@ -56,10 +69,11 @@ in [`trending.md`](trending.md) rather than here.
 
 | Agent | Repo | License | ★ | SHA read | What it does |
 |---|---|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **45,900** | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p492`: HEAD unchanged for a third pass; `v1.6.15` released `2026-10-19`.** Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **47,000** *(`p501`; `p493` read 45,900)* | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p501`: HEAD unchanged for a FOURTH consecutive pass (`p491`→`p501`); `v1.6.15` (`2026-10-19`) is still the newest release, so the star growth is attention, not shipping.** Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
 | OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,700** | `70859b42e714` | **Open Multi-Agent Interactive Classroom** — any topic or document becomes an interactive lesson with slides, quizzes and project-based work. 781 commits; `v1.3.0-rc.1` dated `2026-10-22`; licence 1 065 B, `sha1 56d5b3ffd6e8`. 🟢 **Restored `p493`** after being dropped by `p490`'s rewrite — this is the row that falsifies this file's own permissive-scarcity gap, and its MIT grant is cleaner than DeepTutor's. 🔵 Org is `THU-MAIC` and the partnership contact is a `mail.tsinghua.edu.cn` address; **Tsinghua attribution is inferred from those, not stated in prose.** 🔴 **Not an LMS** — no enrolment, gradebook or SIS integration is claimed. |
 | smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | 30,100 | `96f33faaf028` | Minimal code-writing agent loop. Not education-specific; the usual substrate for a custom tutor agent. |
 | k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | **595** | `31fd6dbb0c07` | Four K-12 teacher skills (lesson planning, differentiation and two more) **plus the eval rubrics for them**, co-developed with Learning Commons. Licence 11 357 B, `sha1 1128f8f91104`. 🟢 **Restored `p493`** — recorded "Now shelved" on `2026-10-18` and never actually present in this file. 🔴 **This is the asset `p492` declared licence-unverifiable;** it was measured in this KB twice before that. |
+| SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | Apache-2.0 | **438** | `84f67257f5aa` | **Social-emotional learning coach** — role-play scenarios for conflict handling and communication, with personalised feedback. 239 commits, **57 forks**. 🟢 **Promoted `p501`**, and it is the first row on any shelf here in the **social-emotional / soft-skills layer** — `social-emotional` returned **0 hits across every live shelf** before this pass. Licence **11 358 B, blob `d645695673…`: byte-identical to apache.org's own copy**, graded **`0/0` operative against Apache-2.0** by [`p501`'s guarded grader](../compose/code/p501-abstention-and-reresolve/). 🔴 **No release and no tag** — 239 commits on `main` and nothing cut; treat as a watch row, not a deployable product (`Gap 499-H`'s shape). 🔴 Carries `topic:ai-in-education` and **not** `topic:edtech`, which is why 11 passes of `topic:edtech` sweeps never saw it (`T22`). |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | **387** | `38adb1e9459d` | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. |
 | dolos | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | **355** | `74b101785bad` | Source-code plagiarism detection; **3,865 commits**, the most-maintained address on this shelf. Ghent University. 🟢 **Restored `p493`** — `p296` tried to promote it, this KB's identity gate correctly refused the duplicate because a `foundations.md` row existed, and **that row was then deleted by a later rewrite too.** Licence 1 084 B, `sha1 8f6f3815d28d`. |
 | Skill-Anything | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | 344 | `3cdc1c1f11dc` | Any source (PDF, video, web, audio) → interactive package with quizzes, flashcards, spaced repetition. |

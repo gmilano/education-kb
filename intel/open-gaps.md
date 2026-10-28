@@ -3,6 +3,95 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p501` — **🔴 `Gap 473-F`'s CURRENCY CONTRACT FAILED AGAIN, BY ONE PASS: newest section was `p499`, expected `p500` — `p500` wrote nine shelves and not this register, which is the exact behaviour `Gap 498-K` was ratified to prevent. 🟢 `p500`'s six gaps are given their register entries here. 🟢 THREE GAPS CLOSED WITH CONTENT (`499-B`, `499-D`, `500-A`), ONE NARROWED WITH NAMED INSTRUMENTS (`488-O`/`T15` for Kenya, Nigeria and Rwanda), ONE SURVIVING A SECOND DEDICATED QUERY (`488-Q`). 🔴 ONE OF THIS FILE'S OWN PROBES PROVEN TO PRODUCE FALSE NEGATIVES ON A LIVE PLATFORM ROW, 🔴 TWO DEFECTS IN THIS PASS'S OWN INSTRUMENT CAUGHT BEFORE ITS RESULTS WERE USED, 🔴 ONE PUBLISHED SATURATION FIGURE RE-READ AS A PROPERTY OF A SEARCH AXIS, and TEN REGISTERED.**
+
+🔵 **`gate-register-currency` — measured and FAILED.** `Gap 473-F`: the register's newest section
+must be `p(N-1)` before a pass writes `pN`. 🔴 **Measured: `p499`. Expected: `p500`. Fail, by one
+pass.** 🔵 `p500` numbered its gaps properly — `Gap 500-A` … `Gap 500-F` are findable on
+[`agents/trending.md`](../agents/trending.md) — and then did not mirror them here. **`Gap 498-K`
+fixed the ID problem and not the mirroring problem;** the contract needs both clauses and only one
+is being honoured. 🟢 All six are entered below.
+
+🔴 **Gate posture, stated first.** `make hooks` was **not run**; nothing in this pass is
+gate-attested (`Gap 446-A`, **25 passes**). 🔵 What was done instead: **every instrument this pass
+relied on was validated against a known-good and a known-bad input before its results were used**,
+and the first live run of one of them produced a wrong conclusion that a single `curl` refuted
+before publication.
+
+### 🟢 Closed with content
+
+| gap | how it closed |
+|---|---|
+| 🟢 **`Gap 499-B`** | **CLOSED.** The grader can decline: `rel = (ins+del)/canonical_words`, label at `rel ≤ 0.15`, else **`ABSTAIN`** naming the nearest family and distance. Validated on **two** known-bads outside the retained set — `Wakoma/nimble` **CERN-OHL-S-2.0** (`rel=1.27`) and, live from this pass's own supply, `spogoda-lab/gcse-QLA-Intervention-System` **CC-BY-NC-4.0** (`rel=1.02`) — one known-good (`SocialCoach` Apache-2.0, `0/0`) and an **over-abstention control** (canonical MIT minus its warranty clause → still `MIT`, `rel=0.079`). 🔴 The band is chosen, not derived → `Gap 501-B`. |
+| 🟢 **`Gap 499-D`** | **CLOSED, and the remedy the gap proposed was the weaker half.** A pinned URL carries a commit SHA and cannot drift, so re-fetching the pin proves **retention** only. Both checks now run: **A (retention) 12/12 PASS** against `MANIFEST.tsv` bytes + blob SHA-1; **B (amendment) 11/11 PASS** reading the same paths at the publisher's moving ref. Negative control with two tampered expectations reports `DRIFT` on exactly those rows. 🔵 `spdx/license-list-data` HEAD **is** the pinned commit `f715b366…`, so B is true today and **vacuous today** — the oracle is established, not yet exercised. |
+| 🟢 **`Gap 500-A`** | **CLOSED.** It asked for a replacement axis after `topic:edtech` 50–400★ was found exhausted. **`topic:ai-in-education` is that axis**, and it is not a marginal one: **13 of 20 rows read are new to this base — 65%, against `p499`'s 19.2%.** 🔴 It also replaces one saturation problem with a coverage problem: the listing states **128 rows and serves 20** → `Gap 501-A`. |
+
+### 🟢 Narrowed
+
+| gap | how far |
+|---|---|
+| 🟢 **`Gap 488-O` / `T15`** | **NARROWED with three named jurisdictions, and they are the two `p500` declared missing plus one.** 🇰🇪 **Kenya National AI Strategy 2025–2030** (MICDE, non-binding) — AI literacy across education, **DigiKen** curriculum hubs; 🔴 publication date conflicts (March 2025 vs December 2025). 🇳🇬 **Nigeria National AI Strategy (2024)** (NITDA/FMCIDE, non-binding) — 🔴 its own education analysts call the application *"aspirational rather than systemic"*. 🇷🇼 **Rwanda National AI Policy** + a **three-year Government-of-Rwanda ↔ Anthropic MoU (February 2026)**. Plus **OECD, *Strengthening AI Governance in Africa* (April 2026)**, the first dated continental reference here, 🔵 located but not read as a primary PDF. 🟢 **The query form that worked names the countries, not the continent** — `p500`'s standing instruction, carried out and confirmed a second time when the single "EMEA" query again returned EU + US only. |
+| 🔴 **`Gap 488-Q`** | **SURVIVES A SECOND DEDICATED QUERY, and the finding is what the query returned instead.** Three APAC teacher-adoption figures found and **all three rejected**: 86% of SEA teachers (secondary blog citing a publisher whose own material does not carry it), >95% of Chinese secondary schools (aggregator, no source), 68% of Indian rural schools (aggregator, no source, counts **schools** not teachers). The only credible cross-country teacher figure is **OECD TALIS 2024's "about one in three"** — 🔴 global and pre-2026. 🔵 **A widely demanded number nobody has measured gets manufactured** — treat any regional teacher rate on these shelves as tracing to one of these three. |
+
+### 🔴 Corrections this pass makes
+
+| what | correction |
+|---|---|
+| 🔴 **This base's 6-path licence probe** | **PROVEN to produce false `NONE` verdicts, on a live platform row.** [`frappe/erpnext`](https://github.com/frappe/erpnext) reads `NONE-OF-6-PATHS` and ships **GPL-3.0 at `license.txt`** (35 149 B, blob `f288702d2fa1`). The probe varied **case** and **extension** separately and never together. 🔴 [`verticals/solutions.md`](../verticals/solutions.md) places `ictinnovations/ICTSchool` in its unusable tier on a **six**-path verdict, and [`repos/trending.md`](../repos/trending.md) carries a row probed at **ten** — 🔴 **neither width includes `license.txt`**, so both verdicts are now unsafe, not refuted. → `Gap 501-F`. |
+| 🔴 **`p499`'s 19.2% novelty, as this base carried it** | **Re-read as a property of the axis, not the sector.** `p499`'s measurement was honest about what it swept; `Gap 498-A`'s closure *"BY REFUTATION"* and this base's subsequent reasoning treated it as a sector claim. The same week on a different axis returns **65%**. 🔵 `Gap 499-I` had already warned that *"the denominator is this shelf, not the market"* — **the same defect, on a different statistic, published anyway.** |
+| 🔴 **`p501`'s own first run** | Reported **`www.apache.org` UNRESOLVED**, from which this pass nearly published *"Apache-2.0 is single-sourced now too, `Gap 499-C` has widened to the whole set"*. 🔴 **False** — the steward answered **200 on 3/3** direct probes. `MANIFEST.tsv`'s URL column carries **prose after the URL** on that row. 🔵 **A "source unreachable" result is a claim about the fetcher before it is a claim about the world.** → `Gap 501-D`. |
+| 🔴 **`p501`'s own year regex** | `\b(19\|20)\d\2?\d` carries an **invalid group reference** and never compiled — it was never reached, because the `(c)`/`©` test short-circuits first on every payload in the set. Corrected, re-run, **output identical**. 🔵 `p499`'s own warning, instantiated: *a plausible number is the expected number.* |
+| 🔴 **Operative-word counts on this base** | **Not comparable across instruments.** The same Apache-2.0/SPDX payload reads **1 426** (`p499`), **1 431** (`p500`) and **1 408** (`p501`). Each is internally consistent; the number is an artefact of where the cut falls. **No shelf row may quote an operative count as a licence property.** → `Gap 501-C`. |
+| 🔴 **An ERPNext version figure in circulation** | A search returned *"most recent stable release… August 2026 (`v16.32.3`)"*. **Measured from the repository's own tags: `v16.52.0` / `v16.52.1`** — twenty minor versions behind. 🔵 Version floors come from `git ls-remote --tags`, **never** from a search result. |
+
+### 🟢 `p500`'s gaps, entered into the register
+
+| gap | status |
+|---|---|
+| 🟢 **`Gap 500-A`** | **CLOSED this pass** — see above. |
+| 🔴 **`Gap 500-B`** | **not addressed.** Every Apache verdict recorded before `p500` was graded against SPDX alone and may carry the `−19` phantom; the shelves were not re-swept. 🟢 Three Apache payloads graded this pass with multi-form matching came back `0/0` (`SocialCoach`, `Student_Exam_Generator`), which is consistent with the phantom being the grader's — **but that is 3 rows, not a sweep.** |
+| 🔴 **`Gap 500-C`** | **not addressed.** The grader still cannot distinguish appended **attribution** from an appended **restriction** (`OpenOLAT`, +99). 🔵 `p501`'s abstention band does not help here: `OpenOLAT`'s residual is well inside `rel ≤ 0.15`, so it labels — correctly — and says nothing about what the extra words *do*. |
+| 🔴 **`Gap 500-D`** | **not addressed.** `eur-lex.europa.eu` was not re-probed this pass. 🔵 The EU dates were re-read from secondary sources and are **consistent with what these shelves carry**; the conflict `Gap 483-K` records is unchanged. **Needs the domain allowed.** |
+| 🔴 **`Gap 500-E`** | **carried, and load-bearing again.** `P501-1` depends on `learning-commons-org/evaluators` and repeats the warning: ship the **MIT code**, not the **CC BY-NC-SA** corpora. Still nobody has asked whether a commercial licence for the corpora exists. |
+| 🟡 **`Gap 500-F`** | **re-run and unchanged.** No AI tutor agent first released in **October 2026** surfaced on any axis queried, `topic:ai-in-education` included. `DeepTutor` (July 2026) remains the newest significant entrant. 🔵 `SocialCoach` is **new to this base**, not new to the world. |
+
+### 🔴 Carried forward, unaddressed
+
+| gap | status |
+|---|---|
+| 🔴 `Gap 446-A` | gate unclosable — the harness refuses execution of code arriving in a clone. **25 passes.** 🔵 `p501`'s instruments were run from a session scratch directory instead, which is not the same thing as a gate. |
+| 🔴 `Gap 499-C` | **re-probed, unmoved.** `www.gnu.org` **000**, `opensource.org` **000**, with `raw.githubusercontent.com` **200** as control. Apache-2.0 is two-sourced; **GPL, LGPL and AGPL remain single-sourced from SPDX.** Needs a network policy reaching `gnu.org`. |
+| 🔴 `Gap 499-E` | **open, and `Gap 501-E` is its sibling on a different axis** — one cut misses a renamed appendix heading, the other misses a wrapped notice paragraph. 🔵 Both are the same defect: **structure read by line prefix and literal marker.** |
+| 🔴 `Gap 499-F`, `499-L` | **not addressed.** The 28.1% raw / 0-materially-altered classification is still hand-made and no code reproduces it. |
+| 🔴 `Gap 499-G`, `484-A`, `498-H`, `498-I`, `498-J` | **nothing cloned, built or run** — eighteen passes. `P501-1` states this in place of an effort range rather than inventing one. |
+| 🔴 `Gap 499-A` | **superseded in diagnosis.** `p500` re-read it as a licence wall; `p501` finds the frame itself was one axis wide. 🔵 Promotion backlog, licence wall and axis coverage are **three different problems** and this base has been reading them as one. |
+| 🔴 `Gap 488-E` | **not re-run, and confirmed by instance.** `SocialCoach` carries `ai-in-education` and **not** `edtech`: the topic axis does not merely admit non-education members, it **excludes education members**. |
+| 🔴 `Gap 488-H` | **untried, deliberately.** Opening issues on third-party repos to request a grant is an outward-facing act this session is not authorised to take unprompted. Needs a human decision. |
+| 🔴 `Gap 488-S` | not re-run. 🔴 **A third bill count appeared** — "134 bills across 31 states in 2026" — against the two trackers `p499` found disagreeing by 2×. Three sources, three inclusion rules. **Use the named instruments with dates, not the count.** |
+| 🟡 `Gap 498-C`, `498-E`, `498-F` | not addressed. |
+| 🟡 `Gap 499-H` | **carried and applied.** `SocialCoach` is the second row to need it: **239 commits, no release, no tag.** `P501-1` pins a commit and says so. |
+| 🟡 `Gap 499-I`, `499-J`, `499-K`, `499-M` | not addressed. 🔵 `499-I`'s selection-effect warning is the one this pass should have heeded a pass earlier (see corrections). |
+| 🟡 `Gap 483-B`, `483-E`, `483-G`, `483-H`, `483-I`, `483-J`, `483-P`, `483-K` | not addressed. |
+| 🟡 `Gap 484-B`, `484-D`, `484-E`, `484-F`, `484-I`, `484-J`, `484-V` | not addressed. 🔵 `484-F` unmoved: `apache.org` is still the only non-GitHub primary source that resolves. |
+| 🟡 `Gap 488-A`, `488-B`, `488-C`, `488-D`, `488-F`, `488-G`, `488-I`, `488-M`, `488-N`, `488-R`, `488-T`, `488-U`, `488-V`, `488-W` | not addressed. |
+| 🟡 `Gap 489-E`–`489-H`, `489-I`, `489-K`, `489-L` | not addressed. |
+| 🔴 `Gap 498-L` | **honoured.** Both `p501` instruments print `rows_in`/`rows_out` with an explicit `ASSERT`. 🔴 And the pagination form of the same defect **recurred on a new channel**: a listing stating **128** rows served **20** → `Gap 501-A`. |
+
+### 🆕 Registered this pass — 10
+
+| gap | statement | cost to close |
+|---|---|---|
+| 🔴 **`Gap 501-A`** | **Discovery is axis-bound and the axis set is undeclared.** `topic:ai-in-education` returns **65%** novelty against `topic:edtech`'s 19.2%, and its listing states **128 rows while serving 20** — 108 unread behind pagination. **No file in this repo records which discovery axes have been swept**, so no pass can tell whether a low novelty reading means *saturated* or *one axis deep*. | one pass to enumerate and record the axes; several to sweep |
+| 🔴 **`Gap 501-B`** | `BAND = 0.15` in the abstention guard is **chosen, not derived.** Four controls show it separates these inputs; nothing shows it is the right threshold, and **no payload in the corpus sits between `rel=0.08` and `rel=1.02`** — the band is untested in its middle. | one pass, a corpus of deliberately graded mutations |
+| 🔴 **`Gap 501-C`** | **Operative-word counts are instrument artefacts** — 1 426 / 1 431 / 1 408 for one Apache-2.0 payload across `p499` / `p500` / `p501`. Only within-run deltas carry meaning, and nothing in this repo states that where a reader would see it. | one pass, state the rule on each shelf that quotes a count |
+| 🔴 **`Gap 501-D`** | **`MANIFEST.tsv`'s last column is documented as a URL and carries prose on at least one row.** Any instrument reading the whole cell as a URL gets a false *"unreachable"*. The manifest is left byte-unchanged as `p499`'s attested artefact, so the defect is live for the next reader. | one pass, add an annotation column or a documented parse rule |
+| 🔴 **`Gap 501-E`** | **The notice-line cut is line-based and copyright notices are paragraphs.** Confirmed on `bydeng01/ability-levels-audit`: a six-author notice wraps, and the continuation line (`Chenyang Li, Hongyang Zhang`) is graded as operative — **4 phantom words**. Predicts false positives on every multi-author repository, which is most academic ones. | one pass, a paragraph-aware cut plus a multi-author control |
+| 🔴 **`Gap 501-F`** | **The 6-path licence probe produces false `NONE` verdicts** — proven on `frappe/erpnext` (GPL-3.0 at `license.txt`). Probe width is **inconsistent across this base's history** — six paths for `ictinnovations/ICTSchool` (tiered unusable on it), ten for a row on [`repos/trending.md`](../repos/trending.md) — and **neither width includes `license.txt`**. Every `NONE` verdict has to be re-read against the width that produced it, and no file records that width per row. | one pass, re-probe every `NONE` row at 22 paths and count |
+| 🟡 **`Gap 501-G`** | **Stars for twelve of thirteen new rows come from the topic listing**, a channel never calibrated here against repo-page reads. `p468` calibrated a second star channel; this is a third, used without calibration. | one pass, re-read ten of them on the repo page and compare |
+| 🟡 **`Gap 501-H`** | **No LATAM education-AI commercial vendor exists on these shelves after seven passes.** Every LATAM source that resolves is UNESCO, OECD or a national statistics agency. 🔵 This is now a **property of the available sources**, not a search failure — record it as structural and stop re-running the query. | needs a different source class (trade press, local registries), not another pass |
+| 🔴 **`Gap 501-I`** | **South Africa's draft National AI Policy 2026 may have been abrogated on 27 April 2026** — which would retire an instrument `p500` placed on these shelves. The claim comes from a general-reference encyclopaedia read second-hand; the government's own publication was not reached. **Flagged, not acted on.** | one read of the official gazette, if it resolves |
+| 🟡 **`Gap 501-J`** | **A named platform with a plausible licence and no resolvable address is a lead, not a finding.** A *"University Management System (UMS), Apache-2.0"* was returned as the only permissive education ERP candidate; **no owner/repo slug was given and none was resolvable**, so no row was written. 🔵 If a permissive education ERP exists, this base has not found it — and guessing a slug is how a 404 becomes a KB entity. | one pass, a by-name search for the slug |
+
 ## 🆕 `p499` — **🟢 `Gap 473-F`'s CURRENCY CONTRACT PASSES FOR THE FIRST TIME IN ELEVEN PASSES: newest section was `p498`, expected `p498`. 🟢 `Gap 498-K` RATIFIED AND HONOURED — every gap this pass declares carries a `Gap 499-<letter>` ID on the shelf it was found on. 🟢 SIX GAPS CLOSED WITH CONTENT (`498-B`, `498-D`, `498-G`, `488-T`, `498-M`'s URL gate, `498-A` with its premise REFUTED), TWO SUBSTANTIALLY (`488-Q`, `488-O` for the Middle East only), 🔴 ONE PUBLISHED TREND NARROWED HARD (`T19`), 🔴 ONE OF `p498`'s OWN INSTANCE COUNTS CORRECTED, 🔴 TWO OF THIS PASS'S OWN INSTRUMENT FORMS CAUGHT DELETING OPERATIVE TEXT, and thirteen registered.**
 
 🔵 **`gate-register-currency` — measured and PASSED.** `Gap 473-F`: the register's newest section

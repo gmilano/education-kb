@@ -3,6 +3,108 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p501` — `2026-10-28` — **🆕 `T22` and `T23`; 🟢 `T15` extended with the two jurisdictions it named as missing; 🔴 and one measurement this file published as a sector property is re-read as a property of a search axis.**
+
+### 🔴 `p499`'s saturation reading was about an axis, not the sector
+
+This file and [`agents/trending.md`](../agents/trending.md) have carried `p499`'s finding that
+education-AI supply in the 50–400★ band is **largely already read** — novelty **19.2%**, which
+`Gap 498-A` closed *"BY REFUTATION"*. 🔴 **Re-measured this pass on `topic:ai-in-education`, an axis
+never swept here: 13 of 20 rows are new — 65%.** Same sector, same week, **3.4×** the novelty.
+
+🔵 **Nothing in `p499`'s method was wrong.** It measured the axis it swept and reported the number
+honestly. The error is in how the number was *carried*: a saturation figure is only a sector claim if
+the sampling frame is the sector, and this base's frame is `topic:edtech` plus named-project queries.
+`Gap 499-I` already warned that the permissive-share move was *"a selection effect… the denominator
+is this shelf, not the market"*. **This is the same defect on a different statistic, and it was
+published anyway.** See `Gap 501-A`.
+
+### 🆕 `T22` — The sector labels itself in two vocabularies, and they barely overlap
+
+`topic:edtech` and `topic:ai-in-education` are **near-disjoint populations on GitHub**, not two views
+of one. Measured on `ai-in-education` page 1 (20 of a stated 128 rows):
+
+| | n | share |
+|---|---|---|
+| new to this base | **13** | **65.0%** |
+| known, narrative only | 5 | 25.0% |
+| known, on a curated shelf | 2 | 10.0% |
+
+[`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) — **Apache-2.0, 438★, 57
+forks** — carries `ai-in-education`, `personalized-learning`, `social-emotional-learning` and **not
+`edtech`**. No `edtech` sweep, at any star band or depth, could have returned it.
+
+🔵 **Why this is a sector trend and not just a tooling note:** the split tracks *who built the
+repo*. `edtech` is the **vendor and platform** vocabulary — LMS plugins, SIS integrations, standards
+tooling. `ai-in-education` is the **practitioner and researcher** vocabulary — a teacher's skill
+pack, a lab's audit, a classroom tool one person shipped. The two populations differ in size by an
+order of magnitude and in licence posture too: `p500` found a **licence wall** on the `edtech` band
+(only 4 of 31 residual rows permissive-and-live), while **10 of 13** new `ai-in-education` rows are
+permissive.
+
+**Consequence:** on an engagement, **query both vocabularies and expect different answers from
+each.** Looking for a platform to extend → `edtech`, and budget for copyleft. Looking for a
+practice-level agent to compose → `ai-in-education`, and expect MIT, small repos, no releases and
+sometimes no licence at all. 🔴 **This base has swept one of the two for eleven passes.**
+
+### 🆕 `T23` — Social-emotional learning is a real layer and this base had nothing on it
+
+Before this pass, `social-emotional` and *"social emotional"* returned **0 hits across
+[`agents/top.md`](../agents/top.md), [`agents/trending.md`](../agents/trending.md), this file and
+[`verticals/solutions.md`](../verticals/solutions.md)**. Every tutoring row here is **cognitive**:
+knowledge tracing (`OATutor`), content generation (`educhain`, `Skill-Anything`), lesson planning
+(`k12-teacher-skills`, `Shiksha-Copilot`), classroom simulation (`OpenMAIC`), plagiarism detection
+(`dolos`).
+
+🟢 `SocialCoach` is the counter-instance and its **57 forks against 438★** read as use rather than
+stargazing — role-play for conflict handling and communication with personalised feedback.
+
+**Consequence:** *"AI tutor"* is two different products. An engagement that means **soft skills —
+interview practice, conflict resolution, communication, SEL curricula** — was served by nothing on
+these shelves until this pass, and is still served by **exactly one row with no release and no
+tag**. 🔴 **Scope the word "tutor" explicitly in discovery.** 🔵 And note what SEL does to the
+regulatory picture: a system coaching a child's emotional conduct sits closer to the EU's Annex III
+*"evaluates learners"* line and to NYC's red tier than a maths tutor does, while being **less**
+measurable — the evidence-of-learning demand `T13`'s successors describe has no obvious instrument
+here.
+
+### 🟢 `T15` extended — Kenya, Nigeria and Rwanda, the two gaps it named and one more
+
+`T15` closed with *"🔵 Kenya and Nigeria remain **unmeasured** here despite an explicit by-country
+query."* Both are now measured, and they **strengthen** the trend rather than qualify it:
+
+| jurisdiction | instrument | what it shows |
+|---|---|---|
+| 🇰🇪 Kenya | **National AI Strategy 2025–2030** (MICDE), non-binding | 🟢 The **most education-explicit** African instrument found: AI literacy across education, **DigiKen** curriculum hubs. 🔴 Publication date conflicts between sources (March 2025 vs December 2025). |
+| 🇳🇬 Nigeria | **National AI Strategy (2024)** (NITDA/FMCIDE), non-binding | 🔴 Its own education analysts: application in education systems *"remains aspirational rather than systemic"* — **policy present, implementation absent**, which is precisely `T15`'s claim. |
+| 🇷🇼 Rwanda | **National AI Policy** + a **three-year Government-of-Rwanda ↔ Anthropic MoU (February 2026)** | 🟢 Model access and intent are settled; **delivery is the open question**. 🔵 An MoU is not an outcome. |
+
+🔵 **`T15` holds and sharpens: the African constraint is not the absence of policy — policy is now
+documented in four jurisdictions — it is capability and language.** Kenya and Rwanda name
+curriculum and literacy; Nigeria's own reading is that the strategy has not reached systems; and
+Ethiopia's reported obstacle remains Amharic and Afaan Oromo model quality. 🔴 Every one of these
+instruments is **non-binding**, so unlike the EU or North Carolina there is **no deadline** driving
+procurement.
+
+🔴 **One instrument may have been retired and this base cannot confirm it.** South Africa's draft
+National AI Policy 2026 — which `p500` placed here — is recorded by one general-reference source as
+**abrogated 27 April 2026**. Read second-hand; the government's own publication was not reached.
+**Flagged, not acted on** (`Gap 501-I`).
+
+### 🔴 The APAC teacher rate is being supplied by invention
+
+`Gap 488-Q` has asked for an APAC teacher-adoption rate for several passes. A dedicated query this
+pass returned **three** figures and **all three fail verification**: 86% of SEA teachers (secondary
+blog citing a publisher whose own material does not carry it), >95% of Chinese secondary schools
+(aggregator, no source), 68% of Indian rural schools (aggregator, no source, and it counts schools
+not teachers). The one credible cross-country figure is **OECD TALIS 2024's "about one in three"** —
+global, and pre-2026.
+
+🔵 **This is a trend about the information market, not the education market: a widely demanded
+number that nobody has measured gets manufactured.** Anything on these shelves quoting a regional
+teacher-adoption rate should be assumed to trace back to one of these three until a probability
+sample appears.
+
 
 # Education AI — current trends
 

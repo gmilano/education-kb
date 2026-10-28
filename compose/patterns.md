@@ -1187,3 +1187,131 @@ Australia and India run on existing law.
 jurisdiction above.
 **Estimate:** 10–12 weeks for two jurisdictions; +3 weeks per additional policy node.
 
+
+## 🆕 `p501` — `2026-10-28` — two patterns: the layer this base had no recipe for, and the licence artefact every engagement now needs
+
+## P501-1 — Social-emotional / soft-skills coach for a school district, with the decision kept human 🟢
+
+**Why:** `T23` established this pass that **every tutoring row on these shelves is cognitive** —
+knowledge tracing, content generation, lesson planning, classroom simulation — and that
+*"social-emotional"* returned **0 hits across four live shelves** before `p501`. An engagement that
+says *"AI tutor"* and means **conflict resolution, communication practice, interview prep or an SEL
+curriculum** had no recipe here. It now has exactly one permissive component, so this pattern is
+honest about resting on a single row.
+
+🔴 **And it is the riskiest education pattern on this file.** A system coaching a child's emotional
+conduct sits closer to the EU's Annex III *"evaluates learners"* line, and to New York City's **red
+tier** (grading, discipline, promotion, graduation), than a maths tutor does — while being **less
+measurable**. The architecture below exists to keep it on the assistive side of that line.
+
+**Components**
+
+| Role | Component | Licence (read at SHA) |
+|---|---|---|
+| SEL role-play + feedback engine | [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) | 🟢 **Apache-2.0**, 11 358 B, blob `d645695673…`, **`0/0` operative**, at `84f67257f5aa` |
+| Way into the incumbent LMS | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0, 10 273 B |
+| Rubric gate on every learner-facing message | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (**code only**) | 🟢 MIT, 1 615 B |
+| Teacher-review routing shape | [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | 🟢 MIT, 1 141 B |
+| Offline / low-connectivity delivery | Kolibri (**pin `v0.19.5`**, not a commit) | 🟢 MIT |
+| No-app delivery surface, 15 languages | [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) | 🟢 Apache-2.0, 11 287 B |
+
+**Wiring**
+
+1. Register **Tsugi** as an LTI tool against the district's existing LMS. 🔵 No fork and no
+   migration — `T2`'s re-scoping is what makes this reachable without inheriting a copyleft
+   platform.
+2. Run **SocialCoach** behind it as the scenario engine. 🔴 **Pin a commit, not a tag: it has
+   239 commits on `main` and no release.** Vendor it into your own build; do not track `main` in a
+   client deployment (`Gap 499-H`'s caveat, and the reason this is a watch row on
+   [`agents/top.md`](../agents/top.md)).
+3. **Gate every learner-facing utterance** through the **evaluators** rubric families before send —
+   tone, reading level, and an escalation rule for any disclosure a role-play may surface. 🔴 Ship
+   the **MIT code with your own rubric data**: the shipped annotated **CLEAR** and **PERSUADE 2.0**
+   corpora are **CC BY-NC-SA 4.0 — non-commercial** and must not ship in a paid engagement
+   (`Gap 500-E`).
+4. **Keep the agent out of every decision of record.** Following **Shiksha-Copilot**'s shape, any
+   observation about a pupil — a pattern, a concern, a flag — is routed to a **named educator who
+   decides**, with the decision and its author logged. 🔵 This is the one architecture that satisfies
+   Oklahoma S.B. 1734, NYC's red tier, and the EU's assist/decide split **at the same time**; see
+   [`intel/market.md`](../intel/market.md) `p501`.
+5. For LATAM and African deployments, deliver through **Kolibri** offline or **rumi-platform**'s
+   **WhatsApp** surface. 🔵 Argentina's **75% high-SES vs 42% low-SES** usage split makes an
+   offline path a *procurement criterion*, not a nicety.
+6. 🔴 **Scope language capability before build** (`T15`): SEL coaching is conversational and
+   culturally loaded, so a model that handles the language of instruction only passably will fail
+   here in ways a maths tutor would survive.
+
+**What this pattern cannot claim**
+
+🔴 **Nothing below was built or run.** Every component is a licence-and-description read
+(`Gap 499-G`, `Gap 484-A`), so **no effort range is given** — this base has produced none it can
+defend. 🔴 **SocialCoach's 57 forks and 239 commits are its only evidence of use**; no deployment,
+benchmark or learning outcome was found for it. 🔴 **There is no SEL evaluation instrument on these
+shelves at all** — `evaluators`' rubric families are about text quality, not emotional-coaching
+safety. 🔵 If the buyer asks *"how will we know it worked?"*, the honest answer today is **an
+instrument has to be built**, and that should be scoped and priced as its own work.
+
+## P501-2 — The licence-assurance artefact an engagement can hand to counsel 🟢
+
+**Why:** every pattern on this file turns on a licence fact, and this pass found how fragile those
+facts are: a **6-path probe that reported GPL-3.0 ERPNext as having no grant**; a grader that
+labelled a **CERN-OHL-S-2.0** hardware licence `BSD-2-Clause`; **three instruments producing three
+different operative-word counts for one payload**; a **search-sourced version number stale by
+twenty minor releases**; and a **CC-BY-NC** row sitting in supply that looks permissive at a glance.
+🟢 Each of those is now fixed or bounded, and the parts compose into something a client's counsel
+can actually read.
+
+**Components** — all in this repository, all permissively licensed or self-authored
+
+| Role | Component |
+|---|---|
+| 12 canonical licence payloads, pinned with bytes + blob SHA-1 + SHA-256 | [`evidence/canonical/`](../evidence/canonical/) + `MANIFEST.tsv` |
+| Retention **and** upstream-amendment check | [`p501-abstention-and-reresolve/reresolve_canonical.py`](code/p501-abstention-and-reresolve/reresolve_canonical.py) |
+| Family grading **with abstention** | [`p501-abstention-and-reresolve/grade_abstain.py`](code/p501-abstention-and-reresolve/grade_abstain.py) |
+| Payload resolution at a pinned SHA | [`p501-abstention-and-reresolve/fetch_lic.sh`](code/p501-abstention-and-reresolve/fetch_lic.sh) |
+| Multi-form canonical comparison | [`p500-dual-canonical-grader/`](code/p500-dual-canonical-grader/) |
+
+**Wiring**
+
+1. **Freeze the dependency set at SHAs, not tags or branches.** Resolve each with
+   `git ls-remote --symref`; `api.github.com` returns **403** for arbitrary repositories and
+   `curl -sI` on `github.com` returns **403 for existent and non-existent alike** — it has **zero
+   discriminating power** and must never be used as an existence check (`Gap 498-M`).
+2. **Resolve each licence payload at its pinned SHA over `raw.githubusercontent.com`** (200 real /
+   404 fake — the gate that does discriminate). 🔴 **Probe 22 path forms, not six**: vary case and
+   extension *together*, or you will report GPL-3.0 code as unlicensed exactly as this base did to
+   ERPNext.
+3. **Grade each payload against every retained form of its family and keep the best match**
+   (`p500`'s rule) — otherwise the two legitimate Apache-2.0 forms manufacture a phantom `−19` and
+   a correctly-licensed dependency reads as `DEVIANT` to a lawyer.
+4. **Let the grader abstain.** `rel = (ins + del) / canonical_words`; label at `rel ≤ 0.15`,
+   otherwise **`ABSTAIN` naming the nearest family and the distance**. An `ABSTAIN` row is routed to
+   a human, which is the correct outcome for CERN-OHL-S, CC-BY-NC and anything else outside the set.
+5. **Run the retention + amendment check every build.** Check A proves the retained canonicals are
+   unchanged; **check B re-reads the same paths at the publisher's moving ref** and is the only one
+   that can catch an upstream amendment. 🔵 Today they agree because
+   `spdx/license-list-data` HEAD **is** the pinned commit `f715b366…`.
+6. **Every instrument gets a known-good and a known-bad input before its output is used**, and the
+   run prints `rows_in`/`rows_out` with an explicit `ASSERT` (`Gap 498-L`, `Gap 498-M`). 🔵 This
+   pass's own first run reported *"`www.apache.org` unreachable"* — a prose annotation in a URL
+   column — and the direct probe answered **200 on 3/3**.
+
+**What the artefact contains, and what it is worth**
+
+A per-dependency row: repo, pinned SHA, licence path, bytes, blob SHA-1, family verdict or
+`ABSTAIN`, and the operative residual. 🟢 **The residual is the part counsel cares about**: `0/0`
+means the dependency ships the canonical text, and a non-zero residual is the exact word list to
+read.
+
+🔴 **Three limits to state to the client, not bury.** (a) **Operative-word counts are artefacts of
+the cut** — 1 408 / 1 426 / 1 431 for the same Apache-2.0 payload across three instruments here —
+so quote *residuals within one run*, never a count as a licence property (`Gap 501-C`). (b) **`BAND
+= 0.15` is chosen, not derived**, and is untested between `rel=0.08` and `rel=1.02` (`Gap 501-B`).
+(c) **A small positive residual on a multi-author repository is this base's bug**: the notice-line
+cut is line-based and copyright notices wrap, which put 4 phantom words on a six-author academic
+repo this pass (`Gap 501-E`). 🔵 **None of this is legal advice** — it is a reproducible reading of
+bytes, which is precisely what makes it useful to someone who *can* give legal advice
+(`Gap 499-M`).
+
+🔴 **Not gate-attested:** `make hooks` has not run on this base for **25 passes** (`Gap 446-A`).
+

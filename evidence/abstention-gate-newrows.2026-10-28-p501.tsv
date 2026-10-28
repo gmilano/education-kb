@@ -1,0 +1,10 @@
+label_input	payload_bytes	payload_words	best_family	best_form	ins	del	rel	verdict
+7-an/ai-study-path-triage	1079	164	MIT	MIT.txt	0	0	0.0000	MIT
+PhongKiemThu/deep-reading-analyst-skill	1068	164	MIT	MIT.txt	0	0	0.0000	MIT
+xiajiadi/verilecture-v3	1066	164	MIT	MIT.txt	0	0	0.0000	MIT
+xiajiadi/dc-designer-core	1086	164	MIT	MIT.txt	0	0	0.0000	MIT
+spogoda-lab/gcse-QLA-Intervention-System CC-BY-NC	1748	231	LGPL-3.0-only	LGPL-3.0-only.txt	188	6384	1.0226	ABSTAIN(nearest=LGPL-3.0-only rel=1.02)
+KaynXu/awesome-ai-education	1091	164	MIT	MIT.txt	0	0	0.0000	MIT
+rithinch/pareto-optimal-student-supervisor-allocation	1073	164	MIT	MIT.txt	0	0	0.0000	MIT
+khayyam-math/khayyam-math	1079	164	MIT	MIT.txt	0	0	0.0000	MIT
+bydeng01/ability-levels-audit	1154	169	MIT	MIT.txt	5	0	0.0305	MIT
