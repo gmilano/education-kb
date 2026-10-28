@@ -1315,3 +1315,94 @@ bytes, which is precisely what makes it useful to someone who *can* give legal a
 
 🔴 **Not gate-attested:** `make hooks` has not run on this base for **25 passes** (`Gap 446-A`).
 
+
+## 🆕 `p502` — `2026-10-28` — one pattern: the compliance evidence layer, which every regulation on these shelves requires and no recipe here has built
+
+## 🆕 `P502-1` — **Auditable AI tutoring: the agent writes to a Learning Record Store, not to a log file** 🟢
+
+**What it answers.** Every regime in [`intel/market.md`](../intel/market.md) converges on one demand:
+*prove a human reviewed the AI's output, and produce the record on request.* EU AI Act **Art. 26**
+deployer logging; **Oklahoma** barring AI as the primary basis for grading or discipline; **Vietnam**
+listing automated assessment as high-risk; **UNESCO IESALC**'s 87%-adopting / **26%**-with-a-strategy
+finding across 200 LATAM institutions. 🔴 **No pattern on this shelf produces that record.** `P490-2`
+and `microsoft/Shiksha-Copilot` route output to a teacher for review; neither *persists the review as
+evidence*.
+
+**Every component permissive, every licence read from bytes at the SHA shown** —
+[`channel-crosscheck.2026-10-28-p502.tsv`](../evidence/channel-crosscheck.2026-10-28-p502.tsv).
+
+| # | Component | Repo | Licence (bytes at SHA) | Pin | Role |
+|---|---|---|---|---|---|
+| 1 | Record store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** 11,356 B `58853eb8199b` | `6159416` 🟢 2 d | The evidence database. SQLite for a pilot, Postgres for an institution |
+| 2 | Agent↔LRS bridge | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | MIT *(carried)* | `fbf6091` 🔴 **425 d** | MCP server exposing xAPI write/read **as agent tools** |
+| 3 | Profile validation | [`yetanalytics/project-persephone`](https://github.com/yetanalytics/project-persephone) | **Apache-2.0** 11,356 B `58853eb8199b` | `92a3f78` 🟢 | Rejects a Statement that does not conform to your declared profile — **at write time** |
+| 4 | Conformance gate | [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | **MIT** 1,045 B `f1083e4aa47d` | `5bc232d` | CI gate + the artefact you hand procurement |
+| 5 | Dashboard | [`openfun/warren`](https://github.com/openfun/warren) | **MIT** 1,093 B `14a2c9fcad08` | `839fcbb` 🔴 **708 d** | Analytics views over the LRS. 🔴 **Fork it — see below** |
+| 6 | The tutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) **or** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | Apache-2.0 / **MIT** | `a31d8262` / `70859b42` | Whichever the engagement already chose — this pattern is **agent-agnostic by design** |
+| 7 | Teacher-review surface | [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | MIT 1,141 B `689ec068` | `cf2a2e24` | Already routes every artefact to a teacher before classroom use |
+
+### How they wire together
+
+```
+ (6) tutor/content agent
+        │  proposes an artefact (lesson, quiz, feedback, grade suggestion)
+        ▼
+ (7) teacher-review surface  ──── human decides: approve / edit / reject
+        │
+        │  emit ONE xAPI Statement per decision, not per generation:
+        │    actor  = the teacher (the human, never the model)
+        │    verb   = approved | edited | rejected
+        │    object = the artefact, with the model + prompt hash as context
+        ▼
+ (2) learnmcp-xapi  ──MCP tool call──►  (3) persephone: profile-valid?
+        │                                     │ no → reject, surface to the teacher
+        ▼                                     ▼ yes
+ (1) lrsql  ◄── the evidence of record ──────┘
+        │
+        ├──► (5) warren        — dashboards for the institution
+        └──► (4) conformance suite — CI gate + procurement artefact
+```
+
+### 🔴 The four things that make this work, which a naive build gets wrong
+
+1. **The `actor` is the teacher, not the model.** An xAPI Statement whose actor is the agent records
+   that *a machine did something*; the regulations above require evidence that **a human decided**.
+   🔵 This single field choice is the difference between a log and a compliance artefact.
+2. **Emit on the decision, not on the generation.** One Statement per human decision. Emitting per
+   model call produces volume with no evidentiary value and leaks prompt content into a store that
+   institutional staff can query.
+3. **🔴 Fork components 2 and 5 at the start of the engagement, not when they break.**
+   `learnmcp-xapi` is **425 days** unmoved and is the *entire* open-source supply for its role;
+   `warren`'s `main` is **708 days** unmoved. Both are MIT, so forking is free and permitted. 🟢
+   Budget for ownership on day one and say so in the proposal — this is the sixth consecutive pass on
+   which `learnmcp-xapi` has not moved.
+4. **🔴 Do not judge any of these by the API's `pushed_at`.** It reports `warren` as pushed **today**
+   against a 708-day-unmoved `main`, and `ADL_LRS` as pushed `2025-11-14` against a last commit of
+   `2025-06-13` (`Gap 502-B`, `T25`). **Date with git.** This is why component 1 is `lrsql` and not
+   the 2.3×-larger `ADL_LRS`, whose mainline is **502 days** dead.
+
+### Licence posture
+
+🟢 **Apache-2.0 / MIT throughout — the deliverable can be closed.** 🔵 This is the first pattern on
+this shelf whose *entire* critical path avoids `T2`'s copyleft platform constraint, because it never
+forks the LMS: it integrates over LTI/xAPI and owns only the record layer. 🟢 Where the client already
+runs Moodle (GPL-3.0), Canvas or Open edX (AGPL-3.0), **nothing here inherits those terms** —
+separate process, standards-defined wire protocol.
+
+### Regional fit
+
+| region | fit | note |
+|---|---|---|
+| **LATAM** | 🟢 **strongest** | The 87%/26% gap *is* an evidence gap. Needs Spanish/Portuguese localisation of components 5 and 7 — neither of which exists, so it is build-and-own, not integrate |
+| **EMEA** | 🟢 strong | Annex III conformity assessment consumes exactly component 4's output. 🔵 Both EMEA-origin components are France Université Numérique and one is stale |
+| **North America** | 🟢 strong | Oklahoma's written-policy deadline is the **2027–28 school year**; the record layer is how a district demonstrates compliance rather than asserting it |
+| **APAC** | 🟡 viable, no local supply | 🔴 **No APAC record-layer repo was found** (`Gap 502-E`). The agent tier is APAC-dominant (`DeepTutor`, `OpenMAIC`), so component 6 is local and components 1–5 are imported |
+
+### 🔴 What this pattern does **not** do
+
+- It does not make the tutor's output correct. It records who approved it.
+- It does not satisfy the EU **conformity assessment** on its own — that is a documentation exercise;
+  component 4 supplies one input to it, not the file.
+- 🔵 It assumes the institution *wants* the record. Where `T1`'s delivery gap is really a
+  procurement-will gap, the dashboard in component 5 is the part that sells it, and that is the
+  **most stale component in the stack**.

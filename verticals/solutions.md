@@ -635,3 +635,33 @@ figure is **twenty minor versions behind**.
 after `Gap 498-G`; the same discipline has to apply to every platform row, and the channel to use is
 `git ls-remote --tags`, **not** a search result. A search-sourced version number has no shelf life.
 
+
+## 🆕 `p502` — `2026-10-28` — **the layer that makes an LMS auditable, and nobody sells it**
+
+This shelf has carried the platforms (Moodle, Canvas, Open edX, Chamilo, ILIAS, OpenOLAT, TAO,
+OpenEduCat) for ~35 passes. 🔴 **Every one of them is a system of record for *enrolment and content*
+and none of them is a system of record for *what an AI did and who reviewed it*.** That second record
+is what the EU AI Act's Art. 26, Oklahoma's grading bar and LATAM's 26%-with-a-strategy finding all
+require — and it is a separate, standards-defined layer: **xAPI / cmi5 / Caliper**.
+
+🟢 **It is real, permissive, and customisable in exactly the sense this shelf means** — the same way
+Odoo is an ERP you build on top of:
+
+| Platform | Licence (bytes at the pinned SHA) | ★ | Mainline | What you bolt onto it |
+|---|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** — 11,356 B `58853eb8199b` | **144** | 🟢 **2 d** `6159416` | 🟢 **The Odoo of this layer.** SQL-backed LRS, runs on SQLite for a pilot and Postgres for an institution; put an agent's review-and-approval events in it and the audit trail is a query |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | **Apache-2.0** — 11,357 B `1128f8f91104` | **334** | 🔴 **502 d** `efa045e` | The US DoD reference LRS. 🔴 **Cite it, do not build on it** |
+| [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | **Apache-2.0** — 11,357 B `1128f8f91104` | 59 | 🔴 281 d `806c0ba` | **cmi5** player + test suite — the launch-and-track profile that replaces SCORM. Pairs with this shelf's SCORM rows |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | **MIT** — 1,045 B `f1083e4aa47d` | 78 | 🔴 419 d `5bc232d` | 🟢 The **acceptance gate**. Run it against whatever you ship and a procurement office has its answer |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | MIT *(carried, `p467`)* | 51 | 🟢 16 d `91fef11` | LRS + ingestion CLI, **EMEA** (France Université Numérique) |
+| [`openfun/warren`](https://github.com/openfun/warren) | **MIT** — 1,093 B `14a2c9fcad08` | 17 | 🔴 **708 d** `839fcbb` | The dashboard half. 🟢 **Fork-and-own: MIT, unmaintained, under a dated legal requirement** |
+
+🔵 **Why this belongs on the *verticals* shelf and not only in intel:** the LMS platforms here are
+mostly **copyleft** (`T2`'s binding constraint — Moodle GPL-3.0, Canvas and Open edX AGPL-3.0,
+Chamilo GPL-3.0). 🟢 **The record layer is the one tier of the education stack that is permissive at
+the top of its own star ranking**, so a client deliverable can contain it outright. That inverts the
+usual recommendation: don't fork the LMS, integrate with it over LTI and own the record layer.
+
+🔴 **Regional reality, stated as measured:** five of the six rows are North American and the two EMEA
+rows are one organisation. **No APAC or LATAM record-layer platform was found** on the channel used
+(`Gap 502-E` names the channel and its blind spots — non-English naming and non-GitHub forges).

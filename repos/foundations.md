@@ -727,3 +727,97 @@ unmeasured blast radius; `Gap 500-C` holds the attribution-vs-restriction blindn
 | [`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) | 74 | **No grant** at any of 7 root paths (all 404). All rights reserved. |
 | [`abdullaitcenter-hue/comet-trail-archives`](https://github.com/abdullaitcenter-hue/comet-trail-archives) | 70 | **No grant** at any of 7 root paths. All rights reserved. |
 
+
+## 🆕 `p502` — `2026-10-28` — **🟢 the record layer reaches this shelf, 35 passes after it was graded**
+
+`Gap 467-I` was opened because *"no permissive row exists at the LRS / learning-analytics tier; an
+xAPI analytics component cannot enter a proprietary deliverable from these shelves."* It was
+**closed by grading nine rows** — and closure moved **nothing onto this shelf**. 🔴 This file has
+carried an LMS/SIS census for ~35 passes with **no record layer in it at all**, while
+[`intel/open-gaps.md`](../intel/open-gaps.md) carried the grades. 🔵 **A gap can be answered and
+still leave the base unable to answer a client.** Registered as `Gap 502-C`; five rows promoted here.
+
+Measurement this pass used a channel this base recorded as closed — the **GitHub REST API**, reachable
+through the MCP server (`Gap 502-A`, and `agents/top.md`'s verification table is corrected). Licence
+family is taken from `license.spdx_id` **and** confirmed against the first 200 bytes at a pinned SHA,
+per the standing two-channel rule. 🔴 **Dates are from git only**: the API's `pushed_at` counts a push
+to any ref and overstated one mainline here by **708 days** (`Gap 502-B`).
+
+### Permissive — the record layer you can put in a closed deliverable
+
+| Repo | Licence (bytes at the pinned SHA) | ★ | forks | mainline | region | What it is |
+|---|---|---|---|---|---|---|
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | **Apache-2.0** — 11,357 B `1128f8f91104` | **334** | 156 | 🔴 **502 d** `efa045e` | North America | The **US DoD ADL Initiative's** own Learning Record Store, Python/Django. 🔴 **Reference implementation, not a base** — `master` has not moved since `2025-06-13` |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** — 11,356 B `58853eb8199b` | **144** | 41 | 🟢 **2 d** `6159416` | North America | SQL-backed LRS (Clojure, SQLite/Postgres). 🟢 **The live permissive LRS — build here.** Yet Analytics, `sqllrs.com` |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | **MIT** — 1,045 B `f1083e4aa47d` | 78 | 53 | 🔴 419 d `5bc232d` | North America | The **official xAPI conformance suite** (`lrstest.adlnet.gov`). 🟢 This is how you prove an LRS you built or forked is conformant — the acceptance instrument for the whole tier |
+| [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | **Apache-2.0** — 11,357 B `1128f8f91104` | 59 | 34 | 🔴 281 d `806c0ba` | North America | **cmi5** player + test suite. cmi5 is the xAPI profile that replaces SCORM for launch-and-track |
+| [`openfun/warren`](https://github.com/openfun/warren) | **MIT** — 1,093 B `14a2c9fcad08` | 17 | 1 | 🔴 **708 d** `839fcbb` | **EMEA** | Learning-analytics visualisation over xAPI. 🔵 Region is read from the licence line itself — *"Copyright (c) 2023-present **France Université Numérique**"* — not inferred |
+| [`yetanalytics/project-persephone`](https://github.com/yetanalytics/project-persephone) | **Apache-2.0** — 11,356 B `58853eb8199b` | 8 | 1 | 🟢 recent | North America | Validates xAPI Statements against **Profiles**. 🟢 New to this base. Small, but it is the piece that turns "we emit xAPI" into "we emit xAPI that conforms to a stated profile" |
+
+🟢 Already carried, re-confirmed: [`openfun/ralph`](https://github.com/openfun/ralph) — MIT, 51★,
+mainline **16 d** (`91fef11`), **EMEA** (France Université Numérique). `Gap 467-I` named it the
+permissive exemplar; 🔴 **it is the third-largest permissive LRS on this shelf, not the first**, so
+that closure understated its own tier by 2.8× on stars.
+
+### 🔴 Two orderings that disagree, and the one a `pushed_at` read gets wrong
+
+| | by stars | by mainline freshness |
+|---|---|---|
+| 1 | `ADL_LRS` **334** | `lrsql` **2 d** |
+| 2 | `lrsql` 144 | `ralph` 16 d |
+| 3 | `lrs-conformance-test-suite` 78 | `CATAPULT` 281 d |
+| … | | `ADL_LRS` 🔴 **502 d** |
+
+🔵 **The orderings are nearly inverted, and the API's convenient date field hides it:** `ADL_LRS`
+reports `pushed_at` `2025-11-14` against a last `master` commit of `2025-06-13` — **154 days apart**.
+🟢 **Shelf rule: cite `ADL_LRS` as the reference, build on `lrsql`, and prove conformance with
+`lrs-conformance-test-suite` regardless of which you pick.**
+
+### 🔵 One byte, two canonical Apache-2.0 payloads
+
+`11,356 B` / `58853eb8199b` (Yet Analytics ×2) and `11,357 B` / `1128f8f91104` (ADL ×2) differ by a
+single trailing byte in the appendix — **not a terms difference**. 🟢 The `1128f8f91104` payload is
+**byte-identical to the one this base already recorded for
+[`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills)**, an independent
+confirmation of that earlier read from an unrelated org.
+
+### Declared gaps
+
+| id | statement |
+|---|---|
+| 🆕 **`Gap 502-C`** | **Graded ≠ shelved.** `Gap 467-I` closed by grading and promoted nothing for ~35 passes. Five rows land here; **26 of the 31 tier addresses read this pass are still unshelved.** 🔴 Open and general: *how many other closed gaps closed without a promotion?* No instrument here answers that |
+| 🆕 **`Gap 502-D`** | **`NOASSERTION` is three states wearing one label** — no licence, custom licence, and a licence GitHub's matcher did not recognise — with opposite procurement consequences. [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) (164★) and [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (87★) both return it, while their sibling `agent-skills` is cleanly Apache-2.0. 🔴 **Neither payload was byte-read this pass**, and they are the larger two |
+| 🟡 carried | 🔴 **The whole record layer above is one region.** Five of six promoted rows are North America (US DoD and a Baltimore vendor); the sixth is EMEA and **708 days stale**. 🔴 **There is no APAC or LATAM LRS on this shelf, and none was found** — stated as a measured absence, not coverage |
+
+### 🟢 `p490`'s `tao-core` correction survives a direct attack — and the attack is the reusable finding
+
+`p490`'s correction table records that this base **overclaimed**
+[`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) as `GPL-2.0-or-later` when *"the `or-later`
+election is **not** readable from the payload."* 🔴 A one-line grep appears to overturn that
+immediately: the payload at `2f4f12f6dbad` (**18,025 B**, `sha1 946b7346e0ed`) **does** contain the
+string *"any later version"* — twice.
+
+🟢 **It does not overturn it. Both hits are canonical GPL-2.0 text, and neither is an election:**
+
+| line | location | what it is |
+|---|---|---|
+| 245 | inside **§9 of the terms** | the clause describing what happens *if* a program specifies a version number — a conditional, not a choice |
+| 299 | **after line 280, `END OF TERMS AND CONDITIONS`**, inside *"How to Apply These Terms to Your New Programs"* (line 282) | the **sample notice template** the FSF supplies for authors to copy |
+
+🔵 **Rule, and it generalises to every GNU payload on these shelves: the `-or-later` election is
+never readable from a canonical GNU licence body, because the canonical body contains the phrase
+twice by construction.** The election lives in the *project's own* notice — source-file headers, a
+`README`, or a declared SPDX identifier — never in the licence text. 🔴 A body scan for
+*"any later version"* therefore returns **true for every GPL-2.0 and GPL-3.0 repository in
+existence**, election or not, and would have mis-corrected a cell that was right.
+
+🟢 **`p490`'s cell stands: `GPL-2.0`, election not readable.** 🔵 This also sharpens `Gap 467-B`,
+which records readable `-or-later` elections on `i-educar`, `i-diario`, `moodle-sence`,
+`LearningLocker` and `EdOptimize` — those must have been read from a channel **other than** the
+licence body, and the gap should say which, or they inherit this same defect.
+
+🟢 **Re-confirmed independently this pass:** [`frappe/education`](https://github.com/frappe/education)'s
+grant payload is still the **19-byte** `license.txt` reading exactly `License: GNU GPL V3`
+(`sha1 425d2be709a6`, at `develop` `73ce33ef2719`) — the fixture behind this file's *"19-byte
+license"* section. 🔴 Its default branch is **`develop`, not `main`**; `main` does not resolve, which
+is this file's branch-name trap in its original instance.

@@ -1143,3 +1143,106 @@ code. 🔴 **But the honest statement is narrower than "licensed instruments exi
 ones are licensed **in their code and restricted in their corpora** (see `T13`). The tier has
 permissive *software* and non-commercial *reference data*.
 
+
+## 🆕 `p502` — `2026-10-28` — **🆕 `T24` and `T25`; 🔴 `T22` is re-scoped from a sector claim to an axis artefact; 🟢 `T11`'s evaluation tier gains the acceptance instrument it was missing**
+
+Reads: [`channel-crosscheck.2026-10-28-p502.tsv`](../evidence/channel-crosscheck.2026-10-28-p502.tsv),
+[`axis-saturation.2026-10-28-p502.tsv`](../evidence/axis-saturation.2026-10-28-p502.tsv).
+
+## T24 — The compliance artefact every regime demands is the record layer, and its open-source supply is one region deep
+
+Four regulatory regimes, four different statutes, **one shared deliverable**: a durable record of
+what the system did and that a human reviewed it. EU AI Act Art. 26 deployer logging; Oklahoma's bar
+on AI as the primary basis for grading or discipline; Vietnam's high-risk listing of automated
+assessment; UNESCO IESALC's finding that **87%** of LATAM institutions use AI and **26%** have a
+strategy. 🔵 **None of these is answered by a better tutor. All of them are answered by xAPI / cmi5 /
+Caliper plumbing.**
+
+🔴 **Measured supply, first-hand this pass:** of 31 record-layer addresses read, the permissive ones
+are **5 North America, 1 EMEA (708 days stale), 0 APAC, 0 LATAM**.
+
+| | permissive supply | live mainline |
+|---|---|---|
+| North America | 5 (`ADL_LRS` 334★, `lrsql` 144★, `lrs-conformance-test-suite` 78★, `CATAPULT` 59★, `project-persephone` 8★) | 🟢 1 (`lrsql`, 2 d) |
+| EMEA | 2 (`ralph` 51★, `warren` 17★) | 🟡 1 (`ralph`, 16 d); `warren` 🔴 708 d |
+| APAC | 🔴 **0** | — |
+| LATAM | 🔴 **0** | — |
+
+🔵 **And the asymmetry runs the other way at the agent tier**: APAC supplies the two largest
+permissive education-AI repositories in existence (`DeepTutor` 47,051★, `OpenMAIC` 41,690★) and
+nothing at the record tier. **Agents are abundant and global; the thing regulators actually ask for
+is scarce and American.** 🟢 That is the clearest build-and-own opportunity on these shelves, and it
+is strongest in LATAM, where the governance deficit is best evidenced (`intel/market.md` `p502`).
+
+## T25 — A repository's "last activity" is reported by three channels and all three can be wrong
+
+🔴 **`Gap 396-G` has now been confirmed against a third independent channel**, and the newest one is
+the worst offender. Fixture: [`openfun/warren`](https://github.com/openfun/warren).
+
+| channel | field | reports | error |
+|---|---|---|---|
+| `github.com/search` HTML | *Updated* | *"3 days ago"* | 🔴 702 d |
+| REST API | `updated_at` | `2026-10-21` | 🔴 ~706 d |
+| REST API | `pushed_at` | **`2026-10-28` — today** | 🔴 **708 d** |
+| `git clone --depth 1` | committer date of `main` | **`2024-11-19`** | 🟢 correct |
+
+🔵 **`pushed_at` is not lying — it is answering a different question.** It counts a push to *any*
+ref, so a repository with an untouched `main` and an active side branch reads as pushed today. The
+field is truthful about the repository and misleading about the mainline, and **the mainline is what
+a shelf decision depends on.** 🔴 Reproduced at a second magnitude on
+[`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS): `pushed_at` `2025-11-14` against a last
+`master` commit of `2025-06-13` — **154 days apart**.
+
+🟢 **Consequence for anyone reading these shelves:** a 334★ Apache-2.0 LRS that looks maintained is
+**502 days dead**, and a 144★ one that looks smaller shipped two days ago. The star ranking and the
+maintenance ranking in that tier are **inverted**, and the convenient date field conceals it.
+
+🟢 **Standing rule, extended from `396-G`:** *enumerate, star, licence-family and topic with the
+**API**; date with **git**; grant-bytes with **`raw`** at a pinned SHA.* Never let one channel do
+another's job — and treat `pushed_at` as evidence about a repository, never about its mainline.
+
+## 🔴 T22 — re-scoped, and the correction matters more than the trend
+
+`T22` was recorded by `p501` as a sector finding: discovery here had been *axis-bound*, with
+`topic:ai-in-education` yielding **65%** novelty against `topic:edtech`'s 19.2%.
+
+🔴 **Re-measured with a star floor, the effect disappears.**
+
+| axis | floor | `total_count` | 🟢 new to this base | novelty |
+|---|---|---|---|---|
+| `topic:ai-in-education` | `>50★` | **3** | **0** | **0.0%** |
+| `topic:edtech` | `>150★` | 28 | **0** | **0.0%** |
+| `topic:edtech license:apache-2.0` | `>20★` | 11 | **0** | **0.0%** |
+| `topic:learning-analytics` | `>20★` | 9 | 1 | 11.1% |
+
+🔵 **`p501`'s novel rows were overwhelmingly sub-50★.** The axis effect was real and the sector
+conclusion drawn from it was not: above 50★ **every axis this base has swept is saturated**, and the
+one new row — [`AkihikoWatanabe/paper_notes`](https://github.com/AkihikoWatanabe/paper_notes) — is a
+research-notes list using **6,846 open issues as note storage**, not a deployable asset.
+
+🟢 **`T22` is therefore narrowed to what it can carry:** *a topic-axis sweep measures its axis, and
+novelty figures are not comparable across axes unless the same star floor is applied to both.*
+`Gap 498-A`'s original *"the supply is largely read"* is **restored as the correct reading**, and
+`p501`'s refutation of it is withdrawn. 🔵 The sub-50★ band is still genuinely unread — but that band
+is `Gap 499-H`'s watch-row shape (no release, no tag), not shelf supply.
+
+## 🟢 T11 — the evaluation tier gains its acceptance instrument
+
+`T11` records that education-AI evaluation instruments exist and that `p493` corrected *"none of them
+is licensed"*. 🟢 **The tier now has a conformance instrument as well as rubrics**:
+[`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) — **MIT**,
+1,045 B `f1083e4aa47d`, 78★, the official suite behind `lrstest.adlnet.gov`.
+
+🔵 **The distinction is worth keeping sharp.** The rubric instruments (`pedagogy-benchmark`,
+Learning Commons `evaluators`) grade whether output is *good teaching*. This one proves a system is
+*standards-conformant*. 🟢 A regulator or a procurement office asks the second question, and until
+this pass these shelves could only answer the first. 🔴 Its mainline is **419 days** stale — but a
+conformance suite tracks a frozen specification, so staleness here is far weaker evidence of
+abandonment than it would be for a product.
+
+## Declared gaps — `p502`
+
+| id | statement |
+|---|---|
+| 🆕 **`Gap 502-B`** | **No gate here knows that `pushed_at` is branch-agnostic.** Two fixtures, 708 d and 154 d of overstatement. A successor reaching for the API's convenient date field will publish dead repositories as live |
+| 🆕 **`Gap 502-E`** | 🔴 **`T24`'s two absences were measured on one channel.** "No APAC or LATAM LRS" means *the xAPI/LRS/cmi5/Caliper vocabulary over the GitHub REST API returned none* — it is not a claim about the world. 🔵 The likeliest blind spot is **non-English naming and non-GitHub hosting** (GitLab, institutional forges), neither of which this channel reaches. Until that is probed, publish the absence **with its channel named** |

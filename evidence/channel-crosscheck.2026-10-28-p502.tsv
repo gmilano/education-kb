@@ -1,0 +1,17 @@
+# p502 2026-10-28 — four-channel cross-check on the xAPI/LRS record layer.
+# Channels: (A) REST API via MCP github server  (B) git ls-remote default branch
+#           (C) shallow clone, committer date   (D) raw.githubusercontent licence bytes at the pinned SHA
+# NEW FINDING: channel A is REACHABLE (refutes Gap 394-C's "api.github.com 403" in scope: via MCP, not curl).
+# NEW FINDING: channel A's pushed_at and updated_at BOTH overstate mainline liveness. Gap 396-G HOLDS.
+repo	api_stars	api_forks	api_spdx	api_updated_at	api_pushed_at	git_default_branch	git_head	git_committer_date	days_stale_vs_2026-10-28	licence_path	licence_bytes	licence_sha1_12	licence_title_200_family	channel_disagreement
+yetanalytics/lrsql	144	41	Apache-2.0	2026-10-27	2026-10-27	main	61594164edf5	2026-10-26	2	LICENSE	11356	58853eb8199b	Apache-2.0	none — all channels agree, mainline LIVE
+openfun/warren	17	1	MIT	2026-10-21	2026-10-28	main	839fcbb411d1	2024-11-19	708	LICENSE.md	1093	14a2c9fcad08	MIT	SEVERE — api pushed_at says TODAY, mainline is 708 days unmoved
+adlnet/ADL_LRS	334	156	Apache-2.0	2026-10-13	2025-11-14	master	efa045e2fc6e	2025-06-13	502	LICENSE	11357	1128f8f91104	Apache-2.0	MODERATE — api pushed_at 2025-11-14 vs last commit 2025-06-13 (154 d apart)
+DavidLMS/learnmcp-xapi	15	4	NOASSERTION_NOT_READ	2026-08-22	n/a	main	fbf609142c3c	2025-08-29	425	n/a	n/a	n/a	not read this pass	none — HEAD identical to the SHA p396 recorded at 419 d
+adlnet/lrs-conformance-test-suite	78	53	MIT	2026-10-11	n/a	master	5bc232d349c6	2025-09-04	419	LICENSE	1045	f1083e4aa47d	MIT	MODERATE — api updated_at 2026-10-11 vs last commit 2025-09-04
+adlnet/CATAPULT	59	34	Apache-2.0	2026-10-11	n/a	main	806c0baaa0fa	2026-01-20	281	LICENSE	11357	1128f8f91104	Apache-2.0	MODERATE — api updated_at 2026-10-11 vs last commit 2026-01-20
+openfun/ralph	51	19	NOT_READ_THIS_PASS	2026-10-12	n/a	main	91fef112394d	2026-10-12	16	n/a	n/a	n/a	carried MIT (p467)	none
+yetanalytics/project-persephone	8	1	Apache-2.0	2026-10-16	n/a	main	92a3f78afc61	n/a	n/a	LICENSE	11356	58853eb8199b	Apache-2.0	NEW TO THIS BASE
+pelotech/xapi-lrs	0	0	NOT_READ_THIS_PASS	2026-08-08	n/a	main	4d18e0cad743	2026-08-08	81	n/a	n/a	n/a	n/a	none — p396 read 75 d, +6 d calendar drift, STILL UNMOVED
+codetakt/kiva	n/a	n/a	NOT_READ_THIS_PASS	n/a	n/a	HEAD	d1b1cda6c364	2026-10-27	1	n/a	n/a	n/a	n/a	none — p396 read 2 d, still live
+nurullahturkoglu/xapi-dotnet	1	0	NOT_READ_THIS_PASS	2026-10-27	n/a	main	569318a0c624	2026-10-27	1	n/a	n/a	n/a	n/a	none — p396 read 1 d, still live

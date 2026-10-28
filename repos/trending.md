@@ -3,6 +3,73 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p502` — `2026-10-28` — **🟢 THE REPOSITORY CENSUS CAN NOW BE RUN AS A CENSUS. The GitHub REST API answers through this session's MCP channel, returning `total_count`, stars, SPDX licence, topics, forks and `archived` for up to 100 rows per call — so "how big is this axis" became a measurable question instead of an estimated one. 🔴 The first census says the axis this base has been mining is EMPTY above 50★: `topic:ai-in-education` holds **3 repositories**, not the 128 the HTML page implied, and this base already carried all 3. 🟢 The xAPI/LRS record layer — 31 addresses, 0 on a live shelf — is promoted.**
+
+Reads: [`channel-crosscheck.2026-10-28-p502.tsv`](../evidence/channel-crosscheck.2026-10-28-p502.tsv),
+[`axis-saturation.2026-10-28-p502.tsv`](../evidence/axis-saturation.2026-10-28-p502.tsv).
+
+### 🔴 `total_count` ends the "how much is behind *Load more*" question
+
+`Gap 501-A` registered that `github.com/topics/ai-in-education` *"states 128 repositories while
+serving 20"*, and treated the 108 unread as unmined supply. 🔴 **They are not supply.** The 128 is the
+unfiltered topic count — overwhelmingly 0–5★ repositories. The API's `total_count`, with a floor
+applied:
+
+| query | `total_count` | this base already had |
+|---|---|---|
+| `topic:ai-in-education stars:>50` | **3** | **3 of 3** |
+| `topic:edtech stars:>150` | 28 | 28 of 28 |
+| `topic:edtech license:apache-2.0 stars:>20` | 11 | 11 of 11 |
+| `topic:learning-analytics stars:>20` | 9 | 8 of 9 |
+
+🔵 **Four axes, 51 rows, one new address** — and that one is a research-notes list, not an asset.
+🟢 `Gap 501-A` is closed as a channel artefact and `Gap 498-A`'s *"the supply is largely read"* is
+**restored as the correct reading**, after `p501` refuted it on an axis-bound measurement.
+
+### 🟢 Permissive record-layer rows, verified and promoted
+
+Licence family from `license.spdx_id` (API) **and** confirmed against the first 200 bytes at the
+pinned SHA (`raw`), per this base's standing two-channel rule. Dates from git, never from the API.
+
+| repo | licence (bytes at SHA) | ★ | forks | mainline age | region basis |
+|---|---|---|---|---|---|
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | **Apache-2.0** 11,357 B `1128f8f91104` | **334** | 156 | 🔴 **502 d** `efa045e` | North America — US DoD ADL Initiative, `lrs.adlnet.gov` |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** 11,356 B `58853eb8199b` | **144** | 41 | 🟢 **2 d** `6159416` | North America — Yet Analytics, `sqllrs.com` |
+| [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) | **MIT** 1,045 B `f1083e4aa47d` | 78 | 53 | 🔴 419 d `5bc232d` | North America — `lrstest.adlnet.gov` |
+| [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) | **Apache-2.0** 11,357 B `1128f8f91104` | 59 | 34 | 🔴 281 d `806c0ba` | North America — cmi5 player + test suite, DoD |
+| [`openfun/warren`](https://github.com/openfun/warren) | **MIT** 1,093 B `14a2c9fcad08` | 17 | 1 | 🔴 **708 d** `839fcbb` | **EMEA** — licence line reads *"France Université Numérique"* |
+| [`yetanalytics/project-persephone`](https://github.com/yetanalytics/project-persephone) | **Apache-2.0** 11,356 B `58853eb8199b` | 8 | 1 | 🟢 recent | North America — 🟢 **new to this base** |
+
+🔵 **Two Apache-2.0 payloads, two different byte counts, both canonical.** `11,356` (`58853eb8199b`,
+Yet Analytics ×2) and `11,357` (`1128f8f91104`, ADL ×2) differ by one byte — a trailing-newline
+difference in the appendix, not a terms difference. 🟢 The `11,357`/`1128f8f91104` pair is
+**byte-identical to the payload this base already recorded for
+[`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills)**, which is a
+clean independent confirmation of that earlier read.
+
+🔴 **The star order and the maintenance order are inverted in this tier.** `ADL_LRS` leads on stars
+by 2.3× and its mainline has not moved in 502 days; `lrsql` is second on stars and shipped two days
+ago. 🔴 **A `pushed_at` read makes this worse, not better** — the API reports `ADL_LRS` pushed
+`2025-11-14` against a last `master` commit of `2025-06-13`. Build on `lrsql`; cite `ADL_LRS` as the
+reference implementation and say that it is one.
+
+### 🔴 What the census does NOT answer
+
+🔵 The API gives `license.spdx_id` cheaply and that is exactly where it is most dangerous to trust it
+blindly: it returns **`NOASSERTION`** for anything it cannot match, and `NOASSERTION` conflates
+*"no licence"*, *"custom licence"* and *"a licence file GitHub's matcher did not recognise"* — three
+states with opposite procurement consequences. Both
+[`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph)
+(164★) and [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+(87★) return `NOASSERTION` while their sibling
+[`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) is
+cleanly Apache-2.0. 🔴 **Not resolved this pass** — registered as `Gap 502-D`, because the two
+unresolved ones are the larger repositories and the base has no byte-read for either.
+
+🟢 **Standing rule, extended:** take the family from the API, confirm it from bytes at a pinned SHA,
+and **never let `NOASSERTION` stand as a published cell** — read the payload or publish the absence.
+
+
 ## 🆕 `p501` — `2026-10-28` — **🟢 `Gap 499-D` CLOSED, AND THE WEAKER CHECK IT ASKED FOR WOULD HAVE PASSED FOREVER WITHOUT MEASURING ANYTHING: a pinned URL carries a commit SHA and cannot drift, so re-fetching the pin proves RETENTION and is blind to upstream AMENDMENT. Both checks are now run. 🟢 12/12 retention PASS, 11/11 amendment PASS, negative control fires on exactly the tampered rows. 🔵 `spdx/license-list-data` HEAD is STILL the commit `p499` pinned. 🔴 And the first run reported `www.apache.org` unreachable — it is not; the retained manifest carries PROSE in a column documented as a URL.**
 
 Reads: [`canonical-reresolve.2026-10-28-p501.tsv`](../evidence/canonical-reresolve.2026-10-28-p501.tsv),

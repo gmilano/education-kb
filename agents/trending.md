@@ -3,6 +3,156 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p502` — `2026-10-28` — **🟢 A MEASUREMENT CHANNEL THIS BASE RECORDED AS CLOSED IS OPEN: the GitHub REST API answers, and it delivers stars, SPDX licence, topics, forks and the archived flag in ONE call. `Gap 394-C`'s *"`api.github.com` 403, per-repository authorisation only"* is REFUTED IN SCOPE — the refusal is on `curl`, not on the API. 🔴 And the first thing the new channel did was CONFIRM an old gap rather than close it: `Gap 396-G` HOLDS, now against three channels instead of one. 🔴 `p501`'s 65% novelty on `topic:ai-in-education` does NOT survive a star floor — above 50★ the axis holds **3 repositories and this base already had all three**. 🟢 The real gap is not discovery, it is PROMOTION: the entire xAPI/LRS record layer sits in this file's history and on **no live shelf**.**
+
+Reads: [`channel-crosscheck.2026-10-28-p502.tsv`](../evidence/channel-crosscheck.2026-10-28-p502.tsv),
+[`axis-saturation.2026-10-28-p502.tsv`](../evidence/axis-saturation.2026-10-28-p502.tsv).
+
+### 🟢 The channel that was recorded as closed
+
+`Gap 394-C` has stood since `p394`: *"this environment can VERIFY any GitHub address it is handed and
+cannot ENUMERATE GitHub at all,"* with `api.github.com` **403** and the refusal attributed to
+per-repository authorisation. `p395` narrowed it to *"the refusal is on `api.github.com` and on
+`curl`, not on the HTML endpoints through WebFetch."*
+
+🟢 **The narrowing was right and the remaining half is now also refuted.** The REST API is reachable
+through this session's GitHub MCP server. `agents/top.md`'s verification table has carried
+*"`api.github.com` — **403, per-repository authorisation only**"* as a standing instruction not to
+try; that row is **wrong as of this pass** and is corrected there.
+
+What the channel returns per repository, in one call, that previously took three:
+
+| field | previously | now |
+|---|---|---|
+| stars | HTML page fetch, one repo at a time | `stargazers_count`, up to 100 rows per call |
+| licence family | `raw` licence bytes + title-block read | `license.spdx_id`, authoritative |
+| topics | HTML | `topics[]` — and this is what makes axis sweeps measurable |
+| forks / archived | HTML, often missed | `forks_count`, `archived` |
+| enumeration | `github.com/search` HTML, silently truncated at 20 (`Gap 501-A`) | `total_count` + `perPage` up to 100 |
+
+🔴 **`Gap 501-A` is closed as a channel defect**: the *"128 repositories, 20 served, 108 behind Load
+more"* truncation was a property of the HTML search page. The API states `total_count` and serves up
+to 100. On `topic:ai-in-education` the true `total_count` **at `stars:>50` is 3**, not 128 — the 128
+was the unfiltered topic count.
+
+### 🔴 `p501`'s 65% novelty does not survive a star floor
+
+`p501` swept `topic:ai-in-education` with no floor, read 20 of a claimed 128, and measured **65%
+new**. Re-run on the API with a floor:
+
+| axis | floor | `total_count` | read | 🟢 new | novelty |
+|---|---|---|---|---|---|
+| `topic:ai-in-education` | `>50★` | **3** | 3 | **0** | **0.0%** |
+| `topic:edtech` | `>150★` | 28 | 28 | **0** | **0.0%** |
+| `topic:edtech license:apache-2.0` | `>20★` | 11 | 11 | **0** | **0.0%** |
+| `topic:learning-analytics` | `>20★` | 9 | 9 | 1 | 11.1% |
+
+🔵 **Both `p501` and `p499` were measuring real things and neither measured the one that matters.**
+`p499`'s 19.2% and `p501`'s 65% differ because of the axis; both collapse to **~0% once a star floor
+is applied**, because `p501`'s novel rows were overwhelmingly sub-50★. The one new row on the
+analytics axis — [`AkihikoWatanabe/paper_notes`](https://github.com/AkihikoWatanabe/paper_notes) —
+is a research-notes list carrying **6,846 open issues used as note storage**, not a deployable asset.
+
+🟢 **The honest standing claim, corrected from both passes: education-AI supply discovery above 50★
+is SATURATED on every axis this base has swept, and `Gap 498-A`'s original read was right.**
+Novelty below 50★ is real but is `Gap 499-H`'s watch-row shape, not shelf supply.
+
+### 🔴 `Gap 396-G` HOLDS — and now against three channels, not one
+
+`Gap 396-G` recorded that `github.com/search`'s *"Updated"* column was wrong by up to **702 days**,
+with [`openfun/warren`](https://github.com/openfun/warren) as the fixture: HTML said *"3 days ago"*,
+git said `839fcbb`, **2024-11-19**. The rule it set was *"enumerate with HTML, date with git, grant
+with `raw`, and never let one channel do another's job."*
+
+🔴 **The API does not fix this, and its `pushed_at` field is the worse of its two dates.** Measured
+this pass on the same fixture:
+
+| channel | field | says | verdict |
+|---|---|---|---|
+| HTML search (`p396`) | *Updated* | *"3 days ago"* | 🔴 wrong by 702 d |
+| REST API | `updated_at` | `2026-10-21` | 🔴 wrong by ~706 d |
+| REST API | `pushed_at` | **`2026-10-28` — TODAY** | 🔴 **wrong by 708 d** |
+| git, shallow clone | committer date of `main` | **`2024-11-19`, `839fcbb`** | 🟢 authoritative |
+
+🔵 **Mechanism, and it is worth stating precisely because it is not a bug: `pushed_at` counts a push
+to ANY ref, not to the default branch.** `warren` genuinely received a push today — to something
+that is not `main`. So the field is truthful about the repository and misleading about the
+mainline, which is the thing a shelf decision depends on. `updated_at` is looser still: it moves on
+metadata touches.
+
+🔴 **This reproduces on a second fixture at a different magnitude**, so it is not a one-off:
+[`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) reports `pushed_at` `2025-11-14` against a
+last `master` commit of **`2025-06-13`** — **154 days apart**.
+
+🟢 **`Gap 396-G`'s rule is extended, not replaced:** *enumerate, star, grant-family and topic with
+the **API**; date with **git**; grant-bytes with **`raw`** at a pinned SHA; and treat `pushed_at`
+as evidence about a repository, never about its mainline.*
+
+### 🟢 `396-H`'s standing re-date action, discharged — and the answer is unchanged
+
+`396-H` asked a successor to re-date the agent↔LRS bridge **every pass**, with the stated
+consequence: *"if it stays dead, the recommendation `fork and own it` only gets stronger."*
+
+| repo | `p396` read | 🔴 `p502` reads | movement |
+|---|---|---|---|
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 419 d, HEAD `fbf6091` | **425 d, HEAD `fbf609142c3c`** | 🔴 **none — +6 d calendar drift only** |
+
+🔴 **Still the entire open-source supply joining an AI agent to an institution's LRS: one repository,
+15★, 4 forks, 425 days unmoved.** `fork and own it` stands and strengthens for a sixth consecutive
+reading.
+
+🟢 **And `396-H`'s ranked item 2, the xAPI 2.0 bake-off, resolves cleanly for the first time:**
+
+| claimant | `p396` | 🟢 `p502` | verdict |
+|---|---|---|---|
+| [`nurullahturkoglu/xapi-dotnet`](https://github.com/nurullahturkoglu/xapi-dotnet) | 1 d | **1 d** (`569318a`) | 🟢 live; scope GREW — now claims xAPI **2.0 / IEEE 9274.1.1 *and* 1.0.3**, a durable outbox and an embeddable LRS |
+| [`codetakt/kiva`](https://github.com/codetakt/kiva) | 2 d | **1 d** (`d1b1cda`) | 🟢 live |
+| [`pelotech/xapi-lrs`](https://github.com/pelotech/xapi-lrs) | *"has not moved at all (75 d)"* | **81 d** (`4d18e0c`) | 🔴 **confirmed dead — 75→81 is pure calendar drift, zero commits in the interval** |
+
+🔵 *"Three claimants at 1 star between them will move fast or die; either outcome changes the
+recommendation."* 🟢 **Both outcomes happened, to different claimants.** Two are shipping daily, one
+is dead. The recommendation is now specific rather than hedged: for .NET, `xapi-dotnet`; and
+`pelotech/xapi-lrs` should be struck from any shortlist.
+
+### 🔴 The real gap is promotion, not discovery
+
+🔴 **Of 31 xAPI/LRS-tier addresses read this pass, ZERO sit on a live shelf.** The tier is
+thoroughly measured — `Gap 467-I` graded nine rows and closed — but the grading lives in
+[`intel/open-gaps.md`](../intel/open-gaps.md) and `repos/foundations.md` carries an LMS/SIS shelf
+with **no record layer at all**. Every regulatory driver this base tracks (EU AI Act Art. 26 deployer
+logging, Oklahoma's teacher-review requirement, LATAM's 87%-adopting / 26%-governed institutions)
+lands on evidence this layer is what produces.
+
+🟢 **`Gap 467-I`'s closure also UNDERSTATED the tier it closed.** It named
+[`openfun/ralph`](https://github.com/openfun/ralph) (MIT, 51★) as the permissive LRS exemplar. Two
+larger permissive LRSes were never shelved, both read first-hand this pass:
+
+| repo | licence (bytes at SHA) | ★ | mainline | the honest recommendation |
+|---|---|---|---|---|
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** — 11,356 B `58853eb8199b` | **144** | 🟢 **2 d** (`6159416`) | 🟢 **the live permissive LRS.** 41 forks, Clojure, SQL-backed |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | **Apache-2.0** — 11,357 B `1128f8f91104` | **334** | 🔴 **502 d** (`efa045e`) | 🔴 biggest by stars, **abandoned mainline** — reference, not a base |
+
+🔵 The star ranking and the maintenance ranking are **inverted** here, which is exactly the
+decision a `pushed_at` read gets wrong: ADL_LRS looks fresher than it is.
+
+Promotions into [`repos/foundations.md`](../repos/foundations.md) this pass: `lrsql`, `ADL_LRS`,
+`warren`, [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite)
+(MIT, 1,045 B `f1083e4aa47d`, 78★, 419 d) and
+[`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) (Apache-2.0, 59★, 281 d).
+
+🟢 **New to this base** (3 of 31, all small): `yetanalytics/project-persephone` (Apache-2.0, 11,356 B
+`58853eb8199b`, 8★ — Statement-vs-Profile validation), `yetanalytics/federate-xapi` (2★),
+`adlnet/DLE-SQL-LRS` (0★).
+
+### 🔴 Gaps opened this pass
+
+| id | statement | remedy |
+|---|---|---|
+| 🆕 **`Gap 502-A`** | **This base's own verification table instructs successors not to use a channel that works.** `agents/top.md` carries *"`api.github.com` — 403, per-repository authorisation only"* and *"`curl -sI` — 403 on every repo — do not use"*. The first is now false; the second is true but was generalised into the first. 🔴 **Cost: every star cell in this base was obtained one HTML fetch at a time, and `p490` found figures overstated by up to 31×** — an error class the API's `stargazers_count` makes structurally impossible. | Corrected in place this pass. 🔴 Open: ~118 live-shelf addresses still carry stars from the HTML era and only 6 were re-read here |
+| 🆕 **`Gap 502-B`** | **`pushed_at` is branch-agnostic and no gate here knows that.** Two fixtures, 708 d and 154 d of overstatement. Any successor that reaches for the API's convenient date field will publish dead repositories as live. | The extended `396-G` rule above. A gate should refuse any liveness claim whose only source is `pushed_at` |
+| 🆕 **`Gap 502-C`** | **The record layer is graded and unshelved, and the two facts have been true simultaneously for ~35 passes.** `Gap 467-I` closed by grading nine rows; closure moved nothing onto a shelf. 🔵 A gap can be *answered* and still leave the base unable to answer a client. | Five rows promoted this pass. Open: the remaining 26 of 31, and a general question — how many other closed gaps closed without a promotion? |
+
+
 ## 🆕 `p501` — `2026-10-28` — **🔴 THIS BASE'S DISCOVERY HAS BEEN AXIS-BOUND FOR ELEVEN PASSES, AND `Gap 498-A`'s REFUTATION IS THE EVIDENCE: `p499` measured **19.2%** novelty on `topic:edtech` and concluded the supply was largely read. 🔴 Measured this pass on `topic:ai-in-education` — an axis this base has **never** swept — **13 of 20 rows are NEW, 65%, 3.4× `p499`'s figure.** 🟢 One of them, [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach), is **Apache-2.0 at 438★ / 57 forks** and opens a layer with **zero prior coverage on any shelf here: social-emotional learning.** 🟢 `Gap 499-B` and `Gap 499-D` CLOSED with validated instruments. 🔴 Two unlicensed rows and one **NonCommercial** row found among the new supply. 🔴 And the notice-line rule `p499` ADOPTED after discarding three wrong ones has a failure mode of its own, caught by executed code on a live payload.**
 
 Full reads: [`aie-axis-overlap.2026-10-28-p501.tsv`](../evidence/aie-axis-overlap.2026-10-28-p501.tsv),

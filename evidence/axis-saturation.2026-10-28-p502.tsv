@@ -1,0 +1,9 @@
+# p502 2026-10-28 — novelty measured per discovery axis against this base's full corpus
+# (118 addresses on live shelves + 3,058 in the append-only trending history = 3,059 distinct).
+# Tests Gap 501-A's claim that the ai-in-education axis holds 65% novelty at depth.
+axis	star_floor	api_total_count	rows_read	new_to_base	live_shelf	history_only	novelty_pct	note
+topic:ai-in-education	>50	3	3	0	3	0	0.0	p501 measured 65% novelty at NO star floor; above 50 stars the axis holds only 3 repos and this base has all 3
+topic:edtech	>150	28	28	0	20	8	0.0	saturated — every row already carried
+topic:edtech license:apache-2.0	>20	11	11	0	4	7	0.0	saturated
+topic:learning-analytics	>20	9	9	1	0	8	11.1	only AkihikoWatanabe/paper_notes is new, and it is a paper-notes list (6,846 open issues used as notes), not an asset
+xapi/LRS orgs (adlnet,yetanalytics,openfun,...)	>0	65	31	3	0	28	9.7	project-persephone, federate-xapi, DLE-SQL-LRS new; the TIER is known but 0 of 31 sit on a live shelf

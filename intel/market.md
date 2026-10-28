@@ -1966,3 +1966,131 @@ classroom.
 | `teacher AI adoption rate … Asia Pacific Singapore China Japan India` | 🔴 **no credible APAC teacher rate.** Three aggregator figures found and rejected; TALIS 2024's global "~1 in 3" is the fallback. |
 | `AI education industry trends 2026` | 🟢 four corroborated directions. 🔴 several vendor blogs with unverifiable headline numbers. |
 | `open source platform education ERP CRM SIS MIT Apache 2026` | 🔴 **no MIT-licensed education ERP exists.** See [`verticals/solutions.md`](../verticals/solutions.md) `p501`. |
+
+## 🆕 `p502` — `2026-10-28` — **the compliance artefact every region now demands has a one-region open-source supply**
+
+Every regulatory regime this file tracks converges on the same deliverable: **evidence that a human
+reviewed, and a record of what the system did.** EU AI Act Art. 26 deployer logging, Oklahoma's bar
+on AI as the primary basis for grading, UNESCO IESALC's 26%-with-a-strategy finding — all of them are
+answered by the **learning-record layer (xAPI / cmi5 / Caliper)**, not by a tutor agent.
+
+🔴 **That layer's permissive open-source supply, graded first-hand this pass, is five-sixths North
+American and its one EMEA row is 708 days stale.** Full reads:
+[`channel-crosscheck.2026-10-28-p502.tsv`](../evidence/channel-crosscheck.2026-10-28-p502.tsv);
+shelf: [`repos/foundations.md`](../repos/foundations.md) `p502`.
+
+| region | permissive LRS / record-layer supply found | state |
+|---|---|---|
+| North America | `adlnet/ADL_LRS` (Apache-2.0, 334★), `yetanalytics/lrsql` (Apache-2.0, 144★), `adlnet/lrs-conformance-test-suite` (MIT, 78★), `adlnet/CATAPULT` (Apache-2.0, 59★), `yetanalytics/project-persephone` (Apache-2.0, 8★) | 🟢 one live base (`lrsql`, 2 d), the rest reference-grade |
+| EMEA | `openfun/ralph` (MIT, 51★, 16 d), `openfun/warren` (MIT, 17★) | 🟡 one live, one 🔴 **708 d stale** — both France Université Numérique |
+| APAC | **none found** | 🔴 **measured absence** |
+| LATAM | **none found** | 🔴 **measured absence** |
+
+🔵 **The two absences are stated as absences.** The sweep that produced this table ran the xAPI /
+LRS / cmi5 / Caliper vocabulary across the GitHub REST API and returned 31 addresses; none carried an
+APAC or LATAM origin readable from its licence line, org or homepage. That is **not** a claim that
+none exists — it is a claim about what this channel returned, and the distinction is the point.
+
+## Opportunities by region — `p502`
+
+### North America
+
+- 🟢 **The supply and the demand are in the same place, and that is unusual on these shelves.** 134
+  AI-in-education bills were introduced across **31 states** in 2026; **Maryland, Idaho, Oklahoma and
+  Virginia** now have laws requiring both state guidance and mandatory district-level AI policies.
+  Oklahoma requires a written district AI policy before the **2027–28** school year and **bars AI as
+  the primary basis for grading or discipline** — a requirement that is unauditable without a record
+  layer, which is exactly what the Apache-2.0 rows above provide.
+- 🔴 **The gap is governance, not adoption.** Teacher use is reported at **60–61%**, while most US
+  public schools still lack a formal AI policy. The sellable unit is therefore the *policy-evidence
+  pipeline*, not another tutor.
+- 🟡 Utah **H.B. 218** puts AI literacy into a required grade 7–8 digital-skills course and Virginia
+  **H.B. 1186** creates a schools AI pilot — two named, funded curriculum openings.
+- 🔵 Federal: the **K-12 AI Literacy and Readiness Act (H.R. 8747)** advanced in committee on **21
+  July**, largely along party lines — a signal, not yet a floor.
+- 🔵 **Canada** is tracked separately and its AI rules so far address **workplace** AI, not classrooms.
+- 🔴 **Caveat on the 36% regional-share figure** this file has carried: it comes from a single
+  commercial market estimate and `T10` already holds that sizing in this sector is not usable.
+
+### EMEA
+
+- 🟢 **The clearest regulatory product spec of any region.** The EU AI Act puts education **access and
+  assessment** — admissions, student evaluation, exam scoring — in **Annex III high-risk**, which
+  compels risk management, **human oversight**, and a **conformity assessment before deployment**.
+  A conformity file is a documentation deliverable; Globant can sell building it.
+- 🔴 **The dates are contested and must not be published as settled.** The Digital Omnibus
+  amendment is reported to set **2 December 2027** for stand-alone Annex III systems and **2 August
+  2028** for AI embedded in regulated products; other sources give different milestones. 🔵 Treat
+  every date here as unverified against the Official Journal — this file's `T5` already records a
+  16-month slip, and the slip *is* the commercial window.
+- 🟢 **Data residency is a concrete build driver**: institutions with strict residency requirements
+  self-host open-weight models rather than calling a US API — which pairs directly with the
+  self-hostable permissive stack on these shelves.
+- 🔴 **The EMEA record-layer supply is one organisation.** Both rows are France Université Numérique
+  and one of them (`warren`) has an unmoved mainline for **708 days**. 🟢 **This is the strongest
+  fork-and-own case in the region**: MIT-licensed, unmaintained, and sitting under a legal
+  requirement that is arriving on a fixed date.
+- 🟡 **UK** remains principle-based and light-touch, with sector guidance rather than a statute —
+  a different sale (assurance, not compliance).
+- 🔴 **Gap, declared:** this pass found **no country-by-country EMEA school-deployment statistics**.
+  The adoption material returned by every EMEA query was US-sourced. An informed absence, not coverage.
+
+### APAC
+
+- 🔴 **No permissive APAC record-layer supply was found** — the most actionable absence in this file.
+  Regulation here names education explicitly, so the demand is real and the local open-source answer
+  is missing.
+- 🟢 **South Korea**'s **AI Basic Act entered into force 22 January 2026**, with officials signalling
+  2026 as effectively a **pilot year with limited enforcement** — a build-now, comply-later window.
+  🔵 Read against this file's `T12`: a national mandate is not a durable demand floor.
+- 🔴 **Vietnam**: education is on the national **high-risk list** (automated assessment, behavioural
+  monitoring). 🔴 **The dates conflict across sources** — one gives a March 2026 effect, another
+  **1 March 2027** with a six-month grace for education, healthcare and finance systems already
+  running before **15 August 2026**. Do not quote a Vietnamese deadline without the instrument.
+- 🟢 **China** has the most binding framework: mandatory registration, strict content labelling, and
+  penalties to **¥50m**. 🔵 Note the asymmetry — the two largest education-AI repositories on these
+  shelves (`DeepTutor` 47,051★, `OpenMAIC` 41,690★) are **PRC-origin and permissive**, so APAC leads
+  the *agent* tier while supplying nothing at the *record* tier.
+- 🟡 **Singapore** leans on toolkits (**AI Verify**) rather than statute; **Japan** and **Taiwan** are
+  drafting; **Australia** is preparing high-risk guardrails without naming education; **New Zealand**
+  positions as a sophisticated adopter.
+- 🔵 **EU spillover is a real APAC requirement**: the AI Act reaches providers whose output is used in
+  the EU, so an APAC vendor serving EU learners inherits the Annex III obligations above.
+- 🔵 Commercial reports name **Google, Microsoft, IBM, Pearson and Byju's** as the regional field; that
+  is a vendor ranking from a paid report and is indicative only.
+
+### LATAM
+
+- 🟢 **The best-evidenced demand in this file, and it is a governance deficit, not an adoption one.**
+  UNESCO IESALC, across **200 institutions in 19 countries**: **87%** use AI in at least one area and
+  **74%** in teaching and learning, while **only 26% have a formal AI strategy**. Private non-profit
+  universities report **84%** use against public institutions' **68%**.
+- 🟢 The Digital Education Council's **2026 LATAM survey** (with Tecnológico de Monterrey) reports
+  **92% of students and 79% of faculty** actively engaging with AI.
+- 🟢 School-level figures run **well above the OECD average of 36%**: TALIS 2024 puts teacher AI use at
+  **Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52%**.
+- 🔴 **Regulation is fragmented rather than absent**: a 2026 Universidad de los Andes study counts
+  **716 AI-related regulatory instruments and proposals across 23 countries and territories**, **over
+  80% initiated since 2023**. 🔵 The regional recommendation in that literature is **common
+  definitions and mutual recognition**, not one AI law — which is a recommendation, not policy.
+- 🟢 **Institutional anchors to engage**: **UNESCO IESALC**, and the **UNESCO Observatory on AI in
+  Education for Latin America and the Caribbean**, launched at **ECLAC headquarters in Santiago**.
+- 🔴 **And no LATAM record layer exists in the open-source supply.** 🟢 **The 87%/26% gap is precisely
+  an evidence gap**, so the fit is exact: a Spanish/Portuguese-localised, self-hostable LRS plus a
+  governance-reporting layer, built on `lrsql` (Apache-2.0), is the clearest build-and-own
+  opportunity these shelves have surfaced for the region.
+
+### Global
+
+- 🟢 **One bridge, 425 days dead, under every regulation above.**
+  [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (MIT, 15★, 4 forks) remains
+  the *entire* open-source supply joining an AI agent to an institution's LRS, with its mainline
+  unmoved at `fbf6091` for **425 days** — re-dated this pass per `396-H`'s standing action, and
+  unchanged for a sixth consecutive reading. 🟢 **Fork-and-own, and the case strengthens each pass.**
+- 🟢 **The acceptance instrument exists and is permissive**:
+  [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite) (MIT).
+  Conformance is demonstrable to a regulator without a commercial licence.
+- 🔴 **Market sizing remains unusable** (`T10`, re-confirmed): 2026 estimates retrieved this pass span
+  **$6B → $12.5B** for what is nominally the same market, from vendor blogs and paid reports.
+  🔵 Quote the *regulatory deadlines* to a client, never the market size — the deadlines are
+  checkable and the sizes are not.

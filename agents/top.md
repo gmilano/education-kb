@@ -6,6 +6,24 @@ updated: 2026-10-28
 
 # Education AI agents — build-on-able shelf
 
+> 🟢 **`p502` (`2026-10-28`) — THE VERIFICATION TABLE BELOW TOLD YOU NOT TO USE A CHANNEL THAT WORKS.**
+> Its row *"stars for arbitrary repos — `api.github.com` — **403, per-repository authorisation
+> only**"* is **false as of this pass**: the GitHub REST API answers through this session's MCP
+> channel and returns `stargazers_count`, `license.spdx_id`, `topics`, `forks_count` and `archived`
+> for up to 100 repositories per call. The table is corrected in place below. 🔴 **This matters
+> because `p490` found star cells in this base overstated by up to 31× (`educhain`: 12,000 → 387),
+> an error class that one-HTML-fetch-at-a-time measurement produces and `stargazers_count` makes
+> structurally impossible.** 🔴 **Only 6 of this file's ~17 shelf rows were re-read on the new
+> channel this pass** (`Gap 502-A`); the rest still carry HTML-era figures.
+> 🔴 **Do NOT take dates from the API.** Its `pushed_at` counts a push to *any* ref, so it reports
+> [`openfun/warren`](https://github.com/openfun/warren) as pushed **today** against a `main` branch
+> **708 days unmoved** — `Gap 396-G` HOLDS, now against three channels (`Gap 502-B`). Date with git.
+> Reads: [`channel-crosscheck.2026-10-28-p502.tsv`](../evidence/channel-crosscheck.2026-10-28-p502.tsv),
+> [`axis-saturation.2026-10-28-p502.tsv`](../evidence/axis-saturation.2026-10-28-p502.tsv).
+> 🔵 **`p501`'s 65%-novelty finding does not survive a star floor:** `topic:ai-in-education` holds
+> **3 repositories above 50★ and this base already carried all three**. Discovery above 50★ is
+> saturated on every axis swept; `Gap 498-A`'s original reading is restored.
+
 > 🟢 **`p501` (`2026-10-28`) — ONE PROMOTION, AND THE REASON IT WAS MISSED IS WORTH MORE THAN THE ROW.**
 > [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) is **Apache-2.0 at 438★ with
 > 57 forks** — the **fourth-largest education-specific permissive repository** this base holds, and it
@@ -51,7 +69,10 @@ license**. Evidence:
 | license text | `raw.githubusercontent.com/<repo>/<SHA>/<path>` **at the pinned SHA** | works |
 | stars + sidebar license | `github.com` repo page via page fetch | works |
 | ~~existence~~ | `curl -sI https://github.com/<repo>` | **403 on every repo — do not use** |
-| stars for arbitrary repos | `api.github.com` | **403, per-repository authorisation only** |
+| stars + licence + topics + forks, 100 rows/call | **GitHub REST API via the MCP channel** | 🟢 **WORKS (`p502`)** — authoritative; supersedes the two rows above for stars and licence family |
+| ~~stars for arbitrary repos~~ | ~~`api.github.com` via `curl`~~ | 🔴 **403 — but this is a `curl` refusal, not an API refusal; see the row above (`Gap 502-A`)** |
+| ~~mainline freshness~~ | ~~API `pushed_at` / `updated_at`~~ | 🔴 **DO NOT USE — `pushed_at` is branch-agnostic; 708 d error measured (`Gap 502-B`)** |
+| mainline freshness | `git clone --depth 1`, committer date | 🟢 authoritative |
 
 License family is anchored on the **first 200 bytes (the title block)**, never on a body scan —
 see the reader defect recorded below. Evidence:
@@ -69,11 +90,11 @@ in [`trending.md`](trending.md) rather than here.
 
 | Agent | Repo | License | ★ | SHA read | What it does |
 |---|---|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **47,000** *(`p501`; `p493` read 45,900)* | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p501`: HEAD unchanged for a FOURTH consecutive pass (`p491`→`p501`); `v1.6.15` (`2026-10-19`) is still the newest release, so the star growth is attention, not shipping.** Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
-| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,700** | `70859b42e714` | **Open Multi-Agent Interactive Classroom** — any topic or document becomes an interactive lesson with slides, quizzes and project-based work. 781 commits; `v1.3.0-rc.1` dated `2026-10-22`; licence 1 065 B, `sha1 56d5b3ffd6e8`. 🟢 **Restored `p493`** after being dropped by `p490`'s rewrite — this is the row that falsifies this file's own permissive-scarcity gap, and its MIT grant is cleaner than DeepTutor's. 🔵 Org is `THU-MAIC` and the partnership contact is a `mail.tsinghua.edu.cn` address; **Tsinghua attribution is inferred from those, not stated in prose.** 🔴 **Not an LMS** — no enrolment, gradebook or SIS integration is claimed. |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **47,051** *(🟢 `p502`, API-authoritative; `p501` read 47,000; `p493` 45,900)* | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p501`: HEAD unchanged for a FOURTH consecutive pass (`p491`→`p501`); `v1.6.15` (`2026-10-19`) is still the newest release, so the star growth is attention, not shipping.** Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,690** *(🟢 `p502`, API; `p493` read 41,700)* | `70859b42e714` | **Open Multi-Agent Interactive Classroom** — any topic or document becomes an interactive lesson with slides, quizzes and project-based work. 781 commits; `v1.3.0-rc.1` dated `2026-10-22`; licence 1 065 B, `sha1 56d5b3ffd6e8`. 🟢 **Restored `p493`** after being dropped by `p490`'s rewrite — this is the row that falsifies this file's own permissive-scarcity gap, and its MIT grant is cleaner than DeepTutor's. 🔵 Org is `THU-MAIC` and the partnership contact is a `mail.tsinghua.edu.cn` address; **Tsinghua attribution is inferred from those, not stated in prose.** 🔴 **Not an LMS** — no enrolment, gradebook or SIS integration is claimed. |
 | smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | 30,100 | `96f33faaf028` | Minimal code-writing agent loop. Not education-specific; the usual substrate for a custom tutor agent. |
 | k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | **595** | `31fd6dbb0c07` | Four K-12 teacher skills (lesson planning, differentiation and two more) **plus the eval rubrics for them**, co-developed with Learning Commons. Licence 11 357 B, `sha1 1128f8f91104`. 🟢 **Restored `p493`** — recorded "Now shelved" on `2026-10-18` and never actually present in this file. 🔴 **This is the asset `p492` declared licence-unverifiable;** it was measured in this KB twice before that. |
-| SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | Apache-2.0 | **438** | `84f67257f5aa` | **Social-emotional learning coach** — role-play scenarios for conflict handling and communication, with personalised feedback. 239 commits, **57 forks**. 🟢 **Promoted `p501`**, and it is the first row on any shelf here in the **social-emotional / soft-skills layer** — `social-emotional` returned **0 hits across every live shelf** before this pass. Licence **11 358 B, blob `d645695673…`: byte-identical to apache.org's own copy**, graded **`0/0` operative against Apache-2.0** by [`p501`'s guarded grader](../compose/code/p501-abstention-and-reresolve/). 🔴 **No release and no tag** — 239 commits on `main` and nothing cut; treat as a watch row, not a deployable product (`Gap 499-H`'s shape). 🔴 Carries `topic:ai-in-education` and **not** `topic:edtech`, which is why 11 passes of `topic:edtech` sweeps never saw it (`T22`). |
+| SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | Apache-2.0 | **440** *(🟢 `p502`, API; `p501` read 438)* | `84f67257f5aa` | **Social-emotional learning coach** — role-play scenarios for conflict handling and communication, with personalised feedback. 239 commits, **57 forks**. 🟢 **Promoted `p501`**, and it is the first row on any shelf here in the **social-emotional / soft-skills layer** — `social-emotional` returned **0 hits across every live shelf** before this pass. Licence **11 358 B, blob `d645695673…`: byte-identical to apache.org's own copy**, graded **`0/0` operative against Apache-2.0** by [`p501`'s guarded grader](../compose/code/p501-abstention-and-reresolve/). 🔴 **No release and no tag** — 239 commits on `main` and nothing cut; treat as a watch row, not a deployable product (`Gap 499-H`'s shape). 🔴 Carries `topic:ai-in-education` and **not** `topic:edtech`, which is why 11 passes of `topic:edtech` sweeps never saw it (`T22`). |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | **387** | `38adb1e9459d` | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. |
 | dolos | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | **355** | `74b101785bad` | Source-code plagiarism detection; **3,865 commits**, the most-maintained address on this shelf. Ghent University. 🟢 **Restored `p493`** — `p296` tried to promote it, this KB's identity gate correctly refused the duplicate because a `foundations.md` row existed, and **that row was then deleted by a later rewrite too.** Licence 1 084 B, `sha1 8f6f3815d28d`. |
 | Skill-Anything | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | 344 | `3cdc1c1f11dc` | Any source (PDF, video, web, audio) → interactive package with quizzes, flashcards, spaced repetition. |
@@ -91,7 +112,7 @@ in [`trending.md`](trending.md) rather than here.
 
 | Agent | Repo | License | ★ | SHA read | Constraint |
 |---|---|---|---|---|---|
-| ChatTutor | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | **AGPL-3.0** | 1,300 | `7d9e9052bc5a` | Visual/interactive AI tutor, whiteboard + math canvas. AGPL reaches across the network: hosting it for a client triggers source obligations. |
+| ChatTutor | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | **AGPL-3.0** | **1,316** *(🟢 `p502`, API; prior cell read 1,300)* | `7d9e9052bc5a` | Visual/interactive AI tutor, whiteboard + math canvas. AGPL reaches across the network: hosting it for a client triggers source obligations. |
 | tutor-gpt | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | **GPL-3.0** | 932 | `5c2f92416c04` | Theory-of-Mind tutoring agent. GPL, not permissive — several public listicles call this one "open source" without naming the family. |
 
 ## Corrections this pass — figures this KB published that were wrong
