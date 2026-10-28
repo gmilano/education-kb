@@ -5,6 +5,116 @@ updated: 2026-10-28
 ---
 
 
+## 🆕 `p515` — `2026-10-28` — **🔴 THE PREMISE `p514` BUILT ITS NEW FLAGSHIP RECIPE ON IS FALSE AGAINST THIS BASE'S OWN SHELVES: it published *"every LMS on these shelves is copyleft"* while `verticals/solutions.md` was selling `OpenOLAT` (**Apache-2.0**) as *"pick this when the client needs a closed derivative"* — and while `TutorLoom` (**Apache-2.0**) had been added as *"second permissive full LMS"* **one pass earlier**. Both re-verified from bytes. 🟢 THE STAR CONFLICT `p514` REFUSED IS RESOLVED on a channel it never used, and the trending aggregator is the wrong side: **47.9k** on the repo's own page against an off-ladder **46,026**. 🟢 The `API 403` that has blocked this base ~16 passes is NOT an outage — it is per-repository session scope, and the 403 body names its own remedy. 🔴 `make hooks` not attempted — a declared abstention, not the prior 18 denials.**
+
+🔴 **Gate posture, stated first — and it is NOT the prior 18 denials.** The previous eighteen
+passes recorded a classifier **DENIAL** (`Code from External`) on `make hooks`. 🟡 **This pass
+the battery was never submitted:** every gate in `HOOK_GATES` executes `$(PY) -I` over Python
+inside `compose/code/p*/` — interpreter runs over a freshly cloned third-party working tree —
+and this session's standing rule is not to run interpreters over cloned repository content.
+🟡 **So `p515`'s posture is a declared abstention, not a refusal received.** The distinction
+matters because it is *stable*: a future pass should expect abstention, not retry-and-be-denied.
+🔴 `p511`'s **45/63** remains the last gate-attested reading — now **four passes stale**.
+🔵 Every figure below is named to the channel that produced it, and the one conflict this pass
+resolved is resolved on a channel the refusing pass did not use.
+
+### 🟢 The star conflict `p514` REFUSED is resolved — and the trending channel is the wrong one
+
+🔴 **`p514`'s position:** *"`DeepTutor`'s star cell is a CONFLICT this pass and is REFUSED rather
+than written: the trending channel says ~46,026, the shelf says 47,677, and the API is 403."*
+🟢 **Refusing to write it was right. Leaving it unresolved was not necessary** — there was a third
+channel neither side used: the repository's **own public page**.
+
+| channel | reading | date |
+|---|---|---|
+| 🟢 **repo page, this session** | **47.9k** — *page-rounded; GitHub does not render an exact count here* | `2026-10-28` |
+| 🔵 shelf ladder, `p502`→`p513` | 47,051 → 47,230 → 47,338 → 47,445 → 47,621 → 47,677 → 47,725 → 47,774 → 47,804 → **47,834** — **monotone, ten readings** | `p502`–`p513` |
+| 🔴 trending aggregator, `p514` | **~46,026** | `2026-10-28` |
+
+🟢 **The resolution is unambiguous in direction even though it is inexact in value.** `47.9k`
+continues the monotone ladder from `p513`'s 47,834. The aggregator's **46,026** sits **~1,800
+BELOW** a ladder that has not decreased once in ten readings, and ~1,870 below a same-day page
+read. 🔴 **The trending figure is REFUTED as off-ladder.** The shelf was never in doubt; the
+channel that disagreed with it was wrong.
+
+🟡 **No exact star cell is written this pass, and that is deliberate.** The page rounds to `47.9k`,
+and this base's rule is that a rounded figure must not overwrite an exact one. 🟢 So the table cell
+in [`agents/top.md`](../agents/top.md) **stays at `p513`'s 47,834** with the ladder intact, and the
+`p514` conflict is closed as *aggregator error* rather than as a new measurement (`Gap 515-B`:
+an exact cell still needs a channel that serves one).
+
+🔵 **The standing lesson, now twice-evidenced.** This base has been burned by aggregator star
+figures in both directions — inflated in earlier cycles, and here **under-reported by ~4%**.
+🟢 **Aggregator star counts are a discovery signal and never a measurement.** Only the page, the
+API, or a git-protocol read may fill a star cell.
+
+### 🟢 "The API is 403" is a misdiagnosis — the condition is session scope, and it has a name
+
+🔴 **What ~16 passes have recorded:** *"the API is 403"*, *"the API search channel is 403
+throughout"*, read as an outage or a rate limit and treated as a dead channel.
+🟢 **This pass read the 403 body instead of its status line.** It is neither:
+
+> `GitHub access to this repository is not enabled for this session. Use add_repo to request
+> access. If add_repo answers that read access is already available and you need GitHub API or
+> write access, call add_repo again with access:"push" to attach the repository with credentials.`
+
+🟢 **So the GitHub API channel is not broken — it is scope-gated per repository**, and the gate
+names its own remedy. 🟡 This retro-explains the instrument history that looked contradictory:
+`p511` filling exact star cells *"(API)"* while `p514` found the same endpoint 403 is not an
+intermittent outage, it is two sessions with different repository scope.
+
+🔴 **The remedy is named and deliberately NOT exercised on third-party repositories.** Attaching
+repos Globant does not own, with `access:"push"`, in order to mint API credentials for a star
+count, is out of proportion to a research pass — and `access:"push"` is the level the message says
+API reads require. 🟢 **What this pass did exercise is the case where it is proportionate:** this
+knowledge base's **own** repository (see below).
+
+🟢 **Instruction for later passes:** stop writing *"the API is 403"* as an outage. Write *"the API
+is out of session scope for this address"*, and if a cell genuinely requires the API, say which
+repository would have to be attached and why that is or is not justified. 🔵 `raw.githubusercontent.com`
+is unaffected and remains the licence-byte channel — it served **every licence payload this pass
+resolved, 9 at HTTP `200`**, across `OpenOLAT`, `TutorLoom`, `SunbirdEd-portal`, `DeepTutor`,
+`xAPI-Spec`, `openbadges-validator-core`, `kolibri`, `tsugiproject/tsugi` and `csev/tsugi`.
+🔴 **Note the asymmetry for later passes:** `curl` to a `github.com` **HTML** URL returns `403`
+through this session's proxy for *every* address, including addresses proven live on the raw
+channel in the same minute. 🔴 **So an HTTP code from `github.com/<org>/<repo>` is NOT an existence
+test here** — a `403` there means nothing, and only the raw channel, `WebFetch`, or an in-scope API
+read can confirm or refute an address.
+
+### 🔴 The premise refutation, in brief — full treatment on the three shelves that hold the rows
+
+🔴 `p514` published, as `P518`'s justification: *"Every LMS on these shelves is copyleft — Moodle
+**GPL-3.0**, Chamilo **GPL-3.0**, Open edX **AGPL-3.0**."* 🔴 **False against this base's live
+shelves.** Two Apache-2.0 full LMS rows contradict it, and both were re-read from bytes this pass:
+
+| slug | 🟢 `p515` byte-read | where it was already shelved |
+|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0**, **10,982 B**, `sha256₁₆ 6dbc5b605ed0be6e` | [`verticals/solutions.md`](../verticals/solutions.md) since `p508` — *"pick this when the client needs a closed derivative"* |
+| [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | 🟢 **Apache-2.0**, **11,362 B**, `sha256₁₆ a890392684288f18` | [`verticals/solutions.md`](../verticals/solutions.md) L983 — added **`p513`**, *"second permissive full LMS"* |
+
+🔴 **The claim was published TWICE, and this pass's probe found the second instance — not a manual
+read.** [`verticals/solutions.md`](../verticals/solutions.md) **L112**, in `p514`'s own section,
+carries it again and compounds it: *"the only permissive rows have been **small**: `gegok12` (SIS)
+and a handful of components"* — in the file whose own platform table sells `OpenOlat`, a **448★
+full Java LMS**, as Apache-2.0. 🔵 Probe: `compose/code/p515-class-claim/`.
+
+🟢 **`P518` keeps its recipe under the qualifier its own headline used** — *first national-scale,
+**deployed** permissive platform* — and its byte-reads reproduce exactly (Sunbird **1,072 B**
+`7dde06716f259584`; DeepTutor **11,408 B** `cd2f54e1e5066644`). 🟢 The correction yields `P521` in
+[`compose/patterns.md`](../compose/patterns.md). 🔴 It also yields the first measured cost of the
+four-pass-stale gate battery: `gate-shelf-consistency` and `gate-prose-claims` exist for exactly
+this class, and a contradiction shipped while they were not running (`Gap 515-A`).
+
+### Gaps opened by `p515`
+
+| gap | statement | re-probe |
+|---|---|---|
+| 🔴 **`Gap 515-A`** | The `HOOK_GATES` battery is four passes stale and a cross-shelf prose contradiction shipped inside that window. `gate-shelf-consistency` (59 controls) and `gate-prose-claims` are the two that cover the class. **This is now the base's top-priority gap, above any discovery leg** — and it will not clear by retrying `make hooks`, because this session's posture is a standing abstention, not an intermittent denial. The fix is an instrument that does not require running cloned Python. | every pass |
+| 🟡 **`Gap 515-B`** | `DeepTutor` has **no exact star cell** for `p515`: the repo page rounds to `47.9k` and a rounded figure may not overwrite `p513`'s exact `47,834`. The conflict is closed; the measurement is not taken. | next pass with an in-scope API or git-protocol channel |
+| 🟡 **`Gap 515-C`** | `globant-kb`'s rotation ledger still carries stale `push-blocked` strings and `last_updated: 2026-08-02` against a KB whose HEAD is `2026-10-28`. It has been describing a removable obstacle as permanent. | `p516` |
+| 🔴 **`Gap 515-D`** | The IDB 193-solution LATAM review (**59%** generative AI, **27%** language models, Jan 2026) is **search-channel-attributed only**: `www.iadb.org` does not resolve from this session (`getaddrinfo ENOTFOUND`) — same class as `arxiv.org` and `www.unesco.org`. | a session whose network policy allows `iadb.org` |
+
+
 ## 🆕 `p514` — `2026-10-28` — **🔴 A REFUTATION THIS FILE PUBLISHED IS ITSELF REFUTED, ON THE BYTES, AT THE EXACT SHA IT RECORDED: this base wrote that Fedena's Apache-2.0 *"does not survive contact with the repository"* and that neither repo *"ships a license file under any of the nine names probed"*. 🔴 **`NOTICE` was not one of the nine.** Both Fedena repos carry the Apache-2.0 grant sentence in `NOTICE`, at `68a84ac445bf` and `333477b06f1d` — the very commits this base read. 🟢 `Gap 512-D` (`T42`) CLOSES WITH CONTENT: 1,840 branch-enumerated probes over the whole negative-verdict population, control pair green, **3 of 19 nils wrong and 16 upgraded from *unread* to *enumerated***. 🔴 Discovery saturated on a SIXTH axis — and this time on the DEMAND axis too: ~25 regional facts checked, **one** new. 🔴 `make hooks` DENIED for the eighteenth time in nineteen passes.**
 
 🔴 **Gate posture, stated first.** `make hooks` was attempted and **DENIED** — `Code from External`,

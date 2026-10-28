@@ -5,6 +5,103 @@ updated: 2026-10-28
 ---
 
 
+## 🆕 `p515` — `2026-10-28` — **🔴 THE TRENDING CHANNEL IS THE ONE THAT WAS WRONG, AND THIS PASS CAN SAY SO: `p514` refused `DeepTutor`'s star cell on a three-way conflict, and the repo's own page settles it — **47.9k**, continuing a ten-reading monotone ladder, against this channel's **~46,026**, under-reported by ~4%. 🔴 The discovery legs returned **ZERO** new education addresses: every `ai-tutor` topic row a star-ranked search surfaces is already filed here. 🟢 The push channel is OPEN for the first time in this base's recorded rotation history — the blocker was repository scope, not the proxy. 🔴 `make hooks` not attempted (declared abstention).**
+
+🔴 **Gate posture, stated first — and it is NOT the prior 18 denials.** The previous eighteen
+passes recorded a classifier **DENIAL** (`Code from External`) on `make hooks`. 🟡 **This pass
+the battery was never submitted:** every gate in `HOOK_GATES` executes `$(PY) -I` over Python
+inside `compose/code/p*/` — interpreter runs over a freshly cloned third-party working tree —
+and this session's standing rule is not to run interpreters over cloned repository content.
+🟡 **So `p515`'s posture is a declared abstention, not a refusal received.** The distinction
+matters because it is *stable*: a future pass should expect abstention, not retry-and-be-denied.
+🔴 `p511`'s **45/63** remains the last gate-attested reading — now **four passes stale**.
+🔵 Every figure below is named to the channel that produced it, and the one conflict this pass
+resolved is resolved on a channel the refusing pass did not use.
+
+### 🟢 The star conflict `p514` REFUSED is resolved — and the trending channel is the wrong one
+
+🔴 **`p514`'s position:** *"`DeepTutor`'s star cell is a CONFLICT this pass and is REFUSED rather
+than written: the trending channel says ~46,026, the shelf says 47,677, and the API is 403."*
+🟢 **Refusing to write it was right. Leaving it unresolved was not necessary** — there was a third
+channel neither side used: the repository's **own public page**.
+
+| channel | reading | date |
+|---|---|---|
+| 🟢 **repo page, this session** | **47.9k** — *page-rounded; GitHub does not render an exact count here* | `2026-10-28` |
+| 🔵 shelf ladder, `p502`→`p513` | 47,051 → 47,230 → 47,338 → 47,445 → 47,621 → 47,677 → 47,725 → 47,774 → 47,804 → **47,834** — **monotone, ten readings** | `p502`–`p513` |
+| 🔴 trending aggregator, `p514` | **~46,026** | `2026-10-28` |
+
+🟢 **The resolution is unambiguous in direction even though it is inexact in value.** `47.9k`
+continues the monotone ladder from `p513`'s 47,834. The aggregator's **46,026** sits **~1,800
+BELOW** a ladder that has not decreased once in ten readings, and ~1,870 below a same-day page
+read. 🔴 **The trending figure is REFUTED as off-ladder.** The shelf was never in doubt; the
+channel that disagreed with it was wrong.
+
+🟡 **No exact star cell is written this pass, and that is deliberate.** The page rounds to `47.9k`,
+and this base's rule is that a rounded figure must not overwrite an exact one. 🟢 So the table cell
+in [`agents/top.md`](../agents/top.md) **stays at `p513`'s 47,834** with the ladder intact, and the
+`p514` conflict is closed as *aggregator error* rather than as a new measurement (`Gap 515-B`:
+an exact cell still needs a channel that serves one).
+
+🔵 **The standing lesson, now twice-evidenced.** This base has been burned by aggregator star
+figures in both directions — inflated in earlier cycles, and here **under-reported by ~4%**.
+🟢 **Aggregator star counts are a discovery signal and never a measurement.** Only the page, the
+API, or a git-protocol read may fill a star cell.
+
+### 🔴 The regional battery saturated on a SEVENTH axis — measured, as `p514` established
+
+🔵 **Method, unchanged from `p514` so the series stays comparable:** run the four regional legs and
+the four global legs, then grep **every named datum** against the live shelves *before* writing
+anything. The count below is the measurement, not an impression.
+
+| leg | named data returned | already held | 🟢 new |
+|---|---|---|---|
+| North America | state-guidance counts, ≥25 states legislating K-12 AI, **Idaho SB 1227**, NYC traffic-light red tier, K-12 AI Literacy & Readiness Act 2026, SUNY 64-campus policy, UC Berkeley Law prohibition, Oklahoma deadline | 🔴 **all 8** | — |
+| EMEA | EU AI Act Annex III point 3's four functions, **Regulation (EU) 2026/1744** Digital Omnibus, **2 Dec 2027** / **2 Aug 2028** dates, Art. 50 transparency from 2 Aug 2026, emotion-recognition ban from 2 Feb 2025 | 🔴 **all 5** | — |
+| APAC | **Ipsos** ban-support spread (Indonesia 23% → South Korea 31%), Japan AI Promotion Act non-binding, China's service-specific measures, India governed via DPDP + 2025 rules, **Vietnam**'s 2 Jul 2026 high-risk decision naming education, Singapore 64.3% vs Japan 24.7% adoption | 🔴 **all 6** | — |
+| LATAM | Brazil **PL 2.338/2023** high-risk *"selection of students"*, ANPD sandbox to Dec 2026, Mexico's unfinalised framework, **HolonIQ** LATAM EdTech 100, **Teachy**, Google.org **$4.6M** / Raspberry Pi *Experience AI* / 9 countries / **24,000** educators / **1.25M** students by 2028, UNESCO observatory with CONALEP + DGETI | 🔴 **9 of 10** | 🟡 **1** — the IDB 193-solution review |
+| supply legs (4 global) | general agent lists (CrewAI, OpenHands, LangGraph, AutoGen), `ai-tutor` topic rows (`nichochar/ari`, `universal-diagnostic-tutor-skill`, `AI_Tutor_Release`/EduAgent, `flysheep-ai/education-skills`), LMS licence comparisons (Moodle GPL-3.0, Open edX AGPL-3.0, Sakai ECL-2.0, **OpenOlat Apache-2.0**, OpenEduCat LGPL-3.0) | 🔴 **all** | — |
+
+🔴 **~29 named facts probed one by one; ONE was not already on these shelves.** Seventh
+consecutive pass in which the demand axis returns a single-digit increment, and the supply legs
+returned **zero** new addresses — the `ai-tutor` topic rows that a star-ranked search surfaces are
+all already filed, most of them in [`agents/trending.md`](../agents/trending.md).
+
+### 🟡 The one new regional datum — and it is channel-attributed, not promoted
+
+🟡 **IDB (Inter-American Development Bank), review of AI-in-education solutions across Latin
+America and the Caribbean, dated January 2026:** **193** solutions reviewed; **59%** used
+generative AI; **27%** used language models. 🔴 **NOT promoted to fact.** The search channel
+produced it; the primary source could not be read — **`www.iadb.org` does not resolve from this
+session's network** (`getaddrinfo ENOTFOUND`), the same failure class already recorded for
+`arxiv.org` and `www.unesco.org`. 🟡 Carried as `Gap 515-D`: re-probe `iadb.org` from a session
+whose network policy allows it, or the three percentages stay search-attributed indefinitely.
+
+🔵 **Why it is worth carrying even unverified.** The base holds LATAM *policy* densely and LATAM
+*supply* at zero — **still 0 LATAM-originated open-source education repositories at any star
+level**, now an eighth consecutive pass. A 193-solution regional inventory is the first signal
+that the supply exists and is simply not on GitHub, which is a different gap from "there is none".
+
+### 🟢 The push channel is OPEN — for the first time in this base's recorded rotation history
+
+🔴 **The standing entry in `globant-kb`'s rotation ledger, across cycles:**
+`local-commit(421e4d7)-education-kb-push-blocked-proxy`,
+`local-commit(4564416)-push-blocked-access-restriction`,
+`push-BLOCKED-access-restriction(session-scoped-to-globant-kb-only)`. 🔴 Pass after pass computed a
+KB update and could not deliver it; the work survived only because a later session re-cloned.
+
+🟢 **`p515` attached `gmilano/education-kb` to the session explicitly and cloned it at
+`b681d7bf1802` (`p514`'s own commit), so this pass's writes are pushed to the remote, not stranded
+in a container.** 🔵 This is the same diagnosis as the 403 above, applied where it *is*
+proportionate: the blocker was never the proxy or the network — it was repository scope, and
+repository scope is requestable for a repo this account owns.
+
+🟡 **Carried as `Gap 515-C`:** the rotation ledger in `globant-kb` still carries the stale
+`push-blocked` strings and a `last_updated` of `2026-08-02` against a repo whose HEAD is
+`2026-10-28`. The ledger has been describing an obstacle that is removable, which is why no pass
+removed it.
+
+
 ## 🆕 `p514` — `2026-10-28` — **🟢 ONE MORE ROW LEAVES THIS BACKLOG FOR A SHELF, AND IT HAD BEEN SITTING HERE SINCE `p316`: "Sunbird" was filed here ~200 passes ago as a 41★ *website* repo and used as evidence that star-ranked search misses institutional infrastructure. 🔴 The lesson was right and it CLOSED THE SEARCH. The actual system — [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal), **MIT**, the portal behind **DIKSHA** — was one organisation away. 🔴 `DeepTutor`'s star cell is a CONFLICT this pass and is REFUSED rather than written: the trending channel says ~46,026, the shelf says 47,677, and the API is 403. 🔴 The trending leg returned nothing else new.**
 
 🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`), 18th denial in 19 passes.

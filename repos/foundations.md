@@ -5,6 +5,104 @@ updated: 2026-10-28
 ---
 
 
+## 🆕 `p515` — `2026-10-28` — **🟢 THIS CENSUS HELD THE COUNTEREXAMPLE THAT REFUTES `p514`'s FLAGSHIP PREMISE, AND IT HELD IT IN TWO ROWS: `OpenOLAT` (**Apache-2.0**, L557) and `TutorLoom` (**Apache-2.0**, L1134, added `p513`) — both re-read from bytes on an independent channel this pass, both **IDENTICAL** on byte count, and `TutorLoom` gains the payload digest it never carried. 🟢 `p514`'s own Sunbird byte-read reproduces **EXACTLY** (1,072 B, `7dde06716f259584`), so the correction is to a prose claim and not to a census cell. 🔴 Zero new addresses from eight search legs — seventh saturation pass. 🔴 `make hooks` not attempted (declared abstention).**
+
+🔴 **Gate posture, stated first — and it is NOT the prior 18 denials.** The previous eighteen
+passes recorded a classifier **DENIAL** (`Code from External`) on `make hooks`. 🟡 **This pass
+the battery was never submitted:** every gate in `HOOK_GATES` executes `$(PY) -I` over Python
+inside `compose/code/p*/` — interpreter runs over a freshly cloned third-party working tree —
+and this session's standing rule is not to run interpreters over cloned repository content.
+🟡 **So `p515`'s posture is a declared abstention, not a refusal received.** The distinction
+matters because it is *stable*: a future pass should expect abstention, not retry-and-be-denied.
+🔴 `p511`'s **45/63** remains the last gate-attested reading — now **four passes stale**.
+🔵 Every figure below is named to the channel that produced it, and the one conflict this pass
+resolved is resolved on a channel the refusing pass did not use.
+
+### 🔴 The refutation — `p514`'s own `P518` premise, against this base's live shelves
+
+🔴 **What `p514` published**, in [`compose/patterns.md`](../compose/patterns.md), as the stated
+reason `P518` could not have been written earlier:
+
+> *"Every LMS on these shelves is copyleft — Moodle **GPL-3.0**, Chamilo **GPL-3.0**, Open edX
+> **AGPL-3.0** — so `P515` had to invent a standards boundary to keep a Globant deliverable from
+> touching client source. 🟢 **Sunbird removes the need for the boundary**."*
+
+🔴 **The three licences named are correct. The universal claim around them is false, and it is
+falsified by this base's own shelves — one of them written one pass earlier.**
+
+| slug | shelf that holds it | grant as shelved | 🟢 `p515` byte-read, third channel | verdict |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | [`verticals/solutions.md`](../verticals/solutions.md) L521, L663, L959; [`repos/foundations.md`](../repos/foundations.md) L557 | **Apache-2.0**, 10,982 B `6dbc5b605ed0…` | 🟢 **Apache-2.0**, `master/LICENSE`, **10,982 B**, `sha256₁₆ 6dbc5b605ed0be6e`, HTTP **200** | 🟢 **IDENTICAL** to the shelved cell |
+| [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | [`verticals/solutions.md`](../verticals/solutions.md) L983 (**added `p513`**); [`repos/foundations.md`](../repos/foundations.md) L1134 | **Apache-2.0**, 11,362 B | 🟢 **Apache-2.0**, `main/LICENSE`, **11,362 B**, `sha256₁₆ a890392684288f18`, HTTP **200** | 🟢 **byte count IDENTICAL**; digest newly recorded |
+
+🔴 **This base does not merely contain a counterexample — it advertises one.**
+[`verticals/solutions.md`](../verticals/solutions.md) L521 sells `OpenOlat` as *"**The only
+permissive full LMS found.** Pick this when the client needs a closed derivative."* L663 reduces
+the whole decision to *"OpenOlat (Apache-2.0) **or** accept copyleft."* And L983, written at
+`p513` — **the pass immediately before the one that claimed every LMS is copyleft** — introduces
+`TutorLoom` as *"Second permissive full LMS after OpenOlat."*
+
+### 🔴 The claim was published TWICE, and the probe found the instance a manual read missed
+
+🔵 **This pass wrote a probe before it wrote the finding** (`compose/code/p515-class-claim/`), and
+the probe returned an instance that reading `compose/patterns.md` by hand did not:
+[`verticals/solutions.md`](../verticals/solutions.md) **L112**, inside `p514`'s own section —
+
+> *"🟢 **Why it matters more than another LMS would.** Every LMS on this shelf is copyleft — Moodle
+> and Chamilo **GPL-3.0**, Open edX **AGPL-3.0**, formaLMS **GPL-2.0** — and the only permissive
+> rows have been **small**: `gegok12` (SIS) and a handful of components."*
+
+🔴 **This second instance is the worse of the two**, for three reasons:
+1. 🔴 It sits in **the very file whose platform table sells `OpenOlat` as the Apache-2.0 full LMS** —
+   the counterexample is roughly 400 lines below the claim, in the same document.
+2. 🔴 It does not merely omit the permissive rows, it **mischaracterises them**: *"the only
+   permissive rows have been small — `gegok12` (SIS) and a handful of components"*. `OpenOlat` is a
+   **448★ full Java LMS**, and `TutorLoom` is a full multi-tenant LMS; neither is a component.
+3. 🔴 It then draws the operational conclusion — *"impossible with Moodle or Open edX"* — which is
+   true of Moodle and Open edX and **false of the shelf it generalises to**.
+
+🟡 **Both instances are left exactly as published**, per this base's standing practice of correcting
+above rather than rewriting history. 🔵 The correction is this section; the original stands below it
+under its own heading.
+
+### 🟡 What survives, and the qualifier that carries it
+
+🟢 **The `P518` recipe is sound and is not withdrawn.** Sunbird's MIT grant is real — this pass
+byte-read it independently and reproduced `p514`'s cell **exactly**: `master/LICENSE`, **1,072 B**,
+`sha256₁₆ 7dde06716f259584`, HTTP **200**. DeepTutor's cell reproduces exactly too: **Apache-2.0**,
+**11,408 B**, `sha256₁₆ cd2f54e1e5066644`.
+
+🟡 **What must be rewritten is the justification.** The defensible claim is the one with the
+qualifier `p514` used in its own headline and then dropped in its rationale:
+
+> 🟢 Sunbird is the first **national-scale, deployed** permissive learning platform on this shelf.
+
+🔴 **Why this is a commercial correction and not a wording nit.** `P518`'s premise tells a reader
+that *"must ship closed + wants a full LMS"* was unsolved until `p514`. On this base's own data it
+has been solved since `p508`, by a platform with — per [`repos/foundations.md`](../repos/foundations.md)
+L557 — a *"strong EMEA higher-ed footprint"*. 🔴 A proposal built off `P518`'s premise would route
+an EMEA closed-derivative engagement to a heavy Indian-ministry stack and never mention the Swiss
+Apache-2.0 LMS already on the shelf. 🟢 `P521`, written this pass, is that missing recipe.
+
+### 🔴 The first measured cost of the stale gate
+
+🔵 `HOOK_GATES` carries **`gate-shelf-consistency`** (`p308` — *"no slug may carry disagreeing
+licence cells across the live shelves"*, 59 controls) and **`gate-prose-claims`**. 🔴 The battery
+has not run since `p511`. 🔴 **In that four-pass window a cross-shelf claim shipped that contradicts
+two live rows.** 🟡 This is the first instance on this base where the gate's absence can be shown to
+have *cost* something rather than merely being noted as stale — and it argues the staleness is
+itself the top-priority gap, above any discovery leg (`Gap 515-A`).
+
+### Gaps opened by `p515`
+
+| gap | statement | re-probe |
+|---|---|---|
+| 🔴 **`Gap 515-A`** | The `HOOK_GATES` battery is four passes stale and a cross-shelf prose contradiction shipped inside that window. `gate-shelf-consistency` (59 controls) and `gate-prose-claims` are the two that cover the class. **This is now the base's top-priority gap, above any discovery leg** — and it will not clear by retrying `make hooks`, because this session's posture is a standing abstention, not an intermittent denial. The fix is an instrument that does not require running cloned Python. | every pass |
+| 🟡 **`Gap 515-B`** | `DeepTutor` has **no exact star cell** for `p515`: the repo page rounds to `47.9k` and a rounded figure may not overwrite `p513`'s exact `47,834`. The conflict is closed; the measurement is not taken. | next pass with an in-scope API or git-protocol channel |
+| 🟡 **`Gap 515-C`** | `globant-kb`'s rotation ledger still carries stale `push-blocked` strings and `last_updated: 2026-08-02` against a KB whose HEAD is `2026-10-28`. It has been describing a removable obstacle as permanent. | `p516` |
+| 🔴 **`Gap 515-D`** | The IDB 193-solution LATAM review (**59%** generative AI, **27%** language models, Jan 2026) is **search-channel-attributed only**: `www.iadb.org` does not resolve from this session (`getaddrinfo ENOTFOUND`) — same class as `arxiv.org` and `www.unesco.org`. | a session whose network policy allows `iadb.org` |
+
+
 ## 🆕 `p514` — `2026-10-28` — **🔴 THE REFUTATION THIS FILE PUBLISHED ABOUT FEDENA IS ITSELF REFUTED, AT THE TWO SHAs THIS FILE RECORDED: `NOTICE` was not among the nine names probed, and both Fedena repos carry the Apache-2.0 grant clause there. 🟢 The permissive census goes 15 → 16 with the ONE address this pass's whole regional battery produced that the base did not already hold: [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) — **MIT**, grant on **78 of 79 heads** including the default, and it is the portal behind **DIKSHA**, India's national platform. 🔴 This base had seen "Sunbird" for ~200 passes as a 41★ *website* repo and never the stack. 🔴 `make hooks` DENIED (18th in 19).**
 
 🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`). 🟡 Nothing here is

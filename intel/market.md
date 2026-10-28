@@ -5,6 +5,123 @@ updated: 2026-10-28
 ---
 
 
+## 🆕 `p515` — `2026-10-28` — **🔴 SEVENTH CONSECUTIVE SATURATION PASS, MEASURED NOT ASSERTED: ~29 named regional facts probed one by one against the live shelves, **ONE** was new — an **IDB** review of **193** LATAM/Caribbean AI-education solutions (**59%** generative AI, **27%** language models), and it is REFUSED as fact because `www.iadb.org` does not resolve from this session. 🔴 The supply legs returned **zero** new addresses. 🟢 So the pass's value is internal: the `P518` premise refuted, a star conflict resolved, the `API 403` re-diagnosed as session scope. 🔵 The LATAM supply nil holds an eighth pass — but 193 solutions implies a DISTRIBUTION gap, not an existence gap, which changes the LATAM offer. 🔴 `make hooks` not attempted (declared abstention).**
+
+🔴 **Gate posture, stated first — and it is NOT the prior 18 denials.** The previous eighteen
+passes recorded a classifier **DENIAL** (`Code from External`) on `make hooks`. 🟡 **This pass
+the battery was never submitted:** every gate in `HOOK_GATES` executes `$(PY) -I` over Python
+inside `compose/code/p*/` — interpreter runs over a freshly cloned third-party working tree —
+and this session's standing rule is not to run interpreters over cloned repository content.
+🟡 **So `p515`'s posture is a declared abstention, not a refusal received.** The distinction
+matters because it is *stable*: a future pass should expect abstention, not retry-and-be-denied.
+🔴 `p511`'s **45/63** remains the last gate-attested reading — now **four passes stale**.
+🔵 Every figure below is named to the channel that produced it, and the one conflict this pass
+resolved is resolved on a channel the refusing pass did not use.
+
+### 🔴 The regional battery saturated on a SEVENTH axis — measured, as `p514` established
+
+🔵 **Method, unchanged from `p514` so the series stays comparable:** run the four regional legs and
+the four global legs, then grep **every named datum** against the live shelves *before* writing
+anything. The count below is the measurement, not an impression.
+
+| leg | named data returned | already held | 🟢 new |
+|---|---|---|---|
+| North America | state-guidance counts, ≥25 states legislating K-12 AI, **Idaho SB 1227**, NYC traffic-light red tier, K-12 AI Literacy & Readiness Act 2026, SUNY 64-campus policy, UC Berkeley Law prohibition, Oklahoma deadline | 🔴 **all 8** | — |
+| EMEA | EU AI Act Annex III point 3's four functions, **Regulation (EU) 2026/1744** Digital Omnibus, **2 Dec 2027** / **2 Aug 2028** dates, Art. 50 transparency from 2 Aug 2026, emotion-recognition ban from 2 Feb 2025 | 🔴 **all 5** | — |
+| APAC | **Ipsos** ban-support spread (Indonesia 23% → South Korea 31%), Japan AI Promotion Act non-binding, China's service-specific measures, India governed via DPDP + 2025 rules, **Vietnam**'s 2 Jul 2026 high-risk decision naming education, Singapore 64.3% vs Japan 24.7% adoption | 🔴 **all 6** | — |
+| LATAM | Brazil **PL 2.338/2023** high-risk *"selection of students"*, ANPD sandbox to Dec 2026, Mexico's unfinalised framework, **HolonIQ** LATAM EdTech 100, **Teachy**, Google.org **$4.6M** / Raspberry Pi *Experience AI* / 9 countries / **24,000** educators / **1.25M** students by 2028, UNESCO observatory with CONALEP + DGETI | 🔴 **9 of 10** | 🟡 **1** — the IDB 193-solution review |
+| supply legs (4 global) | general agent lists (CrewAI, OpenHands, LangGraph, AutoGen), `ai-tutor` topic rows (`nichochar/ari`, `universal-diagnostic-tutor-skill`, `AI_Tutor_Release`/EduAgent, `flysheep-ai/education-skills`), LMS licence comparisons (Moodle GPL-3.0, Open edX AGPL-3.0, Sakai ECL-2.0, **OpenOlat Apache-2.0**, OpenEduCat LGPL-3.0) | 🔴 **all** | — |
+
+🔴 **~29 named facts probed one by one; ONE was not already on these shelves.** Seventh
+consecutive pass in which the demand axis returns a single-digit increment, and the supply legs
+returned **zero** new addresses — the `ai-tutor` topic rows that a star-ranked search surfaces are
+all already filed, most of them in [`agents/trending.md`](../agents/trending.md).
+
+### 🟡 The one new regional datum — and it is channel-attributed, not promoted
+
+🟡 **IDB (Inter-American Development Bank), review of AI-in-education solutions across Latin
+America and the Caribbean, dated January 2026:** **193** solutions reviewed; **59%** used
+generative AI; **27%** used language models. 🔴 **NOT promoted to fact.** The search channel
+produced it; the primary source could not be read — **`www.iadb.org` does not resolve from this
+session's network** (`getaddrinfo ENOTFOUND`), the same failure class already recorded for
+`arxiv.org` and `www.unesco.org`. 🟡 Carried as `Gap 515-D`: re-probe `iadb.org` from a session
+whose network policy allows it, or the three percentages stay search-attributed indefinitely.
+
+🔵 **Why it is worth carrying even unverified.** The base holds LATAM *policy* densely and LATAM
+*supply* at zero — **still 0 LATAM-originated open-source education repositories at any star
+level**, now an eighth consecutive pass. A 193-solution regional inventory is the first signal
+that the supply exists and is simply not on GitHub, which is a different gap from "there is none".
+
+### Gaps opened by `p515`
+
+| gap | statement | re-probe |
+|---|---|---|
+| 🔴 **`Gap 515-A`** | The `HOOK_GATES` battery is four passes stale and a cross-shelf prose contradiction shipped inside that window. `gate-shelf-consistency` (59 controls) and `gate-prose-claims` are the two that cover the class. **This is now the base's top-priority gap, above any discovery leg** — and it will not clear by retrying `make hooks`, because this session's posture is a standing abstention, not an intermittent denial. The fix is an instrument that does not require running cloned Python. | every pass |
+| 🟡 **`Gap 515-B`** | `DeepTutor` has **no exact star cell** for `p515`: the repo page rounds to `47.9k` and a rounded figure may not overwrite `p513`'s exact `47,834`. The conflict is closed; the measurement is not taken. | next pass with an in-scope API or git-protocol channel |
+| 🟡 **`Gap 515-C`** | `globant-kb`'s rotation ledger still carries stale `push-blocked` strings and `last_updated: 2026-08-02` against a KB whose HEAD is `2026-10-28`. It has been describing a removable obstacle as permanent. | `p516` |
+| 🔴 **`Gap 515-D`** | The IDB 193-solution LATAM review (**59%** generative AI, **27%** language models, Jan 2026) is **search-channel-attributed only**: `www.iadb.org` does not resolve from this session (`getaddrinfo ENOTFOUND`) — same class as `arxiv.org` and `www.unesco.org`. | a session whose network policy allows `iadb.org` |
+
+## Opportunities by region — `p515`
+
+### North America
+🟢 **The sellable thing this pass is `P521`'s caveat 2, not a new statute.** The regulatory map is
+unchanged and fully held: ≥25 states legislating K-12 AI, Idaho **SB 1227**'s statewide framework,
+NYC's traffic-light red tier barring AI from grading and promotion decisions, SUNY's 64-campus
+policy, Oklahoma's **2027-28** deadline as `P519`'s clock. 🔴 **Nothing new in 8 probed facts.**
+🟡 **What moved is the supply side of a NA pitch:** districts and systems that must ship a closed,
+branded derivative now have a permissive **full LMS** option on this base (`OpenOlat`, Apache-2.0),
+where `P518`'s premise implied only copyleft or a ministry-scale fork. 🔵 NA buyers are
+institution-scale, so `P521` fits them and `P518` does not.
+
+### EMEA
+🟢 **`P521` is placed here, and the placement is the finding.** `OpenOlat` is Swiss-origin with a
+strong EMEA higher-ed footprint, Apache-2.0 at **10,982 B** `sha256₁₆ 6dbc5b605ed0be6e` — so the
+one engagement this pass added lands in the region that previously had no permissive-platform play
+at all. 🔴 **Regulatory picture unchanged across 5 probed facts:** Annex III point 3's four
+functions, Reg. **(EU) 2026/1744** deferring standalone high-risk obligations to **2 Dec 2027**
+(embedded to 2 Aug 2028), Art. 50 transparency live since 2 Aug 2026, emotion recognition in
+schools banned since 2 Feb 2025. 🟡 **The deferral is a selling window, not relief:** the
+conformity build for auto-assessment is cheaper to do before 2027 than during it.
+
+### APAC
+🔵 **`P518` (Sunbird/DIKSHA) remains the APAC play and is unaffected by this pass's correction** —
+Sunbird's MIT grant reproduced **exactly** on an independent byte read (**1,072 B**,
+`sha256₁₆ 7dde06716f259584`). 🔴 **6 probed facts, all held:** Ipsos ban-support spread (Indonesia
+23% → South Korea 31%, rising in Japan, Australia, South Korea), Japan's non-binding AI Promotion
+Act, China's service-specific measures, India via DPDP plus 2025 rules, **Vietnam**'s 2 Jul 2026
+decision listing education among six high-risk sectors, Singapore 64.3% genAI use vs Japan 24.7%.
+🟢 **Vietnam is the sharper of the two deadlines in `P521`'s caveat 3** — a new 2026 LMS deployment
+with grading on gets **1 Mar 2027**, and that clause now sits in a recipe rather than only in a
+platform table.
+
+### LATAM
+🟡 **The region produced this pass's single new datum, and it is channel-attributed, not fact:**
+an **IDB** review (January 2026) of **193** AI-in-education solutions across Latin America and the
+Caribbean — **59%** using generative AI, **27%** using language models. 🔴 Not promoted:
+**`www.iadb.org` does not resolve from this session's network**, so the primary source is unread
+(`Gap 515-D`). 🔴 **9 of 10 LATAM facts already held:** Brazil's **PL 2.338/2023** naming
+*"selection of students for access to education"* high-risk, ANPD's sandbox to Dec 2026, Mexico's
+unfinalised framework, HolonIQ's LATAM EdTech 100, Teachy, Google.org's **$4.6M** Raspberry Pi
+*Experience AI* across 9 countries (**24,000** educators, **1.25M** students by 2028), UNESCO's
+observatory with CONALEP and DGETI. 🔴 **Supply nil holds for an eighth pass: 0 LATAM-originated
+open-source education repositories at any star level.** 🔵 The 193-solution inventory is the first
+indication that this is a *distribution* gap rather than an *existence* gap — LATAM solutions exist
+and are not on GitHub. That reframes the LATAM offer from "build from scratch" toward
+**`P520`-style provenance and portfolio audit of assets the client already funded**.
+
+### Global
+🔴 **The demand axis is saturated on a seventh consecutive pass: ~29 named facts probed, ONE new.**
+🔴 **The supply legs returned zero new addresses** — every `ai-tutor` topic row a star-ranked search
+surfaces (`nichochar/ari`, `universal-diagnostic-tutor-skill`, `AI_Tutor_Release`/EduAgent,
+`flysheep-ai/education-skills`) is already filed. 🟢 **So this pass's value came from re-reading
+what the base already held rather than from discovery** — the `P518` premise refutation, the
+resolved `DeepTutor` star conflict, and the corrected API diagnosis all came from inside.
+🟡 **Standing implication for the rotation:** on this base, a pass budgeted entirely to discovery
+now has a near-zero expected yield, while internal-consistency work is yielding corrections with
+commercial consequences. 🔴 The gate that would automate exactly that work is **four passes stale**
+(`Gap 515-A`).
+
+
 ## 🆕 `p514` — `2026-10-28` — **🔴 THE DEMAND AXIS IS SATURATED AGAIN, AND THIS PASS MEASURED THE SATURATION INSTEAD OF ASSERTING IT: ~25 named regional facts were checked against this corpus ONE BY ONE — bill numbers, percentages, instruments, institutions — and **24 were already here**. 🟢 The one that was not is **DIKSHA**, India's national platform, and it turned into this pass's only supply promotion. 🔴 `Gap 483-K` re-probed on TWO channels and unmoved for a sixteenth pass, so the LATAM ratios and the EU dates remain channel-attributed rather than primary. 🔴 `make hooks` DENIED (18th in 19).**
 
 🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`). 🟡 `p511`'s **45/63** stands.

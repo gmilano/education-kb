@@ -5,6 +5,102 @@ updated: 2026-10-28
 ---
 
 
+## 🆕 `p515` — `2026-10-28` — **🟢 THE `API 403` THAT HAS DEGRADED THIS FILE'S CHANNEL FOR ~16 PASSES IS A MISDIAGNOSIS, AND THE FIX IS NAMED IN THE 403 ITSELF: it is not a rate limit and not an outage — it is **per-repository session scope**, and the body says so and names `add_repo`. 🟡 Deliberately not exercised on third-party repos; exercised on this KB's own repo, where it opened the push channel. 🔴 The trending leg produced **no new education address** — an eighth consecutive pass in which star-ranked discovery adds nothing this base does not hold. 🟢 `raw.githubusercontent.com` served **4 of 4** licence payloads at `200`. 🔴 `make hooks` not attempted (declared abstention).**
+
+🔴 **Gate posture, stated first — and it is NOT the prior 18 denials.** The previous eighteen
+passes recorded a classifier **DENIAL** (`Code from External`) on `make hooks`. 🟡 **This pass
+the battery was never submitted:** every gate in `HOOK_GATES` executes `$(PY) -I` over Python
+inside `compose/code/p*/` — interpreter runs over a freshly cloned third-party working tree —
+and this session's standing rule is not to run interpreters over cloned repository content.
+🟡 **So `p515`'s posture is a declared abstention, not a refusal received.** The distinction
+matters because it is *stable*: a future pass should expect abstention, not retry-and-be-denied.
+🔴 `p511`'s **45/63** remains the last gate-attested reading — now **four passes stale**.
+🔵 Every figure below is named to the channel that produced it, and the one conflict this pass
+resolved is resolved on a channel the refusing pass did not use.
+
+### 🟢 "The API is 403" is a misdiagnosis — the condition is session scope, and it has a name
+
+🔴 **What ~16 passes have recorded:** *"the API is 403"*, *"the API search channel is 403
+throughout"*, read as an outage or a rate limit and treated as a dead channel.
+🟢 **This pass read the 403 body instead of its status line.** It is neither:
+
+> `GitHub access to this repository is not enabled for this session. Use add_repo to request
+> access. If add_repo answers that read access is already available and you need GitHub API or
+> write access, call add_repo again with access:"push" to attach the repository with credentials.`
+
+🟢 **So the GitHub API channel is not broken — it is scope-gated per repository**, and the gate
+names its own remedy. 🟡 This retro-explains the instrument history that looked contradictory:
+`p511` filling exact star cells *"(API)"* while `p514` found the same endpoint 403 is not an
+intermittent outage, it is two sessions with different repository scope.
+
+🔴 **The remedy is named and deliberately NOT exercised on third-party repositories.** Attaching
+repos Globant does not own, with `access:"push"`, in order to mint API credentials for a star
+count, is out of proportion to a research pass — and `access:"push"` is the level the message says
+API reads require. 🟢 **What this pass did exercise is the case where it is proportionate:** this
+knowledge base's **own** repository (see below).
+
+🟢 **Instruction for later passes:** stop writing *"the API is 403"* as an outage. Write *"the API
+is out of session scope for this address"*, and if a cell genuinely requires the API, say which
+repository would have to be attached and why that is or is not justified. 🔵 `raw.githubusercontent.com`
+is unaffected and remains the licence-byte channel — it served **every licence payload this pass
+resolved, 9 at HTTP `200`**, across `OpenOLAT`, `TutorLoom`, `SunbirdEd-portal`, `DeepTutor`,
+`xAPI-Spec`, `openbadges-validator-core`, `kolibri`, `tsugiproject/tsugi` and `csev/tsugi`.
+🔴 **Note the asymmetry for later passes:** `curl` to a `github.com` **HTML** URL returns `403`
+through this session's proxy for *every* address, including addresses proven live on the raw
+channel in the same minute. 🔴 **So an HTTP code from `github.com/<org>/<repo>` is NOT an existence
+test here** — a `403` there means nothing, and only the raw channel, `WebFetch`, or an in-scope API
+read can confirm or refute an address.
+
+### 🟢 The star conflict `p514` REFUSED is resolved — and the trending channel is the wrong one
+
+🔴 **`p514`'s position:** *"`DeepTutor`'s star cell is a CONFLICT this pass and is REFUSED rather
+than written: the trending channel says ~46,026, the shelf says 47,677, and the API is 403."*
+🟢 **Refusing to write it was right. Leaving it unresolved was not necessary** — there was a third
+channel neither side used: the repository's **own public page**.
+
+| channel | reading | date |
+|---|---|---|
+| 🟢 **repo page, this session** | **47.9k** — *page-rounded; GitHub does not render an exact count here* | `2026-10-28` |
+| 🔵 shelf ladder, `p502`→`p513` | 47,051 → 47,230 → 47,338 → 47,445 → 47,621 → 47,677 → 47,725 → 47,774 → 47,804 → **47,834** — **monotone, ten readings** | `p502`–`p513` |
+| 🔴 trending aggregator, `p514` | **~46,026** | `2026-10-28` |
+
+🟢 **The resolution is unambiguous in direction even though it is inexact in value.** `47.9k`
+continues the monotone ladder from `p513`'s 47,834. The aggregator's **46,026** sits **~1,800
+BELOW** a ladder that has not decreased once in ten readings, and ~1,870 below a same-day page
+read. 🔴 **The trending figure is REFUTED as off-ladder.** The shelf was never in doubt; the
+channel that disagreed with it was wrong.
+
+🟡 **No exact star cell is written this pass, and that is deliberate.** The page rounds to `47.9k`,
+and this base's rule is that a rounded figure must not overwrite an exact one. 🟢 So the table cell
+in [`agents/top.md`](../agents/top.md) **stays at `p513`'s 47,834** with the ladder intact, and the
+`p514` conflict is closed as *aggregator error* rather than as a new measurement (`Gap 515-B`:
+an exact cell still needs a channel that serves one).
+
+🔵 **The standing lesson, now twice-evidenced.** This base has been burned by aggregator star
+figures in both directions — inflated in earlier cycles, and here **under-reported by ~4%**.
+🟢 **Aggregator star counts are a discovery signal and never a measurement.** Only the page, the
+API, or a git-protocol read may fill a star cell.
+
+### 🟢 The push channel is OPEN — for the first time in this base's recorded rotation history
+
+🔴 **The standing entry in `globant-kb`'s rotation ledger, across cycles:**
+`local-commit(421e4d7)-education-kb-push-blocked-proxy`,
+`local-commit(4564416)-push-blocked-access-restriction`,
+`push-BLOCKED-access-restriction(session-scoped-to-globant-kb-only)`. 🔴 Pass after pass computed a
+KB update and could not deliver it; the work survived only because a later session re-cloned.
+
+🟢 **`p515` attached `gmilano/education-kb` to the session explicitly and cloned it at
+`b681d7bf1802` (`p514`'s own commit), so this pass's writes are pushed to the remote, not stranded
+in a container.** 🔵 This is the same diagnosis as the 403 above, applied where it *is*
+proportionate: the blocker was never the proxy or the network — it was repository scope, and
+repository scope is requestable for a repo this account owns.
+
+🟡 **Carried as `Gap 515-C`:** the rotation ledger in `globant-kb` still carries the stale
+`push-blocked` strings and a `last_updated` of `2026-08-02` against a repo whose HEAD is
+`2026-10-28`. The ledger has been describing an obstacle that is removable, which is why no pass
+removed it.
+
+
 ## 🆕 `p514` — `2026-10-28` — **🔴 THE TRENDING LEG PRODUCED NO NEW EDUCATION ADDRESS FOR THIS BASE — AND THE PASS'S REAL DISCOVERY CAME FROM RE-READING ADDRESSES THIS FILE ALREADY HELD: 1,840 branch-enumerated probes over the 19 negative-verdict addresses recovered **3 grants that were called "none"**, two of them on the DEFAULT branch at a path nobody had probed (`NOTICE`). 🟢 One address left this file for the foundations census — [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal), **MIT**, the stack behind **DIKSHA**. 🔴 `Gap 504-A` was NOT tested this pass: the API search channel is 403 throughout, so there was no index to reconcile against.**
 
 🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`). 🟡 `p511`'s **45/63** stands.

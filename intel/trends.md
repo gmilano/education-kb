@@ -5,6 +5,76 @@ updated: 2026-10-28
 ---
 
 
+## 🆕 `p515` — `2026-10-28` — **🔴 NO NEW TREND WAS FOUND, AND THAT IS THE ENTRY: ~29 named facts across eight legs, one new and unverified. 🟢 But two trends on this base's own INSTRUMENT changed, and both change what later passes should do — aggregator star counts now proven to diverge from source in **both** directions (`DeepTutor` under-reported ~4% this pass, inflated in earlier cycles), and *"the API is 403"* exposed as ~16 passes of misdiagnosis for what is per-repository session scope. 🔴 Discovery yield has collapsed while internal-consistency yield has not: the scarce resource on this base is no longer information, it is AGREEMENT BETWEEN THE SHELVES. 🔴 The two gates that enforce exactly that have not run since `p511`.**
+
+🔴 **Gate posture, stated first — and it is NOT the prior 18 denials.** The previous eighteen
+passes recorded a classifier **DENIAL** (`Code from External`) on `make hooks`. 🟡 **This pass
+the battery was never submitted:** every gate in `HOOK_GATES` executes `$(PY) -I` over Python
+inside `compose/code/p*/` — interpreter runs over a freshly cloned third-party working tree —
+and this session's standing rule is not to run interpreters over cloned repository content.
+🟡 **So `p515`'s posture is a declared abstention, not a refusal received.** The distinction
+matters because it is *stable*: a future pass should expect abstention, not retry-and-be-denied.
+🔴 `p511`'s **45/63** remains the last gate-attested reading — now **four passes stale**.
+🔵 Every figure below is named to the channel that produced it, and the one conflict this pass
+resolved is resolved on a channel the refusing pass did not use.
+
+### 🟢 What actually changed in the trend picture this pass
+
+🔵 **No new trend was discovered, and the honest statement of that is the entry.** Four global legs
+and four regional legs returned **~29 named facts, 1 of them new** (the IDB 193-solution review,
+unverified — `Gap 515-D`). Seventh consecutive saturation pass. 🔴 The `ai-tutor` topic rows that
+star-ranked discovery keeps surfacing are all already filed.
+
+🟢 **Two methodological trends on this base's own instrument are worth recording as trends,
+because they change what later passes should do:**
+
+| trend | evidence this pass | consequence |
+|---|---|---|
+| 🟢 **Aggregator star figures diverge from source in BOTH directions** | `p514`'s trending channel put `DeepTutor` at **~46,026** against a ten-reading monotone shelf ladder ending at **47,834** and a same-day page read of **47.9k** — under-reported by ~4%. Earlier cycles recorded the opposite, pipeline-**inflated** counts. | 🔴 Aggregator stars are a discovery signal only. A star cell may be filled **only** from the page, the API, or a git-protocol read. |
+| 🟢 **"The API is 403" has been a misdiagnosis for ~16 passes** | The 403 body names repository-level **session scope** and `add_repo` as its remedy — not a rate limit and not an outage. | 🔴 Stop recording an outage. Record out-of-scope, and name the repository that would have to be attached and whether that is proportionate. |
+
+🔴 **The trend that matters most is internal: discovery yield has collapsed while
+internal-consistency yield has not.** `p515` produced a refuted premise, a resolved conflict and a
+corrected channel diagnosis — all from re-reading shelves — and **zero** new addresses from eight
+search legs. 🟡 On a base of this maturity the scarce resource is no longer information, it is
+**agreement between the shelves**, and that is precisely what `gate-shelf-consistency` and
+`gate-prose-claims` exist to enforce. 🔴 They have not run since `p511`.
+
+### 🔴 The regional battery saturated on a SEVENTH axis — measured, as `p514` established
+
+🔵 **Method, unchanged from `p514` so the series stays comparable:** run the four regional legs and
+the four global legs, then grep **every named datum** against the live shelves *before* writing
+anything. The count below is the measurement, not an impression.
+
+| leg | named data returned | already held | 🟢 new |
+|---|---|---|---|
+| North America | state-guidance counts, ≥25 states legislating K-12 AI, **Idaho SB 1227**, NYC traffic-light red tier, K-12 AI Literacy & Readiness Act 2026, SUNY 64-campus policy, UC Berkeley Law prohibition, Oklahoma deadline | 🔴 **all 8** | — |
+| EMEA | EU AI Act Annex III point 3's four functions, **Regulation (EU) 2026/1744** Digital Omnibus, **2 Dec 2027** / **2 Aug 2028** dates, Art. 50 transparency from 2 Aug 2026, emotion-recognition ban from 2 Feb 2025 | 🔴 **all 5** | — |
+| APAC | **Ipsos** ban-support spread (Indonesia 23% → South Korea 31%), Japan AI Promotion Act non-binding, China's service-specific measures, India governed via DPDP + 2025 rules, **Vietnam**'s 2 Jul 2026 high-risk decision naming education, Singapore 64.3% vs Japan 24.7% adoption | 🔴 **all 6** | — |
+| LATAM | Brazil **PL 2.338/2023** high-risk *"selection of students"*, ANPD sandbox to Dec 2026, Mexico's unfinalised framework, **HolonIQ** LATAM EdTech 100, **Teachy**, Google.org **$4.6M** / Raspberry Pi *Experience AI* / 9 countries / **24,000** educators / **1.25M** students by 2028, UNESCO observatory with CONALEP + DGETI | 🔴 **9 of 10** | 🟡 **1** — the IDB 193-solution review |
+| supply legs (4 global) | general agent lists (CrewAI, OpenHands, LangGraph, AutoGen), `ai-tutor` topic rows (`nichochar/ari`, `universal-diagnostic-tutor-skill`, `AI_Tutor_Release`/EduAgent, `flysheep-ai/education-skills`), LMS licence comparisons (Moodle GPL-3.0, Open edX AGPL-3.0, Sakai ECL-2.0, **OpenOlat Apache-2.0**, OpenEduCat LGPL-3.0) | 🔴 **all** | — |
+
+🔴 **~29 named facts probed one by one; ONE was not already on these shelves.** Seventh
+consecutive pass in which the demand axis returns a single-digit increment, and the supply legs
+returned **zero** new addresses — the `ai-tutor` topic rows that a star-ranked search surfaces are
+all already filed, most of them in [`agents/trending.md`](../agents/trending.md).
+
+### 🟡 The one new regional datum — and it is channel-attributed, not promoted
+
+🟡 **IDB (Inter-American Development Bank), review of AI-in-education solutions across Latin
+America and the Caribbean, dated January 2026:** **193** solutions reviewed; **59%** used
+generative AI; **27%** used language models. 🔴 **NOT promoted to fact.** The search channel
+produced it; the primary source could not be read — **`www.iadb.org` does not resolve from this
+session's network** (`getaddrinfo ENOTFOUND`), the same failure class already recorded for
+`arxiv.org` and `www.unesco.org`. 🟡 Carried as `Gap 515-D`: re-probe `iadb.org` from a session
+whose network policy allows it, or the three percentages stay search-attributed indefinitely.
+
+🔵 **Why it is worth carrying even unverified.** The base holds LATAM *policy* densely and LATAM
+*supply* at zero — **still 0 LATAM-originated open-source education repositories at any star
+level**, now an eighth consecutive pass. A 193-solution regional inventory is the first signal
+that the supply exists and is simply not on GitHub, which is a different gap from "there is none".
+
+
 ## 🆕 `p514` — `2026-10-28` — **🆕 `T50`: a PUBLISHED REFUTATION decays exactly like a published claim, and this base had never checked one — the Fedena refutation was wrong for 24 passes at a SHA that never moved. 🆕 `T51`: the probe's PATH SET is a bigger error source than the branch set, and this pass has 3 instances to 1. 🆕 `T52`: a grant can cover a branch nobody ships, which is a procurement hazard that "licensed" and "unlicensed" both describe wrongly. 🆕 `T53`: a repository dismissed as low-star institutional infrastructure is often the BROCHURE, and the system is one org away. 🔴 `T45` survives again — supply paid, demand saturated 24/25.**
 
 🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`), eighteenth denial in nineteen

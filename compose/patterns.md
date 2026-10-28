@@ -5,6 +5,155 @@ updated: 2026-10-28
 ---
 
 
+## 🆕 `p515` — `2026-10-28` — **🔴 `P518`'s STATED PREMISE IS WITHDRAWN AND THE RECIPE IS KEPT: *"every LMS on these shelves is copyleft"* is false against two live Apache-2.0 LMS rows, one of them added one pass earlier, so the claim that *"Sunbird removes the need for the boundary"* credits Sunbird with a constraint `OpenOlat` lifted at `p508`. 🟢 `P518` survives under the qualifier its own headline used — **first national-scale, DEPLOYED permissive platform** — and its byte-reads reproduce exactly. 🟢 `P521` is the recipe the correction makes available: a **closed derivative of a permissive full LMS**, OpenOlat + DeepTutor over LTI 1.3, EMEA-placed, with the SIS nil priced as scope and both auto-assessment deadlines named. 🔴 `make hooks` not attempted (declared abstention).**
+
+🔴 **Gate posture, stated first — and it is NOT the prior 18 denials.** The previous eighteen
+passes recorded a classifier **DENIAL** (`Code from External`) on `make hooks`. 🟡 **This pass
+the battery was never submitted:** every gate in `HOOK_GATES` executes `$(PY) -I` over Python
+inside `compose/code/p*/` — interpreter runs over a freshly cloned third-party working tree —
+and this session's standing rule is not to run interpreters over cloned repository content.
+🟡 **So `p515`'s posture is a declared abstention, not a refusal received.** The distinction
+matters because it is *stable*: a future pass should expect abstention, not retry-and-be-denied.
+🔴 `p511`'s **45/63** remains the last gate-attested reading — now **four passes stale**.
+🔵 Every figure below is named to the channel that produced it, and the one conflict this pass
+resolved is resolved on a channel the refusing pass did not use.
+
+### 🔴 The refutation — `p514`'s own `P518` premise, against this base's live shelves
+
+🔴 **What `p514` published**, in [`compose/patterns.md`](../compose/patterns.md), as the stated
+reason `P518` could not have been written earlier:
+
+> *"Every LMS on these shelves is copyleft — Moodle **GPL-3.0**, Chamilo **GPL-3.0**, Open edX
+> **AGPL-3.0** — so `P515` had to invent a standards boundary to keep a Globant deliverable from
+> touching client source. 🟢 **Sunbird removes the need for the boundary**."*
+
+🔴 **The three licences named are correct. The universal claim around them is false, and it is
+falsified by this base's own shelves — one of them written one pass earlier.**
+
+| slug | shelf that holds it | grant as shelved | 🟢 `p515` byte-read, third channel | verdict |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | [`verticals/solutions.md`](../verticals/solutions.md) L521, L663, L959; [`repos/foundations.md`](../repos/foundations.md) L557 | **Apache-2.0**, 10,982 B `6dbc5b605ed0…` | 🟢 **Apache-2.0**, `master/LICENSE`, **10,982 B**, `sha256₁₆ 6dbc5b605ed0be6e`, HTTP **200** | 🟢 **IDENTICAL** to the shelved cell |
+| [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | [`verticals/solutions.md`](../verticals/solutions.md) L983 (**added `p513`**); [`repos/foundations.md`](../repos/foundations.md) L1134 | **Apache-2.0**, 11,362 B | 🟢 **Apache-2.0**, `main/LICENSE`, **11,362 B**, `sha256₁₆ a890392684288f18`, HTTP **200** | 🟢 **byte count IDENTICAL**; digest newly recorded |
+
+🔴 **This base does not merely contain a counterexample — it advertises one.**
+[`verticals/solutions.md`](../verticals/solutions.md) L521 sells `OpenOlat` as *"**The only
+permissive full LMS found.** Pick this when the client needs a closed derivative."* L663 reduces
+the whole decision to *"OpenOlat (Apache-2.0) **or** accept copyleft."* And L983, written at
+`p513` — **the pass immediately before the one that claimed every LMS is copyleft** — introduces
+`TutorLoom` as *"Second permissive full LMS after OpenOlat."*
+
+### 🔴 The claim was published TWICE, and the probe found the instance a manual read missed
+
+🔵 **This pass wrote a probe before it wrote the finding** (`compose/code/p515-class-claim/`), and
+the probe returned an instance that reading `compose/patterns.md` by hand did not:
+[`verticals/solutions.md`](../verticals/solutions.md) **L112**, inside `p514`'s own section —
+
+> *"🟢 **Why it matters more than another LMS would.** Every LMS on this shelf is copyleft — Moodle
+> and Chamilo **GPL-3.0**, Open edX **AGPL-3.0**, formaLMS **GPL-2.0** — and the only permissive
+> rows have been **small**: `gegok12` (SIS) and a handful of components."*
+
+🔴 **This second instance is the worse of the two**, for three reasons:
+1. 🔴 It sits in **the very file whose platform table sells `OpenOlat` as the Apache-2.0 full LMS** —
+   the counterexample is roughly 400 lines below the claim, in the same document.
+2. 🔴 It does not merely omit the permissive rows, it **mischaracterises them**: *"the only
+   permissive rows have been small — `gegok12` (SIS) and a handful of components"*. `OpenOlat` is a
+   **448★ full Java LMS**, and `TutorLoom` is a full multi-tenant LMS; neither is a component.
+3. 🔴 It then draws the operational conclusion — *"impossible with Moodle or Open edX"* — which is
+   true of Moodle and Open edX and **false of the shelf it generalises to**.
+
+🟡 **Both instances are left exactly as published**, per this base's standing practice of correcting
+above rather than rewriting history. 🔵 The correction is this section; the original stands below it
+under its own heading.
+
+### 🟡 What survives, and the qualifier that carries it
+
+🟢 **The `P518` recipe is sound and is not withdrawn.** Sunbird's MIT grant is real — this pass
+byte-read it independently and reproduced `p514`'s cell **exactly**: `master/LICENSE`, **1,072 B**,
+`sha256₁₆ 7dde06716f259584`, HTTP **200**. DeepTutor's cell reproduces exactly too: **Apache-2.0**,
+**11,408 B**, `sha256₁₆ cd2f54e1e5066644`.
+
+🟡 **What must be rewritten is the justification.** The defensible claim is the one with the
+qualifier `p514` used in its own headline and then dropped in its rationale:
+
+> 🟢 Sunbird is the first **national-scale, deployed** permissive learning platform on this shelf.
+
+🔴 **Why this is a commercial correction and not a wording nit.** `P518`'s premise tells a reader
+that *"must ship closed + wants a full LMS"* was unsolved until `p514`. On this base's own data it
+has been solved since `p508`, by a platform with — per [`repos/foundations.md`](../repos/foundations.md)
+L557 — a *"strong EMEA higher-ed footprint"*. 🔴 A proposal built off `P518`'s premise would route
+an EMEA closed-derivative engagement to a heavy Indian-ministry stack and never mention the Swiss
+Apache-2.0 LMS already on the shelf. 🟢 `P521`, written this pass, is that missing recipe.
+
+### 🔴 The first measured cost of the stale gate
+
+🔵 `HOOK_GATES` carries **`gate-shelf-consistency`** (`p308` — *"no slug may carry disagreeing
+licence cells across the live shelves"*, 59 controls) and **`gate-prose-claims`**. 🔴 The battery
+has not run since `p511`. 🔴 **In that four-pass window a cross-shelf claim shipped that contradicts
+two live rows.** 🟡 This is the first instance on this base where the gate's absence can be shown to
+have *cost* something rather than merely being noted as stale — and it argues the staleness is
+itself the top-priority gap, above any discovery leg (`Gap 515-A`).
+
+### 🟢 `P521` — Ship closed on a permissive full LMS: the OpenOlat build — **8–11 weeks**
+
+🔵 **Why this recipe did not exist until the premise was corrected.** `P515` invented a standards
+boundary to avoid touching copyleft LMS source; `P518` declared the boundary unnecessary *because
+Sunbird is MIT*. 🔴 **Both were working around a constraint this base's own shelves had already
+lifted:** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is **Apache-2.0** and has
+been shelved as *"the only permissive full LMS"* since `p508`. 🟢 `P521` is the engagement that
+follows from that row — a **closed derivative of a full LMS**, with no boundary and no fork of a
+ministry-scale distribution.
+
+| component | address | grant, byte-read `p515` | role |
+|---|---|---|---|
+| the LMS — fork it | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0**, `master/LICENSE`, **10,982 B**, `sha256₁₆ 6dbc5b605ed0be6e` | enrolment, course structure, assessment UI; Java |
+| tutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0**, **11,408 B**, `sha256₁₆ cd2f54e1e5066644` | adaptive tutoring service behind the LMS's auth |
+| launch boundary | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0**, `master/LICENSE`, **10,273 B**, `sha256₁₆ 73ba74dfaa520b49` | mount the tutor as an **LTI 1.3** tool — no LMS core patch needed for v1 |
+| telemetry out | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0**, `master/LICENSE`, **11,525 B**, `sha256₁₆ a1587287ff0445e1` | learner statements to the client's LRS |
+| credentials out | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0**, `develop/LICENSE`, **13,185 B**, `sha256₁₆ ba1f153bdba34cc8` | verifiable completion |
+| offline reach | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT**, `develop/LICENSE`, **1,097 B**, `sha256₁₆ 3c056b34a4762a9a` | low-connectivity campuses |
+| alternative, **watch row only** | [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | 🟢 **Apache-2.0**, **11,362 B**, `sha256₁₆ a890392684288f18` | lighter Django/React LMS — **~4 weeks old; do not stake an engagement on it** |
+
+🔵 **Wiring.** Fork OpenOlat → stand the tutor up as a separate service and mount it through
+**LTI 1.3** (tsugi) so phase 1 ships *without* patching LMS core → emit **xAPI** per interaction
+to the client's LRS → issue **Open Badges** on mastery, validated with the 1EdTech validator →
+only in phase 2, patch OpenOlat core for the UX the LTI boundary cannot reach, which is where the
+Apache-2.0 grant actually earns its place. 🟢 **Tutor, badge layer and any core patches stay
+Globant IP**; Apache-2.0 asks for attribution, `NOTICE` retention and nothing else.
+
+🔴 **Say these four things out loud in the proposal, because each is real and each is on this base.**
+1. 🔴 **Budget the SIS integration as scope, not as a surprise.** This base's standing nil holds:
+   **no permissive platform is both a full LMS and a student information system**, and the
+   permissive LMS tier ships no gradebook-of-record or SIS integration between its members. The
+   build is OpenOlat ↔ the client's existing SIS over LTI + xAPI. **2–3 of the 8–11 weeks.**
+2. 🔴 **Warn the client's licence scanner before it fails the build.** OpenOlat's `LICENSE` is the
+   Apache-2.0 text **plus** an openolat.org attribution statement, so GitHub's own classifier
+   reports `NOASSERTION`. 🟢 The payload is Apache-2.0 on a byte read — three passes running now.
+   Hand the auditor the digest above, or an automated gate will reject the component.
+3. 🔴 **Turning on auto-assessment changes the regulatory object, in two jurisdictions.** Under the
+   **EU AI Act** Annex III point 3, evaluating learning outcomes is high-risk — standalone
+   obligations now **2 Dec 2027** (Reg. (EU) 2026/1744), Art. 50 transparency already live.
+   In **Vietnam**, an LMS with automated grading or ranking is listed high-risk, and a **new 2026
+   deployment gets the shorter runway — 1 Mar 2027**, not the incumbent's 1 Sep 2027.
+   🟡 **The platform is not the regulated thing; the configuration is.** Price the conformity work
+   per switch, and keep grading off in v1 unless the client is buying the compliance build too.
+4. 🟡 **It is Java, and that is a staffing question.** OpenOlat is a Java LMS; `P518`'s Sunbird and
+   `TutorLoom` are not. Confirm the studio's Java bench before pricing phase 2's core patches.
+
+🟢 **Where it sells: EMEA first.** OpenOlat is Swiss-origin with — per
+[`repos/foundations.md`](../repos/foundations.md) — a strong EMEA higher-ed footprint, so the
+reference customers, the language coverage and the data-residency posture all sit in region.
+🟡 **One address in this pass's own draft of `P521` was wrong, and the pre-write probe caught it.**
+The LTI row was first written as `tsugi/tsugi`, which **404s even on `README.md`**. The canonical
+address this base already held 28 times is [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi);
+[`csev/tsugi`](https://github.com/csev/tsugi) serves a **byte-identical** payload (both `LICENSE`
+**10,273 B** `sha256₁₆ 73ba74dfaa520b49`, both `README.md` 10,277 B). 🟢 **Every one of `P521`'s
+seven components is byte-read above — none is carried on a shelf citation alone.**
+
+🔵 **`P518` (Sunbird, APAC/ministry) and `P521` (OpenOlat, EMEA/institution) are complements, not
+rivals** — the discriminator is *national system* versus *single institution or consortium*, which
+is exactly the discriminator `P518`'s own caveat 3 names.
+
+
 ## 🆕 `p514` — `2026-10-28` — **🟢 `P518` — THE FIRST RECIPE ON THIS BASE THAT EXTENDS A NATIONAL-SCALE PLATFORM AND STILL SHIPS CLOSED, because [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) is **MIT** and every LMS these patterns had to work around is copyleft. 🟢 `P519` — the North America district pack, priced against the FOUR states that mandate both state guidance and district policy, with Oklahoma's **2027-28** deadline as the clock. 🟢 `P520` — the licence-provenance audit as a BILLABLE deliverable, built from this pass's own 1,840-probe instrument and justified by three findings that a client's own counsel would have missed.**
 
 🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`). 🟡 `p511`'s **45/63** stands.
