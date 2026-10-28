@@ -914,3 +914,70 @@ a phantom **−19 DEVIANT**. `HKUDS/DeepTutor`'s recorded **−17** is really **
 this file are unaffected (MIT has one canonical form here and all three new rows are 0-delta), but
 the Apache rows were **not** re-graded this pass. `Gap 500-B` carries it.
 
+
+## 🆕 `p503` — `2026-10-28` — **🟢 THE PROMOTION GAP, MEASURED ON A NEW AXIS AND THEN HALVED BY LICENCE: of six rows with traction and no shelf, THREE are MIT and shelvable and THREE are legally unusable — one of them the fastest-growing education repository this base has ever tracked. 🔴 And the channel row `p502` added to the table above is TOO WIDE: the API answers `search`, it REFUSES `contents`, so licence bytes still come from `raw` alone.**
+
+Reads: [`promotion-audit.2026-10-28-p503.tsv`](../evidence/promotion-audit.2026-10-28-p503.tsv),
+[`licence-bytes.2026-10-28-p503.tsv`](../evidence/licence-bytes.2026-10-28-p503.tsv),
+[`recency-axis.2026-10-28-p503.tsv`](../evidence/recency-axis.2026-10-28-p503.tsv),
+[`channel-boundary.2026-10-28-p503.tsv`](../evidence/channel-boundary.2026-10-28-p503.tsv).
+
+### 🔴 Correction to the verification table above, in its own words
+
+`p502` added the row *"stars + licence + topics + forks, 100 rows/call — GitHub REST API via the
+MCP channel — 🟢 WORKS, authoritative"*. 🟢 **True for `search`.** 🔴 **False for `contents`:**
+
+```
+mcp__github__get_file_contents(owner="learning-commons-org", repo="knowledge-graph", path="/")
+→ Access denied: repository "learning-commons-org/knowledge-graph" is not configured
+  for this session. Allowed repositories: gmilano/globant-kb, gmilano/education-kb
+```
+
+🔵 **The two endpoints have different authorisation models**: repository *search* answers for any
+public repository; repository *contents* is scoped to the repositories attached to the session.
+🟢 So the standing two-channel rule survives intact and its second channel is unchanged —
+**family from the API, bytes from `raw.githubusercontent.com` at a `git ls-remote` SHA.** A
+successor that reads `p502`'s row as *"the API can give me the licence file"* will get a refusal,
+not a payload. Registered as `Gap 503-A`.
+
+### 🟢 Shelved this pass — two MIT agents that have been in this base's history and on no shelf
+
+Licence family from `license.spdx_id` (API) **and** from the payload at a pinned SHA (`raw`), with
+the operative body compared token-for-token against this base's retained canonical MIT.
+
+| Agent | Repo | Licence @ pinned SHA | ★ | Operative body | What it is | Region basis |
+|---|---|---|---|---|---|---|
+| **Study-Mate** | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 **MIT**, 1 064 B `d8114f383632` (blob `1b105b8e1b6b`, sha256₁₆ `dc1997d8218985c9`) | **1 245** | 🟢 **IDENTICAL** (164 words, `745e05f91f85`) | Self-study companion that does the three things a tutor does and a chatbot does not: **plans a route**, teaches against it, and drives a project — with spaced repetition on the schedule. Topics declare `learning-agents`, not `chatbot`. | **APAC** — artefact language: description and README are Chinese-only |
+| **learn-from-materials** | [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 **MIT**, 1 122 B `f8849746d85c` (blob `361465fb8b78`, sha256₁₆ `15ce43afa44a3cf4`) | **1 190** | 🟢 **IDENTICAL** | Turns a PDF, book or paper into an **interactive, traceable** learning page — every generated claim keeps a pointer back to the source span, with quizzing and note-taking on top. Ships a separate `NOTICE.md` (2 287 B, blob `461167a25e0e`). | **APAC** — bilingual 中文/English artefact |
+
+🔵 **Why these two and not the rest of the slice:** both clear the licence bar on both channels,
+both are pushed within the last ten days, and both are *agent-shaped* — a route-planner and a
+source-grounded transformer, not a wrapper around a chat box. 🔴 **Neither has a test suite this
+base could find, and neither declares a model boundary** — they assume a hosted LLM. For a district
+or ministry engagement, see `T1`/`T13` on the local-first posture before proposing either.
+
+### 🔴 Excluded this pass, with the reason recorded — and this is half the slice
+
+| Repo | ★ | Read from bytes | Why it is not here |
+|---|---|---|---|
+| [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) | **739** | 🔴 **PolyForm Noncommercial 1.0.0**, 4 635 B `898b8664cb38` (blob `d0fe054b67ee`, sha256₁₆ `a1530b506c55fef1`) | **Source-available, not open source.** The API reports `NOASSERTION`. 🔵 **Independently re-read this pass**: [`trending.md`](trending.md) recorded the same 4 635-byte payload on `2026-10-14` at **385★** — it is **739★** today, **+92% in 14 days**, the steepest growth in this slice. 🔴 The fastest-moving education repository in the window is the one Globant cannot bill against |
+| [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank) | 358 | 🔴 **AGPL-3.0**, 34 523 B `135b78b0f22c` (blob `be3f7b28e564`, sha256₁₆ `0d96a4ff68ad6d4b`), 6 tokens from canonical | Copyleft. Chinese high-school question bank with LaTeX rendering, LLM parsing and formula OCR — the **assessment-item layer** this shelf still lacks, behind a network-copyleft grant |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 210 | 🔴 **AGPL-3.0**, 34 514 B `269feb00c09a` (blob `128919466b58`, sha256₁₆ `ea94d5765c590b11`), 9 tokens from canonical | Copyleft. Self-hosted language tutor with **Ollama-local** inference and CEFR plans — shelved as a *platform* in [`verticals/solutions.md`](../verticals/solutions.md) with the grant stated, never as a component to build on |
+
+🔵 **The shape of the result:** 6 rows with traction and no shelf → **3 promotable, 3 walled**.
+`p502` read the promotion gap as *"the real gap is not discovery, it is promotion"*; this pass
+measures it and the gap is **half that size**. The other half needs a licence to change, not a
+curator.
+
+### 🔵 The axis itself: recency is a confirmation instrument, not a supply
+
+| query | `total_count` | read | already in this base | novelty |
+|---|---|---|---|---|
+| `topic:education stars:>50 created:>2026-07-28` | 60 | 12 | **12** | **0%** |
+| `topic:edtech stars:>25 created:>2026-04-01` | 20 | 12 | **12** | **0%** |
+| `topic:ai-in-education stars:>50` (control, `p502`'s axis) | 3 | 3 | 3 | 0% |
+
+🔴 **Slicing by creation date instead of by topic finds nothing new** — 0 of 24 on the top-star
+slices of a 90-day and a 180-day window. 🟢 Which makes the finding above the useful one: the
+base's problem on this axis is not that it has not *read* the supply, it is that **a third of what
+it reads never reaches a shelf** (6 of 18 audited). Registered as `Gap 503-C`.

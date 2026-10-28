@@ -3,6 +3,128 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p503` — `2026-10-28` — **🟢 THIS BASE ALREADY OWNED AN INSTRUMENT FOR THE PROMOTION GAP `p502` DESCRIBED IN PROSE, AND IT HAD NOT BEEN RUN IN ~26 PASSES. `make hooks` was run this pass: **48/63 green, 15 RED**, and three of the reds name this pass's exact subject — `gate-promotion` points at two MIT addresses marked *"Promoted"* in this very file that sit on NO shelf. 🟢 The promotion gap is now MEASURED: 6 of 18 recency-slice rows never shelved, of which **3 MIT and shelvable, 3 walled by licence**. 🔴 And a bare 12-hex payload token in these files is a **sha256 prefix, not a blob SHA-1** — a false-DRIFT generator for any successor that checks with `git hash-object`.**
+
+Reads: [`gate-run.2026-10-28-p503.tsv`](../evidence/gate-run.2026-10-28-p503.tsv) +
+[`hooks-run.2026-10-28-p503.log`](../evidence/hooks-run.2026-10-28-p503.log),
+[`promotion-audit.2026-10-28-p503.tsv`](../evidence/promotion-audit.2026-10-28-p503.tsv),
+[`licence-bytes.2026-10-28-p503.tsv`](../evidence/licence-bytes.2026-10-28-p503.tsv),
+[`channel-boundary.2026-10-28-p503.tsv`](../evidence/channel-boundary.2026-10-28-p503.tsv),
+[`recency-axis.2026-10-28-p503.tsv`](../evidence/recency-axis.2026-10-28-p503.tsv),
+[`gitlab-forge.2026-10-28-p503.tsv`](../evidence/gitlab-forge.2026-10-28-p503.tsv).
+
+### 🟢 Gate posture — stated first, because for 26 passes it has been *"not run"*
+
+`Gap 446-A` has carried *"`make hooks` was not run; nothing in this pass is gate-attested"* for
+roughly 26 consecutive passes. 🟢 **It was run this pass.** It is offline, it needs no network, and
+it takes minutes:
+
+| | |
+|---|---|
+| gates | **63** |
+| 🟢 green | **48** |
+| 🔴 red | **15** |
+| exit | `2` |
+
+🔴 **RED:** `recount`, `gate-enumeration`, `gate-shelf-consistency`, `gate-register-currency`,
+`gate-fold-identity`, `gate-author-key`, `gate-census-currency`, `gate-grant-path`,
+`gate-census-union`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`,
+`gate-promotion`, `gate-promotion-ledger`, `gate-cell-reproduction`.
+
+🔵 **The finding is not the count, it is the overlap.** Three of the fifteen reds are *about the
+thing `p502` wrote prose about*:
+
+| gate | what it printed | what it means |
+|---|---|---|
+| 🔴 `gate-promotion` | `wenflow-org/wenflow` **MIT 59★** and `zhangl1001/civil-ai` **MIT 41★** — `UNPROMOTED-PERMISSIVE` | the promotion gap had a **working detector** the whole time |
+| 🔴 `gate-promotion-ledger` | `C2-RATCHET: 197` un-landed claims against a pin of **148**; `C1-UNADJUDICATED` on 15 slugs incl. `GeminiLight/SocialCoach`, `adlnet/ADL_LRS`, `SirhanMacx/Claw-ED` | promotion **claims** in these files outrun promotions that landed |
+| 🔴 `gate-register-currency` | FAIL | newest register section `p501`, expected `p502` — the **same** failure `p501` recorded against `p500`, now twice running |
+
+🔴 **This file marks two rows *"Promoted"* that were never promoted.** Its `p49x` promotion table reads
+*"`wenflow-org/wenflow` … **Promoted**"* and *"`zhangl1001/civil-ai` … **Promoted**"*. Neither
+appears in `agents/top.md`, `repos/foundations.md`, `verticals/solutions.md` or
+`compose/patterns.md`. 🔵 **Writing "Promoted" in a trending narrative is not a promotion** — and
+the gate that says so has been sitting in the `Makefile` unrun. Registered as `Gap 503-E`.
+
+🔵 **`gate-promotion` did not see this pass's three rows**, and that is its stated limit, not a
+defect: it reports `ungraded 2877 REACH-BOUND`, because it only grades trending rows that carry a
+licence cell in a shape it parses. The audit below reaches rows the gate cannot.
+
+### 🟢 The promotion gap, measured — and licence takes half of it
+
+Eighteen rows from two recency queries, joined against the four curated shelves at `HEAD`:
+
+| | n |
+|---|---|
+| audited | **18** |
+| on at least one shelf | 12 |
+| 🔴 **never shelved, with trending history** | **6** (33.3%) |
+
+Of those six, licence from **both** channels (API `spdx_id` + payload bytes at a `git ls-remote`
+SHA):
+
+| repo | ★ | read from bytes | outcome |
+|---|---|---|---|
+| [`xevrion/breakscale`](https://github.com/xevrion/breakscale) | 1 858 | 🟢 MIT, 1 080 B | 🟢 **shelved** → [`repos/foundations.md`](../repos/foundations.md) |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 1 245 | 🟢 MIT, 1 064 B | 🟢 **shelved** → [`agents/top.md`](top.md) |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | 1 190 | 🟢 MIT, 1 122 B | 🟢 **shelved** → [`agents/top.md`](top.md) |
+| [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) | **739** | 🔴 **PolyForm Noncommercial 1.0.0**, 4 635 B | 🔴 walled — source-available |
+| [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank) | 358 | 🔴 **AGPL-3.0**, 34 523 B | 🟡 platform row only → [`verticals/solutions.md`](../verticals/solutions.md) |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 210 | 🔴 **AGPL-3.0**, 34 514 B | 🟡 platform row only → [`verticals/solutions.md`](../verticals/solutions.md) |
+
+🔴 **`TrenTorch` is the fastest-growing row in the window and the least usable.** This file recorded
+it on `2026-10-14` at **385★** with the same 4 635-byte PolyForm payload; today it is **739★**
+(**+92% in 14 days**) and the API still labels it `NOASSERTION`. 🔵 Second non-OSI family found
+behind that label on these shelves, after `p500`'s Elastic-2.0 (`canyongbs/advisingapp`). **The
+label is not a licence and a growth curve is not a grant.**
+
+### 🔴 A bare 12-hex payload token in these files is a sha256 prefix
+
+Re-reading the two rows `gate-promotion` named reproduced their byte counts exactly and **not** the
+hashes printed beside them:
+
+| repo | bytes | published cell | `git hash-object` | sha256₁₆ |
+|---|---|---|---|---|
+| [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | 1 067 | `b6fac57d4710` | `2611735149f3` | 🟢 **`b6fac57d47103d5f`** |
+| [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 1 067 | `5731a2d3ccea` | `f9c5865d1ed2` | 🟢 **`5731a2d3ccea989c`** |
+
+🟢 **Both payloads are identical to what the base recorded.** 🔴 **But a successor checking a
+published cell with `git hash-object` — the tool `evidence/canonical/MANIFEST.tsv` names in its
+`git_blob_sha1` column — gets a mismatch on an unchanged file and reports DRIFT.** `MANIFEST.tsv`
+carries *both* conventions; the shelf cells carry a bare token with **no label**. 🟢 Every payload
+hash this pass publishes is labelled (`blob …` / `sha256₁₆ …`). Registered as `Gap 503-D`.
+
+### 🔵 Channel boundary — `p502`'s new channel is narrower than its row says
+
+| channel | verdict |
+|---|---|
+| GitHub REST **search** via MCP, arbitrary owner | 🟢 **WORKS** — `total_count`, stars, forks, topics, `license.spdx_id`, `created_at`, `pushed_at`, `archived` |
+| GitHub REST **contents** via MCP, owner outside session scope | 🔴 **REFUSED** — *"repository is not configured for this session"* |
+| `api.github.com` via `curl` | 🔴 403, 403, 403 |
+| `raw.githubusercontent.com` | 🟢 200, 200, 200 — still the **only** byte channel |
+| `git ls-remote` (github.com **and** gitlab.com) | 🟢 works — pinning is not GitHub-specific |
+
+🟢 The two-channel rule stands unchanged. 🔴 `agents/top.md`'s verification row has been corrected
+in place (`Gap 503-A`).
+
+### 🔵 The forge axis, re-measured, and it is a coverage obligation rather than a reservoir
+
+`gitlab.com/api/v4` answers (4 of 6 probes `200`, the rest `429`). Two search terms completed before
+the rate limiter closed the window: **40 rows read, 0 new to this base.** The most-starred education
+project GitLab returns is **53★** (`oer/emacs-reveal`) against **4 705★** for the GitHub recency
+slice's top row. 🟢 `cjaikaeo/elabsheet`'s BSD-2-Clause grant re-read from bytes (1 325 B, blob
+`26036f22cf72`, sha256₁₆ `8be92e91c1f6968d`) — **confirms** the base's record and gives it a payload
+identity it lacked. 🔴 `download.moodle.org`, `codeberg.org`, `huggingface.co` and
+`api.npmjs.org` are all **blocked** by this session's network policy (`000` ×3 each), so the LMS
+plugin registry `Gap 500-A` asked for needs a policy change, not a pass (`Gap 503-B`).
+
+🔴 **One instrument defect caught before publication:** an ad-hoc probe loop interpolated an **empty**
+`$sha` into a raw URL after `git ls-remote` timed out — `…/-/raw//LICENSE` → `404` — and very nearly
+published *"no grant at any path"* for a repository whose `LICENSE` is in its tree. 🟢 Rule: assert
+the pinned SHA is 40 hex characters **before** fetching; a `404` from a malformed URL is a claim
+about the fetcher.
+
+---
 ## 🆕 `p502` — `2026-10-28` — **🟢 A MEASUREMENT CHANNEL THIS BASE RECORDED AS CLOSED IS OPEN: the GitHub REST API answers, and it delivers stars, SPDX licence, topics, forks and the archived flag in ONE call. `Gap 394-C`'s *"`api.github.com` 403, per-repository authorisation only"* is REFUTED IN SCOPE — the refusal is on `curl`, not on the API. 🔴 And the first thing the new channel did was CONFIRM an old gap rather than close it: `Gap 396-G` HOLDS, now against three channels instead of one. 🔴 `p501`'s 65% novelty on `topic:ai-in-education` does NOT survive a star floor — above 50★ the axis holds **3 repositories and this base already had all three**. 🟢 The real gap is not discovery, it is PROMOTION: the entire xAPI/LRS record layer sits in this file's history and on **no live shelf**.**
 
 Reads: [`channel-crosscheck.2026-10-28-p502.tsv`](../evidence/channel-crosscheck.2026-10-28-p502.tsv),

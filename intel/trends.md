@@ -3,6 +3,78 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p503` — `2026-10-28` — **🆕 `T26` (the newest supply is deliberately non-commercial, and the metadata hides it) and `T27` (agentic is a sized segment now); 🟢 `T24`'s saturation reading survives a test on a different axis — date instead of vocabulary; 🔴 and this file's own gate suite was run for the first time in ~26 passes: 48/63 green.**
+
+### 🆕 `T26` — **The newest, fastest-growing education supply is deliberately non-commercial, and GitHub's metadata will not tell you**
+
+Six rows with real traction and no shelf, licence read from bytes at a pinned SHA:
+
+| licence family | rows | buildable for a paid engagement |
+|---|---|---|
+| 🟢 MIT | **3** | yes |
+| 🔴 **PolyForm Noncommercial 1.0.0** | 1 | **no** — source-available |
+| 🔴 AGPL-3.0 | 2 | only as a platform the client hosts, never as a component |
+
+🔴 **The fastest-growing row is the unusable one.** [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch)
+went **385★ → 739★ in 14 days (+92%)** on an unchanged 4 635-byte **PolyForm Noncommercial**
+payload, and the GitHub API reports its licence as **`NOASSERTION`**. 🔵 This is the **second**
+non-OSI family found behind that label on these shelves — `p500` found Elastic License 2.0 on
+`canyongbs/advisingapp` (340★) the same way.
+
+🟢 **Why this is a trend and not a licence note:** the cohort is young (all six created inside
+180 days) and the non-commercial choice is *deliberate and explicit* — PolyForm and AGPL are not
+accidents of a template. Authors shipping education AI in 2026 are increasingly choosing grants
+that **block the consultancy use case specifically** while remaining open to individuals. 🔴 The
+practical consequence: **licence must be read before architecture**, and from bytes — a star count
+is a popularity signal and `NOASSERTION` is not a licence.
+
+### 🆕 `T27` — **"Agentic" stopped being a narrative and became a sized segment**
+
+| | 2026 | horizon | CAGR |
+|---|---|---|---|
+| 🆕 Agentic AI in education + learning technologies (Mordor Intelligence) | **$2.37B** | $11.83B (2031) | **37.92%** |
+| AI in education, whole market (Precedence / Grand View) | $9.58–11.4B | $136.79B (2035) | 25–43% |
+
+🟢 **Agentic is about a fifth to a quarter of 2026 AI-in-education spend and compounds faster than
+the category.** 🔵 Mordor adds the structural claim this base's `T6`/`T13` already imply from the
+supply side: **tutoring is the gateway purchase that seeds platform penetration.** 🔴 One firm, one
+methodology, no cross-check — a proposal may cite it, a shelf may not treat it as measured.
+
+### 🟢 `T24`'s saturation reading survives a test on a different axis
+
+`T24`/`Gap 498-A` hold that this base has largely read the education-AI supply; `p501` briefly
+refuted it at 65% novelty and `p502` showed that figure was an artefact of the axis
+(`topic:ai-in-education`). 🔵 The remaining doubt was that **every** such measurement is an axis
+artefact. 🟢 **Tested by slicing on date instead of vocabulary:** `created:>2026-07-28` with
+`stars:>50` (60 rows) and `created:>2026-04-01` with `stars:>25` (20 rows) → **0 of 24 read rows
+new to this base.** 🟢 `T24` stands on two independent slicing dimensions. 🔴 And the corollary is
+`T28`-shaped but not yet a trend: what the base fails at is **promotion**, not reading — 6 of 18
+audited rows have never reached a shelf.
+
+### 🔴 The gate suite was run, and it already knew
+
+`Gap 446-A` has recorded *"`make hooks` was not run"* for ~26 passes. 🟢 Run this pass:
+**48/63 green, 15 red**. 🔴 `gate-promotion` — a gate that has existed in the `Makefile` the whole
+time — prints exactly the class of defect `p502` wrote prose about:
+`wenflow-org/wenflow` (MIT, 59★) and `zhangl1001/civil-ai` (MIT, 41★), both marked **"Promoted"**
+in a promotion table in [`agents/trending.md`](../agents/trending.md) and present on **no** curated shelf.
+🔵 **The lesson is about instruments, not about these two rows:** this base builds gates faster than
+it runs them, and an unrun gate is indistinguishable from a missing one. Full log:
+[`hooks-run.2026-10-28-p503.log`](../evidence/hooks-run.2026-10-28-p503.log).
+
+### Declared gaps
+
+| id | statement |
+|---|---|
+| 🆕 **`Gap 503-A`** | **`p502`'s channel row is too wide.** The GitHub REST API answers *search* for arbitrary repositories and **refuses *contents*** outside the session's attached repos. Licence bytes still come from `raw.githubusercontent.com` at a `git ls-remote` SHA — the two-channel rule is unchanged and the verification table in `agents/top.md` has been corrected in place |
+| 🆕 **`Gap 503-B`** | **Four registry channels are blocked by network policy** — `download.moodle.org`, `codeberg.org`, `huggingface.co`, `api.npmjs.org` (`000` ×3 each). So `Gap 500-A`'s *"LMS plugin registries"* axis and any demand-side (download-count) ranking are **unreachable from this session**, not unmined. Same class as `Gap 499-C`'s `gnu.org`: needs a policy change, not a pass |
+| 🆕 **`Gap 503-C`** | **A third of what this base reads never reaches a shelf** — 6 of 18 audited rows, measured. 🔴 Three were promotable and are now promoted; three are licence-walled. Open: the audit covered one 90-day slice. **What is the shelf rate over the whole trending history?** `gate-promotion` cannot answer it — it reports `2877` rows ungraded by its own reach bound |
+| 🆕 **`Gap 503-D`** | **A bare 12-hex payload token on these shelves is a sha256 prefix, not a git blob SHA-1.** `MANIFEST.tsv` carries both columns; shelf cells carry one unlabelled token. Fixtures: `wenflow-org/wenflow` 1 067 B → blob `2611735149f3`, sha256₁₆ `b6fac57d47103d5f` (published cell: `b6fac57d4710`). 🔴 A successor verifying with `git hash-object` reports **DRIFT on an unchanged payload**. Every p503 hash is labelled; the back history is not |
+| 🆕 **`Gap 503-E`** | **Writing "Promoted" in a trending narrative is not a promotion.** `agents/trending.md:6517-6518` marks two MIT rows promoted; no shelf carries them. `gate-promotion-ledger`'s ratchet has risen to **197 un-landed claims against a pin of 148** |
+| 🆕 **`Gap 503-F`** | **`OpenEduCat`'s interoperability claims (LTI 1.3, OneRoster, Ed-Fi, SCORM/xAPI) are vendor-sourced and unverified**, and its published pricing is internally inconsistent across its own pages. This base holds an LTI corpus to compare against and has not read the module |
+| 🟡 carried | 🔴 **`Gap 446-A` is answered, not closed.** The suite ran: **15 gates are red**, including `recount`, `gate-shelf-consistency`, `gate-grant-path`, `gate-census-union` and `gate-cell-reproduction` (*"zero published cells parsed — a parse fault"*). A green suite is a separate project from a run suite |
+
+---
 ## 🆕 `p501` — `2026-10-28` — **🆕 `T22` and `T23`; 🟢 `T15` extended with the two jurisdictions it named as missing; 🔴 and one measurement this file published as a sector property is re-read as a property of a search axis.**
 
 ### 🔴 `p499`'s saturation reading was about an axis, not the sector

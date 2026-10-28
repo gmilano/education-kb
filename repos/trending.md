@@ -3,6 +3,85 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p503` — `2026-10-28` — **🔴 SLICING SUPPLY BY CREATION DATE INSTEAD OF BY TOPIC FINDS NOTHING NEW — 0 of 24 novel across a 90-day and a 180-day window — so the saturation `p502` measured on topics is a property of the SECTOR'S GITHUB SUPPLY, not of a search axis. 🟢 The reachable non-GitHub forge is re-measured and its ceiling published: the most-starred education project on gitlab.com is 53★ against 4 705★ on GitHub. 🔴 Four registry channels are BLOCKED by network policy, so `Gap 500-A`'s LMS-plugin-registry axis is an informed gap, not an unmined one.**
+
+Reads: [`recency-axis.2026-10-28-p503.tsv`](../evidence/recency-axis.2026-10-28-p503.tsv),
+[`gitlab-forge.2026-10-28-p503.tsv`](../evidence/gitlab-forge.2026-10-28-p503.tsv),
+[`channel-boundary.2026-10-28-p503.tsv`](../evidence/channel-boundary.2026-10-28-p503.tsv),
+[`promotion-audit.2026-10-28-p503.tsv`](../evidence/promotion-audit.2026-10-28-p503.tsv).
+Narrative on the gate run and the promotion result: [`agents/trending.md`](../agents/trending.md) `p503`.
+
+### 🔴 The recency axis: a new question, the same answer
+
+Every census on this base so far has sliced supply by **topic** — `topic:edtech` (`p499`, `p500`),
+`topic:ai-in-education` (`p501`, `p502`) — and each found the axis exhausted. A **time** slice asks
+something different: *is the newest supply new to this base?*
+
+| query | `total_count` | rows read | already in this base | novelty |
+|---|---|---|---|---|
+| `topic:education stars:>50 created:>2026-07-28` (90 d) | **60** | 12 | **12** | 🔴 **0%** |
+| `topic:edtech stars:>25 created:>2026-04-01` (180 d) | **20** | 12 | **12** | 🔴 **0%** |
+| `topic:ai-in-education stars:>50` (`p502` control) | 3 | 3 | 3 | 0% |
+
+🔵 **This is the useful negative.** `p501` read a 65% novelty figure on a topic axis and `p502`
+refuted it as an axis artefact; the obvious next doubt was that *all* these measurements are axis
+artefacts. 🟢 They are not: a window defined by **date** rather than vocabulary returns the same
+verdict. The newest high-star education supply on GitHub is **read**. 🔴 What is **not** done with
+it is promotion — 6 of the 18 rows audited have never reached a shelf, and three of those are MIT.
+
+🔵 **Novel rows the slice did surface, below this base's shelf floor and recorded here rather than
+promoted:** [`s010s/prehistoric-animal-museum`](https://github.com/s010s/prehistoric-animal-museum)
+(1 176★, bilingual 3-D museum for young children),
+[`xr843/insect-world`](https://github.com/xr843/insect-world) (798★, procedurally generated 3-D
+field guide, no model files in the repo),
+[`agharsallah/esp-labs-web`](https://github.com/agharsallah/esp-labs-web) (551★, ESP32-S3 bench
+lessons with simulators, **11 languages**) and
+[`tonyzedginidze/librecalculator`](https://github.com/tonyzedginidze/librecalculator) (325★). 🔴 All
+four are **learning content, not education AI** — none carries an agent, a model boundary or an
+assessment layer, and none was licence-read this pass. They are listed so the next pass does not
+re-discover them as finds.
+
+### 🔵 The forge ceiling, published as a number
+
+`Gap 502-E` named non-GitHub forges as this base's likeliest blind spot. `gitlab.com/api/v4` answers
+(**4 of 6 probes `200`**, the rest `429` — retry with backoff), and two search terms completed
+before the rate limiter closed the window:
+
+| term | rows | top row | ★ | new to this base |
+|---|---|---|---|---|
+| `education` | 20 | [`oer/emacs-reveal`](https://gitlab.com/oer/emacs-reveal) | **53** | 🔴 no — carried with `LICENSE` 517 B, `br=main` |
+| `e-learning` | 20 | [`cjaikaeo/elabsheet`](https://gitlab.com/cjaikaeo/elabsheet) | 14 | 🔴 no — carried as BSD-2-Clause |
+
+🔴 **0 of 40 rows new.** 🔵 And the ceiling is the finding: **53★ is the top of GitLab's education
+vocabulary**, two orders of magnitude below the GitHub slice above. 🟢 **Shelf rule:** the forge is
+a *coverage obligation* — it holds EMEA-origin OER machinery (`oer/emacs-reveal`, Münster; `Openki`,
+CH) and APAC-origin assessment machinery (`elabsheet`, Kasetsart University, TH) that GitHub's
+vocabulary does not surface — and it is **not** a supply reservoir. Budget it as one query, not a
+sweep.
+
+🟢 **`elabsheet` gains a payload identity it did not have:** `LICENSE` at `d69a76af0a93`,
+**1 325 B**, blob `26036f22cf72`, sha256₁₆ `8be92e91c1f6968d`, opening
+*"Copyright (c) 2013, Chaiporn Jaikaeo and Jittat Fakcharoenphol / All rights reserved."* —
+**BSD-2-Clause**, confirming the earlier record from bytes.
+
+🔴 **`license=true` on the GitLab projects endpoint returned `license: null` on every row**, so the
+forge gives no licence channel at list level; each row costs a second call or a raw read. Recorded
+so no successor plans a licensed forge census it cannot run.
+
+### 🔴 What is blocked, stated as an absence rather than left silent
+
+| channel | 3 probes | consequence |
+|---|---|---|
+| `download.moodle.org/api/1.3/pluginlist.php` | `000 000 000` | 🔴 the **LMS plugin registry** axis `Gap 500-A` asked for cannot be read from this session |
+| `codeberg.org/api/v1/repos/search` | `000 000 000` | 🔴 second forge unreachable |
+| `huggingface.co/api/models` | `000 000 000` | 🔴 no model/dataset-hub axis |
+| `api.npmjs.org/downloads/point/...` | `000 000 000` | 🔴 **no demand-side signal** — weekly downloads, the one measure that would rank the LTI/xAPI libraries on these shelves by actual use, is unobtainable |
+| `registry.npmjs.org/-/v1/search` | `200 200 200` | 🟢 package *metadata* only |
+
+🟢 `Gap 503-B` records this as a **network-policy** item, in the same class as `Gap 499-C`'s
+`gnu.org`: no number of future passes changes it.
+
+---
 ## 🆕 `p502` — `2026-10-28` — **🟢 THE REPOSITORY CENSUS CAN NOW BE RUN AS A CENSUS. The GitHub REST API answers through this session's MCP channel, returning `total_count`, stars, SPDX licence, topics, forks and `archived` for up to 100 rows per call — so "how big is this axis" became a measurable question instead of an estimated one. 🔴 The first census says the axis this base has been mining is EMPTY above 50★: `topic:ai-in-education` holds **3 repositories**, not the 128 the HTML page implied, and this base already carried all 3. 🟢 The xAPI/LRS record layer — 31 addresses, 0 on a live shelf — is promoted.**
 
 Reads: [`channel-crosscheck.2026-10-28-p502.tsv`](../evidence/channel-crosscheck.2026-10-28-p502.tsv),

@@ -1,0 +1,24 @@
+# p503 2026-10-28 — promotion audit of the recency axis.
+# Method: rows returned by two GitHub REST search queries (see recency-axis.2026-10-28-p503.tsv)
+# joined against this KB's four curated shelves at HEAD 6511adc and against the two trending files.
+# shelf_* = count of literal "owner/name" matches in that file. 0 across all four = never shelved.
+repo	stars	shelf_agents_top	shelf_repos_foundations	shelf_verticals_solutions	shelf_compose_patterns	trending_mentions	shelved
+xiaoyang111222/cn-math-taxonomy	4705	1	1	0	0	14	YES
+xevrion/breakscale	1858	0	0	0	0	1	NO
+Miaotofu01/Study-Mate	1245	0	0	0	0	47	NO
+dmoshehun-prog/learn-from-materials	1190	0	0	0	0	8	NO
+DozenTwelve/Papermorph	987	1	1	0	0	14	YES
+TrenTorch/TrenTorch	739	0	0	0	0	3	NO
+assafkip/claudemy	496	1	0	0	0	18	YES
+sitor-ai/frametell	429	1	0	0	0	19	YES
+JudgePeach/math-question-bank	358	0	0	0	0	3	NO
+artcc/freelingo	210	0	0	0	0	33	NO
+shigella520/MindTrain	128	1	0	0	1	4	YES
+Zenglian990/AI_Tutor_Release	74	1	0	0	1	28	YES
+pacewisdomhq/TutorLoom	52	0	1	1	0	5	YES
+virgiliojr94/book-to-skill	36378	1	1	0	1	19	YES
+beltromatti/get-it	1138	2	1	0	1	13	YES
+GeminiLight/SocialCoach	440	2	0	0	1	3	YES
+learning-commons-org/evaluators	87	1	1	1	3	13	YES
+learning-commons-org/knowledge-graph	164	0	2	0	0	13	YES
+# totals: 18 rows audited, 6 never shelved (33.3%), all 6 carry trending history.

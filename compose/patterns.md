@@ -1406,3 +1406,104 @@ separate process, standards-defined wire protocol.
 - 🔵 It assumes the institution *wants* the record. Where `T1`'s delivery gap is really a
   procurement-will gap, the dashboard in component 5 is the part that sells it, and that is the
   **most stale component in the stack**.
+
+## 🆕 `p503` — `2026-10-28` — one pattern: the study companion that survives a licence audit, assembled only from rows read from bytes this pass
+
+## 🆕 `P503-1` — **Source-grounded study companion for a paid engagement, with the non-commercial half of the supply designed out** 🟢
+
+🔵 **The problem this solves is procurement, not pedagogy.** The obvious 2026 build — take the
+fastest-growing education repositories and wire them together — produces an estate that **cannot be
+billed**: of the six highest-traction unshelved rows this pass read from bytes, **three are
+PolyForm Noncommercial or AGPL-3.0** (`T26`). This recipe is the same product assembled from the
+three that are MIT, with the exclusions named so a reviewer can check the reasoning rather than
+trust it.
+
+| # | Component | Repo | Licence (bytes at pinned SHA) | ★ | Role |
+|---|---|---|---|---|---|
+| 1 | **Material ingestion** | [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 **MIT** 1 122 B `f8849746d85c` (blob `361465fb8b78`) | 1 190 | PDF / book / paper → an interactive page where **every generated claim keeps a pointer to its source span**. This is the provenance leg |
+| 2 | **Route planning** | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 **MIT** 1 064 B `d8114f383632` (blob `1b105b8e1b6b`) | 1 245 | Decides *what next*: a sequenced route, taught against, with a project at the end. Topics declare `learning-agents` |
+| 3 | **Scheduler** | [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) | 🟢 **MIT** 1 067 B `7115c484c77e` *(carried, `p500`)* | 128 | **Pluggable schedulers** — swap FSRS for the client's own policy without touching the agent. Keeps the review policy out of the prompt |
+| 4 | **Output QA** | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 **code MIT** 1 615 B `b9d47891c1b8` (blob `86eebd7ebc43`) 🔴 **corpora CC BY-NC-SA 4.0 — excluded** | 87 | Scores generated items against rubric families (Text Complexity, Feedback, Standards Alignment, Durable Skills). **Code only** |
+| 5 | **Record layer** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** 11 356 B `58853eb8199b` *(carried, `p502`)* | 144 | One xAPI Statement per **human** decision, per `P502-1`. The audit trail NA districts and EU Annex III both require |
+| 6 | **Practice surface** *(optional, engineering curricula)* | [`xevrion/breakscale`](https://github.com/xevrion/breakscale) | 🟢 **MIT** 1 080 B `c58de512f3ae` (blob `0c920ce1638e`) | 1 858 | The simulate-then-explain loop: the learner breaks a system and the simulator explains why. Subject-bound (distributed systems) but the loop is the reusable part |
+
+### How they wire together
+
+```
+   client's own materials (PDFs, textbooks, standards documents)
+        │
+        ▼
+ (1) learn-from-materials ── extracts spans ──►  page + item candidates
+        │                                              │
+        │                                              ▼
+        │                                      (4) evaluators (MIT code,
+        │                                          YOUR rubrics — see below)
+        │                                              │ score < threshold → regenerate
+        ▼                                              ▼ pass
+ (2) Study-Mate  ── route: what next, and why ──►  learner session
+        │                                              │
+        ▼                                              │ (6) breakscale for lab work
+ (3) MindTrain scheduler ◄── review outcomes ──────────┘
+        │
+        └── teacher/tutor approves, edits or rejects ──► (5) lrsql
+                                                          actor = the human
+                                                          verb  = approved | edited | rejected
+                                                          object = artefact + source span IDs
+```
+
+🔵 **The join that makes this more than four repos in a `docker-compose`:** component 1 emits
+**source-span IDs**, and those IDs travel into the xAPI Statement in component 5. The result is an
+audit trail that answers *"on what basis did the system say this?"* with a pointer into the client's
+own material — not *"the model said so"*. 🔴 Neither repository does this out of the box; it is the
+integration work, and it is roughly **two of the engagement's weeks**.
+
+### 🔴 Designed out, with the reason recorded
+
+| Excluded | Why |
+|---|---|
+| [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) (**739★**, +92% in 14 days) | 🔴 **PolyForm Noncommercial 1.0.0** read from bytes (4 635 B). Source-available, **not** open source. The API says `NOASSERTION`, which is why it keeps reappearing on candidate lists |
+| [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank) (358★) | 🔴 **AGPL-3.0** (34 523 B). It is the only **OCR-capable item bank** on these shelves and it cannot be a component. 🟡 Viable only if the client hosts it themselves as a separate service and accepts §13 |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) (210★) | 🔴 **AGPL-3.0** (34 514 B). A whole platform rather than a component; use as a reference for the Ollama-local posture, not as code |
+| **The Learning Commons corpora** — annotated CLEAR and PERSUADE 2.0 | 🔴 **CC BY-NC-SA 4.0 — non-commercial.** The MIT code is in; the shipped corpora are out. 🟢 **The substitution is the client's own rubrics**, which is better pedagogy anyway and avoids a US-anchored reading-level corpus in a non-US deployment |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) datasets | 🟡 **Code MIT; data licensed per dataset** — Open / Open + Gated / Gated. *"Attribution travels with the data, not with Learning Commons."* Usable, but every dataset is its own procurement question |
+
+### Shape of the engagement
+
+| phase | weeks | what lands |
+|---|---|---|
+| 1 — licence + materials audit | **1** | Every component's grant read **from bytes at a pinned SHA** (not from a badge), plus the client's own content rights. 🔵 This is the week that prevents the rebuild |
+| 2 — ingestion + provenance | 2–3 | Component 1 against real client material; span IDs stable and addressable |
+| 3 — rubrics + QA loop | 2 | Component 4 with the **client's** rubrics; regeneration threshold tuned with teachers in the room |
+| 4 — route + scheduler | 2 | Components 2 and 3; scheduler policy declared as configuration, not prompt text |
+| 5 — record layer + review surface | 2 | Component 5 per `P502-1`: actor = the human, one Statement per decision |
+| 6 — pilot | 2 | One cohort, teacher-in-the-loop, with the conformance/evidence artefact produced |
+| **total** | **11–12** | |
+
+### Licence posture
+
+🟢 **MIT + Apache-2.0 on the entire critical path**, with one named exclusion (the NC corpora) that
+is enforced by *not shipping them*, not by a policy document. 🔵 Nothing here forks an LMS, so
+Moodle (GPL-3.0), Canvas or Open edX (AGPL-3.0) can sit alongside it without infecting the
+deliverable — integrate over LTI/xAPI exactly as `P502-1` does.
+🔴 **Three of the six components are young** (created within 180 days, single-maintainer). Budget
+fork-and-own for components 1, 2 and 6 from day one, as `P502-1` budgets it for `learnmcp-xapi` and
+`warren`. MIT permits it; the proposal should say it out loud.
+
+### Regional fit
+
+| region | fit | note |
+|---|---|---|
+| **APAC** | 🟢 **strongest supply fit** | Components 1 and 2 are Chinese-language artefacts with bilingual material in component 1. 🔴 Localisation of component 2's UI is real work, not a config flag |
+| **North America** | 🟢 strong | Component 5 is what a district points at when its 2026 AI policy asks how AI use is supervised (Ohio's 1 July 2026 mandate; Oklahoma S.B. 1734's human-decision requirement) |
+| **EMEA** | 🟢 strong | The span-ID provenance join is a direct input to Annex III human-oversight and transparency documentation ahead of the **2 December 2027** obligations |
+| **LATAM** | 🟡 viable, build-heavy | 🔴 **No LATAM-origin component exists on these shelves**, and HolonIQ's 2026 reading says the buyer is the teacher's workflow — so weight phase 3 (rubrics, teacher-facing QA) and localise components 1–2 to pt-BR/es |
+
+### 🔴 What this pattern does **not** do
+
+- It does not supply an **item bank**. The only OCR-capable one found is AGPL-3.0, and that is a
+  measured absence on the permissive shelf, not an oversight.
+- It does not make the companion correct — component 4 scores against rubrics, and rubrics encode
+  the client's judgement, not truth.
+- 🔴 It assumes a hosted LLM. **None of components 1, 2 or 3 declares a model boundary**, so a
+  data-residency clause forces a local-inference adaptation (the `freelingo` posture) that this
+  recipe does not include and that is not a week's work.

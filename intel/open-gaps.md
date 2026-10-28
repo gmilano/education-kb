@@ -3,6 +3,75 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p503` — **🔴 `Gap 473-F`'s CURRENCY CONTRACT FAILED A SECOND CONSECUTIVE TIME: newest section was `p501`, expected `p502` — and this time the failure was not inferred from reading, it was PRINTED BY A GATE. 🟢 `make hooks` was RUN, for the first time in ~26 passes: 48/63 green, 15 RED, and three of the reds name the promotion problem `p502` described in prose. 🟢 `p502`'s five gaps are mirrored here. 🟢 THREE GAPS CLOSED WITH CONTENT (`502-D`, `502-E`, and `446-A` answered-not-closed), ONE NARROWED (`464-E`, second sighting, still unbinding). 🔴 SIX REGISTERED.**
+
+Instruments: [`gate-run.2026-10-28-p503.tsv`](../evidence/gate-run.2026-10-28-p503.tsv) +
+[`hooks-run.2026-10-28-p503.log`](../evidence/hooks-run.2026-10-28-p503.log),
+[`promotion-audit.2026-10-28-p503.tsv`](../evidence/promotion-audit.2026-10-28-p503.tsv),
+[`licence-bytes.2026-10-28-p503.tsv`](../evidence/licence-bytes.2026-10-28-p503.tsv),
+[`channel-boundary.2026-10-28-p503.tsv`](../evidence/channel-boundary.2026-10-28-p503.tsv),
+[`recency-axis.2026-10-28-p503.tsv`](../evidence/recency-axis.2026-10-28-p503.tsv),
+[`gitlab-forge.2026-10-28-p503.tsv`](../evidence/gitlab-forge.2026-10-28-p503.tsv).
+
+🔵 **`gate-register-currency` — measured and FAILED, by the base's own gate.** `p501` recorded this
+same failure against `p500` by reading; this pass has the gate's own output. 🔴 **Measured: `p501`.
+Expected: `p502`.** `p502` numbered `Gap 502-A` … `Gap 502-E` properly across the trending shelves
+and did not mirror them here. 🟢 All five are entered below. 🔵 **Two passes in a row is a pattern,
+not a slip:** the contract needs the mirror step to be part of writing a pass, not a separate duty
+at the end of one.
+
+🟢 **Gate posture, stated first — and this time it is not an apology.** `make hooks` **was run**:
+**48/63 green, 15 red, exit 2**. 🔵 It is offline, needs no network, and the cost is minutes.
+🔴 The red list: `recount`, `gate-enumeration`, `gate-shelf-consistency`, `gate-register-currency`,
+`gate-fold-identity`, `gate-author-key`, `gate-census-currency`, `gate-grant-path`,
+`gate-census-union`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`,
+`gate-promotion`, `gate-promotion-ledger`, `gate-cell-reproduction`.
+
+### 🟢 `p502`'s gaps, mirrored (the step the contract requires)
+
+| gap | statement, as `p502` wrote it |
+|---|---|
+| **`Gap 502-A`** | **This base's own verification table instructs successors not to use a channel that works.** `agents/top.md` carried *"`api.github.com` — 403, per-repository authorisation only"*; the refusal is on `curl`, not on the API, which answers through the MCP channel. 🔴 **Amended this pass** — see `Gap 503-A`: it answers *search*, not *contents* |
+| **`Gap 502-B`** | **`pushed_at` is branch-agnostic and no gate here knows it.** Two fixtures, **708 d** and **154 d** of overstatement. A successor reaching for the API's convenient date field will publish dead repositories as live. Date with git |
+| **`Gap 502-C`** | **Graded ≠ shelved.** `Gap 467-I` closed by grading nine rows and moved nothing onto a shelf for ~35 passes. 🟢 **Materially narrowed this pass** — the base's own `gate-promotion` and `gate-promotion-ledger` *measure* this, and both are red; see `Gap 503-C`/`503-E` |
+| **`Gap 502-D`** | **`NOASSERTION` is three states wearing one label** — no licence, custom licence, unrecognised licence. 🟢 **CLOSED this pass**, below |
+| **`Gap 502-E`** | **`T24`'s two absences were measured on one channel.** "No APAC or LATAM LRS" means the xAPI vocabulary over the GitHub REST API returned none. 🔵 Likeliest blind spots: non-English naming and **non-GitHub forges**. 🟢 **Half-closed this pass**, below |
+
+### 🟢 Closed with content
+
+| gap | how it closed |
+|---|---|
+| 🟢 **`Gap 502-D`** | **CLOSED.** Both payloads read from bytes at the commits the shelves already cite: [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) `LICENSE.md` **5 789 B**, blob `6320adcd726e`, sha256₁₆ `d849ffef4f9816cb` @ `a7547180c47d`; [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) `LICENSE.md` **1 615 B**, blob `86eebd7ebc43`, sha256₁₆ `86c7be78af8ba536` @ `b9d47891c1b8`. 🔵 **Both are `NOASSERTION` for the same reason and it is the third of the three states: a recognised-licence-shaped file that is not one licence.** `evaluators` = **MIT code + CC BY 4.0 prompts + CC BY-NC-SA 4.0 corpora**; `knowledge-graph` = **MIT code + per-dataset data terms** across Open / Open + Gated / **Gated (not open at all)**. 🔴 The gap text in [`repos/foundations.md`](../repos/foundations.md) read *"neither payload was byte-read this pass"* while the rows above it already carried the byte counts — **the register entry was stale against its own shelf**, which is this file's recurring failure mode in miniature |
+| 🟢 **`Gap 502-E`** (forge half) | **CLOSED as a blind spot; the remaining half is a ceiling, not a gap.** `gitlab.com/api/v4` answers (4/6 probes `200`, rest `429`). Two terms completed, **40 rows read, 0 new to this base** — the forge was already mined. 🔵 **Its ceiling is published now:** the most-starred education project GitLab returns is **53★** (`oer/emacs-reveal`) against **4 705★** for the GitHub recency slice's top row. 🟢 `cjaikaeo/elabsheet`'s BSD-2-Clause grant re-read from bytes (**1 325 B**, blob `26036f22cf72`, sha256₁₆ `8be92e91c1f6968d`) — confirms the record and gives it a payload identity. 🔴 The **non-English-naming** half of `502-E` is untouched |
+| 🟢 **`Gap 446-A`** | **ANSWERED, not closed.** The suite ran: **48/63 green**. 🔴 Fifteen gates are red, so "gate-attested" is still not available as a claim — but the reason has changed from *"nobody ran it"* to *"these fifteen are failing"*, which is an actionable list rather than an absence. 🔵 `gate-cell-reproduction` prints *"zero published cells parsed — a parse fault, not a clean shelf"*: a gate that cannot parse the shelves it grades would read **green** if its failure mode were different, so the red is the safe outcome |
+
+### 🟡 Narrowed
+
+| gap | how far |
+|---|---|
+| 🟡 **`Gap 464-E`** | **A SECOND, INDEPENDENT SIGHTING — and it does not make the instrument binding.** A Spanish-language query returned the **Estado de México** reform of **artículo 61** of its *Ley de Educación*, **April 2026**, promoting gradual AI use in upper-secondary and higher education. 🔴 The source is a consultancy blog, not the **Gaceta del Gobierno**, and publication is precisely the step the gap names. 🟢 Corroborates date and article number; **HOLDS**. What closes it: one gazette citation |
+| 🟡 **`Gap 488-Q`** | **SURVIVES A THIRD PASS.** The APAC query returned one more candidate rate — Singapore generative-AI user share **64.3%** — 🔴 **rejected**: it is population-level genAI usage presented in an education context, from a tracker that names no primary instrument. The only credible cross-country teacher figure is still OECD TALIS 2024's *"about one in three"*, global and pre-2026 |
+
+### 🆕 Registered this pass
+
+| id | statement |
+|---|---|
+| 🆕 **`Gap 503-A`** | **`Gap 502-A`'s remedy over-corrected.** The GitHub REST API answers **search** for arbitrary repositories and **refuses contents** outside the session's attached repos (*"repository is not configured for this session"*). 🟢 Licence bytes still come from `raw.githubusercontent.com` at a `git ls-remote` SHA; the two-channel rule is unchanged. `agents/top.md`'s table is corrected in place |
+| 🆕 **`Gap 503-B`** | **Four registry channels are blocked by network policy** — `download.moodle.org` (the LMS plugin registry `Gap 500-A` asked for), `codeberg.org`, `huggingface.co`, `api.npmjs.org` (`000` ×3 each; `registry.npmjs.org` and `gitlab.com` answer). 🔴 So the registry axis and any **demand-side** ranking (download counts) are unreachable **from this session**, not unmined. Same class as `Gap 499-C`'s `gnu.org`: a policy change, not a pass |
+| 🆕 **`Gap 503-C`** | **A third of what this base reads never reaches a shelf** — **6 of 18** audited rows on a 90-day slice; 3 promotable (promoted this pass), 3 licence-walled. 🔴 Open: the **whole-history** shelf rate is unmeasured. `gate-promotion` cannot supply it — it reports **2 877 rows ungraded** by its own reach bound, which is why it saw neither of this pass's two agent promotions |
+| 🆕 **`Gap 503-D`** | **A bare 12-hex payload token on these shelves is a `sha256` prefix, not a `git` blob SHA-1.** `MANIFEST.tsv` carries both columns; shelf cells carry one **unlabelled** token. Fixtures: `wenflow-org/wenflow` 1 067 B → blob `2611735149f3`, sha256₁₆ `b6fac57d47103d5f` (cell reads `b6fac57d4710`); `zhangl1001/civil-ai` 1 067 B → blob `f9c5865d1ed2`, sha256₁₆ `5731a2d3ccea989c` (cell reads `5731a2d3ccea`). 🔴 **A successor verifying with `git hash-object` reports DRIFT on an unchanged payload.** p503 labels every hash it publishes; the back history is unlabelled and nothing re-labels it |
+| 🆕 **`Gap 503-E`** | **"Promoted" written in a trending narrative is not a promotion.** A promotion table in [`agents/trending.md`](../agents/trending.md) marks `wenflow-org/wenflow` (MIT, 59★) and `zhangl1001/civil-ai` (MIT, 41★) **Promoted**; no curated shelf carries either, and `gate-promotion` prints both as `UNPROMOTED-PERMISSIVE`. `gate-promotion-ledger`'s ratchet stands at **197** un-landed claims against a pin of **148**, with `C1-UNADJUDICATED` on 15 slugs including `GeminiLight/SocialCoach`, `adlnet/ADL_LRS` and `SirhanMacx/Claw-ED` |
+| 🆕 **`Gap 503-F`** | **`OpenEduCat`'s interoperability claims are vendor-sourced and unread.** LTI 1.3, OneRoster, Ed-Fi, SCORM/xAPI and Shibboleth are asserted on `openeducat.org` and verified against no repository artefact; its published pricing is internally inconsistent across its own pages (*Free + $69–$1 119/yr* vs *Enterprise from $19 per staff user*). 🔵 This base holds an LTI corpus to compare against |
+
+### 🔴 Corrections this pass makes
+
+| what | correction |
+|---|---|
+| 🔴 **This pass's own ad-hoc probe loop** | **Produced a FALSE ABSENCE and nearly published it.** An empty `$sha` — from a `git ls-remote` that timed out — was interpolated into `https://gitlab.com/cjaikaeo/elabsheet/-/raw//LICENSE`, which `404`s, for a repository whose `LICENSE` is in its tree (**1 325 B, BSD-2-Clause**). 🟢 The scripted probe guards this; the ad-hoc loop did not. **Rule: assert the pinned SHA is 40 hex characters before fetching.** A `404` from a malformed URL is a claim about the fetcher, exactly as `Gap 501-D`'s *"source unreachable"* was |
+| 🔴 **`repos/foundations.md`'s `Gap 502-D` entry** | Said *"Neither payload was byte-read this pass"* while the shelf rows **above it in the same file** carried both byte counts. 🟢 Corrected by closure above |
+| 🔴 **A published saturation inference** | *"The supply is largely read"* has been established on **topic** axes only. 🟢 Re-tested on a **date** axis this pass (`created:>`, two windows, 24 top-star rows) → **0% novelty**, so the reading now rests on two independent slicing dimensions rather than one |
+
+---
 ## 🆕 `p501` — **🔴 `Gap 473-F`'s CURRENCY CONTRACT FAILED AGAIN, BY ONE PASS: newest section was `p499`, expected `p500` — `p500` wrote nine shelves and not this register, which is the exact behaviour `Gap 498-K` was ratified to prevent. 🟢 `p500`'s six gaps are given their register entries here. 🟢 THREE GAPS CLOSED WITH CONTENT (`499-B`, `499-D`, `500-A`), ONE NARROWED WITH NAMED INSTRUMENTS (`488-O`/`T15` for Kenya, Nigeria and Rwanda), ONE SURVIVING A SECOND DEDICATED QUERY (`488-Q`). 🔴 ONE OF THIS FILE'S OWN PROBES PROVEN TO PRODUCE FALSE NEGATIVES ON A LIVE PLATFORM ROW, 🔴 TWO DEFECTS IN THIS PASS'S OWN INSTRUMENT CAUGHT BEFORE ITS RESULTS WERE USED, 🔴 ONE PUBLISHED SATURATION FIGURE RE-READ AS A PROPERTY OF A SEARCH AXIS, and TEN REGISTERED.**
 
 🔵 **`gate-register-currency` — measured and FAILED.** `Gap 473-F`: the register's newest section

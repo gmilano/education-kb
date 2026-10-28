@@ -1,0 +1,952 @@
+── lib/license_family.sh  (the shared classifier, P237)
+   PASS
+── lib/licence_path.sh    (the shared path predicate, P441)
+   PASS
+── p222-ecosystem-bound-grammar  (five grammars, the bound)
+   PASS
+── p228-shelf-gate        (the five non-grant subjects, 30 tests)
+   PASS
+── p229-grant-ladder-reach (reach, foreign manifest, withdrawn cells, query key)
+   PASS
+── p230-prose-path-ladder (greedy slug, prose paths, the lazy-quantifier lint)
+   PASS
+── p233-maven-channel   (the response classifier: a 404 is not an absence)
+   PASS
+── p237-grant-payload-shapes (BOM + holderless + year-less grants, 9 controls)
+   PASS
+── p235-carried-index    (ACTION UG/UH: the index, fold, claims — 23 controls)
+   PASS
+── p332-delivery-audit   (evidence -> shelf delivery, 40 controls)
+   PASS
+── p238-lure-signature   (the provenance gate: 66 controls, ACTION VE + p240 loopback)
+   PASS
+── p239-query-shape      (the sort key: 70 controls, ACTION VH)
+   PASS
+── p240-grant-language   (the language axis: 29 controls, ACTION VO)
+   PASS
+── p1054-mit-plus-clause (the added-restriction classifier, ACTION VO/p241)
+   PASS
+── p241-blanket-denial  (the grant axis: 104 controls, ACTION VO)
+   PASS
+── p242-grant-delta    (disclosure vs narrowing vs transition: 23 controls, ACTION VU)
+   PASS
+── p1058-empty-payload-gate (0-byte grant, self-reference, prefix narrowing: 29)
+   PASS
+── p244-absence-states  (payload/address/query absence + truncation: 61)
+   PASS
+── p245-apache-canonical (the TEXT axis: 25 controls, the 4(c)/4(d) twin phrase)
+   PASS
+── p246-payload-integrity (ROLE + STATE: 60 controls, the BUSL-unreachable branch)
+   PASS
+── p247-keyed-grant     (ENFORCEMENT + the windowless name channel: 74, ACTION XA)
+   PASS
+── p247-path-class      (ACTION XC: licence path vs NOTICE vs manifest vs code)
+   PASS
+── p248-named-proprietary (ACTION XE: the windowless name tier + arm closure: 38)
+   PASS
+── p207-permissive-half-audit (D14, the RIDER: it owns the only correct one — 12)
+   PASS
+── p251-gate-exit-reach  (ACTION XM: exit-code reachability + 5 unittest floors)
+   PASS
+── p251-prefix-collision (ACTION XN: the maia class, a truncation onto a real repo)
+   PASS
+── p252-ungated-floors   (ACTION XR: the 71 ungated silent-zero suites, pinned)
+   PASS
+── p252-ungated-floors   (ACTION XR: verify every pinned floor still holds)
+   PASS
+── p253-captured-body-census (ACTION XY: the P834 capture sites, graded)
+   PASS
+── p253-captured-body-census (ACTION XY: verify every pinned site still holds)
+   PASS
+── p253-settled-fact-regression (p253: a pass may not re-open a settled fact)
+   PASS
+── p253-settled-fact-regression (p253: the shelves' CURRENT sections, verified)
+   PASS
+── p253-gate-propagation (p253: a failing step may not reach the banner)
+   PASS
+── p254-scoped-grant-reference (P1065: a POINTER to a licence is not a GRANT)
+   PASS
+── p329-grant-link-resolution (p329: a claim that points at its OWN missing grant)
+   PASS
+── p254-exit-status-reach (ACTION XZ: a contracted recipe line must be able to fail)
+   PASS
+── p254-exit-status-reach (ACTION XZ: the live Makefile's own contract, verified)
+   PASS
+── p255-channel-reachability (ACTION YE: a refusal that does not BILL is not a budget)
+   PASS
+── pass256-ladder-closure (p256: the ladder a pass TYPES vs the paths proven)
+   PASS
+── pass256-ladder-closure (p256: the LIVE ladder's closure, verified)
+   PASS
+── pass257-restriction-scan (185 controls: p257 runs the vocabulary on EVERY payload; p287 makes it MULTILINGUAL, adds UNREADABLE-BODY, and anchors an untitled MIT body; p342 keys the TITLE axis by language too, adds UNREADABLE-TITLE, and pins that pt is NOT claimed complete)
+   PASS
+── pass258-content-licence-family (p258: the CC class the gate could not name)
+   PASS
+── pass258-content-licence-family (p258: the LIVE shelves' CC census, verified)
+   PASS
+── pass259-grant-location-class (p259: WHERE a grant was read, and what that licenses you to conclude)
+   PASS
+── pass260-ecosystem-manifest-tier (p260: REACH is not RUN; foreign/generated/pair guards)
+   PASS
+── pass261-current-state-tier-run (p261: ZD's current-state index, ZE's (path,row) coverage, the scoped reservation)
+   PASS
+── pass262-scoped-reservation-audit (p262: ACTION ZI — the STEWARD reservation, the X11 grant, and a row's state is not what it QUOTES)
+   PASS
+── p798-proxy-refusal-ledger (p294: the INVENTED host is in the ledger too — 22 controls)
+   PASS
+── lazy-quantifier lint over every instrument (ACTION TB)
+# 0 finding(s)
+ALL OFFLINE LICENCE CONTROLS PASS
+# p274 -- T37 standing re-count.  Every number below is derived from the rows, not copied from the sentence that last stated it.
+# p278 -- `published` is READ FROM THE SHELF, so TEXT drift is visible too.
+claim	published	measured	verdict	where_published
+MCP server slugs tabled on agents/top.md (whole file, MCP_HINT)	-	1	NO-ANCHOR	intel/trends.md T21 + agents/top.md MCP section
+MCP server slugs in the MCP SECTION's table (agents/top.md)	-	0	NO-ANCHOR	agents/top.md, the MCP section's own lead sentence (p278; anchor re-pointed at p387)
+LMS platforms reachable by MCP, agents/top.md	-	1	NO-ANCHOR	agents/top.md MCP section (p274). Was 3 on both shelves before this pass
+LMS platforms reachable by MCP, both agent shelves	-	6	NO-ANCHOR	intel/trends.md T24 (p274). Was 3
+permissive rows in the build-on tier	-	0	NO-ANCHOR	agents/top.md ('N permissive rows'), tier bounded STRUCTURALLY since p278
+# STALE=0 NO-ANCHOR=5 of 5 registered claims
+# MCP servers by platform, across agents/top.md AND agents/trending.md:
+#   Anki	1	ankimcp/anki-mcp-server
+#   Blackboard	10	alanwtom/blackboard-mcp, bibo242/blackboard-mcp, e9x/blackboard-mcp, felipedias-ie/blackboard-mcp, karkarkins/blackboardassistantmcp, niccolosalvini/mcp-blackboard-ucsc, p1ckle3/blackboard-mcp, parkseokjune/unist-blackboard-mcp, rd2100/blackboard-mcp, yoyoconnor/blackboardmcp
+#   Brightspace / D2L	7	anonymousonyx22/brightspace-d2l-mcp, carlsvejstrup/dtu-learn-mcp, danieltyukov/tudelft-mcp, exhabition/brightspace-mcp-rs, general-mudkip/d2l-mcp-server, jhostinaleck/brightspace-mcp, rohanmuppa/brightspace-mcp-server
+#   Canvas	45	54yyyu/school-mcp, abr-projects/canvas-mcp, admin978/canvas-mcp, ahnopologetic/canvas-lms-mcp, algorithm0r/canvas-lms-mcp, amirf194/canvas-mcp, anonymousonyx22/canvas-lms-student-mcp, aryankeluskar/canvas-mcp, bartmassey-upstream/canvas-mcp, boyuchengz/canvas-mcp, bruchris/canvas-lms-mcp, caleb-media-studio/canvas-mcp, charliecardenastoledo/mcp-canvas-server, chiptoe-svg/canvas-lms-mcp, chrischall/canvas-parent-mcp, corcvusrambochen/canvas-session-mcp, crevextech/canvas-lms-mcp, dmontgomery40/mcp-canvas-lms, eastarctica/canvas-mcp, fireiscoolsolo/canvas-lms-mcp-local, fireiscoolsolo/canvas-lms-mcp-server, harikeshav-r/canvas-mcp, harrywang/canvas-mcp, johannsenlum/canvas-api-mcp, jsrodr/canvas-mcp, kaushikgunasekaren/canvas-grader-mcp, kkazuhak/canvas-mcp, lindsay-cheng/canvas-mcp, mattlo0546/canvas-mcp, mdweaver/canvas-mcp, mistercommand/mcp-canvas-lms, mtgibbs/canvas-lms-mcp, nelsonspencer/canvas-mcp, plyght/canvas-mcp, psychquant/che-ntucool-mcp, r-huijts/canvas-mcp, r1ckyin/canvas-ed-mcp, sarthak-neupane/canvasmcpserver, shu-silc-osc/canvas-chaoxing-silc-mcp, skhdemo/uoft-quercus-mcp, vishalsachdev/canvas-mcp, vkumar04/canvas-mcp-lite, xmike04/canvas-student-mcp, yeetingwaterbottle/canvas-mcp, zhenghh04/canvas-mcp
+#   Google Classroom / Workspace for Education	12	aaradhya-dev-tamrakar/google-classroom-mcp, adriasantacreu/google-classroom-mcp, alanmagno1/google-classroom-mcp, asthetech/mewcp-google-classroom, davipac/classroom-mcp, faizan45640/google-classroom-mcp-server, kimmahone/edu-workspace-mcp, omarniazi/classroom-mcp, pengusto/google-classroom-mcp, praisethefacts/google-classroom-mcp, sandraschi/classroom-mcp, zainf2327/mcp-classroom
+#   Moodle	31	a2br/moodle-mcp, anonymousonyx22/moodle-student-mcp, av-leschinskiy/moodle-mcp, carlosandreferreira/moodle-obsidian-mcp, csmediapro/moodle-mcp-server, dathis/swiss-moodle-mcp, duck-5/moodle-mcp, falkenslab/moodle-mcp, firedmosquito831/ase-moodle-mcp, g36maid/moodle-mcp, idavi/usp-mcp, isakskogstad/skolverket-mcp, jaipuriaailabs/moodle-mcp, jawadh-salih/moodle-mcp-server, lmscloud-io/moodle-mcp-server, loyaniu/moodle-mcp, marcosnahuel/moodle-mcp, nasus20202/moodlemcp, niccolosalvini/mcp-moodle-staff, niccolosalvini/mcp-moodle-teacher, nmaaalhawary/mcp-moodle, omarali-prod/zewailcity-moodle-mcp, onbirdev/moodle-webservice_mcp, pablopc05/mcp-usc, peancor/moodle-mcp-server, saadrahman01/moodle-mcp, sharziki/purdue-mcp, snaw80/moodle-mcp, tcpassos/moodle-student-mcp, toshieji/moodle-grading-mcp, triffon/moodle-mcp
+#   Open edX	2	blend-ed/openedx-mcp, blend-ed/tutor-contrib-openedxmcp
+# 🔴 NO-ANCHOR means the sentence this claim checks is GONE from the shelf. Restore the sentence or re-point the anchor; do not ignore it.
+make[1]: *** [Makefile:837: recount] Error 1
+🔴 recount FAILED — continuing, so no gate can mask its siblings (p300)
+── pass275-grant-enumeration (64 controls incl. the C3 positive control; vendored/icon/source paths, two-subject lines, p285 examples/IDE/html-xml exclusions)
+   PASS
+# p275 -- enumeration gate.  A negative licence verdict is only a finding if the
+# tree was ENUMERATED.  Otherwise it is the state of a path ladder.
+# p276 -- and the tree is only ONE CHANNEL: a grant can live in a manifest, which is
+# what p275's own headline case (Athena) was.  Both channels must be empty.
+REFUTED	agents/trending.md:1751	projectfedena/fedena	enumeration found a candidate grant: NOTICE
+REFUTED	repos/foundations.md:187	projectfedena/fedena	enumeration found a candidate grant: NOTICE
+REFUTED	repos/foundations.md:259	projectfedena/fedena	enumeration found a candidate grant: NOTICE
+VERIFIED-ABSENT	agents/top.md:104	Open-TutorAi/open-tutor-ai-CE	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/top.md:247	eth-lre/mathtutorbench	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:1676	eth-lre/mathtutorbench	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:11964	CreveXTech/canvas-lms-mcp	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:18333	hdronamraju/sped-agent	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:18381	somenssarkar/gurukul-ai	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:18382	saif2012004/PrepifyAI	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:18478	saif2012004/PrepifyAI	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:18512	nguyenbaophuc27129-web/VIETPOET	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:19284	Valexxy/edunaija-os	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:19285	touretzkyds/ai4k12	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:19987	muskvdc/EduTwin-Africa	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:19988	Valexxy/edunaija-os	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:20109	AStheTECH/mewcp-google-classroom	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:20284	ls1intum/Athena	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:20347	ls1intum/Athena	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:20771	weiwei1392/knowledge-tracing	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:20779	bigdata-ustc/Agent4Edu	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:21235	Obi-Wahn/zeitstrahl-werkstatt	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:21294	MartinNuc/hass-skola-online	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:21403	umaarmirzaa/chalk	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:21465	Elia43/DataPilot	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:21479	Elia43/DataPilot	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:21485	CAHLR/CAHLR-OATutor-Staging-V2	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:21953	vkumar04/canvas-mcp-lite	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:22032	kevinraj23/student-assistant-mcp-server	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:22403	alfredang/AI-LMS-TMS	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:25292	JushBJJ/Mr.-Ranedeer-AI-Tutor	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:28008	open-spaced-repetition/srs-benchmark	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:28040	open-spaced-repetition/srs-benchmark	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:28041	luffycodes/Tutorbot-Spock	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:30236	european-commission-empl/european-digital-credentials	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:30237	fwu-de/schulfach-ontologie	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:31046	jimbozhang/speechocean762	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:31047	JazminVidal/gop-pykaldi	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:31354	datalab912/RATASv1	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:31355	emorynlp/llm-grading	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:31860	mahseema/aibooks	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:32506	bigdata-ustc/Agent4Edu	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:34629	IC-Redacoes-UTFPR/CorrecaoRedacao	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:34630	YuriMatsumotoSantos/CorrecaoRedacao	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:34631	jgabriel-sntx/Corretor-de-redacao-ENEM	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:34632	douglas150206/IF_VEST_Redacao_Correcao	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:34633	victor934034/simulade	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:34634	horaciohudson/corretor-redacao	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:34635	neiltonsantana9-star/redacao	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:34989	shrutika00/StudyMate	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:34991	Aryan6238/EduAgent	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35246	jadrianlg16/learning-tutor	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35247	samrathreddy/Tutor-multi-ai-agent	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35248	omerbbbb/ai-graded-assessment-platform	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35249	spal740/GradeScribe	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35250	natiworldclass/adaptive-tutor	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35251	RutujaDeshmukh29/Adaptive-AI	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35252	Sujal-Shejwal/adaptive-ai-tutor	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35346	kaushal0494/UnifyingAITutorEvaluation	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35347	aisingapore/sealion	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35409	CreveXTech/canvas-lms-mcp	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:35587	a5anka/ai-lab-2026-africa-agent-manager	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:40054	eth-lre/mathtutorbench	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:40195	mendezjerick/ReaDirect-V2	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:40449	mendezjerick/ReaDirect-V2	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:40497	learningequality/kolibri-design-system	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:40849	rachelproject/module-template	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:41745	AI4Bharat/indicnlp_catalog	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	agents/trending.md:42385	alfredang/AI-LMS-TMS	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:2445	JushBJJ/Mr.-Ranedeer-AI-Tutor	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:3230	JushBJJ/Mr.-Ranedeer-AI-Tutor	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:15287	Valexxy/edunaija-os	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:15288	muskvdc/EduTwin-Africa	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:15307	datawhalechina/ai-edu-for-kids	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:15390	touretzkyds/ai4k12	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:16028	AmericasNLP/americasnlp2021	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:16121	bigdata-ustc/Zero-1-to-3	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:16125	weiwei1392/knowledge-tracing	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:16698	usenkovpro/deck	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:16705	HetviBarot21/SmartAttend	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:16710	kerntau/class-log-system	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:16721	jacksonrakena/gradekeeper	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:16730	ldsalud/school-management-system	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:16741	luizengdev/opensga-frontend	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:19908	slegroux/dandelion	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:22416	eugeborzone/Auto_Grade_Guarani	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:23869	open-spaced-repetition/srs-benchmark	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:26091	european-commission-empl/european-digital-credentials	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:26092	fwu-de/schulfach-ontologie	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:26704	jimbozhang/speechocean762	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:26705	tzyll/goparrot	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:26706	JazminVidal/gop-pykaldi	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:27198	weiwei1392/knowledge-tracing	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:27275	adlnet/SCORM-to-xAPI-Wrapper	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:27276	adlnet/SCORM-2004-4ed-Test-Suite	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:27277	adlnet/SCORM-to-TLA-Roadmap	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:27324	Zion-support/curriculum-alignment-checker	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:27325	lovejzzz/CourseMapper	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:27470	adlnet/SCORM-to-xAPI-Wrapper	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:27472	skfriese/simple-scorm-api	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:28176	bigdata-ustc/Agent4Edu	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:28177	yxonic/DTransformer	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:28373	xiaolai/the-craft-of-selfteaching	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:28534	educredentials/ec-issuer	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:29526	emorynlp/LLM-Grading	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:29527	wenjing1170/llm_grader	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:29881	speedyapply/2026-AI-College-Jobs	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:30077	eth-lre/MathTutorBench	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:30249	brettlballard/DIF	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:30437	Aditya7808/AI-Powered-Adaptive-Curriculum-Assignment-Generator-Agent	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:30438	Aryan6238/EduAgent	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33321	learningequality/kolibri-design-system	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33341	mendezjerick/ReaDirect-V2	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33441	rachelproject/module-template	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33562	caiuc/proyectos-hacaithon-2026	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33590	AmericasNLP/americasnlp2021	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33591	AmericasNLP/americasnlp2023	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33592	AmericasNLP/americasnlp2024	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33593	aoncevay/mt-peru	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33594	aoncevay/quechua-nlp	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33595	monirome/asr-indigenous-languages	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33596	UBC-NLP/IndT5	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33597	Llamacha/IWSLT2025_Quechua_data	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	repos/trending.md:33598	jnehring/awesome-low-resource-languages	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	intel/trends.md:259	eth-lre/mathtutorbench	enumerated, no candidate grant in tree
+VERIFIED-ABSENT	compose/patterns.md:281	eth-lre/mathtutorbench	enumerated, no candidate grant in tree
+QUEUE-UNENUMERATED	agents/top.md:538	kennedyraju55/essay-grader	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:218	0xff-r4bbit/watchmetype	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:221	choudaryhussainali/MCQ_Grading_Bot	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:2677	agharsallah/esp-labs-web	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:2756	yashas-wi/Personalised-AI-Tutor	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:3611	tjayze/olympiad-problem-forge	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:3666	Frisher1/ClaudeCode-Workflow-Lab	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:3667	Ciucky/no-numb	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:3887	Takamatsu-Hikaru/AI-Research-Guide	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:3888	selmetwa/parallel-arabic	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:4255	UrielCuriel/codexivo	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:6514	minicoohei/ai-agent-camp	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:7238	JaipuriaAILabs/Moodle-MCP	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:7239	JeabtiE/iep-gen-assistant	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:7240	hd659/moodle-ed-autopilot-patch	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:7935	savinoo/ai-grading-system	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:8841	matsuolab/lecture-ai-engineering-2026-hi	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:9614	NmaaAlhawary/MCP-Moodle	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:11191	DHRUVvkdv/teaching-assistant	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:11751	daivikpurani/AI-Tutor	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:11752	eshaanag/elyaitra	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:12530	QingdaoU/OnlineJudgeDeploy	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:13013	sumry-app/SUMRY	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:13014	omerpanay/special-education-rag	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:13015	JeabtiE/jump-hackathon-demo	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:13016	Pragmatic-Works/Rapid-IEP	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:14793	sumitchopkar2005/Agentic_AI_LMS	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:14830	Naresh1401/education-tutor-agent	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:14831	techpivot25/Educate-AI	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	agents/trending.md:16562	SaiHarsha9992/Plagarism-Check	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/foundations.md:727	jaltekruse/Free-Math	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/foundations.md:728	abdullaitcenter-hue/comet-trail-archives	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:572	wongcyrus/gemini-handwriting-grader	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:1907	agharsallah/esp-labs-web	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:1911	Takamatsu-Hikaru/AI-Research-Guide	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:2247	mwakidenis/Elimu-Sasa	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:4905	minicoohei/ai-agent-camp	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:5003	grasped-dev/staircase	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:5465	DA0806/canvas-student-mcp	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:5717	savinoo/ai-grading-system	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:8140	RoseCityRobotics/ai-developer-resources	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:8348	aifrenz/pcu-2026	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:8349	yg3988/learning-with-ai-tutor	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:8350	wi43278-glitch/py	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:8843	brycewang-stanford/Auto-Empirical-Research-Skills	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:8962	openedx/frontend-build	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:9205	QingdaoU/OnlineJudgeDeploy	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:9533	Joe-Hall-Lee/PSN-IRT	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:9534	mainlp/llm-psychometrics	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:9576	blackboard/BBDN-LTI-Tool-Provider-Node	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:10654	emmanuel-johnson/launch-point-backend	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:12723	w3c/vc-data-model	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	repos/trending.md:19909	invincible-summer/Next-Tutor-Agent	negative verdict rests on a path ladder
+QUEUE-UNENUMERATED	compose/patterns.md:255	kixlab/TutorCaseBench	negative verdict rests on a path ladder
+# REFUTED=3 VERIFIED-ABSENT=123 QUEUE-UNENUMERATED=54
+# FAIL: a shelf asserts an absent grant that an enumeration refutes.
+make[1]: *** [Makefile:405: gate-enumeration] Error 1
+🔴 gate-enumeration FAILED — continuing, so no gate can mask its siblings (p300)
+── p277-table-structure (15 controls: the empty-header, cross-table-blank and pipe-art shapes)
+   PASS
+   10 shelves, no row is published as a header
+── p278-channel-conflict/direction (p121's ten reproduced + the Commons-Clause arm)
+   PASS
+── p278-channel-conflict/gate-parsing (the hyphen regression, NC-before-CC-BY ordering)
+   PASS
+# p278 conflict gate — p121's table at repos/trending.md:24334, 10 rows
+# 🟢 PASS — 10 rows, every published direction re-derived from its own family cells
+── p279-absence-claims (Control Zero is p277's real sentence; the quoted and wrapped shapes)
+   PASS
+# ABSENCE-REFUTED=0 ABSENCE-QUEUED=0 ABSENCE-QUOTED=0  (live pass section, 124 lines)
+🟢 PASS — every absence in the live pass section was checked against the index.
+── p223-selfclaim-date-gate (15 controls: ASSERTED / ATTRIBUTED / QUOTED / CORRECTED)
+   PASS
+# 0 ASSERTED, 0 ATTRIBUTED
+verdict	file	line	text
+── pass280-package-provenance (31 controls: the residual p279 called unreachable, and the workspace packages that must NOT be rejected)
+   PASS
+   1 pinned suite(s) still read CAPTURED payloads
+── p283-repo-identity (17 controls: withdrawn-in-place, the cross-table index, both halves in one cell, plus p300's subject scope — the description-cell false positive, the cell-1 overfit guard and the preserved alias arm)
+   PASS
+# shelves=3 ledger-pairs=8 findings=0
+# 🟢 PASS — no shelf recommends one repository under two live rows.
+── p283-ladder-case-audit (29 controls: the distant-fold and multi-rung overclaims, p284's generator verdict, p286's COMMENT-ONLY, shell-generator, method-attribute and alternation arms, p288's IMPORTED-LADDER arm with its overclaim guard, and the RATCHET)
+   PASS
+# STANDING  CASE-CLOSED=11  CASE-UNVARIED=6  COMMENT-ONLY=78  FOLD-ON-PATH=31  GENERATED-CASE-VARIED=11  IMPORTED-LADDER=1  SINGLE-SPELLING=18  STEM-ONLY=3  TREE-ENUMERATED=15
+# ladders=813 instruments=453 standing=174
+── p288-readme-channel (32 controls: the lowercase rung, the MIT-RAISE collision arm, the postfix/markdown-link claim, reservation-outranks)
+   PASS
+── p289-restatement-authority (40 controls: the OGL restatement pair, the MIT collision arm, the CC generality arm, posture keyed to MEASURED reachability)
+   PASS
+── p291-submodule-pin-grant (31 controls: the read-at-HEAD rejection, the 7-submodule census, block-scoped shelf claims, append-only live-section scope)
+   PASS
+# p291 submodule-pin-grant — 7 segment rows  GRANTED-AT-PIN=7
+🟢 PASS — every segment row is graded at its pin, and every declared submodule carries a row.
+── p292-decision-evidence-store (106 controls: the agent-as-decider refusal, the shown-digest binding, the tamper-evident limit asserted as C18, and S2's recipe-count overclaim)
+   PASS
+# p292 evidence-store citation — 0 load-bearing recipe(s) (none), 0 finding(s)
+🟢 PASS — every recipe that terminates in the store names its implementation, and no line claims more of them than the shelves carry.
+── p293-slug-existence-oracle (45 controls: p292's four discarded probes re-adjudicated, the ABSENT-OR-PRIVATE bound as C9-C11, transport-before-refusal, and the two defective controls this suite's own first draft shipped)
+   PASS
+── p307-payload-pin (9 controls: the wrapped Apache clause, GPL-2.0-not-LGPL, GPL-3.0-not-AGPL-3.0, BSD-3-not-BSD-2, p305's reserved grant, p306's two pointer classes)
+   PASS
+── p308-shelf-consistency (59 controls: AGPL≠GPL, correction tables, retractions, comparators, possessives, quoted claims, dual grants, paired rows, scoped absences, p351's SCOPED THIRD-PARTY grant)
+   PASS
+🔴 p308-shelf-consistency/live FAILED — the disagreeing cells follow:
+   
+   🔴 2 slug(s) carry disagreeing licence cells on the LIVE shelves:
+      oat-sa/tao-core: GPL-2.0 (repos/foundations.md:96) vs LGPL-2.1 (agents/top.md:144)
+      openeducat/openeducat_erp: AGPL-3.0 (intel/open-gaps.md:919) vs ECL-2.0 (intel/open-gaps.md:919) vs GPL-3.0 (intel/open-gaps.md:919) vs LGPL-3.0 (repos/foundations.md:95) vs MIT (intel/open-gaps.md:919)
+   scope	slug	licence	shelf	line	kind
+   LIVE	oat-sa/tao-core	GPL-2.0	repos/foundations.md	96	table
+   LIVE	oat-sa/tao-core	GPL-2.0	repos/foundations.md	794	prose
+   LIVE	oat-sa/tao-core	GPL-2.0	repos/foundations.md	795	prose
+   LIVE	oat-sa/tao-core	GPL-2.0	verticals/solutions.md	37	table
+   LIVE	oat-sa/tao-core	GPL-2.0	intel/open-gaps.md	21470	table
+   LIVE	oat-sa/tao-core	LGPL-2.1	agents/top.md	144	prose
+   LIVE	openeducat/openeducat_erp	AGPL-3.0	intel/open-gaps.md	919	table
+   LIVE	openeducat/openeducat_erp	ECL-2.0	intel/open-gaps.md	919	table
+   LIVE	openeducat/openeducat_erp	GPL-3.0	intel/open-gaps.md	919	table
+   LIVE	openeducat/openeducat_erp	LGPL-3.0	repos/foundations.md	95	table
+   LIVE	openeducat/openeducat_erp	LGPL-3.0	repos/foundations.md	449	table
+   LIVE	openeducat/openeducat_erp	LGPL-3.0	verticals/solutions.md	34	table
+   LIVE	openeducat/openeducat_erp	LGPL-3.0	intel/market.md	852	prose
+   LIVE	openeducat/openeducat_erp	LGPL-3.0	intel/market.md	853	prose
+   LIVE	openeducat/openeducat_erp	LGPL-3.0	intel/open-gaps.md	21301	prose
+   LIVE	openeducat/openeducat_erp	LGPL-3.0	intel/open-gaps.md	21302	prose
+   LIVE	openeducat/openeducat_erp	LGPL-3.0	compose/patterns.md	795	table
+   LIVE	openeducat/openeducat_erp	MIT	intel/open-gaps.md	919	table
+make[1]: *** [Makefile:646: gate-shelf-consistency] Error 1
+🔴 gate-shelf-consistency FAILED — continuing, so no gate can mask its siblings (p300)
+── p309-affero-rung-census (36 controls: the §13 discriminator, the family matcher, the version-after-name rung, ladder order and its scope bug, the title window, p471's Spanish window, declared-token grammars, and GPL-3.0-inside-AGPL-3.0)
+   PASS
+# p309 dynamic arm — every declared classifier, run on pinned payloads
+#   agpl-3.0-jagr                         34523 B  0d96a4ff68ad
+#   ccbysa-4.0-education-agent-skills      1230 B  f952182df4eb
+#   gpl-3.0-aimarkersuite                 35154 B  1ab858f515df
+#   gpl-3.0-gatorgrader                   35191 B  57756125771d
+
+   p419-copyleft-identity/identidad_copyleft.py       🟢 CORRECT    GPL-3.0 -> ('GPL-3.0', 'encabezado: GENERAL P
+   p306-licence-probe/licence_probe.py                🟢 CORRECT    GPL-3.0 -> ('GRANT', 'GPL-3.0')
+   p191-spec-license-sweep/classify_spec.py           🟢 CORRECT    GPL-3.0 -> ('COPYLEFT-SOFTWARE', 'GPL-3.0', '
+   p211-full-column-grant-audit/classify.py           🟢 CORRECT    GPL-3.0 -> {'family': 'GPL-3.0', 'riders': []
+   p153-declaration-surfaces/surfaces.py              🟢 CORRECT    GPL-3.0 -> GPL-3.0
+   p129-transcription-audit/holder.py                 🟢 CORRECT    GPL-3.0 -> GPL
+   p228-shelf-gate/classify_grant.py                  🟢 CORRECT    GPL-3.0 -> ('GPL-3.0', 'title line @20', '§13
+   p198-title-line-family/family_title_line.py        🟢 CORRECT    GPL-3.0 -> GPL-3.0
+   p150-gpl-affero-discrimination/gpl_affero.py       🟢 CORRECT    GPL-3.0 -> GPL
+   p222-ecosystem-bound-grammar/bound_grammar.py      🟢 CORRECT    4 declared tokens
+   p221-licence-version-range/version_range.py        🟢 CORRECT    4 declared tokens
+
+# declared=11  CORRECT=11  DEFECT=0  UNRUNNABLE=0
+🟢 PASS — every declared classifier separates GPL-3.0 from AGPL-3.0 on first-hand payloads.
+── p310-family-coverage (59 controls: the refuted CC0 rung as a live negative control, p124's oracle, P250's two columns and its safe half, the three-valued POINTER class, and the four false positives this grader itself produced)
+   PASS
+# p310 dynamic arm — every classifier p309 declares, run on the 5
+# families p309's corpus did not contain.
+#   ccbync-4.0-aegis-graph                             CC-BY-NC-4.0                   PROHIBITED   19347 B  41003d4a7474
+#   ccby-4.0-writing-support                           CC-BY-4.0                      OK           18873 B  aa0d3c9d6a28
+#   polyform-nc-1.0.0-paper-tutor-skills               PolyForm-Noncommercial-1.0.0   PROHIBITED    4563 B  ffcca38841ad
+#   cc0-1.0-gen-mentor                                 CC0-1.0                        OK            7048 B  a2010f343487
+#   proprietary-algomind                               proprietary                    PROHIBITED     831 B  b2496e89aa4d
+
+# 🟢 the canonical CC oracle, for reference — p124/cc_version.resolve():
+#   ccbync-4.0-aegis-graph                             CC-BY-NC-4.0   -> CC-BY-NC-4.0
+#   ccby-4.0-writing-support                           CC-BY-4.0      -> CC-BY-4.0
+#   polyform-nc-1.0.0-paper-tutor-skills               PolyForm-Noncommercial-1.0.0 -> NOT-CC
+#   cc0-1.0-gen-mentor                                 CC0-1.0        -> CC0-1.0
+#   proprietary-algomind                               proprietary    -> NOT-CC
+
+   p419-copyleft-identity/identidad_copyleft.py         🟡 ABSTAIN=5                    CC-BY-NC-4.0=el encabezado no nombra una familia — tratar como no-osi (`p412`)  CC-BY-4.0=el encabezado no nombra una familia — tratar como no-osi (`p412`)  PolyForm=el encabezado no nombra una familia — tratar como no-osi (`p412`)  CC0-1.0=el encabezado no nombra una familia — tratar como no-osi (`p412`)  proprietary=el encabezado no nombra una familia — tratar como no-osi (`p412`)
+   p306-licence-probe/licence_probe.py                  🟡 ABSTAIN=1 CORRECT=4          CC-BY-NC-4.0=cc-by-nc-4.0  CC-BY-4.0=cc-by-4.0  PolyForm=polyform-noncommercial-1.0.0  CC0-1.0=cc0-1.0  proprietary=-
+   p191-spec-license-sweep/classify_spec.py             🟡 ABSTAIN=4 COARSE=1           CC-BY-NC-4.0=∅  CC-BY-4.0=permissive-software  PolyForm=∅  CC0-1.0=permissive-software  proprietary=∅
+   p211-full-column-grant-audit/classify.py             🟡 ABSTAIN=2 CORRECT=3          CC-BY-NC-4.0=cc-by-nc-4.0  CC-BY-4.0=cc-by-4.0  PolyForm=unrecognised  CC0-1.0=cc0-1.0  proprietary=unrecognised
+   p153-declaration-surfaces/surfaces.py                🟡 ABSTAIN=5                    CC-BY-NC-4.0=∅  CC-BY-4.0=∅  PolyForm=∅  CC0-1.0=∅  proprietary=∅
+   p129-transcription-audit/holder.py                   ⚪ OUT-OF-DOMAIN  reads the copyright HOLDER, not the family (p129's own subject)
+   p228-shelf-gate/classify_grant.py                    🟡 ABSTAIN=2 COARSE=1 CORRECT=2 CC-BY-NC-4.0=no recognised licence title  CC-BY-4.0=cc-by-4.0  PolyForm=polyform  CC0-1.0=cc0-1.0  proprietary=no recognised licence title
+   p198-title-line-family/family_title_line.py          🟡 ABSTAIN=3 COARSE=1 CORRECT=1 CC-BY-NC-4.0=cc-by-nc  CC-BY-4.0=cc-by-4.0  PolyForm=no-family  CC0-1.0=cc  proprietary=no-family
+   p150-gpl-affero-discrimination/gpl_affero.py         🟡 ABSTAIN=5                    CC-BY-NC-4.0=∅  CC-BY-4.0=∅  PolyForm=∅  CC0-1.0=∅  proprietary=∅
+
+# declared=9  ABSTAIN=8  OUT-OF-DOMAIN=1
+🟢 PASS — no classifier crosses a commercial-use boundary on these 5 families.
+── p311-permissive-family-arm (32 controls: the four pins against the shas p310 probed, the one-leading-newline and holder-string negative controls, the refuted holder pattern kept live, the census discovery, and the two orderings' disagreement)
+   PASS
+# p311 dynamic arm — every classifier p309/p310 declare, run on the two
+# families this base PUBLISHES MOST and no arm had ever touched.
+#   mit-open-detector                MIT          OK      1066 B  2e7c69b15c38
+#   mit-gradebridge                  MIT          OK      1100 B  6203d12e65d7
+#   apache-2.0-noplag-engine         Apache-2.0   OK     11358 B  cfc7749b96f6
+#   mpl-2.0-hacklympics              MPL-2.0      OK     16725 B  1f256ecad192
+#   gpl-2.0-opensis                  GPL-2.0      OK     17286 B  224ac3d403e3
+#   dbad-1.1-matrix                  DBAD-1.1     UNDETERMINED   1127 B  65569613b0b7
+#   apache-2.0-reference-audit       Apache-2.0   OK     11357 B  c71d239df917
+
+# 🔴 RAW identity (bytes + sha, as this base pins every payload) vs the
+#    CANONICAL identity of the same grant:
+#   mit-open-detector                MIT          raw   1066 B 2e7c69b15c38   canonical   1054 B d27b4c1636e1
+#   mit-gradebridge                  MIT          raw   1100 B 6203d12e65d7   canonical   1054 B d27b4c1636e1
+#   apache-2.0-noplag-engine         Apache-2.0   raw  11358 B cfc7749b96f6   canonical  11323 B 283ea6cc2997
+#   mpl-2.0-hacklympics              MPL-2.0      raw  16725 B 1f256ecad192   canonical  16724 B 4b89d4518bd1
+#   gpl-2.0-opensis                  GPL-2.0      raw  17286 B 224ac3d403e3   canonical  17232 B 13e8d171eb36
+#   dbad-1.1-matrix                  DBAD-1.1     raw   1127 B 65569613b0b7   canonical   1126 B 22bd030997c2
+#   apache-2.0-reference-audit       Apache-2.0   raw  11357 B c71d239df917   canonical  11323 B 283ea6cc2997
+#   🔴 7 distinct RAW shas  ->  🟢 5 distinct GRANTS (one per family).
+#      The Apache pair differs by ONE LEADING NEWLINE; the MIT pair by
+#      the HOLDER STRING alone. Neither difference is in the grant, and
+#      p310 certified seven CC0 rows partly on exact byte length.
+
+   p419-copyleft-identity/identidad_copyleft.py         🟡 ABSTAIN=2 CORRECT=5    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=el encabezado no nombra una familia — tratar como no-osi (`p412`)  GPL-2.0=gpl-2.0  DBAD-1.1=el encabezado no nombra una familia — tratar como no-osi (`p412`)  Apache-2.0=apache-2.0
+   p306-licence-probe/licence_probe.py                  🟡 ABSTAIN=1 CORRECT=6    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=gpl-2.0  DBAD-1.1=grant  Apache-2.0=apache-2.0
+   p191-spec-license-sweep/classify_spec.py             🟡 ABSTAIN=2 COARSE=4 CORRECT=1 MIT=permissive-software  MIT=permissive-software  Apache-2.0=permissive-software  MPL-2.0=permissive-software  GPL-2.0=gpl-2.0  DBAD-1.1=∅  Apache-2.0=permissive-software
+   p211-full-column-grant-audit/classify.py             🟡 ABSTAIN=2 CORRECT=5    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=lgpl  DBAD-1.1=unrecognised  Apache-2.0=apache-2.0
+   p153-declaration-surfaces/surfaces.py                🟡 ABSTAIN=1 CORRECT=6    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=gpl-2.0  DBAD-1.1=∅  Apache-2.0=apache-2.0
+   p129-transcription-audit/holder.py                   ⚪ OUT-OF-DOMAIN  reads the copyright HOLDER, not the family (p129's own subject)
+   p228-shelf-gate/classify_grant.py                    🟡 ABSTAIN=1 CORRECT=6    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=gpl-2.0  DBAD-1.1=no recognised licence title  Apache-2.0=apache-2.0
+   p198-title-line-family/family_title_line.py          🟡 ABSTAIN=1 CORRECT=6    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=gpl-2.0  DBAD-1.1=no-family  Apache-2.0=apache-2.0
+   p150-gpl-affero-discrimination/gpl_affero.py         🟡 ABSTAIN=2 CORRECT=5    MIT=mit  MIT=mit  Apache-2.0=apache-2.0  MPL-2.0=mpl-2.0  GPL-2.0=gpl  DBAD-1.1=∅  Apache-2.0=apache-2.0
+
+# declared=9  ABSTAIN=8  OUT-OF-DOMAIN=1
+🟢 PASS — every classifier that reads payloads reads these families
+   correctly. 10464 cells newly exercised by this instrument; ZERO defects.
+# 🔵 `p191` returns `permissive-software` on all four, which the imported
+#    grader reads as ABSTAIN by grammar. It is p191's own axis answering
+#    p191's own question and it is RIGHT IN EFFECT for both families —
+#    recorded here, not promoted to CORRECT, because widening another
+#    pass's calibration from this file is the thing this arm refuses.
+── p312-template-identity (80 controls: the refuted MIT band and this module's own three wrong rungs as live negative controls, the 7-payload template collapse at a constant of 1038, Apache's prefix bimodality, and the UNKNOWN-TEMPLATE abstention contract)
+   PASS
+# p312 template identity — 5 fill-in templates, 6 fixed documents
+
+# payload                                       bytes  family       form            why                     constant
+  apache-2.0-edfi-data-standard-10173.LICENSE   10173  Apache-2.0   FIXED-DOCUMENT  NO-DECLARATION          -
+  apache-2.0-noplag-engine-11358.LICENSE        11358  Apache-2.0   FIXED-DOCUMENT  PLACEHOLDER-DECLARATION -
+  apache-2.0-reference-audit-11357.LICENSE      11357  Apache-2.0   FIXED-DOCUMENT  PLACEHOLDER-DECLARATION -
+  bsd-2-clause-github2pandas-1340.LICENSE        1340  BSD-2-Clause FILL-IN         HOLDER                  1290
+  gpl-2.0-devkit-lti1p3-18092.LICENSE           18092  GPL-2.0      FIXED-DOCUMENT  MULTIPLE-DECLARATIONS   -
+  gpl-2.0-memento-18097.LICENSE                 18097  GPL-2.0      FIXED-DOCUMENT  MULTIPLE-DECLARATIONS   -
+  gpl-2.0-rosariosis-15214.LICENSE              15214  GPL-2.0      FILL-IN         HOLDER                  15158
+  mit-academic-instability-1061.LICENSE          1061  MIT          FILL-IN         HOLDER                  1038
+  mit-academico-1094.LICENSE                     1094  MIT          FILL-IN         HOLDER                  1038
+  mit-hallmark-1073.LICENSE                      1073  MIT          FILL-IN         HOLDER                  1038
+  mit-lti-issuer-1076.LICENSE                    1076  MIT          FILL-IN         HOLDER                  1025
+  mit-lute-v3-1068.LICENSE                       1068  MIT          FILL-IN         HOLDER                  1038
+  mit-mural-1066.LICENSE                         1066  MIT          FILL-IN         HOLDER                  1038
+  mit-nus-mooc-corpus-1083.LICENSE               1083  MIT          FILL-IN         HOLDER                  1038
+  mit-open-detector-1066.LICENSE                 1066  MIT          FILL-IN         HOLDER                  1038
+  mit-speechgpt-1066.LICENSE                     1066  MIT          FILL-IN         HOLDER                  1038
+  mitparen-typed-japanese-1086.LICENSE           1086  MIT          FILL-IN         HOLDER                  1047
+  mpl-2.0-safeexambrowser-16726.LICENSE         16726  MPL-2.0      FIXED-DOCUMENT  NO-DECLARATION          -
+
+# fill-in templates, by normalised digest:
+   16d6b7b5799875f6  8 payload(s)  mit-academic-instability-1061, mit-academico-1094, mit-hallmark-1073, mit-lute-v3-1068, mit-mural-1066, mit-nus-mooc-corpus-1083, mit-open-detector-1066, mit-speechgpt-1066
+   6719ae876481e136  1 payload(s)  bsd-2-clause-github2pandas-1340
+   78880e1c6c5e2654  1 payload(s)  gpl-2.0-rosariosis-15214
+   7768d3beb7949a85  1 payload(s)  mit-lti-issuer-1076
+   d936246a542832f3  1 payload(s)  mitparen-typed-japanese-1086
+── p378-presentation-fold (24 controls: all three p312 MIT digests folded to one text and p312 proved STILL to see three, the inflation census, all ten MIT fixtures as one text, and the negative controls that keep Apache/BSD/GPL, the 137-byte CC0 paraphrase and CC0's two real shapes apart — plus the closed title list, the operative first line that must survive, and P541's empty-input refusal)
+   PASS
+── p314-untitled-payload (19 controls: both BSD shapes pinned per item 5, the untitled-MIT headline, the substring form matching by accident inside «permit» as a live false friend, step 0c's scheme repair with its true-negative and URL-eraser bounds, and item 4's notice-vs-grant class over all four of p313's noncommercial payloads)
+   PASS
+# p314 dynamic arm — keyed on payload SHAPE, with the family held constant.
+# `ACTION p313-R` item 5, widened from BSD-3-Clause to MIT by this pass.
+
+# payload                      family         shape      bytes  sha          first non-blank line
+#  🟢 bsd-3-clause-freecodecamp      BSD-3-Clause   titled      1513  e2a20708d0fd BSD 3-Clause License
+#  🔴 bsd-3-clause-jupyterhub        BSD-3-Clause   untitled    1475  7069c7e8d60e Copyright 2014-, Jupyter Development Team
+#  🔴 bsd-3-clause-open-tutor-ai-ce  BSD-3-Clause   untitled    1531  57c341d09920 Copyright (c) 2023-2025 Mohamed El hajji O
+#  🟢 mit-educhain                   MIT            titled      1092  e3321a1b62cd MIT License
+#  🟢 mit-ms-ai-agents               MIT            titled      1141  c2cfccb812fe MIT License
+#  🔴 mit-crewai                     MIT            untitled    1055  28868731966f Copyright (c) 2025 crewAI, Inc.
+
+# 🔴 THE TOKEN CHANNEL — is the family name even IN the file?
+# payload                      family         as a word  substring  🔴 verdict
+#  mit-educhain                 MIT            True       True       🟢 present
+#  mit-crewai                   MIT            False      True       🔴 SUBSTRING MATCHES WITHOUT THE TOKEN — an accident
+#  bsd-3-clause-freecodecamp    BSD-3-Clause   True       True       🟢 present
+#  bsd-3-clause-jupyterhub      BSD-3-Clause   False      False      ⚪ absent on both channels — a title rung is blind here
+#  bsd-3-clause-open-tutor-ai-ce BSD-3-Clause   False      False      ⚪ absent on both channels — a title rung is blind here
+#  mit-ms-ai-agents             MIT            True       True       🟢 present
+#
+#   🔴 mit-crewai: `mit` is absent as a word; the substring matches inside `LIMITED`, `limitation`, `permit`
+
+   p419-copyleft-identity/identidad_copyleft.py         🟡 BSD-3-Clause=neither MIT=TITLE-ONLY freecodecamp=el encabezado no nombra una familia — tratar como no-osi (`p412`)  jupyterhub=el encabezado no nombra una familia — tratar como no-osi (`p412`)  open-tutor-ai-ce=el encabezado no nombra una familia — tratar como no-osi (`p412`)  crewai=el encabezado no nombra una familia — tratar como no-osi (`p412`)  educhain=mit  ms-ai-agents=mit
+   p306-licence-probe/licence_probe.py                  🟢 BSD-3-Clause=both MIT=both freecodecamp=bsd  jupyterhub=bsd  open-tutor-ai-ce=bsd  crewai=mit  educhain=mit  ms-ai-agents=mit
+   p191-spec-license-sweep/classify_spec.py             🟡 BSD-3-Clause=neither MIT=TITLE-ONLY freecodecamp=∅  jupyterhub=∅  open-tutor-ai-ce=∅  crewai=∅  educhain=permissive-software  ms-ai-agents=permissive-software
+   p211-full-column-grant-audit/classify.py             🟢 BSD-3-Clause=both MIT=both freecodecamp=bsd-3-clause  jupyterhub=bsd-family  open-tutor-ai-ce=bsd-family  crewai=mit  educhain=mit  ms-ai-agents=mit
+   p153-declaration-surfaces/surfaces.py                🟡 BSD-3-Clause=neither MIT=TITLE-ONLY freecodecamp=∅  jupyterhub=∅  open-tutor-ai-ce=∅  crewai=∅  educhain=mit  ms-ai-agents=mit
+   p129-transcription-audit/holder.py                   ⚪ OUT-OF-DOMAIN  reads the copyright HOLDER, not the family (p129's own subject)
+   p228-shelf-gate/classify_grant.py                    🟢 BSD-3-Clause=both MIT=both freecodecamp=bsd-3-clause  jupyterhub=bsd-3-clause  open-tutor-ai-ce=bsd-3-clause  crewai=mit  educhain=mit  ms-ai-agents=mit
+   p198-title-line-family/family_title_line.py          🟢 BSD-3-Clause=both MIT=both freecodecamp=bsd  jupyterhub=bsd-3-clause  open-tutor-ai-ce=bsd-3-clause  crewai=mit  educhain=mit  ms-ai-agents=mit
+   p150-gpl-affero-discrimination/gpl_affero.py         🟡 BSD-3-Clause=neither MIT=TITLE-ONLY freecodecamp=∅  jupyterhub=∅  open-tutor-ai-ce=∅  crewai=∅  educhain=mit  ms-ai-agents=mit
+
+# declared=9  ABSTAIN=4  COARSE=3  CORRECT=1  OUT-OF-DOMAIN=1
+#
+# 🔴 TITLE-ONLY readings — the classifier reads the family when the
+#    first line names it and ABSTAINS on the same family's grant
+#    when it does not. The grant is equally binding in both files:
+#     p419-copyleft-identity/identidad_copyleft.py   MIT
+#     p191-spec-license-sweep/classify_spec.py       MIT
+#     p153-declaration-surfaces/surfaces.py          MIT
+#     p150-gpl-affero-discrimination/gpl_affero.py   MIT
+🟢 PASS — no classifier returns a WRONG family or crosses a
+   commercial-use boundary on the untitled-grant class.
+# 🔵 Stated precisely, because the finding is an ABSTENTION pattern and
+#    not a defect: an abstention fails SAFE under `P250`
+#    (`UNDETERMINED` is indistinguishable from `PROHIBITED`), so the
+#    cost of the untitled shape is USABLE SUPPLY EXCLUDED — the same
+#    direction as `p309`'s and `p311`'s `MPL-2.0` losses, and on
+#    `MIT` + `BSD-3-Clause` it is the largest such surface this base
+#    has measured.
+── p383-region-heading-gate (11 controls: MULTIPLE-BLOCKS, OUT-OF-VOCAB, MISSING-REGION, LATAM-ONLY, P541 no-input refusal)
+   PASS
+archivo	hallazgo	linea	detalle
+#	total	0
+── p495-prose-claim-gate (21 controls: ARCHIVE-ONLY, CLAIM-LOST, NO-SUCH-FILE, line-wrap tolerance, five refusals)
+   PASS
+── p495-prose-claim-gate: 16 registered, 16 present, 0 LOST
+── p418-register-currency (16 controls: the four historical shapes, the lead-is-fine case, three parser negatives, p541 refusal)
+   🔴 THE GAP REGISTER IS STALE:
+file	finding	line	detail
+intel/open-gaps.md	P418-REGISTER-STALE	0	register newest=p501; agents/top.md newest=p503; stale by 2 pass(es)
+intel/open-gaps.md	P418-REGISTER-STALE	0	register newest=p501; intel/market.md newest=p502; stale by 1 pass(es)
+intel/open-gaps.md	P418-REGISTER-STALE	0	register newest=p501; intel/trends.md newest=p502; stale by 1 pass(es)
+intel/open-gaps.md	P418-REGISTER-STALE	0	register newest=p501; repos/foundations.md newest=p503; stale by 2 pass(es)
+intel/open-gaps.md	P418-REGISTER-STALE	0	register newest=p501; verticals/solutions.md newest=p502; stale by 1 pass(es)
+intel/open-gaps.md	P418-REGISTER-STALE	0	register newest=p501; compose/patterns.md newest=p502; stale by 1 pass(es)
+#	total	6
+make[1]: *** [Makefile:474: gate-register-currency] Error 1
+🔴 gate-register-currency FAILED — continuing, so no gate can mask its siblings (p300)
+── p341-bespoke-instrument-census (34 controls: title-form totality, the UNTITLED/BESPOKE separation, the p312 non-detector, the title-shape repair)
+   PASS
+🔴 p348-fold-identity FAILED — the suite's own report follows:
+   test_an_org_transfer_is_NOT_a_collision_and_that_is_the_point (__main__.Census.test_an_org_transfer_is_NOT_a_collision_and_that_is_the_point) ... ok
+   test_census_never_fails (__main__.Census.test_census_never_fails) ... ok
+   test_collision_is_reported_with_both_casings (__main__.Census.test_collision_is_reported_with_both_casings) ... ok
+   test_three_variant_group_is_one_group (__main__.Census.test_three_variant_group_is_one_group) ... ok
+   test_C22_date_first_heading_is_a_pass_heading (__main__.DatedHeadingForm.test_C22_date_first_heading_is_a_pass_heading) ... ok
+   test_C23_pass_first_heading_still_splits (__main__.DatedHeadingForm.test_C23_pass_first_heading_still_splits) ... ok
+   test_C24_a_prose_H2_mentioning_a_pass_far_into_the_line_is_not_a_heading (__main__.DatedHeadingForm.test_C24_a_prose_H2_mentioning_a_pass_far_into_the_line_is_not_a_heading) ... ok
+   test_P541_no_input_is_REFUSED_not_passed (__main__.Gate.test_P541_no_input_is_REFUSED_not_passed) ... P541-NO-INPUT	REFUSED: this gate measures the files it receives by argument and received none.  `total 0` with no files is NOT a clean tree.  Usage: fold_identity.py [gate|census] <shelf.md> ...
+   P541-NO-INPUT	REFUSED: this gate measures the files it receives by argument and received none.  `total 0` with no files is NOT a clean tree.  Usage: fold_identity.py [gate|census] <shelf.md> ...
+   ok
+   test_a_genuinely_new_address_PASSES (__main__.Gate.test_a_genuinely_new_address_PASSES) ... ok
+   test_gate_exit_status_is_the_signal (__main__.Gate.test_gate_exit_status_is_the_signal) ... ok
+   test_history_in_ANOTHER_file_still_counts_as_published (__main__.Gate.test_history_in_ANOTHER_file_still_counts_as_published) ... ok
+   test_new_casing_in_the_live_section_FAILS (__main__.Gate.test_new_casing_in_the_live_section_FAILS) ... ok
+   test_the_published_casing_PASSES (__main__.Gate.test_the_published_casing_PASSES) ... ok
+   test_a_blob_url_names_its_REPOSITORY (__main__.Harvest.test_a_blob_url_names_its_REPOSITORY) ... ok
+   test_command_template_is_not_an_address (__main__.Harvest.test_command_template_is_not_an_address) ... ok
+   test_dot_git_suffix_folds_to_the_same_address (__main__.Harvest.test_dot_git_suffix_folds_to_the_same_address) ... ok
+   test_markdown_link_and_trailing_paren (__main__.Harvest.test_markdown_link_and_trailing_paren) ... ok
+   test_plain_address (__main__.Harvest.test_plain_address) ... ok
+   test_trailing_sentence_period_is_not_part_of_the_name (__main__.Harvest.test_trailing_sentence_period_is_not_part_of_the_name) ... ok
+   test_a_file_with_one_pass_heading_is_all_live (__main__.LiveSection.test_a_file_with_one_pass_heading_is_all_live) ... ok
+   test_split_is_at_the_second_pass_heading (__main__.LiveSection.test_split_is_at_the_second_pass_heading) ... ok
+   test_collision_groups_do_not_drop_silently (__main__.MeasuredCorpus.test_collision_groups_do_not_drop_silently)
+   🔴 p355 RE-CALIBRATED 65 -> 63, and the ADDRESS floor below is the reason it is ... ok
+   test_no_address_is_dropped (__main__.MeasuredCorpus.test_no_address_is_dropped)
+   🟢 p355 — THE control the group floor was proxying for, stated directly. ... ok
+   test_the_append_only_shelves_hold_the_majority_of_the_addresses (__main__.MeasuredCorpus.test_the_append_only_shelves_hold_the_majority_of_the_addresses) ... ok
+   test_the_live_sections_are_clean (__main__.MeasuredCorpus.test_the_live_sections_are_clean) ... FAIL
+   test_a_row_that_disagrees_with_itself_is_rejected (__main__.P423Authority.test_a_row_that_disagrees_with_itself_is_rejected) ... ok
+   test_an_absent_register_returns_to_precedence_rather_than_passing (__main__.P423Authority.test_an_absent_register_returns_to_precedence_rather_than_passing) ... ok
+   test_an_unregistered_fold_keeps_the_precedence_arm (__main__.P423Authority.test_an_unregistered_fold_keeps_the_precedence_arm)
+   🟢 Nothing is loosened where authority is absent, which is most of the corpus. ... ok
+   test_the_authority_arm_clears_the_canonical_row_even_against_history (__main__.P423Authority.test_the_authority_arm_clears_the_canonical_row_even_against_history)
+   🟢 The p422 case, as a fixture: history holds the WRONG casing and the live ... ok
+   test_the_authority_arm_fires_on_a_live_non_canonical_address (__main__.P423Authority.test_the_authority_arm_fires_on_a_live_non_canonical_address) ... ok
+   test_the_header_row_is_not_a_register_entry (__main__.P423Authority.test_the_header_row_is_not_a_register_entry) ... ok
+   test_the_historical_deviation_is_a_census_not_a_failure (__main__.P423Authority.test_the_historical_deviation_is_a_census_not_a_failure)
+   🟡 p347's rule: an append-only shelf cannot be repaired backwards.  p370's ... ok
+   test_the_live_register_is_not_empty (__main__.P423Authority.test_the_live_register_is_not_empty)
+   🔴 THE control that caught p423's own bug. ... ok
+   
+   ======================================================================
+   FAIL: test_the_live_sections_are_clean (__main__.MeasuredCorpus.test_the_live_sections_are_clean)
+   ----------------------------------------------------------------------
+   Traceback (most recent call last):
+     File "/home/user/education-kb/compose/code/p348-fold-identity/test_fold_identity.py", line 211, in test_the_live_sections_are_clean
+       self.assertEqual(fi.gate(self.all9), [])
+   AssertionError: Lists differ: [('/home/user/education-kb/agents/trending[641 chars]ED')] != []
+   
+   First list contains 5 additional elements.
+   First extra element 0:
+   ('/home/user/education-kb/agents/trending.md', 'P348-NEW-CASING', 'bartmassey-upstream/canvas-mcp', 'published as BartMassey-upstream/canvas-mcp')
+   
+   Diff is 768 characters long. Set self.maxDiff to None to see it.
+   
+   ----------------------------------------------------------------------
+   Ran 33 tests in 0.877s
+   
+   FAILED (failures=1)
+   # p348 fold census -- a backlog with a denominator, never a failure
+   folded_slug	variants	as_published
+   a/b	2	A/b a/b
+   #	distinct_folded_addresses	1
+   #	collision_groups	1
+   archivo	hallazgo	slug	detalle
+   /tmp/tmpb93r4ft0/bad.md	P348-NEW-CASING	cahlr/OATutor	published as CAHLR/OATutor
+   #	total	1
+   archivo	hallazgo	slug	detalle
+   #	total	0
+make[1]: *** [Makefile:1020: gate-fold-identity] Error 1
+🔴 gate-fold-identity FAILED — continuing, so no gate can mask its siblings (p300)
+── p348-scope-provenance (28 controls: NCSA before MIT — measured, not assumed — the ECL re-check, the BOM axis, the MIT-boilerplate holder defect, the blacklist-free vendored verdict, the LICENSE directory)
+   PASS
+── p349-name-collision (16 controls: the name pre-filter, the DECLARED renamed-transfer blind spot as C5, the stale-address finding, the double-count finding, both excuse forms, and P541)
+   PASS
+archivo	hallazgo	clave	detalle
+#	total	0
+── p349-keyed-authors (12 controls: the %ae re-derivation of p348's cell, the names>addresses row, the multibyte-cut defect as C10, the NO-KEY declaration, Spanish vocabulary, and P541)
+   PASS
+archivo	hallazgo	cifra	detalle
+repos/trending.md	P349-UNKEYED-AUTHORS	1 Contributor	no key named on the line (%ae / %an / identities)
+#	total	1
+make[1]: *** [Makefile:1214: gate-author-key] Error 1
+🔴 gate-author-key FAILED — continuing, so no gate can mask its siblings (p300)
+── p349-payload-digest (7 controls: SHARED across slugs, the same-slug duplicate that is NOT an identity, the 404 that is not evidence, both committed classes, and P541)
+   PASS
+── p351-address-shape (22 controls: p350's 8 non-addresses, the 5 ZZ-an's own prescription misses, both arms load-bearing, the awkward-but-legal addresses that must survive)
+   PASS
+   cifra	valor
+   harvested_folded	3083
+   rejected_non_addresses	40
+   addresses_corrected	3043
+   inflation	1.30%
+   class:NAV-NAMESPACE	32
+   class:OWNER-ELLIDED	3
+   class:EMPTY-NAME	2
+   class:OWNER-TEMPLATE-VAR	1
+   class:PLACEHOLDER-NAME	1
+   class:PLACEHOLDER-OWNER	1
+── p352-census-currency (24 controls: p351's own published sentence, the live-occurrence-wins rule, each of the three cells load-bearing alone, the anchor-file exclusion, P541's refusal as exit 2, and the CASE-CLOSED anchor ladder p283 demanded)
+   PASS
+   🔴 p352-census-currency: 3 of 3 cells STALE. The live write-up's census was derived BEFORE this pass wrote to the shelves. Re-run `make address-shape-census`/`gate-address-shape` as the LAST act before the commit and restate the triple -- do not edit history to match.
+   cifra	published	derived	verdict
+   harvested_folded	2878	3083	STALE
+   rejected_non_addresses	39	40	STALE
+   addresses_corrected	2839	3043	STALE
+make[1]: *** [Makefile:735: gate-census-currency] Error 1
+🔴 gate-census-currency FAILED — continuing, so no gate can mask its siblings (p300)
+── p354-grant-path (43 controls: p353's repaired cell and its FIRST-WINS rule, the three false positives this instrument's own first run produced, the column binding and its table-boundary reset, the live-region cut, P541's refusal as exit 2)
+   PASS
+      cifra	valor
+      grant_claims_parsed	0
+      distinct_slug_branch_path	0
+      rows_without_a_path	0
+   🔴 FAIL — the extractor found ZERO grant claims on the live shelves.  Either the shelves stopped publishing grant paths or this parser broke; both are findings and neither is green.
+make[1]: *** [Makefile:752: gate-grant-path] Error 1
+🔴 gate-grant-path FAILED — continuing, so no gate can mask its siblings (p300)
+── p406-carried-existence (29 controls: the decay rate's two sides with CHANNEL-ERROR on NEITHER, C12's constructed population where the three readings differ, p293's C9' re-asserted plus the MOVED bound this pass measured, the retry arm, and p351's rejection arm as the population guard)
+   PASS
+── p364-companion-closure (20 controls: self-exclusion on case and sub-path, .git and badge folding, p364's two new NAV rungs, the p362 OnlineJudge specimen, the locale-path hole PINNED rather than guessed, and the CASE-CLOSED README ladder p283's audit demanded)
+   PASS
+── p367-bare-slug-channel (22 controls: ZZ-bv's own CAHLR/OATutor-Content specimen found and proved invisible to the URL channel, each of the four arms with the string that prompted it, the dotted-repo-name guard on arm 2, p351 left owning shape and its class names un-relabelled, the .git fold that p367's FIRST DRAFT got wrong, the backtick requirement, and the P541 empty-input refusal)
+   PASS
+── p370-refset-register (32 controls: the moodler-mcp pair that turned the gate red, the purdue-mcp pair whose PULL REF proves the direction, the edu-convokit positive control, and the dead-side refusal)
+   PASS
+#	summary
+#	CANONICAL	CANONICAL-SELF	KEEP	21
+#	DISTINCT	NO-CANONICAL	KEEP	5
+#	STALE	SAME-REF-SET	KEEP	17
+#	UNKNOWN	NO-CANONICAL	KEEP	2
+── p370-domain-check (56 controls: the four REAL traps, each of the four defects D1-D4 in this instrument own first draft with the string that caused it, the tree channel on a repository with no README, the NO-EVIDENCE refusal, and p371's D5 — the credentialing/OER/curriculum-standards layer the OUT-OF-SAMPLE run found it discarding, with the four ambiguous terms it still refuses)
+   PASS
+── p371-region-place (23 controls: D2's five filename strings that placed five rows in Paraguay, D3's RFC-2606 placeholders, D4's registrable-label rule with mycourses.rit.edu as its negative control, P800's maintainer-name control carried, p115's committed stoplist applied rather than copied, and the ORIGIN/SERVES split)
+   PASS
+── p371-backlog-grade (8 controls: D1's '.../archive' relative path that entered the denominator as address number one, p351's tree-path and product-page classes, the .git fold, and the legal-dot negative control)
+   PASS
+   # research-shelf addresses (folded, shape-valid)	3023
+   # carried on a live shelf	718
+   # already graded by p370's probe	63
+   # BACKLOG (Gap 477 remainder)	2331
+── p372-dead-citation (28 controls over 11 groups: the API-URL-path shape, p371's D1 relative paths, documentation placeholders, this base's own negative controls, the rc=0/empty-advertisement live class, and the proxy-refusal-is-not-an-absence arm)
+   PASS
+🟢 gate-dead-citation — I1 partition re-derives (46 rows, 8 classes) · I2 34 absent addresses, none on a live shelf · I3 10 successor rows, all with first-hand proof · I4 every nil English regional leg was re-asked in language
+── p374-regional-leg (53 controls over 9 groups: p373's cell 1 un-withdrawn turns J2 red, I4 passing that same cell recorded beside it, Japan refusing the redundancy claim p373 generalised, and the disposition limb refused symmetrically so a sound nil cannot be hidden)
+   PASS
+── p374-regional-leg — 16 legs, invariants J1-J4
+   J1 checked on 16
+   J2 checked on 3
+   J3 checked on 1
+   J4 checked on 16
+🟢 gate-regional-leg — J1 region vocabulary closed · J2 every published nil names a jurisdiction AND has an in-language sibling · J3 the one published redundancy claim survives a fact-class test · J4 every verdict agrees with its fact count
+🔴 p375-census-union FAILED — the suite's own report follows:
+   ── p375-census-union (27 controls over 5 groups: both one-sided arms with the strings that prompted them, the two LIVE `*/skills` repositories that refute the blanket fix, the committed 756-row derivation re-read rather than restated, p372's three liveness classes, limb 3's unaccounted-survivor invariant, and the P541 refusals)
+      FAIL
+   🔴 24. the two new rejection classes both fire on the live shelves, so neither arm is dead code carried for a fixture
+        got:  ['NAME-REF-OR-PATH']
+        want: ['NAME-DOT-RUN', 'NAME-REF-OR-PATH']
+make[1]: *** [Makefile:688: gate-census-union] Error 1
+🔴 gate-census-union FAILED — continuing, so no gate can mask its siblings (p300)
+🔴 p407-i2-sweep-crosscheck — 1 of 37 controls FAILED:
+   - C21 the case-sensitivity specimens: got [], want ['ai-matrix-engine/aidream', 'mckaroff/graphlms']
+make[1]: *** [Makefile:619: gate-i2-sweep-crosscheck] Error 1
+🔴 gate-i2-sweep-crosscheck FAILED — continuing, so no gate can mask its siblings (p300)
+── p376-union-currency (27 controls over 5 groups: the governed sentence proved non-colliding with p352's in BOTH directions, four separator forms, first-occurrence-wins in both orders, the set-union invariants that are safe to pin, the anchor ladder proved un-redefined at SOURCE level rather than by object identity, agreement with both instruments it imports, and a meta-control asserting this suite pins no derived total)
+   PASS
+   🔴 p376-union-currency: 3 of 3 union cells STALE. The live write-up's union census was derived BEFORE this pass wrote to the shelves. Re-derive with `make union-currency` as the LAST act before the commit and restate the sentence -- do not edit history to match.
+   cifra	published	derived	verdict
+   channel_u	2839	3043	STALE
+   channel_b_survivors	3351	3614	STALE
+   union_addresses	3727	4024	STALE
+make[1]: *** [Makefile:728: gate-union-currency] Error 1
+🔴 gate-union-currency FAILED — continuing, so no gate can mask its siblings (p300)
+── p382-subtree-grant (19 controls: DECLARED-SPLIT, STOCK-SCOPE-LIMITED, NARROWED-OPERATIVE, fixture byte-identity, negative controls)
+   PASS
+── p382-offset-region (10 controls: p381's two specimens, the L1 DST-degeneracy specimen, positive LATAM resolution, negative controls)
+   PASS
+── p397-shelf-fork-audit (11 controls: p351's classes honoured not reimplemented, the channel-U fixture lesson, and the four-way lineage table with SAME-REPO-ALIAS split from DIVERGENT-FORK)
+   PASS
+── p392-capability-absence (15 controls: the capability meeting, five false-positive classes — two of them found by this gate failing on its own author — evidence completeness, the hand-adjudication ledger, the fatal arm)
+   PASS
+── p404-fork-direction (11 controls: the three measured pairs, one of each mechanism, and the commit-only test's own mistake as the load-bearing negative)
+   PASS
+── p405-group-lineage (12 controls: the four measured groups read back from the committed TSV, ancestry asked against HEAD's ancestors rather than all refs, the refused content-copy direction, transitivity, and Gap 400-A pinned as a column NAME)
+   PASS
+🔴 p421-action-answered FAILED — the suite's own report follows:
+   test_a_real_github_address_does_enter_the_index (__main__.Amendment1_AddressChannel.test_a_real_github_address_does_enter_the_index) ... ok
+   test_a_shelf_path_can_never_be_a_subject (__main__.Amendment1_AddressChannel.test_a_shelf_path_can_never_be_a_subject) ... ok
+   test_the_shelf_index_is_anchored_on_github_com (__main__.Amendment1_AddressChannel.test_the_shelf_index_is_anchored_on_github_com) ... ok
+   test_a_fixture_list_is_not_an_ask (__main__.Amendment2_RowSubject.test_a_fixture_list_is_not_an_ask) ... ok
+   test_a_referenced_action_is_not_graded_on_this_clause (__main__.Amendment2_RowSubject.test_a_referenced_action_is_not_graded_on_this_clause) ... ok
+   test_a_bound_refinement_does_not_fire (__main__.Amendment3_OrderedTemplate.test_a_bound_refinement_does_not_fire) ... ok
+   test_a_copula_is_required (__main__.Amendment3_OrderedTemplate.test_a_copula_is_required) ... ok
+   test_a_mismatching_token_does_fire (__main__.Amendment3_OrderedTemplate.test_a_mismatching_token_does_fire) ... ok
+   test_an_action_with_no_licence_question_does_not_fire (__main__.Amendment3_OrderedTemplate.test_an_action_with_no_licence_question_does_not_fire) ... ok
+   test_order_matters_licence_before_subject_does_not_fire (__main__.Amendment3_OrderedTemplate.test_order_matters_licence_before_subject_does_not_fire) ... ok
+   test_a_row_splits_into_cells (__main__.Attribution.test_a_row_splits_into_cells) ... ok
+   test_a_table_match_is_attributed_to_its_row (__main__.Attribution.test_a_table_match_is_attributed_to_its_row) ... ok
+   test_prose_is_attributed_to_its_sentence (__main__.Attribution.test_prose_is_attributed_to_its_sentence) ... ok
+   test_a_blind_parse_is_distinguishable_from_a_clean_one (__main__.Denominator.test_a_blind_parse_is_distinguishable_from_a_clean_one) ... ok
+   test_denominator_is_not_zero (__main__.Denominator.test_denominator_is_not_zero) ... ok
+   test_all_three_action_heading_phrasings_parse (__main__.Notation.test_all_three_action_heading_phrasings_parse) ... ok
+   test_both_section_notations_parse (__main__.Notation.test_both_section_notations_parse) ... ok
+   test_p420_e_fires_against_the_real_platform_vocabulary (__main__.RealSpecimen.test_p420_e_fires_against_the_real_platform_vocabulary) ... FAIL
+   test_p420_e_is_caught_on_both_halves (__main__.RealSpecimen.test_p420_e_is_caught_on_both_halves) ... ok
+   test_the_whole_corpus_yields_exactly_the_specimen (__main__.RealSpecimen.test_the_whole_corpus_yields_exactly_the_specimen)
+   The RATCHET.  Two findings, both `ACTION p420-E`, zero false. ... FAIL
+   test_a_citation_of_an_earlier_closure_is_stale (__main__.StaleArm.test_a_citation_of_an_earlier_closure_is_stale) ... ok
+   test_a_forward_reference_is_not_stale (__main__.StaleArm.test_a_forward_reference_is_not_stale) ... ok
+   test_closures_are_attributed_by_row_not_by_block (__main__.StaleArm.test_closures_are_attributed_by_row_not_by_block) ... ok
+   test_the_live_register_cites_no_closed_gap_in_an_action (__main__.StaleArm.test_the_live_register_cites_no_closed_gap_in_an_action)
+   A measurement, not a tautology: the denominators above are non-zero. ... ok
+   test_a_prose_sentence_first_cell_never_enters_the_vocabulary (__main__.Vocabulary.test_a_prose_sentence_first_cell_never_enters_the_vocabulary) ... ok
+   test_a_row_with_no_licence_token_never_enters (__main__.Vocabulary.test_a_row_with_no_licence_token_never_enters) ... ok
+   test_p422s_two_added_rows_are_the_measured_delta (__main__.Vocabulary.test_p422s_two_added_rows_are_the_measured_delta)
+   🟢 p423 — the growth that reddened `p421`'s constant, pinned as a regression. ... FAIL
+   test_the_hole_is_latent_on_the_live_shelf (__main__.Vocabulary.test_the_hole_is_latent_on_the_live_shelf)
+   🔴 p423 — `p421` PINNED A CARDINALITY WHERE IT MEANT A PROPERTY. ... ok
+   test_the_platform_vocabulary_is_closed_and_shelf_derived (__main__.Vocabulary.test_the_platform_vocabulary_is_closed_and_shelf_derived) ... FAIL
+   test_the_prose_first_cell_hole_is_open (__main__.Vocabulary.test_the_prose_first_cell_hole_is_open)
+   🟡 p421's known hole, asserted so it cannot be forgotten. ... ok
+   test_the_vocabulary_CONFLATES_TIERS_and_it_is_open (__main__.Vocabulary.test_the_vocabulary_CONFLATES_TIERS_and_it_is_open)
+   🔴 p423 — `Gap 423-D`, pinned OPEN rather than closed by a filter. ... FAIL
+   
+   ======================================================================
+   FAIL: test_p420_e_fires_against_the_real_platform_vocabulary (__main__.RealSpecimen.test_p420_e_fires_against_the_real_platform_vocabulary)
+   ----------------------------------------------------------------------
+   Traceback (most recent call last):
+     File "/home/user/education-kb/compose/code/p421-action-answered/test_action_answered.py", line 87, in test_p420_e_fires_against_the_real_platform_vocabulary
+       self.assertEqual(subjects, ["open edx", "sakai"])
+   AssertionError: Lists differ: [] != ['open edx', 'sakai']
+   
+   Second list contains 2 additional elements.
+   First extra element 0:
+   'open edx'
+   
+   - []
+   + ['open edx', 'sakai']
+   
+   ======================================================================
+   FAIL: test_the_whole_corpus_yields_exactly_the_specimen (__main__.RealSpecimen.test_the_whole_corpus_yields_exactly_the_specimen)
+   The RATCHET.  Two findings, both `ACTION p420-E`, zero false.
+   ----------------------------------------------------------------------
+   Traceback (most recent call last):
+     File "/home/user/education-kb/compose/code/p421-action-answered/test_action_answered.py", line 94, in test_the_whole_corpus_yields_exactly_the_specimen
+       self.assertEqual(len(findings), 2, [f[:4] for f in findings])
+   AssertionError: 0 != 2 : []
+   
+   ======================================================================
+   FAIL: test_p422s_two_added_rows_are_the_measured_delta (__main__.Vocabulary.test_p422s_two_added_rows_are_the_measured_delta)
+   🟢 p423 — the growth that reddened `p421`'s constant, pinned as a regression.
+   ----------------------------------------------------------------------
+   Traceback (most recent call last):
+     File "/home/user/education-kb/compose/code/p421-action-answered/test_action_answered.py", line 276, in test_p422s_two_added_rows_are_the_measured_delta
+       self.assertIn(added, vocab)
+   AssertionError: 'canvas lms' not found in {'education erp': 'LGPL-3.0', 'sis (k-12)': 'GPL-2.0', 'school management': 'GPL-3.0', 'interactive content': 'GPL-3.0', 'virtual classroom': 'LGPL-3.0', 'structured lessons': 'Apache-2.0', 'spaced repetition': 'AGPL-3.0', 'academic integrity': 'MIT', 'tutoring evaluation': 'MIT', 'low-bandwidth delivery': 'Apache-2.0', 'lesson planning': 'MIT', 'admissions': 'MIT', 'grading': 'MIT', 'offline-first services': 'MIT', 'civicrm': 'AGPL-3.0'}
+   
+   ======================================================================
+   FAIL: test_the_platform_vocabulary_is_closed_and_shelf_derived (__main__.Vocabulary.test_the_platform_vocabulary_is_closed_and_shelf_derived)
+   ----------------------------------------------------------------------
+   Traceback (most recent call last):
+     File "/home/user/education-kb/compose/code/p421-action-answered/test_action_answered.py", line 225, in test_the_platform_vocabulary_is_closed_and_shelf_derived
+       self.assertIn("sakai", vocab)
+   AssertionError: 'sakai' not found in {'education erp': 'LGPL-3.0', 'sis (k-12)': 'GPL-2.0', 'school management': 'GPL-3.0', 'interactive content': 'GPL-3.0', 'virtual classroom': 'LGPL-3.0', 'structured lessons': 'Apache-2.0', 'spaced repetition': 'AGPL-3.0', 'academic integrity': 'MIT', 'tutoring evaluation': 'MIT', 'low-bandwidth delivery': 'Apache-2.0', 'lesson planning': 'MIT', 'admissions': 'MIT', 'grading': 'MIT', 'offline-first services': 'MIT', 'civicrm': 'AGPL-3.0'}
+   
+   ======================================================================
+   FAIL: test_the_vocabulary_CONFLATES_TIERS_and_it_is_open (__main__.Vocabulary.test_the_vocabulary_CONFLATES_TIERS_and_it_is_open)
+   🔴 p423 — `Gap 423-D`, pinned OPEN rather than closed by a filter.
+   ----------------------------------------------------------------------
+   Traceback (most recent call last):
+     File "/home/user/education-kb/compose/code/p421-action-answered/test_action_answered.py", line 302, in test_the_vocabulary_CONFLATES_TIERS_and_it_is_open
+       self.assertEqual(vocab.get("canvas"), "MIT")          # an AGENT row
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   AssertionError: None != 'MIT'
+   
+   ----------------------------------------------------------------------
+   Ran 31 tests in 1.629s
+   
+   FAILED (failures=5)
+make[1]: *** [Makefile:622: gate-action-answered] Error 1
+🔴 gate-action-answered FAILED — continuing, so no gate can mask its siblings (p300)
+── p423-commit-gate (16 controls: the declaration contract, the UNREGISTERED-RED arm, the Makefile list parser across continuations, the clone-survival census)
+   PASS
+file	finding	gate	detail
+#	total	0
+── p439-case-collision-gate (9 assertions: the registry/self-link/majority channel order, the site-path and .git negatives)
+   PASS
+distinct case-insensitive slugs in the live files: 133
+0 findings: every repository is cited under exactly one spelling
+── p427-conjunctive-grant (24 controls: the MIT+ISC positive, stock GPL-3.0 and Apache-2.0 negatives, the disjunctive shape left to p228, and both guards in isolation)
+   PASS
+── p428-branch-alias (36 assertions over 26 controls: the main-only specimen, the master-only asymmetry, the six non-aliased names, PINNED/TAG/HEAD, the refused verdict on an unreadable ref set, and the empty-ref-set guard)
+   PASS
+── p434-promotion-gate (28 controls: the 4 771 star CC-BY-SA-4.0 load-bearing negative, Gap 433-A's own predicate refuted at C8-C11, the starless population, the reach bound, p439 case folding, and the P541 empty-input refusals)
+   PASS
+slug	family	stars	class
+wenflow-org/wenflow	MIT	59	UNPROMOTED-PERMISSIVE
+zhangl1001/civil-ai	MIT	41	UNPROMOTED-PERMISSIVE
+#	findings	2	predicate=p434
+#	ungraded	2877	REACH-BOUND-not-a-defect-count
+🔴 p434-promotion-gate/live — a PERMISSIVE address on the trending shelves is in NO curated shelf (rows above)
+make[1]: *** [Makefile:1369: gate-promotion] Error 1
+🔴 gate-promotion FAILED — continuing, so no gate can mask its siblings (p300)
+── p435-promotion-sweep (18 controls: the inclusive window edge, the fresh-but-AGPL and fresh-but-CC-BY-SA negatives, the 59.1% majority refutation at C9, recency orthogonal to licence at C10, no star column read at C11, the offset channel carried at C12, PERMISSIVE imported not restated at C13, and the P541 empty-input refusals)
+   PASS
+── p436-promotion-ledger (22 controls: the five negation idioms, C6's comma-crossing false-negation regression, C9's mention-vs-ROW regression, C17's wrong-denominator refusal, the ratchet at and above the pin, and the P541 empty-input refusals on all five instruments)
+   PASS
+ledger rows=265  positive claims derived=287  un-landed distinct=197  ratchet=148
+C1-UNADJUDICATED	GeminiLight/SocialCoach	agents/trending.md:191 claims promotion; no ledger row
+C1-UNADJUDICATED	0/0	agents/trending.md:191 claims promotion; no ledger row
+C1-UNADJUDICATED	ably-labs/realtime-quiz-framework	agents/trending.md:295 claims promotion; no ledger row
+C1-UNADJUDICATED	canyongbs/advisingapp	agents/trending.md:295 claims promotion; no ledger row
+C1-UNADJUDICATED	SirhanMacx/Claw-ED	agents/trending.md:366 claims promotion; no ledger row
+C1-UNADJUDICATED	shigella520/MindTrain	agents/trending.md:366 claims promotion; no ledger row
+C1-UNADJUDICATED	ably-labs/realtime-quiz-framework	agents/trending.md:366 claims promotion; no ledger row
+C1-UNADJUDICATED	yasserstudio/geoalgeria	agents/trending.md:4253 claims promotion; no ledger row
+C1-UNADJUDICATED	D4vRAM369/pbl-project-chronicler	agents/trending.md:4254 claims promotion; no ledger row
+C1-UNADJUDICATED	adlnet/ADL_LRS	repos/trending.md:29 claims promotion; no ledger row
+C1-UNADJUDICATED	adlnet/CATAPULT	repos/trending.md:29 claims promotion; no ledger row
+C1-UNADJUDICATED	openfun/warren	repos/trending.md:29 claims promotion; no ledger row
+C1-UNADJUDICATED	yetanalytics/project-persephone	repos/trending.md:29 claims promotion; no ledger row
+C1-UNADJUDICATED	anthropics/k12-teacher-skills	repos/trending.md:29 claims promotion; no ledger row
+C2-RATCHET	197	un-landed claimed slugs rose above the pinned 148
+C3-REGRESSION	AI-for-Education/edu-qurating	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	AnonymousOnyx22/google-classroom-student-mcp	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	BxnIceLemon/minerva-mcp	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	Ed-Fi-Alliance-OSS/edfi-oneroster	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	Jacob-Met/canvaspilot	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	Kennisnet/php-qti3	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	Kuria-Mbatia/Canvas-MCP-server	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	LongsightGroup/qti3	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	Mattlo0546/classroom-mcp	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	Mugen-Ibi/Classroom-MCP	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	OpenOLAT/qtiworks	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	OpenOLAT/qtiworks	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	OpenOLAT/qtiworks	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	PrahanG/Google-Classroom-MCP	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	Shashwatpog/poke-canvas-mcp	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	Shiv-D-Coder/google-mcp-agent	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	Teci-AI/moodle-mcp-connector	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	The-Morrow-Project/Morrow-Bridge	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	UKplus8HRS/bb-mcp	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	a-ariff/canvas-mcp	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	amp-up-io/qti3-item-player	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	angelonrevelo/bettercanvasmcp	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	arthurcuri/mcp-instructure-canvas	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	charlie2233/coursebinder-ai-ready-google-classroom-exporter	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	datakind/student-success-tool	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	marcosroriz/sete	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	praisethefacts/dsh-plugin-google-classroom	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	sinh-x/personal-google-mcp	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	supachai-j/google-classroom-mcp-project	recorded RESTORED-p436 and is on NO live shelf
+C3-REGRESSION	sweeden-ttu/canvas-lms-mcp	recorded RESTORED-p436 and is on NO live shelf
+45 finding(s)
+🔴 p436-promotion-ledger/live — a promotion claim is unadjudicated, the backlog GREW, or a restored row was dropped again (rows above)
+make[1]: *** [Makefile:1377: gate-promotion-ledger] Error 1
+🔴 gate-promotion-ledger FAILED — continuing, so no gate can mask its siblings (p300)
+── p439-grant-presence (87 controls: the live Vercel-held 552 B notice, the FULL Apache-2.0 negative that carries all three reference markers, the curly-quote false positive on a complete MIT grant, the liability-cap clause, TRUNCATED vs BY-REFERENCE, UNCALIBRATED as a third answer, the dead-marker control, the P541 refusals, p440's GPL-family group: stock GPL-3.0 read as AGPL is NOT a grant, a complete GPL-2.0 fails the 3.0 profile, the version resolver refuses two declarations and LGPL declines by design, and p441's BSD variant group: a complete BSD-2 is not condemned for lacking an endorsement clause, a BSD-3 truncated AT that clause is TRUNCATED while the same payload UNTITLED declines rather than passing, four of this base's eleven published BSD payloads carry no title at all, and BSD-0/BSD-4 are recognised and unprofiled)
+   PASS
+── p442-cell-reproduction (29 controls: the capture-measured cell, the unrecorded cell, the stale record, no cross-slug digest credit, the branch-qualified spelling, P355's three empty cases, the header-row control, and C12-C14 — the three parser defects this gate found in its OWN parser)
+   PASS
+🔴 p442: zero published cells parsed — a parse fault, not a clean shelf (P355)
+# p443: reproduction record read from 3 sweep(s): published-cell-reproduction.2026-10-25-p442.tsv, published-cell-reproduction.2026-10-25-p443.tsv, published-cell-reproduction.2026-10-25-p445.tsv
+make[1]: *** [Makefile:377: gate-cell-reproduction] Error 1
+🔴 gate-cell-reproduction FAILED — continuing, so no gate can mask its siblings (p300)
+
+── p300 hooks runner — every gate ran, none masked
+🔴 FAIL — 48/63 gates green; RED: recount gate-enumeration gate-shelf-consistency gate-register-currency gate-fold-identity gate-author-key gate-census-currency gate-grant-path gate-census-union gate-i2-sweep-crosscheck gate-union-currency gate-action-answered gate-promotion gate-promotion-ledger gate-cell-reproduction
+make: *** [Makefile:385: hooks] Error 1
+EXIT=2

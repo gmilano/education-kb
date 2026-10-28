@@ -1,0 +1,14 @@
+# p503 2026-10-28 — channel boundary map. Three probes per HTTP channel; 000 = agent-proxy CONNECT refused (host not permitted).
+channel	how	probe_1	probe_2	probe_3	verdict
+GitHub REST search (repos) via MCP	mcp__github__search_repositories, arbitrary owner	OK	OK	OK	WORKS for ANY public repo — total_count, stars, forks, topics, license.spdx_id, created_at, pushed_at, archived
+GitHub REST contents via MCP	mcp__github__get_file_contents, owner outside session scope	DENIED	-	-	REFUSED: "repository is not configured for this session" — per-repository authorisation. Licence BYTES cannot come from this channel
+api.github.com via curl	GET /repos/learning-commons-org/evaluators	403	403	403	BLOCKED (unchanged)
+raw.githubusercontent.com (control)	GET /<repo>/HEAD/LICENSE.md	200	200	200	WORKS — the only byte channel for arbitrary repos
+git ls-remote (github.com)	git ls-remote <repo> HEAD	OK	-	-	WORKS — the pinned-SHA source
+git ls-remote (gitlab.com)	git ls-remote gitlab-org/gitlab-foss HEAD	OK	-	-	WORKS — pinning is not GitHub-specific
+download.moodle.org plugin API	GET /api/1.3/pluginlist.php	000	000	000	BLOCKED — the LMS plugin registry axis Gap 500-A asked for is unreachable, not unmined
+codeberg.org API	GET /api/v1/repos/search	000	000	000	BLOCKED
+huggingface.co API	GET /api/models?search=education	000	000	000	BLOCKED
+api.npmjs.org (download counts)	GET /downloads/point/last-week/ltijs	000	000	000	BLOCKED — no demand-side signal available
+registry.npmjs.org (search)	GET /-/v1/search?text=lti	200	200	200	WORKS
+gitlab.com/api/v4 projects	GET /projects?search=moodle	200	200	429	WORKS, RATE-LIMITED — a non-GitHub forge IS reachable (4/6 probes 200); retry with backoff

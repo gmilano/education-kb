@@ -1,0 +1,14 @@
+# p503 2026-10-28 — `make hooks` RUN. Gap 446-A has recorded "not gate-attested" for ~26 passes; this is the run.
+# Command: make hooks (offline; no network gate). Full log retained at hooks-run.2026-10-28-p503.log
+result	value
+gates_total	63
+gates_green	48
+gates_red	15
+exit_code	2
+red_gates	recount gate-enumeration gate-shelf-consistency gate-register-currency gate-fold-identity gate-author-key gate-census-currency gate-grant-path gate-census-union gate-i2-sweep-crosscheck gate-union-currency gate-action-answered gate-promotion gate-promotion-ledger gate-cell-reproduction
+# The three reds that name THIS pass's subject matter:
+gate	what it says	relation to p503
+gate-promotion	"a PERMISSIVE address on the trending shelves is in NO curated shelf": wenflow-org/wenflow (MIT, 59*), zhangl1001/civil-ai (MIT, 41*)	the base already OWNED an instrument for the promotion gap p502 described in prose; it was never run. Its reach bound is 2877 ungraded rows, so it did NOT see p503's three promotions
+gate-promotion-ledger	C2-RATCHET: un-landed promotion claims rose to 197 against a pin of 148; C1-UNADJUDICATED on 15 slugs incl. GeminiLight/SocialCoach, adlnet/ADL_LRS, SirhanMacx/Claw-ED	trending files CLAIM promotions that never landed on a shelf. a promotion table in agents/trending.md marks wenflow and civil-ai "Promoted" while no shelf carries them (line numbers shift every pass; search the slug)
+gate-register-currency	FAIL	the register's newest section must be p(N-1). Measured: p501. Expected: p502. Same failure p501 recorded against p500 — now two passes in a row
+gate-cell-reproduction	"zero published cells parsed - a parse fault, not a clean shelf (P355)"	the cell parser no longer matches the shelves' current table shapes; a green here would be meaningless until it parses again

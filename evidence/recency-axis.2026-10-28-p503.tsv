@@ -1,0 +1,10 @@
+# p503 2026-10-28 — the recency axis: slice supply by CREATION DATE instead of by topic.
+# Rationale: Gap 500-A/501-A/502's censuses all sliced by topic and found the axes exhausted.
+# A time slice asks a different question: is the NEW supply new to this base?
+query	total_count	rows_read	rows_already_in_base	novelty_pct
+topic:education stars:>50 created:>2026-07-28 (sort=stars)	60	12	12	0.0
+topic:edtech stars:>25 created:>2026-04-01 (sort=stars)	20	12	12	0.0
+topic:ai-in-education stars:>50 (p502 re-run, control)	3	3	3	0.0
+# Reading: 0/24 novel on the top-star slices of a 90-day and a 180-day window.
+# The recency axis is NOT a new source of supply for this base; it is a new way of confirming saturation.
+# What it DID surface: 6 of 18 audited rows have never reached a shelf (promotion-audit.2026-10-28-p503.tsv).

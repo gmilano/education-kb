@@ -1,0 +1,21 @@
+# p503 2026-10-28 — two-channel licence reads for the six never-shelved rows.
+# Channel A: raw.githubusercontent.com/<repo>/<pinned_sha>/<path>, bytes + git blob SHA-1 computed locally.
+# Channel B: license.spdx_id from the GitHub REST search API via the MCP channel.
+# pinned_sha from `git ls-remote <repo> HEAD` (api.github.com is 403 under this session's policy).
+# path matrix probed: {LICENSE,LICENCE,License,license,COPYING,Copying,copying,NOTICE} x {"",.md,.txt,.MD,.TXT,.rst} = 48 paths
+# (widened per Gap 501-F: case and extension varied TOGETHER, which the old 6-path probe did not do).
+repo	pinned_sha	path	bytes	blob_sha1	sha256_16	family_from_bytes	api_spdx_id	agree	verdict
+xevrion/breakscale	c58de512f3ae	LICENSE	1080	0c920ce1638e	33ea9e6b8b9621dc	MIT	MIT	YES	PERMISSIVE — operative body IDENTICAL to retained canonical MIT (164 words, md5 745e05f91f85)
+Miaotofu01/Study-Mate	d8114f383632	LICENSE	1064	1b105b8e1b6b	dc1997d8218985c9	MIT	MIT	YES	PERMISSIVE — operative body IDENTICAL to retained canonical MIT
+dmoshehun-prog/learn-from-materials	f8849746d85c	LICENSE.md	1122	361465fb8b78	15ce43afa44a3cf4	MIT	MIT	YES	PERMISSIVE — operative body IDENTICAL to retained canonical MIT; ships an additional NOTICE.md (2287 B, blob 461167a25e0e)
+TrenTorch/TrenTorch	898b8664cb38	LICENSE	4635	d0fe054b67ee	a1530b506c55fef1	PolyForm-Noncommercial-1.0.0	NOASSERTION	NO	NOT OPEN SOURCE — source-available, non-commercial. API label hides it. Confirms the p502-era read at 385 stars; byte count unchanged (4635)
+JudgePeach/math-question-bank	135b78b0f22c	LICENSE	34523	be3f7b28e564	0d96a4ff68ad6d4b	AGPL-3.0	AGPL-3.0	YES	COPYLEFT — 6 tokens from retained canonical AGPL-3.0-only (fill-in lines); not shelvable as permissive
+artcc/freelingo	269feb00c09a	LICENSE	34514	128919466b58	ea94d5765c590b11	AGPL-3.0	AGPL-3.0	YES	COPYLEFT — 9 tokens from retained canonical AGPL-3.0-only (fill-in lines); not shelvable as permissive
+# Re-reads of the two Gap 502-D rows, at the same pinned commits the shelves already cite:
+learning-commons-org/evaluators	b9d47891c1b8	LICENSE.md	1615	86eebd7ebc43	86c7be78af8ba536	MIT (code) + CC-BY-4.0 (content) + CC-BY-NC-SA-4.0 (two corpora)	NOASSERTION	NO	CONFIRMS shelf cell; blob SHA-1 recorded here for the first time
+learning-commons-org/knowledge-graph	a7547180c47d	LICENSE.md	5789	6320adcd726e	d849ffef4f9816cb	MIT (code) + per-dataset: Open (CC-BY-4.0/CC0) | Open+Gated | Gated (not open)	NOASSERTION	NO	CONFIRMS shelf cell; blob SHA-1 recorded here for the first time
+# NOTE on hash conventions (Gap 503-D): shelf cells in this KB print a bare 12-hex token for a payload.
+# MANIFEST.tsv carries BOTH git_blob_sha1 AND sha256_16. The bare cells are sha256 prefixes, NOT blob SHA-1s.
+# Fixtures: wenflow-org/wenflow LICENSE 1067 B -> blob 2611735149f3, sha256_16 b6fac57d47103d5f (the published cell reads b6fac57d4710).
+#           zhangl1001/civil-ai LICENSE 1067 B -> blob f9c5865d1ed2, sha256_16 5731a2d3ccea989c (the published cell reads 5731a2d3ccea).
+# Both payloads are therefore IDENTICAL to what the base recorded; a blob-vs-cell comparison would have reported false DRIFT.

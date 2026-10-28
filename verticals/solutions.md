@@ -665,3 +665,49 @@ usual recommendation: don't fork the LMS, integrate with it over LTI and own the
 🔴 **Regional reality, stated as measured:** five of the six rows are North American and the two EMEA
 rows are one organisation. **No APAC or LATAM record-layer platform was found** on the channel used
 (`Gap 502-E` names the channel and its blind spots — non-English naming and non-GitHub forges).
+
+## 🆕 `p503` — `2026-10-28` — **two platform rows that have been in this base's history for months with no platform row, both read from bytes, and both copyleft — plus the interop claim this file has never checked against its source**
+
+Reads: [`licence-bytes.2026-10-28-p503.tsv`](../evidence/licence-bytes.2026-10-28-p503.tsv),
+[`promotion-audit.2026-10-28-p503.tsv`](../evidence/promotion-audit.2026-10-28-p503.tsv).
+Narrative: [`agents/trending.md`](../agents/trending.md) `p503`.
+
+### 🟡 Customisable platforms — copyleft, so the grant decides the engagement shape
+
+| Layer | Platform | Licence @ pinned SHA | ★ | What it is | Region basis |
+|---|---|---|---|---|---|
+| 🟡 **Self-hosted language learning** | [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0**, 34 514 B `269feb00c09a` (blob `128919466b58`, sha256₁₆ `ea94d5765c590b11`), 9 tokens from canonical | 210 | Full platform, not a component: CEFR study plans, an AI tutor, **voice conversations**, flashcards and spaced repetition, with **local or cloud** inference (`ollama` in its own topics), shipped as `docker-compose`. FastAPI + Next.js. | **EMEA** — CEFR is the Council of Europe's framework and the author's site is a Spanish-language personal domain |
+| 🟡 **Assessment-item bank** | [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank) | 🔴 **AGPL-3.0**, 34 523 B `135b78b0f22c` (blob `be3f7b28e564`, sha256₁₆ `0d96a4ff68ad6d4b`), 6 tokens from canonical | 358 | The layer every tutor on these shelves assumes and none supplies: a **question bank** with live LaTeX rendering, LLM parsing/solving and **formula OCR** for ingesting paper items. Localised to Chinese senior-secondary maths. | **APAC** — Chinese-language artefact, 高中 (senior secondary) curriculum scope |
+
+🔴 **Both are AGPL-3.0, and for these two that is a deployment question, not a packaging question.**
+A hosted deployment for a client triggers §13: the modified source must be offered to the users who
+interact with it over the network. 🟢 **Shelf rule, same as `MoodleNet`/`Openki` above: viable where
+the client accepts an AGPL estate or runs it internally; not viable as a component inside a
+proprietary product.** For the freelingo shape specifically, the **local-inference** posture
+(`ollama`) is what survives a ministry data-residency clause — see `T1`/`T13`.
+
+🔵 **Why neither is in the permissive table:** this file's permissive tier is for platforms Globant
+can fork into client IP. 🔴 Neither can be. They are here because the alternative — leaving a
+210★ voice-capable tutor platform and the only OCR-capable item bank on these shelves **unrecorded**
+— is the failure mode `Gap 502-C` named: *graded and unshelved*.
+
+### 🔴 `OpenEduCat`'s interoperability claim — sourced, and marked as the vendor's own
+
+This file's **Education ERP** row (line 34) and `p501`'s byte-read establish the licence
+(**LGPL-3.0**). What has never been recorded is what the platform claims to *interoperate* with,
+which is the question a client asks second:
+
+| claim | as published by | status here |
+|---|---|---|
+| **LTI 1.3** tool support | `openeducat.org` solution pages | 🔴 **vendor-sourced, unverified** — no repository artefact read |
+| **OneRoster** + **Ed-Fi** roster sync for SIS integration | `openeducat.org` | 🔴 vendor-sourced, unverified |
+| **SCORM / xAPI** content support, Shibboleth SSO | `openeducat.org` | 🔴 vendor-sourced, unverified |
+| Pricing | `openeducat.org` | 🔴 **internally inconsistent** — one comparison page lists *Free + $69–$1 119/yr*, a solutions page *Enterprise from $19 per staff user* |
+
+🔵 **Recorded as claims, not capabilities**, and with the reason: a single-vendor domain supplied
+**every** result for the query *"open source platform education LMS SIS ERP MIT Apache 2026
+self-hosted"* — nine of nine results were `openeducat.org` pages in eight languages, the same
+single-source pattern `p501` already flagged on this row. 🟢 **If an engagement depends on LTI 1.3
+or OneRoster in OpenEduCat, the module must be read in the repository first** — this base has an
+LTI corpus (`Cvmcosta/ltijs`, `1EdTech/lti-1-3-php-library`, `Harvard-University-iCommons/django-lti`)
+to compare against. Registered as `Gap 503-F`.

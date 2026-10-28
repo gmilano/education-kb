@@ -1,0 +1,19 @@
+# p503 2026-10-28 — the non-GitHub forge axis (Gap 502-E), re-measured on gitlab.com.
+# Channel: GET https://gitlab.com/api/v4/projects?search=<term>&order_by=star_count&sort=desc&per_page=20&license=true
+# 200 on 4 of 6 probes; 429 on the rest (retry with backoff). license= did NOT populate: every row returned license=null.
+# Terms completed before the rate limiter closed the window: education, e-learning. moodle/lms/xapi/tutor incomplete.
+term	rows	top_row	top_stars	already_in_this_base	note
+education	20	oer/emacs-reveal	53	YES (repos/trending.md: LICENSE 517 B, br=main, 49a1c8f1c5b3)	2nd row Openki/Openki 35* also carried (AGPL-3.0, 34520 B, br=dev)
+e-learning	20	cjaikaeo/elabsheet	14	YES (repos/trending.md: BSD-2-Clause, re-verified)	autograder for e-learning, Kasetsart Univ (TH) — APAC
+# Novelty on this axis in this window: 0 of 40 rows read.
+# Ceiling: the most-starred education project gitlab.com returns is 53 stars. GitHub's top row in the same
+# 90-day recency slice is 4705. The forge is ~2 orders of magnitude smaller on this vocabulary — it is a
+# coverage obligation, not a supply reservoir.
+# Re-reads performed (payload identity added where the base had none):
+repo	pinned_sha	path	bytes	blob_sha1	sha256_16	family	note
+cjaikaeo/elabsheet (gitlab)	d69a76af0a93	LICENSE	1325	26036f22cf72	8be92e91c1f6968d	BSD-2-Clause	Copyright 2013 Chaiporn Jaikaeo + Jittat Fakcharoenphol; CONFIRMS the base's BSD-2 record
+# INSTRUMENT DEFECT caught in this pass, before publication:
+# An ad-hoc probe loop interpolated an EMPTY $sha into the raw URL when `git ls-remote` timed out, producing
+# https://gitlab.com/cjaikaeo/elabsheet/-/raw//LICENSE -> 404, i.e. a FALSE ABSENCE for a grant that exists.
+# `probe.sh` guards this ([ -z "$sha" ] -> LS-REMOTE-FAIL); the ad-hoc loop did not. Any probe must assert
+# the pinned SHA is 40 hex characters BEFORE fetching. A 404 from a malformed URL is a claim about the fetcher.

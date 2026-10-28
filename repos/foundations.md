@@ -821,3 +821,71 @@ grant payload is still the **19-byte** `license.txt` reading exactly `License: G
 (`sha1 425d2be709a6`, at `develop` `73ce33ef2719`) — the fixture behind this file's *"19-byte
 license"* section. 🔴 Its default branch is **`develop`, not `main`**; `main` does not resolve, which
 is this file's branch-name trap in its original instance.
+
+## 🆕 `p503` — `2026-10-28` — **🟢 `Gap 502-D`'s TWO PAYLOADS ARE RE-READ AND BOTH SHELF CELLS HOLD — the gap text next to them says *"neither payload was byte-read this pass"* while the rows above it carry the byte counts, so the GAP is stale, not the cells. 🟢 Both now carry a blob SHA-1, which is what a drift check needs and neither had. 🟢 One MIT simulator shelved. 🔴 And the LMS-plugin-registry axis `Gap 500-A` asked for is UNREACHABLE from this session, which is an informed gap, not an unmined one.**
+
+Reads: [`licence-bytes.2026-10-28-p503.tsv`](../evidence/licence-bytes.2026-10-28-p503.tsv),
+[`channel-boundary.2026-10-28-p503.tsv`](../evidence/channel-boundary.2026-10-28-p503.tsv).
+
+### 🟢 `Gap 502-D` — re-resolved from bytes, and the terms are richer than one cell can hold
+
+Both payloads re-fetched at the **same pinned commits this file already cites**, bytes and git
+blob SHA-1 computed locally:
+
+| repo | path | bytes | blob SHA-1 | pinned commit | vs the cell above |
+|---|---|---|---|---|---|
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | `LICENSE.md` | **5 789** | 🆕 blob `6320adcd726e` · sha256₁₆ `d849ffef4f9816cb` | `a7547180c47d` | 🟢 **byte count identical** |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | `LICENSE.md` | **1 615** | 🆕 blob `86eebd7ebc43` · sha256₁₆ `86c7be78af8ba536` | `b9d47891c1b8` | 🟢 **byte count identical** |
+
+🔵 **Why the blob SHA-1 matters and the byte count does not suffice:** a byte count collides
+trivially — any one-character substitution preserves it. The blob SHA-1 is what `p501`'s retention
+check (`MANIFEST.tsv`) compares, and neither of these rows could be checked that way until now.
+
+🟢 **`knowledge-graph`'s terms, in full, because the one-line cell flattens three states into one:**
+
+| access type | grant | where the licence lives |
+|---|---|---|
+| **Open** | 🟢 CC BY 4.0 (most) or CC0 (a minority) | row-level attribution in the dataset |
+| **Open + Gated** | 🟡 **split per download** — e.g. *Scope and sequence* Open while *Instructional materials* and *Assessment materials* are Gated | stated per download on the dataset page |
+| **Gated** | 🔴 **not covered by any open licence**; access requires Data Provider approval under separate terms | on request from the publisher |
+
+🔴 **The clause that decides whether this is shelvable for a paid engagement**, quoted:
+*"If you compile datasets from the catalog into your own Knowledge Graph build, you take on the
+licensing and attribution obligations of every dataset and download you include."* And:
+*"Attribution travels with the data, not with Learning Commons."* 🟢 **Shelf rule, unchanged but now
+grounded: build on the MIT code; treat every dataset as a separate procurement question, and never
+publish a derivative build as uniformly CC BY 4.0.**
+
+🔵 `evaluators` is the same shape with a sharper edge: **code MIT**, prompts and settings
+**CC BY 4.0**, and the two annotated corpora it ships — **CLEAR** and **PERSUADE 2.0** —
+**CC BY-NC-SA 4.0, non-commercial**. The code is billable; the rubric corpora are not.
+
+### 🟢 Shelved — an MIT teaching simulator, with its limits stated
+
+| Repo | Licence @ pinned SHA | ★ | Operative body | What it is | Region basis |
+|---|---|---|---|---|---|
+| [`xevrion/breakscale`](https://github.com/xevrion/breakscale) | 🟢 **MIT**, 1 080 B `c58de512f3ae` (blob `0c920ce1638e`, sha256₁₆ `33ea9e6b8b9621dc`) | **1 858** | 🟢 **IDENTICAL** to retained canonical MIT | A **load-it-until-it-breaks** system-design simulator: build an architecture on a canvas, drive traffic through it, watch the queueing behaviour explain the failure. TypeScript + React, `queueing-theory` in its own topics. | 🔴 **unplaced** — English artefact, `breakscale.tech`, no locale signal; recorded as unplaced rather than defaulted to a region |
+
+🔴 **What it is not:** there is no AI in it, and the subject is one topic (distributed systems), so
+it is **courseware machinery, not an education platform** — the reusable part is the
+simulate-then-explain loop, which is the shape an agentic lab assistant needs and which this
+shelf had no permissive instance of.
+
+### 🔴 The registry axis is blocked, not unmined — three probes each
+
+`Gap 500-A` asked for *"topic co-occurrence, LMS plugin registries, or a non-GitHub forge"* and
+`Gap 502-E` named non-GitHub forges as the likeliest blind spot. Probed:
+
+| channel | 3 probes | verdict |
+|---|---|---|
+| `download.moodle.org/api/1.3/pluginlist.php` | `000 000 000` | 🔴 **BLOCKED** by this session's network policy — the Moodle plugin registry cannot be read here |
+| `codeberg.org/api/v1/repos/search` | `000 000 000` | 🔴 **BLOCKED** |
+| `huggingface.co/api/models` | `000 000 000` | 🔴 **BLOCKED** |
+| `api.npmjs.org/downloads/point/...` | `000 000 000` | 🔴 **BLOCKED** — no demand-side signal (downloads) is obtainable |
+| `registry.npmjs.org/-/v1/search` (control) | `200 200 200` | 🟢 works |
+| `gitlab.com/api/v4/projects?search=` | `200 200 429` | 🟢 **ANSWERS, rate-limited** |
+
+🟢 **One non-GitHub forge is reachable** — `gitlab.com`'s REST API, and `git ls-remote` pins SHAs
+there exactly as it does on GitHub (verified against `gitlab-org/gitlab-foss`). 🔴 **The registry
+axis needs a network-policy change, not another pass** — same class as `Gap 499-C`'s `gnu.org`.
+Registered as `Gap 503-B`.
