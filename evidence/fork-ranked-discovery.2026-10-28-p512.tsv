@@ -1,0 +1,4 @@
+leg	qualifiers	returned	new_to_base	note
+A	topic:ai-tutor forks:>20 pushed:>2026-07-01	11	0	every hit already shelved; star-ranked vocabulary, saturated as p511 measured
+B	topic:education stars:50..600 forks:>120 pushed:>2026-04-01 sort:forks	40	4	expertiza, openroberta-lab, tongjiang-lab, DoubtDesk
+C-CONTROL	topic:education forks:>80 stars:<250 pushed:>2026-06-01 repo:HKUDS/DeepTutor	0	-	INSTRUMENT DEFECT: the in-query known-good control ANDs with the filters and is annihilated; total_count 0 with incomplete_results false

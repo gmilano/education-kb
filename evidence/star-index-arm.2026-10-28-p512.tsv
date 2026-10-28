@@ -1,0 +1,3 @@
+WRONG	verticals/solutions.md:329	instructure/canvas-lms	cell=6,900	api=6890	delta=-10
+WRONG	verticals/solutions.md:349	anthropics/k12-teacher-skills	cell=595	api=600	delta=+5
+# COLUMN ARM, no adjacency precondition: 119 cells | WRONG 2 | exact 109 | not-read 8 | no-addr-left 0

@@ -4,6 +4,121 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p512` — `2026-10-28` — **🔴 `T40` IS HALF REFUTED ONE PASS AFTER IT WAS REGISTERED: typography is NOT a data-quality signal — bolded cells are wrong at 27 %, plain at 28 % — and only ROUNDNESS survives, as a screen with 56 % recall rather than a verdict. 🆕 `T42`: an absence must be enumerated over BRANCHES, not just paths, and a real repository just proved it. 🆕 `T43`: a licence detector and a byte reader fail in OPPOSITE directions, and knowing which is which is now a two-line rule. 🆕 `T44`: a self-checking query can annihilate its own control. 🆕 `T45`: the sector's supply is discoverable and its demand is not.**
+
+### 🔴 `T40` — half refuted, and the surviving half is weaker than it was registered
+
+`p511` registered `T40` as *"typography is a data-quality signal, and roundness beats provenance."*
+🟢 **Tested this pass on 91 cells, classified before any value was seen:**
+
+| feature | 🔴 wrong | 🟢 exact | wrong-rate | verdict |
+|---|---|---|---|---|
+| bolded | 8 | 22 | **27 %** | 🔴 **no signal** |
+| plain | 17 | 44 | **28 %** | 🔴 **no signal** |
+| ends in `00` | 14 | 3 | 🔴 **82 %** | 🟢 screen survives |
+| does not | 11 | 63 | 🟢 **15 %** | — |
+
+🔴 **Bolding discriminates nothing** — one percentage point apart — and among non-round cells it is
+*mildly anti-informative* (**BOLD 25 % wrong vs plain 9 %**), because this base bolds its flagships
+and a flagship's count moves fastest. 🔴 **And roundness is a screen, not a verdict: its recall is
+14/25 = 56 %** — it misses nearly half the defects — while `p511` read 4/4 and took it for a law.
+Three round cells are **exact** (`k12-teacher-skills` 600, `openeducat_erp` 900 twice).
+🟢 **The rule, in its final form:** *a round star cell is unread until re-read* — a statement about
+what you may claim, never about what the value is.
+
+🔵 **The deeper lesson, which is about frames and not about stars.** `p510` framed its census on
+bolded cells; `p511` framed on the live shelves' star cells; both frames were **typographic**, and
+[`verticals/solutions.md`](../verticals/solutions.md)'s 26-row platform table has **two** bolded star
+cells out of 26 — so it was structurally invisible to both, and **11 of its cells were wrong**.
+🟢 **Framing on table STRUCTURE instead found 39 wrong cells against `p511`'s four.** A frame built
+from a feature of the *writing* will systematically miss whichever part of the base writes
+differently.
+
+### 🆕 `T42` — an absence must be enumerated over BRANCHES, not only over paths
+
+`T34` (`p509`) says an absence is a claim about everything, and only an enumeration can carry it — a
+path list can never prove a licence missing. 🔴 **`p512` found the second axis of the same error.**
+[`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) serves **no licence
+payload at 12 paths on `develop`**, which `git ls-remote --symref` confirms is its true default
+branch — and serves **Apache-2.0 at `master/LICENSE`, 11,359 B, `sha256₁₆ 8c6db340475136df`**.
+🔴 **A 12-path probe on the resolved default branch is still a path list; it is just a longer one.**
+🔵 This also **inverts** `T36`/`p509`'s practical advice. Resolving the true default branch is right
+for *liveness* and for *pins*; for a **grant** it can manufacture a false absence, because a project
+that cuts releases from `master` and works on `develop` has no reason to carry the licence file
+forward. 🟢 **Rule: default branch for liveness, all branches for the grant.** Until branches are
+enumerated, `NONE-OF-N-PATHS` means **unread**, not **unlicensed**.
+
+### 🆕 `T43` — the detector and the byte reader fail in opposite directions, and both failures are now named
+
+`T33` (`p508`) established that a detector's **abstention** is not a denial. 🟢 **`p512` met both
+failure directions in one sweep of four new addresses, which makes the rule symmetrical and cheap:**
+
+| address | API `license.spdx_id` | the bytes | who is wrong |
+|---|---|---|---|
+| [`expertiza/expertiza`](https://github.com/expertiza/expertiza) | 🟢 `MIT` | verbatim MIT body, **1,068 B**, 🔴 **no title line** | 🔴 **the byte reader** — `p455`'s title-block anchor sees nothing here (`p509`'s defect #4, now on a real address) |
+| [`smithjohn78390/tongjiang-lab`](https://github.com/smithjohn78390/tongjiang-lab) | 🔴 `NOASSERTION` (`key: other`) | **CC BY-NC 4.0** named in prose, **643 B** | 🔴 **the detector** — it abstains on a grant that is explicit and **non-commercial** |
+
+🔴 **The commercially dangerous direction is the second one.** A candidate pipeline that screens on
+`spdx_id != NOASSERTION` keeps `tongjiang-lab` as *"licence unknown, investigate later"* — and
+*unknown* is a far more comfortable label than **non-commercial**, so it survives triage. 🟢 **The
+two-line rule:** a **recognised** `spdx_id` is admissible evidence *for* a grant even when the byte
+anchor cannot see it; an **abstention** is never evidence *for* anything, and the bytes decide.
+🔵 Both arms must run on every new address. Either alone is wrong about 1 in 2 of these four.
+
+### 🆕 `T44` — a self-checking query can annihilate its own control
+
+🟢 `T37` (`p510`) says a check that cannot fail is not evidence, and prescribed feeding every
+instrument a known-bad. 🔴 **`p512` found the mirror failure: a known-GOOD control that the query
+itself deletes.** The leg
+`topic:education forks:>80 stars:<250 pushed:>2026-06-01 repo:HKUDS/DeepTutor` returned
+**`total_count: 0` with `incomplete_results: false`** — a clean, confident zero — because search
+qualifiers **AND**: `DeepTutor` satisfies neither `stars:<250` nor the topic, so the control was
+eliminated along with everything else. 🔵 **A malformed query and an empty world return the same
+byte on this channel**, and the control that was supposed to tell them apart was the thing removed.
+🟢 **Rule: an in-query control is valid only on a pure disjunction of `repo:` terms. Any filtered leg
+must be controlled by a second, separate call.** 🟢 Run that way, the same technique then produced
+this base's strongest reading of `Gap 504-A`: `openedx/edx-platform` absent, the control present,
+`incomplete_results: false` — **the channel, not the query**.
+
+### 🆕 `T45` — in this sector, supply is discoverable and demand is not, and the fix for supply was a sort key
+
+🔴 In one pass, with the same instrument: **eight prescribed demand legs returned zero new figures**
+(third consecutive pass), while **one change of sort key on the supply side returned four addresses
+new to this base**.
+
+| axis | what was wrong | what fixed it |
+|---|---|---|
+| supply | ranking by **stars** — attention, already harvested | 🟢 ranking by **forks** — institutional copies, invisible to every trending list |
+| demand | the **channel** — a general web search for a region | 🔴 unfixed. 🟢 `T30`'s workaround holds: query the **instrument** (the Act, an Annex, a national transposition), never the region |
+
+🔵 **Why forks are the right key in education specifically:** a star is one person deciding to
+remember a repository; a fork is frequently one *institution* deciding to run it. In a sector whose
+buyers are institutions, the fork count is the commercial signal — and it reaches software that never
+trends, like [`expertiza/expertiza`](https://github.com/expertiza/expertiza) at **1,329 forks against
+194★**. 🔴 **The cost is precision: 36 of the leg's 40 rows were not education-AI at all**, because
+`education` is a self-applied topic and the fork axis amplifies whatever the label admits —
+Hacktoberfest starter repositories are forked by contributors, not institutions. **A finder, never a
+ranking.**
+
+### 🔴 Carried trends, re-checked this pass
+
+- 🔴 **`T38` (an unenforced repair regresses within one pass) — CONFIRMED on a second shape, and a
+  worse one.** `p511` saw a repaired heading regress; `p512` finds that **2 of `p511`'s own 4
+  published corrections never reached the shelf at all** (`ai-agents-for-beginners` still at
+  `78,059`; `14,300` alive in two live recipes). **A correction is not a correction until it is
+  applied at every live site**, and the cross-file agreement check is now the instrument that proves
+  it: **7 of 29 multiply-present addresses disagreed with themselves.**
+- 🟢 **`T39` (discovery is saturated) — BOUNDED, not refuted.** Saturation is a property of
+  attention-ranked discovery. See `T45`.
+- 🟢 **`T26` (the newest supply is deliberately non-commercial) — holding, seventh pass, and this is
+  its clearest instance:** the fastest-rising address this base has ever recorded in a day
+  (`tongjiang-lab`, 446★ in <24 h) is refused on its licence, not its quality.
+- 🟢 **`T29` / `Gap 504-A` standing checks:** `archived: false` on all 71 addresses read on the API
+  this pass; `incomplete_results: false` on every batch.
+- 🔴 **`T10` (market sizing is not usable) — STRENGTHENED.** The 2026 spread widens from **1.9× to
+  3.3×** (`$3.7B` – `$12.3B`), and a second North-America share figure (**42 %**) now contradicts the
+  shelved **36 %** that this file called the one point of agreement.
+
 ## 🆕 `p511` — `2026-10-28` — **🟢 THE GATE RAN, AND THE SINGLE MOST IMPORTANT TREND ON THIS BASE IS THAT SIXTEEN PASSES OF UNATTESTED WORK NOW HAVE A VERDICT: 45 of 63 gates green. 🆕 `T38`–`T41` registered. 🔴 One of them is the discovery channel's saturation, measured at 95.2 % shelf recall rather than asserted as "zero new addresses".**
 
 ### 🆕 `T38` — An unenforced repair regresses within one pass

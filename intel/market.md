@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p512` — `2026-10-28` — **🔴 A 2026 MARKET ESTIMATE BELOW THIS FILE'S ENTIRE PUBLISHED RANGE TURNED UP, AND IT WIDENS THE SPREAD FROM 1.9× TO 3.3×: `$3.7B` against a shelved floor of `$6.4B`. `T10` is not softening with time — it is getting worse. 🔴 A SECOND North-America share figure for the SAME YEAR (42 %) contradicts this file's shelved 36 %. 🔴 Both are UNCONFIRMED and the reason is a named, one-action denial: the publisher's domain does not resolve from this session. 🔴 All four regional legs ran and returned nothing this base does not hold — a THIRD consecutive saturated pass on the demand axis — and the EMEA education-specific nil is restated rather than left as silence.**
+
+### 🔴 The spread is widening, not converging — and that is the commercially load-bearing fact
+
+This file's canonical table puts the 2026 estimates at **`$6.4B – $12.3B`** and says *"use the range,
+not a point."* 🔴 **A figure below the floor arrived this pass:**
+
+| source | 2026 | later | CAGR | status |
+|---|---|---|---|---|
+| Persistence Market Research (via the search channel) | 🔴 **`$3.7B`** | `$14.1B` (2033) | — | 🟡 **UNCONFIRMED — see the denial below** |
+| this file's shelved floor (four firms surveyed) | `$6.4B` | — | — | shelved |
+| this file's shelved ceiling (HolonIQ) | `$12.3B` | ~`$23B` | — | shelved |
+| IMARC-family figure (already shelved) | — | `$79.6B` (2034) | `31.35 %` | shelved |
+
+🔴 **The 2026 spread goes from 1.9× to 3.3×.** 🔵 **Why this matters more than the numbers:** a range
+that *narrows* as more firms publish is a market being measured; a range that **widens** is a market
+whose *definition* is still in dispute — a `$3.7B` estimate and a `$12.3B` estimate for the same year
+are not two measurements of one thing, they are two different things being named identically. `T10`
+("market sizing in this sector is not currently usable") is therefore strengthened by this pass, and
+the operative instruction to an engagement is unchanged and now better supported: **never quote a
+sector size to a client; quote the client's own addressable layer.**
+
+### 🔴 A second North-America share figure for the same year, and it contradicts the shelved one
+
+| figure | 2026 NA share | status |
+|---|---|---|
+| shelved (this file, *"the one point the sources agree on"*) | **36 %** | shelved since `p490`-era |
+| returned this pass | 🔴 **42 %** | 🟡 UNCONFIRMED |
+
+🔴 **The shelved claim that the sources "agree" on 36 % does not survive this pass.** 🟢 Both figures
+are kept, both labelled, and neither replaces the other — a six-point disagreement on a regional
+share is itself the finding, and it is the same disorder as the sizing spread one level down.
+
+### 🟢 `Gap 512-A` — the denial names its own remedy, like `Gap 483-K` before it
+
+🔴 Both new figures came from the **search channel's summary of a publisher page**, and the publisher
+page itself **cannot be read from this session**: `www.persistencemarketresearch.com` fails at **DNS
+resolution** (`getaddrinfo ENOTFOUND`), because it is outside this session's allowed network domains.
+🟢 **This is the good kind of gap** — `T41`'s class: a denial that names a one-action remedy. The
+remedy is *allow that domain in the session's network settings*, and until then the figures are
+recorded as **channel-attributed, not publisher-attributed**, and are 🔴 **not shelved as fact**.
+🔵 They are written here, in the pass block, precisely so that a later pass does not rediscover them
+and treat the rediscovery as corroboration. **One channel reporting a number twice is still one
+source.**
+
+### 🔴 The four regional legs — run, and saturated on the demand axis for a third pass
+
+All four prescribed regional legs ran (`AI education {region} 2026 adoption regulation players`), plus
+the four global legs. 🔴 **Every demand-side figure returned was already on these shelves** —
+`71 %` of US teachers untrained, the `86 %` student-use figure, `36 %` NA share, APAC fastest-growing,
+the `$79.6B`/`31.35 %` pair, Chile's surviving AI roadmap, the UNESCO IESALC / UNU-IAS survey of
+**200 institutions across 19 LAC countries**. 🟢 **Saturation is therefore confirmed on the demand
+axis for a third consecutive pass**, by the same instrument that broke the *supply* axis open this
+pass — which is the useful contrast: the fork-ranked leg found four new repositories while the
+regional legs found no new figures. **Supply discovery had a wrong sort key; demand discovery has a
+wrong channel.**
+
+🔴 **The EMEA nil, restated explicitly rather than left as silence** — the brief's own standard, and
+the one this pass can meet honestly: the EMEA leg returned **no education-sector source at all**. It
+returned enterprise-AI and IT-strategy material (CompTIA's regional outlook, a Workday CEO survey
+from **2023**, a Bandwidth/Cavell report on customer engagement), the EU AI Act in general terms, and
+**not one ministry, regulator, university system or EMEA edtech vendor**. 🔵 **The absence is in the
+channel, not in the region**: this file's EMEA section already carries the AI Act's Annex III
+education tier, the four-regime split (`T4`), the emotion-recognition ban (`T6`) and the deadline slip
+(`T5`) — all of which arrived on *instrument-class* legs, not on the prescribed regional leg. 🟢 **The
+standing instruction this produces: for EMEA education, query the instrument (the Act, an Annex, a
+national transposition), never the region.** `T30`'s instrument-class prediction, holding for a
+seventh pass.
+
+## Opportunities by region — `p512`
+
+### North America
+
+🟢 **The new asset of the pass is here and it is MIT.**
+[`expertiza/expertiza`](https://github.com/expertiza/expertiza) (MIT, **194★** *(🟢 `p512`, API)*,
+**1,329 forks**, NSF-funded, NC State) puts a **peer-assessment platform** on the permissive shelf for
+the first time. 🔵 The commercial reading: US institutions already run it — a 6.85× fork-to-star ratio
+is a deployment footprint, not a popularity score — so an engagement can propose **AI inside a review
+workflow the institution already operates**, which is a far smaller change-management ask than a new
+platform. 🟢 And it sidesteps the region's sharpest objection: in `expertiza`'s shape **the model
+never issues a grade**, a human peer and an instructor do, so the FERPA and automated-decision
+questions land on ground the institution has already cleared.
+🔴 **Unchanged and still the binding constraint:** the US regulatory picture is a patchwork
+(Colorado, Texas and others moving piecemeal), institutional AI guidelines remain rare, and
+`canvas-lms` is AGPL-3.0, so a hosted derivative is out — the MCP route
+([`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), MIT, **309★**) is still the
+answer, per `P495-1`.
+
+### EMEA
+
+🟢 **The first permissive, state-backed, EMEA-origin PLATFORM reaches these shelves:**
+[`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) (**Apache-2.0**,
+`master/LICENSE` 11,359 B, **147★** *(🟢 `p512`, API)*, **Fraunhofer IAIS**). 🔵 Why that specific
+provenance is the opportunity: in EMEA education procurement the first question is sovereignty and the
+second is who stands behind the code. **A Fraunhofer institute is an answer to both**, and Apache-2.0
+means a closed derivative is permitted — so a K-12 STEM programme can be delivered on an
+EMEA-anchored permissive base rather than on a US-hosted platform. It joins
+[`openfun/ralph`](https://github.com/openfun/ralph) and
+[`openfun/warren`](https://github.com/openfun/warren) (MIT, France Université Numérique) as the second
+EMEA-origin permissive entry, and the first that is a platform rather than a component.
+🔴 **The demand channel for this region is still broken** — see the nil above. Do not price an EMEA
+engagement off a regional market figure; price it off the Annex III function the client is building.
+
+### APAC
+
+🔴 **The region produced this pass's largest raw signal and it is unusable.**
+[`smithjohn78390/tongjiang-lab`](https://github.com/smithjohn78390/tongjiang-lab) (铜匠实验室,
+`lab.tongjiang.app`) was **created on `2026-10-28`** and reached **446★ and 126 forks inside a day**
+with free interactive 3D high-school science lessons — physics, chemistry, biology, geography. 🔴 Its
+grant is **CC BY-NC 4.0** (643 B, read from bytes), so the content cannot enter a commercial
+deliverable. 🔵 **The opportunity is the shape, not the asset:** demand for interactive 3D STEM content
+in Mandarin is demonstrated at a rate no market report in this file would have predicted, and the
+supply arriving to meet it is deliberately non-commercial (`T26`). An APAC engagement therefore buys
+**authoring capacity**, not content licences — the client's own curriculum rendered through a
+permissive renderer, with `tongjiang-lab` read as a reference design only.
+🔵 Already shelved and unchanged: Vietnam's high-risk education tier and its grace period (`P500-3`),
+Singapore's voluntary gate, and APAC as the fastest-growing region at **35.3 % CAGR**.
+
+### LATAM
+
+🟡 **No new LATAM datum this pass, and the gap is named rather than papered over.** The LATAM leg
+returned the UNESCO IESALC / UNU-IAS working paper (**200 higher-education institutions across 19 LAC
+countries**, surveyed August–October 2025) and the Argentina/Brazil/Chile/Peru/Spain comparative study
+— 🔴 **both already on these shelves**, and both still the best available instruments. The two retired
+LATAM sizings (`$1.5B → $4.2B at 45 %`, and the `$61.1M`/`$59.2M` Brazil/Mexico pair) stay retired:
+🔴 **this file still has no quotable LATAM market size and should not invent one.**
+🟢 **What is live and sellable** is `p511`'s [`oluiscabral/studorama`](https://github.com/oluiscabral/studorama)
+(MIT, **111★** *(🟢 `p512`, API)*) — pt-BR localization and an Ollama local-model path as first-class
+product features — and `P512`'s recipe built on it. 🔵 The region's two first objections remain cloud
+inference cost and data residency, and a local-model path answers both before price is discussed.
+
+### Global
+
+🔴 **The one global finding of the pass is methodological and it is worth more than any figure in this
+file:** the sector's supply is discoverable and its demand is not. A change of **sort key** —
+forks instead of stars — broke a three-pass supply drought and returned four addresses, while eight
+prescribed demand legs returned nothing new for the third pass running. 🟢 **Act on supply through
+deployment signals** (fork counts, institutional forks, release cadence) and 🔴 **treat every published
+sector size as a range whose width is still growing** — `$3.7B` to `$12.3B` for the same year, from
+the same channel, in the same week.
+
 ## 🆕 `p511` — `2026-10-28` — **🔴 THE REGIONAL BATTERY IS SATURATED ON THE DEMAND AXIS FOR A SECOND TIME: all four regional legs plus four global legs ran, and EVERY figure returned was already on these shelves. 🟢 BUT `Gap 483-K` — fifteen passes of "unclosable" — IS NOW A NAMED, ONE-ACTION ASK, because a THIRD channel was probed and it fails at DNS with an explicit remedy. 🔴 The retired NA bill count returned for a THIRD pass. 🔴 This file's duplicate-region-heading defect REGRESSED one pass after `p508` repaired it, and the gate caught it.**
 
 ### 🟢 `Gap 483-K` — the denial finally names its own remedy

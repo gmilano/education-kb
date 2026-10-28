@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p512` — `2026-10-28` — **🟢 THE DISCOVERY DROUGHT THIS BASE DECLARED IS A PROPERTY OF STAR RANKING, NOT OF THE ECOSYSTEM: ranking the SAME `topic:education` population by FORKS returned four addresses this base has never held, one pass after `p511` measured 95.2 % shelf recall on five star-ranked legs. 🔴 The star-ranked leg run this pass returned 11 hits and ZERO new addresses, so both readings are true at once. 🔴 The week's biggest raw signal is REFUSED: 446★ in under 24 hours, CC BY-NC.**
+
+### 🔴 The star-ranked leg: eleven hits, zero new — saturation holds on its own axis
+
+**Leg A — `topic:ai-tutor forks:>20 pushed:>2026-07-01`.** 11 repositories returned,
+`incomplete_results: false`. 🔴 **Every one is already on this base**: `DeepTutor`, `algo-sensei`,
+`Study-Mate`, `freelingo`, `Bloom`, `anki-mcp-server`, `OpenTutor`, `mentingo`, `AI_Tutor_Release`,
+`InterviewMentor`, `universal-examprep-skill`. 🟢 `p511`'s saturation reading survives a test on the
+**tutor** vocabulary with a fork floor attached.
+
+### 🟢 The fork-ranked leg: four addresses new to this base
+
+**Leg B — `topic:education stars:50..600 forks:>120 pushed:>2026-04-01`, sorted by forks.** 40 rows,
+`incomplete_results: false`, **4 new to this repository**. 🔵 **Why this axis works when the star axis
+does not:** stars measure attention and attention is what this base has already harvested; **forks
+measure institutional copies**, and a course-management system is forked once per institution that
+runs it. The axis reaches *deployed* software that never trends.
+
+| address | ★ | forks | ratio | grant (read from bytes) | verdict |
+|---|---|---|---|---|---|
+| [`smithjohn78390/tongjiang-lab`](https://github.com/smithjohn78390/tongjiang-lab) | **446** *(🟢 `p512`, API)* | 126 | 0.28× | 🔴 **CC BY-NC 4.0** — `main/LICENSE` **643 B** `b7039a7ca908106f` | 🔴 **REFUSED** — non-commercial |
+| [`expertiza/expertiza`](https://github.com/expertiza/expertiza) | **194** *(🟢 `p512`, API)* | **1,329** | 🟢 **6.85×** | 🟢 **MIT** — **1,068 B** `cc922786cdca1cd7` | 🟢 **PROMOTED** to [`top.md`](top.md), [`repos/foundations.md`](../repos/foundations.md), [`verticals/solutions.md`](../verticals/solutions.md) |
+| [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) | **147** *(🟢 `p512`, API)* | 141 | 0.96× | 🟢 **Apache-2.0** — `master/LICENSE` **11,359 B** `8c6db340475136df` | 🟢 **PROMOTED** to the foundation and platform shelves |
+| [`knoxiboy/DoubtDesk`](https://github.com/knoxiboy/DoubtDesk) | **99** *(🟢 `p512`, API)* | 167 | 🟢 **1.69×** | 🟢 **MIT** — **1,066 B** `c34b9875225f85e0` | 🟡 **RECORDED, not shelved** — below the floor, last push `2026-08-13` |
+
+🔴 **`tongjiang-lab` is the week's biggest raw signal and it is unusable.** Created
+**`2026-10-28`** — today — it reached **446★ and 126 forks inside a day** with free interactive 3D
+high-school science lessons (铜匠实验室, `lab.tongjiang.app`), **APAC**. Its `LICENSE` is 643 B of
+prose naming **CC BY-NC 4.0**, so the content cannot enter a commercial deliverable. 🔵 This is `T26`
+holding for a seventh pass — *the newest, fastest-growing education supply is deliberately
+non-commercial* — and it is now the clearest single instance: the fastest-rising address this base
+has seen in a day is refused on its licence, not on its quality.
+
+🟡 **The axis's honest cost: 36 of the 40 rows were not education-AI at all** — university course
+material, Hacktoberfest starter repositories, a `p5.js` website, an IBM mainframe file drop, and a
+World-of-Warcraft emulator tagged `education`. **Precision is far worse than the star axis; recall at
+the institutional layer is far better.** Run it as a *finder*, never as a ranking.
+
+### 🔴 `T44` — an in-query known-good control is annihilated by any other qualifier
+
+🔴 **Leg C was written to be self-checking and the check silently destroyed the query.**
+`topic:education forks:>80 stars:<250 pushed:>2026-06-01 repo:HKUDS/DeepTutor` returned
+**`total_count: 0`, `incomplete_results: false`** — a clean, confident zero. The control did not fail
+the query; the control was **ANDed** with `topic:` and `stars:<250`, and `DeepTutor` satisfies
+neither, so the whole query had no satisfying row. 🔵 **A zero from this channel and a zero from a
+malformed query are the same byte**, which is `T37`'s class — *a check that cannot fail is not
+evidence* — reappearing in the shape of a check that **cannot distinguish its own annihilation**.
+🟢 **The rule:** an in-query control works **only** on a pure disjunction of `repo:` terms. A filtered
+leg must be controlled by a **second, separate** call.
+Legs: [`fork-ranked-discovery.2026-10-28-p512.tsv`](../evidence/fork-ranked-discovery.2026-10-28-p512.tsv).
+
+### 🔴 Star cells on the agent shelves, re-read: the flagships are all stale, by a little
+
+🔴 Every bolded flagship cell on [`top.md`](top.md) was wrong this pass, and all of them by small,
+upward amounts — which is the signature of a **fast-moving count written once and left**:
+`DeepTutor` **47,725 → 47,804**, `ai-agents-for-beginners` **78,059 → 78,063**,
+`smolagents` **30,121 → 30,123**, `OpenMAIC` **41,712 → 41,710** (down 2),
+`book-to-skill` **36,339 → 36,421**, `TorchLeet` **2,595 → 2,596**.
+🔵 **`DeepTutor` was read four times across this pass — 47,803 / 47,804 / 47,804 / 47,805 — so its
+cell now carries a clock time**, not just a pass number. On this repository the count moves faster
+than a pass takes to write, and that is a property of the subject, not of the reader.
+
 ## 🆕 `p511` — `2026-10-28` — **🟢 THE WEEK'S REAL AGENT NEWS IS THAT DEEPTUTOR IS SHIPPING, NOT MERELY TRENDING: 88 tags, `v1.7.0`, and a pin stable across two passes — which RETIRES this base's "attention, not shipping" reading rather than restoring it. 🟢 One new agent, MIT, placed LATAM, and it is the first LATAM-placed AI PRODUCT on these shelves. 🔴 `make hooks` ran for the first time in seventeen passes and is RED at 45/63.**
 
 ### 🟢 Movement this week — tag censuses, not star counts

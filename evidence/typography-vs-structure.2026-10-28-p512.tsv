@@ -1,0 +1,6 @@
+frame	definition	cells_in_frame	re_read	wrong	coverage_note
+p510	bolded star cells on the live shelves	24	24	11	typography-defined
+p511	every star cell on the live shelves, suffix+roundness classified	22	19	4	typography-defined; 5 round cells, 4 re-read
+p512-pass1	star COLUMN by table header, adjacency-gated to 1 address	93	91	25	structure-defined; adjacency gate hides 26 cells
+p512-pass2	compose/patterns.md in full, column arm + prose arm	69	64	13	patterns file is live recipes past the first "## new" heading
+p512-pass3	star column by INDEX, adjacency gate REMOVED	119	111	2	the 26 recovered cells held 2 more wrong values

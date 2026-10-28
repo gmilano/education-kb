@@ -1,0 +1,8 @@
+slug	branch_probed	path	http	bytes	sha256_16	grant_read	note
+expertiza/expertiza	main	LICENSE	200	1068	cc922786cdca1cd7	MIT	verbatim MIT body, NO title line; API spdx_id=MIT agrees
+OpenRoberta/openroberta-lab	develop (default)	LICENSE+11 others	404	-	-	NONE-FOUND	12 paths probed on the DEFAULT branch: no payload
+OpenRoberta/openroberta-lab	master	LICENSE	200	11359	8c6db340475136df	Apache-2.0	Apache-2.0 title block; the grant lives OFF the default branch
+OpenRoberta/openroberta-lab	master	NOTICE	200	2625	d3b31bd4e80cfc75	NOT-A-GRANT	p509: a NOTICE is an Apache-2.0 S4(d) attribution notice, not a grant
+smithjohn78390/tongjiang-lab	main	LICENSE	200	643	b7039a7ca908106f	CC-BY-NC-4.0	named in PROSE only; API spdx_id=NOASSERTION abstains. REFUSED: non-commercial
+knoxiboy/DoubtDesk	main	LICENSE	200	1066	c34b9875225f85e0	MIT	MIT title line present, holder "DoubtDesk" 2026
+PapillonApp/Papillon	dev	LICENSE	200	35149	3972dc9744f6499f	GPL-3.0	already on this base's trending shelf; copyleft

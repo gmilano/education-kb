@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p512` — `2026-10-28` — **🟢 `P513` — AI inside a peer-review workflow the institution already runs, on an MIT platform, with the grade never leaving human hands. 🟢 `P514` — the EMEA-sovereign STEM build on an Apache-2.0 Fraunhofer base, with the licence-branch trap written into the build step so it cannot bite. 🔴 And 13 star figures in THIS file were wrong, because every census this base has run framed on the shelves and this file's recipes were never swept.**
+
+🔴 **Correction notice for this file, first, because it affects what a client was shown.** Thirteen
+star figures inside live recipes here were stale or wrong, including **`14,300★` for
+[`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) in three
+separate recipes** (`P491-1`, `P493-1`, `P502-1`) — a value `p511` corrected **one pass ago** on
+[`verticals/solutions.md`](../verticals/solutions.md) and nowhere else. Also corrected:
+`k12-teacher-skills` **595 / 598 → 600** (two sites), `kolibri` **1,200 → 1,162**,
+`OpenMAIC` **41,700 → 41,710**, `smolagents` **30,118 → 30,123**, `Papermorph` **993 / 982 → 995**,
+`book-to-skill` **36,339 → 36,421**, `TorchLeet` **2,595 → 2,596**, `TrenTorch` **739 → 741**,
+`math-question-bank` **358 → 360**, `freelingo` **210 → 211**, `mathtutorbench` **45 → 46**. All now
+carry a `*(🟢 `p512`, API)*` suffix. 🔵 **Licence and role cells were re-read alongside and none was
+refuted** — the recipes were right about what the components *are*, and stale about how popular.
+
+### 🟢 `P513` — AI in the peer-review loop, where the model never issues the grade — **6–8 weeks**
+
+**Why this and why now.** `p512` put the first **peer-assessment** platform on the permissive shelf:
+[`expertiza/expertiza`](https://github.com/expertiza/expertiza) — **MIT**, `main/LICENSE` **1,068 B**
+`sha256₁₆ cc922786cdca1cd7`, `HEAD` `b68bb8f640ac`, **194★** *(🟢 `p512`, API)* and **1,329 forks**.
+🔵 **The ratio is the business case.** 6.85 forks per star means US institutions are *running* it, not
+bookmarking it — so this pattern proposes AI **inside a workflow the client already operates**, which
+is the cheapest change-management ask available in education, and it lands on the one structure that
+defuses the region's sharpest objection: **a human peer writes the review and an instructor
+moderates; the model never issues a grade.** Same structural answer as `P492-1` (arithmetic) and
+`P497-1` (admissions), now at the assessment layer.
+
+**The stack — every grant read from bytes at a pinned ref**
+
+| layer | repo | licence | job |
+|---|---|---|---|
+| review workflow | [`expertiza/expertiza`](https://github.com/expertiza/expertiza) | 🟢 **MIT** (1,068 B `cc922786cdca1cd7`) | rubrics, review mapping, submission, instructor moderation — **the system of record for the grade** |
+| review assistant | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 **Apache-2.0** | drafts and critiques a *peer's review text*, never the artefact's score |
+| rubric quality gate | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT**, 13★ *(🟢 `p512`, API)* | pre/post instrument: does assisted reviewing raise review quality, measurably |
+| integrity arm | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT**, 355★ *(🟢 `p512`, API)* | code-submission plagiarism, because peer review of code invites it |
+| audit trail | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0**, 144★ *(🟢 `p512`, API)* | every assist is an xAPI statement — who was helped, when, with what (sequences `P502-1`) |
+| eval runtime | [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 **MIT**, **14,341★** *(🟢 `p512`, API)* | regression-gates the assistant before each release (`P491-1`) |
+
+**Wiring — in this order, because the order is the compliance argument**
+
+1. **Deploy `expertiza` unmodified first** and leave the grade path untouched. Write down, with the
+   client, the exact field that holds the score and the exact actor permitted to write it.
+2. **Insert the assistant on the REVIEW TEXT only.** It reads the submission and the rubric and
+   returns *suggested review prose* plus *rubric-criterion coverage flags* to the **peer reviewer**,
+   who edits and submits. 🔴 **No code path from the assistant to the score field.** Enforce it in the
+   application, not in a prompt.
+3. **Gate on coverage, not on sentiment.** The useful assist is *"you have not addressed criterion
+   3"*, not *"this looks like a B"*. Build the criterion-coverage check first; it is the part
+   instructors will defend in a faculty meeting.
+4. **Emit xAPI to `lrsql` for every assist**, including the ones the reviewer discarded. 🔵 The
+   discarded ones are the evidence that the human was in control, and that is the artefact an audit
+   asks for.
+5. **Run `dolos`** over code submissions before peer allocation, so reviewers are not unknowingly
+   reviewing a copy.
+6. **Measure with `pedagogy-benchmark`** before and after. A peer-review programme that cannot show
+   review quality rose is indistinguishable from one that just made reviewing faster.
+
+🔴 **Do this or it is negligent.** `expertiza`'s grant **has no title line** — it is the verbatim MIT
+body with a bare copyright notice. 🟢 The API's detector reads `MIT` and the three MIT paragraphs are
+present in the payload, so the grant is sound; 🔴 **but a title-anchored licence gate will report "no
+grant found"** and block the build or, worse, let someone conclude the platform is unlicensed. **Tell
+your licence tooling about this row before the first build** (`T43`).
+🟡 **Honest limits.** `expertiza` is Rails and long-lived; the 1,329 forks are course forks, not a
+contributor community, so treat upstream velocity as low and plan to **fork and own**. And peer
+review is a pedagogy choice, not a feature — if the client's instructors do not already use it, this
+pattern is the wrong one and `P500-1` is closer.
+
+### 🟢 `P514` — EMEA-sovereign K-12 STEM on an Apache-2.0 Fraunhofer base — **8–10 weeks**
+
+**Why.** EMEA education procurement asks sovereignty first and *who stands behind the code* second.
+🟢 [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) answers both:
+**Apache-2.0** (`master/LICENSE` **11,359 B** `sha256₁₆ 8c6db340475136df`), **Fraunhofer IAIS**,
+**147★** *(🟢 `p512`, API)* / 141 forks, `develop` `HEAD` `089b4483df27`, browser-delivered block
+programming for real robots with no client install. 🔵 **It is the first permissive, state-backed,
+EMEA-origin PLATFORM on these shelves** — `ralph` and `warren` are EMEA and MIT but are components.
+
+**The stack**
+
+| layer | repo | licence | job |
+|---|---|---|---|
+| teaching environment | [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) | 🟢 **Apache-2.0** | block programming, device abstraction, browser delivery |
+| local model | Ollama-served open weights | 🟢 permissive weights only | 🔴 **no cloud inference** — the residency answer, stated before price |
+| tutor loop | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 **MIT**, 252★ | diagnosis-first STEM tutoring over the student's own program (`P508-R2`) |
+| record layer | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) + [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **Apache-2.0** / **MIT** | xAPI store plus 🟢 **EMEA-origin, state-backed** ingest (France Université Numérique) |
+| LMS boundary | LTI 1.3 via [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0**, 377★ *(🟢 `p512`, API)* | launch from the authority's existing LMS; keep the copyleft LMS on the other side of the boundary (`P511`) |
+
+**Wiring**
+
+1. 🔴 **Pin the licence to `master`, not to the default branch.** The grant is **absent from
+   `develop`** at twelve conventional paths and present at `master/LICENSE`. Record the branch, the
+   byte count and the sha in the build manifest (`p509-R1`), or your own audit will later report the
+   platform as unlicensed (`T42`).
+2. Fork `openroberta-lab` and stand it up **inside the authority's own tenancy**. Nothing in this
+   pattern calls out of the jurisdiction.
+3. Wire the diagnostic tutor to the **student's program and its execution trace**, not to free chat.
+   It reads the blocks and the robot's behaviour and asks the next useful question.
+4. Serve the model **locally via Ollama**. 🔵 Where the authority will not host GPUs, this is the step
+   to price explicitly rather than quietly swap for an API.
+5. **Launch over LTI 1.3** from the incumbent LMS and 🔴 **do not migrate the LMS** — Moodle (GPL-3.0),
+   ILIAS (GPL-3.0) and Open edX (AGPL-3.0) stay where they are, outside the derivative boundary.
+6. Emit xAPI to `lrsql`, dashboard with `ralph`/`warren`, and keep the records in-region.
+
+🔵 **What to say to an EMEA client.** The teaching environment is Apache-2.0 from a Fraunhofer
+institute; the model runs on their hardware; the records never leave their tenancy; and the LMS is
+untouched. 🔴 **What not to say:** do not quote a sector market size — this pass widened the
+published 2026 spread to **3.3×** (`$3.7B` – `$12.3B`) and the EMEA demand channel returned **no
+education-sector source at all**. Price the Annex III function the client is building, not the market.
+🟡 **Limits.** Robotics means hardware, and hardware means a procurement cycle this pattern does not
+control. `openroberta-lab` is a large Java/JavaScript codebase (485 MB checkout) with 362 open
+issues — budget real integration time, and do not promise a small footprint.
+
 ## 🆕 `p511` — `2026-10-28` — **🟢 `P511` — the standards-spine tutor: an LTI-launched, xAPI-instrumented tutor assembled from FOUR byte-attested permissive grants, with the copyleft LMS deliberately on the other side of the boundary. 🟢 `P512` — the LATAM pt-BR study product, local-model path included.**
 
 ### 🟢 `P511` — Standards-spine tutor (LTI 1.3 in, xAPI out) — **8–10 weeks**
@@ -167,7 +277,7 @@ never enters the deliverable.**
 | 1. source → study package | [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) | 🟢 MIT | 344 | PDF / video / web / audio → quizzes, flashcards and a 12-section study guide in one command. |
 | 2. scheduling policy | [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | 🟢 MIT | 57 | **FSRS** for *when*, RL for *which action* — the part a chatbot has no opinion about. |
 | 3. card delivery | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT | **537** | MCP server over the learner's **local** Anki. 🔴 Anki itself is AGPL-3.0 — it stays on the device, the MIT server is what you ship. |
-| 4. institutional landing | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 MIT | 993 | **Emits SCORM** — the loop reports into Moodle / Canvas / ILIAS without an integration project. |
+| 4. institutional landing | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 MIT | 995 *(🟢 `p512`, API)* | **Emits SCORM** — the loop reports into Moodle / Canvas / ILIAS without an integration project. |
 | 5. evidence of mastery | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | 274 | **BKT** mastery estimates, UC Berkeley — gives step 2 a target rather than a guess. |
 
 🟢 **Shippable licence surface: MIT only.** 🔴 **What it is not:** a hosted SRS product — if the client
@@ -211,10 +321,10 @@ already do.
 
 | step | component | licence | ★ | role |
 |---|---|---|---|---|
-| 1. source → knowledge | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 MIT | 36,339 | Turn the syllabus, textbook or curriculum PDF into agent-readable skill knowledge. |
-| 2. pedagogy layer | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 permissive | **598** | Lesson-planning skills **plus eval rubrics** — the rubrics are the part that makes step 5 possible. |
+| 1. source → knowledge | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 MIT | 36,421 *(🟢 `p512`, API)* | Turn the syllabus, textbook or curriculum PDF into agent-readable skill knowledge. |
+| 2. pedagogy layer | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 permissive | **600** *(🟢 `p512`, API)* | Lesson-planning skills **plus eval rubrics** — the rubrics are the part that makes step 5 possible. |
 | 3. generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 MIT | **387** | Emit lesson plans, question banks and activities as structured objects, not prose. |
-| 4. delivery into the institution | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 MIT | 982 | **Emits SCORM** — lands inside Moodle/Canvas/ILIAS without an integration project. |
+| 4. delivery into the institution | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 MIT | 995 *(🟢 `p512`, API)* | **Emits SCORM** — lands inside Moodle/Canvas/ILIAS without an integration project. |
 | 5. quality gate | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) + [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 🟢 permissive | 13 / 46 | Score the generated material for **pedagogical** quality before a teacher ever sees it. |
 
 🟢 **Wiring:** `book-to-skill` writes a knowledge pack → `k12-teacher-skills` supplies the planning
@@ -237,7 +347,7 @@ being a closed app.
 
 | step | component | licence | ★ | role |
 |---|---|---|---|---|
-| 1. problem bank + grader | [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | 🟢 **MIT** | **2,595** | Problems with an auto-grader; **its MCP server is the tutor interface**. |
+| 1. problem bank + grader | [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | 🟢 **MIT** | **2,596** *(🟢 `p512`, API)* | Problems with an auto-grader; **its MCP server is the tutor interface**. |
 | 2. tutoring policy | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 permissive | **274** | **Bayesian Knowledge Tracing** — decides *what next* from the grader's pass/fail stream, instead of letting the LLM guess mastery. |
 | 3. integrity | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 permissive | **355** | Source-code plagiarism detection on submissions — the control an institution asks for before it will grade with AI. |
 | 4. LMS surface | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 permissive | **309** | Canvas LMS over MCP — the same protocol as step 1, so roster, assignment and grade flow need no adapter. |
@@ -519,7 +629,7 @@ differentiator in this file — and it would close the gap this KB has carried f
 ## P491-1 — Tutoring-quality eval harness on a permissive base 🟢 *(supersedes `P490-6`)*
 
 **Why:** `p491` established that the instruments for measuring tutoring quality **exist and carry
-no license** — [`mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (45★, EMNLP 2025 Oral)
+no license** — [`mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (46★ *(🟢 `p512`, API)*, EMNLP 2025 Oral)
 and [`TutorCaseBench`](https://github.com/kixlab/TutorCaseBench) (0★, KAIST) both ship **no grant
 file**, and MathTutorBench's README contradicts itself (`CC BY 4.0` badge vs `CC BY-SA 4.0` text,
 neither a software grant). So the research is public and the **code and data are not takeable**.
@@ -527,7 +637,7 @@ That is a licensing blocker, not a scarcity one, and it has a clean route around
 
 | Component | Repo | License | Role |
 |---|---|---|---|
-| Harness runtime | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | **MIT** (1,066 B @ `d6de81643928`) | task registry, model adapters, runners, reporting — 14,300★, the de-facto standard |
+| Harness runtime | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | **MIT** (1,066 B @ `d6de81643928`) | task registry, model adapters, runners, reporting — 14,341★ *(🟢 `p512`, API)*, the de-facto standard |
 | Ground-truth mastery | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | BKT as the reference learner model |
 | Item generation | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | held-out item banks at volume |
 | Curriculum authority | [panaversity/ksor](https://github.com/panaversity/ksor) | Apache-2.0 | answer keys with provenance |
@@ -654,14 +764,14 @@ difference between "we must talk about AGPL" and "we do not".
 
 | Component | Repo | License | ★ | Role |
 |---|---|---|---|---|
-| Courseware / classroom | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | 41,700 | Topic or document → multi-agent interactive lesson: slides, quizzes, project-based work |
-| Teacher workflow | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0** | 595 | Lesson planning + differentiation skills **with their eval rubrics** |
+| Courseware / classroom | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | 41,710 *(🟢 `p512`, API)* | Topic or document → multi-agent interactive lesson: slides, quizzes, project-based work |
+| Teacher workflow | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0** | 600 *(🟢 `p512`, API)* | Lesson planning + differentiation skills **with their eval rubrics** |
 | Teacher workflow (twin) | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | **Apache-2.0** | 40 | Consortium-side payloads + `evals/` rubrics for pedagogy, rigour, format, scaffolding |
 | Tutoring platform | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | Collaborative tutoring platform where ChatTutor (AGPL-3.0) was the only option |
 | Quality gate | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | 13 | 1,143 teacher-exam items (920 CDPK / 223 SEND), 100+ models |
-| Eval runtime | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | **MIT** | 14,300 | the harness `pedagogy-benchmark` runs on |
+| Eval runtime | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | **MIT** | 14,341 *(🟢 `p512`, API)* | the harness `pedagogy-benchmark` runs on |
 | Academic integrity | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | **MIT** | 355 | Source-code plagiarism detection; 3,865 commits |
-| Delivery — offline | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** | 1,200 | runs without connectivity |
+| Delivery — offline | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** | 1,162 *(🟢 `p512`, API)* | runs without connectivity |
 | Delivery — no app | [Orenda-Project/rumi-platform](https://github.com/Orenda-Project/rumi-platform) | **Apache-2.0** | 18 | WhatsApp, 15 languages |
 | Institutional layer *(only if needed)* | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | 448 | enrolment, roles, gradebook — **the only permissive full LMS** |
 
@@ -1729,9 +1839,9 @@ integration work, and it is roughly **two of the engagement's weeks**.
 
 | Excluded | Why |
 |---|---|
-| [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) (**739★**, +92% in 14 days) | 🔴 **PolyForm Noncommercial 1.0.0** read from bytes (4 635 B). Source-available, **not** open source. The API says `NOASSERTION`, which is why it keeps reappearing on candidate lists |
-| [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank) (358★) | 🔴 **AGPL-3.0** (34 523 B). It is the only **OCR-capable item bank** on these shelves and it cannot be a component. 🟡 Viable only if the client hosts it themselves as a separate service and accepts §13 |
-| [`artcc/freelingo`](https://github.com/artcc/freelingo) (210★) | 🔴 **AGPL-3.0** (34 514 B). A whole platform rather than a component; use as a reference for the Ollama-local posture, not as code |
+| [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) (**741★** *(🟢 `p512`, API)*, +92% in 14 days as read at `p504`) | 🔴 **PolyForm Noncommercial 1.0.0** read from bytes (4 635 B). Source-available, **not** open source. The API says `NOASSERTION`, which is why it keeps reappearing on candidate lists |
+| [`JudgePeach/math-question-bank`](https://github.com/JudgePeach/math-question-bank) (360★ *(🟢 `p512`, API)*) | 🔴 **AGPL-3.0** (34 523 B). It is the only **OCR-capable item bank** on these shelves and it cannot be a component. 🟡 Viable only if the client hosts it themselves as a separate service and accepts §13 |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) (211★ *(🟢 `p512`, API)*) | 🔴 **AGPL-3.0** (34 514 B). A whole platform rather than a component; use as a reference for the Ollama-local posture, not as code |
 | **The Learning Commons corpora** — annotated CLEAR and PERSUADE 2.0 | 🔴 **CC BY-NC-SA 4.0 — non-commercial.** The MIT code is in; the shipped corpora are out. 🟢 **The substitution is the client's own rubrics**, which is better pedagogy anyway and avoids a US-anchored reading-level corpus in a non-US deployment |
 | [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) datasets | 🟡 **Code MIT; data licensed per dataset** — Open / Open + Gated / Gated. *"Attribution travels with the data, not with Learning Commons."* Usable, but every dataset is its own procurement question |
 
@@ -1802,8 +1912,8 @@ are designed out explicitly rather than discovered at contract.
 | Ingestion / analytics | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟡 **MIT** *(carried `p467`, not re-read from bytes)* | **51** | LRS + ingestion CLI; 🇫🇷 France Université Numérique |
 | Rubric grading | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟡 **MIT code + CC BY 4.0 prompts** | **87** | Grades AI output against research-backed rubrics. 🔴 **See the licence fence below — do NOT ship its corpora** |
 | Pre-deployment gate | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT**, 1 064 B | **13** | 1,143 teacher-exam items (920 CDPK / 223 SEND) |
-| Eval runtime | [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 **MIT** | **14,338** | the harness the benchmark runs on |
-| Agent loop | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 **Apache-2.0** | **30,118** | minimal code-writing agent; emits the statements |
+| Eval runtime | [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 **MIT** | **14,341** *(🟢 `p512`, API)* | the harness the benchmark runs on |
+| Agent loop | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 **Apache-2.0** | **30,123** *(🟢 `p512`, API)* | minimal code-writing agent; emits the statements |
 | Academic integrity | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT** | **355** | plagiarism detection, 3,865 commits, Ghent University |
 | Institutional layer *(if the client has none)* | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | **448** | enrolment, roles, gradebook — served off `master` |
 | Integration target 🇧🇷 *(do not fork)* | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** | **720** | the municipal SIS a Brazilian public engagement lands on; branch **`2.12`** |
@@ -1947,7 +2057,7 @@ and every component below is permissive.
 
 | layer | repo | licence (`p506`, read) | job in this pattern |
 |---|---|---|---|
-| teacher skill content | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0**, 598★ | the CPD payload itself — pedagogy as portable text (`T28`), so it localises per curriculum without a licence negotiation |
+| teacher skill content | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0**, 600★ *(🟢 `p512`, API)* | the CPD payload itself — pedagogy as portable text (`T28`), so it localises per curriculum without a licence negotiation |
 | delivery platform | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0**, 6,950★, branch `develop` | structured "explorations" host the training as *practice*, not slides. 🔵 The second rung of the permissive tier (`p506` correction) |
 | offline / low-bandwidth arm | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT**, 1,162★, branch `develop` | rural and low-connectivity authorities; same content, no hosting assumption |
 | capability measurement | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT**, 13★ | scores pedagogical quality — the pre/post instrument that turns "trained" into a number |

@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p512` — `2026-10-28` — **🔴 THIS FILE'S "PICK BY LAYER" TABLE WAS THE WORST-MAINTAINED SHELF ON THE BASE AND NOBODY HAD EVER SWEPT IT: 11 of its 26 star cells were wrong, 9 of them round, 3 OVERSTATED. 🔵 The reason is structural, not careless — every census in this base's history was framed on BOLDED cells, and this table's column is almost entirely plain. 🟢 Two new platform rows: the MIT peer-assessment layer (North America) and the Apache-2.0 robotics-teaching layer (EMEA). 🔴 The LMS-plus-SIS permissive nil holds for a second pass.**
+
+### 🔴 The table nobody swept, and why the frame missed it rather than the reader
+
+`p510` re-read **24 bolded** star cells; `p511` classified **22** cells by suffix and roundness. 🔴 **Of
+the 26 rows in this file's `Pick by layer` table, exactly TWO carry a bolded star cell.** The other
+24 are plain, so every typography-framed census this base has run was structurally blind to them.
+🟢 **Framed on the table's own `★` column instead, 11 of the 26 are wrong:**
+
+| layer | platform | was | is *(🟢 `p512`, API)* | delta |
+|---|---|---|---|---|
+| LMS — North America HE | [Canvas LMS](https://github.com/instructure/canvas-lms) | `6,900` | **6,890** | 🔴 **−10, OVERSTATED** |
+| LMS — offline-first | [Kolibri](https://github.com/learningequality/kolibri) | `1,200` | **1,162** | 🔴 **−38, OVERSTATED** — and `p511` corrected this exact value on another shelf one pass ago |
+| LMS — ease of use | [Chamilo](https://github.com/chamilo/chamilo-lms) | `1,000` | **1,019** | +19 |
+| LMS + AI mentoring | [mentingo](https://github.com/Selleo/mentingo) | `100` | **101** | +1 — 🔴 `p511` corrected this one too, on [`agents/top.md`](../agents/top.md) only |
+| LMS — modern/greenfield | [LearnHouse](https://github.com/learnhouse/learnhouse) | `2,400` | **2,429** | +29 |
+| Virtual classroom | [BigBlueButton](https://github.com/bigbluebutton/bigbluebutton) | `9,300` | **9,258** | 🔴 **−42, OVERSTATED** |
+| Structured lessons | [Oppia](https://github.com/oppia/oppia) | `6,900` | **6,950** | +50 |
+| Spaced repetition | [Anki](https://github.com/ankitects/anki) | `32,300` | **32,365** | +65 |
+| Interactive classroom | [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | `41,700` | **41,710** | +10 |
+| Teacher workflow (skills) | [k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | `595` | **600** | +5 |
+| Eval runtime for tutors | [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | — | 🟢 **14,341**, unchanged from `p511` | 🟢 the one cell `p511` did fix here |
+
+🔵 **Nine of the eleven ended in `00`.** 🔴 **Two of the eleven were hidden even from this pass's own
+first frame** — `Canvas LMS` and `k12-teacher-skills` — because their notes column cites a *second*
+repository (`canvas-mcp`; `learning-commons-org/agent-skills`) and the extractor's single-address
+safeguard abstained on them. The safeguard's cost is measured on [`agents/top.md`](../agents/top.md):
+**22 % of cells excluded, 2 of them wrong.** 🟢 Reading the star column **by index** needs no
+adjacency, and that is how this table was finally swept.
+
+🟡 **Two round cells in this table are NOT corrected, deliberately.**
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) reads **900** and
+re-reads **900 exactly** — a round cell that is a measurement. And
+[`openedx/edx-platform`](https://github.com/openedx/edx-platform) reads **8,200** and is **unreadable
+on this channel** (`Gap 504-A`, re-confirmed this pass against a known-good control in the same
+query): the figure stays with its caveat rather than being guessed at.
+
+### 🟢 Two new platform rows — the layers this file had no row for
+
+| layer | platform | grant (read from bytes) | ★ | why it belongs here |
+|---|---|---|---|---|
+| 🆕 **Peer assessment / peer review** | [expertiza](https://github.com/expertiza/expertiza) | 🟢 **MIT** — `main/LICENSE` **1,068 B** `cc922786cdca1cd7` | **194** *(🟢 `p512`, API)* | 🟢 **North America** (NSF, NC State). Rubric-driven review mapping, instructor moderation, submission of code / articles / sites. **1,329 forks against 194★** — the strongest deployment signal on this base. 🔴 Grant has **no title line**; a title-anchored gate will report no grant |
+| 🆕 **STEM / robotics teaching** | [Open Roberta Lab](https://github.com/OpenRoberta/openroberta-lab) | 🟢 **Apache-2.0** — `master/LICENSE` **11,359 B** `8c6db340475136df` | **147** *(🟢 `p512`, API)* | 🟢 **EMEA**, Fraunhofer IAIS. Browser-delivered block programming for real robots, no install — the K-12 STEM layer, permissive, and state-backed, which is the EMEA procurement answer. 🔴 **Grant is NOT on the default branch `develop`** |
+
+🔵 **What to tell a client about `expertiza` specifically:** peer review is the cheapest credible
+place to put AI in an assessment pipeline, because **the model never issues the grade** — it drafts
+or checks a peer's review, and a human peer plus an instructor stay in the loop. That is the same
+structural answer `P497-1` gives for admissions and `P492-1` for arithmetic, and it is now available
+on an MIT platform that institutions already run.
+
+### 🔴 The LMS-plus-SIS permissive nil — re-confirmed, second pass
+
+`p511` re-confirmed on a fresh leg that **no permissive platform covers LMS and SIS together**. 🔴 **It
+holds.** The fork-ranked leg — a discovery axis this base had never run, and the one most likely to
+surface institutionally deployed administrative software — returned **40 rows and not one permissive
+LMS+SIS platform**; the SIS-shaped hits were `expertiza` (peer assessment, not SIS),
+`uPortal` (a portal) and `oppia-android` (a client). 🟢 **The nil is now confirmed on the axis most
+likely to break it**, which is the strongest form an absence on this base has had. It stays a build
+estimate, not an absence of need.
+
 ## 🆕 `p511` — `2026-10-28` — **🟢 THE PERMISSIVE EDUCATION STACK HAS A COMPLETE INTEROP SPINE AND THIS FILE HAD NEVER SAID SO: LTI, SCORM, xAPI/LRS and QTI are each covered by an MIT or Apache-2.0 component, all four were already on this base unassembled, and the QTI grant is read here for the first time. 🔴 The LMS-plus-SIS permissive nil is RE-CONFIRMED on a fresh leg, and it is now a build estimate rather than an absence.**
 
 ### 🟢 The interop spine — four standards, four permissive components, and why it is the sellable part
@@ -326,30 +386,32 @@ license read from bytes at a pinned SHA — see
 |---|---|---|---|---|
 | **LMS — mass market** | [Moodle](https://github.com/moodle/moodle) | GPL-3.0 | **7,556** *(`p504`, API)* | Largest installed base; 2,000+ plugins. A Moodle plugin is the lowest-friction way to ship AI into an existing institution. |
 | **LMS — higher ed / MOOC** | [Open edX](https://github.com/openedx/edx-platform) | AGPL-3.0 | 8,200 *(🔵 `p504`: HTML only — **the API search channel cannot see this repo**, `Gap 504-A`)* | University and workforce standard. Deploy via [Tutor](https://github.com/overhangio/tutor) (AGPL-3.0), not by hand. |
-| **LMS — North America HE** | [Canvas LMS](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 6,900 | Dominant in US higher ed. Has a real MCP server already: [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, 309★). |
+| **LMS — North America HE** | [Canvas LMS](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 6,890 *(🟢 `p512`, API)* | Dominant in US higher ed. Has a real MCP server already: [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, 309★). |
 | **LMS — permissive** | [OpenOlat](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** 🔵 *by payload: `master/LICENSE` 10,982 B, `sha256 6dbc5b605ed0…`, Apache 2.0 title block **plus** an openolat.org attribution statement — so the API `license.spdx_id` reads `NOASSERTION` (`p508`)* | 448 | **The only permissive full LMS found.** Pick this when the client needs a closed derivative. 🔴 Tell any automated licence gate about the payload reading, or it will reject this row. |
-| **LMS — offline-first** | [Kolibri](https://github.com/learningequality/kolibri) | **MIT** | 1,200 | Runs without connectivity. Decisive for rural LATAM/Africa/APAC and for national programmes. |
-| **LMS — ease of use** | [Chamilo](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1,000 | Francophone + LATAM public sector. |
+| **LMS — offline-first** | [Kolibri](https://github.com/learningequality/kolibri) | **MIT** | 1,162 *(🟢 `p512`, API)* | Runs without connectivity. Decisive for rural LATAM/Africa/APAC and for national programmes. |
+| **LMS — ease of use** | [Chamilo](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1,019 *(🟢 `p512`, API)* | Francophone + LATAM public sector. |
 | **LMS — DACH** | [ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | 505 | German universities and public sector; SCORM-strong. |
-| **LMS + AI mentoring** | [mentingo](https://github.com/Selleo/mentingo) | **MIT** | 100 | Small, modern, AI-native, multi-tenant via Postgres RLS. The best permissive *starting codebase* rather than a migration target. |
-| **LMS — modern/greenfield** | [LearnHouse](https://github.com/learnhouse/learnhouse) | AGPL-3.0 | 2,400 | **New `p491`.** "Next-gen" course and content platform, modern stack. Larger than Kolibri or Chamilo by stars and previously missing from this KB. 🔴 AGPL — not a closed-SaaS base. Default branch `dev`. |
+| **LMS + AI mentoring** | [mentingo](https://github.com/Selleo/mentingo) | **MIT** | 101 *(🟢 `p512`, API)* | Small, modern, AI-native, multi-tenant via Postgres RLS. The best permissive *starting codebase* rather than a migration target. |
+| **LMS — modern/greenfield** | [LearnHouse](https://github.com/learnhouse/learnhouse) | AGPL-3.0 | 2,429 *(🟢 `p512`, API)* | **New `p491`.** "Next-gen" course and content platform, modern stack. Larger than Kolibri or Chamilo by stars and previously missing from this KB. 🔴 AGPL — not a closed-SaaS base. Default branch `dev`. |
 | **SIS / school mgmt (Frappe)** | [frappe/education](https://github.com/frappe/education) | GPL-3.0 *(declared)* | 682 | **New `p491`.** Admissions, students, programmes, fees on the Frappe stack. 🔴 Grant is a **19-byte stub** naming GPL v3 with no license text — family is GPL-3.0, paperwork is incomplete. **Not the same license as `frappe/lms` (AGPL-3.0).** |
-| **Education ERP** | [OpenEduCat](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 | Admissions, fees, library, hostel, timetable — on Odoo. This is the literal Odoo answer. |
+| **Education ERP** | [OpenEduCat](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 *(🟢 `p512`, API)* | Admissions, fees, library, hostel, timetable — on Odoo. This is the literal Odoo answer. |
 | **SIS (K-12)** | [RosarioSIS](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 647 | Enrolment, scheduling, grades, attendance, billing. |
 | **SIS — permissive, with caveats** | [GegoK12](https://github.com/Gego-K12/gegok12) | **MIT** 🟢 *by payload: `main/LICENSE` 1,150 B, `sha256 b8694396d7dc…`, holder GegoSoft Technologies (`p508`)* | 54 | 🟢 **New row `p508`, and it reverses `p507`:** a full Laravel school-management system (SIS) under a complete MIT grant, API-first, mobile-app ready. **The counter-example to this file's "no permissive education SIS" line — on the licence axis only.** 🔴 **Caveats are the reason it is not a recommendation:** 54★ / 102 forks, **open-core** packaging unmeasured (`Gap 508-C`), **3 distinct author emails with a shared role account at 67.5% of commits** (`Gap 298`), and its `composer.json` is the unedited `laravel/laravel` skeleton so the manifest proves nothing (`Gap 411-C`). |
 | **School management** | [Gibbon](https://github.com/GibbonEdu/core) | GPL-3.0 | 635 | Teacher/student/parent/leadership workflows. |
 | **Assessment / exams** | [TAO](https://github.com/oat-sa/tao-core) | GPL-2.0 | 64 | QTI-standard computer-based testing. The only substantial open assessment engine. |
 | **Interactive content** | [H5P](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 152 | 50+ interactive content types; embeds into Moodle, Canvas, Open edX. |
-| **Virtual classroom** | [BigBlueButton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9,300 | Live classes with whiteboard and breakouts. **LGPL — linking allowed**, the friendliest copyleft here. |
-| **Structured lessons** | [Oppia](https://github.com/oppia/oppia) | **Apache-2.0** | 6,900 | Lesson "explorations" with built-in misconception handling. Permissive. |
-| **Spaced repetition** | [Anki](https://github.com/ankitects/anki) | AGPL-3.0 | 32,300 | Reference SRS scheduler. Use as the algorithm reference even where the code can't ship. |
-| **Interactive classroom / courseware** | [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,700** | 🟢 **New row `p493`** (restored — see below). Topic or document → multi-agent interactive lesson with slides, quizzes, project work. **The largest permissive asset in this file by 4×.** 🔴 **Not an LMS**: no enrolment, gradebook or SIS integration. Pair it with Kolibri or OpenOlat for the institutional layer. |
+| **Virtual classroom** | [BigBlueButton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9,258 *(🟢 `p512`, API)* | Live classes with whiteboard and breakouts. **LGPL — linking allowed**, the friendliest copyleft here. |
+| **Structured lessons** | [Oppia](https://github.com/oppia/oppia) | **Apache-2.0** | 6,950 *(🟢 `p512`, API)* | Lesson "explorations" with built-in misconception handling. Permissive. |
+| **Spaced repetition** | [Anki](https://github.com/ankitects/anki) | AGPL-3.0 | 32,365 *(🟢 `p512`, API)* | Reference SRS scheduler. Use as the algorithm reference even where the code can't ship. |
+| **Interactive classroom / courseware** | [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,710** *(🟢 `p512`, API)* | 🟢 **New row `p493`** (restored — see below). Topic or document → multi-agent interactive lesson with slides, quizzes, project work. **The largest permissive asset in this file by 4×.** 🔴 **Not an LMS**: no enrolment, gradebook or SIS integration. Pair it with Kolibri or OpenOlat for the institutional layer. |
 | **Tutoring platform — permissive** | [open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | 🟢 **New row `p493`** (restored). The permissive answer where ChatTutor (AGPL-3.0) was the only option. 194 forks against 114★ — deployment, not stargazing. |
 | **Academic integrity** | [Dolos](https://github.com/dodona-edu/dolos) | **MIT** | 355 | 🟢 **New row `p493`** (restored). Source-code plagiarism detection; **3,865 commits**, Ghent University. The layer this file previously left empty — and the one every client asks about the moment a tutor can write code. |
-| **Teacher workflow (skills)** | [k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0** | 595 | 🟢 **New row `p493`** (restored). Four K-12 teacher skills **plus eval rubrics**, co-developed with Learning Commons; consortium-side twin at [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) (Apache-2.0, 40★). 🔵 A skill pack has no runtime — nothing to host, no data residency posture. |
+| **Teacher workflow (skills)** | [k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0** | 600 *(🟢 `p512`, API)* | 🟢 **New row `p493`** (restored). Four K-12 teacher skills **plus eval rubrics**, co-developed with Learning Commons; consortium-side twin at [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) (Apache-2.0, 40★). 🔵 A skill pack has no runtime — nothing to host, no data residency posture. |
 | **Tutoring evaluation** | [pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | 13 | 🟢 **New row `p493`** (restored). 1,143 teacher-exam questions (920 CDPK / 223 SEND), 100+ models, `arXiv:2506.18710`. 🔴 13★ — a corpus and baseline, not a dependency. |
 | **Low-bandwidth delivery** | [rumi-platform](https://github.com/Orenda-Project/rumi-platform) | **Apache-2.0** | 18 | 🟢 **New row `p493`** (restored). **WhatsApp**-delivered learning, 15 languages, 847 commits (Pakistan / Taleemabad). No app, no browser — the delivery surface below even Kolibri's. |
 | **Lesson planning** | [Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | **MIT** | 9 | 🟢 **New row `p493`** (restored). MSR India, VELLM, with Sikshana Foundation. **Every artefact is routed to a teacher for review before classroom use** — a shipped implementation of the human-oversight gate. |
+| **Peer assessment / peer review** | [expertiza](https://github.com/expertiza/expertiza) | **MIT** | **194** *(🟢 `p512`, API)* | 🟢 **New row `p512`**, from the fork-ranked leg. Rubric-driven peer review with review mapping and instructor moderation; **1,329 forks / 194★**, NSF-funded (NC State). **North America.** The cheapest credible place to put AI in assessment: the model drafts or checks a *peer's* review and never issues the grade. 🔴 Grant has no title line — tell your licence gate. |
+| **STEM / robotics teaching** | [Open Roberta Lab](https://github.com/OpenRoberta/openroberta-lab) | **Apache-2.0** | **147** *(🟢 `p512`, API)* | 🟢 **New row `p512`.** Fraunhofer IAIS; browser-delivered block programming for real robots, no install. **EMEA, state-backed** — the sovereignty answer in a K-12 STEM procurement. 🔴 **The grant is on `master`, not on the default branch `develop`** (11,359 B `8c6db340475136df`): a default-branch probe reports a phantom absence. |
 
 ## The decision that actually matters on an engagement
 

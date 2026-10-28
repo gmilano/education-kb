@@ -1,0 +1,7 @@
+slug	channel	verdict	default_branch	head_sha
+expertiza/expertiza	git-symref	LIVE	main	b68bb8f640ac
+OpenRoberta/openroberta-lab	git-symref	LIVE	develop	089b4483df27
+smithjohn78390/tongjiang-lab	git-symref	LIVE	main	4d63ce0a72d9
+knoxiboy/DoubtDesk	git-symref	LIVE	main	a1ec0f0d76e1
+PapillonApp/Papillon	git-symref	LIVE	dev	4b8e54c358b4
+globant-kb/this-repo-never-existed-p512-control	git-symref	UNREADABLE_ABSENT_OR_PRIVATE	-	-

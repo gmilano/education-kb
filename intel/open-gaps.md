@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p512` — **🔴 `make hooks` DENIED (`Code from External`) — a seventeenth denial in eighteen passes, so `p511`'s `45/63` is still the last gate-attested reading of this base. 🟢 `Gap 511-B` CLOSES and falsifies the rule that registered it. 🆕 Three gaps registered, two of them against this base's own CENSUS FRAMES rather than its content. 🔴 And `Gap 511-A`'s class reproduced for a TENTH time, in this pass's own instrument.**
+
+🔴 **Gate posture, stated first.** `make hooks` was attempted and **DENIED** — `Code from External`.
+🟡 **Nothing in `p512` is gate-attested.** The invariants `p511` repaired by hand were therefore
+re-checked in this session's own code instead, and both hold:
+
+| invariant | check | result |
+|---|---|---|
+| `P383` — one bare `## Opportunities by region`, exactly five `###` from the closed vocabulary | counted in [`intel/market.md`](market.md) | 🟢 **1 bare heading, 5 subsections**: North America, EMEA, APAC, LATAM, Global |
+| `P418` — the register's newest section matches the shelves' | this section is `p512`; the shelves are `p512` | 🟢 **current** |
+| `T29` — `archived` read on every address | all **71** addresses read on the API this pass | 🟢 **`archived: false` on all 71**; `incomplete_results: false` on every batch |
+
+### 🟢 Closed, superseded, or re-classified
+
+| gap | disposition |
+|---|---|
+| 🟢 **`Gap 511-B`** (`anthropics/k12-teacher-skills` reads a round `600` and was not re-read) | 🟢 **CLOSED — and it falsifies `Gap 510-A`'s successor rule.** Re-read: **600, exactly**. With `openeducat/openeducat_erp` at **900** at both its sites, **three round cells are exact**, so `p511`'s *"4 of 4 round cells wrong"* is 13 of 16, not a law. 🔴 **The operative rule weakens to "a round cell is UNREAD until re-read"** — a statement about what may be claimed, not about the value. 🔵 And the same repository was found carrying **600 / 598 / 595 in three live files at once**, which is the gap below |
+| 🟡 **`Gap 504-A`** (the API search channel cannot see `openedx/edx-platform`) | 🟡 **RE-CONFIRMED on this base's strongest control yet, and WIDENED.** Queried inside a **pure `repo:` disjunction containing a known-good control**: control returned, target did not, `incomplete_results: false` — 🟢 **so the zero is the channel, not the query**, which the gap had never separated before. 🔴 **A second address behaves identically: `foradian/fedena`** (`repos/foundations.md`, `4★`). 🟡 Neither is retired — `Gap 510-B` holds |
+| 🟡 **`Gap 511-A`** (`gate-shelf-consistency`'s false positives: quoting a wrong value is not holding one) | 🟡 **STANDING, and reproduced for a TENTH time — this pass in MY OWN instrument.** The prose arm scored [`compose/patterns.md`](../compose/patterns.md)'s line *"the `~12,000★` figure this base carried for ~500 passes was a stale carry"* as `satvik314/educhain` wrong by **−11,613**. The line is correct and saying so **is** its content. 🟢 Caught by reading the line before publishing |
+
+### 🆕 Registered — `p512`
+
+| gap | what it is, and what would close it |
+|---|---|
+| 🆕 **`Gap 512-A`** — the market denial names its own remedy | 🔴 Two new 2026 figures (a **`$3.7B`** sector size below this base's entire published floor, and a **42 %** North-America share contradicting the shelved **36 %**) came from the **search channel's summary** of a publisher page that **cannot be read from this session**: `www.persistencemarketresearch.com` fails at **DNS** (`getaddrinfo ENOTFOUND`), being outside the session's allowed network domains. 🟢 **`T41`'s class — a one-action ask.** 🟢 **Closes when that domain is allowed** and the figures are read at source. 🔴 Until then they are channel-attributed, **not shelved as fact**, and written into the pass block so a later pass does not mistake rediscovery for corroboration |
+| 🆕 **`Gap 512-B`** — this base has no cross-file agreement check, and 7 addresses were disagreeing with themselves | 🔴 Over the six non-append-only live files, **29 addresses carry a star cell in more than one place and 7 disagreed** — `k12-teacher-skills` at **600/598/595**, `kolibri` at **1,162/1,200**, `oppia` at **6,950/6,900**, `learnhouse` at **2,429/2,400**, `OpenMAIC` at **41,712/41,700**, `mentingo` at **101/100**, `Papermorph` at **993/982**. 🔵 **Internal agreement is cheaper than an API read and catches the un-propagated correction directly** — it is how `p512` found that **2 of `p511`'s own 4 corrections never reached the shelf**. 🟢 **Closes as a gate**: for every address with more than one star cell in the live files, the cells must agree. All 7 are repaired this pass |
+| 🆕 **`Gap 512-C`** — the adjacency safeguard is a measured coverage hole, and the fix is structural | 🔴 Requiring exactly one GitHub address per row — the safeguard that stops an extractor guessing (`Gap 509-B`) — **excluded 26 of 119 star cells (22 %)**, and **2 of the 26 were wrong** (`canvas-lms` `6,900 → 6,890`; `k12-teacher-skills` `595 → 600`). 🔵 **The exclusions are not random**: a row carries a second address precisely when it is a well-developed row that cites a related repository in its notes. 🟢 **Closes with the structural fix, already applied:** when a table header names a `★` column, read that column **by index** and take the address from the repo column — adjacency is then unnecessary. The gate belongs on the **prose** arm, where there is no column to index |
+
+### 🔴 Registered against this base's instruments, not its content — `T42`–`T44` as gaps
+
+| gap | the instrument defect |
+|---|---|
+| 🆕 **`Gap 512-D`** (`T42`) | 🔴 **A licence absence must be enumerated over BRANCHES, not only paths.** [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) serves **no payload at 12 paths on `develop`**, its resolved default branch, and **Apache-2.0 at `master/LICENSE` (11,359 B `8c6db340475136df`)**. 🔴 Every `NONE-OF-N-PATHS` verdict this base holds was computed on one branch and means **unread**, not **unlicensed**. 🟢 Closes by re-running the negative verdicts with `git ls-remote --heads` enumeration first |
+| 🆕 **`Gap 512-E`** (`T43`) | 🔴 **The detector and the byte reader fail in opposite directions and this base runs only one arm at a time.** [`expertiza/expertiza`](https://github.com/expertiza/expertiza) is **MIT with no title line** — the byte anchor is blind, the detector is right. [`smithjohn78390/tongjiang-lab`](https://github.com/smithjohn78390/tongjiang-lab) is **CC BY-NC 4.0 in prose** — the detector abstains (`NOASSERTION`), the bytes are right, and 🔴 **the abstention hides a NON-COMMERCIAL grant behind the comfortable label "unknown"**. 🟢 Closes when both arms run on every new address and the rule is coded: a **recognised** `spdx_id` is evidence *for* a grant; an **abstention** is evidence for nothing |
+| 🆕 **`Gap 512-F`** (`T44`) | 🔴 **An in-query known-good control is annihilated by any other qualifier.** `topic:education forks:>80 stars:<250 pushed:>2026-06-01 repo:HKUDS/DeepTutor` returned **`total_count: 0`, `incomplete_results: false`** — the control was **ANDed away**, so a malformed query and an empty world are the same byte. 🟢 **Closes with the rule, already in force this pass:** an in-query control is valid only on a pure `repo:` disjunction; a filtered leg needs a second, separate control call |
+
+### 🔴 Standing, re-checked, unmoved
+
+| gap | status |
+|---|---|
+| 🔴 **`make hooks` cannot be run from this session** | 🔴 **Seventeenth denial in eighteen passes** (`Code from External`). `p511`'s **45/63** stands as the last gate-attested verdict, with its 18-gate red list unaddressed. 🔵 **This is now the single largest structural gap on this base**: 63 gates exist, they demonstrably catch real defects — `p511` saw three of them independently reproduce hand-found defects — and a pass can run them roughly once in eighteen |
+| 🟡 **`Gap 510-B`** (`ABSENT` is not assertable on the git channel) | 🟡 **UNMOVED and load-bearing twice this pass**: it is why `foradian/fedena` stays on the shelf, and why `openedx/edx-platform` keeps its caveated `8,200` rather than being dropped |
+| 🔴 **The LMS + SIS permissive nil** | 🔴 **RE-CONFIRMED on the axis most likely to break it.** The fork-ranked leg — the one that reaches institutionally deployed administrative software — returned 40 rows and **no permissive LMS+SIS platform**. Strongest form this absence has had |
+| 🔴 **The demand channel for EMEA education** | 🔴 **NIL, explicitly.** The prescribed EMEA leg returned enterprise-AI and IT-strategy material, a **2023** CEO survey, and **no ministry, regulator, university system or EMEA edtech vendor**. 🟢 `T30`'s workaround holds: query the **instrument**, not the region |
+
 ## 🆕 `p511` — **🟢 `make hooks` RAN after sixteen denials and the verdict is 45/63 — this register's whole premise ("the gate is denied, so this stays a discipline") no longer holds. 🟢 `Gap 509-A` CLOSED and the reading it suspended RETIRED. 🟢 `Gap 510-A` SUPERSEDED by a better discriminator. 🟡 `Gap 510-B` SPECIFIED, not closed. 🟢 `Gap 483-K` RE-CLASSIFIED from unclosable to a one-action ask. 🔴 `p510`'s two registered gaps NEVER REACHED THIS REGISTER — repaired here. 🔴 FIVE REGISTERED (`511-A`…`511-E`).**
 
 🟢 **Gate posture, stated first and inverted:** `make hooks` **EXECUTED**. 93 suites ran; `p300`'s

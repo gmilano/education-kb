@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p512` — `2026-10-28` — **🔴 A GRANT CAN BE ABSENT FROM A REPOSITORY'S DEFAULT BRANCH AND PRESENT ON ANOTHER, AND THIS SHELF JUST MET THE CASE: [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) serves **NO licence payload at 12 paths on `develop`** — its true default branch — and serves **Apache-2.0, 11,359 B, at `master/LICENSE`**. `T36`'s rule is INVERTED for grants. 🟢 Two new foundation rows, one North America (MIT peer assessment), one EMEA (Apache-2.0, Fraunhofer). 🔴 SEVEN star cells on this shelf were wrong, five of them round, and three were OVERSTATEMENTS.**
+
+### 🔴 `T42` — resolve the default branch for liveness; **enumerate branches** for the grant
+
+`p509` established the rule this base has used since: *"`main`/`master` is the wrong assumption for
+13.2 % of this shelf"* — resolve the **true** default branch from `git ls-remote --symref`, then read
+the payload there. 🔴 **On `openroberta-lab` that rule produces a false absence.**
+
+| branch | paths probed | result |
+|---|---|---|
+| `develop` — 🔵 **the resolved default**, `HEAD` `089b4483df27` | `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license`, `license.txt`, `LICENCE`, `COPYING`, `COPYING.txt`, `LICENSE-AGPL`, `NOTICE`, `ide/LICENSE`, `OpenRobertaServer/LICENSE` | 🔴 **404 on all 12** |
+| `master` | same set | 🟢 **`LICENSE` 200 — 11,359 B, `sha256₁₆ 8c6db340475136df`, Apache-2.0 title block**; and `NOTICE` 200 — 2,625 B, which per `p509` is **not** a grant |
+
+🔵 **The API's own detector reads `Apache-2.0` for this repository**, so the three channels disagree
+in an instructive way: the detector says Apache-2.0, the default-branch byte probe says *nothing
+here*, and the byte probe on a **non-default** branch says Apache-2.0 with a sha. 🟢 **The bytes and
+the detector agree; the method was wrong.**
+
+🔴 **The operative amendment, and it is a tightening of `T34`, not a loosening:** `T34` says an
+absence must be **enumerated**, never inferred from the paths you thought to try. `p512` adds the
+second axis — **an absence must be enumerated over BRANCHES as well as paths.** A 12-path probe on
+one branch is still a path list; it is just a longer one. Until a repository's branches are
+enumerated, `NONE-OF-N-PATHS` on the default branch means **unread**, not **unlicensed**.
+🔵 Why it happens is mundane and will recur: a project whose releases are cut from `master` and whose
+work happens on `develop` has no reason to carry the licence file forward on the working branch.
+Reads: [`licence-bytes-new-addresses.2026-10-28-p512.tsv`](../evidence/licence-bytes-new-addresses.2026-10-28-p512.tsv).
+
+### 🟢 Two new rows — and both arrive from the fork-ranked leg, not a star-ranked one
+
+🟢 **Registered on the permissive tier above**, each licence read from bytes this pass:
+
+| row | grant | ★ / forks | region | the layer |
+|---|---|---|---|---|
+| [`expertiza/expertiza`](https://github.com/expertiza/expertiza) | 🟢 **MIT**, `main/LICENSE` **1,068 B** `cc922786cdca1cd7` | **194** / **1,329** = 🟢 **6.85×** | 🟢 **North America** (NSF, NC State) | **peer assessment** — a layer this shelf has never had |
+| [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) | 🟢 **Apache-2.0**, `master/LICENSE` **11,359 B** `8c6db340475136df` | **147** / **141** | 🟢 **EMEA** (Fraunhofer IAIS, Germany) | **STEM / robotics teaching environment** |
+
+🔵 **Why these belong on the FOUNDATION shelf rather than the agent shelf:** neither contains an
+agent. `expertiza` is a Rails application that implements a *review workflow* — rubrics, review
+mapping, moderation — and `openroberta-lab` is a block-programming IDE with a device layer. Both are
+things an AI feature is added **to**, which is this shelf's definition.
+
+🔵 **The permissive census moves on the EMEA axis, which is the one that was thin.** `p499` put the
+permissive numerator's movement at the interoperability layer; `openroberta-lab` is the first
+**permissive, state-backed, EMEA-origin platform** on this shelf — `ralph` and `warren` (France
+Université Numérique) are MIT and EMEA but are LRS components, not platforms.
+
+### 🔴 Seven star cells on this shelf were wrong — and the five round ones carried the large errors
+
+| cell | was | is *(🟢 `p512`, API)* | delta | shape |
+|---|---|---|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `9,300` | **9,258** | 🔴 **−42, OVERSTATED** | plain, round |
+| [`frappe/lms`](https://github.com/frappe/lms) | `3,400` | **3,350** | 🔴 **−50, OVERSTATED** | plain, round |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `6,900` | **6,890** | 🔴 **−10, OVERSTATED** | plain, round |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | `32,300` | **32,365** | +65 | plain, round |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | `1,100` | **1,130** | +30 | plain, round |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `1,000` | **1,019** | +19 | plain, round |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | `2,428` | **2,429** | +1 | **bold, non-round** |
+
+🔴 **Three of the seven are overstatements and all three are round.** A round cell is not just stale;
+it is a remembered figure, and a remembered figure drifts in **both** directions. 🔵 The seventh row
+is the instructive one: `learnhouse` was **bolded, non-round, and carried a `p510` provenance
+suffix** — every signal this base trusts — and it was still wrong by one, because stars move
+continuously. 🟢 **The honest form of a star cell is `value` + `pass` + *the read is exact only at its
+timestamp***, which is why `DeepTutor`'s cell on [`agents/top.md`](../agents/top.md) now carries a
+clock time: it was read four times this pass, twenty minutes apart, at **47,803 / 47,804 / 47,804 /
+47,805**.
+
+### 🔴 Two addresses on this shelf are invisible to the API search channel, not one
+
+🔴 **`Gap 504-A` is re-confirmed with the strongest control this base has run on it.**
+[`openedx/edx-platform`](https://github.com/openedx/edx-platform) was queried inside a **pure
+`repo:` disjunction that also contained a known-good control**: the control returned, the repository
+did not, `incomplete_results: false`. 🟢 **So the zero is a property of the channel and not of the
+query** — the first time this gap has been separated from query defect.
+🔴 **And a second address behaves the same way: `foradian/fedena`**, carried on this shelf at `4★`.
+It is **not** retired on that evidence — `Gap 510-B` holds, an absent repository and a private one
+answer alike — but it is now registered as unreadable rather than silently unread.
+Reads: [`star-index-arm.2026-10-28-p512.tsv`](../evidence/star-index-arm.2026-10-28-p512.tsv).
+
 ## 🆕 `p511` — `2026-10-28` — **🟢 `make hooks` RAN after sixteen denials, and it is RED (45/63). 🟢 `p509`'s byte census is INDEPENDENTLY RE-ATTESTED two passes later — same bytes, same `sha256`, from a fresh read. 🟢 One new foundation row, EMEA-placed on its licence holder: the permissive Learning Record Store. 🔴 One round star cell on this shelf was OVERSTATED by 38.**
 
 ### 🟢 `p509`'s licence byte census, re-read independently — and it holds exactly
@@ -347,26 +426,28 @@ heading goes stale silently; the table is the census, not the heading.**
 | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | **MIT** | **355** | `74b101785bad` | **Source-code plagiarism / academic-integrity engine** — 1 084 B, `sha1 8f6f3815d28d`; **3,865 commits**, the most-maintained repo in this file. Ghent University (`dolos@ugent.be`). 🟢 **Restored `p493`: `p296` recorded this as *already a foundation row* and this KB's identity gate refused a duplicate promotion on that basis — then a later full-file rewrite deleted the row the gate had defended.** The gate worked; the rewrite did not. |
 | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 | 448 | `3736d48fa685` | Full Java LMS, Apache-2.0 (10,982 B). The only permissively-licensed *full* LMS found. Swiss-origin, strong EMEA higher-ed footprint. |
 | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | **51** *(🟢 `p511`, API; `archived: false`)* | `91fef112394d` | 🆕 **New row `p511`. The only PERMISSIVE Learning Record Store on this base** — xAPI/LRS with FastAPI, Elasticsearch/Mongo backends and a CLI, **34 tags, latest `v5.1.0`**. Licence read from bytes: `LICENSE.md` **1,094 B**, `sha256₁₆ 08ea77291de9c70f`, holder **"France Université Numérique"** — the French national higher-education digital agency. 🟢 **Region: EMEA**, placed on the holder, not inferred. The component every xAPI-instrumented tutoring deployment needs and nobody wants to write; the public-sector copyright holder is the sovereignty answer an EMEA buyer asks for. 🔴 Carried on this base since `p256` in [`trending.md`](trending.md) only — a nine-pass PLACEMENT failure, not a discovery one. |
+| [expertiza/expertiza](https://github.com/expertiza/expertiza) | **MIT** | **194** *(🟢 `p512`, API)* | `b68bb8f640ac` | 🟢 **New row `p512`.** Rails **peer-assessment / peer-review** platform, NSF-funded (NC State). The layer this shelf has never carried: not an LMS, not an SIS — the **review workflow** an AI grader has to sit beside rather than replace. **1,329 forks / 194★.** Payload **1,068 B `cc922786cdca1cd7`**, verbatim MIT body, no title line. |
+| [OpenRoberta/openroberta-lab](https://github.com/OpenRoberta/openroberta-lab) | **Apache-2.0** | **147** *(🟢 `p512`, API)* | `089b4483df27` | 🟢 **New row `p512`.** **Fraunhofer IAIS** block-programming environment for robots, browser-delivered, no install — the **STEM / robotics teaching** layer, and 🟢 **EMEA-origin and state-backed**, which matters where sovereignty is the first objection. 🔴 **The grant is on `master`, not on the default branch `develop`** (**11,359 B `8c6db340475136df`**) — `T42`; a probe pinned to the default branch reports a phantom absence. |
 
 ## Copyleft — real systems, with the obligation named
 
 | Repo | License | ★ | SHA read | Role / constraint |
 |---|---|---|---|---|
-| [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9,300 | `ac97a8bfdc20` | Virtual classroom / web conferencing. LGPL — linking is permitted, so this is the most integration-friendly copyleft row. Default branch `v4.0.x-develop`. |
+| [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9,258 *(🟢 `p512`, API)* | `ac97a8bfdc20` | Virtual classroom / web conferencing. LGPL — linking is permitted, so this is the most integration-friendly copyleft row. Default branch `v4.0.x-develop`. |
 | [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🟢 **AGPL-3.0** *(`p506`: **read from bytes** at `f73b7ae64dd5` — `LICENSE`, 35,136 B, title block `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`, blob `1eb391f38837`; `Gap 504-C` CLOSED)* | 8,200 *(🔵 `p504`: HTML channel — **the API still cannot see this repo**, `Gap 504-A`, 3rd consecutive pass)* | 🟢 **`f73b7ae64dd5`** *(`p504` re-pin; stable at `p506`)* | The Open edX LMS + Studio. Dominant in higher ed and workforce. AGPL: hosting a modified copy for a client triggers source release. Default branch `master`. |
 | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | **7,556** *(🟢 `p504`, API; prior rounded cell 7,600)* | `46c042e7da65` | Largest installed base and the largest plugin ecosystem (2,000+). Grant is at `COPYING.txt`, **not** `LICENSE` — a root-`LICENSE` probe reports "no grant" here. |
-| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | 6,900 | `1c9f0bb8013e` | The open LMS by Instructure; heavy North America higher-ed share. AGPL. Default branch `master`. |
-| [frappe/lms](https://github.com/frappe/lms) | **AGPL-3.0** | 3,400 | `6054772c0426` | Frappe-framework LMS. **Widely published as MIT — it is not.** Grant at `license.txt` (lowercase), 33,893 B, AGPL-3.0; the GitHub sidebar agrees. |
-| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | **AGPL-3.0** | **2,428** *(🟢 `p510`, API; `p504` 2,427; prior rounded cell 2,400)* | `2d75337273ac` | **New row `p491`.** "Next-gen open source learning platform" — modern course/content platform. At 2,400★ it outranks Kolibri and Chamilo, and was absent from this KB entirely. AGPL confirmed on both channels (`LICENSE`, 34,522 B; sidebar `AGPL-3.0 license`). Default branch **`dev`**. |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | 6,890 *(🟢 `p512`, API)* | `1c9f0bb8013e` | The open LMS by Instructure; heavy North America higher-ed share. AGPL. Default branch `master`. |
+| [frappe/lms](https://github.com/frappe/lms) | **AGPL-3.0** | 3,350 *(🟢 `p512`, API)* | `6054772c0426` | Frappe-framework LMS. **Widely published as MIT — it is not.** Grant at `license.txt` (lowercase), 33,893 B, AGPL-3.0; the GitHub sidebar agrees. |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | **AGPL-3.0** | **2,429** *(🟢 `p512`, API; `p510` 2,428; `p504` 2,427; prior rounded cell 2,400)* | `2d75337273ac` | **New row `p491`.** "Next-gen open source learning platform" — modern course/content platform. At 2,400★ it outranks Kolibri and Chamilo, and was absent from this KB entirely. AGPL confirmed on both channels (`LICENSE`, 34,522 B; sidebar `AGPL-3.0 license`). Default branch **`dev`**. |
 | [frappe/education](https://github.com/frappe/education) | GPL-3.0 *(declared only)* | 682 | `73ce33ef2719` | **New row `p491`.** Frappe school-management / SIS app — **a different product from `frappe/lms`, under a different license family.** Its grant is a **19-byte** `license.txt` reading `License: GNU GPL V3` with **no license text at all**; GitHub's classifier cannot resolve it and shows a bare "License" link. See the note below. Default branch `develop`. |
-| [ankitects/anki](https://github.com/ankitects/anki) | **AGPL-3.0** | 32,300 | `d87cb22bf337` | Spaced-repetition engine; the reference implementation of SRS scheduling. AGPL. Useful as an algorithm reference even where the code can't be taken. |
-| [overhangio/tutor](https://github.com/overhangio/tutor) | **AGPL-3.0** | 1,100 | `aa5d1a764b6c` | Docker-based Open edX distribution — the realistic way anyone actually deploys Open edX. Default branch `release`. |
-| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1,000 | `2d1e97ee4244` | LMS focused on ease of use and accessibility. Notable francophone + LATAM public-sector footprint. |
+| [ankitects/anki](https://github.com/ankitects/anki) | **AGPL-3.0** | 32,365 *(🟢 `p512`, API)* | `d87cb22bf337` | Spaced-repetition engine; the reference implementation of SRS scheduling. AGPL. Useful as an algorithm reference even where the code can't be taken. |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | **AGPL-3.0** | 1,130 *(🟢 `p512`, API)* | `aa5d1a764b6c` | Docker-based Open edX distribution — the realistic way anyone actually deploys Open edX. Default branch `release`. |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1,019 *(🟢 `p512`, API)* | `2d1e97ee4244` | LMS focused on ease of use and accessibility. Notable francophone + LATAM public-sector footprint. |
 | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 647 | `fa5f4b66caf4` | Student Information System for school management. **Correct path — `RosarioSIS/RosarioSIS` is a 404** and was cited on this KB. |
 | [GibbonEdu/core](https://github.com/GibbonEdu/core) | GPL-3.0 | 635 | `65f86bf061fa` | K-12 school management platform (teachers, students, parents, leadership). Default branch `v31.0.00`. |
 | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | 505 | `db9582e3cd3e` | German-origin LMS, strong DACH public-sector and university use. Default branch `release_11`. |
 | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 152 | `1e21b7a2da4a` | Interactive content types (the H5P core). Embeds into Moodle/Canvas/Open edX; the standard way interactive exercises get authored. |
-| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 | `46a5d7d40082` | Education **ERP** on Odoo — admissions, fees, hostel, library, timetable. The Odoo-for-education answer. Default branch `19.0`. |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 *(🟢 `p512`, API)* | `46a5d7d40082` | Education **ERP** on Odoo — admissions, fees, hostel, library, timetable. The Odoo-for-education answer. Default branch `19.0`. |
 | [oat-sa/tao-core](https://github.com/oat-sa/tao-core) | GPL-2.0 | 64 | `d9b3da5e6b0a` | Computer-based **assessment** platform core (QTI). The serious open assessment/exam engine. |
 
 ## The 19-byte license, and why it matters more than it looks

@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p512` — `2026-10-28` — **🟢 A DISCOVERY AXIS THIS BASE HAD NEVER RUN BROKE A THREE-PASS DROUGHT, AND IT IS NOT A NEW QUERY — IT IS A NEW SORT KEY: rank `topic:education` by FORKS instead of stars and four addresses new to this repository appear, including the most-forked education repository this base has ever recorded (1,329 forks against 194★). 🔴 The prescribed star-ranked leg returned 11 rows and zero new addresses in the same pass. 🔴 And the fork axis has terrible precision: 36 of 40 rows were not education-AI.**
+
+### 🟢 The sort key, not the query, was the saturated thing
+
+`p511` measured the prescribed discovery channel at **95.2 % shelf recall** across five legs and
+registered saturation as `T39`. 🟢 **That reading stands and is now bounded.** The saturation is a
+property of **attention-ranked** discovery. Ranking by **forks** — institutional copies rather than
+bookmarks — found four addresses in one leg:
+
+| rank by | leg | rows | 🟢 new to base |
+|---|---|---|---|
+| stars (prescribed shape) | `topic:ai-tutor forks:>20 pushed:>2026-07-01` | 11 | 🔴 **0** |
+| **forks** | `topic:education stars:50..600 forks:>120 pushed:>2026-04-01` | 40 | 🟢 **4** |
+
+🔵 **The mechanism is worth stating because it generalises past education:** a star is one person
+deciding to remember a repository; a fork is frequently one *organisation* deciding to run it. In a
+sector whose buyers are institutions, the second number is the commercial one, and it is invisible to
+every trending list.
+
+### 🟢 The four, with grants read from bytes
+
+| address | ★ *(🟢 `p512`, API)* | forks | ratio | grant | disposition |
+|---|---|---|---|---|---|
+| [`smithjohn78390/tongjiang-lab`](https://github.com/smithjohn78390/tongjiang-lab) | **446** | 126 | 0.28× | 🔴 **CC BY-NC 4.0**, `main/LICENSE` 643 B `b7039a7ca908106f` | 🔴 refused — non-commercial. **Created today** (`2026-10-28`), 446★ in <24 h, APAC (铜匠实验室) |
+| [`expertiza/expertiza`](https://github.com/expertiza/expertiza) | **194** | **1,329** | 🟢 **6.85×** | 🟢 **MIT**, 1,068 B `cc922786cdca1cd7` | 🟢 promoted to the foundation + platform shelves. NSF / NC State, **North America** |
+| [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) | **147** | 141 | 0.96× | 🟢 **Apache-2.0**, `master/LICENSE` 11,359 B `8c6db340475136df` | 🟢 promoted. Fraunhofer IAIS, **EMEA** |
+| [`knoxiboy/DoubtDesk`](https://github.com/knoxiboy/DoubtDesk) | **99** | 167 | 🟢 **1.69×** | 🟢 **MIT**, 1,066 B `c34b9875225f85e0` | 🟡 recorded, below the shelf floor; last push `2026-08-13` |
+
+🟡 **Also returned and already held**, confirming the leg reaches this base's existing population
+rather than a disjoint one: `ai-shifu/ai-shifu`, `INGInious/INGInious`, `numbas/Numbas`,
+`uPortal-Project/uPortal`, `microsoft/o365-moodle`, `oppia/oppia-android`,
+`PapillonApp/Papillon` (GPL-3.0, 35,149 B `3972dc9744f6499f` — re-read from bytes this pass),
+`PetoiCamp/OpenCatEsp32-Quadruped-Robot`, `wingkwong/react-quiz-component`, `NiluK/worldmodels101`.
+
+🔴 **The precision cost, stated so no later pass over-reads this result.** 36 of the 40 rows are not
+education-AI: `w3f/polkadot-wiki`, `ProjectSkyfire/SkyFire_548` (a World-of-Warcraft emulator tagged
+`education`), `IBM/IBM-Z-zOS`, three `inno-devops-labs` course repositories, `geo-python/site`,
+`carpentries/instructor-training`, `ianshulx/Django-Projects-for-beginners`,
+`diwas7777/CodesHub`, `codeharborhub/codeharborhub.github.io` and similar. 🔵 **The `education` topic
+is a self-applied label and the fork axis amplifies whatever the label lets in** — Hacktoberfest
+starter repositories are forked thousands of times by contributors, not institutions. **The ratio is
+a finder, not a score.**
+
+### 🔴 `foradian/fedena` is unreadable on the API search channel, and is NOT retired for it
+
+🔴 A second address joins `openedx/edx-platform` in being invisible to this channel: `foradian/fedena`,
+carried on [`repos/foundations.md`](../repos/foundations.md) at `4★`, did not return from a **pure
+`repo:` disjunction whose known-good control did return**, `incomplete_results: false`.
+🟡 **Per `Gap 510-B` it stays on the shelf**: the git channel is a sound positive test only, and an
+absent repository and a private one answer alike. 🟢 It is registered as *unreadable on one channel*,
+which is a different and smaller claim than *gone*.
+
 ## 🆕 `p511` — `2026-10-28` — **🔴 DISCOVERY ON THIS CHANNEL IS SATURATED, AND THIS PASS MEASURES IT INSTEAD OF ASSERTING IT: 83 distinct addresses returned across five catalogue legs, 79 of them (95.2 %) ALREADY ON THESE SHELVES. 🟢 The two new legs that have never been run before are the ones that found anything. 🔴 The trending digests the prescribed web leg returns are STALE ON STARS by up to 11 %, so they are not a star source.**
 
 ### 🔴 The saturation measurement — recall of the existing shelves against the channel
