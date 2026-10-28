@@ -781,3 +781,37 @@ down.
 
 🔵 **Rule:** enumerate every grant path, then classify by name before counting. Counting paths
 overstates this class **9×**.
+
+---
+
+## 🆕 `p499` — `2026-10-28` — five agent rows promoted, each operatively verified
+
+**Why these appear now.** `p499` measured this base's `topic:edtech` 50–400★ band and found that
+**41 of 52 rows already sat in its own append-only narratives while only 1 had ever reached a
+curated shelf** (`Gap 499-A`; the measurement is in
+[`agents/trending.md`](trending.md) `p499`). Discovery was never the constraint — promotion was.
+These five are the agent-layer half of the repair, read from bytes at the pinned SHA and graded on
+the operative-span instrument introduced this pass
+([`compose/code/p499-canonical-set/`](../compose/code/p499-canonical-set/)).
+
+| Agent | Repo | Licence (read from bytes) | ★ | Operative verdict | What it does |
+|---|---|---|---|---|---|
+| **Bloom** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT**, 1 069 B `68788b5e7d34` | 294 | 🟢 **IDENTICAL** | Private AI tutor that adapts to how a learner actually learns and sequences the next lesson. Self-describes against **Bloom's 2-sigma** result. Topics declare `ai-agent` + `agent-skills`, so it is an agent proper, not a wrapper. |
+| **OpenTutor** | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 **MIT**, 1 068 B `dbaab74ffe76` | 154 | 🟢 **IDENTICAL** | Block-based adaptive-learning workspace that **runs locally** — upload any material, get a course. FastAPI. 🟢 **The only locally-running adaptive tutor on these shelves**, which matters for every data-residency conversation. |
+| **OpenPronounce** | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | 🟢 **MIT**, 1 113 B `74bc17ea406e` | 166 | 🟡 DEVIANT (+2: the title words `The`/`MIT`) | Phoneme-level English pronunciation assessment, **Wav2Vec2 + DTW**, self-hosted. 🟢 A named model and a named algorithm, not a prompt — the most concretely specified AI component added this pass. 🔵 Last push **2026-08-15**. |
+| **Mnemo** | [`onemnemo/mnemo`](https://github.com/onemnemo/mnemo) | 🟢 **Apache-2.0**, 11 326 B `6dce04a20fbc` | 122 | 🟢 **IDENTICAL** | Study / spaced-repetition application, Photino X + .NET 10. 🔵 The **permissive** counterpart to `anki` (AGPL-3.0), whose code these shelves have had to treat as algorithm-reference-only. |
+| **AI flashcards** | [`kirill-markin/flashcards-open-source-app`](https://github.com/kirill-markin/flashcards-open-source-app) | 🟢 **MIT**, 1 070 B `98663982f0ae` | 102 | 🟢 **IDENTICAL** | AI-generated flashcards on **FSRS** scheduling; iOS, macOS, Android and web. Active **2026-10-28**. |
+
+🟢 **All five are permissive and all five can ship in a closed hosted derivative.** Four of the
+five were last pushed within the past eight days.
+
+🔵 **`Mnemo` + the flashcards app together change a standing recommendation.** `verticals/solutions.md`
+has carried `Anki` (AGPL-3.0) as "use as the algorithm reference even where the code can't ship".
+There are now **two permissive spaced-repetition implementations** — one Apache-2.0, one MIT with
+FSRS — so the AGPL constraint on that layer is no longer binding.
+
+🔴 **Not promoted, and why.** [`RandMelville/claude-war-room`](https://github.com/RandMelville/claude-war-room)
+(62★, MIT) carries the `edtech` topic and is **not an education project** — it is a five-agent
+orchestrator written in Portuguese. 🔵 **The topic axis itself admits false members**, so a topic
+count is not an education-supply count; this is the same popularity-filter problem as `Gap 488-E`,
+on a different axis.

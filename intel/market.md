@@ -1328,3 +1328,233 @@ counting and what they count, and the regional series of the publisher most ofte
 regional share implies the low end. 🟢 **Demand signals remain usable where the dollar figures are
 not** — a mandate with a date and a district count, a competence framework with four named domains,
 a survey with 200 institutions behind it. Those are the numbers to put in a proposal.
+
+---
+
+## 🆕 `p499` — `2026-10-28` — **🟢 THE MIDDLE EAST FINALLY HAS A NAMED INSTRUMENT ON THESE SHELVES, which `Gap 488-O` has recorded as missing for four passes — and it was mis-filed under APAC by the source that carried it. 🟢 `Gap 488-Q` SUBSTANTIALLY CLOSED: APAC's teacher-side layer has two named Philippine instruments and a funded training programme. 🔴 The EU AI Act date conflict is NOT closed and is now THREE-WAY. 🔴 And the NA bill-count disagreement `p493` retired a figure over is confirmed at 2× between two named trackers.**
+
+All four regional queries were run plus the two global axes. 🔴 **Every figure below is secondary**
+— `Gap 484-F` is narrowed only for `apache.org` (a licence payload), not for any market or policy
+source. Nothing here is primary-source verified.
+
+### 🟢 The Middle East datum — and why these shelves missed it
+
+`Gap 488-O` records EMEA as *"not repaired for Africa or the Middle East, both named in the query
+and both returning nothing. **'EMEA' on these shelves means Europe.**"*
+
+🟢 **The United Arab Emirates took a Cabinet decision in May 2025 making it the first country on
+record to mandate a nationwide AI curriculum for K-12 students.** 🔴 **It surfaced under an
+APAC query, not an EMEA one** — the source that carried it groups the UAE with Asia-Pacific.
+
+🔵 **This is a vocabulary failure, not a research failure.** `region` on these shelves is a closed
+five-value field and the Middle East belongs to **EMEA**. A pass that files a datum where its
+*source* filed it will keep losing the Middle East, which is exactly what four passes did. 🟢
+**Rule for later passes: place a datum by this base's own vocabulary, not by the publisher's
+regional desk.** The UAE mandate is recorded under EMEA below.
+
+🔴 **Africa is still empty.** Nothing returned on African education-AI adoption, regulation or
+players this pass either. **Five passes, no African datum.** `Gap 488-O` stands for Africa alone.
+
+### 🔴 The EU AI Act date conflict is now three-way, not two-way
+
+`Gap 483-K` has stood since `p483`: no EU AI Act date primary-source verified, EUR-Lex off the
+fetch allowlist. 🟢 This pass adds a **named instrument** for the first time —
+**Regulation (EU) 2026/1744** — and 🔴 **three mutually inconsistent dates for it**:
+
+| date | what it is said to be | source type |
+|---|---|---|
+| **24 July 2026** | published in the Official Journal | secondary (law-firm / guide) |
+| **27 July 2026** | has *applied* since | secondary, same family |
+| **31 July 2026** | *entry into force*, per the Commission's own page | 🔵 the Commission, but read second-hand |
+
+🟢 **The high-risk deadlines are consistent across sources**, and these are the ones that bound an
+engagement: **2 December 2027** for standalone high-risk systems, **2 August 2028** for systems
+embedded in regulated products. 🔵 `compose/patterns.md` `P490-2` and `P499-1` both key to the
+**2 Dec 2027** date, which no source disputes.
+
+🔴 **Do not quote an entry-into-force date.** Quote the 2027/2028 obligations and name the
+regulation number.
+
+### 🔴 The North America bill count: two named trackers, 2× apart
+
+`p491` retired *"134 bills / 31 states"* as one tracker among four that disagree. 🟢 Both ends are
+now named:
+
+| tracker | bills | states |
+|---|---|---|
+| MultiState | **134** | 31 |
+| FutureEd (cited via a second tracker) | **68** | 27 |
+
+🔵 **The retirement was correct and the ratio is 1.97×.** Separately, **33–35 state departments of
+education plus Puerto Rico** publish official AI guidance — a range, not a figure, because the
+trackers disagree on what counts as "guidance".
+
+### 🟢 Named instruments read this pass
+
+| region | instrument | what it requires | dated |
+|---|---|---|---|
+| **North America** | California **AB 1159** | would bar training AI models on student data unless it directly benefits the school | pending |
+| **North America** | Idaho **SB 1227** | statewide generative-AI framework: privacy, **procurement**, academic integrity | enacted |
+| **North America** | North Carolina **Session Law 2026-41** | AI-literacy standards; **model policy due 31 Dec 2026**; **teacher training by 30 Jun 2028** | 🟢 two hard dates |
+| **North America** | Alabama **HB 329** | approved CS course including AI instruction, for graduation | enacted |
+| **North America** | Oklahoma **SB 1734** | every district adopts a written AI policy **before the 2027-28 school year** | confirms `p493` |
+| **North America** | DC policy | 🔵 **non-mandatory**, and **bans AI from grading and discipline** | in force |
+| **North America** | US Dept of Education **Dear Colleague letter** | 🟢 judge AI/edtech by **learning outcomes**; build **evidence requirements into procurement**. 🔵 **No new federal rules.** | issued |
+| **EMEA** | **Regulation (EU) 2026/1744** | high-risk duties: conformity assessment, human oversight, post-market monitoring. Education systems affecting **access or assessment** are high-risk; admissions screening named. **Extraterritorial** — reaches non-EU providers whose systems affect EU learners. | 2 Dec 2027 / 2 Aug 2028 |
+| **EMEA** 🟢 **new** | **UAE Cabinet decision, May 2025** | nationwide **K-12 AI curriculum mandate** — reportedly the first on record | in force |
+| **EMEA** | UK approach | 🔵 light-touch, principle-based, via **existing regulators** — no education-specific AI statute | — |
+| **APAC** 🟢 **new** | Philippines **DepEd Order No. 003, s. 2026** | basic-education AI framework; 🟢 positions AI as a **supplementary tool, not a replacement for teachers** | 2026 |
+| **APAC** 🟢 **new** | Philippines **CHED Memorandum Order No. 21, s. 2026** | the same posture for **higher education** | 2026 |
+| **APAC** | China | AI a **compulsory subject from age six**, by Sept 2025 | in force |
+| **APAC** | India | AI + computational thinking **mandatory from Class 3**, from **2026–27** | scheduled |
+| **APAC** | Singapore | Primary 4 AI tools **teacher-supervised**, delivered through the **Student Learning Space**, not open platforms | in force |
+| **APAC** | South Korea | 🔴 mandatory AI textbooks reached **under 30% adoption by March**; the **National Assembly stripped their official status in August** after unions said the pace outran preparation | 🔴 de-mandated |
+| **LATAM** | Brazil **PL 2338/2023** | risk-based framework. Senate approved **Dec 2024**; **now in the Chamber of Deputies — text can still change** | pending |
+| **LATAM** | Brazil regulatory sandbox | 🟢 **the region's first AI regulatory sandbox**, 2025 | live |
+| **LATAM** 🟢 **new** | Mexico, **11 Feb 2026** — National Law to Regulate the Use of AI (Sen. Karina Isabel Ruíz Ruíz) | would create a **specialised regulator** classifying AI systems by risk. 🔴 **Mexico has no enacted AI law.** | introduced |
+| **LATAM** | Chile, Argentina, Colombia, Costa Rica | governance frameworks advancing; **ECLAC 2024 Digital Agenda** calls for shared standards across **33 member countries** | in progress |
+
+### 🟢 `Gap 488-Q` — substantially closed, and precisely what remains
+
+`Gap 488-Q`: *"failed a second time. No 2026 APAC teacher adoption figure. The ANZ-vs-Asia split
+remains measured on Ipsos ban-support sentiment."*
+
+🟢 **What exists now:** two **named Philippine instruments** that are explicitly teacher-protective
+(`DepEd Order 003` / `CHED MO 21`, both framing AI as supplementary to teachers); **Google's AI
+Opportunity Fund expanding into the region with $10 million for educators**, with Google itself
+stating a *"massive gap in formal training"*; Singapore's **teacher-supervised** delivery model; and
+EdTech Hub's Southeast Asia finding that engagement is happening *"with limited training, guidance,
+or institutional frameworks"*.
+
+🔴 **What is still missing, stated exactly:** there is **still no clean "% of APAC teachers using
+AI" figure.** The one teacher-side survey found covers **207 practitioners across three metro areas
+of the Philippines** — too narrow to carry a regional claim. 🔵 **The gap narrows from "no teacher
+data" to "no teacher-adoption *rate*"**, which is a different and smaller gap. It does not close.
+
+### 🔴 APAC market sizing disagrees with itself, again
+
+| claim | figure |
+|---|---|
+| APAC fastest-growing region, CAGR | **35.3%** |
+| APAC 2026 market | **$2.85B** |
+| APAC CAGR, a different source | **~48%** |
+
+🔴 **A 12.7-point CAGR spread.** Consistent with `T10` — sizing in this sector is not usable as a
+point estimate. **Use the range or say nothing.**
+
+## Opportunities by region — `p499`
+
+### North America
+
+🟢 **Sell procurement evidence, not capability.** The US Department of Education's Dear Colleague
+letter asks states to judge tools by **learning outcomes** and to build **evidence requirements
+into procurement** — and declines to set federal rules. That is an explicit instruction to buyers
+to demand what most vendors cannot produce. 🟢 **An evidence pack — instrumented outcomes, an
+eval harness, a documented measurement method — is a differentiator in every US bid right now**,
+and `P491-1` is already the harness.
+
+🟢 **Two dated near-term windows.** North Carolina's **model policy is due 31 Dec 2026** and its
+**teacher training by 30 Jun 2028**; Oklahoma districts need written policies **before the 2027-28
+year**. 🔵 Pair with Ohio's 610+ districts under an *optional* model policy (`p493`): the repeated
+shape is **a mandate on districts with no state template**, which is what `P490-5` exists for.
+
+🔵 **Where the patchwork itself is the product:** Idaho's SB 1227 covers procurement, California's
+AB 1159 restricts training on student data, DC bans AI from grading and discipline. A product that
+cannot be **configured per jurisdiction** cannot be sold nationally.
+
+🟢 **Technical route:** `P499-1` — LTI-first, so Canvas's AGPL-3.0 installed base is reachable
+without a copyleft conversation.
+
+### EMEA
+
+🟢 **The high-risk classification is the sale.** Education systems affecting **access or
+assessment** are Annex III high-risk, and admissions screening is named explicitly. Conformity
+assessment, human oversight and post-market monitoring are **billable engineering**, not
+compliance paperwork. 🟢 `P490-2` and `P499-1` both key to **2 December 2027** — the one date no
+source disputes.
+
+🟢 **Extraterritoriality widens the market.** The regulation reaches providers outside the EU whose
+systems affect EU learners, so a North American client with EU students is an EMEA compliance
+engagement.
+
+🟢 **The UAE mandate is a first-mover opening** — a nationwide K-12 AI curriculum in force since a
+May 2025 Cabinet decision implies national-scale teacher training and content delivery. 🔴 **This is
+one secondary datum and nothing else about the Gulf is on these shelves.** Scope a discovery
+engagement, not a delivery bid.
+
+🔴 **Africa: no opportunity can be stated.** Five passes of queries naming Africa have returned
+nothing on adoption, regulation or players. 🔵 **This is an informed absence, not coverage** — if a
+client asks about Africa, this KB has nothing and should say so.
+
+### APAC
+
+🟢 **Teacher enablement is the funded gap.** China (compulsory from age six), India (mandatory from
+Class 3, 2026–27) and the UAE have all mandated curriculum; Google is putting **$10M** into APAC
+educator training and naming the training gap itself. 🟢 **The mandates exist and the teachers are
+not ready** — that is a reskilling engagement, which is Globant's own shape.
+
+🔴 **South Korea is the cautionary case to lead with, not hide.** Mandatory AI textbooks reached
+**under 30% adoption** and the National Assembly **stripped their official status in August** after
+unions said the pace outran preparation. 🟢 **Use it:** a mandate is not a demand floor (`T12`), and
+the thing that failed was **change management, not technology**. A bid that prices teacher
+readiness and union consultation is bidding against Korea's failure.
+
+🟢 **The Philippines is the most legible jurisdiction in the region right now** — two named 2026
+instruments, both framing AI as supplementary to teachers. A product that **cannot demonstrate
+teacher-in-the-loop** does not satisfy `DepEd Order 003` or `CHED MO 21`.
+
+🔵 **Singapore defines the delivery pattern:** inside the **Student Learning Space**, teacher-
+supervised, not open platforms. Sovereign-platform integration, not consumer chat.
+
+🟢 **Technical route:** `P490-3` / `P490-4` for ministry scale; `P499-2` for language work, which is
+the region's largest single demand.
+
+### LATAM
+
+🟢 **The governance vacuum is the product.** Regional commentary describes education systems
+*"quietly integrating AI tools into classrooms — often without oversight or guidelines."* 🟢 Nothing
+here needs selling on capability; **the buyable thing is the sanctioned, governed, auditable
+offering** (`T1`). Pitch governance and delivery.
+
+🟢 **Brazil is the region's lead jurisdiction and it has a sandbox.** `PL 2338/2023` is a
+risk-based framework in the Chamber of Deputies, and Brazil ran **the region's first AI regulatory
+sandbox** in 2025. 🟢 **A sandbox is a named venue for a pilot** — the cheapest credible route to a
+reference deployment in LATAM.
+
+🟡 **Mexico is pre-regulatory and that cuts both ways.** No enacted AI law; a national bill was
+introduced **11 Feb 2026** proposing a risk-classifying regulator. 🟢 **Build to Brazil's risk tiers
+and the EU's Annex III now** — both bills are risk-based, so the work ports.
+
+🟢 **Mexico's public workforce programme is a directly addressable engagement.** The Public AI
+Training Center (**INFOTEC + TecNM + 14 technology companies**) targets **10 000 graduates in 2026
+and 25 000 per year** thereafter, in public-sector skills. 🔵 **That is a named, funded,
+multi-year training pipeline with industry partners already seated** — the clearest single
+commercial opening in the region this pass found.
+
+🔵 **ECLAC's 2024 Digital Agenda** asks for shared standards across **33 member countries**, which
+favours a multi-country offering over per-country builds.
+
+🟢 **Technical route:** `P490-3` with **Kolibri `v0.19.5`** + `Wakoma/Lokal` (MIT) for
+low-connectivity delivery; `P499-2` where the subject is language.
+
+### Global
+
+🔵 **Market sizing remains unusable as a point estimate** (`T10`). This pass adds three more
+irreconcilable figures: **$6.4B (2025) → $79.6B (2034)**; **$3.7B (2026) → $14.1B (2033)**;
+**$10.6B (2026)**. 🔴 **The 2026 estimates alone span $3.7B–$12.3B, a 3.3× spread** — wider than the
+2× `p491` recorded. **Quote the spread as the finding.**
+
+🟢 **One global demand figure is consistent enough to use:** AI professional development for
+teachers roughly **doubled in a year — 29% (early 2024) → 50% (late 2025)**. 🔵 It agrees in
+direction with RAND's 25% → 53% K-12 teacher-use doubling already on these shelves, and both point
+at the same conclusion: **the training market is growing faster than the tooling market.**
+
+### 🔵 Queries that returned nothing relevant — recorded, because silence looks like coverage
+
+| axis | result |
+|---|---|
+| `AI education Africa 2026 adoption regulation players` | 🔴 **nothing.** Fifth consecutive pass. |
+| `AI education Middle East` (as an EMEA query) | 🔴 nothing — 🟢 **the UAE datum arrived via the APAC query instead.** |
+| `top open source AI agents education 2026 github MIT` | 🔴 **no education-specific MIT agent list.** Returned general-purpose agent roundups (Hermes, goose, AutoGPT, OpenClaw) and a single zero-star education repo. 🔵 **These shelves are deeper than the public roundups on this axis** — the band enumeration in [`agents/trending.md`](../agents/trending.md) `p499` is the better instrument. |
+| `github trending education AI 2026 open source repos` | 🔴 **no usable trending list.** Returned aggregator pages and curated link lists, none education-AI ranked. 🔵 Use the GitHub search API with a star band, as `p499` did. |
+| `open source education platform SIS ERP LMS MIT Apache self-hosted 2026` | 🟡 returned **only OpenEduCat's own comparison pages** — vendor marketing. 🟢 It did confirm **LGPL-3.0** for OpenEduCat, matching this base's byte read. 🔴 **No MIT/Apache integrated SIS/ERP found by search**; `TutorLoom` was found by the star-band axis instead. |

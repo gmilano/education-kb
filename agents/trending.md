@@ -3,6 +3,146 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p499` — `2026-10-28` — **🟢 THE RETAINED CANONICAL SET EXISTS AND IT CATCHES A LONE ALTERED PAYLOAD: `Gap 498-B` IS CLOSED, AND THE INSTRUMENT WAS PROVED ON `get-it`'s §6 DELETION WITH NOTHING TO COMPARE IT TO. 🔴 `Gap 498-A` IS REFUTED, AND THE OPPOSITE DEFECT IS THE REAL ONE: the 50–400★ `topic:edtech` band is **not** unread — 41 of 52 rows are already in this base's own narratives — but only **1 of 52 ever reached a curated shelf**. This base's bottleneck is PROMOTION, not discovery. 🟢 `Gap 488-T` finally has a rate instead of an anecdote: **28.1% raw, and 0 of 64 materially altered.** 🔴 And two successive forms of this pass's own instrument produced false positives — 14 GPL rows, then `formalms` §1 — each caught only because a control input was run.**
+
+Full reads: [`canonical/MANIFEST.tsv`](../evidence/canonical/MANIFEST.tsv),
+[`operative-sweep.2026-10-28-p499.tsv`](../evidence/operative-sweep.2026-10-28-p499.tsv),
+[`edtech-band-50-400.2026-10-28-p499.tsv`](../evidence/edtech-band-50-400.2026-10-28-p499.tsv),
+[`new-rows-licence-bytes.2026-10-28-p499.tsv`](../evidence/new-rows-licence-bytes.2026-10-28-p499.tsv).
+Instrument: [`compose/code/p499-canonical-set/`](../compose/code/p499-canonical-set/).
+
+### 🟢 `Gap 498-B` CLOSED — and byte size and blob SHA are both disqualified as licence instruments
+
+`Gap 498-B` asked for *"~8 canonical payloads stored by blob SHA, once"*, so that a single altered
+payload read alone could still be graded. **Twelve are now retained** in
+[`evidence/canonical/`](../evidence/canonical/), each with its byte count, git blob SHA-1 and
+SHA-256 in [`MANIFEST.tsv`](../evidence/canonical/MANIFEST.tsv).
+
+🔴 **But the first thing the set proved is that the gap's own proposed key does not work.** Two
+*legitimate* canonical forms of Apache-2.0 are now held side by side:
+
+| canonical form | bytes | git blob SHA-1 | whole words | operative words |
+|---|---|---|---|---|
+| `Apache-2.0.apache-org` — apache.org's own payload | **11 358** | `d645695673349e3947e8e5ae42332d0ac3164cd7` | 1 608 | 1 426 |
+| `Apache-2.0` — SPDX's payload | **10 280** | `137069b823873b8bcf42979bcf8e9371052d26a2` | 1 608 | 1 426 |
+
+🔴 **Different bytes. Different blob SHA. Not one different word.** The entire 1 078-byte delta is
+the centering whitespace apache.org indents its copy with. **A blob-SHA allowlist would reject
+every correctly-licensed Apache repository that used the other form**, and byte size — which
+`p498` reasoned from — has no discriminating power at all. The instrument therefore grades the
+**word sequence** of the **operative span**, not bytes.
+
+### 🟢 The instrument is validated at both poles, which `Gap 498-M` says has never been done here
+
+| input | role | operative verdict |
+|---|---|---|
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) `LICENSE` | 🔴 **known-bad** (`p498`'s find) | **DEVIANT, −5 words**: `reasonable and customary use in` |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) `LICENSE` | 🟢 known-good | **IDENTICAL** |
+| [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) `LICENSE` | 🟢 known-good | **IDENTICAL** |
+
+🟢 **`get-it`'s five-word §6 deletion was recovered from the payload alone.** `p498` found it only
+by comparing two Apache payloads that happened to land in the same pass; `Gap 488-B` warned the
+next lone payload would be unprotected. It is not any more.
+
+🟢 **And `menthor` shows why a naive gate would be useless.** Its *whole payload* is deviant —
+because it filled in `Copyright [yyyy] [name of copyright owner]`, which is what the licence
+**instructs** the licensor to do. **41 of the 64 graded rows** are in exactly that position. A
+whole-payload gate would raise 41 false alarms and bury the one real finding.
+
+### 🔴 Two forms of this pass's own instrument were wrong, and only the controls said so
+
+This is the `Gap 498-M` discipline applied to the instrument being built, and it caught itself
+twice:
+
+| form | what it did | how it was caught |
+|---|---|---|
+| strip any line beginning `copyright` | deleted GPL-3.0 §2's operative sentence *"…for the term of copyright on the Program, and are irrevocable…"*, which wraps onto its own line | 🔴 a **uniform −22-word "deletion" on 14 independent GPL/AGPL projects** — `moodle`, `canvas-lms`, `edx-platform`, `chamilo`, `ILIAS`, `h5p`, `tutor`, `frappe/lms`, `learnhouse`, `GibbonEdu`, `ChatTutor`, `ElijoEstudiar`, `tutor-gpt`. Fourteen projects do not make the same edit. |
+| additionally accept a bare word after `copyright` (added to catch Microsoft's yearless `Copyright (c) Microsoft Corporation.`) | deleted GPL-2.0 §1's wrapped line *"copyright notice and disclaimer of warranty; keep intact all the"* on `formalms` | 🔴 `formalms` §1 read **word-for-word canonical** when fetched and compared by hand |
+
+🟢 **Final rule, which passes both controls and the Microsoft case:** a notice line must carry
+**either** an explicit `(c)`/`©` marker **or** a year/placeholder. 🔵 **Recorded because the lesson
+generalises:** each loosening of a stripper looked locally correct and silently deleted operative
+text. Neither error was detectable from its own output — only from a control whose answer was
+already known.
+
+### 🔴 `Gap 498-A` REFUTED — the band is read; it is the promotion step that is missing
+
+`Gap 498-A` said the 51 rows of `topic:edtech` between 50★ and 400★ are *"rows nobody has read"*
+and that novelty below 400★ *"is unknown and could be higher"* than `p497`'s 69.2%. 🟢 The band
+was enumerated this pass — **52 rows**, which is `p480`'s count plus one — and every row was
+matched against the live shelves:
+
+| where the row already appears | n | share |
+|---|---|---|
+| 🔴 on a **curated** shelf (`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`) | **1** | **1.9%** |
+| 🟡 only in an **append-only trending narrative**, never promoted | **41** | **78.8%** |
+| 🟢 absent from all eight shelves | **10** | **19.2%** |
+
+🔴 **Novelty is 19.2%, not "higher than 69.2%" — it is 3.6× lower.** The gap's fear is refuted on
+its own axis.
+
+🔴 **But the measurement found a worse defect than the one it was sent to check.** This base has
+*read* 42 of 52 rows in the band and *promoted* **one** — [`Selleo/mentingo`](https://github.com/Selleo/mentingo).
+`agents/trending.md` and `repos/trending.md` together run to **97 221 lines**; the four curated
+shelves carry almost none of it. **Discovery is not this base's constraint. Promotion is.** The
+10 genuinely-absent rows were then read from bytes, and **most are absent for cause** — which is
+the second half of the answer:
+
+| row | ★ | read from bytes | why it is not promoted |
+|---|---|---|---|
+| [`studentinsights/studentinsights`](https://github.com/studentinsights/studentinsights) | 135 | 🟢 **MIT**, 1 083 B `c749ed8030c3` | Code for America school-data platform; **last push 2024-08-27**, over two years stale |
+| [`Wakoma/nimble`](https://github.com/Wakoma/nimble) | 110 | 🟡 **CERN-OHL-S-2.0**, 13 419 B | **hardware**, not software; strongly reciprocal |
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | 71 | 🔴 **no root grant** | refused on this base's standing rule |
+| [`codeforlife-education/rapid-router`](https://github.com/codeforlife-education/rapid-router) | 60 | 🔴 **121-byte pointer** | `LICENSE.md` contains only *"Find our license here"* + a link |
+| [`codeforlife-education/codeforlife-portal`](https://github.com/codeforlife-education/codeforlife-portal) | 54 | 🔴 **121-byte pointer** | same 121-byte file |
+| [`Wakoma/Lokal`](https://github.com/Wakoma/Lokal) | 53 | 🟢 **MIT**, 1 063 B `f3c821e1820c`, operative **IDENTICAL** | 🟢 **promotable** — offline-first content/services, see [`repos/foundations.md`](../repos/foundations.md) |
+| [`deneyapkart/deneyapkart-arduino-core`](https://github.com/deneyapkart/deneyapkart-arduino-core) | 53 | 🟡 **LGPL-2.1**, 26 526 B, operative **IDENTICAL** | Turkish STEM dev-kit firmware; hardware-adjacent |
+| [`wombats-writing-code/xoces`](https://github.com/wombats-writing-code/xoces) | 74 | — | **last push 2017-07-24**; dead |
+| [`Aniruddha-Gade/Study-Notion-EdTech__MERN-Stack`](https://github.com/Aniruddha-Gade/Study-Notion-EdTech__MERN-Stack) | 57 | 🔴 none | tutorial project, not a product |
+| [`RandMelville/claude-war-room`](https://github.com/RandMelville/claude-war-room) | 62 | 🟡 MIT | 🔴 **mis-tagged `edtech`** — a five-agent orchestrator in Portuguese, nothing to do with education |
+
+🔵 **So the band's real yield is two rows** (`Wakoma/Lokal`, and `deneyapkart` as a hardware-adjacent
+note), against 41 rows this base already wrote down and never promoted. **The next pass should
+promote from its own narratives before it searches again.**
+
+### 🟢 Two rows added from the band's second page, both operatively verified
+
+The `stars:50..400` axis returned **52** rows against a `perPage:50` window, so two rows sat on a
+second page that a single-page read would have silently dropped — the same class of defect as
+`Gap 498-L`. Both are real, and one matters commercially:
+
+| repo | ★ | licence read from bytes | operative verdict | why |
+|---|---|---|---|---|
+| 🟢 [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | 52 | **Apache-2.0**, 11 362 B `ef4bca4c9b34` | 🟢 **IDENTICAL** | 🟢 **A second permissive full LMS.** Multi-tenant, Django + React, self-hosted, markets itself as a Moodle alternative. 🔴 **Repo created 2026-10-07 — three weeks old.** See the caveat in [`repos/foundations.md`](../repos/foundations.md). |
+| [`ucfopen/Materia`](https://github.com/ucfopen/Materia) | 52 | **AGPL-3.0**, 34 523 B `723f2b22cec6` | 🟢 IDENTICAL | Embeddable course widgets/games over LTI, from the same UCF stable as `UDOIT` and `Obojobo` already on these shelves. |
+
+### 🔴 A third instance makes "grant by reference" a class, not an anecdote
+
+Three rows now ship a **LICENSE file that contains no grant**, only a pointer:
+
+| repo | file | bytes | content |
+|---|---|---|---|
+| [`frappe/education`](https://github.com/frappe/education) | `license.txt` | **19** | `License: GNU GPL V3` |
+| [`codeforlife-education/rapid-router`](https://github.com/codeforlife-education/rapid-router) | `LICENSE.md` | **121** | *"Find our license here"* + link |
+| [`codeforlife-education/codeforlife-portal`](https://github.com/codeforlife-education/codeforlife-portal) | `LICENSE.md` | **121** | same file |
+
+🔵 **This resolves `frappe/education`'s "*(declared only)*" qualifier** on
+[`repos/foundations.md`](../repos/foundations.md): the repo *does* state GPL-3.0 **in its own
+bytes**, so it is no longer merely a GitHub-API declaration — but it ships **no licence text**,
+which for GPL-3.0 is itself a conveyance problem. 🔵 **Both readings were wrong before:** "declared
+only" understated it, and treating the 19 bytes as a grant would overstate it.
+
+### 🆕 Declared gaps — `p499`
+
+| gap | statement | cost to close |
+|---|---|---|
+| 🔴 **`Gap 499-A`** | **The promotion bottleneck is measured but not fixed.** 41 band rows sit in trending narratives unpromoted, and the measurement was run on *one* axis (`topic:edtech`, 50–400★). The shelf-wide unpromoted count across every axis this base has ever enumerated is unknown and is probably far larger than 41. | one pass to count; several to promote |
+| 🔴 **`Gap 499-B`** | The canonical set holds **12** payloads. `Wakoma/nimble`'s **CERN-OHL-S-2.0** is outside it, and the instrument returned a meaningless nearest-neighbour label (`BSD-2-Clause`, −90/+1947) rather than declining to grade. **It has no "unknown licence" verdict and will mislabel instead of abstaining.** | one guard clause |
+| 🔴 **`Gap 499-C`** | GNU canonical payloads are **single-sourced from SPDX**. `www.gnu.org` does not resolve through this session's network policy (6/6 probes returned `000`), so the steward's own copy was never read. Apache-2.0 is two-sourced; **GPL, LGPL and AGPL are not.** | needs a network policy that reaches gnu.org |
+| 🟡 **`Gap 499-D`** | `MANIFEST.tsv` records the SPDX payloads at commit `f715b366`, but **no pass has re-resolved them since**. If SPDX amends a text the set will drift silently; nothing re-checks it. | one assertion per pass |
+| 🟡 **`Gap 499-E`** | The operative/appendix cut uses three literal markers. A payload that renames its appendix heading is cut nowhere and its placeholder fill is graded as operative. `formalms`'s English copy already lacks `How to Apply These Terms` and was saved only by also carrying `END OF TERMS AND CONDITIONS`. | one pass |
+| 🟡 **`Gap 499-F`** | The 28.1% raw rate was classified **by hand**, by me, reading 18 diffs. The classification is not reproducible by any code in this repo, so the headline *"0 of 64 materially altered"* rests on my judgement, not an instrument. | one pass, encode the four classes |
+
 
 ## 🆕 `p498` — `2026-10-28` — **🔴 A LIVE `Apache-2.0` GRANT ON THESE SHELVES' NEWEST 1,138★ FIND HAS FIVE WORDS DELETED FROM §6, AND BYTE SIZE POINTED THE WRONG WAY: THE DEVIANT PAYLOAD IS 22 B *LONGER* THAN THE CANONICAL ONE. 🟢 `Gap 488-B` — *"a lone payload read in one pass cannot be checked this way"* — is now CONFIRMED BY INSTANCE, not feared: the deletion surfaced only because two Apache payloads were compared inside one pass. 🟢 `Gap 488-X` CLOSED and **narrowed 9×**: of 76 carried rows probed at their default ref with ALL grant paths enumerated, nine carry ≥2 root grant files and **exactly one of 76 (1.3%) actually splits the grant**. 🔴 And `p497`'s headline — *"ranked education-AI supply above ~40★ is ~95% enumerated here"* — is REFUTED: one axis it did not run returns **69.2% novelty**.**
 

@@ -1,0 +1,77 @@
+repo	head_sha	path	http	bytes	blob	closest	op_verdict	op_del	op_ins	whole_verdict	note
+3yangyang9/DeepTutor-AILearning	ce32cf86e3db	LICENSE	200	11408	ae1dbfc5e74c	Apache-2.0.apache-org	DEVIANT	1	3	DEVIANT	INSERTED not in canonical: the
+67tallchris/iep-builder	b39df0e9a4a1	LICENSE	200	1069	ef4d8dac1d74	MIT	IDENTICAL	0	0	DEVIANT	
+AI-for-Education/pedagogy-benchmark	21a43a395ab4	LICENSE	200	1064	5c9f89bc3d86	MIT	IDENTICAL	0	0	DEVIANT	
+ASUCICREPO/Admissions-AI-Agent	fcbbbb2fe19f	LICENSE	200	1123	64f69e6a2aeb	MIT	IDENTICAL	0	0	DEVIANT	
+AgnellusX1/GodsEye	fc77fae989b8						NO_ROOT_GRANT				
+CAHLR/OATutor	e24c8456e5f7	LICENSE	200	1105	7cb404425d82	MIT	IDENTICAL	0	0	DEVIANT	
+EleutherAI/lm-evaluation-harness	d6de81643928	LICENSE.md	200	1067	12e606318393	MIT	IDENTICAL	0	0	DEVIANT	
+GarethManning/education-agent-skills	135d6275e7db	LICENSE	200	1230	c1286baf485e	MIT	DEVIANT	151	164	DEVIANT	REPLACED canonical 'mit license permission is hereby granted' -> 'creative commons attribution sharealike 4 0 international the educational skills'
+GibbonEdu/core	4ce08282b597	LICENSE	200	35121	1813df306601	GPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+HKUDS/DeepTutor	a31d82624c27	LICENSE	200	11408	ae1dbfc5e74c	Apache-2.0.apache-org	DEVIANT	1	3	DEVIANT	INSERTED not in canonical: the
+HugeCatLab/ChatTutor	7d9e9052bc5a	LICENSE	200	34522	29ebfa545f55	AGPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+ILIAS-eLearning/ILIAS	db9582e3cd3e	LICENSE	200	35147	94a9ed024d38	GPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+Jeanikt/tutor-ai-agent	987f3106ef6a	LICENSE	200	1103	171f6bacb128	MIT	IDENTICAL	0	0	DEVIANT	
+Open-TutorAi/open-tutor-ai-CE	196c547291da	LICENSE	200	1531	ebd8bbccf924	BSD-3-Clause	IDENTICAL	0	0	DEVIANT	
+OpenOLAT/OpenOLAT	3736d48fa685	LICENSE	200	10982	e8870c0f5f52	Apache-2.0.apache-org	DEVIANT	0	104	DEVIANT	INSERTED not in canonical: additional license statement for the original olat org code base this software consists of voluntary contributions made by many individuals on 
+Orenda-Project/rumi-platform	f2d62af1eb82	LICENSE	200	11287	511de8158adc	Apache-2.0.apache-org	DEVIANT	1	3	DEVIANT	INSERTED not in canonical: the
+SYuan03/Skill-Anything	3cdc1c1f11dc	LICENSE	200	1084	7bf26f5945ee	MIT	IDENTICAL	0	0	DEVIANT	
+SafeExamBrowser/seb-win-refactoring	e18be5617b6c	LICENSE.txt	200	16726	14e2f777f6c3	MPL-2.0	DEVIANT	1	1	DEVIANT	REPLACED canonical 'https' -> 'http'
+SahilC/AutomaticEssayGrading	8bf6dc6b678b	LICENSE	200	1074	812fd2487bf4	MIT	IDENTICAL	0	0	DEVIANT	
+Selleo/mentingo	e137ca47cbec	LICENSE	200	1062	28625a802002	MIT	IDENTICAL	0	0	DEVIANT	
+SudhanvaJ-bit/project-samarth	d628b919449a						NO_ROOT_GRANT				
+THU-MAIC/OpenMAIC	70859b42e714	LICENSE	200	1065	76abc5f13261	MIT	IDENTICAL	0	0	DEVIANT	
+TaiRuiQu/oh-my-paper	96c5e24c0216	LICENSE	200	1094	df8032fb7f7b	MIT	IDENTICAL	0	0	DEVIANT	
+anandpatikat/guru-latihan-dinamis	c94dc8ddbed2						NO_ROOT_GRANT				
+ankitects/anki	d87cb22bf337	LICENSE	200	1930	6aa37a76547f	MIT	DEVIANT	137	300	DEVIANT	REPLACED canonical 'mit' -> 'anki is licensed under the gnu affero general public'
+anthropics/k12-teacher-skills	31fd6dbb0c07	LICENSE	200	11357	7a4a3ea2424c	Apache-2.0.apache-org	IDENTICAL	0	0	IDENTICAL	
+apache/openmeetings	79b71bcb39f8	LICENSE	200	51425	09963ab13b51	Apache-2.0.apache-org	DEVIANT	0	5935	DEVIANT	INSERTED not in canonical: apache openmeetings license
+avivkatz1/easy-iep	ec0d4f039b0a						NO_ROOT_GRANT				
+bigbluebutton/bigbluebutton	ac97a8bfdc20	LICENSE	200	7652	0a041280bd00	MIT	DEVIANT	125	1191	DEVIANT	REPLACED canonical 'mit' -> 'gnu lesser general public'
+chamilo/chamilo-lms	dc7abd135808	LICENSE	200	35147	94a9ed024d38	GPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+datauy/ElijoEstudiar	ed306fef95c5	LICENSE	200	35149	f288702d2fa1	GPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+dodona-edu/dolos	74b101785bad	LICENSE	200	1084	0cc95993166a	MIT	IDENTICAL	0	0	DEVIANT	
+dougdevitre/access-to-education	f8abd70707ba	LICENSE	200	1069	fc3b25de1ee9	MIT	IDENTICAL	0	0	DEVIANT	
+eth-lre/mathtutorbench	6faed173ec2b						NO_ROOT_GRANT				
+foradian/fedena	333477b06f1d	NOTICE	200	679	801a9adae476	MIT	DEVIANT	145	79	DEVIANT	REPLACED canonical 'mit' -> 'fedena this product includes software developed at project fedena http www proje'
+formalms/formalms	446a77a9b9cb						NO_ROOT_GRANT				
+francoisjacquet/rosariosis	fa5f4b66caf4	LICENSE	200	15214	5ea6e8eb22e9	GPL-2.0-only	DEVIANT	2	6	DEVIANT	REPLACED canonical 'street' -> 'st'
+frappe/education	73ce33ef2719	license.txt	200	19	beca17940a71	MIT	DEVIANT	164	3	DEVIANT	DELETED from canonical: mit
+frappe/lms	6054772c0426	license.txt	200	33893	6bb5339778ba	AGPL-3.0-only	IDENTICAL	0	0	IDENTICAL	
+h5p/h5p-php-library	1e21b7a2da4a	LICENSE.txt	200	35146	20d40b6bceca	GPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+h9-tect/AI-Roadmaps	19c63bdb7c86						NO_ROOT_GRANT				
+huggingface/smolagents	96f33faaf028	LICENSE	200	11357	261eeb9e9f8b	Apache-2.0.apache-org	IDENTICAL	0	0	IDENTICAL	
+instructure/canvas-lms	1c9f0bb8013e	LICENSE	200	34520	dba13ed2ddf7	AGPL-3.0-only	IDENTICAL	0	0	IDENTICAL	
+jscott5811/IEP-and-Section-504-Plans-Skill	cd3a9018681f	LICENSE	200	1068	53624f9acc6d	MIT	IDENTICAL	0	0	DEVIANT	
+kennedyraju55/essay-grader	504ddefc863a						NO_ROOT_GRANT				
+kixlab/TutorCaseBench	6b9ac34262c7						NO_ROOT_GRANT				
+labmlai/annotated_deep_learning_paper_implementations	2be1800d141e	license	200	1082	704c339ab127	MIT	DEVIANT	0	2	DEVIANT	INSERTED not in canonical: the
+langchain-ai/langgraph	eb8ec111b3e9	LICENSE	200	1072	fc0602feecdd	MIT	IDENTICAL	0	0	DEVIANT	
+learnhouse/learnhouse	2d75337273ac	LICENSE	200	34523	0ad25db4bd1d	AGPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+learning-commons-org/agent-skills	8b0599c24469	LICENSE	200	10173	377b1cfa0168	Apache-2.0.apache-org	IDENTICAL	0	0	DEVIANT	
+learningequality/kolibri	08e3ecace444	LICENSE	200	1097	6506702f35f3	MIT	IDENTICAL	0	0	DEVIANT	
+marckurniawan/essay-scoring-project	80d6cfceb75e						NO_ROOT_GRANT				
+microsoft/Shiksha-Copilot	cf2a2e24c3d4	LICENSE	200	1141	9e841e7a26e4	MIT	IDENTICAL	0	0	DEVIANT	
+microsoft/ai-agents-for-beginners	dd0f080d07d2	LICENSE	200	1141	9e841e7a26e4	MIT	IDENTICAL	0	0	DEVIANT	
+microsoft/autogen	004749e6b710	LICENSE	200	18650	2f244ac81403	CC-BY-SA-4.0	DEVIANT	229	52	DEVIANT	DELETED from canonical: creative commons
+moodle/moodle	46c042e7da65	COPYING.txt	200	35147	94a9ed024d38	GPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+naufaldi/teacher-exam	ed5bf6359413	LICENSE	200	1071	27461127655e	MIT	IDENTICAL	0	0	DEVIANT	
+oat-sa/tao-core	d9b3da5e6b0a	LICENSE	200	18025	22fbe5dbacbe	GPL-2.0-only	DEVIANT	0	4	DEVIANT	INSERTED not in canonical: gnu general public license
+openeducat/openeducat_erp	46a5d7d40082	LICENSE	200	8241	ef163fea81aa	MIT	DEVIANT	125	1274	DEVIANT	REPLACED canonical 'mit' -> 'for copyright information please see the copyright file openeducat is published '
+openedx/edx-platform	f73b7ae64dd5	LICENSE	200	35136	1eb391f38837	AGPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+oppia/oppia	bc73ecf9cf71	LICENSE	200	11358	d64569567334	Apache-2.0.apache-org	IDENTICAL	0	0	IDENTICAL	
+overhangio/tutor	aa5d1a764b6c	LICENSE.txt	200	34523	be3f7b28e564	AGPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+panaversity/ksor	b50f28926fae	LICENSE	200	11342	96112edd7002	Apache-2.0.apache-org	IDENTICAL	0	0	DEVIANT	
+pguso/agents-from-scratch	da3f9df28a9c	LICENSE	200	1091	a3b6319cc377	MIT	IDENTICAL	0	0	DEVIANT	
+plastic-labs/tutor-gpt	5c2f92416c04	LICENSE	200	35149	f288702d2fa1	GPL-3.0-only	IDENTICAL	0	0	DEVIANT	
+portabilis/i-educar	435649b0474f	LICENSE	200	18092	d159169d1050	GPL-2.0-only	DEVIANT	0	4	DEVIANT	INSERTED not in canonical: gnu general public license
+projectfedena/fedena	68a84ac445bf	NOTICE	200	680	9371135485d4	MIT	DEVIANT	145	79	DEVIANT	REPLACED canonical 'mit' -> 'fedena this product includes software developed at project fedena http www proje'
+robotros/California-IEP-AI-project-kit	33ad4d06f19b	LICENSE	200	1065	75a460423eef	MIT	IDENTICAL	0	0	DEVIANT	
+rohitg00/ai-engineering-from-scratch	3f9715c62a3b	LICENSE	200	1070	61442168db9a	MIT	IDENTICAL	0	0	DEVIANT	
+rtwergrfh-cmyk/iep	264786ddb518	LICENSE	200	1080	6213b4c201d5	MIT	IDENTICAL	0	0	DEVIANT	
+satvik314/educhain	38adb1e9459d	LICENSE	200	1092	b46290b36e7f	MIT	IDENTICAL	0	0	DEVIANT	
+vardanagarwal/Proctoring-AI	4f284a3f110d	LICENSE	200	1071	ddb61ed70e81	MIT	IDENTICAL	0	0	DEVIANT	
+victor-lubn/Special-Education-Planning	7baa4e1a9ecd						NO_ROOT_GRANT				
+vishalsachdev/canvas-mcp	47394125364b	LICENSE	200	1071	3c7307584ae4	MIT	IDENTICAL	0	0	DEVIANT	
+vulinh1704/ai-tutor-agent	5511bf6dc707	LICENSE	200	1071	9075c1821610	MIT	IDENTICAL	0	0	DEVIANT	
+wongcyrus/gemini-handwriting-grader	2849fed23a6f						NO_ROOT_GRANT				

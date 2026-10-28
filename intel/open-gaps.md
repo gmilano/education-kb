@@ -3,6 +3,88 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p499` — **🟢 `Gap 473-F`'s CURRENCY CONTRACT PASSES FOR THE FIRST TIME IN ELEVEN PASSES: newest section was `p498`, expected `p498`. 🟢 `Gap 498-K` RATIFIED AND HONOURED — every gap this pass declares carries a `Gap 499-<letter>` ID on the shelf it was found on. 🟢 SIX GAPS CLOSED WITH CONTENT (`498-B`, `498-D`, `498-G`, `488-T`, `498-M`'s URL gate, `498-A` with its premise REFUTED), TWO SUBSTANTIALLY (`488-Q`, `488-O` for the Middle East only), 🔴 ONE PUBLISHED TREND NARROWED HARD (`T19`), 🔴 ONE OF `p498`'s OWN INSTANCE COUNTS CORRECTED, 🔴 TWO OF THIS PASS'S OWN INSTRUMENT FORMS CAUGHT DELETING OPERATIVE TEXT, and thirteen registered.**
+
+🔵 **`gate-register-currency` — measured and PASSED.** `Gap 473-F`: the register's newest section
+must be `p(N-1)` before a pass writes `pN`. 🟢 **Measured: `p498`. Expected: `p498`. Pass.** The
+contract has not held since `p488` recorded it broken by ten passes.
+
+🟢 **`Gap 498-K` is ratified.** It proposed a second clause — *"a pass writing a 'Declared gaps'
+section must give each item a `Gap <pass>-<letter>` ID"* — and left it *"proposed, not ratified"*.
+🟢 **`p499` adopts it and complies:** `Gap 499-A` … `Gap 499-M`, thirteen IDs, each declared on the
+shelf whose work produced it and all mirrored here. 🔵 This is the clause whose absence let
+`p490`–`p497` register **zero numbered gaps across eight consecutive passes**.
+
+🔴 **Gate posture, stated first.** `make hooks` was not run; no gate on this base is attested
+(`Gap 446-A`, 24 passes). 🔵 What *was* done instead is the thing `Gap 498-M` asked for: **every
+instrument this pass relied on was validated against a known-good and a known-bad input before its
+results were used**, and two forms failed that validation and were discarded.
+
+### 🟢 Closed with content
+
+| gap | how it closed |
+|---|---|
+| 🟢 **`Gap 498-B`** | **CLOSED.** 12 canonical payloads retained in [`evidence/canonical/`](../evidence/canonical/) with bytes, git blob SHA-1 and SHA-256 in [`MANIFEST.tsv`](../evidence/canonical/MANIFEST.tsv). Validated by recovering `get-it`'s five-word §6 deletion **from the payload alone**, which is the exact scenario `Gap 488-B` said was unprotected. 🔴 **And the gap's own proposed key is disqualified:** the two legitimate canonical Apache-2.0 forms (apache.org 11 358 B `d645695673…`, SPDX 10 280 B `137069b823…`) differ in bytes and blob SHA while sharing **1 426 identical operative words**. A blob-SHA allowlist would reject correctly-licensed repos. The instrument grades the **operative word sequence**. |
+| 🟢 **`Gap 488-T`** | **CLOSED with a rate**, after standing since `p488`. 76 census rows re-fetched at pinned SHAs, 64 gradeable: **46 IDENTICAL (71.9%), 18 DEVIANT (28.1%), and 0 materially altered.** The 18 classify as 8 nearest-neighbour mislabels, 2 appended-provenance, 5 benign variants, 3 third-party template variants. |
+| 🟢 **`Gap 498-D`** | **CLOSED.** `formalms`'s two GPL-2.0 payloads carry **2 489 operative words each with identical diff signatures**. Neither is truncated or altered; the 3 200-byte spread is the omitted *How to Apply These Terms* appendix. The −2/+6 is the **1991-vintage FSF transcription** ("Library" for "Lesser", "Franklin St"). GPL-2.0 confirmed. |
+| 🟢 **`Gap 498-G`** | **CLOSED.** Kolibri: **542 tags**, stable **`v0.19.5`**, `v0.20.0-alpha0/alpha1` in flight, `rc`/`beta` before every minor. `P498-1` and `P499-2` now pin a release, not a commit. |
+| 🟢 **`Gap 498-M`** (header-detector half) | **CLOSED.** A working detector exists, and the route is the finding: **three forms, two wrong.** Form 1 (`p498`, first cell is a field name) = 40/40 false positive. Form 2 (`p499`, + not followed by a `\|---\|` separator) = **48/48 false positive**, because this base uses transposed property/value tables where a field name is a legitimate row *label*. Form 3 (**every** cell is a field name) passes three controls including the transposed case. 🟢 **Result: 0 leaked header rows across every live shelf.** 🔵 Form 2 would have passed a control pair that omitted the transposed case — **a control set is only as good as the failure modes it anticipates.** |
+| 🟢 **`Gap 498-M`** (URL-gate half) | **CLOSED and REPAIRED.** `curl -sI` on `github.com` returns **403 for existent and non-existent alike** → zero discriminating power, so every URL it ever "verified" was unverified. 🟢 A gate that discriminates was validated in the same run: `raw.githubusercontent.com` returns **200** for a real path and **404** for a fake one. 🔵 Standing instruction: never verify a repo with `curl -sI` on `github.com`; fetch from `raw.githubusercontent.com` or resolve with `git ls-remote`. |
+| 🔴 **`Gap 498-A`** | **CLOSED BY REFUTATION.** The 50–400★ `topic:edtech` band is **not** unread. 52 rows enumerated; **41 (78.8%) already sit in this base's own trending narratives** and **1 (1.9%) had reached a curated shelf**. Novelty is **19.2%** — **3.6× lower** than the 69.2% the gap feared it might exceed. 🔴 **The real defect is the opposite one: promotion, not discovery** → `Gap 499-A`. |
+| 🟢 **`Gap 484-F`** | **NARROWED**, first movement in fifteen passes. `https://www.apache.org/licenses/LICENSE-2.0.txt` resolves (200, 11 358 B) — a non-GitHub primary source, read from the steward, retained. 🔴 **Not closed:** `www.gnu.org` returned `000` on 6/6 probes and `opensource.org` likewise, so every GNU-family canonical here is single-sourced (`Gap 499-C`). **No market or policy source is primary-verified.** |
+
+### 🟢 Closed substantially
+
+| gap | how far |
+|---|---|
+| 🟢 **`Gap 488-Q`** | **SUBSTANTIALLY CLOSED.** APAC's teacher-side layer now has **two named 2026 instruments** — Philippines **DepEd Order No. 003, s. 2026** and **CHED Memorandum Order No. 21, s. 2026**, both framing AI as supplementary to teachers — plus **Google's $10M AI Opportunity Fund** for APAC educators with Google naming the training gap, Singapore's teacher-supervised delivery model, and EdTech Hub's "limited training, guidance or institutional frameworks" finding. 🔴 **Still no APAC teacher-adoption *rate*.** The one teacher survey found covers **207 practitioners across three Philippine metro areas** — too narrow. The gap narrows from *"no teacher data"* to *"no teacher-adoption rate"*. |
+| 🟢 **`Gap 488-O`** | **REPAIRED FOR THE MIDDLE EAST ONLY, and the cause was a vocabulary failure.** 🟢 The **UAE Cabinet decision of May 2025** — reportedly the first nationwide K-12 AI curriculum mandate on record — is this base's **first Middle East instrument**. 🔴 **It surfaced under an APAC query**, because the publisher files the UAE with Asia-Pacific. 🔵 **Rule adopted: place a datum by this base's closed `region` vocabulary, not the publisher's regional desk.** 🔴 **Africa remains empty after five passes** — `Gap 488-O` stands for Africa alone. |
+| 🔴 **`Gap 483-K`** | **WORSE, not better.** A named instrument exists for the first time — **Regulation (EU) 2026/1744** — and it carries **three mutually inconsistent dates**: OJ publication **24 July 2026**, applied since **27 July 2026**, entry into force **31 July 2026** (the Commission's own page, read second-hand). 🟢 The **2 Dec 2027** / **2 Aug 2028** high-risk deadlines are consistent across all sources and are what `P490-2` and `P499-1` key to. 🔵 **Do not quote an entry-into-force date.** |
+
+### 🔴 Corrections this pass makes to earlier passes
+
+| what | correction |
+|---|---|
+| 🔴 `p498`'s material-edit instance count | **Over by one.** `DeepTutor` does not belong beside `freelingo` and `get-it`. Its Apache deviation ("to **the** Licensor" ×2, §4(d) "excluding **any** notices") appears **identically on three repositories, two unrelated** (🇭🇰 `HKUDS/DeepTutor`, its derivative, and 🇵🇰 `Orenda-Project/rumi-platform`). That is a **circulating template**, not an author's edit. 🔵 **Method rule: a deviation on ≥2 unrelated repos is a shared upstream text; only a unique deviation is a candidate alteration.** |
+| 🔴 `T19` | **NARROWED HARD** — from "licence text is edited in the field" to **one confirmed material alteration base-wide**, at a measured material rate of **0/64** on these shelves. |
+| 🟢 `T2` | **RE-SCOPED.** The copyleft constraint is real at the **platform** layer and **false at the integration layer above it**: `tsugi` (Apache-2.0, 377★) and `scorm-again` (MIT, 360★) are both permissive. 🔵 `T2`'s over-broad form cost real ground — it steered engagements to `OpenOlat` (448★) and away from an installed base that was always reachable over LTI. |
+| 🟢 `frappe/education` | *"GPL-3.0 (declared only)"* **resolved**: `license.txt` is **19 bytes** reading `License: GNU GPL V3`. The repo states GPL-3.0 in its own bytes — but ships **no licence text**, which is its own conveyance problem. Both prior readings were wrong in opposite directions. |
+
+### 🔴 Carried forward, unaddressed
+
+| gap | status |
+|---|---|
+| 🔴 `Gap 446-A` | gate unclosable — harness refuses execution of code arriving in a clone. **24 passes.** |
+| 🔴 `Gap 484-A`, `498-H`, `498-I`, `498-J` | **nothing executed**; sixteen passes of code and licence reads. Bounds every effort range on [`compose/patterns.md`](../compose/patterns.md), `P499-1` and `P499-2` included → extended as `Gap 499-G`. |
+| 🔴 `Gap 488-H` | **untried, deliberately.** Opening issues on third-party repos to request a grant is an outward-facing act this session is not authorised to take unprompted. 🔵 Needs a human decision, not another pass. |
+| 🔴 `Gap 488-B` | 🟢 **now CLOSED in substance by `Gap 498-B`'s canonical set** — a lone payload is no longer unprotected. |
+| 🔴 `Gap 488-E` | **not re-run, and extended again.** `p499` added a `stars:50..400` band of its own, and found the topic axis admits **non-education members** (`RandMelville/claude-war-room`, 62★, an orchestrator in Portuguese). The popularity-filter problem is now also a **topic-purity** problem. |
+| 🔴 `Gap 488-S` | not re-run. 🟢 `p499` adds three further NA instruments with hard dates (NC **31 Dec 2026** / **30 Jun 2028**, Idaho SB 1227, California AB 1159). |
+| 🟡 `Gap 498-C`, `498-E`, `498-F` | not addressed. 🔵 `498-C`'s *or-later* election is untouched; `498-E`'s `formalms` staleness is re-confirmed (last commit **2026-07-17**) but its AI surface is still unread. |
+| 🟡 `Gap 489-E`–`489-H`, `489-I`, `489-K`, `489-L` | not addressed. |
+| 🟡 `Gap 483-B`, `483-E`, `483-G`, `483-H`, `483-I`, `483-J`, `483-P` | not addressed. |
+| 🟡 `Gap 484-B`, `484-D`, `484-E`, `484-I`, `484-J`, `484-V` | not addressed. 🔴 `484-J` (MEA evidence is strategies, not outcomes) is **barely narrowed** — the UAE datum is a mandate, not an outcome. |
+| 🟡 `Gap 488-A`, `488-C`, `488-D`, `488-F`, `488-G`, `488-I`, `488-M`, `488-N`, `488-R`, `488-U`, `488-V`, `488-W` | not addressed. |
+| 🔴 `Gap 498-L` | 🟢 **honoured, not closed.** Both of this pass's sweeps assert **output rows == input rows** (76 in / 76 out, printed). 🔴 The assertion exists in `p499`'s two scripts only; **no other instrument on this base has it**. 🔵 And the band read hit the adjacent form of the same defect: `stars:50..400` returned **52** rows against a `perPage:50` window, so two rows sat on an unread second page. **Pagination is the same silent-truncation class as lost stdin.** |
+
+### 🆕 Registered this pass — 13
+
+| gap | statement | cost to close |
+|---|---|---|
+| 🔴 **`Gap 499-A`** | **The promotion bottleneck is measured but only partly fixed.** 41 band rows sat in trending narratives unpromoted; `p499` promoted **14** and refused 4 with reasons. The measurement ran on **one axis** (`topic:edtech`, 50–400★); the shelf-wide unpromoted count across every axis this base has enumerated is unknown and is almost certainly far larger than 41. 🔵 **The next pass should promote from this base's own narratives before it searches again.** | one pass to count; several to promote |
+| 🔴 **`Gap 499-B`** | The canonical set holds **12** payloads and **has no way to decline**. `Wakoma/nimble`'s **CERN-OHL-S-2.0** is outside the set and the instrument returned a meaningless nearest-neighbour label (`BSD-2-Clause`, −90/+1947) instead of abstaining. Same omission underlies `T21`. | one guard clause |
+| 🔴 **`Gap 499-C`** | GNU canonicals are **single-sourced from SPDX**. `www.gnu.org` does not resolve through this session's network policy (6/6 probes `000`), so the steward's own copy was never read. Apache-2.0 is two-sourced; **GPL, LGPL, AGPL are not.** | needs a network policy reaching gnu.org |
+| 🟡 **`Gap 499-D`** | `MANIFEST.tsv` pins the SPDX payloads at commit `f715b366`; **nothing re-resolves them**. If SPDX amends a text the retained set drifts silently — the exact failure the set was built to prevent. | one assertion per pass |
+| 🟡 **`Gap 499-E`** | The operative/appendix cut uses **three literal markers**. A payload renaming its appendix heading is cut nowhere and its placeholder fill is graded as operative. `formalms`'s English copy already lacks `How to Apply These Terms` and was saved only by also carrying `END OF TERMS AND CONDITIONS`. | one pass |
+| 🔴 **`Gap 499-F`** | The 28.1% raw rate was classified **by hand, by me**, reading 18 diffs. **No code in this repo reproduces the classification**, so the headline *"0 of 64 materially altered"* rests on my judgement. | one pass, encode the four classes |
+| 🔴 **`Gap 499-G`** | All 14 rows promoted this pass are **licence-and-description reads**. Nothing was cloned, built or run. *"Tsugi crosses the LTI boundary"* is the standard's definition and the project's claim — **not a measured integration**, and `P499-1`'s whole premise. | needs an execution-permitted session |
+| 🟡 **`Gap 499-H`** | `TutorLoom` is **three weeks old** (created 2026-10-07). Its Apache-2.0 grant is operatively clean, but **no tag list, no release and no contributor count were read.** It is a watch row; a pass treating it as a deployable LMS will be wrong. | one read per pass |
+| 🟡 **`Gap 499-I`** | The permissive share moved **15.8% → 37.9%** because this pass added rows **at the layers it chose to look at**. That is a **selection effect**, not a measured change in the sector. The denominator is this shelf, not the market. | one pass, defined sampling frame |
+| 🟡 **`Gap 499-J`** | `T20` ("permissiveness tracks position in the stack") is asserted on **29 rows of this shelf**, and the **layer assignment was done by hand**. "Layer" is not a defined taxonomy anywhere in this repo. | one pass, define the layers |
+| 🟡 **`Gap 499-K`** | `T21` ("grant by reference is spreading") rests on **three instances, two from the same organisation** (`codeforlife-education`) — so really **two independent instances**. *"Spreading"* is not yet supported. | one pass, sweep small grant payloads |
+| 🔴 **`Gap 499-L`** | `T19`'s narrowing depends on `Gap 499-F`'s hand classification. A later pass **cannot re-derive** *"0 of 64 materially altered"* without repeating my judgement. | one pass, encode the classes |
+| 🟡 **`Gap 499-M`** | `T2`'s re-scoping and `P499-1`'s entire premise rest on the claim that **LTI is arm's-length network communication, not linking**, so AGPL-3.0 does not reach an LTI tool. 🔴 **That is my reading of the licence and the standard — not legal advice, not a cited authority.** | needs counsel, not a pass |
+
 
 ## 🆕 `p498` — **🔴 THE REGISTER-CURRENCY CONTRACT FAILED FOR TEN PASSES, AND THE CAUSE IS NOT WHAT `p488` ASSUMED. `p488` restored the contract believing later passes would keep registering gaps and merely fail to copy them here. 🔴 Measured this pass: `Gap 490-*` through `Gap 497-*` return **ZERO mentions across all eight shelves** — eight consecutive passes registered **no numbered gap at all**. Their findings were written as prose under *"Declared gaps"*, which cannot be closed, cannot be carried and cannot be counted. 🟢 FOUR GAPS CLOSED WITH CONTENT (`488-K`, `488-X`, `488-J`, `488-P`), 🔴 ONE GAP'S REQUESTED ACTION REFUSED AND THE ROW RE-GRADED INSTEAD (`488-L`), 🔴 ONE PUBLISHED TREND WITHDRAWN (`T17`), 🟢 ONE PRIOR WARNING CONFIRMED BY INSTANCE (`489-J`), five of `p497`'s prose gaps given IDs, and ten registered.**
 

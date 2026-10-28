@@ -965,3 +965,97 @@ from running the stack (`Gap 498-I`).
 |---|---|
 | 🔴 **`Gap 498-I`** | `P498-1` is composed from a **code read**, not an execution. No Kolibri plugin was scaffolded, built or loaded. The plugin contract is quoted from `kolibri/plugins/__init__.py`, `hooks.py` and `registry.py` at `08e3ecace444`; that it works as described for an *AI* surface specifically is inference. |
 | 🟡 **`Gap 498-J`** | The `ENV_VAR_*` kill-switch claim is read from `ConfigDict` properties in `kolibri/plugins/__init__.py`. **Nobody has toggled one.** It is the load-bearing sentence of the SOW language above. |
+
+---
+
+## P499-1 — Closed AI tool inside an LMS you do not own, over LTI 🟢
+
+**Why this is the most commercially useful pattern on this shelf.** Every other pattern here either
+accepts the host LMS's copyleft or avoids the incumbents entirely. This one does neither. The
+education platform layer is GPL/AGPL — Moodle, Canvas, Open edX all are — and a client who wants a
+**hosted, closed, multi-tenant** AI product has been told by this KB to pick `OpenOlat` (448★) and
+give up the installed base. 🟢 **`p499` read the layer above the LMS and both of its standards are
+permissive**, which means the product can be closed and the host can still be Moodle.
+
+🟢 **The licence boundary, stated precisely:** LTI is a **network protocol**, not linking. A tool
+that speaks LTI to an AGPL-3.0 LMS is a **separate work communicating at arm's length** — it does
+not become a derivative of the LMS, and AGPL §13's network clause binds *the LMS operator*, who is
+the institution, not you. The tool you ship stays under whatever licence you choose.
+
+| Component | Repo | License | Operative verdict | Role |
+|---|---|---|---|---|
+| **LTI tool framework** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** `214d11084b7f` | 🟡 −4 (§4 list enumerators only; conditions verbatim) | Speaks LTI 1.1/1.3 + IMS Global + Common Cartridge. This is the plug. |
+| **Courseware runtime** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** `86ab328f0e5b` | 🟢 IDENTICAL | SCORM 1.2 / 2004 / CMI, cross-frame. Needed wherever the client's content is already SCORM-packaged. |
+| **Tutor agent** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 🟢 **MIT** `68788b5e7d34` | 🟢 IDENTICAL | Adaptive tutoring loop. Swap for `zijinz456/OpenTutor` (MIT, runs locally) when data cannot leave the building. |
+| **Credentials / competency** | [`iblai/lms`](https://github.com/iblai/lms) | 🟢 **MIT** `18f76c220561` | 🟢 IDENTICAL | Emits the competency record and digital credential the institution actually wants back. |
+| **Host LMS** (client's, unchanged) | Moodle / Canvas / Open edX | 🔴 GPL-3.0 / AGPL-3.0 | — | 🟢 **Not modified, not linked, not forked.** No plugin fork means no copyleft reach. |
+
+**Wiring.** Register the Tsugi tool in the LMS as an **LTI 1.3 tool** (client id + deployment id +
+JWKS). The LMS launch posts a signed OIDC id_token carrying `sub`, context and roles; Tsugi
+validates it and establishes session identity — **so you never build auth, and you never hold the
+roster.** The tutor agent runs behind Tsugi as a plain HTTP service. Grades go back over **LTI
+Assignment & Grade Services (AGS)**, not by touching the LMS database. Where the client's existing
+content is SCORM, serve it through `scorm-again` in the tool frame and keep CMI state on your side.
+Attach `iblai/lms` to consume the AGS stream and issue credentials.
+
+🔴 **The one place copyleft still reaches you:** if you fork a **Moodle plugin** or an **Open edX
+XBlock** to get what you need, you are inside GPL/AGPL and the argument above is void. **Stay on
+the LTI side of the boundary.** `P490-1` (Canvas MCP) is the alternative when the client wants
+agent *tool-calling* against Canvas specifically rather than an embedded tool.
+
+**Regional fit.** 🟢 **North America strongest** — LTI is near-universal in US higher ed, and this
+is the pattern that reaches Canvas's installed base without the AGPL conversation. 🟢 **EMEA** — the
+arm's-length boundary also keeps the **EU AI Act provider/deployer line clean**: the institution
+deploys, Globant provides, and the Annex III high-risk duties land where `P490-2` already maps
+them. 🟡 **APAC / LATAM** — LTI penetration is lower outside higher ed; prefer `P490-3` for
+ministry-scale K-12.
+
+**Effort.** 🔴 Bounded by `Gap 484-A` and `Gap 499-G`: **nothing in this stack has been executed.**
+The LTI claims are the standard's definition and the projects' own; no launch was performed, no
+grade was posted. Treat any estimate as unvalidated.
+
+---
+
+## P499-2 — Pronunciation assessment with a named model, self-hosted 🟢
+
+**Why:** every "AI language tutor" pitch in this market is a prompt around a chat model. This one
+is a **measurable** component: phoneme-level scoring from an acoustic model, which produces a
+number a ministry procurement can evaluate — and `p497`'s Annex III framing says the sellable cut
+is the **function**, not the sector.
+
+| Component | Repo | License | Operative verdict | Role |
+|---|---|---|---|---|
+| **Pronunciation scorer** | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | 🟢 **MIT** `74bc17ea406e` | 🟡 +2 (title words) | **Wav2Vec2 + DTW**, phoneme-level English scoring. Self-hosted alternative to the commercial speech APIs. |
+| **Practice surface** | [`langx/langx`](https://github.com/langx/langx) | 🟢 **BSD-3-Clause** `8dd6541f1ce8` | 🟡 clause-3 name substitution (instructed) | Peer language-exchange client; where the learner actually speaks. |
+| **Retention layer** | [`kirill-markin/flashcards-open-source-app`](https://github.com/kirill-markin/flashcards-open-source-app) | 🟢 **MIT** `98663982f0ae` | 🟢 IDENTICAL | **FSRS** scheduling over the phonemes the learner failed. |
+| **Offline delivery** (optional) | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) **`v0.19.5`** | 🟢 **MIT** | 🟢 IDENTICAL | Ships the lesson where there is no connectivity. |
+
+**Wiring.** `OpenPronounce` runs as a self-hosted inference service — audio in, per-phoneme score
+out. The practice surface posts learner audio and renders the phoneme heatmap. Failed phonemes
+become FSRS cards, so the next session drills exactly the sounds that scored badly. 🟢 **The whole
+stack is permissive and runs without a hosted model vendor**, which is what makes it viable where
+student audio cannot leave the jurisdiction — EU, and every LATAM ministry deployment.
+
+🔴 **Caveats, stated:** `OpenPronounce` is **English-only** and last pushed **2026-08-15**. Nothing
+here was executed (`Gap 499-G`), so "phoneme-level accuracy" is the project's claim. Student voice
+is **biometric-adjacent**: under the EU AI Act, emotion recognition in education is banned outright
+(`T6`) — scoring *pronunciation* is not emotion recognition, but the data handling sits close
+enough that the DPIA is not optional.
+
+---
+
+## 🔧 `P498-1` amended — the pin becomes a release (`Gap 498-G` closed)
+
+`P498-1` pins **a commit** because no Kolibri release cadence had ever been read, and `Gap 498-G`
+recorded that as a defect. 🟢 Read this pass with `git ls-remote --tags`: **542 tags.**
+
+| | |
+|---|---|
+| 🟢 **pin this** | **`v0.19.5`** — current stable |
+| in flight | `v0.20.0-alpha0`, `v0.20.0-alpha1` |
+| cadence | `v0.19.3` → `v0.19.4` → `v0.19.5`, each preceded by `alpha`/`beta`/`rc` pre-releases |
+
+🟢 **`P498-1` and `P499-2` both pin `v0.19.5`.** The project ships release candidates before every
+minor, so a client can track `v0.19.x` for production and validate `v0.20.0` pre-releases out of
+band. 🔵 `Gap 498-J` is untouched — **nobody has toggled `ENV_VAR_ENABLED_PLUGINS`**, and that is
+still the load-bearing sentence of `P498-1`'s SOW language.

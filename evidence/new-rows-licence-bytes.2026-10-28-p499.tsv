@@ -1,0 +1,10 @@
+repo	stars	head_sha	grant_path	bytes	licence_read_from_bytes	operative_verdict	note
+pacewisdomhq/TutorLoom	52	ef4bca4c9b34	LICENSE	11362	Apache-2.0	IDENTICAL	multi-tenant LMS, Django+React, repo created 2026-10-07
+ucfopen/Materia	52	723f2b22cec6	LICENSE	34523	AGPL-3.0	IDENTICAL	embeddable course widgets/games over LTI, Univ. of Central Florida
+Wakoma/Lokal	53	f3c821e1820c	LICENSE	1063	MIT	IDENTICAL	offline-first content and services
+studentinsights/studentinsights	135	c749ed8030c3	LICENSE	1083	MIT	DEVIANT(+2: title words "The"/"MIT")	Code for America school-data platform; last push 2024-08-27
+deneyapkart/deneyapkart-arduino-core	53	6a78c75e0432	LICENSE	26526	LGPL-2.1	IDENTICAL	Turkish STEM dev-kit Arduino core
+Wakoma/nimble	110	315910f164c0	LICENSE.txt	13419	CERN-OHL-S-2.0	NOT-IN-CANONICAL-SET	hardware licence; strongly reciprocal
+ictinnovations/ICTSchool	71	a76fad328c71	-	0	no root grant	NO_ROOT_GRANT	refused
+codeforlife-education/rapid-router	60	eb9190ff6e91	LICENSE.md	121	pointer only	POINTER-NOT-A-GRANT	121 B linking to codeforlife-workspace
+codeforlife-education/codeforlife-portal	54	210d24f905c4	LICENSE.md	121	pointer only	POINTER-NOT-A-GRANT	121 B linking to codeforlife-workspace

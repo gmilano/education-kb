@@ -1,0 +1,13 @@
+licence	bytes	git_blob_sha1	sha256_16	words_whole	words_operative	source
+AGPL-3.0-only	34020	0c97efd25b5974b974ed9a8a18207bc4f55bb338	d8a6cc31abc16b67	5580	5199	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/AGPL-3.0-only.txt
+Apache-2.0.apache-org	11358	d645695673349e3947e8e5ae42332d0ac3164cd7	cfc7749b96f63bd3	1608	1426	https://www.apache.org/licenses/LICENSE-2.0.txt (apache.org, the steward itself)
+Apache-2.0	10280	137069b823873b8bcf42979bcf8e9371052d26a2	074e6e32c86a4c0e	1608	1426	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/Apache-2.0.txt
+BSD-2-Clause	1267	5f662b354cd40cd5339d5aa05d74b15405138230	f32fb3b417a19416	190	186	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/BSD-2-Clause.txt
+BSD-3-Clause	1460	ea890afbc70c94011b765722a95e2c8c7d4f1233	5a93d5831e1297ab	221	217	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/BSD-3-Clause.txt
+CC-BY-SA-4.0	18375	835a6836b385fa068fdd625685548845cda60c2f	cde7883b9050a110	2799	2799	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/CC-BY-SA-4.0.txt
+GPL-2.0-only	17337	17cb286430a4d8094e473d06bd7f50f40438ddba	aaf135472f81c5b4	2931	2495	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/GPL-2.0-only.txt
+GPL-3.0-only	34674	f6cdd22a6c1fbc887e08a215cb4beb3c47048041	fb981668c18a279e	5699	5236	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/GPL-3.0-only.txt
+LGPL-2.1-only	26001	c6487f4fdf701640ac0f559eb0130cdf76c5d3f4	5749785c8bdefafc	4414	4060	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/LGPL-2.1-only.txt
+LGPL-3.0-only	42098	513d1c01fe5b5b9724e999d8eb041ff17d444eaa	996af0513df21f74	6940	6467	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/LGPL-3.0-only.txt
+MIT	1078	d817195dad53ec992418c28ffca5fbd1cd86502a	b05785f9f18e6716	170	165	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/MIT.txt
+MPL-2.0	16727	ee6256cdb62a765749a71aae3abea32884301cd1	66a3107d5ad6a058	2426	2426	https://raw.githubusercontent.com/spdx/license-list-data/f715b3660bb164c3d0b81cba9ce94e3c558c4048/text/MPL-2.0.txt

@@ -829,3 +829,130 @@ deployment will collide.
 - 🔴 **`Gap 484-J` not narrowed.** The EMEA leg named Africa and the Middle East in the query and
   returned no instrument, figure or player for either. **"EMEA" on these shelves means Europe.**
 - 🟡 **`T11`, `T12`, `T16` were not re-tested this pass.** Carried unchanged.
+
+---
+
+## 🆕 `p499` — `2026-10-28` — **🔴 `T19` IS NARROWED HARD BY THE MEASUREMENT IT ASKED FOR: licence text is NOT "edited in the field" at any measurable rate — 0 of 64 grants on these shelves are materially altered, and two of `p498`'s three claimed instances were a circulating template variant, not edits. 🟢 `T2`'s binding constraint is RE-SCOPED: the copyleft problem is real at the platform layer and FALSE at the integration layer above it. 🆕 `T20` and `T21`.**
+
+### 🔴 `T19` — narrowed from a field practice to a single confirmed instance
+
+`T19` (`p498`) reads: *"Education-AI licence **text** is edited in the field, and the edits are
+inside the operative body."* It rested on three instances — `DeepTutor`, `freelingo`, `get-it` —
+and `Gap 488-T` conceded the **rate was never measured**.
+
+🟢 **The rate is now measured.** 76 census rows re-fetched at pinned SHAs, 64 gradeable against a
+retained canonical set, operative span graded word-by-word
+([`repos/trending.md`](../repos/trending.md) `p499`):
+
+| | n | share |
+|---|---|---|
+| operative body **IDENTICAL** to canonical | 46 | 71.9% |
+| deviant **but** the payload is a *different licence* (nearest-neighbour mislabel) | 8 | 12.5% |
+| deviant **but** only appended provenance prose, no terms added | 2 | 3.1% |
+| deviant **but** a benign vintage / URL / heading variant | 5 | 7.8% |
+| deviant **but** a third-party **template** variant shared across unrelated repos | 3 | 4.7% |
+| 🔴 **materially altered grant** | **0** | **0.0%** |
+
+🔴 **And `p498`'s instance count is over by one.** `DeepTutor`'s Apache deviation — "submitted to
+**the** Licensor", "received by **the** Licensor", §4(d) "excluding **any** notices" — appears
+**identically on three repositories, two of them unrelated** (🇭🇰 `HKUDS/DeepTutor`, its derivative
+`3yangyang9/DeepTutor-AILearning`, and 🇵🇰 `Orenda-Project/rumi-platform`). 🔵 **An author's edit does
+not replicate across unrelated repositories; a template generator's output does.**
+
+🟢 **`T19` restated as the evidence supports it:** *education-AI licence payloads deviate from
+canonical often (28.1%) and almost always harmlessly — fill-ins, vintages, appended attribution,
+circulating templates. **One** material alteration is confirmed base-wide (`beltromatti/get-it`'s
+five-word §6 deletion). The commercial risk is **not** that grants are routinely edited; it is that
+a single edited grant is **undetectable without a canonical set**, and one existed.*
+
+🔵 **The method rule that falls out, and it is reusable:** a deviation found on **≥2 unrelated**
+repositories is evidence of a shared upstream text. Only a deviation **unique to one project** is a
+candidate alteration. `get-it` passes that test; `DeepTutor` does not.
+
+### 🟢 `T2` re-scoped — the copyleft constraint is layer-specific, and the layer that matters is permissive
+
+`T2` reads: *"The education platform layer is copyleft, and this is now the binding constraint."*
+🟢 **True of the platform layer and false one layer up**, which changes what it implies.
+
+| layer | licence picture | can a closed derivative ship? |
+|---|---|---|
+| **Incumbent LMS** (Moodle, Open edX, Canvas) | 🔴 GPL-3.0 / AGPL-3.0 / AGPL-3.0 | 🔴 no |
+| 🟢 **Interoperability standards** (`tsugi` Apache-2.0 377★, `scorm-again` MIT 360★) | 🟢 **permissive** | 🟢 **yes** |
+| 🟢 **Credentials / competency** (`iblai/lms` MIT) | 🟢 permissive | 🟢 yes |
+| 🟢 **Authoring / client** (`haxcms-php` Apache-2.0, `tutors` MIT, `pytogether` MIT) | 🟢 permissive | 🟢 yes |
+| 🟢 **Spaced repetition** (`mnemo` Apache-2.0, FSRS flashcards MIT) | 🟢 permissive | 🟢 yes |
+
+🟢 **The correct strategic sentence is: you cannot close the LMS, but you can close everything you
+build against it** — because **LTI is a network protocol, not linking**, so a tool speaking LTI to
+an AGPL host is a separate work. 🔵 `T2`'s pessimism cost this KB real ground: it pushed engagements
+toward `OpenOlat` (448★) and away from the installed base, when the installed base was always
+reachable over a permissive integration layer. 🟢 Operationalised as `P499-1`.
+
+🔴 **What `T2` keeps:** fork a Moodle plugin or an Open edX XBlock and the copyleft reaches you.
+The constraint is real; it is just **narrower than this file has been stating.**
+
+### 🆕 `T20` — In education, permissiveness tracks *position in the stack*, not project age or size
+
+Across 29 foundational platforms now read from bytes, licence choice is **predicted by layer**:
+systems of record are copyleft; the protocol, credential, authoring and client layers are
+permissive. 🟢 This is not a size or recency effect — `tsugi` (377★) and `scorm-again` (360★) are
+permissive and mature, while `Materia` (52★, 2013) is AGPL-3.0.
+
+**Why it holds:** copyleft was chosen by the 2000s-era institutional platforms to keep public-sector
+forks public. The layers built *since* exist to be embedded in someone else's product, and
+embedding is what copyleft prevents. 🔵 **Consequence:** when scoping, ask *which layer* before
+asking which project. The licence is mostly determined once the layer is fixed, which makes
+licensing a **design decision taken early**, not a procurement surprise found late.
+
+🔴 **Caveat, recorded:** the 15.8% → 37.9% permissive share this pass reports moved because `p499`
+chose to look at layers nobody here had sampled. **That is a selection effect** (`Gap 499-I`); the
+*direction* is evidence, the *magnitude* is not.
+
+### 🆕 `T21` — "Grant by reference" is spreading, and it breaks every licence instrument including this base's
+
+Three rows now ship a `LICENSE` file that **contains no grant** — only a pointer:
+
+| repo | file | bytes | content |
+|---|---|---|---|
+| [`frappe/education`](https://github.com/frappe/education) | `license.txt` | **19** | `License: GNU GPL V3` |
+| [`codeforlife-education/rapid-router`](https://github.com/codeforlife-education/rapid-router) | `LICENSE.md` | **121** | *"Find our license here"* + link |
+| [`codeforlife-education/codeforlife-portal`](https://github.com/codeforlife-education/codeforlife-portal) | `LICENSE.md` | **121** | same file |
+
+🔴 **Three failures at once.** (1) GitHub's licence API reports a **declared** SPDX id with no text
+behind it. (2) A byte-reading instrument — including this base's — finds a payload, grades it
+against canonical, and produces a nonsense verdict (`frappe/education`: "−164 words"). (3) For
+**GPL specifically**, conveying the work without a copy of the License is a problem under the
+licence's own terms.
+
+🟢 **Instrument requirement:** a grant payload must be classified **pointer / partial / full**
+*before* it is graded, and a pointer must return "unresolved", not a diff. 🔵 This is adjacent to
+`Gap 499-B` (no "unknown licence" verdict) and both come from the same omission: **the instrument
+has no way to decline.**
+
+🔵 **Commercially:** a pointer grant is not a blocker, it is a **diligence item** — the real licence
+usually exists in a sibling repository or a `COPYRIGHT` file, as `openeducat_erp` does. **Resolve
+it before an engagement; do not refuse the row and do not trust the API badge.**
+
+### 🔵 A method finding about this base's own instruments, recorded as a trend because it will recur
+
+🔴 **Two successive forms of `p499`'s own licence instrument deleted operative text**, and neither
+was detectable from its own output:
+
+| form | what it silently deleted | what exposed it |
+|---|---|---|
+| strip any line beginning `copyright` | GPL-3.0 §2's *"…for the term of copyright on the Program, and are irrevocable…"* | a **uniform −22-word "deletion" across 14 independent GPL/AGPL projects** |
+| also accept a bare word after `copyright` (to catch `Copyright (c) Microsoft Corporation.`) | GPL-2.0 §1's wrapped *"copyright notice and disclaimer of warranty; keep intact all the"* | `formalms` §1 read **word-for-word canonical** by hand |
+
+🟢 **Both were caught only by a control whose answer was already known** — which is precisely what
+`Gap 498-M` says has never been done to a gate on this base. 🔵 **The generalisation: an instrument's
+own output cannot validate it.** A plausible number is the expected output of a broken instrument.
+Every gate needs a known-good **and** a known-bad input before its results are believed.
+
+### 🆕 Declared gaps — `p499` (trends)
+
+| gap | statement | cost to close |
+|---|---|---|
+| 🟡 **`Gap 499-J`** | `T20` is asserted on **29 rows of this shelf**, not a sample of the sector. Layer assignment was also done by hand, by me, and layers are not a defined taxonomy anywhere in this repo. | one pass, define the layers |
+| 🟡 **`Gap 499-K`** | `T21` rests on **three instances**, two of which are the same organisation (`codeforlife-education`). That is really **two independent instances**. "Spreading" is not yet supported. | one pass, sweep for small grant payloads |
+| 🔴 **`Gap 499-L`** | `T19`'s narrowing depends on my **hand classification of 18 diffs** (`Gap 499-F`). The headline *"0 of 64 materially altered"* is not reproducible by code in this repo, so a later pass cannot re-derive it without repeating my judgement. | one pass, encode the four classes |
+| 🟡 **`Gap 499-M`** | `T2`'s re-scoping claims **LTI is arm's-length, not linking**, and therefore that AGPL does not reach an LTI tool. 🔴 **That is my reading of the licence and the standard, not legal advice and not a cited authority.** It is load-bearing for `P499-1`'s whole premise. | needs counsel, not a pass |

@@ -1,0 +1,53 @@
+repo	stars	declared_licence_api	language	pushed	archived	default_ref	on_curated_shelf	on_trending_only	absent_from_all_8	description
+tsugiproject/tsugi	377	Apache-2.0	PHP	2026-10-27	no	master	no	yes	no	Tsugi Admin, Developer, and Management Console (pls join the dev list)
+jcputney/scorm-again	360	MIT	TypeScript	2026-10-26	no	master	no	yes	no	A modern SCORM JavaScript runtime library.
+JudgePeach/math-question-bank	358	AGPL-3.0	Python	2026-10-27	no	main	no	yes	no	本地化高中数学题库管理系统，支持 LaTeX 实时渲染、智能大模型 AI 解析与 OCR 公式识别。Localized High School Math Question Bank Mana
+canyongbs/advisingapp	340	NOASSERTION	PHP	2026-10-27	no	main	no	yes	no	Advising App® by Canyon GBS® is an AI-powered conversational assistant for staff, student succe
+edrys-org/edrys	334	MPL-2.0	Vue	2024-08-12	no	main	no	yes	no	Edrys is an open and modular remote teaching platform (and the first live LMS)
+Li-Evan/Bloom	294	MIT	JavaScript	2026-10-20	no	main	no	yes	no	Hire a private AI tutor for anything — it reads how you actually learn and teaches the next les
+SJRiz/pytogether	261	MIT	JavaScript	2026-10-21	no	main	no	yes	no	Source code for pytogether.org — A fully browser-based collaborative IDE with real-time editing
+elmsln/elmsln	253	GPL-3.0	PHP	2026-08-14	no	master	no	yes	no	ELMS - create and sustain innovation in education. Dream with us!
+hkalant/awesome-edtech-tools	216	NONE	-	2025-09-02	no	master	no	yes	no	An ongoing curated list with awesome tools and resources for instructional designers.
+artcc/freelingo	209	AGPL-3.0	JavaScript	2026-10-24	no	main	no	yes	no	Open-source, self-hosted AI language learning platform with local or cloud LLMs, CEFR study pla
+iblai/lms	208	MIT	TypeScript	2026-10-27	no	main	no	yes	no	Skills intelligence platform — discover courses, track competencies, earn credentials, and acce
+Halleck45/OpenPronounce	166	MIT	Python	2026-08-15	no	main	no	yes	no	Open-source phoneme-level English pronunciation assessment (Wav2Vec2 + DTW). Self-hosted altern
+learning-commons-org/knowledge-graph	164	NOASSERTION	Python	2026-10-27	no	main	no	yes	no	The data layer for smarter educational AI. Integrate trusted instructional content and research
+senjun-team/senjun-courses	161	GPL-3.0	C++	2026-10-24	no	main	no	yes	no	Курсы от программистов для программистов
+zijinz456/OpenTutor	154	MIT	Python	2026-10-27	no	main	no	yes	no	The first block-based adaptive learning workspace that runs locally. Upload any material → get 
+chipmates/agoracosmica	149	AGPL-3.0	TypeScript	2026-10-27	no	main	no	yes	no	A Living Library You Can Talk To. Thirty historical figures, their lives narrated, their ideas 
+studentinsights/studentinsights	135	MIT	JavaScript	2024-08-27	no	master	no	no	yes	We work within school communities to make open, secure, student-centered data systems.  Say hel
+haxtheweb/haxcms-php	130	Apache-2.0	PHP	2026-10-28	no	master	no	yes	no	HAX + CMS to manage your microsite universe with PHP backend
+shigella520/MindTrain	128	MIT	Java	2026-10-15	no	main	no	yes	no	AI-driven knowledge training platform with pluggable schedulers, Codex Skill integration, and o
+tutors-sdk/tutors	125	MIT	JavaScript	2026-07-23	no	development	no	yes	no	The core Tutors Reader application.
+onemnemo/mnemo	122	Apache-2.0	TypeScript	2026-10-22	no	main	no	yes	no	Mnemo is a free, open-source study application built with Photino X and .NET 10, designed to he
+sagefy/sagefy	120	Apache-2.0	JavaScript	2024-06-18	yes	master	no	yes	no	:telescope: Learn anything, adapted for you. Free.
+codeforlife-education/aimmo	117	NOASSERTION	Python	2024-07-31	yes	master	no	yes	no	A python-based multi-player online educational game for students to play in a class or club set
+ucfopen/UDOIT	117	GPL-3.0	JavaScript	2026-10-26	no	main	no	yes	no	The Universal Design Online content Inspection Tool, or UDOIT (pronounced, “You Do It”) enables
+PapillonApp/papillon-v6	117	GPL-3.0	TypeScript	2024-07-10	yes	development	no	yes	no	Le client alternatif de vie scolaire ouvert à tous et porté par la communauté
+kalvilabs/kalvi	116	AGPL-3.0	TypeScript	2024-05-16	no	master	no	yes	no	📚🏫🚀 Open Source Infrastructure for Online Education. Easily launch educational platforms, craft
+Wakoma/nimble	110	CERN-OHL-S-2.0	Python	2026-01-28	no	master	no	no	yes	The nimble.  An open source, rapidly deployable, wireless mesh network. 
+langx/langx	109	BSD-3-Clause	TypeScript	2026-10-28	no	main	no	yes	no	We connect language learners worldwide. Practice and immerse yourself in different languages.
+kirill-markin/flashcards-open-source-app	102	MIT	TypeScript	2026-10-28	no	main	no	yes	no	AI-powered flashcards app built for serious daily study on iOS, MacOS, Android, and the web. Us
+Selleo/mentingo	100	MIT	TypeScript	2026-10-27	no	main	yes	no	no	Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo
+learning-commons-org/evaluators	87	NOASSERTION	TypeScript	2026-10-28	no	main	no	yes	no	Evaluation for AI outputs against trusted educational rubrics. Measure and improve content qual
+g3i/lxHive	79	GPL-2.0	PHP	2025-04-15	no	master	no	yes	no	A lightweight Experience API Learning Record Store (LRS)
+scollovati/awesome-lti	79	CC-BY-SA-4.0	-	2026-10-05	no	main	no	yes	no	List of awesome resources for learning and developing tools according to the Learning Tools Int
+ably-labs/realtime-quiz-framework	77	Apache-2.0	Vue	2026-03-06	yes	main	no	yes	no	This repository contains a base networking framework for building a realtime quiz platform with
+jaltekruse/Free-Math	74	NONE	JavaScript	2026-10-16	no	master	no	yes	no	An offline React web application for managing digital math homework
+Zenglian990/AI_Tutor_Release	74	MIT	JavaScript	2026-10-27	no	master	no	yes	no	EduAgent: Open-Source RAG AI Tutor for K-9 Education. 国内首个专为1-9年级量身定制的开源 RAG AI 教辅智能体
+wombats-writing-code/xoces	74	MIT	JavaScript	2017-07-24	no	master	no	no	yes	JS widgets for interactive chord and tree visualizations for hierarchical + connected data 🚀🍩🎉
+ucfopen/Obojobo	72	AGPL-3.0	JavaScript	2026-10-14	no	master	no	yes	no	Next generation course content for your LMS. Easy for beginners, but powerful enough for resear
+yh2072/edgameclaw	72	AGPL-3.0	Python	2026-03-26	no	main	no	yes	no	EdGameClaw: Convert any learning material into a game-based course — powered by AI.
+ictinnovations/ICTSchool	71	NONE	Blade	2026-10-13	no	main	no	no	yes	School Management Software with unified communications and  Computer telephony integeration (CT
+abdullaitcenter-hue/comet-trail-archives	70	NONE	HTML	2026-10-28	no	main	no	yes	no	Tiny Comet History RPG API Profile: Educational Simulation Games Guide 2026
+particify/arsnova-server	67	GPL-3.0	Kotlin	2026-10-28	no	master	no	yes	no	The backend components of ARSnova. ARSnova is a modern, web-based approach to Audience Response
+SirhanMacx/Claw-ED	63	MIT	Python	2026-09-19	no	main	no	yes	no	Local-first AI teaching assistant for editable lesson drafts, student materials, and slides. Us
+RandMelville/claude-war-room	62	MIT	Shell	2026-06-26	no	main	no	no	yes	Orquestrador de 5 agentes IA especializados para analise 360 de features com Claude Code. 1 com
+codeforlife-education/rapid-router	60	NOASSERTION	JavaScript	2026-10-23	no	master	no	no	yes	Two games: a Blockly game (Rapid Router) for ages 5-11, and a Python game (Python Den) for ages
+Aniruddha-Gade/Study-Notion-EdTech__MERN-Stack	57	NONE	JavaScript	2024-06-01	no	main	no	no	yes	StudyNotion is a fully functional ed-tech platform that enables users to create, consume, and r
+particify/arsnova	55	NONE	-	2021-01-14	no	master	no	yes	no	ARSnova is a modern, web-based approach to Audience Response Systems (ARS).
+codeforlife-education/codeforlife-portal	54	NOASSERTION	Python	2026-10-27	no	master	no	no	yes	The portal code for Code for Life: an online platform providing free educational resources, mat
+Wakoma/Lokal	53	MIT	Jinja	2025-11-15	no	main	no	no	yes	Lokal, offline first, content and services - for and by local communities.
+deneyapkart/deneyapkart-arduino-core	53	LGPL-2.1	C++	2026-10-16	no	master	no	no	yes	Arduino Core for Deneyap DevKits
+pacewisdomhq/TutorLoom	52	Apache-2.0	TypeScript	2026-10-28	no	main	no	yes	no	Self-hosted multi-tenant LMS, Django+React, moodle-alternative
+ucfopen/Materia	52	?	JavaScript	2026-10-15	no	master	no	yes	no	Embeddable course widgets/games for LMS, LTI, UCF

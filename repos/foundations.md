@@ -570,3 +570,80 @@ not the ratio.
 | 🟡 **`Gap 498-F`** | Kolibri's AI-surface census is a **keyword census** over Python/Vue/JS. A hosted inference call made through a generic HTTP client with no provider name in the source would not match. The verdict is "no provider-named integration", which is narrower than "no AI". |
 | 🟡 **`Gap 498-G`** | Kolibri's **574 open issues** and `develop`-as-default both indicate an active trunk, but **no release cadence was read** — no tag list, no version file (the version is re-exported from `kolibri._version`, which was not resolved). `P498-1` therefore pins a commit, not a release. |
 | 🔴 **`Gap 498-H`** | The three new permissive rows are **licence-and-description reads**. None was cloned and run, so "emits SCORM" is `Papermorph`'s claim, not a measurement. `Gap 484-A` still bounds everything on these shelves. |
+
+---
+
+## 🆕 `p499` — `2026-10-28` — **🟢 the permissive numerator finally moves, and it moves at the layer that matters: INTEROPERABILITY**
+
+**Pass `p499` — reads of 2026-10-28.** This section **extends** the file; nothing above is rewritten.
+Rows come from the promotion repair described in [`agents/trending.md`](../agents/trending.md)
+`p499` (`Gap 499-A`). Every licence below was fetched from `raw.githubusercontent.com` at the pinned
+SHA and graded on the operative-span instrument against the retained canonical set
+([`evidence/canonical/MANIFEST.tsv`](../evidence/canonical/MANIFEST.tsv)).
+Reads: [`new-rows-licence-bytes.2026-10-28-p499.tsv`](../evidence/new-rows-licence-bytes.2026-10-28-p499.tsv).
+
+### 🟢 The headline this file has been waiting eight passes for
+
+This file's standing lede is that **the education platform layer is overwhelmingly copyleft** — of
+19 foundational platforms, 3 permissive — and that this is "the single most commercially important
+fact in this file". 🟢 **It is still true of the LMS layer. It is not true of the layer above it.**
+
+🟢 **The two interoperability standards that every education integration has to cross are both
+permissive, and neither was on this shelf:**
+
+| Layer | Repo | Licence (read from bytes) | ★ | Operative verdict | Why it changes the picture |
+|---|---|---|---|---|---|
+| 🟢 **LTI / IMS Global / Common Cartridge** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0**, 10 273 B `214d11084b7f` | **377** | 🟡 DEVIANT (−4: the `(a)`–`(d)` list enumerators in §4) | 🟢 **The LTI tool framework.** LTI is how anything reaches *inside* Moodle, Canvas, Open edX, Blackboard or D2L. Apache-2.0 means **the integration layer can be closed even when the LMS underneath is AGPL**. |
+| 🟢 **SCORM / CMI runtime** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT**, 1 072 B `86ab328f0e5b` | **360** | 🟢 **IDENTICAL** | 🟢 A modern SCORM JavaScript runtime — SCORM 1.2, SCORM 2004, CMI, cross-frame. The other half of the standards boundary, and MIT. Active **2026-10-26**. |
+
+🔵 **`tsugi`'s −4 was checked by hand before promotion, because an Apache deletion is exactly what
+`p498` found in `get-it`.** It is **not** an alteration: the four §4 condition *bodies* are present
+verbatim — "You must give any other recipients…", "You must cause any modified files…", "You must
+retain, in the Source form…", "If the Work includes a \"NOTICE\" text file…" — and only the
+parenthesised `(a)`/`(b)`/`(c)`/`(d)` enumerators are absent from the de-indented rendering. **The
+conditions stand; the bullet letters do not.**
+
+### 🟢 Six further platform rows, all read from bytes
+
+| Layer | Repo | Licence | ★ | Operative verdict | Note |
+|---|---|---|---|---|---|
+| **LMS — permissive, new** | [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | 🟢 **Apache-2.0**, 11 362 B `ef4bca4c9b34` | 52 | 🟢 IDENTICAL | 🟢 **Only the second permissive full LMS on these shelves** after `OpenOlat`. Multi-tenant, Django + React, self-hosted, markets itself as a Moodle alternative. 🔴 **Repo created 2026-10-07 — three weeks old, 13 forks, 10 open issues. Do not stake an engagement on it yet;** carry it as the row to re-read every pass. |
+| **Skills / credentials** | [`iblai/lms`](https://github.com/iblai/lms) | 🟢 **MIT**, 1 063 B `18f76c220561` | 208 | 🟢 IDENTICAL | Skills-intelligence platform — competency tracking, digital credentials, course discovery. 🟢 The **competency/credential** layer had no permissive row before. Active 2026-10-27. |
+| **Collaborative coding classroom** | [`SJRiz/pytogether`](https://github.com/SJRiz/pytogether) | 🟢 **MIT**, 1 073 B `52021a40fdff` | 261 | 🟢 IDENTICAL | Browser-based collaborative Python IDE with real-time editing — the teaching-lab primitive. |
+| **Course CMS / microsites** | [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) | 🟢 **Apache-2.0**, 11 362 B `ecac353f6e80` | 130 | 🟢 IDENTICAL | HAX + CMS for course microsites, PHP backend. Pushed **2026-10-28**. Same stable as `elmsln`. |
+| **Course reader** | [`tutors-sdk/tutors`](https://github.com/tutors-sdk/tutors) | 🟢 **MIT**, 1 088 B `3f578d9362e6` | 125 | 🟢 IDENTICAL | The Tutors Reader application. 🔵 Last push 2026-07-23. |
+| **Language exchange** | [`langx/langx`](https://github.com/langx/langx) | 🟢 **BSD-3-Clause**, 1 520 B `8dd6541f1ce8` | 109 | 🟡 DEVIANT (clause-3 name substitution `of the copyright holder` → `LangX`) | Peer language practice; a HelloTalk alternative. 🔵 The substitution is **what BSD-3 instructs** the licensor to do, not an edit. Active 2026-10-28. |
+| **Widgets / games over LTI** | [`ucfopen/Materia`](https://github.com/ucfopen/Materia) | 🔴 **AGPL-3.0**, 34 523 B `723f2b22cec6` | 52 | 🟢 IDENTICAL | Embeddable course widgets and games. Same UCF stable as `UDOIT` and `Obojobo`. 🔴 AGPL — hosted derivative must share. |
+| **Offline-first content/services** | [`Wakoma/Lokal`](https://github.com/Wakoma/Lokal) | 🟢 **MIT**, 1 063 B `f3c821e1820c` | 53 | 🟢 IDENTICAL | Offline-first content and local network services, built for low-connectivity communities. 🟢 Pairs with `Kolibri` — see [`compose/patterns.md`](../compose/patterns.md) `P490-3`. 🔵 Last push 2025-11-15. |
+
+### 🔵 The licence census, restated with this pass's rows
+
+| | before `p499` | added `p499` | now |
+|---|---|---|---|
+| foundational platforms read from bytes | 19 | **+10** | **29** |
+| 🟢 of which **permissive** (MIT / Apache-2.0 / BSD) | 3 | **+8** | **11** |
+| permissive share | 15.8% | | 🟢 **37.9%** |
+
+🔴 **Read this carefully — it is not a reversal of the copyleft finding.** Every *incumbent LMS*
+remains GPL or AGPL: Moodle (GPL-3.0), Open edX (AGPL-3.0), Canvas (AGPL-3.0). What changed is
+that the **standards, credential, authoring and client layers around them are permissive**. 🔵 The
+correct strategic sentence is therefore: *you cannot close the LMS, but you can close everything
+you build against it.*
+
+### 🟢 `frappe/education`'s "*(declared only)*" qualifier is resolved
+
+The row above records `GPL-3.0 *(declared only)*`. 🟢 Read from bytes this pass: `license.txt` at
+`73ce33ef2719` is **19 bytes** and contains exactly `License: GNU GPL V3`. 🔵 So the repo **does**
+state GPL-3.0 in its own bytes — the qualifier can go — but it **ships no licence text at all**,
+which for GPL-3.0 is a conveyance problem in its own right. 🔴 **Two rows do the same thing** —
+`codeforlife-education/rapid-router` and `codeforlife-education/codeforlife-portal`, both a
+**121-byte `LICENSE.md`** reading *"Find our license here"* plus a link — which makes **grant by
+reference a class on these shelves, not an anecdote.**
+
+### 🆕 Declared gaps — `p499` (foundations)
+
+| gap | statement | cost to close |
+|---|---|---|
+| 🔴 **`Gap 499-G`** | All ten rows above are **licence-and-description reads**. None was cloned, built or run — the same standing limit as `Gap 498-H`. "Tsugi crosses the LTI boundary" is the project's claim and the standard's definition, **not a measured integration.** | needs an execution-permitted session |
+| 🟡 **`Gap 499-H`** | `TutorLoom` is **three weeks old** and its Apache-2.0 grant is clean, but **nothing about its maintenance is established** — no tag list read, no release, no contributor count. It is promoted as a watch row, and a pass that treats it as a deployable LMS will be wrong. | one read per pass |
+| 🟡 **`Gap 499-I`** | The permissive share moved 15.8% → 37.9% because **this pass added rows at the layers it chose to look at**. That is a selection effect, not a measured change in the sector. The denominator is this shelf, not the market. | one pass, defined sampling frame |

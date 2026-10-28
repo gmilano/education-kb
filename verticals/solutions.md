@@ -452,3 +452,61 @@ than "generate centrally, import offline", and it is the only permissive route t
 `kolibri` (MIT) the only permissive offline platform, and 🔴 **there is still no permissive SIS and
 no permissive QTI exam engine.** `formalms`'s re-grading adds a GPL-2.0 LMS to the copyleft column;
 it does not add a permissive option. The copyleft conversation on SIS and exams remains unavoidable.
+
+---
+
+## 🆕 `p499` — `2026-10-28` — the "Odoo for education" answer gains a permissive integration layer
+
+**Pass `p499` — reads of 2026-10-28.** This section **extends** the file. Licences read from bytes
+at pinned SHAs and graded on the operative-span instrument
+([`evidence/canonical/MANIFEST.tsv`](../evidence/canonical/MANIFEST.tsv)); full reads in
+[`new-rows-licence-bytes.2026-10-28-p499.tsv`](../evidence/new-rows-licence-bytes.2026-10-28-p499.tsv).
+
+### 🟢 The layer this table was missing
+
+Every row in "Pick by layer" above is a **system of record** — it holds the students, courses and
+grades. None of them is the thing you actually write. 🟢 **The integration layer is now on the
+shelf, and it is permissive at both standards:**
+
+| Layer | Platform | License | ★ | Why this one |
+|---|---|---|---|---|
+| 🟢 **LTI tool framework** | [Tsugi](https://github.com/tsugiproject/tsugi) | **Apache-2.0** | 377 | 🟢 **The way into an LMS you do not own.** LTI + IMS Global + Common Cartridge. Works against Moodle, Canvas, Open edX, Blackboard, D2L. **Apache-2.0, so the tool you build stays closed even against an AGPL host.** |
+| 🟢 **SCORM / CMI runtime** | [scorm-again](https://github.com/jcputney/scorm-again) | **MIT** | 360 | 🟢 SCORM 1.2 + 2004 + CMI, cross-frame. The courseware-packaging boundary, MIT. Active 2026-10-26. |
+| 🟢 **LMS — permissive, new** | [TutorLoom](https://github.com/pacewisdomhq/TutorLoom) | **Apache-2.0** | 52 | 🟢 Second permissive full LMS after OpenOlat — multi-tenant, Django + React. 🔴 **Three weeks old; watch row, not a deployment choice** (`Gap 499-H`). |
+| **Skills / credentials** | [iblai/lms](https://github.com/iblai/lms) | **MIT** | 208 | Competency tracking and digital credentials — the layer every workforce-reskilling engagement needs and that had no permissive option here. |
+| **Course authoring / microsites** | [HAXcms](https://github.com/haxtheweb/haxcms-php) | **Apache-2.0** | 130 | Course microsite CMS, PHP. Pushed 2026-10-28. |
+| **Teaching lab — code** | [pytogether](https://github.com/SJRiz/pytogether) | **MIT** | 261 | Browser-based collaborative Python IDE, real-time. Drop-in for a programming classroom. |
+| **Widgets / games over LTI** | [Materia](https://github.com/ucfopen/Materia) | 🔴 AGPL-3.0 | 52 | Embeddable widgets and games. Same UCF stable as UDOIT/Obojobo. 🔴 Hosted derivative must share. |
+| **Offline-first services** | [Lokal](https://github.com/Wakoma/Lokal) | **MIT** | 53 | Offline content + local network services. Pairs with Kolibri for low-connectivity deployments. |
+| **Spaced repetition — permissive** | [Mnemo](https://github.com/onemnemo/mnemo) | **Apache-2.0** | 122 | 🟢 See the correction below. |
+
+### 🟢 A standing recommendation in this file is now obsolete
+
+The table above carries **Anki (AGPL-3.0)** with the note *"Reference SRS scheduler. Use as the
+algorithm reference even where the code can't ship."* 🟢 **That constraint is lifted.** There are
+now **two permissive spaced-repetition implementations** read from bytes:
+[`onemnemo/mnemo`](https://github.com/onemnemo/mnemo) (**Apache-2.0**, operative IDENTICAL) and
+[`kirill-markin/flashcards-open-source-app`](https://github.com/kirill-markin/flashcards-open-source-app)
+(**MIT**, operative IDENTICAL, **FSRS** scheduling). 🔵 Anki stays on the shelf as the reference
+implementation, but **"the code can't ship" is no longer the end of the sentence** — for SRS
+specifically, permissive code now exists.
+
+### 🔵 `formalms` re-graded a second time, and the grade holds
+
+`p498` re-graded [`formalms/formalms`](https://github.com/formalms/formalms) from "no readable
+grant" to **GPL-2.0** after finding the payload at `html/license.txt` rather than the repository
+root. 🟢 `p499` graded **both** of its GPL-2.0 payloads on the operative instrument (`Gap 498-D`):
+**2 489 operative words each, identical diff signatures**, differing from canonical only by the
+**1991-vintage FSF transcription** ("Library" for "Lesser", "Franklin St" for "Franklin Street").
+🟢 **GPL-2.0 confirmed. Neither payload is truncated or altered** — the 3 200-byte spread between
+them is the omitted *How to Apply These Terms* appendix. 🔴 Its staleness is unchanged and still
+disqualifying for a new engagement: last commit **2026-07-17** (`Gap 498-E`).
+
+### 🔴 Refused this pass, with reasons
+
+| Platform | ★ | Why refused |
+|---|---|---|
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | 71 | 🔴 **No root grant at any of six probed paths.** School-management software with unified communications — would otherwise fit the SIS layer. |
+| [`codeforlife-education/codeforlife-portal`](https://github.com/codeforlife-education/codeforlife-portal) | 54 | 🔴 **121-byte `LICENSE.md` containing only a link.** UK Code for Life schools platform. |
+| [`codeforlife-education/rapid-router`](https://github.com/codeforlife-education/rapid-router) | 60 | 🔴 Same 121-byte pointer. Blockly game for ages 5–11. |
+| [`studentinsights/studentinsights`](https://github.com/studentinsights/studentinsights) | 135 | 🟡 MIT and clean, but **last push 2024-08-27** — over two years stale. Code for America school-data platform; recorded, not recommended. |

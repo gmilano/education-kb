@@ -3,6 +3,165 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p499` — `2026-10-28` — **🟢 `Gap 488-T` HAS A RATE AT LAST, AND IT DEFLATES THE ALARM THAT RAISED IT: of 64 root grants read at pinned SHAs, **28.1% deviate and 0 are materially altered**. 🔴 `p498`'s own count of material instances is over by one — `DeepTutor`'s Apache deviation is a THIRD-PARTY TEMPLATE VARIANT it shares with an unrelated Pakistani repo, not an edit by its author. 🟢 `Gap 498-M`'s URL gate is REPAIRED, not just confirmed: `curl -sI` scores 403 on existent and non-existent GitHub addresses alike (zero discriminating power), while `raw.githubusercontent.com` returns 200/404 correctly. 🟢 `Gap 498-D` and `Gap 498-G` CLOSED. 🟢 And `Gap 484-F` is narrowed for the first time in fifteen passes: **a non-GitHub primary source resolved.****
+
+Full reads: [`operative-sweep.2026-10-28-p499.tsv`](../evidence/operative-sweep.2026-10-28-p499.tsv),
+[`canonical/MANIFEST.tsv`](../evidence/canonical/MANIFEST.tsv).
+
+### 🟢 `Gap 488-T` — the sector-wide operative-body edit rate
+
+`Gap 488-T` has stood since `p488`: *"the sector-wide operative-body edit rate is still unmeasured;
+`p498` added a third instance instead of a rate."* 🟢 **The rate now exists.** All **76** rows of
+[`grant-paths.2026-10-28-p498.tsv`](../evidence/grant-paths.2026-10-28-p498.tsv) were re-fetched at
+their **pinned `head_sha`** and graded against the retained canonical set:
+
+| | n | share |
+|---|---|---|
+| rows in the census | **76** | |
+| 🔵 no root grant to grade | 12 | 15.8% |
+| **gradeable** | **64** | |
+| 🟢 operative body **IDENTICAL** to canonical | **46** | **71.9%** |
+| 🟡 operative body **DEVIANT** | **18** | **28.1%** ← the raw rate |
+
+🔴 **28.1% is not the answer, and publishing it as one would be the same mistake `p455` retracted.**
+All 18 diffs were read. They fall into four classes and **none is a material alteration of a
+grant**:
+
+| class | n | what it actually is | rows |
+|---|---|---|---|
+| 🔵 **nearest-neighbour mislabel** — the payload is a *different licence*, so the instrument's closest-match label is meaningless | **8** | `anki` (AGPL-3.0-or-later pointer), `bigbluebutton` (LGPL-3.0), `openeducat_erp` (LGPL-3.0), `frappe/education` (19-byte pointer), `education-agent-skills` (CC-BY-SA-4.0), `autogen` (CC-BY-4.0 root, MIT at `LICENSE-CODE`), `foradian/fedena` + `projectfedena/fedena` (a `NOTICE`, not a grant) | 🟢 **these shelves already record the correct licence for all eight** |
+| 🔵 **appended provenance prose**, grant body untouched | **2** | `OpenOLAT` (+104 w), `apache/openmeetings` (+5 935 w) | adds **no terms** |
+| 🔵 **benign vintage / URL / heading variant** | **5** | `rosariosis`, `tao-core`, `i-educar`, `seb-win-refactoring` (`https`→`http`), `labmlai` (`The MIT License`) | |
+| 🟡 **third-party Apache template variant** | **3** | `HKUDS/DeepTutor`, `3yangyang9/DeepTutor-AILearning`, `Orenda-Project/rumi-platform` | real word differences, immaterial — see below |
+| 🔴 **materially altered grant** | **0** | — | |
+
+🟢 **So: of 64 root grants on these shelves, the materially-altered count is ZERO.** The one known
+material alteration base-wide, `beltromatti/get-it`'s §6 deletion, is **outside this census** —
+`get-it` is a `p498` find that was never added to the grant-path file.
+
+### 🔴 `p498`'s instance count is over by one, and the correction has a method behind it
+
+`p498` wrote that `get-it` was *"a third instance, after `DeepTutor` and `freelingo`."* 🔴 **`DeepTutor`
+does not belong on that list.** Its Apache deviation, read word-by-word this pass, is:
+
+| | canonical (apache.org & SPDX agree) | `DeepTutor`, `DeepTutor-AILearning`, `rumi-platform` |
+|---|---|---|
+| §1, *Contribution* | "intentionally submitted to **Licensor**" | "intentionally submitted to **the** Licensor" |
+| §1, *Contributor* | "received by **Licensor** and subsequently incorporated" | "received by **the** Licensor and subsequently incorporated" |
+| §4(d), NOTICE handling | "excluding **those** notices that do not pertain" | "excluding **any** notices that do not pertain" |
+
+🟢 **Three identical deviations, on three repositories, two of which are unrelated** —
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (🇭🇰 Hong Kong),
+[`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) (a derivative
+of it) and [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) (🇵🇰
+Pakistan, no relation). 🔵 **An author's edit does not replicate across unrelated repositories.** A
+licence-template generator's output does. This is a **circulating Apache-2.0 variant**, and
+`DeepTutor` is one of its downstream users, not an editor of its own grant.
+
+🔵 **The method rule this gives the base:** a deviation found on ≥2 **unrelated** repositories is
+evidence of a *shared upstream text*, not of alteration. Only a deviation unique to one project is
+a candidate alteration. `get-it`'s §6 deletion is unique to `get-it` and survives this test;
+`DeepTutor`'s does not.
+
+### 🟢 `Gap 498-M` — the URL gate is repaired, not merely confirmed
+
+`Gap 498-M` recorded that `curl -sI` returns `403` for every GitHub address, 14/14. 🟢 **Re-run with
+a known-bad control, which is what the gap asked for:**
+
+| probe | result |
+|---|---|
+| `curl -sI https://github.com/moodle/moodle` (exists) | **403** |
+| `curl -sI https://github.com/learningequality/kolibri` (exists) | **403** |
+| `curl -sI https://github.com/gmilano/this-repo-does-not-exist-xyz123` (**does not exist**) | **403** |
+
+🔴 **Identical answer for existent and non-existent. The gate has zero discriminating power** — it
+cannot return a false negative *or* a true positive, so every "verified URL" it ever blessed was
+unverified. 🟢 **A gate that does discriminate was found in the same run:**
+
+| probe | result |
+|---|---|
+| `curl -s https://raw.githubusercontent.com/learningequality/kolibri/develop/LICENSE` | **200**, 1 083 B |
+| `curl -s https://raw.githubusercontent.com/gmilano/nope-xyz123/main/LICENSE` | **404** |
+
+🔵 **Standing instruction for later passes: never verify a repository with `curl -sI` on
+`github.com`.** Fetch a known path from `raw.githubusercontent.com`, or resolve the ref with
+`git ls-remote`. Both discriminate; the former also yields the bytes you were going to need anyway.
+
+### 🟢 `Gap 498-M`, second half — the header-as-data detector took THREE forms, and two were wrong
+
+`Gap 498-M`'s other limb: *"the naive header-row-as-data detector has a **100% false-positive rate**
+on these shelves (40/40)."* 🟢 A working detector now exists —
+[`header_as_data.py`](../compose/code/p499-canonical-set/header_as_data.py) — and **the route to it
+is the finding**:
+
+| form | rule | result |
+|---|---|---|
+| 1 — `p498` | first cell is `Name`/`Repo`/`Licencia` | 🔴 **40/40 false positive.** That is what a legitimate table **header** looks like. |
+| 2 — `p499`, first try | …**and** not followed by a `\|---\|` separator | 🔴 **48/48 false positive.** This base uses **transposed property/value tables** heavily, where a field name is a legitimate **row label**: `\| licence \| MIT \|`. |
+| 3 — `p499`, adopted | **every** cell in the row is a bare field name | 🟢 **passes three controls**, including the transposed-label case that killed form 2 |
+
+🔵 **Form 3's rule matches the actual defect**: the row this base has compiled into an entity named
+*"nombre"* more than once is `\| Nombre \| Repo \| Licencia \|` — **all** cells are field names. One
+field name beside a value is a label, not a leak.
+
+🟢 **Result across every live shelf: 0 leaked header rows.** The shelves are clean — but note that
+`p498` could not have said so, because its detector returned 40 hits and all 40 were wrong.
+
+🔵 **The generalisation, which is `Gap 498-M`'s real point:** two of three forms of this detector
+were wrong, and each looked locally reasonable. **Only a control whose answer is already known
+separates them**, and form 2 would have passed a known-good/known-bad pair that omitted the
+transposed case. **A control set is only as good as the failure modes it anticipates.**
+
+### 🟢 `Gap 484-F` narrowed — a non-GitHub primary source finally resolved
+
+`Gap 484-F` has stood for fifteen passes: *"no non-GitHub URL primary-source verified."* 🟢
+**`https://www.apache.org/licenses/LICENSE-2.0.txt` resolves: 200, 11 358 B** — the Apache Software
+Foundation's own payload, read from the steward rather than from a mirror, and now retained as
+`Apache-2.0.apache-org` in the canonical set. 🔴 **The gap is narrowed, not closed:** `www.gnu.org`
+returned `000` on all six probes (`gpl-3.0`, `gpl-2.0`, `agpl-3.0`, `lgpl-2.1`, `lgpl-3.0`) and
+`opensource.org` likewise, so **every GNU-family canonical here is single-sourced from SPDX**
+(`Gap 499-C`).
+
+### 🟢 `Gap 498-D` CLOSED — `formalms`'s two payloads are operatively the same text
+
+`Gap 498-D` asked which of `formalms`'s two GPL-2.0 payloads — 18 346 B and 15 146 B, a **3 200-byte
+spread** — is canonical and which is *"altered or truncated"*, on a row `p498` had just re-graded.
+
+| payload | bytes | blob | operative words | operative diff vs canonical GPL-2.0 |
+|---|---|---|---|---|
+| `html/license.txt` | 18 346 | `e823963cd437` | **2 489** | −2 / +6 |
+| `html/lib/System/license/license_english.txt` | 15 146 | `b6e1c33e0499` | **2 489** | −2 / +6 |
+
+🟢 **Neither is truncated and neither is altered.** The two carry the **same 2 489 operative words
+with an identical diff signature**; the 3 200-byte spread is **entirely outside the grant** — the
+English copy omits the `How to Apply These Terms to Your New Programs` appendix, which the root copy
+carries. 🟢 And the −2/+6 is not an edit either: it is the **1991-vintage FSF transcription**:
+
+| | SPDX canonical | `formalms` (both copies) |
+|---|---|---|
+| preamble cross-reference | "GNU **Lesser** General Public License" | "GNU **Library** General Public License" — the pre-1999 name |
+| FSF address | "51 Franklin **Street**, Fifth Floor" | "51 Franklin **St**, Fifth Floor" |
+
+🔵 Both are authentic FSF text of different vintages. 🟢 **`formalms` stands as GPL-2.0**, and
+`p498`'s re-grading of it is confirmed on the operative instrument the gap asked for.
+
+### 🟢 `Gap 498-G` CLOSED — Kolibri has a release cadence, and `P498-1` can pin one
+
+`Gap 498-G`: *"no Kolibri release cadence was read — no tag list, and the version is re-exported
+from `kolibri._version`, unresolved. `P498-1` therefore pins a commit, not a release."*
+
+🟢 Read with `git ls-remote --tags` (stdin-safe, per `Gap 498-L`): **542 tags**.
+
+| | |
+|---|---|
+| latest stable | 🟢 **`v0.19.5`** |
+| in flight | `v0.20.0-alpha0`, `v0.20.0-alpha1` |
+| recent line | `v0.19.3` → `v0.19.4` → `v0.19.5`, each with `rc`/`beta`/`alpha` pre-releases |
+
+🟢 **`P498-1` is updated to pin `v0.19.5`** rather than a bare commit — see
+[`compose/patterns.md`](../compose/patterns.md). 🔵 The project ships release candidates before every
+minor, so a client deployment can track `v0.19.x` and test `v0.20.0` pre-releases out of band.
+
 
 ## 🆕 `p498` — `2026-10-28` — **🟢 `formalms` IS LICENSED. This base has refused it across passes for having "no readable grant", and `Gap 488-L` asked this pass to mark it unusable on the shelf. It ships **GPL-2.0 at ten paths, in nine languages** — none of them at the repository root. 🔴 The refusal was a root-level-probe artefact, which is exactly what `Gap 489-J` warned about, now CONFIRMED BY INSTANCE on the very row a gap wanted deleted. 🟢 Eleven other zero-grant refusals re-probed against the whole tree and all eleven HOLD. 🔴 And the branch-name trap, measured shelf-wide for the first time: **15 of 76 rows (19.7%), eleven distinct ref names** — `p497` reported five.**
 
