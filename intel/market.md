@@ -6,6 +6,57 @@ updated: 2026-10-28
 
 # Education AI — market map and opportunities by region
 
+> 🔴 **`p509` (`2026-10-28`) — ALL FOUR REGIONAL LEGS RAN AND ALL FOUR RETURNED ZERO NEW INSTRUMENTS. THAT IS THIS PASS'S MARKET FINDING, AND IT IS A PROPERTY OF THE INSTRUMENT SUPPLY RATHER THAN OF THE QUERIES.**
+> 🟢 **Every leg the schedule prescribes was run — four global, one per region — and each regional
+> leg returned figures this file already carries, by name and value:**
+> **North America** — H.R. 8747 *K-12 AI Literacy and Readiness Act* (advanced **21 Jul 2026**),
+> **134 bills / 31 states**, CA **AB 1159**, ID **SB 1227**, OK **SB 1734**, Maryland + Idaho +
+> Oklahoma + Virginia mandating district-level policy, **36%** regional share, Gallup **60%** teacher
+> use. **EMEA** — EU AI Act high-risk at **2 Dec 2027 / 2 Aug 2028** post-Digital-Omnibus, European
+> market **USD 2.64 bn** (2026), *OECD Digital Education Outlook 2026*, UK light-touch.
+> **APAC** — Vietnam **Decision 33/2026/QD-TTg**, Korea **AI Basic Act in force 22 Jan 2026** with
+> MSIT's grace year, Japan's AI Promotion Act, Singapore **AI Verify**, China's labelling regime,
+> Korea's **AI textbooks stripped of official status**. **LATAM** — UNESCO **IESALC 87% / 74% / 26%**,
+> 🇺🇾 **Ceibal 75%** (2026), TALIS 🇧🇷 **56%** / 🇨🇱 **55%**, **ILIA 2025** (third edition).
+> 🔵 **An eight-leg sweep that moves nothing is worth recording precisely because the alternative
+> reading — "the regions were not searched" — is indistinguishable from silence.** Leg-by-leg:
+> [`search-legs.2026-10-28-p509.tsv`](../evidence/search-legs.2026-10-28-p509.tsv).
+> 🔴 **`Gap 507-A` fails a THIRD consecutive time, on the same shape, and the reading should now be
+> upgraded from "not found" to "does not exist yet".** `p507` asked for a **2026** APAC teacher-
+> adoption rate; `p508` ran dedicated ministry legs (🇯🇵 MEXT, 🇸🇬 MOE) and got **policy and pilots,
+> no usage rate**; `p509`'s regional leg returns **the same policy inventory and the same nil**.
+> 🟢 **Three independent query shapes have now failed identically**, which is the signature of a
+> missing instrument rather than a missing query. 🔵 **TALIS 2024 remains the only probability sample
+> for the region, and its fieldwork year is 2024 — so the honest client sentence is *"the most recent
+> probability-sampled APAC teacher rate is 2024 fieldwork"*, not a 2026 figure.**
+> 🟡 **Carried forward unchanged as `Gap 507-A`, with the escalation named: it closes when an
+> instrument publishes, not when a pass queries better.** The two candidate instruments `p506`
+> named — **Clarivate's *AI Policy and Education in the Asia-Pacific*** and the **THE *AI & Digital
+> Maturity Index* (433 universities, 19 APAC systems, 2026)** — remain unread, and both are blocked
+> by `Gap 506-E`, not by query design.
+> 🔴 **`Gap 483-K` / `506-E` hold without change: `WebSearch` is still the only open-web channel.**
+> Every figure above is **`SEARCH-ATTESTED, PRIMARY UNREAD`**. 🔵 Per `Gap 506-E`'s standing
+> instruction these hosts are **no longer re-probed each pass** — they are a host-policy denial, and
+> the promotion of these figures to primary is a **human** deliverable.
+> 🟢 **`Gap 508-E` CLOSES, and it corrects its own premise.** It held that *"this base cannot
+> discover LATAM-language work on its only catalogue channel… `topic:` values are English."*
+> **The second half is false.** `topic:educacion stars:>5` returns **15 repositories** where
+> `p508`'s Spanish free-text leg returned **`total_count: 0`**. 🔵 **The channel was never
+> English-only; the query shape was wrong, exactly as `Gap 508-E` suspected for the first half.**
+> Reads: [`latam-topic-discovery.2026-10-28-p509.tsv`](../evidence/latam-topic-discovery.2026-10-28-p509.tsv).
+> 🔴 **And what it discovers is itself the regional finding: course materials, not products.** Of the
+> 15, four are LATAM-placeable — 🇪🇨 `crodriguezn/python-2025` (UNEMI), 🇲🇽 `agn3si/ResultadosUNAM---data`
+> (UNAM admissions 2021–2026, open data), 🇨🇱 `fauzcategui/moodle-sence` (a Moodle attendance plugin
+> for **SENCE**, Chile's national training service), 🇨🇱 `brayandiazc/apoyo-python-td-desafio`
+> (Desafío Latam, **archived**) — and **none is an AI product**. 🔵 **Placed next to this file's
+> LATAM adoption figures, that is a coherent picture rather than a disappointment: the region's
+> measured AI *use* is high (IESALC 87%, Ceibal 75%) while its open-source *production* is pedagogy
+> content and national-system integration.** 🟢 **For an engagement that is a buy-vs-build signal:
+> there is no LATAM open-source agent stack to adopt, and there is a real integration surface
+> (`moodle-sence` is GPL-3.0 — integrate, do not vendor).**
+> 🔴 **Gate posture: `make hooks` DENIED (`Code from External`).** Nothing here is gate-attested.
+
+
 > 🔴 **`p508` (`2026-10-28`) — `Gap 507-A` FAILS, AND FAILS INFORMATIVELY: THERE IS NO 2026 APAC TEACHER-ADOPTION RATE BECAUSE THE INSTRUMENT DOES NOT EXIST YET — WHAT EXISTS IS A MANDATE AND A PILOT DENOMINATOR.**
 > 🟢 **Two named, dated 2026 APAC instruments, both new to this file.** 🇸🇬 **MOE launched a Teacher
 > AI Literacy Professional Learning Roadmap in August 2026**: module 1 (AI fundamentals, ethics,
@@ -78,6 +129,68 @@ updated: 2026-10-28
 > Reads: [`talis-regional-placement.2026-10-28-p507.tsv`](../evidence/talis-regional-placement.2026-10-28-p507.tsv),
 > [`channel-probe.2026-10-28-p507.tsv`](../evidence/channel-probe.2026-10-28-p507.tsv),
 > [`probe-errors.2026-10-28-p507.tsv`](../evidence/probe-errors.2026-10-28-p507.tsv).
+
+## Opportunities by region
+
+🔵 **`p509` framing: this pass bought no new market figures, so these opportunities are re-cut from
+what the licence census proved rather than from new intelligence.** The census is the new input —
+**81 permissive, byte-attested components** and a named set of things that cannot be shipped — and
+that changes what can be promised per region, which is the part an engagement actually needs.
+
+### North America
+
+🟢 **The compliance hook is the sell, and it is dated.** Four states — **Maryland, Idaho, Oklahoma,
+Virginia** — have 2026 laws requiring **both** state guidance **and** mandatory district-level AI
+policy adoption, against **134 bills across 31 states** and most districts still without a formal
+policy. 🔵 **OK SB 1734 is the technically load-bearing one:** it bars AI as the *primary basis* for
+grading, discipline or placement — which is a **human-in-the-loop architecture requirement**, not a
+policy PDF. 🟢 **Buildable now from permissive parts:** `k12-teacher-skills` (Apache-2.0, 11,357 B)
+for the teacher-facing surface plus `TorchLeet`'s auto-grader pattern (MIT) behind a mandatory review
+step. 🔴 **Do not propose `canyongbs/advisingapp`** as a product base into this market — **Elastic-2.0
+forbids providing it as a service**, and it is the most obvious-looking fit on the shelf.
+
+### EMEA
+
+🟢 **The AI Act dates are the planning calendar: high-risk obligations at 2 Dec 2027 (stand-alone)
+and 2 Aug 2028 (embedded)**, with admissions, evaluation and exam scoring named high-risk. 🔵 **An
+18-month conformity runway is a service line, not a constraint** — documentation, conformity
+assessment and human-oversight design are exactly what this region will buy, and the EU regime
+**bans** emotion recognition in education where Vietnam merely rates it high-risk (`T6`).
+🟡 **`Gap 506-C` still stands: no EMEA vendor-share figure after fifteen passes**, so size an EMEA
+engagement from adoption instruments (Eurostat **39.3%**, DfE **44%**, Eurydice **38 systems**) and
+never from a market share this base does not have.
+
+### APAC
+
+🟢 **Vietnam remains the only jurisdiction naming education high-risk by instrument** — Decision
+**33/2026/QD-TTg**, in force **15 Aug 2026**, three education system types of 46 — and its
+**corpus-governance** trigger means *a RAG tutor over an unvetted corpus is high-risk on retrieval
+design alone*, with no grading feature in the product. 🔵 **That is a design-review offer.**
+🔴 **And the honest caveat, third pass running: there is no 2026 APAC usage rate** (`Gap 507-A`), so
+an APAC engagement is scoped from mandates and pilot denominators — 🇸🇬 MOE's teacher AI-literacy
+roadmap (module 1 due **end-2026**), 🇯🇵 MEXT's **149 municipalities / 478 schools (~1.4%)** — and
+from TALIS **2024** fieldwork, named as 2024.
+
+### LATAM
+
+🟢 **High measured use, low formal governance, and now a measured production gap.** IESALC: **87%**
+of 200 institutions across 19 countries use AI somewhere, **74%** in teaching and learning, **26%**
+have a formal AI strategy; 🇺🇾 Ceibal **75%** of public-school teachers (2026). 🆕 **`p509` adds the
+supply side: the region's open-source education output on this channel is course materials and
+national-system integration, not agent infrastructure** (`Gap 508-E`). 🔵 **Both facts point the same
+way — the gap is governance and integration, not model capability.** 🟢 **Concrete surface:**
+🇨🇱 `fauzcategui/moodle-sence` integrates Moodle attendance with **SENCE**, Chile's national training
+service — **GPL-3.0, so integrate across a process boundary and never vendor it into a product.**
+🔵 The **26% strategy** figure is the single best opening line for a LATAM governance engagement.
+
+### Global
+
+🟢 **The pass-independent asset: 81 permissive components with a byte-attested grant**
+([`licence-byte-census.2026-10-28-p509.tsv`](../evidence/licence-byte-census.2026-10-28-p509.tsv)),
+and **18 addresses proven to carry no grant at all** — so a build manifest can now be assembled
+*and defended* without re-reading a single licence. 🔴 **The two traps are both in this file's own
+history: `NOTICE` is not a grant, and a detector's `NOASSERTION` is not a refusal.** 🔵 Quote the
+file the grant came from, with its byte count, in any client deliverable that names a licence.
 
 ### 🟢 `p507` — one instrument, all four regions, same measure
 

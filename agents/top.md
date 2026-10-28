@@ -6,6 +6,106 @@ updated: 2026-10-28
 
 # Education AI agents — build-on-able shelf
 
+> 🟢 **`p509` (`2026-10-28`) — THE LICENCE COLUMN ON THESE SHELVES IS NOW BYTE-ATTESTED END TO END: 137 ADDRESSES SWEPT, 119 PAYLOADS READ WITH BYTES AND sha256, AND THE SHELVES WERE RIGHT EVERYWHERE A GRANT EXISTS. 🔴 EVERY CORRECTION THIS PASS IS TO THIS BASE'S OWN INSTRUMENTS, NOT TO ITS CONTENT.**
+> 🟢 **`Gap 508-B` is DELIVERED, and wider than it asked.** It asked for *"bytes + sha256 for every
+> PERMISSIVE row on these shelves (~20 addresses)"* as insurance while the `raw` limb is up.
+> **Done for all 137 shelf addresses**: **119 carry a licence payload** (133 payload files in all),
+> **81 of them permissive** (MIT / Apache-2.0 / BSD-3-Clause), each with a byte count and a sha256.
+> Reads: [`licence-byte-census.2026-10-28-p509.tsv`](../evidence/licence-byte-census.2026-10-28-p509.tsv).
+> 🟢 **The headline is a negative, and it is the valuable kind: no shelf licence cell was refuted.**
+> The census independently reproduced this base's own prior readings — `educhain` **1,092 B
+> `e3321a1b62cd7c46`** (p508's figure to the digit), `gegok12` **1,150 B `b8694396d7dc6439`**
+> (p508's refutation of `p507` stands), `open-tutor-ai-CE` **BSD-3-Clause**, `chamilo` **GPL-3.0**.
+> 🔴 **Seven probe defects, all mine, all caught by a control before anything was published** — and
+> two of them would have written a false correction into a *correct* shelf row:
+> [`probe-defects.2026-10-28-p509.tsv`](../evidence/probe-defects.2026-10-28-p509.tsv).
+> **(1)** A first-match-wins filename probe read [`microsoft/autogen`](https://github.com/microsoft/autogen)
+> as **CC-BY-4.0**; it serves **`LICENSE` (CC-BY-4.0, 18,650 B)** *and* **`LICENSE-CODE` (MIT,
+> 1,141 B)** — the MIT shelf row is right, and **a licence probe must record every payload, not the
+> first.** **(2)** `labmlai/annotated_deep_learning_paper_implementations` (**67,603★**) looked like a
+> **new fourth licence state** — recognised `spdx_id: MIT` with no payload at 19 conventional paths.
+> It is not a state, it is a **filename-case defect**: the grant is at lowercase bare **`license`**,
+> **1,082 B, `sha256 22c7cae23a2b00cb`**. **(3)** **`NOTICE` is not a grant** — an Apache-2.0 §4(d)
+> attribution notice — and counting it inflated the non-OSI tally from 6 to 18.
+> **(4)** **A title-block anchor cannot see BSD-3-Clause**, which has no title line; `p455`'s anchor
+> needs the three numbered conditions as a fallback. **(5)** **`git ls-remote` is not
+> concurrency-safe here**: at `-P 10` it returned **NOREF for `HKUDS/DeepTutor`**, this base's
+> flagship. **(6)** **`main`/`master` is the wrong assumption for 13.2% of this shelf** — see below.
+> 🔴 **`T29` / `Gap 504-A` standing checks:** 13 queried / 13 returned across two batches,
+> `incomplete_results: false` on both; `archived: false` on all 13.
+> 🟢 **Shelf re-read:** `DeepTutor` **47,677★** (`p508`: 47,621, **+56**), `Apache-2.0`,
+> `archived: false`, payload **11,408 B `cd2f54e1e5066644`** — *the flagship's licence read from
+> bytes for the first time*. `OpenMAIC` **41,712** (**+3**). `book-to-skill` **36,415** (**+4**).
+> `k12-teacher-skills` **600** (**+1**). `TorchLeet` **2,596** (**+1**). `educhain` **387** —
+> **unchanged on a FIFTH read**, so `p490`'s 31× correction holds.
+> 🔴 **And one carried claim is RETIRED: `DeepTutor`'s pin has MOVED.** `p505` recorded
+> `a31d82624c27` *"unchanged for a 7th consecutive pass"*; `refs/heads/main` now resolves to
+> **`1ea7df155447`**. The *"attention, not shipping"* reading no longer rests on a frozen `HEAD` and
+> must be re-derived before it is quoted again.
+> 🔴 **No new agent row, a second consecutive pass — and now confirmed on a DIFFERENT discovery
+> shape.** `p508` declared agent-axis saturation from nine free-text legs. This pass added `topic:`
+> legs (`Gap 508-E`'s remedy) and the four prescribed global legs plus all four regional legs: the
+> only addresses new to this base are **`rphilipzhang/AI-PhD-S26`**, **`crodriguezn/python-2025`**
+> and **`V0raOnline/arkinesis`** — **university course materials, not agents**, and not shelf-eligible.
+> **Saturation survives a test it had not yet had.**
+> Reads: [`search-legs.2026-10-28-p509.tsv`](../evidence/search-legs.2026-10-28-p509.tsv),
+> [`api-shelf-read.2026-10-28-p509.tsv`](../evidence/api-shelf-read.2026-10-28-p509.tsv),
+> [`channel-probe.2026-10-28-p509.tsv`](../evidence/channel-probe.2026-10-28-p509.tsv).
+> 🔴 **Gate posture: `make hooks` DENIED (`Code from External`) — a fifteenth denial in sixteen
+> passes.** Nothing in this pass is gate-attested.
+
+### 🔴 `p509` — the default-branch finding, which invalidates a method this base has used throughout
+
+🔵 **Every licence this base has read from `main/LICENSE` or `master/LICENSE` carried an unstated
+assumption.** Resolved from `HEAD`'s symref, **18 of 136 shelf addresses (13.2%) default to neither
+`main` nor `master`** — and they are not marginal rows, they are the verticals:
+
+| address | default branch | address | default branch |
+|---|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop` | [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` |
+| [`frappe/lms`](https://github.com/frappe/lms) | `develop` | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `develop` |
+| [`frappe/education`](https://github.com/frappe/education) | `develop` | [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | `develop` |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `release_11` | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `19.0` |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `v4.0.x-develop` | [`overhangio/tutor`](https://github.com/overhangio/tutor) | `release` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `v31.0.00` | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | `dev` | [`tutors-sdk/tutors`](https://github.com/tutors-sdk/tutors) | `development` |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` | [`TaiRuiQu/oh-my-paper`](https://github.com/TaiRuiQu/oh-my-paper) | `v2` |
+| [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) | `PreProduction` | [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) | `TrenTorch-Dev` |
+
+🟢 **Operative rule, and it is cheap: resolve `HEAD`'s symref before reading any path.** Six of
+`p509`'s round-1 `NOPAYLOAD` verdicts were this defect alone. 🔴 **`francoisjacquet/rosariosis`
+defaults to `mobile`** — a branch name that reads like a side branch and is the project's `HEAD`;
+never infer a default branch from how its name sounds.
+
+### 🔴 `p509` — proving a licence ABSENT needs the tree, not a path list
+
+🔵 **`T33` gave three licence states. A path list can establish only two of them**: a payload that
+answers, and a payload that does not answer *at the paths you guessed*. The third — **no grant at
+all** — is a claim about **everything**, and only a tree enumeration can carry it.
+🟢 **New channel for this base, and it is not gated:** `git clone --depth 1 --filter=blob:none
+--no-checkout` plus `git ls-tree -r` enumerates a full tree without fetching blobs.
+Reads: [`no-grant-tree-probe.2026-10-28-p509.tsv`](../evidence/no-grant-tree-probe.2026-10-28-p509.tsv).
+
+| address | ★ | tree | verdict |
+|---|---|---|---|
+| [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | 67,603 | 2,172 files, grant at **`license`** | 🟢 **MIT, 1,082 B `22c7cae23a2b00cb`** — the apparent fourth state was my probe |
+| [`victor-lubn/Special-Education-Planning`](https://github.com/victor-lubn/Special-Education-Planning) | – | 2,387 files; 4 `licence` hits are **`licence.js`, `check-licence-dialog.component.ts`** | 🔴 **no grant.** The hits are **application code that implements a licence-check dialog** — `p455`'s *"adjacency is not attribution"* in its purest form |
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | – | 2,313 files; every licence file under `public/bower_components/` | 🔴 **no own grant** — bootstrap, datatables, flot. **Vendored dependency licences are not the repo's grant** |
+| [`kixlab/TutorCaseBench`](https://github.com/kixlab/TutorCaseBench) | **0** | 11,059 files, **no licence path** | 🔴 no grant, and no `license` object on the API either |
+| 11 further addresses | – | **no licence path anywhere in tree** | 🔴 `GodsEye`, `project-samarth`, `comet-trail-archives`, `guru-latihan-dinamis`, `easy-iep`, `MCQ_Grading_Bot`, `mathtutorbench`, `AI-Roadmaps`, `Free-Math`, `essay-grader`, `essay-scoring-project`, `ai-spanish-tutor`, `gemini-handwriting-grader` |
+
+🔴 **Two addresses carry a grant BY REFERENCE, and the reference is dead.**
+[`codeforlife-education/codeforlife-portal`](https://github.com/codeforlife-education/codeforlife-portal)
+and [`rapid-router`](https://github.com/codeforlife-education/rapid-router) both serve a **121-byte
+`LICENSE.md`** reading *"Find our license here"* and pointing at
+`codeforlife-workspace/main/LICENSE` — which answers **404**. 🟢 **A fourth state that IS real,
+unlike the one that dissolved: `POINTER_DANGLING`.** Not an abstention, not an absence — an
+**assertion with no referent**. Treat as no grant until the target resolves.
+🔴 **And one more shape: [`frappe/education`](https://github.com/frappe/education)'s `license.txt`
+is 19 bytes — `"License: GNU GPL V3"`.** A *declaration*, with no licence body. The family is
+stated; the grant text is absent. Record it as **declared-not-served**.
+
+
 > 🔴 **`p508` (`2026-10-28`) — NO NEW AGENT ROW, AND THE REASON IS SATURATION RATHER THAN A THIN SEARCH: ~80 ADDRESSES ACROSS NINE LEGS, **ZERO** THIS BASE DOES NOT ALREADY CARRY.**
 > 🟢 **All four prescribed legs plus five `topic:` legs were run, and every permissive candidate they
 > returned is already on these shelves or in this base's trending history** — `ankimcp/anki-mcp-server`

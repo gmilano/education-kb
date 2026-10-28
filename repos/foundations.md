@@ -6,6 +6,53 @@ updated: 2026-10-28
 
 # Foundational education repos
 
+> 🟢 **`p509` (`2026-10-28`) — A FOUNDATION ROW THAT LOOKED UNGRANTED IS MIT, AND THE DEFECT WAS A CAPITAL LETTER. 🟢 EVERY FOUNDATION'S LICENCE IS NOW BYTE-ATTESTED.**
+> 🟢 **[`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
+> — 67,603★, MIT, `archived: false`, 2,172 files — read from bytes for the first time on this base:
+> `master/license`, 1,082 B, `sha256 22c7cae23a2b00cb`, opening `The MIT License (MIT)`.**
+> 🔴 **It reached that reading through a false alarm worth recording.** A 19-path probe returned
+> **no payload** while the API returned `spdx_id: MIT` — which looked like a **new licence state**
+> that `T33` does not cover: *detector asserts a recognised grant, no payload exists*. 🟢 **The state
+> does not exist. The grant is at lowercase bare `license`** — no extension, no capital — and the
+> probe's path list carried `license.txt` but not `license`. 🔵 **A licence reader must be
+> case-insensitive and must accept an extensionless name**, and this base's own foundations shelf is
+> where that would first have gone wrong.
+> 🟢 **Of 137 shelf addresses swept, 119 carry a grant and 81 are permissive**, each with bytes and
+> sha256: [`licence-byte-census.2026-10-28-p509.tsv`](../evidence/licence-byte-census.2026-10-28-p509.tsv).
+> 🔴 **Four foundation-adjacent addresses carry NO grant at all**, proven by tree enumeration rather
+> than inferred from a 404: [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench)
+> (**46★**, 40 files, EMNLP 2025 Oral), [`kixlab/TutorCaseBench`](https://github.com/kixlab/TutorCaseBench)
+> (**0★**, 11,059 files), [`h9-tect/AI-Roadmaps`](https://github.com/h9-tect/AI-Roadmaps) (**373★**)
+> and [`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) (**74★**, 558 files).
+> 🔵 **Two of those are academic benchmarks this base cites for evaluation, and an unlicensed
+> benchmark cannot ship inside a client deliverable** — it can only be *run against* one. That
+> distinction belongs on the row, not in a footnote.
+> 🔴 **`Gap 504-A` reconciliation: 13 queried / 13 returned on two batches**, `incomplete_results:
+> false` both times; `archived: false` on all 13. 🟢 `openedx/edx-platform` was **not** in either
+> batch this pass, so the four-pass silent-omission streak is neither extended nor broken.
+> 🔴 **Gate posture: `make hooks` DENIED (`Code from External`).** Nothing here is gate-attested.
+
+### 🟢 `p509` — the permissive foundation tier, byte-attested
+
+🔵 **Why this table and not a licence word:** a client engagement that ships one of these inherits a
+grant, and *"MIT"* in a cell is a claim about a file nobody on the engagement has read. These are the
+bytes. Full set of 119 in the census TSV; the foundations tier is reproduced here.
+
+| foundation | grant | bytes | sha256 (16) | branch read |
+|---|---|---|---|---|
+| [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | 🟢 **MIT** | 1,082 | `22c7cae23a2b00cb` | `master/license` |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 **Apache-2.0** | 11,357 | `c71d239df91726fc` | `main/LICENSE` |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🟢 **MIT** (code) | 1,141 | `c2cfccb812fe4821` | `main/LICENSE-CODE` |
+| [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 **MIT** | 1,067 | `a806e42547620dff` | `main/LICENSE.md` |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | 1,105 | `5baaaf977a28e9fd` | `main/LICENSE` |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** | 1,064 | `4cdfd8894a136670` | `main/LICENSE` |
+
+🔴 **`microsoft/autogen` is the row to read twice.** Its root `LICENSE` is **CC-BY-4.0 (18,650 B)**
+and its **code** grant is `LICENSE-CODE` **MIT (1,141 B)**. 🟢 The shelf's MIT reading is **correct**,
+and a probe that stopped at the first filename would have "corrected" it to a content licence.
+**Where a repo splits code and content, name the file the grant came from.**
+
+
 > 🔴 **`p508` (`2026-10-28`) — NO NEW FOUNDATION, AND `Gap 504-A` IS FINALLY CHARACTERISED RATHER THAN RE-REPORTED: THE CONTROL THAT `p504` ASSERTED HAS NOW BEEN RUN.**
 > 🟢 **`p504` wrote that on this channel *"a missing row and a nonexistent repo are the same
 > observation."* This pass proves it.** `repo:openedx/edx-platform` queried alone returns

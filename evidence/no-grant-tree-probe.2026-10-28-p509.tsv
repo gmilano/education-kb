@@ -1,0 +1,21 @@
+slug	licence_paths_in_tree	tree_files	verdict
+AgnellusX1/GodsEye	NONE	63 files	NO GRANT ANYWHERE IN TREE
+SudhanvaJ-bit/project-samarth	NONE	134 files	NO GRANT ANYWHERE IN TREE
+abdullaitcenter-hue/comet-trail-archives	NONE	6 files	NO GRANT ANYWHERE IN TREE
+anandpatikat/guru-latihan-dinamis	NONE	6 files	NO GRANT ANYWHERE IN TREE
+avivkatz1/easy-iep	NONE	5 files	NO GRANT ANYWHERE IN TREE
+choudaryhussainali/MCQ_Grading_Bot	NONE	3 files	NO GRANT ANYWHERE IN TREE
+eth-lre/mathtutorbench	NONE	40 files	NO GRANT ANYWHERE IN TREE
+formalms/formalms	html/addons/jquery/malihu-custom-scrollbar-plugin/LICENSE.txt,html/appCore/addons/swfheader/LICENSE.txt,html/lib/System/license/index.html,html/lib/System/license/license_bosnian.txt,html/lib/System/license/license_croatian.txt,html/lib/System/license/license_english.txt,html/lib/System/license/license_french.txt,html/lib/System/license/license_german.txt,	5321 files	licence paths present - inspect (vendored or app code?)
+h9-tect/AI-Roadmaps	NONE	9 files	NO GRANT ANYWHERE IN TREE
+ictinnovations/ICTSchool	public/bower_components/bootstrap-tour/LICENSE,public/bower_components/bootstrap/LICENSE,public/bower_components/datatables/examples/examples_support/syntax/license/Syntax Highlighter,public/bower_components/datatables/license-bsd.txt,public/bower_components/datatables/license-gpl2.txt,public/bower_components/flot/LICENSE.txt,public/bower_components/fullcalendar/license.txt,public/bower_components/moment/LICENSE,	2313 files	licence paths present - inspect (vendored or app code?)
+jaltekruse/Free-Math	NONE	558 files	NO GRANT ANYWHERE IN TREE
+kennedyraju55/essay-grader	NONE	28 files	NO GRANT ANYWHERE IN TREE
+kixlab/TutorCaseBench	NONE	11059 files	NO GRANT ANYWHERE IN TREE
+labmlai/annotated_deep_learning_paper_implementations	license,	2172 files	RESOLVED: MIT at lowercase bare `license`
+marckurniawan/essay-scoring-project	NONE	87 files	NO GRANT ANYWHERE IN TREE
+mcavaliere/ai-spanish-tutor	NONE	31 files	NO GRANT ANYWHERE IN TREE
+victor-lubn/Special-Education-Planning	SpecialEducationPlanning/SpecialEducationPlanning.EducationMiddleware/Fusion.Middleware/library/electron/function/fn/licence.js,SpecialEducationPlanning/SpecialEducationPlanning.Web/src/app/middleware/components/licence/check-licence-dialog.component.html,SpecialEducationPlanning/SpecialEducationPlanning.Web/src/app/middleware/components/licence/check-licence-dialog.component.ts,SpecialEducationPlanning/SpecialEducationPlanning.Web/src/app/middleware/models/licence-dialog-data.model.ts,	2387 files	licence paths present - inspect (vendored or app code?)
+wongcyrus/gemini-handwriting-grader	NONE	70 files	NO GRANT ANYWHERE IN TREE
+labmlai/annotated_deep_learning_paper_implementations	license,	2172 files	RESOLVED: MIT at lowercase bare `license`
+satvik314/educhain	LICENSE,	139 files	CONTROL: grant at LICENSE as expected

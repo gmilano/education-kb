@@ -1,0 +1,9 @@
+measure	value	reading
+tree files at HEAD (main)	7623	a full application, not a shell
+app/Models/*.php	107	the SIS domain is present in the MIT repository
+app/Http/Controllers/*.php	247	
+database/migrations/*	108	schema ships with the repo
+custompackages/ files	73	NOT withheld paid modules - it is a vendored third-party package (brozot/laravel-fcm, Firebase Cloud Messaging)
+models matching fee|invoice|exam|result|transport|hostel	0	the classic commercial SIS revenue modules are ABSENT from the MIT repo
+models matching payroll	4	Payroll, PayrollItem, PayrollTemplate, PayrollTransaction - staff HR is present
+domain entities confirmed present	Admission, Attendance, AcademicYear, Assignment, AssignmentApproval, Discipline, Book/BookLending/BookCategory, ClassRoomPage, Conversation, Bulletin, Feedback, Document, Group	admissions, attendance, academics, discipline, library circulation, messaging

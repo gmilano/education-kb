@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p509` — `2026-10-28` — **🆕 `T34`: an ABSENCE is a claim about everything, and only an enumeration can carry it — a path list can never prove a licence missing. 🆕 `T35`: a channel is not a host, and this base just found an endpoint-level gate inside a channel it treated as open. 🔴 `T33` gains a real fourth state and loses an invented one.**
+
+Reads: [`licence-byte-census.2026-10-28-p509.tsv`](../evidence/licence-byte-census.2026-10-28-p509.tsv),
+[`no-grant-tree-probe.2026-10-28-p509.tsv`](../evidence/no-grant-tree-probe.2026-10-28-p509.tsv),
+[`probe-defects.2026-10-28-p509.tsv`](../evidence/probe-defects.2026-10-28-p509.tsv),
+[`default-branch-census.2026-10-28-p509.tsv`](../evidence/default-branch-census.2026-10-28-p509.tsv),
+[`channel-probe.2026-10-28-p509.tsv`](../evidence/channel-probe.2026-10-28-p509.tsv).
+
+🔴 **Gate posture: `make hooks` not run (`Code from External`) — a fifteenth denial in sixteen
+passes.** Nothing below is gate-attested.
+
+### 🆕 `T34` — an absence must be enumerated, never inferred from the paths you thought to try
+
+🔵 **`T33` taught that a detector's abstention is not a denial. `T34` is the same error one level
+further out, and it is this base's most expensive remaining instrument gap: a 404 is a fact about
+the URL you requested, and "no grant" is a claim about every path in the repository.**
+
+🟢 **The pass that established it nearly published the opposite.** A 19-path probe reported
+[`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
+(**67,603★**) as carrying no licence payload while the API reported `spdx_id: MIT`. 🔵 **That
+disagreement was read, briefly, as a NEW licence state** — *detector asserts a grant, no payload
+exists* — which would have been a genuine and interesting finding. 🔴 **It was a capital letter.**
+The grant is at lowercase, extensionless **`license`**: **1,082 B, `sha256 22c7cae23a2b00cb`**,
+opening `The MIT License (MIT)`. **A probe's path list is a hypothesis, and its misses are evidence
+about the hypothesis before they are evidence about the repository.**
+
+🟢 **The instrument that settles it, and it is cheap:**
+`git clone --depth 1 --filter=blob:none --no-checkout` + `git ls-tree -r` enumerates a complete tree
+with no blob transfer. **18 of 137 shelf addresses carry no licence path anywhere** — now a proven
+nil, where before it was an inference from a handful of 404s.
+
+🔴 **And enumeration immediately paid for itself twice, in opposite directions:**
+🟢 [`formalms/formalms`](https://github.com/formalms/formalms) is **GPL-2.0** — grant served from
+`html/lib/System/license/license_english.txt` (**15,146 B**, in four languages, because the
+*installer* displays it) while the API carries **no `license` object** at all. **A row this base
+would have called ungranted has a real grant in an unguessable place.**
+🔴 [`victor-lubn/Special-Education-Planning`](https://github.com/victor-lubn/Special-Education-Planning)'s
+four `licence` matches are **`licence.js`, `check-licence-dialog.component.ts`,
+`licence-dialog-data.model.ts`** — **application code that implements a licence-check dialog.**
+🔵 **`p455` named this class as *"adjacency is not attribution"* and retracted a 20.6% defect rate
+over it. A filename-keyed probe cannot see a token's ROLE — `Gap 506-B`'s lesson, now demonstrated
+on licences rather than star counts.**
+
+🟡 **The corollary that costs nothing and prevents a whole class: a vendored dependency's licence is
+not the repository's grant.** [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool)
+(2,313 files) carries bootstrap, datatables and flot grants under `public/bower_components/` and
+**none of its own**. Any sweep that greps for `LICENSE` recursively will shelve it as licensed.
+
+### 🆕 `T35` — a channel is not a host, and availability can be gated per endpoint inside one
+
+🔵 **`Gap 505-B` established that denial can be PER-ENDPOINT rather than per-host, on
+`api.github.com`. `T35` generalises it to a channel this base has treated as uniformly open.**
+
+🔴 **The MCP GitHub channel is gated inside itself.** `search_repositories` answers for **any**
+repository — stars, `archived`, `license.spdx_id`, all read this pass. **`get_file_contents` returns
+`ACCESS DENIED`, scoped to this session's one configured repository.** 🔵 **Consequence, and it is
+why this trend is worth a number rather than a note: every future pass that plans *"list the repo's
+files over the API"* as the remedy for a licence question will fail, and `T34`'s enumeration must go
+over the git protocol instead.**
+
+🟡 **Second instance in the same pass, and it concerns reliability rather than permission:
+`git ls-remote` is not concurrency-safe here.** At `-P 10` it returned **NOREF for
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)** — this base's flagship, **47,677★** —
+and single-threaded the same address resolves `refs/heads/main` normally. 🔴 **A parallelism setting
+is now part of a probe's result, not part of its performance.** Re-probe any nil serially before
+recording it.
+
+### 🔴 `T33` — one state added, one retracted, and the difference is the lesson
+
+| state | evidence | is it a grant? |
+|---|---|---|
+| recognised `spdx_id` | payload classified | 🟢 yes |
+| `NOASSERTION` | payload exists, classifier abstained — `gegok12`'s **1,150 B MIT** | 🟡 **read the payload** |
+| no `license` object | — | 🔴 only evidence of no grant *with* `T34`'s enumeration |
+| 🆕 **`POINTER_DANGLING`** | `codeforlife-*`: **121 B** *"Find our license here"* → **404** | 🔴 **an assertion with no referent** |
+| 🆕 **`DECLARED_NOT_SERVED`** | `frappe/education`: `license.txt` = **19 B**, `"License: GNU GPL V3"` | 🟡 family stated, text absent |
+| 🆕 **`NOTICE_ONLY`** | both `fedena` mirrors (679 / 680 B) | 🔴 a NOTICE grants nothing |
+| 🔴 **retracted** | *"detector asserts MIT, no payload"* | 🟢 **not a state — a filename-case defect** |
+
+🔵 **Three of these were invisible while licences were read one guessed path at a time, and the
+retracted one is the point of the table: a new state is the most attractive possible conclusion and
+therefore the one a pass should test hardest before publishing it.**
+
+### 🟡 `T36` — a default branch is a measurement, not a convention
+
+🔴 **18 of 136 shelf addresses (13.2%) default to neither `main` nor `master`**, and they are
+disproportionately the **verticals** this base sells into: `frappe/*` on `develop`, `oppia` on
+`develop`, `kolibri` on `develop`, `tao-core` on `develop`, `ILIAS` on `release_11`,
+`bigbluebutton` on `v4.0.x-develop`, `openeducat_erp` on `19.0`, `overhangio/tutor` on `release`,
+`i-educar` on `2.12`, `GibbonEdu/core` on `v31.0.00`.
+🔵 **`francoisjacquet/rosariosis` defaults to `mobile`** — a name that reads like a side branch and
+is the project's `HEAD`. 🟢 **Resolve `HEAD`'s symref before reading any path; never infer a default
+branch from how its name sounds.** Six of this pass's own round-1 nils were this defect alone.
+
+
 ## 🆕 `p508` — `2026-10-28` — **🆕 `T33`: a detector's ABSTENTION is not a verdict — and quoting the abstention instead of the payload cost `p507` its headline vertical finding, on bytes this base had already read. 🟢 `Gap 504-A` characterised with the control `p504` only asserted. 🔴 The HTML limb of the GitHub channel is gone; the byte limb is all that is left.**
 
 Reads: [`licence-bytes.2026-10-28-p508.tsv`](../evidence/licence-bytes.2026-10-28-p508.tsv),

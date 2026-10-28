@@ -1,0 +1,9 @@
+slug	stars_p509	stars_prev	delta	spdx_id (MCP channel)	archived	licence_payload_bytes	sha256_16 (raw channel)
+HKUDS/DeepTutor	47677	47621 (p508)	+56	Apache-2.0	false	11408	cd2f54e1e5066644
+THU-MAIC/OpenMAIC	41712	41709 (p508)	+3	MIT	false	1065	ba25256374322713
+virgiliojr94/book-to-skill	36415	36411 (p508)	+4	MIT	false	1068	be9b04bccfb4bdab
+Exorust/TorchLeet	2596	2595 (p507)	+1	MIT	false	1106	aad28612a5b76f86
+anthropics/k12-teacher-skills	600	599 (p508)	+1	Apache-2.0	false	11357	58d1e17ffe5109a7
+satvik314/educhain	387	387 (p490, p505, p507, p508)	0 - FIFTH unchanged read	MIT	false	1092	e3321a1b62cd7c46
+Gego-K12/gegok12	54	54 (p508)	0	NOASSERTION (detector abstains; payload is a complete MIT grant)	false	1150	b8694396d7dc6439
+labmlai/annotated_deep_learning_paper_implementations	67603	- (first read on this base)	first read	MIT	false	1082	22c7cae23a2b00cb

@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p509` — `2026-10-28` — **🟢 137 addresses, 133 licence payloads, every one with bytes + sha256: `Gap 508-B`'s insurance is bought. 🔴 18 addresses carry NO grant, proven on the TREE rather than guessed from a 404. 🆕 A real fourth licence state — `POINTER_DANGLING` — and a false one that dissolved.**
+
+Reads: [`licence-byte-census.2026-10-28-p509.tsv`](../evidence/licence-byte-census.2026-10-28-p509.tsv),
+[`no-grant-tree-probe.2026-10-28-p509.tsv`](../evidence/no-grant-tree-probe.2026-10-28-p509.tsv),
+[`default-branch-census.2026-10-28-p509.tsv`](../evidence/default-branch-census.2026-10-28-p509.tsv),
+[`probe-defects.2026-10-28-p509.tsv`](../evidence/probe-defects.2026-10-28-p509.tsv),
+[`channel-probe.2026-10-28-p509.tsv`](../evidence/channel-probe.2026-10-28-p509.tsv).
+
+🔴 **Gate posture: `make hooks` not run (`Code from External`).** Nothing here is gate-attested.
+
+### 🟢 The licence states actually observed, which are more than three
+
+🔵 **`T33` named three: recognised `spdx_id`; `NOASSERTION` (payload exists, classifier declined);
+no `license` object (no payload). A 137-address sweep found three more shapes that matter, and
+retired one it had invented.**
+
+| state | instance | reading |
+|---|---|---|
+| 🆕 **`POINTER_DANGLING`** | [`codeforlife-education/codeforlife-portal`](https://github.com/codeforlife-education/codeforlife-portal), [`rapid-router`](https://github.com/codeforlife-education/rapid-router) — **121 B** `LICENSE.md`: *"Find our license [here]"* → `codeforlife-workspace/main/LICENSE` **404** | 🔴 **An assertion with no referent.** Not an abstention and not an absence. Treat as no grant until the target resolves |
+| 🆕 **`DECLARED_NOT_SERVED`** | [`frappe/education`](https://github.com/frappe/education) — `license.txt` is **19 bytes**: `"License: GNU GPL V3"` | 🟡 the **family** is stated, the **grant text** is absent. Enough to classify, not enough to rely on |
+| 🆕 **`NOTICE_ONLY`** | [`foradian/fedena`](https://github.com/foradian/fedena) (679 B), [`projectfedena/fedena`](https://github.com/projectfedena/fedena) (680 B) | 🔴 the only licence-ish file is an **attribution NOTICE**. A NOTICE grants nothing |
+| 🔴 **retired before publication** | *"detector asserts MIT, no payload exists"* — `labmlai` | 🟢 **not a state: a filename-case defect.** Grant at lowercase bare `license`, **1,082 B `22c7cae23a2b00cb`** |
+| 🟢 **split code/content** | [`microsoft/autogen`](https://github.com/microsoft/autogen) `LICENSE` **CC-BY-4.0 18,650 B** + `LICENSE-CODE` **MIT 1,141 B**; [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) **1,615 B** *"The Evaluator code is licensed under MIT… content…"* | 🔵 **name the file the grant came from**, or a later pass will "correct" a correct row |
+
+### 🔴 The 18 with no grant anywhere in the tree
+
+🔵 **This is the claim a path list cannot make.** `git clone --depth 1 --filter=blob:none
+--no-checkout` + `git ls-tree -r` enumerates the whole tree without blobs — and it is **not gated**,
+unlike the MCP content API (see the channel table).
+
+| address | tree | why it is a nil and not a miss |
+|---|---|---|
+| [`kixlab/TutorCaseBench`](https://github.com/kixlab/TutorCaseBench) | **11,059 files**, zero licence paths | 🔴 largest tree in the nil set; **0★** |
+| [`victor-lubn/Special-Education-Planning`](https://github.com/victor-lubn/Special-Education-Planning) | 2,387 files; 4 hits are **`licence.js`, `check-licence-dialog.component.ts`, `licence-dialog-data.model.ts`** | 🔴 **the matches are source code that implements a licence dialog.** `p455`'s *"adjacency is not attribution"*, exactly |
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | 2,313 files; all hits under `public/bower_components/` | 🔴 **vendored** bootstrap / datatables / flot grants — **not the repo's own** |
+| [`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) (74★) · [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) · [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (46★) · [`h9-tect/AI-Roadmaps`](https://github.com/h9-tect/AI-Roadmaps) (373★) · [`SudhanvaJ-bit/project-samarth`](https://github.com/SudhanvaJ-bit/project-samarth) · [`avivkatz1/easy-iep`](https://github.com/avivkatz1/easy-iep) · [`mcavaliere/ai-spanish-tutor`](https://github.com/mcavaliere/ai-spanish-tutor) · [`wongcyrus/gemini-handwriting-grader`](https://github.com/wongcyrus/gemini-handwriting-grader) · [`kennedyraju55/essay-grader`](https://github.com/kennedyraju55/essay-grader) · [`marckurniawan/essay-scoring-project`](https://github.com/marckurniawan/essay-scoring-project) · [`choudaryhussainali/MCQ_Grading_Bot`](https://github.com/choudaryhussainali/MCQ_Grading_Bot) · [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) · [`abdullaitcenter-hue/comet-trail-archives`](https://github.com/abdullaitcenter-hue/comet-trail-archives) | 3–558 files each, zero licence paths | 🔴 nil confirmed on the tree |
+
+🟢 **And one address recovered from the nil set by the same instrument:**
+[`formalms/formalms`](https://github.com/formalms/formalms) — see `verticals/solutions.md`.
+
+### 🔴 Channel posture — and one NEW restriction worth more than a retry
+
+| channel | endpoint | result |
+|---|---|---|
+| `raw.githubusercontent.com` | `/{slug}/{branch}/{path}` | 🟢 **200** — every payload in this pass |
+| `api.github.com` | `/repos/{slug}` | 🔴 **403** (unchanged since `p505`) |
+| `api.github.com` | `/` and `/rate_limit` | 🟡 **200** — routability only |
+| `github.com` | repo HTML | 🔴 **403** (`p508`'s regression persists) |
+| **MCP GitHub** | `search_repositories` | 🟢 **200** for any repo |
+| **MCP GitHub** | `get_file_contents` | 🔴 **ACCESS DENIED — gated to this session's configured repo** |
+| **git protocol** | `ls-remote --symref` | 🟢 **200** — but **not concurrency-safe at `-P 10`** |
+| **git protocol** | `clone --filter=blob:none` + `ls-tree` | 🟢 **200** — 🆕 **the only way to prove an absence** |
+
+🔴 **The MCP channel is NOT uniformly available, and no pass had measured that.** `search` answers
+for any repository; **content reads are scoped to `gmilano/globant-kb`**. 🔵 That is why the tree work
+above had to go over the git protocol — and it is why *"use the API to list the repo's files"* is
+not a remedy any future pass should plan around.
+
+
 ## 🆕 `p508` — `2026-10-28` — **🔴 Nine legs, ~80 addresses, ZERO new repos — saturation on the repo axis too. 🟢 Two `NOASSERTION` rows resolved from payload bytes, in OPPOSITE directions. 🔴 The HTML limb of the GitHub channel is gone.**
 
 Reads: [`saturation-sweep.2026-10-28-p508.tsv`](../evidence/saturation-sweep.2026-10-28-p508.tsv),

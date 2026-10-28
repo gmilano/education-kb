@@ -1,0 +1,9 @@
+channel	endpoint	result	note
+raw.githubusercontent.com	/{slug}/{branch}/LICENSE	200	the byte limb, alive; every licence payload in this pass is read here
+api.github.com	/repos/{owner}/{repo}	403	unchanged since p505
+api.github.com	/ and /rate_limit	200	routability only, not a usable API - p507's warning holds
+github.com	HTML for a repo page	403	regression first recorded p508, still 403
+MCP GitHub	search_repositories	200	stars, archived, license.spdx_id all readable for ANY repo
+MCP GitHub	get_file_contents	ACCESS DENIED	NEW: gated to this session's configured repo (gmilano/globant-kb) only. The MCP channel is NOT uniformly available - search is open, content reads are repo-scoped. This is why tree enumeration had to go over the git protocol
+git protocol	git ls-remote --symref	200	resolves default branch; NOT concurrency-safe at P=10 (see probe-defects)
+git protocol	git clone --depth 1 --filter=blob:none --no-checkout + ls-tree	200	NEW CHANNEL for this base: enumerates a full repo tree without blobs. It is the only way to prove a licence file's ABSENCE, and it is not gated

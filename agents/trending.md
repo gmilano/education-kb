@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p509` — `2026-10-28` — **🟢 `Gap 508-B` DELIVERED: 137 addresses, 119 licence payloads, bytes + sha256 — and not one shelf licence cell is refuted. 🔴 SEVEN probe defects, all mine, two of which would have falsified a CORRECT row and one of which invented 107 defects that do not exist. 🔴 Agent-axis saturation holds a second pass, now on a different discovery shape.**
+
+Reads: [`licence-byte-census.2026-10-28-p509.tsv`](../evidence/licence-byte-census.2026-10-28-p509.tsv),
+[`probe-defects.2026-10-28-p509.tsv`](../evidence/probe-defects.2026-10-28-p509.tsv),
+[`default-branch-census.2026-10-28-p509.tsv`](../evidence/default-branch-census.2026-10-28-p509.tsv),
+[`no-grant-tree-probe.2026-10-28-p509.tsv`](../evidence/no-grant-tree-probe.2026-10-28-p509.tsv),
+[`api-shelf-read.2026-10-28-p509.tsv`](../evidence/api-shelf-read.2026-10-28-p509.tsv),
+[`search-legs.2026-10-28-p509.tsv`](../evidence/search-legs.2026-10-28-p509.tsv),
+[`channel-probe.2026-10-28-p509.tsv`](../evidence/channel-probe.2026-10-28-p509.tsv),
+[`latam-topic-discovery.2026-10-28-p509.tsv`](../evidence/latam-topic-discovery.2026-10-28-p509.tsv),
+[`gegok12-packaging.2026-10-28-p509.tsv`](../evidence/gegok12-packaging.2026-10-28-p509.tsv).
+
+🔴 **Gate posture: `make hooks` DENIED (`Code from External`) — fifteenth denial in sixteen passes.**
+Nothing here is gate-attested. 🟢 Stars, `archived` and `license.spdx_id` are read on the MCP GitHub
+channel; **every licence payload below is read on `raw.githubusercontent.com` with bytes and sha256**,
+and every **absence** is proven by a tree enumeration over the git protocol.
+
+### 🟢 The census, in one line per family — 119 slugs that carry a grant
+
+| grant family (read from the payload, not the detector) | slugs | build-on-able for a client? |
+|---|---|---|
+| **MIT** | **58** | 🟢 yes |
+| **Apache-2.0** | **21** | 🟢 yes |
+| **BSD-3-Clause** | **1** | 🟢 yes |
+| AGPL-3.0 | 12 | 🔴 no — reaches networked use |
+| GPL-3.0 | 7 | 🔴 no |
+| GPL-2.0 | 3 | 🔴 no |
+| LGPL | 2 | 🟡 linking only |
+| MPL-2.0 | 1 | 🟡 file-level |
+| CUSTOM / non-OSI | 6 | 🔴 no — `PageLM Community License`, `Watch Me Type Source-Available Licence`, two `learning-commons-org` split code/content frameworks, `frappe/education`'s 19-byte declaration |
+| CC-BY-NC (noncommercial) | 2 | 🔴 no |
+| PolyForm-NC / Elastic-2.0 | 1 / 1 | 🔴 no |
+| **POINTER (dangling → 404)** | **2** | 🔴 no — see below |
+| NOTICE only, no grant | 2 | 🔴 no — both `fedena` mirrors |
+
+🟢 **Permissive total: 81 of 119.** 🔴 **18 addresses carry no grant anywhere in their tree**, proven
+by enumeration rather than inferred from a path list.
+
+### 🔴 `p507`'s `TarrySingh` verdict is REFINED from the bytes — and the refinement changes the reason, not the answer
+
+🔴 `p507` recorded [`TarrySingh/…-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials)
+(**4,018★**) as `NOASSERTION` → *"no OSI licence detected… all-rights-reserved until a grant is read
+at a pinned blob."* 🟢 **A grant is served, and it was never all-rights-reserved:** the payload is
+**Attribution-NonCommercial-ShareAlike 4.0 International** (**20,850 B**). 🔵 It also ships a
+**1,257-byte `NOTICE`** reading *"Synapsa Commons — Copyright 2026 RealAI. All rights not granted by
+the licence are reserved"*, which is what a first-match probe would have quoted instead.
+🔴 **The shelf verdict is unchanged — still not build-on-able — but the reason is now precise: a
+NONCOMMERCIAL grant, not an absent one.** 🟢 **This is `T33` one notch finer: the detector's
+abstention told us nothing about *which* non-permissive thing it was, and for a client conversation
+"noncommercial CC" and "no licence at all" are different problems with different remedies.**
+
+### 🔴 The six defects, because every one of them was a confident wrong answer first
+
+| # | defect | what it claimed | control that caught it |
+|---|---|---|---|
+| 1 | first-match-wins on filename | [`microsoft/autogen`](https://github.com/microsoft/autogen) is **CC-BY-4.0** | a known-multi-file control — it serves `LICENSE` **CC-BY-4.0 18,650 B** *and* `LICENSE-CODE` **MIT 1,141 B**; 🟢 **shelf row correct** |
+| 2 | branch assumed `main`/`master` | 24 `NOPAYLOAD`, six of them spurious | `ls-remote --symref`; **18 of 136 addresses are on neither branch** |
+| 3 | filename matched case-sensitively | `labmlai` (**67,603★**) has no grant — *"a new fourth licence state"* | tree enumeration → grant at lowercase **`license`**, **1,082 B `22c7cae23a2b00cb`** |
+| 4 | `NOTICE` counted as a grant | 18 non-OSI addresses | per-slug reconciliation → **6**; `NOTICE` is Apache §4(d) attribution |
+| 5 | title-block anchor | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) is `CUSTOM` | reading all **1,531 B** → **BSD-3-Clause** (it has *no title line*); 🟢 **shelf row correct** |
+| 6 | `ls-remote` at `-P 10` | **`HKUDS/DeepTutor` has no refs** | single-threaded re-probe → `refs/heads/main` answers normally |
+| 7 | table-width probe counted **escaped** `\|` as separators | **107 malformed rows across 4,178 tables** | re-run with escaped pipes masked → 🟢 **0 of 14** in this pass's regions; **the 107 is RETRACTED** |
+
+🔵 **Two of the seven would have published a false correction against a row that was already right,
+and the seventh invented a defect rate out of its own parser** — which is `p455`'s and `p506`'s class
+exactly, on its **seventh** sighting. 🟢 **The three real defects #7 found were all in THIS pass's own
+new tables** (unescaped `|` inside a cell), and they are fixed. 🔴 **The retraction matters more than
+the fixes: 107 "malformed rows" in this base's history do not exist.**
+The remedy that caught all seven is the one `p505` and `p506` named: **a known-good AND a known-bad
+control before any count is published.** It has now paid for itself in seven consecutive instances,
+and `Gap 509-B` asks for it to stop being advisory.
+
+### 🟢 Shelf re-read, and one retirement
+
+`DeepTutor` **47,677★** (`p508`: 47,621, **+56**), `Apache-2.0`, `archived: false`, licence payload
+**11,408 B `cd2f54e1e5066644`** — first byte-level read of the flagship's grant.
+`OpenMAIC` **41,712** (**+3**, MIT 1,065 B). `book-to-skill` **36,415** (**+4**, MIT 1,068 B).
+`k12-teacher-skills` **600** (**+1**, Apache-2.0 11,357 B). `TorchLeet` **2,596** (**+1**).
+`educhain` **387** on a **fifth** unchanged read. `gegok12` **54**, `NOASSERTION`, **1,150 B
+`b8694396d7dc6439`** — `p508`'s refutation of `p507` re-attested independently.
+🔴 **RETIRED: `DeepTutor`'s pin is no longer `a31d82624c27`.** `refs/heads/main` → **`1ea7df155447`**.
+`p505`'s *"unchanged for a 7th consecutive pass"* is now false, and the *"attention, not shipping"*
+reading built on it must be re-derived before reuse.
+
+### 🔴 Saturation, retested on a shape it had not faced
+
+`p508` declared the agent axis saturated from nine free-text legs. This pass ran the four prescribed
+global legs, all four regional legs, **and** `topic:` legs. Addresses new to this base:
+**`rphilipzhang/AI-PhD-S26`**, **`crodriguezn/python-2025`** (UNEMI, 🇪🇨), **`V0raOnline/arkinesis`** —
+🔴 **all three are course materials, none is an agent, none is shelf-eligible.** Every permissive
+*agent* candidate returned is already carried. 🟢 **Saturation holds, and it now survives a second
+discovery method rather than a repeat of the first.**
+
+
 ## 🆕 `p508` — `2026-10-28` — **🔴 ZERO new addresses from nine legs, and that is the finding: the agent axis is SATURATED. 🔴 `p507`'s GegoK12 verdict is refuted on bytes this base had already read. 🟢 `Gap 504-A` characterised with a nonexistent-repo control.**
 
 Reads: [`saturation-sweep.2026-10-28-p508.tsv`](../evidence/saturation-sweep.2026-10-28-p508.tsv),

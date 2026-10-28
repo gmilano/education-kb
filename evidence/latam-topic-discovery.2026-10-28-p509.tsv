@@ -1,0 +1,4 @@
+leg	shape	total_count	placeable_LATAM_returns	reading
+educación inteligencia artificial docentes open source stars:>20 (p508)	free-text	0	-	p508's measurement, reproduced as the baseline
+topic:educacion stars:>5	topic + star floor	15	crodriguezn/python-2025 (UNEMI, Ecuador), agn3si/ResultadosUNAM---data (UNAM admissions 2021-2026, Mexico, open data), fauzcategui/moodle-sence (Moodle attendance plugin for SENCE, Chile's national training service), brayandiazc/apoyo-python-td-desafio (Desafío Latam, Chile - ARCHIVED)	Gap 508-E REMEDY WORKS - and it corrects its own premise: topic: values are NOT English-only, `educacion` is a live Spanish topic
+topic:edtech language:PHP stars:>20	topic + language + star floor	6	none new - ai-ethos, tsugi, advisingapp, elmsln, haxcms-php, lxHive all already carried	the language axis adds no LATAM discovery; it surfaces US/EU PHP edtech

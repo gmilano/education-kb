@@ -6,6 +6,66 @@ updated: 2026-10-28
 
 # Education platforms you can customise with AI on top
 
+> 🟢 **`p509` (`2026-10-28`) — `Gap 508-C` CLOSES WITH CONTENT: `gegok12` IS A REAL SIS CORE, NOT AN OPEN-CORE SHELL — AND THE MODULES IT LACKS ARE EXACTLY THE REVENUE MODULES. 🟢 A VERTICAL THIS BASE HAD AS UNGRANTED IS GPL-2.0, AND ITS GRANT WAS HIDING IN THE INSTALLER.**
+> 🟢 **`Gap 508-C` asked whether the MIT [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12)
+> repository holds the school-management core or an open-core shell, and said the tree was the half
+> that could be done here. Done — and the answer is favourable.** **7,623 files**, **107
+> `app/Models`**, **247 `app/Http/Controllers`**, **108 migrations**. The SIS domain is present and
+> named: `Admission`, `Attendance`, `AcademicYear`, `Assignment`, `AssignmentApproval`, `Discipline`,
+> `Book`/`BookLending`/`BookCategory`, `ClassRoomPage`, `Conversation`, `Bulletin`, `Feedback`,
+> `Document`, `Group`, plus a four-model `Payroll*` set. 🟢 **`custompackages/` is not withheld paid
+> modules — it is a vendored third-party library** (`brozot/laravel-fcm`, Firebase Cloud Messaging,
+> 73 files). 🔴 **But the absence is as informative as the presence: zero models match
+> `fee`/`invoice`/`exam`/`result`/`transport`/`hostel`.** 🔵 **Those four are the classic paid add-ons of every
+> commercial school-management suite, and they are the ones missing from the MIT repository.**
+> 🟡 **Measure definition, per `T31`:** this is a count of filenames under `app/Models/` matching
+> that pattern — a module under another name, or implemented without a model, would not be counted.
+> Reads: [`gegok12-packaging.2026-10-28-p509.tsv`](../evidence/gegok12-packaging.2026-10-28-p509.tsv).
+> 🟢 **So `p501`'s standing finding reaches its final shape.** *"There is no MIT-licensed education
+> ERP/SIS"* is **false on the licence axis** (`p508`, from bytes) and now **false on the substance
+> axis too** — `gegok12` is a 107-model Laravel SIS under a complete MIT grant. 🔴 **What is true is
+> narrower and more useful: there is no MIT education SIS that ships fees, examinations, transport or
+> hostel.** That is a **build estimate, not a disqualification**, and it is the sentence to take into
+> an engagement.
+> 🟢 **A correction in this base's favour: [`formalms/formalms`](https://github.com/formalms/formalms)
+> is GPL-2.0, not ungranted.** A 19-path probe returned **no payload** and the API carries **no
+> `license` object** — the detector is blind to it. 🟢 Tree enumeration found the grant at
+> **`html/lib/System/license/license_english.txt`** — **15,146 B, `sha256 81688a796b2f7a4f`**,
+> opening `GNU GENERAL PUBLIC LICENSE Version 2, June 1991`, shipped in **four languages**
+> (english, croatian, bosnian + an `index.html`) because it is displayed by the **installer**.
+> 🔵 **The grant was never missing; it was in the product rather than at the root.** 🔴 Still
+> copyleft, so still not a client base — but *"GPL-2.0, grant served from the installer directory,
+> detector blind"* is a true row where *"no grant"* was a false one.
+> 🔴 **And one vertical has no own grant at all:
+> [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool)** — 2,313 files, and
+> **every** licence file sits under `public/bower_components/` (bootstrap, datatables, flot).
+> 🔵 **Vendored dependency licences are not the repository's grant.** Refuse it on that basis.
+> 🟢 **Verticals re-attested from bytes, not from a detector field:**
+> [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) **GPL-3.0** (`master/LICENSE`,
+> **35,147 B `8ceb4b9ee5adedde`**) — 🔵 note it *also* serves a 1,614 B `license.txt` that is a
+> **copyright roll, not a grant**, and a first-match probe quotes the wrong one;
+> [`openedx/edx-platform`](https://github.com/openedx/edx-platform) **AGPL-3.0** — **35,136 B
+> `e12d785697426f9d`**, 🟢 *which re-attests `p506`'s `Gap 504-C` reading (35,136 B, `e12d78569742`)
+> independently, on a different pass and a different probe*;
+> [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) **GPL-2.0** on `develop`;
+> [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) **Elastic-2.0** (3,860 B) —
+> 🔴 **source-available, not open source**, and the only AI-native student-success CRM on this shelf.
+> 🔴 **Gate posture: `make hooks` DENIED (`Code from External`).** Nothing here is gate-attested.
+
+### 🟢 `p509` — what a client can actually build on, by grant and not by reputation
+
+| platform | grant (read from bytes) | branch the grant lives on | client posture |
+|---|---|---|---|
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **MIT**, 1,150 B `b8694396d7dc6439` | `main` | 🟢 **the only permissive full SIS on this shelf.** Build fees/exams/transport/hostel; inherit the other 107 models |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 **GPL-3.0**, 35,147 B `8ceb4b9ee5adedde` at `COPYING.txt` | `main` | 🟡 integrate alongside; never vendor into a product |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL-3.0**, 35,147 B `8ceb4b9ee5adedde` | `master` | 🟡 same — 🔵 **byte-identical to Moodle's payload**, a useful consistency control |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 | `master` | 🔴 AGPL reaches networked use |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **GPL-2.0**, 15,146 B — 🆕 grant found in the installer dir | `master` | 🟡 the payload's only *"any later version"* string is the GPLv2 **appendix boilerplate**, so the project's own `or-later` election is **not readable from it** — `p455`'s second axis stays `UNSTATED` |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic-2.0**, 3,860 B | `main` | 🔴 source-available; licence forbids providing it as a service |
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | 🔴 **none of its own** | `main` | 🔴 refuse — only vendored bower grants |
+| [`frappe/education`](https://github.com/frappe/education) | 🟡 **GPL-3.0 declared in 19 bytes**, no licence body | `develop` | 🔴 family stated, text absent — treat as GPL-3.0 and ask upstream to serve the text |
+
+
 > 🔴 **`p508` (`2026-10-28`) — `p507`'s HEADLINE VERTICAL FINDING IS REFUTED ON THE BYTES, AND THIS BASE HAD ALREADY READ THOSE BYTES.**
 > 🔴 **`p507` wrote that [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) is *"published as
 > MIT by its own site… the repository does not substantiate it"*, on the strength of
