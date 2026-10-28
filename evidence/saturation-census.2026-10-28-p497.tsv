@@ -1,0 +1,60 @@
+repo	discovery_channel	kb_files_mentioning_excl_p497	verdict
+Miaotofu01/Study-Mate	topic:ai-tutor + function:admissions	236	PRESENT
+24kchengYe/human-skill-tree	topic:ai-tutor + function:admissions	226	PRESENT
+ankimcp/anki-mcp-server	topic:ai-tutor + function:admissions	291	PRESENT
+ZeKaiNie/universal-examprep-skill	topic:ai-tutor + function:admissions	220	PRESENT
+karanb192/algo-sensei	topic:ai-tutor + function:admissions	205	PRESENT
+Li-Evan/Bloom	topic:ai-tutor + function:admissions	237	PRESENT
+SenmuuuuW/universal-diagnostic-tutor-skill	topic:ai-tutor + function:admissions	213	PRESENT
+nichochar/ari	topic:ai-tutor + function:admissions	37	PRESENT
+artcc/freelingo	topic:ai-tutor + function:admissions	248	PRESENT
+KeWang0622/kaogong-skill	topic:ai-tutor + function:admissions	173	PRESENT
+zijinz456/OpenTutor	topic:ai-tutor + function:admissions	323	PRESENT
+flysheep-ai/education-skills	topic:ai-tutor + function:admissions	191	PRESENT
+PrepLabsAI/InterviewMentor	topic:ai-tutor + function:admissions	121	PRESENT
+SimonsTang/feifei-companion	topic:ai-tutor + function:admissions	172	PRESENT
+ahmedEid1/lumen	topic:ai-tutor + function:admissions	242	PRESENT
+ASUCICREPO/Admissions-AI-Agent	topic:ai-tutor + function:admissions	0	NEW
+DozenTwelve/Papermorph	topic:ai-education	40	PRESENT
+GarethManning/education-agent-skills	topic:ai-education	189	PRESENT
+aaryansamanta/ai-ethos	topic:ai-education	78	PRESENT
+aaryansamanta/nextgen-ai	topic:ai-education	20	PRESENT
+assafkip/claudemy	topic:ai-education	69	PRESENT
+orionsheep/wordlink	topic:ai-education	11	PRESENT
+Fazmin/AILearningGuide	topic:ai-education	19	PRESENT
+liuliu667/cram-engine	topic:ai-education	35	PRESENT
+DAMO-NLP-SG/M3Exam	topic:ai-education	24	PRESENT
+pguso/agents-from-scratch	topic:ai-education	203	PRESENT
+francoisjacquet/rosariosis	topic:knowledge-tracing + topic:student-information-system	282	PRESENT
+academico-sis/academico	topic:knowledge-tracing + topic:student-information-system	213	PRESENT
+OS4ED/openSIS-Classic	topic:knowledge-tracing + topic:student-information-system	288	PRESENT
+yukazakiri/koakademy	topic:knowledge-tracing + topic:student-information-system	132	PRESENT
+Mstfakts/College-Management-System	topic:knowledge-tracing + topic:student-information-system	4	PRESENT
+hcnoh/knowledge-tracing-collection-pytorch	topic:knowledge-tracing + topic:student-information-system	62	PRESENT
+jhljx/GKT	topic:knowledge-tracing + topic:student-information-system	46	PRESENT
+jilljenn/ktm	topic:knowledge-tracing + topic:student-information-system	56	PRESENT
+ckyeungac/deep-knowledge-tracing-plus	topic:knowledge-tracing + topic:student-information-system	40	PRESENT
+lccasagrande/Deep-Knowledge-Tracing	topic:knowledge-tracing + topic:student-information-system	45	PRESENT
+arshadshk/SAINT-pytorch	topic:knowledge-tracing + topic:student-information-system	42	PRESENT
+ApexEDM/GIKT	topic:knowledge-tracing + topic:student-information-system	39	PRESENT
+tswsxk/EduData	topic:knowledge-tracing + topic:student-information-system	29	PRESENT
+ZhijieXiong/pyedmine	topic:knowledge-tracing + topic:student-information-system	76	PRESENT
+HFUT-LEC/EduStudio	topic:knowledge-tracing + topic:student-information-system	57	PRESENT
+yxonic/DTransformer	topic:knowledge-tracing + topic:student-information-system	53	PRESENT
+arshadshk/Last_Query_Transformer_RNN-PyTorch	topic:knowledge-tracing + topic:student-information-system	37	PRESENT
+TianHongZXY/pytorch-SAKT	topic:knowledge-tracing + topic:student-information-system	39	PRESENT
+pykt-team/pykt-toolkit	topic:knowledge-tracing + topic:student-information-system	215	PRESENT
+vardanagarwal/Proctoring-AI	topic:proctoring + topic:automated-grading	54	PRESENT
+SafeExamBrowser/seb-win-refactoring	topic:proctoring + topic:automated-grading	59	PRESENT
+narender-rk10/MyProctor.ai-AI-BASED-SMART-ONLINE-EXAMINATION-PROCTORING-SYSYTEM	topic:proctoring + topic:automated-grading	10	PRESENT
+tusharnankani/Aankh	topic:proctoring + topic:automated-grading	29	PRESENT
+aesophor/hacklympics	topic:proctoring + topic:automated-grading	20	PRESENT
+meefik/ITMOproctor	topic:proctoring + topic:automated-grading	29	PRESENT
+eLearning-BS23/moodle-quizaccess_proctoring	topic:proctoring + topic:automated-grading	48	PRESENT
+AgnellusX1/GodsEye	topic:proctoring + topic:automated-grading	5	PRESENT
+oat-sa/devkit-lti1p3	topic:proctoring + topic:automated-grading	42	PRESENT
+sanket2000/proctoring	topic:proctoring + topic:automated-grading	2	PRESENT
+ZelinZhou-THU/stem-tutor-agent	topic:proctoring + topic:automated-grading	47	PRESENT
+TaiRuiQu/oh-my-paper	topic:proctoring + topic:automated-grading	0	NEW
+sajidbuet/OMRFlow	topic:proctoring + topic:automated-grading	6	PRESENT
+wongcyrus/gemini-handwriting-grader	topic:proctoring + topic:automated-grading	0	NEW

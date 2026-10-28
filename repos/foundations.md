@@ -410,3 +410,76 @@ TensorFlow-era research code and this KB does not propose building on it.
   *agent*-layer drought this pass produced **zero** infrastructure addresses from either region.
   **The gap is in infrastructure supply, not in this KB's queries** — which is a different and more
   defensible sentence than the one this file carried before.
+
+## 🆕 `p497` — `2026-10-28` — the census does not move, the **vertical-platform leg is four passes empty**, and the "no MIT ERP" question is now answered
+
+Evidence: [`licence-and-stars.2026-10-28-p497.tsv`](../evidence/licence-and-stars.2026-10-28-p497.tsv),
+[`branch-ref-census.2026-10-28-p497.tsv`](../evidence/branch-ref-census.2026-10-28-p497.tsv),
+[`saturation-census.2026-10-28-p497.tsv`](../evidence/saturation-census.2026-10-28-p497.tsv).
+
+### 🔴 The census is unchanged: 19 platforms, 3 permissive
+
+**No platform row added or removed.** The vertical-platform discovery leg is now **four consecutive
+passes empty** (`p494`–`p497`).
+
+🟢 **But this pass asked the question the census implies and got an answer**, which is better than a
+fourth empty leg: *does a permissively-licensed education ERP exist at all?* Searched explicitly.
+
+| candidate | licence | verdict |
+|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | already the KB's row; the Odoo-for-education answer |
+| ERPNext | GPL-3.0 | lists Education among its verticals; copyleft |
+| Odoo Community | LGPL-3.0 | the thing OpenEduCat is built on |
+| Dolibarr | GPL-3.0 | ERP+CRM, no education vertical |
+| Apache OFBiz | **Apache-2.0** | 🔵 permissive **but has no education vertical** — ERP/CRM primitives only |
+
+🔴 **Conclusion, and it is a conclusion rather than a backlog item: there is no permissively-licensed
+education ERP.** The only permissive ERP found (OFBiz) has no education domain model, and every
+system that *does* model students, enrolments, fees and timetables is GPL, LGPL or AGPL.
+
+🟢 **This strengthens `T2` instead of narrowing it.** The copyleft constraint is not an artefact of
+this KB's sampling at the LMS layer — it holds independently at the **ERP** layer, reached by a
+different query. For a client needing a closed derivative of an education *ERP*, the honest answer is
+**build the domain model, or accept LGPL-3.0 and keep the Odoo modules separable**. There is no third
+option to find, and future passes should stop looking for one.
+
+### 🔴 The branch-name trap: the note above needs upgrading from two variants to five
+
+The *"Branch-name trap, worth its own note"* section above was written for `19.0`. It is now a
+five-variant pattern, each resolved by `git ls-remote --symref` this pass:
+
+| repo | `default_ref` | ★ | status |
+|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | **`refs/heads/mobile`** | **647** | 🔴 **NEW `p497` — and it is a row in the table above.** This KB's own foundational SIS has a default ref that reads as a feature branch |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `refs/heads/19.0` | 900 | recorded; also a row above |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `refs/heads/develop` | — | recorded `p496` |
+| [`TaiRuiQu/oh-my-paper`](https://github.com/TaiRuiQu/oh-my-paper) | `refs/heads/v2` | 1 | NEW `p497` |
+| [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) | `refs/heads/PreProduction` | 30 | NEW `p497`, archived |
+
+🔴 **Two of the five are foundational rows in this very file** (`rosariosis`, `openeducat_erp`), so a
+licence re-verification script that assumes `main` would report **this KB's own platform layer** as
+partly nonexistent. 🔵 `mobile` and `PreProduction` are the variants to fear: they are
+indistinguishable from feature branches by eye.
+
+### 🟢 `rosariosis` re-read from bytes this pass — the row is correct
+
+| field | KB record | `p497` read | verdict |
+|---|---|---|---|
+| HEAD SHA | `fa5f4b66caf4` | `fa5f4b66caf4` | 🟢 stable, 11th stable pin this pass |
+| default ref | — | **`refs/heads/mobile`** | 🔴 newly recorded |
+| licence | GPL-2.0 | **GPL-2.0**, 15 214 B, `sha1 58cb1cfbf839`, title block *"GNU GENERAL PUBLIC LICENSE Version 2, June 1991"* | 🟢 confirmed from bytes |
+| ★ | 647 | **647** | 🟢 exact |
+
+🟢 **Four of four recorded fields reproduce.** Set against `p496`'s finding that one of four re-read
+byte counts did **not** reproduce, the running tally on `T14` (this KB's records are not
+self-verifying) is now **seven of eight reproduced across two passes**. 🔵 The practice that surfaces
+the errors is re-reading a pin before building on it — keep doing it.
+
+### 🔵 The SIS axis, ranked for the first time
+
+`topic:student-information-system` holds **180** repositories. The four above ~9★ —
+`rosariosis` (647), `academico` (409), `openSIS-Classic` (347), `koakademy` (9) — are **all already
+held here**. 🟢 The platform layer this file covers is enumerated at the top of its distribution; the
+tail below ~80★ is student coursework and single-institution projects, which is why it produces no
+rows. 🔴 **This axis is spent for discovery** — its value this pass was the `mobile` branch trap, not
+a platform.

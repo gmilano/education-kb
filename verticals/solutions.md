@@ -321,3 +321,58 @@ consecutive pass (`47394125364b`), so the pin is a security decision, not a drif
   found eight application-layer addresses found **zero** platforms.
 - 🔵 **No AI-on-top integration surface exists for any special-education system.** The Canvas/Moodle
   surfaces this file catalogues have no counterpart here — there is nothing to attach an agent to.
+
+## 🆕 `p497` — `2026-10-28` — the **admissions / grading / proctoring** layer, which is where the regulator looks and where this file had nothing
+
+Evidence: [`licence-and-stars.2026-10-28-p497.tsv`](../evidence/licence-and-stars.2026-10-28-p497.tsv).
+Narrative: [`agents/trending.md`](../agents/trending.md) `p497`. Recipe:
+[`compose/patterns.md`](../compose/patterns.md) `P497-1`.
+
+### 🔴 The layer this file was missing, and why it is the expensive one
+
+This file picks a platform **by layer** — LMS, SIS, ERP, assessment, conferencing. The layers it
+covers are the ones that *hold* data. 🔴 **The four functions the EU AI Act singles out as high-risk
+are not layers in this table at all** — they are *decisions* made on top of it:
+
+**EU AI Act Annex III point 3** designates education AI as high-risk for **admissions**, **grading**,
+**placement**, and **exam proctoring**. 🔵 Secondary citation — `eur-lex.europa.eu` is `ENOTFOUND`
+from this session (`p495`), so the instrument text has not been read here.
+
+🟢 **This is the commercially useful cut of this file**, because those four decisions are exactly
+where a client needs a conformance story and exactly where the open-source supply is thinnest.
+
+| Annex III function | best open-source starting point | licence | state of supply |
+|---|---|---|---|
+| **Admissions** | [`ASUCICREPO/Admissions-AI-Agent`](https://github.com/ASUCICREPO/Admissions-AI-Agent) | **MIT** (1 123 B, `sha1 8a0aae668604`) | 🔴 **One asset, 5★, found `p497`.** Arizona State University's AI Cloud Innovation Centre. Reference architecture only — AWS Bedrock AgentCore, so the MIT grant covers orchestration, not a portable runtime |
+| **Grading** | [`TaiRuiQu/oh-my-paper`](https://github.com/TaiRuiQu/oh-my-paper) (MIT, `refs/heads/v2`), [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) (MIT, plagiarism), [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) (GPL, assessment platform) | mixed | 🟡 Thin but real. `oh-my-paper` is 1★; `dolos` at 3,865 commits is the maintained one but detects plagiarism rather than grades |
+| **Placement** | — | — | 🔴 **Nothing.** No open-source placement/streaming system found in any pass |
+| **Exam proctoring** | [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) (357★), [`vardanagarwal/Proctoring-AI`](https://github.com/vardanagarwal/Proctoring-AI) (633★) | 🔴 **neither permissive** | 🔴 `topic:proctoring` holds **145** repositories and produced **no permissive asset** this pass. For a designated high-risk function |
+
+### 🟢 What to tell a client, by layer
+
+- **Admissions.** There is one MIT reference design and it is a university's, not a vendor's. 🟢 Read
+  the adviser-handoff boundary in it — the design decision that keeps a human in the loop on the
+  decision itself is the one that carries the Annex III story. Re-implement on your own runtime
+  rather than inheriting Bedrock AgentCore.
+- **Grading.** 🔴 **Never let the model do the arithmetic** — that is `P492-1` and it stands. Compose
+  `oh-my-paper`'s marking flow or build fresh, with scoring in deterministic code.
+- **Placement.** 🔴 Greenfield. Price it as a build.
+- **Proctoring.** 🔴 The honest answer is that the permissive supply does not exist. Safe Exam
+  Browser is the credible institutional system and it is copyleft; plan on deploying it **alongside**
+  rather than embedding it, or accept the licence.
+
+### 🔵 The ERP question, settled
+
+Asked explicitly this pass: **no permissively-licensed education ERP exists.** ERPNext GPL-3.0,
+Dolibarr GPL-3.0, Odoo Community LGPL-3.0, OpenEduCat LGPL-3.0; Apache OFBiz is Apache-2.0 but ships
+no education domain model. 🟢 For a closed derivative at the ERP layer: **build the domain model, or
+take LGPL-3.0 and keep the Odoo modules separable.** Full reasoning:
+[`repos/foundations.md`](../repos/foundations.md) `p497`.
+
+### 🔴 Branch refs for rows in this file
+
+[`rosariosis`](https://github.com/francoisjacquet/rosariosis)'s default ref is
+**`refs/heads/mobile`** and [`openeducat_erp`](https://github.com/openeducat/openeducat_erp)'s is
+**`refs/heads/19.0`** — both rows in this KB's platform tables. A deployment script that clones
+without resolving the symref gets the wrong tree or no tree. Five variants now recorded:
+[`branch-ref-census.2026-10-28-p497.tsv`](../evidence/branch-ref-census.2026-10-28-p497.tsv).

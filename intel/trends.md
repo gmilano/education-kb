@@ -590,3 +590,113 @@ does not need restating so much as it needs the replacement**, which this pass h
 formal AI strategy, **10%** of North American institutions with formal AI guidelines. 🔵 **Two
 instruments, two sources, one conclusion**, and unlike the dollar figures it has been stable across
 passes.
+
+## 🆕 `p497` — `2026-10-28` — a new trend, `T16` qualified, and the registry grep from `p496` **fails on its own file**
+
+### 🔴 The standing instruction's own grep misses a trend
+
+`p496` left this file a standing instruction: *"a pass introducing a trend must
+`grep -n "^## T\|^### 🆕 \`\?T" intel/trends.md` first."* 🟢 **Run, as instructed.** It returns
+`T1`–`T12`, `T14`, `T15` (twice), `T16` — and **not `T13`**.
+
+🔴 **`T13` exists.** It is at line 255, headed
+`### 🟢 A new trend, \`T13\` — the education agent-skills tier is consolidating off hosted
+infrastructure`. The pattern requires `🆕` immediately after `###`; `T13`'s heading uses `🟢` and
+the words *"A new trend,"* before the number, so the registry check **cannot see it**.
+
+🔴 **Consequence:** a pass obeying `p496`'s instruction exactly would read the highest number as
+`T16` and could reasonably conclude `T13` was free — reintroducing the precise collision `p496`
+spent a section resolving. 🟢 **Fix, and it replaces the old instruction:**
+
+> `grep -no "T[0-9]\+" intel/trends.md | sort -u -t: -k2` — pattern-free, so heading decoration
+> cannot defeat it.
+
+🟢 **Run before being recommended** — because proposing an unverified checker is the defect this
+section is about. Output:
+
+```
+T1 T2 T3 T4 T5 T6 T7 T8 T9 T10 T11 T12 T13 T14 T15 T16 T17 T18 T137 T148
+```
+
+🟢 **`T13` is visible (7 occurrences), the full `T1`–`T18` range resolves, and the `T1xx` series from
+[`agents/trending.md`](../agents/trending.md) shows up too** — which is a bonus: the checker surfaces
+the second registry's numbers, so a future collision between the two ranges would be visible at the
+moment a trend is introduced.
+
+🔵 **This is `T14` applying to itself for the second consecutive pass.** `p496` found the registry
+defective and wrote a checker with the same class of defect: **a validator built from the convention
+it is validating inherits the convention's blind spots.** The replacement greps for the *number*,
+never the decoration. 🔵 **Note also that this KB runs two independent trend registries** — `T1`–`T17`
+in this file, and a `T1xx` series in [`agents/trending.md`](../agents/trending.md) (`T137`, `T148`).
+They do not collide today because the ranges are disjoint, but nothing enforces that.
+
+### 🟡 `T16` needs qualifying after one pass
+
+`T16` (`p496`) states that the layer with the highest legal exposure in education has the **worst
+licence hygiene**, from a sample where **five of eight** new addresses carried no grant.
+
+🔴 **This pass's sample points the other way.** Three new addresses in the same high-exposure
+territory — the EU Annex III functions — split: **`ASUCICREPO/Admissions-AI-Agent` MIT**,
+**`TaiRuiQu/oh-my-paper` MIT**, and the only unlicensed one a **2★ handwriting script** sitting
+*below* the regulated layer rather than in it.
+
+🟡 **`T16` is therefore downgraded from a sector characteristic to a sample observation.** Eleven
+addresses across two passes support neither direction. 🟢 **What survives, and is worth carrying to a
+client:** licence hygiene in this sector's long tail is **unpredictable per repository and
+uncorrelated with how regulated the function is** — which is the operational reason every row in
+this KB is read from bytes rather than from a badge, a listicle or an API field.
+
+### 🆕 `T17` — This KB's enumeration of *ranked* education-AI supply is ~95% complete, so discovery spend should move to drift and function queries
+
+🟢 **Measured, not asserted.** Five ranked discovery axes run through a star-ordered channel this KB
+had declared unavailable: `topic:ai-tutor`, `topic:ai-education`, `topic:knowledge-tracing`,
+`topic:student-information-system`, `topic:proctoring`+`topic:automated-grading`. **59 addresses
+pulled, 56 already on these shelves — 94.9%.** Census:
+[`saturation-census.2026-10-28-p497.tsv`](../evidence/saturation-census.2026-10-28-p497.tsv).
+
+🔴 **The two axes that *are* this sector returned zero.** `topic:ai-tutor` and `topic:ai-education`,
+at every star level down to 100★, produced **nothing** this KB does not hold; several hits appear in
+**200+ files** here.
+
+🟢 **All three new addresses came from the administrative layer** — proctoring, grading, admissions.
+`p496` reached the same place from `IEP`/`accommodations`/`rubric`. **Two passes, independent query
+sets, one answer.**
+
+**Consequences, which are budget decisions:**
+
+1. 🔴 **Ranking legs are spent.** The brief's keyword-and-star queries have returned nothing new for
+   **six** consecutive passes, and this pass shows that is a property of the supply, not of the
+   query — a *better* ranking channel found the same ceiling.
+2. 🟢 **Function-shaped administrative queries are the only productive discovery channel.** Spend
+   there: placement, scheduling, degree audit, credentialing, attendance, early-warning, accessibility.
+3. 🟢 **Re-verification now outranks discovery.** With supply enumerated, the KB's value is in pins,
+   licence bytes, security floors and drift — where `p495` (a security floor), `p496` (a reader
+   defect) and this pass (`rosariosis`'s `mobile` default ref) each found something real.
+
+🔵 **Scope limit, stated so this does not harden into dogma.** 94.9% is saturation **of the ranked,
+starred, topic-tagged population**. It says nothing about repositories that are new, untagged,
+unstarred or not in English — and `oh-my-paper`, found this pass at **1★** with a Chinese-language UI
+on a `v2` default branch, is exactly the kind of address this measurement cannot see.
+
+### 🆕 `T18` — The four functions regulators designate as high-risk are the four with the thinnest open-source supply
+
+🟢 **The convergence is this pass's commercial finding.** Every regime examined names substantially
+the same functions: the EU AI Act **Annex III point 3** (admissions, grading, placement, exam
+proctoring); **Vietnam's Decision 33/2026/QD-TTg** (education among six high-risk sectors, naming
+automated assessment); US states legislating district AI policy over the same decisions.
+
+🔴 **Supply, measured against that list** ([`verticals/solutions.md`](../verticals/solutions.md)
+`p497`):
+
+| designated function | permissive open-source supply |
+|---|---|
+| Admissions | 🔴 **one** asset, **5★**, found `p497` (MIT, ASU) — and it is AWS-Bedrock-bound |
+| Grading | 🟡 thin — `oh-my-paper` (MIT, 1★); `dolos` is MIT and maintained but detects plagiarism, not grades |
+| Placement | 🔴 **nothing**, in any pass |
+| Exam proctoring | 🔴 **nothing permissive** out of **145** repositories on `topic:proctoring` |
+
+🟢 **Read together with `T5`** (the EU's 16-month slip to **2 December 2027**) **this is the sector's
+clearest build signal**: a dated compliance runway on functions where there is almost nothing to
+buy, fork, or compose. 🔴 **And the inverse warning:** a client who expects to *assemble* an
+admissions or proctoring capability from open source will not find the parts. Price those as builds.
+Recipe: [`compose/patterns.md`](../compose/patterns.md) `P497-1`.

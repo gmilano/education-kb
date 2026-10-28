@@ -1,0 +1,5 @@
+repo	default_ref	head_sha	licence_path	http	bytes	sha1	title_line	readme_control	stars
+ASUCICREPO/Admissions-AI-Agent	refs/heads/main	fcbbbb2fe19f	LICENSE	200	1123	8a0aae668604	MIT License / Copyright (c) 2025 ASU Artificial Intelligence Cloud Innovation Centre, powered by AWS	README:200	5
+TaiRuiQu/oh-my-paper	refs/heads/v2	96c5e24c0216	LICENSE	200	1094	f298820afe90	MIT License / Copyright (c) 2026 TaiRuiQu and Oh My Paper contributors	README:200	1
+wongcyrus/gemini-handwriting-grader	refs/heads/main	2849fed23a6f	NONE-of-5	404	-	-	NO-GRANT	README:200	2
+naufaldi/teacher-exam	refs/heads/main	ed5bf6359413	LICENSE	200	1071	25cb945a99ab	MIT License (POSITIVE CONTROL - reproduced p495/p496 bytes exactly, twice this pass)	README:200	-

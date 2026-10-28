@@ -1011,3 +1011,142 @@ independently in two regions now — **26%** of LATAM institutions with a formal
 guidelines (vendor survey). 🔵 **Different instruments, different sources, same conclusion:
 deployment has outrun governance everywhere it has been measured**, and the institutional-delivery
 work that follows is the most portable offer in this KB.
+
+## 🆕 `p497` — `2026-10-28` — **the Annex III function layer is the sellable cut**, and all four regions are read against it
+
+Each regional leg below was run as its own query and **its misses are declared**, the practice
+`p493` established. 🔵 **Channel caveat, unchanged:** `eur-lex.europa.eu`, `arxiv.org` and
+`coe.int` return `ENOTFOUND` from this session, so every instrument cited here is a
+**search-channel read, not a primary one**. Instrument numbers and dates below are
+upstream-asserted; **do not quote them to a client as verified from the official text.**
+
+### 🟢 The cross-region frame this pass adds
+
+Four jurisdictions, four different instruments, **one shared list of functions**: admissions,
+grading, placement, proctoring. The EU names them in Annex III point 3; Vietnam's Decision
+33/2026/QD-TTg names education with automated assessment among six high-risk sectors; US states
+legislate at the district-policy level; LATAM is building capacity before statute.
+
+🔴 **The commercial consequence is the same everywhere and it is this pass's deliverable:** the four
+functions regulators single out are the four where open-source supply is thinnest
+([`verticals/solutions.md`](../verticals/solutions.md) `p497` has the per-function table — one MIT
+admissions asset at 5★, thin grading, **nothing** for placement, **no permissive proctoring at all**
+out of 145 repositories). Governed delivery in that layer is a build, and it is the build clients
+have a dated reason to commission.
+
+### North America
+
+**Policy is at district level and it is now mandatory in a named set of states.** Districts are
+required to adopt AI policies in **Ohio** (deadline **1 July 2026**, with a state model policy
+released) and **Tennessee**; sources add **Maryland** (state education department must develop and
+update guidance), **Idaho** (comprehensive generative-AI framework), **Oklahoma** (before the
+**2027–28** school year) and **Virginia**. Roughly **33–35 states plus Puerto Rico** have issued
+official guidance. More than **1,500** AI-related bills were introduced nationwide this year.
+
+Named instruments: **California A.B. 1159** (proposed — would restrict using student data to train
+AI models), **Alabama H.B. 329** (computer-science course including AI instruction as a graduation
+requirement). Alabama also recommends a *"data usage restriction"* clause in district contracts.
+District signals: **Los Angeles Unified** blocks student-facing generative AI on district devices;
+**Wake County** targets a district-wide policy by autumn 2026.
+
+🟢 **Opportunity.** The mandate is to *have a policy*, and the artefact a district must produce is a
+governed configuration, not a model. Sell the policy-to-configuration pipeline: `P490-5` is the
+pattern, and the ASU admissions agent found this pass is the first US-authored MIT asset to point at
+when the conversation turns to admissions.
+🔴 **Miss declared:** no national US statute; the picture is 50 patchworks and a vendor-blog-heavy
+source base. Florida's proposed rule had a State Board hearing scheduled **16 September 2026** —
+**status not confirmed this pass** and it is now past; re-check before citing.
+
+### EMEA
+
+**The dates are the asset here.** EU AI Act **Annex III point 3** makes AI for admissions, grading,
+placement and exam proctoring high-risk. The **Digital Omnibus, Regulation (EU) 2026/1744**,
+published in the Official Journal **24 July 2026**, defers those Annex III obligations by ~16 months
+to **2 December 2027**. Still in force sooner: **Article 50** chatbot-transparency duties from
+**2 August 2026**, and the **emotion-recognition prohibition**, which has applied to education
+institutions since **February 2025** (subject to the medical/safety exception). The Omnibus softened
+the AI-literacy duty — organisations no longer must *guarantee* a "sufficient level" among staff, but
+literacy measures remain required.
+
+Schools and universities using commercial AI tools are generally **deployers**, carrying their own
+compliance obligations — a state secondary school using a commercial tool to assess student progress
+is responsible for that use.
+
+🟢 **Opportunity.** An **18-month dated runway** on functions with almost no permissive supply is the
+cleanest build-versus-wait signal on these shelves. Globant can be the **provider** (`P490-2`) and
+hold the conformance obligation as the product. Position on the **2 December 2027** date and on the
+deployer/provider split, which most institutions have not yet worked out.
+🔴 **Miss declared:** no EMEA adoption statistics found this pass — the regulatory picture is
+well-sourced, the market-size and usage picture is not. The primary read of the Omnibus text remains
+undischargeable from this session and stays on the human deliverable.
+
+### APAC
+
+**Vietnam's Decision No. 33/2026/QD-TTg** identifies high-risk AI systems across six sectors,
+**education among them**, naming automated assessment and behavioural categories — an EU-style
+risk classification, and the KB's existing entry on it is re-confirmed by this pass's independent
+search. **China** and the **UAE** are the only jurisdictions found running **compulsory national AI
+curricula**, from the 2025–26 school year. **India** is running a **ten-million-teacher** training
+push and folds AI-generated content into its existing intermediary framework (platform rules amended
+**February 2026**); sources disagree on how binding its guidance is. **South Korea** has had a public
+reversal. **Japan**'s AI Promotion Act carries **no fines or prohibitions**; the Cabinet adopted a
+revised AI Basic Plan (**14 July 2026** per one source, **23 December 2025** per another — ⚠️ check).
+**China** has no general AI law but enforces service-type rules, including AI-content labelling from
+**1 September 2025**.
+
+Adoption is uneven: **Singapore** leads, then Australia, Korea, Taiwan, with Japan, India and China
+relatively behind. Japanese firm-level generative-AI use is **34.5%** overall, **63.6%** at
+1,000+ staff, **29.6%** at five or fewer (March 2026).
+
+🟢 **Opportunity.** Multi-jurisdiction routing remains the regional differentiator (`P494-1`), and
+this pass adds a concrete asset: **`oh-my-paper` is an MIT, APAC-origin, Chinese-language K-12
+grading platform** — the first regionally-native permissive asset in the Annex III grading tier,
+however early at 1★. Singapore's IMDA agentic-AI framework (recorded `p494`) remains the most
+on-point instrument for this KB's own product.
+🔴 **Miss declared:** no education-specific adoption rates for Japan, India or China. The Vietnam
+Decision 33 official text is still unread (egress-refused) and stays on the human deliverable; the
+Japan AI Basic Plan date conflict is **unresolved** — two sources, two dates, neither primary.
+
+### LATAM
+
+**The strongest adoption data of any region this pass, from a named primary institution.** The
+**UNESCO IESALC** study of **200 higher-education institutions across 19 countries** found **87%**
+using AI in at least one area and **74%** in teaching and learning, while only **26%** had a formal
+AI strategy. Uptake splits by institution type: **84%** private non-profit, **68%** public, **52%**
+private for-profit. **1 in 2 students** reports confusion about appropriate AI use.
+
+School-level teacher use (OECD TALIS) runs well above the OECD average of 36%: **Brazil 56%**,
+**Chile 55%**, **Colombia 53%**, **Costa Rica 52%**.
+
+Regulation: **Brazil's PL 2.338/2023** is in the Chamber of Deputies (text can still change);
+**Chile** has a government bill using risk-based grammar adapted to local institutions;
+**Colombia** went the policy route with **CONPES 4144** (February 2025). A 2026 Universidad de los
+Andes study counted **716 AI-related regulatory instruments and proposals across 23 countries and
+territories**, **80%+ initiated since 2023** — fragmentation is the regional risk. **UNESCO** opened
+an **Observatory on AI in Education for Latin America and the Caribbean** on **14 April 2026** in
+Santiago, with ECLAC hosting and UNU-IAS co-supporting.
+
+🟢 **Opportunity.** The gap is explicit and quantified: **87% adoption against 26% with a strategy**.
+That 61-point spread is a governance engagement, not a tooling one — institutional AI strategy,
+acceptable-use policy and a sanctioned integrated offering, which is exactly `T1`. Offline-first
+delivery (`P490-3`, Kolibri MIT) still applies for ministry-scale and rural work.
+🔴 **Miss declared:** no LATAM market-size figure found this pass; no LATAM-specific high-risk
+instrument comparable to Annex III or Decision 33 — the region is building **capacity and policy**
+ahead of statute, so a compliance-led pitch does not land here the way it does in EMEA.
+
+### Global
+
+Market size: the estimates still do not agree and the **range remains the finding** — 2026 estimates
+span roughly **$6.4B–$12.5B**, with sources this pass adding **~$12.5B** and **~$12.3B** for 2026 and
+one path of **~$6B (2024) → ~$32B (2030)**. 🔴 **Use the range, never a point**, and the two retired
+figures above stay retired.
+
+Themes converging across sources: AI moving **from pilots to embedded infrastructure** in higher ed
+(admissions, advising, administration); **governance and oversight** displacing tool adoption as the
+institutional priority; **agentic** multi-step AI as the year's development; **purpose-built
+education platforms displacing general chatbots**; teacher adoption keyed to saving **5–10 hours a
+week**; **verified digital credentials** and competency frameworks gaining ground; and rising pressure
+for **explainability where AI influences grades or progression**.
+
+🔴 **Unverified vendor statistics, flagged:** an "83% teaching-assistant deployment" figure and a
+"42% outcome gain" circulate in vendor blogs this pass. **Neither is carried into this KB as data.**

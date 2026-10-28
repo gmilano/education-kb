@@ -583,3 +583,127 @@ on. 🔵 **What it does establish is that this KB's byte-level records are not s
 is `T14` with a measurement attached: of the four recorded figures re-read this pass, **three
 reproduced exactly and one did not**. 🔴 **Re-read a pinned byte count before building a
 recommendation on it**, which is what this pass did and why the error surfaced at all.
+
+## 🆕 `p497` — `2026-10-28` — a verification channel this file declares dead is **alive**, and the shelf gains its first **admissions-layer** asset
+
+Full reads: [`licence-and-stars.2026-10-28-p497.tsv`](../evidence/licence-and-stars.2026-10-28-p497.tsv).
+Census of 59 ranked addresses: [`saturation-census.2026-10-28-p497.tsv`](../evidence/saturation-census.2026-10-28-p497.tsv).
+Narrative: [`trending.md`](trending.md) `p497`. Recipe: [`compose/patterns.md`](../compose/patterns.md) `P497-1`.
+
+### 🟢 Correction to this file's own verification table
+
+The table under *"How every cell here was verified"* above records:
+
+> | stars for arbitrary repos | `api.github.com` | **403, per-repository authorisation only** |
+
+🔴 **That row needs splitting, and the half that changed is the half this KB said mattered most.**
+🔵 **Credit where it is due: `p162` already got this right** and published it as `T148` — the `403`
+is *per-repository*, metadata is recoverable one `add_repo` at a time, **but
+`/search/repositories` is "NOT repository-scoped, so NOT recoverable by attaching"**, so
+*"ranking, star-ordered discovery and new-entrant detection"* were declared unrecoverable —
+*"that limb of `T137` stands and is the one that matters for finding agents nobody has told us
+about."*
+
+🟢 **It is that exact limb which is now open.** The authenticated **search** API answers through
+this session's **MCP** channel for **arbitrary** repositories — star-ordered, topic-filtered,
+returning `stargazers_count`, `license.spdx_id`, `default_branch`, `pushed_at` and `topics` for
+repositories this session has never attached. 🔵 **`T148` is not refuted; it is superseded on one
+limb by a channel it did not test.** `p162` tested raw HTTP to `api.github.com` and was correct
+about it — **re-probed this pass, direct `api.github.com` is still `403`.** The row should read:
+**direct `api.github.com` → `403` (per-repository, as `T148` says); MCP-mediated search API →
+works, including star-ordered ranking over arbitrary repositories.**
+
+🔵 **Unchanged, and re-probed this pass:** `curl -sI https://github.com/<repo>` is still proxy
+`403`. 🔵 **Also unchanged, and this is the important half:** **licence family is still read from
+`raw.githubusercontent.com` at a pinned SHA, never from the API.** The API's `license` field and
+`topics` array are upstream **self-assertions** — `oh-my-paper` literally carries a `mit-license`
+topic — and a self-asserted grant is not a read. 🟢 The channel is calibrated: `DeepTutor` returns
+**46,444★** against the **45,900** this file records from a `p492` page read, six days apart, same
+direction.
+
+### 🔴 No promotions, and this time the reason is measured rather than asserted
+
+**Zero rows added to the permissive shelf.** Three addresses new to this repository were found and
+**all three are below this shelf's floor** (5★, 1★, 2★); they are recorded under *reference designs*
+below, the disposition `p492` established.
+
+🔴 **What is new is that the saturation is now a number.** Five ranked topic axes, 59 addresses,
+**56 already on these shelves — 94.9%**. The two axes that *are* this sector —
+`topic:ai-tutor` and `topic:ai-education`, at every star level down to 100 — returned **zero**
+addresses this KB does not hold. 🔵 **So the standing "discovery channel has looped" note in `p494`
+and `p495` is upgraded from an observation to a measurement:** ranked education-AI supply above
+~40★ is substantially enumerated here, and `p496`'s reading that the drought was a query-shape
+artefact is only half right. The *mechanism* half holds — all three of this pass's finds came from
+function-shaped administrative queries and none from a ranking leg.
+
+### 🆕 Reference designs added this pass
+
+🟢 **[`ASUCICREPO/Admissions-AI-Agent`](https://github.com/ASUCICREPO/Admissions-AI-Agent) — MIT,
+1 123 B, `sha1 8a0aae668604`, SHA `fcbbbb2fe19f`, 5★.** Arizona State University's AI Cloud
+Innovation Centre (copyright line: *"ASU Artificial Intelligence Cloud Innovation Centre, powered by
+AWS"*). Admissions-counsellor agent: understands student needs, answers questions, hands off to
+human advisers. AWS Bedrock AgentCore + Next.js, Salesforce CRM, WhatsApp via Twilio.
+
+🔴 **This closes a gap this file did not know it had.** `admissions` appears in **59** markdown files
+in this KB — all of it regulatory prose, because admissions is an **EU AI Act Annex III point 3**
+high-risk function. **There was no buildable admissions asset anywhere on these shelves.** This KB
+could state the law and name nothing to implement against it. 🟢 At 5★ it stays off the shelf, but a
+named university innovation centre's architecture is a credible thing to read and re-implement, and
+it is the only one held in this layer. 🔴 **Its stack is AWS-managed** (Bedrock AgentCore), so the
+MIT grant covers the orchestration code, **not** a portable runtime — read it for the agent design
+and the adviser-handoff boundary, not as a deployable.
+
+🟢 **[`TaiRuiQu/oh-my-paper`](https://github.com/TaiRuiQu/oh-my-paper) — MIT, 1 094 B,
+`sha1 f298820afe90`, SHA `96c5e24c0216`, `refs/heads/v2`, 1★.** K-12 platform: exam-paper
+recognition, question bank and paper assembly, homework and exams, **AI-assisted marking**,
+wrong-answer review, learning analytics, Docker self-host. APAC-origin, Chinese-language UI. 🔵 Sits
+in the Annex III **grading** tier. At 1★ this is a watch item, not a dependency.
+
+🔴 **[`wongcyrus/gemini-handwriting-grader`](https://github.com/wongcyrus/gemini-handwriting-grader)
+— NO GRANT**, `404` at all five probed paths, SHA `2849fed23a6f`, 2★. Handwriting grading via Gemini
+OCR into Excel/Word/PDF reports. `README.md → 200` at the same SHA proves the tree was reached, so
+the absence is real. **Do not build on it.** Recorded so it stops resurfacing.
+
+### 🔵 A caution against reading a licence trend off eleven addresses
+
+`p496` found **five of eight** new addresses unlicensed and concluded the highest-legal-exposure
+layer in education has the worst licence hygiene in the sector. This pass points the other way:
+**both finds inside the Annex III designated layer are MIT, and the unlicensed one is a 2★ script.**
+
+🔴 **Two passes and eleven addresses support neither generalisation.** Both are true statements about
+their own samples. **Do not carry either to a client as a characteristic of the sector**; what is
+safe to say is that licence hygiene in this sector's long tail is unpredictable per-repository, which
+is why every row in this file is read from bytes.
+
+### 🔴 A defect in this pass's own absence gate, recorded rather than quietly fixed
+
+This KB's absence gate — `grep -rl <address>` across every file — was re-run **after** this pass had
+written its evidence TSVs and returned **`NEW=0`**: all three finds reported as already present,
+because the pass had just written them into its own evidence.
+
+🔴 **The rule.** The gate is valid only against the tree **as the pass found it**: run it before
+writing any artefact, or exclude the pass's own files. The census linked above does the latter, and
+the exclusion is visible in its column header (`kb_files_mentioning_excl_p497`). 🔵 **It belongs
+beside `p496`'s reader defect** — both are instruments returning the answer the pass is looking for.
+`p496`'s false `404` manufactured an unlicensed layer; this one manufactures a drought. 🟢 Neither
+would be caught by a control that can only fail in the same direction as the bug.
+
+### 🔴 The branch-name trap is five variants, and one is a 647★ production system
+
+`git ls-remote --symref` this pass added **`refs/heads/mobile`**
+([`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis), **647★**, a live SIS
+with attendance, gradebook and report cards), **`refs/heads/v2`** (`oh-my-paper`) and
+**`refs/heads/PreProduction`** (`AgnellusX1/GodsEye`) to `p496`'s `19.0` and `develop`.
+
+🔴 **A probe that hard-codes `main` now misreads five repositories on these shelves as nonexistent.**
+`mobile` and `PreProduction` are the dangerous pair — they read as feature branches, so a human
+reviewing the probe output would not flag them either. Census:
+[`branch-ref-census.2026-10-28-p497.tsv`](../evidence/branch-ref-census.2026-10-28-p497.tsv).
+
+### 🟢 Pins: ten of ten stable
+
+Every SHA identical to `p496`. `DeepTutor` byte-stable across **seven** passes (`p490`–`p497`).
+🟢 `canvas-mcp` quiet for a **third** consecutive pass, which retires `p494`'s "~2 moves/day"
+reading. 🔴 **`v1.16.0` = `b3f06c76e435` remains the pin regardless — it is a security floor, and the
+sandbox fix requires Node.js ≥ 22.18.** Sweep:
+[`drift-sweep.2026-10-28-p497.tsv`](../evidence/drift-sweep.2026-10-28-p497.tsv).

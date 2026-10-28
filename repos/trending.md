@@ -3,6 +3,84 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p497` — `2026-10-28` — **🟢 THE STAR-ORDERED DISCOVERY LIMB THAT `T148` DECLARED UNRECOVERABLE IS OPEN — through MCP transport, not the raw HTTP `p162` correctly measured as `403` — so this pass ranked supply instead of guessing at it, across FIVE topic axes. 🔴 Result: 59 ranked addresses, **56 already on these shelves (94.9%)**, and the two axes that ARE this sector — `topic:ai-tutor` and `topic:ai-education` — returned ZERO new addresses at every star level down to 100. 🟢 All three new addresses came from the ADMINISTRATIVE layer (proctoring, grading, admissions), which is the same answer `p496` got from `IEP`/`accommodations`/`rubric` by a different route. 🔴 The branch-name trap is now FIVE variants, not two — `mobile` on a 647★ live SIS, plus `v2` and `PreProduction`. 🟢 Ten of ten pins stable; `canvas-mcp` quiet for a THIRD pass.**
+
+Full reads: [`licence-and-stars.2026-10-28-p497.tsv`](../evidence/licence-and-stars.2026-10-28-p497.tsv).
+The 59-address census: [`saturation-census.2026-10-28-p497.tsv`](../evidence/saturation-census.2026-10-28-p497.tsv).
+Branch-ref census: [`branch-ref-census.2026-10-28-p497.tsv`](../evidence/branch-ref-census.2026-10-28-p497.tsv).
+Narrative, the channel caveats and the gate defect: [`agents/trending.md`](../agents/trending.md) `p497`.
+
+### 🟢 Drift sweep — ten of ten stable
+
+| repo | KB pin | `p497` `git ls-remote --symref` | verdict |
+|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `47394125364b` | `47394125364b`, `refs/heads/main` | 🟢 **third consecutive quiet pass** — `p494`'s "~2 moves/day" is retired. 🔴 Pin **`v1.16.0` = `b3f06c76e435`**: security floor, needs **Node ≥ 22.18** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `a31d82624c27` | `a31d82624c27` | 🟢 **7 consecutive passes byte-stable** (`p490`–`p497`). Stars now **46,444** via the new channel (was 45,900 at `p492`) |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `70859b42e714` | `70859b42e714` | 🟢 stable (MIT) |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `7d9e9052bc5a` | `7d9e9052bc5a` | 🟢 stable (AGPL-3.0). **1,316★** this pass |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `196c547291da` | `196c547291da` | 🟢 stable (BSD-3-Clause) |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `46a5d7d40082` | `46a5d7d40082`, **`refs/heads/19.0`** | 🟢 stable. Branch-trap variant 1 of 5 |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `e137ca47cbec` | `e137ca47cbec` | 🟢 stable (MIT) |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `bc73ecf9cf71` | `bc73ecf9cf71`, **`refs/heads/develop`** | 🟢 stable. Branch-trap variant 2 of 5 |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | `21a43a395ab4` | `21a43a395ab4` | 🟢 stable — the MIT evaluation instrument |
+| [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam) | `ed5bf6359413` | `ed5bf6359413` | 🟢 stable, **and this pass's probe control twice**: MIT, 1 071 B, `sha1 25cb945a99ab` reproduced exactly both times |
+
+### 🔴 The branch-name trap: three new variants, five in total
+
+| repo | `default_ref` | ★ | why it bites |
+|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | **`refs/heads/mobile`** | **647** | 🔴 **NEW `p497`, and the worst of the five.** A live, maintained SIS — attendance, gradebook, report cards — whose default ref looks like a feature branch. A `main`-hardcoded probe reports it **nonexistent** |
+| [`TaiRuiQu/oh-my-paper`](https://github.com/TaiRuiQu/oh-my-paper) | **`refs/heads/v2`** | 1 | 🔴 NEW `p497`. Version-tag-as-default |
+| [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) | **`refs/heads/PreProduction`** | 30 | 🔴 NEW `p497`. Environment-name-as-default; repo is archived |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `refs/heads/19.0` | — | recorded `p496` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `refs/heads/develop` | — | recorded `p496` |
+
+🔴 **Five variants means the pattern is not an oddity, it is the norm in this sector's long tail**:
+`19.0`, `develop`, `mobile`, `v2`, `PreProduction`. Two of the five (`mobile`, `PreProduction`) are
+indistinguishable from feature branches by eye, so a human reviewing a probe's output would not
+catch them either. 🟢 `git ls-remote --symref` resolves every one for free and every row in this
+file uses it.
+
+### 🆕 Three addresses absent from this repository
+
+🟢 **Gate applied:** `grep -rl` across all 5,576 files, 🔴 **excluding this pass's own evidence
+files** — see the gate defect in [`agents/trending.md`](../agents/trending.md) `p497`, which is why
+the census column is headed `kb_files_mentioning_excl_p497`.
+🟢 **`README.md → 200` at the same SHA for all three**, so the unlicensed one is a real absence.
+
+| repo | ★ | grant at SHA | verdict |
+|---|---|---|---|
+| [`ASUCICREPO/Admissions-AI-Agent`](https://github.com/ASUCICREPO/Admissions-AI-Agent) | 5 | 🟢 **MIT**, 1 123 B, `sha1 8a0aae668604` (`fcbbbb2fe19f`) | 🟢 **Read and re-implement** — Arizona State University's AI Cloud Innovation Centre. **The first admissions-layer asset on these shelves**: `admissions` appears in 59 files here, all of it regulatory prose about an Annex III high-risk function, with nothing to build from until now. Bedrock AgentCore + Next.js + Salesforce + Twilio/WhatsApp. 🔴 5★ — below shelf floor, reference design only |
+| [`TaiRuiQu/oh-my-paper`](https://github.com/TaiRuiQu/oh-my-paper) | 1 | 🟢 **MIT**, 1 094 B, `sha1 f298820afe90` (`96c5e24c0216`, **`refs/heads/v2`**) | 🟢 **Watch** — K-12 platform: exam-paper recognition, question bank, paper assembly, **AI-assisted marking**, wrong-answer review, learning analytics; Docker self-host. APAC-origin, Chinese-language UI. Sits in the Annex III grading tier. 🔵 Its `mit-license` **topic** is an owner self-assertion; the MIT finding here is from the bytes |
+| [`wongcyrus/gemini-handwriting-grader`](https://github.com/wongcyrus/gemini-handwriting-grader) | 2 | 🔴 **NO GRANT** — `404` at all 5 probed paths (`2849fed23a6f`) | 🔴 **Do not build on.** Handwriting grading via Gemini OCR → Excel/Word/PDF reports. `README:200` proves the tree was reached, so the absence is real |
+
+### 🔴 The zero rows are the finding
+
+| axis | pulled | new | reading |
+|---|---|---|---|
+| `topic:ai-tutor` `stars:>100` | 15 | **0** | 🔴 the core axis of this sector is **enumerated**; several hits appear in **200+ files** here |
+| `topic:ai-education` `stars:>100` | 14 | **0** | 🔴 same, and it includes the *teaching-AI-to-humans* category collision `p496` named |
+| `topic:knowledge-tracing` | 15 of 96 | **0** | 🔴 the whole research layer (pyKT, GKT, SAKT, DTransformer, EduStudio, pyedmine…) is already here |
+| `topic:student-information-system` | 4 of 180 | **0** | 🟢 rosariosis / academico / openSIS / koakademy all held — but this axis gave the `mobile` branch trap |
+| `topic:proctoring` + `topic:automated-grading` | 14 | **2** | 🟢 the productive axis |
+| function: admissions / enrolment / advising | 1 | **1** | 🟢 the productive axis |
+
+🔵 **Do not read "0 new" as "nothing is happening".** It means this KB's enumeration of *ranked,
+starred* education-AI supply is close to complete, so future passes buy nothing from ranking legs
+and should spend their budget on **function-shaped administrative queries** and on **drift and
+licence re-verification of what is already shelved**.
+
+### 🔵 Declared gaps — searched, nothing found
+
+- **No MIT education ERP.** ERPNext GPL-3.0, Dolibarr GPL-3.0, Odoo Community LGPL-3.0, OpenEduCat
+  LGPL-3.0. Confirms `T2` rather than narrowing it.
+- **No new permissive proctoring asset** out of 145 repositories on `topic:proctoring` — for an
+  Annex III function. The credible institutional two (`SafeExamBrowser` 357★,
+  `vardanagarwal/Proctoring-AI` 633★) were already shelved.
+- **`curl -sI https://github.com/…` still `403`**, re-probed. `api.github.com` direct still `403`;
+  only the MCP-mediated API answers.
+
+---
 
 ## 🆕 `p496` — `2026-10-28` — **🟢 EIGHT ADDRESSES NEW TO ALL 5,547 FILES HERE — the first multi-address haul since `p491` — and the mechanism matters more than the haul: they came from FUNCTION-shaped queries (`IEP`, `accommodations`, `rubric`), while the brief's keyword-and-star ranking legs saturated for a FIFTH pass and returned 74,800★ and 1,100★ CURRICULA. 🟢 The cause is now nameable: GitHub's `ai-education` topic means *teaching AI to humans*, which is a disjoint and far larger category than *AI applied to teaching*. 🔴 Five of the eight new addresses carry NO GRANT. 🟢 Ten of ten pins stable, and two more instances of the branch-name trap (`openeducat_erp` → `19.0`, `oppia` → `develop`).**
 

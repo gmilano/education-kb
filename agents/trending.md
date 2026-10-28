@@ -3,6 +3,176 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p497` — `2026-10-28` — **🟢 THE ONE DISCOVERY LIMB THIS KB DECLARED UNRECOVERABLE IS OPEN, AND THE FIRST THING IT DID WAS MEASURE THE DROUGHT INSTEAD OF DESCRIBING IT. `T148` (`p162`) established that GitHub's `403` is per-repository and reversible by attaching, but that `/search/repositories` is NOT — so star-ordered discovery and new-entrant detection were declared gone, *"the limb that matters for finding agents nobody has told us about."* 🟢 That limb answers through this session's **MCP** transport for ARBITRARY repositories; raw `api.github.com`, which is what `p162` actually measured, is STILL `403`. 🔴 So the drought is now a NUMBER, not a mood: 59 ranked addresses pulled across FIVE topic axes, **56 already on these shelves — 94.9%**. 🔴 That partly refutes `p496`'s headline. `p496` said the drought broke "because the query shape changed, not because supply did"; the mechanism half is CONFIRMED (all three of this pass's finds came from function-shaped queries, none from a ranking leg) but the implication is wrong — ranked education-AI supply above ~40★ is ~95% enumerated here, so what `p496` read as a query artefact is substantially a real ceiling. 🟢 Three new addresses, and the licence split inverts `p496`'s: the two sitting INSIDE the EU's Annex III high-risk layer are both MIT; the one below it carries no grant. 🟢 Ten of ten pins stable. 🔴 And this pass caught a defect in its OWN absence gate — it reported its own finds as PRESENT.**
+
+Full reads: [`licence-and-stars.2026-10-28-p497.tsv`](../evidence/licence-and-stars.2026-10-28-p497.tsv).
+The 59-address census: [`saturation-census.2026-10-28-p497.tsv`](../evidence/saturation-census.2026-10-28-p497.tsv).
+Drift sweep: [`drift-sweep.2026-10-28-p497.tsv`](../evidence/drift-sweep.2026-10-28-p497.tsv).
+Branch-ref census, now **five** variants: [`branch-ref-census.2026-10-28-p497.tsv`](../evidence/branch-ref-census.2026-10-28-p497.tsv).
+Shelf dispositions: [`agents/top.md`](top.md) `p497`. Recipe: [`compose/patterns.md`](../compose/patterns.md) `P497-1`.
+
+### 🟢 The channel finding, and exactly how far to trust it
+
+Every pass from `p490` to `p496` recorded the same two dead ends: `curl -sI https://github.com/<repo>`
+→ **proxy `403`**, and `api.github.com` → **`403`, per-repository authorisation only**.
+
+🔵 **The second entry was not sloppy — `p162` had already nailed it as `T148`:** the `403` is
+*per-repository* and reversible one `add_repo` at a time, **but `/search/repositories` is "NOT
+repository-scoped, so NOT recoverable by attaching"**. `T148` therefore declared *"ranking,
+star-ordered discovery and new-entrant detection"* unrecoverable — *"that limb of `T137` stands and
+is the one that matters for finding agents nobody has told us about."*
+
+🟢 **That is the limb this pass opens, and it opens through a channel `p162` never tested.** The
+authenticated **search** API answers via this session's **MCP** channel for **arbitrary**
+repositories — star-ordered, topic-filtered — returning `stargazers_count`, `license.spdx_id`,
+`default_branch`, `pushed_at` and `topics` for repositories never attached to this session.
+
+🔴 **So `T148` is superseded on one limb, not refuted.** `p162` tested raw HTTP and was right about
+raw HTTP: **re-probed this pass, direct `api.github.com` is still `403`.** The distinction that
+matters is **transport**, not endpoint — and no pass since `p162` re-tested the endpoint through a
+different transport.
+
+🔵 **`curl -sI` against `github.com` is still `403` — re-probed this pass, unchanged.** The brief's
+instruction to verify URLs with `curl -sI` therefore still cannot be followed literally here, and
+`git ls-remote --symref` remains this KB's existence oracle.
+
+🟢 **Calibration, because an unvalidated channel is worth nothing.** Pointed at
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor), whose stars `p492`/`p493` read off the
+repo page at **45,900**, the channel returns **46,444** — six days later, same order, same
+direction. Apache-2.0 matches the bytes already pinned here.
+
+🔴 **The limit, and it is a licence limit.** The channel's `license` field and the `topics` array are
+**upstream self-assertions**, not reads. `TaiRuiQu/oh-my-paper` carries a literal `mit-license`
+topic; that is the repository owner's claim about their own repository. **Every licence below is
+still read from `raw.githubusercontent.com` at a pinned SHA**, and the new channel is used only for
+ranking, star counts and `default_branch`. 🔵 On this one repository the claim and the bytes agree —
+which is evidence about this repository, not about the field.
+
+### 🔴 The defect in this pass's own absence gate
+
+The gate this KB runs — `grep -rl <address>` across every file — was run a second time **after**
+this pass had written its evidence TSVs. It returned **`NEW=0`**: all three finds reported as
+already present, because the pass had just written them into its own evidence.
+
+🔴 **The rule this establishes.** The absence gate is only valid against the tree **as the pass
+found it**. Either run it before writing any artefact, or exclude the pass's own files
+(`grep -v p497`) — the census linked above does the latter and the exclusion is visible in its
+column header. 🔵 **Why it belongs next to `p496`'s reader defect:** both are failures where the
+instrument reports the answer the pass wants. `p496`'s false `404` manufactured an unlicensed
+layer; this one manufactures a drought. A KB that measures its own saturation needs the gate to be
+honest about *when* it looked.
+
+### 🔴 The saturation measurement — five axes, 59 addresses, 56 already here
+
+| discovery axis | ranked addresses pulled | already on these shelves | new |
+|---|---|---|---|
+| `topic:ai-tutor` `stars:>100` | 15 | 15 | **0** |
+| `topic:ai-education` `stars:>100` | 14 | 14 | **0** |
+| `topic:knowledge-tracing` (96 total) | 15 | 15 | **0** |
+| `topic:student-information-system` (180 total) | 4 | 4 | **0** |
+| `topic:proctoring` + `topic:automated-grading` | 14 | 12 | **2** |
+| function-shaped: admissions / enrolment / advising | 1 | 0 | **1** |
+| **total** | **59** | **56** | **3** |
+
+🔴 **Read the zero rows first.** `topic:ai-tutor` and `topic:ai-education` — the two axes that
+address this sector's core — returned **nothing** this KB does not hold, at every star level down
+to 100. Several addresses came back referenced in **200+ files** here. That is not a query-shape
+problem; the tutoring layer is enumerated.
+
+🟢 **And read where the three finds came from: the administrative layer.** Proctoring, grading and
+admissions produced all of them. `p496` reached the same conclusion from `IEP`/`accommodations`/
+`rubric`. **Two passes, independent query sets, same answer: the function-shaped administrative
+layer is where this sector's unenumerated supply still is.**
+
+### 🟢 The three addresses, and why the licence split is the commercially interesting part
+
+🔴 **`ASUCICREPO/Admissions-AI-Agent` — MIT, 1 123 B, `sha1 8a0aae668604`, SHA `fcbbbb2fe19f`, 5★.**
+Copyright line: *"ASU Artificial Intelligence Cloud Innovation Centre, powered by AWS"* — Arizona
+State University's CIC. An admissions-counsellor agent on AWS Bedrock AgentCore + Next.js, wired to
+Salesforce CRM and WhatsApp via Twilio.
+
+🟢 **This is the finding that matters, and it is about an absence this KB did not know it had.** The
+string `admissions` appears in **59** markdown files here — entirely as *regulatory prose*, because
+admissions is an EU AI Act Annex III high-risk function. **Until this pass there was no buildable
+admissions asset anywhere on these shelves.** The KB could tell a client what the law says about
+admissions AI and could not name one thing to build it from. That gap is now closed by a
+university-authored MIT reference design.
+
+🔴 **`TaiRuiQu/oh-my-paper` — MIT, 1 094 B, `sha1 f298820afe90`, SHA `96c5e24c0216`, `refs/heads/v2`, 1★.**
+Chinese-language K-12 platform: paper/exam recognition, question bank and paper assembly, homework
+and exams, **AI-assisted marking**, wrong-answer review, learning analytics; Docker self-host.
+🟢 **APAC-origin, MIT, and it sits squarely in the Annex III grading tier.**
+
+🔴 **`wongcyrus/gemini-handwriting-grader` — NO GRANT at any of five probed paths, SHA `2849fed23a6f`, 2★.**
+Handwriting grading via Gemini OCR with Excel/Word/PDF report generation. `README.md → 200` at the
+same SHA proves the tree was reached, so this is a **real absence of a licence, not a probe failure**
+— the distinction `p496`'s reader bug destroyed and this pass re-establishes with a control that
+reproduced `naufaldi/teacher-exam` at **1 071 B, `sha1 25cb945a99ab`** twice.
+
+🟢 **The inversion worth naming.** `p496` found five of eight new addresses unlicensed and concluded
+that the highest-legal-exposure layer in education had the worst licence hygiene. This pass's
+administrative finds point the other way: **both addresses inside the Annex III designated layer are
+MIT, and the unlicensed one is the 2★ hobby script.** 🔵 Two passes, 11 addresses — far too few to
+call a trend. **Do not report either direction to a client as a sector characteristic.**
+
+### 🔴 All three finds are below this shelf's floor — they are reference designs, not shelf rows
+
+5★, 1★ and 2★. None goes into the permissive table in [`top.md`](top.md); all three are recorded
+there as **reference designs**, the disposition `p492` established for its 0★ find. 🟢 **For the
+admissions agent this is a disposition, not a dismissal:** a 5★ repository authored by a named
+university innovation centre is a credible architecture to read and re-implement, and it is the only
+one this KB has in that layer.
+
+### 🟢 The regulatory convergence — why the administrative layer is where the money is
+
+EU AI Act **Annex III point 3** designates education AI as high-risk specifically for **admissions,
+grading, placement and exam proctoring**. The **Digital Omnibus, Regulation (EU) 2026/1744**,
+published in the Official Journal on **24 July 2026**, defers those Annex III obligations to
+**2 December 2027**; Article 50 chatbot-transparency duties still bite from **2 August 2026**, and
+the emotion-recognition prohibition has applied in education since **February 2025**.
+
+🔵 **Secondary, and flagged as such.** `eur-lex.europa.eu` returns `ENOTFOUND` from this session
+(`p495`), so the Omnibus citation is a **search-channel read, not a primary one**, and it joins the
+named human deliverable. **Do not quote the regulation number to a client as verified from the OJ.**
+
+🟢 **The commercial reading, which is this pass's deliverable.** The four functions the EU singles
+out as high-risk are the same four where this KB's shelf was emptiest and where both of this pass's
+MIT finds landed. An 18-month compliance runway on a function with almost no permissive open-source
+supply is the clearest build-versus-wait signal on these shelves. Recipe: `P497-1`.
+
+### 🟢 Drift sweep — ten of ten stable, and `canvas-mcp` is now quiet for a third pass
+
+Every SHA came back **identical to `p496`**. 🟢 `canvas-mcp` has not moved for **three** consecutive
+passes, which retires `p494`'s "~2 moves/day" reading for good — that was a bad week, not a cadence.
+🔴 **Pin `v1.16.0` = `b3f06c76e435` regardless: it is a security floor, not a drift preference**, and
+the Node.js ≥ 22.18 condition on the sandbox fix is unchanged. `DeepTutor` is byte-stable across
+**seven** passes (`p490`–`p497`).
+
+### 🔴 The branch-name trap is five variants, not two
+
+`p496` recorded `19.0` and `develop`. This pass adds three, each confirmed by
+`git ls-remote --symref`: **`refs/heads/mobile`** on
+[`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (**647★** — the
+highest-star instance yet, and a live SIS), **`refs/heads/v2`** on `oh-my-paper`, and
+**`refs/heads/PreProduction`** on `AgnellusX1/GodsEye`.
+
+🔴 **A licence probe that hard-codes `main` now misreads five repositories on these shelves as
+nonexistent, one of them a 647★ student information system.** `mobile` and `PreProduction` are the
+dangerous kind: they look like feature branches, so a human reviewing the probe would not flag them
+either. `git ls-remote --symref` resolves all five for free.
+
+### 🔵 Declared gaps — searched this pass, nothing found
+
+- **No MIT-licensed education ERP exists.** Searched explicitly. ERPNext is GPL-3.0, Dolibarr
+  GPL-3.0, Odoo Community LGPL-3.0, OpenEduCat LGPL-3.0. This **confirms** `T2`'s copyleft thesis at
+  the ERP layer rather than narrowing it.
+- **No permissive proctoring stack.** `topic:proctoring` returned 145 repositories; the two credible
+  institutional ones (`SafeExamBrowser`, `vardanagarwal/Proctoring-AI`) were already here, and the
+  layer produced no new permissive asset — for an Annex III function.
+- **arXiv, EUR-Lex and `coe.int` remain `ENOTFOUND`** from this session. Four hosts in the
+  egress-refusal class, unchanged; the human deliverable `p494`–`p496` named still stands.
+
+---
 
 ## 🆕 `p496` — `2026-10-28` — **🟢 THE DISCOVERY DROUGHT BROKE AFTER FIVE PASSES, AND IT BROKE BECAUSE THE QUERY SHAPE CHANGED, NOT BECAUSE SUPPLY DID. Eight addresses absent from all 5,547 files here — the first multi-address haul since `p491` — and every one came from a FUNCTION-shaped query (`IEP`, `accommodations`, `rubric`) rather than the brief's keyword-and-star ranking legs. 🔴 The licence split is the headline and it inverts this sector's general picture: FIVE OF EIGHT CARRY NO GRANT. The special-education layer has the highest legal exposure in education (IDEA, §504, RPwD) and the worst licence hygiene on these shelves. 🔴 And this pass caught a bug in its OWN reader that would have published "the whole layer is unlicensed" — a control row with a KNOWN BYTE COUNT caught it; the branch control this KB already runs would NOT have. 🟢 Ten of ten pins stable; `canvas-mcp` quiet for a second pass, so `p494`'s "twice a day" was a bad week, not a cadence.**
 

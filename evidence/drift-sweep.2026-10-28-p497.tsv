@@ -1,0 +1,11 @@
+repo	kb_pin_p496	p497_head_sha	default_ref	verdict
+vishalsachdev/canvas-mcp	47394125364b	47394125364b	refs/heads/main	STABLE-3rd-consecutive-quiet-pass
+HKUDS/DeepTutor	a31d82624c27	a31d82624c27	refs/heads/main	STABLE-7-passes-p490..p497
+THU-MAIC/OpenMAIC	70859b42e714	70859b42e714	refs/heads/main	STABLE
+HugeCatLab/ChatTutor	7d9e9052bc5a	7d9e9052bc5a	refs/heads/main	STABLE
+Open-TutorAi/open-tutor-ai-CE	196c547291da	196c547291da	refs/heads/main	STABLE
+openeducat/openeducat_erp	46a5d7d40082	46a5d7d40082	refs/heads/19.0	STABLE-branch-trap-variant-1
+Selleo/mentingo	e137ca47cbec	e137ca47cbec	refs/heads/main	STABLE
+oppia/oppia	bc73ecf9cf71	bc73ecf9cf71	refs/heads/develop	STABLE-branch-trap-variant-2
+AI-for-Education/pedagogy-benchmark	21a43a395ab4	21a43a395ab4	refs/heads/main	STABLE
+naufaldi/teacher-exam	ed5bf6359413	ed5bf6359413	refs/heads/main	STABLE-probe-control

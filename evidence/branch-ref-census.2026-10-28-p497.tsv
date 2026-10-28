@@ -1,0 +1,6 @@
+repo	default_ref	variant	stars	note
+openeducat/openeducat_erp	refs/heads/19.0	version-number	-	recorded p496
+oppia/oppia	refs/heads/develop	develop	-	recorded p496
+francoisjacquet/rosariosis	refs/heads/mobile	mobile	647	NEW p497 - highest-star instance; a main-hardcoded probe reads this SIS as nonexistent
+TaiRuiQu/oh-my-paper	refs/heads/v2	version-tag	1	NEW p497
+AgnellusX1/GodsEye	refs/heads/PreProduction	environment-name	30	NEW p497 - archived repo

@@ -774,3 +774,90 @@ claims the first.
   is tolerable precisely because they are *knowledge packs and renderers* rather than runtimes: the
   value is the pinned regulatory content, which a fork freezes safely. 🔴 It would not be tolerable
   for the agent runtime, which is why that slot is `smolagents` (Apache-2.0, 30,100★).
+
+## 🆕 `P497-1` — Admissions triage agent with the **decision** kept out of the model 🟢
+
+**For:** a university or ministry that wants AI in admissions before **2 December 2027**, when EU AI
+Act Annex III point 3 obligations bite — or a US district under a state AI-policy mandate (Ohio,
+Tennessee, Maryland, Idaho, Oklahoma, Virginia).
+
+**Why this pattern exists:** admissions is a **designated high-risk function in every regime this KB
+tracks**, and until `p497` there was **no buildable admissions asset on these shelves** — 59 files of
+regulatory prose, nothing to implement (`T18`). There is now exactly one, at 5★.
+
+### The parts, each with its licence read from bytes at a pinned SHA
+
+| role | repo | licence | pin | why this one |
+|---|---|---|---|---|
+| **Reference architecture** (read, re-implement — do not depend) | [`ASUCICREPO/Admissions-AI-Agent`](https://github.com/ASUCICREPO/Admissions-AI-Agent) | **MIT**, 1 123 B, `sha1 8a0aae668604` | `fcbbbb2fe19f` | 🟢 The only admissions agent on these shelves, authored by **Arizona State University's AI Cloud Innovation Centre**. Its adviser-handoff boundary is the part that carries the compliance story. 🔴 **5★ and AWS-Bedrock-AgentCore-bound** — the MIT grant covers orchestration, not a portable runtime |
+| **Agent runtime** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | Apache-2.0 | `96f33faaf028` | Minimal code-writing loop; keeps the orchestration yours and portable off Bedrock |
+| **System of record** | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | **GPL-2.0**, 15 214 B, `sha1 58cb1cfbf839` | `fa5f4b66caf4` | Holds applicants, enrolments, grades. 🔴 **Default ref is `refs/heads/mobile`** — resolve the symref or you clone nothing |
+| *(higher-ed alternative)* | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | `46a5d7d40082`, **`refs/heads/19.0`** | Admissions + fees + timetable on Odoo |
+| **Eval harness** | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | `21a43a395ab4` | The licensed evaluation instrument (`p493`) |
+
+🔴 **Licence boundary, and it decides the architecture.** `rosariosis` is **GPL-2.0** and
+`openeducat_erp` **LGPL-3.0**. The agent must sit **out of process** and talk over HTTP, never link
+the SIS as a library. That is not a style preference — linking makes Globant's agent a derivative
+work of a copyleft SIS. There is **no permissive education SIS or ERP** to avoid this with
+([`repos/foundations.md`](../repos/foundations.md) `p497`, settled).
+
+### Wiring
+
+```
+applicant submits
+      │
+      ▼
+┌─────────────────────────────────────────────────────┐
+│ smolagents orchestrator  (Apache-2.0, yours)        │
+│                                                     │
+│  1. EXTRACT    transcript/docs → structured fields   │
+│  2. CHECK      eligibility rules in DETERMINISTIC    │
+│                CODE — not the model  ◄──── P492-1    │
+│  3. EXPLAIN    model drafts rationale TEXT ONLY      │
+│  4. ROUTE      complete / incomplete / needs-human   │
+└───────────────┬─────────────────────────┬───────────┘
+                │ HTTP (never linked)     │
+                ▼                         ▼
+        rosariosis / openeducat     human adviser queue
+        (GPL-2.0 / LGPL-3.0)        ← EVERY admit/deny
+                                       decision lands here
+```
+
+### The four rules that make this conformant rather than merely working
+
+1. 🔴 **The model never decides.** It extracts, explains and routes. Admit/deny/waitlist is produced
+   by rule code or by a human. This is `P492-1`'s arithmetic rule generalised from grading to
+   admissions: **the model touches no number and no outcome.**
+2. 🔴 **Eligibility rules are code, versioned, and replayable.** Given an applicant record and a
+   ruleset version, the outcome must be reproducible without an LLM call. That is what you show a
+   regulator.
+3. 🟢 **Every decision has a named human.** The ASU design's adviser-handoff is the part to copy. An
+   Annex III high-risk system needs demonstrable human oversight, and "a human could have looked" is
+   not demonstrable — log who did.
+4. 🔴 **No emotion recognition, anywhere.** Banned outright in EU education since **February 2025**
+   (`T6`), interview video included. Do not add sentiment scoring to an applicant interview.
+
+### Transparency, which bites sooner than the high-risk rules
+
+🔴 **Article 50 chatbot-transparency duties apply from 2 August 2026 — already in force.** If the
+applicant-facing surface is conversational, it must disclose it is an AI. 🟢 **Build that in from day
+one**; it is cheap now and it is a finding later. The **2 December 2027** Annex III date is the
+runway for the rest.
+
+### What to tell the client about the gaps
+
+🔴 **Placement and proctoring have no permissive open-source supply at all** — nothing for placement
+in any pass, and nothing permissive out of 145 `topic:proctoring` repositories (`T18`). If the
+engagement scope creeps into either, **re-price it as a build.** Do not promise composition where
+there are no parts.
+
+🔵 **Both regulatory citations here are search-channel reads.** `eur-lex.europa.eu` is `ENOTFOUND`
+from this session (`p495`), so Regulation (EU) 2026/1744 and the Annex III point 3 scoping are
+upstream-asserted. 🔴 **Have counsel confirm the dates against the Official Journal before they go in
+a statement of work.**
+
+### Effort
+
+**8–10 weeks** to a governed pilot: 2 weeks reading and re-implementing the ASU design off Bedrock,
+2 weeks rule engine and replay harness, 2 weeks SIS integration over HTTP, 2 weeks oversight logging
+and Article 50 surface, 2 weeks evaluation against `pedagogy-benchmark` plus counsel review.
