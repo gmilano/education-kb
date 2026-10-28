@@ -2255,3 +2255,161 @@ presents as one artefact.
 | `open source platform education LMS SIS ERP MIT Apache 2026 self-hosted` | 🔴 **nine of nine results from one vendor's own domain** (`openeducat.org`, eight languages). No MIT- or Apache-licensed education ERP surfaced — consistent with `p501`'s dedicated query finding none |
 | `top open source AI agents education 2026 github MIT` | 🔴 **generic agent-framework listicles**; the only education-adjacent hits were an awesome-list category and a course. The GitHub REST API is strictly better for this question and is what this pass used |
 | `github trending education AI 2026` | 🔴 **no live trending list** — aggregator pages and opinion posts with unverified star counts |
+
+## 🆕 `p504` — `2026-10-28` — **🔴 THE GLOBAL DOLLAR FIGURE FOR THIS SECTOR IS NOT KNOWABLE TO BETTER THAN 3.1× FROM ANY SOURCE REACHABLE HERE, and this file should stop implying a point estimate. 🟢 LATAM's governance deficit is re-confirmed on two independent studies. 🔴 EMEA returned no education regulator, ministry, university or vendor at all — the largest declared miss in this pass — and the AI Act's education provisions remain UNREAD rather than inferred.**
+
+🔴 **Three market-research houses, read this pass for the SAME year:**
+
+| source | AI-in-education, 2026 | forward |
+|---|---|---|
+| The Business Research Company | **$10.6 B** | +40.9 % y/y |
+| Persistence Market Research | **$3.7 B** | → $14.1 B by 2033 (21 % CAGR) |
+| Grand View / GII summary | **$11.4 B** | → $57.2 B by 2033 |
+
+🔴 **Spread: 3.1× on the same year; the 2033 endpoints differ by 4.1×.** 🔵 All three are
+market-research or vendor publications, none is an independent survey, and no methodology is
+readable from here. **Every absolute dollar figure in this file is directional.** The only claim all
+three support is direction: North America largest (~42 % share, Persistence), APAC fastest-growing.
+🟢 **This is the same defect class this file already named** when it retired "134 bills / 31 states"
+as one tracker among four disagreeing by 2.6× — a single-source figure quoted as fact.
+
+🔵 **One measured share worth more than the forecasts**, because it is an observed series rather
+than a projection: schools offering teacher AI professional development went **29 % (early 2024) →
+50 % (late 2025)** (IMARC-derived summary).
+
+## Opportunities by region — `p504`
+
+### North America
+
+🟢 **The regional series and the global share cannot both be right, and the regional one is
+narrower.** MarketsandMarkets puts NA AI-in-education at **~$951 M (2024) → ~$2.3 B (2029), 15.9 %
+CAGR** — about a fifth of the global 2026 figure above, in a region those same global sources credit
+with ~42 % of it. 🔴 **Flagging the contradiction rather than averaging it.**
+
+🟢 **The sellable gap here is governance, not capability:** **only ~10 % of institutions have formal
+AI guidelines**, **~71 % of US teachers report no AI training**, against a **36 %** NA share of
+regional adoption. 🔵 Regulation is genuinely fragmented — decisions sit with districts and
+individual universities; **Colorado** and **Texas** are named as introducing piecemeal state
+requirements; there is no federal education-AI rule to design against. Canada's **AIDA** is cited as
+the responsible-AI foundation, 🔴 **but its 2026 status is NOT confirmed by anything read this
+pass** — do not brief a client on it without a primary check. Platform-tier players named: **IBM,
+Microsoft, Google**, in a market the same source calls *"highly fragmented"*.
+
+🟢 **Opportunity, placed:** teacher-facing AI with a human review step, sold as *governance plus
+training* rather than as a tutor. The permissive assets are already shelved and byte-verified —
+[`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) (Apache-2.0,
+**598★**) and [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills)
+(Apache-2.0, **40★**) ship the rubrics **and** the evals, which is precisely what a district with no
+AI policy cannot write for itself.
+
+### EMEA
+
+🔴 **DECLARED MISS, and the largest in this pass.** The regional query returned **no education
+ministry, no university, no edtech vendor, no education-specific regulator**. What came back was
+enterprise-AI commentary: CompTIA's IT Industry Outlook 2026 on AI fluency — 🔴 **whose sample is
+1,012 professionals in the United States, so it is not regional evidence at all** — and a Workday
+study reporting **38 % of EMEA organisations have yet to begin piloting**, 🔴 **dated 2023, stale by
+three years**.
+
+🔵 **The EU AI Act is named in those sources as "the first comprehensive AI regulation", and nothing
+further.** This pass did **not** verify its education provisions. The thing an engagement actually
+needs — whether education and vocational training systems are classified **high-risk**, and what
+conformity obligations follow — is **unread here**. 🔴 **Recorded as an informed gap rather than
+inferred: `Gap 504-D` — read the AI Act's education annex from EUR-Lex, a primary source, not a
+vendor blog.** 🔵 This base already carries a Vietnam education-high-risk tier pinned to an
+instrument (`p492`); EMEA deserves the same treatment and does not yet have it.
+
+🟢 **What this file can still say about EMEA stands on licence reads, not market copy.** The
+permissive EMEA-origin supply clusters on the learner-model and analytics layer:
+[`beltromatti/get-it`](https://github.com/beltromatti/get-it) (🇮🇹, Apache-2.0 §6-edited,
+**1,138★**), [`openfun/ralph`](https://github.com/openfun/ralph) (🇫🇷, **51★**) and
+[`openfun/warren`](https://github.com/openfun/warren) (🇫🇷, **17★**),
+[`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) (🇩🇪, **505★**, served off
+`release_11`), [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (🇨🇭, **448★**).
+🟢 **Opportunity, placed:** sovereign self-hosted learning analytics — an xAPI LRS plus a local
+model — is the EMEA-shaped build, with `ralph` / `warren` / `lrsql` as the permissive substrate.
+
+### APAC
+
+🟡 **Partial: real commercial motion, and an education-regulation miss.** Three placed deals this
+window, all **corporate** learning rather than K-12 or higher ed, which is the honest read of where
+APAC money is moving: **Pearson + TCS** multi-year AI learning alliance on employer skills gaps;
+**LearnUpon** opening a Sydney HQ with `Create+` AI course authoring; **Alteryx** relaunching its
+Academy with AI learning paths and credentials.
+
+🔴 **DECLARED MISS: no education-specific AI rule was found for any APAC jurisdiction** — no
+student-data rule, no classroom guidance, no named national education-AI programme. 🔵 What exists is
+adjacent: **Australia** is tightening AI governance and copyright (OpenAI appointed an ANZ policy
+lead), and **Singapore** is consulting on AI in **financial institutions** — 🔴 **which is not
+education and must not be cited as if it were.** 🔵 Forrester, dated **2025** and so a year-old
+forecast, projected 60 % of firms and governments in India and China integrating locally developed
+LLMs alongside global ones, naming education as a target sector. One cross-sector governance figure
+worth carrying: **87 % of organisations encourage AI agents, 47 % have governance for them**
+(OneTrust, 2026) — a 40-point gap that is itself the sales argument.
+
+🟢 **Opportunity, placed — and licence-constrained in a way worth stating plainly: APAC supply on
+these shelves is the strongest and the least usable.**
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) is the best
+K-12 curriculum graph this base has measured — **4,719★** (API, `p504`), 1,644 knowledge points,
+2,403 prerequisite edges, 6,723 items — and it is **CC BY-NC 4.0, REFUSED for paid client work**.
+Build on [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (**MIT, 41,690★**) instead, the
+permissive APAC anchor. 🟢 And
+[`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) (Apache-2.0, 🇵🇰,
+**18★**) remains the only WhatsApp-delivered, no-app, no-browser row on any shelf here — the right
+shape wherever bandwidth, not pedagogy, is the binding constraint.
+
+### LATAM
+
+🟢 **The best-evidenced region in this pass, and the only one answered by primary research instead of
+market copy.** Two independent current studies:
+
+| study | scope | finding |
+|---|---|---|
+| UNESCO **IESALC** / UNU-IAS | **200 institutions, 19 countries** | **87 %** use AI somewhere; 🔴 **only ~25 % have a formal framework**. Teaching and learning **73.5 %**, research **57 %** |
+| **Digital Education Council** LATAM 2026 (with Tec de Monterrey + Institute for the Future of Education) | **30,000+ respondents** | **92 % of students**, **79 % of faculty** actively engage with AI |
+
+🔴 **The region's defining fact is a governance deficit, not an adoption deficit.** Students and
+faculty use AI at rates above any other region reported here, while **only ~30 % of Latin American
+universities have published an AI-use policy**. Uptake is uneven by institution type — private
+nonprofits lead, then public universities, then private for-profits.
+
+🔵 **Regulation: no unified framework, and the variance is large.** **Chile** has had a national AI
+policy since 2021 with a law under discussion; **Brazil** and **Colombia** have national strategies
+but **no education-sector rules**; in **Mexico**, SEP / ANUIES / AI Observatory recommendations are
+explicitly **non-binding**. Institutional actors doing the work: **UNESCO IESALC**, **UNU-IAS**, the
+**IDB** (ILIA readiness index, AI regulatory-design work), and **UNAM** and **UPC** running their own
+faculty AI training.
+
+🟢 **Opportunity, placed:** what LATAM is asking for is **policy-and-evaluation infrastructure**, not
+another tutor — a published AI-use policy, an evaluation rubric, and an audit trail, for the ~70 % of
+universities with none. The permissive pieces are shelved and byte-verified:
+[`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (**87★**) for
+rubric-graded outputs — 🟡 **code MIT, prompts CC BY 4.0, but its two annotated corpora are
+CC BY-NC-SA 4.0 and are REFUSED for paid work** (byte-read at `p503`, reproduced byte-identically at
+`p504` on a second channel; use the code and prompts, bring your own corpus) — [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+(🟢 **MIT**, **13★**) for pedagogical-knowledge measurement, and
+[`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (🟢 **Apache-2.0**, **144★**) with
+[`yetanalytics/project-persephone`](https://github.com/yetanalytics/project-persephone)
+(🟢 **Apache-2.0**, **8★**) for the xAPI record that makes a policy auditable *and schema-valid*.
+🔴 **The Brazilian SIS incumbent is alive but NOT permissive**:
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) — **720★**, served off branch
+`2.12`, **GPL-2.0 at root `LICENSE`** — so it is an integration target, not a base to fork into a
+closed deliverable. It is still the surface a Brazilian public-sector engagement lands on.
+
+## 🔵 `p504` — queries run this pass, and what each returned
+
+| query | returned |
+|---|---|
+| `AI education industry trends 2026` | 🟡 three market-research figures for 2026 that **disagree by 3.1×**; one usable measured series (teacher PD 29 % → 50 %) |
+| `AI education North America 2026 adoption regulation players` | 🟢 regional size series + the governance gap (10 % guidelines, 71 % untrained); 🔵 state-level and AIDA claims are **secondary commentary only** |
+| `AI education EMEA 2026 adoption regulation players` | 🔴 **no education-specific result at all** — a US-sampled survey and a 2023 study. `Gap 504-D` registered |
+| `AI education APAC 2026 adoption regulation players` | 🟡 three corporate-learning deals; 🔴 **no education-specific regulation in any jurisdiction** |
+| `AI education LATAM 2026 adoption regulation players` | 🟢 **two primary studies** (IESALC 200 institutions / 19 countries; DEC 30,000+ respondents) + per-country regulatory detail |
+| `top open source AI agents education 2026 github MIT` | 🔴 generic agent listicles; **zero** education-specific MIT findings the API sweep had not already shelved |
+| `github trending education AI 2026` | 🔴 **no live trending list** — third-party trackers with self-reported stars |
+| `open source platform education ERP CRM MIT Apache` | 🔴 vendor-glossary pages; the only named ERP/CRM fits are **GPL-3.0 (ERPNext)** and **BSL-1.1 (Twenty)**, neither permissive |
+
+🔵 **Four of eight web queries returned nothing this base could use**, which is the same ratio
+`p503` recorded. 🟢 **The API sweep outperformed every web query for supply questions** and the web
+queries outperformed the API for regulation and adoption — they are not substitutes, and this pass
+is the clearest evidence of that split so far.

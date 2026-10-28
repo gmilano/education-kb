@@ -1507,3 +1507,86 @@ fork-and-own for components 1, 2 and 6 from day one, as `P502-1` budgets it for 
 - 🔴 It assumes a hosted LLM. **None of components 1, 2 or 3 declares a model boundary**, so a
   data-residency clause forces a local-inference adaptation (the `freelingo` posture) that this
   recipe does not include and that is not a week's work.
+
+## 🆕 `p504` — `2026-10-28` — one pattern: the artefact the best-evidenced region on these shelves is actually missing, which is a **policy**, not a product
+
+🟢 Every recipe in this file so far builds something a student or teacher *uses*. The strongest
+regional finding this base holds says the gap is elsewhere: in LATAM, **92 % of students and 79 % of
+faculty already use AI** (Digital Education Council, 30,000+ respondents) while **only ~25 % of
+institutions have a formal framework** and **~30 % have published an AI-use policy** (UNESCO IESALC,
+200 institutions / 19 countries). 🔴 **Those universities do not need another tutor. They need a
+policy they can publish, enforce and audit** — and that is a buildable deliverable, not a document
+exercise. `P504-1` is that build.
+
+## 🆕 `P504-1` — **The AI-use policy as an executable artefact: a published profile, enforced in code, auditable per statement** 🟢
+
+**Why:** a published AI-use policy is normally a PDF nobody can check. The move in this pattern is
+to express the policy as a **machine-readable xAPI Profile** and then validate every recorded
+interaction against it. That turns three things a governance committee currently asserts into things
+it can *demonstrate*: what AI use is permitted, that recorded use conformed, and what happened when
+it did not. 🟢 Every component below is a row this base has read from bytes, and the licence traps
+are designed out explicitly rather than discovered at contract.
+
+| Component | Repo | Licence | ★ | Role |
+|---|---|---|---|---|
+| Policy schema | [`yetanalytics/project-persephone`](https://github.com/yetanalytics/project-persephone) | 🟢 **Apache-2.0** | **8** | **The keystone.** Validates xAPI Statements against a **Profile** — i.e. against the published policy |
+| Audit record | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | **144** | SQL-backed LRS (Clojure, SQLite/Postgres); the permissive LRS to build on |
+| Ingestion / analytics | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟡 **MIT** *(carried `p467`, not re-read from bytes)* | **51** | LRS + ingestion CLI; 🇫🇷 France Université Numérique |
+| Rubric grading | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟡 **MIT code + CC BY 4.0 prompts** | **87** | Grades AI output against research-backed rubrics. 🔴 **See the licence fence below — do NOT ship its corpora** |
+| Pre-deployment gate | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT**, 1 064 B | **13** | 1,143 teacher-exam items (920 CDPK / 223 SEND) |
+| Eval runtime | [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 **MIT** | **14,338** | the harness the benchmark runs on |
+| Agent loop | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 **Apache-2.0** | **30,118** | minimal code-writing agent; emits the statements |
+| Academic integrity | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT** | **355** | plagiarism detection, 3,865 commits, Ghent University |
+| Institutional layer *(if the client has none)* | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | **448** | enrolment, roles, gradebook — served off `master` |
+| Integration target 🇧🇷 *(do not fork)* | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** | **720** | the municipal SIS a Brazilian public engagement lands on; branch **`2.12`** |
+
+### Wiring — the policy becomes a schema, then a gate, then evidence
+
+1. **Write the institution's AI-use policy as an xAPI Profile**, not prose. Each permitted use
+   becomes a statement template: who may do what, to which object, with which result. This is the
+   step that makes everything after it mechanical.
+2. **Stand up `lrsql`** as the record. Postgres for an institution, SQLite for a pilot.
+3. **Put `project-persephone` in front of the LRS** and validate every statement against the
+   Profile from step 1. 🟢 **A statement that the policy does not describe is rejected at write
+   time** — so "we complied" stops being a claim and becomes a property of the store.
+4. **Run the agent on `smolagents`**, emitting one xAPI statement per interaction. The agent does
+   not write logs; it writes to the record that the policy validates.
+5. **Gate the model before deployment** with `pedagogy-benchmark` on `lm-evaluation-harness`, and
+   gate its *outputs* continuously with `evaluators`' rubrics.
+6. **Report to the governance committee from `ralph`** — adoption by faculty and department,
+   rejected-statement counts, rubric scores over time. This is the artefact that closes the
+   ~70 % no-published-policy gap, because it shows the policy operating.
+7. **Add `dolos`** where the policy makes claims about student submissions, so the integrity rule is
+   enforced by the same stack that publishes it.
+
+### 🔴 The two licence fences in this recipe, both found this pass
+
+- 🔴 **`evaluators` is NOT cleanly permissive, and `NOASSERTION` hid it.** Byte-read at
+  `b9d47891c1b8` (`LICENSE.md`, 1 615 B, blob `86eebd7ebc43`): **code MIT**, **prompts and settings
+  CC BY 4.0**, but the **Annotated CLEAR Corpus and Annotated PERSUADE 2.0 Corpus are
+  CC BY-NC-SA 4.0** — **non-commercial and ShareAlike**. 🟢 **Use the code and the prompts, with
+  attribution; bring the client's own corpus.** Shipping either annotated corpus in a paid
+  engagement is a breach, and nothing on the repo's GitHub sidebar tells you so.
+- 🔴 **Do not reach for `learning-commons-org/knowledge-graph`** (164★) to seed the rubrics without a
+  per-dataset review. Its data is **Open / Open+Gated / Gated per download**, Gated content needs
+  provider approval and is not redistributable, a compiled build inherits **every** included
+  dataset's obligations, and the terms can change between releases. 🔴 **There is no repo-level
+  answer to "can we use it".** See [`noassertion-bytes.2026-10-28-p504.tsv`](../evidence/noassertion-bytes.2026-10-28-p504.tsv).
+- 🔴 **`i-educar` is GPL-2.0.** Integrate across a process boundary — API, xAPI statements, its
+  database — and do not fork it into a closed deliverable.
+
+### 🔵 Honest limits of this recipe
+
+- 🔴 **`project-persephone` is 8★ with 1 fork.** It is the keystone and it is the smallest component
+  here. Read it before committing: it is small enough to audit in an afternoon and small enough to
+  be abandoned. Budget for owning a fork.
+- 🔴 **`ralph`'s MIT grant is carried from `p467`, not re-read from bytes this pass.** Verify before
+  contract; `lrsql` alone can carry the pattern if it fails.
+- 🔴 **Writing a correct xAPI Profile is the hard part of this build**, and it is consulting work,
+  not integration work. A wrong Profile produces a store that validates the wrong thing confidently.
+- 🔵 **No component here is LATAM-origin** except the integration target. The pattern is placed in
+  LATAM by the *demand* evidence, not by supply provenance — the permissive pieces are North American
+  and European, which is itself the regional finding (`market.md` `p504`).
+- 🔴 **Do not substitute [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework)**
+  for the classroom-response layer if this pattern is extended that way: it reads **`archived: true`**
+  as of `p504` and is frozen upstream (`T29`).

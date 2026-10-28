@@ -1,0 +1,25 @@
+# p504 — 2026-10-28 — Gap 504-A / Gap 504-B: two ways the GitHub repo-search channel drops a slug
+# WITHOUT reporting an error. p502 promoted this channel to "authoritative" for stars; it is, for the
+# rows it RETURNS. The failure is that a dropped row is indistinguishable from a repo that does not
+# exist, and the payload asserts "incomplete_results": false while a row is missing.
+#
+# Reproduction, all three probes run this pass:
+probe	query	result	note
+batch-25	repo:openedx/edx-platform + 24 other slugs	24 items, incomplete_results=false, NO error	edx-platform silently absent
+batch-24	repo:openedx/edx-platform + 23 other slugs	23 items, incomplete_results=false, NO error	silently absent again; reproducible
+single	repo:openedx/edx-platform	HTTP 422 Validation Failed	"the resources do not exist or you do not have permission to view them"
+fork-flag	repo:openedx/edx-platform repo:foradian/fedena fork:true	1 item (fedena only)	fork:true does NOT recover edx-platform
+name-scoped	edx-platform in:name org:openedx	total_count=0	the slug is absent from the search index
+org-control	repo:openedx/frontend-app-learning repo:openedx/openedx-translations	both returned (71*, 9*)	the openedx ORG is searchable -> exclusion is PER-REPOSITORY
+exists-control	git ls-remote --symref https://github.com/openedx/edx-platform HEAD	ref: refs/heads/master, f73b7ae64dd5e1076e69c3a2668427568ff89ec3	THE REPO EXISTS AND SERVES REFS
+html-control	github.com/openedx/edx-platform page fetch	8.2k stars, 4.4k forks, AGPL-3.0, default branch master	all KB claims for this row re-confirmed off-API
+#
+# Gap 504-B, a SECOND and DIFFERENT omission cause with a different fix:
+fork-omission	repo:foradian/fedena (no fork:true)	absent from a 23-slug batch, no error	forks are excluded from repo search BY DEFAULT
+fork-recovery	repo:foradian/fedena fork:true	returned: 4*, fork=true, archived=false	recovered only by passing fork:true
+#
+# STANDING MITIGATION for every future batch read on this channel:
+# 1. Reconcile the returned full_name set against the queried slug set. Never trust item count alone.
+# 2. Re-probe each missing slug SINGLY -- a single-slug call raises the 422 that the batch swallows.
+# 3. Then probe it with fork:true, which recovers the fork class (Gap 504-B) but not the index class.
+# 4. Only after both fail, fall back to git ls-remote (existence) and the HTML page (stars/licence).

@@ -3,6 +3,94 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+
+## 🆕 `p504` — `2026-10-28` — **🟢 `Gap 502-A` IS CLOSED: every live shelf address in this base — 87 of them — was re-read on the API channel, and the carried HTML-era figures were RIGHT. No cell moved more than ~1 %, and the largest error on any exact-integer cell is `k12-teacher-skills` **595 → 598**. That retires "HTML measurement is the error source" and reclassifies the 31× `educhain` defect as a STALE CARRY — a cycle-2 claim copied forward for ~500 passes and never re-measured. 🔴 And the channel `p502` promoted to "authoritative" has a SILENT-OMISSION mode: [`openedx/edx-platform`](https://github.com/openedx/edx-platform) — 8.2k★, AGPL-3.0, a flagship row on two shelves — is absent from the search index, and a batch read drops it with `"incomplete_results": false` and no error at all.**
+
+Reads: [`api-shelf-reconciliation.2026-10-28-p504.tsv`](../evidence/api-shelf-reconciliation.2026-10-28-p504.tsv),
+[`api-silent-omission.2026-10-28-p504.tsv`](../evidence/api-silent-omission.2026-10-28-p504.tsv).
+
+### 🟢 `Gap 502-A` closed — and the answer is the opposite of what the gap feared
+
+`p502` re-read **6 of ~17** shelf rows on the new channel and left the rest carrying HTML-era
+figures, with `p490`'s 31× `educhain` error as the stated reason to distrust them. This pass read
+**all of them**, plus every row on `repos/foundations.md` and `verticals/solutions.md` — **87
+addresses in four batched calls**.
+
+| re-read cells | agreement with the carried figure |
+|---|---|
+| exact-integer cells (`educhain` 387, `dolos` 355, `Skill-Anything` 344, `canvas-mcp` 309, `OATutor` 274, `ksor` 232, `open-tutor-ai-CE` 114, `mentingo` 100, `agent-skills` 40, `rumi-platform` 18, `Shiksha-Copilot` 9, `tutor-gpt` 932, `mathtutorbench` 45, `pedagogy-benchmark` 13, `TutorCaseBench` 0) | 🟢 **identical, all 15** |
+| rounded cells (`smolagents` 30,100 → **30,118**; `ai-agents-for-beginners` 78,000 → **78,039**; `lm-evaluation-harness` 14,300 → **14,338**; `moodle` 7,600 → **7,556**; `learnhouse` 2,400 → **2,427**) | 🟢 agree to their stated precision |
+| the one exact cell that moved | 🟡 `k12-teacher-skills` **595 → 598** (+0.5 %) |
+
+🟢 **So the instrument was never the problem.** `educhain` was published at `~12,000★` in cycle 2
+and carried unchanged until `p490` measured **387**. Nothing re-measured it for ~500 passes. The
+defect class is **the carry**, not the channel — and the fix is a re-read cadence, not a better
+reader. 🔵 This also means `p502`'s correction banner on [`agents/top.md`](top.md), which warns that
+"the rest still carry HTML-era figures", can be retired: they did, and they were accurate.
+
+### 🔴 `Gap 504-A` — the API channel drops rows silently, and says it did not
+
+`openedx/edx-platform` **exists** and serves refs (`git ls-remote --symref` → `refs/heads/master`,
+`f73b7ae64dd5e1076e69c3a2668427568ff89ec3`). It is nonetheless unreachable on the search channel,
+and the way it fails is the problem:
+
+| probe | result |
+|---|---|
+| batched with 24 other slugs | 🔴 **24 items, `"incomplete_results": false`, no error** — the row is simply gone |
+| batched with 23 other slugs | 🔴 same, reproducible |
+| `repo:openedx/edx-platform` **alone** | 🟢 **HTTP 422 Validation Failed** — *"the resources do not exist or you do not have permission to view them"* |
+| `edx-platform in:name org:openedx` | 🔴 `total_count: 0` |
+| control: `openedx/frontend-app-learning`, `openedx/openedx-translations` | 🟢 both returned (71★, 9★) |
+
+🔴 **Batching converts a hard 422 into a silent omission.** The exclusion is **per-repository, not
+per-organisation** — the rest of the `openedx` org answers normally. Cause is undetermined between
+an index exclusion and a session-scope restriction; the error text names both and this session
+cannot distinguish them. What is certain is the operational consequence: **on this channel a
+missing row and a nonexistent repo are the same observation**, which is exactly the failure this
+base refuses to accept elsewhere (an informed gap beats silence).
+
+🟢 **Standing mitigation, now recorded in the channel table on [`agents/top.md`](top.md):** reconcile
+the returned `full_name` set against the queried slug set on *every* batch call; re-probe each
+missing slug singly to surface the 422; then retry it with `fork:true`; only then fall back to
+`ls-remote` and the HTML page. Item count alone is never evidence of a complete read.
+
+### 🔴 `Gap 504-B` — forks are excluded from repo search by default, a second and different omission
+
+[`foradian/fedena`](https://github.com/foradian/fedena) vanished from a 23-slug batch the same
+silent way — but for an unrelated reason: it is a **fork** (`fork: true`), and GitHub repo search
+omits forks unless `fork:true` is passed. Adding the flag returns it (**4★**, archived `false`).
+🔵 Two distinct causes producing one indistinguishable symptom is why the mitigation above needs
+*both* the single-slug re-probe and the `fork:true` retry; neither alone finds both classes.
+
+### 🔴 A live shelf recommends an ARCHIVED repository, with no end-of-life flag
+
+The `archived` field came back `true` for two addresses, and only one of them was flagged:
+
+| repo | ★ | archived | this base said |
+|---|---|---|---|
+| [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 77 | 🔴 **true** | 🔴 *"The permissive base for live classroom response"* on **two** shelves, **no EOL flag** |
+| [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) | 30 | 🔴 true | 🟢 already carried "archived" since `p497` |
+
+🔴 **Fixed this pass on both shelves.** An archived upstream is not disqualifying for a read-only
+reference, but recommending it as *the* base for a build without saying it is frozen is a shelf
+defect — `archived` is a one-field read on the same call that returns stars and there is no excuse
+for carrying it unread. 🟢 **`archived` is now part of the standing batch read** for every row.
+
+### 🔵 Discovery: 35 candidates swept, 34 already held, and the one novelty is below any floor
+
+`p503` found 0 of 24 novel on a date axis. This pass swept three topic axes with lower floors
+(`topic:edtech stars:>120 pushed:>2026-09-01`, `topic:ai-tutor stars:>25`,
+`topic:personalized-learning stars:>40`) — **66 distinct repositories, 35 cross-checked against the
+4,280 addresses this base references, and 34 were already held**, including
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) (**4,719★**,
+already correctly **REFUSED** as CC BY-NC 4.0). The single novel address is
+[`mikhashev/personal-context-manager`](https://github.com/mikhashev/personal-context-manager)
+(**107★**) — 🔵 **not promoted**: its own description calls it a messenger-genesis
+context-personalisation project, education is adjacent at best, and `topic:personalized-learning`
+in the same sweep also returned a NeurIPS image-retrieval paper, so that axis is noisy.
+🟢 `T24`'s saturation reading now survives a **third** test shape. The constraint on this base is
+the promotion backlog, not supply.
+
 ## 🆕 `p503` — `2026-10-28` — **🟢 THIS BASE ALREADY OWNED AN INSTRUMENT FOR THE PROMOTION GAP `p502` DESCRIBED IN PROSE, AND IT HAD NOT BEEN RUN IN ~26 PASSES. `make hooks` was run this pass: **48/63 green, 15 RED**, and three of the reds name this pass's exact subject — `gate-promotion` points at two MIT addresses marked *"Promoted"* in this very file that sit on NO shelf. 🟢 The promotion gap is now MEASURED: 6 of 18 recency-slice rows never shelved, of which **3 MIT and shelvable, 3 walled by licence**. 🔴 And a bare 12-hex payload token in these files is a **sha256 prefix, not a blob SHA-1** — a false-DRIFT generator for any successor that checks with `git hash-object`.**
 
 Reads: [`gate-run.2026-10-28-p503.tsv`](../evidence/gate-run.2026-10-28-p503.tsv) +

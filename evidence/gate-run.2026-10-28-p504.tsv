@@ -1,0 +1,18 @@
+# p504 2026-10-28 — `make hooks` RUN (not denied this pass). Two runs: before and after this pass's edits.
+result	value
+gates_total	63
+pre_edit_gates_green	48
+pre_edit_gates_red	15
+pre_edit_red_gates	recount gate-enumeration gate-shelf-consistency gate-register-currency gate-fold-identity gate-author-key gate-census-currency gate-grant-path gate-census-union gate-i2-sweep-crosscheck gate-union-currency gate-action-answered gate-promotion gate-promotion-ledger gate-cell-reproduction
+pre_edit_vs_p503	IDENTICAL — byte-for-byte the same 15 gates p503 recorded on its pre-edit run
+post_edit_gates_green	49
+post_edit_gates_red	14
+post_edit_red_gates	recount gate-enumeration gate-shelf-consistency gate-fold-identity gate-author-key gate-census-currency gate-grant-path gate-census-union gate-i2-sweep-crosscheck gate-union-currency gate-action-answered gate-promotion gate-promotion-ledger gate-cell-reproduction
+post_edit_delta	gate-register-currency RED -> GREEN; the p504 section written into intel/open-gaps.md satisfies Gap 473-F's currency contract
+post_edit_regressions	NONE — no gate moved green -> red
+#
+# Gate output that named this pass's own work, and what was done about it:
+gate	what it said	p504 response
+gate-register-currency	"register newest=p503; intel/market.md newest=p504; stale by 1 pass" x3 files	🟢 FIXED — the five p504 gaps (504-A..504-E) are registered in intel/open-gaps.md, which is the correct practice independently of the gate
+gate-cell-reproduction	"zero published cells parsed - a parse fault, not a clean shelf (P355)"	🔴 NOT FIXED and now slightly worse-founded: p504 added `p504` provenance notes inside star cells, changing cell shapes again. The parser must be updated before green here means anything (carried from p503)
+gate-promotion / gate-promotion-ledger	permissive trending rows on no curated shelf; 197 un-landed claims vs a pin of 148	🔴 NOT ATTEMPTED — p504 verified the existing shelves rather than extending them. Registered as a declared non-attempt in intel/open-gaps.md

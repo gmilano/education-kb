@@ -6,6 +6,23 @@ updated: 2026-10-28
 
 # Education platforms you can customise with AI on top
 
+> 🔴 **`p504` (`2026-10-28`) — THIS SHELF WAS RECOMMENDING AN ARCHIVED REPOSITORY AS A BUILD BASE.**
+> [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) reads
+> **`archived: true`** on the API. It sat here as the permissive base for live classroom response
+> with no end-of-life flag — the licence was verified from bytes, the stars were right, and the one
+> field that says *"this project is over"* was never read. 🟢 Flagged here and in
+> [`repos/foundations.md`](../repos/foundations.md); **`archived` is now part of the standing batch
+> read** for every address, since it costs nothing on a call that already returns stars.
+> 🔴 **[`openedx/edx-platform`](https://github.com/openedx/edx-platform) — the Open edX row below —
+> is unreadable on the API search channel**: 422 alone, silently dropped from a batch that claims
+> `"incomplete_results": false` (`Gap 504-A`). Its figures here are HTML-channel reads and were all
+> re-confirmed; treat any future "repo not found" on this slug as an instrument artefact until
+> `ls-remote` says otherwise.
+> 🟢 All **87** addresses across the three shelves were re-read this pass and the carried figures
+> held (`Gap 502-A` **closed**). Reads:
+> [`api-shelf-reconciliation.2026-10-28-p504.tsv`](../evidence/api-shelf-reconciliation.2026-10-28-p504.tsv),
+> [`api-silent-omission.2026-10-28-p504.tsv`](../evidence/api-silent-omission.2026-10-28-p504.tsv).
+
 **Pass `p491` — reads of 2026-10-27.** `p490` (earlier the same day) rewrote this file; `p491`
 **extends** it with two platform rows read from bytes and a resolved Fedena entry. Pre-p490
 sections remain in
@@ -21,8 +38,8 @@ license read from bytes at a pinned SHA — see
 
 | Layer | Platform | License | ★ | Why this one |
 |---|---|---|---|---|
-| **LMS — mass market** | [Moodle](https://github.com/moodle/moodle) | GPL-3.0 | 7,600 | Largest installed base; 2,000+ plugins. A Moodle plugin is the lowest-friction way to ship AI into an existing institution. |
-| **LMS — higher ed / MOOC** | [Open edX](https://github.com/openedx/edx-platform) | AGPL-3.0 | 8,200 | University and workforce standard. Deploy via [Tutor](https://github.com/overhangio/tutor) (AGPL-3.0), not by hand. |
+| **LMS — mass market** | [Moodle](https://github.com/moodle/moodle) | GPL-3.0 | **7,556** *(`p504`, API)* | Largest installed base; 2,000+ plugins. A Moodle plugin is the lowest-friction way to ship AI into an existing institution. |
+| **LMS — higher ed / MOOC** | [Open edX](https://github.com/openedx/edx-platform) | AGPL-3.0 | 8,200 *(🔵 `p504`: HTML only — **the API search channel cannot see this repo**, `Gap 504-A`)* | University and workforce standard. Deploy via [Tutor](https://github.com/overhangio/tutor) (AGPL-3.0), not by hand. |
 | **LMS — North America HE** | [Canvas LMS](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 6,900 | Dominant in US higher ed. Has a real MCP server already: [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, 309★). |
 | **LMS — permissive** | [OpenOlat](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | 448 | **The only permissive full LMS found.** Pick this when the client needs a closed derivative. |
 | **LMS — offline-first** | [Kolibri](https://github.com/learningequality/kolibri) | **MIT** | 1,200 | Runs without connectivity. Decisive for rural LATAM/Africa/APAC and for national programmes. |
@@ -551,7 +568,7 @@ this repository as `NOASSERTION`, so the restriction is invisible from the API.
 
 | Layer | Platform | Licence | ★ | Why this one |
 |---|---|---|---|---|
-| 🟢 **Live classroom response / quizzing** | [realtime-quiz-framework](https://github.com/ably-labs/realtime-quiz-framework) | **Apache-2.0** | 77 | Permissive base for synchronous whole-class response: fan-out, mid-round joins, scoring. Pair with an LMS for roster and gradebook. |
+| 🔴 **Live classroom response / quizzing — UPSTREAM ARCHIVED** | [realtime-quiz-framework](https://github.com/ably-labs/realtime-quiz-framework) | **Apache-2.0** | 77 | 🔴 **`p504`: `archived: true` — FROZEN upstream. Fork it or lift the pattern; expect no fixes.** Permissive base for synchronous whole-class response: fan-out, mid-round joins, scoring. Pair with an LMS for roster and gradebook. |
 | 🟡 **AI output QA against rubrics** | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | 🟢 code **MIT** / 🔴 corpora **CC BY-NC-SA 4.0** | 87 | Rubric-based QA for generated instructional content (Text Complexity, Feedback, Standards Alignment, Durable Skills). Deploy the **code**; the shipped annotated corpora are **non-commercial** (`Gap 500-E`). |
 
 

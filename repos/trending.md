@@ -3,6 +3,53 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+
+## 🆕 `p504` — `2026-10-28` — **🔴 A FLAGSHIP FOUNDATION ROW IS UNREACHABLE ON THE CHANNEL THIS BASE JUST PROMOTED TO AUTHORITATIVE, AND THE CHANNEL DOES NOT SAY SO: [`openedx/edx-platform`](https://github.com/openedx/edx-platform) (8.2k★, AGPL-3.0) is absent from the search index, and a batch read returns the other 24 rows with `"incomplete_results": false`. 🟢 Its KB claims were re-confirmed off-API and its pin is RE-PINNED after a drift — `d9aaee456069` → `f73b7ae64dd5`. 🟢 And all 87 shelf addresses were re-read on the API channel: the carried figures were accurate, closing `Gap 502-A`.**
+
+Reads: [`api-shelf-reconciliation.2026-10-28-p504.tsv`](../evidence/api-shelf-reconciliation.2026-10-28-p504.tsv),
+[`api-silent-omission.2026-10-28-p504.tsv`](../evidence/api-silent-omission.2026-10-28-p504.tsv).
+Full narrative on both gaps: [`agents/trending.md`](../agents/trending.md) `p504`.
+
+### 🔴 `openedx/edx-platform` — re-confirmed, re-pinned, and flagged as off-channel
+
+| axis | reading | channel |
+|---|---|---|
+| exists | 🟢 yes — `refs/heads/master` | `git ls-remote --symref` |
+| HEAD | 🔴 **`f73b7ae64dd5`** — drifted from this base's pin `d9aaee456069` | `git ls-remote` |
+| licence | 🟢 **AGPL-3.0**, as carried | HTML sidebar |
+| ★ / forks | 🟢 **8.2k / 4.4k**, as carried (`8,200`) | HTML page |
+| default branch | 🟢 `master`, as carried | both |
+| API search | 🔴 **422 alone; silently dropped in a batch** | `Gap 504-A` |
+
+🟢 **Every claim this base made about the row is correct.** The row is not wrong; the *instrument*
+is blind to it, and the blindness is invisible unless the queried slug set is reconciled against the
+returned one. 🔵 The drift is unexamined for licence change — the AGPL reading above is the sidebar,
+not bytes at `f73b7ae64dd5`; a bytes read at the new SHA is the honest next step (`Gap 504-C`).
+
+### 🔴 An archived repository was shelved as a recommended build base
+
+[`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) reads
+`archived: true` (77★, 24 forks). This file's realtime-quiz row and the matching row in
+[`verticals/solutions.md`](../verticals/solutions.md) both recommended it as the permissive base for
+live classroom response **with no end-of-life flag**. 🟢 Both rows are corrected in place this pass.
+🟢 `archived` is now read on the standing batch call for every address.
+
+### 🟢 The 87-row re-read, and what it says about this file
+
+Every address on this shelf was re-read: `moodle` **7,556**, `edx-platform` **8,200** (HTML),
+`canvas-lms` **6,889**, `frappe/lms` **3,350**, `learnhouse` **2,427**, `kolibri` **1,162**,
+`tutor` **1,130**, `chamilo-lms` **1,019**, `openeducat_erp` **900**, `i-educar` **720**,
+`rosariosis` **647**, `GibbonEdu/core` **635**, `ILIAS` **505**, `OpenOLAT` **448**,
+`book-to-skill` **36,386**, `breakscale` **1,859**, `get-it` **1,138**, `Papermorph` **987**.
+🟢 **Not one carried figure was wrong beyond rounding.** Full table in the reconciliation TSV.
+
+🔵 **One correction to this file's own default-branch cells is worth naming**: the API returns
+`default_branch` and several rows here are served off a non-`main` ref —
+`rosariosis` → `mobile`, `GibbonEdu/core` → `v31.0.00`, `openeducat_erp` → `19.0`,
+`tutors-sdk/tutors` → `development`, `bigbluebutton` → `v4.0.x-develop`, `ILIAS` → `release_11`,
+`oh-my-paper` → `v2`, `tutor` → `release`. A probe that assumes `main` or `master` reads the wrong
+tree on eight of this file's addresses.
+
 ## 🆕 `p503` — `2026-10-28` — **🔴 SLICING SUPPLY BY CREATION DATE INSTEAD OF BY TOPIC FINDS NOTHING NEW — 0 of 24 novel across a 90-day and a 180-day window — so the saturation `p502` measured on topics is a property of the SECTOR'S GITHUB SUPPLY, not of a search axis. 🟢 The reachable non-GitHub forge is re-measured and its ceiling published: the most-starred education project on gitlab.com is 53★ against 4 705★ on GitHub. 🔴 Four registry channels are BLOCKED by network policy, so `Gap 500-A`'s LMS-plugin-registry axis is an informed gap, not an unmined one.**
 
 Reads: [`recency-axis.2026-10-28-p503.tsv`](../evidence/recency-axis.2026-10-28-p503.tsv),

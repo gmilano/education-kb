@@ -3,6 +3,81 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+
+## 🆕 `p504` — `2026-10-28` — **🆕 `T28` (education AI supply is shifting from apps to AGENT SKILLS, and 9 of the 11 rows carrying it were created in 2026) and 🆕 `T29` (archived upstreams are an unmeasured liability — a one-field check no pass in ~500 had run, and it was hiding a frozen repo on two live shelves). 🟢 `T24`'s saturation reading survives a THIRD test shape: 35 candidates swept on three topic axes, 34 already held.**
+
+Reads: [`api-shelf-reconciliation.2026-10-28-p504.tsv`](../evidence/api-shelf-reconciliation.2026-10-28-p504.tsv),
+[`api-silent-omission.2026-10-28-p504.tsv`](../evidence/api-silent-omission.2026-10-28-p504.tsv).
+
+### 🆕 `T28` — **The fastest-growing education supply is not applications. It is agent skills, and the shape has commercial consequences.**
+
+Eleven addresses found on this pass's topic sweeps are not deployable products at all — they are
+**skill packages for a coding agent** (Claude Code, Codex, Gemini CLI), shipped as prompts, rubrics
+and scaffolds rather than as services:
+
+| repo | ★ | created | what it packages |
+|---|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **36,386** | 2026-05-01 | any technical book PDF → an agent skill |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | **987** | 2026-10-03 | books → animated, narrated interactive lessons; **emits SCORM** |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **918** | 2026-03-01 | **165** evidence-grounded skills for teachers and school leaders |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | **585** | 2026-03-07 | 30+ skills, K-12 → career, on a cognitive-science spine |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | **498** | 2026-10-14 | topic → researched course of audio lessons with cited sources |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | **356** | 2026-06-24 | exam coaching with page-level citation to the learner's own slides |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **299** | 2025-10-21 | DSA mentor: progressive hints, mock interviews |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | **294** | 2026-03-10 | Bloom's 2-sigma as a skill **plus** a self-hostable app |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | **252** | 2026-06-26 | diagnosis-first tutoring with no mode menu |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | **209** | 2026-04-06 | 🇨🇳 civil-service exam prep |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **119** | 2026-01-29 | 🇨🇳 teaching/tutoring skill collection |
+
+🟢 **9 of 11 were created in 2026**, and the two oldest are 2025. **41,000★ in aggregate.** This is
+not a long tail — it is a layer that did not exist two years ago.
+
+🟢 **Why it matters commercially, and it cuts both ways.** A skill package is **pedagogy as
+portable text**: no hosting, no model lock-in, no integration project, and it drops into a client's
+existing agent. That makes the *content* — rubrics, prerequisite graphs, diagnostic sequences — the
+asset, and content is the thing a studio can actually author for a client.
+🔴 **And it is why this layer is a weak moat**: a skill is copied by reading it. The defensible part
+is the measurement around it, which is the `evaluators` / `pedagogy-benchmark` tier this base
+already shelves, not the prompt.
+
+🔴 **Stated limit on this trend: licences were NOT read from bytes for these eleven rows.** They are
+a supply-shape observation from topic metadata and descriptions, **not promotions**. 🔵 Four of the
+eleven are 🇨🇳-language-first, which is consistent with `T26`'s finding about where the newest
+supply originates and with the APAC note in [`market.md`](market.md) `p504`.
+
+### 🆕 `T29` — **Archived upstreams are an unmeasured liability on these shelves, and the check costs one field**
+
+The API returns `archived` on the same call as `stargazers_count`. No pass in ~500 had read it.
+Reading it on all 87 shelf addresses this pass found:
+
+| repo | ★ | how it was carried |
+|---|---|---|
+| [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 77 | 🔴 **recommended on TWO live shelves as "the permissive base for live classroom response"** — no end-of-life flag, ~20 passes |
+| [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) | 30 | 🟢 already flagged archived since `p497` |
+| [`sagefy/sagefy`](https://github.com/sagefy/sagefy) | 120 | 🔵 surfaced archived in this pass's sweep; never shelved |
+
+🔴 **The failure mode is specific and worth naming**: `realtime-quiz-framework` had its **licence
+verified from bytes**, its **star count verified**, and its **blob SHA pinned** — every expensive
+check passed, and the free one that says *"this project is over"* was never run. 🟢 **`archived` is
+now part of the standing batch read.** 🔵 A frozen upstream is not disqualifying for a pattern you
+lift or a fork you own; it is disqualifying for a row that tells a client "build on this".
+
+### 🟢 `T24` saturation — a third test shape, same answer
+
+| pass | axis tested | novel finds |
+|---|---|---|
+| `p502` | topic vocabulary, 50★ floor | 0 above floor |
+| `p503` | creation date, 90- and 180-day windows | 0 of 24 |
+| **`p504`** | **three topic axes at LOWER floors** (`edtech` >120★ + pushed since 2026-09; `ai-tutor` >25★; `personalized-learning` >40★) | **1 of 35, and it is out of scope** |
+
+The single novel address,
+[`mikhashev/personal-context-manager`](https://github.com/mikhashev/personal-context-manager)
+(**107★**), is 🔵 **not promoted**: its own description makes it a messenger-genesis
+context-personalisation project with education adjacent at best, and the same axis also returned a
+NeurIPS image-retrieval paper, so `topic:personalized-learning` is noisy rather than productive.
+🟢 **Lowering the floor does not find supply — it finds noise.** The binding constraint on this base
+is the **promotion backlog**, not discovery, and that has now been tested three independent ways.
+
 ## 🆕 `p503` — `2026-10-28` — **🆕 `T26` (the newest supply is deliberately non-commercial, and the metadata hides it) and `T27` (agentic is a sized segment now); 🟢 `T24`'s saturation reading survives a test on a different axis — date instead of vocabulary; 🔴 and this file's own gate suite was run for the first time in ~26 passes: 48/63 green.**
 
 ### 🆕 `T26` — **The newest, fastest-growing education supply is deliberately non-commercial, and GitHub's metadata will not tell you**

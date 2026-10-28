@@ -1,0 +1,21 @@
+# p504 — 2026-10-28 — Gap 502-D was CLOSED AT p503. This is an INDEPENDENT REPRODUCTION of both reads
+# on a different channel (curl against raw.githubusercontent.com at HEAD), returning BYTE-IDENTICAL
+# results to p503's: same byte counts, same blob SHA-1s. Cross-channel corroboration, not a closure.
+# The defect p504 DID find: the stale text p503 recorded as corrected was still live on
+# repos/foundations.md -- the register was edited, the shelf was not (Gap 504-E).
+# Channel: raw.githubusercontent.com/<repo>/<HEAD-SHA>/<path>, the KB's licence authority.
+# blob_sha1 is `git hash-object` of the retrieved payload (a real blob SHA-1, not a sha256 prefix).
+#
+# ROOT CAUSE OF THE NOASSERTION: both carry LICENSE.md -- a PROSE LICENSING FRAMEWORK, not a
+# canonical licence text -- so GitHub's matcher cannot classify it. NOASSERTION here means
+# "too complex to match", which is a FOURTH state beyond the three Gap 502-D named.
+repo	head_sha	path	bytes	blob_sha1	code_grant	content_grant	commercial_verdict
+learning-commons-org/evaluators	b9d47891c1b8ecdef3b09f19da557bb15ef4c6f3	LICENSE.md	1615	86eebd7ebc4396ea879fba5546a7dc71cca92b60	MIT	SPLIT: prompts+settings CC-BY-4.0; Annotated CLEAR Corpus CC-BY-NC-SA-4.0; Annotated PERSUADE 2.0 Corpus CC-BY-NC-SA-4.0	PARTIAL: code+prompts usable commercially with attribution; BOTH ANNOTATED CORPORA ARE NON-COMMERCIAL + SHAREALIKE -> REFUSED for paid client work
+learning-commons-org/knowledge-graph	a7547180c47d8ea875b488d9b27bf836f36aca90	LICENSE.md	5789	6320adcd726ef94734e488f2e1231f02d3d538bf	MIT	NOT UNIFORM: per-dataset and per-DOWNLOAD access types -- Open (mostly CC-BY-4.0, some CC0), Open+Gated (split within one dataset), Gated (no open licence, Data Provider approval, separate terms)	UNDETERMINABLE AT REPO LEVEL: must be resolved per dataset/download in the Dataset Catalog. A compiled build inherits EVERY included dataset's obligations; the distributor role does NOT consolidate them; Gated content is not redistributable by default; terms can change between releases
+#
+# Sibling control, already clean and unchanged:
+learning-commons-org/agent-skills	-	LICENSE	10173	e88848668567(carried)	Apache-2.0	NOTICE names Anthropic, PBC and Learning Commons	CLEAR: permissive, buildable
+#
+# CONSEQUENCE FOR THIS KB: a repo-level licence cell CANNOT express either row. The Learning Commons
+# assets need a code/content/data split in any cell that cites them, and knowledge-graph needs a
+# per-download determination that no single cell can hold. Flagged on the shelves this pass.

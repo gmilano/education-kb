@@ -6,6 +6,42 @@ updated: 2026-10-28
 
 # Foundational education repos
 
+> 🔴 **`p504` (`2026-10-28`) — A FOUNDATION ROW ON THIS SHELF IS INVISIBLE TO THE CHANNEL `p502` CALLED AUTHORITATIVE, AND ANOTHER WAS AN ARCHIVED REPOSITORY SOLD AS A BUILD BASE.**
+> 🔴 **[`openedx/edx-platform`](https://github.com/openedx/edx-platform) cannot be read on the API
+> search channel at all**: queried alone it raises **HTTP 422**, and batched with 24 other slugs it
+> is **silently dropped from a payload that reports `"incomplete_results": false`** (`Gap 504-A`).
+> The exclusion is **per-repository** — `openedx/frontend-app-learning` and
+> `openedx/openedx-translations` both answer normally. The repo exists: `ls-remote` returns
+> `refs/heads/master`. 🟢 **Every claim this file made about the row is correct** — AGPL-3.0, 8.2k★,
+> 4.4k forks, branch `master`, all re-confirmed on the HTML channel — but its **pin had drifted and
+> is re-pinned: `d9aaee456069` → `f73b7ae64dd5`**. 🔵 The licence at the new SHA is the sidebar, not
+> bytes (`Gap 504-C`).
+> 🔴 **[`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework)
+> reads `archived: true`** and this file recommended it as *"the permissive base for live classroom
+> response"* with no end-of-life flag. Flagged here and in
+> [`verticals/solutions.md`](../verticals/solutions.md); **`archived` is now part of the standing
+> batch read**, because it costs nothing on a call that already returns stars.
+> 🟢 **`Gap 502-A` is CLOSED**: all **87** shelf addresses re-read on the API channel, and the
+> carried figures held — **15 of 15 exact-integer cells identical**, every rounded cell right to its
+> stated precision. The 31× `educhain` error was a **stale carry**, not a bad instrument.
+> 🔵 **Eight rows on this shelf are served off a non-`main`/`master` ref** — `rosariosis` → `mobile`,
+> `GibbonEdu/core` → `v31.0.00`, `openeducat_erp` → `19.0`, `tutors-sdk/tutors` → `development`,
+> `bigbluebutton` → `v4.0.x-develop`, `ILIAS` → `release_11`, `oh-my-paper` → `v2`,
+> `tutor` → `release`. A probe that assumes `main` reads the wrong tree on all eight.
+> 🟡 **`Gap 502-D` was closed at `p503`, and `p504` REPRODUCED both reads on a different channel**
+> (`raw.githubusercontent.com` via `curl`) to **byte-identical** results. 🔴 **What was still broken:
+> the stale text on THIS shelf.** `p503` recorded it *"corrected by closure above"* but only edited
+> the register — the shelf still read *"neither payload was byte-read"*. Fixed here; **a correction
+> recorded in the register is not a correction applied to the shelf** (`Gap 504-E`).
+> 🔴 **`learning-commons-org/evaluators` is NOT cleanly permissive**: MIT code and CC BY 4.0
+> prompts, but **CC BY-NC-SA 4.0 on both annotated corpora**, which a paid engagement may not use.
+> 🔴 **`learning-commons-org/knowledge-graph` cannot be licence-graded at repo level at all** —
+> its data is Open / Open+Gated / Gated **per download**, and a compiled build inherits every
+> included dataset's terms. Reads:
+> [`noassertion-bytes.2026-10-28-p504.tsv`](../evidence/noassertion-bytes.2026-10-28-p504.tsv).
+> Reads: [`api-shelf-reconciliation.2026-10-28-p504.tsv`](../evidence/api-shelf-reconciliation.2026-10-28-p504.tsv),
+> [`api-silent-omission.2026-10-28-p504.tsv`](../evidence/api-silent-omission.2026-10-28-p504.tsv).
+
 > 🟢 **`p501` (`2026-10-28`) — the retained canonical licence set is now VERIFIED INFRASTRUCTURE, not
 > just retained bytes.** [`evidence/canonical/`](../evidence/canonical/)'s 12 payloads were
 > re-resolved this pass: **12/12 byte-and-blob-SHA identical to `MANIFEST.tsv`**, and **11/11
@@ -79,11 +115,11 @@ heading goes stale silently; the table is the census, not the heading.**
 | Repo | License | ★ | SHA read | Role / constraint |
 |---|---|---|---|---|
 | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9,300 | `ac97a8bfdc20` | Virtual classroom / web conferencing. LGPL — linking is permitted, so this is the most integration-friendly copyleft row. Default branch `v4.0.x-develop`. |
-| [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** | 8,200 | `d9aaee456069` | The Open edX LMS + Studio. Dominant in higher ed and workforce. AGPL: hosting a modified copy for a client triggers source release. Default branch `master`. |
-| [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | 7,600 | `46c042e7da65` | Largest installed base and the largest plugin ecosystem (2,000+). Grant is at `COPYING.txt`, **not** `LICENSE` — a root-`LICENSE` probe reports "no grant" here. |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** | 8,200 *(🔵 `p504`: HTML channel — **the API cannot see this repo**, `Gap 504-A`)* | 🔴 **`f73b7ae64dd5`** *(`p504` re-pin; drifted from `d9aaee456069`)* | The Open edX LMS + Studio. Dominant in higher ed and workforce. AGPL: hosting a modified copy for a client triggers source release. Default branch `master`. |
+| [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | **7,556** *(🟢 `p504`, API; prior rounded cell 7,600)* | `46c042e7da65` | Largest installed base and the largest plugin ecosystem (2,000+). Grant is at `COPYING.txt`, **not** `LICENSE` — a root-`LICENSE` probe reports "no grant" here. |
 | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | 6,900 | `1c9f0bb8013e` | The open LMS by Instructure; heavy North America higher-ed share. AGPL. Default branch `master`. |
 | [frappe/lms](https://github.com/frappe/lms) | **AGPL-3.0** | 3,400 | `6054772c0426` | Frappe-framework LMS. **Widely published as MIT — it is not.** Grant at `license.txt` (lowercase), 33,893 B, AGPL-3.0; the GitHub sidebar agrees. |
-| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | **AGPL-3.0** | 2,400 | `2d75337273ac` | **New row `p491`.** "Next-gen open source learning platform" — modern course/content platform. At 2,400★ it outranks Kolibri and Chamilo, and was absent from this KB entirely. AGPL confirmed on both channels (`LICENSE`, 34,522 B; sidebar `AGPL-3.0 license`). Default branch **`dev`**. |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | **AGPL-3.0** | **2,427** *(🟢 `p504`, API; prior rounded cell 2,400)* | `2d75337273ac` | **New row `p491`.** "Next-gen open source learning platform" — modern course/content platform. At 2,400★ it outranks Kolibri and Chamilo, and was absent from this KB entirely. AGPL confirmed on both channels (`LICENSE`, 34,522 B; sidebar `AGPL-3.0 license`). Default branch **`dev`**. |
 | [frappe/education](https://github.com/frappe/education) | GPL-3.0 *(declared only)* | 682 | `73ce33ef2719` | **New row `p491`.** Frappe school-management / SIS app — **a different product from `frappe/lms`, under a different license family.** Its grant is a **19-byte** `license.txt` reading `License: GNU GPL V3` with **no license text at all**; GitHub's classifier cannot resolve it and shows a bare "License" link. See the note below. Default branch `develop`. |
 | [ankitects/anki](https://github.com/ankitects/anki) | **AGPL-3.0** | 32,300 | `d87cb22bf337` | Spaced-repetition engine; the reference implementation of SRS scheduling. AGPL. Useful as an algorithm reference even where the code can't be taken. |
 | [overhangio/tutor](https://github.com/overhangio/tutor) | **AGPL-3.0** | 1,100 | `aa5d1a764b6c` | Docker-based Open edX distribution — the realistic way anyone actually deploys Open edX. Default branch `release`. |
@@ -681,7 +717,7 @@ rewritten. Licences fetched from `raw.githubusercontent.com` at commit SHAs reso
 
 | Layer | Repo | Licence @ pinned SHA | ★ | Operative body | Why this one |
 |---|---|---|---|---|---|
-| 🟢 **Realtime quiz / classroom response** | [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 🟢 **Apache-2.0**, 11 357 B `c4c0cb0b30b5` | 77 | 🟢 **IDENTICAL** to the apache.org steward form | The permissive base for live classroom response — the "everyone answers at once" problem (fan-out, join-mid-round, scoring) solved as a networking framework rather than a product. Pushed 2026-03-06: live, not fast-moving. |
+| 🔴 **Realtime quiz / classroom response — UPSTREAM ARCHIVED** | [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 🟢 **Apache-2.0**, 11 357 B `c4c0cb0b30b5` | 77 | 🟢 **IDENTICAL** to the apache.org steward form | 🔴 **`p504`: `archived: true` on the API — this repository is FROZEN upstream, and this row recommended it with no end-of-life flag for ~20 passes.** Fork it or lift the pattern; do not expect fixes. The permissive base for live classroom response — the "everyone answers at once" problem (fan-out, join-mid-round, scoring) solved as a networking framework rather than a product. Pushed 2026-03-06: live, not fast-moving. |
 
 ### 🟢 The permissive census — and why the denominator stops moving here
 
@@ -786,7 +822,7 @@ confirmation of that earlier read from an unrelated org.
 | id | statement |
 |---|---|
 | 🆕 **`Gap 502-C`** | **Graded ≠ shelved.** `Gap 467-I` closed by grading and promoted nothing for ~35 passes. Five rows land here; **26 of the 31 tier addresses read this pass are still unshelved.** 🔴 Open and general: *how many other closed gaps closed without a promotion?* No instrument here answers that |
-| 🆕 **`Gap 502-D`** | **`NOASSERTION` is three states wearing one label** — no licence, custom licence, and a licence GitHub's matcher did not recognise — with opposite procurement consequences. [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) (164★) and [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (87★) both return it, while their sibling `agent-skills` is cleanly Apache-2.0. 🔴 **Neither payload was byte-read this pass**, and they are the larger two |
+| 🆕 **`Gap 502-D`** | **`NOASSERTION` is three states wearing one label** — no licence, custom licence, and a licence GitHub's matcher did not recognise — with opposite procurement consequences. [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) (164★) and [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (87★) both return it, while their sibling `agent-skills` is cleanly Apache-2.0. 🟢 **CLOSED at `p503`; INDEPENDENTLY REPRODUCED at `p504` on a different channel** (`curl` against `raw.githubusercontent.com` at the HEAD SHA) with **byte-identical results** — same byte counts, same blob SHA-1s. 🔴 **But this very sentence was still live on this shelf at `p504`:** `p503`'s register entry says the stale text was *"corrected by closure above"*, and it corrected [`intel/open-gaps.md`](../intel/open-gaps.md) **without touching this file**. The register moved; the shelf did not. Corrected here now. Root cause of the `NOASSERTION`: both carry **`LICENSE.md`, a prose licensing FRAMEWORK rather than a canonical licence text**, which no matcher can classify — a **fourth** state beyond the three this gap named. `evaluators` (1 615 B, blob `86eebd7ebc43`, HEAD `b9d47891c1b8`) is 🟢 **MIT code + CC BY 4.0 prompts** but 🔴 **CC BY-NC-SA 4.0 on both annotated corpora (CLEAR, PERSUADE 2.0) — REFUSED for paid work**. `knowledge-graph` (5 789 B, blob `6320adcd726e`, HEAD `a7547180c47d`) is 🟢 **MIT code** over 🔴 **data that is NOT uniformly licensed at all**: per-dataset *and per-download* access types (Open / Open+Gated / Gated), where Gated carries no open licence and needs provider approval, a compiled build inherits every included dataset's obligations, and terms may change between releases. 🔴 **Neither is answerable at repo level** — see [`noassertion-bytes.2026-10-28-p504.tsv`](../evidence/noassertion-bytes.2026-10-28-p504.tsv) and `p503`'s closure in [`intel/open-gaps.md`](../intel/open-gaps.md). 🔴 **Original `p502` note, retained for the record:** neither payload was byte-read at `p502`, and they are the larger two |
 | 🟡 carried | 🔴 **The whole record layer above is one region.** Five of six promoted rows are North America (US DoD and a Baltimore vendor); the sixth is EMEA and **708 days stale**. 🔴 **There is no APAC or LATAM LRS on this shelf, and none was found** — stated as a measured absence, not coverage |
 
 ### 🟢 `p490`'s `tao-core` correction survives a direct attack — and the attack is the reusable finding
