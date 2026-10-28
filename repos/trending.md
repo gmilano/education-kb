@@ -4,6 +4,53 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p513` — `2026-10-28` — **🟢 EIGHT ADDRESSES LEFT THIS FILE FOR THE FOUNDATIONS CENSUS, AND THE REASON THEY WERE STILL HERE IS THE DEFECT, NOT THE DISCOVERY: `p511` wrote that the permissive interop spine was complete and wrote it in PROSE, while the permissive table stayed at seven rows. It now holds fifteen. 🟢 Two are addresses new to this base: the BSD-3 institutional repository (1,505 forks) and the Apache-2.0 Open Badges validator from the standards body itself. 🔴 `Gap 504-A` reproduced exactly — 15 slugs queried, 13 returned, `openedx/edx-platform` silently dropped for the third pass running.**
+
+### 🟢 Eight promotions to [`foundations.md`](foundations.md) — the spine, finally counted
+
+| promoted | ★ | grant byte-read `p513` | layer |
+|---|---|---|---|
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | **377** | Apache-2.0, 10 273 B | **LTI / IMS Global** launch |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | **360** | MIT, 1 072 B | **SCORM 1.2 + 2004** runtime |
+| [`DSpace/DSpace`](https://github.com/DSpace/DSpace) | **1,105** | BSD-3-Clause, 1 504 B | 🆕 **New address** — institutional repository |
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | **956** | Apache-2.0, 11 525 B | **xAPI specification** (ADL) |
+| [`iblai/lms`](https://github.com/iblai/lms) | **208** | MIT, 1 063 B | Competency + **digital credentials** |
+| [`SJRiz/pytogether`](https://github.com/SJRiz/pytogether) | **261** | MIT, 1 073 B | **Collaborative IDE** (Pyodide/WASM) |
+| [`haxtheweb/haxcms-php`](https://github.com/haxtheweb/haxcms-php) | **130** | Apache-2.0, 11 362 B | Course microsite authoring (**HAX**) |
+| [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | **61** | Apache-2.0, 13 185 B | 🆕 **New address** — **badge validation** |
+
+🟢 **The spine, now checkable in a table rather than asserted in prose:** LTI in (`tsugi`), SCORM
+in/out (`scorm-again`, and `Papermorph` **emits** it), xAPI out (`xAPI-Spec` + `openfun/ralph`'s MIT
+LRS), credentials out (`openbadges-validator-core`, `iblai/lms`), scholarly record (`DSpace`).
+🔴 **This is the set that lets Globant speak every protocol a copyleft LMS speaks while staying
+outside its boundary** — the single most sellable structural fact in this repository.
+
+### 🔴 Two staleness flags carried onto the shelf with the rows
+
+| row | last push | reading |
+|---|---|---|
+| `xAPI-Spec` | 🔴 **2025-07-03** (~16 mo), 5 tags | Correct for a **spec**; wrong for a dependency — **read it, don't vendor it** |
+| `openbadges-validator-core` | 🔴 **2025-11-04**, default `develop` | Reference implementation at a known-good SHA, not a live upstream |
+| `tsugi` | current | 🔵 **71 tags, not a version ladder** — newest-sorted is `PHP_7_2`, a platform marker. **Pin the SHA.** |
+
+### 🔴 `Gap 504-A`, third confirmation, same slug
+
+15 slugs queried in one batch; **13 returned**, `"incomplete_results": false`, no error. Absent:
+🔴 **`openedx/edx-platform`** (the slug `p504` first caught) and `AnalyticsForLearning/xapi`.
+🟢 **Reconciling the returned `full_name` set against the queried set is the only reason this is
+known** rather than absorbed as "Open edX has no licence". Do it on every call.
+
+### 🔵 Platform addresses re-measured this pass, all already shelved
+
+Verified current, no new addresses: `moodle/moodle` **7,556** (GPL-3.0), `oppia/oppia` **6,951**
+(Apache-2.0, `develop`), `instructure/canvas-lms` **6,890** (AGPL-3.0), `frappe/lms` **3,350**
+(AGPL-3.0), `classroomio/classroomio` **1,734** (AGPL-3.0), `learningequality/kolibri` **1,162**
+(MIT, `develop`), `chamilo/chamilo-lms` **1,019** (GPL-3.0), `apache/openmeetings` **688**
+(Apache-2.0), `ILIAS-eLearning/ILIAS` **505** (GPL-3.0, `release_11`),
+`OpenOLAT/OpenOLAT` **448** (🟢 Apache-2.0 — **byte-verified again this pass**; GitHub's classifier
+still reports `NOASSERTION` and is still wrong), `h5p/h5p-php-library` **152** (GPL-3.0),
+`OpenRoberta/openroberta-lab` **147** (Apache-2.0, `develop`).
+
 ## 🆕 `p512` — `2026-10-28` — **🟢 A DISCOVERY AXIS THIS BASE HAD NEVER RUN BROKE A THREE-PASS DROUGHT, AND IT IS NOT A NEW QUERY — IT IS A NEW SORT KEY: rank `topic:education` by FORKS instead of stars and four addresses new to this repository appear, including the most-forked education repository this base has ever recorded (1,329 forks against 194★). 🔴 The prescribed star-ranked leg returned 11 rows and zero new addresses in the same pass. 🔴 And the fork axis has terrible precision: 36 of 40 rows were not education-AI.**
 
 ### 🟢 The sort key, not the query, was the saturated thing

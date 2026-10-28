@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p513` — `2026-10-28` — **🟢 NINE LAYERS THIS FILE HAD NO ROW FOR NOW HAVE ONE, AND EVERY ONE IS PERMISSIVE: LTI launch, SCORM runtime, xAPI spec, badge VALIDATION, institutional repository, collaborative coding IDE, microsite authoring, speech assessment and the local-first tutor. 🔴 The student-success CRM layer gets a row and a REFUSAL in the same line: the only real option is **Elastic License 2.0**, which forbids exactly the hosted engagement it would be bought for. 🟢 `OpenOLAT`'s Apache-2.0 payload re-verified from bytes a second pass running — GitHub's own classifier still reports `NOASSERTION` and is still wrong. 🔴 The LMS-plus-SIS permissive nil holds for a THIRD pass.**
+
+### 🟢 Nine new layer rows — and why they matter more than another LMS would
+
+🔴 **This file had 28 layer rows and no row for a single interoperability standard**, which is the
+one thing every engagement actually has to implement. `p511` described the spine in prose; the
+table never got it. 🟢 **Now it does**, each grant byte-read at the SHA in
+[`foundations.md`](../repos/foundations.md):
+
+| layer added | platform | grant |
+|---|---|---|
+| **LTI / IMS Global launch** | `tsugi` | Apache-2.0 |
+| **SCORM 1.2 + 2004 runtime** | `scorm-again` | MIT |
+| **xAPI specification** | `adlnet/xAPI-Spec` | Apache-2.0 |
+| **Credential validation** | `openbadges-validator-core` (1EdTech) | Apache-2.0 |
+| **Institutional repository** | `DSpace` | BSD-3-Clause |
+| **Collaborative coding IDE** | `pytogether` | MIT |
+| **Course microsite authoring** | `haxcms-php` | Apache-2.0 |
+| **Speech / pronunciation assessment** | `OpenPronounce` | MIT |
+| **Local-first adaptive tutor** | `OpenTutor` | MIT |
+
+🟢 **The sellable consequence:** a client on **Canvas (AGPL-3.0)** or **Open edX (AGPL-3.0)** can
+now be served by a Globant component that speaks LTI in, SCORM both ways, xAPI out and Open Badges
+out — **with every one of those pieces permissive**, so the AGPL boundary stays on the client's side
+of the wire and Globant's deliverable stays closed. 🔴 **Before this pass that argument existed in
+this repository as a sentence. It is now a table with byte-read grants behind it.**
+
+### 🔴 The student-success CRM layer — a row and a refusal in one line
+
+🔴 **This is the layer most likely to be asked for in a North America higher-ed engagement, and the
+honest answer is "not from open source".**
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) (**340★**, 76 forks) is the only
+substantial open student-success / recruitment CRM found — AI advising assistant, retention CRM,
+recruitment CRM, purpose-built for colleges.
+
+🔴 **Its grant is `Elastic License 2.0`** (3 860 B at `1ba02ecb6559`, `sha256₁₆ 48255018b41fc0e9`) —
+**not OSI-approved**, and its central restriction is that you **may not provide the software to
+third parties as a hosted or managed service**. 🔴 **That is the precise shape of a Globant
+engagement**, so the licence forbids the exact use it would be bought for. 🔵 GitHub reports it as
+`NOASSERTION`, so a sidebar reader learns nothing and a permissive-family detector learns nothing.
+
+🟢 **What to do instead, stated so the gap is actionable:** build the advising layer on
+`iblai/lms` (**MIT**, competency + credentials) for the learner-facing surface and a conventional
+CRM the client already licenses for the relationship data. 🆕 `Gap 513-F`: **no permissively
+licensed student-success CRM exists on this base, and the one candidate is licence-blocked rather
+than missing** — an informed gap, not an unmined one.
+
+### 🟢 `OpenOLAT` — Apache-2.0 re-verified from bytes, and the classifier is still wrong
+
+Re-read this pass at `5b42ca47bd10`: `LICENSE`, **10 982 B**, `sha256₁₆ 6dbc5b605ed0be6e`. 🟢 The
+payload is a **verbatim Apache-2.0 body**; the non-canonical length (10 982 B vs 11 358 B) and the
+blank first line come from an **OLAT / frentix GmbH attribution statement appended after the
+terms**, not from altered terms. 🔴 **GitHub's API reports `NOASSERTION` for this repository**, so
+any pipeline trusting the sidebar will record the sector's **only permissive full LMS** as
+unlicensed. 🟢 **Second independent byte-attestation across two passes — this row is settled.**
+`551 tags` and a current push date; it ships.
+
+### 🔴 The LMS-plus-SIS permissive nil — third consecutive pass
+
+🔴 **Still no single permissive platform that is both a full LMS and a student information system.**
+The permissive LMS options (`OpenOLAT`, `Kolibri`, `mentingo`, `open-tutor-ai-CE`) ship **no
+enrolment, gradebook-of-record or SIS integration** between them; every real SIS on this base is
+**GPL-2.0, GPL-3.0 or LGPL-3.0** (`RosarioSIS`, `Gibbon`, `frappe/education`, `OpenEduCat`) with the
+single MIT exception `GegoK12` at **54★**. 🟢 **Restated as an estimate rather than an absence, as
+`p511` prescribed:** the gap is an integration build between a permissive LMS and the client's
+existing SIS, not a platform search — and `tsugi` (LTI) plus `xAPI-Spec`/`ralph` (telemetry), both
+promoted this pass, are the two components that build makes use of.
+
 ## 🆕 `p512` — `2026-10-28` — **🔴 THIS FILE'S "PICK BY LAYER" TABLE WAS THE WORST-MAINTAINED SHELF ON THE BASE AND NOBODY HAD EVER SWEPT IT: 11 of its 26 star cells were wrong, 9 of them round, 3 OVERSTATED. 🔵 The reason is structural, not careless — every census in this base's history was framed on BOLDED cells, and this table's column is almost entirely plain. 🟢 Two new platform rows: the MIT peer-assessment layer (North America) and the Apache-2.0 robotics-teaching layer (EMEA). 🔴 The LMS-plus-SIS permissive nil holds for a second pass.**
 
 ### 🔴 The table nobody swept, and why the frame missed it rather than the reader
@@ -401,9 +469,9 @@ license read from bytes at a pinned SHA — see
 | **Assessment / exams** | [TAO](https://github.com/oat-sa/tao-core) | GPL-2.0 | 64 | QTI-standard computer-based testing. The only substantial open assessment engine. |
 | **Interactive content** | [H5P](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 152 | 50+ interactive content types; embeds into Moodle, Canvas, Open edX. |
 | **Virtual classroom** | [BigBlueButton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9,258 *(🟢 `p512`, API)* | Live classes with whiteboard and breakouts. **LGPL — linking allowed**, the friendliest copyleft here. |
-| **Structured lessons** | [Oppia](https://github.com/oppia/oppia) | **Apache-2.0** | 6,950 *(🟢 `p512`, API)* | Lesson "explorations" with built-in misconception handling. Permissive. |
+| **Structured lessons** | [Oppia](https://github.com/oppia/oppia) | **Apache-2.0** | **6,951** *(🟢 `p513`, API; `p512` 6,950)* | Lesson "explorations" with built-in misconception handling. Permissive. |
 | **Spaced repetition** | [Anki](https://github.com/ankitects/anki) | AGPL-3.0 | 32,365 *(🟢 `p512`, API)* | Reference SRS scheduler. Use as the algorithm reference even where the code can't ship. |
-| **Interactive classroom / courseware** | [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,710** *(🟢 `p512`, API)* | 🟢 **New row `p493`** (restored — see below). Topic or document → multi-agent interactive lesson with slides, quizzes, project work. **The largest permissive asset in this file by 4×.** 🔴 **Not an LMS**: no enrolment, gradebook or SIS integration. Pair it with Kolibri or OpenOlat for the institutional layer. |
+| **Interactive classroom / courseware** | [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,712** *(🟢 `p513`, API; the `p512` cell read 41,710 while `p510` and `p509` both read 41,712 — the `p512` figure was the outlier)* | 🟢 **New row `p493`** (restored — see below). Topic or document → multi-agent interactive lesson with slides, quizzes, project work. **The largest permissive asset in this file by 4×.** 🔴 **Not an LMS**: no enrolment, gradebook or SIS integration. Pair it with Kolibri or OpenOlat for the institutional layer. |
 | **Tutoring platform — permissive** | [open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | 🟢 **New row `p493`** (restored). The permissive answer where ChatTutor (AGPL-3.0) was the only option. 194 forks against 114★ — deployment, not stargazing. |
 | **Academic integrity** | [Dolos](https://github.com/dodona-edu/dolos) | **MIT** | 355 | 🟢 **New row `p493`** (restored). Source-code plagiarism detection; **3,865 commits**, Ghent University. The layer this file previously left empty — and the one every client asks about the moment a tutor can write code. |
 | **Teacher workflow (skills)** | [k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0** | 600 *(🟢 `p512`, API)* | 🟢 **New row `p493`** (restored). Four K-12 teacher skills **plus eval rubrics**, co-developed with Learning Commons; consortium-side twin at [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) (Apache-2.0, 40★). 🔵 A skill pack has no runtime — nothing to host, no data residency posture. |
@@ -412,6 +480,17 @@ license read from bytes at a pinned SHA — see
 | **Lesson planning** | [Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | **MIT** | 9 | 🟢 **New row `p493`** (restored). MSR India, VELLM, with Sikshana Foundation. **Every artefact is routed to a teacher for review before classroom use** — a shipped implementation of the human-oversight gate. |
 | **Peer assessment / peer review** | [expertiza](https://github.com/expertiza/expertiza) | **MIT** | **194** *(🟢 `p512`, API)* | 🟢 **New row `p512`**, from the fork-ranked leg. Rubric-driven peer review with review mapping and instructor moderation; **1,329 forks / 194★**, NSF-funded (NC State). **North America.** The cheapest credible place to put AI in assessment: the model drafts or checks a *peer's* review and never issues the grade. 🔴 Grant has no title line — tell your licence gate. |
 | **STEM / robotics teaching** | [Open Roberta Lab](https://github.com/OpenRoberta/openroberta-lab) | **Apache-2.0** | **147** *(🟢 `p512`, API)* | 🟢 **New row `p512`.** Fraunhofer IAIS; browser-delivered block programming for real robots, no install. **EMEA, state-backed** — the sovereignty answer in a K-12 STEM procurement. 🔴 **The grant is on `master`, not on the default branch `develop`** (11,359 B `8c6db340475136df`): a default-branch probe reports a phantom absence. |
+
+| **LTI / IMS Global launch** 🆕 | [Tsugi](https://github.com/tsugiproject/tsugi) | **Apache-2.0** | **377** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** The standard by which an external tool is launched *from inside* an LMS — the integration every engagement needs, with no copyleft obligation attached. **267 forks against 377★.** 🔵 **71 tags but not a version ladder** (newest-sorted is `PHP_7_2`): **pin the SHA.** |
+| **SCORM runtime** 🆕 | [scorm-again](https://github.com/jcputney/scorm-again) | **MIT** | **360** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** Modern TypeScript **SCORM 1.2 + 2004** runtime, 63 tags. 🟢 Pairs with `Papermorph` (MIT, agents shelf), which **emits** SCORM — so generated lessons land inside the client's existing LMS rather than beside it. |
+| **xAPI specification** 🆕 | [xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | **Apache-2.0** | **956** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** The **xAPI statement grammar** from ADL, the spec beside `openfun/ralph`'s MIT LRS — together a fully permissive learning-telemetry path. 🔴 **Last pushed `2025-07-03`, 5 tags — read it, do not vendor it.** |
+| **Credential validation** 🆕 | [openbadges-validator-core](https://github.com/1EdTech/openbadges-validator-core) | **Apache-2.0** | **61** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** **Open Badges validation from 1EdTech itself** — verifies a credential is well-formed and genuinely issued, the half of "digital credentials" that issuing tools skip. 🔴 Last pushed `2025-11-04`, default `develop`: reference implementation at a known-good SHA. |
+| **Institutional repository** 🆕 | [DSpace](https://github.com/DSpace/DSpace) | **BSD-3-Clause** | **1,105** *(🟢 `p513`, API)* | 🟢 **New row and new address `p513`.** Theses, datasets, OER and the scholarly record, with OAI-PMH harvesting. **1,505 forks against 1,105★ (1.36×)** — the deployment signal for a system each institution runs its own copy of. 🟢 **The most permissive grant in this file.** |
+| **Collaborative coding IDE** 🆕 | [pytogether](https://github.com/SJRiz/pytogether) | **MIT** | **261** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** Real-time collaborative editing, live drawing and voice, with Python executing **client-side via Pyodide/WASM**. 🟢 **No per-student container to pay for** — the cost argument in any coding-education build. |
+| **Course microsite authoring** 🆕 | [HAXcms](https://github.com/haxtheweb/haxcms-php) | **Apache-2.0** | **130** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** Web-components authoring/publishing for course microsites, Penn State **ELMS/NGDLE** lineage — the **permissive** counterpart to `elmsln/elmsln` (**GPL-3.0**, 253★), which is why this row and not that one. |
+| **Speech / pronunciation assessment** 🆕 | [OpenPronounce](https://github.com/Halleck45/OpenPronounce) | **MIT** | **169** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** Phoneme-level English pronunciation scoring, **Wav2Vec2 + DTW**, self-hosted as a named alternative to Azure Pronunciation Assessment. 🟢 **A named model and a named algorithm, not a prompt** — and **no learner speech leaves the tenant**, which is the whole argument in an EMEA or data-residency build. |
+| **Local-first adaptive tutor** 🆕 | [OpenTutor](https://github.com/zijinz456/OpenTutor) | **MIT** | **155** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** Block-based adaptive workspace that **runs locally**; upload material → notes, quizzes, flashcards, adaptive tutor. FastAPI, 10+ providers. 🟢 **The only locally-running adaptive tutor on this base** — the row to reach for whenever data residency is the blocker. 🔴 **0 tags**; HEAD drifted `p513` (`Gap 513-A`). |
+| **Student-success / advising CRM** 🆕 | [Advising App](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic License 2.0** *(3 860 B at `1ba02ecb6559`, `sha256₁₆ 48255018b41fc0e9`)* | **340** *(🟢 `p513`, API)* | 🔴 **New row `p513` — listed as a REFUSAL, not an option.** AI advising assistant + retention and recruitment CRM for colleges; the only substantial open option at this layer. 🔴 **Elastic 2.0 is not OSI and forbids providing the software to third parties as a hosted/managed service — the exact shape of this engagement.** 🔵 GitHub reports `NOASSERTION`, so neither a sidebar nor a family detector catches it. 🟢 **Instead:** `iblai/lms` (MIT) for the learner surface + the client's existing CRM (`Gap 513-F`). |
 
 ## The decision that actually matters on an engagement
 

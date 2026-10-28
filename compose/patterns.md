@@ -4,6 +4,160 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p513` — `2026-10-28` — **🟢 `P515` — THE STANDARDS-BOUNDARY ENGAGEMENT, which is the recipe this repository has been one table away from for eleven passes: a CLOSED Globant deliverable that speaks LTI in, SCORM both ways, xAPI out and Open Badges out, with every one of those four components byte-attested permissive, so the client's AGPL LMS never touches our source. 🟢 `P516` — the EU build re-dated against **Regulation (EU) 2026/1744**: Article 50 is LIVE NOW, Annex III is 2 Dec 2027, and that inversion changes which deliverable ships first. 🟢 `P517` — the LATAM governance-first engagement, priced off a measured 87 %/26 % gap instead of a market-size slide.**
+
+### 🟢 `P515` — The standards-boundary build: closed deliverable, copyleft LMS, no contact — **8–10 weeks**
+
+🔴 **The problem this solves.** The client runs **Canvas (AGPL-3.0)** or **Open edX (AGPL-3.0)**.
+Every AI feature they want — tutor, generated courseware, assessment, credentials — looks like it
+has to live *inside* that LMS, and the moment it does, the AGPL reaches our code. Eleven passes of
+this KB have had all four interop components on the base and none of them in a census, so the
+answer existed and was not reachable.
+
+🟢 **The architecture: the LMS stays on the other side of four standards.** Nothing crosses the
+boundary except protocol messages.
+
+| edge | direction | component | grant (byte-read `p513`) | SHA |
+|---|---|---|---|---|
+| launch | LMS → us | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | **Apache-2.0**, 10 273 B | `214d11084b7f` |
+| courseware | us → LMS | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | **MIT**, 1 072 B | `f966a1b7d6f0` |
+| telemetry | us → LRS | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) + [`openfun/ralph`](https://github.com/openfun/ralph) | **Apache-2.0** / **MIT** | `ca782a1129bc` / `91fef112394d` |
+| credentials | us → wallet | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | **Apache-2.0**, 13 185 B | `0a66b52a8a0b` |
+
+**Inside the boundary — the part Globant owns and keeps closed:**
+- [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) (**MIT**, `8fe4372557f8`) —
+  source material → animated narrated lessons, 🟢 **emits SCORM natively**, so it hands straight to
+  `scorm-again` with no conversion layer.
+- [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (**MIT**,
+  `98463a0cb5fb`) — **Bayesian Knowledge Tracing over MCP**. 🟢 Use this rather than `OATutor`
+  (MIT, 274★) when BKT must be a *service* the orchestrator calls; use `OATutor` when it must be a
+  product the learner opens.
+- [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills)
+  (**Apache-2.0**, `31fd6dbb0c07`) — lesson-planning and differentiation skills **plus their eval
+  rubrics**, which is what the release gate in step 5 runs on.
+- [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) —
+  🔴 **MIT CODE ONLY.** Its prompts/settings are CC BY 4.0 and **the CLEAR and PERSUADE 2.0 corpora
+  are CC BY-NC-SA 4.0 (NonCommercial)**. Vendor the harness; **do not ship the corpora**.
+
+**Wiring, in order:**
+1. **Weeks 1–2** — stand up `tsugi` as the LTI 1.3 tool provider. Register against the client LMS
+   developer key. 🔴 **Pin `tsugi` by SHA, not by tag** — its newest-sorted tag is `PHP_7_2`, a
+   platform marker, not a version.
+2. **Weeks 2–4** — `Papermorph` ingests the client's source material; its SCORM output is served
+   through `scorm-again`'s runtime so progress and completion report back through the LMS's own
+   SCORM API. 🟢 **The LMS believes it is running an ordinary SCORM package.**
+3. **Weeks 4–6** — `tutor-mcp` behind the orchestrator as the mastery model; every learner
+   interaction emits an **xAPI statement** to a self-hosted `ralph` LRS. 🟢 The LRS is MIT, so the
+   telemetry store is ours and the client's data-residency answer is "your tenant".
+4. **Weeks 6–8** — mastery threshold → issue an Open Badge; `openbadges-validator-core` verifies
+   every badge before release. 🔴 Pin it by SHA: last pushed **2025-11-04**, default branch
+   `develop`.
+5. **Weeks 8–10** — release gate: `k12-teacher-skills` rubrics + the `evaluators` MIT harness score
+   every generated lesson for pedagogy, rigour, format and scaffolding. **Nothing ships un-scored.**
+
+🟢 **The deliverable that makes this sellable is a one-page licence boundary diagram** showing four
+permissive grants with byte counts and SHAs on our side and the AGPL on theirs. Client counsel can
+sign that; they cannot sign "we integrated with Canvas".
+
+🔴 **Where this pattern does NOT apply:** if the client wants the AI *inside* the LMS as a native
+plugin (a Moodle plugin, a Canvas LTI-less integration), the boundary collapses and the copyleft
+obligation is real. Say so and reprice — do not build `P515` and hope.
+
+### 🟢 `P516` — The EU build, re-dated: Article 50 now, Annex III on 2 Dec 2027 — **10–12 weeks**
+
+🔴 **This pattern replaces the compliance premise under every prior EMEA recipe in this file.**
+**Regulation (EU) 2026/1744** (OJ **24 Jul 2026**, in force **27 Jul 2026**) deferred Annex III
+high-risk obligations — grading, admissions, placement, proctoring — to **2 December 2027**. It did
+**not** defer **Article 50 transparency**, which has applied since **2 August 2026**. Emotion
+recognition in schools has been **prohibited since February 2025**, and the AI-literacy duty has
+applied since then too.
+
+🟢 **So the build order inverts.** What was going to be a conformity scramble for August 2026 is now
+a 13-month design window for Annex III — **and a live obligation today for disclosure.**
+
+**Ships in weeks 1–4 (already overdue, not forward-looking):**
+- **Article 50 surfaces** — an unmistakable "you are talking to an AI" disclosure on every learner
+  turn, and **machine-readable marking of synthetic output**. 🔵 The marking grace period
+  (**2 Dec 2026**) covers only systems placed on the market before 2 Aug 2026 — a new build gets no
+  grace at all.
+- **Emotion-recognition audit** — 🔴 a named deliverable, because this is a *prohibition*, not a
+  risk tier. Any affect detection, engagement scoring from webcam, or sentiment-from-face in a
+  school context comes out.
+- **AI-literacy provision** for staff and learners, documented.
+
+**Weeks 4–12, the Annex III readiness file, built on a sovereign stack:**
+- [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (**Apache-2.0**, 10 982 B at
+  `5b42ca47bd10`) — 🟢 **the sector's only permissive full LMS**, Swiss-origin, strong EMEA
+  higher-ed footprint. 🔴 **Tell your licence gate explicitly that this is Apache-2.0: GitHub's API
+  reports `NOASSERTION`** because an attribution statement follows the terms.
+- [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) (**MIT**, `2a604cc3935a`) — the
+  tutor **runs locally**; no learner text leaves the tenant.
+- [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) (**MIT**,
+  `74bc17ea406e`) — **Wav2Vec2 + DTW**, self-hosted. 🟢 **Decisive for language assessment under
+  GDPR: voice is biometric-adjacent and this keeps it in-tenant.**
+- [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) (**Apache-2.0**,
+  `089b4483df27`, Fraunhofer IAIS) for STEM. 🔴 **The licence-branch trap goes in the build script:**
+  its default branch is `develop` and serves **no licence payload**; the grant is at
+  **`master/LICENSE`**. A CI licence check pointed at the default branch will fail this
+  dependency and block the pipeline (`T42`).
+- Grading stays `P513`-shaped: **the model never issues the grade.** On 2 Dec 2027 that is the
+  difference between a high-risk system and a decision-support tool, so build it now and the
+  deadline costs nothing.
+
+🟢 **The commercial line:** *"Article 50 is live and you are likely non-compliant today; Annex III
+is 2 December 2027 and we will have your readiness file before it."* 🔴 **Do not sell "ready for
+August 2026"** — it is simultaneously 16 months early for Annex III and late for Article 50.
+
+🔵 **One caveat recorded honestly:** the Omnibus dates above are corroborated across six independent
+legal-advisory sources; **EUR-Lex itself was not read from this session** (`Gap 513-D`). Confirm
+against the Official Journal before putting a date in a contract.
+
+### 🟢 `P517` — LATAM governance-first: sell the inventory before the tutor — **6–8 weeks**
+
+🟢 **Priced off measured numbers, not a market-size slide.** UNESCO IESALC, 200 higher-education
+institutions across 19 countries: **87 % already use AI, 26 % have a formal strategy.** Brazilian
+schools: **53 %** of administrators use AI, **22 %** have guidelines (Cetic.br). Teachers are
+**ahead** of the OECD (BR 56 / CL 55 / CO 53 / CR 52 vs **36 %**); students are at **nine in ten**
+(PISA 2025).
+
+🔴 **So the usual pitch order is wrong on arrival.** Nobody needs persuading to adopt — adoption
+already happened, ungoverned, at scale. A "pilot" framing insults the facts. **The deliverable is
+governance over an installed base, and it is the fastest-closing education sale in this KB.**
+
+**Weeks 1–3 — inventory and policy, no model involved:**
+1. Shadow-AI inventory: what staff and students are actually using. The 61-point strategy gap means
+   this has never been enumerated.
+2. A written institutional AI policy with the three clauses the region's statutes converge on:
+   permitted uses, disclosure, and 🔴 **no automated high-stakes decision** (the Oklahoma
+   constraint, which travels well as a norm even where no LATAM statute yet compels it).
+3. 🔴 **Equity is a design input, not a CSR paragraph:** Argentina runs **75 %** adoption among high
+   socio-economic groups against **42 %** among low. A policy that assumes connectivity entrenches
+   that 33-point gap.
+
+**Weeks 3–8 — the governed stack, offline-first by default:**
+- [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (**MIT**,
+  `9ca1b5b13d7f`, 542 tags) — runs **without connectivity**. 🔴 Default branch is **`develop`**.
+- [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform)
+  (**Apache-2.0**, `f2d62af1eb82`) — **WhatsApp-delivered, 15 languages, no app and no browser.**
+  🟢 The only delivery surface here that works on a shared phone with no data plan.
+- [`oluiscabral/studorama`](https://github.com/oluiscabral/studorama) (**MIT**, `2ddbb1122b5b`) —
+  pt-BR + ES localisation, **Ollama local-model path**. 🔴 **Single maintainer, personal licence
+  holder: fork and own it, never take a dependency.**
+- [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) —
+  **MIT code only**, 🔴 corpora are **CC BY-NC-SA**. The eval harness is what turns "we have a
+  policy" into "we can show the tool helps", which is the renewal argument.
+
+🔴 **Say the supply reality out loud in the bid, because it is a strength.** `p513` ran a
+Spanish/Portuguese discovery leg: **18 rows, zero AI education products**; the closest were a
+Brazilian school-management system with **no AI** (`ipti/br.tag`, 20★) and a Colombian media-centre
+app (39★). 🟢 **There is no regional open-source incumbent to be compared against.** Globant builds
+here rather than composing — and `Studorama` at **111★** is the entire LATAM-placed AI product
+shelf.
+
+**Partners to name:** UNESCO **IESALC**, the **Observatory on AI in Education for LAC** (launched
+14 Apr), **ECLAC/eLAC** working group (co-coordinated by Chile's **CENIA** and Uruguay's
+**AGESIC**), **Ceibal** (UY), **Cetic.br** (BR).
+
 ## 🆕 `p512` — `2026-10-28` — **🟢 `P513` — AI inside a peer-review workflow the institution already runs, on an MIT platform, with the grade never leaving human hands. 🟢 `P514` — the EMEA-sovereign STEM build on an Apache-2.0 Fraunhofer base, with the licence-branch trap written into the build step so it cannot bite. 🔴 And 13 star figures in THIS file were wrong, because every census this base has run framed on the shelves and this file's recipes were never swept.**
 
 🔴 **Correction notice for this file, first, because it affects what a client was shown.** Thirteen

@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p513` — `2026-10-28` — **🟢 THE INTEROP SPINE WAS DOCUMENTED IN PROSE AND MISSING FROM THE CENSUS: LTI, SCORM, xAPI and Open Badges each had a permissive component this base had already found, and NOT ONE of them was a row in this file's permissive table. Eight promotions, 7 → 15, every grant byte-read at the SHA it now carries. 🟢 Two are genuinely new addresses — the BSD-3 institutional repository and the Apache-2.0 badge validator. 🔴 `Gap 504-A` reproduced EXACTLY: a 15-slug batch returned 13 and `openedx/edx-platform` was again silently dropped. 🔴 And this file's own warning about hard-coded counts bit a THIRD time.**
+
+### 🟢 Eight promotions — the spine this file described and never counted
+
+🔴 **The defect is the same one `T47` names in [`trends.md`](../intel/trends.md): found is not
+shelved.** `p511` wrote that *"the permissive education stack has a complete interop spine and this
+file had never said so"* — and then said it in a **narrative section** while the permissive table
+below stayed at seven rows. 🟢 **This pass moves them into the census**, each grant re-read from
+`raw.githubusercontent.com` at the SHA shown.
+
+| promoted | grant, byte-read `p513` | ★ | tags | the layer it holds |
+|---|---|---|---|---|
+| `tsugi` | **Apache-2.0**, 10 273 B, `sha256₁₆ 73ba74dfaa520b49` | **377** | 71 | 🟢 **LTI / IMS Global** — the launch standard. **267 forks** against 377★ |
+| `scorm-again` | **MIT**, 1 072 B, `sha256₁₆ 383b85b370e8da44` | **360** | 63 | 🟢 **SCORM 1.2 + 2004 runtime** — the content-packaging standard, modern TS |
+| `DSpace` | **BSD-3-Clause**, 1 504 B, `sha256₁₆ baf9ee18d437bf88` | **1,105** | 136 | 🆕 **New address.** Institutional repository / scholarly record — **1,505 forks** |
+| `xAPI-Spec` | **Apache-2.0**, 11 525 B, `sha256₁₆ a1587287ff0445e1` | **956** | 5 | 🟢 The **xAPI specification itself** (ADL) — the spec beside `openfun/ralph`'s LRS |
+| `iblai/lms` | **MIT**, 1 063 B, `sha256₁₆ f1269b7b2313456a` | **208** | 233 | Skills/competency + **digital credentials** front end, Next.js 15 |
+| `pytogether` | **MIT**, 1 073 B, `sha256₁₆ 7d90ce36bb2ada31` | **261** | — | Browser-based **collaborative IDE** (Pyodide/WASM) — the CS-teaching surface |
+| `haxcms-php` | **Apache-2.0**, 11 362 B at `LICENSE.md`, `sha256₁₆ b662f44e55e8da2a` | **130** | — | Web-components course/microsite publishing (Penn State **HAX**) |
+| `openbadges-validator-core` | **Apache-2.0**, 13 185 B, `sha256₁₆ ba1f153bdba34cc8` | **61** | 28 | 🆕 **New address.** **Open Badges validation** (1EdTech) — the credential-verification layer |
+
+🟢 **What this changes commercially:** the sentence *"the whole interoperability spine is permissive"*
+is now **checkable against a table** rather than resting on a prose claim. For a client that
+already runs a copyleft LMS, this is the set that lets Globant sit **outside** the AGPL boundary and
+still speak every protocol the LMS speaks: **LTI in** (`tsugi`), **SCORM in/out**
+(`scorm-again`), **xAPI out** (`xAPI-Spec` + `openfun/ralph`), **credentials out**
+(`openbadges-validator-core`, `iblai/lms`), **scholarly record** (`DSpace`).
+
+### 🔴 Two maintenance flags on the promoted rows — stated, not buried
+
+- 🔴 **`xAPI-Spec` last pushed `2025-07-03`** — ~16 months stale, **5 tags**. 🔵 That is appropriate
+  for a *specification* and wrong for a dependency: **read it, do not vendor it**.
+- 🔴 **`openbadges-validator-core` last pushed `2025-11-04`** and defaults to **`develop`** (`T36`).
+  Treat as a reference implementation with a known-good SHA, not a live upstream.
+- 🔵 **`tsugi`'s tag series is not a version ladder** — its newest-sorted tag reads `PHP_7_2`, a
+  platform marker. **Pin the SHA here, never a "latest tag".**
+
+### 🔴 `Gap 504-A` reproduced exactly, and it cost nothing only because it was checked
+
+A 15-slug batch was queried this pass. 🔴 **13 returned.** The two absent were
+`openedx/edx-platform` — **the same slug `p504` identified** — and `AnalyticsForLearning/xapi`,
+with `"incomplete_results": false` and **no error**. 🟢 **The reconciliation step `p504` prescribed
+is the only reason this is known rather than silently absorbed as "Open edX has no license".**
+**Reconcile the returned `full_name` set against the queried slug set on every call.** This is now
+the third pass to confirm it on `edx-platform` specifically.
+
+### 🔴 The hard-coded count in the heading went stale a third time
+
+🔴 **`p493` corrected this heading from *"the three"* and wrote the rule — *"a hard-coded count in a
+heading goes stale silently; the table is the census, not the heading"* — and the heading then
+acquired a prose count in its body paragraph that said FIVE while the table held seven.** It now
+holds **fifteen**. 🟢 **`p513` removes the number from the prose entirely** rather than correcting it
+a fourth time. 🆕 `Gap 513-E`: **no count in this file may be written anywhere except as a derived
+line immediately above the table it counts.**
+
 ## 🆕 `p512` — `2026-10-28` — **🔴 A GRANT CAN BE ABSENT FROM A REPOSITORY'S DEFAULT BRANCH AND PRESENT ON ANOTHER, AND THIS SHELF JUST MET THE CASE: [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) serves **NO licence payload at 12 paths on `develop`** — its true default branch — and serves **Apache-2.0, 11,359 B, at `master/LICENSE`**. `T36`'s rule is INVERTED for grants. 🟢 Two new foundation rows, one North America (MIT peer assessment), one EMEA (Apache-2.0, Fraunhofer). 🔴 SEVEN star cells on this shelf were wrong, five of them round, and three were OVERSTATEMENTS.**
 
 ### 🔴 `T42` — resolve the default branch for liveness; **enumerate branches** for the grant
@@ -415,9 +470,14 @@ is unaffected — but any downstream deck quoting "16 platforms" is quoting a mi
 
 ## Permissive — the ones you can build a closed derivative on
 
-🔴 **Heading corrected `p493`** — it read *"the three"* while the table below it already held four
-rows after `p492` added `openmeetings`, and `p493` restores a fifth. **A hard-coded count in a
-heading goes stale silently; the table is the census, not the heading.**
+🔴 **Heading corrected `p493`** — it read *"the three"* while the table below it already held more
+rows than that. **A hard-coded count goes stale silently; the table is the census, not the prose.**
+🔴 **`p513`: this paragraph itself carried a stale count (it said five while the table held seven),
+so the numbers are now removed from it entirely** rather than corrected a fourth time (`Gap 513-E`).
+
+**Census, derived from the table immediately below: 15 permissive rows** (🟢 `p513` promoted eight —
+`tsugi`, `scorm-again`, `DSpace`, `xAPI-Spec`, `iblai/lms`, `pytogether`, `haxcms-php`,
+`openbadges-validator-core` — completing the interop spine this file had described only in prose).
 
 | Repo | License | ★ | SHA read | Role |
 |---|---|---|---|---|
@@ -428,6 +488,15 @@ heading goes stale silently; the table is the census, not the heading.**
 | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | **51** *(🟢 `p511`, API; `archived: false`)* | `91fef112394d` | 🆕 **New row `p511`. The only PERMISSIVE Learning Record Store on this base** — xAPI/LRS with FastAPI, Elasticsearch/Mongo backends and a CLI, **34 tags, latest `v5.1.0`**. Licence read from bytes: `LICENSE.md` **1,094 B**, `sha256₁₆ 08ea77291de9c70f`, holder **"France Université Numérique"** — the French national higher-education digital agency. 🟢 **Region: EMEA**, placed on the holder, not inferred. The component every xAPI-instrumented tutoring deployment needs and nobody wants to write; the public-sector copyright holder is the sovereignty answer an EMEA buyer asks for. 🔴 Carried on this base since `p256` in [`trending.md`](trending.md) only — a nine-pass PLACEMENT failure, not a discovery one. |
 | [expertiza/expertiza](https://github.com/expertiza/expertiza) | **MIT** | **194** *(🟢 `p512`, API)* | `b68bb8f640ac` | 🟢 **New row `p512`.** Rails **peer-assessment / peer-review** platform, NSF-funded (NC State). The layer this shelf has never carried: not an LMS, not an SIS — the **review workflow** an AI grader has to sit beside rather than replace. **1,329 forks / 194★.** Payload **1,068 B `cc922786cdca1cd7`**, verbatim MIT body, no title line. |
 | [OpenRoberta/openroberta-lab](https://github.com/OpenRoberta/openroberta-lab) | **Apache-2.0** | **147** *(🟢 `p512`, API)* | `089b4483df27` | 🟢 **New row `p512`.** **Fraunhofer IAIS** block-programming environment for robots, browser-delivered, no install — the **STEM / robotics teaching** layer, and 🟢 **EMEA-origin and state-backed**, which matters where sovereignty is the first objection. 🔴 **The grant is on `master`, not on the default branch `develop`** (**11,359 B `8c6db340475136df`**) — `T42`; a probe pinned to the default branch reports a phantom absence. |
+
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | **Apache-2.0** | **377** *(🟢 `p513`, API)* | `214d11084b7f` | 🟢 **New row `p513`.** **LTI / IMS Global** tool hosting — the standard by which an external tool is launched from inside an LMS, which is the integration every engagement needs and no copyleft obligation touches. **267 forks against 377★.** Licence 10 273 B, `sha256₁₆ 73ba74dfaa520b49`. 🔴 Default branch **`master`** (`T36`); 🔵 **71 tags but NOT a version ladder** — newest-sorted reads `PHP_7_2`, a platform marker, so **pin the SHA**. |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** | **360** *(🟢 `p513`, API)* | `f966a1b7d6f0` | 🟢 **New row `p513`.** Modern TypeScript **SCORM 1.2 + SCORM 2004** runtime — the content-packaging standard, maintained (**63 tags**, `v1.1.1`). 🟢 Pairs directly with `Papermorph` on the agents shelf, which **emits** SCORM. Licence 1 072 B, `sha256₁₆ 383b85b370e8da44`. 🔴 Default branch **`master`**. |
+| [DSpace/DSpace](https://github.com/DSpace/DSpace) | **BSD-3-Clause** | **1,105** *(🟢 `p513`, API)* | `17a631f35ece` | 🆕 **New row and NEW ADDRESS `p513`** — not previously on any shelf in this file. **Institutional repository** for the scholarly record: theses, datasets, OER, with OAI-PMH harvesting. **1,505 forks against 1,105★ — a 1.36× ratio**, the deployment signal for a system each institution runs its own copy of. **136 tags.** Licence 1 504 B, `sha256₁₆ baf9ee18d437bf88`. 🟢 **BSD-3 is the most permissive grant in this file.** |
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | **Apache-2.0** | **956** *(🟢 `p513`, API)* | `ca782a1129bc` | 🟢 **New row `p513`.** The **xAPI (Experience API) specification** itself, from **ADL** — the statement grammar that `openfun/ralph` (MIT LRS, this shelf) stores. Together they are a fully permissive learning-telemetry path. Licence 11 525 B, `sha256₁₆ a1587287ff0445e1`. 🔴 **Last pushed `2025-07-03` (~16 months stale), 5 tags** — correct for a spec, wrong for a dependency: **read it, do not vendor it.** |
+| [iblai/lms](https://github.com/iblai/lms) | **MIT** | **208** *(🟢 `p513`, API)* | `beed11229f56` | 🟢 **New row `p513`.** Skills-intelligence front end — course discovery, **competency tracking and digital credentials** on Next.js 15 / React 19. **233 tags**, `v0.90.2-patch.2`, so it ships. 🟢 The **credential/competency** layer this shelf had only in prose. Licence 1 063 B, `sha256₁₆ f1269b7b2313456a`. 🔵 Pre-1.0 — expect API churn. |
+| [SJRiz/pytogether](https://github.com/SJRiz/pytogether) | **MIT** | **261** *(🟢 `p513`, API)* | `52021a40fdff` | 🟢 **New row `p513`.** Browser-based **collaborative IDE** — real-time editing, live drawing and voice, running Python client-side via **Pyodide/WASM** (Django + Yjs). 🟢 **The CS-teaching surface, with no per-student container to pay for**, which is the cost argument in any coding-education build. Licence 1 073 B, `sha256₁₆ 7d90ce36bb2ada31`. |
+| [haxtheweb/haxcms-php](https://github.com/haxtheweb/haxcms-php) | **Apache-2.0** | **130** *(🟢 `p513`, API)* | `ce3078a73e85` | 🟢 **New row `p513`.** **HAX** web-components authoring/publishing for course microsites (Penn State **ELMS/NGDLE** lineage) — the permissive counterpart to `elmsln/elmsln` (**GPL-3.0**, 253★), which is why this row and not that one. Licence 11 362 B at **`LICENSE.md`**, `sha256₁₆ b662f44e55e8da2a`. 🔴 Default branch **`master`**. |
+| [1EdTech/openbadges-validator-core](https://github.com/1EdTech/openbadges-validator-core) | **Apache-2.0** | **61** *(🟢 `p513`, API)* | `0a66b52a8a0b` | 🆕 **New row and NEW ADDRESS `p513`.** **Open Badges validation** from **1EdTech** (the standards body itself) — verifies a credential is well-formed and genuinely issued, which is the half of "digital credentials" that issuing tools skip. **28 tags.** Licence 13 185 B, `sha256₁₆ ba1f153bdba34cc8`. 🔴 **Last pushed `2025-11-04`**, default branch **`develop`** — reference implementation at a known-good SHA, not a live upstream. |
 
 ## Copyleft — real systems, with the obligation named
 

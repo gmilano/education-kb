@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p513` — `2026-10-28` — **🟢 THE BACKLOG THIS FILE EXISTS TO FEED WAS NEVER BEING DRAINED, AND THIS PASS DRAINED IT: nine permissive rows that passed through here and were byte-read are now ON the agents shelf (19 → 28). 🔴 One of them had DRIFTED while it waited — proof that a row parked here is not preserved, it is unwatched. 🟢 Four fresh legs, 27 addresses, ZERO new to this base — a FIFTH saturation axis. 🔴 And the Spanish/Portuguese leg returned 140,948 results whose top rows were `build-your-own-x`, `awesome` and `linux`, which is a lesson about the instrument, not the region.**
+
+### 🟢 Nine promotions off this backlog — what left this file for the shelf
+
+| promoted to `agents/top.md` | ★ `p513` | grant re-read at the shelf SHA |
+|---|---|---|
+| `virgiliojr94/book-to-skill` | **36,422** | MIT, 1 068 B `LICENSE.md` |
+| `DozenTwelve/Papermorph` | **995** | MIT, 1 069 B |
+| `assafkip/claudemy` | **511** | MIT, 1 069 B |
+| `Halleck45/OpenPronounce` | **169** | MIT, 1 113 B |
+| `zijinz456/OpenTutor` | **155** | MIT, 1 068 B 🔴 **(HEAD drifted — see below)** |
+| `Li-Evan/Bloom` | **293** | MIT, 1 069 B — 🟢 **first APAC-placed shelf row** |
+| `shigella520/MindTrain` | **128** | MIT, 1 067 B |
+| `onemnemo/mnemo` | **122** | Apache-2.0, 11 326 B |
+| `ArnaudGuiovanna/tutor-mcp` | **57** | MIT, 1 073 B |
+
+🔴 **`OpenTutor` drifted while it was parked here.** This base recorded `dbaab74ffe76`;
+`git ls-remote` now answers `2a604cc3935a`. Licence byte-identical at both, so the drift is
+code-only — but **nothing was watching**, because every drift sweep this base runs is framed on the
+shelves. 🆕 **A row in this file is not in a holding pattern; it is outside verification.**
+Registered as `Gap 513-A` in [`top.md`](top.md) and as `T47` in [`trends.md`](../intel/trends.md).
+
+### 🔴 Four legs, 27 addresses, zero new — saturation on a fifth axis
+
+| leg | rows | 🟢 new to base |
+|---|---|---|
+| `topic:ai-in-education stars:>80` | 3 | 🔴 **0** |
+| `topic:edtech stars:>120 pushed:>2026-08-01` | 28 | 🔴 **0** |
+| `topic:adaptive-learning stars:>50 pushed:>2026-05-01` | 12 | 🔴 **0** |
+| Spanish/Portuguese `in:name,description stars:>15` | 18 | 🔴 **0** |
+
+🔵 `topic:adaptive-learning` is worth noting as a **vocabulary** finding: of 12 hits only 5 are
+education at all — the rest are `python-adaptive` (active learning of mathematical functions),
+`wluma` (**screen brightness**), `adaptive-classifier`, `paramonte` and `Bgolearn` (materials
+informatics). 🔴 **"Adaptive learning" is a collision between pedagogy and ML sampling**, so this
+topic cannot be used as an education filter without a second term.
+
+### 🔴 The LATAM leg, and why the first instrument was worthless
+
+**Attempt 1** — `educación OR educacao OR aprendizaje OR docentes AI in:name,description,readme
+stars:>25`, sorted by stars: **140,948 results**, top rows `build-your-own-x` (556,923★),
+`awesome` (526,274★), `public-apis`, `linux`. 🔴 **A readme substring match ranked by stars measures
+GitHub itself, not a region.** The Spanish term appears somewhere in a megarepo's readme and the
+sort does the rest.
+
+**Attempt 2** — `educacion OR educativo OR escolar OR docente in:name,description stars:>15
+pushed:>2026-01-01`: **18 rows, and not one AI education product.** The closest:
+
+| address | ★ | what it is |
+|---|---|---|
+| [`midudev/landing-gta-vi`](https://github.com/midudev/landing-gta-vi) | 395 | 🔴 **archived**; a landing page "para fines educativos" |
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | 136 | 🔵 Chilean open data **including education**, not an education tool |
+| [`ipti/br.tag`](https://github.com/ipti/br.tag) | 20 | Brazilian school management, Yii/PHP, 🔴 **no AI** |
+| [`DanielDev87/virtual-center-app`](https://github.com/DanielDev87/virtual-center-app) | 39 | Colombian virtual media-centre management |
+
+🔴 **The LATAM supply nil therefore holds on a second independent axis.** `Studorama` (MIT, `p511`)
+is still the only LATAM-placed AI product on these shelves. 🟢 **Stated as an informed gap, not as
+coverage:** the region's AI education demand is measured and large (87 % institutional adoption,
+26 % with a strategy — see [`market.md`](../intel/market.md)); its permissive *supply* is one repo.
+
+### 🔴 Five high-traction addresses that pass through here and must never be promoted
+
+Byte-read this pass; **8,691★ combined; commercially unusable.** Full terms in [`top.md`](top.md).
+
+| address | ★ | grant |
+|---|---|---|
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 4,782 | 🔴 **CC BY-NC 4.0** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 2,050 | 🔴 **"PageLM Community License"** — non-commercial, redistribution prohibited, revocable |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 921 | 🟡 **CC BY-SA 4.0** |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) | 498 | 🔴 **no payload at 9 paths** |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340 | 🔴 **Elastic License 2.0** |
+
+🔴 **`PageLM` is the one to remember**: its licence's second line is MIT's own
+*"Permission is hereby granted, free of charge"*, so a substring detector calls it MIT
+(`T48`). **Match the title and the grant clause, never a sentence.**
+
 ## 🆕 `p512` — `2026-10-28` — **🟢 THE DISCOVERY DROUGHT THIS BASE DECLARED IS A PROPERTY OF STAR RANKING, NOT OF THE ECOSYSTEM: ranking the SAME `topic:education` population by FORKS returned four addresses this base has never held, one pass after `p511` measured 95.2 % shelf recall on five star-ranked legs. 🔴 The star-ranked leg run this pass returned 11 hits and ZERO new addresses, so both readings are true at once. 🔴 The week's biggest raw signal is REFUSED: 446★ in under 24 hours, CC BY-NC.**
 
 ### 🔴 The star-ranked leg: eleven hits, zero new — saturation holds on its own axis

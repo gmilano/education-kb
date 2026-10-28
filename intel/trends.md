@@ -4,6 +4,140 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p513` — `2026-10-28` — **🆕 `T46`: a statutory date this base treated as settled MOVED, and the amendment ran in BOTH directions at once — one duty deferred 16 months, another left to bite on the original date. 🆕 `T47`: a backlog row is not a cheap row, it is an UNVERIFIABLE row, and this pass caught one drifting to prove it. 🆕 `T48` sharpens `T43` into a rule with a counter-example: a licence that OPENS with MIT's own sentence and then forbids commercial use defeats every substring detector. 🆕 `T49`: in this sector traction and legal usability are ANTI-CORRELATED at the top — the four highest-traction content assets found this pass are the four Globant cannot use. 🔴 `T45` survives its first real test: supply saturated on a fifth axis while demand returned nothing primary.**
+
+### 🆕 `T46` — a compliance date is a measurement, not a constant, and an amendment can run both ways
+
+This base carried **2 August 2026** as the EU high-risk date for education. 🔴 **It is wrong, and
+it has been wrong since 27 July 2026**, when **Regulation (EU) 2026/1744** entered into force and
+deferred Annex III obligations — education among them — to **2 December 2027**.
+
+🔴 **The non-obvious half is what did NOT move.** The same instrument left **Article 50
+transparency** on its original date, so it has applied since **2 August 2026**. A single amendment
+therefore pushed one duty **16 months out** and left another **already live**:
+
+| duty | this base carried | actual |
+|---|---|---|
+| Annex III high-risk (grading, admissions, proctoring) | 2 Aug 2026 | 🔴 **2 Dec 2027** |
+| Article 50 transparency / AI disclosure | — | 🔴 **2 Aug 2026 — live** |
+| emotion recognition in schools, AI-literacy duty | — | **Feb 2025 — live** |
+
+🟢 **The rule:** a regulatory date on a shelf needs a **re-read cadence like a star cell**, and the
+re-read must enumerate *which* duties an amendment touched rather than accepting a headline date.
+🔴 **"The deadline slipped" is the most dangerous possible summary** — it reads as relief and it
+concealed a duty that was already enforceable. `T46` is the demand-side twin of `T36`: a convention
+assumed instead of measured.
+
+### 🆕 `T47` — a backlog row is an unverifiable row, and it decays where nobody is looking
+
+`zijinz456/OpenTutor` was byte-read, described and star-counted by an earlier pass, then left in a
+narrative table. 🔴 **Its HEAD has since moved off the SHA this base records** (`dbaab74ffe76` →
+`2a604cc3935a`), and **no check in this base would ever have caught it**, because every drift and
+currency sweep this base runs is framed on the shelves.
+
+🟢 **So a backlog is not a cheap holding area — it is an exemption from verification.** The row's
+licence happened to be byte-identical at both SHAs, so nothing was lost this time; that is luck,
+not a control. 🆕 **The rule: anything worth byte-reading is worth either shelving or explicitly
+refusing. There is no third state that survives contact with time.** `p513` acted on it by
+promoting all nine such rows at once.
+
+🔵 **`T47` also explains the shape of `T39`.** Discovery has looked saturated for several passes
+partly because *found* and *shelved* had drifted apart: the supply was already in the base,
+unwatched, and re-finding it kept reading as "nothing new".
+
+### 🆕 `T48` — a detector that matches a sentence can be inverted by a licence that quotes one
+
+`T43` said a classifier and a byte reader fail in opposite directions. 🆕 **`T48` is the specific
+adversarial case, and it is live at 2,050★.**
+
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM)'s `LICENSE.md` is titled **"PageLM
+Community License"** and its second line is MIT's own opening — *"Permission is hereby granted,
+free of charge, to any person obtaining a copy…"* — before it continues *"…for **personal,
+educational, or non-commercial research purposes**"* and later *"Redistribution … is strictly
+prohibited"*, with a **revocable** grant.
+
+🔴 **Every substring detector in this base's history scores that as MIT.** The same leg also scored
+`apache/openmeetings` as MIT from a bundled dependency 51 KB into an appendix. 🟢 **The rule, in two
+lines:**
+1. **Match the TITLE and the operative grant clause**, never a sentence found anywhere in the file.
+2. **Read the whole payload before naming a family** — a permissive opening does not bound what
+   follows, and a 50 KB licence is a container, not a grant.
+
+🔵 Counter-direction, same pass: `OpenOLAT` serves a **verbatim Apache-2.0 body with attribution
+text appended** and GitHub's classifier reports `NOASSERTION`. 🔴 **So the two failure modes are
+simultaneous, not alternatives** — the strict channel refused a real grant in the same sweep that
+the loose channel accepted a fake one.
+
+### 🆕 `T49` — traction and legal usability are anti-correlated at the top of this sector
+
+Ranked by stars, the content-and-skills assets found this pass invert on licence:
+
+| rank by ★ | asset | ★ | usable commercially |
+|---|---|---|---|
+| 1 | `cn-math-taxonomy` | 4,782 | 🔴 **No** — CC BY-NC 4.0 |
+| 2 | `PageLM` | 2,050 | 🔴 **No** — bespoke non-commercial, no redistribution |
+| 3 | `education-agent-skills` | 921 | 🟡 **Encumbered** — CC BY-SA 4.0 reaches derivatives |
+| 4 | `ai-ethos` | 498 | 🔴 **No grant at all** |
+| 5 | `claudemy` | 511 | 🟢 **Yes** — MIT |
+| 6 | `Bloom` | 293 | 🟢 **Yes** — MIT |
+
+🔴 **The four highest-traction assets are the four that cannot be used**, and the permissive ones
+start below 600★. 🟢 **Why this is structural rather than coincidental:** these top assets are
+**curriculum content and pedagogy corpora**, and the people who build those come from academic and
+publishing norms where CC-NC is the default generous choice — while the permissive rows are
+**software** built by engineers whose default is MIT. 🟢 **The operative consequence for Globant:
+never shortlist an education asset by stars.** A stars-ranked shortlist in this sector is
+approximately a list of things you must then discard, and the discovery sweep that produces it
+must carry a licence column or it is actively misleading.
+
+### 🔴 `T45` survives its first real test, with one correction
+
+`p512` registered that in this sector **supply is discoverable and demand is not**. Both halves held:
+
+- 🟢 **Supply:** four fresh legs, 27 addresses, **zero new to this base** — a fifth independent
+  saturation axis.
+- 🔴 **Demand:** no primary market-size figure obtained. Vendor pages offering "$12.5B in 2026" and
+  "$12.3B by 2026" sit *above* both ends of this base's shelved range and trace to marketing
+  copy — recording them would widen `T10`'s 3.3× spread on the weakest available evidence.
+
+🟡 **The correction:** `T45` is too absolute as written. **Demand is not undiscoverable — *market
+size* is.** This pass obtained hard, primary, demand-side numbers on the **governance** axis:
+87 % / 26 % (UNESCO IESALC, 200 institutions, 19 countries), TALIS 2024 teacher use
+(BR 56 / CL 55 / CO 53 / CR 52 vs OECD 36), PISA 2025 (9 in 10 students), **134 bills / 31 states**.
+🟢 **Reframed: the sector's spend is unmeasurable from here, but its OBLIGATIONS and its GAPS are
+measurable — and those are what an engagement is actually sold against.**
+
+### 🆕 `T50` — high adoption with absent governance is the sector's dominant buying condition
+
+The same two-part shape appears in every region measured this pass, which makes it a market
+structure rather than a regional quirk:
+
+| region | adoption | governance |
+|---|---|---|
+| **LATAM** | 87 % of HE institutions use AI | 🔴 **26 %** have a formal strategy |
+| **LATAM (BR schools)** | 53 % of administrators use AI | 🔴 **22 %** have school guidelines |
+| **North America** | 60–61 % teacher use | 🔴 most public schools lack a student AI policy |
+| **EMEA** | 🔴 un-sourced (informed gap) | statute is live and dated |
+
+🟢 **So the buyer is never being persuaded to adopt — they are being rescued from adoption that has
+already happened without rules.** That inverts the usual pitch order: the inventory, the policy and
+the eval harness lead; the tutor follows. 🔴 It also means a "pilot" framing is wrong on arrival,
+because the pilot already ran — informally, ungoverned, at scale.
+
+### 🔴 Carried trends, re-checked this pass
+
+- 🟢 **`T43` holds in both directions**, and is now sharpened by `T48` into an operative two-line rule.
+- 🟢 **`T42` holds** — `OpenOLAT`'s grant is on `master`; its payload is not canonical-length
+  (10 982 B vs 11 358 B), which is the attribution-appendix shape, not a different licence.
+- 🟢 **`T36` holds and gained three more cases**: `book-to-skill`, `tsugi`, `scorm-again` and
+  `haxcms-php` all default to **`master`**; `kolibri` and `oppia` default to **`develop`**.
+- 🔴 **`T9` (offline-first) is now load-bearing rather than contextual**, on the Argentina 75 %/42 %
+  socio-economic split — connectivity is where the equity gap physically lives.
+- 🔴 **`Gap 504-A` reproduced exactly:** a 15-slug batch returned **13**, and
+  `openedx/edx-platform` was again among the silently dropped. **Reconcile returned `full_name`
+  against the queried slug set on every call** — this pass did, which is the only reason it is known.
+- 🔵 **`T10` unchanged by choice** — see `T45` above.
+
 ## 🆕 `p512` — `2026-10-28` — **🔴 `T40` IS HALF REFUTED ONE PASS AFTER IT WAS REGISTERED: typography is NOT a data-quality signal — bolded cells are wrong at 27 %, plain at 28 % — and only ROUNDNESS survives, as a screen with 56 % recall rather than a verdict. 🆕 `T42`: an absence must be enumerated over BRANCHES, not just paths, and a real repository just proved it. 🆕 `T43`: a licence detector and a byte reader fail in OPPOSITE directions, and knowing which is which is now a two-line rule. 🆕 `T44`: a self-checking query can annihilate its own control. 🆕 `T45`: the sector's supply is discoverable and its demand is not.**
 
 ### 🔴 `T40` — half refuted, and the surviving half is weaker than it was registered
