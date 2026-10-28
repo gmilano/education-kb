@@ -6,6 +6,112 @@ updated: 2026-10-28
 
 # Education AI — market map and opportunities by region
 
+> 🟢 **`p507` (`2026-10-28`) — EVERY REGION NOW HAS A TEACHER-ADOPTION RATE FROM ONE INSTRUMENT, AND IT WAS INSIDE A SOURCE THIS FILE ALREADY CITES.**
+> 🟢 **OECD TALIS 2024 publishes per-country notes.** This file has quoted TALIS for
+> 🇧🇷56/🇨🇱55/🇨🇴53/🇨🇷52 since `p490` while recording APAC and EMEA teacher rates as *"still
+> unmeasured"* and failing **`Gap 488-Q`** twice. **The same survey reports the same measure for
+> 🇸🇬, 🇦🇺, 🇯🇵, 🇦🇪, 🇸🇦, 🇩🇰, 🇫🇷 and 🇺🇸.** The rate was never missing; the country notes were
+> never queried.
+> 🔴 **`Gap 488-Q` closes only half-way.** Its objection was *"global, not APAC"* **and**
+> *"pre-2026"*. The country notes settle the first and **not** the second — TALIS 2024 is **2024
+> fieldwork**. Re-registered as **`Gap 507-A`** (a 2026 APAC teacher rate). 🔵 Still a far better
+> position than the "no figure exists" the last two passes concluded.
+> 🔴 **Attestation grade, stated plainly: search-summary only.** `www.oecd.org` and `www.ei-ie.org`
+> are **403 at the CONNECT**, as is every non-GitHub host this session. These figures have **not**
+> been read at the primary and are marked as such.
+> 🔴 **One survey, two averages.** The OECD country notes give the OECD mean as **36%**; Education
+> International's summary of the same survey gives **~41%**. **Quote 36% with the OECD
+> attribution; never use them interchangeably.**
+> 🟢 **Decision 33/2026/QD-TTg independently re-derived this pass and matches this file exactly** —
+> 30 Jun 2026 / 15 Aug 2026, **3 education systems of 46**, education 1 Sep 2027 else 1 Mar 2027,
+> under AI Law 134/2025/QH15. **No edit.** 🔵 Recorded because `p504` established that *the carry*
+> is this base's main defect class, so a clean re-attestation is itself evidence.
+> Reads: [`talis-regional-placement.2026-10-28-p507.tsv`](../evidence/talis-regional-placement.2026-10-28-p507.tsv),
+> [`channel-probe.2026-10-28-p507.tsv`](../evidence/channel-probe.2026-10-28-p507.tsv),
+> [`probe-errors.2026-10-28-p507.tsv`](../evidence/probe-errors.2026-10-28-p507.tsv).
+
+### 🟢 `p507` — one instrument, all four regions, same measure
+
+🔵 **Teachers using AI in their work, OECD TALIS 2024.** The value of this table is not any single
+cell; it is that **every cell is the same question asked the same way**, which is what the previous
+regional figures in this file — vendor surveys, ban-support sentiment, intent-to-use — are not.
+
+| region | country | teachers using AI | AI training received |
+|---|---|---|---|
+| 🟢 **APAC** | 🇸🇬 Singapore | **~75%** — joint highest measured | **76%** — highest |
+| 🟢 **APAC** | 🇦🇺 Australia | **66%** | — |
+| 🟢 **APAC** | 🇯🇵 Japan | **<20%** — joint lowest | — |
+| 🟢 **EMEA** | 🇦🇪 UAE | **~75%** — joint highest | — |
+| 🟢 **EMEA** | 🇦🇿 Azerbaijan | **59%** | — |
+| 🟢 **EMEA** | 🇸🇦 Saudi Arabia | **43%** | — |
+| 🟢 **EMEA** | 🇩🇰 Denmark | **36%** — exactly the OECD mean | — |
+| 🟢 **EMEA** | 🇫🇷 France | **14%** (reported **<20%**) — joint lowest | **9%** — lowest |
+| 🟢 **North America** | 🇺🇸 United States | **43%** | — |
+| 🔵 **LATAM** | 🇧🇷 / 🇨🇱 / 🇨🇴 / 🇨🇷 | **56 / 55 / 53 / 52%** | — |
+| 🔵 **Global** | OECD mean | **36%** (OECD) · 🔴 **~41%** (EI) | 🔵 EU PD participation **29.7%** |
+
+🟢 **Uses, among AI-using teachers:** learn about or summarise a topic **68%**, generate lesson
+plans or activities **64%**. 🔵 **Both are preparation, not delivery** — which is the same shape
+the agent shelf shows, and it is the strongest evidence this base has that **the buyable product is
+teacher-side preparation, not student-facing tutoring.**
+
+🔴 **The spread is the commercial fact, not the average.** **~75% to <20% inside one survey** means
+a regional average is close to useless for engagement sizing: 🇸🇬 and 🇫🇷 are both "EMEA/APAC" in
+a slide and **five-fold apart** in reality. 🟡 **And France pairs the lowest use (14%) with the
+lowest training (9%)** while Singapore pairs the highest with the highest — the readiness gap
+tracks training provision, which is a **sellable intervention**, not a cultural given.
+
+## Opportunities by region — `p507`
+
+### North America
+🟢 **A probability-sample number to replace the aggregators.** TALIS 2024 puts 🇺🇸 teacher AI use
+at **43%**, against the **60–61%** that vendor aggregators report. 🔵 Both can be true of different
+populations and definitions, but **43% is the defensible figure in a procurement conversation**, and
+the 17-point spread is itself the argument for measuring a district before quoting it. 🔴 Paired
+with this file's standing US finding — **134 AI-in-education bills across 31 states**, mandatory
+district AI policies in **MD, ID, OK, VA** — the opportunity is **policy-configurable deployment**:
+one product, per-district rules, auditable.
+
+### EMEA
+🟢 **EMEA stops being a nil and becomes a spread.** 🇦🇪 **~75%** and 🇩🇰 **36%** and 🇫🇷 **14%**
+are one survey, one measure. 🟡 **The Gulf is the high-adoption market in this region and the base
+has been treating EMEA as a European question.** 🟢 **France is the clearest single opportunity on
+this table**: lowest use **and** lowest training (**9%**), which makes teacher enablement — not
+tooling — the first deliverable. 🔴 Against the **EU AI Act** (Regulation (EU) 2026/1744;
+stand-alone Annex III **2 Dec 2027**, embedded **2 Aug 2028**), an EMEA engagement sells
+**conformity as a feature**. 🟡 [`TarrySingh/…-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials)
+(4,018★) is a live **EU AI Act conformity-evidence curriculum** — 🔴 but `NOASSERTION`, so a
+reference, not a base.
+
+### APAC
+🟢 **`Gap 488-Q` half-closes: 🇸🇬 ~75%, 🇦🇺 66%, 🇯🇵 <20%.** 🔵 The region contains both extremes
+of the global distribution, so "APAC adoption" as a single number should never be quoted again.
+🟢 **Singapore is the reference deployment** — highest use, highest training (**76%**) — and the
+place to source proof rather than to sell enablement. 🔴 **🇯🇵 Japan at <20% is the inverse of its
+market size**: the largest under-adopting economy on this table. 🔴 **🇻🇳 Vietnam is the compliance
+market**: Decision 33 names **3 education systems** high-risk — self-study content from uncontrolled
+sources, automated examination/assessment/ranking, biometric behaviour monitoring — with
+**1 Mar 2027 for a new deployment** (the longer 1 Sep 2027 runway belongs to incumbents only).
+🔴 Still missing: **edtech vendor share for any APAC market**.
+
+### LATAM
+🔵 **Unchanged and already the best-evidenced region in this file** — UNESCO IESALC (200
+institutions / 19 countries): **87%** using AI somewhere, **74%** in teaching and learning, but only
+**26%** with a formal AI strategy; TALIS **52–56%**; Ceibal 🇺🇾 **75%** of public-school teachers.
+🟢 **TALIS now places LATAM *relative to* the world rather than only above the OECD mean**: 🇧🇷's
+**56%** sits below 🇸🇬/🇦🇪 (~75%) and 🇦🇺 (66%) and well above 🇫🇷 and 🇯🇵. 🔵 **The LATAM
+sentence is therefore "strong adoption, absent governance" — a governance-and-strategy engagement,
+not an adoption one**, which is the opposite of the France shape.
+
+### Global
+🔴 **The single most useful global finding this pass is a methodological one:** adoption figures in
+this market are quoted from instruments that measure different things — use, intent, ban support,
+training — and this file has mixed them. 🟢 **TALIS 2024 is the only instrument here that asks one
+question of probability samples in every region**, so it is the right spine, and everything else
+should be positioned against it rather than averaged with it. 🔴 **Its own headline is quoted at two
+values (36% / ~41%)**, which is the warning in miniature.
+
+
 **Pass `p491` — reads of 2026-10-27.** `p490` (earlier the same day) rewrote this file; `p491`
 **extends** it. Four things changed: the **EMEA sizing gap is partly closed**, **APAC school-adoption
 data now exists** here, a **US statute this KB was about to inherit is refuted**, and **LATAM's

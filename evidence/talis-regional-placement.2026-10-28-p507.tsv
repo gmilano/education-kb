@@ -1,0 +1,17 @@
+region	country	teacher_ai_use_pct	instrument	attestation	note
+APAC	Singapore	~75	OECD TALIS 2024 country notes	search-summary only	joint highest
+APAC	Japan	<20	OECD TALIS 2024 country notes	search-summary only	joint lowest
+APAC	Australia	66	OECD TALIS 2024 country note	search-summary only	
+EMEA	United Arab Emirates	~75	OECD TALIS 2024 country notes	search-summary only	joint highest
+EMEA	France	14 (reported <20)	OECD TALIS 2024 / Education International	search-summary only	joint lowest; EI gives 14
+EMEA	Saudi Arabia	43	OECD TALIS 2024 country note	search-summary only	
+EMEA	Denmark	36	OECD TALIS 2024 country note	search-summary only	at OECD average
+EMEA	Azerbaijan	59	OECD TALIS 2024 country note	search-summary only	
+North America	United States	43	OECD TALIS 2024 country note	search-summary only	probability sample; aggregators claim 60-61
+LATAM	Brazil	56	OECD TALIS 2024	already shelved	
+LATAM	Chile	55	OECD TALIS 2024	already shelved	
+LATAM	Colombia	53	OECD TALIS 2024	already shelved	
+LATAM	Costa Rica	52	OECD TALIS 2024	already shelved	
+Global	OECD average	36 (OECD) / ~41 (EI)	OECD TALIS 2024	search-summary only	UNRECONCILED - two figures for one statistic
+Global	AI training highest	Singapore 76	OECD TALIS 2024	search-summary only	
+Global	AI training lowest	France 9	OECD TALIS 2024	search-summary only	

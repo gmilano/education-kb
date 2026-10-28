@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p507` — `2026-10-28` — **🆕 `T32`: a gap this base has failed twice was answerable from a source it already cites — the failure was not the query but the ASSUMPTION THAT A CITED SOURCE HAD BEEN FULLY READ. 🟢 Every region now has a teacher-adoption rate from one instrument. 🔴 A widely-republished "MIT" education ERP has no licence at all.**
+
+Reads: [`talis-regional-placement.2026-10-28-p507.tsv`](../evidence/talis-regional-placement.2026-10-28-p507.tsv),
+[`new-addresses.2026-10-28-p507.tsv`](../evidence/new-addresses.2026-10-28-p507.tsv),
+[`probe-errors.2026-10-28-p507.tsv`](../evidence/probe-errors.2026-10-28-p507.tsv),
+[`channel-probe.2026-10-28-p507.tsv`](../evidence/channel-probe.2026-10-28-p507.tsv).
+
+🔴 **Gate posture: `make hooks` not run (`Code from External`), a thirteenth denial in fourteen
+passes.** Nothing below is gate-attested.
+
+### 🆕 `T32` — the unread citation
+
+🔵 **`p506` concluded that breaking the EMEA nil took *"a different instrument class, not a better
+query."* `p507` finds a third possibility that is cheaper than either: the instrument was already
+cited, and only part of it had been read.**
+
+🟢 **`Gap 488-Q`** asked for an APAC teacher-adoption rate. It failed at `p488`, failed again, and
+[`open-gaps.md`](./open-gaps.md) records the fallback as OECD TALIS 2024's global *"about one in
+three"*, graded 🔴 *"global, not APAC, and pre-2026."* 🟢 **TALIS 2024 publishes per-country
+notes.** This base has quoted TALIS for 🇧🇷**56** / 🇨🇱**55** / 🇨🇴**53** / 🇨🇷**52** since `p490`
+— **the LATAM numbers came from the country notes.** The APAC and EMEA notes were simply never
+opened.
+
+🔴 **So the defect class is new and it is not the carry, the channel, or the query.** It is
+**treating a citation as exhausted**: once TALIS was on the shelf as "the global one-in-three
+figure", no pass asked what else TALIS reports. 🟢 **Registered as `T32` with a concrete remedy:
+when a source is cited for one region, check whether it covers the others BEFORE opening a gap for
+them.** That check costs one search leg and would have closed `Gap 488-Q` four passes ago.
+
+🔴 **And the gap only half-closes, which `T32` must not be allowed to obscure.** The original
+objection was two-part. The country notes answer *"not APAC"*; they do **not** answer
+*"pre-2026"*, because TALIS 2024 is **2024 fieldwork**. 🟢 **Re-registered as `Gap 507-A`.**
+
+### 🟢 The trend the data actually shows: the spread, not the average
+
+| | |
+|---|---|
+| highest | 🇸🇬 Singapore **~75%**, 🇦🇪 UAE **~75%** |
+| | 🇦🇺 Australia **66%**, 🇦🇿 Azerbaijan **59%**, 🇧🇷 Brazil **56%** |
+| OECD mean | **36%** (🔴 Education International reports **~41%** for the same survey) |
+| | 🇺🇸 US **43%**, 🇸🇦 Saudi **43%**, 🇩🇰 Denmark **36%** |
+| lowest | 🇫🇷 France **14%**, 🇯🇵 Japan **<20%** |
+
+🔴 **A five-fold spread inside one survey.** 🔵 The trend this base has been reporting — *"adoption
+is rising everywhere"* — is true and nearly useless. **The usable trend is that national adoption
+has diverged far more than regional labels can carry**, and a deck that says "EMEA adoption is X"
+is averaging 🇦🇪 **75** with 🇫🇷 **14**.
+
+🟡 **Training tracks use, which makes the gap addressable.** Singapore: highest use, highest
+training (**76%**). France: lowest use, lowest training (**9%**). 🟢 **This is the strongest
+argument in this base that teacher enablement is a product line and not a precondition.**
+
+🟢 **And what teachers use AI *for* has not moved:** summarise or learn a topic **68%**, generate
+lesson plans **64%** — **both preparation**. 🔵 Across the agent shelf, the market map and now a
+probability sample, **the demand is teacher-side preparation; student-facing tutoring is where the
+stars are and not where the usage is.**
+
+### 🔴 A licence claim that travelled further than the licence
+
+🔴 **`GegoK12` is published as MIT by its own site and repeated by comparison pages.**
+[`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) — **54★ / 102 forks, Laravel,
+`archived: false`** — reads **`NOASSERTION`**: GitHub detects **no OSI licence**. 🟢 `p501`'s
+standing finding — **there is no MIT-licensed education ERP** — therefore survives its first real
+counter-candidate. 🔵 **The trend worth recording: "open source" in the education-ERP segment is a
+marketing register, not a licence claim**, and the only reliable test is `license.spdx_id` at the
+repository.
+
+🔴 **Same reading on the new agent tier.** Of the five highest-starred new education repos this
+pass, **two are AGPL-3.0 and one is `NOASSERTION`**; only
+[`OpenCat`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) (**MIT, 5,518★**) and
+[`TorchLeet`](https://github.com/Exorust/TorchLeet) (**MIT, 2,595★**) can be built on. 🔵 **The
+permissive tier keeps thinning as the attention tier grows** — now observed on new entrants, not
+just the standing shelf.
+
+### 🔴 Five probes, five false answers, and one nearly corrected a correct row
+
+🔵 `Gap 506-B` requires a known-good **and** known-bad control before any count is published. **It
+fired five times this pass and every count it blocked was mine**, including a *"200 from
+`api.github.com`"* that would have retired `p505`'s correct **403** row — the 200 came from `/` and
+`/rate_limit`, **neither of which can read a repository**, while every `/repos/` path returns 403.
+
+🔴 **The one to remember is the `menthor` false defect**: the probe reported an archived repo being
+recommended unflagged. **The repo IS archived — and the shelf already says so.** 🟢 **A true
+premise plus an unchecked assumption produced a false correction**, which is more dangerous than a
+false count because it would have edited a right answer into a wrong one. **Corrections require the
+context read, not the hit.**
+
 ## 🆕 `p506` — `2026-10-28` — **🆕 `T31` (a verified number can still be the wrong number — this base has five instruments that grade whether a figure is CURRENT and none that grade what it MEASURES, and the defect is live in its own best commercial sentence). 🟢 The EMEA adoption nil is BROKEN after thirteen passes, and `T30`'s instrument-class prediction is confirmed. 🔴 `T24` saturation holds on a fourth shape: the prescribed discovery query now returns zero repositories.**
 
 Reads: [`emea-adoption-instruments.2026-10-28-p506.tsv`](../evidence/emea-adoption-instruments.2026-10-28-p506.tsv),

@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p507` — **🟢 `Gap 488-Q` HALF-CLOSES, and it was answerable from a source this base already cites — the failure was never the query. 🆕 `T32` registered. 🔴 The convention-probe error recurred a SIXTH and SEVENTH time, both in this pass's own code. 🟢 `p501`'s no-MIT-education-ERP finding survives its first real counter-candidate. 🔴 TWO REGISTERED (`507-A`, `507-B`).**
+
+🔴 **Gate posture, stated first: `make hooks` was not run** — the suite is `Code from External` in
+this session, **thirteen denials in fourteen passes**. 🔵 Nothing in this pass is gate-attested.
+🟢 **Three contracts re-implemented independently in this session's own code, all green:**
+frontmatter (**10/10** files), table column-count integrity (**14** tables added this pass, **0**
+malformed), header-as-data (**0** across all nine shelves), and queried-vs-returned reconciliation
+on **45** addresses. 🔴 **Two of those four numbers were wrong on first measurement** — see
+`Gap 507-B`.
+
+### 🟢 Closed with content
+
+| gap | resolution |
+|---|---|
+| 🟡 **`Gap 488-Q`** | **HALF-CLOSED.** An APAC teacher-adoption rate exists and is placed by country: 🇸🇬 **~75%**, 🇦🇺 **66%**, 🇯🇵 **<20%** — OECD **TALIS 2024 country notes**, a probability sample. The same notes supply EMEA (🇦🇪 ~75%, 🇦🇿 59%, 🇸🇦 43%, 🇩🇰 36%, 🇫🇷 14%) and North America (🇺🇸 43%). 🔴 **The "pre-2026" half of the original objection SURVIVES** — TALIS 2024 is 2024 fieldwork. Carried forward as **`Gap 507-A`**. |
+| 🟢 **`p501`'s no-MIT-education-ERP finding** | **SURVIVES its first named counter-candidate.** `GegoK12` is published as MIT by its own site and repeated by comparison pages; [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) (**54★ / 102 forks**) reads **`license.spdx_id: NOASSERTION`** — no OSI licence detected. The claim travelled; the licence did not. |
+| 🟢 **`Gap 505-B`** | **RE-ATTESTED, not retired.** Its row *"raw `curl` to `api.github.com` is 403"* is **correct**: `/repos/{owner}/{repo}` returns **403** and `/search/repositories` returns **403**. A 200 from `/` and `/rate_limit` is a routability signal, not a usable API. |
+| 🟢 **Decision 33/2026/QD-TTg** | **Independently re-derived and matching [`market.md`](./market.md) exactly** — 30 Jun 2026 / 15 Aug 2026, **3 education systems of 46**, education 1 Sep 2027 else 1 Mar 2027, under AI Law 134/2025/QH15. **No edit.** |
+
+### 🔴 Registered this pass
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 507-A`** | **A 2026 APAC teacher-adoption rate.** TALIS 2024 places the region by country but is **2024 fieldwork**. 🔵 Note for the next pass: this is now a *currency* question, not an *existence* one — a materially different and much narrower ask than `488-Q` was. |
+| 🔴 **`Gap 507-B`** | **Probe correctness recurred twice more, in this pass's own contract code.** The table-integrity probe reported **6 tables** because it segmented *"from the first `p507` string to my own first mention of `p506`"* — **it cut at my own prose**; corrected to **14 tables, 0 malformed**. The frontmatter probe reported **9 files** because it globbed the five shelf directories and **omitted the repo root**, where `README.md` also carries frontmatter; corrected to **10/10**. 🟢 Both were caught only because the numbers disagreed with what was visibly written. |
+
+### 🔴 Standing, not closed
+
+| gap | status |
+|---|---|
+| 🔴 **`Gap 504-A`** | **Reproduced a THIRD consecutive pass.** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) silently absent from a 45-slug batch reporting `incomplete_results: false`. 🟢 **Upgrade the reading: this is deterministic per-repository index behaviour, not a transient.** Reconcile queried against returned on every call. |
+| 🔴 **`Gap 483-K`** | **Unclosable, and the denial is now the whole open web.** `oecd.org`, `ei-ie.org`, `unesco.org`, `luatvietnam.vn`, `multistate.us`, `digitaleducationcouncil.com`, `timeshighereducation.com` — **403 at the CONNECT / no tunnel**. Only `github.com` and the MCP GitHub channel answer. 🔴 **Consequence for this pass: every TALIS figure is search-summary attested and NOT read at the primary.** |
+| 🔴 **OECD average, unreconciled** | TALIS 2024's headline is quoted as **36%** (OECD country notes) and **~41%** (Education International) for the same survey. Quote **36%** with the OECD attribution; never use them interchangeably. |
+| 🔴 **APAC vendor share** | Still nothing for any APAC market. Unmoved. |
+
+### 🆕 `T32` — the unread citation
+
+🔵 **`p506` concluded that breaking the EMEA nil required *"a different instrument class, not a
+better query."* `p507` finds a cheaper third mechanism: the instrument was already cited, and only
+part of it had been read.**
+
+🟢 This base has quoted **TALIS 2024** for 🇧🇷56/🇨🇱55/🇨🇴53/🇨🇷52 since `p490` — **those are the
+country notes** — while simultaneously recording the APAC and EMEA teacher rates as *"still
+unmeasured"* and failing `Gap 488-Q` twice with the fallback *"TALIS's global one-in-three, which is
+global, not APAC."*
+
+🔴 **The defect is treating a citation as exhausted.** Once a source is shelved for one region, no
+pass asks what else it covers. 🟢 **Remedy, registered as `T32`: before opening or re-failing a
+regional gap, check whether a source ALREADY ON THE SHELF reports that region.** One search leg;
+would have closed `Gap 488-Q` four passes ago.
+
 ## 🆕 `p506` — **🟢 THE LONGEST-RUNNING OPEN GAP ON THIS REGISTER IS CLOSED: EMEA has an education adoption rate after THIRTEEN consecutive informative nils, and `p505`'s prediction of the mechanism was exactly right — a different instrument class, not a better query. 🟢 `Gap 504-C` closed from bytes. 🟢 `Gap 505-F` closed with content, and its Maryland half proven UNCLOSABLE here. 🔴 `Gap 505-B` is WRONGLY STATED and is corrected, not closed. 🔴 The convention-probe error recurred a FIFTH time, in this pass's own star probe. 🔴 SIX REGISTERED (`506-A`…`506-F`).**
 
 🔴 **Gate posture, stated first and without softening: `make hooks` was not run** — the suite is

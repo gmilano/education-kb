@@ -1,0 +1,16 @@
+channel	target	result	verdict	note
+raw curl CONNECT	www.oecd.org	403 at CONNECT	BLOCKED	host-policy denial, Gap 483-K family
+raw curl CONNECT	www.ei-ie.org	403 at CONNECT	BLOCKED	
+raw curl CONNECT	www.unesco.org / iesalc	000 no tunnel	BLOCKED	
+raw curl CONNECT	english.luatvietnam.vn	000 no tunnel	BLOCKED	
+raw curl CONNECT	digitaleducationcouncil.com	000 no tunnel	BLOCKED	
+raw curl CONNECT	multistate.us / future-ed.org / timeshighereducation.com	000 no tunnel	BLOCKED	
+raw curl	api.github.com/ (root)	200 body {}	FALSE-POSITIVE	200 + empty object; NOT a working channel
+raw curl	api.github.com/rate_limit	200 real JSON	WORKS	only passing endpoint; proves nothing about repo reads
+raw curl	api.github.com/repos/{owner}/{repo}	403	BLOCKED	"GitHub access to this repository is not enabled for this session"
+raw curl	api.github.com/users/* , /search/repositories	403	BLOCKED	"sessions are bound to their configured repositories"
+MCP search_repositories	repo:owner/name exact slug	full metadata	WORKS	stars, license.spdx_id, archived, forks, topics
+MCP search_repositories	qualifier discovery (topic:, in:name, stars:)	full results	WORKS	280 hits on control query
+MCP get_file_contents	third-party repo	Access denied	BLOCKED	bound to gmilano/globant-kb
+WebFetch	any non-GitHub host	ENOTFOUND	BLOCKED	
+WebSearch	all queries	summaries returned	WORKS	secondary attestation only; no primary text readable

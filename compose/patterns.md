@@ -6,6 +6,87 @@ updated: 2026-10-28
 
 # Compose patterns — concrete education AI recipes
 
+> 🟢 **`p507` (`2026-10-28`) — TWO NEW RECIPES, BOTH BUILT ONLY FROM MIT PARTS VERIFIED THIS PASS.**
+> 🔵 Every repo named below was read on the API channel this pass: `license.spdx_id`, `archived`
+> and star count are measured, not carried. 🔴 **No AGPL or `NOASSERTION` repo appears in any wiring
+> step** — the two fastest-growing new education repos of this pass
+> ([`Echo-Loop`](https://github.com/echo-loop/Echo-Loop), [`penecho`](https://github.com/penecho/penecho))
+> are deliberately absent for that reason, and are cited only as design references.
+> Reads: [`new-addresses.2026-10-28-p507.tsv`](../evidence/new-addresses.2026-10-28-p507.tsv),
+> [`api-shelf-read.2026-10-28-p507.tsv`](../evidence/api-shelf-read.2026-10-28-p507.tsv).
+
+### 🟢 `p507-R1` — Teacher-side preparation, because that is what the probability sample says sells
+
+🔵 **Why this one exists:** TALIS 2024 reports that among AI-using teachers, **68%** use it to
+learn or summarise a topic and **64%** to generate lesson plans — **both preparation**. Student-
+facing tutoring is where the stars are; **preparation is where the usage is.** Build the one people
+already do.
+
+| step | component | licence | ★ | role |
+|---|---|---|---|---|
+| 1. source → knowledge | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 MIT | 36,339 | Turn the syllabus, textbook or curriculum PDF into agent-readable skill knowledge. |
+| 2. pedagogy layer | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 permissive | **598** | Lesson-planning skills **plus eval rubrics** — the rubrics are the part that makes step 5 possible. |
+| 3. generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 MIT | **387** | Emit lesson plans, question banks and activities as structured objects, not prose. |
+| 4. delivery into the institution | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 MIT | 982 | **Emits SCORM** — lands inside Moodle/Canvas/ILIAS without an integration project. |
+| 5. quality gate | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) + [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | 🟢 permissive | 13 / 46 | Score the generated material for **pedagogical** quality before a teacher ever sees it. |
+
+🟢 **Wiring:** `book-to-skill` writes a knowledge pack → `k12-teacher-skills` supplies the planning
+skill and its rubric → `educhain` generates against that rubric → **`pedagogy-benchmark` scores the
+output and anything below threshold regenerates rather than shipping** → `Papermorph` packages the
+survivors as SCORM → import into the LMS.
+🔴 **The non-obvious step is 5.** Every education generation demo skips it, and it is the only step
+that distinguishes this from a prompt. 🟡 **Step 2's rubrics and step 5's benchmark must agree** —
+wire the rubric into the benchmark's scoring config, or you are measuring a different thing than
+you asked for.
+🔵 **Regional fit:** 🇫🇷 France (**14%** use, **9%** training) is the sharpest case — the
+deliverable is enablement, and this recipe produces material a teacher keeps.
+
+### 🟢 `p507-R2` — Assessment with an auto-grader and an MCP tutor, end to end
+
+🔵 **Why this one exists:** [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) (🟢 **MIT**,
+**2,595★**, `archived: false`) is the rare repo that ships **an auto-grader and an MCP AI tutor
+together**. The MCP surface is the point — it composes with any agent on this shelf instead of
+being a closed app.
+
+| step | component | licence | ★ | role |
+|---|---|---|---|---|
+| 1. problem bank + grader | [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | 🟢 **MIT** | **2,595** | Problems with an auto-grader; **its MCP server is the tutor interface**. |
+| 2. tutoring policy | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 permissive | **274** | **Bayesian Knowledge Tracing** — decides *what next* from the grader's pass/fail stream, instead of letting the LLM guess mastery. |
+| 3. integrity | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 permissive | **355** | Source-code plagiarism detection on submissions — the control an institution asks for before it will grade with AI. |
+| 4. LMS surface | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 permissive | **309** | Canvas LMS over MCP — the same protocol as step 1, so roster, assignment and grade flow need no adapter. |
+| 5. evidence | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 permissive | **144** | xAPI learning-record store: every attempt, hint and grade as a statement. |
+
+🟢 **Wiring:** Canvas publishes the assignment via `canvas-mcp` → the learner works a `TorchLeet`
+problem → the auto-grader returns pass/fail → **`OATutor`'s BKT updates mastery and selects the next
+problem** → the `TorchLeet` MCP tutor explains **only** the failed step → `dolos` screens
+submissions → every event lands in `lrsql` as xAPI.
+🟢 **Steps 1 and 4 both speak MCP, so the tutor and the LMS compose without glue** — that is what
+makes this a build rather than an integration.
+🔴 **And step 5 is the compliance step, not a nicety.** 🇻🇳 **Decision 33/2026/QD-TTg** names AI
+that *"automatically conducts examinations, assesses learning outcomes or ranks learners"* a
+**high-risk** system — this recipe is squarely inside it. 🟡 **An xAPI record of every automated
+decision, plus a human override on the grade, is the conformity evidence**, and a **new** Vietnamese
+deployment must have it by **1 Mar 2027**, not the incumbents' 1 Sep 2027.
+
+### 🟢 `p507-R3` — Embodied STEM, a category this base could not build before
+
+🔵 [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot)
+(🟢 **MIT**, **5,518★ / 650 forks**) is the first permissive repo on these shelves that produces a
+**physical** learner artefact.
+
+🟢 **Wiring:** `OpenCat` (or the ESP32 board,
+[`OpenCatEsp32`](https://github.com/PetoiCamp/OpenCatEsp32-Quadruped-Robot), **521★**) supplies the
+robot and its block-coding surface → `k12-teacher-skills` generates the lesson sequence and its
+rubric → `educhain` emits the worksheets and assessment items → **the robot's own telemetry becomes
+the evidence stream into `lrsql`**, so "did the learner's program make the robot walk" is a graded
+xAPI statement rather than a teacher's impression → `Papermorph` packages the unit as SCORM for the
+LMS.
+🟡 **Use the ESP32 board for classroom fleets** — lower unit cost and the same framework.
+🔵 **Regional fit:** this is the recipe for a 🇦🇪/🇸🇬-style high-adoption, well-funded STEM
+programme, where the differentiator is no longer *whether* teachers use AI (**~75%** already do) but
+what the programme produces.
+
+
 **Pass `p491` — reads of 2026-10-27.** `p490` (earlier the same day) rewrote this file; `p491`
 **extends** it with **`P491-1`**, which supersedes `P490-6`. Pre-p490 sections remain in
 [`archive/2026-10-27-p490-pre-rewrite/patterns.md`](../archive/2026-10-27-p490-pre-rewrite/patterns.md).

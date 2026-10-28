@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p507` — `2026-10-28` — **🟢 Five new addresses verified on `license.spdx_id`, and only two can be built on. 🔴 `openedx/edx-platform` is silently omitted from the search index for a THIRD consecutive pass.**
+
+Reads: [`new-addresses.2026-10-28-p507.tsv`](../evidence/new-addresses.2026-10-28-p507.tsv),
+[`api-shelf-read.2026-10-28-p507.tsv`](../evidence/api-shelf-read.2026-10-28-p507.tsv),
+[`channel-probe.2026-10-28-p507.tsv`](../evidence/channel-probe.2026-10-28-p507.tsv).
+
+🔴 **Gate posture: `make hooks` not run (`Code from External`).** Nothing here is gate-attested.
+🟢 Licences below are read from the API's `license.spdx_id` field, never inferred from a README
+badge.
+
+### 🟢 New this pass
+
+| repo | ★ / forks | licence | created | pushed | reading |
+|---|---|---|---|---|---|
+| [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | **5,518** / 650 | 🟢 **MIT** | 2021-01-03 | 2026-09-08 | 🟢 **A category this base has never shelved: embodied STEM.** Classroom quadruped-robot framework — Arduino, Raspberry Pi, block-coding, simulation. Permissive and live. |
+| [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | **4,549** / 470 | 🔴 **AGPL-3.0** | **2026-05-07** | 2026-10-28 | **4,549★ in under six months** — the steepest education trajectory found this pass. Flutter/Dart, intensive-listening + shadowing + spaced repetition. 🇨🇳 APAC. 🔴 AGPL: not a client base. |
+| [`TarrySingh/…-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials) | **4,018** / 1,620 | 🔴 **NOASSERTION** | 2017-07-13 | 2026-10-27 | Autograded AI course with **EU AI Act conformity evidence** and model-validation modules — the EMEA compliance-curriculum angle. 🔴 **`NOASSERTION` = GitHub detected no OSI licence.** Not permissive; treat as all-rights-reserved until a grant is read. |
+| [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | **2,595** / 323 | 🟢 **MIT** | 2024-12-25 | 2026-10-21 | 65 problems, **an auto-grader and an MCP AI tutor in one MIT repo** — assessment + tutoring without a licence negotiation. |
+| [`penecho/penecho`](https://github.com/penecho/penecho) | **2,509** / 321 | 🔴 **AGPL-3.0** | **2026-07-14** | 2026-10-23 | Shared canvas for handwriting, equations and diagrams — **the non-chat interaction surface**, which matters for maths and early-years work where a chat box is the wrong instrument. 🔴 AGPL. |
+
+🔴 **The licence tier is the finding, not the stars.** The two fastest-growing new education repos
+are **AGPL-3.0** and the third carries **no detectable licence at all**. 🟢 **2 of 5 are
+build-on-able** (`OpenCat`, `TorchLeet`), and both are MIT.
+
+### 🔴 `Gap 504-A` is a property, not an incident
+
+🟢 **45 shelf addresses queried this pass, 44 returned.** 🔴 The one missing is
+[`openedx/edx-platform`](https://github.com/openedx/edx-platform) — **8.2k★, AGPL-3.0, a
+foundations row, demonstrably extant** — absent from a batch whose response reads
+`"incomplete_results": false`.
+
+🔵 `p504` found it, `p505` and `p506` carried it, **`p507` reproduces it**. Three passes, three
+identical silent omissions. 🟢 **Conclusion to record: this is deterministic per-repository
+behaviour of the search index, so "absent from a result set" and "does not exist" remain the same
+observation on this channel.** Reconcile queried slugs against returned slugs on **every** call —
+it is the only thing standing between this shelf and a quiet deletion.
+
+### 🟢 Star movements on the existing shelf
+
+| repo | `p506` | `p507` | Δ |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 47,445 | **47,539** | 🟢 **+94** |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 598 | **598** | 🔵 unchanged since `p504` |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 387 | **387** | 🟢 `p490`'s 31× correction holds, third read |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 6,950 | **6,950** | 🔵 sits inside the disproven "cliff" |
+
+🟢 **`archived: true` on exactly two shelf addresses** — `menthorlabs/menthor` and
+`ably-labs/realtime-quiz-framework` — **and both are already carried with an end-of-life flag.**
+🔵 A probe this pass reported `menthor` as an unflagged live defect; **it was wrong**, and the
+error was a slug grep that never read the surrounding sentence. Logged in
+[`probe-errors.2026-10-28-p507.tsv`](../evidence/probe-errors.2026-10-28-p507.tsv).
+
 ## 🆕 `p506` — `2026-10-28` — **🔴 THE PRESCRIBED GITHUB-DISCOVERY BATTERY RETURNED ZERO REPOSITORIES — not "rows we already hold", but nothing at all, because the open web's education-AI surface is now vendor marketing. 🟢 All 129 shelf addresses re-read on the API channel: 3 archived (all already flagged), 1 silently dropped (3rd consecutive pass), 1 fork-hidden. 🔴 And a 6,950★ Apache-2.0 row has been sitting inside this base's headline "cliff" the whole time.**
 
 Reads: [`api-shelf-read.2026-10-28-p506.tsv`](../evidence/api-shelf-read.2026-10-28-p506.tsv),

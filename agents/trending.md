@@ -4,6 +4,134 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p507` — `2026-10-28` — **🟢 `Gap 488-Q` IS ANSWERABLE AND HAS BEEN FOR THREE PASSES — the APAC teacher-adoption rate was inside a source THIS BASE ALREADY CITES. 🔴 The open web is gone this session: every non-GitHub host is 403 at the CONNECT. 🔴 Four probes, four false answers, all mine — including one that nearly wrote a correction to a row that was right.**
+
+Reads: [`api-shelf-read.2026-10-28-p507.tsv`](../evidence/api-shelf-read.2026-10-28-p507.tsv),
+[`new-addresses.2026-10-28-p507.tsv`](../evidence/new-addresses.2026-10-28-p507.tsv),
+[`channel-probe.2026-10-28-p507.tsv`](../evidence/channel-probe.2026-10-28-p507.tsv),
+[`probe-errors.2026-10-28-p507.tsv`](../evidence/probe-errors.2026-10-28-p507.tsv),
+[`talis-regional-placement.2026-10-28-p507.tsv`](../evidence/talis-regional-placement.2026-10-28-p507.tsv).
+
+🔴 **Gate posture, stated first: `make hooks` was not run — the gate suite is `Code from External`
+in this session, a thirteenth denial in fourteen passes.** 🔵 Nothing below is gate-attested.
+🟢 **Re-implemented and green in this session's own code:** frontmatter contract (**10/10** files,
+`region` inside the closed five-value vocabulary), header-as-data (**0** across all nine shelves),
+and queried-vs-returned reconciliation on **45** addresses.
+
+### 🟢 The headline: the gap that failed twice was never a data gap
+
+🔵 **`Gap 488-Q` has asked for an APAC teacher-adoption rate since `p488`, and
+[`intel/open-gaps.md`](../intel/open-gaps.md) records it as *"failed a second time"* with the
+fallback being OECD TALIS 2024's global *"about one in three"* — graded 🔴 *"global, not APAC, and
+pre-2026."***
+
+🟢 **TALIS 2024 publishes per-country notes.** The instrument this base already quotes for
+🇧🇷 **56%** / 🇨🇱 **55%** / 🇨🇴 **53%** / 🇨🇷 **52%** reports the same measure for every participating
+country — including APAC and EMEA ones. The figure was never missing; **the country notes were
+never queried.**
+
+| region | country | teachers using AI | reading |
+|---|---|---|---|
+| 🟢 **APAC** | 🇸🇬 Singapore | **~75%** | joint highest measured anywhere |
+| 🟢 **APAC** | 🇦🇺 Australia | **66%** | |
+| 🟢 **APAC** | 🇯🇵 Japan | **<20%** | joint lowest |
+| 🟢 **EMEA** | 🇦🇪 UAE | **~75%** | joint highest |
+| 🟢 **EMEA** | 🇦🇿 Azerbaijan | **59%** | |
+| 🟢 **EMEA** | 🇸🇦 Saudi Arabia | **43%** | |
+| 🟢 **EMEA** | 🇩🇰 Denmark | **36%** | exactly at the OECD average |
+| 🟢 **EMEA** | 🇫🇷 France | **14%** (reported **<20%**) | joint lowest |
+| 🟢 **North America** | 🇺🇸 United States | **43%** | a probability sample against the aggregators' 60–61% |
+
+🔴 **`Gap 488-Q` closes only HALF-WAY, and the half that stays open is the one this base named
+itself.** Its objection was two-part — *"global, not APAC"* **and** *"pre-2026"*. The country notes
+settle the first; **they do not settle the second**, because TALIS 2024 is 2024 fieldwork. 🟢 So the
+honest grade is: **an APAC teacher-adoption rate now exists, is placed by country, and comes from a
+probability sample — and it is not a 2026 measurement.** Re-registered as **`Gap 507-A`**: a 2026
+APAC teacher rate. 🔵 That is a far better position than "no figure exists", which is what the
+previous two passes concluded.
+
+🔴 **One statistic, two values, unreconciled.** The OECD country notes give the OECD average as
+**36%**; Education International's summary of the same survey gives **~41%**. 🔵 Both describe
+TALIS 2024. **Quote 36% with the OECD attribution, and never quote the two interchangeably.**
+
+🔴 **And none of it could be read at the primary.** `www.oecd.org` and `www.ei-ie.org` are both
+**403 at the CONNECT**. Every figure in the table above is **search-summary attested only**, which
+is a weaker grade than this base normally accepts and is marked as such in the TSV.
+
+### 🔴 The channel collapsed to one host, and my first probe of it was a false positive
+
+| target | result | verdict |
+|---|---|---|
+| 🔴 `oecd.org`, `ei-ie.org`, `unesco.org`, `luatvietnam.vn`, `multistate.us`, `timeshighereducation.com`, `digitaleducationcouncil.com` | **403 / no tunnel** | the open web is **unreadable this session** |
+| 🔴 `api.github.com/` and `/rate_limit` | **200** | 🔴 **a false positive — see below** |
+| 🔴 `api.github.com/repos/{owner}/{repo}` | **403** | *"access to this repository is not enabled for this session"* |
+| 🔴 `api.github.com/users/*`, `/search/repositories` | **403** | *"sessions are bound to their configured repositories"* |
+| 🟢 MCP `search_repositories`, exact `repo:` slug | **full metadata** | stars, `license.spdx_id`, `archived`, forks |
+| 🟢 MCP `search_repositories`, qualifier discovery | **works** | **280** hits on the control query |
+
+🟢 **`p505`'s `Gap 505-B` row — *"raw `curl` to `api.github.com` is still 403"* — is CORRECT and
+must stay.** I nearly retired it: the host root answers **200**, and `/rate_limit` returns real
+JSON with a 15,000-request limit. **Neither can read a repository.** A probe that checks a status
+code on `/` measures *that the host is routable*, not *that the API is usable*.
+
+### 🔴 Five probes, five false answers, all mine
+
+| probe | first answer | corrected | what it actually measured |
+|---|---|---|---|
+| 🔴 API reachability | *"200 — the base's 403 row is wrong"* | 🟢 403 on every repo-reading endpoint | the status of `/`, not of a repo read |
+| 🔴 `AI tutor education agent stars:>300` | **0 results** → *"discovery is impossible this session"* | 🟢 discovery works | an over-conjunctive free-text AND |
+| 🔴 `stars:&gt;100000` | `Validation Failed` | 🟢 n/a | **my own HTML-entity escaping of `>`** |
+| 🔴 `menthorlabs/menthor` archived | *"live defect — archived repo recommended unflagged"* | 🟢 **already correctly flagged** | a slug grep with no context read |
+| 🔴 table-integrity count | **6 tables** in the `p507` sections | 🟢 **14 tables, 0 malformed** | text from the first `p507` string **to my own first mention of `p506`** — the segmenter cut at my own prose |
+| 🔴 frontmatter file set | **9 files** | 🟢 **10/10** | the five shelf directories, **omitting the repo root** — `README.md` carries frontmatter too |
+
+🔵 **This is the thirteenth sighting of the class in three passes, and the second time it has aimed
+at a row that was RIGHT.** 🟢 `Gap 506-B`'s remedy — a known-good **and** known-bad control before any
+count is published — fired on all four and is the only reason none reached these files. 🔴 **The
+`menthor` one is the warning worth keeping: the probe did not invent a defect out of nothing, it
+invented one out of a TRUE premise (the repo IS archived) plus an unchecked assumption (that the
+shelf had not noticed).** A correction needs the context read, not just the hit.
+
+### 🟢 Five new addresses, and the permissive tier is the minority
+
+🟢 **5 queried / 5 returned**, licences read from `license.spdx_id`, not inferred:
+
+| repo | ★ | licence | build-on? | why it is here |
+|---|---|---|---|---|
+| [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | **5,518** | 🟢 **MIT** | 🟢 yes | **Embodied STEM robotics — a category absent from all nine shelves.** Arduino/Pi, block-coding, classroom robot kits. |
+| [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | **4,549** | 🔴 **AGPL-3.0** | 🔴 no | Flutter listening/speaking trainer on spaced repetition. 🇨🇳 APAC, created **2026-05-07** — fastest-growing education repo found this pass. |
+| [`TarrySingh/…-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials) | **4,018** | 🔴 **NOASSERTION** | 🔴 no | Autograded course carrying **EU AI Act conformity evidence** — the EMEA compliance-curriculum angle. 🔴 `NOASSERTION` means **no OSI licence detected**; do not read it as permissive. |
+| [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | **2,595** | 🟢 **MIT** | 🟢 yes | Auto-grader **plus an MCP AI tutor** — assessment and tutoring in one permissive repo. |
+| [`penecho/penecho`](https://github.com/penecho/penecho) | **2,509** | 🔴 **AGPL-3.0** | 🔴 no | Handwriting, equation and diagram canvas — the **non-chat** interaction surface. Created **2026-07-14**. |
+
+🔴 **Only 2 of 5 are permissive.** The two highest-starred *new* education repos of this pass are
+both **AGPL-3.0**, and the third is unlicensed-in-fact. 🔵 This is the same shape the shelf has
+reported for months: attention concentrates where the licence does not permit a client build.
+
+### 🟢 The shelf re-read — 45 addresses, and `Gap 504-A` reproduces a third time
+
+🟢 **45 queried / 44 returned.** 🔴 **[`openedx/edx-platform`](https://github.com/openedx/edx-platform)
+was silently omitted again**, in a batch reporting `incomplete_results: false`. 🔵 Three passes,
+three identical omissions: **this is a stable, reproducible property of the search index, not a
+transient.** Keep the reconciliation on every call.
+
+🟢 **Movements:** `DeepTutor` **47,445 → 47,539** (**+94**). `k12-teacher-skills` **598**, unchanged
+since `p504`. `educhain` **387** — 🟢 `p490`'s 31× correction holds on a third independent read.
+🟢 **`archived` check:** `true` on `menthorlabs/menthor` and `ably-labs/realtime-quiz-framework`,
+**both already correctly flagged**; `false` on the other 42.
+
+🟢 **`oppia/oppia` reads 6,950★**, which re-confirms `p506`: the *"595-to-41,700 cliff"* is false on
+this base's own shelf.
+
+### 🟢 Vietnam Decision 33 — independently re-attested, nothing to change
+
+🟢 This pass re-derived **Decision 33/2026/QD-TTg** from scratch and it matches
+[`intel/market.md`](../intel/market.md) **exactly**: issued **30 Jun 2026**, in force
+**15 Aug 2026**, **3 education systems of 46** across six sectors, education/health/finance
+transition **1 Sep 2027**, all other sectors **1 Mar 2027**, under AI Law **134/2025/QH15**
+(in force 1 Mar 2026). 🔵 **No edit. A clean re-attestation of a carried claim is worth recording
+precisely because `p504` proved the carry is this base's main defect class.**
+
 ## 🆕 `p506` — `2026-10-28` — **🟢 THE EMEA ADOPTION NIL IS BROKEN AFTER THIRTEEN PASSES, and `p505`'s prediction of *why* was exactly right: a different instrument class, not a better query. 🔴 This base's self-declared "best commercial sentence" rests on a MISREAD MEASURE — the Sanoma 63 % is not an AI-use rate. 🔴 The "595-to-41,700 cliff" is FALSE ON ITS OWN SHELF: `oppia/oppia` sits in the gap at 6,950★. 🔴 And the probe-measures-a-convention error recurred for a FIFTH time — in my own star probe, which matched hex digits inside commit SHAs.**
 
 Reads: [`api-shelf-read.2026-10-28-p506.tsv`](../evidence/api-shelf-read.2026-10-28-p506.tsv),

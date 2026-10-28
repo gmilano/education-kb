@@ -1,0 +1,7 @@
+probe	first_answer	corrected_answer	what_it_actually_measured	caught_by
+api.github.com reachability	"200 - channel works, base's 403 row is wrong"	403 on every endpoint that reads a repo	HTTP status of / and /rate_limit, not of a repo read	querying an actual /repos/ path
+discovery query "AI tutor education agent stars:>300"	"0 results - discovery is impossible this session"	discovery works; 280 hits on control	an over-conjunctive free-text AND across name/desc/readme	known-good control (oppia in:name)
+stars:&gt;100000	Validation Failed	n/a	my own HTML-entity escaping of >	API error message
+menthorlabs/menthor archived flag	"live defect: archived repo recommended unflagged"	already correctly flagged on the shelf	a grep for the slug with no context read	reading +/- 12 lines around the hit
+table column integrity (p507 sections)	6 tables found	14 tables added, 0 malformed	text from the first "p507" string to my own first mention of "p506" - the segmenter cut at my own prose	table count was implausibly low vs what was written
+frontmatter contract file set	9 files	10/10 (README.md carries frontmatter too)	the five shelf directories, omitting the repo root	the base's own "10/10" figure disagreeing with mine

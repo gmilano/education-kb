@@ -1,0 +1,46 @@
+slug	stars	forks	license_spdx	archived	status	note
+HKUDS/DeepTutor	47539	5912	Apache-2.0	false	returned	p506 47445 -> +94
+microsoft/ai-agents-for-beginners	78050	25605	-	false	returned	
+labmlai/annotated_deep_learning_paper_implementations	67603	6768	-	false	returned	
+microsoft/autogen	61604	9326	-	false	returned	
+huggingface/smolagents	30120	3163	-	false	returned	
+EleutherAI/lm-evaluation-harness	14338	3736	-	false	returned	
+oppia/oppia	6950	5859	Apache-2.0	false	returned	sits inside the claimed 595-41700 cliff
+CaviraOSS/PageLM	2050	278	PageLM-Community	false	returned	non-commercial clauses
+plastic-labs/tutor-gpt	932	98	-	false	returned	
+anthropics/k12-teacher-skills	598	107	-	false	returned	p504 598 -> unchanged
+satvik314/educhain	387	76	-	false	returned	p490 correction holds (not 12000)
+dodona-edu/dolos	355	48	-	false	returned	
+canyongbs/advisingapp	340	76	-	false	returned	
+vishalsachdev/canvas-mcp	309	100	-	false	returned	
+CAHLR/OATutor	274	163	-	false	returned	
+Open-TutorAi/open-tutor-ai-CE	114	194	-	false	returned	
+Selleo/mentingo	101	31	-	false	returned	
+eth-lre/mathtutorbench	46	14	-	false	returned	
+AI-for-Education/pedagogy-benchmark	13	0	-	false	returned	
+microsoft/Shiksha-Copilot	9	12	-	false	returned	
+ankitects/anki	32361	3381	-	false	returned	
+bigbluebutton/bigbluebutton	9258	5980	-	false	returned	
+moodle/moodle	7556	7686	-	false	returned	
+instructure/canvas-lms	6889	3054	-	false	returned	
+frappe/lms	3350	1561	-	false	returned	
+learnhouse/learnhouse	2428	590	-	false	returned	
+learningequality/kolibri	1162	1012	-	false	returned	
+overhangio/tutor	1130	508	-	false	returned	
+chamilo/chamilo-lms	1019	564	-	false	returned	
+openeducat/openeducat_erp	900	782	-	false	returned	
+apache/openmeetings	688	263	-	false	returned	
+frappe/education	682	469	-	false	returned	
+francoisjacquet/rosariosis	647	393	-	false	returned	
+GibbonEdu/core	635	426	-	false	returned	
+menthorlabs/menthor	582	35	Apache-2.0	TRUE	returned	correctly flagged archived on shelf
+ILIAS-eLearning/ILIAS	505	429	-	false	returned	
+OpenOLAT/OpenOLAT	448	166	-	false	returned	
+tsugiproject/tsugi	377	267	-	false	returned	
+adlnet/ADL_LRS	334	156	-	false	returned	
+h5p/h5p-php-library	152	148	-	false	returned	
+yetanalytics/lrsql	144	41	-	false	returned	
+ably-labs/realtime-quiz-framework	77	24	Apache-2.0	TRUE	returned	correctly flagged archived on shelf
+oat-sa/tao-core	64	37	-	false	returned	
+openfun/warren	17	1	-	false	returned	
+openedx/edx-platform	-	-	-	-	SILENTLY-OMITTED	Gap 504-A reproduced a 3rd pass; incomplete_results false

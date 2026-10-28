@@ -6,6 +6,55 @@ updated: 2026-10-28
 
 # Education platforms you can customise with AI on top
 
+> 🟢 **`p507` (`2026-10-28`) — THE PLATFORM SHELF IS RE-READ AND UNCHANGED; THE NEWS IS A REGULATORY DEADLINE THAT LANDS ON THESE PLATFORMS, NOT A NEW PLATFORM.**
+> 🟢 **Re-read on the API channel, `archived` included:** `moodle/moodle` **7,556★**,
+> `instructure/canvas-lms` **6,889★**, `frappe/lms` **3,350★**, `learnhouse/learnhouse` **2,428★**,
+> `learningequality/kolibri` **1,162★**, `overhangio/tutor` **1,130★**, `chamilo/chamilo-lms`
+> **1,019★**, `openeducat/openeducat_erp` **900★**, `frappe/education` **682★**,
+> `francoisjacquet/rosariosis` **647★**, `GibbonEdu/core` **635★**, `ILIAS-eLearning/ILIAS`
+> **505★**, `OpenOLAT/OpenOLAT` **448★**, `oat-sa/tao-core` **64★**. 🟢 **`archived: false` on all
+> fourteen.**
+> 🔴 **[`openedx/edx-platform`](https://github.com/openedx/edx-platform) again absent from the
+> index** — third consecutive pass, `incomplete_results: false`. The platform is live; the
+> **channel** is lying. Never conclude a vertical platform is gone from a search miss.
+> 🔴 **`ably-labs/realtime-quiz-framework` stays flagged `archived: true`** (77★) — `p504`'s fix
+> re-verified, still correct.
+> 🟢 **`p501`'s standing finding — *there is no MIT-licensed education ERP* — SURVIVES, and this
+> pass is the first to test it against a named counter-candidate rather than a nil.**
+> 🔴 **`GegoK12` is published as MIT by its own site and by at least two comparison pages. The
+> repository does not substantiate it.** [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12)
+> — **54★ / 102 forks, PHP/Laravel, `archived: false`**, pushed 2026-09-23 — reads
+> **`license.spdx_id: NOASSERTION`**: GitHub detects **no OSI licence** at all. 🔵 **A vendor
+> claiming MIT, repeated by comparison sites, against a repository with no detectable grant** — the
+> claim travelled, the licence did not. **Do not shelve it as permissive.**
+> 🟡 Also surfaced and **not shelved**: [`KlassApp-Foundation/KlassApp`](https://github.com/KlassApp-Foundation/KlassApp)
+> — *"an open education protocol for humans and agents"*, Laravel + WhatsApp, **4★**, also
+> **`NOASSERTION`**. Interesting framing, far too early, no grant.
+> Reads: [`api-shelf-read.2026-10-28-p507.tsv`](../evidence/api-shelf-read.2026-10-28-p507.tsv),
+> [`channel-probe.2026-10-28-p507.tsv`](../evidence/channel-probe.2026-10-28-p507.tsv).
+
+### 🔴 `p507` — the compliance clock now runs on the platforms in this file
+
+🔵 Independently re-derived this pass and **matching [`intel/market.md`](../intel/market.md)
+exactly** — recorded because `p504` established that *the carry*, not the measurement, is this
+base's main defect class, so a clean re-attestation is itself evidence:
+
+| what | value |
+|---|---|
+| Instrument | 🇻🇳 **Decision 33/2026/QD-TTg**, under AI Law **134/2025/QH15** (in force 1 Mar 2026) |
+| Issued / in force | **30 Jun 2026** / **15 Aug 2026** |
+| Education systems listed high-risk | **3 of 46**, across six sectors |
+| What they are | AI generating self-study content from **uncontrolled data sources**; AI that **examines, assesses or ranks** learners; AI that **monitors learner behaviour** via biometrics or automated means |
+| Deadline, already live before 15 Aug 2026 | **1 Sep 2027** |
+| Deadline, everything else | **1 Mar 2027** |
+
+🔴 **Read this against the shelf above.** An LMS from this file — Moodle, Canvas, Chamilo, ILIAS,
+OpenOLAT, TAO — with **automated grading or ranking switched on** is a listed high-risk system in
+Vietnam. 🟡 **The platform is not the regulated thing; the configuration is.** A Globant engagement
+that turns on auto-assessment in a Vietnamese deployment inherits a conformity assessment, and
+🔴 **a new 2026 deployment gets the SHORTER runway (1 Mar 2027), not the incumbent's 1 Sep 2027.**
+
+
 > 🟢 **`p506` (`2026-10-28`) — EVERY PLATFORM ROW ON THIS SHELF RE-READ ON THE API CHANNEL; ONE ROW GAINS A BYTE-READ LICENCE AND ONE GAINS ITS PLACE IN THE PERMISSIVE TIER.**
 > 🟢 **[`openedx/edx-platform`](https://github.com/openedx/edx-platform)** — the one address the API
 > search channel cannot enumerate at all (`Gap 504-A`, third consecutive pass) — now has its licence

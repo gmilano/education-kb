@@ -6,6 +6,41 @@ updated: 2026-10-28
 
 # Foundational education repos
 
+> 🟢 **`p507` (`2026-10-28`) — ONE NEW PERMISSIVE FOUNDATION, IN A CATEGORY THIS SHELF HAS NEVER CARRIED.**
+> 🟢 **Added:** [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot)
+> — **5,518★ / 650 forks, MIT, `archived: false`**, pushed 2026-09-08. **Embodied STEM** — a
+> classroom robot framework over Arduino, Raspberry Pi and block-coding, with simulation. Every
+> other repo on this shelf teaches through a screen; this one is the first that teaches through a
+> device, and it is MIT.
+> 🟢 **Shelf re-read, 45 addresses on the API channel: 45 queried / 44 returned.**
+> 🔴 **[`openedx/edx-platform`](https://github.com/openedx/edx-platform) silently omitted a THIRD
+> consecutive pass** (`incomplete_results: false`). `Gap 504-A` is a **deterministic per-repository
+> property of the search index**, not a transient — reconcile queried against returned every call.
+> 🟢 **`archived` check:** `true` on exactly two addresses — [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor)
+> and [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) —
+> **and both are already carried with an end-of-life flag.** 🔴 A probe this pass reported `menthor`
+> as an unflagged live defect; **it was wrong**, because it grepped the slug and never read the
+> sentence that already says *"but **archived** — carried as a 🇧🇷 LATAM data point, not a build
+> target."* The premise was true and the conclusion false.
+> Reads: [`api-shelf-read.2026-10-28-p507.tsv`](../evidence/api-shelf-read.2026-10-28-p507.tsv),
+> [`new-addresses.2026-10-28-p507.tsv`](../evidence/new-addresses.2026-10-28-p507.tsv),
+> [`probe-errors.2026-10-28-p507.tsv`](../evidence/probe-errors.2026-10-28-p507.tsv).
+
+### 🟢 `p507` — added to the foundations shelf
+
+| Repo | Licence | Why it is foundational | ★ / forks |
+|---|---|---|---|
+| [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | 🟢 **MIT** (`license.spdx_id`, API-read) | 🟢 **The embodied-STEM base this shelf has lacked.** A quadruped robot-pet framework built for STEM teaching, coding and robotics education — Arduino + ESP32 + Raspberry Pi, block-coding for younger learners, reinforcement-learning and simulation paths for older ones. For a K-12 or STEM-lab engagement it is the only permissive starting point here that produces a **physical** learner artefact. Companion board: [`PetoiCamp/OpenCatEsp32-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCatEsp32-Quadruped-Robot) (**521★**). | **5,518 / 650** |
+
+🔴 **Not added, licence in every case** —
+[`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) (**4,549★, AGPL-3.0**),
+[`penecho/penecho`](https://github.com/penecho/penecho) (**2,509★, AGPL-3.0**) and
+[`TarrySingh/…-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials)
+(**4,018★, `NOASSERTION` — no OSI licence detected**). 🔵 **Three of the five highest-starred new
+education repos this pass are unusable as client bases.** That ratio, not the star counts, is the
+finding.
+
+
 > 🟢 **`p505` (`2026-10-28`) — THE STANDING CHECKS THIS SHELF INHERITED FROM `p504` WERE RUN, AND THEY PASSED.**
 > 🟢 **`Gap 504-A` reconciliation applied to every call:** 4 slugs queried, **4 returned**,
 > `incomplete_results: false` — no silent omission in this batch. 🟢 **`T29` `archived` check: `false`

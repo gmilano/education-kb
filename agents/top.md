@@ -6,6 +6,54 @@ updated: 2026-10-28
 
 # Education AI agents — build-on-able shelf
 
+> 🟢 **`p507` (`2026-10-28`) — ONE NEW PERMISSIVE AGENT ROW, AND THE APAC/EMEA ADOPTION FIGURES THIS SHELF SELLS INTO ARE NOW PLACED BY COUNTRY.**
+> 🟢 **Added:** [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) — **2,595★, MIT,
+> `archived: false`** — 65 ML/AI problems with **an auto-grader and an MCP AI tutor in one
+> permissive repo**. It is the only new agent this pass whose licence permits a client build.
+> 🔴 **Not added, and for the licence in every case:** [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop)
+> (**4,549★, AGPL-3.0**) and [`penecho/penecho`](https://github.com/penecho/penecho)
+> (**2,509★, AGPL-3.0**) are the two fastest-growing education repos found this pass and **neither
+> can be built on**; [`TarrySingh/…-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials)
+> (**4,018★**) reads **`NOASSERTION`** — GitHub detected **no OSI licence**, which is not a
+> permissive grant and must never be shelved as one.
+> 🟢 **Shelf re-read: 45 queried / 44 returned.** `DeepTutor` **47,539★** (`p506`: 47,445, **+94**),
+> `Apache-2.0`, `archived: false`. `k12-teacher-skills` **598**, unchanged since `p504`.
+> `educhain` **387** — `p490`'s 31× correction holds on a third read.
+> 🔴 **`openedx/edx-platform` silently omitted for a THIRD consecutive pass** with
+> `incomplete_results: false`. `Gap 504-A` is now a **deterministic property of the index**, not an
+> incident: reconcile queried against returned on every call.
+> 🟢 **`Gap 488-Q` half-closes.** OECD **TALIS 2024 country notes** — the same instrument this base
+> already quotes for 🇧🇷56/🇨🇱55/🇨🇴53/🇨🇷52 — carry **🇸🇬 ~75%, 🇦🇺 66%, 🇯🇵 <20%, 🇦🇪 ~75%,
+> 🇸🇦 43%, 🇩🇰 36%, 🇫🇷 14%, 🇺🇸 43%**. The APAC rate was never missing; **the country notes were
+> never queried.** 🔴 It stays half-open because TALIS 2024 is **2024 fieldwork** — the "pre-2026"
+> half of the original objection survives. Re-registered as **`Gap 507-A`**.
+> 🔴 **Every figure above is search-summary attested only: `oecd.org` and `ei-ie.org` are 403 at the
+> CONNECT**, as is the entire non-GitHub web this session. 🔴 **And the OECD average is quoted as
+> both 36% (OECD notes) and ~41% (Education International) for the same survey — quote 36% with the
+> OECD attribution and never mix them.**
+> 🔴 **Five probes gave five false answers this pass, all mine**, including one that nearly retired
+> `p505`'s correct *"raw curl → 403"* row on the strength of a **200 from `api.github.com/`** that
+> cannot read a repository. `Gap 506-B`'s known-good/known-bad control caught all five.
+> Reads: [`api-shelf-read.2026-10-28-p507.tsv`](../evidence/api-shelf-read.2026-10-28-p507.tsv),
+> [`new-addresses.2026-10-28-p507.tsv`](../evidence/new-addresses.2026-10-28-p507.tsv),
+> [`probe-errors.2026-10-28-p507.tsv`](../evidence/probe-errors.2026-10-28-p507.tsv),
+> [`talis-regional-placement.2026-10-28-p507.tsv`](../evidence/talis-regional-placement.2026-10-28-p507.tsv).
+
+### 🟢 `p507` — the one new agent row
+
+| Agent | Repo | Licence | ★ / forks | Archived | What it does |
+|---|---|---|---|---|---|
+| **TorchLeet** | [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | 🟢 **MIT** | 2,595 / 323 | 🟢 `false` | 65 ML/AI problems from real interviews, Jupyter-based, with **an auto-grader and an MCP AI tutor**. 🟢 The MCP surface makes it composable with any agent on this shelf rather than a closed app; the auto-grader makes it the rare tutoring repo that **also carries assessment**. Pushed 2026-10-21. |
+
+🔴 **Rejected this pass, with the reason stated rather than silence:**
+
+| Repo | ★ | Licence | Why not shelved |
+|---|---|---|---|
+| [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 4,549 | 🔴 **AGPL-3.0** | 🔵 Strong design — intensive listening, shadowing, blind listening, retelling, spaced review — and **4,549★ in under six months**. 🔴 AGPL-3.0 reaches networked use; not a base Globant can build a client product on. **Carry as an 🇨🇳 APAC design reference.** |
+| [`penecho/penecho`](https://github.com/penecho/penecho) | 2,509 | 🔴 **AGPL-3.0** | 🔵 The **non-chat** surface — handwriting, equations, diagrams, spatial reasoning — which is the right instrument for maths and early-years and the wrong one for a chat box. 🔴 Same licence bar. |
+| [`TarrySingh/…-Tutorials`](https://github.com/TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials) | 4,018 | 🔴 **NOASSERTION** | 🔴 **No OSI licence detected.** Valuable as an **EU AI Act conformity-evidence curriculum** (EMEA), but all-rights-reserved until a grant is read at a pinned blob. |
+
+
 > 🟢 **`p505` (`2026-10-28`) — THE SHELF WAS RIGHT AGAIN, AND THE ONE CLAIM THAT LOOKED REFUTED SURVIVED THE TEST THAT MATTERS.**
 > 🟢 **`p506` re-read `DeepTutor` at 47,445★** (`p505`: 47,338, **+107**), `Apache-2.0`, `archived: false`.
 > 🟢 **`DeepTutor` re-read at 47,338★** (`p504`: 47,230, **+108**), `Apache-2.0`, `archived: false`,
