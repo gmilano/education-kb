@@ -1,0 +1,9 @@
+# p508 2026-10-28 — channel posture, measured at pass start and re-measured for the byte reads
+channel	probe	result	note
+api.github.com (raw curl)	GET /repos/moodle/moodle	403	unchanged since p505
+api.github.com (raw curl)	GET /search/repositories?q=stars:>1000	403	unchanged since p505
+github.com (HTML, raw curl)	GET /moodle/moodle	403	REGRESSION vs p506/p507 — the HTML limb is gone this session
+raw.githubusercontent.com	GET /moodle/moodle/main/README.md	200	LIVE — the byte limb survives; this is the only non-MCP channel that answers
+www.oecd.org	GET /	000 (no tunnel)	Gap 483-K reproduces
+www.unesco.org	GET /	000 (no tunnel)	Gap 483-K reproduces
+MCP GitHub search_repositories	repo: batches	200	the only enumerable catalogue channel this pass

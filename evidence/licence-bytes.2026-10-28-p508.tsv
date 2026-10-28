@@ -1,0 +1,11 @@
+# p508 2026-10-28 — licence payloads read on raw.githubusercontent.com (bytes, not the API detector field)
+slug	path	http	bytes	sha256	title_block	api_spdx_id	reading
+OpenOLAT/OpenOLAT	master/LICENSE	200	10982	6dbc5b605ed0be6e945483f08d48f754762c5b6e65a20f141e85fe5f8700aed4	Apache License Version 2.0, January 2004	NOASSERTION	Apache-2.0 plus an appended "Additional license statement for the openolat.org code base" — a MODIFIED Apache, which is why the detector abstains
+Gego-K12/gegok12	main/LICENSE	200	1150	b8694396d7dc6439fdfb4d0fa151903268984f2f90db2c18e124adcc1dd72ca9	MIT License + <!-- SPDX-License-Identifier: MIT -->	NOASSERTION	COMPLETE MIT grant, holder "Copyright (c) 2025 GegoSoft Technologies and GegoK12 Contributors". p507's "the repository does not substantiate it" is REFUTED
+satvik314/educhain	main/LICENSE	200	1092	e3321a1b62cd7c46876fe79ef6b60f45ab5065413bc01202e2bac5bd1e9b618f	MIT License	MIT (carried)	control — a detector-recognised MIT at 1092 B; gegok12 is +58 B on the same family
+JushBJJ/Mr.-Ranedeer-AI-Tutor	main/LICENSE	404	-	-	-	(no license object)	no payload at the canonical path — re-attests the carried NO-GRANT reading
+JushBJJ/Mr.-Ranedeer-AI-Tutor	main/LICENSE.md	404	-	-	-	(no license object)	second filename, also absent
+JushBJJ/Mr.-Ranedeer-AI-Tutor	main/README.md	200	9179	3db5fdf9ed06d29ad9ab36eb1049c6cd3f0114e3d2915df374808fe5ab35aee5	# DISCONTINUED	(no license object)	re-attests the carried DISCONTINUED reading from bytes
+OpenOLAT/OpenOLAT	master/LICENSE.txt	404	-	-	-	-	filename sweep
+OpenOLAT/OpenOLAT	master/COPYING	404	-	-	-	-	filename sweep
+OpenOLAT/OpenOLAT	master/NOTICE	404	-	-	-	-	filename sweep — the attribution text is INSIDE LICENSE, not in a NOTICE file

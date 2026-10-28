@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p508` — `2026-10-28` — **🔴 Nine legs, ~80 addresses, ZERO new repos — saturation on the repo axis too. 🟢 Two `NOASSERTION` rows resolved from payload bytes, in OPPOSITE directions. 🔴 The HTML limb of the GitHub channel is gone.**
+
+Reads: [`saturation-sweep.2026-10-28-p508.tsv`](../evidence/saturation-sweep.2026-10-28-p508.tsv),
+[`licence-bytes.2026-10-28-p508.tsv`](../evidence/licence-bytes.2026-10-28-p508.tsv),
+[`query-shape.2026-10-28-p508.tsv`](../evidence/query-shape.2026-10-28-p508.tsv),
+[`channel-probe.2026-10-28-p508.tsv`](../evidence/channel-probe.2026-10-28-p508.tsv).
+
+🔴 **Gate posture: `make hooks` not run (`Code from External`).** Nothing here is gate-attested.
+
+### 🟢 Licence payloads read this pass — bytes, not the detector field
+
+| repo | API `spdx_id` | path | HTTP | bytes | sha256 | verdict |
+|---|---|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `NOASSERTION` | `master/LICENSE` | 200 | **10,982** | `6dbc5b605ed0be6e94…` | 🟢 **Apache-2.0 + openolat.org attribution statement** — modified Apache, classifier abstains |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🔴 `NOASSERTION` | `main/LICENSE` | 200 | **1,150** | `b8694396d7dc6439fd…` | 🟢 **complete MIT grant**, holder *GegoSoft Technologies* — `p507`'s refusal is **refuted** |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) *(control)* | 🟢 `MIT` | `main/LICENSE` | 200 | **1,092** | `e3321a1b62cd7c4687…` | 🟢 recognised MIT — **58 B** below `gegok12`'s, the SPDX comment line |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 no `license` object | `main/LICENSE`, `main/LICENSE.md` | **404, 404** | – | – | 🔴 **no grant** — and `README.md` (**9,179 B**, `3db5fdf9ed06d29ad9…`) opens `# DISCONTINUED`. **29,548★** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | – | `LICENSE.txt`, `LICENSE.TXT`, `LICENSE.md`, `COPYING`, `NOTICE` | **404 ×5** | – | – | 🔵 filename sweep: the attribution text lives **inside `LICENSE`**, not in a `NOTICE` |
+
+🔵 **Three channel states, not two:** a recognised `spdx_id`; `NOASSERTION` (**a payload exists and the
+classifier declined it**); and **no `license` object at all** (no payload). 🔴 Only the third is
+evidence of no grant — see [`intel/trends.md`](../intel/trends.md) `T33`.
+
+### 🔴 Candidates surfaced and NOT shelved — every one already carried
+
+`ankimcp/anki-mcp-server` (537★, MIT) · `JuneYaooo/lineage-skill` (462, Apache-2.0) ·
+`ZeKaiNie/universal-examprep-skill` (356, MIT) · `karanb192/algo-sensei` (299, MIT) ·
+`SenmuuuuW/universal-diagnostic-tutor-skill` (252, MIT) · `orionsheep/wordlink` (249, MIT) ·
+`Fazmin/AILearningGuide` (235, MIT) · `KeWang0622/kaogong-skill` (210, MIT) ·
+`liuliu667/cram-engine` (176, MIT) · `PrepLabsAI/InterviewMentor` (116, MIT) ·
+`SimonsTang/feifei-companion` (110, Apache-2.0) · `wenflow-org/wenflow` (61, MIT) ·
+`ArnaudGuiovanna/tutor-mcp` (57, MIT) · `HumphreySun98/Smart-Study-Agent` (57, MIT) ·
+`edrys-org/edrys` (334, **MPL-2.0**, last pushed **2024-08-12** — stale) ·
+`classroomio/classroomio` (1,734, 🔴 AGPL-3.0) · `elmsln/elmsln` (253, 🔴 GPL-3.0) ·
+`senjun-team/senjun-courses` (161, 🔴 GPL-3.0) · `24kchengYe/human-skill-tree` (585, 🔴 `NOASSERTION`) ·
+`aaryansamanta/ai-ethos` (498, 🔴 `NOASSERTION`) · `hkalant/awesome-edtech-tools` (216, 🔴 `NOASSERTION`).
+
+🔵 **An APAC pattern worth naming, because it is the opposite of this base's APAC gaps.** Every APAC
+demand-side figure here is missing or disputed — yet the permissive supply surfacing on the repo axis is
+**disproportionately Chinese-language**: `Study-Mate` (1,247★ MIT), `cram-engine`, `kaogong-skill`,
+`feifei-companion`, `wenflow`, `AI_Tutor_Release`, `oh-my-paper`, `JudgePeach/math-question-bank`
+(AGPL). 🟢 **APAC appears on these shelves as SUPPLY, and in `intel/market.md` as an unmeasured
+DEMAND** — a client-facing asymmetry this KB can state plainly.
+
 ## 🆕 `p507` — `2026-10-28` — **🟢 Five new addresses verified on `license.spdx_id`, and only two can be built on. 🔴 `openedx/edx-platform` is silently omitted from the search index for a THIRD consecutive pass.**
 
 Reads: [`new-addresses.2026-10-28-p507.tsv`](../evidence/new-addresses.2026-10-28-p507.tsv),

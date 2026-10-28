@@ -6,6 +6,37 @@ updated: 2026-10-28
 
 # Foundational education repos
 
+> 🔴 **`p508` (`2026-10-28`) — NO NEW FOUNDATION, AND `Gap 504-A` IS FINALLY CHARACTERISED RATHER THAN RE-REPORTED: THE CONTROL THAT `p504` ASSERTED HAS NOW BEEN RUN.**
+> 🟢 **`p504` wrote that on this channel *"a missing row and a nonexistent repo are the same
+> observation."* This pass proves it.** `repo:openedx/edx-platform` queried alone returns
+> *Validation Failed — "The listed users and repositories cannot be searched either because the
+> resources do not exist or you do not have permission to view them"*, and
+> `repo:zzzz-nonexistent-org-9931/nope-repo-9931` — **a repository that does not exist** — returns the
+> **identical error string**. 🟢 Two further tightenings: the silent drop reproduces at **batch size
+> 2** (`repo:openedx/edx-platform repo:moodle/moodle` → **1 returned, `incomplete_results: false`**),
+> so it is **not** a pagination or batch-size effect; and `repo:openedx/frontend-app-learning` answers
+> normally, so **exclusion stays per-repository**, re-attested a fourth consecutive pass.
+> 🟢 **Two mechanical facts about the batch form, both new and both cheap to lose:** the explicit
+> `repo:A OR repo:B` shape is now **REJECTED** by the validator (*"Logical operators only apply to
+> text, not to qualifiers"*), while **space-separated repeated `repo:` qualifiers still behave as OR**
+> — that is the batch form a future pass must use. Query budget: **~250 characters**, so batches run
+> 7–10 slugs.
+> 🔴 **And a query-shape defect worth more than either:** multi-term free-text legs **collapse to
+> zero**. `LLM agent grading rubric assessment students stars:>80` → **`total_count: 0`** while these
+> shelves carry six grading repositories; the Spanish-language leg
+> (`educación inteligencia artificial docentes open source stars:>20`) → **0**. 🟢 **The productive
+> discovery shape on this channel is `topic:` plus a star floor**, and LATAM-language discovery does
+> not work through free text at all. Reads:
+> [`query-shape.2026-10-28-p508.tsv`](../evidence/query-shape.2026-10-28-p508.tsv).
+> 🟢 **Shelf re-read, 64 addresses: 64 queried / 64 returned.** No silent omission in any batch other
+> than the known `openedx/edx-platform` exclusion, which was isolated deliberately.
+> 🔴 **Channel posture inverted since `p506`:** `github.com` HTML is **403** this session,
+> `api.github.com` is **403**, and **`raw.githubusercontent.com` is 200**. 🟢 `p506`'s
+> *"the two broken channels are complementary"* survives, but only **one** of the two limbs is left:
+> the bytes. Reads: [`channel-probe.2026-10-28-p508.tsv`](../evidence/channel-probe.2026-10-28-p508.tsv),
+> [`api-shelf-read.2026-10-28-p508.tsv`](../evidence/api-shelf-read.2026-10-28-p508.tsv).
+> 🔴 **Gate posture: `make hooks` DENIED (`Code from External`), fourteenth denial in fifteen passes.**
+
 > 🟢 **`p507` (`2026-10-28`) — ONE NEW PERMISSIVE FOUNDATION, IN A CATEGORY THIS SHELF HAS NEVER CARRIED.**
 > 🟢 **Added:** [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot)
 > — **5,518★ / 650 forks, MIT, `archived: false`**, pushed 2026-09-08. **Embodied STEM** — a

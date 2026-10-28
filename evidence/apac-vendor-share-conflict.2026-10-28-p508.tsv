@@ -1,0 +1,10 @@
+# p508 2026-10-28 — the standing "APAC vendor share" gap. The nil is now a CONFLICT, not an absence: three estimates that cannot all be true, none with a stated base year.
+claim	value	source_class	note
+APAC share of the AI-in-education market	34.6%, "fastest-growing region"	market-research vendor	
+APAC share of the same market	"around 20%"	different market-research vendor	1.7x apart from the row above
+North America share of the same market	35-40%	third vendor	leaves <=65% for every other region, which the 34.6% row nearly exhausts on its own
+North America share of the same market	36%	Azumo round-up (carried since an earlier pass)	consistent with the 35-40% band
+APAC market size	USD 987 million, "five-year historical analysis"	market-research vendor	NO BASE YEAR STATED — unusable
+Global market size 2026	USD 7.10bn to USD 9.58bn	several vendors	a 1.35x spread on the same year, consistent with this file's standing market-size finding
+APAC vendor NAMES (no shares)	Google, Microsoft, IBM, AWS, Pearson, Byju's; China/India/Japan named as leading markets	market-research vendor	names without shares; Quizlet/Quizizz/Carnegie Learning in a second list
+READING	-	-	The gap is no longer "no APAC vendor-share figure exists". It is "three mutually exclusive figures exist, none with a base year, and no revenue attribution to any named vendor". Quote NONE of them to a client.

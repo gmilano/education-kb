@@ -6,6 +6,45 @@ updated: 2026-10-28
 
 # Education AI agents — build-on-able shelf
 
+> 🔴 **`p508` (`2026-10-28`) — NO NEW AGENT ROW, AND THE REASON IS SATURATION RATHER THAN A THIN SEARCH: ~80 ADDRESSES ACROSS NINE LEGS, **ZERO** THIS BASE DOES NOT ALREADY CARRY.**
+> 🟢 **All four prescribed legs plus five `topic:` legs were run, and every permissive candidate they
+> returned is already on these shelves or in this base's trending history** — `ankimcp/anki-mcp-server`
+> (**537★ MIT**), `JuneYaooo/lineage-skill` (**462 Apache-2.0**), `ZeKaiNie/universal-examprep-skill`
+> (**356 MIT**), `karanb192/algo-sensei` (**299 MIT**), `SenmuuuuW/universal-diagnostic-tutor-skill`
+> (**252 MIT**), `orionsheep/wordlink` (**249 MIT**), `Fazmin/AILearningGuide` (**235 MIT**),
+> `KeWang0622/kaogong-skill` (**210 MIT**), `liuliu667/cram-engine` (**176 MIT**),
+> `SimonsTang/feifei-companion` (**110 Apache-2.0**), `wenflow-org/wenflow` (**61 MIT**),
+> `ArnaudGuiovanna/tutor-mcp` (**57 MIT**), `HumphreySun98/Smart-Study-Agent` (**57 MIT**).
+> 🔵 `p505` declared saturation on the **vertical** axis; **this is the first pass to declare it on the
+> AGENT axis**, and the sweep is written down rather than left as silence:
+> [`saturation-sweep.2026-10-28-p508.tsv`](../evidence/saturation-sweep.2026-10-28-p508.tsv).
+> 🔴 **`p507`'s licence rule is too strong, and this pass narrows it from bytes.** `p507` wrote that
+> `NOASSERTION` means *"GitHub detected no OSI licence, which is not a permissive grant and must never
+> be shelved as one."* 🟢 **`NOASSERTION` is the detector ABSTAINING, not denying.** Two addresses on
+> these shelves read `NOASSERTION` for **opposite** reasons:
+> [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) serves an **Apache License** payload of
+> **10,982 B** (`sha256 6dbc5b605ed0…`) with an appended *"Additional license statement for the
+> openolat.org code base"* — a **modified Apache, with a real grant**; while
+> [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) serves a **complete 1,150 B MIT grant**
+> (`sha256 b8694396d7dc…`, holder *"Copyright (c) 2025 GegoSoft Technologies and GegoK12
+> Contributors"*). 🔴 **Applied mechanically, `p507`'s rule deletes this KB's only permissive full
+> LMS.** The operative rule is the one this base already had: **the payload decides, the detector
+> field only routes.** Reads: [`licence-bytes.2026-10-28-p508.tsv`](../evidence/licence-bytes.2026-10-28-p508.tsv).
+> 🟢 **Shelf re-read: 64 queried / 64 returned**, `incomplete_results: false` on every batch.
+> `DeepTutor` **47,621★** (`p507`: 47,539, **+82**), `Apache-2.0`, `archived: false`.
+> `THU-MAIC/OpenMAIC` **41,709★ MIT**. `book-to-skill` **36,411** (`p507`: 36,339, **+72**).
+> `k12-teacher-skills` **599** (`p507`: 598, **+1**). `educhain` **387** — unchanged on a **fourth**
+> read, so `p490`'s 31× correction holds. `TorchLeet` **2,595**, unchanged since `p507` added it.
+> 🔴 **`archived: true` on 3 of 64** — [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor)
+> (582), [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework)
+> (77), [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) (30) — **and all three are
+> already carried with an end-of-life flag.** `T29` holds for a fifth pass.
+> 🔴 **Channel regression, stated plainly: `github.com` HTML is now 403 at the CONNECT**, which
+> `p506` and `p507` still had. 🟢 **`raw.githubusercontent.com` answers 200** — the byte limb is the
+> only non-MCP channel alive, and every licence reading above comes from it.
+> 🔴 **Gate posture: `make hooks` DENIED (`Code from External`) — a fourteenth denial in fifteen
+> passes.** Nothing in this pass is gate-attested.
+
 > 🟢 **`p507` (`2026-10-28`) — ONE NEW PERMISSIVE AGENT ROW, AND THE APAC/EMEA ADOPTION FIGURES THIS SHELF SELLS INTO ARE NOW PLACED BY COUNTRY.**
 > 🟢 **Added:** [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) — **2,595★, MIT,
 > `archived: false`** — 65 ML/AI problems with **an auto-grader and an MCP AI tutor in one

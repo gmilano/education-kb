@@ -6,6 +6,55 @@ updated: 2026-10-28
 
 # Education AI — market map and opportunities by region
 
+> 🔴 **`p508` (`2026-10-28`) — `Gap 507-A` FAILS, AND FAILS INFORMATIVELY: THERE IS NO 2026 APAC TEACHER-ADOPTION RATE BECAUSE THE INSTRUMENT DOES NOT EXIST YET — WHAT EXISTS IS A MANDATE AND A PILOT DENOMINATOR.**
+> 🟢 **Two named, dated 2026 APAC instruments, both new to this file.** 🇸🇬 **MOE launched a Teacher
+> AI Literacy Professional Learning Roadmap in August 2026**: module 1 (AI fundamentals, ethics,
+> responsible use) **due end-2026**, two further modules **encouraged by end-2027**, ~30–45 minutes
+> each, online. 🔵 **This is a compliance hook, and for an engagement it is worth more than a usage
+> rate** — a dated obligation landing on every primary, secondary and JC teacher. 🔴 Sources
+> **conflict** on whether **one** module is compulsory with two recommended, or **three** are
+> compulsory; both readings are secondary and the MOE roadmap itself is unreachable from this session.
+> 🟢 🇯🇵 **MEXT's FY2026 generative-AI pilot: 149 municipalities / 478 schools**, against roughly
+> **33,000 schools** nationally — **about 1.4%** — and the activity is reported as mostly **teachers'
+> administrative** use, not classroom use. 🔵 **A denominator is not a rate, but it is the first 2026
+> APAC quantity in this file that is not a vendor estimate.**
+> 🔴 **`Gap 507-A` therefore stays OPEN, and the shape of the nil is now known:** a dedicated ministry
+> leg per jurisdiction (🇯🇵 MEXT, 🇸🇬 MOE) returned **policy and pilots, no national usage rate**, so
+> the 2024-fieldwork TALIS figures remain the only probability sample for the region. 🟡 One lead for
+> the next pass, surfaced twice in independent legs and **unopenable here**:
+> **`arXiv:2605.16277` — "Generative AI in K-12 Classrooms: A Midyear Implementation Report" (2026)**.
+> 🔴 **Two scope qualifiers that make this file's TALIS rows true, and that this file states only in
+> [`trends.md`](./trends.md):** TALIS 2024's population is **lower-secondary teachers only**, and the
+> results were **published October 2025** from **2024 fieldwork**. 🟢 New detail this pass: 🇦🇺's
+> **66%** is reported as the **fourth highest rate in the OECD**, and a secondary summary puts 🇯🇵 at
+> **17%** against the OECD's own published *"fewer than 20% in France and Japan"*. 🔴 Quote the OECD's
+> band, not the 17%.
+> 🟢 **The standing "APAC vendor share" gap changes character: it is a CONFLICT now, not an absence.**
+> This pass measured three mutually exclusive vendor estimates — APAC at **34.6%** ("fastest-growing"),
+> APAC at **"around 20%"**, and North America at **35–40%** — plus an APAC market size of
+> **USD 987 million with no stated base year**. 🔴 **Quote none of them.** The gap's statement is
+> upgraded from *"nothing exists for any APAC market"* to *"three figures exist, none with a base year,
+> and none attributable to a named vendor"*:
+> [`apac-vendor-share-conflict.2026-10-28-p508.tsv`](../evidence/apac-vendor-share-conflict.2026-10-28-p508.tsv).
+> 🔴 **A retired figure came back, and it must not be re-shelved.** The prescribed North America leg
+> again returned MultiState's **"134 AI-in-education bills across 31 states"** — the figure
+> [`README.md`](../README.md) **retired at `p455`** because four trackers disagree by up to 2.6×.
+> 🟢 It is recorded here as a **re-appearance**, not as a finding.
+> 🟢 **Re-attested unchanged this pass** (same values, independent legs): EU **Digital Omnibus
+> (Regulation (EU) 2026/1744)** and the **2 Dec 2027 / 2 Aug 2028** high-risk dates; **H.R. 8747**
+> advanced in committee and not law; Oklahoma **S.B. 1734**, Idaho **S.B. 1227**, California **AB
+> 1159**, Maryland's 24 districts; 🇰🇷 **AI Basic Act** with MSIT treating 2026 as a pilot year; 🇻🇳
+> education in the high-risk list; UNESCO **IESALC 87% / 26%**, 🇺🇾 **Ceibal 75%**, and the **716**
+> instruments across 23 countries. 🔵 **Nothing in the four regional legs was new except the two APAC
+> instruments above** — which is itself the regional reading for this pass.
+> 🔴 **Attestation grade, unchanged and stated plainly: search-summary only.** `oecd.org`,
+> `unesco.org` and every other non-GitHub host are **403 / no tunnel**; only
+> `raw.githubusercontent.com` and the MCP GitHub channel answer. `Gap 483-K` reproduces.
+> 🟢 **Repair applied, not just recorded:** this file carried **two** `## Opportunities by region`
+> headings — the canonical one and a `p507` duplicate — against the one-heading contract. The `p507`
+> heading is renamed to **`## Regional reads — p507`**; its five `###` region subsections are
+> untouched. Reads: [`apac-2026-instruments.2026-10-28-p508.tsv`](../evidence/apac-2026-instruments.2026-10-28-p508.tsv).
+
 > 🟢 **`p507` (`2026-10-28`) — EVERY REGION NOW HAS A TEACHER-ADOPTION RATE FROM ONE INSTRUMENT, AND IT WAS INSIDE A SOURCE THIS FILE ALREADY CITES.**
 > 🟢 **OECD TALIS 2024 publishes per-country notes.** This file has quoted TALIS for
 > 🇧🇷56/🇨🇱55/🇨🇴53/🇨🇷52 since `p490` while recording APAC and EMEA teacher rates as *"still
@@ -61,7 +110,8 @@ a slide and **five-fold apart** in reality. 🟡 **And France pairs the lowest u
 lowest training (9%)** while Singapore pairs the highest with the highest — the readiness gap
 tracks training provision, which is a **sellable intervention**, not a cultural given.
 
-## Opportunities by region — `p507`
+## Regional reads — `p507`  
+*(opportunities are consolidated under the single canonical "Opportunities by region" heading below — duplicate heading repaired at `p508`)*
 
 ### North America
 🟢 **A probability-sample number to replace the aggregators.** TALIS 2024 puts 🇺🇸 teacher AI use

@@ -1,0 +1,10 @@
+# p508 2026-10-28 — Gap 507-A (a 2026 APAC teacher-adoption rate). No rate found. These are the named, dated 2026 APAC instruments the leg DID return. All search-summary attested: every non-GitHub host is 403/no-tunnel this session.
+jurisdiction	instrument	date	measure	value	grade
+Singapore	MOE Teacher AI Literacy Professional Learning Roadmap	launched Aug 2026	mandated training, not a usage rate	module 1 (AI fundamentals, ethics, responsible use) due end-2026; 2 further modules encouraged by end-2027; ~30-45 min each, online	secondary; sources CONFLICT on whether 1 or 3 modules are compulsory
+Singapore	MOE Committee of Supply debate	Mar 2026	average teacher workload	~53 h/week	single secondary source, unverified against the COS record
+Japan	MEXT FY2026 generative-AI pilot programme	MEXT summary 30 Apr 2026	schools in the pilot	149 municipalities / 478 schools, of ~33,000 schools (about 1.4%); activity mostly teachers' ADMINISTRATIVE use	secondary blog citing a MEXT PDF; the PDF is unreadable from this session
+Japan	unattributed teacher survey	2026 (no author named)	teachers NOT using generative AI	70.7% of 481 junior-high teachers (implies ~29% using)	provenance UNVERIFIED — do not quote
+Japan	OECD TALIS 2024 (country notes)	fieldwork 2024, published Oct 2025	lower-secondary teachers using AI in their work	"fewer than 20%" (OECD text); a secondary summary gives 17%	carried; still 2024 fieldwork, so it does not close 507-A
+Australia	OECD TALIS 2024 (country notes)	fieldwork 2024, published Oct 2025	lower-secondary teachers using AI in the past year	66% — reported as 4th HIGHEST in the OECD	carried; the rank is new this pass
+Singapore	OECD TALIS 2024 (country notes)	fieldwork 2024, published Oct 2025	lower-secondary teachers using AI in their work	~75% (tied with the UAE)	carried
+LEAD for the next pass	arXiv:2605.16277 "Generative AI in K-12 Classrooms: A Midyear Implementation Report"	2026	unknown — region and population not established	-	surfaced twice in independent legs; arxiv.org is unreachable from this session, so it could not be opened

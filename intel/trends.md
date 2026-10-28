@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p508` — `2026-10-28` — **🆕 `T33`: a detector's ABSTENTION is not a verdict — and quoting the abstention instead of the payload cost `p507` its headline vertical finding, on bytes this base had already read. 🟢 `Gap 504-A` characterised with the control `p504` only asserted. 🔴 The HTML limb of the GitHub channel is gone; the byte limb is all that is left.**
+
+Reads: [`licence-bytes.2026-10-28-p508.tsv`](../evidence/licence-bytes.2026-10-28-p508.tsv),
+[`query-shape.2026-10-28-p508.tsv`](../evidence/query-shape.2026-10-28-p508.tsv),
+[`channel-probe.2026-10-28-p508.tsv`](../evidence/channel-probe.2026-10-28-p508.tsv),
+[`saturation-sweep.2026-10-28-p508.tsv`](../evidence/saturation-sweep.2026-10-28-p508.tsv),
+[`api-shelf-read.2026-10-28-p508.tsv`](../evidence/api-shelf-read.2026-10-28-p508.tsv),
+[`apac-2026-instruments.2026-10-28-p508.tsv`](../evidence/apac-2026-instruments.2026-10-28-p508.tsv).
+
+🔴 **Gate posture: `make hooks` not run (`Code from External`) — a fourteenth denial in fifteen
+passes.** Nothing below is gate-attested.
+
+### 🆕 `T33` — the detector's abstention is not a denial
+
+🔵 **`T31` taught this base to record a figure's *measure definition* beside its value. `T33` is the
+same lesson one layer down, for licences: record what the FIELD measures, not only what it says.**
+
+🟢 GitHub's `license.spdx_id` is the output of a **classifier over the licence payload**. Its
+`NOASSERTION` means *"this text is not a recognised instance of a known licence"* — an **abstention**.
+It does **not** mean *"no grant exists"*, and on these shelves it does not even correlate with that:
+
+| address | `license.spdx_id` | payload at `raw.githubusercontent.com` | the truth |
+|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `NOASSERTION` | `master/LICENSE` — **10,982 B**, `sha256 6dbc5b605ed0…`, title `Apache License / Version 2.0` + an appended *"Additional license statement for the openolat.org code base"* | 🟢 **Apache-2.0 with attribution** — a modified Apache, which is precisely what a classifier refuses |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🔴 `NOASSERTION` | `main/LICENSE` — **1,150 B**, `sha256 b8694396d7dc…`, `MIT License` + `<!-- SPDX-License-Identifier: MIT -->` + holder *GegoSoft Technologies* | 🟢 **A complete MIT grant** |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | 🔴 **no `license` object at all** | `LICENSE` and `LICENSE.md` both **404**; `README.md` **9,179 B** opens `# DISCONTINUED` | 🔴 **Genuinely no grant** — the carried reading holds |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) *(control)* | 🟢 `MIT` | **1,092 B**, `sha256 e3321a1b62cd…` | 🟢 a recognised MIT — **58 B smaller** than `gegok12`'s, the difference being the SPDX comment |
+
+🔴 **So the channel has three distinct states and this base was reading two of them as one:**
+`spdx_id` present and recognised; `spdx_id: NOASSERTION` (**a payload exists, the classifier declined
+it**); and **no `license` object at all** (no payload found). 🟢 **Only the third is evidence of no
+grant.** `p507` collapsed the second into the third and published the collapse as a finding.
+
+🔵 **And the aggravating fact is not the error — it is that the bytes were already on the shelf.**
+[`open-gaps.md`](./open-gaps.md) records the `no-label` signal *"fires on `gegok12`'s plain **1 150-byte
+MIT payload**"*. The byte count in that line and the byte count measured this pass are the same number.
+🔴 **`T32` said the defect class was treating a citation as exhausted. `T33` is narrower and worse: a
+recorded measurement was contradicted by a weaker channel and nobody checked the register.**
+
+🟢 **`T33`'s rule, and it is one request:** before writing *any* licence verdict that turns on
+`NOASSERTION` or on an absent field, `curl` the payload path and record **bytes + sha256 + title
+block** — and grep this base's own register for the address first. 🔵 A `NOASSERTION` with a payload is
+a **routing instruction**, not a verdict.
+
+### 🟢 `Gap 504-A` — the control, finally run
+
+🟢 `p504` asserted that on the API search channel *"a missing row and a nonexistent repo are the same
+observation."* 🟢 **Proven:** `repo:openedx/edx-platform` and
+`repo:zzzz-nonexistent-org-9931/nope-repo-9931` return the **identical** `Validation Failed` string.
+🟢 **Tightened twice:** the silent drop reproduces at **batch size 2** (1 of 2 returned,
+`incomplete_results: false`) so it is not a batch-size effect; and `openedx/frontend-app-learning`
+still answers, so exclusion is per-repository. 🔵 **Four passes of reporting the symptom; one control
+and two cheap probes to characterise it.**
+
+### 🔴 The channel narrowed again, in the opposite direction to `p506`
+
+| limb | `p506`/`p507` | `p508` |
+|---|---|---|
+| `api.github.com` (raw `curl`) | 🔴 403 | 🔴 403 |
+| `github.com` HTML | 🟢 answered | 🔴 **403 at the CONNECT — gone** |
+| `raw.githubusercontent.com` | 🟢 answered | 🟢 **200 — the only non-MCP channel left** |
+| MCP GitHub search | 🟢 answered | 🟢 answered, with `OR` now rejected and `repo:` space-separation required |
+
+🔵 **`p506` called the two broken channels complementary. One of the two complements is now gone**, and
+every licence verdict above exists only because the byte limb survived. 🔴 **If `raw` goes next, no
+licence on these shelves is verifiable from this session at all** — that is the single-point-of-failure
+to state to anyone who inherits this base.
+
+### 🟢 Saturation on the agent axis, declared rather than left as silence
+
+🟢 **Nine discovery legs, ~80 distinct addresses, ZERO not already carried.** 🔵 The useful part is the
+**query-shape** finding underneath it: multi-term free-text legs return `total_count: 0` even where the
+shelves hold matching repositories (`LLM agent grading rubric assessment students stars:>80` → **0**,
+against six carried grading repos), and the **Spanish-language leg returns 0** — so this channel cannot
+discover LATAM-language work through free text. 🟢 **`topic:` plus a star floor is the only productive
+shape**, and that is now written down where the next pass will look.
+
 ## 🆕 `p507` — `2026-10-28` — **🆕 `T32`: a gap this base has failed twice was answerable from a source it already cites — the failure was not the query but the ASSUMPTION THAT A CITED SOURCE HAD BEEN FULLY READ. 🟢 Every region now has a teacher-adoption rate from one instrument. 🔴 A widely-republished "MIT" education ERP has no licence at all.**
 
 Reads: [`talis-regional-placement.2026-10-28-p507.tsv`](../evidence/talis-regional-placement.2026-10-28-p507.tsv),

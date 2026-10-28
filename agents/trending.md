@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p508` — `2026-10-28` — **🔴 ZERO new addresses from nine legs, and that is the finding: the agent axis is SATURATED. 🔴 `p507`'s GegoK12 verdict is refuted on bytes this base had already read. 🟢 `Gap 504-A` characterised with a nonexistent-repo control.**
+
+Reads: [`saturation-sweep.2026-10-28-p508.tsv`](../evidence/saturation-sweep.2026-10-28-p508.tsv),
+[`api-shelf-read.2026-10-28-p508.tsv`](../evidence/api-shelf-read.2026-10-28-p508.tsv),
+[`licence-bytes.2026-10-28-p508.tsv`](../evidence/licence-bytes.2026-10-28-p508.tsv),
+[`query-shape.2026-10-28-p508.tsv`](../evidence/query-shape.2026-10-28-p508.tsv),
+[`channel-probe.2026-10-28-p508.tsv`](../evidence/channel-probe.2026-10-28-p508.tsv).
+
+🔴 **Gate posture: `make hooks` DENIED (`Code from External`) — fourteenth denial in fifteen passes.**
+Nothing here is gate-attested. 🟢 Stars, `archived` and `license.spdx_id` below are read on the MCP
+GitHub channel; every licence *payload* is read on `raw.githubusercontent.com` with bytes and sha256.
+
+### 🔴 The sweep, and the zero
+
+| leg | shape | returned | new |
+|---|---|---|---|
+| `top open source AI agents education 2026 github MIT` | WebSearch | OpenHands, CrewAI, Langflow, LibreChat, `ai-agents-for-beginners`, HF agents course, `500-AI-Agents-Projects` | 🔴 **0** |
+| `github trending education AI 2026` | WebSearch | `DeepTutor`, `career-ops`, `Vibe-Trading` | 🔴 **0** |
+| `open source platform education ERP CRM MIT Apache` | WebSearch | OpenEduCat, OFBiz, Huly, Corteza, Krayin, Dolibarr, **GegoK12** | 🔴 **0** |
+| `AI education industry trends 2026` | WebSearch | vendor blogs only | 🔴 **0** |
+| `topic:ai-tutor stars:>50` | MCP API | **25** addresses | 🔴 **0** |
+| `topic:ai-education stars:>60` | MCP API | **17** | 🔴 **0** |
+| `topic:edtech stars:>150` | MCP API | **28** | 🔴 **0** |
+| `topic:education-ai stars:>60` | MCP API | **2** | 🔴 **0** |
+| `education AI tutor stars:>400` | MCP API | **3** | 🔴 **0** |
+
+🟢 **Every permissive candidate was checked against the whole base, shelves *and* this history, before
+being called new** — which is why the count is zero rather than a dozen false finds:
+`ankimcp/anki-mcp-server` **537★ MIT**, `JuneYaooo/lineage-skill` **462 Apache-2.0**,
+`ZeKaiNie/universal-examprep-skill` **356 MIT**, `karanb192/algo-sensei` **299 MIT**,
+`SenmuuuuW/universal-diagnostic-tutor-skill` **252 MIT**, `orionsheep/wordlink` **249 MIT**,
+`Fazmin/AILearningGuide` **235 MIT**, `KeWang0622/kaogong-skill` **210 MIT**,
+`liuliu667/cram-engine` **176 MIT**, `SimonsTang/feifei-companion` **110 Apache-2.0**,
+`PrepLabsAI/InterviewMentor` **116 MIT**, `wenflow-org/wenflow` **61 MIT**,
+`ArnaudGuiovanna/tutor-mcp` **57 MIT**, `HumphreySun98/Smart-Study-Agent` **57 MIT**,
+`edrys-org/edrys` **334 MPL-2.0**, `classroomio/classroomio` **1,734 AGPL-3.0** — all carried.
+🔵 **A sweep whose honest output is "nothing" is the cheapest pass this base can have, and the second
+cheapest is the one that re-finds its own shelf and calls it news.**
+
+### 🔴 The licence correction, and it is `p507`'s headline
+
+| claim | `p507` | `p508`, from bytes |
+|---|---|---|
+| `Gego-K12/gegok12` licence | 🔴 *"published as MIT by its own site… **the repository does not substantiate it**"*, on `license.spdx_id: NOASSERTION` | 🟢 `main/LICENSE` **200, 1,150 B**, `sha256 b8694396d7dc6439…`, `MIT License` + `<!-- SPDX-License-Identifier: MIT -->` + holder *"Copyright (c) 2025 GegoSoft Technologies and GegoK12 Contributors"* — **a complete MIT grant** |
+| `OpenOLAT/OpenOLAT` licence | 🟢 Apache-2.0 (carried from `p317`'s byte read) | 🟢 confirmed: **10,982 B**, `sha256 6dbc5b605ed0be6e…`, `Apache License / Version 2.0` **+ an appended openolat.org attribution statement** — and its API field **also reads `NOASSERTION`** |
+| `JushBJJ/Mr.-Ranedeer-AI-Tutor` | 🔴 no grant, DISCONTINUED | 🟢 **re-attested from bytes**: `LICENSE` + `LICENSE.md` both **404**, `README.md` **9,179 B** opening `# DISCONTINUED`; **29,548★** on the API today |
+
+🔵 **The shelf had the bytes already.** [`intel/open-gaps.md`](../intel/open-gaps.md) records the
+`no-label` signal firing *"on `gegok12`'s plain **1 150-byte MIT payload**"* — same payload, same byte
+count, read passes ago. 🔴 **A detector field was allowed to overturn a recorded measurement.** See
+[`intel/trends.md`](../intel/trends.md) `T33`.
+
+### 🟢 Shelf re-read — 64 queried / 64 returned
+
+| address | ★ `p508` | vs `p507` | `spdx_id` | `archived` |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **47,621** | 47,539 → **+82** | 🟢 Apache-2.0 | 🟢 false |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **41,709** | carried 41,700 | 🟢 MIT | 🟢 false |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **36,411** | 36,339 → **+72** | 🟢 MIT *(carried)* | 🟢 false |
+| [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) | **29,548** | carried as **29,550** in one row and **29,548** in another — 🔵 the shelf disagrees with itself by 2; today's read is **29,548** | 🔴 no `license` object | 🟢 false *(but DISCONTINUED)* |
+| [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | **14,338** | carried | 🟢 MIT | 🟢 false |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **7,556** | unchanged | *(minimal payload)* | 🟢 false |
+| [`PetoiCamp/OpenCat-Quadruped-Robot`](https://github.com/PetoiCamp/OpenCat-Quadruped-Robot) | **5,518** | unchanged | 🟢 MIT | 🟢 false |
+| [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | **2,595** | unchanged | 🟢 MIT | 🟢 false |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | **599** | 598 → **+1** | 🟢 permissive *(carried)* | 🟢 false |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **448** | unchanged | 🔴 `NOASSERTION` → 🟢 Apache from bytes | 🟢 false |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | **387** | unchanged, **fourth read** | 🟢 MIT | 🟢 false |
+| [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | **582** | unchanged | *(minimal payload)* | 🔴 **true** — flagged since `p504` |
+| [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | **77** | unchanged | 🟢 Apache-2.0 | 🔴 **true** — flagged since `p504` |
+| [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) | **30** | unchanged | 🔴 `NOASSERTION` | 🔴 **true** — flagged since `p497` |
+
+🟢 **`T29` holds a fifth pass: 3 archived of 64, all three already flagged.** Full table, all 64 rows:
+[`api-shelf-read.2026-10-28-p508.tsv`](../evidence/api-shelf-read.2026-10-28-p508.tsv).
+
+### 🔴 Channel and query mechanics the next pass needs
+
+- 🔴 **`github.com` HTML is 403 at the CONNECT this session** — a regression against `p506`/`p507`.
+  🟢 **`raw.githubusercontent.com` answers 200**; it is the only non-MCP channel left.
+- 🔴 **`repo:A OR repo:B` is REJECTED**: *"Logical operators only apply to text, not to qualifiers."*
+  🟢 **Space-separated repeated `repo:` qualifiers still behave as OR** — batch at 7–10 slugs inside the
+  ~250-character budget.
+- 🔴 **Multi-term free-text legs collapse to `total_count: 0`** even against carried repositories.
+  🟢 Use `topic:` plus a star floor.
+- 🔵 **A zero is not always a defect:** `education AI tutor stars:>400 pushed:>2026-08-01` → 0 is
+  **correct**, because all three matches were last pushed earlier. It was nearly written up as a
+  channel fault and the dates refuted it.
+
 ## 🆕 `p507` — `2026-10-28` — **🟢 `Gap 488-Q` IS ANSWERABLE AND HAS BEEN FOR THREE PASSES — the APAC teacher-adoption rate was inside a source THIS BASE ALREADY CITES. 🔴 The open web is gone this session: every non-GitHub host is 403 at the CONNECT. 🔴 Four probes, four false answers, all mine — including one that nearly wrote a correction to a row that was right.**
 
 Reads: [`api-shelf-read.2026-10-28-p507.tsv`](../evidence/api-shelf-read.2026-10-28-p507.tsv),

@@ -1,0 +1,16 @@
+# p508 2026-10-28 — query-shape experiments on the MCP GitHub repo-search channel
+query	total_count	incomplete_results	reading
+repo:HKUDS/DeepTutor OR repo:satvik314/educhain OR repo:JushBJJ/Mr.-Ranedeer-AI-Tutor	ERROR	-	"Validation Failed ... Logical operators only apply to text, not to qualifiers" — the explicit-OR batch form is REJECTED
+repo:HKUDS/DeepTutor repo:satvik314/educhain repo:moodle/moodle	3	false	space-separated repeated repo: qualifiers DO behave as OR — this is the batch form that still works
+repo:openedx/edx-platform	ERROR	-	"Validation Failed ... cannot be searched either because the resources do not exist or you do not have permission" (Gap 504-A, fourth consecutive pass)
+repo:zzzz-nonexistent-org-9931/nope-repo-9931	ERROR	-	CONTROL: a repository that does not exist returns the IDENTICAL error string. p504 asserted "a missing row and a nonexistent repo are the same observation"; this is the control that proves it
+repo:openedx/edx-platform repo:moodle/moodle	1	false	the silent drop reproduces at BATCH SIZE 2 — not a pagination or batch-size effect
+repo:openedx/frontend-app-learning	1	false	same org answers — exclusion is per-repository, re-attested
+education AI tutor stars:>400	3	false	three terms + one qualifier: productive
+education AI tutor stars:>400 pushed:>2026-08-01	0	false	0 is CORRECT here (all three matches were pushed before that date) — not a channel defect
+LLM agent grading rubric assessment students stars:>80	0	false	six free-text terms: zero, although this base shelves six grading repos. Multi-term free-text queries collapse
+educacion inteligencia artificial docentes open source stars:>20	0	false	Spanish-language free-text leg: zero. LATAM-language discovery does not work through free text on this channel
+topic:ai-tutor stars:>50	25	false	topic: form is the productive discovery shape
+topic:ai-education stars:>60	17	false	topic: form
+topic:edtech stars:>150	28	false	topic: form
+topic:education-ai stars:>60	2	false	topic: form — and note how narrow this topic is vs ai-education

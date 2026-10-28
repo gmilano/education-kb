@@ -6,6 +6,53 @@ updated: 2026-10-28
 
 # Compose patterns — concrete education AI recipes
 
+> 🟢 **`p508` (`2026-10-28`) — TWO NEW RECIPES, AND BOTH ARE BUILT AROUND A LICENCE-ARCHITECTURE DECISION RATHER THAN A FEATURE LIST.**
+> 🔵 Every component below was read on the API channel this pass (`license.spdx_id`, `archived`, stars)
+> and every **payload-level** licence claim was read on `raw.githubusercontent.com` with bytes and
+> sha256. 🔴 **No AGPL or `NOASSERTION`-without-payload component appears in a shipped step** — where
+> an AGPL asset is unavoidable (`Anki`), the recipe keeps it **on the learner's own machine** and says
+> so. Reads: [`licence-bytes.2026-10-28-p508.tsv`](../evidence/licence-bytes.2026-10-28-p508.tsv),
+> [`api-shelf-read.2026-10-28-p508.tsv`](../evidence/api-shelf-read.2026-10-28-p508.tsv).
+
+### 🟢 `p508-R1` — The retention loop, with the AGPL kept on the learner's device
+
+🔵 **Why this one exists:** every tutoring recipe on this shelf ends at *explanation*. Retention is
+where learning is actually measured, and the reference scheduler in this field (**Anki**, 32,300★) is
+**AGPL-3.0** — which is why nobody builds it into a client product. 🟢 **The MIT MCP server in step 3
+dissolves the problem: the agent writes cards into the learner's own Anki install, so the AGPL code
+never enters the deliverable.**
+
+| step | component | licence | ★ | role |
+|---|---|---|---|---|
+| 1. source → study package | [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) | 🟢 MIT | 344 | PDF / video / web / audio → quizzes, flashcards and a 12-section study guide in one command. |
+| 2. scheduling policy | [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | 🟢 MIT | 57 | **FSRS** for *when*, RL for *which action* — the part a chatbot has no opinion about. |
+| 3. card delivery | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT | **537** | MCP server over the learner's **local** Anki. 🔴 Anki itself is AGPL-3.0 — it stays on the device, the MIT server is what you ship. |
+| 4. institutional landing | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 MIT | 993 | **Emits SCORM** — the loop reports into Moodle / Canvas / ILIAS without an integration project. |
+| 5. evidence of mastery | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | 274 | **BKT** mastery estimates, UC Berkeley — gives step 2 a target rather than a guess. |
+
+🟢 **Shippable licence surface: MIT only.** 🔴 **What it is not:** a hosted SRS product — if the client
+wants cards on a server, the Anki dependency has to be replaced, and FSRS (step 2) is the algorithm you
+reimplement, not the app.
+
+### 🟢 `p508-R2` — Diagnose-first STEM tutor over MCP, with an eval gate before release
+
+🔵 **Why this one exists:** `p507-R1` built the teacher side because TALIS says preparation is where the
+usage is. This is the student side done the way the evidence shelf demands — **a diagnosis before a
+lesson, and a pedagogical-quality gate before anything reaches a classroom.**
+
+| step | component | licence | ★ | role |
+|---|---|---|---|---|
+| 1. ITS runtime | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT | 57 | MCP server that turns any LLM into an intelligent tutoring system — model-agnostic, so the client's procurement decides the model. |
+| 2. pedagogy | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 MIT | 252 | **Diagnosis first**, no mode menu. This is the behaviour teachers ask for and chat UIs never do. |
+| 3. mastery model | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | 274 | BKT over a skill graph — the state that makes step 2's diagnosis persist between sessions. |
+| 4. domain depth (CS/ML) | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) · [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | 🟢 MIT · 🟢 MIT | 299 · 2,595 | DSA mentoring and 65 ML problems **with an auto-grader** — a verifiable correctness signal, not an LLM opinion. |
+| 5. release gate | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) run under [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 MIT · 🟢 MIT | 13 · **14,338** | 1,143 teacher-exam questions as a **CI gate**: no prompt change ships without a pedagogy score. |
+| 6. institutional layer *(only if a closed derivative is required)* | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟡 **Apache-2.0 by payload** (10,982 B, `sha256 6dbc5b605ed0…`) | 448 | The only permissive full LMS. 🔴 **Its API `license.spdx_id` reads `NOASSERTION`** — an automated licence gate in the client's pipeline will reject it unless you give it the payload reading. |
+
+🟢 **Shippable licence surface: MIT throughout steps 1–5**, Apache-2.0 (with attribution) at step 6.
+🔴 **What it is not:** a K-12 product — steps 4 and 5 are tertiary/professional in scope, and the
+benchmark at step 5 is a **13★ corpus**: treat it as a gate you maintain, not a dependency you trust.
+
 > 🟢 **`p507` (`2026-10-28`) — TWO NEW RECIPES, BOTH BUILT ONLY FROM MIT PARTS VERIFIED THIS PASS.**
 > 🔵 Every repo named below was read on the API channel this pass: `license.spdx_id`, `archived`
 > and star count are measured, not carried. 🔴 **No AGPL or `NOASSERTION` repo appears in any wiring

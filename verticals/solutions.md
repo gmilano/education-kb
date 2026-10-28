@@ -6,6 +6,55 @@ updated: 2026-10-28
 
 # Education platforms you can customise with AI on top
 
+> 🔴 **`p508` (`2026-10-28`) — `p507`'s HEADLINE VERTICAL FINDING IS REFUTED ON THE BYTES, AND THIS BASE HAD ALREADY READ THOSE BYTES.**
+> 🔴 **`p507` wrote that [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) is *"published as
+> MIT by its own site… the repository does not substantiate it"*, on the strength of
+> `license.spdx_id: NOASSERTION`. The repository substantiates it completely.**
+> `main/LICENSE` → **HTTP 200, 1,150 B, `sha256 b8694396d7dc6439fdfb4d0fa151903268984f2f90db2c18e124adcc1dd72ca9`**,
+> opening `MIT License` with an explicit `<!-- SPDX-License-Identifier: MIT -->` and the holder line
+> **"Copyright (c) 2025 GegoSoft Technologies and GegoK12 Contributors"** — the full MIT permission and
+> warranty paragraphs follow. 🔵 Control: `satvik314/educhain`'s detector-recognised MIT is **1,092 B**;
+> `gegok12` is **+58 B** on the same family, which is the SPDX comment line. **The embedded comment is
+> the most likely reason the detector abstains.**
+> 🔴 **The defect class is this base's own worst one, and it is not the carry — it is a DETECTOR FIELD
+> OVERTURNING A BYTE READING THE BASE ALREADY HELD.**
+> [`open-gaps.md`](../intel/open-gaps.md) records, under the `no-label` signal, that it *"fires on
+> `gegok12`'s plain **1 150-byte MIT payload**"* — the same payload, the same byte count, read passes
+> ago. `p507` did not contradict a missing fact; it contradicted a recorded one.
+> 🟡 **So `p501`'s standing finding splits, and only the licence half falls.** *"There is no
+> MIT-licensed education ERP/SIS"* is **false on the licence axis**: `gegok12` is a full Laravel
+> school-management system (SIS) — **54★ / 102 forks, `archived: false`, pushed 2026-09-23** — under an
+> MIT payload. 🔴 **What survives are different objections, and they are live:** `Gap 298` records
+> **3 distinct `%ae`** with a **shared role account at 67.5% of commits**, `Gap 411-C` records that its
+> `composer.json` is the **unedited `laravel/laravel` skeleton** (so the manifest's `"license": "MIT"`
+> is *Laravel's*, not evidence about this project), and the product is **open-core**. 🟢 It is shelved
+> below as a **build-with-caveats** row, not as a recommendation.
+> 🟢 **And the same correction explains this shelf's most consequential row.**
+> [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — sold here as *"the only permissive full
+> LMS"* — **also reads `license.spdx_id: NOASSERTION`** on the API channel. Its `master/LICENSE` is
+> **10,982 B, `sha256 6dbc5b605ed0be6e945483f08d48f754762c5b6e65a20f141e85fe5f8700aed4`**, title block
+> **`Apache License / Version 2.0, January 2004`**, with an appended *"Additional license statement for
+> the openolat.org code base"* naming frentix GmbH and the OLAT 7.1 lineage. **A modified Apache, which
+> is exactly what a detector refuses to classify** — and `p317`'s byte reading (*"Apache-2.0 +
+> attribution"*) is confirmed at **a filename sweep of five paths: only `LICENSE` exists, there is no
+> `NOTICE` file.** 🔴 **Consequence for anyone building tooling off these shelves: a licence filter
+> keyed on `license.spdx_id` drops BOTH the only permissive full LMS and the only MIT SIS.**
+> 🟢 **Platform shelf re-read on the API channel:** `moodle/moodle` **7,556★**,
+> `instructure/canvas-lms` **6,889**, `frappe/lms` **3,350**, `learnhouse/learnhouse` **2,428**,
+> `learningequality/kolibri` **1,162**, `overhangio/tutor` **1,130**, `chamilo/chamilo-lms` **1,019**,
+> `openeducat/openeducat_erp` **900**, `frappe/education` **682**, `francoisjacquet/rosariosis` **647**,
+> `GibbonEdu/core` **635**, `ILIAS-eLearning/ILIAS` **505**, `OpenOLAT/OpenOLAT` **448**,
+> `oat-sa/tao-core` **64** — **all fourteen `archived: false`, all fourteen unchanged against `p507`.**
+> 🔴 `menthorlabs/menthor` (**582**) and `ably-labs/realtime-quiz-framework` (**77**) stay
+> `archived: true` and stay flagged. 🔴 `openedx/edx-platform` remains unenumerable on this channel
+> (`Gap 504-A`, now characterised in [`repos/foundations.md`](../repos/foundations.md) `p508`).
+> 🔴 **No new platform candidate for a seventh consecutive pass.** The prescribed vertical leg returned
+> OpenEduCat (**LGPL-3.0**), Apache OFBiz, Huly, Corteza, Krayin, Dolibarr (**GPL-3.0**) and GegoK12 —
+> every one already carried. 🟢 Saturation, declared.
+> 🔴 **Gate posture: `make hooks` DENIED (`Code from External`).** Reads:
+> [`licence-bytes.2026-10-28-p508.tsv`](../evidence/licence-bytes.2026-10-28-p508.tsv),
+> [`api-shelf-read.2026-10-28-p508.tsv`](../evidence/api-shelf-read.2026-10-28-p508.tsv).
+
 > 🟢 **`p507` (`2026-10-28`) — THE PLATFORM SHELF IS RE-READ AND UNCHANGED; THE NEWS IS A REGULATORY DEADLINE THAT LANDS ON THESE PLATFORMS, NOT A NEW PLATFORM.**
 > 🟢 **Re-read on the API channel, `archived` included:** `moodle/moodle` **7,556★**,
 > `instructure/canvas-lms` **6,889★**, `frappe/lms` **3,350★**, `learnhouse/learnhouse` **2,428★**,
@@ -121,7 +170,7 @@ license read from bytes at a pinned SHA — see
 | **LMS — mass market** | [Moodle](https://github.com/moodle/moodle) | GPL-3.0 | **7,556** *(`p504`, API)* | Largest installed base; 2,000+ plugins. A Moodle plugin is the lowest-friction way to ship AI into an existing institution. |
 | **LMS — higher ed / MOOC** | [Open edX](https://github.com/openedx/edx-platform) | AGPL-3.0 | 8,200 *(🔵 `p504`: HTML only — **the API search channel cannot see this repo**, `Gap 504-A`)* | University and workforce standard. Deploy via [Tutor](https://github.com/overhangio/tutor) (AGPL-3.0), not by hand. |
 | **LMS — North America HE** | [Canvas LMS](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 6,900 | Dominant in US higher ed. Has a real MCP server already: [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, 309★). |
-| **LMS — permissive** | [OpenOlat](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | 448 | **The only permissive full LMS found.** Pick this when the client needs a closed derivative. |
+| **LMS — permissive** | [OpenOlat](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** 🔵 *by payload: `master/LICENSE` 10,982 B, `sha256 6dbc5b605ed0…`, Apache 2.0 title block **plus** an openolat.org attribution statement — so the API `license.spdx_id` reads `NOASSERTION` (`p508`)* | 448 | **The only permissive full LMS found.** Pick this when the client needs a closed derivative. 🔴 Tell any automated licence gate about the payload reading, or it will reject this row. |
 | **LMS — offline-first** | [Kolibri](https://github.com/learningequality/kolibri) | **MIT** | 1,200 | Runs without connectivity. Decisive for rural LATAM/Africa/APAC and for national programmes. |
 | **LMS — ease of use** | [Chamilo](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1,000 | Francophone + LATAM public sector. |
 | **LMS — DACH** | [ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | 505 | German universities and public sector; SCORM-strong. |
@@ -130,6 +179,7 @@ license read from bytes at a pinned SHA — see
 | **SIS / school mgmt (Frappe)** | [frappe/education](https://github.com/frappe/education) | GPL-3.0 *(declared)* | 682 | **New `p491`.** Admissions, students, programmes, fees on the Frappe stack. 🔴 Grant is a **19-byte stub** naming GPL v3 with no license text — family is GPL-3.0, paperwork is incomplete. **Not the same license as `frappe/lms` (AGPL-3.0).** |
 | **Education ERP** | [OpenEduCat](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 | Admissions, fees, library, hostel, timetable — on Odoo. This is the literal Odoo answer. |
 | **SIS (K-12)** | [RosarioSIS](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 647 | Enrolment, scheduling, grades, attendance, billing. |
+| **SIS — permissive, with caveats** | [GegoK12](https://github.com/Gego-K12/gegok12) | **MIT** 🟢 *by payload: `main/LICENSE` 1,150 B, `sha256 b8694396d7dc…`, holder GegoSoft Technologies (`p508`)* | 54 | 🟢 **New row `p508`, and it reverses `p507`:** a full Laravel school-management system (SIS) under a complete MIT grant, API-first, mobile-app ready. **The counter-example to this file's "no permissive education SIS" line — on the licence axis only.** 🔴 **Caveats are the reason it is not a recommendation:** 54★ / 102 forks, **open-core** packaging unmeasured (`Gap 508-C`), **3 distinct author emails with a shared role account at 67.5% of commits** (`Gap 298`), and its `composer.json` is the unedited `laravel/laravel` skeleton so the manifest proves nothing (`Gap 411-C`). |
 | **School management** | [Gibbon](https://github.com/GibbonEdu/core) | GPL-3.0 | 635 | Teacher/student/parent/leadership workflows. |
 | **Assessment / exams** | [TAO](https://github.com/oat-sa/tao-core) | GPL-2.0 | 64 | QTI-standard computer-based testing. The only substantial open assessment engine. |
 | **Interactive content** | [H5P](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 152 | 50+ interactive content types; embeds into Moodle, Canvas, Open edX. |

@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p508` — **🔴 `p507`'s HEADLINE VERTICAL FINDING IS REVERSED, and not by new evidence — by a measurement this register ALREADY CONTAINS. 🆕 `T33` registered. 🟢 `Gap 504-A` characterised with the control `p504` only asserted. 🟡 `Gap 507-A` fails informatively: the 2026 APAC instrument does not exist, and the ministry legs say what does. 🔴 FIVE REGISTERED (`508-A`…`508-E`).**
+
+🔴 **Gate posture, stated first: `make hooks` was DENIED** (`Code from External`) before any gate body
+ran — **a fourteenth denial in fifteen passes**. 🔵 Nothing in this pass is gate-attested. 🟢 Contracts
+re-checked independently in this session: frontmatter present on **all 10** shelf files (the five shelf
+directories **plus the repo root**, which is `p507`'s own `Gap 507-B` correction, honoured here);
+header-as-data **0** across the shelves; queried-vs-returned reconciliation on **64** addresses.
+
+### 🔴 Reversed — a closure from last pass that does not hold
+
+| gap | `p507` recorded | `p508` |
+|---|---|---|
+| 🔴 **`p501`'s no-MIT-education-ERP finding "SURVIVES its first named counter-candidate"** | *"`GegoK12` is published as MIT by its own site… [`Gego-K12/gegok12`] reads `license.spdx_id: NOASSERTION` — no OSI licence detected. The claim travelled; the licence did not."* | 🔴 **REVERSED on the licence axis.** `main/LICENSE` → **200, 1,150 B**, `sha256 b8694396d7dc6439fdfb4d0fa151903268984f2f90db2c18e124adcc1dd72ca9`, `MIT License` + `<!-- SPDX-License-Identifier: MIT -->` + holder *"Copyright (c) 2025 GegoSoft Technologies and GegoK12 Contributors"*. 🔵 **This register already held that payload**: the `no-label` row records the signal firing *"on `gegok12`'s plain 1 150-byte MIT payload"* — same byte count. 🟡 What survives is **not** the licence claim but `Gap 298` (3 `%ae`, 67.5 % role account), `Gap 411-C` (unedited `laravel/laravel` manifest) and open-core packaging |
+
+### 🟢 Closed or characterised with content
+
+| gap | resolution |
+|---|---|
+| 🟢 **`Gap 504-A`** | **CHARACTERISED, mitigation unchanged.** `p504` asserted that on this channel *"a missing row and a nonexistent repo are the same observation"*; the control was never run. 🟢 Run now: `repo:openedx/edx-platform` and `repo:zzzz-nonexistent-org-9931/nope-repo-9931` return the **identical** `Validation Failed` string. 🟢 Tightened: the silent drop reproduces at **batch size 2** (1 of 2 returned, `incomplete_results: false`) — **not** a batch-size effect; `openedx/frontend-app-learning` still answers — exclusion stays **per-repository**, fourth consecutive pass |
+| 🟢 **Batch-form mechanics** | **`repo:A OR repo:B` is now REJECTED** by the validator (*"Logical operators only apply to text, not to qualifiers"*); **space-separated repeated `repo:` qualifiers still OR**, inside a ~250-character budget → 7–10 slugs per call. 🔵 A pass that inherits the old form will read zero rows and may call it an outage |
+| 🟢 **`OpenOLAT`'s `NOASSERTION`** | **EXPLAINED from bytes, and the shelf row is vindicated.** `master/LICENSE` **10,982 B**, `sha256 6dbc5b605ed0be6e…`, `Apache License / Version 2.0` **plus an appended openolat.org attribution statement** — a modified Apache, which is exactly what a classifier declines. Filename sweep: **only `LICENSE` exists** (`LICENSE.txt`, `LICENSE.TXT`, `LICENSE.md`, `COPYING`, `NOTICE` all 404) |
+| 🟢 **`Mr.-Ranedeer-AI-Tutor`'s no-grant + DISCONTINUED readings** | **RE-ATTESTED from bytes**, not carried: `LICENSE` and `LICENSE.md` both **404**; `README.md` **9,179 B**, `sha256 3db5fdf9ed06d29ad9…`, first heading `# DISCONTINUED`. **29,548★** on the API today (carried: 29,550) |
+| 🟡 **`Gap 507-A`** (a 2026 APAC teacher rate) | **NOT closed, and the nil is now named per jurisdiction.** Dedicated ministry legs returned **policy, not usage**: 🇸🇬 MOE **Teacher AI Literacy Professional Learning Roadmap**, launched **Aug 2026**, module 1 due **end-2026** (🔴 sources conflict: 1 compulsory + 2 recommended, vs 3 compulsory); 🇯🇵 **MEXT FY2026 pilot — 149 municipalities / 478 schools of ~33,000 (~1.4 %)**, mostly administrative use. 🟢 New TALIS detail: 🇦🇺's **66 %** is the **4th highest in the OECD**; a secondary summary puts 🇯🇵 at **17 %** against the OECD's published *"fewer than 20 %"* — **quote the band**. 🟡 Lead, unopenable here: **`arXiv:2605.16277`** |
+
+### 🔴 Registered this pass
+
+| gap | statement |
+|---|---|
+| 🆕 🔴 **`Gap 508-A`** | **The licence rule on these shelves conflates two different channel states, and one shelf sentence still says so.** `p507` wrote that `NOASSERTION` *"is not a permissive grant and must never be shelved as one"*; that sentence remains in [`agents/top.md`](../agents/top.md)'s `p507` block below the `p508` narrowing. 🟢 The operative three-state rule is in [`trends.md`](./trends.md) `T33`: recognised `spdx_id` / `NOASSERTION` (**payload exists, classifier declined**) / **no `license` object** (no payload). **Only the third is evidence of no grant.** 🔴 Nothing enforces it — a gate is the fix and the gate is denied |
+| 🆕 🔴 **`Gap 508-B`** | **The byte channel is now a single point of failure.** `api.github.com` **403**, `github.com` HTML **403** (a regression against `p506`/`p507`), `raw.githubusercontent.com` **200**. Every licence verdict this pass rests on the one surviving limb. 🟢 **Cheap insurance while it is up: record bytes + sha256 for every PERMISSIVE row on these shelves** (~20 addresses, one request each). 🔴 If `raw` closes before that is done, no licence on this base is verifiable from this session at all |
+| 🆕 🔴 **`Gap 508-C`** | **`gegok12` now blocks on packaging, not licence — and that has never been measured.** Is the school-management core in the MIT repository, or is the shipped product an open-core shell with the SIS modules behind a paid add-on? 🟢 Decidable from the repo tree plus the vendor's module list; the vendor site is unreachable here, so the **tree** is the half that can be done |
+| 🆕 🔴 **`Gap 508-D`** | **APAC vendor share is a CONFLICT, not an absence, and it is unclosable from this session.** APAC **34.6 %** vs **"around 20 %"**, with North America at **35–40 %**; APAC size **USD 987 m with no base year**. 🔴 Quote none. Closing it needs a paid report or company filings — neither reachable |
+| 🆕 🔴 **`Gap 508-E`** | **This base cannot discover LATAM-language work on its only catalogue channel.** The Spanish-language leg (`educación inteligencia artificial docentes open source stars:>20`) returns **`total_count: 0`**, as do all multi-term free-text legs; only `topic:` + a star floor works, and `topic:` values are English. 🟢 Named remedy for the next pass: enumerate by **`topic:` plus language/`location`-adjacent signals** (e.g. `language:PHP topic:edtech`), or by the commit-stream placement method `ACTION ZZ-as` already uses |
+
+### 🟢 Repaired, not merely recorded
+
+🟢 [`intel/market.md`](./market.md) carried **two** `## Opportunities by region` headings — the canonical
+one and a `p507` duplicate — against the one-heading contract that the region filter depends on. **The
+`p507` heading is renamed to `## Regional reads — p507`**; its five `###` region subsections are
+untouched. 🔵 `p504` established that *recording a repair without applying it* is this register's own
+failure mode; this is the opposite case, done in the same pass as the finding.
+
+### 🔴 Standing, unmoved
+
+| gap | status |
+|---|---|
+| 🔴 **`Gap 483-K`** | **Unclosable, and unchanged.** `oecd.org`, `unesco.org`, `arxiv.org` and every other non-GitHub host are **403 / no tunnel**. Every market figure this pass is **search-summary attested** |
+| 🔴 **OECD average, unreconciled** | TALIS 2024's headline is **36 %** (OECD country notes) and **~41 %** (Education International) for the same survey. Quote **36 %** with the OECD attribution |
+| 🔴 **The retired bill count keeps returning** | The North America leg again returned MultiState's **"134 bills across 31 states"**, retired at `p455` because four trackers disagree by up to **2.6×**. 🟢 Recorded as a re-appearance; **not** re-shelved |
+
 ## 🆕 `p507` — **🟢 `Gap 488-Q` HALF-CLOSES, and it was answerable from a source this base already cites — the failure was never the query. 🆕 `T32` registered. 🔴 The convention-probe error recurred a SIXTH and SEVENTH time, both in this pass's own code. 🟢 `p501`'s no-MIT-education-ERP finding survives its first real counter-candidate. 🔴 TWO REGISTERED (`507-A`, `507-B`).**
 
 🔴 **Gate posture, stated first: `make hooks` was not run** — the suite is `Code from External` in

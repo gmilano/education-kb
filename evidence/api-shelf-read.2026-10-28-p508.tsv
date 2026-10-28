@@ -1,0 +1,67 @@
+# p508 2026-10-28 — shelf re-read, MCP GitHub search_repositories channel (raw curl to api.github.com is 403)
+# full_objects = license.spdx_id + archived + stars measured; minimal = stars + archived only (minimal_output drops the license object)
+slug	stars	spdx_id	archived	pushed	payload
+0xff-r4bbit/watchmetype	25	NOASSERTION	false	2026-07-02	full
+3yangyang9/DeepTutor-AILearning	141	Apache-2.0	false	2026-10-09	full
+67tallchris/iep-builder	0	MIT	false	2026-10-23	full
+AI-for-Education/pedagogy-benchmark	13	MIT	false	2026-10-09	full
+ASUCICREPO/Admissions-AI-Agent	5	MIT	false	2026-02-24	full
+AgnellusX1/GodsEye	30	NOASSERTION	TRUE	2021-07-13	full
+CAHLR/OATutor	274	MIT	false	2026-10-28	full
+CaviraOSS/PageLM	2050	NOASSERTION	false	2026-10-13	full
+DozenTwelve/Papermorph	993	MIT	false	2026-10-28	full
+EleutherAI/lm-evaluation-harness	14338	MIT	false	2026-09-14	full
+Exorust/TorchLeet	2595	MIT	false	2026-10-21	full
+Gego-K12/gegok12	54	NOASSERTION	false	2026-09-23	full
+GeminiLight/SocialCoach	440	Apache-2.0	false	2026-10-26	full
+GibbonEdu/core	635	GPL-3.0	false	2026-10-28	full
+HKUDS/DeepTutor	47621	Apache-2.0	false	2026-10-28	full
+Halleck45/OpenPronounce	169	MIT	false	2026-08-15	full
+HugeCatLab/ChatTutor	1316	AGPL-3.0	false	2026-01-09	full
+ILIAS-eLearning/ILIAS	505	GPL-3.0	false	2026-10-28	full
+Jeanikt/tutor-ai-agent	0	MIT	false	2026-10-07	full
+JudgePeach/math-question-bank	360	AGPL-3.0	false	2026-10-27	full
+KlassApp-Foundation/KlassApp	4	NOASSERTION	false	2026-10-27	full
+Li-Evan/Bloom	294	MIT	false	2026-10-20	full
+Miaotofu01/Study-Mate	1247	MIT	false	2026-10-21	full
+Open-TutorAi/open-tutor-ai-CE	114	BSD-3-Clause	false	2026-06-26	full
+OpenOLAT/OpenOLAT	448	NOASSERTION	false	2026-10-28	full
+Orenda-Project/rumi-platform	18	Apache-2.0	false	2026-10-27	full
+PetoiCamp/OpenCat-Quadruped-Robot	5518	MIT	false	2026-09-08	full
+PetoiCamp/OpenCatEsp32-Quadruped-Robot	521	MIT	false	2026-10-24	full
+RandMelville/claude-war-room	62	MIT	false	2026-06-26	full
+SJRiz/pytogether	261	MIT	false	2026-10-21	full
+SYuan03/Skill-Anything	344	MIT	false	2026-09-26	full
+SafeExamBrowser/seb-win-refactoring	357	MPL-2.0	false	2026-10-26	full
+SahilC/AutomaticEssayGrading	13	MIT	false	2016-10-31	full
+Selleo/mentingo	101	MIT	false	2026-10-28	full
+SirhanMacx/Claw-ED	63	MIT	false	2026-09-19	full
+SudhanvaJ-bit/project-samarth	1	(no license object)	false	2026-10-25	full
+THU-MAIC/OpenMAIC	41709	MIT	false	2026-10-28	full
+TaiRuiQu/oh-my-paper	1	MIT	false	2026-10-16	full
+TarrySingh/Artificial-Intelligence-Deep-Learning-Machine-Learning-Tutorials	4018	NOASSERTION	false	2026-10-27	full
+TrenTorch/TrenTorch	740	NOASSERTION	false	2026-10-28	full
+Wakoma/Lokal	53	MIT	false	2025-11-15	full
+Zenglian990/AI_Tutor_Release	74	MIT	false	2026-10-28	full
+abdullaitcenter-hue/comet-trail-archives	70	(no license object)	false	2026-10-28	full
+ably-labs/realtime-quiz-framework	77	Apache-2.0	TRUE	2026-03-06	full
+adlnet/ADL_LRS	334	Apache-2.0	false	2025-11-14	full
+adlnet/CATAPULT	59	Apache-2.0	false	2026-01-20	full
+adlnet/lrs-conformance-test-suite	78	MIT	false	2025-09-04	full
+JushBJJ/Mr.-Ranedeer-AI-Tutor	29548	(no license object)	false	2025-09-30	full
+plastic-labs/tutor-gpt	932	GPL-3.0	false	2026-02-20	full
+moodle/moodle	7556	(minimal)	false	-	minimal
+instructure/canvas-lms	6889	(minimal)	false	-	minimal
+frappe/lms	3350	(minimal)	false	-	minimal
+learnhouse/learnhouse	2428	(minimal)	false	-	minimal
+learningequality/kolibri	1162	(minimal)	false	-	minimal
+overhangio/tutor	1130	(minimal)	false	-	minimal
+chamilo/chamilo-lms	1019	(minimal)	false	-	minimal
+openeducat/openeducat_erp	900	(minimal)	false	-	minimal
+frappe/education	682	(minimal)	false	-	minimal
+francoisjacquet/rosariosis	647	(minimal)	false	-	minimal
+anthropics/k12-teacher-skills	599	(minimal)	false	-	minimal
+menthorlabs/menthor	582	(minimal)	TRUE	-	minimal
+oat-sa/tao-core	64	(minimal)	false	-	minimal
+virgiliojr94/book-to-skill	36411	(minimal)	false	-	minimal
+satvik314/educhain	387	(minimal)	false	-	minimal

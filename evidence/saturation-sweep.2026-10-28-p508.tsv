@@ -1,0 +1,12 @@
+# p508 2026-10-28 — the four prescribed GitHub/discovery legs plus five topic legs. Column "new" = addresses not already carried anywhere in this KB (shelves + trending history + archive).
+leg	channel	addresses_surfaced	new	note
+top open source AI agents education 2026 github MIT	WebSearch	~12 (OpenHands, CrewAI, Langflow, LibreChat, Hermes, ai-agents-for-beginners, HF agents course, 500-AI-Agents-Projects, awesome-ai-agents-2026)	0	no education-specific permissive agent the shelves lack; the leg returns general-purpose frameworks
+github trending education AI 2026	WebSearch	DeepTutor (46,026 per a 28-Oct trend report), career-ops, Vibe-Trading	0	the trend trackers disagree with the API: DeepTutor measured 47,621 here on the same day
+open source platform education ERP CRM MIT Apache	WebSearch	OpenEduCat, Apache OFBiz, Huly, Corteza, Krayin, Dolibarr, GegoK12	0	seventh consecutive pass with no new platform; GegoK12 is the one address whose LICENCE reading changes (see licence-bytes)
+AI education industry trends 2026	WebSearch	-	0	vendor blogs; no instrument
+topic:ai-tutor stars:>50	MCP API	25	0	every permissive candidate already carried (anki-mcp-server, algo-sensei, universal-examprep-skill, ari, kaogong-skill, Bloom, OpenTutor, wenflow, tutor-mcp, Smart-Study-Agent ...)
+topic:ai-education stars:>60	MCP API	17	0	ChatTutor, Papermorph, claudemy, wordlink, AILearningGuide, cram-engine, feifei-companion, vibe-schooling, Seeed_Studio_Courses — all carried
+topic:edtech stars:>150	MCP API	28	0	classroomio, edrys, elmsln, senjun-courses, moreThanFAANGM, hkalant/awesome-edtech-tools — all carried
+topic:education-ai stars:>60	MCP API	2	0	lineage-skill, Claw-ED — both carried
+education AI tutor stars:>400	MCP API	3	0	Mr.-Ranedeer-AI-Tutor, ChatTutor, tutor-gpt — all carried
+TOTAL distinct addresses surfaced	-	~80	0	SATURATION on the agent and repo axes, declared. p505 declared the same on the vertical axis; this is the first pass to declare it on the agent axis
