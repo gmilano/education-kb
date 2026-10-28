@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-28
 ---
 
+
+## 🆕 `p514` — `2026-10-28` — **🔴 THE "REFUSE" VERDICT ON `ICTSchool` WAS RIGHT FOR THE WRONG REASON, AND THE RIGHT REASON IS WORSE: it is not unlicensed — it ships the **full GPL-3.0 text** on a branch abandoned in **2022**, while the branch it actually ships from (`main`, last commit **2026-10-13**) carries **no grant at all**. 🟢 A new platform row that is not another LMS: [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal), **MIT**, the portal behind **DIKSHA** — the first national-scale permissive learning platform on this shelf. 🔴 `make hooks` DENIED (18th in 19).**
+
+🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`). 🟡 `p511`'s **45/63** stands.
+
+### 🔴 `ICTSchool` — "none of its own" is wrong, and the correct reading is a sharper refusal
+
+🔴 **This file's row read:** *"🔴 **none of its own** | `main` | 🔴 refuse — only vendored bower
+grants."* 🟢 **The refusal survives. The reason does not.**
+
+| branch | last commit | grant at 20 probed paths |
+|---|---|---|
+| **`main`** *(default — what a client would deploy)* | 🟢 **2026-10-13** `a76fad328c71` — **active** | 🔴 **NONE** |
+| `ictschool-laravel-5.5` | 🔴 **2022-09-23** `0e5b4cbe9f50` — abandoned | 🔴 **GPL-3.0**, `LICENSE`, **35,149 B**, `sha256₁₆ 3972dc9744f6499f` |
+| `school-new` | — | 🔴 NONE |
+
+🔵 **Why this is worse than "unlicensed", and the distinction is the whole point.** *Unlicensed*
+means no rights are granted and the question ends. 🔴 **This is an active 2026 codebase whose only
+grant covers a 2022 branch nobody ships** — so a client who believes "ICTSchool is GPL-3.0" (as
+every aggregator says) is relying on a grant that **does not reach the code they installed**. 🔴
+**That is a procurement hazard, not a licence choice**, and it is the strongest reason to refuse
+this platform that this file has had.
+
+🟢 **Byte-level cross-attestation, free:** the payload is **byte-identical** — 35,149 B,
+`sha256₁₆ 3972dc9744f6499f` — to [`frappe/erpnext`](https://github.com/frappe/erpnext)'s
+`license.txt`, which this base independently recorded as GPL-3.0 at 35,149 B. 🔵 **Two unrelated
+addresses, one canonical payload**: the family read is corroborated, not inferred from a title line.
+
+### 🟢 New layer row — a national-scale permissive learning platform, which this shelf did not have
+
+| field | value, byte-read at `p514` |
+|---|---|
+| layer | **national / state-scale learning portal** *(content, courses, batches, telemetry)* |
+| address | [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) |
+| licence | 🟢 **MIT** — `LICENSE`, **1,072 B**, `sha256₁₆ 7dde06716f259584` |
+| grant coverage | 🟢 **78 of 79 heads**, default `master` **included** |
+| HEAD | `9efc8b5819c6`, **2025-12-16** |
+| deployed as | **DIKSHA** — India's national school platform *(APAC)* |
+
+🟢 **Why it matters more than another LMS would.** Every LMS on this shelf is copyleft — Moodle and
+Chamilo **GPL-3.0**, Open edX **AGPL-3.0**, formaLMS **GPL-2.0** — and the only permissive rows have
+been *small*: `gegok12` (SIS) and a handful of components. 🟢 **Sunbird is the first permissive
+platform here that is already running at national scale**, which changes what can be proposed: a
+Globant deliverable can be **built into** it and still ship closed, which is impossible with
+Moodle or Open edX and is the entire problem `P515` was written to work around.
+
+🟡 **Honest limits, stated before anyone proposes it.**
+
+| limit | reading |
+|---|---|
+| 🟡 it is the **portal**, not the whole stack | Sunbird Ed is a multi-repo distribution; this row attests **one** repository's grant. 🔴 Every other component needs its own byte-read before a delivery decision — `Gap 514-E` |
+| 🟡 **native AI** | 🔴 **none claimed here.** Not probed this pass. Treat as an integration target, exactly as this file treats Moodle |
+| 🟡 currency | 🟢 **2025-12-16** — ~10 months. Maintained, not fast-moving |
+| 🟡 operational weight | A national-scale platform is heavy. 🔵 It suits a ministry or state engagement, **not** a single-institution pilot |
+
+### 🟢 The layer census at `p514`
+
+| | `p513` | 🟢 `p514` |
+|---|---|---|
+| layer rows | 37 | 🟢 **38** |
+| 🔴 verdicts **corrected** | — | 🔴 **1** — `ICTSchool`, *"none of its own"* → **GPL-3.0 on a dead branch, nothing on the shipped one** |
+| 🔴 the **LMS + SIS permissive** nil | 🔴 held 3 passes | 🟡 **not tested this pass** — Sunbird is a learning portal, not an SIS; `Gap 514-C` |
+| 🔴 permissive **student-success CRM** (`Gap 513-F`) | 🔴 nil | 🔴 **UNMOVED** — Elastic-2.0 remains the only option, and it forbids the hosted engagement |
 ## 🆕 `p513` — `2026-10-28` — **🟢 NINE LAYERS THIS FILE HAD NO ROW FOR NOW HAVE ONE, AND EVERY ONE IS PERMISSIVE: LTI launch, SCORM runtime, xAPI spec, badge VALIDATION, institutional repository, collaborative coding IDE, microsite authoring, speech assessment and the local-first tutor. 🔴 The student-success CRM layer gets a row and a REFUSAL in the same line: the only real option is **Elastic License 2.0**, which forbids exactly the hosted engagement it would be bought for. 🟢 `OpenOLAT`'s Apache-2.0 payload re-verified from bytes a second pass running — GitHub's own classifier still reports `NOASSERTION` and is still wrong. 🔴 The LMS-plus-SIS permissive nil holds for a THIRD pass.**
 
 ### 🟢 Nine new layer rows — and why they matter more than another LMS would
@@ -287,7 +350,7 @@ re-read.**
 | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | 🔴 AGPL-3.0 | `master` | 🔴 AGPL reaches networked use |
 | [`formalms/formalms`](https://github.com/formalms/formalms) | 🔴 **GPL-2.0**, 15,146 B — 🆕 grant found in the installer dir | `master` | 🟡 the payload's only *"any later version"* string is the GPLv2 **appendix boilerplate**, so the project's own `or-later` election is **not readable from it** — `p455`'s second axis stays `UNSTATED` |
 | [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 🔴 **Elastic-2.0**, 3,860 B | `main` | 🔴 source-available; licence forbids providing it as a service |
-| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | 🔴 **none of its own** | `main` | 🔴 refuse — only vendored bower grants |
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | 🔴 **GPL-3.0 on `ictschool-laravel-5.5` ONLY** — 35,149 B `sha256₁₆ 3972dc9744f6499f`; 🔴 **nothing on `main`** *(corrected `p514`; read* **none of its own** *before)* | `main` **2026-10-13** vs grant branch **2022-09-23** | 🔴 **refuse — and for a sharper reason:** the shipped branch carries no grant, so the GPL-3.0 every aggregator prints does not reach the deployed code |
 | [`frappe/education`](https://github.com/frappe/education) | 🟡 **GPL-3.0 declared in 19 bytes**, no licence body | `develop` | 🔴 family stated, text absent — treat as GPL-3.0 and ask upstream to serve the text |
 
 

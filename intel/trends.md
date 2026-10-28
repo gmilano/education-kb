@@ -4,6 +4,96 @@ region: Global
 updated: 2026-10-28
 ---
 
+
+## 🆕 `p514` — `2026-10-28` — **🆕 `T50`: a PUBLISHED REFUTATION decays exactly like a published claim, and this base had never checked one — the Fedena refutation was wrong for 24 passes at a SHA that never moved. 🆕 `T51`: the probe's PATH SET is a bigger error source than the branch set, and this pass has 3 instances to 1. 🆕 `T52`: a grant can cover a branch nobody ships, which is a procurement hazard that "licensed" and "unlicensed" both describe wrongly. 🆕 `T53`: a repository dismissed as low-star institutional infrastructure is often the BROCHURE, and the system is one org away. 🔴 `T45` survives again — supply paid, demand saturated 24/25.**
+
+🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`), eighteenth denial in nineteen
+passes. 🟡 `p511`'s **45/63** is still the last gate-attested reading.
+
+### 🆕 `T50` — a refutation is a claim, and this base audited only one direction
+
+🔵 **This base has strong machinery for decaying *positive* claims**: `Gap 510-A`'s roundness rule,
+`Gap 513-A`'s backlog-row rule, `T29`'s `archived` re-read, `gate-shelf-consistency`. 🔴 **Every one
+of them watches a claim that something IS so.** Nothing watched a claim that something is **NOT**
+so.
+
+🔴 **The instance.** `repos/foundations.md` published a heading — *"Fedena: resolved, and the
+Apache-2.0 claim does not survive contact with the repository"* — and a paragraph concluding that
+*"neither ships a license file under any of the nine names probed"*. 🔴 **`NOTICE` was not one of
+the nine.** Both repositories serve the Apache-2.0 grant clause there, on the default branch, at
+`68a84ac445bf` and `333477b06f1d` — **the exact SHAs the section records**, unmoved.
+
+🔵 **Why a refutation is the more dangerous object.** A positive claim invites re-checking: a row
+with a star count and a SHA *looks* like something to re-read. 🔴 **A refutation closes the
+question** — it is written precisely so no later pass spends budget there, and it reads as
+diligence. 🔴 **This one survived ~24 passes and was quoted as settled.**
+
+🟢 **The rule:** a published **negative** verdict carries its probe's **scope** — path set, branch
+set, channel — or it is unfalsifiable. 🟢 **A negative verdict whose scope is not recorded is
+"unread", never "absent"**, which is `Gap 510-B` generalised from one channel to all of them.
+
+### 🆕 `T51` — the path set, not the branch set, is where the probe actually fails
+
+🔵 `Gap 512-D` (`T42`) was registered on a branch argument, and it was right: `ICTSchool` carries
+GPL-3.0 on `ictschool-laravel-5.5` and nothing on `main`. 🔴 **But this pass's 1,840 probes
+produced three recoveries, and only ONE was a branch problem.** Two were **path-set** misses on the
+**default** branch — both Fedena repos at `NOTICE`.
+
+| cause | instances at `p514` | prior instances |
+|---|---|---|
+| 🔴 **path set too small** | **2** *(both Fedena, `NOTICE`)* | `frappe/erpnext` (`license.txt`), `formalms` (installer dir), `frappe/education` (19-byte declaration) |
+| 🟡 **branch set too small** | 1 *(`ICTSchool`)* | `OpenRoberta/openroberta-lab` (`master` vs `develop`) |
+
+🔴 **So the running score across this base's history is roughly 4:2 in favour of the path set**, and
+the branch axis got the gap and the trend ID while the path axis kept being treated as a series of
+one-offs. 🟢 **The rule: a licence probe's path set is a RECORDED artefact of the verdict**, listed
+with it, and `NOTICE`, `COPYING`, `license.txt` and `*.rdoc`/`*.markdown` variants belong in it.
+🔵 **Cheap test for any negative verdict already on these shelves: was `NOTICE` probed?**
+
+### 🆕 `T52` — a grant can fail to reach the code that ships
+
+🔴 **`ictinnovations/ICTSchool` is the specimen, and it is not an edge case — it is an active
+project.** Default branch `main`: last commit **2026-10-13**, **no grant** at 20 paths. Branch
+`ictschool-laravel-5.5`: last commit **2022-09-23**, **full GPL-3.0**, 35,149 B,
+`sha256₁₆ 3972dc9744f6499f`.
+
+🔵 **Both of the usual words are wrong.** *"Unlicensed"* is wrong — there is a grant in the
+repository. *"GPL-3.0"* — what every aggregator prints — is wrong about **the code a client would
+install**. 🔴 **The true statement is narrower and harder to say: the grant does not cover the
+shipped branch.**
+
+🟢 **The rule, and it is a delivery rule rather than a research one: a licence verdict is pinned to
+a REF, and the ref must be the one the client will deploy.** 🔵 A licence cell without a ref is
+incomplete in exactly the way a star cell without a date is incomplete — and this base already
+fixed the star case.
+
+### 🆕 `T53` — the dismissed repo is often the brochure
+
+🔴 **This base has carried "Sunbird" since `p316`** — as
+[`project-sunbird/project-sunbird.github.io`](https://github.com/project-sunbird/project-sunbird.github.io):
+**41★**, default ref `dev`, HEAD **2018-12-21**. 🔵 It was filed as *evidence* for a good lesson —
+*"a star-ranked search cannot see institutional infrastructure"* — and then the question closed.
+
+🔴 **It was the website repo.** The system is [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal):
+**MIT**, 1,072 B, `sha256₁₆ 7dde06716f259584`, grant on **78 of 79 heads**, HEAD **2025-12-16**, and
+it is the portal behind **DIKSHA**, India's national platform. 🔴 **Different organisation**
+(`Sunbird-Ed`, not `project-sunbird`), reachable by `git ls-remote` in one call.
+
+🟢 **The rule: when an address is dismissed as low-star institutional infrastructure, enumerate its
+ORGANISATION before filing the finding.** 🔵 **The irony is the useful part** — the lesson drawn in
+`p316` was *correct*, and drawing it is what stopped the search. A conclusion that explains an
+absence can prevent the search that would refute it.
+
+### 🔴 `T45` re-tested — supply paid, demand saturated, for the second pass running
+
+| axis | `p514` result |
+|---|---|
+| 🔴 **demand** | **24 of ~25** named regional facts already held; **1** new (`DIKSHA`). Sixth saturation axis |
+| 🟢 **supply** | 🟢 **2 licence records corrected**, **1 refusal sharpened**, **1 national-scale MIT platform shelved**, **16 nils upgraded to enumerated** |
+
+🔵 **`T45` said supply and legal usability are where this base still moves while demand repeats.
+Two passes of evidence now.** 🟢 **The operative instruction stands: spend the regional budget on
+instruments, and spend the rest on bytes.**
 ## 🆕 `p513` — `2026-10-28` — **🆕 `T46`: a statutory date this base treated as settled MOVED, and the amendment ran in BOTH directions at once — one duty deferred 16 months, another left to bite on the original date. 🆕 `T47`: a backlog row is not a cheap row, it is an UNVERIFIABLE row, and this pass caught one drifting to prove it. 🆕 `T48` sharpens `T43` into a rule with a counter-example: a licence that OPENS with MIT's own sentence and then forbids commercial use defeats every substring detector. 🆕 `T49`: in this sector traction and legal usability are ANTI-CORRELATED at the top — the four highest-traction content assets found this pass are the four Globant cannot use. 🔴 `T45` survives its first real test: supply saturated on a fifth axis while demand returned nothing primary.**
 
 ### 🆕 `T46` — a compliance date is a measurement, not a constant, and an amendment can run both ways

@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-28
 ---
 
+
+## 🆕 `p514` — `2026-10-28` — **🟢 `P518` — THE FIRST RECIPE ON THIS BASE THAT EXTENDS A NATIONAL-SCALE PLATFORM AND STILL SHIPS CLOSED, because [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) is **MIT** and every LMS these patterns had to work around is copyleft. 🟢 `P519` — the North America district pack, priced against the FOUR states that mandate both state guidance and district policy, with Oklahoma's **2027-28** deadline as the clock. 🟢 `P520` — the licence-provenance audit as a BILLABLE deliverable, built from this pass's own 1,840-probe instrument and justified by three findings that a client's own counsel would have missed.**
+
+🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`). 🟡 `p511`'s **45/63** stands.
+🔵 Every component named below carries a grant this base byte-read at a pinned ref.
+
+### 🟢 `P518` — Extend a national platform, ship closed: the Sunbird build — **10–14 weeks**
+
+🔵 **The problem this solves, and why it could not be written before `p514`.** Every LMS on these
+shelves is copyleft — Moodle **GPL-3.0**, Chamilo **GPL-3.0**, Open edX **AGPL-3.0** — so `P515`
+had to invent a standards boundary to keep a Globant deliverable from touching client source.
+🟢 **Sunbird removes the need for the boundary**: MIT, so the platform can be forked, extended and
+delivered as part of a closed product.
+
+| component | address | grant, byte-read | role |
+|---|---|---|---|
+| learning portal | [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) | 🟢 **MIT**, 1,072 B `7dde06716f259584`, 78/79 heads | the platform — fork it |
+| tutor | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0**, 11,408 B `cd2f54e1e5066644` @ `1ea7df155447` | adaptive tutoring service |
+| offline reach | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 permissive *(shelved)* | low-connectivity districts |
+| credentials out | [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) | 🟢 **Apache-2.0** | verifiable completion |
+| analytics out | [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | 🟢 permissive spec | ministry reporting |
+
+🔵 **Wiring.** Fork the portal → add a tutoring microservice behind the portal's existing auth,
+calling DeepTutor → emit **xAPI** statements per learner interaction to the ministry's LRS → issue
+**Open Badges** on mastery, validated with the 1EdTech validator → package Kolibri for offline
+districts and sync on reconnect. 🟢 **The tutor and the badge layer stay Globant IP**; only portal
+modifications inherit MIT, which imposes attribution and nothing else.
+
+🔴 **Say these three things out loud in the proposal, because they are real.**
+1. 🔴 **This row attests ONE repository.** Sunbird Ed is a multi-repo distribution; every other
+   component needs its own byte-read before delivery (`Gap 514-E`). **Budget two weeks for that
+   audit and run `P520` as its first phase.**
+2. 🔴 **Sunbird ships no native AI.** It is an integration target, exactly as Moodle is.
+3. 🟡 **It is heavy.** Fits a ministry or state; **wrong** for a single-institution pilot — there,
+   use [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) (MIT, local-first) instead.
+
+🟢 **Where it sells: APAC first** — DIKSHA is the reference deployment and the stack is already
+understood by Indian system integrators. 🔵 Also **LATAM**, where `P517`'s governance work is the
+natural predecessor and a national platform is the natural successor.
+
+### 🟢 `P519` — The North America district pack: a statutory deadline, not a pitch — **5–7 weeks, repeatable**
+
+🔵 **Why this is unusual in this sector: the buyer has a legal deadline, and there are thousands of
+buyers who need the same artefact.** **Maryland, Idaho, Oklahoma and Virginia** require *both* state
+guidance *and* district-level AI policy. 🔴 **Oklahoma `S.B. 1734` fixes it: every district must
+adopt a written AI policy before the 2027-28 school year.**
+
+🟢 **The deliverable, four artefacts:**
+
+| artefact | content | constraint it satisfies |
+|---|---|---|
+| district AI policy | adoption-ready text, mapped to the state's guidance | the statutory requirement itself |
+| human-oversight workflow | which decisions an AI may not make; the review step and its record | Oklahoma / Maryland high-stakes prohibitions |
+| student-data boundary | a documented no-training-data path, with the technical control that enforces it | 🔴 California **AB 1159** — bars student data for model training |
+| audit trail | per-decision logging, retention, exportable evidence | district board review and future audit |
+
+🔵 **Build it on what is already shelved**: the policy and oversight artefacts are documents, and
+the technical control is a proxy/logging layer in front of whichever vendor API the district uses.
+🟢 **No platform commitment is required**, which is why it closes fast.
+
+🔴 **The margin is in repetition, not in the first sale.** 🟢 Templatise against each of the four
+states' guidance once; every district in that state is then a short engagement. 🟡 Curriculum work
+(Utah **H.B. 218**'s grade 7-8 digital-skills course, Georgia and Mississippi CS credits) is a
+second, slower line — different buyer, different cycle.
+
+### 🟢 `P520` — The licence-provenance audit, as a deliverable — **2–3 weeks**
+
+🔵 **The pitch is this pass's own findings, and they are the proof.** A client's counsel reads a
+licence badge or an SPDX field. 🔴 **Three findings at `p514` show what that misses:**
+
+| finding | what a badge or aggregator would have told the client |
+|---|---|
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | 🔴 *"GPL-3.0"* — **wrong about the shipped code.** The grant is on a branch abandoned in **2022**; the active `main` (**2026-10-13**) carries **none** |
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🔴 *"no licence"* — **wrong.** Apache-2.0 grant clause at `NOTICE`, default branch |
+| *(the inverse case this base holds)* | 🔴 A licence file **titled** like MIT that forbids commercial use — `T48` |
+
+🟢 **The instrument exists and is committed:**
+[`compose/code/p514-branch-grant-probe/`](code/p514-branch-grant-probe/). For every dependency and
+platform in the client's stack it enumerates **every head** with `git ls-remote --heads`, probes
+**20** licence paths per head on `raw.githubusercontent.com`, and gates every verdict on a
+known-good **and** known-bad control so a broken channel cannot read as an empty world.
+
+🔵 **Wiring.** Inventory the stack → run the probe → for each address report **family, bytes,
+`sha256₁₆`, path, ref, and the ref the client deploys** → flag three classes: *grant does not cover
+the shipped ref* (`T52`), *grant exists at an unprobed path* (`T51`), *title and body disagree*
+(`T48`) → hand over the TSV plus a per-component delivery verdict.
+
+🔴 **Scope limits in the statement of work, not discovered later.** 🔴 It does **not** walk trees, so
+a deep-subtree grant is still missed (`Gap 514-A`); it reads the **grant**, not dependency
+closure; and 🔴 **it is not legal advice** — it is byte-level evidence counsel can rely on.
+
+🟢 **Sell it as phase zero of `P518` or of any build on a platform the client did not write.**
+🔵 **It is the cheapest pattern on this base and the only one whose value is entirely in what it
+stops you doing.**
 ## 🆕 `p513` — `2026-10-28` — **🟢 `P515` — THE STANDARDS-BOUNDARY ENGAGEMENT, which is the recipe this repository has been one table away from for eleven passes: a CLOSED Globant deliverable that speaks LTI in, SCORM both ways, xAPI out and Open Badges out, with every one of those four components byte-attested permissive, so the client's AGPL LMS never touches our source. 🟢 `P516` — the EU build re-dated against **Regulation (EU) 2026/1744**: Article 50 is LIVE NOW, Annex III is 2 Dec 2027, and that inversion changes which deliverable ships first. 🟢 `P517` — the LATAM governance-first engagement, priced off a measured 87 %/26 % gap instead of a market-size slide.**
 
 ### 🟢 `P515` — The standards-boundary build: closed deliverable, copyleft LMS, no contact — **8–10 weeks**

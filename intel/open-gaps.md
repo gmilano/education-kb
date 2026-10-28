@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-28
 ---
 
+
+## 🆕 `p514` — **🔴 THIS REGISTER WAS STALE BY A PASS AGAIN — `Gap 513-A`…`513-F` were written onto the SHELVES and never reached here, so `P418` regressed exactly as it did at `p511`. Repaired below. 🟢 `Gap 512-D` (`T42`) CLOSES WITH CONTENT on 1,840 probes. 🔴 And the pass's headline is a class this register never had: a PUBLISHED REFUTATION decayed, undetected, for ~24 passes. 🔴 `make hooks` DENIED — eighteenth denial in nineteen passes.**
+
+🔴 **Gate posture, stated first.** `make hooks` attempted and **DENIED** (`Code from External`) —
+this session's classifier will not execute code from a cloned repository. 🟡 **Nothing in `p514` is
+gate-attested**; `p511`'s **45/63** stands. The two invariants a pass must hold were re-checked in
+this session's own code instead:
+
+| invariant | check | result |
+|---|---|---|
+| `P383` — one **bare** `## Opportunities by region`, five `###` from the closed vocabulary | counted in [`market.md`](market.md) | 🟢 **1 bare heading**; the `p514` block is suffixed and carries exactly **North America, EMEA, APAC, LATAM, Global** |
+| `P418` — the register's newest section matches the shelves' | 🔴 **was `p512` against shelves at `p513`** | 🔴 **STALE — repaired by this section**, which carries `p513`'s six gaps and registers `p514`'s |
+
+### 🔴 Repaired first — `p513` registered six gaps and this register never received them
+
+🔴 **`Gap 513-A`…`513-F` were written into the shelf files and appended nowhere here.** 🟢 Carried
+in with their `p514` dispositions:
+
+| gap | what it is | `p514` disposition |
+|---|---|---|
+| **`Gap 513-A`** (`T47`) — a backlog row is not a cheap row, it is an **unverifiable** row that decays silently | registered after `OpenTutor` drifted off its recorded SHA while parked | 🟢 **RE-CONFIRMED and acted on.** `Sunbird` had sat in [`agents/trending.md`](../agents/trending.md) since **`p316`** — ~200 passes — and the row this base held was the **website** repo. Drained to the shelves this pass |
+| **`Gap 513-B`** — match the licence **TITLE**, not a substring | a second family matched from a bundled dependency deep in an appendix | 🟡 **STANDING, honoured.** All four payloads read this pass were identified by title line and byte digest, not substring |
+| **`Gap 513-C`** — eight shelf rows carry **no region**, and the filter filters confidently on a guess | | 🔴 **UNMOVED.** Not attacked; `Sunbird` was added **with** a region (**APAC**, on DIKSHA) so the population did not grow |
+| **`Gap 513-D`** — **EUR-Lex itself was not read**; the Omnibus dates are legal-advisory readings | | 🔴 **UNMOVED, and re-measured on a second channel.** `curl` **000** *and* `WebFetch` **ENOTFOUND**. Folded into `Gap 483-K`'s single ask |
+| **`Gap 513-E`** — no count may be written except as a derived value | hard-coded counts bit a third time | 🟡 **STANDING, honoured.** Every count in `p514` (**19 addresses / 92 heads / 1,840 probes / 78 of 79**) is derived from the committed TSV |
+| **`Gap 513-F`** — no permissively licensed student-success / advising CRM exists | only Elastic-2.0, which forbids the hosted engagement | 🔴 **UNMOVED.** Not attacked this pass |
+
+### 🟢 Closed, or closed with content — `p514`
+
+| gap | disposition |
+|---|---|
+| 🟢 **`Gap 512-D`** (`T42` — a licence absence must be enumerated over **branches**) | 🟢 **CLOSES WITH CONTENT, and its own premise is partly refuted.** The gap named its closure — *"re-run the negative verdicts with `git ls-remote --heads` enumeration first"* — and this pass ran it over the whole population: **19 addresses, 92 heads, 20 paths, 1,840 probes**, control pair green. 🔴 **3 of 19 negative verdicts were wrong**; 🟢 **16 upgraded from *unread* to *enumerated absence*** (`Free-Math` alone over **65 heads × 20 paths = 1,300**). 🔴 **But only ONE of the three was a branch failure** (`ICTSchool`) — the other two were **path-set** failures on the **default** branch (`NOTICE`), so the gap was right to act and wrong about the dominant cause. See `Gap 514-A` and `T51`. Instrument [`compose/code/p514-branch-grant-probe/`](../compose/code/p514-branch-grant-probe/) · reads [`branch-grant-probe.2026-10-28-p514.tsv`](../evidence/branch-grant-probe.2026-10-28-p514.tsv) |
+| 🟢 **`Gap 513-A`** (backlog rows decay) | 🟢 **Acted on** — see the repair table above. Not closed as a class; closed for one ~200-pass instance |
+
+### 🆕 Registered — `p514`
+
+| gap | what it is, and what would close it |
+|---|---|
+| 🆕 **`Gap 514-A`** — the probe's **path set** is the dominant error source and it has no standing instrument | 🔴 **2 of this pass's 3 recoveries were path-set misses on the DEFAULT branch** — both Fedena repos at **`NOTICE`**, a name this base's 6- and 9-path probes never carried. 🔴 Across this base's history the score is ~**4 path : 2 branch** (`erpnext`'s `license.txt`, `formalms`' installer dir, `frappe/education`'s 19-byte declaration, now Fedena ×2 vs `openroberta-lab`, `ICTSchool`). 🟢 **Closes as a gate:** a published negative grant verdict must record **its path set and its branch set**, and the path set must include `NOTICE`, `COPYING*`, lowercase `license.*` and `README.{markdown,rdoc}`. 🔴 **Also scopes the new instrument honestly:** it probes 20 paths at root + `docs/`/`doc/`/`.github/` and does **not** walk trees, so `gate-subtree-grant` (`p382`) is NOT satisfied by it |
+| 🆕 **`Gap 514-B`** — a trending-channel star figure contradicts a shelved API measurement and cannot be adjudicated | 🔴 `HKUDS/DeepTutor` reported at **~46,026★** (`2026-10-28`, trending channel) against the shelf's **47,677★** (`p508`, API) — a **decrease of 1,651** on an address the API showed strictly monotone across `p504`→`p508`. 🔴 `api.github.com/repos/*` is **403**, so neither figure can be checked here. 🟢 **The shelf is left unchanged and the figure recorded as a conflict** (`p512`'s `$3.7B` precedent). 🟢 **Closes when the API channel returns**, or when a second independent channel agrees with one of the two |
+| 🆕 **`Gap 514-C`** — the **LMS + SIS permissive nil** was NOT tested this pass and must not be read as held | 🟡 `Sunbird-Ed/SunbirdEd-portal` is a **learning portal**, not an SIS, and Fedena — now corrected to **Apache-2.0 declared** — is **dormant since 2016-07-20** (*"emptying content"*). 🔴 **So the nil is neither broken nor re-confirmed**, and this pass ran no fork-ranked administrative-software leg. 🟢 **Closes by running that leg** and grading the result against the *combined* LMS+SIS predicate, not the SIS one |
+| 🆕 **`Gap 514-D`** (`T53`) — a repository dismissed as low-star institutional infrastructure is often the **brochure** | 🔴 This base held `project-sunbird/project-sunbird.github.io` (**41★**, HEAD **2018-12-21**) from `p316` and cited it as evidence that *"a star-ranked search cannot see institutional infrastructure."* 🔴 **The generalisation was correct and it closed the search.** The system — `Sunbird-Ed/SunbirdEd-portal`, **MIT**, 78/79 heads, HEAD **2025-12-16** — sits under a **different org** and `git ls-remote` reaches it in one call. 🟢 **Closes as a rule:** when an address is dismissed on star count, **enumerate its organisation before filing the finding** |
+| 🆕 **`Gap 514-E`** — Sunbird is shelved on **one** repository's grant and it is a multi-repo distribution | 🟡 `SunbirdEd-portal`'s MIT is byte-attested; **no other Sunbird component was read**. 🔴 A delivery decision needs each one. 🟢 **Closes by byte-reading the rest of the distribution** at pinned refs. 🔵 This is `P520`'s phase zero and is written into `P518`'s risk list rather than left implicit |
+| 🆕 **`Gap 514-F`** — a trending name with no resolvable address | 🟡 `Filee`, an IELTS vocabulary app tagged new for 2026, was **named by the channel** and its address was **not resolved** this pass. 🟢 **Not shelved** — this base does not carry a name without a reachable address. 🟢 **Closes when the slug resolves on the git channel**, or is retired if it does not |
+| 🆕 **`Gap 514-G`** — this register had no instrument for a decayed **negative** verdict | 🔴 **The whole of this base's decay machinery watches positive claims** — `Gap 510-A`'s roundness rule, `Gap 513-A`'s backlog rule, `T29`'s `archived` re-read, `gate-shelf-consistency`. 🔴 **A published refutation was unwatched, and one was wrong for ~24 passes:** *"Fedena … does not survive contact with the repository"*, at SHAs that never moved. 🟢 **Closes as a gate:** every published **negative** verdict carries the scope that produced it, and a scope-less negative is **"unread"**, never **"absent"**. 🔵 `T50` |
+
+### 🔴 Standing, re-checked, unmoved
+
+| gap | status |
+|---|---|
+| 🔴 **`make hooks` cannot be run from this session** | 🔴 **Eighteenth denial in nineteen passes** (`Code from External`). 🔵 **Still the single largest structural gap on this base:** 63 gates exist and demonstrably catch real defects, and a pass can run them roughly once in nineteen. 🔴 **`p514` would have been a good pass to grade** — it corrected two licence cells, one platform verdict and added a shelf row |
+| 🔴 **`Gap 483-K` / `511-E`** (the open web is an allow-list away) | 🔴 **SIXTEENTH pass, and re-probed on BOTH channels this time:** `eur-lex.europa.eu`, `www.iesalc.unesco.org` → `curl` **000**, `WebFetch` **`getaddrinfo ENOTFOUND`**; `www.oecd.org` → `curl` **000**. 🟢 **The ask is unchanged and still one human action, once:** allow those three hosts. 🔴 **Consequence named rather than buried:** the LATAM **87 % / 26 %** and **74 %** figures are this file's best evidence *and* are channel-attributed, not primary |
+| 🟡 **`Gap 504-A`** (the API search channel cannot see `openedx/edx-platform`) | 🟡 **NOT TESTED at `p514`** — `/search` is **403** throughout, so there was no index to reconcile against. 🔵 Neither confirmed nor retired; the streak simply has a hole in it, which is better recorded than inferred |
+| 🟡 **`Gap 510-B`** (`ABSENT` is not assertable on the raw channel) | 🟡 **UNMOVED and corroborated again.** [`kamranahmedse/developer-roadmap`](https://github.com/kamranahmedse/developer-roadmap) is live and answers `raw HEAD/LICENSE` with **404** — the `oppia` behaviour. 🔵 **Load-bearing for this pass's 16 enumerated nils:** they are stated as *"no payload at 20 paths × every head"*, never as *"unlicensed"* |
+| 🔴 **`Gap 512-B`** (cross-file star-cell agreement) | 🔴 **NOT re-run** — the API is 403, so no star cell could be re-read. The gate it asks for is offline and remains unwritten |
+| 🔴 **`Gap 507-A`** (a 2026 probability-sampled APAC teacher-adoption rate) | 🔴 **FIFTH nil.** This pass's APAC leg returned Ipsos **attitude** data again, not use |
+| 🔴 **`Gap 506-C`** (an EMEA vendor-share figure) · **`Gap 508-D`** (APAC vendor share is a conflict) | 🔴 **Still nil / still conflicted.** Not attacked |
+| 🔴 **The demand channel for EMEA education** | 🔴 **NIL for a fourteenth consecutive pass, explicitly.** The EMEA leg returned EU-instrument commentary and school-advisory blogs — **no ministry, regulator, university system or EMEA edtech vendor**. 🟡 One source asserted a binding education-specific Commission framework *adopted 15 Apr 2026, effective 1 Jan 2027*; 🔴 **uncorroborated and NOT shelved** |
 ## 🆕 `p512` — **🔴 `make hooks` DENIED (`Code from External`) — a seventeenth denial in eighteen passes, so `p511`'s `45/63` is still the last gate-attested reading of this base. 🟢 `Gap 511-B` CLOSES and falsifies the rule that registered it. 🆕 Three gaps registered, two of them against this base's own CENSUS FRAMES rather than its content. 🔴 And `Gap 511-A`'s class reproduced for a TENTH time, in this pass's own instrument.**
 
 🔴 **Gate posture, stated first.** `make hooks` was attempted and **DENIED** — `Code from External`.

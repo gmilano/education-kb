@@ -4,6 +4,130 @@ region: Global
 updated: 2026-10-28
 ---
 
+
+## 🆕 `p514` — `2026-10-28` — **🔴 THE DEMAND AXIS IS SATURATED AGAIN, AND THIS PASS MEASURED THE SATURATION INSTEAD OF ASSERTING IT: ~25 named regional facts were checked against this corpus ONE BY ONE — bill numbers, percentages, instruments, institutions — and **24 were already here**. 🟢 The one that was not is **DIKSHA**, India's national platform, and it turned into this pass's only supply promotion. 🔴 `Gap 483-K` re-probed on TWO channels and unmoved for a sixteenth pass, so the LATAM ratios and the EU dates remain channel-attributed rather than primary. 🔴 `make hooks` DENIED (18th in 19).**
+
+🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`). 🟡 `p511`'s **45/63** stands.
+🔵 **Every figure below is attributed to its channel**, and nothing is promoted to fact on a
+search-channel summary alone.
+
+### 🔴 The saturation, as a measurement rather than a claim
+
+🔵 **Method, so a later pass can repeat it:** each regional leg was run, then every named datum it
+returned was grepped against the live shelves **before** anything was written. That is the inverse
+of the usual order and it is what makes the figure below meaningful.
+
+| checked against the corpus | result |
+|---|---|
+| **North America** — `AB 1159`, `SB 1734`, `H.R. 8747`, `HB 218`, Maryland, Idaho, Utah, Virginia | 🔴 **all 8 already held** |
+| **EMEA** — `Regulation (EU) 2026/1744`, the 2 Dec 2027 Annex III date, Art. 50 at 2 Aug 2026, the schools emotion-recognition ban | 🔴 **all 4 already held** *(`p513`)* |
+| **APAC** — Korea `22 Jan 2026`, Vietnam `1 Sep 2027`, India `20 Feb 2026` labelling, Ipsos Education Monitor 2026 | 🔴 **all 4 already held** |
+| **LATAM** — `87 %` / `26 %`, `74 %`, TALIS per-country, Argentina SES split, Brazil `53 %`/`22 %`, the `716` instruments, CONPES, Uruguay/CoE, ECLAC·eLAC, UNESCO Observatory, Costa Rica | 🔴 **all 11 already held** |
+| 🟢 **new to this base** | 🟢 **1 — `DIKSHA`** |
+
+🔴 **1 new in ~25.** 🔵 **That is a statement about the instrument, not about the world**, and it is
+recorded as saturation rather than as coverage (`T45`). 🟢 **The useful consequence: the prescribed
+regional battery has stopped paying on the demand axis, and the one item it did produce paid on the
+SUPPLY axis** — DIKSHA led to [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal)
+(MIT), now shelved. 🟢 **Next pass should spend the regional budget on instruments, not regions** —
+`T30`'s standing instruction, now with a measured justification.
+
+### 🟢 The one new item — and it is infrastructure, not a statistic
+
+🟢 **DIKSHA** *(Digital Infrastructure for Knowledge Sharing)* — India's national school education
+platform, reaching teachers and students at state scale, named in this pass's APAC leg as
+government digital infrastructure. 🟢 **It is built on the open-source Sunbird stack**, whose portal
+this base has now byte-read as **MIT** (1,072 B, `sha256₁₆ 7dde06716f259584`, grant on 78 of 79
+heads). 🔵 **This is the only instance on record here of a demand-side regional fact converting
+directly into a shelf row** — worth noting because it is the argument for running the regional legs
+at all once they stop yielding figures.
+
+🟡 **Not claimed:** no user count, budget or procurement figure for DIKSHA is shelved. The platform's
+*existence and stack* are attested; its **scale** is channel-reported and unverified here.
+
+### 🔴 `Gap 483-K` / `511-E` — sixteenth pass, two channels, unmoved
+
+| host | `curl` | `WebFetch` |
+|---|---|---|
+| `eur-lex.europa.eu` | 🔴 `000` | 🔴 `getaddrinfo ENOTFOUND` |
+| `www.iesalc.unesco.org` | 🔴 `000` | 🔴 `getaddrinfo ENOTFOUND` |
+| `www.oecd.org` | 🔴 `000` | — *(two identical failures is the stop rule; not probed)* |
+
+🔴 **Consequence, stated plainly rather than buried.** The **87 % / 26 %** LATAM ratio and the
+**74 %** teaching-and-learning figure are UNESCO IESALC readings this base holds **on the search
+channel's summary of a page it cannot open**. 🟡 They are this file's best LATAM evidence *and* they
+are not primary. 🔴 `Gap 513-D` (EUR-Lex unread) likewise stays open, so the Omnibus dates remain
+legal-advisory readings. 🟢 **One human action closes all of it:** allow `eur-lex.europa.eu`,
+`www.unesco.org` and `www.oecd.org`.
+
+### 🟡 Two precision points worth shelving — both are refinements, not new facts
+
+| point | reading at `p514` |
+|---|---|
+| 🟡 **Korea's `AI Basic Act` does not name education** | The high-impact list this pass's APAC leg enumerated — health care, energy, transport, hiring, biometric analysis — 🔴 **does not include education**. 🔵 So Korea's `22 Jan 2026` clock, which this file holds, binds education providers through the **generative-AI notice and labelling** duty, not through a high-impact classification. 🟡 A material difference for scoping a Korean engagement, and this file did not previously draw it |
+| 🟡 **The four US states requiring BOTH state guidance and district policy** | 🔴 **Maryland, Idaho, Oklahoma, Virginia** — named together as a set for the first time here. All four states were already held individually; 🔵 the *set* is the sellable unit, because it is the population where a district-level compliance deliverable has a statutory deadline rather than a recommendation |
+
+🟡 **One claim REJECTED rather than recorded.** An EMEA-leg source asserted a binding
+education-specific Commission AI framework *adopted 15 April 2026, effective 1 January 2027*. 🔴 **No
+other source in the leg mentions it, and its companion statistics are uncorroborated.** 🔴 **Not
+shelved.** 🔵 It would be settled by the one action above — which is the third time this pass a
+denial names its own remedy.
+
+## Opportunities by region — `p514`
+
+### North America
+
+🔴 **The compliance product has a statutory population now, not just a trend.** **Maryland, Idaho,
+Oklahoma and Virginia** require *both* state guidance *and* district-level AI policy; Oklahoma's
+**S.B. 1734** fixes the deadline at **before the 2027-28 school year**. 🟢 **Sellable:** a
+district-policy-and-evidence pack — policy text, human-oversight workflow, a student-data boundary
+that satisfies California **AB 1159**'s training-data prohibition, and an audit trail. 🔵 **The
+engagement is per-district and repeatable**, which is unusual in this sector. 🟡 Curriculum work
+(Utah **H.B. 218**, Georgia, Mississippi) is a second, slower line.
+
+### EMEA
+
+🔴 **The inversion is the whole opportunity and it is counter-intuitive:** Article 50 transparency
+is **live now** (2 Aug 2026) while Annex III high-risk for education is deferred to **2 Dec 2027**
+by **Regulation (EU) 2026/1744**. 🟢 **So the deliverable that ships first is disclosure, logging
+and AI-interaction labelling — not the grading-system conformity file.** 🔴 **The demand channel
+here is still nil:** no ministry, regulator, university system or EMEA edtech vendor surfaced in
+this pass's leg either, which is now the fourteenth consecutive informative nil. 🔵 Sell against the
+**instrument**, not against a market figure this base cannot source.
+
+### APAC
+
+🟢 **The region's opportunity is now a named platform, not a forecast.** **DIKSHA** runs on
+**Sunbird** (MIT, byte-attested this pass), so a ministry or state engagement can extend a
+national-scale platform **and keep the Globant deliverable closed** — the one thing the copyleft
+LMS world forbids. 🟡 **Regulatory scoping differs by jurisdiction and the differences are
+load-bearing:** Korea (in force **22 Jan 2026**) binds education via generative-AI notice and
+labelling rather than a high-impact tier; Vietnam's education transition runs to **1 Sep 2027**;
+India's synthetic-content labelling applies from **20 Feb 2026**; Australia and Japan remain
+voluntary. 🔴 A probability-sampled APAC teacher-adoption rate is **still nil** (`Gap 507-A`, fifth
+pass) — do not quote one.
+
+### LATAM
+
+🟢 **Governance-first remains the strongest-evidenced engagement on this base:** **87 %** of 200
+institutions across 19 countries use AI in at least one area, **74 %** in teaching and learning, and
+only **26 %** have a formal AI strategy. 🟡 **Both figures are channel-attributed, not primary**
+(see `Gap 483-K`) — quote them as UNESCO IESALC readings, with that caveat, never as this base's own
+measurement. 🟢 The regulatory surface is dense and real: **716** instruments across 23 countries,
+Colombia's **CONPES 4144**, Uruguay's Council of Europe signature, the UNESCO **Observatory** for
+LAC and **ECLAC**'s eLAC working group. 🔵 **Equity is the differentiator a buyer will pay for:**
+Argentina runs **75 %** use in high-SES versus **42 %** in low-SES cohorts, and Brazil shows **53 %**
+of administrators using AI against **22 %** of schools having any guidance.
+
+### Global
+
+🔴 **The market-size spread stays where `T10` put it and this pass did not improve it** — no demand
+figure returned was primary, and the publisher domain behind the widest outlier still does not
+resolve (`Gap 512-A`). 🔴 **Do not put a point estimate in a deck.** 🟢 **What is solid globally:
+the permissive supply question.** This pass corrected two licence records, sharpened one refusal and
+added one national-scale MIT platform — 🔵 **and that is the axis where this base can still make
+statements a client can act on**, while the demand axis is saturated and the primary sources are a
+network-allow-list away.
 ## 🆕 `p513` — `2026-10-28` — **🟢 THE REGULATORY LEG BROKE A THREE-PASS DEMAND-AXIS SATURATION, AND IT BROKE IT ON THE ONE THING THIS FILE KEPT TREATING AS SETTLED: the EU high-risk date for education is NOT 2 August 2026. It is **2 December 2027**, deferred by **Regulation (EU) 2026/1744**, in force since 27 July 2026 — and the transparency duty that was NOT deferred still bit on 2 August 2026. 🟢 Two more statutory education clocks named for the first time on this base: **Vietnam** (grace to 1 Sep 2027) and **Korea** (in force 22 Jan 2026). 🟢 The LATAM governance gap is now a MEASURED ratio from a primary multilateral source — 87 % adoption against 26 % strategy — not an assertion. 🔴 And the market-size spread `T10` tracks is left exactly where `p512` put it, because no demand figure this pass was primary.**
 
 🔴 **Posture: every figure below is attributed to its channel.** This pass ran the four regional

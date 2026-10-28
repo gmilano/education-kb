@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-28
 ---
 
+
+## 🆕 `p514` — `2026-10-28` — **🔴 THE TRENDING LEG PRODUCED NO NEW EDUCATION ADDRESS FOR THIS BASE — AND THE PASS'S REAL DISCOVERY CAME FROM RE-READING ADDRESSES THIS FILE ALREADY HELD: 1,840 branch-enumerated probes over the 19 negative-verdict addresses recovered **3 grants that were called "none"**, two of them on the DEFAULT branch at a path nobody had probed (`NOTICE`). 🟢 One address left this file for the foundations census — [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal), **MIT**, the stack behind **DIKSHA**. 🔴 `Gap 504-A` was NOT tested this pass: the API search channel is 403 throughout, so there was no index to reconcile against.**
+
+🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`). 🟡 `p511`'s **45/63** stands.
+
+### 🟢 Left this file for [`foundations.md`](foundations.md)
+
+| promoted | grant byte-read at `p514` | why it belongs on a census and not in a trend log |
+|---|---|---|
+| [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) | 🟢 **MIT**, 1,072 B `sha256₁₆ 7dde06716f259584`, **78/79 heads**, default `master`, HEAD `9efc8b5819c6` **2025-12-16** | 🟢 It is **deployed national infrastructure** (DIKSHA), not a momentum signal. 🔴 It has no trending behaviour at all — which is precisely why ~200 passes of star-ranked discovery never surfaced it |
+
+### 🔴 What the discovery legs actually returned
+
+| leg | result |
+|---|---|
+| `github trending {industry} AI 2026` | 🔴 `DeepTutor` *(held)*, `developer-roadmap` *(held)*, `Vibe-Trading` *(held, out of category)*, `Filee` *(🟡 named, address unresolved — `Gap 514-F`)* |
+| `top open source AI agents education 2026 github MIT` | 🔴 **no education-specific ranked list.** Returned general agent infrastructure — OpenHands, CrewAI, LangGraph, LibreChat, Langflow — all out of category for this base |
+| `open source platform education ERP CRM … MIT Apache` | 🔴 `openeducat`, `frappe/education`, `GegoK12`, `RosarioSIS` — **every one already held** |
+| 🔵 **net new addresses from all discovery legs** | 🔴 **ZERO** |
+
+🔴 **Sixth consecutive saturation axis**, and the first on which the *demand* legs saturated at the
+same time (24 of ~25 regional facts already held — see [`market.md`](../intel/market.md)).
+🟢 **Declared as saturation, not as coverage.**
+
+### 🟢 Where the pass actually paid — re-reading held addresses over every branch
+
+🔵 **Instrument:** [`compose/code/p514-branch-grant-probe/`](../compose/code/p514-branch-grant-probe/) ·
+**Reads:** [`branch-grant-probe.2026-10-28-p514.tsv`](../evidence/branch-grant-probe.2026-10-28-p514.tsv)
+
+| | |
+|---|---|
+| addresses | **19** — the whole negative-verdict population |
+| heads enumerated *(`git ls-remote --heads`)* | **92** |
+| paths × head | **20** |
+| probes | **1,840** |
+| control pair *(`Gap 509-B`)* | 🟢 GOOD `200` 11,408 B / BAD `404` |
+| 🔴 grants recovered | **3** |
+| 🟢 nils upgraded *unread* → **enumerated** | **16** |
+
+| recovered | grant | ref | cause |
+|---|---|---|---|
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | 🔴 **GPL-3.0**, 35,149 B `3972dc9744f6499f` | `ictschool-laravel-5.5` **only** — `main` has none | 🆕 **branch** |
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🟢 **Apache-2.0 declared**, `NOTICE` 680 B `38af3b29e41787ac` | **default** `master` | 🔴 **path set** |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🟢 **Apache-2.0 declared**, `NOTICE` 679 B `386aef9c0b401bff` | **default** `master` | 🔴 **path set** |
+
+🔴 **Both Fedena SHAs are unchanged** from the ones this base recorded when it published *"none"* —
+`68a84ac445bf` and `333477b06f1d`. 🔵 **So the defect is the probe, not drift**, and the path-set
+axis now outscores the branch axis 2:1 within this pass and ~4:2 across this base's history
+(`T51`).
+
+### 🔴 Channel state at `p514` — recorded so the next pass can budget
+
+| channel | state |
+|---|---|
+| `api.github.com/rate_limit` | 🟢 **200** |
+| `api.github.com/repos/*`, `/search` | 🔴 **403** — no stars, no `archived`, no tree enumeration this pass |
+| `raw.githubusercontent.com` | 🟢 **200** |
+| `git ls-remote` / `git clone` | 🟢 **200** |
+| `github.com` HTML | 🔴 **403** |
+| `eur-lex.europa.eu` · `unesco.org` · `oecd.org` | 🔴 `curl` **000** / `WebFetch` **ENOTFOUND** — `Gap 483-K`, 16th pass |
+
+🟢 **The git + raw pair is what made a 1,840-probe pass possible with the API down.** 🔵 Worth
+knowing before a pass spends its budget waiting on the API: **stars were unobtainable, bytes were
+not.** 🔴 And because `/search` is 403, `Gap 504-A` (`openedx/edx-platform` silently dropped from
+index batches) was **not** tested — it is neither confirmed nor retired at `p514`.
 ## 🆕 `p513` — `2026-10-28` — **🟢 EIGHT ADDRESSES LEFT THIS FILE FOR THE FOUNDATIONS CENSUS, AND THE REASON THEY WERE STILL HERE IS THE DEFECT, NOT THE DISCOVERY: `p511` wrote that the permissive interop spine was complete and wrote it in PROSE, while the permissive table stayed at seven rows. It now holds fifteen. 🟢 Two are addresses new to this base: the BSD-3 institutional repository (1,505 forks) and the Apache-2.0 Open Badges validator from the standards body itself. 🔴 `Gap 504-A` reproduced exactly — 15 slugs queried, 13 returned, `openedx/edx-platform` silently dropped for the third pass running.**
 
 ### 🟢 Eight promotions to [`foundations.md`](foundations.md) — the spine, finally counted

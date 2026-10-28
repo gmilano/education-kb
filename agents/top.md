@@ -4,6 +4,163 @@ region: Global
 updated: 2026-10-28
 ---
 
+
+## 🆕 `p514` — `2026-10-28` — **🔴 A REFUTATION THIS FILE PUBLISHED IS ITSELF REFUTED, ON THE BYTES, AT THE EXACT SHA IT RECORDED: this base wrote that Fedena's Apache-2.0 *"does not survive contact with the repository"* and that neither repo *"ships a license file under any of the nine names probed"*. 🔴 **`NOTICE` was not one of the nine.** Both Fedena repos carry the Apache-2.0 grant sentence in `NOTICE`, at `68a84ac445bf` and `333477b06f1d` — the very commits this base read. 🟢 `Gap 512-D` (`T42`) CLOSES WITH CONTENT: 1,840 branch-enumerated probes over the whole negative-verdict population, control pair green, **3 of 19 nils wrong and 16 upgraded from *unread* to *enumerated***. 🔴 Discovery saturated on a SIXTH axis — and this time on the DEMAND axis too: ~25 regional facts checked, **one** new. 🔴 `make hooks` DENIED for the eighteenth time in nineteen passes.**
+
+🔴 **Gate posture, stated first.** `make hooks` was attempted and **DENIED** — `Code from External`,
+this session's classifier refusing to execute code from a cloned repository. 🟡 **Nothing in `p514`
+is gate-attested**; `p511`'s **45/63** remains the last gate-attested reading of this base. Every
+figure below was measured in this session's own instrument, and the channel is named at each one.
+
+### 🔴 The reversal — this file's own nine-path probe, and the path it never had
+
+🔴 **What this base published**, in [`repos/foundations.md`](../repos/foundations.md), under the
+heading *"Fedena: resolved, and the Apache-2.0 claim does not survive contact with the repository"*:
+
+> *"Neither ships a license file under any of the nine names probed. The **Apache-2.0** that
+> comparison tables and vendor blogs print for Fedena traces to a single sentence in the README —
+> *"Fedena is released under the Apache License 2.0"* — and a README sentence is not a grant."*
+
+🟢 **The rule in that sentence is right.** A README sentence is not a grant. 🔴 **The conclusion is
+wrong, because the grant is not only in the README.** Both repositories serve a `NOTICE` file on
+their **default** branch carrying the Apache-2.0 grant clause itself:
+
+| repo | ★ *(carried)* | path | bytes | `sha256₁₆` | SHA read | this base's prior verdict |
+|---|---|---|---|---|---|---|
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 547 | 🟢 **`NOTICE`** @ `master` | **680** | `38af3b29e41787ac` | `68a84ac445bf` | 🔴 *"none"* — **same SHA** |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 4 | 🟢 **`NOTICE`** @ `master` | **679** | `386aef9c0b401bff` | `333477b06f1d` | 🔴 *"none"* — **same SHA** |
+
+🔵 **The payload, read in full** (`projectfedena/fedena`, 680 B) — the grant clause is the Apache-2.0
+boilerplate, applied to the product by its copyright holder:
+
+> `Fedena` / `Copyright 2011 Foradian Technologies Private Limited.`
+> *"This product includes software developed at Project Fedena — http://www.projectfedena.org/"*
+> **"Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file
+> except in compliance with the License. You may obtain a copy of the License at
+> http://www.apache.org/licenses/LICENSE-2.0"**
+
+🔴 **Neither SHA moved.** `git ls-remote` returns `68a84ac445bf` and `333477b06f1d` — character for
+character the commits this base recorded when it wrote *"none"*. 🔵 **So this is not drift and it is
+not bad faith: it is a probe whose path set did not contain `NOTICE`.** That is the
+`Gap 501-F` class — the one `frappe/erpnext` established when a lowercase `license.txt` read
+`NONE-OF-6-PATHS` — reproduced on a **second and third** address, and this time it reversed a
+*published refutation* rather than filling a blank.
+
+🟡 **What the grant is, stated precisely.** `NOTICE` **declares** Apache-2.0 and incorporates the
+text **by reference** to `apache.org`; no full Apache-2.0 payload exists at any of 20 paths on
+either head. 🟢 **This base already has a precedent class for exactly that shape** and resolved it
+the same way — [`frappe/education`](https://github.com/frappe/education) is shelved as
+*"GPL-3.0 declared in 19 bytes, no licence body → treat as GPL-3.0 and ask upstream to serve the
+text"*. 🟢 **Consistency therefore requires Fedena be carried as Apache-2.0, text absent**, on
+**two** independent channels (`NOTICE` grant clause + `README.markdown` declaration) where this base
+had seen one and called it insufficient.
+
+### 🔴 And it changes nothing operationally — which is the half a "nil broken!" headline would lose
+
+🔴 **Fedena is dormant.** Default-branch HEAD `68a84ac445bf` is dated **2016-07-20**, and its commit
+subject is **`emptying content`**. Root tree carries `NOTICE` and `README.markdown` and no other
+licence-ish file. 🔵 **A Rails-2-era codebase last touched ten years ago is not a foundation for a
+2026 engagement**, whatever its licence says.
+
+| claim | verdict at `p514` |
+|---|---|
+| *"Fedena's Apache-2.0 does not survive contact with the repository"* | 🔴 **REFUTED** on bytes, at this base's own recorded SHAs |
+| *"neither ships a license file under any of the nine names probed"* | 🔴 **REFUTED** — `NOTICE`, default branch, both repos |
+| Fedena is usable as a permissive SIS for a Globant engagement | 🔴 **NO** — last commit **2016-07-20**, *"emptying content"* |
+| 🔴 **The permissive-and-LIVE SIS shelf** | 🟡 **STAYS AT ONE ROW** — [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) (MIT). Fedena corrects the *licence record*, not the *supply* |
+
+🔴 **The standing "LMS + SIS permissive nil" is NOT broken by this** and is not claimed to be.
+Fedena is a school-ERP/SIS — its own `README.markdown` reads *"Open source school management
+system … ideal solution for schools and campuses that want an easy means to manage all campus
+records"* — not a combined LMS+SIS, and it is dead. 🔵 **The nil needs its own test; this pass did
+not run one.** Registered as `Gap 514-C`.
+
+### 🟢 `Gap 512-D` (`T42`) closes with content — the negative verdicts, re-run over every head
+
+🟢 **The gap named its own closure** — *"re-running the negative verdicts with `git ls-remote
+--heads` enumeration first"* — and this is that run.
+Instrument: [`compose/code/p514-branch-grant-probe/`](../compose/code/p514-branch-grant-probe/).
+Reads: [`branch-grant-probe.2026-10-28-p514.tsv`](../evidence/branch-grant-probe.2026-10-28-p514.tsv).
+
+| | |
+|---|---|
+| addresses *(the whole negative-verdict population on the live shelves)* | **19** |
+| heads enumerated via `git ls-remote --heads` | **92** |
+| paths per head | **20** |
+| probes | **1,840** |
+| control pair *(`Gap 509-B`)* | 🟢 **GOOD `200` 11,408 B / BAD `404`** — verdicts valid |
+| 🔴 nils that were **wrong** | **3 of 19** |
+| 🟢 nils upgraded from *unread* to **enumerated absence** | **16 of 19** |
+
+🔴 **The three, and their two distinct causes:**
+
+| address | recovered grant | cause |
+|---|---|---|
+| [`ictinnovations/ICTSchool`](https://github.com/ictinnovations/ICTSchool) | 🔴 **GPL-3.0**, `LICENSE`, **35,149 B**, `sha256₁₆ 3972dc9744f6499f`, on **`ictschool-laravel-5.5` only** | 🆕 **the genuine BRANCH instance** — default `main` serves nothing at 20 paths |
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🟢 **Apache-2.0 declared**, `NOTICE`, **680 B** | 🔴 **path set** (`Gap 501-F`) — default branch, unprobed name |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🟢 **Apache-2.0 declared**, `NOTICE`, **679 B** | 🔴 **path set** (`Gap 501-F`) |
+
+🟢 **The 16 surviving nils are the strongest this base has published.**
+[`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) alone was probed over **65 heads ×
+20 paths = 1,300 addresses** and serves no payload at any of them. 🔵 **An absence measured over 65
+branches is a different object from one measured over a single resolved default**, and the rows
+below may now say so.
+
+| address | heads | probes | verdict at `p514` |
+|---|---|---|---|
+| [`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) | **65** | 1,300 | 🟢 **enumerated nil** — all rights reserved, attested |
+| [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) | 5 | 100 | 🟢 enumerated nil |
+| [`wongcyrus/gemini-handwriting-grader`](https://github.com/wongcyrus/gemini-handwriting-grader) | 2 | 40 | 🟢 enumerated nil |
+| [`SudhanvaJ-bit/project-samarth`](https://github.com/SudhanvaJ-bit/project-samarth) | 2 | 40 | 🟢 enumerated nil |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) · [`victor-lubn/Special-Education-Planning`](https://github.com/victor-lubn/Special-Education-Planning) · [`kixlab/TutorCaseBench`](https://github.com/kixlab/TutorCaseBench) · [`kennedyraju55/essay-grader`](https://github.com/kennedyraju55/essay-grader) · [`avivkatz1/easy-iep`](https://github.com/avivkatz1/easy-iep) · [`marckurniawan/essay-scoring-project`](https://github.com/marckurniawan/essay-scoring-project) · [`h9-tect/AI-Roadmaps`](https://github.com/h9-tect/AI-Roadmaps) · [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) · [`abdullaitcenter-hue/comet-trail-archives`](https://github.com/abdullaitcenter-hue/comet-trail-archives) · [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) · [`choudaryhussainali/MCQ_Grading_Bot`](https://github.com/choudaryhussainali/MCQ_Grading_Bot) · [`mcavaliere/ai-spanish-tutor`](https://github.com/mcavaliere/ai-spanish-tutor) | 1 each | 20 each | 🟢 enumerated nil |
+
+🔵 **Scope limit, declared.** 20 paths at the root plus `docs/`, `doc/`, `.github/`. The instrument
+does **not** walk trees, so `gate-subtree-grant` (`p382`) is **not** satisfied and a deep-subtree
+grant would still be missed. 🆕 Registered as `Gap 514-A`.
+
+### 🟢 `DeepTutor` re-read — the pin is stable across five passes, and a star figure is REFUSED
+
+🟢 **`HKUDS/DeepTutor` HEAD = `1ea7df155447`** — byte-identical to the SHA `p509` and `p511`
+recorded, so the pin is **stable across five passes**. 🟢 Grant re-read from bytes at that head:
+**Apache-2.0**, `LICENSE`, **11,408 B**, `sha256₁₆ cd2f54e1e5066644`.
+
+🔴 **A star figure is declined rather than shelved.** This pass's `github trending education AI 2026`
+leg reported DeepTutor at **~46,026★** dated `2026-10-28`, against this file's shelved **47,677★**
+(`p508`, API). 🔴 **That is a *decrease* of 1,651**, which the API channel has never shown for this
+address across `p504`→`p508` (47,230 → 47,338 → 47,445 → 47,621 → 47,677, monotone). 🔴 **The API
+channel is `403` from this session, so neither figure can be adjudicated here.** 🟢 **The shelf is
+left exactly where `p508` put it** and the search-channel figure is recorded as a conflict, not a
+correction — `T40`'s rule, and `p512`'s precedent for the `$3.7B` figure. 🆕 `Gap 514-B`.
+
+### 🔴 Saturation, on a sixth axis — and this time the DEMAND axis went with it
+
+🔴 **All four prescribed global legs and all four regional legs ran.** 🔴 **The supply legs returned
+nothing new to this base**: `DeepTutor`, `openeducat`, `frappe/education`, `GegoK12` and `RosarioSIS`
+were each already held. 🔴 **And ~25 regional facts were checked against the corpus one by one —
+`AB 1159`, `SB 1734`, `H.R. 8747`, `HB 218`, the `716` instruments, `TALIS`, `CONPES`, the UNESCO
+Observatory, India's `20 Feb 2026` labelling date, the schools emotion-recognition ban, Maryland,
+Idaho, Utah, Virginia, Uruguay, ECLAC/eLAC, Ipsos, Costa Rica — and EVERY ONE was already on these
+shelves.** 🟢 **Exactly one was new: `DIKSHA`**, and it is what led to this pass's promotion
+(see [`repos/foundations.md`](../repos/foundations.md)).
+
+🔵 **1 new in ~25 is a measurement of the instrument, not of the world.** It is recorded as
+saturation rather than as coverage, which is `T45`'s standing instruction.
+
+### 🔴 `Gap 483-K` / `511-E` — re-probed on BOTH channels, sixteenth pass, unmoved
+
+| channel | `eur-lex.europa.eu` | `www.unesco.org` / `iesalc` | `www.oecd.org` |
+|---|---|---|---|
+| `curl` | 🔴 `000` | 🔴 `000` | 🔴 `000` |
+| `WebFetch` | 🔴 `getaddrinfo ENOTFOUND` | 🔴 `getaddrinfo ENOTFOUND` | — *(not probed; two identical failures is the stop rule)* |
+
+🟢 **The ask is unchanged and still one human action, once:** allow `eur-lex.europa.eu`,
+`www.unesco.org` and `www.oecd.org` in the session's network settings. 🔴 Until then `Gap 513-D`
+(EUR-Lex unread) and the LATAM figures' primary-source confirmation both stay open.
+
+> 🔵 **Channels up at `p514`, for the next pass's budget:** `api.github.com/rate_limit` **200**,
+> `api.github.com/repos/*` **403**, `raw.githubusercontent.com` **200**, `github.com` (HTML) **403**,
+> `git ls-remote` / `git clone` **200**. 🟢 **The raw + git pair is what made this pass's 1,840-probe
+> instrument possible with the API down** — worth knowing before a pass spends its budget on the API.
 ## 🆕 `p513` — `2026-10-28` — **🟢 THE PROMOTION GAP IS CLOSED RATHER THAN MEASURED A SIXTH TIME: nine permissive rows this file had already byte-read and then left sitting in pass narratives are now ON the shelf, 19 → 28. 🔴 One of them had DRIFTED while it sat there — `OpenTutor`'s HEAD moved off the SHA this file records — because an unshelved row is an unwatched row, and that is the actual cost of a backlog. 🟢 Discovery is confirmed saturated on a FIFTH axis: four fresh legs, 27 addresses, ZERO new to this base. 🔴 And the licences this sector hides are now a shelf of their own: five assets carrying 8,691★ between them that Globant CANNOT build on, one with no grant at all — including a 2,050★ repo whose file is titled like a licence and reads "non-commercial, redistribution strictly prohibited".**
 
 🔴 **Gate posture, stated first: `make hooks` not run in this session** — the shelves remain

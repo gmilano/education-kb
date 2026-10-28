@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-28
 ---
 
+
+## 🆕 `p514` — `2026-10-28` — **🟢 ONE MORE ROW LEAVES THIS BACKLOG FOR A SHELF, AND IT HAD BEEN SITTING HERE SINCE `p316`: "Sunbird" was filed here ~200 passes ago as a 41★ *website* repo and used as evidence that star-ranked search misses institutional infrastructure. 🔴 The lesson was right and it CLOSED THE SEARCH. The actual system — [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal), **MIT**, the portal behind **DIKSHA** — was one organisation away. 🔴 `DeepTutor`'s star cell is a CONFLICT this pass and is REFUSED rather than written: the trending channel says ~46,026, the shelf says 47,677, and the API is 403. 🔴 The trending leg returned nothing else new.**
+
+🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`), 18th denial in 19 passes.
+🟡 `p511`'s **45/63** stands as the last gate-attested reading.
+
+### 🟢 Promotion off this backlog — and the reason it waited ~200 passes
+
+| promoted to a shelf | ★ | grant byte-read at `p514` | destination |
+|---|---|---|---|
+| [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) | *not readable (API 403)* | 🟢 **MIT**, `LICENSE`, **1,072 B**, `sha256₁₆ 7dde06716f259584`, on **78 of 79 heads** incl. default `master`, HEAD `9efc8b5819c6` **2025-12-16** | [`repos/foundations.md`](../repos/foundations.md) + [`verticals/solutions.md`](../verticals/solutions.md) |
+
+🔴 **What this file held instead, since `p316`:**
+[`project-sunbird/project-sunbird.github.io`](https://github.com/project-sunbird/project-sunbird.github.io)
+— **41★**, default ref `dev`, HEAD **2018-12-21**, MIT 1,072 B. 🔵 It was cited as *evidence* for a
+sound generalisation: *"a star-ranked search cannot see institutional infrastructure."*
+🔴 **And that is exactly why nobody looked again.** The repo was the brochure; the system sits under
+a different org. 🟢 Registered as `Gap 514-D` and written up as `T53` in
+[`trends.md`](../intel/trends.md): **a conclusion that explains an absence can prevent the search
+that would refute it.**
+
+🟢 **Free cross-attestation:** the portal's MIT payload is **byte-identical** (1,072 B,
+`sha256₁₆ 7dde06716f259584`) to the one this file recorded on the website repo — two orgs, one
+payload.
+
+### 🔴 `DeepTutor` — the star cell is a conflict, and it is refused rather than resolved
+
+| channel | figure | date |
+|---|---|---|
+| 🔴 trending channel, this pass | **~46,026★** *(reported 42,566 → 44,177 → 46,026 across 25–28 Oct)* | `2026-10-28` |
+| 🟢 this base's shelf | **47,677★** *(`p508`, API)* | — |
+| 🔴 API adjudication | **impossible** — `api.github.com/repos/*` is **403** from this session | — |
+
+🔴 **The trending figure is *lower* than the shelf by 1,651**, and the API channel showed this
+address strictly monotone across `p504`→`p508` (47,230 → 47,338 → 47,445 → 47,621 → 47,677).
+🟢 **The shelf is left exactly where `p508` put it.** 🔵 `p512`'s precedent for the `$3.7B` market
+figure applies: a channel-attributed number that contradicts a shelved measurement is recorded as a
+conflict, never written over it. 🆕 `Gap 514-B`.
+
+🟢 **What IS attested this pass, from the git and raw channels:** HEAD **`1ea7df155447`** — the same
+SHA `p509` and `p511` recorded, so the pin is **stable across five passes** — and the grant re-read
+from bytes: **Apache-2.0**, `LICENSE`, **11,408 B**, `sha256₁₆ cd2f54e1e5066644`.
+
+### 🔴 The rest of the trending leg — held, or unresolved, and declared either way
+
+| returned | disposition |
+|---|---|
+| [`kamranahmedse/developer-roadmap`](https://github.com/kamranahmedse/developer-roadmap) | 🔴 **already held.** 🟡 Note for a later pass: `raw HEAD/LICENSE` is **404** while the repo is live — the `oppia` behaviour of `Gap 510-B`, so its grant is at some other path and this base must not read the 404 as absence |
+| `Vibe-Trading` | 🔴 already held; out of category *(finance)* |
+| `Filee` — an IELTS vocabulary app, tagged new for 2026 | 🟡 **named by the channel, address NOT resolved this pass.** 🔴 Recorded as a lead, not as a row — this base does not shelve a name without a reachable address. 🆕 `Gap 514-F` |
+| everything else on the leg | 🔴 general agent infrastructure, not education |
+
+🔵 **Channel note worth carrying:** the trending signal this pass came from automated
+`news-radar`/`agents-radar` GitHub issues and third-party blogs, **not** GitHub's own trending page.
+🔴 Their star figures disagree with the API by thousands, as the DeepTutor row above shows. 🟢 **Use
+them for *discovery* and never for a *measurement*.**
 ## 🆕 `p513` — `2026-10-28` — **🟢 THE BACKLOG THIS FILE EXISTS TO FEED WAS NEVER BEING DRAINED, AND THIS PASS DRAINED IT: nine permissive rows that passed through here and were byte-read are now ON the agents shelf (19 → 28). 🔴 One of them had DRIFTED while it waited — proof that a row parked here is not preserved, it is unwatched. 🟢 Four fresh legs, 27 addresses, ZERO new to this base — a FIFTH saturation axis. 🔴 And the Spanish/Portuguese leg returned 140,948 results whose top rows were `build-your-own-x`, `awesome` and `linux`, which is a lesson about the instrument, not the region.**
 
 ### 🟢 Nine promotions off this backlog — what left this file for the shelf

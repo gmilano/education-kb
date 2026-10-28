@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-28
 ---
 
+
+## 🆕 `p514` — `2026-10-28` — **🔴 THE REFUTATION THIS FILE PUBLISHED ABOUT FEDENA IS ITSELF REFUTED, AT THE TWO SHAs THIS FILE RECORDED: `NOTICE` was not among the nine names probed, and both Fedena repos carry the Apache-2.0 grant clause there. 🟢 The permissive census goes 15 → 16 with the ONE address this pass's whole regional battery produced that the base did not already hold: [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) — **MIT**, grant on **78 of 79 heads** including the default, and it is the portal behind **DIKSHA**, India's national platform. 🔴 This base had seen "Sunbird" for ~200 passes as a 41★ *website* repo and never the stack. 🔴 `make hooks` DENIED (18th in 19).**
+
+🔴 **Gate posture:** `make hooks` **DENIED** (`Code from External`). 🟡 Nothing here is
+gate-attested; `p511`'s **45/63** stands. Every figure is named to its channel.
+
+### 🔴 Correction to this file's own Fedena section — see below, under its original heading
+
+🔴 **This file published:** *"Neither ships a license file under any of the nine names probed … and
+a README sentence is not a grant."* 🟢 **The rule is right; the conclusion is wrong.** Both
+repositories serve the Apache-2.0 grant clause in **`NOTICE`**, on their **default** branch, at the
+**exact SHAs this file recorded**:
+
+| repo | prior cell | 🟢 `p514`, byte-read | SHA |
+|---|---|---|---|
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🔴 *"none"* | 🟢 **Apache-2.0 declared** — `NOTICE`, **680 B**, `sha256₁₆ 38af3b29e41787ac` | `68a84ac445bf` — **unchanged** |
+| [`foradian/fedena`](https://github.com/foradian/fedena) | 🔴 *"none"* | 🟢 **Apache-2.0 declared** — `NOTICE`, **679 B**, `sha256₁₆ 386aef9c0b401bff` | `333477b06f1d` — **unchanged** |
+
+🟡 **Declared, text absent** — `NOTICE` incorporates Apache-2.0 by reference to `apache.org`; no
+full payload at 20 paths on either head. 🟢 Same shape this file already resolves for
+[`frappe/education`](https://github.com/frappe/education) (*"GPL-3.0 declared in 19 bytes, no
+licence body"*), so Fedena is carried as **Apache-2.0, text absent**, on two channels.
+
+🔴 **And it buys nothing.** `projectfedena/fedena` HEAD is dated **2016-07-20**, commit subject
+**`emptying content`**. 🔵 **The licence record is corrected; the permissive-and-live SIS supply is
+not.** That shelf stays at one row — [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12), MIT.
+
+### 🟢 Promotion 15 → 16 — the stack behind DIKSHA, and why this base kept missing it
+
+🟢 **`Sunbird-Ed/SunbirdEd-portal` — MIT, and the grant is nearly universal across its heads:**
+
+| field | value, byte-read at `p514` |
+|---|---|
+| address | [`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal) |
+| licence | 🟢 **MIT** — `LICENSE`, **1,072 B**, `sha256₁₆ 7dde06716f259584`, *"Copyright (c) 2018 Project Sunbird"* |
+| grant coverage | 🟢 **78 of 79 heads**, the default branch `master` **included** |
+| default ref | `master` *(resolved via `git ls-remote --symref`)* |
+| HEAD | `9efc8b5819c6`, **2025-12-16** — maintained |
+| layer | national-scale learning **portal** (Angular/Node), the Sunbird Ed distribution |
+| placement | **APAC** — the stack behind **DIKSHA**, India's national school platform |
+
+🔵 **Why ~200 passes missed it, which is the transferable part.** This base has carried *"Sunbird"*
+since `p316` — but only as [`project-sunbird/project-sunbird.github.io`](https://github.com/project-sunbird/project-sunbird.github.io),
+the **website** repo: default ref `dev`, HEAD dated **2018-12-21**, **41★**, and it was filed as
+evidence that *"a star-ranked search cannot see institutional infrastructure"*. 🔴 **The lesson was
+drawn and the search was never repeated against the ORGANISATION.** The portal lives under a
+*different org* (`Sunbird-Ed`, not `project-sunbird`) and `git ls-remote` reaches it immediately.
+🟢 **Rule, registered as `Gap 514-D`: when an address is dismissed as low-star institutional
+infrastructure, enumerate its ORG before the finding is filed** — the dismissed repo is often the
+brochure, not the system.
+
+🟢 **Cross-attestation, free:** the portal's MIT payload is **byte-identical** (1,072 B,
+`sha256₁₆ 7dde06716f259584`) to the MIT this base recorded on the website repo — two addresses,
+two orgs, one payload, so the family read is corroborated rather than asserted.
+
+🟡 **One head of 79 lacks the payload.** Recorded as a measurement, not a defect: the grant is on
+the default branch and on every release branch probed, so the gap is a stale topic branch.
+
+### 🟢 The permissive foundations census at `p514`
+
+| | `p513` | 🟢 `p514` |
+|---|---|---|
+| permissive rows | 15 | 🟢 **16** |
+| rows whose grant was byte-read at the SHA they carry | 15 | 🟢 **16** |
+| 🔴 licence records **corrected** this pass | — | 🔴 **2** *(both Fedena repos, `none` → Apache-2.0 declared)* |
+| 🟢 negative verdicts upgraded to **enumerated** absence | — | 🟢 **16** *(see [`agents/top.md`](../agents/top.md))* |
+
+🔵 **Reads:** [`branch-grant-probe.2026-10-28-p514.tsv`](../evidence/branch-grant-probe.2026-10-28-p514.tsv) ·
+[`sunbird-grant-probe.2026-10-28-p514.tsv`](../evidence/sunbird-grant-probe.2026-10-28-p514.tsv) ·
+instrument [`compose/code/p514-branch-grant-probe/`](../compose/code/p514-branch-grant-probe/).
 ## 🆕 `p513` — `2026-10-28` — **🟢 THE INTEROP SPINE WAS DOCUMENTED IN PROSE AND MISSING FROM THE CENSUS: LTI, SCORM, xAPI and Open Badges each had a permissive component this base had already found, and NOT ONE of them was a row in this file's permissive table. Eight promotions, 7 → 15, every grant byte-read at the SHA it now carries. 🟢 Two are genuinely new addresses — the BSD-3 institutional repository and the Apache-2.0 badge validator. 🔴 `Gap 504-A` reproduced EXACTLY: a 15-slug batch returned 13 and `openedx/edx-platform` was again silently dropped. 🔴 And this file's own warning about hard-coded counts bit a THIRD time.**
 
 ### 🟢 Eight promotions — the spine this file described and never counted
@@ -541,13 +611,24 @@ repositories, both of which `git ls-remote` reaches:
 
 | repo | ★ | grant at SHA | sidebar |
 |---|---|---|---|
-| [projectfedena/fedena](https://github.com/projectfedena/fedena) | 547 | 🔴 **none** (`68a84ac445bf`) | no license shown |
-| [foradian/fedena](https://github.com/foradian/fedena) | 4 | 🔴 **none** (`333477b06f1d`) | no license shown |
+| [projectfedena/fedena](https://github.com/projectfedena/fedena) | 547 | 🟢 **Apache-2.0 declared** — `NOTICE`, 680 B, `sha256₁₆ 38af3b29e41787ac` (`68a84ac445bf`) 🔴 *corrected `p514`; this row read* **none** *for 24 passes* | text absent (incorporated by reference); sidebar shows no licence |
+| [foradian/fedena](https://github.com/foradian/fedena) | 4 | 🟢 **Apache-2.0 declared** — `NOTICE`, 679 B, `sha256₁₆ 386aef9c0b401bff` (`333477b06f1d`) 🔴 *corrected `p514`* | text absent (incorporated by reference); sidebar shows no licence |
 
 Both are "Fedena SIS"; the 4★ one is a **fork** of the 547★ one. Neither ships a license file under
 any of the nine names probed. The **Apache-2.0** that comparison tables and vendor blogs print for
 Fedena traces to a single sentence in the README — *"Fedena is released under the Apache License
 2.0"* — and a README sentence is not a grant.
+
+> 🔴 **`p514` — THE PARAGRAPH ABOVE IS REFUTED ON THE BYTES, AND IT IS KEPT HERE RATHER THAN
+> REWRITTEN** so the correction is auditable (`gate-prose-claims`). 🔴 **`NOTICE` was not one of the
+> nine names probed.** Both repositories serve the Apache-2.0 grant clause at `NOTICE` on their
+> **default** branch — 680 B `sha256₁₆ 38af3b29e41787ac` and 679 B `sha256₁₆ 386aef9c0b401bff` — at
+> `68a84ac445bf` and `333477b06f1d`, **the exact SHAs this section records**. 🟢 *"A README sentence
+> is not a grant"* remains correct as a rule; the grant simply was not only in the README. 🟡 The
+> text is **incorporated by reference**, so Fedena is carried as **Apache-2.0, body absent** — the
+> shape this file already resolves for `frappe/education`. 🔴 **It buys nothing operationally:**
+> HEAD is dated **2016-07-20**, commit subject **`emptying content`**. See the `p514` section at the
+> top of this file.
 
 🔴 **Not carried as a permissive row, and the reason is now evidential rather than "unresolved."**
 This *strengthens* the finding below: the one candidate that would have broken "no permissive SIS
