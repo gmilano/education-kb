@@ -299,6 +299,43 @@ first horizontal AI statute, and a vendor that is already EU-conformant will cle
 Brazilian regime with little extra work. That is a reason to build conformity once, in EMEA shape,
 and reuse it.
 
+### Global
+
+🟢 **Added `p495`. It closes a structural red this KB was carrying unnoticed:
+`make gate-region-headings` has been FAILING at `intel/market.md:50` with
+`P383-MISSING-REGION — Global`**, because the region vocabulary is five values and this
+file's single `## Opportunities by region` block carried only four. 🔵 The gate was right and
+the file was wrong; `p495` checked the complaint against `HEAD` before writing, so the red is
+**pre-existing, not introduced**. 🔴 **Nothing is placed here to satisfy a gate** — the
+findings below are the ones that genuinely have no region, and parking them in a regional
+section was itself the distortion.
+
+🔴 **The open-source supply for education agents is exhausted, globally, and this is the most
+decision-relevant global fact this KB holds.** Four consecutive passes of the star-ordered
+sweep have returned nothing promotable above the floor (`p492`–`p495`), and `p495`'s single
+genuinely-new address turned out to be an **unlicensed reskin** of a repo already on the shelf.
+🟢 **The consequence is strategic, not clerical: differentiation cannot come from finding a
+better open-source tutor, because everyone's search returns the same shelf.** It comes from
+**integration, hardening and governance** — which is what every `P49x` pattern now sells.
+
+🔴 **No permissive platform exists at the ERP / SIS / LMS layer, anywhere.** Three independent
+passes of the vertical-platform query return LGPL / GPL / AGPL systems (`OpenEduCat`, Moodle,
+Open edX, BigBlueButton) and no MIT or Apache education platform. 🔵 **So the first question on
+every engagement, in every region, is which copyleft obligation the client can carry** — not
+which platform is best. See [`../repos/foundations.md`](../repos/foundations.md).
+
+🔴 **Agent surfaces on incumbent systems carry security debt that the incumbent's hardening does
+not cover** (`T15`, evidenced first-hand `p495`: four advisories in one day on the only
+maintained Canvas agent surface, two **High**). 🔵 **This is vendor- and region-independent**,
+and it is the clearest global case for a studio engagement: arriving at a deployable posture
+took a release-tag read, four advisory reads, a CVSS read and a runtime check.
+
+🟡 **Global market sizing remains unusable, fifth pass (`T10`).** 2026 estimates from this
+pass's own sweep: **$3.7B**, **$10.6B**, **$11.4B** — not agreeing within a factor of three.
+🟢 **Quote direction and regional ordering, never a figure.** The one quantified contrast worth
+quoting is LATAM's **~92% student engagement against ~30% institutional policy coverage**,
+because it is measured, sourced, and names the product.
+
 ## Cross-region summary
 
 | | NA | EMEA | APAC | LATAM |
@@ -698,4 +735,132 @@ awaiting the rapporteur's report. **Brazil has no AI statute in force.** 🟢 `p
 **no education-AI statute in force anywhere in LATAM** — holds for a **fifth** pass, and whether
 PL 2338 treats education as high-risk is **still** unresolved after four passes of silence on the
 point. **Do not tell a client Brazil has an education high-risk category coming.**
+
+
+## 🆕 `p495` — `2026-10-28` — a **second** instance of the prose-loss defect, and it is in LATAM
+
+🔴 **`p494` found one deleted paragraph — Singapore's agentic-AI framework — and said the prose case
+is the larger surface because nobody knows to look for a fact a file no longer mentions. `p495`
+went looking on purpose and found a second instance, in this file, in LATAM.**
+
+🟢 **The method, so it is repeatable.** This pass ran the per-region queries, then — before writing
+anything — `grep -cF` for each returned figure **in the file that should carry it**, not across the
+tree. North America came back fully held and nothing was written (see below). 🔴 **LATAM came back
+held *somewhere* and absent *here*:**
+
+| LATAM figure returned | in `intel/market.md` | elsewhere in the KB |
+|---|---|---|
+| UNESCO IESALC adoption split — teaching & learning **73.5%** | 🔴 **0 hits** | 🟢 held — `agents/trending.md`, `repos/trending.md`, `README.md`, `intel/open-gaps.md` |
+| DEC LATAM survey population — **30,000+ responses** | 🔴 **0 hits** | 🟢 held in the same four |
+| **29 institutions** | 🔴 **0 hits** | 🟢 held in the same four |
+| **~30%** of LATAM universities with a published AI-use policy | 🔴 **0 hits** | 🟢 held — `README.md` |
+
+🔵 **This is not a new discovery and must not be written up as one.** Every number was already
+verified by an earlier pass. 🔴 **What is new is that the region file an engagement actually reads
+had none of them** — they survived only in narrative history, the README and the gap register.
+**`intel/market.md` is one of the three mostly-prose files `p494` identified as having been rewritten
+in full**, which is precisely the predicted failure, observed a second time.
+
+🟢 **Restored to this file below, and all four are now registered in**
+[`../compose/code/p495-prose-claim-gate/claim_register.tsv`](../compose/code/p495-prose-claim-gate/claim_register.tsv)
+**so a later rewrite cannot drop them silently** (`make gate-prose-claims`).
+
+### North America
+
+🔴 **Miss declared: nothing new, and `grep` is the reason that is a finding rather than a shrug.**
+The query returned MultiState's count of **134 bills across 31 states** in the 2026 session, and the
+four states whose 2026 laws require **both** state-level guidance **and** mandatory district-level AI
+policy adoption — **Idaho, Maryland, Oklahoma, Virginia**. It also returned ~**10%** of institutions
+having formal AI guidelines and **71%** of US teachers lacking AI training.
+
+🟢 **Checked before writing: all of it is already held** — `Oklahoma` in 78 files, `Virginia` in 21,
+`134 bills` in 61, `31 states` in 60. 🔵 **`p493`'s rule — grep the KB before filing a find — paid
+here in the direction nobody credits it for:** it stopped a fresh-looking "new NA regulatory finding"
+that this KB has carried for dozens of passes. **Nothing written.**
+
+🔵 **The standing NA commercial read is unchanged and worth restating because it is the one that
+closes work:** a mandate that a district *adopt a policy* is a procurement trigger, not a product
+requirement. The four-state cluster buys a **policy-configurable** assistant (`P490-5`), not a
+smarter tutor.
+
+### EMEA
+
+🔴 **No EMEA adoption rate and no vendor share. Thirteenth independent pass.** The query returned
+the Omnibus calendar and a vendor-blog comparison table (UK light-touch and sector-specific,
+Canada's AIDA pending, India's data-protection rules phasing through 2026) — **no adoption
+percentage for any EMEA country, and no market-share figure for any vendor.**
+
+🔵 **Thirteen passes of the same absence has itself become the datum.** 🟢 **This is a gap in the
+*public* record, not in this KB's effort**, and the honest client sentence is: *EMEA education-AI
+adoption is not publicly quantified; the EU position is defined by regulation rather than by
+measured uptake.* 🔴 **Do not let a later pass convert this into silence** — silence reads exactly
+like coverage, which is the defect this pass is about.
+
+🟢 **One thing did firm up: the two dates the EMEA argument rests on now agree across independent
+secondary reads.** This pass's return gives the Digital Omnibus as **Regulation (EU) 2026/1744**,
+OJ-published **24 Jul 2026**, applying from **27 Jul 2026**, with stand-alone Annex III education
+systems at **2 Dec 2027** and embedded AI at **2 Aug 2028** — matching `p491`'s `2026/1744` and the
+**2 Dec 2027** slip this file already carries.
+
+🔴 **And the EUR-Lex primary read this file has demanded since `p491` is now proven impossible from
+this session, not merely outstanding.** `eur-lex.europa.eu` returns `http=000, curl exit 56 —
+connect_rejected` on both the ELI and `legal-content` URLs: an **egress-allowlist refusal**, the same
+signature `p494` established for `arxiv.org`. 🔵 **No future pass will find it cleared.** It moves to
+the named **human** deliverable with the two arXiv papers and the Vietnam Decision 33 official text.
+🟡 One four-day conflict recorded, not promoted: the Commission's own milestone list gives
+**31 Jul 2026** as entry into force against the guide's 27 Jul. **It changes no deadline in any
+pattern here.**
+
+### APAC
+
+🟡 **Thin, and the query drifted to enterprise APAC rather than education.** Returns were
+financial-services consultation and copyright policy, not education rules. 🔴 **No ministry-level
+education adoption rate for any APAC country was returned.**
+
+🟢 **One usable demand-side signal.** Forrester's read that **60% of firms and governments in major
+markets such as India and China will integrate locally developed large language models**, with
+**education named as a target sector**. 🔵 **That is the sovereign-deployment thesis arriving from the
+demand side rather than the regulatory side** — until now `P490-3` (offline-first ministry
+deployment) and `P490-4` (jurisdiction-routing) have been argued almost entirely from regulation.
+A procurement preference for locally-developed models is a *different* and more durable reason to
+build for model-portability: it survives even where no rule requires it.
+
+🟢 **`p494`'s restored Singapore holding stands and is now protected.** The **IMDA Model AI
+Governance Framework for Agentic AI** (**22 Jan 2026**, WEF launch) and **AI Verify** are registered
+claims in this file as of `p495` — `SG-AGENTIC-FIRST` and `SG-AI-VERIFY` — so the deletion that ran
+~179 passes unnoticed now fails `make hooks`.
+
+### LATAM
+
+🟢 **The one region where the query returned quantities, and they are being written into this file
+for the first time** (held elsewhere in the KB since earlier passes — see the defect note above):
+
+| figure | source | reading |
+|---|---|---|
+| **92%** of students and **79%** of faculty actively engaging with AI | Digital Education Council **LATAM Survey 2026** — **30,000+ responses** across **29 institutions** | the demand side is not the constraint |
+| adoption by function: teaching & learning **73.5%**, research **57.0%**, administration **34.1%**, community engagement **20.0%** | UNESCO **IESALC** — **200 higher-education institutions** across **19 countries** | 🔵 **administration at 34.1% is the gap in the middle of the stack** |
+| **~30%** of LATAM universities have a **published AI-use policy** | Digital Education Council | 🔴 **the governance layer is where the hole is** |
+
+🔴 **The commercial consequence, and it inverts the usual pitch.** With ~92% student engagement
+against ~30% institutional policy coverage, **LATAM's bottleneck is not adoption and not capability
+— it is governance.** 🟢 **The sellable unit is the policy-and-provenance layer, not another tutor:**
+an AI-use policy instrumented in the product — logging, disclosure, assessment-integrity controls,
+and a record a rector can show — which is `P490-4`'s provenance layer pointed at an institution
+instead of a jurisdiction, and `P493-1`'s all-permissive stack as the base.
+
+🔵 **Administration at 34.1% is the second opening, and it is where the open platforms already
+are.** The LATAM shelf answer is the ERP/SIS layer this KB already holds first-hand —
+[`openeducat_erp`](https://github.com/openeducat/openeducat_erp) (LGPL-3.0, pin `46a5d7d40082`,
+licence byte-read `p495`) — with AI on top rather than a greenfield build.
+
+🟡 **One caveat carried deliberately, not resolved.** This KB holds an unresolved DEC
+ordering conflict (`Gap 242`) and a second DEC read reporting **88%** of faculty at *"minimal"* to
+*"moderate"* engagement, which sits awkwardly beside **79% actively engaging**. 🔵 **Both are DEC
+figures measuring different things (any engagement vs depth of engagement), and this pass does not
+claim to have reconciled them.** Quote the **92% / ~30%** contrast, which is robust and is the one
+that sells; do not quote the faculty-engagement depth figure without the conflict attached.
+
+🟢 **`p490`'s finding holds for a sixth pass: no education-AI statute is in force anywhere in
+LATAM** — which is exactly why the governance product is a *differentiator* here rather than a
+compliance cost, and why it has a window.
 

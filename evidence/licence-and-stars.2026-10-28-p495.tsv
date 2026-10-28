@@ -1,0 +1,31 @@
+# p495 — 2026-10-28 — first-hand reads only. Channels: git ls-remote (existence + SHA),
+# raw.githubusercontent.com at a resolved ref (licence bytes), WebFetch page read
+# (stars, releases, ADVISORIES). curl -sI against github.com is this session's proxy 403
+# and carries zero existence information (p492). arxiv.org AND eur-lex.europa.eu are
+# connect_rejected (curl exit 56, http 000) — proxy allowlist refusals, permanent.
+repo_or_host	channel	field	value	verdict
+vishalsachdev/canvas-mcp	git ls-remote HEAD	sha	47394125364b	STABLE since p494 — no third move in ~24h
+vishalsachdev/canvas-mcp	git ls-remote --tags	newest release tag	v1.16.0 = b3f06c76e43569f10f8f11833b4eb4ba2ee478ba	no v1.17.0 exists; HEAD is UNRELEASED code ahead of it
+vishalsachdev/canvas-mcp	WebFetch security/advisories	published advisory count	4	CONFIRMS p492 at the new SHA — count did NOT change
+vishalsachdev/canvas-mcp	WebFetch advisories index	severities	2 High + 1 Moderate + 1 Low, all published 2026-10-25	NEW this pass — p492 recorded IDs only
+vishalsachdev/canvas-mcp	WebFetch GHSA-7pp5-29mw-9jq3	severity / CVSS	High / 7.8 CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H	NEW — sandbox escape via child_process in execute_typescript
+vishalsachdev/canvas-mcp	WebFetch GHSA-7pp5-29mw-9jq3	affected / patched	affected < 1.16.0 / patched 1.16.0	NEW — v1.16.0 is a SECURITY FLOOR, not a stability preference
+vishalsachdev/canvas-mcp	WebFetch GHSA-7pp5-29mw-9jq3	new runtime requirement	Node.js >= 22.18 (Node permission model)	NEW — a hard deployment prerequisite for P490-1
+vishalsachdev/canvas-mcp	WebFetch GHSA-7pp5-29mw-9jq3	residual risk STATED UNFIXED	outbound network blocking best-effort; executed code can still reach the caller's Canvas token	NEW — the fix does not close the token path
+vishalsachdev/canvas-mcp	WebFetch GHSA-hmr8-mvr2-mvw5	severity	High	NEW — prompt injection to data disclosure / grade change
+vishalsachdev/canvas-mcp	WebFetch GHSA-hmr8-mvr2-mvw5	affected / patched	affected <= 1.12.0 and 1.13.0-1.15.0 / patched 1.13.0 and 1.16.0	NEW — two-stage fix: write allowlist (1.13.0), untrusted file contents (1.16.0)
+HKUDS/DeepTutor	git ls-remote HEAD	sha	a31d82624c27	STABLE — 5th consecutive pass (p490-p495)
+THU-MAIC/OpenMAIC	git ls-remote HEAD	sha	70859b42e714	STABLE — p493 restoration pin holds
+HugeCatLab/ChatTutor	git ls-remote HEAD	sha	7d9e9052bc5a	STABLE
+Open-TutorAi/open-tutor-ai-CE	git ls-remote HEAD	sha	196c547291da	STABLE — matches the agents/top.md pin exactly
+openeducat/openeducat_erp	git ls-remote HEAD	sha	46a5d7d40082	STABLE — matches the repos/foundations.md pin exactly
+openeducat/openeducat_erp	raw master/LICENSE	licence bytes	LGPL-3.0, 8 241 B, sha1 2979df12244d, 178 lines	CONFIRMS the shelf tag first-hand
+openeducat/openeducat_erp	raw master/COPYRIGHT	referenced attribution file	http 404	DEFECT — line 1 of LICENSE says "please see the COPYRIGHT file" and that file does not exist
+anandpatikat/guru-latihan-dinamis	git ls-remote HEAD	sha	d37980fb15b0	EXISTS — first address in 4 passes not already held by this KB
+anandpatikat/guru-latihan-dinamis	raw LICENSE + LICENSE.md	licence	http 404 on BOTH	UNLICENSED — all rights reserved; Globant cannot build on it
+anandpatikat/guru-latihan-dinamis	raw README.md	upstream named in its own tagline	"- naufaldi/teacher-exam"	it is a reskin of a repo this KB ALREADY HOLDS
+naufaldi/teacher-exam	git ls-remote HEAD	sha	ed5bf6359413	the upstream, and it IS licensed
+naufaldi/teacher-exam	raw ed5bf6359413/LICENSE	licence bytes	MIT, 1 071 B, sha1 25cb945a99ab, (c) 2026 Naufaldi Rafif	CONFIRMS repos/trending.md MIT tag first-hand, now byte-pinned
+eur-lex.europa.eu	curl -s https (x2 URLs)	reachability	http 000, curl exit 56 — connect_rejected	PROXY-REFUSED, permanent — the standing EUR-Lex Omnibus verification can NEVER be discharged from this session
+dodona-edu/dolos	git ls-remote HEAD	sha	74b101785bad	STABLE — matches the agents/top.md pin exactly
+AI-for-Education/pedagogy-benchmark	git ls-remote HEAD	sha	21a43a395ab4	observed this pass; this KB carried no pin for it before p495

@@ -20,6 +20,7 @@ PY ?= python3
 # That report used to be redirected to /dev/null, so the gate could prove a failure
 # and could not name it.  It is captured here and printed on failure instead.
 PYPI_CACHE ?= /tmp/p393-pypi-index
+CLAIMS_LOG ?= /tmp/education-kb-gate-prose-claims.log
 GATE_LOG ?= /tmp/education-kb-gate-enumeration.log
 BESPOKE_LOG ?= /tmp/education-kb-gate-bespoke-title.log
 TABLE_LOG ?= /tmp/education-kb-gate-tables.log
@@ -120,6 +121,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-affero-rung gate-family-coverage gate-permissive-arm \
              gate-template-identity gate-presentation-fold \
              gate-untitled-payload gate-region-headings \
+             gate-prose-claims \
              gate-register-currency \
              gate-bespoke-title gate-fold-identity gate-grant-scope \
              gate-alias-canonical gate-author-key gate-payload-digest \
@@ -475,6 +477,20 @@ gate-register-currency: ## p418 — ACTION p417-D: the gap register may not LAG 
 	  repos/foundations.md verticals/solutions.md compose/patterns.md > $(REGCUR_LOG) 2>&1 \
 	  && echo "   PASS — the register is current against every live shelf" \
 	  || { echo "   🔴 THE GAP REGISTER IS STALE:"; cat $(REGCUR_LOG); exit 1; }
+
+# 🟢 p495 — the DETECTOR p494 could only name.  `p493` proved a full-file rewrite drops
+# TABLE ROWS and found eight by grepping repo URLs.  `p494` proved it also drops PROSE and
+# showed the prose case has no key to grep: Singapore's agentic-AI paragraph was deleted by
+# `p315` and sat unnoticed for ~179 passes.  This registers the load-bearing claims WITH a
+# grep key, which is the property a table row already had.
+#
+# 🔴 The control that makes it work is ARCHIVE-ONLY.  p494's lost paragraph was never absent
+# from the tree — `grep -ril` FOUND it, in archive/2026-10-19-p315-pre-rewrite/.  A whole-tree
+# grep therefore grades a deleted claim as PRESENT, which is worse than no detector because it
+# reports coverage.  A key surviving only under archive/ or scratchpad/ is RED.  No network.
+gate-prose-claims: ## p495 — a load-bearing PROSE claim may not vanish in a rewrite, and surviving only in archive/ is a LOSS
+	@cd compose/code/p495-prose-claim-gate && { $(PY) -I test_check_claims.py > $(CLAIMS_LOG) 2>&1 || { echo "🔴 p495-prose-claim-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CLAIMS_LOG) ; false ; } ; } && echo "── p495-prose-claim-gate (21 controls: ARCHIVE-ONLY, CLAIM-LOST, NO-SUCH-FILE, line-wrap tolerance, five refusals)" && echo "   PASS" || exit 1
+	@$(PY) -I compose/code/p495-prose-claim-gate/check_claims.py . || exit 1
 
 gate-region-headings: ## p338 — ACTION ZP: p383's region-heading contract, WIRED.  The gate existed with a passing suite from p383 to p337 and was in no target, so `make hooks` never judged this file's region structure at all.
 	@cd compose/code/p383-region-heading-gate && { $(PY) test_check_headings.py > $(REGION_LOG) 2>&1 || { echo "🔴 p383-region-heading-gate FAILED — the suite's own report follows:" ; sed "s/^/   /" $(REGION_LOG) ; false ; } ; } && echo "── p383-region-heading-gate (11 controls: MULTIPLE-BLOCKS, OUT-OF-VOCAB, MISSING-REGION, LATAM-ONLY, P541 no-input refusal)" && echo "   PASS" || exit 1

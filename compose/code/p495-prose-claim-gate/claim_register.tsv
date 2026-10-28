@@ -1,0 +1,31 @@
+# p495 — the load-bearing prose claims of this KB, each with a grep key that makes a
+# DELETION detectable. Registering a claim here is the only way a dropped paragraph
+# acquires the property a dropped table row already has: a key somebody can grep.
+#
+# Rules for adding a row:
+#   - grep_key must be a DISTINCTIVE LITERAL that no boilerplate would reproduce.
+#   - required_file is where the claim must LIVE, not where it is also mentioned.
+#   - ARCHIVE-ONLY is a FAILURE: p494's Singapore paragraph was in the tree the whole
+#     time, in archive/2026-10-19-p315-pre-rewrite/. A whole-tree grep calls that PRESENT.
+#   - Register the claim a pattern or a price DEPENDS ON. Not every fact. This is a
+#     load-bearing register, not an index.
+#   - Whitespace in a key is NORMALISED, so a key may cross a line wrap. This KB
+#     hard-wraps at ~95 chars; `T15-INTEGRATION-AUTHORITY` was reported CLAIM-LOST
+#     on a sentence sitting in the file before the checker was made wrap-tolerant.
+claim_id	grep_key	required_file	pass_of_record	why_it_matters
+SG-AGENTIC-FIRST	world's first governance framework built specifically for agentic AI	intel/market.md	p494 (restored from p315)	The one instrument worldwide addressing agent autonomy bounds, action logging, human-in-the-loop and multi-agent accountability — the four axes every compose/patterns.md recipe must defend. Deleted by p315's rewrite, unnoticed ~179 passes.
+SG-AI-VERIFY	AI Verify	intel/market.md	p315 / p494	The assurance half of the Singapore programme. A voluntary instrument that functions as a PROCUREMENT GATE for vendors selling to banks and government — the reason SG-AGENTIC-FIRST is a sales asset and not a compliance burden.
+VN-CORPUS-TRIGGER	uncontrolled data sources	intel/market.md	p494	Vietnam's Decision 33 makes a RAG tutor over an unvetted corpus high-risk on the retrieval design alone, with no grading feature anywhere in the product. An EU-conformant design has no corpus-provenance artefact to show for it.
+VN-EDU-DEADLINE	1 Sep 2027	intel/market.md	p492 (re-confirmed p494)	The education/health/finance deadline for systems already in operation before 15 Aug 2026. p493 degraded this precise holding into an apparent contradiction; p494 restored it. The conditional is the whole value.
+EU-OMNIBUS-SLIP	2 Dec 2027	intel/market.md	p491	The 16-month slip of the EU high-risk deadline for stand-alone education systems. The entire EMEA engagement window argument rests on this date.
+CANVAS-ADV-SANDBOX	GHSA-7pp5-29mw-9jq3	agents/top.md	p492 (graded p495)	The High-severity sandbox escape in execute_typescript. One of two High advisories on the base of P490-1.
+CANVAS-SEC-FLOOR	22.18	agents/top.md	p495	The Node.js floor the v1.16.0 sandbox fix REQUIRES. Deploy P490-1 on an older Node and the patched release is not actually patched.
+CHANNEL-PROXY-REFUSED	connect_rejected	agents/trending.md	p494	The diagnosis that separates a proxy allowlist refusal from a transient outage. Without it, every pass re-probes arxiv.org and eur-lex.europa.eu and re-files them as "might be cleared next time".
+EURLEX-REFUSED	EUR-Lex is proxy-refused	agents/trending.md	p495	Closes a standing action carried 10+ passes. The Omnibus primary read is a HUMAN deliverable, not a pass backlog item.
+EMEA-ADOPTION-GAP	no EMEA adoption rate	intel/market.md	p491 (restated through p495)	The longest-standing declared gap in this KB — 13 passes. An informed gap is information; deleting it looks exactly like coverage.
+LATAM-DEC-POPULATION	30,000+ responses	intel/market.md	p495 (figure held since earlier passes)	The LATAM demand-side evidence. Verified passes ago and found ABSENT from intel/market.md at p495 — the second instance of p494's prose-loss defect, and the first found on purpose.
+LATAM-ADOPTION-SPLIT	73.5%	intel/market.md	p495 (figure held since earlier passes)	UNESCO IESALC adoption by function. Administration at 34.1% against teaching/learning at 73.5% is where the open ERP/SIS layer sells; without the split there is no argument for the administration engagement.
+LATAM-POLICY-GAP	published AI-use policy	intel/market.md	p495 (figure held since earlier passes)	~30% institutional policy coverage against ~92% student engagement. This contrast IS the LATAM pitch: the bottleneck is governance, not adoption or capability.
+NO-PERMISSIVE-PLATFORM	No permissive education platform exists	repos/foundations.md	p493 / p495 (3 independent passes)	A declared gap that three patterns choose their base on. p494 established that a deleted gap is indistinguishable from coverage.
+CANVAS-TOKEN-RESIDUAL	can still reach the caller's Canvas token	compose/patterns.md	p495	The advisory states this residual UNFIXED at v1.16.0. It is why P495-1 removes the capability and scopes the token instead of just upgrading. Lose this line and the recipe looks like over-engineering.
+T15-INTEGRATION-AUTHORITY	the integration layer inherits the authority	intel/trends.md	p495	T15's thesis in one clause. An agent surface on an incumbent system inherits its authority and none of its defences.

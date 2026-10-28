@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p495` — `2026-10-28` — **🔴 THE DISCOVERY CHANNEL HAS GONE ONE WORSE THAN `p494`'s "RETURNING THIS KB'S OWN CONTENTS": it is now returning an UNLICENSED RESKIN of a repo this KB already holds. [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) was the first address in four passes that `grep -ril` could not find here — and `LICENSE` and `LICENSE.md` are **both `404`**, so it is all-rights-reserved. 🔵 Its own README tagline names its upstream: `naufaldi/teacher-exam`, **already on this shelf**. 🟢 That upstream is now byte-pinned for the first time: **MIT, 1 071 B, `sha1 25cb945a99ab`** at `ed5bf6359413`. 🟢 Six of six pins stable this pass, including `canvas-mcp` — the "twice a day" drift rate was a burst, not a cadence.**
+
+Full reads: [`licence-and-stars.2026-10-28-p495.tsv`](../evidence/licence-and-stars.2026-10-28-p495.tsv).
+Narrative, the advisory re-read and the new prose-loss gate:
+[`agents/trending.md`](../agents/trending.md) `p495`.
+
+### 🟢 Drift sweep — six of six stable
+
+| repo | KB pin | `p495` `git ls-remote` | verdict |
+|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `47394125364b` | `47394125364b` | 🟢 **stable — no third move.** 🔴 But pin **`v1.16.0` = `b3f06c76e435`**, not HEAD: HEAD is **unreleased code above the newest tag**, and `< 1.16.0` carries **two High advisories** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `a31d82624c27` | `a31d82624c27` | 🟢 **5 consecutive passes byte-stable** (`p490`–`p495`) |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `70859b42e714` | `70859b42e714` | 🟢 stable |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `7d9e9052bc5a` | `7d9e9052bc5a` | 🟢 stable (AGPL-3.0) |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `196c547291da` | `196c547291da` | 🟢 stable |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `46a5d7d40082` | `46a5d7d40082` | 🟢 stable, **and its licence is byte-read this pass**: LGPL-3.0, **8 241 B**, `sha1 2979df12244d` |
+
+🔵 **A rate claim corrected rather than repeated.** `p494` saw two `canvas-mcp` moves in ~24h and
+inferred *"a branch-HEAD pin is stale before the pass that wrote it finishes."* 🟢 **One quiet pass
+refutes the cadence and leaves the advice standing on a better footing** — pin the release tag
+because below it are two High advisories, not because HEAD is fast.
+
+### 🔴 The one new address, and why it is an exclusion
+
+| field | read | channel |
+|---|---|---|
+| repo | [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) | — |
+| region | **APAC** (Indonesia — *Kurikulum Merdeka*, print-ready formative assessment) | README |
+| exists | 🟢 `d37980fb15b0` | `git ls-remote` |
+| held by this KB before `p495` | 🔴 **no — 0 files** | `grep -ril` |
+| licence | 🔴 **NONE — `LICENSE` 404 AND `LICENSE.md` 404** → all rights reserved | `raw.githubusercontent.com` at HEAD |
+| upstream | 🔴 `naufaldi/teacher-exam`, **named in its own README tagline** — already on this shelf | README |
+| verdict | 🔴 **EXCLUDED — unusable by Globant at any price**, and recorded *with its upstream named* so the exclusion survives a later pass | — |
+
+🔵 **The rule this produces is a licence rule, not a search rule: a reskin inherits no grant.** MIT
+on the upstream covers the upstream's bytes; it grants nothing over a fork's additions. 🔴 **The
+failure path is short and realistic** — the search surfaces the shinier derivative, someone
+name-matches the upstream's MIT tag, and the engagement builds on a repository nobody is licensed to
+use.
+
+### 🟢 The upstream, promoted from a licence *tag* to a licence *payload*
+
+This shelf has carried [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam) as
+**MIT** from a `main/LICENSE` read. 🟢 **Now byte-pinned**: at `ed5bf6359413`, **MIT**, **`1 071 B`**,
+`sha1 25cb945a99ab`, © 2026 Naufaldi Rafif. 🔴 **The caveat already on its row is the one that
+decides a build and it is unchanged: the generator is a hosted proprietary model**, so the MIT grant
+buys the harness and not the capability.
+
+### 🔴 Ranking queries: fourth consecutive pass with nothing promotable
+
+| returned | held? | disposition |
+|---|---|---|
+| `pguso/agents-from-scratch` (MIT, ~796★) | 🟢 held — 26 files | curriculum, not a deployable agent |
+| `rohitg00/ai-engineering-from-scratch` | 🟢 held — 30 files | curriculum; #1 on GitHub Trending 24 May 2026 |
+| `h9-tect/AI-Roadmaps` | 🟢 held — 6 files | curated list |
+| `mlabonne/llm-course`, `microsoft/ML-For-Beginners`, `developer-roadmap` | 🟢 held | curriculum, already excluded |
+| Hermes, AutoGPT, CrewAI, AutoGen, LangGraph, OpenClaw | 🟢 held | general-purpose, already excluded as not education-specific |
+| `anandpatikat/guru-latihan-dinamis` | 🔴 **not held** | 🔴 **unlicensed — excluded**, above |
+
+🔵 **Supply fact, stated plainly for the fourth time: the star-ordered education-agent sweep is
+exhausted.** 🟢 **`p494` recommended reallocating to verification and regulatory reads; this pass did
+exactly that and the advisory re-read changed deployment guidance while the ranking queries changed
+nothing.** **Make verification-before-discovery the standing order of work.**
+
+🟡 **One honest note on `AutoGPT`, which keeps resurfacing:** its licence is **split** — everything
+outside `autogpt_platform/` is MIT, everything inside it is **Polyform Shield**. 🔵 This KB's
+`gate-subtree-grant` (`p382`) exists for exactly this shape: **a root-only licence read is wrong
+about the repository.** It stays excluded on fit (not education-specific), not on licence.
+
 ## 🆕 `p494` — `2026-10-28` — **🔴 THE DISCOVERY CHANNEL IS RETURNING THIS KB'S OWN CONTENTS. Every repository the brief's ranking queries surfaced this pass is already held — `ChatTutor`, `Claw-ED`, `lineage-skill`, `llm-course`, `ML-For-Beginners`, `developer-roadmap`, and the general-purpose tier. 🔴 Zero new addresses, third pass running. 🟢 The one re-read done first-hand came back byte-identical, which is the only useful output: `ChatTutor` is **AGPL-3.0, 34 522 B, `sha1 3cd688cb1bd7`** at `7d9e9052bc5a`, matching this KB's own earlier read exactly.**
 
 Full reads: [`licence-and-stars.2026-10-28-p494.tsv`](../evidence/licence-and-stars.2026-10-28-p494.tsv).

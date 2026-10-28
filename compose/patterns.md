@@ -596,3 +596,73 @@ which is the part of this pattern worth reusing even where Decision 33 does not 
 and the action-log schema. 🔴 **Add 4–6 weeks if the biometric fork is in scope**, and resolve that
 question in week one, because it is the only item here that cannot be parallelised.
 
+
+## 🆕 `P495-1` — Hardened Canvas agent deployment 🟢 *(amends `P490-1`; supersedes its pin and its tool list)*
+
+🔴 **Why this exists.** `P490-1` recommends [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+as the Canvas agent surface and that recommendation **stands** — it is still the only maintained
+agent surface on an incumbent LMS this KB has found. 🔴 **But `p495`'s first-hand advisory read makes
+the deployment details non-optional**: below `v1.16.0` the base ships **two High** advisories, and
+`v1.16.0` itself is only patched **on Node.js ≥ 22.18** while its advisory states in writing that
+**executed code can still reach the caller's Canvas token**.
+
+### The stack
+
+| role | component | licence | pin | note |
+|---|---|---|---|---|
+| LMS agent surface | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | MIT *(`1 071 B`, `sha1 491fb891a4cf`)* | 🔴 **tag `v1.16.0` = `b3f06c76e43569f10f8f11833b4eb4ba2ee478ba`** | **never branch HEAD**; HEAD `47394125364b` is unreleased code above the newest tag |
+| runtime | Node.js | — | 🔴 **≥ 22.18** | the sandbox fix *is* Node's permission model; older Node = unpatched |
+| tutor / RAG core | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 *(see the licence caveat in [`../agents/top.md`](../agents/top.md))* | `a31d82624c27` | 🟢 5 passes byte-stable |
+| quality gate | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | — | 1,143 teacher-exam items; 🔴 do not cite its arXiv abstract until a human opens it (`arxiv.org` is proxy-refused) |
+| integrity | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | MIT | `74b101785bad` | plagiarism detection, the most-maintained address on the permissive shelf |
+
+### Wiring — the five hardening steps, in order
+
+1. 🔴 **Pin the tag, not the branch.** `pip install canvas-mcp==1.16.0`, or check out
+   `b3f06c76e43569f10f8f11833b4eb4ba2ee478ba`. **Record the tag in the client's SBOM**, because that
+   is the only artefact that lets anyone later say which advisories were closed at ship time.
+2. 🔴 **Assert the runtime, in CI, as a build failure.** `node -v` → must be **≥ 22.18**. A version
+   check here is not hygiene: it is the difference between the sandbox being enforced and the
+   version string merely claiming it is. **Do this before any functional test**, because every
+   functional test passes either way.
+3. 🔴 **Disable `execute_typescript` at the server's tool registry**, and assert its absence in the
+   agent's tool list at startup. The `1.16.0` advisory states egress blocking is best-effort and
+   **executed code can still access the caller's Canvas token** — so the only complete mitigation
+   is that the capability is not exposed. 🔵 Nothing in `P490-1`'s use case (course Q&A, assignment
+   lookup, submission summaries) needs code execution.
+4. 🔴 **Scope and time-box the Canvas token.** `GHSA-7mj9-4mcg-hvhv` has the bearer token sent to a
+   URL **chosen by the file-storage host** on upload confirmation. Use the narrowest Canvas
+   developer-key scopes that satisfy the tool list, short expiry, rotation, and **never an
+   admin-scoped token for an instructor-facing agent.**
+5. 🔴 **Treat course content as hostile input.** `GHSA-hmr8-mvr2-mvw5` is a student editing course
+   content to instruct the instructor's assistant, reaching **grade change**. `1.13.0` added a write
+   allowlist and message previews; `1.16.0` marks `read_course_file` contents untrusted. 🔵 **Keep
+   both**: no write tool reachable on a first call, and a human preview on any grade-affecting
+   action. **Log every write with the prompt that produced it** — which is also what satisfies
+   Singapore's agentic-AI framework (action logging, human-in-the-loop placement, accountability
+   across agents) per [`../intel/market.md`](../intel/market.md), and is reusable as evidence rather
+   than as overhead.
+
+### What this pattern is worth saying out loud to a client
+
+🔵 **The deployable posture here cost a release-tag read, four advisory reads, a CVSS read and a
+runtime check** — none of which a university IT department will do before installing an MCP server
+someone demoed to them. 🟢 **That gap is the engagement.** The sellable artefact is not the tutor:
+it is **a pinned, hardened, logged integration with a written risk register**, on an MIT base the
+client can keep.
+
+🔴 **Say the residual risk plainly, because it does not go away with the patch:** an agent holding an
+instructor's Canvas token and reading student-editable content is a real attack surface. The
+mitigation is capability-removal and credential-scoping, and the **audit log is the control that
+makes the remaining risk detectable** rather than deniable.
+
+### 🟡 Honest limits of this recipe
+
+- 🔴 **`v1.16.0` is the newest tag AND the minimum safe one.** There is no headroom: the next
+  advisory has no released fix to point at. **Re-read the advisory page before each client ship** —
+  do not inherit this pass's count of four.
+- 🟡 **Advisory severities were read from the GitHub advisory pages, not from CVE records.** The
+  CVSS vector is published for `GHSA-7pp5-29mw-9jq3` (7.8) and **not** for the other three.
+- 🔴 **`DeepTutor`'s licence caveat and `pedagogy-benchmark`'s unread paper are unchanged** and both
+  need a human (`arxiv.org` is **proxy-refused** from this session, permanently — `p494`/`p495`).
+

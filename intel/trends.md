@@ -420,3 +420,81 @@ and a KB entry, **read that entry's own pass note first.** And before a full-fil
 *prose* against the archive copy, not just the tables — 🔴 **this KB currently has no mechanism that
 would catch a deleted paragraph, and that is the open gap this trend names.**
 
+
+## 🆕 `p495` — `2026-10-28` — one new trend, and one existing trend gains its missing demand-side leg
+
+### 🆕 `T15` — The agent surface on an incumbent system is where the security debt lands, and it lands fast
+
+🟢 **Evidence, first-hand this pass.** [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) —
+the only maintained agent surface on an incumbent LMS this KB has found, **309★**, MIT — published
+**four security advisories on a single day (`2026-10-25`)**: two **High** (a sandbox escape at CVSS
+**7.8** via `child_process` in `execute_typescript`; a prompt-injection path from course content to
+**data disclosure and grade change**), one Moderate (**Canvas bearer token sent to a URL chosen by
+the file-storage host**), one Low. 🟢 **All four patched at `v1.16.0`.**
+
+🔵 **The trend is not "this repo is risky."** It is that **the integration layer inherits the
+authority of the system it integrates with, and none of its defences.** Every advisory here is a
+consequence of the agent holding a Canvas instructor token and reading attacker-reachable content:
+course material a student can edit becomes an instruction channel, and a grade-write tool becomes
+the payload. 🔴 **An LMS has decades of permission hardening; a six-month-old MCP server fronting it
+has none of it, and the token does not care which side of the boundary it is on.**
+
+🔴 **Three generalisations this KB will apply to every future integration row:**
+
+1. 🔴 **A version string is not a patch.** `v1.16.0` closes the sandbox escape **only on
+   Node.js ≥ 22.18**, because the fix is Node's permission model. **Right version on an old runtime
+   = unpatched, reported as patched.** This is invisible to a lockfile audit.
+2. 🔴 **The published fix may leave the worst path open, in writing.** The `1.16.0` advisory itself
+   states that egress blocking is best-effort and **executed code can still reach the caller's
+   token.** 🔵 So the mitigation that matters is **removing the capability** (disable
+   `execute_typescript`) and **shrinking the credential** (scoped, short-lived token) — not upgrading.
+3. 🔵 **Advisory counts must be re-read, not inherited.** `p492` recorded four IDs; `p494` flagged
+   that an un-re-read count on a fast-moving repo is the one number not allowed to age; `p495`
+   re-read it and the count **held at four** — but severities, CVSS and patched versions had **never**
+   been read, and those are the fields that decide a deployment. **A stale count is a risk; an
+   un-read severity is a bigger one.**
+
+🔵 **Commercially this is a reason to be the integrator, not a reason to avoid the layer.** A client
+cannot assess this on their own: it took a release-tag read, four advisory reads and a runtime
+check to arrive at a deployable posture. 🟢 **That posture is now written down as
+[`../compose/patterns.md`](../compose/patterns.md) `P495-1`** — which is a billable artefact, and is
+the kind of thing an AI Studio sells that a tutor demo does not.
+
+### 🟢 `T9` (offline-first is a regional differentiator) — the demand-side leg it was missing
+
+`T9` and `P490-3` have been argued almost entirely from **regulation** — sovereignty rules,
+data-residency, jurisdictional divergence. 🟢 **This pass's APAC return supplies a procurement
+argument instead:** Forrester reads that **60% of firms and governments in major markets such as
+India and China will integrate locally developed large language models**, with **education named as
+a target sector**.
+
+🔵 **Why this strengthens `T9` rather than merely repeating it.** A regulatory driver can be
+repealed — `T12` already records South Korea **de-mandating** a national AI mandate, which is this
+KB's own counter-example to regulation as a durable demand floor. 🟢 **A procurement *preference*
+for locally developed models is not repealed; it is a buying habit.** So the architectural
+requirement `T9` prescribes — **model-portability as a first-class design property**, not a
+deployment detail — now has a reason to exist in jurisdictions **where no rule requires it**.
+🔴 **Design consequence, unchanged but better supported: never bind a pattern to a single hosted
+model.** Which is also the standing criticism of `naufaldi/teacher-exam` (MIT harness, hosted
+proprietary generator) on this KB's own trending shelf.
+
+### 🟡 `T10` (market sizing is not usable) — holds, fifth pass, with fresh contradictions
+
+🔴 The mandated trends query returned, in one sweep: **$3.7B in 2026 → $14.1B by 2033** (Persistence),
+**$10.6B in 2026 at 40.9% CAGR** (The Business Research Company), **$11.4B in 2026** (GII), and a
+North America figure given once as **~$951M (2024) → ~$2.3B (2029)** and once as **"USD 26.32 MN"**.
+🟢 **`T10` stands: these are marketing pages, they do not agree within a factor of three, and no
+pass should quote a single figure to a client.** 🔵 Quote the **direction and the regional ordering**
+instead — and in LATAM, quote the **adoption-versus-governance contrast** (`92%` student engagement
+against `~30%` institutional policy coverage) which is measured, sourced and far more persuasive
+than a sizing estimate.
+
+### 🔴 Trend-adjacent method note: a trend this KB loses is a trend that never existed
+
+🟢 `p494` proved a full-file rewrite drops prose; `p495` found a **second instance** — LATAM's
+adoption instrumentation present in the KB's history and README but **absent from
+`intel/market.md`**. 🔴 **This file is mostly prose and has been rewritten in full.** 🟢 **Four of its
+load-bearing claims are therefore now registered in `make gate-prose-claims`** — including `T15`'s
+Node floor and the EMEA adoption-rate gap — so a later rewrite that drops them **fails the build**
+instead of looking like coverage.
+

@@ -63,7 +63,7 @@ in [`trending.md`](trending.md) rather than here.
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | **387** | `38adb1e9459d` | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. |
 | dolos | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | **355** | `74b101785bad` | Source-code plagiarism detection; **3,865 commits**, the most-maintained address on this shelf. Ghent University. 🟢 **Restored `p493`** — `p296` tried to promote it, this KB's identity gate correctly refused the duplicate because a `foundations.md` row existed, and **that row was then deleted by a later rewrite too.** Licence 1 084 B, `sha1 8f6f3815d28d`. |
 | Skill-Anything | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | 344 | `3cdc1c1f11dc` | Any source (PDF, video, web, audio) → interactive package with quizzes, flashcards, spaced repetition. |
-| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 309 | 🔴 **`47394125364b`** *(`p494`; was `830bc2ef8389`)* | MCP server over Canvas LMS. 🔴 **`p494`: drifted AGAIN — second move in ~24h, and it moved *within this pass's own window*. Licence byte-identical at all three SHAs (MIT, 1 071 B, `sha1 491fb891a4cf`), so every move so far is code-only. 🔴 Pin a RELEASE TAG here, not a branch HEAD.** 🔴 **`p492`: HEAD drifted from `32e5d1ca0175`; licence byte-identical at both SHAs (1 071 B, `sha1 491fb891a4cf`) so the drift is code-only. `v1.16.0` lists FOUR advisories, not one** — `GHSA-7mj9-4mcg-hvhv` (Canvas token handling), `GHSA-7pp5-29mw-9jq3` (local code sandbox), `GHSA-hmr8-mvr2-mvw5` (file content fencing), `GHSA-qf6c-jv93-38gv` (Windows download permissions). Tool count self-inconsistent upstream (description 102, README 128) — **stop quoting a number**. |
+| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 309 | 🟢 **PIN THE TAG: `v1.16.0` = `b3f06c76e435`** *(`p495`)* — HEAD `47394125364b` is **unreleased code ahead of it** | MCP server over Canvas LMS. 🔴 **`p495`: `v1.16.0` IS A SECURITY FLOOR, not a drift preference. All FOUR advisories are patched at `1.16.0`; two are High — `GHSA-7pp5-29mw-9jq3` (sandbox escape, **CVSS 7.8**, affected `< 1.16.0`) and `GHSA-hmr8-mvr2-mvw5` (prompt injection → data disclosure / grade change, affected `≤ 1.12.0` and `1.13.0–1.15.0`, patched in two stages: write allowlist at `1.13.0`, untrusted file contents at `1.16.0`). 🔴 The sandbox fix REQUIRES **Node.js ≥ 22.18** — on an older Node the patched release is NOT patched. 🔴 Residual risk the advisory states as UNFIXED: outbound network blocking in local mode is best-effort, and executed code can still reach the caller's Canvas token. 🟢 HEAD stable since `p494` (no third move). 🟢 Advisory count re-read at the new SHA: still FOUR.** 🔴 **`p494`: drifted AGAIN — second move in ~24h, and it moved *within this pass's own window*. Licence byte-identical at all three SHAs (MIT, 1 071 B, `sha1 491fb891a4cf`), so every move so far is code-only. 🔴 Pin a RELEASE TAG here, not a branch HEAD.** 🔴 **`p492`: HEAD drifted from `32e5d1ca0175`; licence byte-identical at both SHAs (1 071 B, `sha1 491fb891a4cf`) so the drift is code-only. `v1.16.0` lists FOUR advisories, not one** — `GHSA-7mj9-4mcg-hvhv` (Canvas token handling), `GHSA-7pp5-29mw-9jq3` (local code sandbox), `GHSA-hmr8-mvr2-mvw5` (file content fencing), `GHSA-qf6c-jv93-38gv` (Windows download permissions). Tool count self-inconsistent upstream (description 102, README 128) — **stop quoting a number**. |
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | **274** | `e24c8456e5f7` | Intelligent tutoring system with Bayesian Knowledge Tracing; ReactJS + Firebase. UC Berkeley CAHLR. |
 | KSoR | [panaversity/ksor](https://github.com/panaversity/ksor) | Apache-2.0 | 232 | `b50f28926fae` | SDK for governed, authoritative knowledge systems for humans and agents. Names education institutions as its target. |
 | open-tutor-ai-CE | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | `196c547291da` | Educational and collaborative AI platform, community edition. 380 commits and **194 forks against 114★** — a fork-heavy ratio that reads as deployment, not stargazing. 🟢 **Restored `p493`**, and 🔵 **its family is confirmed from the bytes**: the 1 531-byte payload opens *"All rights reserved"*, which is the literal opening of canonical BSD and which a title-block reader can mistake for a reserved-rights notice; all three BSD conditions including no-endorsement are present. `sha1 a027c9bb4f47`. |
@@ -333,3 +333,99 @@ session's egress proxy refusing the host — an allowlist decision, not a DNS fa
 transient**, the same class of diagnosis `p492` landed for the GitHub `403`. 🔵 **Stop re-probing it,
 and move both reads out of the pass backlog into a named human deliverable**, alongside the EUR-Lex
 and Decision 33 primary reads named in [`../intel/market.md`](../intel/market.md) `p494`.
+
+
+## 🆕 `p495` — `2026-10-28` — the advisory re-read `p494` ordered, and `v1.16.0` turns out to be a **security floor**
+
+🔵 **`p494` closed with a standing instruction: _"re-read the advisories first, before any discovery
+query."_ It was run first, and it was the right order** — the discovery queries again returned
+nothing promotable (below), while the advisory read changed what this file tells an engineer to
+deploy.
+
+### 🟢 The count holds — and everything the KB did **not** have is the operational part
+
+`p492` recorded four advisory IDs at `v1.16.0`. 🟢 **Re-read at the new SHA, the count is still
+four** — so the number `p494` flagged as "not allowed to age" has aged correctly. 🔴 **But the four
+IDs were all this KB held.** Severities, CVSS, affected ranges and patched versions were never read,
+and they are the fields that decide a deployment:
+
+| advisory | severity | affected | patched | what it is |
+|---|---|---|---|---|
+| `GHSA-hmr8-mvr2-mvw5` | 🔴 **High** | `≤ 1.12.0`, and `1.13.0`–`1.15.0` | **`1.13.0`** *(write allowlist + message previews)* then **`1.16.0`** *(`read_course_file` contents marked untrusted)* | A course member hides instructions in Canvas content that the instructor's assistant reads → course-data disclosure or **unauthorised grade change** |
+| `GHSA-7pp5-29mw-9jq3` | 🔴 **High**, CVSS **7.8** `AV:L/AC:L/PR:L/UI:N/C:H/I:H/A:H` | `< 1.16.0` | **`1.16.0`** | `execute_typescript` ran caller-supplied TypeScript under `npx tsx` without blocking `child_process` → **OS command execution on the server** |
+| `GHSA-7mj9-4mcg-hvhv` | 🟡 Moderate | — | — | Canvas **bearer token** sent to a URL chosen by the file-storage host on upload confirmation, and to off-origin file URLs on download |
+| `GHSA-qf6c-jv93-38gv` | 🔵 Low | — | — | On Windows, downloaded course files are not owner-only — `os.chmod(0o600)` has no effect on NTFS |
+
+All four were published **`2026-10-25`** and are listed on the repository's
+[security advisories index](https://github.com/vishalsachdev/canvas-mcp/security/advisories)
+(linked once, in prose: the advisory IDs above are deliberately **not** per-row links, because
+four rows carrying the same repository address is what `gate-identity` exists to catch — and it
+caught this table on its first run). 🟢 **Every one of them is patched at `v1.16.0`.**
+
+### 🔴 Three consequences this file now carries
+
+🟢 **1. `p494`'s pinning advice was right, and for a stronger reason than it gave.** `p494` said to
+pin the release tag because branch HEAD drifts twice a day. 🔴 **The real reason is that anything
+below `1.16.0` carries two High advisories, one of them remote-ish prompt injection that can change
+grades.** `v1.16.0` = **`b3f06c76e43569f10f8f11833b4eb4ba2ee478ba`**, and `git ls-remote --tags`
+confirms **no `v1.17.0` exists** — so `1.16.0` is simultaneously the newest release and the minimum
+safe one, and HEAD (`47394125364b`) is **unreleased code sitting above it**. Pinning HEAD here means
+shipping a client unreviewed commits *and* losing the ability to say which advisories are closed.
+
+🔴 **2. A runtime prerequisite nobody had recorded: Node.js ≥ 22.18.** The `1.16.0` sandbox fix works
+by running local code under **Node's permission model** (which blocks child processes, worker
+threads, native addons, `process.binding` and file writes). That model requires **Node 22.18 or
+later**. 🔴 **Deploy `v1.16.0` on an older Node and the advisory is not actually closed** — the
+version string says patched and the mechanism is absent. This is now a hard line item in
+[`../compose/patterns.md`](../compose/patterns.md) `P490-1` / `P495-1`.
+
+🔴 **3. The advisory itself names residual risk as unfixed, and it is the risk that matters here.**
+Quoting the `1.16.0` advisory: outbound network blocking in local mode is **best-effort**, and
+**executed code can still access the caller's Canvas token**. 🔵 So "upgrade to `1.16.0`" is not a
+complete answer for an engagement: on a Canvas tenant holding real student records, the
+defensible posture is to **disable `execute_typescript` outright** and run the server with a
+**scoped, short-lived Canvas token**, because the patch narrows the sandbox and does **not** take
+the token out of its reach.
+
+### 🟢 Pins: five of five stable, and the volatile one has stopped moving
+
+| repo | KB pin | `p495` `git ls-remote` | verdict |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `a31d82624c27` | `a31d82624c27` | 🟢 **5th consecutive pass byte-stable** (`p490`–`p495`) |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `47394125364b` | `47394125364b` | 🟢 **stable** — no third move. 🔵 `p494` inferred a ~2-moves-per-day rate from two moves in ~24h; **one quiet pass is enough to say that was a burst, not a cadence** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `70859b42e714` | `70859b42e714` | 🟢 stable |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `7d9e9052bc5a` | `7d9e9052bc5a` | 🟢 stable |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `196c547291da` | `196c547291da` | 🟢 stable — the permissive answer in its layer |
+
+### 🔴 No promotions, and the discovery channel has now looped *twice over*
+
+🔴 **Fourth consecutive pass with no promotable find.** `p494` reported the ranking queries returning
+this KB's own contents. 🔴 **`p495` found something worse and more precise: the channel is now
+returning *unlicensed reskins* of repos this KB already holds.**
+
+[`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) was the
+**first address in four passes that `grep -ril` could not find anywhere in this repository** — 0
+files. It exists (`d37980fb15b0`). It is an Indonesian *Kurikulum Merdeka* print-ready assessment
+generator, which is squarely in this KB's APAC interest. 🔴 **And it has no licence at all** —
+`LICENSE` and `LICENSE.md` both return `404` at HEAD, so it is all-rights-reserved and Globant
+cannot build on it. 🔵 **Its own README tagline names its upstream: `- naufaldi/teacher-exam`** —
+which this KB **already holds**, in [`../repos/trending.md`](../repos/trending.md), correctly tagged
+MIT. 🟢 **This pass byte-pins that upstream for the first time: MIT, `1 071 B`, `sha1 25cb945a99ab`,
+© 2026 Naufaldi Rafif, at `ed5bf6359413`.**
+
+🔵 **The transferable rule, and it is a licence rule rather than a search rule: a reskin inherits no
+grant.** A derivative with no `LICENSE` is unusable **even when its upstream is MIT**, because the
+MIT grant covers the upstream's bytes and says nothing about the fork's additions. 🔴 **The failure
+mode is specific and plausible: a search returns the shinier derivative, the upstream's MIT tag is
+found by name-matching, and an engagement builds on a repository nobody is licensed to use.**
+Record the derivative as excluded *with its upstream named*, which is what this row does.
+
+### 🔵 A gap that is now a conclusion, not a backlog item
+
+🔴 **`EUR-Lex is proxy-refused.`** Probed twice this pass
+(`eur-lex.europa.eu/eli/reg/2026/1744/oj` and the `legal-content` URL):
+`http=000, curl exit 56 — connect_rejected`. 🔵 **Identical signature to `arxiv.org`**, which `p494`
+established is an egress-allowlist refusal rather than an outage. **So the EU Digital Omnibus
+primary read — carried as an open action for more than ten passes — can never be discharged from
+this session on any pass.** It belongs on the same named human deliverable as the two arXiv papers
+and the Vietnam Decision 33 official text. See [`trending.md`](trending.md) `p495`.

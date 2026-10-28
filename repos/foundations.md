@@ -295,3 +295,57 @@ permissive QTI exam engine** — so `T2`'s binding constraint holds at the insti
 nowhere else. An engagement needing enrolment plus a gradebook has one permissive answer; an
 engagement needing a SIS or a standards-based exam engine has **none**, and the copyleft conversation
 is unavoidable. **Say so in week one.**
+
+
+## 🆕 `p495` — `2026-10-28` — the census is unchanged, and the LGPL anchor is byte-read for the first time
+
+🟢 **No change to the permissive numerator or the denominator this pass.** No foundations candidate
+was promoted, and the reason is a supply fact rather than an absence of effort: the mandated
+vertical-platform query — `open source platform education ERP CRM MIT Apache` — **returned no
+MIT- or Apache-licensed education platform for the third consecutive pass**. What it returns is
+`OpenEduCat` (**LGPL-3.0**), `Apache OFBiz` (Apache-2.0 but **not education**), generic MIT CRMs
+(not education), and `CK-ERP` (a 2010 release, licence unconfirmed, effectively dead).
+
+🔵 **That is `p493`'s conclusion arriving from a third independent direction and it should now be
+treated as structural:** in the education **platform** layer, the permissive licences are not
+where the mature systems are. The mature systems are GPL/LGPL/AGPL, and the engagement question
+is never "find a permissive LMS" but **"which obligation can this client carry."**
+
+### 🟢 `openeducat_erp` — the row this shelf points LATAM and APAC engagements at, now verified from bytes
+
+| field | before `p495` | `p495` first-hand read | channel |
+|---|---|---|---|
+| pin | `46a5d7d40082` | 🟢 `46a5d7d40082` — **unchanged** | `git ls-remote` |
+| licence | `LGPL-3.0` *(shelf tag)* | 🟢 **LGPL-3.0 confirmed from the payload** — `8 241 B`, `sha1 2979df12244d`, 178 lines, titled *"GNU LESSER GENERAL PUBLIC LICENSE, Version 3"* | `raw.githubusercontent.com` |
+| attribution | — | 🔴 **DEFECT: line 1 of `LICENSE` reads *"For copyright information, please see the COPYRIGHT file"* — and `COPYRIGHT` returns `404`** | `raw` probe |
+
+🔴 **Why the dangling `COPYRIGHT` matters, and it is not pedantry.** LGPL-3.0 is a *conditional*
+grant: §4 and the GPL-3.0 terms it incorporates require preserving copyright notices and stating
+changes. 🔴 **The repository points its notice obligation at a file that does not exist**, so an
+integrator cannot discharge the notice requirement from the grant alone — there is nothing
+authoritative to reproduce. 🔵 **Practical instruction for an engagement:** reproduce the `LICENSE`
+file verbatim, cite the **pin** (`46a5d7d40082`) as the provenance of what you received, and
+**ask the maintainers for the `COPYRIGHT` file in writing** rather than reconstructing attribution
+from commit authorship — which `p349`/`ACTION ZZ-bn` already established is not a reliable
+ordering.
+
+🔵 **This is the same genus as the *19-byte license* note above**: the licence *name* is not the
+grant. The grant is the bytes, and the bytes here are correct but **incomplete by their own
+reference**.
+
+### 🟢 Pins re-read this pass
+
+| repo | pin | verdict |
+|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `46a5d7d40082` | 🟢 stable + licence byte-read |
+| [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam) | `ed5bf6359413` | 🟢 **MIT byte-pinned** — `1 071 B`, `sha1 25cb945a99ab` *(a trending row, not a foundations row — the generator is a hosted proprietary model)* |
+
+### 🔴 Declared gap, restated and now *registered* rather than merely restated
+
+🔴 **No permissive education platform exists at the ERP/SIS/LMS layer.** Searched again this pass
+with the brief's own query; found nothing new. 🟢 **This absence is now a registered claim in**
+[`../compose/code/p495-prose-claim-gate/claim_register.tsv`](../compose/code/p495-prose-claim-gate/claim_register.tsv)
+**(`NO-PERMISSIVE-PLATFORM`)**, because `p494` established that a declared gap deleted by a later
+rewrite is indistinguishable from coverage — and this gap is load-bearing: three patterns choose
+their base on it.
+

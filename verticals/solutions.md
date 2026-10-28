@@ -206,3 +206,51 @@ review step, cannot be made conformant by swapping the model underneath it.
 [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot)'s shipped design — every
 generated artefact routed to a teacher before classroom use — remains the shape to copy at this layer.
 Full build guidance: `P494-1` in [`../compose/patterns.md`](../compose/patterns.md).
+
+
+## 🆕 `p495` — `2026-10-28` — the Odoo answer is byte-verified, and the Canvas surface gets a version floor
+
+### 🟢 `OpenEduCat` — the Education-ERP row, read from the payload
+
+This file's **Education ERP** row has carried `OpenEduCat` as LGPL-3.0 on a shelf tag. 🟢 **Read
+first-hand this pass and confirmed**: LGPL-3.0, **`8 241 B`**, `sha1 2979df12244d`, at pin
+`46a5d7d40082` (stable). 🔵 It remains *"the literal Odoo answer"* — admissions, fees, library,
+hostel, timetable, on Odoo — and it remains the right base for a LATAM administration engagement,
+where [`../intel/market.md`](../intel/market.md) `p495` now places the numeric opening (UNESCO
+IESALC: administration adoption **34.1%**, against teaching & learning at **73.5%**).
+
+🔴 **One defect found in the grant itself, and it changes the paperwork on an engagement.** Line 1
+of its `LICENSE` reads *"For copyright information, please see the COPYRIGHT file"* — and
+`COPYRIGHT` returns **`404`**. LGPL-3.0 requires preserving copyright notices; **the repository
+points that obligation at a file that does not exist.** 🔵 **Do:** ship the `LICENSE` verbatim, cite
+the pin as provenance, and request the `COPYRIGHT` file from the maintainers in writing. **Do not**
+reconstruct attribution from commit metadata.
+
+### 🔴 Amendment to the Canvas agent-surface row — a **version floor**, not a preference
+
+The Canvas integration surface in this file is [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp).
+🔴 **It now carries a hard minimum**, read first-hand this pass:
+
+| constraint | value | why |
+|---|---|---|
+| minimum version | 🔴 **`v1.16.0`** (= `b3f06c76e435`) | **all four** published advisories are patched there; **two are High** (`GHSA-7pp5-29mw-9jq3`, CVSS **7.8**, sandbox escape; `GHSA-hmr8-mvr2-mvw5`, prompt injection → data disclosure / **grade change**) |
+| pin style | 🔴 **the release tag, never branch HEAD** | HEAD (`47394125364b`) is **unreleased code above the newest tag**, and no `v1.17.0` exists |
+| runtime | 🔴 **Node.js ≥ 22.18** | the `1.16.0` sandbox fix works via **Node's permission model**; on an older Node the advisory is **not actually closed** while the version string says it is |
+| tool posture | 🔴 **disable `execute_typescript`** | the advisory states as **unfixed**: egress blocking is best-effort and **executed code can still reach the caller's Canvas token** |
+| credential | 🔴 **scoped, short-lived Canvas token** | `GHSA-7mj9-4mcg-hvhv` (Moderate): the bearer token is sent to a URL **chosen by the file-storage host** |
+
+🔵 **Read the shape of this, not just the rows.** This is the **only maintained agent surface on an
+incumbent LMS** this KB has found, so it stays the recommended integration point — but the honest
+posture is *"deploy it pinned, hardened and with the code-execution tool off,"* not *"deploy it."*
+The full recipe is [`../compose/patterns.md`](../compose/patterns.md) **`P495-1`**.
+
+### 🔴 Declared gap — the vertical-platform query returns no permissive platform, third pass running
+
+🔴 The brief's `open source platform education ERP CRM MIT Apache` query returned **no MIT- or
+Apache-licensed education platform** again: `OpenEduCat` (LGPL-3.0), `Apache OFBiz` (Apache-2.0 but
+not education), generic MIT CRMs (not education), `CK-ERP` (2010, dead). 🟢 **Structural conclusion,
+now stable across three independent passes: in this layer the mature systems are copyleft, and the
+engagement question is which obligation the client can carry** — which is what this file's decision
+tree already asks. Registered as `NO-PERMISSIVE-PLATFORM` in the `p495` claim register so a later
+rewrite cannot quietly drop it.
+

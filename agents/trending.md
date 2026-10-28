@@ -4,6 +4,250 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p495` — `2026-10-28` — **🟢 THE ADVISORY RE-READ `p494` ORDERED WAS RUN FIRST, AND IT RESOLVED THE PIN FROM A PREFERENCE INTO A SECURITY FLOOR. The count held at FOUR, so the number `p494` said must not age is fine — but the four IDs were ALL this KB held. Read first-hand this pass: **two are High**, one at **CVSS 7.8**, and 🟢 **all four are patched at `v1.16.0`**. 🔴 Two things nobody had recorded fall out of that: the `1.16.0` sandbox fix **requires Node.js ≥ 22.18** (on an older Node the patched version is not patched), and the advisory states as **unfixed** that executed code **can still reach the caller's Canvas token**. 🔴 And `EUR-Lex is proxy-refused` — `connect_rejected`, same signature as `arxiv.org` — which ends a ten-pass open action by proving it is not a pass action at all. 🟢 Five of five pins stable; the "twice a day" drift rate was a burst, not a cadence.**
+
+Full reads: [`licence-and-stars.2026-10-28-p495.tsv`](../evidence/licence-and-stars.2026-10-28-p495.tsv).
+The advisory table, the Node floor and the token residual:
+[`agents/top.md`](top.md) `p495`. The hardened recipe: [`compose/patterns.md`](../compose/patterns.md) `P495-1`.
+
+🔵 **Channel posture: unchanged, and now with one fewer host to re-probe.** `git ls-remote --symref`
+for existence and SHA, `raw.githubusercontent.com` at a pinned SHA for licence bytes, `WebFetch`
+page reads for stars, releases and **advisories**; `curl -sI` against `github.com` is still this
+session's proxy `403` and still carries zero existence information.
+
+### 🟢 Running the ordered re-read first was the right call, measured
+
+`p494` handed exactly one instruction to this pass: *"re-read the advisories first, before any
+discovery query."* 🟢 **Both halves of that bet paid.** The advisory read produced three changes to
+what this KB tells an engineer to deploy. The discovery queries, run afterwards, produced **no
+promotable repository for the fourth consecutive pass**. 🔵 **`p494`'s reallocation recommendation is
+therefore not just vindicated once — it should become this KB's standing order of work:
+verification before discovery, until the supply picture changes.**
+
+### 🔴 The sharp end: a patched version string is not a patch
+
+| what the KB held (`p492`) | what `p495` read | consequence |
+|---|---|---|
+| four advisory **IDs** | four IDs **+ severities, CVSS, affected ranges, patched versions** | 🔴 two are **High** |
+| "`v1.16.0` lists four advisories" | 🟢 **all four are *patched at* `1.16.0`** | 🔴 `< 1.16.0` ships **two High** issues — the pin is a **security floor** |
+| pin `v1.16.0` or later, because HEAD drifts | 🟢 `v1.16.0` = `b3f06c76e435`, and **no `v1.17.0` exists** | "or later" currently means **exactly `v1.16.0`**; HEAD is **unreleased code above the newest tag** |
+| — | 🔴 the fix runs code under **Node's permission model**, requiring **Node ≥ 22.18** | 🔴 **right version + old runtime = unpatched**, with a version string that says otherwise |
+| — | 🔴 advisory states **unfixed**: best-effort egress blocking, and **executed code can still access the caller's Canvas token** | 🔵 upgrading is **not** the whole mitigation — disable `execute_typescript`, scope the token |
+
+🔵 **Why the Node line is the one to carry to a client.** Every other row here is a version
+comparison an engineer can check from a lockfile. **This one is invisible to the lockfile**: the
+dependency is satisfied, the advisory shows as resolved, and the sandbox simply is not enforced
+because the runtime predates the permission model. 🔴 **That is a silent-failure class, and this KB
+had no row for it.**
+
+### 🔴 `EUR-Lex is proxy-refused` — a ten-pass action closed by proving it cannot be done here
+
+This KB has carried *"verify the Omnibus dates against EUR-Lex before client use"* since `p491`,
+re-registered pass after pass. Probed this pass:
+
+```
+eur-lex.europa.eu/eli/reg/2026/1744/oj                  — http=000, curl exit 56  (connect_rejected)
+eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744 — http=000, curl exit 56  (connect_rejected)
+```
+
+🔵 **`connect_rejected` is this session's egress proxy refusing the host** — the diagnosis `p494`
+landed for `arxiv.org` and `p492` landed for the GitHub `403`. **It is an allowlist decision, so no
+future pass will find it cleared.** 🟢 **The action is not "pending", it is misfiled.** Moved, with
+the two arXiv papers (`arXiv:2604.26962`, `arXiv:2506.18710`) and the Vietnam Decision 33 official
+text, onto the named **human** deliverable.
+
+🟡 **And the dates themselves got independent corroboration from the search channel, which is worth
+something short of a primary read.** This pass's EMEA query returned the Omnibus as **Regulation
+(EU) 2026/1744**, published in the OJ **24 Jul 2026**, applying from **27 Jul 2026**, with
+stand-alone Annex III systems at **2 Dec 2027** and embedded AI at **2 Aug 2028**. 🟢 **The two dates
+this KB's commercial argument rests on — `2026/1744` and `2 Dec 2027` — now agree across
+independent secondary reads.** 🔴 **The same return also carried a conflict**: the Commission's own
+milestone list gives **31 Jul 2026** as the entry-into-force date against the guide's 27 Jul. 🔵
+Recorded as a conflict, not promoted — and it is a *four-day* discrepancy on an entry-into-force
+date, which changes no deadline in any pattern here.
+
+### 🔴 The discovery channel is now returning unlicensed reskins of this KB's own holdings
+
+🟢 **One address this pass was genuinely new** — the first in four passes that `grep -ril` could not
+find anywhere in this repository:
+
+| field | read |
+|---|---|
+| repo | [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) |
+| exists | 🟢 yes — `d37980fb15b0` |
+| held by this KB | 🔴 **no — 0 files**, the first miss in four passes |
+| fit | 🟢 strong on paper — Indonesian **Kurikulum Merdeka** print-ready formative assessment, APAC, offline-printable |
+| licence | 🔴 **NONE** — `LICENSE` **404**, `LICENSE.md` **404** at HEAD → all rights reserved |
+| upstream, named in its own README tagline | 🔴 `- naufaldi/teacher-exam` — **already held by this KB**, correctly tagged MIT |
+
+🟢 **The upstream is now byte-pinned for the first time**: `naufaldi/teacher-exam` at
+`ed5bf6359413`, **MIT**, **`1 071 B`**, `sha1 25cb945a99ab`, © 2026 Naufaldi Rafif. This KB had the
+MIT *tag* from a `main/LICENSE` read; it now has the payload.
+
+🔵 **The rule, which is a licence rule and not a search rule: a reskin inherits no grant.** The
+upstream's MIT covers the upstream's bytes. It says nothing about a fork's additions, so an
+unlicensed derivative is unusable **even though its parent is permissive**. 🔴 **The plausible
+failure is concrete** — the search surfaces the shinier derivative, someone name-matches the
+upstream's MIT tag, and an engagement builds on a repository nobody is licensed to use. Recorded in
+[`top.md`](top.md) as excluded **with its upstream named**, which is the form that makes the
+exclusion survive a later pass.
+
+🟡 **A second signal in the same find, recorded without a verdict.** Both repositories advertise in
+their own READMEs which models wrote them (`Opus 4.7`, `GPT 5.5`, `Composer 2.5`, a hosted
+`GPT-6 Luna` for generation). 🔵 For a KB whose job is picking *buildable* bases, this is a
+maintenance-risk signal worth watching rather than a disqualifier — and the harder fact remains the
+one already in [`../repos/trending.md`](../repos/trending.md): `teacher-exam`'s **generator is a
+hosted proprietary model**, so the MIT grant buys the harness, not the capability.
+
+### 🟢 A detector for the defect `p494` could only name: `make gate-prose-claims`
+
+🔴 **`p494`'s headline finding was that this KB has no detector for dropped *prose* at all**, and it
+proved the point with a deletion that survived ~179 passes: Singapore's agentic-AI framework
+paragraph, removed by `p315`'s rewrite, found only in
+`archive/2026-10-19-p315-pre-rewrite/intel-market.md`. Its diagnosis was exact — *"a dropped
+paragraph has no key to grep for"* — and it is also the specification for the fix.
+
+🟢 **Built this pass:** [`compose/code/p495-prose-claim-gate/`](../compose/code/p495-prose-claim-gate/),
+wired into `make hooks` as `gate-prose-claims`. A load-bearing prose claim is registered in
+[`claim_register.tsv`](../compose/code/p495-prose-claim-gate/claim_register.tsv) with a
+**distinctive literal grep key** and the file that must carry it. **Registering the claim is what
+gives a paragraph the property a table row already had: a key somebody can grep.**
+
+🔴 **The control that makes it work is `ARCHIVE-ONLY`, and it is the whole reason a naïve detector
+would have failed.** `p494`'s Singapore paragraph was never absent from the repository —
+`grep -ril` *found* it, in the pre-rewrite archive. **A whole-tree grep therefore grades a deleted
+claim as present, which is worse than having no detector**, because it reports coverage. So the gate
+reads the **required file**, and a key surviving only under `archive/` or `scratchpad/` is graded
+🔴 **`ARCHIVE-ONLY` — a failure, not a pass.**
+
+Verdicts: `PRESENT` · `CLAIM-LOST` (absent corpus-wide) · `ARCHIVE-ONLY` (the `p494` signature) ·
+`NO-SUCH-FILE` (the required file itself is gone). The gate **refuses rather than passes** on a
+missing register, an empty register, a blank `grep_key` (which would match everything and grade
+every loss as present), a duplicate `claim_id`, or a row naming no file.
+
+🟢 **21 controls, all passing**, including the negative controls the design turns on: a claim
+held in *both* the required file and the archive is `PRESENT`, a lookalike directory
+(`archive-notes/`) is **not** an archive, and wrap-tolerance (below) does **not** invent matches. 🔵 The suite loads `check_claims.py` by **explicit path**
+rather than by name, because `make` runs these suites under `python3 -I`, which strips the script's
+own directory from `sys.path` — the `p229` finding, and the exact reason a working gate in this repo
+historically stayed a one-off runnable only from its own folder.
+
+🟢 **Seeded with ten claims and run against the live corpus, it immediately earned its place**:
+8 `PRESENT`, and 🔴 **2 `CLAIM-LOST` — both of them facts *this pass* had verified and not yet
+written* (the Node `22.18` floor and the EUR-Lex refusal). **It caught a gap in the pass that built
+it, which is the only honest first result for a detector of omissions.** Both are now written and
+the gate is green at **10/10**.
+
+🔴 **And its second live run caught a defect in the gate itself, which is worth more than the
+clean result would have been.** Registering `T15`'s thesis produced `CLAIM-LOST` on **a sentence
+that was sitting in the file** — because this KB hard-wraps prose at ~95 characters and the key
+spanned a line break. 🔵 **The wrong fix is to require single-line keys**, which would restrict the
+register to claims short enough to fit inside a wrap — i.e. exclude exactly the load-bearing ones.
+🟢 **Fixed in the instrument instead: whitespace is normalised on both sides before matching**, with
+three added controls (a key crossing one wrap, a key crossing two, and a near-miss that must still
+be `CLAIM-LOST` so tolerance cannot invent a match).
+
+🔵 **Worth naming as a general lesson about gates in this repo: a detector's first finding should be
+treated as a claim about the detector, not about the corpus.** Both of this gate's first two findings
+were real — two unwritten facts, then one blind spot in its own matcher — and only one of them was
+about the KB.
+
+🔵 **What it does not do, stated so a later pass does not over-trust it.** It proves a registered
+string is still in a file. It cannot prove the *surrounding argument* survived, it cannot detect the
+loss of a claim nobody registered, and a pass that rewrites a file **and** edits the register can
+still erase a claim legitimately. 🔴 **So the register is the asset, not the script** — and the
+honest measure of this gate is how many load-bearing claims are in it. Ten is a start; the ~179-pass
+Singapore deletion is now one `make` away from impossible, and everything unregistered is exactly as
+exposed as it was before.
+
+### 🟢 `make hooks` run against a BASELINE, which is the only way the number means anything
+
+🔴 **`make hooks` reports 🔴 FAIL — 47/63 gates green.** 🔵 **A pass that reports that number without a
+baseline has said nothing**, so this pass cloned the repository at `HEAD` (every `p495` edit is
+uncommitted at that point) and re-ran the red set there.
+
+| | result |
+|---|---|
+| red in this working tree, first run | **16** gates |
+| 🟢 red at clean `HEAD` as well | **15** — `recount`, `gate-enumeration`, `gate-register-currency`, `gate-shelf-consistency`, `gate-fold-identity`, `gate-author-key`, `gate-census-currency`, `gate-grant-path`, `gate-census-union`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`, `gate-promotion`, `gate-promotion-ledger`, `gate-cell-reproduction` — **pre-existing, none of them `p495`'s** |
+| 🔴 red **because of `p495`** | **1** — `gate-identity`, and it was a true positive (below) |
+| 🟢 red at `HEAD` and **fixed by `p495`** | **1** — `gate-region-headings` |
+| 🟢 new gate added, green | **1** — `gate-prose-claims` |
+
+🔴 **`gate-identity` caught this pass's own table, correctly, on its first run.** The `p495` advisory
+table in [`top.md`](top.md) linked each of the four `GHSA-…` IDs to
+`github.com/vishalsachdev/canvas-mcp/security/advisories/…`, and `p283-repo-identity` read that as
+**one repository published as four live rows of one table** — `ADDRESS-TWICE`, which is exactly the
+shape that gate exists to stop. 🟢 **Fixed by de-linking the IDs and linking the advisory index once,
+in prose.** 🔵 **Worth recording rather than quietly fixing: the gate was right, the finding was not
+a false positive, and a pass that disabled it to publish a prettier table would have broken a
+control that protects the shelves.**
+
+🟢 **`gate-region-headings` was red at `HEAD` — `intel/market.md:50`, `P383-MISSING-REGION: Global`.**
+The region vocabulary is five values and that file's `## Opportunities by region` block carried four.
+🔵 **The gate was right and the file was wrong for an unknown number of passes.** Fixed by writing a
+real `### Global` subsection — the supply exhaustion, the no-permissive-platform gap, `T15` and the
+sizing refusal, which are precisely the findings that have no region and were being distorted by
+being filed under one. 🔴 **Nothing was placed there to satisfy the gate.**
+
+🟡 **The 15 pre-existing reds are not this pass's to clear and are not being adopted silently
+either.** They are bookkeeping and census gates (promotion ledger, census currency, union currency,
+author keys, cell reproduction) and several report *parse faults* rather than content faults — e.g.
+`p442: zero published cells parsed — a parse fault, not a clean shelf`. 🔵 **Named here so the next
+pass can pick one with a baseline already measured**, which is more than this pass inherited.
+
+### 🟢 Pins: five of five stable, and a rate claim corrected
+
+| repo | KB pin | `p495` | verdict |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `a31d82624c27` | `a31d82624c27` | 🟢 **5 consecutive passes byte-stable** |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `47394125364b` | `47394125364b` | 🟢 **stable — no third move** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `70859b42e714` | `70859b42e714` | 🟢 stable |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `7d9e9052bc5a` | `7d9e9052bc5a` | 🟢 stable |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `196c547291da` | `196c547291da` | 🟢 stable |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `46a5d7d40082` | `46a5d7d40082` | 🟢 stable, **licence now byte-read** (see [`../verticals/solutions.md`](../verticals/solutions.md)) |
+
+🔵 **One inherited claim corrected, gently.** `p494` observed two `canvas-mcp` moves inside ~24 hours
+and drew a cadence from it: *"a branch-HEAD pin is stale before the pass that wrote it finishes."*
+🟢 **One quiet pass is enough to say that was a burst rather than a rate.** 🔵 **The pinning advice
+survives the correction intact and is now better founded** — pin `v1.16.0` because anything below it
+carries two High advisories, not because HEAD moves quickly.
+
+### 🔴 Misses declared — every mandated query run, and the per-region picture
+
+🟢 Both ranking queries, the vertical-platform query, the trends query and all four per-region
+queries were run.
+
+| query | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **nothing promotable.** `agents-from-scratch` (26 files held, curriculum), Hermes / AutoGPT / CrewAI / AutoGen / LangGraph (held, general-purpose, already excluded as not education-specific) |
+| `github trending education AI 2026` | 🔴 curriculum repos again — `ai-engineering-from-scratch` (30 files held), `AI-Roadmaps` (6 files held), `ML-For-Beginners`, `developer-roadmap`. 🟢 **One genuine miss**: `guru-latihan-dinamis` — **unlicensed**, above |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **the query itself has a finding: it returns no MIT/Apache education ERP, for the third pass.** OpenEduCat (LGPL-3.0) and Apache OFBiz (not education) are what exist. See [`../verticals/solutions.md`](../verticals/solutions.md) `p495` |
+| `AI education industry trends 2026` | 🔴 market-research marketing pages, mutually inconsistent sizing — **`T10` holds** |
+
+**Per-region**, with the brief's rule that an informed gap beats silence:
+
+- 🔴 **North America — nothing new, and `grep` is why that is a *finding* rather than a guess.** The
+  query returned MultiState's **134 bills across 31 states** and the four states mandating both
+  state guidance and district-level policy adoption (**Idaho, Maryland, Oklahoma, Virginia**). 🟢
+  **All of it is already held** — `Oklahoma` 78 files, `Virginia` 21, `134 bills` 61, `31 states` 60.
+  🔵 **This is `p493`'s grep rule paying for itself in the other direction:** it stopped this pass
+  from writing a fresh-looking "new NA finding" that the KB has carried for dozens of passes.
+- 🔴 **EMEA — still no adoption rate and still no vendor share. Thirteenth independent pass.** What
+  came back was the Omnibus calendar (corroborated above) and a vendor table listing the UK as
+  light-touch and Canada's AIDA as pending. 🔵 **Thirteen passes of the same absence is itself the
+  datum**: this is not a gap in the KB's effort, it is a gap in the *public* record, and the
+  honest client answer is that EMEA education-AI adoption is not publicly quantified.
+- 🟡 **APAC — the education-specific layer is thin, and the query returned enterprise APAC instead.**
+  Usable: Forrester's read that **60% of firms and governments in major markets such as India and
+  China will integrate locally developed LLMs**, with **education named as a target sector** — which
+  supports `P490-3`'s sovereign/offline thesis from the demand side. 🔴 **No ministry-level
+  education adoption rate for any APAC country was returned**, and the regulatory returns were
+  financial-services and copyright, not education.
+- 🟢 **LATAM — the one region where the query returned quantities this KB did not hold.** The
+  institutional-policy gap is now numeric. See [`../intel/market.md`](../intel/market.md) `p495`.
+
+
 ## 🆕 `p494` — `2026-10-28` — **🔴 `p493` FOUND THAT REWRITES DROP TABLE ROWS. THEY ALSO DROP PROSE, AND THIS KB HAS NO DETECTOR FOR THAT AT ALL. An entire APAC regulatory paragraph — Singapore's Model AI Governance Framework, its generative-AI framework, its **agentic AI framework**, and AI Verify — was deleted by `p315`'s rewrite. `intel/market.md` now mentions Singapore **once**, as a ban-support percentage. 🟢 Re-confirmed first-hand and it is the most commercially on-point instrument in APAC for this KB's own product: IMDA launched the **world's first governance framework for agentic AI** on **22 Jan 2026**. 🔴 And `p493`'s one hand-off to this pass — the Vietnam date "conflict" — was **never a conflict**: `p492` had resolved it precisely, and `p493` re-read a flatter secondary source and flagged the KB's correct entry as suspect. 🔴 Separately: [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), the base of `P490-1`, **drifted again inside this pass's own thirty-minute window** — `830bc2ef8389` → **`47394125364b`**, licence byte-identical, second move in ~24h.**
 
 Full reads: [`licence-and-stars.2026-10-28-p494.tsv`](../evidence/licence-and-stars.2026-10-28-p494.tsv).
