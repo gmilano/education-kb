@@ -6,6 +6,22 @@ updated: 2026-10-28
 
 # Education platforms you can customise with AI on top
 
+> 🟢 **`p505` (`2026-10-28`) — NO NEW PLATFORM ROW THIS PASS, AND THAT IS THE FINDING.**
+> The prescribed vertical query (`open source platform education ERP SIS MIT Apache 2026`) returned
+> **OpenOLAT, Apache OFBiz, Sakai, OpenEduCat, ERPNext and Open edX** — 🔴 **every one of them
+> already on this shelf**, and the licence picture it returned is the one this shelf already
+> publishes: **no education ERP/SIS exists under MIT or Apache-2.0**. OpenEduCat is **LGPL-3.0**,
+> ERPNext **GPL-3.0**, Sakai **ECL-2.0** (Apache-derived, not Apache), OpenOLAT **Apache-2.0** but an
+> **LMS, not an SIS**. 🔵 **This is a saturation reading on the vertical axis, declared as
+> saturation rather than left as silence** — the shelf's standing `T2` position (this layer is
+> copyleft and that is the binding constraint) survives a fourth dedicated query.
+> 🟢 **Standing checks applied:** `Gap 504-A` reconciliation **4 queried / 4 returned**; `T29`
+> `archived: false` on all four addresses read this pass.
+> 🔵 One candidate was examined and **rejected** rather than shelved:
+> [`mcavaliere/ai-spanish-tutor`](https://github.com/mcavaliere/ai-spanish-tutor) — **1★, no
+> `license` field, abandoned `2024-05-20`**. Narrative:
+> [`agents/trending.md`](../agents/trending.md) `p505`.
+
 > 🔴 **`p504` (`2026-10-28`) — THIS SHELF WAS RECOMMENDING AN ARCHIVED REPOSITORY AS A BUILD BASE.**
 > [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) reads
 > **`archived: true`** on the API. It sat here as the permissive base for live classroom response

@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p505` — `2026-10-28` — **🆕 `T30` (the prescribed discovery battery has now saturated on BOTH axes — supply and demand — so the binding defect class in this base is no longer discovery but PROMOTION BETWEEN SHELVES, and this pass found a live instance). 🟢 `T29`'s one-field `archived` check ran clean on every address. 🔴 Three instrument defects registered, one of which nearly wrote a false falsification onto `agents/top.md`.**
+
+Reads: [`api-reconciliation.2026-10-28-p505.tsv`](../evidence/api-reconciliation.2026-10-28-p505.tsv).
+Full narrative: [`agents/trending.md`](../agents/trending.md) `p505`.
+
+### 🆕 `T30` — **The discovery battery is saturated on both axes. What still fails is promotion between shelves.**
+
+`T24` established saturation on the **supply** axis: new topic sweeps return rows this base already
+holds. 🔴 **This pass establishes the same on the DEMAND axis.** All eight prescribed queries were
+run — four global, four regional — and **every** named instrument, institution and figure returned
+is already shelved outside `archive/`: the two US bill-count trackers, five named state and federal
+bills, Korea's AI Basic Act, Japan's AI Promotion Act, Singapore's AI Verify, Vietnam's high-risk
+listing and its "sole basis" qualifier, Brazil's PL 2.338/2023, Chile's bill, the 716-instrument
+count, UNESCO IESALC, TALIS 2024, Ceibal, the Digital Education Council survey, and
+Regulation (EU) 2026/1744 with both its deadlines.
+
+🔵 **The consequence is a reallocation, not a conclusion that the sector stopped moving.** When a
+battery's marginal yield reaches zero, the defects it *cannot* see become the binding ones. This
+pass went looking for those and found two classes, both live:
+
+| class | instance found this pass | why a discovery sweep cannot see it |
+|---|---|---|
+| 🔴 **Figure-level promotion failure** | Maryland's **`S.B. 720`** is shelved on [`intel/market.md`](market.md) in seven places, but its **operative clock — 24 districts, 120 days** — existed only in [`agents/trending.md`](../agents/trending.md). The *instrument* was promoted; the *number that makes it a procurement trigger* was not | the datum is *present* in the base at instrument level, so every "do we have it?" query answers yes |
+| 🔴 **Stale carry in PROSE** | **six** `DeepTutor` star cells (`46.0k`, `47,051`) across three shelves, while `p504` re-read the row to `47,338` | `p504`'s re-read updated shelf *tables*; the same figure also lives in prose and cross-shelf summaries, which no star sweep touches |
+
+🟢 **Both are fixed this pass.** 🔵 **The method rule `T30` yields:** a pass should spend its budget
+on *reconciliation between shelves* and on *named nils*, not on re-running a saturated battery. And
+the cheap instrument for the carry class is **grep the previous value before commit** — which is how
+six cells were found for the cost of one grep.
+
+🔴 **`T30` comes with a warning this pass earned the hard way.** Reconciliation probes are
+*themselves* a defect source, and the first draft of this pass published one: it grepped Maryland's
+**popular name** (`AI Ready Schools`), found it only in a trending log, and reported the instrument
+as unshelved. 🔴 **It was shelved all along, under its bill number `S.B. 720`.** The claim is
+**retracted in [`market.md`](market.md) `p505`**, and the lesson generalises: **a reconciliation
+probe that keys on one spelling of an identifier measures a naming convention and reports a content
+defect** — the same shape as `p455`'s retracted 20.6 % sweep. 🔵 US instruments travel under bill
+number, popular name and session-law citation; these shelves prefer the bill number and trending
+logs record whatever the source used. **Grep both, or report nothing.**
+
+🔵 **`T30` also predicts where the next real finding is**, and it is a named nil, not a search:
+**EMEA has returned no education adoption RATE for twelve consecutive passes.** That cell will not be
+filled by the prescribed query — it has now failed twelve times — but by a different instrument
+class (national ministry statistics, Eurostat). 🔴 Until then, an EMEA pitch cannot cite a regional
+adoption baseline while LATAM has four.
+
+### 🟢 `T29`'s check ran clean, and it stays cheap
+
+`archived` was read on all four addresses touched this pass: **`false` on all four**. 🟢 No repeat of
+the `ably-labs/realtime-quiz-framework` defect, and the check continues to cost nothing on a call
+that already returns stars.
+
+### 🔴 Three instrument defects, registered because an unstated defect is a future false verdict
+
+1. 🔴 **`Gap 505-A` — `pushed_at` is not a shipping signal.** `DeepTutor` returned
+   `pushed_at: 2026-10-28T13:22:04Z` while `HEAD` (`a31d82624c27`, **7th consecutive pass**) and the
+   version-sorted newest tag (**`v1.6.15`** of 87) were both unchanged. It advances on a push to any
+   ref. **The draft of this pass's own section read it as a refutation of the shelf's "attention, not
+   shipping" claim and was wrong.**
+2. 🔴 **`Gap 505-B` — `p502`'s channel correction is channel-specific.** The MCP channel answers
+   **200**; raw `curl` to `api.github.com` is **403**. The retired row was true of the channel it
+   described, so the verification table needs a **channel** column.
+3. 🔴 **`Gap 505-C` — a lexicographic tag sort misreads the newest release.** `ls-remote --tags |
+   tail` gives `v1.6.9`; `sort -V` gives `v1.6.15`. Off `tail`, DeepTutor reads as having regressed.
+
+### 🔴 `T5` / `Gap 483-K` — the EU primary text is unreadable from this session, definitively
+
+`eur-lex.europa.eu`, `digital-strategy.ec.europa.eu`, `publications.europa.eu`, `op.europa.eu`,
+`data.europa.eu`, `ec.europa.eu`, `europarl.europa.eu`, `consilium.europa.eu` and
+`artificialintelligenceact.eu` are **all refused at the CONNECT (403)**, attested by the proxy's own
+`connect_rejected` log. 🟢 **Grade unchanged: `SECONDARY-CONVERGENT, PRIMARY UNREAD`** — but the gap
+is now characterised as a **host-policy denial of an entire domain family**, so it is **not a probe
+to retry each pass**. `T5` keeps its dates and keeps naming the reading.
+
 ## 🆕 `p504` — `2026-10-28` — **🆕 `T28` (education AI supply is shifting from apps to AGENT SKILLS, and 9 of the 11 rows carrying it were created in 2026) and 🆕 `T29` (archived upstreams are an unmeasured liability — a one-field check no pass in ~500 had run, and it was hiding a frozen repo on two live shelves). 🟢 `T24`'s saturation reading survives a THIRD test shape: 35 candidates swept on three topic axes, 34 already held.**
 
 Reads: [`api-shelf-reconciliation.2026-10-28-p504.tsv`](../evidence/api-shelf-reconciliation.2026-10-28-p504.tsv),
@@ -790,7 +864,7 @@ files** in this KB, all in special education and rubric grading. The grant split
 
 🔴 **Five of eight — 62.5% — carry no grant**, each confirmed with `README.md → 200` at the same SHA
 so the tree was demonstrably reached. **Compare the general education-agent layer, where this KB's
-permissive tier is concentrated but real** (`DeepTutor` 46.0k Apache-2.0, `OpenMAIC` 41.7k MIT).
+permissive tier is concentrated but real** (`DeepTutor` 47.3k Apache-2.0 *(🟢 `p505`)*, `OpenMAIC` 41.7k MIT *(`p502`)*).
 🔵 **The special-education layer inverts that: supply exists, grants do not.**
 
 🟢 **The mechanism, and it is the part worth briefing.** These are the repositories of **practitioners
@@ -1316,7 +1390,7 @@ are **5 North America, 1 EMEA (708 days stale), 0 APAC, 0 LATAM**.
 | LATAM | 🔴 **0** | — |
 
 🔵 **And the asymmetry runs the other way at the agent tier**: APAC supplies the two largest
-permissive education-AI repositories in existence (`DeepTutor` 47,051★, `OpenMAIC` 41,690★) and
+permissive education-AI repositories in existence (`DeepTutor` **47,338★** *(🟢 `p505`)*, `OpenMAIC` 41,690★ *(`p502`)*) and
 nothing at the record tier. **Agents are abundant and global; the thing regulators actually ask for
 is scarce and American.** 🟢 That is the clearest build-and-own opportunity on these shelves, and it
 is strongest in LATAM, where the governance deficit is best evidenced (`intel/market.md` `p502`).

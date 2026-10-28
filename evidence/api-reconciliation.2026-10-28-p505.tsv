@@ -1,0 +1,30 @@
+# p505 2026-10-28 — batched API read (MCP channel), 4 slugs queried / 4 returned, reconciled
+# columns: slug_queried	returned	stars	license_spdx	archived	forks	pushed_at	head_ref_sha	verdict
+HKUDS/DeepTutor	yes	47338	Apache-2.0	false	5895	2026-10-28T13:22:04Z	a31d82624c27d75f4e771d4fcb78dce16470b383	CARRY-CONFIRMED p504 read 47230 (+108); HEAD unchanged 7th consecutive pass
+jarodise/Language-Transfer	yes	31	NONE	false	4	2026-02-28T02:36:11Z	n/a	NO LICENCE FIELD — not permissive; carried on trending shelves only
+mcavaliere/ai-spanish-tutor	yes	1	NONE	false	0	2024-05-20T16:23:31Z	n/a	REJECTED — 1 star, no licence field, abandoned 2024, OpenAI-dependent
+Jeanikt/tutor-ai-agent	yes	0	MIT	false	0	2026-10-07T18:58:42Z	n/a	CARRY-CONFIRMED — MIT, pt-BR voice maths tutor, already shelved
+#
+# Gap 504-A standing check: 4 queried / 4 returned, incomplete_results=false — NO silent omission in this batch
+# T29 standing check: archived=false on all 4
+#
+# DeepTutor tag census: 87 tags, version-sorted max = v1.6.15 — "newest release" claim HOLDS
+# WARNING (Gap 505-C): `git ls-remote --tags | tail` returns v1.6.9 as last — lexicographic sort misreads the max
+#
+# channel measurements this pass
+# api.github.com via raw curl	HTTP 403	releases/latest refused — MCP channel answers the same data (Gap 505-B)
+# eur-lex.europa.eu:443	HTTP 403 CONNECT	proxy recentRelayFailures: kind=connect_rejected "gateway answered 403 to CONNECT"
+# digital-strategy.ec.europa.eu:443	HTTP 403 CONNECT	same; whole .europa.eu family refused
+# publications.europa.eu op.europa.eu data.europa.eu ec.europa.eu europarl.europa.eu consilium.europa.eu artificialintelligenceact.eu	000	all refused at the gateway
+#
+# Gap 505-G — URL VERIFICATION CHANNEL, control-tested
+# channel	call	result	discriminating?
+# curl -sI github.com/<any>	57 distinct shelf addresses	ALL 403 (incl. moodle/moodle, HKUDS/DeepTutor)	NO — blanket proxy denial
+# git ls-remote --exit-code	moodle/moodle	LIVE	YES
+# git ls-remote --exit-code	HKUDS/DeepTutor	LIVE	YES
+# git ls-remote --exit-code	Selleo/mentingo	LIVE	YES
+# git ls-remote --exit-code	CAHLR/OATutor	LIVE	YES
+# git ls-remote --exit-code	satvik314/educhain	LIVE	YES
+# git ls-remote --exit-code	vishalsachdev/canvas-mcp	LIVE	YES
+# git ls-remote --exit-code	openedx/edx-platform	LIVE	YES (and still absent from the API search index — Gap 504-A)
+# git ls-remote --exit-code	gmilano/this-does-not-exist-xyz (NEGATIVE CONTROL)	absent	YES — 7 live / 1 absent, correctly separated

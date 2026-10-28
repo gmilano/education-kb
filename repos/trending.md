@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p505` — `2026-10-28` — **🟢 `DeepTutor` RE-READ AT 47,338★ AND ITS PIN IS BYTE-STABLE FOR A 7TH CONSECUTIVE PASS; the 87-tag census confirms `v1.6.15` is genuinely the newest, so the shelf's "attention, not shipping" reading survives a test on the TAG ref. 🔴 Three instrument defects registered: `pushed_at` moved while `HEAD` did not (`505-A`), `api.github.com` is 403 on raw `curl` though the MCP channel answers (`505-B`), and a lexicographic tag sort understates the newest release by six versions (`505-C`).**
+
+Reads: [`api-reconciliation.2026-10-28-p505.tsv`](../evidence/api-reconciliation.2026-10-28-p505.tsv).
+Full narrative on all three gaps: [`agents/trending.md`](../agents/trending.md) `p505`.
+
+### 🟢 The batched read, reconciled
+
+| repo | ★ `p505` | ★ `p504` | licence | `archived` | forks | verdict |
+|---|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **47,338** | 47,230 | 🟢 `Apache-2.0` | 🟢 `false` | 5,895 | 🟢 **+108 in one pass**; carry confirmed |
+| [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | **0** | — | 🟢 `MIT` | 🟢 `false` | 0 | 🟢 pt-BR voice maths tutor; grant confirmed from the API field |
+| [`jarodise/Language-Transfer`](https://github.com/jarodise/Language-Transfer) | **31** | — | 🔴 **no `license` field** | 🟢 `false` | 4 | 🔴 **not permissive** — trending shelf only, never a build base |
+| [`mcavaliere/ai-spanish-tutor`](https://github.com/mcavaliere/ai-spanish-tutor) | **1** | — | 🔴 **no `license` field** | 🟢 `false` | 0 | 🔴 **REJECTED** — abandoned `2024-05-20`, OpenAI-dependent |
+
+🟢 **`Gap 504-A` reconciliation: 4 queried / 4 returned**, `incomplete_results: false`. No silent
+omission in this batch. 🟢 **`T29` check: `archived: false` on all four.**
+
+### 🟢 The pin, and the two refs that actually carry the claim
+
+| ref | value |
+|---|---|
+| `HEAD` → `refs/heads/main` | `a31d82624c27d75f4e771d4fcb78dce16470b383` — 🟢 **7th consecutive pass unchanged** |
+| newest tag of **87**, version-sorted | 🟢 **`v1.6.15`** |
+| `pushed_at` | 🔴 **`2026-10-28T13:22:04Z`** — moved, and signifies neither |
+
+🔴 **Do not grade shipping or staleness from `pushed_at`** (`Gap 505-A`): it advances on a push to any
+ref, including side branches and tags. 🔴 **Do not grade "newest release" from `ls-remote --tags |
+tail`** (`Gap 505-C`): text-sorted, `v1.6.9` lands after `v1.6.15`. Both cost one flag to fix —
+`ls-remote` on `HEAD`, and `sort -V`.
+
+### 🔴 The channel table needs a channel column
+
+`p502` retired the row *"`api.github.com` — 403"* as false. Measured this pass: the **MCP channel
+answers 200** with stars, `license.spdx_id`, `archived`, `forks_count` and `topics`; **raw `curl` to
+`api.github.com` is 403**. 🔵 Both are true of different channels, and a table that omits the channel
+will keep re-retiring a correct row (`Gap 505-B`).
+
+### 🔴 EU primary source — refusal now measured, not inferred
+
+`eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and five more `.europa.eu` hosts are **403 at
+the CONNECT**, attested by the proxy's own `recentRelayFailures` log
+(`kind: connect_rejected`). 🟢 Grade unchanged — **`SECONDARY-CONVERGENT, PRIMARY UNREAD`** — but
+`Gap 483-K` is now known to be **not closable from this session by any address**, including the one
+`p499` left for the next pass. Stop spending calls on it; quote **2 Dec 2027** / **2 Aug 2028** and
+name the reading.
+
 ## 🆕 `p504` — `2026-10-28` — **🔴 A FLAGSHIP FOUNDATION ROW IS UNREACHABLE ON THE CHANNEL THIS BASE JUST PROMOTED TO AUTHORITATIVE, AND THE CHANNEL DOES NOT SAY SO: [`openedx/edx-platform`](https://github.com/openedx/edx-platform) (8.2k★, AGPL-3.0) is absent from the search index, and a batch read returns the other 24 rows with `"incomplete_results": false`. 🟢 Its KB claims were re-confirmed off-API and its pin is RE-PINNED after a drift — `d9aaee456069` → `f73b7ae64dd5`. 🟢 And all 87 shelf addresses were re-read on the API channel: the carried figures were accurate, closing `Gap 502-A`.**
 
 Reads: [`api-shelf-reconciliation.2026-10-28-p504.tsv`](../evidence/api-shelf-reconciliation.2026-10-28-p504.tsv),

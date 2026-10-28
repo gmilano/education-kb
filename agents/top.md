@@ -6,6 +6,30 @@ updated: 2026-10-28
 
 # Education AI agents — build-on-able shelf
 
+> 🟢 **`p505` (`2026-10-28`) — THE SHELF WAS RIGHT AGAIN, AND THE ONE CLAIM THAT LOOKED REFUTED SURVIVED THE TEST THAT MATTERS.**
+> 🟢 **`DeepTutor` re-read at 47,338★** (`p504`: 47,230, **+108**), `Apache-2.0`, `archived: false`,
+> 5,895 forks. Its pin `a31d82624c27` is **unchanged for a 7th consecutive pass**, and a census of
+> **87 tags** version-sorted still maxes at **`v1.6.15`** — so this file's *"attention, not
+> shipping"* reading now holds on **both** the branch ref and the tag ref.
+> 🔴 **`Gap 505-A` — and it nearly wrote a false correction into this file.** The API returned
+> `pushed_at: 2026-10-28T13:22:04Z`, twenty minutes before this pass. That reads exactly like a
+> refutation of the byte-stability claim above. It is not: **`pushed_at` advances on a push to any
+> ref** — side branch, tag, fork-sync — so it signifies neither a moved `HEAD` nor a new release.
+> **Never grade shipping or staleness from it**; grade from `HEAD` plus a version-sorted tag census.
+> 🔴 **`Gap 505-B` — `p502`'s channel correction is channel-specific.** It retired the verification
+> row *"`api.github.com` — 403"* as false; measured this pass, the **MCP channel answers 200** while
+> **raw `curl` to `api.github.com` is still 403**. Both rows are true of different channels, so the
+> table below must carry a **channel** column or the next pass will re-retire a correct row.
+> 🔴 **`Gap 505-C` — a lexicographic tag sort misreads the newest release.** `ls-remote --tags |
+> tail` returns `v1.6.9` as the last of 87; `sort -V` returns `v1.6.15`. Off `tail`, DeepTutor reads
+> as having *regressed* six releases.
+> 🟢 **Standing checks applied:** `Gap 504-A` reconciliation **4 queried / 4 returned**; `T29`
+> `archived: false` on all four addresses.
+> 🔴 **`Gap 483-K` is not closable from this session by any address.** The whole `.europa.eu` family
+> is **403 at the CONNECT**, attested by the proxy's own `connect_rejected` log — a host-policy
+> denial, not a resolution failure. Quote **2 Dec 2027** / **2 Aug 2028** and name the reading.
+> Reads: [`api-reconciliation.2026-10-28-p505.tsv`](../evidence/api-reconciliation.2026-10-28-p505.tsv).
+
 > 🟢 **`p504` (`2026-10-28`) — THE FIGURES THIS FILE CARRIED WERE RIGHT, AND THE CHANNEL THAT PROVED IT IS LESS TRUSTWORTHY THAN `p502` SAID.**
 > 🟢 **`Gap 502-A` is CLOSED.** All **87** live shelf addresses across this file,
 > [`repos/foundations.md`](../repos/foundations.md) and
@@ -116,7 +140,7 @@ in [`trending.md`](trending.md) rather than here.
 
 | Agent | Repo | License | ★ | SHA read | What it does |
 |---|---|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **47,230** *(🟢 `p504`, API; `p502` read 47,051; `p501` 47,000; `p493` 45,900)* | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p501`: HEAD unchanged for a FOURTH consecutive pass (`p491`→`p501`); `v1.6.15` (`2026-10-19`) is still the newest release, so the star growth is attention, not shipping.** Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **47,338** *(🟢 `p505`, API; `p504` read 47,230; `p502` 47,051; `p501` 47,000)* | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p501`: HEAD unchanged for a FOURTH consecutive pass (`p491`→`p501`); `v1.6.15` (`2026-10-19`) is still the newest release, so the star growth is attention, not shipping.** 🟢 **`p505` re-tested that reading on the ref it actually depends on:** a census of **87 tags**, version-sorted, still maxes at **`v1.6.15`**, and `HEAD` is unchanged for a **7th consecutive pass** — so the claim holds on both refs. 🔴 **`p505` also records why this nearly flipped:** the API returned `pushed_at: 2026-10-28T13:22:04Z`, which reads like shipping and is not (`Gap 505-A` — `pushed_at` advances on a push to any ref). Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
 | OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,690** *(🟢 `p502`, API; `p493` read 41,700)* | `70859b42e714` | **Open Multi-Agent Interactive Classroom** — any topic or document becomes an interactive lesson with slides, quizzes and project-based work. 781 commits; `v1.3.0-rc.1` dated `2026-10-22`; licence 1 065 B, `sha1 56d5b3ffd6e8`. 🟢 **Restored `p493`** after being dropped by `p490`'s rewrite — this is the row that falsifies this file's own permissive-scarcity gap, and its MIT grant is cleaner than DeepTutor's. 🔵 Org is `THU-MAIC` and the partnership contact is a `mail.tsinghua.edu.cn` address; **Tsinghua attribution is inferred from those, not stated in prose.** 🔴 **Not an LMS** — no enrolment, gradebook or SIS integration is claimed. |
 | smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | **30,118** *(🟢 `p504`, API; prior rounded cell read 30,100)* | `96f33faaf028` | Minimal code-writing agent loop. Not education-specific; the usual substrate for a custom tutor agent. |
 | k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | **598** *(🟢 `p504`, API; `p493` read 595 — the ONLY exact cell this base carried that moved)* | `31fd6dbb0c07` | Four K-12 teacher skills (lesson planning, differentiation and two more) **plus the eval rubrics for them**, co-developed with Learning Commons. Licence 11 357 B, `sha1 1128f8f91104`. 🟢 **Restored `p493`** — recorded "Now shelved" on `2026-10-18` and never actually present in this file. 🔴 **This is the asset `p492` declared licence-unverifiable;** it was measured in this KB twice before that. |
@@ -180,11 +204,11 @@ the sibling licenses, so any body scan is a family false-positive generator.**
 ## The DeepTutor license caveat — carried forward, still true
 
 🔴 **`p493` correction to the figure this section opens with: DeepTutor is no longer 88% of this
-shelf's star mass.** With `OpenMAIC` (MIT, 41,700★) restored, DeepTutor is **46.0k of ~118k** across
+shelf's star mass.** With `OpenMAIC` (MIT, 41,700★) restored, DeepTutor is **47.3k of ~118k** across
 the permissive tier — **under 40%**. The concentration argument below needs restating, not
 repeating; the *provenance* point it introduces is unaffected and still stands.
 
-`HKUDS/DeepTutor` carries 46.0k★ and its Apache-2.0 payload (11,408 B) is
+`HKUDS/DeepTutor` carries 47.3k★ *(🟢 `p505`, API: 47,338)* and its Apache-2.0 payload (11,408 B) is
 **not** canonical Apache-2.0 (10,015 B operative span). Three function-word substitutions sit in
 the operative body:
 
@@ -248,7 +272,7 @@ Stating these because silence looks identical to coverage.
   education-specific. It was not missed by search: this KB read it, recorded it "Now shelved" on
   `2026-10-18`, cites it **51 times** in its own history, and `p490`'s rewrite dropped the row.
   🟢 **The defensible restatement:** the permissive tier is **concentrated, not empty** — two
-  addresses (`DeepTutor` 46.0k Apache-2.0, `OpenMAIC` 41.7k MIT) hold ~74% of its star mass, and
+  addresses (`DeepTutor` 47.3k Apache-2.0 *(`p505`)*, `OpenMAIC` 41.7k MIT *(`p502`)*) hold ~74% of its star mass, and
   the next permissive education-specific row is `k12-teacher-skills` at **595★**. 🔵 **That
   595-to-41,700 cliff is the real structural finding**, and it is a different sentence from
   "nothing permissive exists".

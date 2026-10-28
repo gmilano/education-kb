@@ -2049,7 +2049,7 @@ none exists — it is a claim about what this channel returned, and the distinct
   running before **15 August 2026**. Do not quote a Vietnamese deadline without the instrument.
 - 🟢 **China** has the most binding framework: mandatory registration, strict content labelling, and
   penalties to **¥50m**. 🔵 Note the asymmetry — the two largest education-AI repositories on these
-  shelves (`DeepTutor` 47,051★, `OpenMAIC` 41,690★) are **PRC-origin and permissive**, so APAC leads
+  shelves (`DeepTutor` **47,338★** *(🟢 `p505`)*, `OpenMAIC` 41,690★ *(`p502`)*) are **PRC-origin and permissive**, so APAC leads
   the *agent* tier while supplying nothing at the *record* tier.
 - 🟡 **Singapore** leans on toolkits (**AI Verify**) rather than statute; **Japan** and **Taiwan** are
   drafting; **Australia** is preparing high-risk guardrails without naming education; **New Zealand**
@@ -2413,3 +2413,159 @@ closed deliverable. It is still the surface a Brazilian public-sector engagement
 `p503` recorded. 🟢 **The API sweep outperformed every web query for supply questions** and the web
 queries outperformed the API for regulation and adoption — they are not substitutes, and this pass
 is the clearest evidence of that split so far.
+
+## 🆕 `p505` — `2026-10-28` — **🔴 THE PRESCRIBED REGIONAL BATTERY IS SATURATED ON THE DEMAND AXIS: all four regional queries plus four global ones were run, and EVERY datum returned was already on these shelves. That is declared as saturation, not as coverage. 🔴 This pass then manufactured a false defect of its own and caught it before commit: it reported a named North American instrument as missing from this shelf because it grepped the instrument's POPULAR NAME and not its BILL NUMBER. The instrument was here all along. What was genuinely missing is narrower and is added. 🔴 EMEA returns an INFORMATIVE NIL on education adoption rate for the twelfth consecutive pass.**
+
+Reads: [`api-reconciliation.2026-10-28-p505.tsv`](../evidence/api-reconciliation.2026-10-28-p505.tsv).
+
+### 🔴 The saturation measurement, stated before the regional cuts
+
+Eight queries were run verbatim from the schedule that drives these passes — four global
+(`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`,
+`open source platform education ERP SIS MIT Apache 2026`, `AI education industry trends 2026`) and
+one per region. 🔴 **Every named instrument, institution and figure that came back returns a live
+hit outside `archive/`:**
+
+| datum returned | already shelved? |
+|---|---|
+| MultiState **134 bills / 31 states**; FutureEd **68 / 27** | 🔴 yes — and `p491` already **retired** the 134 figure as one tracker of four |
+| H.R. **8747**, OK **S.B. 1734**, UT **H.B. 218**, CA **AB 1159**, ID **SB 1227** | 🔴 yes, all five |
+| Korea **AI Basic Act** (in force `2026-01-22`), Japan **AI Promotion Act**, Singapore **AI Verify** | 🔴 yes, all three |
+| Vietnam high-risk education; the **"sole basis … without meaningful human review"** qualifier | 🔴 yes |
+| Brazil **PL 2.338/2023**, Chile's bill, **716 instruments / 23 countries** | 🔴 yes |
+| UNESCO **IESALC** (200 institutions / 19 countries), **TALIS 2024**, **Ceibal**, **Digital Education Council** | 🔴 yes, all four |
+| **Regulation (EU) 2026/1744** and its `2027-12-02` / `2028-08-02` deadlines | 🔴 yes |
+
+🔵 **The honest conclusion: this battery's marginal yield on the demand axis is now approximately
+zero**, which mirrors `T24` on the supply axis. The remaining yield is in **promotion between
+shelves** and in the **named nils** below — not in running the same eight queries a ninth time.
+🔵 Changing the queries is the only way to change the answer; the standing per-region misses say
+which axes are unmeasured.
+
+### 🔴 RETRACTED IN FULL, before commit — this pass's own false promotion-defect
+
+🔴 **The first draft of this section reported that Maryland's `Artificial Intelligence Ready Schools
+Act` had "sat in a trending log for passes and never reached this shelf".** That is **false and is
+retracted.** The instrument is on this shelf in **seven places**, under its bill number
+**`S.B. 720`** — including an explicit unresolved-text flag (*"read the enrolled text before citing
+either"*) and the note that *"Maryland's districts face a post-guidance deadline"*.
+
+🔴 **The mechanism of the error is the finding, and it is a known shape in this base.** The sweep
+grepped the **popular name** (`AI Ready Schools`), got hits only in
+[`agents/trending.md`](../agents/trending.md), and concluded the instrument was unshelved. 🔵 **One
+spelling of an identifier is not the identifier.** US instruments travel under *at least* three
+forms — bill number (`S.B. 720`), popular name (`Artificial Intelligence Ready Schools Act`) and
+session-law citation — and this base's shelves use the **bill number** while trending logs tend to
+record whichever form the source used. This is the same error class `p455` retracted at 20.6 %:
+**a probe that measures a naming convention and reports a content defect.**
+🔵 **Remedy and its cost:** before asserting any instrument is unshelved, grep **both** the bill
+number and the popular name. Cost is one extra grep. 🔴 **Prediction, untested:** the reverse
+direction almost certainly also holds — instruments shelved by popular name only, invisible to a
+bill-number probe — so a defect *rate* measured either way is unsafe.
+
+### 🟢 What was genuinely missing, which is narrower and real
+
+🟢 **The two operative figures never reached this shelf**, only the trending log: the Maryland Act
+gives the state's **24 districts** a **120-day** clock from state guidance to an aligned district AI
+policy. 🟢 **Added to the North America cut below**, because the *clock* is the procurement trigger
+and the bill number alone does not carry it.
+
+## Opportunities by region — `p505`
+
+### North America
+
+🟢 **Added this pass — the operative clock, not the instrument:** Maryland's **`S.B. 720`** (already
+shelved in seven places; its popular name is the **`Artificial Intelligence Ready Schools Act`**)
+gives the state's **24 districts** a **120-day** clock from state guidance to an aligned district AI
+policy. 🔵 The bill number was never missing — the **24 / 120** figures were. 🔵 **This is a
+dated, district-level procurement trigger**, and it is the most sellable shape in the region: the
+deliverable is a *policy-conformant configuration*, replicated 24 times, not 24 bespoke builds.
+Comparable mandates: **Oklahoma `S.B. 1734`** (written district AI policy before the **2027–28**
+school year), plus Idaho and Virginia.
+
+🔵 **Carried, unchanged:** the US market is a **patchwork**, which `P490-5` is the pattern for;
+**33–35 state education departments plus Puerto Rico** publish official AI guidance (a range, not a
+figure — the trackers disagree on what counts as "guidance"). 🔴 **The bill count stays retired:**
+MultiState **134 / 31** against FutureEd **68 / 27** is a **1.97×** disagreement between named
+trackers, so quote neither as *the* count.
+🔴 **Unmeasured, declared:** no **Canadian** education-specific AI instrument has ever been named on
+these shelves — the region's coverage is US-only, and the one Canadian datum carried is a
+*workplace* statute (`Working for Workers Four Act, 2024`), not an education one.
+
+### EMEA
+
+🔴 **INFORMATIVE NIL, twelfth consecutive pass: there is still no EMEA education adoption RATE on
+these shelves.** The query was run; it returned EU *regulatory* content and US adoption figures, and
+no European equivalent of the TALIS/Ceibal numbers LATAM has. 🔵 **This is the single most valuable
+unfilled cell in this file** — an EMEA pitch currently cannot cite a regional adoption baseline, and
+the gap is now old enough that it should be attacked with a *different* instrument (national
+ministry statistics offices, Eurostat) rather than the prescribed query.
+
+🟢 **The regulatory picture is firm and is what EMEA sells on:** **Regulation (EU) 2026/1744** (the
+Digital Omnibus) moved stand-alone Annex III education obligations to **2 Dec 2027** and embedded-
+product systems to **2 Aug 2028**. 🔴 **Not moved, and nearest:** **Article 50** transparency, live
+since **2 Aug 2026**, with the **machine-readable marking** grace expiring **2 Dec 2026** — **five
+weeks from this pass**, and the only EU date inside the current budget year. 🔴 **Emotion
+recognition in education is banned outright** (since `2 Feb 2025`), so engagement-detection and
+attention-tracking features are unshippable in the EU at any price.
+🔴 **Grade unchanged — `SECONDARY-CONVERGENT, PRIMARY UNREAD`**, and now known to be **unclosable
+from this session**: `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and five further
+`.europa.eu` hosts are **403 at the CONNECT** (`Gap 483-K`). The **31 July 2026** entry-into-force
+outlier in the table above **cannot be checked at its own source** and stays quarantined.
+
+### APAC
+
+🟢 **The region's binding instruments, all carried and re-confirmed:** **South Korea's AI Basic
+Act**, in force **`2026-01-22`**, with transparency duties on generative and high-impact AI — 🔵 and
+the commercially material qualifier that **MSIT is treating 2026 as a pilot year with a one-year
+penalty grace**, so the enforcement date and the obligation date differ. **Japan's AI Promotion
+Act** is a **principles law with no penalties** (voluntary internal governance). **Singapore** sells
+on **AI Verify** toolkits rather than statute. **China** already enforces algorithm filings,
+synthetic-content labelling and security review.
+
+🔵 **Vietnam remains the most education-specific APAC instrument** — a July 2026 decision lists
+education, including **automated assessment and behavioural monitoring**, among high-risk sectors.
+🟢 **The qualifier is the sellable detail and it is carried:** many listed systems are high-risk
+**only where the AI output is the sole basis for a decision without meaningful human review** — so
+a human-in-the-loop design decides the tier, which is exactly what `P494-1` builds.
+🔴 **Still unresolved and still declared:** Vietnam's dates conflict across sources
+(`2026-03-01` effective vs `2027-03-01` compliance with a six-month extension for education systems
+running before `2026-08-15`), and **APAC market sizing disagrees with itself**. Quote the *function*
+tier, not the date.
+
+### LATAM
+
+🟢 **This is the best-measured region on these shelves, and all of it reproduced this pass.** UNESCO
+**IESALC**: **200 institutions across 19 countries** — **87%** use AI in at least one area, **74%**
+in teaching and learning, **57%** in research, but only **26%** have a formal AI strategy, and
+public institutions trail private non-profits **68%** to **84%**. **TALIS 2024**: **52–56%** of
+secondary teachers in Brazil, Chile, Colombia and Costa Rica used AI in the prior year against an
+**OECD average of 36%**. **Ceibal** (Uruguay): **75%** of public-school teachers. **Digital
+Education Council**: **92%** of students and **79%** of faculty engaging with AI, while only **19%**
+of faculty use it for assignment feedback against **50%** of students who want it.
+
+🔵 **The commercial read, unchanged and still the strongest in this file: adoption outruns
+governance.** The **87% / 26%** spread is the engagement — governance, policy and oversight
+scaffolding for institutions that have already deployed. The **19% / 50%** feedback gap is a second,
+narrower one with a named function. 🔵 Regulatorily the region is **fragmented, not absent**: Brazil's
+**PL 2.338/2023** passed the Senate and sits in the Chamber (text can still change), Chile's
+government bill is in first-stage committee, and **716 AI-related instruments across 23 countries**
+(Universidad de los Andes) is a fragmentation cost to price into any multi-country build.
+🟢 **Supply note on the region's own axis:** LATAM open-source supply still answers to **Portuguese**
+— [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) is **MIT** — while this
+pass's best Spanish-language find was an unlicensed, abandoned single-star demo
+(`467-E` / `473-G` hold).
+
+### Global
+
+🔴 **Market sizing in this sector remains unusable, and `T10` stands.** This pass's queries returned
+**"past $12.5 B in 2026"** against **"~$6 B in 2024 → ~$32 B by 2030"** from another source in the
+same result set — not reconcilable, and both from vendor-side pages. 🔵 **Do not quote a sector size
+to a client**; quote the regulatory deadlines and the named adoption rates, which are sourced.
+🟢 **The one global figure worth carrying is a share, not a size:** North America holds roughly
+**36%** of the AI-in-education market — directionally consistent across sources and useful for
+prioritising, which a dollar total is not.
+🟢 **Supply is concentrated and permissive:** the two largest education-AI repositories in existence
+(`DeepTutor` **47,338★** Apache-2.0 *(🟢 `p505`, API)*, `OpenMAIC` **41,690★** MIT *(`p502`)*) are
+both **PRC-origin and permissive** — the strongest single fact in this file for a build-on-open
+proposal, in every region.

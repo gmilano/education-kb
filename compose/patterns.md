@@ -1590,3 +1590,71 @@ are designed out explicitly rather than discovered at contract.
 - 🔴 **Do not substitute [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework)**
   for the classroom-response layer if this pattern is extended that way: it reads **`archived: true`**
   as of `p504` and is frozen upstream (`T29`).
+
+---
+
+## 🆕 `p505` — `2026-10-28` — one pattern: the **dated** version of a pattern this file already had, because the clock is what makes it sellable
+
+🔵 `P490-5` is this file's US-patchwork pattern and it is correct, but it is **undated** — it lists
+Maryland `S.B. 720` as one policy toggle among six. 🟢 `p505` promoted the instrument's **operative
+clock** onto [`intel/market.md`](../intel/market.md): **24 districts, 120 days** from state guidance
+to an aligned district AI policy. 🔵 **A 120-day statutory clock across 24 named buyers is a
+different commercial object from a policy toggle**, and it deserves its own recipe. Nothing in the
+stack below is new or unverified — the novelty is the **sequencing**, which the clock dictates.
+
+## 🆕 `P505-1` — **Maryland 120-day district conformance kit: one configuration, 24 buyers** 🟢 *(dates and sequences `P490-5`; does not supersede it)*
+
+**Why this one:** the clock is **statutory, public, and shared by 24 districts simultaneously**. That
+is the rarest shape in US K-12 AI procurement — every other state mandate on these shelves is either
+undated (`S.B. 1227`), set years out (Oklahoma `S.B. 1734`, before the **2027–28** school year), or
+district-discretionary. 🔴 **Do not sell 24 builds.** Sell **one configuration plus 24 policy
+records**, which is exactly what `P490-5`'s tenancy model already supports.
+
+### The stack — every row MIT, every row already verified on these shelves
+
+| Component | Repo | License | Role in *this* pattern |
+|---|---|---|---|
+| Multi-tenant LMS base | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **One deployment, 24 tenants.** Postgres row-level security makes a district a tenant and its policy record non-leaking — enforced in the database, not application code |
+| Policy artefact | `P504-1`'s executable AI-use profile | 🟢 — | The district's adopted policy as a **published, enforceable, per-statement-auditable** artefact — which is what the Act actually requires a district to *have* |
+| Content generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 **MIT** | Lesson plans and assessments. 🔵 **387★** (`p490` read; the `~12,000★` figure this base carried for ~500 passes was a stale carry) |
+| Mastery model | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | BKT, **explainable** — the human-oversight gate needs a reason it can show |
+| Canvas bridge | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** | Only where the district runs Canvas; harden per `P495-1` before deploying it |
+
+🟢 **All five permissive** — a hosted closed derivative is clean, which this must be, because the
+commercial model is one SaaS tenant per district.
+
+### Wiring — sequenced to the clock, which is the whole point
+
+1. **Before guidance lands (now):** build the tenancy and the **policy-record schema**, not the
+   policy. The 120 days start at *state guidance*, so the schema is the only thing that can be built
+   early — and it is the long pole.
+2. **Day 0–15:** ingest the state guidance into `P504-1`'s profile form, once, centrally. One
+   reading, 24 consumers.
+3. **Day 15–60:** per-district deltas only. Grade band restrictions, parent opt-out, approved-tool
+   lists — each a **record**, never a fork.
+4. **Day 60–100:** the human-oversight gate on anything high-stakes. 🔴 **Calibrate it per `P496-1`'s
+   warning** — an uncalibrated compliance gate reproduces the bug it was built to prevent.
+5. **Day 100–120:** produce the **audit artefact** per district: which statement of the adopted
+   policy is enforced by which code path. This is the deliverable a board signs, not the chatbot.
+
+### 🔴 Do this or it is negligent
+
+- 🔴 **Read the enrolled text before citing the Act's requirements.** This base's own Maryland row
+  carries an explicit unresolved flag — *"read the enrolled text before citing either"* — on the
+  question of what `S.B. 720` mandates (state guidance + statewide collaborative vs. every local
+  system designating an AI coordinator). 🔴 **The 24 / 120 figures are secondary-sourced**, like
+  everything in this base's EU date work, and the clock is the pattern's premise. **Verify both at
+  the Maryland General Assembly before quoting them to a buyer.**
+- 🔴 **There is no federal law to plan around.** `H.R. 8747` advanced in committee only.
+- 🔴 **Do not reuse this recipe in the EU.** It has no Annex III conformity work and no Article 50
+  marking — and the EU's own near date is **2 Dec 2026**, five weeks out, not 2027. Use `P490-2`.
+
+### 🟡 Honest limits
+
+- 🟡 **The clock may already have started or may not start for a year** — it is keyed to state
+  guidance whose date this pass did **not** verify. A buyer conversation must open by establishing
+  where in the 120 days they are; the pattern is worthless if that is unknown.
+- 🟡 **24 districts is a ceiling, not a pipeline.** Maryland's districts procure independently.
+- 🔵 **No component here is Maryland-origin or even US-education-origin.** The pattern is placed in
+  North America by the *instrument*, not by supply provenance — the same observation `P504-1` made
+  about LATAM.

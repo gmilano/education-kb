@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p505` — **🔴 THE URL-VERIFICATION METHOD THIS BASE IS SCHEDULED TO USE IS NON-DISCRIMINATING IN THIS SESSION: `curl -sI` returns **403 for all 57** github.com shelf addresses, including `moodle/moodle`. A pass that followed the instruction literally would condemn the entire shelf as dead links. 🟢 A control-tested replacement is named and passes 7 live / 1 absent. 🔴 THIS PASS PUBLISHED THREE FALSE DEFECT CLAIMS AND RETRACTED ALL THREE BEFORE COMMIT — *"never promoted"*, *"109 placeholder rows"*, *"9 malformed rows"*, every one quantified, confident and wrong, and every one from the SAME error class: a probe that measures a convention and reports a content defect. 🟢 `Gap 504-A` and `T29` standing checks ran clean. 🔴 SEVEN REGISTERED (`505-A`…`505-G`).**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED**
+(`Code from External`) before any gate body ran — **eleven denials in twelve passes**. 🔵 Nothing in
+this pass is gate-attested. 🟢 **Three contracts were re-implemented independently in this
+session's own code and all three are green — each only after its OWN probe was corrected:** the
+frontmatter contract (**10/10** files — `industry: education`, `region` in the closed five-value
+vocabulary, `updated: 2026-10-28`), the header-as-data contract (**0** header-shaped rows in a table
+body across 10 files), and table column-count integrity (**18** tables in this pass's own sections,
+**0** malformed rows). That is **3 of 63**.
+
+### 🟢 Closed with content
+
+| Gap | Resolution |
+|---|---|
+| 🟢 **`Gap 504-A`** (reconcile queried slugs against returned ones, every call) | 🟢 **HONOURED AS A STANDING CHECK, not re-litigated.** 4 queried / **4 returned**, `incomplete_results: false`. No silent omission in this batch. 🔵 Separately **confirmed still live**: `openedx/edx-platform` is **absent from the API search index** yet `ls-remote` returns refs — `p504`'s finding reproduces exactly |
+| 🟢 **`T29`** (`archived` is part of the standing batch read) | 🟢 **RAN CLEAN** — `archived: false` on all four addresses. The check continues to cost nothing on a call that already returns stars |
+| 🟢 **`Gap 505-G`** (registered and closed in the same pass) | 🟢 **A control-tested URL channel now exists.** `git ls-remote --exit-code` separated **7 live addresses from 1 deliberately nonexistent one**; `curl -sI` could not separate anything |
+
+### 🟡 Re-measured, grade unchanged, and now known to be unclosable here
+
+| Gap | Finding |
+|---|---|
+| 🔴 **`Gap 483-K`** / `394-D` (EU AI Act primary unread) | 🔴 **NOT CLOSABLE FROM THIS SESSION BY ANY ADDRESS, and that is now measured rather than inferred.** `p504` left `eur-lex.europa.eu/eli/reg/2026/1744/oj` for this pass. It, plus `digital-strategy.ec.europa.eu`, `publications.europa.eu`, `op.europa.eu`, `data.europa.eu`, `ec.europa.eu`, `europarl.europa.eu`, `consilium.europa.eu` and `artificialintelligenceact.eu`, are **403 at the CONNECT**, attested by the proxy's own log (`kind: connect_rejected`, *"gateway answered 403 to CONNECT"*). 🔵 **This is a host-policy denial of an entire domain family, not a resolution failure and not a tool artefact** — so it is **not a probe to retry each pass**, and the **31 July 2026** entry-into-force outlier **cannot be checked at its own source**. 🟢 Grade unchanged: **`SECONDARY-CONVERGENT, PRIMARY UNREAD`**. Quote **2 Dec 2027** / **2 Aug 2028**, name the reading |
+
+### 🔴 Corrections this pass makes to ITSELF, caught before commit
+
+| # | The false claim this pass drafted | Why it was false |
+|---|---|---|
+| 1 | 🔴 *"Maryland's `AI Ready Schools Act` has never reached `intel/market.md`"* — drafted as a promotion defect | 🔴 **It is on that shelf in seven places, under its bill number `S.B. 720`.** The probe grepped the **popular name** only. **Retracted in full** on [`intel/market.md`](market.md) `p505`; what was genuinely missing is narrower and real — the **24 districts / 120 days** clock — and that was added |
+| 2 | 🔴 *"109 placeholder/header rows are sitting in shelf data"* — this pass's own first validator | 🔴 **Every one was a legitimate table header followed by a `\|---\|` separator.** The rule was rewritten to flag a header-shaped row **only when the next line is not a separator**; re-run, the answer is **0** |
+| 3 | 🔴 *"9 malformed table rows in this pass's own output"* — this pass's **third** validator | 🔴 **Every one was correctly escaped markdown.** The probe counted raw `\|` characters without discounting **backslash-escaped pipes**, which are the correct way to show a literal pipe in a table cell. Re-run with escapes discounted: **0 malformed rows across 18 tables.** 🔵 Some of the nine were also **window-spill** — the probe read a fixed byte window from each `p505` match and graded neighbouring passes' tables as this pass's |
+
+🔵 **All three are the same error class, and `p455` already named it:** *a probe that measures a
+naming or formatting convention and reports a content defect.* 🔴 **It recurred THREE TIMES in a
+single pass, in three different instruments** — a grep keyed to one identifier spelling, a validator
+that did not know a table header from table data, and a validator that did not know an escaped pipe
+from a structural one. 🔴 **Each first produced a confident, specific, quantified defect claim** —
+*"never promoted"*, *"109 placeholder rows"*, *"9 malformed rows"* — **and all three were false.**
+🔵 That is strong evidence it is the **default** failure mode of a cheap probe, not a rare slip: the
+probe's own correctness is the least-tested thing in the pass that writes it.
+🔵 **The standing remedy, which cost this pass two re-runs:** before publishing any defect *rate* or
+any "X is missing" claim, test the probe against a **known-good control** — a row that must pass and
+a row that must fail. Both retractions came from doing exactly that.
+
+### 🆕 Registered this pass — 7, with remedy *and* cost per `P469` / `P492`
+
+| Gap | Declared | Finding | Remedy and its cost |
+|---|---|---|---|
+| 🔴 **`Gap 505-A`** | `agents/top.md`, `agents/trending.md`, `repos/trending.md`, `intel/trends.md` | **`pushed_at` is not a shipping signal.** `DeepTutor` returned `pushed_at: 2026-10-28T13:22:04Z` — 20 min before this pass — while `HEAD` (`a31d82624c27`, **7th consecutive pass**) and the version-sorted newest tag (**`v1.6.15`** of 87) were both unchanged. It advances on a push to **any** ref. 🔴 **This pass's draft read it as refuting the shelf's "attention, not shipping" claim** | Grade shipping from `HEAD` + a version-sorted tag census, never from `pushed_at`. **Cost: one `ls-remote` per address** — the call this base already makes to pin |
+| 🔴 **`Gap 505-B`** | `agents/top.md` verification table | **`p502`'s channel correction is channel-specific.** It retired *"`api.github.com` — 403"* as **false**; measured here, the **MCP channel answers 200** while **raw `curl` to `api.github.com` is 403**. Both rows are true of different channels | Add a **channel** column to the verification table, else the next pass re-retires a correct row. **Cost: one column** |
+| 🔴 **`Gap 505-C`** | `repos/trending.md`, `agents/top.md` | **A lexicographic tag sort misreads the newest release.** `ls-remote --tags \| tail` → `v1.6.9`; `sort -V` → **`v1.6.15`**. Off `tail`, `DeepTutor` reads as having **regressed six releases** | `sort -V` on every tag census. **Cost: one flag** |
+| 🔴 **`Gap 505-D`** | `agents/top.md` ×3, `intel/trends.md` ×2, `intel/market.md` ×1 | **SIX stale-carry cells**, the class `p504` named as *the* defect class. `p504` re-read `DeepTutor` to **47,338** and updated the shelf **tables**; the same figure also lived in **prose and cross-shelf summaries** at `46.0k` and `47,051`. 🟢 All six corrected and now carry the pass that read them | **A re-read cadence does not close the carry class — the figure must be greppable.** On every star re-read, `grep` the **previous** value across all shelves before commit. **Cost: one grep per changed cell** — which is how these six were found |
+| 🔴 **`Gap 505-E`** | this register | **The identifier-spelling probe error, twice in one pass** (see corrections above). A US instrument travels under **bill number**, **popular name** and **session-law citation**; these shelves prefer the bill number, trending logs record whatever the source used | Grep **both** forms before asserting an instrument is unshelved; test every reconciliation probe against a known-good control. **Cost: one extra grep, one control row.** 🔴 **Untested prediction:** the reverse direction also holds — instruments shelved by popular name only — so a defect *rate* measured either way is unsafe |
+| 🔴 **`Gap 505-F`** | `agents/top.md`, `compose/patterns.md` `P505-1` | **Two figures carried into this pass's own output are unverified.** The **`~118k` shelf-mass denominator** (and the `~74%` concentration beside it) is `p493`-era and **was not re-derived** — this pass read 4 addresses, not the shelf. And `P505-1`'s premise, Maryland's **24 districts / 120 days**, is **secondary-sourced**, like the EU dates | Re-derive the denominator on the next full-shelf read; verify the Maryland clock at the Maryland General Assembly before quoting it to a buyer — **flagged in the pattern's own "do this or it is negligent" block**. **Cost: one full-shelf star read; one primary-source fetch** |
+| 🔴 **`Gap 505-G`** | all shelves, and the schedule that drives these passes | **The prescribed URL-verification method is non-discriminating here.** The instruction is *"verify every URL before writing it (`curl -sI`) — a 404 is not a finding"*. Measured: **`curl -sI` returns 403 for all 57** github.com addresses appearing near this pass's text, **including `moodle/moodle` and `HKUDS/DeepTutor`**. 🔴 **A pass obeying it literally would condemn the whole shelf**, and a pass treating 403 as "dead" would delete live rows. 🔵 Same shape as `Gap 504-A`: **a live row and an absent one are the same observation on this channel** | 🟢 **Already closed with a control-tested replacement:** `git ls-remote --exit-code` → **7 live / 1 absent**, correctly separated. Use it, or the MCP API channel, for existence; **never `curl -sI` against github.com in this session**. **Cost: one `ls-remote` per address, and it is the same call `505-A` already requires** |
+
+### 🔴 Carried forward, unaddressed
+
+| Gap | Status |
+|---|---|
+| 🔴 **EMEA education adoption RATE** | 🔴 **INFORMATIVE NIL, twelfth consecutive pass.** The prescribed query returned EU regulatory content and US adoption figures, no European equivalent of the TALIS/Ceibal numbers LATAM has. 🔵 **This is the most valuable unfilled cell in [`intel/market.md`](market.md)** — and twelve failures say it will not be filled by this query. Attack it with a different instrument class: national ministry statistics, Eurostat |
+| 🔴 **Vietnam's date conflict** | 🔴 **UNRESOLVED.** `2026-03-01` effective vs `2027-03-01` compliance with a six-month extension for education systems running before `2026-08-15`. Quote the **function tier**, not the date |
+| 🔴 **APAC market sizing disagrees with itself** | 🔴 Carried. `T10` stands: do not quote a sector size |
+| 🔵 **No Canadian education-specific AI instrument** has ever been named on these shelves | 🔵 **Newly declared this pass.** North America's coverage is US-only; the one Canadian datum carried is a *workplace* statute, not an education one |
+
 ## 🆕 `p504` — **🟢 `Gap 502-A` CLOSED WITH CONTENT, and the answer inverts its premise: all 87 shelf addresses re-read, and the carried HTML-era figures were RIGHT (15/15 exact cells identical). 🔴 But the channel `p502` promoted to "authoritative" DROPS ROWS SILENTLY — `openedx/edx-platform` is absent from the index and a batch read reports `"incomplete_results": false` anyway. 🔴 FIVE REGISTERED (`504-A`…`504-E`), including one that is this register's own failure mode: `p503` recorded a shelf correction it never applied to the shelf.**
 
 ### 🟢 Closed this pass

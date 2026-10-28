@@ -6,6 +6,23 @@ updated: 2026-10-28
 
 # Foundational education repos
 
+> 🟢 **`p505` (`2026-10-28`) — THE STANDING CHECKS THIS SHELF INHERITED FROM `p504` WERE RUN, AND THEY PASSED.**
+> 🟢 **`Gap 504-A` reconciliation applied to every call:** 4 slugs queried, **4 returned**,
+> `incomplete_results: false` — no silent omission in this batch. 🟢 **`T29` `archived` check: `false`
+> on all four addresses**, so no repeat of the `ably-labs/realtime-quiz-framework` defect.
+> 🔴 **`Gap 483-K` is now known to be unclosable from this session by ANY address.** `p504` left
+> `eur-lex.europa.eu/eli/reg/2026/1744/oj` for the next pass; it, `digital-strategy.ec.europa.eu`
+> and five further `.europa.eu` hosts are **403 at the CONNECT**, attested by the proxy's own
+> `connect_rejected` log. This is a **host-policy denial of the whole domain family**, not a
+> resolution failure — so it is not a probe to retry, and the **31 July 2026** outlier cannot be
+> checked at its own source. Quote **2 Dec 2027** / **2 Aug 2028** and name the reading.
+> 🔴 **Three instrument gaps registered that bear on how this shelf grades rows** —
+> `505-A` (`pushed_at` is not a shipping signal), `505-B` (`api.github.com` is 403 on raw `curl`
+> though the MCP channel answers, so the channel table needs a channel column) and `505-C`
+> (a lexicographic tag sort understates the newest release by six versions). Narrative:
+> [`agents/trending.md`](../agents/trending.md) `p505`. Reads:
+> [`api-reconciliation.2026-10-28-p505.tsv`](../evidence/api-reconciliation.2026-10-28-p505.tsv).
+
 > 🔴 **`p504` (`2026-10-28`) — A FOUNDATION ROW ON THIS SHELF IS INVISIBLE TO THE CHANNEL `p502` CALLED AUTHORITATIVE, AND ANOTHER WAS AN ARCHIVED REPOSITORY SOLD AS A BUILD BASE.**
 > 🔴 **[`openedx/edx-platform`](https://github.com/openedx/edx-platform) cannot be read on the API
 > search channel at all**: queried alone it raises **HTTP 422**, and batched with 24 other slugs it
