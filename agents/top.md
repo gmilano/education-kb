@@ -63,7 +63,7 @@ in [`trending.md`](trending.md) rather than here.
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | **387** | `38adb1e9459d` | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. |
 | dolos | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | **355** | `74b101785bad` | Source-code plagiarism detection; **3,865 commits**, the most-maintained address on this shelf. Ghent University. 🟢 **Restored `p493`** — `p296` tried to promote it, this KB's identity gate correctly refused the duplicate because a `foundations.md` row existed, and **that row was then deleted by a later rewrite too.** Licence 1 084 B, `sha1 8f6f3815d28d`. |
 | Skill-Anything | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | 344 | `3cdc1c1f11dc` | Any source (PDF, video, web, audio) → interactive package with quizzes, flashcards, spaced repetition. |
-| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 309 | **`830bc2ef8389`** | MCP server over Canvas LMS. 🔴 **`p492`: HEAD drifted from `32e5d1ca0175`; licence byte-identical at both SHAs (1 071 B, `sha1 491fb891a4cf`) so the drift is code-only. `v1.16.0` lists FOUR advisories, not one** — `GHSA-7mj9-4mcg-hvhv` (Canvas token handling), `GHSA-7pp5-29mw-9jq3` (local code sandbox), `GHSA-hmr8-mvr2-mvw5` (file content fencing), `GHSA-qf6c-jv93-38gv` (Windows download permissions). Tool count self-inconsistent upstream (description 102, README 128) — **stop quoting a number**. |
+| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 309 | 🔴 **`47394125364b`** *(`p494`; was `830bc2ef8389`)* | MCP server over Canvas LMS. 🔴 **`p494`: drifted AGAIN — second move in ~24h, and it moved *within this pass's own window*. Licence byte-identical at all three SHAs (MIT, 1 071 B, `sha1 491fb891a4cf`), so every move so far is code-only. 🔴 Pin a RELEASE TAG here, not a branch HEAD.** 🔴 **`p492`: HEAD drifted from `32e5d1ca0175`; licence byte-identical at both SHAs (1 071 B, `sha1 491fb891a4cf`) so the drift is code-only. `v1.16.0` lists FOUR advisories, not one** — `GHSA-7mj9-4mcg-hvhv` (Canvas token handling), `GHSA-7pp5-29mw-9jq3` (local code sandbox), `GHSA-hmr8-mvr2-mvw5` (file content fencing), `GHSA-qf6c-jv93-38gv` (Windows download permissions). Tool count self-inconsistent upstream (description 102, README 128) — **stop quoting a number**. |
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | **274** | `e24c8456e5f7` | Intelligent tutoring system with Bayesian Knowledge Tracing; ReactJS + Firebase. UC Berkeley CAHLR. |
 | KSoR | [panaversity/ksor](https://github.com/panaversity/ksor) | Apache-2.0 | 232 | `b50f28926fae` | SDK for governed, authoritative knowledge systems for humans and agents. Names education institutions as its target. |
 | open-tutor-ai-CE | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | `196c547291da` | Educational and collaborative AI platform, community edition. 380 commits and **194 forks against 114★** — a fork-heavy ratio that reads as deployment, not stargazing. 🟢 **Restored `p493`**, and 🔵 **its family is confirmed from the bytes**: the 1 531-byte payload opens *"All rights reserved"*, which is the literal opening of canonical BSD and which a title-block reader can mistake for a reserved-rights notice; all three BSD conditions including no-endorsement are present. `sha1 a027c9bb4f47`. |
@@ -282,3 +282,54 @@ site that does not resolve from this session, and concluded the licence was unre
 `grep`-ed the repository it was editing. **Rule for later passes: before declaring a gap, run
 `grep -ri <subject>` over this repo. A gap declared over evidence the KB already holds is worse
 than silence, because it tells the next pass not to look.**
+
+## 🆕 `p494` — `2026-10-28` — no drift, no promotions, and the discovery channel has looped
+
+Reads: [`licence-and-stars.2026-10-28-p494.tsv`](../evidence/licence-and-stars.2026-10-28-p494.tsv).
+Narrative: [`trending.md`](trending.md) `p494`.
+
+🟢 **`p493`'s eight restored rows are verified present in the tables above at this pass's HEAD.**
+The restoration landed in the file, not just in the pass note — checked by `grep` per address, which
+is the test `p493`'s own defect report implies.
+
+### 🔴 Drift sweep — three pins stable, one moved **during this pass**
+
+| repo | KB pin | `p494` `git ls-remote --symref` | verdict |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `a31d82624c27` | `a31d82624c27`, `refs/heads/main` | 🟢 **4 consecutive passes byte-stable** (`p490`–`p494`) |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `830bc2ef8389` | 🔴 **`47394125364b`**, `refs/heads/main` | 🔴 **DRIFTED AGAIN, mid-pass** — licence byte-identical at both SHAs (MIT, 1 071 B, `sha1 491fb891a4cf`), so code-only. **Shelf row above re-pinned.** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `70859b42e714` | `70859b42e714`, `refs/heads/main` | 🟢 `p493`'s restoration pin holds |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `7d9e9052bc5a` | `7d9e9052bc5a`, `refs/heads/main` | 🟢 licence re-read from bytes: **AGPL-3.0**, `LICENSE`, **34 522 B**, `sha1 3cd688cb1bd7` — **byte-identical** to this KB's earlier read |
+
+🔵 **The `ChatTutor` row above is now grant-pinned by `sha1`, not by licence tag.** That is what makes
+its stated consequence defensible: **AGPL-3.0 reaches across the network, so hosting it for a client
+triggers source obligations.** The permissive answer in this layer remains
+[`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) (BSD-3-Clause) — see
+[`../verticals/solutions.md`](../verticals/solutions.md).
+
+### 🔴 No promotions, and the reason is a finding rather than an absence
+
+Both brief-mandated ranking queries were run. **Not one address returned was new to this KB** —
+`ChatTutor`, `Claw-ED`, `lineage-skill`, `llm-course`, `ML-For-Beginners`, `developer-roadmap`, the
+general-purpose tier (`OpenClaw`, Hermes, Agent Zero, OpenHands, LangGraph, CrewAI) and `DeepTutor`
+itself are all held, each already with its disposition recorded. Counts and dispositions:
+[`../repos/trending.md`](../repos/trending.md) `p494`.
+
+🟢 **Third consecutive pass with no promotion from discovery.** `p493` found five MIT addresses, all
+below this shelf's star floor; `p494` found none at all. 🔵 **Read it as supply, not fatigue:** the
+star-ordered education-agent surface is exhausted at this shelf's floor, which is the same conclusion
+`p493` reached from the opposite direction. **The `595★ → 41,700★` cliff recorded in the gaps above
+is therefore not an artefact of one pass's search — it has now survived three.**
+
+### 🔵 A standing instruction in this file can only be discharged by a human
+
+`p492` recorded `DeepTutor`'s design paper (`arXiv:2604.26962`) as an upstream-asserted lead with
+*"do not cite the abstract to a client until someone has opened it."* Same for
+`pedagogy-benchmark`'s `arXiv:2506.18710` behind the evaluation-instruments section above.
+
+🔴 **Neither can be discharged from this session, on any pass.** Probed this pass:
+`arxiv.org:443 — connect_rejected` (`curl` exit 56, `http=000`, three URLs). **That is this
+session's egress proxy refusing the host — an allowlist decision, not a DNS failure and not
+transient**, the same class of diagnosis `p492` landed for the GitHub `403`. 🔵 **Stop re-probing it,
+and move both reads out of the pass backlog into a named human deliverable**, alongside the EUR-Lex
+and Decision 33 primary reads named in [`../intel/market.md`](../intel/market.md) `p494`.

@@ -330,3 +330,93 @@ published falsehoods in two passes.
    either carry each row forward or say why it was dropped.** The `archive/` copies make this a
    one-command check. 🔴 Without it, every rewrite is a silent data-loss event, and the shelf keeps
    reporting a census of this KB rather than of the sector.
+
+## 🆕 `p494` — `2026-10-28` — a new trend, and two trends that need qualifying
+
+Full narrative and reads: [`../agents/trending.md`](../agents/trending.md) `p494`;
+[`licence-and-stars.2026-10-28-p494.tsv`](../evidence/licence-and-stars.2026-10-28-p494.tsv).
+
+### 🆕 `T15` — Agentic AI now has its own governance instrument, and it is voluntary by design
+
+🟢 **The claim.** Governance of *agentic* systems has separated from governance of AI generally, and
+the first instrument written specifically for it is **voluntary**. Singapore's IMDA launched the
+**Model AI Governance Framework for Agentic AI** on **22 January 2026** at the World Economic Forum
+— described across multiple independent firm notes as the world's first such framework — covering
+**how much autonomy an agent is granted**, **how its actions are bounded and logged**, **how humans
+stay meaningfully in the loop**, and **how accountability is assigned when several agents
+interact**. **AI Verify** supplies the assurance side: process checks plus technical tests.
+
+🔵 **Why this is a trend and not a single-country fact.** Every other regime this file tracks
+governs AI by **what the system decides about a person** — EU Annex III by use case, Vietnam's
+Decision 33 by sector, Korea's Basic Act by high-impact domain. `T15`'s instrument governs
+**how much the system is allowed to do on its own**, which is an orthogonal axis. 🔴 **No
+education-specific regime anywhere has an agent-autonomy provision**, so for a multi-agent education
+product this is currently the **only** published rubric that addresses its actual architecture.
+
+🟢 **Commercial reading — this is a sales asset, not a compliance burden.** `T4` holds that
+regulation has split into incompatible regimes and that the differentiator is the human-oversight
+gate. `T15` says that for the agentic layer, the gate is **voluntary and therefore demonstrable**:
+a vendor can design to a published rubric and point at it, rather than argue an obligation down.
+🔵 And per this KB's own (previously deleted) Singapore note, vendors selling into government and
+banks **are expected to point to these frameworks** — so a voluntary instrument operates as a
+**procurement gate**. Pricing consequence: an agentic-conformity workstream in Singapore is a
+*demonstrable-conformance* deliverable, closer in shape to EMEA's provider-conformity sale than to
+APAC's jurisdiction-routing sale.
+
+🟡 **One claim deliberately not carried.** An academic commentary (`arXiv:2608.15417`) states the
+framework *"requires each agent to carry a verifiable digital identity and an audit trail"* —
+which conflicts with the voluntary standing every firm note describes. 🔴 **`arxiv.org` is
+`connect_rejected` by this session's egress proxy**, so it cannot be checked here. Recorded as an
+open conflict. **Do not tell a client the framework imposes an agent-identity requirement.**
+
+🔴 **How `T15` came to be written is itself the evidence for `T14`.** This was not a discovery. The
+Singapore posture was in this KB at `p315` and **`p315`'s own rewrite deleted it**; HEAD mentioned
+Singapore exactly once, as a ban-support percentage. `T15` exists because this pass read the KB
+against its own archive, not because a search surfaced something new.
+
+### 🔴 `T4` needs qualifying: "build conformity once in EMEA shape" is only partly true
+
+`T4` holds that regulation has split into four incompatible regimes and that this is a product
+requirement — that stands and is strengthened. 🔴 **But the corollary this KB repeats — that an
+EU-conformant assessment design transfers to the other high-risk jurisdiction with little rework —
+is true for one of Vietnam's three education triggers and false for the other two.**
+
+Vietnam's Decision `33/2026/QD-TTg` names **three** education system types. `p492` recorded one:
+
+| trigger | transfers from an EU-conformant build? |
+|---|---|
+| automatic **assessment, grading or ranking** of students | 🟢 **yes** — same functional trigger as EU Annex III |
+| self-learning content from **uncontrolled data sources** | 🔴 **no** — a **corpus-governance** obligation. An EU-conformant build has no corpus-provenance artefact to show, and the trigger fires on **retrieval design alone**, with no grading feature in the product |
+| **biometric** monitoring of learner behaviour | 🔴 **no, and the regimes point in opposite directions** |
+
+🔴 **The biometric divergence is the sharpest regulatory asymmetry in this file, and it belongs to
+`T6` as much as to `T4`.** `T6` records that the EU **bans** emotion recognition in education
+outright (live since 2 Feb 2025, narrow medical/safety exception). Vietnam **permits biometric
+learner monitoring as a high-risk category** — i.e. allowed, subject to conformity duties. 🟢 **This
+is not stricter-versus-looser along one axis; it is a feature that must be *absent* in one
+jurisdiction and *documented and governed* in the other.** A single configuration cannot satisfy
+both, and no amount of EMEA conformity work produces the Vietnamese artefact. **Treat biometric
+learner monitoring as a build-time jurisdiction fork, never a runtime policy flag.**
+
+### 🟢 `T14` gains a second mode: a later pass can blunt a sharper finding
+
+`T14` holds that in this sector a KB's own bookkeeping is a material source of error. `p493`
+established the first mode — **a full-file rewrite silently drops promoted rows**. This pass adds
+two more, both observed:
+
+1. 🔴 **Rewrites drop *prose*, and prose loss is undetectable.** A dropped row can be found by
+   `grep`-ing a repo URL, which is how `p493` found eight. **A dropped paragraph has no key to grep
+   for** — nobody knows to look for a fact the file no longer mentions. `market.md`, `trends.md` and
+   `patterns.md` are mostly prose and all have been rewritten in full.
+2. 🔴 **A later pass can overwrite a precise finding with a blunter one and file the precise one as
+   the defect.** `p492` resolved Vietnam's deadlines into a conditional table (the date depends on
+   **when the system went live**, not what it does). `p493` re-read a secondary source that flattened
+   that conditional into a single grace date, found the flat version disagreed with the KB, and
+   flagged **the KB's correct entry** as unquotable, deferring it to this pass. This pass's
+   independent read confirms `p492` term by term.
+
+🔵 **Rule, as transferable as `p493`'s grep rule:** before filing a contradiction between a new read
+and a KB entry, **read that entry's own pass note first.** And before a full-file rewrite, diff the
+*prose* against the archive copy, not just the tables — 🔴 **this KB currently has no mechanism that
+would catch a deleted paragraph, and that is the open gap this trend names.**
+

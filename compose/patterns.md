@@ -69,6 +69,18 @@ are not covered by tool scoping at all:
 `32e5d1ca0175` to `830bc2ef8389`, with the licence **byte-identical at both SHAs** (MIT, 1 071 B),
 so the change is **code-only**. Pin by release tag rather than tracking `main`.
 
+🔴 **`p494` — and it drifted again, inside a single pass's own window.** `830bc2ef8389` →
+**`47394125364b`**, observed ~30 minutes apart in the same pass and stable across three reads.
+Licence **byte-identical at all three SHAs** (MIT, 1 071 B, `sha1 491fb891a4cf`), so every move so
+far is code-only. 🔴 **Two moves in ~24 hours makes this the most volatile dependency in this KB,
+and it is this pattern's base.** The instruction above is therefore not a preference but a
+requirement: **pin `v1.16.0` or later by tag, never a branch HEAD** — a HEAD pin on this repo is
+stale before the engagement's first sprint review, and `git ls-remote` will report drift that is
+merely upstream's normal cadence. 🟡 **Advisory caveat:** the **four** advisories named below were
+read by `p492` at `v1.16.0` and were **not** re-read at `47394125364b`. On a repo moving this fast
+and carrying a **token-handling** advisory, **re-read the advisory list at the tag you actually pin,
+before you deploy** — do not inherit this KB's count.
+
 **Licence note:** Canvas itself is AGPL-3.0, but you are **integrating over its API, not
 modifying it** — no obligation attaches. All three components above are permissive. 🟢
 
@@ -454,3 +466,133 @@ Canvas is the incumbent and has the only maintained agent surface.
 (4–6 weeks) because `OpenMAIC` is a courseware engine rather than an integration into an incumbent
 LMS — **you are standing up a stack, not instrumenting one that exists.** Add 3–4 weeks if an
 `OpenOLAT` institutional layer is in scope.
+
+## 🆕 `P494-1` — APAC agentic education build with a Vietnam/Singapore jurisdiction fork 🟢
+
+**Why:** `P490-4` offers a jurisdiction-routing provenance layer for APAC, and its premise is that
+China's binding rules, India's labelling duty, Japan's promotion posture and Singapore's voluntary
+assurance cannot be satisfied by one configuration. 🔴 **That premise had one of its four
+jurisdictions deleted from this KB** — the Singapore posture was held at `p315` and removed by
+`p315`'s own rewrite (see [`../intel/market.md`](../intel/market.md) `p494`). Restoring it, plus
+`p494`'s reading of Vietnam's full education scope, changes what the APAC build actually has to
+produce. 🟢 **Two of Vietnam's three high-risk education triggers do not transfer from an
+EU-conformant design, and Singapore's agentic framework asks four questions no education regime
+asks.** This pattern is `P493-1`'s all-permissive stack with those obligations built in.
+
+**Base stack:** unchanged from [`P493-1`](#-p493-1--the-first-end-to-end-all-permissive-education-stack-) —
+[`OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (MIT, `70859b42e714`) for courseware and the
+classroom, [`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) (BSD-3-Clause,
+`196c547291da`) for 1:1 tutoring, [`dolos`](https://github.com/dodona-edu/dolos) (MIT,
+`74b101785bad`) on submitted code,
+[`pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) (MIT, `21a43a395ab4`)
+on [`lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) (MIT) as the CI
+release gate, [`Kolibri`](https://github.com/learningequality/kolibri) (MIT) and
+[`rumi-platform`](https://github.com/Orenda-Project/rumi-platform) (Apache-2.0, `f2d62af1eb82`) for
+delivery. 🟢 **No copyleft anywhere**, which is what makes the conformity artefacts below sellable
+as product rather than as services.
+
+### 🔴 The three Vietnam triggers, and what each one costs to build
+
+Decision `33/2026/QD-TTg` (issued **30 Jun 2026**, in force **15 Aug 2026**) names **three**
+education system types. This KB recorded one until `p494`.
+
+| trigger | transfers from an EU build? | artefact you must produce |
+|---|---|---|
+| automatic **assessment, grading or ranking** of students | 🟢 **yes** — same functional trigger as EU Annex III | `P490-2`'s conformity pack, reused as-is |
+| self-learning content from **uncontrolled data sources** | 🔴 **no** | a **corpus provenance manifest** — see below |
+| **biometric** monitoring of learner behaviour | 🔴 **no, opposite direction** | a **build-time fork** — see below |
+
+**1. 🔴 The corpus trigger fires on retrieval design alone.** A RAG tutor over an unvetted corpus is
+high-risk in Vietnam **with no grading feature anywhere in the product**. This is a
+corpus-governance obligation and an EU-conformant build produces nothing that answers it. Concretely,
+in `open-tutor-ai-CE`'s retrieval path and `OpenMAIC`'s document-ingest path:
+
+- **Pin the corpus and hash it.** One manifest row per document: source URL or acquisition route,
+  licence, retrieval date, SHA-256, and the human who approved it. Vendor the manifest into the
+  engagement repository next to the index.
+- **Gate retrieval to the manifest.** Reject at query time any chunk whose document id is not in the
+  manifest, and fail closed. An index rebuilt from a crawl that was never approved is the exact
+  failure the trigger describes.
+- 🔵 **This is cheap if done at week one and near-impossible to retrofit**, because the provenance of
+  documents already embedded is not recoverable from the vector store.
+
+**2. 🔴 Biometrics is a build-time fork, never a runtime policy flag.** The EU **prohibits** emotion
+recognition in education outright (live since **2 Feb 2025**, narrow medical/safety exception —
+`T6`); Vietnam **permits biometric learner monitoring as a high-risk category**, i.e. allowed subject
+to conformity duties. 🟢 **The feature must be *absent* in one jurisdiction and *documented and
+governed* in the other.** A feature flag does not satisfy the EU prohibition — the capability's
+presence in a shipped artefact is the problem, not its default state. **Two build targets, one
+codebase, and the EU target must not compile the module.** 🔵 This is the sharpest regulatory
+asymmetry in this KB and the one most likely to be mistaken for a configuration question.
+
+**3. 🟡 Which deadline applies depends on when the system went live, and the new-build answer is
+single-sourced.** Education, healthcare and finance systems **in operation before 15 Aug 2026** have
+until **1 Sep 2027**; other listed sectors have until **1 Mar 2027**. `p492` reports that a system
+first operated **within six months after** 15 Aug 2026 falls back to **1 Mar 2027** — 🔴 **that row
+rests on a single vendor compliance tracker and is expressly unconfirmed against the official
+text.** **Plan to 1 Mar 2027**, because the error direction is safe that way, but 🔴 **do not put
+either date in a contract before someone reads Decision 33's official text** (`english.luatvietnam.vn`
+is subscriber-gated and does not open from this session). **Name that read as a deliverable in week
+one.**
+
+### 🟢 Singapore: four questions, four artefacts, and a voluntary gate worth designing to
+
+IMDA's **Model AI Governance Framework for Agentic AI** (launched **22 Jan 2026**, voluntary, with
+**AI Verify** as the assurance side — `T15`) asks the four questions a multi-agent education system
+actually has to answer. 🔵 **Because it is voluntary, it is demonstrable** — design to the rubric and
+point at it, rather than arguing an obligation down. And per this KB's restored Singapore note,
+vendors selling into government and banks **are expected to point to these frameworks**, which makes
+it a **procurement gate**.
+
+| framework axis | artefact in this stack |
+|---|---|
+| **how much autonomy the agent is granted** | A written capability inventory per agent role in `OpenMAIC`'s multi-agent classroom: what each may read, generate, and persist. 🔴 **No agent gets write access to a gradebook** — `P492-1`'s rule, and the one that survives every regime here |
+| **how actions are bounded and logged** | Structured per-action log (agent id, tool, inputs, outputs, timestamp) retained for the engagement's audit window. 🔵 The same log discharges Vietnam's human-review evidence, so build it once |
+| **how humans stay meaningfully in the loop** | [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot)'s shipped design (MIT, 9★): **every generated artefact routed to a teacher for review before classroom use.** Copy the shape; vendor the code, do not depend on it |
+| **accountability when several agents interact** | A named owner per agent role and a single escalation path. 🔴 This is the axis most multi-agent demos have nothing to say about, and the one a Singapore procurement reviewer will ask about first |
+
+🟢 **And the arithmetic rule is the one thing every regime in this file agrees on.**
+[`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) (MIT, `5511bf6dc707`,
+🔴 **0★, 13 commits — a reference design, not a dependency**) is the only implementation this KB can
+hand an engineer: per-criterion structured output validated against the rubric, **totals computed in
+Python, never by the model**, plus an answer-leak guard. **Copy both mechanisms into the engagement
+repository.**
+
+### Do this or it is negligent
+
+1. 🔴 **Decide the biometric question before the first sprint, not at UAT.** It determines whether
+   you have one build target or two, and retrofitting the EU target means removing a module from a
+   shipped artefact and re-certifying it.
+2. 🔴 **Produce the corpus provenance manifest from the first ingested document.** Provenance is not
+   recoverable from a vector store after the fact.
+3. 🔴 **Pin every component by SHA or release tag and re-read the licence bytes at that pin.**
+   `p493` found eight promoted rows deleted from this KB's own shelves, and `canvas-mcp` has now
+   drifted **twice in ~24 hours** — `32e5d1ca0175` → `830bc2ef8389` → `47394125364b`, the last move
+   observed **inside a single pass's window**, licence byte-identical throughout. 🔵 **The rule that
+   follows: pin a release tag wherever upstream publishes one, and treat a HEAD SHA as a dated
+   observation rather than a pin.** Pins as read `2026-10-28` are listed in `P493-1`; the components
+   in this pattern were all re-resolved at that date and only `canvas-mcp` moved.
+4. 🔴 **Treat `pedagogy-benchmark` (13★), `rumi-platform` (18★), `Shiksha-Copilot` (9★) and
+   `ai-tutor-agent` (0★) as corpora, not dependencies.** Vendor them; budget to maintain them.
+5. 🟢 **Run `pedagogy-benchmark` before the pilot and keep the baseline**, including the **SEND**
+   subset (223 items) — the population where an unevaluated tutor does most harm and where
+   procurement asks hardest.
+6. 🔴 **Do not claim an agent-identity requirement for Singapore.** An academic commentary
+   (`arXiv:2608.15417`) asserts the framework requires verifiable per-agent digital identity and an
+   audit trail; that conflicts with its voluntary standing and 🔴 **`arxiv.org` is
+   `connect_rejected` by this session's proxy**, so it is unverified. Build the audit log because it
+   is good practice and discharges Vietnam's evidence need — **not because Singapore mandates it.**
+7. 🔴 **Honour BSD-3-Clause's third condition** on `open-tutor-ai-CE`: attribution in `NOTICE`, yes;
+   **"built on Open-TutorAI" in a pitch deck, no**, absent written permission.
+
+**Regional fit:** 🟢 **APAC-native** — `OpenMAIC` (China), `Shiksha-Copilot` (India),
+`rumi-platform` (Pakistan) are in-region by origin. 🟡 **Do not carry an "APAC is permissive"
+framing into Australia or New Zealand** — `p493` records ANZ showing *higher* support for banning AI
+in schools than the seven APAC markets at 23–31%, an EMEA-like public mood. 🔵 **The corpus manifest
+and the action log are jurisdiction-neutral and transfer to EMEA and LATAM engagements unchanged**,
+which is the part of this pattern worth reusing even where Decision 33 does not apply.
+
+**Scope:** 12–14 weeks to a governed pilot — `P493-1`'s 10–12 plus 2 weeks for the corpus manifest
+and the action-log schema. 🔴 **Add 4–6 weeks if the biometric fork is in scope**, and resolve that
+question in week one, because it is the only item here that cannot be parallelised.
+

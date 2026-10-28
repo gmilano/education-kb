@@ -171,3 +171,38 @@ student information system or a QTI exam engine, there is still no permissive op
 AGPL/GPL conversation cannot be avoided. That is a four-pass consistent result.
 
 Wired end-to-end as [`compose/patterns.md`](../compose/patterns.md) `P493-1`.
+
+## 🆕 `p494` — `2026-10-28` — no layer changes; one grant re-pinned, one jurisdiction restored
+
+Reads: [`licence-and-stars.2026-10-28-p494.tsv`](../evidence/licence-and-stars.2026-10-28-p494.tsv).
+Narrative: [`../agents/trending.md`](../agents/trending.md) `p494`.
+
+🟢 **The layer table above is unchanged.** `p493`'s seven newly-permissive layers hold, and no
+platform read this pass showed drift.
+
+🟢 **The tutoring-platform layer's copyleft option is now grant-pinned by bytes, not by tag.**
+[`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) re-read first-hand at
+`7d9e9052bc5a`: **AGPL-3.0**, `LICENSE`, **34 522 B**, `sha1 3cd688cb1bd7` — **byte-identical** to
+this KB's earlier read. 🔴 **The consequence is unchanged and now defensible from the payload rather
+than from a sidebar label: AGPL reaches across the network, so hosting ChatTutor for a client
+triggers source obligations on the hosted service.** 🟢 The permissive answer in this layer remains
+[`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) (BSD-3-Clause, 1 531 B,
+`196c547291da`) — **with its third condition honoured**: attribution in `NOTICE`, yes; *"built on
+Open-TutorAI"* in client-facing marketing, **no**, absent written permission.
+
+### 🔵 A deployment-posture input this file had lost
+
+An APAC regulatory posture relevant to **how** these platforms get deployed was deleted from
+[`../intel/market.md`](../intel/market.md) by `p315`'s rewrite and is restored this pass: **Singapore's
+Model AI Governance Framework, its generative-AI framework, its Model AI Governance Framework for
+Agentic AI (IMDA, 22 Jan 2026) and AI Verify are all voluntary — but vendors selling into government
+and banks are expected to point to them**, which makes a voluntary instrument a **procurement gate**.
+
+🟢 **Why it matters when picking a platform rather than a model.** The agentic framework asks how much
+**autonomy** an agent is granted, how its actions are **bounded and logged**, where the **human** sits,
+and who is **accountable when several agents interact**. 🔵 **Those are platform properties, not model
+properties** — a platform that cannot emit a per-action log, or that has no place to put a teacher
+review step, cannot be made conformant by swapping the model underneath it.
+[`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot)'s shipped design — every
+generated artefact routed to a teacher before classroom use — remains the shape to copy at this layer.
+Full build guidance: `P494-1` in [`../compose/patterns.md`](../compose/patterns.md).

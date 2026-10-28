@@ -257,3 +257,41 @@ Apache 2026`). 🔴 **The query returned no permissive candidate at all**: OpenE
 RosarioSIS (GPL-2.0), `frappe/education` (GPL-3.0), Unifiedtransform (GPL-3.0), openSIS and Gibbon
 (GPL-3.0). **Every education ERP/SIS this KB can find is copyleft.** That is now a four-pass
 consistent result and should be treated as a property of the sector, not of the search.
+
+## 🆕 `p494` — `2026-10-28` — census unchanged, and the denominator's authority is re-tested
+
+Reads: [`licence-and-stars.2026-10-28-p494.tsv`](../evidence/licence-and-stars.2026-10-28-p494.tsv).
+Narrative: [`../agents/trending.md`](../agents/trending.md) `p494`.
+
+🟢 **No new foundation rows, no drift, no licence changes.** `p493`'s correction — that this file's
+permissive census was measuring **this KB's bookkeeping rather than the ecosystem** — stands, and
+this pass re-tested it the only way that is meaningful: by looking for *more* dropped material.
+
+🔴 **It found some, and this time it was prose, not a row.** `p493` proved that full-file rewrites
+silently delete promoted **table rows**, and fixed eight. `p494` finds the same mechanism deleting
+**paragraphs**: an entire APAC jurisdiction posture (Singapore's Model AI Governance Framework, its
+generative-AI framework, its **agentic AI framework**, and AI Verify) was removed by `p315`'s rewrite
+of [`../intel/market.md`](../intel/market.md) and left no marker. 🔴 **A dropped row can be found by
+`grep`-ing a repo URL. A dropped paragraph has no key to grep for** — which makes prose loss the
+larger and wholly undetected surface. See [`../intel/trends.md`](../intel/trends.md) `T14`.
+
+🔵 **Why that belongs in this file.** This file's census is a count over rows, and `p493` established
+that the count's authority depends on the shelf being complete rather than on the ecosystem being
+small. `p494` extends the caution: **completeness cannot be audited for prose at all with the tools
+this KB has**, so any claim in this file that rests on narrative context — rather than on a
+byte-pinned row — carries that uncertainty. **The row-level census is sound; the prose around it is
+not audited.**
+
+### 🟢 Re-reads this pass
+
+| repo | KB pin | `p494` read | verdict |
+|---|---|---|---|
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | MIT, `74b101785bad` | not re-read this pass | 🟢 `p493`'s restoration row stands; 3,865 commits |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | AGPL-3.0, 34 522 B | **AGPL-3.0**, **34 522 B**, `sha1 3cd688cb1bd7` @ `7d9e9052bc5a` | 🟢 **byte-identical** — re-read because a `p494` discovery query returned it as if new |
+
+🔴 **Declared gap, unchanged and restated for a fifth pass.** [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)
+(Apache-2.0) remains **the only permissive full LMS**, and there is still **no permissive SIS and no
+permissive QTI exam engine** — so `T2`'s binding constraint holds at the institutional layer and
+nowhere else. An engagement needing enrolment plus a gradebook has one permissive answer; an
+engagement needing a SIS or a standards-based exam engine has **none**, and the copyleft conversation
+is unavoidable. **Say so in week one.**

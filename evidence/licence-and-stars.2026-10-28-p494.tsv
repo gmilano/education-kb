@@ -1,0 +1,24 @@
+# p494	2026-10-28	education	first-hand reads
+# channel: git ls-remote --symref (existence + default ref + SHA); raw.githubusercontent.com @ SHA (licence bytes);
+# bytes measured curl -o file then wc -c (never command substitution — p492's one-byte rule).
+# curl -sI https://github.com/<repo> remains this session's GitHub proxy 403 and carries ZERO existence information.
+repo	default_ref	head_sha	kb_pinned_sha	drift	licence	licence_path	bytes	sha1_12	note
+HKUDS/DeepTutor	refs/heads/main	a31d82624c27	a31d82624c27	none	Apache-2.0 (6 operative-body deviations, carried)	-	-	-	4th consecutive pass byte-stable: p490 p491 p492 p493 p494
+vishalsachdev/canvas-mcp	refs/heads/main	47394125364b	830bc2ef8389	DRIFT (mid-pass)	MIT	LICENSE	1071	491fb891a4cf	read 830bc2ef8389 early in pass, 47394125364b ~30min later, stable x3. Licence byte-identical at BOTH SHAs and at p492's 32e5d1ca0175. Code-only. 2nd move in ~24h = most volatile pin in KB, and it is P490-1's base. RULE: pin the release tag, not branch HEAD. 4 advisories NOT re-read at new SHA - count is p492's, do not let it age.
+THU-MAIC/OpenMAIC	refs/heads/main	70859b42e714	70859b42e714	none	MIT	-	-	-	p493 restoration pin holds
+HugeCatLab/ChatTutor	refs/heads/main	7d9e9052bc5a	7d9e9052bc5a	none	AGPL-3.0	LICENSE	34522	3cd688cb1bd7	byte-identical to this KB's own earlier read (34 522 B). Re-read because a p494 search returned it as if new.
+#
+# CHANNEL DIAGNOSIS — arxiv.org
+# arxiv.org:443 -> connect_rejected by this session's egress proxy (curl exit 56, http=000).
+# This is a SESSION ALLOWLIST refusal, not DNS failure and not an arXiv outage.
+# Consequence: arXiv identifiers can be surfaced by the search channel (snippets, titles) but the
+# paper itself is UNREADABLE from this session, permanently, on any pass. DeepTutor arXiv:2604.26962
+# and pedagogy-benchmark arXiv:2506.18710 therefore cannot be closed here — assign to a human.
+#
+# REGULATORY READS (secondary, convergent; no primary text readable)
+subject	instrument	issued	in_force	deadline	verdict
+Vietnam education high-risk	Decision 33/2026/QD-TTg	2026-06-30	2026-08-15	education+healthcare+finance in operation before 15 Aug 2026 -> before 2027-09-01; other listed sectors -> 2027-03-01	p492 CONFIRMED; p493's flagged "conflict" was not one
+Vietnam education scope	Decision 33/2026/QD-TTg appendix	-	-	-	THREE system types, not one: (a) auto assess/grade/rank students (b) self-learning content from UNCONTROLLED DATA SOURCES (c) learner behaviour monitoring via BIOMETRICS. p492 recorded only (a).
+Vietnam 6-month fallback	AesirX ComplianceOne only	-	-	"operational within 6 months of 15 Aug 2026 -> 2027-03-01"	UNVERIFIED against official text — and it is the element p492's commercial advice rests on
+Singapore agentic AI	IMDA Model AI Governance Framework for Agentic AI	launched 2026-01-22 (WEF)	voluntary	n/a	world's first agentic-specific governance framework; AI Verify is the assurance side. DROPPED from this KB by p315's rewrite; re-confirmed first-hand p494.
+Singapore agent identity claim	arXiv:2608.15417 (academic commentary)	-	-	-	claims framework "requires verifiable digital identity + audit trail per agent" — CONFLICTS with voluntary status. Do not carry. arxiv unreadable here.

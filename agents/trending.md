@@ -4,6 +4,231 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p494` — `2026-10-28` — **🔴 `p493` FOUND THAT REWRITES DROP TABLE ROWS. THEY ALSO DROP PROSE, AND THIS KB HAS NO DETECTOR FOR THAT AT ALL. An entire APAC regulatory paragraph — Singapore's Model AI Governance Framework, its generative-AI framework, its **agentic AI framework**, and AI Verify — was deleted by `p315`'s rewrite. `intel/market.md` now mentions Singapore **once**, as a ban-support percentage. 🟢 Re-confirmed first-hand and it is the most commercially on-point instrument in APAC for this KB's own product: IMDA launched the **world's first governance framework for agentic AI** on **22 Jan 2026**. 🔴 And `p493`'s one hand-off to this pass — the Vietnam date "conflict" — was **never a conflict**: `p492` had resolved it precisely, and `p493` re-read a flatter secondary source and flagged the KB's correct entry as suspect. 🔴 Separately: [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), the base of `P490-1`, **drifted again inside this pass's own thirty-minute window** — `830bc2ef8389` → **`47394125364b`**, licence byte-identical, second move in ~24h.**
+
+Full reads: [`licence-and-stars.2026-10-28-p494.tsv`](../evidence/licence-and-stars.2026-10-28-p494.tsv).
+
+🔵 **Channel posture: unchanged from `p492`/`p493`, plus one gap finally diagnosed rather than
+restated.** `git ls-remote --symref` for existence and SHA, `raw.githubusercontent.com` at the
+pinned SHA for licence bytes, page/search reads for stars and regulatory text; `curl -sI` against
+`github.com` is still this session's GitHub proxy `403` and still carries zero existence
+information. Bytes measured `curl -o file` then `wc -c`.
+
+### 🔴 The defect generalises: `p493` fixed the symptom it could count
+
+`p493`'s finding was that a full-file rewrite silently drops **table rows** a previous pass had
+promoted, and it proved it by counting eight addresses. That diagnosis is right and the restoration
+landed — all eight are in [`agents/top.md`](top.md) at HEAD, verified this pass.
+
+🔴 **But rows are the detectable case.** A dropped row can be found by `grep`-ing a repo URL, which
+is exactly how `p493` found eight. **A dropped *paragraph* has no key to grep for.** Nobody knows
+to look for a fact the file no longer mentions, and that is the larger surface: `market.md`,
+`trends.md` and `patterns.md` are mostly prose, and three of them have been rewritten in full.
+
+The instance, counted the same way `p493` counted rows:
+
+| probe | result |
+|---|---|
+| `grep -ril "agentic AI framework"` across all `*.md` | 🔴 **1 file — and it is `archive/2026-10-19-p315-pre-rewrite/intel-market.md`** |
+| `grep -n "Singapore"` across `intel/market.md`, `intel/trends.md`, `verticals/solutions.md`, `compose/patterns.md` | 🔴 **1 hit total** — `market.md:181`, the Ipsos ban-support figure (**28%**) |
+
+**What `p315` held and what HEAD lost**, verbatim from the archive: *"Singapore — entirely
+voluntary, and compliance-shaped in practice. The Model AI Governance Framework, the generative-AI
+framework and an **agentic AI framework launched `2026-01`** are all voluntary, as is the **AI
+Verify** testing toolkit — but vendors selling to banks and government are expected to point to it,
+which makes a voluntary instrument a procurement gate. National push on student and teacher AI
+literacy, with teacher training at all levels by `2026`."*
+
+🔴 **The paragraph it was part of is the argument for an existing pattern.** `p315`'s next
+bullet — also gone — reads: *"The opportunity is the DIVERGENCE itself. A single APAC education
+product cannot satisfy China's binding rules, India's labelling duty, Japan's promotion posture and
+Singapore's voluntary assurance with one configuration."* That is the thesis
+[`compose/patterns.md`](../compose/patterns.md) `P490-4` (jurisdiction-routing provenance layer) is
+built on, and `P490-4` now stands on a four-jurisdiction divergence argument with **one of the four
+jurisdictions deleted from the KB**.
+
+### 🟢 Re-confirmed first-hand, and it is stronger than the version that was lost
+
+| field | `p315` (lost) | `p494` read |
+|---|---|---|
+| instrument | "an agentic AI framework launched `2026-01`" | **IMDA Model AI Governance Framework for Agentic AI** |
+| date | `2026-01` | **22 January 2026**, launched at the **World Economic Forum** |
+| standing | voluntary | voluntary — **and described across multiple firm notes as the world's *first* governance framework built specifically for agentic AI** |
+| content | — | how much **autonomy** an agent is granted, how its actions are **bounded and logged**, how humans stay **meaningfully in the loop**, and how **accountability is assigned when several agents interact** |
+| assurance | AI Verify, voluntary | AI Verify — process checks plus technical tests; the evidence side of the same programme |
+
+🟢 **Why this matters more to this KB than to a general AI practice.** Every pattern in
+[`compose/patterns.md`](../compose/patterns.md) is a *multi-agent education* system. Singapore has
+published the one instrument in the world that speaks directly to **agent autonomy bounds, action
+logging, human-in-the-loop placement and multi-agent accountability** — the exact four axes those
+patterns have to defend — and it is a **voluntary** framework, which per `p315`'s own (also lost)
+insight functions as a **procurement gate** for vendors selling into government and banks.
+**This is a sales asset, not a compliance burden**, and the KB had deleted it.
+
+🟡 **One claim not carried.** An academic commentary (`arXiv:2608.15417`) states the framework
+*"requires each agent to carry a verifiable digital identity and an audit trail."* That conflicts
+with the voluntary standing every firm note describes, and 🔴 **`arxiv.org` cannot be read from this
+session** (see below), so it cannot be checked. **Recorded as a conflict, not promoted.**
+
+### 🔴 `p493`'s hand-off to this pass was a false alarm — and the mechanism is worth naming
+
+`p493` closed its APAC section with: *"This KB's cross-region table says Vietnamese education
+systems bind from 1 Sep 2027, 'not Mar 2027' … they are not the same obligation and this KB should
+not carry both without saying which is which. Flagged for the next pass; do not quote either to a
+client yet."*
+
+🟢 **There was nothing to resolve. `p492` had already resolved it, in a table, two sections above
+where `p493` was writing.** `p492` established that the date depends on **when the system went
+live**, not on what it does, and both dates are correct for different situations. This pass's
+independent read confirms `p492` exactly:
+
+| situation | deadline | `p494` read |
+|---|---|---|
+| education / healthcare / finance AI **in operation before 15 Aug 2026** | **before 1 Sep 2027** | 🟢 **confirmed** — "*before September 01, 2027, for artificial intelligence systems in the fields of healthcare, education, and finance*" |
+| all **other** listed Decision 33 sectors | **1 Mar 2027** | 🟢 **confirmed** — "*Other listed sectors have until March 01, 2027*" |
+| issued / in force | **30 Jun 2026** / **15 Aug 2026** | 🟢 **confirmed** — `p493`'s "issued 2 July 2026" is **wrong**; `p492` and the cross-region table are right |
+
+🔴 **So the correction runs the other way from what `p493` expected: `p493` degraded a precise
+holding into an apparent contradiction.** It re-read a secondary source that flattened the
+conditional into one grace date, found that flat version disagreed with the KB's precise version,
+and filed the KB's correct entry as the suspect one. **`T14` says this KB's own bookkeeping is a
+material source of error; this is a second mode of it — not a dropped row, but a later pass
+*overwriting a sharper finding with a blunter one* and flagging the sharp one as the defect.**
+
+🔵 **Rule, as transferable as `p493`'s grep rule:** before filing a contradiction between a new read
+and a KB entry, **read the KB entry's own pass note first.** `p493` cited `p491`'s and `p492`'s
+sections elsewhere in the same file but did not read `p492`'s Vietnam table before declaring its
+conclusion unquotable.
+
+### 🔴 But `p492`'s commercial advice rests on the one element that is *not* verified
+
+`p492` draws the engagement-planning conclusion: *"For a Globant engagement standing up a new
+system, **plan on 1 Mar 2027, not 1 Sep 2027** — the generous date is the incumbent's, not the
+newcomer's."* That depends entirely on its third table row: *"A system put into operation within six
+months after the effective date falls back to 1 March 2027."*
+
+🔴 **That row is the one claim in the whole Vietnam picture with a single source, and it is a vendor
+compliance tracker.** This pass's read surfaces it attributed to **AesirX ComplianceOne alone**, and
+explicitly flagged by the reporting as *not confirmable against the official text*. Everything
+else — instrument number, 30 Jun issuance, 15 Aug in force, the 1 Sep 2027 / 1 Mar 2027 split, the
+46-systems-across-6-sectors scope — is convergent across multiple independent sources.
+
+🟡 **Honest status: the advice is probably right and is not yet supportable.** The direction of the
+error is also unfavourable — if the six-month fallback does *not* exist, a new entrant inherits the
+**1 Sep 2027** education date and `p492` has told the engagement to build to a deadline **six months
+tighter than the law requires**, which prices work in that nobody is obliged to buy. **Keep the
+advice, attach the single-source flag to it, and make the primary read a named deliverable.**
+
+### 🟢 The Vietnam education scope is **three** system types; this KB recorded one
+
+`p492` recorded the appendix's education entry as *"systems that automatically assess or rank
+learners — the same functional trigger as EU Annex III."* That is one of three, and it is the one
+most like the EU. The two it did not record are the two that **do not** transfer from an EU
+conformity design:
+
+| Decision 33 education trigger | in this KB before `p494` | why it matters |
+|---|---|---|
+| automatic **assessment, grading or ranking** of students | 🟢 yes | matches EU Annex III; `P490-2`'s conformity work transfers |
+| 🆕 self-learning content generated from **uncontrolled data sources** | 🔴 **no** | **this is a corpus-governance trigger, not an assessment trigger.** A RAG tutor over an unvetted corpus is high-risk in Vietnam *on the retrieval design alone*, with no grading feature anywhere in the product |
+| 🆕 **biometric** monitoring of learner behaviour | 🔴 **no** | the EU **bans** emotion recognition in education outright (`T6`); Vietnam **permits it as high-risk**. 🔴 Opposite regimes, not stricter-and-looser |
+
+🔴 **Consequence for the standing "build conformity once in EMEA shape and reuse it" conclusion.**
+That conclusion is now **partly** true and this KB states it unconditionally. It holds for the
+assessment trigger. It **fails** for the other two: an EU-conformant design has no corpus-provenance
+artefact to show a Vietnamese regulator, and on biometrics the two regimes point in **opposite**
+directions — a product built to EU rules has the feature removed, while Vietnam expects it
+documented and governed. See [`intel/market.md`](../intel/market.md) and `P494-1` in
+[`compose/patterns.md`](../compose/patterns.md).
+
+### 🔴 Re-reads: three pins stable, and the keystone integration drifted *again* — mid-pass
+
+| repo | KB pin | `p494` read | verdict |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `a31d82624c27` | `a31d82624c27` | 🟢 **4th consecutive pass byte-stable** (`p490`–`p494`) |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `830bc2ef8389` | 🔴 **`47394125364b`** | 🔴 **DRIFTED AGAIN — and it moved *during this pass*** (see below) |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `70859b42e714` | `70859b42e714` | 🟢 `p493`'s restoration pin holds |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `7d9e9052bc5a`, AGPL-3.0, 34 522 B | `7d9e9052bc5a`, **AGPL-3.0**, **34 522 B**, `sha1 3cd688cb1bd7` | 🟢 **byte-identical** to this KB's own earlier read |
+
+🔴 **`canvas-mcp` drifted again, and it drifted *inside this pass's own window*.** The first
+`ls-remote` of this pass returned `830bc2ef8389` — matching `p492`'s pin. A second sweep roughly
+thirty minutes later, run to verify the URLs in this pass's own additions, returned
+**`47394125364b`**, stable across three consecutive reads. 🟢 **Licence byte-identical at both SHAs**
+(MIT, `LICENSE`, **1 071 B**, `sha1 491fb891a4cf`) — the same payload `p492` recorded at
+`32e5d1ca0175` — **so every move observed so far is code-only.**
+
+🔴 **This makes `canvas-mcp` the most volatile pin in this KB, and it is the base of `P490-1`.**
+Two moves inside ~24 hours: `32e5d1ca0175` → `830bc2ef8389` (caught by `p492`) →
+`47394125364b` (caught twice over by `p494`). 🔵 **The transferable consequence is a pinning rule,
+not a star count:** on a repo moving at this rate, **a branch-HEAD pin is stale before the pass that
+wrote it finishes**, and a KB that pins HEAD will show phantom drift on every read while telling an
+engineer to pin something that no longer exists. **Pin the release tag (`v1.16.0` or later) for
+`P490-1` and record the HEAD SHA only as an observation with its read time.** `P490-1` and `P494-1`
+are amended accordingly.
+
+🟡 **And the four advisories were not re-checked at the new SHA.** `p492` read them at `v1.16.0`;
+this pass confirms the licence but did **not** re-read the advisory list, so the recorded count of
+**four** is `p492`'s, not `p494`'s. 🔴 **For a repo that moves twice a day and carries a
+token-handling advisory, an unverified advisory count is the one number that should not be allowed
+to age.** Next pass: re-read the advisories first, before any discovery query.
+
+🔵 **Why `ChatTutor` was re-read at all, and what it proves.** The brief's GitHub-trending query
+returned it as a notable education-AI repo — and this KB has had it since at least `p?`, correctly
+recorded as **AGPL-3.0** and correctly excluded from the permissive tier. The re-read cost one probe
+and confirms the KB, but the useful output is the negative: **the discovery channel is now returning
+this KB's own contents back to it.**
+
+### 🔴 Misses declared — the ranking queries are exhausted, and that is this pass's search finding
+
+Every brief-mandated query was run: the two ranking queries, the vertical-platform query, the
+trends query, and all four per-region queries. 🔴 **The repository queries returned not one address
+new to this KB.** Counted by `grep -ril` across the repo:
+
+| returned as a find | already in this KB |
+|---|---|
+| `HugeCatLab/ChatTutor` | 🟢 yes — `agents/top.md` row, AGPL-3.0 |
+| `SirhanMacx/Claw-ED` | 🟢 yes — 118 files |
+| `JuneYaooo/lineage-skill` | 🟢 yes — 147 files |
+| `mlabonne/llm-course`, `microsoft/ML-For-Beginners`, `developer-roadmap` | 🟢 yes — all held, all already excluded as **curriculum, not deployable agents** |
+| `HKUDS/DeepTutor` | 🟢 yes — the shelf's top row |
+| general-purpose agents (`OpenClaw`, Hermes, Agent Zero, OpenHands, LangGraph, CrewAI) | 🟢 yes — held, and already excluded as not education-specific |
+
+🔵 **Read this as a supply fact, not as a tired pass.** Three consecutive passes have now run the
+star-ordered education-agent sweep and returned nothing above the floor that the KB did not hold.
+`p493` reached the same conclusion from the other direction (five MIT finds, all below the floor).
+**The marginal value of the ranking queries is now near zero, and the marginal value of
+licence/SHA re-reads and regulatory primary reads is not.** Recommend the next pass reallocate.
+
+🔴 **Per-region misses:** North America returned the same state-guidance landscape this KB already
+holds (Idaho SB 1227, Maryland SB 720, Arizona HB 4040 pending, the Fine bill, the 35-states count
+this file has ruled unquotable, Katy ISD) — **nothing new**. EMEA returned the Digital Omnibus
+calendar for the twelfth independent time and **still no EMEA adoption rate and no vendor share**.
+LATAM returned the UNESCO LAC observatory, Brazil's EBIA, Chile's Boletín 16821-19 and Mexico's
+no-statute position — **all held**. **APAC is the only region where this pass moved anything**, and
+it moved by repairing a deletion rather than by discovery.
+
+### 🔵 Channel: `arxiv.org` is **proxy-refused**, not unreachable — and that is a permanent verdict
+
+This KB has recorded for several passes that `arxiv.org` "does not resolve from this session's
+network." That phrasing suggests a transient DNS or outage condition that a later pass might find
+cleared. 🔴 **It is neither.** Probed three URLs this pass:
+
+```
+arxiv.org:443 — connect_rejected   (curl exit 56, http=000) ×3
+```
+
+**`connect_rejected` is this session's egress proxy refusing the host** — the same class of
+diagnosis `p492` landed for the GitHub `403`. It is an allowlist decision, not a network fault, so
+**no future pass will find it cleared** and re-probing it each pass is waste.
+
+🔵 **Consequence for two open items, stated so they stop being re-opened.** `DeepTutor`'s design
+paper (`arXiv:2604.26962`) and `pedagogy-benchmark`'s (`arXiv:2506.18710`) **cannot be read from
+this session on any pass.** The search channel can surface their titles and abstract claims as
+snippets, which is how this KB got both identifiers — but `p492`'s instruction *"do not cite the
+abstract to a client until someone has opened it"* can **only** be discharged by a human. **Move it
+out of the pass backlog and into a named human deliverable**, alongside the EUR-Lex primary read and
+the Vietnam official text.
+
+
 ## 🆕 `p493` — `2026-10-28` — **🔴 THIS KB PROMOTED EIGHT REPOSITORIES AND THEN LOST THEM. Eight addresses that earlier passes recorded as "Now shelved" are absent from **both** `agents/top.md` and `repos/foundations.md` at HEAD `cb6a4be`. One of them is [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — **MIT**, **41,700★**, an education-specific multi-agent classroom — which makes this shelf's standing gap *"no permissive education-specific agent above 1,000★ other than DeepTutor"* **false by a factor of forty**. 🔴 A second dropped row, [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark), is **MIT** — which falsifies the claim in `top.md` and in `T11` that **not one** education-AI evaluation instrument is licensed. 🔴 And `p492`'s own declared gap — that the Learning Commons skills "could not be licence-verified" — was already closed in this KB's own history, twice.**
 
 Full reads: [`licence-and-stars.2026-10-28-p493.tsv`](../evidence/licence-and-stars.2026-10-28-p493.tsv).

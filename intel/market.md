@@ -306,10 +306,10 @@ and reuse it.
 | Market position | largest (36%) | mid | fastest (35.3% CAGR) | smallest, badly sized |
 | Binding AI law | none federal; state patchwork | **EU AI Act** | KR, CN, VN yes; JP no; IN partial | **none in force**; BR PL 2338 stalled in committee |
 | Education named high-risk | no | **yes** (Annex III) | **yes — Vietnam**, *Decision 33/2026/QD-TTg*, issued **30 Jun 2026**, in force **15 Aug 2026**, **3 education systems** of 46 | 🟡 claimed for BR PL 2338, unconfirmed |
-| Nearest deadline | varies by state | **2 Dec 2026** (Art. 50 marking) | IN labels live 20 Feb 2026; **KR penalties ~Jan 2027**; **VN education 1 Sep 2027** (not Mar 2027) | — |
+| Nearest deadline | varies by state | **2 Dec 2026** (Art. 50 marking) | IN labels live 20 Feb 2026; **KR penalties ~Jan 2027**; **VN education 1 Sep 2027** if live before 15 Aug 2026, else **1 Mar 2027** 🟢 *confirmed `p494`; the fallback row is single-sourced — see `p494`* | — |
 | Individual adoption | 53% teachers | **$2.64B mkt; FI/EE/NL lead K-12**; rate still unmeasured | **CN compulsory from age 6**; KR mandate **reversed** | **highest measured** |
 | Institutions with AI guidance | ~70% | ~70% | not established | **45%** |
-| Sell on | policy configurability | **provider conformity** | jurisdiction routing | institutional delivery |
+| Sell on | policy configurability | **provider conformity** | jurisdiction routing; 🟢 **SG: demonstrable conformity to a voluntary standard** (`p494`) | institutional delivery |
 
 
 ## 🆕 `p492` — `2026-10-28` — Vietnam's education high-risk tier, pinned to an instrument
@@ -529,3 +529,173 @@ committee, still awaiting the rapporteur's report, as `p491` recorded. 🟡 And 
 whether it treats education as high-risk is **still unresolved** — this pass's sources discuss the
 bill's risk tiers **without mentioning education**, which is the third pass to return that same
 silence. **Do not tell a client Brazil has an education high-risk category coming.**
+
+## 🆕 `p494` — `2026-10-28` — APAC repaired: a deleted jurisdiction restored, and Vietnam's date conflict closed
+
+🔵 **Evidence class:** all regulatory material below is **secondary** (law-firm notes, compliance
+trackers, a government-framework launch report) and flagged as such. No primary legal text was
+readable: `eur-lex.europa.eu`, `www.tilleke.com` and `english.luatvietnam.vn` (subscriber-gated) do
+not resolve or do not open from this session, and 🔴 **`arxiv.org` is now confirmed
+`connect_rejected` by this session's egress proxy — an allowlist refusal, permanent, not transient.**
+**Nothing below reaches a client deck without a primary read.** Full reads:
+[`licence-and-stars.2026-10-28-p494.tsv`](../evidence/licence-and-stars.2026-10-28-p494.tsv).
+
+🔴 **This pass moved one region. North America, EMEA and LATAM returned nothing this file does not
+already hold, and the misses are itemised at the end** — because an unstated miss reads exactly like
+coverage.
+
+### APAC
+
+🔴 **This file lost an entire jurisdiction to a rewrite, and the lost jurisdiction is the one with
+the world's only agentic-AI governance instrument.**
+
+Before this pass, `grep -n "Singapore"` across this file, [`trends.md`](trends.md),
+[`../verticals/solutions.md`](../verticals/solutions.md) and
+[`../compose/patterns.md`](../compose/patterns.md) returned **one hit** — the Ipsos ban-support
+figure (**28%**) at line 181. `p315`'s pre-rewrite copy in
+[`archive/2026-10-19-p315-pre-rewrite/intel-market.md`](../archive/2026-10-19-p315-pre-rewrite/intel-market.md)
+held a full Singapore posture. `p315`'s rewrite deleted it and left no marker — the same mechanism
+`p493` documented for eight table rows, now shown to apply to **prose**, where there is no repo URL
+to `grep` for and therefore **no detector at all**. See
+[`../agents/trending.md`](../agents/trending.md) `p494`.
+
+🟢 **Restored and re-verified first-hand, in a stronger form than the version that was lost:**
+
+- **Singapore — voluntary instruments that function as a procurement gate.** The **Model AI
+  Governance Framework**, the **generative-AI framework**, and the **Model AI Governance Framework
+  for Agentic AI** are all voluntary, as is **AI Verify**, the government testing-and-assurance
+  toolkit (process checks plus technical tests). 🔵 **But vendors selling into government and banks
+  are expected to point to them**, which makes a voluntary instrument a *de facto* procurement
+  requirement. National push on student and teacher AI literacy, with teacher training at all
+  levels by 2026.
+- 🟢 **The agentic framework is dated and attributed:** launched by **IMDA on 22 January 2026** at
+  the **World Economic Forum**, and described across multiple independent firm notes as the
+  **world's first governance framework built specifically for agentic AI** — systems that plan,
+  reason and act autonomously on a user's behalf. Its four axes are **how much autonomy an agent is
+  granted**, **how its actions are bounded and logged**, **how humans stay meaningfully in the
+  loop**, and **how accountability is assigned when several agents interact**.
+
+🟢 **Why this is a commercial asset rather than a compliance cost, and why its loss was expensive.**
+Every recipe in [`../compose/patterns.md`](../compose/patterns.md) is a **multi-agent education
+system**, and those four axes are exactly what such a system has to defend. A voluntary framework
+that a client's procurement function already recognises is **a scoring rubric Globant can design
+to and point at** — not an obligation to argue down. 🔵 **Sell Singapore on demonstrable conformity
+to a voluntary standard**, which is a different motion from EMEA's provider-conformity sale and from
+the jurisdiction-routing sale this file recommends for APAC generally.
+
+🔴 **And the deletion undercut an existing pattern's premise.** `p315` also held: *"The opportunity
+is the DIVERGENCE itself. A single APAC education product cannot satisfy China's binding rules,
+India's labelling duty, Japan's promotion posture and Singapore's voluntary assurance with one
+configuration."* That is the argument [`../compose/patterns.md`](../compose/patterns.md) `P490-4`
+(jurisdiction-routing provenance layer) rests on — and it has been standing on a
+four-jurisdiction divergence with **one of the four deleted from this KB**. `P490-4`'s premise is
+restored this pass.
+
+🟢 **Vietnam — the date conflict `p493` flagged for this pass is closed, in `p492`'s favour.**
+`p493` wrote that this file's cross-region table ("1 Sep 2027, not Mar 2027") might conflict with a
+1 Mar 2027 grace period and that neither date should be quoted. 🔴 **There was no conflict.**
+`p492`'s section above had already resolved it with a conditional table, and this pass's independent
+read confirms `p492` term by term:
+
+| situation | `p492` | `p494` independent read |
+|---|---|---|
+| education / healthcare / finance, **in operation before 15 Aug 2026** | **1 Sep 2027** | 🟢 confirmed — *"before September 01, 2027, for … healthcare, education, and finance"* |
+| all **other** Decision 33 sectors | **1 Mar 2027** | 🟢 confirmed — *"other listed sectors have until March 01, 2027"* |
+| issued | **30 Jun 2026** | 🟢 confirmed — `p493`'s "2 July 2026" is **wrong** |
+| in force | **15 Aug 2026** | 🟢 confirmed |
+| scope | 46 systems / 6 sectors, education is 3 | 🟢 confirmed |
+
+🔴 **One element of `p492`'s picture is single-sourced, and it is the element its advice depends on.**
+`p492` concludes *"plan on 1 Mar 2027, not 1 Sep 2027"* for a new build, which follows only from its
+row *"a system put into operation within six months after the effective date falls back to 1 March
+2027."* This pass finds that claim attributed to **one vendor compliance tracker (AesirX
+ComplianceOne)** and **expressly flagged by the reporting as unconfirmed against the official text**.
+Everything else in the Vietnam picture is convergent across multiple independent sources.
+
+🟡 **Keep the advice, flag it, and name the primary read as a deliverable.** The error direction is
+unfavourable: if the six-month fallback does not exist, a new entrant inherits the **1 Sep 2027**
+education date and the engagement has been scoped to a deadline **six months tighter than the law
+requires** — billable work nobody is obliged to buy.
+
+🟢 **Vietnam's education scope is three system types; this file recorded one.** `p492` captured the
+assessment trigger, which is the one that behaves like EU Annex III. The other two do not:
+
+| Decision 33 education trigger | held before `p494` | engagement consequence |
+|---|---|---|
+| automatic **assessment, grading or ranking** of students | 🟢 yes | matches EU Annex III — `P490-2` conformity work transfers |
+| 🆕 self-learning content generated from **uncontrolled data sources** | 🔴 **no** | a **corpus-governance** trigger. A RAG tutor over an unvetted corpus is high-risk in Vietnam **on retrieval design alone**, with no grading feature in the product at all |
+| 🆕 **biometric** monitoring of learner behaviour | 🔴 **no** | the EU **bans** emotion recognition in education (`T6`); Vietnam **permits it as high-risk**. 🔴 **Opposite regimes, not stricter-and-looser** |
+
+🔴 **This qualifies a conclusion this file states unconditionally.** "Build conformity once, in EMEA
+shape, and reuse it" holds for the **assessment** trigger and **fails for the other two**: an
+EU-conformant build has no corpus-provenance artefact to show a Vietnamese regulator, and on
+biometrics an EU design *removes* the feature while Vietnam expects it *documented and governed*.
+See `P494-1` in [`../compose/patterns.md`](../compose/patterns.md).
+
+🔵 **Re-confirmed, not advanced:** Japan's **AI Basic Plan adopted 14 July 2026** under the AI
+Promotion Act (promotion-first, no penalties); China's **AI-generated-content labelling rules in
+force since 1 Sep 2025** alongside its 2022–2023 algorithm, deep-synthesis and generative-AI rules;
+India's **DPDP rules notified Nov 2025, obligations phased to May 2027**, plus a **Feb 2026**
+amendment requiring platforms above **5 million** Indian users to label AI-generated content. 🟢 All
+four postures remain mutually unsatisfiable by one configuration — `P490-4`'s premise, now with its
+fourth jurisdiction back.
+
+🔴 **Miss declared, fifth pass running:** still **no edtech vendor share for any APAC market**, and
+still no institution-level adoption *rate* for China, India or Japan. The population-level
+generative-AI usage figures that surfaced this pass (Singapore **64.3%**, Japan **24.7%**, Jun 2026)
+are **working-age population** measures, **not school or firm adoption**, and this file already holds
+them — **do not let them be read as education adoption.**
+
+### North America
+
+🔴 **Miss declared: nothing new.** The per-region query returned the landscape this file already
+holds — **Idaho SB 1227** (statewide K-12 AI framework, AI-literacy standards, educator training),
+**Maryland SB 720** (MSDE guidance, professional development, district tool evaluation), **Arizona
+HB 4040** (introduced, not enacted), the **K-12 AI Literacy and Readiness Act of 2026** (introduced
+April 2026, advanced by a House committee, not law), **Katy ISD**'s grade-7 supervised-access policy
+for 2026-27, and the recurring **"35 states plus Puerto Rico have K-12 AI guidance"** count.
+
+🔵 **The state-count rule is re-confirmed, not replaced.** This pass's sources disagree among
+themselves — "35 states and Puerto Rico" against "over half of U.S. states by early 2026" — which is
+the same tracker divergence that made this file rule bill and state counts **unusable**. **Cite a
+specific statute, never a count.** The teacher-adoption figures (54% of K-12 students, 92% of
+university students; separately 86% of education organisations using gen-AI "but most lack a
+policy") again come from vendor round-ups that disagree with each other and are **not promoted**.
+
+### EMEA
+
+🔴 **Miss declared: nothing new, twelfth independent confirmation of the same calendar.** The query
+returned the Digital Omnibus picture this file already holds — Regulation (EU) **2026/1744**
+published in the OJ **24 Jul 2026** and applying from **27 Jul 2026**; stand-alone Annex III
+education systems deferred to **2 Dec 2027**; embedded-in-regulated-products **2 Aug 2028**;
+**Article 50 transparency duties from 2 Aug 2026**; the emotion-recognition prohibition in education
+live since **2 Feb 2025**; and the Article 4 AI-literacy duty softened to *supporting* staff skills
+rather than guaranteeing a level. 🔴 **Still not read at EUR-Lex.** The convergence is now
+overwhelming and the primary text remains unread from this session — **that is a human deliverable,
+not a pass item.**
+
+🔴 **Still missing:** no EMEA adoption rate, no vendor-share data, and **no EMEA-origin education
+repository** beyond the two this KB holds
+([`dolos`](https://github.com/dodona-edu/dolos), Belgium;
+[`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE), Morocco). The **$2.64B** /
+31.9% CAGR figure and the Finland/Estonia/Netherlands K-12 ranking stand as `p491`'s secondary
+figures, **unimproved for a fourth pass**.
+
+### LATAM
+
+🔴 **Miss declared: nothing new.** The query returned material this file holds — the **UNESCO
+Observatory on AI in Education for Latin America and the Caribbean** (including the **CONALEP /
+DGETI** centres-of-excellence pilot in Mexico and the Chilean teacher digital-competency project),
+Brazil's **EBIA** national strategy with education as a vertical axis, **Chile's Boletín 16821-19**
+(before Congress since 7 May 2024, still *en tramitación*), and **Mexico's** position that multiple
+federal AI bills have been introduced and **none has passed**.
+
+🔵 **One source conflict worth recording so it is not inherited.** One secondary source this pass
+described Brazil's **PL 2338/2023** as *"in force with staged applicability."* 🔴 **That is wrong and
+contradicts every other read this KB holds**, including three prior passes: the bill was approved by
+the Senate on 10 Dec 2024 and remains **pending in the Chamber of Deputies' special committee**,
+awaiting the rapporteur's report. **Brazil has no AI statute in force.** 🟢 `p490`'s finding —
+**no education-AI statute in force anywhere in LATAM** — holds for a **fifth** pass, and whether
+PL 2338 treats education as high-risk is **still** unresolved after four passes of silence on the
+point. **Do not tell a client Brazil has an education high-risk category coming.**
+

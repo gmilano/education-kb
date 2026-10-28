@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p494` — `2026-10-28` — **🔴 THE DISCOVERY CHANNEL IS RETURNING THIS KB'S OWN CONTENTS. Every repository the brief's ranking queries surfaced this pass is already held — `ChatTutor`, `Claw-ED`, `lineage-skill`, `llm-course`, `ML-For-Beginners`, `developer-roadmap`, and the general-purpose tier. 🔴 Zero new addresses, third pass running. 🟢 The one re-read done first-hand came back byte-identical, which is the only useful output: `ChatTutor` is **AGPL-3.0, 34 522 B, `sha1 3cd688cb1bd7`** at `7d9e9052bc5a`, matching this KB's own earlier read exactly.**
+
+Full reads: [`licence-and-stars.2026-10-28-p494.tsv`](../evidence/licence-and-stars.2026-10-28-p494.tsv).
+Narrative, the prose-loss defect and the Vietnam correction:
+[`agents/trending.md`](../agents/trending.md) `p494`.
+
+### 🔴 Drift sweep — three pins stable, one moved **during this pass**
+
+| repo | KB pin | `p494` `git ls-remote` | licence re-read | verdict |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `a31d82624c27` | `a31d82624c27` | not re-read this pass | 🟢 **4 consecutive passes byte-stable** (`p490`–`p494`) |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `830bc2ef8389` | 🔴 **`47394125364b`** | 🟢 **MIT, 1 071 B, `sha1 491fb891a4cf` — byte-identical at BOTH SHAs** | 🔴 **DRIFTED AGAIN, mid-pass** — second move in ~24h |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `70859b42e714` | `70859b42e714` | not re-read this pass | 🟢 `p493`'s restoration pin holds |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `7d9e9052bc5a` | `7d9e9052bc5a` | 🟢 **AGPL-3.0**, `LICENSE`, **34 522 B**, `sha1 3cd688cb1bd7` | 🟢 **byte-identical** to this KB's earlier read |
+
+🔵 **`ChatTutor`'s licence is worth having pinned by sha1 rather than by name.** At 34 522 B it is a
+full AGPL-3.0 payload, and the row in [`agents/top.md`](../agents/top.md) carries the consequence
+this KB cares about: **AGPL reaches across the network, so hosting it for a client triggers source
+obligations.** A byte-pinned grant is what makes that statement defensible rather than a licence-tag
+reading. 🟢 [`verticals/solutions.md`](../verticals/solutions.md) already records
+[`open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) (BSD-3-Clause) as the
+permissive answer in this layer — that remains the row to build on.
+
+### 🔴 The exhaustion finding, counted
+
+The brief mandates `top open source AI agents {industry} {year} github MIT` and
+`github trending {industry} AI {year}`. Both were run. Results, checked by `grep -ril` across every
+`*.md` in this repository:
+
+| returned | held? | disposition in this KB |
+|---|---|---|
+| `HugeCatLab/ChatTutor` | 🟢 held | `agents/top.md` copyleft row, AGPL-3.0 |
+| `SirhanMacx/Claw-ED` | 🟢 held (118 files) | local-first teaching assistant, already recorded |
+| `JuneYaooo/lineage-skill` | 🟢 held (147 files) | teacher agent-skills tier, already recorded |
+| `mlabonne/llm-course` | 🟢 held (39 files) | **curriculum, not a deployable agent** |
+| `microsoft/ML-For-Beginners` | 🟢 held (43 files) | **curriculum, not a deployable agent** |
+| `developer-roadmap` | 🟢 held (27 files) | **curriculum, not a deployable agent** |
+| `HKUDS/DeepTutor` | 🟢 held | the shelf's top row |
+| `OpenClaw`, Hermes Agent, Agent Zero, OpenHands, LangGraph, CrewAI | 🟢 held | **general-purpose, not education-specific** — already excluded |
+
+🟢 **The curriculum-versus-agent miscatalogue keeps reappearing, and this KB keeps catching it.**
+`p492` recorded the same exclusion for
+[`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
+(MIT, 67,600★) and for `microsoft/ai-agents-for-beginners` (78,000★): both would **top this shelf on
+stars** and teach a client nothing about tutoring. **Three passes, the same trap, the same verdict.**
+The listicle sources that drive these queries rank by stars and do not distinguish *teaching
+material about AI* from *an AI system that teaches*. **That distinction is this shelf's main editorial
+value and it should be stated as such, not re-derived every pass.**
+
+🔵 **Reallocation recommended.** Three passes of star-ordered sweeps have produced zero promotions.
+`p493` found five MIT addresses, all below the floor; `p494` found none at all. Meanwhile this pass
+found a **deleted APAC regulatory paragraph** and a **mis-filed contradiction** by reading the KB
+against itself, and `p492`/`p493` found real drift and eight dropped rows the same way. **The
+evidence is now consistent across four passes: internal audit and licence/SHA re-reads yield more
+than discovery queries in this industry.** Keep the brief's queries — a miss must be declared, not
+skipped — but spend the pass's budget on the primary reads named in
+[`agents/trending.md`](../agents/trending.md) `p494`.
+
+### 🔵 Channel note that belongs in this file too
+
+`arxiv.org` is **`connect_rejected` by this session's egress proxy** (`curl` exit 56, `http=000`,
+three URLs probed) — an allowlist refusal, **not** a DNS failure and **not** transient. No future
+pass will find it cleared, so **stop re-probing it**. Repository addresses remain fully readable:
+`git ls-remote --symref` and `raw.githubusercontent.com` at a resolved SHA both work unauthenticated,
+and `curl -sI https://github.com/<repo>` remains the GitHub proxy `403` that carries no information.
+
+
 ## 🆕 `p493` — `2026-10-28` — **🔴 THE PERMISSIVE CENSUS WAS NEVER 3-OF-19, OR 4-OF-20. It was wrong because this KB had **deleted rows it had already promoted**. [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) is **MIT at 41,700★** — education-specific, 781 commits — and it appears in **neither** shelf file. 🟢 Restoring the eight dropped addresses changes the permissive picture in the platform and tooling layers at once, and it hands this KB the first **end-to-end all-permissive education stack** it has ever been able to offer.**
 
 🔵 **Channels:** see [`agents/trending.md`](../agents/trending.md) `p493` for the full note and the
