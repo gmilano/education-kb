@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p511` — `2026-10-28` — **🟢 `make hooks` RAN after sixteen denials, and it is RED (45/63). 🟢 `p509`'s byte census is INDEPENDENTLY RE-ATTESTED two passes later — same bytes, same `sha256`, from a fresh read. 🟢 One new foundation row, EMEA-placed on its licence holder: the permissive Learning Record Store. 🔴 One round star cell on this shelf was OVERSTATED by 38.**
+
+### 🟢 `p509`'s licence byte census, re-read independently — and it holds exactly
+
+`p509` swept 137 addresses and read 119 payloads with bytes and `sha256`. 🔵 That census is the
+single most load-bearing artefact on these shelves, and until now nothing had re-derived any of it.
+🟢 **Two rows were re-read this pass from a fresh `raw` fetch, with no reference to the census file
+until after the read:**
+
+| slug | path | `p509` bytes | `p511` bytes | `p509` `sha256₁₆` | `p511` `sha256₁₆` |
+|---|---|---|---|---|---|
+| [`openfun/ralph`](https://github.com/openfun/ralph) | `LICENSE.md` | **1,094** | 🟢 **1,094** | `08ea77291de9c70f` | 🟢 **`08ea77291de9c70f`** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `LICENSE` | **11,358** | 🟢 **11,358** | `cfc7749b96f63bd3` | *(bytes only)* |
+
+🟢 **Exact on both, digest included.** The licence column is reproducible from a cold start, which is
+what `Gap 508-B` bought the insurance for.
+
+### 🔴 A byte-count convention that is wrong by exactly one, caught by a control
+
+🔴 **This pass's first byte read of `ralph/LICENSE.md` returned 1,093, not 1,094**, and would have
+published a one-byte "correction" against a correct census. 🟢 **The cause was found and it is
+general:** shell command substitution `$(curl …)` **strips the trailing newline**, so every byte
+count taken that way is **exactly 1 low on every newline-terminated payload**. Reproduced on two
+independent files:
+
+| payload | `curl -o file; wc -c` | via `$(…)` command substitution | delta |
+|---|---|---|---|---|
+| `openfun/ralph` `LICENSE.md` | **1,094** | 1,093 | **−1** |
+| `oppia/oppia` `LICENSE` | **11,358** | 11,357 | **−1** |
+
+🟢 **`p509`'s census does NOT have this defect** — its numbers match the file-based read exactly, so
+it was taken correctly. 🔴 The warning is for every future pass: **`curl -o` then `wc -c`, never
+`$(curl …)`**. A systematic off-by-one in the most-attested column on these shelves would have been
+invisible, because it is wrong in the same direction every time.
+Control: [`byte-convention-control.2026-10-28-p511.tsv`](../evidence/byte-convention-control.2026-10-28-p511.tsv).
+
+### 🟢 The new row — and the reason it belongs on the FOUNDATION shelf, not the agent shelf
+
+[`openfun/ralph`](https://github.com/openfun/ralph) has been on this base since `p256`, but only in
+[`agents/trending.md`](trending.md) — **never on a live shelf and never region-placed.** 🔴 That is a
+placement failure, not a discovery failure: it is the **only permissive Learning Record Store** this
+base has ever found, and an LRS is the component every xAPI-instrumented tutoring deployment needs
+and nobody wants to write.
+
+| read | value |
+|---|---|
+| licence | 🟢 **MIT**, `LICENSE.md` **1,094 B**, `sha256₁₆ 08ea77291de9c70f` |
+| holder | **"Copyright (c) 2020-present France Université Numérique"** |
+| liveness / pin | 🟢 `ref: refs/heads/main` → **`91fef112394d`** |
+| tags | **34**, latest **`v5.1.0`** (`sort -V`) |
+| ★ | **51** *(🟢 `p511`, API; `archived: false`)* |
+
+🟢 **Region: EMEA, placed on the licence holder's own bytes.** *France Université Numérique* is the
+French national higher-education digital agency — a public-sector copyright holder, which is the
+strongest sovereignty signal available for an EMEA engagement and the opposite of the
+US-API-dependency objection every EMEA education buyer raises first. 🔵 **A `v5.1.0` across 34 tags
+is a maintained component, not a research artefact.**
+
+### 🔴 The round-cell defect on this shelf
+
+🔴 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) read **`1,200`** here and
+the API reads **1,162** — **the shelf OVERSTATED by 38**, and the direction matters: a pass assuming
+star counts only grow would have treated 1,200 as merely stale rather than wrong. 🟢 Corrected in
+place. The full method and the 22-cell census are in
+[`agents/top.md`](../agents/top.md)'s `p511` block; the one-line rule is **a star cell ending in `00`
+is unread until re-read.** 🟢 Every other cell on this shelf — `oppia` 6,950, `OpenOLAT` 448,
+`dolos` 355 — re-read **exact**.
+
 # Foundational education repos
 
 > 🟢 **`p510` (`2026-10-28`) — EVERY FOUNDATION ADDRESS IS PROVEN LIVE, THE TRUE DEFAULT BRANCH IS RECORDED FOR ALL OF THEM, AND `p509`'s WARNING THAT THE BRANCH ASSUMPTION "INVALIDATES A METHOD" IS MEASURED AND FOUND TOO STRONG.**
@@ -275,9 +343,10 @@ heading goes stale silently; the table is the census, not the heading.**
 | Repo | License | ★ | SHA read | Role |
 |---|---|---|---|---|
 | [oppia/oppia](https://github.com/oppia/oppia) | Apache-2.0 | **6,950** *(🟢 `p506`, API; `archived: false`)* | `bc73ecf9cf71` | Interactive lesson platform with built-in structured "explorations". Byte-identical to canonical Apache-2.0. Default branch is `develop`, not `main`. 🟢 **`p506`: this row is the SECOND RUNG of the permissive education tier** — [`agents/top.md`](../agents/top.md) claimed the next permissive education-specific row after `OpenMAIC` (41,705★) was `k12-teacher-skills` at 595★; **this row sits between them and that claim is retracted there.** The real step is **41,705 → 6,950, ~6×**. |
-| [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT | 1,200 | `dbe14ef6c499` | **Offline-first** learning platform. The one row here designed for no-connectivity deployment — the decisive property for rural LATAM, Africa and APAC programmes. Default branch `develop`. |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT | **1,162** *(🟢 `p511`, API; prior cell `1,200` — a ROUND number, OVERSTATED by 38)* | `dbe14ef6c499` | **Offline-first** learning platform. The one row here designed for no-connectivity deployment — the decisive property for rural LATAM, Africa and APAC programmes. Default branch `develop`. |
 | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | **MIT** | **355** | `74b101785bad` | **Source-code plagiarism / academic-integrity engine** — 1 084 B, `sha1 8f6f3815d28d`; **3,865 commits**, the most-maintained repo in this file. Ghent University (`dolos@ugent.be`). 🟢 **Restored `p493`: `p296` recorded this as *already a foundation row* and this KB's identity gate refused a duplicate promotion on that basis — then a later full-file rewrite deleted the row the gate had defended.** The gate worked; the rewrite did not. |
 | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 | 448 | `3736d48fa685` | Full Java LMS, Apache-2.0 (10,982 B). The only permissively-licensed *full* LMS found. Swiss-origin, strong EMEA higher-ed footprint. |
+| [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | **51** *(🟢 `p511`, API; `archived: false`)* | `91fef112394d` | 🆕 **New row `p511`. The only PERMISSIVE Learning Record Store on this base** — xAPI/LRS with FastAPI, Elasticsearch/Mongo backends and a CLI, **34 tags, latest `v5.1.0`**. Licence read from bytes: `LICENSE.md` **1,094 B**, `sha256₁₆ 08ea77291de9c70f`, holder **"France Université Numérique"** — the French national higher-education digital agency. 🟢 **Region: EMEA**, placed on the holder, not inferred. The component every xAPI-instrumented tutoring deployment needs and nobody wants to write; the public-sector copyright holder is the sovereignty answer an EMEA buyer asks for. 🔴 Carried on this base since `p256` in [`trending.md`](trending.md) only — a nine-pass PLACEMENT failure, not a discovery one. |
 
 ## Copyleft — real systems, with the obligation named
 

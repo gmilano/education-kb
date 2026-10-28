@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p511` — `2026-10-28` — **🟢 `P511` — the standards-spine tutor: an LTI-launched, xAPI-instrumented tutor assembled from FOUR byte-attested permissive grants, with the copyleft LMS deliberately on the other side of the boundary. 🟢 `P512` — the LATAM pt-BR study product, local-model path included.**
+
+### 🟢 `P511` — Standards-spine tutor (LTI 1.3 in, xAPI out) — **8–10 weeks**
+
+🔵 **The problem this solves is the one that kills education engagements**: a good tutor that cannot
+be launched from the institution's LMS, cannot read its existing catalogue, and leaves no audit
+trail — so it never leaves the pilot. 🟢 **Every component below is permissive and its grant was read
+from bytes this pass or is carried byte-attested on these shelves.**
+
+| layer | component | licence (bytes) | why this one |
+|---|---|---|---|
+| **LMS launch** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) **377★** | 🟢 Apache-2.0, `LICENSE` **10,273 B** `sha256₁₆ 73ba74dfaa520b49` | LTI 1.3 tool provider with roles + grade passback. Launches from **Moodle, Canvas, Open edX, Blackboard** unchanged |
+| **tutoring loop** | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) **57★** | 🟢 MIT, `LICENSE` **1,073 B** `sha256₁₆ 1e05c9440068c66c` | MCP server exposing an Intelligent Tutoring System (BKT mastery) to any LLM — so the pedagogy is a tool, not a prompt |
+| **mastery state** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) **274★** | 🟢 MIT, **1,105 B** `sha256₁₆ 5baaaf977a28e9fd`, holder *"Zachary A. Pardos"* | UC Berkeley BKT implementation; the knowledge-tracing reference to calibrate `tutor-mcp` against |
+| **legacy catalogue** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) **360★** | 🟢 MIT, **1,072 B** `sha256₁₆ 383b85b370e8da44` | Runs the client's existing SCORM 1.2/2004 packages in-browser. **This is the migration story**, and it is usually the reason procurement says yes |
+| **assessment items** | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🆕 🟢 MIT, **1,076 B** `sha256₁₆ 7faa621251d7ed2b` | QTI 3 items render without re-authoring. Grant read for the first time at `p511` |
+| **telemetry of record** | [`openfun/ralph`](https://github.com/openfun/ralph) **51★** | 🟢 MIT, `LICENSE.md` **1,094 B** `sha256₁₆ 08ea77291de9c70f` | xAPI Learning Record Store, `v5.1.0`. Statements land in a store **the client owns** |
+| **model layer** | Ollama / vLLM behind one gateway | 🟢 MIT / Apache-2.0 | Local inference where residency demands it; hosted where it does not |
+
+🟢 **Wiring, concretely.** `tsugi` receives the LTI 1.3 launch and establishes the user, course and
+role context. It hands that context to the tutor service, which calls `tutor-mcp` over MCP for the
+next pedagogical move and keeps BKT mastery state calibrated against `OATutor`'s implementation.
+Assessment items come from `qti3-item-player`; legacy modules the client already owns are played by
+`scorm-again` inside the same shell. **Every interaction is emitted as an xAPI statement to `ralph`**,
+and grades go back to the LMS over LTI's own grade service — so the LMS stays the system of record
+and the LRS becomes the analytics substrate.
+
+🟢 **The licence argument, which is the commercial point.** The LMSs are copyleft — **Moodle GPL-3.0,
+Open edX AGPL-3.0, Canvas AGPL-3.0**. 🔵 **A tool launched over LTI is not a derivative work of the
+LMS**, so the copyleft stops at the launch boundary and the deliverable stays permissive. **The
+interop layer is the licence firewall**, and this is the sentence to put in front of a client's
+counsel.
+
+🔴 **What this pattern does NOT give you.** No SIS: fees, exams, transport and hostel are absent from
+every permissive education platform on these shelves (`p509`'s finding, re-confirmed at `p511`), so
+anything touching enrolment or billing is a build, costed separately.
+🔴 **`qti3-item-player` is carried without a star read** — read it before quoting adoption.
+
+🟢 **Regions:** 🟢 **North America** — the xAPI trail is the artefact the four states' district-policy
+mandates ask for. 🟢 **EMEA** — the two load-bearing grants are held by **France Université
+Numérique** and the **University of Zurich** lineage (`OpenOLAT`, Apache-2.0, **448★**), which is a
+sovereignty answer with holders rather than adjectives. 🟢 **APAC** — the same spine over Moodle is
+demonstrated in-region by [`kltn-moolde/moodle-adaptive-learning-plugin`](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin)
+(LTI 1.3, Q-learning, SHAP).
+
+### 🟢 `P512` — pt-BR study product with a local-model path — **4–6 weeks**
+
+🔵 **For a LATAM engagement where per-token cost and data residency are the first two objections.**
+
+| layer | component | licence (bytes) | role |
+|---|---|---|---|
+| **product shell** | [`oluiscabral/studorama`](https://github.com/oluiscabral/studorama) **111★** | 🟢 MIT, `LICENSE` **1,064 B** `sha256₁₆ 75ecd9ad0bb3b543` | Multi-provider AI study platform; **pt-BR is a first-class feature**, with localized prompt content, not a translation layer |
+| **local inference** | Ollama, already a first-class provider in the shell | 🟢 MIT | The cost and residency answer. The shell ships **six** providers including browser-local, so the switch is configuration |
+| **spacing / retention** | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) **155★** | 🟢 MIT, `LICENSE` **1,068 B** `sha256₁₆ 5352b49679829689` | Block-based adaptive workspace, local-first, spaced repetition — the retention layer studorama does not own |
+| **telemetry** | [`openfun/ralph`](https://github.com/openfun/ralph) **51★** | 🟢 MIT | xAPI, so outcomes are measurable from week one rather than argued |
+
+🟢 **Why it is billable in six weeks:** `studorama` is a running product with **10 tags**, not a
+research repo, and the provider abstraction already exists — the engagement is institutional
+integration, content grounding and the retention layer, not a build from zero.
+
+🔴 **The risk, stated as a line item and not hidden:** `studorama`'s licence holder is a **personal
+handle**, not an organisation, and there is one maintainer. 🟢 **Mitigation: fork and own it at a
+pinned SHA (`2ddbb1122b5b`) on day one.** MIT permits it, and the fork is the deliverable.
+
+🟢 **The demand case this sells into, from [`market.md`](../intel/market.md):** **87 %** of 200
+institutions across 19 countries use AI somewhere while **26 %** have a formal strategy (UNESCO
+IESALC), and in Brazil **53 %** of school administrators use AI against **22 %** whose school has
+guidelines (Cetic.br). 🔵 **The product is not the hard part; the governance wrapper is, and that is
+the margin.**
+
 # Compose patterns — concrete education AI recipes
 
 > 🟢 **`p510` (`2026-10-28`) — ONE NEW RECIPE, AND IT EXISTS BECAUSE THIS PASS MEASURED THE REF EVERY VERTICAL ACTUALLY DEFAULTS TO. 🔴 THE "VERIFY THE URL" STEP THESE PATTERNS INHERIT WAS A NO-OP AND IS REPLACED.**

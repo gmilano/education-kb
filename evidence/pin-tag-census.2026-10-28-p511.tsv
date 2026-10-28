@@ -1,0 +1,8 @@
+slug	ref	value	note
+HKUDS/DeepTutor	refs/heads/main (HEAD)	1ea7df155447	SAME SHA as p509 recorded -- pin stable p509->p511
+HKUDS/DeepTutor	tag_count	88	git ls-remote --tags, peeled refs excluded
+HKUDS/DeepTutor	latest_tag_sort_V	v1.7.0	dense v1.6.5..v1.6.15 series precedes it
+openfun/ralph	refs/heads/main (HEAD)	91fef112394d	LIVE
+openfun/ralph	tag_count	34	latest v5.1.0
+oluiscabral/studorama	refs/heads/main (HEAD)	2ddbb1122b5b	LIVE
+oluiscabral/studorama	tag_count	10	

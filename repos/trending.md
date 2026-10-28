@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p511` — `2026-10-28` — **🔴 DISCOVERY ON THIS CHANNEL IS SATURATED, AND THIS PASS MEASURES IT INSTEAD OF ASSERTING IT: 83 distinct addresses returned across five catalogue legs, 79 of them (95.2 %) ALREADY ON THESE SHELVES. 🟢 The two new legs that have never been run before are the ones that found anything. 🔴 The trending digests the prescribed web leg returns are STALE ON STARS by up to 11 %, so they are not a star source.**
+
+### 🔴 The saturation measurement — recall of the existing shelves against the channel
+
+Three passes in a row have reported *"the prescribed legs returned zero new addresses."* 🔵 **That is
+an assertion about an outcome; this pass measures the quantity that explains it.** Every address
+returned by every catalogue leg was checked against all ten live files:
+
+| leg | query | `total_count` | returned | already shelved |
+|---|---|---|---|---|
+| `L1` | `topic:education topic:ai stars:>50 pushed:>2026-09-01` | 31 | 25 | 23 |
+| `L2` | `topic:ai-tutor stars:>10 pushed:>2026-06-01` | 44 | 25 | 25 |
+| `L3` | `topic:edtech stars:>50 pushed:>2026-08-01` | 46 | 25 | 25 |
+| 🆕 `L4` | `topic:learning-analytics stars:>5 pushed:>2026-01-01` | 13 | 13 | 11 |
+| 🆕 `L5` | `EU AI Act text regulation in:name,description stars:>5` | **0** | 0 | — |
+| **union** | | | **83 distinct** | 🔴 **79 — 95.2 %** |
+
+🟢 **`incomplete_results: false` on all five; queried-vs-returned reconciled per `Gap 504-A`.**
+🔴 **The right reading of 95.2 % is that these shelves have near-complete recall of what this
+channel can see, so a pass spent on discovery buys almost nothing, while a pass spent on CURRENCY
+bought four corrected star cells today.** Recommendation carried into
+[`intel/open-gaps.md`](../intel/open-gaps.md): stop funding the three prescribed `topic:` legs every
+pass; run them on a longer cycle and spend the budget on drift.
+Census: [`discovery-saturation.2026-10-28-p511.tsv`](../evidence/discovery-saturation.2026-10-28-p511.tsv).
+
+### 🟢 The four that were NOT shelved — and three of them are correctly not shelved
+
+| slug | ★ | licence | disposition |
+|---|---|---|---|
+| [`oluiscabral/studorama`](https://github.com/oluiscabral/studorama) | **111** | 🟢 **MIT**, `LICENSE` 1,064 B `sha256₁₆ 75ecd9ad0bb3b543` | 🟢 **PROMOTED** to [`agents/top.md`](../agents/top.md) — **LATAM**, and it breaks `p509`'s nil |
+| [`HuckleR2003/PC_Workman_HCK`](https://github.com/HuckleR2003/PC_Workman_HCK) | 75 | MIT | 🔴 **EXCLUDED — not education.** An offline-AI PC system monitor; it carries `topic:education` and `topic:ai` and nothing else about it is educational |
+| [`laser-institute/text-mining`](https://github.com/laser-institute/text-mining) | 8 | unread | 🔴 **EXCLUDED — course materials**, not a deployable component. North America (LASER Institute learning labs) |
+| [`simongonzalezdc/dev-learning-archaeologist`](https://github.com/simongonzalezdc/dev-learning-archaeologist) | 6 | unread | 🔴 **EXCLUDED — developer-growth tooling**, not the education sector |
+
+🔵 **`L1`'s two unshelved rows are both topic-tag noise, which is a property of the leg, not a gap.**
+`topic:education` is self-applied and nothing filters it.
+
+### 🟢 `L4` is the first genuinely new leg shape in four passes, and it is the regionally richest
+
+🟢 **`Gap 508-E`'s named remedy was *"enumerate by `topic:` plus language-adjacent signals"*. Run as
+`topic:learning-analytics`, it returns a population the three prescribed legs never reach** — and
+unlike them it is **not** US/China-dominated:
+
+| slug | ★ | placed | what it is |
+|---|---|---|---|
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 51 | 🟢 **EMEA** (France Université Numérique) | 🟢 **PROMOTED to [`repos/foundations.md`](foundations.md) this pass** — the permissive LRS |
+| [`kltn-moolde/moodle-adaptive-learning-plugin`](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin) | 7 | 🟢 **APAC** (Vietnam) | Q-learning adaptive pathways over **Moodle via LTI 1.3**, with SHAP explanations |
+| [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 13 | 🟢 **EMEA** | Transition Network Analysis, an R/CRAN package |
+| [`kqc-real/streamlit`](https://github.com/kqc-real/streamlit) | 6 | 🟢 **EMEA** (German-language development) | MC-Test: formative multiple-choice with item-quality review and Anki export |
+| [`wwlwgo/cn-primary-math-knowledge-graph`](https://github.com/wwlwgo/cn-primary-math-knowledge-graph) | 7 | 🟢 **APAC** (China) | Traceable micro-objective dependency dataset, CN primary mathematics |
+| [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) | 30 | 🟢 **North America** | Knowledge Space Theory pipeline as agent skills |
+| [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 21 | 🟢 **North America** | RCT plug-in for an LMS, with consent hidden from the teacher |
+
+🔵 **All but two were already shelved** — which is the saturation finding again, from a leg that had
+never been run. 🟢 **What the leg adds is PLACEMENT**: seven addresses across four regions, where the
+three prescribed legs return overwhelmingly US and Chinese repositories.
+
+### 🔴 `L5` returned zero, and the zero is the useful part
+
+`EU AI Act text regulation in:name,description stars:>5` → **`total_count: 0`**. 🔵 The leg was run to
+test whether the primary legal text this base has needed for fifteen passes is mirrored on the only
+host this session can reach. 🔴 **It is not.** `Gap 483-K` therefore cannot be routed around through
+GitHub, and the remedy is the one named in [`intel/market.md`](../intel/market.md)'s `p511` block.
+
+### 🔴 The trending digests are not a star source — measured
+
+🟡 The prescribed web leg `github trending education AI 2026` returns automated daily digests. They
+agree with each other and **disagree with the API by a wide, one-directional margin**:
+
+| source | DeepTutor ★ | vs API |
+|---|---|---|
+| digest dated `2026-10-25` | ~**42,600** | 🔴 **−5,174 (−10.8 %)** |
+| October 2026 write-up | **45,224** | 🔴 **−2,550 (−5.3 %)** |
+| 🟢 `api.github.com`, this pass | **47,774** | — |
+
+🔴 **Both are low, which is the shape of a scrape cached behind its own publication date.** A pass
+that took a star count from a trending digest would publish a figure 5–11 % stale and typeset it as
+current. 🟢 **Rule: digests may source a NAME; only the API may source a NUMBER.**
+
 ## 🆕 `p510` — `2026-10-28` — **🟢 EVERY ONE OF THE 154 REPO ADDRESSES ON THESE SHELVES IS PROVEN LIVE — the first full-population attestation this base has, and it required throwing out the prescribed instrument to get it. 🔴 `curl -sI github.com` answers `403` to a live repo and a deleted one alike. 🟢 The true default branch is now recorded for all 154, and `p509`'s 18 non-`main`/`master` verticals reproduce exactly. 🔴 Two foundation-shelf star cells are rounded values dressed as exact reads.**
 
 Reads: [`liveness-branch-census.2026-10-28-p510.tsv`](../evidence/liveness-branch-census.2026-10-28-p510.tsv),

@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p511` — `2026-10-28` — **🟢 THE WEEK'S REAL AGENT NEWS IS THAT DEEPTUTOR IS SHIPPING, NOT MERELY TRENDING: 88 tags, `v1.7.0`, and a pin stable across two passes — which RETIRES this base's "attention, not shipping" reading rather than restoring it. 🟢 One new agent, MIT, placed LATAM, and it is the first LATAM-placed AI PRODUCT on these shelves. 🔴 `make hooks` ran for the first time in seventeen passes and is RED at 45/63.**
+
+### 🟢 Movement this week — tag censuses, not star counts
+
+🔵 **Stars measure attention; tags measure shipping.** This pass read both for the three agents that
+moved, which is the first time this base has graded movement on release cadence:
+
+| agent | ★ *(🟢 `p511`, API)* | pin | tags | latest (`sort -V`) | reading |
+|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **47,774** (`p510` cell 47,725, **+49**) | `1ea7df155447` — 🟢 **unchanged since `p509`** | **88** | **`v1.7.0`**, after a dense `v1.6.5`…`v1.6.15` run | 🟢 **Shipping.** `p505`'s *"attention, not shipping"* is RETIRED |
+| [`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) | **741** (exact, `p510` 741) | — | — | — | 🔴 **Stalled on stars after `+92 %` in 14 days** — and still **PolyForm Noncommercial**, so still unbillable |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **41,712** (exact) | — | — | — | 🟡 Flat across three passes |
+
+🔴 **The retirement is the finding.** `Gap 509-A` ordered the *"attention, not shipping"* reading
+re-derived from `HEAD` **plus** a tag census before reuse. The pin came back stable — which is what
+the old reading would have called confirmation — and **the tag census contradicts it outright**: 88
+tags and a minor-version bump is a release train. 🔵 **The general shape: a conclusion built on one
+cheap observation survives re-running that same observation. It only dies when a second axis is
+read.**
+Reads: [`pin-tag-census.2026-10-28-p511.tsv`](../evidence/pin-tag-census.2026-10-28-p511.tsv).
+
+### 🟢 New this week — and it fills the hole this base declared two passes ago
+
+🟢 [`oluiscabral/studorama`](https://github.com/oluiscabral/studorama) — **MIT**, **111★**, `LICENSE`
+**1,064 B** `sha256₁₆ 75ecd9ad0bb3b543`, `refs/heads/main` → `2ddbb1122b5b`, **10 tags**. A
+multi-provider AI study platform: **OpenAI, Gemini, Anthropic, DeepSeek, Ollama (local) and
+browser-local AI**, 15+ models, per-provider key management, built on named study techniques.
+
+🟢 **Placed LATAM on the product's own bytes** — its `README` (12,965 B) declares *"Complete English
+and Portuguese (Brazil) localization"*, localized AI prompt content and *"Cultural Adaptation:
+region-specific content"* as **features**, not as a translation layer. 🔴 **`p509` closed
+`Gap 508-E` with the nil that the LATAM-reachable set is *"all course materials or national-system
+integration, none an AI product"* — that nil is broken by a row, not by an argument.
+🔴 **Single maintainer, holder is a personal handle: fork-and-own.**
+Promoted to [`top.md`](top.md). Reads: [`p511-new-rows.2026-10-28-p511.tsv`](../evidence/p511-new-rows.2026-10-28-p511.tsv).
+
+### 🟢 Carried forward and finally placed: the permissive LRS
+
+🟢 [`openfun/ralph`](https://github.com/openfun/ralph) — **MIT**, **51★**, 34 tags, **`v5.1.0`** — has
+been on this file since `p256` and on **no live shelf for nine passes**. 🔴 That is a placement
+failure. It is the **only permissive Learning Record Store** this base has, its licence holder is
+**France Université Numérique** (the French national higher-education digital agency), and it is now
+a row in [`repos/foundations.md`](../repos/foundations.md) placed **EMEA**.
+🔵 **The lesson for this file: an address recorded in `trending.md` and never promoted is
+invisible to an engagement.** `trending.md` is a log, not a shelf.
+
+### 🔴 Gate posture — inverted, and red
+
+🟢 **`make hooks` EXECUTED**, after `Code from External` denials in sixteen of the previous seventeen
+passes. 🔴 **`45/63` gates green.** Red: `gate-offline`, `gate-enumeration`, `gate-evidence-store`,
+`gate-shelf-consistency`, `gate-region-headings`, `gate-register-currency`, `gate-fold-identity`,
+`gate-author-key`, `gate-census-currency`, `gate-grant-path`, `gate-census-union`,
+`gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`, `gate-promotion`,
+`gate-promotion-ledger`, `gate-cell-reproduction`, `recount`.
+
+🟢 **Three gates reproduced defects this pass had already found by hand** — the duplicate region
+heading, the stale gap register, and the licence-contradiction class. 🔴 **One of them should not be
+obeyed**: `gate-shelf-consistency`'s three findings are all prose-adjacency false positives, the
+same mechanism `p455` retracted a 20.6 % defect rate over. Adjudicated in
+[`top.md`](top.md)'s `p511` block; registered as `Gap 511-A` **against the gate**.
+
+### 🔴 Eight prescribed legs, and what they returned
+
+🟢 All eight ran: four global web legs, four regional web legs, plus five catalogue legs.
+🔴 **Agent-side result: one promotion from 83 distinct addresses.** The union recall of these shelves
+against the catalogue channel is **95.2 %** — measured, in
+[`repos/trending.md`](../repos/trending.md)'s `p511` block. 🔵 **A fourth consecutive near-zero on
+discovery is no longer news about the week; it is news about the channel.**
+
 ## 🆕 `p510` — `2026-10-28` — **🔴 THE URL CHECK THIS BASE IS PRESCRIBED TO RUN IS REFUTED BY ITS OWN CONTROL: `github.com` answers `403` to a live repo and to a deleted one alike, so every address it "verifies" passes identically. 🟢 154 of 154 shelf addresses proven LIVE on an instrument that does discriminate — this base's first full-population liveness attestation. 🟢 `Gap 509-B` DELIVERED as code that refuses to return a count. 🔴 Two shelf cells are ROUNDED values typeset as exact reads, and one of them OVERSTATES by 36 — a decrease, which "stars only grow" can never catch. 🟡 `p509`'s retracted "107 malformed rows" is re-measured at 15, none of them on a live shelf.**
 
 Reads: [`url-check-control.2026-10-28-p510.tsv`](../evidence/url-check-control.2026-10-28-p510.tsv),

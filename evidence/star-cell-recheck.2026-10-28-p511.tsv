@@ -1,0 +1,23 @@
+slug	shelf_file	shelf_cell	provenance_suffix	ends_in_00	api_p511	delta	verdict
+HKUDS/DeepTutor	agents/top.md	47725	yes	no	47774	+49	CURRENT_AT_READ read twice this pass 47769 then 47774
+THU-MAIC/OpenMAIC	agents/top.md	41712	yes	no	41712	0	EXACT
+huggingface/smolagents	agents/top.md	30121	yes	no	not_reread	-	SUFFIXED cleared by screen
+anthropics/k12-teacher-skills	agents/top.md	600	yes	YES	not_reread	-	SUFFIXED but ROUND -- flagged for next pass
+GeminiLight/SocialCoach	agents/top.md	440	yes	no	not_reread	-	SUFFIXED cleared by screen
+microsoft/ai-agents-for-beginners	agents/top.md	78000	NO	YES	78061	+61	DEFECT CORRECTED p511 both occurrences
+oluiscabral/studorama	agents/top.md	111	yes (new p511)	no	111	0	NEW ROW
+satvik314/educhain	agents/top.md	387	NO	no	387	0	EXACT
+dodona-edu/dolos	agents/top.md	355	NO	no	355	0	EXACT
+SYuan03/Skill-Anything	agents/top.md	344	NO	no	344	0	EXACT
+vishalsachdev/canvas-mcp	agents/top.md	309	NO	no	309	0	EXACT
+CAHLR/OATutor	agents/top.md	274	NO	no	274	0	EXACT
+panaversity/ksor	agents/top.md	232	NO	no	232	0	EXACT
+Open-TutorAi/open-tutor-ai-CE	agents/top.md	114	NO	no	114	0	EXACT
+Selleo/mentingo	agents/top.md	100	NO	YES	101	+1	DEFECT CORRECTED p511
+learning-commons-org/agent-skills	agents/top.md	40	NO	no	40	0	EXACT
+Orenda-Project/rumi-platform	agents/top.md	18	NO	no	18	0	EXACT
+microsoft/Shiksha-Copilot	agents/top.md	9	NO	no	9	0	EXACT
+oppia/oppia	repos/foundations.md	6950	yes	no	6950	0	EXACT
+learningequality/kolibri	repos/foundations.md	1200	NO	YES	1162	-38	DEFECT CORRECTED p511 shelf OVERSTATED
+OpenOLAT/OpenOLAT	repos/foundations.md	448	NO	no	448	0	EXACT
+EleutherAI/lm-evaluation-harness	verticals/solutions.md	14300	NO	YES	14341	+41	DEFECT CORRECTED p511

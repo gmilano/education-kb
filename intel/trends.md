@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p511` — `2026-10-28` — **🟢 THE GATE RAN, AND THE SINGLE MOST IMPORTANT TREND ON THIS BASE IS THAT SIXTEEN PASSES OF UNATTESTED WORK NOW HAVE A VERDICT: 45 of 63 gates green. 🆕 `T38`–`T41` registered. 🔴 One of them is the discovery channel's saturation, measured at 95.2 % shelf recall rather than asserted as "zero new addresses".**
+
+### 🆕 `T38` — An unenforced repair regresses within one pass
+
+🔴 **Evidence, from this pass and the two before it.** `p508` found [`market.md`](./market.md)
+carrying two bare `## Opportunities by region` headings — the one contract the region filter depends
+on — and repaired it by suffixing the newer heading. 🔴 **`p509` added a fresh unsuffixed heading and
+the defect was back**, undetected by `p509` and `p510`, and caught at `p511` **by the gate**
+(`P383-MULTIPLE-BLOCKS`, line 352) **and independently by hand in the same pass**.
+
+🔵 **The trend is not "this base makes mistakes".** It is that **a repair recorded in prose has a
+half-life of about one pass**, because nothing re-checks it and the next pass writes over the region
+it lives in. 🟢 **The corollary is operational: a repair is only durable if a gate holds it, and this
+base has had 63 gates the whole time with no evidence that any of them ran for sixteen passes.**
+
+### 🆕 `T39` — Discovery is saturated; currency is where the defects are
+
+🔴 Three consecutive passes reported *"the prescribed legs returned zero new addresses"*. 🟢 **This
+pass measured the quantity behind it: 83 distinct addresses returned by five catalogue legs, 79
+already shelved — 95.2 % recall.** One promotion.
+
+🟢 **In the same pass, the CURRENCY axis produced four defects out of twenty-two cells read** — a
+star cell overstated by 38, two understated by 41 and 61, one by 1 — plus a retired reading
+(`DeepTutor`'s *"attention, not shipping"*) and an independently re-attested byte census.
+
+🔵 **So the trend is a budget finding:** the supply axis is near-exhausted on this channel and the
+currency axis is not. 🟢 **Operational form:** run the three prescribed `topic:` legs on a longer
+cycle; spend the recovered budget on drift (pins, tags, stars, grants). 🔴 **Risk acknowledged:** a
+longer discovery cycle is how a base goes blind to a genuinely new entrant, so the cycle must be
+stated and kept, not drifted into.
+
+### 🆕 `T40` — Typography is a data-quality signal, and roundness beats provenance
+
+🟢 `p510` noticed two wrong star cells shared a missing `*(🟢 pNNN, API)*` suffix and read that as
+the tell. 🟢 **Tested over all 22 star cells this pass, the suffix's absence has 100 % recall and
+29 % precision** — every wrong cell lacks one, and ten correct cells lack one too.
+
+🔴 **The clean discriminator is ROUNDNESS.** Split on *"ends in two or more zeros"*: **4 of 4
+re-read round cells were WRONG; 15 of 15 non-round cells were EXACT.**
+
+🔵 **Why this generalises beyond stars:** a round number in a measured column is a *remembered*
+value wearing a measurement's typography, and the rounding is the fingerprint of the human step
+between the read and the write. 🟢 **The rule any shelf can apply: a round figure in a measured
+column is unread until re-read.** 🔴 **And the direction matters** — `kolibri` was **overstated**, so
+a "values only grow" assumption cannot catch this class.
+
+### 🆕 `T41` — A denial that names its remedy is a different kind of gap
+
+🔴 `Gap 483-K` has been recorded as **unclosable** for fifteen passes on the basis of two channels
+(proxy `CONNECT` refusal; `api.github.com` 403). 🟢 **A third channel was probed this pass and fails
+differently: `WebFetch` returns `getaddrinfo ENOTFOUND` with an explicit cause — the host is outside
+the session's allowed network domains.**
+
+🔵 **That re-classifies the gap.** *"The open web is unreachable"* is a statement about the world and
+cannot be acted on. *"Three hostnames are not in an allow-list"* is a statement about configuration
+and is one action by one human. 🟢 **Trend form: before filing a denial as a property of the world,
+probe a channel that fails for a DIFFERENT reason** — the failure modes carry the remedy, and
+identical-looking refusals across two channels had hidden it for fifteen passes.
+
+### 🔴 Carried trends, re-checked this pass
+
+| trend | status |
+|---|---|
+| **`T34` — 18 shelf addresses carry no grant at all** | 🔴 **Unchanged, and now load-bearing twice over.** It is also the population on which `p510`'s prescribed liveness probe is undefined: [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) and [`h9-tect/AI-Roadmaps`](https://github.com/h9-tect/AI-Roadmaps) are **LIVE** and answer `raw HEAD/LICENSE` with the same **404** as a repository that never existed |
+| **`Gap 504-A` — silent per-repository exclusion** | 🔴 **Reproduced a FIFTH consecutive pass**, and at the smallest batch yet: [`openedx/edx-platform`](https://github.com/openedx/edx-platform) silently absent from a **5-slug** batch reporting `incomplete_results: false` |
+| **`Gap 509-B` — no count without a known-good and known-bad control** | 🔴 **Instance nine and ten, both this pass's own.** A star extractor attributed one repository's figure to another from the same cell's prose (`oppia` "41,705", `TrenTorch` "385" — both shelves were RIGHT); a byte probe was 1 low on every newline-terminated payload. 🟢 Both caught by controls before publication |
+| **the retired "134 bills / 31 states"** | 🔴 **Third re-appearance** on the North America leg. Recorded, not re-shelved |
+| **`Gap 507-A` — a 2026 APAC teacher-adoption rate** | 🔴 **Fourth nil.** The Ipsos Education Monitor 2026 is a 2026 APAC instrument but measures attitudes, not use |
+
 ## 🆕 `p510` — `2026-10-28` — **🆕 `T37`: an instrument that answers identically to a live target and an absent one is not a check, and this base is prescribed to run one. 🆕 `T38`: a rounded number typeset as an exact read is invisible to review — the tell is the MISSING provenance, not the digits. 🔴 `T36` keeps its rule and loses its reason: the hazard is a stale 200, not a 404.**
 
 Reads: [`url-check-control.2026-10-28-p510.tsv`](../evidence/url-check-control.2026-10-28-p510.tsv),

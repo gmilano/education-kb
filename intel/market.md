@@ -4,6 +4,153 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p511` — `2026-10-28` — **🔴 THE REGIONAL BATTERY IS SATURATED ON THE DEMAND AXIS FOR A SECOND TIME: all four regional legs plus four global legs ran, and EVERY figure returned was already on these shelves. 🟢 BUT `Gap 483-K` — fifteen passes of "unclosable" — IS NOW A NAMED, ONE-ACTION ASK, because a THIRD channel was probed and it fails at DNS with an explicit remedy. 🔴 The retired NA bill count returned for a THIRD pass. 🔴 This file's duplicate-region-heading defect REGRESSED one pass after `p508` repaired it, and the gate caught it.**
+
+### 🟢 `Gap 483-K` — the denial finally names its own remedy
+
+Fifteen passes have recorded that every non-GitHub host is unreachable, and every pass has filed it
+as **unclosable**. 🔵 **That was true of the channels that had been probed.** This pass probed a
+**third**, and the failure mode is different and informative:
+
+| channel | probe | result | what it means |
+|---|---|---|---|
+| `curl` via the session proxy | `CONNECT eur-lex.europa.eu:443` | 🔴 **tunnel never completes**, exit 35, `http_code=000` | proxy refuses the tunnel |
+| `api.github.com` paths | `/repos/…`, `/search/repositories` | 🔴 **403** (`/rate_limit` **200**) | routable, not usable — `p507`'s reading re-attested |
+| 🆕 **`WebFetch`** | `eur-lex.europa.eu`, `www.oecd.org` | 🔴 **`getaddrinfo ENOTFOUND`** | 🟢 **DNS, not policy-at-the-proxy** |
+
+🟢 **The `WebFetch` failure is a DNS-resolution failure with a stated cause: the host is outside the
+session's allowed network domains.** That is not an unclosable condition — **it is one setting, and
+a human can change it.** 🔵 Fifteen passes have described this gap as a property of the world; it is
+a property of this session's configuration.
+
+🟢 **The concrete ask, in the same register as `Gap 509-C`'s licence-request issues — zero cost per
+pass, one action once, by a human:** allow `eur-lex.europa.eu`, `www.oecd.org` and `www.unesco.org`
+in the session's network settings. 🔴 **What it would buy immediately:** the EU AI Act's education
+provisions read at the primary (**`eur-lex.europa.eu/eli/reg/2026/1744/oj`**, the address this file
+has named as *"for the next pass"* since `p500`), TALIS 2024's teacher rates at the OECD rather than
+through search summaries, and the UNESCO IESALC institutional study at its publisher. 🔵 **Every
+market figure in this file is `SEARCH-ATTESTED, PRIMARY UNREAD`, and that is now a decision someone
+can reverse rather than a limit to live with.**
+
+🔴 **And the GitHub workaround does not exist.** A dedicated catalogue leg
+(`EU AI Act text regulation in:name,description stars:>5`) returns **`total_count: 0`** — the
+primary legal text is not mirrored on the one host this session can reach.
+
+### 🔴 The four regional legs — run, and every datum already shelved
+
+| region | leg | returned | new to this base |
+|---|---|---|---|
+| **North America** | `AI education North America 2026 adoption regulation players` | H.R. 8747, STUDENTS FIRST Act, Oklahoma S.B. 1734, Utah H.B. 218, NYC moratorium, Gallup 60 %, the Canada workplace framing | 🔴 **nothing** |
+| **EMEA** | `AI education EMEA Europe 2026 adoption regulation players` | Reg. (EU) 2026/1744, Art. 50 transparency Aug 2026, the Feb 2025 emotion-recognition ban in schools, Council of Europe's planned instrument, Utrecht's risk-tiered policy | 🟡 **one item, and it is UNCONFIRMED** (below) |
+| **APAC** | `AI education APAC Asia Pacific 2026 adoption regulation players` | Korea AI Basic Act, Vietnam's education transition to 1 Sep 2027, China's targeted regime, Japan/Singapore voluntary, Australia's Dec 2025 National AI Plan, Ipsos Education Monitor 2026 | 🔴 **nothing** |
+| **LATAM** | `AI education LATAM Latin America 2026 adoption regulation players` | UNESCO IESALC 200 institutions / 19 countries (87 % / 74 % / 26 %), TALIS 2024 BR 56 % CL 55 % CO 53 % CR 52 %, PISA 2025 nine-in-ten, Argentina 75 % vs 42 % by SES, Brazil 53 % / 22 % (Cetic.br), the 716 instruments across 23 countries, the UNESCO LAC Observatory | 🔴 **nothing** |
+
+🔵 **Eight legs, one unconfirmed item.** `p505` declared this saturation on the demand axis and was
+right; `p511` confirms it a second time and draws the operational conclusion in
+[`open-gaps.md`](./open-gaps.md): **the regional battery should be run on a longer cycle, and the
+budget moved to the supply and currency axes, where this pass corrected four star cells and promoted
+two rows.**
+
+### 🟡 The one new EMEA item — recorded as UNCONFIRMED, and not shelved as fact
+
+🟡 A single secondary source describes a **European EdTech Alliance**, said to represent *"more than
+200 companies"*, as having taken part in the EU education-AI consultations — softening certification
+demands on language models while continuing to oppose mandatory annual external audits.
+🔴 **One source, vendor-adjacent, and the same article carries a claim no other source corroborates**
+(a binding EU education-AI framework approved 15 April 2026, effective 1 January 2027), which
+**contradicts** Regulation (EU) 2026/1744's own dates as this file records them. 🔴 **Nothing from
+that article is shelved.** 🔵 Recorded here because an industry body with a named position in EMEA
+education-AI rulemaking would be a genuine addition to this file's EMEA actor list, which is thin —
+and because the next pass should not re-discover it and treat it as new.
+
+### 🔴 The retired bill count returned a third time
+
+🔴 The North America leg again led with **"134 bills across 31 states"** (MultiState). 🔴 **Retired at
+`p455`** because four trackers disagree by up to **2.6×**, and re-appearing at `p508` and now
+`p511`. 🟢 **Recorded as a third re-appearance; not re-shelved.** 🔵 The pattern is worth naming: a
+retired figure does not stop circulating, so a retirement is only durable if the register says *why*
+— which is why `p455`'s reasoning, not just its verdict, has to stay readable.
+
+### 🟢 Repaired in this file — the same defect `p508` fixed, regressed
+
+🔴 **This file carried TWO bare `## Opportunities by region` headings again** — the exact contract
+break `p508` repaired one pass earlier by suffixing the newer one. `p509` added a fresh unsuffixed
+heading and the break returned. 🟢 **Repaired: the `p509` heading now carries its pass suffix**, leaving one canonical bare block,
+which is what the region filter depends on.
+
+🔵 **The finding underneath the repair is about this base's process, not this file:** `make hooks`
+**ran this pass for the first time in seventeen** and `gate-region-headings` flagged it
+immediately — `P383-MULTIPLE-BLOCKS` at line 352, `bloques=2`. 🔴 **An unenforced repair regressed
+within one pass, and the enforcement existed the whole time and was not running.** That is the
+strongest argument this base has ever had for the gate.
+
+## Opportunities by region — `p511`
+
+🔵 **Framing: this pass bought no new market figures, so these are re-cut from what the SUPPLY side
+gained** — a complete permissive interop spine (LTI + SCORM + xAPI + QTI, all four grants
+byte-read), a permissive LRS placed in EMEA, and the first LATAM-placed AI product on these shelves.
+
+### North America
+
+🟢 **The compliance hook is unchanged and still the sell** — four states with 2026 laws mandating
+both state guidance and district-level AI policy, plus H.R. 8747 through committee. 🟢 **What is new
+this pass is the deliverable's shape:** an LTI-launched tutor writing xAPI to a
+[client-owned LRS](https://github.com/openfun/ralph) produces the **audit trail** those district
+policies ask for as a by-product of its architecture, rather than as a reporting bolt-on.
+🔴 **Do not quote a bill count.** Quote the four named states and the committee vote.
+
+### EMEA
+
+🟢 **Sovereignty is answerable from the shelf now, with holders rather than adjectives.** The LRS is
+MIT and held by **France Université Numérique**, a national public agency; the only Apache-2.0 LMS,
+[`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT), comes out of the University of Zurich. 🟢 A
+deployment can therefore be assembled from **EU-held permissive components with local inference**
+(Ollama/vLLM) and no US API in the critical path. 🔴 **The regulatory dates stay
+`SEARCH-ATTESTED, PRIMARY UNREAD`** — Reg. (EU) 2026/1744's **2 Dec 2027 / 2 Aug 2028** and the
+**Aug 2026** Art. 50 transparency duties — until the EUR-Lex allow-list ask above is granted.
+🔴 The EMEA actor list remains thin; the one candidate addition this pass is unconfirmed.
+
+### APAC
+
+🟢 **The sellable asymmetry is jurisdictional, and it is dated:** Vietnam's education systems reach
+their high-risk transition on **1 Sep 2027** (Decision 33/2026/QD-TTg under AI Law 134/2025/QH15,
+re-derived at `p507` and unchanged), Korea's AI Basic Act is in force, China's regime is targeted and
+Japan/Singapore remain voluntary. 🟢 **A policy-node architecture that varies obligations per
+jurisdiction is the APAC-specific engagement, and the supply side now supports it** — the adaptive
+layer can sit over Moodle via **LTI 1.3**, which
+[`kltn-moolde/moodle-adaptive-learning-plugin`](https://github.com/kltn-moolde/moodle-adaptive-learning-plugin)
+(Vietnam) demonstrates in the region. 🔴 **`Gap 507-A` stands** — no 2026 probability-sampled APAC
+teacher-adoption rate exists; TALIS 2024 fieldwork is still the most recent instrument. 🟡 The Ipsos
+Education Monitor 2026 is a 2026 APAC instrument but measures **attitudes** (support for banning AI
+in schools: Indonesia 23 % → South Korea 31 %), not teacher use, so it does not close it.
+
+### LATAM
+
+🟢 **The region now has a shelf row that is a product, not a course.**
+[`oluiscabral/studorama`](https://github.com/oluiscabral/studorama) is **MIT**, **111★**, and ships
+**pt-BR as a first-class feature with a local-model (Ollama) path** — which answers the two
+objections a LATAM education engagement meets first: per-token cost and data residency. 🔴 **Its
+single-maintainer status means fork-and-own, and that is a line item, not a risk to hide.**
+🟢 The demand case is unchanged and strong: **87 % of 200 institutions across 19 countries using AI
+somewhere against 26 % with a formal strategy** (UNESCO IESALC) is the governance deficit Globant
+sells into, and **Brazil's 53 % of administrators using AI against 22 % with guidelines**
+(Cetic.br) is the same gap at district scale.
+
+#### APAC and LATAM share one supply fact worth stating once
+
+🔵 Both regions' strongest new components this pass are **adapters onto copyleft platforms**
+(Moodle/LTI in Vietnam) or **single-maintainer products** (studorama). 🟢 The interop spine is what
+makes either billable: the permissive adapter is the deliverable, the copyleft platform stays on the
+other side of the LTI boundary, and the licence firewall holds.
+
+### Global
+
+🔴 **The global dollar figure is still not knowable to better than 3.1× from anything reachable here**
+(`p504`), and this pass bought nothing that changes it. 🟢 **What is knowable and was proven today:**
+every permissive component on these shelves is live (154/154, `p510`), its grant is reproducible from
+bytes two passes after it was recorded (`p511`), and four of this file's own star figures were wrong
+in a way a single typographic rule now catches.
+
 # Education AI — market map and opportunities by region
 
 > 🔴 **`p510` (`2026-10-28`) — THE EIGHT-LEG SWEEP RETURNED ZERO NEW FIGURES FOR A SECOND CONSECUTIVE PASS, RUN FRESH BY A DIFFERENT OPERATOR. 🔵 THAT IS NOW A REPRODUCED PROPERTY OF THE INSTRUMENT SUPPLY, NOT A ONE-PASS RESULT.**
@@ -163,7 +310,7 @@ updated: 2026-10-28
 > [`channel-probe.2026-10-28-p507.tsv`](../evidence/channel-probe.2026-10-28-p507.tsv),
 > [`probe-errors.2026-10-28-p507.tsv`](../evidence/probe-errors.2026-10-28-p507.tsv).
 
-## Opportunities by region
+## Opportunities by region — `p509`
 
 🔵 **`p509` framing: this pass bought no new market figures, so these opportunities are re-cut from
 what the licence census proved rather than from new intelligence.** The census is the new input —

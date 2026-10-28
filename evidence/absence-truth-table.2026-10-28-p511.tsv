@@ -1,0 +1,7 @@
+control_class	slug	git_ls_remote_symref	raw_HEAD_README.md	raw_HEAD_other_path	api_github_com_direct	mcp_search_repositories	LIVE_assertable	ABSENT_assertable
+KNOWN_GOOD_PUBLIC	learningequality/kolibri	REF_OK refs/heads/develop	200	n/a	403	row returned	YES	n/a
+KNOWN_GOOD_PUBLIC	oppia/oppia	REF_OK refs/heads/develop	404	LICENSE 200 ; develop/package.json 200	403	row returned	YES	n/a
+KNOWN_BAD_NEVER_EXISTED	zzzz-nonexistent-org-9931/nope-repo-9931	AUTH_PROMPT	404	n/a	403	Validation Failed	NO	NO
+KNOWN_BAD_NEVER_EXISTED	this-org-does-not-exist-xyz123/nope	AUTH_PROMPT	404	n/a	403	Validation Failed	NO	NO
+KNOWN_PRIVATE_IN_SESSION_SCOPE	gmilano/education-kb	REF_OK refs/heads/main	200	n/a	403	n/a	YES	n/a
+KNOWN_LIVE_SILENTLY_EXCLUDED	openedx/edx-platform	REF_OK (p510 census)	n/a	n/a	403	SILENTLY ABSENT from a 5-slug batch, incomplete_results:false	YES (git only)	NO

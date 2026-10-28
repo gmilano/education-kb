@@ -4,6 +4,158 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p511` — `2026-10-28` — **🟢 `make hooks` RAN, after sixteen denials in seventeen passes — AND IT IS RED: 45 of 63 gates green. The shelves have been un-attested for sixteen passes and the suite now says where. 🟢 `Gap 509-A` CLOSES and the reading it suspended is RETIRED, NOT RESTORED: DeepTutor carries 88 tags and `v1.7.0`, which is shipping. 🔴 `Gap 510-A` READ THE WRONG FEATURE: over all 22 star cells, a missing provenance suffix is a screen with 100 % recall and 29 % precision — the clean discriminator is ROUNDNESS, 4 of 4 re-read round cells WRONG against 15 of 15 non-round cells EXACT, and one of the four was OVERSTATED by 38. 🔴 One new MIT agent row, placed LATAM, and it breaks a nil `p509` declared.**
+
+🟢 **Gate posture, stated first because it inverts seventeen passes of posture:
+`make hooks` EXECUTED.** `93` suites ran, `p300`'s no-masking runner reports
+**`45/63` gates green**, and the red list is named:
+`gate-offline`, `gate-enumeration`, `gate-evidence-store`, `gate-shelf-consistency`,
+`gate-region-headings`, `gate-register-currency`, `gate-fold-identity`, `gate-author-key`,
+`gate-census-currency`, `gate-grant-path`, `gate-census-union`, `gate-i2-sweep-crosscheck`,
+`gate-union-currency`, `gate-action-answered`, `gate-promotion`, `gate-promotion-ledger`,
+`gate-cell-reproduction`, `recount`.
+🔵 **Three of those gates independently reproduced defects this pass had already found by hand**,
+which is the first cross-check this base has ever had between its prose discipline and its own suite.
+
+🔴 **And the posture changed again INSIDE this pass: the verification re-run of `make hooks` after the repairs was DENIED (`Code from External`).** 🟡 **So the red verdict above is gate-attested and the two repairs below are NOT.** Both were therefore re-checked independently in this session's own code and are green: one bare `## Opportunities by region` block carrying exactly five `###` subsections, all from the closed vocabulary (`P383`); and the register's newest section at `p511` against the shelves' `p511` (`P418`). 🔵 **Recorded rather than smoothed over — a pass that can run the gate once and not twice must say which half of its own work the gate saw.**
+
+### 🟢 `Gap 509-A` — CLOSED, and the reading it suspended is retired rather than restored
+
+`Gap 509-A` recorded that `p505`'s *"attention, not shipping"* reading of
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) rested on a `HEAD` pin that had moved, and
+ordered the reading re-derived from `HEAD` **plus** a `sort -V` tag census before it was used again.
+🟢 **Both reads are in:**
+
+| read | value |
+|---|---|
+| `refs/heads/main` (`HEAD`) | **`1ea7df155447`** — 🔵 **the same SHA `p509` recorded**, so the pin is now stable `p509` → `p511` |
+| tag count (`git ls-remote --tags`, peeled refs excluded) | **88** |
+| latest tag, `sort -V` | **`v1.7.0`**, preceded by a dense `v1.6.5` … `v1.6.15` series |
+| stars | **47,774** *(🟢 `p511`, API)* — `p510`'s cell is **47,725** (`p509` read 47,677), so **+49** since `p510` |
+
+🔴 **The reading is retired.** 88 tags and a minor-version bump to `v1.7.0` is a project that ships;
+*"attention, not shipping"* was an inference from a single unchanged pin and it does not survive a
+tag census. 🔵 The general lesson `Gap 509-A` asked to be noted holds in the opposite direction too:
+**a claim of the form "unchanged for N passes" decays silently, and so does the conclusion drawn
+from it.**
+
+🟡 **One honest caveat on the star cell itself:** DeepTutor was read **twice** this pass, about
+twenty minutes apart — **47,769** then **47,774**. An "exact" star cell on this repository is exact
+only at its timestamp, and every cell on these shelves should be read that way.
+
+### 🟢 `Gap 510-A` — the tell was tested over the whole population, and the REAL discriminator is a different one
+
+`p510` found two rounded star cells typeset exactly like exact reads and read the tell as
+*"neither cell carried a `*(🟢 pNNN, API)*` provenance suffix."* 🟢 **This pass stopped treating that
+as a diagnosis and measured it.** Every star cell on the live shelves was classified first — by
+suffix, and by whether the number ends in two or more zeros — and **19 of the 22 were then re-read
+on the API**, the classification fixed before any value was seen.
+
+**Axis 1 — the provenance suffix. It is a sound screen and a poor verdict.**
+
+| population | n | re-read | wrong |
+|---|---|---|---|
+| cells **carrying** a `*(🟢 pNNN, API)*` suffix | 8 | 5 | 🟢 **0** |
+| cells **missing** the suffix | 14 | 14 | 🟡 **4** |
+
+🟢 **Recall is perfect — all four wrong cells lack a suffix.** 🔴 **Precision is 4/14 ≈ 29 %**, so
+*"no suffix"* flags ten cells that are exactly right. As a verdict it is nearly useless.
+
+**Axis 2 — roundness. This is the discriminator, and on everything re-read it is clean.**
+
+| cell shape | n | re-read | exact | wrong |
+|---|---|---|---|---|
+| **ends in `00`** | **5** | 4 | **0** | 🔴 **4** — `1,200`, `14,300`, `78,000`, `100` |
+| does not | **17** | 15 | 🟢 **15** | **0** |
+
+🔴 **Four of four re-read round cells were wrong. Fifteen of fifteen non-round cells agreed with the
+API exactly.** A round star count on these shelves is not a measurement — it is a remembered
+approximation wearing a measurement's typography. Corrected this pass:
+
+| cell | shelf | was | is | delta |
+|---|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | [`repos/foundations.md`](../repos/foundations.md) | `1,200` | **1,162** | 🔴 **−38, the shelf OVERSTATED** — a "stars only grow" assumption can never catch this |
+| [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | [`verticals/solutions.md`](../verticals/solutions.md) | `14,300` | **14,341** | +41 |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | this file, **both** occurrences | `78,000` | **78,061** | +61 |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | this file | `100` | **101** | +1 |
+
+🔴 **The fifth round cell is declared, not quietly left:** `anthropics/k12-teacher-skills` reads
+**600** and carries a suffix, so the screen cleared it and the roundness test flags it. It was
+**not** re-read this pass and is registered as `Gap 511-B`.
+
+🟢 **The operative rule, replacing `Gap 510-A`'s:** a star cell ending in `00` is unread until
+re-read, whatever suffix it carries; and every cell written from here on carries its
+`*(🟢 pNNN, API)*` suffix so the screen keeps working. 🔵 `p510` was right that a tell existed and
+right about which two cells were wrong; it read the wrong feature of them, and the feature it chose
+would have cleared two of this pass's four defects.
+Census: [`star-cell-recheck.2026-10-28-p511.tsv`](../evidence/star-cell-recheck.2026-10-28-p511.tsv).
+
+### 🟢 The one new row — and it breaks a nil this base declared two passes ago
+
+`p509` closed `Gap 508-E` with a regional finding stated as a nil: the LATAM-placeable repositories
+the `topic:` channel can reach are *"all course materials or national-system integration, **none an
+AI product**."* 🟢 **That nil no longer holds.**
+
+| agent | licence (read first-hand) | ★ | region | why it is placeable |
+|---|---|---|---|---|
+| [`oluiscabral/studorama`](https://github.com/oluiscabral/studorama) | 🟢 **MIT** — `LICENSE` **1,064 B**, `sha256₁₆ 75ecd9ad0bb3b543`, holder *"Copyright (c) 2025 oluiscabral"* | **111** *(🟢 `p511`, API)* | 🟢 **LATAM** | Its `README` (12,965 B) declares **"Complete English and Portuguese (Brazil) localization"**, localized AI prompt content and *"Cultural Adaptation: region-specific content"* as **first-class product features**, not a translation afterthought |
+
+🟢 **What it is:** a multi-provider AI study platform — **OpenAI, Google Gemini, Anthropic Claude,
+DeepSeek, Ollama (local) and browser-local AI**, 15+ models, per-provider key management — built on
+named study techniques rather than a chat box. `refs/heads/main` → **`2ddbb1122b5b`**, **10 tags**.
+🔵 **The Ollama/local-model path is the part that matters commercially in LATAM**, where cloud
+inference cost and data residency are the two objections an engagement meets first.
+🔴 **Build-on caveat, stated plainly:** the licence holder is a personal handle, not an organisation,
+and the hosted demo runs on Vercel. This is a **single-maintainer** project. Fork-and-own, do not
+take a dependency.
+
+🔵 **The region is placed on the product's own bytes, not on an inference about its author.** This
+base has no evidence of the maintainer's nationality and does not need any: the pt-BR localization
+is in the repository.
+
+### 🔴 Three gates reproduced defects this pass found by hand — and one of them should NOT be obeyed
+
+🔴 **`gate-shelf-consistency` reports three licence contradictions. All three are false positives,
+and they are the defect class this register has already retracted twice.**
+
+| gate finding | what the line actually says |
+|---|---|
+| `microsoft/autogen`: `CC-BY-4.0` (`agents/top.md:52`) vs `MIT` (`:1104`) | `:52` is narrative about **a defective probe** — *"A first-match-wins filename probe read `microsoft/autogen`…"*; `:1104` is this file's **documented AutoGen split** (the `LICENSE` file really is CC BY 4.0). Two different objects, both correct |
+| `oat-sa/tao-core`: `GPL-2.0` (8 sites) vs `LGPL-2.1` (`agents/top.md:416`) | `:416` reads *"The **first reader run** this pass graded `oat-sa/tao-core` as…"* — a **retracted** reading, described as retracted on its own line |
+| `openeducat/openeducat_erp`: five families at `intel/open-gaps.md:1269` | that line is **`Gap 460-D`**, whose content **is** the wrong grants a contradicting external source serves. Quoting a wrong value is the gap |
+
+🟢 **No shelf prose was edited to make this gate green.** `p455` retracted a 20.6 % shelf-defect rate
+over exactly this mechanism (*"adjacency is not attribution"*), and `p509` named its two shapes —
+**line-level co-occurrence** and **sole-address prose rows**. The gate reproduces both.
+🔵 Registered as `Gap 511-A` against the **gate**, not the shelves.
+
+### 🔴 And this pass's own first probe reproduced the same defect, for a ninth recorded instance
+
+🔴 **The star-cell extractor written for this pass reported
+[`oppia/oppia`](https://github.com/oppia/oppia) at `41,705★` and
+[`TrenTorch/TrenTorch`](https://github.com/TrenTorch/TrenTorch) at `385★`.** Both are wrong, and
+neither was a shelf defect: `oppia`'s row correctly reads **6,950** *(🟢 `p506`, API)* and
+`TrenTorch`'s correctly reads **741** *(🟢 `p510`, API)* — the extractor had captured a **different
+repository's star figure from the same table cell's prose** (`OpenMAIC` at 41,705; `TrenTorch`'s own
+`p484` historical value). 🟢 **Caught by the API control before anything was published, and the
+shelves were right both times.** `Gap 509-B`'s precondition has now paid for itself in a **ninth**
+consecutive instance and the shelves have been more precise than the instrument in four of them.
+
+### 🟢 Every address written this pass is attested LIVE on the sound channel
+
+🟢 **85 distinct `github.com/<owner>/<repo>` addresses appear in this pass's blocks across the nine
+live files, and all 85 read `LIVE`** — a `ref:` line with a resolved default branch from
+`git ls-remote --symref`, the one channel that discriminates. 🟢 **A known-bad control was run in
+the same sweep and graded `UNREADABLE_ABSENT_OR_PRIVATE`**, per `Gap 509-B`'s precondition.
+🔴 **No address was checked with `curl -sI`** — `p510` refuted that probe (403 for a live repo and
+a deleted one alike) and `p511` refutes the `raw` 404 half of its replacement (`Gap 510-B`).
+🔵 Among the 85, nine default to neither `main` nor `master` — `GibbonEdu/core` → `v31.0.00`,
+`rosariosis` → `mobile`, `openeducat_erp` → `19.0`, `ILIAS` → `release_11`,
+`bigbluebutton` → `v4.0.x-develop`, `overhangio/tutor` → `release`, `terracotta` and
+`tutors-sdk/tutors` → `development`, `TrenTorch` → `TrenTorch-Dev` — which is why a probe that
+assumes `main` reports phantom absences.
+Reads: [`p511-url-liveness.2026-10-28-p511.tsv`](../evidence/p511-url-liveness.2026-10-28-p511.tsv).
+
 # Education AI agents — build-on-able shelf
 
 > 🟢 **`p510` (`2026-10-28`) — EVERY ADDRESS ON THIS SHELF IS NOW PROVEN LIVE, AND GETTING THERE MEANT DISCARDING THE VERIFICATION INSTRUMENT THIS BASE IS PRESCRIBED TO USE. 🔴 TEN STAR CELLS WERE WRONG, TWO OF THEM ROUNDED VALUES DRESSED AS EXACT READS, AND ONE OVERSTATED BY 36.**
@@ -352,7 +504,7 @@ see the reader defect recorded below. Evidence:
 
 ## Permissive — Globant can build on these
 
-**Seventeen rows** (🟢 `p501` promoted `SocialCoach`), MIT / Apache-2.0 / BSD-3-Clause, each license read from bytes at the SHA shown.
+**Eighteen rows** (🟢 `p511` promoted `studorama`, the first LATAM-placed row here; `p501` promoted `SocialCoach`), MIT / Apache-2.0 / BSD-3-Clause, each license read from bytes at the SHA shown.
 🟢 **`p493` restored seven of them** (`OpenMAIC`, `k12-teacher-skills`, `dolos`, `open-tutor-ai-CE`,
 `agent-skills`, `rumi-platform`, `Shiksha-Copilot`) after finding they had been promoted by earlier
 passes and then dropped by `p490`'s full-file rewrite. 🔵 **`p492` added no row here** — the one new
@@ -374,11 +526,12 @@ in [`trending.md`](trending.md) rather than here.
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | **274** | `e24c8456e5f7` | Intelligent tutoring system with Bayesian Knowledge Tracing; ReactJS + Firebase. UC Berkeley CAHLR. |
 | KSoR | [panaversity/ksor](https://github.com/panaversity/ksor) | Apache-2.0 | 232 | `b50f28926fae` | SDK for governed, authoritative knowledge systems for humans and agents. Names education institutions as its target. |
 | open-tutor-ai-CE | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | `196c547291da` | Educational and collaborative AI platform, community edition. 380 commits and **194 forks against 114★** — a fork-heavy ratio that reads as deployment, not stargazing. 🟢 **Restored `p493`**, and 🔵 **its family is confirmed from the bytes**: the 1 531-byte payload opens *"All rights reserved"*, which is the literal opening of canonical BSD and which a title-block reader can mistake for a reserved-rights notice; all three BSD conditions including no-endorsement are present. `sha1 a027c9bb4f47`. |
-| mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT | 100 | `e137ca47cbec` | Self-hostable LMS with AI mentoring and role-play. Tenant isolation enforced in Postgres RLS, not app code. |
+| mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT | **101** *(🟢 `p511`, API; prior cell `100`, round)* | `e137ca47cbec` | Self-hostable LMS with AI mentoring and role-play. Tenant isolation enforced in Postgres RLS, not app code. |
 | agent-skills (Learning Commons) | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | Apache-2.0 | 40 | `8b0599c24469` | The same four K-12 teacher skills from the education-consortium side, with `evals/` rubrics for pedagogy, rigour, format and scaffolding. `NOTICE` (268 B) names **Anthropic, PBC** and **Learning Commons**. Licence 10 173 B, `sha1 e88848668567`. 🟢 **Restored `p493`.** |
 | rumi-platform | [Orenda-Project/rumi-platform](https://github.com/Orenda-Project/rumi-platform) | Apache-2.0 | 18 | `f2d62af1eb82` | **WhatsApp-delivered** learning in **15 languages**; 847 commits. Pakistan / Taleemabad. 🟢 **Restored `p493`** — the only no-app, no-browser delivery surface on this shelf, which matters wherever `T9`'s offline-first argument applies. Licence 11 287 B, `sha1 20312eb940f0`. |
 | Shiksha-Copilot | [microsoft/Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | MIT | 9 | `cf2a2e24c3d4` | Microsoft Research India, **VELLM** initiative, with the Sikshana Foundation. Lesson plans, examples, analogies, activities, assessments — **all routed to a teacher for review before classroom use**, which is the human-oversight shape `P490-2` argues for. 149 commits; licence 1 141 B, `sha1 689ec0681815`. 🟢 **Restored `p493`.** |
 | AI Agents for Beginners | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | MIT | **78,059** *(🟢 `p510`, API; `p504` 78,039)* | `dd0f080d07d2` | 18-lesson agent course. **A curriculum, not a deployable agent** — listed because it is the most-starred thing in this space and is routinely miscatalogued as a product. |
+| Studorama | [oluiscabral/studorama](https://github.com/oluiscabral/studorama) | **MIT** | **111** *(🟢 `p511`, API; `archived: false`)* | `2ddbb1122b5b` | 🆕 **New row `p511`, and the first LATAM-placed AI PRODUCT on this shelf** — multi-provider AI study platform (OpenAI, Gemini, Anthropic, DeepSeek, **Ollama local**, browser-local; 15+ models) built on named study techniques. Licence read from bytes: `LICENSE` **1,064 B**, `sha256₁₆ 75ecd9ad0bb3b543`. **10 tags.** Region placed on the product's own bytes — the `README` (12,965 B) declares **"Complete English and Portuguese (Brazil) localization"** and *"Cultural Adaptation: region-specific content"* as first-class features. 🔴 **Single maintainer**, licence holder is a personal handle: fork-and-own, do not take a dependency. 🟢 Breaks `p509`'s nil that the LATAM-reachable set contains *"none an AI product"*. |
 
 ## Copyleft — usable, but not for a hosted commercial derivative
 
@@ -588,7 +741,7 @@ It is a **1 071-byte MIT grant over a design worth copying**, which is the entir
 
 | repo | licence @ SHA | ★ | why it is excluded |
 |---|---|---|---|
-| [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | **MIT**, 1 082 B, `sha1 b3428e1f52c0` (`2be1800d141e`) | **67,603** *(🟢 `p510`, API; `p509` read 67,603; prior cell 67,600)* | 60+ annotated PyTorch paper implementations. **CS-education teaching material, not a deployable agent** — the same miscatalogue this shelf already flags for `microsoft/ai-agents-for-beginners` (78,000★). It would top this table on stars and teach a client nothing about tutoring. 🔵 Its licence file is lowercase **`license`**; probes trying only `LICENSE`/`LICENSE.md` would report "no licence" on an MIT repo. **Add lowercase `license` to every future probe list.** |
+| [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | **MIT**, 1 082 B, `sha1 b3428e1f52c0` (`2be1800d141e`) | **67,603** *(🟢 `p510`, API; `p509` read 67,603; prior cell 67,600)* | 60+ annotated PyTorch paper implementations. **CS-education teaching material, not a deployable agent** — the same miscatalogue this shelf already flags for `microsoft/ai-agents-for-beginners` (**78,061** *(🟢 `p511`, API)*). It would top this table on stars and teach a client nothing about tutoring. 🔵 Its licence file is lowercase **`license`**; probes trying only `LICENSE`/`LICENSE.md` would report "no licence" on an MIT repo. **Add lowercase `license` to every future probe list.** |
 
 ### 🔴 Gap restated by `p492` — and it was never a gap. Closed `p493`.
 
@@ -877,7 +1030,7 @@ a **category error rather than a repeat**, and naming the cause retires the comp
 and the keyword *"education"* in a star-ordered query select for **teaching AI to humans**, not
 **applying AI to teaching**. Those two categories are disjoint, and the first is vastly larger and
 more starred. 🔴 **That is why five passes of ranking queries returned curricula** — and why this
-file already had to write exclusion rows for `microsoft/ai-agents-for-beginners` (78,000★) and
+file already had to write exclusion rows for `microsoft/ai-agents-for-beginners` (**78,061** *(🟢 `p511`, API)*) and
 `labmlai/annotated_deep_learning_paper_implementations` (67,600★) one repository at a time.
 
 🔵 **Standing instruction for the next pass, and it is a change of query shape rather than more

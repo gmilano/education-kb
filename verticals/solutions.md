@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p511` — `2026-10-28` — **🟢 THE PERMISSIVE EDUCATION STACK HAS A COMPLETE INTEROP SPINE AND THIS FILE HAD NEVER SAID SO: LTI, SCORM, xAPI/LRS and QTI are each covered by an MIT or Apache-2.0 component, all four were already on this base unassembled, and the QTI grant is read here for the first time. 🔴 The LMS-plus-SIS permissive nil is RE-CONFIRMED on a fresh leg, and it is now a build estimate rather than an absence.**
+
+### 🟢 The interop spine — four standards, four permissive components, and why it is the sellable part
+
+🔵 **An education engagement never starts with the model; it starts with whether the thing can talk
+to the system of record.** This file has carried the platforms for many passes and never assembled
+the layer that connects them. All four licences below are read from bytes on this base:
+
+| standard | what it carries | permissive component | licence, read from bytes this pass | default branch |
+|---|---|---|---|---|
+| **LTI 1.3 / Common Cartridge** | launching a tool inside any LMS, with roles and grade passback | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** — `LICENSE` **10,273 B**, `sha256₁₆ 73ba74dfaa520b49` | `master` |
+| **SCORM 1.2 / 2004** | the legacy package format every corporate and public catalogue still ships | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** — **1,072 B**, `sha256₁₆ 383b85b370e8da44`, holder *"Jonathan Putney"* | `master` |
+| **xAPI / LRS** | the statement store that makes learning analytics possible at all | [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** — `LICENSE.md` **1,094 B**, `sha256₁₆ 08ea77291de9c70f`, holder *"France Université Numérique"* | `main` |
+| **QTI 3** | interoperable assessment items | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🆕 🟢 **MIT** — **1,076 B**, `sha256₁₆ 7faa621251d7ed2b`, holder *"Amp-up.io, LLC"* | `main` |
+
+🟢 **All four are LIVE on the git channel, and the QTI grant is read here for the first time** — this
+base carried `qti3-item-player` with its licence unread, and it is **MIT**.
+
+🟢 **All four are permissive and byte-attested, which means a Globant-built tutor can be
+LTI-launched from Moodle, Canvas or Open edX, consume a SCORM catalogue, serve QTI 3 assessment items
+and write xAPI statements to an LRS the client owns — with no copyleft reaching the deliverable and
+no vendor API in the critical path.** 🔴 **That is a materially different pitch from "we will
+integrate with your LMS", and this file had every part of it without ever stating the whole.**
+
+🟡 **The one caveat that must travel with it:** the LMSs themselves are copyleft —
+**Moodle GPL-3.0**, **Open edX AGPL-3.0**, **Canvas AGPL-3.0**, **OpenEduCat LGPL-3.0**. 🔵 LTI is
+precisely what makes that acceptable: a tool launched over LTI is **not** a derivative work of the
+LMS, so the copyleft stops at the boundary. **The interop layer is the licence firewall.**
+
+### 🟢 `OpenOLAT` — the one Apache-2.0 LMS, and its star cell re-read exact
+
+🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — **448★** *(🟢 `p511`, API; exact
+against the carried cell)*, Apache-2.0 with an appended openolat.org attribution statement (which is
+why the API classifier says `NOASSERTION` — explained from bytes at `p508`, **10,982 B**,
+`sha256₁₆ 6dbc5b605ed0be6e`). 🔵 **University of Zurich lineage, so EMEA**, and it is the only
+permissively licensed full LMS on these shelves. For an EMEA engagement that cannot ship an AGPL
+platform, this is the row.
+
+### 🔴 The LMS-plus-SIS permissive nil — re-confirmed, and restated as an estimate
+
+🔴 The prescribed vertical leg was re-run this pass and returns the same shape it has returned every
+time: **no MIT or Apache-2.0 platform combines a full student information system with an LMS.** What
+exists is split across licences:
+
+| platform | scope | licence |
+|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | the only one integrating LMS + SIS + fees + parent app on one database | 🟡 **LGPL-3.0** |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | Laravel school management, API-first | 🟢 **MIT** (`p508`, 1,150 B) — 🔴 but **no fees / exams / transport / hostel models** (`p509`) |
+| `Gibbon`, `RosarioSIS` | K-12 SIS | 🔴 **GPL** |
+| `Frappe LMS` | LMS only | 🟢 **MIT** |
+| `Moodle`, `Chamilo` / `Open edX`, `Canvas` | LMS only | 🔴 **GPL-3.0** / **AGPL-3.0** |
+
+🟢 **The honest form of the finding, carried from `p509` and unchanged:** *"there is no MIT education
+SIS"* is **false**; *"there is no MIT education SIS that ships fees, exams, transport or hostel"* is
+**true**, and that gap is **a build estimate for a Globant engagement, not a dead end** — `gegok12`'s
+MIT core (7,623 files, 107 models, 247 controllers, 108 migrations) is the base those four modules
+would be built onto.
+
+### 🔴 Correction in this file
+
+🔴 [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) read
+**`14,300★`** here — a **round** number carrying **no provenance suffix**. The API reads **14,341**.
+🟢 Corrected in place with its suffix. 🔵 It was one of **four** round cells across these shelves and
+**all four were wrong**; the method and the 22-cell census are in
+[`agents/top.md`](../agents/top.md)'s `p511` block. **A star cell ending in `00` is unread until
+re-read.**
+
 # Education platforms you can customise with AI on top
 
 > 🟢 **`p510` (`2026-10-28`) — THE CLONE REF FOR EVERY VERTICAL ON THIS SHELF IS NOW READ RATHER THAN ASSUMED, AND FOR TWELVE OF THEM `git clone` WITHOUT `-b` DOES NOT GIVE YOU WHAT A PASS READING `main` THOUGHT IT WAS READING.**
@@ -314,7 +381,7 @@ Don't build the connector — these are real:
 | Source → study package | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | PDF/video/web/audio → quizzes + SRS |
 | Mastery modelling | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | Bayesian Knowledge Tracing |
 | Moodle plugin API | — | GPL-3.0 (plugin inherits) | 2,000+ plugin ecosystem; note the plugin is a derivative |
-| Eval runtime for tutors | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | MIT | 14,300★. Generic LLM eval; **the only permissive base for a tutoring-quality harness** — the education-specific benchmarks are unlicensed (see [`agents/top.md`](../agents/top.md)) |
+| Eval runtime for tutors | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | MIT | **14,341** *(🟢 `p511`, API; prior cell `14,300`, rounded and carrying NO provenance suffix — the one cell on these shelves without one, and the one that was wrong: `Gap 510-A`'s tell confirmed)*. Generic LLM eval; **the only permissive base for a tutoring-quality harness** — the education-specific benchmarks are unlicensed (see [`agents/top.md`](../agents/top.md)) |
 
 ## Declared gaps
 
