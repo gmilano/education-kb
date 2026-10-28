@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-27
+updated: 2026-10-28
 ---
 
 # Education platforms you can customise with AI on top
@@ -89,3 +89,37 @@ Don't build the connector — these are real:
   the latest-commit date is not, on any channel open to this session. A row's presence here means
   *it exists and its license is known*, **not** *it is actively maintained* — do not let a layer
   table imply currency it cannot support.
+
+
+## 🆕 `p492` — `2026-10-28` — the virtual-classroom layer gains a permissive option
+
+Evidence: [`licence-and-stars.2026-10-28-p492.tsv`](../evidence/licence-and-stars.2026-10-28-p492.tsv).
+
+| Layer | Platform | License | ★ | Why this one |
+|---|---|---|---|---|
+| **Virtual classroom — permissive** | [apache/openmeetings](https://github.com/apache/openmeetings) | **Apache-2.0** | 688 | Video conferencing, IM, **whiteboard**, collaborative document editing; media via Kurento. Release `v9.1.0` (a security release), ASF governance. **The only permissively-licensed conferencing platform in this file.** |
+
+🔵 **This does not replace the BigBlueButton row above.** BigBlueButton (LGPL-3.0, 9,300★) is
+**13× larger** and stays the default for live classes; LGPL already permits linking. Reach for
+OpenMeetings only in the narrow case where the deliverable must **ship modified platform source
+inside a proprietary product** — the one case LGPL's linking allowance does not cover. At 688★,
+treat it as a **considered fallback**, and verify its Kurento dependency first.
+
+### 🔴 Amendment to the Canvas agent-surface row
+
+The [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) entries above remain correct that
+it is MIT and the only maintained agent tool surface on an incumbent LMS. 🔴 **Two things changed
+this pass:** its HEAD **drifted** to `830bc2ef8389` (licence byte-identical at both SHAs, so
+code-only), and `v1.16.0` publishes **four** security advisories where this KB recorded one —
+including **Canvas token handling** (`GHSA-7mj9-4mcg-hvhv`) and a **local code sandbox**
+(`GHSA-7pp5-29mw-9jq3`). **Pin `v1.16.0` or later, and treat the institutional Canvas API token —
+not the tool scope — as the primary asset to protect.** See
+[`compose/patterns.md`](../compose/patterns.md) `P490-1`, amended this pass. 🟡 Its tool count is
+self-inconsistent upstream (description 102, README 128) — **do not quote a number to a client.**
+
+### 🟢 The "no maintenance signal" caveat above is now too strong
+
+This file states that "no maintenance signal is available for any row." **Release dates are
+readable** via page fetch — `openmeetings v9.1.0`, `canvas-mcp v1.16.0` (Oct 2026). Repos that tag
+releases **can** be shown to be live; only untagged ones cannot. Next pass should carry a release
+date per row.

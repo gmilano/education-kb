@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-27
+updated: 2026-10-28
 ---
 
 # Education AI agents — build-on-able shelf
@@ -34,15 +34,17 @@ see the reader defect recorded below. Evidence:
 
 ## Permissive — Globant can build on these
 
-Nine rows, MIT / Apache-2.0, each license read from bytes at the SHA shown.
+Nine rows, MIT / Apache-2.0, each license read from bytes at the SHA shown. 🔵 **`p492` added no row
+here** — the one new permissive education agent it found has **0★** and is listed under *reference
+designs* below, deliberately outside this shelf.
 
 | Agent | Repo | License | ★ | SHA read | What it does |
 |---|---|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 45,800 | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. **See license caveat below.** |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **45,900** | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p492`: HEAD unchanged for a third pass; `v1.6.15` released `2026-10-19`.** Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
 | smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | 30,100 | `96f33faaf028` | Minimal code-writing agent loop. Not education-specific; the usual substrate for a custom tutor agent. |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | **387** | `38adb1e9459d` | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. |
 | Skill-Anything | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | 344 | `3cdc1c1f11dc` | Any source (PDF, video, web, audio) → interactive package with quizzes, flashcards, spaced repetition. |
-| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 309 | `32e5d1ca0175` | MCP server over Canvas LMS; self-described as up to 102 tools + 8 agent skills. Ships a published advisory (GHSA-hmr8-mvr2-mvw5) naming its prompt-injection path. |
+| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 309 | **`830bc2ef8389`** | MCP server over Canvas LMS. 🔴 **`p492`: HEAD drifted from `32e5d1ca0175`; licence byte-identical at both SHAs (1 071 B, `sha1 491fb891a4cf`) so the drift is code-only. `v1.16.0` lists FOUR advisories, not one** — `GHSA-7mj9-4mcg-hvhv` (Canvas token handling), `GHSA-7pp5-29mw-9jq3` (local code sandbox), `GHSA-hmr8-mvr2-mvw5` (file content fencing), `GHSA-qf6c-jv93-38gv` (Windows download permissions). Tool count self-inconsistent upstream (description 102, README 128) — **stop quoting a number**. |
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | **274** | `e24c8456e5f7` | Intelligent tutoring system with Bayesian Knowledge Tracing; ReactJS + Firebase. UC Berkeley CAHLR. |
 | KSoR | [panaversity/ksor](https://github.com/panaversity/ksor) | Apache-2.0 | 232 | `b50f28926fae` | SDK for governed, authoritative knowledge systems for humans and agents. Names education institutions as its target. |
 | mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT | 100 | `e137ca47cbec` | Self-hostable LMS with AI mentoring and role-play. Tenant isolation enforced in Postgres RLS, not app code. |
@@ -151,6 +153,54 @@ Stating these because silence looks identical to coverage.
   **neither carries a license grant**, which is a harder blocker than scarcity. A star-ordered
   sweep is still structurally blind to this tier, and a license-ordered sweep finds nothing in it
   either. See the table above.
-- **Commit recency is not on this table.** The page-fetch channel does not expose per-file commit
-  dates, and `api.github.com` is 403 for arbitrary repos. Rows carry a pinned SHA instead, which
-  is a stronger claim than a date.
+- ~~**Commit recency is not on this table.**~~ 🟢 **Partly closed `p492` — a *release* date is
+  readable even though a commit date is not.** The page-fetch channel does expose tagged releases
+  with dates: `canvas-mcp v1.16.0` (Oct 2026), `DeepTutor v1.6.15` (`2026-10-19`),
+  `education-agent-skills v3.1.0` (`2026-10-22`), `openmeetings v9.1.0`. That is a **real liveness
+  signal** for any repo that tags releases, and this KB had been declaring it unavailable.
+  **Remaining limit:** repos that do not tag releases still have no maintenance signal, and
+  `api.github.com` is still 403 for unattached repos. Rows still carry a pinned SHA, which proves
+  content; a release date now proves *liveness* where one exists.
+
+
+## 🆕 `p492` — `2026-10-28` — reference designs, and why they are not shelf rows
+
+Full reads and channel notes:
+[`licence-and-stars.2026-10-28-p492.tsv`](../evidence/licence-and-stars.2026-10-28-p492.tsv);
+narrative in [`agents/trending.md`](trending.md).
+
+**Three corrections landed in the tables above, not here:** `canvas-mcp`'s drifted SHA and its
+**four** advisories, `DeepTutor`'s star count plus its previously-unrecorded arXiv paper, and the
+partial closure of the commit-recency gap via release dates.
+
+### Reference designs — read these, do not depend on them
+
+A repo with no community is not supply. It can still be the clearest statement of an architecture,
+and this KB has been arguing for the architecture below without ever pointing at code.
+
+| repo | licence @ SHA | ★ | read it for |
+|---|---|---|---|
+| [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) | **MIT**, 1 071 B, `sha1 2a558a4b5980` (`5511bf6dc707`) | 🔴 **0** (13 commits, one author) | **Rubric totals computed in code, never by the model** — per-criterion structured output validated against the rubric, arithmetic in Python. Plus an **answer-leak guard** (a hint that reveals the answer is regenerated under a stricter instruction, and replaced by a safe hint if it still leaks) and **session memory as an explicit LangGraph thread** (in-memory or SQLite). FastAPI + LangGraph + Pydantic; CI on Python 3.11–3.14; deterministic fake model for offline tests. |
+
+🟢 **Why this is worth a row in a KB that refuses to pad.** Point 1 is the **human-oversight shape
+the EU AI Act requires of a *provider*** of a high-risk assessment system — and
+[`intel/market.md`](../intel/market.md) establishes that *for a Globant-built education AI system,
+Globant is the provider*. "Do not let the model do the arithmetic" has been this KB's advice for
+several passes; this is the first MIT implementation of it we can hand an engineer.
+
+🔴 **Do not propose it as a dependency.** Zero stars, 13 commits, one author, no security process.
+It is a **1 071-byte MIT grant over a design worth copying**, which is the entire claim.
+
+### Not an education agent, recorded so it stops resurfacing
+
+| repo | licence @ SHA | ★ | why it is excluded |
+|---|---|---|---|
+| [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | **MIT**, 1 082 B, `sha1 b3428e1f52c0` (`2be1800d141e`) | **67,600** | 60+ annotated PyTorch paper implementations. **CS-education teaching material, not a deployable agent** — the same miscatalogue this shelf already flags for `microsoft/ai-agents-for-beginners` (78,000★). It would top this table on stars and teach a client nothing about tutoring. 🔵 Its licence file is lowercase **`license`**; probes trying only `LICENSE`/`LICENSE.md` would report "no licence" on an MIT repo. **Add lowercase `license` to every future probe list.** |
+
+### 🔵 Gap restated, now with a reason rather than a silence
+
+**Learning Commons' "Claude for Teachers" agent skills** (Lesson Plan Generation, Lesson
+Differentiation; launched July 2026, publicly described as open-source) are **not listed** because
+their licence could not be read: no repository resolved under the obvious paths, and
+`learningcommons.org` **does not resolve from this session's network**. An unverified licence is not
+a finding. Recorded as a lead for the next pass.

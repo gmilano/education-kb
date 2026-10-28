@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-27
+updated: 2026-10-28
 ---
 
 # Education AI — current trends
@@ -190,3 +190,78 @@ part most often cut from a bid to win it.
   repos, and page fetches returned commit counts without dates on every repo tried this pass). No
   file in this KB can currently distinguish an actively maintained project from an abandoned one —
   which matters most for the small rows, where abandonment is likeliest.
+
+
+## 🆕 `p492` — `2026-10-28` — two trends move from thesis to evidence
+
+### 🔴 `T8` is now closed: write-capable education agents are a demonstrated safety surface
+
+`T8` has argued since it was written that this is "a real safety surface, not a hypothetical."
+**That argument is over.** [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — the single
+most deployable education-agent integration in this KB, and the base of pattern `P490-1` — now
+publishes **four** security advisories in `v1.16.0`, where this KB had recorded **one**:
+
+| advisory | subject | why it is the whole blast radius |
+|---|---|---|
+| `GHSA-7mj9-4mcg-hvhv` | **Canvas token handling** | The engagement hands this server an **institutional** Canvas API token. Read-only *tool* scoping does not protect the *token*. |
+| `GHSA-7pp5-29mw-9jq3` | **local code sandbox** | Code execution reachable from an agent loop driven by **student-authored text**. |
+| `GHSA-hmr8-mvr2-mvw5` | **file content fencing** | The one already carried — though upstream's words are *file content fencing*, not this KB's gloss of "prompt-injection path". |
+| `GHSA-qf6c-jv93-38gv` | **Windows download permissions** | Low relevance on Linux hosting; still live. |
+
+🟢 **The useful generalisation.** Four CVE-class advisories on a **309★, MIT, actively maintained,
+security-policy-carrying** project is not a sign of a bad project — it is the **opposite**. It is
+what a project looks like when it takes an exposed surface seriously and discloses. **The trend is
+that the LMS agent boundary is now understood to be a security boundary**, by the maintainers
+first. Treat any education MCP server with **zero** advisories as unexamined rather than safe.
+
+🔴 **Operational rule this yields:** on an LMS agent integration, the **credential is the primary
+asset**, not the tool scope. Scope tools *and* isolate the token. `P490-1` is amended accordingly.
+
+### 🟢 `T2` holds, but the permissive numerator moved for the first time in three passes
+
+`T2` ("the education platform layer is copyleft, and this is now the binding constraint") **stands
+— 16 of 20 platforms are copyleft.** The correction is narrow and worth carrying:
+[`apache/openmeetings`](https://github.com/apache/openmeetings) is **Apache-2.0** (51 425 B) at
+**688★**, giving the **virtual-classroom** layer its first permissive option. The census goes
+**19 → 20 platforms, 3 → 4 permissive**.
+
+🔵 **It changes no conclusion.** No permissive **SIS** exists; no permissive **assessment/QTI**
+engine exists; the only permissive **full LMS** is still `OpenOLAT`. And BigBlueButton (LGPL-3.0)
+is **13×** OpenMeetings' size and stays the default. **The constraint is intact; one cell in it is
+not as tight as this KB claimed.**
+
+### 🟢 A new trend, `T13` — the education agent-skills tier is consolidating off hosted infrastructure
+
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+(**917★**, `v3.1.0` dated **2026-10-22**) is **retiring its hosted public MCP service** in favour of
+a **local MCP server**, with hosted access now gated behind an **auth token**. It ships composition
+for **Claude, OpenAI Codex and Hermes Agent**, plus a portable ZIP edition — **165 skills across 20
+domains**, of which domain 20 is **13 student-facing** skills.
+
+**Two things to take from this:**
+
+1. 🔴 **Its licence is `CC BY-SA 4.0` — content copyleft with ShareAlike, not a software grant.**
+   ShareAlike propagates to *adapted* material, so lesson plans, rubrics and curriculum **derived**
+   from these skills inherit the obligation. **Read it; do not ship it inside a proprietary
+   deliverable.** That is a licence conclusion, not a quality judgement — the skills are
+   evidence-graded and good.
+2. 🟢 **The direction of travel is local, not hosted.** The largest education skills library in
+   existence is moving *away* from a hosted endpoint. Anyone who demoed against the hosted MCP URL
+   has a **migration**, not a config change. Design education-agent work for a **locally-run MCP
+   server** by default.
+
+### 🟢 Channel and method corrections (they belong in this file too)
+
+- 🟢 **A standing gap in three files was overstated.** "No maintenance signal is available for any
+  row" is **false for repos that tag releases** — release names and dates read fine via page fetch
+  (`v1.16.0`, `v1.6.15` `2026-10-19`, `v3.1.0` `2026-10-22`, `v9.1.0`). **Liveness is readable.**
+  Only untagged repos lack a signal.
+- 🔵 **The `github.com` `curl` `403` is this session's own proxy access gate**, returning a JSON
+  body that says so — **not** GitHub rate-limiting and **not** evidence a repo is missing. It
+  carries zero information about existence. Open since `p472`, now diagnosed.
+- 🔵 **Licence bytes must be measured with `curl -o file`.** `$(curl ...)` strips trailing newlines
+  and undercounts by one byte, which **presents exactly as licence drift**. `p492` produced one
+  byte of phantom drift this way before re-measuring. **Phantom drift is how a KB starts lying
+  about licences.**
+- 🔵 **Add lowercase `license` to every licence probe list.** `labmlai`'s MIT grant lives there, and
+  a probe trying only `LICENSE`/`LICENSE.md` would call an MIT repo unlicensed.

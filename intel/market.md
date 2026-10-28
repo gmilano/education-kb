@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-27
+updated: 2026-10-28
 ---
 
 # Education AI — market map and opportunities by region
@@ -305,8 +305,67 @@ and reuse it.
 |---|---|---|---|---|
 | Market position | largest (36%) | mid | fastest (35.3% CAGR) | smallest, badly sized |
 | Binding AI law | none federal; state patchwork | **EU AI Act** | KR, CN, VN yes; JP no; IN partial | **none in force**; BR PL 2338 stalled in committee |
-| Education named high-risk | no | **yes** (Annex III) | **yes — Vietnam**, Jul 2026 | 🟡 claimed for BR PL 2338, unconfirmed |
-| Nearest deadline | varies by state | **2 Dec 2026** (Art. 50 marking) | IN labels live 20 Feb 2026; **KR penalties ~Jan 2027** | — |
+| Education named high-risk | no | **yes** (Annex III) | **yes — Vietnam**, *Decision 33/2026/QD-TTg*, issued **30 Jun 2026**, in force **15 Aug 2026**, **3 education systems** of 46 | 🟡 claimed for BR PL 2338, unconfirmed |
+| Nearest deadline | varies by state | **2 Dec 2026** (Art. 50 marking) | IN labels live 20 Feb 2026; **KR penalties ~Jan 2027**; **VN education 1 Sep 2027** (not Mar 2027) | — |
 | Individual adoption | 53% teachers | **$2.64B mkt; FI/EE/NL lead K-12**; rate still unmeasured | **CN compulsory from age 6**; KR mandate **reversed** | **highest measured** |
 | Institutions with AI guidance | ~70% | ~70% | not established | **45%** |
 | Sell on | policy configurability | **provider conformity** | jurisdiction routing | institutional delivery |
+
+
+## 🆕 `p492` — `2026-10-28` — Vietnam's education high-risk tier, pinned to an instrument
+
+`p491` reported "a July 2026 decision classifies education as a high-risk AI sector." **That was
+right in substance and wrong in two details, and it had no instrument number** — which is the
+difference between a slide and advice. Now citable:
+
+| field | `p491` | `p492` |
+|---|---|---|
+| instrument | "a July 2026 decision" | **Decision `33/2026/QD-TTg`** |
+| issued | — | **30 June 2026** (not July) |
+| in force | — | **15 August 2026** |
+| scope | "education is high-risk" | **46 high-risk AI systems across 6 sectors; education is 3 of them** |
+| education compliance deadline | — | 🟢 **1 September 2027** |
+
+### 🟢 The deadline correction matters commercially
+
+The general Decision 33 deadline is **1 March 2027**. **Education does not run on it.** Systems in
+**healthcare, education and finance already in operation before 15 Aug 2026 have until
+1 September 2027** — a **six-month longer runway** than every other listed sector. A system put
+into operation **within six months after** the effective date falls back to **1 March 2027**.
+
+**So the date depends on when the system went live, not on what it does:**
+
+| situation | deadline |
+|---|---|
+| education AI **in operation before 15 Aug 2026** | **1 Sep 2027** |
+| education AI **first operated within 6 months after 15 Aug 2026** | **1 Mar 2027** |
+| non-education sectors under Decision 33 | **1 Mar 2027** |
+
+🟡 **The counter-intuitive consequence: shipping earlier buys more time.** An incumbent Vietnamese
+deployment that was already live has the longer runway; a *new* 2026 entrant gets the **shorter**
+one. For a Globant engagement standing up a new system, **plan on 1 Mar 2027, not 1 Sep 2027** —
+the generous date is the incumbent's, not the newcomer's.
+
+**Transition rule:** during the transitional period existing systems may keep operating **unless a
+competent State agency determines a system poses a serious risk** and suspends or terminates it.
+So the runway is **conditional, not guaranteed**.
+
+**Named education scope:** the appendix includes systems that **automatically assess or rank
+learners** — the same functional trigger as EU Annex III. 🟢 **An EU-conformant assessment design
+therefore transfers to Vietnam with little rework**, which strengthens the standing
+"build conformity once, in EMEA shape, and reuse it" conclusion in the LATAM section — it now
+holds for APAC's second high-risk jurisdiction too.
+
+🔵 **Evidence caveat, stated because this KB does not launder secondary sources.** This rests on
+**convergent reporting from four independent law firms and a trade brief**, not a primary read.
+`www.tilleke.com` **does not resolve from this session's network** — the same posture as the
+standing EUR-Lex gap on the EU Digital Omnibus. Figures agree across sources; the instrument number
+and both dates are consistent. **Read the official text before it reaches a client contract.** One
+earlier source (a May 2026 vendor guide saying the high-risk list "has not been issued") simply
+predates Decision 33 — it is stale, not contradictory.
+
+### 🔵 Still missing in APAC, restated
+
+No **edtech vendor share** for any APAC market, and no reliable institution-level adoption *rate*
+for China, India or Japan. Decision 33 adds a **compliance hook** for Vietnam; it adds no
+market-sizing figure, and this file still has none for Vietnam specifically.

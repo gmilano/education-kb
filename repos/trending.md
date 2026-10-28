@@ -1,8 +1,48 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-27
+updated: 2026-10-28
 ---
+
+## 🆕 `p492` — `2026-10-28` — **🟢 THE PERMISSIVE NUMERATOR MOVED FOR THE FIRST TIME IN THREE PASSES. [`apache/openmeetings`](https://github.com/apache/openmeetings) is **Apache-2.0** at **688★**, read from 51 425 bytes — a **virtual-classroom platform** in the one layer where this KB's best option was copyleft. The census goes **19 → 20 platforms, 3 → 4 permissive**. 🔵 It had **zero prior mentions in this KB, archive included**.**
+
+🔵 **Channels:** see [`agents/trending.md`](../agents/trending.md) `p492` for the full note — the `github.com` `curl` `403` is now **diagnosed as this session's proxy access gate**, carrying no information about repo existence, and licence bytes must be measured with `curl -o file` (command substitution undercounts by one byte and reads as drift). Evidence:
+[`licence-and-stars.2026-10-28-p492.tsv`](../evidence/licence-and-stars.2026-10-28-p492.tsv).
+
+### 🟢 The new permissive platform row
+
+| repo | ref | licence @ SHA | ★ | note |
+|---|---|---|---|---|
+| [`apache/openmeetings`](https://github.com/apache/openmeetings) | **`master`** | **Apache-2.0**, 51 425 B, `sha1 d30124557187` (`79b71bcb39f8`) | **688** | Video conferencing, instant messaging, **whiteboard**, collaborative document editing; media via **Kurento Media Server**. Latest release **`v9.1.0`, a security release**. Sidebar shows only an unnamed "License" link; the **bytes** are unambiguous Apache-2.0. |
+
+### 🟢 Why this one matters more than its star count suggests
+
+`p491` wrote that "the permissive shortlist has not grown in three passes while the denominator went 17 → 19." **That is no longer true, and the correction lands in the layer where it is most useful.**
+
+| layer | this KB's incumbent | licence | `p492` permissive alternative | licence |
+|---|---|---|---|---|
+| **Virtual classroom** | [`bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) (9,300★) | LGPL-3.0 | [`apache/openmeetings`](https://github.com/apache/openmeetings) (688★) | **Apache-2.0** |
+
+**Read this honestly in both directions.** BigBlueButton is **13× larger** and remains the right default for a live-classroom deployment; LGPL permits linking, which is why this KB called it "the friendliest copyleft here." OpenMeetings does **not** displace it. What it does is give the virtual-classroom layer a **genuinely permissive** option for the case LGPL cannot serve — a deliverable that must ship **modified platform source** inside a proprietary product, where even LGPL's linking allowance does not help. **That case is rare. When it arrives there was previously no answer in this file, and now there is one**, backed by the ASF's governance and release process rather than a single maintainer.
+
+🔵 **Sizing caveat:** at 688★ against BigBlueButton's 9,300, treat OpenMeetings as a **considered fallback, not a recommendation**. Verify its Kurento dependency and `v9.1.0` security notes before proposing it.
+
+### 🟢 Census correction — the permissive count was 3 and is now 4
+
+| | `p491` published | `p492` |
+|---|---|---|
+| platforms read from bytes | **19** | **20** |
+| permissive (MIT / Apache-2.0 / BSD) | **3** | **4** |
+| permissive *full LMS* | **1** (`OpenOLAT`, Apache-2.0) | **1** — unchanged; OpenMeetings is **not** an LMS |
+
+🔵 **Do not let the numerator move blur the standing finding.** The education **platform** layer is still overwhelmingly copyleft — **16 of 20** — and the hard gaps `p491` established **all still hold**: **no permissive SIS exists**, and **no permissive assessment/QTI engine exists** (`tao-core` remains GPL-2.0). OpenMeetings closes none of those. It closes a *conferencing* gap.
+
+### 🔵 One more MIT repo, deliberately not shelved as a platform
+
+| repo | licence @ SHA | ★ | why it is not a foundations row |
+|---|---|---|---|
+| [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | **MIT**, 1 082 B, `sha1 b3428e1f52c0` (`2be1800d141e`) | **67,600** | At 67.6k★ it is the **largest-starred MIT repo this KB has ever read** and it would top any table it entered — which is precisely the trap. It holds **no students, no courses, no enrolments and no grades**; it is 60+ annotated PyTorch paper implementations, i.e. **CS-education teaching content**. It is recorded here as a **teaching resource**, not a foundation. 🔵 Note its licence file is lowercase **`license`** — a probe trying only `LICENSE`/`LICENSE.md` reports "no licence" on an MIT repo. That is the `fedena` false-negative mechanism in reverse and it is worth adding to every future probe list. |
+
 
 ## 🆕 `p491` — `2026-10-27` — **🔴 TWO NEW PLATFORMS READ FROM BYTES, BOTH COPYLEFT — the permissive shortlist has not grown in three passes while the denominator went 17 → 19. [`learnhouse`](https://github.com/learnhouse/learnhouse) is **`AGPL-3.0` at 2 400★** and outranks Kolibri and Chamilo, yet was absent from this KB entirely. 🔴 [`frappe/education`](https://github.com/frappe/education) ships a **19-byte licence** reading `License: GNU GPL V3` with no licence text — GitHub's own classifier cannot resolve it. 🔴 And `p490`'s census is off by one: it published **16** platforms while its own cell named **nine** GPL repos and its tables listed **seventeen** rows.**
 

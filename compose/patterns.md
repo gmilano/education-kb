@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-27
+updated: 2026-10-28
 ---
 
 # Compose patterns — concrete education AI recipes
@@ -27,7 +27,7 @@ surface. Fastest path to a working engagement in the largest market.
 
 | Component | Repo | License | Role |
 |---|---|---|---|
-| Tool surface | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | ~102 Canvas tools + 8 agent skills over MCP |
+| Tool surface | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | Canvas tools + 8 agent skills over MCP. 🔴 **Pin `v1.16.0` or later** (`p492`) — see the amended threat model below. Tool count is self-inconsistent upstream (102 vs 128): **do not quote one.** |
 | Agent loop | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | code-writing agent runtime |
 | Content generation | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | quizzes, lesson plans, flashcards |
 
@@ -36,10 +36,38 @@ surface. Fastest path to a working engagement in the largest market.
 `canvas-mcp`'s content tools.
 
 **Do this or it is negligent:** start from `canvas-mcp`'s **read-only** tool subset
-(`get_*`/`list_*`), enable write tools individually through its operator allowlist, and treat its
-published advisory **GHSA-hmr8-mvr2-mvw5** as the threat model. Its own source makes the point to
-honour: *a confirmation token does not prove a human approved anything.* Put a human gate on
-anything that writes a grade.
+(`get_*`/`list_*`), enable write tools individually through its operator allowlist, and put a human
+gate on anything that writes a grade. Its own source makes the point to honour: *a confirmation
+token does not prove a human approved anything.*
+
+🔴 **Amended `p492` — the threat model above was right and is no longer sufficient.** This pattern
+previously named **one** advisory as the threat model. `v1.16.0` publishes **four**, and two of them
+are not covered by tool scoping at all:
+
+| advisory | subject | what it defeats |
+|---|---|---|
+| `GHSA-7mj9-4mcg-hvhv` | **Canvas token handling** | 🔴 **Read-only tool scoping does not protect the token.** This pattern hands the server an *institutional* Canvas API token — scoping tools limits what the agent may call, not what a token-handling defect exposes. |
+| `GHSA-7pp5-29mw-9jq3` | **local code sandbox** | 🔴 Code execution reachable from an agent loop driven by **student-authored text**. |
+| `GHSA-hmr8-mvr2-mvw5` | **file content fencing** | The advisory this pattern already carried. Upstream's words are *file content fencing*, not "prompt-injection path". |
+| `GHSA-qf6c-jv93-38gv` | Windows download permissions | Low relevance on Linux hosting; still live. |
+
+**Three additions to the build, not optional:**
+
+1. **Treat the Canvas API token as the primary asset, not the tool scope.** Issue a **dedicated
+   service token** scoped to the pilot faculty, hold it in a secret manager the agent process
+   cannot read, inject at request time, and **rotate on a schedule set before go-live**. Never the
+   institution's admin token.
+2. **Isolate the runtime.** With a published sandbox advisory and `smolagents` *writing and running
+   code* in this very pattern, the agent process runs in its own container with **no ambient cloud
+   credentials** and egress restricted to the Canvas host and the model endpoint.
+3. **Pin and watch.** Pin `canvas-mcp` to `v1.16.0`+ by tag, subscribe to its advisories, and
+   re-read them at every engagement checkpoint. 🟢 It **has** a `SECURITY.md` and discloses — which
+   is why four advisories is a sign of a project worth depending on, not one to avoid. **An
+   education MCP server with zero advisories is unexamined, not safe.**
+
+🔵 **Also `p492`:** this pattern's base **drifted** — HEAD moved from this KB's pinned
+`32e5d1ca0175` to `830bc2ef8389`, with the licence **byte-identical at both SHAs** (MIT, 1 071 B),
+so the change is **code-only**. Pin by release tag rather than tracking `main`.
 
 **Licence note:** Canvas itself is AGPL-3.0, but you are **integrating over its API, not
 modifying it** — no obligation attaches. All three components above are permissive. 🟢
@@ -277,3 +305,57 @@ runtime, model adapters and reporting are no longer yours to write.
   are copyleft. There is no permissive base — it is a ground-up build.
 - **Nothing using `ChatTutor` (AGPL-3.0) or `tutor-gpt` (GPL-3.0)** in a hosted commercial
   pattern, despite both being capable. Named here so the omission is visible rather than silent.
+
+
+## 🆕 `P492-1` — Grading assistant whose arithmetic the model never touches 🟢
+
+**Why:** every high-risk education regime now converging on the same functional trigger —
+**automated assessment or ranking of learners** (EU Annex III; Vietnam Decision `33/2026/QD-TTg`,
+3 education systems of 46) — demands demonstrable human oversight from the **provider**. And
+[`intel/market.md`](../intel/market.md) establishes that **for a Globant-built education AI system,
+Globant is the provider.** The cheapest way to fail a conformity assessment is to let an LLM
+compute a grade total.
+
+| Component | Repo | License | Role |
+|---|---|---|---|
+| Reference design | [vulinh1704/ai-tutor-agent](https://github.com/vulinh1704/ai-tutor-agent) | MIT | 🔵 **read, do not depend** (0★, 13 commits) — the rubric/leak-guard/thread architecture below |
+| Agent runtime | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | **MIT** (1 072 B, `sha1 73a6ebe3bd93` @ `eb8ec111b3e9`) | explicit per-session thread with checkpointed state |
+| Rubric item generation | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | generates the rubric criteria and assessment items |
+| LMS write-back | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | **`v1.16.0`+**, write tools behind a human gate |
+| Quality harness | [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) | 🔴 **no software grant** | 🔵 measure against it; **do not vendor it** — see [`agents/top.md`](../agents/top.md) |
+
+**Wiring — the whole point is the split:**
+
+1. `educhain` emits the **rubric** (criteria + weights + max points) as data, reviewed by a human
+   **once per assignment**, then frozen and version-pinned.
+2. The model is asked for **per-criterion structured output only** — a score and a feedback string
+   per criterion, validated against the frozen rubric schema with Pydantic. **A response that does
+   not validate is rejected and retried, never coerced.**
+3. 🟢 **The total is computed in Python from the validated per-criterion scores.** The model is
+   never asked for, and never shown, a total. This is the single load-bearing decision.
+4. **Socratic mode gets the answer-leak guard:** a draft hint that reveals the answer is
+   regenerated under a stricter instruction; if it still leaks, a safe canned hint replaces it.
+   Hints escalate one level at a time.
+5. Session state is an **explicit LangGraph thread** (SQLite for a pilot), so every grade carries a
+   replayable trace — which is what an oversight duty actually asks for.
+6. `canvas-mcp` writes the grade back **only after a human gate**, per `P490-1`'s amended rules
+   (dedicated scoped token, isolated runtime, pinned release).
+
+**What makes this conformant rather than merely careful:** the arithmetic is deterministic and
+auditable, the rubric is human-approved before any student is graded, every score decomposes to a
+criterion with a rationale, and the trace is replayable. 🟢 **An EU-conformant build of this
+transfers to Vietnam with little rework** — the functional trigger is the same, which is why this
+KB's standing advice is to build conformity **once, in EMEA shape, and reuse it**.
+
+🔴 **Do not propose the reference repo as a dependency.** One author, 13 commits, zero stars, no
+security process. Its value is that it is a **1 071-byte MIT grant over an architecture worth
+copying** — the first open implementation of advice this KB has given for several passes without
+being able to point at code.
+
+🔵 **Honest gap:** `mathtutorbench` measures tutoring quality and **ships no software licence**
+(its own README names two different Creative Commons variants, neither a software grant). Use it as
+an **external yardstick you run against**, never as vendored code. There is still **no usable
+open-source education-AI evaluation harness** — see `T11`.
+
+**Scope:** 5–7 weeks to a governed pilot on one course, including the rubric-freeze workflow and
+the oversight trace. Add 2–3 weeks if the conformity documentation is a deliverable.

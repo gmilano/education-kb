@@ -1,8 +1,90 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-27
+updated: 2026-10-28
 ---
+
+## 🆕 `p492` — `2026-10-28` — **🔴 THE KEYSTONE INTEGRATION MOVED AND NOBODY CHECKED IT. [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — the only maintained agent surface on an incumbent LMS, and the base of pattern `P490-1` — has drifted from this KB's pinned `32e5d1ca0175` to **`830bc2ef8389`**, and its `v1.16.0` now lists **FOUR** published security advisories where this KB recorded **one**. 🟢 Its licence is **byte-identical at both SHAs** (MIT, 1 071 B, `sha1 491fb891a4cf`), so the drift is **code-only**. 🔵 And the `curl` `403` that has blocked this KB since `p472` is now **explained, not worked around**.**
+
+🔵 **Channel posture — the `403` is finally diagnosed.** `p491` called `curl -sI https://github.com/<repo>` "a uniform false-negative generator" and was right, but could not say why. It can now: the request returns **HTTP 403 with a JSON body** reading *"GitHub access to this repository is not enabled for this session. Use add_repo to request access."* **The 403 is this session's own GitHub proxy access gate — not GitHub rate-limiting, not a missing repo.** So a `403` here carries **zero** information about whether a repo exists. What works, unauthenticated and unchanged: **`git ls-remote --symref`** (existence + default ref + SHA) and **`raw.githubusercontent.com` at a resolved SHA** (licence bytes). For stars, sidebar, releases and advisories, the working channel is a **`WebFetch` page read**, not `curl`. Evidence, with the full note:
+[`licence-and-stars.2026-10-28-p492.tsv`](../evidence/licence-and-stars.2026-10-28-p492.tsv).
+
+🔵 **A measurement bug worth institutionalising.** Licence bytes must be measured as `curl -o file` then `wc -c`. **Command substitution — `$(curl ...)` — strips trailing newlines and undercounts by one byte**, which presents exactly as licence drift. `p492` mis-measured `education-agent-skills` as 1 229 B this way before re-measuring it correctly at **1 230 B**, matching `p466` exactly. **One byte of phantom drift is how a KB starts lying about licences.** Future passes: never measure bytes through a shell variable.
+
+### 🔴 `canvas-mcp` — drift, and a security surface four times larger than recorded
+
+| field | this KB recorded | `p492` read | verdict |
+|---|---|---|---|
+| HEAD SHA | `32e5d1ca0175` | **`830bc2ef8389`** | 🔴 **real drift** |
+| licence | MIT | MIT, 1 071 B, `sha1 491fb891a4cf` | 🟢 unchanged — **and verified byte-identical at the OLD SHA too**, so the drift is code-only |
+| ★ | 309 | 309 | 🟢 unchanged |
+| advisories | **1** (`GHSA-hmr8-mvr2-mvw5`, described here as "its prompt-injection path") | **4** | 🔴 **understated 4×** |
+| tool count | "~102" | description says **102**, README says **128** | 🟡 upstream self-inconsistent — stop quoting a number |
+
+The four advisories named in `v1.16.0` (released Oct 2026):
+
+| advisory | subject | why it matters to a Globant engagement |
+|---|---|---|
+| `GHSA-7mj9-4mcg-hvhv` | **Canvas token handling** | 🔴 The engagement hands this server an institutional Canvas API token. A token-handling defect is the whole blast radius. |
+| `GHSA-7pp5-29mw-9jq3` | **local code sandbox** | 🔴 Code execution reachable from an agent loop driven by student-authored text. |
+| `GHSA-hmr8-mvr2-mvw5` | **file content fencing** | 🟡 This is the one this KB already carried — but upstream describes it as *file content fencing*, **not** "prompt-injection path". Our gloss was close but not upstream's words. |
+| `GHSA-qf6c-jv93-38gv` | **Windows download permissions** | 🔵 Lowest relevance for a Linux-hosted deployment; still live. |
+
+🔴 **Consequence for [`compose/patterns.md`](../compose/patterns.md).** `P490-1` tells an engineer to wire `canvas-mcp` against an institution's Canvas API token and calls starting from the read-only subset *"negligent"* to skip. That instruction is **right and now insufficient**: with a **token-handling** advisory and a **sandbox** advisory published, read-only tool scoping does not cover the token path. `P490-1` is amended this pass — pin `v1.16.0` or later and treat the token as the primary asset, not the tool scope.
+
+🟢 **This is `T8` moving from thesis to evidence.** `T8` has argued since it was written that write-capable education agents are "a real safety surface, not a hypothetical." Four published CVE-class advisories on the single most deployable education-agent integration is that argument closed.
+
+### 🟢 `DeepTutor` — a third pass with no drift, and the paper this KB never recorded
+
+HEAD `a31d82624c27` is **unchanged across `p490`, `p491` and `p492`** — three passes, byte-stable. Stars **45,800 → 45,900**. Two things are new:
+
+- **`v1.6.15`, released `2026-10-19`.** A release landed without the default branch HEAD moving in our window.
+- 🟡 **A design paper this KB never recorded — identifier upstream-asserted, not verified.** The
+  repo's About section links `arxiv.org/abs/2604.26962` and an upstream News item dated
+  `2026-04-10` announces it as a preprint, *"DeepTutor: Towards Agentic Personalized Tutoring"*.
+  **This KB contained no paper citation for its own flagship agent** — `grep` for `arxiv` across the
+  six non-append files returned nothing, and for a shelf whose top row is 88% of its star mass the
+  design paper is the most useful missing artefact. 🔵 **But `arxiv.org` does not resolve from this
+  session's network**, so the identifier comes from the GitHub page, **not from a read of arXiv**.
+  Recorded as a lead with its provenance stated. **Do not cite the abstract to a client until
+  someone has opened it** — and do not let the next pass promote this to a verified row without
+  reading it.
+
+### 🟢 `education-agent-skills` — no drift, but the hosted endpoint is going away
+
+| field | read | verdict |
+|---|---|---|
+| licence | **CC BY-SA 4.0**, **1 230 B**, `sha1 574477f0a0e4` @ HEAD `135d6275e7db` | 🟢 **identical to `p466`** — no drift (see the measurement note above) |
+| ★ | **917** | 913 → 914 → 916 → **917**: flat, slow, real |
+| verdict | 🔴 **still not a software grant** | unchanged — content copyleft with **ShareAlike** |
+
+🟢 **New and operational:** **`v3.1.0`, dated `2026-10-22`**, and the **hosted public MCP service is being retired** in favour of a **local MCP server**, with hosted access now requiring an **auth token**. Anyone who wired the hosted endpoint into a demo has a migration, not a config change. Composition also now ships for **Claude, OpenAI Codex and Hermes Agent**, plus a portable ZIP edition. Structure: **165 skills across 20 domains**, of which **domain 20 is 13 student-facing skills** — the rest are teacher- and designer-facing.
+
+🔴 **The ShareAlike problem, stated plainly because it keeps getting lost.** This is the largest education agent-skills library in existence at 917★ and it is **CC BY-SA 4.0**. ShareAlike propagates to adapted material. Lesson plans, rubrics and curriculum that a Globant deliverable *derives* from these skills inherit the obligation. **It is a reference to read, not a library to ship inside a proprietary deliverable** — and that is a licence conclusion, not a quality one. The skills themselves are evidence-graded and good.
+
+### 🟢 Two new MIT repos, one of which is honestly not supply
+
+| repo | licence @ SHA | ★ | what it actually is |
+|---|---|---|---|
+| [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | **MIT**, 1 082 B, `sha1 b3428e1f52c0` (`2be1800d141e`) | **67,600** | 60+ annotated PyTorch implementations (transformers, diffusion, LoRA, RL, optimizers). 🔵 **CS-education teaching material — NOT an education platform.** Shelving it as one would repeat the `ai-agents-for-beginners` miscatalogue this KB already warns about. Its licence file is lowercase **`license`**, which licence probes that only try `LICENSE`/`LICENSE.md` miss entirely. |
+| [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) | **MIT**, 1 071 B, `sha1 2a558a4b5980` (`5511bf6dc707`) | 🔴 **0** | 13 commits, zero stars. **Not supply — a reference design**, and a genuinely instructive one: see below. |
+
+### 🟢 Why a 0★ repo is in this file at all
+
+`ai-tutor-agent` is **not** a dependency and this KB should never list it as one. It is here because its architecture encodes three decisions this KB has been arguing for, in working MIT code:
+
+1. **Rubric totals are computed in code, never by the model.** Per-criterion scores come back as structured output validated against the rubric; the arithmetic is Python. This is exactly the human-oversight shape the EU AI Act's high-risk assessment duties require of a *provider* — and the thing an LLM reliably gets wrong.
+2. **An answer-leak guard.** A draft hint that reveals the answer is regenerated under a stricter instruction, and a safe hint replaces it if it still leaks. Socratic hints escalate one level at a time.
+3. **Session memory as an explicit LangGraph thread** (in-memory or SQLite), not an implicit context window.
+
+FastAPI + LangGraph + Pydantic, CI on Python 3.11–3.14, offline deterministic fake model for tests. 🔵 **Read it, do not depend on it** — one author, 13 commits, no community.
+
+### 🔵 Declared gaps this pass
+
+- **`www.tilleke.com` and `learningcommons.org` do not resolve from this session's network.** The Vietnam Decision 33 detail in [`intel/market.md`](../intel/market.md) therefore rests on convergent secondary law-firm reporting, not a primary read — same posture as the standing EUR-Lex gap.
+- **Learning Commons' "Claude for Teachers" agent skills** (Lesson Plan Generation, Lesson Differentiation; launched July 2026, described as open-source) **could not be licence-verified**: no repository resolved under the two obvious paths and the publisher's own site is unreachable here. **An unverified licence is not a finding** — recorded as a lead for the next pass, not as a row.
+- **No education-specific Apache-2.0 *agent* was found**, again. The permissive agent shelf's only Apache-2.0 entries remain DeepTutor, smolagents and KSoR.
+
 
 ## 🆕 `p491` — `2026-10-27` — **🟢 THE EDUCATION-AI EVALUATION TIER IS NOT EMPTY — IT IS UNLICENSED. `p490` reported no instrument exists; two do, both serious, and **neither ships a licence file**. 🔴 `mathtutorbench`'s own README names two different licences (`CC BY 4.0` badge vs `CC BY-SA 4.0` text) and neither is a software grant. 🟢 And `Fedena`, "could not be confirmed" since `p490`, resolves to two real repos — **both with no grant at all**.**
 

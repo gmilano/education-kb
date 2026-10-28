@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-27
+updated: 2026-10-28
 ---
 
 # Foundational education repos
@@ -134,3 +134,69 @@ that hardcodes `/main/` returns 404 on all of them — which reads as "file abse
   `api.github.com` is 403 for unattached repos. So **no row here can be shown to be maintained** —
   `fedena` at 547★ may well be abandoned and this file cannot tell. Rows carry a pinned SHA, which
   proves existence and content but not liveness.
+
+
+## 🆕 `p492` — `2026-10-28` — the permissive numerator moves 3 → 4
+
+Evidence: [`licence-and-stars.2026-10-28-p492.tsv`](../evidence/licence-and-stars.2026-10-28-p492.tsv).
+Narrative: [`repos/trending.md`](trending.md).
+
+`p491` recorded that "the permissive numerator has not moved in two passes while the denominator
+keeps growing." 🟢 **It moved this pass**, and in the layer where this file's only option was
+copyleft.
+
+| repo | licence | ★ | SHA read | note |
+|---|---|---|---|---|
+| [apache/openmeetings](https://github.com/apache/openmeetings) | **Apache-2.0** | 688 | `79b71bcb39f8` | Virtual classroom / web conferencing: video, IM, **whiteboard**, collaborative document editing; media via **Kurento Media Server**. Apache-2.0 read from **51 425 B** (`sha1 d30124557187`); the sidebar shows only an unnamed "License" link, the bytes are unambiguous. Latest release **`v9.1.0`, a security release**. Default branch `master`. **ASF governance** rather than a single maintainer. |
+
+### The census, corrected
+
+| | `p491` published | `p492` |
+|---|---|---|
+| platforms read from bytes | 19 | **20** |
+| permissive (MIT / Apache-2.0 / BSD) | 3 | **4** |
+| GPL / LGPL / AGPL and other copyleft | 16 | **16** |
+| permissive *full LMS* | 1 (`OpenOLAT`) | **1** — unchanged; **OpenMeetings is not an LMS** |
+
+🔵 **The standing finding survives the correction.** The education platform layer is still
+**16 of 20 copyleft**, and every hard gap this file established **still holds**: **no permissive
+SIS exists** (both `fedena` repos ship no grant at all) and **no permissive assessment/QTI engine
+exists** (`tao-core` remains GPL-2.0). OpenMeetings closes a **conferencing** gap and nothing else.
+
+### How to read this row against BigBlueButton — honestly, in both directions
+
+| | [`bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | [`apache/openmeetings`](https://github.com/apache/openmeetings) |
+|---|---|---|
+| ★ | **9,300** | 688 |
+| licence | LGPL-3.0 — **linking permitted** | **Apache-2.0** |
+| verdict | **still the default** for a live-classroom deployment | a **considered fallback**, not a recommendation |
+
+**BigBlueButton is 13× larger and remains the right default.** LGPL already permits linking, which
+is why this file calls it the friendliest copyleft here. The case OpenMeetings uniquely serves is
+narrow and real: a deliverable that must ship **modified platform source inside a proprietary
+product**, where LGPL's linking allowance does not help. **That case is rare — but this file
+previously had no answer for it.** Verify the Kurento dependency and the `v9.1.0` security notes
+before proposing it.
+
+### 🔵 Recorded as a teaching resource, deliberately not a foundations row
+
+[`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
+— **MIT**, 1 082 B, `sha1 b3428e1f52c0` (`2be1800d141e`), **67,600★**. At 67.6k it is the
+largest-starred MIT repo this KB has read and would top any table it entered. It holds **no
+students, no courses, no enrolments, no grades** — it is 60+ annotated PyTorch paper
+implementations, i.e. CS-education *content*. **A foundation here is a system that already holds
+the records.** This is not one.
+
+🔵 **Probe-list fix worth more than the row:** its licence file is lowercase **`license`**. A probe
+trying only `LICENSE`/`LICENSE.md` reports "no licence" on an MIT repo — the `fedena`
+false-negative mechanism in reverse. **Add lowercase `license` to the nine probed names.**
+
+### 🟢 The maintenance gap is partly closed
+
+This file has declared, for several passes, that "no row here can be shown to be maintained."
+**That was too strong.** The page-fetch channel **does** expose tagged releases with dates —
+`openmeetings v9.1.0`, `canvas-mcp v1.16.0` (Oct 2026), `DeepTutor v1.6.15` (`2026-10-19`),
+`education-agent-skills v3.1.0` (`2026-10-22`). For any repo that tags releases, **liveness is
+readable**. The remaining limit is real but narrower: repos that never tag have no signal, and
+`api.github.com` stays 403 for unattached repos. **Next pass should read a release date for every
+row in this file** — it is available and this file was not using it.
