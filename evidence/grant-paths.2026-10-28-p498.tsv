@@ -1,0 +1,77 @@
+repo	default_ref	head_sha	n_grant_paths	root_grant_paths	all_grant_paths
+3yangyang9/DeepTutor-AILearning	main	ce32cf86e3db	1	LICENSE	1
+67tallchris/iep-builder	main	b39df0e9a4a1	1	LICENSE	1
+AI-for-Education/pedagogy-benchmark	main	21a43a395ab4	1	LICENSE	1
+ASUCICREPO/Admissions-AI-Agent	main	fcbbbb2fe19f	1	LICENSE	46
+AgnellusX1/GodsEye	PreProduction	fc77fae989b8	0		0
+CAHLR/OATutor	main	e24c8456e5f7	1	LICENSE	318
+EleutherAI/lm-evaluation-harness	main	d6de81643928	1	LICENSE.md	1
+GarethManning/education-agent-skills	main	135d6275e7db	1	LICENSE	2
+GibbonEdu/core	v31.0.00	4ce08282b597	1	LICENSE	8
+HKUDS/DeepTutor	main	a31d82624c27	1	LICENSE	4
+HugeCatLab/ChatTutor	main	7d9e9052bc5a	1	LICENSE	1
+ILIAS-eLearning/ILIAS	release_11	db9582e3cd3e	1	LICENSE	3
+Jeanikt/tutor-ai-agent	main	987f3106ef6a	1	LICENSE	1
+Open-TutorAi/open-tutor-ai-CE	main	196c547291da	1	LICENSE	1
+OpenOLAT/OpenOLAT	master	3736d48fa685	2	LICENSE,NOTICE.TXT	46
+Orenda-Project/rumi-platform	main	f2d62af1eb82	1	LICENSE	3
+SYuan03/Skill-Anything	main	3cdc1c1f11dc	1	LICENSE	1
+SafeExamBrowser/seb-win-refactoring	master	e18be5617b6c	1	LICENSE.txt	2
+SahilC/AutomaticEssayGrading	master	8bf6dc6b678b	1	LICENSE	1
+Selleo/mentingo	main	e137ca47cbec	2	LICENSE,licenses.comment.md	2
+SudhanvaJ-bit/project-samarth	main	d628b919449a	0		0
+THU-MAIC/OpenMAIC	main	70859b42e714	1	LICENSE	9
+TaiRuiQu/oh-my-paper	v2	96c5e24c0216	1	LICENSE	2
+anandpatikat/guru-latihan-dinamis	main	c94dc8ddbed2	0		0
+ankitects/anki	main	d87cb22bf337	1	LICENSE	2
+anthropics/k12-teacher-skills	main	31fd6dbb0c07	2	LICENSE,NOTICE	9
+apache/openmeetings	master	79b71bcb39f8	2	LICENSE,NOTICE.md	5
+avivkatz1/easy-iep	main	ec0d4f039b0a	0		0
+bigbluebutton/bigbluebutton	v4.0.x-develop	ac97a8bfdc20	1	LICENSE	3
+chamilo/chamilo-lms	master	dc7abd135808	2	LICENSE,license.txt	27
+datauy/ElijoEstudiar	master	ed306fef95c5	1	LICENSE	17
+dodona-edu/dolos	main	74b101785bad	1	LICENSE	4
+dougdevitre/access-to-education	main	f8abd70707ba	1	LICENSE	1
+eth-lre/mathtutorbench	main	6faed173ec2b	0		0
+foradian/fedena	master	333477b06f1d	1	NOTICE	8
+formalms/formalms	master	446a77a9b9cb	0		19
+francoisjacquet/rosariosis	mobile	fa5f4b66caf4	1	LICENSE	11
+frappe/education	develop	73ce33ef2719	1	license.txt	1
+frappe/lms	develop	6054772c0426	1	license.txt	1
+h5p/h5p-php-library	master	1e21b7a2da4a	1	LICENSE.txt	2
+h9-tect/AI-Roadmaps	main	19c63bdb7c86	0		0
+huggingface/smolagents	main	96f33faaf028	1	LICENSE	1
+instructure/canvas-lms	master	1c9f0bb8013e	1	LICENSE	17
+jscott5811/IEP-and-Section-504-Plans-Skill	main	cd3a9018681f	1	LICENSE	1
+kennedyraju55/essay-grader	master	504ddefc863a	0		0
+kixlab/TutorCaseBench	main	6b9ac34262c7	0		0
+labmlai/annotated_deep_learning_paper_implementations	master	2be1800d141e	1	license	1
+langchain-ai/langgraph	main	eb8ec111b3e9	1	LICENSE	9
+learnhouse/learnhouse	dev	2d75337273ac	1	LICENSE	3
+learning-commons-org/agent-skills	main	8b0599c24469	2	LICENSE,NOTICE	14
+learningequality/kolibri	develop	08e3ecace444	1	LICENSE	6
+marckurniawan/essay-scoring-project	main	80d6cfceb75e	0		0
+microsoft/Shiksha-Copilot	main	cf2a2e24c3d4	1	LICENSE	1
+microsoft/ai-agents-for-beginners	main	dd0f080d07d2	1	LICENSE	2
+microsoft/autogen	main	004749e6b710	2	LICENSE,LICENSE-CODE	14
+moodle/moodle	main	46c042e7da65	1	COPYING.txt	92
+naufaldi/teacher-exam	main	ed5bf6359413	1	LICENSE	1
+oat-sa/tao-core	develop	d9b3da5e6b0a	1	LICENSE	14
+openeducat/openeducat_erp	19.0	46a5d7d40082	1	LICENSE	15
+openedx/edx-platform	master	f73b7ae64dd5	1	LICENSE	16
+oppia/oppia	develop	bc73ecf9cf71	2	LICENSE,NOTICE	6
+overhangio/tutor	release	aa5d1a764b6c	1	LICENSE.txt	1
+panaversity/ksor	main	b50f28926fae	2	LICENSE,NOTICE	8
+pguso/agents-from-scratch	main	da3f9df28a9c	1	LICENSE	1
+plastic-labs/tutor-gpt	main	5c2f92416c04	1	LICENSE	1
+portabilis/i-educar	2.12	435649b0474f	1	LICENSE	2
+projectfedena/fedena	master	68a84ac445bf	1	NOTICE	8
+robotros/California-IEP-AI-project-kit	main	33ad4d06f19b	1	LICENSE	1
+rohitg00/ai-engineering-from-scratch	main	3f9715c62a3b	1	LICENSE	6
+rtwergrfh-cmyk/iep	main	264786ddb518	1	LICENSE	1
+satvik314/educhain	main	38adb1e9459d	1	LICENSE	1
+vardanagarwal/Proctoring-AI	master	4f284a3f110d	1	LICENSE	1
+victor-lubn/Special-Education-Planning	main	7baa4e1a9ecd	0		0
+vishalsachdev/canvas-mcp	main	47394125364b	1	LICENSE	1
+vulinh1704/ai-tutor-agent	main	5511bf6dc707	1	LICENSE	1
+wongcyrus/gemini-handwriting-grader	main	2849fed23a6f	0		0

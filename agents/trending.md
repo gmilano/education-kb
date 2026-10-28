@@ -3,6 +3,140 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+
+## 🆕 `p498` — `2026-10-28` — **🔴 A LIVE `Apache-2.0` GRANT ON THESE SHELVES' NEWEST 1,138★ FIND HAS FIVE WORDS DELETED FROM §6, AND BYTE SIZE POINTED THE WRONG WAY: THE DEVIANT PAYLOAD IS 22 B *LONGER* THAN THE CANONICAL ONE. 🟢 `Gap 488-B` — *"a lone payload read in one pass cannot be checked this way"* — is now CONFIRMED BY INSTANCE, not feared: the deletion surfaced only because two Apache payloads were compared inside one pass. 🟢 `Gap 488-X` CLOSED and **narrowed 9×**: of 76 carried rows probed at their default ref with ALL grant paths enumerated, nine carry ≥2 root grant files and **exactly one of 76 (1.3%) actually splits the grant**. 🔴 And `p497`'s headline — *"ranked education-AI supply above ~40★ is ~95% enumerated here"* — is REFUTED: one axis it did not run returns **69.2% novelty**.**
+
+Full reads: [`grant-paths.2026-10-28-p498.tsv`](../evidence/grant-paths.2026-10-28-p498.tsv).
+
+### 🔴 `T498-1` — the five words deleted from Apache-2.0 §6, and the two axes that cancelled
+
+🟢 **`beltromatti/get-it`** (🇮🇹, 1,138★, GDG AI Hack Milan 2026) ships `LICENSE` at **11,359 B,
+blob `29492aec7faa`**, read at `main` @ `ae0fa999f352`. Its §6 *Trademarks* clause reads:
+
+> "…except as required for **describing the origin of the Work** and reproducing the content of the
+> NOTICE file."
+
+🔴 The canonical clause reads *"except as required for **reasonable and customary use in**
+describing the origin of the Work…"*. **Five words are deleted from the operative body of a live
+grant.**
+
+🟢 **Graded on a two-source consensus**, which is this base's own `Gap 489-K` practice:
+
+| payload | bytes | blob | §6 carries *"reasonable and customary use in"* |
+|---|---|---|---|
+| `beltromatti/get-it` `LICENSE` | **11 359** | `29492aec7faa` | 🔴 **no** |
+| `menthorlabs/menthor` `LICENSE` | 11 337 | `08c875b2050c` | 🟢 yes |
+| `huggingface/smolagents` `LICENSE` | 11 357 | — | 🟢 yes |
+
+🔴 **And the byte axis inverted.** `get-it` is **22 B longer** than the payload that carries the
+canonical clause. The deletion removes ~28 B; `get-it`'s appendix copyright line — *"Copyright 2026
+Mattia Beltrami, Matteo Impieri, Filippo Difronzo, Luca Feggi"* against *"Copyright 2023 Menthor"* —
+adds ~54 B. 🔵 **The two axes cancelled, and the inert one won.** `Gap 488-A` said byte sizes are
+neither necessary nor sufficient for identity; this is stronger — here size pointed at the **wrong
+payload**.
+
+🟢 **What it costs a studio.** Canonical §6 grants a *"reasonable and customary use"* safe harbour
+for naming the upstream project. `get-it`'s text grants trademark use only *as required for*
+describing origin. Any studio that reproduces the NOTICE and names the project in its own materials
+is relying on exactly the carve-out that was removed. 🔵 Not fatal, and not a reason to refuse the
+row — but it is a clause to read to a client, not a licence cell to copy.
+
+### 🟢 `Gap 488-X` closed — and the alarm narrows 9×
+
+🟢 **76 carried rows**, each resolved to its default ref with `git ls-remote --symref` and probed
+with a **full tree enumeration** (`git ls-tree -r`), not a first-hit path guess. **Nine rows carry
+two root-level grant paths.** Classified by name, they are not nine problems:
+
+| row | second path | bytes | what it actually is |
+|---|---|---|---|
+| 🔴 [`microsoft/autogen`](https://github.com/microsoft/autogen) | `LICENSE-CODE` | **1 141** | 🔴 **the only genuine grant split.** `LICENSE` = **CC BY 4.0** (18 650 B, blob `2f244ac81403`); `LICENSE-CODE` = **MIT** (blob `9e841e7a26e4`). A first-hit `LICENSE` probe returns a *content* licence, with no patent grant, for a **code** repository. |
+| 🟡 [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `license.txt` | 1 614 | **not a grant — an attribution file**, and load-bearing for a different reason: it names **eight copyright holders across six countries** (BeezNest Latino SAC 🇵🇪, BeezNest 🇧🇪, NoSoloRed 🇪🇸, Université de Grenoble 🇫🇷, CBlue 🇧🇪, Université de Genève 🇨🇭, and two individuals). On a GPL-3.0 platform that is the relicensing/CLA conversation, written down. `LICENSE` = GPL-3.0, blob `94a9ed024d38` — 🟢 re-confirming the blob `p488` found shared with `moodle` and `ILIAS`. |
+| 🟡 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `licenses.comment.md` | **0** | 🔴 an **empty file** — blob `e69de29bb2d1`, git's empty-blob SHA. A path-sorted first-hit probe can select it and read "no licence text". The grant is `LICENSE` = MIT, 1 062 B, blob `28625a802002`. |
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) · [`apache/openmeetings`](https://github.com/apache/openmeetings) · [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) · [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) · [`oppia/oppia`](https://github.com/oppia/oppia) · [`panaversity/ksor`](https://github.com/panaversity/ksor) | `NOTICE` / `NOTICE.TXT` / `NOTICE.md` | — | 🟢 **not grants.** An Apache §4(d) attribution file. Six of the nine. |
+
+🔵 **The instrument rule this produces:** enumerate every grant path, then **classify by name before
+counting**. `LICENSE-*` and `COPYING*` are candidate grants; `NOTICE*` and a project's own
+`license.txt` attribution file are not. 🔴 **Counting paths overstates the exposure 9×** — nine
+multi-path rows, one real split.
+
+🟢 **Prevalence, measured:** **1 of 76 rows (1.3%)** splits its grant, and it is the control row the
+gap was written from. The class is real and the enumeration was worth running; the systemic exposure
+`Gap 488-X` feared is not there.
+
+### 🔴 `p497`'s enumeration ceiling, refuted on the axis it did not run
+
+🔵 `p497` pulled 59 ranked addresses across five topic axes, found **56 already shelved (94.9%)**,
+and concluded that *"ranked education-AI supply above ~40★ is ~95% enumerated here, so what `p496`
+read as a query artefact is substantially a real ceiling."*
+
+🟢 **One axis, not among `p497`'s five: `topic:edtech` `stars:>400`.** `incomplete_results` false,
+13 of 13 read.
+
+| | count | share |
+|---|---|---|
+| ranked addresses returned | 13 | — |
+| 🟢 already on these shelves | 4 | 30.8 % |
+| 🔴 **absent from every shelf** | **9** | **69.2 %** |
+
+🔴 **Against `p497`'s 5.1%.** And the axis was not unknown: **`p480` censused `topic:edtech` ≥50★
+and reported 64 repositories — six passes ago — and never enumerated them.** 🔵 So the ceiling
+`p497` inferred is a property of **which five axes it chose**, not of ranked supply. The count was
+taken and the reading was never done.
+
+🟡 **`p497`'s mechanism half still stands**, and this pass does not touch it: its three finds did
+come from function-shaped queries. It is the *implication* — a real supply ceiling — that fails.
+
+### 🟢 Nine addresses, graded — and the sector's licence split replicates on a disjoint population
+
+🔵 `p479` measured a complete 22-row population and found the two non-commercial rows were **exactly
+the two curriculum-and-content repositories**. 🟢 `p498` reproduces that on a **disjoint** 8-row
+population, every grant read as a payload at a pinned SHA.
+
+| repo | ★ | forks | f/★ | licence (bytes · blob) | verdict |
+|---|---|---|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 36 339 | 3 858 | 0.11 | 🟢 **MIT** (1 068 · `b000bdffeaa2`, at `LICENSE.md`) | 🟢 build-on-able. Technical-book PDF → an agent skill. Default ref **`master`**. |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 4 586 | 1 158 | 0.25 | 🔴 **CC BY-NC 4.0** (19 347 · `fe463e0f7888`) | 🔴 **REFUSED for client work.** 🇨🇳 K-12 maths/English/physics knowledge graph: **1 644 knowledge points, 2 403 prerequisite edges, 6 723 items**, curriculum-aligned, with adaptive prerequisite diagnostics. The best open APAC education **data** asset found this pass, and it is non-commercial. |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 2 049 | 278 | 0.14 | 🔴 **bespoke "PageLM Community License"** (8 563 · `6759e05bb55c`) | 🔴 **not OSI.** Four non-commercial clauses in the payload. NotebookLM-shaped: study material → quizzes, flashcards, notes, podcasts. |
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | 1 138 | 136 | 0.12 | 🟡 **Apache-2.0, §6 altered** (11 359 · `29492aec7faa`) | 🟡 usable — **read `T498-1` first.** 🇮🇹 EMEA. Knowledge graph + spaced repetition + Feynman technique. |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 982 | 135 | 0.14 | 🟢 **MIT** (1 069 · `f461737043ac`) | 🟢 build-on-able. Books → animated, narrated, interactive web experiences; **ships SCORM**, so it lands inside an LMS. Vendored MathJax is Apache-2.0. 🟡 Its copyright line names an evident pseudonym — a provenance point to raise, not a licence defect. |
+| [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | 582 | 35 | 0.06 | 🟢 **Apache-2.0**, canonical §6 (11 337 · `08c875b2050c`) | 🔴 **ARCHIVED.** 🇧🇷 LATAM programming-education platform. Carried as a regional data point, **not** as a build target. |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | 492 | 59 | 0.12 | 🟢 **MIT** (1 069 · `ebe94bd95589`) | 🟢 build-on-able. Topic → a course of 2-minute audio lessons with cited sources. |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 423 | 84 | 0.20 | 🟡 **AGPL-3.0** (34 523 · `be3f7b28e564`), §13 present | 🟡 copyleft — **not for a hosted commercial derivative.** "Local-first, any model" explainer-video director agent. |
+
+🔴 **The split, replicated:** of eight addresses, the **two refused rows are exactly the two
+content/curriculum assets** — a knowledge graph and a study-material platform. **Every pure
+code/tooling row is MIT or Apache-2.0.** 🔵 Two independent populations, same boundary: this base's
+standing observation is now a *replicated* property, not a single-population measurement.
+
+### 🟢 The AGPL byte axis gets the third leg `p488` asserted without measuring
+
+🔵 `p488` refuted the byte-size axis in both directions but never produced the case where equal size
+and unequal blob resolve to an **equal operative body**.
+
+| payload | bytes | blob | normalised operative span |
+|---|---|---|---|
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 34 523 | `be3f7b28e564` | `bd16e40eace3` |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 34 523 | `0ad25db4bd1d` | `bd16e40eace3` |
+
+🟢 **Same size, different bytes, identical operative body.** The whole difference is inert.
+`frametell`'s AGPL-3.0 is clean, and `p488`'s refutation gains the leg it was missing.
+
+### 🔴 Declared gaps — searched, and what was missing
+
+- 🔴 **No new permissive education *agent* this pass.** The four build-on-able new rows are a
+  book-to-skill converter, a book-to-animation renderer, a course generator and a flashcard/graph
+  study tool. **None is a tutoring, assessment or grading agent.** Three passes of agent-layer
+  discovery and the productive axes remain administrative and content-generation.
+- 🔴 **`topic:edtech` was read only at `stars:>400` (13 of a ≥50★ population `p480` counted at 64).**
+  The 69.2% novelty figure is measured on the **top 13**; the remaining ~51 rows at 50–400★ are
+  **counted and still unread**. The novelty rate below 400★ is unmeasured and could be higher.
+- 🔴 **`Gap 488-H` untried and still untried.** Eleven rows are refused for a missing grant file and
+  **no pass has opened an issue asking a maintainer to add one.** This pass did not either — opening
+  issues on third-party repositories is an outward-facing act this session is not authorised to take
+  on its own. It needs a human decision, not another pass.
+- 🟡 **`Gap 488-E` not re-run.** This pass added a star-floored axis of its own (`stars:>400`), so it
+  **extends** the popularity-filter problem rather than measuring it.
+
 ## 🆕 `p497` — `2026-10-28` — **🟢 THE ONE DISCOVERY LIMB THIS KB DECLARED UNRECOVERABLE IS OPEN, AND THE FIRST THING IT DID WAS MEASURE THE DROUGHT INSTEAD OF DESCRIBING IT. `T148` (`p162`) established that GitHub's `403` is per-repository and reversible by attaching, but that `/search/repositories` is NOT — so star-ordered discovery and new-entrant detection were declared gone, *"the limb that matters for finding agents nobody has told us about."* 🟢 That limb answers through this session's **MCP** transport for ARBITRARY repositories; raw `api.github.com`, which is what `p162` actually measured, is STILL `403`. 🔴 So the drought is now a NUMBER, not a mood: 59 ranked addresses pulled across FIVE topic axes, **56 already on these shelves — 94.9%**. 🔴 That partly refutes `p496`'s headline. `p496` said the drought broke "because the query shape changed, not because supply did"; the mechanism half is CONFIRMED (all three of this pass's finds came from function-shaped queries, none from a ranking leg) but the implication is wrong — ranked education-AI supply above ~40★ is ~95% enumerated here, so what `p496` read as a query artefact is substantially a real ceiling. 🟢 Three new addresses, and the licence split inverts `p496`'s: the two sitting INSIDE the EU's Annex III high-risk layer are both MIT; the one below it carries no grant. 🟢 Ten of ten pins stable. 🔴 And this pass caught a defect in its OWN absence gate — it reported its own finds as PRESENT.**
 
 Full reads: [`licence-and-stars.2026-10-28-p497.tsv`](../evidence/licence-and-stars.2026-10-28-p497.tsv).

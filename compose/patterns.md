@@ -861,3 +861,107 @@ a statement of work.**
 **8–10 weeks** to a governed pilot: 2 weeks reading and re-implementing the ASU design off Bedrock,
 2 weeks rule engine and replay harness, 2 weeks SIS integration over HTTP, 2 weeks oversight logging
 and Article 50 surface, 2 weeks evaluation against `pedagogy-benchmark` plus counsel review.
+
+---
+
+## 🆕 `P498-1` — Kolibri as an AI **host**, not a content sink 🟢 *(amends the Kolibri row in `P490-3` and `P493-1`)*
+
+**Why:** `P490-3` and `P493-1` both use [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+as a **delivery sink** — generate study packages centrally and online, ship them into Kolibri's
+offline content channels. 🟢 `p498` read the code at HEAD `08e3ecace444` (ref `develop`, last commit
+2026-10-27) and Kolibri is an **extension host with a documented plugin contract**. The difference is
+the difference between shipping a client pre-baked content and shipping them an in-platform AI
+surface they control — on the only **MIT** institutional platform that exists.
+
+| Component | Repo | Licence | Role |
+|---|---|---|---|
+| Host platform | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** (1 097 B · blob `6506702f35f3`) | Offline-first platform; pin at `08e3ecace444`, ref **`develop`** |
+| Your AI surface | *(the plugin you write)* | yours | A Django app with a `kolibri_plugin` module, mounting its own URLs + DRF API |
+| Source → study assets | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | **MIT** | Curriculum source → quizzes, flashcards, SRS items |
+| Source → agent knowledge | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | **MIT** (blob `b000bdffeaa2`) | Long-form PDF → a structured skill the plugin's agent reads. Default ref 🔴 `master` |
+| Learner model | [beltromatti/get-it](https://github.com/beltromatti/get-it) | 🟡 **Apache-2.0, §6 edited** (blob `29492aec7faa`) | Knowledge graph + prerequisite ordering + spaced repetition. **Read the §6 note below** |
+| Lesson structure | [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** | Explorations with misconception handling. Default ref 🔴 `develop` |
+| Quality gate | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | 1 143 teacher-exam items, run in CI |
+| Eval runtime | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | **MIT** | The harness the benchmark runs on |
+
+🟢 **Every component is MIT or Apache-2.0.** This is an all-permissive stack — no AGPL, no
+GPL, no non-commercial content asset.
+
+### Wiring — against the contract that is actually in the code
+
+1. **Build the AI surface as a plugin, not a fork.** A Kolibri plugin is a Django app containing a
+   `kolibri_plugin` module; enabling it adds its apps to `INSTALLED_APPS`. Subclass
+   `KolibriPluginBase` and implement `url_module` and `api_url_module` — the plugin then serves **its
+   own pages and its own DRF API** inside Kolibri. Copy the shape of `kolibri/plugins/learn/`
+   (learner-facing) or `kolibri/plugins/coach/` (teacher-facing): each is itself a plugin with
+   `kolibri_plugin.py`, `api_urls.py`, `views.py`, `viewsets/`, `frontend/`, `buildConfig.js` and
+   `package.json`.
+2. **Ship it out-of-tree as a Python package.** The repository carries four worked examples under
+   `python_packages/`: `kolibri-oidc-provider-plugin`, `kolibri-sentry-plugin`,
+   `kolibri-sync-extras-plugin`, `kolibri-context-translation-plugin`. 🟢 An **OIDC provider** shipped
+   as a plugin is proof the extension surface reaches authentication, so an AI surface is not
+   stretching it.
+3. **Keep generation central and online; keep inference local or optional.** `Skill-Anything` and
+   `book-to-skill` run against the ministry's approved curriculum **in your environment**, producing
+   content channels and structured skills. The plugin consumes those offline. Only the
+   conversational surface needs a model at the edge, and that is the piece the institution can turn
+   off.
+4. **Put the learner model in the plugin's own tables.** `get-it`'s graph gives prerequisite
+   ordering and spaced-repetition scheduling; `oppia` explorations carry remediation. Both are
+   permissive, so the model stays yours.
+5. **Gate releases on `pedagogy-benchmark` via `lm-evaluation-harness` in CI** — not as a one-off
+   report. This is `P491-1`'s rule and it does not change here.
+
+### 🟢 The clause that makes this pattern sellable
+
+🟢 **Kolibri plugins are enabled and disabled from the CLI or a UI, and through
+`ENV_VAR_ENABLED_PLUGINS` / `ENV_VAR_DISABLED_PLUGINS` / `ENV_VAR_APPLIED_PLUGINS`.** Write this into
+the SOW:
+
+> *The AI surface is a separately-packaged plugin. The institution disables it with one environment
+> variable, with no rebuild and no redeployment of the platform. With the plugin disabled, Kolibri
+> runs exactly as it does today.*
+
+🔵 **That is a materially different regulatory object from an AI feature compiled into a platform.**
+For an EU engagement it is the cleanest answer available to *"can this be switched off"*; for a
+ministry pilot it is the answer to *"what happens when the next administration disagrees"* — which
+is the LATAM failure mode [`intel/market.md`](../intel/market.md) names this pass. 🟢 And **there is
+no incumbent AI to unwind**: the code read found **zero** LLM integration across 3 071 Python/Vue/JS
+files.
+
+### 🔴 Do this or it will bite
+
+1. 🔴 **Hooks are singletons.** `KolibriHook` uses metaclass `KolibriHookMeta(SingletonMeta)` and
+   raises `HookSingleInstanceError`. **One registration per hook.** If the client may run a second
+   vendor's plugin, agree the hook split before you build, not at integration.
+2. 🔴 **Honour the project's own rule or you will fork by accident:** *"a plugin should **never**
+   modify internals of Kolibri or other plugins without using the hooks API or normal conventional
+   Django scenarios."* Every internal reach-around is an upstream merge you will own forever.
+3. 🔴 **Pin `develop`, not `main` — `main` does not exist.** Kolibri's default ref is `develop`, as
+   are `oppia`'s and `frappe/*`'s; `book-to-skill`'s is `master`. **15 of 76 rows on these shelves
+   are on a non-default ref across 11 distinct names**, four of them version numbers. Resolve with
+   `git ls-remote --symref <url> HEAD`, which returns the ref and the SHA in one call.
+4. 🔴 **Re-read `get-it`'s `LICENSE` bytes at your pin and tell the client about §6.** Five words
+   are deleted from the Apache trademark clause (see [`agents/top.md`](../agents/top.md) `p498`). It
+   does not block use; it narrows a safe harbour your own marketing copy may rely on.
+5. 🟡 **No release pin is offered here because none was read.** Kolibri's version is re-exported from
+   `kolibri._version` and was not resolved, and no tag list was read (`Gap 498-G`). **Pin the commit
+   SHA**, and resolve a release tag before a production engagement.
+6. 🔴 **Do not reach for `cn-math-taxonomy` to seed the learner model.** It is the best
+   curriculum-aligned knowledge graph found this pass — 1 644 nodes, 2 403 prerequisite edges, 6 723
+   items — and it is **CC BY-NC 4.0**. Use its *scope* as your estimate; build the graph.
+
+### Scope
+
+🟡 **8–12 weeks** for a first plugin with one learner-facing surface, the content pipeline and the
+CI gate — the pipeline is the long pole, as in `P490-3`. 🔴 **Uncalibrated.** `Gap 484-A` (nothing on
+these shelves has been executed) and `Gap 484-V` (no range calibrated against a delivered
+engagement) both bound this figure, and this pattern was composed from a code and licence read, not
+from running the stack (`Gap 498-I`).
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 498-I`** | `P498-1` is composed from a **code read**, not an execution. No Kolibri plugin was scaffolded, built or loaded. The plugin contract is quoted from `kolibri/plugins/__init__.py`, `hooks.py` and `registry.py` at `08e3ecace444`; that it works as described for an *AI* surface specifically is inference. |
+| 🟡 **`Gap 498-J`** | The `ENV_VAR_*` kill-switch claim is read from `ConfigDict` properties in `kolibri/plugins/__init__.py`. **Nobody has toggled one.** It is the load-bearing sentence of the SOW language above. |

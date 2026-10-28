@@ -707,3 +707,77 @@ Every SHA identical to `p496`. `DeepTutor` byte-stable across **seven** passes (
 reading. 🔴 **`v1.16.0` = `b3f06c76e435` remains the pin regardless — it is a security floor, and the
 sandbox fix requires Node.js ≥ 22.18.** Sweep:
 [`drift-sweep.2026-10-28-p497.tsv`](../evidence/drift-sweep.2026-10-28-p497.tsv).
+
+---
+
+## 🆕 `p498` — `2026-10-28` — four permissive additions, one licence cell corrected, and a §6 clause to read aloud
+
+🔵 Every grant below was read as a **payload at a pinned commit**, not from a repository badge or a
+search-result `license` field. Bytes and blob SHAs are given so the next pass can re-grade without
+re-reading. Full enumeration: [`evidence/grant-paths.2026-10-28-p498.tsv`](../evidence/grant-paths.2026-10-28-p498.tsv).
+
+### 🟢 Permissive — added to the shelf this pass
+
+| Name | Repo | Licence | Description | ★ |
+|---|---|---|---|---|
+| book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | **MIT** (1 068 B · blob `b000bdffeaa2` at `LICENSE.md`) | Turns a technical-book PDF into an agent skill — chunking, structuring and indexing a long source into a reference an agent can work from. Python. Default ref 🔴 **`master`**. | 36 339 |
+| Papermorph | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | **MIT** (1 069 B · blob `f461737043ac`) | Books → animated, narrated, interactive web lessons. 🟢 **Emits SCORM**, so output lands inside an existing LMS instead of beside it. Vendored MathJax carries its own Apache-2.0. | 982 |
+| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | **MIT** (1 069 B · blob `ebe94bd95589`) | Topic → a sequenced course of ~2-minute audio lessons **with cited sources**. The citation requirement is the part worth copying. | 492 |
+| get-it | [beltromatti/get-it](https://github.com/beltromatti/get-it) | 🟡 **Apache-2.0 with §6 altered** (11 359 B · blob `29492aec7faa`) | Source material → knowledge graph + flashcards + spaced repetition on a Feynman-technique loop. 🇮🇹 Built at GDG AI Hack Milan 2026. **Read the §6 caveat below before quoting the licence to a client.** | 1 138 |
+
+### 🟡 Copyleft — usable, with the obligation named
+
+| Name | Repo | Licence | Description | ★ |
+|---|---|---|---|---|
+| frametell | [sitor-ai/frametell](https://github.com/sitor-ai/frametell) | **AGPL-3.0** (34 523 B · blob `be3f7b28e564`), §13 *Remote Network Interaction* present | Explainer-video director agent, **local-first and model-agnostic** — which makes it the strongest fit on these shelves for an air-gapped or sovereign deployment, and the worst fit for a hosted multi-tenant product. | 423 |
+
+🔴 **§13 means hosting it for a client triggers the source-offer to that client's users.** Run it as
+a local authoring tool, or accept the obligation deliberately. The licence payload is **clean** —
+same bytes as `classroomio`'s at a different blob, same operative body (see
+[`agents/trending.md`](trending.md) `p498`).
+
+### 🔴 Refused this pass — and both are content assets
+
+| Name | Repo | Licence | Why refused |
+|---|---|---|---|
+| cn-math-taxonomy | [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 **CC BY-NC 4.0** (19 347 B · blob `fe463e0f7888`) | **Non-commercial.** Painful, because the asset is excellent: a 🇨🇳 K-12 maths / English / junior-physics knowledge graph with **1 644 knowledge points, 2 403 prerequisite edges and 6 723 items**, curriculum-aligned, shipping adaptive prerequisite diagnostics. **Globant cannot ship it into a paid engagement.** Cite it as prior art; build the graph. |
+| PageLM | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🔴 **bespoke "PageLM Community License"** (8 563 B · blob `6759e05bb55c`) | **Not an OSI licence**, and four separate non-commercial clauses in the payload. A NotebookLM-shaped study platform — material in, quizzes/flashcards/notes/podcasts out. Read it as a product spec, not a dependency. |
+
+🔵 **This is the sector's split, and it reproduced on a population disjoint from the one `p479`
+measured it on:** the code is permissive, the curriculum and content are not. Of the eight addresses
+graded this pass, **the two refused are exactly the two content assets.** Plan for building the
+knowledge model, not acquiring it.
+
+### 🔴 The `get-it` §6 caveat — five words deleted from a live Apache-2.0 grant
+
+🔴 `beltromatti/get-it`'s §6 *Trademarks* reads *"except as required for **describing the origin of
+the Work**…"*. The canonical clause reads *"except as required for **reasonable and customary use
+in** describing the origin of the Work…"*. 🟢 Graded against two independent canonical payloads
+(`menthorlabs/menthor` 11 337 B; `huggingface/smolagents` 11 357 B), both of which carry the five
+words.
+
+🔵 **What to do:** the row stays on the shelf — this narrows a trademark safe harbour, it does not
+touch the patent or copyright grants. 🔴 **But if your deliverable names the upstream project in
+client-facing material, that is the clause you are relying on**, and it has been edited. Raise it in
+the licence review, in one sentence, and move on.
+
+🔴 **And note how nearly it was missed:** `get-it`'s payload is **22 bytes longer** than the canonical
+one it was compared against, because its appendix copyright line is longer than `menthor`'s. A
+size-based check would have cleared it.
+
+### 🟢 `Gap 488-X` — the `LICENSE`-is-not-the-grant class, measured
+
+🟢 All **76** carried rows re-probed with a full tree enumeration. **Nine** carry two root-level
+grant files; **one of 76 (1.3%)** actually splits its grant:
+
+🔴 [`microsoft/autogen`](https://github.com/microsoft/autogen) — `LICENSE` is **CC BY 4.0**
+(18 650 B · blob `2f244ac81403`); the code grant is **`LICENSE-CODE`, MIT** (1 141 B · blob
+`9e841e7a26e4`). 🔴 **A first-hit `LICENSE` probe on this row returns a content licence, with no
+patent grant, for a code repository.** Six of the other eight are `NOTICE` files (Apache §4(d)
+attribution, not grants); [`Selleo/mentingo`](https://github.com/Selleo/mentingo)'s second path is a
+**0-byte file**; [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms)'s is a copyright
+roll naming **eight holders across six countries** — not a grant, but the CLA conversation written
+down.
+
+🔵 **Rule:** enumerate every grant path, then classify by name before counting. Counting paths
+overstates this class **9×**.

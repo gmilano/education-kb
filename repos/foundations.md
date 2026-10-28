@@ -483,3 +483,90 @@ held here**. 🟢 The platform layer this file covers is enumerated at the top o
 tail below ~80★ is student coursework and single-institution projects, which is why it produces no
 rows. 🔴 **This axis is spent for discovery** — its value this pass was the `mobile` branch trap, not
 a platform.
+
+---
+
+## 🆕 `p498` — `2026-10-28` — the permissive numerator moves, and the census denominator was wrong by one
+
+🟢 **Added to the foundations shelf** — read as payloads at pinned commits:
+
+| Repo | Licence | Why it is foundational | ★ / forks |
+|---|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **MIT** (1 068 B · blob `b000bdffeaa2`, at `LICENSE.md`) | The document-to-agent-knowledge step every education build needs and most rebuild badly. Python; default ref 🔴 `master`. | 36 339 / 3 858 |
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | 🟡 **Apache-2.0, §6 edited** (11 359 B · blob `29492aec7faa`) | A working knowledge-graph + spaced-repetition loop over arbitrary source material — the learner-model substrate the permissive shelf has otherwise lacked. 🇮🇹 EMEA. | 1 138 / 136 |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | **MIT** (1 069 B · blob `f461737043ac`) | 🟢 **Emits SCORM.** The only new row that lands inside an institutional LMS without an integration project. | 982 / 135 |
+
+🔴 **Not added, and the reason is the same reason twice:**
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) is
+**CC BY-NC 4.0** and [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) carries a bespoke
+**"PageLM Community License"** with four non-commercial clauses. Both are content/curriculum assets.
+🟡 [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) is genuinely **Apache-2.0**
+(11 337 B · blob `08c875b2050c`, canonical §6) but **archived** — carried as a 🇧🇷 LATAM data point,
+not a build target.
+
+### 🔴 The census had an arithmetic error in it, and it was a refusal
+
+🔵 This shelf's licence census has counted [`formalms/formalms`](https://github.com/formalms/formalms)
+as having **no readable grant** for multiple passes, and `Gap 488-L` asked for it to be marked
+unusable. 🟢 **It is GPL-2.0.** The grant sits at `html/license.txt` (18 346 B · blob
+`e823963cd437`) and at `html/lib/System/license/license_english.txt` (15 146 B · blob
+`b6e1c33e0499`) **with eight further language translations** — a project that serves its licence to
+users through its own web UI, and therefore has no copy at the repository root where every previous
+probe looked.
+
+🔴 **So every `NO_LICENCE` denominator this shelf has published is one too high.** 🟢 The
+re-probe ran tree-wide on all twelve zero-root-grant rows and **eleven of twelve held** — the defect
+is real, and its yield is 1 in 12. Detail and the eleven pinned SHAs:
+[`repos/trending.md`](trending.md) `p498`.
+
+### 🟢 `learningequality/kolibri` — the one permissive institutional platform, finally read
+
+🔵 `Gap 488-K`: *"the only permissive institutional platform on these shelves and has never been
+read — no code read, no AI-surface census, no star or activity figure. The one row the brief's
+licence preference points to is the least examined."* 🟢 Closed.
+
+| | measured |
+|---|---|
+| grant | 🟢 **MIT**, 1 097 B, blob `6506702f35f3`, **one** grant path in the whole tree. *"Copyright (c) 2021 Learning Equality and other contributors"* |
+| ref / HEAD | 🔴 default ref **`develop`** · HEAD `08e3ecace444` · last commit **2026-10-27** · `pushed_at` **2026-10-28T01:21:58Z** |
+| scale | ★ **1 162** · forks **1 012** · open issues **574** · 185 MB · Python |
+| code read | **6 040 tracked files** — 1 231 `.py`, 657 `.vue`, 1 183 `.js` |
+| 🔴 **AI surface** | **zero.** One regex hit across all 3 071 Python/Vue/JS files, and it is a **false positive**: the word *"transformers"* in a comment about Django `from_db_value` field transformers, at `kolibri/core/content/viewsets/import_metadata.py:152` |
+| 🟢 **AI-on-top surface** | `kolibri/plugins/` — **21 in-tree plugins**, a formal hook contract, and **21 `api_urls.py`** DRF surfaces |
+
+🟢 **The plugin contract, read from the code** (`kolibri/plugins/__init__.py`,
+`kolibri/plugins/hooks.py`, `kolibri/plugins/registry.py`):
+
+- A plugin is **a Django app with a `kolibri_plugin` module**; enabling it adds its apps to
+  `INSTALLED_APPS`.
+- `KolibriPluginBase` exposes `url_module` and `api_url_module`, so a plugin mounts **its own URLs
+  and its own DRF API** inside Kolibri.
+- 🟢 **Plugins are enabled and disabled from the CLI or a UI**, and through
+  `ENV_VAR_ENABLED_PLUGINS` / `ENV_VAR_DISABLED_PLUGINS` / `ENV_VAR_APPLIED_PLUGINS`. **That is an
+  operational kill switch for an AI surface, with no rebuild** — which is the single most useful
+  fact on this page for a ministry pilot or a regulator conversation.
+- Hooks are singletons: `KolibriHook` with metaclass `KolibriHookMeta(SingletonMeta)` and an explicit
+  `HookSingleInstanceError`. 🔴 **One registration per hook** — a real constraint if two vendors ship
+  plugins into the same deployment.
+- The project's own rule, in its own docs: *"a plugin should **never** modify internals of Kolibri or
+  other plugins without using the hooks API."*
+- 🟢 **Out-of-tree plugins are an exercised path, not a theory.** The repository ships four as
+  `python_packages/`: `kolibri-oidc-provider-plugin`, `kolibri-sentry-plugin`,
+  `kolibri-sync-extras-plugin`, `kolibri-context-translation-plugin`. An OIDC **provider** as a
+  plugin is proof the extension surface reaches authentication.
+
+🔵 **Why this matters more than the star count:** every recipe on
+[`compose/patterns.md`](../compose/patterns.md) has treated Kolibri as a **content sink** — generate
+packages centrally, ship them into offline channels. The code says it is a **host**. See `P498-1`.
+
+🔵 **Not new here:** Kolibri's 0.87 fork-per-star was already recorded by `p489` as a deployment
+proxy. This pass adds the licence payload, the activity, the code read and the extension contract —
+not the ratio.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🟡 **`Gap 498-F`** | Kolibri's AI-surface census is a **keyword census** over Python/Vue/JS. A hosted inference call made through a generic HTTP client with no provider name in the source would not match. The verdict is "no provider-named integration", which is narrower than "no AI". |
+| 🟡 **`Gap 498-G`** | Kolibri's **574 open issues** and `develop`-as-default both indicate an active trunk, but **no release cadence was read** — no tag list, no version file (the version is re-exported from `kolibri._version`, which was not resolved). `P498-1` therefore pins a commit, not a release. |
+| 🔴 **`Gap 498-H`** | The three new permissive rows are **licence-and-description reads**. None was cloned and run, so "emits SCORM" is `Papermorph`'s claim, not a measurement. `Gap 484-A` still bounds everything on these shelves. |

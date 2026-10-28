@@ -376,3 +376,79 @@ take LGPL-3.0 and keep the Odoo modules separable.** Full reasoning:
 **`refs/heads/19.0`** — both rows in this KB's platform tables. A deployment script that clones
 without resolving the symref gets the wrong tree or no tree. Five variants now recorded:
 [`branch-ref-census.2026-10-28-p497.tsv`](../evidence/branch-ref-census.2026-10-28-p497.tsv).
+
+---
+
+## 🆕 `p498` — `2026-10-28` — a platform this file calls unusable is **GPL-2.0**, and the one permissive platform turns out to be a **host**
+
+### 🔴 Correction — `formalms` is licensed, and this file said otherwise
+
+🔵 This file has carried [`formalms/formalms`](https://github.com/formalms/formalms) as a
+vertical platform with no usable grant, and `Gap 488-L` asked `p498` to mark it unusable. 🟢 **The
+opposite edit is the correct one.**
+
+| | |
+|---|---|
+| grant | 🟢 **GNU GPL version 2, June 1991** |
+| at | `html/license.txt` — 18 346 B · blob `e823963cd437` |
+| and at | `html/lib/System/license/license_english.txt` — 15 146 B · blob `b6e1c33e0499`, **plus Italian, Spanish, French, German, Portuguese, Croatian, Bosnian and Tamil**, with an `index.html` to serve them |
+| at the repository root | 🔴 **nothing** — which is every previous probe's entire answer |
+| ref / HEAD / activity | `master` · `446a77a9b9cb` · last commit **2026-07-17** (🟡 three months stale) |
+| 🔴 *or-later* election | **none found** — 0 PHP files in the tree cite the GPL. **GPL-2.0-only.** |
+
+🔴 **Shelf verdict, corrected: `formalms` is a GPL-2.0-only LMS, not an ungranted one.** 🟡 It is
+still not a recommendation — three months without a commit, and `Gap 489-L` already warned its 0.70
+fork-per-star cannot tell a live deployment from historical forks. **But "unusable, no licence" was
+wrong**, and a studio that refused it on this file's say-so refused it for a reason that does not
+exist.
+
+🔵 **The transferable lesson for this layer specifically:** an institutional platform that serves its
+own licence to end users through its web UI has no reason to keep a copy at the repository root.
+**A root-only licence probe is systematically blind to exactly the platforms this file is about.**
+
+### 🔴 The GPL-2.0-only boundary, now measured on two platform rows
+
+| platform | grant | *or-later* elected? | combines with GPL-3.0 code? |
+|---|---|---|---|
+| 🇧🇷 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) — municipal SIS, ref `2.12`, HEAD `435649b0474f`, last commit **2026-10-22** 🟢 live | GPL-2.0 (root `LICENSE`) | 🔴 **no** — 0 of its PHP files | 🔴 **no** |
+| 🇮🇹 [`formalms/formalms`](https://github.com/formalms/formalms) | GPL-2.0 (`html/license.txt`) | 🔴 **no** | 🔴 **no** |
+
+🔴 **Say this in week one of a Brazilian municipal engagement.** `i-educar` is live and maintained,
+and it is **GPL-2.0-only**. It cannot take GPL-3.0 code, and the GPL-3.0 platforms on this
+file — [`moodle`](https://github.com/moodle/moodle), [`chamilo`](https://github.com/chamilo/chamilo-lms),
+[`ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) — cannot take its. The two copyleft families on
+this shelf are **not interoperable**, and nothing on this file said so before.
+
+🟡 Read from PHP source notices only; neither tree was read exhaustively for a prose election
+(`Gap 498-C`).
+
+### 🟢 `learningequality/kolibri` is an extension host, not a content sink
+
+🔵 This file lists Kolibri as the offline-first delivery platform and the **only permissive**
+institutional option. `p498` read its code at HEAD `08e3ecace444` (ref `develop`, last commit
+2026-10-27) and the integration surface is larger than this file has claimed.
+
+| surface | what is actually there |
+|---|---|
+| 🟢 **plugin registry** | `kolibri/plugins/` — **21 in-tree plugins**. A plugin is a Django app with a `kolibri_plugin` module; enabling it adds its apps to `INSTALLED_APPS`. |
+| 🟢 **own API** | `KolibriPluginBase` exposes `url_module` and `api_url_module` — a plugin mounts **its own URLs and its own DRF API**. **21 `api_urls.py`** across the tree. |
+| 🟢 **runtime kill switch** | plugins enable/disable **from the CLI or a UI**, and via `ENV_VAR_ENABLED_PLUGINS` / `ENV_VAR_DISABLED_PLUGINS` / `ENV_VAR_APPLIED_PLUGINS`. **No rebuild to turn the AI off.** |
+| 🔴 **hook singletons** | `KolibriHook` / `KolibriHookMeta(SingletonMeta)` / `HookSingleInstanceError` — **one registration per hook.** Two vendors shipping plugins into one deployment will collide. |
+| 🟢 **third-party precedent** | four out-of-tree plugins ship in the repo as `python_packages/`: `kolibri-oidc-provider-plugin`, `kolibri-sentry-plugin`, `kolibri-sync-extras-plugin`, `kolibri-context-translation-plugin`. **OIDC provider as a plugin** — the extension surface reaches authentication. |
+| 🔴 **native AI** | **none.** One keyword hit across 3 071 Python/Vue/JS files and it is a false positive (*"transformers"* in a Django `from_db_value` comment, `kolibri/core/content/viewsets/import_metadata.py:152`). |
+
+🟢 **The "no native AI surface" verdict on this row is now a code read at a 2026-10-27 commit**, not
+the Apr-2026 secondary comparison `Gap 488-N` objected to. For this row, `Gap 488-N` is closed.
+
+🔵 **The consequence for this file's decision table:** on the permissive path you are not limited to
+pre-baking content and importing it. You can ship an **in-platform AI surface** as a plugin, with
+the institution holding the off switch, and without forking core. That is a materially better offer
+than "generate centrally, import offline", and it is the only permissive route to it on this file.
+
+### 🟡 The institutional layer's permissive count does not move
+
+🔵 Three passes have now ended with the same answer and this one makes four:
+[`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0) remains the only permissive full LMS,
+`kolibri` (MIT) the only permissive offline platform, and 🔴 **there is still no permissive SIS and
+no permissive QTI exam engine.** `formalms`'s re-grading adds a GPL-2.0 LMS to the copyleft column;
+it does not add a permissive option. The copyleft conversation on SIS and exams remains unavoidable.

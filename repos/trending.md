@@ -3,6 +3,119 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+
+## 🆕 `p498` — `2026-10-28` — **🟢 `formalms` IS LICENSED. This base has refused it across passes for having "no readable grant", and `Gap 488-L` asked this pass to mark it unusable on the shelf. It ships **GPL-2.0 at ten paths, in nine languages** — none of them at the repository root. 🔴 The refusal was a root-level-probe artefact, which is exactly what `Gap 489-J` warned about, now CONFIRMED BY INSTANCE on the very row a gap wanted deleted. 🟢 Eleven other zero-grant refusals re-probed against the whole tree and all eleven HOLD. 🔴 And the branch-name trap, measured shelf-wide for the first time: **15 of 76 rows (19.7%), eleven distinct ref names** — `p497` reported five.**
+
+Full reads: [`grant-paths.2026-10-28-p498.tsv`](../evidence/grant-paths.2026-10-28-p498.tsv).
+
+### 🟢 `Gap 488-L` — the requested action is refused, and the row is re-graded instead
+
+🔵 `Gap 488-L` reads: *"`formalms` has been carried as a vertical platform across passes with **no
+readable grant at 22 paths**. It should be marked unusable on the shelf itself."* 🟢 **One edit, it
+said.** Before making it, this pass enumerated the tree.
+
+[`formalms/formalms`](https://github.com/formalms/formalms) — default ref **`master`**, HEAD
+`446a77a9b9cb`, last commit **2026-07-17**:
+
+| | |
+|---|---|
+| root-level grant paths | 🔴 **0** — which is every previous probe's whole answer |
+| grant paths in the tree | 🟢 **19** |
+| 🟢 **the project's own grant** | `html/license.txt` — **GNU GPL **version 2**, June 1991**, 18 346 B, blob `e823963cd437` |
+| 🟢 **and again, translated** | `html/lib/System/license/license_english.txt` (15 146 B, blob `b6e1c33e0499`) **plus `license_{italian,spanish,french,german,portuguese,croatian,bosnian,tamil}.txt`** — **nine languages**, with an `index.html` to serve them |
+| third-party, not the project's grant | 9 paths: `vendor/composer`, `vendor/symfony/polyfill-{ctype,mbstring,php72}`, `vendor/twig/{twig,extensions}`, `html/addons/jquery/malihu-custom-scrollbar-plugin`, `html/appCore/addons/swfheader`, one template image credit |
+
+🔴 **So the shelf was wrong, and `Gap 488-L` would have written the error down permanently.**
+`formalms` is **GPL-2.0**, not ungranted. 🟢 Re-graded on [`verticals/solutions.md`](../verticals/solutions.md)
+this pass.
+
+🔵 **`Gap 489-J` is the mechanism, confirmed by instance.** It registered that *"every
+`NO_LICENCE_ARTIFACT` verdict on these shelves — including the ones used to refuse rows — is an
+11-path result."* 🟢 It was right, and the row it was right about is the one a later gap proposed to
+condemn on that evidence. 🔵 **The lesson is narrow and transferable: a project that serves its
+licence to end users through its own web UI has no reason to put a copy at the repository root.**
+A root-only probe is systematically blind to exactly the institutional platforms this KB exists to
+find.
+
+### 🟢 The other eleven zero-grant refusals — re-probed against the whole tree, and all eleven hold
+
+🟢 Every row returning zero root-level grant paths was re-enumerated with `git ls-tree -r`. **Eleven
+of twelve returned zero grant paths anywhere in the tree**, so their refusal is now a tree-wide
+result rather than an 11-path one:
+
+| row | default ref | HEAD | grant paths in tree |
+|---|---|---|---|
+| [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) | 🔴 `PreProduction` | `fc77fae989b8` | 0 |
+| [`SudhanvaJ-bit/project-samarth`](https://github.com/SudhanvaJ-bit/project-samarth) | `main` | `d628b919449a` | 0 |
+| [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) | `main` | `c94dc8ddbed2` | 0 |
+| [`avivkatz1/easy-iep`](https://github.com/avivkatz1/easy-iep) | `main` | `ec0d4f039b0a` | 0 |
+| [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) | `main` | `6faed173ec2b` | 0 |
+| [`h9-tect/AI-Roadmaps`](https://github.com/h9-tect/AI-Roadmaps) | `main` | `19c63bdb7c86` | 0 |
+| [`kennedyraju55/essay-grader`](https://github.com/kennedyraju55/essay-grader) | `master` | `504ddefc863a` | 0 |
+| [`kixlab/TutorCaseBench`](https://github.com/kixlab/TutorCaseBench) | `main` | `6b9ac34262c7` | 0 |
+| [`marckurniawan/essay-scoring-project`](https://github.com/marckurniawan/essay-scoring-project) | `main` | `80d6cfceb75e` | 0 |
+| [`victor-lubn/Special-Education-Planning`](https://github.com/victor-lubn/Special-Education-Planning) | `main` | `7baa4e1a9ecd` | 0 |
+| [`wongcyrus/gemini-handwriting-grader`](https://github.com/wongcyrus/gemini-handwriting-grader) | `main` | `2849fed23a6f` | 0 |
+
+🔵 **Worth saying plainly: the re-probe changed exactly one verdict out of twelve.** The instrument
+defect is real and its yield is 1 in 12 — which is the honest size of it, and the reason to run it
+once rather than to distrust every refusal on these shelves.
+
+### 🔴 The branch-name trap, measured on the whole carried shelf
+
+🔵 `p488` measured **8 of 20** platform rows on a non-default ref name; `p497` reported **five
+distinct variants**. 🟢 `p498` resolves all **76** carried rows with `git ls-remote --symref`:
+
+| | |
+|---|---|
+| rows on `main` or `master` | 61 of 76 |
+| 🔴 **rows on neither** | **15 of 76 — 19.7 %** |
+| 🔴 **distinct non-default names** | **11** |
+
+`develop` (5 rows — `kolibri`, `oppia`, `frappe/education`, `frappe/lms`, `oat-sa/tao-core`) ·
+`v4.0.x-develop` ([`bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton)) ·
+`v31.0.00` ([`GibbonEdu/core`](https://github.com/GibbonEdu/core)) ·
+`release_11` ([`ILIAS`](https://github.com/ILIAS-eLearning/ILIAS)) ·
+`19.0` ([`openeducat_erp`](https://github.com/openeducat/openeducat_erp)) ·
+`2.12` ([`i-educar`](https://github.com/portabilis/i-educar)) ·
+`release` ([`overhangio/tutor`](https://github.com/overhangio/tutor)) ·
+`mobile` ([`rosariosis`](https://github.com/francoisjacquet/rosariosis)) ·
+`dev` ([`learnhouse`](https://github.com/learnhouse/learnhouse)) ·
+`v2` ([`oh-my-paper`](https://github.com/TaiRuiQu/oh-my-paper)) ·
+`PreProduction` ([`GodsEye`](https://github.com/AgnellusX1/GodsEye))
+
+🟢 **Use:** `git ls-remote --symref <url> HEAD` returns the default ref **and** its commit SHA in one
+call, with no clone. 🔴 One row in five on these shelves will give a false negative to any probe
+that assumes `main`, and **four of the eleven names are version numbers**, which no fallback list
+can enumerate.
+
+### 🟢 `Gap 488-J` answered — and the answer is the restrictive one
+
+🔵 The gap: the GPL-2.0 rows carry an unread *or-later* election; *"until read, neither combines with
+GPL-3.0 code."* 🟢 Read from source-file notices, which is where the election lives — the LICENSE
+payload's §9 speaks generically and elects nothing.
+
+| row | grant | files electing *"or (at your option) any later version"* | consequence |
+|---|---|---|---|
+| 🇧🇷 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) · ref `2.12` · HEAD `435649b0474f` · last commit **2026-10-22**, 🟢 live | GPL-2.0 (root `LICENSE`) | 🔴 **0** PHP files, tree-wide | 🔴 **GPL-2.0-only. Does not combine with GPL-3.0 code.** |
+| 🇮🇹 [`formalms/formalms`](https://github.com/formalms/formalms) · ref `master` · HEAD `446a77a9b9cb` | GPL-2.0 (`html/license.txt`) | 🔴 **0** PHP files cite the GPL at all | 🔴 **GPL-2.0-only**, same consequence |
+
+🔴 **Both are GPL-2.0-only.** For a municipal SIS engagement in Brazil that is the governing fact:
+`i-educar` cannot take GPL-3.0 code, and the GPL-3.0 platforms on these shelves (`moodle`,
+`chamilo`, `ILIAS`) cannot take `i-educar`'s. 🟡 **Residual:** the election was read from PHP
+source notices only. A `COPYING`-style project statement elsewhere in either tree would change this,
+and neither tree was read exhaustively for prose.
+
+### 🆕 Registered
+
+| gap | statement |
+|---|---|
+| 🔴 **`Gap 498-A`** | The 51 rows of `topic:edtech` between 50★ and 400★ that `p480` counted and `p498` did not read. The 69.2% novelty rate is measured on the top 13 only. |
+| 🔴 **`Gap 498-B`** | `get-it`'s §6 deletion was found by comparing two payloads **in the same pass**. There is still no **retained canonical set** on this base, so the next lone Apache or GNU payload is as unprotected as `get-it` was. `Gap 488-B` is confirmed, not closed. |
+| 🟡 **`Gap 498-C`** | The *or-later* election was read from **PHP source notices only**, on two rows. Neither tree was read exhaustively, and the other GPL-2.0 rows (`rosariosis`, and whatever `p488` recorded as `br.tag`) were not read at all. |
+| 🟡 **`Gap 498-D`** | `formalms`'s two GPL-2.0 payloads differ by **3 200 B** (18 346 vs 15 146). Both are GPL-2.0 version 2 at the header; **neither was graded on the operative-span instrument**, so which is canonical and which is altered or truncated is unknown. |
+| 🟡 **`Gap 498-E`** | `formalms` is re-graded GPL-2.0 but its **activity and AI surface are unread** — last commit 2026-07-17, three months stale, and `Gap 489-L` already warned that its 0.70 fork-per-star cannot distinguish a live deployment from historical forks. |
+
 ## 🆕 `p497` — `2026-10-28` — **🟢 THE STAR-ORDERED DISCOVERY LIMB THAT `T148` DECLARED UNRECOVERABLE IS OPEN — through MCP transport, not the raw HTTP `p162` correctly measured as `403` — so this pass ranked supply instead of guessing at it, across FIVE topic axes. 🔴 Result: 59 ranked addresses, **56 already on these shelves (94.9%)**, and the two axes that ARE this sector — `topic:ai-tutor` and `topic:ai-education` — returned ZERO new addresses at every star level down to 100. 🟢 All three new addresses came from the ADMINISTRATIVE layer (proctoring, grading, admissions), which is the same answer `p496` got from `IEP`/`accommodations`/`rubric` by a different route. 🔴 The branch-name trap is now FIVE variants, not two — `mobile` on a 647★ live SIS, plus `v2` and `PreProduction`. 🟢 Ten of ten pins stable; `canvas-mcp` quiet for a THIRD pass.**
 
 Full reads: [`licence-and-stars.2026-10-28-p497.tsv`](../evidence/licence-and-stars.2026-10-28-p497.tsv).

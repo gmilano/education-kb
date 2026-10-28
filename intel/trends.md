@@ -700,3 +700,132 @@ clearest build signal**: a dated compliance runway on functions where there is a
 buy, fork, or compose. 🔴 **And the inverse warning:** a client who expects to *assemble* an
 admissions or proctoring capability from open source will not find the parts. Price those as builds.
 Recipe: [`compose/patterns.md`](../compose/patterns.md) `P497-1`.
+
+---
+
+## 🆕 `p498` — `2026-10-28` — a new trend about licence *text*, `T17` **refuted**, `T3` promoted from pattern to replicated property, and `T10` given its decisive measurement
+
+### 🔴 `T17` — **refuted by this pass's own measurement**
+
+🔵 `p497` published `T17`: *"this KB's enumeration of **ranked** education-AI supply is ~95%
+complete, so discovery spend should move to drift and function queries."* It rested on 59 ranked
+addresses across five topic axes, **56 already shelved**.
+
+🔴 **One axis `p497` did not run — `topic:edtech` `stars:>400` — returns 13 ranked addresses of
+which 9 are absent from every shelf: 69.2% novelty against `T17`'s 5.1%.** And the axis was not
+unknown: **`p480` censused `topic:edtech` ≥50★ at 64 repositories, six passes earlier, and never
+enumerated them.**
+
+🔴 **`T17` is withdrawn as a trend.** It measured the five axes `p497` chose, not ranked supply.
+🟢 **What survives is narrower and still useful:** the axes that name this sector directly
+(`topic:ai-tutor`, `topic:ai-education`, `topic:knowledge-tracing`) *are* enumerated, and `p497`'s
+finding that productive discovery now comes from **function-shaped** queries (proctoring, grading,
+admissions, IEP) held again this pass — every new address came from a generic-platform axis or a
+function axis, none from a sector-named one. 🔵 **The correct standing instruction is not "ranked
+discovery is finished" but "ranked discovery on sector-named topics is finished; generic and
+function axes are not, and at least 51 counted rows remain unread" (`Gap 498-A`).**
+
+### 🔴 `T19` — Education-AI licence **text** is edited in the field, and the edits are inside the operative body
+
+🔵 `T3` says *"open source" claims in this market are unreliable at the family level* — a repo
+calling itself Apache may be AGPL, a repo calling itself open source may carry a bespoke licence.
+🔴 **`T19` is a layer beneath that: the family is right and the text has been changed.**
+
+🟢 **The instance, this pass:** [`beltromatti/get-it`](https://github.com/beltromatti/get-it)
+(1 138★, live) ships an Apache-2.0 payload with **five words deleted from §6 *Trademarks***. The
+canonical safe harbour *"reasonable and customary use in describing the origin of the Work"* becomes
+*"describing the origin of the Work"*. Graded against two independent canonical payloads
+(`menthorlabs/menthor` 11 337 B; `huggingface/smolagents` 11 357 B).
+
+🟢 **It is not the first.** `p488` found [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+carrying **three one-word insertions inside Apache's `TERMS AND CONDITIONS`** plus an overwritten
+appendix, and `freelingo` carrying a genuinely altered GNU payload. 🔴 **Three instances across
+three unrelated repositories is a pattern, not a trio of accidents.**
+
+🔴 **Why it is invisible.** `get-it`'s payload is **22 bytes longer** than the canonical one it
+deviates from — its appendix copyright line adds ~54 B while the deletion removes ~28 B. **A
+size check clears it. A badge clears it. A search-API `license` field clears it.** Only a
+normalised comparison of the operative span against a known-good payload catches it, and this base
+has no retained canonical set (`Gap 498-B`).
+
+🟢 **The product consequence for a studio:** licence review on an education-AI dependency cannot be
+*"what licence is it"*. It has to be *"is this licence's operative text the text we think it is"*.
+That is one `git cat-file` and one diff per dependency, and it is cheap enough to put in CI. 🔴 What
+is not cheap is discovering at contract stage that a trademark carve-out your client-facing
+materials rely on was edited out by an upstream author who almost certainly did not mean anything
+by it.
+
+### 🟢 `T3` is promoted: the permissive/non-commercial split is a **replicated** property, not a pattern
+
+🔵 `p479` measured a **complete** population — all 22 repositories in a 30-day ≥30★ `topic:education`
+census — and found the **two** non-commercial rows were **exactly the two curriculum-and-content
+repositories**.
+
+🟢 **`p498` reproduces it on a disjoint population.** Of eight addresses graded from
+`topic:edtech` `stars:>400`:
+
+| class | rows | grants |
+|---|---|---|
+| 🟢 code / tooling | `book-to-skill`, `Papermorph`, `claudemy`, `get-it`, `menthor`, `frametell` | **MIT ×3, Apache-2.0 ×2, AGPL-3.0 ×1 — every one an OSI licence** |
+| 🔴 **content / curriculum** | `cn-math-taxonomy`, `PageLM` | 🔴 **CC BY-NC 4.0** and a bespoke **"PageLM Community License"** — **both non-commercial** |
+
+🔴 **Two independent populations, same boundary, no exceptions in either.** 🔵 **The planning
+consequence is firm enough to put in a proposal: budget to *build* the curriculum model and the
+item bank; expect to *acquire* the tooling.** The reverse assumption — that content is the
+commodity and tooling the hard part — is how an education engagement discovers in month three that
+its knowledge graph cannot ship.
+
+### 🔴 `T10` gets its decisive measurement — and it is internal to one publisher
+
+🔵 `T10` says market sizing in this sector is not currently usable, resting on cross-publisher
+disagreement. 🔴 **The stronger argument needs no second publisher.** MarketsandMarkets puts **North
+America at $951 M in 2024**; North America is widely put at **36–42 %** of this market; that implies
+a **global $2.3–2.6 B in 2024** — an order of magnitude below the **$9.58 B** figure this KB carried
+for 2026, and ~**100×** above its own "Rest of Latin America" series when set against this base's
+carried LATAM figure.
+
+🟢 **`T10` therefore hardens from "the publishers disagree" to "the figures are not arithmetically
+compatible with their own regional components".** 🟢 Both carried figures are withdrawn as data on
+[`intel/market.md`](market.md) this pass. Quote a range with a publisher, or quote a demand signal.
+
+### 🟡 `T2` qualified — the copyleft platform layer has **two non-interoperable families**, not one
+
+🔵 `T2` calls the copyleft platform layer *the binding constraint*. 🟢 `p498` measures a constraint
+**inside** it: [`portabilis/i-educar`](https://github.com/portabilis/i-educar) (🇧🇷 municipal SIS,
+live at 2026-10-22) and [`formalms/formalms`](https://github.com/formalms/formalms) are both
+**GPL-2.0 with no *or-later* election in their source notices — GPL-2.0-only**.
+
+🔴 **GPL-2.0-only and GPL-3.0 do not combine.** So the copyleft column on
+[`verticals/solutions.md`](../verticals/solutions.md) is not one pool of mutually-compatible
+platforms: `moodle` / `chamilo` / `ILIAS` (GPL-3.0) sit on one side and `i-educar` / `formalms`
+(GPL-2.0-only) on the other, and code cannot move between them. 🔵 **For a Brazilian municipal SIS
+engagement this is week-one information**, and no previous pass stated it.
+
+### 🟢 `T7` gains its strongest instance — and the agent surface is a **kill switch**, not just a hook
+
+🔵 `T7` says agent tool surfaces are arriving at the LMS boundary, unevenly. 🟢 `p498`'s code read of
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (HEAD `08e3ecace444`,
+2026-10-27) finds the most deployable instance yet: **21 in-tree plugins**, a plugin that mounts its
+own URLs and its own DRF API via `KolibriPluginBase.url_module` / `api_url_module`, **21
+`api_urls.py`** surfaces, four out-of-tree plugins shipped as precedent (including an **OIDC
+provider**), and 🔴 **zero native LLM integration** to displace.
+
+🟢 **The part that matters for procurement:** plugins are enabled and disabled **from the CLI or a
+UI** and through `ENV_VAR_ENABLED_PLUGINS` / `ENV_VAR_DISABLED_PLUGINS` / `ENV_VAR_APPLIED_PLUGINS`.
+🔵 **An AI surface the deploying institution can switch off with one environment variable and no
+rebuild is a different regulatory object from one compiled into the platform** — it is an
+AI-Act-friendly posture that falls out of the architecture rather than being engineered onto it.
+🔴 The constraint to design around: hooks are singletons (`KolibriHookMeta(SingletonMeta)`,
+`HookSingleInstanceError`) — **one registration per hook**, so two vendors shipping into one
+deployment will collide.
+
+### 🔴 Declared gaps on this file
+
+- 🔴 **`T19` rests on three instances across three repositories, all found incidentally.** Nobody has
+  measured the **rate** of operative-body edits across an education corpus. `Gap 488-T` asked for
+  exactly this and it is still unmeasured — this pass added a third instance instead of a rate.
+- 🔴 **`Gap 488-Q` failed a second time.** No 2026 APAC teacher-adoption figure. The ANZ-vs-Asia
+  split remains measured on ban-support sentiment.
+- 🔴 **`Gap 484-J` not narrowed.** The EMEA leg named Africa and the Middle East in the query and
+  returned no instrument, figure or player for either. **"EMEA" on these shelves means Europe.**
+- 🟡 **`T11`, `T12`, `T16` were not re-tested this pass.** Carried unchanged.

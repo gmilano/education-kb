@@ -1150,3 +1150,181 @@ for **explainability where AI influences grades or progression**.
 
 🔴 **Unverified vendor statistics, flagged:** an "83% teaching-assistant deployment" figure and a
 "42% outcome gain" circulate in vendor blogs this pass. **Neither is carried into this KB as data.**
+
+---
+
+## 🆕 `p498` — `2026-10-28` — **the carried market figure is unsupportable, and the proof is one publisher's own regional arithmetic**; EMEA repaired with named institutions
+
+### 🔴 `Gap 488-P` closed by deletion, not by replacement
+
+🔵 The gap: *"the carried **$9.58 B → $42.48 B** figure is still written on older blocks of this file
+and in the rotation status. Five publishers put 2026 at $3.7 B–$9.0 B and forecasts 8× apart.
+Replace with range + publisher, or delete."*
+
+🟢 **Range and publishers, read this pass:**
+
+| publisher | figure | for |
+|---|---|---|
+| Persistence Market Research | **US$ 3.7 B** | 2026 |
+| IMARC | **US$ 6.4 B** | 2025 → **US$ 79.6 B by 2034** |
+| The Business Research Company | **$7.52 B** (2025) → **$10.6 B** | 2026 |
+| Persistence Market Research | **US$ 14.1 B** | 2033 |
+| MarketsandMarkets (North America only) | **$951 M** (2024) → **$2 303.2 M** (2029), CAGR **15.9 %** | regional |
+| MarketsandMarkets ("Rest of Latin America") | **$18.2 M** (2024) → **$36 M** (2029), CAGR **12.1 %** | regional |
+
+🔴 **2026 estimates span 2.9× ($3.7 B to $10.6 B). The long forecasts span 5.6× ($14.1 B to
+$79.6 B).** Both are for the same named market.
+
+🔴 **And the decisive leg is internal, not cross-publisher.** Take MarketsandMarkets' own North
+America figure — **$951 M in 2024** — and the widely-repeated claim that North America holds
+**36–42 %** of this market. That implies a **global market of roughly $2.3–2.6 B in 2024**. 🔴 **An
+order of magnitude below the $9.58 B this KB carried for 2026**, and from a publisher whose regional
+reports are the source of the regional shares. 🔴 **The carried LATAM figure fails harder still:
+`$1.5 B → $4.2 B at 45 % CAGR` against M&M's "Rest of Latin America" at `$18.2 M → $36 M at
+12.1 %`** — roughly **100× apart**, and while "Rest of" excludes Brazil and Mexico, no exclusion
+closes two orders of magnitude.
+
+🔴 **Verdict: the `$9.58 B → $42.48 B` figure and the `$1.5 B → $4.2 B` LATAM figure are withdrawn
+as data.** They are not conservative or aggressive; they are incompatible with the regional
+arithmetic of the publishers that supply this sector's regional shares. 🟢 **Use the range with the
+publisher attached, or use demand signals.** `T10` said market sizing in this sector is not
+currently usable; this is the measurement behind that.
+
+🔵 **Every figure in this section is secondary.** `Gap 484-F` is unchanged: no non-GitHub primary
+source was verified this pass, and two of the publishers above are reachable only through
+aggregator pages.
+
+## Opportunities by region — `p498`
+
+### North America
+
+🟢 **The Ohio mandate, with its statutory cite, and what it actually requires.**
+`Gap 488-S` asked whether districts complied with the **1 July 2026** deadline that has now passed.
+
+| | |
+|---|---|
+| instrument | 🟢 **Ohio Revised Code 3301.24** |
+| who it binds | school districts, **Chapter 3314** community schools, **Chapter 3326** STEM schools |
+| deadline | **1 July 2026 — now passed** |
+| scale | **610+** districts covered |
+| 🔴 **the state model policy is OPTIONAL** | the statute says covered schools **may** adopt it |
+| 🔴 compliance | **searched, and no state or Department of Education and Workforce compliance report exists.** `Gap 488-S` is **not** closed — it is now a *named* absence. |
+
+🟢 **The optional-model clause is the opportunity, and it is a bigger one than compliance data would
+have been.** 610+ districts each had to adopt a policy and none was required to adopt the *same*
+one. 🔴 **So the deliverable is not a product that encodes "the Ohio rule" — there is no single Ohio
+rule.** It is a K-12 assistant whose policy layer is **configuration**, which is precisely what
+`P490-5` is built for. This pass gives that pattern its statutory anchor.
+
+🟡 **Secondary context, carried but not relied on:** the US has no sector regulator for educational
+technology; adoption decisions sit with individual districts and institutions; Colorado and Texas
+are introducing piecemeal requirements; one 2026 roundup reports **only ~10 % of institutions with
+formal AI guidelines** and **71 % of US teachers without AI training**. Canada's proposed **AI and
+Data Act** remains the federal instrument to watch. Named vendors in the market reports are IBM,
+Microsoft and Google.
+
+### EMEA
+
+🟢 **`Gap 488-O` repaired.** The gap recorded that EMEA *"returned one vendor blog
+(`openeducat.org`) replicated across seven language paths and counted as seven results — and that
+vendor is on this base's own vertical shelf."* 🟢 This pass's EMEA leg returns **institutions, with
+instruments**:
+
+| source | instrument | detail |
+|---|---|---|
+| 🟢 **European Commission + OECD** | **AI Literacy Framework for primary and secondary education** | Four competence domains: **engage with / create with / manage / shape AI**. Consultation drew **2 000+** teachers, education leaders, policymakers, learning designers and researchers across **100+ countries**. Published in EN/FR/DE, **all 24 official EU languages from July 2026**. **CodeAI** (formerly Code.org) was involved in development. |
+| 🟢 **European Commission** | **four sets of digital education guidelines**, two new and two updated, under the **Digital Education Action Plan** | Ethical AI and data use · digital literacy · high-quality digital content · informatics. The updated AI-and-data guidelines for educators are structured in three parts: core principles and legal context; guiding questions and scenarios; background resources. |
+| 🟢 **Cedefop** | hosts the 2026 ethical-AI guidelines in its VET toolkit | Places the same instrument in the **vocational** track, not only general schooling. |
+| 🟢 **Malta, Ministry for Education** | republished the updated guidelines, **March 2026** | 🟢 A **member-state adoption** data point — the instrument is being taken up nationally, not only published centrally. |
+
+🔴 **Date conflict, declared:** the AI Literacy Framework is dated **17 June 2026** by one source and
+**18 June 2026** by another; the four guideline sets are dated **5 March 2026** by the Commission's
+own newsroom and **June 2026** elsewhere. 🔴 Not resolved — EUR-Lex and several EU primary paths
+remain off this session's fetch allowlist (`Gap 483-K`, `Gap 484-F`).
+
+🟢 **The sellable cut:** an EU engagement now has a **named competence framework with four domains**
+to map a product's features onto, in 24 languages, plus a vocational variant. That is a conformity
+story a procurement officer can read, which is what EMEA has been missing on this file.
+
+🟢 **And EMEA supplies a repository this pass:**
+[`beltromatti/get-it`](https://github.com/beltromatti/get-it) (🇮🇹, 1 138★, Apache-2.0 with an
+edited §6 — see [`agents/top.md`](../agents/top.md)), built at **GDG AI Hack Milan 2026**.
+
+🔴 **Africa and the Middle East returned nothing again.** The EMEA leg was run with Africa and the
+Middle East named explicitly in the query and returned **no ministry-level instrument, no adoption
+figure and no named player** for either. 🔴 `Gap 484-J` (MEA evidence is strategies, not outcomes)
+is **not** narrowed. **"EMEA" on this file is currently Europe.** Saying so is the finding; a
+7-result count built from one vendor's language paths is what pretending otherwise looks like.
+
+### APAC
+
+🟢 **APAC supplies the best open education *data* asset found this pass, and Globant cannot ship
+it.** [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) (🇨🇳,
+4 586★, created **18 October 2026** — ten days old): a K-12 **mathematics, English and junior
+physics knowledge graph** with **1 644 knowledge points, 2 403 prerequisite edges and 6 723 items**,
+aligned to the national curriculum, shipping **adaptive prerequisite diagnostics**. 🔴 **CC BY-NC
+4.0** (19 347 B · blob `fe463e0f7888`) — **non-commercial, refused for client work.**
+
+🔵 **Read it as the specification for what an APAC engagement must build**: 1 644 nodes and 2 403
+prerequisite edges is a concrete scope figure for a curriculum-aligned learner model, and it is now
+a measured one rather than an estimate.
+
+🔴 **The adoption and regulation leg returned nothing education-specific.** Run as
+`AI education APAC 2026 adoption regulation players`, it returned enterprise AI material. What it
+did return, flagged as adjacent and not carried as education data: **Singapore's** consultations on
+AI in financial institutions (transparency, accountability, risk oversight) as the region's clearest
+regulatory template; **Canberra** tightening AI governance and copyright rules; a **Forrester 2025**
+forecast that 60 % of firms and governments in markets such as India and China would integrate
+locally-developed LLMs alongside global ones in sectors including education; and an enterprise
+figure of **49 %** of APAC businesses citing insufficient real-time data infrastructure.
+
+🔴 **`Gap 488-Q` stands unclosed and is now twice-named: there is still no 2026 APAC *teacher
+adoption* figure on this base.** The ANZ-vs-Asia split `p488` found is measured on **ban-support
+sentiment** (Ipsos), and this pass could not find a procurement or adoption figure to test whether
+it transfers. 🔵 One more search leg is the stated cost and the leg has now failed twice.
+
+### LATAM
+
+🟢 **A real survey instrument exists, and it is better than anything this file has carried for the
+region.** A **UNESCO IESALC + UNU-IAS** working paper on AI implementation in higher education in
+Latin America and the Caribbean reports a survey of **200 institutions across 19 countries,
+conducted August–October 2025**, covering teaching, research, administration and governance.
+
+🔴 **Its figures are unread.** `unu.edu` **does not resolve through this session's network policy**,
+so the method is recorded from the search result and **no percentage from it is carried as data**.
+🔵 This is the single highest-value fetch for the next pass that has the host allowed: 200
+institutions across 19 countries would replace the aggregator-sourced LATAM numbers on this file
+outright.
+
+🟡 **Carried as secondary, with the source named:** a 2025 comparative study of AI rules in higher
+education across **Argentina, Brazil, Chile, Peru and Spain** identifies regulatory gaps to close
+before ethical classroom use; a 2025 commentary describes the regional policy landscape as **a
+patchwork of pilots that get dropped when administrations change**, and names **Chile** as the
+regional AI-readiness leader on the strength of **an AI roadmap that survived political change**; a
+January 2026 Mexican trade report says education leaders want AI past pilots into scaled,
+skills-based learning.
+
+🟢 **The Chile reading is the actionable one, and it inverts the usual pitch.** If the regional
+failure mode is *pilots dropped at the change of administration*, then the differentiator is not a
+better pilot — it is **institutional durability**: handover artefacts, a policy layer the next
+administration can re-configure rather than replace, and no dependency on the sponsoring
+ministry's personnel. Sell the continuity, not the demo.
+
+🔴 **The region's repository supply this pass is one archived row.**
+[`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) (🇧🇷, 582★, genuinely **Apache-2.0**,
+11 337 B · blob `08c875b2050c`) is **archived**. 🟢 And the region's one live platform row is now
+graded: [`portabilis/i-educar`](https://github.com/portabilis/i-educar) is a **GPL-2.0-only**
+municipal SIS, last commit **2026-10-22**, which **will not combine with GPL-3.0 code** — the
+governing constraint for a Brazilian municipal engagement, and new on this base this pass.
+
+🔴 **And the carried LATAM market figure is withdrawn** — see the sizing block above. `$1.5 B →
+$4.2 B at 45 % CAGR` is ~100× MarketsandMarkets' "Rest of Latin America" series.
+
+### Global
+
+🔴 **The one thing to carry out of this pass's sizing work:** quote the **range with the publisher
+attached**, never a point estimate. 2026 sits somewhere in **$3.7 B–$10.6 B** depending on who is
+counting and what they count, and the regional series of the publisher most often cited for
+regional share implies the low end. 🟢 **Demand signals remain usable where the dollar figures are
+not** — a mandate with a date and a district count, a competence framework with four named domains,
+a survey with 200 institutions behind it. Those are the numbers to put in a proposal.
