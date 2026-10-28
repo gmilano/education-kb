@@ -127,7 +127,7 @@ as unsupported: the "$42.48B by 2030 / 41.5% CAGR" pair, and "LATAM $1.5B → $4
 **Consequence:** quote ranges with the firm named, or quote nothing. Never put a single
 AI-in-education market number in a client deck without a primary source.
 
-## T11 — The education-AI evaluation instruments now exist, and not one of them is licensed
+## T11 — The education-AI evaluation instruments now exist, and 🟢 **one of them is MIT** (`p493` correction)
 
 This reverses the shape of the sector's biggest gap. `p490` reported the tier as empty. Measured
 from bytes this pass: [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (45★,
@@ -137,14 +137,36 @@ are real, serious, and **ship no license file at all**. MathTutorBench's README 
 badge `CC BY 4.0`, closing line `CC BY-SA 4.0` — and **neither is a software grant**; Creative
 Commons advises against CC licenses for code, and one of the two is copyleft.
 
-**Consequence:** the instrument tier is blocked by **licensing, not scarcity** — a harder problem,
-because scarcity is fixed by searching and no-grant is fixed only by the authors. The papers are
-readable and the *task designs* are reimplementable; the repositories are not usable. So a
-tutoring-eval capability is still a **build**, but it is no longer a build from nothing: rebase it
-on [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness)
-(**MIT**, 14,300★, grant read at 1,066 B) and implement the published task designs on it. This is
-the single clearest open-source credibility asset available in this sector, and EU high-risk
-conformity will demand exactly this evidence by **2 Dec 2027**.
+🔴 **`p493` — the "not one of them is licensed" claim in this trend's title and body is false.**
+[`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) is
+**MIT** (1 064 B, `sha1 ac3710f1a312`, read at `21a43a395ab4`; sidebar and README agree). It is
+education-specific and substantive: **1,143 questions from teacher-qualification exams**, split
+**920 CDPK** (cross-domain pedagogical knowledge) and **223 SEND** (special educational needs and
+disabilities), with harness support for *"100+ models"*, behind *Benchmarking the Pedagogical
+Knowledge of Large Language Models* (`arXiv:2506.18710`). 🔵 **It was read by this KB on
+`2026-10-18` and dropped from the shelf by `p490`'s rewrite** — so this trend was built on an
+incomplete shelf, not on an incomplete sector. See [`agents/trending.md`](../agents/trending.md)
+`p493`.
+
+**Consequence, restated.** The tier is **small and under-starred, not unlicensed**:
+
+- 🟢 **Takeable now:** `pedagogy-benchmark` — **MIT**, so the exam-derived item bank *and* the
+  multi-model harness are usable as code and data, not merely readable as a paper.
+  🔴 **13★, 5 commits, no security process** — a corpus and a baseline, not a maintained
+  dependency.
+- 🔴 **Still blocked by licensing:** `mathtutorbench` (45★) and `TutorCaseBench` (0★) ship no grant
+  at all. Their papers are readable and their *task designs* reimplementable; their repositories
+  are not usable. MathTutorBench's self-contradicting README (badge `CC BY 4.0`, closing line
+  `CC BY-SA 4.0`) stands as recorded, and neither is a software grant.
+- 🟢 **So the eval capability is no longer a build from nothing, and no longer a build from a bare
+  runtime either.** Start from `pedagogy-benchmark`'s MIT items and harness, keep
+  [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness)
+  (**MIT**, 14,300★, 1,066 B) underneath, and implement the two unlicensed instruments' published
+  task designs on top.
+
+🟢 **Why this matters commercially, unchanged and now cheaper to reach:** this is still the
+clearest open-source credibility asset in the sector, and EU high-risk conformity will demand
+exactly this evidence by **2 Dec 2027**. `p493` moves the starting line, not the deadline.
 
 ## T12 — A national AI mandate is not a durable demand floor: South Korea de-mandated one
 
@@ -265,3 +287,46 @@ domains**, of which domain 20 is **13 student-facing** skills.
   about licences.**
 - 🔵 **Add lowercase `license` to every licence probe list.** `labmlai`'s MIT grant lives there, and
   a probe trying only `LICENSE`/`LICENSE.md` would call an MIT repo unlicensed.
+
+
+## 🆕 `p493` — `2026-10-28` — a trend correction, and a method rule this KB needed
+
+### 🔴 `T2`'s scope was too broad, and `T11` was simply wrong
+
+Both corrections have one cause: **`p490`'s full-file rewrite of `agents/top.md`, and the earlier
+rewrites of `repos/foundations.md`, deleted eight rows that previous passes had promoted** — with
+no marker left behind, so the shelves then read as complete censuses. Full account and the
+re-verified rows: [`agents/trending.md`](../agents/trending.md) `p493`.
+
+| trend | published claim | `p493` |
+|---|---|---|
+| **`T2`** | "The education platform layer is copyleft, and this is now the binding constraint" | 🟡 **True of the LMS/SIS/assessment core only.** `OpenMAIC` (**MIT, 41,700★**, courseware), `open-tutor-ai-CE` (**BSD-3-Clause**, tutoring platform), `dolos` (**MIT**, integrity) and `pedagogy-benchmark` (**MIT**, evaluation) are all permissive and were all already in this KB. **Narrow the claim to the core; it is still true there and still binding there.** |
+| **`T11`** | "not one of them is licensed" | 🔴 **False** — `pedagogy-benchmark` is MIT. Corrected in place above. |
+
+🟢 **`T2`'s core survives and is worth restating precisely**, because the precise version is the
+one that holds up in a client conversation: **the full LMS, the SIS and the assessment/QTI engine
+are copyleft-bound** — `OpenOLAT` (Apache-2.0, 448★) is the only permissive full LMS, no permissive
+SIS exists, no permissive QTI engine exists. Everything *above* that core now has a permissive
+option. See [`repos/foundations.md`](../repos/foundations.md) `p493`.
+
+### 🆕 `T14` — in this sector, a KB's own bookkeeping is a material source of error
+
+Not a market trend; a trend in **how this KB fails**, recorded because it has now produced three
+published falsehoods in two passes.
+
+- `p492` declared a gap (Learning Commons licences unreadable) over evidence this KB had held since
+  `p119`/`p120`. The pass searched the open web instead of `grep`-ing the repository it was editing.
+- `p490`/`p491` published two "declared gaps" in `agents/top.md` that this KB's own trending log
+  refuted: the permissive-agent gap (refuted by `OpenMAIC`, cited **51 times** in this KB's history)
+  and the unlicensed-eval-tier gap (refuted by `pedagogy-benchmark`).
+- `p492` reported the permissive platform numerator as `3 → 4` as though it were ecosystem
+  movement, computed over a shelf missing eight promoted rows.
+
+🔵 **Two rules, both cheap, both would have caught all three:**
+
+1. **Before declaring a gap, `grep -ri` the subject across this repository.** A gap asserted over
+   held evidence is worse than silence — it instructs the next pass not to look.
+2. **A full-file rewrite must diff its promoted-row names against the version it replaces, and
+   either carry each row forward or say why it was dropped.** The `archive/` copies make this a
+   one-command check. 🔴 Without it, every rewrite is a silent data-loss event, and the shelf keeps
+   reporting a census of this KB rather than of the sector.

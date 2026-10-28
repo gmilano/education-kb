@@ -359,3 +359,98 @@ open-source education-AI evaluation harness** — see `T11`.
 
 **Scope:** 5–7 weeks to a governed pilot on one course, including the rubric-freeze workflow and
 the oversight trace. Add 2–3 weeks if the conformity documentation is a deliverable.
+
+---
+
+## 🆕 `P493-1` — The first end-to-end **all-permissive** education stack 🟢
+
+**Why:** every stack this KB has been able to propose crossed a copyleft boundary somewhere —
+usually at the platform layer, which is why `T2` called that *the binding constraint*. `p493`
+restored eight addresses that earlier passes had promoted and later rewrites deleted (see
+[`agents/trending.md`](../agents/trending.md) `p493`), and with them **a complete stack exists in
+which every component is MIT, Apache-2.0 or BSD-3-Clause.** For a client who cannot accept
+copyleft — a commercial derivative, a hosted multi-tenant product, an OEM arrangement — this is the
+difference between "we must talk about AGPL" and "we do not".
+
+| Component | Repo | License | ★ | Role |
+|---|---|---|---|---|
+| Courseware / classroom | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | 41,700 | Topic or document → multi-agent interactive lesson: slides, quizzes, project-based work |
+| Teacher workflow | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0** | 595 | Lesson planning + differentiation skills **with their eval rubrics** |
+| Teacher workflow (twin) | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | **Apache-2.0** | 40 | Consortium-side payloads + `evals/` rubrics for pedagogy, rigour, format, scaffolding |
+| Tutoring platform | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | Collaborative tutoring platform where ChatTutor (AGPL-3.0) was the only option |
+| Quality gate | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | 13 | 1,143 teacher-exam items (920 CDPK / 223 SEND), 100+ models |
+| Eval runtime | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | **MIT** | 14,300 | the harness `pedagogy-benchmark` runs on |
+| Academic integrity | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | **MIT** | 355 | Source-code plagiarism detection; 3,865 commits |
+| Delivery — offline | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** | 1,200 | runs without connectivity |
+| Delivery — no app | [Orenda-Project/rumi-platform](https://github.com/Orenda-Project/rumi-platform) | **Apache-2.0** | 18 | WhatsApp, 15 languages |
+| Institutional layer *(only if needed)* | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | 448 | enrolment, roles, gradebook — **the only permissive full LMS** |
+
+**Wiring:** `OpenMAIC` generates the courseware and runs the classroom experience → the two
+teacher-skill packs drive lesson planning and differentiation at the teacher's desk (a skill pack
+has **no runtime**, so nothing is hosted and no data-residency posture attaches to it) →
+`open-tutor-ai-CE` carries the 1:1 tutoring surface → `dolos` sits on submitted code →
+`pedagogy-benchmark` on `lm-evaluation-harness` runs as a **release gate in CI**, not as a one-off
+report → `Kolibri` or `rumi-platform` carries delivery where connectivity is not assumable →
+`OpenOLAT` underneath **only** where the engagement genuinely needs enrolment, roles and a
+gradebook.
+
+**Do this or it is negligent:**
+
+1. 🔴 **`OpenMAIC` is not an LMS and must not be sold as one.** Nothing on its page claims
+   enrolment, a gradebook, SIS integration or institutional roles. If the client needs those, the
+   permissive answer is `OpenOLAT` beneath it — and if they need a **SIS** or a **QTI exam
+   engine**, 🔴 **there is no permissive option at all** and the copyleft conversation is
+   unavoidable. Say that in week one, not at UAT.
+2. 🔴 **Pin every component by SHA or release tag and re-read the licence bytes at that pin.** This
+   pattern's own evidence is why: `p493` found eight promoted rows deleted from this KB's shelves,
+   and `p492` found `canvas-mcp` drifted with its licence byte-identical at both SHAs. Pins read at
+   `2026-10-28`: `OpenMAIC` `70859b42e714` (MIT, 1 065 B), `k12-teacher-skills` `31fd6dbb0c07`
+   (Apache-2.0, 11 357 B), `open-tutor-ai-CE` `196c547291da` (BSD-3-Clause, 1 531 B), `dolos`
+   `74b101785bad` (MIT, 1 084 B), `pedagogy-benchmark` `21a43a395ab4` (MIT, 1 064 B),
+   `agent-skills` `8b0599c24469` (Apache-2.0, 10 173 B), `rumi-platform` `f2d62af1eb82`
+   (Apache-2.0, 11 287 B).
+3. 🔴 **Honour BSD-3-Clause's third condition.** `open-tutor-ai-CE` forbids using the copyright
+   holder's or contributors' names to endorse or promote a derivative without written permission.
+   **Do not put "built on Open-TutorAI" in client-facing marketing** without that permission —
+   attribution in the NOTICE file, yes; endorsement in a pitch deck, no. 🔵 This is the one
+   obligation in the stack that bites *marketing* rather than *engineering*, which is exactly why
+   it gets missed.
+4. 🔴 **Three components are single-digit-to-low-double-digit★ and must be treated as corpora, not
+   dependencies.** `pedagogy-benchmark` (13★, 5 commits), `rumi-platform` (18★),
+   `Shiksha-Copilot` (9★) have no community and no security process. **Vendor the code into the
+   engagement repository**, do not take a live dependency, and budget to maintain it yourself.
+   `OpenMAIC` (781 commits), `dolos` (3,865 commits) and `Kolibri` are the three that can carry a
+   real dependency.
+5. 🟢 **Run `pedagogy-benchmark` before the pilot and keep the baseline.** It is the only licensed
+   education-specific instrument available (see [`intel/trends.md`](../intel/trends.md) `T11`), and
+   the **SEND** subset (223 items) is the only readable signal in this KB on special-educational-needs
+   competence — the population where an unevaluated tutor does the most harm and where procurement
+   asks the hardest questions.
+6. 🟢 **Keep the human-oversight gate even though nothing here is formally high-risk yet.**
+   `Shiksha-Copilot`'s shipped design — **every generated artefact routed to a teacher for review
+   before classroom use** — is the pattern to copy, and `P492-1`'s rule stands: **the model never
+   does the arithmetic on a grade.** This is what EU Annex III will require of a *provider* from
+   **2 Dec 2027**, what Oklahoma S.B. 1734 appears to require of districts before the **2027-28**
+   school year (see [`intel/market.md`](../intel/market.md) `p493`), and what Vietnam's decision
+   keys its high-risk tier to.
+
+**Licence note:** 🟢 **No copyleft anywhere in the stack**, including the optional LMS layer. The
+one component to keep out is this KB's most-cited education skill pack,
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) —
+**CC-BY-SA-4.0**, re-confirmed at 1 230 B this pass. 🔴 **ShareAlike on a content licence reaches
+the derived curriculum, not just the code**, which would relicense the client's teaching materials.
+Reference it; do not vendor it.
+
+**Regional fit:** 🟢 **APAC strongest** — `OpenMAIC` (China), `Shiksha-Copilot` (India),
+`rumi-platform` (Pakistan) are all regional in origin. 🟢 **LATAM** — pair with `Kolibri` and
+`rumi-platform` against the **33-point Argentine socio-economic access gap** `p493` records, and note
+there is still **no LATAM-origin component** at usable scale. 🟢 **EMEA** — `dolos` (Belgium) and
+`open-tutor-ai-CE` (Morocco) are in-region, and the all-permissive property is what makes a
+provider-grade conformity build sellable as product rather than as services. 🟡 **North America** —
+the skill packs are NA-origin, but `P490-1` remains the faster route into US higher ed because
+Canvas is the incumbent and has the only maintained agent surface.
+
+**Scope:** 10–12 weeks to a governed pilot with an evaluation baseline. 🔵 Longer than `P490-1`
+(4–6 weeks) because `OpenMAIC` is a courseware engine rather than an integration into an incumbent
+LMS — **you are standing up a stack, not instrumenting one that exists.** Add 3–4 weeks if an
+`OpenOLAT` institutional layer is in scope.

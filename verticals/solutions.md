@@ -39,6 +39,13 @@ license read from bytes at a pinned SHA — see
 | **Virtual classroom** | [BigBlueButton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9,300 | Live classes with whiteboard and breakouts. **LGPL — linking allowed**, the friendliest copyleft here. |
 | **Structured lessons** | [Oppia](https://github.com/oppia/oppia) | **Apache-2.0** | 6,900 | Lesson "explorations" with built-in misconception handling. Permissive. |
 | **Spaced repetition** | [Anki](https://github.com/ankitects/anki) | AGPL-3.0 | 32,300 | Reference SRS scheduler. Use as the algorithm reference even where the code can't ship. |
+| **Interactive classroom / courseware** | [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,700** | 🟢 **New row `p493`** (restored — see below). Topic or document → multi-agent interactive lesson with slides, quizzes, project work. **The largest permissive asset in this file by 4×.** 🔴 **Not an LMS**: no enrolment, gradebook or SIS integration. Pair it with Kolibri or OpenOlat for the institutional layer. |
+| **Tutoring platform — permissive** | [open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | 🟢 **New row `p493`** (restored). The permissive answer where ChatTutor (AGPL-3.0) was the only option. 194 forks against 114★ — deployment, not stargazing. |
+| **Academic integrity** | [Dolos](https://github.com/dodona-edu/dolos) | **MIT** | 355 | 🟢 **New row `p493`** (restored). Source-code plagiarism detection; **3,865 commits**, Ghent University. The layer this file previously left empty — and the one every client asks about the moment a tutor can write code. |
+| **Teacher workflow (skills)** | [k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0** | 595 | 🟢 **New row `p493`** (restored). Four K-12 teacher skills **plus eval rubrics**, co-developed with Learning Commons; consortium-side twin at [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) (Apache-2.0, 40★). 🔵 A skill pack has no runtime — nothing to host, no data residency posture. |
+| **Tutoring evaluation** | [pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | 13 | 🟢 **New row `p493`** (restored). 1,143 teacher-exam questions (920 CDPK / 223 SEND), 100+ models, `arXiv:2506.18710`. 🔴 13★ — a corpus and baseline, not a dependency. |
+| **Low-bandwidth delivery** | [rumi-platform](https://github.com/Orenda-Project/rumi-platform) | **Apache-2.0** | 18 | 🟢 **New row `p493`** (restored). **WhatsApp**-delivered learning, 15 languages, 847 commits (Pakistan / Taleemabad). No app, no browser — the delivery surface below even Kolibri's. |
+| **Lesson planning** | [Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | **MIT** | 9 | 🟢 **New row `p493`** (restored). MSR India, VELLM, with Sikshana Foundation. **Every artefact is routed to a teacher for review before classroom use** — a shipped implementation of the human-oversight gate. |
 
 ## The decision that actually matters on an engagement
 
@@ -123,3 +130,44 @@ This file states that "no maintenance signal is available for any row." **Releas
 readable** via page fetch — `openmeetings v9.1.0`, `canvas-mcp v1.16.0` (Oct 2026). Repos that tag
 releases **can** be shown to be live; only untagged ones cannot. Next pass should carry a release
 date per row.
+
+
+## 🆕 `p493` — `2026-10-28` — seven layers gained a permissive option, and none of them is a new discovery
+
+Reads: [`licence-and-stars.2026-10-28-p493.tsv`](../evidence/licence-and-stars.2026-10-28-p493.tsv).
+Mechanism: [`agents/trending.md`](../agents/trending.md) `p493`.
+
+🔴 **Every row added to the table above was already in this KB** — read, licence-measured, and
+recorded as promoted — and then deleted by a full-file rewrite of the shelf files, with no marker
+left behind. **This section is a repair, not a find.** Saying so matters: two consecutive passes
+have now moved the permissive count, `p492` by discovery (`apache/openmeetings`) and `p493` by
+repair, and reading them as one trend would be wrong.
+
+### 🟢 The decision tree in this file changes shape
+
+The question this file says *actually matters* — **"does the client need to host a modified
+platform for third parties?"** — was decisive because an AGPL platform at the bottom of the stack
+contaminated the whole engagement. That is still true **for the LMS/SIS/assessment core**. It is no
+longer true for everything above it.
+
+| layer | before `p493` | after `p493` |
+|---|---|---|
+| Full LMS | OpenOlat (Apache-2.0) or accept copyleft | **unchanged** — OpenOlat is still the only permissive full LMS |
+| SIS | 🔴 no permissive option | 🔴 **unchanged** — none exists |
+| Assessment / QTI | 🔴 no permissive option (TAO, GPL-2.0) | 🔴 **unchanged** — none exists |
+| Interactive classroom | *not offered* | 🟢 **OpenMAIC (MIT, 41,700★)** |
+| Tutoring platform | ChatTutor (AGPL-3.0) | 🟢 **open-tutor-ai-CE (BSD-3-Clause)** |
+| Academic integrity | *not offered* | 🟢 **Dolos (MIT)** |
+| Teacher workflow | *not offered* | 🟢 **k12-teacher-skills (Apache-2.0)** |
+| Evaluation | 🔴 "nothing licensed exists" | 🟢 **pedagogy-benchmark (MIT)** |
+| Virtual classroom | BigBlueButton (LGPL-3.0) | OpenMeetings (Apache-2.0), `p492` |
+| Low-bandwidth delivery | Kolibri (MIT, offline) | 🟢 **+ rumi-platform (Apache-2.0, WhatsApp)** |
+
+🟢 **Practical consequence:** a client who cannot accept copyleft is no longer pushed onto
+OpenOlat-or-nothing for the whole stack. Build the AI layers permissively — courseware, tutoring,
+integrity, teacher workflow, evaluation — and confine the copyleft decision to the LMS/SIS/assessment
+core, where it is genuinely unavoidable. 🔴 **And confine it honestly:** if the engagement needs a
+student information system or a QTI exam engine, there is still no permissive option and the
+AGPL/GPL conversation cannot be avoided. That is a four-pass consistent result.
+
+Wired end-to-end as [`compose/patterns.md`](../compose/patterns.md) `P493-1`.

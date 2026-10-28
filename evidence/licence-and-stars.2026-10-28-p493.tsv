@@ -1,0 +1,32 @@
+# p493	2026-10-28	education-kb
+# Channels (unchanged from p492, re-confirmed this pass):
+#   existence + default ref + HEAD SHA : git ls-remote --symref   -> works, unauthenticated
+#   licence bytes                      : raw.githubusercontent.com/<repo>/<SHA>/<path> -> works
+#   stars / sidebar / releases / forks : page fetch -> works
+#   curl -sI https://github.com/<repo>  : 403 (session GitHub proxy access gate) -> carries NO information
+# Byte rule (p492): measured with `curl -o file` then `wc -c`. Command substitution undercounts by 1.
+# Probe path list includes lowercase `license` and `LICENSE-CODE` (p490/p492 rules).
+#
+# SUBJECT OF THIS PASS: eight repositories earlier passes recorded as promoted ("Now shelved")
+# that are absent from BOTH agents/top.md and repos/foundations.md at HEAD cb6a4be.
+repo	default_ref	head_sha	licence_path	licence_bytes	licence_sha1_12	family	stars	forks	commits	region	status_p493
+THU-MAIC/OpenMAIC	main	70859b42e714	LICENSE	1065	56d5b3ffd6e8	MIT	41700	6400	781	APAC (China, Tsinghua)	DROPPED-ROW / RESTORED p493
+anthropics/k12-teacher-skills	main	31fd6dbb0c07	LICENSE	11357	1128f8f91104	Apache-2.0	595	107	4	North America	DROPPED-ROW / RESTORED p493
+dodona-edu/dolos	main	74b101785bad	LICENSE	1084	8f6f3815d28d	MIT	355	48	3865	EMEA (Ghent, BE)	DROPPED-ROW / RESTORED p493
+Open-TutorAi/open-tutor-ai-CE	main	196c547291da	LICENSE	1531	a027c9bb4f47	BSD-3-Clause	114	194	380	EMEA (Morocco)	DROPPED-ROW / RESTORED p493
+learning-commons-org/agent-skills	main	8b0599c24469	LICENSE	10173	e88848668567	Apache-2.0	40	6	43	North America	closes p492 false gap
+AI-for-Education/pedagogy-benchmark	main	21a43a395ab4	LICENSE	1064	ac3710f1a312	MIT	13	0	5	EMEA/Global	FALSIFIES "no licensed eval instrument"
+Orenda-Project/rumi-platform	main	f2d62af1eb82	LICENSE	11287	20312eb940f0	Apache-2.0	18	19	847	APAC (Pakistan)	DROPPED-ROW / RESTORED p493
+microsoft/Shiksha-Copilot	main	cf2a2e24c3d4	LICENSE	1141	689ec0681815	MIT	9	12	149	APAC (India, MSR)	DROPPED-ROW / RESTORED p493
+#
+# NEW ADDRESSES FOUND THIS PASS -- all MIT, all BELOW this shelf's star floor. Deliberately NOT promoted.
+MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor	main	e3c6905a7b6e	LICENSE	1069	d985908e4f70	MIT	0	3	24	North America	research origin; NOT promoted (0 stars)
+mitodl/open-learning-ai-tutor	main	6a8028528afc	LICENSE	1069	d985908e4f70	MIT	1	2	157	North America	institutional FORK, 157 commits vs origin 24; reference design
+Jeanikt/tutor-ai-agent	main	987f3106ef6a	LICENSE	1103	c7d1c8acf6cc	MIT	0	0	3	LATAM (Brazil)	pt-BR voice math tutor "Manu"; instantiates the LATAM gap, does not close it
+Ebimsv/AITutorAgent	main	09fdd6722f1e	LICENSE	1072	d587f7809550	MIT	-	-	-	-	NOT promoted
+hari7261/AI-Tutor	main	8d93823328b1	LICENSE	1090	37b7b93baf21	MIT	-	-	-	-	NOT promoted (offline Ollama)
+maxew6/ai-tutor-project	main	2af1c6be3885	LICENSE	1073	3b54feb158b1	MIT	-	-	-	-	NOT promoted (downstream of krishna16-origin)
+GarethManning/education-agent-skills	main	135d6275e7db	LICENSE	1230	574477f0a0e4	CC-BY-SA-4.0	-	-	-	EMEA (UK)	re-confirmed content-copyleft; 1230 B matches p466/p492
+#
+# RE-READ, NO DRIFT
+HKUDS/DeepTutor	main	-	-	-	-	Apache-2.0 (sidebar)	46000	5800	-	APAC (HK)	stars 45,900 -> 46.0k; v1.6.15 2026-10-19 re-confirmed; no licence re-read this pass

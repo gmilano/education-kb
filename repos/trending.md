@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p493` — `2026-10-28` — **🔴 THE PERMISSIVE CENSUS WAS NEVER 3-OF-19, OR 4-OF-20. It was wrong because this KB had **deleted rows it had already promoted**. [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) is **MIT at 41,700★** — education-specific, 781 commits — and it appears in **neither** shelf file. 🟢 Restoring the eight dropped addresses changes the permissive picture in the platform and tooling layers at once, and it hands this KB the first **end-to-end all-permissive education stack** it has ever been able to offer.**
+
+🔵 **Channels:** see [`agents/trending.md`](../agents/trending.md) `p493` for the full note and the
+defect's mechanism (full-file rewrites silently drop previously-promoted rows; `curl -sI` against
+`github.com` is still the session proxy's uninformative `403`). Reads:
+[`licence-and-stars.2026-10-28-p493.tsv`](../evidence/licence-and-stars.2026-10-28-p493.tsv).
+
+### 🟢 The restored permissive rows, by layer
+
+| layer | restored address | licence @ SHA | ★ | what it contributes |
+|---|---|---|---|---|
+| **Interactive classroom / courseware** | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT**, 1 065 B, `sha1 56d5b3ffd6e8` (`70859b42e714`) | **41,700** | Multi-agent interactive classroom: topic or document → lesson with slides, quizzes, project-based work. 781 commits; `v1.3.0-rc.1` dated **`2026-10-22`**. |
+| **Tutoring platform** | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause**, 1 531 B, `sha1 a027c9bb4f47` (`196c547291da`) | 114 | Educational + collaborative AI platform, community edition. 380 commits, **194 forks** against 114★ — an unusually fork-heavy ratio, which reads as deployment rather than stargazing. |
+| **Teacher workflow** | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0**, 11 357 B, `sha1 1128f8f91104` (`31fd6dbb0c07`) | **595** | Four K-12 teacher skills **plus their eval rubrics**, co-developed with Learning Commons. |
+| **Teacher workflow (consortium side)** | [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | **Apache-2.0**, 10 173 B, `sha1 e88848668567` (`8b0599c24469`) | 40 | Same skill payloads from the education-consortium side, with `evals/` rubrics; `NOTICE` names **Anthropic, PBC** and Learning Commons. |
+| **Academic integrity** | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | **MIT**, 1 084 B, `sha1 8f6f3815d28d` (`74b101785bad`) | **355** | Source-code plagiarism detection, **3,865 commits** — by far the most-maintained address restored. Ghent University. |
+| **Evaluation** | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT**, 1 064 B, `sha1 ac3710f1a312` (`21a43a395ab4`) | 13 | 1,143 teacher-qualification-exam questions (920 CDPK / 223 SEND), 100+ models. `arXiv:2506.18710`. |
+| **Low-bandwidth delivery** | [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) | **Apache-2.0**, 11 287 B, `sha1 20312eb940f0` (`f2d62af1eb82`) | 18 | WhatsApp-delivered learning, **15 languages**, 847 commits. Pakistan / Taleemabad. |
+| **Lesson planning** | [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | **MIT**, 1 141 B, `sha1 689ec0681815` (`cf2a2e24c3d4`) | 9 | Microsoft Research India, **VELLM** initiative, with Sikshana Foundation. Lesson plans, analogies, activities, assessments — **all teacher-reviewed before classroom use**. |
+
+### 🔴 What this does to the census this KB has been publishing
+
+`p492` wrote the platform census as **20 platforms, 4 permissive** and treated the move from 3 to 4
+as the headline. That ratio was computed over a shelf that was **missing eight rows it had already
+promoted**, so it was never a measurement of the ecosystem — it was a measurement of this KB's own
+bookkeeping.
+
+🟢 **The honest restatement:** the permissive *platform* scarcity `T2` describes is **real but
+narrower than published**. It holds for the **full-LMS** layer — `OpenOLAT` (Apache-2.0) is still
+the only permissively-licensed full LMS, and Moodle / Open edX / Canvas / frappe-lms remain
+GPL/AGPL. It **does not** hold for the layers above and beside it:
+
+| layer | published incumbent | licence | permissive option, restored `p493` | licence |
+|---|---|---|---|---|
+| Interactive courseware | `oppia` (6,900★) | Apache-2.0 | — already permissive | — |
+| **Interactive classroom** | *this KB named none* | — | **`OpenMAIC` (41,700★)** | **MIT** |
+| **Tutoring platform** | `ChatTutor` (1,300★) | AGPL-3.0 | **`open-tutor-ai-CE` (114★)** | **BSD-3-Clause** |
+| **Academic integrity** | *this KB named none at HEAD* | — | **`dolos` (355★)** | **MIT** |
+| **Evaluation** | *"nothing licensed exists"* | — | **`pedagogy-benchmark` (13★)** | **MIT** |
+| Virtual classroom | `bigbluebutton` (9,300★) | LGPL-3.0 | `apache/openmeetings` (688★), `p492` | Apache-2.0 |
+| Full LMS | `moodle` / `edx-platform` / `canvas-lms` | GPL/AGPL | `OpenOLAT` (448★) | Apache-2.0 |
+
+🔴 **Read the `OpenMAIC` row against `BigBlueButton` and `edx-platform` honestly.** It is not an
+LMS and does not replace one: no enrolment, gradebook, SIS integration or institutional
+roles are claimed anywhere on its page. It is a **courseware-generation and classroom-experience
+engine**. It outstars every copyleft platform on this shelf by 4–5× and carries the most permissive
+grant available, and it still needs an LMS underneath it for an institutional deployment. Both
+things are true at once.
+
+### 🟢 The consequence worth the most to an engagement
+
+Until this pass, every end-to-end education stack this KB could propose crossed a copyleft boundary
+somewhere — usually at the platform layer, which is why `T2` called that the *binding constraint*.
+With the restored rows, a complete stack exists in which **every component is MIT, Apache-2.0 or
+BSD-3-Clause**: `OpenMAIC` (courseware) + `k12-teacher-skills` (teacher workflow) +
+`pedagogy-benchmark` (evaluation) + `dolos` (integrity) + `kolibri` (MIT, offline delivery), with
+`OpenOLAT` (Apache-2.0) where a full LMS is required. **That is a materially different sentence to
+put in front of a client than "the platform layer is copyleft."** Wired up as
+[`compose/patterns.md`](../compose/patterns.md) **`P493-1`**.
+
+### 🔵 Declared gaps, by region — stated because silence reads as coverage
+
+- **North America** — 🔴 **no new NA-origin repository above this shelf's floor this pass.** The
+  two NA addresses found (`mitodl/open-learning-ai-tutor` 1★, the `MIT-OL-AI-Tutoring` origin 0★)
+  are institutional and real but have no community. Restored NA supply is the two skill bundles.
+- **EMEA** — 🟢 restored supply (`dolos` 355★ Belgium, `open-tutor-ai-CE` 114★ Morocco,
+  `pedagogy-benchmark` MIT) rather than newly-found supply. 🔴 **No new EMEA-origin education
+  repository surfaced this pass.**
+- **APAC** — 🟢 **the strongest region in this restoration by a wide margin**: `OpenMAIC` (China,
+  41,700★), `rumi-platform` (Pakistan), `Shiksha-Copilot` (India). 🔵 Each was found in this KB's
+  own history, **not** by the brief's queries — consistent with the standing finding that
+  discovery-by-label is blind to `OpenMAIC` specifically.
+- **LATAM** — 🔴 **still nothing above the floor.** `Jeanikt/tutor-ai-agent` ("Manu", MIT, pt-BR
+  voice math tutor) is the first LATAM-origin education agent here with a readable grant and is
+  **0★ / 3 commits**. The gap is a supply fact, not a search artefact; the regional substance
+  remains in deployments and national programmes, see [`intel/market.md`](../intel/market.md).
+
+
 ## 🆕 `p492` — `2026-10-28` — **🟢 THE PERMISSIVE NUMERATOR MOVED FOR THE FIRST TIME IN THREE PASSES. [`apache/openmeetings`](https://github.com/apache/openmeetings) is **Apache-2.0** at **688★**, read from 51 425 bytes — a **virtual-classroom platform** in the one layer where this KB's best option was copyleft. The census goes **19 → 20 platforms, 3 → 4 permissive**. 🔵 It had **zero prior mentions in this KB, archive included**.**
 
 🔵 **Channels:** see [`agents/trending.md`](../agents/trending.md) `p492` for the full note — the `github.com` `curl` `403` is now **diagnosed as this session's proxy access gate**, carrying no information about repo existence, and licence bytes must be measured with `curl -o file` (command substitution undercounts by one byte and reads as drift). Evidence:

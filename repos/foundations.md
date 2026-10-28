@@ -42,12 +42,17 @@ count was off by one and the stated total was an undercount: p490's real figure 
 16. With this pass's two rows it is **19**. The permissive count of 3 was correct throughout and
 is unaffected — but any downstream deck quoting "16 platforms" is quoting a miscount.
 
-## Permissive — the three you can build a closed derivative on
+## Permissive — the ones you can build a closed derivative on
+
+🔴 **Heading corrected `p493`** — it read *"the three"* while the table below it already held four
+rows after `p492` added `openmeetings`, and `p493` restores a fifth. **A hard-coded count in a
+heading goes stale silently; the table is the census, not the heading.**
 
 | Repo | License | ★ | SHA read | Role |
 |---|---|---|---|---|
 | [oppia/oppia](https://github.com/oppia/oppia) | Apache-2.0 | 6,900 | `bc73ecf9cf71` | Interactive lesson platform with built-in structured "explorations". Byte-identical to canonical Apache-2.0. Default branch is `develop`, not `main`. |
 | [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT | 1,200 | `dbe14ef6c499` | **Offline-first** learning platform. The one row here designed for no-connectivity deployment — the decisive property for rural LATAM, Africa and APAC programmes. Default branch `develop`. |
+| [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | **MIT** | **355** | `74b101785bad` | **Source-code plagiarism / academic-integrity engine** — 1 084 B, `sha1 8f6f3815d28d`; **3,865 commits**, the most-maintained repo in this file. Ghent University (`dolos@ugent.be`). 🟢 **Restored `p493`: `p296` recorded this as *already a foundation row* and this KB's identity gate refused a duplicate promotion on that basis — then a later full-file rewrite deleted the row the gate had defended.** The gate worked; the rewrite did not. |
 | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 | 448 | `3736d48fa685` | Full Java LMS, Apache-2.0 (10,982 B). The only permissively-licensed *full* LMS found. Swiss-origin, strong EMEA higher-ed footprint. |
 
 ## Copyleft — real systems, with the obligation named
@@ -200,3 +205,55 @@ This file has declared, for several passes, that "no row here can be shown to be
 readable**. The remaining limit is real but narrower: repos that never tag have no signal, and
 `api.github.com` stays 403 for unattached repos. **Next pass should read a release date for every
 row in this file** — it is available and this file was not using it.
+
+
+## 🆕 `p493` — `2026-10-28` — the census was measuring this KB's bookkeeping, not the ecosystem
+
+Reads: [`licence-and-stars.2026-10-28-p493.tsv`](../evidence/licence-and-stars.2026-10-28-p493.tsv).
+Narrative and the full list of dropped rows: [`agents/trending.md`](../agents/trending.md) `p493`.
+
+🔴 **`p490` rewrote `agents/top.md` in full and `p383`/`p391`/`p392` rewrote this file in full.
+A full-file rewrite re-derives its tables from the rewriting pass's own reads, so any row an
+earlier pass promoted but that pass did not re-read is deleted without a marker.** Eight addresses
+this KB had recorded as promoted are absent from both shelf files at HEAD `cb6a4be`; `dolos` is the
+one that belongs here and it is restored above.
+
+### The census, corrected again — and the correction is about the denominator's authority
+
+| | `p491` | `p492` | `p493` |
+|---|---|---|---|
+| platforms read from bytes | 19 | 20 | **21** |
+| permissive (MIT / Apache-2.0 / BSD) | 3 | 4 | **5** |
+| copyleft | 16 | 16 | **16** |
+| permissive *full LMS* | 1 | 1 | **1** — `OpenOLAT`, unchanged |
+
+🔴 **Do not read the `4 → 5` as ecosystem movement.** `p492`'s `3 → 4` was a real find
+(`apache/openmeetings`). **`p493`'s is a repair**: `dolos` was always in the ecosystem and was
+previously in this file. Two passes in a row have now moved the permissive numerator for
+**different reasons**, and conflating them would turn a bookkeeping fix into a false trend.
+
+### What still holds, and what does not
+
+🟢 **Holds, and `p493` re-confirms it:** the **full-LMS** layer is copyleft-bound —
+`OpenOLAT` (Apache-2.0, 448★) is the only permissive full LMS, against Moodle (GPL-3.0),
+Open edX (AGPL-3.0), Canvas (AGPL-3.0), `frappe/lms` (AGPL-3.0, widely mispublished as MIT) and
+`learnhouse` (AGPL-3.0). **No permissive SIS exists** (both `fedena` repos ship no grant).
+**No permissive assessment/QTI engine exists** (`tao-core`, GPL-2.0). These are the gaps that
+actually constrain an engagement and none of them moved this pass.
+
+🔴 **Does not hold:** the generalisation that *the education stack* is copyleft-bound. With the
+restored rows (see [`repos/trending.md`](trending.md) `p493`), the courseware, tutoring-platform,
+teacher-workflow, academic-integrity and evaluation layers each have a permissive option, and an
+end-to-end all-permissive stack is assemblable for the first time — wired up as
+[`compose/patterns.md`](../compose/patterns.md) `P493-1`. **The constraint is specific to the
+LMS/SIS/assessment core, and saying so is both more accurate and more useful than the blanket
+claim.**
+
+### 🔵 Declared gap, unchanged and restated
+
+**No permissive SIS and no permissive QTI assessment engine** — searched again this pass across the
+brief's platform query (`open source platform education ERP SIS student information system MIT
+Apache 2026`). 🔴 **The query returned no permissive candidate at all**: OpenEduCat (LGPL-3.0),
+RosarioSIS (GPL-2.0), `frappe/education` (GPL-3.0), Unifiedtransform (GPL-3.0), openSIS and Gibbon
+(GPL-3.0). **Every education ERP/SIS this KB can find is copyleft.** That is now a four-pass
+consistent result and should be treated as a property of the sector, not of the search.

@@ -369,3 +369,163 @@ predates Decision 33 — it is stale, not contradictory.
 No **edtech vendor share** for any APAC market, and no reliable institution-level adoption *rate*
 for China, India or Japan. Decision 33 adds a **compliance hook** for Vietnam; it adds no
 market-sizing figure, and this file still has none for Vietnam specifically.
+
+## 🆕 `p493` — `2026-10-28` — regional reads, with the per-region queries run and their misses declared
+
+🔵 **Evidence class:** everything in this section is **secondary** (institutional reports, policy
+trackers, survey write-ups) and flagged as such. No primary legal text was readable: `eur-lex.europa.eu`,
+`capitol.texas.gov` and `arxiv.org` still do not resolve from this session's network, which is the
+same limit `p490`–`p492` recorded. **Nothing below should reach a client deck without a primary read.**
+
+The brief's four per-region queries were each run. 🔴 **Two returned nothing new** and that is stated
+rather than left silent, because an unstated miss reads exactly like coverage.
+
+### North America
+
+🟢 **The `p490`/`p491` conflict over Oklahoma S.B. 1734 is resolved by a third independent source,
+in `p491`'s favour.** This KB has carried two incompatible descriptions of the same act:
+
+| source | description |
+|---|---|
+| `p490` | parent opt-out rights |
+| `p491` | instructional AI must be **educator-directed with human-in-the-loop review** |
+| 🆕 `p493` | districts must **adopt a written AI policy before the 2027-28 school year**, and AI is **barred from being the primary basis for high-stakes decisions such as grading or discipline** |
+
+🟢 **`p493`'s read and `p491`'s are the same duty in different words** — "not the primary basis for
+grading or discipline" *is* a human-in-the-loop requirement. **Two of three sources now describe an
+oversight duty; `p490`'s parent-opt-out reading is the outlier.** 🔵 Still not a primary read of the
+enrolled text, so the flag stays — but **design against the oversight duty, not against opt-out
+plumbing**, and note that the two are not mutually exclusive within one act.
+
+🔵 **The commercial point is unchanged and now better supported:** a written-policy mandate with a
+dated deadline (2027-28) plus a bar on AI-primary high-stakes decisions is **exactly** the
+policy-configurable compliance surface this section already recommends selling. 🟢 It also aligns
+North America with the EU shape: the differentiator is the human-oversight gate, so
+[`compose/patterns.md`](../compose/patterns.md) `P490-2`'s conformity work is reusable across both.
+
+🔴 **Miss declared:** no new NA adoption figure survived scrutiny. The widely-republished teacher-use
+numbers (60% of US K-12 teachers in 2024-25, 32% weekly; a competing 61% for 2026) come from vendor
+statistics round-ups that disagree with each other, and the "134 bills across 31 states" count is the
+figure this file already ruled **unusable** (trackers disagree by >10×). **Cite a specific statute,
+never a count** — that rule is re-confirmed, not replaced.
+
+### EMEA
+
+🟢 **Three institutional actors worth naming, none of them a regulator** — useful for positioning
+rather than compliance:
+
+- **The Apply AI Alliance** — a Commission forum convening AI providers, industry, public sector,
+  academia and social partners. A venue, not a rule-maker.
+- **Commission ethical-AI-in-education guidelines, updated May 2026.** 🔵 Guidance, not binding; the
+  binding calendar is still the AI Act's.
+- **Council conclusions on a human-centred approach to AI in education.** Direction-setting only.
+
+🟢 **The Article 4 AI-literacy clarification is re-confirmed from an independent source**: since
+July 2026 the duty is to **support** staff AI literacy and explicitly **does not require guaranteeing
+any specific level**. This matters in pricing — an AI-literacy workstream is a *measures-taken*
+deliverable, not a certified-outcome deliverable.
+
+🔵 **The deferral dates re-confirmed again, now from an eleventh independent secondary source**:
+stand-alone Annex III education systems **2 Dec 2027**, embedded-in-regulated-products **2 Aug 2028**,
+with enforcement by the AI Office and national authorities having started **2 Aug 2026**, and
+Regulation (EU) **2026/1744** published in the OJ on **24 Jul 2026**. 🔴 **Still not read at EUR-Lex**
+— the convergence is now very strong but the primary text remains unread from this session.
+🔵 The **2 Aug 2030 public-authority** claim `p491` flagged **did not resurface this pass** and stays
+unverified; it remains the item to check before pricing a ministry programme.
+
+🔴 **Miss declared:** the per-region query returned **no EMEA adoption rate and no vendor-share data**
+beyond what `p492` recorded, and **no new EMEA-origin education repository**. The `$2.64B`/31.9% CAGR
+and the Finland/Estonia/Netherlands K-12 ranking stand as `p491`'s secondary figures, unimproved.
+
+### APAC
+
+🟢 **A materially new regulatory fact, and it cuts against the obvious assumption: South Korea's
+AI Basic Act does not put education in its high-impact tier.** The enumerated high-impact domains
+are **health care, energy, transport, hiring and biometric analysis**. Education is **absent**.
+
+🔵 **Why this is worth a paragraph.** Korea has APAC's only comprehensive binding AI statute (in
+force **22 Jan 2026**, penalties expected ~Jan 2027), so it is the natural assumption that a Korean
+education deployment inherits a high-risk compliance burden. **It does not.** Combined with `T12` —
+Korea stripped AI digital textbooks of official textbook status in **August 2026** after adoption
+stayed below 30% — the Korean picture is consistent and unusual: **a strong general AI law, no
+education-specific high-risk tier, and a reversed national mandate.** 🟢 **Consequence:** sell Korea
+on outcomes and general-AI-Act conformity, **not** on an education high-risk hook that does not
+exist. The cross-region table's "education named high-risk → Vietnam only" row is confirmed, and
+now confirmed *by enumeration* rather than by absence of evidence.
+
+🟢 **The Ipsos ban-support series has an exception this KB had not recorded: Australia and New
+Zealand.** Where the seven APAC markets already listed run **23–31%** support for banning AI in
+schools, **ANZ shows *higher* support for a ban** — an EMEA-like public mood inside the region this
+file characterises as the world's most permissive. 🔵 **Practical effect:** do not carry an
+"APAC is permissive" framing into an Australian or New Zealand pitch. Treat ANZ as its own posture
+— closer to EMEA on public sentiment, while sitting under Australia's non-statutory,
+existing-law-plus-voluntary-guidance regime.
+
+🔵 **Vietnam re-confirmed, not advanced:** a July 2026 decision places education among six
+high-risk sectors (automated assessment, behavioural monitoring), **high-risk chiefly where the AI
+output is the sole basis for a decision without meaningful human review**, with systems already
+running before **15 Aug 2026** getting a grace period to **1 Mar 2027**. 🟡 **This KB's cross-region
+table says Vietnamese education systems bind from 1 Sep 2027, "not Mar 2027".** The two dates are
+reconcilable — a grace period for *pre-existing* systems versus a general application date — but
+**they are not the same obligation and this KB should not carry both without saying which is which.**
+Flagged for the next pass; do not quote either to a client yet.
+
+🔴 **Miss declared:** still **no edtech vendor share for any APAC market**, four passes running. The
+market report found names Google, Microsoft, IBM, Pearson and Byju's as "key players" with no share
+figures attached, which is not usable.
+
+### LATAM
+
+🟢 **This is the region where the evidence genuinely improved this pass, and it improved in
+*quality*, not just quantity** — the new figures come from UNESCO IESALC and PISA rather than from
+vendor surveys.
+
+| Figure | Value | Source class |
+|---|---|---|
+| Higher-ed institutions using AI in ≥1 area | **87%** of **200 institutions across 19 countries** | UNESCO IESALC with UNU-IAS |
+| Those with a **formal AI strategy** | 🔴 **26%** | same study |
+| 15-year-olds who have used AI chatbots for schoolwork | **~9 in 10**, across the **13** regional countries assessed | **PISA 2025** |
+| Brazilian school administrators using AI | **53%** — but only **22%** report school guidelines | Cetic.br |
+| Argentina, AI use by socio-economic class | **75%** high SES vs **42%** low SES | regional survey |
+| AI regulatory instruments, rules and proposals | **716**, across **23** countries and territories | Universidad de los Andes, 2026 |
+
+🟢 **The 87%-vs-26% pair is the strongest single statement of this region's thesis this KB has
+carried.** It replaces nothing — the Digital Education Council's 92%-students-vs-30%-satisfied
+figures stand — but it moves the claim from *student and faculty sentiment* to **institutional
+capability, measured across 19 countries by UNESCO**. UNESCO's own framing matches this file's:
+adoption is **driven by individual academics, researchers and students rather than institution-wide
+strategies**. 🔵 **This is the sentence to put in a ministry or university-system pitch**, and it is
+now attributable to UNESCO rather than to a vendor.
+
+🔴 **The Argentina SES split is new to this KB and changes a pattern recommendation.** A 33-point
+access gap between high and low socio-economic classes within one country means a national
+deployment that assumes connected, device-equipped students **will widen the gap it was bought to
+close**. 🟢 This is the strongest evidence yet for `T9`'s offline-first argument and for
+[`compose/patterns.md`](../compose/patterns.md) `P490-3`'s Kolibri base — and `p493` adds a second
+delivery surface below it: [`rumi-platform`](https://github.com/Orenda-Project/rumi-platform)
+(Apache-2.0, **WhatsApp**, 15 languages), which needs neither an app nor a browser.
+
+🟢 **A binding-ish hook exists after all, and this file said there was none.** This section states
+*"there is no binding LATAM compliance hook to sell against."* **Uruguay signed the Council of
+Europe Framework Convention on Artificial Intelligence in 2025 — the first country in Latin America
+to do so.** 🔴 **Read this carefully before using it:** a signature is **not** ratification and the
+Framework Convention is **not** an education-specific instrument; it binds *states* to principles,
+not vendors to conformity duties. 🟡 **So the honest status:** LATAM still has **no
+education-AI statute in force anywhere** — `p490`'s finding holds for a fourth pass — but Uruguay is
+now the region's first treaty-level AI commitment and the natural beachhead for a
+conformity-led pitch. **Also newly named:** Colombia's **CONPES 4144** national AI policy
+(Feb 2025) and a **Peruvian** AI law whose entry into force is reported as 90 business days after
+publication; 🔵 neither was read at source and Peru's status in particular needs verifying.
+
+🔵 **The 716-instrument figure is the LATAM analogue of this file's US bill-count rule.** 716
+instruments across 23 countries, with **none in force for education**, is not a sign of a maturing
+regime — it is regulatory noise, and one commentary reads it exactly that way: hundreds of
+overlapping initiatives producing **uncertainty rather than governance**. **Treat it as context,
+never as a count to quote**, the same discipline this file already applies to the "134 bills"
+figure in North America.
+
+🔵 **Brazil's PL 2338/2023 re-checked: no movement.** Still in the Chamber of Deputies' special
+committee, still awaiting the rapporteur's report, as `p491` recorded. 🟡 And the question of
+whether it treats education as high-risk is **still unresolved** — this pass's sources discuss the
+bill's risk tiers **without mentioning education**, which is the third pass to return that same
+silence. **Do not tell a client Brazil has an education high-risk category coming.**

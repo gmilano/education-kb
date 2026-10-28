@@ -6,6 +6,18 @@ updated: 2026-10-28
 
 # Education AI agents — build-on-able shelf
 
+> 🔴 **`p493` (`2026-10-28`) — READ THIS BEFORE THE TABLES.** `p493` found that **eight
+> repositories earlier passes recorded as promoted are absent from this file**, dropped by
+> `p490`'s full-file rewrite without leaving a marker. They are **restored into the tables below**,
+> each re-verified first-hand this pass. Two consequences for text that still stands elsewhere in
+> this file: the gap *"no permissive education-specific agent above 1,000★ other than DeepTutor"*
+> is **false** — [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) is **MIT at
+> 41,700★** — and the evaluation tier's *"none of them is licensed"* is **false** —
+> [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+> is **MIT**. Both corrections are applied in place below. Narrative:
+> [`agents/trending.md`](trending.md) `p493`; reads:
+> [`licence-and-stars.2026-10-28-p493.tsv`](../evidence/licence-and-stars.2026-10-28-p493.tsv).
+
 **Pass `p491` — reads of 2026-10-27.** `p490` (earlier the same day) rewrote this file to its
 specified table shape; `p491` **extends** it and does not rewrite it. The p490 tables below stand
 unchanged — every p490 SHA was re-resolved this pass and came back **identical**
@@ -34,20 +46,31 @@ see the reader defect recorded below. Evidence:
 
 ## Permissive — Globant can build on these
 
-Nine rows, MIT / Apache-2.0, each license read from bytes at the SHA shown. 🔵 **`p492` added no row
-here** — the one new permissive education agent it found has **0★** and is listed under *reference
-designs* below, deliberately outside this shelf.
+**Sixteen rows**, MIT / Apache-2.0 / BSD-3-Clause, each license read from bytes at the SHA shown.
+🟢 **`p493` restored seven of them** (`OpenMAIC`, `k12-teacher-skills`, `dolos`, `open-tutor-ai-CE`,
+`agent-skills`, `rumi-platform`, `Shiksha-Copilot`) after finding they had been promoted by earlier
+passes and then dropped by `p490`'s full-file rewrite. 🔵 **`p492` added no row here** — the one new
+permissive education agent it found has **0★** and is listed under *reference designs* below,
+deliberately outside this shelf; `p493`'s five new finds are all below the floor too and are listed
+in [`trending.md`](trending.md) rather than here.
 
 | Agent | Repo | License | ★ | SHA read | What it does |
 |---|---|---|---|---|---|
 | DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **45,900** | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p492`: HEAD unchanged for a third pass; `v1.6.15` released `2026-10-19`.** Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,700** | `70859b42e714` | **Open Multi-Agent Interactive Classroom** — any topic or document becomes an interactive lesson with slides, quizzes and project-based work. 781 commits; `v1.3.0-rc.1` dated `2026-10-22`; licence 1 065 B, `sha1 56d5b3ffd6e8`. 🟢 **Restored `p493`** after being dropped by `p490`'s rewrite — this is the row that falsifies this file's own permissive-scarcity gap, and its MIT grant is cleaner than DeepTutor's. 🔵 Org is `THU-MAIC` and the partnership contact is a `mail.tsinghua.edu.cn` address; **Tsinghua attribution is inferred from those, not stated in prose.** 🔴 **Not an LMS** — no enrolment, gradebook or SIS integration is claimed. |
 | smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | 30,100 | `96f33faaf028` | Minimal code-writing agent loop. Not education-specific; the usual substrate for a custom tutor agent. |
+| k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | **595** | `31fd6dbb0c07` | Four K-12 teacher skills (lesson planning, differentiation and two more) **plus the eval rubrics for them**, co-developed with Learning Commons. Licence 11 357 B, `sha1 1128f8f91104`. 🟢 **Restored `p493`** — recorded "Now shelved" on `2026-10-18` and never actually present in this file. 🔴 **This is the asset `p492` declared licence-unverifiable;** it was measured in this KB twice before that. |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | **387** | `38adb1e9459d` | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. |
+| dolos | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | **355** | `74b101785bad` | Source-code plagiarism detection; **3,865 commits**, the most-maintained address on this shelf. Ghent University. 🟢 **Restored `p493`** — `p296` tried to promote it, this KB's identity gate correctly refused the duplicate because a `foundations.md` row existed, and **that row was then deleted by a later rewrite too.** Licence 1 084 B, `sha1 8f6f3815d28d`. |
 | Skill-Anything | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | 344 | `3cdc1c1f11dc` | Any source (PDF, video, web, audio) → interactive package with quizzes, flashcards, spaced repetition. |
 | canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 309 | **`830bc2ef8389`** | MCP server over Canvas LMS. 🔴 **`p492`: HEAD drifted from `32e5d1ca0175`; licence byte-identical at both SHAs (1 071 B, `sha1 491fb891a4cf`) so the drift is code-only. `v1.16.0` lists FOUR advisories, not one** — `GHSA-7mj9-4mcg-hvhv` (Canvas token handling), `GHSA-7pp5-29mw-9jq3` (local code sandbox), `GHSA-hmr8-mvr2-mvw5` (file content fencing), `GHSA-qf6c-jv93-38gv` (Windows download permissions). Tool count self-inconsistent upstream (description 102, README 128) — **stop quoting a number**. |
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | **274** | `e24c8456e5f7` | Intelligent tutoring system with Bayesian Knowledge Tracing; ReactJS + Firebase. UC Berkeley CAHLR. |
 | KSoR | [panaversity/ksor](https://github.com/panaversity/ksor) | Apache-2.0 | 232 | `b50f28926fae` | SDK for governed, authoritative knowledge systems for humans and agents. Names education institutions as its target. |
+| open-tutor-ai-CE | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | `196c547291da` | Educational and collaborative AI platform, community edition. 380 commits and **194 forks against 114★** — a fork-heavy ratio that reads as deployment, not stargazing. 🟢 **Restored `p493`**, and 🔵 **its family is confirmed from the bytes**: the 1 531-byte payload opens *"All rights reserved"*, which is the literal opening of canonical BSD and which a title-block reader can mistake for a reserved-rights notice; all three BSD conditions including no-endorsement are present. `sha1 a027c9bb4f47`. |
 | mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT | 100 | `e137ca47cbec` | Self-hostable LMS with AI mentoring and role-play. Tenant isolation enforced in Postgres RLS, not app code. |
+| agent-skills (Learning Commons) | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | Apache-2.0 | 40 | `8b0599c24469` | The same four K-12 teacher skills from the education-consortium side, with `evals/` rubrics for pedagogy, rigour, format and scaffolding. `NOTICE` (268 B) names **Anthropic, PBC** and **Learning Commons**. Licence 10 173 B, `sha1 e88848668567`. 🟢 **Restored `p493`.** |
+| rumi-platform | [Orenda-Project/rumi-platform](https://github.com/Orenda-Project/rumi-platform) | Apache-2.0 | 18 | `f2d62af1eb82` | **WhatsApp-delivered** learning in **15 languages**; 847 commits. Pakistan / Taleemabad. 🟢 **Restored `p493`** — the only no-app, no-browser delivery surface on this shelf, which matters wherever `T9`'s offline-first argument applies. Licence 11 287 B, `sha1 20312eb940f0`. |
+| Shiksha-Copilot | [microsoft/Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | MIT | 9 | `cf2a2e24c3d4` | Microsoft Research India, **VELLM** initiative, with the Sikshana Foundation. Lesson plans, examples, analogies, activities, assessments — **all routed to a teacher for review before classroom use**, which is the human-oversight shape `P490-2` argues for. 149 commits; licence 1 141 B, `sha1 689ec0681815`. 🟢 **Restored `p493`.** |
 | AI Agents for Beginners | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | MIT | 78,000 | `dd0f080d07d2` | 18-lesson agent course. **A curriculum, not a deployable agent** — listed because it is the most-starred thing in this space and is routinely miscatalogued as a product. |
 
 ## Copyleft — usable, but not for a hosted commercial derivative
@@ -95,7 +118,12 @@ the sibling licenses, so any body scan is a family false-positive generator.**
 
 ## The DeepTutor license caveat — carried forward, still true
 
-`HKUDS/DeepTutor` is 88% of this shelf's star mass and its Apache-2.0 payload (11,408 B) is
+🔴 **`p493` correction to the figure this section opens with: DeepTutor is no longer 88% of this
+shelf's star mass.** With `OpenMAIC` (MIT, 41,700★) restored, DeepTutor is **46.0k of ~118k** across
+the permissive tier — **under 40%**. The concentration argument below needs restating, not
+repeating; the *provenance* point it introduces is unaffected and still stands.
+
+`HKUDS/DeepTutor` carries 46.0k★ and its Apache-2.0 payload (11,408 B) is
 **not** canonical Apache-2.0 (10,015 B operative span). Three function-word substitutions sit in
 the operative body:
 
@@ -113,18 +141,25 @@ Kong), and the same edited payload appears byte-identically in the derivative
 [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) (136★),
 which is how a copied license travels. Treat it as a provenance flag, not a license risk.
 
-## Evaluation instruments — they exist, and none of them is licensed
+## Evaluation instruments — they exist, and 🟢 **one of them IS licensed** (`p493` correction)
 
 `p490` recorded "no open-source education-AI evaluation harness above 60★ exists" and treated the
-tier as empty. Measured this pass, the finding is **sharper and worse**: the instruments exist and
-are academically serious, but **not one of them ships a license grant**, so none can be used in
-client work at all.
+tier as empty. `p491` replaced that with a sharper claim — that the instruments exist and **not one
+of them ships a license grant**.
+
+🔴 **`p493`: that sharper claim is also false, and the counter-example was already in this KB.**
+[`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) is
+**MIT** (1 064 B, `sha1 ac3710f1a312`, read at `21a43a395ab4`; sidebar and README agree). It was
+read on `2026-10-18`, recorded in `agents/trending.md`, and never landed in this file — the same
+dropped-row defect described in the banner at the top. **The tier is small and under-starred, not
+unlicensed.**
 
 | Instrument | Repo | Grant at SHA | ★ | What it measures |
 |---|---|---|---|---|
 | MathTutorBench | [eth-lre/mathtutorbench](https://github.com/eth-lre/mathtutorbench) | 🔴 **no license file** (`6faed173ec2b`) | 45 | Open-ended *pedagogical* capability of LLM tutors — 3 teacher skills, 7 tasks. EMNLP 2025 Oral (arXiv 2502.18940). |
 | TutorCaseBench | [kixlab/TutorCaseBench](https://github.com/kixlab/TutorCaseBench) | 🔴 **no license file** (`6b9ac34262c7`) | 0 | Tutor behaviour with students showing challenging behaviours; 923 dialogues, 5 challenge types. KAIST. |
-| lm-evaluation-harness | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 **MIT**, 1,066 B (`d6de81643928`) | 14,300 | Not education-specific — the general runtime. **The only permissive piece in this tier.** |
+| **pedagogy-benchmark** | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT**, 1 064 B (`21a43a395ab4`) | 13 | **Pedagogical knowledge of LLMs, from teacher-qualification exams**: 1,143 questions — **920 CDPK** (cross-domain pedagogical knowledge) and **223 SEND** (special educational needs and disabilities) — with harness support for "100+ models". Paper: *Benchmarking the Pedagogical Knowledge of Large Language Models*, `arXiv:2506.18710`. 🟢 **The licensed education-specific instrument this KB spent three passes declaring does not exist.** Restored `p493`. |
+| lm-evaluation-harness | [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 **MIT**, 1,066 B (`d6de81643928`) | 14,300 | Not education-specific — the general runtime. The permissive *runtime* in this tier. |
 
 🔴 **MathTutorBench's own README contradicts itself on the license**: the badge reads
 `License: CC BY 4.0` and the closing line of the same file says
@@ -132,27 +167,54 @@ client work at all.
 are two different licenses, **one of them copyleft**, and neither is a software grant — Creative
 Commons licenses are content licenses and CC itself advises against using them for code.
 
-**Consequence for an engagement:** the benchmark *tasks* are publishable research you may read and
-reimplement from the papers; the **repository code and data cannot be taken**. No grant means no
-rights, not permissive-by-default. So the harness remains a **build** — see
-[`compose/patterns.md`](../compose/patterns.md) `P491-1`, which rebases that build on
-`lm-evaluation-harness` (MIT) instead of on nothing.
+**Consequence for an engagement, restated `p493`:** for `mathtutorbench` and `TutorCaseBench` the
+old consequence holds — the *tasks* are publishable research you may read and reimplement, the
+**repository code and data cannot be taken**, and no grant means no rights rather than
+permissive-by-default. 🟢 **But the engagement no longer starts from nothing.**
+`pedagogy-benchmark` is **MIT**, so its 1,143 exam-derived items and its 100+-model harness are
+**takeable as code and data**. `P491-1` is therefore no longer a build-from-scratch on a bare
+runtime: it starts from an MIT education-specific instrument and extends it, with
+`lm-evaluation-harness` (MIT) underneath. 🔴 Its 13★ means no community and no security process —
+use it as a corpus and a baseline, not as a dependency you expect to be maintained.
 
 ## Declared gaps — searched, nothing found
 
 Stating these because silence looks identical to coverage.
 
-- **No permissive education-specific agent above 1,000★ other than DeepTutor.** Everything
-  between 387★ and 30,000★ on this shelf is either general-purpose (smolagents) or copyleft
-  (ChatTutor, tutor-gpt). The permissive education tier is genuinely small.
+- 🔴 ~~**No permissive education-specific agent above 1,000★ other than DeepTutor.**~~
+  **RETRACTED `p493` — this was false, and false by ~40×.**
+  [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) is **MIT at 41,700★** and
+  education-specific. It was not missed by search: this KB read it, recorded it "Now shelved" on
+  `2026-10-18`, cites it **51 times** in its own history, and `p490`'s rewrite dropped the row.
+  🟢 **The defensible restatement:** the permissive tier is **concentrated, not empty** — two
+  addresses (`DeepTutor` 46.0k Apache-2.0, `OpenMAIC` 41.7k MIT) hold ~74% of its star mass, and
+  the next permissive education-specific row is `k12-teacher-skills` at **595★**. 🔵 **That
+  595-to-41,700 cliff is the real structural finding**, and it is a different sentence from
+  "nothing permissive exists".
+- 🟢 **`p493` — a permissively-licensed option now exists in four layers this file previously
+  showed as copyleft-only or empty**: interactive classroom (`OpenMAIC`, MIT), tutoring platform
+  (`open-tutor-ai-CE`, BSD-3-Clause), academic integrity (`dolos`, MIT) and evaluation
+  (`pedagogy-benchmark`, MIT). 🔴 **The full-LMS layer is still copyleft-bound** — `OpenOLAT`
+  (Apache-2.0) remains the only permissive full LMS, so `T2`'s binding constraint holds *there*
+  and nowhere else. See [`repos/trending.md`](../repos/trending.md) `p493`.
 - **No LATAM-origin or Africa-origin education agent reached this shelf's star floor.** Searched
   globally and per region; the regional supply is in deployments and national programmes
-  (see `intel/market.md`), not in starred repositories.
-- **No *usable* open-source education-AI evaluation harness exists — but the instruments do.**
-  Restated this pass: `mathtutorbench` (45★) and `TutorCaseBench` (0★) are real and serious, and
-  **neither carries a license grant**, which is a harder blocker than scarcity. A star-ordered
-  sweep is still structurally blind to this tier, and a license-ordered sweep finds nothing in it
-  either. See the table above.
+  (see `intel/market.md`), not in starred repositories. 🔵 **`p493` — the gap is now instantiated
+  rather than asserted, and it is still open.**
+  [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) ("Manu") is **MIT**
+  (1 103 B, `987f3106ef6a`), a **Brazilian-Portuguese voice math tutor** covering 1st grade to
+  university on TypeScript + LiveKit Agents — the first LATAM-origin education agent here with a
+  readable grant and a real regional property. At **0★ and 3 commits it does not close the gap**;
+  it shows the gap is a supply fact, not a search artefact. **Do not propose it as a dependency.**
+  🔵 Africa-origin: still nothing, though `open-tutor-ai-CE` (Morocco) and `rumi-platform`
+  (Pakistan) now put North-African and South-Asian origin on the shelf.
+- 🔴 ~~**No *usable* open-source education-AI evaluation harness exists.**~~ **RETRACTED `p493`.**
+  `mathtutorbench` (45★) and `TutorCaseBench` (0★) do carry no grant, and that part stands — but
+  [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+  is **MIT**, education-specific, and was read by this KB on `2026-10-18`. 🟢 **The usable
+  instrument exists.** 🔵 **What remains true is the discovery point, and it is sharper now:** a
+  star-ordered sweep is blind to this tier (13★) *and* this KB's own star-ordered shelf dropped the
+  row — so the blindness was in the bookkeeping as much as in the sweep. See the table above.
 - ~~**Commit recency is not on this table.**~~ 🟢 **Partly closed `p492` — a *release* date is
   readable even though a commit date is not.** The page-fetch channel does expose tagged releases
   with dates: `canvas-mcp v1.16.0` (Oct 2026), `DeepTutor v1.6.15` (`2026-10-19`),
@@ -197,10 +259,26 @@ It is a **1 071-byte MIT grant over a design worth copying**, which is the entir
 |---|---|---|---|
 | [`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | **MIT**, 1 082 B, `sha1 b3428e1f52c0` (`2be1800d141e`) | **67,600** | 60+ annotated PyTorch paper implementations. **CS-education teaching material, not a deployable agent** — the same miscatalogue this shelf already flags for `microsoft/ai-agents-for-beginners` (78,000★). It would top this table on stars and teach a client nothing about tutoring. 🔵 Its licence file is lowercase **`license`**; probes trying only `LICENSE`/`LICENSE.md` would report "no licence" on an MIT repo. **Add lowercase `license` to every future probe list.** |
 
-### 🔵 Gap restated, now with a reason rather than a silence
+### 🔴 Gap restated by `p492` — and it was never a gap. Closed `p493`.
 
-**Learning Commons' "Claude for Teachers" agent skills** (Lesson Plan Generation, Lesson
+~~**Learning Commons' "Claude for Teachers" agent skills** (Lesson Plan Generation, Lesson
 Differentiation; launched July 2026, publicly described as open-source) are **not listed** because
 their licence could not be read: no repository resolved under the obvious paths, and
-`learningcommons.org` **does not resolve from this session's network**. An unverified licence is not
-a finding. Recorded as a lead for the next pass.
+`learningcommons.org` **does not resolve from this session's network**.~~
+
+🔴 **`p493`: both repositories were already measured in this KB, by name, before `p492` declared
+this gap** — and both re-measured **byte-identically** this pass:
+
+| repo | earlier read in this KB | `p493` read at SHA | verdict |
+|---|---|---|---|
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0, 11 357 B | **11 357 B**, `sha1 1128f8f91104` (`31fd6dbb0c07`) | 🟢 identical |
+| [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | Apache-2.0, 10 173 B, `NOTICE` names Anthropic, PBC | **10 173 B**, `sha1 e88848668567` (`8b0599c24469`) | 🟢 identical |
+
+Both are now **rows in the permissive table above**, where one of them had been recorded as "Now
+shelved" since `2026-10-18`.
+
+🔵 **The method failure is the transferable part.** `p492` searched the open web for a publisher's
+site that does not resolve from this session, and concluded the licence was unreadable. It never
+`grep`-ed the repository it was editing. **Rule for later passes: before declaring a gap, run
+`grep -ri <subject>` over this repo. A gap declared over evidence the KB already holds is worse
+than silence, because it tells the next pass not to look.**

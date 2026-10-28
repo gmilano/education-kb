@@ -4,6 +4,153 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p493` — `2026-10-28` — **🔴 THIS KB PROMOTED EIGHT REPOSITORIES AND THEN LOST THEM. Eight addresses that earlier passes recorded as "Now shelved" are absent from **both** `agents/top.md` and `repos/foundations.md` at HEAD `cb6a4be`. One of them is [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — **MIT**, **41,700★**, an education-specific multi-agent classroom — which makes this shelf's standing gap *"no permissive education-specific agent above 1,000★ other than DeepTutor"* **false by a factor of forty**. 🔴 A second dropped row, [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark), is **MIT** — which falsifies the claim in `top.md` and in `T11` that **not one** education-AI evaluation instrument is licensed. 🔴 And `p492`'s own declared gap — that the Learning Commons skills "could not be licence-verified" — was already closed in this KB's own history, twice.**
+
+Full reads: [`licence-and-stars.2026-10-28-p493.tsv`](../evidence/licence-and-stars.2026-10-28-p493.tsv).
+
+🔵 **Channel posture: `p492`'s diagnosis re-confirmed, nothing new to add.** `git ls-remote --symref`
+for existence and SHA, `raw.githubusercontent.com` at the pinned SHA for licence bytes, page fetch
+for stars/forks/releases; `curl -sI` against `github.com` still returns the session proxy's `403`
+and still carries zero information about whether a repo exists. Bytes measured `curl -o file` then
+`wc -c`, per `p492`'s one-byte rule. Probe list includes lowercase `license` and `LICENSE-CODE`.
+
+### 🔴 The defect, stated precisely
+
+`p490` rewrote `agents/top.md` in full and `p383`/`p391`/`p392` rewrote `repos/foundations.md` in
+full (see `archive/`). **A full-file rewrite re-derives the tables from the pass's own reads, and
+any row promoted by an earlier pass that the rewriting pass did not happen to re-read is silently
+gone.** It leaves no marker: the row does not move to a "removed" list, it simply stops existing,
+and the shelf then reads as a complete census.
+
+The mechanism is verifiable by name. `agents/trending.md` records a `2026-10-18` read-table whose
+rows are each annotated **"Now shelved"**. Counted against HEAD `cb6a4be`:
+
+| repo | recorded as | in `top.md`? | in `foundations.md`? |
+|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | "Now shelved", MIT, 41.0k★ | 🔴 **0 occurrences** | 🔴 **0** |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | "Now shelved", Apache-2.0, 572★ | 🔴 **0** | 🔴 **0** |
+| [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) | "Now shelved", Apache-2.0, 18★ | 🔴 **0** | 🔴 **0** |
+| [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | "Now shelved", MIT, 9★ | 🔴 **0** | 🔴 **0** |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | *"already a foundation row"*, enriched at `p296` | 🔴 **0** | 🔴 **0** |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | read `2026-10-18`, MIT, 12★ | 🔴 **0** | 🔴 **0** |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | in `p?`'s eight "Build-on-this" grants, BSD-3-Clause | 🔴 **0** | 🔴 **0** |
+| [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | Apache-2.0, measured since `p119`/`p120` | 🔴 **0** | 🔴 **0** |
+
+🔴 **`dolos` is the sharpest case**: `p296` tried to promote it, this KB's identity gate *correctly
+refused the duplicate* because a foundations row already existed — and that foundations row is now
+gone too. The gate defended a row that a later rewrite deleted.
+
+### 🟢 All eight re-verified first-hand this pass, then restored
+
+Every row below was re-resolved from scratch: `git ls-remote --symref` for the SHA, licence bytes
+read at that SHA, stars from the page. **No row is carried on an earlier pass's word.**
+
+| repo | licence @ SHA | ★ | forks | commits | region |
+|---|---|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT**, 1 065 B, `sha1 56d5b3ffd6e8` (`70859b42e714`) | **41,700** | 6,400 | 781 | APAC — China |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0**, 11 357 B, `sha1 1128f8f91104` (`31fd6dbb0c07`) | **595** | 107 | 4 | North America |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | **MIT**, 1 084 B, `sha1 8f6f3815d28d` (`74b101785bad`) | **355** | 48 | 3,865 | EMEA — Belgium |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause**, 1 531 B, `sha1 a027c9bb4f47` (`196c547291da`) | **114** | 194 | 380 | EMEA — Morocco |
+| [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | **Apache-2.0**, 10 173 B, `sha1 e88848668567` (`8b0599c24469`) | 40 | 6 | 43 | North America |
+| [`Orenda-Project/rumi-platform`](https://github.com/Orenda-Project/rumi-platform) | **Apache-2.0**, 11 287 B, `sha1 20312eb940f0` (`f2d62af1eb82`) | 18 | 19 | 847 | APAC — Pakistan |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT**, 1 064 B, `sha1 ac3710f1a312` (`21a43a395ab4`) | 13 | 0 | 5 | EMEA/Global |
+| [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | **MIT**, 1 141 B, `sha1 689ec0681815` (`cf2a2e24c3d4`) | 9 | 12 | 149 | APAC — India |
+
+🟢 **`open-tutor-ai-CE`'s family is confirmed from the bytes, not the sidebar.** Its 1 531-byte
+payload opens *"Copyright (c) 2023-2025 Mohamed El hajji … All rights reserved."* — which a
+title-block reader could mistake for a reserved-rights notice. The full text carries the
+**three** BSD conditions including the no-endorsement clause, so it is **BSD-3-Clause**; the
+sidebar agrees. 🔵 Worth recording because *"All rights reserved"* is the literal opening of
+canonical BSD and this KB has a reader anchored on the first 200 bytes.
+
+### 🔴 Two standing claims in this KB are false, and a third was never a gap
+
+**1. `top.md`'s first declared gap is false by ~40×.** It reads: *"No permissive education-specific
+agent above 1,000★ other than DeepTutor. Everything between 387★ and 30,000★ on this shelf is
+either general-purpose (smolagents) or copyleft."* [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC)
+is **MIT**, **41,700★**, and education-specific — its own description is *"Open Multi-Agent
+Interactive Classroom — Get an immersive, multi-agent learning experience in just one click"*,
+and its README describes turning any topic or document into an interactive classroom with slides,
+quizzes and project-based learning. The organisation is `THU-MAIC` and the partnership contact is
+a `mail.tsinghua.edu.cn` address. 🔵 **Tsinghua attribution is inferred from the org name and that
+contact domain, not stated in prose** — recorded as inference, not as a read.
+
+🟢 **And it is more permissive than the row this shelf is built on.** DeepTutor is Apache-2.0 with
+the edited-payload provenance flag this KB carries at length; OpenMAIC is plain MIT at 1 065 B.
+
+🔴 **Consequence for a second published figure:** `top.md` states DeepTutor is *"88% of this
+shelf's star mass."* With OpenMAIC restored, DeepTutor is **46.0k of ~118k** across the permissive
+tier — **under 40%**. The concentration argument that figure supports needs restating, not
+repeating.
+
+**2. `T11` and `top.md` are wrong that no education-AI evaluation instrument is licensed.** The
+published claim is *"the instruments exist and **not one of them ships a license grant**, so none
+can be used in client work at all."*
+[`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) is
+**MIT** (1 064 B, read at `21a43a395ab4`; sidebar and README agree). It is a genuine pedagogical
+instrument: **1,143 questions drawn from teacher-qualification exams**, split **920 CDPK** /
+**223 SEND**, harness support for *"100+ models"*, behind the paper *"Benchmarking the Pedagogical
+Knowledge of Large Language Models"* (`arXiv:2506.18710`, an identifier this KB already carried).
+🟢 **This is the licensed education-AI eval instrument the KB has spent several passes declaring
+does not exist** — and it was sitting in this KB's own trending history, read on `2026-10-18`.
+
+**3. `p492`'s Learning Commons gap was never a gap.** `p492` wrote that the "Claude for Teachers"
+skills *"could not be licence-verified: no repository resolved under the obvious paths"*. Both
+repositories were already measured in this KB, repeatedly, by name — and both re-measured
+**byte-identically** this pass:
+
+| repo | this KB's earlier read | `p493` read | verdict |
+|---|---|---|---|
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0, `LICENSE` **11 357 B** | Apache-2.0, **11 357 B**, `sha1 1128f8f91104` | 🟢 **identical** |
+| [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | Apache-2.0, `LICENSE` **10 173 B**, `NOTICE` names **Anthropic, PBC** | Apache-2.0, **10 173 B**, `sha1 e88848668567` | 🟢 **identical** |
+
+🔴 **The failure was not a network failure, it was a lookup failure.** `p492` searched the web for
+a publisher's site that does not resolve from this session, instead of `grep`-ing the KB it was
+editing. **Rule for later passes: before declaring a gap, `grep -ri` the repository for the
+subject's name. A gap declared over held evidence is worse than silence, because it instructs the
+next pass not to look.**
+
+### 🟢 New addresses this pass — five MIT finds, none promoted, and that is the finding
+
+The brief's two ranking queries were run and did return addresses new to this KB. **Every one is
+below this shelf's star floor**, so none is promoted; they are recorded so the next pass does not
+re-discover them as if new.
+
+| repo | licence @ SHA | ★ | why not promoted |
+|---|---|---|---|
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | **MIT**, 1 069 B, `sha1 d985908e4f70` (`6a8028528afc`) | **1** | MIT Open Learning's own tutor backend; pedagogy paper `arXiv:2410.03781`. Institutional provenance, no community. **Reference design.** |
+| [`MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor`](https://github.com/MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor) | **MIT**, 1 069 B, `sha1 d985908e4f70` (`e3c6905a7b6e`) | **0** | the research origin of the above |
+| [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | **MIT**, 1 103 B, `sha1 c7d1c8acf6cc` (`987f3106ef6a`) | **0** | "Manu" — **Brazilian-Portuguese voice math tutor**, 1st grade to university, TypeScript + LiveKit Agents. **3 commits.** |
+| [`Ebimsv/AITutorAgent`](https://github.com/Ebimsv/AITutorAgent) | **MIT**, 1 072 B, `sha1 d587f7809550` (`09fdd6722f1e`) | low | LangGraph tutorial/Q&A agent |
+| [`hari7261/AI-Tutor`](https://github.com/hari7261/AI-Tutor) | **MIT**, 1 090 B, `sha1 37b7b93baf21` (`8d93823328b1`) | low | fully offline via Ollama — the posture `T9` argues for, at no scale |
+
+🟢 **A fork can be the maintained copy — this KB had no rule for that and needed one.**
+`mitodl/open-learning-ai-tutor` carries GitHub's *"forked from
+`MIT-OL-AI-Tutoring/Open_Learning_AI_Tutor`"* label and **157 commits**; the upstream it forked has
+**24**. The institutional fork is the live one and the research origin is the quiet one — the
+inverse of the usual assumption. Their licence payloads are **byte-identical** (`1 069 B`, both
+`sha1 d985908e4f70`). **Rule: "fork" is not a staleness signal. Compare commit counts in both
+directions before picking the canonical address.**
+
+🔵 **The LATAM-origin gap is now instantiated rather than asserted — and it is still open.** This
+shelf has said for several passes that no LATAM-origin education agent reaches its star floor.
+"Manu" is the first LATAM-origin education agent here with a **readable MIT grant** and a genuine
+regional property (pt-BR voice, primary school through university). At **0★ and 3 commits it does
+not close the gap** — it shows the gap is a supply fact, not a search artefact. Do not propose it
+as a dependency.
+
+### 🟢 Re-read, no drift
+
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) sidebar now reads **46.0k★** / 5.8k forks
+against the **45,900** this KB published hours earlier, with **`v1.6.15` (`2026.10.19`)** and
+default branch `main` re-confirmed. 🔵 Two third-party trend aggregators put it at **42,566** on
+`2026-10-25` and **44,177** on `2026-10-27`; the page read is the authoritative channel here and
+the aggregator series is consistent with it at roughly **+1,600★/day**. No licence re-read this
+pass. [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+re-read at **1 230 B** `CC-BY-SA-4.0` (`135d6275e7db`) — matching `p466` and `p492` exactly, and
+🔴 still a **content** licence, still not build-on supply.
+
+
 ## 🆕 `p492` — `2026-10-28` — **🔴 THE KEYSTONE INTEGRATION MOVED AND NOBODY CHECKED IT. [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — the only maintained agent surface on an incumbent LMS, and the base of pattern `P490-1` — has drifted from this KB's pinned `32e5d1ca0175` to **`830bc2ef8389`**, and its `v1.16.0` now lists **FOUR** published security advisories where this KB recorded **one**. 🟢 Its licence is **byte-identical at both SHAs** (MIT, 1 071 B, `sha1 491fb891a4cf`), so the drift is **code-only**. 🔵 And the `curl` `403` that has blocked this KB since `p472` is now **explained, not worked around**.**
 
 🔵 **Channel posture — the `403` is finally diagnosed.** `p491` called `curl -sI https://github.com/<repo>` "a uniform false-negative generator" and was right, but could not say why. It can now: the request returns **HTTP 403 with a JSON body** reading *"GitHub access to this repository is not enabled for this session. Use add_repo to request access."* **The 403 is this session's own GitHub proxy access gate — not GitHub rate-limiting, not a missing repo.** So a `403` here carries **zero** information about whether a repo exists. What works, unauthenticated and unchanged: **`git ls-remote --symref`** (existence + default ref + SHA) and **`raw.githubusercontent.com` at a resolved SHA** (licence bytes). For stars, sidebar, releases and advisories, the working channel is a **`WebFetch` page read**, not `curl`. Evidence, with the full note:
