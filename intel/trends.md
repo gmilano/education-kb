@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p506` — `2026-10-28` — **🆕 `T31` (a verified number can still be the wrong number — this base has five instruments that grade whether a figure is CURRENT and none that grade what it MEASURES, and the defect is live in its own best commercial sentence). 🟢 The EMEA adoption nil is BROKEN after thirteen passes, and `T30`'s instrument-class prediction is confirmed. 🔴 `T24` saturation holds on a fourth shape: the prescribed discovery query now returns zero repositories.**
+
+Reads: [`emea-adoption-instruments.2026-10-28-p506.tsv`](../evidence/emea-adoption-instruments.2026-10-28-p506.tsv),
+[`channel-probe.2026-10-28-p506.tsv`](../evidence/channel-probe.2026-10-28-p506.tsv).
+Full narrative: [`agents/trending.md`](../agents/trending.md) `p506`.
+
+### 🆕 `T31` — **Every verification instrument on this base grades provenance. None grades meaning. That is a whole missing axis, and it is already costing.**
+
+This base has built, over ~500 passes, an unusually disciplined verification stack: licence payload
+digests, pinned blob SHAs, star re-read cadence, pin-drift detection, `archived`, queried-vs-returned
+reconciliation, tag censuses. 🟢 **Every one of them answers the same question — *is this number
+current, and is it attributable to the thing it is attached to?***
+
+🔴 **None of them answers: *does this number measure what the sentence built on it claims?*** And
+the live instance is in this base's own self-declared *"best commercial sentence"*:
+
+| | what the shelf says | what the instrument says |
+|---|---|---|
+| Sanoma Learning 2026, >20,000 teachers, 14 countries | 🔴 **"63 % of European teachers use AI"** | 🟢 **63 % EXPECT TO USE AI TO PREPARE LEARNING MATERIALS**, up from **49 %** (2023–2025) |
+| the argument built on it | 🔴 *"a 47-point gap"* against the 16 % who think general-purpose AI improves outcomes | 🔴 **two different measures — not one population, so not a gap** |
+
+🔵 **The provenance chain was flawless and that is the point.** `p270` caught a *propagation*
+defect on this very figure (the file claimed Sanoma was shelved when it was not), fixed it, and
+re-ran the grep to prove the fix. **It propagated the number faithfully and never asked what the
+number counted.** A press release and a report said different things; the base shelved the press
+release.
+
+🟢 **`T31`'s method rule, and it is cheap:** for any figure a *client sentence* rests on, record the
+**measure definition** beside the value — population, denominator, and the verb (*uses* / *expects
+to use* / *has ever used* / *uses at least sometimes*). 🔵 **Those four verbs are not
+interchangeable and this pass met all four in one week of European teacher data**: DfE **44 %**
+(*uses at least sometimes*), DfE School and College Voice **82 % / 78 %** (*has ever used*), Sanoma
+**63 %** (*expects to use, for one task*), OECD **37 %** (*used for their job*, **lower secondary
+only**). 🔴 **Quoting any two of them side by side as a trend is a fabrication**, and it is an easy
+one to commit by accident.
+🔴 **Second live instance, found by the same rule:** the OECD **37 %** is specifically **lower
+secondary** teachers. `lower secondary` returns **zero** hits across every shelf while
+*Digital Education Outlook* appears **14** times — the instrument is shelved, the scope qualifier
+that makes the figure true is not. 🟢 The shelves' own **36 %** is left unchanged; the OECD's
+summary page and its PDF disagree by a point and the primary is unreadable here.
+
+### 🟢 `T30` confirmed on its own prediction — and the EMEA nil is closed
+
+🔵 `T30` predicted the next real finding would be *"a named nil, not a search"*, and named the
+instrument classes: **national ministry statistics, Eurostat**. 🟢 **Both delivered on the first
+attempt**, after the prescribed regional query had failed thirteen times:
+
+| figure | instrument | measure |
+|---|---|---|
+| **39.3 %** | 🟢 **Eurostat** | EU **16–24s** using generative AI **for formal education**, 2025 (**9.4 %** at 16–74) |
+| **63.8 %** | Eurostat | EU 16–24s using generative AI **at all**, 2025 |
+| **44 %** | 🟢 **DfE England** (*Technology in Schools 2024–25*) | teachers using GenAI **at least sometimes for school activities** |
+| **~two-thirds / ~one-third** | 🟢 **Eurydice** (*Digital education at school in Europe 2026*, 22 Sep 2026, 38 systems) | systems with an AI policy instrument / with AI in the **curriculum** |
+| **29.7 %** | OECD **TALIS 2024** via the European Commission | EU teachers with **any AI professional development** |
+
+🟢 **The trend this establishes is not "EMEA adopted AI".** It is that **EMEA's deficit is
+capability and governance, not uptake** — demand arrived informally and is now measured, while under
+30 % of teachers have had training and only a third of systems teach AI in the curriculum.
+🔵 **That is a different engagement shape from North America's**, where the binding constraint is a
+policy mandate acting as a procurement trigger. Commercial consequence in
+[`intel/market.md`](market.md) `p506`.
+
+🔴 **Grade, and it is a hard limit on everything above: `SEARCH-ATTESTED, PRIMARY UNREAD`.** Every
+non-GitHub host is refused at the CONNECT in this session and **`WebFetch` shares the same
+allowlist** — so `Gap 483-K` generalises from the `europa.eu` family to **every host but
+`github.com` and `raw.githubusercontent.com`**, and **WebSearch is the only open-web channel here.**
+🔴 This also makes `Gap 505-F`'s Maryland primary **unclosable from this session**, by the same
+attested mechanism as EUR-Lex.
+
+### 🔴 `T24` — a fourth test shape, and the channel is what saturated
+
+The prescribed `top open source AI agents education 2026 github MIT` returned **zero GitHub
+repositories** — vendor blogs and SEO roundups naming only commercial products. 🟢 Earlier
+saturation tests said *this base already holds the supply*; **this one says the discovery channel
+itself is exhausted.** 🔵 Run the battery to attest, not to find; find on the API channel.
+
 ## 🆕 `p505` — `2026-10-28` — **🆕 `T30` (the prescribed discovery battery has now saturated on BOTH axes — supply and demand — so the binding defect class in this base is no longer discovery but PROMOTION BETWEEN SHELVES, and this pass found a live instance). 🟢 `T29`'s one-field `archived` check ran clean on every address. 🔴 Three instrument defects registered, one of which nearly wrote a false falsification onto `agents/top.md`.**
 
 Reads: [`api-reconciliation.2026-10-28-p505.tsv`](../evidence/api-reconciliation.2026-10-28-p505.tsv).

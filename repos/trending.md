@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p506` — `2026-10-28` — **🔴 THE PRESCRIBED GITHUB-DISCOVERY BATTERY RETURNED ZERO REPOSITORIES — not "rows we already hold", but nothing at all, because the open web's education-AI surface is now vendor marketing. 🟢 All 129 shelf addresses re-read on the API channel: 3 archived (all already flagged), 1 silently dropped (3rd consecutive pass), 1 fork-hidden. 🔴 And a 6,950★ Apache-2.0 row has been sitting inside this base's headline "cliff" the whole time.**
+
+Reads: [`api-shelf-read.2026-10-28-p506.tsv`](../evidence/api-shelf-read.2026-10-28-p506.tsv),
+[`permissive-tier.2026-10-28-p506.tsv`](../evidence/permissive-tier.2026-10-28-p506.tsv),
+[`channel-probe.2026-10-28-p506.tsv`](../evidence/channel-probe.2026-10-28-p506.tsv).
+
+### 🔴 `T24` saturation — a fourth test shape, and the shape itself is new
+
+| pass | axis tested | novel finds |
+|---|---|---|
+| `p502` | topic vocabulary, 50★ floor | 0 above floor |
+| `p503` | creation date, 90- and 180-day windows | 0 of 24 |
+| `p504` | three topic axes at lower floors | 1 of 35, out of scope |
+| 🆕 **`p506`** | **the two prescribed GitHub-discovery queries, verbatim** | 🔴 **0 repositories returned — not 0 novel, 0 ROWS** |
+
+🔴 **`top open source AI agents education 2026 github MIT`** returned vendor blogs, a university
+course listing and SEO roundups. The products named — Khanmigo, Squirrel AI, Magic School, Eduaide,
+Brisk, Curipod — are **all commercial**, and not one GitHub address came back.
+🔴 **`github trending education AI 2026`** returned a third-party trending tracker whose
+education-adjacent rows are an `aitutor` repo at **+2★ in 60 days** and a 292★ article collection.
+
+🟢 **This is a stronger result than three passes of "already held", and it changes the method.**
+Saturation measured on vocabulary, date and floor says *this base has the supply*. **This says the
+CHANNEL is exhausted**: a web search for education-AI repositories now surfaces marketing, because
+that is what ranks. 🔵 **Consequence, and it supersedes the schedule's own instruction:** run the
+prescribed battery to **attest** saturation and record the attestation, then spend the pass's budget
+on the API channel and on cross-shelf reconciliation (`T30`). Discovery through WebSearch is no
+longer a yield-bearing activity for this industry.
+
+### 🔴 The second rung of the permissive tier was never missing — it was never read
+
+🔴 [`agents/top.md`](../agents/top.md) has carried, as *"the real structural finding"*, a
+**"595-to-41,700 cliff"**: two permissive leaders and then nothing until `k12-teacher-skills` at
+595★. 🔴 **Six permissive education-specific rows sit in that gap, on that same shelf**, led by
+[`oppia/oppia`](https://github.com/oppia/oppia) at **6,950★ Apache-2.0** — a platform this base also
+carries on [`repos/foundations.md`](foundations.md) and
+[`verticals/solutions.md`](../verticals/solutions.md).
+
+| slug | ★ (`p506`) | licence | shelf |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **47,445** | 🟢 Apache-2.0 | `top` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **41,705** | 🟢 MIT | `top` |
+| 🔴 [`oppia/oppia`](https://github.com/oppia/oppia) | **6,950** | 🟢 Apache-2.0 | `top` + `foundations` + `solutions` |
+| 🔴 [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **1,246** | 🟢 MIT | `top` |
+| 🔴 [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | **1,190** | 🟢 MIT | `top` |
+| 🔴 [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | **1,138** | 🟢 Apache-2.0 | `top` |
+| 🔴 [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | **992** | 🟢 MIT | `top` |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | **598** | 🟢 Apache-2.0 | `top` |
+
+🟢 **Corrected on [`agents/top.md`](../agents/top.md).** The true step down is **41,705 → 6,950,
+about 6×, not 70×** — and the honest version sells better: **concentration with a credible second
+tier** beats a vacuum in any build-on-open proposal.
+
+### 🟢 Full-shelf re-read: 129 addresses, and the three standing defects all reproduce exactly
+
+| check | result |
+|---|---|
+| 🟢 queried vs returned (`Gap 504-A`) | **129 → 128**, `"incomplete_results": false`. 🔴 [`openedx/edx-platform`](https://github.com/openedx/edx-platform) silently absent — **third consecutive pass** |
+| 🟢 fork exclusion (`Gap 504-B`) | [`foradian/fedena`](https://github.com/foradian/fedena) absent from its batch, **returned with `fork:true`** |
+| 🟢 `archived` (`T29`) | **3 of 128**: [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) 582★, [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) 77★, [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) 30★ — 🟢 **all three already flagged on the shelves.** `p504`'s repair held |
+| 🟢 licence from bytes (`Gap 504-C`) | 🟢 **CLOSED** — edx-platform `LICENSE` at `f73b7ae64dd5`, 35,136 B, **AGPL Version 3**, blob `1eb391f38837`. See [`repos/foundations.md`](foundations.md) |
+| 🔴 `Gap 505-C` lexicographic tags | Honoured — `sort -V` only; no tag claim rests on `tail` this pass |
+
+🔵 **One retraction made before commit:** `menthorlabs/menthor` (582★, Apache-2.0, archived) was
+drafted here as *"the largest archived repository on these shelves, unflagged"*. 🔴 **It is flagged,
+in three places**, as 🇧🇷 LATAM-origin and explicitly *"not a build target"*. Reading the shelf cost
+one grep and saved a false defect claim — the `Gap 505-E` control, working as intended.
+
 ## 🆕 `p505` — `2026-10-28` — **🟢 `DeepTutor` RE-READ AT 47,338★ AND ITS PIN IS BYTE-STABLE FOR A 7TH CONSECUTIVE PASS; the 87-tag census confirms `v1.6.15` is genuinely the newest, so the shelf's "attention, not shipping" reading survives a test on the TAG ref. 🔴 Three instrument defects registered: `pushed_at` moved while `HEAD` did not (`505-A`), `api.github.com` is 403 on raw `curl` though the MCP channel answers (`505-B`), and a lexicographic tag sort understates the newest release by six versions (`505-C`).**
 
 Reads: [`api-reconciliation.2026-10-28-p505.tsv`](../evidence/api-reconciliation.2026-10-28-p505.tsv).

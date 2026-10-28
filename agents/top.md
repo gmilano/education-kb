@@ -7,6 +7,7 @@ updated: 2026-10-28
 # Education AI agents — build-on-able shelf
 
 > 🟢 **`p505` (`2026-10-28`) — THE SHELF WAS RIGHT AGAIN, AND THE ONE CLAIM THAT LOOKED REFUTED SURVIVED THE TEST THAT MATTERS.**
+> 🟢 **`p506` re-read `DeepTutor` at 47,445★** (`p505`: 47,338, **+107**), `Apache-2.0`, `archived: false`.
 > 🟢 **`DeepTutor` re-read at 47,338★** (`p504`: 47,230, **+108**), `Apache-2.0`, `archived: false`,
 > 5,895 forks. Its pin `a31d82624c27` is **unchanged for a 7th consecutive pass**, and a census of
 > **87 tags** version-sorted still maxes at **`v1.6.15`** — so this file's *"attention, not
@@ -121,6 +122,10 @@ license**. Evidence:
 | ~~existence~~ | `curl -sI https://github.com/<repo>` | **403 on every repo — do not use** |
 | stars + licence + topics + forks + **`archived`**, 100 rows/call | **GitHub REST API via the MCP channel** | 🟢 **WORKS (`p502`)** — authoritative **for the rows it returns**; supersedes the two rows above for stars and licence family. 🔴 **`p504`: IT DROPS ROWS SILENTLY.** `openedx/edx-platform` is absent from the index: alone it raises **422**, batched it vanishes with `"incomplete_results": false` and no error. **Reconcile the returned `full_name` set against the queried slug set on every call** (`Gap 504-A`). 🔴 **Forks are excluded unless `fork:true`** (`Gap 504-B`). 🔵 `minimal_output` omits `license` — licence stays on the bytes reader. |
 | ~~stars for arbitrary repos~~ | ~~`api.github.com` via `curl`~~ | 🔴 **403 — but this is a `curl` refusal, not an API refusal; see the row above (`Gap 502-A`)** |
+| 🆕 rate/quota check | `curl https://api.github.com/` and `/rate_limit` | 🟢 **200 (`p506`)** — core limit 15 000. 🔴 **`Gap 505-B` is therefore WRONGLY STATED as a host-level denial:** the refusal is **PER-ENDPOINT**, not per-host. This table needs **endpoint** granularity, not a `channel` column |
+| 🆕 repo metadata by slug | `curl https://api.github.com/repos/<repo>` | 🔴 **403 (`p506`, 3 of 3 tried)** — the endpoint that is actually denied. Use the MCP channel |
+| 🆕 any non-GitHub host | `curl` **or** `WebFetch` | 🔴 **REFUSED AT THE CONNECT (`p506`, 10 hosts + 3 `WebFetch` `ENOTFOUND`)** — `ec.europa.eu`, `eurydice.eacea.ec.europa.eu`, `www.oecd.org`, `assets.publishing.service.gov.uk`, `explore-education-statistics.service.gov.uk`, `mgaleg.maryland.gov`, `arxiv.org`, `files.eric.ed.gov`, `www.sanoma.com`, `www.statista.com`. 🔵 **Generalises `Gap 483-K` from the `europa.eu` family to *every* host but `github.com` and `raw.githubusercontent.com`.** So `Gap 505-F`'s Maryland primary is **not closable here** |
+| 🆕 open-web facts | **`WebSearch`** | 🟢 **the ONLY open-web channel in this session (`p506`)**. Everything it returns is `SEARCH-ATTESTED, PRIMARY UNREAD` — never grade a WebSearch snippet as a primary read |
 | ~~mainline freshness~~ | ~~API `pushed_at` / `updated_at`~~ | 🔴 **DO NOT USE — `pushed_at` is branch-agnostic; 708 d error measured (`Gap 502-B`)** |
 | mainline freshness | `git clone --depth 1`, committer date | 🟢 authoritative |
 
@@ -140,7 +145,7 @@ in [`trending.md`](trending.md) rather than here.
 
 | Agent | Repo | License | ★ | SHA read | What it does |
 |---|---|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **47,338** *(🟢 `p505`, API; `p504` read 47,230; `p502` 47,051; `p501` 47,000)* | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p501`: HEAD unchanged for a FOURTH consecutive pass (`p491`→`p501`); `v1.6.15` (`2026-10-19`) is still the newest release, so the star growth is attention, not shipping.** 🟢 **`p505` re-tested that reading on the ref it actually depends on:** a census of **87 tags**, version-sorted, still maxes at **`v1.6.15`**, and `HEAD` is unchanged for a **7th consecutive pass** — so the claim holds on both refs. 🔴 **`p505` also records why this nearly flipped:** the API returned `pushed_at: 2026-10-28T13:22:04Z`, which reads like shipping and is not (`Gap 505-A` — `pushed_at` advances on a push to any ref). Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **47,445** *(🟢 `p506`, API; `p505` read 47,338; `p504` 47,230; `p502` 47,051; `p501` 47,000)* | `a31d82624c27` | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p501`: HEAD unchanged for a FOURTH consecutive pass (`p491`→`p501`); `v1.6.15` (`2026-10-19`) is still the newest release, so the star growth is attention, not shipping.** 🟢 **`p505` re-tested that reading on the ref it actually depends on:** a census of **87 tags**, version-sorted, still maxes at **`v1.6.15`**, and `HEAD` is unchanged for a **7th consecutive pass** — so the claim holds on both refs. 🔴 **`p505` also records why this nearly flipped:** the API returned `pushed_at: 2026-10-28T13:22:04Z`, which reads like shipping and is not (`Gap 505-A` — `pushed_at` advances on a push to any ref). Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
 | OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,690** *(🟢 `p502`, API; `p493` read 41,700)* | `70859b42e714` | **Open Multi-Agent Interactive Classroom** — any topic or document becomes an interactive lesson with slides, quizzes and project-based work. 781 commits; `v1.3.0-rc.1` dated `2026-10-22`; licence 1 065 B, `sha1 56d5b3ffd6e8`. 🟢 **Restored `p493`** after being dropped by `p490`'s rewrite — this is the row that falsifies this file's own permissive-scarcity gap, and its MIT grant is cleaner than DeepTutor's. 🔵 Org is `THU-MAIC` and the partnership contact is a `mail.tsinghua.edu.cn` address; **Tsinghua attribution is inferred from those, not stated in prose.** 🔴 **Not an LMS** — no enrolment, gradebook or SIS integration is claimed. |
 | smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | **30,118** *(🟢 `p504`, API; prior rounded cell read 30,100)* | `96f33faaf028` | Minimal code-writing agent loop. Not education-specific; the usual substrate for a custom tutor agent. |
 | k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | **598** *(🟢 `p504`, API; `p493` read 595 — the ONLY exact cell this base carried that moved)* | `31fd6dbb0c07` | Four K-12 teacher skills (lesson planning, differentiation and two more) **plus the eval rubrics for them**, co-developed with Learning Commons. Licence 11 357 B, `sha1 1128f8f91104`. 🟢 **Restored `p493`** — recorded "Now shelved" on `2026-10-18` and never actually present in this file. 🔴 **This is the asset `p492` declared licence-unverifiable;** it was measured in this KB twice before that. |
@@ -203,12 +208,21 @@ the sibling licenses, so any body scan is a family false-positive generator.**
 
 ## The DeepTutor license caveat — carried forward, still true
 
-🔴 **`p493` correction to the figure this section opens with: DeepTutor is no longer 88% of this
-shelf's star mass.** With `OpenMAIC` (MIT, 41,700★) restored, DeepTutor is **47.3k of ~118k** across
-the permissive tier — **under 40%**. The concentration argument below needs restating, not
-repeating; the *provenance* point it introduces is unaffected and still stands.
+🟢 **`p506` re-derived this figure and NAMED THE POPULATION the old one never stated — which was
+the actual defect (`Gap 505-F`, closed).** Over the **permissive, education-specific rows on this
+shelf** — **46 addresses, Σ 106,506★** — `DeepTutor` is **47,445 of 106.5k**, i.e. **44.5%**.
+🔵 The carried `~118k` was sound but undefined: the same question answered over *every* shelf
+address gives **601,119★** and over *all* permissive rows **415,299★**, a **5.6× spread** driven
+entirely by whether general-purpose AI-learning-resource repos are counted. Exclusions are itemised
+in [`permissive-tier.2026-10-28-p506.tsv`](../evidence/permissive-tier.2026-10-28-p506.tsv) so the
+denominator is reproducible.
 
-`HKUDS/DeepTutor` carries 47.3k★ *(🟢 `p505`, API: 47,338)* and its Apache-2.0 payload (11,408 B) is
+🔴 **`p493` correction to the figure this section opens with: DeepTutor is no longer 88% of this
+shelf's star mass.** With `OpenMAIC` (MIT, 41,700★) restored, DeepTutor is under half of the
+permissive tier. The concentration argument below needs restating, not repeating; the *provenance*
+point it introduces is unaffected and still stands.
+
+`HKUDS/DeepTutor` carries 47.4k★ *(🟢 `p506`, API: 47,445)* and its Apache-2.0 payload (11,408 B) is
 **not** canonical Apache-2.0 (10,015 B operative span). Three function-word substitutions sit in
 the operative body:
 
@@ -271,11 +285,26 @@ Stating these because silence looks identical to coverage.
   [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) is **MIT at 41,700★** and
   education-specific. It was not missed by search: this KB read it, recorded it "Now shelved" on
   `2026-10-18`, cites it **51 times** in its own history, and `p490`'s rewrite dropped the row.
-  🟢 **The defensible restatement:** the permissive tier is **concentrated, not empty** — two
-  addresses (`DeepTutor` 47.3k Apache-2.0 *(`p505`)*, `OpenMAIC` 41.7k MIT *(`p502`)*) hold ~74% of its star mass, and
-  the next permissive education-specific row is `k12-teacher-skills` at **595★**. 🔵 **That
-  595-to-41,700 cliff is the real structural finding**, and it is a different sentence from
-  "nothing permissive exists".
+  🟢 **The defensible restatement, re-derived at `p506`:** the permissive tier is **concentrated,
+  not empty** — two addresses (`DeepTutor` **47,445** Apache-2.0 *(`p506`)*, `OpenMAIC` **41,705**
+  MIT *(`p506`)*) hold **89,150 of 106,506★ = 83.7%** of the permissive education-specific tier on
+  this shelf.
+  🔴 **`p506` RETRACTS the sentence that followed, and it was this file's own:** *"the next
+  permissive education-specific row is `k12-teacher-skills` at 595★"*, and the **"595-to-41,700
+  cliff"** called *"the real structural finding"*. 🔴 **Six permissive education-specific rows sit
+  in that gap, all of them on this shelf** — [`oppia/oppia`](https://github.com/oppia/oppia)
+  **6,950** (Apache-2.0), [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate)
+  **1,246** (MIT), [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials)
+  **1,190** (MIT), [`beltromatti/get-it`](https://github.com/beltromatti/get-it) **1,138**
+  (Apache-2.0), [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) **992** (MIT)
+  and [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) **598**
+  (Apache-2.0). 🔵 **Oppia is not an obscure row** — it is a long-standing Apache-2.0 education
+  platform carried on this shelf, [`repos/foundations.md`](../repos/foundations.md) *and*
+  [`verticals/solutions.md`](../verticals/solutions.md). **The cliff sentence was written about this
+  shelf without reading it.**
+  🟢 **The true structural claim, which is a better one:** the step down from `OpenMAIC` is
+  **41,705 → 6,950, about 6×, not 70×** — concentration **with a credible second tier**, which is
+  stronger for a build-on-open proposal than a vacuum.
 - 🟢 **`p493` — a permissively-licensed option now exists in four layers this file previously
   showed as copyleft-only or empty**: interactive classroom (`OpenMAIC`, MIT), tutoring platform
   (`open-tutor-ai-CE`, BSD-3-Clause), academic integrity (`dolos`, MIT) and evaluation

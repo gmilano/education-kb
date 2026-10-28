@@ -6,6 +6,21 @@ updated: 2026-10-28
 
 # Education platforms you can customise with AI on top
 
+> 🟢 **`p506` (`2026-10-28`) — EVERY PLATFORM ROW ON THIS SHELF RE-READ ON THE API CHANNEL; ONE ROW GAINS A BYTE-READ LICENCE AND ONE GAINS ITS PLACE IN THE PERMISSIVE TIER.**
+> 🟢 **[`openedx/edx-platform`](https://github.com/openedx/edx-platform)** — the one address the API
+> search channel cannot enumerate at all (`Gap 504-A`, third consecutive pass) — now has its licence
+> **read from bytes** at its current pin `f73b7ae64dd5`: `LICENSE`, **35,136 B**, title block
+> **`GNU AFFERO GENERAL PUBLIC LICENSE Version 3`**, blob `1eb391f38837` (`Gap 504-C` closed).
+> 🔵 **An address invisible to one channel is not unverifiable** — `raw.githubusercontent.com` reads
+> it fine, so the two channels are complementary rather than redundant.
+> 🟢 **[`oppia/oppia`](https://github.com/oppia/oppia) re-read at 6,950★ Apache-2.0, `archived: false`.**
+> 🔴 It is also the row that **refutes [`agents/top.md`](../agents/top.md)'s "595-to-41,700 cliff"** —
+> this shelf has carried the counter-example to that claim the whole time. Retracted there.
+> 🟢 **`archived` ran clean on this shelf:** of three archived addresses across the whole base, none
+> is a platform row here, and all three were already flagged.
+> 🔴 **No new platform row again this pass**, and the `p505` finding below stands unchanged: **no
+> education ERP/SIS exists under MIT or Apache-2.0.**
+>
 > 🟢 **`p505` (`2026-10-28`) — NO NEW PLATFORM ROW THIS PASS, AND THAT IS THE FINDING.**
 > The prescribed vertical query (`open source platform education ERP SIS MIT Apache 2026`) returned
 > **OpenOLAT, Apache OFBiz, Sakai, OpenEduCat, ERPNext and Open edX** — 🔴 **every one of them

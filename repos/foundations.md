@@ -23,6 +23,18 @@ updated: 2026-10-28
 > [`agents/trending.md`](../agents/trending.md) `p505`. Reads:
 > [`api-reconciliation.2026-10-28-p505.tsv`](../evidence/api-reconciliation.2026-10-28-p505.tsv).
 
+> 🟢 **`p506` (`2026-10-28`) — `Gap 504-C` IS CLOSED FROM BYTES, AND THE TWO BROKEN CHANNELS TURN OUT TO BE COMPLEMENTARY.**
+> 🟢 **[`openedx/edx-platform`](https://github.com/openedx/edx-platform)'s licence is now READ AT ITS
+> CURRENT PIN**, not inferred from an HTML sidebar: at `f73b7ae64dd5`, path `LICENSE`, **35,136
+> bytes**, title block **`GNU AFFERO GENERAL PUBLIC LICENSE Version 3`**, sha256 `e12d78569742`,
+> git blob `1eb391f38837`. 🟢 **The shelf's AGPL-3.0 reading is confirmed on this base's own
+> authority — the bytes.**
+> 🔵 **The generalisation is worth more than the closure:** the repository the API search channel
+> **cannot enumerate at all** (`Gap 504-A`, reproduced for a **third** consecutive pass this pass —
+> 129 queried, 128 returned, `"incomplete_results": false`) is **fully readable on
+> `raw.githubusercontent.com`**. 🟢 **The two channels have complementary coverage**, so an address
+> invisible to one is not an unverifiable address — it is a routing question.
+>
 > 🔴 **`p504` (`2026-10-28`) — A FOUNDATION ROW ON THIS SHELF IS INVISIBLE TO THE CHANNEL `p502` CALLED AUTHORITATIVE, AND ANOTHER WAS AN ARCHIVED REPOSITORY SOLD AS A BUILD BASE.**
 > 🔴 **[`openedx/edx-platform`](https://github.com/openedx/edx-platform) cannot be read on the API
 > search channel at all**: queried alone it raises **HTTP 422**, and batched with 24 other slugs it
@@ -122,7 +134,7 @@ heading goes stale silently; the table is the census, not the heading.**
 
 | Repo | License | ★ | SHA read | Role |
 |---|---|---|---|---|
-| [oppia/oppia](https://github.com/oppia/oppia) | Apache-2.0 | 6,900 | `bc73ecf9cf71` | Interactive lesson platform with built-in structured "explorations". Byte-identical to canonical Apache-2.0. Default branch is `develop`, not `main`. |
+| [oppia/oppia](https://github.com/oppia/oppia) | Apache-2.0 | **6,950** *(🟢 `p506`, API; `archived: false`)* | `bc73ecf9cf71` | Interactive lesson platform with built-in structured "explorations". Byte-identical to canonical Apache-2.0. Default branch is `develop`, not `main`. 🟢 **`p506`: this row is the SECOND RUNG of the permissive education tier** — [`agents/top.md`](../agents/top.md) claimed the next permissive education-specific row after `OpenMAIC` (41,705★) was `k12-teacher-skills` at 595★; **this row sits between them and that claim is retracted there.** The real step is **41,705 → 6,950, ~6×**. |
 | [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT | 1,200 | `dbe14ef6c499` | **Offline-first** learning platform. The one row here designed for no-connectivity deployment — the decisive property for rural LATAM, Africa and APAC programmes. Default branch `develop`. |
 | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | **MIT** | **355** | `74b101785bad` | **Source-code plagiarism / academic-integrity engine** — 1 084 B, `sha1 8f6f3815d28d`; **3,865 commits**, the most-maintained repo in this file. Ghent University (`dolos@ugent.be`). 🟢 **Restored `p493`: `p296` recorded this as *already a foundation row* and this KB's identity gate refused a duplicate promotion on that basis — then a later full-file rewrite deleted the row the gate had defended.** The gate worked; the rewrite did not. |
 | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 | 448 | `3736d48fa685` | Full Java LMS, Apache-2.0 (10,982 B). The only permissively-licensed *full* LMS found. Swiss-origin, strong EMEA higher-ed footprint. |
@@ -132,7 +144,7 @@ heading goes stale silently; the table is the census, not the heading.**
 | Repo | License | ★ | SHA read | Role / constraint |
 |---|---|---|---|---|
 | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9,300 | `ac97a8bfdc20` | Virtual classroom / web conferencing. LGPL — linking is permitted, so this is the most integration-friendly copyleft row. Default branch `v4.0.x-develop`. |
-| [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** | 8,200 *(🔵 `p504`: HTML channel — **the API cannot see this repo**, `Gap 504-A`)* | 🔴 **`f73b7ae64dd5`** *(`p504` re-pin; drifted from `d9aaee456069`)* | The Open edX LMS + Studio. Dominant in higher ed and workforce. AGPL: hosting a modified copy for a client triggers source release. Default branch `master`. |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | 🟢 **AGPL-3.0** *(`p506`: **read from bytes** at `f73b7ae64dd5` — `LICENSE`, 35,136 B, title block `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`, blob `1eb391f38837`; `Gap 504-C` CLOSED)* | 8,200 *(🔵 `p504`: HTML channel — **the API still cannot see this repo**, `Gap 504-A`, 3rd consecutive pass)* | 🟢 **`f73b7ae64dd5`** *(`p504` re-pin; stable at `p506`)* | The Open edX LMS + Studio. Dominant in higher ed and workforce. AGPL: hosting a modified copy for a client triggers source release. Default branch `master`. |
 | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | **7,556** *(🟢 `p504`, API; prior rounded cell 7,600)* | `46c042e7da65` | Largest installed base and the largest plugin ecosystem (2,000+). Grant is at `COPYING.txt`, **not** `LICENSE` — a root-`LICENSE` probe reports "no grant" here. |
 | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | 6,900 | `1c9f0bb8013e` | The open LMS by Instructure; heavy North America higher-ed share. AGPL. Default branch `master`. |
 | [frappe/lms](https://github.com/frappe/lms) | **AGPL-3.0** | 3,400 | `6054772c0426` | Frappe-framework LMS. **Widely published as MIT — it is not.** Grant at `license.txt` (lowercase), 33,893 B, AGPL-3.0; the GitHub sidebar agrees. |

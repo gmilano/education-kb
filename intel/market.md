@@ -2569,3 +2569,152 @@ prioritising, which a dollar total is not.
 (`DeepTutor` **47,338★** Apache-2.0 *(🟢 `p505`, API)*, `OpenMAIC` **41,690★** MIT *(`p502`)*) are
 both **PRC-origin and permissive** — the strongest single fact in this file for a build-on-open
 proposal, in every region.
+
+## 🆕 `p506` — `2026-10-28` — **🟢 THE EMEA EDUCATION ADOPTION RATE EXISTS. After THIRTEEN consecutive informative nils, the cell is filled — and `p505`'s own prediction was right about *why*: the prescribed query never had the figure, a DIFFERENT INSTRUMENT CLASS did. Four named instruments, one of them a national ministry and one the EU's own statistical authority. 🔴 And the pass's second finding is a defect in this base's single best commercial sentence: the Sanoma "63 %" is NOT an AI-use rate.**
+
+Reads: [`emea-adoption-instruments.2026-10-28-p506.tsv`](../evidence/emea-adoption-instruments.2026-10-28-p506.tsv),
+[`channel-probe.2026-10-28-p506.tsv`](../evidence/channel-probe.2026-10-28-p506.tsv).
+
+### 🟢 EMEA — the thirteen-pass nil is BROKEN, and it was an instrument-class problem all along
+
+🔵 **What `p505` predicted, verbatim:** *"That cell will not be filled by the prescribed query — it
+has now failed twelve times — but by a different instrument class (national ministry statistics,
+Eurostat)."* 🟢 **Both named classes delivered on the first attempt.** The nil was never a gap in
+the public record, which is what [`intel/market.md`](market.md) `p505` concluded; it was a gap in
+the *query*.
+
+| instrument | publisher | figure | what it actually measures |
+|---|---|---|---|
+| 🟢 **Use of AI by individuals** | **Eurostat** — the EU's own statistical authority | **39.3 %** | share of **all** EU 16–24-year-olds who used generative AI **for formal education** in 2025 — against **9.4 %** for ages 16–74 |
+| 🟢 same | Eurostat | **63.8 %** | share of EU 16–24s who used generative AI **at all** in 2025 |
+| 🟢 **Technology in Schools survey 2024 to 2025** | **Department for Education (England)** — a **national ministry** | **44 %** | teachers using GenAI **at least sometimes for school activities** |
+| 🟢 same | DfE England | **35 % / 5 % / 7 %** | planning / marking / delivering live lessons — the task split, not a single rate |
+| 🟢 **Digital education at school in Europe 2026** (22 Sep 2026) | **Eurydice / EACEA** | **~two-thirds** | education systems addressing AI through a strategy, guidance or policy framework |
+| 🟢 same | Eurydice / EACEA | **~one-third** | education systems with AI skills **in the national curriculum** — Western and Southern Europe leading |
+| 🟢 **TALIS 2024**, via the European Commission | OECD / EC | **29.7 %** | EU teachers who took part in **professional development on AI** for teaching and learning |
+
+🟢 **The client sentence this base could not write until now, and can:** *EMEA education-AI adoption
+is measured. Four in ten European 16–24-year-olds already use generative AI for their formal
+education (Eurostat, 39.3 %, 2025) and 44 % of English teachers use it for school work (DfE).
+What is missing is not uptake — it is capability and governance: under 30 % of EU teachers have had
+any AI training, and only a third of systems teach AI in the curriculum.*
+🔵 **That inverts the pitch.** The EMEA sale is **not** adoption enablement; demand has already
+arrived informally. It is **teacher capability and curriculum conformity** — a training-and-governance
+engagement, which is a different buyer and a different statement of work from the NA
+policy-configurable procurement trigger.
+
+🔴 **Grade, stated as bluntly as this base's conventions require: `SEARCH-ATTESTED, PRIMARY UNREAD`
+for every row above.** Not one primary was read, and that is **not** laziness — it is measured.
+**Every non-GitHub host is refused at the CONNECT in this session**, including `ec.europa.eu`,
+`eurydice.eacea.ec.europa.eu`, the Eurydice PDF mirror, `www.oecd.org`,
+`assets.publishing.service.gov.uk` (the DfE report's own host),
+`explore-education-statistics.service.gov.uk`, `www.sanoma.com`, `arxiv.org` and
+`files.eric.ed.gov`. 🔴 **`WebFetch` was tested and shares the same allowlist** (`ENOTFOUND` on all
+three attempts), so this generalises `Gap 483-K` from *"the europa.eu domain family"* to
+**"every host except github.com and raw.githubusercontent.com"**. 🔵 **WebSearch is the only
+open-web channel in this session** — a fact worth more than any single figure, because it fixes
+what every future pass can and cannot claim. 🟢 **Promote these figures to primary when a human
+can open four URLs**; they are named in the evidence file for exactly that.
+
+🔴 **Two conflicts registered rather than resolved, because resolving them needs the primaries.**
+Eurostat's *Statistics Explained* page and its `KS-01-26-009` PDF carry **62 %** and **61.6 %** for a
+related education measure against the news release's **39.3 %** — almost certainly a different
+denominator (users of generative AI rather than the whole age group), but **not confirmed, so do not
+mix the two**. And the OECD's summary page gives **37 %** where its own PDF appears to give **36 %**;
+these shelves already carry **36 %**, so the shelf is not changed.
+
+### 🔴 The Sanoma "63 %" is not what this base says it is, and the error is load-bearing
+
+🔴 [`agents/trending.md`](../agents/trending.md) `p270` calls it *"the best commercial sentence on
+this base"*: **"63 % of European teachers use AI"** against **16 %** who believe general-purpose AI
+improves learning outcomes — *"a 47-point gap"*. 🔴 **The full report defines the 63 % as the share
+of teachers who EXPECT TO USE AI TO PREPARE LEARNING MATERIALS, up from 49 % across 2023–2025.**
+The press release is what carries the looser "teacher AI use" wording, and this base shelved the
+press release.
+
+🟡 **The argument survives, but only restated — and it is weaker and narrower:**
+
+> Among **>20,000 teachers in 14 European countries** (Sanoma Learning 2026, fieldwork by GfK/NIQ),
+> **63 % expect to use AI to prepare learning materials** — up from **49 %** — while only **16 %**
+> believe general-purpose AI improves learning outcomes, and **75–93 %** say education AI should be
+> purpose-built rather than adapted from general tools.
+
+🔵 **Why the restatement still sells, and better:** the two figures are different measures, so the
+"47-point gap" is **not a gap in one population** and must stop being quoted as one. 🟢 But
+**75–93 % wanting purpose-built tools is a stronger and cleaner version of the same pitch**, it is
+the report's own headline, and it is about *demand for what a studio builds* rather than about
+disappointment. 🔴 **Do not quote "63 % of European teachers use AI" again.** Use the DfE's **44 %**
+when an actual use rate is needed — it is a ministry measuring use, not a vendor measuring
+expectation.
+
+## Opportunities by region — `p506`
+
+### North America
+
+🟢 **One genuinely new federal instrument, and it is unshelved anywhere in this base:** a Senate
+bill on **K-12 AI literacy, `S.4414`, introduced 2026-05-04**, with a House companion.
+🔵 `H.R. 8747` was already here; `S.4414` returns **zero** hits across every shelf. 🟢 Added.
+🟡 **A THIRD bill-count tracker, which strengthens rather than resolves `p499`'s 2× disagreement:**
+**FutureEd — 71 bills across 27 states** for the 2026 session, against MultiState's **134 / 31**
+(April) and the PIE Network's **~100**. 🔴 **Three trackers, three answers, a 1.9× spread.** The
+`p493` retirement of "134 bills / 31 states" as *one tracker's* number is **confirmed correct** and
+now has a third sighting behind it. **Quote the spread and name the tracker, never a count.**
+🔵 **The enacted-law count disagrees the same way** — "at least 11 states" on one analysis against
+"three states this cycle" on another. Same rule.
+🟢 **The standing NA read is unchanged and reinforced:** governance has overtaken AI-literacy
+mandates as the dominant legislative frame, and the buy is a **policy-configurable** assistant.
+Named mechanics already shelved and re-confirmed: **California `AB 1159`** (bars training AI models
+on student data), **Idaho `SB 1227`** (privacy protections), Oklahoma and Maryland restricting AI
+from high-stakes decisions on students, and **Ohio and Tennessee requiring districts to author their
+own policies** — which is the procurement trigger stated plainly.
+
+### EMEA
+
+🟢 **See the section above: the adoption cell is FILLED, with four named instruments, for the first
+time in fourteen passes.** 🔵 The regulatory picture is unchanged and already strong here
+(Regulation (EU) 2026/1744, Annex III education systems at **2 Dec 2027**, embedded AI at
+**2 Aug 2028** — quote the dates and name the reading, per `Gap 483-K`).
+🔴 **Still genuinely missing for EMEA, and now the ONLY thing missing: vendor share.** No
+market-share figure for any education-AI vendor in any European market was returned, on any query,
+this pass or in the thirteen before it. 🔵 That is now the single open EMEA cell, and it is a
+narrower and more honest statement than "no EMEA data".
+
+### APAC
+
+🟡 **No ministry-level APAC education adoption rate again — but for the first time the pass can name
+the two instruments that would carry one**, which is a better outcome than another blank:
+**Clarivate's *AI Policy and Education in the Asia-Pacific*** (compares Mainland China, India,
+Japan, Malaysia, Singapore, South Korea, Taiwan) and the **Times Higher Education *AI & Digital
+Maturity Index*, 433 universities across 19 APAC systems, 2026 edition**. 🔴 **Neither is shelved:**
+`Clarivate` appears once in this entire base and `433 universities` / `Digital Maturity` return
+**zero**. 🟢 Both added as **named next instruments**, not as figures — neither was readable here.
+🟢 **One hard, citable school-level mechanic, re-confirmed:** **Beijing requires at least 8 hours of
+AI instruction per year** in primary and secondary schools from 2025 — a *curriculum-hours mandate*,
+which is a different and more tractable procurement shape than a policy mandate.
+🔵 `Gap 488-Q` (an APAC teacher-adoption rate) **survives a third dedicated attempt** and stays open.
+
+### LATAM
+
+🔴 **A correction to this pass's own draft, caught by the `Gap 505-E` control grep before it
+reached the file.** The UNESCO figures returned — **87 %** of 200 HEIs across 19 countries using AI
+in at least one area against **26 %** holding a formal framework — were drafted here as a new LATAM
+finding. 🔴 **They are already on these shelves**, in [`agents/trending.md`](../agents/trending.md)
+twice, attributed to UNESCO IESALC. 🟢 **Carried, not new.** 🔵 Fifth instance of the error class
+`p455` named and `p505` hit three times: *a probe that measures a convention and reports a content
+defect.* The control that caught it cost one grep.
+🟢 **Genuinely new and shelved this pass:** **EdTech Hub × Fundación Ceibal**, a partnership
+announced **September 2026** to help education systems across Latin America and the Caribbean
+respond to AI. 🔵 Ceibal is already this base's strongest LATAM institution; this gives it a named
+international delivery partner, which is a **route to market**, not just a data point.
+🟡 Re-confirmed, grade unchanged: the region's governance deficit (Chile's National AI Policy since
+2021 and a bill under discussion; Brazil with national strategies but no education-specific
+regulation; Mexico with no binding national instrument and SEP/ANUIES proposals that lack force).
+
+### Global
+
+🔴 **The 3× sizing spread re-measured on four fresh sources, and `p504`'s conclusion holds exactly:**
+IMARC **$9.0B (2026) → $79.6B (2034), 31.35 %**; Persistence **~$3.7B (2026) → $14.1B (2033), 21 %**;
+a GIR report **$11.4B → $57.2B (2033)** with North America at **37.5 %** of 2025; Technavio
+**$3.37B incremental 2025–30 at 45 % CAGR** — a different basis again. 🔴 **Low to high is 3.1×,
+the same factor `p504` measured on a different set.** 🟢 **This file should keep refusing a point
+estimate**, and the refusal is now twice-measured rather than asserted.

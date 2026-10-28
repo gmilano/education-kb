@@ -1,0 +1,19 @@
+instrument	publisher	date	figure	measure_definition	channel_grade
+Use of AI by individuals	Eurostat (official EU statistical authority)	2025 ref year, pub 2026-02-10	39.3%	share of ALL EU 16-24s who used generative AI FOR FORMAL EDUCATION	SEARCH-ATTESTED, PRIMARY UNREAD
+Use of AI by individuals	Eurostat	2025 ref year	9.4%	same measure, ages 16-74	SEARCH-ATTESTED, PRIMARY UNREAD
+Use of AI by individuals	Eurostat	2025 ref year	63.8% / ~64%	share of EU 16-24s who used generative AI AT ALL	SEARCH-ATTESTED, PRIMARY UNREAD
+Use of AI by individuals (CONFLICT)	Eurostat Statistics Explained / KS-01-26-009 PDF	2026	62% / 61.6%	a DIFFERENT denominator, unresolved - do not mix with 39.3%	CONFLICT REGISTERED
+Technology in Schools survey 2024 to 2025	Department for Education (England) - NATIONAL MINISTRY	pub 2025-11	44%	teachers using GenAI at least sometimes for school activities	SEARCH-ATTESTED, PRIMARY UNREAD
+Technology in Schools survey 2024 to 2025	DfE England	pub 2025-11	35% / 5% / 7%	planning / marking / delivering live lessons	SEARCH-ATTESTED, PRIMARY UNREAD
+Technology in Schools survey 2024 to 2025	DfE England	pub 2025-11	29%	received GenAI training in the past year	SEARCH-ATTESTED, PRIMARY UNREAD
+School and College Voice	DfE England	2025-12	82% primary / 78% secondary	EVER used generative AI - not comparable with the 44%	SECONDARY ONLY, flagged
+Digital education at school in Europe 2026	Eurydice / EACEA (EU)	2026-09-22	~two-thirds	education systems addressing AI via strategy, guidance or policy framework	SEARCH-ATTESTED, PRIMARY UNREAD
+Digital education at school in Europe 2026	Eurydice / EACEA	2026-09-22	~one-third	education systems with AI skills in national curricula (W/S Europe lead)	SEARCH-ATTESTED, PRIMARY UNREAD
+Digital education at school in Europe 2026	Eurydice / EACEA	2026-09-22	38 systems / 27 MS; ICILS 2023 on 24	scope and data base of the report	SEARCH-ATTESTED, PRIMARY UNREAD
+TALIS 2024 via European Commission	OECD / European Commission	pub 2026-09	29.7%	EU teachers who took part in CPD on AI for teaching and learning	SEARCH-ATTESTED, PRIMARY UNREAD
+Digital Education Outlook 2026	OECD	2026-01	37%	LOWER SECONDARY teachers who used AI for their job in 2024 (OECD summary page)	SCOPE QUALIFIER WAS MISSING ON SHELVES
+Digital Education Outlook 2026 (CONFLICT)	OECD PDF	2026-01	36%	same measure, OECD's own PDF - the shelves already carry 36	CONFLICT REGISTERED
+European Teacher Survey 2026	Sanoma Learning (private, fieldwork GfK/NIQ)	2026-09-24	63%	share EXPECTING TO USE AI TO PREPARE LEARNING MATERIALS, up from 49% (2023-2025)	MEASURE MISREAD ON SHELVES
+European Teacher Survey 2026	Sanoma Learning	2026-09-24	16%	believe general-purpose AI improves learning outcomes	SEARCH-ATTESTED
+European Teacher Survey 2026	Sanoma Learning	2026-09-24	>20,000 teachers / 14 countries	core: FI SE NL BE(Fl+Wa) PL ES IT + 7 smaller	SEARCH-ATTESTED
+Estonia teacher survey	Estonia (national)	2026	~53%	teacher AI use, ~4,000 teachers	SEARCH-ATTESTED, PRIMARY UNREAD

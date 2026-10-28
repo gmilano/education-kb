@@ -1658,3 +1658,77 @@ commercial model is one SaaS tenant per district.
 - 🔵 **No component here is Maryland-origin or even US-education-origin.** The pattern is placed in
   North America by the *instrument*, not by supply provenance — the same observation `P504-1` made
   about LATAM.
+
+## 🆕 `P506-1` — **EMEA teacher-capability engagement: prove the training worked, because the adoption argument is already over** 🟢
+
+🔵 **The premise is `p506`'s EMEA finding, and it inverts the usual pitch.** Four independent
+instruments now measure European education-AI adoption, and they agree that **uptake is not the
+problem**: **39.3 %** of EU 16–24-year-olds already use generative AI for formal education
+(Eurostat, 2025) and **44 %** of English teachers use it for school work at least sometimes
+(DfE, *Technology in Schools 2024–25*). 🔴 **What is missing is capability and governance:**
+**29.7 %** of EU teachers have had any AI professional development (TALIS 2024 via the European
+Commission) and only **~one-third** of education systems teach AI in the national curriculum
+(Eurydice, *Digital education at school in Europe 2026*, 22 Sep 2026).
+
+🔴 **So do not sell adoption enablement into EMEA.** The buyer is a ministry, a regional authority
+or a university that must evidence **trained teachers** and **curriculum coverage** — and the thing
+they cannot currently buy is *proof the training changed practice*. That is a measurement product,
+and every component below is permissive.
+
+### The wiring
+
+| layer | repo | licence (`p506`, read) | job in this pattern |
+|---|---|---|---|
+| teacher skill content | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 **Apache-2.0**, 598★ | the CPD payload itself — pedagogy as portable text (`T28`), so it localises per curriculum without a licence negotiation |
+| delivery platform | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0**, 6,950★, branch `develop` | structured "explorations" host the training as *practice*, not slides. 🔵 The second rung of the permissive tier (`p506` correction) |
+| offline / low-bandwidth arm | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT**, 1,162★, branch `develop` | rural and low-connectivity authorities; same content, no hosting assumption |
+| capability measurement | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT**, 13★ | scores pedagogical quality — the pre/post instrument that turns "trained" into a number |
+| evidence store | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0**, 144★ | xAPI Learning Record Store: every training interaction is a statement, auditable per teacher (sequences `P502-1`) |
+| analytics over the LRS | [`openfun/ralph`](https://github.com/openfun/ralph) + [`openfun/warren`](https://github.com/openfun/warren) | 🟢 **MIT** / **MIT**, 51★ / 17★ | 🟢 **EMEA-origin and state-backed** — France Université Numérique. `ralph` ingests learning-record streams, `warren` dashboards them |
+| integrity arm | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | 🟢 **MIT**, 355★ | 🟢 **EMEA-origin** (Ghent). Academic-integrity evidence, which is the objection that kills AI training programmes politically |
+| SCORM bridge | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT**, 360★ | ministries' existing LMS estates are SCORM; this is the adapter that avoids a platform migration |
+
+### The sequence
+
+1. **Baseline with the benchmark, before any training.** `pedagogy-benchmark` scores a sample of
+   teachers' actual lesson artefacts. 🔵 This is the step that makes the engagement defensible: the
+   DfE's own task split (**35 %** planning, **5 %** marking, **7 %** live lessons) shows where
+   practice already is, so baseline those three separately or the post-measure is meaningless.
+2. **Deploy the skills payload on `oppia` (or `kolibri` offline), bridged into the incumbent LMS via
+   `scorm-again`.** Localise `k12-teacher-skills` to the national curriculum — Apache-2.0 permits
+   it and the Eurydice "~one-third have AI in the curriculum" figure tells you whether you are
+   authoring *to* a curriculum or *ahead of* one.
+3. **Emit xAPI for every interaction into `lrsql`**, ingest with `ralph`, dashboard with `warren`.
+4. **Re-run the benchmark.** The deliverable is a **signed delta per teacher cohort**, with the
+   record store as the audit trail.
+5. **Hand the authority the dashboard and the LRS**, not a report. 🟢 All-permissive means they can
+   keep running it after the engagement closes, which is what makes this renewable.
+
+### Why it clears EMEA's own bar
+
+🟢 **The AI Act arm is already satisfied by construction.** Annex III education obligations bite at
+**2 Dec 2027** (stand-alone) and **2 Aug 2028** (embedded) — 🔵 **quote those dates and name the
+reading as secondary** (`Gap 483-K`: the primary is unreadable from this session). A pattern whose
+evidence layer is an auditable record store is *already* the conformity artefact, so the training
+programme and the compliance programme are one project rather than two.
+
+### 🔴 Do this or the pattern is negligent
+
+- 🔴 **Verify the four EMEA figures at their primaries before quoting any of them to a buyer.** All
+  four are **`SEARCH-ATTESTED, PRIMARY UNREAD`** — Eurostat, the DfE report, Eurydice and the
+  Commission's TALIS summary are all on hosts refused at the CONNECT in this session. **Named in
+  [`emea-adoption-instruments.2026-10-28-p506.tsv`](../evidence/emea-adoption-instruments.2026-10-28-p506.tsv)
+  for exactly that.**
+- 🔴 **Never put two of these teacher figures in one trend line.** `T31`: the four European teacher
+  numbers met this pass use four different verbs — *uses at least sometimes* (DfE 44 %), *has ever
+  used* (DfE 82 %/78 %, secondary-sourced), *expects to use for one task* (Sanoma 63 %) and *used
+  for their job, lower secondary only* (OECD 37 %). **They are not a time series.**
+- 🔴 **`learning-commons-org/evaluators` and `knowledge-graph` are deliberately excluded here**
+  despite fitting the measurement layer: both return **`NOASSERTION`** on the licence field, and
+  this base's rule is that the grant is the bytes. Promote them into this pattern only after a
+  payload read.
+- 🟡 **`ralph` (51★) and `warren` (17★) are low-star.** They are in because they are **MIT,
+  EMEA-origin and state-backed** (France Université Numérique), not because they are popular —
+  expect to own operational burden, and say so in the SOW.
+- 🟡 **`oppia` runs on branch `develop` and `kolibri` on `develop`.** Pin a release, not `HEAD`
+  (`Gap 498-G`'s rule, still binding).

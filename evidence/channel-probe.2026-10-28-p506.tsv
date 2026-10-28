@@ -1,0 +1,18 @@
+channel	endpoint_or_host	result	note
+curl	https://api.github.com/	200	host answers
+curl	https://api.github.com/rate_limit	200	core limit 15000, remaining 15000
+curl	https://api.github.com/repos/HKUDS/DeepTutor	403	PER-ENDPOINT denial, not per-host
+curl	https://api.github.com/repos/moodle/moodle	403	same
+curl	https://api.github.com/repos/openedx/edx-platform	403	same
+curl	https://raw.githubusercontent.com/<slug>/<sha>/LICENSE	200	licence bytes readable
+mcp-github	search_repositories repo:<slug>	200	the working metadata channel
+curl	https://ec.europa.eu/eurostat	000	connect_rejected (proxy log)
+curl	https://www.oecd.org	000	connect_rejected
+curl	https://eurydice.eacea.ec.europa.eu	000	connect_rejected
+curl	https://assets.publishing.service.gov.uk	000	connect_rejected (UK DfE primary)
+curl	https://explore-education-statistics.service.gov.uk	000	connect_rejected
+curl	https://mgaleg.maryland.gov	000	connect_rejected (Gap 505-F Maryland primary)
+curl	https://arxiv.org	000	connect_rejected
+curl	https://files.eric.ed.gov	000	connect_rejected
+WebFetch	ec.europa.eu / eurydice.indire.it / www.sanoma.com	ENOTFOUND	WebFetch shares the same egress allowlist
+WebSearch	(any)	200	THE ONLY open-web channel in this session

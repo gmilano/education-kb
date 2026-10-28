@@ -4,6 +4,205 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p506` — `2026-10-28` — **🟢 THE EMEA ADOPTION NIL IS BROKEN AFTER THIRTEEN PASSES, and `p505`'s prediction of *why* was exactly right: a different instrument class, not a better query. 🔴 This base's self-declared "best commercial sentence" rests on a MISREAD MEASURE — the Sanoma 63 % is not an AI-use rate. 🔴 The "595-to-41,700 cliff" is FALSE ON ITS OWN SHELF: `oppia/oppia` sits in the gap at 6,950★. 🔴 And the probe-measures-a-convention error recurred for a FIFTH time — in my own star probe, which matched hex digits inside commit SHAs.**
+
+Reads: [`api-shelf-read.2026-10-28-p506.tsv`](../evidence/api-shelf-read.2026-10-28-p506.tsv),
+[`channel-probe.2026-10-28-p506.tsv`](../evidence/channel-probe.2026-10-28-p506.tsv),
+[`permissive-tier.2026-10-28-p506.tsv`](../evidence/permissive-tier.2026-10-28-p506.tsv),
+[`emea-adoption-instruments.2026-10-28-p506.tsv`](../evidence/emea-adoption-instruments.2026-10-28-p506.tsv).
+
+🔴 **Gate posture, stated first and without softening: `make hooks` was not run — the gate suite is
+`Code from External` in this session, twelve denials in thirteen passes.** 🔵 Nothing here is
+gate-attested. 🟢 **Four contracts were re-implemented independently in this session's own code and
+all four are green:** the frontmatter contract (**10/10** files: `industry: education`, `region` in
+the closed five-value vocabulary, `updated: 2026-10-28`), table column-count integrity (**16**
+tables in this pass's own sections, **0** malformed), the header-as-data contract (**0** across all
+nine shelves), and the queried-vs-returned reconciliation (`Gap 504-A`, run on all **129**
+addresses). That is **4 of 63**. 🔴 **Every one of those green numbers is the SECOND or THIRD
+answer its probe gave — see below.**
+
+### 🔴 Four probes, four false defect counts, all mine, all caught before commit
+
+🔵 **`p505` ended with a warning: *"the probe's own correctness is the least-tested thing in the
+pass that writes it."* 🔴 This pass tested that claim without meaning to and confirmed it four
+times over.**
+
+| this pass's probe | first answer | corrected answer | what the probe was actually measuring |
+|---|---|---|---|
+| 🔴 stale `DeepTutor` star cells | **3 contradictory values** (`47,394`, `47,291`, `47.3k`) | 🟢 **0** — the shelf is consistent at `47,338` | **hex digits inside pinned commit SHAs.** `47394125364b` is a `canvas-mcp` SHA; `196c547291da` is an `open-tutor-ai-CE` SHA |
+| 🔴 header-as-data rows | **21 defects** | 🟢 **0** | `repo` as a legitimate **value** in a `layer` column, and `Repo` / `Licencia` as **row labels in transposed tables** (`\| Campo \| Valor medido \|`) |
+| 🔴 table column integrity | **7 malformed rows** | 🟢 **0 of 16** | the **header of each new table** graded against the **previous** table's width — the parser never reset at a table boundary |
+| 🔴 "is this instrument shelved?" | **`menthor` unflagged**, **UNESCO 87/26 % new** | 🟢 both **already shelved** | a substring count with no context read |
+
+🔴 **Eight sightings of the class in two passes (`p505` ×3, `p506` ×4, plus two retracted content
+claims), which settles it: this is the DEFAULT failure mode of a cheap probe, not a rare slip.**
+🟢 **The remedy that actually worked, every time, is the same one and it is not "write a better
+regex":** these contracts are all about a token's **ROLE** — is this cell a header, a row label, a
+star count, a SHA? — and **a probe keyed on a token cannot see role.** 🟢 **So: every probe gets a
+known-good AND a known-bad control before its count is published.** Registered as `Gap 506-B`.
+
+### 🟢 The headline: EMEA has an adoption rate, and the instrument class was the whole problem
+
+🔵 `p505` wrote the prediction down: *"That cell will not be filled by the prescribed query — it has
+now failed twelve times — but by a different instrument class (national ministry statistics,
+Eurostat)."* 🟢 **Both named classes delivered on the first attempt.** Full table and the client
+sentence in [`intel/market.md`](../intel/market.md) `p506`; the four instruments are **Eurostat**
+(**39.3 %** of all EU 16–24s used generative AI *for formal education* in 2025, vs **9.4 %** at
+16–74; **63.8 %** used it at all), the **English DfE's *Technology in Schools survey 2024 to 2025***
+(**44 %** of teachers using GenAI at least sometimes for school work), **Eurydice's *Digital
+education at school in Europe 2026*** (22 Sep 2026 — **~two-thirds** of systems with an AI policy
+instrument, **~one-third** with AI skills in the curriculum, across **38** systems) and **TALIS 2024
+via the European Commission** (**29.7 %** of EU teachers with any AI professional development).
+
+🟢 **The commercial consequence is an inversion, and it is the most useful thing in this pass.** The
+EMEA sale is **not** adoption enablement — demand arrived informally and is measured. It is
+**teacher capability and curriculum conformity**: under 30 % of EU teachers trained, one third of
+systems teaching AI. Different buyer, different statement of work, and it is the first time this
+base can argue it from figures rather than from regulation.
+
+🔴 **Grade: `SEARCH-ATTESTED, PRIMARY UNREAD`, and the reason is measured, not assumed.**
+
+| channel | result |
+|---|---|
+| `curl` → `api.github.com/` and `/rate_limit` | 🟢 **200** (core limit 15 000) |
+| `curl` → `api.github.com/repos/{slug}` | 🔴 **403** on all three tried |
+| `curl` → `raw.githubusercontent.com/{slug}/{sha}/LICENSE` | 🟢 **200** — licence bytes readable |
+| MCP `search_repositories` | 🟢 **200** — the working metadata channel |
+| `curl` → every other host tried (10) | 🔴 **000 / `connect_rejected`** |
+| `WebFetch` → `ec.europa.eu`, `eurydice.indire.it`, `www.sanoma.com` | 🔴 **`ENOTFOUND` — same allowlist** |
+| `WebSearch` | 🟢 **the only open-web channel in this session** |
+
+🔵 **This generalises `Gap 483-K` from "the `europa.eu` domain family" to "every host except
+`github.com` and `raw.githubusercontent.com`"** — including `assets.publishing.service.gov.uk`,
+which is the DfE report's own host, and `mgaleg.maryland.gov`, which `Gap 505-F` asked a future pass
+to read. 🔴 **So `Gap 505-F`'s Maryland half is NOT CLOSABLE from this session**, by the same
+attested mechanism as EUR-Lex, and it moves to the named human deliverable rather than staying on
+the retry list.
+
+### 🔴 The pass's most uncomfortable finding is in this base's own best sentence
+
+🔴 `p270` of this file calls it *"the best commercial sentence on this base"*: **"63 % of European
+teachers use AI"** against **16 %** believing general-purpose AI improves outcomes — *"a 47-point
+gap"*. 🔴 **The Sanoma report defines the 63 % as the share of teachers who EXPECT TO USE AI TO
+PREPARE LEARNING MATERIALS**, up from **49 %** across 2023–2025. The press release carries the loose
+"teacher AI use" wording; **this base shelved the press release and built an argument on it.**
+
+🔵 **The failure mode is new to this base and worth naming, because it is not the carry class.**
+`p270` did the hard part correctly — it caught a *propagation* defect (the file claimed Sanoma was
+shelved when it was not) and fixed it, then grepped the destination to prove it. 🔴 **It propagated
+the figure faithfully and never checked what the figure MEANT.** Every verification instrument this
+base has built — payload digests, star re-reads, pin drift, `archived`, queried-vs-returned — grades
+*whether a number is current and attributable*. **None of them grades whether the number measures
+what the sentence claims.** That is a whole missing axis, and it is registered as `Gap 506-A`.
+
+🟡 **The restatement, which is narrower and sells better** — see [`intel/market.md`](../intel/market.md)
+`p506`. 🟢 **75–93 % of those teachers say education AI should be purpose-built rather than adapted
+from general tools**; that is the report's own headline, it is demand for what a studio builds, and
+it does not need two incompatible measures to work. 🔴 **"63 % of European teachers use AI" must not
+be quoted again.** For a real use rate, the DfE's **44 %** is a ministry measuring use.
+
+### 🔴 `oppia/oppia` has been sitting in the middle of this file's structural finding
+
+🔴 [`agents/top.md`](top.md) states that the two permissive leaders *"hold ~74 % of its star mass,
+and the next permissive education-specific row is `k12-teacher-skills` at 595★"*, and calls that
+**"595-to-41,700 cliff"** *"the real structural finding"*. 🔴 **On that same shelf, re-read this
+pass, there are SIX permissive education-specific rows between them:**
+
+| slug | ★ (`p506`, API) | licence |
+|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **6,950** | 🟢 Apache-2.0 |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **1,246** | 🟢 MIT |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | **1,190** | 🟢 MIT |
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | **1,138** | 🟢 Apache-2.0 |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | **992** | 🟢 MIT |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | **598** | 🟢 Apache-2.0 |
+
+🟢 **The real step down from `OpenMAIC` is 41,705 → 6,950 — about 6×, not 70×.** 🔵 **Oppia is not
+an obscure row:** it is a long-standing Apache-2.0 education platform, it is on
+[`agents/top.md`](top.md), [`repos/foundations.md`](../repos/foundations.md) **and**
+[`verticals/solutions.md`](../verticals/solutions.md), and this base has shelved it for hundreds of
+passes. 🔴 **The cliff sentence was written about the shelf without reading the shelf.** Corrected on
+[`agents/top.md`](top.md) this pass. 🔵 **The defensible structural claim is still a real one** and
+it is simply the true one: *two PRC-origin permissive repositories hold ~84 % of the permissive
+education tier's star mass, and the next rung is an Apache-2.0 platform at 6,950★* — concentration
+with a credible second tier, which is a **better** fact for a build-on-open proposal than a vacuum.
+
+### 🟢 `Gap 505-F` closed with content — and the carried denominator was basically right
+
+🔴 `Gap 505-F` flagged the **`~118k`** shelf-mass denominator and the **`~74 %`** beside it as
+`p493`-era and never re-derived. 🟢 **Re-derived this pass over all 129 shelf addresses**, and the
+answer depends entirely on a population the old figure never stated — which is the actual defect:
+
+| population, stated explicitly | n | Σ★ |
+|---|---|---|
+| every shelf address returned | 128 | **601,119** |
+| permissive licences only (MIT / Apache-2.0 / BSD / ISC) | 72 | **415,299** |
+| permissive **and** education-specific, any shelf | 66 | **113,709** |
+| 🟢 **permissive, education-specific, on [`agents/top.md`](top.md)** — the claim's own population | **46** | **106,506** |
+
+🟢 **So `~118k` was sound**; it just never said which set it counted, and the three candidate
+answers differ by **5.6×**. 🟢 **Restated on the shelf as `106.5k` with the population named**, and
+the concentration with it: **`DeepTutor` + `OpenMAIC` = 89,150 of 106,506 = 83.7 %**, up from the
+carried `~74 %`. 🔵 Exclusions are listed in
+[`permissive-tier.2026-10-28-p506.tsv`](../evidence/permissive-tier.2026-10-28-p506.tsv) so the
+number is reproducible rather than merely asserted — the seven general-purpose AI-learning-resource
+and tooling rows (`ai-agents-for-beginners` 78,046★, `ai-engineering-from-scratch` 75,085★,
+`annotated_deep_learning_paper_implementations` 67,602★, `book-to-skill` 36,399★, `smolagents`
+30,120★, `lm-evaluation-harness` 14,338★, `agents-from-scratch` 1,064★), which are not education
+products and would otherwise quadruple the denominator.
+
+### 🔴 The convention-probe error, a FIFTH time, and this time it was mine
+
+🔴 Hunting stale `DeepTutor` star cells (the `Gap 505-D` remedy, which is a standing duty), my probe
+`grep -oE "47[ ,.]?[0-9]{3}"` reported **three live values on the shelves — `47,394`, `47,291` and
+`47.3k`** — and I was one edit away from publishing *"three contradictory DeepTutor figures"*.
+
+🔴 **`47394125364b` is a commit SHA for [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp).
+`196c547291da` is a commit SHA for [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE).**
+A numeric star regex matches **hex digits inside pinned SHAs** — and this base pins a SHA beside
+almost every star cell, so the false-positive rate is structural, not incidental.
+
+🟢 **The shelves were right and internally consistent all along:** [`agents/top.md`](top.md) carries
+**47,338** (`p505`, API) and `47.3k` in prose, and the four `46.0k` hits are **legitimate history** —
+two inside `p505`'s own correction table and two inside `p493`'s section, which is what an
+append-only log is *for*. 🟢 **`Gap 505-D`'s fix held.** 🔴 **Registered as `Gap 506-B`**: anchor any
+numeric shelf probe to its cell context (a `★`, a table column) or exclude 12-hex-character tokens.
+🔵 **Fifth sighting of the class `p455` named**, and the control that caught it was reading the
+matched line instead of trusting the count.
+
+### 🟢 The standing checks, all run, all cheap
+
+| check | result |
+|---|---|
+| 🟢 `Gap 504-A` queried-vs-returned, **129 addresses** | **128 returned**, `incomplete_results: false`. The one absence is [`openedx/edx-platform`](https://github.com/openedx/edx-platform) — 🔴 **reproduces for a third consecutive pass**, still silently missing, still live on `ls-remote` |
+| 🟢 `Gap 504-B` fork exclusion | [`foradian/fedena`](https://github.com/foradian/fedena) missing from its batch, **returned by `fork:true`**. Reproduces exactly |
+| 🟢 `T29` `archived` | **3 of 128 archived** — [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) (582★), [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) (77★), [`AgnellusX1/GodsEye`](https://github.com/AgnellusX1/GodsEye) (30★). 🟢 **All three already flagged on the shelves** — `p504`'s repair held. 🔵 `menthor` was drafted here as a new find and retracted on reading the shelf |
+| 🟢 `Gap 504-C` edx-platform licence from bytes | 🟢 **CLOSED.** At `f73b7ae64dd5`: `LICENSE`, **35,136 B**, **GNU AFFERO GENERAL PUBLIC LICENSE Version 3** read from the title block, sha256 `e12d78569742`, git blob `1eb391f38837`. 🔵 The repo the API cannot enumerate is fully readable on `raw.githubusercontent.com` — **the two channels have complementary coverage**, which is the useful generalisation |
+| 🟢 `Gap 505-C` `sort -V` tag census | Applied; no lexicographic tag claim made this pass |
+| 🔴 `Gap 505-B` channel column | 🔴 **Sharpened and NOT as stated.** The denial is **per-endpoint, not per-host**: `api.github.com/rate_limit` → **200**, `api.github.com/repos/{slug}` → **403**. A `channel` column is insufficient; it needs **endpoint** granularity |
+
+### 🟢 Star re-reads this pass
+
+| repo | `p505`/`p504` | `p506` | move |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 47,338 | **47,445** | 🟢 **+107**, Apache-2.0, `archived: false` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 41,690 | **41,705** | 🟢 +15, MIT |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 598 | **598** | 🟢 identical |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 387 | **387** | 🟢 identical — the cycle-2 `12,000★` claim stays retired |
+
+### 🔴 The prescribed discovery battery returned ZERO repositories, which is a fourth test of `T24`
+
+🔴 The mandated query **`top open source AI agents education 2026 github MIT`** returned **no
+GitHub repository at all** — vendor blogs, a course listing and SEO roundups naming Khanmigo,
+Squirrel AI, Magic School and Curipod, every one of them **commercial**. 🔴 The
+**`github trending education AI 2026`** leg returned a third-party tracker whose education rows are
+`aitutor` at **+2★/60 days** and a 292★ article collection. 🟢 **`T24` saturation now holds on a
+fourth independent test shape**, and the shape is new: not *"the query returns rows we hold"* but
+**"the query returns no rows at all, because the open web's education-AI surface is now vendor
+marketing."** 🔵 **Method consequence:** the prescribed battery should be run to *attest* saturation,
+not to find supply. The GitHub API is where supply is found, and `T30`'s reallocation to
+reconciliation is now the correct default rather than the recommended one.
+
 ## 🆕 `p505` — `2026-10-28` — **🟢 THE CARRIED FIGURES HELD AGAIN AND THE "ATTENTION, NOT SHIPPING" READING OF `DeepTutor` SURVIVED A TEST IT WAS NEVER GIVEN — the tag ref, not the release page. 🔴 But three INSTRUMENT defects are registered, and the first one nearly wrote a false falsification into this file: `pushed_at` MOVED 20 MINUTES BEFORE THIS PASS WHILE `HEAD` AND THE NEWEST TAG DID NOT. `pushed_at` is not a shipping signal. 🔴 `p502`'s "the API answers" correction is CHANNEL-SPECIFIC — raw `curl` to `api.github.com` is still 403. 🔴 And a lexicographic tag sort reports the wrong newest release.**
 
 Reads: [`api-reconciliation.2026-10-28-p505.tsv`](../evidence/api-reconciliation.2026-10-28-p505.tsv).
