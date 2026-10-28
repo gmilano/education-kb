@@ -815,3 +815,67 @@ FSRS — so the AGPL constraint on that layer is no longer binding.
 orchestrator written in Portuguese. 🔵 **The topic axis itself admits false members**, so a topic
 count is not an education-supply count; this is the same popularity-filter problem as `Gap 488-E`,
 on a different axis.
+
+---
+
+## 🆕 `p500` — `2026-10-28` — three MIT agents promoted off the trending backlog, and the grader that graded them is corrected
+
+**Pass `p500` — reads of 2026-10-28.** This section **extends** the file; nothing above is
+rewritten. Every licence below was fetched from `raw.githubusercontent.com` at a **pinned commit
+SHA** resolved with `git ls-remote` (`api.github.com` is 403 under this session's network policy —
+see [`gate-discrimination.2026-10-28-p500.tsv`](../evidence/gate-discrimination.2026-10-28-p500.tsv)).
+Reads: [`pinned-sha-rows.2026-10-28-p500.tsv`](../evidence/pinned-sha-rows.2026-10-28-p500.tsv),
+[`promo-licence-bytes.2026-10-28-p500.tsv`](../evidence/promo-licence-bytes.2026-10-28-p500.tsv).
+Narrative: [`agents/trending.md`](trending.md) `p500`.
+
+### 🟢 Registered — three agents that this base had already read and never shelved
+
+| Agent | Repo | Licence @ pinned SHA | ★ | Operative body | What it is |
+|---|---|---|---|---|---|
+| **Claw-ED** | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT**, 1 078 B `18f2e223cdd1` | 63 | 🟢 **IDENTICAL** | Local-first AI teaching assistant: editable lesson drafts, student materials and slides from the teacher's **own** curriculum and chosen model. Python 3.11+, self-described teacher-reviewed beta. 🟢 The local-first posture is the one that survives a district AI policy — see `T1`/`T13`. |
+| **EduAgent** | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟢 **MIT**, 1 068 B `2987df2be268` | 74 | 🟢 **IDENTICAL** | Open-source **RAG** tutor built for Chinese K-9 (repo says grades 1–9; its README says 1–12 — 🔴 unreconciled). The clearest permissive RAG-tutor reference implementation on an APAC curriculum. |
+| **MindTrain** | [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) | 🟢 **MIT**, 1 067 B `7115c484c77e` | 128 | 🟢 **IDENTICAL** | AI knowledge-training platform with **pluggable schedulers** — the spaced-repetition/sequencing layer as a swappable component rather than a hardcoded policy. |
+
+🔴 **Why this is worth noting rather than just doing:** `Claw-ED` is mentioned **39** times across
+this KB's two trending files and `AI_Tutor_Release` **27**, and neither had ever reached a shelf.
+That is the promotion gap `Gap 499-A` described, in its cleanest form.
+
+### 🟢 A second licensed evaluation instrument — with a trap in the data
+
+The standing claim that education-AI evaluation instruments are unlicensed was already falsified
+by `p493` ([`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark),
+MIT). A second now exists, and it is **not** shelved as a clean row:
+
+| Instrument | Repo | Code | Content / corpora | ★ |
+|---|---|---|---|---|
+| **Learning Commons Evaluators** | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 **MIT**, 1 615 B `b9d47891c1b8` | 🔴 prompts **CC BY 4.0**; annotated **CLEAR** + **PERSUADE 2.0** corpora **CC BY-NC-SA 4.0 — non-commercial** | 87 |
+
+Evaluates LLM output against research-backed educational rubrics, in families — **Text
+Complexity**, **Feedback**, **Academic Standards Alignment**, **Durable Skills** — with Python and
+TypeScript SDKs and a web playground. 🟢 It closes `p493`'s open item on the Learning Commons rows.
+🔴 **But an evaluator is its rubrics**, and the annotated corpora are non-commercial. Treat the MIT
+code as usable and the shipped corpora as **not** usable in a paid engagement until `Gap 500-E`
+is answered.
+
+### 🔴 Excluded, with the reason recorded
+
+- [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) — **340★**, an AI assistant
+  for staff and **student success**, i.e. precisely the commercial shape of this industry. Read
+  from bytes at `4449f765bdd0`: **Elastic License 2.0**, 3 860 B. Source-available, **not** OSI
+  open source; it forbids offering the software to third parties as a hosted service. GitHub's
+  `NOASSERTION` label concealed this. **Not shelvable, and not buildable on.**
+- [`RandMelville/claude-war-room`](https://github.com/RandMelville/claude-war-room) — MIT, 62★, but
+  a **false positive of `topic:edtech`**: a 5-agent feature-analysis orchestrator with no
+  education function.
+- [`wombats-writing-code/xoces`](https://github.com/wombats-writing-code/xoces) (MIT, 74★, last
+  push **2017-07-24**) — permissive and dead.
+
+### 🔴 The verdict column in this file is not fully trustworthy yet
+
+Every **Apache-2.0** verdict recorded on this shelf before `p500` was graded against **one**
+canonical form (SPDX, 1431 operative words) while the apache.org steward's own form is **1412** —
+a 19-word difference between two legitimate texts. A repository shipping the steward's copy scores
+a phantom **−19 DEVIANT**. `HKUDS/DeepTutor`'s recorded **−17** is really **+2**. The MIT rows in
+this file are unaffected (MIT has one canonical form here and all three new rows are 0-delta), but
+the Apache rows were **not** re-graded this pass. `Gap 500-B` carries it.
+

@@ -1059,3 +1059,131 @@ recorded that as a defect. 🟢 Read this pass with `git ls-remote --tags`: **54
 minor, so a client can track `v0.19.x` for production and validate `v0.20.0` pre-releases out of
 band. 🔵 `Gap 498-J` is untouched — **nobody has toggled `ENV_VAR_ENABLED_PLUGINS`**, and that is
 still the load-bearing sentence of `P498-1`'s SOW language.
+
+---
+
+## 🆕 `p500` — `2026-10-28` — three patterns, each keyed to a regulation or licence fact established this pass
+
+**Pass `p500` — reads of 2026-10-28.** This section **extends** the file; nothing above is
+rewritten. Every component below is a row verified from bytes at a pinned commit SHA — see
+[`agents/top.md`](../agents/top.md) `p500`, [`repos/foundations.md`](../repos/foundations.md) `p500`
+and [`pinned-sha-rows.2026-10-28-p500.tsv`](../evidence/pinned-sha-rows.2026-10-28-p500.tsv).
+
+---
+
+## P500-1 — Student-success advising agent for US higher ed, without the Elastic trap 🟢
+
+**Why:** advising and retention is one of the most-bought education-AI capabilities, and this pass
+established that the leading open-ish implementation —
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) (340★) — is **Elastic License
+2.0**, which forbids providing the software to third parties as a hosted service. A hosted advising
+product **cannot** be a fork of it. This pattern reaches the same capability from permissive parts.
+
+**Components**
+
+| Role | Component | Licence |
+|---|---|---|
+| Way into the institution's LMS | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0, 10 273 B |
+| Courseware/progress signal | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 MIT, 1 072 B |
+| Competency + credential state | [`iblai/lms`](https://github.com/iblai/lms) | 🟢 MIT, 1 063 B |
+| Output QA against rubrics | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (**code only**) | 🟢 MIT, 1 615 B |
+
+**Wiring**
+
+1. Register a **Tsugi** LTI tool against the incumbent LMS (Canvas, Moodle, Open edX). Tsugi is the
+   boundary that does not require owning the LMS — no fork, no migration.
+2. Read progress through **scorm-again**'s CMI runtime and competency state from **iblai/lms**;
+   these two give the agent a factual record instead of a chat history.
+3. The advising agent proposes interventions. **Gate every student-facing message** behind the
+   **evaluators** rubric families (Feedback, Text Complexity) so tone and reading level are checked
+   before send.
+4. 🔴 **Deploy the evaluators' MIT code with your own rubric data.** The shipped annotated **CLEAR**
+   and **PERSUADE 2.0** corpora are **CC BY-NC-SA 4.0 — non-commercial** and must not ship in a paid
+   engagement (`Gap 500-E`).
+5. Enforce **human-in-the-loop** on anything touching grading or discipline — see `P500-2`.
+
+**Licence posture:** 🟢 all four components permissive; a closed hosted derivative is lawful.
+🔴 The corpus carve-out in step 4 is the one hard constraint.
+
+**Estimate:** 8–10 weeks to a pilot against one LMS.
+
+---
+
+## P500-2 — District AI policy-conformance layer for US K-12 🟢
+
+**Why:** `T14` and the North America read. **Oklahoma SB 1734** would require a written district AI
+policy before AY 2027–28 and **bar AI as the primary basis for grading or discipline**; **NYC** runs
+a moratorium on student-facing AI through grade 8; most US public schools have no formal policy
+while teacher use is near **60%**. The gap between mandated use and governed use is the deliverable.
+
+**Components**
+
+| Role | Component | Licence |
+|---|---|---|
+| Teacher-side generation, local-first | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 🟢 MIT, 1 078 B `18f2e223cdd1` |
+| LMS boundary | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0 |
+| Output QA / reading level | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (code) | 🟢 MIT |
+| Sequencing policy, swappable | [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) | 🟢 MIT, 1 067 B `7115c484c77e` |
+
+**Wiring**
+
+1. **Claw-ED** runs **local-first** against the district's own curriculum and chosen model. This is
+   the architectural reason to pick it: under a grade-8 moratorium or an under-13 ban, the defensible
+   deployment is one where no student-facing inference leaves the district's control.
+2. Put an **age/grade gate** in front of every student-facing path, configured per district. NYC's
+   grade-8 line and the UAE's under-13 line are the same control with a different constant — build
+   it as configuration, not a branch.
+3. Route teacher-authored output through **evaluators** for reading-level and feedback-quality
+   checks before it reaches students.
+4. **MindTrain**'s pluggable schedulers hold the sequencing policy, so a district can swap the
+   progression rule without a code change.
+5. **The compliance artefact is the point:** emit an append-only audit record — which model, which
+   prompt, which student artefact, which human approved it. **SB 1734**'s grading/discipline bar is
+   satisfiable only if you can show a human decided.
+
+**Licence posture:** 🟢 fully permissive.
+**Estimate:** 6–8 weeks for the gate + audit layer over an existing LMS; add 4 weeks for Claw-ED
+curriculum onboarding.
+
+---
+
+## P500-3 — Multi-jurisdiction APAC tutoring deployment, keyed to Vietnam's grace period 🟢
+
+**Why:** **Vietnam's Law on Artificial Intelligence** (in force **1 March 2026**) gives education
+systems **already operating before 15 August 2026** additional time to comply — a statutory
+advantage for *integrating with the incumbent stack* rather than replacing it. South Korea's **AI
+Basic Act** and China's targeted measures need separate policy nodes; Japan, Singapore, Hong Kong,
+Australia and India run on existing law.
+
+**Components**
+
+| Role | Component | Licence |
+|---|---|---|
+| Permissive RAG tutor, APAC curriculum | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) (EduAgent) | 🟢 MIT, 1 068 B `2987df2be268` |
+| Institutional LMS, closed derivative allowed | [OpenOlat](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0, 10 982 B `cd91a957ea2e` |
+| Live classroom response | [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 🟢 Apache-2.0, 11 357 B `c4c0cb0b30b5` |
+| LMS boundary where the incumbent stays | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0 |
+
+**Wiring**
+
+1. **In Vietnam, do not replace the incumbent LMS.** Attach via **Tsugi** LTI so the deployment is
+   a continuation of a system operating before **15 Aug 2026** — that is what the carve-out
+   attaches to. Replacement forfeits the grace period.
+2. **EduAgent** supplies the RAG tutor, already built against a K-9 curriculum rather than
+   retrofitted from a Western one. 🔴 Reconcile its grade range first: the repo description says
+   grades 1–9 and its README says 1–12.
+3. Where a greenfield institutional platform *is* wanted (and a closed derivative is required),
+   **OpenOlat** is the permissive full LMS — Apache-2.0 re-verified from bytes this pass, its
+   +99-word residual being attribution prose with no added condition.
+4. **realtime-quiz-framework** carries synchronous whole-class response; pair it with the LMS for
+   roster and gradebook, which it does not provide.
+5. **One policy node per jurisdiction**, not one per region. Vietnam (carve-out + in-force duties),
+   South Korea (AI Basic Act), China (recommendation-algorithm, deep-synthesis, generative-AI and
+   AI-content-labelling measures), and a light-touch default for JP/SG/HK/AU/IN. 🔴 Do not carry an
+   **ANZ** deployment on pan-APAC sentiment — Australia and New Zealand show *higher* support for
+   banning AI in schools than the 23–31% band across the rest of the region.
+
+**Licence posture:** 🟢 all components permissive; closed hosted derivative lawful in every
+jurisdiction above.
+**Estimate:** 10–12 weeks for two jurisdictions; +3 weeks per additional policy node.
+

@@ -1,0 +1,10 @@
+repo	pinned_sha	path	http	bytes	spdx	verdict	word_delta
+SirhanMacx/Claw-ED	18f2e223cdd1	LICENSE	200	1078	MIT	IDENTICAL	0
+Zenglian990/AI_Tutor_Release	2987df2be268	LICENSE	200	1068	MIT	IDENTICAL	0
+shigella520/MindTrain	7115c484c77e	LICENSE	200	1067	MIT	IDENTICAL	0
+ably-labs/realtime-quiz-framework	c4c0cb0b30b5	LICENSE	200	11357	Apache-2.0	DEVIANT	-19
+learning-commons-org/evaluators	b9d47891c1b8	LICENSE.md	200	1615	SPLIT-or-OTHER	NOT-GRADEABLE(abstain)	-
+learning-commons-org/knowledge-graph	a7547180c47d	LICENSE.md	200	5789	SPLIT-or-OTHER	NOT-GRADEABLE(abstain)	-
+canyongbs/advisingapp	4449f765bdd0	LICENSE	200	3860	Elastic-2.0	NOT-GRADEABLE(abstain)	-
+OpenOLAT/OpenOLAT	cd91a957ea2e	LICENSE	200	10982	Apache-2.0	DEVIANT	80
+HKUDS/DeepTutor	a31d82624c27	LICENSE	200	11408	Apache-2.0	DEVIANT	-17

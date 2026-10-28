@@ -3,6 +3,103 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p500` — `2026-10-28` — **🟢 THE `topic:edtech` 50–400★ AXIS IS EXHAUSTED AND THIS IS THE USEFUL RESULT: of 31 rows still unshelved, **25 are blocked by licence or dormancy, not by curator attention** — 11 copyleft, 6 with no grant at any root path, 9 untouched since 2024. 🔴 The band's largest unresolved row, `canyongbs/advisingapp` (340★), is **Elastic License 2.0** — source-available, not open source, and GitHub's `NOASSERTION` hid it. 🟢 One new permissive interoperability row shelved (`ably-labs/realtime-quiz-framework`, Apache-2.0, operative-IDENTICAL to the steward's own form). 🔴 And every Apache verdict on these shelves predating this pass may carry a **−19 phantom deviation**.**
+
+Full reads: [`residual-promotion.2026-10-28-p500.tsv`](../evidence/residual-promotion.2026-10-28-p500.tsv),
+[`apache-canonical-divergence.2026-10-28-p500.tsv`](../evidence/apache-canonical-divergence.2026-10-28-p500.tsv),
+[`gate-discrimination.2026-10-28-p500.tsv`](../evidence/gate-discrimination.2026-10-28-p500.tsv).
+Narrative on the grader defect: [`agents/trending.md`](../agents/trending.md) `p500`.
+
+### 🟢 The residual is a licence wall, not a backlog
+
+`Gap 499-A` framed the 50–400★ `topic:edtech` band as a promotion backlog — *"41 rows sitting in
+trending narratives unpromoted."* Re-joined against the three curated shelves at HEAD today, the
+band is **21/52 shelved (40.4%)**, because **`p499` promoted 20 rows in its own pass** after
+writing its census. Of the **31** rows still unshelved:
+
+| why it is not on a shelf | n |
+|---|---|
+| 🔴 copyleft (AGPL-3.0, GPL-3.0/2.0, LGPL-2.1, MPL-2.0, CERN-OHL-S-2.0) | 11 |
+| 🔴 no resolvable grant / `NOASSERTION` / `NONE` | 6 |
+| 🔴 dormant — not pushed since 2024 or earlier | 9 |
+| 🟢 **permissive and live in 2026 — genuinely promotable** | **4** |
+| 🟡 permissive but dormant | 2 |
+
+**This is the finding.** Three passes of effort aimed at this axis would recover **four rows**.
+The axis is spent; what remains cannot be built on. `Gap 500-A` asks the next discovery pass for a
+*new* axis — topic co-occurrence, LMS plugin registries, or a non-GitHub forge — rather than
+another sweep of this one.
+
+### 🟢 Shelved this pass — the interoperability leg gains a row
+
+| layer | repo | licence (bytes @ pinned SHA) | ★ | verdict |
+|---|---|---|---|---|
+| 🟢 **Realtime quiz / classroom response** | [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 🟢 **Apache-2.0**, 11 357 B `c4c0cb0b30b5` | 77 | 🟢 **IDENTICAL** to the apache.org steward form |
+
+It scored **−19 DEVIANT** on first grading and is in fact word-identical to the steward's copy —
+see the grader defect below. Pushed 2026-03-06, so live but not fast-moving.
+
+### 🔴 Every Apache verdict written before this pass is suspect
+
+The canonical set holds **two legitimate forms** of Apache-2.0. They differ by **exactly 19
+operative words** (SPDX 1431, apache.org 1412), and every Apache row on these shelves was graded
+against SPDX alone:
+
+| repo | words | vs SPDX | vs apache.org | real verdict |
+|---|---|---|---|---|
+| [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 1412 | −19 | **0** | 🟢 IDENTICAL |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 1414 | −17 | **+2** | 🟢 immaterial (`p499` recorded −17) |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 1511 | +80 | +99 | 🟢 immaterial — appended attribution |
+
+**`OpenOLAT` is this file's only permissive full LMS**, so its +99 was read by hand: two
+paragraphs crediting the **OLAT Zentrum at the University of Zurich** and **frentix GmbH**, adding
+no condition. Its copy carries **no `APPENDIX` heading**, so the marker-based cut removed nothing —
+`Gap 499-E` firing on the most load-bearing row in the file. Its Apache-2.0 grant stands; the
+verdict was the instrument's fault. `Gap 500-B` holds the unmeasured blast radius.
+
+### 🔴 `advisingapp` — 340★, and not open source
+
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp), read from bytes at
+`4449f765bdd0`: **Elastic License 2.0**, 3 860 B. It forbids providing the software to third
+parties as a hosted service — which is exactly what an education engagement would want to do with
+an *"AI-powered conversational assistant for staff and student success."* **Not shelvable.**
+Recorded here because it is the band's most commercially attractive row and its `NOASSERTION`
+label said nothing.
+
+Two rows have **no grant at any of 7 root paths** (all 404) — all rights reserved, not shelvable:
+[`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) (74★),
+[`abdullaitcenter-hue/comet-trail-archives`](https://github.com/abdullaitcenter-hue/comet-trail-archives) (70★).
+
+### 🟢 Split-licence rows: MIT code, non-commercial corpus
+
+| repo | ★ | code | data |
+|---|---|---|---|
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 87 | 🟢 **MIT** | 🔴 annotated **CLEAR** / **PERSUADE 2.0** corpora **CC BY-NC-SA 4.0** |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 164 | 🟢 **MIT** | 🔴 per-dataset, each download separately labelled |
+
+Closes what `p493` left open on the Learning Commons rows. 🔴 **New trap class:** permissive code
+whose indispensable corpus is non-commercial. `Gap 500-E` carries the open question of whether a
+commercial corpus licence exists.
+
+### 🔵 Discovery, stated including what was missing
+
+**Searched** (global and per region): open source AI agents for education; GitHub trending for
+education AI; open source education platforms (LMS/SIS); and `AI education {region} 2026 adoption
+regulation players` for North America, EMEA, APAC and LATAM.
+
+- 🔵 **No AI tutor agent first released in October 2026 surfaced on any axis.**
+  [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (July 2026) is still the newest
+  significant entrant. Recorded as a measured silence, not coverage — `Gap 500-F`.
+- 🟢 **`DeepTutor` is at 46.8k★**, Apache-2.0, read from the repository page this pass. It was
+  recorded at **~24k★** in this KB's 2026-08-01 education cycle: **roughly doubled in under three
+  months**, and it remains the only education-specific permissive agent of that magnitude apart
+  from [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (MIT, 41.7k★), re-confirmed
+  reachable this pass.
+- 🔵 **The platform-discovery leg is empty for a fifth consecutive pass.** Vendor LMS round-ups
+  surfaced only names this KB already holds (Moodle, Open edX, Canvas, OpenOlat, OpenEduCat,
+  RosarioSIS, Sakai, Fedena). One round-up's **Apache-2.0** claim for **OpenOlat** is 🟢 **correct**
+  — verified from bytes — and its **Fedena** claim remains 🔴 refuted, as `p491` found.
+
 ## 🆕 `p499` — `2026-10-28` — **🟢 `Gap 488-T` HAS A RATE AT LAST, AND IT DEFLATES THE ALARM THAT RAISED IT: of 64 root grants read at pinned SHAs, **28.1% deviate and 0 are materially altered**. 🔴 `p498`'s own count of material instances is over by one — `DeepTutor`'s Apache deviation is a THIRD-PARTY TEMPLATE VARIANT it shares with an unrelated Pakistani repo, not an edit by its author. 🟢 `Gap 498-M`'s URL gate is REPAIRED, not just confirmed: `curl -sI` scores 403 on existent and non-existent GitHub addresses alike (zero discriminating power), while `raw.githubusercontent.com` returns 200/404 correctly. 🟢 `Gap 498-D` and `Gap 498-G` CLOSED. 🟢 And `Gap 484-F` is narrowed for the first time in fifteen passes: **a non-GitHub primary source resolved.****
 
 Full reads: [`operative-sweep.2026-10-28-p499.tsv`](../evidence/operative-sweep.2026-10-28-p499.tsv),

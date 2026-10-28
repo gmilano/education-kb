@@ -1,0 +1,6 @@
+payload	operative_words	delta_vs_SPDX_1431	delta_vs_apacheorg_1412	verdict	residual_explained
+canonical/Apache-2.0.txt (SPDX)	1431	0	19	canonical form A	-
+canonical/Apache-2.0.apache-org.txt (steward)	1412	-19	0	canonical form B	-
+ably-labs/realtime-quiz-framework@c4c0cb0b30b5	1412	-19	0	IDENTICAL to form B	none; the -19 is a grader artifact of scoring against form A only
+HKUDS/DeepTutor@a31d82624c27	1414	-17	2	IMMATERIAL	p499 recorded -17; true distance to the steward form is +2
+OpenOLAT/OpenOLAT@cd91a957ea2e	1511	80	99	IMMATERIAL	+99 words of appended attribution prose (Univ. Zurich OLAT, frentix GmbH); no added restriction; 2nd instance of Gap 499-E

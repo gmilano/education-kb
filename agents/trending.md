@@ -3,6 +3,156 @@ industry: education
 region: Global
 updated: 2026-10-28
 ---
+## 🆕 `p500` — `2026-10-28` — **🔴 THIS KB'S APACHE GRADER HAS A −19 PHANTOM BUILT INTO IT: the two legitimate canonical forms of Apache-2.0 differ by exactly 19 operative words, and `p499` graded against only one of them. `ably-labs/realtime-quiz-framework` scored **−19 DEVIANT** and is **word-identical to the steward's own copy**; `DeepTutor`'s recorded **−17** is really **+2**. 🟢 `Gap 499-A` IS RE-MEASURED AND ITS PREMISE IS OVERTAKEN: `p499` promoted 20 rows in its own pass, so the band is **21/52 shelved**, and of the **31** that remain only **4** are permissive-and-live. The residual is a **LICENCE WALL, not a promotion backlog.** 🟢 Four rows promoted, three of them MIT and operative-IDENTICAL. 🔴 `canyongbs/advisingapp` (340★, the largest unresolved row) is **Elastic License 2.0 — not open source at all.** 🟢 And `git ls-remote` is established as a working pinned-SHA oracle where `api.github.com` is 403.**
+
+Full reads: [`residual-promotion.2026-10-28-p500.tsv`](../evidence/residual-promotion.2026-10-28-p500.tsv),
+[`apache-canonical-divergence.2026-10-28-p500.tsv`](../evidence/apache-canonical-divergence.2026-10-28-p500.tsv),
+[`pinned-sha-rows.2026-10-28-p500.tsv`](../evidence/pinned-sha-rows.2026-10-28-p500.tsv),
+[`promo-licence-bytes.2026-10-28-p500.tsv`](../evidence/promo-licence-bytes.2026-10-28-p500.tsv),
+[`gate-discrimination.2026-10-28-p500.tsv`](../evidence/gate-discrimination.2026-10-28-p500.tsv).
+Instrument: [`compose/code/p500-dual-canonical-grader/`](../compose/code/p500-dual-canonical-grader/).
+
+### 🔴 The grader this base has been grading with produces false deviations
+
+`p499` retained twelve canonical payloads and noted, correctly, that it held **two legitimate
+forms of Apache-2.0** side by side. It then graded every Apache row against **one** of them
+(SPDX's). Measured this pass:
+
+| canonical form | operative words |
+|---|---|
+| `canonical/Apache-2.0.txt` (SPDX) | **1431** |
+| `canonical/Apache-2.0.apache-org.txt` (the steward itself) | **1412** |
+| **difference between two legitimate forms** | **19** |
+
+Every repository shipping the steward's own copy therefore scores a phantom **−19**. Three rows,
+re-read this pass at pinned SHAs and graded against **both** forms:
+
+| repo | operative words | vs SPDX | vs apache.org | real verdict |
+|---|---|---|---|---|
+| [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 1412 | **−19** | **0** | 🟢 **IDENTICAL** to the steward's form. The deviation was the grader's. |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 1414 | −17 | **+2** | 🟢 IMMATERIAL. `p499` recorded **−17**; the true distance to the steward's form is **+2**. |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 1511 | +80 | +99 | 🟢 IMMATERIAL — see below. |
+
+**The rule, now encoded in `grade.sh`:** grade against *every* canonical form held for the
+licence, take the best match, inspect the residual. A delta against a single form is not a
+deviation. This matters beyond bookkeeping: a "DEVIANT" licence verdict on a shelf row is the
+kind of thing an engagement reads as a legal flag.
+
+### 🟢 `OpenOLAT`'s +99 is attribution, not a restriction — and it is `Gap 499-E` happening again
+
+`OpenOLAT` is this KB's **only permissive full LMS**, so its residual was read by hand rather
+than trusted to the grader. The +99 operative words are two appended paragraphs crediting the
+**OLAT Zentrum at the University of Zurich** and **frentix GmbH**. They add **no** condition.
+
+🔴 But the reason they were graded as operative is `Gap 499-E` exactly: OpenOLAT's copy carries
+**no `APPENDIX` heading at all**, so the marker-based cut found nothing to remove. `Gap 499-E`
+previously had one near-miss (`formalms`); it now has a **named payload where it actually fires**,
+on the most commercially load-bearing row in the file. The gap stays open.
+
+### 🟢 `Gap 499-A` re-measured — and `p499` had already overtaken its own premise
+
+`Gap 499-A` reads: *"41 band rows sit in trending narratives unpromoted… several passes to
+promote."* Re-joined against the three curated shelves at HEAD today:
+
+| | n | share |
+|---|---|---|
+| band rows (`topic:edtech`, 50–400★) | **52** | |
+| 🟢 on a curated shelf **now** | **21** | **40.4%** |
+| unshelved | 31 | 59.6% |
+| ↳ permissive (MIT/Apache/BSD) | 6 | |
+| ↳ **permissive AND pushed in 2026** | **4** | **7.7%** |
+
+🔴 **`p499`'s census column said 51 of 52 were unshelved; that was a pre-promotion snapshot of
+its own pass.** `p499` then promoted 20 rows before writing out. My first read of this treated the
+discrepancy as a p499 error — it is not; the rows sit inside p499's own file sections, with byte
+counts identical to my independent reads (`10 273`, `1 072`, `1 069`, `1 063`, `1 068`, `11 362`).
+Recorded because a future pass reading `on_curated_shelf=no` will reach the same wrong conclusion.
+
+🟢 **The finding that replaces `Gap 499-A`'s premise:** of the 31 rows still unshelved, **25 are
+blocked by licence or dormancy, not by curator attention** — 11 are AGPL/GPL/LGPL/MPL/CERN-OHL,
+6 carry no resolvable grant, and 9 have not been pushed since 2024 or earlier. The band is not a
+backlog of good rows nobody promoted. **It is mostly exhausted, and what is left is unbuildable-on.**
+Discovery on this axis is finished; a new axis is needed, not more promotion effort.
+
+### 🟢 Four rows promoted — three MIT, operative-IDENTICAL, pinned
+
+| repo | ★ | licence (bytes @ pinned SHA) | verdict | shelved to |
+|---|---|---|---|---|
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 63 | 🟢 **MIT**, 1 078 B `18f2e223cdd1` | 🟢 **IDENTICAL** | [`agents/top.md`](top.md) |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 74 | 🟢 **MIT**, 1 068 B `2987df2be268` | 🟢 **IDENTICAL** | [`agents/top.md`](top.md) |
+| [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) | 128 | 🟢 **MIT**, 1 067 B `7115c484c77e` | 🟢 **IDENTICAL** | [`agents/top.md`](top.md) |
+| [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 77 | 🟢 **Apache-2.0**, 11 357 B `c4c0cb0b30b5` | 🟢 **IDENTICAL** (steward form) | [`repos/foundations.md`](../repos/foundations.md) |
+
+**`Claw-ED` is the clean instance of the promotion gap this base kept describing**: **39** mentions
+across the two trending files and it had never reached a shelf. `AI_Tutor_Release` had **27**.
+
+**Not promoted, with reasons:** [`wombats-writing-code/xoces`](https://github.com/wombats-writing-code/xoces)
+(MIT, 74★) last pushed **2017-07-24**; [`sagefy/sagefy`](https://github.com/sagefy/sagefy)
+(Apache-2.0, 120★) **2024-06-18** — both permissive and both dead.
+[`RandMelville/claude-war-room`](https://github.com/RandMelville/claude-war-room) (MIT, 62★) is a
+**false positive of `topic:edtech`** — a Portuguese-language 5-agent feature-analysis orchestrator
+with no education function. The topic axis carries miscategorised rows; a licence filter will not
+catch them.
+
+### 🔴 The largest unresolved row is not open source
+
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) — **340★**, the biggest
+`NOASSERTION` in the band, described as an *"AI-powered conversational assistant for staff and
+student success"*, which is squarely the commercial shape of an education engagement. Read from
+bytes at `4449f765bdd0`: **Elastic License 2.0**, 3 860 B. Not OSI-approved, not permissive;
+it forbids providing the software to third parties as a hosted service. 🔴 **Globant cannot build
+a hosted student-success product on this row**, and GitHub's `NOASSERTION` label hid that.
+
+Two further `NOASSERTION` rows resolved to **split licences**, which the grader now abstains on
+rather than mislabelling:
+
+| repo | ★ | code | content / data |
+|---|---|---|---|
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 87 | 🟢 **MIT** | 🔴 prompts **CC BY 4.0**; annotated **CLEAR** and **PERSUADE 2.0** corpora **CC BY-NC-SA 4.0 — non-commercial** |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 164 | 🟢 **MIT** | 🔴 per-dataset, not uniform; each download separately labelled |
+
+🟢 This closes what `p493` left open about the Learning Commons rows being licence-unverifiable.
+🔴 And it is a **new class of trap for this KB**: the code is MIT and the *corpus the instrument
+is worthless without* is non-commercial. An education-AI evaluator is its rubrics.
+
+Two rows have **no grant at any root path** (7 paths tried, all 404) — all rights reserved:
+[`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) (74★) and
+[`abdullaitcenter-hue/comet-trail-archives`](https://github.com/abdullaitcenter-hue/comet-trail-archives) (70★).
+
+### 🟢 `git ls-remote` is a pinned-SHA oracle that works where the API does not
+
+`api.github.com` returns **403** through this session's network policy, which is why
+`p499` had no SHA source of its own. `git ls-remote` does work: for `Li-Evan/Bloom` it returned
+`68788b5e7d34…`, **exactly** the SHA already pinned on the shelf. Gate discrimination, tested at
+**both** poles this pass:
+
+| gate | existent | nonexistent | discriminating? |
+|---|---|---|---|
+| `api.github.com/repos` | 403 | 403 | 🔴 **no** |
+| `curl -sI github.com/O/R` | 403 | 403 | 🔴 **no** — re-confirms `Gap 498-M` |
+| `raw.githubusercontent.com/O/R/REF/PATH` | 200 | 404 | 🟢 **yes** |
+| `git ls-remote` | 40-hex SHA | auth prompt | 🟡 **partial** |
+
+🔴 **Stated as a limitation, not left to be discovered:** `ls-remote` is **not** an existence
+oracle — a nonexistent repo and a private one both fail by prompting for a username. Existence
+stays with `raw.githubusercontent.com`.
+
+🔴 **One false alarm of my own, caught by a control:** a grep for the Apache §2 grant clause
+returned **0** on `ably-labs` and on `OpenOLAT`, which reads like a gutted licence. It was line
+wrapping. Whitespace-insensitive, the clause is present in both and in both canonical forms. A
+literal grep across a wrapped legal text is not an instrument.
+
+### 🆕 Declared gaps — `p500`
+
+| gap | statement | cost |
+|---|---|---|
+| 🔴 **`Gap 500-A`** | The `topic:edtech` 50–400★ axis is **exhausted** — 25 of 31 residual rows are licence-blocked or dormant. No replacement axis has been enumerated. The next discovery pass needs a *new* axis (topic co-occurrence, LMS-plugin registries, or non-GitHub forges), not another sweep of this one. | one pass to choose and enumerate |
+| 🔴 **`Gap 500-B`** | Every Apache verdict recorded on these shelves **before `p500`** was graded against SPDX alone and may carry the −19 phantom. The shelves were **not** re-graded this pass; only three rows were. The blast radius is unmeasured. | one pass to re-grade all Apache rows against both forms |
+| 🔴 **`Gap 500-C`** | `Gap 499-E` now has a live instance (`OpenOLAT`, +99). The grader still cannot distinguish appended **attribution** from an appended **restriction**; a human read the residual. Until it can, every non-zero Apache residual needs a human. | one pass |
+| 🟡 **`Gap 500-D`** | **`eur-lex.europa.eu` does not resolve under this session's network policy.** The claim that the *Digital Omnibus on AI* became **Regulation (EU) 2026/1744** (OJ 24 July 2026), deferring Annex III high-risk duties to **2 Dec 2027**, is **single-sourced to a vendor page** and is recorded in [`intel/market.md`](../intel/market.md) as unverified. This is `Gap 499-C`'s shape a second time: the primary source is unreachable, so the steward's own text was never read. | needs eur-lex.europa.eu allowed in the session's network settings |
+| 🟡 **`Gap 500-E`** | The split-licence rows are shelved on their **code** licence. No pass has checked whether the **CC BY-NC-SA corpora** have a commercially-licensable equivalent, which is what decides whether `evaluators` is usable in a paid engagement at all. | one pass, likely a vendor enquiry |
+| 🔵 **`Gap 500-F`** | **Searched, nothing found:** no AI tutor agent first released in **October 2026** surfaced on any axis queried. `DeepTutor` (July 2026) remains the newest significant entrant. Recorded so the silence is not read as coverage. | — |
+
 ## 🆕 `p499` — `2026-10-28` — **🟢 THE RETAINED CANONICAL SET EXISTS AND IT CATCHES A LONE ALTERED PAYLOAD: `Gap 498-B` IS CLOSED, AND THE INSTRUMENT WAS PROVED ON `get-it`'s §6 DELETION WITH NOTHING TO COMPARE IT TO. 🔴 `Gap 498-A` IS REFUTED, AND THE OPPOSITE DEFECT IS THE REAL ONE: the 50–400★ `topic:edtech` band is **not** unread — 41 of 52 rows are already in this base's own narratives — but only **1 of 52 ever reached a curated shelf**. This base's bottleneck is PROMOTION, not discovery. 🟢 `Gap 488-T` finally has a rate instead of an anecdote: **28.1% raw, and 0 of 64 materially altered.** 🔴 And two successive forms of this pass's own instrument produced false positives — 14 GPL rows, then `formalms` §1 — each caught only because a control input was run.**
 
 Full reads: [`canonical/MANIFEST.tsv`](../evidence/canonical/MANIFEST.tsv),

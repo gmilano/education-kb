@@ -510,3 +510,47 @@ disqualifying for a new engagement: last commit **2026-07-17** (`Gap 498-E`).
 | [`codeforlife-education/codeforlife-portal`](https://github.com/codeforlife-education/codeforlife-portal) | 54 | 🔴 **121-byte `LICENSE.md` containing only a link.** UK Code for Life schools platform. |
 | [`codeforlife-education/rapid-router`](https://github.com/codeforlife-education/rapid-router) | 60 | 🔴 Same 121-byte pointer. Blockly game for ages 5–11. |
 | [`studentinsights/studentinsights`](https://github.com/studentinsights/studentinsights) | 135 | 🟡 MIT and clean, but **last push 2024-08-27** — over two years stale. Code for America school-data platform; recorded, not recommended. |
+
+---
+
+## 🆕 `p500` — `2026-10-28` — the permissive LMS row is re-verified, and the student-success layer turns out to be closed
+
+**Pass `p500` — reads of 2026-10-28.** This section **extends** the file; nothing above is
+rewritten. Reads:
+[`pinned-sha-rows.2026-10-28-p500.tsv`](../evidence/pinned-sha-rows.2026-10-28-p500.tsv).
+
+### 🟢 `OpenOlat` — the "only permissive full LMS" claim survives a byte re-read
+
+This file's single most consequential row is [OpenOlat](https://github.com/OpenOLAT/OpenOLAT)
+(Apache-2.0, 448★), because it is the one row that lets an engagement ship a **closed hosted
+derivative** of a university-grade LMS. Re-read from bytes at pinned SHA `cd91a957ea2e`
+(**10 982 B**): 🟢 **Apache-2.0 confirmed, operative body materially unaltered.** The +99-word
+residual against the apache.org canonical form is two appended attribution paragraphs (OLAT
+Zentrum, University of Zurich; frentix GmbH) and adds **no condition**.
+
+An independent 2026 vendor round-up also lists OpenOlat as Apache-2.0 — 🟢 **that claim is
+correct**, unlike the same genre's **Fedena** claim, which `p491` refuted from bytes. Vendor
+licence columns are right about half the time here; the byte read is what decides.
+
+### 🔴 The student-success / advising layer has no permissive option
+
+This is a **new gap in this file's layer map**, and a commercially important one. Student success,
+advising and retention is one of the most frequently bought education-AI capabilities. The leading
+open-ish implementation:
+
+| Layer | Platform | Licence | ★ | Verdict |
+|---|---|---|---|---|
+| 🔴 **Student success / advising** | [advisingapp](https://github.com/canyongbs/advisingapp) (Canyon GBS) | 🔴 **Elastic License 2.0**, 3 860 B `4449f765bdd0` | 340 | **Source-available, not open source.** Forbids providing the software to third parties as a hosted service — i.e. it forbids the delivery model an engagement would use. |
+
+🔴 **Consequence for an engagement:** there is **no permissive advising/student-success platform**
+to customise. The buildable route is an agent layer over the SIS/LMS you already have — see
+[`compose/patterns.md`](../compose/patterns.md) `P500-1` — not a fork of this row. GitHub reports
+this repository as `NOASSERTION`, so the restriction is invisible from the API.
+
+### 🟢 Registerable at the content/assessment layer
+
+| Layer | Platform | Licence | ★ | Why this one |
+|---|---|---|---|---|
+| 🟢 **Live classroom response / quizzing** | [realtime-quiz-framework](https://github.com/ably-labs/realtime-quiz-framework) | **Apache-2.0** | 77 | Permissive base for synchronous whole-class response: fan-out, mid-round joins, scoring. Pair with an LMS for roster and gradebook. |
+| 🟡 **AI output QA against rubrics** | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | 🟢 code **MIT** / 🔴 corpora **CC BY-NC-SA 4.0** | 87 | Rubric-based QA for generated instructional content (Text Complexity, Feedback, Standards Alignment, Durable Skills). Deploy the **code**; the shipped annotated corpora are **non-commercial** (`Gap 500-E`). |
+

@@ -647,3 +647,64 @@ reference a class on these shelves, not an anecdote.**
 | 🔴 **`Gap 499-G`** | All ten rows above are **licence-and-description reads**. None was cloned, built or run — the same standing limit as `Gap 498-H`. "Tsugi crosses the LTI boundary" is the project's claim and the standard's definition, **not a measured integration.** | needs an execution-permitted session |
 | 🟡 **`Gap 499-H`** | `TutorLoom` is **three weeks old** and its Apache-2.0 grant is clean, but **nothing about its maintenance is established** — no tag list read, no release, no contributor count. It is promoted as a watch row, and a pass that treats it as a deployable LMS will be wrong. | one read per pass |
 | 🟡 **`Gap 499-I`** | The permissive share moved 15.8% → 37.9% because **this pass added rows at the layers it chose to look at**. That is a selection effect, not a measured change in the sector. The denominator is this shelf, not the market. | one pass, defined sampling frame |
+
+---
+
+## 🆕 `p500` — `2026-10-28` — the interoperability leg gains a row, and the census axis is declared exhausted
+
+**Pass `p500` — reads of 2026-10-28.** This section **extends** the file; nothing above is
+rewritten. Licences fetched from `raw.githubusercontent.com` at commit SHAs resolved with
+`git ls-remote`. Reads:
+[`pinned-sha-rows.2026-10-28-p500.tsv`](../evidence/pinned-sha-rows.2026-10-28-p500.tsv),
+[`residual-promotion.2026-10-28-p500.tsv`](../evidence/residual-promotion.2026-10-28-p500.tsv).
+
+### 🟢 Registered
+
+| Layer | Repo | Licence @ pinned SHA | ★ | Operative body | Why this one |
+|---|---|---|---|---|---|
+| 🟢 **Realtime quiz / classroom response** | [`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework) | 🟢 **Apache-2.0**, 11 357 B `c4c0cb0b30b5` | 77 | 🟢 **IDENTICAL** to the apache.org steward form | The permissive base for live classroom response — the "everyone answers at once" problem (fan-out, join-mid-round, scoring) solved as a networking framework rather than a product. Pushed 2026-03-06: live, not fast-moving. |
+
+### 🟢 The permissive census — and why the denominator stops moving here
+
+The `topic:edtech` **50–400★** axis, enumerated by `p499` and re-joined against the three curated
+shelves this pass, is **spent**. Of 52 rows, **21 are now shelved (40.4%)** — `p499` promoted 20
+in its own pass — and of the **31** that remain:
+
+| why unshelved | n |
+|---|---|
+| 🔴 copyleft (AGPL-3.0, GPL-3.0/2.0, LGPL-2.1, MPL-2.0, CERN-OHL-S-2.0) | 11 |
+| 🔴 no resolvable grant at any root path | 6 |
+| 🔴 dormant (no push since 2024 or earlier) | 9 |
+| 🟡 permissive but dormant | 2 |
+| 🟢 **permissive and live — promotable** | **4** |
+
+**The whole remaining yield of this axis is four rows.** That is the honest reason this file's
+permissive numerator has crept rather than jumped for ten passes: **not** curator inattention, but
+a population that is mostly copyleft, unlicensed or abandoned. `Gap 500-A` asks the next discovery
+pass for a different axis.
+
+### 🟢 `OpenOLAT`'s Apache-2.0 grant stands — the deviation was ours
+
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT), re-read at `cd91a957ea2e`
+(**10 982 B**), is this file's **only permissive full LMS**, so its licence was re-graded from
+bytes rather than carried forward. Operative body **1 511** words against the apache.org steward's
+**1 412**: the +99 is two appended paragraphs crediting the **OLAT Zentrum at the University of
+Zurich** and **frentix GmbH**. 🟢 **No added condition — the Apache-2.0 grant is materially
+unaltered.**
+
+🔴 Two instrument faults are recorded against this one row. Its copy carries **no `APPENDIX`
+heading**, so the marker-based operative cut removed nothing and graded attribution prose as
+operative — `Gap 499-E` firing on the file's most load-bearing row. And every Apache verdict in
+this file written before `p500` was scored against SPDX's 1431-word form alone, which manufactures
+a **−19** phantom for any repository shipping the steward's 1412-word copy. `Gap 500-B` holds the
+unmeasured blast radius; `Gap 500-C` holds the attribution-vs-restriction blindness.
+
+### 🔴 Not registerable, recorded so the next pass does not re-read them
+
+| Repo | ★ | Finding |
+|---|---|---|
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | 340 | **Elastic License 2.0** (3 860 B @ `4449f765bdd0`) — source-available, not OSI. Forbids hosted provision to third parties. |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 164 | 🟢 code **MIT** (5 789 B @ `a7547180c47d`); 🔴 datasets licensed **per download**, not uniformly. Shelvable as code, not as data. |
+| [`jaltekruse/Free-Math`](https://github.com/jaltekruse/Free-Math) | 74 | **No grant** at any of 7 root paths (all 404). All rights reserved. |
+| [`abdullaitcenter-hue/comet-trail-archives`](https://github.com/abdullaitcenter-hue/comet-trail-archives) | 70 | **No grant** at any of 7 root paths. All rights reserved. |
+

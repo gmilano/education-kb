@@ -956,3 +956,88 @@ Every gate needs a known-good **and** a known-bad input before its results are b
 | 🟡 **`Gap 499-K`** | `T21` rests on **three instances**, two of which are the same organisation (`codeforlife-education`). That is really **two independent instances**. "Spreading" is not yet supported. | one pass, sweep for small grant payloads |
 | 🔴 **`Gap 499-L`** | `T19`'s narrowing depends on my **hand classification of 18 diffs** (`Gap 499-F`). The headline *"0 of 64 materially altered"* is not reproducible by code in this repo, so a later pass cannot re-derive it without repeating my judgement. | one pass, encode the four classes |
 | 🟡 **`Gap 499-M`** | `T2`'s re-scoping claims **LTI is arm's-length, not linking**, and therefore that AGPL does not reach an LTI tool. 🔴 **That is my reading of the licence and the standard, not legal advice and not a cited authority.** It is load-bearing for `P499-1`'s whole premise. | needs counsel, not a pass |
+
+---
+
+## 🆕 `p500` — `2026-10-28` — two new trends, and one of this file's own claims re-grounded
+
+**Pass `p500` — reads of 2026-10-28.** This section **extends** the file; nothing above is
+rewritten.
+
+## T13 — The licence question has moved from the code to the data
+
+**This is the new one, and it changes how to vet an education-AI component.** Two rows resolved
+this pass carry **permissive code and restricted data**:
+
+| Repo | Code | Data |
+|---|---|---|
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 **MIT** | 🔴 prompts **CC BY 4.0**; annotated **CLEAR** and **PERSUADE 2.0** corpora **CC BY-NC-SA 4.0 — non-commercial** |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 🟢 **MIT** | 🔴 licensed **per dataset**, per download — not uniform |
+
+For an **evaluation** instrument the corpus *is* the product: an MIT rubric evaluator with
+non-commercial reference corpora cannot be shipped in a paid engagement on the strength of its code
+licence. The same split is what makes `knowledge-graph` unshelvable as data while shelvable as code.
+
+**Consequence:** a two-column licence check — code **and** data — on every education-AI component.
+A single SPDX field, which is what GitHub shows and what most curation reads, cannot express this
+and will read as green. `Gap 500-E` carries the open commercial question.
+
+## T14 — Mandate and prohibition arrive together, and the gap between them is the work
+
+The 2026 pattern across regions is not adoption versus resistance. It is **the same authority doing
+both at once**:
+
+- 🇦🇪 **UAE** mandates AI teaching **KG → Grade 12** across all government schools *and* publishes
+  **25 classroom prohibitions** including a **ban for students under 13**; reported teacher uptake
+  is **48%**.
+- 🇺🇸 **Oklahoma SB 1734** would require every district to adopt a written AI policy *and* bar AI as
+  the **primary basis for grading or discipline**. **NYC** runs a moratorium on student-facing AI
+  through grade 8 while US teacher use sits near **60%**.
+- 🇪🇺 The **EU** treats education **access and assessment** as **Annex III high-risk** — permitted,
+  conditioned, and dated (**2 December 2027**).
+
+**Consequence for an engagement:** the deliverable is not a tutor. It is the **enforcement surface**
+— age gating, per-district prohibition configuration, human-in-the-loop on grading and discipline,
+and an audit trail of which model touched which student artefact — plus the teacher training that
+closes a 48%-uptake gap under a full mandate. Capability is assumed; **governed delivery is bought.**
+
+## T15 — Africa's constraint is language, not policy
+
+First pass with named African instruments on these shelves. Ethiopia's Ministry of Education is
+building a cross-level framework with **UNESCO** (begun May 2026) and testing teacher
+lesson-planning AI; South Africa's **draft** National AI Policy 2026 names STEAM curricula and
+community AI centres. 🔴 **The reported practical obstacle in Ethiopia is that models handle
+Amharic and Afaan Oromo far less reliably than English.**
+
+**Consequence:** on an African education engagement, scope **model and corpus capability in the
+language of instruction before anything else**, and assume offline-capable delivery
+([`Wakoma/Lokal`](https://github.com/Wakoma/Lokal), Kolibri). A curriculum-policy framing will
+produce a product that does not work in the classroom it was bought for. 🔵 Kenya and Nigeria
+remain **unmeasured** here despite an explicit by-country query.
+
+## 🟢 `T2` re-grounded — the copyleft constraint now has a measured denominator
+
+`T2` has said since `p491` that the education platform layer is copyleft and that this is the
+binding constraint. It now has a rate rather than an impression. Of the **31** rows in the
+`topic:edtech` 50–400★ band still absent from every curated shelf:
+
+| | n |
+|---|---|
+| 🔴 copyleft (AGPL-3.0, GPL-3.0/2.0, LGPL-2.1, MPL-2.0, CERN-OHL-S-2.0) | 11 |
+| 🔴 no resolvable grant at any root path | 6 |
+| 🔴 dormant (no push since 2024 or earlier) | 9 |
+| 🟢 permissive **and** live | **4** |
+
+**25 of 31 are unusable for reasons that no amount of curation changes.** `T2` is correct and the
+constraint is tighter than "mostly copyleft" suggested: on this axis the permissive-and-live yield
+is **7.7%**.
+
+## 🔴 `T11` — the claim about unlicensed evaluation instruments needs its third correction
+
+`T11` originally held that **no** education-AI evaluation instrument is licensed. `p493` falsified
+it once ([`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark),
+MIT). `p500` falsifies the weaker successor claim too: `learning-commons-org/evaluators` is **MIT**
+code. 🔴 **But the honest statement is narrower than "licensed instruments exist":** the licensed
+ones are licensed **in their code and restricted in their corpora** (see `T13`). The tier has
+permissive *software* and non-commercial *reference data*.
+

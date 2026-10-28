@@ -1,0 +1,5 @@
+gate	probe_existent	probe_nonexistent	discriminating	note
+api.github.com/repos	403	403	NO	blocked by this session's network policy; unusable for stars/licence/SHA
+curl -sI github.com/OWNER/REPO	403	403	NO	re-confirms Gap 498-M: zero discriminating power, 403 on real and fake alike
+raw.githubusercontent.com/OWNER/REPO/REF/PATH	200	404	YES	the existence + bytes gate used for every licence read this pass
+git ls-remote https://github.com/OWNER/REPO REF	40-hex SHA	auth-prompt error	PARTIAL	sound SHA oracle for public repos; NOT an existence oracle (nonexistent and private both prompt for a username)
