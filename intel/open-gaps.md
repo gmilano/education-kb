@@ -27,6 +27,14 @@ at the end of one.
 `gate-census-union`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`,
 `gate-promotion`, `gate-promotion-ledger`, `gate-cell-reproduction`.
 
+🟢 **Re-run after this pass's edits were written: 49/63 green.** `gate-register-currency` turned
+**GREEN** — the mirror above is what the contract was asking for, and it is cheap. 🔵 **No
+regression:** the other fourteen reds are identical to the pre-edit run and no gate moved
+green → red. 🔴 `gate-promotion` and `gate-promotion-ledger` stay red **by design** — this pass did
+not promote `wenflow-org/wenflow` or `zhangl1001/civil-ai` (neither was re-read for shelf fit), and
+the ledger's ratchet is a whole-history measure (`Gap 503-C`). Log:
+[`hooks-rerun-after-edits.2026-10-28-p503.log`](../evidence/hooks-rerun-after-edits.2026-10-28-p503.log).
+
 ### 🟢 `p502`'s gaps, mirrored (the step the contract requires)
 
 | gap | statement, as `p502` wrote it |

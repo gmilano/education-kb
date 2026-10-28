@@ -12,3 +12,8 @@ gate-promotion	"a PERMISSIVE address on the trending shelves is in NO curated sh
 gate-promotion-ledger	C2-RATCHET: un-landed promotion claims rose to 197 against a pin of 148; C1-UNADJUDICATED on 15 slugs incl. GeminiLight/SocialCoach, adlnet/ADL_LRS, SirhanMacx/Claw-ED	trending files CLAIM promotions that never landed on a shelf. a promotion table in agents/trending.md marks wenflow and civil-ai "Promoted" while no shelf carries them (line numbers shift every pass; search the slug)
 gate-register-currency	FAIL	the register's newest section must be p(N-1). Measured: p501. Expected: p502. Same failure p501 recorded against p500 — now two passes in a row
 gate-cell-reproduction	"zero published cells parsed - a parse fault, not a clean shelf (P355)"	the cell parser no longer matches the shelves' current table shapes; a green here would be meaningless until it parses again
+# RE-RUN after this pass's edits were written (hooks-rerun-after-edits.2026-10-28-p503.log):
+re-run_gates_green	49 of 63 (was 48)
+re-run_delta	gate-register-currency GREEN - the p502 mirror written into intel/open-gaps.md satisfies the contract Gap 473-F states
+re-run_regressions	NONE - the other 14 red gates are identical to the pre-edit run, and no gate moved green -> red
+re-run_note	gate-promotion and gate-promotion-ledger stay RED by design: wenflow-org/wenflow and zhangl1001/civil-ai were NOT promoted this pass (neither was licence-re-read for fit), and the ledger ratchet is a whole-history measure this pass did not attempt
