@@ -254,3 +254,70 @@ engagement question is which obligation the client can carry** — which is what
 tree already asks. Registered as `NO-PERMISSIVE-PLATFORM` in the `p495` claim register so a later
 rewrite cannot quietly drop it.
 
+
+
+## 🆕 `p496` — `2026-10-28` — the special-education layer has **no platform**, and that is the finding
+
+🔴 **No layer in this file changes, and the platform query returned one vendor for the third pass
+running** (nine `openeducat.org` pages in eight languages, no second platform). The LGPL-3.0 reading
+`p495` byte-verified stands.
+
+🆕 **What is new is a layer this file never had: special education.** Discovery this pass produced
+eight addresses in it (see [`../agents/top.md`](../agents/top.md) `p496`), and the shape of what
+exists is the useful part for an engagement:
+
+| layer | what exists | permissive answer |
+|---|---|---|
+| IEP / §504 **knowledge packs** (law, sources, checklists) | three, all MIT | 🟢 [`jscott5811/IEP-and-Section-504-Plans-Skill`](https://github.com/jscott5811/IEP-and-Section-504-Plans-Skill) **(US federal)**, [`robotros/California-IEP-AI-project-kit`](https://github.com/robotros/California-IEP-AI-project-kit) (California), [`67tallchris/iep-builder`](https://github.com/67tallchris/iep-builder) (Arizona K-8) |
+| IEP **rendering / plain-language output** | one, MIT, **deterministic** | 🟢 [`rtwergrfh-cmyk/iep`](https://github.com/rtwergrfh-cmyk/iep) |
+| IEP **drafting pipeline** (multi-agent, retrieval, compliance gate) | one, **no grant** | 🔴 **none** — `SudhanvaJ-bit/project-samarth` is a read-only reference design |
+| special-education **platform / system of record** | 🔴 **nothing**, open or permissive | 🔴 **none** |
+
+🔴 **So the honest brief for a special-education engagement is: there is no platform to customise.**
+Every MIT asset in this layer is a *knowledge pack* or a *renderer*. The system of record stays
+whatever the district already runs, and Globant's build sits beside it. 🔵 **That is the opposite of
+this file's usual answer** — for LMS, ERP and virtual-classroom work the advice is "customise a real
+platform". Here there is no platform, and saying so early is worth more than a shortlist.
+
+### 🟢 A deployment posture this file has never been able to offer: **zero-AI, zero-server**
+
+[`rtwergrfh-cmyk/iep`](https://github.com/rtwergrfh-cmyk/iep) — **MIT**, 1 080 B,
+`sha1 fb30401f6782` at `264786ddb518` — converts an IEP PDF into one-page plain-language sheets per
+adult (classroom teacher, paraprofessional, substitute, family), plus optional accommodation and
+goal-data trackers. 🟢 **It runs entirely in the browser: no server, no AI service, rules only.**
+Prints in English or Spanish.
+
+🔵 **Why this matters more than its 0★ and 1 commit suggest.** The hardest objection in a
+special-education engagement is not accuracy, it is **data egress** — IEPs are among the most
+sensitive records a school holds. A tool that never transmits the document answers that objection
+*architecturally* rather than contractually. 🟢 **It is also the cleanest instance of `T9`
+(offline-first as a differentiator) this KB holds**, because it is offline by construction rather
+than by configuration.
+
+🔴 **Three limits to state before anyone proposes it:**
+- **Mixed licensing.** Project code MIT; bundled `pdf.js` **Apache-2.0**; Nunito font **SIL OFL
+  1.1**. 🔵 The font licence is the one a compliance review will stop on — OFL restricts
+  *renaming* the font, which matters if the output is rebranded for a district.
+- **Spanish is partial, and upstream says so.** The classifier works in English only; Spanish IEPs
+  are read by rules, and translation uses a built-in phrase list of **~150 common accommodations and
+  services**, so many items still need a human translator. 🔴 **Do not sell it as bilingual.**
+- **1 commit, 0★, no release tags.** No maintenance signal exists. Treat it as a **seed to fork**,
+  never as a dependency to track.
+
+### 🔴 Amendment to this file's Canvas row — unchanged, and restated because it is a floor
+
+No new advisory data this pass. The `canvas-mcp` version floor from `p495` stands in full:
+**`v1.16.0` = `b3f06c76e435`**, which patches all four advisories including two High (one at CVSS
+**7.8**), **requires Node.js ≥ 22.18** for the sandbox fix to be real, and leaves the caller's Canvas
+token reachable by executed code as a declared-unfixed residual. 🟢 HEAD stable for a second
+consecutive pass (`47394125364b`), so the pin is a security decision, not a drift workaround.
+
+### 🔴 Declared gaps
+
+- 🔴 **No permissive education ERP/SIS platform** — the mandated platform query has now returned
+  none for **three** consecutive passes. `openeducat_erp` (**LGPL-3.0**) by elimination.
+- 🔴 **No open special-education system of record**, permissive or copyleft. New gap, declared this
+  pass, and it is a supply fact rather than a search artefact: the function-shaped queries that
+  found eight application-layer addresses found **zero** platforms.
+- 🔵 **No AI-on-top integration surface exists for any special-education system.** The Canvas/Moodle
+  surfaces this file catalogues have no counterpart here — there is nothing to attach an agent to.

@@ -349,3 +349,64 @@ with the brief's own query; found nothing new. 🟢 **This absence is now a regi
 rewrite is indistinguishable from coverage — and this gap is load-bearing: three patterns choose
 their base on it.
 
+
+
+## 🆕 `p496` — `2026-10-28` — the census does not move, and the vertical-platform leg is now **three passes empty**
+
+🔵 **Nothing this pass promotes a foundations row, and that is the honest result rather than a quiet
+one.** The eight addresses discovery produced (see [`../agents/top.md`](../agents/top.md) `p496`) are
+all *application-layer* — IEP drafting, rubric grading, plain-language rendering. **None is
+infrastructure**, so none belongs here. Recording that explicitly, because an unchanged file looks
+identical to an unexamined one.
+
+### 🟢 Pins re-read this pass — and two branch-name traps in one sweep
+
+| repo | KB pin | `p496` `git ls-remote --symref` | default ref |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `46a5d7d40082` | `46a5d7d40082` | 🔵 **`refs/heads/19.0`** — a version branch |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `bc73ecf9cf71` | `bc73ecf9cf71` | 🔵 **`refs/heads/develop`** |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | `21a43a395ab4` | `21a43a395ab4` | `refs/heads/main` |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `e137ca47cbec` | `e137ca47cbec` | `refs/heads/main` |
+
+🔴 **This file's branch-name note is stronger than it reads.** Two of the four anchors above do **not**
+default to `main`, and they are the two a LATAM or APAC engagement is most likely to clone. A licence
+or liveness probe that hard-codes `main` reports both as **nonexistent** — not as unlicensed, which
+is the more dangerous of the two failure modes because "missing" tends to be retried while
+"unlicensed" tends to be believed. 🟢 `git ls-remote --symref` resolves the real ref in one call and
+every read in this pass uses it.
+
+### 🔴 The vertical-platform leg returned a single vendor, for the third pass running
+
+The brief's platform query (`open source platform education ERP SIS LMS MIT Apache self-hosted`)
+returned **nine pages from one domain — `openeducat.org`** — in eight languages, and no second
+platform at all.
+
+🟢 **It does corroborate the byte read `p495` made:** OpenEduCat is **LGPL-3.0** (8 241 B,
+`sha1 2979df12244d`), not the MIT or Apache the query asked for, and the vendor's own glossary page
+is what states the permissive/copyleft distinction. 🔴 **So the query's own premise returned
+nothing**: there is still **no permissive education ERP/SIS platform** on these shelves, and the
+LGPL-3.0 anchor remains the recommendation for exactly the reason `p495` recorded — LGPL's obligation
+attaches to the *module*, not to the whole deployment, which is survivable where AGPL is not.
+
+### 🟡 Recorded, deliberately **not** a foundations row
+
+[`SahilC/AutomaticEssayGrading`](https://github.com/SahilC/AutomaticEssayGrading) — **MIT**, 1 074 B,
+`sha1 cd4c5b7304aa` at `8bf6dc6b678b`, 13★, 55 commits, default ref **`master`**. Classical ML essay
+scoring: SVM, decision trees, random forests, LSTM. **No LLM anywhere in it.**
+
+🔵 **Why it is worth a line despite being old and small:** it is a *comparator*, and this sector has
+almost none. When a client asks why rubric scoring needs a model at all, this is the pre-LLM baseline
+that answers the question with code rather than assertion. 🔴 **It is not a dependency** — it is
+TensorFlow-era research code and this KB does not propose building on it.
+
+### 🔴 Declared gap — restated, and now with the reason it keeps recurring
+
+- 🔴 **No permissive (MIT / Apache / BSD) education ERP or SIS platform.** Third consecutive pass
+  that the mandated platform query returns no such thing. The permissive answer in the *full-LMS*
+  layer remains **OpenOLAT** (Apache-2.0) alone; in the *education-ERP* layer there is **no
+  permissive answer at all**, and `openeducat_erp` (LGPL-3.0) is the recommendation by elimination.
+- 🔴 **No foundational repository originated in LATAM or Africa.** Unchanged. 🔵 `p496` adds a
+  supply-side datum rather than a search artefact: the function-shaped queries that broke the
+  *agent*-layer drought this pass produced **zero** infrastructure addresses from either region.
+  **The gap is in infrastructure supply, not in this KB's queries** — which is a different and more
+  defensible sentence than the one this file carried before.

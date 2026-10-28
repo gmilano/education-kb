@@ -429,3 +429,157 @@ established is an egress-allowlist refusal rather than an outage. **So the EU Di
 primary read — carried as an open action for more than ten passes — can never be discharged from
 this session on any pass.** It belongs on the same named human deliverable as the two arXiv papers
 and the Vietnam Decision 33 official text. See [`trending.md`](trending.md) `p495`.
+
+
+## 🆕 `p496` — `2026-10-28` — the discovery drought **broke**, and the layer it broke in is the one with the worst licence hygiene in the sector
+
+🔵 **Standing order honoured.** `p495` made *verification before discovery* this KB's order of work.
+Verification ran first and came back clean (below); discovery ran second — and for the first time in
+five passes it returned **addresses this repository has never held**. Full reads:
+[`licence-and-stars.2026-10-28-p496.tsv`](../evidence/licence-and-stars.2026-10-28-p496.tsv).
+
+### 🟢 Drift sweep — **ten of ten stable**, and the volatile pin is now quiet for a second pass
+
+| repo | KB pin | `p496` `git ls-remote --symref` | verdict |
+|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `47394125364b` | `47394125364b`, `refs/heads/main` | 🟢 **stable, second consecutive quiet pass.** 🔴 Pin **`v1.16.0` = `b3f06c76e435`** anyway — the security floor in `p495` is unchanged |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `a31d82624c27` | `a31d82624c27`, `refs/heads/main` | 🟢 **6th consecutive pass byte-stable** (`p490`–`p496`) |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `70859b42e714` | `70859b42e714`, `refs/heads/main` | 🟢 stable |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `7d9e9052bc5a` | `7d9e9052bc5a`, `refs/heads/main` | 🟢 stable (AGPL-3.0) |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `196c547291da` | `196c547291da`, `refs/heads/main` | 🟢 stable |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `46a5d7d40082` | `46a5d7d40082`, **`refs/heads/19.0`** | 🟢 stable. 🔵 Default ref is a **version branch, not `main`** — the branch-name trap `repos/foundations.md` records, confirmed again |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `e137ca47cbec` | `e137ca47cbec`, `refs/heads/main` | 🟢 stable |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `bc73ecf9cf71` | `bc73ecf9cf71`, **`refs/heads/develop`** | 🟢 stable. 🔵 Second version of the branch-name trap: default ref is `develop` |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | `21a43a395ab4` | `21a43a395ab4`, `refs/heads/main` | 🟢 stable — the MIT evaluation instrument holds |
+| [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam) | `ed5bf6359413` | `ed5bf6359413`, `refs/heads/main` | 🟢 stable, **and used as this pass's probe control** — see below |
+
+🔵 **The `canvas-mcp` rate question is now settled.** `p494` inferred ~2 moves/day from a burst;
+`p495` saw one quiet pass; `p496` makes it **two**. **Branch HEAD is not inherently volatile here —
+it had a bad week.** The release-tag pin stands anyway, because it is a *security* floor and not a
+drift preference.
+
+### 🔴 A defect in this pass's own reader — caught by a control row, recorded rather than quietly fixed
+
+This pass's first licence sweep reported **`404` at every path for every repository probed**, which
+reads as a dramatic ecosystem finding: *a whole layer with no grants.* 🔴 **It was a shell-quoting
+bug in the probe** (the status code and the body length were being concatenated — `404000` — so no
+path could ever match `200`).
+
+🟢 **What caught it was a control row**, not a review of the code: the same probe was pointed at
+[`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam), whose licence `p495` had already
+byte-pinned at **MIT, 1 071 B, `sha1 25cb945a99ab`**. The control came back `404` too — which is
+impossible — and the sweep was rebuilt. The corrected probe reproduces `p495`'s bytes **exactly**,
+which is what licenses the rest of this pass's reads.
+
+🔵 **The method rule, stated so it outlives this pass.** This KB already runs a *branch* control
+(`README.md → 200` to prove the tree was reached). That control would **not** have caught this bug,
+because it fails in the same direction as everything else. 🔴 **A probe run needs a control with a
+known *positive* answer — a specific byte count the KB has already recorded — or a silent reader
+failure is indistinguishable from an ecosystem finding.** Every row in this pass's TSV carries both:
+a `README:200` branch control and a repository whose bytes were known in advance.
+
+🔴 **Why this is more than housekeeping:** `p495`'s headline finding was an *unlicensed reskin*. A
+false `NO-GRANT` is exactly the error that manufactures that finding. Had the control row been
+omitted, this pass would have published "the special-education layer is entirely unlicensed" — and
+three of the eight addresses below would have been libelled.
+
+### 🆕 The special-education / IEP layer — eight addresses new to this repository
+
+🟢 **Every one of these was absent from all 5,547 files in this repository** (`grep -rl`, including
+`evidence/` and `compose/code/`), which is the first time since `p491` that discovery has produced
+more than one such address. 🔵 **They did not come from the brief's ranking queries.** Those were run
+and saturated again (below). These came from **function-shaped** queries — *IEP*, *accommodations*,
+*rubric grading* — rather than keyword-and-star-ordered ones.
+
+🔴 **The licence split is the finding, and it is the inverse of the sector's general picture: five of
+eight carry no grant at all.**
+
+| repo | ★ | grant at SHA | disposition |
+|---|---|---|---|
+| [`jscott5811/IEP-and-Section-504-Plans-Skill`](https://github.com/jscott5811/IEP-and-Section-504-Plans-Skill) | 0 | 🟢 **MIT**, 1 068 B, `sha1 e8b3ee2c48a2` (`cd3a9018681f`) | 🟢 **Build on.** The **US federal baseline** this shelf lacked: IDEA **34 CFR Part 300** and **Section 504** of the Rehabilitation Act, with ED/OCR/OSERS sources cited by document and date. 2 commits. Same *pinned knowledge pack* architecture this KB already praises in `robotros/California-IEP-AI-project-kit` — but federal where that one is Californian |
+| [`rtwergrfh-cmyk/iep`](https://github.com/rtwergrfh-cmyk/iep) | 0 | 🟢 **MIT**, 1 080 B, `sha1 fb30401f6782` (`264786ddb518`) | 🟢 **Build on, and read it for its posture.** "IEP Glance" renders an IEP PDF into one-page plain-language sheets per adult (teacher, para, substitute, family). 🟢 **No server and no AI service — entirely in-browser, rules-only.** Prints EN/ES. 🔵 **Mixed grant, stated honestly upstream:** project code MIT, `pdf.js` Apache-2.0, Nunito **SIL OFL 1.1** — the font licence is the one a compliance review will ask about. 1 commit |
+| [`SahilC/AutomaticEssayGrading`](https://github.com/SahilC/AutomaticEssayGrading) | 13 | 🟢 **MIT**, 1 074 B, `sha1 cd4c5b7304aa` (`8bf6dc6b678b`) | 🟡 **Baseline, not a build target.** SVM / decision-tree / random-forest / LSTM essay scoring, 55 commits, **no LLM**. Worth one sentence to a client who assumes rubric scoring requires a model: this is the pre-LLM comparator |
+| [`SudhanvaJ-bit/project-samarth`](https://github.com/SudhanvaJ-bit/project-samarth) | 1 | 🔴 **no licence at 6 paths** (`README.md → 200`), `d628b919449a` | 🔵 **Reference design — read it, do not depend on it.** See below; it is the most instructive thing in this haul |
+| [`kennedyraju55/essay-grader`](https://github.com/kennedyraju55/essay-grader) | — | 🔴 **no licence at 6 paths** (`README.md → 200`), `504ddefc863a`, **`refs/heads/master`** | 🔴 **Excluded, and it is a misgrant.** The search channel asserted *"MIT-licensed"*; the payload has **no grant at any of six filenames**. Local-Gemma-via-Ollama rubric grading — the offline shape `T9` wants — and Globant **cannot use it** |
+| [`avivkatz1/easy-iep`](https://github.com/avivkatz1/easy-iep) | — | 🔴 **no licence at 6 paths** (`README.md → 200`), `ec0d4f039b0a` | 🔴 Excluded. IEP-meeting preparation framed around **FERPA** and Illinois **SOPPA** — 🔵 the first appearance of SOPPA anywhere on these shelves, and it arrives unusable |
+| [`victor-lubn/Special-Education-Planning`](https://github.com/victor-lubn/Special-Education-Planning) | — | 🔴 **no licence at 6 paths** (`README.md → 200`), `7baa4e1a9ecd` | 🔴 Excluded. Intake → SMART goals → accommodations → human review; avoids medical diagnosis |
+| [`marckurniawan/essay-scoring-project`](https://github.com/marckurniawan/essay-scoring-project) | — | 🔴 **no licence at 6 paths** (`README.md → 200`), `80d6cfceb75e` | 🔴 Excluded. Gemini + teacher rubrics |
+
+🔴 **No promotions to the permissive shelf table above, and the reason is the star floor, not the
+grant.** The three MIT finds sit at **0, 0 and 13★**. They go on this file as a layer, not as shelf
+rows, which keeps the `595★ → 41,700★` cliff recorded in the gaps section honest.
+
+### 🔵 `project-samarth` — a reference design worth more than its licence lets you use
+
+🔴 **It has no grant, so it is a read and nothing else.** What makes it worth reading is one
+architectural decision, and it is the special-education analogue of the rule `P492-1` already builds
+on (*"the model never does the arithmetic"*):
+
+> A rule-based baseline of what the **RPwD Act 2016** requires for each disability category is merged
+> with the model's suggestions, and **the model can add to the list; it cannot remove from it.**
+
+🟢 **That is a monotonic compliance floor enforced in code rather than asked for in a prompt** —
+generalised into a recipe as [`P496-1`](../compose/patterns.md). 🔵 Stack is LangGraph + Gemini 3.x
+Flash + `gemini-embedding-2` + ChromaDB + FastAPI (Python 3.13) + React 19; NASET's 11-section IEP
+format adapted to Indian law; field-level tracking of whether each edit was AI- or human-authored,
+with the original model output preserved. 32 commits.
+
+🔴 **And its own evaluation is the most useful thing on the page, because it is a declared failure:**
+across **15 synthetic profiles, all 15 runs returned `Partial`** — its compliance agent has **never
+once returned `compliant`**. Upstream also states drafts are stored **unencrypted** and that real
+student data must not be used, and that the pipeline has never been compared against single-prompt
+generation or against IEPs written by special educators. 🟢 **A compliance gate that never passes is
+not a conservative gate, it is an uncalibrated one**, and `P496-1` is built to avoid exactly that.
+
+### 🔴 The brief's ranking queries — run, and saturated for a **fifth** consecutive pass
+
+Both global ranking legs were run. 🔴 **Not one promotable education agent.** What they return now is
+a **category error rather than a repeat**, and naming the cause retires the complaint:
+
+| address returned | ★ | grant at SHA | why it is not an education agent |
+|---|---|---|---|
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **74,800** | 🟢 MIT, 1 070 B, `sha1 5f16474bdbd6` (`3f9715c62a3b`) | "Learn AI Engineering" — **542 lessons, 20 phases**. A curriculum for engineers |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | **1,100** | 🟢 MIT, 1 091 B, `sha1 543c922b12f8` (`da3f9df28a9c`) | 12 lessons on building agents with a local LLM. Upstream says it plainly: **"Educational, not production."** 23 commits |
+| [`h9-tect/AI-Roadmaps`](https://github.com/h9-tect/AI-Roadmaps) | — | 🔴 **no licence at 5 paths** (`19c63bdb7c86`) | A roadmap list. Unlicensed **and** out of category |
+
+🟢 **The cause is a taxonomy collision, and it is in GitHub's own metadata.** The topic `ai-education`
+and the keyword *"education"* in a star-ordered query select for **teaching AI to humans**, not
+**applying AI to teaching**. Those two categories are disjoint, and the first is vastly larger and
+more starred. 🔴 **That is why five passes of ranking queries returned curricula** — and why this
+file already had to write exclusion rows for `microsoft/ai-agents-for-beginners` (78,000★) and
+`labmlai/annotated_deep_learning_paper_implementations` (67,600★) one repository at a time.
+
+🔵 **Standing instruction for the next pass, and it is a change of query shape rather than more
+effort:** drop *"education"* + star-ordering as a discovery leg. **Query the function** — `IEP`,
+`accommodations`, `rubric`, `gradebook`, `attendance`, `SIS`, `proctoring`, `enrolment`. That is what
+produced all eight new addresses above after five passes of nothing. 🟡 **Stated against itself:** the
+licensed *head* of the special-education layer was already swept (`robotros`, `67tallchris/iep-builder`,
+`dougdevitre/access-to-education`, all MIT, all held). This pass reached the **tail** of that same
+layer, and the tail is where the grants stop.
+
+### 🔴 A correction, and a drift, on the repository `P496-1` now depends on
+
+[`robotros/California-IEP-AI-project-kit`](https://github.com/robotros/California-IEP-AI-project-kit)
+is cited in [`compose/patterns.md`](../compose/patterns.md) `P496-1` as a state-overlay knowledge
+pack, so its pin and its bytes were re-read this pass rather than carried.
+
+| field | this KB's recorded value | `p496` read | verdict |
+|---|---|---|---|
+| HEAD | `ff1ae0ce30e7` | 🔴 **`33ad4d06f19b`** | **drifted** |
+| `LICENSE` bytes @ `ff1ae0ce30e7` | **1 064 B**, `sha1 2524a8e74f10` | 🔴 **1 065 B**, `sha1 35b8efcd34d0` | **does not reproduce** |
+| `LICENSE` bytes @ `33ad4d06f19b` | — | **1 065 B**, `sha1 35b8efcd34d0` | 🟢 **byte-identical to the old SHA — the drift is code-only** |
+| licence family | MIT | 🟢 **MIT** (`MIT License` title line) | 🟢 unaffected |
+
+🔴 **The byte count and `sha1` this KB published for this repository do not reproduce at the SHA this
+KB itself cites.** Re-read three times, identical each time. 🟢 **And this pass's reader is
+independently validated in two directions**: `naufaldi/teacher-exam` reproduces `p495`'s
+**1 071 B / `sha1 25cb945a99ab`** exactly, and `braiinz94/braiinz-education` reproduces this KB's
+**11 356 B** exactly. 🔵 **So the defect is in the recorded figure, not in the reading of it** — a
+transcription error rather than an upstream change, since the payload is byte-identical across both
+SHAs.
+
+🟢 **Nothing commercial turns on it** — the grant is MIT either way, which is what `P496-1` relies
+on. 🔵 **What it does establish is that this KB's byte-level records are not self-verifying**, which
+is `T14` with a measurement attached: of the four recorded figures re-read this pass, **three
+reproduced exactly and one did not**. 🔴 **Re-read a pinned byte count before building a
+recommendation on it**, which is what this pass did and why the error surfaced at all.

@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p496` — `2026-10-28` — **🟢 THE DISCOVERY DROUGHT BROKE AFTER FIVE PASSES, AND IT BROKE BECAUSE THE QUERY SHAPE CHANGED, NOT BECAUSE SUPPLY DID. Eight addresses absent from all 5,547 files here — the first multi-address haul since `p491` — and every one came from a FUNCTION-shaped query (`IEP`, `accommodations`, `rubric`) rather than the brief's keyword-and-star ranking legs. 🔴 The licence split is the headline and it inverts this sector's general picture: FIVE OF EIGHT CARRY NO GRANT. The special-education layer has the highest legal exposure in education (IDEA, §504, RPwD) and the worst licence hygiene on these shelves. 🔴 And this pass caught a bug in its OWN reader that would have published "the whole layer is unlicensed" — a control row with a KNOWN BYTE COUNT caught it; the branch control this KB already runs would NOT have. 🟢 Ten of ten pins stable; `canvas-mcp` quiet for a second pass, so `p494`'s "twice a day" was a bad week, not a cadence.**
+
+Full reads: [`licence-and-stars.2026-10-28-p496.tsv`](../evidence/licence-and-stars.2026-10-28-p496.tsv).
+The eight addresses, the reader defect and the taxonomy collision: [`agents/top.md`](top.md) `p496`.
+The monotonic-floor recipe: [`compose/patterns.md`](../compose/patterns.md) `P496-1`.
+The EMEA prose-loss finding: [`intel/market.md`](../intel/market.md) `p496`.
+
+🔵 **Channel posture: unchanged, with a fourth host now proven refused.** `git ls-remote --symref`
+for existence and SHA, `raw.githubusercontent.com` at a pinned SHA for licence bytes, `WebFetch` page
+reads for stars and releases; `curl -sI` against `github.com` remains proxy `403`.
+
+### 🔴 `coe.int` joins `arxiv.org` and `eur-lex.europa.eu` — a fourth host in the egress-refusal class
+
+Two Council of Europe pages were probed this pass and both returned
+**`getaddrinfo ENOTFOUND www.coe.int`** — this session's egress refusing the host, the same class of
+diagnosis `p494` established for `arxiv.org` and `p495` for `eur-lex.europa.eu`.
+
+🔴 **So the Council of Europe primary read can never be discharged from this session either**, and it
+joins the named human deliverable alongside the two arXiv papers, the EUR-Lex Omnibus text and the
+Vietnam Decision 33 official text. 🔵 **Everything this pass records about the CoE track below is
+therefore secondary** — a search-channel snapshot, explicitly not a primary read. **Do not quote the
+deliverable titles to a client as verified.**
+
+### 🟢 Verification ran first, and `p495`'s standing order paid again
+
+`p495` made *verification before discovery* this KB's order of work. Verification came back **ten of
+ten pins stable** — including `openeducat_erp` on `refs/heads/19.0` and `oppia` on
+`refs/heads/develop`, two more instances of the branch-name trap `repos/foundations.md` records.
+🟢 **Then discovery, running second, broke a five-pass drought.** The order did not cost anything.
+
+### 🔴 The reader defect, and why it is the most important paragraph in this pass
+
+This pass's first licence sweep returned `404` **at every path on every repository** — which reads as
+a spectacular finding about an unlicensed layer. 🔴 **It was a shell-quoting bug** concatenating the
+HTTP status with the body length (`404000`), so no path could ever match `200`.
+
+🟢 **A control row caught it.** The probe was pointed at `naufaldi/teacher-exam`, whose grant `p495`
+byte-pinned at **MIT, 1 071 B, `sha1 25cb945a99ab`**. The control returned `404`, which is
+impossible, and the sweep was rebuilt; the corrected probe reproduces `p495`'s bytes exactly.
+
+🔴 **The rule, and it is a correction to this KB's existing practice.** The `README.md → 200` branch
+control already in use here **fails in the same direction** as the bug and would not have caught it.
+A probe run needs a control whose **positive** answer is known in advance — a byte count already
+recorded in this KB. 🔵 **Why it matters beyond hygiene: `p495`'s headline was an *unlicensed reskin*,
+and a false `NO-GRANT` is precisely the error that manufactures that headline.** Three of this pass's
+eight addresses are genuinely MIT and would have been libelled.
+
+### 🟢 Why the drought broke — a taxonomy collision in GitHub's own metadata
+
+🔴 **The brief's two ranking legs saturated for a fifth consecutive pass**, and what they return is
+now a *category error* rather than a repeat: `rohitg00/ai-engineering-from-scratch` (**74,800★**, MIT,
+542 lessons), `pguso/agents-from-scratch` (1,100★, MIT, upstream's own words: *"Educational, not
+production"*) and `h9-tect/AI-Roadmaps` (unlicensed roadmap list).
+
+🟢 **The cause is nameable: the topic `ai-education` and the keyword *"education"* select for
+teaching AI to humans, not applying AI to teaching.** The two categories are disjoint and the first
+is far larger and far more starred. 🔴 **Five passes of ranking queries were therefore measuring the
+wrong population** — and this file has been writing exclusion rows one repository at a time
+(`ai-agents-for-beginners` at 78,000★, `annotated_deep_learning_paper_implementations` at 67,600★)
+without naming the mechanism that keeps producing them.
+
+🔵 **Standing instruction for `p497`, and it is cheaper rather than harder:** retire *"education"* +
+star-ordering as a discovery leg; **query the function** — `IEP`, `accommodations`, `rubric`,
+`gradebook`, `attendance`, `SIS`, `proctoring`, `enrolment`. That single change produced eight new
+addresses after five passes of none.
+
+🟡 **Honest limit, stated against this pass's own headline.** The licensed *head* of the
+special-education layer was already on these shelves (`robotros/California-IEP-AI-project-kit`,
+`67tallchris/iep-builder`, `dougdevitre/access-to-education` — all MIT, all held). **This pass reached
+the tail of a layer the KB had already found, not a new layer.** The finding is the tail's licence
+density, not the layer's discovery.
+
+### 🔴 The thing a client should hear from this pass
+
+🟢 **The US federal special-education baseline is now on these shelves and it is MIT**
+([`jscott5811/IEP-and-Section-504-Plans-Skill`](https://github.com/jscott5811/IEP-and-Section-504-Plans-Skill),
+1 068 B, `sha1 e8b3ee2c48a2`) — IDEA **34 CFR Part 300** and **Section 504**, sourced to ED/OCR/OSERS
+documents by date. The KB already held Californian and Arizonan state packs; **the federal floor
+under them was missing until now.**
+
+🔴 **And the warning that travels with it:** the offline rubric grader that would have fit `T9`
+perfectly — `kennedyraju55/essay-grader`, local Gemma via Ollama — was asserted *"MIT-licensed"* by
+the search channel and has **no grant at six filenames**. 🔵 **In this layer, assume no grant until
+the bytes say otherwise.** Five of eight new addresses had none.
+
+---
+
+
 ## 🆕 `p495` — `2026-10-28` — **🟢 THE ADVISORY RE-READ `p494` ORDERED WAS RUN FIRST, AND IT RESOLVED THE PIN FROM A PREFERENCE INTO A SECURITY FLOOR. The count held at FOUR, so the number `p494` said must not age is fine — but the four IDs were ALL this KB held. Read first-hand this pass: **two are High**, one at **CVSS 7.8**, and 🟢 **all four are patched at `v1.16.0`**. 🔴 Two things nobody had recorded fall out of that: the `1.16.0` sandbox fix **requires Node.js ≥ 22.18** (on an older Node the patched version is not patched), and the advisory states as **unfixed** that executed code **can still reach the caller's Canvas token**. 🔴 And `EUR-Lex is proxy-refused` — `connect_rejected`, same signature as `arxiv.org` — which ends a ten-pass open action by proving it is not a pass action at all. 🟢 Five of five pins stable; the "twice a day" drift rate was a burst, not a cadence.**
 
 Full reads: [`licence-and-stars.2026-10-28-p495.tsv`](../evidence/licence-and-stars.2026-10-28-p495.tsv).

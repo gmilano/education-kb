@@ -498,3 +498,95 @@ load-bearing claims are therefore now registered in `make gate-prose-claims`** �
 Node floor and the EMEA adoption-rate gap — so a later rewrite that drops them **fails the build**
 instead of looking like coverage.
 
+
+
+## 🆕 `p496` — `2026-10-28` — a trend number used twice, and a new trend about the layer with the worst licence hygiene
+
+### 🔴 Bookkeeping defect: **`T15` names two different trends**
+
+🔴 **Found by counting headings, not by reading prose.** This file contains two sections both
+numbered `T15`:
+
+| heading | pass | subject |
+|---|---|---|
+| `### 🆕 T15 — Agentic AI now has its own governance instrument, and it is voluntary by design` | `p494` | a governance instrument |
+| `### 🆕 T15 — The agent surface on an incumbent system is where the security debt lands, and it lands fast` | `p495` | security debt at the agent surface |
+
+🔴 **Consequence, and it is live rather than theoretical: every cross-file reference to "`T15`" in
+this KB is now ambiguous**, including the ones in `agents/top.md` and `compose/patterns.md`.
+`T13` and `T14` were each introduced inside a pass section the same way, so the numbering has no
+single registry to collide against — which is how `p495` reached `T15` without noticing `p494` had
+taken it.
+
+🟢 **Resolution, chosen to avoid breaking existing references.** Neither section is renumbered —
+renaming them would silently invalidate every citation already written. Instead both are
+**disambiguated by suffix** from here on:
+
+- **`T15-GOV`** — the voluntary agentic-AI governance instrument (`p494`).
+- **`T15-SEC`** — security debt at the agent surface of an incumbent system (`p495`).
+
+🔵 **And the next free number is `T16`**, used below. 🔴 **Standing instruction: a pass introducing a
+trend must `grep -n "^## T\|^### 🆕 \`\?T" intel/trends.md` first.** This is `T14` applying to
+itself — the defect was in the registry, not in anyone's reading.
+
+### 🆕 `T16` — The layer with the highest legal exposure in education has the **worst licence hygiene**, and the two facts are connected
+
+🟢 **Measured this pass, from bytes.** Discovery produced **eight addresses absent from all 5,547
+files** in this KB, all in special education and rubric grading. The grant split:
+
+| grant at pinned SHA | count | addresses |
+|---|---|---|
+| 🟢 **MIT** | **3** | `jscott5811/IEP-and-Section-504-Plans-Skill` (1 068 B), `rtwergrfh-cmyk/iep` (1 080 B), `SahilC/AutomaticEssayGrading` (1 074 B) |
+| 🔴 **no licence at six filenames** | **5** | `SudhanvaJ-bit/project-samarth`, `kennedyraju55/essay-grader`, `avivkatz1/easy-iep`, `victor-lubn/Special-Education-Planning`, `marckurniawan/essay-scoring-project` |
+
+🔴 **Five of eight — 62.5% — carry no grant**, each confirmed with `README.md → 200` at the same SHA
+so the tree was demonstrably reached. **Compare the general education-agent layer, where this KB's
+permissive tier is concentrated but real** (`DeepTutor` 46.0k Apache-2.0, `OpenMAIC` 41.7k MIT).
+🔵 **The special-education layer inverts that: supply exists, grants do not.**
+
+🟢 **The mechanism, and it is the part worth briefing.** These are the repositories of **practitioners
+and parents**, not of labs or vendors — a special-education teacher, a district employee, a family
+advocate, shipping 1 to 32 commits to solve their own problem. 🔴 **People in that position publish
+to help, and a licence file is an artefact of intending redistribution.** So the layer governed by
+the *strictest* statutes — **IDEA**, **Section 504**, **FERPA**, Illinois **SOPPA**, India's **RPwD
+Act** — is also the layer where almost nothing can lawfully be reused.
+
+🔴 **Why this is a commercial trend and not a curiosity.** The failure mode is specific: a search
+returns a tool that does exactly what a district needs, it is public on GitHub, the engagement
+assumes "open source", and **there is no grant** — so the build is unlicensed from day one, in the
+one domain where a compliance review is certain to happen. 🔵 **`T3` ("open source" claims are
+unreliable at the family level) said the *family* is often misstated. `T16` is sharper and worse:
+here there is often no licence at all**, and this pass caught the search channel asserting
+*"MIT-licensed"* for `kennedyraju55/essay-grader`, which has none.
+
+🟢 **What to do with it on an engagement:** treat this layer as **read-only reference** by default.
+The three MIT assets are knowledge packs and a deterministic renderer — they compose
+([`P496-1`](../compose/patterns.md)) but they do not add up to a product. 🔴 **There is no
+special-education platform, open or permissive, at all** (see
+[`../verticals/solutions.md`](../verticals/solutions.md) `p496`), so the system of record stays the
+district's and Globant builds beside it.
+
+### 🟢 `T9` (offline-first is a regional differentiator) — its cleanest instance yet, and it is not regional
+
+[`rtwergrfh-cmyk/iep`](https://github.com/rtwergrfh-cmyk/iep) (MIT, 1 080 B, `sha1 fb30401f6782`)
+runs **entirely in the browser with no server and no AI service** — rules-only IEP→plain-language
+rendering. 🟢 **Offline by construction rather than by configuration**, which is the strongest form
+of the `T9` argument this KB holds.
+
+🔵 **And it extends `T9` past its regional framing.** This file has argued offline-first as a
+*LATAM/APAC connectivity* differentiator. Here the driver is **data sensitivity in a high-income
+market**: an IEP is among the most protected records a school holds, and a tool that never transmits
+it answers the egress objection **architecturally instead of contractually**. 🟢 **So offline-first
+is now two arguments — connectivity where bandwidth is the constraint, and non-egress where privacy
+law is** — and the second one sells in North America and EMEA.
+
+### 🟡 `T10` (market sizing is not usable) — holds, sixth pass, with the contradiction inside one query
+
+🔴 A single mandated trends query returned **three figures for the same year**: **$3.7bn**,
+**$10.6bn** and **$11.4bn** for 2026, with CAGRs from **15.9%** to **46.12%**, plus disagreement on
+the leading segment (one source: higher education largest; another: K-12 at **45.62%**). 🟢 **`T10`
+does not need restating so much as it needs the replacement**, which this pass has: the
+**governance gap**, now measured independently in two regions — **26%** of LATAM institutions with a
+formal AI strategy, **10%** of North American institutions with formal AI guidelines. 🔵 **Two
+instruments, two sources, one conclusion**, and unlike the dollar figures it has been stable across
+passes.

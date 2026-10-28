@@ -864,3 +864,150 @@ that sells; do not quote the faculty-engagement depth figure without the conflic
 LATAM** — which is exactly why the governance product is a *differentiator* here rather than a
 compliance cost, and why it has a window.
 
+
+
+## 🆕 `p496` — `2026-10-28` — **EMEA's regulatory picture in this file is missing an entire institution**, and the two bodies are easy to confuse
+
+🔴 **The headline is a defect in this file, found by counting rather than by reading.**
+`grep -c "Council of Europe" intel/market.md` returns **`0`**. This file's EMEA section carries the
+EU AI Act calendar, the Digital Omnibus chronology (Regulation (EU) **2026/1744**) and *"Council
+conclusions on a human-centred approach to AI in education"* — and **nothing at all** about the
+**Council of Europe**, whose education-AI instrument pipeline this KB **does** hold, in
+[`../agents/trending.md`](../agents/trending.md).
+
+🔴 **The two are different institutions, and this file names only one of them while using a word that
+reads like both.** The *Council of the European Union* issues the "Council conclusions" cited at the
+top of the EMEA section. The *Council of Europe* is a separate treaty organisation of 46 member
+states, not an EU body, and it is the one drafting education-specific AI instruments. 🔵 **An
+engagement reading this file alone would brief a client that the AI Act is the whole EMEA picture.**
+
+🟡 **This is the third instance of the prose-loss defect** `p494` found in APAC and `p495` found in
+LATAM — and the first where the loss is not a deleted paragraph but a **fact that never crossed from
+`trending.md` into the file an engagement actually reads.** `T14` covers it; `T16` below extends it.
+
+🔴 **Grade: secondary, and permanently so.** `coe.int` was probed twice this pass and returned
+**`getaddrinfo ENOTFOUND www.coe.int`** — this session's egress refusing the host, the same signature
+`p494` established for `arxiv.org` and `p495` for `eur-lex.europa.eu`. **The Council of Europe
+primary read can never be discharged from this session**, so it joins the named human deliverable.
+Everything below is a search-channel snapshot. **Do not quote these titles to a client as verified.**
+
+## Opportunities by region — `p496`
+
+### North America
+
+🟢 **The federal special-education baseline is now a buildable asset, and it is MIT.**
+[`jscott5811/IEP-and-Section-504-Plans-Skill`](https://github.com/jscott5811/IEP-and-Section-504-Plans-Skill)
+(MIT, 1 068 B, `sha1 e8b3ee2c48a2`) pins **IDEA 34 CFR Part 300** and **Section 504 of the
+Rehabilitation Act of 1973**, sourced to US Dept. of Education OCR/OSERS documents by title and date.
+🔵 **This KB already held Californian and Arizonan state packs; the federal floor beneath them was
+missing.** The commercial shape that follows is *federal baseline + one state pack per jurisdiction*,
+which is a per-state engagement with a shared core rather than 50 bespoke builds.
+
+🔵 **A second US jurisdiction layer appears this pass and arrives unusable:** `avivkatz1/easy-iep`
+frames IEP-meeting preparation around **FERPA** and Illinois **SOPPA** — the first appearance of
+SOPPA anywhere on these shelves — and has **no licence at six paths**. 🔴 **SOPPA is a real
+procurement gate in Illinois districts** (vendor contracts, breach notification, data-deletion
+duties) and this KB has no permissive asset addressing it. **Named gap, not a filler row.**
+
+🟡 **Demand-side reads this pass, both secondary and both consistent with `T1`:** a vendor roundup
+dated April 2026 puts North America at **~36%** of the regional market and reports only **10% of
+institutions have formal AI guidelines** while **71% of US teachers lack AI training**; a
+market-research page gives **$951M (2024) → ~$2.3bn (2029), ~15.9% CAGR**. 🔴 **The 10%-guidelines
+figure is the one that sells institutional delivery work**, and it is the same adoption-without-
+governance split UNESCO measured in LATAM (87% using, 26% with a strategy). 🔵 **Two regions,
+independent sources, the same gap** — that is `T1` with a second leg.
+
+### EMEA
+
+🆕 **The Council of Europe track, carried into this file for the first time.** Secondary throughout
+(`coe.int` is proxy-refused), and the dates below are as reported rather than read:
+
+- **Committee of Experts on AI and Education (`EDU-IA`)** — first meeting **January 2026**; second
+  plenary reported for **Strasbourg, 16–17 September 2026**.
+- **A legal instrument on AI in education** — listed among the committee's deliverables, in
+  drafting. 🔴 **If this lands binding, it is a second EMEA conformity regime beside the AI Act**,
+  and it is education-*specific* where the AI Act is horizontal.
+- **European Reference Framework for the Evaluation of Educational Technologies** — reviewed at the
+  second plenary, still in drafting. 🟢 **This is the procurement-side instrument** that would turn
+  edtech evaluation from a vendor claim into a scored framework.
+- **Compass for AI and Education** — reported for release **March 2026**, covering AI literacy,
+  regulation, teaching and assessment with AI, and edtech evaluation.
+- **4th Working Conference on AI Governance in Education** — in preparation. The 3rd (October 2025)
+  reported broad stakeholder agreement that regulation is needed to protect children's rights.
+
+🔵 **Why this changes an EMEA engagement's shape.** The AI Act tells a provider *what conformity
+costs*; an evaluation framework tells a ministry *what it will score at procurement*. 🟢 **Those are
+different deliverables, and only the AI Act one was in this file.** The commercial opportunity is
+**conformity-plus-evaluability**: build the AI Act evidence pack, and build the artefacts an
+evaluation framework will ask for, once.
+
+🟡 **Adoption reads, all secondary:** **64%** of Europeans agree everyone will need to be AI-literate
+by 2030; an Allianz survey across eight countries finds **48%** using AI at least weekly (Germany,
+France, Austria in the low 40s); **>50%** of large firms use AI against **<15%** of SMEs. UK's AI
+Adoption Summit committed **>£200m**, delivered largely with Big Tech rather than education
+providers; the Commission signed **three Advanced Digital Skills grant agreements worth €25.4m**.
+Market: **$512.6M (2024) → ~$1,328.8M (2029)**, with UK, Germany, France and Scandinavia named as
+leading adopters. 🔴 **The large-firm/SME split is the one to design to** — a ministry or university
+procures like a large firm; a school procures like an SME, and nothing in this market is priced for
+that.
+
+### APAC
+
+🆕 **A reference design for Indian special education, and its licence makes it a read only.**
+`SudhanvaJ-bit/project-samarth` (**no grant at six paths**, `d628b919449a`) targets the **Rights of
+Persons with Disabilities Act 2016** and **NCTE/NCERT** guidance, using the **NASET** 11-section IEP
+format adapted to Indian law. 🟢 **Its one transferable idea — a statutory accommodation baseline
+the model may add to but never remove from — is generalised as
+[`P496-1`](../compose/patterns.md).** 🔴 Upstream declares: drafts stored **unencrypted**, no real
+student data, board- and state-specific rules **not** implemented, and **15 of 15** evaluation runs
+returned `Partial` with the compliance agent never once returning `compliant`.
+
+🔵 **India's statutory hook is new to this file.** The RPwD Act appears in `agents/trending.md` but
+not here, and it is the kind of anchor an APAC engagement is built on: a named act, per-category
+entitlements, and a national teacher-education body's guidance. 🔴 **No permissive asset addresses
+it.** Named gap.
+
+🟡 **Regional posture, secondary:** Forrester describes APAC AI legislation as **fragmented**,
+unlike the EU's single regime — Singapore with mature responsible-AI guidelines, China focused on
+algorithmic-misconduct law, the **ASEAN Guide on AI Governance and Ethics** still early-stage — and
+reports **sovereignty, security and responsible deployment** as 2026 leadership priorities, with
+Japan, South Korea and Australia advancing cautiously. Market: **$591.6M (2024) → $1,848.1M (2029),
+~20.9% CAGR**. 🟢 **Fragmentation is the product requirement here**, which is why `P494-1`'s
+jurisdiction-fork shape remains the right APAC architecture.
+
+### LATAM
+
+🔴 **This leg returned nothing this file did not already hold, and it held it more precisely.** The
+mandated LATAM query surfaced the **UNESCO IESALC / UNU-IAS** study of **200 higher-education
+institutions across 19 countries**, which this file already carries at finer grain: **87%** using AI
+in ≥1 area against **26%** with a formal AI strategy, and the function split **teaching & learning
+73.5% / research 57.0% / administration 34.1% / community engagement 20.0%**. 🟢 **The search channel
+returned "74%" for teaching and learning; this file's held figure is 73.5%** — the KB is the better
+source and the pass adds nothing. **Declared non-finding.**
+
+🟡 **Secondary context that is new but thin:** a 2025 comparative study of AI regulation in higher
+education across **Argentina, Brazil, Chile, Peru and Spain**; commentary naming **Chile** as the
+regional leader whose AI roadmap survived a change of administration, against a regional pattern of
+pilots dropped at each new administration. 🔵 **"Survived a change of government" is the only
+durability signal this KB has found in LATAM policy**, and it is the argument for anchoring a
+regional engagement in Chile.
+
+🔴 **Mexico: nothing, again.** The Portuguese/Spanish agent query returned `Jeanikt/tutor-ai-agent`
+(**held**, MIT, Brazilian-Portuguese voice math tutor) and generic Spanish language-learning repos
+with no grants. **No Mexico-specific permissive education asset exists on these shelves**, which
+matches this KB's standing record and is now restated with the query that failed to find one.
+
+### Global
+
+🔴 **Market sizing remains unusable, sixth consecutive pass (`T10`).** This pass's single trends
+query returned **three different figures for the same year** — **$3.7bn**, **$10.6bn** and
+**$11.4bn** for 2026 — from three vendors, with CAGRs from **15.9%** to **46.12%**. 🟢 **Use the
+structural facts instead** (adoption-without-governance in two regions, the copyleft platform layer,
+the four regulatory regimes); they are stable across passes where the dollar figures are not.
+
+🟢 **One cross-region pattern is firm enough to brief:** the governance gap is measured
+independently in two regions now — **26%** of LATAM institutions with a formal AI strategy (UNESCO,
+200 institutions / 19 countries) and **10%** of North American institutions with formal AI
+guidelines (vendor survey). 🔵 **Different instruments, different sources, same conclusion:
+deployment has outrun governance everywhere it has been measured**, and the institutional-delivery
+work that follows is the most portable offer in this KB.

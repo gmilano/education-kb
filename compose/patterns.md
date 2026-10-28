@@ -666,3 +666,111 @@ makes the remaining risk detectable** rather than deniable.
 - 🔴 **`DeepTutor`'s licence caveat and `pedagogy-benchmark`'s unread paper are unchanged** and both
   need a human (`arxiv.org` is **proxy-refused** from this session, permanently — `p494`/`p495`).
 
+
+
+## 🆕 `P496-1` — IEP / accommodation drafting with a **monotonic statutory floor enforced in code** 🟢
+
+**For:** a US district or state SELPA, or an Indian school group under the RPwD Act, that wants AI
+help drafting IEPs and §504 plans without any possibility of the model weakening a legally required
+accommodation.
+
+🔵 **Where the idea comes from, and the attribution matters because the source is unusable.**
+[`SudhanvaJ-bit/project-samarth`](https://github.com/SudhanvaJ-bit/project-samarth) has **no licence
+at six filenames** (`d628b919449a`, `README.md → 200`), so **no line of it may be copied**. It is
+read for one architectural decision, stated in its own README:
+
+> a rule-based baseline of what the statute requires for each disability category is merged with the
+> model's suggestions, and **the model can add to the list; it cannot remove from it.**
+
+🟢 **That is the accommodation analogue of `P492-1`'s rule that the model never does the arithmetic**
+— a legally binding floor held in code, not requested in a prompt. `P496-1` generalises it and
+builds it from assets that are **actually licensed**.
+
+### The stack — every component byte-verified this pass or already pinned here
+
+| role | component | grant at SHA |
+|---|---|---|
+| **Statutory floor, US federal** | [`jscott5811/IEP-and-Section-504-Plans-Skill`](https://github.com/jscott5811/IEP-and-Section-504-Plans-Skill) | 🟢 **MIT**, 1 068 B, `sha1 e8b3ee2c48a2` (`cd3a9018681f`) — IDEA **34 CFR Part 300**, **§504**, ED/OCR/OSERS sources by date |
+| **Statutory floor, state overlay** | [`robotros/California-IEP-AI-project-kit`](https://github.com/robotros/California-IEP-AI-project-kit) (CA) · [`67tallchris/iep-builder`](https://github.com/67tallchris/iep-builder) (AZ K-8) | 🟢 **MIT** (both, already pinned in this KB) |
+| **Parent-facing navigation** | [`dougdevitre/access-to-education`](https://github.com/dougdevitre/access-to-education) | 🟢 **MIT**, 1 068 B · `68657618a157` |
+| **Deterministic output renderer** | [`rtwergrfh-cmyk/iep`](https://github.com/rtwergrfh-cmyk/iep) | 🟢 **MIT**, 1 080 B, `sha1 fb30401f6782` (`264786ddb518`) — in-browser, no server, no AI service |
+| **Agent runtime** | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 **Apache-2.0** (`96f33faaf028`) |
+| **Orchestration + durable state** | LangGraph (MIT) · Temporal (MIT) | 🟢 permissive, both already on these shelves |
+| **Pedagogical regression gate** | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) + [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | 🟢 **MIT** both — `21a43a395ab4` stable this pass; **223 SEND items** are the relevant subset |
+| **Reference design only — do not import** | `SudhanvaJ-bit/project-samarth` | 🔴 **no grant** |
+
+🟢 **Every buildable component is MIT or Apache-2.0.** This is the second all-permissive stack in
+this file after `P493-1`.
+
+### Wiring — the floor is the whole point, so build it first
+
+1. **Encode the floor as data, not prose.** From the MIT knowledge packs, build a table keyed by
+   `(jurisdiction, disability category) → required accommodations/services`. Federal (IDEA/§504)
+   rows from `jscott5811`; state rows overlaid from the California and Arizona packs. 🔴 **Hand-check
+   this table against the cited regulation.** It is the only artefact in the system that must be
+   right, and it is small enough to review.
+2. **Let the model propose only additions.** The agent returns a *candidate set*. Merge is
+   `final = floor ∪ model_suggestions`, computed in Python. 🔴 **The model never sees a delete
+   path** — not a discouraged one, an absent one. Any suggestion that collides with a floor item is
+   recorded as a comment on that item, never as a replacement.
+3. **Make removal possible only for a named human.** A floor item can be removed **only** by an
+   authenticated user with a role that the district maps to IEP-team membership, and the removal
+   writes an audit row: who, when, which statute cite, what justification. 🟢 **This is what makes
+   the system lawful rather than merely cautious** — IDEA contemplates team decisions, not immutable
+   plans.
+4. **Track authorship per field.** Store, for every field, whether its current value is AI- or
+   human-authored, and preserve the original model output alongside edits. 🔵 Taken from
+   `project-samarth`, which does this and is right to.
+5. **Render deterministically, and keep the document off the network.** Fork `rtwergrfh-cmyk/iep`
+   for the per-adult plain-language sheets. 🟢 **It uses no model and no server**, so the finished
+   IEP never leaves the browser — which answers the egress objection architecturally (`T9`'s
+   non-egress leg, `intel/trends.md` `p496`). 🔴 Honour its mixed grant: `pdf.js` **Apache-2.0**,
+   Nunito **SIL OFL 1.1** — OFL restricts **renaming** the font, so a district rebrand must not
+   rename it.
+6. **Gate on the SEND subset before every release.** Run `pedagogy-benchmark`'s **223 SEND** items
+   through `lm-evaluation-harness` and block deploys on regression. 🟢 This is the only
+   education-specific, **licensed** instrument that touches special educational needs.
+
+### 🔴 Calibrate the compliance gate, or you have rebuilt the bug
+
+`project-samarth` reports **15 of 15** evaluation runs returning `Partial`, with its compliance agent
+**never once** returning `compliant`. 🔴 **A gate that never passes is uncalibrated, not
+conservative** — staff learn in a week that `Partial` means nothing and stop reading it.
+
+🟢 **Do this instead:** make the gate **mechanical and binary** — *is every floor item present in the
+output, yes or no* — because that is a set-containment check, computable exactly, with no model in
+the loop. Anything requiring judgement (is this goal measurable? is this accommodation appropriate?)
+goes to the human reviewer as a **flag with the statute cite**, never as a score. 🔵 **Separate what
+code can decide from what a person must**, and the gate becomes trustworthy because it only ever
+claims the first.
+
+### What to say to the client, and what not to
+
+- 🟢 **"The statutory floor cannot be weakened by the model — that is enforced in code, and here is
+  the table and the merge function."** Reviewable in an afternoon; the strongest sentence in this
+  recipe.
+- 🟢 **"The finished IEP never leaves the browser."** True, because the renderer has no server.
+- 🔴 **Do not say the output is compliant.** Nothing here certifies compliance; the floor check
+  proves *presence of required items*, which is necessary and nowhere near sufficient.
+- 🔴 **Do not claim bilingual delivery.** The renderer's classifier is English-only and its Spanish
+  translation is a **~150-phrase** list; many items still need a human translator.
+- 🔴 **Do not use real student data in a pilot until storage is encrypted at rest and the district's
+  FERPA — and in Illinois **SOPPA** — obligations are contracted. 🔵 **This KB holds no permissive
+  asset addressing SOPPA**; `avivkatz1/easy-iep` frames it and has **no licence**.
+
+### 🟡 Honest limits of this recipe
+
+- 🔴 **There is no special-education platform to build on** — open or permissive, none exists
+  ([`../verticals/solutions.md`](../verticals/solutions.md) `p496`). This composes knowledge packs
+  and a renderer beside the district's existing system of record; it does **not** replace it, and
+  there is **no integration surface** to attach to the way Canvas or Moodle offer one.
+- 🔴 **Jurisdiction coverage is three deep, not fifty.** Federal + California + Arizona, plus
+  Missouri parent-facing content. Every other state is net-new work, and the state packs are
+  **0–1★ single-author repositories** — fork them, do not depend on them.
+- 🔴 **India needs the floor rebuilt from the statute.** The RPwD Act / NCTE route has **no licensed
+  asset at all**; `project-samarth` is a read, and upstream itself says board- and state-specific
+  rules are not implemented. 🔵 Scope that as statutory research, not as integration.
+- 🟡 **Every MIT component here is tiny** — 1 to 55 commits, 0–13★, no release tags on most. 🟢 That
+  is tolerable precisely because they are *knowledge packs and renderers* rather than runtimes: the
+  value is the pinned regulatory content, which a fork freezes safely. 🔴 It would not be tolerable
+  for the agent runtime, which is why that slot is `smolagents` (Apache-2.0, 30,100★).

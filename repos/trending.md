@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p496` — `2026-10-28` — **🟢 EIGHT ADDRESSES NEW TO ALL 5,547 FILES HERE — the first multi-address haul since `p491` — and the mechanism matters more than the haul: they came from FUNCTION-shaped queries (`IEP`, `accommodations`, `rubric`), while the brief's keyword-and-star ranking legs saturated for a FIFTH pass and returned 74,800★ and 1,100★ CURRICULA. 🟢 The cause is now nameable: GitHub's `ai-education` topic means *teaching AI to humans*, which is a disjoint and far larger category than *AI applied to teaching*. 🔴 Five of the eight new addresses carry NO GRANT. 🟢 Ten of ten pins stable, and two more instances of the branch-name trap (`openeducat_erp` → `19.0`, `oppia` → `develop`).**
+
+Full reads: [`licence-and-stars.2026-10-28-p496.tsv`](../evidence/licence-and-stars.2026-10-28-p496.tsv).
+Narrative, the reader defect and the taxonomy collision: [`agents/trending.md`](../agents/trending.md) `p496`.
+Shelf dispositions: [`agents/top.md`](../agents/top.md) `p496`.
+
+### 🟢 Drift sweep — ten of ten stable
+
+| repo | KB pin | `p496` `git ls-remote --symref` | verdict |
+|---|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | `47394125364b` | `47394125364b`, `refs/heads/main` | 🟢 **second consecutive quiet pass** — `p494`'s "~2 moves/day" was a bad week, not a cadence. 🔴 Pin **`v1.16.0` = `b3f06c76e435`** regardless: it is a security floor |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `a31d82624c27` | `a31d82624c27` | 🟢 **6 consecutive passes byte-stable** (`p490`–`p496`) |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `70859b42e714` | `70859b42e714` | 🟢 stable (MIT, 41,700★) |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `7d9e9052bc5a` | `7d9e9052bc5a` | 🟢 stable (AGPL-3.0) |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `196c547291da` | `196c547291da` | 🟢 stable (BSD-3-Clause) |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `46a5d7d40082` | `46a5d7d40082`, **`refs/heads/19.0`** | 🟢 stable. 🔵 **Default ref is a version branch** — the branch-name trap, re-confirmed |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | `e137ca47cbec` | `e137ca47cbec` | 🟢 stable (MIT) |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `bc73ecf9cf71` | `bc73ecf9cf71`, **`refs/heads/develop`** | 🟢 stable. 🔵 **Second branch-name variant: `develop`.** A probe hard-coding `main` reads this repo as missing |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | `21a43a395ab4` | `21a43a395ab4` | 🟢 stable — the MIT evaluation instrument |
+| [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam) | `ed5bf6359413` | `ed5bf6359413` | 🟢 stable, **and this pass's probe control**: MIT, 1 071 B, `sha1 25cb945a99ab` reproduced exactly |
+
+🔵 **Two branch-name variants in one ten-row sweep** (`19.0` and `develop`) is worth more than a
+footnote: a licence probe that assumes `main` would report **two of this KB's anchor repositories as
+nonexistent**. `git ls-remote --symref` resolves it for free and every row here uses it.
+
+### 🆕 Eight addresses absent from this entire repository
+
+🟢 **Gate applied:** `grep -rl` across all 5,547 files, `evidence/` and `compose/code/` included.
+🔴 **Five of eight carry no grant**, each with `README.md → 200` at the same SHA proving the tree was
+reached — so these are **real absences, not probe failures.**
+
+| repo | ★ | grant at SHA | verdict |
+|---|---|---|---|
+| [`jscott5811/IEP-and-Section-504-Plans-Skill`](https://github.com/jscott5811/IEP-and-Section-504-Plans-Skill) | 0 | 🟢 **MIT**, 1 068 B, `sha1 e8b3ee2c48a2` (`cd3a9018681f`) | 🟢 **Build on** — the **US federal** IEP/§504 baseline (IDEA 34 CFR Part 300), ED/OCR/OSERS sources by date. The floor under the state packs this KB already holds |
+| [`rtwergrfh-cmyk/iep`](https://github.com/rtwergrfh-cmyk/iep) | 0 | 🟢 **MIT**, 1 080 B, `sha1 fb30401f6782` (`264786ddb518`) | 🟢 **Build on.** In-browser, **no server and no AI service**, rules-only IEP→plain-language sheets, prints EN/ES. 🔵 Mixed grant upstream: code MIT, `pdf.js` Apache-2.0, Nunito **SIL OFL 1.1** |
+| [`SahilC/AutomaticEssayGrading`](https://github.com/SahilC/AutomaticEssayGrading) | 13 | 🟢 **MIT**, 1 074 B, `sha1 cd4c5b7304aa` (`8bf6dc6b678b`) | 🟡 Pre-LLM comparator — SVM / DT / RF / LSTM, 55 commits, no model API |
+| [`SudhanvaJ-bit/project-samarth`](https://github.com/SudhanvaJ-bit/project-samarth) | 1 | 🔴 **none at 6 paths** (`d628b919449a`) | 🔵 **Reference design only.** RPwD Act 2016 baseline merged so the model **can add but cannot remove** required accommodations → generalised as [`P496-1`](../compose/patterns.md) |
+| [`kennedyraju55/essay-grader`](https://github.com/kennedyraju55/essay-grader) | — | 🔴 **none at 6 paths** (`504ddefc863a`, **`master`**) | 🔴 **Misgrant.** Search channel asserted *"MIT-licensed"*; payload has none. Local Gemma via Ollama — the `T9` offline shape, unusable |
+| [`avivkatz1/easy-iep`](https://github.com/avivkatz1/easy-iep) | — | 🔴 **none at 6 paths** (`ec0d4f039b0a`) | 🔴 Excluded. **FERPA + Illinois SOPPA** framing — first SOPPA sighting on these shelves, and it arrives unusable |
+| [`victor-lubn/Special-Education-Planning`](https://github.com/victor-lubn/Special-Education-Planning) | — | 🔴 **none at 6 paths** (`7baa4e1a9ecd`) | 🔴 Excluded |
+| [`marckurniawan/essay-scoring-project`](https://github.com/marckurniawan/essay-scoring-project) | — | 🔴 **none at 6 paths** (`80d6cfceb75e`) | 🔴 Excluded. Gemini + teacher rubrics |
+
+### 🔴 The ranking legs, counted — fifth saturated pass, and the cause is named
+
+| query | result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0 education agents.** Returned `rohitg00/ai-engineering-from-scratch` (74,800★, MIT, 542-lesson curriculum), `pguso/agents-from-scratch` (1,100★, MIT, *"Educational, not production"*), `h9-tect/AI-Roadmaps` (**no grant**), plus the general-purpose tier this KB holds |
+| `github trending education AI 2026` | 🔴 **0 promotable.** Returned the same curricula and `anandpatikat/guru-latihan-dinamis` — the unlicensed reskin `p495` already excluded |
+| `open source platform education ERP SIS LMS MIT Apache self-hosted` | 🔴 **0 new.** Returned **nine `openeducat.org` vendor pages** and no second platform. 🟢 Corroborates the LGPL-3.0 reading `p495` byte-verified; 🔴 third consecutive pass with **no permissive education platform** |
+| `AI education industry trends 2026` | 🟡 Market-research estimates only, **mutually inconsistent** ($3.7bn / $10.6bn / $11.4bn for the same year) — `T10` holds, sixth pass |
+| `open source AI agent IEP special education accommodations github` | 🟢 **Seven addresses, five new.** The leg that broke the drought |
+| `open source automated essay grading rubric AI github MIT Apache 2026` | 🟢 **Three new.** 🔴 Two misgrants caught (`kennedyraju55/essay-grader` no grant; `Dmoayad/essay-grader-llm` README-MIT vs payload GPL-3.0 — **already held and confirmed**) |
+| `open source AI tutor agent Brazil Mexico Portuguese Spanish github 2026` | 🟡 Returned `Jeanikt/tutor-ai-agent` (**held**) and generic Spanish language-learning repos. 🔴 **Mexico-specific: nothing**, matching this KB's standing record |
+
+🟢 **Read the pattern, not the counts: every leg that named a *function* produced new addresses;
+every leg that named the *industry* produced curricula.** That is the standing instruction for
+`p497`.
+
+---
+
 ## 🆕 `p495` — `2026-10-28` — **🔴 THE DISCOVERY CHANNEL HAS GONE ONE WORSE THAN `p494`'s "RETURNING THIS KB'S OWN CONTENTS": it is now returning an UNLICENSED RESKIN of a repo this KB already holds. [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) was the first address in four passes that `grep -ril` could not find here — and `LICENSE` and `LICENSE.md` are **both `404`**, so it is all-rights-reserved. 🔵 Its own README tagline names its upstream: `naufaldi/teacher-exam`, **already on this shelf**. 🟢 That upstream is now byte-pinned for the first time: **MIT, 1 071 B, `sha1 25cb945a99ab`** at `ed5bf6359413`. 🟢 Six of six pins stable this pass, including `canvas-mcp` — the "twice a day" drift rate was a burst, not a cadence.**
 
 Full reads: [`licence-and-stars.2026-10-28-p495.tsv`](../evidence/licence-and-stars.2026-10-28-p495.tsv).
