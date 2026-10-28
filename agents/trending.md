@@ -4,6 +4,211 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p510` — `2026-10-28` — **🔴 THE URL CHECK THIS BASE IS PRESCRIBED TO RUN IS REFUTED BY ITS OWN CONTROL: `github.com` answers `403` to a live repo and to a deleted one alike, so every address it "verifies" passes identically. 🟢 154 of 154 shelf addresses proven LIVE on an instrument that does discriminate — this base's first full-population liveness attestation. 🟢 `Gap 509-B` DELIVERED as code that refuses to return a count. 🔴 Two shelf cells are ROUNDED values typeset as exact reads, and one of them OVERSTATES by 36 — a decrease, which "stars only grow" can never catch. 🟡 `p509`'s retracted "107 malformed rows" is re-measured at 15, none of them on a live shelf.**
+
+Reads: [`url-check-control.2026-10-28-p510.tsv`](../evidence/url-check-control.2026-10-28-p510.tsv),
+[`liveness-branch-census.2026-10-28-p510.tsv`](../evidence/liveness-branch-census.2026-10-28-p510.tsv),
+[`stale-branch-byte-compare.2026-10-28-p510.tsv`](../evidence/stale-branch-byte-compare.2026-10-28-p510.tsv),
+[`star-cell-staleness.2026-10-28-p510.tsv`](../evidence/star-cell-staleness.2026-10-28-p510.tsv),
+[`api-shelf-read.2026-10-28-p510.tsv`](../evidence/api-shelf-read.2026-10-28-p510.tsv),
+[`prescribed-legs.2026-10-28-p510.tsv`](../evidence/prescribed-legs.2026-10-28-p510.tsv),
+[`table-integrity.2026-10-28-p510.tsv`](../evidence/table-integrity.2026-10-28-p510.tsv).
+Code: [`compose/code/p510-liveness-gate/`](../compose/code/p510-liveness-gate/) — **8/8 offline controls green**, plus a live integration run.
+
+🔴 **Gate posture: `make hooks` DENIED (`Code from External`) — sixteenth denial in seventeen passes.**
+Nothing here is gate-attested, and no workaround was attempted. 🟢 Stars, `archived` and
+`default_branch` are read on the MCP GitHub channel; liveness and default branches are read over the
+**git protocol**; licence payloads are read on `raw.githubusercontent.com` with bytes and sha256.
+
+### 🔴 The headline is an instrument refutation, and the instrument is the one the task prescribes
+
+The standing instruction is *"verify every URL before writing it (`curl -sI`). A 404 is not a
+finding."* 🔴 **On this channel that check carries ZERO information.** Run with a known-good **and** a
+known-bad target — the discipline `p505`–`p509` kept asking for — it answers identically to both:
+
+| instrument | known-good `HKUDS/DeepTutor` | known-bad (never existed) | discriminates? |
+|---|---|---|---|
+| `curl -sI https://github.com/<slug>` | **403** | **403** | 🔴 **no — zero information** |
+| `curl -sI https://raw.githubusercontent.com/<slug>/<branch>/LICENSE` | **200** | **404** | 🟢 yes |
+| `git ls-remote --symref` | **LIVE `main` `1ea7df155447`** | credential prompt | 🟡 positive only |
+
+🔴 **A second control makes the failure worse than a false negative:** `learningequality/kolibri`
+(live) and `this-org-does-not-exist-p510/nope` (no such owner) both answer **403**. 🔴 **Any pass that
+reported URLs "verified with `curl -sI`" on this channel verified nothing** — a deleted repository
+and a healthy one are the same byte.
+
+🟡 **And the replacement is only half a sound instrument, which is stated rather than glossed.** Over
+the git protocol GitHub answers an **absent** repository and a **private** one with the *same*
+credential prompt. So **`LIVE` is assertable and `ABSENT` is not**: the classifier never returns
+"absent", only `UNREADABLE_ABSENT_OR_PRIVATE`, and retiring an address needs a second channel.
+🟢 That is `Gap 505-G` — *"the URL check cannot tell a live repo from a deleted one"* — **answered in
+both directions at last:** positively on the raw and git channels, and never on `github.com`.
+
+### 🟢 154 of 154 shelf addresses are LIVE
+
+Every `github.com/<owner>/<repo>` address on the six live shelves — **154 distinct slugs** — was
+probed over the git protocol behind the passing controls. 🟢 **All 154 read `LIVE`, with a resolved
+default branch and a `HEAD` SHA.** 🟢 **Zero dead addresses, zero unreadable.** This base has
+re-measured stars and licences many times; this is the first pass in which *every* carried address
+is attested live on a discriminating instrument in a single population.
+
+### 🟢 `p509`'s default-branch table reproduced independently — 🔴 and its conclusion refined
+
+🟢 `p509` found **18 of 136** addresses defaulting to neither `main` nor `master`. On a **154**-address
+population, resolved from `HEAD`'s symref, **the same 18 addresses** come back, name for name and
+branch for branch, across **14 distinct default-branch names**. 🟢 **An independent reproduction, on a
+wider population, by a different operator.**
+
+🔴 **But `p509`'s framing — *"invalidates a method this base has used throughout"* — is too strong, and
+this pass measured the consequence instead of assuming it.** Two corrections, both of my own first
+answers:
+
+1. 🔴 **I predicted a `main`/`master` probe would 404 on those 18. It does not.** `GibbonEdu/core`
+   (default `v31.0.00`) answers **200 on both**; `kolibri`, `openeducat_erp`, `ILIAS` and
+   `bigbluebutton` all answer **200 on `master`**. 🔴 **So the defect's dangerous mode is not a 404 —
+   it is a silent 200 served from a stale branch**, which `p509`'s `NOPAYLOAD` count could not see.
+2. 🟢 **I then predicted those stale 200s carry different bytes. They do not.** Licence payloads on
+   the stale branch versus the true default are **byte-identical on 7 of 7** that serve one
+   (`kolibri` 1,097 B `3c056b34a476`, `GibbonEdu/core` 35,121 B `93178a43d6d3`, `openeducat_erp`
+   8,241 B `528f84036800`, `ILIAS` 35,147 B `8ceb4b9ee5ad`, `bigbluebutton` 7,652 B `e3a994d82e64`,
+   `oppia` 11,358 B `cfc7749b96f6`, `tao-core` 18,025 B `a01259a1b522`). `frappe/erpnext` serves no
+   `LICENSE` on either — a **filename** question, not a branch one.
+
+🟢 **So no licence cell on these shelves is wrong because of the branch assumption, and `p509`'s 119
+payloads stand.** 🔵 **The honest statement is narrower and more useful than either alarm:** licence
+payloads are branch-stable on this population, so resolve the symref because it is cheap and because
+*release* content is not branch-stable — not because the shelf is currently wrong. 🟢 **Two of my own
+confident claims died to measurement in one pass, and the base came out stronger both times.**
+
+### 🟢 `Gap 509-B` DELIVERED — the control is no longer advisory, it is structural
+
+`Gap 509-B` asked that *"a known-good AND a known-bad control before any count is published"* stop
+being advice. 🟢 It is now
+[`compose/code/p510-liveness-gate/`](../compose/code/p510-liveness-gate/): `sweep()` calls
+`run_controls()` first and **raises `ControlFailure` instead of returning a count** when the
+known-good does not read `LIVE` or the known-bad does. The classifier is a pure function over
+`ls-remote` output, so **8/8 controls run offline against recorded fixtures** — including one
+asserting that an absent repo is *not* reported absent, and two asserting the gate refuses a count.
+
+🔴 **It earned itself twice inside this very pass.** First it **failed closed** on my own first
+classifier, which expected a bare "not found" and so misread the known-bad as `ERROR`; no count was
+published. Second, a spot-check before publishing caught my star-cell extractor scoring
+**`RosarioSIS/RosarioSIS` · "cited as a path" · `404 — the repo is …`** as a **404-star** row — a bolded
+**HTTP status inside a dead-URL table**, not a star cell. 🔴 **That is the "probe measures a
+convention" class on its sixth sighting, in a brand-new probe, and the control is the only reason it
+is a footnote instead of a published figure.**
+
+### 🔴 Stale carry re-measured on the live shelves — and a NEW defect class under it
+
+24 bolded star cells across `agents/top.md` and `repos/foundations.md`, each re-read on the MCP
+channel this pass:
+
+| class | cells | worst case |
+|---|---|---|
+| 🟢 **`CURRENT`** | **13** | exact |
+| 🔴 `STALE_EXACT` | **9** | `DeepTutor` **47,445 → 47,725** (**+280**, a `p506` carry) |
+| 🔴 **`ROUNDED_NOT_EXACT`** | **2** | `ai-engineering-from-scratch` **74,800 → 75,238** (**+438**) |
+
+🔴 **The class is NOT new, and that is what makes it a defect rather than a discovery:** `p504`
+already found and converted two rounded cells — `smolagents` *"prior rounded cell read 30,100"* and
+`learnhouse` *"prior rounded cell 2,400"*. 🔴 **These two were left behind, and nothing marks them:**
+`**74,800**` and `**1,100**` are typeset exactly like exact reads, with no `~`, no marker, and —
+unlike every corrected cell — **no `*(🟢 pNNN, API)*` provenance at all.** 🔵 **The missing
+provenance annotation was the available tell, and no pass read it as one.** 🔴 **And
+[`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) reads 1,064 against a
+published `**1,100**` — the shelf OVERSTATES by 36 (3.4 %), and it is a DECREASE.** 🔴 `p504`
+concluded *"the largest error on any exact-integer cell is `k12-teacher-skills` 595 → 598"*; that
+conclusion silently excluded the rounded cells, which carry **~10× the error and can err upward**.
+🔵 **A monotonic "stars only grow" assumption cannot find this defect, because this one went down.**
+🟢 All 24 cells are corrected on the shelves this pass, and the two rounded cells are replaced with
+exact reads.
+
+### 🔴 Saturation — and it now extends from the agent axis to the REGIONAL INTEL axis
+
+All four prescribed global legs and all four prescribed regional legs were run this pass.
+
+| leg | new addresses | new figures |
+|---|---|---|
+| 4 × global (agents, trending, ERP/CRM, trends) | 🔴 **0** | 🔴 **0** |
+| North America · EMEA · APAC · LATAM | 🔴 **0** | 🔴 **0** |
+
+🔴 **The agent axis is saturated for a third consecutive pass, on a third occasion.**
+🔵 **Stated precisely, because "saturated" is a strong word: this is not a claim that nothing new
+exists, only that eight prescribed legs, run three times across three passes, surface nothing this
+base does not hold.** Every
+permissive agent candidate returned — OpenHands, CrewAI, Langflow, LibreChat, MetaGPT, smolagents —
+is already carried; the ERP/CRM leg returned OpenEduCat, OFBiz, Huly, Corteza, Krayin, Dolibarr and
+`Awesome-Higher-Education-CRM`, all carried.
+
+🔴 **The regional axis is saturated as well — and `p509` got there first, which this pass confirms
+rather than claims.** `intel/market.md` already records `p509`'s *"all four regional legs ran and all
+four returned zero new instruments"*. 🟢 **p510 reproduces that independently, a pass later, with the
+legs run fresh:** the four regional legs returned **UNESCO IESALC 87 % / 74 % / 26 %**, **TALIS Brazil 56 %,
+Chile 55 %, Colombia 53 %, Costa Rica 52 % against an OECD 36 %**, **Ceibal 75 %**, the **716**
+regulatory instruments, the **Argentina 75 %/42 % SES split**, **Korea's AI Basic Act in force
+22 Jan 2026**, **Vietnam's Decision 33/2026/QD-TTg**, and the **Digital Omnibus (Regulation (EU)
+2026/1744)** with its **2 Dec 2027 / 2 Aug 2028** dates. 🟢 **Every single one is already on this
+base's shelves, to the number** — including the two `p509`'s own note did not list,
+**Colombia 53 % / Costa Rica 52 %** and the **Argentina SES split**, both carried in
+`intel/market.md` already. 🔵 **The North America leg additionally re-served MultiState's
+"134 bills across 31 states" — a figure `p455` RETIRED as one tracker among four that disagree by
+2.6×. It was not re-imported.** 🟢 **An open-web leg that returns only what you already hold, plus a
+figure you deliberately retired, is evidence the axis is exhausted — not a reason to write filler.**
+
+### 🔵 Channel posture, unchanged and re-attested a third pass
+
+🔴 Every non-GitHub host fails at the CONNECT: `eur-lex.europa.eu`, `iesalc.unesco.org` and
+`oecd.org` all return **`000`**. `p507`'s *"the open web is gone this session"* **holds a third
+pass**, so the one EMEA item worth primary-source resolution — whether high-risk duties land
+**2 Aug 2026** or **2 Dec 2027**, which secondary sources still contradict each other on — **remains
+unresolvable from here and is NOT recorded as settled.** 🟢 `api.github.com` is **403 on `curl`** and
+open on the MCP channel, exactly as `p502` found; both MCP batches this pass returned **12/12 and
+11/11** requested rows, so 🟢 **`Gap 504-A`'s silent-omission mode did not fire** on this population.
+
+### 🟡 `p509`'s retracted "107 malformed rows" re-measured properly — the real number is 15, and none is on a live shelf
+
+🔴 `p509` published **"107 malformed rows across 4,178 tables"**, then **retracted it in full** when a
+re-run with escaped pipes masked returned **0 of 14** in that pass's own regions. 🟡 **The retraction
+was right and the measurement was never redone, so the base has carried "unknown" since.**
+
+🟢 **Redone here, with the masking remedy and a validated checker** — escaped `\|` masked, pipes
+inside inline-code spans masked, and a **known-good table** (containing both forms) plus a
+**known-bad table** (a genuine extra column) pushed through first; the checker passed the good and
+caught the bad before any count was published.
+
+| population | malformed rows |
+|---|---|
+| 🟢 the six **live** shelves (`top`, `foundations`, `solutions`, `market`, `trends`, `patterns`) | 🟢 **0** |
+| 🟡 append-only **history** in `agents/trending.md` | 9 |
+| 🟡 append-only **history** in `repos/trending.md` | 6 |
+| **total** | 🟡 **15** |
+
+🟢 **So `p509`'s retraction stands — 107 was wrong by ~7× — and the live shelves are clean.**
+🔵 **The mechanism is specific and worth knowing, because it is a property of how this base grows:**
+in both rows spot-checked, **a later pass appended a correction cell to an older row without widening
+the header** — `dssg/student-early-warning` carries 6 cells under a 5-column header, `foradian/fedena`
+4 under 3. 🟡 **Not corrected here: these are append-only records, and rewriting an old row to fit
+would destroy the correction it carries.** Registered as **`Gap 510-C`** — widen the header, or add
+the correction as a new row, never as an extra cell on an old one.
+
+### Gaps after this pass
+
+- 🟢 **`Gap 509-B` CLOSED** — the control is executable, refuses counts, and caught two live defects.
+- 🟢 **`Gap 505-G` ANSWERED** — `github.com` + `curl -sI` can never tell live from deleted; the raw
+  and git channels can, positively. Retiring an address still needs a second channel.
+- 🔴 **`Gap 510-A` OPENED** — **a rounded value typeset as an exact read can err upward, and the tell
+  is a MISSING provenance annotation, not the number's shape.** `p504` converted two such cells and
+  left two; the remedy is mechanical, so make it a gate: **no bolded numeric cell without a
+  `*(pNNN, channel)*` suffix.** `p504`'s *"largest error is 595 → 598"* needs re-deriving over
+  rounded cells, which it excluded by construction.
+- 🔴 **`Gap 510-B` OPENED** — liveness is attested for all 154 addresses, but `UNREADABLE` is
+  *unresolvable on one channel*. The gate needs an MCP-channel second leg to separate absent from
+  private before any future pass retires a row.
+- 🟡 **`Gap 510-C` OPENED** — 15 malformed rows survive in the two append-only histories, every one
+  a correction cell appended to an old row. Widen the header or add a row; never widen a cell.
+- 🔴 **`Gap 507-A` still open** (no 2026 APAC teacher rate) and 🔴 **the EU high-risk date conflict
+  stays unresolved** while non-GitHub hosts are unreachable.
+
 ## 🆕 `p509` — `2026-10-28` — **🟢 `Gap 508-B` DELIVERED: 137 addresses, 119 licence payloads, bytes + sha256 — and not one shelf licence cell is refuted. 🔴 SEVEN probe defects, all mine, two of which would have falsified a CORRECT row and one of which invented 107 defects that do not exist. 🔴 Agent-axis saturation holds a second pass, now on a different discovery shape.**
 
 Reads: [`licence-byte-census.2026-10-28-p509.tsv`](../evidence/licence-byte-census.2026-10-28-p509.tsv),

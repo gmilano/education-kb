@@ -1,0 +1,9 @@
+slug	true_default_branch	main_http	master_http	stale_master_bytes_sha12	true_branch_bytes_sha12	verdict
+learningequality/kolibri	develop	404	200	1097B/3c056b34a476	1097B/3c056b34a476	SAME
+GibbonEdu/core	v31.0.00	200	200	35121B/93178a43d6d3	35121B/93178a43d6d3	SAME
+openeducat/openeducat_erp	19.0	404	200	8241B/528f84036800	8241B/528f84036800	SAME
+ILIAS-eLearning/ILIAS	release_11	404	200	35147B/8ceb4b9ee5ad	35147B/8ceb4b9ee5ad	SAME
+bigbluebutton/bigbluebutton	v4.0.x-develop	200	200	7652B/e3a994d82e64	7652B/e3a994d82e64	SAME
+oppia/oppia	develop	-	200	11358B/cfc7749b96f6	11358B/cfc7749b96f6	SAME
+frappe/erpnext	develop	-	404	404	404	SAME (grant not at LICENSE)
+oat-sa/tao-core	develop	-	200	18025B/a01259a1b522	18025B/a01259a1b522	SAME

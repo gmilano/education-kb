@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p510` — `2026-10-28` — **🟢 EVERY ONE OF THE 154 REPO ADDRESSES ON THESE SHELVES IS PROVEN LIVE — the first full-population attestation this base has, and it required throwing out the prescribed instrument to get it. 🔴 `curl -sI github.com` answers `403` to a live repo and a deleted one alike. 🟢 The true default branch is now recorded for all 154, and `p509`'s 18 non-`main`/`master` verticals reproduce exactly. 🔴 Two foundation-shelf star cells are rounded values dressed as exact reads.**
+
+Reads: [`liveness-branch-census.2026-10-28-p510.tsv`](../evidence/liveness-branch-census.2026-10-28-p510.tsv),
+[`url-check-control.2026-10-28-p510.tsv`](../evidence/url-check-control.2026-10-28-p510.tsv),
+[`stale-branch-byte-compare.2026-10-28-p510.tsv`](../evidence/stale-branch-byte-compare.2026-10-28-p510.tsv),
+[`star-cell-staleness.2026-10-28-p510.tsv`](../evidence/star-cell-staleness.2026-10-28-p510.tsv),
+[`api-shelf-read.2026-10-28-p510.tsv`](../evidence/api-shelf-read.2026-10-28-p510.tsv).
+Code: [`compose/code/p510-liveness-gate/`](../compose/code/p510-liveness-gate/) — **8/8 offline controls green**.
+
+🔴 **Gate posture: `make hooks` DENIED (`Code from External`) — sixteenth denial in seventeen passes.**
+Nothing here is gate-attested.
+
+### 🟢 The liveness census — 154 of 154, and what it took to make it mean anything
+
+| population | result |
+|---|---|
+| distinct `github.com/<owner>/<repo>` addresses on the six live shelves | **154** |
+| 🟢 read `LIVE` with a resolved default branch and `HEAD` SHA | **154** |
+| 🔴 dead, redirected or unreadable | **0** |
+
+🔴 **The prescribed check could not have produced this.** `curl -sI https://github.com/<slug>` returns
+**403 for a live repository and 403 for one that never existed** — proven with
+`gmilano/definitely-not-a-real-repo-p510-control` and `this-org-does-not-exist-p510/nope` against
+`HKUDS/DeepTutor` and `learningequality/kolibri`. 🔴 **A sweep built on it would have reported 154/154
+"verified" even if every address were deleted.**
+
+🟡 **The instrument that replaced it is sound in one direction only, and that is recorded, not
+smoothed over.** Over the git protocol an **absent** repo and a **private** one both answer with a
+credential prompt, so `LIVE` is assertable and `ABSENT` is not — the classifier emits
+`UNREADABLE_ABSENT_OR_PRIVATE` and **no address may be retired on this channel alone** (`Gap 510-B`).
+
+### 🟢 The true default branch, for all 154 — `p509`'s verticals finding reproduces exactly
+
+**104 `main` · 32 `master` · 6 `develop` · 12 one-offs**, across **14 distinct non-`main`/`master`
+names**. 🟢 **The 18 addresses that default to neither `main` nor `master` are the same 18 `p509`
+named, branch for branch** — an independent reproduction on a wider population (154 vs 136). They
+remain the verticals, and the version-pinned defaults are the ones a fallback list would miss:
+`GibbonEdu/core` → **`v31.0.00`**, `openeducat/openeducat_erp` → **`19.0`**,
+`ILIAS-eLearning/ILIAS` → **`release_11`**, `portabilis/i-educar` → **`2.12`**,
+`bigbluebutton/bigbluebutton` → **`v4.0.x-develop`**, `overhangio/tutor` → **`release`**,
+`francoisjacquet/rosariosis` → **`mobile`**, `TaiRuiQu/oh-my-paper` → **`v2`**,
+`AgnellusX1/GodsEye` → **`PreProduction`**, `TrenTorch/TrenTorch` → **`TrenTorch-Dev`**,
+`learnhouse/learnhouse` → **`dev`**, `tutors-sdk/tutors` → **`development`**, and the four
+`develop` defaults (`frappe/erpnext`, `frappe/lms`, `frappe/education`, `oat-sa/tao-core`) plus
+`oppia/oppia` and `learningequality/kolibri`.
+
+🔴 **`p509` said this *"invalidates a method this base has used throughout."* Measured, it does not —
+and the reason is worth more than the alarm.** A `main`/`master` probe mostly does **not** 404 on
+those 18: `GibbonEdu/core` and `bigbluebutton` answer **200 on both**, and `kolibri`,
+`openeducat_erp` and `ILIAS` answer **200 on `master`**. 🔴 **So the defect's real mode is a silent
+200 from a stale branch, not a visible 404.** 🟢 **And the bytes are identical — 7 of 7 that serve a
+`LICENSE` match their true-branch payload exactly**, so every licence cell these shelves carry is
+still right. 🔵 **Resolve the symref because release content is not branch-stable, not because the
+licence reading was wrong.**
+
+### 🔴 The rounded-cell defect, found on the foundations shelf's own neighbours
+
+24 bolded star cells re-read on the MCP channel: 🟢 **13 `CURRENT`**, 🔴 **9 stale by +1 to +280**,
+🔴 **2 ROUNDED values typeset exactly like exact reads** — `**74,800**` and `**1,100**`, no `~`, no
+marker, and 🔵 **no `*(🟢 pNNN, API)*` provenance suffix, which was the available tell.** `p504` had
+already converted two others (`smolagents` 30,100, `learnhouse` 2,400), so the class was known and
+these two were simply missed. 🔴 **[`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) reads 1,064
+against a published 1,100: the shelf overstates by 36, and the direction is DOWN**, which no
+"stars only grow" check can catch. Foundations-shelf cells fare well — `oppia` **6,950**,
+`moodle` **7,556**, `dolos` **355**, `rosariosis` **647**, `tsugi` **377**, `scorm-again` **360**,
+`ADL_LRS` **334**, `lrsql` **144** all exact; only `learnhouse` moved (**2,427 → 2,428**).
+🟢 All 24 corrected this pass. Registered as **`Gap 510-A`**: a numeric cell must carry its read
+provenance, and `p504`'s *"largest error is 595 → 598"* needs re-deriving over rounded cells.
+
+### 🔴 Discovery: zero new repos from eight legs, and the regional axis is saturated too
+
+The ERP/CRM leg returned **OpenEduCat, Apache OFBiz, Huly, Corteza, Krayin, Dolibarr, ERPNext** and
+`ishandutta2007/Awesome-Higher-Education-CRM` — 🔴 **all carried**. The trending leg returned
+**DeepTutor**, the `ai-in-education` topic, `awesome-ai-education` and the auto-generated
+`agents-radar` / `news-radar` issue feeds — 🔴 **all carried or not shelf-eligible**. 🔴 **Zero new
+addresses, for a third consecutive pass.** 🟢 **No filler rows were added to reach a minimum count.**
+
 ## 🆕 `p509` — `2026-10-28` — **🟢 137 addresses, 133 licence payloads, every one with bytes + sha256: `Gap 508-B`'s insurance is bought. 🔴 18 addresses carry NO grant, proven on the TREE rather than guessed from a 404. 🆕 A real fourth licence state — `POINTER_DANGLING` — and a false one that dissolved.**
 
 Reads: [`licence-byte-census.2026-10-28-p509.tsv`](../evidence/licence-byte-census.2026-10-28-p509.tsv),

@@ -1,0 +1,9 @@
+population	tables_scanned_scope	malformed_rows	note
+six live shelves	agents/top.md repos/foundations.md verticals/solutions.md intel/market.md intel/trends.md compose/patterns.md	0	clean
+agents/trending.md (append-only history)	whole file	9	correction cell appended to an older row without widening the header
+repos/trending.md (append-only history)	whole file	6	same mechanism
+TOTAL	all eight shelves	15	p509's retracted "107" was wrong by ~7x; retraction stands
+CONTROL known-good	escaped pipes + pipes inside inline code	0	checker must pass this
+CONTROL known-bad	row with one genuine extra column	1	checker must catch this
+SPOT-CHECK	agents/trending.md:21599 dssg/student-early-warning	1	6 cells under a 5-column header, confirmed cell by cell
+SPOT-CHECK	repos/trending.md:16152 foradian/fedena	1	4 cells under a 3-column header, confirmed cell by cell

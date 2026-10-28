@@ -6,6 +6,36 @@ updated: 2026-10-28
 
 # Education platforms you can customise with AI on top
 
+> 🟢 **`p510` (`2026-10-28`) — THE CLONE REF FOR EVERY VERTICAL ON THIS SHELF IS NOW READ RATHER THAN ASSUMED, AND FOR TWELVE OF THEM `git clone` WITHOUT `-b` DOES NOT GIVE YOU WHAT A PASS READING `main` THOUGHT IT WAS READING.**
+> 🟢 **Every vertical here is proven LIVE** and its **true default branch** resolved from `HEAD`'s
+> symref: [`liveness-branch-census.2026-10-28-p510.tsv`](../evidence/liveness-branch-census.2026-10-28-p510.tsv).
+> 🔵 **This is the shelf the default-branch finding actually bites on, because these are the platforms
+> an engagement clones, vendors and pins.** The refs, read this pass:
+
+| platform | true default ref | platform | true default ref |
+|---|---|---|---|
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **`release_11`** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | **`v31.0.00`** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **`19.0`** | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | **`2.12`** |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **`v4.0.x-develop`** | [`overhangio/tutor`](https://github.com/overhangio/tutor) | **`release`** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | **`mobile`** | [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | **`dev`** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **`develop`** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **`develop`** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | **`develop`** | [`frappe/erpnext`](https://github.com/frappe/erpnext) · [`frappe/lms`](https://github.com/frappe/lms) · [`frappe/education`](https://github.com/frappe/education) | **`develop`** |
+
+> 🔴 **Five of these are version-pinned defaults** — `release_11`, `v31.0.00`, `19.0`, `2.12`,
+> `v4.0.x-develop` — which a `main` → `master` → `develop` fallback list still misses. 🔴 **And
+> `rosariosis` defaults to `mobile`**: never infer a default ref from how its name reads.
+> 🔴 **The practical hazard is the opposite of a 404, which is why no pass caught it by eye.**
+> `GibbonEdu/core` and `bigbluebutton` answer **200 on both `main` and `master`** though neither is
+> default, and `kolibri`, `openeducat_erp` and `ILIAS` answer **200 on `master`** — so a hardcoded
+> probe silently reads a **stale branch** and reports success.
+> 🟢 **Measured, the licence bytes are identical on 7 of 7** that serve a `LICENSE`
+> ([`stale-branch-byte-compare.2026-10-28-p510.tsv`](../evidence/stale-branch-byte-compare.2026-10-28-p510.tsv)),
+> **so no licence cell on this shelf is wrong.** 🔵 **The exposure is in versioned content — code,
+> migrations, release notes — where a stale branch and the default ref genuinely differ, which is
+> exactly what a vendoring engagement reads.**
+> 🔴 **Gate posture: `make hooks` DENIED (`Code from External`) — sixteenth denial in seventeen
+> passes.** Nothing in this pass is gate-attested.
+
 > 🟢 **`p509` (`2026-10-28`) — `Gap 508-C` CLOSES WITH CONTENT: `gegok12` IS A REAL SIS CORE, NOT AN OPEN-CORE SHELL — AND THE MODULES IT LACKS ARE EXACTLY THE REVENUE MODULES. 🟢 A VERTICAL THIS BASE HAD AS UNGRANTED IS GPL-2.0, AND ITS GRANT WAS HIDING IN THE INSTALLER.**
 > 🟢 **`Gap 508-C` asked whether the MIT [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12)
 > repository holds the school-management core or an open-core shell, and said the tree was the half

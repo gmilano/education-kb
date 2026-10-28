@@ -6,6 +6,33 @@ updated: 2026-10-28
 
 # Foundational education repos
 
+> 🟢 **`p510` (`2026-10-28`) — EVERY FOUNDATION ADDRESS IS PROVEN LIVE, THE TRUE DEFAULT BRANCH IS RECORDED FOR ALL OF THEM, AND `p509`'s WARNING THAT THE BRANCH ASSUMPTION "INVALIDATES A METHOD" IS MEASURED AND FOUND TOO STRONG.**
+> 🟢 **154 of 154 addresses across the six live shelves read `LIVE`** over the git protocol, each with
+> a resolved default branch and `HEAD` SHA — **zero dead, zero unreadable**:
+> [`liveness-branch-census.2026-10-28-p510.tsv`](../evidence/liveness-branch-census.2026-10-28-p510.tsv).
+> 🔴 **It could not have been done with the prescribed check:** `curl -sI https://github.com/<slug>`
+> answers **403 to a live repo and 403 to one that never existed**
+> ([`url-check-control.2026-10-28-p510.tsv`](../evidence/url-check-control.2026-10-28-p510.tsv)).
+> 🟢 **Branch census: 104 `main`, 32 `master`, 6 `develop`, 12 one-offs across 14 distinct
+> non-`main`/`master` names — and the 18 addresses that default to neither are exactly the 18 `p509`
+> named**, branch for branch, independently reproduced on a wider population (154 vs 136).
+> 🔴 **`p509` called this *"invalidating"*; measured, it is not — and the correction runs both ways.**
+> A `main`/`master` probe mostly does **not** 404 on those 18: `GibbonEdu/core` and `bigbluebutton`
+> answer **200 on both**, `kolibri`, `openeducat_erp` and `ILIAS` **200 on `master`**. 🔴 **So the
+> defect's real mode is a silent 200 served from a stale branch, which `p509`'s `NOPAYLOAD` count
+> could not see.** 🟢 **But the payloads are byte-identical — 7 of 7 that serve a `LICENSE` match
+> their true-branch bytes exactly**, so **no licence cell on this shelf is wrong and `p509`'s 119
+> payloads stand**:
+> [`stale-branch-byte-compare.2026-10-28-p510.tsv`](../evidence/stale-branch-byte-compare.2026-10-28-p510.tsv).
+> 🔵 **Resolve the symref because *release* content is not branch-stable — not because the licence
+> reading was wrong.** `frappe/erpnext` serves no `LICENSE` on either branch: a **filename** question
+> (`p509`'s lowercase-`license` defect), not a branch one.
+> 🟢 **Foundation star cells are in good shape**: `oppia` **6,950**, `moodle` **7,556**, `dolos`
+> **355**, `rosariosis` **647**, `tsugi` **377**, `scorm-again` **360**, `ADL_LRS` **334**, `lrsql`
+> **144** all exact; only `learnhouse` moved (**2,427 → 2,428**), corrected here.
+> 🔴 **Gate posture: `make hooks` DENIED (`Code from External`) — sixteenth denial in seventeen
+> passes.** Nothing in this pass is gate-attested.
+
 > 🟢 **`p509` (`2026-10-28`) — A FOUNDATION ROW THAT LOOKED UNGRANTED IS MIT, AND THE DEFECT WAS A CAPITAL LETTER. 🟢 EVERY FOUNDATION'S LICENCE IS NOW BYTE-ATTESTED.**
 > 🟢 **[`labmlai/annotated_deep_learning_paper_implementations`](https://github.com/labmlai/annotated_deep_learning_paper_implementations)
 > — 67,603★, MIT, `archived: false`, 2,172 files — read from bytes for the first time on this base:
@@ -261,7 +288,7 @@ heading goes stale silently; the table is the census, not the heading.**
 | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | **7,556** *(🟢 `p504`, API; prior rounded cell 7,600)* | `46c042e7da65` | Largest installed base and the largest plugin ecosystem (2,000+). Grant is at `COPYING.txt`, **not** `LICENSE` — a root-`LICENSE` probe reports "no grant" here. |
 | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | **AGPL-3.0** | 6,900 | `1c9f0bb8013e` | The open LMS by Instructure; heavy North America higher-ed share. AGPL. Default branch `master`. |
 | [frappe/lms](https://github.com/frappe/lms) | **AGPL-3.0** | 3,400 | `6054772c0426` | Frappe-framework LMS. **Widely published as MIT — it is not.** Grant at `license.txt` (lowercase), 33,893 B, AGPL-3.0; the GitHub sidebar agrees. |
-| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | **AGPL-3.0** | **2,427** *(🟢 `p504`, API; prior rounded cell 2,400)* | `2d75337273ac` | **New row `p491`.** "Next-gen open source learning platform" — modern course/content platform. At 2,400★ it outranks Kolibri and Chamilo, and was absent from this KB entirely. AGPL confirmed on both channels (`LICENSE`, 34,522 B; sidebar `AGPL-3.0 license`). Default branch **`dev`**. |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | **AGPL-3.0** | **2,428** *(🟢 `p510`, API; `p504` 2,427; prior rounded cell 2,400)* | `2d75337273ac` | **New row `p491`.** "Next-gen open source learning platform" — modern course/content platform. At 2,400★ it outranks Kolibri and Chamilo, and was absent from this KB entirely. AGPL confirmed on both channels (`LICENSE`, 34,522 B; sidebar `AGPL-3.0 license`). Default branch **`dev`**. |
 | [frappe/education](https://github.com/frappe/education) | GPL-3.0 *(declared only)* | 682 | `73ce33ef2719` | **New row `p491`.** Frappe school-management / SIS app — **a different product from `frappe/lms`, under a different license family.** Its grant is a **19-byte** `license.txt` reading `License: GNU GPL V3` with **no license text at all**; GitHub's classifier cannot resolve it and shows a bare "License" link. See the note below. Default branch `develop`. |
 | [ankitects/anki](https://github.com/ankitects/anki) | **AGPL-3.0** | 32,300 | `d87cb22bf337` | Spaced-repetition engine; the reference implementation of SRS scheduling. AGPL. Useful as an algorithm reference even where the code can't be taken. |
 | [overhangio/tutor](https://github.com/overhangio/tutor) | **AGPL-3.0** | 1,100 | `aa5d1a764b6c` | Docker-based Open edX distribution — the realistic way anyone actually deploys Open edX. Default branch `release`. |

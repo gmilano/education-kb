@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-28
 ---
 
+## 🆕 `p510` — `2026-10-28` — **🆕 `T37`: an instrument that answers identically to a live target and an absent one is not a check, and this base is prescribed to run one. 🆕 `T38`: a rounded number typeset as an exact read is invisible to review — the tell is the MISSING provenance, not the digits. 🔴 `T36` keeps its rule and loses its reason: the hazard is a stale 200, not a 404.**
+
+Reads: [`url-check-control.2026-10-28-p510.tsv`](../evidence/url-check-control.2026-10-28-p510.tsv),
+[`liveness-branch-census.2026-10-28-p510.tsv`](../evidence/liveness-branch-census.2026-10-28-p510.tsv),
+[`stale-branch-byte-compare.2026-10-28-p510.tsv`](../evidence/stale-branch-byte-compare.2026-10-28-p510.tsv),
+[`star-cell-staleness.2026-10-28-p510.tsv`](../evidence/star-cell-staleness.2026-10-28-p510.tsv).
+Code: [`compose/code/p510-liveness-gate/`](../compose/code/p510-liveness-gate/) — **8/8 controls green**.
+
+🔴 **Gate posture: `make hooks` DENIED (`Code from External`) — sixteenth denial in seventeen passes.**
+
+### 🆕 `T37` — a check that cannot fail is not evidence, and the only way to know is to feed it a known-bad
+
+🔴 **The standing instruction to *"verify every URL before writing it (`curl -sI`)"* produces nothing
+on this channel.** `github.com` answers **403** to `HKUDS/DeepTutor` (live, 47,725★), to
+`learningequality/kolibri` (live), to a repository that never existed, and to a repository under an
+**owner** that never existed. 🔴 **Four targets, two classes, one response.**
+
+🔵 **The generalisation is the trend, and it is not about GitHub.** A verification step is only
+evidence if it can come back negative. `T31` already says a measure needs its definition; `T37` adds
+the operational half: **a measure needs a demonstrated failure mode.** A probe is unvalidated until
+something known-bad has been pushed through it, and "all 154 verified" from an instrument that
+cannot say "no" is indistinguishable from not having checked.
+
+🟢 **Applied here it produced a real replacement, not just a complaint**: `git ls-remote --symref`
+(liveness + true default branch) and `raw.githubusercontent.com` (**200** live / **404** absent),
+both control-proven, carried **154 of 154 addresses to `LIVE`**.
+🟡 **And it bounded its own replacement honestly: the git channel answers an ABSENT repository and a
+PRIVATE one identically**, so `LIVE` is assertable and `ABSENT` is not — which is why the classifier
+emits `UNREADABLE_ABSENT_OR_PRIVATE` and why no row may be retired on one channel (`Gap 510-B`).
+
+### 🆕 `T38` — a rounded value dressed as an exact read, and the tell is what is missing
+
+🔴 Two shelf cells read `**74,800**` and `**1,100**`. Both are **rounded**; both are typeset exactly
+like the exact API reads beside them; 🔴 **and [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch)
+actually reads 1,064 — the shelf OVERSTATED by 36, and the true count went DOWN.**
+
+🔵 **The lesson is not "round numbers are suspicious" — it is that the evidence of a missing
+measurement was already on the page and nobody read it as evidence.** Every re-measured cell on these
+shelves carries a `*(🟢 pNNN, API)*` suffix. **These two carried none.** 🟢 **An absent provenance
+annotation is a positive signal that a value was never read**, and it is mechanically checkable,
+which is what makes `Gap 510-A` a gate rather than a habit.
+
+🔴 **It also falsifies a comfortable assumption:** a staleness check that only looks for growth
+cannot find this, because stars decrease. 🔵 `p504`'s *"the largest error on any exact-integer cell
+is 595 → 598"* was true and **excluded the rounded cells by construction** — the quietest way for a
+bound to be wrong is for its population to have been defined around the exceptions.
+
+### 🔴 `T36` — the rule survives, the stated reason does not
+
+🟡 `T36` (`p509`) says *"a default branch is a measurement, not a convention"*. 🟢 **The rule holds and
+is re-attested**: **18 of 154** addresses default to neither `main` nor `master`, across **14
+distinct names**, five of them version-pinned (`release_11`, `v31.0.00`, `19.0`, `2.12`,
+`v4.0.x-develop`).
+
+🔴 **But `p509`'s reason — that this *"invalidates a method this base has used throughout"* — is too
+strong, and this pass tried hard to confirm it before giving it up.** A `main`/`master` probe mostly
+does **not** fail on those 18: `GibbonEdu/core` and `bigbluebutton` answer **200 on both**;
+`kolibri`, `openeducat_erp` and `ILIAS` answer **200 on `master`**. 🔴 **The hazard is therefore a
+silent 200 from a stale branch, not a visible 404** — strictly worse as a failure mode, and invisible
+to the `NOPAYLOAD` count that found the original problem. 🟢 **And then the consequence failed too:
+the licence bytes are identical on 7 of 7**, so **no licence cell is wrong and `p509`'s 119 payloads
+stand.**
+
+🔵 **The surviving formulation is narrower and more usable: resolve the symref because *versioned*
+content — code, migrations, releases — is branch-dependent, while licence payloads on this population
+are branch-stable.** 🟢 **Two confident claims of my own died to measurement here, and the base is
+better attested for both.**
+
 ## 🆕 `p509` — `2026-10-28` — **🆕 `T34`: an ABSENCE is a claim about everything, and only an enumeration can carry it — a path list can never prove a licence missing. 🆕 `T35`: a channel is not a host, and this base just found an endpoint-level gate inside a channel it treated as open. 🔴 `T33` gains a real fourth state and loses an invented one.**
 
 Reads: [`licence-byte-census.2026-10-28-p509.tsv`](../evidence/licence-byte-census.2026-10-28-p509.tsv),

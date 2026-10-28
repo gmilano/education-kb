@@ -6,6 +6,39 @@ updated: 2026-10-28
 
 # Education AI — market map and opportunities by region
 
+> 🔴 **`p510` (`2026-10-28`) — THE EIGHT-LEG SWEEP RETURNED ZERO NEW FIGURES FOR A SECOND CONSECUTIVE PASS, RUN FRESH BY A DIFFERENT OPERATOR. 🔵 THAT IS NOW A REPRODUCED PROPERTY OF THE INSTRUMENT SUPPLY, NOT A ONE-PASS RESULT.**
+> 🟢 **`p509`'s finding above is confirmed rather than restated.** All four global and all four
+> regional legs were run again from scratch this pass, and every figure returned is already carried in
+> this file **to the number**: **North America** — H.R. 8747, OK **SB 1734**, Maryland's AI Ready
+> Schools Act, the **36 %** regional share, Gallup **60 %**. **EMEA** — EU AI Act high-risk,
+> **Digital Omnibus (Regulation (EU) 2026/1744)**, **2 Dec 2027 / 2 Aug 2028**, European market
+> **USD 2.64 bn**, *OECD Digital Education Outlook 2026*, UK light-touch, the **10 %** of 450+
+> institutions with formal guidelines. **APAC** — Korea's **AI Basic Act in force 22 Jan 2026** with
+> MSIT's pilot year, Vietnam's **Decision 33/2026/QD-TTg** naming education high-risk, China's
+> framework. **LATAM** — UNESCO **IESALC 87 % / 74 % / 26 %**, TALIS 🇧🇷 **56 %** / 🇨🇱 **55 %** /
+> 🇨🇴 **53 %** / 🇨🇷 **52 %** against an **OECD 36 %**, 🇺🇾 **Ceibal 75 %**, the **716** regulatory
+> instruments across 23 countries, and the **Argentina 75 % / 42 %** SES split.
+> 🔵 **Two of those — Colombia 53 % / Costa Rica 52 % and the Argentina SES split — were not in
+> `p509`'s own leg note but are carried elsewhere in this file**, so the nil survives a stricter
+> reading than `p509` applied to it.
+> Leg-by-leg: [`prescribed-legs.2026-10-28-p510.tsv`](../evidence/prescribed-legs.2026-10-28-p510.tsv).
+> 🔴 **The North America leg re-served MultiState's "134 AI-in-education bills across 31 states" a
+> second pass running. It was NOT re-imported.** `p455` retired that figure as one tracker among four
+> that disagree by up to **2.6×**, and this file's standing caveat — *"bill counts are not usable"* —
+> holds. 🔵 **An open-web channel that keeps re-offering a figure you deliberately retired is a
+> reason to keep the retirement documented, because the next pass will be offered it again.**
+> 🔴 **`Gap 507-A` fails a FOURTH consecutive time.** The APAC leg returned the same policy inventory
+> and the same nil: **no 2026 APAC teacher-adoption rate exists**. The honest client sentence remains
+> *"the most recent probability-sampled APAC teacher rate is TALIS 2024 fieldwork"*.
+> 🔴 **Channel posture, re-attested a third pass: every non-GitHub host fails at the CONNECT.**
+> `eur-lex.europa.eu`, `iesalc.unesco.org` and `oecd.org` all return **`000`**
+> ([`url-check-control.2026-10-28-p510.tsv`](../evidence/url-check-control.2026-10-28-p510.tsv)).
+> 🟡 **So the one EMEA item that genuinely warrants primary-source resolution stays unresolved and is
+> NOT recorded as settled:** secondary sources still contradict each other on whether high-risk
+> duties land **2 Aug 2026** or **2 Dec 2027**. This file carries **2 Dec 2027** post-Omnibus; it
+> remains **`SEARCH-ATTESTED, PRIMARY UNREAD`**, and promoting it is a human deliverable
+> (`Gap 506-E`).
+
 > 🔴 **`p509` (`2026-10-28`) — ALL FOUR REGIONAL LEGS RAN AND ALL FOUR RETURNED ZERO NEW INSTRUMENTS. THAT IS THIS PASS'S MARKET FINDING, AND IT IS A PROPERTY OF THE INSTRUMENT SUPPLY RATHER THAN OF THE QUERIES.**
 > 🟢 **Every leg the schedule prescribes was run — four global, one per region — and each regional
 > leg returned figures this file already carries, by name and value:**

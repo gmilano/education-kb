@@ -6,6 +6,15 @@ updated: 2026-10-28
 
 # Compose patterns — concrete education AI recipes
 
+> 🟢 **`p510` (`2026-10-28`) — ONE NEW RECIPE, AND IT EXISTS BECAUSE THIS PASS MEASURED THE REF EVERY VERTICAL ACTUALLY DEFAULTS TO. 🔴 THE "VERIFY THE URL" STEP THESE PATTERNS INHERIT WAS A NO-OP AND IS REPLACED.**
+> 🔵 Every component below has its grant read from **bytes with a sha256** on
+> `raw.githubusercontent.com`, on its **resolved default branch**, and its address **proven LIVE** on
+> an instrument control-proven to discriminate — **154 of 154**:
+> [`liveness-branch-census.2026-10-28-p510.tsv`](../evidence/liveness-branch-census.2026-10-28-p510.tsv),
+> [`url-check-control.2026-10-28-p510.tsv`](../evidence/url-check-control.2026-10-28-p510.tsv).
+> 🔴 **`curl -sI https://github.com/<slug>` must not be used as the verification step in any recipe
+> here**: it answers **403** to live and absent alike.
+
 > 🟢 **`p509` (`2026-10-28`) — TWO NEW RECIPES, AND BOTH ARE BUILDABLE ONLY BECAUSE THIS PASS MEASURED SOMETHING: ONE SHIPS THE LICENCE EVIDENCE AS A DELIVERABLE, THE OTHER IS SCOPED FROM A COUNT OF MODULES THAT DO NOT EXIST.**
 > 🔵 Every component below has its grant read from **bytes with a sha256** on
 > `raw.githubusercontent.com`, on its **resolved default branch**, and no AGPL, noncommercial,
@@ -1921,3 +1930,66 @@ programme and the compliance programme are one project rather than two.
   expect to own operational burden, and say so in the SOW.
 - 🟡 **`oppia` runs on branch `develop` and `kolibri` on `develop`.** Pin a release, not `HEAD`
   (`Gap 498-G`'s rule, still binding).
+
+## 🆕 `P510-1` — **The vendoring attestation a platform engagement hands to the client's security review** 🟢 *(operationalises `Gap 498-G`'s "pin a release, not `HEAD`"; does not supersede `P501-2`)*
+
+🔵 **The gap this fills.** `P501-2` produces the **licence** artefact for counsel. `Gap 498-G` says
+pin a release. 🔴 **Neither is checkable by the client**, because the step both inherit —
+*"verify the URL"* — was being run as `curl -sI https://github.com/<slug>`, which on this channel
+answers **403 to a live repository and to one that never existed alike**
+([`url-check-control.2026-10-28-p510.tsv`](../evidence/url-check-control.2026-10-28-p510.tsv)).
+🟢 **This recipe replaces that step with one that can fail, and emits the result as a signed-off
+deliverable.**
+
+**Components** — each address proven `LIVE` this pass, on its resolved default ref:
+
+| role | component | grant | ref to pin from |
+|---|---|---|---|
+| LMS / offline delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** *(🟢 `p510`, API)* | **`develop`** — not `main` |
+| interactive lessons | [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** *(🟢 `p510`, API)* | **`develop`** |
+| assessment / QTI | [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | GPL-2.0 **`or-later`** *(`p455`; grant re-read independently by `p510` — 18,025 B `a01259a1b522`, matching `p509`'s census to the digit)* | **`develop`** |
+| SCORM runtime | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | **MIT** *(`p509` byte-census, 1,072 B `383b85b370e8da44`)* | **`master`** |
+| record layer | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** *(`p509` byte-census, 11,357 B `c71d239df91726fc`)* | **`main`** |
+| tutoring agent | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** *(🟢 `p510`, API)* | **`main`** @ `1ea7df155447` |
+| agent loop | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | **Apache-2.0** *(`p509` byte-census)* | **`main`** |
+
+🔴 **Four of the seven do not default to `main`.** A build script that clones without `-b`, or a
+probe that reads `main/…`, is reading a different tree than this table — and will often get a
+**200 from a stale branch** rather than an honest 404.
+
+**Wiring — four steps, each producing a file the client keeps**
+
+1. **Resolve, do not assume.** Run
+   [`compose/code/p510-liveness-gate/`](code/p510-liveness-gate/) over the component list.
+   `sweep()` calls `run_controls()` first and **raises `ControlFailure` instead of returning a
+   count** if the known-good does not read `LIVE` or the known-bad does. Output: one row per
+   component — state, **true default branch**, `HEAD` SHA.
+2. **Pin from the resolved ref, never from `HEAD`.** Take the newest release *reachable from the ref
+   step 1 resolved* (`git ls-remote --tags`, version-sorted — **not lexicographic**, per
+   `Gap 505-C`). Record `owner/repo@tag` **and** the commit SHA; the SHA is what survives a retag.
+3. **Read each grant from bytes on the pinned ref** — `raw.githubusercontent.com/<slug>/<ref>/<path>`
+   with byte count and sha256, case-insensitively and accepting an extensionless `license`
+   (`p509`'s defect #3). 🔴 **A `NOTICE` is not a grant** (Apache §4(d)); 🔴 **a detector's
+   abstention is not a verdict** (`T33`) — read the payload.
+4. **Gate it in the client's CI.** Re-run steps 1–3 on every dependency bump and fail the build on:
+   any component not `LIVE`; a default ref that moved; a grant whose sha256 changed; or any grant
+   outside MIT / Apache-2.0 / BSD-3-Clause entering a **shipped** path.
+
+**The deliverable.** One TSV plus a one-page summary: every component, its proven-live address, its
+pinned `ref@sha`, its grant with bytes and sha256, and the two control rows showing the instrument
+can fail. 🟢 **The control rows are the point** — they are what makes the other rows evidence rather
+than assertion.
+
+**Caveats, stated in the SOW**
+
+- 🟡 **Liveness is positive-only on one channel.** An absent repository and a **private** one answer
+  identically over the git protocol, so `UNREADABLE` must be resolved on a second channel before any
+  component is declared gone (`Gap 510-B`).
+- 🔴 **`tao-core` is GPL-2.0-or-later** — combinable forward, but it is **not** permissive; keep it
+  behind a service boundary if the engagement ships proprietary code, per `P503-1`'s discipline.
+- 🟡 **Licence payloads are branch-stable on this population** (7 of 7 identical across stale and
+  true refs, [`stale-branch-byte-compare.2026-10-28-p510.tsv`](../evidence/stale-branch-byte-compare.2026-10-28-p510.tsv)),
+  **but versioned content is not** — which is exactly what vendoring reads. Resolve the ref for
+  code, not for the licence cell.
+- 🔴 **Not gate-attested.** `make hooks` has been DENIED (`Code from External`) for sixteen of the
+  last seventeen passes, so this recipe's own CI step is the only gate it can promise.

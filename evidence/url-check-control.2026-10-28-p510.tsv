@@ -1,0 +1,10 @@
+instrument	target	expected_class	http_or_state	discriminates
+curl -sI github.com	HKUDS/DeepTutor	LIVE	403	no
+curl -sI github.com	gmilano/definitely-not-a-real-repo-p510-control	ABSENT	403	no
+curl -sI github.com	learningequality/kolibri	LIVE	403	no
+curl -sI github.com	this-org-does-not-exist-p510/nope	ABSENT	403	no
+curl -sI raw.githubusercontent.com/<slug>/main/LICENSE	HKUDS/DeepTutor	LIVE	200	yes
+curl -sI raw.githubusercontent.com/<slug>/main/LICENSE	gmilano/definitely-not-a-real-repo-p510-control	ABSENT	404	yes
+git ls-remote --symref	HKUDS/DeepTutor	LIVE	LIVE main 1ea7df155447	positive-only
+git ls-remote --symref	gmilano/definitely-not-a-real-repo-p510-control	ABSENT	credential-prompt (absent==private)	positive-only
+git ls-remote --symref	this-org-does-not-exist-p510/nope	ABSENT	credential-prompt (absent==private)	positive-only

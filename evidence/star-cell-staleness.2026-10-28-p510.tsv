@@ -1,0 +1,26 @@
+file	line	slug	shelf_cell	p510_read	delta	class
+agents/top.md	335	HKUDS/DeepTutor	47445	47725	+280	STALE_EXACT
+agents/top.md	336	THU-MAIC/OpenMAIC	41690	41712	+22	STALE_EXACT
+agents/top.md	337	huggingface/smolagents	30118	30121	+3	STALE_EXACT
+agents/top.md	338	anthropics/k12-teacher-skills	598	600	+2	STALE_EXACT
+agents/top.md	339	GeminiLight/SocialCoach	440	440	0	CURRENT
+agents/top.md	340	satvik314/educhain	387	387	0	CURRENT
+agents/top.md	341	dodona-edu/dolos	355	355	0	CURRENT
+agents/top.md	344	CAHLR/OATutor	274	274	0	CURRENT
+agents/top.md	351	microsoft/ai-agents-for-beginners	78039	78059	+20	STALE_EXACT
+agents/top.md	357	HugeCatLab/ChatTutor	1316	1316	0	CURRENT
+agents/top.md	448	EleutherAI/lm-evaluation-harness	14338	14341	+3	STALE_EXACT
+agents/top.md	561	labmlai/annotated_deep_learning_paper_implementations	67600	67603	+3	STALE_EXACT
+agents/top.md	842	rohitg00/ai-engineering-from-scratch	74800	75238	+438	ROUNDED_NOT_EXACT
+agents/top.md	843	pguso/agents-from-scratch	1100	1064	-36	ROUNDED_NOT_EXACT_AND_OVERSTATED
+agents/top.md	1229	TrenTorch/TrenTorch	739	741	+2	STALE_EXACT
+repos/foundations.md	250	oppia/oppia	6950	6950	0	CURRENT
+repos/foundations.md	252	dodona-edu/dolos	355	355	0	CURRENT
+repos/foundations.md	261	moodle/moodle	7556	7556	0	CURRENT
+repos/foundations.md	264	learnhouse/learnhouse	2427	2428	+1	STALE_EXACT
+repos/foundations.md	650	francoisjacquet/rosariosis	647	647	0	CURRENT
+repos/foundations.md	793	tsugiproject/tsugi	377	377	0	CURRENT
+repos/foundations.md	794	jcputney/scorm-again	360	360	0	CURRENT
+repos/foundations.md	928	adlnet/ADL_LRS	334	334	0	CURRENT
+repos/foundations.md	929	yetanalytics/lrsql	144	144	0	CURRENT
+EXCLUDED	371	francoisjacquet/rosariosis	404	n/a	n/a	NOT_A_STAR_CELL (HTTP status in dead-URL table; caught by spot-check)
