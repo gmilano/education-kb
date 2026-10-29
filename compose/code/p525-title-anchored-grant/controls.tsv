@@ -1,0 +1,14 @@
+slug	path	sha	expected_family	expected_confidence	why_this_control
+CaviraOSS/PageLM	LICENSE.md	228a36cd9169	BESPOKE-NONCOMMERCIAL	title-attested	p520 REFUSED it by hand; the standing probe says MIT off its opening sentence
+xiaoyang111222/cn-math-taxonomy	LICENSE	c71ca266cf36	CC-BY-NC-4.0	title-attested	standing probe drops the -NC and prints CC-BY-4.0
+canyongbs/advisingapp	LICENSE	1ba02ecb6559	Elastic-2.0	title-attested	standing probe prints unknown-text; the family is the first line
+oat-sa/tao-core	LICENSE	dabc1c180e9f	GPL-2.0	title-attested	p490's reader graded this LGPL-2.0 off the GPLv2 preamble cross-reference
+francoisjacquet/rosariosis	LICENSE	25d568f6edca	GPL-2.0	title-attested	second GPL-2.0 payload, same preamble trap
+bigbluebutton/bigbluebutton	LICENSE	799a973616bd	LGPL-3.0	title-attested	a GENUINE LGPL - the positive control the preamble trap must not swallow
+open-spaced-repetition/fsrs4anki	LICENSE	ff7c85cee735	MIT	title-attested	plain MIT, shelf row
+HKUDS/DeepTutor	LICENSE	1ea7df155447	Apache-2.0	title-attested	plain Apache-2.0, largest shelf row
+microsoft/autogen	LICENSE	d07c667a3239	CC-BY-4.0	title-attested	the content grant half of the autogen split
+microsoft/autogen	LICENSE-CODE	d07c667a3239	MIT	title-attested	the code grant half. p525 EXPECTED "no title line" and was WRONG: the title line is there, INDENTED four spaces ("    MIT License"). Expectation corrected, instrument unchanged
+expertiza/expertiza	LICENSE	b68bb8f640ac	MIT (BY-BODY)	body-only	T43: MIT with NO title line - the case that breaks a pure title reader
+Open-TutorAi/open-tutor-ai-CE	LICENSE	196c547291da	BSD-3-Clause (BY-BODY)	body-only	p493: payload opens "All rights reserved", which a naive title reader misreads
+Halleck45/OpenPronounce	LICENSE	74bc17ea406e	MIT	title-attested	title reads "The MIT License" (+2 bytes vs canonical)

@@ -4,6 +4,54 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p525` — `2026-10-29` — **🟢 THE TRENDING CHANNEL'S REAL OUTPUT THIS WINDOW IS A LICENCE-FILENAME FINDING WITH A 107,478★ EXAMPLE: [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) serves its Apache-2.0 grant at **`LICENSE.txt`**, so every probe on this base that reads `LICENSE` alone files a six-figure-star permissive asset as ungranted. 🟢 A 138-address sweep of this base's own unshelved backlog puts a number on how often that shape bites: **26 of 138 addresses returned `UNRESOLVED` on seven filenames**, which is 19 % — and the 53-name standing probe exists precisely because seven is not enough. 🔴 And the pass's hardest number is about this file's neighbours, not its rows: of 138 addresses this base NAMES, **71 are permissive and 39 sit on no canonical shelf anywhere**.**
+
+### 🟢 Trending-channel addresses re-resolved this window, every grant from served bytes
+
+| Repo | Grant file | Grade (title-anchored, `p525`) | Bytes · `sha256₁₆` | HEAD | Mainline date |
+|---|---|---|---|---|---|
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | 🔴 **`LICENSE.txt`** | **Apache-2.0** | `11 505` · `4b6615cdb446946f` | `cdbd33e6d57a` | `2026-10-02` |
+| [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | `LICENSE` | **MIT** | `1 141` · `c2cfccb812fe4821` | `e01dec498a0c` | `2026-10-24` |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | `LICENSE` | **MIT** | `1 070` · `d116e214adbcab1c` | `2a851e678e52` | 🟢 **`2026-10-29`** |
+| [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) | `LICENSE` | **MIT** | `1 141` · `c2cfccb812fe4821` | `13c22b50e158` | 🟢 **`2026-10-29`** |
+| [`panaversity/learn-agentic-ai`](https://github.com/panaversity/learn-agentic-ai) | `LICENSE` | **MIT** | `1 068` · `8ea022e30a9bbe33` | `dd7426f65b24` | 🔴 **`2025-10-26` — 368 days** |
+| [`skillcoco/skillcoco`](https://github.com/skillcoco/skillcoco) | `LICENSE` | **MIT** *(re-attested; `p524`'s read holds)* | — | — | `2026-10-05` |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | `LICENSE` | **MIT** | `1 074` · `0ef87fdb98daea16` | `e0e347f7f399` | `2026-10-11` |
+
+🟢 **Two Microsoft grants are byte-identical** (`1 141` B, `sha256₁₆ c2cfccb812fe4821`) and so is
+`microsoft/autogen`'s `LICENSE-CODE`. 🔵 Useful operationally: a single digest identifies the
+Microsoft MIT template across repositories, which makes a template drift detectable rather than
+re-litigated per repo.
+
+### 🔴 `panaversity/learn-agentic-ai` is the stalest asset this base has ever measured
+
+**368 days** since the mainline moved (`2025-10-26`, *"Remove unnecessary line breaks in readme.md"*),
+at **4,392★** and **1,006 forks**, MIT. 🔴 That beats `fsrs4anki`'s **340 days** — the staleness
+`p523` built an instrument to catch — and nothing on this base had measured it, although the same
+owner's `panaversity/ksor` has been a shelf row for passes. 🔵 The lesson is the one `p523` already
+wrote and this base keeps paying for: **owner adjacency is not liveness.** Shelved in `top.md`'s
+curriculum tier **with** the gap in the cell, never as current curriculum.
+
+### 🟢 New address this window — one, and it arrived from a README rather than a search
+
+[`ankimcp/anki-mcp-server-addon`](https://github.com/ankimcp/anki-mcp-server-addon) — the sibling
+that runs the same MCP server **inside Anki** (AnkiWeb code `124672614`), removing the Node.js
+install, the AnkiConnect configuration and the separate process. 🔵 Read the split before quoting
+either: **STDIO clients and the `.mcpb` bundle → the server repo; HTTP, tunnel and web clients →
+the addon.** 🔴 **Its own grant was not read this pass** (`Gap 525-D`): the address was taken from
+the server repo's README at `e0e347f7f399`, not probed, and an unprobed sibling is exactly the
+`UNRESOLVED`-vs-`unlicensed` distinction this file is supposed to keep.
+
+### 🟡 Sweep hygiene — what 19 % `UNRESOLVED` on seven names actually means
+
+Seven filenames (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `LICENSE-CODE`,
+`NOTICE`) left **26 of 138** addresses ungraded. 🔴 **That is a property of the probe, not of the
+repositories**, and this file states it rather than letting a later pass read 26 nils as 26
+unlicensed projects. `LLMs-from-scratch` would itself have been one of the 26 had `LICENSE.txt` been
+left out, and `p514` already recorded the same class when `NOTICE` was missing from nine names and
+two Fedena repos were wrongly called ungranted. Full rows:
+[`evidence/promotion-gap-sweep.2026-10-29-p525.tsv`](../evidence/promotion-gap-sweep.2026-10-29-p525.tsv).
+
 ## 🆕 `p524` — `2026-10-29` — **🔴 THIS FILE HELD THE PASS'S BIGGEST FINDING AND UNDER-DESCRIBED IT: row `skillcoco/skillcoco` — *"Offline adaptive desktop app, terminal labs"*, 8★, MIT, Rust — is the **only asset on this base shipping BKT + SM-2 + a BYOK LLM tutor in one MIT tree**. Every cell in that row was CORRECT; the description was the cell that mattered and it described the app, not the library. 🟢 The row is now re-described here and promoted in `agents/top.md`. 🟡 `git ls-remote` re-resolved 9 education platform HEADs this pass: all live, and `bigbluebutton` serves off **`v4.0.x-develop`** — a ninth non-`main`/`master` default, which extends `p497`'s finding rather than contradicting it.**
 
 ### 🟢 The re-described row

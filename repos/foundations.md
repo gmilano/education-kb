@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p525` — `2026-10-29` — **🟢 THIS SHELF IS WHERE 32 OF THE 71 PERMISSIVE ADDRESSES `p525` SWEPT TURNED OUT TO ALREADY LIVE — AND THAT IS THE PASS'S MOST IMPORTANT NEGATIVE RESULT: `oppia`, `kolibri`, `pykt-toolkit`, `OpenOLAT`, `richie`, `pupilfirst`, `freeCodeCamp` and 25 more are named by [`agents/top.md`](../agents/top.md) and absent from ITS table because they belong HERE, correctly placed. 🔵 `p516`'s rule held: a nil checked against this base's own shelves shrank from 71 to 39 before a single row was written. 🟢 The one foundation-layer finding that IS new is a filename: [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) serves Apache-2.0 at **`LICENSE.txt`**, so a `LICENSE`-only probe files a **107,478★** permissive asset as ungranted.**
+
+### 🟢 Why the 32 are not a gap, stated so a later pass does not re-measure it
+
+`p525` enumerated the 138 GitHub addresses `agents/top.md` names but does not shelve, graded every
+grant from served bytes, and found **71 permissive**. 🔴 A pass that stopped there would have
+published *"71 unshelved permissive rows"* — and it would have been wrong by **more than
+two-to-one**, because the agents shelf is not the only shelf. The cross-check against this file and
+[`verticals/solutions.md`](../verticals/solutions.md) placed 32 of them immediately:
+
+| Layer | Addresses this file or `solutions.md` already carries |
+|---|---|
+| Learning platforms / LMS | `oppia/oppia`, `learningequality/kolibri`, `OpenOLAT/OpenOLAT`, `openfun/richie`, `pupilfirst/pupilfirst`, `pacewisdomhq/TutorLoom`, `tutors-sdk/tutors` |
+| SIS / ERP | `foradian/fedena`, `projectfedena/fedena`, `gongfuxiang/schoolcms`, `Gego-K12/gegok12` |
+| Knowledge tracing / assessment | `pykt-team/pykt-toolkit`, `AI-for-Education/pedagogy-benchmark`, `SahilC/AutomaticEssayGrading`, `openfun/warren` |
+| Robotics / STEM / curriculum data | `OpenRoberta/openroberta-lab`, `bncc-dev/bncc-dados`, `freeCodeCamp/freeCodeCamp` |
+| Eval / infrastructure | `EleutherAI/lm-evaluation-harness`, `apache/openmeetings`, `ably-labs/realtime-quiz-framework` |
+
+🔵 **The operative rule, re-stated because this base has paid for it twice** (`p516`'s three false
+nils, `p513`'s nine-row backlog): *before publishing an absence, grep every live shelf for the
+address.* `p525` did it mechanically — set difference across seven shelf files — and it cost one
+script, not a pass.
+
+### 🔴 The new foundation-layer defect: the grant is not always at `LICENSE`
+
+| Repo | Grant path | Family | Bytes · `sha256₁₆` | SHA |
+|---|---|---|---|---|
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | 🔴 **`LICENSE.txt`** | **Apache-2.0** | `11 505` · `4b6615cdb446946f` | `cdbd33e6d57a` |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | 🔴 **`LICENSE.md`** | **MIT** | `1 122` · `15ce43afa44a3cf4` | `f8849746d85c` |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **`LICENSE.md`** | **BESPOKE-NONCOMMERCIAL** | `8 563` · `c834209c5f338013` | `228a36cd9169` |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 🔴 **`LICENSE-CODE`** *(the code grant; root `LICENSE` is CC-BY-4.0)* | **MIT** | `1 141` | `d07c667a3239` |
+
+🟢 **`ingest/probe-grant.sh` already probes 53 filenames and would have caught every one of these.**
+🔴 **What it would then have done with two of them is the problem**: it grades `PageLM` as `MIT`.
+So the filename coverage on this base is sound and the **classification** is not — the argument, the
+controls and the fix are in [`agents/top.md`](../agents/top.md) `p525` and
+[`compose/code/p525-title-anchored-grant/`](../compose/code/p525-title-anchored-grant/).
+
+### 🟢 Foundation-adjacent substrate re-read this pass
+
+| Repo | License | ★ *(`p525`, API)* | SHA | Mainline date | Why it belongs in a foundations conversation |
+|---|---|---|---|---|---|
+| [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) | **MIT** `1 141` B | **14,369** | `13c22b50e158` | 🟢 `2026-10-29` | 🔵 **The named successor `microsoft/autogen` redirects to.** This base shelved `autogen` as live supply in three consecutive cycles before `p518` caught the retirement; this is the address that retirement points at, and it moved today. 🔴 836 open issues. |
+| [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | MIT *(carried)* | — | — | — | Already on this shelf; re-confirmed present during the cross-check, not re-read. |
+
+🔴 **Declared, so the absence is not read as coverage:** `p525` did **not** re-resolve this file's
+eleven platform HEADs — `p524` did that one pass ago and found all eleven live. **This pass's
+platform rows are carried, not re-attested.**
+
 ## 🆕 `p524` — `2026-10-29` — **🟢 THIS SHELF HAS A PERMISSIVE **ALGORITHM** LAYER AND HAS NEVER LISTED ONE: every adaptive-learning row here is either a platform (`moodle`, `OpenOLAT`, `oppia`) or a research library with no tutor (`pykt-toolkit`), and the gap between them — *a mastery estimator you can embed* — is filled by `skillcoco-core` (**MIT**, WASM-portable, BKT + SM-2), which this base carried only as an 8★ app row in `repos/trending.md`. 🟡 Default-ref sweep re-resolved: **11 platform HEADs, all live**, and `bigbluebutton` serves off **`v4.0.x-develop`** — a NINTH non-`main`/`master` default on this shelf, which strengthens `p497` rather than revising it. 🔴 One internal inconsistency found: this file records `rosariosis` at TWO different commits in two different rows.**
 
 ### 🟢 The missing layer, named

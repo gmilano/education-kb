@@ -4,6 +4,127 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p525` — `2026-10-29` — **🟢 `Gap 523-A` CLOSES FROM BYTES, AND THE ROW IT CONCERNS DRIFTED A SECOND TIME WHILE THE GAP WAS OPEN. 🔴 `p524` REGISTERED ITS FINDINGS ON THE SHELVES AND NOT HERE — `P418` REGRESSES FOR THE FOURTH TIME ON THIS REGISTER (`p511`, `p514`, `p521`, now `p524`); repaired below. 🟢 The pass's headline gap is new and it is about the base's STANDING instrument, not its supply: `ingest/probe-grant.sh` grades all three grants `p520` refused as buildable-or-unknown. 🔴 SIX REGISTERED (`525-A`…`525-F`). 🔴 `make hooks` DENIED — but the denial is NARROWER than this register has recorded it, and that is measured.**
+
+### 🔴 Gate posture — and a correction to how this register describes the denial
+
+🔴 **`make hooks` was DENIED (`Code from External`)** before any gate body ran. Nothing in `p525` is
+gate-attested, and `p522`'s **47/63** remains the last attested reading.
+
+🟢 **But this register has been recording the denial too broadly.** `p525` executed
+`bash ingest/probe-grant.sh` (three separate invocations, 11 addresses) and every instrument in
+`compose/code/p525-title-anchored-grant/` — `title_grant.py`, `run_controls.sh`, `sweep_unshelved.sh`
+— without refusal. 🔵 **So the refusal is specific to the `hooks` recipe, not to executing
+repository code**, and the ~20 passes of *"the gate is denied, so this stays a discipline"* framing
+should be narrowed to *"the `hooks` recipe is denied; instruments run"*. 🟢 **Practical consequence,
+and it is the useful half:** a gate's *contract* can be re-implemented and run standalone this
+session even while `hooks` is refused, which is how `p525` got 13 controls green.
+
+### 🟢 `Gap 523-A` — CLOSED from bytes
+
+**Asked for:** re-read `THU-MAIC/OpenMAIC`'s licence at the SHA it had drifted onto (`ed564ec6`),
+which `p523` recorded and did not do.
+
+**Measured `p525`:** `main` resolves to **`c0f296aa3609`** — 🔴 **a second drift**, inside ~24 h.
+🟢 The grant at that SHA is **byte-identical to the figure the shelf carries**: `LICENSE`
+**`1 065`** B, `sha1 56d5b3ffd6e8`, `sha256₁₆ ba25256374322713`, title block *"MIT License"*,
+copyright *"2026 THU-MAIC"*. **Both drifts are code-only across all three SHAs; the MIT grant
+holds.** Shelf cell updated in [`agents/top.md`](../agents/top.md).
+
+🔵 **The generalisable half:** two code-only drifts in 24 h on a 41,740★ row means *drift is not
+evidence of a licence change*, and a pass that re-reads a grant on every drift spends its budget on
+digests that do not move. **Re-read the grant when the digest changes, and record the digest so the
+question is answerable without a re-read.**
+
+### 🔴 `p524`'s gaps, mirrored here — `P418` regression #4
+
+`p524` wrote its findings onto six shelves and added no section to this register, so the register
+read `p523` while every shelf read `p524`. Mirrored:
+
+| id | From `p524` | Status after `p525` |
+|---|---|---|
+| `Gap 521-D` | EU primary hosts unreadable; `p524` proved it **environmental**, not evidential — six hosts, two channels, all DNS-fail | 🔴 **OPEN and UNCLOSABLE from this session class.** `p525` did not retry, by design. The note should read *"requires network allowlisting"* |
+| `p524`'s `skillcoco` promotion | `skillcoco-core` lifted as the mastery crate; platform refused (`v0.1.0`, CLA-gated, open-core) | 🟢 **Carried and used** — it is a named component of `P545` and `P546` |
+| `p524`'s Japan gap | guidelines and pilot schools, no confirmed 2026 national curriculum requirement | 🔴 **OPEN.** `p525`'s APAC leg returned nothing on Japan |
+
+### 🔴 Registered this pass
+
+**`Gap 525-A` — `ingest/probe-grant.sh`'s correctness depends on an undocumented accident.**
+Its GNU branches are right only because their patterns are UPPERCASE and bash `case` is
+case-sensitive, so they match a title block and skip a mixed-case preamble cross-reference.
+`oat-sa/tao-core`'s GPLv2 contains *"GNU Lesser General Public License"* — verified today at
+`dabc1c180e9f`. **Action:** replace `spdx_of()` per `P544`, and until then add a comment saying the
+case-sensitivity is load-bearing. **Do not add `shopt -s nocasematch`.**
+🔵 *Not* merely theoretical: the same function already mis-grades `PageLM`, `cn-math-taxonomy` and
+`advisingapp` through the sentence-matching half of the same design.
+
+**`Gap 525-B` — `p490`'s "anchor on the title block" is really "anchor on the first 200 bytes", and
+inside that window a declaration and a cross-reference are indistinguishable.**
+Live example found this pass: `openeducat/openeducat_erp`'s `LICENSE` (`8 241` B,
+`sha256₁₆ 528f84036800168d`, ref **`19.0`** @ `46a5d7d40082`) carries **no licence title line** and
+instead declares, inside the first 200 bytes, *"published under the GNU LESSER GENERAL PUBLIC
+LICENSE, Version 3 (LGPLv3)"*. 🟢 Both readers grade it correctly **off a declaration sentence**.
+🔴 A payload that names a *sibling* licence that early would be graded wrong. **Action:** when the
+200-byte window contains a family token but no line that is *only* a licence title, emit the family
+with `confidence = declaration`, not `title-attested`. No live row exhibits the failing case today,
+so this is named, not patched.
+
+**`Gap 525-C` — a 4,392★ MIT asset was 368 days stale and reachable from this base's own shelf row
+the whole time.** `panaversity/learn-agentic-ai`'s mainline last moved `2025-10-26`; the same
+owner's `panaversity/ksor` has been a shelf row for passes. 🔴 Worse than `fsrs4anki`'s 340 days,
+the staleness `p523` built an instrument for. **Action:** run `p523`'s code-vs-docs liveness check
+over **owner-adjacent** addresses of every shelf row, not just the rows.
+
+**`Gap 525-D` — a sibling address was taken from a README and never probed.**
+`ankimcp/anki-mcp-server-addon` is named in `repos/trending.md` `p525` from
+`ankimcp/anki-mcp-server`'s README at `e0e347f7f399`. **Its grant, HEAD and liveness are unread.**
+🔵 Registered rather than quietly listed, because *"named in a README"* and *"probed"* are exactly
+the distinction this base keeps collapsing (`UNRESOLVED` vs `unlicensed`).
+
+**`Gap 525-E` — the scheduled regional query template cannot reach education in EMEA.**
+`AI {industry} {region} {year} adoption regulation players` returned, for EMEA, **no education
+ministry, no edtech vendor, no education regulator and no 2026 education adoption figure** — only
+enterprise-AI material, one source of it dated **2023**. 🔴 Four regions run, and EMEA is the only
+one where the template produced nothing sector-specific. **Action:** for EMEA, replace the template
+with ministry-named and instrument-named legs — the shape that reached Singapore's `AI@NIE` and
+India's `NCF-SE 2023` at `p524`. 🔵 **This does not license any claim about European adoption**:
+`p506` closed that gap after thirteen informative nils by changing instrument class, not query.
+
+### 🟢 Standing checks run this pass
+
+| Check | Result |
+|---|---|
+| `Gap 504-A` — reconcile returned `full_name` set against queried slug set on every API call | 🔴 **REPRODUCED.** 39 slugs queried in two batches, **37 returned**, `"incomplete_results": false`. `xch1986/AI-Tutor` and `kvnloo/tutor-mcp` dropped silently. The standing check is the only reason it was noticed |
+| `T36` — default ref is not always `main`/`master` | 🔴 Four more instances: `openeducat_erp` → **`19.0`**, `thm-mni-ii/feedbacksystem` → **`dev`**, `Zenglian990/AI_Tutor_Release` → `master`, `JustinoLM/STI-matematicas` → `master` |
+| `p505` — `curl -sI https://github.com/<repo>` as a URL gate | 🔴 **403 again** (re-tested on `pguso/agents-from-scratch`). 🟢 `git ls-remote --symref` **works**; `raw.githubusercontent.com` returns **200**; `curl api.github.com/repos/<slug>` returns **403**. The channel table in `agents/top.md` holds unchanged |
+| `p516` — check every nil against this base's own shelves before publishing it | 🟢 **RAN, and it mattered**: *"71 unshelved permissive rows"* became **39** once `repos/foundations.md` and `verticals/solutions.md` were differenced in. A pass that skipped it would have been wrong by more than 2× |
+
+**`Gap 525-F` — the `BLANK-SPLITS-TABLE` shape, as this base states it, is not discriminating.**
+`p525` ran a blank-line-between-two-pipe-lines detector over the nine files it touched and got
+**11 findings** — `agents/trending.md:38666`, `:42459`, `:52491`; `repos/trending.md:707`, `:3303`,
+`:3497`, `:20966`, `:32709`, `:37914`, `:40652`; `intel/open-gaps.md:17882`. 🔴 **All eleven were
+inspected and all eleven are FALSE POSITIVES**: in every case the line after the blank is a table
+**header** and the line after that is a `|---|` separator, i.e. two *distinct, adjacent* tables, not
+one table split in half. **Removing the blank would MERGE two tables** and destroy the second
+header — a strictly worse outcome than the finding. 🟢 `p522`'s three repairs were genuine and had
+the other shape (row ∥ blank ∥ row). 🔵 **Action:** whatever check reports this shape must require
+that the line following the blank is **not** a header — i.e. that line *n+2* is not a `|---|`
+separator. 🔴 **Nothing was repaired at these eleven sites, deliberately.** This is this pass's
+fourth instrument defect and the only one found by inspecting findings before acting on them.
+
+### 🔴 This pass's own instrument defects, for the record
+
+| Defect | Caught by | Would have published |
+|---|---|---|
+| `NAMES` array at file scope, used inside an `xargs bash -c` child — **bash cannot export arrays** | the tally (`137/138 UNRESOLVED`) | a universal false nil over 138 addresses |
+| `awk '/HEAD$/{print $1}'` on `git ls-remote --symref` output — **the symref line also ends in `HEAD`**, so the SHA was the literal `ref:` | the same tally, after the first fix | every raw read 404s; 138 rows read as unlicensed |
+| one control expectation (`autogen/LICENSE-CODE` *"has no title line"*) asserted from reasoning | `run_controls.sh` printed `FAIL` | a correct classifier "fixed" to match a wrong expectation |
+
+🔵 All three are the class this register has recorded since `p505`: **a probe that measures a
+convention and reports a content defect.** 🟢 The mitigation that worked was cheap and is worth
+making standing: **every sweep prints a distribution, and every instrument ships a control row it is
+expected to fail.** None of the three reached a shelf cell.
+
 ## 🆕 `p522` — `2026-10-29` — **🟢 THE GATE SUITE RAN AND `p522` TURNED FOUR REDS GREEN — `gate-tables`, `gate-dates`, `gate-region-headings` and `gate-register-currency`, every one of them a defect this base had carried as "pre-existing backlog" for passes. 43/63 at entry → **47/63**, above `p511`'s and `p520`'s attested best of 45. 🟢 `Gap 475-E` RETIRES with a six-channel measurement and a replacement instrument. 🟡 `Gap 521-D` NARROWS: convergent and attributed to the Commission's own page, whose host is DNS-blocked here — so the primary stays unread and the reason is now measured. 🔴 THREE new gaps, all about this base's own instruments and register rather than its supply — including a DUPLICATE gap id (`521-G`) allocated twice on the same day from two different files.**
 
 ### 🟢 Gate posture — the suite ran, and this pass is accountable for the delta

@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p525` — `2026-10-29` — **🟢 THREE RECIPES, ALL BUILT FROM ASSETS THIS PASS READ FROM BYTES. `P544` is the one to run FIRST on any engagement: a **grant gate that cannot be fooled by a licence that opens with the MIT sentence**, wired into `make hooks`, with the 13 controls that prove it. `P545` is a **cost-constrained exam coach** that pairs slide-cited teaching with a real mastery estimator and pushes retention into the learner's own Anki — every component MIT, no hosted service. `P546` is the **training-chain platform**: the only multi-tenant skeleton on these shelves with the operator→institution→campus hierarchy already in the schema, with the mastery crate lifted in rather than written.**
+
+## `P544` — The grant gate that cannot be fooled *(run this before any other pattern)*
+
+**Problem.** A client proposal that names an open-source asset is a legal claim. This base's
+standing probe grades [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) as **`MIT`** —
+a licence whose §2 reads *"Redistribution … is strictly prohibited"* and whose §4 demands a
+**revenue-share executed before any commercial deployment**. One bad cell is a legal exposure, not
+a KB defect.
+
+**Components** — all in-repo, no external service:
+
+| Piece | Path | Role |
+|---|---|---|
+| default-ref resolver + 53 grant filenames in 14 languages | [`ingest/probe-grant.sh`](../ingest/probe-grant.sh) | 🟢 **keep** — its filename coverage is this base's best asset and would have caught every odd path found this pass (`LICENSE.txt`, `LICENSE.md`, `LICENSE-CODE`) |
+| title-anchored classifier | [`compose/code/p525-title-anchored-grant/title_grant.py`](code/p525-title-anchored-grant/title_grant.py) | 🔴 **replace `spdx_of()` with this** — it grades on the first 200 bytes, keeps `NonCommercial` in the family, emits `BESPOKE` for a non-canonical title, and labels body-only verdicts `(BY-BODY)` |
+| 13 controls, each a case this base recorded by hand | [`controls.tsv`](code/p525-title-anchored-grant/controls.tsv) + [`run_controls.sh`](code/p525-title-anchored-grant/run_controls.sh) | 🟢 the regression suite: 3 known-bad grants, 2 GPL-2.0 preamble traps, 1 genuine LGPL, 1 MIT with **no title line**, 1 BSD opening *"All rights reserved"*, the `autogen` split, 3 plain rows |
+
+**Wiring, concretely.**
+
+1. In `probe-grant.sh`, replace the `spdx_of()` body with a call out to the classifier:
+   `python3 -I "$(dirname "$0")/../compose/code/p525-title-anchored-grant/title_grant.py" "$payload_tmp"`,
+   and print the returned `family` **and** `confidence` as two columns rather than one `spdx_guess`.
+2. Add a `gate-grant-title` recipe to `make hooks` that runs
+   `cd compose/code/p525-title-anchored-grant && ./run_controls.sh` and fails on any row whose
+   verdict column is not `PASS`. 🔵 **`cd` into the instrument** — `p229` recorded that these suites
+   only pass from their own directory, because `python3 -I` strips the script's directory from
+   `sys.path`.
+3. Treat `confidence = body-only` as a **review flag**, not a verdict: `expertiza` (MIT, no title
+   line) and `open-tutor-ai-CE` (BSD-3 opening *"All rights reserved"*) are both legitimate and both
+   land there.
+4. 🔴 **Never add `shopt -s nocasematch` and never lowercase the payload before matching.** The GNU
+   branches are correct *because* bash `case` is case-sensitive; `oat-sa/tao-core`'s GPLv2 contains
+   the mixed-case string *"GNU Lesser General Public License"* and a case-insensitive match grades
+   every GPL-2.0 row on these shelves as `LGPL`.
+
+**Effort:** ~1 day to wire, ~0 to run. **What it buys:** the three wrong grades this pass found, and
+every future one of the same class, fail a gate instead of reaching a proposal.
+
+## `P545` — Cost-constrained, slide-cited exam coach with a real mastery estimator
+
+**Who buys it.** A ministry, a public university system or a LATAM/APAC training provider that has
+(a) its own course materials, (b) a hard per-seat cost ceiling, and (c) no appetite for sending
+student work to a hosted service. 🔵 This is the engagement `intel/market.md`'s LATAM and APAC
+sections both describe and that no single asset on these shelves answers.
+
+**Components** — every grant read from bytes at the SHA shown:
+
+| Layer | Asset | Licence · SHA | What it contributes |
+|---|---|---|---|
+| Teaching loop | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | **MIT** · `e01d2f7647b0` | teaches **from the client's own slides with page citations**, crops figures, quizzes from real homework, cross-session memory — and self-describes as running *"on small cheap models"*, which is the cost ceiling |
+| Next-step policy | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | **MIT** · `075c1895d255` | **diagnosis-first**: decides the next useful teaching step and checks understanding, with no mode menu to train users on |
+| Mastery estimate | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) *(carried)* | **MIT** · `98463a0cb5fb` | **Bayesian Knowledge Tracing over MCP** — the estimator as a tool any host can call |
+| …or embedded instead | [`skillcoco/skillcoco`](https://github.com/skillcoco/skillcoco) `skillcoco-core` *(`p524`)* | **MIT** · pin a commit, **not on crates.io** | BKT **and** SM-2 as a WASM-portable Rust crate when you want it in-process rather than over a socket |
+| Retention | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **MIT** · `e0e347f7f399` | writes cards into the learner's **own Anki**, so retention lives in a tool they already own. 🔵 Use **this repo** for STDIO hosts and the sibling **addon** for HTTP/tunnel clients |
+| Human authority | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | **MIT** · `18f2e223cdd1` | **editable** lesson drafts and materials, local-first, self-labelled *"teacher-reviewed"* — `P542`'s oversight step as a default |
+| EMEA reference | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | **Apache-2.0** · `1b7cd65f1112`, ref 🔴 **`dev`** | a public-university ITS in production since 2018 — the European reference a buyer asks for |
+
+**How it wires.** The host (Claude Code, Cursor, or any MCP client the institution already licenses)
+loads the two **skills** as the teaching and policy layers; both call `tutor-mcp` for the per-skill
+mastery posterior and gate the next item on it; a pass above `MASTERY_THRESHOLD` emits an Anki card
+through `anki-mcp-server`; every generated artefact lands in `Claw-ED`'s editable-draft surface for
+a teacher to approve before it reaches a learner. 🟢 **Nothing here is hosted**, so data residency is
+the institution's existing posture, unchanged.
+
+🔴 **Caveats to put in the SOW, not discover later.** The two skills are **`MIT` but young**
+(`universal-diagnostic-tutor-skill` mainline `2026-09-24`, 35-day gap; `universal-examprep-skill`
+`2026-10-27`); `tutor-mcp` is **57★ with no release**; `skillcoco` is `v0.1.0`, **CLA-gated** and
+open-core, so **lift `skillcoco-core`, do not adopt the platform** (`p524`); the *"small cheap
+models"* claim is a property of the **host**, not of the skill (`Trend 47`); and `feedbacksystem`
+carries **244 open issues** and serves off **`dev`**, so pin a commit and read paths at `dev`.
+
+**Effort:** 6–8 weeks to a classroom pilot, because the integration work is MCP plumbing and
+material ingestion rather than model work.
+
+## `P546` — The training-chain platform: tenancy you inherit, mastery you lift
+
+**Who buys it.** A private training chain or franchise network — the operator sells to institutions,
+institutions run campuses, campuses run classrooms, and **billing policy lives at the top**. Every
+other platform row on these shelves is single-tenant or institution-scoped.
+
+**Components.**
+
+| Layer | Asset | Licence · SHA | Role |
+|---|---|---|---|
+| Tenancy skeleton | [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | **Apache-2.0** `11 408` B · `ce32cf86e3db` | operator → institution → campus → teacher/student hierarchy, **model and billing policy at the operator level**, already in the schema |
+| Mastery | `skillcoco-core` | **MIT**, pin a commit | BKT + SM-2 behind a `BktStore` trait; `D-02` forbids `rusqlite`/`tauri`/`reqwest` in `[dependencies]`, so it ports to WASM and the host keeps its own datastore |
+| Tenant isolation reference | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) *(carried)* | **MIT** | isolation enforced in **Postgres RLS, not app code** — copy the posture even if you do not take the code |
+| Delivery into an existing LMS | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) *(carried)* | **MIT** | **emits SCORM**, so output lands inside the LMS a franchisee already runs |
+
+**How it wires.** Take `DeepTutor-AILearning` as the tenancy and billing skeleton; replace its
+per-learner progress model with `skillcoco-core` compiled to WASM behind the platform's own API, so
+mastery is a swappable component rather than a hardcoded policy; enforce tenant boundaries with
+`mentingo`'s RLS pattern at the database rather than in request handlers; and publish generated
+courseware as SCORM via `Papermorph` so each franchisee's existing LMS is the delivery surface.
+
+🔴 **Caveats.** `DeepTutor-AILearning` was **created 2026-10-09**, has **no tags** and is
+Chinese-first — treat it as a **reference architecture to fork**, not a dependency to track; its
+name collides with `HKUDS/DeepTutor` and the two are unrelated; `skillcoco-core` is **not published
+on crates.io**, so vendor it at a commit; and the billing layer is a schema, not a payment
+integration.
+
+**Effort:** 10–12 weeks, dominated by the tenancy audit rather than the AI layer.
+
 ## 🆕 `p524` — `2026-10-29` — **🟢 TWO RECIPES, BOTH BUILT ON THINGS THIS PASS VERIFIED FROM BYTES. `P542` is the **"model proposes, teacher disposes"** mastery gate — the one architecture that satisfies Oklahoma `S.B. 1734`, EU Annex III human-oversight AND India's NCF-SE *"educators must retain final authority over grading"* with a single design, because all three regions independently require that a human owns the grade. `P543` lifts `skillcoco-core` as a **WASM-portable crate** — the only permissive asset on this base holding BKT *and* SM-2 behind one API — and pins it by commit, because it is **not on crates.io**.**
 
 ### 🟢 `P542` — The portable human-authority grading gate

@@ -1,0 +1,14 @@
+slug	path	sha	bytes	sha256_16	expected	got	conf	verdict
+CaviraOSS/PageLM	LICENSE.md	228a36cd9169	8563	c834209c5f338013	BESPOKE-NONCOMMERCIAL	BESPOKE-NONCOMMERCIAL	title-attested	PASS
+xiaoyang111222/cn-math-taxonomy	LICENSE	c71ca266cf36	19347	41003d4a74749c02	CC-BY-NC-4.0	CC-BY-NC-4.0	title-attested	PASS
+canyongbs/advisingapp	LICENSE	1ba02ecb6559	3860	48255018b41fc0e9	Elastic-2.0	Elastic-2.0	title-attested	PASS
+oat-sa/tao-core	LICENSE	dabc1c180e9f	18025	a01259a1b522cf0d	GPL-2.0	GPL-2.0	title-attested	PASS
+francoisjacquet/rosariosis	LICENSE	25d568f6edca	15214	d954e14e5c752eb0	GPL-2.0	GPL-2.0	title-attested	PASS
+bigbluebutton/bigbluebutton	LICENSE	799a973616bd	7652	e3a994d82e644b03	LGPL-3.0	LGPL-3.0	title-attested	PASS
+open-spaced-repetition/fsrs4anki	LICENSE	ff7c85cee735	1079	2ec9e6e61ed82af8	MIT	MIT	title-attested	PASS
+HKUDS/DeepTutor	LICENSE	1ea7df155447	11408	cd2f54e1e5066644	Apache-2.0	Apache-2.0	title-attested	PASS
+microsoft/autogen	LICENSE	d07c667a3239	18650	7e7170e3cebf88a9	CC-BY-4.0	CC-BY-4.0	title-attested	PASS
+microsoft/autogen	LICENSE-CODE	d07c667a3239	1141	c2cfccb812fe4821	MIT	MIT	title-attested	PASS
+expertiza/expertiza	LICENSE	b68bb8f640ac	1068	cc922786cdca1cd7	MIT (BY-BODY)	MIT (BY-BODY)	body-only	PASS
+Open-TutorAi/open-tutor-ai-CE	LICENSE	196c547291da	1531	57c341d0992078f7	BSD-3-Clause (BY-BODY)	BSD-3-Clause (BY-BODY)	body-only	PASS
+Halleck45/OpenPronounce	LICENSE	74bc17ea406e	1113	6f4d9645aa9f3df4	MIT	MIT	title-attested	PASS

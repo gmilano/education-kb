@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p525` — `2026-10-29` — **🟢 THE `OpenEduCat` ROW STOPS BEING VENDOR-ATTESTED AND BECOMES A BYTE READ: `LGPL-3.0`, `8 241` B, `sha256₁₆ 528f84036800168d`, served off ref **`19.0`** at `46a5d7d40082` — and the payload declares its own family IN ITS FIRST 200 BYTES while carrying **no licence title line at all**, which is a shape neither of this base's grant readers has a name for. 🟢 Three platform rows added, each a layer this file did not have: a **multi-tenant training-chain platform** with the operator→institution→campus hierarchy in the schema, an **EMEA university ITS** with eight years of history, and a **LATAM educational-media-centre** system. 🔴 Two of the three serve off a non-`main` default ref, which is `p524`'s finding holding at 11 of 14 platform rows measured on this base.**
+
+### 🟢 `OpenEduCat` — read, not relayed
+
+The scheduled vertical-platform search leg returned `OpenEduCat` and its own marketing pages as the
+only education-ERP answer, claiming LGPL v3. 🔵 **A vendor page is `SEARCH-ATTESTED, PRIMARY
+UNREAD`.** Read first-hand today:
+
+| Property | Value |
+|---|---|
+| Repo | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) 🔴 **not** `openeducat/openeducat`, which does not resolve (`p524`) |
+| Default ref | 🔴 **`19.0`** — not `main`, not `master` |
+| HEAD | `46a5d7d40082` |
+| Grant | **LGPL-3.0** — `LICENSE`, `8 241` B, `sha256₁₆ 528f84036800168d` |
+| Newest tag over the git protocol | `18.0-beta` 🔵 so the default ref (`19.0`) is **ahead of the newest tag**: pin a commit, not a tag |
+| Modules the vendor claims | Student Information System, attendance, fees, timetabling, exams, parent portal, **enrolment CRM** |
+
+🔴 **LGPL-3.0 is the constraint to say out loud in a proposal**: OpenEduCat's modules may be used
+and linked, but modifications *to the covered modules* carry source obligations. The permissive
+route to the same functional area on these shelves remains `OpenOLAT` (Apache-2.0) for learning
+delivery — there is still **no permissive education ERP** on this base (`p501`'s finding, re-checked
+and surviving a fourth candidate).
+
+🔵 **And the payload is a reader finding in its own right.** It opens *"For copyright information,
+please see the COPYRIGHT file."* — **no licence title line** — then declares, inside the first 200
+bytes, *"published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included
+below"*. 🟢 Both readers grade it correctly, and **both do so off a self-declaration sentence rather
+than a title**, because the declaration is uppercase. 🔴 `Gap 525-B`: `p490`'s *"anchor on the title
+block"* rule is really *"anchor on the first 200 bytes"*, and inside that window a **declaration**
+and a **cross-reference** are indistinguishable. It is right here and it would be wrong on a payload
+that mentions a sibling licence early. Named rather than patched, because no live row on these
+shelves exhibits the failing case today.
+
+### 🟢 Three platform rows added — layers this file did not have
+
+| Platform | Repo | License (bytes, read `p525`) | ★ | Default ref · HEAD | Mainline date | The layer it adds |
+|---|---|---|---|---|---|---|
+| **DeepTutor-AILearning** | [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | **Apache-2.0**, `11 408` B, `cd2f54e1e5066644` | **154** | `main` · `ce32cf86e3db` | 🟢 `2026-10-29` | 🟢 **Multi-tenancy with the commercial hierarchy in the product**: the platform operator manages institutions, **models and billing policy**; institutions manage campuses; campuses manage teachers and students. 🔵 Every other platform row here is single-tenant or institution-scoped, so this is the only one shaped like what a **training chain** buys. 🔴 Created `2026-10-09`, no tags, Chinese-first — 🟢 **APAC**. 🔴 Shares a name with `HKUDS/DeepTutor` and is unrelated. |
+| **feedbacksystem** | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | **Apache-2.0**, `10 785` B, `65125d9e480bbeee` | **24** | 🔴 **`dev`** · `1b7cd65f1112` | `2026-10-28` | 🟢 **An intelligent tutoring system run by a university, in production, in EMEA** — Technische Hochschule Mittelhessen. Personalised automated feedback for students; `topic:intelligent-tutoring-system`. 🟢 **Created 2018: by code age the most durable AI-education asset on these shelves**, against **244 open issues**. 🔴 A path read at `main` or `master` **404s** — `p524`'s `bigbluebutton` finding, third platform instance. |
+| **virtual-center-app (A-DDIE)** | [`DanielDev87/virtual-center-app`](https://github.com/DanielDev87/virtual-center-app) | **Apache-2.0**, `11 358` B, `93f0abad889135ae` | **39** | `main` · `8d16435293de` | `2026-10-27` | 🟢 **LATAM, Spanish-first, and aimed at the *production* side of education** — integrated management and virtual collaboration for **educational production and media centres**. 🔵 University media units and public broadcasters are a real LATAM buyer this file had no asset for. 🔴 Blade/Laravel, single maintainer, 16 forks: **fork-and-own, do not take a dependency.** |
+
+### 🔴 Non-`main` default refs — the running count on this base
+
+`p497` recorded the class; `p524` found a ninth instance; `p525` adds two more from this pass's own
+reads: **`openeducat_erp` → `19.0`**, **`feedbacksystem` → `dev`**, plus **`Zenglian990/AI_Tutor_Release` → `master`**
+and **`JustinoLM/STI-matematicas` → `master`** on the agent side. 🟢 Across the 138 addresses swept
+this pass, the default ref was **resolved, never assumed**, which is the whole reason the sweep has
+usable rows at all — and the one run where it *was* assumed (`p525`'s first two attempts, which
+extracted the literal string `ref:` as a SHA) reported **137 of 138 as ungranted**. 🔵 **The
+cheapest standing rule on this base: resolve the ref, then read.**
+
 ## 🆕 `p524` — `2026-10-29` — **🟢 ELEVEN PLATFORM ROWS RE-RESOLVED LIVE THIS PASS, AND THE ONE OPERATIONAL FINDING IS A REF, NOT A LICENCE: `bigbluebutton` — the virtual-classroom row an engagement is most likely to probe — serves off **`v4.0.x-develop`**, so a path read at `main` or `master` returns **404 on a fully maintained project**. 🟢 With `oppia` and `kolibri` on `develop`, THREE live rows in this file would read dead to a `main`-assuming gate. 🔴 And the `OpenEduCat` path this KB cites needs care: `openeducat/openeducat` does NOT resolve — the repo is `openeducat_erp`, served off ref `19.0`.**
 
 ### 🟢 Platform liveness, re-resolved today (`git ls-remote --symref`)

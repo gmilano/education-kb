@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p525` — `2026-10-29` — **🔴 THE WINDOW PRODUCED NO NEW SUPPLY AND THAT IS NOW A MEASUREMENT, NOT AN IMPRESSION: four repositories came off the scheduled search legs — `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `h9-tect/AI-Roadmaps`, `anandpatikat/guru-latihan-dinamis` — and **all four were already on this base**, three of them named together on one line of this very file. 🟢 So the movement this window is a BACKLOG, not a discovery: **39 permissive addresses** this base holds and shelves nowhere, **21 promoted into [`top.md`](top.md) this pass**. 🔴 And the trending aggregator that `p524` caught understating `DeepTutor` is not the only unreliable channel here — the GitHub search API **silently dropped 2 of 39** queried slugs today with `"incomplete_results": false`, which is `Gap 504-A` reproducing on schedule.**
+
+### 🟡 The window's star movements, measured on the API channel
+
+| Address | `p525` (API) | prior cell on this base | Δ |
+|---|---|---|---|
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **75,444** 🟢 **and it moved +3 INSIDE this pass's own window** (`75,441` → `75,444`) | `75,238` (`p510`) | **+206** |
+| [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | **122,382** | never carried a star cell on this base | — |
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | **107,478** | never carried a star cell | — |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | **1,063** | `1,064` (`p510`) | **−1** |
+| [`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) | **115** 🔴 and still **NO grant file** on the API's licence field | `116` (search snippet) | **−1** |
+
+🔵 **`guru-latihan-dinamis` is worth one sentence of its own**: Indonesian exam-prep teacher tooling
+aligned to **Kurikulum Merdeka**, mainline pushed **today**, and it carries **no licence at all**.
+That is `p517`'s APAC finding — *8 of 12 newly-probed APAC education repos carry no grant* — holding
+on a live, actively-developed address. **Do not propose it; cite it as the shape of the APAC supply
+problem**, which is permission, not absence.
+
+### 🟢 What is new this window is an instrument, and it corrects three published grades
+
+The standing probe `ingest/probe-grant.sh` grades [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM)
+as **`MIT`** — a licence whose own §2 reads *"Redistribution of the Software, in whole or in part,
+in source or binary form, is strictly prohibited"* and whose §4 requires a **revenue-share executed
+before any commercial deployment**. It grades a **NonCommercial** CC payload as `CC-BY-4.0` and an
+**Elastic-2.0** payload as `unknown-text`. 🟢 One cause — a body scan where the family is on the
+title line — and a title-anchored replacement with **13/13 controls** now lives at
+[`compose/code/p525-title-anchored-grant/`](../compose/code/p525-title-anchored-grant/). Full
+argument in [`top.md`](top.md) `p525`.
+
+### 🟢 Agents promoted off this file's own backlog this window — 21, every grant byte-read today
+
+`Study-Mate` (MIT, 1,255★, 🟢 APAC) · `learn-from-materials` (MIT, 1,194★, 🟢 APAC) ·
+`agents-from-scratch` (MIT, 1,063★) · `TorchLeet` (MIT, 2,598★) · `anki-mcp-server` (MIT, 537★) ·
+`lineage-skill` (Apache-2.0, 462★) · `universal-examprep-skill` (MIT, 361★, 🟢 APAC) ·
+`algo-sensei` (MIT, 299★) · `universal-diagnostic-tutor-skill` (MIT, 252★) · `ari` (MIT, 211★) ·
+`kaogong-skill` (MIT, 210★, 🟢 APAC) · `DeepTutor-AILearning` (Apache-2.0, 154★, 🟢 APAC) ·
+`education-skills` (MIT, 119★, 🟢 APAC) · `InterviewMentor` (MIT, 116★) ·
+`feifei-companion` (Apache-2.0, 110★, 🟢 APAC) · `DoubtDesk` (MIT, 99★, **167 forks**) ·
+`AI_Tutor_Release` (MIT, 75★, 🟢 APAC) · `Studivexa` (MIT, 72★) · `Claw-ED` (MIT, 63★) ·
+`feedbacksystem` (Apache-2.0, 24★, 🟢 **EMEA — this shelf's first EMEA-placed ITS**) ·
+`virtual-center-app` (Apache-2.0, 39★, 🟢 **LATAM**).
+
+🔴 **Nine of the twenty-one are APAC-placed on the product's own bytes and none of them came from an
+APAC-targeted search leg** — they came from reading this base's own trending history. The APAC
+supply this base spent passes declaring thin was sitting in its own logs, undescribed.
+
+### 🔴 Still open from this file's perspective
+
+- 🔴 `DeepTutor`'s star channel was **not** re-read this pass; `p524`'s aggregator/API conflict
+  (`48,093` vs `48,672`) stands unresolved. **Do not quote either without a fresh read.**
+- 🔴 **18 of the 21 promoted rows carry a staleness, maturity or single-maintainer caveat.** The
+  backlog was real supply, but it is not uniformly deployable supply, and the cells say which.
+- 🔴 The remaining **18 of 39** backlog addresses are unshelved on purpose (below floor, not
+  education-specific, or content-licensed) and are enumerated in
+  [`evidence/promotion-gap-sweep.2026-10-29-p525.tsv`](../evidence/promotion-gap-sweep.2026-10-29-p525.tsv).
+
 ## 🆕 `p524` — `2026-10-29` — **🟢 THE WINDOW'S REAL MOVEMENT IS NOT A STAR COUNT, IT IS A CAPABILITY THAT WAS ALREADY ON THIS BASE AND MIS-FILED: `skillcoco/skillcoco` sat as an **8★ one-line row in `repos/trending.md`** reading *"offline adaptive desktop app, terminal labs"* — and byte-level reads today show it is the **only MIT asset on this base carrying BKT *and* SM-2 *and* a BYOK LLM tutor in one tree**. 🔴 So the discovery channel worked and the *description* channel lost the finding: a row can be present, correctly licensed, correctly linked, and still invisible. 🟡 `DeepTutor`'s star channel disagrees with itself again — an aggregator published **48,093 (+2,371)** today against `p523`'s API read of **48,672** — and no new dated release landed.**
 
 ### 🔴 The mis-filing, and what it costs

@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p525` — `2026-10-29` — **🔴 TREND 1 PROMOTES A RECURRING DEFECT INTO A CLASS: THIS BASE'S AUTOMATED GRANT READERS ARE SYSTEMATICALLY MORE PERMISSIVE THAN ITS HAND READS, ON THREE DIFFERENT INSTRUMENTS IN FIVE PASSES — `licence-grant-gate` (`p521`), `commercial_posture` (`p522`) and now the STANDING `ingest/probe-grant.sh` (`p525`), which grades a licence that prohibits redistribution as **`MIT`**. 🟢 Trend 2 is the opposite of a supply trend and is the most useful thing in this pass: with discovery saturated on seven axes and the demand legs returning **zero** new facts, the productive channel on this base is **its own backlog** — 39 permissive addresses it already held. 🔴 Trend 3: on these shelves **licence risk is now smaller than LIVENESS risk**, and the two worst cases are a 4,392★ asset 368 days stale and a 4,119★ asset 340 days stale.**
+
+### 🔴 `Trend 44` — automated grant readers on this base fail in one direction: too permissive
+
+| Pass | Instrument | What it passed that a hand read refused |
+|---|---|---|
+| `p521` | `licence-grant-gate` | `PageLM` → `{'family': 'MIT', 'granted': True}`; `cn-math-taxonomy` → `{'family': 'CC', 'granted': True}` |
+| `p522` | `commercial_posture` | `gen-mentor`'s **CC0-1.0** read as `CC-BY`; `i-educar`'s **GPL-2.0** read as bare `GPL` |
+| 🆕 `p525` | **`ingest/probe-grant.sh`** — the **standing** probe | `PageLM` → **`MIT`**; a **NonCommercial** CC payload → `CC-BY-4.0`; an **Elastic-2.0** payload → `unknown-text` |
+
+🔵 **Why the direction is always the same, and it is not bad luck.** A permissive licence is short
+and formulaic, so a substring match finds it easily; a restrictive licence is long, bespoke, and
+*frequently opens by quoting a permissive one* in order to then carve it back. `PageLM`'s first
+sentence is MIT's first sentence. Any reader that matches on sentences therefore has a built-in bias
+toward "buildable", and **the error is always in the expensive direction** — a false `MIT` puts an
+unusable asset into a client proposal, where a false `GPL` only costs a re-read.
+🟢 **The structural fix is a design rule, not a patch**: grade on what the payload **calls itself**
+(its first 200 bytes), and when the title names something non-canonical, emit `BESPOKE`, never an
+SPDX id. Implemented with 13/13 controls at
+[`compose/code/p525-title-anchored-grant/`](../compose/code/p525-title-anchored-grant/).
+🔴 **And the corollary for every KB in this family, not just education:** any shelf graded by a
+body-scanning reader should be re-read before a licence claim goes into a SOW.
+
+### 🟢 `Trend 45` — the marginal value of search on this sector is ~zero; the marginal value of re-reading the base is high
+
+Measured, in one pass, on both channels:
+
+| Channel | `p525` measurement |
+|---|---|
+| Supply discovery (global + 4 regional repo legs) | **4 addresses surfaced, 4 already on this base** — three of them named on a single line of `agents/trending.md` |
+| Demand facts (4 regional legs) | **every figure already carried in `intel/market.md`**, checked token by token — `951`, `15.9`, `1,848`, `20.9`, `46.12`, `18.2`, `IESALC`, `200 institutions`, `ILIA`, `ASEAN Guide`, `AIDA` |
+| The base's own unshelved backlog | **138 addresses swept → 71 permissive → 39 on no canonical shelf → 21 promoted**, including **9 APAC-placed** and the first **EMEA**-placed ITS |
+
+🔵 **This is a scheduling finding, not a research finding.** A pass that spends its budget on fresh
+legs produces a near-empty window; a pass that spends it reading what the base holds produces 21
+shelf rows and two region firsts. 🟢 **The regional consequence is the sharpest form of it:** the
+APAC supply this base spent passes calling thin was in its own logs, undescribed — which is `p524`'s
+`skillcoco` finding (*a row can be present, correctly licensed, correctly linked and still
+invisible*) **reproduced at population scale.**
+
+### 🔴 `Trend 46` — liveness has overtaken licence as the dominant risk on these shelves
+
+| Asset | ★ | Licence | Mainline committer date | Code gap |
+|---|---|---|---|---|
+| [`panaversity/learn-agentic-ai`](https://github.com/panaversity/learn-agentic-ai) | **4,392** | MIT | `2025-10-26` | 🔴 **368 d** |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **4,119** | MIT | last code `2025-09-08` | 🔴 **340 d** (`p523`) |
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | 462 | Apache-2.0 | `2026-07-23` | 98 d |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 1,063 | MIT | `2026-07-25` | 96 d |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 61.6k | MIT (`LICENSE-CODE`) | last code `2026-03-25` | 🔴 **217 d**, `archived: false` (`p523`) |
+
+🔵 **The pattern across all five: the grant is clean and the project is not moving.** A licence can be
+read once and trusted for years; liveness decays continuously and **no field reports it honestly** —
+`archived` is `false` on a retired project, `pushed_at` advances on a docs push, and a README can say
+*"not deprecated"* while the code sits still (or, as `ankimcp/anki-mcp-server` shows, say something
+that *reads* like deprecation while the project is genuinely maintained).
+🟢 **The only channel that answers it is `git clone --depth 1` and the committer date**, which is why
+every row promoted this pass carries one. 🔴 **18 of the 21 promoted rows carry a staleness, maturity
+or single-maintainer caveat in their own cell** — the backlog was real supply, not uniformly
+deployable supply, and a proposal that quotes the star count without the date is quoting the wrong
+number.
+
+### 🟡 `Trend 47` — the delivery form factor for education AI is shifting from app to **agent skill**
+
+Of the 21 rows promoted this pass, **seven ship as agent skills rather than applications** —
+`universal-examprep-skill`, `universal-diagnostic-tutor-skill`, `kaogong-skill`, `lineage-skill`,
+`education-skills`, `algo-sensei`, `book-to-skill` *(carried)* — and two more ship as **MCP servers**
+(`anki-mcp-server`, `tutor-mcp` *(carried)*). 🔵 **Why it matters for an engagement:** a skill or MCP
+server composes into whatever client the institution already licenses and carries no hosting,
+no data-residency surface and no procurement of its own, where an app needs all three. 🔴 **The
+trade-off is equally concrete:** a skill inherits the host's model, so the *"runs on small cheap
+models"* property that `universal-examprep-skill` advertises is a claim about the host, not a
+guarantee the skill can enforce.
+
+### 🟢 `Trend 48` — roughly one in ten education repositories carries a grant that refuses paid work
+
+Over the 138 addresses swept from bytes this pass: **14 are refused for commercial client work**
+(8 `BESPOKE`, 2 `BESPOKE-NONCOMMERCIAL`, 2 `CC-BY-NC`, 1 `CC-BY-NC-SA`, 1 `Elastic-2.0`) and 3 more
+carry **content** grants (CC-BY / CC-BY-SA / CC0) that do not grant software rights. 🔴 **That is
+~10 % refused and ~12 % mis-usable**, in a sector whose public listicles call all of it "open
+source". 🔵 Education is unusually prone to this because its assets are *content-shaped* — a
+curriculum, a problem bank, a taxonomy — and Creative Commons is the default instinct for content,
+including its **NonCommercial** variant. 🟢 **Operational rule:** in this sector, read the grant
+before the README, and read the **title line** before the first sentence.
+
 ## 🆕 `p524` — `2026-10-29` — **🟢 TREND 1 IS A NEW FAILURE CLASS FOR THIS BASE AND IT IS THE OPPOSITE OF THE LAST FOUR PASSES': `p520`–`p523` all found rows whose CELLS WERE WRONG. This pass found a row whose cells were ALL RIGHT — correct link, correct MIT licence, correct language — and whose **description** lost the finding, leaving the shelf believing it had no permissive mastery-estimating tutor while holding one for several passes. 🔴 Trend 2: THREE REGIONS NOW INDEPENDENTLY REQUIRE A HUMAN TO OWN THE GRADE — Oklahoma `S.B. 1734`, EU Annex III, India `NCF-SE 2023` — which converts a compliance clause into a single portable architecture. 🔴 Trend 3: `Gap 521-D` is environmental, so some gaps on this base cannot be closed by research at all.**
 
 ### 🟢 Trend 1 — The true-but-invisible row

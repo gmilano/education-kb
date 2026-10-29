@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p525` — `2026-10-29` — **🔴 THE FOUR REGIONAL LEGS RETURNED **ZERO** FACTS NEW TO THIS FILE, AND THAT IS MEASURED RATHER THAN FELT: every figure they produced — NA `$951M→$2.3B @15.9%`, APAC `$591.6M→$1,848.1M @20.9%`, the conflicting `46.12%` CAGR, Rest-of-LATAM `$18.2M→$36M`, the UNESCO IESALC/UNU-IAS **200 institutions / 19 countries** survey, `ILIA`, the `ASEAN Guide`, Canada's `AIDA` — is **already carried in this file**, checked token by token. 🟢 So the demand channel has saturated the way the supply channel did, and this pass's regional contribution is a different kind: **placed SUPPLY**. Nine of the twenty-one agents promoted today are APAC-placed on the product's own bytes, one is this base's first EMEA-placed ITS, one is its third LATAM-placed row. 🔴 And the EMEA leg's result is the one to write down loudest: it returned **no education ministry, no edtech vendor, no education regulator and no 2026 education adoption figure at all** — only enterprise-AI material.**
+
+### 🔴 The saturation measurement, so a later pass does not pay for the same legs
+
+| Leg | What it returned | Already in this file? |
+|---|---|---|
+| North America | `$951M` (2024) → `$2.3B` (2029), **15.9 %** CAGR; NA share **36 %**; *"only 10 % of institutions have formal AI guidelines"*; *"71 % of US teachers lack AI training"*; no FDA-equivalent for edtech; Colorado/Texas piecemeal; Canada **AIDA** proposed | 🔴 **all of it** — `951`×6, `15.9`×6, `71 %`/`71%`×12, `AIDA`×3 |
+| EMEA | 🔴 **nothing education-specific.** CompTIA 2026 EMEA IT trends (AI fluency beyond technical staff; privacy the #1 cybersecurity driver); a **2023** Workday study (40 % trust worry, 38 % not piloting); Bandwidth/Cavell Feb 2026 on compliance complexity | 🔴 `CompTIA` already ×2; the rest is **enterprise, not education** |
+| APAC | `$591.6M` (2024) → `$1,848.1M` (2029), **20.9 %** CAGR, fastest-growing region; a conflicting **46.12 %** global CAGR; Forrester — no APAC-wide AI law likely, Singapore mature guidelines, China targeting algorithmic misconduct, **ASEAN Guide** early-stage | 🔴 **all of it** — `1,848`, `20.9`, `46.12`, `ASEAN Guide` each present |
+| LATAM | UNESCO **IESALC** + UNU-IAS working paper (**200 institutions, 19 countries**, fielded late 2025, published Sept 2026); CEPAL **ILIA** with a regulation subdimension; Chile the readiness leader with a roadmap that survived a change of government; Rest-of-LATAM `$18.2M` → `$36M`; policy as *"a patchwork of pilots dropped with each administration"* | 🔴 **all of it** — `IESALC`×44, `200 institutions`×19, `ILIA`×9, `18.2`×4 |
+
+🔵 **Read positively**: `p514` measured ~25 regional facts and found **one** new; `p525` measured
+this window's full set and found **zero**. The demand side of this sector is, for this session class
+and these query shapes, fully harvested. 🟢 **The remaining regional work is not search, it is
+placement** — attaching the supply this base already holds to the region that can buy it, which is
+what the block below now does with 21 rows that had no region yesterday.
+
+### 🔴 What the EMEA leg's silence does and does not license
+
+🔴 **It does not license "EMEA adoption is low".** `p506` closed the longest-running gap on this
+register by getting an EMEA education adoption rate after **thirteen** informative nils, and the
+mechanism was *a different instrument class, not a better query*. This leg used the scheduled query
+shape, got enterprise material, and that is a **property of the query**, not of Europe.
+🟢 **What it does license** is `Gap 525-E`: the scheduled `AI {industry} {region} {year} adoption
+regulation players` template **cannot reach education in EMEA** — four runs, zero education-specific
+hits — and the template should be replaced for this region with ministry-named and
+instrument-named legs, which is exactly how `p524` reached Singapore's `AI@NIE` and India's
+`NCF-SE 2023`.
+
+## Opportunities by region
+
+### North America
+
+🔵 **Demand side unchanged from `p524`/`p523`** — the state-by-state compliance patchwork
+(Ohio `2026-07-01` policy duty, Oklahoma **SB 1734** human-oversight and high-stakes prohibition,
+Idaho **SB 1227**, California **AB 2876**, Alabama **H.B. 329**) remains the binding fact and every
+date remains secondary. 🔴 **Canada stays thin**: `AIDA` is still described as *proposed*, and no
+education-sector instrument was found.
+
+🟢 **New supply placed here this pass — the employability layer, which had no permissive rows:**
+
+| Asset | Licence | ★ | Why it sells in NA |
+|---|---|---|---|
+| [`Exorust/TorchLeet`](https://github.com/Exorust/TorchLeet) | **MIT** | 2,598 | 65 ML/AI interview problems **plus an auto-grader plus an MCP tutor** in one tree; problems sourced from named US employers. The only row on this base pairing bank + grader + tutor. |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **MIT** | 299 | DSA mentor that gives **progressive hints, not solutions** — a pedagogy constraint written into the tool, which is what a university integrity office asks for. |
+| [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | **MIT** | 116 | Mock technical interviews incl. SQL. |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | **MIT** | 63 | **Local-first, editable drafts, self-labelled "teacher-reviewed"** — Oklahoma SB 1734's human-oversight requirement as a product default rather than a workflow bolt-on. |
+
+🟢 **The sellable package is unchanged and now better supplied**: a district AI-policy conformance
+package (policy artefact + human-oversight workflow + audit trail + per-state deadline matrix), with
+`Claw-ED` as the reference implementation of the oversight step and
+`anthropics/k12-teacher-skills` + `learning-commons-org/agent-skills` supplying the eval rubrics.
+
+### EMEA
+
+🔴 **The demand picture from this pass's own leg is empty, and that is stated rather than filled
+in.** No ministry, no vendor, no regulator, no 2026 education adoption figure. 🔵 The EU material
+this file carries — the AI Act Annex III `2027-12-02` high-risk date for education, the Art. 50
+transparency obligations, the human-oversight requirement — is **carried from `p521`–`p524` and was
+not re-attested this pass**, and `Gap 521-D` remains **environmental**: both EU primary hosts fail
+DNS from this session class, so every EU date here is `reported` by construction.
+
+🟢 **The pass's one genuine EMEA gain is a supply row, and it is the kind this region actually
+procures:**
+
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) — **Apache-2.0**
+(`10 785` B, `sha256₁₆ 65125d9e480bbeee`), **24★**, **Technische Hochschule Mittelhessen**,
+`topic:intelligent-tutoring-system`, created **2018**, mainline commit **`2026-10-28`**, default ref
+🔴 **`dev`**. 🟢 **This base's first EMEA-placed intelligent tutoring system**, and the placement is
+on the owning institution rather than a handle. 🔵 **Why it matters commercially:** EMEA education
+buyers ask for a *European* reference running in a *public* institution under a *permissive* licence,
+and this base could not previously name one. 🔴 **244 open issues** — cite it as a reference and a
+starting point, not as a product.
+
+🔵 Also EMEA-origin and deliberately **not** shelved:
+[`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) — Apache-2.0
+(`11 356` B), Socratic tutoring + spaced repetition + **PISA-aligned diagnostics**, *"aligned with
+French curriculum"*, **0★**. 🔴 Below any floor; listed so the French-curriculum alignment is
+findable, never as a dependency.
+
+### APAC
+
+🔵 **Demand side carried, not re-attested**: Singapore's `AI@NIE` programme and India's `NCF-SE 2023`
+alignment (`p524`), Korea's AI Basic Act, China's standards work, Japan still a declared gap — plus
+this pass's leg confirming **no APAC-wide law is expected** and the **ASEAN Guide** remaining
+early-stage, so compliance stays country-by-country.
+
+🟢 **The region's result this pass is a supply inversion, and it is large.** **Nine of the
+twenty-one** agents promoted today are APAC-placed **on the product's own bytes**:
+
+| Asset | Licence | ★ | Layer it fills |
+|---|---|---|---|
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | MIT | **1,255** | route + teach + build, with spaced repetition in-topic |
+| [`dmoshehun-prog/learn-from-materials`](https://github.com/dmoshehun-prog/learn-from-materials) | MIT | **1,194** | documents → **traceable, quizzable** lessons |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | MIT | 361 | slide-cited exam coach that **runs on small cheap models** |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | MIT | 210 | 🟢 **public-sector examinations — a vertical this base had no supply for** |
+| [`3yangyang9/DeepTutor-AILearning`](https://github.com/3yangyang9/DeepTutor-AILearning) | Apache-2.0 | 154 | 🟢 **multi-tenant training-chain platform** (operator → institution → campus) |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | MIT | 119 | a classroom-task skills pack (`topic:gaokao`) |
+| [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | Apache-2.0 | 110 | 🟢 **AIGC detection + parent-child communication** — both firsts here |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | MIT | 75 | grades 1–9 **RAG** tutor with a named local index (LanceDB) |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) *(carried)* | MIT | 293 | Socratic sequencing, Chinese-first |
+
+🔴 **None of these nine came from an APAC-targeted search leg.** They came from reading this base's
+own trending history. 🔵 That settles `p517`'s question in the other direction: the APAC supply nil
+was never an English-language artefact *or* an absence — it was an **unshelved backlog**.
+🔴 **The APAC licensing problem is real and separate**:
+[`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis) —
+Indonesian, **Kurikulum Merdeka**-aligned, 115★, mainline pushed **today** — carries **no grant at
+all**, which is `p517`'s *8 of 12* finding holding on a live, active address. **The APAC constraint
+is permission, not supply.**
+
+### LATAM
+
+🔵 **Demand side carried**: the UNESCO IESALC / UNU-IAS higher-education survey (200 institutions,
+19 countries), CEPAL's `ILIA`, Chile as readiness leader, Brazil's Marco Legal, and the structural
+warning that regional policy is *a patchwork of pilots dropped with each administration*. 🔴 None of
+it is new and none of it was re-attested at a primary source this pass.
+
+🟢 **Supply placed here this pass:**
+[`DanielDev87/virtual-center-app`](https://github.com/DanielDev87/virtual-center-app) (A-DDIE) —
+**Apache-2.0** (`11 358` B, `sha256₁₆ 93f0abad889135ae`), **39★**, 16 forks, Spanish-first, mainline
+**`2026-10-27`**. 🟢 **This base's third LATAM-placed row** (with `studorama`, MIT, 111★), and the
+**only asset on any shelf aimed at the production side of education** — integrated management and
+virtual collaboration for educational production and media centres. 🔵 University media units,
+distance-education production houses and public broadcasters are a real LATAM buyer this base could
+not previously serve. 🔴 Single maintainer, Blade/Laravel: **fork-and-own**.
+
+🔴 **The LATAM licensing picture is unchanged and it is the binding constraint, not supply volume.**
+`JustinoLM/STI-matematicas` (Panama, UTP, validated with 74 students in a public school) serves
+**no licence** and its README's `## Licencia` section reads *"Todos los derechos reservados"*;
+`Jeanikt/tutor-ai-agent` is MIT but **0★ / 3 commits**. 🟢 **The honest LATAM proposition remains:
+permissive supply from elsewhere, localised here** — `universal-examprep-skill`'s
+small-cheap-model claim and `Studorama`'s pt-BR localisation are the two concrete levers, and
+`virtual-center-app` is now the one row that is both permissive **and** regional.
+
 ## 🆕 `p524` — `2026-10-29` — **🔴 `Gap 521-D` IS NOW PROVEN UNCLOSABLE FROM THIS ENVIRONMENT, NOT MERELY UNCLOSED: six EU primary hosts were probed on **two independent channels** (shell DNS+`curl`, and `WebFetch`) and every one fails to resolve. 🟢 So the Annex III `2027-12-02` date is as verified as this session can make it — three passes converging on secondary reporting — and the gap note should read *"requires network allowlisting"*, because *"not yet read"* has already cost four passes of retries. 🟢 APAC gains two named instruments this base did not hold: Singapore's **`AI@NIE`** five-year NIE programme and the **`NCF-SE 2023`** framework India's Grade-3 mandate is aligned to. 🔴 Japan stays a declared gap: guidelines and pilot schools, no confirmed 2026 national curriculum requirement.**
 
 ### 🔴 The gap, measured on both channels
@@ -179,7 +314,7 @@ host that does not resolve from this session (`www.statista.com`, `www.grandview
 `www.precedenceresearch.com` — and `curl` to any non-GitHub host returns `CONNECT tunnel failed,
 403`, re-measured this pass on `www.oecd.org` and `arxiv.org`). **Never grade these as read.**
 
-## Opportunities by region
+## Opportunities by region — `p523`
 
 ### North America
 
@@ -378,7 +513,7 @@ code to the byte and cannot verify law to the byte, and that asymmetry is struct
 oversight.** Every policy row stays `reported`. **Do not quote a regulation number to a client
 from this base alone — quote the obligation and date, and have Legal pull the OJ text.**
 
-## Opportunities by region
+## Opportunities by region — `p522`
 
 ### North America
 
