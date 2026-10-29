@@ -4,6 +4,184 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p531` — `2026-10-29` — **🔴 TWO OF THE FOUR MONOTONICITY VIOLATIONS `530-C` ASKED ME TO ALLOWLIST WERE THE INSTRUMENT, NOT THE HISTORY — AND FIXING THEM SHOWED THAT **212 `##` SECTIONS, 15.8% OF THE CORPUS, CARRIED THE WRONG PASS NUMBER**. 🟢 `Gap 530-A` CLOSES WITH ALL 349 GRANTS READ FIRST-HAND: **203 permissive (58.2%)**, and the yield is a coherent nine-repo layer the live corpus had zero rows for. 🟢 `530-B` CLOSES ON A SCOPE RULE: the fork hole is **89 addresses** and **exactly zero** at any star floor. 🟢 `528-C` CLOSES WITH A RETRIEVAL, FOUR TIMES OVER. 🟢 `530-C` CLOSES WITH A GATE THAT REFUTED ITS OWN FIRST FIX. 🔴 THREE REGISTERED (`531-A`…`531-C`).**
+
+### 🔴 The finding: the instrument was reading 15.8% of its own corpus into the wrong pass
+
+`Gap 530-C` asked for a standing gate asserting *"section pass numbers descend
+within each history file, with the 4 known violations allowlisted"*. 🔴 **An
+allowlist would have made two defects permanent.** Taking the four one at a
+time, against the real files:
+
+| `530-C`'s "known violation" | Verdict |
+|---|---|
+| `intel/open-gaps.md:17901` — `## 🆕 Actions opened by p133` | 🔴 **Instrument.** A **roll-up** heading counted as a pass section. `NOT_A_SECTION` excluded `gaps opened` and `Gaps CLOSED` **by name** and missed this dialect. |
+| `repos/trending.md:16626` — `## 2026-10-17 (pass 277) — … refuted `p276`'s own expected result` | 🔴 **Instrument.** `\bPass\s+` was **case-sensitive**, so the lower-case `pass 277` was invisible and the first token matched was the `` `p276` `` **cited in the same title**. |
+| `agents/trending.md:45140` — `pase 126` | 🟢 **Genuine** — it sits below a `## History (earlier passes, preserved verbatim)` divider. |
+| `repos/trending.md:36223` — `pase 126` | 🟢 **Genuine** — same rewrite boundary. |
+
+🔴 **The second one is not an edge case, and this is the measurement that
+matters.** The dialects `## … (pass N) …` and `## Live gaps declared by pass N`
+account for **234 `##` headings** across the three history files, and the `p530`
+matcher matched **none of them**. 🔵 **A heading the matcher does not recognise
+does not reset the section pointer**, so every address first described under one
+was attributed to **the newer pass above it**. Counting them correctly takes the
+corpus from **1 128 sections to 1 340**:
+
+| | Count |
+|---|---|
+| `##` sections the `p530` matcher counted | 1 128 |
+| `##` sections after `p531`'s fix | 🔴 **1 340** |
+| → **sections that carried the wrong pass** | 🔴 **212 — 15.8%** |
+| Ascending violations before the fix | 4 |
+| Ascending violations after | 🟢 **2**, both genuine rewrite boundaries |
+
+🔵 **Why `first_seen_pass` is the column that was wrong, and why that matters
+beyond tidiness.** This base's whole promotion-debt argument is *"we described
+this address N passes ago and never filed it"*. That claim is computed from
+`first_seen_pass` and `mentions`. 🔴 **Both were being read off a section index
+in which one heading in six belonged to the wrong pass** — so every "unfiled for
+19 passes" figure this base has published is approximately right and precisely
+wrong. 🟡 **The direction of the error is knowable: a dropped heading merges an
+older section into the newer one above it, so `first_seen_pass` was biased
+NEWER and the debt was UNDER-stated.** The corrected ledger is `531-A`.
+
+### 🟢 …and the gate refuted my own first fix before it shipped
+
+🔴 **The obvious repair is a blanket `re.I` on the dialect regex. It is wrong,
+and `C1` caught it on the first run.** Measured that way:
+
+| | `p530` | blanket `re.I` | `p531`'s narrowed fix |
+|---|---|---|---|
+| Sections counted | 1 128 | 🔴 **1 375** | 🟢 **1 340** |
+| Ascending violations | 4 | 🔴 **13** | 🟢 **2** |
+| Nonsense in the violation list | — | 🔴 ascents to `p795`, `p865`, `p1024` | none |
+
+🔵 **The cause is a naming convention nobody had written down: this base writes
+PASSES lower-case (`p530`) and PROPOSALS upper-case (`P553`). Two namespaces,
+separated by the case of one letter.** `re.I` merged them, and 247 proposal
+headings became "passes". 🟢 **So the fold is legal on the *word* forms
+(`Pass`/`pass`, `Pase`/`pase`) and illegal on the bare `pNNN` token** — which is
+the fix that shipped, in both
+[`../ingest/address-ledger.py`](../ingest/address-ledger.py) and the gate.
+
+🔴 **And it refuted the gate's own design, on its third run.** `C1`'s allowlist
+was first keyed `(file, line, prev, this)` — and it failed on **`p531`'s own
+write to this file**. These files are **append-only at the top**, so every pass
+shifts every line below its new section: a line-keyed allowlist would go stale
+**once per pass, for ever**. 🔵 A gate that cries wolf on every run teaches the
+next pass to ignore it, which is worse than no gate. The key is now the **pass
+pair at the rewrite boundary**, which is the invariant, and the unit suite
+refuses an allowlist entry that looks like a line number.
+
+🔵 **The generalisable half: a gate written to confirm a fix is worth less than
+a gate written to measure one.** `C1`'s value this pass was not that it passed;
+it was that it failed **three times** — on two proposed repairs and on the
+gate's own key — before it passed.
+
+### 🟢 `Gap 530-A` CLOSES — all 349 grants read first-hand
+
+**Method.** `api.github.com` and `github.com` both return **403** through this
+session's proxy; `raw.githubusercontent.com` returns **200**, and
+`…/{owner}/{repo}/HEAD/{name}` resolves the default branch without a per-repo
+lookup. So the grant was read from **the licence file's own title block** for
+every one of the 349 addresses in
+[`../evidence/archive-only-addresses.tsv`](../evidence/archive-only-addresses.tsv),
+over 11 filename variants, 14-way parallel. 🟢 **349/349 probed, no sampling.**
+
+| Grant, read from the title block | Count | Share |
+|---|---|---|
+| 🟢 MIT | **140** | 40.1% |
+| 🟢 Apache-2.0 | 46 | 13.2% |
+| 🟢 BSD | 16 | 4.6% |
+| 🟢 Unlicense | 1 | 0.3% |
+| **→ permissive, the promotion queue** | 🟢 **203** | **58.2%** |
+| 🔴 GPL | 29 | 8.3% |
+| 🔴 AGPL | 9 | 2.6% |
+| 🔴 LGPL | 2 | 0.6% |
+| 🟡 CC-BY family | 10 | 2.9% |
+| **→ closed on grant** | **50** | **14.3%** |
+| 🔴 no licence file on any of 11 variants | 85 | 24.4% |
+| 🔴 licence file present, title unrecognised | 11 | 3.2% |
+
+🔵 **Then the 203 were measured against the API** — stars, forks, `pushed_at`,
+`archived`, `fork` — in **28 batched `repo:` calls with `fork:true`**. The
+promotions are on [`top.md`](top.md),
+[`../repos/foundations.md`](../repos/foundations.md) and
+[`../verticals/solutions.md`](../verticals/solutions.md); the shape of the whole
+set is trend **16** in [`../intel/trends.md`](../intel/trends.md).
+
+🟢 **A second, 7× larger measurement of `529-B`'s API-absence rate.** `529-B`
+measured 1 address in 29 not returned by the API (**3.4%**) over two calls.
+Over 203 addresses in 28 calls: **1 — 0.49%**.
+[`bq-educacion/editor`](https://github.com/bq-educacion/editor) is **MIT**,
+reachable on `raw` (README, `LICENSE` and `package.json` all 200), and absent
+from a `repo:`-qualified census with `fork:true`. 🔵 **The rate is real and it is
+ten times lower than the first sample suggested** — so an API absence is a
+finding to check on `raw`, not a reason to distrust a census.
+
+### 🟢 Four agent rows promoted — every one already owned
+
+| Row | Grant (title block) | Stars | Passes described, never filed |
+|---|---|---|---|
+| [`THU-MAIC/dsh-openmaic`](https://github.com/THU-MAIC/dsh-openmaic) | 🟢 MIT | **111** | — (archive-drop set) |
+| [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 MIT | **60** | 🔴 **20** |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 MIT | 10 | 🔴 **25** |
+| [`mackt/pi-language-tutor`](https://github.com/mackt/pi-language-tutor) | 🟢 MIT | **82** | — (archive-drop set) |
+
+🔴 **`brightspace-mcp-server` is the sharpest instance.** Known since `p69`,
+described in **20 separate passes**, and the shelf went on carrying a Canvas
+bridge and a Moodle *gap note* while saying nothing about **the third major
+LMS**. Pattern `P565` is the composition.
+
+### 🔴 Not shelved, and why — stated so the absence is legible
+
+- 🔴 **[`kaushal0494/AITutor-EvalKit`](https://github.com/kaushal0494/AITutor-EvalKit)
+  — the ledger records MIT; the repository carries no licence file on any of 11
+  variants.** A pedagogical-evaluation framework for LLM tutors in mathematics
+  is exactly what this base's `P552` wants, and **shelf rule 8** says the title
+  block decides. 🔵 Fifth recorded instance of a recorded grant the file does
+  not carry.
+- 🔴 **[`X-RayLuan/Openclaw-Study-Coach`](https://github.com/X-RayLuan/Openclaw-Study-Coach)
+  is archived by its owner** (9★, K-12 tutoring skill pack with a parent
+  playbook). Read it; do not ship it.
+- 🟡 **[`Abelo9996/LearnOS`](https://github.com/Abelo9996/LearnOS)** — MIT, *"the
+  open-source AI university"*, pushed 2026-10-24, **9★**. The right product
+  shape and too early to shelve; carried here so a successor can re-measure.
+- 🟡 **[`omerfarooq223/AutoGrader-Agent`](https://github.com/omerfarooq223/AutoGrader-Agent)**
+  — MIT, 3★, grades a ZIP of assignments and emits an Excel report. Thin, but it
+  is the only *end-to-end* grading agent in the drop set.
+
+### 🔵 Declared non-findings — stated so silence is not read as coverage
+
+- 🔴 **Generic web search produced zero shelf-grade findings for the THIRD
+  consecutive pass.** All four mandated global legs ran. The only lead with no
+  prior trace in this base was *"Ask Tim"* and *"Grady"* — an MIT/Open edX
+  educator working-group page describing a student-support tutor and an
+  AI-assisted grading tool. 🔴 **Unverifiable from this session:**
+  `openedx.atlassian.net` does **not resolve** through the network policy, and a
+  GitHub search for either name returns nothing attributable. 🔵 Carried as a
+  lead, not a finding, and the blocked host is named so a successor knows what
+  to ask for.
+- 🔴 **The four regional *policy* legs returned no new attributable material**,
+  for the third pass in a row — and **the EMEA leg returned nothing
+  education-sector at all**, only enterprise-AI material (a CompTIA 2026 "EMEA"
+  outlook whose survey base is **US-only, 1 012 respondents**, and a Workday
+  study from its **2023** edition). 🟢 What *is* new is a **placed supply
+  census** per region, in [`../intel/market.md`](../intel/market.md).
+- 🔴 **One aggregator mis-stated a licence this base has read first-hand, again.**
+  A 2026 statistics roundup and two market-research summaries were re-read; no
+  new figure survived. 🔵 `p530` recorded the fourth instance of an aggregator
+  asserting a grant a repository does not carry; this pass found the fifth
+  **inside this base's own ledger** (`AITutor-EvalKit`, above). The failure mode
+  is not external.
+- 🟡 **`dsh-openmaic`'s region is stated, not inferred** (THU-MAIC is Tsinghua's
+  MAIC group, named in the org). 🔴 **`canvas-lms-mcp` and `pi-language-tutor`
+  carry no country signal at all** and are marked unstated rather than guessed —
+  an author's handle is not a country.
+
+---
+
 ## 🆕 `p530` — `2026-10-29` — **🔴 THIS BASE DECLARED "ZERO PERMISSIVE SIS" ONE PASS AGO AND THE COUNTER-EXAMPLE HAS BEEN IN ITS OWN HISTORY SINCE `p108`: `academico-sis/academico`, **MIT**, **409★**, pushed yesterday. 🟢 `Gap 529-A` CLOSES — the address ledger exists, and its first run paid for itself by falsifying a published non-finding. 🟢 `Gap 529-B` CLOSES WITH A MECHANISM, NOT A RULE: the API's "absences" are FORKS, and `fork:true` returns every one of them. 🟢 `Gap 528-D` CLOSES on the reverse direction. 🔴 THREE REGISTERED (`530-A`…`530-C`).**
 
 ### 🔴 The finding: the base's own history contained the refutation of its own headline

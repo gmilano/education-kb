@@ -4,6 +4,180 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p531` — `2026-10-29` — **🟢 `530-A` CLOSES with all 349 grants read first-hand (203 permissive) and a nine-repo layer promoted. 🟢 `530-B` CLOSES on a scope rule: the fork hole is 89 and zero at any star floor. 🟢 `530-C` CLOSES with a standing gate that refuted two of the four violations it was asked to allowlist AND its own first fix. 🟢 `528-C` CLOSES with a retrieval, four times over. 🔴 THREE REGISTERED (`531-A`…`531-C`).**
+
+### 🟢 `Gap 530-C` — CLOSED, and it closed by contradicting its own brief
+
+**Asked:** a gate asserting section-pass monotonicity *"with the 4 known
+violations allowlisted"*, plus ledger fixtures and a count ratchet; then run it.
+
+**Built:** [`../compose/code/p531-ledger-gate/`](../compose/code/p531-ledger-gate/)
+— `ledger_gate.py` (6 controls over the real files) and `test_ledger_gate.py`
+(19 unit controls over synthetic headings), wired into `make hooks` as
+`gate-ledger`.
+
+🔴 **Two of the four "known violations" were the instrument.** One was a roll-up
+heading (`## Actions opened by p133`) counted as a pass section; one was a
+case-sensitive `\bPass\s+` that missed a lower-case `pass 277` and attributed
+the section to a `` `p276` `` **cited in the same title**. Both are **fixed, not
+allowlisted** — an allowlist entry would have made them permanent. 🔴 **The
+second defect's blast radius: `## … (pass N) …` and `## Live gaps declared by
+pass N` are 234 `##` headings and the matcher saw none of them, so 212
+sections — 15.8% — carried the wrong pass.** Corrected allowlist: **2**, both
+genuine rewrite boundaries.
+
+🟢 **And `C1` refuted the obvious fix before it shipped.** A blanket `re.I` took
+the section count to 1 375 and the violation set to 13, with "ascents" to
+`p795`/`p865`/`p1024`. 🔵 **This base writes passes lower-case (`p530`) and
+proposals upper-case (`P553`): the case of one letter separates two namespaces,
+and nothing had written that down.** The fold is therefore legal on the word
+forms only.
+
+🟡 **Attestation, stated exactly, because the claim is the point of the gap.**
+`ledger_gate.py` was run against the real files — **PASS, 6/6** — and
+`test_ledger_gate.py` — **PASS, 19/19**. 🔴 **Neither was run through
+`make hooks`:** this session could not execute repo-resident code, so the recipe
+wiring is written and **unexercised**. The nine-pass `make hooks` drought is
+therefore *not* broken by this pass, and saying otherwise would be the exact
+failure `530-C` exists to prevent.
+
+### 🟢 `Gap 530-A` — CLOSED on all three asks
+
+1. 🟢 **Triage by grant: done, 349/349, read from each licence file's own title
+   block over `raw.githubusercontent.com`** (`api.github.com` and `github.com`
+   are both 403 here). **203 permissive (58.2%)** · 50 closed on copyleft · 96
+   unresolved. The 203 were then measured against the API in 28 batched `repo:`
+   calls **with `fork:true`**. 🔵 **The yield is not uniform and that is the
+   result:** of the 38 above 100★, **21 are general-purpose AI/infrastructure
+   that a curated education file is right to drop**, and 17 are education
+   software — the largest coherent cluster being the **JupyterHub deployment
+   family**, 9 live repos, 2 309★, BSD-3-Clause throughout, with **zero rows in
+   the live corpus**. **29** distinct addresses filed (23 foundations · 4 agents ·
+   2 further platforms). Census:
+   [`../evidence/archive-grant-triage.2026-10-29-p531.tsv`](../evidence/archive-grant-triage.2026-10-29-p531.tsv).
+2. 🟢 **`scancode-toolkit` evaluated against `528-C`: it resolves direct
+   dependency grants over manifest and lockfile formats, by its own README.**
+   `528-C` closes. 🔴 **And three more of the same class were in the same drop
+   set** — `ort` (2 109★), `syft` (9 792★), `cyclonedx-cli` (552★). 🟡 `scancode`'s
+   datasets are **CC-BY-4.0** while its engine is Apache-2.0.
+3. 🟢 **The `head`/`tail`/`wc -l` grep over every recipe: done, and it bounds the
+   class.** **5** piped lines, **2 defects**, **3 benign** (`ls … | wc -l` file
+   counts). 🔴 **The defect is worse than truncation.** `SHELL := /bin/bash`
+   carries no `-o pipefail`, so make takes the **last** command's status: a
+   census that died reported success — and one of the two was inside `hooks`
+   (`gate-ladder-case`'s second line, `… ladder_case.py --root . | tail -2`).
+   The other (`index`'s `… carried_index.py . | head -3`) is p530's
+   `BrokenPipeError` case exactly. Both rewritten to capture, propagate status,
+   then truncate for the reader.
+
+### 🟢 `Gap 530-B` — CLOSED on a scope rule
+
+**Measured.** `moodle mcp in:name,description`: **223** without `fork:true`,
+**312** with — **+89, 28.5% of the forked total**. Unscoped: 251 → 340, the same
++89. 🟢 **And at `stars:>5`, 14 → 14. At the SIS censuses' `stars:>40`, 4 → 4.**
+
+🔵 **Rule 13.** `fork:true` belongs on a **raw field size** and nowhere else: a
+field size without it is a floor that reads like a count, and a starred census
+with it is unchanged. 🔴 So `p529`'s `total_count: 222` was a floor — and every
+decision taken from that field was taken on a starred subset, where it never
+mattered.
+
+### 🔴 `Gap 531-A` — THE LEDGER'S OWN NUMBERS WERE COMPUTED ON A BROKEN SECTION INDEX, AND THE ERROR HAS A KNOWN DIRECTION
+
+**Measured.** 212 of 1 340 `##` sections (**15.8%**) were attributed to the wrong
+pass by the `p530` matcher, because two heading dialects were invisible to it.
+`first_seen_pass` and `mentions` are computed from that index, and **every
+promotion-debt figure this base has published** — *"unfiled for 19 passes"*,
+*"described in ≥5 distinct passes"*, `p530`'s **97** and **3 098** — rests on
+them.
+
+🟡 **The direction is knowable, which makes this fixable rather than merely
+wrong.** A dropped heading merges an older section into the newer one above it,
+so `first_seen_pass` was biased **newer** and the debt **under-stated**. 🔴 The
+matcher is fixed in [`../ingest/address-ledger.py`](../ingest/address-ledger.py)
+but **`evidence/address-ledger.tsv` is still `p530`'s run**: this session could
+not execute it.
+
+**Asked of `p532`:**
+1. 🔴 **Re-run `ingest/address-ledger.py` and publish the delta** — how many
+   addresses change `first_seen_pass`, and by how many passes. 🔵 Expect the
+   debt to grow; if it shrinks, the fix is wrong and that is the more
+   interesting result.
+2. 🟢 **Re-run `--archives` too.** The 349 figure was measured on the same broken
+   index; the archive side has the same bias.
+3. 🟡 **Then re-bless `gate-ledger`'s ratchet** (`--bless-ratchet`) and say in
+   one line why the count moved, which is what `C6` exists to force.
+
+### 🔴 `Gap 531-B` — A PROMOTION SWEEP THAT READS A *LAYER* PROMOTES WHAT IT HAPPENS TO LOOK AT
+
+**Measured.** `p530` filed twelve standards repos as "the integration layer" and
+left [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0, 373★,
+**28 passes** unfiled) and
+[`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (MIT, 138★,
+**27 passes**) unfiled — **the #1 and #2 most-described unfiled permissive
+addresses in the entire live corpus**, in the very layer it was filing. 🔵 It
+filed the PHP LTI library and missed the Node and Python ones.
+
+🔴 **The cause is not carelessness, it is input order.** A sweep that starts from
+a *subject* ("the standards layer") sees what its query surfaces. A sweep that
+starts from the *ranking* cannot miss the top of it.
+
+**Asked of `p532`:** make the ranking the input. A `make promotion-queue` target
+that prints the top N unfiled-permissive addresses by distinct-pass count,
+recomputed against the **live** files (the committed `filed_on` column is the
+previous pass's opening balance — `p531` had to recompute it by hand, which is
+the same one-off problem `529-A` named). 🟢 Then a pass's promotion section is
+answerable: *"the top 10 of the queue, and why each was filed or refused."*
+
+### 🔴 `Gap 531-C` — THE ARCHIVE CHANNEL HAS NO FILTER, SO ITS COST IS PAID TWICE
+
+**Measured.** Of the 38 permissive archive-only addresses above 100★, **21 are
+general-purpose AI/infrastructure** (`vllm`, `ragflow`, `mem0`, `litellm`,
+`llama_index`, `dspy`, `qdrant`, `jitsi-meet`, `appsmith`, …). Census:
+[`../evidence/archive-drop-top100.2026-10-29-p531.tsv`](../evidence/archive-drop-top100.2026-10-29-p531.tsv). 🟢 **Dropping
+those was correct** — they are not education software and a curated education
+file should not carry them. 🔴 **But nothing in the process distinguished them
+from the JupyterHub family**, and so the drop channel costs a full re-triage
+every time it is consulted.
+
+**Asked of `p532`:** a **subject** column on the archive-drop report, so the
+channel self-filters. 🔵 The cheap version is already available and needs no
+model: the API returns `topics` for every address in the batched census, and an
+education address in this corpus almost always carries one of
+`education`/`edtech`/`lms`/`lti`/`learning`/`k12`/`student`/`teaching`. Measure
+its precision and recall against `p531`'s 349-row hand triage, which is the
+labelled set, and publish both numbers. 🔴 **If recall is below 90%, say so and
+keep the channel manual** — a filter that silently drops `ltiauthenticator`
+(topics: `jupyterhub`, `lms`, `lti`) would be `529-A` again, in a new costume.
+
+### 🔵 Declared non-findings — stated so silence is not read as coverage
+
+- 🔴 **Generic web search: zero shelf-grade findings, third consecutive pass.**
+  All four mandated global legs ran. One lead with no prior trace here —
+  *"Ask Tim"* and *"Grady"*, from an MIT/Open edX educator working-group page —
+  is **unverifiable from this session**: `openedx.atlassian.net` does not resolve
+  through the network policy, and neither name is attributable on GitHub.
+  🔵 Carried as a lead; the blocked host is named so a successor can ask for it.
+- 🔴 **The EMEA demand leg is a measured blank.** Queried for EMEA education
+  adoption, regulation and players, search returned enterprise-AI material: a
+  CompTIA 2026 "EMEA" outlook whose survey base is **US-only (1 012
+  respondents)** and a Workday study from its **2023** edition. 🟢 EMEA's
+  *supply* leg, by contrast, is the strongest of any region this pass — Artemis
+  (MIT, 823★, TU München), abstimmbar (Osnabrück), edu-sharing, FUN's `arnold`.
+- 🔴 **`kaushal0494/AITutor-EvalKit` read and NOT shelved.** The ledger records
+  **MIT**; the repository carries **no licence file** on any of 11 variants.
+  🔵 Fifth instance of a recorded grant a repository does not carry — and the
+  first one this base recorded **against itself**.
+- 🟡 **`menthorlabs/menthor` (Apache-2.0, 582★, Brazil) and
+  `X-RayLuan/Openclaw-Study-Coach` (MIT, 9★) are archived by their owners.**
+  Named because the star counts invite a reader to reach for them.
+- 🟢 **The API-absence rate, re-measured 7× larger: 1 of 203 (0.49%)**, against
+  `529-B`'s 1 of 29 (3.4%). [`bq-educacion/editor`](https://github.com/bq-educacion/editor)
+  is MIT and reachable on `raw` while absent from a `repo:` census. 🔵 An API
+  absence is a `raw` probe, not a reason to distrust a census.
+
+---
+
 ## 🆕 `p530` — `2026-10-29` — **🟢 `529-A` CLOSES: the index exists, and its first run surfaced 97 unused permissive components and corrected a published non-finding. 🟢 `529-B` CLOSES ON A MECHANISM — the API's "absences" are FORKS. 🟢 `528-D` CLOSES on the reverse direction. 🟡 `529-C` CARRIED and RE-SCOPED. 🔴 `529-D` CONFIRMED OPEN, fourth pass. 🔴 THREE REGISTERED (`530-A`…`530-C`).**
 
 ### 🟢 Gate posture — unchanged and stated

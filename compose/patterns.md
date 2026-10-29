@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Compose Patterns — Education
 
-**Pass `p530` · 2026-10-29.** **Fifteen** recipes. Every component named below was read
+**Pass `p531` · 2026-10-29.** **Nineteen** recipes. Every component named below was read
 from its repository page this pass, and **every licence was read from the licence
 file's own title block** (`raw.githubusercontent.com` is reachable while
 `github.com` returns HTTP 403 through the session proxy). No recipe uses a
@@ -601,6 +601,147 @@ because NA institutions buy integration. So the same artefact is a *cost
 reduction* in LATAM/APAC — a day instead of a semester, with governance attached
 — and a *product* in NA. **10–12 weeks for the core + 1 week per tenant.**
 🔴 Gate with `P551` + `P556` before any row above enters a deliverable.
+
+## 🆕 P562 — The computational course, served from inside the LMS (Global; EMEA/North America first)
+
+**When.** The client teaches anything where the student writes code or runs a
+notebook — data science, statistics, engineering, bioinformatics — and the ask is
+"put AI in the course". 🔴 **The pedagogical part is not the hard part; serving
+500 students a reproducible environment, authenticated out of the LMS, is.** This
+pattern is entirely permissive and almost entirely assembly.
+
+**The stack, bottom to top — every piece verified this pass.**
+
+| Layer | Repo | Licence | Role |
+|---|---|---|---|
+| Compute | [jupyterhub/kubespawner](https://github.com/jupyterhub/kubespawner) | BSD-3-Clause · 611★ | One notebook pod per student, with per-student CPU/RAM limits as config |
+| …or, on a cluster | [jupyterhub/batchspawner](https://github.com/jupyterhub/batchspawner) | BSD-3-Clause · 207★ | Spawn into Slurm/PBS/LSF when the client's compute is a research queue |
+| …or, for a pilot | [jupyterhub/dockerspawner](https://github.com/jupyterhub/dockerspawner) | BSD-3-Clause · 543★ | One host, Docker, one afternoon |
+| Identity | [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | BSD-3-Clause · 73★ | 🔴 **The load-bearing row.** LTI launch from Moodle/Canvas/Brightspace — no second login |
+| …or SSO / directory | [jupyterhub/oauthenticator](https://github.com/jupyterhub/oauthenticator) · [ldapauthenticator](https://github.com/jupyterhub/ldapauthenticator) | BSD-3-Clause · 443★ / 214★ | OIDC where the tenant has SSO; LDAP/AD where it has a directory, which in EMEA public-sector estates it does |
+| Assignment lifecycle | [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | BSD-3-Clause · 1 370★ | Release, collect, autograde, manual-grade, return |
+| …or a full platform | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** · 823★ | Use instead of nbgrader when exercises span programming, modelling and text, and an exam mode is required |
+| The agent | any shelf row from [`../agents/top.md`](../agents/top.md) | MIT/Apache-2.0 | Runs **inside the student's own kernel**, so it reads the code they wrote rather than a paraphrase of it |
+
+**Wiring.**
+1. Deploy the hub with `kubespawner` (or `batchspawner` on HPC). Pin the image.
+2. Register the hub as an **LTI 1.3 tool** in the LMS and configure
+   `ltiauthenticator`. 🟢 This is the step that makes it a course rather than a
+   demo: the student clicks the assignment in Moodle and lands in their own
+   server, already identified.
+3. Install `nbgrader` for release/collect/autograde. Keep the autograder
+   deterministic — the model never decides the mark.
+4. Attach the agent in the kernel with a **read-only** view of the student's
+   notebook and an explicit refusal to emit the solution cell. The agent's
+   output is a hint and a next step; `nbgrader` produces the grade.
+5. Emit xAPI statements to an LRS ([yetanalytics/lrsql](https://github.com/yetanalytics/lrsql),
+   Apache-2.0) so engagement and hint-use are measurable rather than anecdotal.
+
+🔴 **Two traps, both measured.** The official JupyterHub deployment tutorial
+([`jupyterhub-tutorial`](https://github.com/jupyterhub/jupyterhub-tutorial),
+202★) is **archived by its owner** — write your own runbook and do not cite it
+to the client. And [`wrapspawner`](https://github.com/jupyterhub/wrapspawner)
+(65★), which is what you reach for to let students choose a profile, was last
+pushed **2025-08-16**: pin it.
+
+**Why this is the pattern and not a shopping list.** Every row is
+BSD-3-Clause or MIT, so the deliverable can be proprietary; the only copyleft in
+the picture is the LMS you are *attaching to*, and LTI is a protocol boundary,
+not a linkage. 🟢 **The licence question answers itself.**
+
+---
+
+## 🆕 P563 — Adaptive assessment a ministry would accept (LATAM-led, globally applicable)
+
+**When.** The client wants "personalised testing" and the buyer is a ministry, a
+board or a university registrar — i.e. somebody who will ask **how the score was
+derived**. 🔴 An LLM choosing the next question is not an adaptive test; it is an
+unaudited one.
+
+**The stack.**
+
+| Layer | Repo | Licence | Role |
+|---|---|---|---|
+| Psychometrics | [douglasrizzo/catsim](https://github.com/douglasrizzo/catsim) | **BSD-3-Clause** · 153★ | IRT item banks, item selection, ability estimation, stopping rules — **the audited core** |
+| Item interchange | [LongsightGroup/qti3](https://github.com/LongsightGroup/qti3) | **MIT** · 6★ | QTI 3 items, so the bank outlives the vendor |
+| Item *generation* | a shelf agent + the client's curriculum | MIT/Apache-2.0 | Drafts candidate items **into the bank**, never into the exam |
+| Curriculum anchor | [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) (Brazil, MIT) · the client's own standard elsewhere | MIT | Each item carries the objective it tests, with provenance |
+| Retention | [open-spaced-repetition/fsrs.js](https://github.com/open-spaced-repetition/fsrs.js) | **MIT** · 180★ | Schedules the *review*, which is a different job from scoring |
+| Records | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | Apache-2.0 · 144★ | xAPI statements per response |
+
+**Wiring.** The agent writes items; a human calibrates them; `catsim` selects and
+scores; `fsrs.js` schedules the revisit. 🔴 **The line that makes it defensible:
+the model is upstream of the item bank and nowhere near the score.** Every
+delivered item has IRT parameters estimated from real responses, and the
+ability estimate comes from `catsim`, which is 153★ of published method rather
+than a prompt.
+
+🟢 **Why LATAM-led.** `catsim`'s author is in Brazil and
+[`Dramoscuello/simic`](https://github.com/Dramoscuello/simic) already does the
+ICFES Saber 11 shape in Colombia; `bncc-dados` carries **1 721** BNCC objectives
+with per-record provenance. 🔵 The region has the exam culture, the standards as
+open data and now the psychometrics — which is a stronger starting position than
+any other region holds for this pattern.
+
+---
+
+## 🆕 P564 — The transitive-grant answer, retrieved rather than built (run inside `P551`)
+
+**When.** Always, before the deliverable ships — and specifically when `P551`'s
+shelf-level licence check has passed and somebody asks the real question:
+**what grant does this thing carry once its dependencies are counted?**
+
+🔴 **`Gap 528-C` scoped a dependency-grant enumerator as a build for four
+passes. It did not need building.**
+
+| Tool | Licence | Use it when |
+|---|---|---|
+| [aboutcode-org/scancode-toolkit](https://github.com/aboutcode-org/scancode-toolkit) | **Apache-2.0** (engine) · 🟡 **CC-BY-4.0** (licence datasets) | You need the **evidence**: it detects licences, copyrights, package manifests and **direct dependencies**, and processes manifest and lockfile formats to Package URLs. This is the artefact you hand a client's legal team. |
+| [oss-review-toolkit/ort](https://github.com/oss-review-toolkit/ort) | **Apache-2.0** · 2 109★ | You need a **gate in CI**: the *Analyzer* resolves dependencies across package managers, the *Evaluator* runs policy-as-code, and it emits SPDX/CycloneDX plus attribution documents. |
+| [anchore/syft](https://github.com/anchore/syft) | **Apache-2.0** · 9 792★ | You need the **deployed artefact's** bill of materials, from the image rather than the source tree. |
+
+**Wiring.** `ort analyze` → `ort evaluate` with a policy that fails on AGPL-3.0
+reaching a shipped binary → `scancode` over the same tree for the evidence pack
+→ `syft` over the built image, so the claim covers what actually runs.
+
+🔴 **Read `scancode`'s dual grant before redistributing.** The engine is
+Apache-2.0; the reference licence data is **CC-BY-4.0**, so shipping the rule set
+inside a product carries attribution duties. 🔵 **That is exactly the
+"granted, but not under a code licence" band this base opened at `p528`, and it
+appears here in the tool you would use to check for it.**
+
+---
+
+## 🆕 P565 — Brightspace, the third LMS (North America first)
+
+**When.** The client runs **D2L Brightspace** — which, in North American higher
+education, a large share of them do, and which this base had no agent row for
+until this pass.
+
+**The stack.** [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+(**MIT, 60★**, npm-published, works against any tenant) for grades, due dates,
+assignments, announcements, rosters, syllabus and content · a shelf agent from
+[`../agents/top.md`](../agents/top.md) as the reasoning half ·
+[`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (**Apache-2.0, 373★**) if
+the deliverable must also appear *inside* the LMS as a tool rather than only
+beside it · [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) for the
+record.
+
+**Wiring.** MCP for the read path and the teacher-facing write path (grades,
+comments); LTI 1.3 via `ltijs` for placement and launch; AGS for grade passback
+when the tool owns the activity. 🔴 **Do not fork Brightspace** — it is not open
+source at all, which makes the API and LTI the *only* boundaries, and therefore
+makes this the cleanest of the three LMS patterns rather than the hardest.
+
+🔵 **Parity note, stated because it is the reason this pattern exists:** the
+shelf now carries Canvas ([`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp),
+MIT, 308★; [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp),
+MIT, for the **write** half) and Brightspace, and for Moodle still carries a
+**build** (`P553`, `P558`) rather than a row. 🔴 **Moodle — the largest LMS in
+the world — remains the one with no credible off-the-shelf bridge**, and that
+has now been true across four passes.
+
+---
 
 ## Pattern selection
 

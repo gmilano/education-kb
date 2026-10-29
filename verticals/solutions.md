@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p530` · 2026-10-29.** Every platform below is a real, running system that
+**Pass `p531` · 2026-10-29.** Every platform below is a real, running system that
 institutions already operate, with its licence read this pass from **the licence
 file's own title block** (`raw.githubusercontent.com` is reachable while
 `github.com` returns HTTP 403 through the session proxy). The question this file
@@ -154,6 +154,27 @@ All promoted off [`../evidence/address-ledger.tsv`](../evidence/address-ledger.t
 (the API said `NOASSERTION`) at **980★** — and **pushed 2025-12-09**, eleven
 months stale. 🔵 A dormant 980★ LMS is a **migration source**, not a platform to
 build on.
+
+### 🆕 `p531`: the platforms the rewrites dropped — assessment, polling, and the computational classroom
+
+🔴 **Four real, running platforms were in an `archive/` snapshot of this file's
+neighbours and nowhere in the live corpus.** They came back from `Gap 530-A`'s
+triage of the **349** dropped addresses, grant read first-hand from the licence
+file's title block.
+
+| Platform | Repo | Licence | Where AI attaches |
+|---|---|---|---|
+| 🆕 **Artemis** | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** · 823★ | **Fork it, or extend it.** TU München's interactive-learning platform: programming, modelling, text and quiz exercises with **automated assessment built in**, plus a proctored exam mode, in production across European universities. 🟢 **The best EMEA base when the deliverable is assessment and must include proprietary extensions** — MIT, 395 forks, pushed today. The AI attaches as a feedback generator *behind* the existing assessment pipeline, not as a new one. Deploy with [`artemis-ansible-collection`](https://github.com/ls1intum/artemis-ansible-collection) (MIT). 🔵 Compare OpenOLAT above: OpenOLAT is the broader LMS, Artemis is the deeper assessment engine. |
+| 🆕 **JupyterHub + spawners** | [jupyterhub/kubespawner](https://github.com/jupyterhub/kubespawner) | **BSD-3-Clause** · 611★ | **Configure it, never fork it.** The computational-course platform: one notebook server per student, spawned into Kubernetes, authenticated **out of the LMS over LTI** with [`ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) (BSD-3-Clause). The AI attaches inside the student's own kernel, where it can see the code they actually wrote. 🔴 The official deployment tutorial is **archived** — budget your own runbook. Full family in [`../repos/foundations.md`](../repos/foundations.md). |
+| 🆕 **abstimmbar** | [virtUOS/abstimmbar](https://github.com/virtUOS/abstimmbar) | **Apache-2.0** · 2★ | **Fork it.** An audience-response system for universities — live quizzes and polls, anonymous participation by QR or short code, **LTI 1.3 and OIDC**, and self-hostable AI helpers already in the design. From virtUOS (Universität Osnabrück), successor to Cliqr. 🟡 2★ means early; Apache-2.0 plus LTI 1.3 plus a named institutional owner means it is the cleanest *lecture-hall* attachment point in EMEA, and the in-room data it produces is the signal a tutor agent otherwise has to guess. |
+| 🆕 **paper-lms** | [EduThemes/paper-lms](https://github.com/EduThemes/paper-lms) | **MIT** · 6★ | **Read it, then decide.** An LMS in Go that is *"fully backwards compatible with Canvas-LMS"*, built for low-cost hosting and easy modification, with LTI and IMSCC import. 🟢 **The only permissive escape route from an AGPL-3.0 Canvas deployment this base has found** — which is the architecture question Canvas forces. 🟡 6★ and 16 open issues: a migration *target* to evaluate, not a platform to promise. |
+
+🟡 **One negative worth the row it is not getting.**
+[`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) — Apache-2.0,
+**582★**, a free open-source programming-education platform from **Brazil** — is
+**archived by its owner**. 🔵 It is a migration source and a design reference
+for a LATAM engagement, not a platform to build on, and the star count is
+exactly why a reader would otherwise reach for it.
 
 ## The architecture this implies
 

@@ -6,7 +6,9 @@ updated: 2026-10-29
 
 # Foundational Education Repos
 
-**Pass `p530` · 2026-10-29.** Thirty-two load-bearing systems an education
+**Pass `p531` · 2026-10-29.** **Fifty-five** load-bearing systems — `p530`'s
+thirty-two plus the **twenty-three** `p531` adds, every one of them an address
+this base already owned and had dropped — an education
 engagement is likely to inherit, extend or integrate against — not agents (those
 are in [`../agents/top.md`](../agents/top.md)), but the platforms and standards
 the agents must live beside.
@@ -200,6 +202,88 @@ distinct passes described the address before anything filed it.
 🔴 **What this layer does not contain: an agent.** Every row above is
 infrastructure an agent would *drive*. The composition is in
 [`../compose/patterns.md`](../compose/patterns.md).
+
+## 🆕 Serving the course — the JupyterHub deployment family (`p531`)
+
+🔴 **This is the single largest coherent layer this base has ever been missing,
+and it was not missing from the world — it was missing from this file.** Every
+row below sat in an `archive/` snapshot and **nowhere in the live corpus**: they
+are part of the **349** addresses `Gap 530-A` measured as dropped by a rewrite.
+`p531` read the grant of all 349 first-hand and these came back **BSD-3-Clause,
+every one**, title block `BSD 3-Clause License · Copyright (c) 2016/2017,
+Project Jupyter Contributors`.
+
+🔵 **Why it is foundational and not plumbing.** This file already carries
+[`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) (1 370★) — how you
+*grade* notebooks. It carried nothing about how a university *serves* them to
+500 students, authenticated out of the LMS they already log into, on hardware
+they already have. That is the whole gap between a notebook demo and a course,
+and it is **nine live repositories, 2 309★, all permissive**.
+
+| Repo | Licence | Stars | Forks | Last push | What it is for |
+|---|---|---|---|---|---|
+| [jupyterhub/kubespawner](https://github.com/jupyterhub/kubespawner) | **BSD-3-Clause** | **611** | 308 | 2026-10-27 | Spawns each student's notebook server as a Kubernetes pod. **The default answer for a cohort of any size**, and the one that makes per-student resource limits a config value rather than a project. |
+| [jupyterhub/dockerspawner](https://github.com/jupyterhub/dockerspawner) | **BSD-3-Clause** | **543** | 305 | 2026-10-27 | The same, in Docker containers on one host. 🟢 The right choice for a single-department pilot, and the cheapest credible demo in this layer. |
+| [jupyterhub/oauthenticator](https://github.com/jupyterhub/oauthenticator) | **BSD-3-Clause** | **443** | 367 | 2026-10-27 | OAuth2 sign-in — Google, GitHub, Globus, generic OIDC. The institutional-identity half for any tenant that already runs SSO. |
+| [jupyterhub/ldapauthenticator](https://github.com/jupyterhub/ldapauthenticator) | **BSD-3-Clause** | **214** | 177 | 2026-08-20 | LDAP/AD sign-in. 🔵 Named separately because in public-sector and EMEA university estates **this, not OAuth, is what the directory speaks**. |
+| [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | **BSD-3-Clause** | 73 | 55 | 2026-07-01 | 🔴 **The row that connects this layer to the rest of the file.** Launch the hub *from inside Moodle, Canvas or Brightspace* over LTI, so the student never sees a second login. Known to this base since `p13` and described in **13 separate passes** without ever being filed. |
+| [jupyterhub/batchspawner](https://github.com/jupyterhub/batchspawner) | **BSD-3-Clause** | **207** | 137 | 2026-07-17 | Spawns into Slurm/PBS/LSF batch queues. **The HPC route** — the deciding row wherever the client's compute is a research cluster, which in higher education it usually is. |
+| [jupyterhub/systemdspawner](https://github.com/jupyterhub/systemdspawner) | **BSD-3-Clause** | 101 | 45 | 2026-10-24 | systemd units with real resource limits, no container runtime. The answer when Docker is not permitted on the box. |
+| [jupyterhub/wrapspawner](https://github.com/jupyterhub/wrapspawner) | **BSD-3-Clause** | 65 | 60 | 🟡 2025-08-16 | Lets the *student* pick a spawner/profile at launch. 🟡 Fourteen months stale — read it, pin it, do not assume maintenance. |
+| [jupyterhub/sudospawner](https://github.com/jupyterhub/sudospawner) | **BSD-3-Clause** | 52 | 39 | 2026-08-05 | Spawns as the student's own Unix user via a narrow sudo rule. The shape a university's own sysadmins will ask for. |
+
+🔴 **Two members of the family are archived by their owner and are read-only
+history:** [`jupyterhub/yarnspawner`](https://github.com/jupyterhub/yarnspawner)
+(19★, Hadoop/YARN) and
+[`jupyterhub/jupyterhub-tutorial`](https://github.com/jupyterhub/jupyterhub-tutorial)
+(**202★**). 🔵 The second is worth naming precisely because it is the thing a
+reader would reach for first: **the official deployment tutorial is archived**,
+so an engagement should budget its own runbook rather than cite that one. 🟡
+[`jupyterhub/kerberosauthenticator`](https://github.com/jupyterhub/kerberosauthenticator)
+(12★, BSD-3-Clause, live) completes the authenticator set for Kerberos estates.
+
+## 🆕 The LTI libraries this base has described 55 times and never filed (`p531`)
+
+🔴 **`p530` built the integration layer above and filed the PHP LTI library
+while leaving the Node and Python ones unfiled.** These are the **#1 and #2
+most-described unfiled permissive addresses in the entire live corpus**, by the
+base's own ledger:
+
+| Repo | Licence | Stars | Forks | Passes unfiled | Why it is foundational |
+|---|---|---|---|---|---|
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** | **373** | 86 | 🔴 **28** | *"Turn your application into a fully integratable LTI 1.3 tool provider."* TypeScript/Node. **The reference implementation of the Node LTI stack** — the one an agent written in TypeScript attaches to any LMS with. Pushed 2026-10-13. |
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **MIT** | **138** | 84 | 🔴 **27** | LTI 1.3 Advantage tool for Python, with Django/Flask adapters. 🟢 The Python counterpart, and therefore the one that sits in front of a Python agent without a language boundary. Pushed 2026-09-10. |
+| [LongsightGroup/qti3](https://github.com/LongsightGroup/qti3) | **MIT** | 6 | 3 | 11 | Dependency-light, framework-neutral TypeScript reference implementation of **QTI 3** assessment items. 🔵 QTI is how an assessment moves between systems; this is the only permissive, current QTI 3 implementation this base has found. |
+| [jdolny/OneRoster.NET](https://github.com/jdolny/OneRoster.NET) | **MIT** | 6 | 8 | 12 | OneRoster API client. 🔵 OneRoster is **rostering** — the standard a district uses to tell a tool who is in which class. Thin, .NET-only, and the only permissive client on record. |
+| [1EdTech/openbadges-validator-core](https://github.com/1EdTech/openbadges-validator-core) | **Apache-2.0** | 61 | 31 | 12 | Open Badges validation, Python, **from the standards body itself**. The credential half: if a deliverable issues badges, this is what says whether they are well-formed. |
+| [Apereo-Learning-Analytics-Initiative/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | **ECL-2.0** | 62 | 25 | 12 | Apereo's Learning Record Warehouse — Caliper/xAPI ingestion with a OneRoster-shaped model. 🟡 ECL-2.0 behaves as permissive (Apache-2.0 with an academic patent tweak), which this base has already graded on `sakaiproject/sakai`. |
+
+## 🆕 Assessment science, and the licence-compliance instruments (`p531`)
+
+| Repo | Licence | Stars | Forks | What it is for |
+|---|---|---|---|---|
+| [douglasrizzo/catsim](https://github.com/douglasrizzo/catsim) | **BSD-3-Clause** | **153** | 37 | **Computerised Adaptive Testing** simulator: item-response theory, item selection, ability estimation, stopping rules. 🟢 **The only permissive CAT/IRT implementation on this base**, and the thing that separates "an LLM asks harder questions" from a defensible adaptive assessment. Author in Brazil — **LATAM-origin psychometrics**. Pushed 2026-10-28. |
+| [open-spaced-repetition/fsrs.js](https://github.com/open-spaced-repetition/fsrs.js) | **MIT** | **180** | 14 | FSRS — the scheduler that superseded Anki's SM-2. The retention half of any tutoring deliverable, as a library rather than a prompt. |
+| [VienDinhCom/supermemo](https://github.com/VienDinhCom/supermemo) | **MIT** | **337** | 24 | SM-2 in JS/TS. 🔵 Filed beside FSRS deliberately: SM-2 is simpler, auditable in an afternoon and still what a client's existing flashcard data was scheduled with. |
+| [aboutcode-org/scancode-toolkit](https://github.com/aboutcode-org/scancode-toolkit) | **Apache-2.0** (code) · 🟡 **CC-BY-4.0** (licence datasets) | **2 656** | 831 | 🔴 **`Gap 528-C` closes here, with a retrieval instead of a build.** Its own README states it *"detects licenses, copyrights, package manifests, **direct dependencies**"* and *"can process packages, build manifest and lockfile formats"* — which is exactly the dependency-grant enumerator `528-C` had scoped as new work for four passes. 🟡 **Read the dual grant before shipping:** the engine is Apache-2.0, the reference licence data is CC-BY-4.0, so redistributing the rule set carries attribution duties. |
+| [oss-review-toolkit/ort](https://github.com/oss-review-toolkit/ort) | **Apache-2.0** | **2 109** | 393 | The orchestrated form of the same job: an *Analyzer* that *"determines the dependencies of projects and their metadata, abstracting which package managers are actually being used"*, plus an Evaluator for policy-as-code. 🟢 Pick `ort` when the client wants a **gate in CI**; pick `scancode` when they want the **evidence**. |
+| [anchore/syft](https://github.com/anchore/syft) | **Apache-2.0** | **9 792** | 1 031 | SBOM generation from images and filesystems (SPDX, CycloneDX). The deployed-artefact view, where the other two read the source tree. |
+
+🔵 **Five of the six rows above came out of a drop set, and the sixth off the
+live promotion queue** — `catsim` had been described in **10** separate passes
+and never filed; `ort`, `syft`, `fsrs.js` and `supermemo` are in the **349**
+archive-only addresses `p531` triaged; `scancode` is in `archive-drops`, the
+691-row looser bound. 🔴 **Four licence/SBOM instruments — `scancode`, `ort`,
+`syft`, [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli)
+(Apache-2.0, 552★) — were owned, dropped, and then re-scoped as a build.** That
+is `Gap 528-C`'s whole history, and it is a retrieval failure, not a supply gap.
+
+## 🆕 Two platform rows the drop set also returned (`p531`)
+
+| Repo | Licence | Stars | What it is |
+|---|---|---|---|
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** | **823** | *"Interactive Learning with Automated Feedback"*, from **TU München**. Programming, modelling, text and quiz exercises with automated assessment and an exam mode, in production across European universities. 🔴 **MIT, 823★, 395 forks, pushed today — and this base had no row for it.** The strongest permissive assessment platform in EMEA, and the natural alternative to bolting autograding onto Moodle. Ansible collection: [`ls1intum/artemis-ansible-collection`](https://github.com/ls1intum/artemis-ansible-collection) (MIT). |
+| [opensacorg/learning-blocks](https://github.com/opensacorg/learning-blocks) | **MIT** | 6 | 🟢 **A second permissive Student Information System.** `p529` published *"zero permissive SIS"*; `p530` falsified it with `academico-sis/academico` (MIT, 409★). This is the third reading: the field is small and thin, but it is **not empty and not copyleft-only**. 22 forks against 6★ — more forks than stars, the signature of a system people deploy rather than star. Python. Pushed 2026-09-21. |
 
 ## Licence map, for the architecture decision
 

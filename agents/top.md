@@ -6,9 +6,28 @@ updated: 2026-10-29
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p530` · 2026-10-29.** **Twenty-one** real agents, every row read
+**Pass `p531` · 2026-10-29.** **Twenty-five** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
+
+> 🟢 **`p531`: four rows added, and — for the second pass running — not one of
+> them is a discovery.** All four came off the promotion queue: addresses this
+> base already owned and had never filed. 🔴 **Two of the four are LMS bridges
+> for platforms this shelf had no agent for at all** —
+> [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+> (**MIT**, **60★**, D2L/Brightspace) has been in this base's history since
+> `p69` across **20 separate passes**, and the shelf has meanwhile carried a
+> Canvas bridge and a Moodle gap note while saying nothing about the third
+> major LMS.
+>
+> 🔵 **Where the queue came from is the pass's method, and it is not search.**
+> `p531` triaged the **349** addresses that `Gap 530-A` measured as present in
+> an archive snapshot and nowhere in the live corpus, reading the **grant
+> first-hand** for every one of them: **203 permissive (58.2%)**, 50 closed on
+> copyleft, 96 unresolved. Then it re-ran the *live* debt query against the
+> current curated files and took the top of it. 🔴 **Generic web search
+> contributed nothing for the third consecutive pass** — see
+> [`trending.md`](trending.md).
 
 > 🟢 **`p530`: five rows added, and not one of them is a discovery.** All five
 > came off [`../evidence/promotion-queue.2026-10-29-p530.tsv`](../evidence/promotion-queue.2026-10-29-p530.tsv)
@@ -97,7 +116,7 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 21 verified education agents
+## Shelf — 25 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -123,9 +142,15 @@ header, a placeholder or an example.
 | 🆕 **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT | 156 | unplaced | Block-based adaptive learning workspace that **runs locally**: upload material, get notes, quizzes, flashcards and an adaptive tutor, across 10+ LLM providers. FastAPI + Next.js, with a knowledge graph. 🔴 **31 passes unfiled — the most-rediscovered address in this base.** |
 | 🆕 **open-learning-ai-tutor** | [mitodl/open-learning-ai-tutor](https://github.com/mitodl/open-learning-ai-tutor) | MIT | 1 | 🟢 **North America** (MIT Open Learning) | Backend for MIT Open Learning's student-facing tutor, deployed at `learn-ai.ol.mit.edu`, with a published pedagogical engine. 159 commits. 🔴 **Invisible to GitHub's repository search because it is a fork** — see shelf rule 10. Shelved on the institution and the deployment, not the star count. |
 
-**Licence split:** **9 × MIT, 4 × Apache-2.0, 1 × BSD-3-Clause** — all fourteen
-buildable, every cell read from the licence file's title block.
-*Apache-2.0: DeepTutor, k12-teacher-skills, lineage-skill, ai-tutor-app. BSD-3-Clause: Open TutorAI CE.*
+| 🆕 **dsh-openmaic** | [THU-MAIC/dsh-openmaic](https://github.com/THU-MAIC/dsh-openmaic) | MIT | **111** | APAC (Tsinghua University, MAIC group) | OpenMAIC as a **harness plugin** rather than an application: classrooms, slides, interactive widgets and Socratic teaching delivered inside DeepSeek Harness. 19 forks, pushed **2026-10-29**. 🔵 The same lab's second row on this shelf, and the first row anywhere on it that *attaches to* an agent harness instead of shipping its own. For an engagement that already has a harness, this is the cheaper half of `OpenMAIC`. |
+| 🆕 **brightspace-mcp-server** | [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | MIT | **60** | 🟡 North America — *inferred* from the repo's own `purdue` topic, not stated | Grades, due dates, assignments, announcements, rosters, syllabus and course content over MCP for **D2L Brightspace**, published to npm and documented as working against any institution's tenant. 🔴 **The third major LMS finally has a bridge on this shelf.** 29 forks against 60★ — the fork-to-star ratio of this field's one-university-one-bridge shape. Pushed 2026-10-29. |
+| 🆕 **canvas-lms-mcp** | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | MIT | 10 | 🟡 **unstated** — no country signal in repo, README or profile | Canvas over MCP: courses, assignments, submissions, rubrics, quizzes — and, per its own description, **grade and comment**. 🟢 It is shelved beside the larger `vishalsachdev/canvas-mcp` for one reason: the **write** half. A bridge that only reads cannot close the teacher's loop, and grading is the task the teacher is actually paying to shed. Pushed 2026-10-27. |
+| 🆕 **pi-language-tutor** | [mackt/pi-language-tutor](https://github.com/mackt/pi-language-tutor) | MIT | **82** | 🟡 **unstated** | Language tutoring attached to work the learner was doing anyway: it reviews the prompts a developer writes for spelling, grammar and natural phrasing, and renders the agent's replies as bilingual immersive translations. 🔵 **The only row on this shelf where the lesson is a side effect of the day job** — which is the shape "language learning is the fastest-growing segment" implies and almost nothing in the open-source field builds. 13 forks, pushed 2026-10-26. |
+
+**Licence split:** **18 × MIT, 6 × Apache-2.0, 1 × BSD-3-Clause** — all
+twenty-five buildable, every cell read from the licence file's title block.
+*Apache-2.0: DeepTutor, k12-teacher-skills, lineage-skill, ai-tutor-app,
+feedbacksystem, ai-shifu. BSD-3-Clause: Open TutorAI CE.*
 
 ### Region notes — what is read, and what is inferred
 

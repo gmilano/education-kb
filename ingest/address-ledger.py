@@ -50,13 +50,29 @@ HEADING = re.compile(r"^(#{1,6})\s")
 # attributed 26,000 lines to `p209` because a `###` sub-heading mentioned that
 # pass in passing, and min() over the file then reported p209 as the
 # first_seen_pass of almost every address in the base.
-PASS_IN_HEAD = re.compile(r"`p(\d{1,4})`|\bPass\s+(\d{1,4})\b|\bpase\s+(\d{1,4})\b|\bp(\d{1,4})\b")
+# p531: the word forms are case-folded on their first letter; the BARE token
+# stays case-sensitive, because this base writes passes lower-case (`p530`)
+# and proposals upper-case (`P553`) and only the case separates them.  A
+# blanket re.I here merges the two namespaces -- p531 tried it and
+# p531-ledger-gate's C1 refuted it (1 128 sections -> 1 375, 4 ascending
+# violations -> 13, "ascents" to p795/p865/p1024 that are proposal numbers).
+# 🔴 The fold itself is load-bearing: `## ... (pass N) ...` and `## Live gaps
+# declared by pass N` are 234 headings across the three history files and the
+# p530 matcher saw NONE of them, so 212 sections -- 15.8% of the corpus --
+# were attributed to the newer pass above them.
+PASS_IN_HEAD = re.compile(r"`p(\d{1,4})`|\b[Pp]ass\s+(\d{1,4})\b|\b[Pp]ase\s+(\d{1,4})\b|\bp(\d{1,4})\b")
 DATE_TOK = re.compile(r"(\d{4}-\d{2}-\d{2})")
 # Headings that name a pass without being that pass's section: forward
 # registrations and the gap-roll-up blocks that sit INSIDE a section.
+# p531 adds the three roll-up dialects the fold exposed: `Actions opened by pN`,
+# `Live gaps declared by pass N` and `The rows pass N changed`.  Each names a
+# pass inside another pass's section; counting one as a section is what made
+# `intel/open-gaps.md:17901` look like out-of-order history.
 NOT_A_SECTION = re.compile(
     r"(🔜|Registered for|Pre-registered|Gaps OPEN after|Gaps CLOSED|"
-    r"gaps opened|Verdicts on|rows pass)", re.I)
+    r"gaps opened|(Actions|Gaps)\s+(opened|closed)\s+(by|after)|"
+    r"(Live\s+)?gaps\s+declared\s+(by|after)|"
+    r"Verdicts on|rows pass|The rows? \S+ changed|one row pass)", re.I)
 
 # Owners that are never a repository address: GitHub's own namespaces plus the
 # path prefixes that appear in links to pages rather than repos.

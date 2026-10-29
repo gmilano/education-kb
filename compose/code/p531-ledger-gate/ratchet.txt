@@ -1,0 +1,4 @@
+# Gap 530-C ratchet: the ledger's address count must not fall
+# below this without a stated reason.  Raise it with
+#   python3 -I compose/code/p531-ledger-gate/ledger_gate.py --bless-ratchet
+3102

@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p530` · 2026-10-29.** **Fifteen** trends. Each one is stated so it could be
+**Pass `p531` · 2026-10-29.** **Seventeen** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -432,6 +432,65 @@ that, failed at it for 400 passes until it built an index of its own contents.
 near-empty after the ledger runs in front of every pass, then the debt was a
 one-off backlog rather than a structural property. **The queue size at `p540` is
 the test.**
+
+## 16. 🆕 The reusable layer in this sector is **delivery**, not intelligence — and it is permissive
+
+🔴 **Measured, this pass, over 349 addresses.** `Gap 530-A` asked `p531` to
+triage every address a rewrite had dropped from this base. Reading the grant
+first-hand for all 349: **203 permissive (58.2%)**, 50 copyleft, 96 unresolved.
+🔵 **The useful half of the result is not the ratio — it is what the permissive
+203 turn out to be.**
+
+| What the permissive drop set actually contains | Count |
+|---|---|
+| General-purpose AI/infra that is not education software (`vllm`, `ragflow`, `llama_index`, `dspy`, `qdrant`, `mem0`, `litellm`, `storm`, `gpt-researcher`, `unstructured`, `jitsi`, `appsmith`, `mcp-go`, `syft`, `ort`, `cyclonedx-cli`, `oauthlib`, `synthea`, `basemaps`, `RAG-Anything`, `django-machina`) | **21 of the 38 above 100★** |
+| Education systems and libraries | **17 of the 38** |
+| The largest single coherent cluster: the **JupyterHub deployment family** (9 live repos, **2 309★**, BSD-3-Clause throughout) | 9 |
+
+🟢 **The trend claim.** The parts of an education deliverable that are already
+built, permissively licensed, maintained and boring are the **delivery** parts:
+spawn a server per student, authenticate them out of the LMS over LTI, hold the
+records in an LRS, schedule the review with FSRS, select the next item with IRT.
+🔴 **The parts that are not built are the pedagogical ones** — and that is the
+inverse of how the sector's marketing reads, where the model is the product and
+the delivery is assumed.
+
+🔵 **What it means for an engagement.** The first week should be spent choosing
+from this layer, not writing it; the differentiator has to live in the
+pedagogy, the evaluation and the institutional integration. 🔴 **And the layer
+is permissive while the platform cores are AGPL-3.0** — so the boundary between
+"what we ship" and "what we attach to" is drawn by the licence map, not by
+preference. See [`../repos/foundations.md`](../repos/foundations.md) and
+pattern `P562`.
+
+---
+
+## 17. 🆕 A field *size* is a fork artefact; a *starred* census is not — and this base had the hole in every query
+
+🔴 **`Gap 530-B` registered that `fork:true` was absent from every API query this
+base has ever run, and predicted the fork share would be large.** `p531`
+measured it:
+
+| Census | without `fork:true` | with `fork:true` | Δ |
+|---|---|---|---|
+| `moodle mcp in:name,description` — `p529`'s published field | **223** | 🔴 **312** | **+89 (+39.9%)** |
+| `moodle mcp`, unscoped | **251** | 🔴 **340** | **+89** |
+| `moodle mcp in:name,description stars:>5` | **14** | 🟢 **14** | **0** |
+| `student information system school management in:name,description stars:>40` | **4** | 🟢 **4** | **0** |
+| `topic:student-information-system stars:>40` | **4** | 🟢 **4** | **0** |
+
+🟢 **The prediction holds and the consequence does not.** The fork-shaped hole is
+real and large — **89 addresses, 28.5% of the forked total** — and it lies
+**entirely in the zero-star tail**. At any star floor at all, including the
+lowest one this base uses, `fork:true` changes nothing.
+
+🔵 **The rule, which is the part worth carrying:** add `fork:true` when
+publishing a **raw field size**, because a field size without it is a floor and
+reads like a count. Omit it when the query carries a **star floor**, because it
+cannot change the answer and implies a precision the measurement does not have.
+🔴 **`p529`'s `total_count: 222` was therefore a floor, not a census** — and
+every decision this base took from that field was taken on a starred subset,
+where the number was right all along.
 
 ## Counter-signals worth holding
 

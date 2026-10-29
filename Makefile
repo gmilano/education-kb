@@ -31,6 +31,10 @@ README_LOG := $(shell mktemp)
 REFSET_LOG ?= /tmp/education-kb-gate-refset-register.log
 PROMO_LOG ?= /tmp/education-kb-gate-promotion.log
 LEDGER_LOG ?= /tmp/education-kb-gate-promotion-ledger.log
+# p531: the two logs that replace a status-masking pipe, plus the address-ledger gate's.
+LADDER_CENSUS_LOG ?= /tmp/education-kb-ladder-case-census.log
+INDEX_LOG ?= /tmp/education-kb-carried-index.log
+ADDR_LEDGER_LOG ?= /tmp/education-kb-gate-ledger.log
 PROMO_LEDGER ?= evidence/promotion-ledger.2026-10-25-p436.tsv
 # p436 — the backlog this pass measured and adjudicated.  It may only FALL.
 PROMO_RATCHET ?= 148
@@ -96,7 +100,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: gate-grant-presence grant-presence-census bsd-variant-census gate-promotion-ledger promotion-backlog archive-drops dead-citations gate-branch-alias branch-alias-census branch-alias-vendored gate-conjunctive-grant conjunctive-census gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
+.PHONY: gate-ledger gate-grant-presence grant-presence-census bsd-variant-census gate-promotion-ledger promotion-backlog archive-drops dead-citations gate-branch-alias branch-alias-census branch-alias-vendored gate-conjunctive-grant conjunctive-census gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -131,6 +135,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-refset-register gate-domain-check \
              gate-region-place gate-backlog-denominator \
              gate-dead-citation gate-regional-leg gate-census-union \
+             gate-ledger \
              gate-i2-sweep-crosscheck \
              gate-union-currency \
              gate-subtree-grant gate-offset-region gate-shelf-fork \
@@ -800,9 +805,27 @@ gate-identity: ## ACTION p283 — no shelf may recommend one repository under tw
 # QUEUE rows.  The controls DO fail: they pin the two overclaims this instrument's own first
 # draft made (a distant `.lower()` read as immunity; a four-rung ladder called "single").
 # 🔴 Registered, not built: a RATCHET over these counts.  Stated so it is not mistaken for done.
+# ---------------------------------------------------------------- p531
+# 🟢 `Gap 530-C`: the address ledger is the control in front of every pass and its own
+# correctness was unattested — its one check (section-pass monotonicity) had been run by
+# hand, once, inline in p530's write-up.  This makes it standing.  🔴 Its first automated
+# run reported that TWO of the four violations `530-C` asked to allowlist were the
+# INSTRUMENT, not the history, and that 212 sections — 15.8% — carried the wrong pass.
+# See `compose/code/p531-ledger-gate/README.md`.
+gate-ledger: ## Gap 530-C — the address ledger's monotonicity, fixtures and ratchet
+	@cd compose/code/p531-ledger-gate && { $(PY) test_ledger_gate.py > $(ADDR_LEDGER_LOG) 2>&1 || { echo "🔴 p531-ledger-gate unit controls FAILED — the suite's own report follows:" ; sed "s/^/   /" $(ADDR_LEDGER_LOG) ; false ; } ; } && sed "s/^/   /" $(ADDR_LEDGER_LOG) || exit 1
+	@$(PY) -I compose/code/p531-ledger-gate/ledger_gate.py --repo-root . || exit 1
+
 gate-ladder-case: ## ACTION p283 — which path ladders can find an uppercase extension?
 	@cd compose/code/p283-ladder-case-audit && { $(PY) test_ladder_case.py > $(LADDER_LOG) 2>&1 || { echo "🔴 p283-ladder-case-audit FAILED — the suite's own report follows:" ; sed "s/^/   /" $(LADDER_LOG) ; false ; } ; } && echo "── p283-ladder-case-audit (29 controls: the distant-fold and multi-rung overclaims, p284's generator verdict, p286's COMMENT-ONLY, shell-generator, method-attribute and alternation arms, p288's IMPORTED-LADDER arm with its overclaim guard, and the RATCHET)" && echo "   PASS" || exit 1
-	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . | tail -2
+# 🔴 p531 (`Gap 530-A` ask 3): this line used to read `... ladder_case.py --root . | tail -2`.
+# `SHELL` carries no `-o pipefail`, so make saw TAIL's status: a census that died
+# reported success, inside `hooks`.  p530 found the same class one line at a time
+# (`| head -40` in `archive-drops`, which also killed the script on SIGPIPE before it
+# could print its own totals).  One grep over every recipe bounds the class: 5 piped
+# lines, 2 defects, 3 benign `ls | wc -l` counts.  Status first, truncation second.
+	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . > $(LADDER_CENSUS_LOG) 2>&1 || { echo "🔴 p283 ladder-case census FAILED — its own output follows:" ; sed "s/^/   /" $(LADDER_CENSUS_LOG) ; exit 1 ; }
+	@tail -2 $(LADDER_CENSUS_LOG)
 
 ladder-audit: ## ACTION p283 — the full per-ladder table.  make ladder-audit FAMILY=readme
 	@$(PY) -I compose/code/p283-ladder-case-audit/ladder_case.py --root . $(if $(FAMILY),--family $(FAMILY),) --out evidence/ladder-case-audit.$$(date +%F)-$(PASS).tsv
@@ -1123,7 +1146,12 @@ status:
 	@echo "last commit: $$(git log -1 --format='%ar — %s' 2>/dev/null | cut -c1-90)"
 
 index: ## ACTION UG (p235) — rebuild the carried-row index and report the UH collisions
-	@$(PY) -I compose/code/p235-carried-index/carried_index.py . | head -3
+# 🔴 p531 (`Gap 530-A` ask 3): was `... carried_index.py . | head -3`.  `head` closes the
+# pipe, which kills the script on `BrokenPipeError` BEFORE it prints its own totals, and
+# then masks the non-zero status it died with — p530's `archive-drops` defect, in a
+# second target.
+	@$(PY) -I compose/code/p235-carried-index/carried_index.py . > $(INDEX_LOG) 2>&1 || { echo "🔴 p235 carried-index FAILED — its own output follows:" ; sed "s/^/   /" $(INDEX_LOG) ; exit 1 ; }
+	@head -3 $(INDEX_LOG)
 
 # p254 (`ACTION YB`): the SUPPLY TEST, now with a status.  `CARRIED` exits 1, `NEW` exits 0,
 # so `make carried SLUG=x && <publish the row>` is finally a correct sentence.  p252 ran this

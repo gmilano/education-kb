@@ -43,6 +43,32 @@ because an averaged number is a number nobody published.
 > Europe and APAC **publishes no LATAM figure at all** — see
 > [§ Declared gaps](#declared-gaps-this-pass).
 
+> 🆕 **`p531` ran the full four-region sweep and reports the same policy result
+> as `p530`, with one thing it did not have: a *supply* map that is placed.**
+> 🔴 **Every policy item the four legs surfaced was already on this base** — the
+> EU AI Act's deferral of stand-alone high-risk education systems to
+> **2 December 2027** with Article 50 transparency still at **2 August 2026**,
+> Canada's AIDA still *proposed* rather than enacted, the US state patchwork,
+> Singapore's AI Verify, the ASEAN governance guide, UNESCO IESALC's 200
+> institutions across 19 countries. 🔵 Three passes have now put the regional
+> *policy* legs at saturation for this search depth; that is a result, and a
+> successor should spend the budget elsewhere rather than re-confirm it.
+>
+> 🔴 **The EMEA leg specifically returned nothing education-sector at all.**
+> Queried for EMEA adoption, regulation and players, generic search returned
+> enterprise-AI material — a CompTIA 2026 EMEA outlook whose survey base is
+> **US-only (1 012 respondents)**, and a Workday study from its **2023**
+> edition. 🔵 **Stated plainly so silence is not read as coverage: the EMEA
+> education-sector demand leg is a measured blank at this depth, not a quiet
+> one.** What EMEA is *not* blank on is supply — see the region's section below.
+>
+> 🟢 **What is new this pass is a supply census that can be placed.** `p531`
+> read the grant of **349** addresses first-hand (`Gap 530-A`) and measured
+> **203 permissive**. Sorting the education-relevant remainder by origin
+> produces a different shape per region, and that shape — not the market
+> forecast — is what decides what a studio can reuse on day one. Each region's
+> section below now carries it.
+
 ## Global market size — four firms, one wide band
 
 | Source | 2026 | Forecast | CAGR |
@@ -118,6 +144,31 @@ AI-TA deployment) are vendor-blog figures — **do not quote them.***
 ## Opportunities by region
 
 ### North America
+
+> 🆕 **`p531` — supply placed.** The region's permissive education supply in the
+> drop set is **assessment plumbing and compliance scaffolding, not tutors**:
+> GitHub's own autograders
+> ([`classroom-resources/autograding-python-grader`](https://github.com/classroom-resources/autograding-python-grader),
+> MIT, 11★;
+> [`autograding-io-grader`](https://github.com/classroom-resources/autograding-io-grader),
+> MIT, 7★), [`edulinq/autograder-py`](https://github.com/edulinq/autograder-py)
+> (MIT, 16★, 21 forks), the **Ed-Fi** deployment tooling
+> ([`Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp),
+> [`xmarcosx/edfi-via-kubernetes`](https://github.com/xmarcosx/edfi-via-kubernetes)),
+> the PowerSchool client libraries
+> ([`dougpenny/SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore),
+> [`IronCountySchoolDistrict/powerschool-alchemy`](https://github.com/IronCountySchoolDistrict/powerschool-alchemy)),
+> and a **FERPA/COPPA readiness suite**
+> ([`mizcausevic-dev/state-ai-disclosure-state-tracker`](https://github.com/mizcausevic-dev/state-ai-disclosure-state-tracker),
+> [`student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream),
+> [`pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile))
+> that names IL SOPPA, CA AB 1584/AB 2876, TX HB 18, NY Ed Law 2-d, VA ChAIPA
+> and CO SB 196 as concrete obligations. 🔵 **The opportunity this implies:** in
+> North America the differentiator is not the tutor, it is **being able to
+> answer the procurement questionnaire** — and the artefacts for that are
+> permissive and already written, at 0–1★, by people who read the statutes.
+> 🔴 **Verify them before use at that star count**; the value is the obligation
+> mapping, not the code.
 
 **Regulatory posture.** State-led and moving fast: **134+ bills across 31 states**
 on AI in K-12 and higher education (MultiState and FutureEd trackers), mostly on
@@ -215,6 +266,35 @@ recorded.**
 
 
 ### EMEA
+
+> 🆕 **`p531` — the demand leg is a measured blank, the supply leg is the
+> strongest of any region.** Nothing education-sector came back on EMEA
+> adoption, regulation or players (see the header note). 🟢 **What did come back
+> is institutional infrastructure, and it is the best-governed supply on this
+> base:** [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) (**MIT,
+> 823★**, TU München — automated assessment plus a proctored exam mode, in
+> production across European universities),
+> [`virtUOS/abstimmbar`](https://github.com/virtUOS/abstimmbar) (Apache-2.0,
+> Universität Osnabrück — LTI 1.3 audience response),
+> [`openeduhub/edu-sharing-python-client`](https://github.com/openeduhub/edu-sharing-python-client)
+> (Apache-2.0 — the German OER repository's own API client, with full-text
+> extraction and metadata management) and
+> [`openfun/arnold`](https://github.com/openfun/arnold) (MIT, 41★ — France
+> Université Numérique's Kubernetes deployment tooling for its edtech estate).
+> 🔵 **Below that sits a teacher-tool layer nobody outside it writes about:**
+> [`foerbsnavi/Notenberechner`](https://github.com/foerbsnavi/Notenberechner),
+> [`florianchristophnowak-dot/capy-note`](https://github.com/florianchristophnowak-dot/capy-note),
+> [`prep-ybara`](https://github.com/florianchristophnowak-dot/prep-ybara) — German
+> grade calculators and lesson-prep apps at 0–1★ — plus a whole family of
+> **WebUntis** and **Schulmanager** timetable clients
+> ([`Keule0010/WebUntisAPI`](https://github.com/Keule0010/WebUntisAPI),
+> [`Suiram1701/WebUntisAPI.Client`](https://github.com/Suiram1701/WebUntisAPI.Client),
+> [`egore4606/schulmanager-calendar-sync`](https://github.com/egore4606/schulmanager-calendar-sync)).
+> 🔴 **The shape: EMEA ships the institution's systems and the teacher's
+> desk — and no tutors.** For a studio, that means an EMEA engagement should
+> plan to *attach to* Artemis, edu-sharing or WebUntis rather than to field a
+> tutor against them, and the 🟡 **AGPL-3.0/GPL-3.0 core of the public-sector
+> estate** (Moodle, ILIAS, Open edX) is what decides the boundary.
 
 **Regulatory posture — re-verified from source this pass, with three dates
 `p526` did not carry.** The **Digital Omnibus, Regulation (EU) 2026/1744**, was
@@ -354,6 +434,33 @@ framing, where EMEA appears as the regulated region and little else.
 
 ### APAC
 
+> 🆕 **`p531` — supply placed, and it is the only region shipping full agents.**
+> [`THU-MAIC/dsh-openmaic`](https://github.com/THU-MAIC/dsh-openmaic) (MIT,
+> **111★**, Tsinghua MAIC — classrooms, slides, Socratic teaching as a harness
+> plugin) joins this base's two largest education agents, both APAC-academic.
+> 🟢 **Two state-infrastructure signals that have no analogue elsewhere:**
+> [`nso-india/esankhyiki-mcp`](https://github.com/nso-india/esankhyiki-mcp)
+> (**MIT, 147★**) is an MCP server published by **India's Ministry of Statistics
+> and Programme Implementation** — a national statistical office shipping an
+> agent interface under a permissive licence; and a cluster of tooling around
+> **China's national smart-education platform**
+> ([`alterem/knowledge-grab`](https://github.com/alterem/knowledge-grab), MIT,
+> **567★**; [`hantang/smartedu-dl-go`](https://github.com/hantang/smartedu-dl-go),
+> MIT, **207★**) whose existence is itself the measurement: the state platform is
+> where the content is. 🔵 Further placed supply:
+> [`oas114/EduShield`](https://github.com/oas114/EduShield) (MIT, Taiwan —
+> client-side de-identification before student data reaches a model),
+> [`RozhakDev/EduPintarIPAS`](https://github.com/RozhakDev/EduPintarIPAS)
+> (Indonesia), [`guruduan/SIMG`](https://github.com/guruduan/SIMG) (Indonesia,
+> a Moodle administration plugin with WhatsApp notifications),
+> [`localis-ai/student-discovery-agent`](https://github.com/localis-ai/student-discovery-agent)
+> (Vietnam, career guidance) and
+> [`Turkish-AI-Community/hsd-agu-egitim`](https://github.com/Turkish-AI-Community/hsd-agu-egitim)
+> (Türkiye, 33★). 🔴 **The opportunity:** APAC is the only region where the
+> *agent* can be reused rather than built — and the integration risk moves to
+> the state platform and the local messaging channel (WhatsApp, Feishu), not the
+> LMS.
+
 **Regulatory posture — no single model.** Binding AI rules: **South Korea, China,
 Vietnam**. Guidance and existing law: **Japan, Singapore, Hong Kong, Australia,
 India**. **South Korea's AI Basic Act** is the region's landmark statute (sources
@@ -479,6 +586,20 @@ confirmed against primary sources before they go in a client deck.
 
 ### Global
 
+> 🆕 **`p531` — the cross-region finding is a licence instrument, not a market
+> number.** The licence-compliance layer every region's deliverable needs is
+> permissive, mature and was sitting in this base's own discarded history:
+> [`aboutcode-org/scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit)
+> (Apache-2.0 code / 🟡 CC-BY-4.0 datasets, **2 656★**),
+> [`oss-review-toolkit/ort`](https://github.com/oss-review-toolkit/ort)
+> (Apache-2.0, **2 109★**), [`anchore/syft`](https://github.com/anchore/syft)
+> (Apache-2.0, **9 792★**) and
+> [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli)
+> (Apache-2.0, 552★). 🔵 In a sector whose platform cores are AGPL-3.0 and whose
+> integration layer is permissive, **"which grant does this deliverable actually
+> carry, transitively" is a question every engagement answers once and bills
+> for** — and it needs a retrieval, not a build.
+
 🆕 **`p530`.** Opportunities that are not region-specific, kept here so the four
 regional sections stay regional rather than absorbing cross-cutting work.
 
@@ -503,6 +624,56 @@ not a country** — this base's standing rule, and the reason these are here and
 not under APAC.
 
 ### LATAM
+
+> 🆕 **`p531` — the LATAM supply shape, measured rather than asserted, and it is
+> not what this base has been saying.** For seven passes this base recorded the
+> LATAM contribution as *"data, not code"*; `p528` falsified the strong version
+> of that with `dsvi-b/corretor-enem`. 🟢 **`p531` can now state the positive
+> shape: LATAM ships institutional-system glue and curriculum data, and it ships
+> the region's only psychometrics.**
+>
+> 🔴 **The psychometrics first, because it is a first for this base.**
+> [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) —
+> **BSD-3-Clause, 153★, 37 forks, pushed 2026-10-28**, author in **Brazil** — is
+> a Computerised Adaptive Testing simulator with item-response theory, item
+> selection, ability estimation and stopping rules. 🔵 **It is the only
+> permissive CAT/IRT implementation anywhere on this base**, and it is the
+> difference between "the model asks harder questions" and an adaptive
+> assessment a ministry would accept.
+>
+> 🟢 **Curriculum and exam data:**
+> [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) (MIT, 23★ —
+> **1 721 BNCC learning objectives** as verified JSON/SQLite/CSV with
+> per-record provenance and a reproducible extraction pipeline),
+> [`Dramoscuello/simic`](https://github.com/Dramoscuello/simic) (Colombia —
+> generating and analysing **ICFES Saber 11** mock exams),
+> [`startin-lab/brujula-educativa`](https://github.com/startin-lab/brujula-educativa)
+> (Colombia — a public agent over open education data).
+>
+> 🟢 **Institutional glue, which is the volume:** bridges and clients for the
+> region's academic systems —
+> [`django-by-kelsoncm/django-auth-suap`](https://github.com/django-by-kelsoncm/django-auth-suap)
+> (Brazil, SUAP/IFRN OAuth2),
+> [`gabotachak/sia-unal-bridge`](https://github.com/gabotachak/sia-unal-bridge)
+> (Colombia, UNAL course catalogue as JSON),
+> [`roncuevas/ipn_saes_utils`](https://github.com/roncuevas/ipn_saes_utils) and
+> [`ramomar/siase-schedule-scraper`](https://github.com/ramomar/siase-schedule-scraper)
+> (Mexico, IPN SAES and UANL SIASE),
+> [`Open-Source-eUdeC/UdeCursos-bot`](https://github.com/Open-Source-eUdeC/UdeCursos-bot)
+> (Chile, Universidad de Concepción),
+> [`shishiv/EDUCA`](https://github.com/shishiv/EDUCA) (Brazil, municipal school
+> management with LGPD framing) and
+> [`maiatechdev/avit`](https://github.com/maiatechdev/avit) (Brazil — built
+> explicitly inside the pedagogical window **Lei 15.100/2025** leaves open for
+> phones in class, with a Socratic mentor that withholds answers).
+>
+> 🔵 **The opportunity this implies, and it is specific:** in LATAM the scarce
+> asset is **a bridge to the ministry's or university's existing system**, and
+> those bridges exist, permissively, one institution at a time. A studio's value
+> is consolidating them — not writing the twentieth SAES scraper. 🟡 And
+> [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) (Apache-2.0,
+> **582★**, Brazil) is **archived**: a design reference and a migration source,
+> not a platform.
 
 **Regulatory posture — fragmented, and now measured.** 🆕 A 2026 **Universidad de
 los Andes** study counts **716 AI-related instruments across 23 countries and

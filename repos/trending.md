@@ -4,6 +4,148 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p531` — `2026-10-29` — **🟢 THE 349 DROPPED ADDRESSES ARE TRIAGED, EVERY GRANT READ FIRST-HAND: **203 PERMISSIVE**, AND THE YIELD IS NOT A SCATTER — IT IS THE **JUPYTERHUB DEPLOYMENT FAMILY**, NINE LIVE REPOS, **2 309★**, BSD-3-CLAUSE THROUGHOUT, AND THE LIVE CORPUS HAD ZERO ROWS FOR IT. 🔴 THE TWO MOST-DESCRIBED UNFILED PERMISSIVE ADDRESSES IN THE WHOLE BASE ARE `ltijs` (28 passes) AND `pylti1.3` (27) — ONE PASS AFTER `p530` BUILT AN LTI LAYER AND FILED THE PHP LIBRARY. 🟢 `528-C` NEEDED A RETRIEVAL AND THE BASE HAD FOUR OF THEM. 🟢 `530-B`: THE FORK HOLE IS 89 ADDRESSES AND ZERO AT ANY STAR FLOOR.**
+
+### 🟢 `Gap 530-A` ask 1 — the triage, and what the drop channel is actually worth
+
+`530-A` expected *"a large yield"*. 🟡 **The yield is large and it is not
+uniform, and the distinction is the finding.** Of the **38** permissive
+archive-only addresses above 100★:
+
+| What they are | Count | Examples |
+|---|---|---|
+| 🔴 General-purpose AI/infrastructure — **not education software** | **21** | `vllm` (95.9k), `infiniflow/ragflow` (93.1k), `mem0` (68.1k), `litellm` (62.3k), `llama_index` (52.7k), `appsmith` (41.1k), `dspy` (38.8k), `qdrant` (35.3k), `jitsi-meet` (30.2k), `gpt-researcher` (30.4k), `RAG-Anything` (24.3k), `unstructured` (15.6k), `syft` (9.8k), `mcp-go` (9.2k) |
+| 🟢 Education systems and libraries | **17** | the JupyterHub family, `supermemo` (337), `fsrs.js` (180), `catsim` (153), `siyuanzhao/automated-essay-grading` (121), `dsh-openmaic` (111) |
+
+🔵 **So a rewrite dropping `vllm` was *correct*** — it is an inference server, not
+education software, and a curated education file is right not to carry it. 🔴
+**A rewrite dropping the JupyterHub family was not**, and nothing in the process
+could tell the two cases apart, because nothing was reading the grant or the
+subject. That is what the triage is for, and it is why `531-A` asks for it in
+front of a rewrite rather than after one.
+
+### 🟢 The yield, named: nine repos, one job, one grant
+
+| Repo | Grant (title block) | Stars | Forks | Pushed |
+|---|---|---|---|---|
+| [`jupyterhub/kubespawner`](https://github.com/jupyterhub/kubespawner) | 🟢 **BSD-3-Clause** | **611** | 308 | 2026-10-27 |
+| [`jupyterhub/dockerspawner`](https://github.com/jupyterhub/dockerspawner) | 🟢 **BSD-3-Clause** | **543** | 305 | 2026-10-27 |
+| [`jupyterhub/oauthenticator`](https://github.com/jupyterhub/oauthenticator) | 🟢 **BSD-3-Clause** | **443** | 367 | 2026-10-27 |
+| [`jupyterhub/ldapauthenticator`](https://github.com/jupyterhub/ldapauthenticator) | 🟢 **BSD-3-Clause** | **214** | 177 | 2026-08-20 |
+| [`jupyterhub/batchspawner`](https://github.com/jupyterhub/batchspawner) | 🟢 **BSD-3-Clause** | **207** | 137 | 2026-07-17 |
+| [`jupyterhub/systemdspawner`](https://github.com/jupyterhub/systemdspawner) | 🟢 **BSD-3-Clause** | 101 | 45 | 2026-10-24 |
+| [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** | 73 | 55 | 2026-07-01 |
+| [`jupyterhub/wrapspawner`](https://github.com/jupyterhub/wrapspawner) | 🟢 **BSD-3-Clause** | 65 | 60 | 🟡 2025-08-16 |
+| [`jupyterhub/sudospawner`](https://github.com/jupyterhub/sudospawner) | 🟢 **BSD-3-Clause** | 52 | 39 | 2026-08-05 |
+| 🔴 [`jupyterhub/jupyterhub-tutorial`](https://github.com/jupyterhub/jupyterhub-tutorial) | BSD-3-Clause | **202** | 56 | 🔴 **ARCHIVED** |
+| 🔴 [`jupyterhub/yarnspawner`](https://github.com/jupyterhub/yarnspawner) | BSD-3-Clause | 19 | 14 | 🔴 **ARCHIVED** |
+
+🔴 **The archived row at 202★ is the one a reader would reach for first.** The
+*official deployment tutorial* is read-only history, so an engagement budgets its
+own runbook. 🔵 `ltiauthenticator` at **73★** is the family's least-starred live
+member and its most load-bearing: it is what makes the hub a *course* rather than
+a separate system, and it has been in this base's history since `p13` across
+**13 passes** unfiled.
+
+### 🔴 The live debt, recomputed against the current files — and the top of it is an indictment
+
+The committed ledger's `filed_on` column is `p530`'s **opening** balance. Recomputed
+against the live curated files as they stand, both address channels:
+🔴 **1 454 unfiled permissive addresses.** The top, by distinct passes that
+described them:
+
+| Passes | Address | Grant | First seen |
+|---|---|---|---|
+| 🔴 **28** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | Apache-2.0 · **373★** | `p25` |
+| 🔴 **27** | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | MIT · **138★** | `p25` |
+| 🔴 **25** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | MIT · 10★ | `p35` |
+| 🔴 **24** | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | MIT | `p107` |
+| 🔴 **20** | [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server) | MIT · 60★ | `p69` |
+| 🔴 **13** | [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) | BSD-3-Clause · 73★ | `p13` |
+| 🔴 **12** | [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) · [`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core) · [`Apereo…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | MIT · Apache-2.0 · ECL-2.0 | — |
+| 🔴 **11** | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | MIT | `p25` |
+| 🔴 **10** | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | BSD-3-Clause · **153★** | `p108` |
+
+🔴 **`ltijs` and `pylti1.3` are the finding.** One pass ago `p530` added *"the
+e-learning standards implementations — twelve repos … SCORM runtimes, xAPI
+learning record stores, **LTI frameworks**"* and filed the **PHP** library. The
+**Node reference implementation (Apache-2.0, 373★)** and the **Python one (MIT,
+138★)** — the #1 and #2 most-described unfiled permissive addresses in the entire
+base — stayed unfiled. 🔵 **A promotion sweep that reads a *layer* and not a
+*ranking* promotes what it happens to look at.** `531-B` asks for the ranking to
+be the sweep's input.
+
+All of the above are now filed on
+[`foundations.md`](foundations.md), with
+[`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) also carried in
+[`../intel/market.md`](../intel/market.md) as 🟢 **the first LATAM-origin
+psychometrics instrument on this base**.
+
+### 🟢 `Gap 528-C` CLOSES — and it needed a retrieval, four times over
+
+`528-C` has been scoping a dependency-grant enumerator as a **build** since `p528`.
+`p530` found [`aboutcode-org/scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit)
+in the drop set and asked `p531` to evaluate it. 🟢 **Evaluated, from its own
+README:** it *"detects licenses, copyrights, package manifests, **direct
+dependencies**"* and *"can process packages, build manifest and lockfile formats
+to collect Package URLs and extract metadata"*. **That is the instrument,
+verbatim.**
+
+🔴 **And it is not alone in the drop set.** Four industry-standard licence/SBOM
+instruments were owned and dropped. 🟡 **Provenance, stated precisely because the
+two drop measures differ:** `ort`, `syft` and `cyclonedx-cli` are in the **349**
+archive-only set `p531` triaged; `scancode-toolkit` is in `archive-drops`, the
+**691**-row looser bound, where `p530` found it. 🔵 Both are `530-A` measures and
+`530-A` said why they differ — this is the first time the difference has
+changed which instrument a finding is attributed to.
+
+| Instrument | Grant | Stars | What it answers |
+|---|---|---|---|
+| [`aboutcode-org/scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit) | 🟢 Apache-2.0 · 🟡 **CC-BY-4.0 datasets** | **2 656** | the evidence pack |
+| [`oss-review-toolkit/ort`](https://github.com/oss-review-toolkit/ort) | 🟢 Apache-2.0 | **2 109** | the CI gate: an *Analyzer* that *"determines the dependencies of projects … abstracting which package managers are actually being used"*, plus policy-as-code |
+| [`anchore/syft`](https://github.com/anchore/syft) | 🟢 Apache-2.0 | **9 792** | the built artefact's SBOM |
+| [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli) | 🟢 Apache-2.0 | 552 | SBOM merge, diff, conversion |
+
+🟡 **One caveat, and it is this base's own fourth verdict band.** `scancode`'s
+engine is Apache-2.0 and its **reference licence datasets are CC-BY-4.0** — so
+redistributing the rule set inside a product carries attribution duties. 🔵 The
+licence-checking tool is itself a *"granted, but not under a code licence"* case.
+Composition: `P564`.
+
+### 🟢 `Gap 530-B` CLOSES — the fork hole is real, large, and irrelevant to every decision
+
+| Census | no `fork:true` | with `fork:true` | Δ |
+|---|---|---|---|
+| `moodle mcp in:name,description` — `p529`'s published field | **223** | 🔴 **312** | **+89** |
+| `moodle mcp`, unscoped | **251** | 🔴 **340** | **+89** |
+| `moodle mcp in:name,description stars:>5` | **14** | 🟢 **14** | **0** |
+| `student information system school management in:name,description stars:>40` (`p529`) | **4** | 🟢 **4** | **0** |
+| `topic:student-information-system stars:>40` (`p530`) | **4** | 🟢 **4** | **0** |
+
+🟢 **`p530`'s prediction holds — 28.5% of the forked total — and the consequence
+it feared does not.** The hole is **entirely in the zero-star tail**. 🔵 **Rule
+13: `fork:true` belongs on a raw field size and nowhere else.** A field size
+without it is a floor; a starred census with it is unchanged, and adding it
+implies a precision the measurement never had. 🔴 **`p529`'s `total_count: 222`
+was a floor, not a census** — and `223` today, one pass later, which also puts
+this field's growth at roughly one address per pass.
+
+### 🔵 The method note that is worth more than any single row
+
+🔴 **Every promotion this pass came from an index, and none came from search.**
+Three channels ran: generic web search (**zero** shelf-grade findings, third
+consecutive pass), the archive-drop triage (**349** addresses, grants read
+first-hand), and the live debt query (**1 454** unfiled permissive). 🟢 **Two
+indices over material this base already owned produced **29 newly filed
+addresses** — 23 on [`foundations.md`](foundations.md), 4 agent rows on
+[`../agents/top.md`](../agents/top.md) and 2 further platforms on
+[`../verticals/solutions.md`](../verticals/solutions.md), with Artemis and the
+JupyterHub core cross-filed as platforms; the network produced none.** 🔵 Trend **15** in [`../intel/trends.md`](../intel/trends.md)
+says retrieval is harder than discovery in this sector. This is the third pass to
+measure it, and the ratio is no longer close.
+
+---
+
 ## 🆕 `p530` — `2026-10-29` — **🟢 THE INDEX EXISTS. `evidence/address-ledger.tsv` COMPACTS ALL NINE FILES INTO 3 098 ADDRESSES AND REPORTS THE NUMBER THIS BASE HAS BEEN PAYING FOR WITHOUT MEASURING: **79 FILED, 3 019 HISTORY-ONLY** — and 97 of them are permissive repos described five or more times and never filed. 🔴 THE LEDGER'S FIRST RUN FALSIFIED A `p529` NON-FINDING AND FOUND A PERMISSIVE, AI-NATIVE LMS THIS BASE HAS SAID FOR FOUR PASSES DOES NOT EXIST.**
 
 ### 🟢 `Gap 529-A` CLOSES — the instrument, and what it cost to get right
