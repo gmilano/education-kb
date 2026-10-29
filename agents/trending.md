@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p522` — `2026-10-29` — **🟢 THE WEEK'S ONE DATED INSTRUCTIONAL RELEASE IS NOW CONFIRMED ON A PRIMARY CHANNEL AND THE AGGREGATOR THAT DENIED IT IS REFUTED: a release tracker asserted TODAY that `DeepTutor`'s latest is `v1.6.0` (2026-08-27) and that no `v1.7.0` exists; `git ls-remote --tags` answers `refs/tags/v1.7.0 = a44d28a6aeb4`, 88 distinct tags. 🔴 The regulatory clock is what actually moved this window, in FOUR jurisdictions at once, and every movement is BACKWARDS except the labelling obligations. 🟡 No new instructional agent was announced in the window — the sweep found 24 addresses and not one new to this base.**
+
+### Dated this window
+
+| Date | What | Signal |
+|---|---|---|
+| `2026-10-29` | `git ls-remote --tags HKUDS/DeepTutor` → **`refs/tags/v1.7.0` = `a44d28a6aeb4`**, 88 distinct tag names; HEAD `1ea7df155447`; Apache-2.0 `11 408` B | 🟢 **`p521`'s `v1.7.0` claim moves from the rendered page to the git protocol.** A release aggregator read the same day says *"no evidence of a v1.7.0 … latest is v1.6.0, 2026-08-27"* — 🔴 **refuted by the repository itself** |
+| `2026-10-29` | `DeepTutor` **48.6k**★ / 6.0k forks on the rendered page | 🟢 `48.4k` at `p521` **earlier today** → `48.6k`. A same-day move large enough to survive rounding |
+| `2026-10-28` | `DeepTutor` `v1.7.0` release date as the page prints it (`2026.10.28`) | 🟢 Consistent with `p521`; now corroborated by the tag's existence |
+| `2026-01-22` → `2027-01-22` | 🇰🇷 **Korea's AI Basic Act** has been in force since `2026-01-22`, with penalties (up to **KRW 30 m**) deferred for a **one-year grace**, and its high-impact list names **student assessment in early childhood, elementary and secondary education** (Art. 9(1) Basic Education Act tie-in, per the CSET translation) | 🔴 **An education-specific high-impact classification, already in force.** Not previously typed on this base's APAC rows — now `intel/policy-matrix.tsv` carries it |
+| `2026-12-02` | 🇪🇺 **EU AI Act Art. 50(2)** machine-readable marking grace **expires**, for generative systems placed on the market before `2026-08-02` | 🔴 **Five weeks out.** `p521` carried this as single-source and ordered it verified first; see `intel/market.md` `p522` — it is now convergent and attributed to the Commission's own fact page, 🔴 **which is DNS-blocked from this session** |
+| `2026-12-01` | 🇨🇱 **Chile's Ley 21.719** data-protection regime takes effect, with the supervisory agency fully operative and sanctions applicable | 🔴 **One day before the EU marking deadline** — and 🟡 a bill to defer it to `2027-12-01` is live in Congress. **Do not plan against either date without checking the bill** |
+| `2026-02-20` | 🇮🇳 India's AI-generated-content labelling and provenance-marker requirement in force | 🟡 Applies to edtech output surfaces; secondary sourcing |
+
+### 🔵 The shape of the week, stated plainly
+
+🔵 **`p521` found the money in the back office and that still holds — but this window's movement
+is regulatory, not commercial, and it is almost entirely DEFERRAL.** Four jurisdictions, one
+direction:
+
+| Jurisdiction | The hard obligation | Where it moved |
+|---|---|---|
+| 🇪🇺 EU | Annex III high-risk for education (grading, admission, proctoring) | `2026-08-02` → **`2027-12-02`** |
+| 🇰🇷 Korea | AI Basic Act penalties incl. education high-impact | in force `2026-01-22`, **penalties waived to ~`2027-01-22`** |
+| 🇻🇳 Vietnam | education named high-risk by statute (Decision 33/2026) | compliance **`2027-03-01`**, **+6 months** for systems already running before `2026-08-15` → 🟢 **corroborates `p520`'s two-clock resolution exactly** (`2027-03-01` base, `2027-09-01` incumbents) on an independent source |
+| 🇨🇱 Chile | data-protection enforcement over student data | `2026-12-01`, **deferral bill to `2027-12-01` pending** |
+
+🔴 **What did NOT move, in any of the four: the labelling, marking and disclosure obligations,
+and the outright prohibitions.** EU Art. 50 transparency applies from `2026-08-02` with no grace
+for chatbot disclosure or deepfake labelling; emotion recognition in EU education has been
+prohibited since `2025-02-02`; India's labelling rule is in force now.
+
+🔵 **So the sellable artefact this quarter is the one nobody is briefing.** A client reading
+"Europe delays education AI to 2027" concludes there is nothing to do, and the thing there IS to
+do — output marking, disclosure, provenance — binds in five weeks and is cheap to build. See
+`compose/patterns.md` `P537`.
+
+### 🟡 Supply: nothing new was announced, and the sweep measured it
+
+🟢 24 agent addresses swept off GitHub's own topic listings (`ai-tutor`, 817 repositories listed;
+`intelligent-tutoring-system`, 42), each grant read from served bytes at a resolved default
+branch. 🟢 **19 of 24 permissively buildable.** 🔴 **Zero new to this base** — the seventh
+independent saturation confirmation, and the first on this discovery axis. The full graded table
+is in `agents/top.md` `p522`.
+
+🔴 **One refusal worth repeating in a trending file, because it is a trap for a weekly sweep:**
+[`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) — a named,
+paper-backed tutoring chatbot — **serves no grant at all**, on 16 filenames probed at the
+resolved default branch. A trending list that ranks by novelty will keep surfacing it; it is
+unusable in paid work until its authors publish a licence.
+
+---
+
+
 ## 🆕 `p521` — `2026-10-29` — **🟡 THIS WEEK'S EDUCATION-AGENT NEWS IS OPERATIONAL, NOT INSTRUCTIONAL: the two dated vendor announcements in the window are an **invoice agent** and a **recruitment/course-discovery agent**. Neither teaches anybody anything. 🔴 And a sector survey in the same window reports that relatively FEW districts and colleges have agents in day-to-day operations, with leaders withholding access to sensitive systems — so even the operational wave is announcement-heavy. 🟢 The one instructional release that is dated and verifiable is `DeepTutor` `v1.7.0` (`2026-10-28`, Apache-2.0).**
 
 ### Dated this window

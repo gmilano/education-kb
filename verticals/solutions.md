@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p522` — `2026-10-29` — **🟢 THE WHOLE PLATFORM TIER IS RE-GRADED BY INSTRUMENT AND EVERY FAMILY CELL HOLDS: 11 platform rows, licence bytes re-read at the RESOLVED default branch, **11/11 MATCH** — `OpenOLAT` Apache-2.0, `sakai` ECL-2.0, `moodle`/`chamilo`/`ILIAS`/`GibbonEdu` GPL-3.0, `openedx`/`tutor`/`frappe-lms` AGPL-3.0, `bigbluebutton` LGPL-3.0. 🔴 AND THE TIER HIDES A DEPLOYMENT FACT THE LICENCE COLUMN NEVER SHOWS: **five of these eleven platforms do not develop on `main`** — `develop`, `release`, `release_11`, `v31.0.00`, `v4.0.x-develop` — so "clone the default branch" is wrong advice for them, and two serve their grant under a filename no default probe tries (`COPYING.txt`, `license.txt`).**
+
+### 🟢 The platform tier, re-attested from bytes `2026-10-29`
+
+| Platform | Grant | Served | Default branch @ HEAD | Grant path | Hosting a modified build |
+|---|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | `10 982` | `master` @ `5b42ca47bd10` | `LICENSE` | 🟢 no obligation |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | `11 120` | `master` @ `dd5d200698ae` | `LICENSE` | 🟢 no obligation (Apache derivative, explicit patent grant) |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | `1 062` | `main` @ `e137ca47cbec` | `LICENSE` | 🟢 no obligation |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | `35 147` | `main` @ `46c042e7da65` | 🔵 `COPYING.txt` | 🟢 none — hosting is not distribution |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** | `35 147` | `master` @ `bbb6ec898bc7` | `LICENSE` | 🟢 none |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** | `35 147` | 🔵 `release_11` @ `7382ba444263` | `LICENSE` | 🟢 none |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | **GPL-3.0** | `35 121` | 🔵 `v31.0.00` @ `cb321113da90` | `LICENSE` | 🟢 none (SIS, not LMS) |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **LGPL-3.0** | `7 652` | 🔵 `v4.0.x-develop` @ `799a973616bd` | `LICENSE` | 🟡 weak — library boundary matters |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0** | `35 136` | `master` @ `7f0416cd75e2` | `LICENSE` | 🔴 **source owed to the client's users** |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | **AGPL-3.0** | `34 523` | 🔵 `release` @ `49836f63029e` | `LICENSE.txt` | 🔴 same |
+| [`frappe/lms`](https://github.com/frappe/lms) | **AGPL-3.0** | `33 893` | 🔵 `develop` @ `86e891cc2c54` | 🔵 `license.txt` | 🔴 same |
+
+🔵 **`p521`'s hosting decision table stands unchanged and is now attested rather than asserted.**
+The question that splits this tier is still *does the engagement host a MODIFIED build?* — and
+the answer still costs money only on the three AGPL rows.
+
+### 🔴 The branch fact the licence column cannot show
+
+🔴 **Five of these eleven rows do not develop on `main` or `master`.** `ILIAS` ships from
+`release_11`, `GibbonEdu` from a **version** branch `v31.0.00`, `bigbluebutton` from
+`v4.0.x-develop`, `tutor` from `release`, `frappe/lms` from `develop` — and on the wider
+foundations shelf `oppia`, `kolibri` and `openroberta-lab` make it **8 of 23** (`35%`).
+
+🔵 **Why a solutions file cares, not just a probe:**
+
+1. **Kickoff instructions.** "Clone the default branch and build" is correct for `moodle` and
+   wrong for `GibbonEdu`, where the default branch IS a release and the next release is a
+   different branch. An engagement that pins `main` on these projects pins nothing.
+2. **Patch delivery.** On a project that ships from `release_11`, a fix proposed against `main`
+   will not reach the client's deployed version this cycle. Target the release branch the
+   institution actually runs.
+3. **Grant discovery.** Compose the branch trap with the filename trap — `frappe/lms` serves
+   **AGPL-3.0** at `license.txt` on `develop` — and a probe looking for `LICENSE` on `main`
+   finds **nothing**, which reads as *"no licence, probably fine"*. 🔴 **It is the strongest
+   copyleft in this tier.**
+
+### 🟢 The permissive route through the tier, with the grants that make it possible
+
+| If the client needs… | Take | Grant | Why this one |
+|---|---|---|---|
+| An institutional LMS of record, closed derivative permitted | `OpenOLAT` | **Apache-2.0** | 🟢 The permissive LMS of record; re-confirmed from bytes for the third consecutive pass |
+| A university-grade platform with an explicit patent grant | `sakai` | **ECL-2.0** | Apache-derived, written for HE consortia |
+| A modern, AI-native LMS to extend rather than retrofit | `mentingo` | **MIT** | NestJS + Postgres **RLS** tenant isolation, built-in AI mentor and role-play; self-described alternative to Moodle/Open edX |
+| Virtual classroom / conferencing inside the LMS | `apache/openmeetings` | **Apache-2.0** | `51 425` B grant re-read; the permissive alternative to the LGPL BigBlueButton path |
+| A municipal SIS in LATAM | `portabilis/i-educar` | 🟡 **GPL-2.0** | 🔴 **Version matters and `p521`'s instrument dropped it**: GPL-2.0-**only** will not combine with Apache-2.0 components. See `agents/top.md` `p522` |
+
+🔵 **The one-line rule for a kickoff deck:** *everything a client wants to HOST can be
+permissive, and everything a client wants to EXTEND can be MIT — but only if you read the grant
+at the branch the project actually ships from.*
+
+---
+
+
 ## 🆕 `p521` — `2026-10-29` — **🟢 THE PLATFORM TIER IS RE-GRADED BY INSTRUMENT AND THE PERMISSIVE ENTRY HOLDS: `OpenOLAT` is Apache-2.0 (`10 982` B), independently re-read this pass. 🔴 A vendor comparison page published in this window states that NO Apache-licensed LMS exists and that `frappe/lms` is "MIT (no restrictions)". Both are false against served bytes — and `frappe/lms` is **AGPL-3.0**, the strongest copyleft on this shelf. 🔵 The platform tier splits cleanly on ONE question a client must answer at kickoff: does the engagement HOST a modified build?**
 
 ### 🔴 The hosting question is the whole decision
@@ -1019,7 +1078,6 @@ license read from bytes at a pinned SHA — see
 | **Lesson planning** | [Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | **MIT** | 9 | 🟢 **New row `p493`** (restored). MSR India, VELLM, with Sikshana Foundation. **Every artefact is routed to a teacher for review before classroom use** — a shipped implementation of the human-oversight gate. |
 | **Peer assessment / peer review** | [expertiza](https://github.com/expertiza/expertiza) | **MIT** | **194** *(🟢 `p512`, API)* | 🟢 **New row `p512`**, from the fork-ranked leg. Rubric-driven peer review with review mapping and instructor moderation; **1,329 forks / 194★**, NSF-funded (NC State). **North America.** The cheapest credible place to put AI in assessment: the model drafts or checks a *peer's* review and never issues the grade. 🔴 Grant has no title line — tell your licence gate. |
 | **STEM / robotics teaching** | [Open Roberta Lab](https://github.com/OpenRoberta/openroberta-lab) | **Apache-2.0** | **147** *(🟢 `p512`, API)* | 🟢 **New row `p512`.** Fraunhofer IAIS; browser-delivered block programming for real robots, no install. **EMEA, state-backed** — the sovereignty answer in a K-12 STEM procurement. 🔴 **The grant is on `master`, not on the default branch `develop`** (11,359 B `8c6db340475136df`): a default-branch probe reports a phantom absence. |
-
 | **LTI / IMS Global launch** 🆕 | [Tsugi](https://github.com/tsugiproject/tsugi) | **Apache-2.0** | **377** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** The standard by which an external tool is launched *from inside* an LMS — the integration every engagement needs, with no copyleft obligation attached. **267 forks against 377★.** 🔵 **71 tags but not a version ladder** (newest-sorted is `PHP_7_2`): **pin the SHA.** |
 | **SCORM runtime** 🆕 | [scorm-again](https://github.com/jcputney/scorm-again) | **MIT** | **360** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** Modern TypeScript **SCORM 1.2 + 2004** runtime, 63 tags. 🟢 Pairs with `Papermorph` (MIT, agents shelf), which **emits** SCORM — so generated lessons land inside the client's existing LMS rather than beside it. |
 | **xAPI specification** 🆕 | [xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | **Apache-2.0** | **956** *(🟢 `p513`, API)* | 🟢 **New row `p513`.** The **xAPI statement grammar** from ADL, the spec beside `openfun/ralph`'s MIT LRS — together a fully permissive learning-telemetry path. 🔴 **Last pushed `2025-07-03`, 5 tags — read it, do not vendor it.** |

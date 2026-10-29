@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p522` — `2026-10-29` — **🟢 THREE RECIPES, EACH BUILT ON SOMETHING THIS PASS MEASURED RATHER THAN ASSUMED. `P536` is the shelf-attestation gate — the sweep that re-derived 23 of 23 published family+byte cells today, wired as a standing check, and it exists because 8 of those 23 repositories do NOT develop on `main`. `P537` is the EU `2 December 2026` marking build, scoped by WHO the grace actually covers, which the "delayed to 2027" headline buries. `P538` is the retention loop: a fully-MIT spaced-repetition + knowledge-tracing stack, every grant read from bytes today, and it is the layer `P534`'s institutional stack does not have.**
+
+---
+
+### `P536` — Shelf attestation: re-derive every published licence cell, branch-resolved
+
+**Problem it solves.** This base publishes `family` and `bytes` cells to clients and has
+historically checked them by hand, one pass at a time. 🔴 `p512` found **39 wrong star cells**
+on a single sweep; a wrong *licence* cell is worse, because it decides whether work is legal.
+🔴 And a probe that assumes `main`/`master` cannot read **8 of the 23** rows on this shelf.
+
+**Components — all in-repo, no network beyond two public channels:**
+
+| Component | Grant | Role |
+|---|---|---|
+| [`compose/code/p522-family-resolution/`](code/p522-family-resolution/) | this KB | SPDX family **with version**, posture incl. `PUBLIC-DOMAIN`, 42-check offline suite |
+| [`compose/code/p521-commercial-posture/`](code/p521-commercial-posture/) | this KB | Restriction scan — imported, not replaced; its `\b` anchors are load-bearing |
+| `git ls-remote --symref` | — | 🟢 Default branch **resolved**, exact HEAD SHA. Works on arbitrary public repos here |
+| `raw.githubusercontent.com` | — | 🟢 The only licence-bytes channel open in this session class |
+
+**Wiring:**
+
+1. **Parse the published cells out of the shelf file** — slug, family, byte count — so the check
+   never reads the row it is checking from the same sentence that wrote it.
+2. **Resolve the default branch** with `git ls-remote --symref <url> HEAD`. 🔴 **Never assume.**
+   On this shelf the answer is `develop` three times, `release`, `release_11`, `v31.0.00` and
+   `v4.0.x-develop` once each.
+3. **Probe the grant path** at that branch across the filename ladder — `LICENSE`, `LICENSE.md`,
+   `LICENSE.txt`, `COPYING`, `COPYING.txt`, `license.txt`, `NOTICE`, then
+   [`ingest/probe-grant.sh`](../ingest/probe-grant.sh)'s 14-language set. 🔴 `moodle` answers at
+   `COPYING.txt`, `frappe/lms` at `license.txt`.
+4. **Grade with `family_resolution.resolve()`**, and compare BOTH cells: family and exact served
+   byte count from `curl -w %{size_download}`. 🔵 **Do not measure bytes with
+   `printf '%s' "$body" | wc -c`** — it strips a trailing newline and under-reports by 1, which
+   is enough to break a byte-identity cell.
+5. **Report three verdicts only** — `MATCH`, `DIFFERS`, `UNCHECKED`. An `UNCHECKED` row (channel
+   refused) must never be rendered as agreement.
+
+**First run, `2026-10-29`:** 23 rows, **23/23 MATCH on both cells**. Full table in
+`repos/foundations.md` `p522`.
+
+**What it costs.** ~2 minutes of network for 23 rows. **Run it on every pass that touches a
+shelf**, and before any deck that quotes a licence.
+
+---
+
+### `P537` — The `2 December 2026` marking build, scoped to who the grace actually covers
+
+**Problem it solves.** `P535` built the EU Article 50 marking pack. 🔴 **What it does not do is
+tell the client whether the deadline applies to them at all** — and the scope is the whole
+decision, because it splits the client's own product line in two.
+
+**The rule, from this window's convergent reading (`intel/market.md` `p522`):**
+
+| The generative system was placed on the EU market… | Marking obligation (Art. 50(2)) |
+|---|---|
+| **before `2026-08-02`** | 🟡 grace — but it **expires `2026-12-02`** |
+| **on or after `2026-08-02`** | 🔴 **no grace at all** — mark from the moment of placement |
+| content generated **before `2026-08-02`** | 🟢 no retroactive labelling required (encouraged) |
+
+🔴 **And three Art. 50 duties never had a grace period:** chatbot disclosure, deepfake
+labelling, emotion-recognition notification — all live since `2026-08-02`. 🔴 Emotion
+recognition in education is **prohibited** outright (Art. 5, since `2025-02-02`, €35 m / 7%).
+
+**Wiring — a two-week engagement, not a programme:**
+
+1. **Inventory by placement date.** Split every generative feature into *pre-* and
+   *post-`2026-08-02`*. The post- set is already non-compliant if unmarked; it goes first.
+2. **Mark the output, machine-readably.** C2PA-style provenance on generated media; a
+   watermark or embedded marker on generated text where the surface allows it; the marker must
+   survive the export paths the product actually has (PDF export, LMS upload, print).
+3. **Wire the disclosure surfaces** — tutor chat ("you are interacting with an AI system"),
+   synthetic media labels, and the removal of any emotion-inference feature from EU education
+   deployments. 🔴 Not a banner: a per-surface, per-locale assertion.
+4. **Produce the evidence pack** the Annex III work will need in 2027 anyway — model cards,
+   data lineage, human-oversight description, logging. 🔵 **Build it now while it is optional;
+   it is the same artefact the deferred obligations will demand.**
+5. **Cross-check the regional clocks before go-live** against
+   [`intel/policy-matrix.tsv`](../intel/policy-matrix.tsv): 🇰🇷 Korea (education assessment
+   high-impact, in force, penalties ~`2027-01-22`), 🇻🇳 Vietnam (`2027-03-01`/`2027-09-01`),
+   🇮🇳 India (content labelling since `2026-02-20`), 🇨🇱 Chile (**Ley 21.719, `2026-12-01`**,
+   deferral bill pending).
+
+🔵 **Why it sells.** The client has read that Europe moved education AI to 2027. The thing that
+binds them is five weeks out, cheaper than they expect, and reusable in four other
+jurisdictions. 🔴 **Price the marking work separately from the Annex III work** — one is due
+now, the other is a 2027 programme.
+
+---
+
+### `P538` — The retention loop: a fully-MIT spaced-repetition and mastery stack
+
+**Problem it solves.** `P534` ships a permissive institutional stack — LMS, tutoring agent,
+knowledge tracing, classroom. 🔴 **It has no retention layer.** A tutoring agent that cannot
+schedule review teaches a session, not a semester, and "did the learner retain it?" is the
+question a ministry or a corporate L&D buyer actually pays for.
+
+**Components — every grant read from served bytes `2026-10-29` at the resolved default branch:**
+
+| Layer | Component | Grant | Served | Branch @ HEAD |
+|---|---|---|---|---|
+| **Scheduler** | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | `1 079` | `main` @ `ff7c85cee735` |
+| **Agent surface over the deck** | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **MIT** | `1 074` | `main` @ `e0e347f7f399` |
+| **Mastery model** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | `1 066` | `main` @ `ccbaf37b07e3` |
+| **Host + reporting** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | `1 062` | `main` @ `e137ca47cbec` |
+| **ITS orchestration** | [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 🟢 **CC0-1.0** | `7 048` | `main` @ `79fc182c5d80` |
+| **Structured tutor** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | `1 105` | `main` @ `e24c8456e5f7` |
+| **Material → cards** | [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) | MIT | 🟡 shelf-carried, **not re-read this pass** | — |
+
+🟢 **Zero reciprocity anywhere in the stack, and one component — `gen-mentor` — carries no
+attribution duty at all.** 🔴 **Note the family cell:** `p521`'s instrument reads that payload as
+`CC-BY`, which would have imposed an attribution obligation the grantor waived. Graded here with
+[`p522-family-resolution`](code/p522-family-resolution/).
+
+**Wiring:**
+
+1. **`Skill-Anything` ingests** the client's source material (PDF, video, web, audio) and emits
+   quiz items and flashcards. 🟡 Re-read its grant before contracting — this pass did not.
+2. **`fsrs4anki` schedules** them. FSRS is the scheduler of record for spaced repetition; take
+   the algorithm and the parameter optimiser, not the Anki add-on packaging.
+3. **`anki-mcp-server` exposes the deck to the agent over MCP** — so the tutor can *add* a card
+   when it detects a gap and *read* due counts before choosing today's activity. 🔵 **This is
+   the join that makes the loop agentic instead of a cron job.**
+4. **`pykt-toolkit` models mastery** per skill from the review log (DKT/SAKT/BKT family), and its
+   output — not the raw review count — gates progression.
+5. **`OATutor` handles the structured remediation** when `pykt` says a skill is not mastered;
+   **`gen-mentor` orchestrates** the goal-oriented path across skills.
+6. **`mentingo` hosts it and reports** — enrolment, cohorts, dashboards, Postgres **RLS** tenant
+   isolation, so a multi-institution deployment does not rely on application-layer filtering.
+
+**Where it breaks.** 🔴 Four of the seven components are small single-maintainer repositories —
+fork and own them, do not take a runtime dependency. 🔴 `fsrs4anki`'s optimiser expects a review
+history; a cold-start cohort has none, so ship with the published default parameters and
+re-optimise at ~1 000 reviews. 🟡 EU deployments: a mastery model that gates progression is an
+**Annex III learning-path-steering** system — deferred to `2027-12-02`, not exempt (see `P537`).
+
+---
+
+
 ## 🆕 `p521` — `2026-10-29` — **🟢 THREE RECIPES, AND ONE OF THEM REPAIRS AN INSTRUMENT THIS BASE HAS BEEN RELYING ON. `P533` is the licence-clearance gate rebuilt after finding that [`licence-grant-gate`](code/licence-grant-gate/) returns `granted: True` for BOTH repositories `p520` refused — shipped with a 40-check offline suite and served-bytes fixtures. `P534` is the fully-permissive INSTITUTIONAL stack, buildable because `OpenOLAT` is Apache-2.0 and re-confirmed this pass. `P535` is the EU Article 50 marking pack for the deadline five weeks away that the "delayed to 2027" headline is burying.**
 
 ---

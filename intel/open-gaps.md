@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p522` — `2026-10-29` — **🟢 THE GATE SUITE RAN AND `p522` TURNED FOUR REDS GREEN — `gate-tables`, `gate-dates`, `gate-region-headings` and `gate-register-currency`, every one of them a defect this base had carried as "pre-existing backlog" for passes. 43/63 at entry → **47/63**, above `p511`'s and `p520`'s attested best of 45. 🟢 `Gap 475-E` RETIRES with a six-channel measurement and a replacement instrument. 🟡 `Gap 521-D` NARROWS: convergent and attributed to the Commission's own page, whose host is DNS-blocked here — so the primary stays unread and the reason is now measured. 🔴 THREE new gaps, all about this base's own instruments and register rather than its supply — including a DUPLICATE gap id (`521-G`) allocated twice on the same day from two different files.**
+
+### 🟢 Gate posture — the suite ran, and this pass is accountable for the delta
+
+🟢 **`make hooks` ran unpiped, captured in full: 980 lines / 92 823 bytes, 115 `PASS` lines.**
+At entry: **43 of 63 green**, 20 RED — 🔴 **two worse than `p520`'s attested 45/63**, and one of
+the two is directly attributable: `gate-register-currency` went RED because `p521` wrote six
+shelf sections and **did not add a section to this register**, so the register read `p520` while
+every shelf read `p521`. 🔵 **The gate is exactly right about that**, and it is the reason this
+section exists before the pass's own findings.
+
+🟢 **Four REDs repaired, each verified green by re-running the gate alone:**
+
+| Gate | The finding | The repair |
+|---|---|---|
+| `gate-tables` | 3 × `BLANK-SPLITS-TABLE` — `agents/top.md:1863`, `repos/foundations.md:1042`, `verticals/solutions.md:1022` | 🟢 the blank line between two rows of ONE table removed at each site. No row changed |
+| `gate-dates` | 1 × `ASSERTED` at `intel/market.md:1384` — the Annex III deferral stated as this base's own claim | 🟢 **`reportedly do not apply from 2 August 2026`** + the channel named (`Gap 521-D`). 🔵 The claim is unchanged; only its band is now visible |
+| `gate-region-headings` | `P383-MULTIPLE-BLOCKS` at `intel/market.md:320` — **2** canonical `## Opportunities by region` blocks, the contract allows 1 | 🟢 the two older blocks suffixed with their pass ids (`— p521`, `— p520`), matching the convention `p519` and earlier already used. `p522`'s block is the single canonical one |
+| `gate-register-currency` | `P418-REGISTER-STALE` × 6 — register newest `p520`, shelves newest `p521` | 🟢 **this section** |
+
+🔴 **Sixteen REDs remain and they are NOT this pass's**, on the attribution `p520` established:
+`gate-promotion-ledger` (57 findings, all `RESTORED-p436` rows on no live shelf — a backlog ~86
+passes old), `gate-cell-reproduction` (*"zero published cells parsed — a parse fault, not a clean
+shelf"*; its own 29 controls PASS), `gate-enumeration` (`REFUTED=4`, `QUEUE-UNENUMERATED=66`),
+`recount` (5 of 5 registered claims `NO-ANCHOR` — the sentences those claims check are gone from
+the shelves), plus `gate-offline`, `gate-evidence-store`, `gate-shelf-consistency`,
+`gate-fold-identity`, `gate-author-key`, `gate-census-currency`, `gate-grant-path`,
+`gate-census-union`, `gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`,
+`gate-promotion`.
+
+🔵 **`recount`'s five `NO-ANCHOR` findings are the cheapest remaining win and they are a
+REWRITE artefact**, not a counting error: the claims are registered against sentences that the
+`p490` rewrite removed. Either restore the sentence or re-point the anchor — and the fix is one
+pass's work, not a backlog.
+
+### 🟢 `Gap 475-E` — RETIRED, with the measurement the previous eleven passes deferred
+
+**Asked for:** a dated `repo,stars` snapshot, differenced next pass.
+**Measured this pass:** exact star integers are unobtainable in this session class on **six**
+channels — `curl api.github.com` (`403`), the search backend on the same URL (`403`),
+`curl github.com` HTML (`403`), `ungh.cc` (`ENOTFOUND`), `img.shields.io`
+(`connect_rejected`), rendered page (🔴 **rounds**).
+**The one remedy that exists** is `add_repo` per repository, which 🔴 does not scale to a 30-row
+third-party shelf and mints credentials against repositories this base merely observes.
+🟢 **Replacement, better than the original ask:** the git smart-HTTP protocol answers arbitrary
+public repositories here with **exact** HEAD SHAs and **exact** tag names. 🔴 **Blind spot named:**
+`ls-remote` resolves ARCHIVED repositories too (`microsoft/autogen` → `d07c667a3239`), so it
+proves motion and never maintenance.
+🟢 **One exact star channel does survive and it is where this base discovers:** GitHub's topic
+listings print exact integers below ~1 000★ (`585`, `537`, `923`, `134` today). Above that they
+round. **So: exact stars for the tail, SHAs for the head.**
+
+### 🟡 `Gap 521-D` — narrowed on two axes, still open, and the reason is now a measurement
+
+| What `p521` asked | Status after `p522` |
+|---|---|
+| Verify the `2026-12-02` Art. 50(2) marking date first | 🟢 **CONVERGENT** across this window AND attributed to the European Commission's own transparency fact page |
+| Read the primary text | 🔴 **STILL UNREAD.** `digital-strategy.ec.europa.eu` → `ENOTFOUND`, exactly as `eur-lex.europa.eu`. **Two EU primary hosts measured blocked today** |
+| — *new* — the grace period's SCOPE | 🟢 **Resolved and it is the commercially decisive part**: the grace only ever covered systems placed on the market before `2026-08-02`; later ones must mark from placement; chatbot disclosure and deepfake labelling have **no** grace |
+| — *new* — a second `2026-12-02` item | 🔴 A new Art. 5 prohibition (AI-generated NCII/CSAM) is reported on the same date, **single-source. Verify before quoting** |
+
+🔵 **Registered as a session-class fact, not a to-do:** the remedy for `521-D` is not another
+search leg, it is **network access to the two EU primary hosts**. Until a session has it, every
+EU date on these shelves is `reported` by construction — and `intel/policy-matrix.tsv`'s band is
+correct to say so.
+
+### 🔴 New gaps
+
+**`Gap 522-A` — `commercial_posture`'s family cells are wrong upstream, and the patch is
+downstream.** [`p521-commercial-posture`](../compose/code/p521-commercial-posture/) returns
+`CC-BY` for a **CC0-1.0** payload and bare `GPL` for **GPL-2.0**.
+[`p522-family-resolution`](../compose/code/p522-family-resolution/) corrects both and asserts the
+divergence as a test (`disagreement_with_p521`). 🔴 **Two instruments now answer the same
+question differently, which is the condition this base keeps paying for.** The fix is to move
+`family_resolution`'s resolution INTO `commercial_posture` and delete the patch. Next pass, and
+it is ~20 lines.
+
+**`Gap 522-B` — a SHA cell without a timestamp is not reproducible.**
+`THU-MAIC/OpenMAIC` moved **twice inside this pass's window** — `971233231219` at ~`06:30Z`,
+`ed564ec66a37` at `06:55Z`, against `ba2525637432` last recorded. 🔵 `p513` learned that an
+unshelved row is unwatched; this is the sharper form: **a pass that reads a SHA early and
+publishes it late publishes a stale cell**. Remedy: record `sha @ HH:MMZ` for any address that
+moves more than once a week, or record the tag instead of the branch HEAD.
+
+**`Gap 522-C` — the register has a DUPLICATE gap id, and both halves are live.**
+🔴 **`Gap 521-G` is registered twice, for two unrelated things:** at `intel/open-gaps.md:194`
+(and `:158`) it is *"`gate-shelf-consistency` credits a QUOTED grant as a live shelf
+assertion"*, registered by `p520`; at `intel/market.md:342` it is the uncorroborated Chilean
+*"Ley 21.640 (2025)"*, registered by `p521`. 🔵 **Two passes allocated the same letter on the
+same day from different files, which is what happens when the register is written last.**
+Remedy: the Chilean item takes a new id, and a gap id is allocated **in this file first**, not in
+the shelf that discovers it.
+
+🟡 **And a testable hypothesis for the Chilean half, worth one search next pass.** `p521` ruled
+*"treat `Ley 21.640` as false until read"*. 🟢 This pass verified a REAL and closely-numbered
+Chilean instrument that no earlier pass carried: **`Ley 21.719`**, data protection, published
+`2024-12-13`, in force **`2026-12-01`**, 🟡 with a deferral bill to `2027-12-01` pending. 🔵 **The
+hypothesis is that the unverifiable "21.640" is a transposition of `21.719`** — same country,
+adjacent number, both dated in the same window. It is a hypothesis, not a finding: do not write
+it into a client deck, and do not retire `21.640` on it either.
+
+### 🟢 Carried, unchanged
+
+`Gap 516-B` closed at `p521` (`Jal246/study-mcp` serves no grant — absence, not naming).
+`Gap 521-E` (no publishable headline market figure; a 3× spread at the base year) — **unmoved**,
+and this pass adds nothing to it: the figures found today (`$6.4B–$11.4B` for 2026 across four
+houses) reproduce the spread rather than narrowing it. `Gap 521-G` (the consistency gate crediting
+a *quoted* defect as a live assertion) — unmoved, and `gate-shelf-consistency` is still RED for
+it.
+
+🔴 **Declared abstention:** the agent shelf in `agents/top.md` (28+ rows) was **not** re-attested
+by instrument this pass — only the 23 rows of `repos/foundations.md` and the 11 of
+`verticals/solutions.md` were. The instrument and the sweep are general; the budget was not.
+**That is the next pass's cheapest high-value run** (`P536`).
+
+---
+
+
 ## 🆕 `p520` — `2026-10-29` — **🟢 FOUR GAPS CLOSE WITH CONTENT — `520-A` (Quebec, four dates + the required artefacts), `520-B` (the served-licence channel, SEVEN rows graded), `520-C` (Vietnam, the conflict dissolved into two clocks), `520-E` (the `P383` contract now REPAIRS itself, demonstrated on the live file this pass). 🟡 `520-D` closes PARTIALLY and REFUTES its own framing — Africa was a search artefact, not an absence. 🔴 `520-F` is HONOURED. 🔴 And the pass's hardest result is a condemnation, not a rescue: of the seven rows `520-B` unblocked, THREE are refused for paid client work and the three highest-starred are refused on CONTENT licences.**
 
 ### 🟢 Gate posture — the gate RAN, a second invocation ALSO ran, and the REDs are now ATTRIBUTED

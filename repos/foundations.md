@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p522` — `2026-10-29` — **🟢 THE WHOLE PUBLISHED SHELF IS RE-GRADED BY INSTRUMENT FOR THE FIRST TIME AND IT IS CLEAN: 23 of 23 rows, family cell AND byte cell, re-read from served bytes at the RESOLVED default branch — **23/23 MATCH on both cells**. 🔴 And the reason that result is not free: **8 of the 23 do not develop on `main` or `master`** — `develop`, `release`, `release_11`, `v31.0.00`, `v4.0.x-develop` — so a probe that assumes the two English defaults silently fails to read **35%** of this shelf. 🟢 `19` of 23 graded postures are buildable without reciprocity; the four that are not are named and are all platform-tier.**
+
+### 🟢 The attestation — every cell this file publishes, re-derived today
+
+Channel: `git ls-remote --symref` for the default branch and HEAD, `raw.githubusercontent.com`
+for the grant bytes, [`p522-family-resolution`](../compose/code/p522-family-resolution/) for the
+family. 🔵 **Nothing below is copied from the row it checks** — the published cell was parsed
+out of this file and compared afterwards.
+
+| Row | Published | Served today | Default branch @ HEAD | Grant file | Verdict |
+|---|---|---|---|---|---|
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | BSD-3-Clause `1 513` | BSD-3-Clause `1 513` | `main` @ `e7093476eb95` | `LICENSE.md` | 🟢 MATCH |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 `10 982` | Apache-2.0 `10 982` | `master` @ `5b42ca47bd10` | `LICENSE` | 🟢 MATCH |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | ECL-2.0 `11 120` | ECL-2.0 `11 120` | `master` @ `dd5d200698ae` | `LICENSE` | 🟢 MATCH |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | Apache-2.0 `11 358` | Apache-2.0 `11 358` | 🔵 `develop` @ `6b9292ddd297` | `LICENSE` | 🟢 MATCH |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | MIT `1 097` | MIT `1 097` | 🔵 `develop` @ `9ca1b5b13d7f` | `LICENSE` | 🟢 MATCH |
+| [`apache/openmeetings`](https://github.com/apache/openmeetings) | Apache-2.0 `51 425` | Apache-2.0 `51 425` | `master` @ `79b71bcb39f8` | `LICENSE` | 🟢 MATCH |
+| [`openfun/richie`](https://github.com/openfun/richie) | MIT `1 079` | MIT `1 079` | `master` @ `db881520709e` | `LICENSE` | 🟢 MATCH |
+| [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) | Apache-2.0 `11 359` | Apache-2.0 `11 359` | 🔵 `develop` @ `089b4483df27` | `LICENSE` | 🟢 MATCH |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | MIT `1 066` | MIT `1 066` | `main` @ `ccbaf37b07e3` | `LICENSE` | 🟢 MATCH |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | MIT `1 105` | MIT `1 105` | `main` @ `e24c8456e5f7` | `LICENSE` | 🟢 MATCH |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 `11 408` | Apache-2.0 `11 408` | `main` @ `1ea7df155447` | `LICENSE` | 🟢 MATCH — HEAD unmoved since `p510` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | MIT `1 065` | MIT `1 065` | `main` @ `ed564ec66a37` | `LICENSE` | 🟢 MATCH — 🔴 **HEAD moved twice today**, see below |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | MIT `1 062` | MIT `1 062` | `main` @ `e137ca47cbec` | `LICENSE` | 🟢 MATCH |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT `1 064` | MIT `1 064` | `main` @ `21a43a395ab4` | `LICENSE` | 🟢 MATCH |
+| [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | MIT `1 067` | MIT `1 067` | `main` @ `d6de81643928` | `LICENSE.md` | 🟢 MATCH |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 `35 147` | GPL-3.0 `35 147` | `main` @ `46c042e7da65` | 🔵 `COPYING.txt` | 🟢 MATCH |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | AGPL-3.0 `35 136` | AGPL-3.0 `35 136` | `master` @ `7f0416cd75e2` | `LICENSE` | 🟢 MATCH |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | AGPL-3.0 `34 523` | AGPL-3.0 `34 523` | 🔵 `release` @ `49836f63029e` | `LICENSE.txt` | 🟢 MATCH |
+| [`frappe/lms`](https://github.com/frappe/lms) | AGPL-3.0 `33 893` | AGPL-3.0 `33 893` | 🔵 `develop` @ `86e891cc2c54` | 🔵 `license.txt` | 🟢 MATCH |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 `35 147` | GPL-3.0 `35 147` | `master` @ `bbb6ec898bc7` | `LICENSE` | 🟢 MATCH |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 `35 147` | GPL-3.0 `35 147` | 🔵 `release_11` @ `7382ba444263` | `LICENSE` | 🟢 MATCH |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | GPL-3.0 `35 121` | GPL-3.0 `35 121` | 🔵 `v31.0.00` @ `cb321113da90` | `LICENSE` | 🟢 MATCH |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 `7 652` | LGPL-3.0 `7 652` | 🔵 `v4.0.x-develop` @ `799a973616bd` | `LICENSE` | 🟢 MATCH |
+
+🔵 **This base publishes refutations far more often than confirmations, so state the
+confirmation plainly: on the evidence of 23 independent byte reads, the family and byte cells of
+this shelf are correct as published.** Nothing here needed an edit.
+
+### 🔴 The 35% that a `main`/`master` probe cannot see, finally quantified
+
+`p509` found that assuming `main`/`master` mislabels repositories whose default branch is
+something else, and `p516` reproduced the same defect six passes later. 🔵 **It has never been
+sized against this shelf. It is 8 of 23 — 35%:**
+
+| Default branch | Rows | Addresses |
+|---|---|---|
+| `develop` | 3 | `oppia`, `kolibri`, `frappe/lms` |
+| a release branch | 2 | `overhangio/tutor` (`release`), `ILIAS` (`release_11`) |
+| a version branch | 2 | `GibbonEdu/core` (`v31.0.00`), `bigbluebutton` (`v4.0.x-develop`) |
+| `main`/`master` | 15 | the remainder |
+
+🔴 **And two rows do not serve the grant under an English default name either** —
+`moodle/moodle` at `COPYING.txt`, `frappe/lms` at `license.txt`. Compose the two traps and a
+naive probe reads **neither the branch nor the file** for `frappe/lms`, the strongest copyleft
+on this shelf. **That is how an AGPL row becomes an "unlicensed" row and then a usable one.**
+
+🔵 **Operational consequence for an engagement, not just for a probe:** a project whose default
+branch is `v31.0.00` or `release_11` is telling you it ships from version branches. Pin the
+branch the project itself develops on; `main` may be stale or absent.
+
+### 🔴 `OpenMAIC` moved twice inside this pass's own window
+
+| Read | HEAD |
+|---|---|
+| last recorded by this base (`repos/trending.md`) | `ba2525637432` |
+| this pass, first `ls-remote` (~`06:30Z`) | `971233231219` |
+| this pass, re-read (`06:55Z`) | **`ed564ec66a37`** |
+
+🔵 **A SHA cell without a timestamp is not reproducible.** `p513` recorded `OpenTutor` drifting
+*between passes* and drew the lesson that an unshelved row is an unwatched row. This is the
+sharper version: the highest-star MIT education agent on this base moved **during a single
+pass**, so a pass that reads a SHA early and publishes it late is already publishing a stale
+cell. 🟢 The grant bytes were **identical at both reads** (`1 065` B), so the drift is code-only
+— which is exactly what the byte cell exists to establish.
+
+### 🟢 The instrument this attestation runs on
+
+[`compose/code/p522-family-resolution/`](../compose/code/p522-family-resolution/) — 42 offline
+checks, nine fixtures read from served bytes today with `fixtures/PROVENANCE.tsv` recording slug,
+path and byte count for each. It corrects two family cells in `p521`'s `commercial_posture`
+(CC0-1.0 read as CC-BY; GNU families published without a version) and keeps `p520`'s two hand
+refusals as permanent positive controls — which is the only reason its own first draft, which
+graded a CC BY-NC payload as public domain, never shipped. See `agents/top.md` `p522`.
+
+---
+
+
 ## 🆕 `p521` — `2026-10-29` — **🟢 THE PERMISSIVE SHELF IS RE-READ FROM BYTES AND IT HOLDS: `19` of `31` graded rows are permissive with no reciprocity. 🔴 And the claim that would have shrunk it is FALSE — a vendor comparison page asserted today that no Apache-licensed LMS exists; `OpenOLAT` (`10 982` B) and `apache/openmeetings` (`51 425` B) are both Apache-2.0. 🔴 The same page called `frappe/lms` "MIT (no restrictions)". Its served bytes are **AGPL-3.0**, `33 893` B — the strongest copyleft on this shelf, asserted as the weakest.**
 
 ### 🔴 Two refutations of the search channel, both in the costly direction
@@ -1039,7 +1127,6 @@ so the numbers are now removed from it entirely** rather than corrected a fourth
 | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | **51** *(🟢 `p511`, API; `archived: false`)* | `91fef112394d` | 🆕 **New row `p511`. The only PERMISSIVE Learning Record Store on this base** — xAPI/LRS with FastAPI, Elasticsearch/Mongo backends and a CLI, **34 tags, latest `v5.1.0`**. Licence read from bytes: `LICENSE.md` **1,094 B**, `sha256₁₆ 08ea77291de9c70f`, holder **"France Université Numérique"** — the French national higher-education digital agency. 🟢 **Region: EMEA**, placed on the holder, not inferred. The component every xAPI-instrumented tutoring deployment needs and nobody wants to write; the public-sector copyright holder is the sovereignty answer an EMEA buyer asks for. 🔴 Carried on this base since `p256` in [`trending.md`](trending.md) only — a nine-pass PLACEMENT failure, not a discovery one. |
 | [expertiza/expertiza](https://github.com/expertiza/expertiza) | **MIT** | **194** *(🟢 `p512`, API)* | `b68bb8f640ac` | 🟢 **New row `p512`.** Rails **peer-assessment / peer-review** platform, NSF-funded (NC State). The layer this shelf has never carried: not an LMS, not an SIS — the **review workflow** an AI grader has to sit beside rather than replace. **1,329 forks / 194★.** Payload **1,068 B `cc922786cdca1cd7`**, verbatim MIT body, no title line. |
 | [OpenRoberta/openroberta-lab](https://github.com/OpenRoberta/openroberta-lab) | **Apache-2.0** | **147** *(🟢 `p512`, API)* | `089b4483df27` | 🟢 **New row `p512`.** **Fraunhofer IAIS** block-programming environment for robots, browser-delivered, no install — the **STEM / robotics teaching** layer, and 🟢 **EMEA-origin and state-backed**, which matters where sovereignty is the first objection. 🔴 **The grant is on `master`, not on the default branch `develop`** (**11,359 B `8c6db340475136df`**) — `T42`; a probe pinned to the default branch reports a phantom absence. |
-
 | [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | **Apache-2.0** | **377** *(🟢 `p513`, API)* | `214d11084b7f` | 🟢 **New row `p513`.** **LTI / IMS Global** tool hosting — the standard by which an external tool is launched from inside an LMS, which is the integration every engagement needs and no copyleft obligation touches. **267 forks against 377★.** Licence 10 273 B, `sha256₁₆ 73ba74dfaa520b49`. 🔴 Default branch **`master`** (`T36`); 🔵 **71 tags but NOT a version ladder** — newest-sorted reads `PHP_7_2`, a platform marker, so **pin the SHA**. |
 | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** | **360** *(🟢 `p513`, API)* | `f966a1b7d6f0` | 🟢 **New row `p513`.** Modern TypeScript **SCORM 1.2 + SCORM 2004** runtime — the content-packaging standard, maintained (**63 tags**, `v1.1.1`). 🟢 Pairs directly with `Papermorph` on the agents shelf, which **emits** SCORM. Licence 1 072 B, `sha256₁₆ 383b85b370e8da44`. 🔴 Default branch **`master`**. |
 | [DSpace/DSpace](https://github.com/DSpace/DSpace) | **BSD-3-Clause** | **1,105** *(🟢 `p513`, API)* | `17a631f35ece` | 🆕 **New row and NEW ADDRESS `p513`** — not previously on any shelf in this file. **Institutional repository** for the scholarly record: theses, datasets, OER, with OAI-PMH harvesting. **1,505 forks against 1,105★ — a 1.36× ratio**, the deployment signal for a system each institution runs its own copy of. **136 tags.** Licence 1 504 B, `sha256₁₆ baf9ee18d437bf88`. 🟢 **BSD-3 is the most permissive grant in this file.** |

@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p522` — `2026-10-29` — **🟢 `Gap 475-E` IS RETIRED WITH A MEASUREMENT, NOT DEFERRED AGAIN: exact star integers are unobtainable in this session class, measured on SIX channels — and the ONE remedy that works (`add_repo` per repository) does not scale to a discovery shelf and is the wrong instrument to point at third-party repositories. 🟢 The replacement is better than what the gap asked for: the git smart-HTTP protocol answers ARBITRARY public repositories here, with EXACT HEAD SHAs and EXACT tag names, no rounding. 🔴 Its one blind spot is named: `ls-remote` resolves ARCHIVED repositories too, so it proves motion and cannot prove maintenance.**
+
+### 🔴 The six channels, each measured this pass
+
+| Channel | Result today | Grain |
+|---|---|---|
+| `curl https://api.github.com/repos/<slug>` | 🔴 `403` — *"GitHub access to this repository is not enabled for this session"* | exact, unavailable |
+| search backend's fetch of the same API URL | 🔴 `403 Forbidden` | exact, unavailable |
+| `curl https://github.com/<slug>` (HTML) | 🔴 `403`, 378-byte proxy body | — |
+| `ungh.cc/repos/<slug>` (third-party mirror API) | 🔴 `ENOTFOUND` — not in this session's allowed domains | — |
+| `img.shields.io/github/stars/<slug>` | 🔴 `connect_rejected` by the egress proxy | rounded anyway |
+| rendered repo page via the search backend | 🟢 `200` | 🔴 **ROUNDED** (`48.6k`, `6.0k`, `1.3k`) |
+
+🔵 **`p515` diagnosed the `403` correctly** — it is per-repository session scope, and the body
+names its own remedy. 🔴 **But the remedy is to ATTACH the repository to the session.** For a
+shelf of 30+ third-party education repositories that is neither proportionate nor appropriate:
+it mints credentials against somebody else's repository to read a number that is public. 🟢 **So
+the gap closes as RETIRED-WITH-REASON rather than open-and-unfixed**, and the reason is a
+property of the channel plus a judgement about scope, both written down.
+
+### 🟢 The replacement instrument, and it is sharper than the gap's own fix
+
+`Gap 475-E` asked for *"a dated `repo,stars` snapshot, differenced next pass"*. 🔵 **Stars cannot
+be differenced at weekly cadence off a rounded channel** — `5.0k → 5.0k` is indistinguishable
+from `+400`. 🟢 **`git ls-remote` is exact and it is open:** 24 of 24 third-party repositories
+resolved this pass, plus all 23 shelf rows in `repos/foundations.md`.
+
+| What it answers exactly | What it cannot answer |
+|---|---|
+| default branch (resolved, never assumed) | star count |
+| HEAD SHA, full 40 hex | fork count |
+| every tag name and its SHA | 🔴 **archived status** |
+
+🔴 **The blind spot, demonstrated:** `microsoft/autogen` — which `p518` established is
+**ARCHIVED** and *"no longer maintained"* — answers `ls-remote` normally, HEAD
+`d07c667a3239`. **A drift instrument built only on this channel would have carried autogen as
+live for three more cycles, exactly as the shelves did.** Liveness still needs a second channel;
+drift does not.
+
+### 🟢 Momentum, read today, with the grain of each cell stated
+
+| Address | Read today | Channel | Grain | Movement |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **48.6k**★ / 6.0k forks | rendered page | 🔴 rounded | 🟢 `48.4k` (`p521`, earlier **today**) → `48.6k`. A same-day move visible even through rounding |
+| `HKUDS/DeepTutor` tags | **88** distinct names, latest **`v1.7.0`** = `a44d28a6aeb4` | 🟢 git protocol | 🟢 **exact** | equal to `p511`'s 88 — so the tag count is stable and the release is real |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **1.3k**★ | topic listing | 🔴 rounded | 🔵 a search summary read the same repository as `1.2k` **today** — two rounded reads one hour apart, so neither is differenceable against the other |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | **585**★ | topic listing | 🟢 exact (non-round) | new exact cell |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **537**★ | topic listing | 🟢 exact | 🟢 `526` (`agents/trending.md:13843`) → **537**, `+11` — **differenceable, because both ends are exact** |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **923**★ | topic listing | 🟢 exact | 🟢 `921` (`agents/top.md:1112`) and `922` (`agents/top.md:190`) → **923** |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | **134**★ | topic listing | 🟢 exact | flat on `134` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | HEAD `971233231219` → **`ed564ec66a37`** | 🟢 git protocol | 🟢 exact | 🔴 **two moves inside this pass**, ~25 minutes apart |
+
+🔵 **Note the pattern in the grain column, because it is the practical rule:** GitHub's **topic
+listings print exact integers below ~1 000** and round above it, while the repo page rounds
+everywhere. So for the long tail this base actually discovers in — 40★ to 950★ — there IS an
+exact star channel, and it is the topic listing. Above 1 000★, record SHAs instead.
+
+### 🔴 What did NOT move, and that is the week's real signal
+
+🔵 The two highest-velocity addresses in this sector are unchanged in the only respect that
+matters: [`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) is still
+**CC BY-NC 4.0** (`c71ca266cf36` today) and [`PageLM`](https://github.com/CaviraOSS/PageLM) is
+still a bespoke non-commercial grant (`ad02d75bce00`). 🔴 **Three consecutive passes have now
+found the sector's momentum concentrated in assets Globant cannot build on.** The permissive
+supply grows in the tail, not at the top.
+
+---
+
+
 ## 🆕 `p521` — `2026-10-29` — **🟢 THE MOMENTUM TABLE NOW CARRIES A POSTURE COLUMN COMPUTED BY AN INSTRUMENT RATHER THAN BY HAND — and the instrument reproduces every one of `p520`'s verdicts, including the two refusals [`licence-grant-gate`](../compose/code/licence-grant-gate/) gets WRONG. 🔴 The top of this table is unchanged in the only way that matters: the two highest-velocity rows in the sector are still NOT buildable. 🟡 `Gap 475-E` (star VELOCITY, never once measured in this base) is advanced but NOT closed — a dated snapshot is written below, and the reason it still cannot be differenced is a channel limit, not an oversight.**
 
 ### 🟡 `Gap 475-E` — why velocity is still not measured, and what is now in place

@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p522` — `2026-10-29` — **🔴 THE LOAD-BEARING TREND IS THAT EVERY HARD EDUCATION-AI OBLIGATION ON THIS BASE HAS MOVED BACKWARDS AND EVERY LABELLING OBLIGATION HAS NOT: EU Annex III `2026-08` → `2027-12`; Korea in force with penalties waived a year; Vietnam `2027-03` with a six-month incumbent extension; Chile `2026-12-01` with a deferral bill pending. 🔵 FOUR jurisdictions, ONE direction — and the obligations that did NOT move are output marking, disclosure and the prohibitions. 🔴 Trend 2 is about this base's own instruments: `p521` proved a licence READER can be defeated; `p522` proves the FIX can be defeated the same way, by boilerplate that Creative Commons itself prints in every payload. 🟢 Trend 3: the licence channel is byte-exact while the LAW channel is unreachable — measured, not assumed.**
+
+### 🔴 Trend 1 — the deadline a studio plans against is itself a moving object, and it moves one way
+
+| Jurisdiction | Hard obligation | Original | Now |
+|---|---|---|---|
+| 🇪🇺 EU | Annex III high-risk: grading, admission, proctoring | `2026-08-02` | **`2027-12-02`** |
+| 🇰🇷 Korea | AI Basic Act penalties (education assessment is high-impact) | in force `2026-01-22` | **penalties ~`2027-01-22`** |
+| 🇻🇳 Vietnam | Decision 33/2026 education high-risk | `2027-03-01` | **`2027-09-01`** for incumbents |
+| 🇨🇱 Chile | Ley 21.719 enforcement over student data | `2026-12-01` | 🟡 **deferral bill to `2027-12-01` pending** |
+
+🔵 **The generalisation, and it is the sentence to carry forward:** *in education AI, the
+obligations that get deferred are the ones that require an institution to change how it DECIDES;
+the obligations that stick are the ones that require a vendor to change what it SHOWS.* Marking,
+disclosure, labelling and the outright prohibitions have not slipped in any of the four
+jurisdictions. **Everything that slipped was an impact-assessment-shaped duty.**
+
+🔴 **The commercial consequence, and it is counter-intuitive enough to be worth money.** A client
+reading the headline — *"Europe delays education AI grading rules to 2027"* — concludes the
+compliance work is two years out. 🔴 **The work that binds in five weeks is output marking, and
+it is a build, not a policy.** Any engagement scoping EMEA education AI this quarter that does
+not have a marking story is mis-scoped. See `compose/patterns.md` `P537`.
+
+🔵 **Second-order:** a one-year penalty grace (Korea) is NOT the same as a deferred obligation
+(EU). Korean obligations are live now; only the fine is waived. A client told "Korea is on a
+grace period" will under-build. **The precise unit is (obligation date, penalty date), two
+cells, never one.**
+
+### 🔴 Trend 2 — the licence checker is adversarial in BOTH directions, and the second one is accidental
+
+`p520`: in education the blocking grant is a **content** licence. `p521`: a restricted grant can
+open with the verbatim MIT incipit, so *"a licence classifier keyed on an incipit is keyed on the
+one part of the document an author controls freely"*. 🔵 **`p522` closes the loop, and the new
+failure needs no adversary at all.**
+
+| Reader | Payload | Verdict | Why |
+|---|---|---|---|
+| `licence-grant-gate` (`p520`-era) | `PageLM`, bespoke non-commercial | 🔴 `MIT, granted=True` | incipit camouflage — **authored** |
+| `p522`'s first CC0 probe | `cn-math-taxonomy`, **CC BY-NC 4.0** | 🔴 `CC0-1.0, PUBLIC-DOMAIN` | **Creative Commons' own boilerplate**: every CC 4.0 payload says its own TEXT is dedicated under CC0 |
+| a boundary-less restriction scan | `Apache-2.0`, `CC0`, `GPL-3.0`, `AGPL-3.0` | 🔴 refused as *"revocable"* / *"non-commercial"* | `irrevocable` contains `revocable`; GPL §6 permits conveying *"noncommercially"* |
+
+🔵 **So three distinct defect classes, one root:** a licence is **prose**, and prose read by
+substring lies in whichever direction the prose happens to be written. 🟢 **The only control that
+caught any of them was a POSITIVE CONTROL — `p520`'s two hand refusals, kept as fixtures.** A
+licence gate without adversarial fixtures is not a gate; it is a lookup that agrees with itself.
+
+🔵 **And the third row is the costlier direction institutionally**, because it refuses supply
+rather than admitting it. `p517` already measured that class — an abstention fails SAFE and the
+cost is **usable supply excluded**. A scan that refuses Apache-2.0 would have removed
+`OpenOLAT`, `DeepTutor`, `openmeetings` and `sakai` from every shelf at once.
+
+### 🟢 Trend 3 — this base can verify code to the byte and cannot verify law at all
+
+Measured today, not assumed:
+
+| Channel | Result | Grain |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 `200` on every probe | 🟢 byte-exact |
+| `git ls-remote` on arbitrary public repos | 🟢 works on every repository probed this pass — 24 in the agent sweep, 23 on the foundations shelf | 🟢 exact SHAs, exact tag names |
+| `github.com` HTML / `api.github.com` via `curl` and via the search backend | 🔴 `403` | — |
+| `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` | 🔴 `ENOTFOUND` | — |
+
+🔴 **The asymmetry is structural.** Every licence cell on these shelves is first-hand; every
+regulatory cell is a secondary report. 🔵 **That should change how both are written.** A licence
+claim may be stated flatly with its byte count. A policy claim must name its band and its
+channel — which is why `intel/policy-matrix.tsv` bands every row `reported`, and why `p522`'s
+own repair to `gate-dates` turned an ASSERTED date into an ATTRIBUTED one rather than deleting
+it.
+
+### 🔵 Trend 4 — discovery is saturated and the saturation is now a property of the AXIS, not the query
+
+🟢 24 addresses swept off GitHub's own topic listings — `ai-tutor` (817 listed) and
+`intelligent-tutoring-system` (42) — each grant read from bytes. **Zero new to this base.** This
+is the seventh consecutive saturation, and the axes already exhausted include English search,
+in-language search, fork-ranking, registry channels and now topic listings.
+
+🔵 **The read to take from seven consecutive nils is not "look harder".** It is that the
+open-source education supply reachable from a session like this one is **bounded and known**, and
+the next marginal value is not in discovery at all — it is in **grading what is already shelved
+more precisely** (this pass: 23 of 23 cells re-attested, two family defects found in an
+instrument) and in **placing demand** (this pass: four regions, each with a dated clock). 🔴 A
+pass that spends its budget on an eighth discovery axis is spending it against measured evidence.
+
+---
+
+
 ## 🆕 `p521` — `2026-10-29` — **🔴 THE LOAD-BEARING TREND THIS PASS IS THAT THE SECTOR'S LICENCE RISK HAS MOVED FROM *WHICH LICENCE* TO *WHETHER THE CHECKER CAN SEE IT*. `p520` established that in education the blocking grant is a CONTENT licence. `p521` establishes the next step: a restricted grant can OPEN with the verbatim MIT incipit, and this base's own gate then reports `family=MIT, granted=True`. 🔵 A licence-clearance step is now an ADVERSARIAL problem, not a lookup. 🟡 And the week's deployment evidence says the money is in the back office: the dated agent launches are an invoice agent and an enrolment agent.**
 
 ### 🔴 Trend 1 — the licence checker is now part of the attack surface

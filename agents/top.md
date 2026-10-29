@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p522` — `2026-10-29` — **🔴 THE INSTRUMENT `p521` SHIPPED YESTERDAY IS CORRECT ABOUT POSTURE AND WRONG ABOUT TWO FAMILY CELLS, AND ONE OF THEM IS THIS SHELF'S OWN: `commercial_posture` reads `gen-mentor`'s **CC0-1.0** payload as **`CC-BY`** and `i-educar`'s **GPL-2.0** as bare **`GPL`**. The shelf cells are right BY HAND and the instrument contradicts them — `p521`'s finding about `licence-grant-gate`, one layer out. 🟢 A sweep of 24 agent addresses off two GitHub topic pages, every grant read from served bytes at a RESOLVED default branch: **19 of 24 permissively buildable**, and **ZERO new to this base**. 🟢 `DeepTutor v1.7.0` is confirmed on the git protocol — `refs/tags/v1.7.0 = a44d28a6aeb4` — against a release aggregator that asserted TODAY that no such tag exists.**
+
+### 🔴 The two family cells, both reproducible in one invocation
+
+`p521` built [`commercial_posture`](../compose/code/p521-commercial-posture/) because
+`licence-grant-gate` answered *"is a licence granted?"* and was read as *"may we build on
+this?"*. 🟢 **That instrument's POSTURE verdicts are sound**: this pass ran it over seven
+payloads read from bytes today and every posture was right. 🔴 **Two FAMILY cells are not**,
+and the shelves publish family cells to clients:
+
+| Payload read today | Served | `commercial_posture` family | Correct family | What believing the cell costs |
+|---|---|---|---|---|
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) `main/LICENSE` | `7 048` B @ `79fc182c5d80` | 🔴 **`CC-BY`** | 🟢 **`CC0-1.0`** | An attribution duty the grantor **explicitly waived** — or, read the other way, a genuinely CC-BY asset treated as dedicated |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) `2.12/LICENSE` | `18 092` B @ `435649b0474f` | 🔴 **`GPL`** (no version) | 🟢 **`GPL-2.0`** | GPL-2.0-**only** is incompatible with Apache-2.0; GPL-3.0 is compatible. The LATAM SIS row loses the cell that answers *"can this be combined with our Apache-2.0 components?"* |
+
+🔵 **The shelf is not wrong — `agents/trending.md` already records `gen-mentor` as CC0-1.0,
+by hand, with the byte count.** The defect is that the instrument a later pass will trust
+disagrees with the hand verdict, and in this base's own history the instrument wins once
+nobody re-reads the prose.
+
+🟢 **Fixed and shipped, not reported:**
+[`compose/code/p522-family-resolution/`](../compose/code/p522-family-resolution/) — SPDX-shaped
+family resolution with the version, `PUBLIC-DOMAIN` added to `p521`'s posture vocabulary, and a
+**42-check offline suite** over nine payloads read from bytes today. It imports
+`commercial_posture` rather than replacing it, and `disagreement_with_p521()` asserts the two
+divergences AS TESTS, so the patch retires itself the moment upstream is fixed.
+
+### 🔴 The fix's own first draft reintroduced `p520`'s refusal — and the positive control caught it
+
+🔵 **This is the part worth carrying forward.** `p522`'s first CC0 probe searched the whole
+payload for `\bCC0\b`. It then graded
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) —
+**CC BY-NC 4.0**, the asset `p520` refused BY HAND — as **`CC0-1.0` / `PUBLIC-DOMAIN`**, which
+is *buildable in paid work*. 🔴 **The fix for a false-permissive read produced a false-permissive
+read, in the same direction, on the same repository.**
+
+The cause is not sloppiness, it is Creative Commons' own boilerplate. **Every** CC 4.0 payload
+contains this sentence, as served, wrapped across four lines:
+
+> *"The text of the Creative Commons public licenses is dedicated to the public domain under the
+> CC0 Public Domain Dedication."*
+
+🔵 **It dedicates the LICENCE TEXT, not the licensed work.** So a body-wide `CC0` probe reads
+CC BY-NC — and CC BY, CC BY-SA, CC BY-ND, all of them — as a public-domain dedication. 🔵 And
+because the sentence is **line-wrapped in the served bytes**, the first strip written for it
+(literal spaces) matched nothing at all; the pattern is joined on `\s+` now. **Two defects of
+the same class — reading served bytes as if they were normalised text — in one instrument, in
+one pass.**
+
+🟢 **`p520`'s two hand refusals are now permanent positive controls in the suite.** They are the
+only reason this pass did not ship the defect it was written to remove.
+
+### 🟢 The discovery sweep: 24 addresses, every grant from bytes, zero new
+
+🔴 **`curl` on `github.com` is `403` in this session** (378-byte proxy body), so the topic pages
+were read through the search backend's fetch, and the grants through
+`raw.githubusercontent.com`, which answers `200`. Default branch **resolved** by
+`git ls-remote --symref` for every row — `master`, `dev` and `main` all appear below.
+
+| Address | Grant | Served | Default branch @ HEAD | Posture |
+|---|---|---|---|---|
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | `1 062` | `main` @ `e137ca47cbec` | 🟢 PERMISSIVE |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | `1 079` | `main` @ `ff7c85cee735` | 🟢 PERMISSIVE |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | **CC0-1.0** | `7 048` | `main` @ `79fc182c5d80` | 🟢 PUBLIC-DOMAIN |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | `1 073` | `main` @ `98463a0cb5fb` | 🟢 PERMISSIVE |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **MIT** | `1 064` | `main` @ `d8114f383632` | 🟢 PERMISSIVE |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **MIT** | `1 074` | `main` @ `e0e347f7f399` | 🟢 PERMISSIVE |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | **MIT** | `1 065` | `main` @ `e01d2f7647b0` | 🟢 PERMISSIVE |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **MIT** | `1 081` | `main` @ `25ea970f82c5` | 🟢 PERMISSIVE |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | **MIT** | `1 069` | `main` @ `68788b5e7d34` | 🟢 PERMISSIVE |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | **MIT** | `1 102` | `main` @ `075c1895d255` | 🟢 PERMISSIVE |
+| [`nichochar/ari`](https://github.com/nichochar/ari) | **MIT** | `1 073` | `main` @ `a395851ba10c` | 🟢 PERMISSIVE |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | **MIT** | `1 083` | `main` @ `2af2115291bd` | 🟢 PERMISSIVE |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **MIT** | `1 068` | `main` @ `2a604cc3935a` | 🟢 PERMISSIVE — 🔵 unmoved since `p513`'s drift |
+| [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | **MIT** | `1 068` | `main` @ `b4c935210206` | 🟢 PERMISSIVE |
+| [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | **MIT** | `1 071` | `main` @ `0dcc68a9da99` | 🟢 PERMISSIVE |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** | `1 068` | `master` @ `5e710fd60749` | 🟢 PERMISSIVE |
+| [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | **MIT** | `1 068` | `main` @ `6ac279946ca9` | 🟢 PERMISSIVE |
+| [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | **Apache-2.0** | `10 227` | `main` @ `c9c6295d220c` | 🟢 PERMISSIVE |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | **Apache-2.0** | `10 785` | `dev` @ `1b7cd65f1112` | 🟢 PERMISSIVE |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **CC-BY-SA-4.0** | `1 230` | `main` @ `135d6275e7db` | 🟡 WEAK-COPYLEFT — ShareAlike reaches derivatives |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | **AGPL-3.0** | `1 134` | `master` @ `be589ddd04c9` | 🟡 COPYLEFT (network) |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | **AGPL-3.0** | `34 514` | `main` @ `269feb00c09a` | 🟡 COPYLEFT (network) |
+| [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | **GPL-3.0** | `35 149` | `main` @ `07635d3c81ad` | 🟡 COPYLEFT |
+| [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 🔴 **NO GRANT** | — | `main` @ `fcec41644339` | 🔴 UNUSABLE — 16 filenames probed at the resolved branch |
+
+🟢 **19 of 24 are permissively buildable** (16 MIT, 2 Apache-2.0, 1 CC0-1.0); 3 are copyleft,
+1 is a ShareAlike **content** licence on a repository shipped as software, and 1 serves no grant
+at all. 🔴 **And not one of the 24 is new to this base** — every address was already shelved or
+already in a pass narrative. **That is the seventh independent saturation confirmation, and the
+first measured on GitHub's own topic listings** (`ai-tutor`, 817 repositories listed;
+`intelligent-tutoring-system`, 42).
+
+### 🟢 `DeepTutor v1.7.0`: the git protocol settles what the aggregator denied
+
+🔴 A release-tracking aggregator stated **today** that DeepTutor's latest release is **`v1.6.0`
+(2026-08-27)** and that there is *"no evidence of a v1.7.0"*. 🟢 **`git ls-remote --tags`
+answers from the repository itself:** `refs/tags/v1.7.0` → **`a44d28a6aeb4`**, with **88 distinct
+tag names** — the same 88 `p511` counted. `p521`'s `v1.7.0` claim now rests on a primary channel
+instead of a rendered page, and the rendered page agrees (`v1.7.0`, `2026.10.28`).
+
+🔵 **The channel lesson, which is this base's recurring one:** `curl github.com` is `403` here,
+`api.github.com` is `403` on both `curl` and the search backend's fetch, and the rendered page
+**rounds**. The git smart-HTTP protocol is open to arbitrary public repositories in this session
+and returns **exact** SHAs and **exact** tag names. For liveness and drift it is strictly better
+than the star cell — see `repos/trending.md` `p522`, where `Gap 475-E` is retired on that basis.
+
+---
+
+
 ## 🆕 `p521` — `2026-10-29` — **🔴 THE BASE'S OWN LICENCE GATE PASSES BOTH REPOSITORIES `p520` REFUSED. `licence-grant-gate` returns `{'family': 'MIT', 'granted': True}` for `PageLM` — a grant that prohibits redistribution outright and requires a revenue-share before any commercial deployment — and `{'family': 'CC', 'granted': True}` for `cn-math-taxonomy`, which is CC BY-NC. 🔵 `p520`'s two refusals were correct and were made BY HAND; the instrument contradicts both. 🟢 `Gap 516-B` CLOSES, and not as "unresolved": `Jal246/study-mcp` serves NO licence file at all — root listing read, sidebar read, 24 branch×name combinations probed. Absence, not a naming problem. 🟢 And the search channel is REFUTED twice by served bytes in a single pass.**
 
 ### 🔴 The finding: a grant gate is not a posture gate
@@ -1860,7 +1970,6 @@ in [`trending.md`](trending.md) rather than here.
 | AI Agents for Beginners | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | MIT | **78,064** *(🟢 `p513`, API; `p512` 78,063; `p510` 78,059; `p504` 78,039)* | `dd0f080d07d2` | 18-lesson agent course. **A curriculum, not a deployable agent** — listed because it is the most-starred thing in this space and is routinely miscatalogued as a product. |
 | Studorama | [oluiscabral/studorama](https://github.com/oluiscabral/studorama) | **MIT** | **111** *(🟢 `p511`, API; `archived: false`)* | `2ddbb1122b5b` | 🆕 **New row `p511`, and the first LATAM-placed AI PRODUCT on this shelf** — multi-provider AI study platform (OpenAI, Gemini, Anthropic, DeepSeek, **Ollama local**, browser-local; 15+ models) built on named study techniques. Licence read from bytes: `LICENSE` **1,064 B**, `sha256₁₆ 75ecd9ad0bb3b543`. **10 tags.** Region placed on the product's own bytes — the `README` (12,965 B) declares **"Complete English and Portuguese (Brazil) localization"** and *"Cultural Adaptation: region-specific content"* as first-class features. 🔴 **Single maintainer**, licence holder is a personal handle: fork-and-own, do not take a dependency. 🟢 Breaks `p509`'s nil that the LATAM-reachable set contains *"none an AI product"*. |
 | expertiza | [expertiza/expertiza](https://github.com/expertiza/expertiza) | **MIT** | **194** *(🟢 `p512`, API)* | `b68bb8f640ac` | 🟢 **New row `p512`**, found on the fork-ranked leg. **Peer assessment**: students submit learning objects (articles, code, sites) and review each other's, with rubric-driven review mapping and instructor moderation. **1,329 forks against 194★ — a 6.85× ratio, the most extreme on this base** and the clearest deployment signal here: a course-management system is forked once per institution that runs it. NSF-funded, NC State, so 🟢 **North America**. 🔴 The grant has **no title line** (`T43`): tell any title-anchored licence gate, or it will report no grant. |
-
 | book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | **MIT** | **36,422** *(🟢 `p513`, API; `p512` 36,415)* | `7540eefbe749` | 🟢 **Promoted `p513`** — turns a technical-book PDF into an agent skill: chunking, structuring and indexing a long source into a reference an agent can work from. **3,862 forks.** Licence 1 068 B at **`LICENSE.md`**, `sha256₁₆ be9b04bccfb4bdab`. 🔴 Default ref is **`master`**, not `main` (`T36`). 🔴 **Unplaced** (`Gap 513-C`). |
 | Papermorph | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | **MIT** | **995** *(🟢 `p513`, API; prior cell 992)* | `8fe4372557f8` | 🟢 **Promoted `p513`** — books → animated, narrated, interactive web lessons. 🟢 **Emits SCORM**, so the output lands *inside* an LMS the client already runs instead of beside it — the only row here that does. 12 tags. Licence 1 069 B, `sha256₁₆ 41857092247a8ad8`. Vendored MathJax carries its own Apache-2.0. 🔴 **Unplaced.** |
 | claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | **MIT** | **511** *(🟢 `p513`, API; prior cell 492)* | `438a6288fa74` | 🟢 **Promoted `p513`** — topic → a sequenced course of ~2-minute audio lessons **with cited sources**; the citation requirement is the part worth copying into any content-generation engagement. Licence 1 069 B, `sha256₁₆ 262b47ee1fffc7da`. 🔴 **Unplaced.** |
