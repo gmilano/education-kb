@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p533` — `2026-10-29` — **🔴 THIS BASE FILED A 823★ MIT PLATFORM IN THREE PLACES AND NEVER ITS AI LAYER: `ls1intum/edutelligence` IS **MIT** AND CARRIES **THREE** DEPLOYED EDUCATION AGENTS (IRIS, ATHENA, ATLAS). 🟢 `Gap 532-B` CLOSED — THE QUEUE HAS A MATERIALITY COLUMN AND IT INVERTS THE ORDER: RECALL RANK **1** IS **UNGRANTED**, RECALL RANK **18** IS **BSD-3-CLAUSE, 458,181★**. 🔴 TWO PROBE BUGS THAT MANUFACTURE ABSENCE: RAW IS CASE-SENSITIVE (`README.MD`), AND A `repo:` BATCH DROPPED **3 OF 35** LIVE ADDRESSES SILENTLY. 🟢 FIVE SHELF ROWS, THREE REGIONALLY PLACED. 🔴 GENERIC WEB SEARCH: ZERO NEW SHELF-GRADE FINDINGS, SIXTH CONSECUTIVE PASS, ALL FOUR GLOBAL LEGS AND ALL FOUR REGIONAL LEGS RUN.**
+
+### 🔴 The find: an institution ships the LMS and the agents as two artefacts
+
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) — **MIT**, **823★**,
+TU München's interactive-learning platform — is filed on
+[`../repos/foundations.md`](../repos/foundations.md),
+[`../verticals/solutions.md`](../verticals/solutions.md) and
+[`../intel/market.md`](../intel/market.md), and has been for several passes.
+🔴 **Its AI layer is a separate repository and no curated page here held it:**
+
+| Address | Grant (title block) | Stars | What it is |
+|---|---|---|---|
+| [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence) | 🟢 **MIT** — `Copyright (c) 2025 TUM Applied Education Technologies` | 17 | The suite: **Iris** (virtual tutor), **Athena** (automated assessment), **Atlas** (competency modelling) |
+| [`ls1intum/Iris`](https://github.com/ls1intum/Iris) | 🟢 **MIT** — `Copyright (c) 2023 TUM Applied Software Engineering` | — | *"Pyris V2"*, the standalone predecessor, superseded by the monorepo's `iris/` |
+
+🔵 **Why this is a shape and not an accident.** This base's "is it filed?" test
+matches on the **address**. An institution that ships its platform and its
+intelligence as separate repositories therefore reads as *filed* the moment the
+platform is filed — the agents are invisible to the test by construction. The
+same shape will hold for any university or ministry that separates the two, and
+it is now `Gap 533-A`.
+
+🟢 **What is actually in it**, read from the suite's own README: **Iris**
+(*Pyris*) explains a failing programming exercise by reading the submitted code,
+Artemis's feedback **and the build logs**, does RAG over instructor-provided
+material, and generates competencies — Python 3.13, FastAPI, Weaviate.
+**Athena** is (semi-)automated assessment for text and programming exercises,
+built for **large courses**. **Atlas** generates competency models, infers
+relationships between competencies, recommends learning activities, and says it
+is *"adaptable to other LMSs"*. The maturity signal is the **21-row
+Artemis↔EduTelligence version-compatibility matrix**, current through Artemis
+`10.2.x` — release discipline, not stars.
+
+### 🔴 Two probe bugs, both pointing the expensive way
+
+A probe that invents a repository is embarrassing. A probe that **erases** one is
+expensive, because the loss is silent. Both found this pass point that way.
+
+**1. `raw.githubusercontent.com` is case-sensitive.** `ls1intum/Iris` serves
+`README.MD`; `README.md` 404s on every branch. `p528`'s existence check — *fetch
+`README.md` on `main` and `master`, and a repo that 404s on every path is not
+there* — would have filed a live, MIT, deployed TU München repository as
+**absent**. 🟢 The contradiction that catches it is free: **`LICENSE` returned
+200 on the branch where the README "did not exist."** A grant that resolves on a
+repo whose README does not is a probe bug, every time. → **shelf rule 13**.
+
+**2. A `repo:`-qualified batch came back short, silently.** 35 addresses sent
+across two calls, **32** returned, `incomplete_results: false`, no error, no
+indication which three were missing:
+
+| Dropped address | Live? | Grant (probed at source) | Why it was probably invisible |
+|---|---|---|---|
+| [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) | 🟢 yes | **MIT** — `(c) 2026 Ghaith AlHallak` | in the Moodle census; fork-shaped |
+| [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) | 🟢 yes | **MIT** — 🔴 `(c) 2026 Arnaud Guiovanna` | **a copy of the shelved [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)** |
+| [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) | 🟢 yes | **MIT** — `(c) 2020 theopenem` | unfiled standards repo, `master` only |
+
+🔵 `p529` promoted the API to this base's strongest instrument and that promotion
+still stands — exact counters, batched grants. **But its recall on this batch was
+32/35 = 91.4%**, and nothing in the response says so. The batch's own arithmetic
+is the only detector. → **shelf rule 14**.
+
+### 🔴 Generic web search, measured again — sixth consecutive pass, zero new supply
+
+All four mandated global legs were run at `2026` (computed, not hardcoded):
+
+| Query | New shelf-grade addresses | What it actually returned |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **0** | General agent lists (OpenHands, CrewAI, LangGraph); the only education items were `microsoft/ai-agents-for-beginners` — **filed by `p532`** — and a use-case index |
+| `github trending education AI 2026` | 🔴 **0** | `HKUDS/DeepTutor`, shelf row **1**. Star figures disagreed across sources (45k–48.4k) against the **49,574** measured here |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0** | `Gego-K12/gegok12`, `openeducat_erp`, Frappe Education — **all three already filed** |
+| `AI education industry trends 2026` | 🔴 **0 addresses** | Useful *demand* signal only; see [`../intel/trends.md`](../intel/trends.md) |
+
+🟢 **One genuinely new address came out of search, and it is unusable:**
+[`LeoLiu363/ai-video-understanding`](https://github.com/LeoLiu363/ai-video-understanding)
+(2★, off GitHub's `education-ai` topic page) is **ungranted** — no licence file
+at any probed path. Filed as such on [`top.md`](top.md).
+
+🔵 **The standing conclusion is now six passes deep and should be read as a
+property of the field, not of the queries:** this sector's open-source supply is
+not *discoverable* by trend search, because its artefacts are small, national,
+institutional, or packaged as skills — none of which trend. The instruments that
+work here are this base's own history (`p528`–`p533`) and a grant-filtered API
+census.
+
 ## 🆕 `p532` — `2026-10-29` — **🔴 FIVE CONSECUTIVE PASSES OF "DISCOVERY DROUGHT" ENDED THE MOMENT THE INPUT ORDER CHANGED: THE #1 UNFILED PERMISSIVE ADDRESS IN THIS BASE IS **MIT, 78.1k★**, DESCRIBED IN **23 SEPARATE PASSES**, FILED IN NONE. 🟢 FOUR SHELF ROWS ADDED, ALL FOUR OFF THE RANKED QUEUE, ZERO FROM SEARCH. 🟢 THE LMS AGENT-BRIDGE LAYER COMPLETES — BLACKBOARD WAS THE HOLE AND THE MIT BRIDGE HAD BEEN DESCRIBED HERE EIGHT TIMES. 🔴 GENERIC WEB SEARCH: ZERO SHELF-GRADE FINDINGS, FOURTH CONSECUTIVE PASS, ALL FOUR GLOBAL LEGS AND ALL FOUR REGIONAL LEGS RUN.**
 
 ### 🔴 The drought was in the input order, not in the world

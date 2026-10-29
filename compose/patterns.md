@@ -743,6 +743,90 @@ has now been true across four passes.
 
 ---
 
+## 🆕 P567 — The institutional assessment stack, permissive end to end (EMEA-first; North America with one substitution)
+
+**Brief.** A university or ministry wants automated assessment *with* a tutor that
+explains the result, and it must be self-hosted, auditable and extensible with
+proprietary work. 🔴 **This base's previous answer was "fork Artemis and build the
+feedback agent."** That build is unnecessary: TU München already ships it, under
+**MIT**, as a separate repository. The pattern is now assembly, not construction.
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Platform | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | 🟢 **MIT** · 823★ | Programming, modelling, text and quiz exercises, proctored exam mode, in production across European universities |
+| Tutor | **Iris** in [ls1intum/edutelligence](https://github.com/ls1intum/edutelligence) | 🟢 **MIT** · 17★ | Explains a failing exercise from the **submitted code, the assessment feedback and the build logs** — not from the prompt alone. RAG over instructor material; FastAPI + Weaviate |
+| Assessment | **Athena** (same repo) | 🟢 **MIT** | (Semi-)automated assessment for **text and programming** exercises, built for large-course scale |
+| Competencies | **Atlas** (same repo) | 🟢 **MIT** | Generates the competency model, infers relationships, recommends activities. 🟢 **Its README states it is adaptable to other LMSs — so this layer is liftable on its own** |
+| Sandbox | [judge0/judge0](https://github.com/judge0/judge0) | 🔴 **GPL-3.0** · 4,498★ | Only if Artemis's own container grading is insufficient. 🔵 **Deploy as a separate network service**: GPL-3.0 has no §13, so the deliverable does not inherit the grant |
+| Evaluation | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** · 13★ | Answers *"does the model we routed to actually know how to teach"* (CDPK/SEND) before it faces students |
+| Deployment | [ls1intum/artemis-ansible-collection](https://github.com/ls1intum/artemis-ansible-collection) | 🟢 **MIT** | The maintainers' own runbook |
+
+**Wiring, concretely.** Artemis speaks to EduTelligence over its REST seam —
+**pin the pair using the suite's 21-row compatibility matrix** (Artemis `10.2.x`
+↔ EduTelligence `3.2.x`; never infer the pairing). Point Iris's model routing at
+whatever the engagement's sovereignty rules allow (self-hosted via Ollama/vLLM,
+or a hosted API) and Weaviate at the instructor corpus. Athena runs behind the
+existing grading pipeline, so **the grade stays deterministic and only the
+explanation is generated** — the single most defensible division of labour in
+assessment, and the one that survives Oklahoma S.B. 1734-style rules barring AI
+as the *primary basis* for a grade.
+
+🔵 **North America substitution:** swap Artemis + Athena for
+[autolab/Autolab](https://github.com/autolab/Autolab) (**Apache-2.0**, 808★,
+Carnegie Mellon) and keep Atlas and the benchmark. Autolab is the same idea under
+a permissive grant with CMU's deployment history, and
+[uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal)
+(**Apache-2.0**) is the natural student-facing shell in a US higher-ed estate.
+
+**Effort.** 🟢 **4–6 weeks** to a running pilot on a real course, against the
+**10–12** this base previously implied for the same outcome — the saving is the
+tutor and assessment services that no longer need writing. Budget the time in
+model routing, the instructor corpus, and the EU AI Act Art. 50 transparency
+duties (in force since `2026-08-02`), **not** in agent code.
+
+🔴 **What to check before promising it.** EduTelligence is **17★** — the
+institution, the deployment at `artemis.cit.tum.de` and the release discipline
+are the evidence, not the counter. Read the three services' own READMEs for
+per-service Python versions (3.13 for Iris and Atlas, **3.11** for Athena) and
+confirm the compatibility row for the Artemis version the client actually runs.
+
+## 🆕 P568 — The split-grant gate (run inside `P551`, after `P556`)
+
+**Brief.** `P551` reads the licence file; `P556` takes the **union** of linked
+dependency grants. 🔴 **Neither handles a repository whose own licence file names
+two grants scoped to different directories** — and that is the normal shape for a
+corpus, an item bank or a benchmark, which is where this sector's value is
+moving (trend 19).
+
+| Failure | Instance, verified `p533` | What a repo-level probe sees | What is actually granted |
+|---|---|---|---|
+| 🔴 **Split grant, scoped by path** | [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) · 12★ | `NOASSERTION` (API); a title line reading only `# Licenças`, naming no licence family | **MIT** for `harness/`, `test/` and config · **CC BY 4.0** for `itens/`, `resultados/`, `METODOLOGIA.md` and docs |
+| 🟡 **Third-party output inside a granted repo** | same repo, `resultados/` | one grant for the whole tree | Model responses generated by **third-party models**, whose own reuse conditions the repo explicitly pushes to `resultados/README.md` |
+
+**The gate, three steps.**
+
+1. **If the licence file's title line names no licence family, do not grade the
+   repository — read the body.** Look for `##`-level headings that name a scope
+   (a directory, "código", "dados", "datasets", "models", "content"). 🔵 Every
+   rule on [`../agents/top.md`](../agents/top.md) reads the *title line*; this is
+   the case that defeats all of them.
+2. **Record the grant per path**, as `grant | grant@path` — e.g.
+   `MIT | CC-BY-4.0@itens/,resultados/`. A single cell cannot carry it, and
+   flattening it to either grant is wrong in a different direction each way.
+3. **Ask which half you are actually shipping.** 🔴 **`CC BY 4.0` is not a
+   software licence**: it grants no patent terms and no sublicensing, and
+   attribution must travel with the data. Shipping an item bank inside a
+   proprietary deliverable is therefore a *different legal act* from shipping the
+   harness, even though one `git clone` produced both. If the corpus is
+   `NonCommercial` (as with `xiaoyang111222/cn-math-taxonomy`, **CC-BY-NC-4.0**),
+   the data half stops the engagement while the code half is fine.
+
+**Output.** One row per component: grant on the title line (or `names-none`) ·
+per-path grants · *which paths this deliverable actually ships* · verdict.
+🟢 **A benchmark you only ever *run* is a much easier case than a corpus you
+*redistribute*** — and separating those two uses is usually what unblocks the
+deal.
+
 ## Pattern selection
 
 | If the brief is… | Run |

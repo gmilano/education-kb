@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p533` — `2026-10-29` — **🟢 `Gap 532-B` CLOSED: THE PROMOTION QUEUE NOW CARRIES **STARS, GRANT AND LIVENESS**, AND MEASURING ITS HEAD INVERTED IT. RECALL RANK **1** (16 PASSES, 104★) HAS **NO LICENCE FILE AT 15 PATHS**. RECALL RANK **18** IS **`freeCodeCamp` — BSD-3-CLAUSE, 458,181★**, 32× THE NEXT-LARGEST UNFILED ADDRESS. **4 OF 35** QUEUE-HEAD ADDRESSES ARE ARCHIVED OR OVER A YEAR STALE. 🟢 ELEVEN FOUNDATION ROWS ADDED, INCLUDING THE AUTOGRADER LAYER THIS BASE HAD NO ROW FOR.**
+
+### 🔴 A recall count is not a priority, and this is how badly it misorders
+
+`p532` shipped the promotion queue ranked by `distinct_passes` and said plainly
+that its top ten spanned *"78 100★ down to 1★ — four orders of magnitude"*, then
+registered `Gap 532-B` asking for a materiality column. This pass measured the
+**35 queue-head addresses** — stars, grant at the title block, `pushed_at`,
+archived — and the ranking did not merely blur. It pointed at an address that
+**cannot be used at all**:
+
+| Recall rank | Address | Stars | Grant | Verdict |
+|---|---|---|---|---|
+| 🔴 **1** | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 104 | ⛔ **none at 15 probed paths** | **Unpromotable.** 54-tool Canvas bridge, 16 passes described it, no grant exists |
+| 🟢 **18** | [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | 🔴 **458,181** | 🟢 **BSD-3-Clause** | The largest permissive asset this base has ever touched |
+| 33 | [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) | **14,372** | 🟢 **MIT** | Agent orchestration, unfiled |
+| 15 | [`frappe/frappe`](https://github.com/frappe/frappe) | **11,024** | 🟢 **MIT** | The framework *under* Frappe Education |
+
+🔵 **And a mention count cannot notice that an address has died.** Four of the
+thirty-five are gone or going: [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper)
+(**archived**, last push **2017-10-02**),
+[`ably-labs/realtime-quiz-framework`](https://github.com/ably-labs/realtime-quiz-framework)
+(**archived**), [`projectfedena/fedena`](https://github.com/projectfedena/fedena)
+(last push **2020-05-18**; 🟡 **grant unresolved** — see the channel note
+below),
+[`leemonade/leemons`](https://github.com/leemonade/leemons) (`NOASSERTION`, last
+push **2025-05-14**).
+
+🟢 **The instrument**, so the next pass inherits it rather than the conclusion:
+[`../ingest/promotion-rank.py`](../ingest/promotion-rank.py) gates on grant and
+liveness, then ranks by measured stars, then by recall. Output:
+[`../evidence/promotion-queue.2026-10-29-p533.tsv`](../evidence/promotion-queue.2026-10-29-p533.tsv)
+(**1 433 unfiled permissive addresses** against the live curated files).
+Measurements: [`../evidence/materiality-measurements.2026-10-29-p533.tsv`](../evidence/materiality-measurements.2026-10-29-p533.tsv).
+Bands over the measured head: **A (≥10k★) ×3 · C (100–999) ×6 · D (10–99) ×17 ·
+E (<10) ×6**.
+
+🟡 **What the column is not.** Stars measure attention, not fitness — `freeCodeCamp`
+is a curriculum, not a dependency, and `open-edge-platform/education-ai-suite`
+(Apache-2.0, **2★**, Intel) may matter more to an engagement than either. The
+band is a **triage order**, and the grant and liveness gates are the part that is
+actually load-bearing. Registered as `Gap 533-C`.
+
+
+### 🟡 A third channel disagreement, and it runs the opposite way to the other two
+
+🔵 Recorded because it is the inverse of shelf rule 13 and the pair together say
+what each channel is actually good for.
+[`projectfedena/fedena`](https://github.com/projectfedena/fedena) **resolves on
+the API** — a full repository object, **547★**, default branch `master`,
+**11.8 MB** of content, `pushed_at` **2020-05-18** — and
+🔴 **`raw.githubusercontent.com` serves nothing for it**, at five filenames
+across `master`, `main`, `develop` and `dev`.
+
+| Address | API | `raw` | What is true |
+|---|---|---|---|
+| [`ls1intum/Iris`](https://github.com/ls1intum/Iris) | 🔴 dropped silently | 🟢 serves `README.MD`, `LICENSE`, `app/main.py` | **Live, MIT** |
+| [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🟢 full object, 547★ | 🔴 nothing at 5 paths | **Exists; grant NOT established** |
+
+🔴 **So this pass did not earn the word "ungranted" for `fedena`**, and the first
+draft of this section used it. The API's missing `license` key means only *the
+title block has not been read* (shelf rule 8), and here it **could not be read on
+the one channel that reads title blocks**. 🟢 **The address is still correctly out
+of the promotion queue — on liveness, not on grant:** last pushed 2020-05-18,
+five and a half years stale. 🔵 **The general rule the pair implies:** neither
+channel is authoritative alone — **the API is the better *index* and `raw` is the
+only *grant reader*** — and an address absent from one is a question, never a
+verdict.
+
+### 🟢 One grant correction, from the ledger's carried verdict to the title block
+
+The ledger carried [`opensalt/opensalt`](https://github.com/opensalt/opensalt) as
+`GPL-3.0|Apache-2.0`. The licence file's title block reads **`MIT License ·
+Copyright (c) 2016 Public Consulting Group`**. 🔵 `promotion-rank.py` prefers a
+measured title block over a carried verdict for exactly this reason, per shelf
+rules 8–9 — a standards-alignment tool moved from "copyleft, check carefully" to
+**permissive** on one read.
+
 ## 🆕 `p532` — `2026-10-29` — **🔴 THE INSTRUMENT THAT READS THIS FILE'S OWN HISTORY WAS MIS-READING **403 OF 1 532** SECTION HEADINGS AT `p530` AND **189** AFTER `p531`'S FIX — BECAUSE A THIRD DIALECT, **153 ORDINAL-WORD HEADINGS CARRYING THIS BASE'S FIRST FIFTY PASSES**, WAS INVISIBLE TO BOTH. `first_seen_pass` MOVES ON **1 043** ADDRESSES, **1 038 OLDER**, MEAN **50.5 PASSES**, MAX **107**. 🟢 THREE FOUNDATION ROWS ADDED OFF THE RANKED QUEUE, INCLUDING A **78.1k★ MIT** ASSET UNFILED FOR 23 PASSES. 🟢 ARCHIVE-ONLY DROPS 349 → 286.**
 
 ### 🔴 `p531` fixed one instance of a bug and shipped another instance of the same bug

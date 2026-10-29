@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p533` — `2026-10-29` — **🟢 `532-B` CLOSES WITH A GATED, MATERIALITY-RANKED QUEUE WHOSE FIRST RUN SHOWED RECALL RANK 1 IS **UNGRANTED** AND RECALL RANK 18 IS **458,181★ BSD-3-CLAUSE**. 🔴 THREE REGISTERED (`533-A`…`533-C`), ONE OF THEM A DEFECT IN THIS BASE'S OWN "IS IT FILED?" TEST.**
+
+### 🟢 `Gap 532-B` — CLOSED
+
+**Asked:** a materiality column, because distinct-pass count measures how often
+this base talked about an address, not how much it matters — *"a recall
+instrument, not a priority one."*
+
+**Delivered:** [`../ingest/promotion-rank.py`](../ingest/promotion-rank.py).
+It gates on **grant** (permissive at the title block, preferring a measured read
+over the ledger's carried verdict) and on **liveness** (not archived, pushed
+within twelve months), then ranks by **measured stars**, then by recall. Output
+[`../evidence/promotion-queue.2026-10-29-p533.tsv`](../evidence/promotion-queue.2026-10-29-p533.tsv);
+35 head addresses measured into
+[`../evidence/materiality-measurements.2026-10-29-p533.tsv`](../evidence/materiality-measurements.2026-10-29-p533.tsv).
+
+🔴 **The close is not cosmetic.** Recall rank 1 (`DMontgomery40/mcp-canvas-lms`,
+104★, 16 passes) is **ungranted at 15 probed paths** and the gate removes it;
+recall rank 18 (`freeCodeCamp/freeCodeCamp`) is **BSD-3-Clause, 458,181★** and
+the ranking promotes it to 1. Four of thirty-five head addresses are archived or
+over a year stale.
+
+### 🔴 `Gap 533-A` — this base's "is it filed?" test cannot see an unfiled AI layer
+
+**The defect.** The filed test matches on the **address**. TU München ships
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) (the platform, filed
+here three times) and [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence)
+(**MIT**, the Iris/Athena/Atlas agent suite, filed nowhere) as separate
+repositories. Filing the platform therefore satisfies nothing about the agents,
+and no query on this base would have surfaced the omission.
+
+**Remedy, scoped.** For every *organisation* already cited on a curated page,
+enumerate that org's other repositories and diff against the filed set — one
+API call per org with `user:` + `fork:true`. 🔵 **Cost:** one pass for the orgs
+this base already holds. **Expected yield:** the same shape wherever a
+university, ministry or lab separates platform from intelligence; `mitodl`,
+`learningequality`, `openedx`, `1EdTech` and `Ed-Fi-Alliance-OSS` are the
+obvious next probes.
+
+### 🔴 `Gap 533-B` — a repo-level grant cell cannot express a split grant
+
+**The defect.** [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark)
+carries **one licence file naming two grants, scoped by path**: **MIT** for
+`harness/`, `test/` and config; **CC BY 4.0** for the item bank (`itens/`), the
+run results (`resultados/`), `METODOLOGIA.md` and the docs. Its title line is the
+bare Portuguese word `# Licenças` and names no licence at all, so every rule on
+[`../agents/top.md`](../agents/top.md) — all of which read the title line —
+produces the wrong answer or none. The API says `NOASSERTION`.
+
+**Remedy, scoped.** A grant cell becomes `grant | grant@path` when the licence
+file names scopes, and the probe reads the **body** for `##`-level scope
+headings whenever the title line names no licence family. 🔵 **Cost:** small for
+the probe, larger for the files, because several existing cells silently assume
+one grant per repository. 🔴 **Related but not the same as `Gap 528-C`**: that
+gap is about *dependency* grants under a repo-level grant; this is about the
+repository's **own** grant differing by path — and it is the shape a *dataset*
+repository takes, which is most of this sector's LATAM supply.
+
+### 🟡 `Gap 533-C` — the materiality band measures attention, not fitness
+
+**The limit, stated at the moment of closing `532-B` rather than later.** Stars
+rank `freeCodeCamp` (a curriculum, not a dependency) above
+`open-edge-platform/education-ai-suite` (Apache-2.0, **2★**, Intel reference
+applications), and for an engagement the second may be worth more. **Remedy:**
+a fitness dimension the band does not have — *is this a dependency, a reference
+implementation, a corpus or a curriculum?* — which is a classification this base
+already performs in prose on every row and has never recorded as a field.
+🔵 **Cost:** one column, applied at file time, plus a backfill pass.
+
 ## 🆕 `p532` — `2026-10-29` — **🟢 `531-A` CLOSES, AND THE RE-RUN IT ASKED FOR FOUND A DEFECT IN `p531`'S OWN FIX: THE CASE-FOLD MATCHES A PASS NUMBER THE TITLE *CITES*, AND A THIRD DIALECT — 153 ORDINAL-WORD HEADINGS CARRYING THIS BASE'S FIRST FIFTY PASSES — WAS INVISIBLE TO BOTH MATCHERS. `first_seen_pass` MOVES ON 1 043 ADDRESSES, 1 038 OF THEM OLDER, MEAN 50.5 PASSES. 🟢 `531-B` CLOSES WITH A `make` TARGET AND A 44-CONTROL SUITE — AND ITS FIRST RUN FOUND A 78.1k★ MIT ASSET UNFILED FOR 23 PASSES. 🟢 `531-C` CLOSES ON ITS OWN DECISION RULE: RECALL 0.824 < 0.90, CHANNEL STAYS MANUAL. 🔴 THREE REGISTERED (`532-A`…`532-C`).**
 
 ### 🟢 `Gap 531-A` — CLOSED on all three asks, and the re-run refuted the fix it was re-running

@@ -164,9 +164,49 @@ markets**. 🔵 That inversion is the LATAM engagement thesis and it has now
 survived four passes of re-checking — which is a stronger statement than any new
 number this pass could have added.
 
+## 🆕 `p533` — the four regional legs re-run: **saturated on demand, moving on supply**
+
+🔵 **The result is a fifth consecutive pass of the same shape, and it is now a
+finding about the channel rather than about the window.** All four regional legs
+were run at `2026` (computed, not hardcoded), plus all four global legs. 🔴 **The
+demand and regulation legs returned exactly one figure this base did not already
+hold.** What *did* move this pass is **supply** — five shelf rows and eleven
+foundation rows, three of them regionally placed — and none of it came from a
+market query.
+
+| Region | What the leg returned | New? |
+|---|---|---|
+| **North America** | 134 AI-in-education bills across 31 states in 2026; Oklahoma S.B. 1734 (written district AI policy before 2027-28; AI barred as the primary basis for grading, discipline or placement); Maryland's *AI Ready Schools Act* (24 districts, 120 days from MSDE guidance); Utah H.B. 218 (grade 7–8 digital-skills course incl. AI literacy); H.R. 8747; Gallup ~60% of teachers using AI | 🔴 **No** — all held, and the bill-count disagreement `p532` flagged is **unresolved**: this pass got *134 bills / 31 states* where `p532` held *28+DC vs 34+DC+PR*. 🟡 Still not quotable without a primary legislature source. |
+| **EMEA** | EU AI Act high-risk classification for systems that evaluate learners, assign them to programmes, proctor assessments or gate qualifications; Digital Omnibus timing; extraterritorial reach to non-EU vendors; Gulf movement (UAE MoE, KHDA); UK light-touch via existing regulators; OECD *Digital Education Outlook 2026* urging purpose-built over general-purpose educational AI | 🔴 **No** — all held. 🔴 **Sources again disagreed on the high-risk date** (one gave 2026-08, another 2027-12 standalone / 2028-08 embedded); this base's **Regulation (EU) 2026/1744** reading stands and the conflict is a source-quality note, not a correction. 🔴 **The DEMAND leg is a measured blank for the third consecutive pass.** |
+| **APAC** | Korea **AI Basic Act** in force 2026-01-22 with a one-year penalty grace period; **Vietnam** Decision naming education a high-risk sector, compliance by 2027-03-01 (**+6 months for education systems already running before 2026-08-15**); China algorithm filings + synthetic-content labelling; Singapore AI Verify; Japan/Taiwan drafting; Australia preparing high-risk guardrails | 🔴 **No** — held, the Vietnam decision included. 🔴 **No K-12 or higher-ed APAC *adoption rate* exists in any result, for the second pass running** — the region's regulation is well documented here and its demand is not. |
+| **LATAM** | 🟢 **UNESCO IESALC (Sept 2026): 200 institutions, 19 countries — 87% using AI in at least one area and 🆕 `74%` using it in teaching and learning specifically**, against **26%** with a formal AI strategy; UNESCO **Observatory on AI in Education for LAC** launched April 2026 at ECLAC, Santiago; TALIS 2024 teacher use Brazil 56% / Chile 55% / Colombia 53% / Costa Rica 52% vs OECD 36%; Uruguay's **Ceibal** | 🟡 **One new figure: `74%`** — the teaching-and-learning sub-rate inside the 87% headline this base already held. 🔵 It matters because it separates *administrative* adoption from adoption **in the classroom**, which is the half an engagement is sold against. |
+
+🟢 **The durable conclusion survives a fifth re-check and gains a sharper
+number:** LATAM has the region's highest measured classroom adoption (**74%** of
+surveyed institutions, teachers 16–20 points above the OECD average) and the
+least scaffolding (**26%** with a strategy, **9%** evaluating). 🔴 **And the
+inversion now runs the other way on evidence quality too:** LATAM is the
+*best-measured* region on this base — a 200-institution, 19-country instrument
+with a published method — while **EMEA and APAC demand remain blanks**. The
+region usually treated as the under-evidenced leg is the only one with a census.
+
 ## Opportunities by region
 
 ### North America
+
+> 🆕 **`p533` — supply added on this leg.** [`autolab/Autolab`](https://github.com/autolab/Autolab)
+> (**Apache-2.0**, 808★, **Carnegie Mellon**) is the permissive autograding
+> course-management platform, the North American counterpart to Artemis, and this
+> base had no autograder row at all before this pass.
+> [`uPortal-Project/uPortal`](https://github.com/uPortal-Project/uPortal)
+> (**Apache-2.0**, 287★, Apereo) is the higher-ed student portal — the
+> authenticated front door an assistant belongs inside.
+> [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service)
+> (**Apache-2.0**) is the successor generation of the region's K-12 data
+> interoperability layer. And [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp)
+> (**BSD-3-Clause**, **458,181★**) is a reusable *curriculum*, which is the one
+> asset class this base has never had on any leg. All on
+> [`../repos/foundations.md`](../repos/foundations.md).
 
 > 🆕 **`p531` — supply placed.** The region's permissive education supply in the
 > drop set is **assessment plumbing and compliance scaffolding, not tutors**:
@@ -289,6 +329,25 @@ recorded.**
 
 
 ### EMEA
+
+> 🆕 **`p533` — EMEA's supply leg extends again, and it is now the strongest on
+> this base by a clear margin.** 🟢 [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence)
+> (**MIT**, TU München) is **three deployed education agents** — Iris (tutor),
+> Athena (assessment at large-course scale), Atlas (competency modelling) —
+> running behind Artemis for real students at `artemis.cit.tum.de`, with a
+> 21-row version-compatibility matrix. 🔴 **This base filed the Artemis platform
+> three times and never this.**
+> 🟢 [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp)
+> (**MIT**, PyPI `2.5.0`) bridges **Librus Synergia**, a Polish school gradebook —
+> **the first LMS/register bridge on this base outside the Anglosphere**, and the
+> clearest evidence yet for trend 12's claim that the integration unit is the
+> *institution*, not the product. 🔵 **The engagement consequence:** an EMEA
+> assessment or tutoring deliverable can now be assembled almost entirely from
+> permissive, institutionally-maintained EMEA code (Artemis + EduTelligence +
+> Numbas + Opencast + abstimmbar), which is not true of any other region. See
+> `P567`. 🔴 The **demand** leg is still a blank — so the regional thesis here
+> rests on supply and on regulation, and that should be said out loud in a
+> pitch rather than papered over.
 
 > 🆕 **`p531` — the demand leg is a measured blank, the supply leg is the
 > strongest of any region.** Nothing education-sector came back on EMEA
@@ -456,6 +515,19 @@ framing, where EMEA appears as the regulated region and little else.
 
 
 ### APAC
+
+> 🆕 **`p533` — supply added on this leg.** 🟢 [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam)
+> (*Ujian Sekolah*, **MIT**) generates **A4 print-ready exam sheets for
+> Indonesian elementary-school teachers** — mixed item types, answer key and a
+> *pembahasan* for every question — from a one-sentence brief, live at
+> `ujian-sekolah.naufaldi.com`. 🔵 **Read the problem statement it names, because
+> it is a market fact and not a feature list:** Indonesian SD teachers *"spend
+> 4–8 hours a week hand-writing exams in Word."* 🟢 **The output is paper**, which
+> is the right answer in a context where the constraint is a photocopier rather
+> than a device per student — the same insight `P565` draws for rural LATAM,
+> arrived at independently in APAC. 🔴 Note the asymmetry this leg keeps
+> producing: APAC supplies the largest agents on this base (DeepTutor 49.6k★,
+> OpenMAIC 41.8k★) **and its classroom demand remains unmeasured here.**
 
 > 🆕 **`p531` — supply placed, and it is the only region shipping full agents.**
 > [`THU-MAIC/dsh-openmaic`](https://github.com/THU-MAIC/dsh-openmaic) (MIT,
@@ -647,6 +719,24 @@ not a country** — this base's standing rule, and the reason these are here and
 not under APAC.
 
 ### LATAM
+
+> 🆕 **`p533` — one new demand figure and one new supply artefact, and the
+> artefact comes with a licence lesson.** 🟢 The UNESCO IESALC instrument
+> (**200 institutions, 19 countries**) reports **74%** using AI *in teaching and
+> learning* inside the **87%** headline — the classroom half, separated from
+> administrative adoption for the first time on this base.
+> 🔵 [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) is a
+> **BNCC hallucination benchmark** — an open item bank with published methodology
+> for measuring whether a model actually knows Brazil's national curriculum,
+> alongside [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes)
+> (npm/PyPI packages plus an MCP server over the BNCC dataset). 🟢 **This is the
+> procurement instrument the LATAM thesis has been missing:** `pedagogy-benchmark`
+> answers *"which model knows how to teach"* over Chilean exams; this answers
+> *"which model knows our curriculum"* over Brazilian ones, and a ministry can
+> run it. 🔴 **But its grant is split by path** — **MIT** for the harness, **CC BY
+> 4.0** for the item bank and results — so the code and the corpus travel under
+> different terms and a repo-level licence cell gets it wrong. Registered as
+> `Gap 533-B`; see [`../agents/top.md`](../agents/top.md) § Licence traps.
 
 > 🆕 **`p531` — the LATAM supply shape, measured rather than asserted, and it is
 > not what this base has been saying.** For seven passes this base recorded the
@@ -912,6 +1002,28 @@ essay marking calibrated on 11 147 real essays).
 ## Declared gaps this pass
 
 Written down because an unstated gap is indistinguishable from coverage.
+
+### 🆕 `p533` additions
+
+- 🔴 **EMEA classroom-adoption demand is a measured blank for the third
+  consecutive pass**, and **APAC's for the second**. Both legs return
+  regulation in depth and adoption not at all. 🔵 Closing either needs a named
+  instrument rather than another query: for EMEA the **OECD Digital Education
+  Outlook** and Eurostat/Eurydice digital-education indicators; for APAC a
+  national ministry series. 🔴 Until then, every cross-regional *adoption*
+  sentence in this file is grounded for **North America and LATAM only**, and
+  the other two legs are inference.
+- 🟡 **The North American bill count is still unresolved and now has a third
+  value.** `p532` held *28+DC vs 34+DC+PR*; this pass's leg returned
+  *134 bills across 31 states in 2026*. Three mutually inconsistent framings
+  (enacted vs introduced vs bill-count) from secondary trackers. **No figure
+  here is quotable without a primary legislature source**, and that is the
+  honest state rather than a number to pick.
+- 🔴 **The split-grant problem has no instrument.** `bncc-benchmark` proves a
+  single repository can carry two grants scoped by path, and this base grades
+  one grant per address. Until `Gap 533-B` closes, **any dataset-bearing
+  repository on these pages may be mis-graded** — and dataset repositories are
+  disproportionately where LATAM's contribution sits.
 
 ### 🆕 `p529` additions
 

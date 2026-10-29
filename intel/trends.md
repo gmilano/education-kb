@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p532` · 2026-10-29.** **Seventeen** trends. Each one is stated so it could be
+**Pass `p533` · 2026-10-29.** **Nineteen** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -492,6 +492,77 @@ cannot change the answer and implies a precision the measurement does not have.
 every decision this base took from that field was taken on a starred subset,
 where the number was right all along.
 
+## 18. 🆕 The institution ships the platform and the intelligence as **two repositories** — so a platform census under-counts the sector's agents
+
+**The claim, stated so it can fail:** in this sector, an institutional producer
+publishes its LMS and its AI layer as **separate addresses under the same org**,
+and any instrument that inventories platforms will therefore report the agents as
+absent.
+
+🟢 **The evidence this pass is first-hand and it is about this base's own
+blindness.** TU München publishes
+[`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) (**MIT**, 823★, the
+platform) and [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence)
+(**MIT**, 17★, the agents: **Iris** tutor, **Athena** assessment, **Atlas**
+competency modelling). This base filed the first on three curated pages across
+several passes and **never held the second**, while writing on two of those pages
+that *"the agent attaches as a feedback generator behind the existing
+autograder"* — a build recommendation for software the maintainers had already
+shipped.
+
+🔵 **Why it is a trend and not an anecdote.** The split is what institutional
+engineering *looks like*: the LMS has a multi-year release train and a conformance
+surface, the AI layer moves on model timelines, so they cannot share a version.
+**EduTelligence publishes a 21-row compatibility matrix against Artemis
+releases** precisely because the two are decoupled — the matrix is the seam made
+visible. `mitodl` shows the same shape (platform elsewhere,
+[`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor)
+as its own repo), and `1EdTech`, `Ed-Fi-Alliance-OSS` and `learningequality` all
+split standards, server and client the same way.
+
+🔴 **The consequence for an engagement, which is the point:** *"there is no open
+agent for platform X"* is not a finding until the platform's **org** has been
+enumerated, not just its flagship repository. Twice this pass that enumeration
+turned "build it" into "mount it". **Disconfirmed if** a sweep of the
+institutional orgs this base already cites turns up no further unfiled AI layers
+— the test is `Gap 533-A`, and it is cheap: one API call per org.
+
+## 19. 🆕 The grant is becoming **path-scoped**, because the artefact is becoming a **dataset**
+
+**The claim:** as this sector's open contribution shifts from code to **corpora,
+item banks and benchmarks**, a single repository increasingly carries **two
+grants** — a permissive one for the harness and a Creative Commons one for the
+data — and a licence model with one grant per repository returns the wrong answer
+for exactly the artefacts that matter most.
+
+🟢 **The evidence.** [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark)'s
+licence file is titled with the bare word `# Licenças`, names no licence family on
+its title line, and then assigns **MIT** to `harness/`, `test/` and config and
+**CC BY 4.0** to the item bank (`itens/`), the run results (`resultados/`),
+`METODOLOGIA.md` and the documentation — *"porque contém duas coisas de natureza
+diferente"*. GitHub's API grades the whole repository `NOASSERTION`. 🔵 The same
+division is already visible, less explicitly, in
+[`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+(MIT code, Chilean ministry exam material) and in
+[`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) (MIT grader,
+separately-credited Essay-BR corpus).
+
+🔴 **Why it bites hardest where the sector's value is growing.** A tutor's
+differentiator is the curriculum it is grounded in, and curricula are national
+and published by ministries — so the *data* half arrives under CC terms with
+attribution and sometimes NonCommercial, while the *code* half is permissive.
+🔴 **`CC BY 4.0` is not a software licence and does not grant patent or
+sublicensing terms**, so shipping an item bank inside a proprietary deliverable is
+a different legal act from shipping the harness, even when one `git clone`
+produced both.
+
+🟢 **The practical rule, now in [`../compose/patterns.md`](../compose/patterns.md)
+as `P568`:** resolve the grant **per path** before a dataset-bearing repository
+enters a deliverable, and record it as `grant | grant@path`. **Disconfirmed if**
+the dataset-bearing repositories on this base turn out to be predominantly
+single-grant on inspection — which is the backfill `Gap 533-B` asks for and
+nobody has run.
+
 ## Counter-signals worth holding
 
 - **ANZ leans toward banning AI in schools** (Ipsos Education Monitor 2026) while
@@ -526,6 +597,47 @@ the **OECD Outlook recommendation** (reported, not read from the Outlook itself)
 and **APAC curriculum status** (sources mutually contradictory).
 
 ---
+
+## 🆕 `p533` — the seventeen carried trends re-checked; **two added, none contradicted**
+
+🔵 All four global legs and all four regional legs were run. **No carried trend
+was narrowed or contradicted**, and two were added from first-hand evidence
+rather than from a market query — which is where this pass's new information came
+from generally.
+
+- 🟢 **Trend 2 confirmed, sharper counter.** `DeepTutor` reads **49,574★**
+  (API-exact) against `p529`'s 49,216 and `p532`'s "49.5k", still **Apache-2.0**,
+  still the sector's largest. 🔴 **And the trend's APAC-academic framing now has
+  a measured counterweight:** the two largest *institutional* permissive assets
+  filed this pass are **EMEA** (`Artemis` + `EduTelligence`, TU München) and
+  **North American** (`Autolab`, Carnegie Mellon). The trend's claim was about
+  the *top of the star distribution* and that is unchanged; its implied claim
+  that permissive institutional supply is APAC-only is **narrowed**.
+- 🟢 **Trend 6 confirmed and made more precise, which lowers a cost.** "The
+  sector is copyleft, and that decides the architecture" stands — but this pass
+  separates **GPL-3.0 from AGPL-3.0** in practice: [`judge0/judge0`](https://github.com/judge0/judge0)
+  (**GPL-3.0**, 4,498★) is deployable as a **separate network service** a
+  proprietary deliverable calls, because GPL-3.0 has no §13, where
+  [`classroomio/classroomio`](https://github.com/classroomio/classroomio)
+  (**AGPL-3.0**, 1,735★) in the same position is not. 🔵 This base had been
+  collapsing both into "integrate, do not fork" — correct for AGPL, needlessly
+  expensive for GPL.
+- 🟢 **Trend 4 (Moodle) and Trend 12 (the institution is the integration unit)
+  both confirmed by the same new row.** [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp)
+  (**MIT**, PyPI `2.5.0`) bridges **Librus Synergia**, a *national* Polish
+  gradebook — the first non-Anglosphere register bridge here, and the shape
+  Trend 12 predicts.
+- 🟢 **Trend 15 confirmed emphatically** ("retrieval is harder than discovery in
+  this sector"). Six consecutive passes of generic search producing no new
+  shelf-grade supply, while this base's **own history** yielded a 458,181★
+  BSD-3-Clause asset and a three-agent MIT suite in a single pass. See
+  [`../repos/trending.md`](../repos/trending.md).
+- 🟡 **Trend 1 (the governance gap is the market) holds and gains its cleanest
+  number**, LATAM: **74%** of surveyed institutions using AI in teaching and
+  learning against **26%** holding a formal AI strategy, over a 200-institution,
+  19-country UNESCO IESALC base.
+- 🔴 **Not re-evidenced this pass and standing on recorded sourcing:** Trends 3,
+  5, 7–11, 13, 14, 16, 17.
 
 ## 🆕 `p532` — the seventeen trends re-checked, and nothing moved
 

@@ -1,0 +1,36 @@
+address	stars	grant_measured	grant_channel	pushed_at	archived	note
+freeCodeCamp/freeCodeCamp	458181	BSD-3-Clause	title-block:main/LICENSE.md	2026-10-29	no	largest permissive asset this base has touched
+microsoft/agent-framework	14372	MIT	title-block:main/LICENSE	2026-10-29	no	agent orchestration framework, Microsoft
+frappe/frappe	11024	MIT	title-block:master/LICENSE	2026-10-29	no	framework under Frappe Education
+autolab/Autolab	808	Apache-2.0	title-block:master/LICENSE	2026-10-27	no	autograded programming assignments, course management
+projectfedena/fedena	547	UNRESOLVED	api:no-licence-key + raw:nothing-at-probed-paths	2020-05-18	no	DEAD: last push 2020-05-18. Grant unresolved on BOTH channels - API returns the repo (master, 11.8MB) with no licence key, raw serves nothing at 5 probed filenames. Gated on liveness, not on grant.
+leemonade/leemons	290	NOASSERTION	api	2025-05-14	no	DEAD: last push 2025-05-14, grant unresolved
+uPortal-Project/uPortal	287	Apache-2.0	title-block:master/LICENSE	2026-10-24	no	higher-education enterprise portal
+learning-commons-org/knowledge-graph	164	NOASSERTION	api	2026-10-28	no	grant unresolved, needs title-block read
+DMontgomery40/mcp-canvas-lms	104	none	probed-15-paths	2026-05-31	no	UNGRANTED: recall rank 1 and unpromotable
+adlnet/SCORM-to-xAPI-Wrapper	99	none	api:no-licence	2017-10-02	YES	ARCHIVED 2017
+learning-commons-org/evaluators	87	NOASSERTION	api	2026-10-28	no	grant unresolved
+ably-labs/realtime-quiz-framework	77	Apache-2.0	api	2026-03-06	YES	ARCHIVED
+webtech-network/autograder	62	Apache-2.0	title-block:main/LICENSE	2026-10-20	no	autograder, live
+learningequality/kolibri-design-system	51	NOASSERTION	api	2026-10-26	no	design system, not an agent
+opensalt/opensalt	47	MIT	title-block:main/LICENSE	2026-10-28	no	ledger said GPL-3.0|Apache-2.0 - CORRECTED to MIT
+tl-its-umich-edu/my-learning-analytics	37	Apache-2.0	api	2026-10-27	no	Univ. of Michigan learning analytics
+TovTechOrg/Tov-learn	36	MIT	title-block:master/LICENSE	2026-09-29	no	AI tutor as a Claude Code skill, spaced repetition
+amp-up-io/qti3-item-player	30	MIT	api	2025-06-21	no	QTI 3 item player
+naufaldi/teacher-exam	21	MIT	title-block:main/LICENSE	2026-10-26	no	APAC (Indonesia): print-ready exam sheets
+MysterionRise/adaptive-knowledge-graph	18	MIT	title-block:main/LICENSE	2026-10-29	no	knowledge graph + local LLM adaptive learning
+krzysztofbury/librus-mcp	14	MIT	title-block:main/LICENSE	2026-10-28	no	EMEA (Poland): Librus Synergia school register
+bncc-dev/bncc-benchmark	12	MIT + CC-BY-4.0	title-block:main/LICENSE	2026-09-19	no	SPLIT GRANT, per-path: see licence traps
+r-huijts/canvas-mcp	12	MIT	api	2026-09-21	no	Canvas MCP, one of several
+Ed-Fi-Alliance-OSS/Data-Management-Service	12	Apache-2.0	api	2026-10-29	no	Ed-Fi API platform successor
+1EdTech/OpenCASE	11	Apache-2.0	api	2026-10-29	no	CASE server and editor, 1EdTech
+bncc-dev/bncc-pacotes	10	NOASSERTION	api	2026-10-15	no	LATAM (Brazil): BNCC npm/PyPI + MCP server
+nirholas/ai-tutor-mcp	9	Apache-2.0	api	2026-10-10	no	pay-as-you-learn tutor ledger over MCP
+Ed-Fi-Alliance-OSS/edfi-oneroster	6	Apache-2.0	api	2026-10-23	no	OneRoster 1.2 API over Ed-Fi ODS
+laurauguc/grading_assistant	4	MIT	api	2025-08-11	no	grading assistant, stale
+admin978/canvas-mcp	4	MIT	api	2026-07-23	no	local-first Canvas MCP, ~125 lines
+open-edge-platform/education-ai-suite	2	Apache-2.0	title-block:main/LICENSE	2026-10-29	no	Intel open-edge-platform education reference apps
+Gchism94/ai-tutor	1	MIT	api	2025-05-08	no	stale
+Dymayo/moodler-mcp	unmeasured	MIT	title-block:main/LICENSE	unmeasured	unknown	API DROPPED SILENTLY - live on raw
+kvnloo/tutor-mcp	unmeasured	MIT	title-block:main/LICENSE	unmeasured	unknown	API DROPPED SILENTLY - copyright reads Arnaud Guiovanna, i.e. a copy of the shelved ArnaudGuiovanna/tutor-mcp
+theopenem/OneRoster.NET	unmeasured	MIT	title-block:master/LICENSE	unmeasured	unknown	API DROPPED SILENTLY - live on raw, unfiled standards repo

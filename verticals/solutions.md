@@ -177,6 +177,22 @@ file's title block.
 for a LATAM engagement, not a platform to build on, and the star count is
 exactly why a reader would otherwise reach for it.
 
+### 🆕 `p533`: the autograder layer, the student front door, and the AI layer Artemis ships separately
+
+🔴 **The correction that matters most on this page.** `p530` and `p531` both
+filed [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) and both wrote
+that *"the agent attaches as a feedback generator behind the existing
+autograder."* **TU München already built that agent and ships it as a separate
+MIT repository**, and no row here pointed at it. Registered as `Gap 533-A`.
+
+| Platform | Repo | Licence | Where AI attaches |
+|---|---|---|---|
+| 🆕 **EduTelligence** (Artemis's own AI layer) | [ls1intum/edutelligence](https://github.com/ls1intum/edutelligence) | 🟢 **MIT** · 17★ | **Do not build this — mount it.** The three microservices TU München runs behind Artemis: **Iris** (tutor; reads submitted code, assessment feedback *and build logs*), **Athena** ((semi-)automated assessment for text and programming exercises at large-course scale), **Atlas** (competency-model generation and learning-activity recommendation, stated as *"adaptable to other LMSs"*). 🟢 **The version-compatibility matrix is the reason to trust it** — 21 rows, current through Artemis `10.2.x`. 🔵 **Atlas is the piece worth lifting on its own**: it is the only competency-modelling service on this page, and its own README says it is not Artemis-specific. |
+| 🆕 **Autolab** | [autolab/Autolab](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0** · 808★ | **Fork it.** Carnegie Mellon's course-management service for **auto-graded programming assignments** — the North American counterpart to Artemis, permissive, Rails, with container-isolated grading. 🟢 **The autograding layer this page had no row for.** The agent attaches as the *explainer* of an autograder verdict the student already received, which is the highest-value and lowest-risk attachment in assessment: the grade stays deterministic, the explanation is generated. |
+| 🆕 **Judge0** | [judge0/judge0](https://github.com/judge0/judge0) | 🔴 **GPL-3.0** · **4,498★** | **Deploy it beside the product, never inside it.** The field's default sandboxed code-execution service — 942 forks, and its own topics claim `ai-agents`/`ai-agent-tools`. 🟢 **The licence reasoning, stated because it decides the architecture:** GPL-3.0 has no §13, so a proprietary deliverable calling Judge0 over HTTP as a **separate self-hosted service** does not inherit the grant — where an AGPL-3.0 component in the same position would. Any agent that runs, tests or grades student code needs this layer; this is how to use it without contaminating the deliverable. |
+| 🆕 **uPortal** | [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | 🟢 **Apache-2.0** · 287★ | **Configure it.** Apereo's higher-education portal — the authenticated **front door** that aggregates LMS, SIS, timetable and announcements into one student surface. 🔵 Nothing else on this page holds that position. When the engagement's ask is *"one place where the student sees everything, and an assistant inside it"*, the assistant belongs here as a portlet, with the LMS bridges on [`../agents/top.md`](../agents/top.md) behind it. |
+| 🆕 **ClassroomIO** | [classroomio/classroomio](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** · **1,735★** | ⛔ **Do not fork, and this row exists as the contrast to Judge0 above.** *"Intelligent Customer Training Platform"* — SvelteKit + Supabase, 409 forks, pushed during this pass. 🔴 **AGPL-3.0 §13 reaches users who interact over a network**, which is exactly the hosted shape a studio engagement delivers, so the grant follows the deliverable. The capability — courses, assignments, a classroom — is real and well-starred; the architecture answer is to integrate over its API or to choose Mentingo (MIT) instead. |
+
 ## 🆕 6. Offline-first delivery — the deployment context most of this file assumes away (`p532`)
 
 | Platform | Repo | Licence | Where AI attaches |
@@ -212,3 +228,16 @@ exactly why a reader would otherwise reach for it.
    Frappe Education (GPL-3.0) are the same stack under different regimes, and a
    README badge can disagree with the grant it links to (Lumen). Read the licence
    file's title block before the architecture depends on it.
+   🆕 **And check it per *layer* too:** `frappe/frappe`, the framework under both,
+   is **MIT**, so the copyleft lives in the apps and not in the platform.
+6. 🆕 **GPL-3.0 and AGPL-3.0 are not the same architectural constraint.** A
+   GPL-3.0 component (**Judge0**) can be deployed as a separate network service
+   that a proprietary deliverable calls, because GPL-3.0 has no §13. An
+   AGPL-3.0 component (**ClassroomIO**, Open edX, Canvas, Frappe LMS) in the
+   same position pulls its grant onto the deliverable. 🔴 This base had been
+   collapsing both into "copyleft — integrate, do not fork", which is right
+   about AGPL and needlessly expensive about GPL.
+7. 🆕 **Before building an AI layer for a platform, check whether the platform's
+   own maintainers already ship one — in another repository.** Artemis and
+   EduTelligence are one institution and two addresses; filing the platform said
+   nothing about the agents. See `Gap 533-A`.
