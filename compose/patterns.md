@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Compose Patterns — Education
 
-**Pass `p527` · 2026-10-29.** Eight recipes. Every component named below was read
+**Pass `p528` · 2026-10-29.** Ten recipes. Every component named below was read
 from its repository page this pass, and **every licence was read from the licence
 file's own title block** (`raw.githubusercontent.com` is reachable while
 `github.com` returns HTTP 403 through the session proxy). No recipe uses a
@@ -315,13 +315,33 @@ is a *build*, not a fork.
 | Portable output | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | GPL-3.0 · 152★ |
 | Event records | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** · 51★ |
 
-**Why the field is empty, stated precisely.** Eight search results for "Moodle MCP"
-resolve to roughly **three codebases**: `thc1006/moodle-mcp` (0★) is a stated fork
-of `G36maid/moodle-mcp` (27★); `triffon/moodle-mcp` carries
-`Copyright (c) 2026 Falkenslab` and is the same code as `falkenslab/moodle-mcp`
-(2★); `tosuki/moodle-mcp` has **no licence file at all**. The most-surfaced option
-is AGPL-3.0 and read-only by design. See
-[`../repos/foundations.md`](../repos/foundations.md) for the full lineage table.
+⚠️ **Why the field is empty — corrected `p528`, and the correction changes the
+recipe.** `p527` wrote that the field *"resolves to roughly three codebases."* It
+does not. A thirteen-address census — **twelve probed first-hand this pass**, the
+thirteenth a duplicate carried from `p527` — found **eleven independent codebases
+plus two forks**, four languages, tool counts from **8 to ~230**, **37 stars across every
+counter read**, and 🟢 **ten of the eleven under MIT.** The forks are real
+(`thc1006` → `G36maid`; `triffon` → `falkenslab`, via its
+`Copyright (c) 2026 Falkenslab` line) and `tosuki/moodle-mcp` is genuinely
+ungranted — but they are two of thirteen, not the shape of the field. Full census:
+[`../repos/foundations.md`](../repos/foundations.md).
+
+🔵 **So this is a consolidation, not a greenfield build**, and that is cheaper and
+more defensible. Four MIT pieces to take, each verified `p528`:
+
+| Take | From | Why that one |
+|---|---|---|
+| Typed tool surface + tested version matrix (3.7 / 4.5 / 5.2) | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) · MIT · 27★ · Rust | The only one that names three live-tested Moodle versions |
+| Two-flag write gate + `confirm=true` on destructive calls | [GhaithAlHallak8/moodler-mcp](https://github.com/GhaithAlHallak8/moodler-mcp) · MIT · 3★ | Best-governed write model in the census (32 read / 8 write, writes off by default) |
+| Course-whitelist boundary (`MOODLE_DEV_COURSE_WHITELIST`, prod writes off) | [leshamblin/MoodleMCP](https://github.com/leshamblin/MoodleMCP) · MIT · 2★ | The only one that separates dev from prod write scope |
+| Zero-dependency posture (stdlib only, single file) | [Faixiang/moodle-mcp](https://github.com/Faixiang/moodle-mcp) · MIT · 2★ | Makes the institutional security review short |
+
+🟢 **The asset worth owning is the vocabulary, not the server.** No two of the
+eleven name the same operations the same way, and three contradict their own
+READMEs on tool count (Faixiang 6 vs 8, leshamblin 70 vs 67, falkenslab 140 vs
+~230). **Publish the tool schema as a spec and the server as its reference
+implementation.** 🔴 Do not take `sonstellar969/open-moodle` as a starting point
+despite its MIT grant: it links **AGPL-3.0 PyMuPDF**. See **P556**.
 
 **Wiring.** Build the server **permissively (MIT/Apache-2.0) and out-of-process**,
 speaking **Moodle Web Services** — never link Moodle's GPL-3.0 code, and never
@@ -413,6 +433,89 @@ assessment** and the natural door-opener.
 
 ---
 
+## 🆕 P555 — Portuguese-language curriculum and assessment stack (LATAM, Brazil)
+
+**Brief.** Everything in this recipe is **Brazilian, MIT and verified**, which is
+what makes it new: for seven passes this base held that LATAM contributed *data*
+and not *code* to the agent legs. It does not. The recipe grounds a teacher-facing
+agent in Brazil's own curriculum (**BNCC**) and marks student writing against
+Brazil's own examination (**ENEM**) — no translation layer, no US rubric wearing a
+Portuguese label.
+
+| Role | Component | Licence | Verified |
+|---|---|---|---|
+| Essay marking, 5 ENEM competencies | [dsvi-b/corretor-enem](https://github.com/dsvi-b/corretor-enem) | **MIT** · 7★ | `p420`, re-read `p528` |
+| Curriculum grounding (BNCC `EF01`–`EF04`, PCNs) | [ThallesYVasconcelos/Agente-Educacional](https://github.com/ThallesYVasconcelos/Agente-Educacional) | **MIT** · 0★ | `p528` |
+| LMS seam | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) (or **P553**'s consolidation) | **MIT** · 27★ | `p528` |
+| Pedagogical evaluation | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** · 13★ | `p527` |
+| Retention | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** · 4.1k★ | `p527` |
+| Event records | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** · 51★ | `p527` |
+| Local inference | Ollama (the EduRAG reference runs `llama3.2` / `qwen2.5` / `mistral` / `gemma2`) | — | `p528` |
+
+**Wiring.**
+
+1. **Take `corretor-enem` as a skill, not a service.** It is *agent-agnostic by
+   design*: no API, no ML, no model weights — a methodology plus a local SQLite
+   corpus of **11,147 examiner-marked essays**, which the agent reads to anchor
+   its scores. 🟢 **That is why it belongs at the bottom of the stack:** the
+   marking rationale is inspectable and the corpus is the citation. Methodology
+   credited to **Silva & Araujo (UFPE, 2024)**; corpora to `rafaelanchieta/essay`
+   and `lplnufpi/essay-br`.
+2. **Copy EduRAG's grounding architecture, do not depend on it.** 0★ and a
+   university course's final project — but it is the cleanest reference this base
+   has for curriculum grounding: page-level citations into **MEC** documents,
+   BNCC-code identification for an arbitrary activity, a **Self-RAG** check
+   before answering, and **Giskard** for evaluation. Re-implement that shape on
+   your own stack (LangGraph + ChromaDB + `bge-m3` embeddings is what it uses).
+3. **Attach to the LMS over MCP**, never by forking Moodle (GPL-3.0).
+4. **Evaluate with `pedagogy-benchmark` before and after.** It carries **CDPK**
+   and **SEND**, and its ground truth comes from Chile's Agencia de la Calidad de
+   la Educación and CPEIP — 🔵 **so the evaluation instrument is also LATAM**, and
+   a procurement conversation can be held entirely in regional evidence.
+5. **Write every marking event to Ralph (xAPI)** so the audit trail survives the
+   agent.
+
+🔴 **State the maturity honestly to the client.** The two Brazilian components
+total **7 stars, 1 fork and zero releases**. They are *correct* and they are
+*unproven at scale*. Price the engagement as "harden and operate verified
+reference code", not "integrate a maintained dependency" — and expect to become
+the de-facto maintainer of both. ⚠️ `corretor-enem`'s own page calls its output
+**an estimate, not an official score**; that sentence belongs in the deliverable's
+UI, not just in its README.
+
+**Timeline.** 6–8 weeks to a marked-essay pilot in one school network. **Region:
+LATAM.**
+
+## 🆕 P556 — The grant-union gate (run inside P551)
+
+**Brief.** `p551` reads the repository's licence file. `p528` found two ways that
+is not enough, both in live education repos, and both would pass a repo-level
+probe.
+
+| Failure | Instance, verified `p528` | What the probe sees | What ships |
+|---|---|---|---|
+| 🔴 **Transitive copyleft** | [sonstellar969/open-moodle](https://github.com/sonstellar969/open-moodle) | **MIT** | Links **PyMuPDF (AGPL-3.0)** for PDF extraction — the page says so itself. Network copyleft reaches the hosted deliverable. |
+| 🟡 **Non-code grant** | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) · **926★** | sidebar names **no licence**; README badge reads CC BY-SA 4.0 | **CC BY-SA 4.0** — a *content* licence. ShareAlike propagates to adaptations, no patent grant, and the code/content line is undrawn across a 157-tool MCP server and 165 prose skills. |
+
+**The gate, four commands and two questions.**
+
+1. `curl -s raw.githubusercontent.com/<repo>/<branch>/README.md` → **does the
+   address resolve at all?** A 404 everywhere is *absent*, not *ungranted*.
+   (`belentani7/aprende-brasil`: a search summary described 205 modules and a
+   tutor named "Nilo"; the repository does not exist.)
+2. Read the **licence file's title block** — not the badge, not the sidebar.
+3. **Enumerate the dependency licences** (`requirements.txt`, `pyproject.toml`,
+   `package.json`, `Cargo.toml`) and take the **union**. 🔵 *The grant you ship is
+   the union of the grants you link.*
+4. Ask **what the licence was written to cover.** CC BY-SA on an executable skill
+   library and MIT on a corpus are both category errors; only the first is
+   currently common, and it is on the largest education-skills repo in the field.
+
+**Output.** One row per component: address resolves (y/n) · grant from title
+block · dependency grants · union verdict · *written for code or for content*.
+🟢 **Any `ShareAlike`, `NonCommercial` or `AGPL` in the union stops the fork
+decision**, whatever the top-level badge says.
+
 ## Pattern selection
 
 | If the brief is… | Run |
@@ -424,6 +527,8 @@ assessment** and the natural door-opener.
 | Teacher-facing, PT/ES, public sector (LATAM) | **P550** |
 | 🆕 Moodle client, or a reusable asset worth owning | **P553** |
 | 🆕 Institution already using AI without a strategy (the 87%) | **P554** |
+| 🆕 Brazilian school network, PT-BR curriculum or ENEM marking (LATAM) | **P555** |
+| 🆕 Any fork decision — run **after** P551's title-block read | **P556** grant-union gate |
 | A claim about learning outcomes needs defending | **P552**, folded into the above |
 
 **Components not used, and why:** `advisingapp` (Elastic-2.0 — forbids the hosted
@@ -431,5 +536,9 @@ shape), `PageLM` (non-commercial, revenue-share), `cn-math-taxonomy`
 (CC-BY-NC-4.0), 🆕 `lumen` (**GPL-3.0**, despite its own README badge saying MIT),
 🆕 `csmediapro/moodle-mcp-server` (AGPL-3.0 — see P553), 🆕
 `A-R007/Multi-Agent-Study-Assistant`, `idoforgod/Vibe-learning-AgenticWorkflow`
-and `tosuki/moodle-mcp` (**ungranted — no licence file at all**). All of them look
-usable to a careless probe. See **P551**.
+and `tosuki/moodle-mcp` (**ungranted — no licence file at all**), 🆕
+`sonstellar969/open-moodle` (MIT, but links **AGPL-3.0** PyMuPDF — see **P556**),
+🆕 `GarethManning/education-agent-skills` (**CC BY-SA 4.0**, 926★ — a real grant
+with a ShareAlike condition, usable only where the derivative can be published),
+🆕 `henriquebotelhogomes/educacao` and `Fatima0923/AssessmentAI` (**ungranted**).
+All of them look usable to a careless probe. See **P551** and **P556**.

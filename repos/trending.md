@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p528` — `2026-10-29` — **🟢 THE MOODLE MCP FIELD IS NOT THREE CODEBASES. IT IS ELEVEN, TEN OF THEM MIT, AND THEY SUM TO 37 STARS.** `p527` read this field as *"eight search results resolve to ~three real codebases"*; `p528` probed **thirteen addresses** — existence first, then the licence file's title block — and found **eleven independent codebases plus two confirmed forks**, in four languages, with tool counts spanning **8 → ~230**. 🔵 **The finding inverts: not absence, fragmentation.** Eleven people built the same bridge, ten of them permissively, and nobody converged on a tool vocabulary. 🔴 New probe failure recorded: **transitive copyleft** — an **MIT** repo that links **AGPL-3.0** PyMuPDF. 🔴 And one search summary described, in rich detail, a repository that **does not exist**.
+
+### 🟢 The census — thirteen addresses, twelve probed first-hand this pass
+
+⚠️ `triffon/moodle-mcp` is **carried from `p527`** (confirmed duplicate of
+`falkenslab`) and was not re-probed; its row is marked `—` throughout. Every
+other row below was read this pass.
+
+| Repo | Licence (title block) | ★ | Lang | Tools | Note |
+|---|---|---|---|---|---|
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | **MIT** | **27** | Rust (`rmcp`) | 22 (20 typed + 2 opt-in escape hatches) | 🟢 **Ceiling unchanged.** The only one naming three live-tested versions: **Moodle 3.7, 4.5, 5.2** |
+| [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) | MIT (`© G36maid`) | 0 | Rust | 22 | ⛔ Stated fork of the above |
+| 🆕 [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | **MIT** (`© Ghaith AlHallak`) | 3 | Python 3.14+ | **40** (32 R / 8 W) | 🟢 **Best-governed writes in the field:** off by default behind two flags, `confirm=true` on destructive calls. Playwright sign-in, SQLite cache, `.mcpb` bundle |
+| 🆕 [`Faixiang/moodle-mcp`](https://github.com/Faixiang/moodle-mcp) | **MIT** | 2 | Python 3.8+, **stdlib only** | 8 | Single `server.py`, zero deps, docs in 10 languages, verified vs Moodle 4.3.6. ⚠️ all four changelog entries `1.0.0`→`1.3.0` dated **2026-10-27**; ⚠️ own text says *"six read-only tools"* over a table of 8 |
+| 🆕 [`leshamblin/MoodleMCP`](https://github.com/leshamblin/MoodleMCP) | **MIT** | 2 | Python 3.10+, FastMCP | **70 claimed / 67 counted** | R+W with the clearest boundary: `MOODLE_DEV_COURSE_WHITELIST`, `MOODLE_PROD_ALLOW_WRITES=false` recommended, token in local `.env` |
+| [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | **MIT** | 2 | — | **~230 claimed** | Drives a logged-in **browser session**, not Web Services. ⚠️ Largest claim, least verifiable |
+| [`triffon/moodle-mcp`](https://github.com/triffon/moodle-mcp) | MIT (`© Falkenslab`) | — | — | ~230 | ⛔ Same code as `falkenslab` |
+| 🆕 [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server) | **MIT** | 0 · 2 forks | **Go** | 14 (13 R + `submit_assignment`) | Also a REST mode for ChatGPT/Gemini. 🟡 `uom.lk` in the examples → *inferred* Sri Lanka, **not stated** |
+| 🆕 [`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle) | **MIT** 🔴 *see below* | 0 | Python | 14 | SQLite FTS5 search. 🔴 **Links AGPL-3.0 PyMuPDF.** ⚠️ its `moodle_mobile_app` token *can* allow writes on some sites |
+| 🆕 [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp) | **MIT** | 0 | TypeScript / Node 20+ | 12 | Read-only by construction — *"can never submit, edit or delete anything"* |
+| [`duck-5/moodle-mcp`](https://github.com/duck-5/moodle-mcp) | **MIT** | not read | — | — | Existence + grant re-confirmed; counter not read |
+| ⚠️ [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | 🔴 **AGPL-3.0** (*"GNU AFFERO GENERAL PUBLIC LICENSE"*) | 1 | TypeScript / Node | — | The most *visible* in search and **the one that is not permissive** |
+| ⛔ [`tosuki/moodle-mcp`](https://github.com/tosuki/moodle-mcp) | **none** | — | — | — | Repo **resolves**; no licence file at six paths on `main`. `p527`'s call, re-confirmed |
+
+**Totals:** 13 addresses · **11 independent codebases** · 2 forks · **10 MIT** ·
+1 AGPL-3.0 · 1 ungranted · 🔴 **37★ across every counter read** — under one
+eighth of [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (**308★**)
+for the *larger* install base.
+
+🔵 **What this changes for a build.** "Nothing exists" argues greenfield.
+"Eleven permissive half-builds and no standard" argues **consolidation plus a
+specification**, and the specification is the part worth owning. Four MIT pieces
+to take, each verified this pass: **G36maid's** typed tool surface and tested
+version matrix · **moodler-mcp's** two-flag write gate · **leshamblin's**
+course-whitelist boundary · **Faixiang's** zero-dependency posture. **P553**
+rewritten around exactly that.
+
+⚠️ **Tool counts in this field are marketing, not measurement.** Three of
+thirteen contradict their own READMEs (Faixiang 6 vs 8, leshamblin 70 vs 67,
+falkenslab 140 vs ~230). Treat every number in the Tools column as a claim.
+
+### 🔴 New probe failure — transitive copyleft
+
+[`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle):
+**MIT** at the repository, and its own page states **PyMuPDF (AGPL-3.0)** as the
+PDF-extraction dependency. A repo-level probe grades it buildable; the shipped
+artefact carries **network copyleft**. 🔵 **The grant you ship is the union of the
+grants you link.** First instance on these legs → new gate **P556** in
+[`../compose/patterns.md`](../compose/patterns.md); licence map on
+[`foundations.md`](foundations.md) updated to place `open-moodle` in the
+network-copyleft row *in practice* despite its MIT grant.
+
+### 🔴 Absent, not ungranted
+
+`belentani7/aprende-brasil` — a search summary asserted *"plataforma educativa
+brasileña interactiva con tutor IA"*, a tutor named **"Nilo"**, an offline LLM
+fallback, **205 modules**, React + FastAPI + SQLite. ⛔ **`README.md` 404s on
+`main` and `master`; the repository page returns HTTP 404. No such repository.**
+🔴 Third occurrence of this failure mode on this base, after `tosuki/moodle-mcp`
+and the ArguLens mis-attribution (`p527`). 🔵 **The richer the detail in a search
+summary, the more it needs an existence probe.**
+
+### 🟢 Non-Moodle repo reads this pass
+
+| Repo | Licence | ★ | Why recorded |
+|---|---|---|---|
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🟡 **CC BY-SA 4.0** | **926** (+5 vs `p520`'s 921) · 130 forks | `v3.1.0` 22 Oct 2026 · **165 skills / 20 domains** · MCP server with **157 tools / 165 prompts**. 🔴 Known since `p466`, on neither shelf nor trap table until now → promoted to a **fourth verdict band** on [`../agents/top.md`](../agents/top.md) |
+| [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) | 🟢 **MIT** | **7** (was 6 at `p420`) | ENEM 5-competency essay grading over **11,147** examiner-marked essays, stdlib-only, **no API / no ML / no weights**. 🔴 Verified `p420`, never shelved → **shelf row 14, LATAM (Brazil)** |
+| [`ThallesYVasconcelos/Agente-Educacional`](https://github.com/ThallesYVasconcelos/Agente-Educacional) | 🟢 **MIT** | 0 | "EduRAG" — BNCC `EF01`–`EF04` + PCN grounding, page-level citations, **Self-RAG** check, LangGraph + ChromaDB + `bge-m3` + Ollama, MCP server, **Giskard** eval. Reference implementation → **P555** |
+| [`sonowalvaibhav/gradeops`](https://github.com/sonowalvaibhav/gradeops) | 🟢 **MIT** | 0 · 0 forks | VLM grading of handwritten answers, JSON rubrics, TA override; plagiarism by **shared anomalous logic / identical erroneous reasoning**. 🔴 0★ → signal, not a row (unchanged verdict, re-confirmed) |
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | 🟢 **MIT** | 0 · 0 forks | **Zero external APIs**, on-device; from-scratch logistic regression yielding an **evidence breakdown for human review, not a verdict** — the compliant shape for the EU **2 Dec 2027** band. ⚠️ self-contradicts on test count (94 vs 344) |
+| [`AIEd-Innovations/assessment_agent`](https://github.com/AIEd-Innovations/assessment_agent) | **Apache-2.0** | 0 · 1 fork | 🔴 **PR #19 "Remove the integrity check: the agent only grades"** merged to `main` **27 Oct 2026** (`c019f0f`): anomaly LLM call, anomaly log, `GET /anomalies` and `anomaly_report` all removed; integrity risk no longer routes to review. Payoff: one LLM call instead of two → **new trend 11** |
+| ⛔ [`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) | **none** | 0 | Resolves on `main`; no licence file at six paths. **Ungranted** |
+| ⛔ [`henriquebotelhogomes/educacao`](https://github.com/henriquebotelhogomes/educacao) | **none** | 0 | "Mentora AI", Socratic RAG + learning-gap radar. Resolves on `master`; no licence file. **Ungranted** |
+| [`iwuzhu/kiro-ai-grading-system`](https://github.com/iwuzhu/kiro-ai-grading-system) | 🟢 **MIT** | not read | Multi-tenant AI grading claiming academic-integrity coverage. Grant confirmed; page not read this pass — 🟡 **open for `p529`** |
+
+⚠️ **`gradeops` is a name collision worth keeping straight:**
+[`sonowalvaibhav/gradeops`](https://github.com/sonowalvaibhav/gradeops) (MIT,
+read this pass) is **not** `adriangilr/gradeops` (1★), which this base recorded
+separately under `Gap 354` as declaring nothing anywhere.
+
+### 🔵 Method notes from this pass
+
+1. 🆕 **Existence before licence.** `README.md` on `main` **and** `master` first.
+   A 404 everywhere is **absent**, not ungranted — filing it as ungranted puts a
+   phantom in the census. New shelf rule 5.
+2. 🆕 **Dependency grants, not just the repository's.** New shelf rule 6; gate
+   **P556**.
+3. 🆕 **Ask what the licence was written to cover.** CC BY-SA on an executable
+   skill library is a fourth verdict band, not a pass and not a trap. Rule 7.
+4. 🔴 **Rewrites drop verified rows.** `p527`'s full rewrite of `top.md` lost two
+   addresses this base had verified itself. Contract for `p529` on
+   [`../agents/top.md` § Promotion debt](../agents/top.md).
+5. 🟡 **Fifty minutes is not a measurement interval.** `p527` committed at 11:58
+   UTC; this pass began at 12:47. **No star delta is claimed for any row except
+   the two promoted ones**, whose movement is measured against `p420` and `p520`,
+   not against `p527`.
+
+---
+
 ## 🆕 `p527` — `2026-10-29` — **THE RED CELL `p526` LEFT OPEN IS NOW GREEN, AND IT RESOLVED THE COPYLEFT WAY: `frappe/education` IS GPL-3.0 — WHILE `frappe/lms` ON THE SAME STACK IS AGPL-3.0.** One vendor, one framework, **two different copyleft regimes**. 🟢 **Channel upgrade that made it possible:** `curl` to `github.com` and `api.github.com` is still **HTTP 403** through the session proxy, but **`raw.githubusercontent.com` is reachable** — so licences are now read from **the licence file's own title block** instead of a sidebar badge. Every platform licence on [`foundations.md`](foundations.md) was re-read that way this pass. 🔴 **The structural finding this window:** Moodle, the sector's largest LMS, has **no credible MCP server** — the whole field tops out at **27★**, eight search results resolve to about **three codebases**, and the most-visible one is AGPL-3.0. Against [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) at **308★** for the *smaller* install base.
 
 ### 🔵 Resolved — the `p526` red cell

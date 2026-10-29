@@ -6,10 +6,15 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p527` · 2026-10-29.** Ten trends. Each one is stated so it could be
+**Pass `p528` · 2026-10-29.** Eleven trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
+
+> 🆕 **`p528`, a same-day second pass**, rewrote **Trend 4** (the Moodle reading
+> was wrong in shape), sharpened **Trend 9**, and added **Trend 11** on a
+> deletion. Trends 1–3, 5–8 and 10 were not re-evidenced this pass and stand on
+> `p527`'s sourcing.
 
 ## 1. The governance gap is the market
 
@@ -80,22 +85,34 @@ Oct 2026, ~102-128 tools) for Canvas, and
 retention. Both are licence-clean seams into AGPL and desktop systems that must
 not be forked.
 
-🔴 **But Moodle — the sector's largest install base and plugin ecosystem — has no
-credible MCP server.** Every candidate was licence-probed and page-read this pass:
-the whole field tops out at **27★**
-([G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp), MIT), the eight
-search results collapse to roughly **three real codebases** once fork lineages are
-traced, and the most-visible option
-([csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server),
-1★) is **AGPL-3.0**. See the lineage table in
+🔴 **But Moodle — the sector's largest install base and plugin ecosystem — still
+has no credible MCP server**, and ⚠️ **`p527`'s account of *why* was wrong.** It
+read the field as *"roughly three real codebases."* `p528` probed **twelve
+addresses first-hand** (existence first, then the licence title block) for a
+census of **thirteen**, and found
+**eleven independent codebases plus two forks**, in four languages, with tool
+counts from **8 to ~230**, and **37 stars across every counter read**. Ceiling
+unchanged at **27★**
+([G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp), MIT, Rust, the only
+one naming three live-tested Moodle versions). Full census in
 [`../repos/foundations.md`](../repos/foundations.md).
 
-**So the honest form of the trend:** MCP is the *intended* integration layer and
-the *actual* one only for Canvas and Anki. For Moodle, the plugin boundary is
-still the seam — and the gap is the clearest build opportunity on this base.
+🟢 **So the honest form of the trend, restated:** MCP is the *intended*
+integration layer and the *actual* one only for Canvas and Anki — **not because
+nobody built a Moodle bridge, but because eleven people each built their own.**
+Ten of the eleven are **MIT**, so the blocker is neither licensing nor effort:
+it is 🔴 **the absence of a shared tool vocabulary.** Eight tools in one server,
+~230 in another, three of them contradicting their own READMEs on the count.
+**Tool counts in this field are marketing, not measurement.**
 
-**What would disconfirm it:** a Moodle MCP server past ~500★, or Moodle shipping
-an official one. Either would make this the fastest-moving line on the base.
+🔵 **Why that reframes the opportunity.** "Nothing exists" argues for a
+greenfield build. "Eleven permissive half-builds and no standard" argues for a
+**consolidation plus a specification** — materially cheaper, and the
+specification is the defensible part. See **P553**.
+
+**What would disconfirm it:** a Moodle MCP server past ~500★, Moodle shipping an
+official one, or 🆕 **two of the eleven converging on one tool vocabulary.** The
+third is now the one to watch, and it is the cheapest of the three to cause.
 
 ## 5. Compliance timelines have become build windows — and now **differ by buyer type**
 
@@ -206,8 +223,23 @@ AI-generated content. **Provenance is where the governance gap, the evaluation
 gap and the labelling rules converge**, and it is the cheapest thing to design in
 and the most expensive to retrofit.
 
+🆕 **`p528` adds the licence half of this trend, and it is the part that bites.**
+The largest skills library in education is
+[GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills)
+— **926★, 130 forks, 165 skills across 20 domains, 157 MCP tools**, `v3.1.0` on
+22 Oct 2026 — and it is **CC BY-SA 4.0**, a *content* licence. ShareAlike
+propagates to adaptations, there is no patent grant, and the repository ships a
+working server and 165 prose skills under one grant without drawing the
+code/content line. 🔵 **As the packaging unit shifts from application to skill,
+the licensing question shifts with it — from "can we fork this code" to "what
+does this grant actually cover."** A content licence on an artefact that an agent
+executes is a new question, and `MIT`-shaped intuitions answer it wrongly. See
+the fourth verdict band on [`../agents/top.md`](../agents/top.md).
+
 **What would disconfirm it:** skills plateauing while monolithic apps resume
-growth, or provenance staying absent from procurement questions.
+growth, provenance staying absent from procurement questions, or the big skill
+libraries relicensing to Apache-2.0 — which would retire the licensing half
+without touching the packaging half.
 
 ## 10. The buyer is shifting from the learner to the teacher
 
@@ -224,6 +256,48 @@ teacher review in the loop. The tooling is now arriving where the money is.
 
 **What would disconfirm it:** learner-facing subscription products reclaiming
 funding share, or teacher tools failing to convert at district level.
+
+## 11. 🆕 Integrity is the half that gets cut — and the evidence is a merge commit
+
+The clearest signal this pass is a **deletion**, which is a stronger form of
+evidence than a launch because nobody ships a deletion for attention.
+
+🔴 [`AIEd-Innovations/assessment_agent`](https://github.com/AIEd-Innovations/assessment_agent)
+(**Apache-2.0**) was the one open agent doing grading **and** integrity in one
+pipeline. **PR #19 — *"Remove the integrity check: the agent only grades"* —
+merged to `main` on 27 Oct 2026.** It removed the anomaly-detection LLM call, the
+anomaly report log, the `GET /anomalies` endpoint and the `anomaly_report` result
+field. An integrity risk **no longer routes a submission to review.** The stated
+reason is cost: **one LLM call per submission instead of two.**
+
+🔵 **Read it as unit economics, not as one team's preference.** Integrity was the
+second inference call, it doubled the per-submission cost, and it was the half
+that went. That is the same pressure every grading deployment is under, and it
+predicts where the open tooling will keep thinning out.
+
+🟡 **Meanwhile the permissive supply exists and nobody uses it.** Two MIT
+candidates were verified this pass and **both sit at 0★ / 0 forks**:
+[gradeops](https://github.com/sonowalvaibhav/gradeops) (VLM grading of handwritten
+answers, JSON rubrics, TA override, plus plagiarism detection that looks for
+*shared anomalous logic and identical erroneous reasoning* — the right primitive,
+because matched *errors* are far harder to explain away than matched text) and
+[Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent)
+(**zero external APIs, fully on-device**, from-scratch logistic regression
+producing an **evidence breakdown for human review rather than a verdict**).
+
+🟢 **Why the posture of that second one matters commercially:** from 2 Dec 2027 an
+EU deployer running AI over grading or proctoring is in the high-risk band, where
+"explainable evidence for a human decision-maker" is the compliant shape and "a
+cheating verdict" is not. **The 0★ repo has the right architecture and no
+adoption; the funded deployments have adoption and just deleted the feature.**
+
+⚠️ **Both are single-author projects with self-reported metrics**, and the
+proctoring one contradicts itself on its own test count (94 vs 344). Signals, not
+dependencies.
+
+**What would disconfirm it:** an integrity capability landing *back* in a
+maintained open grading agent, or one of these two passing ~100★ with external
+contributors.
 
 ## Counter-signals worth holding
 

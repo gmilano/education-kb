@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p528` — `2026-10-29` — **🔴 THE PASS'S PRIMARY GAP IS THIS BASE'S OWN PROMOTION PATH. Two addresses it verified itself were absent from the shelf `p527` rebuilt 50 minutes earlier, and one of them FALSIFIED the LATAM gap note printed below it. 🟢 Both repaired. 🟢 `Gap 527-Moodle` RESHAPED from bytes: not three codebases, ELEVEN. 🔴 FOUR REGISTERED (`528-A`…`528-D`).**
+
+### 🔴 `Gap 528-A` — the promotion sweep was never run, and is still not run
+
+**Measured.** [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem)
+(MIT, Brazil) was verified at **`p420`, 24 Oct**, recorded verbatim as *"the one
+new address worth shelving"*, and was **not on `p527`'s shelf** — while
+[`../agents/top.md`](../agents/top.md) asserted *"no LATAM-origin education
+agent"* for seven passes.
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+(CC BY-SA 4.0, **926★**), verified `p466` and re-read at `p492` and `p520`, was on
+**neither shelf nor trap table**.
+
+🟢 **Both repaired this pass** (shelf row 14; new fourth verdict band).
+🔴 **The gap that stays open:** `p528` checked the history only for the addresses
+it had reason to look up. **A full sweep of every promotion verdict in the
+trending history was not run**, so the two repairs are what surfaced, not
+provably all of them.
+
+**Asked of `p529`:** run the sweep. Extract every address a prior pass called
+shelf-worthy, diff against the current shelf, and record a written reason for
+each absence. 🔵 **Mechanism named:** a *full rewrite* re-derives the shelf from
+the pass's own reading, so anything verified earlier is invisible unless
+something carries it forward. **Nothing does.** The control belongs in front of
+the next rewrite, not after it.
+
+### 🟢 `Gap 527-Moodle` — RESHAPED, not closed
+
+**`p527` said:** eight search results *"resolve to ~three real codebases."*
+
+**`p528` measured:** **twelve addresses probed first-hand** (existence first,
+then title block) for a census of **thirteen** — the thirteenth,
+`triffon/moodle-mcp`, carried from `p527` as a confirmed duplicate and marked as
+such → **eleven independent codebases plus two confirmed forks**, four
+languages, tool counts **8 → ~230**, 🟢 **ten of eleven MIT**, 🔴 **37★ in
+total**. Ceiling unchanged at 27★.
+
+🔵 **The generalisable half:** the gap's *shape* was wrong while its *conclusion*
+held. "No credible bridge" was right; "almost nobody tried" was not. **A gap
+stated as absence invites a greenfield build; the same gap stated as
+non-convergence invites a consolidation plus a specification** — which is
+cheaper and is the defensible asset. **P553** rewritten accordingly.
+
+### 🔴 `Gap 528-B` — "ungranted" has been recorded without an existence check
+
+**Measured.** `belentani7/aprende-brasil` was described by a search summary in
+first-hand texture — a tutor named "Nilo", an offline LLM fallback, **205
+modules**, React + FastAPI + SQLite. ⛔ **`README.md` 404s on `main` and
+`master`; the repository page returns HTTP 404.** The address does not exist.
+
+🔴 **Third occurrence of this failure mode** — `tosuki/moodle-mcp` (*"MIT
+licensed"*, real but ungranted) and the **ArguLens** mis-attribution to
+`wwrwbs/AI_AWE` (`p527`) precede it. 🟢 **New shelf rule 5 added:** probe that the
+address resolves before grading its grant. **Asked of `p529`:** re-probe the
+existing ungranted table — four rows were filed before this rule existed, and any
+of them could be a phantom rather than an ungranted repo.
+
+### 🔴 `Gap 528-C` — the licence probe reads one grant where the artefact ships several
+
+**Measured.** [`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle)
+is **MIT** and its own page states that **PyMuPDF, its PDF dependency, is
+AGPL-3.0**. A repo-level probe grades it buildable; the shipped artefact carries
+network copyleft. 🟢 Recorded as shelf rule 6 and gate **P556**.
+
+🔴 **Open:** this base's probes — `ingest/probe-grant.sh` and every title-block
+reader in `compose/code/` — read **repository** grants only. **No instrument on
+this base enumerates dependency grants.** Every "buildable" verdict on the
+shelves is therefore a repository-level verdict, not an artefact-level one.
+**Asked of `p529`:** state that limitation wherever a buildable verdict is
+published, and scope what a `requirements.txt` / `package.json` / `Cargo.toml`
+reader would cost.
+
+### 🔴 `Gap 528-D` — a fourth verdict band existed in the history and had no home on the shelves
+
+**Measured.** CC BY-SA 4.0 on a 926★ skills library is neither a trap (the grant
+is real and honestly flagged) nor ungranted (a grant exists) nor buildable
+(ShareAlike propagates, no patent clause). The base had the licence recorded
+since `p466` and **no verdict band to file it under**, which is the mechanical
+reason it stayed off `top.md`.
+
+🟢 **Band opened this pass** (rule 7: *ask what the licence was written to
+cover*). 🔴 **Open:** no sweep has been run for other **non-code grants** across
+the shelves — CC family, ODbL, OpenRAIL, and `MIT`-on-a-corpus, which is the same
+category error in the other direction. **Asked of `p529`:** sweep the shelves for
+content licences on executable artefacts and code licences on data.
+
+### 🔵 Declared non-findings — stated so silence is not read as coverage
+
+- **Regional policy legs returned nothing new.** All four regional queries ran in
+  full; every NA / EMEA / APAC item was already on this base (134 bills / 31
+  states, NYC traffic-light, Ohio 1 Jul 2026, COPPA 22 Apr 2026, Oregon SB 1546,
+  Gallup 60%, Reg (EU) 2026/1744 → 2 Dec 2027 with Art. 50 at 2 Aug 2026,
+  emotion-recognition ban since Feb 2025, China age six / Beijing 8h, India
+  Class 3 + ₹10,372 crore, Singapore AI Verify). 🔵 **Saturated at this search
+  depth** — moving these legs needs primary sources, named on
+  [`market.md`](market.md).
+- **Two new LATAM items only:** UNESCO's **October 2026 Santiago convening of
+  Latin American faculties of education** (Mexico, Colombia, Chile), and a
+  date-flagged **Letrus / 400 Brazilian schools** figure from a **2025** source.
+- 🔴 **No SIS or advising agent under a permissive licence.** Unchanged for
+  several passes; `advisingapp` remains Elastic-2.0.
+- 🟡 **[`iwuzhu/kiro-ai-grading-system`](https://github.com/iwuzhu/kiro-ai-grading-system)
+  — grant confirmed MIT, page not read.** Claims academic-integrity coverage, so
+  it is directly relevant to the integrity gap. **Open for `p529`.**
+- 🟡 **No star counts read for `duck-5/moodle-mcp` or `tosuki/moodle-mcp`**, so
+  the census's 37★ total is a floor, not a total.
+- 🔴 **Gate posture unchanged:** `make hooks` not run this pass. Nothing in `p528`
+  is gate-attested; `p522`'s **47/63** remains the last attested reading.
+
+---
+
 ## 🆕 `p525` — `2026-10-29` — **🟢 `Gap 523-A` CLOSES FROM BYTES, AND THE ROW IT CONCERNS DRIFTED A SECOND TIME WHILE THE GAP WAS OPEN. 🔴 `p524` REGISTERED ITS FINDINGS ON THE SHELVES AND NOT HERE — `P418` REGRESSES FOR THE FOURTH TIME ON THIS REGISTER (`p511`, `p514`, `p521`, now `p524`); repaired below. 🟢 The pass's headline gap is new and it is about the base's STANDING instrument, not its supply: `ingest/probe-grant.sh` grades all three grants `p520` refused as buildable-or-unknown. 🔴 SIX REGISTERED (`525-A`…`525-F`). 🔴 `make hooks` DENIED — but the denial is NARROWER than this register has recorded it, and that is measured.**
 
 ### 🔴 Gate posture — and a correction to how this register describes the denial

@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p527` · 2026-10-29.** Every platform below is a real, running system that
+**Pass `p528` · 2026-10-29.** Every platform below is a real, running system that
 institutions already operate, with its licence read this pass from **the licence
 file's own title block** (`raw.githubusercontent.com` is reachable while
 `github.com` returns HTTP 403 through the session proxy). The question this file
@@ -21,7 +21,7 @@ function they own.
 
 | Platform | Repo | Licence | Where AI attaches |
 |---|---|---|---|
-| **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 · 7.6k★ | The **plugin API** (local, block, mod, qtype plugins) plus the AI subsystem introduced in the 4.5 line. A GPL plugin living in-tree is the lowest-friction attachment anywhere in this sector, and the plugin directory gives distribution for free. Keep the model-serving side in a separate permissive service and call it over HTTP. 🔴 **The MCP route is not available off the shelf:** the whole Moodle-MCP field tops out at **27★** and the most-visible option is AGPL-3.0 — see the lineage table in [`../repos/foundations.md`](../repos/foundations.md). For Moodle, the plugin boundary *is* the seam today. |
+| **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 · 7.6k★ | The **plugin API** (local, block, mod, qtype plugins) plus the AI subsystem introduced in the 4.5 line. A GPL plugin living in-tree is the lowest-friction attachment anywhere in this sector, and the plugin directory gives distribution for free. Keep the model-serving side in a separate permissive service and call it over HTTP. 🔴 **The MCP route is not available off the shelf** — but ⚠️ **`p528` corrects why.** It is not that nobody built one: **eleven independent codebases exist, ten of them MIT**, the field tops out at **27★** and sums to **37★ in total**, and no two agree on a tool vocabulary. The most-visible option is still AGPL-3.0. 🟢 So for a client engagement there *is* permissive prior art to consolidate — see the census in [`../repos/foundations.md`](../repos/foundations.md) and **P553**. 🔴 For a deployment today, the plugin boundary is still the seam. |
 | **Open edX** | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | AGPL-3.0 · 8.2k★ | **XBlocks** for new interactive component types, and **Tutor plugins** ([overhangio/tutor](https://github.com/overhangio/tutor), AGPL-3.0 · 1.1k★) for deployment-level changes. Never fork the platform; an XBlock plus a Tutor plugin covers almost every ask. |
 | **Canvas LMS** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | AGPL-3.0 · 6.9k★ | **Do not fork.** Attach over **LTI 1.3 + the Canvas REST API**, or via MCP — [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (MIT · 308★, v1.16.0 Oct 2026) already exposes Canvas to assistants and is **the fastest credible LMS-agent demo available in this sector, for any platform.** |
 | **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | **Apache-2.0** · 7.0k★ | Fork it. Its explorations model — branching lesson states with feedback at each step — is the closest thing in open source to a structure an agent can author *into* rather than around. The permissive licence makes it the default when the client wants to own the product. |

@@ -6,9 +6,25 @@ updated: 2026-10-29
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p527` · 2026-10-29.** Figures are attributed to the source that produced
+**Pass `p528` · 2026-10-29.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
+
+> 🆕 **`p528` ran the full four-region sweep and reports the result plainly: the
+> regional *policy* picture did not move.** Every North America, EMEA and APAC
+> item this pass surfaced — 134 bills across 31 states, NYC's traffic-light
+> guidance, Ohio's 1 Jul 2026 deadline, the amended COPPA rule's 22 Apr 2026
+> compliance date, Oregon SB 1546, Gallup's 60% of US teachers, Regulation (EU)
+> 2026/1744 moving stand-alone high-risk education systems to **2 Dec 2027** with
+> Article 50 transparency still landing **2 Aug 2026**, the schools emotion-
+> recognition ban in force since Feb 2025, China's compulsory AI from age six,
+> India's Class 3 target and ₹10,372 crore IndiaAI mission, Singapore's AI
+> Verify — **was already on this base.** 🔵 That is a result, not a blank: after
+> ~500 passes the regulatory legs are saturated at this level of search, and a
+> pass that re-reports them is spending budget to confirm what the file says.
+> **Two genuinely new LATAM items** are recorded below. The real movement this
+> pass was on the supply legs — see
+> [`../agents/top.md`](../agents/top.md).
 
 ## Global market size — four firms, one wide band
 
@@ -347,6 +363,30 @@ inside an open benchmark — that is leverage nobody is using.
    greenfield read: national AI-literacy programmes with no incumbent to displace.
    Kolibri (MIT, offline-first) is the right base where connectivity binds.
 
+### 🆕 LATAM — two additions from `p528`'s sweep
+
+🟢 **Teacher-formation is organising regionally, and it is the entry point.** In
+**October 2026** UNESCO convened **faculties of education from across Latin
+America in Santiago** to work on how to prepare future teachers for AI, with
+experiences presented from **Mexico, Colombia and Chile**. 🔵 **Why this is
+commercially relevant and not just news:** it is the same institutional circle
+that runs the **LAC Observatory on AI in Education** (launched 14 Apr 2026,
+Santiago — CAF, CENIA, Cetic.br, CEPAL, Fundación Ceibal, Tecnológico de
+Monterrey), and Trend 10 on [`trends.md`](trends.md) says the buyer is moving
+from the learner to the teacher. **Teacher formation is where regional
+procurement is being designed, in public, right now.**
+
+🟡 **One deployment figure, date-flagged.** A regional analysis reports **Letrus
+used in 400 Brazilian schools**, and Chile's **Elige Educar** applying AI to
+teacher retention and recruitment. ⚠️ **The source is dated 2025**, so treat both
+as the most recent *published* figures rather than current ones; neither was
+confirmed against the vendors this pass.
+
+🔴 **And the honest counterweight, unchanged:** the same analysis warns that LATAM
+education systems are absorbing AI tools **often without oversight or
+guidelines** — which is the demand side of pattern **P554**, not a reason to
+discount it.
+
 ## Declared gaps this pass
 
 Written down because an unstated gap is indistinguishable from coverage.
@@ -363,9 +403,25 @@ Written down because an unstated gap is indistinguishable from coverage.
   *absent* data. The EMEA leg is an EU-regulation leg plus a funding list. A pass
   targeting the UK DfE, UAE KHDA and specific African education ministries would
   fix it; this pass did not.
-- **No LATAM-origin open-source education agent exists on these shelves.** The
-  region's shipped strength is school management (i-educar), not agents. What
-  LATAM *does* contribute on the agent legs is **data** (Chile → CDPK/SEND).
+- 🟢 🆕 **RETIRED: "no LATAM-origin open-source education agent."** This gap was
+  false when it was written. [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem)
+  (**MIT**, Brazil — ENEM's five competencies over 11,147 examiner-marked essays,
+  UFPE methodology) was verified by this base at **`p420` on 24 Oct** and never
+  shelved; a second MIT Brazilian artefact,
+  [`ThallesYVasconcelos/Agente-Educacional`](https://github.com/ThallesYVasconcelos/Agente-Educacional)
+  (BNCC/PCN-grounded agentic RAG, 0★), was verified this pass. 🔴 **The gap was in
+  this base's promotion path, not in the region's supply** — see
+  [`../agents/top.md` § Promotion debt](../agents/top.md). 🟡 **The real LATAM gap,
+  restated:** the region's two verified agent-leg artefacts total **7 stars and
+  zero releases**. The shortage is *maturity and adoption*, not origin. What LATAM
+  also contributes is **data** (Chile → CDPK/SEND).
+- 🆕 **The regional policy legs are saturated at this search depth.** `p528` ran
+  all four regional queries and every NA/EMEA/APAC item returned was already on
+  this base. **Stated so the next pass does not spend its budget here:** moving
+  these legs now needs *primary* sources — the UK DfE, UAE KHDA, named African
+  education ministries, Canada's and Mexico's education departments, and
+  Regulation (EU) 2026/1744 read from EUR-Lex — not another round of regional
+  search.
 - **The "under 10% of schools have AI rules" figure has no primary citation.**
 - **APAC curriculum status is internally contradictory across sources** (see the
   warning above) and needs per-country verification before client use.

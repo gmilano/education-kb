@@ -4,6 +4,245 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p528` — `2026-10-29` — **🔴 THE PASS'S BIGGEST FINDING IS A SELF-INFLICTED ONE: TWO ADDRESSES THIS BASE VERIFIED ITSELF WERE MISSING FROM THE SHELF `p527` REBUILT 50 MINUTES AGO — AND ONE OF THEM FALSIFIED THE LATAM GAP NOTE PRINTED DIRECTLY BELOW IT.** `dsvi-b/corretor-enem` (**MIT**, Brazil, ENEM over **11,147** examiner-marked essays) was verified at **`p420`, 24 Oct**, recorded verbatim as *"the one new address worth shelving"*, **never shelved** — while [`top.md`](top.md) went on asserting *"no LATAM-origin education agent… the LATAM contribution is data, not code"* for seven passes. `GarethManning/education-agent-skills` (**CC BY-SA 4.0, 926★**), known since `p466`, was on **neither** the shelf nor the trap table. 🟢 **Both promoted. Shelf 13 → 14; new fourth verdict band opened.** 🟢 **And the Moodle census is finished and `p527`'s reading of it corrected: not "roughly three codebases" — ELEVEN, ten of them MIT, 37★ in total.** 🔴 One search summary described a repository, in rich detail, that **does not exist**.
+
+### 🔴 Promotion debt — the headline, because it is the one a client would notice
+
+| Address | Verified by | Verdict then | On `p527`'s shelf | `p528` |
+|---|---|---|---|---|
+| [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) | **`p420`** · 24 Oct | 🟢 MIT · 6★ · *"the one new address worth shelving"* | 🔴 **absent** — and contradicted by the gap note beneath it | 🟢 **shelf row 14** · LATAM (Brazil) · **7★** |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **`p466`**, re-measured `p492` (the 1 229/1 230 B byte bug), re-read `p520` | 🟡 CC BY-SA 4.0 · 921★ · hosted MCP retired at `v3.1.0` | 🔴 **absent** — neither shelf nor trap | 🟢 **fourth verdict band** · **926★** (+5) |
+
+🔴 **The mechanism is the rewrite.** `p527` rebuilt [`top.md`](top.md) as a full
+rewrite, and a rewrite re-derives the shelf from its own reading — an address
+verified a hundred passes earlier is invisible to it unless something carries it
+forward. **Nothing does.** The cost this time was the base's longest-standing
+regional claim.
+
+🔵 **Control for `p529`, stated as a contract:** before a rewrite ships, diff the
+new shelf against the promotion verdicts of the last ~20 passes. **Any address a
+prior pass called shelf-worthy appears on the new file or carries a written
+reason it does not.** A dropped row is a decision; an unstated decision is
+indistinguishable from an accident.
+
+🟡 **Scope honesty:** `p528` checked the history for the addresses it had reason
+to look up. **A full sweep of every promotion verdict was not run.** The two
+repairs above are what surfaced, not provably all of them.
+
+### 🟢 `corretor-enem` — why it is a shelf row and not a curiosity
+
+| Field | Read `p528` |
+|---|---|
+| Licence | **MIT**, title block, `master/LICENSE` |
+| Stars / forks / commits | **7** (was 6 at `p420`) · 1 · 11 · **no release** |
+| What it is | ENEM dissertative-argumentative essay grading across the **five official competencies** (0–200 each, 0–1000 total) |
+| Ground truth | **11,147 real essays already marked by examiners**, in a local SQLite `corpus.db` (Essay-BR) |
+| 🔴 Architecture | **No API, no ML, no model weights.** Python 3.10+, **standard library only** (`sqlite3`). The methodology is Markdown; the agent reads the corpus to anchor its scores |
+| Provenance | Methodology credited **Silva & Araujo (UFPE, 2024)**; corpora `rafaelanchieta/essay`, `lplnufpi/essay-br`. Bundled corpora carry their own MIT grants |
+| ⚠️ Self-stated limit | Its own page calls the output **an estimate, not an official score** — that sentence belongs in a deliverable's UI, not just its README |
+
+🟢 **The placement is the strongest on the shelf** and it does not rest on a
+domain name or a README language: ENEM's competencies, a Brazilian examiner
+corpus, UFPE methodology. 🔵 **This is LATAM *origin*, not LATAM data** —
+`pedagogy-benchmark` is EMEA code over Chilean data; this is **Brazilian code over
+Brazilian data**, the first on this base. It also sits in **trend 9's** packaging
+shift: it ships as a *skill* with no model, so provenance is the whole product.
+
+🟡 **A second LATAM artefact, verified and deliberately NOT shelved.**
+[`ThallesYVasconcelos/Agente-Educacional`](https://github.com/ThallesYVasconcelos/Agente-Educacional)
+("EduRAG") — **MIT**, **0★**, a university LLM course's final project. Agentic RAG
+for Brazilian grades 1–4 grounded in **MEC** documents (BNCC `EF01`–`EF04`, PCNs
+across six subjects), page-level citations, BNCC-code identification for an
+arbitrary activity, a **Self-RAG** hallucination check, LangGraph + ChromaDB +
+`bge-m3` + Ollama, an MCP server, **Giskard** evaluation. 🔵 **Reference
+implementation, not a dependency** — and the cleanest one this base has for
+*"ground a teacher agent in a national curriculum."* Written into **P555**.
+
+🔴 **So the LATAM gap is restated, not closed:** the region's two verified
+agent-leg artefacts total **7 stars, 1 fork and zero releases.** The shortage is
+**maturity and adoption, not origin.**
+
+### 🟡 The fourth verdict band — granted, but not under a code licence
+
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+· **926★** · 130 forks · `v3.1.0` 22 Oct 2026 · **165 skills / 20 domains** ·
+MCP server exposing **157 tools and 165 prompts** · Claude, Codex, Hermes ·
+author Gareth Manning, *"20 years of international education experience across 27
+countries"*, **no country stated → unplaced**.
+
+**Licence: `Creative Commons Attribution-ShareAlike 4.0 International`**, read
+from the title block. The sidebar names **no licence at all**; only the README
+badge does. Three consequences to price:
+
+1. 🔴 **ShareAlike propagates to adaptations** — a client's derived skill library
+   is owed to the public. The opposite of a bespoke-deliverable assumption.
+2. 🔴 **No patent grant, no CLA**, unlike Apache-2.0 — for skills used in
+   assessment and admissions decisions, not academic.
+3. 🟡 **The code/content line is undrawn**: a working MCP server and 165 prose
+   skills under one content licence, with no statement of which half it covers.
+
+🔵 **The rule:** a permissive-looking badge is not the question. **Ask what the
+licence was written to cover.** As the packaging unit moves from application to
+skill (**trend 9**), this stops being an edge case.
+
+### 🟢 Moodle MCP — the census is finished, and `p527`'s shape was wrong
+
+`p527`: *"eight search results resolve to ~three codebases."* `p528` probed
+**twelve addresses first-hand** — existence first (`README.md` on `main` **and**
+`master`), then the licence title block — for a census of **thirteen**, the
+thirteenth (`triffon/moodle-mcp`) carried from `p527` as a confirmed duplicate of
+`falkenslab`:
+
+| | Count |
+|---|---|
+| Addresses probed | **13** |
+| Independent codebases | **11** |
+| Confirmed forks | 2 (`thc1006`→`G36maid`; `triffon`→`falkenslab`) |
+| 🟢 Under **MIT** | **10 of 11** |
+| 🔴 Not permissive | 1 — `csmediapro/moodle-mcp-server`, **AGPL-3.0** |
+| ⛔ Ungranted | 1 — `tosuki/moodle-mcp` (`p527`'s call, re-confirmed) |
+| Languages | Rust ×1 · Python ×4 · TypeScript/Node ×2 · Go ×1 · 2 unread |
+| Tool counts | **8 → ~230** |
+| 🔴 **Total stars, every counter read** | **37** |
+
+🆕 **New codebases this pass:** [`Faixiang/moodle-mcp`](https://github.com/Faixiang/moodle-mcp)
+(MIT, 2★, Python **stdlib only**, single `server.py`, 8 tools, docs in 10
+languages, verified against Moodle 4.3.6) and
+[`leshamblin/MoodleMCP`](https://github.com/leshamblin/MoodleMCP) (MIT, 2★,
+FastMCP, **70 claimed / 67 counted** tools, read **and** write with a
+`MOODLE_DEV_COURSE_WHITELIST` boundary and prod writes off by default). Plus
+first full reads of [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp)
+(MIT, 3★, **40 tools: 32 read / 8 write**, writes behind two separate flags with
+`confirm=true` on destructive calls — **the best-governed write model in the
+census**), [`Jawadh-Salih/moodle-mcp-server`](https://github.com/Jawadh-Salih/moodle-mcp-server)
+(MIT, 0★, **Go**, 14 tools, 🟡 `uom.lk` in the examples → *inferred* Sri Lanka,
+not stated), [`AnonymousOnyx22/moodle-student-mcp`](https://github.com/AnonymousOnyx22/moodle-student-mcp)
+(MIT, 0★, TypeScript, 12 tools, read-only by construction) and
+[`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle)
+(MIT, 0★, 14 tools — **see the dependency finding below**).
+
+🔵 **So the finding inverts: not absence, fragmentation.** Eleven people each
+built the same bridge, ten of them permissively, and **nobody converged.** That
+makes the opportunity a **consolidation plus a tool-vocabulary specification**,
+not a greenfield server — cheaper, and the spec is the defensible asset. **P553**
+rewritten accordingly; the ceiling is still 27★ against `canvas-mcp`'s **308★**
+for the *smaller* install base.
+
+⚠️ **Tool counts in this field are marketing, not measurement.** Three repos
+contradict their own READMEs: Faixiang (*"six read-only tools"* over a table of
+8), leshamblin (70 vs 67), falkenslab (a search summary said 140, the README says
+~230). ⚠️ And Faixiang's four changelog entries, `1.0.0` through `1.3.0`, **all
+carry the same date, 2026-10-27** — a self-claimed version history, not a release
+series.
+
+### 🔴 New licence-probe failure: **transitive copyleft**
+
+[`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle) is
+**MIT** — and **its own page states that PyMuPDF, its PDF-extraction dependency,
+is AGPL-3.0.** A repo-level probe grades it buildable; the shipped artefact
+carries **network copyleft**. 🔵 **The rule: the grant you ship is the union of
+the grants you link.** First instance recorded on these legs; new gate **P556**.
+⚠️ Its `moodle_mobile_app` token *can* permit writes on some sites, so
+"read-only" there is a property of the deployment, not of the code.
+
+### 🔴 Not ungranted — **absent.** A search summary described a repository that is not there
+
+| Address | What the summary asserted | What the probe found |
+|---|---|---|
+| `belentani7/aprende-brasil` | *"plataforma educativa brasileña interactiva con tutor IA"*; a tutor named **"Nilo"**; an **offline LLM fallback**; **205 modules**; React + FastAPI + SQLite | ⛔ `README.md` **404 on `main` and `master`**; repository page **HTTP 404**. **No such repository.** |
+
+🔴 **Third occurrence of this failure mode** — after `tosuki/moodle-mcp` (called
+"MIT licensed", real but ungranted) and the **ArguLens** paper mis-attributed to
+`wwrwbs/AI_AWE` (`p527`). 🔵 **Named precisely now: the richer the detail in a
+search summary, the more it needs an existence probe.** "205 modules and a tutor
+called Nilo" is exactly the texture that reads as first-hand and was not.
+**New shelf rule 5: probe that the address resolves before grading its grant** —
+a 404 everywhere is *absent*, not *ungranted*, and filing it as ungranted puts a
+phantom in the census.
+
+### 🟡 Assessment integrity — the gap moves, and the sharpest signal is a deletion
+
+🔴 [`AIEd-Innovations/assessment_agent`](https://github.com/AIEd-Innovations/assessment_agent)
+(**Apache-2.0**, 0★, 1 fork, 22 commits) was the one open agent doing grading
+**and** integrity in one pipeline. **PR #19 — *"Remove the integrity check: the
+agent only grades"*, opened by `Seanamccormick7`, approved by `jeronperey`,
+merged to `main` 27 Oct 2026 (`c019f0f`).** Removed: the anomaly-detection LLM
+call (`agents/anomaly_detector.py`, `prompts/anomaly_detection.txt`), the anomaly
+report log (`interfaces/integrity_guardian.py`), the `GET /anomalies` endpoint,
+the `anomaly_report` result field, and the spec's `skill_level` field. **An
+integrity risk no longer routes a submission to review.** Stated payoff: **one
+LLM call per submission instead of two.**
+
+🔵 **Read it as unit economics, not one team's preference.** Integrity was the
+second inference call; it doubled per-submission cost; it was the half that went.
+That pressure is on every grading deployment. **New trend 11.**
+
+🟢 **Two MIT candidates now exist and both sit at 0★ / 0 forks:**
+
+| Repo | Licence | What earns the mention |
+|---|---|---|
+| [`sonowalvaibhav/gradeops`](https://github.com/sonowalvaibhav/gradeops) | **MIT** | Handwritten-answer VLM grading, instructor JSON rubrics, TA approve/override dashboard — and plagiarism detection that compares two submissions for **shared anomalous logic and identical erroneous reasoning**. 🔵 Matched *errors* are far harder to explain away than matched text: the right primitive. 5 commits, three named student authors, no institution stated. |
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | **MIT** | **Zero external APIs, fully on-device.** From-scratch logistic regression + anomaly detection producing an **evidence breakdown for human review rather than a verdict**. 🟢 That posture is the compliant shape for the EU's **2 Dec 2027** high-risk band, where "explainable evidence for a human decision-maker" is what the rule wants and "a cheating verdict" is not. ⚠️ Contradicts itself on its own test count: **94** under Performance Metrics, **344** under Quick Start; all performance figures self-reported with no methodology. |
+
+🔴 **The asymmetry is the finding:** the 0★ repos have the right architecture and
+no adoption; the project with users just deleted the feature.
+
+⛔ **Two more ungranted**, both in this same capability band:
+[`Fatima0923/AssessmentAI`](https://github.com/Fatima0923/AssessmentAI) (multi-agent
+essay evaluation with human-in-the-loop) and
+[`henriquebotelhogomes/educacao`](https://github.com/henriquebotelhogomes/educacao)
+("Mentora AI", Socratic RAG tutor with a learning-gap radar, Next.js + FastAPI).
+Both resolve; neither has a licence file on `main` or `master` across six paths.
+
+### 🔵 Regional sweep — ran in full, and the result is "no movement", stated rather than implied
+
+All four regional queries were run. **Every** North America, EMEA and APAC item
+returned was **already on this base**: 134 bills across 31 states, NYC's
+traffic-light guidance, Ohio's 1 Jul 2026 policy deadline, the amended COPPA
+rule's 22 Apr 2026 compliance date, Oregon SB 1546, Gallup's 60% of US teachers,
+Regulation (EU) 2026/1744 (stand-alone high-risk education → **2 Dec 2027**,
+Article 50 transparency still **2 Aug 2026**), the schools emotion-recognition ban
+in force since Feb 2025, China's compulsory AI from age six and Beijing's eight
+annual hours, India's Class 3 target and ₹10,372 crore IndiaAI mission,
+Singapore's AI Verify and 2026 teacher-training commitment.
+
+🔵 **That is a result, not a blank: the regulatory legs are saturated at this
+search depth.** Moving them now needs **primary** sources — EUR-Lex for
+2026/1744, the UK DfE, UAE KHDA, named African ministries, Canada's and Mexico's
+education departments. Recorded on [`../intel/market.md`](../intel/market.md) so
+`p529` does not re-spend here.
+
+🟢 **Two genuinely new LATAM items** (zero prior occurrences on this base):
+**UNESCO convened faculties of education from across Latin America in Santiago in
+October 2026** on preparing future teachers for AI, with experiences from
+**Mexico, Colombia and Chile** — the same institutional circle that runs the LAC
+Observatory (CAF, CENIA, Cetic.br, CEPAL, Fundación Ceibal, Tec de Monterrey).
+🔵 **Teacher formation is where regional procurement is being designed, in
+public** — which is exactly where **trend 10** says the buyer moved. 🟡 And one
+date-flagged deployment figure: **Letrus in 400 Brazilian schools**, Chile's
+**Elige Educar** on teacher retention — **source dated 2025**, unconfirmed
+against the vendors this pass.
+
+### 🔵 What `p528` changed, and what it did not
+
+| File | Changed |
+|---|---|
+| [`top.md`](top.md) | Shelf **13 → 14** (`corretor-enem`); fourth verdict band; 2 ungranted rows; "absent" section; rules **5, 6, 7**; LATAM / Moodle / integrity gaps rewritten; **§ Promotion debt** |
+| [`../repos/foundations.md`](../repos/foundations.md) | Moodle census rewritten **3 → 11 codebases**; licence map + transitive-copyleft note; "not found" list |
+| [`../intel/trends.md`](../intel/trends.md) | Trend **4** rewritten (fragmentation, not absence); trend **9** licence half added; 🆕 trend **11** (integrity deletion) |
+| [`../intel/market.md`](../intel/market.md) | Saturation note; 2 new LATAM items; LATAM-origin gap **retired** |
+| [`../compose/patterns.md`](../compose/patterns.md) | **P553** rewritten as a consolidation with 4 named MIT sources; 🆕 **P555** (PT-BR curriculum + ENEM stack), 🆕 **P556** (grant-union gate) |
+| [`../verticals/solutions.md`](../verticals/solutions.md) | Moodle MCP line corrected |
+
+🔴 **Not re-read this pass and carrying `p527`'s verification:** all 13 prior
+shelf rows, every platform core on `foundations.md`, trends 1–3 and 5–8 and 10,
+and every market figure outside the LATAM additions. **Fifty minutes is not a
+measurement interval**, so no star delta is claimed for anything but the two
+promoted rows, and those are stated as page reads (`corretor-enem` 6→7 since
+`p420`; `education-agent-skills` 921→926 since `p520`).
+
+---
+
 ## 🆕 `p527` — `2026-10-29` — **THE VERIFICATION CHANNEL IMPROVED, AND IT IMMEDIATELY PAID: A SELF-CONTRADICTING LICENCE, FOUR UNGRANTED REPOS, AND A 462★ NEW ROW.** `curl` to `github.com` and `api.github.com` is still **HTTP 403** through the session proxy — but **`raw.githubusercontent.com` is not blocked.** Every licence on [`top.md`](top.md) is therefore now read from **the licence file's own title block**, which is what this base's own rule has demanded for seven passes and could not previously do. 🟢 **New shelf rows:** [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) (**Apache-2.0, 462★**, source-backed teacher Skills), [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) (MIT, 63★), [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) (Apache-2.0, 34★) — shelf goes **10 → 13**. 🔴 **New trap:** [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) (91★) has a **README badge saying `MIT` and a licence file saying `GNU GPL v3`**. 🔴 **New category:** four repos with up to **64★** and **no licence file at all**.
 
 ### 🟢 Top of shelf — both leaders moved, slightly

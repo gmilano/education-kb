@@ -6,8 +6,21 @@ updated: 2026-10-29
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p527` · 2026-10-29.** Thirteen real agents, every row read first-hand this
-pass. No row is a header, a placeholder or an example.
+**Pass `p528` · 2026-10-29.** Fourteen real agents, every row read first-hand.
+No row is a header, a placeholder or an example.
+
+> **`p528` is a same-day second pass** — `p527` committed at 11:58 UTC, this one
+> ran from 12:47. Nothing on a star counter moves in fifty minutes, so this pass
+> spent its budget on two things instead: **promoting addresses this base had
+> already verified and never shelved**, and **finishing the Moodle census**.
+> The headline is uncomfortable and it is the useful kind:
+> 🔴 **the supply problem this pass was promotion, not discovery.** Two addresses
+> the base verified itself — [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem)
+> (`p420`, 24 Oct, recorded verbatim as *"the one new address worth shelving"*)
+> and [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+> (`p466`/`p492`/`p520`, **926★**) — were absent from this shelf, **and the first
+> of them directly contradicted the LATAM gap note printed below it.** Both are
+> now on the file. See [§ Promotion debt](#-promotion-debt--what-p528-actually-fixed).
 
 > **Verification channel — improved this pass, and it matters.** `curl` to
 > `github.com` and `api.github.com` still returns **HTTP 403** from the session
@@ -19,8 +32,14 @@ pass. No row is a header, a placeholder or an example.
 > channel for the one field this base keeps getting burned on, and it is what
 > turned up the new trap in [§ Licence traps](#-licence-traps--repos-that-look-permissive-and-are-not)
 > and resolved the question `p526` left open on `frappe/education`.
+>
+> 🆕 **`p528` adds one step in front of that probe: confirm the repository
+> resolves at all.** Fetch `README.md` on `main` *and* `master` before grading a
+> licence. A repo that 404s on every path is **not** "ungranted" — it is **not
+> there**, and filing it as ungranted puts a phantom in the census. This caught
+> one this pass: see [§ Not ungranted — absent](#-not-ungranted--absent).
 
-## Shelf — 13 verified education agents
+## Shelf — 14 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -36,9 +55,10 @@ pass. No row is a header, a placeholder or an example.
 | **Open TutorAI CE** | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | **EMEA (Morocco** — stated on the org profile) | Community edition of an educational, collaborative AI platform; Python backend with a SvelteKit UI. **194 forks against 114 stars** — unusually fork-heavy, which reads as deployment rather than stargazing. |
 | 🆕 **Claw-ED** | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | MIT | 63 | unplaced — no country stated | "Local-first AI teaching assistant for editable lesson drafts, student materials, and slides", working from the teacher's own curriculum files and chosen model. Page states **v9.18.2026.1 · Beta**, explicitly **single-teacher-per-instance, not multi-tenant**, student-facing features labelled experimental. 15 forks. Honest about its own scope, which is rarer here than capability. |
 | 🆕 **ai-tutor-app** | [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | Apache-2.0 | 34 | unplaced | "Agentic RAG tutor for applied AI, LLMs, RAG, and Python: a LangGraph agent (FastAPI + Next.js)", grounded in a curated course and library corpus, with LangSmith tracing. 5 forks. Small, but it is the cleanest **readable reference implementation** of corpus-grounded tutoring on this shelf — the architecture, not the content, is the asset. |
+| 🆕 **corretor-enem** | [dsvi-b/corretor-enem](https://github.com/dsvi-b/corretor-enem) | MIT | 7 | 🟢 **LATAM (Brazil)** — product and ground truth; author's own country not stated | ENEM essay grader across the **five official competencies** (0–200 each, 0–1000 total), *agent-agnostic*: no API, no ML, no model weights. Calibrated against a local SQLite corpus of **11,147 real essays already marked by examiners** (Essay-BR). Methodology credited to Silva & Araujo (**UFPE**, 2024); corpora to `rafaelanchieta/essay` and `lplnufpi/essay-br`. 1 fork, 11 commits, no release. **Promotion owed since `p420` (24 Oct) and not paid until now.** |
 | **pedagogy-benchmark** | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | 13 | **EMEA origin + LATAM data** — *newly placed*, see note | Code for *"Benchmarking the Pedagogical Knowledge of Large Language Models"* — runs the **CDPK** (Cross-Domain Pedagogical Knowledge) and **SEND** (Special Educational Needs and Disabilities) benchmarks. Thirteen stars, no About line, and still the most useful repo here for a procurement conversation: it is how you answer *"which model actually knows how to teach"* rather than *"which model knows the subject"*. |
 
-**Licence split:** **8 × MIT, 4 × Apache-2.0, 1 × BSD-3-Clause** — all thirteen
+**Licence split:** **9 × MIT, 4 × Apache-2.0, 1 × BSD-3-Clause** — all fourteen
 buildable, every cell read from the licence file's title block.
 *Apache-2.0: DeepTutor, k12-teacher-skills, lineage-skill, ai-tutor-app. BSD-3-Clause: Open TutorAI CE.*
 
@@ -71,11 +91,25 @@ but it must not be quoted as if it were stated.
   is built from. So the code is EMEA and **the pedagogical ground truth is
   Chilean**. The UK origin is reported, not read off the repo; the Chilean
   attribution *is* on the repo.
+- 🟢 🆕 **corretor-enem → LATAM (Brazil).** The strongest placement on the shelf
+  and the only one where the *artefact itself* is the evidence rather than a
+  domain name or a README language. The grader encodes **ENEM's five official
+  competencies**, the corpus is **11,147 essays already marked by Brazilian
+  examiners**, and the methodology is credited to **UFPE**. The author's own
+  country is nowhere on the page — and it does not need to be: a product this
+  tightly bound to one national examination is placed by what it does.
+  🔵 **Worth separating for the regional filter:** this is *origin*, not just
+  data. `pedagogy-benchmark` is EMEA code over Chilean data; `corretor-enem` is
+  **Brazilian code over Brazilian data**, and it is the first of those on this
+  base.
 - ⚪ **Genuinely unplaced:** anki-mcp-server, Claw-ED, ai-tutor-app.
 
 **Regional balance, stated plainly:** 4 APAC · 3 North America · 2 EMEA (one of
-them with Chilean data) · 3 unplaced. Still APAC-weighted at the top by a very
-wide margin, and still no LATAM-*origin* agent — see
+them with Chilean data) · 🆕 **1 LATAM** · 3 unplaced. Still APAC-weighted at the
+top by a very wide margin — DeepTutor and OpenMAIC alone hold **90.8k of the
+shelf's ~93k stars** — but the "no LATAM-origin agent" line that stood for seven
+passes is **retired this pass**, and it was retired from this base's own records
+rather than from a search. See
 [§ What is still missing](#what-is-still-missing).
 
 ## ⚠️ Licence traps — repos that look permissive and are not
@@ -89,6 +123,34 @@ Every row re-read from the **licence file's title block** this pass.
 | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) · 2.1k★ | `MIT` | **Bespoke non-commercial** — title line reads *"# PageLM Community License"* | The payload *opens* with the MIT sentence — *"Permission is hereby granted, free of charge…"* — then spends 8 KB taking it back: use limited to personal/educational/non-commercial research, **redistribution in source or binary form strictly prohibited**, and a **revenue-share agreement required before any commercial deployment**. A probe matching on body sentences sees MIT. A probe reading the **title line** sees the truth. Re-confirmed this pass — and note the grant is at **`LICENSE.md`**, not `LICENSE`. |
 | [canyongbs/advisingapp](https://github.com/canyongbs/advisingapp) · 340★ | `unknown` | **Elastic-2.0** (title block: *"Elastic License 2.0"*) | Higher-ed advising CRM and conversational platform. Elastic-2.0 forbids providing the product as a hosted/managed service — which is exactly what a studio engagement does. Not usable as a base. |
 | [xiaoyang111222/cn-math-taxonomy](https://github.com/xiaoyang111222/cn-math-taxonomy) · 5.1k★ | `CC-BY-4.0` | **CC-BY-NC-4.0** — this trap is **entirely probe-side**; the page badge is correct | The title line reads *"Attribution-**NonCommercial** 4.0 International"*; the body carries the BY-4.0 boilerplate. Dropping `NonCommercial` from the family name turns an unusable corpus into a usable one on paper only. |
+
+### 🆕 A fourth verdict band: **granted, but not under a code licence**
+
+Not mislabelled, not ungranted — **granted under a licence that was never meant
+for software.** This band had no home on the shelf before this pass, which is how
+the largest education-agent repository this base tracks stayed off the file.
+
+| Repo | Stars | Licence (title block) | Verdict |
+|---|---|---|---|
+| 🆕 [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | **926** · 130 forks | **Creative Commons Attribution-ShareAlike 4.0 International** | 🟡 **Usable, with a condition most engagements will not accept.** 165 evidence-grounded skills across 20 domains for teachers, school leaders and EdTech builders; the bundled MCP server exposes **157 tools and 165 prompts**; `v3.1.0`, **22 Oct 2026**, which retired the public hosted MCP service in favour of a portable edition. Claude, Codex and Hermes. Author Gareth Manning, *"20 years of international education experience across 27 countries"*, no country or institution stated — **unplaced**. |
+
+**Why this is its own band and not a trap row.** CC BY-SA 4.0 is a real grant and
+an honest one — the README calls it *"Open. Forkable. Share alike."* — but it is a
+**content** licence. Three consequences a studio has to price before it forks:
+
+1. 🔴 **ShareAlike propagates to adaptations.** Derive a client's skill library
+   from these skills and the derivative is owed to the public under BY-SA. That
+   is the opposite of what a bespoke-deliverable engagement assumes.
+2. 🔴 **No patent grant and no contributor licence**, unlike Apache-2.0. For a
+   library whose output is used in assessment and admissions decisions, the
+   absence is not academic.
+3. 🟡 **The code/content line is undrawn.** The repository ships a working MCP
+   server *and* 165 prose skills under a single content licence. Which half the
+   grant covers is not stated anywhere on the page.
+
+🔵 **The rule this band adds:** a permissive-looking badge is not the question.
+**Ask what the licence was written to cover.** `MIT` on a corpus and `CC BY-SA` on
+a server are both category errors, and only the second one is currently common.
 
 ### 🆕 The other failure mode: stars but **no grant at all**
 
@@ -104,6 +166,22 @@ trap rows; they are a third category this base had not written down.
 | [idoforgod/Vibe-learning-AgenticWorkflow](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow) | 25 | Resources shows a **"License" link that anchors into the README**, not to a licence file. No licence type named anywhere. | ⛔ **Ungranted.** The sidebar link is the trap: it renders exactly like a real licence entry. |
 | [tosuki/moodle-mcp](https://github.com/tosuki/moodle-mcp) | — | A search result described this repo as *"MIT licensed."* **No licence file exists.** | ⛔ **Ungranted** — and a reminder that a search summary is not a verification channel. |
 | [bobuel/bloom-taxonomy-quiz-builder-skill](https://github.com/bobuel/bloom-taxonomy-quiz-builder-skill) | 3 | Nothing. | ⛔ **Ungranted.** |
+| 🆕 [henriquebotelhogomes/educacao](https://github.com/henriquebotelhogomes/educacao) | 0 | "Mentora AI" — a Socratic RAG tutor with a learning-gap radar, Next.js + FastAPI. README present on `master`, no licence section. | ⛔ **Ungranted.** Probed on `main` and `master` across six paths. The repository resolves; the grant does not exist. |
+| 🆕 [Fatima0923/AssessmentAI](https://github.com/Fatima0923/AssessmentAI) | 0 | Multi-agent LLM essay-evaluation pipeline with human-in-the-loop review. README present on `main`. | ⛔ **Ungranted** — and it sits squarely in the one capability gap this base has carried longest, which is what makes the missing grant expensive rather than merely untidy. |
+
+### 🆕 Not ungranted — **absent**
+
+| Address | What a search result said about it | What the probe found |
+|---|---|---|
+| 🔴 `belentani7/aprende-brasil` | A search summary described it in confident detail: *"plataforma educativa brasileña interactiva con tutor IA"*, a tutor named **"Nilo"**, an **offline LLM fallback**, **205 modules**, React + FastAPI + SQLite. | ⛔ **The address does not resolve.** `README.md` returns 404 on `main` and on `master`; the repository page returns **HTTP 404**. **No such repository.** |
+
+🔴 **This is the third time this base has recorded a search summary describing a
+repository it cannot confirm exists** — after `tosuki/moodle-mcp` ("MIT licensed",
+no licence file: that one is real and ungranted) and the **ArguLens** paper
+mis-attributed to `wwrwbs/AI_AWE` (`p527`). The pattern is now specific enough to
+name: 🔵 **the richer the detail in a search summary, the more it needs an
+existence probe** — 205 modules and a named tutor is exactly the texture that
+reads as first-hand and was not.
 
 **Rules for this base**, extended this pass:
 
@@ -120,14 +198,41 @@ trap rows; they are a third category this base had not written down.
 4. 🆕 **"No licence file" is a finding, not a blank.** Record it as ungranted;
    a missing grant is a harder blocker than a bad one, because there is nobody
    to negotiate the exception with.
+5. 🆕 **Probe that the repository resolves before grading its grant.** `README.md`
+   on `main` and `master`. A 404 everywhere means *absent*, not *ungranted* —
+   see [§ Not ungranted — absent](#-not-ungranted--absent).
+6. 🆕 **Read the dependency licences, not only the repository's.**
+   [sonstellar969/open-moodle](https://github.com/sonstellar969/open-moodle) is
+   **MIT** and its own page states that its PDF-extraction dependency
+   **PyMuPDF is AGPL-3.0**. A repo-level probe grades it buildable; the shipped
+   artefact carries network copyleft. The grant you ship is the *union* of the
+   grants you link.
+7. 🆕 **Ask what the licence was written to cover.** CC BY-SA on a skills library
+   is a real grant with a ShareAlike condition and no patent clause — a fourth
+   verdict band, not a pass and not a trap. See
+   [§ A fourth verdict band](#-a-fourth-verdict-band-granted-but-not-under-a-code-licence).
 
 ## What is still missing
 
 Stated rather than left silent, because an unwritten gap looks like coverage.
 
-- 🔴 **No credible MCP server for Moodle — the sector's largest LMS.** Searched
-  deliberately this pass and verified every candidate. The entire cluster is
-  **0–27★**, and it is not even eight projects: `thc1006/moodle-mcp` (0★) is a
+- 🔴 **No credible MCP server for Moodle — the sector's largest LMS.** ⚠️ **The
+  shape of this gap is corrected this pass, and the correction matters more than
+  the gap.** `p527` wrote that eight search results *"resolve to ~three
+  codebases"*. They do not. The census now holds **thirteen addresses — twelve
+  probed first-hand this pass**, the thirteenth (`triffon/moodle-mcp`) carried
+  from `p527` as a confirmed duplicate — and they resolve to
+  **eleven independent codebases plus two forks**, in **four languages**
+  (Rust ×1, Python ×4, TypeScript/Node ×2, Go ×1, two unread), with tool counts
+  from **8 to ~230**
+  — and **the entire field sums to under 40 stars.** So the finding is not
+  absence, it is 🔴 **fragmentation with no convergence**: ten of eleven
+  codebases are **MIT**, nobody has above 27★, and no two agree on a tool
+  vocabulary. Full census in
+  [`../repos/foundations.md`](../repos/foundations.md). 🟢 **This makes the build
+  *more* attractive, not less** — consolidating nine permissive implementations
+  is a cheaper start than a greenfield bridge. The old reading, kept because the
+  ceiling is unchanged: `thc1006/moodle-mcp` (0★) is a
   fork of [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) (**27★**,
   MIT, the lineage's real head), and `triffon/moodle-mcp` carries
   `Copyright (c) 2026 Falkenslab` — i.e. it is
@@ -138,8 +243,25 @@ Stated rather than left silent, because an unwritten gap looks like coverage.
   the sector's largest install base and plugin ecosystem and **no serious agent
   bridge** — the clearest build opportunity on this base. See
   [`../compose/patterns.md`](../compose/patterns.md).
-- 🔴 **No LATAM-origin education agent.** Searched again this pass in Portuguese
-  and Spanish framings. What exists is pre-release:
+- 🟢 🆕 **"No LATAM-origin education agent" is RETIRED — and it should have been
+  retired on 24 October.** [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem)
+  (**MIT**, 7★) is LATAM-origin **code**: Brazilian examination, Brazilian corpus,
+  Brazilian methodology. `p420` verified it, called it *"the one new address worth
+  shelving"*, and no later pass either shelved it or recorded a reason not to —
+  while this file went on printing *"the LATAM contribution is data, not code"*
+  for seven passes. 🔴 **The gap was not in the supply. It was in this base.**
+  🆕 A second LATAM artefact, verified this pass and **not** shelf-grade:
+  [`ThallesYVasconcelos/Agente-Educacional`](https://github.com/ThallesYVasconcelos/Agente-Educacional)
+  ("EduRAG", **MIT**, **0★**) — agentic RAG for Brazilian grades 1–4, grounded in
+  **MEC** documents (BNCC `EF01`–`EF04`, PCNs across six subjects), with
+  page-level citations, BNCC-code identification, a **Self-RAG** hallucination
+  check, LangGraph + ChromaDB + `bge-m3` + Ollama, an MCP server and **Giskard**
+  evaluation. It is a university course's final project with no stars — so it is
+  a **reference implementation, not a dependency**, and it is the cleanest one
+  this base has seen for *"ground a teacher agent in a national curriculum."*
+  🟡 **So the LATAM gap is now about maturity, not existence:** the region's two
+  verified agent-leg artefacts total **7 stars and 0 releases**. What remains
+  pre-release:
   [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) ("Manu",
   MIT, **0★**) is a Brazilian-Portuguese voice maths tutor on LiveKit Agents
   covering 1st grade to university, README states *"in development"*, no public
@@ -154,8 +276,32 @@ Stated rather than left silent, because an unwritten gap looks like coverage.
   `pedagogy-benchmark`.
 - 🟡 **Two EMEA-placed agents** (Open TutorAI CE in Morocco; pedagogy-benchmark's
   UK origin) against four APAC.
-- 🔴 **No open-source agent for assessment integrity.** Unchanged. The credible
-  tooling is classical, not agentic —
+- 🟡 🆕 **Assessment integrity: the gap moves from "nothing permissive" to
+  "nothing adopted", and the sharpest signal this pass is a deletion.**
+  🔴 [`AIEd-Innovations/assessment_agent`](https://github.com/AIEd-Innovations/assessment_agent)
+  (**Apache-2.0**, 0★) was the one open agent doing grading *and* integrity
+  together. **PR #19, *"Remove the integrity check: the agent only grades"*,
+  merged to `main` on 27 Oct 2026** — it strips the anomaly-detection LLM call
+  (`agents/anomaly_detector.py`, `prompts/anomaly_detection.txt`), the anomaly
+  report log, the `GET /anomalies` endpoint and the `anomaly_report` result
+  field; an integrity risk **no longer routes a submission to review**. The
+  stated payoff is one LLM call per submission instead of two. 🔵 **Read it as
+  the economics of the gap, not as one team's choice:** integrity doubled the
+  inference cost and was the half that got cut. 🟢 Two MIT candidates now exist
+  and **both sit at 0★ / 0 forks** —
+  [`sonowalvaibhav/gradeops`](https://github.com/sonowalvaibhav/gradeops)
+  (handwritten-answer VLM grading, JSON rubrics, TA override dashboard, and
+  plagiarism detection that compares two submissions for *shared anomalous
+  logic and identical erroneous reasoning* — the right primitive) and
+  [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent)
+  (fully local, **zero external APIs**, from-scratch logistic regression for
+  explainable cheating-risk with an evidence breakdown for human review rather
+  than a verdict — the right posture for the EU's 2 Dec 2027 high-risk band).
+  ⚠️ Both are single-author student projects with self-reported metrics, and the
+  proctoring repo contradicts itself on its own test count (**94** under
+  Performance Metrics, **344** under Quick Start). **Signals, not dependencies.**
+  The older reading still holds for anything production: the credible tooling is
+  classical, not agentic —
   [dodona-edu/dolos](https://github.com/dodona-edu/dolos) does code-similarity
   detection well and has no LLM in it. Automated *scoring* is likewise thin:
   [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) (Apache-2.0, **2★**) is a
@@ -165,3 +311,30 @@ Stated rather than left silent, because an unwritten gap looks like coverage.
   a `<your-org>` placeholder. The attribution is **unverified** — do not repeat it.
 - 🔴 **No open-source SIS/advising agent under a permissive licence.** Unchanged.
   The only serious candidate (`advisingapp`) is Elastic-2.0.
+
+## 🆕 Promotion debt — what `p528` actually fixed
+
+This pass found less than it repaired, and the repair is the reportable part.
+
+| Address | Verified by | Verdict then | On the shelf before `p528` | Now |
+|---|---|---|---|---|
+| [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) | **`p420`**, 24 Oct | 🟢 MIT, 6★, *"the one new address worth shelving"* | 🔴 **No** — and the LATAM gap note beneath it asserted the opposite | 🟢 **Shelf row 14**, LATAM (Brazil), 7★ |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **`p466`**, re-measured `p492`, re-read `p520` | 🟡 CC BY-SA 4.0, 921★, hosted MCP retired at `v3.1.0` | 🔴 **No** — neither shelf row nor trap row | 🟢 **Fourth verdict band**, 926★ |
+
+**Why both were dropped.** `p527` rebuilt this file as a full rewrite. A rewrite
+re-derives the shelf from the pass's own reading, and an address verified three
+passes earlier is invisible to it unless something carries it forward. 🔴 **The
+rewrite is the regression mechanism**, and it has now cost this base its
+longest-standing regional claim: seven passes of *"no LATAM-origin education
+agent"* printed over a verified Brazilian MIT grader sitting in its own history.
+
+🔵 **The control this implies**, written down for whoever runs `p529`: before a
+rewrite ships, **re-read the last ~20 passes' promotion verdicts and diff them
+against the new shelf.** Any address a prior pass called shelf-worthy must appear
+on the new file **or** carry a stated reason it does not. A dropped row is a
+decision, and an unstated decision is indistinguishable from an accident.
+
+🟡 **Scope honesty:** `p528` checked this against the trending history for the
+specific addresses it had reason to look up. **A full sweep of every promotion
+verdict in the history was not run** — so the two repairs above are the ones that
+surfaced, not provably all of them. That sweep is the open gap this pass leaves.
