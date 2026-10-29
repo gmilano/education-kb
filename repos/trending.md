@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p536` — `2026-10-29` — **🟢 THE NATIONAL DATA PLANE ARRIVES: FOUR COUNTRIES PUBLISH THEIR OWN EDUCATION/STATISTICS LAYER UNDER MIT OR APACHE-2.0, INCLUDING AN **OFFICIAL GOVERNMENT MCP SERVER** (INDIA'S MoSPI, MIT, 147★). 🔴 AND THE EFFICACY LAYER `p535` BUILT GAINS THE HALF IT SAID IT LACKED — **ASSIGNMENT** — AS APACHE-2.0 JAVA THAT RUNS INSIDE THE LMS.**
+
+### The efficacy layer completes, and it closes `p535`'s own stated hole
+
+`p535` filed `dowhy` and `EconML` and wrote plainly: *"None of these three makes a weak
+design strong… The design (assignment, a control arm, a pre-registered outcome) is
+`P571`'s subject."* 🟢 **That component exists.**
+[`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta)
+— **Apache-2.0**, 21★, 9 forks, Java, default branch `development`, **pushed
+2026-10-29** — is an **LTI plug-in** that randomises pupils to differentiated
+assignment variants *inside the LMS they already use*, with informed consent hidden
+from the teacher, non-consenting participants filtered from exports and student
+identifiers stripped. 🔵 **The privacy design is the part a studio cannot cheaply
+rebuild**, and it is what makes an RCT survive an EU AI Act Art. 10 conversation.
+
+Two pre-registered audit repos land beside it, both **MIT at the title block and both
+`NOASSERTION` to the API**: [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit)
+(NeurIPS 2026 NewInML, arXiv:2608.27309 — **bounded ratings make difference-in-differences
+manufacture effects that are not there**) and
+[`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor)
+(arXiv:2607.28128 — **answer leakage** and **student independence** across tutor models,
+topics naming `reward-hacking`: an LLM judge scoring *helpfulness* rewards the tutor that
+just gives the answer).
+
+### The national data plane — four countries, all permissive
+
+| Repo | Grant | Stars | Region | What it is |
+|---|---|---|---|---|
+| [`nso-india/esankhyiki-mcp`](https://github.com/nso-india/esankhyiki-mcp) | **MIT** — copyright line reads **Ministry of Statistics and Programme Implementation** | **147** · 28 forks | 🟢 APAC (India), *stated* | 🟢 **An official government MCP server.** The first row here where a national statistical office ships the MCP itself rather than a third party scraping it. |
+| [`hantang/smartedu-dl-go`](https://github.com/hantang/smartedu-dl-go) | **MIT** | **207** · 45 forks | 🟢 APAC (China) | Downloader for the 国家中小学智慧教育平台 — national K-12 textbooks, courseware, audio, video. 🟡 An access tool, not a content licence: what it fetches carries the platform's terms, unread here. |
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | **MIT** | **136** · 12 forks | 🟢 LATAM (Chile) | Curated, normalised, validated Chilean public data. Pairs with the Colombian agent `brujula-educativa`. |
+| [`openeduhub/edu-sharing-python-client`](https://github.com/openeduhub/edu-sharing-python-client) | **Apache-2.0** | 🔴 0 | 🟢 EMEA (Germany) | The only permissive client for **edu-sharing**, the OER repository layer German states run. Filed on the attachment point, per `Gap 534-C`. |
+
+### Also filed, and why each was invisible
+
+- [`openfun/arnold`](https://github.com/openfun/arnold) — **MIT**, 41★, **GIP FUN MOOC**
+  (France). Read at **`master`**; 404 on `main`. 🟢 Completes the `openfun` family:
+  `richie` (CMS) + `ralph` (LRS) + `arnold` (deployment), all MIT, all from the French
+  national MOOC operator.
+- [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics)
+  — **Apache-2.0**, 37★ / **39 forks**, U. Michigan's production MyLA dashboard. Read at
+  **`master`**. 🟢 More forks than stars reads as institutions deploying it.
+- [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli) —
+  **Apache-2.0, 552★**. 🟢 **The instrument `Gap 528-C` has been costed against for
+  eight passes**: this base has no way to enumerate *dependency* grants, and
+  `open-moodle` (MIT repo, AGPL-3.0 PyMuPDF in the artefact) is the standing proof it
+  matters. Named twice in prose, filed nowhere.
+- [`edulinq/autograder-py`](https://github.com/edulinq/autograder-py) — **MIT**, 16★ /
+  **21 forks**. Completes `p533`'s autograder layer with the interface students actually call.
+- [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) —
+  **MIT**, 30★. The *delivery* half of the standards stack whose *authoring* half `p533`
+  built an emitter for. 🟡 16 months stale; the standard moves slowly.
+- [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) — **MIT, declared in
+  `DESCRIPTION`**, CRAN `1.3.1`. Transition Network Analysis: learning as **transitions
+  between states over time**, which is how you show a tutor changed a learner's
+  *process* rather than their score. 🔴 **The row that produced shelf rule 16.**
+
+### 🔴 Recorded as unbuildable rather than left silent
+
+Three 2026 projects and one carried row are copyleft, and all four are things a studio
+would want: [`Schlaflied/Plot-Ark`](https://github.com/Schlaflied/Plot-Ark)
+(**AGPL-3.0**, 13★ — curriculum operations over xAPI and Moodle, the closest thing to
+`P558`'s intended output anyone has shipped),
+[`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) (**GPL-3.0**, 12★, Brown
+PLT — **misconception-based** tutoring, a sharper pedagogy than any permissive row
+here), [`avps82/mentar`](https://github.com/avps82/mentar) (**AGPL-3.0**, 0★ —
+local-first child tutor, *"no cloud, no accounts, no child data leaving the device"*),
+and `openedx/openedx-ai-extensions` (AGPL-3.0, from `p534`). 🔵 **Three of the four
+were created in 2026** — Trend 14's claim that this sector's copyleft is a
+*present-tense* choice, measured again rather than restated.
+
+### 🔴 Measurement caveats, stated
+
+- `topic:ai-in-education` has **`total_count` 3** at `stars:>15`. 🔵 That is a statement
+  about how thinly the topic is applied, **not** about the field's size — shelf rule 12,
+  and the reason this pass ran five topic queries rather than one.
+- A `repo:`-qualified batch of 20 returned **19**, dropping
+  [`ls1intum/Iris`](https://github.com/ls1intum/Iris) silently. Shelf rule 14 again, so
+  that row carries a grant read from bytes and **no star figure** rather than a guess.
+- MCP `get_file_contents` is **refused for every repository not attached to this
+  session**, so every payload below was read over `raw.githubusercontent.com`. Census:
+  [`../evidence/channel-split.2026-10-29-p536.tsv`](../evidence/channel-split.2026-10-29-p536.tsv).
+
 ## 🆕 `p535` — `2026-10-29` — **🟢 ONE NEW ADDRESS IN EIGHT PASSES OF SEARCH, AND IT IS THE ONE PLATFORM CLASS THIS BASE KEPT ASSERTING WITHOUT A ROW: OFFLINE-FIRST FOR LOW-CONNECTIVITY DEPLOYMENT. [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet) — **AGPL-3.0**, **70★**, LICENCE READ FROM THE TITLE BLOCK. 🔴 ITS `main` BRANCH IS **404**; THE LICENCE LIVES ON `master`, WHICH IS A LIVENESS SIGNAL THIS BASE'S READERS WOULD HAVE MISSED. 🟢 AND THREE FOUNDATION ROWS THAT NO SEARCH LEG RETURNED — THEY CAME OFF THE **DEMAND** FINDING: THIS BASE ARGUES IN TREND 21 THAT CAUSAL EVIDENCE IS BECOMING THE PROCUREMENT GATE AND HELD **NOT ONE CAUSAL-INFERENCE LIBRARY**. [`py-why/dowhy`](https://github.com/py-why/dowhy) **MIT 8.4k★**, [`py-why/EconML`](https://github.com/py-why/EconML) **MIT 4.8k★**, [`comet-ml/opik`](https://github.com/comet-ml/opik) **Apache-2.0 23.0k★** — ALL THREE UNFILED, ALL THREE PERMISSIVE. 🔴 THE INFRASTRUCTURE LEG ITSELF RETURNED SIX ADDRESSES AND ALL SIX WERE ALREADY HERE.**
 
 ### 🟢 Filed this pass

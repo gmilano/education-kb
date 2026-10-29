@@ -349,9 +349,81 @@ not**: a client in a consolidating sector buys *integration into what they alrea
 🔴 **All four bullets are single-channel** (`worldassessmentcouncil.org`,
 `edtechinnovationhub.com` both `ENOTFOUND`). → `Gap 535-D`.
 
+## 🆕 `p536` — the four regional legs re-run: **saturated on demand, and the supply side moved in all four regions**
+
+🔴 **The demand legs returned nothing this base did not hold.** Every figure the four
+regional queries produced is already on this file, and the duplication is now itemised
+rather than described: the **Digital Education Council** LATAM 2026 survey (92 % of
+students / 79 % of faculty, n > 30 000 across 29 institutions), **UNESCO IESALC**'s
+200-institution / 19-country mapping (teaching & learning **73.5 %**, research **57.0 %**,
+administration **34.1 %**, community engagement **20.0 %**), the **~30 %** of LATAM
+universities with a published policy, Mexico's **SEP / ANUIES** non-binding guidance,
+Chile's 2021 national AI policy, the North American **10 % with formal guidelines /
+71 % of teachers untrained** pair, **TCS–Pearson**, LearnUpon's Sydney HQ, and the EU
+AI Act's August 2026 full-effect date. 🔵 **This is the fourth consecutive pass on which
+the demand legs are saturated**, and `Gap 535-A`'s diagnosis now has a fourth
+corroboration: the queries are not failing, the *question* they encode has been answered.
+
+🟡 **Two demand figures were returned that this base holds only in a weaker form**, and
+both are recorded single-channel and labelled, per `Gap 535-B` (no non-GitHub primary is
+readable from this session):
+
+| Region | Figure | Measure | Channel |
+|---|---|---|---|
+| Global | AI-in-education 2026 market size spans **$3.7B – $10.6B** across four firms | the band itself, not any point in it | search summaries only; 🔴 **a 2.9× spread is the finding** — no deck should quote a point estimate from it |
+| APAC | **24.8 % CAGR, 2026–2033** — fastest-growing region | one firm, one method | single-channel |
+| North America | **~36–42 %** of global market share, depending on firm | one firm each | single-channel; 🔴 the two figures are not reconcilable and both are quoted as "North America leads" |
+| Global | AI professional development for teachers **29 % (early 2024) → 50 % (late 2025)** | teachers receiving any AI PD | single-channel; 🟡 consistent in *direction* with the European Commission's **29.7 %** EU CPD figure this base holds from `p535`, which is the only cross-check available |
+
+🟢 **The supply side moved in all four regions, which has not happened before on this
+file** — and it moved because the instrument changed, not because the field did. Full
+reasoning on [`../agents/trending.md`](../agents/trending.md); placed findings below.
+
+| Region | What is newly held | Why it was invisible |
+|---|---|---|
+| **North America** | [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) (164★), [`evaluators`](https://github.com/learning-commons-org/evaluators) (87★), [`agent-skills`](https://github.com/learning-commons-org/agent-skills) (Apache-2.0, 40★); [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) (MIT); [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) (Apache-2.0); [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) (Apache-2.0) | 🔴 Learning Commons is **named on the agent shelf as a partner** and was never enumerated; MyLA's grant is **404 on `main`** |
+| **EMEA** | [`ls1intum/Iris`](https://github.com/ls1intum/Iris) (MIT, TU München); [`openfun/arnold`](https://github.com/openfun/arnold) (MIT, GIP FUN MOOC, France); [`openeduhub/edu-sharing-python-client`](https://github.com/openeduhub/edu-sharing-python-client) (Apache-2.0, Germany); [`Turkish-AI-Community/hsd-agu-egitim`](https://github.com/Turkish-AI-Community/hsd-agu-egitim) (MIT, Türkiye) | 🟢 **The first Türkiye-origin address on this base** — EMEA here has meant Western Europe plus Morocco, and that was never written down |
+| **APAC** | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (**MIT, 980★**, India); [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) (MIT, Microsoft Research India); [`nso-india/esankhyiki-mcp`](https://github.com/nso-india/esankhyiki-mcp) (MIT, **MoSPI**, 147★); [`hantang/smartedu-dl-go`](https://github.com/hantang/smartedu-dl-go) (MIT, 207★, China); [`RozhakDev/EduPintarIPAS`](https://github.com/RozhakDev/EduPintarIPAS) (MIT, Indonesia); [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) (Apache-2.0, 459★) | 🔴 `pupilfirst` is the **most expensive near-miss on this base**: MIT at 980★, discarded by a `main`-only licence read *and* by the API's `NOASSERTION`, named only in a sentence |
+| **LATAM** | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (MIT, rural higher ed); [`startin-lab/brujula-educativa`](https://github.com/startin-lab/brujula-educativa) (MIT, Colombia open education data); [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) (MIT, 136★, Chile); [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) (Apache-2.0, **582★**, Brazil, 🔴 2.5 y stale); [`Dramoscuello/simic`](https://github.com/Dramoscuello/simic) (Apache-2.0) | 🔴 And the pass's sharpest regional finding is a **grant**, not a gap: [`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) (UTP Panama, validated with **74 pupils**, **SUS 70.1**) has **no licence at 10 probed paths** |
+
+🔴 **One regional claim on this file is corrected by the above.** The LATAM subsection
+has argued across several passes that *"the region's shipped open-source strength remains
+school management, not agents."* 🟢 **Measured this pass that is no longer true**: the
+region now has **two live MIT agents** (`TutorIA`, `brujula-educativa`), a **582★**
+Apache-2.0 platform, a **136★** MIT data layer and a fourth country placed (**Panama**,
+joining Brazil, Chile and Colombia). 🟡 **What is still true, and sharper:** the region's
+agent artefacts are **0★ and pre-release**, its strongest platform is **2.5 years
+stale**, and its best-evaluated system is **ungranted**. The constraint has moved from
+*existence* to *maintenance and licensing* — which is a far better brief for a studio,
+because both are things a studio supplies.
+
 ## Opportunities by region
 
 ### North America
+
+> 🆕 **`p536` — the opportunity is *integration into an institutional stack that
+> already exists*, and this pass found three layers of it unowned.** 🟢 **Learning
+> Commons** publishes the rubric layer ([`evaluators`](https://github.com/learning-commons-org/evaluators),
+> 87★) and the instructional-content layer
+> ([`knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph), 164★)
+> that Anthropic's `k12-teacher-skills` is built against — so a US K-12 engagement can
+> be **grounded in audited instructional content with published rubrics on day one**
+> rather than in a prompt. 🔴 **The billable complication is the grant, and it is
+> real:** the datasets license **per download** across Open / Open + Gated / Gated, and
+> the payload states that distribution *"doesn't consolidate those into a single license
+> for your build."* 🟢 **That is a service, not an obstacle** — `P572` is the
+> access-type-aware ingest that makes a build shippable, and the client cannot do it
+> themselves because it requires reading the catalogue per release.
+> 🟢 **Second opening: efficacy as a deliverable.** With
+> [`terracotta`](https://github.com/terracotta-education/terracotta) (Apache-2.0,
+> randomisation + consent + de-identification inside the LMS) plus `dowhy` / `EconML`
+> from `p535`, a studio can now sell **an effect estimate**, not a pilot — against a
+> buyer side where **~10 % of institutions have formal AI guidelines** and only ~20 of
+> 800+ K-12 AI studies produced strong causal evidence. 🔵 **Third, and cheapest:** MyLA
+> ([`my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics),
+> Apache-2.0, 39 forks against 37 stars) is a peer university's production dashboard —
+> `P569`'s "start from a peer institution's code" play, with a second instance.
+
 
 > 🆕 **`p534` — this is the pass's strongest supply leg, and all four finds are
 > institutional 0★–5★ repositories, not products.** The engagement opening is
@@ -504,6 +576,30 @@ recorded.**
 
 
 ### EMEA
+
+> 🆕 **`p536` — the supply leg places a fourth and fifth EMEA country, and one of
+> them is new to this base entirely.** 🟢 **Germany** now has two addresses rather
+> than one: `ls1intum/Iris` (**MIT**, TU München — the standalone tutor beside the
+> `edutelligence` monorepo) and
+> [`openeduhub/edu-sharing-python-client`](https://github.com/openeduhub/edu-sharing-python-client)
+> (**Apache-2.0**), the only permissive client for **edu-sharing**, the OER repository
+> layer German states actually run. 🟢 **France**: `openfun/arnold` (**MIT**, GIP FUN
+> MOOC) completes the `openfun` family — `richie` (CMS) + `ralph` (LRS) + `arnold`
+> (Kubernetes deployment), **all MIT, all from the national MOOC operator**, which is
+> the only end-to-end permissive national stack on this base. 🟢 🆕 **Türkiye** appears
+> for the first time ([`Turkish-AI-Community/hsd-agu-egitim`](https://github.com/Turkish-AI-Community/hsd-agu-egitim),
+> MIT, Abdullah Gül University) — filed honestly as a **curriculum, not a product**.
+> 🔴 **The finding worth acting on is the absence this makes visible:** "EMEA" on these
+> pages has meant Western Europe plus Morocco, and nothing here had ever said so. The
+> Gulf is the sharpest hole — `p535` measured the **UAE at ~75 % of teachers using AI
+> in their work**, the highest figure in the whole TALIS set, and this base holds **zero
+> Gulf-origin repositories**. 🔵 That combination — highest measured adoption, no local
+> open-source supply — is the clearest greenfield on this file. → `Gap 536-D`.
+> 🟢 **Build opening, unchanged in shape and now better supplied:** the sovereign,
+> self-hosted institutional stack — `edutelligence`/`Iris` for tutoring, `Artemis` for
+> delivery, `ralph` for records, `arnold` for deployment, `terracotta` for evidence, all
+> permissive, nothing leaving the institution. That is `P567` with two components added.
+
 
 > 🟢 **`p535` — this section's twelve-pass demand blank is no longer blank.** Teacher
 > AI-use figures for **UAE (~75%)**, **Denmark/Finland (~31%)** and **France (<20%)**
@@ -713,6 +809,34 @@ framing, where EMEA appears as the regulated region and little else.
 
 
 ### APAC
+
+> 🆕 **`p536` — APAC is where the filing-rate defect cost the most, and the
+> correction is worth stating as money.** 🔴 [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst)
+> is **MIT with 980★ and 279 forks** — an LMS built around **coaching, submission
+> review and feedback queues** rather than content delivery, from Pupilfirst Pvt. Ltd.
+> (India) — and this base held it only inside a sentence, because its licence is **404
+> on `main` / 200 on `master`** and the API grades it `NOASSERTION`. 🟡 It is **~11
+> months stale**, so the play is fork-and-own; the coaching data model is the asset.
+> 🟢 **The government layer is the genuinely new opening.**
+> [`nso-india/esankhyiki-mcp`](https://github.com/nso-india/esankhyiki-mcp) is **MIT,
+> 147★, and its copyright line is the Ministry of Statistics and Programme
+> Implementation** — an *official* national MCP server. 🔵 **Use it twice:** as the
+> grounding layer for any India engagement that must cite the government's own
+> enrolment, attainment or expenditure figures, and as the **precedent to show other
+> ministries** when proposing they publish one. 🟢 Alongside it:
+> [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) (MIT, 9★,
+> pushed 2026-10-28) targets the **state-board government-school teacher**, which is a
+> buyer segment nothing else on this base addresses; `hantang/smartedu-dl-go` (MIT,
+> 207★) is the ingest tool for China's national K-12 platform; `RozhakDev/EduPintarIPAS`
+> (MIT) joins `naufaldi/teacher-exam` to give **Indonesia a teacher-facing and a
+> pupil-facing artefact**, both naming the national curriculum by its own acronym.
+> 🟢 **And a new capability band with APAC origin:**
+> [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) (Apache-2.0,
+> **459★**) is social-emotional learning — conflict role-play with feedback — which no
+> other row on this base does, and which is a funded line in both US K-12 and EU
+> wellbeing frameworks. 🔵 Against a demand side reported at **24.8 % CAGR
+> (2026–2033), the fastest of any region** — single-channel, and labelled as such.
+
 
 > 🟢 **`p535` — the "no APAC adoption rate exists" blank is filled, and the number is a
 > spread, not a point.** TALIS 2024: **Singapore ~75%** of teachers using AI in their
@@ -936,6 +1060,40 @@ not a country** — this base's standing rule, and the reason these are here and
 not under APAC.
 
 ### LATAM
+
+> 🆕 **`p536` — the long-standing claim that *"the region's shipped open-source
+> strength remains school management, not agents"* is retired, and what replaces it is
+> a better brief.** 🟢 **Measured this pass:** two live **MIT** agents —
+> [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (autonomous tutor for
+> **rural higher education**, the low-connectivity case §6 of
+> [`../verticals/solutions.md`](../verticals/solutions.md) says this sector assumes
+> away) and [`startin-lab/brujula-educativa`](https://github.com/startin-lab/brujula-educativa)
+> (**Colombia**, the first agent anywhere on this base whose corpus is a **national
+> open-data portal**) — plus [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub)
+> (MIT, **136★**, curated Chilean public data), [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor)
+> (Apache-2.0, **582★**, Brazil) and [`Dramoscuello/simic`](https://github.com/Dramoscuello/simic)
+> (Apache-2.0, Spanish-language assessment). 🟢 **A fourth country is placed: Panama**,
+> joining Brazil, Chile and Colombia.
+>
+> 🔴 **The constraint moved, and it moved onto ground a studio actually owns.** The
+> region's agent artefacts are **0★ and pre-release**; its highest-starred platform is
+> **2.5 years stale**; and its single best-evaluated system is **ungranted**.
+> [`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) —
+> Universidad Tecnológica de Panamá, validated **May–July 2026 with 74 sixth-graders in
+> three sections of a Panamanian public school**, **SUS 70.1 (n = 70)**, K-means learner
+> profiles adapting the mastery streak 7→15, automatic alerts including **anomalous
+> answer patterns** — carries **no licence file at ten probed paths**, and its
+> validation infrastructure has been decommissioned. 🔵 **That is the most credible
+> efficacy evidence on this entire base, in the region with the weakest governance
+> coverage, and it is legally unusable.** 🟢 **Three concrete plays follow, in cost
+> order:** (1) one upstream issue asking UTP to add a licence — hours of work against a
+> validated artefact (`Gap 536-C`); (2) **maintenance as the offer**, not greenfield:
+> `menthor`'s PT-BR curriculum model and `pupilfirst`'s coaching model are both assets
+> whose owners stopped; (3) pair `brujula-educativa` with `chile-hub` as the
+> **ministry-data-grounded advisory agent** — Colombia's agent, Chile's data, the same
+> pattern, two countries, against a buyer side where **~30 % of universities have a
+> published AI policy** and use-versus-governance still differs by ~60 points.
+
 
 > 🆕 **`p534` — the governance gap is now corroborated by a second, independent
 > instrument.** UNESCO **IESALC** (200 institutions, 19 countries): **87 %**

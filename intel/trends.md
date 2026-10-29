@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p535` · 2026-10-29.** **Twenty-one** trends. Each one is stated so it could be
+**Pass `p536` · 2026-10-29.** **Twenty-three** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -23,6 +23,24 @@ trend is rewritten rather than quietly restated.
 > were not re-evidenced this pass and stand on their recorded sourcing.
 > 🟢 **Trend 2 gained hard numbers:** `DeepTutor` **49,216★** and `OpenMAIC`
 > **41,756★**, API-exact rather than rounded.
+
+> 🆕 **`p536` added Trends 22 and 23, and 22 is the one that changes a deliverable.**
+> **Trend 22** — the evaluation layer arrives as *permissive rubrics with a
+> non-commercial marked corpus attached*, measured across three unrelated publishers —
+> is the first pass on which Trend 3's instruments **exist**, and it decides what a
+> studio may ship. **Trend 23** is narrow and operational: a grant can live in the
+> package manifest, which matters because this sector's measurement tooling ships in R.
+> 🟢 **Trend 3 is advanced rather than rewritten** (its instruments are now named and
+> filed), and **Trend 21 gains its missing half** — `terracotta` (Apache-2.0) supplies
+> the *assignment* and consent machinery `p535` said the estimation libraries could not.
+> 🟢 **Trend 20 — popularity is anti-correlated with fitness — gained four
+> instances**: `microsoft/Shiksha-Copilot` at **9★**, `terracotta` at **21★**,
+> `edu-sharing-python-client` at **0★** and `learning-commons-org/agent-skills` at
+> **40★** are all more useful to an engagement than most of this base's four-figure
+> rows. 🔴 **And Trend 15 — retrieval is harder than discovery here — is no longer a
+> claim about buyers only**: this base files **173 of the 4 141 addresses** it holds,
+> and nine passes called that a supply problem. Trends 1–2, 4–14, 16–19 were not
+> re-evidenced this pass and stand on their recorded sourcing.
 
 > 🆕 **`p535` added Trend 21 — the procurement gate is becoming causal evidence** — and
 > re-checked nothing else: this pass's supply legs returned **zero** unfiled agents, so
@@ -714,6 +732,84 @@ not evidence, and the studio play is different.
 **What a studio does about it on Monday.** Ship the measurement as a first-class
 component of the engagement, not a report at the end — see `P571` in
 [`../compose/patterns.md`](../compose/patterns.md).
+
+## 22. 🆕 The evaluation layer is arriving as **rubrics with a non-commercial corpus bolted on** — and the split runs straight through the deliverable
+
+🟢 **Trend 3 has argued since early passes that pedagogy is becoming measurable and
+almost nobody is measuring it. `p536` is the first pass on which the instruments
+actually exist** — and they arrive with a licence shape that decides what a studio can
+ship.
+
+[`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+(**87★**, pushed *inside this pass's window*) is exactly the artefact Trend 3 asked
+for: *"Evaluation for AI outputs against trusted educational rubrics… research-backed."*
+🔴 **Its `LICENSE.md` grants three different things three different ways:**
+
+| Artefact | Grant | Can a studio ship it? |
+|---|---|---|
+| Evaluator **code** | **MIT** | 🟢 Yes |
+| Evaluator **content** — the prompts and settings, i.e. the rubrics | **CC BY 4.0** | 🟢 Yes, with attribution |
+| Annotated **CLEAR Corpus** (orig. CommonLit) | 🔴 **CC BY-NC-SA 4.0** | 🔴 **No** — non-commercial, and ShareAlike |
+| Annotated **PERSUADE 2.0** (orig. [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0)) | 🔴 **CC BY-NC-SA 4.0** | 🔴 **No** |
+
+🔵 **Why this is a trend and not one repository's choice.** The same shape appears
+three times in this base's own holdings, from three unrelated organisations:
+
+- `evaluators` — permissive code and rubrics, **non-commercial marked corpora**.
+- [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph)
+  — MIT code, data licensed **per dataset and per download** (Open / Open + Gated /
+  Gated), with the payload stating that distribution *"doesn't consolidate those into a
+  single license for your build."*
+- [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) (`p533`) —
+  **MIT** for `harness/` and `test/`, **CC BY 4.0** for the item bank and the results.
+
+🔴 **The common structure: the executable part is permissive and the *marked ground
+truth* is not.** That is not stinginess — marked data is the expensive artefact, it
+usually carries an upstream grant the publisher cannot widen, and in `evaluators`' case
+both corpora were already `CC BY-NC-SA` before Learning Commons annotated them.
+🟢 **The consequence for an engagement is specific and plannable:** you can ship the
+evaluator, the rubrics and the pipeline; you cannot ship, redistribute or
+commercially train on the corpus you calibrated against. So **calibration becomes a
+licensing question**, and the only fully permissive alternative on this base is
+[`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+(**MIT**, 13★ — CDPK and SEND).
+
+🔵 **The architectural answer, and it is cheap if decided early:** keep the corpus on
+the *other side* of a boundary. Calibrate in a non-shipped evaluation environment,
+record the rubric version and the resulting thresholds, and ship the thresholds — not
+the data. That is `P572`'s second half, and it is the same move `p535` made for
+efficacy estimation running beside the LMS rather than inside it.
+
+🔴 **What would falsify this trend:** a permissively-licensed, *annotated* education
+corpus of comparable size appearing from any publisher. None exists on this base today,
+and `pedagogy-benchmark` is a benchmark of **model** pedagogical knowledge, not a marked
+corpus of **student** work — so it does not fill the hole, it sidesteps it.
+
+## 23. 🆕 A grant can live in the **package manifest**, and this sector's measurement tooling is where that bites
+
+🟡 Narrow, cheap to act on, and it falsified three of this base's own instruments in one
+row. [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) is a CRAN package
+(**`tna` 1.3.1**, Transition Network Analysis) whose `LICENSE` file is **45 bytes**:
+
+```
+YEAR: 2025-2026
+COPYRIGHT HOLDER: tna authors
+```
+
+🔴 That is not a grant and not an absence — it is **R's two-parameter template file**,
+and the family is declared in the manifest: `DESCRIPTION` reads
+`License: MIT + file LICENSE`. 🔴 **Three instruments, three wrong answers:** the GitHub
+API says `NOASSERTION`; a title-block reader finds no family; an absence-reader finds a
+file present and records *"granted, family unknown"*.
+
+🔵 **Why it matters here rather than in general.** This sector's *measurement* layer —
+learning analytics, psychometrics, educational data mining, item-response theory — ships
+disproportionately in **R**, so a base that reads only licence payloads will
+systematically mis-grade the exact tooling an efficacy or evaluation engagement needs.
+`tna` is the instance; `sonsoleslp/tna`, CRAN's `ltm`, `mirt` and `lavaan` are the
+class. 🟢 Remedy is **shelf rule 16**: read `DESCRIPTION`, `package.json`,
+`pyproject.toml`, `Cargo.toml` and `*.gemspec` before grading, resolve manifest-vs-payload
+conflicts to the payload, and record which channel answered.
 
 ## Counter-signals worth holding
 

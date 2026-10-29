@@ -6,9 +6,90 @@ updated: 2026-10-29
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p535` · 2026-10-29.** **Thirty-six** real agents, every row read
+**Pass `p536` · 2026-10-29.** **Forty-three** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
+
+> 🔴 **`p536`'s headline is a ratio, and it ends the nine-pass "discovery
+> drought" as a mis-diagnosis.** This base's corpus holds **4 141 distinct
+> GitHub addresses**. Its six curated pages file **173** of them in a table
+> row. 🔴 **That is 4.2 %.** Nine consecutive passes have reported a supply
+> problem while 96 % of the addresses this base had already found, read and
+> written sentences about were sitting outside every table on it. 🟢 The
+> instrument that measured it is new and is the one `Gap 535-E` asked for:
+> [`../ingest/prose-address-ledger.py`](../ingest/prose-address-ledger.py)
+> splits the corpus by **rendered role** — an address inside a table row is
+> *filed*, an address inside a sentence on the same page is not — because the
+> existing ledger keys on *mention*, and a stack description in prose counts as
+> a mention. Queue:
+> [`../evidence/prose-address-queue.2026-10-29-p536.tsv`](../evidence/prose-address-queue.2026-10-29-p536.tsv)
+> — **63 addresses named in sentences on curated pages and filed in no table on
+> any of them.**
+>
+> 🟢 **Seven rows added, and `Gap 535-A` is answered by replacement rather than
+> by a better query.** The four mandated global queries and all four regional
+> legs ran and returned **nothing unfiled for the ninth consecutive pass** (the
+> single new agent-shaped address they produced,
+> [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch),
+> was filed at `p534`; measured on [`trending.md`](trending.md)). The rows below
+> came from **topic-qualified repository search** and **org enumeration**
+> instead — two instruments, nineteen measured addresses, **24 of 27 candidates
+> filed in no curated table row**.
+>
+> 🔴 **The largest find is an organisation this shelf has partnered with since
+> `p1` and never filed.** `k12-teacher-skills` — shelf row 3, Anthropic's — is
+> built *"with Learning Commons"*. **Learning Commons ships three substantive
+> repositories and this base filed none of them:**
+> [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph)
+> (**164★**), [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+> (**87★**, pushed *during this pass*) and
+> [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills)
+> (**Apache-2.0, 40★**) — the third invisible to the prose queue as well,
+> because no sentence here has ever named it. 🔵 `Gap 533-A`'s shape for the
+> fourth time, and this time the unfiled half is the **data plane**.
+>
+> 🔴 **And that data plane does not have a repository-level grant at all.**
+> `knowledge-graph`'s `LICENSE.md` is **5 788 bytes** whose title line reads
+> *"This page explains the licensing framework for Knowledge Graph"*: code
+> **MIT**, datasets labelled **Open** (CC BY 4.0 or CC0), **Open + Gated** or
+> **Gated** *per download*, and — stated in the payload — *"Learning Commons'
+> role as distributor doesn't consolidate those into a single license for your
+> build."* 🟢 Every instrument on this base answers *"what is this repository's
+> grant?"*; here the correct answer is **that the question does not have one**.
+> See [§ A fifth verdict band](#-a-fifth-verdict-band-the-grant-is-per-artefact-and-there-is-no-repository-level-answer).
+>
+> 🟢 **Three fresh instances of `Gap 535-C`, the branch-fallback defect
+> registered one pass ago — and it would have cost three real rows.**
+> [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst)
+> (**MIT, 980★**), [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics)
+> (**Apache-2.0**, U. Michigan) and [`openfun/arnold`](https://github.com/openfun/arnold)
+> (**MIT**, France Université Numérique) are **404 on `main` and 200 on
+> `master`**. The remedy is wired as an instrument this pass —
+> [`../ingest/grant-title-block.sh`](../ingest/grant-title-block.sh) tries
+> `main`, then `master`, across five filenames, and **records which ref
+> answered**: [`../evidence/grant-title-block.2026-10-29-p536.tsv`](../evidence/grant-title-block.2026-10-29-p536.tsv).
+> 🔴 `pupilfirst` is **MIT at 980★** and the API said `NOASSERTION`; a
+> `main`-only reader plus the API would have discarded the largest permissive
+> LMS this base has ever measured, twice over.
+>
+> 🔴 **A sixteenth shelf rule, from a 45-byte licence file.**
+> [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna)'s `LICENSE` contains
+> exactly *"YEAR: 2025-2026 / COPYRIGHT HOLDER: tna authors"*. That is not a
+> grant and not an absence — it is **R's parameter file**, and the grant lives
+> in the package manifest: `DESCRIPTION` reads `License: MIT + file LICENSE`.
+> 🔵 This base's entire licence instrument reads licence-file title blocks, so
+> it would mis-grade **every CRAN package** it ever meets. → **shelf rule 16**.
+>
+> 🔴 **The LATAM finding is the sharpest of the pass, and it is not a supply
+> finding.** [`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas)
+> is the most rigorously *evaluated* education agent artefact this base has
+> ever measured — a Universidad Tecnológica de Panamá graduation thesis,
+> validated **May–July 2026 with 74 sixth-graders across three sections of a
+> Panamanian public school**, K-means learner profiles adapting the mastery
+> streak from 7 to 15, **SUS 70.1 (n = 70)**. 🔴 **It carries no licence file at
+> ten probed paths.** The region's problem on this leg is not existence and not
+> maturity — it is **grant hygiene**, and that is a cheap thing to fix upstream.
+> See [§ What is still missing](#what-is-still-missing).
 
 > 🔴 **`p535` adds no rows, and that is the pass's finding rather than its
 > apology.** All eight search legs ran — four global (open-source agents, GitHub
@@ -229,7 +310,7 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 36 verified education agents
+## Shelf — 43 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -269,11 +350,27 @@ header, a placeholder or an example.
 | 🆕 **adaptive-knowledge-graph** | [MysterionRise/adaptive-knowledge-graph](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2025 Adaptive Knowledge Graph Contributors` | 18 | ⚪ unplaced | *"A local-first AI tutor for open textbooks: knowledge-graph-enhanced retrieval with cited answers and adaptive quizzes, running entirely on your own machine."* **Neo4j** knowledge graph + hybrid **BM25 and vector search in OpenSearch** + a local LLM via **Ollama**, shipping two **OpenStax** textbooks (US History, Principles of Economics) and synthetic learner profiles. 🟢 **The most completely specified retrieval architecture on this shelf** — and the one row that pairs *cited* answers with adaptive quizzing over an openly-licensed corpus. 🟡 **Its README calls it *"a proof of concept and pilot prototype, not a production system"***, and that is quoted rather than softened: treat the architecture as the asset. |
 | 🆕 **learn-ai** (TutorBot · VideoGPT · syllabus · recommender) | [mitodl/learn-ai](https://github.com/mitodl/learn-ai) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2024 Matt Bertrand`, read at `main` `1e297ab` (1 070 B, `d1ea675aa9bb`) | 🔴 **0** | 🟢 **North America** (MIT Open Learning) — *stated* | **Fitness: dependency.** 🔴 **The largest find of this pass and the lowest-starred row on this shelf.** Four education agents on **LangGraph**, served over **Django Channels**: resource recommendation, syllabus, **VideoGPT** and **TutorBot** — with **RAG evaluation** and three tracing integrations wired in (**LangSmith, PostHog, Opik** at `opik.ol.mit.edu`), against the RC environment `rc.learn.mit.edu`. **816 commits**, no forks, no stars. 🔵 **This is the serving layer of [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor), which `p533` filed and this base then stopped looking** — the second confirmed instance of `Gap 533-A`'s shape, and the one that proves a star gate cannot see an institution's production stack. |
 | 🆕 **Fiona** | [Ed-Fi-Alliance-OSS/Fiona](https://github.com/Ed-Fi-Alliance-OSS/Fiona) | 🟢 **Apache-2.0** — title block `Apache License Version 2.0, January 2004`, read at `main` `a502843` (11 357 B, `c71d239df917`) | 🔴 **0** | 🟡 **North America** — *inferred from the product, not the page*: the org profile states **no location**; the Ed-Fi Data Standard is adopted by US state education agencies | **Fitness: reference implementation.** *"An AI-powered Slack assistant for the Ed-Fi community."* JavaScript, pushed **2026-10-29**. 🔵 Shelved not for capability but for **where it sits**: the Ed-Fi Alliance governs the interoperability standard that US K-12 student data moves on, and this is that standard-body's own agent — the data-plane end of the stack whose learner-facing end this shelf is full of. 🔴 **Zero stars, and the Alliance's second unfiled Apache-2.0 AI repository**; see [`../repos/foundations.md`](../repos/foundations.md) for `AI-Tools-for-Ed-Fi-SDLC`. |
+| 🆕 **SocialCoach** | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | 🟢 **Apache-2.0** — title block `Apache License Version 2.0, January 2004`, read at `main` (11 357 B); **API agrees** | **459** | 🟡 APAC — *inferred*: same author as `gen-mentor` (WWW '25) and `awesome-ai-llm4education`, both already on these pages; no country stated | **Fitness: product.** *"Your personal EQ coach. Build social skills and learn to handle conflict through realistic role-play and personalized feedback."* TypeScript, **60 forks**, created 3 Sept 2026, pushed **2026-10-29**. 🟢 **The highest-starred new row this pass and a whole capability band this shelf did not have: social-emotional learning.** Every other tutor here teaches a *subject* and measures mastery of it; this one rehearses conflict and reads back feedback on how the learner handled it. 🔵 SEL is a budgeted line in US K-12 and in the EU's wellbeing frameworks, and the open-source field had no address on this page against it. |
+| 🆕 **agent-skills** (Learning Commons) | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | 🟢 **Apache-2.0** — title block `Apache License Version 2.0, January 2004`, read at `main` (10 172 B) | **40** | 🟢 **North America** — Learning Commons, the partner named on shelf row 3 | **Fitness: dependency.** Python, 6 forks, created 25 June 2026, pushed 2026-10-20. 🟢 **The agent layer of the organisation that co-authored `anthropics/k12-teacher-skills`** — and the one of its three repositories that **no sentence on this base has ever named**, so the prose queue could not see it either. 🔵 Shelved as the *skills* end of a three-part institutional stack whose other two parts are filed on [`../repos/foundations.md`](../repos/foundations.md): skills here, rubrics in `evaluators`, instructional content in `knowledge-graph`. 🔴 Note the grant split across that stack — only **this** repository is permissive end to end. |
+| 🆕 **knowledge-spaces** | [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2025 Vanderbilt Data Science Institute`, read at `main` (1 089 B) | **30** | 🟢 **North America** (Vanderbilt University, Data Science Institute) — *stated* in the copyright line | **Fitness: reference implementation.** *"AI-powered Knowledge Space Theory for adaptive education. 10 Claude Code skills implementing the full KST pipeline — from course materials to knowledge graphs, adaptive assessment, personalized materials, and JIT instruction planning."* Python, 5 forks. 🟢 **The second row on this shelf built on a named, published learning theory rather than a prompt** — `OATutor` has Bayesian Knowledge Tracing, this has **Knowledge Space Theory** (Doignon & Falmagne), which models *what a learner can learn next* rather than *what they know now*. 🟡 **Pushed 2026-02-13 — eight months stale**, stated rather than softened: take the ten skills as a specification of the pipeline, not as maintained code. |
+| 🆕 **Shiksha-Copilot** | [microsoft/Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | 🟢 **MIT** — title block `MIT License · Copyright (c) Microsoft Corporation`, read at `main` (1 140 B); **API agrees** | 🔴 **9** | 🟡 **APAC (India)** — *inferred from the product*: *shiksha* is Hindi/Sanskrit for education and the work is Microsoft Research India's; the org profile states no location for the repository | **Fitness: reference implementation.** Teacher-facing lesson-preparation copilot, 12 forks, pushed **2026-10-28**. 🔴 **Nine stars on a Microsoft repository, pushed yesterday** — and it is the only row on this shelf from a hyperscaler aimed at the *government-school* teacher rather than the institutional buyer. 🔵 Shelved on the origin and the target user, not the counter: trend 20 says popularity is anti-correlated with fitness in this sector, and a 9★ repo from Microsoft Research built for Indian state-board teachers is the cleanest instance of it this base has filed. |
+| 🆕 **Iris** (standalone *Pyris V2*) | [ls1intum/Iris](https://github.com/ls1intum/Iris) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2023 TUM Applied Software Engineering`, read at `main` (1 088 B) | — | 🟢 **EMEA (Germany)** — *stated*: TU München | **Fitness: dependency.** The **standalone** virtual tutor, separate from the `edutelligence` monorepo that shelf row 30 files. 🔴 **Named in a sentence on this page since `p533` as the proof of shelf rule 13 — and filed in no table row until now**, which is `Gap 535-E` landing on this file's own evidence. 🔴 **The `repo:`-qualified batch that measured the other nineteen addresses this pass dropped this one silently** — shelf rule 14 firing again, so its grant is read-only from `raw.githubusercontent.com` and its counter is left blank rather than guessed. |
+| 🆕 **TutorIA** | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Grupo Sirius`, read at `main` (1 068 B) | 🔴 **0** | 🟢 **LATAM** — *stated by the product*: *"educación superior rural"*, Spanish-language, Grupo Sirius | **Fitness: reference implementation.** *"Agente tutor virtual autónomo basado en IA para educación superior rural"* — an autonomous tutor agent aimed at **rural higher education**, pushed **2026-10-27**. 🟢 **The third LATAM-origin agent on this shelf, and the first built for the low-connectivity rural case** that [`../verticals/solutions.md`](../verticals/solutions.md) §6 says this sector assumes away. 🟡 Zero stars, zero forks: a signal and an architecture, not a dependency. |
+| 🆕 **brújula-educativa** | [startin-lab/brujula-educativa](https://github.com/startin-lab/brujula-educativa) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 startin-lab`, read at `main` (1 067 B) | 🔴 **0** | 🟢 **LATAM (Colombia)** — *stated by the product*: *"datos educativos abiertos de Colombia"* | **Fitness: reference implementation.** *"Agente público de consulta sobre datos educativos abiertos de Colombia."* Pushed 2026-09-21. 🟢 **The fourth LATAM-origin agent and the first anywhere on this shelf whose corpus is a national open-data portal rather than a curriculum document or a textbook** — the shape `P554`'s governance work implies and nothing here had built. 🔵 Pairs with [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) (MIT, 136★, filed on [`../repos/foundations.md`](../repos/foundations.md)) as Colombia-agent plus Chile-data: between them, two of the four LATAM systems whose ministry data a studio would actually query. |
 
-**Licence split:** **27 × MIT, 8 × Apache-2.0, 1 × BSD-3-Clause** — all
-thirty-six buildable, every cell read from the licence file's title block.
+**Licence split:** **31 × MIT, 11 × Apache-2.0, 1 × BSD-3-Clause** — all
+forty-three buildable, every cell read from the licence file's title block.
 *Apache-2.0: DeepTutor, k12-teacher-skills, lineage-skill, ai-tutor-app,
-feedbacksystem, ai-shifu, get-it, 🆕 Fiona. BSD-3-Clause: Open TutorAI CE.*
+feedbacksystem, ai-shifu, get-it, Fiona, 🆕 SocialCoach, 🆕 agent-skills
+(Learning Commons). BSD-3-Clause: Open TutorAI CE.*
+🆕 **`p536`'s seven rows are 5 × MIT and 2 × Apache-2.0**, and three of the
+seven ref-answered on `master` or were graded `NOASSERTION` by the API — i.e.
+**they are permissive and two of this base's own instruments said otherwise**.
+🔵 **Recount run after the edit, not asserted**: `make gate-tables` and the
+row/filing census in
+[`../evidence/prose-address-queue.2026-10-29-p536.tsv`](../evidence/prose-address-queue.2026-10-29-p536.tsv)
+are the controls, per `Gap 534-D`'s retraction — the defect that shipped at
+`p533` shipped because nobody ran the gate that already graded it.
 🔴 **`p534` also repaired the table this paragraph counts.** A blank line left
 at `top.md:197` by `p533` **split the shelf in two**, so the last five rows
 rendered as a second, *headerless* table — in which the first data row
@@ -475,6 +572,45 @@ an honest one — the README calls it *"Open. Forkable. Share alike."* — but i
 **Ask what the licence was written to cover.** `MIT` on a corpus and `CC BY-SA` on
 a server are both category errors, and only the second one is currently common.
 
+### 🆕 A fifth verdict band: **the grant is per-artefact, and there is no repository-level answer**
+
+Not mislabelled, not ungranted, not a content licence on code — **a licensing
+*framework* in place of a licence.** Every instrument on this base, and every
+cell in every table on it, answers the question *"what is this repository's
+grant?"*. 🔴 **This band is the case where that question is malformed**, and the
+repository states so itself.
+
+| Repo | Stars | What the payload actually is | Verdict |
+|---|---|---|---|
+| 🆕 [learning-commons-org/knowledge-graph](https://github.com/learning-commons-org/knowledge-graph) | **164** · 23 forks | `LICENSE.md`, **5 788 B**, title line *"This page explains the licensing framework for Knowledge Graph"* | 🔵 **Code MIT; data per-dataset and in places per-*download*.** Three access types, a closed vocabulary: **Open** (CC BY 4.0 for the majority, CC0 for a minority), **Open + Gated** (a curriculum dataset's *Scope and sequence* download may be Open while its *Instructional materials* and *Assessment materials* are Gated — *"The two are **not** interchangeable"*), and **Gated** (*"Not covered by an open license. Access requires Data Provider approval"*). 🔴 **The payload forecloses the consolidation a studio would want to assume**: *"If you compile datasets from the catalog into your own Knowledge Graph build, you take on the licensing and attribution obligations of every dataset and download you include. Learning Commons' role as distributor doesn't consolidate those into a single license for your build."* And attribution *"travels with the data, not with Learning Commons"* — a CC BY 4.0 build owes each original source, not the distributor. |
+| 🆕 [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | **87** · 17 forks · pushed **during this pass** (2026-10-29 20:37 UTC) | `LICENSE.md`, 1 614 B, title line *"The Evaluator code is licensed under MIT"* | 🔵 **Three grants, split by artefact, and the split runs straight through the thing a studio wants.** Code **MIT**. Evaluator *content* — the prompts and settings, i.e. the rubrics themselves — **CC BY 4.0**, so commercially usable with attribution. 🔴 **The two annotated corpora are `CC BY-NC-SA 4.0`: non-commercial.** Annotated **CLEAR Corpus** (orig. CommonLit) and annotated **PERSUADE 2.0** (orig. [`scrosseye/persuade_corpus_2.0`](https://github.com/scrosseye/persuade_corpus_2.0)) are the ground truth you would calibrate an essay scorer against. 🟢 **So: ship the evaluator and the rubrics; do not ship the corpora, and do not train on them for a commercial deliverable.** TypeScript, 25 open issues. |
+
+**Why it is its own band and not a trap row.** Nothing here is mislabelled and
+nothing is hidden — both payloads are unusually careful, and `knowledge-graph`'s
+is the most honest licence document this base has read. The problem is
+**expressive**, and it is this base's, not theirs:
+
+1. 🔴 **A repo-level cell cannot hold the answer.** `Gap 533-B` registered this
+   for `bncc-benchmark`'s two path-scoped grants. 🟢 **This band is strictly
+   worse than that**: `bncc-benchmark`'s grant is resolvable by reading one
+   file, while `knowledge-graph`'s is resolvable only **per download, at fetch
+   time, against a catalogue that the payload says changes between releases** —
+   *"Check before you ship, not after."*
+2. 🔴 **The verdict is time-varying**, which no cell on these pages can express.
+   Every other grant on this base is a property of a commit; this one is a
+   property of a commit **and a catalogue state**.
+3. 🟢 **The buildable answer is architectural, and it is cheap.** Treat the
+   catalogue as an **external data dependency with a per-dataset manifest**, not
+   as a vendored corpus: resolve access type at ingest, record it per row, and
+   refuse to compile Gated rows into a shipped build. That is `P572` on
+   [`../compose/patterns.md`](../compose/patterns.md), and the gate it extends is
+   `P568`.
+
+🔵 **The rule this band adds, and it generalises past education:** as the
+artefact under the grant moves from *code* to *curated data*, the grant moves
+from the repository to the **row**. Trend 19 saw it becoming path-scoped; this is
+the next step, and a licence cell is no longer the right data type.
+
 ### 🆕 The other failure mode: stars but **no grant at all**
 
 Not mislabelled — **ungranted**. No licence file at any common path
@@ -483,15 +619,23 @@ Not mislabelled — **ungranted**. No licence file at any common path
 code **cannot be used**, however open it looks. These are not shelf rows and not
 trap rows; they are a third category this base had not written down.
 
+🔵 🆕 **`p536` adds a caveat to this whole band, and it cost this base its
+highest-recall address.** *"No licence file at any common path"* is a statement about
+**payloads**, and shelf rule 16 says a grant can be declared in a **manifest** instead.
+🔴 **So every verdict in this table is now provisional until the manifest has been read**
+— `package.json`, `DESCRIPTION`, `pyproject.toml`, `Cargo.toml`, `*.gemspec`. One row
+below has already flipped on exactly that; the others were re-checked this pass and stand.
+
 | Repo | Stars | What the repo says instead | Verdict |
 |---|---|---|---|
-| 🆕 [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | **104** | *"Version 2.2 — 54 tools available — an MCP server for interacting with Canvas LMS."* Nothing about a licence anywhere. | ⛔ **Ungranted** — probed at **15 paths** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` × `main`, `master`, `develop`), and the API returns no `license` key either. 🔴 **This is the address that `p532`'s recall-ranked promotion queue put at number one** — 16 distinct passes describing a 54-tool Canvas bridge that cannot legally be used. It is also the largest Canvas MCP server by stars, and `pushed_at` is **2026-05-31**. The capability is real and the grant is not. |
+| 🔵 **CORRECTED `p536`** — [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | **104** | `package.json` at **`v2.3.1`** declares `"license": "MIT"`, and its `files` array promises a `LICENSE` — *"A comprehensive Model Context Protocol (MCP) server for Canvas LMS with full student functionality and account management."* | 🔵 **NOT ungranted. `MIT` by manifest declaration, with the payload missing** — which is a third state this table did not have, and **shelf rule 16** is what resolves it. Verified first-hand this pass on **both** refs: `package.json` carries `"license": "MIT"` at `v2.3.1`; the promised `LICENSE` file is **absent at six paths × two refs**. 🔴 **This row said "⛔ Ungranted — probed at 15 paths" for four passes, and this base's own `gate-enumeration` has been printing `REFUTED … (manifest) "license": "MIT" (l.66); "files" names a LICENSE that is NOT in the tree` the whole time.** 🟢 **The reading that matters:** a missing payload that the manifest promises is a **packaging defect, not a withheld grant** — and because the package publishes to npm, the MIT declaration travels into registry metadata, which is a second channel asserting the same grant. 🟡 **Residual risk, stated:** there is no copyright line and no payload, so a cautious client legal review can still object; cite the manifest and the registry, and **ask upstream to add the file** (one issue, `Gap 536-C`'s class). 🔵 This was `p533`'s recall rank 1 — 16 distinct passes describing a 54-tool Canvas bridge — and the reason it stayed unfiled was a wrong verdict, not a missing one. |
 | 🆕 [LeoLiu363/ai-video-understanding](https://github.com/LeoLiu363/ai-video-understanding) | 2 | Topics include `education-ai`; README present on `master` only. No licence section. | ⛔ **Ungranted.** Local transcription + courseware OCR with timestamped Q&A over lecture video — the ingest half of `P560` and of `lineage-skill`'s shape. 🟡 Returned by a *global* web query this pass (GitHub's `education-ai` topic page), which makes it one of the very few genuinely new addresses search produced — and it is unusable. |
 | [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | **64** 🆕 *API-confirmed* | Sidebar shows **no licence**. README's own License section says only *"This project is open source and available for educational purposes."* | ⛔ **Ungranted.** That sentence names no licence, grants no rights and would not survive five minutes of client legal review. The most substantial repo in this category — 6 agents, adaptive roadmaps, RAG Q&A, 15 forks. 🆕 **`p529`: re-probed — grant still absent, and `pushed_at` is 2025-11-04. Abandoned for roughly twelve months.** The most substantial repo in this category is also the deadest. |
 | [idoforgod/Vibe-learning-AgenticWorkflow](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow) | 25 · 29 forks | Resources shows a **"License" link that anchors into the README**, not to a licence file. No licence type named anywhere. | ⛔ **Ungranted.** The sidebar link is the trap: it renders exactly like a real licence entry. 🆕 **`p529`: re-probed — no licence file at five paths on `main`, verdict stands. This is also the address that proves shelf rule 8** — the API returns `NOASSERTION` for it, which looks like "a grant exists" and is not. |
 | [tosuki/moodle-mcp](https://github.com/tosuki/moodle-mcp) | 🆕 **0** | A search result described this repo as *"MIT licensed."* **No licence file exists.** | ⛔ **Ungranted** — and a reminder that a search summary is not a verification channel. 🆕 **`p529`: counter read at last — `0★`, closing `p528`'s `—`.** |
 | [bobuel/bloom-taxonomy-quiz-builder-skill](https://github.com/bobuel/bloom-taxonomy-quiz-builder-skill) | 3 | Nothing. | ⛔ **Ungranted.** |
 | 🆕 [henriquebotelhogomes/educacao](https://github.com/henriquebotelhogomes/educacao) | 0 | "Mentora AI" — a Socratic RAG tutor with a learning-gap radar, Next.js + FastAPI. README present on `master`, no licence section. | ⛔ **Ungranted.** Probed on `main` and `master` across six paths. The repository resolves; the grant does not exist. |
+| 🆕 [JustinoLM/STI-matematicas](https://github.com/JustinoLM/STI-matematicas) | 🔴 **0** | A complete thesis report: *"Se desarrolló como trabajo de graduación de la Licenciatura en Ingeniería de Software de la **Universidad Tecnológica de Panamá (UTP)**… y se validó con estudiantes reales en una escuela pública panameña."* No licence section anywhere. | ⛔ **Ungranted — and the most expensive instance of this band on the whole base.** Probed at **10 paths** across `main` and `master`; the API returns `license: None`. 🟢 **Liveness confirmed first** per shelf rule 5: `README.md` is **200 on `master` and 404 on `main`** — a fourth `Gap 535-C` instance in one pass. 🔴 **What the missing grant locks up:** adaptive decimal-arithmetic practice for Panamanian sixth grade, **K-means (scikit-learn) learner profiles** clustering each school's pupils into four types (*rápido y preciso, cuidadoso y metódico, impulsivo, en desarrollo*) and **adapting the mastery streak from 7 to 15 correct answers** accordingly; paper-procedure solving grids (carries, partial products, long division) with a tablet keypad; automatic teacher alerts for pupils who are behind, inactive, stalled, outstanding, promoting too fast, **or answering anomalously**; Excel roster import. 🔴 **Validated May–July 2026 with 74 pupils across three sections of a Panamanian public school** (65 completed ≥1 practice), **SUS 70.1 (n = 70)**, 92 % of practising pupils used the reward store. Tagged `v1.0-tesis`; the project is **concluded**, the validation infrastructure **decommissioned**, no live demo. 🔵 **This is the only artefact on this base with a published usability instrument against real schoolchildren, and it is the one nobody can use.** → `Gap 536-C`: one upstream issue asking UTP for a licence is the cheapest high-value contribution available to this base. |
 | 🆕 [Fatima0923/AssessmentAI](https://github.com/Fatima0923/AssessmentAI) | 0 | Multi-agent LLM essay-evaluation pipeline with human-in-the-loop review. README present on `main`. | ⛔ **Ungranted** — and it sits squarely in the one capability gap this base has carried longest, which is what makes the missing grant expensive rather than merely untidy. |
 
 ### 🆕 Not ungranted — **absent**
@@ -647,6 +791,37 @@ reads as first-hand and was not.
    channel is evidence about that channel only, and the cheapest refutation of
    a four-pass-old blocker cost one request
    ([`../evidence/channel-asymmetry.2026-10-29-p534.tsv`](../evidence/channel-asymmetry.2026-10-29-p534.tsv)).
+
+16. 🆕 **A grant can live in the package manifest, with the licence file as a
+   *parameter* file — so read the manifest before recording an absence or a
+   family.** [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna)'s `LICENSE`
+   is **45 bytes** and contains only `YEAR: 2025-2026` and
+   `COPYRIGHT HOLDER: tna authors`. A title-block reader sees no family; an
+   absence-reader sees a file and so records *"granted, family unknown"*; both
+   are wrong. 🟢 **`DESCRIPTION` reads `License: MIT + file LICENSE`** — R's
+   convention is that the manifest names the family and `LICENSE` supplies the
+   two template parameters. 🔴 **This base's licence instrument reads licence
+   files, so it would mis-grade every CRAN package it ever meets**, and this
+   sector has them: learning analytics and psychometrics ship in R. 🔵
+   Generalised: check `DESCRIPTION` (R), `package.json` (`license` field),
+   `pyproject.toml` / `setup.cfg` (`license`, `classifiers`), `Cargo.toml` and
+   `*.gemspec` **before** grading, and record which channel answered. The
+   manifest is a *declaration*, not a payload, so a conflict between manifest
+   and payload resolves to the payload — but a manifest-only grant is a real
+   grant, not an absence.
+17. 🆕 **The MCP GitHub channel is split, so "the API is reachable" is not one
+   fact.** `p529` recorded the GitHub search API as reachable through session
+   MCP tooling while `curl` to `api.github.com` stayed **403**, and that held
+   this pass: `search_repositories` answered **32 of 32** addresses asked of it
+   across three batches. 🔴 **`get_file_contents` on the same server is refused
+   for every repository not attached to the session** — *"Access denied:
+   repository … is not configured for this session"* — which is an
+   authorisation boundary, not a proxy block, and it does not move with the
+   search channel. 🟢 So **search metadata** (existence, SPDX screen, exact
+   counters, `pushed_at`, default branch) comes from MCP, and **payload bytes**
+   come from `raw.githubusercontent.com`. 🔵 Rule 15 said a channel is the unit
+   of a blockage; rule 17 narrows it: on one server, **the method is the unit**.
+   Census: [`../evidence/channel-split.2026-10-29-p536.tsv`](../evidence/channel-split.2026-10-29-p536.tsv).
 
 ## 🆕 `p534` — fitness: the axis `Gap 533-C` named, now a field
 

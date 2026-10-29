@@ -957,6 +957,119 @@ re-read the grants per app:** `education` is **GPL-3.0** and `lms` is
 **AGPL-3.0**, two different copyleft regimes on one stack, so a deliverable
 spanning both inherits both.
 
+## 🆕 P572 — The access-type-aware content pipeline (North America first; run inside `P551`)
+
+**When the brief is:** *"ground our teacher copilot in real instructional content and
+real rubrics, not in a prompt"* — the US K-12 and higher-ed shape, against a buyer who
+will ask who vouches for the content.
+
+**Why this pattern exists.** `p536` filed the three repositories Anthropic's
+`k12-teacher-skills` is built *"with"*, and the two that matter most here do **not have a
+repository-level grant**. Vendoring them the way a studio vendors a library is not a
+licensing risk to be managed later — it is **incorrect**, and the payload says so.
+
+**Components, all measured at `p536`:**
+
+| Role | Component | Grant | Note |
+|---|---|---|---|
+| Instructional content | [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 🔵 **MIT code; data Open / Open + Gated / Gated, per download** | 164★. The grant is **per row and time-varying** |
+| Rubrics + scoring | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🔵 **code MIT · rubrics CC BY 4.0 · corpora CC BY-NC-SA** | 87★. Ship the first two; **do not ship the third** |
+| Teacher skills | [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | 🟢 **Apache-2.0** | 40★ — the only part of the stack permissive end to end |
+| Teacher workflows + eval rubrics | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 🟢 Apache-2.0 | 601★, already on the agent shelf |
+| Permissive calibration set | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** | 13★ — the fallback when the NC corpora are out of bounds |
+| SBOM / dependency grants | [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli) | 🟢 Apache-2.0 | 552★ — `P556`'s instrument, now named |
+
+**Wiring, in order. The first step is the pattern; the rest is ordinary work.**
+
+1. 🔴 **Build the manifest before the pipeline.** For every dataset and **every
+   download** you intend to use, record: dataset id, download id, **access type**
+   (`Open` / `Open+Gated` / `Gated`), licence (`CC BY 4.0` / `CC0` / per-agreement),
+   upstream source for attribution, and the date read. This is a table in your repo, not
+   a comment — the payload states terms *"can change between releases"*, so the manifest
+   carries a read date or it is worthless.
+2. 🔴 **Make `Gated` un-compilable, mechanically.** The ingest step refuses any row whose
+   access type is not `Open`, unless an explicit access-agreement id is present in the
+   manifest. A build that *can* include a Gated row eventually will.
+3. 🟢 **Carry attribution to the original source, not to the distributor.** The payload
+   is explicit: attribution *"travels with the data"*. A CC BY 4.0 build owes each
+   upstream publisher. Emit the attribution file from the manifest, so it cannot drift.
+4. 🟢 **Calibrate behind a boundary; ship thresholds, not corpora.** Run `evaluators`
+   against the annotated CLEAR / PERSUADE corpora **in a non-shipped evaluation
+   environment**, record rubric version + resulting thresholds, and ship the thresholds.
+   Where the client needs the calibration itself to be redistributable, calibrate against
+   `pedagogy-benchmark` instead and say which you did.
+5. 🟢 **Mount the skills.** `agent-skills` + `k12-teacher-skills` over the content
+   resolved in step 2; the rubrics from step 4 gate the output.
+6. 🟢 **Run `P556` with a real instrument.** `cyclonedx-cli` produces the dependency
+   SBOM; the grant union is computed from it rather than asserted. This is `Gap 528-C`'s
+   remedy, finally holding a tool.
+
+**Timeline:** 5–7 weeks. The manifest and the ingest gate are ~1.5 weeks of that and are
+the part a client cannot do themselves, because it requires re-reading the catalogue each
+release.
+
+🔴 **What this pattern does not do.** It does not get you the Gated content. If the
+engagement needs the instructional or assessment materials behind the gate, that is a
+**commercial conversation with the data provider**, and it should happen in week 1, not
+week 6. Say so in the proposal.
+
+---
+
+## 🆕 P573 — The ministry-data advisory agent, two countries from one pattern (LATAM; APAC with one substitution)
+
+**When the brief is:** *"an agent that answers questions about our education system using
+our own published data"* — a ministry, a regional secretariat, a university consortium or
+an NGO that must cite official figures rather than a model's recollection.
+
+**Why this pattern exists, and why now.** `p536` placed the two halves in two different
+countries, both **MIT**, and neither had ever been filed: the **agent** shape in Colombia
+and the **data** shape in Chile. 🟢 Separately they are 0★ and 136★ curiosities; together
+they are a repeatable engagement, and a third country (India) has just published the
+*government-shipped* version of the same thing, which is the precedent to quote.
+
+**Components:**
+
+| Role | Component | Grant | Region |
+|---|---|---|---|
+| Agent over national open education data | [`startin-lab/brujula-educativa`](https://github.com/startin-lab/brujula-educativa) | 🟢 **MIT** | 🟢 LATAM (Colombia) |
+| Curated, normalised national public data | [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | 🟢 **MIT**, 136★ | 🟢 LATAM (Chile) |
+| 🟢 **The precedent**: a ministry shipping its own MCP | [`nso-india/esankhyiki-mcp`](https://github.com/nso-india/esankhyiki-mcp) | 🟢 **MIT**, 147★, copyright **MoSPI** | 🟢 APAC (India) |
+| Orchestration + policy nodes | `LangGraph` | 🟢 MIT | — |
+| Rural / low-connectivity delivery | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | 🟢 **MIT** | 🟢 LATAM |
+| Offline-first distribution | `Crosstalk-Solutions/Project-NOMAD` | 🟢 Apache-2.0 | — (`p532`) |
+| Citation-grounded retrieval reference | [`MysterionRise/adaptive-knowledge-graph`](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 MIT | — |
+
+**Wiring:**
+
+1. 🟢 **Normalise before you retrieve.** `chile-hub`'s contribution is not data, it is
+   *validated, normalised* data — which is the step a ministry's own portal has usually
+   not done. Replicate its schema for the target country rather than importing its rows.
+2. 🟢 **Expose the data as an MCP server, not as a RAG index.** This is the
+   `esankhyiki-mcp` lesson: official figures are **queried**, not *recalled*, so the
+   agent asks for a number and gets that number with its series and vintage attached. A
+   vector index over statistical tables invents plausible figures, which is the one
+   failure mode this buyer cannot tolerate.
+3. 🟢 **Make every answer carry its citation.** `brujula-educativa` is the shape;
+   `adaptive-knowledge-graph` is the reference implementation of *cited* answers over an
+   openly-licensed corpus.
+4. 🟡 **Add the rural path only if the brief has one.** `TutorIA` (rural higher ed) and
+   Project-NOMAD (offline-first) make the same agent reachable where connectivity is not
+   assumed — §6 of [`../verticals/solutions.md`](../verticals/solutions.md).
+5. 🔵 **Lead the proposal with the precedent, not the architecture.** India's Ministry of
+   Statistics and Programme Implementation publishes its own MCP server under **MIT**.
+   For a ministry deciding whether to expose data this way, that is worth more than any
+   diagram.
+
+**Timeline:** 6–8 weeks per country; the second country is ~3, because steps 2–3 carry
+over and only step 1 is country-specific.
+
+🔴 **Stated limits.** `brujula-educativa` and `TutorIA` are **0★, pre-release, single-lab
+artefacts** — read the architecture, do not take the dependency. And this pattern is
+**only as good as the portal**: where a ministry publishes nothing machine-readable,
+step 1 is a data-engineering engagement in its own right and should be priced as one.
+
+---
+
 ## Pattern selection
 
 | If the brief is… | Run |
@@ -971,6 +1084,9 @@ spanning both inherits both.
 | 🆕 Brazilian school network, PT-BR curriculum or ENEM marking (LATAM) | **P555** |
 | 🆕 Any fork decision — run **after** P551's title-block read | **P556** grant-union gate |
 | A claim about learning outcomes needs defending | **P552**, folded into the above |
+| 🆕 Ground a teacher copilot in audited instructional content + rubrics (NA) | **P572** — build the per-download manifest **first** |
+| 🆕 Ministry, secretariat or consortium wants an agent over its own official data | **P573** (LATAM; APAC with one substitution) |
+| 🆕 The client demands an **effect estimate**, not a pilot | **P571** + [`terracotta`](https://github.com/terracotta-education/terracotta) for assignment and consent |
 
 **Components not used, and why:** `advisingapp` (Elastic-2.0 — forbids the hosted
 shape), `PageLM` (non-commercial, revenue-share), `cn-math-taxonomy`
@@ -981,7 +1097,14 @@ and `tosuki/moodle-mcp` (**ungranted — no licence file at all**), 🆕
 `sonstellar969/open-moodle` (MIT, but links **AGPL-3.0** PyMuPDF — see **P556**),
 🆕 `GarethManning/education-agent-skills` (**CC BY-SA 4.0**, 926★ — a real grant
 with a ShareAlike condition, usable only where the derivative can be published),
-🆕 `henriquebotelhogomes/educacao` and `Fatima0923/AssessmentAI` (**ungranted**).
+🆕 `henriquebotelhogomes/educacao` and `Fatima0923/AssessmentAI` (**ungranted**),
+🆕 `JustinoLM/STI-matematicas` (**ungranted — no licence at 10 probed paths**, and the
+best-evaluated artefact on this base: UTP Panama, 74 pupils, SUS 70.1 — see `Gap 536-C`),
+🆕 `Schlaflied/Plot-Ark` and `avps82/mentar` (**AGPL-3.0**), 🆕 `brownplt/LTLTutor`
+(**GPL-3.0**) — the last three usable behind a service boundary, never vendored, and
+🆕 the annotated **CLEAR** and **PERSUADE 2.0** corpora inside
+`learning-commons-org/evaluators` (**CC BY-NC-SA 4.0** — the code and rubrics beside them
+*are* usable; see **P572** step 4).
 All of them look usable to a careless probe. See **P551** and **P556**.
 
 ---

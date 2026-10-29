@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p536` — `2026-10-29` — **🟢 `Gap 535-E` BUILT AND RUN, AND ITS FIRST OUTPUT REFRAMES NINE PASSES: THIS BASE FILES **173 OF 4 141** ADDRESSES — **4.2 %**. 🟢 `Gap 535-A` ANSWERED BY REPLACING THE QUERY SET, NOT IMPROVING IT. 🟢 `Gap 535-C` WIRED AS AN INSTRUMENT AND IT FOUND **FOUR** INSTANCES IN ONE PASS, ONE WORTH **980★**. 🔴 FOUR REGISTERED (`536-A`…`536-D`).**
+
+### 🟢 `Gap 535-E` — CLOSED by instrument, and the measurement is the finding
+
+**Asked:** *"Extract every GitHub-shaped and tool-shaped proper noun from prose into the
+address ledger automatically, not just from tables"* — costed medium, and called *"the
+highest-yield instrument this base has."*
+
+**Delivered:** [`../ingest/prose-address-ledger.py`](../ingest/prose-address-ledger.py).
+It does not key on mention — the `p530` ledger already does, and that is precisely why it
+could not see this residue. It keys on **rendered role**: on a curated page, a line whose
+first non-space character is `|` is *filed*; the same address in a sentence is not.
+
+| Bucket | Count |
+|---|---|
+| Distinct addresses anywhere in the corpus | **4 141** |
+| 🔴 Filed in a table row on one of the six curated pages | **173** — **4.2 %** |
+| Named in a sentence on a curated page, filed in no table anywhere | **63** |
+| Measured candidates this pass that were in no curated table row | 🔴 **24 of 27** |
+
+Queue: [`../evidence/prose-address-queue.2026-10-29-p536.tsv`](../evidence/prose-address-queue.2026-10-29-p536.tsv).
+
+🔵 **The reading that matters, and it is not "file everything."** Most of the 4 141 are
+census rows, counter-examples, forks and duplicates that *should* stay unfiled — the
+instrument is a queue, not a work order. The finding is that 🔴 **"we cannot find
+anything" and "we are not filing what we found" produce an identical trending entry**,
+and this base has published the first one **nine times**. → `Gap 536-A` takes the
+unfinished half.
+
+### 🟢 `Gap 535-A` — ANSWERED, by retiring the queries rather than sharpening them
+
+All four mandated global queries and all four regional legs ran. 🔴 **Ninth consecutive
+nil on unfiled agent-shaped addresses**, and every demand figure returned was already on
+[`market.md`](market.md) — itemised there rather than described. 🟢 **The replacement
+the gap prescribed was run and it worked**: `topic:intelligent-tutoring-system` alone
+returned **28** addresses of which this base had filed **three**;
+`org:learning-commons-org` returned the three repositories of the organisation named as
+a partner on the agent shelf, **none filed**; `topic:learning-analytics` returned
+`terracotta`, `tna`, `my-learning-analytics` and `knowledge-spaces`. Census:
+[`../evidence/channel-split.2026-10-29-p536.tsv`](../evidence/channel-split.2026-10-29-p536.tsv).
+🟡 **Not closed outright**: the mandated legs are part of this job's brief, so they keep
+running; what changes is that they are now **measured as a control** rather than relied
+on as the supply instrument.
+
+### 🟢 `Gap 535-C` — CLOSED with a wired instrument, and it was expensive to have been open
+
+**Asked:** *"Try `main` then `master` then the default branch, and record which one
+answered."* **Delivered:**
+[`../ingest/grant-title-block.sh`](../ingest/grant-title-block.sh) — five filenames ×
+two refs, printing the ref that answered. Output:
+[`../evidence/grant-title-block.2026-10-29-p536.tsv`](../evidence/grant-title-block.2026-10-29-p536.tsv).
+
+🔴 **Four instances in a single pass**, where `p535` had one:
+
+| Address | `main` | `master` | What a `main`-only reader would have published |
+|---|---|---|---|
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 404 | 🟢 200 — **MIT**, 1 683 B | 🔴 *"ungranted"* — for an **MIT LMS at 980★ / 279 forks**. The API also said `NOASSERTION`, so **two** instruments independently discarded it |
+| [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 404 | 🟢 200 — **Apache-2.0** | 🔴 *"ungranted"* — U. Michigan's production dashboard |
+| [`openfun/arnold`](https://github.com/openfun/arnold) | 404 | 🟢 200 — **MIT** | 🔴 *"ungranted"* — France Université Numérique's deployment tooling |
+| [`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) | 404 | 🟢 `README.md` 200 | 🔵 Here the fallback proved the repo **live** before grading it ungranted — shelf rule 5 and 535-C working together, which is the correct outcome |
+
+🔵 **The dating signal the gap predicted holds:** all three `master` repos are older
+projects (2013, 2018, 2018 creation) that never migrated. The ref that answers is itself
+metadata.
+
+### 🔴 `make hooks` has been failing, and nobody looked — `Gap 534-D`, third instance
+
+🔴 **`make gate-enumeration` is RED on the committed `p535` tree.** Established by
+stashing this pass's edits and re-running: `REFUTED=4`, the same four addresses, only
+line numbers differing. The gate is inside `make hooks`, so **the standing check has
+been failing while passes shipped** — which is exactly the sentence `p534` wrote when it
+registered and retracted `534-D`, and exactly the sentence `p536` had to write about
+`gate-tables` two paragraphs later.
+
+🟢 **The gate was right, and it was right about something that cost this base its
+highest-recall address.** `DMontgomery40/mcp-canvas-lms` (**104★**, `p533`'s recall
+rank 1, 16 distinct passes) was filed as *"⛔ Ungranted — probed at 15 paths"*;
+`gate-enumeration` has been printing
+`REFUTED … (manifest) "license": "MIT" (l.66); "files" names a LICENSE that is NOT in the tree`
+the whole time. 🔵 **Corrected this pass**, verified first-hand on both refs, under
+**shelf rule 16**: a manifest-declared grant with an absent payload is a **packaging
+defect, not a withheld grant**. 🔴 **So the ungranted band's method was wrong, not just
+one of its rows** — an absence keyed to a payload path cannot see a manifest, a subtree
+or a registry.
+
+🟡 **Not registered as a new gap, because it is `534-D` and `536-A` together**: the
+instrument exists, grades correctly and is not *consulted*. `536-A`'s ratchet is the
+remedy for both, and the cheapest first step is to make `make hooks` red-on-red visible
+in the commit path rather than a target someone remembers to run.
+
+### 🔴 Registered this pass
+
+| Gap | Statement | Remedy and cost |
+|---|---|---|
+| 🆕 **`536-A`** | **The prose ledger is a queue and nothing promotes from it.** `p536` worked its top by hand and filed 7 agents + 19 foundations/platform rows; **the queue still holds the rest, and the instrument has no gate.** A future rewrite can silently drop every row it just gained — which is exactly the regression mechanism `p528` identified and nobody has closed | Wire the ledger into `make hooks` with a **ratchet**: the filed count may not fall between passes, and any address filed once and later absent must carry a stated reason. 🟢 Low cost — the instrument exists; it needs 20 lines and a target |
+| 🆕 **`536-B`** | **A licence cell is the wrong data type for a curated-data grant, and this base has three instances.** `knowledge-graph` licenses **per download** across Open / Open+Gated / Gated and states that distribution *"doesn't consolidate those into a single license for your build"*; `evaluators` splits code (MIT) / rubrics (CC BY 4.0) / corpora (**CC BY-NC-SA**); `bncc-benchmark` splits by path. 🔴 **`knowledge-graph`'s verdict is also *time-varying*** — a property of a commit **and** a catalogue state — which no cell on these pages can express | Replace the single `licence` cell with a **grant record**: `{scope, family, channel, ref, read_date}`, repeating per scope. 🟡 Medium cost, and it touches every curated table — so do it when the next rewrite is due, not before. Interim: `P572`'s manifest is the per-engagement workaround and it is billable |
+| 🆕 **`536-C`** | **The best-evidenced artefact on this base is unusable, and the fix is hours of work.** [`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) — Universidad Tecnológica de Panamá, validated **May–July 2026 with 74 sixth-graders in three sections of a Panamanian public school**, **SUS 70.1 (n = 70)**, K-means learner profiles adapting the mastery streak 7→15 — has **no licence file at 10 probed paths**, and its validation infrastructure is decommissioned | Open one upstream issue asking UTP to add a licence, and offer MIT text. 🟢 **Lowest cost / highest value contribution available to this base**, and it is `Gap 240`'s class — which has been open since early passes because **nothing has ever been contributed upstream from here** |
+| 🆕 **`536-D`** | **The Gulf is this base's largest adoption-to-supply hole, and nothing had ever said so.** `p535` measured the **UAE at ~75 % of teachers using AI in their work** — the highest figure in the whole TALIS set — and this base holds **zero Gulf-origin repositories**. "EMEA" on these pages has meant Western Europe plus Morocco, and `p536` adding Türkiye is what made the shape visible | Run `org:` and region-qualified repository search against named Gulf institutions (KAUST, KFUPM, Khalifa, NYU Abu Dhabi, MBZUAI) and Gulf ministry GitHub presences. 🟢 Low cost — it is the `535-A` replacement instrument pointed at a named list, and `536-D` is the first test of whether that instrument generalises past the orgs this base already cites |
+
+🔵 **One carried gap advances without closing.** `Gap 528-C` — *"this base has no
+instrument that enumerates dependency grants"* — has been costed for eight passes and now
+**holds a tool**: [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli)
+(**Apache-2.0, 552★**) is filed on [`../repos/foundations.md`](../repos/foundations.md)
+and wired into `P572` step 6 and `P556`. 🔴 It is **not closed** — nothing on these pages
+has been re-graded through it yet, so every 🟢 on this base remains a *repository-level*
+grant and `sonstellar969/open-moodle` (MIT repo, AGPL-3.0 PyMuPDF in the artefact) is
+still the standing proof that matters.
+
+🔴 **And one gap this pass re-opened against itself, then closed inside the pass.**
+`Gap 534-D` was registered and retracted at `p534` on the grounds that the
+`BLANK-SPLITS-TABLE` gate *"existed, covered this file, and shipped a defect for a pass
+because nobody ran it."* 🔴 **`p536` reproduced the identical defect** — inserting seven
+shelf rows left a blank line splitting the table at `agents/top.md:353`. 🟢 **This pass
+ran the gate before committing, it failed by name, the defect was removed, and
+`make gate-tables` now passes on 10 shelves.** 🔵 Recorded because the useful fact is not
+that the defect recurred — it is that **a gate nobody runs and a gate that runs are
+different artefacts**, and the difference showed up within two passes of the retraction.
+
 ## 🆕 `p535` — `2026-10-29` — **🟢 `Gap 534-F` ADVANCES AFTER TWELVE FAILED PASSES — NOT WITH A BETTER QUERY BUT WITH THE INSTRUMENT THE GAP ITSELF NAMED, AND THE APAC ADOPTION BLANK FILLS FROM THE SAME SURVEY. 🔴 `Gap 242` AND EVERY "READ THE PRIMARY" GAP ON THIS BASE ARE RE-PRICED FROM "LOW COST" TO **NOT PURCHASABLE**: `WebFetch` RESOLVES `github.com` AND NO OTHER HOST. 🟢 THE SUPPLY LEGS RETURNED ZERO UNFILED AGENTS AND THE DEMAND SIDE PRODUCED THREE PERMISSIVE REPOS ANYWAY. 🔴 FIVE REGISTERED (`535-A`…`535-E`).**
 
 ### 🟢 `Gap 534-F` — ADVANCED, materially, and the method is the transferable part

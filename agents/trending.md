@@ -4,6 +4,130 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p536` — `2026-10-29` — **🔴 THE NINE-PASS "DISCOVERY DROUGHT" IS A **FILING-RATE ARTEFACT**: THIS BASE HOLDS **4 141** DISTINCT ADDRESSES AND FILES **173** OF THEM IN A TABLE ROW — **4.2 %**. 🟢 SEVEN AGENTS SHELVED, NONE FROM A SEARCH: THREE FROM ORG ENUMERATION, FOUR FROM TOPIC-QUALIFIED API QUERIES. 🔴 THE PARTNER NAMED ON SHELF ROW 3 SHIPS THREE REPOS AND THIS BASE FILED **ZERO**. 🔴 THE MANDATED QUERY SET RETURNS NOTHING UNFILED FOR THE **NINTH** PASS.**
+
+### The measurement, because it reframes nine passes of this file
+
+🟢 **New instrument:** [`../ingest/prose-address-ledger.py`](../ingest/prose-address-ledger.py).
+The existing ledger (`p530`) keys on **mention**; `Gap 535-E` registered what that
+cannot see — an address named inside a *sentence* on a curated page is already
+"mentioned", so a recall instrument scores it known while no table files it. The new
+instrument splits the corpus by **rendered role**: a line whose first non-space
+character is `|` is *filed*; anything else on the same page is *prose*.
+
+| Bucket | Count | What it means |
+|---|---|---|
+| Distinct addresses anywhere in the corpus | **4 141** | the base has found, read or written about every one |
+| 🔴 Filed in a table row on a curated page | **173** | **4.2 %** |
+| Named in a sentence on a curated page, filed in no table | **63** | the `p536` promotion queue |
+| Candidates measured this pass and filed in no curated table row | 🔴 **24 of 27** | i.e. the API queries were not finding *new* things so much as *findable* things |
+
+Queue: [`../evidence/prose-address-queue.2026-10-29-p536.tsv`](../evidence/prose-address-queue.2026-10-29-p536.tsv).
+🔵 **The lesson is not "file everything."** Most of the 4 141 are census rows,
+counter-examples and duplicates that *should* stay unfiled. It is that **"we are not
+finding anything" and "we are not filing what we found" produce the same trending
+entry**, and this base has written the first one nine times.
+
+### The eight mandated legs, run and measured — ninth consecutive nil on supply
+
+All four global queries and all four regional queries ran. 🔴 **Zero unfiled
+agent-shaped addresses.** The one agent-shaped address they produced,
+[`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch), was filed
+at `p534`; `rohitg00/ai-engineering-from-scratch`, `MadsLorentzen/ai-job-search`,
+`h9-tect/AI-Roadmaps`, `openeducat/openeducat_erp` and `dodona-edu/dolos` are all
+already held. 🔴 **Every demand-side figure the four regional legs returned was also
+already on [`../intel/market.md`](../intel/market.md)** — the DEC LATAM 2026 survey
+(92 % / 79 %, n > 30 000, 29 institutions), UNESCO IESALC's 200-institution mapping
+(73.5 / 57.0 / 34.1 / 20.0), the 30 %-of-LATAM-universities policy figure, ANUIES/SEP,
+TCS–Pearson, the 10 % / 71 % North America pair. 🟢 **`Gap 535-A` is therefore answered
+by replacement, not by a better query**, and the replacement is recorded in
+[`../evidence/channel-split.2026-10-29-p536.tsv`](../evidence/channel-split.2026-10-29-p536.tsv):
+`topic:intelligent-tutoring-system` alone returned **28** addresses, of which this base
+had filed **three**.
+
+### The rows, and where each came from
+
+| Agent | Grant | Stars | Region | Instrument that found it |
+|---|---|---|---|---|
+| [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) | Apache-2.0 | **459** | APAC *(inferred)* | `topic:ai-in-education` — **a capability band this shelf did not have: social-emotional learning** |
+| [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | Apache-2.0 | 40 | North America | `org:learning-commons-org` — 🔴 **named in no sentence on this base**, so the prose queue could not see it either |
+| [`vanderbilt-data-science/knowledge-spaces`](https://github.com/vanderbilt-data-science/knowledge-spaces) | MIT | 30 | North America *(stated)* | `topic:learning-analytics` — Knowledge Space Theory, 10 skills; 🟡 8 months stale |
+| [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) | MIT | 🔴 9 | APAC (India) | prose queue, [`../intel/market.md`](../intel/market.md) |
+| [`ls1intum/Iris`](https://github.com/ls1intum/Iris) | MIT | — | EMEA (Germany) *(stated)* | prose queue — 🔴 **named on [`top.md`](top.md) itself since `p533` and filed in no row** |
+| [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | MIT | 🔴 0 | 🟢 LATAM *(stated)* | `topic:intelligent-tutoring-system` — rural higher education |
+| [`startin-lab/brujula-educativa`](https://github.com/startin-lab/brujula-educativa) | MIT | 🔴 0 | 🟢 LATAM (Colombia) *(stated)* | prose queue — first agent here whose corpus is a **national open-data portal** |
+
+### 🔴 The LATAM finding, and it is not about supply
+
+[`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) is the most
+rigorously **evaluated** education-agent artefact this base has ever measured:
+Universidad Tecnológica de Panamá graduation thesis, validated **May–July 2026 with 74
+sixth-graders across three sections of a Panamanian public school** (65 completed ≥ 1
+practice), **SUS 70.1 (n = 70)**, K-means learner profiles adapting the mastery streak
+from 7 to 15 correct answers, automatic teacher alerts including **anomalous answer
+patterns**. 🔴 **No licence file at 10 probed paths; API `license: None`.** Liveness
+confirmed first (shelf rule 5): `README.md` is **200 on `master`, 404 on `main`**.
+🟢 **So the region's constraint on this leg is grant hygiene, not existence and not
+maturity** — and one upstream issue is the fix. `Gap 536-C`.
+
+### 🔵 A correction this pass owes to its own gate, not to a search
+
+🔴 **`make gate-enumeration` is RED on the committed `p535` tree** — verified by
+stashing this pass's edits and re-running: `REFUTED=4`, the identical four addresses,
+only the line numbers differing. 🔴 **That gate is inside `make hooks`, so `make hooks`
+has been failing**, which is `Gap 534-D`'s shape for the third time: a gate that grades
+correctly, is wired, and is red while passes ship.
+
+🟢 **One of the four refutations is a real, expensive error, and this pass fixes it.**
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms)
+(**104★**) has been filed under *"⛔ Ungranted — probed at 15 paths"* since `p532`.
+**Verified first-hand this pass on both refs:** `package.json` at **`v2.3.1`** declares
+`"license": "MIT"`, and the `LICENSE` its `files` array promises is **absent at six
+paths × two refs**. 🔵 **Under shelf rule 16 that is not an absence — it is a
+manifest-declared grant with a packaging defect**, and since the package publishes to
+npm the declaration travels into registry metadata as a second channel. 🔴 **This was
+`p533`'s recall rank 1 — 16 distinct passes describing a 54-tool Canvas bridge — and the
+reason it stayed unfiled was a *wrong verdict*, not a missing one.** 🟡 Residual risk
+stated on [`top.md`](top.md): no copyright line, no payload, so cite the manifest and ask
+upstream for the file.
+
+🔵 **The other three stand** and are recorded rather than silently carried:
+`os4ed/openSIS-Classic` (enumeration finds `docs/License.txt` + `docs/LICENSE.rtf` plus
+20 vendored grants — a subtree question, `Gap 382`'s class) and
+`projectfedena/fedena` ×2 (enumeration finds `NOTICE`, which is **not** a grant). 🟢
+**The lesson generalises past this base:** an absence claim keyed to a *payload path* is
+a weaker claim than it looks, because grants also live in manifests, subtrees and
+registries.
+
+### Instrument changes this pass
+
+- 🟢 **New:** [`../ingest/prose-address-ledger.py`](../ingest/prose-address-ledger.py)
+  (`Gap 535-E`) and [`../ingest/grant-title-block.sh`](../ingest/grant-title-block.sh)
+  (`Gap 535-C` — tries `main` then `master` across five filenames and **records which
+  ref answered**).
+- 🔴 **`Gap 535-C` produced four instances in one pass**: `pupilfirst/pupilfirst`
+  (**MIT, 980★** — the single most expensive near-miss on this base),
+  `tl-its-umich-edu/my-learning-analytics`, `openfun/arnold`, `STI-matematicas`.
+- 🔴 **Shelf rule 16, from a 45-byte file.** [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna)'s
+  `LICENSE` holds only `YEAR:` and `COPYRIGHT HOLDER:`; the grant is in `DESCRIPTION`
+  (`License: MIT + file LICENSE`). **This base would mis-grade every CRAN package.**
+- 🔴 **Shelf rule 17, the channel split.** MCP `search_repositories` answered **32 of
+  32** addresses; MCP `get_file_contents` is **refused for every repo not attached to
+  the session**. One server, two verdicts — the *method* is the unit, not the host.
+- 🔴 **The API said `NOASSERTION` for five repositories whose title blocks are
+  permissive** (`pupilfirst` MIT, `knowledge-graph` MIT-code, `evaluators` MIT-code,
+  both `bydeng01` repos MIT, `tna` MIT-by-manifest). Shelf rule 8, five more times.
+- 🟢 **A fifth verdict band**, for a grant that has **no repository-level answer**:
+  `learning-commons-org/knowledge-graph` licenses **per dataset and per download**
+  (Open / Open + Gated / Gated) and states that distribution *"doesn't consolidate those
+  into a single license for your build."*
+- 🔴 **`Gap 534-D` reproduced by this pass and caught before commit, which is the
+  point.** Inserting the seven shelf rows left a blank line splitting the table at
+  `top.md:353` — the exact `BLANK-SPLITS-TABLE` shape that shipped at `p533` because
+  nobody ran the gate. 🟢 This pass ran it, it failed by name, the defect was removed and
+  `make gate-tables` passes on **10 shelves**. The gate is now load-bearing rather than
+  merely present.
+
 ## 🆕 `p535` — `2026-10-29` — **🔴 THE SUPPLY LEGS RETURN **ZERO** UNFILED AGENTS — 39 OF 40 ADDRESSES ACROSS EIGHT SEARCH LEGS WERE ALREADY HERE, AND THE ONE THAT WAS NOT IS A PLATFORM, NOT AN AGENT. 🟢 THAT IS A MEASUREMENT, NOT A SHRUG: THE DIFF IS FILED ROW BY ROW. 🔴 AND `p534`'S CHANNEL CORRECTION **DOES NOT GENERALISE** — `WebFetch` RESOLVES `github.com` AND **NOTHING ELSE**: `oecd.org`, `ec.europa.eu`, `edweek.org` AND SEVEN MORE ARE `ENOTFOUND`, SO EVERY PRIMARY-SOURCE READ THIS BASE HAS PRICED AS "LOW COST" FOR FOUR PASSES IS **IMPOSSIBLE FROM THIS SESSION**. 🟢 THE DEMAND SIDE MOVED INSTEAD, AND IT MOVED ON THE CELL THAT HAD FAILED TWELVE TIMES.**
 
 ### 🔴 The supply result: eight legs, forty addresses, one unfiled — and it is not an agent

@@ -1,0 +1,13 @@
+channel	method	target	result	note
+mcp-github	search_repositories	repo:-qualified batch (20 addresses)	200 / 19 returned	one address dropped silently (ls1intum/Iris) - shelf rule 14
+mcp-github	search_repositories	repo:-qualified batch (13 addresses)	200 / 13 returned	no drops
+mcp-github	search_repositories	org:learning-commons-org	200 / 5 returned	org enumeration; surfaced agent-skills, named in no sentence on this base
+mcp-github	search_repositories	topic:ai-in-education pushed:>2026-09-01 stars:>15	200 / 3 returned	total_count 3 - the topic is thinly applied, not the field's size (rule 12)
+mcp-github	search_repositories	topic:intelligent-tutoring-system pushed:>2026-01-01	200 / 28 returned	the single highest-yield query of this pass
+mcp-github	search_repositories	topic:learning-analytics pushed:>2026-01-01 stars:>10	200 / 7 returned	surfaced terracotta, tna, my-learning-analytics, knowledge-spaces
+mcp-github	search_repositories	topic:education-technology topic:ai-agent	200 / 3 returned	near-empty; the two topics are rarely co-applied
+mcp-github	get_file_contents	learning-commons-org/knowledge-graph LICENSE	REFUSED	"not configured for this session" - authorisation, not proxy
+mcp-github	get_file_contents	learning-commons-org/evaluators LICENSE	REFUSED	same
+mcp-github	get_file_contents	pupilfirst/pupilfirst LICENSE	REFUSED	same
+raw.githubusercontent.com	curl GET	31 licence payloads across main and master	200 on 30 of 31	the payload channel; unaffected by the MCP boundary
+raw.githubusercontent.com	curl GET	JustinoLM/STI-matematicas 10 paths x 2 refs	404 on all	ungranted, liveness confirmed separately via README on master

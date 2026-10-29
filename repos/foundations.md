@@ -441,6 +441,89 @@ credible ones. The design (assignment, a control arm, a pre-registered outcome) 
 `P571`'s subject in [`../compose/patterns.md`](../compose/patterns.md); these libraries
 are what you run **once the design is sound**.
 
+## 🆕 `p536` — the institutional data plane, and the instruments that grade it
+
+🔵 **None of these rows came from a search for a repository.** Three came from
+enumerating an organisation this base has cited since `p1`, nine came from the
+prose-address queue (`Gap 535-E`'s instrument,
+[`../ingest/prose-address-ledger.py`](../ingest/prose-address-ledger.py)), and
+four came from two topic-qualified API queries that replace the four mandated
+global queries `Gap 535-A` retired. Every grant below was read from the licence
+payload's **title block** over `raw.githubusercontent.com`, with the ref that
+answered recorded —
+[`../evidence/grant-title-block.2026-10-29-p536.tsv`](../evidence/grant-title-block.2026-10-29-p536.tsv).
+
+### The Learning Commons stack — three repositories, three different grants
+
+🔴 **Shelf row 3 of [`../agents/top.md`](../agents/top.md) is
+`anthropics/k12-teacher-skills`, built *"with Learning Commons"*, and this base
+filed none of Learning Commons' own repositories across 535 passes.** The
+`agent-skills` third is shelved as an agent; the other two are here, and the
+reason they are *here* rather than *there* is that neither is an agent — they are
+the **rubric layer** and the **content layer** that an agent is pointed at.
+
+| Repo | Grant (title block) | Stars | Fitness | What it is for here |
+|---|---|---|---|---|
+| 🆕 [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 🔵 **MIT code; data per-dataset — Open / Open + Gated / Gated.** Title line is *"This page explains the licensing framework…"*, 5 788 B at `main`. **API: `NOASSERTION`** | **164** · 23 forks | `dependency` | *"The data layer for smarter educational AI. Integrate trusted instructional content and research directly into your AI-powered tools."* 🟢 **The thing every tutor on the agent shelf needs and none of them ships**: academic standards, curriculum and instructional materials with provenance. 🔴 **Not vendorable as a corpus** — see the fifth verdict band on [`../agents/top.md`](../agents/top.md); treat it as an external data dependency with a per-row access type, which is `P572`. Pushed 2026-10-28. |
+| 🆕 [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🔵 **Code MIT · rubric content CC BY 4.0 · annotated corpora CC BY-NC-SA 4.0.** **API: `NOASSERTION`** | **87** · 17 forks | `dependency` | *"Evaluation for AI outputs against trusted educational rubrics."* 🟢 **This is the instrument Trend 3 has asked for since early passes** — research-backed rubrics a buyer can audit, in TypeScript, with 25 open issues and a push **inside this pass's own window**. 🔴 **The non-commercial half is the useful half for calibration**: annotated **CLEAR Corpus** and **PERSUADE 2.0** are the marked ground truth, and they are `CC BY-NC-SA`. Ship the rubrics, licence the corpora separately, or calibrate against `pedagogy-benchmark` instead. |
+
+🔵 **Read the three grants together and the org's intent is legible**: the
+*code* is permissive everywhere, the *rubrics* are permissive with attribution,
+and the *marked corpora* are not. That is a rational position for a non-profit
+holding licensed instructional content — and it means a studio can build the
+pipeline and must negotiate the data.
+
+### The efficacy layer gains its missing half: **assignment**
+
+`p535` filed the estimation libraries (`dowhy`, `EconML`) and said in terms what
+they do not give you: *"None of these three makes a weak design strong… The
+design (assignment, a control arm, a pre-registered outcome) is `P571`'s
+subject."* 🟢 **That component exists, it is Apache-2.0, and it runs inside the
+LMS.**
+
+| Repo | Grant (title block) | Stars | Fitness | What it is for here |
+|---|---|---|---|---|
+| 🆕 [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 **Apache-2.0** — `Apache License Version 2.0, January 2004`, 11 323 B at `main`; **API agrees** | **21** · 9 forks | `dependency` | *"Tool for Education Research with RAndomized COnTrolled TriAls"* — an **LTI plug-in** that differentiates assignment content into experimental conditions and **randomises pupils to them inside the LMS they already use**, with informed consent hidden from the teacher, non-consenting participants filtered from summaries and exports, and student identifiers stripped on export. Java, default branch `development`, pushed **2026-10-29**. 🟢 **The randomisation, the consent handling and the de-identification are the three things a studio would otherwise build by hand and get wrong** — and the privacy design is what makes an RCT survive an EU AI Act Art. 10 conversation. 🔴 21★: fitness, not popularity. |
+| 🆕 [`bydeng01/ability-levels-audit`](https://github.com/bydeng01/ability-levels-audit) | 🟢 **MIT** — `MIT License · Copyright (c) 2026 Shuyi Fan, Boyuan Deng, Mengyu Xu, Xinh…`, 1 153 B at **`master`**. 🔴 **API said `NOASSERTION`** | 4 | `reference implementation` | *"Code and frozen data for a pre-registered LLM-judge audit, with exploratory analysis of spurious DiD effects from bounded ratings."* **NeurIPS 2026 NewInML Workshop, arXiv:2608.27309.** 🟢 **The methodological warning a studio needs before it believes its own dashboard**: when the outcome is a bounded rating, difference-in-differences manufactures effects that are not there. 🔵 Pre-registered, with frozen data — reproducible in a way almost nothing in this sector is. |
+| 🆕 [`bydeng01/conv-vs-ped-tutor`](https://github.com/bydeng01/conv-vs-ped-tutor) | 🟢 **MIT**, 1 149 B at `main`. 🔴 **API said `NOASSERTION`** | 3 | `reference implementation` | *"A pre-registered audit of LLM-judged helpfulness, answer leakage, and student independence across tutor models."* **arXiv:2607.28128**, LangGraph. 🟢 **`answer leakage` and `student independence` are the two failure modes every tutor on the agent shelf can exhibit and none of them measures**, and the repo's topics name `reward-hacking` outright: an LLM judge scoring *helpfulness* rewards the tutor that simply gives the answer. 🔵 Pair it with `evaluators` and `pedagogy-benchmark` and the eval story stops being a single judge's opinion. |
+| 🆕 [`sonsoleslp/tna`](https://github.com/sonsoleslp/tna) | 🟡 **MIT — declared in the *manifest*, not the payload.** `DESCRIPTION`: `License: MIT + file LICENSE`; `LICENSE` is **45 B** of template parameters. 🔴 **API said `NOASSERTION`** | 13 | `dependency` | **CRAN** package `tna` **1.3.1**, *Transition Network Analysis*: models learning as **transitions between states over time** (Markov) rather than as a score, which is how you show a tutor changed a learner's *process*. R. 🔴 **The row that produced shelf rule 16** — three of this base's instruments disagree about it and all three are wrong. 🔵 Learning analytics and psychometrics ship in R; this is not the last CRAN grant this base will have to read. |
+| 🆕 [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics) | 🟢 **Apache-2.0**, 11 378 B, read at **`master`** (404 on `main`) | **37** · 39 forks | `dependency` | **MyLA** — the University of Michigan's student-facing learning-analytics dashboard, in production, **98 open issues against 39 forks**. 🟢 **More forks than stars, which on this base reads as institutions deploying it.** 🔴 A `main`-only reader grades it ungranted: second `Gap 535-C` instance of the pass. Python. |
+| 🆕 [`edulinq/autograder-py`](https://github.com/edulinq/autograder-py) | 🟢 **MIT** — `Copyright (c) 2023 Eriq Augustine`, 1 070 B at `main` | 16 | `dependency` | The Python client for the EduLinq autograder server, **21 forks against 16 stars**, pushed 2026-10-02. 🟢 Completes the autograder layer `p533` opened: the server was filed, the interface students and CI actually call was named in a sentence on [`../intel/market.md`](../intel/market.md) and filed nowhere. |
+| 🆕 [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) | 🟢 **MIT** — `Copyright (c) 2022-2024 Amp-up.io, LLC`, 1 075 B at `main` | 30 | `dependency` | A 100 % JavaScript **QTI 3 item player** — the *delivery* half of the standards stack whose *authoring* half `p533` built an emitter for (`compose/code/p533-qti3-template-emitter/`). 🟢 Named in a sentence on this very file and filed in no table on it. 🟡 Pushed 2025-06-21 — 16 months stale; the standard moves slowly, so read that as settled rather than abandoned, and verify against your QTI version. |
+| 🆕 [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli) | 🟢 **Apache-2.0**, 11 340 B at `main`; **API agrees** | **552** · 86 forks | `infrastructure` | SBOM analysis, merging, diffing and format conversion. 🟢 **This is the instrument `Gap 528-C` has been costed against for eight passes** — the gap that says every 🟢 on these pages is a *repository-level* grant and this base has no way to enumerate **dependency** grants. `open-moodle` (MIT repo, AGPL-3.0 PyMuPDF in the artefact) is the standing proof it matters. 🔴 Named on this file and on [`../intel/market.md`](../intel/market.md) and filed in no table row. Pushed 2026-10-19. |
+
+### The national data plane — four countries, four grants, all permissive
+
+🔵 **This is the layer Trend 12 implies and this base has only ever held the
+*product* end of.** An education agent that answers a question about a school
+system needs that system's own data, and in four countries it is published as a
+permissive repository.
+
+| Repo | Grant (title block) | Stars | Region | What it is for here |
+|---|---|---|---|---|
+| 🆕 [`nso-india/esankhyiki-mcp`](https://github.com/nso-india/esankhyiki-mcp) | 🟢 **MIT** — `Copyright (c) 2026 Ministry of Statistics and Prog…`, 1 115 B at `main` | **147** · 28 forks | 🟢 **APAC (India)** — *stated in the copyright line*: the **Ministry of Statistics and Programme Implementation** | An **official government MCP server** over the eSankhyiki national statistics platform, pushed 2026-10-27. 🟢 **The first row on this base where a national statistical office ships the MCP itself** — not a third party scraping it. 🔵 For an engagement that must ground claims about enrolment, attainment or expenditure in the government's own figures, this is the shape to ask every ministry for, and the precedent to cite when asking. |
+| 🆕 [`hantang/smartedu-dl-go`](https://github.com/hantang/smartedu-dl-go) | 🟢 **MIT** — `Copyright (c) 2024 hantang`, 1 063 B at `main` | **207** · 45 forks | 🟢 **APAC (China)** — *stated by the product* | Multi-platform downloader for the **国家中小学智慧教育平台** (national K-12 smart-education platform): textbooks as PDF, courseware, audio and video. Go. 🟢 **The largest-starred national-curriculum *ingest* tool on this base** — and the ingest step is the one `P560` and `lineage-skill` both assume someone else solved. 🟡 It is an access tool, not a licence: what it downloads carries the platform's own terms, which this base has **not** read and does not claim. |
+| 🆕 [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | 🟢 **MIT** — `Copyright (c) 2026 Carlos Ortega`, 1 069 B at `main` | **136** · 12 forks | 🟢 **LATAM (Chile)** — *stated by the product* | *"Datos públicos de Chile curados, normalizados y validados: geografía…"* — curated, normalised, validated Chilean public data, pushed 2026-10-26. 🟢 Pairs with the Colombian agent [`startin-lab/brujula-educativa`](https://github.com/startin-lab/brujula-educativa) (agent shelf) as the data half of the same pattern, and with the Chilean exam data already behind `pedagogy-benchmark`. |
+| 🆕 [`openeduhub/edu-sharing-python-client`](https://github.com/openeduhub/edu-sharing-python-client) | 🟢 **Apache-2.0**, 11 348 B at `main` | 🔴 0 | 🟢 **EMEA (Germany)** — Open Edu Hub | Python client and connectors for the **edu-sharing** API — the OER repository layer German states run (WirLernenOnline). 🟢 Zero stars and the only permissive client for a national OER infrastructure on this base. 🔵 Filed on the attachment point, per `Gap 534-C`: a star gate cannot see a public-sector integration layer. |
+| 🆕 [`openfun/arnold`](https://github.com/openfun/arnold) | 🟢 **MIT** — `Copyright (c) 2018-present GIP FUN MOOC`, 1 077 B, read at **`master`** | 41 · 10 forks | 🟢 **EMEA (France)** — *stated*: **GIP FUN MOOC**, France Université Numérique | Kubernetes deployment tooling for the FUN MOOC stack, pushed 2026-10-28. 🟢 Completes the `openfun` family already here (`ralph` LRS, `richie` CMS): CMS, learning-record store **and** the deployment that runs them, all MIT, all from the French national MOOC operator. 🔴 Third `Gap 535-C` instance of the pass. |
+| 🆕 [`Turkish-AI-Community/hsd-agu-egitim`](https://github.com/Turkish-AI-Community/hsd-agu-egitim) | 🟢 **MIT** — `Copyright (c) 2026 Enes Fehmi Manan`, 1 072 B at `main` | 33 | 🟡 **EMEA (Türkiye)** — *inferred* from the org name and Turkish-language material | *"From Model to Agent"* mini-bootcamp project and teaching documents, Abdullah Gül University. 🟢 **Filed as a curriculum, explicitly not as an education-sector product** — the same honest classification `p534` gave `pguso/agents-from-scratch`. 🔵 It is the only Türkiye-origin address on this base, which is itself the finding: EMEA on these pages has meant Western Europe plus Morocco. |
+| 🆕 [`RozhakDev/EduPintarIPAS`](https://github.com/RozhakDev/EduPintarIPAS) | 🟢 **MIT** — `The MIT License (MIT) · Copyright (c) 2025 Rozhak`, 1 092 B at `main` | 20 | 🟢 **APAC (Indonesia)** — *stated by the product* | Web chatbot for **IPAS** (integrated science) for Indonesian primary pupils. 🟡 Pushed 2025-08-10 — 14 months stale. 🔵 Filed beside `naufaldi/teacher-exam` (agent shelf, Indonesia): two Indonesian artefacts, one teacher-facing and one pupil-facing, both MIT, both naming the national curriculum by its own acronym — which is the texture Trend 12 predicts and a global query never returns. |
+
+🔴 **Four rows this pass are copyleft or network-copyleft and are recorded here
+rather than filed as buildable**, because an unstated exclusion looks like an
+oversight: [`Schlaflied/Plot-Ark`](https://github.com/Schlaflied/Plot-Ark)
+(**AGPL-3.0**, 13★ — curriculum operations over xAPI and Moodle, the closest
+thing to `P558`'s output anyone has shipped),
+[`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) (**GPL-3.0**, 12★ —
+Brown PLT, a *misconception*-based tutor, which is a sharper pedagogy than any
+permissive row here), [`avps82/mentar`](https://github.com/avps82/mentar)
+(**AGPL-3.0**, 0★ — local-first child tutor, *"no cloud, no accounts, no child
+data leaving the device"*) and `openedx/openedx-ai-extensions` (AGPL-3.0,
+carried from `p534`). 🔵 **All four are usable behind a service boundary and none
+is vendorable into a proprietary deliverable** — Trend 14's point, four more
+times, and note that **three of the four are 2026 projects**: the sector's
+copyleft is a present-tense choice, not a legacy.
+
 ## Licence map, for the architecture decision
 
 | Band | Repos |

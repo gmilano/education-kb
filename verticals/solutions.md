@@ -270,6 +270,34 @@ Ed-Fi community) and
 newest permissive attachment surface on this page, and the only one whose
 upstream is a standards body rather than a vendor.
 
+## 🆕 `p536` — §8, the permissive LMS this base measured wrong twice over
+
+🔴 **The largest permissive LMS on this base was discarded by two of its own
+instruments at once.** [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst)
+is **MIT at 980★ with 279 forks**, and until this pass it appeared on these
+pages only inside a *sentence* on this file — never in a table row. Both
+instruments that could have promoted it said no:
+
+- 🔴 The **API** returns `NOASSERTION`, which shelf rule 8 says screens and never
+  grades.
+- 🔴 The **licence payload is 404 on `main` and 200 on `master`** — `Gap 535-C`,
+  registered one pass ago, and this is the instance that would have cost the most.
+
+| Platform | Repo | Grant (title block) | Stars | Region (origin) | Liveness | Why it is an attachment point |
+|---|---|---|---|---|---|---|
+| 🆕 **Pupilfirst** | [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🔵 **MIT, with `docs/` under CC BY-SA 4.0** — read at **`master`**, 1 683 B. The payload scopes four ways: `docs/` CC BY-SA 4.0, *"all client-side JavaScript… MIT"*, third-party components under their own grants, *"content outside of the above… MIT"* | **980** · 279 forks | 🟢 **APAC (India)** — *stated* in the copyright line: **Pupilfirst Pvt. Ltd.**, 2013–present | 🔴 **Pushed 2025-12-09 — ~11 months stale** | *"A learning management system that lets you run an asynchronous online course."* 🟢 **The only permissive LMS on this base built around *coaching and review* rather than content delivery** — submissions, coach feedback and review queues are first-class, which is the half Moodle and Open edX make you build. 🟡 Eleven months of silence is stated, not softened: fork-and-own, not depend-and-upgrade. 🔵 Note the split grant is **path-scoped and benign** — the CC BY-SA half is documentation, which is the category error Trend 7 warns about running the *right* way round for once. |
+| 🆕 **Menthor** | [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | 🟢 **Apache-2.0**, 11 336 B at `main`; **API agrees** | **582** · 35 forks | 🟢 **LATAM (Brazil)** — *stated by the product*: *"Plataforma gratuita e open-source de ensino de programação"* | 🔴 **Pushed 2024-04-21 — ~2.5 years stale** | 🟢 **The highest-starred LATAM-origin education platform this base has ever filed, and it is archived in practice if not in label.** Portuguese-language programming-education platform. 🔵 Filed anyway, and the reason is `Gap 534-C`'s inverse: a studio asking *"has anyone built a Portuguese-language learning platform we can start from?"* needs the **answer with the date attached** far more than it needs the absence of a row. Read the curriculum structure and the PT-BR content model; do not read the dependency tree. |
+| 🆕 **SIMIC** | [`Dramoscuello/simic`](https://github.com/Dramoscuello/simic) | 🟢 **Apache-2.0**, 11 356 B at `main`; **API agrees** | 🔴 2 | 🟢 **LATAM** — *stated by the product*, Spanish-language | 🟡 Pushed 2026-07-23 | *"Plataforma open source para la generación, aplicación y análisis…"* of assessments. 🟢 Filed as the Spanish-language counterpart to `P563`'s adaptive-assessment slot, where the stack was otherwise Anglophone or Brazilian. 🟡 Two stars: a reference, not a dependency. |
+
+🔵 **What the three rows together say about this file's own method.** All three
+are **platforms a studio would want and none was reachable by this base's
+retrieval**: one lost to a branch default, one lost to a staleness that no row
+recorded, one never named outside a sentence. 🟢 **The fix is the filing
+instrument, not more searching** — see `Gap 536-A`. 🔴 And the liveness column
+`p534` added to §7 is doing exactly the work it was added for: two of these
+three rows are **stale**, and a table without that column would have published
+them as live.
+
 ## The architecture this implies
 
 1. **Never fork an AGPL core.** Attach over LTI 1.3, REST, xAPI or MCP.
