@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p519` — `2026-10-29` — **🟢 THIS SHELF GETS ITS FIRST PERMISSIVE SYSTEM OF RECORD: `academico-sis/academico` — **MIT**, 409★, 150 forks, pushed `2026-10-28` — a school-management platform with a student-information system in it. Every other system of record on this shelf is copyleft, so this single row changes what a client deliverable can look like. 🔴 And a 582★ Apache-2.0 platform on the open-source-edtech map is ARCHIVED and has been for eighteen months — `menthorlabs/menthor`, whose `updated_at` is seventeen days old.**
+
+🔵 **What belongs here.** Real, deployed systems of record a studio can customise and put AI on
+top of — the Odoo / OpenMRS / Moodle layer. Not agents, not curricula.
+
+### 🟢 The first permissive system of record on this shelf
+
+🔴 **The standing problem, restated from `p518`'s own reading.** `p518` read the two ERPs GitHub
+will not classify and found **both prior records too permissive**: `openeducat_erp` is
+**LGPL-3.0**, `frappe/education` is **GPL-3.0**. Add Open edX (**AGPL-3.0**) and Moodle
+(**GPL-3.0**) and the position was: *there is no permissive system of record in education*. A
+studio that wanted to ship a closed, client-owned SIS derivative had nothing to start from.
+
+| Repo | Licence (asserted today) | ★ / forks | `pushed_at` | What it is |
+|---|---|---|---|---|
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT** | **409** / **150** | `2026-10-28` | Laravel + Filament school-management platform for **small and medium institutions**. Its own topics name it: `student-information-system`, `lms`, `school`. Alive since `2018-12-16`; 150 forks on a 409★ base is an unusually high fork ratio — this is a system people *deploy and modify*, which is exactly the signal a system of record needs |
+
+🟢 **Why the MIT matters more here than on an agent row.** An agent is replaceable; a system of
+record is the thing a client's registrar, timetable and transcripts live in for a decade. MIT means
+the client can own the derivative outright, with no obligation to publish their modifications —
+the thing AGPL Open edX and GPL Moodle both forbid. 🔵 **The honest scope:** at 409★ this is a
+*small-and-medium-institution* platform, not a Moodle replacement for a national ministry. It is
+the right row for a single school, a chain, or a bootcamp, and `P528` says so explicitly.
+
+### 🔴 The archived row — and the field that hid it
+
+🔴 **[`menthorlabs/menthor`](https://github.com/menthorlabs/menthor)** — **Apache-2.0** (asserted
+today), **582★**, 35 forks, *"Plataforma gratuita e open-source de ensino de programação"*.
+**`archived: true`**. Last `pushed_at`: **`2024-04-21`**. 🔴 Last `updated_at`: **`2026-10-12`** —
+seventeen days before this read.
+
+| field | value read today | what a shelf would conclude from it alone |
+|---|---|---|
+| ★ | 582 | 🔴 "popular, worth shelving" |
+| `updated_at` | `2026-10-12` | 🔴 **"actively maintained"** — wrong |
+| `pushed_at` | `2024-04-21` | 🟢 "no code in 18 months" |
+| `archived` | **`true`** | 🟢 **"dead, and deliberately so"** |
+
+🟢 Graded by [`compose/code/p519-liveness-fields/`](../compose/code/p519-liveness-fields/)
+(**21/21 controls green**), which refuses `updated_at` as an input on purpose.
+
+🔴 **Its region is left `UNRESOLVED-pt` and that is deliberate.** The description is Portuguese and
+`menthor.io` carries no country in the payload. Portuguese does **not** separate 🇧🇷 from 🇵🇹, so
+placing it in LATAM would be a guess, and `Gap 513-C` is precisely about shelf rows that carry a
+guess as if it were a region. 🔵 It is recorded in the TSV as `UNRESOLVED-pt` with the basis
+stated, which is a verdict a successor can overturn with one read — unlike a blank.
+
+### 🔵 The copyleft systems of record, re-read today for completeness of the map
+
+🔵 These are **not** new to this base, and none is a defect — copyleft is a licence, not a fault.
+They are listed so the permissive/copyleft split on this shelf is visible in one place, because
+that split is what `P528` routes around:
+
+| Repo | Licence | ★ / forks | Note |
+|---|---|---|---|
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** | 1,019 / 565 | Pushed `2026-10-29`. 🔵 Served as this pass's **negative licence control** — queried under MIT and correctly **not** returned |
+| [`frappe/lms`](https://github.com/frappe/lms) | **AGPL-3.0** | 3,350 / 1,565 | 🔴 A **distinct repo** from `frappe/education` (**GPL-3.0**, read by `p518`) and a **stronger** copyleft. Two Frappe education products, two different grants — do not carry one record for both |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** | 505 / 429 | Release branch `release_11`, pushed `2026-10-28`. Long-standing EMEA-origin LMS |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | **AGPL-3.0** | 2,429 / 592 | Pushed `2026-10-25` |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | **AGPL-3.0** | 1,289 / 267 | Pushed `2026-10-29` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | **AGPL-3.0** | 1,130 / 508 | The Docker-based Open edX distribution — the practical way Open edX is actually deployed |
+
+🔴 **Three rows on the same map carry an unreadable grant and are placed nowhere:**
+[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (`NOASSERTION`, 980★, last
+pushed `2025-12-09` — **~11 months stale**),
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (`NOASSERTION`, 448★) and
+[`claroline/Claroline`](https://github.com/claroline/Claroline) (`NOASSERTION`, 347★). 🔵
+[`edrys-org/edrys`](https://github.com/edrys-org/edrys) is readable — **MPL-2.0**, 334★ — but last
+pushed `2024-08-12`, so it is **STALE** rather than blocked: a file-level copyleft that nobody is
+maintaining.
+
 ## 🆕 `p518` — `2026-10-29` — **🟢 THE LICENCE AXIS ON THIS SHELF IS NOW READ FROM BYTES FOR THE TWO ERPs THAT GITHUB DECLINES TO CLASSIFY, AND BOTH PRIOR RECORDS WERE WRONG IN THE SAME DIRECTION — TOO PERMISSIVE: `openeducat_erp` is **LGPL-3.0** (GitHub: `NOASSERTION`), `frappe/education` is **GPL-3.0** (GitHub: unclassified; vendor articles call it unstated). 🔴 Open edX is shelved under its real name for the first time. 🟢 Sakai is the one genuinely permissive LMS of record on this shelf and has never been named as such.**
 
 🔵 **What belongs here.** Real, deployed systems of record that a studio can customise and put

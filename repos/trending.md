@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p519` — `2026-10-29` — GitHub trending / population reads this window
+
+🔵 **Append-only.** Added above `p518`'s section; nothing below is rewritten.
+
+### 🟢 The instrument this pass used, so the rows below are reproducible
+
+🔴 **`curl` to `github.com` is 403 at this session's egress proxy and `get_file_contents` is scoped
+to this session's own repositories.** So the whole population below was read through the **search
+API** with these queries, recorded verbatim for a successor:
+
+| query | `total_count` | returned |
+|---|---|---|
+| `topic:ai-tutor stars:>50` | 25 | 20 |
+| `topic:edtech stars:>200` | 24 | 24 |
+| `topic:lms stars:>300` | 24 | 24 |
+| `topic:education-ai stars:>60` | 2 | 2 |
+| `advising student success in:name,description,readme higher education` | 765 | 8 |
+| `tutor agent education created:>2026-09-15 stars:>100` | 🔴 **0** | 0 |
+| 16-slug consolidated verification read | 16 | 16 |
+
+### 🟢 Permissive rows worth carrying, read `2026-10-29`
+
+| Repo | Licence (asserted) | ★ / forks | `pushed_at` | Note |
+|---|---|---|---|---|
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | **Apache-2.0** | 377 / **267** | **`2026-10-29`** | 🟢 **LTI + Common Cartridge.** Pushed the day of this read; alive since 2013. The highest fork-to-star ratio on this shelf — a thing people build *with* |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | **MIT** | 361 / 85 | `2026-10-28` | 🟢 **SCORM 1.2 + 2004 runtime**, offline-first, TypeScript. The receiving half of `P528` |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | **MIT** | 409 / **150** | `2026-10-28` | 🟢 The **first permissive system of record** on these shelves. Laravel + Filament; topics include `student-information-system` |
+| [`iblai/lms`](https://github.com/iblai/lms) | **MIT** | 208 / 16 | `2026-10-28` | Competency tracking + **digital credentials**, Next.js 15 / React 19 |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 1,163 / **1,012** | `2026-10-28` | Re-asserted MIT today. Highest fork count on the shelf |
+| [`safytech/ulearn`](https://github.com/safytech/ulearn) | **MIT** | 701 / 299 | 🟡 `2026-03-10` | Laravel + React LMS script. 🟡 ~7 months since a push — live by this base's 365-day rule, but trending **down** |
+| [`SJRiz/pytogether`](https://github.com/SJRiz/pytogether) | **MIT** | 261 / 17 | `2026-10-21` | Browser-based collaborative Python IDE (pytogether.org). Useful for CS-classroom engagements |
+| [`openfun/richie`](https://github.com/openfun/richie) | **MIT** | 317 / 94 | `2026-10-29` | Education-portal CMS, carried on these shelves; pushed today |
+
+### 🔵 The copyleft population, so the permissive/copyleft split is visible
+
+| Repo | Licence | ★ / forks | Note |
+|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | **AGPL-3.0** | 3,350 / 1,565 | 🔴 **Distinct from `frappe/education` (GPL-3.0)** and a stronger copyleft. Two products, two grants |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | **AGPL-3.0** | 2,429 / 592 | pushed `2026-10-25` |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | **AGPL-3.0** | 1,734 / 406 | pushed `2026-10-28` |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | **AGPL-3.0** | 1,289 / 267 | pushed `2026-10-29` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | **AGPL-3.0** | 1,130 / 508 | The practical Open edX distribution |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | 1,240 / 1,018 | 🟢 Apache-2.0-derivative, so **permissive** — as `p518` first named. Carried here for completeness |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** | 1,019 / 565 | 🔵 This pass's **negative licence control**: queried under MIT and correctly not returned |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** | 505 / 429 | release branch `release_11` |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | **AGPL-3.0** | 431 / 88 | created `2026-10-10` — fast-rising and copyleft |
+| [`Automattic/sensei`](https://github.com/Automattic/sensei) | **GPL-2.0** | 596 / 216 | WordPress-ecosystem LMS |
+
+### 🔴 Unreadable or dead — placed nowhere, and named so nobody re-finds them as candidates
+
+| Repo | ★ / forks | Verdict | Basis |
+|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2,050** / 279 | 🔴 `NOASSERTION` | Community NotebookLM-style study platform. High stars, unreadable grant |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 922 / 130 | 🔴 `NOASSERTION` | 165 teacher/school-leader skills |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 980 / 278 | 🔴 `NOASSERTION` **+ ~11 months stale** | last push `2025-12-09` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 448 / 166 | 🔴 `NOASSERTION` | actively pushed (`2026-10-28`), grant unreadable |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | 347 / 201 | 🔴 `NOASSERTION` | branch `15.0` |
+| [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) | 582 / 35 | 🔴 **ARCHIVED** | Apache-2.0 and dead since `2024-04-21`; `updated_at` `2026-10-12` hid it |
+| [`edrys-org/edrys`](https://github.com/edrys-org/edrys) | 334 / 37 | 🟡 **STALE** | **MPL-2.0** (readable), last push `2024-08-12` |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 585 / — | 🔴 `NOASSERTION` | carried from `p518`'s `T518-1`; unchanged |
+
 ## 🆕 `p518` — `2026-10-29`
 
 🟢 **The trending-repos channel produced real new supply this window for the first time in

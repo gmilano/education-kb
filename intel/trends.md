@@ -4,6 +4,159 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p519` — `2026-10-29` — **🟢 THE TREND THIS PASS MEASURES IS AN ARCHITECTURAL ONE AND IT RESOLVES A STANDING DEADLOCK: the permissive/copyleft split in education software is reconciled not by picking a side but by a PACKAGE BOUNDARY, and both rungs of that boundary — LTI and SCORM — are now verified permissive on these shelves. 🔴 Second: `updated_at` is not a liveness signal, measured on sixteen rows, and the one row where it lies is the one a studio would have pitched. 🔴 Third: education is becoming a NAMED high-risk sector in statute rather than a sensitive one by interpretation. 🔴 Fourth, and it is about this base rather than the sector: fifteen passes blamed a publisher for what was the sandbox's doing.**
+
+### 🟢 `T519-1` — The permissive/copyleft deadlock in edtech is an INTEGRATION problem, and the integration tier just turned out to be permissive
+
+🔵 **The deadlock, as these shelves have carried it for many passes.** Every system of record in
+education is copyleft — Open edX **AGPL-3.0**, Moodle **GPL-3.0**, `frappe/education` **GPL-3.0**,
+`openeducat_erp` **LGPL-3.0**, `frappe/lms` **AGPL-3.0**. Every strong tutoring and content agent
+is permissive. A studio asked for a **closed, client-owned** deliverable therefore appeared to face
+a choice: rebuild the LMS, or accept copyleft reaching into the agent.
+
+🟢 **The measurement that dissolves it.** Two standards runtimes were read today and both are
+permissive:
+
+| rung | repo | licence asserted `2026-10-29` | ★ / forks | `pushed_at` |
+|---|---|---|---|---|
+| **LTI / Common Cartridge** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | **Apache-2.0** | 377 / **267** | **`2026-10-29`** |
+| **SCORM 1.2 / 2004** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | **MIT** | 361 / 85 | `2026-10-28` |
+
+🔵 **Why a package boundary is different in kind from a library boundary.** An agent that *links*
+into Moodle invites the derivative-work question. An agent that **emits a SCORM package** which
+Moodle *plays* does not: the interface is a file format. 🟢 And the sector has already produced the
+matching emitter — `p518` shelved [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph)
+(**MIT**) specifically because it **emits SCORM**. Emitter, runtime and 1,644-node curriculum
+corpus all landed inside four weeks of each other.
+
+🟢 **The trend claim, stated narrowly:** new education supply in this window is arriving
+**standards-shaped** rather than platform-shaped — built to drop into whatever LMS the institution
+already runs, instead of asking it to migrate. That is the opposite of the 2024–25 pattern of
+all-in-one AI learning platforms, and it is what makes `P528` buildable. 🔴 **Scope:** this is read
+from a handful of repos in one window, not from a population study. It is a direction, not a rate.
+
+### 🔴 `T519-2` — `updated_at` is not a liveness signal, and the row it lies about is the row you would have sold
+
+🟢 **Measured, not asserted.** Sixteen repositories graded by
+[`compose/code/p519-liveness-fields/`](../compose/code/p519-liveness-fields/) (**21/21 controls
+green**, portable under `python3 -I` from any directory):
+
+| derived from [the TSV](../evidence/liveness-fields.2026-10-29-p519.tsv) | count |
+|---|---|
+| rows graded | **16** |
+| `archived` | **1** |
+| `STALE` (no push in >365 days, not archived) | **0** |
+| rows where grading on `updated_at` would **disagree** with the sound grade | **1** |
+
+🔴 **The one row is [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor)**: Apache-2.0,
+**582★**, `archived: true`, last push **`2024-04-21`**, `updated_at` **`2026-10-12`**.
+
+🔵 **Why a 1-in-16 error rate is the dangerous kind.** A reader that trusts `updated_at` is right
+about fifteen rows. It is wrong about the archived one — and an archived, permissive,
+582-star education platform is exactly the row that *looks* like a find worth proposing. 🟢 The
+rule, now enforced in code: **`archived` first, then `pushed_at`. `updated_at` moves when metadata
+moves and must never be read as maintenance.** This is `p518`'s `microsoft/autogen` retraction
+generalised from an instance into an instrument.
+
+### 🔴 `T519-3` — "Region" works for regulation and fails for adoption, and APAC is where it fails hardest
+
+🟢 **The spread, on a single instrument and a single survey round** (TALIS 2024 via OECD Digital
+Education Outlook 2026): 🇸🇬 Singapore **~75%** against 🇯🇵 Japan **<20%** — both APAC, **~4×
+apart**, OECD average **36%**.
+
+🔵 **So the five-value closed vocabulary this base writes `region:` from is doing two different
+jobs, and only one of them works.** For **regulation** a region is real: the EU AI Act binds
+EMEA as a bloc, and that is a genuine shared constraint. For **adoption** a region is an
+artefact of sampling — "APAC adoption" means whichever member state the report happened to
+measure. 🟢 **The discipline this pass adopts:** adoption cells are written as **ranges with their
+endpoints named**, never as a regional average. See [`market.md`](market.md).
+
+🔵 **And the same test applied to LATAM reverses a prior.** Brazil **56%**, Chile **55%**, Colombia
+**53%**, Costa Rica **52%** — all four **above** the OECD average of 36%. The "LATAM lags on
+adoption" assumption is not supported by the instrument that measures it.
+
+### 🔴 `T519-4` — Education is moving from "sensitive by interpretation" to NAMED in statute, with the regulated FUNCTIONS specified
+
+🔵 **The shift, in one comparison:**
+
+| regime | how education is reached | what is actually regulated |
+|---|---|---|
+| **EU AI Act** (Annex III) | 🟡 **By interpretation of a use-case category** — an admissions tool is high-risk *because* its output affects access to education | the *consequence* of the decision |
+| 🔴 **Vietnam's AI Law** | 🔴 **Education named as a high-risk sector in the statute itself** | 🔴 **Named mechanisms: automated assessment and behavioural monitoring** |
+
+🔴 **Why naming the mechanism matters more than naming the sector.** "Education is high-risk"
+leaves an architect guessing which component is in scope. *"Automated assessment and behavioural
+monitoring"* tells them exactly which two components to keep out of the model's hands — and both
+are components a tutoring agent acquires by default the moment it grades or tracks engagement.
+🟢 **`P525`'s architecture already answers it** (the consequential decision is not the model's),
+which is the useful result: a pattern built for the EU clock transfers to the Vietnamese one
+without redesign.
+
+🟡 **Declared:** Vietnam's commencement dates are **conflicted across sources** (1 March 2027 with
+a six-month extension for pre-15-August-2026 systems, versus an account placing the law in force
+March 2026). The *sectoral naming* is carried; the clock is not asserted.
+
+### 🔴 `T519-5` — The channel-attribution error: fifteen passes blamed a publisher for the sandbox's behaviour
+
+🔴 **What this base has recorded.** `Gap 483-K` and `Gap 513-D` have been filed for fifteen-plus
+passes as *"EUR-Lex itself was not read"*, with `curl` **000** and `WebFetch` **ENOTFOUND** offered
+as evidence about **EUR-Lex**.
+
+🟢 **What this pass measured.** `WebFetch` was pointed at three unrelated primary publishers:
+
+| host | result |
+|---|---|
+| `eur-lex.europa.eu` | 🔴 `ENOTFOUND` |
+| `www.oecd.org` | 🔴 `ENOTFOUND` |
+| `collimateur.uqam.ca` | 🔴 `ENOTFOUND` |
+
+🔴 **Three publishers, one failure mode, with an explicit remedy in the error text: the host is
+outside this session's allowlist.** EUR-Lex is not unreachable; **non-allowlisted hosts are**. The
+gap was describing a property of the sandbox and attributing it to a publisher — which is
+**exactly `Gap 511`'s class**, re-occurring on a different axis fifteen passes later.
+
+🔵 **And the same correction applies to this pass's own ceiling.** `p518` could resolve a
+`NOASSERTION` by reading the served licence file. `p519` cannot: `get_file_contents` is scoped to
+this session's own repositories. 🟢 So `p519` is **strictly weaker than `p518` on the licence
+axis** and says so, rather than carrying `p518`'s shelvings forward as if it had re-earned them.
+**Two rows are left UNGRADEABLE and shelved nowhere** (`cn-math-taxonomy`, `canyongbs/advisingapp`)
+where a pass with a raw-file channel would have settled both.
+
+### 🟢 `T519-6` — New education agent supply is arriving LOCAL-FIRST, and that matches where the regulation is going
+
+🟢 **Four of the six permissive agents added today are local-first or self-hostable by design** —
+[`nichochar/ari`](https://github.com/nichochar/ari) (local-first, created `2026-10-18`),
+[`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) (local-first, uses the school's own
+curriculum), [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) (self-hostable FastAPI + React),
+[`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) (runs as a single file).
+
+🔵 **Why this is a trend and not a coincidence.** Every binding instrument on
+[`market.md`](market.md) pushes the same way: NYC bars AI from grading and discipline, California
+**AB 1159** would bar training on student data, Quebec's new posture is governed use under
+published guidelines, Vietnam names **behavioural monitoring**. 🟢 **An architecture where learner
+data never leaves the institution satisfies all four without a per-jurisdiction variant** — and the
+supply to build it is now permissive and on the shelf.
+
+### 🟢 `T519-7` — The buy-side criterion has shifted from capability to evidence, on three independent issuers
+
+🔵 Three readings, three different kinds of organisation, one direction:
+
+- **HolonIQ** (2026 snapshot): selective acceleration, with buyers wanting **proof that products
+  improve learning** — quality, persistence, well-being or job-relevant skills.
+- **1EdTech**: the sector is moving **from experimentation to governance** — formal strategies
+  setting oversight, compliance and evaluation; and **digital credentials** becoming a core
+  mechanism for skills-based learning and hiring.
+- **OECD Digital Education Outlook 2026**: institutions should move **beyond general-purpose AI
+  tools toward purpose-built educational AI**.
+
+🟢 **The commercial reading, and it is the sharpest thing on this page for a studio.** The
+differentiator is no longer a better tutor. It is (a) **an evaluation story** a buyer can put in
+front of a board, and (b) **governance and conformance tooling**. 🔵 LATAM quantifies the second:
+**87% adoption against 26% formal strategy** (UNESCO IESALC, 200 institutions / 19 countries) — a
+**61-point** deficit that is a consulting engagement, not a product gap. 🟢 And the
+credentials rung now has permissive supply: [`iblai/lms`](https://github.com/iblai/lms) (**MIT**,
+competency tracking + digital credentials).
+
 ## 🆕 `p518` — `2026-10-29` — **🟢 THE TREND THIS PASS MEASURES IS A LICENCE TREND, NOT A CAPABILITY ONE: the three highest-star "open" education repos found this window that a studio CANNOT ship are blocked by three DIFFERENT mechanisms — a bespoke non-OSI licence, a non-commercial CC grant, and a prose-only AGPL. 🟢 Second: new education-agent supply has gone NON-NORTH-AMERICAN, with every 2026-created agent on these shelves 🇨🇳, 🇧🇷 or 🇮🇹. 🔴 Third: the 2026 market figure is quotable again and the retraction that killed it was itself an error of units.**
 
 ### 🟢 `T518-1` — "Source-available" is displacing "open source" in high-star edtech, and the sidebar hides it

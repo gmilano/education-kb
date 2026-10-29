@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p519` — `2026-10-29` — **🟢 THIS SHELF GAINS THE TIER IT HAS BEEN MISSING ALL ALONG — THE INTEROPERABILITY LAYER, AND IT IS PERMISSIVE ON BOTH RUNGS: `tsugiproject/tsugi` (**Apache-2.0**, LTI / Common Cartridge, pushed TODAY) and `jcputney/scorm-again` (**MIT**, SCORM 1.2 + 2004 runtime). 🟢 That pair is what makes a permissive agent shippable INTO an AGPL or GPL LMS without the agent inheriting the copyleft. 🔴 And `cn-math-taxonomy`, shelved here by `p518`, is DEMOTED to `UNREADABLE`: its grant is `NOASSERTION` and this session cannot read a served byte.**
+
+🔵 **What belongs here.** A foundation is something a studio builds *on* — a platform, a
+curriculum corpus, a runtime, or a provenance index. Agents compose; foundations carry. Every row
+below was read `2026-10-29` through the search API with a single-licence assertion
+([`liveness-fields.2026-10-29-p519.tsv`](../evidence/liveness-fields.2026-10-29-p519.tsv)).
+
+### 🟢 The new tier: interoperability, and why it is the highest-leverage row on this shelf
+
+🔴 **The problem it solves, stated as a licence problem rather than a feature one.** Every
+deployed LMS of record on [`../verticals/solutions.md`](../verticals/solutions.md) is copyleft:
+Open edX **AGPL-3.0**, Moodle **GPL-3.0**, `frappe/education` **GPL-3.0**, `openeducat_erp`
+**LGPL-3.0**. Every strong tutoring agent on [`../agents/top.md`](../agents/top.md) is permissive.
+🔵 A studio that wires the two together **in-process** has to reason about whether the combined
+work is a derivative. A studio that ships the agent's output as a **standard package** the LMS
+merely *plays* does not: the boundary is a file format, and a file format is not linkage.
+
+| Repo | Licence (asserted today) | ★ / forks | `pushed_at` | What it carries |
+|---|---|---|---|---|
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | **Apache-2.0** | **377** / 267 | **`2026-10-29`** | IMS **LTI** tool framework + **Common Cartridge**, PHP. 🟢 Pushed *the day of this read*, and alive since `2013-11-28` — **thirteen years** of maintained standards plumbing. The 267 forks are the signal: this is what people build tools *with* |
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | **MIT** | **361** / 85 | `2026-10-28` | Modern **SCORM 1.2 / SCORM 2004** JavaScript runtime, TypeScript, **offline-first**. 🟢 The receiving end for `p518`'s [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) (MIT), which **emits SCORM** — so content agent and player are now BOTH permissive and BOTH on these shelves |
+
+🟢 **The consequence is a recipe, not an observation:** `P528` in
+[`../compose/patterns.md`](../compose/patterns.md) wires exactly this — permissive agent → SCORM
+package → copyleft LMS — with the copyleft left untouched on the far side of a package boundary.
+
+### 🟢 Two more permissive foundations verified today
+
+| Repo | Licence (asserted today) | ★ / forks | `pushed_at` | What it carries |
+|---|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | **1,163** / **1,012** | `2026-10-28` | The offline-first learning platform for universal education. 🟢 Re-asserted rather than carried: **MIT confirmed today**. 1,012 forks is the highest fork count on this shelf, and it is the runtime `P526`'s offline deployment is built on |
+| [`iblai/lms`](https://github.com/iblai/lms) | **MIT** | **208** / 16 | `2026-10-28` | **Skills-intelligence** layer: course discovery, **competency tracking**, digital credentials, workforce development. Next.js 15 / React 19. 🟢 The credentialing-and-competency rung this shelf had only in copyleft form — and `1EdTech`'s 2026 reading makes digital credentials a core mechanism (see [`../intel/trends.md`](../intel/trends.md)) |
+
+### 🔴 The demotion — `cn-math-taxonomy` is not a foundation this base may stand on yet
+
+🔴 **[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy)** —
+**4,925★ / 1,262 forks**, created `2026-10-18`, pushed `2026-10-28`, **APAC** (aligned to the PRC
+national curriculum, 课标). On substance it is the richest curriculum corpus this base has found:
+**1,644 knowledge points, 2,403 prerequisite edges, 6,723 problems**, plus an adaptive
+prerequisite diagnostic. 🔴 **Its grant is `NOASSERTION`** — GitHub's classifier read a file it
+could not match to a known template.
+
+🔴 **`p518` shelved it here anyway.** `p519` demotes it to **`UNREADABLE`** and that is a
+*downgrade in confidence, not a finding against the repo*: the licence may well be permissive. The
+point is that **this session has no channel that can tell** — `get_file_contents` is scoped to this
+session's repos, `curl` to `github.com` is 403, and `WebFetch` will not resolve a non-allowlisted
+host. 🟢 A successor with any raw-file channel closes this in one read; the ask is registered as
+`Gap 520-B`.
+
+🔵 **The rule this makes explicit, because it bit twice today:** a star count is not a grant, and a
+*prior pass's shelving* is not a grant either. `NOASSERTION` carried forward silently is how a
+`$0` licence memo becomes a client's problem.
+
 ## 🆕 `p518` — `2026-10-29` — **🟢 THIS SHELF GAINS ITS LARGEST ROW AND ITS CLEANEST LATAM ROW IN THE SAME PASS: `freeCodeCamp` — **BSD-3-Clause**, **458,132★** — and 🇧🇷 `Universidade-Livre/ciencia-da-computacao` — **MIT**, **20,985★**. 🔴 And it loses a row it never actually had: `openedx/edx-platform` is a RENAMED repo, invisible to the search API under the slug this base carried.**
 
 🔵 **What belongs here.** A foundation is something a studio builds *on* — a platform, a

@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p519` — `2026-10-29` — new agent signals this window
+
+🔵 **Append-only.** This section is added above `p518`'s; nothing below is rewritten. Every row was
+licence-asserted today against the GitHub search API, with two negative controls refused
+([`../evidence/liveness-fields.2026-10-29-p519.tsv`](../evidence/liveness-fields.2026-10-29-p519.tsv)).
+
+### 🟢 Newest supply — created within the last six weeks
+
+| Repo | Licence | ★ / forks | created | `pushed_at` | Signal |
+|---|---|---|---|---|---|
+| [`nichochar/ari`](https://github.com/nichochar/ari) | **MIT** | 211 / 18 | **`2026-10-18`** | `2026-10-28` | 🟢 **Eleven days old and already 211★.** *"learn stuff with pen + paper + AI"* — **local-first**, TypeScript. The newest education agent on any shelf in this base |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | **MIT** | 1,001 / 138 | `2026-10-03` | `2026-10-29` | 🟢 Carried from `p518` and re-read today: **1,001★ at four weeks**, and it **emits SCORM** — which is why `P528` could be written at all |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 **`NOASSERTION`** | **4,925** / **1,262** | **`2026-10-18`** | `2026-10-28` | 🔴 **The largest star velocity in this sector right now — ~4.9k★ in eleven days** — and **ungradeable**. PRC-curriculum knowledge graph: 1,644 knowledge points, 2,403 prerequisite edges, 6,723 problems, adaptive prerequisite diagnostic. **APAC** |
+
+### 🟢 Permissive agents entering this base's shelves for the first time
+
+| Repo | Licence | ★ / forks | `pushed_at` | Why it is a signal rather than just a row |
+|---|---|---|---|---|
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **Apache-2.0** | 462 / 70 | `2026-07-23` | Output is a **durable teacher skill with its sources attached**, not a chat session. The provenance is the product |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **MIT** | 299 / 62 | `2026-10-02` | DSA/interview coach that **withholds solutions** by design — progressive hints, pattern drills, mock interviews. Relevant to bootcamp and reskilling engagements |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | **MIT** | 293 / 43 | `2026-10-20` | **Bloom's 2-sigma** framing, Socratic, **🟢 APAC** (Chinese-first). Ships as a skill *and* a self-hostable app — the dual shape that is becoming standard |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | **MIT** | 210 / 17 | `2026-10-12` | **🟢 APAC.** PRC civil-service exam coach across seven exam components. 🔵 **High-stakes public-sector exam prep is a vertical this base had not seen open-sourced** |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | **MIT** | 63 / 15 | `2026-09-19` | **Local-first K-12 teacher assistant** producing *editable* artefacts from the school's own curriculum. 🟢 Low stars, high architectural fit — it is the backbone of `P529` |
+
+### 🔴 Retractions and non-findings this window
+
+- 🔴 **[`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) is ARCHIVED** — Apache-2.0,
+  **582★**, last push `2024-04-21`, but `updated_at` `2026-10-12`. 🔵 This is the second
+  consecutive pass to retract a high-star "live" row for liveness rather than licence, and the
+  reason is now instrumented: **`updated_at` is not a maintenance signal**
+  ([`../compose/code/p519-liveness-fields/`](../compose/code/p519-liveness-fields/), 21/21
+  controls green).
+- 🔴 **[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp)** — 340★ / 76 forks,
+  pushed `2026-10-28`, **`NOASSERTION`**. The only maintained advising / student-success CRM at
+  scale found on two legs, and its grant cannot be read from this session. `Gap 513-F`'s
+  disposition is in [`../intel/open-gaps.md`](../intel/open-gaps.md).
+- 🔴 **[`sitor-ai/frametell`](https://github.com/sitor-ai/frametell)** — 431★, created
+  `2026-10-10`, pushed `2026-10-29`: an AI-director explainer-video agent with real momentum, but
+  **AGPL-3.0**. Named here so a successor does not rediscover it as a candidate: it is live and
+  interesting and **not shippable in a closed client derivative**.
+- 🟡 **[`artcc/freelingo`](https://github.com/artcc/freelingo)** — 212★, **AGPL-3.0**, self-hosted
+  AI language learning with CEFR study plans and local or cloud LLMs. Same disposition: copyleft,
+  recorded, not shelved as permissive supply.
+- 🔴 **DECLARED NON-FINDING.** A targeted leg for *education agents created since 2026-09-15 with
+  >100★* returned **zero** results through the search API (`total_count: 0`), while a
+  topic-based leg over the same window returned supply. 🔵 So the nil is an **index-shape**
+  artefact, not an absence — the same class as `Gap 510`'s language legs. A date-bounded
+  supply question must be asked topic-first on this channel.
+
 ## 🆕 `p518` — `2026-10-29`
 
 🟢 **Four genuinely new education agents this window, three of them under four weeks old, and

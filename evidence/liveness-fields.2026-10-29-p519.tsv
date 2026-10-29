@@ -1,0 +1,18 @@
+slug	spdx_served	spdx_asserted	assertion	stars	forks	created	pushed	updated	default_branch	archived	liveness	updated_at_would_lie	region	region_basis
+JuneYaooo/lineage-skill	Apache-2.0	Apache-2.0	ASSERT_OK	462	70	2026-06-01	2026-07-23	2026-10-27	main	no	LIVE	no	UNSTATED	no evidence in payload
+KeWang0622/kaogong-skill	MIT	MIT	ASSERT_OK	210	17	2026-04-06	2026-10-12	2026-10-28	main	no	LIVE	no	APAC	PRC civil-service exam (公务员/事业单位) scope
+Li-Evan/Bloom	MIT	MIT	ASSERT_OK	293	43	2026-03-10	2026-10-20	2026-10-28	main	no	LIVE	no	APAC	description is Chinese-first (中文优先 苏格拉底式 AI 家教)
+SirhanMacx/Claw-ED	MIT	MIT	ASSERT_OK	63	15	2026-03-23	2026-09-19	2026-10-23	main	no	LIVE	no	UNSTATED	no evidence in payload
+academico-sis/academico	MIT	MIT	ASSERT_OK	409	150	2018-12-16	2026-10-28	2026-10-28	main	no	LIVE	no	UNSTATED	no evidence in payload
+beltromatti/get-it	Apache-2.0	Apache-2.0	ASSERT_OK	1138	138	2026-05-09	2026-06-29	2026-10-28	main	no	LIVE	no	EMEA	built at GDG AI Hack Milan 2026
+canyongbs/advisingapp	NOASSERTION	-	NO_ASSERTION_POSSIBLE	340	76	2023-02-18	2026-10-28	2026-10-28	main	no	LIVE	no	UNSTATED	no evidence in payload
+chamilo/chamilo-lms	GPL-3.0	MIT	ASSERT_REFUSED	1019	565	2013-03-29	2026-10-29	2026-10-29	master	no	LIVE	no	UNSTATED	no evidence in payload
+iblai/lms	MIT	MIT	ASSERT_OK	208	16	2026-03-04	2026-10-28	2026-10-28	main	no	LIVE	no	UNSTATED	no evidence in payload
+jcputney/scorm-again	MIT	MIT	ASSERT_OK	361	85	2019-11-10	2026-10-28	2026-10-29	master	no	LIVE	no	UNSTATED	no evidence in payload
+karanb192/algo-sensei	MIT	MIT	ASSERT_OK	299	62	2025-10-21	2026-10-02	2026-10-28	main	no	LIVE	no	UNSTATED	no evidence in payload
+learningequality/kolibri	MIT	MIT	ASSERT_OK	1163	1012	2016-01-19	2026-10-28	2026-10-29	develop	no	LIVE	no	UNSTATED	no evidence in payload
+menthorlabs/menthor	Apache-2.0	Apache-2.0	ASSERT_OK	582	35	2023-04-16	2024-04-21	2026-10-12	main	yes	ARCHIVED	YES	UNRESOLVED-pt	Portuguese description does not separate BR from PT
+nichochar/ari	MIT	MIT	ASSERT_OK	211	18	2026-10-18	2026-10-28	2026-10-28	main	no	LIVE	no	UNSTATED	no evidence in payload
+tsugiproject/tsugi	Apache-2.0	Apache-2.0	ASSERT_OK	377	267	2013-11-28	2026-10-29	2026-10-29	master	no	LIVE	no	UNSTATED	no evidence in payload
+xiaoyang111222/cn-math-taxonomy	NOASSERTION	-	NO_ASSERTION_POSSIBLE	4925	1262	2026-10-18	2026-10-28	2026-10-29	main	no	LIVE	no	APAC	aligned to the PRC national curriculum (课标)
+academico-sis/academico (neg-control)	MIT	Apache-2.0	ASSERT_REFUSED	409	150	2018-12-16	2026-10-28	2026-10-28	main	no	-	-	-	negative control, not a shelf row

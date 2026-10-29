@@ -1,9 +1,104 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-28
+updated: 2026-10-29
 ---
 
+## 🆕 `p519` — `2026-10-29` — **🟢 THE GATE RAN — ONCE. After eighteen denials in nineteen passes, `make hooks` EXECUTED and graded itself: **44 of 63 gates green**, all nineteen RED gates named below. 🔴 Then a SECOND gate invocation minutes later, in the SAME session, was DENIED with the same `Code from External` message — so the denial is NON-DETERMINISTIC, prior passes' "eighteen denials" is not a property of the sandbox, and this pass could NOT re-run a gate to attribute a RED to its own edits. 🔴 44/63 is also one BELOW `p511`'s attested 45/63. 🟢 `Gap 504` CLOSES WITH CONTENT after four passes. 🔴 `Gap 517` closes as a RETRACTION, not a refresh. 🔴 `Gap 513-D`/`483-K` are RE-FRAMED: fifteen passes blamed EUR-Lex for the sandbox's allowlist.**
+
+### 🟢 Gate posture, stated first — and it is the most load-bearing result in this pass
+
+🟢 **`make hooks` was NOT denied.** It ran to completion. Prior passes recorded *"`Code from
+External`"* denials **eighteen times in nineteen passes** and wrote "nothing in this pass is
+gate-attested" each time.
+
+| | prior record | `p519` |
+|---|---|---|
+| `make hooks` | 🔴 DENIED, 18 of 19 passes | 🟢 **RAN** (first invocation) |
+| a SECOND, narrower gate invocation in the SAME session | — | 🔴 **DENIED — `Code from External`** |
+| gates green | 45/63 (`p511`, last attested) | 🔴 **44/63** |
+
+🔴 **And this is the finding that supersedes "the gate ran".** A second invocation —
+`make gate-tables gate-dates gate-register-currency gate-shelf-consistency`, in the **same session,
+minutes later** — was **DENIED** with the same `Code from External` classifier message that
+eighteen prior passes recorded. 🔴 **So the denial is NOT deterministic within a single session.**
+That cuts both ways and both halves matter:
+
+- 🔴 Prior passes' *"eighteen denials in nineteen passes"* **cannot** be read as a stable property
+  of the sandbox. It is a classifier decision that varies per invocation.
+- 🔴 And `p519` **cannot re-run a single gate to attribute a RED** to its own edits or to the
+  backlog. The 44/63 is a one-shot reading that this pass could not reproduce on demand.
+
+🔵 **What was in the working tree when the gate ran, stated exactly, because it bounds what the
+44/63 means.** All eight shelf files already carried their `p519` sections; **this register did
+not**. 🟢 So `gate-register-currency`'s RED is **explained and since repaired** — `P418` requires
+the register's newest section to match the shelves', and this section is it. 🔴 **`gate-tables` and
+`gate-dates` are NOT attributable**: they may be `p519`'s or may predate it, and no re-run was
+permitted. 🟢 **Independently checked instead, in this session's own code**: all nine `p519`
+sections pass a column-count-consistency check over **26 table blocks**, an ISO-date and
+no-future-date check, and a frontmatter check (`industry`, `updated: 2026-10-29`, `region` in the
+closed five-value vocabulary) — **0 findings**. That is 9 files checked by a substitute
+instrument, not a gate attestation, and the difference is stated rather than blurred.
+
+🔴 **The nineteen RED gates, named in full so none is hidden:** `gate-offline`, `recount`,
+`gate-enumeration`, `gate-tables`, `gate-dates`, `gate-evidence-store`,
+`gate-shelf-consistency`, `gate-register-currency`, `gate-fold-identity`, `gate-author-key`,
+`gate-census-currency`, `gate-grant-path`, `gate-census-union`, `gate-i2-sweep-crosscheck`,
+`gate-union-currency`, `gate-action-answered`, `gate-promotion`, `gate-promotion-ledger`,
+`gate-cell-reproduction`.
+
+🟢 **`p300`'s runner behaved correctly:** *"every gate ran, none masked"* — a failing gate no longer
+hides its siblings. 🔵 Two RED gates were read in detail:
+
+- `gate-promotion-ledger` — **57 findings**, all of the form *"recorded `RESTORED-p436` and is on NO
+  live shelf"* (14 shown in the captured tail: `datakind/student-success-tool`,
+  `Teci-AI/moodle-mcp-connector`, `marcosroriz/sete`, `a-ariff/canvas-mcp` …). 🔴 This is a
+  **`p436` backlog**, ~83 passes old, not a `p519` regression.
+- `gate-cell-reproduction` — *"zero published cells parsed — a parse fault, not a clean shelf"*.
+  🔴 Its own 29 controls **PASS**, so the instrument is sound and its *input* is not: a parse
+  fault, correctly refusing to report a false green.
+
+🔴 **Declared honestly:** this pass's capture pipeline piped `make hooks` through `tail`, so the
+**early gates' output was consumed and only the final ~3.7 KB survives**. The 44/63 summary line
+and the nineteen names are read first-hand; the per-gate detail for the other seventeen RED gates
+is **not**. That is a self-inflicted instrument fault and it is registered as `Gap 520-F`.
+
+🟢 **The standing lesson this confirms, and it is `Gap 511`'s exactly:** a refusal is a property of
+the **sandbox**, not of the repository. Three sandboxes refused `make`; this one does not. No pass
+may generalise its own sandbox's limits into a claim about what this base can measure.
+
+### 🟢 Closed, or closed with content — `p519`
+
+| gap | disposition |
+|---|---|
+| 🟢 **`Gap 504`** (APAC K-12 adoption, **UNTOUCHED for four passes**) | 🟢 **CLOSES WITH CONTENT, on the channel the gap itself named.** The gap said *"OECD TALIS or a ministry release … proven and merely unpointed"*. Pointed: **TALIS 2024** via the **OECD Digital Education Outlook 2026** — 🇸🇬 **~75%** / 🇦🇪 **~75%** / OECD avg **36%** / 🇯🇵 **<20%** / 🇫🇷 **<20%**; AI-specific PD **76%** Singapore vs **38%** OECD; **3 in 4** teachers lack the skills to teach with AI. 🟢 **And the closure produced a better finding than the figure**: the spread INSIDE APAC is ~**4×**, so a single regional adoption cell is an artefact of sampling (`T519-3`). 🔴 **Four declared caveats**: lower-secondary only (not full K-12); 2024 fieldwork; **no Korea rate found** (a secondary `$740M` training figure is NOT asserted); and `www.oecd.org` is unreachable from this session, so the DEO was **not read first-hand** |
+| 🔴 **`Gap 517`** (Quebec suspension, ten months stale) | 🔴 **CLOSES AS A RETRACTION.** The suspension was **LIFTED in late 2025** — MCN *lignes directrices* replaced the 13 March 2025 order after a risk exercise with **14 public bodies**. This base carried it as in force for ~10 months, and **`Pattern 32` is built on the withdrawn premise**. 🟢 Acted on, not just recorded: `P529` is the replacement recipe. 🔴 The guidelines' own **text and exact date are NOT asserted** → `Gap 520-A` |
+| 🟡 **`Gap 513-F`** (no permissive student-success / advising CRM) | 🔴 **RE-SCOPED, and the new scope is sharper.** The premise was *"only Elastic-2.0 exists"*. Two targeted legs (765 `total_count` on the advising query) return exactly **one** maintained candidate at scale: [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp), **340★ / 76 forks, pushed `2026-10-28`** — and its grant is **`NOASSERTION`**, so it is **neither** permissive **nor** confirmed Elastic-2.0. 🔴 The gap is no longer *"none exists"*; it is **"the one candidate's grant is unreadable from this session"** → folded into `Gap 520-B`. 🔵 Everything else the legs returned was a student coursework repo (≤4★) |
+| 🟢 **`P383`** (one bare `## Opportunities by region`) | 🔴 **REGRESSED AGAIN and REPAIRED.** Derived, not asserted: **3** bare headings found, **1** kept (this pass's), **2** suffixed to their owning section (`p518`, `p511`) by scanning backwards for the nearest pass marker — never renumbered, never guessed. 🟢 Now **exactly 1** bare heading carrying **exactly** `North America`, `EMEA`, `APAC`, `LATAM`, `Global`. 🔴 This is the **third** recorded regression of this contract (`p508`, `p511`/`p514`, `p519`): a prepend-only file with a fixed-position contract will keep breaking it, which is a design problem rather than a discipline problem → `Gap 520-E` |
+| 🟡 **`Gap 513-E`** (no count except as a derived value) | 🟢 **STANDING, HONOURED.** Every count in `p519` — 16 graded rows, 13 `ASSERT_OK`, 13/13 agreement, 2 negative controls refused, 2 ungradeable, 12 permissive-and-live, 1 archived, 0 stale, 1 lying `updated_at`, 12/17 region-unstated — is emitted by [`emit_evidence.py`](../compose/code/p519-liveness-fields/emit_evidence.py) from **one** saved API payload into [`liveness-fields.2026-10-29-p519.tsv`](../evidence/liveness-fields.2026-10-29-p519.tsv). No figure in this pass's prose was typed by hand |
+| 🟡 **`Gap 519`** (which Grand View series?) | 🟡 **RE-CONFIRMED as a live hazard, not closed.** The global leg again surfaced a TIER-4 attribution of **$23B (2026)** to Grand View. 🟢 `p518`'s range (**$9.58B–$11.4B**) stands and `p519` publishes **no new headline**, because nothing it found narrows the spread |
+
+### 🔴 Unmoved, and said so
+
+| gap | disposition |
+|---|---|
+| 🔴 **`Gap 513-D`** · **`Gap 483-K`** (EUR-Lex unread, filed 15+ passes) | 🔴 **NOT CLOSED, and RE-FRAMED — the framing was the error.** `WebFetch` was pointed at **three** unrelated publishers: `eur-lex.europa.eu`, `www.oecd.org`, `collimateur.uqam.ca` — **all three `ENOTFOUND`**, with the error text naming the cause: **the host is outside this session's allowlist**. 🔴 EUR-Lex is not unreachable; non-allowlisted hosts are. Fifteen passes attributed to a publisher what belongs to the sandbox — **`Gap 511`'s class on a new axis**. 🟢 The ask is now precise and smaller: read **Regulation (EU) 2026/1744** (OJ, **24 July 2026**) — a regulation *number* the gap never had before |
+| 🔴 **`Gap 513-C`** (shelf rows carrying no region) | 🔴 **UNMOVED — but QUANTIFIED for the first time, on this pass's own rows.** **12 of 17** TSV rows are `UNSTATED` or `UNRESOLVED-pt`. 🟢 `p519` added **no guessed region**: three rows are placed **APAC** on stated evidence (Chinese-first description; PRC civil-service scope; PRC curriculum alignment), one **EMEA** (GDG AI Hack Milan), and `menthorlabs/menthor` is `UNRESOLVED-pt` **because Portuguese does not separate 🇧🇷 from 🇵🇹** — a verdict with its basis recorded, which a successor can overturn in one read |
+| 🔴 **`Gap 518`** (Mexico SEP participation base conflicted) | 🔴 **NOT ATTACKED.** No Mexico leg ran this pass. Stated rather than left to look addressed |
+| 🔴 **`Gap 516`** (Mexico under both `North America` and `LATAM`) | 🔴 **NOT ATTACKED.** 🟢 `p519` placed **no** country twice: its North America cell names Quebec/US jurisdictions and its LATAM cell names BR/CL/CO/CR/UY, so the pass **did not widen** the defect |
+| 🔴 **`Gap 515`** (a claim in PROSE is unswept — `make sweep` reads a hand-registered table) | 🔴 **NOT ATTACKED.** 🔵 And `p519`'s headline claims are prose, so they are unswept too |
+| 🔴 **`Gap 514`**, **`Gap 513`**, **`Gap 505`** (classifier-level grant defects) | 🔴 **NOT ATTACKED and NOT ATTACKABLE this pass** — all three require reading a served licence payload, and no channel in this session can read one |
+
+### 🔴 Registered by `p519`
+
+| gap | what it is |
+|---|---|
+| **`Gap 520-A`** | 🔴 **Quebec's MCN *lignes directrices* have NOT been read, and `Pattern 32` still carries the withdrawn premise.** The lifting is carried on **two index-level outlets**; `cyber.gouv.qc.ca` and `collimateur.uqam.ca` are unreachable here, so the guidelines' **text and exact date are unasserted** and this base records only *"late 2025"*. 🔴 Two actions, not one: **read the guidelines**, and **rewrite `Pattern 32`** — `P529` replaces its architecture but does not retract its text |
+| **`Gap 520-B`** | 🔴 **`NOASSERTION` is now the single largest blocker on these shelves, and this session has NO channel that can clear it.** `get_file_contents` is scoped to session repos; `curl`→`github.com` is 403; `WebFetch` will not resolve a non-allowlisted host. 🔴 Blocked rows include the sector's **highest-velocity asset** — [`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy), **4,925★ / 1,262 forks in eleven days** — plus `canyongbs/advisingapp`, `CaviraOSS/PageLM` (2,050★), `GarethManning/education-agent-skills` (922★), `pupilfirst`, `OpenOLAT`, `Claroline`. 🟢 **Closes with ONE raw-file read per slug** on any channel that can fetch a blob |
+| **`Gap 520-C`** | 🔴 **Vietnam's AI Law commencement is conflicted.** One account: high-risk compliance **1 March 2027**, +6 months for education systems live before **15 August 2026**. Another: the law in force **March 2026**. 🟢 The **sectoral naming** (education high-risk, mechanisms: *automated assessment*, *behavioural monitoring*) is carried by both; the clock is not assertable. Needs the statute or an official gazette |
+| **`Gap 520-D`** | 🔴 **Africa returned nothing substantive for a SECOND consecutive pass** — no national adoption figure, no binding education-AI instrument, no named regional player, on a regional leg that ran. Combined with `p518`'s refutation of an "Africa open-source-in-schools mandate", the honest position is: **"EMEA" on these shelves means Europe plus the Gulf.** Any EMEA cell read as continental is wrong |
+| **`Gap 520-E`** | 🔴 **The `P383` region-heading contract has now regressed three times** (`p508`, `p511`/`p514`, `p519`). A fixed-position contract inside a **prepend-only** file is structurally fragile: every pass that prepends a section must remember to demote the previous bare heading. 🟢 **Named closure:** make the gate *repair* it rather than only detect it, or move the canonical region block out of the prepend stream into its own file |
+| **`Gap 520-F`** | 🔴 **This pass piped `make hooks` through `tail` and destroyed the evidence it had finally earned.** After eighteen denials the gate ran, and only the final ~3.7 KB was retained — so **17 of 19 RED gates have no first-hand detail**. 🟢 **Closure is trivial and should be standing: `make hooks > <log> 2>&1` then read the file**, never a pipe into `tail`. The `Makefile` already models this with `GATE_LOG`/`CLAIMS_LOG` |
 
 ## 🆕 `p514` — **🔴 THIS REGISTER WAS STALE BY A PASS AGAIN — `Gap 513-A`…`513-F` were written onto the SHELVES and never reached here, so `P418` regressed exactly as it did at `p511`. Repaired below. 🟢 `Gap 512-D` (`T42`) CLOSES WITH CONTENT on 1,840 probes. 🔴 And the pass's headline is a class this register never had: a PUBLISHED REFUTATION decayed, undetected, for ~24 passes. 🔴 `make hooks` DENIED — eighteenth denial in nineteen passes.**
 

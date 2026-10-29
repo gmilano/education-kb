@@ -4,6 +4,234 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p519` — `2026-10-29` — **🔴 THE CANADIAN LEG PRODUCES A RETRACTION, NOT A REFRESH: Quebec's suspension of generative-AI assistants — the strictest fact on this base's North America leg, and the constraint `Pattern 32` is built around — WAS LIFTED IN LATE 2025. This base has carried it as in force for roughly ten months. 🟢 `Gap 504` CLOSES WITH CONTENT after four passes: APAC K-12 teacher adoption is measured, and the spread INSIDE the region is ~4× (Singapore ~75% vs Japan <20%), so "APAC" as a single adoption cell is not usable. 🟢 LATAM gets its strongest evidenced figure set yet, from a TIER-1 multilateral. 🔴 A new APAC regulatory clock lands: Vietnam names education a HIGH-RISK sector by statute.**
+
+🔵 **Channel posture, stated before any figure.** Every regional leg below ran through the search
+index. 🔴 **No primary source on this page could be read first-hand**: `WebFetch` returned
+`ENOTFOUND` for `eur-lex.europa.eu`, `www.oecd.org` *and* `collimateur.uqam.ca` — three different
+publishers, one cause, and the cause is **this session's host allowlist**, not the publishers. So
+every figure here is an **index-level** read and is marked with the tier of the issuer it is
+attributed to. 🟢 This also **re-frames `Gap 483-K` / `Gap 513-D`**, which have been filed for
+fifteen-plus passes as *"EUR-Lex itself was not read"*: see `T519-5` in
+[`trends.md`](trends.md).
+
+### 🔴 The retraction, stated first and in full
+
+🔴 **What this base has been carrying.** `Gap 517` registered that Quebec's suspension of AI
+assistants *"was last confirmed in force in DECEMBER 2025 … Ten months stale"*, and asked for a
+cheap recurring check. The check ran. **The answer is not "still in force".**
+
+| | this base's record | read `2026-10-29` |
+|---|---|---|
+| Instrument | Ministère de la Cybersécurité et du Numérique (MCN) ministerial order, **13 March 2025**, halting integration and experimentation with generative-AI assistants across public bodies — schools included | 🟢 **Confirmed as the origin.** Not disputed |
+| Status | 🔴 **in force** | 🔴 **LIFTED in late 2025.** New MCN *lignes directrices* replaced the suspension after a risk-assessment exercise run with **14 public bodies** |
+| What replaced it | — | Guidelines that govern rather than prohibit; and separately an **updated digital-competency framework, 21 April 2026**, which integrates **AI literacy** into existing competencies rather than creating a dedicated AI course, plus a teacher guide on pedagogical and ethical use of generative AI |
+
+🔴 **Why this is a retraction and not an update.** `Pattern 32` and this base's North America
+posture treat Quebec as the *prohibition* case — the jurisdiction a studio designs around. Read
+today, Quebec is a **governed-use** jurisdiction, and the architectural consequence inverts: the
+constraint is no longer "do not deploy an assistant", it is "deploy one that satisfies published
+guidelines". 🔵 A studio that pitched a Quebec board on the strength of this base's record would
+have proposed the wrong architecture.
+
+🟡 **Tier, declared.** Read at index level from a university pedagogical-watch summary (UQAM
+*Collimateur*) and an education-technology outlet (*École branchée*), with the original
+*Le Soleil* report of the March 2025 order as the origin. 🔴 **`cyber.gouv.qc.ca` and
+`collimateur.uqam.ca` could not be opened from this session**, so the guidelines' own text and
+their exact publication date are **not asserted**. The *direction* of the change is carried by two
+independent outlets; the **date is left as "late 2025"** rather than invented. Registered as
+`Gap 520-A`.
+
+### 🟢 `Gap 504` closes with content — APAC K-12, on the channel the gap itself named
+
+🟢 **The gap named its own instrument four passes ago:** *"Named next channel: OECD TALIS or a
+ministry release — TALIS already produced this base's Brazil/Chile figures, so the instrument is
+proven and merely unpointed."* It is now pointed. **TALIS 2024**, surfaced via the **OECD Digital
+Education Outlook 2026**:
+
+| jurisdiction | lower-secondary teachers who used AI in the prior 12 months | source |
+|---|---|---|
+| 🇸🇬 Singapore | **~75%** | TALIS 2024 via OECD DEO 2026 — **TIER-1 issuer** |
+| 🇦🇪 United Arab Emirates | **~75%** | same |
+| **OECD average** | **36%** | same |
+| 🇯🇵 Japan | **<20%** | same |
+| 🇫🇷 France | **<20%** | same |
+
+🟢 **AI-specific professional development:** **76%** of Singapore's teachers against an **OECD
+average of 38%** — and across the OECD, **three in four teachers report lacking the knowledge or
+skills to teach using AI.**
+
+🔴 **The finding that matters is the spread, not the figures.** Singapore and Japan are both APAC
+and sit **~4× apart** on the same instrument in the same survey round. 🔵 So a single "APAC
+adoption" number is an artefact of whichever country a report happened to sample — and this base
+should never again carry one. The regional cell below is written as a *range with its endpoints
+named*.
+
+🟡 **Four caveats, all load-bearing.** (1) TALIS covers **lower-secondary teachers only**, so it is
+not full K-12. (2) Fieldwork is **2024**, not 2026 — in a sector moving this fast that is two years
+stale, and it is the newest comparable instrument that exists. (3) Korea is **not** in the figures
+above; a secondary source cites a **$740M** 2024–26 teacher-AI-training investment, which is
+**not asserted** here — no adoption rate for Korea was found. (4) `www.oecd.org` is unreachable
+from this session, so the DEO PDF was **not** read first-hand. 🟢 The gap moves from *unmeasured*
+to *measured at index level with a TIER-1 issuer named* — a real closure, and a weaker one than a
+first-hand read.
+
+### 🔴 The new APAC regulatory clock
+
+🔴 **Vietnam's AI Law classifies education as a high-risk sector by statute**, naming **automated
+assessment** and **behavioural monitoring** as the examples. Reported compliance date for those
+systems: **1 March 2027**, with an additional **six months** for education systems already running
+before **15 August 2026**. 🔴 **Sources conflict on commencement** — one account has the law taking
+effect March 2026 — so the *existence and sectoral scope* are carried and the **exact timeline is
+not assertable** from this channel. Registered under `Gap 520-C`.
+
+🟢 **South Korea's AI Basic Act entered into force `2026-01-22`**, with regulators signalling a soft
+start — 2026 described as effectively a pilot year with limited enforcement. 🔵 For a studio this
+is the most favourable build window in the region: the obligations exist, so an architecture can be
+designed against them, while enforcement has not yet bitten.
+
+🔵 The rest of the region, at the level the channel supports: **China** has the most extensive
+life-cycle rules; **Singapore** governs through toolkits (**AI Verify**) rather than statute;
+**Japan** and **Taiwan** are drafting; **Australia** is preparing high-risk guardrails.
+
+---
+
+## Opportunities by region
+
+🔵 **How to read these.** Each cell names the instrument that binds, the demand figure with its
+issuer, and the opportunity that follows. Where a region returned nothing on an axis, the cell says
+so — an informed gap is information; silence is indistinguishable from coverage.
+
+### North America
+
+**Posture: largest market by share, most fragmented regulation — and one jurisdiction just moved from prohibition to governed use.**
+
+- 🔴 **Quebec has inverted** (see the retraction above). The opportunity is no longer a compliance
+  workaround; it is **guideline-conformant assistant deployment** for a public sector that spent a
+  year unable to buy. 🟢 First-mover window, and the four local-first agents added to
+  [`../agents/top.md`](../agents/top.md) today are the supply for it.
+- 🟡 **US state law is the binding layer and the count depends on the tracker.** One tracker
+  (MultiState) reports **134 AI-in-education bills across 31 states** in the 2026 session, themed
+  on data privacy, classroom-use limits and curriculum. 🔴 `Gap 508` stands: this base **may not
+  quote a bill count without naming the tracker**, because a second tracker returned *"nearly
+  100"* on different inclusion rules.
+- 🟢 **Named, dated instruments a deliverable can be designed against:** Oklahoma **S.B. 1734**
+  (every district to adopt a written AI policy before the 2027–28 school year); **Ohio** districts
+  had a statutory deadline of **1 July 2026** to adopt an AI-use policy; **New York City**'s
+  **March 2026** guidance uses a traffic-light framework that **bars AI from grading and
+  discipline**; California **AB 1159** would bar using student data to train models; South Carolina
+  **H.B. 5253** would require parental opt-in and bar AI from replacing licensed teachers in core
+  instruction or grading — 🔴 **pending, not enacted**.
+- 🔵 **Federal:** the amended **COPPA Rule** reached its general compliance date **22 April 2026**,
+  which binds child-directed services regardless of state law.
+- 🟡 **Demand:** a Gallup survey cited at index level puts **60% of US teachers** using AI tools,
+  against most public schools still lacking a formal student AI policy. 🟢 **That gap between use
+  and policy is the engagement**: policy-conformance tooling, not another tutor.
+
+### EMEA
+
+**Posture: one statute dominates, its clock just moved, and the Gulf is governing faster than it is deploying.**
+
+- 🟢 **The instrument has a number now.** The **Digital Omnibus on AI** was published in the
+  Official Journal as **Regulation (EU) 2026/1744** on **24 July 2026**, moving stand-alone
+  **Annex III** high-risk obligations to **2 December 2027** (with a further tranche in August
+  2028). 🔴 **A second index source still states the original August 2026 application date**, so
+  the two readings are carried side by side and **neither is asserted as settled**.
+- 🔴 **EUR-Lex was NOT read.** `eur-lex.europa.eu` does not resolve from this session. The
+  regulation number and OJ date above are **index-level**, and `Gap 483-K`'s single ask — read the
+  OJ text — remains open and now has a precise target: **Regulation (EU) 2026/1744**. 🟢 That
+  target is new this pass and is the most useful thing the leg produced.
+- 🔵 **Scope that matters for a deliverable:** AI that **ranks applicants for admission** is
+  high-risk under the Act, because the output directly affects access to education. 🟢 `P525`'s
+  architecture — the consequential decision is **not** the model's — is the answer, and it predates
+  the clock change, so it survives it.
+- 🟢 **Gulf:** governance is moving unusually fast relative to infrastructure. Named bodies: **UAE
+  Ministry of Education** and **KHDA**. 🟢 And the UAE sits at **~75%** teacher AI use on TALIS
+  2024 — tied with Singapore and the joint-highest figure in that round, which makes it the one
+  Gulf jurisdiction with both a governance layer and measured classroom uptake.
+- 🔵 **Institutional readiness:** **~70%** of institutions across Europe and North America have or
+  are developing AI guidance (UNESCO-based figure, cited at index level).
+- 🔴 **DECLARED GAP — Africa returned nothing substantive, for the second pass running.** The
+  regional leg surfaced no national adoption figure, no binding education-AI instrument and no
+  named regional player. 🔴 `p518` separately **refuted** an "Africa open-source-in-schools
+  mandate" — four national strategies read, none requires it. So the position is: **EMEA on these
+  shelves means Europe plus the Gulf.** Any cell read as continental is wrong. Registered as
+  `Gap 520-D`.
+
+### APAC
+
+**Posture: the widest internal spread of any region, and the region where statute now names education explicitly.**
+
+- 🟢 **Adoption, with endpoints named rather than averaged:** **~75% (Singapore) → <20% (Japan)**
+  on TALIS 2024, OECD average **36%**. A ~4× spread inside one region. **Never quote a single APAC
+  adoption number.**
+- 🔴 **Vietnam** names education high-risk by statute (automated assessment, behavioural
+  monitoring); **1 March 2027** reported, **+6 months** for systems live before **15 August 2026**;
+  timeline conflicted across sources.
+- 🟢 **Korea's AI Basic Act in force `2026-01-22`**, soft enforcement through 2026 — the region's
+  best build window.
+- 🟡 **Faculty intent is the lowest of any region** — Digital Education Council, **76% → 67%**,
+  alongside **57%** excitement (carried from this base's earlier reading, 45,398 responses / 35
+  countries).
+- 🟢 **The supply is here too, and it is permissive.** Three of the six agents added today are
+  APAC-origin on stated evidence (`Li-Evan/Bloom`, `KeWang0622/kaogong-skill`, and the
+  curriculum corpus `cn-math-taxonomy` — the last **grant-unreadable**). 🔵 So APAC is now both the
+  hardest region to generalise about **and** the largest source of new permissive education supply.
+- 🔵 **Market-share structure:** APAC is the fastest-growing regional segment at **35.3% CAGR**
+  (carried; single-source).
+
+### LATAM
+
+**Posture: the best-evidenced region on this base, with adoption high and institutional governance the measured bottleneck.**
+
+- 🟢 **TIER-1 multilateral, 2026: UNESCO IESALC**, surveying **200 higher-education institutions
+  across 19 countries** — **87%** using AI in at least one area, **74%** in teaching and learning,
+  and only **26%** with a **formal AI strategy**.
+- 🟢 **And the split by institution type is the commercially useful cut:** private **non-profit**
+  universities **84%** adoption, **public 68%**, private **for-profit 52%**.
+- 🟢 **K-12 is measured here, unlike APAC until today** — TALIS 2024: 🇧🇷 **56%**, 🇨🇱 **55%**,
+  🇨🇴 **53%**, 🇨🇷 **52%**, against an OECD average of **36%**. 🔵 Every one of those four is
+  **above** the OECD average, which is the opposite of the "LATAM lags" prior.
+- 🟢 **🇺🇾 Uruguay: 75%** of public-school teachers report using these tools (Ceibal) — the
+  highest national figure on this shelf outside Singapore and the UAE.
+- 🟡 **Regulatory volume is high and fragmented:** a 2026 Universidad de los Andes study counts
+  **716** AI-related instruments, rules and legislative proposals across **23 countries and
+  territories**, **>80% initiated since 2023**. 🔵 Volume is not governance — the same reading
+  warns that hundreds of overlapping initiatives produce uncertainty.
+- 🔵 **Named national instruments:** 🇧🇷 **PL 2.338/2023** now in the Chamber of Deputies (text can
+  still change); 🇨🇱 government bill in its first constitutional stage (Chamber's Future, Science
+  and Technology Commission); 🇨🇴 **CONPES 4144** national AI policy (adopted February 2025).
+- 🟢 **A regional institution now exists to sell into:** UNESCO's **Observatory on Artificial
+  Intelligence in Education for Latin America and the Caribbean**, launched **14 April 2026** at
+  **ECLAC headquarters, Santiago**.
+- 🟢 **The opportunity, stated as the gap the evidence actually shows:** **87% adoption against 26%
+  formal strategy** is a **61-point governance deficit** at institutional level. That is an
+  AI-governance-and-policy engagement — assessment, policy drafting, conformance tooling — not a
+  tutoring pilot. 🔴 And the supply side has a warning attached: the one LATAM-adjacent permissive
+  platform re-read today, `menthorlabs/menthor`, is **archived**.
+
+### Global
+
+**Posture: the 2026 figure stays a range, and the pressure has moved from capability to evidence.**
+
+- 🔵 **`p518`'s range stands and this pass did not improve on it:** four houses read the same day
+  put 2026 global AI-in-education at **$9.58B–$11.4B**. This pass's global leg returned figures
+  consistent with that spread (*"surged past $12.5B"*, *"$12.3B by 2026"*, *"~$6B in 2024 → ~$32B
+  by 2030"*) and **nothing that narrows it**. 🟢 No new headline is published.
+- 🔴 **`Gap 519` recurs and is confirmed as a live hazard:** *"Grand View says"* is ambiguous on
+  these shelves. A TIER-4 outlet attributes **$23B (2026)** to Grand View Research, ~2× that
+  house's own curve. 🔵 Also still true: **Technavio's "$3.37B" is INCREMENTAL growth, not a
+  market size** — the single most-repeated unit error in this sector.
+- 🟢 **Regional structure (the one point sources agree on):** North America holds the largest share
+  at **~36%**; APAC is fastest-growing at **35.3% CAGR**.
+- 🟢 **The buy-side criterion is shifting, and this is the most actionable global trend:** HolonIQ's
+  2026 snapshot has buyers wanting **proof that products improve learning**; **1EdTech** reads the
+  sector as moving **from experimentation to governance**; the **OECD DEO 2026** recommends
+  institutions move **beyond general-purpose AI tools toward purpose-built educational AI**. 🔵
+  Three independent issuers, one direction: **evidence and fitness-for-purpose, not capability.**
+- 🟡 **Student-side demand is not the constraint:** a Microsoft report cited at index level has
+  **92%** of students using AI for school while training lags far behind.
+
 ## 🆕 `p518` — `2026-10-29` — **🟢 THE MARKET FIGURE IS QUOTABLE AGAIN, AS A RANGE AND WITH ITS SCOPE NAMED: four houses read the same day put 2026 global AI-in-education at **$9.58B–$11.4B**, and the "$3.37B" that circulates is Technavio's INCREMENTAL growth, not a market size. 🟢 ALL FOUR REGIONS PLACED, WITH THE REGULATORY CLOCK THAT ACTUALLY BINDS EACH ONE. 🔴 Africa's open-source-in-schools mandate does not exist — four national strategies read, none requires it.**
 
 ### 🟢 The 2026 global figure, with the spread explained rather than averaged
@@ -50,7 +278,7 @@ measured in three regions and unmeasured in one:
 | **APAC** | Not measured as a single figure | Three different regulatory postures in one region | Compliance is per-jurisdiction, not per-region |
 | **EMEA** | 🔴 **No EMEA-specific adoption figure was found this pass** | EU AI Act is binding and specific | 🔴 Declared gap — see below |
 
-## Opportunities by region
+## Opportunities by region — `p518`
 
 ### North America
 
@@ -1504,7 +1732,7 @@ share at **36%**; **APAC is fastest-growing at 35.3% CAGR**.
 | K-12 teachers using genAI for work | **25% → 53%** in one year | RAND |
 | Institutions planning AI teaching-assistant deployment by end-2026 | **83%** | EDUCAUSE (as cited) |
 
-## Opportunities by region
+## Opportunities by region — `p511`
 
 ### North America
 

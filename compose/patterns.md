@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p519` — `2026-10-29` — **🟢 TWO RECIPES, AND BOTH EXIST BECAUSE OF SOMETHING THAT CHANGED TODAY: `P528` wires a FULLY PERMISSIVE pipeline INTO a copyleft LMS without touching it, across a package boundary — newly buildable because the LTI and SCORM runtimes were verified permissive this pass. `P529` is the Quebec public-sector deployment, newly buildable because the suspension `Pattern 32` was built around turns out to have been LIFTED in late 2025.**
+
+🔵 **Reading note.** Every repo named below was existence- and licence-asserted on `2026-10-29`
+through the GitHub search API, with two negative controls refused
+([`../evidence/liveness-fields.2026-10-29-p519.tsv`](../evidence/liveness-fields.2026-10-29-p519.tsv)),
+or carried from `p518`'s same-day reads. 🔴 **Nothing whose grant reads `NOASSERTION` appears in a
+recipe** — which excludes `cn-math-taxonomy` and `canyongbs/advisingapp` despite both being
+substantively attractive. Where a part is copyleft the recipe says so and puts it across a process
+or package boundary rather than pretending it is permissive.
+
+---
+
+### 🟢 `P528` — Permissive end-to-end, shipped INTO the client's existing copyleft LMS
+
+**The ask it answers.** *"We want a client-owned, closed derivative. Our LMS is Moodle / Open edX
+and we are not migrating off it."* 🔴 Until this pass these shelves had no clean answer: every
+system of record in education is copyleft (**AGPL-3.0** Open edX, **GPL-3.0** Moodle), and an agent
+linked into one invites the derivative-work question.
+
+🟢 **The move: the only thing that crosses into the LMS is a STANDARD PACKAGE.** A file format is
+not linkage. The agent stack stays permissive and entirely outside the copyleft work.
+
+| layer | part | licence | why this one |
+|---|---|---|---|
+| **Source → content** | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | **MIT** | Turns a book into an animated, narrated, interactive experience **and emits SCORM** — the one emitter on these shelves that already speaks the boundary format |
+| **Source → teacher assets** | [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **Apache-2.0** | Distils videos, PDFs and transcripts into **source-backed** teacher skills — so the generated material carries its citations, which is what an evaluation story needs |
+| **Adaptive sequencing** | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | **MIT** | Reads how the learner learns and sets the next lesson; self-hostable (FastAPI + React), so no learner data leaves the institution |
+| **Auditable mastery** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | **Bayesian Knowledge Tracing** — a mastery estimate that is deterministic and inspectable rather than model-generated. 🟢 This is the component that survives a regulator asking *"how was this score produced?"* |
+| **Retention** | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **MIT** | MCP server over Anki: the agent writes into a spaced-repetition schedule the learner already keeps |
+| 🟢 **THE BOUNDARY — runtime** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | **MIT** | SCORM **1.2 + 2004** runtime, offline-first. Plays the package; reports completion and score back through the standard |
+| 🟢 **THE BOUNDARY — tool launch** | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | **Apache-2.0** | **LTI** + Common Cartridge. Use instead of SCORM when the agent must stay a *live* tool the LMS launches rather than a packaged asset. Pushed `2026-10-29`; 267 forks |
+| **System of record (optional)** | [`academico-sis/academico`](https://github.com/academico-sis/academico) | **MIT** | 🟢 Only when the client wants a **permissive SIS too** — the first on these shelves. Scope honestly: small-and-medium institutions, **not** a ministry-scale Moodle replacement |
+| **Delivery where connectivity is poor** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | Offline-first runtime; 1,012 forks. Shares `P526`'s deployment shape |
+
+**Wiring, concretely.**
+
+1. **Ingest** the client's own source material through `lineage-skill` (teacher-facing assets) and
+   `Papermorph` (learner-facing interactive content). Both run in your infrastructure; neither
+   touches the LMS.
+2. **Hold learner state** in `Bloom` + `OATutor`. 🔵 `OATutor` owns the *mastery number*; `Bloom`
+   owns *what to teach next*. Keep them separate — it is what lets you show a deterministic
+   mastery estimate alongside a model-chosen sequence.
+3. **Emit a SCORM package** from `Papermorph`; validate it against `scorm-again` **in CI, before
+   any LMS sees it**. 🔴 The failure mode here is not licensing, it is the SCORM data model: get
+   `cmi.completion_status` and `cmi.score.scaled` wrong and the LMS records nothing. A local
+   `scorm-again` harness makes that a test, not a pilot incident.
+4. **Deliver** either as a SCORM package the existing LMS plays, **or** as an LTI tool launched
+   through `tsugi`. Choose by whether the experience must be *live* (LTI) or *packaged* (SCORM).
+5. **Write retention** through `anki-mcp-server`; write completion back through the SCORM/LTI
+   return channel only.
+
+🔴 **The boundary rules — the whole pattern rests on these.**
+
+- 🔴 **Do not fork, patch or link into Moodle or Open edX.** The moment you ship a modified AGPL/GPL
+  work, the client's obligation to publish attaches. Interact **only** through SCORM or LTI.
+- 🔴 **Do not put `cn-math-taxonomy` in this pipeline**, however well its 1,644 knowledge points and
+  2,403 prerequisite edges would fit `OATutor`'s skill model. Its grant is `NOASSERTION` and
+  unread. 🟢 **The substitution if the client needs a prerequisite graph now:** build it from the
+  client's own curriculum with `lineage-skill`, which produces source-backed output you own.
+- 🟡 **`Papermorph` is four weeks old** (created `2026-10-03`) and `ari` eleven days. Treat
+  freshly-created supply as a dependency you may have to maintain yourself, and say so in the
+  estimate.
+
+**Effort:** 6–8 weeks for a single-subject pilot against an existing LMS; add 3–4 weeks if
+`academico` replaces the SIS. **The deliverable that de-risks it:** a SCORM conformance harness in
+CI from week one.
+
+---
+
+### 🟢 `P529` — The Quebec / governed-use public-sector deployment (replaces `Pattern 32`'s premise)
+
+🔴 **Why this pattern exists, stated as a correction.** `Pattern 32` on these shelves is built
+around Quebec's **13 March 2025** MCN order suspending generative-AI assistants in public bodies.
+Read `2026-10-29`: **that suspension was lifted in late 2025**, replaced by MCN *lignes directrices*
+written after a risk exercise with **14 public bodies**. 🔴 So `Pattern 32`'s premise — *this
+jurisdiction cannot buy* — is withdrawn. The jurisdiction can buy, **under published guidelines**.
+
+🟡 **Tier, declared before anything is built on it:** index-level reads (UQAM *Collimateur*, *École
+branchée*), with the March 2025 order's origin in *Le Soleil*. 🔴 `cyber.gouv.qc.ca` and
+`collimateur.uqam.ca` are unreachable from this session, so **the guidelines' own text has not been
+read and their exact date is not asserted**. 🔴 **Do not quote the guidelines to a client from this
+base.** Read them first — `Gap 520-A`.
+
+🟢 **The architecture, and it generalises past Quebec.** Four instruments on
+[`../intel/market.md`](../intel/market.md) point the same way: NYC bars AI from grading and
+discipline (March 2026); California **AB 1159** would bar training on student data; Vietnam's AI
+Law names **automated assessment** and **behavioural monitoring**; Quebec now requires conformance
+to published guidelines. 🔵 **One architecture satisfies all four** — learner data never leaves the
+institution, and no consequential decision is the model's.
+
+| requirement it comes from | part | licence | role |
+|---|---|---|---|
+| data must not leave the institution | [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | **MIT** | **Local-first** teacher-facing assistant producing *editable* lesson drafts, student materials and slides **from the school's own curriculum**. 🟢 Teacher edits the artefact — so a human is the author of record |
+| same, learner-facing | [`nichochar/ari`](https://github.com/nichochar/ari) | **MIT** | **Local-first** learner tool (pen + paper + AI). 🟡 Created `2026-10-18` — eleven days old; pilot-grade, and estimate it as such |
+| AI must not grade | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | BKT mastery estimate is **deterministic and auditable**, and it is *formative*. 🔴 It feeds teacher judgement; it does **not** emit a grade of record |
+| no behavioural monitoring | — | — | 🔴 **An omission is part of the build.** Do not ship engagement tracking, attention inference or affect detection. Vietnam names it; NYC's framework implies it. Log *task* events, never *person* signals |
+| offline / low-connectivity delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | Offline-first delivery where school connectivity is the constraint |
+| must map to the ministry's own framework | — | — | 🟢 Quebec's **updated digital-competency framework (21 April 2026)** integrates **AI literacy into existing competencies** rather than creating a dedicated AI course. 🔵 **Map the deliverable onto those competencies**; a standalone "AI module" fights the framework |
+
+**Wiring, concretely.**
+
+1. **Deploy `Claw-ED` teacher-side first**, on institution infrastructure with a locally-hosted
+   model. Teachers get editable drafts; nothing is published to students unreviewed.
+2. **Add `OATutor` as the formative mastery layer.** Make the audit trail a feature of the pitch:
+   every mastery number is reproducible from the response history.
+3. **Keep the decision boundary explicit in the data model** — a `recommendation` table the model
+   writes, and a `decision` table only a human writes. 🟢 This is `P525`'s rule and it transfers
+   unchanged to the Vietnamese statute's named mechanisms.
+4. **Write the conformance memo as a deliverable**, mapped to the competency framework and to the
+   MCN guidelines **once their text is read**.
+5. **Ship nothing that infers emotion, attention or engagement.**
+
+🟢 **Why this is commercially live rather than theoretical:** Quebec's public sector spent roughly
+a year unable to procure generative-AI assistants. The constraint lifted, the guidelines are
+published, and the permissive local-first supply to build against them landed on these shelves
+**today**. **Effort:** 8–10 weeks teacher-side pilot; the conformance memo is week one, not week
+ten.
+
 ## 🆕 `p518` — `2026-10-29` — **🟢 FOUR RECIPES, EACH WIRED FROM REPOS VERIFIED TODAY AND EACH ANSWERING A REGULATORY OR OPERATIONAL CONSTRAINT RATHER THAN A FEATURE REQUEST: `P524` the fully-permissive tutoring stack (closed derivative permitted end to end), `P525` the Annex-III / Oklahoma-S.B.-1734 architecture where the consequential decision is NOT the model's, `P526` the offline deployment for Ghana/Kenya AI-literacy and rural LATAM, `P527` the licence-clearance gate as a three-mechanism checklist.**
 
 🔵 **Reading note.** Every repo named below was existence- and licence-verified on `2026-10-29`

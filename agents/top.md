@@ -4,6 +4,89 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p519` — `2026-10-29` — **🟢 THE PERMISSIVE AGENT SHELF IS WIDER THAN `p518` MEASURED: six MORE education agents verified permissive today, every one of them outside the twelve `p518` shelved, and the single-licence channel discriminated correctly on two negative controls. 🔴 But the pass's load-bearing result is a LIVENESS one: an Apache-2.0, 582★ row is ARCHIVED and its `updated_at` is seventeen days old — so the field this base reads to decide "maintained" is the one field that lies. 🔴 And this session cannot read a served LICENCE byte at all, so two high-star rows stay UNGRADEABLE and are shelved nowhere.**
+
+🔵 **Instrument note, and it is narrower than `p518`'s.** `p518` read licences against the
+repository API with a single-licence search assertion. This session's channels were probed as the
+opening act (`Gap 511`'s standing rule) and the result is **narrower**:
+
+| channel | probe | result |
+|---|---|---|
+| GitHub **search** API (`search_repositories`) | 16-slug consolidated read | 🟢 **WORKS** — existence, ★, forks, `created_at`, `pushed_at`, `updated_at`, `default_branch`, `archived`, `topics`, and GitHub's licence classification |
+| GitHub **contents** API (`get_file_contents`) | `canyongbs/advisingapp:LICENSE` | 🔴 **REFUSED** — *"repository … is not configured for this session"*. Scoped to this session's own repos, so **no third-party LICENCE byte is readable** |
+| `curl` → `github.com` | — | 🔴 **403 at the egress proxy**, as `p518` recorded |
+| `WebFetch` → any non-allowlisted host | `eur-lex.europa.eu`, `www.oecd.org`, `collimateur.uqam.ca` | 🔴 **ENOTFOUND, all three** — see `T519-5` in [`../intel/trends.md`](../intel/trends.md) |
+
+🔴 **What follows from that.** `p518` could resolve a `NOASSERTION` by reading the served file.
+`p519` cannot. So where GitHub's classifier declines, this pass writes **`UNREADABLE`** and shelves
+the row **nowhere** — not as permissive, not as blocked. That is a weaker verdict than `p518`'s and
+it is stated rather than papered over.
+
+### 🟢 Six permissive agents `p518` did not have, each licence-asserted today
+
+🟢 **The assertion.** Each row was put to the search API as `license:<spdx> repo:<slug> …` — a
+query that returns the repo **only if** GitHub's own classifier names that SPDX id. **13 of 13
+asserted rows agreed**, and **both negative controls were refused** (`chamilo/chamilo-lms` queried
+under MIT → not returned, it is GPL-3.0; `academico-sis/academico` queried under Apache-2.0 → not
+returned, it is MIT). A channel that returns everything you ask for proves nothing; this one
+discriminates. Reads: [`liveness-fields.2026-10-29-p519.tsv`](../evidence/liveness-fields.2026-10-29-p519.tsv).
+
+| Repo | Licence (asserted today) | ★ / forks | `pushed_at` | Region | What it is |
+|---|---|---|---|---|---|
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **Apache-2.0** | **462** / 70 | `2026-07-23` | 🔴 `UNSTATED` | Distils videos, PDFs, transcripts and notes into **source-backed** teacher agent skills. 🟢 The one row on this shelf whose output is a *skill a teacher keeps*, not a session |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | **MIT** | **299** / 62 | `2026-10-02` | 🔴 `UNSTATED` | DSA / interview mentor: progressive hints, pattern-recognition drills, mock interviews, code review, 5 languages. Explicitly refuses to hand over solutions |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | **MIT** | **293** / 43 | `2026-10-20` | 🟢 **APAC** | Socratic private tutor built on **Bloom's 2-sigma** framing; reads how the learner learns, then sets the next lesson. Ships as a skill **and** a self-hostable FastAPI + React app |
+| [`nichochar/ari`](https://github.com/nichochar/ari) | **MIT** | **211** / 18 | `2026-10-28` | 🔴 `UNSTATED` | *"learn stuff with pen + paper + AI"* — **local-first**, TypeScript. Created `2026-10-18`: **eleven-day-old supply**, and the newest row on any education shelf in this base |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | **MIT** | **210** / 17 | `2026-10-12` | 🟢 **APAC** | PRC civil-service / public-institution exam coach (行测, 申论, 职测, 综应, 公基, 公文, interview, wrong-answer review). Runs as an agent skill **or** a single file |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | **MIT** | **63** / 15 | `2026-09-19` | 🔴 `UNSTATED` | **Local-first** K-12 teaching assistant producing *editable* lesson drafts, student materials and slides from the school's own curriculum. Teacher-reviewed beta |
+
+🔵 **Why these six matter more than their star counts suggest.** Four of the six are **local-first
+or self-hostable by design** (`ari`, `Claw-ED`, `Bloom`, `kaogong-skill`). That is the shape every
+regulated engagement in this base needs — Quebec's public-sector guidance, the EU Annex III
+architecture in `P525`, and the offline deployment in `P526` all require the learner's data not to
+leave the institution. 🟢 **`Claw-ED` is the only row on any shelf here that both runs local AND
+emits an artefact a teacher edits** rather than a chat transcript.
+
+### 🔴 The liveness retraction: an Apache-2.0, 582★ education platform that is dead
+
+🔴 **[`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) is ARCHIVED.** Read today:
+`archived: true`, **Apache-2.0** (asserted), **582★**, 35 forks — and `pushed_at` is
+**`2024-04-21`**, about **eighteen months** before this pass. 🔴 **Its `updated_at` is
+`2026-10-12`, seventeen days ago.** A shelf that reads `updated_at` to decide whether a repo is
+maintained calls this platform live.
+
+🟢 **This is `p518`'s `microsoft/autogen` class, and `p519` turns it into a rule with an
+instrument.** `updated_at` moves when *metadata* moves — a star, a topic, a description edit — so
+it is **not** a liveness signal. `archived` and `pushed_at` are.
+[`compose/code/p519-liveness-fields/`](../compose/code/p519-liveness-fields/) is the pure-function
+grader, **21/21 controls green**, and it passes under `python3 -I` from the repository root *and*
+from inside its own folder — the `p355-cwd-portability` class the `Makefile` says kept a working
+gate a one-off. Over the 16 graded rows: **1 archived, 0 stale, and exactly 1 row where
+`updated_at` would have lied** — that row being `menthor`.
+
+🔵 **The honest scope of that measurement:** one lying row out of sixteen is a *low* rate, and that
+is precisely why the naive reader survives. It does not fail often. It fails on the row a studio
+would otherwise have proposed to a client.
+
+### 🔴 Two high-star rows that are UNGRADEABLE from this session, and are therefore shelved nowhere
+
+| Repo | ★ / forks | GitHub classifier | Why it is not placed |
+|---|---|---|---|
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **4,925** / 1,262 | 🔴 **`NOASSERTION`** | PRC-curriculum-aligned maths/English/physics knowledge graph — 1,644 knowledge points, 2,403 prerequisite edges, 6,723 problems, with an adaptive prerequisite diagnostic. **APAC.** Created `2026-10-18`: ~4.9k★ in eleven days. 🔴 `p518` carried it on [`../repos/foundations.md`](../repos/foundations.md); the grant is **still unread**, and this session cannot read it |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | **340** / 76 | 🔴 **`NOASSERTION`** | Advising App® — AI conversational assistant for staff, student success and recruitment CRM. Pushed `2026-10-28`, so actively maintained. See `Gap 513-F`'s disposition in [`../intel/open-gaps.md`](../intel/open-gaps.md) |
+
+🔴 **Neither is a "probably fine".** A `NOASSERTION` means GitHub's classifier read a file it could
+not match to a known template — which is exactly what a bespoke, a non-commercial, or a modified
+grant looks like, and `p518` found all three mechanisms live in this sector. **No client
+deliverable may be built on either until the served bytes are read.**
+
+### 🟢 The `p518` shelf, unchanged and still standing
+
+🔵 `p519` re-read none of `p518`'s twelve rows: they were verified **the same day**, against the
+same API, and nothing in a single day's window justifies spending the channel on a re-read.
+`p518`'s table below is current. The two retractions it published (`microsoft/autogen` archived;
+`openedx/edx-platform` renamed to `openedx/openedx-platform`) stand unaltered.
+
 ## 🆕 `p518` — `2026-10-29` — **🔴 TWO RETRACTIONS ON THIS SHELF, BOTH ABOUT LIVENESS RATHER THAN LICENCE: `microsoft/autogen` IS ARCHIVED — *"Project archived and no longer maintained"*, 61.6k★, redirecting new users to Microsoft Agent Framework — AND IT WAS SHELVED AS LIVE SUPPLY IN THREE CONSECUTIVE EDUCATION CYCLES. 🔴 `openedx/edx-platform` HAS BEEN RENAMED TO `openedx/openedx-platform`; the old slug still serves a browser and is INVISIBLE TO THE SEARCH API. 🟢 Twelve education-specific agents re-read today; the permissive supply is intact and it is overwhelmingly non-North-American.**
 
 🔵 **Instrument note.** Every row below was read today, `2026-10-29`, against the GitHub
