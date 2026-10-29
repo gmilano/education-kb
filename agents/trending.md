@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p518` — `2026-10-29`
+
+🟢 **Four genuinely new education agents this window, three of them under four weeks old, and
+the English discovery channel finally paid.** The eleven preceding windows reported the
+English-language trending-education channel as exhausted — every lead already shelved. 🔴 That
+was true of `github trending` style queries and remains true. 🟢 **What worked this window was
+topic-plus-recency filtering on the repository API** (`topic:ai-education stars:>250
+pushed:>2026-07-01`, `topic:edtech stars:>400 pushed:>2026-06-01`, `topic:ai-tutor stars:>300`),
+which surfaced four repos no prior pass holds.
+
+### 🟢 New this window — verified `2026-10-29`
+
+| Repo | ★ | Licence | Created | Why it is new supply and not a restatement |
+|---|---|---|---|---|
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | **999** (138 forks) | **MIT** | `2026-10-03` | 🟢 Books → animated, narrated, interactive web experiences, **and it emits SCORM**. The SCORM output is the differentiator: every other content-transformation agent on these shelves produces something an LMS cannot ingest without integration work |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | **517** (62 forks) | **MIT** | `2026-10-14` | 🟢 Topic in → a course of 2-minute audio lessons out, **with cited sources**. Two weeks old, 517★. The citation requirement is what separates it from the generic course-generator cohort |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | **431** (88 forks) | 🟡 **AGPL-3.0** | `2026-10-10` | Explainer-video generation driven by an "AI director agent", **local-first, any model**. 🟡 Shelved on trending but **not** promoted to [`agents/top.md`](top.md): AGPL-3.0 makes it a boundary component, not a build-on |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | **252** (6 forks) | **MIT** | `2026-06-26` | 🟢 Diagnosis-first tutoring with **no mode or command menu** — it decides the next teaching step itself. The interaction model is the finding: every other tutor on these shelves exposes modes |
+
+### 🟢 Movement on held rows — re-read today
+
+| Repo | Reading today | Movement |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **48,177★**, 5,974 forks, **v1.7.0 released `2026-10-28`** | 🟢 `p517` recorded 41.7k-class context and third-party trackers reported 44,177 and 46,026 in late October. **48,177 read today** — roughly +2k in a week, still climbing, and a release landed yesterday |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **41,717★**, 6,454 forks | 🔵 Flat against `p517`'s reading. Stable, not stalling — 6,454 forks on an eight-month-old repo is deep engagement |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **36,435★**, 3,863 forks | 🟢 **Newly placed as 🇧🇷/LATAM origin this pass.** It was held as unplaced supply; placing it makes it the highest-star LATAM-origin repo in this entire base |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | **1,249★**, 60 forks | 🟢 Six weeks old (created `2026-09-17`) and past 1.2k |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | **1,063★**, 261 forks | 🔵 Held row, re-confirmed MIT. Promoted in function this pass: it is the local-inference primitive in `P526` |
+
+### 🔴 Retracted from the live-agent shelf this window
+
+🔴 **[`microsoft/autogen`](https://github.com/microsoft/autogen) is ARCHIVED.** Read today: *"Project
+archived and no longer maintained"*, 61.6k★, licence **CC-BY-4.0 + MIT** (not the plain MIT this
+base recorded). The README directs new users to Microsoft Agent Framework. 🔴 **Education cycles
+1, 2 and 3 each shelved AutoGen as live supply.** 🟢 **Replacement verified:**
+[`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) — **MIT**, **14,368★**,
+2,533 forks, pushed `2026-10-29`.
+
+🔵 **Why an archive notice belongs on a *trending* file.** Trending measures momentum, and an
+archived 61.6k★ repo has the strongest possible false momentum signal: the stars are real,
+historical, and will keep it at the top of every aggregated list for years. 🟢 The only defence
+is to read `archived` on every pass.
+
+### 🔴 Channel notes — what was searched and what it returned
+
+🔴 **`github trending {industry} AI {year}`-shaped queries: exhausted for a twelfth consecutive
+window.** Everything returned was already held (`pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch`, `developer-roadmap`) or was a third-party
+auto-generated daily digest rather than GitHub's own trending page. 🔵 Third-party digests also
+disagree with each other on star counts for the same repo on the same day (DeepTutor: 44,177 vs
+46,026 vs **48,177 read directly**) — 🔴 **do not source a star count from a digest.**
+
+🔴 **`curl -sI` URL verification is unavailable in this session** — `github.com` returns **403 at
+the egress proxy**. 🟢 Every row above was instead verified against the GitHub repository API,
+which is strictly stronger: it reads existence, archived status, default branch, fork count and
+licence rather than mere reachability.
+
+🔴 **Zero new agents of North American origin.** See `T518-2` in
+[`intel/trends.md`](../intel/trends.md): every education agent on these shelves created in 2026 is
+🇨🇳, 🇧🇷, 🇮🇹 or unplaced.
+
 ## 🆕 `p517` — `2026-10-29`
 
 🟢 **The new-agent flow this window is entirely non-English, and that is the week's finding.**

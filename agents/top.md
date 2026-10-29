@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p518` — `2026-10-29` — **🔴 TWO RETRACTIONS ON THIS SHELF, BOTH ABOUT LIVENESS RATHER THAN LICENCE: `microsoft/autogen` IS ARCHIVED — *"Project archived and no longer maintained"*, 61.6k★, redirecting new users to Microsoft Agent Framework — AND IT WAS SHELVED AS LIVE SUPPLY IN THREE CONSECUTIVE EDUCATION CYCLES. 🔴 `openedx/edx-platform` HAS BEEN RENAMED TO `openedx/openedx-platform`; the old slug still serves a browser and is INVISIBLE TO THE SEARCH API. 🟢 Twelve education-specific agents re-read today; the permissive supply is intact and it is overwhelmingly non-North-American.**
+
+🔵 **Instrument note.** Every row below was read today, `2026-10-29`, against the GitHub
+repository API (existence, default branch, ★, fork count) with licence confirmed by a
+single-licence search assertion per repo — a query that returns the repo only if GitHub's own
+licence classifier agrees with the named SPDX id. Where that classifier returns `NOASSERTION`
+the licence was read from the served file instead, and the row says so. 🔴 `curl` to
+`github.com` is **403 at the egress proxy** in this session, so the shell-level `curl -sI`
+check named in the standing brief could not be used; the API assertion replaces it and is
+strictly stronger (it reads licence, not just reachability).
+
+### 🔴 The two retractions, stated before anything is built on them
+
+🔴 **`microsoft/autogen` is archived.** Read today: the sidebar carries *"Project archived and
+no longer maintained"* and the README states *"New users should start with Microsoft Agent
+Framework."* Its licence is a dual **CC-BY-4.0 / MIT** grant, not the plain MIT this base has
+been recording. The education cycles 1–3 status lines each shelved it as live supply
+(`AutoGen(MIT,~58k★)`, then `~60k★`). 🟢 **The replacement is named and verified:**
+
+| Retracted | Read today | Replacement | Replacement verified |
+|---|---|---|---|
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) — "MIT, ~60k★, live" | **ARCHIVED**, 61.6k★, *"no longer maintained"*, licence **CC-BY-4.0 + MIT** | [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) | **MIT**, **14,368★**, 2,533 forks, `main`, pushed `2026-10-29` |
+
+🔴 **`openedx/edx-platform` is a renamed repository.** The slug this base has carried resolves in
+a browser, but `repo:openedx/edx-platform` returns *"the resources do not exist or you do not
+have permission to view them"* from the search API. The live name is
+[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) — **AGPL-3.0**, 8.2k★,
+README: *"Formerly known as 'edx-platform'"*. 🔵 **Why this matters more than a cosmetic
+correction:** a browser check passes and an automated check fails, so any pipeline that
+verifies by API silently drops Open edX from the shelf while a human spot-check says it is fine.
+
+### 🟢 The education-specific agent shelf, re-read `2026-10-29`
+
+🟢 **Permissive (MIT / Apache-2.0 / BSD) — a closed client derivative is permitted.** Twelve rows,
+all verified today, ordered by ★:
+
+| Repo | Origin | Licence (asserted today) | ★ | Default branch | What it is |
+|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🇭🇰 HKU Data Science (HKUDS) | **Apache-2.0** | **48,177** (5,974 forks) | `main` | *"DeepTutor: Lifelong Personalized Tutoring."* Multi-agent + RAG tutoring loop that keeps a persistent learner model across sessions. **v1.7.0 released `2026-10-28`**; paper `arXiv:2604.26962`. 🟢 The single highest-star education-specific agent anywhere, and permissive |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🇨🇳 Tsinghua MAIC | **MIT** | **41,717** (6,454 forks) | `main` | *"Open Multi-Agent Interactive Classroom"* — a whole simulated classroom of cooperating agents (instructor, peers, assessor) in one click. TypeScript. Created `2026-03-11` → 41.7k★ in under eight months |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🇧🇷 | **MIT** | **36,435** (3,863 forks) | `master` | Turns any technical book PDF into a usable agent skill — PDF→markdown, chunking, retrieval, packaged as a skill directory. 🟢 **The highest-star LATAM-origin repo on any shelf in this base** |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🇨🇳 | **MIT** | **1,249** (60 forks) | `main` | *"你的AI学习搭档"* — plans a route through a subject, teaches it, then sets projects; spaced repetition built in. Created `2026-09-17`, so this is **six-week-old supply** |
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | 🇮🇹 GDG AI Hack Milan 2026 | **Apache-2.0** | **1,138** (138 forks) | `main` | Feynman-technique study agent: ingests a PDF, builds a knowledge graph, generates flashcards and a 3D concept view, quizzes to mastery. 🟢 **The EMEA-origin row this shelf has been short of**, and permissive |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | — | **MIT** | **999** (138 forks) | `main` | Turns a book into an animated, narrated, interactive web experience; **emits SCORM**, so output drops into an existing LMS. Created `2026-10-03` — four weeks old |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | — | **MIT** | **537** (39 forks) | `main` | MCP server exposing Anki to any agent. 🔵 The retention layer: lets a tutoring agent write into a spaced-repetition schedule the learner already keeps |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | — | **MIT** | **517** (62 forks) | `main` | Topic in → researched course of 2-minute audio lessons out, **with cited sources**. Created `2026-10-14` — two weeks old |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🇮🇳 | **MIT** | **387** (76 forks) | `main` | Python package for generating educational content (questions, lesson plans, MCQs) from a model. The oldest education-native library still maintained on this shelf |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 🇨🇳 | **MIT** | **358** (21 forks) | `main` | Exam-prep coach that teaches **from the learner's own slides with page citations**, crops figures, and quizzes from real homework. Explicitly built to resist hallucination and to run on small cheap models |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🇺🇸 UC Berkeley CAHLR | **MIT** | **274** (164 forks) | `main` | Intelligent tutoring system with **Bayesian Knowledge Tracing**. 🟢 The one row here whose mastery estimate is deterministic and auditable rather than model-generated — see `P525` in [`compose/patterns.md`](../compose/patterns.md) |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | — | **MIT** | **252** (6 forks) | `main` | Diagnosis-first tutor: no mode menu, it decides the next useful teaching step, checks understanding, and builds toward mastery |
+
+### 🔴 High-star education repos that are **not** safe to build a client deliverable on
+
+🔵 **Why this block exists.** Each row below would pass a star-count filter and a "has a LICENSE
+link" filter. Each one fails on the actual grant. 🔴 **All four were read today.**
+
+| Repo | ★ | Grant as read | Why it is blocked for a studio build |
+|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2,050** | 🔴 **"CaviraOSS Community License"** — bespoke, not OSI. Free for personal and educational use; *"commercial use or resale requires prior written permission from CaviraOSS"* | 🔴 **Not open source.** A client engagement is commercial use. GitHub's classifier declines it (`NOASSERTION`), so the sidebar shows only a bare "License" link — exactly the shape that gets mistaken for permissive |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | **1,734** | **AGPL-3.0** (asserted) | 🟡 Network copyleft. Hosting a modified ClassroomIO for a client triggers source disclosure to its users. Usable, but only with that understood and priced |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **922** | 🔴 GitHub: unclassified. README: educational content under **CC BY-SA 4.0**, with the repo-level LICENSE file governing full terms | 🟡 165 evidence-grounded pedagogy skills — genuinely valuable **as reference**. 🔴 CC BY-SA is a share-alike *content* licence, wrong instrument for code, and the code/content boundary is not drawn in the repo |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | **585** | 🔴 GitHub: unclassified. README: **AGPL-3.0** | 🟡 30+ K-12→career skills on a cognitive-science spine. Same copyleft caveat as ClassroomIO, with the added problem that the grant is only in prose |
+
+### 🟢 General-purpose frameworks this shelf composes with, re-asserted today
+
+| Repo | Licence | ★ | Note |
+|---|---|---|---|
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | **MIT** | **78,070** | 18 lessons. Curriculum, not a runtime — the fastest way to staff an education engagement |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | **Apache-2.0** | **30,128** | Code-writing agents, minimal surface. The orchestrator in `P524` |
+| [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) | **MIT** | **14,368** | 🟢 The named successor to archived AutoGen. Python + .NET |
+| [`panaversity/learn-agentic-ai`](https://github.com/panaversity/learn-agentic-ai) | **MIT** | **4,392** | Dapr/Kubernetes-shaped agentic curriculum (DACA). Operational, not pedagogical |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | **MIT** | **1,063** | Agents on a **local** LLM, no cloud APIs. 🟢 The offline-deployment primitive in `P526` |
+
+### 🔴 Declared gaps on this shelf
+
+🔴 **North America contributes no new permissive education agent this window.** Its row here is
+`OATutor` (UC Berkeley, 274★, MIT) — academically valuable, 2019-vintage. Every agent on this
+shelf created in 2026 is 🇨🇳, 🇧🇷, 🇮🇹 or unplaced. 🔵 This is a supply observation, not a quality
+claim, and it is the opposite of where the demand and the regulation are (see
+[`intel/market.md`](../intel/market.md)).
+🔴 **No education-specific agent-evaluation harness was found** — nothing that scores a tutoring
+agent on learning gain rather than on task completion. Searched: `topic:ai-tutor stars:>300`,
+`topic:ai-education stars:>250 pushed:>2026-07-01`, `topic:edtech stars:>400 pushed:>2026-06-01`,
+`tutor|tutoring|curriculum in:name,description topic:education stars:>400`. This gap has now
+been declared in four consecutive education passes.
+
 ## 🆕 `p517` — `2026-10-29` — **🔴 `Gap 516-D` ASKED WHETHER THE APAC SUPPLY NIL WAS AN ENGLISH-LANGUAGE ARTIFACT. THE LEGS ARE RUN, AND THE ANSWER IS WORSE THAN THE QUESTION: "this base's APAC supply shelf is thin" WAS ALREADY FALSE AGAINST `agents/top.md:1204`, WHICH HOLDS 🇨🇳 `THU-MAIC/OpenMAIC` — MIT, **41.7k★**, Tsinghua — THE HIGHEST-STAR MIT EDUCATION AGENT ANYWHERE IN THIS BASE. 🟢 `Gap 516-A` IS CLOSED THE ONLY WAY IT COULD BE: `ingest/probe-grant.sh` — 53 grant filenames, 14 languages, default branch RESOLVED. 🟢 THE REAL APAC FINDING IS A DIFFERENT SHAPE FROM LATAM'S: 8 of 12 newly-probed APAC education repos carry NO GRANT AT ALL. 🔴 `make hooks` not attempted (standing abstention).**
 
 🔴 **Gate posture, stated first and unchanged.** `HOOK_GATES` executes `$(PY) -I` over Python inside

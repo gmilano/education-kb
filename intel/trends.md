@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p518` — `2026-10-29` — **🟢 THE TREND THIS PASS MEASURES IS A LICENCE TREND, NOT A CAPABILITY ONE: the three highest-star "open" education repos found this window that a studio CANNOT ship are blocked by three DIFFERENT mechanisms — a bespoke non-OSI licence, a non-commercial CC grant, and a prose-only AGPL. 🟢 Second: new education-agent supply has gone NON-NORTH-AMERICAN, with every 2026-created agent on these shelves 🇨🇳, 🇧🇷 or 🇮🇹. 🔴 Third: the 2026 market figure is quotable again and the retraction that killed it was itself an error of units.**
+
+### 🟢 `T518-1` — "Source-available" is displacing "open source" in high-star edtech, and the sidebar hides it
+
+🟢 **The measurement.** Four education repositories read today, each ≥585★, each showing nothing
+but a bare **"License"** link in GitHub's About sidebar because GitHub's own classifier declines
+to name the grant. Each is blocked for a client deliverable, and **by a different mechanism**:
+
+| Repo | ★ | Mechanism | What breaks |
+|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2,050** | 🔴 **Bespoke non-OSI licence** — "CaviraOSS Community License": free for personal/educational use, *"commercial use or resale requires prior written permission"* | A client engagement is commercial use. There is no OSI grant to fall back on |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **4,877** | 🔴 **Non-commercial Creative Commons** — `CC BY-NC 4.0` over graph, question bank, tool code *and* docs | The `-NC` clause. Permissive-looking family, non-commercial term |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 585 | 🟡 **Prose-only copyleft** — README says AGPL-3.0; the classifier does not confirm it | Strong copyleft asserted in prose, so the actual obligation is arguable rather than readable |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 922 | 🟡 **Content licence used for a code repo** — README: content under `CC BY-SA 4.0`, repo LICENSE governs "full terms" | The code/content boundary is never drawn, so neither grant is cleanly applicable |
+
+🔵 **Why this is a trend and not four accidents.** All four are 2025–2026 repositories. The older
+education projects on these shelves — Moodle, Sakai, Oppia, Kolibri, i-educar — all carry a
+single, classifier-recognised SPDX grant. 🟢 **The new cohort does not**, and the common factor is
+that each wants the distribution benefits of looking open while retaining a commercial claim.
+🔴 **The operational consequence:** a star-count filter plus a "has a licence" filter — the two
+checks most ingest pipelines actually run — admits all four.
+
+### 🟢 `T518-2` — New education-agent supply has stopped being North American
+
+🟢 **The measurement, from [`agents/top.md`](../agents/top.md) read today.** Every
+education-specific agent on that shelf **created in 2026**:
+
+| Agent | Created | Origin | ★ | Licence |
+|---|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `2026-03-11` | 🇨🇳 Tsinghua | 41,717 | MIT |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | `2026-05-01` | 🇧🇷 | 36,435 | MIT |
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | `2026-05-09` | 🇮🇹 GDG Milan | 1,138 | Apache-2.0 |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | `2026-06-24` | 🇨🇳 | 358 | MIT |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | `2026-09-17` | 🇨🇳 | 1,249 | MIT |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | `2026-10-03` | — | 999 | MIT |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | `2026-10-14` | — | 517 | MIT |
+
+🔴 **North America's contribution to this shelf is `OATutor`** — UC Berkeley, MIT, 274★, created
+**2019**. 🔵 **This inverts the usual regional story:** North America has the measured teacher
+adoption (~60%, Gallup) and all of the binding 2026 legislation, while the permissive open-source
+supply to serve it is being written in Shenzhen, São Paulo and Milan. 🟢 For a studio that is an
+arbitrage, not a problem — the supply is MIT and Apache-2.0, so it travels.
+
+🟡 **Honest limit on this trend.** Origin is attributed from account/organisation signals and
+repo language, not from a residency check. 🔵 Two rows above are unplaced, and "created in 2026"
+is a window, not a cohort — a 2024 repo that matured this year does not appear.
+
+### 🟢 `T518-3` — The market figure was retired over a units error, and is quotable again
+
+🔴 **What this base did.** Earlier passes read a "~3× spread across four estimates the same day"
+and retired the 2026 market figure as unquotable. 🟢 **Re-read today, the spread is not in the
+2026 totals** — Precedence **$9.58B**, Research and Markets **$10.6B**, Grand View **$11.4B**:
+a 1.19× range across three houses. 🔴 **The fourth number was Technavio's `+$3.37B`, which is
+incremental growth 2025→2030, not a market size.** Comparing it to a total produces exactly the
+≈3× artefact that got the whole figure retired.
+
+🟢 **The trend underneath, now that the units are right:** the *2026* number is close to settled
+and the *disagreement has moved out-year* — $42.48B by 2030, $57.2B by 2033, $136.79B by 2035,
+CAGRs 25.9%→41.5%. 🔵 Houses now differ about how long the growth lasts and whether embedded AI
+revenue and corporate training count, not about today's size. 🟢 **For a studio that is good
+news:** a near-term business case can be built on a defensible range, and the long-horizon
+numbers should be quoted as scope-dependent rather than as forecasts.
+
+### 🟢 `T518-4` — Governance is being written as architecture requirements, not as guidance
+
+🟢 **The measurement.** Three instruments read this pass impose a *structural* constraint on how
+an education AI system must be built, not merely a disclosure duty:
+
+- 🇺🇸 **Oklahoma S.B. 1734** — AI is **barred as the primary basis** for high-stakes decisions such as grading or discipline. That is a requirement about where the decision lives.
+- 🇪🇺 **EU AI Act, Annex III** — learner evaluation and admissions are **high-risk**, requiring documentation, conformity assessment and demonstrable **human oversight**.
+- 🌐 **OECD *2026 Digital Education Outlook*** — urges institutions toward **purpose-built educational AI** rather than general-purpose tools.
+
+🟢 **All three point at the same architecture**, and it is one a studio can build once: the
+consequential decision (mastery, progression, discipline) computed by auditable deterministic
+code, the model confined to explanation, drafting and dialogue, with a logged human gate at the
+boundary. 🔵 **This is why `OATutor`'s Bayesian Knowledge Tracing matters out of proportion to its
+274 stars** — it is the only agent on these shelves whose mastery estimate is a number you can
+show a regulator. The recipe is `P525` in [`compose/patterns.md`](../compose/patterns.md).
+
+🔵 **Contrast with the 2026 commentary trend**, which reads the year as "experimentation →
+embedded infrastructure" and "experimentation → governance" (1EdTech, Campus Technology,
+HolonIQ). 🟢 Those are the same movement described from the buyer's side; the three instruments
+above are what it looks like in a technical spec.
+
+### 🔴 `T518-5` — The demand-side trend axis is saturated for an eleventh consecutive window
+
+🔴 **Searched this pass:** `AI {industry} industry trends 2026` globally plus the four regional
+legs. 🔴 **Returned:** agentic AI in classrooms, governance catching up to usage, purpose-built
+over general-purpose platforms, evidence-of-outcomes pressure, digital credentials for
+skills-based hiring, multimodal tooling. 🟢 **All six are already recorded on this shelf from
+prior passes.** 🔵 Recording the nil explicitly because an empty result and an unsearched axis
+look identical in a file. 🟢 **The three trends above (`T518-1`, `-2`, `-4`) are supply- and
+instrument-side, which is where this window's new information actually was.**
+
+🔴 **One figure declined.** A widely-circulated "83% institutional adoption of AI teaching
+assistants" and a "$12.3B market" appear only in vendor marketing and could not be traced to a
+primary source. **Not recorded as data.**
+
 ## 🆕 `p517` — `2026-10-29` — **🟢 THE TREND THIS PASS ADDS IS MEASURABLE AND UNCOMFORTABLE: APAC open-source education supply is ABUNDANT AND TWO-THIRDS UNGRANTED — 8 of 12 repos probed carry no licence on 53 filenames in 14 languages. 🔴 That is a different failure mode from LATAM's, and it changes what "open source" means per region. 🔴 Demand-side trends saturated a TENTH time (~24 facts, 4 new). 🟢 The 2026 market figure is now demonstrably unquotable: a ~3× spread across four estimates read the same day.**
 
 ### 🟢 `T517-1` — "Open source" does not mean the same thing in APAC as in LATAM

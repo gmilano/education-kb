@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p518` — `2026-10-29` — **🟢 THE LICENCE AXIS ON THIS SHELF IS NOW READ FROM BYTES FOR THE TWO ERPs THAT GITHUB DECLINES TO CLASSIFY, AND BOTH PRIOR RECORDS WERE WRONG IN THE SAME DIRECTION — TOO PERMISSIVE: `openeducat_erp` is **LGPL-3.0** (GitHub: `NOASSERTION`), `frappe/education` is **GPL-3.0** (GitHub: unclassified; vendor articles call it unstated). 🔴 Open edX is shelved under its real name for the first time. 🟢 Sakai is the one genuinely permissive LMS of record on this shelf and has never been named as such.**
+
+🔵 **What belongs here.** Real, deployed systems of record that a studio can customise and put
+AI on top of — the Odoo/OpenMRS/Moodle layer. Not agents, not curricula. Every row re-read
+`2026-10-29`.
+
+### 🔴 The two ERPs GitHub will not classify — grants read from the served file
+
+| System | Repo | Grant as recorded before | 🟢 Grant read from bytes today | ★ / branch |
+|---|---|---|---|---|
+| **OpenEduCat** (education ERP on Odoo) | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 `LGPL-3.0` asserted; the API assertion **returns zero** — GitHub classifies it `license: other / NOASSERTION` | 🟢 **LGPL-3.0** — `LICENSE` @ branch `19.0` opens *"GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007"*, with the GPL-3 text appended as the LGPL requires. Bundled third-party components may carry other GPL-compatible grants | **900** (782 forks) @ **`19.0`** |
+| **Frappe Education** (school management on Frappe/ERPNext) | [`frappe/education`](https://github.com/frappe/education) | 🔴 "licence not stated — check the repository" (the state every vendor comparison leaves it in) | 🟢 **GPL-3.0** — `license.txt` @ `develop` carries the single identifying line *"License: GNU GPL V3"* | **683** @ `develop` |
+
+🔵 **Why the direction of the error matters.** Both were previously carried as *more* permissive
+than they are, or as unknown. LGPL-3.0 and GPL-3.0 are the difference between "customise freely
+and keep the client's modules closed" and "publish your modules, or keep them at arm's length
+across a process boundary." 🟢 **For OpenEduCat the LGPL is actually workable** — a studio's Odoo
+modules can link against it and stay closed if the boundary is a real library boundary; 🔴 **for
+Frappe Education the plain GPL-3.0 is not**, and an integration there belongs over HTTP.
+
+### 🟢 The systems-of-record shelf, re-read `2026-10-29`
+
+| System | Repo | Licence (asserted today) | ★ | Branch | What it is, and how AI goes on top |
+|---|---|---|---|---|---|
+| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **LGPL-3.0** | **9,259** (5,981 forks) | `v4.0.x-develop` | Full web-conferencing system purpose-built for virtual classes. 🟢 LGPL — a studio's recording/transcription/attention-analytics layer can sit beside it without disclosure |
+| **Open edX** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | **AGPL-3.0** | **8.2k** | `master` | 🔴 **Shelved under its real name for the first time** (was `openedx/edx-platform`). LMS + Studio authoring. AGPL: hosting a modified instance for a client triggers disclosure to its users — build as a separate XBlock/service, not a fork |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | **7,556** (7,686 forks) | `main` | The world's most-deployed LMS. GPL-3.0 — AI goes in as a plugin against the documented API, and the plugin inherits the grant |
+| **ClassroomIO** | [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | **AGPL-3.0** | **1,734** (406 forks) | `main` | Training/course platform on SvelteKit + Supabase. 🔵 The most modern stack on this shelf; the AGPL is the price |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | **1,240** (1,018 forks) | `master` | Higher-education LMS/VLE, Java. 🟢 **ECL-2.0 is the Educational Community License — an Apache-2.0 derivative, permissive.** This is the one system of record on this shelf a studio can fork, extend and ship closed. It has never been named that way in this base |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **LGPL-3.0** (from bytes) | **900** (782 forks) | `19.0` | Education ERP on Odoo: admissions, students, courses/batches, exams, fees, library. 🟢 The Odoo-equivalent for education, and the branch is already on Odoo **19** |
+| **i-educar** | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | **GPL-2.0** | **722** (552 forks) | `2.12` | 🇧🇷 Brazil's most-deployed free school SIS — enrolment, staff, grades, municipal reporting. Originated in Itajaí-SC municipal government. The LATAM public-sector anchor |
+| **Frappe Education** | [`frappe/education`](https://github.com/frappe/education) | **GPL-3.0** (from bytes) | **683** | `develop` | Admissions, fees, student portal, as a module on ERPNext — so it inherits a full accounting/HR backbone for free |
+| **SchoolCMS** | [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) | 🟢 **Apache-2.0** | **292** (110 forks) | `master` | *"中国首个开源学校教务管理系统"* — 🇨🇳 academic-affairs/SIS: students, grades, teachers, enrolment, exams, grade lookup. ThinkPHP. 🟢 **Permissive where `i-educar` is GPL-2.0** — the APAC SIS a studio can ship closed |
+| **H5P** | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 **GPL-3.0** (sidebar, read today) | 152 | — | Interactive content types (the engine Moodle/Drupal/WordPress embed). 🔴 Recorded here with the grant corrected: **GPL-3.0**, not the MIT this base asserted. The low star count is because adoption happens through the integrations, not this repo |
+
+### 🟢 The decision this shelf now supports in one line
+
+🟢 **A client that must keep its derivative closed has exactly two systems of record here:**
+**Sakai** (ECL-2.0, higher education, Java, 1,240★) and **SchoolCMS** (Apache-2.0, K-12
+academic affairs, 🇨🇳, 292★). 🟡 **OpenEduCat (LGPL-3.0, Odoo) is the third if, and only if, the
+studio's work is genuinely separable modules.** 🔴 Everything else on this shelf — Moodle, Open
+edX, BigBlueButton, i-educar, Frappe, H5P, ClassroomIO — is GPL/LGPL/AGPL family, and the
+integration has to be architected across a boundary rather than as a fork. 🔵 That is a
+procurement answer, and before this pass this shelf could not give it, because two of the
+grants were unread and one was wrong.
+
+### 🔴 Declared gap
+
+🔴 **No permissive student-information system of EMEA or North American origin is on this
+shelf.** The permissive SIS rows are 🇨🇳 (SchoolCMS) and the ECL-2.0 LMS is 🇺🇸-originated but
+higher-education-only. Searched
+`open source platform education ERP CRM MIT Apache student information system` globally this
+pass; everything returned for NA/EMEA K-12 (RosarioSIS, openSIS, GegoK12, Fedena) is GPL-family,
+vendor-hosted, or could not be verified by API. 🔵 **RosarioSIS is GNU GPL v2 per its own
+project page and openSIS is GPL-2.0 per a vendor comparison table — neither was API-verified this
+pass and so neither is shelved above.**
+
 ## 🆕 `p517` — `2026-10-29` — **🟢 THE APAC COUNTERPART TO `i-educar` IS NOW ON THIS SHELF, AND IT IS THE MORE PERMISSIVE OF THE TWO: 🇨🇳 `gongfuxiang/schoolcms` — *"中国首个开源学校教务管理系统"* — **Apache-2.0** read from bytes, **292★**, 110 forks, 271 commits, default branch `master`. 🔴 One pass after this base called its APAC supply shelf "thin". 🟢 Found by a Mandarin query; eight English passes missed it.**
 
 ### 🟢 The Chinese academic-affairs stack — and why it outranks `i-educar` for a studio

@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p518` — `2026-10-29` — **🟢 THIS SHELF GAINS ITS LARGEST ROW AND ITS CLEANEST LATAM ROW IN THE SAME PASS: `freeCodeCamp` — **BSD-3-Clause**, **458,132★** — and 🇧🇷 `Universidade-Livre/ciencia-da-computacao` — **MIT**, **20,985★**. 🔴 And it loses a row it never actually had: `openedx/edx-platform` is a RENAMED repo, invisible to the search API under the slug this base carried.**
+
+🔵 **What belongs here.** A foundation is something a studio builds *on* — a platform, a
+curriculum corpus, a runtime, or a provenance index. Agents compose; foundations carry. Every
+row re-read `2026-10-29` against the repository API with a single-licence assertion per repo.
+
+### 🟢 The permissive foundations, re-asserted today
+
+| Repo | Origin | Licence (asserted today) | ★ | Default branch | What a studio builds on it |
+|---|---|---|---|---|---|
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | 🇺🇸 freeCodeCamp.org | **BSD-3-Clause** | **458,132** (48,718 forks) | `main` | 🟢 **The largest education codebase in open source, and permissively licensed.** Platform *and* curriculum: math, programming, CS, plus a certification engine. A studio can lift the curriculum data model, the challenge/test-runner pattern, or the whole platform |
+| [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) | 🇧🇷 | **MIT** | **20,985** (1,688 forks) | `main` | *"Um caminho para a educação autodidata em Ciência da Computação"* — a structured, community-maintained CS curriculum **in Portuguese**. 🟢 For a 🇧🇷 engagement this is the curriculum spine that does not need translating |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🌐 Project Jupyter | **BSD-3-Clause** | **8,359** (2,125 forks) | `main` | Multi-user notebook server. The standard way to give a cohort identical, isolated, pre-provisioned compute — the substrate under almost every university CS/DS course |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🌐 Oppia Foundation (nonprofit) | **Apache-2.0** | **6,951** (5,861 forks) | `develop` | Authoring + delivery of *interactive* lessons with built-in misconception handling. 🟢 Permissive and pedagogically opinionated — rare together |
+| [`Universidade-Livre/matematica`](https://github.com/Universidade-Livre/matematica) | 🇧🇷 | **MIT** | **1,422** (92 forks) | `main` | The mathematics counterpart to the CS curriculum above. Same org, same grant, same language |
+| [`llm-jp/awesome-japanese-llm`](https://github.com/llm-jp/awesome-japanese-llm) | 🇯🇵 LLM-jp (NII-led) | **Apache-2.0** | **1,442** (49 forks) | `main` | The authoritative index of Japanese LLMs **and their licences**. 🔵 An index, not a product: licence-and-provenance routing for a 🇯🇵 engagement starts here rather than at a model card |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🌐 Learning Equality | **MIT** | **1,163** (1,012 forks) | `develop` | **Offline-first** learning platform built for low- and no-connectivity deployment. 🟢 The foundation under `P526`; the only row here designed for a school with no reliable uplink |
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | 🇨🇱 | **MIT** | **136** (12 forks) | `main` | Chilean public data — **including education** — curated, normalised, validated, queryable from Polars/DuckDB/SQLite in one line. 🔵 Small, but it is the shape a regional grounding corpus should have |
+
+### 🔴 The renamed-repo failure, recorded as infrastructure guidance
+
+🔴 **`openedx/edx-platform` does not resolve through the API.** `repo:openedx/edx-platform`
+returns *"The listed users and repositories cannot be searched either because the resources do
+not exist or you do not have permission to view them."* The live repository is
+[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) — **AGPL-3.0**, 8.2k★,
+README: *"Formerly known as 'edx-platform'"*. 🔵 **The lesson is about the instrument, not Open
+edX:** GitHub serves a browser redirect for a renamed repo and does **not** serve one to the
+search API. So a human spot-check passes while automated verification reports the repo missing —
+the two checks disagree, and the human one is the misleading one. 🟢 **Rule for this base: resolve
+a repo by API before recording its slug, and record the slug the API returns.**
+
+### 🔴 A 4,877★ "open" curriculum corpus that is non-commercial — and disagrees with itself
+
+🔴 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) —
+**4,877★**, created `2026-10-18`, 1,242 forks. A 🇨🇳 K-12 knowledge graph spanning mathematics
+(primary→senior high), English (grade 3→senior high) and junior/senior-high physics, aligned to
+the national curriculum standard, shipped with an adaptive prerequisite diagnostic. On supply
+shape alone it is exactly what this shelf wants. 🔴 **It is blocked twice over:**
+
+1. 🔴 **The grant is `CC BY-NC 4.0`** — *non-commercial*. Read from the README (GitHub's
+   classifier declines it, so the sidebar shows only a bare "License" link). It covers the
+   knowledge graph, the question bank, the diagnostic tool code **and** the documentation; only
+   the vendored Cytoscape/dagre libraries under `assets/vendor/` stay MIT. A client engagement is
+   commercial use. **This cannot ground a client tutor.**
+2. 🔴 **The repo's own counts do not agree with each other**, read the same day:
+
+| Quantity | About blurb | README tally |
+|---|---|---|
+| Knowledge points | **1,644** | **~1,838** (math 845, English 724, physics 269) |
+| Prerequisite edges | **2,403** | **~2,926** (≈1,769 hard, 1,157 soft) |
+| Questions | **6,723** | **7,427** (math 3,467, English 2,896, physics 1,076) |
+
+🔴 **And the README states the content is an AI-generated first draft that has not been reviewed
+by teachers, with prerequisite relationships and difficulty levels unvalidated.** 🔵 Recorded here
+in full because its star count will keep surfacing it: a studio that shelves it on stars alone
+inherits a non-commercial grant, unverified pedagogy, and a corpus whose size it cannot state.
+
+### 🔴 Declared gaps on this shelf
+
+🔴 **No permissive national-curriculum corpus was found for EMEA.** 🇧🇷 has `bncc-dados` (MIT,
+already held) and now two `Universidade-Livre` curricula; 🇨🇳 has `cn-math-taxonomy` but
+non-commercially; 🇯🇵 has a licence index. Searched this pass for Spanish/Portuguese
+(`educacion|educativa|educacao|escolar in:name,description stars:>120`) and for
+`sunbird|diksha education india stars:>80` — **the India leg returned zero repositories**, despite
+NCERT's DIKSHA being one of the largest national education platforms in the world. 🔵 That is a
+discovery-channel nil, not an absence claim: DIKSHA's code is published under the Sunbird
+programme, and nothing matching surfaced under these queries.
+
 ## 🆕 `p517` — `2026-10-29` — **🟢 THIS SHELF GAINS A LAYER THE LATAM PASS ESTABLISHED THE NEED FOR AND COULD NOT FILL FOR APAC: a licence-and-provenance index for a national LLM ecosystem — 🇯🇵 `llm-jp/awesome-japanese-llm`, **Apache-2.0**. 🟢 And it gains the instrument itself: `ingest/probe-grant.sh` is now foundational infrastructure for this base, not a one-pass script. 🔴 8 of 12 APAC education repos probed this pass carry NO GRANT.**
 
 ### 🟢 The instrument is a foundation — `ingest/probe-grant.sh`

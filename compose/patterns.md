@@ -4,6 +4,154 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p518` — `2026-10-29` — **🟢 FOUR RECIPES, EACH WIRED FROM REPOS VERIFIED TODAY AND EACH ANSWERING A REGULATORY OR OPERATIONAL CONSTRAINT RATHER THAN A FEATURE REQUEST: `P524` the fully-permissive tutoring stack (closed derivative permitted end to end), `P525` the Annex-III / Oklahoma-S.B.-1734 architecture where the consequential decision is NOT the model's, `P526` the offline deployment for Ghana/Kenya AI-literacy and rural LATAM, `P527` the licence-clearance gate as a three-mechanism checklist.**
+
+🔵 **Reading note.** Every repo named below was existence- and licence-verified on `2026-10-29`
+(see [`agents/top.md`](../agents/top.md), [`repos/foundations.md`](../repos/foundations.md),
+[`verticals/solutions.md`](../verticals/solutions.md)). Where a part is copyleft the recipe says
+so and places it across a process boundary rather than pretending it is permissive.
+
+---
+
+### 🟢 `P524` — The fully-permissive tutoring stack: a closed client derivative, end to end
+
+🔵 **Who it is for:** any client — region-independent — that will not accept a copyleft
+obligation on its own modules, which in practice means most private edtech and most enterprise
+L&D buyers.
+
+🟢 **Every part is MIT, Apache-2.0, BSD-3-Clause or ECL-2.0. There is no copyleft anywhere in
+this stack**, which is why it is the default recommendation.
+
+| Layer | Part | Licence | Why this one |
+|---|---|---|---|
+| System of record | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) (HiEd) **or** [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) (K-12) | **ECL-2.0** / **Apache-2.0** | 🟢 The only two systems of record on these shelves a studio can fork and ship closed |
+| Orchestrator | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | Apache-2.0 | Minimal surface, code-writing agents; nothing to unpick later |
+| Tutoring loop | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 48,177★, v1.7.0 `2026-10-28`; keeps a persistent learner model across sessions |
+| Classroom simulation | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | MIT | Instructor + peer + assessor agents, for cohort dynamics a 1:1 tutor cannot produce |
+| Content ingestion | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | MIT | Client's own textbooks/manuals → retrievable skill packages |
+| Content transformation | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | MIT | 🟢 **Emits SCORM** — output drops into the LMS the client already owns, no integration work |
+| Course generation | [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | MIT | Topic → 2-minute audio lessons **with cited sources** |
+| Retention | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | MIT | Writes into the learner's own spaced-repetition schedule instead of inventing a new one |
+| Content generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) | MIT | Questions, MCQs, lesson plans as a library call |
+
+🟢 **How it wires.** Sakai/SchoolCMS stays the system of record and is the **only** writer of
+enrolment, grades and transcript. `smolagents` runs the orchestration; `DeepTutor` owns the
+learner model and the dialogue; `book-to-skill` + `educhain` + `claudemy` produce material from
+the client's own corpus; `Papermorph` renders it to SCORM so the LMS ingests it through a path
+it already supports; `anki-mcp-server` carries retention. 🔴 **The one hard rule:** the agents
+read the SIS and write only to their own store — a tutoring agent that writes a grade is both an
+architectural mistake and, under `P525`'s regimes, an illegal one.
+
+🔵 **Substitutions by region:** 🇨🇳 swap in `Study-Mate` (MIT) and `universal-examprep-skill`
+(MIT) for Mandarin-native UX; 🇪🇺 swap in `get-it` (Apache-2.0, 🇮🇹) for an in-region provenance
+story; 🇧🇷 add `ciencia-da-computacao` / `matematica` / `bncc-dados` (all MIT) as the curriculum
+spine.
+
+---
+
+### 🟢 `P525` — The architecture where the model is **not** the decision-maker (EU Annex III, Oklahoma S.B. 1734)
+
+🔵 **Who it is for:** any EU institution doing learner evaluation or admissions (Annex III
+**high-risk**), and any US district under Oklahoma-style language barring AI as the **primary
+basis** for grading or discipline. 🟢 **One architecture satisfies both**, because both regimes
+regulate *where the consequential decision lives*, not what model you use.
+
+🔴 **The anti-pattern this replaces:** an LLM is shown a transcript and asked "has this student
+mastered X?" Its answer is unreproducible, unexplainable and is the decision. That fails
+conformity assessment and fails the Oklahoma test.
+
+🟢 **The pattern — three tiers with the boundary enforced in code:**
+
+1. 🟢 **Deterministic mastery tier — [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor), MIT, UC Berkeley.** Bayesian Knowledge Tracing computes mastery from observed correct/incorrect responses. 🔵 **This is the whole point of the recipe:** BKT yields a probability with a stated model, auditable inputs and a reproducible result — a number you can put in front of a regulator or a parent. No LLM participates in it.
+2. 🟡 **Explanation / dialogue tier — `DeepTutor` (Apache-2.0) and/or `get-it` (Apache-2.0, 🇮🇹).** The model explains, hints, re-teaches, generates practice and converses. It **reads** the mastery estimate and never computes one. `get-it` earns its place here on the Feynman-technique loop (learner explains it back) which produces evidence of understanding rather than an assertion of it.
+3. 🟢 **Human gate — logged, blocking, on the decision boundary.** Progression, grading and discipline require an educator action. Log: the BKT inputs, the estimate, the model's explanation, the human's decision, and the timestamp. 🔵 **That log is the conformity artefact** — it is what documentation, human-oversight and record-keeping obligations actually ask for.
+
+🟢 **Delivery surface:** [`oppia/oppia`](https://github.com/oppia/oppia) (Apache-2.0) for the
+interactive lessons, since its authoring model already encodes misconceptions explicitly, which
+maps onto BKT skill nodes. 🟢 **System of record:** Sakai (ECL-2.0). 🔴 **If the client is on
+Moodle (GPL-3.0) or Open edX (AGPL-3.0)**, integrate as a plugin/XBlock over the documented API
+and keep tiers 1–3 in a separate service — do not fork.
+
+🟢 **Why it sells.** The compliance artefact is a by-product of a better architecture, not an
+overhead bolted on. And it is portable: the same build answers Maryland's 24 districts, every
+state copying Oklahoma's language, and an EU Annex III assessment.
+
+---
+
+### 🟢 `P526` — Offline-first AI literacy for Ghana/Kenya pillars and rural LATAM
+
+🔵 **Who it is for:** 🇬🇭 Ghana (*National AI Strategy 2025–2035*, launched 24 April 2026,
+**education as pillar one**; KG→P6 AI-literacy curriculum revisions presented July 2026),
+🇰🇪 Kenya (*National AI Strategy 2025–2030*, AI literacy across education), and the rural and
+Indigenous-language LATAM contexts that UNESCO IESALC's 87%-adoption figure does **not** reach.
+
+🔴 **The binding constraint is not cost, it is connectivity** — and it rules out every
+cloud-API tutoring product on the market.
+
+| Layer | Part | Licence | Why |
+|---|---|---|---|
+| Platform | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 🟢 Offline-first by design, built for exactly this deployment; syncs opportunistically |
+| Local inference | [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | **MIT** | 🟢 Agents on a **local** LLM — *"no frameworks, no cloud APIs, no hidden reasoning"*. The architecture is legible, which matters when the ministry must audit it |
+| Mastery | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | 🟢 BKT runs on-device at negligible cost; no inference needed for the mastery estimate at all |
+| Curriculum corpus | [`freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) (BSD-3-Clause) + [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) (MIT) | permissive | 🟢 AI-literacy content that already exists, permissively licensed, and is what the pillars actually ask for |
+| Retention | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | **MIT** | Anki is offline-native; spaced repetition survives an uplink that does not |
+
+🟢 **The design move.** Put `OATutor`'s BKT and `Kolibri`'s content on the device, and treat model
+inference as **optional enrichment** rather than the critical path. A learner with no uplink
+still gets curriculum, practice, mastery tracking and spaced repetition; when a local model is
+available they also get explanation and dialogue. 🔴 **A stack that degrades to nothing without
+inference cannot be deployed under these pillars** — that is the single most common failure in
+this segment.
+
+🔴 **Pricing note, stated as a risk not a plan.** A ResearchGate proposal pairs a $50M Phase-1
+1M-device rollout with open-source components and asks all 54 African countries to adopt AI
+education strategies — 🔴 **it is a recommendation, not funded policy.** Do not build a commercial
+case on it. The funded, named hooks are Ghana's and Kenya's adopted strategies.
+
+🟡 **For rural LATAM** the same stack applies with `bncc-dados` (MIT) or
+`ciencia-da-computacao` (MIT) as the corpus; 🔴 Indigenous-language support is **not** solved by
+anything on these shelves and should be scoped as original work, not as configuration.
+
+---
+
+### 🟢 `P527` — The licence-clearance gate: three mechanisms, three checks
+
+🔵 **Who it is for:** the studio itself, before any education repo enters a client build. 🟢 This
+pass measured three *distinct* ways a high-star education repo defeats the usual check, so the
+gate is three checks, not one.
+
+🔴 **What the usual check is, and why it fails.** Filter on stars, confirm a LICENSE link exists.
+🔴 **All four repos in [`agents/top.md`](../agents/top.md)'s blocked block pass that filter.**
+
+🟢 **Check 1 — resolve the repo by API, and record the slug the API returns.**
+🔴 `openedx/edx-platform` serves a browser redirect and returns *"the resources do not exist"* to
+the search API; the live name is `openedx/openedx-platform`. 🔴 `microsoft/autogen` is **archived**
+— *"no longer maintained"* — and a browser glance does not say so as loudly as a star count says
+otherwise. 🟢 **Assert existence, archived status, default branch and last push by API. A
+renamed or archived repo is a supply risk before it is a licence question.**
+
+🟢 **Check 2 — when GitHub's classifier declines the grant, read the served file, not the README.**
+🟢 `openeducat_erp` classifies as `NOASSERTION`; `LICENSE` @ branch `19.0` opens *"GNU LESSER
+GENERAL PUBLIC LICENSE, Version 3, 29 June 2007"* — **LGPL-3.0**, workable. 🟢 `frappe/education`
+is unclassified; `license.txt` @ `develop` says *"License: GNU GPL V3"* — **GPL-3.0**, not
+workable as a fork. 🔵 Run [`ingest/probe-grant.sh`](../ingest/probe-grant.sh) (53 grant filenames,
+14 languages, default branch resolved) first, then read the title block of whatever it finds.
+
+🟢 **Check 3 — read the grant for a non-commercial or bespoke term, which a family name hides.**
+🔴 `cn-math-taxonomy` is `CC BY-NC 4.0`: Creative Commons, permissive-*looking*, **non-commercial**
+— unusable for a client engagement. 🔴 `PageLM` carries a **"CaviraOSS Community License"**, free
+for personal and educational use, *"commercial use or resale requires prior written permission"* —
+not OSI at all. 🟢 **The check is literal: grep the grant for `NonCommercial`, `-NC`, `-ND`,
+`prior written permission`, `resale`, and for any licence title that is not a recognised SPDX
+name.**
+
+🟢 **Gate output, per repo, three fields:** `{resolved_slug, archived}` · `{spdx_id, read_from}` ·
+`{commercial_use: permitted | permission_required | prohibited}`. 🔴 **Any repo that cannot fill
+all three does not enter the build.** 🔵 And one secondary check worth the minute it costs: where
+a repo publishes its own counts (`cn-math-taxonomy`: 1,644 vs ~1,838 knowledge points, 6,723 vs
+7,427 questions), **disagreement between its About blurb and its README is a data-quality signal
+about the corpus itself**, independent of the licence.
+
 ## 🆕 `p517` — `2026-10-29` — **🟢 `P522` — the first recipe on these shelves built end-to-end from APAC-originated, licence-verified parts, and the first that permits a CLOSED derivative, because every part is Apache-2.0 or MIT. 🟢 `P523` — the licence-clearance gate, which is a runnable script in this repo rather than advice.**
 
 ### 🟢 `P522` — A fully permissive APAC school stack: SIS of record + lesson generation + curriculum-grounded tutor + gated ops agents

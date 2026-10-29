@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p518` — `2026-10-29`
+
+🟢 **The trending-repos channel produced real new supply this window for the first time in
+twelve windows — and the single largest row this base has ever shelved.** 🔴 The mechanism that
+broke the eleven-window drought was **not** a new query language: it was abandoning
+`github trending`-shaped searches entirely in favour of topic-plus-recency filters on the
+repository API.
+
+### 🟢 New this window — verified `2026-10-29`
+
+| Repo | ★ | Licence | What it is | Why it is shelved |
+|---|---|---|---|---|
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | **458,132** (48,718 forks) | 🟢 **BSD-3-Clause** | Platform **and** curriculum: math, programming, CS, with a certification engine | 🟢 **The largest education codebase in open source and it is permissive.** That this base reached `p518` without shelving it is the most significant discovery-channel gap yet recorded here. Promoted to [`repos/foundations.md`](foundations.md) |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **36,435** (3,863 forks) | **MIT** | Technical book PDF → a usable agent skill: PDF→markdown, chunking, retrieval, packaged | 🟢 Held already, but **newly placed as 🇧🇷/LATAM** — making it the highest-star LATAM-origin repo in this base |
+| [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao) | **20,985** (1,688 forks) | **MIT** | 🇧🇷 Structured self-taught CS curriculum, in Portuguese | 🟢 A permissive national-language curriculum spine. For a 🇧🇷 engagement it removes the translation step entirely |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **4,877** (1,242 forks) | 🔴 **CC BY-NC 4.0** | 🇨🇳 K-12 knowledge graph: math, English, physics; curriculum-aligned, with an adaptive prerequisite diagnostic. Created `2026-10-18` | 🔴 **Shelved as trending and explicitly BLOCKED for client work** — non-commercial grant, *and* its About blurb and README disagree on its own counts, *and* the README says the content is an unreviewed AI-generated first draft. Full reading in [`repos/foundations.md`](foundations.md) |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2,050** (279 forks) | 🔴 **"CaviraOSS Community License"** | Community NotebookLM alternative: study materials → quizzes, flashcards, notes, podcasts. TypeScript | 🔴 **Trending but not open source.** Free for personal/educational use; *"commercial use or resale requires prior written permission"*. Recorded precisely so it is not mistaken for permissive later |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | **1,734** (406 forks) | 🟡 **AGPL-3.0** | Course/training platform on SvelteKit + Supabase | 🟡 The most modern stack among systems of record on these shelves; network copyleft is the price. Promoted to [`verticals/solutions.md`](../verticals/solutions.md) |
+| [`Universidade-Livre/matematica`](https://github.com/Universidade-Livre/matematica) | **1,422** (92 forks) | **MIT** | 🇧🇷 Self-taught mathematics curriculum, same org as the CS one | 🟢 Completes the 🇧🇷 permissive curriculum pair |
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | **1,138** (138 forks) | 🟢 **Apache-2.0** | PDF → knowledge graph → flashcards → 3D concept view → quiz-to-mastery, on the Feynman technique. Built at **GDG AI Hack Milan 2026** | 🟢 **The EMEA-origin row these shelves have been short of, and it is permissive.** Promoted to [`agents/top.md`](../agents/top.md) and used in `P525` |
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | **136** (12 forks) | **MIT** | 🇨🇱 Chilean public data incl. education, normalised and validated, queryable from Polars/DuckDB/SQLite in one line | 🟢 Small, but it is the correct *shape* for a regional grounding corpus and the only 🇨🇱 row in this base |
+
+### 🔴 Retracted from this shelf
+
+🔴 **`openedx/edx-platform` is a slug this base should never have carried.** The search API
+returns *"the resources do not exist or you do not have permission to view them"*; the live
+repository is [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) —
+**AGPL-3.0**, 8.2k★, README: *"Formerly known as 'edx-platform'"*. 🔵 **The instrument lesson:**
+GitHub serves a browser redirect for a renamed repo but does **not** serve one to the search
+API, so a human spot-check passes while automated verification reports the repo missing. The
+human check is the misleading one. Recorded as Check 1 of `P527` in
+[`compose/patterns.md`](../compose/patterns.md).
+
+### 🟢 Grants corrected on held rows — read from bytes this pass
+
+| Repo | Carried as | 🟢 Read today | Consequence |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `LGPL-3.0` asserted (API assertion returns **zero** — GitHub says `NOASSERTION`) | 🟢 **LGPL-3.0** — `LICENSE` @ `19.0` opens *"GNU LESSER GENERAL PUBLIC LICENSE, Version 3, 29 June 2007"* | 🟢 Confirmed workable: separable modules may stay closed |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 "licence not stated" | 🟢 **GPL-3.0** — `license.txt` @ `develop`: *"License: GNU GPL V3"* | 🔴 Not forkable for a closed derivative; integrate over HTTP |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🔴 `MIT` | 🔴 **GPL-3.0** (sidebar, read today), 152★ | 🔴 A straight correction — H5P was carried as permissive and is not |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | held, grant unremarked | 🟢 **ECL-2.0** asserted — the Educational Community License, an Apache-2.0 derivative | 🟢 **Promoted in significance:** this is the one permissive system of record on these shelves, and it had never been named as such |
+
+### 🔴 Channel notes
+
+🔴 **`github trending {industry} AI {year}` is exhausted for a twelfth consecutive window** and
+should be retired as a primary channel for this base. Everything it returns is either already
+held or a third-party auto-generated digest. 🔴 Those digests disagree with each other on the same
+repo on the same day — **do not source a star count from one.**
+
+🟢 **What works, recorded so the next pass starts here:** repository-API searches of the form
+`topic:<t> stars:><n> pushed:><date>` with `sort=stars`, over the topics `ai-education`,
+`edtech`, `ai-tutor`, `education`; plus non-English name/description legs
+(`educacion|educativa|educacao|escolar`). 🟢 Nine of the rows above came from that shape and
+none from a trending page.
+
+🔴 **The India leg returned zero repositories.** `sunbird|diksha education india stars:>80` found
+nothing, despite NCERT's DIKSHA being among the largest national education platforms in the
+world. 🔵 That is a discovery-channel nil, **not** an absence claim — DIKSHA's code is published
+under the Sunbird programme and did not surface under these queries. Next pass should query
+Sunbird's organisation directly rather than by keyword.
+
+🔴 **`curl -sI` verification is unavailable this session** (`github.com` → **403** at the egress
+proxy). Every row above was verified against the GitHub repository API instead — existence,
+archived status, default branch, fork count, and a single-licence assertion per repo.
+
 ## 🆕 `p517` — `2026-10-29`
 
 🔴 **GitHub trending, education slice: thin again — eleventh consecutive window — and this pass
