@@ -358,7 +358,7 @@ header, a placeholder or an example.
 | 🆕 **TutorIA** | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Grupo Sirius`, read at `main` (1 068 B) | 🔴 **0** | 🟢 **LATAM** — *stated by the product*: *"educación superior rural"*, Spanish-language, Grupo Sirius | **Fitness: reference implementation.** *"Agente tutor virtual autónomo basado en IA para educación superior rural"* — an autonomous tutor agent aimed at **rural higher education**, pushed **2026-10-27**. 🟢 **The third LATAM-origin agent on this shelf, and the first built for the low-connectivity rural case** that [`../verticals/solutions.md`](../verticals/solutions.md) §6 says this sector assumes away. 🟡 Zero stars, zero forks: a signal and an architecture, not a dependency. |
 | 🆕 **brújula-educativa** | [startin-lab/brujula-educativa](https://github.com/startin-lab/brujula-educativa) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 startin-lab`, read at `main` (1 067 B) | 🔴 **0** | 🟢 **LATAM (Colombia)** — *stated by the product*: *"datos educativos abiertos de Colombia"* | **Fitness: reference implementation.** *"Agente público de consulta sobre datos educativos abiertos de Colombia."* Pushed 2026-09-21. 🟢 **The fourth LATAM-origin agent and the first anywhere on this shelf whose corpus is a national open-data portal rather than a curriculum document or a textbook** — the shape `P554`'s governance work implies and nothing here had built. 🔵 Pairs with [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) (MIT, 136★, filed on [`../repos/foundations.md`](../repos/foundations.md)) as Colombia-agent plus Chile-data: between them, two of the four LATAM systems whose ministry data a studio would actually query. |
 
-**Licence split:** **31 × MIT, 11 × Apache-2.0, 1 × BSD-3-Clause** — all
+**Licence split:** **32 × MIT, 10 × Apache-2.0, 1 × BSD-3-Clause** — all
 forty-three buildable, every cell read from the licence file's title block.
 *Apache-2.0: DeepTutor, k12-teacher-skills, lineage-skill, ai-tutor-app,
 feedbacksystem, ai-shifu, get-it, Fiona, 🆕 SocialCoach, 🆕 agent-skills
@@ -366,6 +366,14 @@ feedbacksystem, ai-shifu, get-it, Fiona, 🆕 SocialCoach, 🆕 agent-skills
 🆕 **`p536`'s seven rows are 5 × MIT and 2 × Apache-2.0**, and three of the
 seven ref-answered on `master` or were graded `NOASSERTION` by the API — i.e.
 **they are permissive and two of this base's own instruments said otherwise**.
+🔴 **This paragraph was wrong when `p536` first published it** — it read
+*"31 × MIT, 11 × Apache-2.0"*, which totals 43 and distributes them wrongly: the
+Apache-2.0 list beneath it has always named **ten** repositories, not eleven.
+🟢 Corrected by counting the cells rather than the claim — 10 Apache-2.0 + 1
+BSD-3-Clause + 32 MIT = 43. 🔵 Recorded rather than quietly fixed, because it is
+the same failure mode as the row this file corrected upstream this pass: **a
+summary number restated from the previous pass instead of recomputed**, which is
+exactly what `p535` caught `rotation.json` doing with star counts.
 🔵 **Recount run after the edit, not asserted**: `make gate-tables` and the
 row/filing census in
 [`../evidence/prose-address-queue.2026-10-29-p536.tsv`](../evidence/prose-address-queue.2026-10-29-p536.tsv)
