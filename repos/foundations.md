@@ -6,10 +6,21 @@ updated: 2026-10-29
 
 # Foundational Education Repos
 
-**Pass `p528` · 2026-10-29.** Twenty load-bearing systems an education engagement
+**Pass `p529` · 2026-10-29.** Twenty load-bearing systems an education engagement
 is likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms the agents must live
 beside.
+
+> 🆕 **`p529` changed one section of this file and nothing else — the same
+> section, again, and this time the correction runs the other way.** The GitHub
+> search API became reachable this pass (see
+> [`../agents/top.md`](../agents/top.md)), and it reports **`total_count: 222`**
+> for the Moodle MCP field. `p528`'s census of eleven was not a census; it was a
+> sample of what a search engine surfaced. 🔴 **The ceiling, the star total and
+> the licence spread are all corrected below.** The platform-core and
+> administration rows above were not re-read this pass except where the API
+> corroborated them — `fsrs4anki` (**MIT, 4,119★**), `openeducat_erp` (**LGPL**,
+> 900★ / **782 forks**) and `rosariosis` (**GPL-2.0**, 648★) all **confirmed**.
 
 > 🆕 **`p528` changed one section of this file and nothing else.** The Moodle MCP
 > census below was re-probed from scratch — existence first, then the licence
@@ -63,7 +74,33 @@ beside.
 | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | 51 | "The ultimate Learning Record Store (and more!) for your learning analytics." Python/FastAPI/Pydantic; copyright line reads `France Université Numérique` (**EMEA**). Fifty-one stars and genuinely load-bearing: it is the **xAPI/LRS seam** where agent-generated learning events get stored in a standard shape instead of a vendor's private table. |
 | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | 4.1k | FSRS (Free Spaced Repetition Scheduler). The retention primitive — use it instead of inventing a review interval, because the scheduling problem is solved and the solution is permissive. |
 
-## 🆕 The Moodle MCP census — **eleven codebases, 37 stars, no convergence**
+## 🆕 The Moodle MCP census — 🔴 **222 addresses, not eleven; ceiling 52★ and ungranted**
+
+> 🔴 **`p529` correction, read this before the table.** The heading of this
+> section used to read *"eleven codebases, 37 stars, no convergence"*. The API
+> reports **222** matching addresses; `p529` read the **top 80 by stars**, which
+> alone total **352★**. The field's ceiling is **not** `G36maid` at 27★ — it is
+> [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) at **52★**, and
+> ⛔ **it has no licence file** (no `license` key from the API; no file at five
+> paths on `main`). The permissive ceiling is
+> [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server),
+> **MIT, 45★**, last pushed **22 Feb 2026**. Licence spread over the 80 read:
+> **MIT 44 · none 18 · GPL-3.0 7 · `NOASSERTION` 4 · Apache-2.0 4 · AGPL-3.0 2 ·
+> WTFPL 1** → **60% permissive, 27.5% with no usable grant** — not *"ten of
+> eleven MIT"*.
+>
+> 🔵 **And the conclusion changes with the number.** `p528` recommended
+> consolidating eleven codebases. **You cannot consolidate 222 repositories whose
+> purpose is to be institution-specific** — 14 of the top 26 bridge one named
+> university each, and LATAM and APAC ship five apiece while **North America
+> ships none**. The asset is a **bridge generator**, not a merged bridge. Full
+> census, regional placement and reasoning in
+> [`trending.md`](trending.md); the recipe is `P558` in
+> [`../compose/patterns.md`](../compose/patterns.md).
+>
+> ⚠️ **The table below is `p528`'s thirteen-address census, kept as-is**, because
+> its tool counts and read/write analysis are first-hand and the API exposes
+> neither. **Read it as a deep sample of the field, not as the field.**
 
 ⚠️ **This section is corrected and widened this pass.** `p527` wrote that the
 Moodle MCP field is *"eight search results, roughly three real codebases"*. That

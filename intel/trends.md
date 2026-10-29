@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p528` · 2026-10-29.** Eleven trends. Each one is stated so it could be
+**Pass `p529` · 2026-10-29.** **Thirteen** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -15,6 +15,14 @@ trend is rewritten rather than quietly restated.
 > was wrong in shape), sharpened **Trend 9**, and added **Trend 11** on a
 > deletion. Trends 1–3, 5–8 and 10 were not re-evidenced this pass and stand on
 > `p527`'s sourcing.
+
+> 🆕 **`p529` rewrote Trend 4 again — `p528`'s shape was right and its magnitude
+> was wrong by 20× — and added Trends 12 and 13.** Trend 12 is the one a client
+> hears first: **the unit of LMS integration is the institution, not the
+> product.** Trend 13 is about this base's own instruments. Trends 1–3, 5–11
+> were not re-evidenced this pass and stand on their recorded sourcing.
+> 🟢 **Trend 2 gained hard numbers:** `DeepTutor` **49,216★** and `OpenMAIC`
+> **41,756★**, API-exact rather than rounded.
 
 ## 1. The governance gap is the market
 
@@ -84,6 +92,13 @@ Oct 2026, ~102-128 tools) for Canvas, and
 [anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) (MIT, 538★) for
 retention. Both are licence-clean seams into AGPL and desktop systems that must
 not be forked.
+
+> 🔴 **`p529` correction.** `p528` rewrote this trend as *"eleven codebases,
+> nobody converged"*. The GitHub search API reports **222**. The conclusion
+> *"no credible bridge"* **survives** — the ceiling is **52★ and ungranted**, and
+> the permissive leader is 45★ and eight months stale — but *"eleven people
+> tried"* becomes *"hundreds tried, one per campus"*. See **Trend 12**, which is
+> what the real number turned out to mean.
 
 🔴 **But Moodle — the sector's largest install base and plugin ecosystem — still
 has no credible MCP server**, and ⚠️ **`p527`'s account of *why* was wrong.** It
@@ -298,6 +313,65 @@ dependencies.
 **What would disconfirm it:** an integrity capability landing *back* in a
 maintained open grading agent, or one of these two passing ~100★ with external
 contributors.
+
+## 12. 🆕 The unit of LMS integration is the **institution**, not the product
+
+**Stated so it can be wrong:** *if this trend is right, the Moodle-bridge field
+should show many single-institution codebases and no scaled product; if it is
+wrong, we should see two or three bridges with most of the stars and real
+deployment counts.*
+
+🟢 **The evidence says institution.** Of the 26 highest-starred addresses in a
+222-address field, **14 exist to bridge one named university's Moodle** —
+Universidade de São Paulo, FICH-UNL, UTN, UTN FRLP, Universidad de San Andrés,
+Vietnamese-German University, SLIIT, Nottingham Ningbo, Taylor's, UNSW, SPbPU,
+RTU MIREA (×2), TU Wien. Almost all are read-only, almost all are student-built,
+almost all are under 10★. **No product has consolidated them**, and the field's
+most-starred artefact carries **no licence at all**.
+
+🔵 **Why this is the most commercially useful line on this base.** It says the
+opportunity is **not** a better Moodle bridge. Hundreds of people can already
+write one in a weekend; what none of them can do is make it safe, auditable and
+maintainable for an institution that will be asked about FERPA, the EU AI Act or
+a ministry's data rules. **The deliverable is a generator plus a governance
+model** — tool vocabulary, read-only default, write-gating, token custody,
+audit log — not another bridge. See `P558`.
+
+🔴 **The regional distribution is part of the trend, not a footnote.** LATAM
+ships **5**, APAC **5**, EMEA **4**, **North America 0**. NA has the largest
+AI-education market and builds none of these, which is the signature of a region
+that **buys** institutional integration. That is where a productised bridge finds
+a buyer rather than a hundred hobbyist competitors.
+
+## 13. 🆕 A measurement channel is a finding, and this base just changed one
+
+**Stated so it can be wrong:** *if this trend is right, re-measuring old records
+with a new instrument should change conclusions, not just confirm them.*
+
+🟢 **It did, in both directions, on the same day.** The GitHub search API became
+reachable this pass after months of `github-api-proxy-blocked`. It **confirmed**
+all fourteen shelf rows, grant and counter — the hand-probe method had been this
+base's only instrument, hence unfalsifiable, and it passed. It then **destroyed**
+`p528`'s Moodle headline, raised **two** new shelf rows, and showed that **25 of
+80 census addresses were already in this base's history** with only 9 ever filed.
+
+🔴 **And it produced two new failure modes within one pass**, which is the part
+worth generalising:
+
+1. **`NOASSERTION` is uninformative.** It resolved to a permissive grant, a
+   copyleft grant, a non-OSI grant *and* no grant at all. Reading it as
+   "ungranted" would have thrown away `thm-mni-ii/feedbacksystem`, which is
+   **Apache-2.0**.
+2. **Absence from an API search is not non-existence.** A real repository
+   (`packbackbooks/lti-1-3-php-library`) did not come back from a call that
+   returned six others.
+
+🔵 **The trend, not the anecdote:** every new channel arrives with its own
+credulity. This base already had a rule about trusting search summaries; it
+needed the *same* rule for a structured API, and did not have it until the API
+nearly produced a phantom. **A faster instrument does not reduce the need for a
+second one — it raises it**, because speed is what makes skipping the check
+tempting.
 
 ## Counter-signals worth holding
 

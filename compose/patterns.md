@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Compose Patterns — Education
 
-**Pass `p528` · 2026-10-29.** Ten recipes. Every component named below was read
+**Pass `p529` · 2026-10-29.** **Twelve** recipes. Every component named below was read
 from its repository page this pass, and **every licence was read from the licence
 file's own title block** (`raw.githubusercontent.com` is reachable while
 `github.com` returns HTTP 403 through the session proxy). No recipe uses a
@@ -300,6 +300,15 @@ rather than sold alone.
 
 ## 🆕 P553 — The Moodle agent bridge (the build nobody has done)
 
+> 🔴 **`p529`: superseded in scope by [`P558`](#-p558--the-moodle-bridge-generator-the-build-the-field-actually-needs).**
+> The premise below — *"the entire Moodle-MCP field tops out at 27★"* — is wrong.
+> The field is **222 addresses**; its ceiling is **52★ and ungranted**; its
+> permissive leader is **45★ and eight months stale**. 🟢 **The conclusion
+> survives and strengthens** — there is still no credible, shippable bridge — but
+> *"nobody has done this"* becomes *"hundreds have each done it once, for one
+> campus."* **P553 remains valid as a single-client build.** When the client is
+> buying a capability rather than one integration, run **P558** instead.
+
 **Brief.** Moodle has the sector's largest install base and plugin ecosystem and
 **no credible agent bridge.** Canvas has one at 308★; the entire Moodle-MCP field
 tops out at **27★**. This is the clearest build opportunity on this base, and it
@@ -515,6 +524,83 @@ probe.
 block · dependency grants · union verdict · *written for code or for content*.
 🟢 **Any `ShareAlike`, `NonCommercial` or `AGPL` in the union stops the fork
 decision**, whatever the top-level badge says.
+
+## 🆕 P557 — Mastery-tracked tutoring with real retention (Global)
+
+**Brief.** Every "AI tutor" demo answers questions. Almost none **model what the
+learner knows** or **schedule the review that makes it stick** — the two things
+fifty years of cognitive science say decide the outcome. Both halves now exist
+permissively and neither needs building.
+
+| Role | Component | Grant | Verified `p529` |
+|---|---|---|---|
+| Tutoring + **mastery estimate** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | API + title block · **57★** · Go · pushed 28 Oct 2026 · topics name **`bkt`** |
+| Retention **algorithm** | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | API + title block · **4,119★** · 165 forks |
+| Retention **surface** the learner keeps | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | **MIT** | API · **538★** |
+| Independent mastery baseline | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | **MIT** | API · **274★** · BKT, published |
+| Does the model teach acceptably? | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | API · 13★ · CDPK + SEND |
+| Event records in a standard shape | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | xAPI/LRS · 51★ |
+
+**Wiring.** `tutor-mcp` mounts as an MCP server beside whatever assistant the
+client already licenses — it is not an application, so there is no UI to
+displace. It holds the learner model; every turn updates a **BKT** estimate per
+skill. When a skill crosses mastery, the agent emits a card through
+`anki-mcp-server` and **`fsrs4anki` owns the interval** — do not invent a review
+schedule, the problem is solved and the solution is MIT. `ralph` receives xAPI
+statements so the mastery trace lives in a standard store rather than a vendor
+table. `OATutor` is the control: run the same cohort against a published BKT
+implementation and compare, because *"our tutor tracks mastery"* is a claim an
+institution will ask you to prove.
+
+🟢 **Why this composition and not a bigger one.** Every component is **MIT**,
+every one was verified twice this pass, and the whole stack is **out-of-process**
+— so it drops beside a GPL Moodle or an AGPL Canvas without touching either.
+**8–10 weeks.** 🔴 **Gate it with `P551` + `P556`:** all six rows are
+*repository*-level verdicts, and `fsrs4anki` ships Python/Jupyter with a real
+dependency tree.
+
+## 🆕 P558 — The Moodle bridge **generator** (the build the field actually needs)
+
+**Brief.** 🔴 **`P553` assumed a missing product. The measurement says otherwise:
+the field has 222 addresses, 14 of the top 26 bridge exactly one named
+university, and nobody has consolidated anything.** You cannot consolidate
+repositories whose purpose is to be institution-specific. **What is missing is
+not a bridge — it is the thing that produces a bridge**, with the safety and
+audit properties an institution's legal and data-protection review will demand.
+
+| Role | Component | Grant | Note |
+|---|---|---|---|
+| Tool-vocabulary reference | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | **MIT** · 27★ | The only one naming three live-tested Moodle versions (**3.7, 4.5, 5.2**) |
+| **Write-gating** reference | [GhaithAlHallak8/moodler-mcp](https://github.com/GhaithAlHallak8/moodler-mcp) | **MIT** · 3★ | Writes off by default behind two flags; `confirm=true` on destructive calls — **the best governance model in the field** |
+| Scope-boundary reference | [leshamblin/MoodleMCP](https://github.com/leshamblin/MoodleMCP) | **MIT** · 2★ | `MOODLE_DEV_COURSE_WHITELIST`, `MOODLE_PROD_ALLOW_WRITES=false` |
+| Architecture to copy wholesale | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | **MIT** · 308★ | The field's one proven LMS bridge |
+| The platform — **never forked** | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 · 7.6k★ | Bridge stays out-of-process |
+| Per-tenant worked examples | [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) (🔴 GPL-3.0), [`Equisdo/fich-mcp`](https://github.com/Equisdo/fich-mcp) (**MIT**), [`changazo/udesa-mcp`](https://github.com/changazo/udesa-mcp) (**Apache-2.0**) | mixed | **Read for requirements, do not vendor.** USP is GPL-3.0 — copying it into a permissive core relicenses the core |
+| Audit trail | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** · 51★ | Every tool call becomes an xAPI statement |
+
+⛔ **Do not start from** [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp)
+(52★, **no licence file** — the field's most-starred artefact is unshippable),
+[`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server)
+(**AGPL-3.0**), `threos/mcp4lms` (**AGPL-3.0**), or
+[`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle)
+(MIT repo, **AGPL-3.0 PyMuPDF** in the artefact — `P556` catches this one).
+
+**Wiring.** One permissive core (`MIT`/`Apache-2.0`) implementing a **named tool
+vocabulary** taken from `G36maid`, with three properties the hand-built instances
+almost never have: **read-only by default**, writes behind an explicit per-course
+allowlist (`leshamblin`) plus confirmation on destructive calls
+(`moodler-mcp`), and **token custody** that never puts a Moodle Web Services
+token in a shared config. Per-institution output is **configuration plus a
+capability manifest**, not a fork: endpoint, enabled tools, course scope, data
+residency. `ralph` makes every call auditable, which is what converts this from
+a student project into something a DPO signs off.
+
+🔵 **Why it sells.** The per-campus bridges cluster in **LATAM and APAC**, where
+institutions build because nobody sells them this; **North America builds none**,
+because NA institutions buy integration. So the same artefact is a *cost
+reduction* in LATAM/APAC — a day instead of a semester, with governance attached
+— and a *product* in NA. **10–12 weeks for the core + 1 week per tenant.**
+🔴 Gate with `P551` + `P556` before any row above enters a deliverable.
 
 ## Pattern selection
 

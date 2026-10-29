@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p528` · 2026-10-29.** Figures are attributed to the source that produced
+**Pass `p529` · 2026-10-29.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
 
@@ -26,6 +26,23 @@ because an averaged number is a number nobody published.
 > pass was on the supply legs — see
 > [`../agents/top.md`](../agents/top.md).
 
+> 🆕 **`p529` ran the full four-region sweep again and does *not* repeat
+> `p528`'s result.** `p528` concluded the regional legs were *"saturated at this
+> search depth"*. 🟢 **They were saturated on *policy*, not on *evidence*.**
+> Re-running the four legs with the same depth but reading for **surveys and
+> budget commitments** rather than statutes returned **new, attributable material
+> in all four regions** — including the single best-sourced LATAM dataset this
+> base has ever held (UNESCO IESALC, **200 institutions across 19 countries**),
+> and the first **methodologically consistent regional market comparison**
+> (one firm, same method, three regions — see below).
+>
+> 🔵 **The generalisable half:** "saturated" was a property of the *query*, not
+> of the region. A leg that keeps returning the same statutes has exhausted its
+> **regulatory** supply while its **adoption-evidence** supply is untouched.
+> 🔴 **And the sharpest new finding is a hole:** the same firm that sizes NA,
+> Europe and APAC **publishes no LATAM figure at all** — see
+> [§ Declared gaps](#declared-gaps-this-pass).
+
 ## Global market size — four firms, one wide band
 
 | Source | 2026 | Forecast | CAGR |
@@ -42,6 +59,32 @@ those are the usable parts.
 
 Regional share: **North America ~36%** (largest), **APAC fastest-growing at
 35.3% CAGR**.
+
+### 🆕 Regional sizing from one firm, one method (`p529`)
+
+Every table above mixes firms, so regional comparison across them is arithmetic
+on incompatible definitions. These three figures come from **MarketsandMarkets'
+per-geography AI-in-education reports** — same publisher, same method, so the
+*ratios* are meaningful even if the levels are vendor estimates:
+
+| Region | 2024 | 2029 forecast | Implied CAGR |
+|---|---|---|---|
+| **North America** | USD **951M** | ~USD **2.3B** | ~15.9% |
+| **APAC** | USD **591.6M** | USD **1,848.1M** | ~20.9% — *named fastest-growing* |
+| **EMEA (Europe)** | USD **512.6M** | USD **1,328.8M** | ~21% — UK, Germany, France lead |
+| 🔴 **LATAM** | ⛔ **not published** | ⛔ **not published** | ⛔ — |
+
+🔵 **Read the ratio, not the level.** NA is roughly **1.6×** APAC and **1.9×**
+Europe today, and APAC closes the gap but does not overtake inside the window.
+🔴 **The LATAM row is the finding.** The firm that sizes the other three regions
+does not size LATAM — so every LATAM market figure this base holds comes from a
+*different* methodology than its NA/EMEA/APAC figures, and the regional
+comparisons in this file are **not like-for-like for LATAM**. Stated here so the
+limitation travels with the numbers.
+
+⚠️ These are **lower** than the global tables above imply, because the global
+figures include corporate training and consumer learning that the per-geography
+reports scope out. Do not add these rows to a global total.
 
 ## Adoption — better evidenced than market size
 
@@ -117,6 +160,31 @@ rejects both an outright ban and unrestricted adoption.
    a working, honestly-scoped reference for exactly this shape: local-first,
    single-teacher, lesson drafts from the teacher's own curriculum, teacher review
    before use. Its explicit *"not multi-tenant"* limit is the gap a studio fills.
+
+#### 🆕 `p529` — North America: the governance deficit, quantified
+
+- 🔴 **Only ~10% of institutions have formal AI guidelines**, and **71% of US
+  teachers report no AI training** (trade roundup; methodology not published —
+  treat as indicative, but note it points the same way as Gallup's 60% already
+  on this file).
+- **Market:** USD **951M (2024) → ~USD 2.3B (2029)**, ~15.9% CAGR; **~36% of
+  global share**, the largest single region (MarketsandMarkets).
+- **Canada:** the proposed federal **Artificial Intelligence and Data Act
+  (AIDA)** is described as targeting risk mitigation and transparency for
+  *high-impact* systems — ⚠️ **not education-specific**, which is the fourth
+  consecutive pass the Canada leg has returned workplace rather than education
+  policy.
+- **Sub-federal:** commentary names **Colorado** and **Texas** as having
+  introduced piecemeal requirements, against a federal picture one source calls
+  a *"regulatory vacuum"* for education AI with **no FDA-equivalent** for EdTech.
+- 🔵 **The opportunity this prices.** NA is the largest market, ships **zero** of
+  the per-university LMS bridges counted in
+  [`../repos/trending.md`](../repos/trending.md), and has a **90% institutional
+  policy gap**. That combination — buys rather than builds, and cannot yet say
+  what "acceptable" means — is why `k12-teacher-skills`' **eval rubrics** are the
+  most commercially loaded artefact on the shelf: a procurement conversation here
+  starts with *"prove it teaches acceptably"*, not *"prove it works"*.
+
 
 ### EMEA
 
@@ -196,6 +264,37 @@ copyright line), [Open TutorAI CE](https://github.com/Open-TutorAi/open-tutor-ai
    almost no vendor can show evidence. Running it is cheap; being the firm that
    ran it is the differentiator.
 
+#### 🆕 `p529` — EMEA: money and guidance both moved this window
+
+- 🟢 **UK — AI Adoption Summit commits £200m+**: **£100m** expanding *Bridge AI*
+  and **£53m** for regional initiatives, delivered with **Cisco, IBM, BT and
+  Rolls-Royce** as partners and **Skills England** setting the curriculum
+  framework. ⚠️ Reported via a sector newsletter (QS/HolonIQ), not a Treasury
+  document.
+- 🟢 **EU — the Commission updated its ethical guidelines on AI in education
+  (9 June)** and signed **three Advanced Digital Skills grant agreements worth
+  €25.4m**. The **AI Continent Action Plan** is adopted and the **Apply AI
+  Strategy** is under way.
+- **Council of Europe** continues a dedicated **AI-and-education expert group**
+  and working-conference track on the *regulatory* dimension — the body to watch
+  for anything that becomes binding after Reg (EU) 2026/1744.
+- **Adoption:** Eurobarometer — **64%** of Europeans agree everyone will need to
+  be AI-literate by 2030. Allianz Pulse 2026 — **48%** use AI at least weekly
+  across eight countries, with **Germany, France and Austria in the low 40s**.
+  Eurostat via the EESC — **>50% of large enterprises** use AI against **<15% of
+  SMEs**.
+- **Market:** USD **512.6M (2024) → USD 1,328.8M (2029)**; **UK, Germany and
+  France** named the leading markets.
+- 🔵 **Read the contrast the sources themselves draw:** the UK is buying
+  *deployment speed*, the EU is buying *institutional and human capacity*. An
+  EMEA engagement is therefore sold differently on each side of the Channel —
+  outcomes-per-quarter in the UK, auditability and capability-building in the EU.
+  🟢 And this pass put the base's **first stated-origin EMEA institutional agent**
+  on the shelf: [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem),
+  **Apache-2.0**, TH Mittelhessen — evidence that the EU capacity money lands as
+  *university-built, permissively licensed* software.
+
+
 ### APAC
 
 **Regulatory posture — no single model.** Binding AI rules: **South Korea, China,
@@ -267,6 +366,29 @@ the single most actionable supply fact in this file.**
    ([Dolos](https://github.com/dodona-edu/dolos), MIT).
 5. 🆕 **Vietnam first for a port.** The 18-month education transition is the
    softest landing in the region for a system already in service.
+
+#### 🆕 `p529` — APAC: fastest-growing, and still no common framework
+
+- **Market:** USD **591.6M (2024) → USD 1,848.1M (2029)**, ~20.9% CAGR —
+  **named the fastest-growing region** on both methodologies checked, driven by
+  internet penetration and government-led digital-education reform.
+- **Regulation stays fragmented.** Forrester: *"a common APAC-wide AI legislative
+  framework will remain a distant dream"* — **Singapore** leaning on mature
+  guidelines, **China** targeting algorithmic misconduct, **ASEAN**'s governance
+  guide still early-stage. ⚠️ Nothing education-specific surfaced beyond what
+  this base already holds (China's compulsory AI from age six, Beijing's 8h,
+  India's Class 3 target, Singapore AI Verify).
+- **2026 posture:** APAC leadership attention is on **governance, AI literacy,
+  sovereignty and measurable ROI**. Enterprise deployment runs **ahead** of
+  Europe and North America — **56%** of APAC businesses have deployed chatbots,
+  copilots or assistants (Confluent). ⚠️ Enterprise figures, not school figures.
+- 🔵 **The supply side corroborates the demand side here.** APAC ships **5** of
+  the per-university Moodle bridges in the census head (Vietnam, Sri Lanka,
+  China, Malaysia, Australia) — second only to LATAM — and the two largest
+  education agents in existence are APAC-built (`DeepTutor`, HKU; `OpenMAIC`,
+  Tsinghua: **49,216★** and **41,756★**). **APAC is not an adoption market for
+  this base's shelf — it is where the shelf comes from.**
+
 
 ### LATAM
 
@@ -387,9 +509,83 @@ education systems are absorbing AI tools **often without oversight or
 guidelines** — which is the demand side of pattern **P554**, not a reason to
 discount it.
 
+#### 🆕 `p529` — LATAM: the best-sourced regional dataset this base holds
+
+🟢 **UNESCO IESALC — 200 institutions across 19 countries.** The first LATAM
+figure on this file with a stated sample frame rather than a vendor estimate:
+
+| Measure | Value |
+|---|---|
+| Institutions using AI in **at least one** area | 🟢 **87%** |
+| …with a **formal AI strategy** | 🔴 **26.0%** |
+| …with **institution-wide policies** | 🔴 **18.5%** |
+| …with a **dedicated AI budget** | 🔴 **8.0%** |
+| …with **formal evaluation mechanisms** | 🔴 **9.0%** |
+| Use in **teaching and learning** | 73.5% |
+| Use in **research** | 57.0% |
+
+⚠️ **Second source, not comparable:** the Digital Education Council's *AI in
+Higher Education LATAM Survey 2026* reports **92% of students** and **79% of
+faculty** actively engaging with AI — but across **29 institutions**. Different
+frame, different unit. Shown beside the UNESCO figures, **not averaged with them**.
+
+- **Regulation:** no unified regional framework. **Chile** leads — national AI
+  policy since **2021**, with a law under discussion; **Brazil** and **Colombia**
+  have advanced national strategies **without education-specific rules**;
+  **Mexico**'s SEP, ANUIES and the Observatorio IA have issued recommendations
+  that are **non-binding**. One regional study concludes development is
+  *heterogeneous*. ⚠️ Chile's bill status in 2026 was not confirmed this pass.
+- **Institutional actors to name in a proposal:** **UNESCO IESALC** (Caracas),
+  the **Digital Education Council**, **Tecnológico de Monterrey** with its
+  Institute for the Future of Education, **UNAM**, **UPC Peru**, **PUC Chile**.
+  Private non-profit universities lead adoption.
+- 🔵 **The gap between 87% and 8% is the entire LATAM opportunity, and it is not
+  a tooling gap.** Institutions have already adopted; **92% of them have no
+  dedicated budget and 91% have no way to evaluate what they adopted.** Selling
+  another tutor into that is selling into the 87%. **Selling evaluation,
+  policy scaffolding and procurement-grade evidence is selling into the 74-92%
+  who cannot yet govern what they run** — and it is exactly what
+  [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+  (MIT) and `k12-teacher-skills`' rubrics are for.
+- 🟢 **And LATAM ships code, which this base denied for seven passes.** Beyond
+  `corretor-enem` (Brazil), the census head holds **five** LATAM-origin Moodle
+  bridges — **USP** (Brazil) and **FICH-UNL, UTN, UTN FRLP, Universidad de San
+  Andrés** (Argentina). 🔴 **More than any other region, including North America
+  at zero.** The old note — *"the LATAM contribution is data, not code"* — is now
+  falsified twice over and should not reappear.
+
+
 ## Declared gaps this pass
 
 Written down because an unstated gap is indistinguishable from coverage.
+
+### 🆕 `p529` additions
+
+- 🔴 **No LATAM market sizing on the same methodology as the other three
+  regions.** MarketsandMarkets publishes per-geography AI-in-education reports
+  for **North America, Europe and APAC** and **none for LATAM**. Every
+  cross-regional comparison in this file is therefore **not like-for-like for
+  LATAM**, and no amount of care with the other three fixes it. 🔵 Closing it
+  needs a paid report or a national-ministry source, not another search.
+- 🔴 **Chile's AI bill status in 2026 unconfirmed.** The national policy dates to
+  2021 and a law is *"under discussion"*; this pass could not establish whether
+  it advanced. It is the region's most likely first binding instrument, so the
+  gap matters more than its size suggests.
+- 🟡 **The UK £200m+ and EU €25.4m figures rest on one sector newsletter.**
+  Primary sources (HM Treasury, the Commission's grant register) were not
+  checked. Recorded with the channel named.
+- 🟡 **NA's "10% of institutions have formal AI guidelines" and "71% of teachers
+  untrained" come from a trade roundup with no published methodology.** They
+  point the same way as Gallup's 60%, already on this file from a stronger
+  source, which is why they are recorded at all.
+- 🔴 **Canada and Mexico education-specific AI policy returned nothing again** —
+  **fifth** consecutive pass. The NA leg remains, in substance, a US leg. 🔵
+  Saturated at this search depth; moving it needs ministry sources in French and
+  Spanish, which this base has never attempted.
+- 🟢 **`p528`'s "regional legs are saturated" is withdrawn as stated.** They were
+  saturated on *statutes*. Re-querying the same four legs for **surveys and
+  budget commitments** returned new attributable material in **all four**. The
+  lesson is about the query, not the regions.
 
 - **No authoritative ranking of EMEA AI-education vendors.** The funding figures
   above come from trade aggregators that disagree with each other on round sizes

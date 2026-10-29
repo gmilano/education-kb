@@ -4,6 +4,136 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p529` — `2026-10-29` — **🟢 THE MEASUREMENT CEILING THIS BASE HAS RECORDED AS BLOCKED SINCE `p3xx` IS LIFTED: THE GITHUB SEARCH API IS REACHABLE THIS PASS, IT BATCH-VERIFIES EXISTENCE + GRANT + STARS + LIVENESS, AND IT CONFIRMED ALL FOURTEEN SHELF ROWS ON THE FIRST RUN. 🔴 IT ALSO FALSIFIED `p528`'S HEADLINE: the Moodle MCP field is not eleven codebases, it is 222, its ceiling is not 27★ but 52★ — and the ceiling is UNGRANTED. 🟢 Shelf 14 → 16. 🟢 `Gap 528-A` CLOSES, `528-B` CLOSES WITH NO PHANTOMS, `528-C` AND `528-D` ANSWERED WITH AN INSTRUMENT RULE. 🔴 And the new instrument has a false-negative mode that nearly made me repeat `528-B` in reverse.**
+
+### 🟢 The instrument — what changed, and what it is worth
+
+Every pass from `p3xx` onward recorded some version of *"`github.com` returns HTTP 403 through the session proxy; `raw.githubusercontent.com` is reachable"*, and `rotation.json` has carried `github-api-proxy-blocked` for months. **That is no longer the whole picture.** `api.github.com` by `curl` is still 403, but the **GitHub MCP search tool is reachable and unscoped for repository search**, and `repo:` qualifiers **OR together**, so one call verifies a batch:
+
+| What it returns per address | Field |
+|---|---|
+| Does it resolve | presence in the result set (⚠️ **with a false-negative mode — see below**) |
+| Grant, as an SPDX id | `license.spdx_id` |
+| Stars, forks | `stargazers_count`, `forks_count` |
+| Alive or abandoned | `pushed_at`, `archived` |
+| Language, default branch, topics | `language`, `default_branch`, `topics` |
+
+⚠️ **`minimal_output: true` omits the `license` field entirely.** Every grant-bearing call must pass `minimal_output: false`. Recorded because the compact form looks like the cheap default and silently drops the one field this base exists to read.
+
+### 🟢 The shelf, independently re-measured — 14/14 confirmed
+
+`p527` and `p528` read these star counts and grants by hand from `raw.githubusercontent.com` title blocks. A second, independent instrument now agrees on **all fourteen rows**, grant and counter:
+
+| Row | Grant (title block, `p528`) | Grant (API, `p529`) | ★ `p528` | ★ API | Verdict |
+|---|---|---|---|---|---|
+| `HKUDS/DeepTutor` | Apache-2.0 | **Apache-2.0** | 49.0k | **49,216** | 🟢 agree |
+| `THU-MAIC/OpenMAIC` | MIT | **MIT** | 41.8k | **41,756** | 🟢 agree |
+| `anthropics/k12-teacher-skills` | Apache-2.0 | **Apache-2.0** | 601 | **601** | 🟢 agree |
+| `ankimcp/anki-mcp-server` | MIT | **MIT** | 538 | **538** | 🟢 agree |
+| `JuneYaooo/lineage-skill` | Apache-2.0 | **Apache-2.0** | 462 | **462** | 🟢 agree |
+| `satvik314/educhain` | MIT | **MIT** | 387 | **387** | 🟢 agree |
+| `vishalsachdev/canvas-mcp` | MIT | **MIT** | 308 | **308** | 🟢 agree |
+| `Li-Evan/Bloom` | MIT | **MIT** | 294 | **294** | 🟢 agree |
+| `CAHLR/OATutor` | MIT | **MIT** | 274 | **274** | 🟢 agree |
+| `Open-TutorAi/open-tutor-ai-CE` | BSD-3-Clause | **BSD-3-Clause** | 114 · 194 forks | **114 · 195 forks** | 🟢 agree (+1 fork) |
+| `SirhanMacx/Claw-ED` | MIT | **MIT** | 63 | **63** | 🟢 agree |
+| `towardsai/ai-tutor-app` | Apache-2.0 | **Apache-2.0** | 34 | **34** | 🟢 agree |
+| `AI-for-Education/pedagogy-benchmark` | MIT | **MIT** | 13 | **13** | 🟢 agree |
+| `dsvi-b/corretor-enem` | MIT | **MIT** | 7 | **7** | 🟢 agree |
+
+🔵 **Why this matters more than it reads.** The hand-probe method was this base's only instrument and therefore unfalsifiable. It is now falsifiable, and it passed — **so every star figure and grant on the shelf is dual-sourced**, and `rotation.json`'s `p528` note that earlier cycles' counts were "pipeline-inflated" does not apply to the current shelf.
+
+### 🟢 Two new shelf rows — both verified twice, one of which the API alone would have thrown away
+
+| 🆕 Address | Grant | ★ | Region | Why it is a row |
+|---|---|---|---|---|
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** — API, and title block `MIT License · Copyright (c) 2026 Arnaud Guiovanna` | **57** · 9 forks | ⚠️ **unplaced** — no country on the profile or in the copyright line | *"An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive science, MIT licensed."* **Go**, created 30 Mar 2026, pushed **28 Oct 2026**, site `tutor-mcp.dev`. Topics name **`bkt`** — Bayesian Knowledge Tracing. 🟢 **This is the row the shelf was missing:** `OATutor` is the only other row with a real mastery estimator and it is a whole ReactJS application; this is the same pedagogy as **one MCP server any assistant can mount**. |
+| 🆕 [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🔴 API: `NOASSERTION` → 🟢 **title block: `Apache License, Version 2`** | 24 · 10 forks | 🟢 **EMEA (Germany)** — *stated*: `Copyright 2021 Technische Hochschule Mittelhessen` | "Intelligent, personalized feedback for students using artificial intelligence" — TypeScript, branch `dev`, pushed **28 Oct 2026**, live service at `frits.mni.thm.de`. **244 open issues** against 10 forks reads as a running institutional system, not a demo. 🔴 **The API would have discarded this row.** It is the base's first *stated-origin EMEA institutional* agent under a permissive grant. |
+
+### 🔴 The instrument rule — the generalisable half, and it cuts both ways
+
+Eleven addresses were read by **both** instruments this pass. The result is a rule, not a preference:
+
+🟢 **A clean SPDX id is reliable.** `MIT`, `Apache-2.0`, `GPL-3.0`, `BSD-3-Clause`, `CC0-1.0` — **12 of 12 agreed with the title block.** Including `ahmedEid1/lumen`, where the API returns **`GPL-3.0`** and so independently confirms `p528`'s call that the licence file beats the README's `MIT` badge.
+
+🔴 **`NOASSERTION` (and an absent licence key) is uninformative.** It means only *"GitHub could not assign an SPDX id"*. Across the addresses tested it resolved to **four different realities**:
+
+| Reality | Addresses |
+|---|---|
+| 🟢 A real **permissive** grant | `thm-mni-ii/feedbacksystem` → **Apache-2.0** |
+| 🟡 A real **copyleft** grant | `openeducat/openeducat_erp` → **LGPL** (*"OpenEduCat is published under the GNU LESSER…"*) |
+| 🟡 A real **non-OSI** grant | `GarethManning/education-agent-skills` → CC BY-SA 4.0 · `CaviraOSS/PageLM` → bespoke Community License · `canyongbs/advisingapp` → Elastic-2.0 · `xiaoyang111222/cn-math-taxonomy` → CC-BY-**NC**-4.0 |
+| ⛔ **No grant at all** | `idoforgod/Vibe-learning-AgenticWorkflow` · `OS4ED/openSIS-Classic` · `loyaniu/moodle-mcp` |
+
+➡️ **Shelf rule 8.** The API licence field **screens**; it never grades. A clean SPDX id may be recorded. `NOASSERTION`, `Other`, or an absent key means *the title block has not been read yet* — never "ungranted", and never "fine".
+
+### 🔴 …and the new instrument has a false-negative mode. I nearly filed a real repo as a phantom.
+
+`packbackbooks/lti-1-3-php-library` — cited in this base's own [`../repos/trending.md`](../repos/trending.md) history — **was not returned** by a `repo:`-qualified API call that successfully returned six other addresses in the same request. By `528-B`'s existence rule that looks like a phantom.
+
+⛔ **It is not.** `README.md` returns **HTTP 200 on `master`** (404 on `main` — the branch, not the repo, was the trap). The repository is real.
+
+➡️ **Shelf rule 9.** **Absence from a `repo:` search is not evidence of non-existence.** Existence is disproved only by a direct fetch 404ing on the actual default branch. 🔵 This is `Gap 528-B`'s failure mode *in reverse* — the same error, committed by trusting a new channel instead of a search summary — and it is recorded here because the new instrument's speed is exactly what makes it tempting to skip the check.
+
+### 🟢 `Gap 528-A` — the promotion sweep, run. It closes, and it closes with a structural finding.
+
+`p528` asked `p529` to extract every address a prior pass called shelf-worthy and diff it against the shelf.
+
+🔴 **The sweep cannot be run as specified, and that is the finding.** Scoring "a pass graded this 🟢" by the marker's presence on a line yields **1,764 addresses** out of 3,182 in the history — because 🟢 is prose decoration on long table rows naming many repos, not a field attached to one address. **This base records no machine-readable promotion verdict.**
+
+🟢 **Run on explicit promotion language instead** — `worth shelving`, `shelf-worthy`, `belongs on the shelf`, `promoted to the shelf`, `should be shelved`, `worth a shelf` — restricted to lines naming ≤3 addresses, the sweep returns **8 candidates, of which 4 are path artefacts** (`agents/top.md`, `master/LICENSE.md`, an `evidence/*.tsv`). The four real ones:
+
+| Address | Filed? | Reason |
+|---|---|---|
+| `dsvi-b/corretor-enem` | 🟢 **on the shelf** | repaired by `p528` |
+| `GarethManning/education-agent-skills` | 🟢 **fourth band** | repaired by `p528` |
+| `wwrwbs/AI_AWE` | 🟢 **filed on `top.md`** | — |
+| `duck-5/moodle-mcp` | 🟢 **filed on [`../repos/foundations.md`](../repos/foundations.md)** | 🔵 **not a debt** — a bridge library's home is foundations, not the agent shelf. The sweep only looked at `top.md`, which is why it read as absent. |
+
+✅ **No unpaid promotion debt survives this sweep** — *as worded*. 🔴 **And that turns out to be the wrong test entirely.**
+
+🔴 **The sweep that matters was run on [`../repos/trending.md`](../repos/trending.md) instead, and it is damning.** Diffing the 80-address Moodle census against **every address in this base's history** (3,182 distinct addresses across nine files): **25 of the 80 were already here, and only 9 of those had ever reached a shelf or foundation file.** The two the base had seen and never filed include **the field's #1 and #2 by stars**. So did `ArnaudGuiovanna/tutor-mcp` (**57★ MIT** — shelf row 15 this pass), `thm-mni-ii/feedbacksystem` (**Apache-2.0** — row 16), `GeminiLight/gen-mentor` (**134★** — band four) and `OS4ED/openSIS-Classic` (**347★**).
+
+🔵 **So the supply problem is neither discovery nor promotion-wording. It is retrieval.** Every one of this pass's "new" shelf rows was an address the base already owned, described once in a dated section, and never looked at again. **An append-only history of 100k lines with no index is a write-only store**, and the explicit-language sweep returned "no debt" precisely because it searched the *prose* rather than the *addresses*.
+
+➡️ Registered as **`Gap 529-A`**, and it is the most expensive gap on this base: **every pass pays to rediscover what it already owns.** The remedy is an index keyed by address — `evidence/` already holds per-pass TSVs, so the ledger is a compaction of material that exists, not new collection. 🔴 The rewrite mechanism `p528` named is real and still open, but it is the *second* problem; this is the first.
+
+### 🟢 `Gap 528-B` — the four pre-rule ungranted rows re-probed. **No phantoms.**
+
+| Address | API | Title block (5 paths) | ★ `p529` | Verdict |
+|---|---|---|---|---|
+| `A-R007/Multi-Agent-Study-Assistant` | no licence key | ⛔ none | **64** | ⛔ ungranted **stands** · 🆕 **pushed 2025-11-04 — abandoned for ~12 months.** The "most substantial repo in this category" is also the deadest. |
+| `idoforgod/Vibe-learning-AgenticWorkflow` | `NOASSERTION` | ⛔ none | 25 · 29 forks | ⛔ ungranted **stands** — and this is the address that proves `NOASSERTION` ≠ "a grant exists" |
+| `tosuki/moodle-mcp` | no licence key | ⛔ none (`p528`) | 🆕 **0** | ⛔ ungranted **stands** · 🟢 **counter read — `p528`'s `—` closed** |
+| `bobuel/bloom-taxonomy-quiz-builder-skill` | no licence key | ⛔ none (`p528`) | 3 | ⛔ ungranted **stands** |
+| `henriquebotelhogomes/educacao` | no licence key | ⛔ none on `master` | 0 | ⛔ ungranted **stands** |
+| `Fatima0923/AssessmentAI` | no licence key | ⛔ none on `main` | 0 | ⛔ ungranted **stands** |
+| 🔴 `belentani7/aprende-brasil` | **absent from the result set** | ⛔ `README.md` 404 on `main` **and** `master` | — | ⛔ **phantom confirmed by a second instrument.** ⚠️ Note rule 9: the API absence alone would not have been enough; the 404 is what settles it. |
+
+### 🟢 `p528`'s last open item closes: `iwuzhu/kiro-ai-grading-system` read
+
+**MIT** (API), **0★**, 0 forks, TypeScript, created 27 Sep 2026, pushed 11 Oct 2026, 31 MB. Multi-tenant grading + academic-integrity platform on NestJS / Next.js / PostgreSQL / AWS — *"built for the Kiro University Challenge"*.
+
+🟡 **Real, permissive, and squarely in the integrity gap — and still not a row.** A hackathon submission at 0★ and 0 forks with a 31 MB tree is a *reference to read*, not a component to compose. 🔵 It does say something: the integrity gap is not unattempted, it is **unadopted**.
+
+### 🟢 Fourth verdict band gains its second member — and it is the cleaner teaching case
+
+| Address | Grant | ★ | Why it is band-four and not buildable |
+|---|---|---|---|
+| 🆕 [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | **CC0-1.0** — API *and* title block (`Creative Commons Legal Code · CC0 1.0 Universal`) | **134** · 23 forks | `[WWW '25 Oral]` GenMentor — *"LLM-powered Multi-agent Framework for Goal-oriented Learning in Intelligent Tutoring System"*, WWW 2025 Industry Track. TypeScript, pushed 23 Oct 2026, live at `genmentor.aurax.live`. 🟡 **CC0 is a public-domain dedication, not a software licence:** it grants more than MIT on copyright and **says nothing about patents**, which is why the OSI has never approved it for code. Usable in most engagements, **not** in one that requires an express patent grant. |
+
+🔵 **This is `Gap 528-D`'s category error in its purest form** — not a trap, not ungranted, not buildable-as-OSI: **a content instrument applied to executable code by an author who meant to be maximally generous.** The band exists for exactly this.
+
+### 🔵 Declared non-findings — stated so silence is not read as coverage
+
+- 🔴 **Generic web search is now a measurably worse channel than the API.** `top open source AI agents education 2026 github MIT` returned one education-specific repo and five general-purpose listicles with unverified star counts; one aggregator attributed an MIT grant to a project it could not name. **Zero shelf-grade findings.** Both new shelf rows this pass came from `topic:`-qualified API queries.
+- 🔴 **No permissive SIS or advising agent. Now measured, not asserted** — see [`../repos/foundations.md`](../repos/foundations.md) and [`../verticals/solutions.md`](../verticals/solutions.md). At `stars:>40` the global SIS field is **four addresses and not one is permissive**.
+- 🟡 **`ArnaudGuiovanna/tutor-mcp` is unplaced on purpose.** The author's name and the `.dev` domain are not a country. Rule 3 holds: inference is not placement.
+- 🔴 **Dependency grants remain unread** (`Gap 528-C`). Every buildable verdict on these shelves is a **repository**-level verdict. The limitation is now stamped on each shelf file rather than living only here.
+- 🔴 **Gate posture unchanged:** `make hooks` not run this pass. `p522`'s **47/63** remains the last attested reading. Nothing in `p529` is gate-attested.
+
+---
+
 ## 🆕 `p528` — `2026-10-29` — **🔴 THE PASS'S BIGGEST FINDING IS A SELF-INFLICTED ONE: TWO ADDRESSES THIS BASE VERIFIED ITSELF WERE MISSING FROM THE SHELF `p527` REBUILT 50 MINUTES AGO — AND ONE OF THEM FALSIFIED THE LATAM GAP NOTE PRINTED DIRECTLY BELOW IT.** `dsvi-b/corretor-enem` (**MIT**, Brazil, ENEM over **11,147** examiner-marked essays) was verified at **`p420`, 24 Oct**, recorded verbatim as *"the one new address worth shelving"*, **never shelved** — while [`top.md`](top.md) went on asserting *"no LATAM-origin education agent… the LATAM contribution is data, not code"* for seven passes. `GarethManning/education-agent-skills` (**CC BY-SA 4.0, 926★**), known since `p466`, was on **neither** the shelf nor the trap table. 🟢 **Both promoted. Shelf 13 → 14; new fourth verdict band opened.** 🟢 **And the Moodle census is finished and `p527`'s reading of it corrected: not "roughly three codebases" — ELEVEN, ten of them MIT, 37★ in total.** 🔴 One search summary described a repository, in rich detail, that **does not exist**.
 
 ### 🔴 Promotion debt — the headline, because it is the one a client would notice

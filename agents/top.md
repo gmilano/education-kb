@@ -6,8 +6,35 @@ updated: 2026-10-29
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p528` · 2026-10-29.** Fourteen real agents, every row read first-hand.
-No row is a header, a placeholder or an example.
+**Pass `p529` · 2026-10-29.** **Sixteen** real agents, every row read first-hand
+and — new this pass — **every row corroborated by a second, independent
+instrument**. No row is a header, a placeholder or an example.
+
+> 🟢 **`p529`: the verification ceiling lifted.** The **GitHub search API is
+> reachable this pass** through the session's MCP tooling (plain `curl` to
+> `api.github.com` is still **403**). `repo:` qualifiers **OR together**, so one
+> call returns existence, **SPDX grant**, exact **star and fork counts**,
+> `pushed_at` and default branch for a batch of addresses. Consequences for this
+> file, in order of importance:
+>
+> 1. 🟢 **All fourteen `p528` rows re-measured and confirmed — grant and counter,
+>    14/14.** Star figures are now **exact**, not rounded page values
+>    (`49,216`, not `49.0k`). The hand-probe method was this base's only
+>    instrument and so was unfalsifiable; it is now falsifiable and it passed.
+> 2. 🟢 **Two rows added** — [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+>    (MIT, 57★, an ITS as a single MCP server, with **BKT**) and
+>    [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem)
+>    (**Apache-2.0**, TH Mittelhessen — the base's first *stated-origin* EMEA
+>    institutional agent under a permissive grant).
+> 3. 🔴 **The API grades licences badly, and the rule is now written down.** A
+>    clean SPDX id agreed with the title block **12/12**; but `NOASSERTION`
+>    resolved to a permissive grant, a copyleft grant, a non-OSI grant *and* no
+>    grant at all. **`feedbacksystem` is Apache-2.0 and the API would have
+>    discarded it.** See shelf rules 8–9 below.
+>
+> 🔴 **`p528`'s Moodle headline did not survive the new instrument** — eleven
+> codebases is **222**, and the field's ceiling is **ungranted**. Corrected in
+> full on [`../repos/trending.md`](../repos/trending.md).
 
 > **`p528` is a same-day second pass** — `p527` committed at 11:58 UTC, this one
 > ran from 12:47. Nothing on a star counter moves in fifty minutes, so this pass
@@ -39,7 +66,20 @@ No row is a header, a placeholder or an example.
 > there**, and filing it as ungranted puts a phantom in the census. This caught
 > one this pass: see [§ Not ungranted — absent](#-not-ungranted--absent).
 
-## Shelf — 14 verified education agents
+> 🔴 **What "buildable" on this file does and does not mean — stated, per
+> `Gap 528-C`.** Every grant below is a **repository-level** grant. This base has
+> **no instrument that enumerates dependency grants**, and
+> [`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle)
+> proved the gap is real: **MIT** at the repository, **AGPL-3.0 PyMuPDF** in the
+> shipped artefact. So a 🟢 here means *"the repository may be used"*, **never**
+> *"the built artefact may be shipped"*. 🔵 **Scoped cost of closing it:** a
+> reader for `requirements.txt` / `package.json` / `Cargo.toml` / `go.mod` that
+> resolves each direct dependency's grant — one pass's work for direct
+> dependencies, and genuinely hard transitively, which is where the AGPL risk
+> actually lives. **Until it exists, an engagement's own licence scan is the
+> control, not this file.**
+
+## Shelf — 16 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -57,6 +97,8 @@ No row is a header, a placeholder or an example.
 | 🆕 **ai-tutor-app** | [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | Apache-2.0 | 34 | unplaced | "Agentic RAG tutor for applied AI, LLMs, RAG, and Python: a LangGraph agent (FastAPI + Next.js)", grounded in a curated course and library corpus, with LangSmith tracing. 5 forks. Small, but it is the cleanest **readable reference implementation** of corpus-grounded tutoring on this shelf — the architecture, not the content, is the asset. |
 | 🆕 **corretor-enem** | [dsvi-b/corretor-enem](https://github.com/dsvi-b/corretor-enem) | MIT | 7 | 🟢 **LATAM (Brazil)** — product and ground truth; author's own country not stated | ENEM essay grader across the **five official competencies** (0–200 each, 0–1000 total), *agent-agnostic*: no API, no ML, no model weights. Calibrated against a local SQLite corpus of **11,147 real essays already marked by examiners** (Essay-BR). Methodology credited to Silva & Araujo (**UFPE**, 2024); corpora to `rafaelanchieta/essay` and `lplnufpi/essay-br`. 1 fork, 11 commits, no release. **Promotion owed since `p420` (24 Oct) and not paid until now.** |
 | **pedagogy-benchmark** | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | 13 | **EMEA origin + LATAM data** — *newly placed*, see note | Code for *"Benchmarking the Pedagogical Knowledge of Large Language Models"* — runs the **CDPK** (Cross-Domain Pedagogical Knowledge) and **SEND** (Special Educational Needs and Disabilities) benchmarks. Thirteen stars, no About line, and still the most useful repo here for a procurement conversation: it is how you answer *"which model actually knows how to teach"* rather than *"which model knows the subject"*. |
+| 🆕 **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** — title block `MIT License · Copyright (c) 2026 Arnaud Guiovanna`, **API agrees** | **57** | ⚠️ unplaced — no country on the profile or in the copyright line | *"An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive science, MIT licensed."* **Go**, 9 forks, created 30 Mar 2026, pushed **28 Oct 2026**, site `tutor-mcp.dev`. Topics name **`bkt`** — Bayesian Knowledge Tracing. 🟢 **The row this shelf was missing:** `OATutor` is the only other row with a real mastery estimator and it is an entire ReactJS application; this is the same pedagogy delivered as **one MCP server any assistant can mount**. |
+| 🆕 **feedbacksystem** | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** — title block `Copyright 2021 Technische Hochschule Mittelhessen · Licensed under the Apache License, Version 2`. 🔴 **API said `NOASSERTION`** | 24 | 🟢 **EMEA (Germany)** — *stated* in the copyright line | "Intelligent, personalized feedback for students using artificial intelligence." TypeScript, 10 forks, branch `dev`, pushed **28 Oct 2026**, live service at `frits.mni.thm.de`. **244 open issues against 10 forks** reads as a running institutional system rather than a demo. 🔴 **The API alone would have thrown this row away** — it is the evidence for shelf rule 8. |
 
 **Licence split:** **9 × MIT, 4 × Apache-2.0, 1 × BSD-3-Clause** — all fourteen
 buildable, every cell read from the licence file's title block.
@@ -132,6 +174,7 @@ the largest education-agent repository this base tracks stayed off the file.
 
 | Repo | Stars | Licence (title block) | Verdict |
 |---|---|---|---|
+| 🆕 [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | **134** · 23 forks | **CC0 1.0 Universal** — title block `Creative Commons Legal Code · CC0 1.0 Universal`, **API agrees** | 🟡 **Usable in most engagements, and disqualified in one specific kind.** `[WWW '25 Oral]` GenMentor — *"LLM-powered Multi-agent Framework for Goal-oriented Learning in Intelligent Tutoring System"*, WWW 2025 Industry Track. TypeScript, pushed 23 Oct 2026, live at `genmentor.aurax.live`. **CC0 is a public-domain dedication, not a software licence:** it grants *more* than MIT on copyright and **says nothing about patents**, which is why the OSI has never approved it for code. 🔵 **`Gap 528-D`'s category error in its purest form** — a content instrument applied to executable code by an author trying to be maximally generous. |
 | 🆕 [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | **926** · 130 forks | **Creative Commons Attribution-ShareAlike 4.0 International** | 🟡 **Usable, with a condition most engagements will not accept.** 165 evidence-grounded skills across 20 domains for teachers, school leaders and EdTech builders; the bundled MCP server exposes **157 tools and 165 prompts**; `v3.1.0`, **22 Oct 2026**, which retired the public hosted MCP service in favour of a portable edition. Claude, Codex and Hermes. Author Gareth Manning, *"20 years of international education experience across 27 countries"*, no country or institution stated — **unplaced**. |
 
 **Why this is its own band and not a trap row.** CC BY-SA 4.0 is a real grant and
@@ -162,9 +205,9 @@ trap rows; they are a third category this base had not written down.
 
 | Repo | Stars | What the repo says instead | Verdict |
 |---|---|---|---|
-| [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | **64** | Sidebar shows **no licence**. README's own License section says only *"This project is open source and available for educational purposes."* | ⛔ **Ungranted.** That sentence names no licence, grants no rights and would not survive five minutes of client legal review. The most substantial repo in this category — 6 agents, adaptive roadmaps, RAG Q&A, 15 forks. |
-| [idoforgod/Vibe-learning-AgenticWorkflow](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow) | 25 | Resources shows a **"License" link that anchors into the README**, not to a licence file. No licence type named anywhere. | ⛔ **Ungranted.** The sidebar link is the trap: it renders exactly like a real licence entry. |
-| [tosuki/moodle-mcp](https://github.com/tosuki/moodle-mcp) | — | A search result described this repo as *"MIT licensed."* **No licence file exists.** | ⛔ **Ungranted** — and a reminder that a search summary is not a verification channel. |
+| [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | **64** 🆕 *API-confirmed* | Sidebar shows **no licence**. README's own License section says only *"This project is open source and available for educational purposes."* | ⛔ **Ungranted.** That sentence names no licence, grants no rights and would not survive five minutes of client legal review. The most substantial repo in this category — 6 agents, adaptive roadmaps, RAG Q&A, 15 forks. 🆕 **`p529`: re-probed — grant still absent, and `pushed_at` is 2025-11-04. Abandoned for roughly twelve months.** The most substantial repo in this category is also the deadest. |
+| [idoforgod/Vibe-learning-AgenticWorkflow](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow) | 25 · 29 forks | Resources shows a **"License" link that anchors into the README**, not to a licence file. No licence type named anywhere. | ⛔ **Ungranted.** The sidebar link is the trap: it renders exactly like a real licence entry. 🆕 **`p529`: re-probed — no licence file at five paths on `main`, verdict stands. This is also the address that proves shelf rule 8** — the API returns `NOASSERTION` for it, which looks like "a grant exists" and is not. |
+| [tosuki/moodle-mcp](https://github.com/tosuki/moodle-mcp) | 🆕 **0** | A search result described this repo as *"MIT licensed."* **No licence file exists.** | ⛔ **Ungranted** — and a reminder that a search summary is not a verification channel. 🆕 **`p529`: counter read at last — `0★`, closing `p528`'s `—`.** |
 | [bobuel/bloom-taxonomy-quiz-builder-skill](https://github.com/bobuel/bloom-taxonomy-quiz-builder-skill) | 3 | Nothing. | ⛔ **Ungranted.** |
 | 🆕 [henriquebotelhogomes/educacao](https://github.com/henriquebotelhogomes/educacao) | 0 | "Mentora AI" — a Socratic RAG tutor with a learning-gap radar, Next.js + FastAPI. README present on `master`, no licence section. | ⛔ **Ungranted.** Probed on `main` and `master` across six paths. The repository resolves; the grant does not exist. |
 | 🆕 [Fatima0923/AssessmentAI](https://github.com/Fatima0923/AssessmentAI) | 0 | Multi-agent LLM essay-evaluation pipeline with human-in-the-loop review. README present on `main`. | ⛔ **Ungranted** — and it sits squarely in the one capability gap this base has carried longest, which is what makes the missing grant expensive rather than merely untidy. |
@@ -173,7 +216,7 @@ trap rows; they are a third category this base had not written down.
 
 | Address | What a search result said about it | What the probe found |
 |---|---|---|
-| 🔴 `belentani7/aprende-brasil` | A search summary described it in confident detail: *"plataforma educativa brasileña interactiva con tutor IA"*, a tutor named **"Nilo"**, an **offline LLM fallback**, **205 modules**, React + FastAPI + SQLite. | ⛔ **The address does not resolve.** `README.md` returns 404 on `main` and on `master`; the repository page returns **HTTP 404**. **No such repository.** |
+| 🔴 `belentani7/aprende-brasil` | A search summary described it in confident detail: *"plataforma educativa brasileña interactiva con tutor IA"*, a tutor named **"Nilo"**, an **offline LLM fallback**, **205 modules**, React + FastAPI + SQLite. | ⛔ **The address does not resolve.** `README.md` returns 404 on `main` and on `master`; the repository page returns **HTTP 404**. **No such repository.** 🆕 **`p529`: confirmed by a second instrument** — the address is also absent from a `repo:`-qualified GitHub API call. ⚠️ Per rule 9 the API absence alone would *not* have settled it; the 404 does. |
 
 🔴 **This is the third time this base has recorded a search summary describing a
 repository it cannot confirm exists** — after `tosuki/moodle-mcp` ("MIT licensed",
@@ -201,6 +244,10 @@ reads as first-hand and was not.
 5. 🆕 **Probe that the repository resolves before grading its grant.** `README.md`
    on `main` and `master`. A 404 everywhere means *absent*, not *ungranted* —
    see [§ Not ungranted — absent](#-not-ungranted--absent).
+   🆕 **`p529` amendment: filenames are case-sensitive on `raw`.** This pass's own
+   validation sweep filed `MikaDerBre/moodlemcpconnector` as unresolvable because
+   it fetched `README.md` and the repository ships **`readme.md`**. Try both
+   casings before reading a 404 as absence.
 6. 🆕 **Read the dependency licences, not only the repository's.**
    [sonstellar969/open-moodle](https://github.com/sonstellar969/open-moodle) is
    **MIT** and its own page states that its PDF-extraction dependency
@@ -211,6 +258,27 @@ reads as first-hand and was not.
    is a real grant with a ShareAlike condition and no patent clause — a fourth
    verdict band, not a pass and not a trap. See
    [§ A fourth verdict band](#-a-fourth-verdict-band-granted-but-not-under-a-code-licence).
+8. 🆕 **The GitHub API licence field *screens*; it never grades.** A clean SPDX
+   id (`MIT`, `Apache-2.0`, `GPL-3.0`, `BSD-3-Clause`, `CC0-1.0`) may be
+   recorded — it agreed with the title block **12 times out of 12** this pass,
+   and independently confirmed the `lumen` trap as **GPL-3.0**. But
+   **`NOASSERTION`, `Other`, or an absent `license` key means only "GitHub could
+   not assign an SPDX id"**, and this pass watched that one value resolve to four
+   different realities: a real permissive grant
+   ([thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) →
+   **Apache-2.0**), a real copyleft grant (`openeducat_erp` → **LGPL**), a real
+   non-OSI grant (`education-agent-skills`, `PageLM`, `advisingapp`,
+   `cn-math-taxonomy`) and **no grant at all** (`idoforgod`, `openSIS-Classic`,
+   `loyaniu/moodle-mcp`). 🔴 **Never read `NOASSERTION` as "ungranted" and never
+   as "fine" — read it as *the title block has not been read yet*.**
+9. 🆕 **Absence from an API search is not evidence of non-existence.** A
+   `repo:`-qualified call that returned six addresses in the same request did
+   **not** return `packbackbooks/lti-1-3-php-library` — an address this base
+   cites in its own history. ⛔ It is real: `README.md` is **HTTP 200 on
+   `master`** (404 on `main` — the *branch* was the trap, not the repo).
+   Existence is disproved only by a direct fetch 404ing on the actual default
+   branch. 🔵 This is rule 5's failure mode in reverse: the same credulity,
+   aimed at a new channel instead of a search summary.
 
 ## What is still missing
 

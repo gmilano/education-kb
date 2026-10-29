@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p528` · 2026-10-29.** Every platform below is a real, running system that
+**Pass `p529` · 2026-10-29.** Every platform below is a real, running system that
 institutions already operate, with its licence read this pass from **the licence
 file's own title block** (`raw.githubusercontent.com` is reachable while
 `github.com` returns HTTP 403 through the session proxy). The question this file
@@ -43,6 +43,38 @@ function they own.
 | **i-educar** | [portabilis/i-educar](https://github.com/portabilis/i-educar) | GPL-2.0 · 722★ | REST/DB integration. Brazil's largest free school-management system, born in **Itajaí (SC)** municipal government, on the federal Public Software Portal since 2008. For Brazilian public-sector work this is the incumbent, not an option. |
 | **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 · 648★ | Module system + PostgreSQL. Strong ES/FR/PT localisation; common in small and mid-size schools. |
 | ⚠️ **Advising App** | [canyongbs/advisingapp](https://github.com/canyongbs/advisingapp) | **Elastic-2.0** · 340★ | **Reference only — do not build on it.** AI advising and recruitment CRM for colleges; Elastic-2.0 prohibits offering it as a hosted service, which is the engagement shape. Read it for its data model (advising notes, engagement signals, outreach journeys), then build that model yourself. |
+
+| 🔴 🆕 **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | ⛔ **NO GRANT** · 347★ · 288 forks | 🔴 **Do not build on it, and do not believe the table that says you can.** Marketed on its own page as a *"commercial grade, secure, scalable"* Student Information System, and a widely-cited third-party comparison lists it as **GPL-2.0**. `p529` probed it both ways: the GitHub API returns **no `license` key**, and ⛔ **no licence file exists at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE` or `COPYING` on `master`**. Default copyright applies. This is `tosuki/moodle-mcp`'s failure mode at **347 stars and 288 forks** — and the first time this base has caught a *secondary source asserting a grant the repository does not carry*. |
+
+### 🆕 The SIS gap, measured rather than declared (`p529`)
+
+This base has carried *"no SIS or advising agent under a permissive licence"* as
+a declared gap for several passes. 🟢 **It is now a measurement.** Query:
+`student information system school management in:name,description stars:>40`,
+sorted by stars — **the global field at that threshold is four addresses**:
+
+| Address | Grant | ★ | State |
+|---|---|---|---|
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** (API + title block) | 648 · 394 forks | 🟢 alive — pushed 28 Oct 2026 |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | ⛔ **no grant** | 347 · 288 forks | 🟢 alive — pushed 26 Oct 2026 |
+| [`xrandx/Student-Information-Management-System`](https://github.com/xrandx/Student-Information-Management-System) | 🔴 AGPL-3.0 | 107 | ⛔ a university course project, last pushed **2021** |
+| [`OPTIMUM-LINKUP/Latest-Optimum-School-System`](https://github.com/OPTIMUM-LINKUP/Latest-Optimum-School-System) | 🔴 GPL-3.0 | 83 | ⛔ dead — last pushed **2017** |
+
+🔴 **Zero permissive. Zero.** Two are dead, one is ungranted, and the one live
+grantable system is GPL-2.0. Adding the ERP layer does not rescue it:
+**OpenEduCat is LGPL-3.0**, **Frappe Education GPL-3.0**, **i-educar GPL-2.0**,
+**Advising App Elastic-2.0**. A targeted check of the one permissive claim in
+circulation — a vendor table listing **Fedena as Apache-2.0** — found that
+`foradian/fedena` ⛔ **404s on `main` and `master`**; unverifiable at that address.
+
+🔵 **What this means for an engagement, stated as a decision rather than a lament.**
+The records layer of education is **structurally copyleft**, and unlike the LMS
+layer it has no `Kolibri` and no `OpenOLAT` to escape to. So do not plan to fork
+a SIS. **Plan to sit beside one**: the agent stays permissive and out-of-process,
+reads and writes over REST/SQL, and the copyleft core is deployed unmodified.
+That is the same architectural conclusion the LMS section reaches, arrived at
+from a field with *no* permissive option at all — which makes it the stronger
+version of the rule, not a weaker one.
 
 ## 3. Synchronous classroom
 

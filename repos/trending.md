@@ -4,6 +4,136 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p529` — `2026-10-29` — **🔴 `p528`'S MOODLE HEADLINE IS WRONG BY 20×, AND THE REASON IS WORSE THAN THE NUMBER. The field is not eleven codebases — the GitHub search API reports `total_count: 222`. The ceiling is not 27★ but **52★**, and 🔴 **the ceiling carries no licence file at all**. 🔴 But the finding that matters is this: of the 26 highest-starred addresses in the field, **18 were ALREADY somewhere in this base's 100k lines of history and none had reached a shelf** — including the field's #1 and #2. 🟢 The shape nobody had seen: the unit of this field is **one university, one bridge, built by a student** — and **LATAM and APAC ship them while North America ships none.**
+
+### 🔴 The correction, side by side
+
+| | `p528` (13 addresses, hand-probed) | `p529` (API census) |
+|---|---|---|
+| Field size | *"**eleven** independent codebases plus two forks"* | 🔴 **`total_count: 222`**; **80 read** (top 80 by stars, 2 pages) |
+| Ceiling | *"**27★**, `G36maid/moodle-mcp`, unchanged"* | 🔴 **52★, [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp)** — ⛔ **ungranted**. `G36maid` is **third** |
+| Permissive ceiling | — | 🟡 **45★, [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server)** (MIT, title block read) — but **pushed 22 Feb 2026**, eight months stale |
+| Star total | *"**37★** in total"* | 🔴 **352★ across the 80 read** — a floor; 142 addresses unread |
+| Licence spread | *"**ten of eleven MIT**"* | 🔴 MIT **44** · none **18** · GPL-3.0 **7** · `NOASSERTION` **4** · Apache-2.0 **4** · AGPL-3.0 **2** · WTFPL **1** |
+| → permissive | ~91% | 🟡 **48/80 = 60%** |
+| → **no usable grant** | 1 of 11 | 🔴 **22/80 = 27.5%** |
+
+### 🔴 The real `Gap 528-A` — the base had already ingested the field it then failed to census
+
+`p528` repaired **two** promotion debts and asked `p529` to sweep for more. The
+explicit-language sweep found none (see [`../agents/trending.md`](../agents/trending.md)).
+🔴 **That sweep was looking for the wrong thing.** Diffing all 80 census
+addresses against **every address in this base's history** (3,182 distinct
+addresses across the nine files):
+
+| | Count |
+|---|---|
+| Census addresses **already in this base's history** | 🔴 **25 of 80** |
+| …of those, **filed on any shelf or foundation file** | 🔴 **9** |
+| Census addresses **net-new to the KB** | 🟢 55 of 80 |
+
+🔴 **The two addresses the base had already seen and never filed include the
+field's #1 and #2** — `loyaniu/moodle-mcp` (**52★**, the ceiling) and
+`peancor/moodle-mcp-server` (**45★**, the permissive ceiling). So did
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+(**57★ MIT**, now shelf row 15),
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem)
+(**Apache-2.0**, now shelf row 16),
+[`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor)
+(**134★**, now band four) and
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (**347★**).
+
+🔵 **So the supply problem is not discovery and it is not promotion-wording — it
+is retrieval.** This base ingests addresses faster than it can re-find them. The
+explicit-promotion sweep returned "no debt" because the debt was never *worded*
+as a promotion; the addresses were ingested, described once in a dated section,
+and never looked at again. **A 100k-line append-only history with no index is a
+write-only store.** Registered as `Gap 529-A`, and it is the most expensive gap
+on this base: **every pass pays to rediscover what it already owns.**
+
+### 🟢 The census — top 26 of 80 read, by stars
+
+| Address | Grant (API) | ★ | Lang | Pushed | In base history? | Institution / what it is |
+|---|---|---|---|---|---|---|
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | ⛔ **none** | **52** | Python | 2026-06-29 | 🔴 **seen, never filed** | A Model Context Protocol (MCP) server implementation tha… |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **MIT** | **45** | JavaScript | 2026-02-22 | 🔴 **seen, never filed** | — |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | **MIT** | **27** | Rust | 2026-10-20 | 🔴 **seen, never filed** | MCP server that lets AI agents operate Moodle: courses,… |
+| [`kad-xyz/spbstu-mcp`](https://github.com/kad-xyz/spbstu-mcp) | **MIT** | **23** | Go | 2026-10-27 | 🔴 **seen, never filed** | 🟢 **EMEA** — Russia — SPbPU Polytech (`dl.spbstu.ru`) |
+| [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) | ⛔ **none** | 18 | PHP | 2026-07-23 | 🔴 **seen, never filed** | A Moodle web service plugin that implements the MCP for… |
+| [`1alexandrer/moodle-mcp`](https://github.com/1alexandrer/moodle-mcp) | **MIT** | 18 | TypeScript | 2026-04-21 | 🔴 **seen, never filed** | MCP server template for moodle.com educational platform |
+| [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | **MIT** | 10 | Python | 2026-06-06 | 🔴 **seen, never filed** | Model Context Protocol server giving AI assistants live… |
+| [`haanhtuandev/vgu-mcp`](https://github.com/haanhtuandev/vgu-mcp) | ⛔ **none** | 10 | Go | 2026-09-03 | 🔴 **seen, never filed** | 🟢 **APAC** — Vietnam — Vietnamese-German University |
+| [`IsaacAnwar/moodle-mcp`](https://github.com/IsaacAnwar/moodle-mcp) | **MIT** | 9 | JavaScript | 2026-10-04 | 🆕 net-new | Give Claude (or any MCP agent) read-only access to your… |
+| [`kesaruhasun/mcp-sliit-courseweb`](https://github.com/kesaruhasun/mcp-sliit-courseweb) | **MIT** | 7 | HTML | 2026-10-18 | 🔴 **seen, never filed** | 🟢 **APAC** — Sri Lanka — SLIIT Courseweb |
+| [`Deeptanshuu/mydy-lms-helper`](https://github.com/Deeptanshuu/mydy-lms-helper) | **MIT** | 7 | TypeScript | 2026-09-29 | 🔴 **seen, never filed** | A terminal UI application and MCP server for interacting… |
+| [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) | ⛔ **none** | 6 | TypeScript | 2026-10-01 | 🔴 **seen, never filed** | MCP server for any Moodle site: courses, deadlines, grad… |
+| [`Ilya-Grigoryev/moodle-student-mcp`](https://github.com/Ilya-Grigoryev/moodle-student-mcp) | **MIT** | 6 | Python | 2026-10-27 | 🆕 net-new | MCP server for Moodle LMS – tools for site info, courses… |
+| [`Jabir-Srj/moodle-connector`](https://github.com/Jabir-Srj/moodle-connector) | **MIT** | 6 | Python | 2026-03-30 | 🆕 net-new | 🟢 **APAC** — Malaysia — Taylor's University (`mytimes.taylors.edu.my`) |
+| [`yunfenglong/learning-mcp`](https://github.com/yunfenglong/learning-mcp) | 🟡 `NOASSERTION` | 5 | TypeScript | 2026-10-22 | 🆕 net-new | Cloud MCP suite for Ed Discussion, Moodle and OnTrack wi… |
+| [`iDavi/usp-mcp`](https://github.com/iDavi/usp-mcp) | 🔴 GPL-3.0 | 5 | Python | 2026-07-10 | 🔴 **seen, never filed** | 🟢 **LATAM** — **Brazil — Universidade de São Paulo** (+ JupiterWeb, e-Disciplinas) |
+| [`Snaw80/moodle-mcp`](https://github.com/Snaw80/moodle-mcp) | **MIT** | 4 | Python | 2026-06-13 | 🔴 **seen, never filed** | MCP server exposing Moodle Web Services to Claude, Curso… |
+| [`MarkyMarkMa/unnc-moodle-mcp`](https://github.com/MarkyMarkMa/unnc-moodle-mcp) | **MIT** | 4 | TypeScript | 2026-10-05 | 🆕 net-new | 🟢 **APAC** — China — Univ. of Nottingham Ningbo (unofficial) |
+| [`gafapa/moodle-local_moodlia`](https://github.com/gafapa/moodle-local_moodlia) | 🟡 `NOASSERTION` | 4 | PHP | 2026-10-28 | 🔴 **seen, never filed** | Moodle local plugin exposing MoodlIA automation over RES… |
+| [`threos/mcp4lms`](https://github.com/threos/mcp4lms) | 🔴 AGPL-3.0 | 4 | TypeScript | 2026-10-18 | 🆕 net-new | Connect Claude (or any MCP client) to your university's… |
+| [`KunyQi/moodle-downloader`](https://github.com/KunyQi/moodle-downloader) | **MIT** | 4 | Python | 2026-07-28 | 🆕 net-new | 🟢 **APAC** — Australia — UNSW |
+| [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | **MIT** | 3 | Python | 2026-09-19 | 🔴 **seen, never filed** | Moodle LMS MCP server: talk to your Moodle in plain Engl… |
+| [`MikaDerBre/moodlemcpconnector`](https://github.com/MikaDerBre/moodlemcpconnector) | ⛔ **none** | 3 | Python | 2025-10-15 | 🆕 net-new | This Python script connects to the Moodle API for use in… |
+| [`RichtsfeldJulian/tuwel-mcp`](https://github.com/RichtsfeldJulian/tuwel-mcp) | ⛔ **none** | 3 | Python | 2026-10-03 | 🆕 net-new | 🟢 **EMEA** — Austria — TU Wien (TUWEL) |
+| [`Equisdo/fich-mcp`](https://github.com/Equisdo/fich-mcp) | **MIT** | 3 | Python | 2026-09-08 | 🆕 net-new | 🟢 **LATAM** — **Argentina — FICH, Univ. Nacional del Litoral** (read-only) |
+| [`leshamblin/MoodleMCP`](https://github.com/leshamblin/MoodleMCP) | **MIT** | 2 | Python | 2026-08-30 | 🔴 **seen, never filed** | An MCP server that lets an AI assistant read and write M… |
+
+⚠️ **Measurement boundary, stated.** The API reports **222** matching addresses; this pass read the **top 80 by stars**. Everything below ~2★ is unread, so the licence distribution is a distribution *over the starred head of the field*, and **352★ is a floor, not a total**. Grants are **API-screened only** except where a title block is quoted — per shelf rule 8, `NOASSERTION` and `none` rows are *unread*, not *graded*.
+
+### 🟢 The structural finding — the per-institution instance is the unit
+
+**14 of the top 26** addresses exist to bridge **one named institution's** Moodle. Not a product with deployments: a codebase per campus, usually by a student, usually read-only, usually under 10★.
+
+| Region | Count | Institutions named in the top 26 |
+|---|---|---|
+| 🟢 **LATAM** | **5** | **Univ. de São Paulo** (Brazil) · **FICH–UNL**, **UTN**, **UTN FRLP**, **Univ. de San Andrés** (Argentina) |
+| 🟢 **APAC** | **5** | Vietnamese-German Univ. · SLIIT (Sri Lanka) · Univ. of Nottingham Ningbo (China) · Taylor's Univ. (Malaysia) · UNSW (Australia) |
+| 🟢 **EMEA** | **4** | SPbPU Polytech, RTU MIREA ×2 (Russia) · TU Wien (Austria) |
+| 🔴 **North America** | **0** | — **none in the top 26** |
+
+🔵 **This reframes the engagement, and it is the most commercially useful line in this pass.** `p528` concluded *"consolidate eleven codebases, publish a tool specification."* 🔴 **You cannot consolidate 222 repositories whose entire purpose is to be institution-specific.** A category with 222 instances and no convergence is not a missing product — it is a **missing template**. The asset is a **bridge generator**: one permissive, audited core (tool vocabulary, read-only by default, write-gating, token handling) plus per-tenant configuration, so an institution gets its bridge in a day instead of a semester project. **`P553` rewritten; new recipe `P558` in [`../compose/patterns.md`](../compose/patterns.md).**
+
+🔴 **And the demand signal is placed where Globant sells.** The regions hand-building these are **LATAM and APAC**; **North America ships none** — which does not mean no demand, it means NA institutional LMS integration is *bought* rather than *built*, so a productised bridge meets a buyer there and a competitor in LATAM.
+
+### 🔴 The ceiling is ungranted — the field's defining fact
+
+[`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) — **52★, 14 forks**, Python, pushed 29 Jun 2026 — is the most-starred Moodle MCP bridge in existence and **has no licence file**: no `license` key from the API, and ⛔ **no file at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE` or `COPYING` on `main`**. Two instruments agree. **Nobody can ship it.** The permissive leader, `peancor` at 45★, has been untouched since **22 Feb 2026**.
+
+🔵 **The field therefore has no usable incumbent** — the strongest argument for the template play above, and a materially better finding than "non-convergence".
+
+### 🟢 Re-measured this pass — already filed, now exact
+
+These were **already on this base's shelves**; `p529` adds API-exact counters and, where the API disagreed with the record, a title-block read. **None is a new find.**
+
+| Address | Filed on | `p529` measurement | Change |
+|---|---|---|---|
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | `foundations.md` (as `4.1k`), `verticals`, `patterns` | 🟢 **MIT** (API + title block) · **4,119★** · 165 forks · pushed 14 Aug 2026 | 🟢 exact counter; grant dual-sourced |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `foundations.md` (as LGPL-3.0, 900★) | 🟡 API `NOASSERTION` → 🟢 title block *"OpenEduCat is published under the GNU LESSER…"* · **900★ · 782 forks** · branch `19.0` · pushed **29 Oct 2026** | 🟢 **record confirmed** — and a clean rule-8 case: the API could not classify a grant the file states plainly |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `foundations.md`, `verticals`, `market.md` | 🟢 **GPL-2.0** (API + title block) · **648★ · 394 forks** · branch `mobile` · pushed 28 Oct 2026 | 🟢 confirmed |
+
+### 🔴 Net-new to the shelves this pass
+
+| Address | Grant | ★ | Where it goes |
+|---|---|---|---|
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** — API + title block | **57** · 9 forks | **shelf row 15.** ITS-as-one-MCP-server, **BKT** in its topics. Go, pushed 28 Oct 2026 |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟡 API `NOASSERTION` → 🟢 **Apache-2.0** | 24 · 10 forks | **shelf row 16.** Running institutional ITS, **TH Mittelhessen, Germany** (stated). 244 open issues |
+| [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) | 🟡 **CC0-1.0** — API + title block | **134** · 23 forks | **fourth verdict band.** WWW '25 Oral. Public-domain dedication on executable code — **no express patent grant** |
+| 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | ⛔ **no licence file** (5 paths, `master`); no `license` key | **347** · 288 forks | **[`../verticals/solutions.md`](../verticals/solutions.md), as a warning row.** 🔴 Marketed as a *"commercial grade"* open-source SIS, and a third-party comparison table states **GPL-2.0** — **the repository carries no grant.** `tosuki/moodle-mcp`'s failure mode at 347 stars |
+| ⚠️ `foradian/fedena` | — | — | ⛔ A vendor table lists Fedena as **Apache-2.0**. `README.md` **404s on `main` and `master`**; the API returns nothing. **Not verifiable at this address** — recorded as unverified, **not** as a phantom (rule 9) |
+
+### 🔵 Declared non-findings
+
+- 🔴 **`github trending education AI 2026` produced nothing usable.** No trending education repo with a verifiable star count; one aggregator's "trending" claim rested on a single secondary article, and a listed "agentic learning app" had **0★**. Both new shelf rows came from `topic:`-qualified API queries, which is now this base's primary discovery channel.
+- 🟡 **142 of 222 Moodle addresses unread.** Four more API pages closes it; the licence distribution would move, the ceiling almost certainly would not.
+- 🟡 **Tool counts not re-read.** `p528`'s 8 → ~230 range stands on its own reading; the API exposes no tool count, so that column is unchanged and uncorroborated.
+- 🔴 **No permissive SIS.** Measured, not asserted: at `stars:>40` the global SIS field is **four addresses** — GPL-2.0, no-grant, AGPL-3.0, GPL-3.0 (dead since 2017). See [`../verticals/solutions.md`](../verticals/solutions.md).
+
+---
+
 ## 🆕 `p528` — `2026-10-29` — **🟢 THE MOODLE MCP FIELD IS NOT THREE CODEBASES. IT IS ELEVEN, TEN OF THEM MIT, AND THEY SUM TO 37 STARS.** `p527` read this field as *"eight search results resolve to ~three real codebases"*; `p528` probed **thirteen addresses** — existence first, then the licence file's title block — and found **eleven independent codebases plus two confirmed forks**, in four languages, with tool counts spanning **8 → ~230**. 🔵 **The finding inverts: not absence, fragmentation.** Eleven people built the same bridge, ten of them permissively, and nobody converged on a tool vocabulary. 🔴 New probe failure recorded: **transitive copyleft** — an **MIT** repo that links **AGPL-3.0** PyMuPDF. 🔴 And one search summary described, in rich detail, a repository that **does not exist**.
 
 ### 🟢 The census — thirteen addresses, twelve probed first-hand this pass

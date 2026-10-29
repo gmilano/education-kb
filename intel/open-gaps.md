@@ -4,6 +4,185 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p529` — `2026-10-29` — **🟢 `528-A` CLOSES AND IMMEDIATELY REOPENS ONE SIZE LARGER: the promotion debt was never two addresses, it is a RETRIEVAL failure — 25 of 80 census addresses were already in this base's history and only 9 had ever reached a shelf, including the field's #1 and #2. 🟢 `528-B` CLOSES, NO PHANTOMS. 🟢 `528-C` and `528-D` ANSWERED with an instrument rule and a scoped cost. 🔴 `Gap 527-Moodle` DESTROYED, not reshaped: eleven is 222. 🔴 FOUR REGISTERED (`529-A`…`529-D`).**
+
+### 🟢 Gate posture — unchanged and stated
+
+`make hooks` **not run this pass.** `p522`'s **47/63** remains the last attested
+reading. **Nothing in `p529` is gate-attested.** This is the eighth consecutive
+pass with no gate run, which is itself worth a line: the attestation is now old
+enough that "last attested" and "currently true" should not be treated as the
+same claim.
+
+### 🔴 `Gap 529-A` — this base cannot re-find what it already owns
+
+**Measured.** Diffing the 80-address Moodle census against **every address in
+the nine KB files** (3,182 distinct addresses):
+
+| | Count |
+|---|---|
+| Census addresses already in this base's history | 🔴 **25 / 80** |
+| …of those, filed on **any** shelf or foundation file | 🔴 **9** |
+| Net-new to the KB | 55 / 80 |
+
+🔴 **The addresses it had seen and never filed include the field's #1 and #2** —
+`loyaniu/moodle-mcp` (**52★**, the ceiling) and `peancor/moodle-mcp-server`
+(**45★**, the permissive ceiling) — plus **every one of this pass's new shelf
+rows**: `ArnaudGuiovanna/tutor-mcp` (57★ MIT), `thm-mni-ii/feedbacksystem`
+(Apache-2.0), `GeminiLight/gen-mentor` (134★) and `OS4ED/openSIS-Classic` (347★).
+
+🔵 **Mechanism.** `p528` named the *rewrite* as the cause of lost promotions.
+That is real but secondary. The primary cause is that **an append-only history of
+100,000 lines has no index**: an address is described once in a dated section and
+is then unreachable except by full-text search for a string nobody remembers.
+`p528`'s explicit-language sweep returned "no debt" because it searched the
+**prose** (`worth shelving`) rather than the **addresses**.
+
+🔴 **This is the most expensive gap on this base** — every pass pays to
+rediscover what it already owns, and `p513` already ran one such drain ("19 → 28")
+without the mechanism being fixed, so it will recur.
+
+**Asked of `p530`:** build `evidence/address-ledger.tsv` — one row per address,
+columns `address · first_seen_pass · last_verdict · filed_on · last_measured`.
+🔵 **It is a compaction, not new collection**: `evidence/` already holds per-pass
+TSVs and the nine files are parseable. **The control belongs in front of every
+pass, not after a rewrite.**
+
+### 🟢 `Gap 528-A` — CLOSED as worded
+
+The explicit-promotion sweep ran: 8 candidates, 4 of them path artefacts, 4 real
+— `dsvi-b/corretor-enem` (shelved `p528`), `GarethManning/education-agent-skills`
+(band four, `p528`), `wwrwbs/AI_AWE` (filed), and `duck-5/moodle-mcp`, which is
+🟢 **filed on [`../repos/foundations.md`](../repos/foundations.md)** — not a debt;
+a bridge library's home is foundations, and the sweep only read `top.md`.
+🔴 **Superseded by `529-A`**, which is the same question asked properly.
+
+### 🟢 `Gap 528-B` — CLOSED. The ungranted table holds; no phantoms.
+
+All six pre-rule rows re-probed by **two** instruments. Every one resolves and
+every ungranted verdict stands. 🟢 Two open items closed with it:
+**`tosuki/moodle-mcp` = 0★** (`p528`'s `—`), and
+**`iwuzhu/kiro-ai-grading-system`** read — **MIT**, **0★**, 0 forks, a *Kiro
+University Challenge* submission. 🟡 Real, permissive, squarely in the integrity
+gap, **and not a row**: a 31 MB hackathon tree at 0★ is a reference, not a
+component. 🔵 It reframes the integrity gap usefully — **not unattempted,
+unadopted.**
+
+🔴 `belentani7/aprende-brasil` **confirmed absent** by a second instrument.
+⚠️ **With a caveat that became `529-B`:** the API absence alone would not have
+been sufficient.
+
+### 🔴 `Gap 529-B` — the new instrument has a false-negative mode
+
+**Measured.** `packbackbooks/lti-1-3-php-library` — an address **this base cites
+in its own history** — was **not returned** by a `repo:`-qualified API call that
+successfully returned six other addresses in the same request. ⛔ It exists:
+`README.md` is **HTTP 200 on `master`** (404 on `main`).
+
+🔴 **This is `528-B`'s failure mode in reverse** — the same credulity, aimed at a
+structured API instead of a search summary. Recorded as **shelf rule 9**:
+*absence from an API search is not evidence of non-existence; only a direct fetch
+404ing on the actual default branch disproves existence.*
+
+🔵 **The generalisable half, and the reason this is a gap rather than a note:**
+this base wrote a rule about trusting search summaries and did **not**
+generalise it to "any channel". A faster instrument **raises** the need for a
+second one, because speed is exactly what makes the check feel skippable.
+
+🔴 **And the same gap bit this pass a second time, in miniature.** `p529`'s own
+link-validation sweep flagged `MikaDerBre/moodlemcpconnector` as unresolvable —
+because the probe fetched **`README.md`** and this repository ships
+**`readme.md`**. ⛔ **A case-sensitive filename produced a false "does not
+exist"** on a repository the API had already returned with full metadata.
+➡️ **Shelf rule 5 amended:** the existence probe must try **`readme.md` and
+`README.md`** (and should fall back to any tracked path) before a 404 is read as
+absence. 🔵 Two false negatives from two different causes in one pass is the
+argument for `529-B` being a gap rather than a note.
+
+**Asked of `p530`:** sweep the `p529` census for addresses the API returned and
+`raw` cannot reach, and vice-versa. The disagreement rate between the two
+channels is currently **unknown**, and every count in this pass assumes it is low.
+
+### 🟢 `Gap 528-C` — ANSWERED on both halves
+
+1. 🟢 **The limitation is now stamped where the verdicts are published**, not
+   only here: [`../agents/top.md`](../agents/top.md) carries a block stating that
+   every grant on it is a **repository**-level grant and that a 🟢 means *"the
+   repository may be used"*, never *"the built artefact may be shipped"*.
+2. 🟢 **Scoped cost.** A reader over `requirements.txt` / `package.json` /
+   `Cargo.toml` / `go.mod` resolving **direct** dependency grants is roughly one
+   pass's work. 🔴 **Transitive** resolution is not — and transitive is where the
+   AGPL risk actually lives (`sonstellar969/open-moodle` → PyMuPDF). **Until it
+   exists, the engagement's own licence scan is the control, not this base.**
+
+🔴 **Still open:** no instrument built. The gap is now *scoped and disclosed*
+rather than *silent*, which is the improvement.
+
+### 🟢 `Gap 528-D` — ANSWERED, and the sweep found a second member
+
+Band four gains [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor)
+— **CC0-1.0** (both instruments agree), **134★**, WWW '25 Oral. 🟡 CC0 is a
+public-domain dedication, not a software licence: more permissive than MIT on
+copyright, **silent on patents**, never OSI-approved for code. 🔵 **The purest
+form of the category error** — a content instrument applied to executable code by
+an author trying to be maximally generous.
+
+🔴 **The reverse case — a code licence on data — was NOT swept.** `MIT`-on-a-corpus
+remains unchecked across the shelves. **Carried to `p530`.**
+
+### 🔴 `Gap 529-C` — the census has a measured denominator and an unmeasured tail
+
+**142 of 222** Moodle addresses are unread — everything below ~2★. So:
+**352★ is a floor**, and the licence distribution (**60% permissive, 27.5% no
+grant**) is a distribution **over the starred head**, not the field. 🔵 Four more
+API pages closes it. The ceiling will not move; the no-grant share probably
+**rises**, since unstarred repos are less likely to carry a licence file — which
+would strengthen, not weaken, this pass's conclusion.
+
+### 🔴 `Gap 529-D` — no LATAM market sizing on a comparable methodology
+
+**Measured.** MarketsandMarkets publishes per-geography AI-in-education reports
+for **North America, Europe and APAC** and **none for LATAM**. Every
+cross-regional comparison on [`market.md`](market.md) is therefore **not
+like-for-like for LATAM** — the one region this base is most often asked about.
+🔵 Closing it needs a paid report or national-ministry statistics, **not another
+search**; the limitation is now printed beside the numbers.
+
+### 🔵 Declared non-findings — stated so silence is not read as coverage
+
+- 🟢 **`p528`'s "the regional legs are saturated" is WITHDRAWN as stated.** They
+  were saturated on **statutes**. Re-running the same four legs reading for
+  **surveys and budget commitments** returned new attributable material in **all
+  four regions** — including the base's best-sourced LATAM dataset (UNESCO
+  IESALC, **200 institutions / 19 countries**: 87% using AI, **26%** with a
+  strategy, **8%** with a budget, **9%** with evaluation). 🔵 *"Saturated"* was a
+  property of the query, not the region.
+- 🔴 **Generic web search is now measurably the weakest channel this base has.**
+  `top open source AI agents education 2026 github MIT` and
+  `github trending education AI 2026` returned **zero** shelf-grade findings
+  between them; one aggregator attributed an MIT grant to a project it could not
+  name, another's "trending" claim rested on a single secondary article. **Both
+  new shelf rows came from `topic:`-qualified API queries.**
+- 🔴 **Still no permissive SIS — now measured, not declared.** At `stars:>40` the
+  global field is **four addresses**: GPL-2.0, **no grant**, AGPL-3.0 (dead 2021),
+  GPL-3.0 (dead 2017). 🔴 **Zero permissive.** The one permissive claim in
+  circulation (a vendor table listing **Fedena** as Apache-2.0) could not be
+  verified — `foradian/fedena` 404s on `main` and `master`.
+- 🔴 **A secondary source asserted a grant a repository does not carry** — a
+  widely-cited comparison table lists **openSIS** as GPL-2.0;
+  `OS4ED/openSIS-Classic` (**347★, 288 forks**) has **no licence file at five
+  paths**. First time this base has caught this specific direction of the error,
+  and at the largest star count yet.
+- 🟡 **Tool counts across the Moodle field remain `p528`'s hand-read numbers.**
+  The API exposes none, so the 8 → ~230 range is uncorroborated.
+- 🟡 **`ArnaudGuiovanna/tutor-mcp` is unplaced on purpose.** An author's name and
+  a `.dev` domain are not a country.
+- 🔴 **Chile's 2026 AI bill status unconfirmed**; **Canada and Mexico** education
+  policy returned nothing for the **fifth** consecutive pass. The NA leg remains
+  in substance a US leg.
+
+---
+
 ## 🆕 `p528` — `2026-10-29` — **🔴 THE PASS'S PRIMARY GAP IS THIS BASE'S OWN PROMOTION PATH. Two addresses it verified itself were absent from the shelf `p527` rebuilt 50 minutes earlier, and one of them FALSIFIED the LATAM gap note printed below it. 🟢 Both repaired. 🟢 `Gap 527-Moodle` RESHAPED from bytes: not three codebases, ELEVEN. 🔴 FOUR REGISTERED (`528-A`…`528-D`).**
 
 ### 🔴 `Gap 528-A` — the promotion sweep was never run, and is still not run
