@@ -4,6 +4,274 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p520` — `2026-10-29` — **🟢 THREE REGULATORY GAPS CLOSE WITH DATED, NAMED INSTRUMENTS: `Gap 520-A` (Quebec) — the suspension was lifted by an *arrêté* of **3 Dec 2025** and an *indication d'application* of **5 Dec 2025**, announced **19 Dec 2025**, with full compliance due **5 June 2026**, a deadline now PASSED. `Gap 520-C` (Vietnam) — the conflict dissolves: the Law took effect **1 Mar 2026**, and it is **Decision 33** (in force **15 Aug 2026**, 46 high-risk systems, **three of them education**) that sets the **1 Sep 2027** education deadline. `Gap 520-D` (Africa) — the leg finally PRODUCES CONTENT after two empty passes, and it REFINES this base's "EMEA = Europe + Gulf" claim rather than confirming it. 🔴 And the market-size spread WIDENED: a house read today puts 2026 at **$3.7B**, far below `p518`'s $9.58B–$11.4B floor. No headline figure is published.**
+
+### 🟢 `Gap 520-A` closes — Quebec, with the instruments and all four dates
+
+🔴 **What this base carried, and for how long.** `p519` discovered the suspension of generative-AI
+assistants in the Quebec public sector had been **lifted in late 2025**, after this base had
+carried it as in force for ~10 months. 🔴 It could not read the replacing guidelines: *"the
+guidelines' text and exact date are unasserted"*, recording only *"late 2025"*.
+
+🟢 **Now dated and named:**
+
+| | instrument | date |
+|---|---|---|
+| The suspension | *indication d'application* **`IA-RI-2025-001-OP`** | **March 2025** |
+| Revised ministerial order | *arrêté ministériel révisé* | 🟢 **3 December 2025** |
+| The replacing guidance | *indication d'application* on generative AI | 🟢 **5 December 2025** |
+| Public announcement | minister's office (**MCN**) | 🟢 **19 December 2025** |
+| 🔴 Full compliance deadline | — | 🔴 **5 June 2026 — PASSED** |
+
+🟢 **What the guidance actually requires**, which is what a studio needs: data protection, **staff
+training**, stated criteria for selecting generative-AI use cases, a **governance framework**, risk
+management, control measures, and an updated statement of principles carrying **12 ethical
+principles**. 🔵 Scope: all bodies subject to the *loi sur la gouvernance des ressources
+informationnelles* — which includes public education institutions.
+
+🔴 **The commercial consequence, and it is the opposite of a blocker.** The deadline has **passed**.
+Quebec public bodies are not waiting to be allowed to deploy generative AI — they are **already
+obliged to be compliant** and many will not be. 🟢 That is a remediation engagement with a
+statutory date behind it, not a greenfield pitch. `P529` is the architecture;
+[`../compose/patterns.md`](../compose/patterns.md) carries the `Pattern 32` retraction this closure
+forces.
+
+🔴 **Declared caveat:** read from Quebec press and sector coverage (*École branchée*, *Le Devoir*,
+*L'actualité*, *Cyberjustice*, UQAM *Collimateur*). 🔴 `cyber.gouv.qc.ca` and
+`collimateur.uqam.ca` remain **non-allowlisted from this session**, so the MCN texts themselves are
+still unread first-hand. The dates are corroborated across four independent outlets; the clause
+text is not asserted.
+
+### 🟢 `Gap 520-C` closes — Vietnam, and the "conflict" was two different clocks
+
+🔴 **The gap said:** *"One account: high-risk compliance 1 March 2027, +6 months for education
+systems live before 15 August 2026. Another: the law in force March 2026."* 🟢 **Both accounts were
+right about different instruments**, which is why no single clock could be asserted:
+
+| instrument | what it does | date |
+|---|---|---|
+| **Law on AI** | takes effect | 🟢 **1 March 2026** |
+| **Decision 33** (`33/2026/QD-TTg`) | names **46 high-risk AI systems** across six sectors | 🟢 in force **15 August 2026** |
+| Transition — other sectors | systems operating before the cutoff must comply | **1 March 2027** |
+| 🔴 Transition — **healthcare, education, finance** | systems operating before **15 Aug 2026** must comply | 🔴 **1 September 2027** |
+
+🟢 **The three education systems named high-risk**, and the naming is what makes this actionable:
+(1) **self-learning content drawn from uncontrolled data sources**, (2) systems that **grade or
+rank students**, (3) systems that **monitor learner behaviour using biometrics**.
+
+🔵 **Why that list is strategically useful.** It is narrower than the EU's Annex III and it is
+mechanism-specific. 🟢 A RAG tutor over a **curated, institution-supplied** corpus is outside
+category (1) by construction — the corpus is controlled. 🟢 A `P525`-shaped build, where BKT
+computes mastery and a human makes the decision, is outside (2) in substance. 🔴 Any proctoring or
+attention-tracking feature lands squarely in (3) and should be declined or quarantined.
+
+🔴 **The earlier "1 July 2027" figure is RETIRED** as an artefact of a pre-enactment draft.
+🔴 **Declared caveat:** read from law-firm and trade coverage (Baker McKenzie, Allen & Gledhill,
+Vietnam Briefing, MLex). The Vietnamese text of `33/2026/QD-TTg` was **not** read; the official
+gazette remains unfetched → `Gap 521-B`.
+
+### 🟡 `Gap 520-D` — Africa produces content, and the honest conclusion is NOT the one the gap proposed
+
+🔴 **The gap's framing:** *"Africa returned nothing substantive for a SECOND consecutive pass …
+the honest position is: 'EMEA' on these shelves means Europe plus the Gulf."* 🟢 **A third leg, run
+with different terms, returned substantive content** — so the framing was a search-channel artefact,
+not a fact about the continent. `Gap 511`'s class again, on a fourth axis.
+
+| jurisdiction / body | instrument | status |
+|---|---|---|
+| **Continent-wide** | national AI strategies adopted | 🟡 **16 African countries** as of mid-2025; only a small minority carry **education-specific** guidance |
+| **African Union** | **AU Digital Education Strategy & Implementation Plan** | 🟢 **2023–2028** — the continental reference point |
+| 🇰🇪 **Kenya** | National AI Strategy **2025–2030** | 🟢 Commits to embedding **AI literacy across education**; pilots **Digital Innovation Hubs (DigiKen)** as curriculum anchors |
+| 🇬🇭 **Ghana** | AI literacy + coding in the **KG–Primary 6** curriculum | 🟡 **Draft only** — government had **not adopted** the revised basic-school curriculum as of **August 2026** |
+| 🇿🇦 **South Africa** | Draft **National AI Policy 2026** | 🔴 **ABROGATED 27 April 2026** — it no longer stands. Its education goals (STEAM curricula, community AI centres) are withdrawn with it |
+
+🟢 **The corrected position, stated precisely.** Africa is **not** absent from these shelves for
+want of policy activity — there is a continental strategy, a costed national strategy with an
+education pillar (Kenya), and a curriculum revision in progress (Ghana). 🔴 **What is absent is a
+*binding* education-AI instrument**: no African jurisdiction read across three passes imposes
+enforceable obligations on an education AI deployment the way the EU AI Act, Vietnam's Decision 33
+or Korea's Framework Act do. 🟢 So the usable claim is narrower and more actionable than the gap's:
+**"EMEA" carries binding education-AI regulation only in Europe; in Africa the binding
+constraint is procurement and connectivity, not compliance.**
+
+🔴 **And `p518`'s refutation stands, re-confirmed.** No 2026 national policy **mandates open-source
+AI tools in schools**. Open source is **recommended** — one analysis urges governments to
+*"prioritise open-source and low-cost AI tools"* for rural and under-resourced teachers — and its
+worked example is **Estonia's, not an African one.**
+
+### 🔴 The 2026 market figure — the spread WIDENED, so no headline is published
+
+🔴 **`p518` published a range of `$9.58B–$11.4B` for 2026 global AI-in-education, from four houses
+read the same day.** A house read today sits **below that floor by a factor of ~2.6**:
+
+| house | 2026 global AI-in-education | forward |
+|---|---|---|
+| 🔴 **Persistence Market Research** | **~$3.7B** | → $14.1B by 2033 @ **21%** |
+| IMARC | ~**$9.0B** (from $6.4B in 2025) | → $79.6B by 2034 @ **31.35%** |
+| The Business Research Company | ~**$10.6B** | @ **40.9%** |
+| (unnamed house, carried) | **$11.4B** | → $57.2B by 2033 @ **25.9%** |
+
+🔴 **So the honest spread is now `$3.7B–$11.4B` — a 3.1× range on the same year and the same
+nominal subject.** 🟢 **`p518`'s range is therefore NOT republished**, and no average is taken: a
+mean across incompatible scopes is a fabricated number. 🔵 `Gap 519`'s hazard — *"which series is
+being cited?"* — is **re-confirmed for a third pass** and remains open. The one durable finding is
+unchanged: **Technavio's "$3.37B" is incremental growth, not market size**, and anyone quoting it
+as a 2026 total is wrong.
+
+🟢 **What IS quotable**, because it is structural rather than a dollar figure: North America leads
+share (estimates cluster **36–42%**), APAC is the fastest-growing region (one house: **24.8%**
+CAGR to 2033), and cloud deployment holds the largest share.
+
+### 🔵 The structural fact that organises every region below
+
+🔴 **Adoption is near-universal and governance is not**, and the gap between them is the business.
+🟢 Figures this base has verified across passes and re-confirmed in direction today: **~10% of
+institutions have formal AI guidelines**; **71% of US teachers lack AI training**; **3 in 4
+teachers lack the skills to teach with AI** (TALIS 2024 via OECD DEO 2026); LATAM **87% adoption
+against 26% strategy**. 🔵 Nobody is selling adoption any more. **The sellable artefact is the
+governance, the training and the audit trail** — and in Quebec, as of 5 June 2026, it is overdue.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The dated, overdue obligation is the opening.** Quebec public bodies — education institutions
+included — had until **5 June 2026** to comply with the MCN generative-AI *indication
+d'application* (12 ethical principles, governance framework, risk management, staff training,
+use-case selection criteria). 🔴 **That date has passed.** A compliance-remediation engagement
+here is not speculative: the instrument exists, the deadline is behind us, and the required
+artefacts are enumerated. 🟢 Offer: gap assessment against the 12 principles, the governance
+framework, the staff-training programme, and the decision log `P529` produces.
+
+🟡 **The US remains fragmented and that is the second opening.** ~**10%** of institutions have
+formal AI guidelines and **71%** of teachers lack AI training, while state law accretes piecemeal
+(Colorado, Texas, Oklahoma-style *"not the primary basis"* language). 🟢 `P525` sells into all of
+it at once, because every one of these regimes regulates **where the consequential decision
+lives**, not which model you used. 🔵 Market share: NA leads at **36–42%** by every house read.
+
+🔴 **Supply constraint to state plainly in any NA conversation:**
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) — the one maintained
+student-success/advising CRM at scale — is **Elastic-2.0**, read from served bytes this pass. You
+may self-host it for a client; you may **not** offer it as a managed service. There is still **no
+permissive alternative** (`Gap 513-F`, now settled on its original premise).
+
+### EMEA
+
+🟢 **The clock a studio must get right, and this pass corroborates it on a fresh channel.** EU AI
+Act **Annex III point 3** makes four education uses high-risk: admissions/placement, evaluating
+learning outcomes, assessing the appropriate education level, and monitoring students for
+prohibited behaviour during tests. 🟢 Those obligations apply from **2 December 2027**, deferred by
+**Regulation (EU) 2026/1744** — `p513` established this and **today's leg independently
+reproduces it**.
+
+🔴 **What was NOT deferred, and still bites:** **Article 50 transparency** has applied since
+**2 August 2026**, and the **emotion-recognition ban in education** since **February 2025**.
+🔴 A secondary outlet read today still asserts high-risk rules *"began applying in August 2026"* —
+the same misinformation `p518` logged. 🟢 **The build order therefore inverts**: transparency and
+the emotion-recognition prohibition are *present-tense* compliance; Annex III conformity is a
+**2027** programme with ~13 months of runway.
+
+🟢 **Three EMEA dates new to this base**, all 2026: political agreement on the deferral
+**7 May**; Council (education ministers) conclusions on **teachers in the era of AI** **11 May**;
+Commission **draft guidelines on high-risk classification** **19 May**. 🔵 The draft guidelines are
+the document an EU conformity engagement should be scoped against.
+
+🟢 **Supply, newly permissive and newly European.** 🇨🇭
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — **Apache-2.0**, 448★, descended from
+the University of Zurich's OLAT — is the **first permissive institutional LMS on these shelves**,
+and it changes what a sovereign-deployment pitch can offer: a permissive system of record, not a
+copyleft one plugged at arm's length. 🇫🇷
+[`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) is Apache-2.0 and
+French-curriculum aligned, at **0★** — licence-cleared, adoption-blocked.
+
+🔴 **Africa, within EMEA, carries no binding education-AI instrument** — see `Gap 520-D` above.
+The constraint there is procurement and connectivity, so the offer is `P526` (offline-first,
+`kolibri`), Kenya's **DigiKen** hubs and Ghana's **draft** KG–P6 curriculum, **not** compliance
+work. 🔴 South Africa's draft national AI policy was **abrogated 27 April 2026**: do not scope
+against it.
+
+### APAC
+
+🟢 **Two statutory clocks are now fully dated, and they are different shapes.**
+🇻🇳 **Vietnam**: Law in force **1 Mar 2026**; **Decision 33** in force **15 Aug 2026** naming
+**46 high-risk systems**, three of them education — self-learning content from **uncontrolled**
+sources, **grading/ranking**, **biometric behaviour monitoring** — with pre-existing systems due
+**1 Sep 2027**. 🇰🇷 **Korea**: Framework Act in force **22 Jan 2026** (carried from `p513`).
+🔵 Vietnam's mechanism-specific drafting is an **advantage** to a well-architected build: a curated
+corpus and a human decision boundary sit outside two of the three categories by design.
+
+🔴 **A single APAC adoption cell remains unusable**, and `p519` measured why: lower-secondary
+teacher AI use runs **~75%** (🇸🇬, 🇦🇪) against **<20%** (🇯🇵, 🇫🇷) — a ~**4×** spread *inside* the
+region (TALIS 2024 via OECD DEO 2026). 🟢 Quote the country, never the region. 🔵 Regulatory
+landscape is correspondingly fragmented: Singapore runs mature voluntary guidelines, China
+regulates algorithmic conduct, and the **ASEAN framework is early-stage** — so compliance is
+country-by-country, with no regional passport.
+
+🟢 **APAC is where this base's permissive supply actually lives.** 🇨🇳
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) — **MIT**, **41,726★**, pushed the day
+of this read — is the highest-star MIT education agent in this base. 🔴 **And APAC is where the
+licence trap lives too**: [`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy),
+the PRC-curriculum corpus every maths engagement would reach for, is **CC BY-NC 4.0** and refused.
+🇮🇳 [`pupilfirst`](https://github.com/pupilfirst/pupilfirst) is **MIT** but unmaintained since
+`2025-12-09`. 🟢 `P532` is the substitution recipe.
+
+### LATAM
+
+🟡 **The region's defining ratio is unchanged and it is the whole offer: ~87% adoption against ~26%
+strategy.** 🔴 Universities across most of the region operate in a **regulatory vacuum**, making
+isolated, uncoordinated decisions about AI use — which is precisely the condition that produces an
+incident and then a procurement.
+
+🟡 **Regulatory state, refreshed today.** 🇨🇱 **Chile** leads: a National AI Policy since **2021**
+and a bill under discussion. 🇧🇷 **Brazil**'s legislature is considering a framework that **borrows
+heavily from the EU's approach** — so a Brazilian build should be scoped to **Annex III shapes now**
+rather than retrofitted later. 🇧🇷🇨🇴 Brazil and Colombia have national strategies **without
+education-specific rules**. 🔴 A comparative study of 🇦🇷🇧🇷🇨🇱🇵🇪🇪🇸 found **marked differences in
+type, scope and implementation** — there is no regional template.
+
+🟢 **The regional asset is real and it is sovereign.** 🇨🇱 **Latam-GPT** (CENIA) trained on
+documents from Latin America, Puerto Rico and Spain. 🔵 Pair it with permissive local supply:
+`kolibri` (MIT, offline-first) for low-connectivity deployments and 🇧🇷
+[`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao)
+(MIT, 20,985★, `p518`) as a Portuguese-language curriculum corpus — 🟢 **and note that this one is
+MIT**, which is exactly what `cn-math-taxonomy` is not.
+
+🔴 **Chamilo (GPL-3.0) is the LMS actually deployed across LATAM public sector**, and its payload
+read today carries the **`or-later`** election — so it may be combined forward. 🟡 Plugin boundary
+still applies; do not fork it.
+
+### Global
+
+🔴 **No 2026 market headline is publishable** — the spread across four houses read is
+**$3.7B–$11.4B**, 3.1× on the same year. 🟢 Sell the structural facts instead: **~10%** of
+institutions have formal AI guidelines, **71%** of US teachers untrained, **3 in 4** teachers
+lacking the skills to teach with AI, cloud deployment dominant, APAC fastest-growing.
+
+🟢 **The cross-regional finding this pass contributes, and it applies in every market:** of the
+seven highest-profile education repos whose grant was unreadable until today, **three are refused
+outright for paid client work** and the three highest-starred of them are refused on **content**
+licences (CC BY-NC, bespoke non-commercial, CC BY-SA) rather than code licences. 🔵 In education the
+asset is curriculum, and **curriculum is licensed like publishing, not like software.** A licence
+clearance step that only checks code licences will pass exactly the wrong artefacts — `P530`.
+
+## 🔴 Declared gaps — `p520`, searched this pass and not found
+
+- 🔴 **No primary EU source read.** `artificialintelligenceact.eu`, `eur-lex.europa.eu`,
+  `www.oecd.org`, `cyber.gouv.qc.ca` and `collimateur.uqam.ca` are **all non-allowlisted from this
+  session** (`ENOTFOUND`). Every regulatory date above rests on secondary corroboration, and
+  **Regulation (EU) 2026/1744**'s OJ text remains unread — `Gap 513-D` / `483-K` stay open.
+- 🔴 **No named APAC education vendor or ministry programme** surfaced on the regional leg; it
+  returned general enterprise-AI adoption material. The APAC *supply* rows above come from repo
+  reads, not from the market leg.
+- 🔴 **No 2026 classroom-adoption figure for Latin America.** The regulatory comparison is solid;
+  the adoption series is not, and the ~87%/26% ratio is carried from `p513`'s multilateral source
+  rather than refreshed.
+- 🔴 **`Gap 518` (Mexico SEP participation base) NOT ATTACKED** — no Mexico leg ran. Said rather
+  than left to look addressed.
+- 🔴 **`Gap 516` (Mexico under both `North America` and `LATAM`) NOT ATTACKED.** 🟢 This pass placed
+  **no country twice**: its North America cell names Quebec and US states, its LATAM cell names
+  CL/BR/CO/AR/PE. The defect was not widened.
+
 ## 🆕 `p519` — `2026-10-29` — **🔴 THE CANADIAN LEG PRODUCES A RETRACTION, NOT A REFRESH: Quebec's suspension of generative-AI assistants — the strictest fact on this base's North America leg, and the constraint `Pattern 32` is built around — WAS LIFTED IN LATE 2025. This base has carried it as in force for roughly ten months. 🟢 `Gap 504` CLOSES WITH CONTENT after four passes: APAC K-12 teacher adoption is measured, and the spread INSIDE the region is ~4× (Singapore ~75% vs Japan <20%), so "APAC" as a single adoption cell is not usable. 🟢 LATAM gets its strongest evidenced figure set yet, from a TIER-1 multilateral. 🔴 A new APAC regulatory clock lands: Vietnam names education a HIGH-RISK sector by statute.**
 
 🔵 **Channel posture, stated before any figure.** Every regional leg below ran through the search
@@ -96,7 +364,7 @@ life-cycle rules; **Singapore** governs through toolkits (**AI Verify**) rather 
 
 ---
 
-## Opportunities by region
+## Opportunities by region — `p519`
 
 🔵 **How to read these.** Each cell names the instrument that binds, the demand figure with its
 issuer, and the opportunity that follows. Where a region returned nothing on an axis, the cell says

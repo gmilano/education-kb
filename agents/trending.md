@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p520` — `2026-10-29` — **🟡 THE WEEK'S STRONGEST EDUCATION-AGENT SIGNAL IS A WITHDRAWAL, NOT A LAUNCH: `education-agent-skills` shipped **v3.1.0 on 22 Oct 2026** and RETIRED its own hosted MCP service — public signup closed — pivoting to a portable, validator-checked skill edition. 🔴 And the week's two biggest star counts are both ungradeable-no-longer and both REFUSED: `PageLM` (2,050★) is a bespoke non-commercial licence, `cn-math-taxonomy` (4,925★ in eleven days) is CC BY-NC.**
+
+### 🟡 Signal 1 — a hosted agent service shut down in favour of portable skills
+
+🟢 **[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)**
+— **922★ / 130 forks**, pushed `2026-10-22`, **CC BY-SA 4.0** (read from served bytes this pass,
+`1 230` B, blob `c1286baf485e`). 165 evidence-grounded skills for teachers, school leaders and
+EdTech builders: pedagogy, learning science, curriculum, assessment.
+
+🔴 **What changed in v3.1.0, and it is the trend rather than the release.** The library **retired
+its own hosted public MCP service** — public signup is no longer offered — and shipped instead a
+**portable edition checked against the official Agent Skills validator**, plus 37 educational
+revisions and eight guides.
+
+🔵 **Why that direction is worth recording.** Running a hosted MCP endpoint for schools means
+carrying their data, their availability expectations and — in the EU, from `2026-08-02` — Article 50
+transparency duties. A **portable skill file** the institution loads into its own agent carries
+none of that. 🟢 It is the same pull toward local-first and self-hostable that `p519` measured on
+its own shelf (four of six new rows), reached here from the opposite end: a maintainer who tried
+hosting and stopped. `T520-8` in [`../intel/trends.md`](../intel/trends.md).
+
+🟡 **Licence caveat for a studio.** CC BY-SA 4.0 is **not** a code licence and **not** permissive.
+The skills are usable commercially, but ShareAlike binds derivatives: adapt a skill and the
+adaptation must ship under CC BY-SA 4.0. 🔵 Keep adapted skills in a separately-licensed directory
+and the obligation stays scoped to them.
+
+### 🔴 Signal 2 — the week's two highest star counts are both refused on licence
+
+| Repo | ★ | Momentum | Served licence | Verdict |
+|---|---|---|---|---|
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **4,925** / 1,262 forks | 🔴 created `2026-10-18` — **~4.9k★ in eleven days**, the fastest ramp on any education shelf in this base | 🔴 **CC BY-NC 4.0** | 🔴 **REFUSED** for paid client work |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2,050** / 279 forks | pushed `2026-10-28` | 🔴 **"PageLM Community License"** — bespoke, *"personal, educational, or non-commercial research purposes"* | 🔴 **REFUSED** for paid client work |
+
+🔴 **The trend-level point, and it is uncomfortable.** This file exists to record momentum. For two
+consecutive weeks the momentum leaders in education AI have been projects a studio **cannot
+build on**. 🟢 Momentum and buildability are orthogonal, and a trending list that does not carry
+the grant is an invitation to a licence incident. Every row in this file now carries one.
+
+🔵 **`PageLM`'s grant is the more instructive of the two.** It opens with MIT's exact words —
+*"Permission is hereby granted, free of charge, to any person obtaining a copy…"* — and then
+narrows the field of use to non-commercial. 🔴 A reader skimming the first line sees MIT. The
+grader this pass built refuses that shape by design: no standard name in the title window **plus**
+a commercial restriction in the body ⇒ `BESPOKE-NC`, and there is a control pinning it.
+
+### 🟡 Signal 3 — MCP-native intelligent tutoring is forming, at near-zero adoption
+
+🟢 Three MCP-native ITS servers surfaced this week, **all licence-verified permissive on served
+bytes**, and all with adoption too thin to shelve:
+
+- [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) — **MIT** (`1 073` B). *"Turns any LLM
+  into an Intelligent Tutoring System"*, persistent learner state. 🔴 **Invisible to the GitHub
+  search API** (`total_count: 0`) while its blobs serve at `200`, so ★ and liveness are unreadable.
+  Byte-identical LICENSE to [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
+  (blob `7f7f7a24de57`), whose copyright line it carries.
+- [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) — **Apache-2.0** (`11 338` B),
+  **9★**, pushed `2026-10-10`.
+- [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) —
+  **MIT** (`1 069` B), **0★**, pushed `2026-08-23`. Labs, exams and grading DSLs with human review
+  and sandboxed evaluation.
+
+🔵 **Why a 0★ repo is worth a line here.** The *shape* is the signal: a grading agent that ships a
+**human-review step and a sandboxed evaluator** is the architecture `P525` requires for EU Annex III
+and Oklahoma-style regimes. 🔴 The adoption is not there, so none of the three is shelved —
+recorded as probed-and-declined in [`../agents/top.md`](../agents/top.md).
+
+### 🟢 Confirmed live this week, top of the permissive shelf
+
+🟢 **[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC)** — **MIT**, **41,726★ / 6,454
+forks**, **pushed `2026-10-29`** (the day of this read), 🇨🇳 Tsinghua, **APAC**. Multi-agent
+interactive classroom; `v1.0.0` was `2026-08-27`. 🔵 Still the highest-star MIT education agent on
+this base, and the only row at that scale whose grant is confirmed on **two independent channels**
+(served bytes `1 065` B + search-API classifier).
+
+### 🔴 Declared gaps — searched this week, not found
+
+- 🔴 **No education-specific agent entered a mainstream GitHub-trending list this week.** The
+  trending legs returned general-purpose agents (OpenClaw, Hermes, goose) and third-party trackers;
+  the education rows they held were curated reading lists and course repos, not agents.
+- 🔴 **No permissive AI *grading* agent with real adoption exists.** The one Apache-2.0 candidate
+  aimed at teachers (`braiinz94/braiinz-education`) has **0★**; the one with grading DSLs has 0★;
+  the one with 20★ is GPL-3.0 and eight months stale.
+- 🔴 **`LearnHarness`** was reported by a third-party outlet at *"1.5k stars in 9 days"* and
+  **AGPL**. 🔴 No repository slug was resolvable from the search results, so **no row is written**
+  and the star figure is not carried. Registered as `Gap 521-C`.
+
 ## 🆕 `p519` — `2026-10-29` — new agent signals this window
 
 🔵 **Append-only.** This section is added above `p518`'s; nothing below is rewritten. Every row was

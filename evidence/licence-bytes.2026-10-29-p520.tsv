@@ -1,0 +1,14 @@
+# p520 — 2026-10-29 — SERVED licence bytes for every row Gap 520-B listed as blocked,
+# read over curl -> raw.githubusercontent.com (the channel p504 used and p518/p519
+# could not reach). Graded by compose/code/p520-licence-bytes/grade.py, 36/36 controls
+# green. Two rows are positive controls with independently known answers.
+slug	path	http	bytes	blob_sha1	spdx_served	verdict	permissive	paid_client_work	basis	prior_grade_on_these_shelves	control
+xiaoyang111222/cn-math-taxonomy	LICENSE	200	19347	fe463e0f7888bbf8b82e42d55f5743508ddafb7e	CC-BY-NC-4.0	NON_COMMERCIAL_REFUSED	no	NO	standard CC-BY-NC-4.0 body matched	NOASSERTION/UNREADABLE(p519); shelved as a foundation by p518	-
+canyongbs/advisingapp	LICENSE	200	3860	809108b857ffd2c2a93cafc5b69e496f3b6ace04	Elastic-2.0	SOURCE_AVAILABLE_RESTRICTED	no	NO	standard Elastic-2.0 body matched	NOASSERTION/NO_ASSERTION_POSSIBLE(p519)	-
+CaviraOSS/PageLM	LICENSE.md	200	8563	6759e05bb55c6b8c5e7c1e6b63c6bb7ba9ae2852	BESPOKE-NC	NON_COMMERCIAL_REFUSED	no	NO	no standard licence named in the title window; body restricts commercial use	NOASSERTION, blocked(Gap 520-B)	-
+GarethManning/education-agent-skills	LICENSE	200	1230	c1286baf485edf23727ab83bc756181212aff895	CC-BY-SA-4.0	SHAREALIKE_CONTENT	no	yes	standard CC-BY-SA-4.0 body matched	NOASSERTION, blocked(Gap 520-B)	-
+pupilfirst/pupilfirst	LICENSE	200	1684	451d134e257fc790c9c48c5ed89a4a4c1dafc2c1	MIT	PERMISSIVE	yes	yes	WRAPPER: bespoke headline over a verbatim MIT body; the body is the grant	NOASSERTION, blocked(Gap 520-B)	-
+OpenOLAT/OpenOLAT	LICENSE	200	10982	e8870c0f5f5250ab9011ba92e95435e5cc43671a	Apache-2.0	PERMISSIVE	yes	yes	standard Apache-2.0 body matched	NOASSERTION, blocked(Gap 520-B)	-
+claroline/Claroline	LICENSE	200	34616	f7340ca37d2d3473e75be8e1e25443584c472690	AGPL-3.0	COPYLEFT	no	yes	WRAPPER: bespoke headline over a verbatim AGPL-3.0 body; the body is the grant	NOASSERTION, blocked(Gap 520-B)	-
+learningequality/kolibri	LICENSE	200	1097	6506702f35f36c815395fb668e78dabb6c15ef54	MIT	PERMISSIVE	yes	yes	standard MIT body matched	MIT (positive control, asserted p519)	AGREES(MIT)
+chamilo/chamilo-lms	LICENSE	200	35147	94a9ed024d3859793618152ea559a168bbcbb5e2	GPL-3.0	COPYLEFT	no	yes	standard GNU body; version from title region; election=or-later	GPL-3.0 (positive control, asserted p519)	AGREES(GPL-3.0)

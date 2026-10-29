@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p520` — `2026-10-29` — **🔴 THIS SHELF LOSES ITS RICHEST ROW OUTRIGHT: `cn-math-taxonomy` is **CC BY-NC 4.0**, so `p519`'s demotion to `UNREADABLE` becomes a REFUSAL — it is not buildable in a paid engagement at any price. 🟢 And it gains the row this shelf has implicitly claimed was impossible: **`OpenOLAT` is Apache-2.0** — a full institutional LMS, permissive, 448★, pushed yesterday. 🔴 That REFUTES a standing claim on this very file: *"every deployed LMS of record is copyleft"* is now false. 🟡 `pupilfirst` is **MIT** and **eleven months stale** — permissive and not maintained are independent axes, and this row is the proof.**
+
+🔵 **What belongs here.** A foundation is something a studio builds *on* — a platform, a curriculum
+corpus, a runtime, or a provenance index. Agents compose; foundations carry. 🟢 Every grant below
+was read from **served bytes** this pass (`curl`→`raw.githubusercontent.com`), not from a
+classifier label; the channel note and its limits are in
+[`../agents/top.md`](../agents/top.md), and the per-row byte counts and blob SHA-1s are in
+[`licence-bytes.2026-10-29-p520.tsv`](../evidence/licence-bytes.2026-10-29-p520.tsv).
+
+### 🔴 The refusal — `cn-math-taxonomy` is off this shelf, and not because it is unread
+
+🔴 **[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy)** —
+**4,925★ / 1,262 forks**, created `2026-10-18`, **APAC** (aligned to the PRC national curriculum,
+课标). Served `LICENSE`, `19 347` B, blob `fe463e0f7888`: **`Attribution-NonCommercial 4.0
+International`**.
+
+🔴 **The consequence, stated without softening.** On substance this is still the richest curriculum
+corpus this base has found — **1,644 knowledge points, 2,403 prerequisite edges, 6,723 problems**,
+plus an adaptive prerequisite diagnostic. 🔴 **CC BY-NC forbids commercial use.** A Globant client
+engagement is commercial by definition, so this corpus cannot be ingested, embedded, fine-tuned on,
+or shipped — and `NonCommercial` is not cured by attribution, by a licence fee, or by using it
+"only for evaluation" inside paid work.
+
+🔵 **The three-pass history of this row is the lesson, not the row.** `p518` shelved it here on its
+star count. `p519` demoted it to `UNREADABLE` and wrote that *"the licence may well be
+permissive"*. 🟢 `p520` read the bytes: it is the **opposite** of permissive. **A star count is not
+a grant, and an unread grant is not a favourable one.**
+
+### 🟢 The gain this shelf has been asserting was impossible — a PERMISSIVE institutional LMS
+
+🔴 **The standing claim, quoted from this file's own `p519` section:** *"Every deployed LMS of
+record on `../verticals/solutions.md` is copyleft: Open edX **AGPL-3.0**, Moodle **GPL-3.0**,
+`frappe/education` **GPL-3.0**, `openeducat_erp` **LGPL-3.0**."* 🟢 **That enumeration was true of
+the rows it named and false as a generalisation**, and the whole `P528` package-boundary argument
+was built on the generalisation.
+
+| Repo | Served licence | ★ / forks | `pushed_at` | What it carries |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** `10 982` B `e8870c0f5f52` | **448** / 166 | `2026-10-28` | 🟢 Full institutional LMS — courses, assessment, groups, portfolio, catalogue — Java, descended from the University of Zurich's OLAT and maintained by frentix GmbH (🇨🇭 **EMEA**). The one LMS of record on these shelves a studio may fork into a **closed** derivative |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🟢 **MIT** `1 684` B `451d134e257f` | **980** / 278 | 🔴 **`2025-12-09`** | 🟡 Course + cohort platform with review/submission workflows (Rails + ReScript), 🇮🇳 **APAC**. 🔴 **Eleven months since a push** and not `archived`, so no flag warns you |
+
+🟢 **Why `OpenOLAT`'s `10 982` bytes are a verbatim Apache-2.0 and not a modified one — checked,
+not assumed.** The payload is the standard Apache-2.0 body through *"END OF TERMS AND
+CONDITIONS"*. It omits the optional **APPENDIX** (the "how to apply" boilerplate, which grants
+nothing) and appends two **attribution statements** naming the OLAT Zentrum at the University of
+Zurich and the OpenOLAT community. 🔵 Those statements add **no terms, no conditions and no
+restrictions** — they are provenance prose. That is why the byte count differs from the canonical
+`11 358` while the grant does not.
+
+🔴 **What this does NOT do.** It does not retract `P528`. Shipping a permissive agent into Moodle
+or Open edX across a SCORM/LTI package boundary is still the right recipe **for clients already on
+those systems**, which is most of them. 🟢 What changes is that a **greenfield** institutional
+engagement now has a permissive system-of-record option, and `P531` in
+[`../compose/patterns.md`](../compose/patterns.md) wires it.
+
+### 🟡 `pupilfirst` — the row that separates "permissive" from "maintained"
+
+🔴 **MIT, 980★, 278 forks, and `pushed_at` `2025-12-09`.** `p519` established the liveness rule on
+`menthorlabs/menthor`: `updated_at` moves when metadata moves, so only `archived` and `pushed_at`
+are liveness signals. 🟡 **`pupilfirst` is the next case along that axis and a harder one**: it is
+**not** archived, so nothing on the repo page warns a reader, yet it has had no push in
+**~10.7 months**.
+
+🟢 **The rule this shelf now carries, derived from the two rows together:** a grant verdict and a
+liveness verdict are **independent**, and a row needs both before it is proposed to a client.
+`pupilfirst` passes on grant and fails on liveness; `cn-math-taxonomy` is pushed `2026-10-28` and
+fails on grant. 🔵 Neither defect is visible in the field a studio usually checks.
+
+### 🟢 Grant re-verified from bytes, carried rows
+
+| Repo | Served licence | ★ / forks | Note |
+|---|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** `11 358` B `(canonical length)` | **6,951** / 5,861 | 🟢 Interactive-lesson authoring whose model encodes misconceptions explicitly — maps onto BKT skill nodes. `P525`'s delivery surface, now byte-verified |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | 🟡 **AGPL-3.0** `34 616` B `f7340ca37d2d` | **347** / 201 | 🔴 A **WRAPPER**: line 1 says *"Claroline Connect License"*, the body is verbatim AGPL-3.0. Default branch is `15.0`, not `main`. Network copyleft — a hosted derivative must offer source |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 🟡 **GPL-3.0**, `or-later` | — | 🔵 Read as a **positive control**, and it caught a real grader defect (see `../agents/top.md`). `or-later` means it may be combined forward |
+
 ## 🆕 `p519` — `2026-10-29` — **🟢 THIS SHELF GAINS THE TIER IT HAS BEEN MISSING ALL ALONG — THE INTEROPERABILITY LAYER, AND IT IS PERMISSIVE ON BOTH RUNGS: `tsugiproject/tsugi` (**Apache-2.0**, LTI / Common Cartridge, pushed TODAY) and `jcputney/scorm-again` (**MIT**, SCORM 1.2 + 2004 runtime). 🟢 That pair is what makes a permissive agent shippable INTO an AGPL or GPL LMS without the agent inheriting the copyleft. 🔴 And `cn-math-taxonomy`, shelved here by `p518`, is DEMOTED to `UNREADABLE`: its grant is `NOASSERTION` and this session cannot read a served byte.**
 
 🔵 **What belongs here.** A foundation is something a studio builds *on* — a platform, a

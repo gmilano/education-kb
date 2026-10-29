@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p520` — `2026-10-29` — **🟢 FOUR GAPS CLOSE WITH CONTENT — `520-A` (Quebec, four dates + the required artefacts), `520-B` (the served-licence channel, SEVEN rows graded), `520-C` (Vietnam, the conflict dissolved into two clocks), `520-E` (the `P383` contract now REPAIRS itself, demonstrated on the live file this pass). 🟡 `520-D` closes PARTIALLY and REFUTES its own framing — Africa was a search artefact, not an absence. 🔴 `520-F` is HONOURED. 🔴 And the pass's hardest result is a condemnation, not a rescue: of the seven rows `520-B` unblocked, THREE are refused for paid client work and the three highest-starred are refused on CONTENT licences.**
+
+### 🟢 Gate posture — the gate RAN, a second invocation ALSO ran, and the REDs are now ATTRIBUTED
+
+🟢 **`make hooks` ran, unpiped and captured in full: 964 lines / 91,111 bytes, 116 `PASS` lines.**
+🔴 **45 of 63 gates green**, 18 RED. 🔵 That is **+1 on `p519`'s 44/63** and equal to `p511`'s
+attested best.
+
+🟢 **`Gap 520-F` is honoured and this is what it bought.** `p519` piped `make hooks` through `tail`,
+kept only the final ~3.7 KB, and had to write that *"the per-gate detail for the other seventeen
+RED gates is NOT read first-hand"*. 🟢 This pass redirected the whole stream to a file, so every
+gate's output survives.
+
+🟢 **And a second gate invocation was NOT denied this session.** `p519` found the `Code from
+External` denial to be **non-deterministic** and could not re-run a single gate to attribute a RED.
+🟢 `p520` re-ran **three** gates individually — `gate-tables`, `gate-dates`,
+`gate-shelf-consistency` — which confirms `p519`'s non-determinism finding and, for the first time,
+lets the REDs be attributed rather than merely listed:
+
+| gate | finding | attributable to `p520`? |
+|---|---|---|
+| `gate-tables` | 3 × `BLANK-SPLITS-TABLE` at `agents/top.md:1716`, `repos/foundations.md:975`, `verticals/solutions.md:948` | 🟢 **NO.** `p520`'s sections end at lines **147**, **83** and **61** respectively — every defect is hundreds of lines *below* them. **Pre-existing backlog** |
+| `gate-dates` | 1 × `ASSERTED` at `intel/market.md:1198` | 🟢 **NO.** `p520`'s market section ends at line **275**. **Pre-existing backlog** |
+| `gate-shelf-consistency` | `openeducat/openeducat_erp` carried as **LGPL-3.0**, **GPL-3.0** and **MIT** across the shelves | 🟢 **NO — and the gate is wrong here.** See below |
+| `gate-promotion-ledger` | 57 findings, all `RESTORED-p436` rows on no live shelf | 🔴 **NO** — a `p436` backlog, ~84 passes old (`p519` established this) |
+| `gate-cell-reproduction` | *"zero published cells parsed — a parse fault, not a clean shelf"*; its own **29 controls PASS** | 🔴 **NO** — the instrument is sound, its input is not |
+
+🟢 **`gate-register-currency` is GREEN this pass**, where `p519` recorded it RED because its
+register section was missing from the working tree. `P418`'s requirement — the register's newest
+section matches the shelves' — is met by this section.
+
+### 🔴 `gate-shelf-consistency` has a FALSE-POSITIVE class, and `p520` settled the cell it flagged
+
+🟢 **The grant is now read first-hand, so the disagreement is resolvable:**
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) served `LICENSE`,
+**`8 241` B**, blob **`ef163fea81aa`**: *"OpenEduCat is published under the GNU LESSER GENERAL
+PUBLIC LICENSE, Version 3 (LGPLv3)"*. 🟢 **LGPL-3.0 is correct**, and every `LGPL-3.0` cell the
+gate listed — including `p520`'s own at `verticals/solutions.md:26` — is right.
+
+🔵 **It is a fourth WRAPPER**, on the same axis as `Claroline`: line 1 reads *"For copyright
+information, please see the COPYRIGHT file."* and the grant is named on line 2. A headline-only
+reader learns nothing from it.
+
+🔴 **The two dissenting cells are at `intel/open-gaps.md:1557`, and they are not shelf claims at
+all.** That line is **`Gap 460-D`**, which *reports* `gmilano/globant-kb`'s stale `education/` tree
+for **serving wrong grants**, and quotes the wrong values as its evidence. 🔴 **The gate credits a
+quoted defect as a live assertion.** 🟢 So no edit is made: rewriting that line would delete the
+report of a defect in order to satisfy a parser that misread it.
+
+🔵 **This is `p455`'s retraction class on a new instrument** — *"adjacency is not attribution"* —
+and `Gap 515`'s unswept-prose class in the same place. Registered as `Gap 521-G`.
+
+### 🟢 Closed, or closed with content — `p520`
+
+| gap | disposition |
+|---|---|
+| 🟢 **`Gap 520-B`** (`NOASSERTION` the largest blocker; no channel can read a served byte) | 🟢 **CLOSES, on exactly the condition the gap set** — *"closes with ONE raw-file read per slug on any channel that can fetch a blob"*. 🟢 `curl`→`raw.githubusercontent.com` **works** (and `WebFetch`→the same host independently). **All 7 blocked slugs read at `200`** with byte counts and git blob SHA-1s; graded by a reader with **40/40 controls** green from two working directories. 🔴 **The result condemns rather than rescues:** only **2 of 7** are permissive, **3 of 7** are refused for paid work. 🔴 `cn-math-taxonomy` is **CC BY-NC 4.0**, not the *"may well be permissive"* `p519` allowed. 🔴 **The channel was `p504`'s all along** — `Gap 511`'s class, third confirmation, and this time with a measured cost |
+| 🟢 **`Gap 520-A`** (Quebec guidelines unread; `Pattern 32` carries a withdrawn premise) | 🟢 **CLOSES on both actions the gap named.** Dates: *arrêté révisé* **3 Dec 2025**, *indication d'application* **5 Dec 2025**, announced **19 Dec 2025**, full compliance **5 June 2026 — PASSED**. Required artefacts enumerated (data protection, staff training, use-case criteria, governance framework, risk management, controls, **12 ethical principles**); scope = all bodies under the *loi sur la gouvernance des ressources informationnelles*. 🟢 **`Pattern 32` is RETRACTED IN TEXT** in [`../compose/patterns.md`](../compose/patterns.md), which `P529` had not done. 🔴 Caveat: `cyber.gouv.qc.ca` non-allowlisted, so **clause text is still not asserted** — four independent Quebec outlets corroborate the dates only |
+| 🟢 **`Gap 520-C`** (Vietnam commencement conflicted) | 🟢 **CLOSES — and the "conflict" was two instruments, so neither account was wrong.** Law on AI in force **1 Mar 2026**; **Decision 33 (`33/2026/QD-TTg`)** in force **15 Aug 2026**, naming **46 high-risk systems** across six sectors, **three of them education** (self-learning content from **uncontrolled** sources; **grading/ranking**; **biometric** behaviour monitoring); pre-existing systems due **1 Mar 2027**, or **1 Sep 2027** for health/education/finance. 🔴 The *"1 July 2027"* figure is **RETIRED** as a pre-enactment draft artefact. 🔴 The Vietnamese statute text is unread → `Gap 521-B` |
+| 🟢 **`Gap 520-E`** (`P383` region-heading contract regressed three times; fixed-position contract in a prepend-only file) | 🟢 **CLOSES WITH A WORKING INSTRUMENT, on the gap's own named closure** — *"make the gate repair it rather than only detect it"*. [`compose/code/p520-region-heading-repair/`](../compose/code/p520-region-heading-repair/) demotes every bare heading after the first to `— pNNN`, read by scanning **backwards** for the owning pass marker; **15/15 controls** green from both working directories, including a **refusal control** (an orphan heading with no marker above it is reported `UNREPAIRABLE`, never guessed) and an **idempotence** assertion. 🟢 **Demonstrated live this pass:** prepending `p520`'s section created the fourth regression, and the tool repaired it automatically (`line 367 -> p519`). The `p383` gate then passed `0` findings |
+| 🔴 **`Gap 520-F`** (`p519` piped `make hooks` through `tail`, destroying early gate output) | 🔴 **HONOURED.** This pass captured `make hooks` **unpiped, in full, to a file**, so no gate's output is consumed. The gate posture below is read from the complete capture |
+| 🟡 **`Gap 520-D`** (Africa returned nothing for two passes; *"EMEA means Europe plus the Gulf"*) | 🟡 **CLOSES PARTIALLY, and REFUTES its own framing.** A third leg with different terms returned substantive content: **16 African countries** with national AI strategies (mid-2025); **AU Digital Education Strategy 2023–2028**; 🇰🇪 Kenya's **2025–2030** strategy with an AI-literacy education pillar and **DigiKen** hubs; 🇬🇭 Ghana's **KG–P6** AI-literacy curriculum **still unadopted** as of Aug 2026; 🔴 🇿🇦 South Africa's draft **National AI Policy 2026 ABROGATED 27 April 2026**. 🟢 So the framing was a **search-channel artefact** (`Gap 511`'s class, fourth axis). 🟢 **The corrected, narrower claim:** *"EMEA" carries binding education-AI regulation only in Europe; in Africa the binding constraint is procurement and connectivity, not compliance.* 🔴 `p518`'s refutation **stands**: no 2026 national policy mandates open-source AI tools in schools |
+| 🟡 **`Gap 513-F`** (no permissive student-success / advising CRM) | 🟢 **SETTLED ON ITS ORIGINAL PREMISE.** `p519` re-scoped it to *"the one candidate's grant is unreadable"*; the bytes say [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) is **Elastic-2.0** (`3 860` B, blob `809108b857ff`). 🔴 The gap's first wording — *"only Elastic-2.0 exists"* — was **correct**, and the re-scope was a sandbox artefact. Self-hostable for a client; **never** offered as a managed service |
+| 🟡 **`Gap 513-E`** (no count except as a derived value) | 🟢 **STANDING, HONOURED.** Every licence figure in `p520` — 9 payloads at `200`, 7 shelf rows graded, 2 permissive, 3 refused for paid work, 2 wrappers, 0 `UNSTATED`, 2 controls agreeing — is emitted by [`emit_evidence.py`](../compose/code/p520-licence-bytes/emit_evidence.py) from saved payloads into [`licence-bytes.2026-10-29-p520.tsv`](../evidence/licence-bytes.2026-10-29-p520.tsv). No licence figure in this pass's prose was typed by hand |
+| 🟡 **`Gap 519`** (which Grand View series?) | 🔴 **RE-CONFIRMED a third pass, and the spread WIDENED.** Persistence Market Research puts 2026 at **~$3.7B**, breaking `p518`'s **$9.58B** floor from below; the honest range is now **$3.7B–$11.4B**, **3.1×** on one year. 🟢 **No headline and no average published.** The durable correction stands: Technavio's *"$3.37B"* is **incremental growth**, not a market size |
+
+### 🔴 Unmoved, and said so
+
+| gap | disposition |
+|---|---|
+| 🔴 **`Gap 513-D`** · **`Gap 483-K`** (EUR-Lex / Reg. (EU) 2026/1744 unread) | 🔴 **NOT CLOSED.** 🟢 **Content advanced on a secondary channel**: today's EMEA leg independently reproduced `p513`'s finding — Annex III education duties apply **2 Dec 2027**, deferred by **Regulation (EU) 2026/1744** — and added three 2026 dates new to this base (political agreement **7 May**; Council education-ministers conclusions on teachers **11 May**; Commission **draft guidelines on high-risk classification 19 May**). 🔴 **No primary text read**: `artificialintelligenceact.eu` joins `eur-lex.europa.eu`, `www.oecd.org`, `cyber.gouv.qc.ca` and `collimateur.uqam.ca` as `ENOTFOUND` — **five** non-allowlisted hosts now recorded. The ask is unchanged and precise: read **Regulation (EU) 2026/1744** (OJ, 24 July 2026) |
+| 🔴 **`Gap 514`**, **`Gap 513`**, **`Gap 505`** (classifier-level grant defects) | 🟡 **NOW ATTACKABLE, NOT YET ATTACKED.** All three required reading a served licence payload, which `p519` could not do and `p520` can. 🔴 `p520` spent the channel on the **7 rows `Gap 520-B` named** rather than on these, and says so rather than implying coverage. 🟢 The precondition is removed; a successor with the same channel can close them. Re-registered as `Gap 521-D` |
+| 🔴 **`Gap 518`** (Mexico SEP participation base conflicted) | 🔴 **NOT ATTACKED.** No Mexico leg ran this pass |
+| 🔴 **`Gap 516`** (Mexico under both `North America` and `LATAM`) | 🔴 **NOT ATTACKED.** 🟢 But **not widened**: `p520` placed no country twice — its North America cell names Quebec and US states, its LATAM cell names 🇨🇱🇧🇷🇨🇴🇦🇷🇵🇪 |
+| 🔴 **`Gap 515`** (a claim in PROSE is unswept) | 🔴 **NOT ATTACKED.** 🔵 And `p520`'s headline claims are prose, so they are unswept too |
+| 🔴 **`Gap 504-E` class** (register edited, shelf not) | 🟢 **GUARDED THIS PASS.** The `Pattern 32` retraction was written to [`../compose/patterns.md`](../compose/patterns.md) — the **shelf** — not only to this register, which is the exact defect `p504` recorded |
+
+### 🔴 Registered by `p520`
+
+| gap | what it is |
+|---|---|
+| **`Gap 521-A`** | 🔴 **No permissive SIS at institutional scale**, now **five passes** old. `OpenEduCat` (**LGPL-3.0**) remains the only credible single-schema LMS+SIS, so any student-records requirement forces a separate-module boundary. 🟢 `P531` gives a fully-permissive stack for everything **except** student records, and that is the one rung still copyleft. 🟢 **Closure:** find or refute a permissive SIS — `academico-sis/academico` (MIT, 409★, `p519`) is the nearest candidate and has **never been assessed for institutional scale** |
+| **`Gap 521-B`** | 🔴 **Vietnam's `33/2026/QD-TTg` is carried on law-firm and trade coverage only** (Baker McKenzie, Allen & Gledhill, Vietnam Briefing, MLex). 🟢 Four outlets agree on all four dates and on the three education mechanisms, so the clock is usable — 🔴 but the **46-system list** is summarised, not read, and the Vietnamese gazette text is unfetched. A compliance opinion needs the statute |
+| **`Gap 521-C`** | 🔴 **`LearnHarness` is reported at *"1.5k stars in 9 days"* and AGPL by a third-party outlet, and NO repository slug was resolvable.** 🟢 No row was written and the star figure is not carried. If real, it is the fastest-growing education agent of the week and this base is blind to it. **Closure: resolve the slug**, then one metadata read and one licence-byte read |
+| **`Gap 521-D`** | 🟡 **`Gap 505`/`513`/`514` are unblocked but unattacked** (see above). 🟢 The channel exists; the work is a sweep of every remaining `NOASSERTION` row on these shelves — `p504`'s TSV and `p520`'s together cover **12** slugs, and the register's own history names more. **Closure: enumerate the remaining set and read it** |
+| **`Gap 521-E`** | 🔴 **The two `tutor-mcp` copies are unresolved as to direction.** [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) and [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) serve **byte-identical** `LICENSE` blobs (`7f7f7a24de57`) and the payload carries **`Copyright (c) 2026 Arnaud Guiovanna`**, so `kvnloo` is **INFERRED** to be the copy. 🔴 Fork metadata is unreadable (search returns `total_count: 0` for `kvnloo/tutor-mcp`), so the direction is **not asserted** and neither copy is shelved. 🟢 **Closure: one read on a channel that returns fork metadata** |
+| **`Gap 521-G`** | 🔴 **`gate-shelf-consistency` credits a QUOTED grant as a live shelf assertion.** It flagged `openeducat/openeducat_erp` as carrying three licences; `p520` read the served bytes (**LGPL-3.0**, `8 241` B, blob `ef163fea81aa`) and the two dissenting cells are both at `intel/open-gaps.md:1557` — **`Gap 460-D`**, which *reports* another repository for serving those wrong grants and quotes them as evidence. 🔴 The gate cannot tell a quoted defect from an assertion, so it demands an edit that would delete a defect report. 🔵 `p455`'s *"adjacency is not attribution"* class on a new instrument. 🟢 **Closure:** teach the parser to skip licence tokens inside a cell that also contains a quotation or a `Gap` reference, or move quoted grants behind a marker the sweep ignores |
+| **`Gap 521-F`** | 🟡 **`P530`'s content-licence refusal classes are not enforced by any gate.** The reader exists with 40 controls, but nothing in `make hooks` runs it against the shelves, so a future pass can still shelve a CC BY-NC row by hand. 🟢 **Closure:** wire a `gate-content-licence` that re-reads every shelf row's served bytes and fails on `NON_COMMERCIAL_REFUSED` appearing anywhere outside an explicit refusal table |
+
 ## 🆕 `p519` — `2026-10-29` — **🟢 THE GATE RAN — ONCE. After eighteen denials in nineteen passes, `make hooks` EXECUTED and graded itself: **44 of 63 gates green**, all nineteen RED gates named below. 🔴 Then a SECOND gate invocation minutes later, in the SAME session, was DENIED with the same `Code from External` message — so the denial is NON-DETERMINISTIC, prior passes' "eighteen denials" is not a property of the sandbox, and this pass could NOT re-run a gate to attribute a RED to its own edits. 🔴 44/63 is also one BELOW `p511`'s attested 45/63. 🟢 `Gap 504` CLOSES WITH CONTENT after four passes. 🔴 `Gap 517` closes as a RETRACTION, not a refresh. 🔴 `Gap 513-D`/`483-K` are RE-FRAMED: fifteen passes blamed EUR-Lex for the sandbox's allowlist.**
 
 ### 🟢 Gate posture, stated first — and it is the most load-bearing result in this pass

@@ -4,6 +4,169 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p520` — `2026-10-29` — **🟢 THREE RECIPES, AND ONE RETRACTION `Gap 520-A` ASKED FOR BY NAME: `P530` is the licence-clearance gate rebuilt around the finding that in education the blocking grant is a CONTENT licence — with a working reader and 40 controls. `P531` is the first fully-permissive INSTITUTIONAL stack this base can offer, newly buildable because `OpenOLAT` is Apache-2.0. `P532` is the substitution recipe for `cn-math-taxonomy`, which is CC BY-NC and cannot be used at all. 🔴 And `Pattern 32`'s TEXT is retracted here, not merely superseded — `P529` replaced its architecture while leaving the withdrawn premise on the shelf.**
+
+### 🔴 `Pattern 32` — RETRACTED IN TEXT, as `Gap 520-A` required
+
+🔴 **The gap's wording was precise and it named two actions:** *"read the guidelines, and rewrite
+`Pattern 32` — `P529` replaces its architecture but does not retract its text."* 🟢 Both are done.
+
+🔴 **`Pattern 32` is withdrawn.** Its premise — *Quebec public bodies may not integrate,
+experiment with, acquire or deploy generative-AI assistants* — was true from **March 2025**
+(*indication d'application* `IA-RI-2025-001-OP`) and **ceased to be true in December 2025**. Any
+recipe built on "you cannot deploy generative AI in the Quebec public sector" is **wrong as of
+3–5 December 2025** and has been for ~11 months.
+
+🟢 **What replaces it is not a prohibition pattern but a compliance-remediation one**, because the
+new instruments carry a deadline that has **already passed**:
+
+| instrument | date |
+|---|---|
+| *arrêté ministériel révisé* | **3 December 2025** |
+| *indication d'application* (generative AI) | **5 December 2025** |
+| announced by the MCN | **19 December 2025** |
+| 🔴 full compliance due | 🔴 **5 June 2026 — PASSED** |
+
+🔵 **Required artefacts, enumerated by the instrument itself**: data protection, **staff training**,
+stated criteria for selecting generative-AI use cases, a **governance framework**, risk management,
+control measures, and an updated statement of principles with **12 ethical principles**. 🟢 `P529`
+is the architecture that produces them; the sales motion is *"you are past your deadline"*, not
+*"you are now permitted"*.
+
+🔴 **Declared caveat, carried into every use of this:** the MCN texts are **not read first-hand** —
+`cyber.gouv.qc.ca` is non-allowlisted from this session. Dates are corroborated across four
+independent Quebec outlets; **clause text is not asserted** and must be read before a compliance
+opinion is given to a client.
+
+---
+
+### 🟢 `P530` — The licence-clearance gate, rebuilt for an industry that ships curriculum
+
+🔵 **Who it is for:** every education engagement, as the first gate before any repo enters a
+proposal. 🔴 **Why the previous version was insufficient**, stated as a measured defect rather than
+a worry: this pass graded seven high-profile education repos whose grant had been unreadable, and
+the three highest-starred blockers were **CC BY-NC 4.0**, a **bespoke non-commercial** licence and
+**CC BY-SA 4.0**. 🔴 **Not one is a code licence.** A clearance step that asks *"is it MIT, Apache
+or BSD?"* has no verdict for any of them, and the common failure mode is to read the first line,
+see MIT-shaped words, and pass it.
+
+🟢 **The recipe — four stages, each with a channel and a refusal:**
+
+1. 🟢 **Existence, on two channels.** GitHub search API (`repo:<slug>`) **and**
+   `curl -s -o /dev/null -w '%{http_code}' https://raw.githubusercontent.com/<slug>/HEAD/README.md`.
+   🔴 If they disagree, the row is **not shelvable on one channel** — `kvnloo/tutor-mcp` serves at
+   `200` while search returns `total_count: 0` (`T520-6`).
+2. 🟢 **Liveness, from `archived` and `pushed_at` only.** 🔴 **Never from `updated_at`**, which moves
+   when metadata moves (`p519`, `menthorlabs/menthor`). 🔴 A repo that is not archived can still be
+   dead: `pupilfirst` is MIT, 980★, unarchived, and unpushed since `2025-12-09`.
+3. 🟢 **The grant, from SERVED BYTES — never from the classifier label.**
+   `curl -sL https://raw.githubusercontent.com/<slug>/HEAD/LICENSE` and probe
+   `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` in turn. Record **byte count** and
+   **`git hash-object`** so the read is reproducible. 🔴 A `NOASSERTION` label is a *blocker that
+   one read clears*, not a grant (`T520-3`).
+4. 🟢 **Grade the payload with the reader, not by eye** —
+   [`compose/code/p520-licence-bytes/grade.py`](code/p520-licence-bytes/grade.py), **40/40
+   controls green**, runnable under `python3 -I` from the repo root or its own folder.
+
+🟢 **The four refusal classes the reader enforces**, and each exists because a live repo on these
+shelves has that shape:
+
+| class | what it looks like | live example | posture |
+|---|---|---|---|
+| **`NON_COMMERCIAL_REFUSED`** | CC BY-**NC**, or a bespoke grant limiting use to *"personal, educational or non-commercial"* | `cn-math-taxonomy`, `PageLM` | 🔴 **HARD NO for paid work.** Not cured by attribution, by a fee, or by "internal evaluation only" |
+| **`SOURCE_AVAILABLE_RESTRICTED`** | Elastic-2.0 / BSL shape: source open, **hosting** restricted | `advisingapp` | 🔴 Self-host for the client; **never** offer as a managed service |
+| **`SHAREALIKE_CONTENT`** | CC BY-**SA** | `education-agent-skills` | 🟡 Commercial use fine; **derivatives must ship CC BY-SA**. Quarantine adaptations in their own directory |
+| **`WRAPPER`** | bespoke name on line 1, standard body beneath | `Claroline`→AGPL-3.0, `pupilfirst`→MIT | 🟡 **Read the body, grade on the body.** Line 1 misleads in both directions |
+
+🔴 **Two instrument rules the reader encodes, both learned the hard way this pass:**
+🟢 read the **GNU family from the first six lines**, never from the body — canonical GPL-3.0 names
+the AGPL in its own §13, and a body scan grades verbatim GPL-3.0 as AGPL-3.0 (`T520-5`);
+🟢 grade a **bespoke non-commercial licence before** any MIT body match, because such licences
+borrow MIT's *"Permission is hereby granted, free of charge…"* opening verbatim.
+
+🟢 **Deliverable:** a per-repo TSV — slug, path, HTTP, bytes, blob SHA-1, served SPDX, verdict,
+permissive, paid-client-work, basis, prior belief — exactly
+[`evidence/licence-bytes.2026-10-29-p520.tsv`](../evidence/licence-bytes.2026-10-29-p520.tsv).
+🔵 **Effort: ~0.5 day for a 20-repo shortlist**, and it is the cheapest insurance in the engagement:
+this pass found **three refusals among seven rows** that two prior passes had carried or shelved.
+
+---
+
+### 🟢 `P531` — The fully-permissive INSTITUTIONAL stack (no copyleft anywhere)
+
+🔵 **Who it is for:** a **greenfield** institutional build — a new programme, a new campus, a
+training arm, a corporate academy — where the client wants to own and possibly close the result.
+🔴 **Why this did not exist before this pass:** every LMS of record on these shelves was copyleft
+(Open edX AGPL-3.0, Moodle GPL-3.0, `frappe/education` GPL-3.0, `openeducat_erp` LGPL-3.0), so
+`P528` had to route the agent *around* the platform across a SCORM/LTI package boundary.
+🟢 **[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is Apache-2.0** — read from served
+bytes, `10 982` B, blob `e8870c0f5f52` — so the boundary is no longer required.
+
+🟢 **The stack, every rung permissive and every grant byte-verified:**
+
+| rung | component | licence | why this one |
+|---|---|---|---|
+| System of record | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | Full institutional LMS — courses, assessment, groups, portfolio, curriculum. 🇨🇭 **EMEA**, descended from University of Zurich OLAT, 448★ / 166 forks, pushed `2026-10-28` |
+| *(alternative)* | Sakai | 🟢 **ECL-2.0** | Apache-2.0 + educational patent clause; consortium governance. Use where research-collaboration workflows matter |
+| Interop | [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 **Apache-2.0** | LTI + Common Cartridge. 13 years maintained, 267 forks (`p519`) |
+| Content runtime | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 **MIT** | SCORM 1.2 / 2004, offline-first (`p519`) |
+| Mastery tier | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | Bayesian Knowledge Tracing — reproducible, auditable, no LLM in the decision |
+| Lesson surface | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | Authoring model encodes misconceptions explicitly → maps onto BKT skill nodes. 6,951★ / 5,861 forks |
+| Dialogue tier | `DeepTutor` (Apache-2.0) · 🇨🇳 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (**MIT**, 41,726★) · 🇫🇷 [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) (Apache-2.0) | 🟢 permissive | Explains, hints, re-teaches. **Reads** the mastery estimate; never computes one |
+| Offline edition | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | Low-connectivity deployments (`P526`) |
+
+🟢 **Why it sells:** the client may fork any rung, ship a **closed** derivative, and owes
+reciprocity to nobody. 🔵 No package boundary, no plugin-vs-derivative argument, no AGPL network
+clause — the licence conversation ends at "attribution and a NOTICE file".
+
+🔴 **When NOT to use it.** If the client is **already** on Moodle or Open edX — which is most
+institutional clients — `P528` remains correct and this pattern is a migration proposal, not an
+integration one. 🔴 Do not pitch replacing a working Moodle estate to win a licence argument.
+
+🔵 **Effort: 10–12 weeks** for a working institutional pilot (system of record + interop + mastery
++ one dialogue agent), assuming no SIS integration. 🔴 **There is still no permissive SIS at
+institutional scale** on these shelves (`Gap 521-A`), so a student-records requirement forces
+OpenEduCat (LGPL-3.0) and a separate-module boundary.
+
+---
+
+### 🟢 `P532` — Substituting for a corpus you may not use (the `cn-math-taxonomy` problem)
+
+🔵 **Who it is for:** any APAC maths or STEM engagement, and more generally any engagement whose
+obvious best corpus turns out to be non-commercial. 🔴 **The concrete problem:**
+[`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) is the richest curriculum
+corpus this base has found — **1,644 knowledge points, 2,403 prerequisite edges, 6,723 problems**,
+PRC-curriculum-aligned, 4,925★ in eleven days — and it is **CC BY-NC 4.0**. 🔴 It cannot be
+ingested, embedded, fine-tuned on, or shipped in paid work. **There is no workaround**, and
+"evaluation only, inside a paid engagement" is still commercial use.
+
+🟢 **The recipe — build the structure, licence the content separately:**
+
+1. 🟢 **Take the *shape*, not the data.** A prerequisite graph over knowledge points is **not
+   copyrightable as an idea**; this corpus's particular expression is. 🟢 So model the schema —
+   knowledge point, prerequisite edge, problem, diagnostic path — in your own repository, and
+   populate it from sources you may use. 🔴 Do **not** copy its node set, its edge list or its
+   problem text, and do not have a model trained on it emit them.
+2. 🟢 **Populate from the client's own curriculum.** In an institutional engagement this is the
+   *correct* source anyway: the client owns its syllabus, its past papers and its question banks,
+   and a corpus built from them is aligned to the assessment that actually matters.
+   🔵 [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) (MIT, `p519`) is built exactly
+   for this — editable artefacts from *the school's own* curriculum.
+3. 🟢 **Fill gaps with permissive corpora.** 🇧🇷
+   [`Universidade-Livre/ciencia-da-computacao`](https://github.com/Universidade-Livre/ciencia-da-computacao)
+   (**MIT**, 20,985★) for CS; [`oppia/oppia`](https://github.com/oppia/oppia)'s (Apache-2.0)
+   exploration content for maths, whose misconception encoding is the part BKT needs.
+4. 🟢 **Wire mastery with [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor)** (MIT) over your own
+   graph, so prerequisites drive the next item deterministically — `P525`'s tier 1.
+5. 🟡 **If the PRC-curriculum alignment itself is the requirement**, licence it: CC BY-NC permits
+   a **separately negotiated** commercial grant from the rights-holder. 🟢 That is a procurement
+   conversation to open early, not a blocker to discover at delivery.
+
+🔵 **Effort: 4–6 weeks** to a populated graph over a single subject and year-group from client
+materials. 🔴 **State the licence finding to the client in writing.** The failure mode this recipe
+exists to prevent is an engineer finding the corpus independently mid-build and ingesting it,
+because its README does not say "non-commercial" — only its `LICENSE` does.
+
 ## 🆕 `p519` — `2026-10-29` — **🟢 TWO RECIPES, AND BOTH EXIST BECAUSE OF SOMETHING THAT CHANGED TODAY: `P528` wires a FULLY PERMISSIVE pipeline INTO a copyleft LMS without touching it, across a package boundary — newly buildable because the LTI and SCORM runtimes were verified permissive this pass. `P529` is the Quebec public-sector deployment, newly buildable because the suspension `Pattern 32` was built around turns out to have been LIFTED in late 2025.**
 
 🔵 **Reading note.** Every repo named below was existence- and licence-asserted on `2026-10-29`

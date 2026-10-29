@@ -4,6 +4,143 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p520` — `2026-10-29` — **🔴 THE LOAD-BEARING TREND THIS PASS IS ABOUT EDUCATION ITSELF, NOT ABOUT TOOLING: the grant that blocks an education engagement is a **CONTENT** licence, not a code licence. The three highest-starred ungradeable rows in this sector are CC BY-NC, bespoke non-commercial and CC BY-SA — not one is a code licence. Education ships curriculum, and curriculum is licensed like publishing. 🔴 A licence-clearance step that checks code licences will pass exactly the wrong artefacts.**
+
+### 🔴 `T520-1` — A refusal is a property of the sandbox. Third confirmation, and it cost two passes
+
+🟢 `Gap 511` established the rule. `p520` confirms it a third time and this time the **cost** is
+measurable. 🔴 `p518` and `p519` each recorded that **no channel could read a served licence byte**
+and acted accordingly: `p518` shelved `cn-math-taxonomy` on its star count, `p519` demoted it to
+`UNREADABLE` and speculated the licence *"may well be permissive"*. 🟢 `p504` had read served bytes
+on `curl`→`raw.githubusercontent.com` **two passes earlier**, and that channel works in this
+session.
+
+🔵 **The generalisable form:** when a pass writes *"this cannot be measured"*, it has measured its
+**sandbox**, not the subject. 🟢 The operational rule is therefore to **re-probe every channel at
+the start of every pass**, including ones a predecessor declared dead — which is `Gap 511`'s
+standing rule and the reason this pass opened with a channel table. 🔴 The anti-pattern is
+inheriting a predecessor's channel verdict as a fact about the world.
+
+### 🔴 `T520-2` — Star count anti-correlates with buildability at the top of this sector
+
+🟢 **Measured on this pass's seven rows**, not asserted. Ranked by stars, the three highest
+`NOASSERTION` rows in education are:
+
+| rank | repo | ★ | served grant | buildable (paid) |
+|---|---|---|---|---|
+| 1 | `cn-math-taxonomy` | 4,925 | **CC BY-NC 4.0** | 🔴 NO |
+| 2 | `PageLM` | 2,050 | **bespoke non-commercial** | 🔴 NO |
+| 3 | `education-agent-skills` | 922 | **CC BY-SA 4.0** | 🟡 yes, ShareAlike binds |
+
+🔴 **The two permissive rows sit at 980★ and 448★ — below all three.** 🔵 A plausible mechanism:
+a project that ships *curriculum, problem banks or pedagogical skills* attracts stars from
+**teachers and learners**, and its author reaches for a Creative Commons licence because the
+artefact feels like publishing. A project that ships a **platform** attracts stars from engineers
+and reaches for Apache or MIT. 🟢 So in education, **star count is a proxy for how
+content-shaped the project is — which is a proxy for a restrictive grant.**
+
+### 🔴 `T520-3` — `NOASSERTION` is not a coin flip, and it skews against the reader
+
+🟢 **All seven rows carried `NOASSERTION`; seven of seven were resolvable from served bytes.** So
+the label means *the classifier abstained*, never *no licence*. 🔴 **But five of the seven are not
+permissive.** A studio treating `NOASSERTION` as "unknown, probably fine" is wrong **5 times in
+7** — and wrong on the rows a star count pushes it toward first. 🔵 The correct posture is the one
+`p518`/`p519` reached for the wrong reason: **`NOASSERTION` is a blocker.** It just happens to be a
+blocker that **one raw-file read clears**, in either direction.
+
+### 🔴 `T520-4` — The title block is not a sufficient anchor: licence WRAPPERS exist
+
+🔴 **Corrects `p455`**, which anchored on the title block as *"the only region of a payload a
+preamble cannot reach"*. 🔴 `claroline/Claroline` puts a bespoke name — *"Claroline Connect
+License"* — on **line 1**, with a verbatim `GNU AFFERO GENERAL PUBLIC LICENSE` four lines below,
+**inside the same title window**. A window sees a standard name either way. 🟢 **Line 1 alone
+discriminates**: a bespoke headline over a recognised body is a **wrapper**, and the body is the
+grant. **2 of 7 rows this pass are wrappers** (`Claroline`/AGPL-3.0, `pupilfirst`/MIT).
+
+🔵 **Why it matters commercially rather than pedantically.** A wrapper is the shape of *"we renamed
+the licence"*, and a reader who stops at line 1 files it as bespoke-and-unusable (`Claroline`,
+actually AGPL — usable with obligations) or as bespoke-and-unknown (`pupilfirst`, actually MIT —
+fully permissive). 🔴 **Both errors are expensive and they point in opposite directions.**
+
+### 🔴 `T520-5` — GNU licences name each other, so the family cannot be read from the body
+
+🔴 **Canonical GPL-3.0 cross-references the AGPL in its own section 13**; LGPL incorporates the GPL
+by reference. 🔴 A grader scanning the whole payload graded `chamilo/chamilo-lms` — **GPL-3.0** —
+as `AGPL-3.0`. 🟢 Caught only because `chamilo` was carried as a **positive control with an
+independently known answer**. 🔵 **The transferable lesson is about instrument design, not about
+GNU**: a control that agrees with everything proves nothing, and the two controls in this pass
+(`kolibri`→MIT, `chamilo`→GPL-3.0) earned their cost by catching a defect that would otherwise have
+shipped as a confident wrong answer on every copyleft row.
+
+### 🔴 `T520-6` — The GitHub search API is an index, not an existence oracle
+
+🔴 [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) serves `LICENSE` and `README.md` at
+**`200`** on `raw.githubusercontent.com` while the search API answers **`total_count: 0`**.
+🟢 `p518` saw this once (`openedx/edx-platform`, renamed); this is the **second** slug.
+🔵 Mechanism: search indexes repositories, and a rename, transfer or de-indexing removes the slug
+from the index while the blob path keeps serving. 🟢 **Consequence for this base: existence needs
+two channels**, and a `total_count: 0` is evidence of *non-indexing*, not of non-existence.
+
+🔵 **The same lesson from the other direction, on the vertical leg.** A search for permissive
+education platforms returned **nine of ten results on a single vendor's own domain** and concluded
+*"no Apache- or MIT-licensed platforms surfaced"*. 🟢 One served-bytes read found **OpenOLAT,
+Apache-2.0**. **A saturated search channel is not evidence of absence.**
+
+### 🟡 `T520-7` — Hosted education-agent services are retreating toward portable skills
+
+🟢 **The week's signal is a withdrawal, not a launch.**
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+(922★) shipped **v3.1.0 on 22 Oct 2026** and **retired its own public hosted MCP service** —
+signup closed — shipping instead a **portable edition validated against the official Agent Skills
+reference tool**.
+
+🔵 **Why the direction is structural rather than one maintainer's choice.** Hosting an education
+agent means holding student data, carrying availability expectations, and — in the EU since
+**2 August 2026** — owing Article 50 transparency. 🟢 A **portable skill file** the institution
+loads into its own agent carries none of those. 🟢 It converges with what `p519` measured from the
+supply side: **four of six** new permissive rows were local-first or self-hostable by design.
+🔵 **The studio-level read: ship the client an artefact they run, not an endpoint you run.**
+
+### 🟢 `T520-8` — Permissive and maintained are independent axes, and both are usually unchecked
+
+🟡 `p519` established that `updated_at` is not a liveness signal (it moves on metadata edits) and
+that `archived`/`pushed_at` are. 🟢 `p520` adds the **harder** case:
+[`pupilfirst`](https://github.com/pupilfirst/pupilfirst) is **MIT**, **980★**, **not archived** —
+and has had **no push since `2025-12-09`**, ~10.7 months. 🔴 Nothing on the repository page warns a
+reader.
+
+🟢 **The rule both passes together support:** a row needs **two independent verdicts** — a grant
+verdict and a liveness verdict — before it reaches a client proposal, and in this sector a row
+commonly passes one while failing the other. `cn-math-taxonomy` is pushed yesterday and refused on
+grant; `pupilfirst` is permissive and unmaintained. 🔵 **Neither defect appears in the field a
+studio habitually checks**, which is the licence *label* and the star count.
+
+### 🟡 `T520-9` — Regulation is converging on mechanisms, which makes one architecture portable
+
+🟢 Three instruments now dated on this base regulate **the same four mechanisms**: admissions /
+placement, grading or ranking, assessing education level, and behavioural or biometric monitoring
+during assessment.
+
+| regime | education mechanisms named | binding from |
+|---|---|---|
+| 🇪🇺 EU AI Act Annex III(3) | admissions/placement, learning-outcome evaluation, level assessment, exam monitoring | **2 Dec 2027** (Reg. **2026/1744**); Art. 50 transparency **already**; emotion-recognition ban **Feb 2025** |
+| 🇻🇳 Decision 33 (`33/2026/QD-TTg`) | self-learning content from **uncontrolled** sources, grading/ranking, **biometric** behaviour monitoring | **15 Aug 2026**; pre-existing systems **1 Sep 2027** |
+| 🇺🇸 Oklahoma-style state language | AI as the **primary basis** for grading or discipline | in force, accreting state by state |
+
+🟢 **Because all three regulate *where the consequential decision lives*, one architecture answers
+all three** — that is `P525`, and it is the single most portable asset in this base. 🔵 Vietnam's
+drafting is the most mechanism-specific and therefore the most *designable-around*: a **curated,
+institution-supplied** corpus is outside its category (1) by construction. 🔴 The one mechanism no
+architecture rescues is **biometric / attention monitoring**: decline it or quarantine it.
+
+### 🔴 `T520-10` — The market number is still not quotable, and the spread grew
+
+🔴 Four houses read put 2026 global AI-in-education between **$3.7B and $11.4B** — a **3.1×** range
+on the same year. 🔴 `p518`'s `$9.58B–$11.4B` floor is **broken from below** by Persistence's
+~$3.7B. 🟢 **No headline and no average is published**: a mean across incompatible scopes is a
+fabricated number. 🔵 `Gap 519`'s *"which series?"* hazard is re-confirmed a third pass. 🟢 The
+durable correction stands: **Technavio's "$3.37B" is incremental growth, not a market size.**
+
 ## 🆕 `p519` — `2026-10-29` — **🟢 THE TREND THIS PASS MEASURES IS AN ARCHITECTURAL ONE AND IT RESOLVES A STANDING DEADLOCK: the permissive/copyleft split in education software is reconciled not by picking a side but by a PACKAGE BOUNDARY, and both rungs of that boundary — LTI and SCORM — are now verified permissive on these shelves. 🔴 Second: `updated_at` is not a liveness signal, measured on sixteen rows, and the one row where it lies is the one a studio would have pitched. 🔴 Third: education is becoming a NAMED high-risk sector in statute rather than a sensitive one by interpretation. 🔴 Fourth, and it is about this base rather than the sector: fifteen passes blamed a publisher for what was the sandbox's doing.**
 
 ### 🟢 `T519-1` — The permissive/copyleft deadlock in edtech is an INTEGRATION problem, and the integration tier just turned out to be permissive

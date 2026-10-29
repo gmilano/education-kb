@@ -4,6 +4,146 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p520` — `2026-10-29` — **🟢 `Gap 520-B` CLOSES: the served-licence channel is READABLE again and all seven blocked rows are graded. 🔴 And it does not vindicate them — it CONDEMNS most of them. Only **2 of 7** are permissive. The sector's highest-velocity asset, `cn-math-taxonomy` (4,925★), is **CC BY-NC 4.0** — NON-COMMERCIAL, so it is REFUSED for paid client work, not "probably fine" as `p519` allowed it might be. `PageLM` (2,050★) is a bespoke non-commercial grant. `advisingapp` is **Elastic-2.0**, which settles `Gap 513-F` on its ORIGINAL premise. 🔴 The channel was never the repository's property: `p504` had it, `p518`/`p519` did not, this session does — `Gap 511`'s class for the third time.**
+
+🔵 **Instrument note, stated first because every row below depends on it.** `p519` recorded that
+`get_file_contents` is scoped to session repos, `curl`→`github.com` is 403, and `WebFetch` will not
+resolve a non-allowlisted host — and concluded it *"cannot read a served LICENCE byte at all"*.
+🟢 All three of those remain true in this session. **A fourth channel was not probed by `p519` and
+it works**:
+
+| channel | probe | result |
+|---|---|---|
+| `curl` → **`raw.githubusercontent.com`** | 9 + 8 slugs, `HEAD` ref | 🟢 **WORKS** — `200`, full payload, byte count and git blob SHA-1 for every one |
+| `WebFetch` → **`raw.githubusercontent.com`** | `canyongbs/advisingapp:LICENSE` | 🟢 **WORKS** — independently returned the same licence |
+| `curl` → `github.com` | same slug | 🔴 **403** — *"GitHub access to this repository is not enabled for this session"* |
+| GitHub **search** API | 12-slug consolidated read | 🟢 WORKS for ★/forks/`pushed_at`/`archived`, as `p519` found |
+| `WebFetch` → `artificialintelligenceact.eu` | AI Act timeline | 🔴 **ENOTFOUND** — non-allowlisted, as `p519` established |
+
+🔴 **This is not a new channel. It is `p504`'s channel, and `p504` used it on 2026-10-28 — two
+passes ago.** `p518` and `p519` each wrote that no channel could read a served byte, and each was
+right *about its own sandbox*. 🟢 The standing lesson `Gap 511` states — *"a refusal is a property
+of the sandbox, not of the repository"* — now has its **third** confirmation, and the cost of
+forgetting it was measured: two passes shelved or demoted rows they could have graded.
+
+### 🔴 The seven blocked rows, graded on served bytes — and only two survive
+
+🟢 Every row read today over `curl`→`raw.githubusercontent.com`, graded by
+[`compose/code/p520-licence-bytes/grade.py`](../compose/code/p520-licence-bytes/grade.py)
+(**40/40 controls green**, from the repository root *and* from its own folder), emitted to
+[`licence-bytes.2026-10-29-p520.tsv`](../evidence/licence-bytes.2026-10-29-p520.tsv) by
+[`emit_evidence.py`](../compose/code/p520-licence-bytes/emit_evidence.py). 🔵 Per `Gap 513-E` no
+count in this section was typed by hand.
+
+| Repo | GitHub classifier | **Served bytes** | Verdict | Paid client work | ★ |
+|---|---|---|---|---|---|
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | `NOASSERTION` | 🔴 **CC BY-NC 4.0** `19 347` B `fe463e0f7888` | `NON_COMMERCIAL_REFUSED` | 🔴 **NO** | 4,925 |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `NOASSERTION` | 🔴 **"PageLM Community License"** (bespoke) `8 563` B `6759e05bb55c` | `NON_COMMERCIAL_REFUSED` | 🔴 **NO** | 2,050 |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `NOASSERTION` | 🔴 **Elastic-2.0** `3 860` B `809108b857ff` | `SOURCE_AVAILABLE_RESTRICTED` | 🔴 **NO** | 340 |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `NOASSERTION` | 🟡 **CC BY-SA 4.0** `1 230` B `c1286baf485e` | `SHAREALIKE_CONTENT` | 🟡 yes, ShareAlike binds | 922 |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | `NOASSERTION` | 🟡 **AGPL-3.0** `34 616` B `f7340ca37d2d` | `COPYLEFT` | 🟡 yes, network clause | 347 |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `NOASSERTION` | 🟢 **Apache-2.0** `10 982` B `e8870c0f5f52` | `PERMISSIVE` | 🟢 **yes** | 448 |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `NOASSERTION` | 🟢 **MIT** `1 684` B `451d134e257f` | `PERMISSIVE` | 🟢 **yes** | 980 |
+
+🔴 **The hard number: 3 of the 7 are REFUSED for paid client work** — two non-commercial and one
+field-restricted. 🟢 **2 of 7 are permissive.** 2 of 7 are copyleft or ShareAlike: buildable, with
+obligations that propagate.
+
+🔴 **`p519`'s charitable reading of `cn-math-taxonomy` was wrong, and it is worth naming exactly
+why.** It wrote: *"the licence may well be permissive. The point is that this session has no
+channel that can tell."* The second sentence was true of that sandbox. The first was a hope, and
+the served bytes refute it: **`Attribution-NonCommercial 4.0 International`**. 🔵 This base's
+richest curriculum corpus — 1,644 knowledge points, 2,403 prerequisite edges, 6,723 problems —
+**cannot be used in a Globant engagement at all.** A substitution recipe is `P532` in
+[`../compose/patterns.md`](../compose/patterns.md).
+
+🔵 **Why `advisingapp` matters beyond itself.** `Gap 513-F` originally said *"only Elastic-2.0
+exists"* for student-success / advising CRM. `p519` re-scoped that to *"the one candidate's grant
+is unreadable"*. 🟢 The bytes restore the **original** premise: it **is** Elastic-2.0. The gap was
+right before it was re-scoped, and the re-scope was an artefact of the sandbox.
+
+### 🔴 `NOASSERTION` is not a coin flip — it is measured, and it skews against the reader
+
+🟢 **All seven rows above carried `NOASSERTION` to GitHub's classifier, and seven of seven were
+resolvable from served bytes.** So `NOASSERTION` means *the classifier abstained*, never *no
+licence*. 🔴 But the distribution is the finding: of the seven, **five are not permissive**. A
+studio that treats `NOASSERTION` as "unknown, probably MIT-ish" would have been wrong **five times
+out of seven** on exactly the rows a star count would have pushed it toward.
+
+🔴 **And the skew is sharpest at the top.** Ranked by ★, the three highest `NOASSERTION` rows in
+this sector — `cn-math-taxonomy` (4,925), `PageLM` (2,050), `education-agent-skills` (922) — are
+**CC BY-NC**, **bespoke non-commercial**, and **CC BY-SA**. 🟢 **Not one of the three is a code
+licence.** The grant that blocks an education engagement is a **content** licence, because what
+these projects ship is curriculum, skills and problem banks — not libraries. `T520-7` in
+[`../intel/trends.md`](../intel/trends.md).
+
+### 🟢 Two instrument corrections this pass had to make, both caught by its own controls
+
+🔴 **1. The title block is not a sufficient anchor, and that corrects `p455`.** `p455` anchored its
+licence reader on the title block, *"the only region of a payload a preamble cannot reach"*.
+🔴 **`claroline/Claroline` is the counterexample**: line 1 reads `Claroline Connect License` — a
+name no SPDX id matches — while four lines down, **inside the same title window**, sits a verbatim
+`GNU AFFERO GENERAL PUBLIC LICENSE`. A title *window* sees a standard name either way and cannot
+tell a wrapper from a clean grant. 🟢 The **headline** — line 1 alone — can, and the grader now
+reads both: a recognised standard body outranks an unrecognised headline, and the row is marked
+`WRAPPER`. **2 of the 7 rows are wrappers** (`Claroline` over AGPL-3.0, `pupilfirst` over MIT).
+
+🔴 **2. GNU licences name each other, so the family cannot come from the body.** The grader first
+scanned the whole payload and graded `chamilo/chamilo-lms` — a **positive control with an
+independently known answer** — as `AGPL-3.0`. It is `GPL-3.0`. 🔴 **Cause: canonical GPL-3.0
+cross-references the AGPL in its own section 13** (*"Remote Network Interaction; Use with the GNU
+Affero General Public License"*), and LGPL incorporates the GPL by reference. 🟢 Fixed by reading
+the GNU family from a **six-line** title region, with a control pinning a GPL payload whose §13
+sits just past that window. 🔵 **This is what the two positive controls were for**: both now agree
+(`kolibri`→MIT, `chamilo`→GPL-3.0), and the defect would have shipped silently without them.
+
+### 🔴 A second channel disagreement: the search API is not an existence oracle
+
+🔴 **[`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp)** serves `LICENSE` (`1 073` B,
+**MIT**) and `README.md` (`10 353` B) at **`200`** over `raw.githubusercontent.com`, while the
+GitHub search API returns **`total_count: 0`** for `repo:kvnloo/tutor-mcp`. 🟢 This is `p518`'s
+`openedx/edx-platform` class — a renamed or transferred repo stays invisible to search while its
+blobs still serve — now observed on a **second** slug and from the opposite direction.
+
+🔵 **What the bytes say about which copy is canonical, and what they do not.**
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) serves a
+**byte-identical** `LICENSE` — same blob SHA-1 `7f7f7a24de57` — and its copyright line reads
+**`Copyright (c) 2026 Arnaud Guiovanna`**. 🔴 So `kvnloo/tutor-mcp` carries another party's
+copyright, which makes it the **copy** rather than the origin. 🔴 **Declared as INFERRED, not
+asserted:** fork metadata is unreadable here (search returns nothing for the slug), so the
+direction rests on the copyright line alone. Neither copy is shelved on that basis.
+
+### 🟡 Probed and DECLINED — six permissive education agents that are real but not yet supply
+
+🟢 **Licence-verified on served bytes, every one permissive.** 🔴 **Declined on adoption, not on
+grant**, and the brief's rule applies — *fewer real rows always beat padding*:
+
+| Repo | Served licence | ★ / forks | `pushed_at` | Why not shelved |
+|---|---|---|---|---|
+| [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) | **Apache-2.0** `11 356` B | **0** / 1 | `2026-10-20` | 🔴 Zero stars. Socratic tutor + practice coach + diagnostician, French-curriculum aligned (**EMEA**), code Apache-2.0 / content CC-BY-SA-4.0. Worth re-probing in a later pass |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | **MIT** `1 069` B | **0** / 0 | `2026-08-23` | 🔴 Zero stars, and two months since a push. Labs/exams/grading DSLs with human review + sandboxed evaluation — the right *shape* for `P525`, with no adoption behind it |
+| [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) | **Apache-2.0** `11 338` B | **9** / 0 | `2026-10-10` | 🔴 Nine stars, zero forks |
+| [`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp) | **MIT** `1 073` B | 🔴 unreadable | 🔴 unreadable | 🔴 Invisible to the search API (above), so neither ★ nor liveness can be read. Not shelvable on one channel |
+| [`saniales/ai-lesson-planner`](https://github.com/saniales/ai-lesson-planner) | **GPL-3.0** `35 149` B | **20** / 3 | `2026-02-14` | 🔴 Copyleft **and** eight months stale |
+| [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** `1 073` B | 🔴 not read | 🔴 not read | 🔴 Only its LICENSE was read; no metadata leg was run on this slug |
+
+🔵 **Why this table is here rather than discarded.** `Gap 513-E`'s sibling discipline is that an
+informed negative is information: a successor looking for an MCP-native ITS or an EMEA-aligned
+Socratic tutor should find these already licence-cleared, and should see that the reason to wait is
+**adoption**, which one push can change — not the grant, which is settled.
+
+### 🟢 Carried forward, re-confirmed today
+
+| Repo | Licence | ★ / forks | `pushed_at` | Note |
+|---|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** (bytes `1 065` B + classifier) | **41,726** / 6,454 | **`2026-10-29`** | 🟢 **The highest-star MIT education agent on this base**, 🇨🇳 Tsinghua, **APAC**. Pushed the day of this read. `p517` shelved it; today it is confirmed on **both** channels |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** (bytes `11 358` B + classifier) | **6,951** / 5,861 | `2026-10-28` | 🟢 `P525`'s delivery surface, now grant-verified on served bytes rather than carried |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** (bytes `1 105` B) | — | — | 🟢 `P525`'s deterministic BKT tier, grant re-read from bytes this pass |
+
+🔵 `p519`'s six permissive rows and `p518`'s twelve are unchanged and still standing; neither was
+re-read, because both were verified within the last 24 hours against the same search API and
+nothing in that window justifies spending the channel again.
+
 ## 🆕 `p519` — `2026-10-29` — **🟢 THE PERMISSIVE AGENT SHELF IS WIDER THAN `p518` MEASURED: six MORE education agents verified permissive today, every one of them outside the twelve `p518` shelved, and the single-licence channel discriminated correctly on two negative controls. 🔴 But the pass's load-bearing result is a LIVENESS one: an Apache-2.0, 582★ row is ARCHIVED and its `updated_at` is seventeen days old — so the field this base reads to decide "maintained" is the one field that lies. 🔴 And this session cannot read a served LICENCE byte at all, so two high-star rows stay UNGRADEABLE and are shelved nowhere.**
 
 🔵 **Instrument note, and it is narrower than `p518`'s.** `p518` read licences against the

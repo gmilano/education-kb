@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p520` — `2026-10-29` — **🟢 THE MOMENTUM TABLE NOW CARRIES A GRANT COLUMN READ FROM SERVED BYTES, AND THE TOP TWO ROWS FAIL IT. 🔴 `cn-math-taxonomy` — the fastest-growing education repo this base has ever recorded, ~4.9k★ in eleven days — is **CC BY-NC 4.0**. 🟢 The quiet row that matters instead is `OpenOLAT`: only 448★, but **Apache-2.0** and a full institutional LMS, which no amount of star count on the rows above can substitute for.**
+
+### 🔴 Trending by momentum — with the grant attached
+
+| Repo | ★ / forks | `pushed_at` | Momentum signal | Served licence | Buildable (paid) |
+|---|---|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **41,726** / 6,454 | **`2026-10-29`** | 🟢 Pushed the day of this read; `v1.0.0` `2026-08-27` | **MIT** `1 065` B | 🟢 **yes** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **6,951** / 5,861 | `2026-10-28` | 🟢 5,861 forks — the highest fork count on this shelf | **Apache-2.0** `11 358` B | 🟢 **yes** |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **4,925** / 1,262 | `2026-10-28` | 🔴 **~4.9k★ in eleven days** (created `2026-10-18`) | 🔴 **CC BY-NC 4.0** `19 347` B | 🔴 **NO** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2,050** / 279 | `2026-10-28` | 🟡 Sustained | 🔴 **Bespoke non-commercial** `8 563` B | 🔴 **NO** |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | **980** / 278 | 🔴 `2025-12-09` | 🔴 **No push in ~10.7 months**, not archived | **MIT** `1 684` B | 🟢 yes, but unmaintained |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **922** / 130 | `2026-10-22` | 🟡 `v3.1.0`; hosted MCP service **retired** | 🟡 **CC BY-SA 4.0** `1 230` B | 🟡 yes, ShareAlike binds |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **448** / 166 | `2026-10-28` | 🟢 Steady; 🇨🇭 **EMEA** institutional | 🟢 **Apache-2.0** `10 982` B | 🟢 **yes** |
+| [`claroline/Claroline`](https://github.com/claroline/Claroline) | **347** / 201 | `2026-10-13` | 🟡 Active; default branch `15.0` | 🟡 **AGPL-3.0** `34 616` B (wrapper) | 🟡 yes, network copyleft |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | **340** / 76 | `2026-10-28` | 🟢 Actively maintained | 🔴 **Elastic-2.0** `3 860` B | 🔴 **NO** |
+| [`saniales/ai-lesson-planner`](https://github.com/saniales/ai-lesson-planner) | **20** / 3 | 🔴 `2026-02-14` | 🔴 Eight months stale | **GPL-3.0** `35 149` B | 🟡 yes, copyleft |
+| [`nirholas/ai-tutor-mcp`](https://github.com/nirholas/ai-tutor-mcp) | **9** / 0 | `2026-10-10` | 🔴 Early | **Apache-2.0** `11 338` B | 🟢 yes |
+| [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) | **0** / 1 | `2026-10-20` | 🔴 No adoption yet; 🇫🇷 **EMEA** | **Apache-2.0** `11 356` B | 🟢 yes |
+| [`littlecookie0722/AI-Teaching-Agent`](https://github.com/littlecookie0722/AI-Teaching-Agent) | **0** / 0 | `2026-08-23` | 🔴 No adoption yet | **MIT** `1 069` B | 🟢 yes |
+
+🔵 **Every licence cell above is a read, not a label.** Byte counts and git blob SHA-1s for each
+are in [`licence-bytes.2026-10-29-p520.tsv`](../evidence/licence-bytes.2026-10-29-p520.tsv) and the
+grader's 40 controls are in
+[`../compose/code/p520-licence-bytes/`](../compose/code/p520-licence-bytes/).
+
+### 🔴 The ranking inverts when you sort by what a studio can ship
+
+🟢 **Sorted by stars**, the top four are OpenMAIC, oppia, `cn-math-taxonomy`, PageLM. 🔴 **Sorted
+by "can a paid engagement use this"**, rows three and four drop out entirely, and a **448★** row —
+`OpenOLAT` — becomes the most consequential entry on the shelf, because it is the only permissive
+institutional **system of record** in this base.
+
+🔵 **Derived, not asserted:** of the 13 rows above, **9 are buildable in paid client work**,
+**3 are refused outright**, and **1 is permissive but unmaintained**. The three refusals hold
+**7,315 stars** between them — about **59%** of the non-OpenMAIC star mass on this table.
+
+### 🔴 A repo that exists on one channel and not the other
+
+🔴 **[`kvnloo/tutor-mcp`](https://github.com/kvnloo/tutor-mcp)** is deliberately **absent** from the
+table above: `raw.githubusercontent.com` serves its `LICENSE` (**MIT**, `1 073` B) and `README.md`
+(`10 353` B) at `200`, while the GitHub search API answers `total_count: 0`. 🟢 No star or liveness
+figure can be read, so no momentum row is written for it. 🔵 `p518` saw this shape once
+(`openedx/edx-platform`, renamed); this is the second slug, and the rule it supports is in
+`T520-5`: **the search API is an index, not an existence oracle.**
+
 ## 🆕 `p519` — `2026-10-29` — GitHub trending / population reads this window
 
 🔵 **Append-only.** Added above `p518`'s section; nothing below is rewritten.
