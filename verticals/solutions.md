@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p521` — `2026-10-29` — **🟢 THE PLATFORM TIER IS RE-GRADED BY INSTRUMENT AND THE PERMISSIVE ENTRY HOLDS: `OpenOLAT` is Apache-2.0 (`10 982` B), independently re-read this pass. 🔴 A vendor comparison page published in this window states that NO Apache-licensed LMS exists and that `frappe/lms` is "MIT (no restrictions)". Both are false against served bytes — and `frappe/lms` is **AGPL-3.0**, the strongest copyleft on this shelf. 🔵 The platform tier splits cleanly on ONE question a client must answer at kickoff: does the engagement HOST a modified build?**
+
+### 🔴 The hosting question is the whole decision
+
+🔵 **Education platforms ship by being hosted.** That makes the GPL/AGPL distinction operative here
+in a way it is not in most verticals:
+
+| If the engagement… | GPL-3.0 platform | AGPL-3.0 platform |
+|---|---|---|
+| Hosts an **unmodified** build | 🟢 no source obligation | 🟢 no source obligation |
+| Hosts a **modified** build for the client's users | 🟢 **no obligation** — no distribution occurs | 🔴 **source must be offered to those users** |
+| Ships the build to the client to run themselves | 🟡 source to the client | 🟡 source to the client |
+
+🔴 **So "Moodle vs Open edX" is not a feature comparison, it is a licence decision.** A customised,
+Globant-hosted Open edX or `frappe/lms` obliges source release to end users. The same customisation
+on Moodle, Chamilo or ILIAS does not.
+
+### The platform shelf, graded from served bytes `2026-10-29`
+
+#### 🟢 Permissive tier — customise and host with no reciprocity
+
+| Platform | Repo | Grant | Bytes | What it is |
+|---|---|---|---|---|
+| **OpenOLAT** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | `10 982` | 🟢 Full institutional LMS — courses, assessment, enrolment, groups. The permissive LMS of record |
+| **Sakai** | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | `11 120` | HE LMS + collaboration. Apache-derivative with a university-oriented patent grant |
+| **Apache OpenMeetings** | [`apache/openmeetings`](https://github.com/apache/openmeetings) | **Apache-2.0** | `51 425` | Virtual classroom, whiteboard, recording. ASF-governed |
+| **Oppia** | [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** | `11 358` | Interactive, branching lessons. Highest fork count on the shelf |
+| **Kolibri** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | `1 097` | 🟢 **Offline-first.** The deployment answer wherever connectivity is the constraint |
+| **Richie** | [`openfun/richie`](https://github.com/openfun/richie) | **MIT** | `1 079` | Course-catalogue/portal CMS to sit above an LMS |
+| **Mentingo** | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | `1 062` | Lightweight modern LMS |
+| **Open Roberta Lab** | [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) | **Apache-2.0** | `11 359` | Block-based programming for classroom robotics |
+| **freeCodeCamp** | [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | **BSD-3-Clause** | `1 513` | Platform **and** curriculum **and** certification engine |
+
+#### 🟡 Copyleft tier — distribution-triggered (GPL/LGPL): hosting a modification is safe
+
+| Platform | Repo | Grant | Bytes | Note |
+|---|---|---|---|---|
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | `35 147` | The global install-base leader. 🔵 Serves at `COPYING.txt` |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** | `35 147` | 🟢 Strong 🇪🇸-language and LATAM public-sector presence |
+| **ILIAS** | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** | `35 147` | 🇩🇪 institutional; strong in regulated/public training |
+| **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | **GPL-3.0** | `35 121` | 🔵 **SIS, not LMS** — school management, a different layer |
+| **BigBlueButton** | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **LGPL-3.0** | `7 652` | Virtual classroom; integrates with Moodle/Canvas. Weakest obligation in the tier |
+
+#### 🔴 Network-copyleft tier — hosting a modification OBLIGES source release
+
+| Platform | Repo | Grant | Bytes | Note |
+|---|---|---|---|---|
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0** | `35 136` | MOOC-scale. 🔴 Raise at kickoff, not at delivery |
+| **Tutor** | [`overhangio/tutor`](https://github.com/overhangio/tutor) | **AGPL-3.0** | `34 523` | The practical Open edX distribution; inherits the obligation |
+| **Frappe Learning** | [`frappe/lms`](https://github.com/frappe/lms) | **AGPL-3.0** | `33 893` | 🔴 **Asserted "MIT (no restrictions)" by a vendor page in this window.** It is AGPL-3.0 |
+
+### 🔵 The customisation layer above the platform
+
+The point of this shelf is that **AI goes on top of a system of record, not instead of one.** The
+pairings this base can defend from graded bytes:
+
+- **OpenOLAT (Apache-2.0) + DeepTutor (Apache-2.0)** — 🟢 the only fully-permissive
+  institutional-LMS-plus-tutoring-agent pairing available. See `P534` in
+  [`compose/patterns.md`](../compose/patterns.md).
+- **Moodle (GPL-3.0) + BigBlueButton (LGPL-3.0)** — the mainstream install base; safe to customise
+  and host.
+- **Kolibri (MIT) + OATutor (MIT) + pykt (MIT)** — 🟢 the offline/low-connectivity stack, fully
+  permissive, deployable where bandwidth rather than licensing is the binding constraint.
+- **Open edX / Tutor (AGPL-3.0)** — choose deliberately, with the hosting obligation accepted in
+  writing.
+
+🔴 **What this pass could not establish.** The vertical discovery leg returned **only vendor-authored
+comparison pages** — the same failure mode `p520` recorded, now with two demonstrated factual
+errors attached. 🔵 **No independent, non-vendor LMS licence inventory was found in this channel.**
+Registered as `Gap 521-C`. Every licence above is read from `raw.githubusercontent.com` bytes
+precisely because the search channel could not supply one correctly.
+
+---
+
 ## 🆕 `p520` — `2026-10-29` — **🟢 THE LMS-OF-RECORD TIER FINALLY HAS A PERMISSIVE ENTRY: `OpenOLAT` is **Apache-2.0**, read from served bytes. Every other institutional platform on this shelf is GPL, AGPL, LGPL or ECL, and this base has repeatedly generalised that into *"the LMS layer is copyleft"* — a claim that is now FALSE. 🔴 `Claroline` is **AGPL-3.0** behind a bespoke title, so a hosted derivative owes source. 🔴 And the vertical search leg returned ONLY vendor-authored comparison pages: the licence facts below come from reading `LICENSE` blobs, because the search channel could not supply one.**
 
 🔵 **Instrument note for this shelf specifically.** The vertical leg (`open source platform

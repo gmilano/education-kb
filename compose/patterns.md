@@ -4,6 +4,159 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p521` — `2026-10-29` — **🟢 THREE RECIPES, AND ONE OF THEM REPAIRS AN INSTRUMENT THIS BASE HAS BEEN RELYING ON. `P533` is the licence-clearance gate rebuilt after finding that [`licence-grant-gate`](code/licence-grant-gate/) returns `granted: True` for BOTH repositories `p520` refused — shipped with a 40-check offline suite and served-bytes fixtures. `P534` is the fully-permissive INSTITUTIONAL stack, buildable because `OpenOLAT` is Apache-2.0 and re-confirmed this pass. `P535` is the EU Article 50 marking pack for the deadline five weeks away that the "delayed to 2027" headline is burying.**
+
+---
+
+### `P533` — Licence clearance that cannot be defeated by an incipit
+
+**Problem it solves.** A studio runs one automated licence check before building. `p521` showed
+that check is defeated by a grant that opens with the MIT sentence and restricts below it, and by a
+`CC` family label that hides the `-NC` variant. 🔴 **Both failures pass code that may not be used
+in paid work.**
+
+**Components — all permissive, all read from bytes `2026-10-29`:**
+
+| Component | Grant | Role |
+|---|---|---|
+| [`compose/code/p521-commercial-posture/`](code/p521-commercial-posture/) | this KB | Posture verdict + cited clause |
+| [`compose/code/licence-grant-gate/`](code/licence-grant-gate/) | this KB | Grant existence (run it too — it answers a different question) |
+| `raw.githubusercontent.com` | — | The only working licence-bytes channel this session |
+
+**Wiring:**
+
+1. **Enumerate** candidate dependencies from the manifest (`package.json`, `pyproject.toml`,
+   `go.mod`), not from a curated list.
+2. **Fetch bytes** — `raw.githubusercontent.com/<slug>/<branch>/<file>` across
+   **`3` branches × `8` names**: `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license.txt`, `COPYING`,
+   `COPYING.txt`, `LICENCE`, `license`. 🔵 **Eight names is not padding:** `frappe/lms` serves at
+   `license.txt` and `moodle/moodle` at `COPYING.txt`; a two-name probe records both as ungranted.
+3. **Read the root listing** when no blob is found. 🔵 **This is what closed `Gap 516-B`:** name
+   enumeration can only fail to find, while listing the directory proves there is nothing to find.
+   Absence of a grant is a REFUSAL, not an unknown — default copyright is all rights reserved.
+4. **Grade** with `licence_grant_gate.verdict()` **and** `commercial_posture.posture_of()`.
+   🔴 **Gate them on the second.** Ship only `PERMISSIVE`; route `COPYLEFT` / `WEAK-COPYLEFT` to an
+   explicit written acceptance of the reciprocity obligation; **block** `NON-COMMERCIAL`,
+   `BESPOKE-RESTRICTED`, `NOT-OSI` and `UNKNOWN`.
+5. **Fail closed on disagreement.** Where the two tools differ — exactly the `PageLM` case — stop
+   the build and require a human read. 🔵 **The disagreement is the signal.**
+6. **Archive the bytes.** Store each payload with its byte count, as
+   [`fixtures/`](code/p521-commercial-posture/fixtures/) does, so a later audit re-grades without
+   re-fetching and a relicensing is detectable as a byte diff.
+
+🔵 **Never grade from:** a vendor comparison page (wrong twice today — `frappe/lms` "MIT", "no
+Apache LMS exists"), a README badge **alone** (a badge is a claim, not a grant — though it is a
+cue to re-probe), or GitHub's sidebar label (blank for `PageLM`).
+
+**Effort: 1-2 weeks** to wire into CI. **Run it before the first commit of an engagement, not at
+delivery.**
+
+---
+
+### `P534` — The fully-permissive institutional stack
+
+**Problem it solves.** A university or ministry wants a customised, self-hosted LMS with AI
+tutoring, and cannot accept a network-copyleft obligation on a hosted modified build. 🔴 **Open edX,
+Tutor and `frappe/lms` are all AGPL-3.0** — hosting a modification obliges source release to users.
+
+**Components — every grant read from bytes `2026-10-29`, no reciprocity anywhere in the stack:**
+
+| Layer | Component | Grant | Bytes |
+|---|---|---|---|
+| **LMS of record** | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | `10 982` |
+| **Tutoring agent** | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `v1.7.0` | **Apache-2.0** | `11 408` |
+| **Knowledge tracing** | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | `1 066` |
+| **Structured ITS** | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | `1 105` |
+| **Virtual classroom** | [`apache/openmeetings`](https://github.com/apache/openmeetings) | **Apache-2.0** | `51 425` |
+| **Course portal** | [`openfun/richie`](https://github.com/openfun/richie) | **MIT** | `1 079` |
+| **Offline delivery** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | `1 097` |
+| **Pedagogical eval** | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | `1 064` |
+| **Capability eval** | [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | **MIT** | `1 067` |
+
+**Wiring:**
+
+1. **`OpenOLAT` is the system of record** — enrolment, groups, gradebook, assessment. 🔵 **Do not
+   replace it with an agent.** Everything below writes back into it.
+2. **`Richie` in front** as the public catalogue/portal; `OpenOLAT` stays the authenticated
+   interior.
+3. **`DeepTutor` as the tutoring surface**, scoped per course. Its lifelong-memory model is the
+   reason to prefer it over a bare LLM call — the tutor must persist across a term.
+4. **`pykt` behind the tutor** to maintain per-learner mastery estimates; `DeepTutor` reads mastery
+   to choose what to practise. 🔵 **This is the join that makes it adaptive rather than
+   conversational.**
+5. **`OATutor` for structured domains** (mathematics) where Bayesian Knowledge Tracing and a
+   problem bank beat free-form dialogue.
+6. **`OpenMeetings` for synchronous sessions**, launched from the `OpenOLAT` course context.
+7. **`Kolibri` for the offline edge** — where connectivity is the binding constraint, the same
+   content ships offline-first and syncs back.
+8. **Gate every model change** on `pedagogy-benchmark` (pedagogical quality) **and**
+   `lm-evaluation-harness` (capability). 🔵 **Pedagogical quality and raw capability are different
+   axes; a stronger model can tutor worse.**
+9. **Run `P533` over the whole dependency tree** before shipping.
+
+🟢 **Why this pattern did not exist before `p520`:** this base generalised that *"every deployed LMS
+of record is copyleft"*, which made a fully-permissive institutional stack look impossible.
+`OpenOLAT` being Apache-2.0 refuted it. 🔵 **Re-confirmed independently this pass from a fresh byte
+read.**
+
+**Effort: 10-14 weeks.** 🟢 **Strongest fit: EMEA** (sovereignty and self-hosting pressure) **and
+public-sector LATAM/APAC** where redistribution terms are scrutinised.
+
+---
+
+### `P535` — The EU Article 50 marking pack, due `2 December 2026`
+
+**Problem it solves.** 🔴 **Five weeks from today** the grace period for machine-readable marking of
+AI-generated content expires. The sector headline — "high-risk delayed to Dec 2027" — is causing
+exactly the wrong preparation. **Article 50 was not deferred.**
+
+**Scope — what must be true on `2 Dec 2026` for an EdTech product serving EU learners:**
+
+1. **Interaction disclosure** — a learner talking to a tutoring agent is told it is an AI.
+2. **Generated-content marking** — every AI-generated quiz item, feedback comment, summary and
+   lesson asset carries a **machine-readable** mark, not only a visible label.
+3. **Provenance through the LMS** — the mark survives the agent → LMS → export path. 🔵 **This is
+   where implementations fail:** content is marked at generation and the mark is stripped on
+   import into the gradebook or on PDF/SCORM export.
+
+**Components:**
+
+| Role | Component | Grant |
+|---|---|---|
+| Existing Art. 50 instrumentation in this KB | [`compose/code/aiact-50-2-marking/`](code/aiact-50-2-marking/), [`aiact-50-2-spans/`](code/aiact-50-2-spans/), [`aiact-50-2-pack/`](code/aiact-50-2-pack/), [`aiact-50-2-exposure/`](code/aiact-50-2-exposure/) | this KB |
+| LMS of record | `OpenOLAT` (Apache-2.0) or `Moodle` (GPL-3.0) | permissive / copyleft |
+| Generation surface | `DeepTutor` (Apache-2.0) | permissive |
+
+**Wiring:**
+
+1. **Inventory generation points** — every path that emits learner-visible text or media.
+   🔵 **Include the ones nobody calls AI:** autogenerated feedback, rubric suggestions, translated
+   captions.
+2. **Mark at the generation boundary**, never at the presentation layer, so the mark cannot be lost
+   by a downstream renderer.
+3. **Carry the mark across the LMS write**, and re-test it on **export** (PDF, SCORM, gradebook
+   CSV) — the step most often missed.
+4. **Disclose interaction** in the tutor UI at session start, not buried in terms.
+5. 🔴 **Remove emotion inference entirely.** Emotion recognition is **prohibited**, already in
+   force, and no marking or documentation makes a proctoring/engagement feature that infers
+   emotional state lawful. **This is a deletion, not a compliance task.**
+6. **Then, and separately,** begin the Annex III programme for `2 Dec 2027` — conformity
+   assessment, technical documentation, logging and human oversight for the four named functions:
+   admissions screening, evaluating learning outcomes, determining education level, exam
+   monitoring. 🔵 **Design to human-final-decision now** and the 2027 assessment becomes
+   documentation.
+
+🔴 **Caveat to carry into the client conversation.** The amending instrument is reported as
+**Regulation (EU) 2026/1744** (OJ `24 Jul 2026`, in force `27 Jul 2026`), but
+`eur-lex.europa.eu` is **DNS-blocked in this session** and the primary text is **not read here**
+(`Gap 521-D`); the `2 Dec 2026` marking date is **single-sourced** (`Gap 521-E` neighbour).
+🔵 **Brief the direction, verify the citation before it reaches a contract.**
+
+**Effort: 3-5 weeks** for the marking pack. 🟢 **The nearest-dated billable education-AI engagement
+in EMEA.**
+
+---
+
 ## 🆕 `p520` — `2026-10-29` — **🟢 THREE RECIPES, AND ONE RETRACTION `Gap 520-A` ASKED FOR BY NAME: `P530` is the licence-clearance gate rebuilt around the finding that in education the blocking grant is a CONTENT licence — with a working reader and 40 controls. `P531` is the first fully-permissive INSTITUTIONAL stack this base can offer, newly buildable because `OpenOLAT` is Apache-2.0. `P532` is the substitution recipe for `cn-math-taxonomy`, which is CC BY-NC and cannot be used at all. 🔴 And `Pattern 32`'s TEXT is retracted here, not merely superseded — `P529` replaced its architecture while leaving the withdrawn premise on the shelf.**
 
 ### 🔴 `Pattern 32` — RETRACTED IN TEXT, as `Gap 520-A` required

@@ -4,6 +4,153 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p521` — `2026-10-29` — **🔴 THE BASE'S OWN LICENCE GATE PASSES BOTH REPOSITORIES `p520` REFUSED. `licence-grant-gate` returns `{'family': 'MIT', 'granted': True}` for `PageLM` — a grant that prohibits redistribution outright and requires a revenue-share before any commercial deployment — and `{'family': 'CC', 'granted': True}` for `cn-math-taxonomy`, which is CC BY-NC. 🔵 `p520`'s two refusals were correct and were made BY HAND; the instrument contradicts both. 🟢 `Gap 516-B` CLOSES, and not as "unresolved": `Jal246/study-mcp` serves NO licence file at all — root listing read, sidebar read, 24 branch×name combinations probed. Absence, not a naming problem. 🟢 And the search channel is REFUTED twice by served bytes in a single pass.**
+
+### 🔴 The finding: a grant gate is not a posture gate
+
+`p520` refused [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) ("bespoke non-commercial")
+and [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy)
+(CC BY-NC 4.0). Both refusals are right. **Both are reversed by this base's own instrument:**
+
+```
+$ python3 -c "import grant_gate as g; print(g.verdict(open('pagelm.txt').read()))"
+{'state': 'LICENSED', 'family': 'MIT', 'granted': True, 'note': 'grant read from payload'}
+
+$ python3 -c "import grant_gate as g; print(g.verdict(open('cnmath.txt').read()))"
+{'state': 'LICENSED', 'family': 'CC',  'granted': True, 'note': 'grant read from payload'}
+```
+
+🔵 **The gate is not wrong about what it measures.** `verdict()` answers *"is a licence granted?"*,
+and in both cases one is. It is silent about **commercial posture**. A caller who reads `granted`
+as *"may a paid engagement build on this?"* — which is the only reason this base grades licences —
+gets the wrong answer on precisely the two rows where it costs money.
+
+**Why `PageLM` reads as MIT.** Its `LICENSE.md` (`8 563` B) **opens with the verbatim MIT incipit**
+— *"Permission is hereby granted, free of charge, to any person obtaining a copy …"* — and only
+then restricts to *"personal, educational, or non-commercial research purposes"*, prohibits
+redistribution **"strictly prohibited"** (§2), bars commercial use without written consent (§3),
+requires a **revenue-sharing agreement executed before any commercial deployment** (§4), and makes
+the grant **revocable**. 🔵 **The MIT opening sentence is doing the work of making a restricted
+grant look permissive to exactly the automated check a studio would run.** GitHub's own sidebar
+names no licence for this repo; the incipit defeats the classifier, not the reader.
+
+The fix, with a 40-check offline suite and the served bytes stored as fixtures, is
+[`compose/code/p521-commercial-posture/`](../compose/code/p521-commercial-posture/). It does not
+replace `licence-grant-gate` — it answers the question that one leaves open. 🔵 **Run both.**
+
+🔵 **Two bounds this pass's own suite caught, neither hypothetical.** A 1 200-character title window
+is too generous (the GPLv3 names the AGPL in §13), and resolving family-by-family lets a later line
+beat the title. **Scan title lines in order.** A body-wide grep misclassifies *every* GPLv3 payload
+as AGPL — on this sweep that is `moodle`, `chamilo`, `ILIAS` and `Gibbon`, four institutional
+platforms whose reciprocity obligation would have been overstated.
+
+### 🟢 `Gap 516-B` closes — the grant is ABSENT, not unresolved
+
+`p516` left [`Jal246/study-mcp`](https://github.com/Jal246/study-mcp) open: *"no grant on five
+English names at `main`/`master`… unresolved, not absent, until other-language names and the true
+default branch are probed."* **Both conditions are now discharged:**
+
+| Probe | Result |
+|---|---|
+| Default branch | **`main`** (read from the repo page, not assumed) |
+| Root listing | `.github/workflows`, `scripts`, `src/study_mcp`, `tests`, `.gitattributes`, `.gitignore`, `.python-version`, `README.md`, `pyproject.toml`, `uv.lock` |
+| Licence file at root | 🔴 **none — no file of any name** |
+| Sidebar licence | 🔴 none shown |
+| Blob probe | 🔴 `3` branches × `8` names = **24 combinations, all 404** |
+| Stars | **0** |
+
+🔵 **The root listing is what closes it.** Probing names can only ever fail to find; *reading the
+directory* shows there is nothing to find. No licence file exists, so the default applies: all
+rights reserved. 🔴 **Not buildable, and at `0`★ it never warranted a row.** Closed as
+`NO-GRANT-ABSENT`, and this base should prefer a root listing over name enumeration in future.
+
+### 🔴 The search channel is refuted twice by served bytes, in one pass
+
+| Search-channel claim (today) | Served bytes | Verdict |
+|---|---|---|
+| *"Frappe Learning (MIT): this is the MIT-licensed option… MIT (no restrictions)"* | [`frappe/lms`](https://github.com/frappe/lms) `main/license.txt` = **AGPL-3.0**, `33 893` B | 🔴 **FALSE.** A vendor comparison page asserted the most permissive grant for what is in fact the strongest copyleft on the LMS shelf |
+| *"I didn't find any Apache-licensed LMS… I can't confirm one exists"* | [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) **Apache-2.0** `10 982` B; [`apache/openmeetings`](https://github.com/apache/openmeetings) **Apache-2.0** `51 425` B | 🔴 **FALSE.** `p520` found `OpenOLAT` first; this pass confirms it independently |
+
+🔵 **Both errors run in the direction that costs a client.** One would have put AGPL code into a
+proprietary deliverable; the other would have sent an engagement to a copyleft platform while a
+permissive institutional LMS existed. **Vendor comparison pages are not a licence channel.**
+
+### The graded shelf — `31` rows, every grant read from served bytes `2026-10-29`
+
+Channel: `raw.githubusercontent.com/<slug>/<branch>/<file>`, `3` branches × `8` names.
+Posture by [`p521-commercial-posture`](../compose/code/p521-commercial-posture/).
+
+#### 🟢 Permissive — buildable in a paid engagement with no reciprocity
+
+| Repo | Grant | Bytes | What it is |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** | `11 408` | Lifelong personalised tutoring; `v1.7.0` released `2026-10-28`. The sector's anchor agent |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | `1 065` | Highest-starred permissive row on this shelf |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** | `11 358` | Interactive lessons platform; the highest fork count on the shelf |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | `10 982` | 🟢 A **full institutional LMS**, permissive. The row that refutes "the LMS layer is copyleft" |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | `1 097` | Offline-first learning platform — the low-connectivity deployment answer |
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | **BSD-3-Clause** | `1 513` | Platform **and** curriculum with a certification engine; the largest education codebase in open source |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | `11 120` | HE collaboration/LMS. Apache-2.0 derivative, so permissive |
+| [`apache/openmeetings`](https://github.com/apache/openmeetings) | **Apache-2.0** | `51 425` | Virtual classroom / conferencing, ASF-governed |
+| [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) | **Apache-2.0** | `11 359` | Block programming for classroom robotics (Fraunhofer IAIS, 🇩🇪) |
+| [`openfun/richie`](https://github.com/openfun/richie) | **MIT** | `1 079` | Django/React CMS for course portals (France Université Numérique, 🇫🇷) |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | `1 105` | Intelligent tutoring with Bayesian Knowledge Tracing (UC Berkeley) |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | `1 066` | Knowledge-tracing library; the adaptive-learning substrate |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | `1 531` | Multimodal tutoring with voice/avatars, Ollama-friendly |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | `1 064` | Pedagogical-quality benchmark — the evaluation leg |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | **Apache-2.0** | `11 357` | K-12 teacher agent skills, permissively granted |
+| [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | **MIT** | `1 067` | The general evaluation harness tutors are scored in |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | `1 062` | Permissive modern LMS |
+| [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) | **MIT** | `1 141` | Curriculum, not a tool — permissive and reusable as course material |
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) | **Apache-2.0** | `11 505` | Teaching codebase for LLM internals |
+
+#### 🟡 Copyleft — buildable, with a reciprocity obligation the engagement must accept explicitly
+
+| Repo | Grant | Bytes | Note |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | `35 147` | `COPYING.txt`, not `LICENSE` — name enumeration misses it |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** | `35 147` | Strong 🇪🇸/LATAM install base |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** | `35 147` | 🇩🇪 institutional LMS |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | **GPL-3.0** | `35 121` | School-management (SIS) rather than LMS |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0** | `35 136` | 🔴 Network copyleft — a hosted derivative owes source |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | **AGPL-3.0** | `34 523` | The practical Open edX distribution; same obligation |
+| [`frappe/lms`](https://github.com/frappe/lms) | **AGPL-3.0** | `33 893` | 🔴 Asserted MIT by a vendor page today. It is not |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **LGPL-3.0** | `7 652` | Virtual classroom; weak copyleft, library-scoped |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **CC BY-SA** | `1 230` | 🔵 A **content** licence on an agent-skills repo — reciprocity on the skills themselves |
+
+#### 🔴 Refused — not buildable in a paid engagement at any price
+
+| Repo | Grant | Bytes | Operative clause |
+|---|---|---|---|
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **CC BY-NC 4.0** | `19 347` | NonCommercial. Now **5.0k★ / 1.3k forks**, and the README badge agrees with the bytes — two channels, same answer |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **Bespoke non-commercial** | `8 563` | §2 redistribution *"strictly prohibited"*; §3 no commercial use without consent; §4 revenue-share before deployment; grant **revocable** |
+| [`Jal246/study-mcp`](https://github.com/Jal246/study-mcp) | 🔴 **NO GRANT — absent** | — | No licence file at root. Default copyright: all rights reserved |
+
+🟢 **`19` of `31` rows are permissive and buildable with no reciprocity.** 🔵 **The three refusals
+carry the two highest non-`OpenMAIC` star counts on the shelf** — which is the same lesson `p520`
+drew and this pass now has an instrument for: **in education, star mass and buildability are
+close to uncorrelated.**
+
+### Channel matrix, read `2026-10-29`
+
+| Channel | Result | Use |
+|---|---|---|
+| `raw.githubusercontent.com/<slug>/<br>/<file>` | 🟢 **200** | 🟢 The licence-bytes channel. Everything above |
+| `curl https://github.com/<slug>` | 🔴 **403** | Not an existence test, as `p31` established |
+| `curl https://api.github.com/repos/<slug>` | 🔴 **403** | Session-scoped; refuses non-attached repos |
+| `curl https://api.github.com/rate_limit` | 🟢 200 | 🔵 Reachable but useless — the endpoint is not repo-scoped |
+| Rendered repo page (markdown reader) | 🟢 **200** | 🟢 Root listings, sidebars, **rounded** star counts |
+| `eur-lex.europa.eu` | 🔴 **DNS-blocked** | 🔴 No primary EU legal text this pass — see [`intel/market.md`](../intel/market.md) |
+
+🟡 **`Gap 515-B` stays open and the reason is now precise.** `DeepTutor` reads **`48.4k`★** — the
+rendered page rounds, the two API routes are 403, and no in-scope channel returns an exact integer.
+🔵 **Against `p513`'s exact `47,834`, `48.4k` is consistent with growth but cannot overwrite an
+exact figure with a rounded one.** The gap is not "unmeasured" — it is **unmeasurable from the
+channels this session has**, which is a different instruction to the next pass: do not re-spend
+discovery budget on it unless an API or git-protocol channel opens.
+
+---
+
 ## 🆕 `p520` — `2026-10-29` — **🟢 `Gap 520-B` CLOSES: the served-licence channel is READABLE again and all seven blocked rows are graded. 🔴 And it does not vindicate them — it CONDEMNS most of them. Only **2 of 7** are permissive. The sector's highest-velocity asset, `cn-math-taxonomy` (4,925★), is **CC BY-NC 4.0** — NON-COMMERCIAL, so it is REFUSED for paid client work, not "probably fine" as `p519` allowed it might be. `PageLM` (2,050★) is a bespoke non-commercial grant. `advisingapp` is **Elastic-2.0**, which settles `Gap 513-F` on its ORIGINAL premise. 🔴 The channel was never the repository's property: `p504` had it, `p518`/`p519` did not, this session does — `Gap 511`'s class for the third time.**
 
 🔵 **Instrument note, stated first because every row below depends on it.** `p519` recorded that

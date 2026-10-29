@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p521` — `2026-10-29` — **🟢 THE MOMENTUM TABLE NOW CARRIES A POSTURE COLUMN COMPUTED BY AN INSTRUMENT RATHER THAN BY HAND — and the instrument reproduces every one of `p520`'s verdicts, including the two refusals [`licence-grant-gate`](../compose/code/licence-grant-gate/) gets WRONG. 🔴 The top of this table is unchanged in the only way that matters: the two highest-velocity rows in the sector are still NOT buildable. 🟡 `Gap 475-E` (star VELOCITY, never once measured in this base) is advanced but NOT closed — a dated snapshot is written below, and the reason it still cannot be differenced is a channel limit, not an oversight.**
+
+### 🟡 `Gap 475-E` — why velocity is still not measured, and what is now in place
+
+`p475` recorded the fix as *"cheap and not done: write a dated `repo,stars` snapshot each pass and
+difference it next pass."* 🔵 **The fix is cheaper than that and also harder than that.**
+
+🔴 **Harder, because the channel rounds.** The two API routes are `403` this session
+(`api.github.com/repos/<slug>` and `curl` on the repo page); the only working star channel is the
+rendered page, which prints `48.4k`, `5.0k`, `1.3k`. **A rounded figure cannot be differenced
+against another rounded figure at weekly cadence** — `DeepTutor` moving `47.9k → 48.4k` is a real
+delta, but `5.0k → 5.0k` for `cn-math-taxonomy` is indistinguishable from `+400`.
+
+🟢 **Cheaper, because `p520` already wrote exact integers.** Where a prior pass captured an exact
+count, a *rounded* current read still bounds the delta. That is the honest unit this base can
+publish, and it is published below.
+
+🔵 **Instruction to the next pass, and it is a change of channel, not of effort:** a dated snapshot
+is only differenceable if both ends are exact. Until an API or git-protocol channel opens, record
+**the rounded figure AND the bound**, and do not describe a rounded-to-rounded comparison as
+velocity.
+
+### Dated star snapshot — `2026-10-29`, read from the rendered page (rounded unless noted)
+
+| Repo | `p520` exact | `p521` read | Bounded delta | Posture |
+|---|---|---|---|---|
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **41,726** / 6,454 | not re-read | — | 🟢 **MIT** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `47.9k` (`p515`); `47,834` exact (`p513`) | **48.4k** / 6.0k | 🟢 **≈ +0.5k since `p515`** | 🟢 **Apache-2.0** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **6,951** / 5,861 | not re-read | — | 🟢 **Apache-2.0** |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **4,925** / 1,262 | **5.0k** / **1.3k** | 🟡 **+0 … +124** (rounding-bounded) | 🔴 **CC BY-NC — REFUSED** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2,050** / 279 | not re-read | — | 🔴 **Bespoke non-commercial — REFUSED** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **448** | not re-read | — | 🟢 **Apache-2.0** |
+| [`Jal246/study-mcp`](https://github.com/Jal246/study-mcp) | — | **0** (exact) | — | 🔴 **NO GRANT — absent** |
+
+🔵 **`cn-math-taxonomy`'s eleven-day run has flattened, within the limits of what can be seen.**
+`4,925 → 5.0k` over the day between `p520` and `p521` is at most `+124` and may be zero. 🔴 **It
+does not matter either way: the row is CC BY-NC and cannot be used in paid work at any star count.**
+🔵 **This is the single most repeated lesson in this file and it now has a number attached: the
+fastest-growing education repository this base has ever recorded is one a client may not touch.**
+
+### 🟢 The posture column is now computed, and it caught what the hand-read also caught
+
+`p520` graded these rows by hand and got them right. This pass re-grades them with
+[`p521-commercial-posture`](../compose/code/p521-commercial-posture/) — `40/40` offline checks,
+served-bytes fixtures stored — and the machine agrees. 🔴 **The base's existing
+`licence-grant-gate` does not**, returning `granted: True` for both refusals. See
+[`agents/top.md`](../agents/top.md) for the reproduction.
+
+🔵 **Why this matters for a trending table specifically.** A momentum table is the file most likely
+to be read quickly and acted on — it is the "what's hot" page. It is therefore the file where a
+licence misread does the most damage, and the one that most needs a verdict a human did not have to
+remember to produce.
+
+### 🔴 Discovery this window returned nothing new, and that is the finding
+
+Every repository surfaced by this pass's discovery legs was **already held** by this base —
+verified repo-by-repo against the shelf, not assumed: `moodle`, `canvas-lms`, `h5p`, `openeducat`,
+`oppia`, `kolibri`, `tutor`, `sakai`, `ILIAS`, `bigbluebutton`, `Gibbon`, `mentingo`, `richie`,
+`openroberta-lab`, `openmeetings`, `generative-ai-for-beginners`, `LLMs-from-scratch`.
+
+🔵 **At `p521` the well-known permissive education surface is saturated.** The marginal return on
+another "top open source AI agents for education" query is zero, and this base has now paid for
+that query enough times to say so. **Reallocate discovery budget to grading, to regional/regulatory
+legs, and to the unread primary sources named in [`agents/trending.md`](../agents/trending.md).**
+
+---
+
 ## 🆕 `p520` — `2026-10-29` — **🟢 THE MOMENTUM TABLE NOW CARRIES A GRANT COLUMN READ FROM SERVED BYTES, AND THE TOP TWO ROWS FAIL IT. 🔴 `cn-math-taxonomy` — the fastest-growing education repo this base has ever recorded, ~4.9k★ in eleven days — is **CC BY-NC 4.0**. 🟢 The quiet row that matters instead is `OpenOLAT`: only 448★, but **Apache-2.0** and a full institutional LMS, which no amount of star count on the rows above can substitute for.**
 
 ### 🔴 Trending by momentum — with the grant attached

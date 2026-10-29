@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p521` — `2026-10-29` — **🔴 THE LOAD-BEARING TREND THIS PASS IS THAT THE SECTOR'S LICENCE RISK HAS MOVED FROM *WHICH LICENCE* TO *WHETHER THE CHECKER CAN SEE IT*. `p520` established that in education the blocking grant is a CONTENT licence. `p521` establishes the next step: a restricted grant can OPEN with the verbatim MIT incipit, and this base's own gate then reports `family=MIT, granted=True`. 🔵 A licence-clearance step is now an ADVERSARIAL problem, not a lookup. 🟡 And the week's deployment evidence says the money is in the back office: the dated agent launches are an invoice agent and an enrolment agent.**
+
+### 🔴 Trend 1 — the licence checker is now part of the attack surface
+
+`p520`: *"a licence-clearance step that checks code licences will pass exactly the wrong
+artefacts."* 🔵 **That was about licence TYPE. This is about licence READING, and it is worse,
+because it defeats the fix for the first problem.**
+
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) serves a grant that begins with the exact
+MIT sentence and then prohibits redistribution, bars commercial use, demands a revenue share and
+makes itself revocable. 🔴 **Every automated reading this base can perform calls it MIT**, and
+GitHub's own sidebar names no licence at all. The correct verdict required reading `8 563` bytes
+of prose to the end.
+
+🔵 **The generalisation, and it is the sentence to carry forward:** *a licence classifier keyed on
+an incipit is keyed on the one part of the document an author controls freely.* Grading must scan
+the **whole** payload for restriction terms and let them **override** a permissive family read.
+
+🔵 **Second-order consequence.** This base's refusals at `p520` were produced by hand and were
+right. Its instrument, run today against the same bytes, is wrong. 🔴 **Hand-reads do not scale
+and instruments do not read prose** — so the only durable answer is an instrument that *refuses on
+evidence it can cite*, which is what
+[`p521-commercial-posture`](../compose/code/p521-commercial-posture/) does: every refusal names the
+clause that caused it, so a human can check the machine rather than replace it.
+
+### 🔴 Trend 2 — "granted" and "buildable" have come apart, and tooling still conflates them
+
+| Question | Answered by | PageLM | cn-math-taxonomy |
+|---|---|---|---|
+| Is a licence granted? | `licence-grant-gate` | 🟢 yes | 🟢 yes |
+| May a paid engagement build on it? | `p521-commercial-posture` | 🔴 **no** | 🔴 **no** |
+
+🔵 **Both tools are correct; only the second one is the question.** The sector's convention of
+publishing a single SPDX-ish label per repository cannot express `CC-BY` vs `CC-BY-NC` vs
+`CC-BY-SA` — three different commercial answers behind one family string. **Resolve the variant,
+never the family.**
+
+### 🟡 Trend 3 — education AI is being deployed in the back office first
+
+The dated vendor launches in this window are an **invoice agent** (live in Texas districts) and a
+**continuing-education enrolment / course-discovery agent** (announced, ships spring 2027). The
+dated *instructional* release is an open-source tutoring agent from a university lab.
+
+🔵 **Procurement follows measurable cost, and administrative cost is measurable while learning
+outcomes are not.** Expect the near-term budget in operations — finance, enrolment, scheduling,
+compliance — and expect instructional AI to continue arriving through open source and institutions
+rather than through vendors.
+
+🔴 **Adoption remains thin even there:** few districts and colleges run agents in daily operations,
+and leaders cite caution about granting access to sensitive systems and data. 🔵 **That named
+blocker is an integration and permissions problem, which is a studio's work, not a model problem.**
+
+### 🔴 Trend 4 — the workload-relief claim is unevidenced in both directions
+
+Circulating figures (*~40% workload reduction*, *3M US teacher-hours saved weekly*, *80% of routine
+labour*) trace to a single vendor roadmap page with no study behind them. A countervailing analysis
+in the same window argues the mechanism runs the other way: generic tools shift effort from lesson
+planning to prompt-crafting, verification and curriculum adaptation.
+
+🔴 **Neither is measured. Do not quote either to a client.** 🔵 **The usable form of the claim is
+narrower and defensible:** *task-specific* agents against *named* administrative tasks have
+measurable baselines; "teacher workload" in the aggregate does not. See `Gap 521-A` in
+[`agents/trending.md`](../agents/trending.md).
+
+### 🟢 Trend 5 — the permissive education surface is saturated, and discovery should stop
+
+Every repository surfaced by this pass's discovery legs was already held here. 🔵 **At `p521` the
+marginal return on another "best open source AI agents for education" query is zero.** The
+remaining uncertainty in this base is not *which repositories exist* — it is **what their grants
+actually say**, **what the regulators actually wrote**, and **which regions are actually buying**.
+🟢 **Shift the budget from discovery to grading, primary-source reads and regional legs.**
+
+### 🔴 Trend 6 — the regulatory headline is inverted relative to the binding date
+
+"EU high-risk delayed to Dec 2027" is the story; **`2 December 2026` — the Article 50
+machine-readable marking grace, five weeks away — is the deadline.** 🔵 **A deferral headline
+reliably causes under-preparation for the obligations that were not deferred**, and transparency,
+marking and the emotion-recognition prohibition were not. The same inversion appears in LATAM,
+where Chile's nearest binding instrument is a **data-protection** law (`1 Dec 2026`), not an AI law.
+
+🔵 **Generalisation: in education the binding date is usually attached to a data or transparency
+instrument, not to the AI instrument everyone is watching.**
+
+---
+
 ## 🆕 `p520` — `2026-10-29` — **🔴 THE LOAD-BEARING TREND THIS PASS IS ABOUT EDUCATION ITSELF, NOT ABOUT TOOLING: the grant that blocks an education engagement is a **CONTENT** licence, not a code licence. The three highest-starred ungradeable rows in this sector are CC BY-NC, bespoke non-commercial and CC BY-SA — not one is a code licence. Education ships curriculum, and curriculum is licensed like publishing. 🔴 A licence-clearance step that checks code licences will pass exactly the wrong artefacts.**
 
 ### 🔴 `T520-1` — A refusal is a property of the sandbox. Third confirmation, and it cost two passes

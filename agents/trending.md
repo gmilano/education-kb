@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p521` — `2026-10-29` — **🟡 THIS WEEK'S EDUCATION-AGENT NEWS IS OPERATIONAL, NOT INSTRUCTIONAL: the two dated vendor announcements in the window are an **invoice agent** and a **recruitment/course-discovery agent**. Neither teaches anybody anything. 🔴 And a sector survey in the same window reports that relatively FEW districts and colleges have agents in day-to-day operations, with leaders withholding access to sensitive systems — so even the operational wave is announcement-heavy. 🟢 The one instructional release that is dated and verifiable is `DeepTutor` `v1.7.0` (`2026-10-28`, Apache-2.0).**
+
+### Dated this window
+
+| Date | What | Signal |
+|---|---|---|
+| `2026-10-28` | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) **`v1.7.0`** released; **Apache-2.0** re-read from bytes (`11 408` B); **48.4k**★ / 6.0k forks | 🟢 The only dated *instructional* agent release in the window, and it is permissive |
+| `2026-10-27` | Expert-consensus statement on generative AI in K-20 learning published, emphasising pedagogical limits and risks | 🟡 **Not retrieved** — the aggregator describes it, the document itself was not read here. Recorded as a lead, not a finding |
+| `2026-10-21` | **Element451 for CE and Workforce** announced — course-discovery agents, recruiter follow-ups, workforce-partnership workflows. Availability slated **spring 2027** | 🟡 Operational/enrolment, not teaching. **Announced ~6 months before it ships** |
+| `2026-10-20` | **Frontline Education** "System of Intelligent Action" for K-12 operations; first live component **Invoice Agent**, running in Texas districts | 🟢 The only one of the three described as *already running*. 🔵 **It is an invoice agent** |
+| `2026-10-18 → 10-29` | [`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) `4,925`★ (`p520`) → **`5.0k`★ / 1.3k forks** | 🔴 Still **CC BY-NC 4.0** — confirmed this pass from both the served `LICENSE` (`19 347` B) and the README badge |
+
+### 🔵 The shape of the week, stated plainly
+
+🔵 **Where money is being committed in education AI right now is the back office, not the
+classroom.** Of the three dated vendor items above, one is finance, one is enrolment/marketing,
+and the third is a consensus statement warning about pedagogical limits. **The instructional layer's
+only dated release this window came from open source** — a university lab shipping Apache-2.0.
+
+🔴 **And the adoption claim underneath the announcements is weak.** The same window's survey
+reporting says few districts and colleges actually run agents in daily operations, and that leaders
+are specifically cautious about granting them access to sensitive systems and data. 🔵 **For a
+Globant engagement that is the brief, not an obstacle:** the blocker named by buyers is *system
+access and data governance*, which is an integration and permissions problem — the thing a studio
+sells — rather than a model-quality problem.
+
+### 🔴 What this base could NOT verify this window, stated so the next pass does not re-spend it
+
+- 🔴 **Teacher-workload figures are vendor-sourced and should not be quoted to a client.** The
+  circulating numbers — *"~40% workload reduction"*, *"3 million hours saved weekly in the US"*,
+  *"80% of routine labour"* — trace to a single EdTech roadmap page with no primary study behind
+  them. 🔵 **A countervailing analysis in the same window argues the opposite mechanism**: generic
+  tools shift effort from lesson planning to prompt-crafting, verification and curriculum
+  adaptation — *supervision*, not relief. **Both are assertions; neither is measured here.**
+  Registered as `Gap 521-A`.
+- 🔴 **The October K-20 expert-consensus document was not retrieved**, only described second-hand.
+  Registered as `Gap 521-B`. It is the highest-value unread primary source in this window.
+- 🔴 **No new permissive education agent appeared this window.** Every candidate surfaced by the
+  discovery leg was already held by this base — checked repo-by-repo against the shelf, not
+  assumed. 🔵 **That is a finding, not an empty result:** at `p521` the well-known permissive
+  education-agent surface is saturated, and discovery budget is better spent on grading and on
+  regional/regulatory legs than on re-finding `DeepTutor`.
+
+---
+
 ## 🆕 `p520` — `2026-10-29` — **🟡 THE WEEK'S STRONGEST EDUCATION-AGENT SIGNAL IS A WITHDRAWAL, NOT A LAUNCH: `education-agent-skills` shipped **v3.1.0 on 22 Oct 2026** and RETIRED its own hosted MCP service — public signup closed — pivoting to a portable, validator-checked skill edition. 🔴 And the week's two biggest star counts are both ungradeable-no-longer and both REFUSED: `PageLM` (2,050★) is a bespoke non-commercial licence, `cn-math-taxonomy` (4,925★ in eleven days) is CC BY-NC.**
 
 ### 🟡 Signal 1 — a hosted agent service shut down in favour of portable skills

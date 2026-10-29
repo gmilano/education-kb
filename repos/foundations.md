@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p521` — `2026-10-29` — **🟢 THE PERMISSIVE SHELF IS RE-READ FROM BYTES AND IT HOLDS: `19` of `31` graded rows are permissive with no reciprocity. 🔴 And the claim that would have shrunk it is FALSE — a vendor comparison page asserted today that no Apache-licensed LMS exists; `OpenOLAT` (`10 982` B) and `apache/openmeetings` (`51 425` B) are both Apache-2.0. 🔴 The same page called `frappe/lms` "MIT (no restrictions)". Its served bytes are **AGPL-3.0**, `33 893` B — the strongest copyleft on this shelf, asserted as the weakest.**
+
+### 🔴 Two refutations of the search channel, both in the costly direction
+
+This shelf exists because a studio needs to know what it may build on. **Both errors the search
+channel made today would have cost a client:**
+
+| Asserted today | Served bytes | Cost of believing it |
+|---|---|---|
+| `frappe/lms` is **MIT**, *"no restrictions"* | **AGPL-3.0**, `33 893` B, `main/license.txt` | 🔴 AGPL code in a proprietary deliverable — network copyleft on a hosted LMS |
+| *"I didn't find any Apache-licensed LMS… can't confirm one exists"* | `OpenOLAT` **Apache-2.0**; `apache/openmeetings` **Apache-2.0** | 🔴 An engagement pushed onto copyleft while a permissive institutional LMS was available |
+
+🔵 **A vendor comparison page is not a licence channel, and this is now twice-demonstrated rather
+than asserted.** Grade from `raw.githubusercontent.com` bytes or do not grade.
+
+🔵 **Note the file-name trap in the same table.** `frappe/lms` serves at `license.txt` and
+`moodle/moodle` at `COPYING.txt`. A probe that tries only `LICENSE`/`LICENSE.md` finds neither and
+would record both as ungranted. This pass probes `3` branches × `8` names.
+
+### The foundational shelf, graded `2026-10-29`
+
+Posture by [`compose/code/p521-commercial-posture/`](../compose/code/p521-commercial-posture/).
+
+#### 🟢 Permissive — the default starting points
+
+| Repo | Grant | Bytes | Layer | Why it is foundational |
+|---|---|---|---|---|
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | **BSD-3-Clause** | `1 513` | Platform + curriculum | The largest education codebase in open source, and permissive. Carries its own certification engine |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | `10 982` | **Institutional LMS** | 🟢 The permissive LMS of record. Everything else in this tier is GPL/AGPL/LGPL/ECL |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | `11 120` | HE LMS / collaboration | Apache-2.0 derivative with an explicit patent grant suited to universities |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** | `11 358` | Interactive lessons | Highest fork count on the shelf — the clearest signal of real downstream reuse |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | `1 097` | Offline-first delivery | 🟢 The low-connectivity answer. Decisive for rural LATAM, Africa and APAC deployments |
+| [`apache/openmeetings`](https://github.com/apache/openmeetings) | **Apache-2.0** | `51 425` | Virtual classroom | ASF governance — the lowest-risk conferencing dependency available |
+| [`openfun/richie`](https://github.com/openfun/richie) | **MIT** | `1 079` | Course portal CMS | 🇫🇷 Django/React; the portal layer above an LMS |
+| [`OpenRoberta/openroberta-lab`](https://github.com/OpenRoberta/openroberta-lab) | **Apache-2.0** | `11 359` | K-12 robotics / blocks | 🇩🇪 Fraunhofer IAIS. The STEM-curriculum spine |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | `1 066` | Knowledge tracing | The adaptive-learning substrate every personalisation feature needs |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | `1 105` | Intelligent tutoring | Bayesian Knowledge Tracing, UC Berkeley |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** | `11 408` | Tutoring agent | `v1.7.0` `2026-10-28`; the sector's anchor agent |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | `1 065` | Agent platform | Highest-starred permissive row held here |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | `1 062` | Modern LMS | The permissive alternative when `OpenOLAT` is too heavy |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | `1 064` | Evaluation | Pedagogical quality, not generic capability |
+| [`EleutherAI/lm-evaluation-harness`](https://github.com/EleutherAI/lm-evaluation-harness) | **MIT** | `1 067` | Evaluation | The general harness to wrap the above in |
+
+#### 🟡 Copyleft foundations — real options, with an obligation to accept up front
+
+| Repo | Grant | Bytes | Obligation |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | `35 147` | Distribution-triggered. 🔵 Serves at `COPYING.txt` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | **AGPL-3.0** | `35 136` | 🔴 **Network-triggered** — hosting a modified build obliges source release |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | **AGPL-3.0** | `34 523` | Same; the practical Open edX distribution |
+| [`frappe/lms`](https://github.com/frappe/lms) | **AGPL-3.0** | `33 893` | 🔴 Same. Serves at `license.txt` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | **GPL-3.0** | `35 147` | Distribution-triggered. Large 🇪🇸/LATAM install base |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | **GPL-3.0** | `35 147` | Distribution-triggered. 🇩🇪 |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | **GPL-3.0** | `35 121` | SIS rather than LMS — a different layer |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **LGPL-3.0** | `7 652` | Library-scoped; the mildest obligation in this tier |
+
+🔵 **The AGPL rows are the ones to raise in a kickoff, not at delivery.** `edx-platform`, `tutor`
+and `frappe/lms` all trigger on *hosting*, which is exactly how an education platform ships. A
+client who expects to host a modified Open edX and keep it closed has a licence problem, not a
+technical one.
+
+🟢 **The practical consequence of `OpenOLAT` being Apache-2.0 is that this shelf can now offer a
+fully-permissive institutional stack** — see `P534` in
+[`compose/patterns.md`](../compose/patterns.md).
+
+---
+
 ## 🆕 `p520` — `2026-10-29` — **🔴 THIS SHELF LOSES ITS RICHEST ROW OUTRIGHT: `cn-math-taxonomy` is **CC BY-NC 4.0**, so `p519`'s demotion to `UNREADABLE` becomes a REFUSAL — it is not buildable in a paid engagement at any price. 🟢 And it gains the row this shelf has implicitly claimed was impossible: **`OpenOLAT` is Apache-2.0** — a full institutional LMS, permissive, 448★, pushed yesterday. 🔴 That REFUTES a standing claim on this very file: *"every deployed LMS of record is copyleft"* is now false. 🟡 `pupilfirst` is **MIT** and **eleven months stale** — permissive and not maintained are independent axes, and this row is the proof.**
 
 🔵 **What belongs here.** A foundation is something a studio builds *on* — a platform, a curriculum
