@@ -4,6 +4,140 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p523` — `2026-10-29` — **🟢 THREE RECIPES, EACH BUILT ON SOMETHING THIS PASS MEASURED. `P539` is the dependency-intake gate that would have stopped `microsoft/autogen` entering three education cycles as live supply — it keys on days since the last CODE commit, because `archived`, `updated_at`, `ls-remote` and the committer date all read LIVE on a project 217 days dead. `P540` is the retention stack rebuilt on the link that is actually maintained: `fsrs-rs` (BSD-3-Clause, 6-day code gap), not `fsrs4anki` (MIT, 340 days). `P541` is the Moodle-gap wedge: core's AI subsystem names exactly three things it does not do, and this base has a permissive asset for each — including the only one that emits SCORM.**
+
+---
+
+### `P539` — Dependency intake gate: reject on the code gap, not on the metadata
+
+**Problem it solves.** This base shelved [`microsoft/autogen`](https://github.com/microsoft/autogen)
+as live supply across **three consecutive education cycles**. On `2026-10-29` its `archived` flag
+is **`false`**, its `updated_at` is hours old, `ls-remote` resolves it, and `git clone --depth 1`
+reports a committer date **one day old** — the channel [`agents/top.md`](../agents/top.md) calls
+*authoritative*. 🔴 **Its last code commit is `2026-03-25`. Its three newest commits announce its
+own retirement.** 🔴 And the mirror case is on the same shelves:
+[`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) reads `updated_at: 2026-10-15`
+on a repository whose single branch has not moved since **`2020-04-22`**.
+
+**What to wire.**
+
+1. **Resolve the ref, don't guess it.** `git ls-remote --symref https://github.com/<slug> HEAD`.
+   🔴 **8 of 23 rows on these shelves do not develop on `main` or `master`** (`develop`,
+   `release_11`, `v31.0.00`, `v4.0.x-develop`, `19.0`, `15.0`, `2.12`, and `rosariosis`'s
+   **`mobile`**) — a probe assuming the two English defaults silently fails on 35 % of the shelf.
+2. **Read the grant at the resolved ref**, from bytes:
+   `raw.githubusercontent.com/<slug>/<branch>/<name>`. Anchor the family on the **title block**,
+   never a body scan (`p490`: a GNU preamble names the LGPL). 🔴 Probe `LICENSE-CODE` and `NOTICE`
+   too — `microsoft/autogen` serves **CC-BY-4.0 at `LICENSE` (18 650 B)** and the real grant,
+   **MIT, at `LICENSE-CODE` (1 141 B)**; Fedena's Apache-2.0 lives only in `NOTICE` (`p514`).
+3. **Compare the payload size against the asserted family's canonical length.**
+   🔴 `24kchengYe/human-skill-tree` asserts `GNU AFFERO GENERAL PUBLIC LICENSE Version 3` in
+   **1 134 bytes**; `yh2072/edgameclaw` serves the real text in **34 523**. A 30× shortfall means
+   the file **references** a licence rather than granting under it — which is why GitHub's own
+   classifier returns `NOASSERTION` for it. Route those to human review; do not emit a family cell.
+4. **Grade liveness on the code gap**, with
+   [`p523-code-vs-docs-liveness`](code/p523-code-vs-docs-liveness/):
+
+   ```sh
+   python3 -I code_liveness.py <owner/repo>
+   # SHIPPING | STALE-CODE (≥90d) | NOTICES-ONLY | NO-CODE-IN-WINDOW
+   ```
+
+   🔴 **Thresholds to argue with the client, not inherit:** `≥ 90 d` code gap → justify;
+   `NOTICES-ONLY` → **reject**; for anything with a code-execution surface, **days since the last
+   security commit** is its own gate. AutoGen's is **218**.
+5. **Keep the previous reviewer's hand verdicts as the gate's regression suite, both polarities.**
+   🔴 Three consecutive passes here shipped an instrument that was wrong — `p521` and `p522` **false
+   permissive**, `p523` **false restrictive** — and in all three the control that caught it was a
+   manual verdict from the pass before. The suite that ships with this recipe holds
+   `fsrs4anki`'s two *"use archive link"* commits as permanent negatives and `autogen`'s three
+   notices as permanent positives: **38 checks, offline, no network.**
+
+**Why it is cheap.** Steps 1–3 are three `curl`s and one `ls-remote` per candidate. Step 4 is a
+blobless clone. The whole gate runs on `raw.githubusercontent.com` + the git smart-HTTP protocol —
+🔵 the two channels that answer for arbitrary public repositories in a session where
+`curl github.com`, `api.github.com/repos/<slug>` and `api.github.com/search/repositories` are all
+`403`.
+
+**Evidence.** [`population.2026-10-29-p523.txt`](code/p523-code-vs-docs-liveness/population.2026-10-29-p523.txt)
+— 20 rows off these shelves: **17 `SHIPPING`, 2 `STALE-CODE`, 1 `NOTICES-ONLY`**.
+
+---
+
+### `P540` — The retention loop, rebuilt on the maintained link
+
+**Problem it solves.** [`repos/trending.md`](../repos/trending.md) published *"the FSRS reference,
+pinned at last — the scheduler → skill → deliverable chain is now permissive at every link"* and
+pinned [`fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) (MIT, 4,119★).
+🔴 **That link has shipped no code in 340 days.** The claim is true; the named component is the
+wrong one.
+
+**The stack, every grant read from bytes `2026-10-29` and every liveness measured.**
+
+| Layer | Component | Grant, bytes | ★ | code gap | Role |
+|---|---|---|---|---|---|
+| scheduling algorithm | [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | **BSD-3-Clause**, `1 509` B, `sha256₁₆ 2604c7d519c6a579`, `main` @ `3be7d2af54fd` | 454 | 🟢 **6 d** | 🟢 **the dependency.** Optimizer + scheduler, Rust, embeddable |
+| parameter fitting | [`open-spaced-repetition/fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) | 🔴 **unread — grade before use** | 112 | 🟢 0 d @ `2026-08-06` | fit FSRS parameters to the cohort's own review log |
+| knowledge tracing | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT**, `1 073` B | 57 | 🟢 (`updated_at` yesterday) | 🟢 **BKT over MCP** — mastery estimate as a *tool*, so any agent can call it |
+| scheduler as a swappable policy | [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) | **MIT**, `1 067` B | 128 | 🟢 | pluggable schedulers + an MCP server; optional Anki/FSRS |
+| study application | [`onemnemo/mnemo`](https://github.com/onemnemo/mnemo) | **Apache-2.0**, `11 326` B | 122 | 🟢 | 🟢 the permissive counterpart to Anki |
+| RL action selection | [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent) | **MIT**, `1 067` B, `main` @ `1f0ab5c160f1` | 57 | 🟢 | 🟢 *"RL picks the action, FSRS picks the timing, the LLM only writes the quizzes"* — **copy this separation of concerns, whatever you build** |
+| reference deployment | [`ankitects/anki`](https://github.com/ankitects/anki) | **AGPL-3.0** | 32,374 | 🟢 **0 d** | 🔴 **algorithm reference only** — AGPL reaches a hosted derivative |
+| Anki-side reference | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT**, `1 079` B, `sha256₁₆ 2ec9e6e61ed82af8` | 4,119 | 🔴 **340 d** | 🔵 cite it; do not depend on it |
+
+**Wiring.** Embed `fsrs-rs` behind an internal interval service. Fit parameters with
+`fsrs-optimizer` against the client's own review log — **grade its grant first, it is unread
+here**. Expose mastery through `tutor-mcp` so the content agent asks *"is this learner ready"*
+rather than inferring it. Keep the **scheduler swappable** the way `MindTrain` does, so an
+institution can replace FSRS with its own policy without touching the content layer. Take
+`Smart-Study-Agent`'s division of labour as the architecture: **RL chooses what, FSRS chooses
+when, the LLM only writes.**
+
+🔴 **The one real constraint:** the maintained link is **BSD-3-Clause**, not MIT. Both are
+permissive and neither has reciprocity, but a bill of materials that says *"MIT throughout"* is
+wrong — BSD-3-Clause adds a **no-endorsement** clause, so do not use the client's or the project's
+name to promote the derivative.
+
+---
+
+### `P541` — The Moodle-gap wedge: ship into the LMS the client already runs
+
+**Problem it solves.** Every education engagement meets an incumbent LMS, and the reflex is to
+propose replacing it. 🟢 **Moodle has made that unnecessary and more profitable:** AI is in core
+since **4.5** as a subsystem of **placements / actions / providers**, with provider plugins for
+OpenAI, Azure OpenAI, Ollama, DeepSeek, Gemini, Bedrock and Claude, and **per-course and
+per-activity access control since 5.1**; **5.3 LTS** shipped `2026-10-05`. 🔴 **Core names exactly
+three things it does not do** — and this base has a permissive asset for each.
+
+| Moodle core gap | Permissive asset, grant read from bytes | How it attaches |
+|---|---|---|
+| **no AI question generation** | [`satvik314/educhain`](https://github.com/satvik314/educhain) **MIT** 387★ · [`SYuan03/Skill-Anything`](https://github.com/SYuan03/Skill-Anything) **MIT** 344★ | generate MCQs / flashcards / 12-section study guides from the course's own material; import as Moodle question-bank XML. `Skill-Anything` takes PDF, video, web **and audio** |
+| **no conversational practice** | [`GeminiLight/SocialCoach`](https://github.com/GeminiLight/SocialCoach) **Apache-2.0** 457★ · [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) **MIT** 293★ | role-play with personalised feedback (`SocialCoach`) and Socratic next-lesson sequencing (`Bloom`, self-hostable, 中文优先). Launch from an LTI activity; mastery flows back over `tutor-mcp` |
+| **no AI over SCORM content** | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) **MIT** **1,006★** | 🟢 **it EMITS SCORM.** The generated lesson lands *inside* Moodle as a SCORM package — gradebook, completion and reporting all keep working. **The only asset on these shelves that does this** |
+| *(adjacent, not a Moodle gap)* | [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) **MIT** 355★ | source-code plagiarism detection over assignment submissions; 3,865 commits, Ghent University |
+
+**Why this wedge and not a rebuild.** 🔵 Moodle's subsystem is a **provider** architecture, so an
+Ollama or Bedrock provider the client already trusts carries the data-residency argument, and the
+`5.1` per-activity access control means the governance conversation has an enforcement point that
+already exists. 🟢 **Nothing above requires forking Moodle** — question-bank import, LTI launch and
+SCORM packaging are all supported extension points. 🔴 **And if the incumbent is Open edX instead,
+say so plainly:** it has **no first-party AI product**; the community **AI Extensions** plugin
+(in-unit assistant, AI-drafted MCQs in Studio) states in its own README that it is **not yet for
+production**, so on Open edX this is a build, not an integration.
+
+🔴 **Licence constraints to carry into the proposal, not discover in it:** Moodle is **GPL-3.0** and
+Open edX is **AGPL-3.0** — a *plugin* is a separate work under the usual reading, but a **modified
+core** is not, and AGPL reaches a hosted derivative. 🟢 If the client needs a closed derivative of
+the platform itself, the permissive full-LMS options on these shelves are **`OpenOLAT`
+(Apache-2.0, 448★)**, **`pacewisdomhq/TutorLoom` (Apache-2.0, 52★, 22 days old)** and
+**`Selleo/mentingo` (MIT, 101★)** — and `mentingo` enforces tenant isolation in **Postgres RLS**
+rather than application code, which is the detail that survives a security review.
+🔵 **The Moodle and Open edX feature claims here are `SEARCH-ATTESTED, PRIMARY UNREAD`**
+(`docs.moodle.org` does not resolve from this session); every repository, grant and star cell is
+read directly.
+
+---
+
 ## 🆕 `p522` — `2026-10-29` — **🟢 THREE RECIPES, EACH BUILT ON SOMETHING THIS PASS MEASURED RATHER THAN ASSUMED. `P536` is the shelf-attestation gate — the sweep that re-derived 23 of 23 published family+byte cells today, wired as a standing check, and it exists because 8 of those 23 repositories do NOT develop on `main`. `P537` is the EU `2 December 2026` marking build, scoped by WHO the grace actually covers, which the "delayed to 2027" headline buries. `P538` is the retention loop: a fully-MIT spaced-repetition + knowledge-tracing stack, every grant read from bytes today, and it is the layer `P534`'s institutional stack does not have.**
 
 ---

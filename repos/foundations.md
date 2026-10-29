@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p523` — `2026-10-29` — **🟢 `p522` RE-GRADED EVERY LICENCE CELL ON THIS SHELF AND GOT 23/23; `p523` RE-GRADES THE SAME SHELF ON LIVENESS AND THE SCORE IS WORSE: of 16 foundation and shelf rows measured by commit stream, **14 ship, 1 is 340 days stale, and 1 has not changed code since 2019**. 🔴 `microsoft/autogen` — a foundations row — is `archived: false`, committed yesterday, and its last code commit is `2026-03-25`. 🔴 `gongfuxiang/schoolcms` reads `updated_at: 2026-10-15` and has one branch whose HEAD is a commit from **`2020-04-22`**. 🟢 A licence cell is a property of bytes and holds for years; a liveness cell is a property of a moment and this shelf had none.**
+
+### 🟢 The liveness attestation — the cell this shelf has never published
+
+Channel: `git clone --filter=blob:none`, 60-commit window, changed paths per commit, via
+[`p523-code-vs-docs-liveness`](../compose/code/p523-code-vs-docs-liveness/). 🔵 **This is a
+different question from `p522`'s and it needs a different channel:** `raw.githubusercontent.com`
+answers *"what does the grant say"* and is stable for years; nothing on this base answered
+*"is anyone still working on it"*.
+
+| Foundations row | HEAD | last **code** commit | gap | verdict |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `2026-10-29` `1ea7df15` | `2026-10-29` | **0 d** | 🟢 SHIPPING |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `2026-10-29` `ed564ec6` | `2026-10-29` | **0 d** | 🟢 SHIPPING — 🔴 HEAD **drifted** off the shelf's `70859b42e714` (`Gap 523-A`) |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `2026-10-28` `6b9292ddd` | `2026-10-28` | **0 d** | 🟢 SHIPPING |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `2026-10-28` `9ca1b5b13d` | `2026-10-28` | **0 d** | 🟢 SHIPPING |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `2026-10-28` `25d568f6` | `2026-10-28` | **0 d** | 🟢 SHIPPING |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2026-10-22` `435649b04` | `2026-10-22` | **0 d** | 🟢 SHIPPING — 🟢 no drift off `p522`'s SHA |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | `2026-10-28` `dabc1c180` | `2026-10-28` | **0 d** | 🟢 SHIPPING |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `2026-10-20` `1e21b7a` | `2026-10-20` | **0 d** | 🟢 SHIPPING |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `2026-10-28` `1ba02ecb6` | `2026-10-28` | **0 d** | 🟢 SHIPPING |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | `2026-10-13` `31fd6db` | `2026-10-13` | **0 d** | 🟢 SHIPPING |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | `2026-06-25` `99da145` | `2026-06-25` | **0 d** | 🟢 SHIPPING (126 d since any commit — 🟡 slow, not stale) |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | `2026-07-17` `446a77a9` | `2026-07-17` | **0 d** | 🟢 SHIPPING (104 d since any commit) |
+| [`expertiza/expertiza`](https://github.com/expertiza/expertiza) | `2026-04-11` `b68bb8f64` | `2026-04-11` | **0 d** | 🟢 SHIPPING (201 d since any commit) — 🟢 no drift off the shelf SHA |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `2026-10-06` `96f33fa` | **`2026-07-10`** `83162f6` | 🟡 **88 d** | 🟢 SHIPPING, barely — 🔴 **the SHA this shelf pins is a DOCS commit**, and no code has landed in 111 days |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | `2026-08-14` `ff7c85c` | **`2025-09-08`** `c2d8a9d` | 🔴 **340 d** | 🔴 STALE-CODE |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | `2026-10-28` `d07c667a` | **`2026-03-25`** `8544314f` | 🔴 **217 d** | 🔴 **NOTICES-ONLY** |
+
+🔵 **The `gegok12` / `formalms` / `expertiza` rows are the reason the threshold is on the CODE
+gap and not on calendar age.** All three last committed months ago and all three are honest:
+whatever landed, landed as code. A shelf that read calendar age alone would flag them and miss
+`autogen`, which committed yesterday.
+
+### 🔴 `microsoft/autogen` — a foundations row that has been publishing notices since April
+
+| Date | Commit | Subject |
+|---|---|---|
+| `2026-10-28` | `d07c667a` | `docs: add archive caution to landing page (#8393)` |
+| `2026-10-16` | `004749e6` | `docs: clarify AutoGen is archived and no longer maintained- #1 (#8366)` |
+| `2026-04-06` | `027ecf0a` | `Update maintenance mode banner in readme (#7521)` |
+| `2026-03-25` | `8544314f` | 🟢 `fix: restrict importlib provider loading to trusted namespaces (#7463)` — **the last code** |
+| `2026-03-11` | `b047730` | `fix: Improve AutoGen Studio: deprecate FunctionTool, harden MCP WebSocket endpoint (#7362)` |
+
+🟢 **Both grants re-read from bytes today, re-attesting this base's AutoGen split:**
+`LICENSE` → **CC-BY-4.0, `18 650` B**; `LICENSE-CODE` → **MIT, `1 141` B**. 🔵 So the licence
+cell on this shelf was right and stayed right; the row's *usefulness* is what changed, and no
+licence re-grade could have found it.
+
+🔴 **What this means for a proposal:** the last two commits that touched AutoGen's code were
+both security hardening — importlib provider loading and an MCP WebSocket endpoint — in **March**.
+A framework with an agent-executes-code surface and no security commit in seven months is not a
+foundation. 🟢 **Upstream names the successor itself** (Microsoft Agent Framework); this base
+already shelves it elsewhere, and the foundations row for multi-agent orchestration should be
+`smolagents` (Apache-2.0, shipping) or that successor, not this.
+
+### 🆕 🟢 Two rows this shelf should carry and does not
+
+| Repo | Grant, read from bytes today | ★ | code gap | Why it belongs here |
+|---|---|---|---|---|
+| [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | **BSD-3-Clause**, `1 509` B, `sha256₁₆ 2604c7d519c6a579`, `main` @ `3be7d2af54fd` | **454** | 🟢 **6 d** | 🟢 **The maintained FSRS implementation** — optimizer and scheduler in Rust. This shelf has carried `fsrs4anki` (MIT, 340 d stale) as *"the FSRS reference"*; **this** is the dependency a retention feature should take. Permissive, no reciprocity |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | **AGPL-3.0** *(carried, not re-read this pass)* | **32,374** | 🟢 **0 d** | 🔵 FSRS ships in Anki core; the largest spaced-repetition deployment anywhere. 🔴 AGPL — **algorithm reference only** for a hosted commercial derivative |
+
+🟢 **So the retention layer is permissive end to end** — `fsrs-rs` (BSD-3-Clause) → scheduler →
+skill → deliverable — which is what [`repos/trending.md`](trending.md) claimed; 🔴 **the family is
+BSD-3-Clause, not MIT, and the MIT link it named is the stale one.**
+
+### 🟢 Shelf metadata re-read, 32 of 32 returned
+
+Channel: MCP GitHub REST, 15–16 slugs per call, `incomplete_results: false`, returned
+`full_name` set reconciled against the queried set (`Gap 504-A`) — **clean**.
+🟢 **Not one row carries `archived: true`.** 🔴 **Eight of the platform rows still do not develop
+on `main` or `master`** — `develop` (`frappe/lms`, `frappe/education`, `kolibri`, `tao-core`),
+`release_11` (`ILIAS`), `v31.0.00` (`GibbonEdu/core`), `v4.0.x-develop` (`bigbluebutton`),
+`19.0` (`openeducat_erp`), `15.0` (`Claroline`), `2.12` (`i-educar`), `mobile` (`rosariosis`),
+`master` (`openedx-platform`, `sakai`, `OpenOLAT`, `schoolcms`, `pupilfirst`, `formalms`,
+`h5p-php-library`) — `p522`'s 35 % finding holds and `rosariosis`'s `mobile` default is the one
+no probe would guess.
+
+🟢 **Exact star cells for the platform tier, read today:** `bigbluebutton` **9,259**,
+`openedx/openedx-platform` **8,211**, `moodle/moodle` **7,556**, `oppia/oppia` **6,951**,
+`instructure/canvas-lms` **6,890**, `frappe/lms` **3,351**, `classroomio` **1,734**,
+`courselit` **1,289**, `sakai` **1,240**, `kolibri` **1,163**, `chamilo-lms` **1,019**,
+`pupilfirst` **980**, `openeducat_erp` **900**, `i-educar` **722**, `apache/openmeetings` **688**,
+`frappe/education` **684**, `rosariosis` **648**, `GibbonEdu/core` **635**, `ILIAS` **505**,
+`OpenOLAT` **448**, `academico` **409**, `Claroline` **347**, `advisingapp` **340**,
+`richie` **317**, `schoolcms` **292** *(🔴 dead since 2020 — see below)*,
+`h5p-php-library` **152**, `ICTSchool` **72**, `tao-core` **64**, `gegok12` **54**,
+`TutorLoom` **52**, `formalms` **37**.
+
+---
+
 ## 🆕 `p522` — `2026-10-29` — **🟢 THE WHOLE PUBLISHED SHELF IS RE-GRADED BY INSTRUMENT FOR THE FIRST TIME AND IT IS CLEAN: 23 of 23 rows, family cell AND byte cell, re-read from served bytes at the RESOLVED default branch — **23/23 MATCH on both cells**. 🔴 And the reason that result is not free: **8 of the 23 do not develop on `main` or `master`** — `develop`, `release`, `release_11`, `v31.0.00`, `v4.0.x-develop` — so a probe that assumes the two English defaults silently fails to read **35%** of this shelf. 🟢 `19` of 23 graded postures are buildable without reciprocity; the four that are not are named and are all platform-tier.**
 
 ### 🟢 The attestation — every cell this file publishes, re-derived today

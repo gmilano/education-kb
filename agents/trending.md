@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p523` — `2026-10-29` — **🔴 THE WINDOW'S BIGGEST MOVEMENT IS A PROJECT PUBLISHING ITS OWN OBITUARY AND EVERY LIVENESS FIELD READING IT AS ACTIVITY: `microsoft/autogen` (61,614★) committed `docs: add archive caution to landing page` YESTERDAY, its `archived` flag is **`false`**, and its last CODE commit is `2026-03-25` — **217 days**. 🟢 Dated releases in the window: none. `DeepTutor` holds at `v1.7.0`/88 tags on the git protocol for a second pass. 🔴 The star channel disagreed with itself twice today: the API read **48,672** while a trending aggregator published **48,093 (+2,371)** for the same day. 🟡 Discovery: an eighth axis, the API topic index, returns `total_count: 42` against `p522`'s page-read 42 — exact agreement, zero new.**
+
+### Dated this window
+
+| Date | What | Signal |
+|---|---|---|
+| `2026-10-28` | [`microsoft/autogen`](https://github.com/microsoft/autogen) HEAD `d07c667a3239` — **`docs: add archive caution to landing page (#8393)`**, committer date `14:45:27Z` | 🔴 **The newest commit on a 61.6k★ framework is a notice that it is dead.** `README.md` title line, served bytes: `# AutoGen` followed by an inline **`status-archived-red`** shields.io badge |
+| `2026-10-16` | `autogen` `004749e6` — `docs: clarify AutoGen is archived and no longer maintained- #1 (#8366)` | 🔴 Second retirement notice in thirteen days |
+| `2026-03-25` | `autogen` `8544314f` — `fix: restrict importlib provider loading to trusted namespaces (#7463)` | 🔴 **The last code commit. 217 days ago, and it was a security fix.** The one before it (`b047730`, `2026-03-11`) hardened an MCP WebSocket endpoint. **No security fix has landed in AutoGen in seven months** |
+| `2026-10-29` | `git ls-remote --tags HKUDS/DeepTutor` → **88 distinct tags**, version-max **`v1.7.0`** = `a44d28a6aeb4` | 🟢 **Unchanged from `p522` on the same primary channel.** No release cut in the window — the star growth is attention, not shipping, for the second pass running |
+| `2026-10-29` | `DeepTutor` **48,672★** (MCP API) — and **48,662** ~20 minutes earlier in the same pass | 🟢 Still the fastest-growing education asset tracked here. 🔴 A trending aggregator published **`48,093 (+2,371)`** for TODAY: **understates by 579** |
+| `2026-10-29` | `DozenTwelve/Papermorph` **1,006★** | 🟢 **Crosses 1,000.** 24 days old (`created_at 2026-10-03`) — the fastest zero-to-1k on this base |
+| `2026-10-29` | `GeminiLight/SocialCoach` **457★** (was 440 at `p502`) | 🟢 Fastest riser by percentage on the permissive shelf; still **no release and no tag** |
+| `2026-10-28` | `open-spaced-repetition/fsrs-rs` code commit `0fd5994` (`2026-10-22`), HEAD `3be7d2af54fd` | 🟢 **This is where FSRS is actually maintained** — 6-day code gap, **BSD-3-Clause**, 454★. See the `fsrs4anki` correction below |
+| `2026-10-28` | `ankitects/anki` HEAD `82e58484f`, code gap **0 d**, **32,374★** | 🟢 FSRS ships inside Anki core. AGPL-3.0, so reference-only for a closed deliverable |
+
+### 🔴 `fsrs4anki`: this file called it *"the FSRS reference, pinned at last"* — and pinned the stale link
+
+🟢 **The grant is intact and re-attested today**: MIT, `1 079` B, `sha256₁₆ 2ec9e6e61ed82af8`,
+`main` @ `ff7c85cee735`, **no drift** since `p522`. **4,119★** (API).
+🔴 **The liveness is not:** HEAD `2026-08-14` is `Fix broken star history chart (#753)`; the last
+commit that changed code is `2025-09-08`. **340 days.**
+
+| Link in the chain | Family | ★ | code gap | Take the dependency? |
+|---|---|---|---|---|
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | 4,119 | 🔴 **340 d** | 🔵 cite as the Anki-side reference |
+| [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | **BSD-3-Clause** | 454 | 🟢 **6 d** | 🟢 **yes — this is the maintained scheduler** |
+| [`open-spaced-repetition/fsrs-optimizer`](https://github.com/open-spaced-repetition/fsrs-optimizer) | **(unread this pass)** | 112 | 🟡 0 d at `2026-08-06` | 🟡 parameter fitting; grade the licence first |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | **AGPL-3.0** | 32,374 | 🟢 **0 d** | 🔴 reference-only for a hosted commercial derivative |
+
+🟢 **The claim survives in corrected form:** the retention chain *is* permissive end to end —
+but the family at the live link is **BSD-3-Clause**, not MIT, and the MIT link is the one that
+stopped shipping. 🟢 `fsrs4anki` is now **on the permissive shelf** in
+[`top.md`](top.md) with both facts in the cell.
+
+### 🟡 Discovery, eighth axis — and it vindicates `p522` rather than beating it
+
+`p522` swept two GitHub topic **pages** through the search backend's fetch. This pass re-ran the
+same topics on the **MCP API topic index**, a channel `p522` did not have:
+
+| Topic | `p522` (page read) | `p523` (API index) | Verdict |
+|---|---|---|---|
+| `intelligent-tutoring-system` | 42 repositories listed | **`total_count: 42`** | 🟢 **Exact agreement. The page channel did not truncate** |
+| `ai-tutor` | 817 listed; 24 addresses tabled | 25 rows at `stars:>50`, **4 absent from `p522`'s table** | 🟡 the omission is the **table's**, not the channel's |
+
+The four: [`yh2072/edgameclaw`](https://github.com/yh2072/edgameclaw) (**AGPL-3.0**, `34 523` B —
+🔵 **the real AGPL text, which is what proves `human-skill-tree`'s `1 134` B is a notice, not a
+licence**, 72★), [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) (MIT, `1 067` B,
+`main` @ `1c86890946a3`, 61★, 🇨🇳 Chinese-first learning-path prototype with LSS/KTL/LF/LSB load
+tracking), [`HumphreySun98/Smart-Study-Agent`](https://github.com/HumphreySun98/Smart-Study-Agent)
+(MIT, `1 067` B, `main` @ `1f0ab5c160f1`, 57★ — *RL picks the action, FSRS picks the timing, the
+LLM only writes the quizzes*, which is the cleanest separation-of-concerns statement in this
+sector) and [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant)
+(🔴 **no grant at 6 filenames**, `main` @ `3c1c88b95a9d`, 65★).
+🟢 **All four are already recorded in this file.** `Zero new to this base` stands at **eight**
+independent axes.
+
+### 🆕 🇵🇦 The one address in this window with a property no other row has
+
+[`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) — already in this
+file, re-read today and now **characterised**: an intelligent tutoring system for sixth-grade
+decimal arithmetic, **Universidad Tecnológica de Panamá**, built as an undergraduate thesis and
+🟢 **validated with 74 students in a Panamanian public school**. K-means learner profiles, LLM
+hints, teacher dashboard; FastAPI + PostgreSQL + React; `topic:panama`; `master` @ `a027809cfd9b`.
+🔴 **No licence file at 24 filenames probed, and the `README.md`'s `## Licencia` section reads
+"Todos los derechos reservados."** — an explicit reservation, in Spanish, in prose. **Not a
+dependency.** 🟢 But it is the first LATAM-origin row here with *classroom evidence*, and that
+changes what a regional engagement does with it: ask UTP about relicensing, do not assume a void.
+
+---
+
 ## 🆕 `p522` — `2026-10-29` — **🟢 THE WEEK'S ONE DATED INSTRUCTIONAL RELEASE IS NOW CONFIRMED ON A PRIMARY CHANNEL AND THE AGGREGATOR THAT DENIED IT IS REFUTED: a release tracker asserted TODAY that `DeepTutor`'s latest is `v1.6.0` (2026-08-27) and that no `v1.7.0` exists; `git ls-remote --tags` answers `refs/tags/v1.7.0 = a44d28a6aeb4`, 88 distinct tags. 🔴 The regulatory clock is what actually moved this window, in FOUR jurisdictions at once, and every movement is BACKWARDS except the labelling obligations. 🟡 No new instructional agent was announced in the window — the sweep found 24 addresses and not one new to this base.**
 
 ### Dated this window

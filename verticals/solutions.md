@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p523` — `2026-10-29` — **🔴 THIS FILE IS SELLING A DEAD PLATFORM AND EVERY METADATA FIELD HIDES IT: `gongfuxiang/schoolcms` (292★, *中国首个开源学校教务管理系统*) reads `updated_at: 2026-10-15` and has **ONE branch** whose HEAD is a commit from **`2020-04-22`**; its last code change is **`2019-10-22`**. A **2 367-day** error, on a row an APAC engagement could be pointed at. 🟢 The other 14 platform rows measured this pass are all genuinely shipping, so this is a row to flag, not a tier to re-grade. 🟢 `p522` proved the licence cells are right (11/11); `p523` adds the cell they could never contain — whether anyone is still there.**
+
+### 🔴 `gongfuxiang/schoolcms` — flagged, with the evidence
+
+| Field | Reads | Channel |
+|---|---|---|
+| `updated_at` | **`2026-10-15T14:30:50Z`** | MCP API |
+| ★ / forks | 292 / 110 | MCP API |
+| `archived` | **`false`** | MCP API |
+| all refs | **one branch**: `master` = `21d6a41b89e4b668`; tags `v_2.3`, `v_2.3.1`, `bate_v_2.3` | `git ls-remote` |
+| that commit's committer date | 🔴 **`2020-04-22`** | `git clone --depth 1` |
+| last commit that changed code | 🔴 **`2019-10-22`** (`细节优化`) | [`p523-code-vs-docs-liveness`](../compose/code/p523-code-vs-docs-liveness/) |
+
+🟢 **There is no branch where work could be hiding** — that is the usual escape hatch for this
+verdict and it is closed here by enumeration, not assumption. 🔴 **Do not propose this platform.**
+🔵 The row stays in this file, flagged: a dead PHP school-administration system with 110 forks is
+still a *market* fact about China's public-school software layer, and a client may already be
+running one of those forks. It is no longer a *supply* fact.
+
+### 🟢 The platform tier's liveness cell, measured for the first time
+
+| Platform row | HEAD | last **code** commit | gap | verdict |
+|---|---|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `2026-10-28` | `2026-10-28` | 0 d | 🟢 SHIPPING |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `2026-10-28` | `2026-10-28` | 0 d | 🟢 SHIPPING |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `2026-10-28` | `2026-10-28` | 0 d | 🟢 SHIPPING — 🔴 default branch is **`mobile`**, not `master` |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) 🇧🇷 | `2026-10-22` | `2026-10-22` | 0 d | 🟢 SHIPPING — default branch **`2.12`** |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) | `2026-10-28` | `2026-10-28` | 0 d | 🟢 SHIPPING (Elastic-2.0 — `Gap 513-F`) |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | `2026-10-28` | `2026-10-28` | 0 d | 🟢 SHIPPING — default branch **`develop`** |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `2026-10-20` | `2026-10-20` | 0 d | 🟢 SHIPPING |
+| [`expertiza/expertiza`](https://github.com/expertiza/expertiza) | `2026-04-11` | `2026-04-11` | 0 d | 🟢 SHIPPING (201 d quiet, but code-honest) |
+| [`formalms/formalms`](https://github.com/formalms/formalms) | `2026-07-17` | `2026-07-17` | 0 d | 🟢 SHIPPING (104 d quiet) |
+| [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | `2026-06-25` | `2026-06-25` | 0 d | 🟢 SHIPPING (126 d quiet) |
+| [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) 🇨🇳 | 🔴 **`2020-04-22`** | 🔴 **`2019-10-22`** | 🔴 **183 d then nothing for 6½ years** | 🔴 **DEAD** |
+
+🟢 **10 of 11 ship.** 🔵 The three quiet-but-honest rows (`expertiza`, `formalms`, `gegok12`)
+are why the verdict keys on the **code** gap rather than calendar age: each last committed months
+ago and what landed was code, so each is a slow project rather than an abandoned one. A
+calendar-age rule would have flagged all three and still missed `schoolcms`, whose metadata is
+fresher than any of them.
+
+### 🟢 Platform liveness summary a client can read
+
+| Pick this when | Platform | Grant | ★ | liveness `2026-10-29` |
+|---|---|---|---|---|
+| closed derivative, full LMS | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | 448 | 🟢 carried; licence 11/11 at `p522` |
+| closed derivative, multi-tenant LMS | [`pacewisdomhq/TutorLoom`](https://github.com/pacewisdomhq/TutorLoom) | **Apache-2.0** | 52 | 🟡 22 days old; watch row |
+| closed derivative, AI-native LMS | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | 101 | 🟢 `updated_at` yesterday |
+| largest installed base, copyleft acceptable | [`moodle/moodle`](https://github.com/moodle/moodle) | **GPL-3.0** | 7,556 | 🟢 — 🟢 **AI subsystem is core since 4.5**: placements / actions / providers, provider plugins for OpenAI, Azure OpenAI, Ollama, DeepSeek, Gemini, Bedrock, Claude; **5.1** adds per-course and per-activity access control; **5.3 LTS** released `2026-10-05`. 🔴 Still **no** core AI question generation, no conversational practice, no AI over SCORM — that is the integration surface |
+| MOOC scale, copyleft acceptable | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | **AGPL-3.0** | 8,211 | 🟢 — 🔴 **no first-party AI product.** The route is the community **Open edX AI Extensions** plugin (in-unit learner assistant, AI-drafted MCQs in Studio), whose README says **not yet for production**. Named supported release: **Verawood** (`2026-07-30`) |
+| offline / low-connectivity | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 1,163 | 🟢 0 d |
+| education ERP / SIS on Odoo | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **LGPL-3.0** | 900 | 🟢 carried; default branch **`19.0`** |
+| SIS, LATAM municipal | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) 🇧🇷 | **GPL-2.0** *(`p522` corrected from bare `GPL`; GPL-2.0-**only** is incompatible with Apache-2.0)* | 722 | 🟢 0 d |
+| SIS, self-hosted PHP | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | **GPL-2.0** | 648 | 🟢 0 d |
+| school admin, APAC | 🔴 ~~[`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms)~~ | — | 292 | 🔴 **DEAD since 2020 — do not propose** |
+
+🔵 **The Moodle and Open edX rows above are `SEARCH-ATTESTED, PRIMARY UNREAD`** on the AI-feature
+claims: `docs.moodle.org` and the Open edX release pages do not resolve from this session, so the
+subsystem shape, the provider list and the `5.3 LTS` date arrive through a search backend. The
+**repository** facts (slug, star cell, default branch, liveness) are read directly.
+
+### 🆕 🇵🇦 A vertical row with classroom evidence and no grant
+
+[`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) — sixth-grade decimal
+arithmetic ITS from the **Universidad Tecnológica de Panamá**, with adaptive practice, **K-means
+learner profiles**, LLM hints and a **teacher dashboard**; FastAPI + PostgreSQL + React;
+`master` @ `a027809cfd9b`; `topic:panama`. 🟢 **Validated with 74 students in a Panamanian public
+school** — the only LATAM-origin row on this base with a stated classroom result.
+🔴 **No licence file at 24 filenames** (including `LICENCIA`, `LICENÇA`, `COPYING`, `NOTICE`), and
+the `README.md`'s `## Licencia` section reads **"Todos los derechos reservados."**
+🔴 **Not a dependency, and not a reference implementation to copy from either** — all rights
+reserved means all rights reserved. 🟢 **It is a conversation**: a named university with a working,
+evaluated system and no commercial posture yet.
+
+---
+
 ## 🆕 `p522` — `2026-10-29` — **🟢 THE WHOLE PLATFORM TIER IS RE-GRADED BY INSTRUMENT AND EVERY FAMILY CELL HOLDS: 11 platform rows, licence bytes re-read at the RESOLVED default branch, **11/11 MATCH** — `OpenOLAT` Apache-2.0, `sakai` ECL-2.0, `moodle`/`chamilo`/`ILIAS`/`GibbonEdu` GPL-3.0, `openedx`/`tutor`/`frappe-lms` AGPL-3.0, `bigbluebutton` LGPL-3.0. 🔴 AND THE TIER HIDES A DEPLOYMENT FACT THE LICENCE COLUMN NEVER SHOWS: **five of these eleven platforms do not develop on `main`** — `develop`, `release`, `release_11`, `v31.0.00`, `v4.0.x-develop` — so "clone the default branch" is wrong advice for them, and two serve their grant under a filename no default probe tries (`COPYING.txt`, `license.txt`).**
 
 ### 🟢 The platform tier, re-attested from bytes `2026-10-29`

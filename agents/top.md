@@ -4,6 +4,173 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p523` — `2026-10-29` — **🔴 THE LIVENESS ROW THIS TABLE CALLS AUTHORITATIVE IS FALSIFIED BY A SHELF ADDRESS: `microsoft/autogen`'s committer date is ONE DAY OLD and its last code commit is `2026-03-25` — a **217-day** gap — because its last three commits are notices announcing its own retirement. 🔴 Its GitHub `archived` flag is **`false`**, so `p518`'s *"IS ARCHIVED"* is right about the posture and wrong about the flag, and every liveness channel on this base reads LIVE. 🟢 Fixed, not reported: `p523-code-vs-docs-liveness`, 38 offline checks — and 🔴 its own first draft graded `fsrs4anki` (MIT, **4,119★**) as retired off the words *"use archive link of the tutorial"*, the `p520` class in mirror image, caught by a positive control. 🟢 `fsrs4anki` is ALSO the shelf's largest promotion miss, and this pass places it.**
+
+### 🔴 The falsification, reproducible in three commands
+
+This table's liveness row reads *"`git clone --depth 1`, committer date — 🟢 authoritative"*.
+Against [`microsoft/autogen`](https://github.com/microsoft/autogen) (**61,614★**, API today):
+
+| Channel | Answer `2026-10-29` | Reads |
+|---|---|---|
+| `archived` flag (API) | **`false`** | 🔴 LIVE |
+| `git ls-remote --symref` | `main` @ `d07c667a3239` | 🔴 LIVE |
+| `updated_at` (API) | `2026-10-29T06:08:29Z` | 🔴 LIVE |
+| `git clone --depth 1`, committer date | **`2026-10-28T14:45:27Z`** — *one day* | 🔴 LIVE — **and this is the row called authoritative** |
+| HEAD commit **subject** | `docs: add archive caution to landing page (#8393)` | 🟢 RETIRED |
+| last commit that **changed code** | `8544314f`, **`2026-03-25`** — *fix: restrict importlib provider loading to trusted namespaces* | 🟢 **217 d** |
+| `README.md` title line, served bytes | `# AutoGen` followed by an inline **`status-archived-red`** shields.io badge | 🟢 RETIRED |
+
+🔵 **The commit stream is live and the project is not.** The three most recent commits are
+`docs: add archive caution to landing page` (`2026-10-28`), `docs: clarify AutoGen is archived
+and no longer maintained- #1` (`2026-10-16`) and `Update maintenance mode banner in readme`
+(`2026-04-06`). 🔴 **Nothing but notices has landed since April.** For a client proposal the
+number that matters is the second one: **no security fix has landed in AutoGen in 7 months**,
+and the two that did (`#7463` importlib provider loading, `#7362` MCP WebSocket hardening,
+both March) are the kind this base would cite as evidence of a maintained surface.
+
+🟢 **`p518`'s call is RESTORED on the posture and CORRECTED on the mechanism.** It read the
+prose and was right; it recorded the *flag* state, and the flag says `false` and always will,
+because these maintainers chose a README badge over the repository setting. 🔴 **So an
+`archived == true` gate passes `microsoft/autogen` as live supply forever.**
+
+🟢 Both grants re-read from bytes today, which re-attests this file's AutoGen split:
+`LICENSE` → **CC-BY-4.0, 18 650 B**; `LICENSE-CODE` → **MIT, 1 141 B**.
+
+### 🟢 The instrument, and the defect it caught in itself
+
+[`compose/code/p523-code-vs-docs-liveness/`](../compose/code/p523-code-vs-docs-liveness/) —
+separates *last commit* from *last commit that changed code*, reports the gap in days, and
+flags commits whose subject retires the project. **38 offline checks, green.**
+
+🔴 **Its first draft matched any `archiv*` and graded
+[`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki)
+— MIT, 4,119★ — `NOTICES-ONLY`, on two `2024-11-27` commits reading *"use archive link of
+Chinese version of the tutorial"`.* 🔵 An archived **URL**, not a retired **project**. The
+false verdict would have blocked a 4,119-star permissive asset — the mirror of `p520`'s and
+`p522`'s false-**permissive** reads, and the same class of defect: the fix for one direction
+produced the other. Both commits are permanent negative controls. The tightening removed
+**5** false retirement notices across the population (`advisingapp` 4 → 0, `tao-core` 1 → 0)
+and kept **all 3** true ones.
+
+🟢 **Population, 20 rows off this base's own shelves: 17 `SHIPPING`, 2 `STALE-CODE`, 1
+`NOTICES-ONLY`.** So the defect is **not** systemic — which is the result that makes the one
+case worth carrying rather than a reason to re-grade everything.
+
+### 🟢 `fsrs4anki` — the promotion miss this shelf has carried longest, placed with its caveat
+
+🔴 **`p522` byte-read it** (`MIT`, `1 079` B, `main` @ `ff7c85cee735` — re-attested today,
+`sha256₁₆ 2ec9e6e61ed82af8`, **no drift**), 🔴 [`repos/trending.md`](trending.md) calls it
+*"the FSRS reference, pinned at last — the scheduler → skill → deliverable chain is now
+permissive at every link"*, 🔴 **and it has never had a row on this shelf.** At **4,119★** it
+is the **fifth-largest permissive education-specific asset** on this base, above `oppia`
+(6,951 is larger — fourth) — see the tier below.
+
+🔴 **And the sentence that praised it is wrong about which link is load-bearing.** `fsrs4anki`
+has shipped **no code in 340 days** (HEAD `2026-08-14` is `Fix broken star history chart`;
+last code `2025-09-08`). The live FSRS implementation is
+[`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) —
+**BSD-3-Clause**, `1 509` B, `sha256₁₆ 2604c7d519c6a579`, `main` @ `3be7d2af54fd`, **454★**,
+code gap **6 d** — and FSRS ships inside [`ankitects/anki`](https://github.com/ankitects/anki)
+(**32,374★**, code gap **0 d**). 🟢 **The chain IS permissive end to end; the family is
+BSD-3-Clause, not MIT, and the maintained link is `fsrs-rs`.** Take the dependency there and
+read `fsrs4anki` as the Anki-side reference it is.
+
+### 🔴 `p522`'s own sweep row discards a grant this base had already resolved
+
+| Address | `p522` published (this file, sweep table) | What the base already held | API `licence` today |
+|---|---|---|---|
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) **585★** | 🔴 **`AGPL-3.0`** / `COPYLEFT (network)`, `1 134` B | 🟢 `skills/` → **AGPL-3.0 OR MIT**, `app/` → AGPL-only — [`intel/open-gaps.md:12897`](../intel/open-gaps.md), `:22339` | 🟡 **`NOASSERTION`** |
+
+🔵 **Three channels, three answers, and the base's own is the best one.** A 1 134-byte payload
+cannot be AGPL-3.0's text — `yh2072/edgameclaw` serves the real thing at **34 523 B** — which
+is why GitHub's classifier declines it. 🔴 **The cost of the flattened cell is specific:** the
+MIT rider covers `skills/`, the pedagogy layer, which is the only part Globant could ship in a
+closed deliverable. A one-cell `licence` column cannot hold this row; it needs scope, as
+`ACTION OJ` already says.
+
+### 🟢 Shelf attestation — 30 of 30 returned, none archived
+
+Channel: the **MCP GitHub REST channel**, one call per 15–16 slugs. 🟢 **`Gap 504-A`
+reconciliation is clean this pass**: the returned `full_name` set equals the queried set,
+`15/15` and `16/16`, `incomplete_results: false`.
+
+🟢 **No row on either shelf carries `archived: true`.** 🟢 **20 of 30 star cells are EXACT and
+unchanged since `p513`** — ten passes of stability on two-thirds of the shelf, which is the
+first time this file can say that. **10 moved, all upward, none down:**
+
+| Row | `p513` cell | `p523` | Δ |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | 47,834 | **48,672** | **+838** |
+| `microsoft/ai-agents-for-beginners` | 78,064 | **78,089** | +25 |
+| `virgiliojr94/book-to-skill` | 36,422 | **36,452** | +30 (forks 3,862 → **3,864**) |
+| `THU-MAIC/OpenMAIC` | 41,712 | **41,740** | +28 |
+| `huggingface/smolagents` | 30,124 | **30,132** | +8 |
+| `DozenTwelve/Papermorph` | 995 | **1,006** | +11 — 🟢 **crosses 1,000** |
+| `assafkip/claudemy` | 511 | **519** | +8 |
+| `GeminiLight/SocialCoach` | 440 | **457** | +17 |
+| `anthropics/k12-teacher-skills` | 600 | **601** | +1 — 🔵 the exact cell moved; `Gap 511-B`'s *"round ⇒ unread"* remnant is now dead on its own example |
+| `Halleck45/OpenPronounce` | 169 | **170** | +1 |
+| `HugeCatLab/ChatTutor` (copyleft) | 1,316 | **1,317** | +1 |
+| `plastic-labs/tutor-gpt` (copyleft) | 932 | **933** | +1 |
+
+🔴 **`DeepTutor` moved twice inside this pass** — `48,662` at the channel probe, `48,672`
+~20 minutes later. 🔴 **And a trending aggregator published `48,093 (+2,371)` for TODAY**: it
+**understates by 579** against the API read, so the aggregator is the wrong side again, as at
+`p515` and `p521`.
+
+🔴 **One HEAD drift:** `THU-MAIC/OpenMAIC` `70859b42e714` → **`ed564ec6`**. Licence not
+re-read at the new SHA this pass (`Gap 523-A`).
+
+🟢 **Release state unchanged:** `git ls-remote --tags HKUDS/DeepTutor` → **88 distinct tags**,
+version-max **`v1.7.0`**, matching `p522` exactly. No release cut in the window.
+
+### 🔴 Two published cells corrected against the repositories' own bytes
+
+| Row | this file publishes | upstream says today | fix |
+|---|---|---|---|
+| `Orenda-Project/rumi-platform` | *"WhatsApp-delivered learning in **15 languages**"* | the repo's own description: *"…lesson plans, and voice interaction in **9 languages**"* | **9**, and the row now also claims reading assessments, which it did not |
+| `vishalsachdev/canvas-mcp` | *"Tool count self-inconsistent upstream (description 102, README 128) — **stop quoting a number**"* | description: *"up to **102 tools** and **8 agent skills**"* | 🟢 **upstream settled on 102.** The abstention can be lifted; quote *"up to 102"*, which is itself hedged |
+
+### 🟢 Channel table — one row is NEW and it corrects `Gap 505-B`
+
+Measured at the top of this pass, before any finding depended on it:
+
+| Endpoint / channel | `p523` | Note |
+|---|---|---|
+| `curl -sI https://github.com/<repo>` | 🔴 `403` | unchanged |
+| `raw.githubusercontent.com/<repo>/<ref>/<path>` | 🟢 `200` | unchanged — the grant channel |
+| `git ls-remote --symref` / `--tags` | 🟢 works | unchanged — exact SHAs, exact tag names |
+| `curl https://api.github.com/` and `/rate_limit` | 🟢 `200` | unchanged |
+| `curl https://api.github.com/repos/<slug>` | 🔴 `403` | unchanged |
+| 🆕 `curl https://api.github.com/search/repositories?q=…` | 🔴 **`403`, and the body names its own cause**: *"This GitHub API path is not available: **sessions are bound to their configured repositories**. Use repository-scoped endpoints."* | 🟢 **So the refusal is session **repo-binding**, not a GitHub permission or rate refusal** |
+| 🆕 **MCP GitHub `search_repositories`** | 🟢 **works, and is NOT repo-bound** — arbitrary public repos, with `stargazers_count`, `license.spdx_id`, `archived`, `topics`, `forks_count`, `default_branch` | 🟢 **Refines `Gap 505-B` from *per-endpoint* to *per-endpoint AND per-channel*: the same logical query is `403` on `curl` and `200` on MCP** |
+| `curl` any non-GitHub host | 🔴 `CONNECT tunnel failed, 403` (`www.oecd.org`, `arxiv.org` measured) | unchanged |
+| 🔴 ~~`git clone --depth 1`, committer date — authoritative for liveness~~ | 🔴 **NECESSARY, NOT SUFFICIENT** — `microsoft/autogen` answers *one day* on a project 217 days dead | 🟢 pair it with [`p523-code-vs-docs-liveness`](../compose/code/p523-code-vs-docs-liveness/) |
+| 🆕 `updated_at` as a liveness field, measured at its worst | 🔴 **2 367-day error**: `gongfuxiang/schoolcms` reads `2026-10-15T14:30:50Z`; its only branch's HEAD **is** its `2020-04-22` commit | 🟢 `Gap 502-B` now has its maximum. See [`verticals/solutions.md`](../verticals/solutions.md) `p523` |
+
+### 🟢 Discovery: saturation confirmed on an EIGHTH axis, and `p522`'s count vindicated
+
+`p522` swept two GitHub **topic pages** through the search backend's fetch and reported
+**zero new**. This pass re-ran the same two topics on the **MCP API topic index** — an
+independent channel — to test whether the page read had truncated.
+
+- 🟢 **`topic:intelligent-tutoring-system` → `total_count: 42`. `p522` reported 42.** The page
+  channel did **not** truncate; the count is exact on both.
+- 🟡 **`topic:ai-tutor stars:>50` → 25 rows, of which 4 are absent from `p522`'s 24-row table**
+  — `yh2072/edgameclaw` (AGPL-3.0, 34 523 B, 72★), `wenflow-org/wenflow` (MIT, 1 067 B, 61★),
+  `HumphreySun98/Smart-Study-Agent` (MIT, 1 067 B, 57★) and
+  `A-R007/Multi-Agent-Study-Assistant` (🔴 **no grant at 6 filenames**, 65★).
+  🟢 **All four are already in [`agents/trending.md`](trending.md).** So the omission was the
+  **table's**, not the channel's, and **zero new to this base** stands.
+- 🔵 **Eight independent axes now agree.** The honest statement is no longer *"discovery is
+  saturated"* but *"**the discoverable English-keyword, star-ranked population of
+  education-AI repositories is enumerated on this base**"* — which is a claim about the
+  population, and which `p516`/`p517` already showed does **not** extend to non-English
+  supply. This pass found one such row and it is in the gaps below.
+
+---
+
 ## 🆕 `p522` — `2026-10-29` — **🔴 THE INSTRUMENT `p521` SHIPPED YESTERDAY IS CORRECT ABOUT POSTURE AND WRONG ABOUT TWO FAMILY CELLS, AND ONE OF THEM IS THIS SHELF'S OWN: `commercial_posture` reads `gen-mentor`'s **CC0-1.0** payload as **`CC-BY`** and `i-educar`'s **GPL-2.0** as bare **`GPL`**. The shelf cells are right BY HAND and the instrument contradicts them — `p521`'s finding about `licence-grant-gate`, one layer out. 🟢 A sweep of 24 agent addresses off two GitHub topic pages, every grant read from served bytes at a RESOLVED default branch: **19 of 24 permissively buildable**, and **ZERO new to this base**. 🟢 `DeepTutor v1.7.0` is confirmed on the git protocol — `refs/tags/v1.7.0 = a44d28a6aeb4` — against a release aggregator that asserted TODAY that no such tag exists.**
 
 ### 🔴 The two family cells, both reproducible in one invocation
@@ -85,7 +252,7 @@ were read through the search backend's fetch, and the grants through
 | [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | **Apache-2.0** | `10 227` | `main` @ `c9c6295d220c` | 🟢 PERMISSIVE |
 | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | **Apache-2.0** | `10 785` | `dev` @ `1b7cd65f1112` | 🟢 PERMISSIVE |
 | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | **CC-BY-SA-4.0** | `1 230` | `main` @ `135d6275e7db` | 🟡 WEAK-COPYLEFT — ShareAlike reaches derivatives |
-| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | **AGPL-3.0** | `1 134` | `master` @ `be589ddd04c9` | 🟡 COPYLEFT (network) |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 🔴 **`AGPL-3.0`** — **corrected `p523` to `AGPL-3.0` + MIT rider on `skills/`** | `1 134` | `master` @ `be589ddd04c9` | 🔴 **CELL FLATTENED A RESOLVED VERDICT.** This base already held `skills/` → **AGPL-3.0 OR MIT**, `app/` → AGPL-only (`intel/open-gaps.md:12897`, `:22339`); the API returns **`NOASSERTION`**, because 1 134 B cannot be AGPL-3.0's text (`edgameclaw` serves the real thing at **34 523 B**). The discarded MIT rider covers the pedagogy layer — the only shippable part. 585★ |
 | [`artcc/freelingo`](https://github.com/artcc/freelingo) | **AGPL-3.0** | `34 514` | `main` @ `269feb00c09a` | 🟡 COPYLEFT (network) |
 | [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | **GPL-3.0** | `35 149` | `main` @ `07635d3c81ad` | 🟡 COPYLEFT |
 | [`luffycodes/Tutorbot-Spock`](https://github.com/luffycodes/Tutorbot-Spock) | 🔴 **NO GRANT** | — | `main` @ `fcec41644339` | 🔴 UNUSABLE — 16 filenames probed at the resolved branch |
@@ -1941,7 +2108,7 @@ see the reader defect recorded below. Evidence:
 
 ## Permissive — Globant can build on these
 
-**Twenty-eight rows** (🟢 `p513` promoted **nine** at once — `book-to-skill`, `Papermorph`, `claudemy`, `Bloom`, `OpenPronounce`, `OpenTutor`, `MindTrain`, `Mnemo`, `tutor-mcp` — every one of them already byte-read by an earlier pass and left in a narrative table rather than here, which is the promotion gap `p503` registered and five passes re-measured without closing; `Bloom` is this shelf's first **APAC**-placed row; 🟢 `p512` promoted `expertiza`, the first peer-assessment row here and the first found on a fork-ranked leg; 🟢 `p511` promoted `studorama`, the first LATAM-placed row here; `p501` promoted `SocialCoach`), MIT / Apache-2.0 / BSD-3-Clause, each license read from bytes at the SHA shown.
+**Twenty-nine rows** (🟢 `p523` promoted **`fsrs4anki`** — MIT, **4,119★**, byte-read by `p522` and praised in `repos/trending.md` while never actually shelved, which makes it the largest instance of the promotion gap `p503` registered; it is shelved **with** a 340-day code-staleness caveat and a pointer to the maintained `fsrs-rs`; 🟢 `p513` promoted **nine** at once — `book-to-skill`, `Papermorph`, `claudemy`, `Bloom`, `OpenPronounce`, `OpenTutor`, `MindTrain`, `Mnemo`, `tutor-mcp` — every one of them already byte-read by an earlier pass and left in a narrative table rather than here, which is the promotion gap `p503` registered and five passes re-measured without closing; `Bloom` is this shelf's first **APAC**-placed row; 🟢 `p512` promoted `expertiza`, the first peer-assessment row here and the first found on a fork-ranked leg; 🟢 `p511` promoted `studorama`, the first LATAM-placed row here; `p501` promoted `SocialCoach`), MIT / Apache-2.0 / BSD-3-Clause, each license read from bytes at the SHA shown.
 🟢 **`p493` restored seven of them** (`OpenMAIC`, `k12-teacher-skills`, `dolos`, `open-tutor-ai-CE`,
 `agent-skills`, `rumi-platform`, `Shiksha-Copilot`) after finding they had been promoted by earlier
 passes and then dropped by `p490`'s full-file rewrite. 🔵 **`p492` added no row here** — the one new
@@ -1951,41 +2118,42 @@ in [`trending.md`](trending.md) rather than here.
 
 | Agent | Repo | License | ★ | SHA read | What it does |
 |---|---|---|---|---|---|
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **47,834** *(🟢 `p513`, API; `p512` 47,804, 20:47Z; `p510` 47,725; `p509` read 47,677; `p506` 47,445; `p505` 47,338; `p504` 47,230; `p502` 47,051)* | `1ea7df155447` *(🔴 `p509` retired `a31d82624c27`; `p510` re-attests `1ea7df155447` over the git protocol)* | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p501`: HEAD unchanged for a FOURTH consecutive pass (`p491`→`p501`); `v1.6.15` (`2026-10-19`) is still the newest release, so the star growth is attention, not shipping.** 🟢 **`p505` re-tested that reading on the ref it actually depends on:** a census of **87 tags**, version-sorted, still maxes at **`v1.6.15`**, and `HEAD` is unchanged for a **7th consecutive pass** — so the claim holds on both refs. 🔴 **`p505` also records why this nearly flipped:** the API returned `pushed_at: 2026-10-28T13:22:04Z`, which reads like shipping and is not (`Gap 505-A` — `pushed_at` advances on a push to any ref). Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
-| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,712** *(🟢 `p513`, API; 🔴 `p512` published 41,710 while `p510`/`p509` both read 41,712 — the `p512` cell was the outlier, not these; `p510` 41,712; `p509` read 41,712; `p502` 41,690; `p493` 41,700)* | `70859b42e714` | **Open Multi-Agent Interactive Classroom** — any topic or document becomes an interactive lesson with slides, quizzes and project-based work. 781 commits; `v1.3.0-rc.1` dated `2026-10-22`; licence 1 065 B, `sha1 56d5b3ffd6e8`. 🟢 **Restored `p493`** after being dropped by `p490`'s rewrite — this is the row that falsifies this file's own permissive-scarcity gap, and its MIT grant is cleaner than DeepTutor's. 🔵 Org is `THU-MAIC` and the partnership contact is a `mail.tsinghua.edu.cn` address; **Tsinghua attribution is inferred from those, not stated in prose.** 🔴 **Not an LMS** — no enrolment, gradebook or SIS integration is claimed. |
-| smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | **30,124** *(🟢 `p513`, API; `p512` 30,123; `p510` 30,121; `p504` 30,118; prior rounded cell read 30,100)* | `96f33faaf028` | Minimal code-writing agent loop. Not education-specific; the usual substrate for a custom tutor agent. |
-| k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | **600** *(🟢 `p512`, API — `Gap 511-B` closed, the round cell is EXACT; `p510` `p509` read 600; `p504` 598; `p493` 595 — no longer the only exact cell that has moved: `p510` found 9)* | `31fd6dbb0c07` | Four K-12 teacher skills (lesson planning, differentiation and two more) **plus the eval rubrics for them**, co-developed with Learning Commons. Licence 11 357 B, `sha1 1128f8f91104`. 🟢 **Restored `p493`** — recorded "Now shelved" on `2026-10-18` and never actually present in this file. 🔴 **This is the asset `p492` declared licence-unverifiable;** it was measured in this KB twice before that. |
-| SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | Apache-2.0 | **440** *(🟢 `p502`, API; `p501` read 438)* | `84f67257f5aa` | **Social-emotional learning coach** — role-play scenarios for conflict handling and communication, with personalised feedback. 239 commits, **57 forks**. 🟢 **Promoted `p501`**, and it is the first row on any shelf here in the **social-emotional / soft-skills layer** — `social-emotional` returned **0 hits across every live shelf** before this pass. Licence **11 358 B, blob `d645695673…`: byte-identical to apache.org's own copy**, graded **`0/0` operative against Apache-2.0** by [`p501`'s guarded grader](../compose/code/p501-abstention-and-reresolve/). 🔴 **No release and no tag** — 239 commits on `main` and nothing cut; treat as a watch row, not a deployable product (`Gap 499-H`'s shape). 🔴 Carries `topic:ai-in-education` and **not** `topic:edtech`, which is why 11 passes of `topic:edtech` sweeps never saw it (`T22`). |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **48,672** *(🟢 `p523`, API — **+838**, and it moved AGAIN inside `p523` from `48,662`; a trending aggregator published `48,093` the same day, **understating by 579**; `p513` 47,834; `p512` 47,804, 20:47Z; `p510` 47,725; `p509` read 47,677; `p506` 47,445; `p505` 47,338; `p504` 47,230; `p502` 47,051)* | `1ea7df155447` *(🔴 `p509` retired `a31d82624c27`; `p510` re-attests `1ea7df155447` over the git protocol)* | Lifelong personalised tutoring; graph-enhanced RAG over course material. Largest education-AI repo on GitHub. 🟢 **`p501`: HEAD unchanged for a FOURTH consecutive pass (`p491`→`p501`); `v1.6.15` (`2026-10-19`) is still the newest release, so the star growth is attention, not shipping.** 🟢 **`p505` re-tested that reading on the ref it actually depends on:** a census of **87 tags**, version-sorted, still maxes at **`v1.6.15`**, and `HEAD` is unchanged for a **7th consecutive pass** — so the claim holds on both refs. 🔴 **`p505` also records why this nearly flipped:** the API returned `pushed_at: 2026-10-28T13:22:04Z`, which reads like shipping and is not (`Gap 505-A` — `pushed_at` advances on a push to any ref). Its own repo page links a design paper at `arxiv.org/abs/2604.26962` (upstream News item dated `2026-04-10`). 🔵 **Unverified — `arxiv.org` does not resolve from this session's network**, so this is an upstream-asserted identifier, not a read. **See license caveat below.** |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | **41,740** *(🟢 `p523`, API — **+28**; `p513` 41,712; 🔴 `p512` published 41,710 while `p510`/`p509` both read 41,712 — the `p512` cell was the outlier, not these; `p510` 41,712; `p509` read 41,712; `p502` 41,690; `p493` 41,700)* | 🔴 **`ed564ec6`** *(`p523` — DRIFTED off `70859b42e714`; licence NOT re-read at the new SHA, `Gap 523-A`)* | **Open Multi-Agent Interactive Classroom** — any topic or document becomes an interactive lesson with slides, quizzes and project-based work. 781 commits; `v1.3.0-rc.1` dated `2026-10-22`; licence 1 065 B, `sha1 56d5b3ffd6e8`. 🟢 **Restored `p493`** after being dropped by `p490`'s rewrite — this is the row that falsifies this file's own permissive-scarcity gap, and its MIT grant is cleaner than DeepTutor's. 🔵 Org is `THU-MAIC` and the partnership contact is a `mail.tsinghua.edu.cn` address; **Tsinghua attribution is inferred from those, not stated in prose.** 🔴 **Not an LMS** — no enrolment, gradebook or SIS integration is claimed. |
+| smolagents | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Apache-2.0 | **30,132** *(🟢 `p523`, API; `p513` 30,124; `p512` 30,123; `p510` 30,121; `p504` 30,118; prior rounded cell read 30,100)* | `96f33faaf028` | Minimal code-writing agent loop. Not education-specific; the usual substrate for a custom tutor agent. |
+| k12-teacher-skills | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | **601** *(🟢 `p523`, API — **+1**, so the exact round cell has now MOVED and `Gap 511-B`'s "round ⇒ unread" remnant dies on its own example; `p512` 600, `Gap 511-B` closed; `p510` `p509` read 600; `p504` 598; `p493` 595 — no longer the only exact cell that has moved: `p510` found 9)* | `31fd6dbb0c07` | Four K-12 teacher skills (lesson planning, differentiation and two more) **plus the eval rubrics for them**, co-developed with Learning Commons. Licence 11 357 B, `sha1 1128f8f91104`. 🟢 **Restored `p493`** — recorded "Now shelved" on `2026-10-18` and never actually present in this file. 🔴 **This is the asset `p492` declared licence-unverifiable;** it was measured in this KB twice before that. |
+| SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | Apache-2.0 | **457** *(🟢 `p523`, API — **+17**, the fastest riser on this shelf by percentage; `p502` 440; `p501` read 438)* | `84f67257f5aa` | **Social-emotional learning coach** — role-play scenarios for conflict handling and communication, with personalised feedback. 239 commits, **57 forks**. 🟢 **Promoted `p501`**, and it is the first row on any shelf here in the **social-emotional / soft-skills layer** — `social-emotional` returned **0 hits across every live shelf** before this pass. Licence **11 358 B, blob `d645695673…`: byte-identical to apache.org's own copy**, graded **`0/0` operative against Apache-2.0** by [`p501`'s guarded grader](../compose/code/p501-abstention-and-reresolve/). 🔴 **No release and no tag** — 239 commits on `main` and nothing cut; treat as a watch row, not a deployable product (`Gap 499-H`'s shape). 🔴 Carries `topic:ai-in-education` and **not** `topic:edtech`, which is why 11 passes of `topic:edtech` sweeps never saw it (`T22`). |
 | educhain | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | **387** | `38adb1e9459d` | Python package generating educational content (MCQs, lesson plans, flashcards) from an LLM. |
 | dolos | [dodona-edu/dolos](https://github.com/dodona-edu/dolos) | MIT | **355** | `74b101785bad` | Source-code plagiarism detection; **3,865 commits**, the most-maintained address on this shelf. Ghent University. 🟢 **Restored `p493`** — `p296` tried to promote it, this KB's identity gate correctly refused the duplicate because a `foundations.md` row existed, and **that row was then deleted by a later rewrite too.** Licence 1 084 B, `sha1 8f6f3815d28d`. |
 | Skill-Anything | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | MIT | 344 | `3cdc1c1f11dc` | Any source (PDF, video, web, audio) → interactive package with quizzes, flashcards, spaced repetition. |
-| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | **308** *(🟢 `p513`, API — **−1**, the first DECLINE recorded on this shelf; prior cell 309)* | 🟢 **PIN THE TAG: `v1.16.0` = `b3f06c76e435`** *(`p495`)* — HEAD `47394125364b` is **unreleased code ahead of it** | MCP server over Canvas LMS. 🔴 **`p495`: `v1.16.0` IS A SECURITY FLOOR, not a drift preference. All FOUR advisories are patched at `1.16.0`; two are High — `GHSA-7pp5-29mw-9jq3` (sandbox escape, **CVSS 7.8**, affected `< 1.16.0`) and `GHSA-hmr8-mvr2-mvw5` (prompt injection → data disclosure / grade change, affected `≤ 1.12.0` and `1.13.0–1.15.0`, patched in two stages: write allowlist at `1.13.0`, untrusted file contents at `1.16.0`). 🔴 The sandbox fix REQUIRES **Node.js ≥ 22.18** — on an older Node the patched release is NOT patched. 🔴 Residual risk the advisory states as UNFIXED: outbound network blocking in local mode is best-effort, and executed code can still reach the caller's Canvas token. 🟢 HEAD stable since `p494` (no third move). 🟢 Advisory count re-read at the new SHA: still FOUR.** 🔴 **`p494`: drifted AGAIN — second move in ~24h, and it moved *within this pass's own window*. Licence byte-identical at all three SHAs (MIT, 1 071 B, `sha1 491fb891a4cf`), so every move so far is code-only. 🔴 Pin a RELEASE TAG here, not a branch HEAD.** 🔴 **`p492`: HEAD drifted from `32e5d1ca0175`; licence byte-identical at both SHAs (1 071 B, `sha1 491fb891a4cf`) so the drift is code-only. `v1.16.0` lists FOUR advisories, not one** — `GHSA-7mj9-4mcg-hvhv` (Canvas token handling), `GHSA-7pp5-29mw-9jq3` (local code sandbox), `GHSA-hmr8-mvr2-mvw5` (file content fencing), `GHSA-qf6c-jv93-38gv` (Windows download permissions). Tool count self-inconsistent upstream (description 102, README 128) — **stop quoting a number**. |
+| canvas-mcp | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | **308** *(🟢 `p513`, API — **−1**, the first DECLINE recorded on this shelf; prior cell 309)* | 🟢 **PIN THE TAG: `v1.16.0` = `b3f06c76e435`** *(`p495`)* — HEAD `47394125364b` is **unreleased code ahead of it** | MCP server over Canvas LMS. 🔴 **`p495`: `v1.16.0` IS A SECURITY FLOOR, not a drift preference. All FOUR advisories are patched at `1.16.0`; two are High — `GHSA-7pp5-29mw-9jq3` (sandbox escape, **CVSS 7.8**, affected `< 1.16.0`) and `GHSA-hmr8-mvr2-mvw5` (prompt injection → data disclosure / grade change, affected `≤ 1.12.0` and `1.13.0–1.15.0`, patched in two stages: write allowlist at `1.13.0`, untrusted file contents at `1.16.0`). 🔴 The sandbox fix REQUIRES **Node.js ≥ 22.18** — on an older Node the patched release is NOT patched. 🔴 Residual risk the advisory states as UNFIXED: outbound network blocking in local mode is best-effort, and executed code can still reach the caller's Canvas token. 🟢 HEAD stable since `p494` (no third move). 🟢 Advisory count re-read at the new SHA: still FOUR.** 🔴 **`p494`: drifted AGAIN — second move in ~24h, and it moved *within this pass's own window*. Licence byte-identical at all three SHAs (MIT, 1 071 B, `sha1 491fb891a4cf`), so every move so far is code-only. 🔴 Pin a RELEASE TAG here, not a branch HEAD.** 🔴 **`p492`: HEAD drifted from `32e5d1ca0175`; licence byte-identical at both SHAs (1 071 B, `sha1 491fb891a4cf`) so the drift is code-only. `v1.16.0` lists FOUR advisories, not one** — `GHSA-7mj9-4mcg-hvhv` (Canvas token handling), `GHSA-7pp5-29mw-9jq3` (local code sandbox), `GHSA-hmr8-mvr2-mvw5` (file content fencing), `GHSA-qf6c-jv93-38gv` (Windows download permissions). 🟢 **`p523`: the tool-count abstention is LIFTED.** Upstream settled: the description now reads *"up to **102 tools** and **8 agent skills**"*, so quote **"up to 102"** — which is itself hedged — instead of refusing the figure. (Prior state: description 102 vs README 128, and this row said *stop quoting a number*.) |
 | OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | **274** | `e24c8456e5f7` | Intelligent tutoring system with Bayesian Knowledge Tracing; ReactJS + Firebase. UC Berkeley CAHLR. |
 | KSoR | [panaversity/ksor](https://github.com/panaversity/ksor) | Apache-2.0 | 232 | `b50f28926fae` | SDK for governed, authoritative knowledge systems for humans and agents. Names education institutions as its target. |
 | open-tutor-ai-CE | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | **BSD-3-Clause** | 114 | `196c547291da` | Educational and collaborative AI platform, community edition. 380 commits and **194 forks against 114★** — a fork-heavy ratio that reads as deployment, not stargazing. 🟢 **Restored `p493`**, and 🔵 **its family is confirmed from the bytes**: the 1 531-byte payload opens *"All rights reserved"*, which is the literal opening of canonical BSD and which a title-block reader can mistake for a reserved-rights notice; all three BSD conditions including no-endorsement are present. `sha1 a027c9bb4f47`. |
 | mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | MIT | **101** *(🟢 `p511`, API; prior cell `100`, round)* | `e137ca47cbec` | Self-hostable LMS with AI mentoring and role-play. Tenant isolation enforced in Postgres RLS, not app code. |
 | agent-skills (Learning Commons) | [learning-commons-org/agent-skills](https://github.com/learning-commons-org/agent-skills) | Apache-2.0 | 40 | `8b0599c24469` | The same four K-12 teacher skills from the education-consortium side, with `evals/` rubrics for pedagogy, rigour, format and scaffolding. `NOTICE` (268 B) names **Anthropic, PBC** and **Learning Commons**. Licence 10 173 B, `sha1 e88848668567`. 🟢 **Restored `p493`.** |
-| rumi-platform | [Orenda-Project/rumi-platform](https://github.com/Orenda-Project/rumi-platform) | Apache-2.0 | 18 | `f2d62af1eb82` | **WhatsApp-delivered** learning in **15 languages**; 847 commits. Pakistan / Taleemabad. 🟢 **Restored `p493`** — the only no-app, no-browser delivery surface on this shelf, which matters wherever `T9`'s offline-first argument applies. Licence 11 287 B, `sha1 20312eb940f0`. |
+| rumi-platform | [Orenda-Project/rumi-platform](https://github.com/Orenda-Project/rumi-platform) | Apache-2.0 | 18 | `f2d62af1eb82` | **WhatsApp-delivered** learning in **9 languages** *(🔴 `p523` correction — this row published **15**; the repository's own description reads "…lesson plans, and voice interaction in **9 languages**", and also claims **reading assessments** and **classroom coaching**, which this row did not)*; 847 commits. Pakistan / Taleemabad. 🟢 **Restored `p493`** — the only no-app, no-browser delivery surface on this shelf, which matters wherever `T9`'s offline-first argument applies. Licence 11 287 B, `sha1 20312eb940f0`. |
 | Shiksha-Copilot | [microsoft/Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | MIT | 9 | `cf2a2e24c3d4` | Microsoft Research India, **VELLM** initiative, with the Sikshana Foundation. Lesson plans, examples, analogies, activities, assessments — **all routed to a teacher for review before classroom use**, which is the human-oversight shape `P490-2` argues for. 149 commits; licence 1 141 B, `sha1 689ec0681815`. 🟢 **Restored `p493`.** |
-| AI Agents for Beginners | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | MIT | **78,064** *(🟢 `p513`, API; `p512` 78,063; `p510` 78,059; `p504` 78,039)* | `dd0f080d07d2` | 18-lesson agent course. **A curriculum, not a deployable agent** — listed because it is the most-starred thing in this space and is routinely miscatalogued as a product. |
+| AI Agents for Beginners | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | MIT | **78,089** *(🟢 `p523`, API; `p513` 78,064; `p512` 78,063; `p510` 78,059; `p504` 78,039)* | `dd0f080d07d2` | 18-lesson agent course. **A curriculum, not a deployable agent** — listed because it is the most-starred thing in this space and is routinely miscatalogued as a product. |
 | Studorama | [oluiscabral/studorama](https://github.com/oluiscabral/studorama) | **MIT** | **111** *(🟢 `p511`, API; `archived: false`)* | `2ddbb1122b5b` | 🆕 **New row `p511`, and the first LATAM-placed AI PRODUCT on this shelf** — multi-provider AI study platform (OpenAI, Gemini, Anthropic, DeepSeek, **Ollama local**, browser-local; 15+ models) built on named study techniques. Licence read from bytes: `LICENSE` **1,064 B**, `sha256₁₆ 75ecd9ad0bb3b543`. **10 tags.** Region placed on the product's own bytes — the `README` (12,965 B) declares **"Complete English and Portuguese (Brazil) localization"** and *"Cultural Adaptation: region-specific content"* as first-class features. 🔴 **Single maintainer**, licence holder is a personal handle: fork-and-own, do not take a dependency. 🟢 Breaks `p509`'s nil that the LATAM-reachable set contains *"none an AI product"*. |
 | expertiza | [expertiza/expertiza](https://github.com/expertiza/expertiza) | **MIT** | **194** *(🟢 `p512`, API)* | `b68bb8f640ac` | 🟢 **New row `p512`**, found on the fork-ranked leg. **Peer assessment**: students submit learning objects (articles, code, sites) and review each other's, with rubric-driven review mapping and instructor moderation. **1,329 forks against 194★ — a 6.85× ratio, the most extreme on this base** and the clearest deployment signal here: a course-management system is forked once per institution that runs it. NSF-funded, NC State, so 🟢 **North America**. 🔴 The grant has **no title line** (`T43`): tell any title-anchored licence gate, or it will report no grant. |
-| book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | **MIT** | **36,422** *(🟢 `p513`, API; `p512` 36,415)* | `7540eefbe749` | 🟢 **Promoted `p513`** — turns a technical-book PDF into an agent skill: chunking, structuring and indexing a long source into a reference an agent can work from. **3,862 forks.** Licence 1 068 B at **`LICENSE.md`**, `sha256₁₆ be9b04bccfb4bdab`. 🔴 Default ref is **`master`**, not `main` (`T36`). 🔴 **Unplaced** (`Gap 513-C`). |
-| Papermorph | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | **MIT** | **995** *(🟢 `p513`, API; prior cell 992)* | `8fe4372557f8` | 🟢 **Promoted `p513`** — books → animated, narrated, interactive web lessons. 🟢 **Emits SCORM**, so the output lands *inside* an LMS the client already runs instead of beside it — the only row here that does. 12 tags. Licence 1 069 B, `sha256₁₆ 41857092247a8ad8`. Vendored MathJax carries its own Apache-2.0. 🔴 **Unplaced.** |
-| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | **MIT** | **511** *(🟢 `p513`, API; prior cell 492)* | `438a6288fa74` | 🟢 **Promoted `p513`** — topic → a sequenced course of ~2-minute audio lessons **with cited sources**; the citation requirement is the part worth copying into any content-generation engagement. Licence 1 069 B, `sha256₁₆ 262b47ee1fffc7da`. 🔴 **Unplaced.** |
+| book-to-skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | **MIT** | **36,452** *(🟢 `p523`, API; **3,864 forks**; `p513` 36,422; `p512` 36,415)* | `7540eefbe749` | 🟢 **Promoted `p513`** — turns a technical-book PDF into an agent skill: chunking, structuring and indexing a long source into a reference an agent can work from. **3,862 forks.** Licence 1 068 B at **`LICENSE.md`**, `sha256₁₆ be9b04bccfb4bdab`. 🔴 Default ref is **`master`**, not `main` (`T36`). 🔴 **Unplaced** (`Gap 513-C`). |
+| Papermorph | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | **MIT** | **1,006** *(🟢 `p523`, API — 🟢 **crosses 1,000**; `p513` 995; prior cell 992)* | `8fe4372557f8` | 🟢 **Promoted `p513`** — books → animated, narrated, interactive web lessons. 🟢 **Emits SCORM**, so the output lands *inside* an LMS the client already runs instead of beside it — the only row here that does. 12 tags. Licence 1 069 B, `sha256₁₆ 41857092247a8ad8`. Vendored MathJax carries its own Apache-2.0. 🔴 **Unplaced.** |
+| claudemy | [assafkip/claudemy](https://github.com/assafkip/claudemy) | **MIT** | **519** *(🟢 `p523`, API; `p513` 511; prior cell 492)* | `438a6288fa74` | 🟢 **Promoted `p513`** — topic → a sequenced course of ~2-minute audio lessons **with cited sources**; the citation requirement is the part worth copying into any content-generation engagement. Licence 1 069 B, `sha256₁₆ 262b47ee1fffc7da`. 🔴 **Unplaced.** |
 | Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | **MIT** | **293** *(🟢 `p513`, API; prior cell 294 — **−1**)* | `68788b5e7d34` | 🟢 **Promoted `p513`, and the first APAC-placed row on this shelf.** Socratic private tutor that sequences the next lesson from how a learner actually learns; self-describes against **Bloom's 2-sigma** result. 🟢 **Region placed on the product's own bytes** — the description declares **`中文优先` (Chinese-first)** and it carries `topic:chinese`, which is the `Studorama` test, not a handle inference. Licence 1 069 B, `sha256₁₆ 7d574cf3632e7f16`. 🔴 **0 tags** — watch row, not a deployable product. |
-| OpenPronounce | [Halleck45/OpenPronounce](https://github.com/Halleck45/OpenPronounce) | **MIT** | **169** *(🟢 `p513`, API; prior cell 166)* | `74bc17ea406e` | 🟢 **Promoted `p513`** — phoneme-level English pronunciation assessment, **Wav2Vec2 + DTW**, self-hosted as a named alternative to Azure Pronunciation Assessment. 🟢 **A named model and a named algorithm, not a prompt** — the most concretely specified AI component on this shelf. `v0.3.0`, 2 tags. Licence 1 113 B, `sha256₁₆ 6f4d9645aa9f3df4` (🟡 +2 bytes vs canonical MIT: the title words `The`/`MIT`). 🔴 **Unplaced.** |
+| OpenPronounce | [Halleck45/OpenPronounce](https://github.com/Halleck45/OpenPronounce) | **MIT** | **170** *(🟢 `p523`, API; `p513` 169; prior cell 166)* | `74bc17ea406e` | 🟢 **Promoted `p513`** — phoneme-level English pronunciation assessment, **Wav2Vec2 + DTW**, self-hosted as a named alternative to Azure Pronunciation Assessment. 🟢 **A named model and a named algorithm, not a prompt** — the most concretely specified AI component on this shelf. `v0.3.0`, 2 tags. Licence 1 113 B, `sha256₁₆ 6f4d9645aa9f3df4` (🟡 +2 bytes vs canonical MIT: the title words `The`/`MIT`). 🔴 **Unplaced.** |
 | OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | **MIT** | **155** *(🟢 `p513`, API; prior cell 154)* | 🔴 **`2a604cc3935a`** *(`p513` — DRIFTED off this file's recorded `dbaab74ffe76`)* | 🟢 **Promoted `p513`** — block-based adaptive-learning workspace that **runs locally**; upload any material, get a course. FastAPI, 10+ LLM providers. 🟢 **The only locally-running adaptive tutor on these shelves**, which is the row to reach for in every data-residency conversation. 🔴 **HEAD drifted while this row sat unshelved and nothing was watching it (`Gap 513-A`)**; licence **byte-identical at both SHAs** (MIT, 1 068 B, `sha256₁₆ 5352b49679829689`), so the drift is code-only. 🔴 **0 tags.** |
 | MindTrain | [shigella520/MindTrain](https://github.com/shigella520/MindTrain) | **MIT** | **128** *(🟢 `p513`, API — identical to the carried cell)* | `7115c484c77e` | 🟢 **Promoted `p513`** — AI knowledge-training platform with **pluggable schedulers**, i.e. the spaced-repetition / sequencing layer as a swappable component rather than a hardcoded policy. Ships an **MCP server**; optional Anki/FSRS. Java. Licence 1 067 B, `sha256₁₆ 8078815070f9a592`. 🔴 **Unplaced.** |
 | Mnemo | [onemnemo/mnemo](https://github.com/onemnemo/mnemo) | **Apache-2.0** | **122** *(🟢 `p513`, API — identical to the carried cell)* | `6dce04a20fbc` | 🟢 **Promoted `p513`** — study / spaced-repetition application, Photino X + .NET 10. 🔵 **The permissive counterpart to `anki` (AGPL-3.0)**, whose code these shelves have had to treat as algorithm-reference-only. Licence 11 326 B, `sha256₁₆ 62e02db7f9a1e311`. 🔴 **Unplaced.** |
 | tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** | **57** *(🟢 `p513`, API — identical to the carried cell)* | `98463a0cb5fb` | 🟢 **Promoted `p513`, and the lowest-star row here on purpose** — an **MCP server that turns any LLM into an Intelligent Tutoring System**, with **Bayesian Knowledge Tracing** named in its topics. Go. 🟢 **This is the ITS layer as a TOOL rather than an app**, which is the one shape that composes with every other row on this shelf — `OATutor` (`p513`-carried) implements BKT as a product, this exposes it over MCP. Licence 1 073 B, `sha256₁₆ 1e05c9440068c66c`. 🔴 **Unplaced.** |
+| fsrs4anki | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | **4,119** *(🟢 `p523`, API)* | `ff7c85cee735` | 🆕 **New row `p523`, and the largest promotion miss this shelf has carried** — the reference implementation of **FSRS** (Free Spaced Repetition Scheduler) as an Anki custom scheduler. 🔴 **`p522` byte-read it and left it in a sweep table; [`repos/trending.md`](trending.md) calls it *"the FSRS reference, pinned at last"*; it has never had a row here.** At 4,119★ it is the **fifth-largest permissive education-specific asset on this base**. Licence re-attested from bytes today: `1 079` B, `sha256₁₆ 2ec9e6e61ed82af8`, **no drift** since `p522`. 🔴 **Read the liveness caveat before taking a dependency: no code has landed in 340 days** (HEAD `2026-08-14` is *Fix broken star history chart*; last code commit `2025-09-08` — [`p523-code-vs-docs-liveness`](../compose/code/p523-code-vs-docs-liveness/)). 🟢 **The maintained link is [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs)** — **BSD-3-Clause**, `1 509` B, `sha256₁₆ 2604c7d519c6a579`, `main` @ `3be7d2af54fd`, **454★**, code gap **6 d** — and FSRS ships inside [`ankitects/anki`](https://github.com/ankitects/anki) (**32,374★**, code gap **0 d**, AGPL-3.0). Depend on `fsrs-rs`; cite `fsrs4anki` as the Anki-side reference. |
 
 ## Copyleft — usable, but not for a hosted commercial derivative
 
 | Agent | Repo | License | ★ | SHA read | Constraint |
 |---|---|---|---|---|---|
-| ChatTutor | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | **AGPL-3.0** | **1,316** *(🟢 `p502`, API; prior cell read 1,300)* | `7d9e9052bc5a` | Visual/interactive AI tutor, whiteboard + math canvas. AGPL reaches across the network: hosting it for a client triggers source obligations. |
-| tutor-gpt | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | **GPL-3.0** | 932 *(🟢 `p504`, API — identical to the carried cell)* | `5c2f92416c04` | Theory-of-Mind tutoring agent. GPL, not permissive — several public listicles call this one "open source" without naming the family. |
+| ChatTutor | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | **AGPL-3.0** | **1,317** *(🟢 `p523`, API; `p502` 1,316; prior cell read 1,300)* | `7d9e9052bc5a` | Visual/interactive AI tutor, whiteboard + math canvas. AGPL reaches across the network: hosting it for a client triggers source obligations. |
+| tutor-gpt | [plastic-labs/tutor-gpt](https://github.com/plastic-labs/tutor-gpt) | **GPL-3.0** | **933** *(🟢 `p523`, API — **+1**, the first move on this row; `p504` 932)* | `5c2f92416c04` | Theory-of-Mind tutoring agent. GPL, not permissive — several public listicles call this one "open source" without naming the family. |
 
 ## Corrections this pass — figures this KB published that were wrong
 
@@ -2139,6 +2307,42 @@ Stating these because silence looks identical to coverage.
   it shows the gap is a supply fact, not a search artefact. **Do not propose it as a dependency.**
   🔵 Africa-origin: still nothing, though `open-tutor-ai-CE` (Morocco) and `rumi-platform`
   (Pakistan) now put North-African and South-Asian origin on the shelf.
+- 🆕 🟡 **`p523` — the LATAM supply gap is a LICENSING gap here, not an absence gap, and the
+  refusal is written in Spanish in a README.**
+  [`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) is a
+  **Panamanian intelligent tutoring system** for sixth-grade decimal arithmetic: adaptive
+  practice, **K-means learner profiling**, LLM-generated hints and a teacher dashboard;
+  FastAPI + PostgreSQL + React; `topic:panama`. 🟢 **It was built at the Universidad
+  Tecnológica de Panamá (UTP), Facultad de Ingeniería de Sistemas Computacionales, as an
+  undergraduate thesis, and VALIDATED WITH 74 STUDENTS IN A PANAMANIAN PUBLIC SCHOOL** — a
+  classroom-validation claim no other LATAM-origin row on this base carries.
+  🔴 **It serves no licence file at 24 filenames probed** (including `LICENCIA`, `LICENÇA`,
+  `LICENCA`, `COPYING`, `NOTICE`, `docs/`, `.github/`), `master` @ `a027809cfd9b`.
+  🔴 **And this is not omission — it is refusal:** the `README.md` (14 645 B) carries a
+  `## Licencia` section whose entire body reads **"Todos los derechos reservados."**
+  **Do not propose it as a dependency.**
+  🆕 **New finding class, and it generalises past this row:** *"no licence file"* and
+  *"unlicensed"* are not the same verdict, and the grant verdict can live **in README prose,
+  in the repository's own language**. Every grant probe on this base — including
+  `ingest/probe-grant.sh`'s 53 filenames across 14 languages — reads **files**, so it reports
+  this repository as *unread*, never as *refused*. 🟢 **The actionable reading for a LATAM
+  engagement is better than the old nil:** supply with real classroom evidence exists at a
+  named public university, and the obstacle is a relicensing conversation, not an absence.
+- 🆕 🔴 **`Gap 523-A` — `THU-MAIC/OpenMAIC` HEAD drifted `70859b42e714` → `ed564ec6` and its
+  licence was NOT re-read at the new SHA.** This is the MIT row holding 41,740★, the second
+  pillar of the permissive tier. `p513`'s lesson applies in reverse: a shelved row still
+  drifts, and this file's practice is to re-read the grant at every new SHA.
+- 🆕 🔴 **`Gap 523-B` — Africa-origin supply is still nothing, and the demand side is now
+  specific enough to make that uncomfortable.** AUDA-NEPAD's draft *African EdTech 2030* plan
+  reportedly favours **vendor-neutral, mobile-first, open-source** platforms and cross-border
+  content sharing; Kenya has a National AI Strategy 2025–2030; named regional players are
+  **M-Shule** (SMS-delivered personalised learning, Kenya), **Siyavula** (AI over open
+  textbooks, South Africa), **Edves** and **Edukoya** (Nigeria, the latter offline-capable).
+  🔴 **Not one Africa-origin education-AI repository has reached any star floor on this base**,
+  on eight discovery axes. 🔵 `open-tutor-ai-CE` (Morocco) and `rumi-platform` (Pakistan) put
+  North-African and South-Asian origin on the shelf; sub-Saharan origin is absent.
+  🔵 **All of the above is `SEARCH-ATTESTED, PRIMARY UNREAD`** — every source is a secondary
+  blog or aggregator and no primary host resolves from this session.
 - 🔴 ~~**No *usable* open-source education-AI evaluation harness exists.**~~ **RETRACTED `p493`.**
   `mathtutorbench` (45★) and `TutorCaseBench` (0★) do carry no grant, and that part stands — but
   [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)

@@ -1,0 +1,29 @@
+HKUDS/DeepTutor	SHIPPING	head=2026-10-29(1ea7df15)	code=2026-10-29(1ea7df15)	gap=0d	retire_notices=0
+THU-MAIC/OpenMAIC	SHIPPING	head=2026-10-29(ed564ec6)	code=2026-10-29(ed564ec6)	gap=0d	retire_notices=0
+huggingface/smolagents	SHIPPING	head=2026-10-06(96f33fa)	code=2026-07-10(83162f6)	gap=88d	retire_notices=0
+anthropics/k12-teacher-skills	SHIPPING	head=2026-10-13(31fd6db)	code=2026-10-13(31fd6db)	gap=0d	retire_notices=0
+open-spaced-repetition/fsrs4anki	STALE-CODE	head=2026-08-14(ff7c85c)	code=2025-09-08(c2d8a9d)	gap=340d	retire_notices=0
+    head_subject: Fix broken star history chart (#753)
+    code_subject: Fix/remove evaluation part (#745)
+expertiza/expertiza	SHIPPING	head=2026-04-11(b68bb8f64)	code=2026-04-11(b68bb8f64)	gap=0d	retire_notices=0
+formalms/formalms	SHIPPING	head=2026-07-17(446a77a9)	code=2026-07-17(446a77a9)	gap=0d	retire_notices=0
+gongfuxiang/schoolcms	STALE-CODE	head=2020-04-22(21d6a41)	code=2019-10-22(26eec37)	gap=183d	retire_notices=0
+    head_subject: md
+    code_subject: 细节优化
+oat-sa/tao-core	SHIPPING	head=2026-10-28(dabc1c180)	code=2026-10-28(dabc1c180)	gap=0d	retire_notices=0
+h5p/h5p-php-library	SHIPPING	head=2026-10-20(1e21b7a)	code=2026-10-20(1e21b7a)	gap=0d	retire_notices=0
+Gego-K12/gegok12	SHIPPING	head=2026-06-25(99da145)	code=2026-06-25(99da145)	gap=0d	retire_notices=0
+portabilis/i-educar	SHIPPING	head=2026-10-22(435649b04)	code=2026-10-22(435649b04)	gap=0d	retire_notices=0
+francoisjacquet/rosariosis	SHIPPING	head=2026-10-28(25d568f6)	code=2026-10-28(25d568f6)	gap=0d	retire_notices=0
+oppia/oppia	SHIPPING	head=2026-10-28(6b9292ddd)	code=2026-10-28(6b9292ddd)	gap=0d	retire_notices=0
+learningequality/kolibri	SHIPPING	head=2026-10-28(9ca1b5b13d)	code=2026-10-28(9ca1b5b13d)	gap=0d	retire_notices=0
+canyongbs/advisingapp	SHIPPING	head=2026-10-28(1ba02ecb6)	code=2026-10-28(1ba02ecb6)	gap=0d	retire_notices=0
+microsoft/autogen	NOTICES-ONLY	head=2026-10-28(d07c667a)	code=2026-03-25(8544314f)	gap=217d	retire_notices=3
+    head_subject: docs: add archive caution to landing page (#8393)
+    code_subject: fix: restrict importlib provider loading to trusted namespaces (#7463)
+    retires: 2026-10-28 d07c667a docs: add archive caution to landing page (#8393)
+    retires: 2026-10-16 004749e6 docs: clarify AutoGen is archived and no longer maintained- #1 (#8366)
+    retires: 2026-04-06 027ecf0a Update maintenance mode banner in readme (#7521)
+open-spaced-repetition/fsrs-rs	SHIPPING	head=2026-10-28(3be7d2a)	code=2026-10-22(0fd5994)	gap=6d	retire_notices=0
+open-spaced-repetition/fsrs-optimizer	SHIPPING	head=2026-08-06(ac2a82d)	code=2026-08-06(ac2a82d)	gap=0d	retire_notices=0
+ankitects/anki	SHIPPING	head=2026-10-28(82e58484f)	code=2026-10-28(82e58484f)	gap=0d	retire_notices=0

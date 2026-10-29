@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p523` — `2026-10-29` — **🟢 `p522` RETIRED `Gap 475-E` BY NAMING THE GIT PROTOCOL'S ONE BLIND SPOT — *"`ls-remote` resolves ARCHIVED repositories too, so it proves motion and cannot prove maintenance"* — AND THIS PASS FINDS THE BLIND SPOT IS WIDER THAN THAT SENTENCE: the `archived` FLAG cannot prove maintenance either. `microsoft/autogen` is **`archived: false`**, committed yesterday, and 217 days dead. 🔴 And the trending channel's worst liveness error on this base is now measured: `gongfuxiang/schoolcms` reads `updated_at: 2026-10-15` on a repository whose only branch has not moved since **`2020-04-22`** — a **2 367-day** error on a published row. 🟢 The replacement instrument ships with 38 offline checks.**
+
+### 🔴 The six channels, re-measured — and one row is new
+
+`p522` tabled six channels for the exact-star question. This pass re-measures them for the
+**liveness** question, which is a different question with a worse answer:
+
+| Channel | Liveness answer on `microsoft/autogen` | Truth |
+|---|---|---|
+| `git ls-remote --symref` | resolves, `main` @ `d07c667a3239` | 🔴 LIVE (wrong) |
+| `archived` flag, MCP API | **`false`** | 🔴 LIVE (wrong) |
+| `updated_at`, MCP API | `2026-10-29T06:08:29Z` | 🔴 LIVE (wrong) |
+| `git clone --depth 1`, committer date | `2026-10-28` — **one day** | 🔴 LIVE (wrong) — 🔴 **and `agents/top.md` calls this row authoritative** |
+| HEAD commit **subject** | `docs: add archive caution to landing page (#8393)` | 🟢 RETIRED |
+| 🆕 **last commit that changed a non-docs path** | `8544314f`, **`2026-03-25`** | 🟢 **217-day gap — the only channel that gets it right** |
+
+🔵 **`p522`'s sentence needs one word changed.** *"`ls-remote` proves motion and cannot prove
+maintenance"* is true and too narrow: **no field proves maintenance.** Motion is what every
+channel measures, and a project can move for months while announcing that it is finished.
+
+### 🔴 `gongfuxiang/schoolcms` — `Gap 502-B` at its maximum, on a row this base sells
+
+[`verticals/solutions.md`](../verticals/solutions.md) carries
+[`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) — *中国首个开源学校教务管理系统*,
+**292★**, 110 forks — as an APAC school-administration row.
+
+| Field | Reads | Reality |
+|---|---|---|
+| `updated_at` (MCP API) | **`2026-10-15T14:30:50Z`** | 🔴 wrong by **2 367 days** |
+| `git ls-remote` (all refs) | **one branch**, `master` = `21d6a41b89e4b668` | — |
+| that commit's committer date | **`2020-04-22`** | 🟢 the repository's true last motion |
+| last commit that changed code | **`2019-10-22`** (`细节优化`) | 🟢 **seven years** |
+| newest tag | `v_2.3.1` | 🟢 consistent with the above |
+
+🟢 **Every ref agrees** — there is no second branch where work could be hiding, which is the
+usual escape hatch for this verdict. 🔴 **The row is dead and the metadata says fourteen days.**
+`Gap 502-B` recorded a 708-day `pushed_at` error; this is **3.3×** worse and it is not `pushed_at`,
+it is `updated_at`, which this base has used as a fallback.
+
+### 🟢 The instrument
+
+[`compose/code/p523-code-vs-docs-liveness/`](../compose/code/p523-code-vs-docs-liveness/) —
+`SHIPPING` / `STALE-CODE` / `NOTICES-ONLY` / `NO-CODE-IN-WINDOW`, from a commit list with changed
+paths. **38 offline checks, green.** Population of **20** rows off this base's own shelves:
+
+| verdict | n | rows |
+|---|---|---|
+| 🟢 `SHIPPING` | **17** | `DeepTutor` (0 d), `OpenMAIC` (0 d), `k12-teacher-skills` (0 d), `tao-core` (0 d), `h5p-php-library` (0 d), `i-educar` (0 d), `rosariosis` (0 d), `oppia` (0 d), `kolibri` (0 d), `advisingapp` (0 d), `expertiza` (0 d), `formalms` (0 d), `gegok12` (0 d), `fsrs-rs` (6 d), `fsrs-optimizer` (0 d), `anki` (0 d), `smolagents` (**88 d** — 🟡 just inside the threshold; HEAD `96f33fa` is the shelf's pinned SHA **and it is a docs commit**) |
+| 🔴 `STALE-CODE` | **2** | `fsrs4anki` (**340 d**), `schoolcms` (**head 2020-04-22**) |
+| 🔴 `NOTICES-ONLY` | **1** | `microsoft/autogen` (**217 d**, 3 retirement notices) |
+
+🟢 **So the defect is not systemic** — 17 of 20 shelf rows are genuinely shipping, which is the
+result that makes the three exceptions worth a row each instead of a re-grade of everything.
+
+### 🔴 The instrument's own first draft shipped the mirror of `p520`'s defect
+
+`announces_retirement` matched any `archiv*`. It graded **`fsrs4anki` — MIT, 4,119★ —**
+`NOTICES-ONLY`, on two `2024-11-27` commits reading *"use archive link of Chinese version of the
+tutorial"*. 🔵 **An archived URL for a tutorial, not a retired project.**
+
+🔵 **The symmetry is the lesson, and it is this base's recurring one.** `p520` refused two
+repositories by hand and `p521`'s gate passed them — **false permissive**. `p522` fixed that and
+its CC0 probe graded `CC BY-NC` as public domain — **false permissive again**. `p523` built a
+liveness gate and it called a live permissive asset dead — **false restrictive**. 🟢 Three passes,
+three instrument defects, and the only reason none shipped is that each pass kept the previous
+pass's hand verdicts as **positive and negative controls**. Both `fsrs4anki` commits are now
+permanent controls; the tightening removed **5** false retirement notices (`advisingapp` 4 → 0,
+`tao-core` 1 → 0) and kept **all 3** true ones.
+
+### 🟢 Trending star cells, re-read today
+
+| Repo | prior cell | `p523` (MCP API) | Δ |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 47,834 (`p513`) | **48,672** | **+838** |
+| [`microsoft/autogen`](https://github.com/microsoft/autogen) | 61.6k (`p518`) | **61,614** | 🔵 exact; `archived: false` |
+| [`ankitects/anki`](https://github.com/ankitects/anki) | — | **32,374** | 🆕 cell |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | — | **1,734** | 🆕 cell |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | — | **1,289** | 🆕 cell |
+| [`frappe/lms`](https://github.com/frappe/lms) | — | **3,351** | 🆕 cell (AGPL-3.0) |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | — | **8,211** | 🆕 cell — 🟢 `p518`'s rename confirmed live at the new slug |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | — | **9,259** | 🆕 cell |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 4.1k, rounded | **4,119** | 🟢 exact at last |
+| [`open-spaced-repetition/fsrs-rs`](https://github.com/open-spaced-repetition/fsrs-rs) | — | **454** | 🆕 cell (BSD-3-Clause) |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 572 (`p201`) | **585** | +13; 🟡 API licence **`NOASSERTION`** |
+
+🔴 **`Gap 523-C` (new):** the `curl` path to `api.github.com/search/repositories` is `403` here and
+the body says why — *"sessions are bound to their configured repositories"* — while the **MCP**
+channel answers the same query. So every exact-star cell above depends on one channel with no
+`curl` fallback, and `p522`'s six-channel table should carry the MCP row explicitly as **the**
+star channel rather than as one of six.
+
+---
+
 ## 🆕 `p522` — `2026-10-29` — **🟢 `Gap 475-E` IS RETIRED WITH A MEASUREMENT, NOT DEFERRED AGAIN: exact star integers are unobtainable in this session class, measured on SIX channels — and the ONE remedy that works (`add_repo` per repository) does not scale to a discovery shelf and is the wrong instrument to point at third-party repositories. 🟢 The replacement is better than what the gap asked for: the git smart-HTTP protocol answers ARBITRARY public repositories here, with EXACT HEAD SHAs and EXACT tag names, no rounding. 🔴 Its one blind spot is named: `ls-remote` resolves ARCHIVED repositories too, so it proves motion and cannot prove maintenance.**
 
 ### 🔴 The six channels, each measured this pass

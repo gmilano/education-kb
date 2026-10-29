@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p523` — `2026-10-29` — **🔴 THE LOAD-BEARING TREND IS THAT "MAINTAINED" HAS STOPPED BEING MEASURABLE FROM METADATA, AND THE SECTOR'S BIGGEST ARCHIVED FRAMEWORK PROVES IT: `microsoft/autogen` is `archived: false`, committed yesterday, and has not changed code since `2026-03-25`. 🔴 Trend 2 is the opposite failure on the same axis — `gongfuxiang/schoolcms` reads `updated_at: 2026-10-15` and has not moved since `2020-04-22`, a **2 367-day** error. 🟢 Trend 3: three consecutive passes have each built an instrument that was WRONG in a different direction, and in all three the saving control was a HAND verdict from the pass before. 🟡 Trend 4: the market's own 2026 number has a **2.8× spread** and the disagreement is definitional, not empirical.**
+
+### 🔴 Trend 1 — the liveness signal the whole sector relies on has decoupled from maintenance
+
+The way a studio decides whether an open-source component is safe to build on is a metadata read:
+is it archived, when was it last pushed, when was the last commit. **All three now fail in both
+directions, measured on this base's own shelves this pass.**
+
+| Failure direction | Instance | What every channel said | Truth |
+|---|---|---|---|
+| 🔴 **False LIVE** | [`microsoft/autogen`](https://github.com/microsoft/autogen), 61,614★ | `archived: false`; `updated_at` hours old; HEAD commit **yesterday**; `ls-remote` resolves | 🔴 **last code commit `2026-03-25` — 217 days.** The three newest commits are notices announcing the project's retirement; the README title line carries a `status-archived-red` badge |
+| 🔴 **False LIVE** | [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms), 292★ | `updated_at: 2026-10-15T14:30:50Z`; `archived: false` | 🔴 **one branch, HEAD is a commit from `2020-04-22`; last code change `2019-10-22`.** A **2 367-day** error |
+| 🔴 **False DEAD** | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki), 4,119★ | 🔴 this pass's own first-draft instrument: `NOTICES-ONLY` | 🟢 **live project, MIT, no retirement notice** — the match was on *"use archive link of the tutorial"*, an archived URL |
+
+🔵 **Why this is a sector trend and not a bookkeeping story.** AutoGen's maintainers did the
+*responsible* thing — they told everyone, in the README, in the docs, in three commits — and
+every automated gate in the ecosystem read those commits as activity. **Announcing retirement
+looks identical to shipping to every tool that measures commits.** As agent frameworks
+consolidate (AutoGen → Microsoft Agent Framework, and this base has recorded `goose` donated to
+the Linux Foundation's Agentic AI Foundation), this pattern will repeat: the project keeps its
+repository open, keeps committing documentation, and never flips the flag.
+
+🟢 **The discriminator, and it is cheap:** read the last commit **that changed a non-docs path**.
+[`p523-code-vs-docs-liveness`](../compose/code/p523-code-vs-docs-liveness/) does it in one clone;
+over 20 rows off these shelves it returns **17 `SHIPPING`, 2 `STALE-CODE`, 1 `NOTICES-ONLY`**.
+🔴 **For a client:** the number to put in a risk register is not "last commit", it is **days since
+the last code commit**, and for an agent framework with a code-execution surface, **days since the
+last security commit**. AutoGen's is **218**.
+
+### 🔴 Trend 2 — three passes, three instruments, three different wrong directions
+
+| Pass | Instrument | Defect | Direction |
+|---|---|---|---|
+| `p521` | `licence-grant-gate` | passed `PageLM` (bespoke non-commercial, redistribution prohibited) and `cn-math-taxonomy` (CC BY-NC) as granted | 🔴 **false permissive** |
+| `p522` | `commercial_posture` + CC0 probe | the CC0 probe read CC BY-NC as a public-domain dedication, because **every** CC 4.0 payload contains *"The text of the Creative Commons public licenses is dedicated to the public domain under the CC0 Public Domain Dedication"* | 🔴 **false permissive again** |
+| `p523` | `code_liveness` | graded a live MIT 4,119★ repository retired off *"use archive link of Chinese version of the tutorial"* | 🔴 **false restrictive** |
+
+🟢 **In all three the saving control was a HAND verdict from the previous pass.** `p520`'s two
+manual refusals caught `p522`'s regression; `p522`'s `fsrs4anki` byte-read caught `p523`'s.
+🔵 **The generalisable rule, and it is the most transferable thing on this base:** when a pass
+ships an instrument, the previous pass's hand verdicts become its **regression suite**, and both
+polarities must be represented. An instrument tested only against the failure it was written for
+reproduces that failure with the sign flipped — three for three.
+
+🔴 **The shared root cause across all three is one thing: reading boilerplate as data.** A licence
+preamble cross-references its siblings (`p490`'s LGPL false positive). CC prints a CC0 sentence in
+every payload (`p522`). A commit subject says "archive" about a URL (`p523`). **Natural-language
+artefacts contain the vocabulary of the thing they are not.**
+
+### 🟡 Trend 3 — the market's own number disagrees with itself by 2.8×, definitionally
+
+Four firms publishing the **same year**: **$4.09B** (higher-ed only), **$9.58B** (incl. corporate
+training), **$10.6B**, **$11.4B** (broadest). APAC's regional CAGR is quoted between **28.1%** and
+**48%**. 🔵 **The spread is scope, not error** — which means a number used without its scope is
+not conservative or aggressive, it is **meaningless**. 🔴 **And this base propagated a composite:**
+it published `$9.58B → $42.48B (2030, 41.5%)` as one series when the base is Precedence (whose own
+terminal is **$136.79B by 2035 at 34.52%**) and the terminal is Research and Markets off `$10.6B`.
+🟢 Corrected in [`market.md`](market.md): quote one firm end to end, or quote the band with the
+scope named.
+
+### 🟢 Trend 4 — curriculum mandates have become permanent infrastructure, and that changes the buyer
+
+🟢 China's AI subject is **formalised by the Ministry of Education as "Artificial Intelligence and
+Technology" for 2026–2027**, compulsory from age six — a named subject, not a pilot. India puts
+**AI and Computational Thinking in all schools from Grade 3** in **2026–27**, with teacher training
+inside the rollout via **NISHTHA**. 🔵 **The consequence for a studio is the second clause in both,
+not the first:** a compulsory subject needs **teacher capacity at national scale**, which is a
+training-and-content programme, not a tutoring app. That is where
+`anthropics/k12-teacher-skills` + `learning-commons-org/agent-skills` (Apache-2.0, **with eval
+rubrics**), `microsoft/Shiksha-Copilot` (MIT, **teacher-in-the-loop by design**) and
+`Orenda-Project/rumi-platform` (Apache-2.0, **WhatsApp, 9 languages, no app**) sit, and none of
+them is a tutor.
+
+🟢 **The demand-side corollary, measured:** 🇧🇷 **56%** of Brazilian secondary teachers used AI in
+the prior year against an **OECD average of 36%** (TALIS 2024), and **65%** of Brazilian internet
+users aged 9–17 use AI tools (Cetic.br, 2026). 🔵 **Teachers and students have already adopted;
+institutions have not governed.** Support for *banning* AI in schools is **23%–31%** across APAC.
+**The sellable layer is governance over tools already in use**, not adoption.
+
+### 🔴 Trend 5 — the regulatory direction is still backwards for capability and forwards for disclosure
+
+🟢 Carried from `p522` and unchanged this window: EU Annex III `2026-08` → **`2027-12-02`**
+(**Regulation (EU) 2026/1744**, OJ `2026-07-24`; embedded-in-product `2028-08-02`); Korea in force
+with penalties waived ~a year; Vietnam `2027-03` with a six-month incumbent extension; Chile
+`2026-12-01` with a deferral bill pending. 🔴 **And the obligations that did not move are all
+disclosure:** EU Art. 50(2) marking grace ends **`2026-12-02`** (covering only systems placed
+before `2026-08-02`); chatbot disclosure, deepfake labelling and emotion-recognition notices have
+**no grace**; China's AI-content labelling has applied since **`2025-09-01`**; India's Feb 2026
+amendments require platforms **>5M users** to label synthetic content.
+
+🔵 **The planning consequence is unchanged and worth repeating because it is counter-intuitive:**
+the thing to build first is **not** the high-risk assessment feature whose deadline slipped to
+2027 — it is the **labelling and disclosure layer**, which binds in weeks and binds everywhere.
+🔴 **Every date in this section is `SEARCH-ATTESTED, PRIMARY UNREAD`**: five EU/OECD primary hosts
+were measured unreachable from this session this pass (`ec.europa.eu`,
+`digital-strategy.ec.europa.eu`, `eur-lex.europa.eu`, `eurydice.eacea.ec.europa.eu`,
+`www.oecd.org`), and `curl` to any non-GitHub host returns `CONNECT tunnel failed, 403`.
+
+### 🟡 Trend 6 — the platform layer's AI is arriving as a subsystem, and its gaps are the integration surface
+
+🟢 **Moodle** now ships AI in core — a subsystem of **placements, actions and providers** since
+**4.5**, provider plugins for OpenAI, Azure OpenAI, Ollama, DeepSeek, Gemini, Bedrock and Claude,
+and **per-course and per-activity access control added in 5.1**; **5.3 LTS** released
+**`2026-10-05`**. 🔴 **What core still does not do** is the sellable part: **no AI question
+generation, no conversational practice, no AI over SCORM content**.
+🔴 **Open edX has no first-party AI product at all** — the route is the community **AI Extensions**
+plugin (in-unit learner assistant, AI-drafted MCQs in Studio) whose own README says **not yet for
+production**; named supported release **Verawood** (`2026-07-30`).
+
+🔵 **So the incumbent LMS layer has become a host rather than a competitor**, and the three named
+Moodle gaps map directly onto assets on these shelves: question generation →
+`satvik314/educhain` (MIT) / `SYuan03/Skill-Anything` (MIT); conversational practice →
+`GeminiLight/SocialCoach` (Apache-2.0) / `Li-Evan/Bloom` (MIT); AI over SCORM →
+`DozenTwelve/Papermorph` (MIT, **emits SCORM** — the only row on this base that lands *inside* the
+LMS the client already runs). 🔵 **These claims about Moodle and Open edX are
+`SEARCH-ATTESTED, PRIMARY UNREAD`** (`docs.moodle.org` does not resolve here); the repository
+facts are read.
+
+---
+
 ## 🆕 `p522` — `2026-10-29` — **🔴 THE LOAD-BEARING TREND IS THAT EVERY HARD EDUCATION-AI OBLIGATION ON THIS BASE HAS MOVED BACKWARDS AND EVERY LABELLING OBLIGATION HAS NOT: EU Annex III `2026-08` → `2027-12`; Korea in force with penalties waived a year; Vietnam `2027-03` with a six-month incumbent extension; Chile `2026-12-01` with a deferral bill pending. 🔵 FOUR jurisdictions, ONE direction — and the obligations that did NOT move are output marking, disclosure and the prohibitions. 🔴 Trend 2 is about this base's own instruments: `p521` proved a licence READER can be defeated; `p522` proves the FIX can be defeated the same way, by boilerplate that Creative Commons itself prints in every payload. 🟢 Trend 3: the licence channel is byte-exact while the LAW channel is unreachable — measured, not assumed.**
 
 ### 🔴 Trend 1 — the deadline a studio plans against is itself a moving object, and it moves one way
