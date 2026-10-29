@@ -1,7 +1,7 @@
 {
-  "filed": 240,
-  "notes": "p537 baseline, measured against the committed p537 tree. p536 left 173 filed / 63 queued; p537 opened at 202 filed / 46 queued (so p536's rows did land) and closed at 240 filed / 20 queued after filing 8 agents, 9 foundations, 9 Gulf rows and 13 regional adapters. Measured by an independent re-implementation of the p536 contract, because ingest/prose-address-ledger.py could not be EXECUTED this pass (gate denial 'Code from External', the 11th denial in 12 passes) — so this number is NOT gate-attested. Lowering it is allowed but must be explicit and reasoned here, in the same commit.",
-  "pass": "p537",
-  "queue": 20,
-  "union": 4155
+  "filed": 258,
+  "notes": "p538, measured against this pass's tree by ingest/prose-address-ledger.py, which EXECUTED this pass — so 258 IS instrument-attested, unlike p537's 240. p537's own 240 is confirmed: the ledger reported exactly 240 filed at p538's opening tree, matching the hand re-implementation p537 had to fall back on. p538 filed 7 agents + 9 platform rows + the Gulf/ungranted additions and emptied the queue: 20 -> 3. The 3 residue addresses, named exactly: Dymayo/moodler-mcp and kvnloo/tutor-mcp are FORKS whose canonical upstreams (GhaithAlHallak8/moodler-mcp, ArnaudGuiovanna/tutor-mcp) are both already shelved, so they are correctly unfiled rather than pending — see Gap 538-A. microsoft/presidio is a NEW queue item p538 itself created, by naming it in P577's prose without filing a row; recorded rather than quietly filed, because that is precisely the mechanism Gap 535-E registered and a pass that introduces one while reporting the queue empty would be hiding it. CAVEAT, so the next pass does not read 3 as 'nearly done': the prose queue is EXHAUSTED as a supply channel. HISTORY holds 4145 distinct addresses against 258 filed (6.2%), but no materiality ranking exists for that bucket, so it is not a drop-in replacement. p538 also FIXED the ledger's casing defect: it emitted lower-cased addresses, which p537 measured as a 45% mis-spelling rate and attributed to the corpus; the corpus was correct in 6 of 6 cases tested and spelling_conflict is 0 across all 20. Lowering `filed` is allowed but must be explicit and reasoned here, in the same commit.",
+  "pass": "p538",
+  "queue": 3,
+  "union": 4315
 }

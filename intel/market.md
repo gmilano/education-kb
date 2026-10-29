@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p537` · 2026-10-29.** Figures are attributed to the source that produced
+**Pass `p538` · 2026-10-29.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
 
@@ -455,9 +455,65 @@ APIs** through one MCP server — and it was named in a sentence on this page an
 no table row on this base. 🟢 It is the single most load-bearing LATAM integration
 asset here, and `P537-A` is built on it.
 
+> 🆕 **`p538` ran all four mandated regional legs and the result is a fifth
+> consecutive measured saturation — reported per region, as a result rather
+> than as silence.** Every item the four legs returned was checked against this
+> base by name before being called new. 🔴 **Not one was unfiled.**
+>
+> | Region | What the leg returned this pass | Already on this base? |
+> |---|---|---|
+> | **North America** | 134 bills / 31 states · California **AB 1159** (barring student data for model training) · Idaho **SB 1227** · Oklahoma **S.B. 1734** (AI barred as the primary basis for grading, discipline or placement) · Maryland **AI Ready Schools Act** (districts 120 days from MSDE guidance) · **H.R. 8747**, the *K-12 AI Literacy and Readiness Act of 2026*, advanced out of committee in July · Gallup **60 %** of US teachers · AASA student-authored national framework (Aug 2026) · UNESCO **70 %** of Europe/NA institutions with AI guidance | 🔴 **All held.** Every bill, both percentages and the framework are already filed. |
+> | **EMEA** | **Regulation (EU) 2026/1744** published in the OJ 24 Jul 2026 · stand-alone Annex III high-risk at **2 Dec 2027**, embedded at **2 Aug 2028**, Article 50 transparency at **2 Aug 2026** · emotion-recognition ban in schools · UNESCO GenAI guidance · OECD **Digital Education Outlook 2026** · Gulf policy-ahead-of-infrastructure (UAE MoE, KHDA) | 🔴 **All held.** 🔴 **And the demand leg is a measured blank for the FIFTH consecutive pass:** queried for EMEA adoption and players, generic search returned enterprise-AI material and a Microsoft figure (*"92 % use AI for school"*) with no education-sector sampling frame. **Stated plainly so silence is not read as coverage.** |
+> | **APAC** | Korea **AI Basic Act** in force 22 Jan 2026, MSIT treating 2026 as a pilot year with a one-year penalty grace · **Vietnam**'s 2 Jul 2026 decision listing automated assessment and behavioural monitoring as high-risk, compliance by 1 Mar 2027 with a six-month extension for education systems operating before 15 Aug 2026 · China's compulsory AI from age six · India's Class 3 target and ₹10 372 crore IndiaAI mission · Singapore **AI Verify** · ASEAN governance guide | 🔴 **All held**, Vietnam's grace-period structure included. |
+> | **LATAM** | UNESCO IESALC — **200 institutions, 19 countries**, 87 % using AI somewhere, **74 %** in teaching and learning, only **26 %** with a formal AI strategy · Universidad de los Andes — **716** regulatory instruments across 23 countries, **>80 % since 2023** · **Ceibal** (Uruguay) 75 % of public-school teachers · TALIS 2024 — Brazil, Chile, Colombia and Costa Rica above the OECD's 36 % · UNESCO's **Observatory on AI in Education for LAC** (Santiago, Apr 2026) · CENIA / ECLAC on sub-average public AI investment | 🔴 **All held.** |
+>
+> 🔵 **Five passes have now put the regional *policy and demand* legs at
+> saturation for this search depth. That is a finding about the instrument, not
+> about the regions**, and a successor should stop re-confirming it: eight
+> searches bought zero new market facts this pass. 🟢 **Where the budget
+> actually paid was supply, and specifically the prose queue** — which placed
+> rows in **all four regions in a single pass**, something no regional search
+> leg has ever done here. See
+> [`../repos/trending.md`](../repos/trending.md).
+>
+> 🔴 **One genuinely new negative, worth filing because it is cheap to
+> re-derive wrongly:** the North America leg's own summary stated that *"Canada's
+> AI rules focus on workplaces, not schools, so the education regulation picture
+> is essentially US-driven."* This base already records AIDA as **proposed, not
+> enacted**. 🔵 **So "North America" in every opportunity below means the United
+> States**, and a Canadian engagement inherits no federal AI-in-education
+> statute at all — which is a *commercial* fact (no compliance product to sell,
+> and no statutory forcing function for procurement) rather than a gap in this
+> file.
+
 ## Opportunities by region
 
 ### North America
+
+> 🆕 **`p538` — supply placed here for the first time, and it answers this
+> section's own demand findings.** Everything above is US regulation: 134 bills,
+> FERPA, COPPA's amended rule, state disclosure statutes. 🔴 **This base has
+> catalogued that demand for many passes with no permissive supply to point an
+> engagement at.** Three MIT repositories now exist and they compose into one
+> compliance spine:
+> [`state-ai-disclosure-state-tracker`](https://github.com/mizcausevic-dev/state-ai-disclosure-state-tracker)
+> (hash-chained per-state lifecycle record; names Illinois SOPPA, California
+> AB 1584 / AB 2876, Texas HB 18, NY Ed Law 2-d),
+> [`pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile)
+> (**FERPA's 7 PII categories** and **COPPA's 10 PI categories** mapped to vault
+> targets, with retention, redaction and a four-doctrine consent taxonomy) and
+> [`student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream)
+> (tamper-evident **FERPA §99.32** access log with a Node verifier). 🔴 **All
+> three are 0–1★ v0.1 drafts by one author with no adoption**, and each says of
+> itself *"EdTech-readiness scaffolding, not certification."* 🔵 **So the
+> commercial read is: use them as a specification, bill the implementation.**
+> The category mappings and the §99.32 rule are what an engagement would
+> otherwise derive from statute by hand, and that derivation is the expensive
+> part. 🟢 Also newly placed here:
+> [`dougpenny/SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) (MIT,
+> 6★) — the first permissively granted client for **PowerSchool**, the dominant
+> US K-12 SIS. 🔴 Swift-only, so an agent runtime cannot link it directly.
+
 
 > 🆕 **`p536` — the opportunity is *integration into an institutional stack that
 > already exists*, and this pass found three layers of it unowned.** 🟢 **Learning
@@ -634,6 +690,29 @@ recorded.**
 
 
 ### EMEA
+
+> 🆕 **`p538` — the demand leg is blank for the fifth consecutive pass, and the
+> supply leg moved instead.** Two MIT agents are newly placed in EMEA —
+> [`capy-note`](https://github.com/florianchristophnowak-dot/capy-note)
+> (offline grading of scanned exams, with first- and second-correction layers)
+> and [`prep-ybara`](https://github.com/florianchristophnowak-dot/prep-ybara)
+> (lesson preparation on a 45-minute period timeline), both German-language,
+> both carrying `lehrer` · `schule` · `unterricht` topics. 🟢 **Their
+> architecture is the regulatory argument this section has made in prose and
+> never had an artefact for: both run entirely offline on the teacher's
+> machine.** Assessment that influences access to a qualification is Annex III
+> high-risk from **2 Dec 2027**; a tool that never transmits student work moves
+> the processing question rather than documenting it. 🟡 **Both are 1★ and both
+> are by the same author** — one contributor, not two signals. 🟢 **And the
+> Gulf gains its index rather than its code:**
+> [`h9-tec/Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP)
+> (**258★**, 42 forks) is the most-used Arabic-NLP map in the open, with a
+> dedicated tutorials section. 🟡 **Its grant is a README badge reading
+> `CC BY 4.0` with no sidebar licence entry** — a content grant, right for an
+> index and wrong for a dependency: cite it, do not vendor it. 🔴 This does not
+> change `p537`'s Gulf verdict that the region's *code* is copyleft or
+> ungranted.
+
 
 > 🆕 **`p536` — the supply leg places a fourth and fifth EMEA country, and one of
 > them is new to this base entirely.** 🟢 **Germany** now has two addresses rather
@@ -899,6 +978,38 @@ to prevent.
 
 ### APAC
 
+> 🆕 **`p538` — APAC supplied the queue's highest-starred row, and it is not an
+> agent.**
+> [`alterem/knowledge-grab`](https://github.com/alterem/knowledge-grab) (**MIT,
+> 567★, 52 forks**) downloads e-textbooks, course video and courseware from
+> 国家中小学智慧教育平台 (`basic.smartedu.cn`), the PRC's national K-12 platform,
+> decrypting video and merging to MP4. 🟢 **Read it against China's compulsory
+> AI-from-age-six policy recorded above:** the policy creates demand for
+> curriculum-grounded tutoring, and this is the only tool on this base that
+> acquires a **national curriculum corpus** at scale. ⚠️ The MIT grant covers the
+> **tool**; the platform's terms on the **content** are unread here, and that
+> distinction is the whole legal question for a commercial deployment. 🟢 Also
+> placed: [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) (MIT,
+> 61★ — goal-first learning paths with spaced review and *simulated virtual
+> learners* for testing the loop without real students),
+> [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) (MIT, 41★ —
+> a local-first adaptive-tutoring **foundation** with the Chinese
+> civil-service exam as its worked vertical),
+> [`tanghua-git/skill-instructional-design`](https://github.com/tanghua-git/skill-instructional-design)
+> (lesson plans against named pedagogy — ICAP, Bloom, 扶放有度 — 🟡 MIT in the
+> README only), [`oas114/EduShield`](https://github.com/oas114/EduShield)
+> (Taiwan; MIT; de-identification as **one static HTML file, no backend**) and
+> [`guruduan/SIMG`](https://github.com/guruduan/SIMG) (Indonesia; MIT; a Moodle
+> plugin encoding BK counselling and *surat izin siswa*, notifying over
+> **WhatsApp**). 🔵 **The regional lesson in that last one is the channel:** an
+> engagement that assumes email in Indonesia has lost the teachers before it
+> starts. 🔴 **One ungranted artefact worth knowing about rather than using:**
+> [`Traceable-Ideological-Education-RAG`](https://github.com/upstream1119/Traceable-Ideological-Education-RAG)
+> has **no licence at all**, and is the only thing here treating citation
+> grounding and a policy check as first-class architecture — which is precisely
+> the primitive a regulated-curriculum engagement in this region needs.
+
+
 > 🆕 **`p536` — APAC is where the filing-rate defect cost the most, and the
 > correction is worth stating as money.** 🔴 [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst)
 > is **MIT with 980★ and 279 forks** — an LMS built around **coaching, submission
@@ -1149,6 +1260,36 @@ not a country** — this base's standing rule, and the reason these are here and
 not under APAC.
 
 ### LATAM
+
+> 🆕 **`p538` — the region gains a third agent-leg artefact and, more usefully,
+> a named incumbent.**
+> [`maiatechdev/avit`](https://github.com/maiatechdev/avit) (**MIT**, 0★) is a
+> Brazilian classroom-session Socratic tutor: the teacher opens a session by
+> code or QR, each student picks a path (*Investigar · Criar · Resolver ·
+> Colaborar*), and the tutor gives a **ladder of hints without revealing the
+> answer**, explaining the steps only after three unsuccessful attempts. 🟢 **The
+> session model is the transferable part** — it assumes a teacher in the room,
+> which matches the 74 % classroom-adoption figure above far better than the
+> self-serve tutors this base mostly holds. ⚠️ README states no real student data
+> until a legal review completes.
+>
+> 🟢 **And [`shishiv/EDUCA`](https://github.com/shishiv/EDUCA) (MIT, 1★) names
+> what this region's districts actually run:** *"A planilha da secretaria de
+> educação não aguenta mais"* — the spreadsheet the education secretariat runs
+> on cannot cope. 🔵 **That is the most commercially useful sentence this pass
+> found for LATAM**, and no market report above contains it. The competitor in a
+> *secretaria* engagement is not Moodle or an incumbent vendor; it is a
+> spreadsheet, which means the sale is **first-time digitisation**, not
+> replacement — different buyer, different objection, different price. ⚠️ EDUCA
+> itself is synthetic-data-only and not production-approved.
+>
+> 🟡 **The region's standing shape is unchanged and should not be overstated:**
+> its three agent-leg artefacts total **7 stars and 0 releases**
+> (`corretor-enem` 7★, `avit` 0★, plus the pre-release `tutor-ai-agent`), while
+> its shipped open-source strength remains school management —
+> [`portabilis/i-educar`](https://github.com/portabilis/i-educar). **High
+> adoption, thin buildable supply** remains the LATAM thesis.
+
 
 > 🆕 **`p536` — the long-standing claim that *"the region's shipped open-source
 > strength remains school management, not agents"* is retired, and what replaces it is

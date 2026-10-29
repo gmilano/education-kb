@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p537` · 2026-10-29.** Every platform below is a real, running system that
+**Pass `p538` · 2026-10-29.** Every platform below is a real, running system that
 institutions already operate, with its licence read from **the licence file's own
 title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
 carried for two passes — "`github.com` returns HTTP 403 through the session
@@ -325,6 +325,34 @@ open platform or an official client, and **no Arabic-language intelligent-tutori
 repository exists on this base at all**. The closest asset the full-text leg returned,
 [`h9-tec/Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) (**258★**),
 is a link list serving **no grant at 21 probed paths** and is not Gulf-origin.
+
+## 🆕 `p538` — §10, the plugin ecosystem claim gets its first artefact, and the anonymisation layer has no platform at all
+
+This file asserts, and [`../compose/patterns.md`](../compose/patterns.md)
+assumes, that **Moodle's real asset is its plugin ecosystem** rather than its
+core. That is the premise behind every Moodle recipe on this base. 🔴 **It has
+never been substantiated here with a single plugin.** `p538` files two
+attachment-point rows that bear on it, and one gap that the platform layer does
+not cover at all.
+
+| Platform / attachment point | Address | Licence (read first-hand) | Region (basis) | What it attaches to, and what it proves |
+|---|---|---|---|---|
+| 🆕 **SIMG** (*Sistem Informasi Manajemen Guru*) | [`guruduan/SIMG`](https://github.com/guruduan/SIMG) | 🟢 **MIT** — sidebar `MIT license` | APAC (Indonesia — Indonesian-language description) | 🟢 **A Moodle plugin, under MIT, encoding national administrative practice.** PHP 8.2. Teaching journals, homeroom-teacher (*guru wali*) journals, student leave letters (*surat izin siswa*), attendance recaps, **BK counselling services** and extracurriculars — with notifications over **WhatsApp** via the Wablas API. 🔵 **This is the evidence the plugin-ecosystem claim needed:** the things a school actually needs that no LMS core ships are *jurisdiction-specific administrative workflows*, and Moodle's plugin API is where they live. 🔵 **And WhatsApp as the notification channel is the regional lesson, not an implementation detail** — an engagement that assumes email in Indonesia has already lost the teachers. ⚠️ **1★**: a worked example, not a dependency. |
+| 🆕 **EduShield** | [`oas114/EduShield`](https://github.com/oas114/EduShield) | 🟢 **MIT** — sidebar `MIT license` | APAC (Taiwan — Traditional-Chinese description) | 教育隱私保護系統 — *"Zero-Trust Data Anonymization Shield for AI."* De-identifies student text before it reaches a model and restores the original values after. 🟢 **It attaches to nothing, and that is the point.** It is 單一靜態 HTML 檔案 — **one static HTML file, no backend** — with an optional local-LLM scan through Ollama. 🔴 **So §10's real finding is a hole in this file:** every platform in §1–§9 is a *system to deploy and operate*, and the anonymisation layer every one of them needs has **no platform-shaped answer here**. The permissive answer that exists is a single file a teacher can open. |
+| 🆕 **EDUCA** | [`shishiv/EDUCA`](https://github.com/shishiv/EDUCA) | 🟢 **MIT** — sidebar `MIT license` | 🟢 **LATAM (Brazil)** — Portuguese README, targets *secretarias de educação* | School-management core: schools, students, guardians, classes, enrolment, attendance, with district dashboards. Next.js / TypeScript. 🔵 **Its framing is worth more than its code:** *"A planilha da secretaria de educação não aguenta mais"* — the spreadsheet the district runs on doesn't scale. 🟢 **That names the actual LATAM incumbent**, which this file's platform tables do not contain and cannot, because a spreadsheet has no repository. ⚠️ README states it is **synthetic-data-only, not approved for real student data or production.** |
+| 🆕 **SwiftyPSCore** | [`dougpenny/SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) | 🟢 **MIT** — sidebar `MIT license` | 🟢 **North America** (PowerSchool) | *"Swift interface for the PowerSchool API."* 🟢 **The first permissively granted access layer for the dominant US K-12 SIS on this base** — §5's SIS row has been about `advisingapp` (Elastic-2.0) and OpenSIS (GPL-2.0). 🔴 **It is a client library, not a platform and not an agent**, and Swift is a real constraint: a Python or TypeScript agent runtime cannot link it directly. ⚠️ *"not endorsed, sponsored, or affilitated with PowerSchool in any way"* (sic). |
+
+🔵 **The cross-cutting read, and it is about this file's own shape.** §1–§9 are
+organised by *what an institution operates*. These four rows are organised by
+**what the institution could not buy** — a jurisdiction's leave-letter workflow,
+a PII shield for a school with no IT staff, a replacement for a district's
+spreadsheet, a Swift client for a closed SIS API. 🟢 **Three of the four are
+MIT and all four are 0–11★.** The permissive supply at the *edges* of the
+platform layer is real and uniformly immature, which is the opposite shape from
+the platform cores in §1, where the mature options are overwhelmingly
+**GPL/AGPL** (Moodle, Open edX, OpenSIS). 🔴 **An engagement therefore inherits
+copyleft at the centre and orphan code at the edges**, and the architecture
+section below should be read with that in mind.
 
 ## The architecture this implies
 

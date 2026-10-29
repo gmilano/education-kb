@@ -6,9 +6,60 @@ updated: 2026-10-29
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p537` · 2026-10-29.** **Fifty-one** real agents, every row read
+**Pass `p538` · 2026-10-29.** **Fifty-eight** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
+
+> 🟢 **`p538` emptied `p537`'s queue — all twenty addresses read first-hand —
+> and the headline is that `p537`'s own headline was an artefact of this base's
+> instrument, not a fact about the corpus.** `p537` reported that **13 of 29**
+> queued addresses (45 %) carried a non-canonical owner or repository spelling,
+> and attributed it to
+> [`../ingest/prose-address-ledger.py`](../ingest/prose-address-ledger.py)
+> lower-casing what it emits. 🔴 **That attribution is correct and the
+> consequence is larger than `p537` stated: the curated prose already carried
+> the canonical spelling in every case tested.** Six were re-measured directly
+> against the pages — `upstream1119/Traceable-Ideological-Education-RAG`,
+> `oas114/EduShield`, `dougpenny/SwiftyPSCore`, `shishiv/EDUCA`,
+> `guruduan/SIMG`, `h9-tec/Awesome_Arabic_NLP` — and **all six are written
+> correctly in the sentences the queue was built from.** 🔵 So the mis-spelling
+> was not inherited, not a research gap and not a supply problem. **The
+> instrument manufactured it, by emitting its comparison key as if it were
+> data.** 🟢 **Fixed this pass, in the instrument rather than in prose:** the
+> queue is now two columns — `address` as the corpus wrote it, `match_key`
+> lower-cased for set arithmetic and explicitly not an address — plus an
+> `as_written_variants` column that flags a key whose spelling genuinely
+> disagrees across pages. Re-run at this pass's tree: **7 of the 20 queued
+> addresses (35 %) were being corrupted, and `spelling_conflict` is 0 for all
+> 20** — the corpus is internally consistent, so the whole error was the
+> script's. New queue:
+> [`../evidence/prose-address-queue.2026-10-29-p538.tsv`](../evidence/prose-address-queue.2026-10-29-p538.tsv).
+>
+> 🔵 **The generalisable half, for whoever runs `p539`:** a normalising
+> instrument must keep its key and its payload separate. This one had a single
+> `norm()` doing both jobs, and for nine passes the lossy half was the half
+> that reached the page. ⚠️ **And the fix does not cover the other defect
+> class:** the ledger now emits `Dymayo/moodler-mcp` with the corpus's own
+> capitalisation, but the canonical upstream is
+> [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp)
+> and `Dymayo`'s is its fork. **No instrument on this base can see fork-vs-
+> upstream** — that stays a hand check, and it is the open instrument gap
+> `p538` leaves.
+>
+> 🟢 **Seven agents shelved (51 → 58), and two of the seven land in EMEA** —
+> [`capy-note`](https://github.com/florianchristophnowak-dot/capy-note) and
+> [`prep-ybara`](https://github.com/florianchristophnowak-dot/prep-ybara),
+> German-language offline teacher tools. That takes the EMEA-placed count from
+> **two to four** and ends the 4-APAC-to-2-EMEA imbalance this file has carried.
+> 🟢 **One lands in LATAM** ([`avit`](https://github.com/maiatechdev/avit),
+> Brazilian Socratic classroom tutor), taking the region's agent-leg artefacts
+> from two to three.
+>
+> 🔴 **And the Moodle gap — this base's single clearest build opportunity —
+> carried two falsified numbers for nine passes beside a link to the page that
+> had already corrected them.** The restoration, why no instrument caught it,
+> and the first-hand re-read are in
+> [§ the Moodle correction](#-the-moodle-mcp-census-was-wrong-on-both-its-numbers-and-this-base-already-knew).
 
 > 🟢 **`p537` promoted eight agents off `p536`'s queue, and in doing so found
 > the queue is not safe to promote from verbatim.** Nineteen queued addresses were
@@ -343,7 +394,7 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 51 verified education agents
+## Shelf — 58 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -398,6 +449,13 @@ header, a placeholder or an example.
 | 🆕 **gradeops** | [sonowalvaibhav/gradeops](https://github.com/sonowalvaibhav/gradeops) | 🟢 **MIT** — title block names **three** authors: `Copyright (c) 2026 Himanshu Kumar, Akhil Lavudya, and Vaibhav Sonowal` (1 106 B, `main`) | 🔴 **0** | ⚠️ unplaced | **Fitness: reference implementation.** *"An AI-powered, Human-in-the-Loop examination grading platform for handwritten answer evaluation, rubric-based assessment and academic integrity analysis."* 🟢 **Human-in-the-loop is in the project's own one-line description, not inferred from its docs** — the posture `P554` and the EU AI Act's Article 14 both require of a grading deployment, and the only shelf row that states it at the top. 🔴 Pushed 2026-08-30 and untouched since; zero stars, zero forks. |
 | 🆕 **student-discovery-agent** | [localis-ai/student-discovery-agent](https://github.com/localis-ai/student-discovery-agent) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Nguyễn Võ Thanh Duy`, read at `main` (1 078 B) | 🔴 **0** · 2 forks | 🟢 **APAC (Vietnam)** — *stated by the product*: *"career guidance chatbot for **Vietnamese high school students**"* | **Fitness: reference implementation — and the README says so itself.** *"IHRD Career Agent … **Agent features are under design**"*: FastAPI + Next.js + PostgreSQL + Redis scaffolding with the agent layer not yet built. 🔵 **Filed anyway, and the reason is regulatory rather than technical:** Vietnam is the one APAC jurisdiction whose draft AI law names **education** as a high-risk sector by itself (automated assessment, behavioural monitoring), and this base held **no Vietnamese-origin education repository at all**. A half-built scaffold from inside that jurisdiction is worth more to an APAC engagement than a finished tool from outside it. Pushed 2026-10-29. |
 | 🆕 **ai-agent-to-learn-faster-and-better** | [abhijeetgupta23/ai-agent-to-learn-faster-and-better](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Abhijeet Gupta`, read at `main` (1 070 B) | **4** | ⚠️ unplaced | **Fitness: reference implementation, and the most interesting row of the eight.** *"Adaptive tutoring agent that personalises lesson modality from a learning-science knowledge graph, with a **first-class eval harness**."* 🟢 **Two of its declared topics are the two things this base has repeatedly recorded as missing from education-agent supply: `eval-harness` and `prompt-injection`.** Nine passes of trending entries have said no OSS education agent ships its own evaluation; this one claims to, at 4★, and it was sitting in prose on [`../intel/trends.md`](../intel/trends.md) while those entries were being written. 🔴 **The claim is unverified** — the harness has not been run from here, and 12 open issues against 0 forks is an early project, not a validated one. 🔵 `Gap 537-B` is to run it. |
+| 🆕 **moodle-mcp-server** | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** — sidebar `MIT license` | **45** · 14 forks | unplaced — no country on the page, no copyright line read | 🟢 **The most-starred *permissively granted* Moodle bridge this base has found.** Eight tools, and the set is unusual in being **teacher-side**: `get_courses`, `list_students`, `get_assignments`, `get_student_submissions`, `provide_assignment_feedback`, `get_quizzes`, `get_quiz_attempts`, `provide_quiz_feedback`. Two of the eight *write* — feedback on an assignment and on a quiz attempt — so it is a grading loop, not a read-only reporter. ⚠️ Sidebar says *"No description, website, or topics provided"*: the README is the only documentation. |
+| 🆕 **civil-ai** | [zhangl1001/civil-ai](https://github.com/zhangl1001/civil-ai) | 🟢 **MIT** — sidebar `MIT license` | **41** · 7 forks | APAC (China — Chinese civil-service exam is the reference application) | *"Local-first adaptive tutoring agent foundation reference implementation for iOS and Web."* README calls it *"a reusable, local-first foundation for building adaptive education Agents on iOS and Web"*, with the civil-service exam as one application over it (practice, grading, review, planning). 🟢 **The framing is the value: it ships as a foundation with a worked vertical on top**, which is the shape an engagement reuses. TypeScript / Vue. |
+| 🆕 **wenflow** | [wenflow-org/wenflow](https://github.com/wenflow-org/wenflow) | 🟢 **MIT** — sidebar `MIT license` | **61** · 19 forks | APAC (China — Chinese-language README and description) | *"先说清你想解决的事，再开始学习"* — "state the problem you want to solve, then start learning." Clarifies a learner's goal in conversation, generates a learning path, teaches in rounds, schedules spaced review and tracks learning load; ships an admin dashboard and **simulated virtual learners** for testing the loop without real students. Vue 3 + TypeScript front end, Node/Express back end. ⚠️ README labels it 早期实验原型 — *early experimental prototype*. |
+| 🆕 **avit** | [maiatechdev/avit](https://github.com/maiatechdev/avit) | 🟢 **MIT** — sidebar `MIT license` | 0 · 0 forks | 🟢 **LATAM (Brazil)** — Portuguese-language README and UI, *"janela pedagógica"* framing | A **classroom-session** Socratic tutor, and the session model is the interesting part: the teacher opens a session with a code or QR, each student picks a path (*Investigar · Criar · Resolver · Colaborar*), and the tutor gives a **ladder of hints without revealing the answer** — after three unsuccessful hints it explains the steps and offers a similar exercise. React 19 + Vite + Tailwind 4 + TypeScript. ⚠️ README states it is a prototype with **no real student data until a legal review completes** — a reference implementation, not a dependency. |
+| 🆕 **skill-instructional-design** | [tanghua-git/skill-instructional-design](https://github.com/tanghua-git/skill-instructional-design) | 🟡 **MIT — README only.** The sidebar carries **no licence entry**; the grant is the line *"MIT © 2026 Tanghua (唐华)"* in the README | 2 · 0 forks | APAC (China — Chinese-language description, author 唐华) | A **multi-agent lesson-plan generator shipped as an agent *skill***, installable standalone or as an OpenClaw skill. Generates systematic K-12 lesson plans against named pedagogy — **ICAP**, **Bloom**, and 扶放有度 (gradual release of responsibility) — running the theory analysis internally and emitting plain-language output. 🟢 **The pedagogy is explicit and named**, which almost nothing else on this shelf does. ⚠️ Sidebar description says v3.0 while the README documents **v5.3**: the page contradicts itself on its own version. |
+| 🆕 **capy-note** | [florianchristophnowak-dot/capy-note](https://github.com/florianchristophnowak-dot/capy-note) | 🟢 **MIT** — sidebar `MIT license` | 1 · 0 forks | 🟢 **EMEA (German-speaking Europe)** — German-language description *"Effiziente Bewertung gescannter Schülerarbeiten"*, topics `lehrer` · `schule` · `unterricht` | **Offline desktop grading of scanned class exams**: PDF import, automatic segmentation of each student's work, task templates, annotation, **first and second correction layers** (the German *Erst-/Zweitkorrektur* convention), and a statistics dashboard. Electron + React + Vite. 🟢 **Fully offline is the posture the EU's 2 Dec 2027 high-risk band rewards** — assessment that influences access to qualifications is Annex III, and a tool that never leaves the teacher's machine moves the processing question entirely. |
+| 🆕 **prep-ybara** | [florianchristophnowak-dot/prep-ybara](https://github.com/florianchristophnowak-dot/prep-ybara) | 🟢 **MIT** — sidebar `MIT license` | 1 · 0 forks | 🟢 **EMEA (German-speaking Europe)** — description *"Unterrichtsvorbereitungs-App"*, topics `lehrer` · `schule` · `unterricht` | Lesson *preparation* rather than delivery: weekly timetable, teaching sequences and individual lessons on a **45-minute timeline** (the German lesson period), PDF export, backup/restore, plus a companion mobile web app *"Prép-ybara Pocket"*. Local Windows app on Electron + React. 🟡 Same author as `capy-note`, so the two are **one EMEA contributor, not two independent signals** — stated because a region count that double-counts an author overstates the region. |
 
 **Licence split:** **39 × MIT, 11 × Apache-2.0, 1 × BSD-3-Clause** — all
 fifty-one buildable, every cell read from the licence file's title block.
@@ -627,6 +685,90 @@ above recommends this bridge, and a recommendation that omits a High-severity
 RCE in the default mode is not a recommendation. The grant was never the risk
 here.
 
+## 🔴 The Moodle MCP census was wrong on both its numbers — and this base already knew
+
+This base calls a Moodle agent bridge *"the clearest build opportunity"* and has
+said so for ten passes. The gap note under it carried two quantitative claims —
+*"ten of eleven codebases are **MIT**, nobody has above 27★"* and *"the entire
+field sums to under 40 stars"* — and `p538` re-read four of the codebases
+first-hand to test them. **Both are false.**
+
+🔴 **But the reportable part is not the measurement. It is that the correction
+was already on this base, one page away, and had been since `p529`.**
+[`../repos/foundations.md`](../repos/foundations.md) heads its own Moodle
+section **"🔴 222 addresses, not eleven; ceiling 52★ and ungranted"** and states
+in its first paragraph that *"the field's ceiling is **not** `G36maid` at 27★ —
+it is `loyaniu/moodle-mcp` at **52★**, and ⛔ it has no licence file"*, with the
+permissive ceiling named as `peancor/moodle-mcp-server`, **MIT, 45★**. 🔴 **The
+stale bullet in this file links to that very page**, as *"full census in
+`../repos/foundations.md`"*. Nine passes rendered a sentence beside a link to
+its own refutation.
+
+🔵 **Why no instrument caught it.** This base has a cross-page contradiction
+sweep — [`../compose/code/p121-stale-token-crosspage/crosspage.py`](../compose/code/p121-stale-token-crosspage/crosspage.py)
+— and it was built for exactly this failure after `FWU-DE/ais-chat` survived
+three passes of corrections. 🔴 **It keys on *licence tokens*.** The Moodle
+claims are **star counts and a sum**, and nothing on this base compares a
+numeric claim about an address on one page against a numeric claim about the
+same address on another. `p336`'s figure-contradiction work is scoped to OER
+content counts, not to cross-page claims. So the defect class is open:
+**`Gap 538-C`, below.**
+
+🟢 **What `p538` adds beyond the restoration** is the first-hand re-read at this
+pass's `HEAD`, which `p529` took from the API, plus the tool vocabularies the
+API cannot expose:
+
+| Codebase | Grant (read first-hand) | Stars | Forks | Tools | Language |
+|---|---|---|---|---|---|
+| [loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) | ⛔ **No grant.** No licence entry in the sidebar, none in the title block | 🔴 **52** | 14 | **24**, in four documented groups (5 courses & content · 10 assignments & deadlines · 4 grades & progress · 5 aggregated overviews) | Vue/TS stack per README; sidebar breakdown empty |
+| [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** — sidebar `MIT license` | 🔴 **45** | 14 | 8, **two of them writes** (`provide_assignment_feedback`, `provide_quiz_feedback`) | not stated on page |
+| [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | 🟢 **MIT** — sidebar `MIT license` | 27 (**unchanged** — re-measured) | 1 | 20 typed + 2 opt-in escape hatches = 22 | **Rust**, on the official MCP SDK |
+| [GhaithAlHallak8/moodler-mcp](https://github.com/GhaithAlHallak8/moodler-mcp) | 🟢 **MIT** — sidebar `MIT license` | 3 | 1 | **40** counted from the tables (32 read + 8 write, writes off by default) | not stated on page |
+
+🔴 **Claim one — "nobody has above 27★" — is false by a factor of two**, and
+`p529` said so. Two codebases sit above it: 52 and 45. `G36maid` at 27★ was
+never the ceiling; it was the most-starred one *that census happened to have
+read*. `p538` re-measured 27★ at `G36maid` unchanged, so the error was never in
+that figure — it was in treating it as a maximum.
+
+🔴 **Claim two — "the field sums to under 40 stars" — is false by more than
+3×** on these four alone (**127★**), and by roughly **9×** against `p529`'s
+reading of the top 80 by stars (**352★**). The seven codebases this pass did not
+re-read can only raise it.
+
+🟢 **But the conclusion the census drew survives, and sharpens.** The finding
+was *"fragmentation with no convergence"* and that is now better supported, not
+worse: four codebases, four tool vocabularies — **8, 22, 24 and 40 tools** — and
+no two agree. `peancor` is teacher-side and writes grades. `GhaithAlHallak8` is
+read-first with writes gated off. `G36maid` is Rust with escape hatches.
+`loyaniu` is the richest read surface and has the most stars.
+
+🔴 **And the new fact is the one that matters commercially: the field's leader
+cannot be built on.** The most-starred Moodle bridge in the census —
+`loyaniu/moodle-mcp`, **52★, 14 forks, 24 tools, the richest vocabulary
+anyone has published** — carries **no grant at all**. Its sidebar has no
+licence entry and its title block has none. 🔵 Under this base's own rule that
+is *ungranted, not permissive*: absent a grant, default copyright applies and
+an engagement may not build on it whatever the star count says. So the
+practical shelf for a Globant build is:
+
+1. 🟢 **[`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server)** — MIT, 45★, **the most-starred permissively granted bridge**, and already does the teacher-side write loop.
+2. 🟢 **[`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp)** — MIT, 40 tools, **the widest permissive surface**, writes off by default.
+3. 🟢 **[`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp)** — MIT, Rust, 22 tools, the only one on the official SDK.
+
+🔵 **Consolidation target: `GhaithAlHallak8`'s 40-tool surface, `peancor`'s
+write path, `G36maid`'s SDK discipline — all three MIT, so they compose without
+a licence question.** `loyaniu`'s vocabulary can be read for design and must
+not be copied. Recipe in
+[`../compose/patterns.md`](../compose/patterns.md).
+
+⚠️ **Scope honesty:** four codebases were re-read first-hand this pass. The
+rest of the field — `p529` puts it at **222 matching addresses**, of which it
+read the top 80 — carries figures this pass did **not** re-attest. And the
+census's own caveat still stands and is worth repeating: every tool count in
+this field is the repository's own claim, three repositories contradict
+themselves on it, so **tool counts here are marketing, not measurement.**
+
 ## ⚠️ Licence traps — repos that look permissive and are not
 
 Education repositories a naive licence probe grades as buildable. They are not.
@@ -736,6 +878,8 @@ below has already flipped on exactly that; the others were re-checked this pass 
 | 🆕 [henriquebotelhogomes/educacao](https://github.com/henriquebotelhogomes/educacao) | 0 | "Mentora AI" — a Socratic RAG tutor with a learning-gap radar, Next.js + FastAPI. README present on `master`, no licence section. | ⛔ **Ungranted.** Probed on `main` and `master` across six paths. The repository resolves; the grant does not exist. |
 | 🆕 [JustinoLM/STI-matematicas](https://github.com/JustinoLM/STI-matematicas) | 🔴 **0** | A complete thesis report: *"Se desarrolló como trabajo de graduación de la Licenciatura en Ingeniería de Software de la **Universidad Tecnológica de Panamá (UTP)**… y se validó con estudiantes reales en una escuela pública panameña."* No licence section anywhere. | ⛔ **Ungranted — and the most expensive instance of this band on the whole base.** Probed at **10 paths** across `main` and `master`; the API returns `license: None`. 🟢 **Liveness confirmed first** per shelf rule 5: `README.md` is **200 on `master` and 404 on `main`** — a fourth `Gap 535-C` instance in one pass. 🔴 **What the missing grant locks up:** adaptive decimal-arithmetic practice for Panamanian sixth grade, **K-means (scikit-learn) learner profiles** clustering each school's pupils into four types (*rápido y preciso, cuidadoso y metódico, impulsivo, en desarrollo*) and **adapting the mastery streak from 7 to 15 correct answers** accordingly; paper-procedure solving grids (carries, partial products, long division) with a tablet keypad; automatic teacher alerts for pupils who are behind, inactive, stalled, outstanding, promoting too fast, **or answering anomalously**; Excel roster import. 🔴 **Validated May–July 2026 with 74 pupils across three sections of a Panamanian public school** (65 completed ≥1 practice), **SUS 70.1 (n = 70)**, 92 % of practising pupils used the reward store. Tagged `v1.0-tesis`; the project is **concluded**, the validation infrastructure **decommissioned**, no live demo. 🔵 **This is the only artefact on this base with a published usability instrument against real schoolchildren, and it is the one nobody can use.** → `Gap 536-C`: one upstream issue asking UTP for a licence is the cheapest high-value contribution available to this base. |
 | 🆕 [Fatima0923/AssessmentAI](https://github.com/Fatima0923/AssessmentAI) | 0 | Multi-agent LLM essay-evaluation pipeline with human-in-the-loop review. README present on `main`. | ⛔ **Ungranted** — and it sits squarely in the one capability gap this base has carried longest, which is what makes the missing grant expensive rather than merely untidy. |
+| 🔴 🆕 **`p538`** — [loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) | 🔴 **52** · 14 forks | Nothing. No licence entry in the sidebar, none in the title block. The README documents **24 MCP tools** in four groups and says nothing about terms. | ⛔ **Ungranted — and this is the costliest row in the band.** It is the **most-starred Moodle bridge in this base's census** and has the richest tool vocabulary anyone has published (24 tools vs 22, 8 and 40 across the three MIT alternatives). The census under the Moodle gap called the field *"ten of eleven MIT"*; its **leader is the eleventh**. Read it for design, do not build on it. |
+| 🆕 **`p538`** — [upstream1119/Traceable-Ideological-Education-RAG](https://github.com/upstream1119/Traceable-Ideological-Education-RAG) | 2 · 0 forks | A detailed architecture — *"Traceable KG-RAG system for ideological education with citation grounding, multi-agent review, political safety checking, and cross-modal learning interaction"*, FastAPI + Python, hybrid retriever with an optional FAISS path, graph store, citation checker, policy checker. **No licence entry in the sidebar.** README describes it as a *"backend-first prototype"* with KG reasoning and multi-agent review still **planned**. | ⛔ **Ungranted.** 🔵 Worth recording for its *shape* rather than its code: it is the only artefact on this base that treats **citation grounding and a policy check as first-class architecture** rather than as a prompt. That is the primitive a regulated-curriculum engagement needs — see APAC in [`../intel/market.md`](../intel/market.md). |
 
 ### 🆕 Not ungranted — **absent**
 
@@ -963,11 +1107,26 @@ Stated rather than left silent, because an unwritten gap looks like coverage.
   from `p527` as a confirmed duplicate — and they resolve to
   **eleven independent codebases plus two forks**, in **four languages**
   (Rust ×1, Python ×4, TypeScript/Node ×2, Go ×1, two unread), with tool counts
-  from **8 to ~230**
-  — and **the entire field sums to under 40 stars.** So the finding is not
-  absence, it is 🔴 **fragmentation with no convergence**: ten of eleven
-  codebases are **MIT**, nobody has above 27★, and no two agree on a tool
-  vocabulary. Full census in
+  from **8 to ~230**.
+  🔴 ⚠️ **`p538` falsified the two numbers that used to close this sentence.**
+  It read *"the entire field sums to under 40 stars"* and *"nobody has above
+  27★"*. Four codebases re-read first-hand at `p538` total **127★**, and two of
+  them — `loyaniu/moodle-mcp` (**52★**) and `peancor/moodle-mcp-server`
+  (**45★**) — are above the claimed ceiling. 27★ was the most-starred bridge the
+  census had *read*, not the most-starred one that exists. Table in
+  [§ the Moodle correction](#-the-moodle-mcp-census-was-wrong-on-both-its-numbers-and-this-base-already-knew)
+  — where the material point is that
+  [`../repos/foundations.md`](../repos/foundations.md) **already carried this
+  correction at `p529`**, under a heading that names the 52★ ceiling outright,
+  and this bullet went on contradicting it for nine passes while linking to it.
+  🟢 **The qualitative finding survives and is better supported:** it is not
+  absence, it is 🔴 **fragmentation with no convergence** — four vocabularies at
+  **8, 22, 24 and 40 tools**, no two agreeing. 🔴 **And the field's leader is
+  ungranted:** `loyaniu/moodle-mcp`, the most-starred bridge with the richest
+  tool surface, has **no licence entry in its sidebar and none in its title
+  block**, so it cannot be built on at all. The permissive shelf is
+  `peancor` (MIT, 45★), `GhaithAlHallak8` (MIT, 40 tools) and `G36maid`
+  (MIT, Rust, 22 tools). Full census in
   [`../repos/foundations.md`](../repos/foundations.md). 🟢 **This makes the build
   *more* attractive, not less** — consolidating nine permissive implementations
   is a cheaper start than a greenfield bridge. The old reading, kept because the
@@ -1013,8 +1172,19 @@ Stated rather than left silent, because an unwritten gap looks like coverage.
   [`../repos/foundations.md`](../repos/foundations.md). The LATAM contribution on
   the *agent* legs this pass is **data, not code**: the Chilean exams behind
   `pedagogy-benchmark`.
-- 🟡 **Two EMEA-placed agents** (Open TutorAI CE in Morocco; pedagogy-benchmark's
-  UK origin) against four APAC.
+- 🟢 🆕 **"Two EMEA-placed agents against four APAC" is RETIRED.** `p538`
+  shelved two German-language teacher tools —
+  [`capy-note`](https://github.com/florianchristophnowak-dot/capy-note) (MIT,
+  offline exam grading) and
+  [`prep-ybara`](https://github.com/florianchristophnowak-dot/prep-ybara) (MIT,
+  lesson preparation) — placed on German-language descriptions and the topics
+  `lehrer` · `schule` · `unterricht`. With Open TutorAI CE (Morocco) and
+  pedagogy-benchmark (UK) that is **four EMEA-placed**, level with APAC on this
+  count. 🟡 **Two caveats, stated so the count is not read as stronger than it
+  is:** both new rows are **1★**, and both are by the **same author**, so EMEA's
+  gain is one contributor rather than two independent signals. 🔴 **The live
+  EMEA gap is now maturity, not presence** — and the region still has no
+  education agent above three figures of stars.
 - 🟡 🆕 **Assessment integrity: the gap moves from "nothing permissive" to
   "nothing adopted", and the sharpest signal this pass is a deletion.**
   🔴 [`AIEd-Innovations/assessment_agent`](https://github.com/AIEd-Innovations/assessment_agent)
@@ -1048,8 +1218,64 @@ Stated rather than left silent, because an unwritten gap looks like coverage.
   arXiv **ArguLens** paper (2608.17356) to this repository; **the repository
   mentions neither ArguLens nor any arXiv paper**, and its citation URL is still
   a `<your-org>` placeholder. The attribution is **unverified** — do not repeat it.
-- 🔴 **No open-source SIS/advising agent under a permissive licence.** Unchanged.
-  The only serious candidate (`advisingapp`) is Elastic-2.0.
+- 🟡 🆕 **The SIS gap narrows from "nothing permissive" to "a client, not an
+  agent."** [`dougpenny/SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore)
+  (**MIT**, 6★) is a *"pure Swift PowerSchool API client"* handling auth and
+  decoding against the PowerSchool SIS API — **the first permissively granted
+  SIS access layer on this base.** 🔴 It is not an agent and does not pretend to
+  be, and its README states it *"is not endorsed, sponsored, or affilitated with
+  PowerSchool in any way"* (sic). 🔵 **So the gap splits:** the *access layer*
+  for the largest US K-12 SIS now exists under MIT; the *agent* over it does
+  not. The only full candidate (`advisingapp`) is still Elastic-2.0. Filed in
+  [`../repos/foundations.md`](../repos/foundations.md).
+- 🔴 🆕 **`Gap 538-A` — no instrument on this base can tell a fork from its
+  upstream.** `p538` fixed the ledger's casing defect, and the fix explicitly
+  does **not** reach this: the queue now emits `Dymayo/moodler-mcp` with the
+  corpus's own capitalisation, which is still not the canonical address
+  ([`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp)).
+  Two of twenty queued addresses this pass were forks whose upstream the queue
+  could not name. Both were caught **by hand**, as `kvnloo/tutor-mcp` →
+  [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) was
+  at `p536`. 🔵 A one-pass instrument exists in principle — a repository page
+  carries a *"forked from"* line — but nothing here reads it, so the rate is
+  **2 of 20 observed and unbounded above**.
+- 🟢 🆕 **`Gap 538-C` — the cross-page sweep for NUMERIC claims now exists, and
+  it reports a blank.** The Moodle defect was a *figure* contradicted across
+  pages, and this base's cross-page instrument
+  ([`../compose/code/p121-stale-token-crosspage/crosspage.py`](../compose/code/p121-stale-token-crosspage/crosspage.py))
+  keys on **licence tokens** — a closed vocabulary it can match. A star count is
+  an open integer, so nothing compared one page's figure for an address against
+  another page's. 🟢 **Written this pass:**
+  [`../ingest/crosspage-figure-claims.py`](../ingest/crosspage-figure-claims.py).
+  It is header-aware (it reads the column whose header matches `/star/i`, after
+  a first cut that took any bare cell and scored one fork, twenty-two tools and
+  twenty-seven stars as a single three-way contradiction on `G36maid`). Queue:
+  [`../evidence/crosspage-figure-claims.2026-10-29-p538.tsv`](../evidence/crosspage-figure-claims.2026-10-29-p538.tsv).
+  🔵 **All nine rows were triaged by hand and the result is a blank:** 3 benign
+  (growth deliberately recorded between passes — `corretor-enem` 6→7,
+  `tutor-mcp` 57→59, `education-agent-skills` 921→926), **6 artefacts sharing a
+  single cause**, and 🟢 **0 actionable** — no second instance of the Moodle
+  shape survives on this tree. 🔴 **The one cause behind all six artefacts:**
+  the instrument reads a *line*, and this base's prose routinely wraps a figure
+  onto a different line from the address it belongs to, so
+  `"(Apache-2.0, **2 109★**), [anchore/syft](…)"` reads ORT's figure onto
+  `syft` while the **rendered sentence is correct**. Pre-registered fix for
+  `p539`, in the instrument's own docstring: join wrapped lines into rendered
+  sentences and attribute to the *nearest* address, not the only one on the
+  line. 🔵 **Stars-column coverage is reported rather than assumed** and it is
+  thin outside the two supply pages: 5/16 tables on this file,
+  18/23 on `foundations.md`, but **2/55 on `patterns.md` and 2/98 on
+  `market.md`** — those pages state figures in prose, so the sweep sees them
+  only through the `MARKED` path.
+- 🟡 🆕 **`Gap 538-B` — seven of eleven Moodle codebases are still unread.**
+  `p538` re-read four and both of the census's quantitative claims failed. The
+  remaining seven carry figures no pass has re-attested, and the census's tool
+  ceiling (*"~230"*) sits on one of them. Until they are read, the census's
+  **shape** (fragmentation, no convergence) is attested and its **numbers** are
+  not.
+- 🔴 **No open-source SIS/advising agent under a permissive licence.** Narrowed
+  but not closed — see the SwiftyPSCore bullet above. The only serious full
+  candidate (`advisingapp`) is Elastic-2.0.
 
 ## 🆕 Promotion debt — what `p528` actually fixed
 

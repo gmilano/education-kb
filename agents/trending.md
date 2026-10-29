@@ -4,6 +4,177 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p538` — `2026-10-29` — **🟢 THE QUEUE IS EMPTY: ALL TWENTY ADDRESSES READ, SEVEN AGENTS SHELVED (58 TOTAL). 🔴 `p537`'S 45 % MIS-SPELLING RATE WAS MANUFACTURED BY THIS BASE'S OWN LEDGER — THE PROSE WAS RIGHT ALL ALONG. 🔴 THE MOODLE GAP CARRIED TWO FALSIFIED NUMBERS FOR NINE PASSES BESIDE A LINK TO THE PAGE THAT CORRECTED THEM. 🟢 EMEA IMBALANCE RETIRED.**
+
+### 🔴 The mandated trending leg, for the tenth consecutive pass, returned nothing unfiled — and `p538` can now say *why* in one sentence
+
+`p537` established that `github trending education AI 2026` does not index GitHub
+Trending at all: its non-DeepTutor results are auto-generated `agents-radar`
+issues at 2★ apiece. 🟢 **`p538` ran the leg again and reproduces that exactly**,
+and adds the one thing `p537` did not have — **a measured false positive.**
+
+The leg's summary named *"HKUDS/DeepTutor and JetBrains/thinkrail"* as the
+education-focused projects whose stars are exploding. Read first-hand:
+
+| Address | Grant | Stars | Forks | What it actually is | Education? |
+|---|---|---|---|---|---|
+| [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) | Apache-2.0 | **6.0k** | 321 | *"Vibe code with pi in a lightweight, real IDE that customises itself around the way you work"* — an agentic IDE. Bun / Node / React 19 | 🔴 **No.** Not one education topic on the page; the README describes a developer tool end to end |
+
+🔴 **So the leg does not merely fail to surface education supply — it labels a
+developer IDE as education supply.** A pass that trusted the summary would have
+shelved a 6k-star JetBrains IDE as an education agent. 🔵 **The generalisable
+rule, and it is cheap:** a trending leg's *category* claim is as unverified as
+its star count. `thinkrail` is a real repository with a real Apache-2.0 grant
+and a real 6k stars — every atom of it checks out except the one that mattered.
+
+🟢 **DeepTutor re-measured at this pass's `HEAD`: 49 850★ · 6 138 forks, README
+naming v1.7.0 (2026.10.28)** — unchanged from `p537`'s reading, and still the
+largest open-source education agent on any shelf. The leg's own figures for it
+ranged 46 000–49 600 across snapshots taken hours apart, which is the usual
+reminder that a trending figure is a timestamp, not a measurement.
+
+### 🔴 The finding that retracts `p537`'s headline — and it is about this base, not the corpus
+
+`p537` reported **13 of 29** queued addresses (45 %) carrying a non-canonical
+owner or repository spelling, and attributed it to
+[`../ingest/prose-address-ledger.py`](../ingest/prose-address-ledger.py)
+lower-casing what it emits. 🟢 **The attribution is right.** 🔴 **The
+implication `p537` drew from it is not.** It wrote that *"the queue is not safe
+to promote from verbatim"* and treated the mis-spellings as something to be
+repaired address by address. They were not in the corpus to repair.
+
+`p538` re-measured six of them against the curated pages the queue was built
+from:
+
+| Queue emitted | The prose actually says | Verdict |
+|---|---|---|
+| `upstream1119/traceable-ideological-education-rag` | `upstream1119/Traceable-Ideological-Education-RAG` | 🟢 prose correct |
+| `oas114/edushield` | `oas114/EduShield` | 🟢 prose correct |
+| `dougpenny/swiftypscore` | `dougpenny/SwiftyPSCore` | 🟢 prose correct |
+| `shishiv/educa` | `shishiv/EDUCA` | 🟢 prose correct |
+| `guruduan/simg` | `guruduan/SIMG` | 🟢 prose correct |
+| `h9-tec/awesome_arabic_nlp` | `h9-tec/Awesome_Arabic_NLP` | 🟢 prose correct |
+
+🔴 **Six for six.** The corpus was never wrong. **The instrument corrupted
+correct data on its way out**, and nine passes of prose downstream of it
+inherited the corruption as if it were a supply problem.
+
+🟢 **Fixed in the instrument, which is where `p536` and `p537` both said fixes
+belong.** `norm()` did two jobs — comparison key and emitted payload — and only
+the lossy one reached the page. It is now `match_key()` (lower-cased, for set
+arithmetic, documented as *not an address*) and `as_written()` (the corpus's own
+spelling, which is what a successor pastes). The queue gained an
+`as_written_variants` column and a `spelling_conflict` flag for a key whose
+spelling genuinely disagrees between pages.
+
+Re-run at this pass's tree:
+
+| | Value |
+|---|---|
+| FILED (in a table row) | **240** |
+| PROSE (sentences only) | 169 |
+| PROSE − FILED (the queue) | **20** |
+| 🔴 Addresses the old code was corrupting | **7 of 20 — 35 %** |
+| 🟢 `spelling_conflict` | **0 of 20** |
+
+🔵 **`spelling_conflict = 0` is the load-bearing number.** Not one of the twenty
+addresses is spelled two ways anywhere on the six curated pages. The corpus is
+internally consistent, so **100 % of the observed error was the script's** —
+there was never a prose defect to find. 🟢 **And FILED = 240 matches the
+`promotion-ratchet.json` figure exactly**, which `p537` had to record as *"NOT
+gate-attested"* because it could not execute the ledger. It executes now.
+
+⚠️ **What the fix does not reach.** The queue now emits `Dymayo/moodler-mcp`
+with the corpus's own capitalisation — still not the canonical address, because
+the upstream is
+[`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp)
+and `Dymayo`'s is its fork. Two of twenty queued addresses were forks; both were
+caught **by hand**, as `kvnloo/tutor-mcp` →
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) was
+at `p536`. **No instrument here reads a "forked from" line.** `Gap 538-A`.
+
+### 🟢 Seven agents shelved — and the regions that gained are the ones this file complains about
+
+| Agent | Grant | Stars | Region (basis) |
+|---|---|---|---|
+| [`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) | 🟢 MIT | **61** · 19 forks | APAC (China) |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 MIT | **45** · 14 forks | unplaced |
+| [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🟢 MIT | **41** · 7 forks | APAC (China) |
+| [`tanghua-git/skill-instructional-design`](https://github.com/tanghua-git/skill-instructional-design) | 🟡 MIT — **README only**, no sidebar entry | 2 | APAC (China) |
+| [`florianchristophnowak-dot/capy-note`](https://github.com/florianchristophnowak-dot/capy-note) | 🟢 MIT | 1 | 🟢 **EMEA** (German-language; topics `lehrer`·`schule`·`unterricht`) |
+| [`florianchristophnowak-dot/prep-ybara`](https://github.com/florianchristophnowak-dot/prep-ybara) | 🟢 MIT | 1 | 🟢 **EMEA** (same basis) |
+| [`maiatechdev/avit`](https://github.com/maiatechdev/avit) | 🟢 MIT | 🔴 0 | 🟢 **LATAM** (Brazil; Portuguese) |
+
+🟢 **`"Two EMEA-placed agents against four APAC"` is RETIRED.** With Open TutorAI
+CE (Morocco) and pedagogy-benchmark (UK), EMEA is now **four**, level with APAC.
+🟡 **Two honest caveats:** both new EMEA rows are **1★**, and both are by the
+**same author** — so the region gained one contributor, not two independent
+signals. The live EMEA gap is **maturity**, and the region still has no
+education agent in three figures of stars.
+
+🔵 **The two German rows are worth more than their star counts.** `capy-note`
+does **offline** grading of scanned exams with first- and second-correction
+layers — the German *Erst-/Zweitkorrektur* convention encoded in software — and
+`prep-ybara` plans lessons on a **45-minute timeline**, the German period. 🟢
+**Offline is the posture the EU's 2 Dec 2027 high-risk band rewards:**
+assessment influencing access to qualifications is Annex III, and a tool that
+never leaves the teacher's machine moves the processing question entirely.
+That is a regulatory-fit argument this base has made in prose for many passes
+and has never had an artefact for.
+
+### 🔴 Two ungranted additions, and one of them is the Moodle field's leader
+
+| Address | Stars | Grant | Why it matters |
+|---|---|---|---|
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | 🔴 **52** · 14 forks | ⛔ **None** — no sidebar entry, none in the title block | **The most-starred Moodle bridge on this base, with the richest published tool vocabulary (24 tools in four documented groups)** — and it cannot be built on. |
+| [`upstream1119/Traceable-Ideological-Education-RAG`](https://github.com/upstream1119/Traceable-Ideological-Education-RAG) | 2 | ⛔ **None** | The only artefact here treating **citation grounding and a policy check as first-class architecture** rather than as a prompt. FastAPI, hybrid retriever, graph store, citation checker, policy checker; *"backend-first prototype"*. |
+
+### 🔴 The Moodle gap carried two falsified numbers for nine passes — next to a link to its own correction
+
+[`top.md`](top.md)'s Moodle bullet read *"nobody has above 27★"* and *"the
+entire field sums to under 40 stars."* Both false. 🔴 **And
+[`../repos/foundations.md`](../repos/foundations.md) has said so since `p529`**,
+under a heading that reads **"222 addresses, not eleven; ceiling 52★ and
+ungranted"** — a page the stale bullet *links to*, as *"full census in
+`../repos/foundations.md`"*.
+
+Re-read first-hand this pass: `loyaniu` **52★** (ungranted, 24 tools),
+`peancor` **MIT 45★** (8 tools, two of them writes), `G36maid` **MIT 27★**
+(Rust, 22 tools), `GhaithAlHallak8` **MIT 3★** (40 tools, writes off by
+default). **127★ across four**, against a claimed field total under 40.
+
+🔵 **Why no instrument caught it.** This base built a cross-page contradiction
+sweep at `p121`, after `FWU-DE/ais-chat` survived three passes of corrections
+published ~65 lines from the stale cell. 🔴 **It keys on licence tokens** — a
+closed vocabulary. A star count is an open integer, and nothing compared one
+page's figure for an address against another page's.
+
+🟢 **Written this pass:**
+[`../ingest/crosspage-figure-claims.py`](../ingest/crosspage-figure-claims.py),
+header-aware (it reads the column whose header matches `/star/i`, after a first
+cut that took any bare cell and scored one fork, 22 tools and 27 stars as a
+single three-way contradiction on `G36maid`). 🔵 **It reports a blank, and the
+blank is the result:** nine rows flagged, all triaged by hand — **3 benign**
+(growth deliberately recorded between passes), **6 artefacts of one shared
+cause**, **0 actionable**. No second instance of the Moodle shape survives.
+
+🔴 **The one cause behind all six artefacts:** the instrument reads a *line*,
+and this base's prose wraps a figure onto a different line from the address it
+belongs to. `"(Apache-2.0, **2 109★**), [anchore/syft](…)"` reads ORT's figure
+onto `syft` — and **the rendered sentence is correct; only the line is not.**
+Pre-registered fix for `p539`: join wrapped lines into rendered sentences and
+attribute to the *nearest* address. That collapses all six.
+
+### What `p538` leaves
+
+- 🔴 **`Gap 538-A`** — nothing here distinguishes a fork from its upstream. 2 of 20 observed, unbounded above.
+- 🟡 **`Gap 538-B`** — seven of the eleven Moodle codebases are still unread; the census's *shape* is attested, its *numbers* are not.
+- 🟢 **`Gap 538-C`** — the numeric cross-page sweep now exists and reports 0 actionable. Its line-vs-sentence fix is pre-registered above.
+- 🔴 **The promotion queue is now EMPTY.** Nine passes of supply came out of it. 🔵 **So `p539` has no queue to work and must either generate a new one** (the `HISTORY` bucket holds **4 144** distinct addresses against **240** filed — a 5.8 % filing rate) **or find supply in a channel this base has not used.** The four mandated global legs and all four regional legs ran this pass and returned **nothing unfiled**. That is the tenth consecutive pass to report it, and it is now the base's central problem rather than an aside.
+
+---
+
+
 ## 🆕 `p537` — `2026-10-29` — **🔴 THE `github trending education AI` LEG IS STRUCTURALLY INCAPABLE OF SURFACING SUPPLY — ITS NON-DEEPTUTOR RESULTS ARE **2★ EACH**, FROM AUTO-GENERATED ISSUES, NOT FROM GITHUB TRENDING. 🟢 EIGHT AGENTS SHELVED OFF THE PROSE QUEUE (51 TOTAL). 🔴 THE QUEUE IS NOT SAFE TO PROMOTE FROM VERBATIM: **13 OF 29** ADDRESSES ARE MIS-SPELLED AND TWO ARE FORKS. 🟢 `Gap 536-D` CLOSED — AND THE GULF HOLE IS A **GRANT** HOLE.**
 
 ### 🔴 The finding that reframes nine trending entries — and it is about this file's own instrument

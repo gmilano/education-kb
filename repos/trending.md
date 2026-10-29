@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p538` — `2026-10-29` — **🟢 NINE PLATFORM ROWS FILED AND THE PROSE QUEUE IS EMPTY — PLACED IN **ALL FOUR REGIONS**, WHICH NO SEARCH LEG HAS EVER MANAGED. 🔴 THE MOODLE CENSUS'S CORRECTION WAS ALREADY HERE AND `agents/top.md` CONTRADICTED IT FOR NINE PASSES. 🟢 A NUMERIC CROSS-PAGE SWEEP NOW EXISTS.**
+
+### 🟢 The queue's residue placed better than the search legs did
+
+`p537` left **twenty** addresses queued. `p538` read all twenty first-hand, filed
+the nine non-agent ones on [`foundations.md`](foundations.md) and the seven
+agent-grade ones on [`../agents/top.md`](../agents/top.md), and resolved the
+remaining four as two forks (upstream named) and two already-shelved agents
+re-measured.
+
+| Region | Rows | Addresses |
+|---|---|---|
+| 🟢 **North America** | **3** | [`SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) (PowerSchool SIS client, MIT 6★) · [`state-ai-disclosure-state-tracker`](https://github.com/mizcausevic-dev/state-ai-disclosure-state-tracker) · [`pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile) · [`student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) |
+| **APAC** | **3** | [`knowledge-grab`](https://github.com/alterem/knowledge-grab) (MIT **567★** — the highest-starred row this queue has produced) · [`EduShield`](https://github.com/oas114/EduShield) (Taiwan, MIT 11★) · [`SIMG`](https://github.com/guruduan/SIMG) (Indonesia, MIT 1★) |
+| 🟢 **EMEA** | **1** | [`Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) (Gulf/Arabic, **258★**, 🟡 CC BY 4.0 badge only) |
+| 🟢 **LATAM** | **1** | [`EDUCA`](https://github.com/shishiv/EDUCA) (Brazil, MIT 1★) |
+
+🔵 **The generalisable finding, and it is cheaper than another search leg.** This
+base's standing complaint is that its supply is APAC-heavy and its LATAM and
+EMEA legs come back blank. 🟢 **The prose queue placed rows in all four regions
+in a single pass** — because a queue built from *sentences* inherits the
+regional spread of the prose, and **this base's prose is better balanced than
+its tables are.** The four mandated regional legs ran again this pass and
+returned nothing unfiled; the queue returned a four-region set. 🔴 **That is an
+argument about where to spend the next pass's budget**, not a one-off.
+
+🟢 **Two of the nine are architecturally interesting well beyond their star
+counts:**
+
+- [`alterem/knowledge-grab`](https://github.com/alterem/knowledge-grab) (**MIT, 567★, 52 forks**) downloads e-textbooks, course video and courseware from 国家中小学智慧教育平台 (`basic.smartedu.cn`), the PRC's national K-12 platform, decrypting video and merging to MP4. 🔵 **Every tutoring agent needs a grounded corpus and this is the only tool on this base that acquires a *national curriculum* corpus at scale.** ⚠️ The MIT grant covers the **tool**; the platform's terms on the **content** are unread here.
+- [`oas114/EduShield`](https://github.com/oas114/EduShield) (**MIT, 11★**) de-identifies student text before it reaches a model and re-identifies the output after — as **one static HTML file with no backend**. 🟢 Every data-protection pattern on this base assumes a service to deploy and an institution to run it. This assumes neither, which is the only posture a school with no IT department can actually adopt.
+
+🟢 **And the three `mizcausevic-dev` repositories are one asset this base has
+been describing the *demand* for, for many passes, with no supply-side answer:**
+a per-state status record (Illinois SOPPA, California AB 1584/AB 2876, Texas
+HB 18, NY Ed Law 2-d), a vault contract mapping **FERPA's 7 PII categories** and
+**COPPA's 10 PI categories** with a four-doctrine consent taxonomy, and a
+hash-chained **FERPA §99.32** access-audit stream. All MIT, all composing into
+one compliance spine. 🔴 **And all 0–1★ v0.1 drafts by a single author with no
+adoption.** 🔵 **Use them as a specification, not a dependency** — the category
+mappings and the §99.32 rule are what an engagement would otherwise derive from
+statute by hand.
+
+### 🔴 This page already held the Moodle correction. `agents/top.md` contradicted it for nine passes.
+
+[`foundations.md`](foundations.md) has headed its Moodle section **"222
+addresses, not eleven; ceiling 52★ and ungranted"** since `p529`, naming
+[`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) at **52★** with no
+licence file and the permissive ceiling at
+[`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server),
+**MIT 45★**. 🔴 **[`../agents/top.md`](../agents/top.md) went on printing
+*"nobody has above 27★"* and *"the entire field sums to under 40 stars"* — in a
+bullet that links to this page.**
+
+Re-read first-hand at this pass's `HEAD`, which is new (`p529` took its figures
+from the API, and the API exposes no tool counts):
+
+| Codebase | Grant | Stars | Forks | Tools |
+|---|---|---|---|---|
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | ⛔ **none** | 🔴 **52** | 14 | **24** in four documented groups |
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** | **45** | 14 | 8, **two of them writes** |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | 🟢 **MIT** | 27 (unchanged) | 1 | 22 (20 typed + 2 opt-in) |
+| [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | 🟢 **MIT** | 3 | 1 | **40** (32 read / 8 write, off by default) |
+
+🟢 **127★ across four**, against a claimed field total under 40. 🔴 **And the
+commercially material fact: the field's leader cannot be built on.** `loyaniu`
+has the most stars *and* the richest tool vocabulary *and* no grant at all. The
+permissive shelf is `peancor` (most-starred granted, already does the
+teacher-side write loop), `GhaithAlHallak8` (widest surface, writes gated) and
+`G36maid` (Rust, official SDK) — **all three MIT, so they compose without a
+licence question.**
+
+### 🟢 A numeric cross-page sweep now exists — and it reports a blank
+
+The Moodle defect is a *figure* contradicted across pages.
+[`../compose/code/p121-stale-token-crosspage/crosspage.py`](../compose/code/p121-stale-token-crosspage/crosspage.py)
+was built for exactly this failure mode and 🔴 **keys on licence tokens**, a
+closed vocabulary. A star count is an open integer.
+
+🟢 [`../ingest/crosspage-figure-claims.py`](../ingest/crosspage-figure-claims.py)
+closes it. Nine rows flagged; all nine triaged by hand; **3 benign, 6 artefact,
+0 actionable.** Queue:
+[`../evidence/crosspage-figure-claims.2026-10-29-p538.tsv`](../evidence/crosspage-figure-claims.2026-10-29-p538.tsv).
+
+🔵 **Its coverage report is the part worth carrying forward**, because it names
+where the sweep is blind rather than returning a quiet pass:
+
+| Page | Tables with a `/star/i` header | Blind tables |
+|---|---|---|
+| `agents/top.md` | 5 / 16 | 11 |
+| `repos/foundations.md` | **18 / 23** | 5 |
+| `intel/trends.md` | 3 / 19 | 16 |
+| `verticals/solutions.md` | 2 / 20 | 18 |
+| `compose/patterns.md` | 🔴 **2 / 55** | 53 |
+| `intel/market.md` | 🔴 **2 / 98** | 96 |
+
+🔴 **`patterns.md` and `market.md` state figures almost entirely in prose**, so
+the sweep sees them only through its weaker `MARKED` path — which is also where
+all six false positives came from. **The two pages most likely to carry a stale
+figure are the two the instrument covers worst.** Stated so the 0-actionable
+result is not read as a clean bill of health for those pages.
+
+### What this page leaves for `p539`
+
+- 🔴 **The prose queue is EMPTY.** Nine passes of platform supply came out of it; there is no tenth. The `HISTORY` bucket holds **4 144** distinct addresses against **240** filed — **5.8 %** — so a new queue can be generated from history, but it has not been, and the materiality ranking that made the prose queue useful does not exist for it.
+- 🟡 **`Gap 538-B`** — seven of eleven Moodle codebases unread; the census's *shape* is attested, its *numbers* are not.
+- 🔴 **Ten consecutive passes have reported the mandated trending leg returning nothing unfiled.** `p537` showed the leg does not index GitHub Trending. 🔴 **`p538` adds a measured false *positive*:** the leg presented [`JetBrains/thinkrail`](https://github.com/JetBrains/thinkrail) (Apache-2.0, **6.0k★**, 321 forks) as education-focused, and it is an agentic IDE with **no education topic on the page**. A pass that trusted the summary would have shelved a JetBrains IDE as an education agent.
+
+---
+
+
 ## 🆕 `p537` — `2026-10-29` — **🟢 TWENTY-TWO PLATFORM ROWS FILED: THE NINE-REPOSITORY GULF SET (`Gap 536-D`), NINE PROSE-QUEUE FOUNDATIONS AND THIRTEEN REGIONAL ADAPTERS. 🔴 TWO OF THEM ARE **ARCHIVED UPSTREAM** AND NO INSTRUMENT HERE WOULD HAVE SAID SO. 🔴 THE PROSE QUEUE LOWER-CASES, AND **45 %** OF WHAT IT HANDS YOU IS MIS-SPELLED.**
 
 ### 🟢 The Gulf set — `Gap 536-D`, and the supply is copyleft or ungranted

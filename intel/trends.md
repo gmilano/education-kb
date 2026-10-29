@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p537` · 2026-10-29.** **Twenty-six** trends. Each one is stated so it could be
+**Pass `p538` · 2026-10-29.** **Twenty-nine** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -892,6 +892,111 @@ studio that sells those as one 2027 programme has mispriced the near half.
 licenses a platform is a **deployer**; the vendor is the **provider** and carries most
 design and conformity duties. A studio building *for* an institution may be making that
 institution a provider.
+
+## 27. 🆕 This sector's permissive supply sits at the **edges** of the stack while its **centre** is copyleft — so an engagement inherits both problems at once
+
+**The claim.** In education specifically, licence permissiveness is
+*anti-correlated with architectural centrality*. The systems an institution
+actually operates are overwhelmingly copyleft; the tools that would extend them
+are overwhelmingly MIT and overwhelmingly abandoned-scale.
+
+**The evidence, from this base's own tables rather than a survey.** Platform
+cores: **Moodle** GPL-3.0, **Open edX** AGPL-3.0, **OpenSIS** GPL-2.0,
+**OpenEduCat** LGPL-3.0. Edge tools filed at `p538`:
+[`SIMG`](https://github.com/guruduan/SIMG) MIT **1★**,
+[`EduShield`](https://github.com/oas114/EduShield) MIT **11★**,
+[`EDUCA`](https://github.com/shishiv/EDUCA) MIT **1★**,
+[`SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) MIT **6★**,
+`capy-note` and `prep-ybara` MIT **1★** each, the three `mizcausevic-dev`
+compliance repos MIT **0–1★**. 🔴 **Nine of the eleven newly filed permissive
+artefacts are in single digits of stars.** Meanwhile `p537`'s Gulf set returned
+**four GPL-3.0** courseware repositories and **four with no grant at all**.
+
+**Why it matters commercially, and it is not the obvious point.** The obvious
+read is "copyleft at the centre is a licensing problem." It is not, for most
+engagements: running a GPL LMS and writing a separate agent against its API
+triggers nothing. 🔴 **The real cost is that the permissive layer cannot be
+depended on** — a 1★ single-author repository with no release is a specification
+you read, not a dependency you pin. So an engagement pays twice: **once in
+copyleft discipline at the platform boundary, and once in writing the edge
+tooling that exists but is not yet dependable.**
+
+**How to disconfirm it.** Find an education edge tool — an LMS plugin, an
+anonymisation layer, a SIS client, a compliance artefact — that is permissively
+granted, above ~500 stars, and has tagged releases. 🟢 **One candidate already
+exists and is the exception that sharpens the rule:**
+[`alterem/knowledge-grab`](https://github.com/alterem/knowledge-grab), MIT,
+**567★**, 52 forks. It is an edge tool, permissive and genuinely adopted — and
+it is a **content-acquisition** tool, not an extension of any platform. Find
+three more that *do* attach to a platform and this trend is wrong.
+
+## 28. 🆕 **Offline-first is turning from a connectivity workaround into a compliance architecture**
+
+**The claim.** Local-only processing in education software used to be about bad
+networks. It is now also being chosen for **regulatory** reasons, and the two
+rationales are converging on the same designs.
+
+**The evidence.** The EU's stand-alone Annex III high-risk obligations land
+**2 Dec 2027** for systems that evaluate learners or gate qualifications
+(Regulation (EU) 2026/1744), with Article 50 transparency already at
+**2 Aug 2026**. Against that: `p538` filed
+[`capy-note`](https://github.com/florianchristophnowak-dot/capy-note) — **offline**
+grading of scanned exams, Electron, no service — and
+[`prep-ybara`](https://github.com/florianchristophnowak-dot/prep-ybara), a local
+Windows lesson planner, both German-language. 🟢
+[`oas114/EduShield`](https://github.com/oas114/EduShield) (Taiwan) does
+de-identification as **one static HTML file with no backend**, with an optional
+**local** LLM scan over Ollama. And the proctoring candidate this base already
+holds,
+[`Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent),
+is *"fully local, zero external APIs"* with from-scratch logistic regression for
+**explainable** risk.
+
+🔵 **The convergence is the finding.** A school in rural Indonesia and a
+Gymnasium in Bavaria are arriving at the same architecture for opposite
+reasons — one cannot rely on the network, the other does not want the data
+leaving the building. **That makes offline-first a single engineering investment
+serving two distinct markets**, which is unusual and worth pricing accordingly.
+
+**How to disconfirm it.** Show that the German and Taiwanese artefacts above are
+offline for *convenience* (single-developer projects avoiding hosting) rather
+than by design. 🟡 **That is a live possibility** — all three are 1–11★
+single-author projects, and a solo developer avoids a backend because backends
+cost money. **The regulatory reading is an inference from timing and
+jurisdiction, not a claim any of their READMEs makes.** Stated so it is not
+quoted as their authors' intent.
+
+## 29. 🆕 In a given category, **the most-starred project can be the one you may not use** — and visibility does not predict a usable grant
+
+**The claim.** Star count carries no information about whether a grant exists.
+In this sector the *leader* of a category is, with some regularity, ungranted.
+
+**The evidence.** The Moodle MCP field's most-starred bridge is
+[`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) — **52★, 14 forks,
+24 documented tools, the richest published tool vocabulary in the category** —
+and it has **no licence entry in its sidebar and none in its title block**. The
+three alternatives below it are all MIT. 🔴 **The census on this base read the
+field as *"ten of eleven MIT"*; its leader is the eleventh.** Across the top 80
+Moodle-MCP addresses by stars, `p529` measured **18 with no licence and 4
+`NOASSERTION` — 27.5 % with no usable grant.** The pattern repeats elsewhere
+here: `A-R007/Multi-Agent-Study-Assistant` at **64★** ungranted,
+`DMontgomery40/mcp-canvas-lms` at **104★** which only resolved as MIT once its
+*manifest* was read.
+
+**Why it matters.** Any ranked shortlist built from popularity — which is what a
+trending query, an awesome-list or a search summary gives you — is **biased
+toward the unusable** at the top. 🔵 **So grant resolution has to happen before
+ranking, not after.** This base learned that the expensive way: it has a
+dedicated verdict band for *"stars but no grant at all"*, a second for
+*"granted, but not under a code licence"*, and a third for *"the grant is
+per-artefact."*
+
+**How to disconfirm it.** Take any education category on this base, rank by
+stars, and show the top entry is permissively granted in **four of five** cases.
+🔵 The honest counter-evidence is that the sector's single largest agent,
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) at **49 850★**, is clean
+**Apache-2.0** — so this is a claim about *category leaders in thin categories*,
+where one 50★ project can lead, and not about the sector's headline projects.
 
 ## Counter-signals worth holding
 

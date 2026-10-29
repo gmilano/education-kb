@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Compose Patterns — Education
 
-**Pass `p537` · 2026-10-29.** **Twenty-six** recipes. Every component named below
+**Pass `p538` · 2026-10-29.** **Twenty-nine** recipes. Every component named below
 was read from its repository page, and **every licence was read from the licence
 file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
 this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
@@ -1514,3 +1514,137 @@ and it compounds across terms.
 **Shape:** 3–4 weeks to stand up the pipeline if P552 already exists, then one academic
 term for the trial window. **Region:** North America first; EMEA where the AI Act file
 needs an evidence artefact; LATAM where the governance gap is the opening.
+
+## 🆕 P576 — The Moodle bridge, built by consolidating three **MIT** servers and *reading* the ungranted leader (Global; supersedes the sizing in `P553`/`P558`)
+
+**Who this is for.** Any engagement on Moodle — the sector's largest install
+base — that needs an agent to do more than read.
+
+🔴 **Why this supersedes the earlier sizing.** `P553` and `P558` were scoped
+against a census that said the Moodle MCP field *"sums to under 40 stars"* with
+*"nobody above 27★"*. `p538` re-read the field first-hand and those figures are
+wrong; [`../repos/foundations.md`](../repos/foundations.md) had already said so
+at `p529`. The field is larger, and **its leader is unusable**, which changes
+what you consolidate.
+
+**The three components, all MIT, so they compose with no licence question:**
+
+| Take from | Address | Stars | Take exactly this |
+|---|---|---|---|
+| **Widest surface** | [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | 3 · 1 fork | The **40-tool** vocabulary (32 read / 8 write) and its two-flag write gate — writes off by default behind `MOODLER_ALLOW_STUDENT_WRITES` and a second flag, with `confirm=true` |
+| **The write loop** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | **45** · 14 forks | The **teacher-side grading path** — `get_student_submissions` → `provide_assignment_feedback`, and `get_quiz_attempts` → `provide_quiz_feedback`. This is the only one of the four that ships the feedback write as a first-class tool |
+| **Runtime discipline** | [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | 27 · 1 fork | **Rust on the official MCP SDK**, 20 typed tools plus 2 opt-in escape hatches gated by `MOODLE_ENABLE_WS_FUNCTION`, and its tested Moodle version matrix |
+
+🔴 **Read, do not copy:**
+[`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) — **52★, 14 forks,
+24 tools in four documented groups (courses & content · assignments & deadlines
+· grades & progress · aggregated overviews)**. It is the **most-starred bridge
+in the field and has the best-organised tool taxonomy**, and it carries **no
+grant at all** — no licence entry in its sidebar, none in its title block.
+⛔ **Default copyright applies. Do not vendor it, do not copy its code, do not
+lift its source.** 🟢 **What you may take is the *design*: the four-group
+grouping is the clearest read of what a Moodle agent surface needs, and a
+taxonomy is not copyrightable expression.** Re-derive the tools from Moodle's
+own Web Services API against that grouping.
+
+**Wiring.**
+
+1. Start from `moodler-mcp` (MIT). It has the widest surface and the safest write posture already.
+2. Re-group its 40 tools into `loyaniu`'s four categories. Taxonomy only — no code.
+3. Port `peancor`'s two feedback writes as first-class tools inside `moodler-mcp`'s existing gate. They are the two the other three lack.
+4. Adopt `G36maid`'s version matrix as the test matrix. It is the only one in the field that publishes which Moodle releases it is tested against.
+5. Put the whole thing behind [`oas114/EduShield`](https://github.com/oas114/EduShield) (MIT) when student free text crosses to a model — see **P577**.
+6. Grade it with the rubrics in [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) (**87★**; 🔵 code MIT, rubrics CC BY 4.0 — attribute, do not relicense).
+
+**Effort.** 5–7 weeks to a write-capable bridge on the merged vocabulary, versus
+the 8–10 weeks `P553` assumed for a greenfield build — the saving is entirely
+`moodler-mcp`'s existing 40 tools and gate.
+
+⚠️ **Scope honesty:** four of eleven codebases in the census were re-read this
+pass. Seven carry figures no pass has re-attested (`Gap 538-B`), and **every tool
+count in this field is the repository's own claim** — three of them contradict
+themselves on it. Treat tool counts as marketing.
+
+## 🆕 P577 — The zero-infrastructure PII shield, for a school with no IT department (Global; APAC and LATAM first)
+
+**Who this is for.** Any K-12 engagement where the customer has no server, no
+IT staff, and student free text that must reach a model anyway. This is the
+common case in LATAM *secretarias* and across APAC, and this base's
+data-protection patterns have all assumed a service to deploy.
+
+**The component.** [`oas114/EduShield`](https://github.com/oas114/EduShield) —
+教育隱私保護系統, **MIT**, 11★, Taiwan. De-identifies text **before** it reaches
+a model, replacing personal data with placeholder codes, then restores the
+original values in the output. 🟢 **It is 單一靜態 HTML 檔案 — one static HTML
+file, no backend, no install** — with an optional local scan through **Ollama**
+for anything the pattern rules miss.
+
+**Why this is a pattern and not just a dependency.** 🔵 **The deployment story
+is the product.** Every other anonymisation option on this base
+([`microsoft/presidio`](https://github.com/microsoft/presidio) and the vault
+contracts in `P572`) requires something to run and someone to run it. **A single
+HTML file is deployable by emailing it.** That removes the one blocker that kills
+these engagements before procurement: there is nobody on the customer's side to
+operate a service.
+
+**Wiring.**
+
+1. Fork `EduShield` (MIT — clean). Replace its pattern rules with the jurisdiction's categories: **FERPA's 7 / COPPA's 10** from [`pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile) for the US, **LGPD** categories for Brazil, **PDPA** for Taiwan and Singapore.
+2. Keep the Ollama path and ship a model with it for the offline case. This is what makes it defensible rather than regex theatre.
+3. For an institution that *does* have infrastructure, run the same category list through `presidio` server-side and keep the HTML file as the fallback — one category definition, two deployments.
+4. Log every model read through [`student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) (MIT) when the jurisdiction is the US: its hash-chained schema enforces tokenised student IDs and **FERPA §99.32** consistency.
+
+**Effort.** 2–3 weeks per jurisdiction for the category rules and the offline
+model, on top of a 1-week fork.
+
+⚠️ **What this is not.** `EduShield` is 11★ and `student-data-access-audit-stream`
+is 0★ at v0.1; both state they are scaffolding rather than certification.
+🔵 **The engagement's deliverable is the category mapping and the evidence
+trail, which is billable work; the repositories are the starting shape.**
+
+## 🆕 P578 — Curriculum-grounded tutoring where the national corpus is downloadable (APAC first — China; the method is portable)
+
+**Who this is for.** A ministry or publisher engagement in a jurisdiction that
+publishes its curriculum on a national platform. China's compulsory AI-from-age-six
+policy makes this concrete now; India's Class 3 target and Brazil's BNCC make the
+method portable.
+
+**The gap this closes.** Every tutoring pattern on this base says "ground it in
+the curriculum" and none says **how you get the curriculum**. 🟢 `p538` filed the
+answer for one jurisdiction.
+
+| Layer | Component | Grant | Role |
+|---|---|---|---|
+| **Corpus acquisition** | [`alterem/knowledge-grab`](https://github.com/alterem/knowledge-grab) | 🟢 **MIT**, **567★** · 52 forks | Pulls e-textbooks, course video and courseware from 国家中小学智慧教育平台 (`basic.smartedu.cn`) — the PRC national K-12 platform. Decrypts video, merges to MP4 via ffmpeg. Tauri + Vue 3 |
+| **Video → text** | [`LeoLiu363/ai-video-understanding`](https://github.com/LeoLiu363/ai-video-understanding) | ⛔ **Ungranted** — read for method only | Local transcription + courseware OCR with timestamped Q&A. The *approach* is what you take |
+| **Curriculum-code grounding** | [`ThallesYVasconcelos/Agente-Educacional`](https://github.com/ThallesYVasconcelos/Agente-Educacional) | 🟢 **MIT**, 0★ | The cleanest reference on this base for grounding an agent in a *national* curriculum: BNCC code identification, page-level citations, **Self-RAG** hallucination check, LangGraph + ChromaDB + `bge-m3` + Ollama, **Giskard** evaluation |
+| **Citation + policy architecture** | [`upstream1119/Traceable-Ideological-Education-RAG`](https://github.com/upstream1119/Traceable-Ideological-Education-RAG) | ⛔ **Ungranted** — read for architecture only | The only artefact here treating **citation grounding and a policy check as first-class components** rather than as prompt text. Essential shape where curriculum content is itself regulated |
+| **Tutor runtime** | [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🟢 **MIT**, 41★ | A local-first adaptive-tutoring **foundation** that already ships a worked vertical (civil-service exam: practice, grading, review, planning) |
+| **Mastery scheduling** | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT**, **59★** · 9 forks | **Bayesian Knowledge Tracing + FSRS** as an MCP server, so the "what next" decision is a tool call rather than prompt logic |
+
+**Wiring.** `knowledge-grab` fills a corpus store → transcribe and OCR locally
+(method from `ai-video-understanding`, **implemented fresh — it is ungranted**)
+→ index with `Agente-Educacional`'s BNCC-style scheme, swapping BNCC codes for
+the target jurisdiction's curriculum codes → serve retrieval with its
+page-level citations and Self-RAG check → architect citation and policy checks
+as separate components per `Traceable-Ideological-Education-RAG`'s shape,
+**written from scratch** → run the tutor on `civil-ai`'s foundation → delegate
+mastery to `tutor-mcp` over MCP → evaluate with Giskard, as
+`Agente-Educacional` already does.
+
+🔴 **The licence line that decides this build.** Two of the six components are
+**ungranted** and are present as *architecture*, not code. The four you may
+build on — `knowledge-grab`, `Agente-Educacional`, `civil-ai`, `tutor-mcp` — are
+all **MIT**, so the buildable path is clean end to end.
+
+⚠️ **The unresolved question, and it is legal rather than technical.**
+`knowledge-grab`'s MIT grant covers **the tool**. The **content** on
+`basic.smartedu.cn` carries the platform's own terms, which this base **has not
+read**. 🔴 **For a commercial deployment that is the whole question, and it must
+be answered by counsel in-jurisdiction before the corpus is built** — not by a
+star count or a repository licence. Stated plainly because the technical path is
+easy enough to make the legal one easy to skip.
+
+**Effort.** 4–6 weeks to a grounded tutor over one subject and one grade band,
+assuming the corpus question is already answered. **Indefinite if it is not.**
+

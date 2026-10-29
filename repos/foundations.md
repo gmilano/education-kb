@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Foundational Education Repos
 
-**Pass `p537` · 2026-10-29.** Load-bearing systems an education engagement is
+**Pass `p538` · 2026-10-29.** Load-bearing systems an education engagement is
 likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms, standards and
 toolkits the agents must live beside.
@@ -644,3 +644,56 @@ queue's residue is not junk — seven of nine are live and six carry a grant thi
 act on — but **two of nine were archived upstream and no instrument here would have said
 so**. A promotion queue without an `archived` column promotes dead projects as
 foundations. `Gap 537-A`.
+
+
+## 🆕 Nine platform rows — the prose queue emptied, and placed in all four regions (`p538`)
+
+`p537` left **twenty** addresses in the promotion queue. `p538` read every one
+first-hand and filed the non-agent half here; the seven agent-grade ones went to
+[`../agents/top.md`](../agents/top.md). 🔵 **Read the region column before the
+star column.** This base's standing complaint is that its supply is APAC-heavy
+and LATAM-thin, and this residue is the first promotion set that places rows in
+**all four regions** — because a queue built from sentences inherits whatever
+the sentences were about, and this base writes about every region.
+
+⚠️ **Grants here are read from the repository page's own sidebar and title
+block**, not from a licence-file probe: `curl` and the GitHub API are both
+refused for this session, so the channel is the rendered page. A row marked
+*"README only"* means the sidebar carried **no** licence entry.
+
+| Address | Stars | Licence — read first-hand | Region (basis) | What it is |
+|---|---|---|---|---|
+| [`alterem/knowledge-grab`](https://github.com/alterem/knowledge-grab) | 🟢 **567** · 52 forks | 🟢 **MIT** — sidebar `MIT license` | APAC (China — Chinese-language description, targets a PRC national platform) | 🟢 **The highest-starred row this queue has produced, and it is a *data acquisition* tool, not an agent.** A Tauri + Vue 3 desktop app that downloads from 国家中小学智慧教育平台 (`basic.smartedu.cn`), the PRC's national K-12 resource platform: e-textbooks, course video and courseware, with video decryption and ffmpeg merge to MP4. 🔵 **Why it is load-bearing:** every tutoring agent needs a grounded corpus, and this is the only tool on this base that acquires a *national curriculum* corpus at scale. Pair it with a RAG stack and the curriculum-grounding pattern stops being hypothetical. ⚠️ Downloading from a state platform has terms this base has **not** read — the licence covers the *tool*, not the content. |
+| [`h9-tec/Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) | **258** · 42 forks | 🟡 **CC BY 4.0 — README badge only.** The sidebar carries **no licence entry**; the grant is a badge reading `License: CC BY 4.0`. 🔵 **Fourth verdict band** — granted, but not under a code licence | 🟢 **EMEA (Gulf / Arabic-speaking)** — subject matter | *"The most comprehensive, up-to-date collection of Arabic NLP resources on the internet"* — models, datasets, tools, research and companies, with a dedicated **🎓 Tutorials & Learning Resources** section. 🟢 **The index `Gap 536-D` implied and the Gulf set did not supply.** `p537` found Gulf *code* to be copyleft or ungranted; this is the region's **map**, and at 258★ it is the most-used Arabic-NLP entry point in the open. 🔵 A content grant is right for an index and wrong for a dependency: cite it, do not vendor it. |
+| [`oas114/EduShield`](https://github.com/oas114/EduShield) | 11 · 2 forks | 🟢 **MIT** — sidebar `MIT license` | APAC (Taiwan — Traditional-Chinese description) | 教育隱私保護系統 — *"Zero-Trust Data Anonymization Shield for AI."* De-identifies student text **before** it reaches a model and re-identifies the output after, as **a single static HTML file with no backend**, with an optional local-LLM scan via Ollama. 🟢 **The architecture is the finding.** Every data-protection pattern on this base assumes a service to deploy and an institution to run it; this one assumes neither, which is exactly the posture a school with no IT department can adopt. 🔵 **Composes with anything** — it sits in front of a model, so it is licence- and vendor-neutral. |
+| [`dougpenny/SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) | 6 · 0 forks | 🟢 **MIT** — sidebar `MIT license` | 🟢 **North America** (PowerSchool is the dominant US K-12 SIS) | *"Swift interface for the PowerSchool API"* — a pure-Swift client handling authentication and response decoding against the PowerSchool SIS API. 🟢 **The first permissively granted SIS access layer on this base**, against a gap that has read *"no open-source SIS/advising agent under a permissive licence"* for many passes. 🔴 **It is a client, not an agent**, so it narrows that gap without closing it — the only full candidate (`advisingapp`) is still Elastic-2.0. ⚠️ README states it *"is not endorsed, sponsored, or affilitated with PowerSchool in any way"* (sic). Swift is also a constraint: an agent runtime in Python or TypeScript cannot link it directly. |
+| [`shishiv/EDUCA`](https://github.com/shishiv/EDUCA) | 🔴 **1** · 0 forks | 🟢 **MIT** — sidebar `MIT license` | 🟢 **LATAM (Brazil)** — Portuguese-language README, targets *secretarias de educação* | *"A planilha da secretaria de educação não aguenta mais. O EDUCA aguenta"* — "the spreadsheet your school district runs on doesn't scale; EDUCA does." Schools, students, guardians, classes, enrolment and attendance in one place, with district-staff dashboards. TypeScript / Next.js. 🔵 **It names the actual LATAM baseline, which is a spreadsheet** — and that framing is more useful to an engagement than the code is. ⚠️ README states it is a **synthetic-data-only pilot foundation, not approved for real student data or production**. A reference implementation. |
+| [`guruduan/SIMG`](https://github.com/guruduan/SIMG) | 🔴 **1** · 0 forks | 🟢 **MIT** — sidebar `MIT license` | APAC (Indonesia — Indonesian-language description) | A **Moodle plugin** (PHP 8.2) for school administration: teaching journals, homeroom-teacher journals, student leave letters, attendance recaps, counselling (BK) services and extracurriculars, with WhatsApp notifications through the Wablas API. 🟢 **Evidence for a claim this base makes and rarely substantiates: that Moodle's value is its plugin ecosystem.** This is a *national administrative practice* — BK counselling, Indonesian leave letters — encoded as a Moodle plugin under MIT. 🔵 **WhatsApp as the notification channel is the regional lesson**, not an implementation detail. |
+| [`mizcausevic-dev/state-ai-disclosure-state-tracker`](https://github.com/mizcausevic-dev/state-ai-disclosure-state-tracker) | 🔴 **0** · 0 forks | 🟢 **MIT** — sidebar `MIT license`, README agrees | 🟢 **North America** (US state statutes) | *"Hash-chained per-state lifecycle record + reference verifier for EdTech AI products."* A v0.1 draft schema for an append-only per-state status record, plus a verifier. Names **Illinois SOPPA**, **California AB 1584** and **AB 2876**, **Texas HB 18** and **NY Ed Law 2-d**. ⚠️ Its own words: *"EdTech-readiness scaffolding, not certification."* The worked example covers **three** states. |
+| [`mizcausevic-dev/pii-student-vault-contract-profile`](https://github.com/mizcausevic-dev/pii-student-vault-contract-profile) | 🔴 **1** · 0 forks | 🟢 **MIT** — sidebar `MIT license`, README agrees | 🟢 **North America** (FERPA / COPPA) | An EdTech profile of an *AI Procurement Decision Card* vault contract: maps **FERPA's 7 PII categories** and **COPPA's 10 PI categories** to vault targets, each with default retention and redaction rules and a **four-doctrine consent taxonomy**. Ships a `profile.json` and one example deployment. ⚠️ Same disclaimer — scaffolding, not compliance. |
+| [`mizcausevic-dev/student-data-access-audit-stream`](https://github.com/mizcausevic-dev/student-data-access-audit-stream) | 🔴 **0** · 0 forks | 🟢 **MIT** — sidebar `MIT license` | 🟢 **North America** (FERPA §99.32) | *"Hash-chained event schema + reference verifier for AI tool reads of student records"* — a tamper-evident log of which tool read which record, when, under what legal basis and under which authorising Decision Card. A small Node verifier checks the hash chain and enforces tokenised student IDs and **FERPA §99.32** logging consistency. |
+
+🟢 **The three `mizcausevic-dev` repositories are one asset, and this base has
+nothing else like it.** Every US-regulation finding on
+[`../intel/market.md`](../intel/market.md) — 134 bills across 31 states, the
+amended COPPA rule's 22 Apr 2026 compliance date, Ohio's 1 Jul 2026 deadline —
+is **demand-side intelligence with no supply-side answer**. These three are the
+answer's shape: a per-state status record, a PII-category vault contract, and an
+access audit stream, all MIT, all hash-chained, all composing into one
+compliance spine. 🔴 **And all three are 0–1★ v0.1 drafts by a single author
+with no adoption whatsoever.** 🔵 **So the correct use is as a specification,
+not a dependency** — the FERPA-7 / COPPA-10 category mapping and the
+§99.32 logging rule are the reusable parts, and they are the parts an engagement
+would otherwise derive from statute by hand. Recipe in
+[`../compose/patterns.md`](../compose/patterns.md).
+
+🔵 **The pattern across all nine, and it is the one `p537` asked for.** `p537`
+closed on `Gap 537-A`: a promotion queue with no `archived` column promotes dead
+projects. 🟢 **None of these nine is archived** — every page rendered live. But
+the sharper observation is about *region*: these nine place **3 in North
+America, 3 in APAC, 1 in EMEA, 1 in LATAM** with one global index, against a
+base whose supply has been APAC-dominated for its whole history. 🔵 **A queue
+built from sentences inherits the regional spread of the prose, and this base's
+prose is more balanced than its tables are.** That is a cheaper way to fix a
+regional gap than another regional search leg — which this pass ran, four times,
+and which returned nothing unfiled.
