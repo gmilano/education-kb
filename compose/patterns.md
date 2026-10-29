@@ -1,8 +1,80 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-28
+updated: 2026-10-29
 ---
+
+## 🆕 `p516` — `2026-10-29` — **🟢 `P521` — the first recipe on these shelves built END-TO-END from LATAM-originated, licence-verified parts. 🔴 It exists because the premise that LATAM had no such parts was false.**
+
+### 🟢 `P521` — Curriculum-anchored tutoring and reporting on a Brazilian municipal stack
+
+🔵 **Who it is for:** a Brazilian municipal or state education secretariat (or a private network)
+already running **`i-educar`**, that wants AI tutoring and curriculum-aligned reporting without
+replacing its system of record. 🟢 **Every part is verified from bytes this pass and is
+LATAM-originated except the tutoring runtime.**
+
+**The parts, with the grants that govern them:**
+
+| Layer | Part | Licence | Why this one |
+|---|---|---|---|
+| System of record | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) @ `2.12`, HEAD `435649b0474f` | **GPL-2.0** | 722★, already deployed in Brazilian municipalities via the federal *Portal do Software Público*; holds enrolment, grades, staff |
+| Teacher surface | [`portabilis/i-diario`](https://github.com/portabilis/i-diario) @ `1.6`, HEAD `ef909f23755a` | 🔴 **AGPL-3.0** | attendance, lesson records, continuous assessment |
+| Curriculum ground truth | [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | **MIT** | **1,721** BNCC learning objectives, JSON/SQLite/CSV, provenance per record |
+| Agent access to curriculum | [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟡 code **MIT** + data **CC BY 4.0** | ships an **MCP server** (`mcp-worker/src/`) — the tutor resolves objectives as tools, no custom integration |
+| Factuality gate | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟡 code **MIT** + data **CC BY 4.0** | curriculum-grounded hallucination benchmark — gates the model *before* it reaches students |
+| Tutoring runtime | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp), HEAD `98463a0cb5fb`, **57★**, 🔴 **alpha** | **MIT** | MCP-native ITS that tracks learner state and holds no item bank — so BNCC objectives become the item spine |
+| Evidence trail | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi), HEAD `fbf609142c3c` | **MIT** | writes every interaction to an xAPI LRS — the record a secretariat produces under audit |
+
+**How to wire it:**
+
+1. 🟢 **Stand up the curriculum as tools, not as a prompt.** Run `bncc-pacotes`' MCP worker; the
+   tutor calls it to resolve BNCC codes to objectives. Pin the `bncc-dados` commit — `bncc-pacotes`
+   syncs data from a pinned commit by design, so reproduce that discipline.
+2. 🟢 **Gate the model before students see it.** Run `bncc-benchmark` against the candidate model.
+   Its held-out item set is private to resist contamination, so the score means something. Record
+   the figure as an acceptance criterion in the SOW.
+3. 🟢 **Attach `tutor-mcp` as the runtime** and let BNCC objectives supply the item spine it lacks.
+   🔴 **It is alpha at 57★** — treat it as a component to fork and own, not a dependency to trust.
+4. 🟢 **Read, do not fork, the system of record.** Have the tutor read learner context from
+   `i-educar` over its database/API from a **separate service**. 🔴 **This is the licence-critical
+   step** (see below).
+5. 🟢 **Emit every interaction to an LRS via `learnmcp-xapi`.** This is what answers the governance
+   gap — IESALC puts **26%** of LATAM institutions with a formal AI strategy, UNESCO **<10%** with
+   guidelines plus capacity, and Brazil's **PL 2.338/2023** names *"selection of students for
+   access to education"* high-risk.
+6. 🟢 **Report in BNCC terms.** Because objectives carry provenance, mastery reporting cites the
+   curriculum record rather than a vendor's taxonomy — which is what survives a secretariat review.
+
+🔴 **The licence trap, stated as the decisive design constraint.** `i-educar` is **GPL-2.0** and
+`i-diario` is **AGPL-3.0**, and these are *not* the same obligation. 🟢 A **separate service** that
+talks to `i-educar` keeps the AI work outside the GPL boundary. 🔴 **Modifying `i-diario` and
+hosting it for a municipality triggers AGPL-3.0's network source-offer to users** — so put AI
+features *beside* `i-diario`, not *inside* it, unless the client accepts publishing the modified
+source. 🟡 And the two `bncc-*` package repos ship **code MIT + data CC BY 4.0 in the same npm
+tarball and PyPI wheel**: carry the data attribution into the product, and note that `bncc-pacotes`
+withholds **name and visual identity**, so the derivative may **not** present as BNCC-branded.
+
+🔵 **Indicative shape:** 8–10 weeks. Weeks 1–2 curriculum MCP + pinned data; week 3 benchmark gate
+and acceptance figure; weeks 4–6 tutor-mcp fork and `i-educar` read-path; weeks 7–8 xAPI evidence
+trail and BNCC-term reporting; weeks 9–10 governance documentation against PL 2.338/2023.
+🔴 **Largest risk is `tutor-mcp`'s alpha status**, not the integration.
+
+🟢 **Generalising `P521` outside Brazil:** the pattern is *curriculum-as-data → MCP → factuality
+gate → tutor → xAPI evidence*. Only `bncc-*` is Brazil-specific. 🔵 Any jurisdiction publishing a
+national curriculum can be substituted at layer 3; the other five layers are unchanged. 🟢 **That
+is the reusable Globant asset — the architecture, not the Brazilian dataset.**
+
+### 🟡 `P520` — amended, because the premise under it was withdrawn
+
+🔴 **`P520` (provenance-and-portfolio audit of assets the client already funded) was justified by
+`p515`'s claim that LATAM had "0 LATAM-originated open-source education repositories" and therefore
+only a distribution gap.** 🟢 **That premise is withdrawn** (see
+[`intel/market.md`](../intel/market.md)). 🟡 **`P520` is not withdrawn with it** — an audit offer
+still fits the **193 IDB-reviewed solutions**, which remain unverified (`Gap 515-D`). 🔴 **But it
+must no longer be sold as "there is nothing to build on," and it should not be the *first* LATAM
+offer.** 🟢 **Lead with `P521`**: the client likely already runs `i-educar`, and customisation of a
+system of record is a larger and better-anchored engagement than an inventory audit.
+
 
 
 ## 🆕 `p515` — `2026-10-28` — **🔴 `P518`'s STATED PREMISE IS WITHDRAWN AND THE RECIPE IS KEPT: *"every LMS on these shelves is copyleft"* is false against two live Apache-2.0 LMS rows, one of them added one pass earlier, so the claim that *"Sunbird removes the need for the boundary"* credits Sunbird with a constraint `OpenOlat` lifted at `p508`. 🟢 `P518` survives under the qualifier its own headline used — **first national-scale, DEPLOYED permissive platform** — and its byte-reads reproduce exactly. 🟢 `P521` is the recipe the correction makes available: a **closed derivative of a permissive full LMS**, OpenOlat + DeepTutor over LTI 1.3, EMEA-placed, with the SIS nil priced as scope and both auto-assessment deadlines named. 🔴 `make hooks` not attempted (declared abstention).**

@@ -1,8 +1,156 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-28
+updated: 2026-10-29
 ---
+
+## 🆕 `p516` — `2026-10-29` — **🔴 THE LATAM SUPPLY NIL `p515` HELD FOR AN EIGHTH PASS IS FALSE AGAINST THIS BASE'S OWN SHELVES: `verticals/solutions.md:1010` has been carrying 🇧🇷 `portabilis/i-educar` — a Brazilian municipal SIS, GPL-2.0, **722★**, flagged live — while `intel/market.md` published *"0 LATAM-originated open-source education repositories at any star level"*. 🟢 ROOT CAUSE FOUND, AND IT IS ONE CAUSE IN THREE PLACES: this base's instruments are **English-biased**, and all three false nils are that bias. 🟢 `Gap 515-B` is RETIRED, not re-probed — an exact star cell is **unobtainable from this session class**, measured on five channels. 🔴 `make hooks` not attempted (standing abstention).**
+
+🔴 **Gate posture, unchanged and stated first.** `HOOK_GATES` executes `$(PY) -I` over Python inside
+`compose/code/p*/` — an interpreter over a freshly cloned third-party tree — and this session's
+standing rule forbids it. 🟡 **`p516` is a declared abstention, as `p515` predicted it would be.**
+🔴 `p511`'s **45/63** remains the last gate-attested reading — now **five passes stale**, and
+`Gap 515-A` (an instrument that does not require running cloned Python) is untouched.
+
+### 🔴 The refutation — a nil published against a row this base had already shelved
+
+🔴 **What `p515` published**, twice, in `intel/market.md` (lines 51 and 107):
+
+> *"The base holds LATAM policy densely and LATAM supply at zero — **still 0 LATAM-originated
+> open-source education repositories at any star level**, now an eighth consecutive pass."*
+> *"🔵 The 193-solution inventory is the first indication that this is a distribution gap rather
+> than an existence gap — LATAM solutions exist and are not on GitHub."*
+
+🟢 **What the shelves said while that was being written**, re-read from bytes this pass:
+
+| shelf | row | origin | licence (from bytes) | ★ | HEAD |
+|---|---|---|---|---|---|
+| 🟢 `verticals/solutions.md:1010` | [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🇧🇷 Itajaí-SC municipal government; on Brazil's *Portal do Software Público* since 2008 | **GPL-2.0** (root `LICENSE`, default branch `2.12`) | **722** | `435649b0474f` |
+| 🟢 `agents/top.md:790` | the same repo, as a version-reference row | 🇧🇷 | GPL-2.0 | 722 | `435649b0474f` |
+
+🔴 **The row even carries a 🇧🇷 flag.** The nil was not a gap in the base's holdings; it was a gap
+between its holdings and its prose. 🔴 **And the inference built on it is therefore unsafe**: the
+"distribution gap, not existence gap" reframing — which `p515` used to steer the LATAM offer away
+from *build* and toward a `P520` provenance-and-portfolio audit — rests on a premise its own
+shelves refute. 🟡 The reframing may still be *partly* right for the 193 IDB solutions, which
+remain unverified; it is simply not supported by "0 repositories", because that is not true.
+
+### 🟢 One root cause, in three independent instruments — and it is language
+
+🟢 **This is the finding worth carrying forward.** The three false nils this pass broke are not
+three accidents. Each is an English-language assumption inside an instrument:
+
+| # | instrument | the assumption | what broke it | cost |
+|---|---|---|---|---|
+| 🔴 **1** | **discovery queries** — 8 passes of `top open source AI agents education`, `github trending education AI` | search in English | one query in Portuguese — `código aberto IA educação github Brasil` — surfaced the `bncc-dev` family **and** the `portabilis` family on the first page | **8 passes** of a false LATAM supply nil |
+| 🔴 **2** | **licence path list** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `NOTICE`, … | grant files are named in English | `bncc-dev/bncc-benchmark` keeps its grants in **`LICENSE-CODIGO.md`** and **`LICENSE-DADOS.md`** — Portuguese | a repo declared **unlicensed** that is in fact MIT + CC BY 4.0 |
+| 🔴 **3** | **branch assumption** — probe `main`, then `master` | the default branch is `main`/`master` | `portabilis/i-diario` defaults to **`1.6`**; `portabilis/i-educar` defaults to **`2.12`** | `i-diario` declared **unlicensed**; it is **AGPL-3.0** |
+
+🔵 **Defect 3 is a recurrence, not a discovery.** `agents/top.md:777` already records `p509`'s
+default-branch finding as *"invalidat[ing] a method this base has used throughout"*. It came back
+this pass because the lesson was written into prose and never into the probe. 🟢 **The standing
+rule, stated so it survives into the instrument:** *resolve the default branch with
+`git ls-remote --symref` before probing any path, and probe grant filenames in the repository's
+own language before writing any `no licence` verdict.*
+
+### 🟢 The LATAM rows, verified from bytes this pass — the nil replaced with a shelf
+
+🟢 Every row below: `git ls-remote` for liveness and default branch, `raw.githubusercontent.com`
+for grant bytes, WebFetch for the star figure. 🔵 Origin is stated because it is the point.
+
+| Repo | Origin | Licence (read from bytes) | ★ | HEAD @ default branch | What it is |
+|---|---|---|---|---|---|
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🇧🇷 Itajaí-SC municipal gov → Portabilis | **GPL-2.0** — root `LICENSE`; sidebar *"GPL-2.0 license"* | **722** (551 forks) | `435649b0474f` @ **`2.12`** | Brazil's most-deployed free school-management system (SIS): enrolment, staff, grades, municipal reporting |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🇧🇷 Portabilis | 🔴 **AGPL-3.0** — `LICENSE` @ `1.6`, and the text is **Portuguese**: *"LICENÇA PÚBLICA GERAL AFFERO GNU, Versão 3"* | — | `ef909f23755a` @ **`1.6`** | Teacher gradebook / *diário de classe* companion to i-educar |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | 🇧🇷 Profy Tecnologias Educacionais Ltda | **MIT** — root `LICENSE` @ `main` | — | `9c268978efa2` @ `main` | Brazil's **BNCC** national curriculum as open, verified data: **1,721** learning objectives in JSON / SQLite / CSV, provenance per record |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🇧🇷 bncc.dev / Profy | 🟡 **SPLIT: code MIT** (`LICENSE-CODIGO.md`) **+ data CC BY 4.0** (`LICENSE-DADOS.md`); GitHub sidebar: *"License and 2 other licenses found"* | **12** (1 fork) | `4713901ce5d7` @ `main` | Open **LLM-hallucination benchmark over the BNCC** — the only curriculum-grounded factuality benchmark on these shelves |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🇧🇷 Profy | 🟡 **SPLIT: code MIT + embedded data CC BY 4.0**; 🔴 *"Nome e identidade visual — não licenciados"* | — | `e9b4985adf83` @ `main` | npm + PyPI packages **and an MCP server** (`mcp-worker/src/`) serving the BNCC dataset to agents |
+
+🔴 **`br.tag` — and this pass nearly repeated the exact error it is reporting.** The Portuguese
+search named a third Brazilian school-management project, *br.tag*. 🔴 This pass inferred the
+address `portabilis/br.tag` from its siblings' owner; **that does not resolve**, and the first
+draft of this section recorded it as *"an unverified lead with no address"*. 🟢 **Wrong — against
+this base's own shelves, again.** The real address is
+[`ipti/br.tag`](https://github.com/ipti/br.tag) — **GPL-2.0** read from bytes, **20★**, HEAD
+`5758efb76754` @ `main` — and it is **already held here**, including a recorded finding that its
+README claims BSD-3 while the payload says GPL-2.0.
+
+🔴 **So it is a FIFTH LATAM-originated row on these shelves, and the same defect fired a fourth
+time inside this one pass**: a nil asserted from a probe result instead of checked against the
+base. 🟢 **That is the strongest evidence this pass produces: the defect is structural, not a lapse
+by `p515`.** Any pass can reproduce it, including the pass auditing it. 🟢 **The control is
+mechanical, not attentional — `grep` the base before writing any nil**, which is the one step that
+caught it here.
+
+### 🟡 Split licences are an operative distinction, not a cataloguing nicety
+
+🟢 **Two of the five LATAM rows ship code and data under different grants in one artifact.**
+`bncc-pacotes` states it plainly: *"o tarball do npm e o wheel do PyPI carregam código MIT e dados
+CC BY 4.0 no mesmo artefato."* 🟢 **For Globant that is buildable** — MIT code, and CC BY 4.0 data
+that needs **attribution carried into the product**, not a licence fee. 🔴 **A single-licence cell
+would be wrong in both directions**: "MIT" would drop an attribution obligation that ships inside
+the wheel, "CC BY" would wrongly imply the code is not permissive. 🔵 `bncc-pacotes` additionally
+withholds **name and visual identity** — so a derivative may use the data and the code and may
+**not** present itself as BNCC-branded.
+
+### 🟢 `Gap 515-B` — RETIRED as unobtainable, with the channel matrix that proves it
+
+🔴 **`p515` left an exact `DeepTutor` star cell open and named the remedy as** *"call `add_repo`
+again with `access:"push"`"*. 🔴 **That is a false lead, and re-probing it costs a leg every pass.**
+Measured on five channels this pass:
+
+| channel | result | serves an exact star count? |
+|---|---|---|
+| 🔴 `curl` → `github.com/<o>/<r>` HTML | **403** on every repo tried | no — **and this is a change: `p515`'s "repo page" channel is gone for `curl`** |
+| 🟢 **WebFetch** → `github.com/<o>/<r>` | **works** — stars, forks, licence sidebar, About | 🔴 **no — the page renders only a rounded figure** (`48.0k`, `722` only because it is small) |
+| 🔴 `api.github.com/repos/{o}/{r}` | **403** — *"sessions are bound to their configured repositories"* | no |
+| 🔴 `api.github.com/search/repositories` | **403** — *"This GitHub API path is not available"* | no — **and `add_repo` cannot fix this**, it is a path-level block, not a scope one |
+| 🟢 `api.github.com/rate_limit` | **200** | no — but it proves the API is **reachable**, so "the API is down" is wrong |
+| 🟢 `git ls-remote [--symref]` | **works** — HEAD SHA, refs, tags, **default branch** | no — git carries no star data |
+
+🟢 **Therefore: an exact star cell is unobtainable from this session class** — the page rounds, both
+useful API paths are blocked, and git carries no such datum. 🟢 **`Gap 515-B` is retired, not
+carried.** A future pass should stop spending a leg on it and should *not* attach third-party
+repositories via `add_repo` to read public star counts: that mints credentials for repos the task
+does not work on, and it still would not unblock `/search`.
+
+🔵 **`DeepTutor`, on the one channel that answers**: **48.0k★**, 5.9k forks, **Apache-2.0**, latest
+release **`v1.7.0` dated 2026.10.28**. The ladder holds monotone — `p513` 47,834 exact → `p515`
+`47.9k` → `p516` **`48.0k`**. 🟢 And `p515`'s refutation of the aggregator channel is **re-confirmed
+independently**: three aggregators read today returned **42.6K**, **45.2K** and **46K** — dispersed
+across ~3.4k and all *below* a ladder that has never decreased. 🔴 Aggregator stars remain a
+discovery signal and never a measurement.
+
+### 🟢 Three new addresses — the education-MCP axis, shelved at their real size
+
+🔵 **Honest framing: these are micro-repos**, and they are shelved at their measured size rather
+than padded. 🔴 The education-MCP axis is otherwise **saturated** — `tutor-mcp` (62 files),
+`canvas-mcp` (101), `learnmcp-xapi` (37) are all long since held here.
+
+| Repo | Licence (from bytes) | HEAD | Size | What it is |
+|---|---|---|---|---|
+| [`clouatre-labs/math-mcp-learning-server`](https://github.com/clouatre-labs/math-mcp-learning-server) | **Apache-2.0** (`LICENSE` @ `main`) | `43a317b96a74` | 🔴 ~4★ class | 17-tool maths MCP server — operations, matrix algebra, plotting, persistent workspace; on the MCP Registry and PyPI |
+| [`iyiook333/mcp-github-learning-assistant`](https://github.com/iyiook333/mcp-github-learning-assistant) | **MIT** (`LICENSE` @ `master`) | `24bb664e8224` | 🔴 very small, released Oct 2026 | MCP server that finds learning-friendly open-source projects for a learner |
+| [`Jal246/study-mcp`](https://github.com/Jal246/study-mcp) | 🟡 **unresolved** — no grant on 5 English names @ `main`/`master` | `db675f952a09` | 🔴 very small | Study-material MCP server; SQLite-backed flashcards, quizzes, exams |
+
+🟡 **`study-mcp`'s licence is recorded as *unresolved*, not *absent*** — precisely because defects 2
+and 3 above fired twice this pass. Calling it unlicensed is the error this pass is about
+(`Gap 516-B`).
+
+🔵 **`wwrwbs/AI_AWE` (ArguLens) — a correction to a search claim, not a new row.** Already held
+(15 files). The search channel called it **Apache-2.0**; the bytes say **MIT** (`LICENSE` @ `main`,
+HEAD `41ae3bd4dd9e`). 🟢 The bytes win. arXiv `2608.17356`.
+
+### Gaps opened by `p516`
+
+| gap | statement | re-probe |
+|---|---|---|
+| 🔴 **`Gap 516-A`** | The three false nils share one cause and the fix belongs in the **instrument**, not in prose: resolve the default branch via `--symref`, and probe grant filenames in the repository's own language. `p509` wrote defect 3 into prose and it recurred six passes later. **Until the probe changes, expect a fourth instance.** | every pass that writes a licence cell |
+| 🟡 **`Gap 516-B`** | `Jal246/study-mcp` has no grant on five English names at `main`/`master`. Unresolved, not absent, until Portuguese/other-language names and the true default branch are probed. | next pass |
+| 🟢 **`Gap 516-C`** | **CLOSED IN-PASS, as a correction to this pass's own draft.** *br.tag* resolves as [`ipti/br.tag`](https://github.com/ipti/br.tag) — GPL-2.0, 20★, HEAD `5758efb76754` @ `main` — **already held on these shelves**. `portabilis/br.tag` was this pass's inference and is wrong. | closed |
+| 🔴 **`Gap 516-D`** | How much of the **rest** of this base's supply nils are English-language artifacts? The LATAM nil fell to one Portuguese query. **APAC has never been probed in Mandarin, Japanese, Korean or Hindi**, and its supply shelf is correspondingly thin. | an APAC-language discovery leg, next APAC pass |
+| 🟢 **`Gap 515-B`** | **RETIRED.** An exact star cell is unobtainable from this session class (five channels measured above). Do not spend a leg on it; do not attach third-party repos to chase it. | never |
+
 
 
 ## 🆕 `p515` — `2026-10-28` — **🔴 THE PREMISE `p514` BUILT ITS NEW FLAGSHIP RECIPE ON IS FALSE AGAINST THIS BASE'S OWN SHELVES: it published *"every LMS on these shelves is copyleft"* while `verticals/solutions.md` was selling `OpenOLAT` (**Apache-2.0**) as *"pick this when the client needs a closed derivative"* — and while `TutorLoom` (**Apache-2.0**) had been added as *"second permissive full LMS"* **one pass earlier**. Both re-verified from bytes. 🟢 THE STAR CONFLICT `p514` REFUSED IS RESOLVED on a channel it never used, and the trending aggregator is the wrong side: **47.9k** on the repo's own page against an off-ladder **46,026**. 🟢 The `API 403` that has blocked this base ~16 passes is NOT an outage — it is per-repository session scope, and the 403 body names its own remedy. 🔴 `make hooks` not attempted — a declared abstention, not the prior 18 denials.**

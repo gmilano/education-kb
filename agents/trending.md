@@ -1,8 +1,53 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-28
+updated: 2026-10-29
 ---
+
+## 🆕 `p516` — `2026-10-29`
+
+🟢 **`DeepTutor` — `48.0k★`, and the aggregator channel is refuted a second time, independently.**
+WebFetch on the repo page: **48.0k★**, **5.9k** forks, **Apache-2.0**, latest release **`v1.7.0`
+dated `2026.10.28`**. 🔵 The ladder stays monotone across fourteen readings: `p513` **47,834**
+(exact) → `p515` **47.9k** → `p516` **48.0k**.
+
+🔴 **Three aggregators read the same day disagree with each other and all sit below the ladder:**
+
+| channel | reading | date |
+|---|---|---|
+| 🟢 **repo page (WebFetch)** | **48.0k** — *rounded; GitHub renders no exact count* | `2026-10-29` |
+| 🔴 trending digest A | **~42.6K** | `2026-10-25` |
+| 🔴 trending digest B | **~45.2K** | late Oct 2026 |
+| 🔴 trending digest C | **~46K** | `2026-10-28` |
+
+🔴 **Dispersed across ~3.4k, all below a ladder that has never decreased.** `p515` refuted this
+channel on one data point; `p516` refutes it on three. 🟢 **Standing rule, now twice-evidenced:
+aggregator star counts are a discovery signal and never a measurement.**
+
+🟢 **New this window — the education-MCP axis, which is otherwise saturated.** Three addresses new
+to this base, all verified live, all **micro-repos** and shelved at that size rather than padded:
+
+| Repo | Licence (bytes) | HEAD | Size |
+|---|---|---|---|
+| [`clouatre-labs/math-mcp-learning-server`](https://github.com/clouatre-labs/math-mcp-learning-server) | Apache-2.0 | `43a317b96a74` | ~4★ class |
+| [`iyiook333/mcp-github-learning-assistant`](https://github.com/iyiook333/mcp-github-learning-assistant) | MIT | `24bb664e8224` | very small, Oct 2026 |
+| [`Jal246/study-mcp`](https://github.com/Jal246/study-mcp) | 🟡 unresolved | `db675f952a09` | very small |
+
+🔴 **The rest of the axis returned nothing new:** `tutor-mcp` (held in 62 files), `canvas-mcp`
+(101), `learnmcp-xapi` (37), the `open-spaced-repetition` FSRS family (17–51), `AI_AWE`/ArguLens
+(15), `mcp-for-beginners` (6) — **all already held.**
+
+🟢 **The one axis that was not saturated was the one never run: a non-English query.**
+`código aberto IA educação github Brasil` surfaced the 🇧🇷 `bncc-dev` family and the 🇧🇷
+`portabilis` family on its first page — breaking a LATAM supply nil this base had carried for
+**eight** passes. Full treatment in [`agents/top.md`](../agents/top.md).
+
+🔴 **Correction to a search claim:** `wwrwbs/AI_AWE` (ArguLens, arXiv `2608.17356`) was reported by
+the search channel as Apache-2.0. The bytes say **MIT** (`LICENSE` @ `main`, HEAD
+`41ae3bd4dd9e`). The bytes win.
+
+---
+
 
 
 ## 🆕 `p515` — `2026-10-28` — **🔴 THE TRENDING CHANNEL IS THE ONE THAT WAS WRONG, AND THIS PASS CAN SAY SO: `p514` refused `DeepTutor`'s star cell on a three-way conflict, and the repo's own page settles it — **47.9k**, continuing a ten-reading monotone ladder, against this channel's **~46,026**, under-reported by ~4%. 🔴 The discovery legs returned **ZERO** new education addresses: every `ai-tutor` topic row a star-ranked search surfaces is already filed here. 🟢 The push channel is OPEN for the first time in this base's recorded rotation history — the blocker was repository scope, not the proxy. 🔴 `make hooks` not attempted (declared abstention).**

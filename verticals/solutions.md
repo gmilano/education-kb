@@ -1,8 +1,65 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-28
+updated: 2026-10-29
 ---
+
+## 🆕 `p516` — `2026-10-29` — **🔴 THIS SHELF HELD THE ROW THAT REFUTES THE BASE'S LATAM SUPPLY NIL — line 1010, 🇧🇷 `i-educar`, GPL-2.0, flagged live — while `intel/market.md` published "0 LATAM-originated open-source education repositories at any star level" for an eighth pass. 🟢 The row is re-verified from bytes and now carries its star figure (722), its real default branch (`2.12`), and its sibling `i-diario` (AGPL-3.0, default branch `1.6`).**
+
+### 🟢 The Brazilian municipal stack — a real, deployed, customisable LMS/SIS line
+
+🔵 **Why it belongs on this shelf next to Odoo, Moodle and OpenMRS:** it is a *government-adopted*
+platform with a long deployment history, which is exactly the profile this shelf exists to hold —
+a real system a studio can customise with AI on top rather than a research artifact.
+
+| Platform | Origin & standing | Licence (read from bytes) | ★ | HEAD @ default branch | Customisation surface |
+|---|---|---|---|---|---|
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🇧🇷 Built by the **Itajaí-SC municipal government**; published on Brazil's **Portal do Software Público Federal** in **2008**; maintained by Portabilis. Self-described *"o maior software livre de educação do Brasil"* | **GPL-2.0** — root `LICENSE`; sidebar *"GPL-2.0 license"* | **722** (551 forks) | `435649b0474f` @ **`2.12`** | Full municipal **SIS**: enrolment, student/staff records, grades, transfers, municipal census reporting. PHP/Laravel |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | 🇧🇷 Portabilis; the teacher-facing companion to i-educar | 🔴 **AGPL-3.0** — `LICENSE` @ `1.6`; the licence text is **Portuguese** (*"LICENÇA PÚBLICA GERAL AFFERO GNU, Versão 3"*) | — | `ef909f23755a` @ **`1.6`** | *Diário de classe* — attendance, lesson records, continuous assessment, teacher gradebook |
+
+🔴 **Both are copyleft, and the two grants are not the same constraint.** 🟡 **`i-educar` is
+GPL-2.0:** a hosted service built on it is workable, since GPL-2.0 has no network-service clause —
+but distributed derivatives must carry the grant. 🔴 **`i-diario` is AGPL-3.0:** hosting a modified
+version **triggers the source-offer obligation to users over the network**. 🟢 **Operative
+consequence for an engagement:** AI features added *around* `i-educar` (a separate service talking
+to its database or API) stay clean; AI features added *inside* `i-diario` and hosted for a
+municipality put the modified source under an offer obligation. 🔵 That distinction is the kind a
+single "copyleft" label loses, which is why both are written with their version.
+
+🟢 **The permissive escape hatch this shelf already documents remains the answer for a closed
+derivative:** [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (**Apache-2.0**) and `TutorLoom`
+(**Apache-2.0**) — the two permissive full LMS rows, re-confirmed by `p515` against `p514`'s false
+*"every LMS on these shelves is copyleft"*. 🔴 That claim was wrong then and is wrong now.
+
+### 🟢 Curriculum-as-data — a customisation surface this shelf has never listed
+
+🟢 **New capability class, 🇧🇷-originated, MIT/CC BY 4.0:** Brazil's **BNCC** national curriculum is
+published as machine-readable open data with per-record provenance —
+[`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) (**MIT**, **1,721** learning
+objectives, JSON/SQLite/CSV) — plus
+[`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) (npm + PyPI + **an MCP
+server**) and [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark)
+(curriculum-grounded LLM hallucination benchmark, **12★**). 🟡 Both package repos are
+**split-licensed: code MIT, data CC BY 4.0, in the same npm tarball and PyPI wheel** — buildable,
+with an **attribution obligation that ships inside the artifact**. 🔴 `bncc-pacotes` additionally
+withholds **name and visual identity** (*"não licenciados"*), so a derivative may use the data and
+may **not** present as BNCC-branded. Full stack treatment in
+[`repos/foundations.md`](../repos/foundations.md).
+
+🟢 **Why this matters to an i-educar engagement specifically:** a municipality running `i-educar`
+holds enrolment and assessment records; `bncc-dados` supplies the competency map those records
+should be scored against; `bncc-benchmark` measures whether a model's curriculum claims are
+hallucinated. 🟢 **The three compose into the first LATAM pattern on these shelves that is built
+from LATAM-originated, licence-verified parts** — see [`compose/patterns.md`](../compose/patterns.md)
+(`P521`).
+
+🟢 **A fifth LATAM row, already here:** *br.tag* resolves as
+[`ipti/br.tag`](https://github.com/ipti/br.tag) — **GPL-2.0** from bytes, **20★**, HEAD
+`5758efb76754` @ `main`, Brazilian municipal school management (Yii/PHP), 🔴 **no AI component**.
+🔴 This pass first inferred `portabilis/br.tag` from its siblings' owner, which does not resolve,
+and nearly published that as a nil — the same defect it is auditing (`Gap 516-C`, closed in-pass).
+🔵 This base already records that its README claims BSD-3 while the payload says GPL-2.0.
+
 
 
 ## 🆕 `p515` — `2026-10-28` — **🔴 THIS FILE IS THE WITNESS THAT REFUTES `p514`: it has sold `OpenOlat` (**Apache-2.0**) since `p508` as *"the only permissive full LMS — pick this when the client needs a closed derivative"*, and at L983 it added `TutorLoom` (**Apache-2.0**) as *"second permissive full LMS"* — one pass before `compose/patterns.md` declared *"every LMS on these shelves is copyleft"*. 🟢 Both grants re-read from bytes this pass: `OpenOLAT` **10,982 B** `6dbc5b605ed0be6e`, `TutorLoom` **11,362 B** `a890392684288f18`. 🟢 The consequence is a new engagement, `P521`, that this file's rows supported for seven passes and no pattern ever wrote. 🔴 `make hooks` not attempted (declared abstention).**

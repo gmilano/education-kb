@@ -1,8 +1,71 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-28
+updated: 2026-10-29
 ---
+
+## 🆕 `p516` — `2026-10-29` — **🟢 THE TREND THIS PASS ADDS IS ABOUT THIS BASE'S OWN BLIND SPOT: a regional supply nil held for eight passes fell to a single query in Portuguese. 🔴 Demand-side trends saturated a NINTH time (~26 facts, 2 new). 🟢 Curriculum-as-data emerges as a real, shipped architecture — not a forecast.**
+
+### 🟢 `T516-1` — Curriculum-as-data is shipping, and it reorders the adaptive-learning stack
+
+🔵 **Until this pass, every adaptive-learning recipe on these shelves assumed the client supplies
+the competency map.** 🟢 Brazil has published one as code: **`bncc-dados`** (MIT) emits the national
+curriculum as **1,721 learning objectives** in JSON/SQLite/CSV **with provenance per record**,
+**`bncc-pacotes`** serves it to agents over **MCP**, and **`bncc-benchmark`** measures whether a
+model's curriculum claims are hallucinated. 🟢 **The significance is ordering**: factuality against
+a *public standard* becomes measurable before any tutoring product is built, which inverts the usual
+sequence of ship-then-evaluate. 🔵 Transferable to any jurisdiction with a published curriculum;
+the Brazilian data is the reference implementation, not the asset.
+
+### 🟢 `T516-2` — A supply nil is only as credible as the languages it was searched in
+
+🔴 **This base ran eight consecutive passes of English-language discovery and concluded "0
+LATAM-originated open-source education repositories at any star level."** 🟢 One query in
+Portuguese returned five, all licence-verified from bytes — and a sixth
+([`ipti/br.tag`](https://github.com/ipti/br.tag), GPL-2.0, 20★) was already on the shelves the nil
+was published against. 🔴 **And the same bias sat in two other
+instruments**: a licence probe that only knew English filenames (missing
+`LICENSE-CODIGO.md` / `LICENSE-DADOS.md`) and a branch probe that only knew `main`/`master`
+(missing `i-diario` @ `1.6`, `i-educar` @ `2.12`). 🟢 **Trend statement, for any industry KB and not
+just this one: regional "there is nothing here" findings produced by English-only tooling are
+systematically wrong in the direction of under-counting the Global South.** 🔴 **Live prediction:
+APAC's thin supply shelf here is probably the same artifact** — it has never been probed in
+Mandarin, Japanese, Korean or Hindi (`Gap 516-D`).
+
+### 🔴 `T516-3` — Governance is the sector's binding constraint, and the gap is now measured on both sides
+
+🟢 **The adoption/governance scissors is the most robust finding across all four regions this
+pass**, and every number below was already on these shelves — which is what makes it a trend rather
+than a datapoint:
+
+| region | adoption | governance |
+|---|---|---|
+| LATAM | IESALC: **87%** of 200 institutions using AI in ≥1 area; **74%** in teaching and learning | only **26%** have a formal AI strategy; UNESCO: **<10%** have guidelines *and* capacity |
+| North America | Gallup: **60%** of US teachers using AI | most US public schools still lack a formal student AI policy; 4 states now *mandate* district policies |
+| EMEA | UNESCO: **70%** of NA+EU institutions have or are developing guidance | high-risk duties deferred to **2 Dec 2027**, so most schools are pre-compliance |
+| APAC | Singapore **64.3%** vs Japan **24.7%** adoption | four incompatible regimes; Vietnam's education transition runs to **1 Sep 2027** |
+
+🟢 **The commercial reading is consistent across regions: the buyer's pain is the policy gap, not
+the capability gap.** Teachers have already adopted; institutions have not governed. 🔵 That is why
+the LATAM offer sequences governance first even though LATAM now has verified buildable assets.
+
+### 🔴 `T516-4` — Aggregator star counts are refuted a second time, independently
+
+🔴 Three trending digests read within four days reported `DeepTutor` at **42.6K**, **45.2K** and
+**46K**; the repo page read **48.0k** on `2026-10-29`. 🔴 **Dispersed across ~3.4k, all below a
+ladder that has not decreased in fourteen readings.** 🟢 `p515` refuted this channel on one
+datapoint; `p516` refutes it on three. **Aggregator stars are a discovery signal, never a
+measurement.**
+
+### 🟡 `T516-5` — Education remains a secondary theme in general AI trending
+
+🔴 In the general AI open-source digests this window, education appears as a **secondary** theme;
+`DeepTutor` (Apache-2.0, **48.0k★**, `v1.7.0` dated `2026.10.28`) is the only education repo at the
+top of a live ranking. 🔵 The education-MCP axis is real but **small** — `tutor-mcp`, `canvas-mcp`,
+`learnmcp-xapi` are the substantive entries and all are long held here; this pass's three new
+addresses are ~4★-class micro-repos. 🟡 **Stated as information, not padding: the sector's open
+source is concentrated in a few assets plus a long tail of very small ones.**
+
 
 
 ## 🆕 `p515` — `2026-10-28` — **🔴 NO NEW TREND WAS FOUND, AND THAT IS THE ENTRY: ~29 named facts across eight legs, one new and unverified. 🟢 But two trends on this base's own INSTRUMENT changed, and both change what later passes should do — aggregator star counts now proven to diverge from source in **both** directions (`DeepTutor` under-reported ~4% this pass, inflated in earlier cycles), and *"the API is 403"* exposed as ~16 passes of misdiagnosis for what is per-repository session scope. 🔴 Discovery yield has collapsed while internal-consistency yield has not: the scarce resource on this base is no longer information, it is AGREEMENT BETWEEN THE SHELVES. 🔴 The two gates that enforce exactly that have not run since `p511`.**

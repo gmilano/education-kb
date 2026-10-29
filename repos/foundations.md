@@ -1,8 +1,64 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-28
+updated: 2026-10-29
 ---
+
+## 🆕 `p516` — `2026-10-29` — **🟢 THE FOUNDATIONS SHELF GAINS A LAYER IT HAS NEVER HAD: a national curriculum as machine-readable, provenance-tracked open data — 🇧🇷 `bncc-dados`, MIT, 1,721 learning objectives in JSON/SQLite/CSV — plus the MCP package that serves it to agents. 🔴 Found only because the discovery query was run in Portuguese; eight English-language passes missed it. 🔴 Two licence verdicts on this shelf's probe method were WRONG for the same reason.**
+
+### 🟢 The missing layer — curriculum-as-data, and why it is foundational
+
+🔵 **What this shelf has always had:** tutoring runtimes, LMS cores, scheduling algorithms,
+retrieval stacks. 🔴 **What it has never had:** the *curriculum standard itself*, in a form an
+agent can resolve against. Every adaptive-learning pattern on
+[`compose/patterns.md`](../compose/patterns.md) has had to assume the client supplies a competency
+map. 🟢 **`bncc-dados` is that map, for Brazil, under MIT.**
+
+| Repo | Licence (read from bytes) | HEAD @ default branch | Role on this shelf |
+|---|---|---|---|
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | **MIT** — root `LICENSE` @ `main`, *"Copyright (c) 2026 Profy Tecnologias Educacionais Ltda"* | `9c268978efa2` @ `main` | 🟢 **Curriculum ground truth.** Brazil's **BNCC** (*Base Nacional Comum Curricular*) as open, verified data: **1,721** learning objectives, emitted as **JSON, SQLite and CSV**, with **provenance per record** |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟡 **SPLIT** — code **MIT** (`LICENSE-CODIGO.md`), embedded data **CC BY 4.0** (`LICENSE-DADOS.md`) | `e9b4985adf83` @ `main` | 🟢 **The access layer.** npm + PyPI packages **and an MCP server** (`mcp-worker/src/`) that serves BNCC objectives to an agent as tools. Data JSONs are **synced from a pinned commit** of `bncc-dados`, keeping that repo's grant |
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟡 **SPLIT** — code **MIT**, items/results/methodology **CC BY 4.0** | `4713901ce5d7` @ `main` | 🟢 **The evaluation layer.** Open LLM-hallucination benchmark **grounded in the curriculum** — the only curriculum-anchored factuality benchmark on these shelves. **12★**, 1 fork |
+
+🟢 **Together they are a three-layer stack this base could not previously assemble:** ground truth
+(`bncc-dados`) → agent access (`bncc-pacotes`, MCP) → factuality measurement (`bncc-benchmark`).
+🔵 All three are 🇧🇷-originated, which is also the refutation carried in
+[`agents/top.md`](../agents/top.md): this base published *"0 LATAM-originated open-source education
+repositories at any star level"* while these existed and were already named in its own pass
+narratives.
+
+🟡 **A self-inconsistency in `bncc-benchmark`, recorded rather than resolved.** Its GitHub About
+says **15,300 responses from 17 models**; its README says the official round measured **19 models
+× 900 responses = 17,100 raw responses**. 🔴 **Both figures are written here with their channel**,
+because the repository disagrees with itself and this pass has no third channel to break the tie
+(`Gap 516-E`).
+
+### 🔴 Two licence verdicts this shelf's probe got WRONG — same cause, twice
+
+🔴 **This pass's first probe repeated the base's standing defect and must be recorded as a defect,
+not quietly corrected.** The probe walked five English grant filenames over `main` then `master`:
+
+| Repo | first verdict | 🟢 truth, from bytes | why the probe failed |
+|---|---|---|---|
+| `bncc-dev/bncc-benchmark` | 🔴 **`none-found`** | **MIT code + CC BY 4.0 data** | grants live in **`LICENSE-CODIGO.md`** / **`LICENSE-DADOS.md`** — **Portuguese filenames**, not on the English path list |
+| `portabilis/i-diario` | 🔴 **`none-found`** | **AGPL-3.0**, and the licence text itself is Portuguese: *"LICENÇA PÚBLICA GERAL AFFERO GNU, Versão 3"* | its default branch is **`1.6`** — the probe only tried `main` and `master` |
+
+🔵 **`p509` already recorded the branch defect** as invalidating *"a method this base has used
+throughout"*, and `p514` already recorded the filename defect via Fedena's `NOTICE`. 🔴 **Both
+recurred this pass** because both lessons were written into prose and never into the probe.
+🟢 **The operative rule for this shelf:** resolve the default branch with
+`git ls-remote --symref` first, then probe grant filenames **in the repository's own language**.
+A `no licence` cell written without both steps is not a finding.
+
+### 🟢 Channel note for anyone re-verifying this shelf
+
+🔴 **`curl` → `github.com/<owner>/<repo>` now returns 403** for every repository tried this pass —
+the HTML channel `p515` used for star counts is **gone for `curl`**. 🟢 **Working channels:**
+`git ls-remote [--symref]` (liveness, HEAD, default branch), `raw.githubusercontent.com` (grant
+bytes), **WebFetch** on the repo page (stars, forks, licence sidebar). 🔴 `api.github.com` repo and
+`/search` paths are both **403** and `add_repo` does not unblock `/search`. Full matrix in
+[`agents/top.md`](../agents/top.md).
+
 
 
 ## 🆕 `p515` — `2026-10-28` — **🟢 THIS CENSUS HELD THE COUNTEREXAMPLE THAT REFUTES `p514`'s FLAGSHIP PREMISE, AND IT HELD IT IN TWO ROWS: `OpenOLAT` (**Apache-2.0**, L557) and `TutorLoom` (**Apache-2.0**, L1134, added `p513`) — both re-read from bytes on an independent channel this pass, both **IDENTICAL** on byte count, and `TutorLoom` gains the payload digest it never carried. 🟢 `p514`'s own Sunbird byte-read reproduces **EXACTLY** (1,072 B, `7dde06716f259584`), so the correction is to a prose claim and not to a census cell. 🔴 Zero new addresses from eight search legs — seventh saturation pass. 🔴 `make hooks` not attempted (declared abstention).**

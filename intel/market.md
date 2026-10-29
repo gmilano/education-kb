@@ -1,8 +1,123 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-28
+updated: 2026-10-29
 ---
+
+## 🆕 `p516` — `2026-10-29` — **🔴 THE "SUPPLY NIL" THIS FILE PUBLISHED TWICE IS FALSE, AND IT IS THIS FILE'S OWN CLAIM: lines 51 and 107 read "0 LATAM-originated open-source education repositories at any star level" while `verticals/solutions.md:1010` carried 🇧🇷 `i-educar` (GPL-2.0, 722★, 🟢 live) and this base's narratives named the 🇧🇷 `bncc-dev` family. 🟢 ROOT CAUSE: eight passes of discovery were run in ENGLISH. One Portuguese query broke the nil on its first page. 🔴 The demand axis saturated a NINTH time — ~26 regional facts probed, 2 new.**
+
+### 🔴 The retraction, stated plainly before anything is built on it
+
+🔴 **This file published, at lines 51 and 107:**
+
+> *"still **0 LATAM-originated open-source education repositories at any star level**, now an
+> eighth consecutive pass"* … *"LATAM solutions exist and are **not on GitHub**"*
+
+🟢 **Both are withdrawn.** The refuting rows were on this base's shelves at the time of writing —
+🇧🇷 [`portabilis/i-educar`](https://github.com/portabilis/i-educar), GPL-2.0, **722★**, re-verified
+at HEAD `435649b0474f`, **carrying a 🇧🇷 flag on the row itself**; 🇧🇷
+[`ipti/br.tag`](https://github.com/ipti/br.tag), GPL-2.0, **20★**, shelved with a recorded
+README-vs-payload licence conflict; and the 🇧🇷
+[`bncc-dev`](https://github.com/bncc-dev/bncc-dados) family, already named in this base's own pass
+narratives. 🔴 **Six rows, not zero.** 🔴 **The `P520` reframing built on the nil is therefore unsafe**: *"distribution
+gap, not existence gap → steer the LATAM offer from build toward provenance-and-portfolio audit"*
+assumed there was nothing to build on. There is. 🟡 The audit offer may still suit the **193 IDB
+solutions** (still unverified, `Gap 515-D`), but it must not be justified by "0 repositories".
+
+### 🟢 Root cause — the instruments were English, not the sector
+
+| # | instrument | assumption | what broke it | cost |
+|---|---|---|---|---|
+| 🔴 1 | discovery queries, 8 passes | search in English | `código aberto IA educação github Brasil` → `bncc-dev` + `portabilis` on page 1 | 8 passes of a false nil |
+| 🔴 2 | licence path list (5 English names) | grants are named in English | `LICENSE-CODIGO.md` / `LICENSE-DADOS.md` | a MIT+CC repo called unlicensed |
+| 🔴 3 | branch probe (`main`, `master`) | default branch is `main`/`master` | `i-diario` defaults to `1.6`; `i-educar` to `2.12` | an AGPL-3.0 repo called unlicensed |
+
+🔵 **Defects 2 and 3 are recurrences** (`p514` Fedena/`NOTICE`; `p509` default-branch). 🔴 Both were
+written into prose and never into the probe, so both fired again. 🔴 **And a fourth instance fired
+inside this pass**: it inferred the address `portabilis/br.tag`, got no resolution, and drafted
+*"no verified address"* — while [`ipti/br.tag`](https://github.com/ipti/br.tag) (GPL-2.0, 20★) sat
+on these shelves. 🟢 Caught by `grep`-before-nil, which is now the control. **The defect is
+structural: the pass auditing it reproduced it.** 🔴 **`Gap 516-D`: APAC has never
+been probed in Mandarin, Japanese, Korean or Hindi — and its supply shelf is correspondingly thin.
+Expect the same false nil there.**
+
+### 🔴 The regional battery — ninth consecutive saturation, measured as `p514` established
+
+| leg | named data returned | already held | 🟢 new |
+|---|---|---|---|
+| North America | **134 bills / 31 states** (2026 session), Maryland's 24 districts, the four states mandating both state guidance and district policy (MD, **ID**, **OK**, **VA**), Oklahoma's bar on AI as primary basis for grading/discipline/placement, **K-12 AI Literacy & Readiness Act of 2026** advanced in committee, Gallup **60%** of US teachers using AI, UNESCO **70%** of NA+EU institutions with guidance | 🔴 **all 7** | — |
+| EMEA | EU AI Act Annex III high-risk for admissions/grading/proctoring, **Regulation (EU) 2026/1744** (Digital Omnibus) moving high-risk education to **2 Dec 2027**, Art. 50 transparency from **2 Aug 2026**, emotion-recognition ban since **Feb 2025**, Commission+OECD **"Empowering Learners for the Age of AI"** literacy framework (**18 Jun 2026**), Utrecht University risk-tiered policy | 🔴 **all 6** | — |
+| APAC | **Korea AI Basic Act** in force **22 Jan 2026**, Japan's voluntary AI Promotion Act, Australia's National AI Plan (Dec 2025), Ipsos ban-support spread (Indonesia **23%** → Korea **31%**; India 26, Thailand 25, Singapore 28, Japan/Malaysia 29), NCERT **DIKSHA**, **SEAMEO INNOTECH** | 🔴 **9 of 10** | 🟡 **1** — **Vietnam's Law on AI in force 1 Mar 2026**, transition to 1 Mar 2027 but **1 Sep 2027 for education, health and finance** (the base held Vietnam's Jul-2026 high-risk decision, not the statute's sectoral date) |
+| LATAM | UNESCO **IESALC**: 200 institutions / 19 countries, **87%** using AI in ≥1 area, **74%** in teaching and learning, only **26%** with a formal AI strategy, private non-profit **84%** vs public **68%** vs private for-profit **52%**; Universidad de los Andes **716** regulatory instruments across 23 countries (>80% since 2023); TALIS 2024 teacher use Brazil **56%** / Chile **55%** / Colombia **53%** / Costa Rica **52%** vs OECD **36%**; Ceibal Uruguay **75%**; Colombia **CONPES 4144**; Brazil **PL 2.338/2023**; UNESCO Observatory (**14 Apr 2026**) | 🔴 **8 of 9** | 🟡 **1** — Meta-reported **38%** of LATAM organisations using open-source AI, **Mexico 65%**, **Brazil 46%** |
+| 🟢 **supply legs** | 🟢 **BROKEN, in Portuguese:** `bncc-dev/{bncc-dados, bncc-benchmark, bncc-pacotes}`, `portabilis/{i-educar, i-diario}`, and `ipti/br.tag` already held | — | 🟢 **6 LATAM rows, every licence read from bytes** |
+| supply legs (English) | education-MCP axis (`tutor-mcp` 62 files, `canvas-mcp` 101, `learnmcp-xapi` 37), FSRS family, `AI_AWE`, `mcp-for-beginners` | 🔴 **all** | 🟡 3 micro-repos (~4★ class) |
+
+🔴 **~26 named demand-side facts probed one by one; TWO were new.** Ninth consecutive single-digit
+increment on demand. 🟢 **But the supply axis — declared saturated for eight passes — was not
+saturated at all. It was mis-instrumented.**
+
+🟡 **The two new demand facts are channel-attributed, not promoted.** Vietnam's sectoral transition
+date and the Meta open-source-AI adoption percentages come from the search channel; primary sources
+were not read (`www.iadb.org`, `arxiv.org` and `www.unesco.org` all still fail to resolve from this
+session — the failure class `p515` recorded). 🔵 UNESCO's *"fewer than 10% of regional institutions
+have formal guidelines and sufficient capacity"* is **new to these shelves** and sits consistently
+beside IESALC's already-held **26%** formal-strategy figure, which measures a different population.
+
+## Opportunities by region — `p516`
+
+### North America
+🔵 **The constraint is procedural, not technical.** 134 bills across 31 states, and four states
+(MD, ID, OK, VA) now require **district-level** AI policy adoption, not just state guidance.
+Oklahoma bars AI as the **primary basis** for grading, discipline or placement. 🟢 **The offer is
+the audit trail**: any tutoring or assessment agent sold into US K-12 must emit a
+human-decision-of-record for every high-stakes output. 🟢 Build it as a policy layer —
+`learnmcp-xapi` writing to an xAPI LRS gives per-interaction evidence a district can produce on
+request. 🔴 Not a LATAM-style greenfield: **60%** of teachers already use AI informally, so the
+work is governing existing shadow use, not introducing it.
+
+### EMEA
+🔵 **Sixteen extra months, and they are the whole opportunity.** Regulation (EU) 2026/1744 moved
+high-risk education duties to **2 Dec 2027**, while **Art. 50 transparency applies from 2 Aug 2026**
+and the emotion-recognition ban has been live since **Feb 2025**. 🟢 **Sell the conformity runway**:
+Annex III classification of a client's existing tools, then remediation before Dec 2027, with the
+Commission+OECD **"Empowering Learners"** framework (18 Jun 2026) as the literacy curriculum
+deliverable. 🟢 The permissive LMS rows matter here — **`OpenOLAT` (Apache-2.0)** supports a closed,
+auditable derivative where GPL/AGPL platforms complicate a vendor's conformity package.
+
+### APAC
+🔵 **Four incompatible regimes and one newly dated deadline.** Korea's **AI Basic Act** (in force
+22 Jan 2026) and **Vietnam's Law on AI** (in force 1 Mar 2026, with **education transition to
+1 Sep 2027**) are binding; Japan and Australia rely on existing law and voluntary frameworks.
+🟢 **The offer is a single policy-routing layer** — LangGraph-style policy nodes resolving
+jurisdiction per learner, as this base's APAC pattern already holds. 🔴 **Declared gap, stated as
+information:** this base's APAC **supply** shelf is thin, and after this pass that must be read as
+**probably an artifact of English-only discovery** (`Gap 516-D`), not as an absence. **Do not quote
+an APAC supply nil to a client until the Mandarin, Japanese, Korean and Hindi legs have been run.**
+
+### LATAM
+🟢 **The offer changes this pass, because the premise did.** LATAM is **not** a build-from-scratch
+or audit-only region: it has a **government-adopted, 722★, GPL-2.0 SIS** (`i-educar`) deployed
+through Brazil's federal software portal, an **AGPL-3.0** teacher gradebook (`i-diario`), and a
+**national curriculum published as MIT open data** with an MCP access layer and its own
+hallucination benchmark. 🟢 **That is a customisation engagement, not a greenfield one** — and the
+parts are LATAM-originated, so the provenance story is domestic. 🔵 Demand is already there and
+governance is not: IESALC **87%** institutional AI use against **26%** with a formal strategy, and
+UNESCO putting **<10%** with guidelines plus capacity. TALIS teacher use (Brazil **56%**, Chile
+**55%**, Colombia **53%**, Costa Rica **52%**) runs well above the OECD's **36%**; Uruguay's Ceibal
+reports **75%**. 🟢 **Sequence the offer: governance first (the 26%/<10% gap is the buyer's pain),
+delivered on top of assets the client already owns.** 🔴 Watch Brazil's **PL 2.338/2023**, which
+names *"selection of students for access to education"* as high-risk and is still amendable in the
+Chamber of Deputies.
+
+### Global
+🟢 **Curriculum-as-data is the transferable idea, and Brazil shipped the reference
+implementation.** `bncc-dados` (MIT, 1,721 objectives, provenance per record) +
+`bncc-pacotes` (MCP) + `bncc-benchmark` (curriculum-grounded factuality) is a three-layer template
+that applies to any jurisdiction with a published national curriculum. 🟢 **Globant's reusable
+asset is the pattern, not the Brazilian data.** 🔴 **And the methodological lesson generalises past
+education:** eight passes of English-language discovery produced a confident, wrong regional nil.
+**A supply nil is only as credible as the languages it was searched in.**
+
 
 
 ## 🆕 `p515` — `2026-10-28` — **🔴 SEVENTH CONSECUTIVE SATURATION PASS, MEASURED NOT ASSERTED: ~29 named regional facts probed one by one against the live shelves, **ONE** was new — an **IDB** review of **193** LATAM/Caribbean AI-education solutions (**59%** generative AI, **27%** language models), and it is REFUSED as fact because `www.iadb.org` does not resolve from this session. 🔴 The supply legs returned **zero** new addresses. 🟢 So the pass's value is internal: the `P518` premise refuted, a star conflict resolved, the `API 403` re-diagnosed as session scope. 🔵 The LATAM supply nil holds an eighth pass — but 193 solutions implies a DISTRIBUTION gap, not an existence gap, which changes the LATAM offer. 🔴 `make hooks` not attempted (declared abstention).**

@@ -1,8 +1,47 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-28
+updated: 2026-10-29
 ---
+
+## 🆕 `p516` — `2026-10-29`
+
+🔴 **GitHub trending, education slice: thin again, and the digests are unreliable on figures.**
+Education remains a **secondary** theme in the general AI-trending digests; `DeepTutor` is the only
+education repo appearing at the top of a live ranking this window, described there as a *lifelong
+personalised tutoring platform that adapts curricula via RAG*. 🔴 The same digests reported its
+stars as **42.6K**, **45.2K** and **46K** within four days, against **48.0k** on the repo page —
+see [`agents/trending.md`](../agents/trending.md).
+
+🟡 **One adjacent trending repo noted, not shelved:** *Filee*, an IELTS vocabulary app (7,298 words
+with illustrations, UK/US audio, 14,596 example sentences, FSRS review). 🔴 Appears on an
+aggregator's live ranking only; **no address verified this pass**, so it is a lead, not a row.
+
+🟢 **Trending repos verified live this window** (`git ls-remote` + grant bytes):
+
+| Repo | Licence (bytes) | HEAD @ default branch |
+|---|---|---|
+| [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark) | 🟡 split: code MIT + data CC BY 4.0 | `4713901ce5d7` @ `main` |
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | MIT | `9c268978efa2` @ `main` |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟡 split: code MIT + data CC BY 4.0 | `e9b4985adf83` @ `main` |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | GPL-2.0 | `435649b0474f` @ **`2.12`** |
+| [`portabilis/i-diario`](https://github.com/portabilis/i-diario) | AGPL-3.0 | `ef909f23755a` @ **`1.6`** |
+| [`clouatre-labs/math-mcp-learning-server`](https://github.com/clouatre-labs/math-mcp-learning-server) | Apache-2.0 | `43a317b96a74` @ `main` |
+| [`iyiook333/mcp-github-learning-assistant`](https://github.com/iyiook333/mcp-github-learning-assistant) | MIT | `24bb664e8224` @ `master` |
+| [`Jal246/study-mcp`](https://github.com/Jal246/study-mcp) | 🟡 unresolved | `db675f952a09` @ `main` |
+
+🟢 **`br.tag` resolves as [`ipti/br.tag`](https://github.com/ipti/br.tag)** — GPL-2.0, **20★**,
+HEAD `5758efb76754` @ `main`, **already held on these shelves**. 🔴 `portabilis/br.tag` was this
+pass's own inference and does not resolve; it was nearly published as a nil (`Gap 516-C`, closed
+in-pass).
+
+🔴 **Channel change this window:** `curl` → `github.com` HTML is now **403**; **WebFetch** on the
+same URL works. `api.github.com` repo paths **403** (*"sessions are bound to their configured
+repositories"*) and `/search/repositories` **403** (*"This GitHub API path is not available"*) —
+`add_repo` does **not** unblock the latter. `git ls-remote` and `raw.githubusercontent.com` work.
+
+---
+
 
 
 ## 🆕 `p515` — `2026-10-28` — **🟢 THE `API 403` THAT HAS DEGRADED THIS FILE'S CHANNEL FOR ~16 PASSES IS A MISDIAGNOSIS, AND THE FIX IS NAMED IN THE 403 ITSELF: it is not a rate limit and not an outage — it is **per-repository session scope**, and the body says so and names `add_repo`. 🟡 Deliberately not exercised on third-party repos; exercised on this KB's own repo, where it opened the push channel. 🔴 The trending leg produced **no new education address** — an eighth consecutive pass in which star-ranked discovery adds nothing this base does not hold. 🟢 `raw.githubusercontent.com` served **4 of 4** licence payloads at `200`. 🔴 `make hooks` not attempted (declared abstention).**
