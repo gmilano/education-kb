@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Foundational Education Repos
 
-**Pass `p534` · 2026-10-29.** Load-bearing systems an education engagement is
+**Pass `p535` · 2026-10-29.** Load-bearing systems an education engagement is
 likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms, standards and
 toolkits the agents must live beside.
@@ -408,6 +408,38 @@ naming the evidence that killed it. 🔴 **And the register row should now be
 retired**, because a gate that demands a false sentence will eventually be
 satisfied by someone re-asserting it. → noted in
 [`../intel/open-gaps.md`](../intel/open-gaps.md) under `Gap 534-I`.
+
+## 🆕 `p535` — the efficacy layer: **causal inference**, which this base argued for and never held
+
+🔵 **This section exists because of a contradiction inside this KB, not because of a
+search.** [`../intel/trends.md`](../intel/trends.md) Trend 3 has argued since early passes
+that *"pedagogy is becoming measurable and almost nobody is measuring it"*, and `p535`
+added Trend 21: the **procurement gate is becoming causal evidence**, on a reported
+review in which only ~**20 of 800+** K-12 AI studies produced strong causal evidence.
+🔴 **Asked what it could hand a buyer who demands an effect estimate, this base held
+nothing**: `openfun/ralph` (xAPI event capture) appears in it **157 times**, and
+causal-inference libraries appeared **zero** times. Capturing events is not estimating
+an effect, and the distinction is the whole of Trend 21.
+
+| Repo | Grant (title block) | Stars | Fitness | What it is for here |
+|---|---|---|---|---|
+| [`py-why/dowhy`](https://github.com/py-why/dowhy) | 🟢 **MIT** | **8.4k** | `dependency` | Makes the causal **assumptions explicit and testable** — you state the graph (who got the tutor, what else differs between cohorts), and it refutes or survives that statement. This is the part a funder or ministry reviewer actually interrogates. |
+| [`py-why/EconML`](https://github.com/py-why/EconML) | 🟢 **MIT** 🔴 *page names no licence; bytes do* | **4.8k** | `dependency` | **Heterogeneous** treatment effects — *who* did it help. In education this is the finding that matters: a null average effect that hides a large gain for the lowest-attaining quartile is a success story the average destroys. |
+| [`comet-ml/opik`](https://github.com/comet-ml/opik) | 🟢 **Apache-2.0** | **23.0k** | `infrastructure` | Tracing and automated evaluation for the agent itself, so an effect estimate can be tied to **a known model, prompt and retrieval version**. 🔴 Filed only now: `p534` recorded Opik **by name** inside [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai)'s production stack and never filed the repository. |
+
+🟢 **All three are permissive, and that is the point.** An efficacy claim has to be
+auditable by the buyer, which means the client must be able to **run and inspect** the
+estimation code — MIT and Apache-2.0 allow that without the copyleft conversation the
+rest of this sector forces. 🔵 They sit *beside*, not inside, the LMS: the estimation
+runs on exported xAPI records, so the copyleft boundary this file keeps insisting on
+(see the licence map below) is not touched.
+
+🔴 **What this layer does not give you.** None of these three makes a weak design strong.
+Observational estimation on a cohort that self-selected into using a tutor will produce a
+confident, wrong number — which is plausibly how a field accumulates 800 studies and 20
+credible ones. The design (assignment, a control arm, a pre-registered outcome) is
+`P571`'s subject in [`../compose/patterns.md`](../compose/patterns.md); these libraries
+are what you run **once the design is sound**.
 
 ## Licence map, for the architecture decision
 

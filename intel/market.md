@@ -313,6 +313,42 @@ in the six months after the Decision — is due `1 March 2027`.** 🔵 For an
 engagement that means the **deployment date decides the deadline**, and a
 greenfield build started now inherits the *earlier* one.
 
+## 🆕 `p535` — the four regional legs re-run: **the twelve-pass EMEA blank finally returns numbers — from the instrument this base already trusts**
+
+Read the verdict column before the figures. The supply side returned nothing (see
+[`../agents/top.md`](../agents/top.md)); **the demand side moved, in the one cell this
+file has called its most valuable unfilled one.**
+
+| Region | What the leg returned | Verdict |
+|---|---|---|
+| **EMEA** | 🟢 **OECD TALIS 2024 carries the European rows of the *same* survey this base already quotes for LATAM.** Teacher AI use in their work: **UAE ~75%**, **Denmark ~31%** and **Finland ~31%** (lesson-plan item), 🔴 **France <20%** — against the **OECD average ~1 in 3**. Plus a **European Commission** report (Sept 2026): **29.7%** of EU teachers have had any CPD on using AI in teaching, **53%** have had none *and report no strong need for it*, and **~two-thirds** of EU education systems now have an AI strategy or policy framework. An EC teacher survey (**n=1 130**, 54% secondary) reports **73%** using AI for lesson planning and **67%** for assessment preparation — 🔴 **self-selected, explicitly not representative** | 🟢 **`Gap 534-F` ADVANCED, and not by a new query — by a *different instrument class*, exactly as the gap prescribed.** Twelve passes asked for "EMEA adoption" and got EU regulation; this pass asked the survey that already produced the LATAM rows. 🔴 **Not closed**: `www.oecd.org` and `school-education.ec.europa.eu` are both **`ENOTFOUND`** from this session, so **no figure here was read from its primary** |
+| **APAC** | 🟢 **The same instrument fills the APAC blank this file has recorded twice**: **Singapore ~75%** of teachers using AI in their work — the joint highest of any TALIS 2024 system — against 🔴 **Japan <20%**, the joint lowest | 🟢 **The two-pass "no APAC adoption rate exists in any result" blank is FILLED**, same caveat: search-backend, primary unread. 🔵 The **55-point spread inside one region** is the finding — "APAC adoption" is not a number |
+| **North America** | 🟡 **The regulatory picture is saturated as recorded** (134 bills / 31 states, Gallup 60%, the four states mandating district policy). 🟢 **New, and it is about *evidence* rather than policy**: a coalition reported as **140+ organisations** (Alliance for Learning Innovation) published a report **2026-10-15** asking Congress and the administration to fund research into whether AI tools actually improve learning; the review behind it is reported as finding that of **800+ K-12 AI studies**, only **~20 produced strong causal evidence of learning impact** (attributed to the Stanford Accelerator for Learning) | 🟢 **New to this base** — nothing matching `Stanford Accelerator`, `Alliance for Learning Innovation` or that 800/20 ratio appears anywhere in it. 🔴 **Every host carrying it is `ENOTFOUND`** (`edweek.org`, `acceleratelearning.stanford.edu`, `aasa.org`), so it is recorded as a **single-channel claim** and drives [`trends.md`](trends.md) Trend 21 |
+| **LATAM** | 🔴 **Nothing new.** The leg returned the holdings this base already has first-hand or near-first-hand: UNESCO IESALC (200 institutions / 19 countries, 87% using AI, 74% in teaching and learning, 26% with a formal strategy), the LAC Observatory launched April 2026 at ECLAC, TALIS 2024 (Brazil 56 / Chile 55 / Colombia 53 / Costa Rica 52), Ceibal, CENIA's "regional public investment six times below the global average", and the Universidad de los Andes count of **716 AI regulatory instruments across 23 countries** | 🔴 **Saturated, and said so rather than re-reported as new.** 🟢 One structural note: LATAM is now the **best-evidenced region on this base** and EMEA the worst, which inverts the assumption the KB was started on |
+
+### 🔴 The money leg, and it points the other way from the market-size band
+
+🟢 **New to this base this pass**, and it belongs beside the four-firm size band above
+because it contradicts the mood that band creates:
+
+- **EdTech venture funding is reported down ~89%** from its peak, with the decline
+  continuing through the first half of 2026 — while the *AI-in-education* segment is
+  the thing every forecast in this file projects at **25–45% CAGR**.
+- **Reach Capital** closed a **$265M** fund to back AI applications across learning,
+  health and work.
+- **IXL Learning acquired NoRedInk** — reported as its **14th acquisition since 2018**.
+- **UK**: a package reported at **£600m+** for AI, whose central education commitment is
+  a **UK Advanced Chip Design Academy** backed by **£18m** — 🔵 note the shape, because
+  it is an EMEA *skills-and-silicon* bet, not a classroom bet.
+
+🔴 **Read together, these say the buyer is consolidating, not expanding.** Capital is
+scarce, incumbents are absorbing products, and the public money in EMEA is going to
+chip-design skills. 🟢 **For a studio this is good news and the market-size band is
+not**: a client in a consolidating sector buys *integration into what they already run*
+— which is what this base's permissive MCP/LTI shelf is for — rather than a new platform.
+🔴 **All four bullets are single-channel** (`worldassessmentcouncil.org`,
+`edtechinnovationhub.com` both `ENOTFOUND`). → `Gap 535-D`.
+
 ## Opportunities by region
 
 ### North America
@@ -468,6 +504,17 @@ recorded.**
 
 
 ### EMEA
+
+> 🟢 **`p535` — this section's twelve-pass demand blank is no longer blank.** Teacher
+> AI-use figures for **UAE (~75%)**, **Denmark/Finland (~31%)** and **France (<20%)**
+> against an **OECD average of ~1 in 3**, plus the European Commission's **29.7%**
+> AI-CPD figure and **~two-thirds** of EU systems holding an AI policy framework, are
+> tabulated in the `p535` regional-legs section above and in
+> [`../evidence/emea-apac-demand-talis.2026-10-29-p535.tsv`](../evidence/emea-apac-demand-talis.2026-10-29-p535.tsv).
+> 🔴 **None was read from its primary** — `oecd.org` and `ec.europa.eu` are `ENOTFOUND`
+> from this session. 🔵 **The engagement opening is the 53%**: a majority of EU teachers
+> have had no AI training *and do not say they want any*, which makes teacher-facing
+> enablement, not learner-facing novelty, the thing an EMEA buyer can be sold.
 
 > 🔴 **`p534` — the demand leg returned zero education-specific results for the
 > second consecutive pass, and the fault is now attributed to the query.** What
@@ -666,6 +713,12 @@ framing, where EMEA appears as the regulated region and little else.
 
 
 ### APAC
+
+> 🟢 **`p535` — the "no APAC adoption rate exists" blank is filled, and the number is a
+> spread, not a point.** TALIS 2024: **Singapore ~75%** of teachers using AI in their
+> work, **Japan <20%** — the joint highest and joint lowest of any system measured, in
+> one region. 🔵 Any APAC proposal that quotes a regional average is quoting something
+> no buyer in the region recognises. 🔴 Search-backend only; `oecd.org` is `ENOTFOUND`.
 
 > 🆕 **`p534` — commercial and policy motion, no education-specific regulation,
 > and no new addresses.** **TCS × Pearson** signed a multi-year AI learning

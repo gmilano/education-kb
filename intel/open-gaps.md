@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p535` — `2026-10-29` — **🟢 `Gap 534-F` ADVANCES AFTER TWELVE FAILED PASSES — NOT WITH A BETTER QUERY BUT WITH THE INSTRUMENT THE GAP ITSELF NAMED, AND THE APAC ADOPTION BLANK FILLS FROM THE SAME SURVEY. 🔴 `Gap 242` AND EVERY "READ THE PRIMARY" GAP ON THIS BASE ARE RE-PRICED FROM "LOW COST" TO **NOT PURCHASABLE**: `WebFetch` RESOLVES `github.com` AND NO OTHER HOST. 🟢 THE SUPPLY LEGS RETURNED ZERO UNFILED AGENTS AND THE DEMAND SIDE PRODUCED THREE PERMISSIVE REPOS ANYWAY. 🔴 FIVE REGISTERED (`535-A`…`535-E`).**
+
+### 🟢 `Gap 534-F` — ADVANCED, materially, and the method is the transferable part
+
+**Asked:** *"the EMEA demand leg is empty because 'EMEA' is a sales territory"* — and the
+companion note called EMEA adoption **"the most valuable unfilled cell in `market.md`"**
+after **twelve consecutive INFORMATIVE NIL** passes, prescribing: *"attack it with a
+different instrument class: national ministry statistics, Eurostat."*
+
+**Delivered.** 🟢 **The instrument was neither of those two — it was the survey this base
+already quotes for LATAM.** This KB has held OECD **TALIS 2024** figures for Brazil 56 /
+Chile 55 / Colombia 53 / Costa Rica 52 against an OECD average of 36 for many passes, and
+never asked the same survey for its European rows. They exist:
+
+| Region | System | Figure | Measure |
+|---|---|---|---|
+| EMEA | United Arab Emirates | **~75%** | teachers using AI in their work |
+| EMEA | France | 🔴 **<20%** | teachers using AI in their work |
+| EMEA | Denmark · Finland | **~31%** | agree AI helps create or improve lesson plans |
+| Global | OECD average | **~1 in 3** | teachers using AI in their work |
+| APAC | Singapore | **~75%** | teachers using AI in their work |
+| APAC | Japan | 🔴 **<20%** | teachers using AI in their work |
+
+Plus the **European Commission** (Sept 2026): **29.7%** of EU teachers have had any CPD
+on using AI in teaching, **53%** have had none *and report no strong need for it*,
+**~two-thirds** of EU systems hold an AI strategy or framework; and an EC teacher survey
+(**n=1 130**) at **73%** lesson planning / **67%** assessment prep — 🔴 self-selected and
+explicitly not representative. Census:
+[`../evidence/emea-apac-demand-talis.2026-10-29-p535.tsv`](../evidence/emea-apac-demand-talis.2026-10-29-p535.tsv).
+
+🟡 **NOT CLOSED, and the residue is exactly one thing:** `www.oecd.org` and
+`school-education.ec.europa.eu` are **`ENOTFOUND`** from this session, so **no figure
+above was read from its primary.** The gap stays open as *"figures from one channel,
+primaries unread"* — the same state `Gap 242` is in.
+
+🔵 **The transferable lesson, and it is worth more than the figures.** Twelve passes
+re-asked *"EMEA adoption"* and got EU regulation back every time. The fix was to stop
+searching for the **region** and start asking a **named instrument this base already
+trusted** for its other rows. 🟢 **Generalise it:** for any blank regional cell, first ask
+which instrument already filled the *adjacent* cell. → this is `Gap 535-A`'s remedy too.
+
+### 🔴 `Gap 242` and `Gap 534-H` — RE-PRICED, from "low cost" to **not purchasable here**
+
+`242` has been costed three separate times as *"low cost — obtain the primary report and
+read its regional definitions."* `534-H` was registered on the premise that *"three
+capabilities this base records as blocked are **not** blocked, and nobody re-tested
+them."* 🟢 **Both were tested this pass, and the result splits cleanly:**
+
+- 🟢 **GitHub was never blocked**: `github.com` is 403 to `curl` and **200 through
+  `WebFetch`** (`p534`'s correction, confirmed on 40 addresses).
+- 🔴 **Nothing else resolves at all.** `oecd.org`, `school-education.ec.europa.eu`,
+  `eunews.it`, `edweek.org`, `worldassessmentcouncil.org`, `edtechinnovationhub.com`,
+  `acceleratelearning.stanford.edu` are **`ENOTFOUND` on `WebFetch`**;
+  `iesalc.unesco.org`, `unesco.org`, `future-ed.org`, `multistate.us`, `holoniq.com`,
+  `campustechnology.com`, `aasa.org` are **000 on `curl`**. Matrix:
+  [`../evidence/channel-allowlist.2026-10-29-p535.tsv`](../evidence/channel-allowlist.2026-10-29-p535.tsv).
+
+🔴 **So the remedy for every "read the primary" gap on this base is a network-allowlist
+change, not research budget**, and **no future pass should price one as cheap again.**
+🔵 The concrete ask, if anyone can action it: allow `oecd.org`, `ec.europa.eu` and
+`unesco.org`. Those three would close `242` and `534-F` and harden Trend 21.
+
+### 🔴 Registered this pass
+
+| Gap | Statement | Remedy and cost |
+|---|---|---|
+| 🆕 **`535-A`** | **The generic query set is exhausted.** Eight legs, 40 addresses, **39 already filed**; the one new address is a platform, not an agent. Eight consecutive passes of search have yielded one curriculum and one platform, while org enumeration, licence-byte re-reads and *reasoning from demand to a missing layer* all yielded in the same window | Retire the four global queries as written. Replace with: (a) org enumeration over the ~40 institutions already cited, (b) "which instrument filled the adjacent cell" per `534-F`, (c) capability-gap reasoning as run this pass. 🟢 Low cost, and it is a change of *method*, not budget |
+| 🆕 **`535-B`** | **This base cannot read any non-GitHub primary**, and has priced such reads as cheap four times | Not purchasable from this session. Allowlist `oecd.org`, `ec.europa.eu`, `unesco.org`. Until then, every such figure is filed **single-channel and labelled** |
+| 🆕 **`535-C`** | **Licence readers keyed to `main` produce false "no licence" results.** `open-learning-exchange/planet` is 404 on `main` and 200 on `master` | Try `main` then `master` then the default branch, and record which one answered — a repo still on `master` in late 2026 is itself a dating signal. Low cost |
+| 🆕 **`535-D`** | **The money leg is single-channel and contradicts the market-size band.** EdTech VC reported **down ~89%** from peak while every size forecast here projects 25–45% CAGR; Reach Capital **$265M**; IXL→NoRedInk (14th acquisition); UK **£600m+** with **£18m** to a chip-design academy | Corroborate against a second channel before any of it enters a deck. 🔵 The *structural* reading — consolidating buyer, integration over new platforms — is what a studio should act on, and it is robust to the figures being imprecise |
+| 🆕 **`535-E`** | **This base describes components by name and fails to file them.** `comet-ml/opik` (**Apache-2.0, 23.0k★**) was written down inside `mitodl/learn-ai`'s stack at `p534` and never filed; Project NOMAD went unfiled for eleven passes; the LTI libraries for 55 | Extract every GitHub-shaped and tool-shaped proper noun from prose into the address ledger automatically, not just from tables. 🟡 Medium cost, and it is the highest-yield instrument this base has |
+
+🟢 **One gap closes by being answered rather than argued**: the two-pass blank *"no K-12
+or higher-ed APAC adoption rate exists in any result"* is **filled** — Singapore ~75%,
+Japan <20%, same TALIS 2024 instrument, same single-channel caveat. 🔵 And the useful form
+of the answer is the **55-point intra-regional spread**, not an average: "APAC adoption"
+is not a number any buyer in the region would recognise.
+
+---
+
 ## 🆕 `p534` — `2026-10-29` — **🟢 `533-A` CLOSES ON ITS NAMED SCOPE AND ITS REMEDY COST **NOTHING** IT PREDICTED — THE "ONE API CALL PER ORG" WAS NEVER NEEDED, BECAUSE THE BLOCKER IT BUDGETED AROUND WAS A WRONG SENTENCE IN THIS BASE. 🟡 `533-C` PARTIALLY CLOSES: THE FITNESS FIELD EXISTS AND IS **NOT BACKFILLED**. 🔴 `533-B` STAYS OPEN, UNTOUCHED, AND IS SAID SO. 🟢 **AND THE GATES RAN — 65 OF THEM, 47 GREEN, FOR THE FIRST ATTESTED TIME IN ELEVEN PASSES — CATCHING A GRANT ERROR THIS PASS HAD JUST WRITTEN AND **ELEVEN** LOST LOAD-BEARING CLAIMS, FOUR OF THEM SECURITY OR REGULATORY FACTS ABOUT COMPONENTS THESE PAGES RECOMMEND. ALL ELEVEN DISCHARGED, NONE FROM MEMORY.** 🔴 EIGHT REGISTERED (`534-A`…`534-C`, `534-E`…`534-J`). 🟢 `534-D` WAS REGISTERED AND **CLOSED INSIDE THIS PASS**, BY RETRACTION: THE GATE FOR `p533`'S BROKEN TABLE HAS EXISTED SINCE `p277`, GRADES THE DEFECT **BY NAME**, AND WAS SIMPLY NOT RUN — AND THE REPLACEMENT INSTRUMENT THIS PASS WROTE BEFORE CHECKING WAS **WORSE**, AND WAS DELETED RATHER THAN COMMITTED.**
 
 ### 🟢 `Gap 533-A` — CLOSED (on its named scope)

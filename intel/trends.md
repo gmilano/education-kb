@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p534` · 2026-10-29.** **Twenty** trends. Each one is stated so it could be
+**Pass `p535` · 2026-10-29.** **Twenty-one** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -23,6 +23,12 @@ trend is rewritten rather than quietly restated.
 > were not re-evidenced this pass and stand on their recorded sourcing.
 > 🟢 **Trend 2 gained hard numbers:** `DeepTutor` **49,216★** and `OpenMAIC`
 > **41,756★**, API-exact rather than rounded.
+
+> 🆕 **`p535` added Trend 21 — the procurement gate is becoming causal evidence** — and
+> re-checked nothing else: this pass's supply legs returned **zero** unfiled agents, so
+> no carried trend gained or lost evidence from them. Trends 1–20 stand on their
+> recorded sourcing. 🔴 **Trend 21 is deliberately filed as single-channel**, because
+> every host carrying its primary is unreachable from this session.
 
 ## 1. The governance gap is the market
 
@@ -653,6 +659,61 @@ gated address set produce substantially the same top ten. 🔵 That comparison i
 one run of
 [`../ingest/promotion-rank.py`](../ingest/promotion-rank.py) with a second sort
 key, and it has never been done.
+
+## 21. 🆕 The procurement gate is becoming **causal evidence**, and the open-source shelf has none
+
+**The claim.** Through 2026 the binding constraint on selling AI into education stops
+being capability or compliance and becomes **proof that learning improved** — and
+because none of the open-source projects on this base carries such proof, the studio
+that ships *measurement* alongside the agent wins the engagement over the studio that
+ships a better agent.
+
+**The evidence, and it is one channel.** A coalition reported as **140+ organisations**
+(the Alliance for Learning Innovation) published a report on **2026-10-15** urging
+Congress and the administration to fund research into whether AI tools actually help
+students learn. The review behind the push is reported as finding that of **800+ K-12
+AI studies**, only about **20 produced strong causal evidence of learning impact**
+(attributed to the **Stanford Accelerator for Learning**). Alongside it, HolonIQ's 2026
+outlook holds that systems increasingly *"expect evidence that products improve learning
+quality, persistence, well-being, or job-relevant skills"*, and **1EdTech** reports
+institutions standing up evaluation processes rather than pilots.
+
+🔴 **Single-channel, and declared as such.** `edweek.org`,
+`acceleratelearning.stanford.edu`, `aasa.org`, `holoniq.com` and
+`campustechnology.com` are **all `ENOTFOUND` or 000** from this session
+([`../evidence/channel-allowlist.2026-10-29-p535.tsv`](../evidence/channel-allowlist.2026-10-29-p535.tsv)),
+so the 800/20 ratio is a search-backend report of a review this base **has not read**.
+Treat the *ratio* as indicative and the *direction* as the trend.
+
+**What this adds to Trend 3, which it does not replace.** Trend 3 says pedagogy is
+becoming measurable and almost nobody is measuring it — an observation about **supply**.
+This is the **demand** half, and it is newer and harder: the people with the money have
+started asking for causal evidence by name, in the same year venture funding into the
+sector fell ~**89%** from peak (see [`market.md`](market.md)). 🔵 Scarce capital plus an
+evidence bar is the combination that kills feature-led pitches.
+
+**Why it lands on the open-source shelf specifically.** Of the agents filed in
+[`../agents/top.md`](../agents/top.md), the ones with any evaluation apparatus at all are
+the minority: [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (**MIT**, 274★) carries
+BKT and came out of a university lab, [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai)
+(**MIT**, 0★) ships RAG evaluation with LangSmith/PostHog/Opik tracing, and
+[`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better)
+(**MIT**, 4★) is built around an eval harness. 🔴 **The 49.7k★ flagship,
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor), is a tutoring system, not a
+trial** — which is not a criticism of it and is exactly the gap a buyer will probe.
+🟢 **This is Trend 20 again from the demand side**: the repositories with the
+measurement apparatus are the ones with no stars.
+
+**How to disconfirm it.** Any of these would falsify or blunt it: a 2027 procurement in
+which an AI-in-education award is made with no efficacy requirement in the tender; the
+ALI push failing to produce appropriated research funding; a flagship open-source
+education agent publishing a randomised trial and *not* gaining adoption from it; or
+evidence that buyers accept vendor-run studies, in which case the gate is **marketing**,
+not evidence, and the studio play is different.
+
+**What a studio does about it on Monday.** Ship the measurement as a first-class
+component of the engagement, not a report at the end — see `P571` in
+[`../compose/patterns.md`](../compose/patterns.md).
 
 ## Counter-signals worth holding
 

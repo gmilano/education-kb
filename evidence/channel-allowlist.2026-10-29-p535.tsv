@@ -1,0 +1,24 @@
+# p535 2026-10-29 — host reachability by channel. Refines p534's channel-asymmetry read.
+# p534 concluded "github.com is 403 to curl and 200 through WebFetch" — correct, and NOT generalisable.
+# Tested this pass: WebFetch resolves github.com only. Every non-GitHub host is ENOTFOUND (outside session allowlist).
+host	channel	result	note
+github.com	curl (inline)	403	proxy session gate, JSON body naming add_repo
+api.github.com	curl (inline)	403	same gate; "GitHub access to this repository is not enabled for this session"
+github.com	WebFetch	200	full repo page incl. stars, licence label, release, archive state
+raw.githubusercontent.com	curl (inline)	200	licence title block readable; used for open-learning-exchange/planet
+www.oecd.org	WebFetch	ENOTFOUND	TALIS 2024 primary — NOT readable from this session
+school-education.ec.europa.eu	WebFetch	ENOTFOUND	EC teacher AI survey primary — NOT readable
+www.eunews.it	WebFetch	ENOTFOUND	EC 29.7% CPD figure secondary — NOT readable
+www.edweek.org	WebFetch	ENOTFOUND	ALI coalition report coverage — NOT readable
+worldassessmentcouncil.org	WebFetch	ENOTFOUND	EdTech funding -89% — NOT readable
+edtechinnovationhub.com	WebFetch	ENOTFOUND	UK GBP600m package — NOT readable
+acceleratelearning.stanford.edu	WebFetch	ENOTFOUND	Stanford causal-evidence review — NOT readable
+ed.stanford.edu	curl (inline)	000	blocked
+www.future-ed.org	curl (inline)	000	blocked
+www.multistate.us	curl (inline)	000	blocked
+www.iesalc.unesco.org	curl (inline)	000	blocked — the Gap 242 instrument, blocked for a fourth pass
+www.unesco.org	curl (inline)	000	blocked
+alliance4learninginnovation.org	curl (inline)	000	blocked
+www.aasa.org	curl (inline)	000	blocked
+campustechnology.com	curl (inline)	000	blocked
+www.holoniq.com	curl (inline)	000	blocked

@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p534` · 2026-10-29.** Every platform below is a real, running system that
+**Pass `p535` · 2026-10-29.** Every platform below is a real, running system that
 institutions already operate, with its licence read from **the licence file's own
 title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
 carried for two passes — "`github.com` returns HTTP 403 through the session
@@ -203,6 +203,7 @@ MIT repository**, and no row here pointed at it. Registered as `Gap 533-A`.
 
 | Platform | Repo | Licence | Where AI attaches |
 |---|---|---|---|
+| 🆕 **Planet Learning** | [open-learning-exchange/planet](https://github.com/open-learning-exchange/planet) | 🔴 **AGPL-3.0** · 70★ | **Do not fork; attach out-of-process over HTTP.** Angular + CouchDB, by Open Learning Exchange. Its distinguishing property is **peer-to-peer CouchDB replication between community servers** rather than sync to a cloud — so the agent cannot assume a central store, and anything it writes back (mastery state, feedback) has to tolerate merge on reconnection. 🔴 Licence read from the title block on `master`; **`main` is 404**, so licence readers keyed to `main` would score this repo as *no licence at all*. |
 | 🆕 **Project NOMAD** | [Crosstalk-Solutions/Project-NOMAD](https://github.com/Crosstalk-Solutions/Project-NOMAD) | 🟢 **Apache-2.0** · 🔴 **41.3k★** | Fork it, or deploy it as-is and attach. A **self-contained, offline-first knowledge and education server** — *"Knowledge That Never Goes Offline"* — that bundles content, tooling **and a local AI assistant** onto one Debian/Ubuntu box (≈5 GB disk, <1 GB RAM for the server itself; the offline corpus is what fills a drive). Terminal-based install, no cloud dependency at run time. |
 
 > 🟢 **Why this row changes the shape of the file.** Every other platform here
@@ -215,6 +216,18 @@ MIT repository**, and no row here pointed at it. Registered as `Gap 533-A`.
 > runs on plus the local assistant. That pairing is the deciding architecture for
 > **LATAM** rural and **Africa** deployments, and it is also the honest answer
 > whenever a client's connectivity assumption is weaker than a demo's.
+>
+> 🆕 **`p535` adds the third row, and the class is now a comparison rather than a bet.**
+> [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet)
+> (**AGPL-3.0**, 70★) was **the only unfiled address returned by any of this pass's eight
+> search legs** — 39 of 40 were already here. 🔵 **It is not a Kolibri substitute, it is a
+> different topology**: Kolibri syncs learners to a local server, Planet replicates
+> *between* community servers, which is the right shape when there are many small sites
+> and no reliable centre. 🔴 **The grant splits the class**: Kolibri **MIT** and NOMAD
+> **Apache-2.0** can be forked and shipped; Planet is **AGPL-3.0**, so it stays a
+> deployed dependency the agent talks to over HTTP. 🟢 Offline-first is now the only
+> class in this file with two permissive options *and* a network-copyleft one — which
+> makes it the easiest class in which to give a client a real licence choice.
 >
 > 🔴 **It was unfiled for 11 passes.** NOMAD came off `p532`'s ranked promotion
 > queue, not off a search — this base had described it eleven separate times and

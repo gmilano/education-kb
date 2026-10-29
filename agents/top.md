@@ -6,9 +6,38 @@ updated: 2026-10-29
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p534` · 2026-10-29.** **Thirty-six** real agents, every row read
+**Pass `p535` · 2026-10-29.** **Thirty-six** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
+
+> 🔴 **`p535` adds no rows, and that is the pass's finding rather than its
+> apology.** All eight search legs ran — four global (open-source agents, GitHub
+> trending, vertical platforms, industry trends) and all four regional — and
+> returned **40 distinct GitHub addresses, 39 of which were already filed here**.
+> The fortieth,
+> [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet)
+> (AGPL-3.0, 70★), is a **platform**, not an agent, and is filed on
+> [`../verticals/solutions.md`](../verticals/solutions.md). Row-by-row census:
+> [`../evidence/address-diff.2026-10-29-p535.tsv`](../evidence/address-diff.2026-10-29-p535.tsv).
+> 🟢 **Eight consecutive passes of generic search have now yielded one curriculum
+> and one platform between them**, while the instruments that *did* yield were org
+> enumeration (`p534`), licence-byte re-reads (`p533`) and — this pass — **reasoning
+> from a demand finding to a missing capability layer** (three permissive
+> causal-inference repos, [`../repos/foundations.md`](../repos/foundations.md)
+> §efficacy). → `Gap 535-A`: the query set is exhausted; retire it or replace it.
+>
+> 🟢 **Re-measured first-hand this pass**, flagship row confirmed and moving up:
+> **DeepTutor 49.7k★**, Apache-2.0, **v1.7.0 dated 2026.10.28**, 3 155 commits.
+> 🔴 **And three rows refute the scheduler log that drives this job, not this file:**
+> `globant-kb`'s `rotation.json` carried `educhain ~12k★`, `OATutor ~1.5k★` and
+> `OpenTutor ~900★`; measured today they are **387★**, **274★** and **156★** — this
+> file's own numbers were right, the upstream log was inflated up to **31×**, and it
+> is corrected upstream this pass.
+>
+> 🔴 **Table-integrity check ran and passed**: `p534` reported a blank line at
+> `top.md:197` splitting the 34-row table and compiling a data row as a column
+> header. Re-audited this pass — **no table splits, and every header-like row is a
+> real header followed by its separator**. The defect is fixed, verified, not assumed.
 
 > 🟢 **`p534`: two rows added, and the headline is that `Gap 533-A` was right
 > about the shape and wrong about the scale.** The gap said this base's "is it

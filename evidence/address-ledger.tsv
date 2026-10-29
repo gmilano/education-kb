@@ -3162,3 +3162,7 @@ ZYT64/KuroTutor	p470	MIT	-	2026-10-27	1	1
 zyx1121/nycu	p132	MIT	-	2026-10-11	1	1
 Zyzzyva0381/answer-paper	p86	unstated	-	2026-10-09	1	1
 ZZombie04/hwpx_new	p238	MIT	-	2026-10-16	1	1
+open-learning-exchange/planet	p535	AGPL-3.0 (title block, master)	verticals/solutions.md	2026-10-29	1	1
+py-why/dowhy	p535	MIT (title block)	repos/foundations.md,compose/patterns.md	2026-10-29	1	1
+py-why/EconML	p535	MIT (title block; page labels none)	repos/foundations.md,compose/patterns.md	2026-10-29	1	1
+comet-ml/opik	p535	Apache-2.0 (title block)	repos/foundations.md,compose/patterns.md	2026-10-29	1	1

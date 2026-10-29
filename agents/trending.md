@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p535` — `2026-10-29` — **🔴 THE SUPPLY LEGS RETURN **ZERO** UNFILED AGENTS — 39 OF 40 ADDRESSES ACROSS EIGHT SEARCH LEGS WERE ALREADY HERE, AND THE ONE THAT WAS NOT IS A PLATFORM, NOT AN AGENT. 🟢 THAT IS A MEASUREMENT, NOT A SHRUG: THE DIFF IS FILED ROW BY ROW. 🔴 AND `p534`'S CHANNEL CORRECTION **DOES NOT GENERALISE** — `WebFetch` RESOLVES `github.com` AND **NOTHING ELSE**: `oecd.org`, `ec.europa.eu`, `edweek.org` AND SEVEN MORE ARE `ENOTFOUND`, SO EVERY PRIMARY-SOURCE READ THIS BASE HAS PRICED AS "LOW COST" FOR FOUR PASSES IS **IMPOSSIBLE FROM THIS SESSION**. 🟢 THE DEMAND SIDE MOVED INSTEAD, AND IT MOVED ON THE CELL THAT HAD FAILED TWELVE TIMES.**
+
+### 🔴 The supply result: eight legs, forty addresses, one unfiled — and it is not an agent
+
+This pass ran the prescribed four global legs (open-source agents · GitHub trending ·
+vertical platforms · industry trends) **and** all four regional legs, then diffed every
+address returned against this repository before writing anything. Census:
+[`../evidence/address-diff.2026-10-29-p535.tsv`](../evidence/address-diff.2026-10-29-p535.tsv).
+
+| Leg yield | Count |
+|---|---|
+| Distinct GitHub addresses returned across eight legs | **40** |
+| Already filed on this base | 🔴 **39** |
+| Unfiled | 🟢 **1** — [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet), **AGPL-3.0**, **70★** |
+| Unfiled **agents** | 🔴 **0** |
+
+🔵 **Why this is worth a section rather than a sentence.** `p534` called the search
+drought "seven passes, ending by exactly one address, and it is a curriculum". `p535`
+makes it eight, and the one address is a **learning platform** for low-connectivity
+deployments — filed to
+[`../verticals/solutions.md`](../verticals/solutions.md), not here, because it is not an
+agent. 🔴 **Eight consecutive passes in which the agent shelf grew by nothing from
+search means the generic query set is exhausted**, and the two instruments that *did*
+yield in the last two passes were both **org enumeration** (`p534`) and **licence-byte
+re-reads** (`p533`) — neither of them a search. → `Gap 535-A`.
+
+### 🟢 Re-measured this pass, first-hand, and three of them refute the *rotation log* that scheduled this run
+
+Every address above was read through `WebFetch` today. The curated files here were
+**right**; the `globant-kb` rotation log that drives this job was **wrong**, and by an
+order of magnitude:
+
+| Address | Measured `p535` | Rotation log claimed | Verdict |
+|---|---|---|---|
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | **387★** · MIT | `~12k★` | 🔴 inflated **31×** |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **274★** · MIT | `~1.5k★` | 🔴 inflated **5.5×** |
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | **156★** · MIT | `~900★` | 🔴 inflated **5.8×** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **49.7k★** · Apache-2.0 · **v1.7.0 dated 2026.10.28** | `~24k★` | 🟡 stale, and the direction is *up* |
+
+🔵 The correction is logged upstream in `rotation.json` this pass, because a scheduler
+note that overstates a 387★ package as a 12k★ one is how a pitch gets built on a
+project that does not exist at that scale.
+
+### 🔴 The instrument finding: `WebFetch` is a GitHub channel, not a web channel
+
+`p534` established that `github.com` is **403 to `curl` and 200 through `WebFetch`** and
+wrote it up as a recovered capability (shelf rule 15). 🟢 **That read is confirmed again
+this pass** — all forty rows above came through it. 🔴 **But the generalisation it
+invited is false**, and this pass tested it rather than assuming:
+
+| Host | `curl` | `WebFetch` |
+|---|---|---|
+| `github.com` | 403 | 🟢 **200** |
+| `raw.githubusercontent.com` | 🟢 **200** | — |
+| `www.oecd.org` · `school-education.ec.europa.eu` · `www.edweek.org` · `worldassessmentcouncil.org` · `edtechinnovationhub.com` · `acceleratelearning.stanford.edu` | 000 | 🔴 **`ENOTFOUND`** |
+| `iesalc.unesco.org` · `unesco.org` · `future-ed.org` · `multistate.us` · `holoniq.com` · `campustechnology.com` · `aasa.org` | 000 | — |
+
+Matrix: [`../evidence/channel-allowlist.2026-10-29-p535.tsv`](../evidence/channel-allowlist.2026-10-29-p535.tsv).
+
+🔴 **This is the fourth pass to mis-price the same remedy.** `Gap 242` has been costed
+as *"low cost — obtain the primary report and read its regional definitions"* three
+times, and `p534` registered `Gap 534-H` on the premise that blocked capabilities had
+gone un-retested. 🟢 **Retested here, the answer is split**: GitHub was never blocked,
+and **every non-GitHub primary is unreachable at any price from this session**. The
+remedy for `242`, `534-F` and every "read the primary" gap on this base is therefore not
+budget — it is a **network-allowlist change**, and no pass should price it as research
+again. → `Gap 535-B`.
+
+---
+
 ## 🆕 `p534` — `2026-10-29` — **🟢 `Gap 533-A` CLOSED ON ITS NAMED SCOPE: NINE ORGS ENUMERATED, AND MIT OPEN LEARNING TURNS OUT TO SHIP **THREE** AI REPOSITORIES WHERE THIS BASE HELD ONE — `mitodl/learn-ai` IS **MIT, 816 COMMITS, 0★** AND SERVES FOUR EDUCATION AGENTS. 🔴 THE BLOCKER THAT MADE ORG ENUMERATION LOOK IMPOSSIBLE WAS THIS BASE'S OWN WRONG SENTENCE: `github.com` IS **403 TO `curl` AND 200 THROUGH WEBFETCH**. 🔴 A BLANK LINE AT `top.md:197` HAS BEEN SPLITTING THE FLAGSHIP 34-ROW TABLE AND COMPILING A DATA ROW AS A COLUMN HEADER. 🟢 THE SEVEN-PASS SEARCH DROUGHT ENDS — BY EXACTLY ONE ADDRESS, AND IT IS A CURRICULUM. 🟢 TWO SHELF ROWS, BOTH REGIONALLY PLACED; THREE FOUNDATION ROWS.**
 
 ### 🔴 The find: a university's production agent stack, 0★, invisible to every instrument here
@@ -22100,7 +22170,7 @@ virtual AI tutor."* And the README's link for Iris points at **`artemis.cit.tum.
 `github.com/ls1intum/Iris` is a name alias that silently resolves to `Pyris`.
 
 🔴 **The cost is not cosmetic, and it landed on the shelf a delivery team actually opens.**
-[`compose/patterns.md`](../patterns.md) named *"`Iris` + `Pyris`"* as **two components to compose** in
+[`compose/patterns.md`](../compose/patterns.md) named *"`Iris` + `Pyris`"* as **two components to compose** in
 **six** places — a stack diagram, a region playbook, a jurisdiction playbook and three recipes. A
 studio following them clones the same 203 files twice and wires a microservice to itself. 🟢 **All
 six are corrected**, along with [`verticals/solutions.md`](../verticals/solutions.md)'s Sunbird stack

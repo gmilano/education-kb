@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p535` — `2026-10-29` — **🟢 ONE NEW ADDRESS IN EIGHT PASSES OF SEARCH, AND IT IS THE ONE PLATFORM CLASS THIS BASE KEPT ASSERTING WITHOUT A ROW: OFFLINE-FIRST FOR LOW-CONNECTIVITY DEPLOYMENT. [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet) — **AGPL-3.0**, **70★**, LICENCE READ FROM THE TITLE BLOCK. 🔴 ITS `main` BRANCH IS **404**; THE LICENCE LIVES ON `master`, WHICH IS A LIVENESS SIGNAL THIS BASE'S READERS WOULD HAVE MISSED. 🟢 AND THREE FOUNDATION ROWS THAT NO SEARCH LEG RETURNED — THEY CAME OFF THE **DEMAND** FINDING: THIS BASE ARGUES IN TREND 21 THAT CAUSAL EVIDENCE IS BECOMING THE PROCUREMENT GATE AND HELD **NOT ONE CAUSAL-INFERENCE LIBRARY**. [`py-why/dowhy`](https://github.com/py-why/dowhy) **MIT 8.4k★**, [`py-why/EconML`](https://github.com/py-why/EconML) **MIT 4.8k★**, [`comet-ml/opik`](https://github.com/comet-ml/opik) **Apache-2.0 23.0k★** — ALL THREE UNFILED, ALL THREE PERMISSIVE. 🔴 THE INFRASTRUCTURE LEG ITSELF RETURNED SIX ADDRESSES AND ALL SIX WERE ALREADY HERE.**
+
+### 🟢 Filed this pass
+
+| Address | Grant (title block) | Stars | Fitness | Channel that found it |
+|---|---|---|---|---|
+| [`open-learning-exchange/planet`](https://github.com/open-learning-exchange/planet) | 🔴 **AGPL-3.0** — read from `raw.githubusercontent.com/.../master/LICENSE`, title line `GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007` | **70** | `reference-implementation` | vertical-platform search leg |
+
+**What it is.** Planet Learning — an Angular + CouchDB learning system built for
+**offline and intermittently-connected deployment**, by Open Learning Exchange.
+Filed to [`../verticals/solutions.md`](../verticals/solutions.md) §offline, beside
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (**MIT**, 1.2k★).
+
+🔵 **Why it matters despite 70★, and the shape is one this base has a trend for.**
+Trend 20 holds that in this sector **popularity is anti-correlated with fitness**. The
+offline-first class is where that bites hardest: it serves the deployments with the least
+procurement budget and the most need, and Kolibri was until now this base's *only* row
+for it. 🔴 **CouchDB replication is the architectural point** — Planet syncs
+peer-to-peer between community servers rather than to a cloud, which is the one
+topology an agent layer cannot assume away. For a LATAM or Africa engagement where
+connectivity is the binding constraint, a two-row class is a comparison; a one-row class
+is a bet.
+
+🔴 **The AGPL-3.0 grant decides how you attach**, and it is the same rule this base
+already applies to Canvas and Open edX: do not fork, do not link in-process. The agent
+runs **out-of-process** and talks to it over HTTP, and the permissive code stays yours.
+
+### 🔴 The `main`/`master` read, which is a liveness finding and not a trivium
+
+`raw.githubusercontent.com/open-learning-exchange/planet/main/LICENSE` is **404**;
+`.../master/LICENSE` is **200**. 🟡 Every licence-byte instrument on this base that
+assumes `main` would have recorded this repository as **"no licence at all"** — which is
+Trend 8's named failure mode, and would have been a false positive produced by the
+reader, not the repository. 🔵 A repo still on `master` in late 2026 is also a dating
+signal worth carrying beside the star count. → `Gap 535-C`.
+
+### 🟢 The three rows the search legs did **not** find, and how they were found instead
+
+🔵 **Provenance matters here, so it is stated first: no query returned these.** They were
+derived from this pass's *demand* finding — the reported review in which **only ~20 of
+800+ K-12 AI studies produced strong causal evidence** ([`../intel/trends.md`](../intel/trends.md)
+Trend 21). 🔴 **Asked what this base could offer a buyer who demands causal evidence, the
+answer was nothing: zero causal-inference libraries filed across ~535 passes**, while
+`openfun/ralph` (xAPI capture) has been held **157 times**. The base could measure
+*events* and could not estimate an *effect*.
+
+| Address | Grant (title block) | Stars | Fitness | How it was found |
+|---|---|---|---|---|
+| [`py-why/dowhy`](https://github.com/py-why/dowhy) | 🟢 **MIT** — `MIT License / Copyright (c) PyWhy contributors` | **8.4k** | `dependency` | derived from Trend 21, not a search leg |
+| [`py-why/EconML`](https://github.com/py-why/EconML) | 🟢 **MIT** — same title block | **4.8k** | `dependency` | same |
+| [`comet-ml/opik`](https://github.com/comet-ml/opik) | 🟢 **Apache-2.0** — `Copyright (c) Comet ML, Inc` then `Apache License Version 2.0` | **23.0k** | `infrastructure` | named inside `mitodl/learn-ai`'s tracing stack, filed `p534`, and never filed itself |
+
+🔴 **`EconML` is this base's Trend 7 and Trend 8 running in reverse, and it is worth a
+sentence.** Its GitHub page **names no licence at all** — the sidebar links a `LICENSE`
+file without labelling it, which is precisely the signal Trend 8 treats as the "no
+licence" failure mode. 🟢 **The bytes say `MIT License`.** So the page under-reports the
+grant where this sector usually over-reports it, and a reader that trusts the label
+would have discarded a permissive 4.8k★ library. → the licence rule holds: **read the
+title block, never the label.**
+
+🟢 **`opik` is the more embarrassing find.** `p534` filed
+[`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) and wrote down that it traces
+with *"LangSmith/PostHog/Opik"*. 🔴 **This base therefore described Opik by name, as part
+of a university's production education-agent stack, and never filed the 23.0k★
+Apache-2.0 repository it was describing** — the same pattern that left Project NOMAD
+unfiled for eleven passes. → `Gap 535-E`.
+
+**Where they are filed:** [`foundations.md`](foundations.md), new §efficacy layer, and
+wired in [`../compose/patterns.md`](../compose/patterns.md) `P571`.
+
+### 🟡 Re-measured, nothing new: the infrastructure leg is saturated
+
+| Address | Measured `p535` | Grant |
+|---|---|---|
+| [`ollama/ollama`](https://github.com/ollama/ollama) | 185.2k★ | MIT |
+| [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | 157.2k★ | 🔴 **"Open WebUI License" — NOT OSI**, branding-retention clause |
+| [`infiniflow/ragflow`](https://github.com/infiniflow/ragflow) | 93.1k★ | Apache-2.0 |
+| [`docling-project/docling`](https://github.com/docling-project/docling) | 69.8k★ | MIT |
+| [`mem0ai/mem0`](https://github.com/mem0ai/mem0) | 68.1k★ | Apache-2.0 |
+| [`langchain-ai/langgraph`](https://github.com/langchain-ai/langgraph) | 44.1k★ | MIT |
+| [`qdrant/qdrant`](https://github.com/qdrant/qdrant) | 35.3k★ | Apache-2.0 |
+
+🟢 **Two canonical-name reads worth recording**, because a stale address in a pitch deck
+is a dead link: [`openedx/edx-platform`](https://github.com/openedx/edx-platform)
+**redirects to** `openedx/openedx-platform`, and
+`danny-avila/LibreChat` **redirects to**
+[`LibreChat-AI/LibreChat`](https://github.com/LibreChat-AI/LibreChat) (**MIT**, 46.5k★).
+Both old forms still appear in this base's history.
+
+---
+
 ## 🆕 `p534` — `2026-10-29` — **🟢 THREE FOUNDATION ROWS, ALL THREE OFF AN ORG ENUMERATION THIS BASE BELIEVED IT COULD NOT RUN. 🔴 THE AI AGENT LAYER OF A VERTICAL PLATFORM FILED HERE THREE TIMES WAS **ARCHIVED SEVEN DAYS AGO** AND NOTHING NOTICED: `frappe/flow_client`, AGPL-3.0, 89★, `Public archive` 2026-10-22. 🔴 THE *OFFICIAL* OPEN EDX AI PLUGIN IS **AGPL-3.0** — "EXTEND OPEN EDX" READS PERMISSIVE BECAUSE `XBlock` IS APACHE-2.0, AND THE AI PLUGIN IS NOT. 🔴 THIS FILE'S HEADLINE COUNT WAS A FULL PASS STALE AND IS NOW ARITHMETIC, NOT AN ASSERTION. 🟢 ONE SEARCH-SOURCED ADDRESS IN SEVEN PASSES, FILED AS A **CURRICULUM**.**
 
 ### 🟢 What was filed, and where it came from

@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Compose Patterns — Education
 
-**Pass `p534` · 2026-10-29.** **Twenty-three** recipes. Every component named below
+**Pass `p535` · 2026-10-29.** **Twenty-four** recipes. Every component named below
 was read from its repository page, and **every licence was read from the licence
 file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
 this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
@@ -1207,3 +1207,97 @@ copyleft 52★ one.
 **Shape:** 6–8 weeks for two platforms, +2 per additional platform once the
 façade exists. **Region:** Global; North America and EMEA first, where
 multi-LMS estates and Blackboard/Brightspace share are concentrated.
+
+---
+
+## 🆕 P571 — The efficacy trial, as a shippable component (North America first; EMEA, LATAM)
+
+**Brief.** A client has, or wants, an AI tutor, and the question that will decide renewal
+is no longer "does it work?" but **"can you show it caused learning?"** This pattern
+produces a defensible effect estimate as a **deliverable of the build**, not a study
+bolted on afterwards.
+
+🔵 **Why it is separate from [`P552`](#p552--pedagogy-evaluation-harness-the-differentiator),
+which it depends on.** P552 answers *does this model know how to teach* — construct
+validity, model selection, a CI gate on teaching quality. **P571 answers a different
+question**: *did this deployment change outcomes for these students, against a
+counterfactual.* A buyer can accept P552's benchmark scores and still have nothing to
+show a ministry, a school board or a funder. Run P552 at model-selection time; run P571
+around the deployment.
+
+**The demand signal this is built for.** A coalition reported as **140+ organisations**
+asked US federal funders on **2026-10-15** to fund exactly this kind of research, on the
+back of a review reported to find only ~**20 of 800+** K-12 AI studies carrying strong
+causal evidence ([`../intel/trends.md`](../intel/trends.md) Trend 21). 🔴 Single-channel
+claim — but the *direction* is corroborated by HolonIQ (systems expecting evidence of
+improved learning) and 1EdTech (institutions standing up evaluation processes).
+
+| Role | Component | Licence |
+|---|---|---|
+| LMS of record (**not forked**) — cohorts, sections, gradebook | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | AGPL-3.0 · 6.9k★ |
+| Assignment + roster seam | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | **MIT** · 308★ |
+| The intervention (tutor under test) | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) · v1.7.0 (2026.10.28) | **Apache-2.0** · 49.7k★ |
+| Mastery ground truth (BKT) | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | **MIT** · 274★ |
+| Retention outcome, principled | [open-spaced-repetition/py-fsrs](https://github.com/open-spaced-repetition/py-fsrs) | **MIT** · 519★ |
+| Longitudinal event capture (xAPI LRS) | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** · 51★ |
+| Agent-version provenance for every event | 🆕 [comet-ml/opik](https://github.com/comet-ml/opik) | **Apache-2.0** · 23.0k★ |
+| Causal assumptions, stated and refuted | 🆕 [py-why/dowhy](https://github.com/py-why/dowhy) | **MIT** · 8.4k★ |
+| Heterogeneous effects — *who* it helped | 🆕 [py-why/EconML](https://github.com/py-why/EconML) | **MIT** · 4.8k★ |
+| Teaching-quality gate, upstream | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** · 13★ |
+
+**Wiring, in the order it has to happen.**
+
+1. **Pre-register the primary outcome before any code ships.** One outcome, named, with
+   its measurement window — e.g. *mastery on the OATutor BKT skill model at 30 days*,
+   not "engagement". 🔴 Everything after this step is cheap; this step is what separates
+   the 20 credible studies from the 780.
+2. **Assign at the level the institution already groups by** — Canvas **sections**, read
+   through `canvas-mcp`. Cluster assignment by section, not by student, because students
+   talk to each other and contaminate a student-level control arm. The control arm is
+   business-as-usual teaching, **not** a degraded tutor.
+3. **Stamp every event with the agent version.** `opik` traces model, prompt and
+   retrieval version; that id travels into each xAPI statement written to `ralph`. 🔵
+   Without this, a mid-trial prompt change silently makes the two arms three arms, and
+   the estimate is unrecoverable.
+4. **Capture outcomes through `ralph`** for both arms, from the LMS and the tutor alike,
+   so the control arm is measured by the same instrument as the treatment arm.
+5. **Estimate with `dowhy` first, not last.** State the graph — assignment, prior
+   attainment, teacher, section size — and run its **refutation tests** (placebo
+   treatment, random common cause). A model that fails them is reported as failing them.
+6. **Then `EconML` for the heterogeneous effect**, pre-specifying the subgroup that
+   matters: prior-attainment quartile. 🟢 **This is usually where the finding is.** A
+   null average with a real gain in the bottom quartile is the result that renews a
+   contract, and an average-only analysis throws it away.
+7. **Hand over the estimation code with the model.** Both libraries are MIT, so the
+   client can re-run and audit the claim themselves — which is the difference between
+   evidence and a vendor assertion.
+
+🔴 **The licence boundary is unchanged and still decides the architecture.** Canvas stays
+AGPL-3.0 and **unforked**; the tutor, the LRS and the whole estimation stack are
+permissive and out-of-process, talking over MCP, LTI 1.3 and xAPI. Nothing in this
+pattern links copyleft code in-process.
+
+🔴 **State the honest limits in the proposal, because a buyer who asks for causal
+evidence will ask these.** A single-institution cluster trial has few clusters and wide
+intervals; it will rarely produce a statistically significant average effect in one term.
+🟢 **Sell it as what it is**: a pre-registered design, an auditable pipeline and an
+honest interval — which is already more than the field's 780 non-credible studies offer,
+and it compounds across terms.
+
+**Regional fit.**
+- **North America** — the live demand. Federal research funding is being actively lobbied
+  for, **134 AI-education bills across 31 states**, and four states now mandate
+  district-level AI policy; a district that must adopt a written policy needs evidence to
+  write it against.
+- **EMEA** — the compliance fit. The EU AI Act makes education **assessment** high-risk,
+  and an effect estimate with stated assumptions is the natural evidence artefact for
+  that file. 🔵 And the opening is teacher-side: **29.7%** of EU teachers have had any AI
+  CPD and **53%** have had none and report no strong need for it, so the trial's control
+  arm is genuinely business-as-usual.
+- **LATAM** — the governance gap as the sale. UNESCO IESALC: **87%** of surveyed
+  institutions use AI, **26%** have a formal strategy. An institution with no strategy
+  and a deployment in flight is one that can be sold the measurement *first*.
+
+**Shape:** 3–4 weeks to stand up the pipeline if P552 already exists, then one academic
+term for the trial window. **Region:** North America first; EMEA where the AI Act file
+needs an evidence artefact; LATAM where the governance gap is the opening.

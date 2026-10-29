@@ -1,0 +1,42 @@
+# p535 2026-10-29 — every address this pass's four global + four regional search legs returned, diffed against this base.
+# Measured first-hand via WebFetch (github.com = 200 through that channel). filed_already = appears in this repo's .md/.tsv.
+address	stars_measured_p535	grant_measured	filed_already	note
+HKUDS/DeepTutor	49.7k	Apache-2.0	yes	v1.7.0 dated 2026.10.28; 3155 commits
+microsoft/ai-agents-for-beginners	78.1k	MIT	yes	curriculum, 18 lessons
+ollama/ollama	185.2k	MIT	yes	infrastructure
+open-webui/open-webui	157.2k	Open WebUI License (NOT OSI)	yes	branding-retention clause; licence trap
+infiniflow/ragflow	93.1k	Apache-2.0	yes	infrastructure
+docling-project/docling	69.8k	MIT	yes	document ingestion
+mem0ai/mem0	68.1k	Apache-2.0	yes	learner memory
+microsoft/autogen	61.6k	MIT + CC-BY-4.0	yes	archived / unmaintained per repo page; base already holds this at p523
+LibreChat-AI/LibreChat	46.5k	MIT	yes	canonical name; danny-avila/LibreChat redirects here
+langchain-ai/langgraph	44.1k	MIT	yes	infrastructure
+qdrant/qdrant	35.3k	Apache-2.0	yes	infrastructure
+huggingface/smolagents	30.1k	Apache-2.0	yes	agent framework
+bigbluebutton/bigbluebutton	9.3k	LGPL-3.0	yes	synchronous classroom
+openedx/openedx-platform	8.2k	AGPL-3.0	yes	openedx/edx-platform redirects to this name
+moodle/moodle	7.6k	GPL-3.0	yes	LMS
+oppia/oppia	7.0k	Apache-2.0	yes	only permissive LMS-class core
+instructure/canvas-lms	6.9k	AGPL-3.0	yes	LMS
+panaversity/learn-agentic-ai	4.4k	MIT	yes	curriculum
+frappe/lms	3.4k	AGPL-3.0	yes	LMS
+learningequality/kolibri	1.2k	MIT	yes	offline-first
+sakaiproject/sakai	1.2k	ECL-2.0	yes	LMS
+overhangio/tutor	1.1k	AGPL-3.0	yes	Open edX distribution
+chamilo/chamilo-lms	1.0k	GPL-3.0	yes	LMS
+openeducat/openeducat_erp	901	LGPL-3.0	yes	education ERP/SIS
+open-spaced-repetition/py-fsrs	519	MIT	yes	spaced repetition
+satvik314/educhain	387	MIT	yes	387 stars measured — NOT the ~12k the globant-kb rotation log claimed
+vishalsachdev/canvas-mcp	308	MIT	yes	up to 102-128 tools, 8 agent skills
+CAHLR/OATutor	274	MIT	yes	274 measured — NOT ~1.5k as the rotation log claimed
+zijinz456/OpenTutor	156	MIT	yes	156 measured — NOT ~900 as the rotation log claimed
+h5p/h5p-php-library	152	GPL-3.0	yes	interactive content
+open-learning-exchange/planet	70	AGPL-3.0	NO	THE ONLY UNFILED ADDRESS THIS PASS. Licence read from title block on raw.githubusercontent.com (master branch; main is 404)
+abhijeetgupta23/ai-agent-to-learn-faster-and-better	4	MIT	yes	4 stars
+falkenslab/moodle-mcp	2	MIT	yes	~230 tools, Moodle 4.5 + 5.x
+kaushikgunasekaren/canvas-grader-mcp	1	MIT	yes	grading, human-approval gate before posting
+CharlieCardenasToledo/mcp-canvas-server	unmeasured	unmeasured	yes	51 tools claimed; in the Moodle/Canvas MCP census
+NiccoloSalvini/mcp-moodle-teacher	unmeasured	unmeasured	yes	teacher-side Moodle
+sonstellar969/open-moodle	unmeasured	unmeasured	yes	read-oriented, local models
+G36maid/moodle-mcp	unmeasured	unmeasured	yes	Rust
+triffon/moodle-mcp	unmeasured	unmeasured	yes	in census

@@ -1,0 +1,19 @@
+# p535 2026-10-29 — Gap 534-F (EMEA demand leg) and the APAC adoption-rate blank, attacked with the instrument class the gap named.
+# INSTRUMENT: OECD TALIS 2024 — the SAME survey this base already quotes for LATAM (Brazil 56 / Chile 55 / Colombia 53 / Costa Rica 52 vs OECD 36).
+# READ STATUS: search-backend summary of oecd.org. www.oecd.org is ENOTFOUND on WebFetch from this session, so NO figure below was read from the primary.
+# Population: lower secondary teachers. Figures as reported by the backend, rounded as published.
+region	system	figure	measure	instrument	read_firsthand
+Global	OECD average	~1 in 3 (~33%)	teachers reporting having used AI in their work	TALIS 2024	no
+APAC	Singapore	~75%	teachers using AI in their work	TALIS 2024	no
+EMEA	United Arab Emirates	~75%	teachers using AI in their work	TALIS 2024	no
+EMEA	France	<20%	teachers using AI in their work	TALIS 2024	no
+APAC	Japan	<20%	teachers using AI in their work	TALIS 2024	no
+EMEA	Denmark	~31%	agree AI helps create or improve lesson plans	TALIS 2024	no
+EMEA	Finland	~31%	agree AI helps create or improve lesson plans	TALIS 2024	no
+EMEA	EU (27)	29.7%	teachers who took part in CPD on using AI in teaching	European Commission, Sept 2026 report	no
+EMEA	EU (27)	53%	teachers with no AI CPD and no strong reported need for it	European Commission, Sept 2026 report	no
+EMEA	EU education systems	~two-thirds	systems with AI strategies, guidelines or policy frameworks	European Commission, Sept 2026 report	no
+EMEA	EU (self-selected)	73%	using AI at least partially for lesson planning / materials	EC survey, n=1130, 54% secondary	no
+EMEA	EU (self-selected)	67%	using AI at least partially for preparing assessments	EC survey, n=1130, 54% secondary	no
+EMEA	EU (self-selected)	81%	report using AI "a lot" or "partially"	EC survey, n=1130 — NOT representative, self-selected	no
+EMEA	England	44%	teachers using generative AI for school activities	DfE Technology in schools 2024-25, cited secondhand	no
