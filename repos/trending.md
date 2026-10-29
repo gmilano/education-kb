@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p517` — `2026-10-29`
+
+🔴 **GitHub trending, education slice: thin again — eleventh consecutive window — and this pass
+established *why* the English channel keeps coming back empty.** Every trending-education lead
+returned was **already on these shelves**: `rohitg00/ai-engineering-from-scratch` (#1 on GitHub
+Trending `2026-05-24`), `pguso/agents-from-scratch` (MIT, `ai-education` topic, 796★ as of late
+May 2026), `h9-tect/AI-Roadmaps` (🔴 `UNRESOLVED` on 53 names), `anandpatikat/guru-latihan-dinamis`
+(🇮🇩 exam-prep teacher tools, 🔴 `UNRESOLVED`). 🟢 **Only `rphilipzhang/AI-PhD-S26` (MIT,
+`3643b8eee7a2` @ `main`, ~91★ class) was new, and it is course material.**
+
+🟢 **The trending channel's real yield this window came from Mandarin, not English:**
+
+| Repo | Origin | Licence (from bytes) | ★ / forks | HEAD @ default branch |
+|---|---|---|---|---|
+| [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) | 🇨🇳 | 🟢 **Apache-2.0** (`LICENSE` + `LICENSE.txt`) | **292** / 110 | `21d6a41b89e4` @ **`master`** |
+| [`yqy624/eduagent-digital-workforce`](https://github.com/yqy624/eduagent-digital-workforce) | 🇨🇳 | 🟢 **MIT** | 3 / 1 | `a52bf227145c` @ `main` |
+| [`llm-jp/awesome-japanese-llm`](https://github.com/llm-jp/awesome-japanese-llm) | 🇯🇵 | 🟢 **Apache-2.0** | ~1.4k class | `4fa4630ddbdd` @ `main` |
+
+🔴 **Two channel facts worth recording against future passes:**
+
+1. 🔴 **`curl -sI` is dead for liveness in this session class — 403 on 17/17 repos**, including
+   `portabilis/i-educar` and `THU-MAIC/OpenMAIC`, which `git ls-remote` proves alive. A pass that
+   read 403 as 404 would delete true rows. 🟢 Liveness now comes from `git ls-remote --symref`
+   inside [`ingest/probe-grant.sh`](../ingest/probe-grant.sh).
+2. 🔴 **Trending digests remain unreliable on figures** — the same four-day window reported
+   `DeepTutor` at **42.6K**, **45.2K** and **46K** against **48.0k** on the repo page
+   (`p515`, `p516`). 🟢 Aggregator stars are a discovery signal, never a measurement.
+
+🔴 **`Gap 517-C`, opened this window and material to this shelf:** **Gitee and GitCode are entirely
+unprobed hosts.** `schoolcms` mirrors to Gitee and OSChina, and a Chinese LMS named *CTutor*
+surfaced this pass **only** on `gitcode.com` and could not be resolved to any GitHub address.
+🟡 If licensed APAC education supply exists at scale, it may not be on GitHub at all — which would
+mean this shelf's eleven thin windows are a **host** artifact on top of the language artifact
+`p516` found.
+
+
 ## 🆕 `p516` — `2026-10-29`
 
 🔴 **GitHub trending, education slice: thin again, and the digests are unreliable on figures.**

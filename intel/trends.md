@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p517` — `2026-10-29` — **🟢 THE TREND THIS PASS ADDS IS MEASURABLE AND UNCOMFORTABLE: APAC open-source education supply is ABUNDANT AND TWO-THIRDS UNGRANTED — 8 of 12 repos probed carry no licence on 53 filenames in 14 languages. 🔴 That is a different failure mode from LATAM's, and it changes what "open source" means per region. 🔴 Demand-side trends saturated a TENTH time (~24 facts, 4 new). 🟢 The 2026 market figure is now demonstrably unquotable: a ~3× spread across four estimates read the same day.**
+
+### 🟢 `T517-1` — "Open source" does not mean the same thing in APAC as in LATAM
+
+🟢 **The measurement.** Twelve APAC-origin education repositories, probed this pass with
+[`ingest/probe-grant.sh`](../ingest/probe-grant.sh) — default branch resolved, 53 grant filenames
+across 14 languages:
+
+| outcome | count |
+|---|---|
+| 🟢 permissively licensed (Apache-2.0 / MIT) | **4** |
+| 🔴 **no grant file under any of 53 names** | **8** |
+
+🔴 **So the modal APAC education repository is public, active, feature-complete in its README — and
+carries no licence.** 🟢 **Under default copyright that means it is not usable**, however open it
+looks. 🔵 Examples, each `UNRESOLVED` at its resolved default branch: `EduAgent-Platform`
+(multi-agent orchestration, hybrid RAG, MCP tools), `eduAgent` (PolyU, vector RAG),
+`bridge-ai-for-edu` (**Japan's national LLM project**), two Korean university course repos, one
+Indonesian training repo.
+
+🟢 **Why this is a trend and not an artifact.** It held across **four** independent language legs
+and **three** national ecosystems, and it is the *opposite* of the LATAM pattern, where the supply
+that eight English passes missed turned out to be cleanly licensed (`i-educar` GPL-2.0,
+`bncc-dados` MIT, `bncc-benchmark` MIT + CC BY 4.0, with grants in Portuguese filenames).
+
+🔴 **The forward-looking claim, stated as a claim:** if licensed APAC supply exists at scale it is
+probably **not on GitHub** — `schoolcms` mirrors to Gitee and OSChina, and a Chinese LMS surfaced
+this pass only on `gitcode.com`. 🟡 **Unverified** and logged as `Gap 517-C`; the probe cannot
+reach those hosts today.
+
+### 🟢 `T517-2` — Curriculum-grounding is becoming the product, and it is nationally specific
+
+🔵 **`p516` established curriculum-as-data as shipping** (Brazil's BNCC as MIT open data).
+🟢 **This pass shows the same instinct arriving independently in China, but bound to textbooks
+rather than standards:** `AI_Tutor_Release` / `AI-Tutor` ground answers on **人教版 (PEP) textbook
+PDFs**, with the README specifying that the AI *"prioritises quoting the textbook's original
+wording"*, uses **Socratic questioning rather than giving answers**, and automatically collects the
+knowledge points a student repeatedly gets wrong.
+
+🟢 **The trend: tutors are differentiating on *whose* curriculum they are faithful to**, not on
+model quality. 🔴 **The strategic consequence for a studio is unpleasant and worth saying:** a tutor
+grounded on PEP textbooks does not transfer to BNCC, NCERT or a US state standard without
+re-grounding — so *"an AI tutor"* is not one product, it is one product per curriculum authority.
+🟢 **This is why `bncc-dados`-style curriculum-as-data is the higher-leverage asset**: the standard
+is portable, the textbook corpus is not.
+
+### 🔴 `T517-3` — The 2026 market figure has become unquotable, and the dispersion is the finding
+
+🔴 **Four commercial 2026 estimates, read the same day: $3.7B, $10.6B, $11.4B**, against 2025 bases
+of **$6.4B** and **$8.3B**. 🔴 One 2026 estimate sits **below** another firm's 2025 base. 🟢 **~3×
+spread.** 🔵 The firms define *"AI in education"* differently — some include corporate and workforce
+learning, some only K-12 and higher education.
+
+🟢 **This is the third channel on which this base has now measured source dispersion** rather than
+inheriting a number: aggregator star counts (`p515`, `p516` — 42.6K/45.2K/46K against 48.0k),
+licence claims in search prose against licence bytes (`p516`, and twice this pass), and now market
+sizing. 🟢 **The method generalises and should be stated as doctrine: when three sources disagree,
+publish the spread and the direction, never the median.**
+
+### 🟢 `T517-4` — Human-in-the-loop is being specified in code, not in policy decks
+
+🟢 **A small repo with a disproportionate signal.** `yqy624/eduagent-digital-workforce` (MIT, 3★)
+defines **five** education agents and gates each one *in its architecture*: grading requires
+**teacher confirmation before a grade is written**; classroom vision **logs events without acting
+on them**; learning analytics is **read-only and makes no final judgement**; supervision
+**de-duplicates and requires manual confirmation**.
+
+🔵 **Why that is a trend signal at 3★:** every education buyer across ten saturation passes has
+asked for these guarantees, and this base has had to *specify them from scratch each time*. 🟢 The
+guarantees are now appearing as **default repository structure** in new education agent projects —
+which is what adoption of a norm looks like before it reaches policy documents. 🔴 **Counter-note,
+kept visible:** the repo's own page calls it *"a demonstrable MVP rather than a production
+system"*, so this is evidence of a design norm, not of production practice.
+
+### 🔴 `T517-5` — Teacher enablement is the one demand trend that has never wobbled
+
+🟢 **Ten saturation passes and this claim has moved only upward, from independent sources:** schools
+offering AI professional development for teachers went **29% (early 2024) → 50% (late 2025)**;
+**71%** of US teachers still report lacking AI training; only ~**10%** of institutions have formal
+AI guidelines while **86%** of students across 16 countries already use AI; LATAM shows the same
+shape at higher intensity (TALIS teacher use **52–56%** against the OECD's **36%**, Uruguay's Ceibal
+**75%**) with only **26%** of institutions holding a formal strategy.
+
+🟢 **The durable statement, and the only demand claim this base will put in front of a client
+without a channel caveat:** *student adoption has outrun institutional capacity everywhere it has
+been measured, and the gap is widening fastest where teacher use is highest.* 🔵 Everything else on
+the demand axis is saturated or dispersed.
+
+
 ## 🆕 `p516` — `2026-10-29` — **🟢 THE TREND THIS PASS ADDS IS ABOUT THIS BASE'S OWN BLIND SPOT: a regional supply nil held for eight passes fell to a single query in Portuguese. 🔴 Demand-side trends saturated a NINTH time (~26 facts, 2 new). 🟢 Curriculum-as-data emerges as a real, shipped architecture — not a forecast.**
 
 ### 🟢 `T516-1` — Curriculum-as-data is shipping, and it reorders the adaptive-learning stack

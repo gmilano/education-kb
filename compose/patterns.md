@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p517` — `2026-10-29` — **🟢 `P522` — the first recipe on these shelves built end-to-end from APAC-originated, licence-verified parts, and the first that permits a CLOSED derivative, because every part is Apache-2.0 or MIT. 🟢 `P523` — the licence-clearance gate, which is a runnable script in this repo rather than advice.**
+
+### 🟢 `P522` — A fully permissive APAC school stack: SIS of record + lesson generation + curriculum-grounded tutor + gated ops agents
+
+🔵 **Who it is for:** a Chinese (or broader APAC) school group or municipal education bureau that
+wants AI tutoring, lesson generation and operational automation **on top of an open SIS it
+controls**, and that needs the right to ship a **proprietary** derivative.
+
+🟢 **Why this recipe could not be written before `p517`:** the SIS was missing. `p516`'s LATAM
+recipe (`P521`) is built on `i-educar`, which is **GPL-2.0** — so it cannot offer a closed
+derivative. 🟢 **Every part below is Apache-2.0 or MIT, verified from bytes this pass.**
+
+| Role | Part | Licence (from bytes) | HEAD @ default branch |
+|---|---|---|---|
+| **System of record** (students, grades, teachers, enrolment, exams) | [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) 🇨🇳 | 🟢 **Apache-2.0** | `21d6a41b89e4` @ **`master`** |
+| **Lesson generation** (topic or document → interactive lesson, slides, quizzes) | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) 🇨🇳 | 🟢 **MIT** | `e95c1d0bf23b` @ `main` |
+| **Curriculum-grounded tutor** (K-9, textbook-faithful, Socratic) | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) 🇨🇳 | 🟢 **MIT** | `525d977f230a` @ **`master`** |
+| **Gated operations agents** (Q&A, grading, vision, analytics, supervision) | [`yqy624/eduagent-digital-workforce`](https://github.com/yqy624/eduagent-digital-workforce) 🇨🇳 | 🟢 **MIT** | `a52bf227145c` @ `main` |
+| **Jurisdiction policy routing** (Korea / Vietnam / Japan / Australia) | LangGraph policy nodes — **build**, no off-the-shelf part exists | MIT (LangGraph) | — |
+| **Model layer** | 🇯🇵 route via [`llm-jp/awesome-japanese-llm`](https://github.com/llm-jp/awesome-japanese-llm) (Apache-2.0 index) for a Japanese deployment; GPT-OSS Swallow / Tanuki weights are Apache-2.0 | 🟢 Apache-2.0 | `4fa4630ddbdd` @ `main` |
+
+🟢 **How the parts wire together — the load-bearing constraint is that the SIS stays authoritative:**
+
+1. 🟢 **`schoolcms` remains the only writer of grades and enrolment.** Expose it to the AI layer
+   through a **read-only replica** of its MySQL schema. 🔴 **No agent writes to `schoolcms`
+   directly** — this is the single rule that makes the stack defensible to an education buyer.
+2. 🟢 **Curriculum ingestion → `OpenMAIC`.** Feed syllabus documents and textbook units in; it emits
+   interactive lessons with slides, quizzes and project work. Store lesson artifacts in your own
+   store keyed by the `schoolcms` course ID.
+3. 🟢 **Tutoring → `AI_Tutor_Release`.** Point its RAG index at the licensed textbook corpus
+   (🔴 **the corpus is the client's licensing problem, not the repo's** — PEP/人教版 texts are
+   copyrighted; the repo ships the retrieval pattern, not the books). Keep its two documented
+   behaviours: quote the textbook's original wording in preference to paraphrase, and ask Socratic
+   questions rather than returning answers.
+4. 🟢 **Operations → `eduagent-digital-workforce`, gates preserved exactly as the repo defines
+   them.** Grading writes to a **teacher-confirmation queue**, never to the grade table; vision
+   **logs events without acting**; analytics is **read-only**; supervision de-duplicates and
+   requires manual confirmation. 🟢 The confirmation queue is the only path from an agent to
+   `schoolcms`, and a human is on it.
+5. 🟢 **Policy routing wraps everything.** A LangGraph policy node resolves the learner's
+   jurisdiction before any model call: **Korea** (AI Basic Act, in force 22 Jan 2026) and
+   **Vietnam** (Law on AI, in force 1 Mar 2026, **education transition 1 Sep 2027**) are binding
+   regimes; **Japan** and **Australia** route to voluntary-framework handling. 🔴 This is the one
+   component with no open-source part and it is where the studio's margin is.
+
+🟢 **What the client gets to own.** Apache-2.0 on the SIS gives an **express patent grant** and
+permits a closed derivative; MIT on the three agent parts permits the same. 🟢 **So the AI layer can
+be proprietary and the SIS can be modified in place** — which `P521` cannot offer in 🇧🇷.
+🔴 **Attribution obligations still ship:** Apache-2.0 requires the `NOTICE` and licence text to
+travel with the derivative, and the repo carries both `LICENSE` and `LICENSE.txt`.
+
+🔴 **Honest sizing, stated rather than buried.** `schoolcms` is **292★/110 forks** on **ThinkPHP**
+(PHP) — mature for its niche, not a modern framework; `eduagent-digital-workforce` is **3★** and
+self-describes as *"a demonstrable MVP rather than a production system"*; `AI_Tutor_Release` is
+**74★**. 🟢 **`OpenMAIC` is the only large part (41.7k★, 798 commits).** 🟢 **Read the recipe
+accordingly: it is a credible reference architecture with one production-grade component, and the
+studio's work is hardening the other four** — which is precisely the APAC engagement shape this
+pass established.
+
+### 🟢 `P523` — The licence-clearance gate: run this before any APAC architecture work
+
+🔵 **Who it is for:** any engagement that will build on open-source parts found in a region whose
+supply this base has measured as **two-thirds ungranted** (`intel/trends.md` `T517-1`).
+
+🟢 **It is a script in this repo, not advice:**
+[`ingest/probe-grant.sh`](../ingest/probe-grant.sh).
+
+```bash
+./ingest/probe-grant.sh owner/repo [owner/repo ...]
+# TSV out: repo  live  default_branch  head_sha  grant_files  spdx_guess
+```
+
+🟢 **What it does that hand-checking did not**, and this base has the scar tissue to prove each one
+matters:
+
+| guarantee | the failure it prevents | the pass that paid for it |
+|---|---|---|
+| default branch via `git ls-remote --symref` | probing `main`/`master` on a repo whose default is `2.12` or `1.6` → **false "unlicensed"** | `p509`, repeated by `p516` |
+| **53 grant filenames in 14 languages** | missing `LICENSE-CODIGO.md` / `LICENSE-DADOS.md` → **a split MIT + CC BY 4.0 repo read as unlicensed** | `p516` |
+| emits **`UNRESOLVED`**, never *"unlicensed"* | publishing a verdict where only a measurement exists | `p516`, `p517` |
+
+🟢 **The triage, which is the actual deliverable of the gate:**
+
+1. 🟢 **Apache-2.0 / MIT / BSD → BUILD.** Closed derivative permitted; carry `NOTICE` and licence
+   text. Apache-2.0 adds an express patent grant.
+2. 🟡 **GPL / AGPL / LGPL → ISOLATE.** Keep the copyleft component at arm's length — separate
+   process, network boundary, no linking. 🔴 **AGPL reaches across the network**, so an AGPL
+   gradebook (`i-diario`) cannot sit inside a proprietary service.
+3. 🟡 **Split grants (code vs data) → CARRY BOTH.** `bncc-pacotes` ships **MIT code and CC BY 4.0
+   data in one wheel**; attribution must travel into the product, and its **name and visual
+   identity are not licensed** — so a derivative may use the data and may not present itself as
+   BNCC-branded.
+4. 🔴 **`UNRESOLVED` → DO NOT SHIP.** Default copyright applies: no licence means no permission.
+   🟢 **Next step is not a judgement, it is an email** — open an issue asking the maintainer to
+   declare a licence. 🔵 Before concluding absence, check the README, `pyproject.toml` classifiers
+   and `package.json` `license`, which this probe does not read (`Gap 517-E`).
+
+🔴 **Do not use `curl -sI` as the liveness check** in this session class: it returns **403 on
+every GitHub repo page**, including ones `git ls-remote` proves alive (17/17 this pass). A pass that
+treated 403 as 404 would delete true rows. 🟢 `probe-grant.sh` establishes liveness on `git`, so
+liveness is attested by construction.
+
+
 ## 🆕 `p516` — `2026-10-29` — **🟢 `P521` — the first recipe on these shelves built END-TO-END from LATAM-originated, licence-verified parts. 🔴 It exists because the premise that LATAM had no such parts was false.**
 
 ### 🟢 `P521` — Curriculum-anchored tutoring and reporting on a Brazilian municipal stack

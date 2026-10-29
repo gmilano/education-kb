@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p517` — `2026-10-29` — **🟢 THIS SHELF GAINS A LAYER THE LATAM PASS ESTABLISHED THE NEED FOR AND COULD NOT FILL FOR APAC: a licence-and-provenance index for a national LLM ecosystem — 🇯🇵 `llm-jp/awesome-japanese-llm`, **Apache-2.0**. 🟢 And it gains the instrument itself: `ingest/probe-grant.sh` is now foundational infrastructure for this base, not a one-pass script. 🔴 8 of 12 APAC education repos probed this pass carry NO GRANT.**
+
+### 🟢 The instrument is a foundation — `ingest/probe-grant.sh`
+
+🔵 **Why a script belongs on the foundations shelf.** Every other row here is something a studio
+builds *on*. This one is something a studio must run *before* it builds on anything — and this
+base spent **eight passes** on a false LATAM nil and **one more** on a false APAC claim for want
+of it.
+
+🟢 **What it is:** `git ls-remote --symref` to resolve the default branch and liveness, then **53
+grant filenames across 14 languages** probed at that branch over `raw.githubusercontent.com`.
+🟢 **What it refuses to do:** emit the word *unlicensed*. It emits **`UNRESOLVED`**, which is a
+measurement. 🔵 Full rationale, self-test and the two bugs found in it: `agents/top.md` `p517`.
+
+🟢 **It closes `Gap 516-A`**, which `p509` opened in prose and `p516` reproduced six passes later —
+the base's clearest demonstration that a finding written into narrative does not survive, and a
+finding written into an instrument does.
+
+### 🟢 Curriculum-and-licence provenance for 🇯🇵 — the APAC half of `p516`'s curriculum-as-data layer
+
+🔵 **`p516` added the LATAM half:** `bncc-dados` (MIT) emits Brazil's national curriculum as 1,721
+provenance-tracked learning objectives. 🔴 **There is no APAC equivalent on these shelves** — no
+national curriculum published as machine-readable open data was found in the Mandarin, Japanese,
+Korean or Hindi legs. 🟡 **What exists instead, and is foundational for a different reason:**
+
+| Repo | Origin | Licence (from bytes) | HEAD @ branch | Why it is foundational |
+|---|---|---|---|---|
+| [`llm-jp/awesome-japanese-llm`](https://github.com/llm-jp/awesome-japanese-llm) | 🇯🇵 **LLM-jp** — NII-led cross-organisational project (arXiv `2407.03963`) | 🟢 **Apache-2.0** (`LICENSE` @ `main`) | `4fa4630ddbdd` @ `main` | The authoritative index of Japanese LLMs **with their licences**. 🟢 A 🇯🇵 engagement's model-selection and grant-routing decision starts here rather than in vendor prose |
+
+🟢 **The provenance fact that makes it load-bearing:** LLM-jp publishes weights **Apache-2.0**, and
+switched to Apache-2.0 **as a matter of policy from March 2025** after criticism of a restricted
+licence on `llm-jp-3-172b`. 🔵 So for a Japanese engagement there is a *national-scale, permissively
+licensed* base-model line, and this index is its map. 🔵 Adjacent, same policy: **GPT-OSS Swallow**
+(20B/120B reasoning models, Japanese-strengthened, weights Apache-2.0) and **Tanuki**.
+
+🟡 **`llm-jp/bridge-ai-for-edu`** — the same org's **education** repo — is 🔴 **`UNRESOLVED`**
+(no grant on 53 names @ `main`, HEAD `31c82c466375`), 2★, **no description**, 56 commits, last
+touched `2026-10-14`. 🟢 **Watched as `Gap 517-D`:** if LLM-jp grants it Apache-2.0 as it did its
+weights, it becomes the first 🇯🇵 national-scale education asset on these shelves.
+
+### 🟢 One new permissive runtime reference — small, and shelved at its size
+
+| Repo | Origin | Licence | ★ | HEAD @ branch | What it is |
+|---|---|---|---|---|---|
+| [`yqy624/eduagent-digital-workforce`](https://github.com/yqy624/eduagent-digital-workforce) | 🇨🇳 | 🟢 **MIT** (`LICENSE` @ `main`) | 🔴 **3** (1 fork) | `a52bf227145c` @ `main` | FastAPI + LangChain + YOLO + RAG, 75 commits. 🟢 **Foundational for its *gate design*, not its size:** grading requires teacher confirmation before any grade is written; classroom vision logs events without acting; analytics is read-only and makes no final judgement; supervision de-duplicates and requires manual confirmation. 🔵 Its own page calls it *"a demonstrable MVP rather than a production system"* |
+
+🔴 **Why that is worth a foundations row at 3★.** Every education buyer on these shelves asks for
+human-in-the-loop guarantees, and this base's patterns have had to specify them from scratch each
+time. This repo states them **per agent, in code structure**, under MIT — so it is citable as a
+reference design even though it is not deployable at scale.
+
+### 🔴 The foundations-shelf nil that is real, and is now measured rather than assumed
+
+🟢 **Stated as information, which is the point of writing it down.** Searched this pass in Mandarin,
+Japanese, Korean, Hindi and Indonesian for an APAC **national curriculum as open data** — the
+`bncc-dados` equivalent. 🔴 **Nothing was found in any of the five languages.** 🔵 Unlike the LATAM
+and APAC supply claims this pass refuted, this nil is **grep-checked against these shelves first**
+and holds: no such row exists here, and none was discoverable. 🟡 **It is a genuine gap, not an
+instrument artifact** — and `Gap 517-C` (Gitee/GitCode unprobed) is the one channel that could
+still overturn it.
+
+
 ## 🆕 `p516` — `2026-10-29` — **🟢 THE FOUNDATIONS SHELF GAINS A LAYER IT HAS NEVER HAD: a national curriculum as machine-readable, provenance-tracked open data — 🇧🇷 `bncc-dados`, MIT, 1,721 learning objectives in JSON/SQLite/CSV — plus the MCP package that serves it to agents. 🔴 Found only because the discovery query was run in Portuguese; eight English-language passes missed it. 🔴 Two licence verdicts on this shelf's probe method were WRONG for the same reason.**
 
 ### 🟢 The missing layer — curriculum-as-data, and why it is foundational

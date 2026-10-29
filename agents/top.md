@@ -4,6 +4,191 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p517` — `2026-10-29` — **🔴 `Gap 516-D` ASKED WHETHER THE APAC SUPPLY NIL WAS AN ENGLISH-LANGUAGE ARTIFACT. THE LEGS ARE RUN, AND THE ANSWER IS WORSE THAN THE QUESTION: "this base's APAC supply shelf is thin" WAS ALREADY FALSE AGAINST `agents/top.md:1204`, WHICH HOLDS 🇨🇳 `THU-MAIC/OpenMAIC` — MIT, **41.7k★**, Tsinghua — THE HIGHEST-STAR MIT EDUCATION AGENT ANYWHERE IN THIS BASE. 🟢 `Gap 516-A` IS CLOSED THE ONLY WAY IT COULD BE: `ingest/probe-grant.sh` — 53 grant filenames, 14 languages, default branch RESOLVED. 🟢 THE REAL APAC FINDING IS A DIFFERENT SHAPE FROM LATAM'S: 8 of 12 newly-probed APAC education repos carry NO GRANT AT ALL. 🔴 `make hooks` not attempted (standing abstention).**
+
+🔴 **Gate posture, stated first and unchanged.** `HOOK_GATES` executes `$(PY) -I` over Python inside
+`compose/code/p*/` — an interpreter over a freshly cloned third-party tree — and this session's
+standing rule forbids it. 🟡 **`p517` is a declared abstention**, the third consecutive one.
+🔴 `p511`'s **45/63** remains the last gate-attested reading — now **six passes stale**.
+🟢 **One distinction worth recording, because it is what made this pass possible:**
+`ingest/probe-grant.sh` is **bash authored in-pass**, not cloned repository content, so running it
+is consistent with the standing rule. The rule bars interpreting *third-party* code, not
+instrumenting the base.
+
+### 🔴 The refutation — the fifth instance of the defect `p516` called structural
+
+🟢 **`p516` predicted this exactly**, in its own words: *"the defect is structural, not a lapse by
+`p515`. Any pass can reproduce it, including the pass auditing it."* 🔴 **It then reproduced it, in
+the very gap it opened to prevent it.**
+
+🔴 **What `p516` published** in `intel/market.md:93–95`:
+
+> *"🔴 **Declared gap, stated as information:** this base's APAC **supply** shelf is thin, and after
+> this pass that must be read as **probably an artifact of English-only discovery** (`Gap 516-D`),
+> not as an absence. **Do not quote an APAC supply nil to a client until the Mandarin, Japanese,
+> Korean and Hindi legs have been run.**"*
+
+🟢 **What the shelves said while that was being written**, re-read from bytes this pass:
+
+| shelf | row | origin | licence (from bytes) | ★ | what the base's own cell says about it |
+|---|---|---|---|---|---|
+| 🟢 `agents/top.md:1204` | [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🇨🇳 `THU-MAIC`, Tsinghua contact address | **MIT** | **41.7k** | *"the row that falsifies this file's own permissive-scarcity gap"* |
+| 🟢 `agents/top.md:2017` | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🇨🇳 | **MIT** | 74 | *"The clearest permissive RAG-tutor reference implementation **on an APAC curriculum**"* |
+
+🔴 **The second cell contains the phrase "on an APAC curriculum".** The APAC supply shelf was not
+thin; it held the single largest permissive education agent on these shelves, and a row that
+labels itself APAC in its own description. 🔴 **"Thin" was false by `grep`, not by language** —
+and it was published one pass *after* the mechanical control that catches it was named.
+
+🟢 **So the honest ledger on `Gap 516-D` is split**, and both halves matter:
+
+- 🟢 **The in-language legs were worth running** — they produced **five** new licensed rows and an
+  **Apache-2.0 SIS** this base did not hold (below, and `verticals/solutions.md`).
+- 🔴 **The premise that motivated them was still false on arrival.** Running a discovery leg is not
+  a substitute for reading your own shelves, and this pass is the fifth proof.
+
+### 🟢 `Gap 516-A` — CLOSED, in the instrument, which is the only place it could close
+
+🔴 **The history this closes:** `p509` found that probing `main`/`master` mislabels repos whose
+default branch is something else. It wrote the finding into **prose**. 🔴 **Six passes later `p516`
+reproduced it**, plus a second defect — grant files are not always named in English. `p516` wrote:
+*"the fix belongs in the **instrument**, not in prose … until the probe changes, expect a fourth
+instance."*
+
+🟢 **The probe now exists: [`ingest/probe-grant.sh`](../ingest/probe-grant.sh).** What it guarantees:
+
+| # | guarantee | mechanism |
+|---|---|---|
+| 🟢 **1** | the default branch is **resolved, never assumed** | `git ls-remote --symref <url> HEAD`, which also establishes liveness |
+| 🟢 **2** | grant filenames probed in **14 languages** before any verdict | **53** names: EN, PT, ES, DE, IT, FR, ZH (`许可证`, `协议`, `开源协议.md`), JA (`ライセンス`), KO (`라이선스`), ID (`LISENSI`), RU (`ЛИЦЕНЗИЯ`), AR (`الترخيص`), plus split-grant forms (`LICENSE-CODIGO.md`, `LICENSE-DADOS.md`, `LICENSE-CODE`, `LICENSE-DATA`, `LICENSE-MIT`, `LICENSE-APACHE`) |
+| 🟢 **3** | it prints **`UNRESOLVED`**, never *"unlicensed"* | absence on 53 names is absence on 53 names — a measurement, not a verdict |
+
+🟢 **Self-test: it reproduces all three of `p516`'s hand-verified cases exactly**, which is the
+only acceptable acceptance test for an instrument replacing hand work.
+
+| case | `p516` found by hand | 🟢 probe output |
+|---|---|---|
+| `portabilis/i-educar` | GPL-2.0 @ `2.12`, HEAD `435649b0474f` | `2.12` · `435649b0474f` · `LICENSE` · **GPL-2.0** |
+| `portabilis/i-diario` | AGPL-3.0 @ `1.6`, HEAD `ef909f23755a` | `1.6` · `ef909f23755a` · `LICENSE` · **AGPL-3.0** |
+| `bncc-dev/bncc-benchmark` | split MIT + CC BY 4.0 | `main` · `4713901ce5d7` · `LICENSE,LICENSE-CODIGO.md,LICENSE-DADOS.md` · **MIT,CC-BY-4.0** |
+
+🔴 **Two defects found *in the instrument* during self-test, both recorded because both are traps
+for the next pass:**
+
+1. 🔴 `git ls-remote --symref` emits **two** lines ending in `HEAD` — `ref: refs/heads/<b>\tHEAD`
+   and `<sha>\tHEAD`. A naive `/HEAD$/` captures the literal string **`ref:`** as the SHA.
+2. 🔴 **`portabilis/i-educar` publishes a `refs/remotes/origin/HEAD` ref** — so even excluding
+   `^ref:` is not enough; a *third* line ends in `HEAD`. The SHA field must be anchored
+   **`$2=="HEAD"`**. 🔵 This is a real repository doing an unusual thing, and it was only caught
+   because the self-test ran against it.
+
+### 🟢 The APAC constraint is a GRANT gap — not a discovery gap, and not a supply gap
+
+🟢 **This is the finding worth carrying forward, and it is a *different shape* from LATAM's.**
+Twelve new APAC-origin education repos were probed this pass with the instrument above:
+
+| outcome | count | repos |
+|---|---|---|
+| 🟢 **licensed, permissive** | **4** | `gongfuxiang/schoolcms` (Apache-2.0), `yqy624/eduagent-digital-workforce` (MIT), `llm-jp/awesome-japanese-llm` (Apache-2.0), `xch1986/AI-Tutor` (MIT, a fork) |
+| 🔴 **`UNRESOLVED` — no grant on 53 names in 14 languages, at the resolved default branch** | **8** | `llm-jp/bridge-ai-for-edu`, `jiaxiaojia123789/EduAgent-Platform`, `xixi-in-polyu/eduAgent`, `1008wjh/EduAgent`, `rlaalstn1504/langchain-ai-agent-edu`, `janggoons/knu-edu-ai-agent-2026`, `matsuolab/lecture-ai-engineering-2026-hi`, `AbdurraghibSS/AI-Engineer-Training-with-DigitalSkola` |
+
+🔴 **Two-thirds of newly-found APAC education supply is not buildable.** 🟢 **Compare the two
+regions, because the offer differs:**
+
+| region | the nil was | broken by | the real constraint | what Globant sells |
+|---|---|---|---|---|
+| 🇧🇷 **LATAM** | a **discovery** artifact | one Portuguese query | nothing — the supply is licensed and government-adopted | **customisation** of assets the client owns |
+| 🇨🇳🇯🇵🇰🇷 **APAC** | false by **`grep`**; the shelf was never thin | reading the base | 🔴 **grants** — the code is abundant and findable, and 2/3 of it carries no licence | **licence clearance and hardening** of what exists (`compose/patterns.md` `P523`) |
+
+🟢 **For a client conversation that is a sharper sentence than any star count:** *in LATAM the
+problem was finding it; in APAC the problem is that you may not legally ship it.*
+
+### 🟢 New rows, verified from bytes this pass
+
+🔵 **Honest framing: one of these is substantial and four are small.** They are shelved at measured
+size, not padded. 🟢 Every row: `git ls-remote --symref` for liveness and default branch,
+`raw.githubusercontent.com` for grant bytes, WebFetch for the star figure.
+
+| Repo | Origin | Licence (from bytes) | ★ | HEAD @ default branch | What it is |
+|---|---|---|---|---|---|
+| [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) | 🇨🇳 | **Apache-2.0** — `LICENSE` **and** `LICENSE.txt` | **292** (110 forks) | `21d6a41b89e4` @ **`master`** | *"中国首个开源学校教务管理系统"* — academic-affairs / SIS: students, grades, teachers, grade lookup, online enrolment and exams. ThinkPHP + Amaze UI, 271 commits. 🟢 **Full row on [`verticals/solutions.md`](../verticals/solutions.md)** — this is the APAC counterpart to `i-educar`, and it is **permissive where `i-educar` is GPL-2.0** |
+| [`yqy624/eduagent-digital-workforce`](https://github.com/yqy624/eduagent-digital-workforce) | 🇨🇳 | **MIT** (`LICENSE` @ `main`) | 🔴 **3** (1 fork) | `a52bf227145c` @ `main` | Five cooperating "digital employees" — Q&A (知问), grading (笔正), classroom vision (明察), learning analytics (知微), supervision (守则). FastAPI + LangChain + YOLO + RAG, 75 commits. 🟢 **Its value here is architectural, not its size** — see the human-in-the-loop gates below |
+| [`llm-jp/awesome-japanese-llm`](https://github.com/llm-jp/awesome-japanese-llm) | 🇯🇵 **LLM-jp** (NII-led cross-organisational project) | **Apache-2.0** (`LICENSE` @ `main`) | ~1.4k class | `4fa4630ddbdd` @ `main` | The authoritative index of Japanese LLMs and their licences. 🔵 An index, not a product — shelved because licence-and-provenance routing for a 🇯🇵 engagement starts here |
+| [`xch1986/AI-Tutor`](https://github.com/xch1986/AI-Tutor) | 🇨🇳 | **MIT** (`LICENSE` @ `master`) | small | `4062e24462c7` @ **`master`** | 🟡 **A fork of the already-held `Zenglian990/AI_Tutor_Release`**, rebranded *"曾练专属私教"*, claiming 人教版 grades 1–9 full-subject coverage plus TTS and a gamified knowledge graph. 🔵 Recorded **as a fork**, not as independent supply |
+| [`rphilipzhang/AI-PhD-S26`](https://github.com/rphilipzhang/AI-PhD-S26) | — | **MIT** (`LICENSE` @ `main`) | 🔴 ~91 class | `3643b8eee7a2` @ `main` | Mono-repo for a PhD course on AI for business research. 🔵 Course material, not a runtime |
+
+🟢 **Why `eduagent-digital-workforce` is worth its 3★.** Its README specifies **human-in-the-loop
+gates per agent**, which is exactly the control an education buyer asks for and which this base's
+patterns have had to invent: grading *"requires teacher confirmation before grades are saved"*;
+classroom vision *"logs events without handling them"*; analytics is *"read-only"* and *"makes no
+final judgements"*; supervision *"avoids repeat notifications and requires manual confirmation"*.
+🔵 Its own page calls it *"a demonstrable MVP rather than a production system"* — recorded as the
+repo states it.
+
+### 🟢 `Gap 516-B` — CLOSED as a measured absence
+
+🟢 **`Jal246/study-mcp`**: default branch resolved to `main`, HEAD `db675f952a09`, **`UNRESOLVED` on
+all 53 names across 14 languages**. 🟢 `p516` left this open precisely because calling it
+*unlicensed* on five English names would have been the error it was auditing. 🟢 **It is now a
+measurement:** no grant file exists under any name this instrument knows. 🔴 **It is still not
+"unlicensed"** — a grant can live in a README, a `pyproject.toml` classifier or a `package.json`
+field, none of which this probe reads. 🔵 That is the next refinement, not a defect.
+
+### 🔴 The brief's prescribed URL check does not work in this session class
+
+🔴 **The standing brief says to verify every URL with `curl -sI`.** Run across all **17** repos
+touched this pass, `curl -sI https://github.com/<o>/<r>` returned **403 on every single one** —
+including `portabilis/i-educar` and `THU-MAIC/OpenMAIC`, which `git ls-remote` proves are alive.
+🟢 **This re-confirms `p516`'s channel matrix independently and at scale: a 403 here is not a 404**,
+and a pass that treated `curl -sI` as a liveness test would delete true rows.
+
+🟢 **The substitute, and it is stronger, not weaker:** `git ls-remote --symref` proves liveness
+*and* yields the default branch *and* the HEAD SHA; `raw.githubusercontent.com` serves grant bytes.
+🟢 **Both are in the instrument**, so every row above is liveness-attested by construction.
+
+### 🔵 `OpenMAIC` — a fresh reading, and `Gap 515-B` stays retired
+
+🟢 **WebFetch, the one channel that answers:** **41.7k★**, **6.5k** forks, **MIT**, **798 commits**,
+`v1.3.0-rc.1` dated `2026-10-22` (newest non-candidate `v1.2.1`, `2026-10-18`). 🔵 HEAD has moved
+`70859b42e714` (`p516`) → **`e95c1d0bf23b`**, and commits **781 → 798 (+17)** — the project is
+live and advancing, which is the datum that matters.
+🟢 **No exact-star chase was attempted.** `Gap 515-B` is retired as unobtainable from this session
+class, and this pass's 17-repo `403` sweep is further confirmation. The rounded figure is recorded
+as rounded.
+
+### 🔴 The in-language legs that returned little — written down, because silence looks like coverage
+
+🟢 **An informed gap is information.** Four legs were run; they did not return equally.
+
+| leg | query language | what came back | verdict |
+|---|---|---|---|
+| 🟢 **Mandarin** | 中文 | by far the richest — `OpenMAIC`, the `EduAgent`/`AI_Tutor` family, `eduagent-digital-workforce`, `schoolcms`, and four more ungranted platforms | 🟢 **productive** — and 2/3 ungranted |
+| 🟡 **Japanese** | 日本語 | `llm-jp` org (Apache-2.0 index + an **ungranted** education repo); no Japanese-origin licensed education *agent* found | 🟡 **partial** |
+| 🔴 **Korean** | 한국어 | **only lecture materials** — `langchain-ai-agent-edu` (2026 재교육 course), `knu-edu-ai-agent-2026` (Kangwon Nat'l Univ College of Education special lecture). **Both `UNRESOLVED`.** 🔴 No Korean-origin licensed education agent found at all | 🔴 **genuine gap, not a language artifact** |
+| 🔴 **Hindi** | हिन्दी | no India-originated education agent. The one Hindi-language hit, `matsuolab/lecture-ai-engineering-2026-hi`, is published by a **Japanese** institution and is `UNRESOLVED` | 🔴 **gap** — next probe should use *Indic*, *NCERT*, not Hindi prose |
+| 🔴 **Indonesian** | Bahasa Indonesia | no Indonesia-originated open-source education agent; one personal course-notes repo (`UNRESOLVED`) | 🔴 **gap** |
+
+🔴 **One instrument result that deserves its own line.** The single Indonesian education repo on
+these shelves — `anandpatikat/guru-latihan-dinamis`, AI teacher tools for Indonesian exam prep —
+was **already held, and was found by the ENGLISH trending leg, not the Indonesian one.**
+🟢 **So in-language discovery is not uniformly superior**; it was decisive for Portuguese and
+Mandarin and *worse* than English for Indonesian. 🔵 The lesson is to run **both**, not to replace
+one with the other.
+
+### Gaps opened by `p517`
+
+| gap | statement | re-probe |
+|---|---|---|
+| 🔴 **`Gap 517-A`** | **The grep-before-nil control is still attentional, and attentional controls have now failed five times.** `p516` *named* this control — *"the control is mechanical, not attentional — `grep` the base before writing any nil"* — and then published a nil without applying it. The instrument fix worked for licences; the same is needed here: a `grep-before-nil.sh` that takes a claim string and greps all eight shelves before it may be written. **Until it exists, expect a sixth instance.** | every pass that writes a nil |
+| 🔴 **`Gap 517-C`** | **Gitee / GitCode is an entire unprobed host.** `schoolcms` mirrors to Gitee; a Chinese LMS named *CTutor* surfaced this pass on `gitcode.com` and **could not be resolved to any GitHub address**. If 2/3 of APAC supply is ungranted *on GitHub*, the licensed APAC supply may simply live on hosts this probe cannot reach. 🟢 `probe-grant.sh` is host-agnostic in shape — `raw.githubusercontent.com` is the only hard-coded part | next APAC pass |
+| 🟡 **`Gap 517-B`** | Korean-, Hindi- and Indonesian-origin **licensed** education supply is **genuinely unfound**, not merely unprobed in-language — all three legs are now run. Next probe: *Indic*, *NCERT*, Dicoding, and the Gitee/GitCode channel of `Gap 517-C` | next APAC pass |
+| 🟡 **`Gap 517-D`** | [`llm-jp/bridge-ai-for-edu`](https://github.com/llm-jp/bridge-ai-for-edu) — **Japan's national LLM project has an education repo with no licence, no description and 56 commits** (2★, last touched `2026-10-14`). If LLM-jp grants it Apache-2.0, as it did its weights from Mar 2025, this becomes the first 🇯🇵 national-scale education asset on these shelves | watch; re-probe each APAC pass |
+| 🟡 **`Gap 517-E`** | `probe-grant.sh` reads only **grant files**. A licence declared in a README, a `pyproject.toml` classifier or a `package.json` `license` field is invisible to it, so some of the 8 `UNRESOLVED` rows may be licensed. **This is the difference between `UNRESOLVED` and "unlicensed" and must stay visible in every cell** | next refinement of the instrument |
+| 🟢 **`Gap 516-A`** | **CLOSED.** `ingest/probe-grant.sh` — default branch resolved, 53 names, 14 languages, self-test green against all three of `p516`'s hand cases | closed |
+| 🟢 **`Gap 516-B`** | **CLOSED** as a measured absence (`study-mcp`, `UNRESOLVED` on 53 names @ `main`), with `Gap 517-E` as its honest caveat | closed |
+| 🟢 **`Gap 515-B`** | **STAYS RETIRED** — re-confirmed at scale: `curl -sI` → **403 on 17/17** repos, including ones `git` proves live | never |
+
+
 ## 🆕 `p516` — `2026-10-29` — **🔴 THE LATAM SUPPLY NIL `p515` HELD FOR AN EIGHTH PASS IS FALSE AGAINST THIS BASE'S OWN SHELVES: `verticals/solutions.md:1010` has been carrying 🇧🇷 `portabilis/i-educar` — a Brazilian municipal SIS, GPL-2.0, **722★**, flagged live — while `intel/market.md` published *"0 LATAM-originated open-source education repositories at any star level"*. 🟢 ROOT CAUSE FOUND, AND IT IS ONE CAUSE IN THREE PLACES: this base's instruments are **English-biased**, and all three false nils are that bias. 🟢 `Gap 515-B` is RETIRED, not re-probed — an exact star cell is **unobtainable from this session class**, measured on five channels. 🔴 `make hooks` not attempted (standing abstention).**
 
 🔴 **Gate posture, unchanged and stated first.** `HOOK_GATES` executes `$(PY) -I` over Python inside

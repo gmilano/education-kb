@@ -4,6 +4,156 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p517` — `2026-10-29` — **🔴 THE APAC CLAIM THIS FILE PUBLISHED LAST PASS IS FALSE, AND IT IS THIS FILE'S OWN CLAIM AGAIN: lines 93–95 read *"this base's APAC supply shelf is thin"* while `agents/top.md:1204` carried 🇨🇳 `OpenMAIC` — MIT, **41.7k★**, Tsinghua, the highest-star MIT education agent in this entire base — and `agents/top.md:2017` carried a row describing itself as *"on an APAC curriculum"*. 🟢 THE FOUR IN-LANGUAGE LEGS ARE RUN AND THEY DID PAY: an **Apache-2.0** 🇨🇳 SIS is now shelved. 🟢 THE REAL APAC CONSTRAINT IS MEASURED: 8 of 12 newly-probed APAC education repos carry NO GRANT. 🔴 Demand axis saturated a TENTH time — ~24 regional facts probed, 4 new.**
+
+### 🔴 The retraction, stated before anything is built on it
+
+🔴 **`p516` wrote** (this file, lines 93–95): *"Do not quote an APAC supply nil to a client until
+the Mandarin, Japanese, Korean and Hindi legs have been run."* 🟢 **The legs are run.** 🔴 **But the
+sentence that framed them — "this base's APAC supply shelf is thin" — was already false by `grep`,
+not by language.** The shelf held `OpenMAIC` (MIT, 41.7k★) and a row whose own description says
+*"on an APAC curriculum"*.
+
+🔴 **This is the fifth instance of the defect `p516` diagnosed as structural**, and it occurred
+inside the gap `p516` opened to prevent it. 🟢 Full ledger and the instrument that closes the
+licence half of it: `agents/top.md` `p517`. 🔴 **The nil-checking half is still open as
+`Gap 517-A`** — and it is the highest-value unclosed gap on this base.
+
+### 🟢 What the legs actually bought — and why the APAC offer changes shape
+
+🟢 **The in-language legs were worth running even though their premise was wrong.** New, verified
+from bytes: 🇨🇳 **`gongfuxiang/schoolcms`** — *"中国首个开源学校教务管理系统"*, **Apache-2.0**,
+**292★**, 110 forks, `21d6a41b89e4` @ `master` — plus 🇨🇳 `eduagent-digital-workforce` (MIT) and
+🇯🇵 `llm-jp/awesome-japanese-llm` (Apache-2.0).
+
+🔴 **And the constraint that replaces the false nil, measured with
+[`ingest/probe-grant.sh`](../ingest/probe-grant.sh):** of **12** APAC-origin education repos probed,
+**4 are permissively licensed and 8 carry no grant at all** on 53 filenames across 14 languages at
+the resolved default branch. 🟢 **Two-thirds of APAC education supply is findable and not
+shippable.**
+
+🟢 **The two regions therefore sell differently, and this is the sentence for a client:**
+
+| region | supply | the binding constraint | the engagement |
+|---|---|---|---|
+| 🇧🇷 **LATAM** | licensed, government-adopted (`i-educar` GPL-2.0, `bncc-dados` MIT) | 🟢 none on supply; **governance** is the pain (26% formal strategy) | **customise what the client already owns** |
+| 🇨🇳🇯🇵🇰🇷 **APAC** | abundant, and 🔴 **2/3 ungranted** | 🔴 **licence clearance** | **clear, harden and extend** — `compose/patterns.md` `P523` |
+
+🔴 **And one licence asymmetry that decides architecture**, both halves read from bytes this pass:
+`i-educar` is **GPL-2.0** (no closed derivative); `schoolcms` is **Apache-2.0** (closed derivative
+permitted, **express patent grant**). 🟢 So a proprietary AI layer on the client's system of record
+is honestly sellable in 🇨🇳 and honestly *not* in 🇧🇷. Full table: `verticals/solutions.md` `p517`.
+
+### 🔴 The regional battery — tenth consecutive saturation, measured as `p514` established
+
+🔵 **Method unchanged:** four regional legs plus a global leg, each fact checked against these
+shelves before being called new.
+
+| leg | query | what came back | new? |
+|---|---|---|---|
+| **North America** | `AI education North America 2026 adoption regulation players` | M&M NA sizing $951M (2024) → $2.3B (2029) @ 15.9%; NA ~36% of global share; "regulatory vacuum", state patchwork (Colorado, Texas); 71% US teachers untrained; 10% institutions with formal AI guidelines | 🟡 **2 new** (NA sizing pair, 36% share) |
+| **EMEA** | `AI education EMEA Europe 2026 adoption regulation players` | UK £200m+ AI adoption (£100m Bridge AI, £53m regional); EU updated ethical guidelines on AI in education + 3 Advanced Digital Skills grants €25.4m; Council of Europe education-regulation track; 48% weekly AI use across 8 countries; >50% large firms vs <15% SMEs; UK/DE/FR >60% of regional value | 🟡 **2 new** (the £200m package, the €25.4m grants) |
+| **APAC** | `AI education APAC 2026 adoption regulation players` | Korea AI Basic Act; Vietnam education transition 1 Sep 2027; APAC fastest-growing at 35.3% CAGR; 49% cite insufficient real-time infrastructure; 87% encourage agents vs 47% with governance | 🔴 **all already held** except the 35.3% CAGR |
+| **LATAM** | `AI education LATAM Latin America 2026 adoption regulation players` | UNESCO IESALC + UNU-IAS working paper (dated 1 Sep 2026) mapping 200 HEIs across 19 countries, surveyed Aug–Oct 2025, five dimensions; ILIA 2025 (CEPAL) 3rd edition with a regulation sub-dimension; M&M "Rest of LATAM" $18.2M → $36M | 🟡 **1 new** (the IESALC/UNU-IAS survey base) |
+| **Global** | `AI education industry trends 2026` | 2026 market estimates of **$3.7B**, **$10.6B**, **$11.4B** against a 2025 base of **$6.4B**–**$8.3B**; teacher PD 29% (early 2024) → 50% (late 2025); 86% of students across 16 countries using AI; NA largest share, APAC fastest | 🔴 **held** — but see the spread below |
+
+🔴 **Tenth saturation. ~24 facts probed, 4 new.** 🟢 The demand axis is exhausted on this query
+family; the supply and licence axes are where this base still moves, which is exactly what this
+pass demonstrated.
+
+### 🔴 The 2026 market figure should not be quoted as a number at all
+
+🔴 **Four commercial estimates for the *same* year, read the same day:** **$3.7B**, **$10.6B**,
+**$11.4B**, against 2025 bases of **$6.4B** and **$8.3B**. 🔴 **That is a ~3× spread**, and one
+estimate for 2026 sits *below* another's 2025 base. 🟢 **The honest client sentence:** *"published
+estimates of the 2026 AI-in-education market span roughly $4B to $11B because the firms define the
+category differently; the directional agreement is North America largest, APAC fastest-growing, and
+30%-ish CAGR."* 🔴 **Never quote a single figure from this family.** 🔵 This mirrors `p515`/`p516`'s
+finding on aggregator star counts: dispersion across sources is the datum.
+
+## Opportunities by region — `p517`
+
+### North America
+🔵 **Sizing, named to its channel:** M&M puts NA at **$951M (2024) → $2.3B (2029)**, a **15.9%**
+CAGR, and NA at ~**36%** of the global market — the largest regional share. 🔴 **The regulatory
+picture is a vacuum, not a framework:** commentary this pass describes education AI as operating
+with *"no equivalent to the FDA"*, with adoption decided *"by individual schools, districts, or
+universities with minimal external oversight"*, and states such as **Colorado** and **Texas**
+adding piecemeal requirements. 🟢 **The offer is therefore procurement-and-assurance, not
+compliance:** there is no regulator to satisfy, so the buyer's real need is a defensible internal
+standard. 🟢 **Two demand facts point at the same product:** **71%** of US teachers lack AI
+training and only **10%** of institutions have formal AI guidelines. 🟢 **Sell: an institutional
+AI-use policy, an evaluation harness, and teacher enablement** — with the model layer deliberately
+swappable, because no external standard yet constrains it.
+
+### EMEA
+🔵 **This is the one region where a regulator is the buyer's clock.** The **EU AI Act** is in force
+and education AI sits in its **high-risk** classification; the Commission has updated its **ethical
+guidelines on AI in education** and signed **three Advanced Digital Skills grant agreements worth
+€25.4m**; the **Council of Europe** runs a standing education-regulation track that has floated a
+European evaluation framework for educational technology. 🟡 One source this pass put the Act's
+full effect for education at **August 2026** — 🔴 **unverified against an official EU source and
+flagged as such, not published as a date.** 🟢 **Public money is the other half:** the UK committed
+**£200m+** to AI adoption (**£100m** expanding Bridge AI, **£53m** regional), on a model where
+government funds and Big Tech (Cisco, IBM, BT, Rolls-Royce) delivers. 🔵 **Demand is uneven and
+that is the sales map:** ~**48%** weekly AI use across eight surveyed countries, with Spain near
+**55%** and Germany, France and Austria in the low **40s**; **>50%** of large enterprises using AI
+against **<15%** of SMEs; UK, Germany and France together **>60%** of regional AI-in-education
+value. 🟢 **Sell: conformity-ready delivery** — documentation, risk classification and evaluation
+artifacts produced as part of the build, aimed at UK/DE/FR, with an SME-priced tier where the
+adoption gap is widest.
+
+### APAC
+🟢 **The supply premise is corrected this pass, and the offer changes with it.** This base holds
+🇨🇳 **`OpenMAIC`** (MIT, **41.7k★**, Tsinghua, 798 commits, `v1.3.0-rc.1` `2026-10-22`) — its
+largest permissive education agent — 🇨🇳 **`AI_Tutor_Release`** (MIT, a K-9 RAG tutor grounded on
+人教版 textbooks), and now 🇨🇳 **`schoolcms`** (**Apache-2.0**, 292★) and 🇨🇳
+**`eduagent-digital-workforce`** (MIT). 🔴 **The binding constraint is grants, measured: 8 of 12
+newly-probed APAC education repos carry no licence at all.** 🟢 **So the first deliverable of an
+APAC engagement is a licence-clearance pass, and this base now ships the instrument for it**
+(`ingest/probe-grant.sh`, `compose/patterns.md` `P523`). 🔵 **Regulation is four incompatible
+regimes and a dated deadline:** Korea's **AI Basic Act** (in force **22 Jan 2026**) and Vietnam's
+**Law on AI** (in force **1 Mar 2026**, **education transition 1 Sep 2027**) are binding; Japan and
+Australia rely on existing law and voluntary frameworks. 🟢 A **policy-routing layer** — LangGraph
+policy nodes resolving jurisdiction per learner — remains the right architecture and is the one
+piece a client cannot buy off the shelf. 🔵 **Market shape:** APAC is the **fastest-growing** region
+(**35.3%** CAGR, M&M), while **49%** of APAC businesses cite insufficient real-time data
+infrastructure as an AI barrier and **87%** encourage agent use against only **47%** with
+governance in place. 🔴 **Still nil:** no 2026 probability-sampled APAC teacher-adoption rate
+(`Gap 507-A`, sixth pass), and no APAC national curriculum published as open data
+(searched in five languages this pass).
+
+### LATAM
+🟢 **Unchanged from `p516` and re-confirmed, because `p516` got this region right.** LATAM is a
+**customisation** region, not a greenfield one: a government-adopted **722★ GPL-2.0 SIS**
+(`i-educar`, on Brazil's *Portal do Software Público* since 2008), an **AGPL-3.0** teacher gradebook
+(`i-diario`), and a **national curriculum as MIT open data** (`bncc-dados`, 1,721 objectives) with
+an MCP access layer and its own hallucination benchmark. 🔴 **The licence ceiling is real:**
+`i-educar` is GPL-2.0, so a closed derivative is not available here — unlike 🇨🇳 `schoolcms`. Plan
+the AI layer at arm's length. 🔵 **Demand is present and governance is not:** IESALC **87%**
+institutional AI use against **26%** with a formal strategy; UNESCO puts **<10%** with guidelines
+plus capacity; TALIS teacher use runs well above the OECD's **36%** (Brazil **56%**, Chile **55%**,
+Colombia **53%**, Costa Rica **52%**), and Uruguay's Ceibal reports **75%**. 🟡 **New this pass:**
+the **UNESCO IESALC + UNU-IAS** working paper (dated **1 Sep 2026**) maps AI implementation across
+**200 higher-education institutions in 19 countries**, surveyed **Aug–Oct 2025**, on five
+dimensions — teaching and learning, research, community engagement, administration, governance;
+**ILIA 2025** (CEPAL, third edition) carries a governance section with a regulation sub-dimension.
+🟢 **Sequence the offer: governance first** — the 26%/<10% gap is the buyer's pain — **delivered on
+assets the client already owns.** 🔴 Watch Brazil's **PL 2.338/2023**, which names *"selection of
+students for access to education"* as high-risk and remains amendable in the Chamber of Deputies.
+
+### Global
+🔴 **Do not quote a 2026 market size.** Four estimates read the same day span **$3.7B–$11.4B**
+against 2025 bases of **$6.4B–$8.3B**; one 2026 figure sits below another's 2025 base. 🟢 Quote the
+**direction**: NA largest share, APAC fastest-growing, CAGR estimates clustering around **21–31%**.
+🟢 **Two cross-regional demand facts that are consistent across sources and usable:** schools
+offering AI professional development for teachers rose **29% (early 2024) → 50% (late 2025)**, and
+**86%** of students across 16 countries report using AI in their studies against **~10%** of
+institutions having formal guidelines. 🟢 **That gap — near-universal student use against
+near-absent institutional policy — is the most reliable opportunity statement this base holds**,
+and it is the one claim that survived ten saturation passes unchanged.
+
+
 ## 🆕 `p516` — `2026-10-29` — **🔴 THE "SUPPLY NIL" THIS FILE PUBLISHED TWICE IS FALSE, AND IT IS THIS FILE'S OWN CLAIM: lines 51 and 107 read "0 LATAM-originated open-source education repositories at any star level" while `verticals/solutions.md:1010` carried 🇧🇷 `i-educar` (GPL-2.0, 722★, 🟢 live) and this base's narratives named the 🇧🇷 `bncc-dev` family. 🟢 ROOT CAUSE: eight passes of discovery were run in ENGLISH. One Portuguese query broke the nil on its first page. 🔴 The demand axis saturated a NINTH time — ~26 regional facts probed, 2 new.**
 
 ### 🔴 The retraction, stated plainly before anything is built on it

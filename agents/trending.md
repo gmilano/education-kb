@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p517` — `2026-10-29`
+
+🟢 **The new-agent flow this window is entirely non-English, and that is the week's finding.**
+Four in-language discovery legs (Mandarin, Japanese, Korean, Hindi) plus Indonesian were run
+against `Gap 516-D`. 🔴 **Every English-language lead returned was already held** — `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch`, `h9-tect/AI-Roadmaps`, `anandpatikat/guru-latihan-dinamis`
+all `grep`-matched these shelves. 🟢 **All five new licensed rows came from the non-English legs.**
+
+| Repo | Origin | Licence (from bytes, 53 names / 14 languages) | ★ | HEAD @ default branch | Note |
+|---|---|---|---|---|---|
+| [`yqy624/eduagent-digital-workforce`](https://github.com/yqy624/eduagent-digital-workforce) | 🇨🇳 | 🟢 **MIT** | 🔴 3 | `a52bf227145c` @ `main` | Five gated education agents — 知问 / 笔正 / 明察 / 知微 / 守则 |
+| [`llm-jp/awesome-japanese-llm`](https://github.com/llm-jp/awesome-japanese-llm) | 🇯🇵 NII / LLM-jp | 🟢 **Apache-2.0** | ~1.4k class | `4fa4630ddbdd` @ `main` | Japanese-LLM licence-and-provenance index |
+| [`xch1986/AI-Tutor`](https://github.com/xch1986/AI-Tutor) | 🇨🇳 | 🟢 **MIT** | small | `4062e24462c7` @ **`master`** | 🟡 **a fork** of the held `AI_Tutor_Release` |
+| [`rphilipzhang/AI-PhD-S26`](https://github.com/rphilipzhang/AI-PhD-S26) | — | 🟢 **MIT** | 🔴 ~91 class | `3643b8eee7a2` @ `main` | PhD course mono-repo; material, not a runtime |
+| [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) | 🇨🇳 | 🟢 **Apache-2.0** | **292** | `21d6a41b89e4` @ **`master`** | SIS — full row on [`verticals/solutions.md`](../verticals/solutions.md) |
+
+🔴 **And the eight that cannot be shelved as buildable** — `UNRESOLVED` on 53 grant filenames in 14
+languages, at the resolved default branch: `llm-jp/bridge-ai-for-edu` 🇯🇵,
+`jiaxiaojia123789/EduAgent-Platform` 🇨🇳, `xixi-in-polyu/eduAgent` 🇭🇰, `1008wjh/EduAgent` 🇨🇳,
+`rlaalstn1504/langchain-ai-agent-edu` 🇰🇷, `janggoons/knu-edu-ai-agent-2026` 🇰🇷,
+`matsuolab/lecture-ai-engineering-2026-hi` 🇯🇵→hi, `AbdurraghibSS/AI-Engineer-Training-with-DigitalSkola` 🇮🇩.
+🟢 **4 licensed / 8 ungranted out of 12 APAC-origin repos** — the measurement behind
+`intel/trends.md` `T517-1`.
+
+🔵 **`OpenMAIC`, the ladder datum, read on the one channel that answers (WebFetch):** **41.7k★**,
+**6.5k** forks, **MIT**, **798 commits** (`p516`: 781, **+17**), `v1.3.0-rc.1` dated `2026-10-22`
+(newest non-candidate `v1.2.1`, `2026-10-18`). 🔵 HEAD `70859b42e714` → **`e95c1d0bf23b`**.
+🟢 **No exact-star chase attempted** — `Gap 515-B` stays retired, and this pass re-confirmed why:
+`curl -sI` on the repo page returned **403 on 17/17** repos touched, including ones `git ls-remote`
+proves live.
+
+🔴 **The Korean leg is a genuine nil and is written down as one.** Two repos returned, both
+university course material (`langchain-ai-agent-edu` — 2026 보수교육; `knu-edu-ai-agent-2026` —
+Kangwon National University College of Education), **both ungranted**. 🔴 **No Korean-origin
+licensed education agent was found at all.** 🔴 Same for 🇮🇳 Hindi (the one Hindi-language hit is
+published by a *Japanese* institution) and 🇮🇩 Indonesian (no Indonesia-originated project; the one
+Indonesian education repo on these shelves was found by the **English** leg).
+
+
 ## 🆕 `p516` — `2026-10-29`
 
 🟢 **`DeepTutor` — `48.0k★`, and the aggregator channel is refuted a second time, independently.**

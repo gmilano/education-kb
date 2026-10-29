@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p517` — `2026-10-29` — **🟢 THE APAC COUNTERPART TO `i-educar` IS NOW ON THIS SHELF, AND IT IS THE MORE PERMISSIVE OF THE TWO: 🇨🇳 `gongfuxiang/schoolcms` — *"中国首个开源学校教务管理系统"* — **Apache-2.0** read from bytes, **292★**, 110 forks, 271 commits, default branch `master`. 🔴 One pass after this base called its APAC supply shelf "thin". 🟢 Found by a Mandarin query; eight English passes missed it.**
+
+### 🟢 The Chinese academic-affairs stack — and why it outranks `i-educar` for a studio
+
+🔵 **Why it belongs on this shelf next to Odoo, Moodle, OpenMRS and `i-educar`:** it is a *real,
+deployed school system of record* with a decade of history and a mirror on Gitee and OSChina —
+the profile this shelf exists to hold. 🟢 It is a system to **customise with AI on top**, not a
+research artifact.
+
+| Field | Value (read this pass) |
+|---|---|
+| Repo | [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) |
+| Origin | 🇨🇳 — self-described *"中国首个开源学校教务管理系统"* (*China's first open-source school academic-affairs management system*) |
+| Licence | 🟢 **Apache-2.0** — `LICENSE` **and** `LICENSE.txt` both present; GitHub sidebar *"Apache-2.0"* |
+| ★ / forks | **292** / **110** |
+| HEAD @ default branch | `21d6a41b89e4` @ 🔴 **`master`** — *not* `main`; the resolved-branch rule earns its keep again |
+| Commits | 271 |
+| Stack | ThinkPHP (PHP) back end, Amaze UI front end, multi-database with read/write splitting and caching |
+| Mirrors | Gitee, OSChina, GitCode (🔴 see `Gap 517-C`) |
+
+🟢 **Modules, as the README states them.** Back office: multi-administrator permission control,
+student management, grades, teacher management, article and site management, automated site
+layout, navigation modes. Front end: HTML5 responsive desktop/mobile, **online registration via
+SMS or email**, online enrolment, **online exams**, article reading. Also claimed: multilingual
+support, modular development, SQL-injection protection, high-concurrency support.
+
+### 🟢 The licence comparison that decides which region gets which offer
+
+🔴 **This is the operative point of the whole pass.** The two government-adjacent school systems on
+these shelves are now one per region, and their grants differ in the way that matters most:
+
+| | 🇧🇷 [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | 🇨🇳 [`gongfuxiang/schoolcms`](https://github.com/gongfuxiang/schoolcms) |
+|---|---|---|
+| Licence (from bytes) | **GPL-2.0** | 🟢 **Apache-2.0** |
+| ★ | 722 | 292 |
+| Default branch | `2.12` | `master` |
+| Adoption | Brazil's *Portal do Software Público* since 2008; municipal deployments | self-described first-of-kind in China; Gitee/OSChina presence |
+| 🔴 **Closed derivative possible?** | 🔴 **No** — GPL-2.0 is copyleft | 🟢 **Yes** — Apache-2.0 is permissive |
+| Patent grant | 🔴 none | 🟢 **express** (Apache-2.0 §3) |
+
+🟢 **So the studio's answer to *"can we ship a proprietary product on top of the client's SIS?"*
+is region-dependent, and now evidenced on both sides:** in 🇧🇷 the honest answer is *no, plan an
+AGPL/GPL-clean architecture with the AI layer at arm's length*; in 🇨🇳 the honest answer is
+**yes, and you get a patent grant with it.** 🔵 `compose/patterns.md` `P522` is the recipe that
+uses this.
+
+### 🔴 The licence-clearance problem this shelf must now carry for APAC
+
+🔴 **`schoolcms` is the exception, not the rule.** Of **12** APAC-origin education repos probed
+this pass with [`ingest/probe-grant.sh`](../ingest/probe-grant.sh), **8 carry no grant at all** on
+53 filenames across 14 languages, at the resolved default branch. 🟢 **For this shelf that changes
+the intake question:** an APAC vertical candidate is not *"is it good?"* but **"is it grantable?"**
+— and the probe answers that in one call before any architecture work starts.
+
+🟡 **Two ungranted APAC platforms worth naming anyway**, because they are platform-shaped and would
+belong on this shelf if their grants resolved:
+
+| Repo | Origin | Status | What it is |
+|---|---|---|---|
+| [`jiaxiaojia123789/EduAgent-Platform`](https://github.com/jiaxiaojia123789/EduAgent-Platform) | 🇨🇳 | 🔴 `UNRESOLVED` @ `main`, HEAD `099fc5508925` | Agentic education platform: multi-agent orchestration, hybrid RAG, persistent memory, agent harness, MCP tools, teaching workflows. 🔵 Reported as built on Alibaba Bailian + Milvus |
+| [`xixi-in-polyu/eduAgent`](https://github.com/xixi-in-polyu/eduAgent) | 🇭🇰 (PolyU) | 🔴 `UNRESOLVED` @ `main`, HEAD `1e22d3624e09` | AI education platform with vector RAG |
+
+🔴 **Neither may be shelved as buildable**, and neither is called unlicensed — see `Gap 517-E`.
+
+### 🔵 `OpenEduCat` — a licence correction worth recording
+
+🟡 **Probed this pass via its Odoo module listing:** `OpenEduCat` (education ERP on the Odoo
+framework — SIS, LMS, ERP and an admissions CRM) is listed as **LGPL-3** on
+`apps.odoo.com`. 🔵 This base has previously carried it as **LGPL-3.0**, so this is a
+**confirmation, not a change** — recorded because the vendor's own marketing pages describe the
+CRM and SIS breadth without naming the grant, and a future pass reading only those pages would
+have no licence at all.
+
+
 ## 🆕 `p516` — `2026-10-29` — **🔴 THIS SHELF HELD THE ROW THAT REFUTES THE BASE'S LATAM SUPPLY NIL — line 1010, 🇧🇷 `i-educar`, GPL-2.0, flagged live — while `intel/market.md` published "0 LATAM-originated open-source education repositories at any star level" for an eighth pass. 🟢 The row is re-verified from bytes and now carries its star figure (722), its real default branch (`2.12`), and its sibling `i-diario` (AGPL-3.0, default branch `1.6`).**
 
 ### 🟢 The Brazilian municipal stack — a real, deployed, customisable LMS/SIS line
