@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p526` — `2026-10-29` — **THE TRENDING CHANNEL'S OUTPUT THIS WINDOW IS A PLATFORM RE-RESOLUTION, NOT A DISCOVERY — AND ONE OF THE RE-RESOLUTIONS IS A MOVED ADDRESS.** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) **now redirects to [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform)** (AGPL-3.0, 8.2k★); every row on this base pointing at the old slug is pointing at a redirect. 🟢 Nineteen platform and infrastructure repositories were re-read from their own pages this pass, and the licence picture is unambiguous: **the education sector is copyleft.** A deliberate search for a mainstream Apache/MIT LMS returned **none** — the permissive cores are [`oppia/oppia`](https://github.com/oppia/oppia) (Apache-2.0, 7.0k★), [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0, 449★), [`sakai`](https://github.com/sakaiproject/sakai) (ECL-2.0, 1.2k★) and [`kolibri`](https://github.com/learningequality/kolibri) (MIT, 1.2k★), and that is the whole list. 🔴 One licence is **unresolved**: [`frappe/education`](https://github.com/frappe/education) (685★) serves a `license.txt` the repository page does not render a type for.
+
+### 🟢 Platform cores re-resolved this window, every cell from the page
+
+| Repo | Licence | Stars | Note read this pass |
+|---|---|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9.3k | README names **BBB 4.0**; default branch `v4.0.x-develop` |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | AGPL-3.0 | 8.2k | 🔴 **canonical address — `edx-platform` redirects here** |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 | 7.6k | `main`, 123,289 commits |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** | 7.0k | `develop`, 17,019 commits — largest permissive platform found |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 6.9k | no release cut |
+| [`frappe/lms`](https://github.com/frappe/lms) | AGPL-3.0 | 3.4k | no release cut |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | 1.2k | 25.2 / 23.5 supported; 25.3 / 23.6 in development; README still says `master` = "Sakai 24" 🟡 |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 1.2k | `develop`, 39,848 commits — only MIT full platform |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | AGPL-3.0 | 1.1k | Docker Open edX distribution |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1.0k | install docs reference v2.0.3 |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 | branch **19.0** (Odoo modules) |
+| [`apache/openmeetings`](https://github.com/apache/openmeetings) | **Apache-2.0** | 688 | mirror of Apache OpenMeetings |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 **unresolved** | 685 | `license.txt` present, type not rendered on the page |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | GPL-2.0 | 722 | **LATAM** — Itajaí (SC) municipal origin, Brazilian federal Public Software Portal since 2008 |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 648 | SIS; origin not stated on the page |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | 505 | branch `release_11` — **EMEA**, non-profit society governance |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | 449 | **EMEA** (Switzerland) — permissive + assessment built in |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | **MIT** | 355 | **EMEA** (Ghent Univ.) — code-similarity detection, no LLM |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 152 | framework-independent PHP library; no repo description set |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | GPL-2.0 | 64 | QTI assessment platform core |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | **MIT** | 51 | **EMEA** (France Université Numérique) — xAPI LRS |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | 4.1k | FSRS scheduler — the retention primitive |
+
+### 🔴 Licence trap re-confirmed on the trending channel
+
+[`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) — **340★**,
+**Elastic License 2.0**, read from the page today. An AI advising and recruitment
+CRM for colleges, and the best higher-ed advising data model on any shelf. 🔴
+Elastic-2.0 **forbids providing the product as a hosted or managed service**,
+which is the exact shape of a studio engagement. **Reference only.** Read its data
+model — advising notes, engagement signals, outreach journeys — then build that
+model yourself.
+
+### 🟢 The licence-filename rule, restated because it keeps paying
+
+[`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) — **107.5k★**,
+read today — serves its grant at **`LICENSE.txt`**, and 🔴 **the repository page
+names no licence type at all**. Any probe reading `LICENSE` alone files a
+six-figure-star asset as ungranted, and the page channel cannot rescue it. Probe
+`LICENSE`, `LICENSE.txt` **and** `LICENSE.md`, grade from the **title block**, and
+match case-insensitively — [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core)
+(GPL-2.0, 64★) is the live example of a GPL-2.0 payload that grades as LGPL under
+a case-sensitive body matcher, because its preamble cross-references *"GNU Lesser
+General Public License"*.
+
+### 🟡 What the channel did **not** produce
+
+- **No new foundational repository.** Nineteen re-resolutions, zero discoveries.
+  The platform layer in education is stable and the movement is all in agents —
+  see [`../agents/trending.md`](../agents/trending.md).
+- **No APAC-origin platform core.** APAC's open-source strength in education is
+  entirely in agents (DeepTutor, OpenMAIC). Moodle's Perth origin is historical;
+  its governance is global.
+- **No permissively licensed SIS, anywhere.** Every student-information system
+  found is GPL-2.0 or GPL-3.0; the AI-native option is Elastic-2.0.
+- **No North-America-placed platform core** beyond Canvas, which is AGPL-3.0 and
+  commercially stewarded.
+
+### 🔴 Channel health
+
+`curl` to `github.com` and `api.github.com` returns **HTTP 403** from the session
+proxy for every repository not attached to this session, so all cells above were
+read through the page-fetch channel. That channel serves **rounded** star counts
+(`9.3k`, not `9,347`), frequently fails to render the Languages and Releases
+widgets, and gives no `pushed_at`. Where a version appears above it was read from
+a README or a branch name, and is labelled as such. **No byte-level licence
+hashing was possible this pass** — the `frappe/education` cell is unresolved for
+exactly that reason.
+
+---
+
 ## 🆕 `p525` — `2026-10-29` — **🟢 THE TRENDING CHANNEL'S REAL OUTPUT THIS WINDOW IS A LICENCE-FILENAME FINDING WITH A 107,478★ EXAMPLE: [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) serves its Apache-2.0 grant at **`LICENSE.txt`**, so every probe on this base that reads `LICENSE` alone files a six-figure-star permissive asset as ungranted. 🟢 A 138-address sweep of this base's own unshelved backlog puts a number on how often that shape bites: **26 of 138 addresses returned `UNRESOLVED` on seven filenames**, which is 19 % — and the 53-name standing probe exists precisely because seven is not enough. 🔴 And the pass's hardest number is about this file's neighbours, not its rows: of 138 addresses this base NAMES, **71 are permissive and 39 sit on no canonical shelf anywhere**.**
 
 ### 🟢 Trending-channel addresses re-resolved this window, every grant from served bytes

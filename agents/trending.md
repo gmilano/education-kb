@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p526` — `2026-10-29` — **TWO RELEASES IN 48 HOURS AT THE TOP OF THE SHELF, AND A NEW REPO SHAPE UNDERNEATH IT.** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) cut **v1.7.0 on 2026-10-28** and reads **48.9k★** today; [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) cut **v1.3.0 on 2026-10-29** — today — and reads **41.7k★**. Both permissive, both APAC-academic, 90k★ between them. 🟢 The real discovery this window is one layer down: a **full sweep of the GitHub `ai-tutor` topic** returned **20 repositories**, and the fast-growing tail is no longer applications but **agent *skills*** — `universal-examprep-skill` (361★), `universal-diagnostic-tutor-skill` (252★), `kaogong-skill` (210★), `education-skills` (119★). 🔴 **Verification channel degraded:** `curl` to `github.com` and `api.github.com` returns **HTTP 403** from the session proxy for every unattached repository, so stars below are **rounded page values**, not API integers.
+
+### 🟢 Top of shelf — releases inside the window
+
+| Agent | Stars (page, `p526`) | Release in window | Licence |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **48.9k** | **v1.7.0 · 2026-10-28** | Apache-2.0 |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **41.7k** | **v1.3.0 · 2026-10-29** (knowledge base + "Pro workbench") | MIT |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 308 | v1.16.0 · October 2026 | MIT |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 538 | 0.27.0 (README) | MIT |
+
+🟡 **DeepTutor's own number, and the aggregators'.** Trend aggregators put DeepTutor at **46.0k-48.1k** across 28-29 Oct with **+1,600 to +2,400 in a single day**; a GitHub topic listing showed **46.2k** on 27 Oct. The repository page itself served **48.9k** today. The aggregators are low by 1-3k and lag by a day — **prefer the repository page**, and that is the third consecutive pass on this base where an aggregator understated DeepTutor.
+
+### 🟢 Full `ai-tutor` topic sweep — 20 repositories, first page
+
+Licence column: **`✅ read`** = licence read from the repository page this pass.
+**`— unread`** = star count and description read from the topic listing, licence
+**not** verified. An unread cell is not a permissive cell.
+
+| # | Repo | Stars | Licence | Lang | What it is |
+|---|---|---|---|---|---|
+| 1 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 48.9k | ✅ Apache-2.0 | Python | Lifelong personalised tutoring |
+| 2 | [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 1.3k | ✅ **MIT** | JS | AI study partner: plans a route, explains, guides projects |
+| 3 | [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 585 | — unread | TS | Lifelong-learning skill tree, 30+ skills |
+| 4 | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 538 | ✅ **MIT** | TS | MCP server for Anki flashcards |
+| 5 | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 361 | — unread | Python | Exam-prep coach, cross-session memory, slide citations |
+| 6 | [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 300 | — unread | Python | LeetCode/DSA mentor, progressive hints, mock interviews |
+| 7 | [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 294 | ✅ **MIT** | JS | Self-hostable tutor that adapts to how you learn |
+| 8 | [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 252 | — unread | — | Diagnosis-first STEM/CS tutor |
+| 9 | [`artcc/freelingo`](https://github.com/artcc/freelingo) | 213 | — unread | JS | Self-hosted language learning, plans + flashcards |
+| 10 | [`nichochar/ari`](https://github.com/nichochar/ari) | 211 | — unread | TS | Pen, paper and AI combined |
+| 11 | [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 210 | — unread | Python | China civil-service / public-institution exam prep |
+| 12 | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 155 | ✅ **MIT** | Python | Local-first block workspace → notes, quizzes, flashcards, 10+ LLM providers |
+| 13 | [`flysheep-ai/education-skills`](https://github.com/flysheep-ai/education-skills) | 119 | — unread | Shell | Claude Code skills for teaching and learning |
+| 14 | [`PrepLabsAI/InterviewMentor`](https://github.com/PrepLabsAI/InterviewMentor) | 116 | — unread | — | AI mock interviews for tech roles |
+| 15 | [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion) | 110 | — unread | — | Trinity K12 AI education companion |
+| 16 | [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 101 | ✅ **MIT** | TS | **AI-native LMS** — AI mentor + role-play in the product |
+| 17 | [`mahseema/aibooks`](https://github.com/mahseema/aibooks) | 95 | — unread | — | Curated AI/ML/DL book list (not an agent) |
+| 18 | [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) | 91 | — unread | Python | Learner-owned platform, private courses, cited RAG |
+| 19 | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 75 | — unread | JS | RAG tutor for grades 1-9 |
+| 20 | [`codeXsidd/Studivexa`](https://github.com/codeXsidd/Studivexa) | 72 | — unread | JS | Student/developer productivity workspace |
+
+🔴 **The listing is truncated** — the rest sit behind "Load more…", so this is the
+first page of the topic and not the topic.
+
+### 🟢 Promoted to [`top.md`](top.md) this pass
+
+`Selleo/mentingo` (MIT, 101★) went onto the verticals shelf as the **only MIT
+full LMS with an agent already in the product** — no retrofit. `Li-Evan/Bloom`,
+`Miaotofu01/Study-Mate`, `zijinz456/OpenTutor` and `ankimcp/anki-mcp-server` are
+licence-verified MIT and now carried on this base; `anki-mcp-server` is in
+[`top.md`](top.md) as the retention half of the tutoring stack.
+
+### 🟡 The shape change worth naming
+
+Four of the twenty rows are **skills**, not applications — packaged instructions
+for a host agent rather than a deployable service, and three of those four sit
+between 210★ and 361★ after weeks, not years. 🟢 **Consequence for composition:**
+a skill is a *prompt asset* under whatever licence its repository carries, and it
+inherits the host's safety posture rather than bringing its own. Useful as a
+pedagogy accelerator inside P549; never the deliverable on its own, and never
+counted as an "agent" on these shelves.
+
+### 🔴 Declared gaps, this window
+
+- **No LATAM-origin education agent** on any leg. Third consecutive pass.
+- **One EMEA-placed agent** in total: [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+  (BSD-3-Clause, 114★, **Morocco** — stated on the org profile, verified this pass).
+- **14 of 20 topic rows have unverified licences.** They are recorded as unread
+  rather than assumed permissive, and none entered a compose pattern.
+- **`github.com` and `api.github.com` are 403 from the session proxy** for
+  unattached repositories; stars are rounded page values this pass.
+
+### 🟢 Correction entered this pass
+
+`Open-TutorAi/open-tutor-ai-CE` was carried as **Apache-2.0** by earlier passes.
+The repository page served **BSD-3-Clause** today. Still permissive, still
+buildable — the cell was simply wrong.
+
+---
+
 ## 🆕 `p525` — `2026-10-29` — **🔴 THE WINDOW PRODUCED NO NEW SUPPLY AND THAT IS NOW A MEASUREMENT, NOT AN IMPRESSION: four repositories came off the scheduled search legs — `pguso/agents-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `h9-tect/AI-Roadmaps`, `anandpatikat/guru-latihan-dinamis` — and **all four were already on this base**, three of them named together on one line of this very file. 🟢 So the movement this window is a BACKLOG, not a discovery: **39 permissive addresses** this base holds and shelves nowhere, **21 promoted into [`top.md`](top.md) this pass**. 🔴 And the trending aggregator that `p524` caught understating `DeepTutor` is not the only unreliable channel here — the GitHub search API **silently dropped 2 of 39** queried slugs today with `"incomplete_results": false`, which is `Gap 504-A` reproducing on schedule.**
 
 ### 🟡 The window's star movements, measured on the API channel
