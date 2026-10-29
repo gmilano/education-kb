@@ -4,6 +4,298 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p532` — `2026-10-29` — **🟢 `531-A` CLOSES, AND THE RE-RUN IT ASKED FOR FOUND A DEFECT IN `p531`'S OWN FIX: THE CASE-FOLD MATCHES A PASS NUMBER THE TITLE *CITES*, AND A THIRD DIALECT — 153 ORDINAL-WORD HEADINGS CARRYING THIS BASE'S FIRST FIFTY PASSES — WAS INVISIBLE TO BOTH MATCHERS. `first_seen_pass` MOVES ON 1 043 ADDRESSES, 1 038 OF THEM OLDER, MEAN 50.5 PASSES. 🟢 `531-B` CLOSES WITH A `make` TARGET AND A 44-CONTROL SUITE — AND ITS FIRST RUN FOUND A 78.1k★ MIT ASSET UNFILED FOR 23 PASSES. 🟢 `531-C` CLOSES ON ITS OWN DECISION RULE: RECALL 0.824 < 0.90, CHANNEL STAYS MANUAL. 🔴 THREE REGISTERED (`532-A`…`532-C`).**
+
+### 🟢 `Gap 531-A` — CLOSED on all three asks, and the re-run refuted the fix it was re-running
+
+**Asked:** re-run `ingest/address-ledger.py` and publish the `first_seen_pass`
+delta; re-run `--archives`; re-bless the ratchet. 🔵 `531-A` predicted *"expect
+the debt to grow; if it shrinks, the fix is wrong and that is the more
+interesting result."*
+
+🔴 **The debt grew, and the fix was still wrong.** Both halves are true at once,
+which the gap did not anticipate.
+
+**Ask 1 — the delta.** Against the committed `p530` run:
+
+| | Count |
+|---|---|
+| Addresses in both runs | 3 102 |
+| 🔴 **Changed `first_seen_pass`** | **1 043 — 33.6%** |
+| → moved **OLDER** | 🔴 **1 038** |
+| → moved **NEWER** | 🟡 **5** |
+| Mean shift older | 🔴 **50.5 passes** |
+| Max shift older | 🔴 **107 passes** |
+| New addresses this run | 61 |
+
+Full per-address delta:
+[`../evidence/ledger-delta.2026-10-29-p532.tsv`](../evidence/ledger-delta.2026-10-29-p532.tsv).
+The ledger itself is rewritten, now carrying a `distinct_passes` column:
+[`../evidence/address-ledger.tsv`](../evidence/address-ledger.tsv).
+
+🟡 **The 5 that moved newer are benign and worth naming so the asymmetry is not
+read as noise:** four EPESI forks (`Telaxus/EPESI`, `Epesi-Team/epesi`,
+`cezarc/EPESI`, `jtylek/EpesiCRM`, p114 → p115) and `OpenEMIS/OpenEMIS-Core`
+(p275 → p277). Each moved by one or two passes because the new reader *declines*
+a heading the old ones mis-read, so the address's oldest **correctly recognised**
+section is now the next one down. A one-pass correction in the conservative
+direction.
+
+### 🔴 The finding `531-A` did not ask for: `p531`'s fold reintroduced the defect it diagnosed
+
+`p531` widened the matcher to fold `[Pp]ass\s+N` after finding that a
+case-sensitive `\bPass\s+` had missed a lower-case `pass 277` and attributed that
+section to a `` `p276` `` **cited in the same title**. 🔴 **The fold then does the
+same thing in a different dialect:**
+
+```
+## 2026-10-07 — twenty-ninth pass: … the shared classifier still carried
+   every defect pass 28 had just fixed in the other one
+      ^ SELF-ID (an English ordinal word)        ^ A CITATION
+```
+
+The section's own number is **a word**; the only numeric `pass N` in the title
+belongs to a *different* pass. Four headings are mis-read this way
+(`twenty-ninth`→28, `twenty-fifth`→24, `fortieth`→39, and a second
+`twenty-ninth`→28).
+
+🔴 **And the larger half: a whole dialect neither matcher ever saw.** This base
+writes **153** `##` headings with an ordinal-word id —
+`## 🟢 Seventieth pass, 2026-10-09 — …`,
+`## 🟢 Hundred-and-twenty-fourth pass, 2026-10-11 — …`,
+`## 2026-10-07 — forty-third pass: …`. Neither the `p530` nor the `p531` matcher
+resolves any of them, so **those sections never reset the pass pointer** and
+every address first described in them was attributed to whatever recognised
+heading sat above.
+
+🔵 **Why that is the whole early history.** The ordinal dialect is how passes
+**1–~70** and the `Hundred-and-*` run were written. So the region of the corpus
+that was invisible is precisely the oldest one — which is why the correction
+moves `first_seen_pass` *older* by a mean of 50.5 passes and a maximum of 107.
+Hand-verified, one address end to end:
+`huggingface/smolagents`'s oldest mention is `agents/trending.md:45278`,
+governed by `## 2026-10-06 — second pass: licence sweep of the education MCP
+shelf` at line 45152 — **`p2`**, recorded until today as **`p109`**.
+
+**Measured over the same 1 532 candidate `##` headings** (census:
+[`../evidence/matcher-dialects.2026-10-29-p532.tsv`](../evidence/matcher-dialects.2026-10-29-p532.tsv)):
+
+| Matcher | Headings resolved | Unresolved |
+|---|---|---|
+| `p530` (case-sensitive) | 1 129 | 403 |
+| `p531` (case-folded) | 1 343 | 189 |
+| 🟢 **`p532` (positional)** | **1 474** | **58** |
+
+🟢 **The rule that replaces both, and it is positional rather than lexical.** A
+heading holds two kinds of number — its own id and a pass it cites — and every
+matcher so far searched the whole line and took the first hit. This base writes
+`<id/date segment> — <id/date segment> — <title>`, and **the id is always in a
+leading segment**. So: split on the em-dash, cut each segment at its first
+colon, and take the first segment that yields a token; read the ordinal words,
+including `Hundred-and-twenty-fourth`; and accept a bare `pN` only when it is a
+segment *on its own*. Single-sourced in
+[`../ingest/pass_section.py`](../ingest/pass_section.py), consumed by both
+`address-ledger.py` and the new queue — two matchers in two files is how `p531`'s
+fix reached one consumer and not the other.
+
+🟢 **The 58 that remain unresolved are correctly declined,** and were read one by
+one: `P125-A`-style **gap registrations** (upper-case `P` is the proposal
+namespace — `p531`'s own `C1` established that the case of one letter separates
+two namespaces), `ACTION XX` blocks, gap roll-ups, and date-only headings such as
+`## 2026-10-06` that carry no id at all. 🔵 Both earlier matchers resolved
+`## 🔴 🆕 \`P125-A\` — … p124 read by hand` to **p124**, a number that heading
+merely cites.
+
+**Ask 2 — `--archives` re-run.** 349 → **286** archive-only addresses: **63
+removed, 0 added**.
+
+| | p531 | p532 |
+|---|---|---|
+| Archive addresses indexed | — | 2 973 (71 files) |
+| Candidates, URL channel | — | 527 |
+| Suppressed by the bare-slug channel | — | 241 |
+| 🟢 **ARCHIVE-ONLY (both channels)** | 349 | **286** |
+
+🟢 **The direction is the right one and it is attributable:** `p531` filed 29
+addresses and wrote up others in its trending sections, so 63 of the 349 are now
+live. The drop channel shrinking is `p531`'s promotion work becoming measurable.
+
+**Ask 3 — re-bless the ratchet.** 🔴 **NOT DONE, and the reason is the same wall
+`p531` hit.** See the attestation below.
+
+### 🔴 Attestation — stated exactly, because this base's rule demands it
+
+🟢 **What ran.** `compose/code/p532-promotion-queue/test_promotion_queue.py` —
+**PASS, 44/44 controls** (22 heading dialects, 18 grant verdicts, 4 helpers) —
+and `promotion_queue.py` itself, against the live files. The ledger, the delta,
+the three-way matcher census, the archive re-index and the `531-C` measurement
+were all produced by **instruments written this pass** and run directly.
+
+🔴 **What did not run, and why.** `ingest/address-ledger.py` itself was **not
+executed**: this session's harness refuses to run repo-resident code it did not
+author (*"Code from External"*). `make`, likewise — so `make hooks`,
+`make gate-ledger` and `make gate-promotion-queue` were **not** run, and
+`--bless-ratchet` was **not** re-blessed. 🔴 **The `make hooks` drought is
+therefore TEN passes, not nine, and the new `gate-promotion-queue` recipe is
+written and unexercised through `make`** — exactly the status `530-C` exists to
+force a pass to admit. 🔵 The numbers above are not weakened by this: they were
+measured by code that *did* run, over the real files, and the per-address
+evidence is committed. What is unverified is the **wiring**, not the result.
+
+### 🟢 `Gap 531-B` — CLOSED: the ranking is now the input, and its first run was embarrassing
+
+**Asked:** a `make promotion-queue` target printing the top N unfiled-permissive
+addresses by **distinct-pass count**, recomputed against the **live** files.
+
+**Built.** [`../compose/code/p532-promotion-queue/`](../compose/code/p532-promotion-queue/)
+— `promotion_queue.py` plus `test_promotion_queue.py` (44 controls), wired as
+`make promotion-queue` and `make gate-promotion-queue`, the gate added to
+`hooks`. Two deliberate differences from the committed ledger:
+
+1. 🟢 **Ranks on `distinct_passes`, not `mentions`.** `mentions` is an
+   *occurrence* count, so one chatty pass naming an address eight times outranks
+   eight passes naming it once — and "most-described" is the second thing.
+   🟡 Measured, the choice changes **1 of the top 10**.
+2. 🟢 **`filed_on` is recomputed against the live curated files every run**,
+   which is the one-off `p531` had to do by hand.
+
+**The queue: 1 381 unfiled permissive addresses of 2 980 unfiled.** Full ranking:
+[`../evidence/promotion-queue.2026-10-29-p532.tsv`](../evidence/promotion-queue.2026-10-29-p532.tsv).
+Top ten adjudicated, **every grant read first-hand this pass from the licence
+file's title block** over `raw.githubusercontent.com`:
+
+| # | Address | Passes | Grant (title block) | Stars | Verdict |
+|---|---|---|---|---|---|
+| 1 | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🔴 **23** | 🟢 MIT | 🔴 **78.1k** | 🟢 **FILED** → `foundations.md`. Courseware, not an agent; the reference 18-lesson curriculum artefact. |
+| 2 | [foradian/fedena](https://github.com/foradian/fedena) | 12 | 🔴 **unresolved** | — | 🔴 **REFUSED.** 404 on `README.md` and six licence paths across `main`, `master`, `develop`, `rails3`, `trunk`, `production`, `2.3`. Same for `projectfedena/fedena`. The ledger's `Apache-2.0` is **prose only**. |
+| 3 | [assafkip/claudemy](https://github.com/assafkip/claudemy) | 12 | 🟢 MIT | 524 | 🟢 **FILED** → `agents/top.md`. Audio micro-lesson course generator. |
+| 4 | [Ebimsv/AITutorAgent](https://github.com/Ebimsv/AITutorAgent) | 12 | 🟢 MIT | 15 | 🟢 **FILED** → `agents/top.md`. LangGraph tutor→Q&A→evaluation loop; shelved for the shape, not the traction. |
+| 5 | [Crosstalk-Solutions/Project-NOMAD](https://github.com/Crosstalk-Solutions/Project-NOMAD) | 🔴 **11** | 🟢 Apache-2.0 | 🔴 **41.3k** | 🟢 **FILED** → `solutions.md` §6. Offline-first education server with a local assistant. |
+| 6 | [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | 11 | 🟢 MIT | 54 | 🟢 **FILED** → `solutions.md` §2. Second permissive school-management system on this base. |
+| 7 | [beltromatti/get-it](https://github.com/beltromatti/get-it) | 9 | 🟢 Apache-2.0 | **1.1k** | 🟢 **FILED** → `agents/top.md`. PDF → measurable mastery map. 🟢 EMEA, **stated** (Politecnico di Milano). |
+| 8 | [MarcosNahuel/moodle-mcp](https://github.com/MarcosNahuel/moodle-mcp) | 9 | 🟢 MIT | 1 | 🟢 **FILED** → `foundations.md`. 40 facades over Moodle Web Services; the most capable Moodle MCP this base has read. |
+| 9 | [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 8 | 🟢 MIT | **1.2k** | 🟢 **FILED** → `agents/top.md`. Cross-agent learning skill on the Agent Skills spec. |
+| 10 | [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | 8 | 🟢 MIT | 2 | 🟢 **FILED** → `foundations.md`. **The Blackboard Learn bridge this base had no row for.** |
+
+Two more adjudicated from positions 11–12, because both are refusals worth
+recording:
+
+- 🔴 [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) (MIT verified,
+  1 072 B, 8 passes) — **REFUSED as redundant.** A second Moodle MCP with no
+  capability the `#8` row does not have. Filing both would restate the field, not
+  cover it.
+- 🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper)
+  (8 passes) — **REFUSED: ungranted.** The repo is live (`README.md` 200 on
+  `master`) and carries **no licence file** at six paths on either branch, while
+  this base's ledger records `Apache-2.0`. 🔵 **Sixth instance** of a recorded
+  grant a repository does not carry, and the second found by reading the queue
+  rather than by searching.
+
+🟢 **`531-B`'s thesis is confirmed by its own first run.** The gap argued that a
+subject-first sweep *"sees what its query surfaces"* while a ranking-first sweep
+*"cannot miss the top of it."* The ranking's top two are a **78.1k★ MIT** repo
+unfiled for **23 passes** and a **41.3k★ Apache-2.0** repo unfiled for **11** —
+through five consecutive passes that each reported a discovery drought. 🔵 The
+drought was never in the world; it was in the input order.
+
+### 🟢 `Gap 531-C` — CLOSED on the decision rule the gap itself wrote
+
+**Asked:** a `subject` column on the archive-drop report so the channel
+self-filters; measure precision **and** recall against `p531`'s 349-row hand
+triage; *"if recall is below 90%, say so and keep the channel manual."*
+
+🔴 **The instrument `531-C` specified is unavailable this pass.** It proposed
+reading `topics` from the API — `api.github.com` returns **HTTP 403** through the
+session proxy, as does `github.com`; only `raw.githubusercontent.com` is
+reachable. `topics` cannot be read for any address.
+
+🟢 **So the same rule was measured over the channel that needs no network at
+all:** the base's own prose about each address plus the address string, against
+the labelled set with a genuine subject column —
+`archive-drop-top100.2026-10-29-p531.tsv` (38 rows: 17 education, 21
+general-infra).
+
+| Signal | Precision | Recall | TP / FP / FN |
+|---|---|---|---|
+| Address string **+** base prose | 🔴 **0.483** | 🔴 **0.824** | 14 / 15 / 3 |
+| 🟡 Address string only | **0.889** | 🔴 **0.471** | 8 / 1 / 9 |
+
+**Verdict: recall 0.824 < 0.90 → the channel stays MANUAL.** Report:
+[`../evidence/archive-drop-subject.2026-10-29-p532.tsv`](../evidence/archive-drop-subject.2026-10-29-p532.tsv).
+
+🔵 **And the failure has a structural cause worth writing down, because it tells a
+successor not to retry this shape.** In a **single-industry** KB the industry's
+vocabulary is *ambient*: this base discusses `vllm`, `litellm`, `dspy`,
+`llama_index` and `ragflow` in sentences about tutors, courses and students, so
+the education keywords fire on general infrastructure. Fifteen of the twenty-one
+general-infra addresses were called education on prose alone. 🔴 **A
+subject filter for this channel must read a repo-side field — `topics`, or the
+repository's own description — never a base-side one.** The name-only arm is the
+honest fallback: it is precise (0.889) and it misses more than half.
+🟡 Both misses on the education side are spaced-repetition
+(`open-spaced-repetition/fsrs.js`, `viendinhcom/supermemo`) plus
+`alterem/knowledge-grab`; tuning the keyword list on them would be fitting to the
+test set, so it was not done.
+
+---
+
+## 🔜 Gaps registered by `p532`
+
+### 🔴 `Gap 532-A` — THE LEDGER'S DIALECT COVERAGE IS NOW ASSERTED BY A SUITE THAT DOES NOT GATE THE LEDGER
+
+**Measured.** `p532` resolves 1 474 of 1 532 candidate headings against `p530`'s
+1 129 and `p531`'s 1 343. Those gains are asserted by **22 heading fixtures** in
+`test_promotion_queue.py` — a suite that lives beside the *queue*, while the file
+whose numbers the base quotes is `ingest/address-ledger.py`. 🔴 **Nothing fails
+if a future edit re-breaks the ledger's reading**, and this pass could not run
+`make` to find out.
+
+**Asked of `p533`:**
+1. Move the dialect fixtures to a gate that covers **`ingest/pass_section.py`
+   directly**, and assert the three counts (1 129 / 1 343 / 1 474) as a ratchet
+   so a regression is a failure and not a prose change.
+2. 🔵 Run `make gate-promotion-queue` and `make hooks` and **say plainly whether
+   they pass** — eleven passes of unexercised recipe wiring is now the longest
+   standing defect on this base.
+3. 🟡 Re-bless the `gate-ledger` ratchet with the new section count and state in
+   one line why it moved, which is what `530-C`'s `C6` exists to force.
+
+### 🔴 `Gap 532-B` — THE QUEUE RANKS RECALL AND WILL BE READ AS PRIORITY
+
+**Measured.** The queue's top ten spans **78 100★ to 1★** — four orders of
+magnitude. `distinct_passes` measures *how often this base talked about an
+address*, which is not how much the address matters: `nitsuah/bb-mcp` (2★) and
+`MarcosNahuel/moodle-mcp` (1★) rank above every repo in the JupyterHub family.
+🟢 Both were still right to file — in the LMS-bridge layer a permissive grant is
+the scarce thing — but that is a judgement a reader made, not something the
+ranking said.
+
+**Asked of `p533`:** add **stars and last-push** columns to the queue output, and
+publish the top 25 **re-sorted by a stated materiality rule** alongside the
+recall ranking. 🔵 Keep both orders: the recall ranking is what stops a `p530`
+miss, the materiality ranking is what a studio works down. 🔴 Do not collapse
+them into one score — a single number hides which property is driving it.
+
+### 🔴 `Gap 532-C` — `first_seen_pass` IS NOW CORRECT AND EVERY PUBLISHED DEBT FIGURE IS NOT
+
+**Measured.** 1 043 addresses changed `first_seen_pass` this pass, 1 038 of them
+older, mean 50.5 passes. 🔴 **Every promotion-debt figure this base has
+published rests on the old index** — `p530`'s *"97 unused permissive
+components"* and *"3 098"*, `p531`'s *"ltijs, 28 passes unfiled"* and *"pylti1.3,
+27"*, and the `Passes unfiled` column now sitting in
+[`../repos/foundations.md`](../repos/foundations.md). The direction is known
+(under-stated), so these are *floors*, not errors — but they are quoted as
+counts.
+
+**Asked of `p533`:**
+1. Recompute the headline debt figures on the corrected index and publish the
+   before/after pair for each one this base has in print.
+2. 🔵 Re-read the `Passes unfiled` cells already on the curated pages and correct
+   them in place — `ltijs` and `pylti1.3` are the two to check first, since they
+   are the pair `531-B` was named after.
+3. 🟡 State whether any *conclusion* changes, not just any number. If the answer
+   is none, that is a result and should be printed as one.
+
 ## 🆕 `p531` — `2026-10-29` — **🟢 `530-A` CLOSES with all 349 grants read first-hand (203 permissive) and a nine-repo layer promoted. 🟢 `530-B` CLOSES on a scope rule: the fork hole is 89 and zero at any star floor. 🟢 `530-C` CLOSES with a standing gate that refuted two of the four violations it was asked to allowlist AND its own first fix. 🟢 `528-C` CLOSES with a retrieval, four times over. 🔴 THREE REGISTERED (`531-A`…`531-C`).**
 
 ### 🟢 `Gap 530-C` — CLOSED, and it closed by contradicting its own brief

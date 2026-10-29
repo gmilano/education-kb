@@ -35,6 +35,8 @@ LEDGER_LOG ?= /tmp/education-kb-gate-promotion-ledger.log
 LADDER_CENSUS_LOG ?= /tmp/education-kb-ladder-case-census.log
 INDEX_LOG ?= /tmp/education-kb-carried-index.log
 ADDR_LEDGER_LOG ?= /tmp/education-kb-gate-ledger.log
+# p532: the promotion-queue instrument's own control log.
+PROMO_QUEUE_LOG ?= /tmp/education-kb-gate-promotion-queue.log
 PROMO_LEDGER ?= evidence/promotion-ledger.2026-10-25-p436.tsv
 # p436 — the backlog this pass measured and adjudicated.  It may only FALL.
 PROMO_RATCHET ?= 148
@@ -100,7 +102,7 @@ ALIAS_REGISTER ?= evidence/alias-register.2026-10-21-p370.tsv
 # `PASS` is overridable, so a pass stamps its own artefacts: `make hooks-online PASS=p382`.
 PASS ?= p381
 
-.PHONY: gate-ledger gate-grant-presence grant-presence-census bsd-variant-census gate-promotion-ledger promotion-backlog archive-drops dead-citations gate-branch-alias branch-alias-census branch-alias-vendored gate-conjunctive-grant conjunctive-census gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
+.PHONY: promotion-queue gate-promotion-queue gate-ledger gate-grant-presence grant-presence-census bsd-variant-census gate-promotion-ledger promotion-backlog archive-drops dead-citations gate-branch-alias branch-alias-census branch-alias-vendored gate-conjunctive-grant conjunctive-census gate-action-answered gate-carried-existence carried-existence-census carried-existence-sweep gate-group-lineage gate-fork-direction gate-shelf-fork shelf-fork-candidates pypi-index-sweep pypi-index-verify gate-subtree-grant gate-offset-region verdict channels gate-presentation-fold gate-union-currency union-currency gate-dead-citation gate-alias-canonical alias-census gate-author-key author-key-census gate-payload-digest hooks-online gate-fold-identity fold-census gate-grant-scope gate-untitled-payload untitled-arm gate-template-identity gate-permissive-arm permissive-arm risk-order gate-family-coverage family-coverage hooks gate-offline gate-online gate-mit-tier reach status exists index carried claims recount sweep gate-enumeration gate-tables gate-conflict gate-absence absence-census enumerate conflict-sweep gate-provenance provenance-census provenance-sweep gate-identity gate-identity-online gate-ladder-case ladder-audit gate-restatement gate-pin-grant gate-evidence-store gate-slug-oracle slug-probe gate-payload-pin gate-shelf-consistency gate-affero-rung delivery-audit affero-rung-census gate-bespoke-title bespoke-census gate-address-shape address-shape-census gate-census-union census-union census-union-grade gate-register-currency
 
 # 🔴 p300: `hooks` WAS A FAIL-FAST CHAIN, AND THAT MASKED SIX GATES FOR TWO PASSES.
 # `gate-identity` went red at p298 on four findings that were its own false positives
@@ -136,6 +138,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-region-place gate-backlog-denominator \
              gate-dead-citation gate-regional-leg gate-census-union \
              gate-ledger \
+             gate-promotion-queue \
              gate-i2-sweep-crosscheck \
              gate-union-currency \
              gate-subtree-grant gate-offset-region gate-shelf-fork \
@@ -1442,6 +1445,19 @@ grant-presence-census: ## p439 — the live corpus measured against Gap 439-A.  
 bsd-variant-census: ## p441 — Gap 440-A: every BSD payload, fixture and published, graded by variant.  A MEASUREMENT, never a failure.
 	@$(PY) -I compose/code/p441-bsd-variant/grade_bsd.py --root . || true
 
+
+promotion-queue: ## Gap 531-B — the top of the unfiled-permissive ranking, recomputed against the LIVE files.  A measurement, never a failure.
+# 🔵 Why this target exists.  p530 filed twelve standards repos as "the integration
+# layer" and left `ltijs` (28 passes unfiled) and `pylti1.3` (27) — the #1 and #2
+# most-described unfiled permissive addresses in the corpus — unfiled, IN THAT LAYER.
+# A sweep that starts from a subject sees what its query surfaces; a sweep that starts
+# from the ranking cannot miss the top of it.  Ranked on DISTINCT PASSES, not mentions:
+# `mentions` is an occurrence count, so one chatty pass outranks eight separate ones.
+	@cd compose/code/p532-promotion-queue && $(PY) promotion_queue.py \
+	    --repo-root ../../.. --out evidence/promotion-queue.$$(date +%F)-p532.tsv --top 25 || true
+
+gate-promotion-queue: ## p532 — the heading-dialect and grant controls behind `promotion-queue`
+	@cd compose/code/p532-promotion-queue && { $(PY) test_promotion_queue.py > $(PROMO_QUEUE_LOG) 2>&1 || { echo "🔴 p532-promotion-queue controls FAILED — the suite's own report follows:" ; sed "s/^/   /" $(PROMO_QUEUE_LOG) ; false ; } ; } && sed "s/^/   /" $(PROMO_QUEUE_LOG) || exit 1
 
 promotion-backlog: ## p436 — the adjudicated promotion backlog with its denominator.  A measurement, never a failure.
 	@$(PY) -I compose/code/p436-promotion-ledger/ledger.py . $(PROMO_LEDGER) 100000 || true

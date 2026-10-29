@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p531` · 2026-10-29.** Every platform below is a real, running system that
+**Pass `p532` · 2026-10-29.** Every platform below is a real, running system that
 institutions already operate, with its licence read this pass from **the licence
 file's own title block** (`raw.githubusercontent.com` is reachable while
 `github.com` returns HTTP 403 through the session proxy). The question this file
@@ -38,6 +38,7 @@ function they own.
 
 | Platform | Repo | Licence | Where AI attaches |
 |---|---|---|---|
+| 🆕 **GegoK12** | [Gego-K12/gegok12](https://github.com/Gego-K12/gegok12) | 🟢 **MIT** · 54★ | Fork it. A Laravel school-management system, **API-first with mobile app support** by its own description — admissions, records, the administrative spine of a K-12 institution. 🟢 **The second permissive SIS/school-management system on this file**, after `p530` retracted this base's published "zero permissive SIS" non-finding with `academico-sis/academico` (MIT, 409★). 🔴 **And its grant is readable only at source:** the GitHub page links a `License` file *without naming the licence*, so a page-scraping probe records `unknown`; the title block reads `MIT License` with an `SPDX-License-Identifier: MIT` comment (1 150 B, `b8694396d7dc`). 🟡 54★ and a thin README — fork-and-own, not depend-on. |
 | **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 · 900★ | Odoo modules (branch `19.0`): admissions, timetabling, attendance, fees, library. **This is the literal Odoo-for-education answer** — and the Odoo module boundary is a clean, well-documented place for an agent to act on records. |
 | 🔵 **Frappe Education** | [frappe/education](https://github.com/frappe/education) | **GPL-3.0** — *resolved this pass* · 685★ | "Open source education / school management system", the administration counterpart to Frappe LMS on the same stack and the same hooks. **`p526` could not grade it** — the page renders no licence type. Read directly this pass: `license.txt` says `License: GNU GPL V3`. 🔴 **Plan for the mismatch:** Frappe LMS is **AGPL-3.0**, Frappe Education is **GPL-3.0**. One stack, two copyleft regimes — a single deliverable touching both inherits both sets of obligations, and the AGPL §13 network clause is the one that bites a hosted engagement. |
 | **i-educar** | [portabilis/i-educar](https://github.com/portabilis/i-educar) | GPL-2.0 · 722★ | REST/DB integration. Brazil's largest free school-management system, born in **Itajaí (SC)** municipal government, on the federal Public Software Portal since 2008. For Brazilian public-sector work this is the incumbent, not an option. |
@@ -175,6 +176,28 @@ file's title block.
 **archived by its owner**. 🔵 It is a migration source and a design reference
 for a LATAM engagement, not a platform to build on, and the star count is
 exactly why a reader would otherwise reach for it.
+
+## 🆕 6. Offline-first delivery — the deployment context most of this file assumes away (`p532`)
+
+| Platform | Repo | Licence | Where AI attaches |
+|---|---|---|---|
+| 🆕 **Project NOMAD** | [Crosstalk-Solutions/Project-NOMAD](https://github.com/Crosstalk-Solutions/Project-NOMAD) | 🟢 **Apache-2.0** · 🔴 **41.3k★** | Fork it, or deploy it as-is and attach. A **self-contained, offline-first knowledge and education server** — *"Knowledge That Never Goes Offline"* — that bundles content, tooling **and a local AI assistant** onto one Debian/Ubuntu box (≈5 GB disk, <1 GB RAM for the server itself; the offline corpus is what fills a drive). Terminal-based install, no cloud dependency at run time. |
+
+> 🟢 **Why this row changes the shape of the file.** Every other platform here
+> assumes connectivity; **Kolibri** (MIT, 1.2k★) was this base's only
+> offline-first answer, and its own section says *"a cloud-only tutor is not
+> deployable in the contexts Kolibri exists to serve."* NOMAD is the **server
+> side of that same argument, with the model included and an Apache-2.0 grant**,
+> at **41.3k★** — thirty-four times Kolibri's star count. 🔵 Pair them: Kolibri
+> for the learner-facing curriculum and progress model, NOMAD for the box it all
+> runs on plus the local assistant. That pairing is the deciding architecture for
+> **LATAM** rural and **Africa** deployments, and it is also the honest answer
+> whenever a client's connectivity assumption is weaker than a demo's.
+>
+> 🔴 **It was unfiled for 11 passes.** NOMAD came off `p532`'s ranked promotion
+> queue, not off a search — this base had described it eleven separate times and
+> filed it nowhere. 🟡 **No location stated** on the page or in the README, so it
+> is unplaced; `Crosstalk-Solutions` as an org name is not evidence of a country.
 
 ## The architecture this implies
 

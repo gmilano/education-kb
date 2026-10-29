@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p532` — `2026-10-29` — **🔴 FIVE CONSECUTIVE PASSES OF "DISCOVERY DROUGHT" ENDED THE MOMENT THE INPUT ORDER CHANGED: THE #1 UNFILED PERMISSIVE ADDRESS IN THIS BASE IS **MIT, 78.1k★**, DESCRIBED IN **23 SEPARATE PASSES**, FILED IN NONE. 🟢 FOUR SHELF ROWS ADDED, ALL FOUR OFF THE RANKED QUEUE, ZERO FROM SEARCH. 🟢 THE LMS AGENT-BRIDGE LAYER COMPLETES — BLACKBOARD WAS THE HOLE AND THE MIT BRIDGE HAD BEEN DESCRIBED HERE EIGHT TIMES. 🔴 GENERIC WEB SEARCH: ZERO SHELF-GRADE FINDINGS, FOURTH CONSECUTIVE PASS, ALL FOUR GLOBAL LEGS AND ALL FOUR REGIONAL LEGS RUN.**
+
+### 🔴 The drought was in the input order, not in the world
+
+Five passes running — `p525` through `p531` — this file reported some version of
+*"no new supply this window."* 🟢 **`Gap 531-B`'s instrument, on its first run,
+returned this:**
+
+| Rank | Address | Grant | Stars | Passes described, never filed |
+|---|---|---|---|---|
+| 1 | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** | 🔴 **78.1k** | 🔴 **23** |
+| 5 | [Crosstalk-Solutions/Project-NOMAD](https://github.com/Crosstalk-Solutions/Project-NOMAD) | 🟢 **Apache-2.0** | 🔴 **41.3k** | 🔴 **11** |
+
+🔵 **Two of the three largest permissive assets this base has ever held were
+sitting in its own append-only history, unfiled, through five passes that each
+reported a drought.** Neither is a discovery and neither came from a search. The
+ranked queue is at
+[`../evidence/promotion-queue.2026-10-29-p532.tsv`](../evidence/promotion-queue.2026-10-29-p532.tsv);
+the adjudication of its top twelve, filings and refusals both, is in
+[`../intel/open-gaps.md`](../intel/open-gaps.md) under `Gap 531-B`.
+
+### 🟢 Four shelf rows, every grant read at source
+
+`github.com` and `api.github.com` are both **HTTP 403** through this session's
+proxy; `raw.githubusercontent.com` is not. Every grant below was read from the
+licence file's own **title block**, with bytes and a sha256 prefix recorded.
+
+| Agent | Grant (title block) | Bytes · sha256 | Stars | Why it earns a row |
+|---|---|---|---|---|
+| [beltromatti/get-it](https://github.com/beltromatti/get-it) | 🟢 **Apache-2.0** | 11 359 · `d0622ead9e49` | **1.1k** | PDF → **measurable mastery map**. Its README states the thesis this shelf had no row for: *"flashcard ratings measure recall in the moment… none answer 'would I survive a question I have not seen before?'"* 🟢 **EMEA, stated** — GDG AI Hack 2026 Milan, authors at **Politecnico di Milano**. 🔴 Built in 24 h; architecture is the asset, not the maturity. |
+| [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 🟢 **MIT** | 1 122 · `15ce43afa44a` | **1.2k** | A **cross-agent learning skill on the open Agent Skills spec** — any material set becomes a traceable knowledge base plus interactive pages. Runs wherever `SKILL.md` is honoured; 🔴 not in pure-chat environments, which is the limit to state to a client. |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | 🟢 **MIT** | 1 069 · `262b47ee1fff` | 524 | *"teach me X"* → **~12 audio lessons of ~2 minutes**. 🔵 **Audio-first micro-lessons are the one genuinely under-represented delivery format on this shelf.** |
+| [Ebimsv/AITutorAgent](https://github.com/Ebimsv/AITutorAgent) | 🟢 **MIT** | 1 072 · `c8050f8df7c1` | 15 | A **LangGraph** graph closing tutorial → Q&A → **knowledge evaluation**. 🟡 Shelved for the shape at 15★: it is the assessment-closing loop, and it is MIT, which the comparable loops here are not. |
+
+🟢 **Shelf 25 → 29.** Licence split now **21 × MIT, 7 × Apache-2.0, 1 ×
+BSD-3-Clause** — all twenty-nine buildable.
+
+### 🟢 The LMS agent-bridge layer completes, and the gap was never supply
+
+This base has carried a **Canvas** bridge since `p490` and filed a
+**Brightspace** bridge at `p531`, and has censused the **Moodle** MCP field
+twice. 🔴 **It had never said anything about Blackboard Learn** — one of the four
+LMS platforms a Western higher-ed engagement actually meets.
+
+- 🟢 [`nitsuah/bb-mcp`](https://github.com/nitsuah/bb-mcp) — **MIT** (1 063 B,
+  `e024d09e682a`), **2★**, described here in **8 separate passes** and filed in
+  none. A standalone MCP server over the Blackboard Learn REST API.
+- 🟢 [`MarcosNahuel/moodle-mcp`](https://github.com/MarcosNahuel/moodle-mcp) —
+  **MIT** (1 065 B, `f27341a8425b`), **1★**, **9 passes** unfiled. Wrapper
+  v0.5.2 + plugin v0.5.0, **40 facades** over Moodle Web Services with
+  idempotency guarantees; its README claims ~80% of a course teaching workflow
+  operable from an agent. 🔵 The most capable Moodle MCP this base has read —
+  against `p529`'s census of **222 addresses whose 52★ ceiling is ungranted**.
+
+🟡 **Both are 1–2★, and that is the honest frame:** in this layer the scarce
+thing is a permissive grant, not adoption. A studio **forks** these; it does not
+depend on them. Filed in [`../repos/foundations.md`](../repos/foundations.md).
+
+### 🟡 The window's own movement, measured rather than impressed
+
+- 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) reads **49.5k★**
+  today against the shelf's recorded **49.0k**, and holds at **`v1.7.0`
+  (2026-10-28)** — 3 155 commits, no new dated release in the window. 🔵
+  Consistent with the trending digests' **+1.6k to +2.4k stars/day**, which is
+  the fastest sustained climb this base has recorded for any education asset.
+- 🔴 **A star-channel correction worth printing, because it runs against this
+  base's own neighbour file.** The `globant-kb` copy of this KB carries
+  `Educhain` at **"~12k★"**. Read first-hand today,
+  [`satvik314/educhain`](https://github.com/satvik314/educhain) is **387★**, MIT,
+  with `v0.3.13 (October 2024)` as the current version on its own README. 🔵 A
+  **31×** overstatement, and the shelf row here already carried the correct
+  order of magnitude — so the defect is in the stale downstream copy, not in this
+  base.
+- 🟡 `zijinz456/OpenTutor` reads **156★** against the shelf's **156** — exact
+  agreement, no change.
+
+### 🔴 Declared non-findings — written down so silence is not read as coverage
+
+🔴 **Generic web search: zero shelf-grade findings, fourth consecutive pass.** All
+four mandated global legs ran (`top open source AI agents education 2026 github
+MIT`, `github trending education AI 2026`, `open source platform education LMS
+SIS ERP MIT Apache`, `AI education industry trends 2026`). Everything they
+returned that was real — `DeepTutor`, `educhain`, `zijinz456/OpenTutor`,
+`Open-TutorAi/open-tutor-ai-CE`, `CAHLR/OATutor`, `Miaotofu01/Study-Mate`,
+`A-R007/Multi-Agent-Study-Assistant`, the Moodle and Open edX MCP plugins — **was
+already on this base**. 🔵 The legs are still worth running; they are a *control*
+on the ranked queue, and this pass they confirmed it rather than adding to it.
+
+🔴 **All four regional legs ran, and all four returned material this base already
+holds.** Stated per region, because an unplaced finding is worth less than a
+placed one and an unstated blank reads exactly like coverage:
+
+| Region | What the leg returned | Verdict |
+|---|---|---|
+| **North America** | State-level K-12 AI policy (Idaho SB 1227, Maryland SB 720, Oklahoma SB 1734, NY A 9190, California AB 1159), NYC's traffic-light guidance, federal H.R. 8747 | 🔴 **Nothing new.** Already held; trackers disagree on counts (28 vs 34 states) and on enacted-vs-introduced status, so none of it is quotable without a primary source. |
+| **EMEA** | **Regulation (EU) 2026/1744** moving stand-alone high-risk education obligations from 2026-08-02 to **2027-12-02**, Art. 50 transparency still from 2026-08-02, emotion recognition in schools already prohibited | 🔴 **Nothing new** — this base holds `2026/1744` across six files. 🔴 **And the EMEA *demand* leg is a measured blank for the second consecutive pass**, exactly as `p531` recorded. 🟢 Its *supply* leg, by contrast, produced this pass's one stated-region row (`get-it`, Milan). |
+| **APAC** | **Vietnam Decision 33/2026/QD-TTg** naming education among six high-risk sectors; Japan's promotion-not-penalty posture; Ipsos Education Monitor 2026 school-AI-ban support, 23% Indonesia → 31% South Korea | 🔴 **Nothing new** — `33/2026/QD-TTg` and the Ipsos series are both already on this base. |
+| **LATAM** | OECD teacher-use figures (Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52% vs OECD 36%), UNESCO's *87% of universities use AI / 26% have a strategy / 9% evaluate it*, Google.org's **$4.6M** across nine countries, Teachy (BR), Ginia (MX) | 🔴 **Nothing new** — all held. 🔴 **And the regulation sub-leg is a genuine blank:** asked directly for Brazilian and Mexican AI-in-education rules, search returned **PL 2338 still pending in the Chamber** (*aguardando parecer do relator*, mid-Oct 2026, no education-specific provision) and **nothing at all for Mexico**. |
+
+🔴 **`api.github.com` is 403 again, so `p529`'s measurement ceiling is back
+down.** The search API was reachable at `p529` and is not this pass; `github.com`
+is 403 for every unattached repository. Star counts above are **page reads**, not
+API integers; grants are **title-block reads over `raw`**, which is the stronger
+channel and was available throughout.
+
 ## 🆕 `p531` — `2026-10-29` — **🔴 TWO OF THE FOUR MONOTONICITY VIOLATIONS `530-C` ASKED ME TO ALLOWLIST WERE THE INSTRUMENT, NOT THE HISTORY — AND FIXING THEM SHOWED THAT **212 `##` SECTIONS, 15.8% OF THE CORPUS, CARRIED THE WRONG PASS NUMBER**. 🟢 `Gap 530-A` CLOSES WITH ALL 349 GRANTS READ FIRST-HAND: **203 permissive (58.2%)**, and the yield is a coherent nine-repo layer the live corpus had zero rows for. 🟢 `530-B` CLOSES ON A SCOPE RULE: the fork hole is **89 addresses** and **exactly zero** at any star floor. 🟢 `528-C` CLOSES WITH A RETRIEVAL, FOUR TIMES OVER. 🟢 `530-C` CLOSES WITH A GATE THAT REFUTED ITS OWN FIRST FIX. 🔴 THREE REGISTERED (`531-A`…`531-C`).**
 
 ### 🔴 The finding: the instrument was reading 15.8% of its own corpus into the wrong pass

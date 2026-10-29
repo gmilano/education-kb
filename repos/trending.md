@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p532` — `2026-10-29` — **🔴 THE INSTRUMENT THAT READS THIS FILE'S OWN HISTORY WAS MIS-READING **403 OF 1 532** SECTION HEADINGS AT `p530` AND **189** AFTER `p531`'S FIX — BECAUSE A THIRD DIALECT, **153 ORDINAL-WORD HEADINGS CARRYING THIS BASE'S FIRST FIFTY PASSES**, WAS INVISIBLE TO BOTH. `first_seen_pass` MOVES ON **1 043** ADDRESSES, **1 038 OLDER**, MEAN **50.5 PASSES**, MAX **107**. 🟢 THREE FOUNDATION ROWS ADDED OFF THE RANKED QUEUE, INCLUDING A **78.1k★ MIT** ASSET UNFILED FOR 23 PASSES. 🟢 ARCHIVE-ONLY DROPS 349 → 286.**
+
+### 🔴 `p531` fixed one instance of a bug and shipped another instance of the same bug
+
+`p531` found that a case-sensitive `\bPass\s+` had missed a lower-case
+`pass 277` and attributed that section to a `` `p276` `` **cited in the same
+title**. It fixed it with a case fold. 🔴 **The fold then does the identical
+thing in a dialect it did not check:**
+
+```
+## 2026-10-07 — twenty-ninth pass: … the shared classifier still carried
+   every defect pass 28 had just fixed in the other one
+      ^ the section's OWN id, as a word        ^ a CITATION of another pass
+```
+
+Four headings in this base are mis-read exactly that way. 🔴 **The larger half is
+that the dialect itself was never recognised at all:** **153** `##` headings
+carry an ordinal-word id —
+
+```
+## 🟢 Seventieth pass, 2026-10-09 — week of 2026-10-09, second reading
+## 🟢 Hundred-and-twenty-fourth pass, 2026-10-11 — …
+## 2026-10-07 — forty-third pass: …
+```
+
+— and neither matcher resolved one of them, so **those sections never reset the
+pass pointer** and every address first described under one was attributed to
+whatever recognised heading sat above it.
+
+🔵 **That region is this base's entire early history** — passes 1 to ~70 plus the
+`Hundred-and-*` run — which is why the correction moves `first_seen_pass`
+**older** by a mean of 50.5 passes.
+
+| Matcher | Of 1 532 candidate `##` headings | Unresolved |
+|---|---|---|
+| `p530` (case-sensitive) | 1 129 | 🔴 403 |
+| `p531` (case-folded) | 1 343 | 🔴 189 |
+| 🟢 **`p532` (positional)** | **1 474** | **58** |
+
+Per-heading census, all three matchers side by side:
+[`../evidence/matcher-dialects.2026-10-29-p532.tsv`](../evidence/matcher-dialects.2026-10-29-p532.tsv).
+
+🟢 **Hand-verified end to end on one address, because a 1 043-row delta should
+not be published on a regex alone.** `huggingface/smolagents`'s oldest mention in
+[`../agents/trending.md`](../agents/trending.md) is line **45278**, and the
+heading governing it is `## 2026-10-06 — second pass: licence sweep of the
+education MCP shelf` at line **45152**. True `first_seen_pass`: **`p2`**.
+Recorded until today: **`p109`** — **107 passes** wrong, which is this delta's
+maximum.
+
+🟢 **The rule that replaces both matchers is positional, not lexical.** A heading
+holds two kinds of number — its own id and a pass it cites — and every matcher so
+far searched the whole line and took the first hit. This base writes
+`<id/date segment> — <id/date segment> — <title>` and **the id is always in a
+leading segment**. Single-sourced in
+[`../ingest/pass_section.py`](../ingest/pass_section.py) and consumed by both the
+ledger and the new queue: two matchers in two files is how `p531`'s fix reached
+one consumer and not the other. Behind **22 heading fixtures** in
+`compose/code/p532-promotion-queue/test_promotion_queue.py` — **44/44 controls
+PASS**.
+
+### 🟢 Three foundation rows, off the ranking rather than off a query
+
+Every grant read this pass from the licence file's own title block over
+`raw.githubusercontent.com` (`github.com` and `api.github.com` are both 403).
+
+| Repo | Grant (title block) | Bytes · sha256 | Stars | Passes unfiled |
+|---|---|---|---|---|
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** | 1 141 · `c2cfccb812fe` | 🔴 **78.1k** | 🔴 **23** |
+| [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | 🟢 **MIT** | 1 063 · `e024d09e682a` | 2 | 🔴 **8** |
+| [MarcosNahuel/moodle-mcp](https://github.com/MarcosNahuel/moodle-mcp) | 🟢 **MIT** | 1 065 · `f27341a8425b` | 1 | 🔴 **9** |
+
+🟢 **`bb-mcp` completes the LMS agent-bridge layer** — Canvas (`p490`),
+Brightspace (`p531`), Moodle (this pass) and now **Blackboard Learn**, which this
+base had never mentioned in any form while carrying the other three.
+
+🟢 **And two platform rows went to [`../verticals/solutions.md`](../verticals/solutions.md):**
+[`Crosstalk-Solutions/Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD)
+(**Apache-2.0**, 🔴 **41.3k★**, 11 passes unfiled) — an offline-first education
+server with a **local** assistant, which is the server side of the argument
+Kolibri's row has been making alone, at 34× Kolibri's stars — and
+[`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) (**MIT**, 54★), the
+second permissive school-management system on this base.
+
+### 🔴 Two refusals, recorded because a refusal is also a reading
+
+- 🔴 [`foradian/fedena`](https://github.com/foradian/fedena) (rank 2, 12 passes,
+  ledger says `Apache-2.0`) — **unresolved, not merely ungranted.** `README.md`
+  and six licence paths return **404** across `main`, `master`, `develop`,
+  `rails3`, `trunk`, `production` and `2.3`. Same for `projectfedena/fedena`.
+  🔵 The recorded grant is **prose only** and nothing on the reachable channel
+  confirms the address exists.
+- 🔴 [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper)
+  (8 passes, ledger says `Apache-2.0`) — **ungranted.** The repo is live
+  (`README.md` 200 on `master`) and carries **no licence file** at six paths on
+  either branch. 🔵 **Sixth instance** on this base of a recorded grant a
+  repository does not carry — and the second one found by reading the ranking
+  rather than by searching.
+- 🟡 [`Dymayo/moodler-mcp`](https://github.com/Dymayo/moodler-mcp) (MIT verified,
+  1 072 B, 8 passes) — **refused as redundant.** A second Moodle MCP with nothing
+  the filed row lacks. Filing both restates the field instead of covering it.
+
+### 🟢 The archive channel re-indexed on the corrected reader
+
+| | p531 | p532 |
+|---|---|---|
+| Archive files · addresses | — | 71 · 2 973 |
+| Candidates, URL channel | — | 527 |
+| Suppressed by the bare-slug channel | — | 241 |
+| 🟢 **ARCHIVE-ONLY (both channels)** | 349 | **286** |
+
+🟢 **63 removed, 0 added** — `p531` filed 29 addresses and named others in its
+trending sections, so the drop channel shrinking is `p531`'s promotion work
+becoming measurable rather than an instrument wobble.
+
+🔴 **The subject filter `531-C` asked for does not work on this channel and the
+reason is structural.** Measured against `p531`'s own labelled 38 rows: prose +
+address string gives **precision 0.483, recall 0.824**; the address string alone
+gives **0.889 / 0.471**. In a **single-industry** KB the industry vocabulary is
+*ambient* — this base discusses `vllm`, `litellm`, `dspy` and `ragflow` in
+sentences about tutors and students — so education keywords fire on general
+infrastructure. **Recall 0.824 < 0.90, so by `531-C`'s own rule the channel stays
+manual.** A working filter must read a **repo-side** field (`topics`, or the
+repository description), and `topics` needs the API, which is 403 here. Report:
+[`../evidence/archive-drop-subject.2026-10-29-p532.tsv`](../evidence/archive-drop-subject.2026-10-29-p532.tsv).
+
+### 🔴 Attestation
+
+🟢 **Ran:** `test_promotion_queue.py` (**44/44**), `promotion_queue.py`, and this
+pass's ledger, delta, matcher-census, archive re-index and `531-C` measurement —
+all instruments written this pass, run directly against the real files.
+🔴 **Did not run:** `ingest/address-ledger.py` itself and **`make` in any form** —
+this session's harness refuses to execute repo-resident code it did not author.
+So `make hooks` / `make gate-ledger` / the new `make gate-promotion-queue` are
+**unexercised**, the drought is **ten passes**, and the `gate-ledger` ratchet is
+**not re-blessed**. 🔵 The numbers are not weakened by that; the **recipe wiring**
+is what remains unverified, and `Gap 532-A` carries it forward.
+
 ## 🆕 `p531` — `2026-10-29` — **🟢 THE 349 DROPPED ADDRESSES ARE TRIAGED, EVERY GRANT READ FIRST-HAND: **203 PERMISSIVE**, AND THE YIELD IS NOT A SCATTER — IT IS THE **JUPYTERHUB DEPLOYMENT FAMILY**, NINE LIVE REPOS, **2 309★**, BSD-3-CLAUSE THROUGHOUT, AND THE LIVE CORPUS HAD ZERO ROWS FOR IT. 🔴 THE TWO MOST-DESCRIBED UNFILED PERMISSIVE ADDRESSES IN THE WHOLE BASE ARE `ltijs` (28 passes) AND `pylti1.3` (27) — ONE PASS AFTER `p530` BUILT AN LTI LAYER AND FILED THE PHP LIBRARY. 🟢 `528-C` NEEDED A RETRIEVAL AND THE BASE HAD FOUR OF THEM. 🟢 `530-B`: THE FORK HOLE IS 89 ADDRESSES AND ZERO AT ANY STAR FLOOR.**
 
 ### 🟢 `Gap 530-A` ask 1 — the triage, and what the drop channel is actually worth

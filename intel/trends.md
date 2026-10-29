@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p531` · 2026-10-29.** **Seventeen** trends. Each one is stated so it could be
+**Pass `p532` · 2026-10-29.** **Seventeen** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -524,3 +524,41 @@ band), **EMEA vendor funding detail** (trade aggregators that disagree with each
 other), the **EU public-authority 2 Aug 2030 date** (single commentary source),
 the **OECD Outlook recommendation** (reported, not read from the Outlook itself),
 and **APAC curriculum status** (sources mutually contradictory).
+
+---
+
+## 🆕 `p532` — the seventeen trends re-checked, and nothing moved
+
+🔵 **A trend list that only ever grows is a slogan list.** This pass ran all four
+global legs and all four regional legs and re-tested the carried trends against
+what came back. **No trend was added, narrowed or contradicted** — and that is a
+reportable result rather than an empty pass.
+
+- 🟢 **Confirmed, with a sharper number.**
+  [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) reads **49.5k★** today
+  and holds at **`v1.7.0` (2026-10-28)**. Independent trending digests put it at
+  **+1.6k to +2.4k stars/day** this window — the fastest sustained climb this
+  base has recorded for any education asset, and the strongest single piece of
+  evidence for the *persistent-memory tutoring* trend.
+- 🟢 **Confirmed and now served by a permissive stack.** The **offline-first /
+  sovereign-deployment** trend had exactly one component on this base (Kolibri,
+  MIT, 1.2k★). `p532` adds
+  [`Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD)
+  (**Apache-2.0, 41.3k★**) — the *server* side, model included. 🔵 The trend is
+  no longer an argument with one repo behind it; see **P565**.
+- 🟢 **Confirmed.** The **agent-skills-not-applications** shift `p526` first
+  named holds: three of this pass's four new shelf rows are *skills* on the open
+  Agent Skills spec or a Claude Code skill (`claudemy`,
+  `learn-from-materials`), not standalone apps.
+- 🔴 **Unchanged and still the regulatory headline:** stand-alone high-risk
+  education obligations under the EU AI Act sit at **2027-12-02** per Regulation
+  (EU) 2026/1744, while Art. 50 transparency duties applied from **2026-08-02**,
+  and **Vietnam's Decision 33/2026/QD-TTg** remains the only APAC instrument that
+  names education as a high-risk sector outright.
+- 🔴 **A void, restated because it has now survived four passes:** there is still
+  **no binding education-specific AI rule in Brazil or Mexico**. PL 2338 is
+  pending in the Chamber (*aguardando parecer do relator*, mid-Oct 2026) with no
+  education provision; for Mexico, search returns nothing. 🔵 Against LATAM's
+  *highest-in-the-world* teacher adoption, that gap is the region's commercial
+  opening and its governance risk at the same time — which is what **P554**
+  exists to sell.

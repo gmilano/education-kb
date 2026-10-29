@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p531` · 2026-10-29.** **Twenty-five** real agents, every row read
+**Pass `p532` · 2026-10-29.** **Twenty-nine** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
 
@@ -116,7 +116,7 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 25 verified education agents
+## Shelf — 29 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -134,6 +134,10 @@ header, a placeholder or an example.
 | 🆕 **ai-tutor-app** | [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | Apache-2.0 | 34 | unplaced | "Agentic RAG tutor for applied AI, LLMs, RAG, and Python: a LangGraph agent (FastAPI + Next.js)", grounded in a curated course and library corpus, with LangSmith tracing. 5 forks. Small, but it is the cleanest **readable reference implementation** of corpus-grounded tutoring on this shelf — the architecture, not the content, is the asset. |
 | 🆕 **corretor-enem** | [dsvi-b/corretor-enem](https://github.com/dsvi-b/corretor-enem) | MIT | 7 | 🟢 **LATAM (Brazil)** — product and ground truth; author's own country not stated | ENEM essay grader across the **five official competencies** (0–200 each, 0–1000 total), *agent-agnostic*: no API, no ML, no model weights. Calibrated against a local SQLite corpus of **11,147 real essays already marked by examiners** (Essay-BR). Methodology credited to Silva & Araujo (**UFPE**, 2024); corpora to `rafaelanchieta/essay` and `lplnufpi/essay-br`. 1 fork, 11 commits, no release. **Promotion owed since `p420` (24 Oct) and not paid until now.** |
 | **pedagogy-benchmark** | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | 13 | **EMEA origin + LATAM data** — *newly placed*, see note | Code for *"Benchmarking the Pedagogical Knowledge of Large Language Models"* — runs the **CDPK** (Cross-Domain Pedagogical Knowledge) and **SEND** (Special Educational Needs and Disabilities) benchmarks. Thirteen stars, no About line, and still the most useful repo here for a procurement conversation: it is how you answer *"which model actually knows how to teach"* rather than *"which model knows the subject"*. |
+| **get-it** | [beltromatti/get-it](https://github.com/beltromatti/get-it) | **Apache-2.0** | **1.1k** | 🆕 **EMEA (Milan, Italy — Politecnico di Milano)** | "Read it. See it. Get it." Turns a PDF the student *already has* into a **measurable mastery map**: concept-level decomposition plus assessment that targets unseen questions rather than recall-in-the-moment. Its own README states the thesis — *"flashcard ratings measure recall in the moment, mind maps measure how much you drew… none answer 'would I survive a question I have not seen before?'"* 🔴 **Built in 24 hours** at GDG AI Hack 2026 Milan for the Braynr challenge; everything past commit `277ec43` is post-hackathon polish. Treat the architecture as the asset, not the maturity. |
+| **learn-from-materials** | [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | **MIT** | **1.2k** | APAC signal (ships a `README_CN.md` co-equal with English; no location on the page) | A **cross-agent learning skill on the open Agent Skills spec** — books, PDFs, slides, Word, web pages and multi-file sets become traceable knowledge bases, interactive learning pages and Markdown off one content model. Runs wherever `SKILL.md` is recognised (Claude Code, Codex, Copilot CLI, WorkBuddy); 🔴 pure-chat environments cannot host it, which is the portability limit to state to a client. |
+| **claudemy** | [assafkip/claudemy](https://github.com/assafkip/claudemy) | **MIT** | 524 | unplaced — no location on the org profile, in the README, or in the copyright line (*"Copyright (c) 2026 Assaf Kipnis"*) | A Claude Code skill that answers *"teach me X"* with **~12 audio lessons of ~2 minutes each**, researched from the web at generation time. Positions itself against Udemy/Coursera on completion rather than coverage — *"you got a 40-hour course… and a tab you never reopened."* 🔵 The **audio-first micro-lesson** shape is the one genuinely under-represented delivery format on this shelf. |
+| **AITutorAgent** | [Ebimsv/AITutorAgent](https://github.com/Ebimsv/AITutorAgent) | **MIT** | 15 | unplaced — no location on the page or in the copyright line (*"Copyright (c) 2025 Ebrahim Mousavi"*) | A **LangGraph** tutoring graph closing the full loop: generate a structured tutorial on any subject → interactive Q&A → **knowledge evaluation**. 🟡 Shelved for the *shape*, not the traction — at 15★ this is a reference implementation of the tutor-with-assessment loop, and it is MIT, which is what the comparable loops on this shelf are not. |
 | 🆕 **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** — title block `MIT License · Copyright (c) 2026 Arnaud Guiovanna`, **API agrees** | **57** | ⚠️ unplaced — no country on the profile or in the copyright line | *"An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive science, MIT licensed."* **Go**, 9 forks, created 30 Mar 2026, pushed **28 Oct 2026**, site `tutor-mcp.dev`. Topics name **`bkt`** — Bayesian Knowledge Tracing. 🟢 **The row this shelf was missing:** `OATutor` is the only other row with a real mastery estimator and it is an entire ReactJS application; this is the same pedagogy delivered as **one MCP server any assistant can mount**. |
 | 🆕 **feedbacksystem** | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** — title block `Copyright 2021 Technische Hochschule Mittelhessen · Licensed under the Apache License, Version 2`. 🔴 **API said `NOASSERTION`** | 24 | 🟢 **EMEA (Germany)** — *stated* in the copyright line | "Intelligent, personalized feedback for students using artificial intelligence." TypeScript, 10 forks, branch `dev`, pushed **28 Oct 2026**, live service at `frits.mni.thm.de`. **244 open issues against 10 forks** reads as a running institutional system rather than a demo. 🔴 **The API alone would have thrown this row away** — it is the evidence for shelf rule 8. |
 | 🆕 **Study-Mate** | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT | **1 259** | APAC — *inferred* from a Chinese-language README, not stated | "Your AI study partner": sets a route through a subject, teaches the knowledge, then builds a project alongside the learner. JavaScript. 60 forks. 🔴 **Described in 29 passes of this base's history, from `p42`, before anything filed it.** |
@@ -141,16 +145,40 @@ header, a placeholder or an example.
 | 🆕 **ai-shifu** | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | Apache-2.0 | 329 | APAC | "Get AI to teach and answer questions for you — just by typing." Script-driven teaching agent: an author writes the lesson flow, the agent delivers and answers inside it. Python. 127 forks, pushed 2026-10-29. |
 | 🆕 **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT | 156 | unplaced | Block-based adaptive learning workspace that **runs locally**: upload material, get notes, quizzes, flashcards and an adaptive tutor, across 10+ LLM providers. FastAPI + Next.js, with a knowledge graph. 🔴 **31 passes unfiled — the most-rediscovered address in this base.** |
 | 🆕 **open-learning-ai-tutor** | [mitodl/open-learning-ai-tutor](https://github.com/mitodl/open-learning-ai-tutor) | MIT | 1 | 🟢 **North America** (MIT Open Learning) | Backend for MIT Open Learning's student-facing tutor, deployed at `learn-ai.ol.mit.edu`, with a published pedagogical engine. 159 commits. 🔴 **Invisible to GitHub's repository search because it is a fork** — see shelf rule 10. Shelved on the institution and the deployment, not the star count. |
-
 | 🆕 **dsh-openmaic** | [THU-MAIC/dsh-openmaic](https://github.com/THU-MAIC/dsh-openmaic) | MIT | **111** | APAC (Tsinghua University, MAIC group) | OpenMAIC as a **harness plugin** rather than an application: classrooms, slides, interactive widgets and Socratic teaching delivered inside DeepSeek Harness. 19 forks, pushed **2026-10-29**. 🔵 The same lab's second row on this shelf, and the first row anywhere on it that *attaches to* an agent harness instead of shipping its own. For an engagement that already has a harness, this is the cheaper half of `OpenMAIC`. |
 | 🆕 **brightspace-mcp-server** | [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | MIT | **60** | 🟡 North America — *inferred* from the repo's own `purdue` topic, not stated | Grades, due dates, assignments, announcements, rosters, syllabus and course content over MCP for **D2L Brightspace**, published to npm and documented as working against any institution's tenant. 🔴 **The third major LMS finally has a bridge on this shelf.** 29 forks against 60★ — the fork-to-star ratio of this field's one-university-one-bridge shape. Pushed 2026-10-29. |
 | 🆕 **canvas-lms-mcp** | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | MIT | 10 | 🟡 **unstated** — no country signal in repo, README or profile | Canvas over MCP: courses, assignments, submissions, rubrics, quizzes — and, per its own description, **grade and comment**. 🟢 It is shelved beside the larger `vishalsachdev/canvas-mcp` for one reason: the **write** half. A bridge that only reads cannot close the teacher's loop, and grading is the task the teacher is actually paying to shed. Pushed 2026-10-27. |
 | 🆕 **pi-language-tutor** | [mackt/pi-language-tutor](https://github.com/mackt/pi-language-tutor) | MIT | **82** | 🟡 **unstated** | Language tutoring attached to work the learner was doing anyway: it reviews the prompts a developer writes for spelling, grammar and natural phrasing, and renders the agent's replies as bilingual immersive translations. 🔵 **The only row on this shelf where the lesson is a side effect of the day job** — which is the shape "language learning is the fastest-growing segment" implies and almost nothing in the open-source field builds. 13 forks, pushed 2026-10-26. |
 
-**Licence split:** **18 × MIT, 6 × Apache-2.0, 1 × BSD-3-Clause** — all
-twenty-five buildable, every cell read from the licence file's title block.
+**Licence split:** **21 × MIT, 7 × Apache-2.0, 1 × BSD-3-Clause** — all
+twenty-nine buildable, every cell read from the licence file's title block.
 *Apache-2.0: DeepTutor, k12-teacher-skills, lineage-skill, ai-tutor-app,
-feedbacksystem, ai-shifu. BSD-3-Clause: Open TutorAI CE.*
+feedbacksystem, ai-shifu, 🆕 get-it. BSD-3-Clause: Open TutorAI CE.*
+
+> 🟢 **`p532` adds four rows and not one of them is a discovery either — that is
+> now five consecutive passes.** All four came off
+> [`../evidence/promotion-queue.2026-10-29-p532.tsv`](../evidence/promotion-queue.2026-10-29-p532.tsv),
+> the ranked queue `Gap 531-B` asked for, and all four grants were read this
+> pass from the licence file's own title block over `raw.githubusercontent.com`
+> (`github.com` and `api.github.com` are both **HTTP 403** here).
+>
+> 🔴 **The queue's top line is the finding, and it is embarrassing in the useful
+> way.** [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners)
+> — **MIT, 78.1k★** — has been described in **23 separate passes** of this base
+> and filed on no curated page until now, and
+> [`Crosstalk-Solutions/Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD)
+> — **Apache-2.0, 41.3k★** — in **11**. Both are filed this pass, in
+> [`../repos/foundations.md`](../repos/foundations.md) and
+> [`../verticals/solutions.md`](../verticals/solutions.md) respectively. 🔵 Two of
+> the three largest permissive assets this base has ever held were sitting in its
+> own history, unfiled, while five consecutive passes reported a discovery
+> drought.
+>
+> 🟡 **And the queue needs a materiality column before anyone treats it as a work
+> order.** Its top ten spans **78 100★ down to 1★** — four orders of magnitude —
+> because distinct-pass count measures *how often this base talked about an
+> address*, which is not the same thing as how much the address matters. It is a
+> **recall** instrument, not a **priority** one. Registered as `Gap 532-B`.
 
 ### Region notes — what is read, and what is inferred
 
@@ -159,7 +187,16 @@ but it must not be quoted as if it were stated.
 
 - 🟢 **Stated on the page or in the copyright line:** DeepTutor (HKUDS, HKU),
   OpenMAIC (THU-MAIC, Tsinghua), k12-teacher-skills (Anthropic), canvas-mcp
-  (UIUC), OATutor (UC Berkeley CAHL lab), Open TutorAI CE (Morocco).
+  (UIUC), OATutor (UC Berkeley CAHL lab), Open TutorAI CE (Morocco),
+  🆕 **get-it (Milan, Italy)**.
+- 🟢 **`get-it` → EMEA, and it is STATED rather than inferred.** The README
+  carries a `GDG AI Hack — Milan 2026` badge, credits the **Braynr** challenge,
+  and names both authors with their institution: **Politecnico di Milano**. 🔵
+  Worth separating from the inferred placements below, because it is the kind of
+  evidence this section exists to privilege — an affiliation on the page, not a
+  language or a TLD. It also extends `p531`'s finding that **EMEA's supply leg
+  is the strongest of any region on this base** while its demand leg stays a
+  measured blank.
 - 🟡 **Educhain → APAC (India).** *Newly placed this pass.* The page states no
   location; the **licence file's copyright line reads
   `Copyright (c) 2024-2025 Educhain (https://educhain.in)`**. The `.in` domain is

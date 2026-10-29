@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p530` · 2026-10-29.** Figures are attributed to the source that produced
+**Pass `p532` · 2026-10-29.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
 
@@ -140,6 +140,29 @@ citation. Treat it as directional. The RAND, Gallup, Digital Education Council a
 UNESCO IESALC figures carry named primaries and can be quoted to a client. The
 X-Pilot report's headline statistics (42% learning-outcome gain, 83% planning
 AI-TA deployment) are vendor-blog figures — **do not quote them.***
+
+## 🆕 `p532` — the four regional legs, reported per region including the blanks
+
+🔵 **Why this section exists at all.** An unstated blank reads exactly like
+coverage. All four regional legs were run this pass; **none returned a fact this
+base does not already hold**, and two returned a genuine void. Printing that is
+the finding — it tells a successor which channels are saturated and which are
+simply empty.
+
+| Region | What the leg returned this pass | Status |
+|---|---|---|
+| **North America** | State K-12 AI policy (Idaho SB 1227, Maryland SB 720, Oklahoma SB 1734; NY A 9190 and California AB 1159 pending), NYC traffic-light guidance with a red tier barring AI from grading/discipline/placement, federal H.R. 8747 on AI literacy funding | 🔴 **Saturated — nothing new.** 🟡 Trackers disagree on the state count (28+DC vs 34+DC+PR) and on enacted-vs-introduced status, so **no specific figure here is quotable without a primary legislature source**. |
+| **EMEA** | **Regulation (EU) 2026/1744** moving stand-alone high-risk education obligations from `2026-08-02` to **`2027-12-02`**; Art. 50 transparency duties still from `2026-08-02`; emotion recognition in schools prohibited since `2025-02-02` (penalties to €35M / 7% turnover) | 🔴 **Saturated — nothing new**; `2026/1744` is already across six files here. 🔴 **The DEMAND leg is a measured blank for the second consecutive pass** — queried for EMEA adoption and players it returned US-only survey bases and a 2023-edition study. 🟢 Its **supply** leg is the strongest of any region: `get-it` (Milan) is this pass's one *stated*-region shelf row. |
+| **APAC** | **Vietnam Decision 33/2026/QD-TTg**, which names **education among six high-risk sectors** (automated assessment, behavioural monitoring) — the region's clearest education-specific AI rule; Japan promotion-not-penalty; Ipsos Education Monitor 2026 support for banning AI in schools, **23% Indonesia → 31% South Korea**, Japan rising 21% → 29% | 🔴 **Saturated — nothing new.** Both the Vietnam decision and the Ipsos series are already held. |
+| **LATAM** | OECD secondary-teacher AI use — **Brazil 56%, Chile 55%, Colombia 53%, Costa Rica 52%** against an OECD average of **36%**; UNESCO: **87%** of regional universities use AI, **26%** have a strategy, **9%** evaluate it; in Brazil **53%** of administrators use AI and **22%** have guidelines; Google.org **$4.6M** across nine countries targeting 1.25M students by 2028; Teachy (BR), Ginia (MX) | 🔴 **Saturated — nothing new.** 🔴 **The regulation sub-leg is a genuine void:** asked directly for Brazilian and Mexican AI-in-education rules, search returned **PL 2338 still pending in the Chamber** (*aguardando parecer do relator*, mid-Oct 2026, **no education-specific provision**) and **nothing whatsoever for Mexico**. |
+
+🟢 **The one durable regional conclusion, and it is unchanged:** the region with
+the **highest adoption** (LATAM, teachers 16–20 points above the OECD average)
+is also the one with the **least institutional scaffolding** (9% of universities
+evaluate their own AI use) and **no binding education rule in its two largest
+markets**. 🔵 That inversion is the LATAM engagement thesis and it has now
+survived four passes of re-checking — which is a stronger statement than any new
+number this pass could have added.
 
 ## Opportunities by region
 

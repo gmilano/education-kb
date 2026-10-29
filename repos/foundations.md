@@ -6,9 +6,9 @@ updated: 2026-10-29
 
 # Foundational Education Repos
 
-**Pass `p531` · 2026-10-29.** **Fifty-five** load-bearing systems — `p530`'s
-thirty-two plus the **twenty-three** `p531` adds, every one of them an address
-this base already owned and had dropped — an education
+**Pass `p532` · 2026-10-29.** **Fifty-eight** load-bearing systems — `p531`'s
+fifty-five plus the **three** `p532` adds, every one of them an address this
+base already owned and had dropped — an education
 engagement is likely to inherit, extend or integrate against — not agents (those
 are in [`../agents/top.md`](../agents/top.md)), but the platforms and standards
 the agents must live beside.
@@ -284,6 +284,34 @@ is `Gap 528-C`'s whole history, and it is a retrieval failure, not a supply gap.
 |---|---|---|---|
 | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** | **823** | *"Interactive Learning with Automated Feedback"*, from **TU München**. Programming, modelling, text and quiz exercises with automated assessment and an exam mode, in production across European universities. 🔴 **MIT, 823★, 395 forks, pushed today — and this base had no row for it.** The strongest permissive assessment platform in EMEA, and the natural alternative to bolting autograding onto Moodle. Ansible collection: [`ls1intum/artemis-ansible-collection`](https://github.com/ls1intum/artemis-ansible-collection) (MIT). |
 | [opensacorg/learning-blocks](https://github.com/opensacorg/learning-blocks) | **MIT** | 6 | 🟢 **A second permissive Student Information System.** `p529` published *"zero permissive SIS"*; `p530` falsified it with `academico-sis/academico` (MIT, 409★). This is the third reading: the field is small and thin, but it is **not empty and not copyleft-only**. 22 forks against 6★ — more forks than stars, the signature of a system people deploy rather than star. Python. Pushed 2026-09-21. |
+
+## 🆕 The LMS agent-bridge layer completes — Blackboard was the hole (`p532`)
+
+Every row below came off the **ranked** promotion queue
+([`../evidence/promotion-queue.2026-10-29-p532.tsv`](../evidence/promotion-queue.2026-10-29-p532.tsv)),
+not off a search, and every grant was read this pass from the licence file's own
+title block over `raw.githubusercontent.com`.
+
+> 🔴 **The hole this closes.** This base has carried a Canvas bridge since `p490`
+> (`canvas-mcp`, MIT, 308★), filed a Brightspace bridge at `p531`
+> (`brightspace-mcp-server`, MIT, 60★), and censused the Moodle MCP field twice
+> — while saying nothing about **Blackboard Learn**, which is one of the four
+> LMS platforms a Western higher-ed engagement actually meets. The bridge
+> existed, MIT-licensed, and this base had described it in **8 separate
+> passes**.
+>
+> 🟡 **Read the star counts honestly.** `bb-mcp` is **2★** and
+> `MarcosNahuel/moodle-mcp` is **1★**. These are not adopted projects; they are
+> *correct starting points with a permissive grant*, which in this layer is the
+> scarce thing — `p529` measured the Moodle MCP field at **222 addresses with a
+> 52★ ceiling that is ungranted**. A studio forks one of these; it does not
+> depend on it.
+
+| Repo | Licence (title block) | Stars | Passes unfiled | Why it is foundational |
+|---|---|---|---|---|
+| [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | 🟢 **MIT** — `MIT License · Copyright (c) 2026 nitsuah` (1 063 B, `e024d09e682a`) | 2 | 🔴 **8** | **The Blackboard Learn bridge this shelf had no row for.** A *standalone* MCP server wrapping the Blackboard Learn REST API — its README argues the case explicitly: *"the integration logic lives here, not in the client… build it once, use it everywhere."* Any MCP client (Claude Desktop, Cursor, agent-board) attaches unchanged. 🔵 With this row the agent-bridge layer covers **all four** major LMS platforms: Canvas, Brightspace, Moodle and Blackboard. |
+| [MarcosNahuel/moodle-mcp](https://github.com/MarcosNahuel/moodle-mcp) | 🟢 **MIT** — `MIT License · Copyright (c) 2026 Italicia` (1 065 B, `f27341a8425b`) | 1 | 🔴 **9** | **The most capable Moodle MCP this base has read, and the field's own census said the ceiling was ungranted.** Wrapper **v0.5.2** + a companion Moodle plugin **v0.5.0**, exposing **40 high-level facades** plus one `ws_raw` escape hatch, over Moodle Web Services, with *idempotency guarantees* — its README claims ~80% of a course teaching workflow operable from an agent. 🟡 Spanish-language file paths and an `Italicia` copyright; **no country stated**, so unplaced. |
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** — `MIT License · Copyright (c) Microsoft Corporation` (1 141 B, `c2cfccb812fe`) | 🔴 **78.1k** | 🔴 **23** | **Courseware, not an agent — and filed here for exactly that reason.** 18 lessons on building AI agents, with runnable Python on Microsoft Agent Framework and Foundry. For an education engagement this is the *reference curriculum artefact*: the thing to fork when a client wants an AI-literacy track with working code, and the thing to point at when asked what a well-structured 18-lesson technical course looks like. 🔴 **The single largest promotion debt in this base's history** — described in 23 passes, filed in none until now. |
 
 ## Licence map, for the architecture decision
 

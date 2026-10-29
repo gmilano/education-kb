@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Compose Patterns — Education
 
-**Pass `p531` · 2026-10-29.** **Nineteen** recipes. Every component named below was read
+**Pass `p532` · 2026-10-29.** **Twenty-one** recipes. Every component named below was read
 from its repository page this pass, and **every licence was read from the licence
 file's own title block** (`raw.githubusercontent.com` is reachable while
 `github.com` returns HTTP 403 through the session proxy). No recipe uses a
@@ -899,3 +899,97 @@ library.
 **Shape:** 3–4 weeks for a first census; the instrument is already written.
 **Region:** Global. 🔵 Best sold to organisations with long-lived internal
 platform estates — which in this sector means ministries and university systems.
+
+---
+
+## 🆕 P565 — The disconnected classroom, served end to end (LATAM rural, Africa; Global wherever connectivity is assumed away)
+
+🔵 **The engagement this answers.** A ministry or NGO programme where the
+deliverable has to work in schools with intermittent power and no reliable
+uplink. Every other recipe on this page assumes a reachable model endpoint. This
+one does not, and `p532` is the first pass that can name a **permissive server
+side** for it.
+
+**Components, all read first-hand this pass:**
+
+| Component | Repo | Grant (title block) | Stars | Role in the recipe |
+|---|---|---|---|---|
+| Offline server + local assistant | [Crosstalk-Solutions/Project-NOMAD](https://github.com/Crosstalk-Solutions/Project-NOMAD) | 🟢 **Apache-2.0** | **41.3k** | The box. Self-contained offline knowledge/education server, ≈5 GB disk and <1 GB RAM for the server itself, terminal install on Ubuntu 26.04 / 24.04 / Debian 12, **local AI assistant included**. |
+| Curriculum + learner model | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 1.2k | The learner-facing half: curriculum structure, progress and offline sync — the part NOMAD does not model. |
+| Content studio | [learningequality/studio](https://github.com/learningequality/studio) | 🟢 **MIT** | — | Authoring and channel packaging for the Kolibri side, so a ministry curates its own corpus rather than shipping someone else's. |
+| Mastery assessment | [beltromatti/get-it](https://github.com/beltromatti/get-it) | 🟢 **Apache-2.0** | 1.1k | Turns the PDFs a school already has into concept-level mastery maps. 🟡 24-hour hackathon origin — take the architecture, rewrite the shell. |
+| Spaced repetition | [open-spaced-repetition/fsrs.js](https://github.com/open-spaced-repetition/fsrs.js) | 🟢 **MIT** | 180 | Scheduling that survives a device being offline for a week. |
+
+**Wiring.**
+1. **NOMAD is the deployment unit**, one per school: it already bundles content
+   serving plus a local model, so the AI tier has no egress dependency.
+2. **Kolibri runs beside it on the same box** and owns the learner model and
+   curriculum tree; NOMAD owns the corpus, the tooling and the assistant. Neither
+   project duplicates the other's half, which is why the pairing is clean.
+3. **`get-it`'s mastery decomposition runs against the school's own PDFs**, with
+   the local model as its engine instead of an account-based CLI.
+4. **`fsrs.js` schedules review** entirely on-device; nothing in the loop needs a
+   round trip.
+5. **Sync is Kolibri's**, opportunistic — when an uplink appears, progress leaves
+   and curated channels arrive. Treat connectivity as an event, never a
+   precondition.
+
+🔴 **The licence reading that makes this shippable.** Apache-2.0 + MIT
+throughout, so a studio can ship proprietary extensions on top. 🔵 Contrast the
+LMS cores in [`../verticals/solutions.md`](../verticals/solutions.md), which are
+almost entirely AGPL/GPL — **the permissive surface in this sector is the
+integration and delivery layer, not the platforms**, and that is exactly the
+surface this recipe is built on.
+
+**Shape:** 8–10 weeks to a pilot on real hardware; the long pole is **content
+curation and teacher training**, not code. 🔴 Budget hardware per school and say
+so in the proposal — this is the one recipe on this page with a unit cost.
+**Region:** LATAM rural and Africa first; applicable anywhere a client's
+connectivity assumption is weaker than the demo's.
+
+---
+
+## 🆕 P566 — One agent, four LMS platforms (Global; North America and EMEA first)
+
+🔵 **The engagement this answers.** A university system or district running
+**more than one** LMS — which is the normal case after any merger, federation or
+decade of procurement — that wants one assistant across all of them rather than
+four integrations.
+
+🟢 **`p532` is the first pass where this recipe is possible**, because the
+Blackboard bridge was the missing fourth and it had been sitting in this base's
+own history, MIT-licensed, described in eight passes and filed in none.
+
+| Platform | Bridge | Grant (title block) | Stars |
+|---|---|---|---|
+| **Canvas** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** | 308 |
+| **Blackboard Learn** | 🆕 [nitsuah/bb-mcp](https://github.com/nitsuah/bb-mcp) | 🟢 **MIT** | 2 |
+| **Brightspace (D2L)** | [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | 🟢 **MIT** | 60 |
+| **Moodle** | 🆕 [MarcosNahuel/moodle-mcp](https://github.com/MarcosNahuel/moodle-mcp) | 🟢 **MIT** | 1 |
+
+**Wiring.**
+1. **Normalise at the tool boundary, not in the agent.** The four servers do not
+   share a tool vocabulary — `p528` measured that across the Moodle field alone —
+   so define one internal verb set (`list_courses`, `get_roster`,
+   `post_announcement`, `read_submissions`, `write_grade`) and adapt each bridge
+   to it. This is the actual deliverable; the bridges are upstream.
+2. **Run each bridge as its own process** behind that façade, so a platform
+   outage degrades one tenant rather than the assistant.
+3. **Keep writes behind an approval step.** Grades and placement are exactly what
+   NYC's red tier and the EU AI Act's high-risk list cover — see **P548** and the
+   `p532` regional table in [`../intel/market.md`](../intel/market.md). Reads can
+   be direct; writes are proposals a human confirms.
+4. **Adopt `bb-mcp`'s own argument deliberately:** *"the integration logic lives
+   here, not in the client."* One façade, many clients.
+
+🔴 **State the maturity honestly in the proposal.** Two of the four bridges are
+**1★ and 2★**. These are *correct starting points with a permissive grant*, not
+adopted dependencies — the studio **forks and owns** them, and prices that in.
+🟢 What the permissive grant buys is the right to do exactly that: `p529`'s
+census found the Moodle MCP field's most-visible option is **AGPL-3.0** and its
+**52★ ceiling is ungranted**, so forking an MIT 1★ server beats depending on a
+copyleft 52★ one.
+
+**Shape:** 6–8 weeks for two platforms, +2 per additional platform once the
+façade exists. **Region:** Global; North America and EMEA first, where
+multi-LMS estates and Blackboard/Brightspace share are concentrated.

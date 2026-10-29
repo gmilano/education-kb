@@ -23,6 +23,13 @@ import os
 import re
 import sys
 
+# p532: the heading reader is now single-sourced in `pass_section.py` beside
+# this file.  Two matchers in two files is how p531's fix reached one consumer
+# and not the other.  `python3 -I` strips the script's own directory from
+# sys.path, so the path is rebuilt explicitly.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pass_section import pass_of_heading  # noqa: E402
+
 # The nine files.  CURATED are the ones a reader is pointed at -- an address
 # present here is "filed".  HISTORY is the append-only record: an address that
 # appears only here is owned-but-unfiled, which is exactly the debt 529-A names.
@@ -60,6 +67,12 @@ HEADING = re.compile(r"^(#{1,6})\s")
 # declared by pass N` are 234 headings across the three history files and the
 # p530 matcher saw NONE of them, so 212 sections -- 15.8% of the corpus --
 # were attributed to the newer pass above them.
+# 🔴 p532: SUPERSEDED and kept only as the record of what was tried.  This
+# pattern is lexical -- it takes the first pass-shaped token anywhere in the
+# heading -- and p532 measured the cost: of 1 532 candidate headings it reads
+# 1 343, misses the whole 153-heading ORDINAL dialect that carries this base's
+# first fifty passes, and on 4 headings returns a pass number the title merely
+# CITES.  `pass_section.pass_of_heading` replaces it.
 PASS_IN_HEAD = re.compile(r"`p(\d{1,4})`|\b[Pp]ass\s+(\d{1,4})\b|\b[Pp]ase\s+(\d{1,4})\b|\bp(\d{1,4})\b")
 DATE_TOK = re.compile(r"(\d{4}-\d{2}-\d{2})")
 # Headings that name a pass without being that pass's section: forward
@@ -133,9 +146,13 @@ def scan(path, label):
             # Only a level-2 heading starts a new pass section; `###` and deeper
             # are sub-sections and routinely cite OTHER passes.
             if hm and len(hm.group(1)) == 2 and not NOT_A_SECTION.search(line):
-                pm = PASS_IN_HEAD.search(line)
-                if pm:
-                    cur_pass = int(next(g for g in pm.groups() if g))
+                # p532: POSITIONAL, not lexical.  A heading holds two kinds of
+                # number -- its own id and a pass it cites -- and every matcher
+                # before this one searched the whole line and took the first
+                # hit.  `pass_of_heading` reads only the leading id segments.
+                pno, _dialect = pass_of_heading(line)
+                if pno is not None:
+                    cur_pass = pno
                     d = DATE_TOK.search(line)
                     cur_date = d.group(1) if d else cur_date
             for om in ADDR.finditer(line):
