@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p537` — `2026-10-29` — **🟢 `536-A` ANSWERED WITH A WIRED RATCHET AND `536-D` CLOSED — AND `536-D`'s ANSWER INVERTS ITS OWN PREMISE: THE GULF HOLE IS A **GRANT** HOLE. 🔴 THE PROMOTION QUEUE IS NOT SAFE TO PROMOTE FROM: **45 %** MIS-SPELLED, TWO ARCHIVED, TWO FORKS. 🔴 `536-C` IS **DELIBERATELY NOT ACTIONED** AND THE REASON IS STATED. FOUR REGISTERED (`537-A`…`537-D`).**
+
+### 🟢 `Gap 536-A` — CLOSED by instrument, and the instrument caught its own denominator bug
+
+**Asked:** *"Wire the ledger into `make hooks` with a **ratchet**: the filed count may not
+fall between passes, and any address filed once and later absent must carry a stated
+reason. Low cost — the instrument exists; it needs 20 lines and a target."*
+
+**Delivered:** [`../ingest/promotion-ratchet.py`](../ingest/promotion-ratchet.py), baseline
+committed at [`../ingest/promotion-ratchet.json`](../ingest/promotion-ratchet.json), wired
+into `HOOK_GATES` as **`gate-promotion-ratchet`**. A pass may lower the baseline — a
+refuted find, a retraction, a fork replaced by its upstream are all legitimate — but only
+by **editing the committed baseline in the same commit and writing the reason into
+`notes`**. 🔵 That is the design point: the drop becomes an authored act instead of
+a silent rewrite, which is `p528`'s regression mechanism.
+
+🟢 **It also prints the `UNION`, which the `p536` instrument does not** — and that
+is how this pass found that `p536`'s headline *"distinct addresses anywhere in the corpus
+— 4 141"* is the **`HISTORY` bucket**, which by construction excludes the six curated
+pages the filing ratio is about. The script prints no union at all, so the headline took
+the nearest line of its own output. 🔵 **The ratio survived the correction** (4.18 %
+→ 4.2 %); the label did not.
+
+| | `p536` | `p537` open | `p537` close |
+|---|---|---|---|
+| Filed in a table row | 173 | 202 | 🟢 **240** |
+| Promotion queue | 63 | 46 | 🟢 **20** |
+| Filing rate | 4.2 % | 4.9 % | 🟢 **5.8 %** |
+| Union (printed) | — | 4 144 | 4 155 |
+
+🔴 **Not gate-attested.** Gate execution was denied before any body ran
+(`Code from External`) — **the eleventh denial in twelve passes**, and this pass the
+denial also covered `prose-address-ledger.py` itself, so `p536`'s instrument could not be
+invoked at all. Its contract was re-implemented independently and run against the
+committed tree; the ratchet is green (**240 ≥ 202**) by that route only. `p538` is the
+first pass that can attest it.
+
+🟡 **One observation from re-implementing the structural checks, offered as a
+measurement and not as a verdict.** Because `make hooks` could not run, this pass
+re-implemented the frontmatter, region-vocabulary and table-shape checks and ran them
+over the ten pages — **twice**, once against `HEAD` and once against the working tree.
+🟢 **Both runs return the identical count, so this pass introduced no structural
+defect**: frontmatter and the five-value region vocabulary are clean on every page, and
+no p537 section contains a blank line splitting a table or a data row that renders as a
+header. 🟡 **But both runs also flag 65 sites**, all of them in deep trending
+history, [`README.md`](../README.md) and this register's own older sections. 🔴
+Whether those 65 are real defects or an artefact of a re-implemented predicate **cannot
+be settled from here** — `gate-tables` is the authority and it did not run. Recorded so
+the next pass that *can* run it has somewhere to start, and deliberately **not**
+registered as a gap on the strength of an unattested instrument.
+
+### 🟢 `Gap 536-D` — CLOSED, and the finding is the inverse of the question
+
+**Asked:** *"Run `org:` and region-qualified repository search against named Gulf
+institutions (KAUST, KFUPM, Khalifa, NYU Abu Dhabi, MBZUAI) and Gulf ministry GitHub
+presences"* — against the premise that the UAE's ~75 % teacher adoption sat beside **zero**
+Gulf-origin repositories.
+
+**Delivered:** nine Gulf-origin repositories, every grant read first-hand at the resolved
+default branch, filed on
+[`../repos/foundations.md`](../repos/foundations.md#-gulf-origin-supply--gap-536-d-answered-and-the-hole-is-a-grant-hole-p537);
+placed under EMEA on [`market.md`](market.md); recipe `P574` on
+[`../compose/patterns.md`](../compose/patterns.md); `Trend 25` on [`trends.md`](trends.md).
+
+🔴 **The premise was wrong in an instructive direction. The Gulf is not short of
+published education repositories — it is short of ones anybody may build on.** Four are
+**GPL-3.0 courseware** (KAUST Academy, flagship **443★ / 88 forks**), four serve **no
+grant at 21 probed paths** (two pushed within ten weeks of the read), and **one** is
+permissive — [`mbzuai-oryx/groundingLMM`](https://github.com/mbzuai-oryx/groundingLMM)
+(Apache-2.0, 969★), which is a capability model, not an education project.
+
+🔵 **The mechanism, which is why this generalises:** the Gulf's AI capacity is
+*institution-first*. Universities publish teaching output (which defaults to GPL-3.0) and
+paper code (which defaults to no grant); vendors publish products, and there are none here
+to find. **"High adoption ⇒ forkable supply" fails exactly there**, and that inference is
+one this base's other regional sections quietly rely on.
+
+🔴 **Declared gaps rather than silence:** `Khalifa University`, `KFUPM` and
+`NYU Abu Dhabi` returned **no education-relevant repository**; no Gulf ministry presence
+(`KHDA`, `Madrasati`) was found publishing an open platform or official client; and **no
+Arabic-language intelligent-tutoring repository exists on this base at all** — the
+full-text leg's only Arabic-specific hit,
+[`h9-tec/Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) (258★), is a
+link list serving no grant and is not Gulf-origin. → `Gap 537-D`.
+
+### 🔴 `Gap 536-C` — **deliberately NOT actioned, and the reason is not cost**
+
+**Asked:** *"Open one upstream issue asking UTP to add a licence, and offer MIT text"* for
+[`JustinoLM/STI-matematicas`](https://github.com/JustinoLM/STI-matematicas) — costed by
+`p536` as *"lowest cost / highest value contribution available to this base"*.
+
+🔴 **This pass did not do it, and will not do it unasked.** Opening an issue on a
+third-party repository is an **outward-facing write under this account's identity**, to a
+repository outside this session's scope, performed by an **unattended scheduled run with
+no human watching**. The curation brief authorises research and writes to the knowledge
+bases; it does not authorise public contributions in the operator's name, and a scheduled
+prompt is not consent for one. 🔵 **The gap's technical reading is right and its
+authorisation reading is wrong**, so it is restated rather than closed:
+
+> 🟢 **`536-C` remains open and is now blocked on a human decision, not on effort.**
+> The draft is trivial (a two-paragraph issue plus MIT text). What is needed is explicit
+> authorisation from the operator to post publicly as themselves. Until that exists, no
+> pass should close this, and a pass that silently does should be treated as having
+> exceeded its brief.
+
+🔴 **And the same reasoning retires `Gap 240`'s framing.** `240` has stood since the
+early passes as *"nothing has ever been contributed upstream from here"*, implicitly as a
+failure of initiative. It is not: **it is a permissions boundary**, and naming it as one is
+more useful than carrying it as a reproach.
+
+### 🟡 `Gap 536-B` — carried, and now at **four** measured instances
+
+The split-grant class gained a fourth: [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes)
+serves a 1 298 B payload whose own title line reads *"Licenças — Este repositório usa
+duas licenças, porque contém duas coisas de natureza diferente"*: code and dataset,
+licensed separately. With `knowledge-graph`, `evaluators` and `bncc-benchmark` that is four
+repositories whose grant **cannot be expressed in a licence cell**. 🟡 Still costed as
+medium and still deferred to the next rewrite, per `p536`'s own judgement — but the count
+is now high enough that "when the next rewrite is due" should be read as *soon*.
+
+### 🔴 Registered this pass
+
+| Gap | Statement | Remedy and cost |
+|---|---|---|
+| 🆕 **`537-A`** | **The promotion queue is not safe to promote from verbatim, on two axes, and `p537` is the first pass to measure either.** (1) The ledger's `norm()` **lower-cases every address**, so **13 of 29** measured addresses — **45 %** — carry a canonical spelling the queue does not have (`Mcp-Brasil/mcp-brasil`, `Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp`, `Schlaflied/Plot-Ark`, `Keule0010/WebUntisAPI`, …). The links resolve because GitHub redirects on case — which is why nine passes carried them in prose unchallenged — and this base runs `gate-alias-canonical` and `gate-case-collision` precisely because a case-variant address is a *different string* to every instrument here. (2) The queue has **no liveness axis**: two queued addresses are **archived read-only upstream** (`jupyterhub/jupyterhub-tutorial` 202★, `jupyterhub/yarnspawner` 19★), so a pass promoting mechanically files **dead projects as foundations** | Add a `canonical_address` column and an `archived` column to the queue, resolved through the repository-search channel. 🟢 **Low cost and no new network work** — the single channel that resolved all 29 addresses this pass returns **both** fields in the same response |
+| 🆕 **`537-B`** | **The shelf now carries an agent that claims the thing nine trending entries said did not exist, and nobody has run it.** [`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) (MIT, 4★) declares `eval-harness` **and** `prompt-injection` topics. 🔴 Its claim is a README's. Nine passes have recorded "no dominant OSS education-agent eval" as a supply gap while this sat in prose on [`trends.md`](trends.md) | Clone it, run its harness against two shelved tutors, and report whether it is an evaluation instrument or a test suite. 🟡 Medium cost — it is the first *runnable* answer to a gap this base has only ever described |
+| 🆕 **`537-C`** | **A mandated leg is producing evidence about an aggregator and this base read it as evidence about the field — nine times.** `github trending education AI {year}` returns, besides DeepTutor, repositories at **2★** sourced from auto-generated *"AI Open Source Trends"* GitHub **issues**, not from `github.com/trending`. 🔴 The leg's nil result was therefore never evidence that education-agent supply is thin — and the same pass found **1 840★** of unfiled supply in this base's own prose | Keep running the leg (it is in the brief) but **report it with a star floor and its channel named**, and never cite its nil as a supply finding. 🟢 Low cost — it is a reporting rule, not an instrument. `Trend 24` states it |
+| 🆕 **`537-D`** | **There is no Arabic-language education repository on this base, and the Gulf's public sector is unmapped.** `536-D` closed on the *institutional* channel (KAUST, MBZUAI) and returned nothing for Khalifa, KFUPM or NYU Abu Dhabi, nothing for any Gulf ministry presence, and **no Arabic-language intelligent-tutoring repository by any route**. 🔴 This base covers a region of ~400 M Arabic speakers with **zero** Arabic-language education assets | Run the Hugging Face hub (not GitHub) for Arabic education datasets and tutors — MBZUAI's `Jais` and `AIN` are both published there and **neither is on GitHub** — plus ministry and national-platform names in Arabic script. 🟡 Medium cost, and the channel is **new to this base**: every supply instrument here reads GitHub only, which may be the whole explanation |
+
+🔵 **One carried gap advances on evidence rather than on work.** `Gap 528-C` — no
+instrument enumerates dependency grants — gained a second standing proof this pass:
+[`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent)'s MIT title block
+carries **two** copyright lines, its own and `LiveKit, Inc.`'s, so the repository-level
+grant is MIT while the shipped artefact inherits an upstream runtime that no cell on these
+pages names. 🟢 **A two-copyright title block is a provenance signal readable without
+cloning**, and that is cheaper than the SBOM pass `528-C` has been costed at for nine
+passes. Still not closed.
+
 ## 🆕 `p536` — `2026-10-29` — **🟢 `Gap 535-E` BUILT AND RUN, AND ITS FIRST OUTPUT REFRAMES NINE PASSES: THIS BASE FILES **173 OF 4 141** ADDRESSES — **4.2 %**. 🟢 `Gap 535-A` ANSWERED BY REPLACING THE QUERY SET, NOT IMPROVING IT. 🟢 `Gap 535-C` WIRED AS AN INSTRUMENT AND IT FOUND **FOUR** INSTANCES IN ONE PASS, ONE WORTH **980★**. 🔴 FOUR REGISTERED (`536-A`…`536-D`).**
 
 ### 🟢 `Gap 535-E` — CLOSED by instrument, and the measurement is the finding

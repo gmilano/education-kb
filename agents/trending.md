@@ -4,6 +4,129 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p537` — `2026-10-29` — **🔴 THE `github trending education AI` LEG IS STRUCTURALLY INCAPABLE OF SURFACING SUPPLY — ITS NON-DEEPTUTOR RESULTS ARE **2★ EACH**, FROM AUTO-GENERATED ISSUES, NOT FROM GITHUB TRENDING. 🟢 EIGHT AGENTS SHELVED OFF THE PROSE QUEUE (51 TOTAL). 🔴 THE QUEUE IS NOT SAFE TO PROMOTE FROM VERBATIM: **13 OF 29** ADDRESSES ARE MIS-SPELLED AND TWO ARE FORKS. 🟢 `Gap 536-D` CLOSED — AND THE GULF HOLE IS A **GRANT** HOLE.**
+
+### 🔴 The finding that reframes nine trending entries — and it is about this file's own instrument
+
+Nine consecutive passes have written *"the mandated trending leg returned nothing
+unfiled"*. `p536` reframed that as a filing-rate artefact. 🔴 **`p537` measured the
+leg itself, and there is a second mechanism: the query cannot return supply, because what
+it indexes is not GitHub Trending.**
+
+The leg `github trending education AI 2026` returned exactly one real asset —
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — and three education repositories
+presented alongside it as trending. Resolved through the repository-search channel:
+
+| Address as the leg surfaced it | Stars, measured | Pushed | Grant |
+|---|---|---|---|
+| [`LeoLiu363/ai-video-understanding`](https://github.com/LeoLiu363/ai-video-understanding) | 🔴 **2** | 2026-09-27 | none declared |
+| [`upstream1119/Traceable-Ideological-Education-RAG`](https://github.com/upstream1119/Traceable-Ideological-Education-RAG) | 🔴 **2** | 2026-10-13 | none declared |
+| [`tanghua-git/skill-instructional-design`](https://github.com/tanghua-git/skill-instructional-design) | 🔴 **2** | 2026-09-13 | none declared |
+
+🔴 **All three came from auto-generated *"AI Open Source Trends"* GitHub **issues**
+in bot repositories (`agents-radar` and its clones), not from `github.com/trending`.**
+Those issues are machine-written digests that scrape and re-rank, and at the education
+end of their distribution they are emitting **two-star repositories**. 🔵 **So the
+leg's nil result was never evidence about the supply of education agents.** It is
+evidence about an aggregator. A query that reaches 2★ repositories and calls them
+trending will also miss `Mcp-Brasil/mcp-brasil` at **1 840★** — which this pass found
+in its own prose, not through any leg.
+
+🟢 **The one figure the leg did produce, and it is worth having:** DeepTutor
+re-measured at **49 850★ / 6 138 forks**, Apache-2.0, pushed 2026-10-29 — against the
+shelf's carried **49.0k**. Still the largest education agent anywhere on this base, and
+still APAC-origin.
+
+### 🟢 Eight agents shelved — 43 → 51, and none of them came from a search
+
+Every one was named in a *sentence* on a curated page and filed in no table row. Grants
+read first-hand; see [`top.md`](top.md) for the full rows.
+
+| Agent | Grant | Stars | Region | Why it earns a row |
+|---|---|---|---|---|
+| [`AIEd-Innovations/assessment_agent`](https://github.com/AIEd-Innovations/assessment_agent) | Apache-2.0 | 0 | unplaced | Assessment generation, org-published |
+| [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | MIT (`master`) | 0 | unplaced | 🟢 **No external AI APIs** — the only fully-local proctoring candidate this base holds |
+| [`H1bertto/professor-agent`](https://github.com/H1bertto/professor-agent) | MIT | 0 | unplaced | 🔵 The shelf's only **desktop-overlay** form factor (Electron + VRM avatar + voice) |
+| [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | MIT **+ a second copyright line, `LiveKit, Inc.`** | 0 | **LATAM (Brazil)** | Voice-first pt-BR math tutor, 1st grade → university |
+| [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | MIT | 3 | unplaced | Moodle MCP server shipped as a one-click `.mcpb`; 🔴 reaches Moodle by **scraping**, not web services |
+| [`sonowalvaibhav/gradeops`](https://github.com/sonowalvaibhav/gradeops) | MIT | 0 | unplaced | Human-in-the-loop handwritten-answer grading, stated in the project's own one-liner |
+| [`localis-ai/student-discovery-agent`](https://github.com/localis-ai/student-discovery-agent) | MIT | 0 | **APAC (Vietnam)** | 🟢 First Vietnamese-origin education repo here — and Vietnam is the one APAC jurisdiction naming education high-risk by sector |
+| [`abhijeetgupta23/ai-agent-to-learn-faster-and-better`](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | MIT | 4 | unplaced | 🟢 Declares `eval-harness` **and** `prompt-injection` topics — the two things nine trending entries said education agents never ship |
+
+### 🔴 Two forks were in the queue, and promoting verbatim would have shelved them
+
+[`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) is the
+canonical repository (MIT, 3★, 1 fork); the queue held **`dymayo/moodler-mcp`**, which is
+that one fork. 🔵 **Established without cloning either:** the fork's own README
+carries a release badge pointing at `GhaithAlHallak8/moodler-mcp`, and the grant's
+copyright line reads `Ghaith AlHallak`. Same shape as `kvnloo/tutor-mcp` →
+[`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) (re-measured
+**59★**, up from the shelf's 57). 🔴 **Two instances in one pass of a prose address
+being a fork of the thing worth filing.**
+
+### 🔴 What `make hooks` did, which was nothing, for the eleventh time in twelve passes
+
+🔴 **Gate execution was DENIED before any gate body ran** (`Code from External`) —
+and this pass the denial also covered
+[`../ingest/prose-address-ledger.py`](../ingest/prose-address-ledger.py), so `p536`'s own
+instrument could not be invoked. 🟢 **Its contract was re-implemented independently
+and run against the committed tree**, which is this base's established remedy and the
+reason the correction below exists at all:
+
+| Bucket | `p536` reported | `p537` measured at `HEAD` |
+|---|---|---|
+| Filed in a table row on a curated page | 173 | 🟢 **202** |
+| Distinct addresses — union of all buckets | *not printed by the instrument* | **4 144** |
+| `HISTORY` bucket (everything outside the six curated pages) | **4 141** | 4 141 |
+| Filing rate | 4.2 % | 🟢 **4.9 %** |
+| `PROSE`-minus-`FILED` queue | 63 | 🟢 **46** |
+| 🆕 **After this pass's own filings** | — | 🟢 **240 filed · queue 20 · rate 5.8 %** |
+
+🟢 **`p536`'s seven agent rows and nineteen platform rows did land** — the queue
+shrank by 17 and the filed count rose by 29. 🔴 **And `p536`'s headline label is
+wrong in a way worth stating precisely:** it reported *"distinct addresses anywhere in
+the corpus — 4 141"*, but **4 141 is the `HISTORY` bucket, which by construction
+excludes the six curated pages the ratio is about**. The script prints no union at all,
+so the headline took the nearest line of its own output. 🔵 **The ratio survives
+the correction** (the true union is 3 larger, 4.18 % → 4.2 %); **the label does not.**
+
+
+🟢 **And `Gap 536-A` is answered with the instrument it asked for.**
+[`../ingest/promotion-ratchet.py`](../ingest/promotion-ratchet.py) is a **ratchet**: the
+filed count may not fall between passes, the baseline is committed at
+[`../ingest/promotion-ratchet.json`](../ingest/promotion-ratchet.json), and a pass that
+legitimately removes a row must **lower the baseline explicitly, in the same commit, with
+a reason** — which turns a silent regression into an authored act. It is wired into
+`HOOK_GATES` as `gate-promotion-ratchet`. 🟢 It also prints the **union**, so the
+denominator `p536` mislabelled cannot be mislabelled again.
+
+🔴 **Stated plainly: this pass could not run it through `make`.** Gate execution was
+denied, so the logic was exercised against the committed tree by an independent copy and
+is green (**240 ≥ 202**); it is **not gate-attested**, and `p538` is the first pass that
+can attest it.
+
+🟢 **The pass's filing effect, measured the same way:** 202 → **240** filed, queue
+46 → **20**, rate 4.9 % → **5.8 %**. Thirty-eight addresses moved from sentences into
+table rows: 8 agents ([`top.md`](top.md)), 9 prose-queue foundations and the 9-row Gulf
+set ([`../repos/foundations.md`](../repos/foundations.md)), and 13 regional adapters
+([`../intel/market.md`](../intel/market.md)).
+
+### 🟢 `Gap 536-D` closed, and the answer inverts the question
+
+The gap said: highest teacher-adoption figure on this base (**UAE ~75 %**), **zero**
+Gulf-origin repositories. Run against the named institutions, the region returns nine
+repositories — and **one** permissive grant among them. KAUST Academy ships **GPL-3.0
+courseware** (443★ flagship, 88 forks) and three repositories with **no grant at 21
+probed paths**; MBZUAI ships `groundingLMM` (Apache-2.0, 969★) and an ungranted ECCV
+2026 agent framework. 🔴 **The Gulf hole was never a discovery hole. It is a grant
+hole**, and the engagement shape that follows is on
+[`../intel/market.md`](../intel/market.md) under EMEA.
+
+🔴 **Declared gaps, stated rather than left silent:** Khalifa University, KFUPM and
+NYU Abu Dhabi returned no education-relevant repository; **no Arabic-language
+intelligent-tutoring repository was found at all**, by either the institutional or the
+full-text leg.
+
 ## 🆕 `p536` — `2026-10-29` — **🔴 THE NINE-PASS "DISCOVERY DROUGHT" IS A **FILING-RATE ARTEFACT**: THIS BASE HOLDS **4 141** DISTINCT ADDRESSES AND FILES **173** OF THEM IN A TABLE ROW — **4.2 %**. 🟢 SEVEN AGENTS SHELVED, NONE FROM A SEARCH: THREE FROM ORG ENUMERATION, FOUR FROM TOPIC-QUALIFIED API QUERIES. 🔴 THE PARTNER NAMED ON SHELF ROW 3 SHIPS THREE REPOS AND THIS BASE FILED **ZERO**. 🔴 THE MANDATED QUERY SET RETURNS NOTHING UNFILED FOR THE **NINTH** PASS.**
 
 ### The measurement, because it reframes nine passes of this file

@@ -1,0 +1,7 @@
+{
+  "filed": 240,
+  "notes": "p537 baseline, measured against the committed p537 tree. p536 left 173 filed / 63 queued; p537 opened at 202 filed / 46 queued (so p536's rows did land) and closed at 240 filed / 20 queued after filing 8 agents, 9 foundations, 9 Gulf rows and 13 regional adapters. Measured by an independent re-implementation of the p536 contract, because ingest/prose-address-ledger.py could not be EXECUTED this pass (gate denial 'Code from External', the 11th denial in 12 passes) — so this number is NOT gate-attested. Lowering it is allowed but must be explicit and reasoned here, in the same commit.",
+  "pass": "p537",
+  "queue": 20,
+  "union": 4155
+}

@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p537` — `2026-10-29` — **🟢 TWENTY-TWO PLATFORM ROWS FILED: THE NINE-REPOSITORY GULF SET (`Gap 536-D`), NINE PROSE-QUEUE FOUNDATIONS AND THIRTEEN REGIONAL ADAPTERS. 🔴 TWO OF THEM ARE **ARCHIVED UPSTREAM** AND NO INSTRUMENT HERE WOULD HAVE SAID SO. 🔴 THE PROSE QUEUE LOWER-CASES, AND **45 %** OF WHAT IT HANDS YOU IS MIS-SPELLED.**
+
+### 🟢 The Gulf set — `Gap 536-D`, and the supply is copyleft or ungranted
+
+Nine repositories from KAUST Academy (🇸🇦) and MBZUAI (🇦🇪), every grant read
+first-hand at the resolved default branch. Full table on
+[`foundations.md`](foundations.md).
+
+| | Count | Detail |
+|---|---|---|
+| 🔴 **GPL-3.0** | **4** | All KAUST Academy courseware; `Artificial-Intelligence-Courses` is **443★ / 88 forks**, 35 128 B grant |
+| ⛔ **No grant at 21 probed paths** | **4** | `2026_KASP_Summer_School`, `weekly-ai-brief` (pushed 2026-10-27), `2025_Advanced-Ai`, `mbzuai-oryx/OpenEarthAgent` (131★, ECCV 2026) |
+| 🟢 **Apache-2.0** | **1** | [`mbzuai-oryx/groundingLMM`](https://github.com/mbzuai-oryx/groundingLMM), 969★ — a capability model, not an education project |
+
+🔵 **One permissive grant in nine, and it is not education-built.** That is the
+whole finding: the region with the highest teacher-adoption number this base holds
+exports **teaching materials under copyleft** and **research code under no grant**.
+
+### 🔴 Two archived repositories were in the promotion queue, flagged only by the channel that resolved them
+
+[`jupyterhub/jupyterhub-tutorial`](https://github.com/jupyterhub/jupyterhub-tutorial)
+(**202★**, BSD-3-Clause, `master`) and
+[`jupyterhub/yarnspawner`](https://github.com/jupyterhub/yarnspawner) (19★,
+BSD-3-Clause, `master`) are **archived, read-only upstream**. Both are real, both are
+permissively licensed, and neither is a foundation anyone should start from in 2026.
+🔴 **The prose queue has no liveness or `archived` column**, so a pass promoting
+from it mechanically files dead projects as foundations. They are filed **with the
+archived flag in the row**, which is the only honest way to carry them. 🟢 The
+third of the trio, [`jupyterhub/kerberosauthenticator`](https://github.com/jupyterhub/kerberosauthenticator)
+(12★, BSD-3-Clause, live), is the one that earns its place — Kerberos is what a
+university IT department actually runs.
+
+### 🔴 The queue lower-cases every address it emits — 45 % mis-spelled
+
+Twenty-nine queued addresses were resolved against the repository-search channel this
+pass. **Thirteen carry a canonical owner or repository spelling the queue does not
+have**, because the ledger's `norm()` lower-cases: `Mcp-Brasil/mcp-brasil`,
+`Open-Source-eUdeC/UdeCursos-bot`, `Keule0010/WebUntisAPI`,
+`Suiram1701/WebUntisAPI.Client`, `IronCountySchoolDistrict/powerschool-alchemy`,
+`foerbsnavi/Notenberechner`, `AIEd-Innovations/assessment_agent`,
+`Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp`, `Schlaflied/Plot-Ark`, `brownplt/LTLTutor`,
+`H1bertto/professor-agent`, `Jeanikt/tutor-ai-agent`,
+`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`. 🔵 **The links all
+resolve — GitHub redirects on case — which is exactly why nine passes carried them in
+prose and nothing objected, and why a table row must not.** This base runs
+`gate-alias-canonical` and `gate-case-collision` for precisely this reason. `Gap 537-A`.
+
+### 🟢 Thirteen regional adapters, placed — and the largest was already in this base's own prose
+
+Filed on [`../intel/market.md`](../intel/market.md): twelve permissive (eleven MIT, one
+Apache-2.0) plus one split-grant, each reaching a **named system of record** — SIASE,
+SAES, SIA, SUAP, BNCC, WebUntis, Schulmanager Online, PowerSchool, Ed-Fi.
+
+🔴 **[`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) — MIT,
+1 840★, 287 forks, pushed on the day of this read, exposing 70 Brazilian public-sector
+APIs through one MCP server — was named in a sentence on this base and filed in no table
+row.** It is the highest-star asset the promotion queue contained and the most
+load-bearing LATAM integration asset here.
+
+🔴 **A fourth instance of `Gap 536-B` (a licence cell is the wrong data type).**
+[`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) serves a 1 298 B
+payload whose own title line is *"§ Licenças — Este repositório usa duas licenças,
+porque contém duas coisas de natureza diferente"*: code and dataset licensed separately.
+No cell on these pages can express that, and this is now the fourth such repository.
+
 ## 🆕 `p536` — `2026-10-29` — **🟢 THE NATIONAL DATA PLANE ARRIVES: FOUR COUNTRIES PUBLISH THEIR OWN EDUCATION/STATISTICS LAYER UNDER MIT OR APACHE-2.0, INCLUDING AN **OFFICIAL GOVERNMENT MCP SERVER** (INDIA'S MoSPI, MIT, 147★). 🔴 AND THE EFFICACY LAYER `p535` BUILT GAINS THE HALF IT SAID IT LACKED — **ASSIGNMENT** — AS APACHE-2.0 JAVA THAT RUNS INSIDE THE LMS.**
 
 ### The efficacy layer completes, and it closes `p535`'s own stated hole

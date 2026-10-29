@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p534` · 2026-10-29.** Figures are attributed to the source that produced
+**Pass `p537` · 2026-10-29.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
 
@@ -396,6 +396,64 @@ agent artefacts are **0★ and pre-release**, its strongest platform is **2.5 ye
 stale**, and its best-evaluated system is **ungranted**. The constraint has moved from
 *existence* to *maintenance and licensing* — which is a far better brief for a studio,
 because both are things a studio supplies.
+
+
+## 🆕 `p537` — the four regional legs re-run: **demand saturated for a sixth pass, and the supply side yielded a 1 840★ asset this base already owned**
+
+All four regional legs ran (`AI education {region} 2026 adoption regulation players`,
+North America · EMEA · APAC · LATAM) plus the four mandated global legs. Reported per
+region **including the blanks**.
+
+| Leg | Demand figures returned | New to this base? | Supply returned |
+|---|---|---|---|
+| **North America** | ~134 AI-in-education bills across 31 states; Maryland / Idaho / Oklahoma / Virginia dual-mandate laws; Oklahoma S.B. 1734 (written district policy before 2027-28, AI barred as *primary* basis for grading or discipline); Utah H.B. 218 (required grade 7–8 digital-skills course incl. AI literacy); H.R. 8747 *K-12 AI Literacy and Readiness Act of 2026* advanced out of committee in July; ~60 % of US teachers using AI tools (Gallup, via secondary sources) | 🔴 **No — and one is a figure this base RETIRED at `p455`.** *"134 bills / 31 states"* is **one tracker's tally**, and `p455` retired it after three other trackers disagreed by up to **2.6×**. 🔴 **It came back through the leg unchanged, which is the point**: the mandated query reproduces a figure this base has already refuted, so the leg cannot be used as a demand instrument without the register in hand. 🟢 The Oklahoma and Utah statute details are sharper than what was held and are carried below | ⛔ **Nil** |
+| **EMEA** | **Regulation (EU) 2026/1744** — the *Digital Omnibus* — moved most Annex III high-risk obligations, education among them, from **2026-08-02 to 2027-12-02**; Article 50 chatbot-transparency duties took effect on schedule **2026-08-02**; emotion-recognition in schools banned since **2025-02**; schools are **deployers**, vendors are **providers** | 🟡 **Partly.** The delay is held; 🟢 **the split — transparency live now, high-risk deferred 16 months — is what this pass adds**, and it is the whole basis of an EMEA sequencing argument. 🔴 Sources disagree on whether the Omnibus retains the AI-literacy duty; recorded as disputed, not resolved | 🟢 **Yes — the Gulf set.** `Gap 536-D` closed on [`../repos/foundations.md`](../repos/foundations.md): nine Gulf-origin repositories, **one permissively licensed** |
+| **APAC** | Korea's **AI Basic Act in force 2026-01-22** (MSIT signalling 2026 as a de-facto pilot year, limited enforcement); **Vietnam** the one APAC jurisdiction naming **education** high-risk by sector (automated assessment, behavioural monitoring), compliance date disputed across sources (2026-03 vs 2027-03-01); Singapore consulting on AI Risk Management Guidelines; China's registration + content-labelling regime; EU Art. 2(1)(c) extraterritorial reach onto APAC providers | 🟡 **Partly** — `p534` restored and corrected the APAC regulatory holdings; the **Vietnam education-as-high-risk** reading is the operative item here, and it is the reason a Vietnamese repository was shelved this pass | 🟢 **Yes** — [`localis-ai/student-discovery-agent`](https://github.com/localis-ai/student-discovery-agent) (MIT, Vietnam), the base's first Vietnamese-origin education repository |
+| **LATAM** | UNESCO IESALC: **200 institutions / 19 countries, 87 % using AI in at least one area, 74 % in teaching and learning, only 26 % with a formal AI strategy**; Brazil **53 % of school administrators using AI, 22 % of schools with guidelines** (Cetic.br); **716** AI-related regulatory instruments across 23 countries (U. de los Andes, 2026); Uruguay first LATAM signatory of the CoE Framework Convention; Colombia CONPES 4144; UNESCO **Observatory on AI in Education for LAC launched 2026-04** | 🔴 **No** — every figure is already itemised on this page; the IESALC 200-institution mapping was logged at `p536` | 🟢 **Yes, and it is the pass's largest find** — see the adapter table below |
+
+🔵 **Sixth consecutive pass in which the regional legs are saturated on demand.**
+That is now a stable property of the instrument, not a surprise, and `p536`'s ruling
+stands: the legs run as a **control**, and supply comes from topic-qualified and
+organisation-qualified repository search.
+
+### 🔴 The nine regional adapters this base described and never filed
+
+Each address below was named in a *sentence on this page* and filed in **no** table row
+anywhere on this base — some for many passes. Grants read first-hand at the resolved
+default branch; stars and forks from the repository-search channel. 🔴 **Six of the
+ten rows carry a canonical spelling the prose did not have** (see
+[`../agents/top.md` § the queue's case defect](../agents/top.md#-the-promotion-queues-own-defect-it-lowercases-and-37--of-what-it-hands-you-is-mis-spelled)).
+
+| Address (canonical) | Region | Stars | Licence — read first-hand | System of record it reaches | State |
+|---|---|---|---|---|---|
+| [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | 🟢 **LATAM (Brazil)** | 🟢 **1 840** · 287 forks | 🟢 **MIT** — `Copyright (c) 2025-2026 MCP Brasil`, 1 071 B at `main` | **70 Brazilian public-sector APIs** over one MCP server | 🟢 Live, pushed **2026-10-29** |
+| [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟢 **LATAM (Brazil)** | 10 · 2 forks | 🟡 **Split grant** — the payload's own title is `# Licenças · Este repositório usa duas licenças, porque contém duas coisas de natureza diferente` (1 298 B, `main`) | npm/PyPI packages + MCP server over the **BNCC** national curriculum dataset | 🟢 Live (2026-10-27) |
+| [`Open-Source-eUdeC/UdeCursos-bot`](https://github.com/Open-Source-eUdeC/UdeCursos-bot) | 🟢 **LATAM (Chile)** | 8 · 3 forks | 🟢 **MIT** — `Copyright (c) 2021 Open Source eUdeC`, 1 073 B at `main` | Universidad de Concepción course data, over **Telegram** | 🟡 Live but quiet (2025-08) |
+| [`ramomar/siase-schedule-scraper`](https://github.com/ramomar/siase-schedule-scraper) | 🟢 **LATAM (Mexico)** | 10 · 2 forks | 🟢 **MIT** — `The MIT License (MIT) · Copyright (c) 2015 Omar Garza`, 1 076 B at **`master`** | **SIASE** (UANL) timetables | 🟡 Live, low activity (2026-04) |
+| [`roncuevas/ipn_saes_utils`](https://github.com/roncuevas/ipn_saes_utils) | 🟢 **LATAM (Mexico)** | 🔴 **0** | 🟢 **MIT** — `Copyright (c) 2026 Aarón Martínez Cuevas`, 1 079 B at `main` | **SAES** (Instituto Politécnico Nacional) | 🟡 Created and last pushed the same day (2026-02-09) |
+| [`gabotachak/sia-unal-bridge`](https://github.com/gabotachak/sia-unal-bridge) | 🟢 **LATAM (Colombia)** | 1 | 🟢 **MIT** — `Copyright (c) 2026 Gabriel Andres Anzola Tachak`, 1 084 B at `main` | **SIA** (Universidad Nacional de Colombia) course catalogue, as a JSON API over Oracle ADF | 🟢 Live (2026-10-16) |
+| [`django-by-kelsoncm/django-auth-suap`](https://github.com/django-by-kelsoncm/django-auth-suap) | 🟢 **LATAM (Brazil)** | 🔴 **0** | 🟢 **MIT** — `Copyright (c) 2026 kelsoncm`, 1 064 B at `LICENSE.md`, `main` | **SUAP** OAuth2 (IFRN's academic management system) as a Django auth backend | 🟢 Live, pushed **2026-10-29** |
+| [`Keule0010/WebUntisAPI`](https://github.com/Keule0010/WebUntisAPI) | 🟢 **EMEA (DE/AT/CH)** | 6 · 1 fork | 🟢 **MIT** — `Copyright (c) 2022 Keule22`, 1 063 B at `main` | **WebUntis** JSON-RPC, in Java | 🟡 Live, low activity (2026-03) |
+| [`Suiram1701/WebUntisAPI.Client`](https://github.com/Suiram1701/WebUntisAPI.Client) | 🟢 **EMEA (DE/AT/CH)** | 2 | 🟢 **MIT** — `Copyright (c) 2023 Suiram1701`, 1 066 B at `LICENSE.txt`, **`master`** | **WebUntis**, in .NET — *"(Not official)"*, the author's own words | 🟡 Live (2026-06) |
+| [`egore4606/schulmanager-calendar-sync`](https://github.com/egore4606/schulmanager-calendar-sync) | 🟢 **EMEA (Germany)** | 1 · 1 fork | 🟢 **MIT** — `Copyright (c) 2026 egore4606`, 1 065 B at `main` | **Schulmanager Online** timetables → Google Calendar, self-hosted | 🟢 Live (2026-09) |
+| [`foerbsnavi/Notenberechner`](https://github.com/foerbsnavi/Notenberechner) | 🟢 **EMEA (Germany)** | 🔴 **0** | 🟢 **MIT** — `Copyright (c) 2026 Fabian Brose`, 1 068 B at `main` | None — browser-only grade calculator for teachers, *"ohne Anmeldung"* | 🟢 Live (2026-07) |
+| [`IronCountySchoolDistrict/powerschool-alchemy`](https://github.com/IronCountySchoolDistrict/powerschool-alchemy) | 🟢 **North America (Utah, USA)** | 3 | 🟢 **MIT** — 1 056 B at **`master`** | **PowerSchool** database via SQLAlchemy | 🔴 Stale (2024-02) |
+| [`xmarcosx/edfi-via-kubernetes`](https://github.com/xmarcosx/edfi-via-kubernetes) | 🟢 **North America (USA)** | 1 | 🟢 **Apache-2.0** — 11 356 B at **`master`** | **Ed-Fi** API + Admin App on GKE, ODS on Cloud SQL | 🔴 Stale (2022-05) |
+
+🔵 **The reading, and it is a market reading rather than a catalogue one.**
+Thirteen addresses, **twelve permissively licensed** (eleven MIT, one Apache-2.0) and one
+split-grant, each reaching a **named national or institutional system of record**: SIASE,
+SAES, SIA, SUAP, BNCC, WebUntis, Schulmanager, PowerSchool, Ed-Fi. 🟢 **This is
+`Trend 41`'s adapter inversion with a price list attached.** None of these is a platform
+to fork; each is the thin, permissive, usually single-author bridge between an agent and a
+system the client does not control — and **every one of them is a maintenance liability
+the client inherits** (two are already stale, three have a single author and zero forks).
+
+🔴 **`Mcp-Brasil/mcp-brasil` is the row that should not have waited.** 1 840 stars,
+287 forks, MIT, pushed on the day of this read, exposing **70 Brazilian public-sector
+APIs** through one MCP server — and it was named in a sentence on this page and filed in
+no table row on this base. 🟢 It is the single most load-bearing LATAM integration
+asset here, and `P537-A` is built on it.
 
 ## Opportunities by region
 
@@ -807,6 +865,37 @@ Poland, the only permissive AI-native LMS), [`ls1intum/Artemis`](https://github.
 for permissive, named-institution components** — which inverts the usual
 framing, where EMEA appears as the regulated region and little else.
 
+
+
+#### 🆕 `p537` — the Gulf, placed: highest adoption on this base, and almost nothing permissive to build on
+
+🔴 **The Gulf is the sharpest adoption-to-supply inversion on these pages.**
+`p535` measured the **UAE at ~75 % of teachers using AI in their work**, the highest
+figure in this base's whole TALIS set. `Gap 536-D` asked what the region *ships*.
+Answered on [`../repos/foundations.md` § Gulf-origin supply](../repos/foundations.md#-gulf-origin-supply--gap-536-d-answered-and-the-hole-is-a-grant-hole-p537):
+nine repositories from the two leading Gulf AI institutions, of which **one** carries a
+permissive grant.
+
+- 🔴 **KAUST Academy (Saudi Arabia) ships curriculum under GPL-3.0** — 443★ / 88
+  forks on the flagship course repository, four repositories at GPL-3.0 and three serving
+  **no grant at any of 21 probed paths**. A client-branded fork of GPL-3.0 courseware is a
+  GPL-3.0 distribution; so the engagement is **integrate-and-attribute, or negotiate a
+  separate licence with the institution** — never fork.
+- 🟢 **MBZUAI (UAE) ships one buildable asset of size**:
+  [`mbzuai-oryx/groundingLMM`](https://github.com/mbzuai-oryx/groundingLMM) (Apache-2.0,
+  969★), a grounded multimodal model — a *capability* layer, not an education product.
+  Its newest agent framework, `OpenEarthAgent` (131★, ECCV 2026), serves no grant.
+- 🔴 **No Arabic-language intelligent-tutoring repository was found**, by either the
+  institutional or the full-text leg. Stated as a gap rather than left as silence.
+
+🔵 **So the Gulf opportunity is not "fork a platform", which is what North America
+and LATAM look like on this page.** It is (a) **licence and curriculum advisory** — four
+of nine institutional repositories, two pushed within ten weeks, have no grant at all,
+and an institution that wants adoption and has not noticed is a conversation; (b) **a
+build on `groundingLMM`**, the one permissive asset; (c) **adapter work against national
+systems**, as in EMEA proper. 🔴 **What it is not is a supply market.** Writing
+"Gulf: high adoption, high opportunity" without this would be the error `536-D` existed
+to prevent.
 
 ### APAC
 

@@ -6,9 +6,42 @@ updated: 2026-10-29
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p536` · 2026-10-29.** **Forty-three** real agents, every row read
+**Pass `p537` · 2026-10-29.** **Fifty-one** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
+
+> 🟢 **`p537` promoted eight agents off `p536`'s queue, and in doing so found
+> the queue is not safe to promote from verbatim.** Nineteen queued addresses were
+> measured against the repository-search channel. 🔴 **Seven of the nineteen
+> — 37 % — carry a canonical owner or repository spelling the queue does not
+> have**, because the ledger lower-cases every address it emits
+> ([`../ingest/prose-address-ledger.py`](../ingest/prose-address-ledger.py), `norm()`).
+> `aied-innovations/assessment_agent` is really **`AIEd-Innovations/assessment_agent`**;
+> `ed-fi-alliance-oss/ed-fi-adminapp` is **`Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp`**;
+> `schlaflied/plot-ark` is **`Schlaflied/Plot-Ark`**. 🔴 **A second batch of ten
+> queued addresses was then measured and six more differ — so the rate over all
+> **29** addresses measured this pass is **13, or 45 %**, not 37 %.** 🔵 The links still resolve
+> — GitHub redirects on case — which is exactly why nine passes could carry them
+> in prose without noticing, and why a table row must not. See
+> [§ the queue's case defect](#-the-promotion-queues-own-defect-it-lowercases-and-37--of-what-it-hands-you-is-mis-spelled).
+>
+> 🔴 **And two queued agent addresses are forks whose upstream this base did not
+> file.** The queue held `dymayo/moodler-mcp`; the canonical repository is
+> [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp)
+> (**MIT, 3★**), and `dymayo/moodler-mcp` is its *one fork* — established from the
+> README's own release badge, which points at the upstream owner. That is the same
+> shape as `kvnloo/tutor-mcp` → `ArnaudGuiovanna/tutor-mcp`, which `p536` caught by
+> hand. 🟢 **The canonical address is what is shelved below, in both cases.**
+>
+> 🟢 **The ratio `p536` published is sound; its denominator's label is not.**
+> Re-measured independently at this pass's `HEAD`: **202 of 4 144** distinct
+> addresses are filed in a table row — **4.9 %**, up from 4.2 %, so `p536`'s seven
+> agent rows and nineteen platform rows did land. 🔴 But `p536` reported
+> *"distinct addresses anywhere in the corpus — 4 141"*, and **4 141 is the
+> instrument's `HISTORY` bucket, which by construction excludes the six curated
+> pages the ratio is about**; the script prints no union at all, so the headline
+> figure was the nearest line on its own output. The ratio survives the correction
+> (the union is 3 larger); the label does not.
 
 > 🔴 **`p536`'s headline is a ratio, and it ends the nine-pass "discovery
 > drought" as a mis-diagnosis.** This base's corpus holds **4 141 distinct
@@ -310,11 +343,11 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 43 verified education agents
+## Shelf — 51 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
-| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **49.0k** | APAC (Univ. of Hong Kong, HKUDS lab) | "Lifelong Personalized Tutoring." Multi-agent tutor with persistent learner memory, learning paths and mastery gates. README names **v1.7.0, 2026.10.28**. 6.1k forks. The largest open-source education agent on any shelf. |
+| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **49 850** · 6 138 forks (re-measured `p537`) | APAC (Univ. of Hong Kong, HKUDS lab) | "Lifelong Personalized Tutoring." Multi-agent tutor with persistent learner memory, learning paths and mastery gates. README names **v1.7.0, 2026.10.28**. 6.1k forks. The largest open-source education agent on any shelf. |
 | **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | MIT | **41.8k** | APAC (Tsinghua University, MAIC group) | "Open Multi-Agent Interactive Classroom" — a one-click immersive classroom staffed by multiple agent roles (lecturer, peer, assistant). TypeScript / Next.js / React. News section names **v1.3.0, 2026-10-29**. 6.5k forks. |
 | **k12-teacher-skills** | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | 601 | North America (Anthropic, with Learning Commons) | Agent *skills* plus **eval rubrics** for K-12 teacher workflows. The rubrics matter more than the skills: they are a published yardstick for "is this agent pedagogically acceptable", which almost nothing else in this space ships. 108 forks. |
 | **anki-mcp-server** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | 538 | unplaced — no location on the org profile or in the copyright line | MCP server exposing Anki (spaced repetition) to any MCP-speaking assistant. README gives **0.27.0**. This is the retention half of a tutoring stack: the agent teaches, Anki makes it stick, and the learner keeps the deck. |
@@ -357,9 +390,17 @@ header, a placeholder or an example.
 | 🆕 **Iris** (standalone *Pyris V2*) | [ls1intum/Iris](https://github.com/ls1intum/Iris) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2023 TUM Applied Software Engineering`, read at `main` (1 088 B) | — | 🟢 **EMEA (Germany)** — *stated*: TU München | **Fitness: dependency.** The **standalone** virtual tutor, separate from the `edutelligence` monorepo that shelf row 30 files. 🔴 **Named in a sentence on this page since `p533` as the proof of shelf rule 13 — and filed in no table row until now**, which is `Gap 535-E` landing on this file's own evidence. 🔴 **The `repo:`-qualified batch that measured the other nineteen addresses this pass dropped this one silently** — shelf rule 14 firing again, so its grant is read-only from `raw.githubusercontent.com` and its counter is left blank rather than guessed. |
 | 🆕 **TutorIA** | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Grupo Sirius`, read at `main` (1 068 B) | 🔴 **0** | 🟢 **LATAM** — *stated by the product*: *"educación superior rural"*, Spanish-language, Grupo Sirius | **Fitness: reference implementation.** *"Agente tutor virtual autónomo basado en IA para educación superior rural"* — an autonomous tutor agent aimed at **rural higher education**, pushed **2026-10-27**. 🟢 **The third LATAM-origin agent on this shelf, and the first built for the low-connectivity rural case** that [`../verticals/solutions.md`](../verticals/solutions.md) §6 says this sector assumes away. 🟡 Zero stars, zero forks: a signal and an architecture, not a dependency. |
 | 🆕 **brújula-educativa** | [startin-lab/brujula-educativa](https://github.com/startin-lab/brujula-educativa) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 startin-lab`, read at `main` (1 067 B) | 🔴 **0** | 🟢 **LATAM (Colombia)** — *stated by the product*: *"datos educativos abiertos de Colombia"* | **Fitness: reference implementation.** *"Agente público de consulta sobre datos educativos abiertos de Colombia."* Pushed 2026-09-21. 🟢 **The fourth LATAM-origin agent and the first anywhere on this shelf whose corpus is a national open-data portal rather than a curriculum document or a textbook** — the shape `P554`'s governance work implies and nothing here had built. 🔵 Pairs with [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) (MIT, 136★, filed on [`../repos/foundations.md`](../repos/foundations.md)) as Colombia-agent plus Chile-data: between them, two of the four LATAM systems whose ministry data a studio would actually query. |
+| 🆕 **assessment_agent** | [AIEd-Innovations/assessment_agent](https://github.com/AIEd-Innovations/assessment_agent) | 🟢 **Apache-2.0** — title block `Apache License · Version 2.0, January 2004`, read first-hand at `main` (**11 323 B**) | 🔴 **0** | ⚠️ unplaced — no country on the org profile and none in the copyright line | **Fitness: reference implementation.** Assessment-generation agent published by the `AIEd-Innovations` organisation; 1 fork, 8 open issues, pushed 2026-10-27. 🔵 **Promoted from the prose queue**, where it had been named in a sentence *on this page* since `p519` and filed in no table row on any page. 🔴 Its canonical owner spelling is **`AIEd-Innovations`**, not the `aied-innovations` the queue emits — see [§ the queue's case defect](#-the-promotion-queues-own-defect-it-lowercases-and-37--of-what-it-hands-you-is-mis-spelled). |
+| 🆕 **Autonomous-Exam-Proctoring-Grading-Agent** | [biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Prem Biswal`, read at **`master`** (1 067 B) | 🔴 **0** | ⚠️ unplaced — a personal-name copyright is not a country | **Fitness: reference implementation, and the only one on this shelf with no model vendor in the loop.** Self-described as *"a fully local, mathematics-driven AI exam system for autonomous proctoring, explainable cheating-risk prediction, automated grading and student performance analysis — **with no external AI APIs**"*. 🟢 **That last clause is the reason it is filed:** every other proctoring and grading candidate this base has met calls a hosted model, and a data-residency engagement (EU AI Act deployer, LGPD, a ministry tender) cannot. 🔴 **Zero stars, zero forks, pushed 2026-10-26** — read the code before proposing it; the claim is a README's, not a measurement of this base's. |
+| 🆕 **professor-agent** | [H1bertto/professor-agent](https://github.com/H1bertto/professor-agent) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Humberto Vieira`, read at `main` (1 071 B) | 🔴 **0** | ⚠️ unplaced — **and deliberately so**: the copyright name reads Lusophone, which is a name, not a location | **Fitness: reference implementation.** *"Local, open source study tutor with a 2D or 3D avatar on top of your apps."* Electron desktop overlay, voice in and out (speech-recognition + TTS), **VRM** avatar, bring-your-own model provider; topics name `language-learning`. 🔵 **The shelf's only desktop-overlay form factor** — every other tutor here is a web app, a CLI or an MCP server, and "sits on top of whatever the learner already has open" is a different product than "a place the learner goes". 11 open issues, pushed 2026-10-06. |
+| 🆕 **tutor-ai-agent** (*Manu*) | [Jeanikt/tutor-ai-agent](https://github.com/Jeanikt/tutor-ai-agent) | 🟡 **MIT** — and the title block carries **two** copyright lines: `Copyright (c) 2026 Jean Oliveira` **and** `Copyright (c) 2025 LiveKit, Inc.` (1 102 B, `main`) | 🔴 **0** | 🟢 **LATAM (Brazil)** — *stated by the product*: a math tutor **in Brazilian Portuguese** | **Fitness: reference implementation.** *"Manu: open-source voice AI math tutor in Brazilian Portuguese that adapts from 1st grade to university. TypeScript + LiveKit Agents."* 🔵 **The two-copyright title block is the finding, and it is a provenance signal this base can read without cloning:** the second line is upstream's, so this is a LiveKit agent-starter derivative and the engagement inherits LiveKit's runtime, not just this repo. 🟢 **The fifth LATAM-origin agent on the shelf and the first that is voice-first** — which matters for the region's low-bandwidth, shared-device deployments far more than it does in North America. |
+| 🆕 **moodler-mcp** | [GhaithAlHallak8/moodler-mcp](https://github.com/GhaithAlHallak8/moodler-mcp) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Ghaith AlHallak`, read at `main` (1 071 B) | **3** · 1 fork | ⚠️ unplaced — no country on the profile, in the grant or in the README | **Fitness: dependency.** *"Moodle LMS MCP server: talk to your Moodle in plain English."* Python, ships as a one-click **`.mcpb`** bundle for Claude Desktop / Claude Code / any MCP client; handles courses, assignments, deadlines, grades, feedback, file downloads, and — **for staff accounts** — participant lookup and student search. 🔴 **It reaches most of that by scraping, not by Moodle's web-services API** (the README's own examples: *"scrapes your user grade report"*, *"fetches the PDF through Moodle's resource redirect chain"*), and it states it is *"unofficial, independent … not affiliated with, endorsed by or sponsored by Moodle Pty Ltd"*. So it breaks when a theme changes — the `pronotepy` failure mode (`Trend 41`), now met inside the Moodle estate rather than against a closed national system. 🔵 **The address the prose queue held was `dymayo/moodler-mcp`, which is this repository's one fork**; the canonical upstream is filed here. |
+| 🆕 **gradeops** | [sonowalvaibhav/gradeops](https://github.com/sonowalvaibhav/gradeops) | 🟢 **MIT** — title block names **three** authors: `Copyright (c) 2026 Himanshu Kumar, Akhil Lavudya, and Vaibhav Sonowal` (1 106 B, `main`) | 🔴 **0** | ⚠️ unplaced | **Fitness: reference implementation.** *"An AI-powered, Human-in-the-Loop examination grading platform for handwritten answer evaluation, rubric-based assessment and academic integrity analysis."* 🟢 **Human-in-the-loop is in the project's own one-line description, not inferred from its docs** — the posture `P554` and the EU AI Act's Article 14 both require of a grading deployment, and the only shelf row that states it at the top. 🔴 Pushed 2026-08-30 and untouched since; zero stars, zero forks. |
+| 🆕 **student-discovery-agent** | [localis-ai/student-discovery-agent](https://github.com/localis-ai/student-discovery-agent) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Nguyễn Võ Thanh Duy`, read at `main` (1 078 B) | 🔴 **0** · 2 forks | 🟢 **APAC (Vietnam)** — *stated by the product*: *"career guidance chatbot for **Vietnamese high school students**"* | **Fitness: reference implementation — and the README says so itself.** *"IHRD Career Agent … **Agent features are under design**"*: FastAPI + Next.js + PostgreSQL + Redis scaffolding with the agent layer not yet built. 🔵 **Filed anyway, and the reason is regulatory rather than technical:** Vietnam is the one APAC jurisdiction whose draft AI law names **education** as a high-risk sector by itself (automated assessment, behavioural monitoring), and this base held **no Vietnamese-origin education repository at all**. A half-built scaffold from inside that jurisdiction is worth more to an APAC engagement than a finished tool from outside it. Pushed 2026-10-29. |
+| 🆕 **ai-agent-to-learn-faster-and-better** | [abhijeetgupta23/ai-agent-to-learn-faster-and-better](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Abhijeet Gupta`, read at `main` (1 070 B) | **4** | ⚠️ unplaced | **Fitness: reference implementation, and the most interesting row of the eight.** *"Adaptive tutoring agent that personalises lesson modality from a learning-science knowledge graph, with a **first-class eval harness**."* 🟢 **Two of its declared topics are the two things this base has repeatedly recorded as missing from education-agent supply: `eval-harness` and `prompt-injection`.** Nine passes of trending entries have said no OSS education agent ships its own evaluation; this one claims to, at 4★, and it was sitting in prose on [`../intel/trends.md`](../intel/trends.md) while those entries were being written. 🔴 **The claim is unverified** — the harness has not been run from here, and 12 open issues against 0 forks is an early project, not a validated one. 🔵 `Gap 537-B` is to run it. |
 
-**Licence split:** **32 × MIT, 10 × Apache-2.0, 1 × BSD-3-Clause** — all
-forty-three buildable, every cell read from the licence file's title block.
+**Licence split:** **39 × MIT, 11 × Apache-2.0, 1 × BSD-3-Clause** — all
+fifty-one buildable, every cell read from the licence file's title block.
 *Apache-2.0: DeepTutor, k12-teacher-skills, lineage-skill, ai-tutor-app,
 feedbacksystem, ai-shifu, get-it, Fiona, 🆕 SocialCoach, 🆕 agent-skills
 (Learning Commons). BSD-3-Clause: Open TutorAI CE.*
@@ -390,6 +431,56 @@ since `p277`, covers this file, and — tested by reintroducing the defect on
 purpose — fails on it by name (`BLANK-SPLITS-TABLE`). It shipped for a pass
 because **nobody ran it**. See `Gap 534-D`, registered and closed by retraction
 inside this pass.
+
+## 🔴 The promotion queue's own defect: it lowercases, and 37 % of what it hands you is mis-spelled
+
+`p536` built the prose-address ledger and called its output a promotion queue.
+`p537` is the first pass to promote from it in bulk, and the first to measure what
+the queue says against what GitHub serves. 🔴 **Of nineteen queued addresses
+resolved through the repository-search channel, seven are not spelled the way the
+queue spells them:**
+
+| Queue says (lower-cased) | Canonical, as served | What it is |
+|---|---|---|
+| `aied-innovations/assessment_agent` | [`AIEd-Innovations/assessment_agent`](https://github.com/AIEd-Innovations/assessment_agent) | org camel-case |
+| `biswal-prem-5677/autonomous-exam-proctoring-grading-agent` | [`biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | repo title-case |
+| `h1bertto/professor-agent` | [`H1bertto/professor-agent`](https://github.com/H1bertto/professor-agent) | owner initial cap |
+| `jeanikt/tutor-ai-agent` | [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) | owner initial cap |
+| `brownplt/ltltutor` | [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | repo acronym case |
+| `schlaflied/plot-ark` | [`Schlaflied/Plot-Ark`](https://github.com/Schlaflied/Plot-Ark) | owner **and** repo |
+| `ed-fi-alliance-oss/ed-fi-adminapp` | [`Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp) | owner **and** repo |
+
+🔴 **A second batch, measured after the table above was written, raises the
+rate.** Ten more queued addresses went through the same channel and **six** differ:
+`mcp-brasil/mcp-brasil` is **`Mcp-Brasil/mcp-brasil`**; `open-source-eudec/udecursos-bot`
+is **`Open-Source-eUdeC/UdeCursos-bot`**; `keule0010/webuntisapi` is
+**`Keule0010/WebUntisAPI`**; `suiram1701/webuntisapi.client` is
+**`Suiram1701/WebUntisAPI.Client`**; `ironcountyschooldistrict/powerschool-alchemy` is
+**`IronCountySchoolDistrict/powerschool-alchemy`**; `foerbsnavi/notenberechner` is
+**`foerbsnavi/Notenberechner`**. 🔴 **Total: 13 of 29 measured — 45 %.** The
+section heading's 37 % is the first batch's rate and is left standing as the figure that
+was measured first; **45 % is the pass's number.**
+
+🔵 **Why this matters more than a cosmetic diff.** This base runs
+`gate-alias-canonical` and `gate-case-collision` precisely because an address that
+differs only by case is a *different string* to every instrument here and the *same
+repository* to GitHub. A queue that normalises case is correct as a **recall**
+instrument — it must match `Kolibri` to `kolibri` to score a mention — and wrong as
+a **promotion** instrument, because what it hands you is the key, not the address.
+🔴 Nine passes wrote these addresses into sentences in the lower-cased form and
+nothing objected, because the links work.
+
+🔴 **A second axis the queue has no column for: upstream state.** Two queued
+`jupyterhub/*` addresses are **archived read-only upstream** —
+[`jupyterhub/jupyterhub-tutorial`](https://github.com/jupyterhub/jupyterhub-tutorial)
+(202★, archived) and [`jupyterhub/yarnspawner`](https://github.com/jupyterhub/yarnspawner)
+(19★, archived). Both are real, both are BSD-3-Clause, and neither is a foundation
+anyone should start from in 2026. They are filed on
+[`../repos/foundations.md`](../repos/foundations.md) **with the archived flag in the
+row**, which is the only honest way to carry them. 🟢 `Gap 537-A` is the
+remedy for both axes at once: the queue needs a canonical-spelling column and an
+`archived` column, and neither needs new network work — the channel that resolved
+all nineteen returns both fields.
 
 > 🟢 **`p532` adds four rows and not one of them is a discovery either — that is
 > now five consecutive passes.** All four came off

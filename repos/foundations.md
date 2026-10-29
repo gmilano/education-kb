@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Foundational Education Repos
 
-**Pass `p535` · 2026-10-29.** Load-bearing systems an education engagement is
+**Pass `p537` · 2026-10-29.** Load-bearing systems an education engagement is
 likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms, standards and
 toolkits the agents must live beside.
@@ -566,3 +566,81 @@ code belongs.**
   lineage-skill, Educhain) — see [`../agents/top.md`](../agents/top.md). Moodle's
   Perth origin is historical and its governance is now global.
 - **No LATAM-origin platform beyond i-educar and RosarioSIS's localisation.**
+
+## 🆕 Gulf-origin supply — `Gap 536-D` answered, and the hole is a **grant** hole (`p537`)
+
+`Gap 536-D` registered this base's largest adoption-to-supply gap: `p535` measured the
+**UAE at ~75 % of teachers using AI in their work** — the highest figure in the whole
+TALIS set this base holds — against **zero Gulf-origin repositories** in any curated
+table. The gap prescribed `org:` and region-qualified search against named Gulf
+institutions (KAUST, KFUPM, Khalifa, NYU Abu Dhabi, MBZUAI). 🟢 **It was run, it
+returned supply, and the supply inverts the gap's premise.**
+
+🔴 **The Gulf is not short of published education repositories. It is short of
+ones a studio may build a product on.** Every grant below was read first-hand at the
+resolved default branch.
+
+| Address | Stars | Licence — read first-hand | Origin | Pushed | What it is |
+|---|---|---|---|---|---|
+| [`KAUST-Academy/Artificial-Intelligence-Courses`](https://github.com/KAUST-Academy/Artificial-Intelligence-Courses) | **443** · 88 forks | 🔴 **GPL-3.0** — `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007`, **35 128 B** at `main` | 🟢 **EMEA (Saudi Arabia — KAUST Academy)** | 2026-10-22 | **The largest Gulf-origin education asset this base has found.** Jupyter-notebook AI curriculum, ~3.2 GB of tree. Taught with King Khalid University; the org's teaching line, not a research dump. 🔴 **GPL-3.0 on courseware is the hard case**: the grant binds derivative *teaching materials*, so a client-branded fork of this curriculum is a GPL-3.0 distribution |
+| [`KAUST-Academy/2025_Artificial-Intelligence-Summer`](https://github.com/KAUST-Academy/2025_Artificial-Intelligence-Summer) | **279** | 🔴 **GPL-3.0** — 35 128 B at `main` | 🟢 **EMEA (Saudi Arabia)** | 2025-09-10 | The 2025 summer-school edition. Same grant, no longer maintained |
+| [`KAUST-Academy/2026_Introduction_To_AI`](https://github.com/KAUST-Academy/2026_Introduction_To_AI) | **80** | 🔴 **GPL-3.0** — 35 128 B at `main` | 🟢 **EMEA (Saudi Arabia)** | 2026-01-16 | Current-year introductory track |
+| [`KAUST-Academy/2026_Advanced_AI`](https://github.com/KAUST-Academy/2026_Advanced_AI) | **57** | 🔴 **GPL-3.0** — 35 128 B at `main` | 🟢 **EMEA (Saudi Arabia)** | 2026-02-07 | Current-year advanced track |
+| [`KAUST-Academy/2026_KASP_Summer_School`](https://github.com/KAUST-Academy/2026_KASP_Summer_School) | 24 | ⛔ **No grant at 21 probed paths** on the resolved default branch | 🟢 **EMEA (Saudi Arabia)** | 2026-08-20 | Live, current, and **unusable** — absence of a grant is not permission |
+| [`KAUST-Academy/weekly-ai-brief`](https://github.com/KAUST-Academy/weekly-ai-brief) | 18 | ⛔ **No grant at 21 probed paths** | 🟢 **EMEA (Saudi Arabia)** | 2026-10-27 | An automated weekly AI report, mailed on a schedule. 🔵 Interesting as a *pattern* (an institution running agentic content ops), unusable as a *dependency* |
+| [`KAUST-Academy/2025_Advanced-Ai`](https://github.com/KAUST-Academy/2025_Advanced-Ai) | 47 | ⛔ **No grant at 21 probed paths** | 🟢 **EMEA (Saudi Arabia)** | 2025-03-13 | Prior-year advanced track, ungranted |
+| [`mbzuai-oryx/groundingLMM`](https://github.com/mbzuai-oryx/groundingLMM) | **969** | 🟢 **Apache-2.0** — 11 356 B at `main` | 🟢 **EMEA (UAE — MBZUAI, Oryx lab)** | 2026-09-05 | **The one permissive Gulf asset of real size here.** GLaMM, a grounded large multimodal model (CVPR 2024). Not education-built — it is the *capability* layer a diagram-grading or worked-example tutor would sit on |
+| [`mbzuai-oryx/OpenEarthAgent`](https://github.com/mbzuai-oryx/OpenEarthAgent) | **131** | ⛔ **No grant at 21 probed paths** | 🟢 **EMEA (UAE — MBZUAI)** | 2026-10-26 | ECCV 2026 tool-augmented geospatial agent framework. Pushed three days before this read and still ungranted |
+
+🔴 **The measured shape, and it is the finding `536-D` was really asking for.**
+Across the two leading Gulf AI institutions' public output, education-relevant supply is
+**courseware under GPL-3.0** or **research code under no grant at all**. Of the nine rows
+above, **one** (`groundingLMM`) carries a permissive grant, and it is not an education
+project. 🔵 **So the Gulf engagement does not look like the LATAM or EMEA ones on
+these pages.** There is no permissive vertical platform to fork and no MIT agent to
+compose. What exists is:
+
+1. **Curriculum under copyleft** — integrate and attribute, or license separately from
+   the institution; do not fork into a client-branded product. This is the `Moodle` posture
+   applied to *content* rather than code, and `Trend 41`'s adapter inversion applied to
+   a syllabus.
+2. **A capability model under Apache-2.0** — `groundingLMM` is buildable, and it is the
+   only thing here that is.
+3. **A grant-hygiene gap wide enough to be a service line.** Four of nine Gulf
+   repositories, including two pushed within the last ten weeks, serve no licence at any
+   probed path. 🟢 An institution that wants its work adopted and has not noticed
+   this is a conversation, not a blocker.
+
+🔵 **Declared gap, stated rather than left silent.** `Khalifa University`,
+`KFUPM` and `NYU Abu Dhabi` were in `536-D`'s named list and returned **no
+education-relevant repository** through the channels run here. A separate full-text leg
+for Arabic-language education tooling returned **noise only** — twenty hits, of which the
+single Arabic-specific one,
+[`h9-tec/Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) (**258★**),
+is a link list serving **no grant at 21 probed paths**, and is not Gulf-origin. 🔴
+**There is no Arabic-language intelligent-tutoring repository on this base and this pass
+did not find one.** That is an informed gap, not coverage.
+
+## 🆕 Nine platform rows promoted off the prose queue — and two are archived upstream (`p537`)
+
+Every row below was named in a *sentence* on a curated page and filed in **no** table
+row on any of them. Grants read first-hand at the resolved default branch; stars, forks
+and the **archived** flag from the repository-search channel.
+
+| Address | Stars | Licence — read first-hand | Upstream state | What it is |
+|---|---|---|---|---|
+| [`jupyterhub/jupyterhub-tutorial`](https://github.com/jupyterhub/jupyterhub-tutorial) | **202** · 56 forks | 🟢 **BSD-3-Clause** — `BSD 3-Clause License · Copyright (c) 2017, Project Jupyter Contributors`, 1 527 B at **`master`** | 🔴 **ARCHIVED, read-only** | Deployment tutorial for JupyterHub. 🔴 **Do not start here in 2026** — it is filed so the next pass stops re-finding it, and the archived flag is the row's point |
+| [`jupyterhub/yarnspawner`](https://github.com/jupyterhub/yarnspawner) | 19 · 14 forks | 🟢 **BSD-3-Clause** — `Copyright (c) 2018, Jim Crist`, 1 491 B at **`master`** | 🔴 **ARCHIVED, read-only** | Spawns single-user notebook servers into Hadoop/YARN containers. Dead, and only relevant to an on-prem Hadoop estate |
+| [`jupyterhub/kerberosauthenticator`](https://github.com/jupyterhub/kerberosauthenticator) | 12 · 8 forks | 🟢 **BSD-3-Clause** — `Copyright (c) 2019, Jim Crist`, 1 491 B at `main` | 🟢 Live (pushed 2026-08-01) | Kerberos auth for JupyterHub. 🔵 **The row that earns its place in this trio**: Kerberos is what a university IT department actually runs, and this is the supported bridge to it |
+| [`classroom-resources/autograding-python-grader`](https://github.com/classroom-resources/autograding-python-grader) | 11 · 14 forks | 🟢 **MIT** — `Copyright (c) 2023 GitHub`, 1 062 B at `main` | 🟢 Live | GitHub Classroom's Python autograder action. 🟢 **North America origin (GitHub), and vendor-maintained** — the cheapest credible grading substrate for a CS course, with no model call in it at all |
+| [`classroom-resources/autograding-io-grader`](https://github.com/classroom-resources/autograding-io-grader) | 7 · 8 forks | 🟢 **MIT** — `Copyright (c) 2023 GitHub`, 1 062 B at `main` | 🟢 Live | Its stdin/stdout sibling: language-agnostic I/O grading |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp) | 🔴 **0** · 5 forks | 🟢 **Apache-2.0** — 11 356 B at `main` | 🟢 Live (pushed 2026-10-28) | Administrator UI for Ed-Fi Technology Suite deployments. 🟢 **North America (Ed-Fi Alliance)** — zero stars and actively developed on the same day it was read, which is what vendor-internal tooling looks like. Completes the Ed-Fi row set beside `Fiona` on the agent shelf |
+| [`brownplt/LTLTutor`](https://github.com/brownplt/LTLTutor) | 12 | 🔴 **GPL-3.0** — `GNU GENERAL PUBLIC LICENSE Version 3`, **35 148 B** at `LICENSE.txt`, `main` | 🟢 Live (2026-07-28) | Misconception-based tutor for Linear Temporal Logic, from Brown University's PLT group. 🔵 **The research-grade exemplar of the only tutoring design this base rates**: it models *specific wrong beliefs*, not a generic mastery score. 🔴 GPL-3.0 — integrate, do not fork |
+| [`Schlaflied/Plot-Ark`](https://github.com/Schlaflied/Plot-Ark) | 13 | 🔴 **AGPL-3.0** — `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`, 34 522 B at **`master`** | 🟢 Live (2026-09-12) | *"Evidence-driven curriculum operations: turn learning signals into reviewable course changes, then track outcomes over time with knowledge graphs and long-term memory."* Moodle + xAPI + LightRAG + human-in-the-loop. 🔴 **AGPL-3.0 §13 — a hosted SaaS built on this owes source to its users** |
+| [`avps82/mentar`](https://github.com/avps82/mentar) | 🔴 **0** | 🔴 **AGPL-3.0** — 34 522 B at `main` | 🟢 Live (2026-10-01) | *"OSS-first, local-first AI tutor for children — supplements school, never replaces it. No cloud, no accounts, no child data leaving the device."* Ollama / llama.cpp, Bayesian knowledge tracing. 🔵 **The child-data posture is the asset**, and it is the one an EU AI Act deployer or a COPPA-exposed district can actually defend. 🔴 Zero stars; AGPL-3.0 rules out a hosted product |
+
+🔵 **The pattern across all nine, and it is why this section is not padding:** the
+queue's residue is not junk — seven of nine are live and six carry a grant this base can
+act on — but **two of nine were archived upstream and no instrument here would have said
+so**. A promotion queue without an `archived` column promotes dead projects as
+foundations. `Gap 537-A`.

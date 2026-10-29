@@ -1,0 +1,40 @@
+address	live	default_branch	grant_path	bytes	title_block
+aied-innovations/assessment_agent	YES	main	LICENSE	11323	Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ 
+biswal-prem-5677/autonomous-exam-proctoring-grading-agent	YES	master	LICENSE	1067	MIT License Copyright (c) 2026 Prem Biswal Permission is hereby granted, free of charge, to any person obtaini
+h1bertto/professor-agent	YES	main	LICENSE	1071	MIT License Copyright (c) 2026 Humberto Vieira Permission is hereby granted, free of charge, to any person obt
+jeanikt/tutor-ai-agent	YES	main	LICENSE	1102	MIT License Copyright (c) 2026 Jean Oliveira Copyright (c) 2025 LiveKit, Inc. 
+kvnloo/tutor-mcp	YES	main	LICENSE	1072	MIT License Copyright (c) 2026 Arnaud Guiovanna Permission is hereby granted, free of charge, to any person ob
+dymayo/moodler-mcp	YES	main	LICENSE	1071	MIT License Copyright (c) 2026 Ghaith AlHallak Permission is hereby granted, free of charge, to any person obt
+sonowalvaibhav/gradeops	YES	main	LICENSE	1106	MIT License Copyright (c) 2026 Himanshu Kumar, Akhil Lavudya, and Vaibhav Sonowal Permission is hereby granted
+localis-ai/student-discovery-agent	YES	main	LICENSE	1078	MIT License Copyright (c) 2026 Nguyễn Võ Thanh Duy Permission is hereby granted, free of charge, to any per
+abhijeetgupta23/ai-agent-to-learn-faster-and-better	YES	main	LICENSE	1070	MIT License Copyright (c) 2026 Abhijeet Gupta Permission is hereby granted, free of charge, to any person obta
+jupyterhub/kerberosauthenticator	YES	main	LICENSE	1491	Copyright (c) 2019, Jim Crist All rights reserved. Redistribution and use in source and binary forms, with or 
+jupyterhub/yarnspawner	YES	master	LICENSE	1491	Copyright (c) 2018, Jim Crist All rights reserved. Redistribution and use in source and binary forms, with or 
+jupyterhub/jupyterhub-tutorial	YES	master	LICENSE	1527	BSD 3-Clause License Copyright (c) 2017, Project Jupyter Contributors All rights reserved. 
+brownplt/ltltutor	YES	main	LICENSE.txt	35148	GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://
+avps82/mentar	YES	main	LICENSE	34522	GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc
+schlaflied/plot-ark	YES	master	LICENSE	34522	GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007 Copyright (C) 2007 Free Software Foundation, Inc
+classroom-resources/autograding-python-grader	YES	main	LICENSE.md	1062	MIT License Copyright (c) 2023 GitHub Permission is hereby granted, free of charge, to any person obtaining a 
+classroom-resources/autograding-io-grader	YES	main	LICENSE.md	1062	MIT License Copyright (c) 2023 GitHub Permission is hereby granted, free of charge, to any person obtaining a 
+ed-fi-alliance-oss/ed-fi-adminapp	YES	main	LICENSE	11356	Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ 
+gabotachak/sia-unal-bridge	YES	main	LICENSE	1084	MIT License Copyright (c) 2026 Gabriel Andres Anzola Tachak Permission is hereby granted, free of charge, to a
+ramomar/siase-schedule-scraper	YES	master	LICENSE	1076	The MIT License (MIT) Copyright (c) 2015 Omar Garza Permission is hereby granted, free of charge, to any perso
+roncuevas/ipn_saes_utils	YES	main	LICENSE	1079	MIT License Copyright (c) 2026 Aarón Martínez Cuevas Permission is hereby granted, free of charge, to any pe
+django-by-kelsoncm/django-auth-suap	YES	main	LICENSE.md	1064	MIT License Copyright (c) 2026 kelsoncm Permission is hereby granted, free of charge, to any person obtaining 
+open-source-eudec/udecursos-bot	YES	main	LICENSE	1073	MIT License Copyright (c) 2021 Open Source eUdeC Permission is hereby granted, free of charge, to any person o
+mcp-brasil/mcp-brasil	YES	main	LICENSE	1071	MIT License Copyright (c) 2025-2026 MCP Brasil Permission is hereby granted, free of charge, to any person obt
+bncc-dev/bncc-pacotes	YES	main	LICENSE	1298	# Licenças Este repositório usa duas licenças, porque contém duas coisas de natureza diferente. Mesmo mode
+keule0010/webuntisapi	YES	main	LICENSE	1063	MIT License Copyright (c) 2022 Keule22 Permission is hereby granted, free of charge, to any person obtaining a
+suiram1701/webuntisapi.client	YES	master	LICENSE.txt	1066	MIT License Copyright (c) 2023 Suiram1701 Permission is hereby granted, free of charge, to any person obtainin
+egore4606/schulmanager-calendar-sync	YES	main	LICENSE	1065	MIT License Copyright (c) 2026 egore4606 Permission is hereby granted, free of charge, to any person obtaining
+foerbsnavi/notenberechner	YES	main	LICENSE	1068	MIT License Copyright (c) 2026 Fabian Brose Permission is hereby granted, free of charge, to any person obtain
+ironcountyschooldistrict/powerschool-alchemy	YES	master	LICENSE	1056	MIT License Copyright (c) 2017 Permission is hereby granted, free of charge, to any person obtaining a copy 
+xmarcosx/edfi-via-kubernetes	YES	master	LICENSE	11356	Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ 
+KAUST-Academy/Artificial-Intelligence-Courses	YES	main	LICENSE	35128	GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://
+KAUST-Academy/2026_Introduction_To_AI	YES	main	LICENSE	35128	GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://
+KAUST-Academy/2026_Advanced_AI	YES	main	LICENSE	35128	GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 Copyright (C) 2007 Free Software Foundation, Inc. <https://
+KAUST-Academy/2026_KASP_Summer_School	YES	main	-	0	NO-GRANT-AT-21-PROBED-PATHS
+KAUST-Academy/weekly-ai-brief	YES	main	-	0	NO-GRANT-AT-21-PROBED-PATHS
+mbzuai-oryx/groundingLMM	YES	main	LICENSE	11356	Apache License Version 2.0, January 2004 http://www.apache.org/licenses/ 
+mbzuai-oryx/OpenEarthAgent	YES	main	-	0	NO-GRANT-AT-21-PROBED-PATHS
+h9-tec/Awesome_Arabic_NLP	YES	main	-	0	NO-GRANT-AT-21-PROBED-PATHS

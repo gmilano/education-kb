@@ -146,7 +146,8 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-action-answered gate-commit-gate gate-case-collision \
              gate-conjunctive-grant gate-branch-alias \
              gate-promotion gate-recency gate-promotion-ledger \
-             gate-grant-presence gate-cell-reproduction
+             gate-grant-presence gate-cell-reproduction \
+             gate-promotion-ratchet
 
 # ---------------------------------------------------------------- p427
 # 🟢 p427: A GRANT MAY CARRY TWO FAMILIES CONJUNCTIVELY, AND THIS BASE HAD NO SCOPE FOR
@@ -1430,6 +1431,12 @@ gate-promotion-ledger: ## p436 — Gap 435-B: a promotion CLAIM and the shelf RO
 # `Gap 438-B` prescribed for `gate-census-union`.  `needs_a_human()` IS NOT TOUCHED by this
 # pass: it moves rows across a boundary committed suites assert against, and that is priced
 # in `Gap 439-A` rather than taken here.
+gate-promotion-ratchet: ## p537 — Gap 536-A: the prose ledger's FILED count may not fall between passes
+	@$(PY) -I ingest/promotion-ratchet.py || exit 1
+
+promotion-ratchet-update: ## p537 — record the current tree as the new ratchet baseline (authored act, never automatic)
+	@$(PY) -I ingest/promotion-ratchet.py --update --pass "$(PASS)"
+
 gate-grant-presence: ## p439 — Gap 439-A: P1065 (a pointer is not a grant) carried from the CC-content path to the CODE-licence path, where the verdicts are written
 	@cd compose/code/p439-grant-presence && { $(PY) -I test_grant_presence.py > $(GRANTPRES_LOG) 2>&1 || { echo "🔴 p439-grant-presence FAILED — its own report follows:" ; sed "s/^/   /" $(GRANTPRES_LOG) ; false ; } ; } && echo "── p439-grant-presence (87 controls: the live Vercel-held 552 B notice, the FULL Apache-2.0 negative that carries all three reference markers, the curly-quote false positive on a complete MIT grant, the liability-cap clause, TRUNCATED vs BY-REFERENCE, UNCALIBRATED as a third answer, the dead-marker control, the P541 refusals, p440's GPL-family group: stock GPL-3.0 read as AGPL is NOT a grant, a complete GPL-2.0 fails the 3.0 profile, the version resolver refuses two declarations and LGPL declines by design, and p441's BSD variant group: a complete BSD-2 is not condemned for lacking an endorsement clause, a BSD-3 truncated AT that clause is TRUNCATED while the same payload UNTITLED declines rather than passing, four of this base's eleven published BSD payloads carry no title at all, and BSD-0/BSD-4 are recognised and unprofiled)" && echo "   PASS" || exit 1
 

@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Compose Patterns — Education
 
-**Pass `p535` · 2026-10-29.** **Twenty-four** recipes. Every component named below
+**Pass `p537` · 2026-10-29.** **Twenty-six** recipes. Every component named below
 was read from its repository page, and **every licence was read from the licence
 file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
 this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
@@ -1069,6 +1069,96 @@ artefacts** — read the architecture, do not take the dependency. And this patt
 step 1 is a data-engineering engagement in its own right and should be priced as one.
 
 ---
+
+
+## 🆕 P574 — The Gulf engagement, where there is nothing to fork (EMEA — Saudi Arabia, UAE)
+
+**The problem this solves.** `Gap 536-D` and `Trend 25`: the Gulf has the highest
+teacher-adoption figure on this base (**UAE ~75 %**) and, across its two leading AI
+institutions, **one permissively licensed repository in nine**. Every other recipe here
+starts by forking a platform. 🔴 **In the Gulf there is no platform to fork**, so a
+recipe that assumes one produces a proposal the client cannot accept.
+
+**Components, each grant read first-hand at the resolved default branch:**
+
+| Role | Component | Grant | How it is used — and the constraint |
+|---|---|---|---|
+| Capability model | [`mbzuai-oryx/groundingLMM`](https://github.com/mbzuai-oryx/groundingLMM) | 🟢 **Apache-2.0** (11 356 B) | **The only buildable Gulf-origin asset.** GLaMM grounds language to *regions of an image*, so it is the layer for marking diagrams, geometry and handwritten working — build on it freely, including commercially |
+| Curriculum | [`KAUST-Academy/Artificial-Intelligence-Courses`](https://github.com/KAUST-Academy/Artificial-Intelligence-Courses) · [`2026_Introduction_To_AI`](https://github.com/KAUST-Academy/2026_Introduction_To_AI) · [`2026_Advanced_AI`](https://github.com/KAUST-Academy/2026_Advanced_AI) | 🔴 **GPL-3.0** (35 128 B each) | 🔴 **Integrate and attribute; never fork into a client-branded product.** A derivative of GPL-3.0 courseware distributed to a client's learners is a GPL-3.0 distribution. Two lawful routes: deliver it **unmodified with attribution** alongside your own materials, or **negotiate a separate licence with KAUST Academy** |
+| Tutor runtime | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT**, 59★ | BKT mastery model over MCP — the pedagogy layer, carried in from outside the region because the region ships none |
+| Local inference | [`avps82/mentar`](https://github.com/avps82/mentar) — **pattern only** | 🔴 **AGPL-3.0** | 🔴 **Read its Ollama / llama.cpp wiring as a reference and write your own.** AGPL-3.0 §13 makes a hosted product owe source to its users; do not vendor it |
+| Compliance record | [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli) | 🟢 **Apache-2.0**, 552★ | Emit an SBOM per delivery. **Mandatory here**, because the copyleft and the permissive components sit in one tree and the boundary is the deliverable |
+
+**Wiring, in order:**
+
+1. **Draw the licence boundary before writing code.** Two artefacts, two grants:
+   `product/` (your code + `groundingLMM` + `tutor-mcp`, all permissive) and
+   `curriculum/` (KAUST material, GPL-3.0, unmodified, attributed). 🔴 They ship
+   as separate deliverables with separate notices — the moment GPL-3.0 content is
+   *built into* the product tree, the product is GPL-3.0.
+2. **Stand up the tutor loop** with `tutor-mcp` as the MCP server and the client's own
+   model provider; mastery state stays on the client's infrastructure.
+3. **Add visual marking** by serving `groundingLMM` behind one internal endpoint for
+   diagram and worked-answer feedback. Apache-2.0, so this is the only layer you may
+   freely modify and re-licence.
+4. **Mount the curriculum read-only** and have the agent *cite* it rather than
+   reproduce it — citation is not derivation, and it keeps step 1's boundary intact.
+5. **Emit the SBOM** with `cyclonedx-cli` and attach the GPL-3.0 notice set.
+6. **Bill the licence review as a line item.** 🟢 Four of the nine Gulf
+   repositories measured serve **no grant at any of 21 probed paths**, two of them
+   pushed within ten weeks of this read. An institution that wants its work adopted and
+   has not noticed this is a conversation — and offering to fix it upstream is the
+   cheapest goodwill available in the region.
+
+🔵 **What this recipe deliberately does not do:** promise a forkable Gulf
+platform, or treat `groundingLMM` as an education product. 🔴 **And it does not
+pretend the curriculum problem is technical.** It is a licensing negotiation, and it
+should be opened in week one, not discovered at delivery.
+
+## 🆕 P575 — The adapter fleet: one agent, thirteen systems of record it does not control (LATAM, EMEA, North America)
+
+**The problem this solves.** `Trend 41` established the adapter inversion — against a
+closed national system, the engagement is *adapter plus agent layer*, not platform
+customisation. `p537` filed **thirteen** such adapters, each permissive, each reaching a
+named system of record. 🔴 **Every one of them is also a single-author maintenance
+liability**, and a recipe that mounts them without saying so hands the client a fleet of
+silent dependencies.
+
+**The fleet, as filed on [`../intel/market.md`](../intel/market.md):**
+
+| Region | System of record | Adapter | Grant | Risk to price in |
+|---|---|---|---|---|
+| **LATAM** (Brazil) | 70 Brazilian public-sector APIs | [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) | 🟢 MIT, **1 840★ / 287 forks** | 🟢 **Low** — the only adapter here with a real contributor base |
+| **LATAM** (Brazil) | BNCC national curriculum | [`bncc-dev/bncc-pacotes`](https://github.com/bncc-dev/bncc-pacotes) | 🟡 **Split grant** — code and dataset licensed separately | 🔴 Read **both** notices; `Gap 536-B`'s fourth instance |
+| **LATAM** (Brazil) | SUAP (IFRN) | [`django-by-kelsoncm/django-auth-suap`](https://github.com/django-by-kelsoncm/django-auth-suap) | 🟢 MIT | 🔴 Single author, 0★, 0 forks |
+| **LATAM** (Mexico) | SIASE (UANL) · SAES (IPN) | [`ramomar/siase-schedule-scraper`](https://github.com/ramomar/siase-schedule-scraper) · [`roncuevas/ipn_saes_utils`](https://github.com/roncuevas/ipn_saes_utils) | 🟢 MIT | 🔴 Scrapers — they break when the portal's markup moves |
+| **LATAM** (Colombia) | SIA (U. Nacional) | [`gabotachak/sia-unal-bridge`](https://github.com/gabotachak/sia-unal-bridge) | 🟢 MIT | 🟡 Live, 1★ — wraps Oracle ADF as JSON |
+| **LATAM** (Chile) | U. de Concepción courses | [`Open-Source-eUdeC/UdeCursos-bot`](https://github.com/Open-Source-eUdeC/UdeCursos-bot) | 🟢 MIT | 🟡 Quiet since 2025-08 |
+| **EMEA** (DE/AT/CH) | WebUntis | [`Keule0010/WebUntisAPI`](https://github.com/Keule0010/WebUntisAPI) (Java) · [`Suiram1701/WebUntisAPI.Client`](https://github.com/Suiram1701/WebUntisAPI.Client) (.NET) | 🟢 MIT | 🔴 Both **unofficial**; the vendor rate limit is real (≤1 800/h, permanent blocking as the penalty) |
+| **EMEA** (Germany) | Schulmanager Online | [`egore4606/schulmanager-calendar-sync`](https://github.com/egore4606/schulmanager-calendar-sync) | 🟢 MIT | 🟡 Live, self-hosted, 1★ |
+| **North America** | PowerSchool · Ed-Fi | [`IronCountySchoolDistrict/powerschool-alchemy`](https://github.com/IronCountySchoolDistrict/powerschool-alchemy) · [`xmarcosx/edfi-via-kubernetes`](https://github.com/xmarcosx/edfi-via-kubernetes) · [`Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp) | 🟢 MIT · Apache-2.0 · Apache-2.0 | 🔴 The first two are **stale** (2024-02, 2022-05); `Ed-Fi-AdminApp` is vendor-maintained and current |
+
+**Wiring:**
+
+1. **One MCP boundary, many adapters behind it.** Expose a single tool surface to the
+   agent — `list_courses`, `get_timetable`, `get_grades` — and implement it per region.
+   🔵 The agent must not know whether it is talking to SIASE or WebUntis; that is
+   what makes the fleet a fleet rather than thirteen integrations.
+2. **Pin and vendor every adapter at a read commit**, because eight of the thirteen have
+   a single author and three have zero forks. 🔴 Treat each as **code you now
+   maintain**, not a dependency you track.
+3. **Put a contract test per adapter in CI** that runs against a recorded fixture, so a
+   portal markup change surfaces as a red test and not as a silent wrong answer in front
+   of a learner.
+4. **Honour the documented rate limits** — WebUntis is the measured case (≤1 800/h,
+   hard ceiling 3 600/h, **permanent blocking** as the penalty), so throttle centrally at
+   the MCP boundary, never per adapter.
+5. **Emit the SBOM** ([`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli),
+   Apache-2.0) and read `bncc-pacotes`' **two** notices separately.
+6. **Price the maintenance, not the integration.** 🟢 The build is days per
+   adapter; the liability is years. This is the honest shape of the quote, and the reason
+   `Mcp-Brasil/mcp-brasil` (287 forks) is worth more than its star count suggests — it
+   is the one adapter the client will not be maintaining alone.
 
 ## Pattern selection
 

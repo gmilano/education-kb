@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p535` · 2026-10-29.** Every platform below is a real, running system that
+**Pass `p537` · 2026-10-29.** Every platform below is a real, running system that
 institutions already operate, with its licence read from **the licence file's own
 title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
 carried for two passes — "`github.com` returns HTTP 403 through the session
@@ -297,6 +297,34 @@ instrument, not more searching** — see `Gap 536-A`. 🔴 And the liveness colu
 `p534` added to §7 is doing exactly the work it was added for: two of these
 three rows are **stale**, and a table without that column would have published
 them as live.
+
+
+## 🆕 `p537` — §9, the region with no platform layer at all: the Gulf
+
+Every section above answers *"which running system does the client already operate, and
+may we build on it?"* 🔴 **For the Gulf, this pass measured the answer to be
+"none that this base can find, and none that is forkable."** `Gap 536-D` ran `org:` and
+institution-qualified search against KAUST, KFUPM, Khalifa, NYU Abu Dhabi and MBZUAI; the
+result is on [`../repos/foundations.md` § Gulf-origin supply](../repos/foundations.md#-gulf-origin-supply--gap-536-d-answered-and-the-hole-is-a-grant-hole-p537).
+
+| What the region publishes | Count | Fit as a **platform** to build on |
+|---|---|---|
+| 🔴 GPL-3.0 courseware (KAUST Academy) | 4 | ⛔ **Not a platform** — it is *content*, and copyleft content at that |
+| ⛔ Ungranted repositories | 4 | ⛔ **Unusable** — two were pushed within ten weeks of the read |
+| 🟢 Apache-2.0 capability model (`mbzuai-oryx/groundingLMM`, 969★) | 1 | 🟡 **A component, not a platform** — no LMS, no SIS, no records layer |
+
+🔵 **So the Gulf engagement attaches to the platforms in §§1–3 like anywhere
+else — Moodle, Open edX, Canvas — and the regional content is a licensing question
+rather than a technical one.** `P574` on [`../compose/patterns.md`](../compose/patterns.md)
+is the recipe; the operative constraint is that GPL-3.0 courseware may be **integrated
+and attributed, never forked into a client-branded product**.
+
+🔴 **Stated as a gap and not as coverage:** no Gulf national school system
+(UAE's `KHDA`, Saudi's `Madrasati`, or any ministry presence) was found publishing an
+open platform or an official client, and **no Arabic-language intelligent-tutoring
+repository exists on this base at all**. The closest asset the full-text leg returned,
+[`h9-tec/Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) (**258★**),
+is a link list serving **no grant at 21 probed paths** and is not Gulf-origin.
 
 ## The architecture this implies
 

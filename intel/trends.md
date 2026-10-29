@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p536` · 2026-10-29.** **Twenty-three** trends. Each one is stated so it could be
+**Pass `p537` · 2026-10-29.** **Twenty-six** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -810,6 +810,88 @@ systematically mis-grade the exact tooling an efficacy or evaluation engagement 
 class. 🟢 Remedy is **shelf rule 16**: read `DESCRIPTION`, `package.json`,
 `pyproject.toml`, `Cargo.toml` and `*.gemspec` before grading, resolve manifest-vs-payload
 conflicts to the payload, and record which channel answered.
+
+
+## 24. 🆕 A "trending" query in this sector measures an **aggregator**, not a field — and it bottoms out at 2★
+
+**Stated so it can be wrong:** *if the mandated `github trending {industry} AI {year}`
+leg were reaching GitHub's own trending signal, its results would be distributed like a
+trending list — a few large repositories and a tail of mid-size ones. If instead it is
+reaching machine-written digests, the tail will be absurd.*
+
+🔴 **It is absurd.** `p537` ran the leg and resolved every education repository it
+surfaced alongside DeepTutor:
+[`LeoLiu363/ai-video-understanding`](https://github.com/LeoLiu363/ai-video-understanding)
+**2★**, [`upstream1119/Traceable-Ideological-Education-RAG`](https://github.com/upstream1119/Traceable-Ideological-Education-RAG)
+**2★**, [`tanghua-git/skill-instructional-design`](https://github.com/tanghua-git/skill-instructional-design)
+**2★** — all three sourced from auto-generated *"AI Open Source Trends"* GitHub
+**issues** in bot repositories, not from `github.com/trending`.
+
+🔵 **Why this is a trend about the sector and not just about a query.** Education
+is a thin slice of AI open source, so general-purpose AI aggregators have almost nothing
+education-shaped to rank — and rather than return nothing they return their own
+distribution's floor. 🔴 **The practical consequence is a measurement error this
+base made nine times**: the leg's nil result was read as evidence that education agent
+supply is thin, when it is evidence about an aggregator. Supply this pass found in the
+base's own prose included [`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil)
+at **1 840★**.
+
+🟢 **Disconfirmed by:** a trending leg returning an unfiled education repository
+above, say, 200★. That has not happened in ten passes.
+
+## 25. 🆕 The Gulf inverts this sector's licence gradient: **highest adoption, least buildable supply**
+
+**Stated so it can be wrong:** *the usual pattern on this base is that adoption and
+permissive supply move together — North America and APAC are high on both, and the
+EMEA blank was a measurement gap rather than a real one. If that generalises, the Gulf's
+exceptional adoption should come with exceptional supply.*
+
+🔴 **It does not.** The region carrying the highest teacher-adoption figure this
+base holds (**UAE ~75 %**, `p535`) publishes, across its two leading AI institutions,
+nine education-relevant repositories of which **one** is permissively licensed:
+
+- 🔴 **4 × GPL-3.0** — KAUST Academy courseware, flagship at **443★ / 88 forks**
+- ⛔ **4 × no grant at 21 probed paths** — including two pushed within ten weeks of the read
+- 🟢 **1 × Apache-2.0** — [`mbzuai-oryx/groundingLMM`](https://github.com/mbzuai-oryx/groundingLMM)
+  (969★), and it is a capability model, not an education project
+
+🔵 **The mechanism, and it is what makes this a trend rather than a tally.** The
+Gulf's AI institutions are *universities publishing teaching and research output*, not
+vendors publishing products — and university output defaults to GPL-3.0 (courseware) or
+to no grant at all (paper code). A region whose AI capacity is built institution-first
+will therefore look adoption-rich and supply-poor **by construction**, and the inference
+"high adoption ⇒ forkable supply" fails exactly there.
+
+🟢 **Disconfirmed by:** a Gulf ministry or Gulf vendor publishing a permissively
+licensed education platform. None was found; `Khalifa University`, `KFUPM` and
+`NYU Abu Dhabi` returned nothing education-relevant.
+
+## 26. 🆕 The EU's education obligations have **split in time**, and the 16-month gap is the sequencing window
+
+**Stated so it can be wrong:** *"the EU AI Act applies to education from August 2026"
+is the claim a single-date reading produces. If the obligations have actually split, a
+deployer's near-term work and its 2027 work are different work.*
+
+🔴 **They have split.** Under the **Digital Omnibus, Regulation (EU) 2026/1744**:
+
+| Obligation | Status |
+|---|---|
+| Article 50 — chatbot / AI-interaction **transparency** | 🔴 **Live, on schedule, 2026-08-02** |
+| Annex III **high-risk** duties for stand-alone education systems (access, progression, assessment) | 🟡 **Deferred 2026-08-02 → 2027-12-02** |
+| **Emotion recognition** in schools | ⛔ **Banned since 2025-02** |
+| AI-literacy duty | 🟡 **Disputed across sources** — recorded as unresolved, not settled |
+
+🔵 **What follows for an engagement, and it is the opposite of "we have until
+2027".** Disclosure, logging and the deployer-vs-provider boundary are **due now** and
+are cheap; conformity assessment, risk management and human-oversight evidence for
+grading and admissions are **due 2027-12-02** and are expensive. 🟢 So the correct
+EMEA sequence is *transparency and record-keeping first, conformity work second* — and a
+studio that sells those as one 2027 programme has mispriced the near half.
+
+🔴 **The deployer/provider split is the part clients get wrong:** a school that
+licenses a platform is a **deployer**; the vendor is the **provider** and carries most
+design and conformity duties. A studio building *for* an institution may be making that
+institution a provider.
 
 ## Counter-signals worth holding
 
