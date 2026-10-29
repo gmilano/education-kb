@@ -6,9 +6,27 @@ updated: 2026-10-29
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p529` · 2026-10-29.** **Sixteen** real agents, every row read first-hand
-and — new this pass — **every row corroborated by a second, independent
-instrument**. No row is a header, a placeholder or an example.
+**Pass `p530` · 2026-10-29.** **Twenty-one** real agents, every row read
+first-hand and corroborated by a second, independent instrument. No row is a
+header, a placeholder or an example.
+
+> 🟢 **`p530`: five rows added, and not one of them is a discovery.** All five
+> came off [`../evidence/promotion-queue.2026-10-29-p530.tsv`](../evidence/promotion-queue.2026-10-29-p530.tsv)
+> — addresses this base had already described **five or more times** and never
+> filed. The index that made them findable is
+> [`../ingest/address-ledger.py`](../ingest/address-ledger.py), built this pass
+> to close `Gap 529-A`. 🔴 **[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor)
+> had been written up in 31 separate passes before it reached this file.**
+>
+> 🔴 **And the ledger's first run corrected something this file's neighbours
+> published one pass ago.** `p529` reported *"still no permissive SIS … zero
+> permissive"*. That was true of the four addresses its query returned and false
+> of the field: [`academico-sis/academico`](https://github.com/academico-sis/academico)
+> is **MIT**, **409★**, live, and has been in this base's history since `p108` —
+> invisible to `p529`'s query because it never calls itself a "student
+> information system" outside its topics. It is a platform, so it is filed on
+> [`../verticals/solutions.md`](../verticals/solutions.md); the measurement is on
+> [`trending.md`](trending.md) and the lesson is **shelf rule 12**.
 
 > 🟢 **`p529`: the verification ceiling lifted.** The **GitHub search API is
 > reachable this pass** through the session's MCP tooling (plain `curl` to
@@ -79,7 +97,7 @@ instrument**. No row is a header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 16 verified education agents
+## Shelf — 21 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -99,6 +117,11 @@ instrument**. No row is a header, a placeholder or an example.
 | **pedagogy-benchmark** | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | 13 | **EMEA origin + LATAM data** — *newly placed*, see note | Code for *"Benchmarking the Pedagogical Knowledge of Large Language Models"* — runs the **CDPK** (Cross-Domain Pedagogical Knowledge) and **SEND** (Special Educational Needs and Disabilities) benchmarks. Thirteen stars, no About line, and still the most useful repo here for a procurement conversation: it is how you answer *"which model actually knows how to teach"* rather than *"which model knows the subject"*. |
 | 🆕 **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** — title block `MIT License · Copyright (c) 2026 Arnaud Guiovanna`, **API agrees** | **57** | ⚠️ unplaced — no country on the profile or in the copyright line | *"An open-source MCP server that turns any LLM into an Intelligent Tutoring System. 50 years of cognitive science, MIT licensed."* **Go**, 9 forks, created 30 Mar 2026, pushed **28 Oct 2026**, site `tutor-mcp.dev`. Topics name **`bkt`** — Bayesian Knowledge Tracing. 🟢 **The row this shelf was missing:** `OATutor` is the only other row with a real mastery estimator and it is an entire ReactJS application; this is the same pedagogy delivered as **one MCP server any assistant can mount**. |
 | 🆕 **feedbacksystem** | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** — title block `Copyright 2021 Technische Hochschule Mittelhessen · Licensed under the Apache License, Version 2`. 🔴 **API said `NOASSERTION`** | 24 | 🟢 **EMEA (Germany)** — *stated* in the copyright line | "Intelligent, personalized feedback for students using artificial intelligence." TypeScript, 10 forks, branch `dev`, pushed **28 Oct 2026**, live service at `frits.mni.thm.de`. **244 open issues against 10 forks** reads as a running institutional system rather than a demo. 🔴 **The API alone would have thrown this row away** — it is the evidence for shelf rule 8. |
+| 🆕 **Study-Mate** | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT | **1 259** | APAC — *inferred* from a Chinese-language README, not stated | "Your AI study partner": sets a route through a subject, teaches the knowledge, then builds a project alongside the learner. JavaScript. 60 forks. 🔴 **Described in 29 passes of this base's history, from `p42`, before anything filed it.** |
+| 🆕 **Papermorph** | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | MIT | **1 015** | unplaced — no location stated | Turns books into animated, narrated, interactive web experiences. The only row on this shelf whose output is a *produced artefact* rather than a conversation, which makes it the natural front end for a content pipeline. 139 forks, pushed 2026-10-29. |
+| 🆕 **ai-shifu** | [ai-shifu/ai-shifu](https://github.com/ai-shifu/ai-shifu) | Apache-2.0 | 329 | APAC | "Get AI to teach and answer questions for you — just by typing." Script-driven teaching agent: an author writes the lesson flow, the agent delivers and answers inside it. Python. 127 forks, pushed 2026-10-29. |
+| 🆕 **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT | 156 | unplaced | Block-based adaptive learning workspace that **runs locally**: upload material, get notes, quizzes, flashcards and an adaptive tutor, across 10+ LLM providers. FastAPI + Next.js, with a knowledge graph. 🔴 **31 passes unfiled — the most-rediscovered address in this base.** |
+| 🆕 **open-learning-ai-tutor** | [mitodl/open-learning-ai-tutor](https://github.com/mitodl/open-learning-ai-tutor) | MIT | 1 | 🟢 **North America** (MIT Open Learning) | Backend for MIT Open Learning's student-facing tutor, deployed at `learn-ai.ol.mit.edu`, with a published pedagogical engine. 159 commits. 🔴 **Invisible to GitHub's repository search because it is a fork** — see shelf rule 10. Shelved on the institution and the deployment, not the star count. |
 
 **Licence split:** **9 × MIT, 4 × Apache-2.0, 1 × BSD-3-Clause** — all fourteen
 buildable, every cell read from the licence file's title block.
@@ -248,6 +271,15 @@ reads as first-hand and was not.
    validation sweep filed `MikaDerBre/moodlemcpconnector` as unresolvable because
    it fetched `README.md` and the repository ships **`readme.md`**. Try both
    casings before reading a 404 as absence.
+   🆕 **`p530` generalises this from two spellings to the class, because naming
+   the two spellings did not prevent the third.** `raw.githubusercontent.com` is
+   case-sensitive across the **whole filename, extension included**, and
+   [openedx/XBlock](https://github.com/openedx/XBlock) (**Apache-2.0**, 471★)
+   ships **`LICENSE.TXT`** where the probe carried `LICENSE.txt`. It resolved on
+   zero of five names and was one absent `NOTICE.txt` away from being filed
+   ungranted. 🟢 [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) now
+   *generates* upper/lower/title variants of every ASCII grant name — **53 → 159
+   names** — rather than listing spellings by hand.
 6. 🆕 **Read the dependency licences, not only the repository's.**
    [sonstellar969/open-moodle](https://github.com/sonstellar969/open-moodle) is
    **MIT** and its own page states that its PDF-extraction dependency
@@ -279,6 +311,39 @@ reads as first-hand and was not.
    Existence is disproved only by a direct fetch 404ing on the actual default
    branch. 🔵 This is rule 5's failure mode in reverse: the same credulity,
    aimed at a new channel instead of a search summary.
+   🟢 **`p530` found the cause, so this rule is now enforceable rather than
+   merely cautionary — see rule 10.**
+10. 🆕 **Every census query carries `fork:true`, or its denominator is
+   "non-forks only" and must say so.** `p530` tested rule 9's two recorded
+   absences and **both are forks**:
+   [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library)
+   (54★, IMS-certified LTI 1.3, **Apache-2.0** at `LICENSE.md`) and
+   [mitodl/open-learning-ai-tutor](https://github.com/mitodl/open-learning-ai-tutor)
+   (**MIT**, MIT Open Learning's deployed tutor). **GitHub's repository search
+   excludes forks by default**; adding `fork:true` returned both immediately with
+   full metadata. 🔴 **Consequence for work already published:** every API census
+   on this base — `p529`'s Moodle `total_count: 222` and its `stars:>40` SIS
+   field included — counted non-forks only. Those numbers are **floors**, and a
+   fork is not a lesser object.
+11. 🆕 **Resolve the default branch; never assume `main` or `master`.** Built
+   into [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) since `p517` and
+   **now measured**: of the **41 addresses verified at `p530`**, **6 — 15% —**
+   default to something else (`develop` ×3, `dev`, `mobile`). 🔴 The `mobile` one
+   is [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis),
+   the 648★ ceiling of this pass's SIS census.
+12. 🆕 **One query's `total_count` is a sample size, never a field.** `p530` ran
+   two reasonable queries over the same population —
+   `student information system school management in:name,description stars:>40`
+   and `topic:student-information-system stars:>40`. **Each returned exactly
+   four. Only two addresses overlapped**, and the field's one permissive member
+   ([academico-sis/academico](https://github.com/academico-sis/academico), MIT,
+   409★) was visible to the second only, because its name and description never
+   use the phrase. 🔴 **So the two queries disagreed on half their membership and
+   on the headline conclusion.** Report a census as *"N addresses matching
+   &lt;query&gt;"*, never as *"the global field"*, and cross a `topic:` form with
+   a free-text form before concluding that something does not exist. 🔵 This is
+   `p178`'s *"the census was measuring a tag"* defect, recurring with the tag and
+   the free text swapped.
 
 ## What is still missing
 

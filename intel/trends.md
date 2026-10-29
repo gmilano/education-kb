@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p529` · 2026-10-29.** **Thirteen** trends. Each one is stated so it could be
+**Pass `p530` · 2026-10-29.** **Fifteen** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -372,6 +372,66 @@ needed the *same* rule for a structured API, and did not have it until the API
 nearly produced a phantom. **A faster instrument does not reduce the need for a
 second one — it raises it**, because speed is what makes skipping the check
 tempting.
+
+## 14. 🆕 The new entrants are choosing network copyleft, so the sector's copyleft is a *present-tense* decision
+
+**The claim.** This base has carried *"education is copyleft"* since `p526` as a
+statement about **legacy** platforms — Moodle GPL-3.0, Open edX AGPL-3.0, Canvas
+AGPL-3.0. `p530` measured the **new** cohort, the AI-native LMS entrants, and the
+pattern is not inherited. It is being chosen now:
+
+| Address | Grant | Stars |
+|---|---|---|
+| [frappe/lms](https://github.com/frappe/lms) | 🔴 AGPL-3.0 | 3 353 |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🔴 AGPL-3.0 | 2 430 |
+| [codelitdev/courselit](https://github.com/codelitdev/courselit) | 🔴 AGPL-3.0 | 1 290 |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 AGPL-3.0 | 213 |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 101 |
+
+🔴 **Every AI-native LMS with traction is AGPL-3.0; the single permissive entrant
+is the smallest by an order of magnitude.** AGPL is the open-core commercial
+posture — it permits the project while making a hosted competitor
+license-impossible — and it is what a 2026 founder picks.
+
+**Why it matters more than the legacy reading.** A legacy copyleft core can be
+worked around by sitting beside it. **A copyleft core that is also the AI layer
+cannot** — the thing you want to extend is the thing the licence protects. So the
+permissive surface of this sector is shrinking in exactly the layer where AI
+value accrues.
+
+🔵 **How this is disconfirmed.** If a permissive AI-native LMS passes ~1 000★
+within two quarters, or if one of the four relicenses, the trend inverts. Watch
+`Selleo/mentingo` as the single clean indicator.
+
+## 15. 🆕 In this sector, retrieval is a harder problem than discovery — and that is a claim about *buyers*, not just this base
+
+**The claim.** `Gap 529-A` is usually read as housekeeping. `p530`'s measurement
+says it is the sector's shape: **3 098 addresses in this base, 79 filed, 97
+permissive repos described five or more times and never used.** The supply of
+open-source education software is not scarce. **What is scarce is the ability to
+find the right piece at the moment of need.**
+
+**The evidence that this generalises past this base.** Asked for an open-source
+grader this pass, generic web search answered *"I found no open-source agent that
+grades students."* There are **three permissive autograders totalling 2 337★**
+([nbgrader](https://github.com/jupyter/nbgrader),
+[Submitty](https://github.com/Submitty/Submitty),
+[otter-grader](https://github.com/ucbds-infra/otter-grader)), two of them from
+named universities, all of them a decade old. 🔴 **The market's own
+discovery channel reported a mature capability as absent.** An institution
+running that same search reaches the same wrong conclusion and buys a vendor
+product.
+
+**Why it matters commercially.** It reframes what a studio sells. If supply were
+scarce, the asset would be building the missing component. Supply is not scarce,
+so **the asset is the curated, licence-verified, regionally-placed index** — and
+the evidence that it is an asset is that this base, which exists to be exactly
+that, failed at it for 400 passes until it built an index of its own contents.
+
+🔵 **How this is disconfirmed.** If a later pass's promotion queue comes back
+near-empty after the ledger runs in front of every pass, then the debt was a
+one-off backlog rather than a structural property. **The queue size at `p540` is
+the test.**
 
 ## Counter-signals worth holding
 

@@ -6,10 +6,31 @@ updated: 2026-10-29
 
 # Foundational Education Repos
 
-**Pass `p529` · 2026-10-29.** Twenty load-bearing systems an education engagement
-is likely to inherit, extend or integrate against — not agents (those are in
-[`../agents/top.md`](../agents/top.md)), but the platforms the agents must live
-beside.
+**Pass `p530` · 2026-10-29.** Thirty-two load-bearing systems an education
+engagement is likely to inherit, extend or integrate against — not agents (those
+are in [`../agents/top.md`](../agents/top.md)), but the platforms and standards
+the agents must live beside.
+
+> 🟢 **`p530` adds a layer this file did not have: the e-learning standards
+> implementations.** Twelve repos — SCORM runtimes, xAPI learning record stores,
+> LTI frameworks, knowledge-tracing libraries and autograders. 🔴 **None of them
+> is new to this base.** Every one was already in its append-only history, some
+> across twenty passes, and none had ever reached a curated file. They surfaced
+> only once `Gap 529-A`'s index existed
+> ([`../ingest/address-ledger.py`](../ingest/address-ledger.py)).
+>
+> 🔵 **Why this layer decides engagements.** An institution does not buy a tutor;
+> it buys something that plugs into the LMS it already runs. These twelve are how
+> you plug in, and **eleven of the twelve are MIT, Apache-2.0 or BSD** — against
+> a platform-core layer below that is almost entirely copyleft. 🔴 **The
+> permissive surface of this sector is the integration layer, not the
+> platforms.**
+>
+> 🔴 **One retrieval failure worth naming, because the search channel stated it
+> as a capability gap.** Asked for an open-source grader this pass, generic
+> search replied *"I found no open-source agent that grades students."* This base
+> already owned **three permissive autograders totalling 2 337★**. The gap was
+> never in the world.
 
 > 🆕 **`p529` changed one section of this file and nothing else — the same
 > section, again, and this time the correction runs the other way.** The GitHub
@@ -153,6 +174,32 @@ value read through the session proxy, and every tool count is the repository's
 own claim. Three of them contradict themselves on that claim (Faixiang 6 vs 8,
 leshamblin 70 vs 67, falkenslab 140 vs ~230). **Tool counts in this field are
 marketing, not measurement.**
+
+## 🆕 Standards, records and assessment — the integration layer (`p530`)
+
+Grants read from the licence file's own title block; counters exact from the API
+this pass. **Passes unfiled** is from
+[`../evidence/address-ledger.tsv`](../evidence/address-ledger.tsv) — how many
+distinct passes described the address before anything filed it.
+
+| Repo | Licence | Stars | Passes unfiled | Why it is foundational |
+|---|---|---|---|---|
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | Apache-2.0 | 956 | — | The xAPI specification itself, from US DoD ADL — the vocabulary every learning-record claim in this sector is written against. 402 forks. 🟡 Apache-2.0 on a *specification document* is deliberate, not a category error: the patent grant is the point. |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | Apache-2.0 | 144 | 🔴 **19** | A SQL-backed xAPI Learning Record Store. Clojure, runs on Postgres/SQLite. **This is where agent-generated learning events belong** — an institution will ask where the data lands, and an LRS is the standards-compliant answer. |
+| [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | Apache-2.0 | 334 | — | ADL's own reference LRS, Python. 156 forks. 🟡 Pushed **2025-11-14** — the reference implementation, not the one to deploy; `lrsql` is the live option. |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | MIT | 361 | 🔴 **20** | A modern SCORM JavaScript runtime (SCORM 1.2 / 2004 / AICC), offline-first, cross-frame. TypeScript. **The bridge to every legacy course package an institution already owns**, and the reason an AI layer need not discard existing content. |
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | Apache-2.0 | 377 | 🔴 **14** | LTI tool framework — build a tool once, launch it inside Moodle, Canvas, Sakai or Open edX. 267 forks. **The cheapest route to putting an agent inside an LMS an institution will not replace.** |
+| [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | Apache-2.0 (`LICENSE.md`) | 54 | — | IMS-certified LTI 1.3 tool-provider library, PHP. 🔴 **A fork, so GitHub repository search does not return it** — see shelf rule 10. Certification is what matters here, not the star count. |
+| [openedx/XBlock](https://github.com/openedx/XBlock) | Apache-2.0 | 471 | 🔴 **15** | The Open edX component SDK: the supported way to add a custom learning component to an AGPL-3.0 platform **without touching the platform's code**. 231 forks. 🔵 Note the grants differ — the SDK is Apache-2.0 while the core is AGPL-3.0. |
+| [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) | MIT | 291 | — | Bayesian Knowledge Tracing and extensions, from Berkeley's CAHLR — the same lab behind [OATutor](https://github.com/CAHLR/OATutor) on the agent shelf. C++ core with Python bindings. **Mastery estimation that a faculty board will accept**, because it predates the LLM era and has a literature. |
+| [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | MIT | 453 | — | pyKT: benchmark library for deep knowledge tracing, with standard datasets and prediction scenarios. **The way to show an adaptive claim is measured rather than asserted.** |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | BSD-3-Clause | 1 370 | — | Assigning and grading Jupyter notebooks — release, collect, autograde, manual-grade, return feedback. 345 forks. **The highest-starred permissive grading system in this sector.** |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | BSD-3-Clause | 806 | — | Homework submission, automated grading and TA grading, from RPI. **1 118 forks against 806 stars** — a deployment-heavy system, i.e. institutions actually run it. |
+| [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | BSD-3-Clause | 161 | — | Python *and* R autograding, container-based, from Berkeley Data Science. The lighter alternative to Submitty when only the grading half is wanted. |
+
+🔴 **What this layer does not contain: an agent.** Every row above is
+infrastructure an agent would *drive*. The composition is in
+[`../compose/patterns.md`](../compose/patterns.md).
 
 ## Licence map, for the architecture decision
 

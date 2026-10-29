@@ -1,0 +1,12 @@
+repo	live	default_branch	head_sha	grant_files	spdx_guess
+cortega26/chile-hub	LIVE	main	cf5a2c02aca0	LICENSE	MIT
+bncc-dev/bncc-dados	LIVE	main	9c268978efa2	LICENSE	MIT
+adlnet/xAPI-Spec	LIVE	master	ca782a1129bc	LICENSE	Apache-2.0
+repo	live	default_branch	head_sha	grant_files	spdx_guess
+packbackbooks/lti-1-3-php-library	LIVE	master	66d8e4e4b9bd	LICENSE.md	Apache-2.0
+repo	live	default_branch	head_sha	grant_files	spdx_guess
+aboutcode-org/scancode-toolkit	LIVE	develop	05a98f66b4b0	NOTICE	Apache-2.0
+adaptlearning/adapt_authoring	LIVE	master	02dc8c87b857	LICENSE	GPL-3.0
+repo	live	default_branch	head_sha	grant_files	spdx_guess
+wenflow-org/wenflow	LIVE	main	1c86890946a3	LICENSE	MIT
+zhangl1001/civil-ai	LIVE	main	77e8e253ef7c	LICENSE	MIT

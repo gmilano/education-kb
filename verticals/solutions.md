@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p529` · 2026-10-29.** Every platform below is a real, running system that
+**Pass `p530` · 2026-10-29.** Every platform below is a real, running system that
 institutions already operate, with its licence read this pass from **the licence
 file's own title block** (`raw.githubusercontent.com` is reachable while
 `github.com` returns HTTP 403 through the session proxy). The question this file
@@ -43,7 +43,6 @@ function they own.
 | **i-educar** | [portabilis/i-educar](https://github.com/portabilis/i-educar) | GPL-2.0 · 722★ | REST/DB integration. Brazil's largest free school-management system, born in **Itajaí (SC)** municipal government, on the federal Public Software Portal since 2008. For Brazilian public-sector work this is the incumbent, not an option. |
 | **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 · 648★ | Module system + PostgreSQL. Strong ES/FR/PT localisation; common in small and mid-size schools. |
 | ⚠️ **Advising App** | [canyongbs/advisingapp](https://github.com/canyongbs/advisingapp) | **Elastic-2.0** · 340★ | **Reference only — do not build on it.** AI advising and recruitment CRM for colleges; Elastic-2.0 prohibits offering it as a hosted service, which is the engagement shape. Read it for its data model (advising notes, engagement signals, outreach journeys), then build that model yourself. |
-
 | 🔴 🆕 **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | ⛔ **NO GRANT** · 347★ · 288 forks | 🔴 **Do not build on it, and do not believe the table that says you can.** Marketed on its own page as a *"commercial grade, secure, scalable"* Student Information System, and a widely-cited third-party comparison lists it as **GPL-2.0**. `p529` probed it both ways: the GitHub API returns **no `license` key**, and ⛔ **no licence file exists at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE` or `COPYING` on `master`**. Default copyright applies. This is `tosuki/moodle-mcp`'s failure mode at **347 stars and 288 forks** — and the first time this base has caught a *secondary source asserting a grant the repository does not carry*. |
 
 ### 🆕 The SIS gap, measured rather than declared (`p529`)
@@ -60,8 +59,12 @@ sorted by stars — **the global field at that threshold is four addresses**:
 | [`xrandx/Student-Information-Management-System`](https://github.com/xrandx/Student-Information-Management-System) | 🔴 AGPL-3.0 | 107 | ⛔ a university course project, last pushed **2021** |
 | [`OPTIMUM-LINKUP/Latest-Optimum-School-System`](https://github.com/OPTIMUM-LINKUP/Latest-Optimum-School-System) | 🔴 GPL-3.0 | 83 | ⛔ dead — last pushed **2017** |
 
-🔴 **Zero permissive. Zero.** Two are dead, one is ungranted, and the one live
-grantable system is GPL-2.0. Adding the ERP layer does not rescue it:
+🔴 **Zero permissive in that sample** — and 🟢 **`p530` found the field's
+permissive member, which that query could not see.** See
+[§ `p530`: the permissive SIS exists](#-p530-the-permissive-sis-exists-and-this-base-has-owned-it-since-p108)
+below before acting on the paragraph that follows. Of the four above: two are
+dead, one is ungranted, and the one live grantable system is GPL-2.0. Adding the
+ERP layer does not rescue it:
 **OpenEduCat is LGPL-3.0**, **Frappe Education GPL-3.0**, **i-educar GPL-2.0**,
 **Advising App Elastic-2.0**. A targeted check of the one permissive claim in
 circulation — a vendor table listing **Fedena as Apache-2.0** — found that
@@ -100,6 +103,57 @@ version of the rule, not a weaker one.
 |---|---|---|---|
 | **Anki + anki-mcp-server** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | **MIT** · 538★ | The agent teaches; Anki makes it stick. An MCP server means any assistant can write cards into the learner's **own** deck, which survives the end of the engagement. README version **0.27.0**. |
 | **FSRS** | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** · 4.1k★ | Modern spaced-repetition scheduler. Use it instead of inventing a review interval — the scheduling problem is solved and the solution is permissive. |
+
+### 🆕 `p530`: the permissive SIS exists, and this base has owned it since `p108`
+
+| Platform | Repo | Licence | Where AI attaches |
+|---|---|---|---|
+| **Academico** | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** (title block, `main`) | **409★ · 150 forks · pushed 2026-10-28.** Laravel + Filament school-management platform for small and medium institutions; topics name it a `student-information-system`. 🟢 **The only permissive records system this base has verified.** Filament is an admin-panel framework, so an agent attaches as a Filament page or a Laravel command inside the app — **no out-of-process sidecar required**, because the grant permits modification and redistribution. |
+
+🔴 **Why `p529`'s query could not return it.** Academico calls itself a *"school
+management platform"*; the phrase *"student information system"* appears only in
+its **topics**. `in:name,description` is structurally blind to that.
+`topic:student-information-system stars:>40` returns it second, behind
+RosarioSIS. 🔵 **Recorded as shelf rule 12** on
+[`../agents/top.md`](../agents/top.md): a single query's `total_count` is a
+sample size, not a field.
+
+🟢 **What changes for an engagement.** The *"do not fork a SIS, sit beside one"*
+rule above was derived from a field with **no** permissive option. That premise
+is now false for one address. So there are two plays, not one:
+
+| | When | Architecture |
+|---|---|---|
+| **Sit beside it** | The institution already runs RosarioSIS, openSIS, i-educar or a vendor SIS | Agent stays permissive and **out-of-process**, reads/writes over REST/SQL, copyleft core deployed unmodified. Unchanged, and still the common case. |
+| 🆕 **Build inside it** | Greenfield, or a small/medium institution with no incumbent | Start from **Academico (MIT)** and add the agent **in-process** as Filament pages. 🟢 The whole stack stays permissive and shippable. |
+
+🔴 **The gap that survives, restated precisely.** There is now a permissive SIS;
+there is still **no agent that speaks to any SIS**. The Moodle and Canvas bridge
+fields have dozens of entries, and crossing `topic:student-information-system`
+with MCP returns nothing. 🔵 **That is this pass's cleanest greenfield** — and
+with Academico it can be built permissively end to end. See **P559** in
+[`../compose/patterns.md`](../compose/patterns.md).
+
+### 🆕 `p530`: the permissive AI-native LMS, and four institutional platforms
+
+All promoted off [`../evidence/address-ledger.tsv`](../evidence/address-ledger.tsv)
+— owned by this base, never filed — and re-verified on two channels this pass.
+
+| Platform | Repo | Licence | Where AI attaches |
+|---|---|---|---|
+| 🆕 **Mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **MIT** | **101★ · 31 forks · pushed 2026-10-29 during this pass.** "Open-source AI-native LMS with AI Mentor & role-play", positioned as a self-hosted alternative to Moodle, Docebo and Open edX. Ships **SCORM** and **xAPI** topics, so it speaks the standards layer on [`../repos/foundations.md`](../repos/foundations.md). 🟢 **EMEA** (Selleo, Poland). 🔴 **The only permissive AI-native LMS this base has found** — every rival with more traction is AGPL-3.0 (`frappe/lms` 3 353★, `learnhouse` 2 430★, `courselit` 1 290★, `freelingo` 213★). The AI is already the product; what attaches is *your* domain content and model routing. |
+| 🆕 **Artemis** | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | 🟢 **MIT** | **823★ · 395 forks · branch `develop` · pushed 2026-10-29.** "Interactive Learning with Automated Feedback", from TU München's `ls1intum` chair — exam mode, autograding, programming exercises. 🟢 **EMEA, stated institutional origin.** A permissive, production-grade assessment platform: the agent attaches as a feedback generator behind the existing autograder rather than replacing it. |
+| 🆕 **Opencast** | [opencast/opencast](https://github.com/opencast/opencast) | 🟡 **ECL-2.0** | **509★ · 260 forks · branch `develop`.** Automated lecture capture and video distribution at scale, run by a university consortium. ECL-2.0 is Apache-2.0 with a narrowed patent clause — **permissive, and not a trap**. 🟢 Where transcription, chaptering and lecture-derived material attach: it is the source of the content a tutoring agent should be grounded in. |
+| 🆕 **UniTime** | [UniTime/unitime](https://github.com/UniTime/unitime) | 🟢 **Apache-2.0** | **356★ · 214 forks.** Comprehensive university course timetabling, exams and student scheduling (Apereo). 🔵 Scheduling is a **constraint-solving** problem, not a generative one — the honest AI attachment is natural-language intent capture and explanation on top of the existing solver, not a model asked to build a timetable. |
+| 🆕 **Numbas** | [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | **215★ · 129 forks.** Fully browser-based e-assessment for mathematics, with a computer-algebra system; from **Newcastle University** (🟢 EMEA, named in its own topics). Exports SCORM. 🔵 The CAS matters: it marks mathematical equivalence rather than string matches, so it is the component that makes an AI maths tutor *gradeable*. |
+| 🆕 **Richie** | [openfun/richie](https://github.com/openfun/richie) | 🟢 **MIT** | **317★ · 94 forks · branch `master`.** Django + React CMS for education portals, from France Université Numérique (🟢 **EMEA**). The catalogue and marketing front end that sits in front of an LMS — where AI attaches is course discovery and recommendation, not delivery. |
+| 🆕 **Sunbird Ed** | [Sunbird-Ed/SunbirdEd-portal](https://github.com/Sunbird-Ed/SunbirdEd-portal) | 🟢 **MIT** | **41★ and 317 forks — a 7.7:1 fork-to-star ratio.** The web portal of India's national education stack (🟢 **APAC**). 🔴 **This base ranks by stars and this row is the argument against that:** 317 forks on an MIT national platform is deployment, where 41 stars reads as obscurity. 🟡 Pushed **2026-02-21**, eight months quiet — verify liveness before proposing it. |
+
+🟡 **One row deliberately not promoted.**
+[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) is **MIT**
+(the API said `NOASSERTION`) at **980★** — and **pushed 2025-12-09**, eleven
+months stale. 🔵 A dormant 980★ LMS is a **migration source**, not a platform to
+build on.
 
 ## The architecture this implies
 

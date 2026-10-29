@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p529` · 2026-10-29.** Figures are attributed to the source that produced
+**Pass `p530` · 2026-10-29.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
 
@@ -186,6 +186,34 @@ rejects both an outright ban and unrestricted adoption.
   starts with *"prove it teaches acceptably"*, not *"prove it works"*.
 
 
+#### 🆕 `p530` — the adoption/governance gap is now two-sourced, and faculty intent is *falling*
+
+| Finding | Source | Figure |
+|---|---|---|
+| Staff who used AI for work in the last six months | EDUCAUSE, n = **1 960** higher-ed professionals | 🟢 **94%** |
+| …who are aware of **any** governing policy | same survey | 🔴 **54%** |
+| Faculty **intent to use** AI, US + Canada | Digital Education Council 2026 | 🔴 **76% → 67%**, a 9-point fall |
+| …same measure outside US + Canada | same survey | largely unchanged |
+| Students who think instructors are equipped to guide AI use | same survey | 🔴 **29%** |
+| K-12 principals given any AI policy or guidance | RAND 2025 | 🔴 **45%** |
+
+🔴 **The one genuinely new signal: North American faculty intent is the only
+regional figure that moved, and it moved down.** Every other region held flat.
+🔵 **Read it as a sales signal, not a demand signal.** A 9-point fall against
+94% actual use is not retreat from AI; it is retreat from *unmanaged* AI — the
+gap between "I use it" and "my institution has told me how" is **40 points**.
+🟢 **What sells into that is governance, evaluation and audit trails, not another
+tutor.** The permissive components for exactly that are now on
+[`../repos/foundations.md`](../repos/foundations.md) (xAPI LRS, autograders) and
+composed in **P559**/**P560**.
+
+🟡 **Source quality, stated.** EDUCAUSE and Digital Education Council are the two
+credible instruments here. Aggregator figures in the same search ranged from
+*"86% of students"* to *"92% of university students"* with no method given, and
+one vendor page asserted a 71% adaptive-platform forecast with no source. **Not
+recorded.**
+
+
 ### EMEA
 
 **Regulatory posture — re-verified from source this pass, with three dates
@@ -295,6 +323,35 @@ copyright line), [Open TutorAI CE](https://github.com/Open-TutorAi/open-tutor-ai
   *university-built, permissively licensed* software.
 
 
+#### 🆕 `p530` — no new regulatory material; the base is more precise than the sources
+
+🔴 **The EMEA policy leg returned nothing this base did not already hold.** Every
+substantive item the sweep surfaced is on this file or
+[`open-gaps.md`](open-gaps.md) already: the **`Digital Omnibus`**
+(Regulation (EU) **2026/1744**, OJ 24 July 2026) deferring high-risk education
+duties — admissions, grading, placement, proctoring — to **2 December 2027**;
+embedded-AI products to August 2028; the emotion-recognition ban live since
+February 2025; Article 4 AI-literacy duties in force.
+
+🟢 **And on the one date that matters commercially this base is *more* precise
+than the sources.** Vendor and consultancy blogs paraphrase Article 50 as
+applying "from 2 August 2026". This base holds the **marking grace as
+`2026-12-02`**, two-sourced from `eur-lex`. 🔵 **Recorded as a positive
+result:** on EU AI Act timing, the KB should be trusted over a secondary search,
+and a pass that finds nothing new here has confirmed coverage rather than wasted
+its budget.
+
+🟢 **Where EMEA did move is supply, not policy** — and all of it permissive and
+institutional: [`Selleo/mentingo`](https://github.com/Selleo/mentingo) (MIT,
+Poland, the only permissive AI-native LMS), [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis)
+(MIT, TU München), [`numbas/Numbas`](https://github.com/numbas/Numbas)
+(Apache-2.0, Newcastle University), [`openfun/richie`](https://github.com/openfun/richie)
+(MIT, France Université Numérique), [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem)
+(Apache-2.0, TH Mittelhessen). 🔵 **EMEA is now this base's best-supplied region
+for permissive, named-institution components** — which inverts the usual
+framing, where EMEA appears as the regulated region and little else.
+
+
 ### APAC
 
 **Regulatory posture — no single model.** Binding AI rules: **South Korea, China,
@@ -389,6 +446,61 @@ the single most actionable supply fact in this file.**
   Tsinghua: **49,216★** and **41,756★**). **APAC is not an adoption market for
   this base's shelf — it is where the shelf comes from.**
 
+
+#### 🆕 `p530` — mandates are the demand driver, and the teacher-training gap is the opening
+
+| Country | Instrument | Figure |
+|---|---|---|
+| **China** | AI education compulsory across national K-12 | **≥ 8 hours/year** mandated for primary and secondary (Beijing); national plan extends AI into **teacher qualification exams**, full AI-literacy infrastructure targeted **2030** |
+| **India** | AI + Computational Thinking mandatory **from Class 3**, academic year **2026–27**, under NEP 2020 | 🔴 **~10 million teachers** need upskilling |
+| **Singapore** | AI modules in primary computer science; AI training for teachers at every level by **2026**; supervised use via Student Learning Space | — |
+| Regional attitude | Ipsos Education Monitor 2026 — support for **banning** AI in schools | 🟢 **23–31%** across Asian markets vs **39% global**; Singapore **37% → 28%** YoY; India **26%** |
+
+🟢 **The opportunity is the inverse of the mandate.** Curricula are legislated and
+the teacher capacity to deliver them is not. India's ~10 million-teacher gap and
+China's move to test AI competence in **teacher qualification exams** both point
+at the same product: **teacher-facing training and assessment**, at national
+scale, under a permissive licence a ministry can self-host.
+
+🟢 **Matching supply this base verified this pass:**
+[`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) (MIT,
+teacher copilot for Indian classrooms),
+[`Sunbird-Ed/SunbirdEd-portal`](https://github.com/Sunbird-Ed/SunbirdEd-portal)
+(MIT, India's national stack, **317 forks against 41 stars**),
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (MIT, Tsinghua,
+41.8k★), [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu)
+(Apache-2.0). 🔵 **Sunbird is the sovereignty play**: an MIT national platform a
+ministry already forks is a far easier procurement than a vendor product.
+
+🟡 **Caveat carried.** Every figure above is from secondary commentary, not
+ministry documents. The China hours figure and the India Class-3 date should be
+confirmed against primary sources before they go in a client deck.
+
+
+### Global
+
+🆕 **`p530`.** Opportunities that are not region-specific, kept here so the four
+regional sections stay regional rather than absorbing cross-cutting work.
+
+| Opportunity | Why it is global | Components verified this pass |
+|---|---|---|
+| **The standards integration layer** | SCORM, xAPI and LTI are international standards; an institution on any continent speaks them, and **eleven of the twelve implementations are MIT / Apache-2.0 / BSD** against a platform layer that is almost entirely copyleft | [`scorm-again`](https://github.com/jcputney/scorm-again), [`lrsql`](https://github.com/yetanalytics/lrsql), [`tsugi`](https://github.com/tsugiproject/tsugi), [`XBlock`](https://github.com/openedx/XBlock) — [`../repos/foundations.md`](../repos/foundations.md) |
+| **Permissive autograding** | Assessment mechanics are subject-bound, not territory-bound. 🔴 **And the market's own discovery channel reports this capability as absent** — a generic search for an open-source grader returned *"I found no open-source agent that grades students"* against **2 337★** of permissive autograders | [`nbgrader`](https://github.com/jupyter/nbgrader) (BSD-3, 1 370★), [`Submitty`](https://github.com/Submitty/Submitty) (BSD-3, 806★), [`otter-grader`](https://github.com/ucbds-infra/otter-grader) (BSD-3, 161★) |
+| **The SIS agent** | No agent speaks to any SIS in any region, and as of `p530` there is a **permissive** SIS to build one against — so the whole stack can ship under MIT | [`academico`](https://github.com/academico-sis/academico) (MIT, 409★) + **P559** |
+| **Mastery estimation with a literature** | *"Is this student at risk"* must survive a faculty board in every jurisdiction; BKT predates the LLM era and has citations | [`pyBKT`](https://github.com/CAHLR/pyBKT) (MIT), [`pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (MIT) |
+
+🟡 **Unplaced supply, recorded here rather than guessed into a region** — all
+MIT, all verified first-hand this pass, none stating a location:
+[`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) (156★),
+[`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) (1 015★),
+[`wenflow-org/wenflow`](https://github.com/wenflow-org/wenflow) (61★ · learning
+paths with forgetting-curve review and load tracking, Vue3 + SQLite,
+self-hostable — the author calls it an early experimental prototype) and
+[`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) (41★ ·
+**local-first** adaptive tutoring agent for iOS and Web, with a civil-service
+exam application). 🔵 **An author's name, a README's language and a domain are
+not a country** — this base's standing rule, and the reason these are here and
+not under APAC.
 
 ### LATAM
 
@@ -485,7 +597,7 @@ inside an open benchmark — that is leverage nobody is using.
    greenfield read: national AI-literacy programmes with no incumbent to displace.
    Kolibri (MIT, offline-first) is the right base where connectivity binds.
 
-### 🆕 LATAM — two additions from `p528`'s sweep
+#### 🆕 Two additions from `p528`'s sweep
 
 🟢 **Teacher-formation is organising regionally, and it is the entry point.** In
 **October 2026** UNESCO convened **faculties of education from across Latin
@@ -553,6 +665,54 @@ frame, different unit. Shown beside the UNESCO figures, **not averaged with them
   Andrés** (Argentina). 🔴 **More than any other region, including North America
   at zero.** The old note — *"the LATAM contribution is data, not code"* — is now
   falsified twice over and should not reappear.
+
+
+#### 🆕 `p530` — `Gap 529-D` CONFIRMED OPEN, and the regional instruments now have numbers
+
+🔴 **`Gap 529-D` stands exactly as `p529` worded it.** A fourth targeted sweep
+found **no AI-in-education market sizing for LATAM on a methodology comparable to
+the per-geography reports published for North America, Europe and APAC.** 🔵
+Every cross-regional comparison on this file remains **not like-for-like for
+LATAM** — the region this base is asked about most. Closing it needs a paid
+report or ministry statistics, **not another search**; four passes have now
+confirmed that.
+
+🟢 **What the sweep did add — the policy-to-budget gap, quantified.**
+
+| Finding | Source | Figure |
+|---|---|---|
+| National AI instruments that **explicitly allocate budget** | 2026 regional AI index | 🔴 **only Brazil and Colombia** |
+| Large enterprises with ≥ 1 AI project in production | IDB / McKinsey, via regional reporting | 🟢 **67%** |
+| …reporting **measurable** impact on business metrics | same | 🔴 **23%** |
+| Higher-ed institutions using AI | UNESCO IESALC — **200 institutions, 19 countries** | 🟢 87% |
+| …with a strategy / a budget / an evaluation framework | same | 🔴 **26% / 8% / 9%** |
+
+🔵 **Two independent instruments, one shape.** Enterprise: 67% building, 23%
+measuring. Higher education: 87% using, **8% funding**, 9% evaluating. 🟢 **The
+regional bottleneck is not adoption and not regulation — it is the step from
+pilot to funded, measured programme.** That is a consulting-shaped gap, and it is
+the same conclusion from two unrelated datasets, which is why it is worth
+printing.
+
+🟡 **Regulatory state, unchanged from what this base holds.** Brazil PL
+2.338/2023 (risk-based, in the Chamber of Deputies, text can still change);
+Colombia CONPES **4144** (Feb 2025, policy-first); Mexico still has **no
+AI-specific statute**; Colombia, Peru and Paraguay have proposals naming
+education explicitly. 🔴 **Chile's 2026 bill status remains unconfirmed, and
+Canada and Mexico education policy returned nothing for the sixth consecutive
+pass.**
+
+🟢 **LATAM supply verified this pass** — and it is no longer only data:
+[`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (MIT, **Universidad
+Tecnológica de Pereira**, rural higher education in Risaralda, Colombia — a
+stated-origin university agent, 0★ so a reference not a component),
+[`Mcp-Brasil/mcp-brasil`](https://github.com/Mcp-Brasil/mcp-brasil) (MIT,
+**1 840★**, MCP server over 70 Brazilian public APIs — the highest-starred
+LATAM-origin address this base has recorded),
+[`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) (MIT, Chilean
+public data including education, with a per-dataset redistribution audit),
+[`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) (MIT, ENEM
+essay marking calibrated on 11 147 real essays).
 
 
 ## Declared gaps this pass

@@ -22,6 +22,21 @@ MAP = {
     "intel-trends.md": "intel/trends.md",
     "compose-patterns.md": "compose/patterns.md",
 }
+# p530: the newest snapshot (`2026-10-27-p490-pre-rewrite`) stores the same
+# files under their PLAIN basenames, and `MAP.get(base)` returned None for
+# every one of them -- so `continue` skipped the whole snapshot in silence
+# while the `if not read` guard stayed satisfied by the older ones.  An
+# instrument that reads 64 of 71 files and reports success is worse than one
+# that fails.  Both spellings are accepted from here.
+MAP.update({
+    "top.md": "agents/top.md",
+    "trending.md": "agents/trending.md",
+    "foundations.md": "repos/foundations.md",
+    "solutions.md": "verticals/solutions.md",
+    "market.md": "intel/market.md",
+    "trends.md": "intel/trends.md",
+    "patterns.md": "compose/patterns.md",
+})
 LIVE_CORPUS = sorted(set(MAP.values()))
 
 

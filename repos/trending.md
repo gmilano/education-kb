@@ -4,6 +4,183 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p530` — `2026-10-29` — **🟢 THE INDEX EXISTS. `evidence/address-ledger.tsv` COMPACTS ALL NINE FILES INTO 3 098 ADDRESSES AND REPORTS THE NUMBER THIS BASE HAS BEEN PAYING FOR WITHOUT MEASURING: **79 FILED, 3 019 HISTORY-ONLY** — and 97 of them are permissive repos described five or more times and never filed. 🔴 THE LEDGER'S FIRST RUN FALSIFIED A `p529` NON-FINDING AND FOUND A PERMISSIVE, AI-NATIVE LMS THIS BASE HAS SAID FOR FOUR PASSES DOES NOT EXIST.**
+
+### 🟢 `Gap 529-A` CLOSES — the instrument, and what it cost to get right
+
+`p529` asked for `evidence/address-ledger.tsv`, one row per address, built as a
+**compaction** of files the base already holds. It exists:
+[`../ingest/address-ledger.py`](../ingest/address-ledger.py) →
+[`../evidence/address-ledger.tsv`](../evidence/address-ledger.tsv).
+
+It collects nothing from the network, so it is safe in front of every pass —
+which is where `p529` said the control belongs.
+
+| Measured over the nine files | Count |
+|---|---|
+| Distinct GitHub addresses | **3 098** |
+| 🟢 Filed on a curated file (`top`, `foundations`, `solutions`, `market`, `trends`, `patterns`) | **79** |
+| 🔴 Present only in the append-only history | **3 019** |
+| 🔴 …unfiled **with a permissive grant on record** | **1 497** |
+| 🔴 …unfiled, permissive, described in **≥ 5 distinct passes** | 🔴 **97** |
+| 🔴 …unfiled, permissive, described in **≥ 8 distinct passes** | 🔴 **49** |
+
+🟡 **These are the figures measured BEFORE this pass wrote.** Re-running the
+instrument after `p530`'s edits gives **3 102 addresses, 111 filed** — the 32
+new rows this pass filed, plus the addresses its prose cites. 🔵 **The index is
+not a passive observer of the base: filing an address changes the number that
+measured the debt.** So the debt figure a pass publishes is always its *opening*
+balance, and the two readings are only comparable if each pass says which it
+quoted. This one quotes the opening balance.
+
+🔵 **The last two rows are the gap's actual cost.** A once-mentioned address is a
+rejection; an address this base has written up **eight separate times** and never
+filed is pure drain. The queue is published as
+[`../evidence/promotion-queue.2026-10-29-p530.tsv`](../evidence/promotion-queue.2026-10-29-p530.tsv)
+and nine of its rows were promoted this pass.
+
+⚠️ **The instrument's first run was wrong, and the way it was wrong is worth
+recording.** It reported `first_seen_pass = p209` for almost every address in the
+base. Cause: it took the pass number from **any** heading containing a
+backticked `` `pNNN` ``, and a `###` sub-heading deep in this file cites `p209`
+in passing — so one incidental reference captured **26 000 subsequent lines**.
+🔵 **The same credulity the licence rules keep catching, aimed at this base's own
+structure.** Fixed by reading the pass only from `##` section headings, excluding
+the forward-looking (`🔜 Registered for pN`) and roll-up (`Gaps CLOSED by pN`)
+headings by name, and supporting the four heading dialects actually in use
+(`` `p529` ``, `Pass 248`, `p239`, and the Spanish `pase 2`).
+
+🟢 **Validated, not asserted.** These files run newest-first, so section pass
+numbers must descend. After the fix: **1 125 sections parsed, 4 ascending
+violations** (two genuinely out-of-order sections in the source), and the range
+resolves to **`p2` … `p529`** — `p2`/`p3` being the real September 2026 Spanish
+passes. Before the fix the range collapsed onto `p209`.
+
+🔴 **Scope limit — measured, and then corrected downward by 40%.** The ledger
+reads the nine live files; the repository also holds **13 `archive/` trees, 71
+Markdown files**. Diffing them: **588** addresses appear only in an archive **on
+the URL channel** — but **239 of those (40.6%) are present in a live file as a
+bare backticked slug**, which this base's `gate-bare-slug-channel` (`p367`) and
+`gate-census-union` (`p375`) already exist to catch and which the new instrument
+rebuilt the defect of. 🟢 **True archive-only, both channels: 349.**
+`python3 -I ingest/address-ledger.py --archives`, committed as
+[`../evidence/archive-only-addresses.tsv`](../evidence/archive-only-addresses.tsv).
+🔴 **The number this pass nearly published was 591.** See `Gap 530-A`, which also
+records the two defects found in the base's **own** archive instrument. `p528` named the rewrite as a mechanism that destroys
+verified work; **591 is its volume.** 🔴 **Among them,
+[`aboutcode-org/scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit)
+— Apache-2.0, 2 656★, the industry-standard licence and dependency scanner —
+which is precisely the instrument `Gap 528-C` scoped as a build.** See
+`Gap 530-A`.
+
+### 🟢 The permissive LMS this base said did not exist
+
+`p526` published a deliberate search for a mainstream permissive LMS and
+concluded: *"the permissive cores are `oppia`, `OpenOLAT`, `sakai` and `kolibri`,
+and that is the whole list."* The trending channel this pass returns a fifth, and
+it is the only **AI-native** one:
+
+| Address | Grant | Stars | Forks | Pushed | Origin |
+|---|---|---|---|---|---|
+| 🆕 [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 101 | 31 | 🟢 **2026-10-29, 15:01 UTC — during this pass** | 🟢 **EMEA** (Selleo, Poland) |
+
+*"Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative
+to Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX."* Topics include
+**`scorm`** and **`xapi`** — so it speaks the two standards the rest of this
+file's foundations layer implements.
+
+🔵 **Why 101★ is the interesting number, not a disqualifying one.** Set it
+against the AI-native LMS cohort verified alongside it:
+
+| Address | Grant | Stars |
+|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | 🔴 AGPL-3.0 | 3 353 |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 🔴 AGPL-3.0 | 2 430 |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | 🔴 AGPL-3.0 | 1 290 |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 🔴 AGPL-3.0 | 213 |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | 🟢 **MIT** | 101 |
+
+🔴 **Every AI-native LMS entrant with traction is AGPL-3.0. The one permissive
+entrant is the smallest.** That is a sharper statement of this base's standing
+"education is copyleft" thesis than the thesis itself: the copyleft is not
+legacy, it is **what the new entrants are choosing**, and a vendor-facing
+engagement inherits network copyleft by default unless it starts from the 101★
+outlier. 🟢 `artcc/freelingo`'s grant was **`unstated` on the ledger across 16
+passes** and is now resolved — AGPL-3.0, which is why it was never shelvable.
+
+### 🟢 Foundations layer — eleven standards and assessment repos promoted off the ledger
+
+The ledger's most useful surprise was not any single agent but a **whole missing
+layer**: the e-learning *standards* implementations. An engagement that must talk
+to an existing institution needs these before it needs a tutor, and this base
+owned all of them without filing one. Full rows on
+[`foundations.md`](foundations.md); grants read from the licence file, counters
+exact from the API.
+
+| Address | Grant | Stars | Passes unfiled | Layer |
+|---|---|---|---|---|
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | 🟢 MIT | 361 | 20 | SCORM runtime |
+| [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 | 144 | 19 | xAPI LRS |
+| [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) | 🟢 Apache-2.0 | 334 | — | xAPI LRS (US DoD ADL) |
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | 🟢 Apache-2.0 | 956 | — | the xAPI specification |
+| [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0 | 377 | 14 | LTI tool framework |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 Apache-2.0 | 471 | 15 | Open edX component SDK |
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 Apache-2.0 (`LICENSE.md`) | 54 | — | IMS-certified LTI 1.3 — **fork, API-invisible** |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 MIT | 291 | — | Bayesian Knowledge Tracing (Berkeley) |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 MIT | 453 | — | deep knowledge-tracing benchmark |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 BSD-3-Clause | 1 370 | — | notebook assignment + grading |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 🟢 BSD-3-Clause | 161 | — | Python/R autograding |
+| [`Submitty/Submitty`](https://github.com/Submitty/Submitty) | 🟢 BSD-3-Clause | 806 | — | submission + TA grading (RPI) |
+
+🔵 **This layer answers the question the search channel could not.** Asked for an
+open-source *grader*, generic search said *"I found no open-source agent that
+grades students."* The base owned **three** permissive autograders (`nbgrader`,
+`otter-grader`, `Submitty`, 2 337★ combined) the whole time. 🔴 **That is the
+retrieval failure stated as a capability gap** — the thing `Gap 529-A` predicted
+would keep happening.
+
+### 🟡 The branch assumption, now quantified
+
+`p509` found that probing `main`/`master` mislabels repos with another default
+branch, and `p517` built the resolution into
+[`../ingest/probe-grant.sh`](../ingest/probe-grant.sh). The rate was never
+measured. Over the **41 addresses verified this pass**
+([`../evidence/url-validation.2026-10-29-p530.tsv`](../evidence/url-validation.2026-10-29-p530.tsv),
+**41/41 resolve**):
+
+| Default branch | Count |
+|---|---|
+| `main` | 22 |
+| `master` | 13 |
+| 🔴 `develop` | 3 — `opencast`, `ls1intum/Artemis`, `frappe/lms` |
+| 🔴 `dev` | 1 — `learnhouse` |
+| 🔴 `mobile` | 1 — **`francoisjacquet/rosariosis`**, the SIS field's 648★ ceiling |
+
+🔴 **6 of 41 — 15% — default to neither `main` nor `master`.** A main/master-only
+probe mis-handles one address in seven, and the single most-starred address in
+this pass's SIS census is one of them.
+
+### 🔵 Declared non-findings
+
+- 🔴 **`github.com/trending` itself remains unreachable** — the search channel
+  returns topic listings and vendor roundups in its place, as at `p528`. Every
+  "trending" claim on this file is therefore a `topic:`-qualified API ranking,
+  not GitHub's own trending computation. **Stated rather than implied.**
+- 🟡 **`minimal_output: true` on the API omits the `license` object.** Cheap
+  calls cannot grade grants; grant verification costs the full payload. Recorded
+  because two of this pass's calls had to be re-run for that reason.
+- 🔴 **`Sunbird-Ed/SunbirdEd-portal`: MIT, 41★ — and 317 forks.** A 7.7:1
+  fork-to-star ratio on India's national education stack. 🔵 **Stars measure
+  attention and forks measure deployment, and this base ranks by stars.** Filed
+  on [`../verticals/solutions.md`](../verticals/solutions.md); the ranking
+  limitation is now stated there. 🟡 Pushed **2026-02-21** — eight months quiet.
+- 🟡 **`Gap 529-C` NOT advanced.** The 142 unread Moodle addresses below ~2★ were
+  not paged this pass; the budget went to the ledger. 🔴 **And `fork:true` now
+  means that census must be re-run, not merely extended** — its `total_count:
+  222` excluded forks. Carried, re-scoped, as `Gap 530-B`.
+
+---
+
 ## 🆕 `p529` — `2026-10-29` — **🔴 `p528`'S MOODLE HEADLINE IS WRONG BY 20×, AND THE REASON IS WORSE THAN THE NUMBER. The field is not eleven codebases — the GitHub search API reports `total_count: 222`. The ceiling is not 27★ but **52★**, and 🔴 **the ceiling carries no licence file at all**. 🔴 But the finding that matters is this: of the 26 highest-starred addresses in the field, **18 were ALREADY somewhere in this base's 100k lines of history and none had reached a shelf** — including the field's #1 and #2. 🟢 The shape nobody had seen: the unit of this field is **one university, one bridge, built by a student** — and **LATAM and APAC ship them while North America ships none.**
 
 ### 🔴 The correction, side by side

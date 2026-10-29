@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Compose Patterns — Education
 
-**Pass `p529` · 2026-10-29.** **Twelve** recipes. Every component named below was read
+**Pass `p530` · 2026-10-29.** **Fifteen** recipes. Every component named below was read
 from its repository page this pass, and **every licence was read from the licence
 file's own title block** (`raw.githubusercontent.com` is reachable while
 `github.com` returns HTTP 403 through the session proxy). No recipe uses a
@@ -628,3 +628,133 @@ and `tosuki/moodle-mcp` (**ungranted — no licence file at all**), 🆕
 with a ShareAlike condition, usable only where the derivative can be published),
 🆕 `henriquebotelhogomes/educacao` and `Fatima0923/AssessmentAI` (**ungranted**).
 All of them look usable to a careless probe. See **P551** and **P556**.
+
+---
+
+## 🆕 P559 — The SIS agent, permissive end to end (the greenfield `p530` found)
+
+**Why this is the pass's best build.** Every bridge field this base has censused
+is crowded: Moodle has **222** addresses, Canvas has dozens. Crossing
+`topic:student-information-system` with MCP returns **nothing** — and as of
+`p530` there is a **permissive** SIS to build it against, so the whole stack can
+ship under MIT.
+
+**Components, all verified at `p530`.**
+
+| Role | Component | Grant |
+|---|---|---|
+| Records core | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 MIT · 409★ · Laravel + Filament |
+| Agent surface | an MCP server over Academico's Eloquent models | 🟢 yours |
+| Standards bridge | [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0 · LTI launch into the LMS |
+| Mastery model | [CAHLR/pyBKT](https://github.com/CAHLR/pyBKT) | 🟢 MIT · BKT |
+| Event sink | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 · xAPI LRS |
+
+**Wiring.**
+
+1. Stand up Academico. Because it is **MIT**, the agent goes **in-process** — a
+   Filament panel plus an `artisan` command — instead of the out-of-process
+   sidecar every copyleft core forces. This is the step no other records platform
+   in this sector permits.
+2. Expose a read/write MCP server over the Eloquent models: enrolment, attendance,
+   grades, fees. **Scope writes to an explicit allow-list**; advising agents that
+   can silently change a grade are the reason institutions refuse them.
+3. Launch it inside the institution's existing LMS over **Tsugi** (LTI 1.3), so
+   staff meet it where they already work rather than in a second system.
+4. Emit every interaction as **xAPI** into `lrsql`. This is the audit trail that
+   answers "what did the agent do", and it is the artefact a procurement review
+   asks for.
+5. Fit **pyBKT** on the attendance + grade history so "this student is at risk"
+   is a mastery estimate with a literature behind it, not a model's opinion.
+
+**Grant check (run P556 before quoting).** Academico MIT · Tsugi Apache-2.0 ·
+pyBKT MIT · lrsql Apache-2.0 → 🟢 **the union is permissive; the artefact is
+shippable.** 🔴 Verify Academico's own `composer.json` tree — Filament is MIT but
+the direct-dependency scan is still the engagement's control, not this base's
+(`Gap 528-C`).
+
+**Shape:** 8–10 weeks. **Region:** Global; strongest where small and medium
+private institutions buy directly rather than through a ministry — **LATAM and
+EMEA**.
+
+---
+
+## 🆕 P560 — Grounding a tutor in the institution's own lectures and standards
+
+**The failure this avoids.** A tutor grounded in a general corpus answers
+plausibly and off-syllabus, which is precisely the objection faculty raise. The
+components to ground it in the institution's *own* material are permissive and
+have been in this base's history for twenty passes unused.
+
+| Role | Component | Grant |
+|---|---|---|
+| Source material | [opencast/opencast](https://github.com/opencast/opencast) | 🟡 ECL-2.0 · lecture capture, 509★ |
+| Source → teachable unit | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 🟢 Apache-2.0 · 462★ · source-backed skills |
+| Legacy content bridge | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 MIT · 361★ · SCORM 1.2/2004 runtime |
+| Maths marking | [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 · CAS-backed e-assessment |
+| Retention | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT · spaced repetition |
+| Event sink | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 Apache-2.0 |
+
+**Wiring.**
+
+1. Opencast already holds the lectures — most universities running it have years
+   of recordings. Pull transcripts from its existing pipeline; **do not build a
+   capture system**.
+2. Feed transcripts plus the course PDFs through **lineage-skill**, whose output
+   is *source-backed*: each generated lesson traces to the material it came from.
+   That traceability is the faculty-acceptance argument, so do not substitute a
+   generic summariser.
+3. Mount the institution's existing SCORM packages through **scorm-again** so the
+   tutor can reference and sequence content the institution already licensed.
+4. For quantitative subjects, mark with **Numbas** rather than the model.
+   Numbas's CAS judges mathematical *equivalence*; an LLM asked to mark algebra
+   grades the string. 🔵 This is the single highest-value substitution in the
+   recipe.
+5. Push mastery events to **lrsql**; schedule review through
+   **anki-mcp-server** so the learner keeps the deck when the engagement ends.
+
+**Grant check.** ECL-2.0 (Apache-like, narrowed patent clause) · Apache-2.0 ·
+MIT · Apache-2.0 · MIT → 🟢 permissive union. 🟡 ECL-2.0's patent clause is
+narrower than Apache-2.0's — flag it in the engagement's legal review; it is not
+a trap, but it is not Apache-2.0 either.
+
+**Shape:** 10–12 weeks. **Region:** EMEA first — Opencast and Numbas are both
+European-consortium/university projects with existing installed bases there.
+
+---
+
+## 🆕 P561 — The ledger as a billable artefact (productising `Gap 529-A`)
+
+**The insight is `p530`'s own failure.** This base spent ~400 passes
+rediscovering addresses it already held, and a **one-file index** surfaced 97
+unused permissive components in a single run. A client's engineering
+organisation has the same pathology in its own repos, wikis and ADRs.
+
+| Role | Component | Grant |
+|---|---|---|
+| The compaction | [`../ingest/address-ledger.py`](../ingest/address-ledger.py) | 🟢 this base's |
+| Grant resolution | [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) | 🟢 this base's · 159 filename variants, branch resolved |
+| Knowledge tracing of *components*, not learners | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 MIT |
+
+**Wiring.**
+
+1. Point the ledger at the client's own corpus. One row per artefact:
+   `address · first_seen · last_verdict · filed_on · last_measured`.
+2. Run `probe-grant.sh` over every address for a **grant census**. Expect what
+   `p530` found: a minority permissive, a long ungranted tail, and at least one
+   licence asserted in a wiki that the repository does not carry.
+3. Rank by **distinct mentions without adoption**. That number is the cost of
+   rediscovery, and it is the number that justifies the engagement.
+4. Put the index **in front of** the process that keeps losing things, not after
+   it. 🔴 `p528` named a rewrite as the cause and repaired the symptom; the debt
+   recurred one pass later because the control sat downstream.
+
+**Three defects to carry in, each of which cost this base a pass.**
+🔴 Case-sensitivity: `LICENSE.txt` ≠ `LICENSE.TXT` — generate variants, never
+list them. 🔴 Default branches: **15% of addresses** are not `main`/`master`
+(`develop`, `dev`, `mobile`). 🔴 Search excludes forks unless the query says
+`fork:true`, and forks are not lesser objects — one was an **IMS-certified**
+library.
+
+**Shape:** 3–4 weeks for a first census; the instrument is already written.
+**Region:** Global. 🔵 Best sold to organisations with long-lived internal
+platform estates — which in this sector means ministries and university systems.

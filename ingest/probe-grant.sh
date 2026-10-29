@@ -10,6 +10,16 @@
 #   p516 wrote: "the fix belongs in the instrument, not in prose ... until the probe
 #   changes, expect a fourth instance." This is the probe.
 #
+#   p530 FOUND THE FOURTH INSTANCE ANYWAY, in this file, in a new dimension:
+#   raw.githubusercontent.com is case-sensitive on the WHOLE filename including the
+#   extension, and this list carried `LICENSE.txt` but not `LICENSE.TXT`. So
+#   openedx/XBlock (Apache-2.0, 471*) returned only `NOTICE.txt` and was one absent
+#   file away from being filed UNRESOLVED while carrying a plain Apache licence at
+#   `LICENSE.TXT`. This is the same bug class p529 recorded twice (`readme.md` vs
+#   `README.md`) and did not generalise to "any channel, any case". The fix below is
+#   therefore GENERATED case variants, not three more hand-written rows -- a
+#   hand-written list is what failed twice.
+#
 # WHAT IT GUARANTEES
 #   1. The default branch is RESOLVED (git ls-remote --symref), never assumed.
 #   2. Grant filenames are probed in 14 languages before any "no licence" verdict.
@@ -50,6 +60,25 @@ GRANT_NAMES=(
   # Arabic
   الترخيص
 )
+
+# p530: expand every ASCII name into its case variants, because the remote is
+# case-sensitive and authors are not consistent.  For `LICENSE.txt` this yields
+# `LICENSE.TXT`, `license.txt` and `License.txt` as well.  Non-ASCII names are
+# passed through unchanged -- case folding is not meaningful for them here.
+_expanded=()
+for _n in "${GRANT_NAMES[@]}"; do
+  _expanded+=("$_n")
+  case "$_n" in
+    *[!\ -~]*) continue ;;                     # skip non-ASCII (CJK, Cyrillic, Arabic)
+  esac
+  _up=${_n^^}                                  # LICENSE.TXT
+  _lo=${_n,,}                                  # license.txt
+  _ti=${_lo^}                                  # License.txt
+  for _v in "$_up" "$_lo" "$_ti"; do
+    case " ${_expanded[*]} " in *" $_v "*) ;; *) _expanded+=("$_v") ;; esac
+  done
+done
+GRANT_NAMES=("${_expanded[@]}")
 
 spdx_of() { # read first 4KB and name the grant
   local body="$1"

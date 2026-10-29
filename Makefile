@@ -620,7 +620,11 @@ gate-i2-sweep-crosscheck: ## p407 — Gap 406-A: the two instruments cross-check
 
 gate-action-answered: ## p421 — no pass may DELIVER an action the corpus already answers.  `action-gap-crosscheck` (pase 59) is this question's first instrument and has been in NO make target for ~360 passes; run over the live corpus it reports 0 citations, because it reads the retired `pase N`/`gap N`/`CERRADO` notation.  This is that question re-notated, with the RATCHET pinned at p420's specimen.
 	@cd compose/code/p421-action-answered && { $(PY) test_action_answered.py > $(ACTIONANS_LOG) 2>&1 || { echo "🔴 p421-action-answered FAILED — the suite's own report follows:" ; sed "s/^/   /" $(ACTIONANS_LOG) ; false ; } ; } && echo "── p421-action-answered (29 controls: the zero-denominator guard \`action-gap-crosscheck\` lacked, the real \`ACTION p420-E\` specimen on both halves, the three amendments that cut a 268-finding first draft to 2, both section notations, T103 attribution by row-then-cell, the STALE arm's forward-reference control, and the prose-first-cell hole pinned OPEN rather than closed by a refuted fix)" && echo "   PASS" || exit 1
-	@cd compose/code/p421-action-answered && $(PY) -I action_answered.py ../../.. | head -6
+# p530: `head -6` printed the six summary counters — including `findings: N` — and cut the
+# findings themselves, which begin at line 8. The gate could state that it had found
+# something and could not say what. Same class as p277, where a suite could prove a
+# failure and not name it. The whole report is printed now.
+	@cd compose/code/p421-action-answered && $(PY) -I action_answered.py ../../..
 
 gate-carried-existence: ## Gap 405-C — the EXISTENCE of a CARRIED address, swept (offline controls; the sweep itself is ONLINE and stays out of hooks)
 	@cd compose/code/p406-carried-existence && { $(PY) test_carried_existence.py > $(CARRIEDEX_LOG) 2>&1 || { echo "🔴 p406-carried-existence FAILED — the suite's own report follows:" ; sed "s/^/   /" $(CARRIEDEX_LOG) ; false ; } ; } && echo "── p406-carried-existence (29 controls: the decay rate's two sides with CHANNEL-ERROR on NEITHER, C12's constructed population where the three readings differ, p293's C9' re-asserted plus the MOVED bound this pass measured, the retry arm, and p351's rejection arm as the population guard)" && echo "   PASS" || exit 1
@@ -1415,8 +1419,14 @@ promotion-backlog: ## p436 — the adjudicated promotion backlog with its denomi
 	@$(PY) -I compose/code/p436-promotion-ledger/ledger.py . $(PROMO_LEDGER) 100000 || true
 	@awk -F'\t' 'NR>1{print $$8}' $(PROMO_LEDGER) | sort | uniq -c | sort -rn
 
+# p530: `| head -40` made this target report 40 of 10 362 rows — 0.4% — and, worse,
+# `head` closing the pipe killed the script on BrokenPipeError BEFORE it printed its
+# own totals, so the target emitted a traceback and no summary. Snapshots are walked
+# in sorted order, so what survived was always the OLDEST one. The rows now go to a
+# committed artefact and only the summary is printed.
 archive-drops: ## p436 — rows present in an archive/ snapshot and absent from the live corpus.  A measurement, never a failure.
-	@$(PY) -I compose/code/p436-promotion-ledger/archive_drop.py . | head -40 || true
+	@$(PY) -I compose/code/p436-promotion-ledger/archive_drop.py . > evidence/archive-drops.tsv || true
+	@echo "rows -> evidence/archive-drops.tsv"
 
 dead-citations: ## p436 — gap-register citations whose finding ID no live shelf defines.  A measurement, never a failure.
 	@$(PY) -I compose/code/p436-promotion-ledger/finding_citations.py . || true

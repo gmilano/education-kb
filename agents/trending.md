@@ -4,6 +4,209 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p530` — `2026-10-29` — **🔴 THIS BASE DECLARED "ZERO PERMISSIVE SIS" ONE PASS AGO AND THE COUNTER-EXAMPLE HAS BEEN IN ITS OWN HISTORY SINCE `p108`: `academico-sis/academico`, **MIT**, **409★**, pushed yesterday. 🟢 `Gap 529-A` CLOSES — the address ledger exists, and its first run paid for itself by falsifying a published non-finding. 🟢 `Gap 529-B` CLOSES WITH A MECHANISM, NOT A RULE: the API's "absences" are FORKS, and `fork:true` returns every one of them. 🟢 `Gap 528-D` CLOSES on the reverse direction. 🔴 THREE REGISTERED (`530-A`…`530-C`).**
+
+### 🔴 The finding: the base's own history contained the refutation of its own headline
+
+`p529` published this, as a measured non-finding:
+
+> 🔴 **Still no permissive SIS — now measured, not declared.** At `stars:>40` the
+> global field is **four addresses**: GPL-2.0, **no grant**, AGPL-3.0 (dead 2021),
+> GPL-3.0 (dead 2017). 🔴 **Zero permissive.**
+
+🟡 **`p529`'s census was correct for the query it ran.** Re-run verbatim,
+`student information system school management in:name,description stars:>40`
+still returns `total_count: 4`, still the same four addresses, and **still zero
+permissive**. So this is not an arithmetic error, and the correction below is not
+that `p529` miscounted.
+
+🔴 **It is that one query's `total_count` was published as "the global field".**
+A second, equally reasonable query over the same field —
+`topic:student-information-system stars:>40` — **also** returns exactly four, and
+**only two of the four are the same addresses**:
+
+| # | Address (`topic:`-qualified field) | Grant, read from the licence file | Stars | Forks | Default branch | Live |
+|---|---|---|---|---|---|---|
+| 1 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 GPL-2.0 | **648** | 394 | 🟡 `mobile` | 🟢 2026-10-29 |
+| 2 | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **MIT** | **409** | 150 | `main` | 🟢 2026-10-28 |
+| 3 | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **no grant** — UNRESOLVED on **159** filename variants | 347 | 288 | `master` | 🟢 2026-10-26 |
+| 4 | [`Mstfakts/College-Management-System`](https://github.com/Mstfakts/College-Management-System) | 🔴 **no grant** — UNRESOLVED on 159 variants | 77 | 29 | `master` | 🟢 2026-10-22 |
+
+🔴 **One of these four is MIT, at 409★, with 150 forks, pushed the day before
+this pass.** Evidence:
+[`../evidence/sis-regrade.2026-10-29-p530.tsv`](../evidence/sis-regrade.2026-10-29-p530.tsv).
+
+🔵 **Why the first query cannot see it, which is the generalisable part.** GitHub
+free-text requires *all* terms. `academico-sis/academico` describes itself as a
+*"school management platform"* and **never says "student information system"** in
+its name or description — only in its **topics**. So `in:name,description` was
+structurally incapable of returning the field's one permissive member, and no
+amount of paging would have surfaced it.
+
+➡️ **The corrected claim.** The union of the two queries is **six** addresses, of
+which **one is permissive**. "Zero permissive" was true of a four-address sample
+and false of the field. 🔴 **Two reasonable queries over one field disagreed on
+half their membership and on the headline conclusion** — so a single query's
+`total_count` is a sample size, never a denominator. **Recorded as shelf rule
+12.**
+
+🔵 **And the reason it was false is the whole point of `Gap 529-A`.**
+`academico-sis/academico` is not a discovery. It appears in this base's history
+**16 times, across passes `p108` → `p519`**, recorded as MIT, and it had never
+reached a curated file. The base did not fail to find it. **It failed to re-find
+what it had already written down.**
+
+🟡 **Two corrections to that non-finding, not one.** The second is softer and
+matters for every census on this base: `topic:student-information-system` is a
+**tag**, not a field. `total_count: 4` is four addresses *that carry the tag*.
+The free-text query `student information system education stars:>40` returns a
+result set two orders of magnitude larger. 🔵 This is `p178`'s defect — *"the
+census was measuring a tag"* — recurring in a new instrument. **A tag census is
+publishable; calling it "the global field" is not.**
+
+### 🟢 `Gap 529-B` CLOSES — and it closes on a mechanism, which a rule could not do
+
+`p529` asked `p530` to measure the API↔`raw` disagreement rate, and recorded
+**shelf rule 9**: *absence from an API search is not evidence of non-existence.*
+True, and it left the cause unknown — so the rule had to be obeyed on faith and
+could not be designed around.
+
+**Measured, 29 addresses across two batched `repo:`-qualified calls:**
+
+| | Count | Rate |
+|---|---|---|
+| Addresses asked of the API | 29 | — |
+| 🔴 Not returned | **1** | 3.4% |
+| 🟢 Returned, grant agreeing with the licence file | 27 / 28 | 96.4% |
+| 🔴 Returned as `NOASSERTION` while carrying a clean grant | **1** | 3.6% |
+| 🔴 `raw` channel misses on first attempt | **1 / 13** | 7.7% — **and the channel was not at fault** |
+
+🟢 **The mechanism, and it is one qualifier wide.** The single API absence was
+[`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor).
+It is **`"fork": true`**. So is `p529`'s absence,
+[`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library)
+(**54★**, the IMS-certified LTI 1.3 PHP library). **GitHub's repository search
+excludes forks unless the query says `fork:true`.** Adding it returns **both,
+immediately, with full metadata** — `total_count: 2`.
+
+➡️ **Shelf rule 9 is superseded by shelf rule 10**, which is actionable where 9
+was only cautionary: *every census query carries `fork:true`, or its denominator
+is "non-forks only" and must say so.*
+
+🔴 **The consequence is larger than the two addresses.** Every API census this
+base has run — including `p529`'s `total_count: 222` Moodle field and the
+`stars:>40` SIS field above — **silently excluded forks**. Those denominators are
+floors, not counts, and a fork is not a lesser object: `lti-1-3-php-library` is
+IMS-certified and `mitodl/open-learning-ai-tutor` is MIT Open Learning's own
+tutor backend.
+
+🟢 **The `raw` miss resolves the same way — as this base's bug, not a channel
+property.** [`openedx/XBlock`](https://github.com/openedx/XBlock) (Apache-2.0,
+**471★**) returned nothing on five licence filenames, then resolved at
+**`LICENSE.TXT`** — uppercase extension. `raw.githubusercontent.com` is
+case-sensitive across the **whole** filename, and
+[`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) carried `LICENSE.txt` and
+not `LICENSE.TXT`. 🔴 **Third instance of one bug class** — `p529` recorded
+`readme.md` vs `README.md` twice and wrote a rule naming those two spellings
+instead of the class. 🟢 **Fixed in the instrument, generatively:** the probe now
+expands every ASCII grant name into upper, lower and title variants, **53 → 159
+names**. It found `LICENSE.TXT` on the next run.
+
+⚠️ **XBlock was one absent file from being filed ungranted.** Its Apache-2.0
+verdict had been arriving via `NOTICE.txt`, which happens to quote the licence.
+**The right answer by luck is still a broken probe.**
+
+### 🟢 Promoted off the ledger — nine agent rows, every one already owned
+
+Shelf **16 → 21** on [`top.md`](top.md), plus four reference-band entries. Every
+row below was drawn from
+[`../evidence/promotion-queue.2026-10-29-p530.tsv`](../evidence/promotion-queue.2026-10-29-p530.tsv)
+— addresses this base has described **five or more times** and never filed — and
+re-verified this pass on **two channels**.
+
+| Agent | Grant | Stars | Passes seen before being filed | Region (origin) |
+|---|---|---|---|---|
+| [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 MIT | **156** | 🔴 **31**, `p42`→`p526` | unplaced |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 🟢 MIT | **1 259** | 🔴 **29**, `p42`→`p526` | APAC (Chinese-language README) |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 MIT | **1 015** | 12, `p416`→`p519` | unplaced |
+| [`ai-shifu/ai-shifu`](https://github.com/ai-shifu/ai-shifu) | 🟢 Apache-2.0 | 329 | 12, `p108`→`p472` | APAC |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 MIT | 1 | — (**API-invisible: fork**) | 🟢 North America (MIT Open Learning) |
+
+🔵 **`OpenTutor` at 31 passes is the most-rediscovered unfiled address in this
+base.** Thirty-one separate passes described a **156★ MIT** adaptive-learning
+workspace and none of them filed it.
+
+### 🟡 Reference band — real, permissive, and deliberately not shelf rows
+
+Filed so that a later pass does not spend its budget rediscovering them, under
+the rule `p529` set on `iwuzhu/kiro-ai-grading-system`: **a near-zero-star tree
+is a reference, not a component.**
+
+- 🟢 [`microsoft/Shiksha-Copilot`](https://github.com/microsoft/Shiksha-Copilot) — **MIT**, **9★**, pushed 2026-10-28. Microsoft's teacher-copilot work for Indian classrooms. 🔵 **APAC, stated by name**, and the base's first Microsoft-origin education agent.
+- 🟢 [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) — **MIT**, **0★**, pushed 2026-10-27. *"Agente tutor virtual autónomo … para educación superior rural en Risaralda"* — **Universidad Tecnológica de Pereira, Colombia.** 🔵 **A stated-origin LATAM university agent**, which is exactly the object `p528` found this base asserting did not exist.
+- 🟢 [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) — **MIT**, **78 117★**. 🔴 **Not an agent**: eighteen lessons. It has been in this base's history since `p107` and would be the highest-starred row on any shelf, which is precisely why it must stay off one. **Curriculum, not component.**
+- 🟢 [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) — **MIT**, **10★**. Canvas MCP server that grades and comments. Kept visible because the Canvas bridge field matters more than its star counts.
+
+### 🟢 `Gap 528-D` CLOSES on the reverse direction — and the instance is real
+
+`p528` opened the fourth verdict band for **content licences on code** (CC BY-SA
+on a skills library, CC0 on `gen-mentor`). `p529` asked for the reverse — **a
+code licence on a corpus** — and did not run it. Run here, over every data-shaped
+address on this base:
+
+| Address | What it ships | Grant | Verdict |
+|---|---|---|---|
+| [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) | **1 721 curriculum learning objectives** as JSON/SQLite/CSV — the product *is* the data | 🔴 single `LICENSE` = **MIT** | 🔴 **The reverse category error, measured.** MIT is a software grant; over a dataset it is silent on database rights and on attribution for the data itself. |
+| [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) | Curated Chilean public data (incl. education) | 🟢 MIT, badged **"Code License: MIT"** | 🟢 **The correct pattern.** The grant is scoped to code *in the badge*, and a per-dataset `redistribution_report.md` records licence, required attribution and redistribution permission **dataset by dataset, regenerated on every build**. |
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | A **specification document**, 956★ | 🟢 Apache-2.0 | 🟡 **Not an error — a deliberate choice.** Apache-2.0 carries a patent grant, which is what a standards body wants on a spec. |
+
+🔴 **The sharpest part: the same organisation gets it right and wrong in two
+repositories.** This base recorded at `p516` that `bncc-dev/bncc-benchmark`
+splits **`LICENSE-CODIGO.md` (MIT)** from **`LICENSE-DADOS.md` (CC BY 4.0)**.
+Its sibling `bncc-dados` ships **one MIT file over pure data**, and the split
+filenames **404**. 🔵 **So the error is not ignorance — it is per-repository
+drift inside one team.** Which means a licence verdict cannot be inherited from
+an organisation, only read per address. Evidence:
+[`../evidence/corpus-grant-sweep.2026-10-29-p530.tsv`](../evidence/corpus-grant-sweep.2026-10-29-p530.tsv).
+
+### 🔵 Declared non-findings — stated so silence is not read as coverage
+
+- 🔴 **Generic web search returned zero shelf-grade findings for the second
+  consecutive pass.** `top open source AI agents education 2026 github MIT
+  tutoring grading` and `github trending education AI 2026 ...` produced no
+  address that survived verification. 🔴 **And one of them mis-stated a licence
+  this base has read first-hand:** a blog described
+  [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) as *"completely open
+  source under the MIT license"* at *"46.2k stars"*. It is **Apache-2.0** and
+  **49 359★** (exact, this pass). 🔵 Fourth recorded instance of an aggregator
+  asserting a grant the repository does not carry. **Every promotion this pass
+  came from the ledger or a `topic:`-qualified API call; none came from search.**
+- 🔴 **The four regional *policy* legs returned no new attributable material.**
+  Re-run for NA, EMEA, APAC and LATAM, every substantive item they surfaced was
+  **already on this base**: Ohio's district-policy mandate, Idaho S.B. 1227,
+  Maryland S.B. 720, Alabama H.B. 329, Colombia's CONPES 4144, UNESCO IESALC,
+  and the `Digital Omnibus` deferral of high-risk education duties to
+  **2 December 2027**. 🔵 On the AI Act the base is **more precise than the
+  sources** — it holds the Article 50 marking grace as `2026-12-02` from
+  `eur-lex`, where the vendor blogs paraphrase. 🟡 **This is a real result:
+  `p528` called these legs "saturated", `p529` withdrew that as a property of
+  the query. `p530` re-ran them on the `p529` wording and they were saturated
+  after all.** What is *not* saturated is survey data — see [`../intel/market.md`](../intel/market.md).
+- 🟡 **`Study-Mate`'s region is inferred from a Chinese-language README, not
+  stated.** Marked APAC on that basis and flagged, per the rule that an author's
+  name and a domain are not a country.
+- 🔴 **`pupilfirst/pupilfirst` read but NOT shelved.** **MIT** at the licence
+  file (the API said `NOASSERTION` — shelf rule 8 again), **980★** — and
+  **pushed 2025-12-09**, eleven months stale. 🔵 A dormant 980★ LMS is a
+  migration source, not a component.
+- 🔴 **No permissive SIS *agent* — distinct from the SIS finding above.** The
+  permissive SIS now exists (`academico`); what does not exist is an agent that
+  speaks to one. The Moodle and Canvas bridge fields have dozens of entries;
+  `topic:student-information-system` crossed with MCP returns nothing. 🔵 **This
+  is the clean greenfield this pass found.**
+
+---
+
 ## 🆕 `p529` — `2026-10-29` — **🟢 THE MEASUREMENT CEILING THIS BASE HAS RECORDED AS BLOCKED SINCE `p3xx` IS LIFTED: THE GITHUB SEARCH API IS REACHABLE THIS PASS, IT BATCH-VERIFIES EXISTENCE + GRANT + STARS + LIVENESS, AND IT CONFIRMED ALL FOURTEEN SHELF ROWS ON THE FIRST RUN. 🔴 IT ALSO FALSIFIED `p528`'S HEADLINE: the Moodle MCP field is not eleven codebases, it is 222, its ceiling is not 27★ but 52★ — and the ceiling is UNGRANTED. 🟢 Shelf 14 → 16. 🟢 `Gap 528-A` CLOSES, `528-B` CLOSES WITH NO PHANTOMS, `528-C` AND `528-D` ANSWERED WITH AN INSTRUMENT RULE. 🔴 And the new instrument has a false-negative mode that nearly made me repeat `528-B` in reverse.**
 
 ### 🟢 The instrument — what changed, and what it is worth
