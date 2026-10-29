@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Current Trends
 
-**Pass `p533` · 2026-10-29.** **Nineteen** trends. Each one is stated so it could be
+**Pass `p534` · 2026-10-29.** **Twenty** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -316,6 +316,17 @@ contributors.
 
 ## 12. 🆕 The unit of LMS integration is the **institution**, not the product
 
+> 🟢 **`p534` restores this trend's load-bearing clause, which
+> `make gate-prose-claims` reported as `CLAIM-LOST`:**
+> the integration layer inherits the authority of the system it attaches to,
+> **and none of its defences**. 🔵 An MCP server mounted on an LMS speaks with a teacher's or an
+> admin's token, so it can grade, enrol and message — while the LMS's own
+> consent flows, audit trail and rate limits sit on the *web* path the agent
+> does not use. 🔴 That is why every bridge on this base is graded on its
+> **write** model (default-off, course allow-list, `confirm=true`) and not on
+> its tool count, and why `p534` specifies the Canvas read and write servers as
+> two separate mounts in `P569`.
+
 **Stated so it can be wrong:** *if this trend is right, the Moodle-bridge field
 should show many single-institution codebases and no scaled product; if it is
 wrong, we should see two or three bridges with most of the stars and real
@@ -527,6 +538,44 @@ turned "build it" into "mount it". **Disconfirmed if** a sweep of the
 institutional orgs this base already cites turns up no further unfiled AI layers
 — the test is `Gap 533-A`, and it is cheap: one API call per org.
 
+> 🟢 **`p534` RAN THAT TEST, AND THE TREND SURVIVES IT — with its claim
+> strengthened in one dimension and weakened in another.**
+>
+> 🟢 **Strengthened: the split is not two-way, it is n-way.** MIT Open Learning
+> publishes **three** AI repositories, and the one this base had filed was the
+> smallest. [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor)
+> (MIT, 1★, 159 commits) is the **pedagogical engine**;
+> [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) (**MIT**, 0★, **816
+> commits**) is the **service** that runs four agents on LangGraph over Django
+> Channels with RAG evaluation and three tracing backends; and
+> [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) (**BSD-3-Clause**,
+> 551 commits) is the **toolchain** under both. 🔵 So the unit of institutional
+> publication is not "platform + intelligence" but **one repository per release
+> cadence** — engine, service and toolchain each move on a different clock, which
+> is the same mechanism the Artemis↔EduTelligence compatibility matrix makes
+> visible, applied one level deeper.
+>
+> 🟢 **Also confirmed on a third org:** `Ed-Fi-Alliance-OSS`, whose standards and
+> service repositories were filed here, ships
+> [`Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) and
+> [`AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC)
+> (both **Apache-2.0**, both **0★**) and neither was held.
+>
+> 🔴 **Weakened: one named org produced a clean negative.**
+> `learningequality` — Kolibri's org, **238 repositories** — ships **no AI-layer
+> repository at all**; its two keyword hits are substring false positives
+> (`sushi-chef-aimhi`, `sushi-chef-aiep`). `1EdTech`, `jupyterhub` and `adlnet`
+> returned zero as well. 🔵 **So the trend is a property of institutional
+> *producers of intelligence*, not of institutional producers generally** — a
+> standards body or an offline-first platform team may simply have no AI layer,
+> and this trend must not be used to assert that an unfound one exists.
+>
+> 🔴 **And the instrument has a stated limit:** the enumeration matched the
+> keyword `ai`, and the pass's most consequential negative —
+> [`frappe/flow_client`](https://github.com/frappe/flow_client), **archived
+> 2026-10-22** — only appeared under a second query on `flow`. Four of the five
+> negatives above are therefore weaker than they read (`Gap 534-A`).
+
 ## 19. 🆕 The grant is becoming **path-scoped**, because the artefact is becoming a **dataset**
 
 **The claim:** as this sector's open contribution shifts from code to **corpora,
@@ -563,6 +612,48 @@ the dataset-bearing repositories on this base turn out to be predominantly
 single-grant on inspection — which is the backfill `Gap 533-B` asks for and
 nobody has run.
 
+## 20. 🆕 In this sector, **popularity is anti-correlated with fitness** — and every ranked instrument on this base has it backwards
+
+**The claim, stated so it can fail:** for an education engagement, an
+open-source repository's star count predicts how *useful* it is **negatively**,
+because the sector's deployable assets are institutional and its popular assets
+are curricula.
+
+🟢 **The evidence is a single table, and it is this base's own promotion
+history.** The three highest-star assets it has ever promoted, and the largest
+find of this pass:
+
+| Address | Stars | Fitness | What a client could deploy |
+|---|---|---|---|
+| [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | **458 181** | `curriculum` | 🔴 nothing — it is a curriculum |
+| [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) | **78 100** | `curriculum` | 🔴 nothing — it teaches a person |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | **~1 100** | `curriculum` | 🔴 nothing — twelve lessons |
+| 🟢 [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) | 🔴 **0** | `dependency` | 🟢 **four production education agents**, RAG eval, three tracing backends, 816 commits |
+
+🔵 **Why it holds rather than being a coincidence of four rows.** A star is a
+signal from *readers*, and the readers of education-AI code on GitHub are
+overwhelmingly learners, not institutions. An institution's own deployment
+repository has no audience at all: nobody stars the service their university
+runs. 🔴 So the sector's two populations — **people learning to build agents**
+and **institutions running them** — produce star counts that differ by five
+orders of magnitude in the *wrong* direction for a studio deciding what to
+build on.
+
+🔴 **The concrete failure this caused, inside this base:** `p533` built a
+materiality-ranked promotion queue that gates on grant and liveness and then
+orders by **measured stars**. Run against this pass's finds, that queue ranks a
+**1★, 159-commit** engine above the **0★, 816-commit** service that runs it,
+and both below a curriculum. 🟢 **The fix is not to drop stars but to add the
+two dimensions a star cannot carry** — `fitness` (filed this pass on
+[`../agents/top.md`](../agents/top.md)) and **depth** (commits, open PRs,
+release discipline, a named deployment host). → `Gap 534-C`.
+
+**Disconfirmed if** a star-ordered queue and a depth-ordered queue over the same
+gated address set produce substantially the same top ten. 🔵 That comparison is
+one run of
+[`../ingest/promotion-rank.py`](../ingest/promotion-rank.py) with a second sort
+key, and it has never been done.
+
 ## Counter-signals worth holding
 
 - **ANZ leans toward banning AI in schools** (Ipsos Education Monitor 2026) while
@@ -572,6 +663,15 @@ nobody has run.
   tutoring is rebuilding from a low base of trust, not a high one.
 - **Market-size estimates diverged rather than converged** this pass: the 2026
   band is now **USD 6.4B-12.3B**. Quote the 30-35% CAGR, not a point estimate.
+  🆕 **`p534` widens it further and the widening is the signal.** Three firms
+  read this pass: The Business Research Company **$10.6B (2026)** at 40.9 %,
+  IMARC $6.4B (2025) → $79.6B (2034) at 31.35 %, Persistence **$3.7B (2026)** at
+  21 %. 🔴 **High over low for the same year is 2.9×**, all three are
+  vendor-sponsored, and the band should be quoted as **$3.7B–$10.6B, 21–41 %**.
+  🔵 **The one figure from that sweep worth more than the band:** teacher AI
+  professional development moved **29 % (early 2024) → 50 % (late 2025)**, and
+  K-12 holds **45.62 %** of adoption while higher education holds the revenue —
+  the sector's users and its money are in different segments.
 - 🆕 **Policy is not deployment.** UNESCO's APAC analysis is blunt that adoption
   needs **infrastructure, connectivity and teacher training**, and that much of
   the region has unmet basic educational needs first. CENIA says **13 of 19 LAC

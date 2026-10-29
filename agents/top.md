@@ -6,9 +6,48 @@ updated: 2026-10-29
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p533` · 2026-10-29.** **Thirty-four** real agents, every row read
+**Pass `p534` · 2026-10-29.** **Thirty-six** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
+
+> 🟢 **`p534`: two rows added, and the headline is that `Gap 533-A` was right
+> about the shape and wrong about the scale.** The gap said this base's "is it
+> filed?" test matches on the **address**, so an institution that ships its
+> platform and its intelligence as separate repositories reads as *filed* the
+> moment the platform is. 🟢 **Nine organisations already cited on these pages
+> were enumerated this pass and the shape held twice more**, census in
+> [`../evidence/org-layer-diff.2026-10-29-p534.tsv`](../evidence/org-layer-diff.2026-10-29-p534.tsv):
+>
+> 🔴 **MIT Open Learning ships three AI repositories and this base held one.**
+> `p533` filed [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor)
+> (MIT, **1★**) and stopped. [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai)
+> — **MIT**, **816 commits**, **0★** — is the backend that *serves* it: four
+> education agents on LangGraph (recommender, syllabus, **VideoGPT**,
+> **TutorBot**) over Django Channels, with RAG evaluation and LangSmith/PostHog/Opik
+> tracing. [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit)
+> (**BSD-3-Clause**, 551 commits) is the toolkit both are built with, filed on
+> [`../repos/foundations.md`](../repos/foundations.md). 🔵 **Every star-ranked
+> instrument on this base ranks a 1★ repo above an 816-commit production
+> backend**, which is `Gap 534-C`.
+>
+> 🔴 **The instrument claim that made this look impossible was wrong, and it was
+> this base's own.** `p532` and `p533` both record *"`github.com` and
+> `api.github.com` are both **HTTP 403** through this session's proxy."* 🟢
+> **Measured this pass: `github.com` HTML is 403 to `curl` and 200 through
+> WebFetch**, which serves org repository listings **with star counts and
+> licence labels**; `api.github.com` is 403 on **both** channels
+> ([`../evidence/channel-asymmetry.2026-10-29-p534.tsv`](../evidence/channel-asymmetry.2026-10-29-p534.tsv)).
+> 🔵 A host is not blocked — a *channel* is. → **shelf rule 15**.
+>
+> 🟢 **And the six-pass search drought ends, narrowly and with a caveat.** Leg 1
+> returned one genuinely new live permissive address,
+> [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch)
+> (**MIT**, **~1.1k★**, 262 forks, topics `ai-education` + `open-source-education`),
+> filed on [`../repos/foundations.md`](../repos/foundations.md) as a
+> **curriculum** — not an education-sector product, and said so rather than
+> shelved as an agent. 🔴 **The search snapshot reported 796★ against ~1.1k on
+> the page** — a ~38 % disagreement, which is why no star figure on these pages
+> is ever search-sourced.
 
 > 🟢 **`p533`: five rows added, and the headline is a whole agent *suite* this
 > base had been looking straight past.** This file, [`../repos/foundations.md`](../repos/foundations.md)
@@ -161,7 +200,7 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 34 verified education agents
+## Shelf — 36 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -194,17 +233,29 @@ header, a placeholder or an example.
 | 🆕 **brightspace-mcp-server** | [RohanMuppa/brightspace-mcp-server](https://github.com/RohanMuppa/brightspace-mcp-server) | MIT | **60** | 🟡 North America — *inferred* from the repo's own `purdue` topic, not stated | Grades, due dates, assignments, announcements, rosters, syllabus and course content over MCP for **D2L Brightspace**, published to npm and documented as working against any institution's tenant. 🔴 **The third major LMS finally has a bridge on this shelf.** 29 forks against 60★ — the fork-to-star ratio of this field's one-university-one-bridge shape. Pushed 2026-10-29. |
 | 🆕 **canvas-lms-mcp** | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | MIT | 10 | 🟡 **unstated** — no country signal in repo, README or profile | Canvas over MCP: courses, assignments, submissions, rubrics, quizzes — and, per its own description, **grade and comment**. 🟢 It is shelved beside the larger `vishalsachdev/canvas-mcp` for one reason: the **write** half. A bridge that only reads cannot close the teacher's loop, and grading is the task the teacher is actually paying to shed. Pushed 2026-10-27. |
 | 🆕 **pi-language-tutor** | [mackt/pi-language-tutor](https://github.com/mackt/pi-language-tutor) | MIT | **82** | 🟡 **unstated** | Language tutoring attached to work the learner was doing anyway: it reviews the prompts a developer writes for spelling, grammar and natural phrasing, and renders the agent's replies as bilingual immersive translations. 🔵 **The only row on this shelf where the lesson is a side effect of the day job** — which is the shape "language learning is the fastest-growing segment" implies and almost nothing in the open-source field builds. 13 forks, pushed 2026-10-26. |
-
 | 🆕 **EduTelligence** (Iris · Athena · Atlas) | [ls1intum/edutelligence](https://github.com/ls1intum/edutelligence) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2025 TUM Applied Education Technologies` | 17 | 🟢 **EMEA (Germany)** — *stated*: TU München | **Three agents in one permissive monorepo, and the AI layer of a platform this base already filed.** **Iris** (*Pyris*) is a virtual tutor that reads the student's submitted code, Artemis's own feedback and the **build logs** to explain a failing programming exercise, plus RAG over instructor-provided course material and automated competency generation — Python 3.13, FastAPI, Weaviate. **Athena** is (semi-)automated assessment for text *and* programming exercises, built explicitly for **large courses**. **Atlas** generates competency models, infers the relationships between competencies and recommends learning activities, and states it is *"adaptable to other LMSs"*. 🔵 **The maturity signal is not the 17★ — it is the 21-row Artemis↔EduTelligence version-compatibility matrix** (current through Artemis `10.2.x`), which is release discipline no other institutional row here publishes. 🔴 Filed only at `p533`; see `Gap 533-A`. |
 | 🆕 **Tov-learn** | [TovTechOrg/Tov-learn](https://github.com/TovTechOrg/Tov-learn) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 TovTech` | **36** | ⚪ unplaced — no country on the page, the profile or the copyright line | *"Interactive AI tutor, built as a Claude Code skill."* 🟢 **Spaced repetition is a first-class feature rather than an afterthought**, which puts it in the same half of the stack as `anki-mcp-server` while being a *tutor* rather than a bridge — the retention and the teaching in one skill. 🔵 Shelved for the packaging: it is the harness-native tutor shape that trend 9 predicted, in 36★ worth of code a studio can read in an afternoon. |
 | 🆕 **teacher-exam** (*Ujian Sekolah*) | [naufaldi/teacher-exam](https://github.com/naufaldi/teacher-exam) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Naufaldi Rafif` | 21 | 🟢 **APAC (Indonesia)** — *stated* by the product | Turns one sentence — *"PPKn kelas 5, sumatif tengah semester, sila ke-3, 20 soal"* — into an **A4 print-ready exam sheet**: mixed item types, answer key, and a teacher-facing *pembahasan* (worked explanation) for every question. React 19 + Effect-TS, live at `ujian-sekolah.naufaldi.com`. 🟢 **The only row on this shelf whose output is a sheet of paper**, and it names the problem in hours: Indonesian SD teachers *"spend 4–8 hours a week hand-writing exams in Word."* 🔵 The second regionally-placed row where the *artefact* is the evidence, after `corretor-enem`. |
 | 🆕 **librus-mcp** | [krzysztofbury/librus-mcp](https://github.com/krzysztofbury/librus-mcp) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Krzysztof Bury` | 14 | 🟢 **EMEA (Poland)** — *stated* by the product | MCP server over **Librus Synergia**, the gradebook a large share of Polish schools actually run: grades, attendance, timetable, homework, calendar, announcements, messages, formative assessments, school-year history and student information, with **multiple logins at once**. Published to **PyPI** at `2.5.0`; `v2.0` replaced the `librus-apix` backend with the native API. 🟢 **The fifth LMS/register bridge on this base and the first outside the Anglosphere** — Canvas, Brightspace, Blackboard and Moodle are all US/global products; this is a *national* system, which is the shape trend 12 says the integration layer really has. |
 | 🆕 **adaptive-knowledge-graph** | [MysterionRise/adaptive-knowledge-graph](https://github.com/MysterionRise/adaptive-knowledge-graph) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2025 Adaptive Knowledge Graph Contributors` | 18 | ⚪ unplaced | *"A local-first AI tutor for open textbooks: knowledge-graph-enhanced retrieval with cited answers and adaptive quizzes, running entirely on your own machine."* **Neo4j** knowledge graph + hybrid **BM25 and vector search in OpenSearch** + a local LLM via **Ollama**, shipping two **OpenStax** textbooks (US History, Principles of Economics) and synthetic learner profiles. 🟢 **The most completely specified retrieval architecture on this shelf** — and the one row that pairs *cited* answers with adaptive quizzing over an openly-licensed corpus. 🟡 **Its README calls it *"a proof of concept and pilot prototype, not a production system"***, and that is quoted rather than softened: treat the architecture as the asset. |
+| 🆕 **learn-ai** (TutorBot · VideoGPT · syllabus · recommender) | [mitodl/learn-ai](https://github.com/mitodl/learn-ai) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2024 Matt Bertrand`, read at `main` `1e297ab` (1 070 B, `d1ea675aa9bb`) | 🔴 **0** | 🟢 **North America** (MIT Open Learning) — *stated* | **Fitness: dependency.** 🔴 **The largest find of this pass and the lowest-starred row on this shelf.** Four education agents on **LangGraph**, served over **Django Channels**: resource recommendation, syllabus, **VideoGPT** and **TutorBot** — with **RAG evaluation** and three tracing integrations wired in (**LangSmith, PostHog, Opik** at `opik.ol.mit.edu`), against the RC environment `rc.learn.mit.edu`. **816 commits**, no forks, no stars. 🔵 **This is the serving layer of [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor), which `p533` filed and this base then stopped looking** — the second confirmed instance of `Gap 533-A`'s shape, and the one that proves a star gate cannot see an institution's production stack. |
+| 🆕 **Fiona** | [Ed-Fi-Alliance-OSS/Fiona](https://github.com/Ed-Fi-Alliance-OSS/Fiona) | 🟢 **Apache-2.0** — title block `Apache License Version 2.0, January 2004`, read at `main` `a502843` (11 357 B, `c71d239df917`) | 🔴 **0** | 🟡 **North America** — *inferred from the product, not the page*: the org profile states **no location**; the Ed-Fi Data Standard is adopted by US state education agencies | **Fitness: reference implementation.** *"An AI-powered Slack assistant for the Ed-Fi community."* JavaScript, pushed **2026-10-29**. 🔵 Shelved not for capability but for **where it sits**: the Ed-Fi Alliance governs the interoperability standard that US K-12 student data moves on, and this is that standard-body's own agent — the data-plane end of the stack whose learner-facing end this shelf is full of. 🔴 **Zero stars, and the Alliance's second unfiled Apache-2.0 AI repository**; see [`../repos/foundations.md`](../repos/foundations.md) for `AI-Tools-for-Ed-Fi-SDLC`. |
 
-**Licence split:** **26 × MIT, 7 × Apache-2.0, 1 × BSD-3-Clause** — all
-thirty-four buildable, every cell read from the licence file's title block.
+**Licence split:** **27 × MIT, 8 × Apache-2.0, 1 × BSD-3-Clause** — all
+thirty-six buildable, every cell read from the licence file's title block.
 *Apache-2.0: DeepTutor, k12-teacher-skills, lineage-skill, ai-tutor-app,
-feedbacksystem, ai-shifu, 🆕 get-it. BSD-3-Clause: Open TutorAI CE.*
+feedbacksystem, ai-shifu, get-it, 🆕 Fiona. BSD-3-Clause: Open TutorAI CE.*
+🔴 **`p534` also repaired the table this paragraph counts.** A blank line left
+at `top.md:197` by `p533` **split the shelf in two**, so the last five rows
+rendered as a second, *headerless* table — in which the first data row
+(`🆕 EduTelligence (Iris · Athena · Atlas)`) becomes a **column name**. 🔵 That
+is the exact failure mode this base forbids on the input side ("never leave a
+header as data"), arriving from the output side. 🔴 **And the gate for it
+already existed:** `make gate-tables` has graded the `cross-table-blank` shape
+since `p277`, covers this file, and — tested by reintroducing the defect on
+purpose — fails on it by name (`BLANK-SPLITS-TABLE`). It shipped for a pass
+because **nobody ran it**. See `Gap 534-D`, registered and closed by retraction
+inside this pass.
 
 > 🟢 **`p532` adds four rows and not one of them is a discovery either — that is
 > now five consecutive passes.** All four came off
@@ -313,6 +364,44 @@ passes is **retired this pass**, and it was retired from this base's own records
 rather than from a search. See
 [§ What is still missing](#what-is-still-missing).
 
+## 🆕 `p534` — security advisories on a shelved bridge, two claims restored first-hand
+
+🔴 **`make gate-prose-claims`, run this pass for the first time in at least
+eleven, reported the security facts about this shelf's most-starred Canvas
+bridge as `CLAIM-LOST`** — present in this base's history, absent from this
+file. 🟢 **Re-read first-hand from the repository's own advisory pages** (the
+`github.com` channel the same pass reopened), not restored from memory:
+
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+(**MIT**, 308★, shelved above) published **four advisories on 2026-10-25**:
+
+| Advisory | Severity | What it is |
+|---|---|---|
+| **`GHSA-7pp5-29mw-9jq3`** | 🔴 **High** · CVSS **7.8** (`AV:L/AC:L/PR:L/UI:N/C:H/I:H/A:H`), CWE-94 | **TypeScript sandbox escape via `child_process` in `execute_typescript`.** In local sandbox mode (the default when Docker/Podman is absent), through **1.15.0** caller-supplied TypeScript ran under `npx tsx` with only an in-process network guard — **any authenticated MCP caller could execute OS commands as the server process user**, demonstrated at `uid=0(root)` in a container, and **remotely exploitable under HTTP transport**. Affected: **all versions < 1.16.0**. Patched: **1.16.0** |
+| `GHSA-hmr8-mvr2-mvw5` | 🔴 **High** | **Prompt-injected assistant could disclose course data or change grades through first-call write tools** |
+| `GHSA-7mj9-4mcg-hvhv` | 🟡 Moderate | Canvas bearer token sent to a URL chosen by the file-storage host during upload confirmation, and to off-origin file URLs on download |
+| `GHSA-qf6c-jv93-38gv` | 🔵 Low | Windows: downloaded course files are not actually owner-only (`os.chmod 0o600` has no effect on NTFS) |
+
+🔴 **The fix has a runtime floor, and it is the half that gets missed:** local
+sandbox mode now runs under Node's permission model and **requires Node.js
+22.18 or later**, refusing to execute on anything older. 🔵 **Upgrading
+`canvas-mcp` alone is not enough** — on an older runtime the patched release
+simply will not run `execute_typescript`, and a deployment that upgrades the
+package and not the runtime is **not actually patched**. State the **22.18**
+floor in any deployment note.
+
+🟡 **Residual risk, stated by the advisory itself:** outbound network blocking in
+local mode is **best-effort** (issue #157), container mode and
+`ENABLE_TS_SANDBOX=false` are **unchanged** by the fix, and the executed code
+still holds the caller's Canvas token. 🟢 **Interim mitigation if the runtime
+cannot move:** `EXECUTE_TYPESCRIPT_ENABLED=false` unregisters the tool and
+removes the surface.
+
+🔵 **Why this sits on the agent shelf rather than only in a pattern:** the row
+above recommends this bridge, and a recommendation that omits a High-severity
+RCE in the default mode is not a recommendation. The grant was never the risk
+here.
+
 ## ⚠️ Licence traps — repos that look permissive and are not
 
 Education repositories a naive licence probe grades as buildable. They are not.
@@ -320,6 +409,8 @@ Every row re-read from the **licence file's title block** this pass.
 
 | Repo | Grades as | Actually | Why the trap works |
 |---|---|---|---|
+| 🆕 [openedx/openedx-ai-extensions](https://github.com/openedx/openedx-ai-extensions) | "the official Open edX AI plugin — the platform is already on these pages, so the plugin must be too" | 🔴 **AGPL-3.0** — title block `GNU AFFERO GENERAL PUBLIC LICENSE Version 3`, read at `main` `66d0792` (34 523 B, `8486a10c4393`), **17★** | 🔵 The trap is **inheritance by association**, not a mislabelled file. `openedx/XBlock` is **Apache-2.0** and filed here as the extension point, so "extend Open edX" reads as permissive work — but *this* plugin, the one that houses the AI helpers, carries the platform's AGPL. 🟢 Build the AI layer **behind** an XBlock or an LTI boundary and it stays yours; vendor this plugin and the AGPL reaches the service. 🔴 Found by `p534`'s org enumeration, not by a search. |
+| 🆕 [frappe/flow_client](https://github.com/frappe/flow_client) | "Frappe Flow — native AI agents, tools and triggers for Frappe, 89★, and this base files `frappe/education` and `frappe/lms`" | 🔴 **AGPL-3.0 *and* `Public archive` as of 2026-10-22** — grant at **`license.txt`** on default branch **`develop`**, `4a3189b` | 🔴 **Two traps in one row.** The licence is copyleft, and the repository was **retired seven days before this pass** — so the AI agent layer of a vertical platform this base files in three places no longer has an upstream. 🟢 The platform rows stand; the agent layer must be treated as **build-it-yourself over the Frappe REST API**, which is what [`../compose/patterns.md`](../compose/patterns.md) now says. 🔵 It is also rule 11 and rule 2 firing together: `main` and `LICENSE` would both have missed it. |
 | 🆕 [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) · 12★ | `NOASSERTION` (API) | 🔵 **Two grants in one file, scoped by path: `MIT` for the code, `CC BY 4.0` for the data** | **A trap shape this base had not met: the grant is neither mislabelled nor absent — it is *split*.** The licence file is in Portuguese, its title line is the bare word `# Licenças`, and it names no licence at all; it then says *"Este repositório usa duas licenças, porque contém duas coisas de natureza diferente"* and assigns **MIT** to `harness/`, `test/` and the config, and **CC BY 4.0** to the item bank (`itens/`), the run results (`resultados/`), `METODOLOGIA.md` and the docs. 🔴 **Every rule on this page reads the *title line*, and here the title line is the word "Licences".** The correct verdict is not one grant but a **per-path** grant, and a repo-level cell cannot express it. See `Gap 533-B`. |
 | 🆕 [ahmedEid1/lumen](https://github.com/ahmedEid1/lumen) · 91★ | `MIT` | **GPL-3.0** | **New this pass, and the cheapest trap on the list to fall into: the repository contradicts itself.** The sidebar says `GPL-3.0`; the **README badge says `License: MIT`**. The licence file's title block reads `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007`. **GPL-3.0 wins** — a README badge is a claim, a licence file is the grant. A "learner-owned" platform (private courses, course-scoped cited RAG, BYOK keys, 40 forks) that cannot be shipped inside a proprietary deliverable. |
 | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) · 2.1k★ | `MIT` | **Bespoke non-commercial** — title line reads *"# PageLM Community License"* | The payload *opens* with the MIT sentence — *"Permission is hereby granted, free of charge…"* — then spends 8 KB taking it back: use limited to personal/educational/non-commercial research, **redistribution in source or binary form strictly prohibited**, and a **revenue-share agreement required before any commercial deployment**. A probe matching on body sentences sees MIT. A probe reading the **title line** sees the truth. Re-confirmed this pass — and note the grant is at **`LICENSE.md`**, not `LICENSE`. |
@@ -511,6 +602,51 @@ reads as first-hand and was not.
    licence file reads `Copyright (c) 2026 Arnaud Guiovanna`, i.e. it is a copy
    of the shelved [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp)
    — **a duplicate, correctly not shelved twice, and wrongly invisible.**
+15. 🆕 **"Host blocked" is never a finding; "channel blocked" is — so probe a
+   host on every channel available before recording it closed.** `p532` and
+   `p533` both recorded `github.com` and `api.github.com` as *"both HTTP 403
+   through this session's proxy"*, and that sentence is why four passes of org
+   enumeration, star measurement and liveness checking were treated as
+   impossible. 🔴 **Measured at `p534`: `github.com/ls1intum/edutelligence` is
+   `403` to `curl` and `200` through WebFetch**, and
+   `github.com/orgs/{org}/repositories` serves the full listing **with star
+   counts and licence labels** on that channel — which is the whole instrument
+   `Gap 533-A` asked for and said would cost an API call per org. 🟢
+   `api.github.com` **is** closed, on both channels, so exact star counts remain
+   unavailable and every figure filed this pass is the page's **rounded**
+   display, labelled as such. 🔵 The asymmetry is the lesson: one blocked
+   channel is evidence about that channel only, and the cheapest refutation of
+   a four-pass-old blocker cost one request
+   ([`../evidence/channel-asymmetry.2026-10-29-p534.tsv`](../evidence/channel-asymmetry.2026-10-29-p534.tsv)).
+
+## 🆕 `p534` — fitness: the axis `Gap 533-C` named, now a field
+
+`Gap 533-C` was registered at the moment `532-B` closed, and it said the
+materiality band *"measures attention, not fitness"*: stars rank a curriculum
+above a reference implementation, and for an engagement the second may be worth
+more. 🟢 **This pass makes the classification a field instead of prose.** Five
+values, closed vocabulary, assigned at file time:
+
+| Value | Means | What it is good for | Example on these pages |
+|---|---|---|---|
+| `dependency` | code a client's system would **import, mount or deploy** | the build | [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai), [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) |
+| `reference-implementation` | readable, small, shows the **shape** of a solution | the architecture decision | [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona), [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) |
+| `infrastructure` | agent plumbing, not education logic | the platform underneath | [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) |
+| `corpus` | data, items, ground truth — often **not** under a code licence | calibration and evaluation | [`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark), Essay-BR |
+| `curriculum` | teaches a **person**; nothing to deploy | ramping a studio team | [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch), [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) |
+
+🔵 **Why it changes an answer rather than adding a column.** The two highest-star
+unfiled assets this base has ever promoted — `freeCodeCamp/freeCodeCamp`
+(458 181★) and `microsoft/ai-agents-for-beginners` (78.1k★) — are both
+`curriculum`. The largest find of **this** pass, `mitodl/learn-ai`, is a
+`dependency` at **0★**. 🔴 **A star-ordered queue puts them in exactly the wrong
+order for an engagement**, and the fitness field is the only thing on these
+pages that says so.
+
+🔴 **Stated plainly: this is a partial close.** The field is applied to the rows
+`p534` files and to the five examples above. The **34 rows carried from earlier
+passes are not backfilled**, so any count of fitness values on this shelf today
+is wrong, and no query should be run against it yet. → `Gap 534-B`.
 
 ## What is still missing
 

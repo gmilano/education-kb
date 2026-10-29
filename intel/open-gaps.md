@@ -4,6 +4,301 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p534` — `2026-10-29` — **🟢 `533-A` CLOSES ON ITS NAMED SCOPE AND ITS REMEDY COST **NOTHING** IT PREDICTED — THE "ONE API CALL PER ORG" WAS NEVER NEEDED, BECAUSE THE BLOCKER IT BUDGETED AROUND WAS A WRONG SENTENCE IN THIS BASE. 🟡 `533-C` PARTIALLY CLOSES: THE FITNESS FIELD EXISTS AND IS **NOT BACKFILLED**. 🔴 `533-B` STAYS OPEN, UNTOUCHED, AND IS SAID SO. 🟢 **AND THE GATES RAN — 65 OF THEM, 47 GREEN, FOR THE FIRST ATTESTED TIME IN ELEVEN PASSES — CATCHING A GRANT ERROR THIS PASS HAD JUST WRITTEN AND **ELEVEN** LOST LOAD-BEARING CLAIMS, FOUR OF THEM SECURITY OR REGULATORY FACTS ABOUT COMPONENTS THESE PAGES RECOMMEND. ALL ELEVEN DISCHARGED, NONE FROM MEMORY.** 🔴 EIGHT REGISTERED (`534-A`…`534-C`, `534-E`…`534-J`). 🟢 `534-D` WAS REGISTERED AND **CLOSED INSIDE THIS PASS**, BY RETRACTION: THE GATE FOR `p533`'S BROKEN TABLE HAS EXISTED SINCE `p277`, GRADES THE DEFECT **BY NAME**, AND WAS SIMPLY NOT RUN — AND THE REPLACEMENT INSTRUMENT THIS PASS WROTE BEFORE CHECKING WAS **WORSE**, AND WAS DELETED RATHER THAN COMMITTED.**
+
+### 🟢 `Gap 533-A` — CLOSED (on its named scope)
+
+**Asked:** *"For every organisation already cited on a curated page, enumerate
+that org's other repositories and diff against the filed set — one API call per
+org with `user:` + `fork:true`."* Named `mitodl`, `learningequality`, `openedx`,
+`1EdTech` and `Ed-Fi-Alliance-OSS` as the obvious next probes.
+
+**Delivered:** all five named orgs plus `jupyterhub`, `adlnet`, `openfun` and
+`frappe` — **nine orgs**, census in
+[`../evidence/org-layer-diff.2026-10-29-p534.tsv`](../evidence/org-layer-diff.2026-10-29-p534.tsv),
+grants in
+[`../evidence/grant-reads.2026-10-29-p534.tsv`](../evidence/grant-reads.2026-10-29-p534.tsv).
+
+🟢 **Yield: four unfiled live permissive addresses, one licence trap, one
+archived dependency.**
+
+| Address | Grant | Stars | Filed |
+|---|---|---|---|
+| [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) | 🟢 **MIT** | 🔴 **0** (816 commits) | [`../agents/top.md`](../agents/top.md) |
+| [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) | 🟢 **Apache-2.0** | 🔴 0 | [`../agents/top.md`](../agents/top.md) |
+| [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) | 🟢 **BSD-3-Clause** | 5 | [`../repos/foundations.md`](../repos/foundations.md) |
+| [`Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) | 🟢 **Apache-2.0** | 🔴 0 | [`../repos/foundations.md`](../repos/foundations.md) |
+| [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) | 🔴 **AGPL-3.0** | 17 | licence traps |
+| [`frappe/flow_client`](https://github.com/frappe/flow_client) | 🔴 **AGPL-3.0** + **`Public archive` 2026-10-22** | 89 | licence traps + [`../verticals/solutions.md`](../verticals/solutions.md) §7 |
+
+🔴 **The close is cheaper than the gap and that is the uncomfortable part.**
+`533-A` priced its own remedy at *"one API call per org"* because `p532` and
+`p533` had both recorded `github.com` and `api.github.com` as *"both HTTP 403
+through this session's proxy."* 🟢 **`github.com` HTML is 403 to `curl` and 200
+through WebFetch**, and `github.com/orgs/{org}/repositories?q=…` serves the full
+listing **with star counts and licence labels**
+([`../evidence/channel-asymmetry.2026-10-29-p534.tsv`](../evidence/channel-asymmetry.2026-10-29-p534.tsv)).
+🔵 **Four passes treated a capability as unavailable on the strength of one
+`curl` result**, and the refutation cost a single request. → **shelf rule 15**.
+
+🟢 **The negatives are recorded, because five of nine orgs returned nothing** —
+`learningequality` (238 repos, **no AI-layer repository at all**; its two hits
+are substring false positives), `1EdTech`, `jupyterhub` (against 12 filed
+addresses), `adlnet`, and `openfun` (three 2023 conference artefacts, 0★).
+🔵 That matters for [`trends.md`](trends.md) trend 18: the platform/intelligence
+split is a property of institutional **producers of intelligence**, not of
+institutional producers generally.
+
+### 🟡 `Gap 533-C` — PARTIALLY CLOSED, and the remainder is named
+
+**Asked:** a **fitness** dimension — *is this a dependency, a reference
+implementation, a corpus or a curriculum?* — *"one column, applied at file time,
+plus a backfill pass."*
+
+**Delivered:** the closed vocabulary (five values: `dependency`,
+`reference-implementation`, `infrastructure`, `corpus`, `curriculum`), the
+taxonomy table with worked examples on
+[`../agents/top.md`](../agents/top.md), and the field applied to every row
+`p534` files. 🔴 **The backfill did not run.** The 34 rows carried from earlier
+passes have no fitness value, so **any count of fitness values on that shelf
+today is wrong and no query should be run against it.** → `Gap 534-B`.
+
+🟢 **The field earned its place immediately:** the three highest-star assets this
+base has ever promoted are all `curriculum`, and this pass's largest find is a
+`dependency` at **0★**. That inversion is now trend 20.
+
+### 🔴 `Gap 533-B` — STILL OPEN, untouched
+
+A repo-level grant cell cannot express a split grant
+([`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark): MIT for
+`harness/`, CC BY 4.0 for the item bank, title line a bare `# Licenças`). 🔴
+**`p534` did not work on it and claims no progress.** 🔵 Stated here rather than
+left silent, because an unmentioned gap in a gaps file reads as closed. The
+remedy it asked for is unchanged: `grant | grant@path`, with the probe reading
+`##`-level scope headings whenever the title line names no family.
+
+### 🔴 `Gap 534-A` — the org enumeration is keyword-scoped, so it manufactures absence
+
+**The defect.** Nine orgs were enumerated with `?q=ai&type=source`. 🔴 **The
+pass's most consequential negative did not match it:**
+[`frappe/flow_client`](https://github.com/frappe/flow_client) — *"native AI
+agents, tools and triggers for Frappe"*, 89★, **archived seven days ago** — only
+appeared under a second query on `flow`. So **four of the five "zero matches"
+above are weaker evidence than they read**, and an AI layer named `flow`,
+`copilot`, `assistant`, `tutor`, `brain` or anything else is invisible to the
+instrument that just closed `533-A`.
+
+**Remedy, scoped.** Enumerate the **full** repository list per org and diff
+locally, rather than letting the server's keyword filter decide. 🔵 **Cost:** the
+HTML channel pages at 30 repos per request, so `mitodl` is 11 requests and
+`learningequality` 8 — call it **~60 requests for the nine orgs already done**,
+which is affordable and was not attempted this pass. 🔴 **Expected yield is
+non-zero and known:** the one address that *did* escape the keyword was the most
+important negative of the pass.
+
+### 🔴 `Gap 534-B` — the fitness backfill (the other half of `533-C`)
+
+**The defect.** 34 of 36 shelf rows have no fitness value. Until they do, the
+field cannot be counted, filtered or compiled, and a partially-populated field is
+worse than none because it looks queryable.
+
+**Remedy, scoped.** Classify the carried rows at `dependency` /
+`reference-implementation` / `infrastructure` / `corpus` / `curriculum` from the
+prose already in each row — every row on that shelf already *says* which it is.
+🔵 **Cost:** one pass, no network. 🔴 **Do it before anything queries the field.**
+
+### 🔴 `Gap 534-C` — the promotion queue ranks by attention, and depth is what mattered
+
+**The defect.** [`../ingest/promotion-rank.py`](../ingest/promotion-rank.py)
+gates on grant and liveness, then orders by **measured stars**. Run against this
+pass's finds it ranks [`open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor)
+(1★, 159 commits, the engine) **above**
+[`learn-ai`](https://github.com/mitodl/learn-ai) (0★, **816 commits**, the
+service that runs four agents with eval and tracing), and both below a
+curriculum. 🔴 **The biggest find of the pass is last in the queue that was
+built to find it.**
+
+**Remedy, scoped.** Add a **depth** signal beside stars — commit count, open PR
+count, release/version discipline, and whether a **named deployment host**
+appears in the README — and publish the star-ordered and depth-ordered top tens
+side by side. 🔵 **Cost:** one column plus one sort; the commit count is on the
+same page the star count is read from, so there is no new request. 🟡
+**Disconfirmable:** if both orderings give substantially the same top ten, stars
+were fine and this gap is closed by measurement rather than by code.
+
+### 🟢 `Gap 534-D` — CLOSED, and not the way it was registered: **the gate existed, it works, and it was not run**
+
+**Registered earlier in this pass as** *"no gate on this base reads table
+boundaries"*, after [`../agents/top.md`](../agents/top.md) was found carrying a
+blank line left mid-table by `p533` at line 197 — splitting the 34-row shelf so
+its second half rendered **headerless** and its first data cell
+(`🆕 EduTelligence (Iris · Athena · Atlas)`) compiled as a **column name**.
+
+🔴 **That registration was wrong, and `p534` retracts it in full.** The gate
+exists, it has existed since `p277`, and it is **`make gate-tables`** —
+*"ACTION p277 — no shelf may publish a data row that renders as a table
+header"*, 15 controls, with **`cross-table-blank` named explicitly among the
+shapes it grades**.
+
+🟢 **Tested rather than assumed.** The defect was reintroduced into
+`agents/top.md` on purpose and the existing gate was run against it:
+
+```
+🔴 1 table-structure defect(s):
+   agents/top.md:236	BLANK-SPLITS-TABLE	| 🆕 **EduTelligence** (Iris · Athena · Atlas) | …
+make: *** [Makefile:426: gate-tables] Error 1
+```
+
+🔵 **So the gate catches it exactly, by name, and fails the build.** Its
+`SHELVES` list already covers all ten curated files, this one included. The
+defect shipped for a whole pass for one reason: **nobody ran it.**
+
+🔴 **And `p534` nearly repeated the mistake in a worse form.** This pass wrote a
+replacement instrument (`ingest/table-gate.py`) before checking whether one
+existed, ran it, and got **115 "violations" across the append-only files that
+`p277` reports clean**. 🟢 **`p277` was right and the new instrument was
+wrong**: at `repos/trending.md:1739` the blank line separates **two complete,
+correctly-formed tables** — the second opens with its own header *and*
+separator — which renders perfectly. A blank line splits a table only when what
+follows it is **not** a new header/separator pair, and `p277` makes that
+distinction while a naive detector cannot. 🔴 **The duplicate has been deleted
+rather than committed.** It would have added a second, worse answer to a
+question this base had already answered correctly — which is the `p278` lesson
+verbatim: *"The gate for this error existed and was not run."*
+
+**What actually closes this gap:** nothing to build. 🟢 **Run `make gate-tables`
+(and its siblings individually) before every commit**, which this pass did, and
+which costs under a second. The `pre-commit` hook in
+[`../ingest/pre-commit`](../ingest/pre-commit) is where it belongs permanently.
+
+### 🟡 `Gap 534-H` — three capabilities this base records as blocked are **not** blocked, and nobody re-tested them
+
+**The defect, and it is the most expensive one `p534` found.** Three standing
+claims in this base's own prose were refuted this pass, each by a single
+cheap test:
+
+| Claim, as written here | Passes carried | Measured at `p534` |
+|---|---|---|
+| *"`github.com` and `api.github.com` are both HTTP 403 through this session's proxy"* | `p532`, `p533` | 🔴 **Half wrong.** `github.com` HTML is **200 through WebFetch** — org listings with stars and licences, which is the whole of `Gap 533-A`'s remedy. `api.github.com` is genuinely closed |
+| *"no gate reads table boundaries"* | registered and retracted **within this pass** | 🔴 **Wrong.** `make gate-tables` has graded `cross-table-blank` since `p277` |
+| *"`make hooks` was DENIED (`Code from External`) — ten denials in eleven passes"* | `p455` and around it | 🟡 **Not denied at `p534`.** It ran, and gates reported green as they went |
+
+🔵 **The pattern is one failure mode, not three incidents:** a negative result
+about the *environment* was written into prose, and prose is not re-tested. A
+licence cell gets re-read every pass; *"that channel is blocked"* never does,
+so it hardens into a constraint that silently shapes every later pass's plan —
+`Gap 533-A` priced its own remedy at *"one API call per org"* and therefore
+deferred it, when the capability was a single request away.
+
+**Remedy, scoped.** A standing **capability probe** — one script, four or five
+assertions (raw 200, `github.com` HTML via each channel, `api.github.com`, `make
+hooks` runnable), run at the **start** of every pass, output to
+`evidence/capabilities.<date>-<pass>.tsv`, and **no prose claim about a blocked
+channel permitted without a dated row in it**. 🔵 **Cost:** minutes per pass.
+🔴 **Benefit, measured:** this pass's largest find (`mitodl/learn-ai`) was
+unreachable under the old claim and trivially reachable once it was tested.
+
+### 🟡 `Gap 534-I` — the claim register can demand a sentence this base has refuted
+
+**The defect.** `make gate-prose-claims` holds `NO-PERMISSIVE-PLATFORM` and
+greps [`../repos/foundations.md`](../repos/foundations.md) for
+**"No permissive education platform exists."** 🔴 **That sentence is false**:
+this base files [`oppia/oppia`](https://github.com/oppia/oppia) (**Apache-2.0**,
+7.0k★), [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)
+(**Apache-2.0**), [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+(**MIT**) and [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)
+(**ECL-2.0**). 🔵 So the register, whose whole purpose is to stop a true claim
+being deleted silently, now **pressures a future pass into re-asserting a false
+one** — and the cheapest way to make that gate green is to write the falsehood
+back.
+
+🟢 **How `p534` discharged it, and why that is the right shape.** The claim is
+recorded in the owing file as a **dated retraction** naming the four addresses
+that killed it. The gate goes green because the claim's *fate* is in the file —
+which is what `p494` actually established ("a deleted claim is
+indistinguishable from coverage"), not that the claim must still hold.
+
+**Remedy, scoped.** The register needs a **status** column — `LIVE` /
+`RETIRED` / `CORRECTED` — so a retired claim is checked for its *retraction*
+rather than its assertion. 🔵 **Cost:** one column, plus a pass over the 30-odd
+register rows to classify them. 🔴 **Until then, a green
+`gate-prose-claims` means "the claim's fate is recorded", not "the claim is
+true", and no one should read it as the latter.**
+
+### 🟡 `Gap 534-J` — `recount`'s anchors point at a file layout that no longer exists
+
+**The defect.** `make recount` reports **`STALE=0, NO-ANCHOR=5 of 5`**. 🟢 **No
+count it checks is wrong** — but all five anchors target sentences that have been
+removed: an `agents/top.md` **"MCP section"** with its own lead sentence and
+table, an `N permissive rows` sentence in a structurally-bounded build-on tier,
+and trends **`T21`** and **`T24`** on a file that now holds twenty numbered
+trends under different headings.
+
+🔵 **Why this is worse than a stale number.** A `STALE` finding says a published
+count disagrees with a measurement. A `NO-ANCHOR` finding says **the gate has
+stopped checking anything at all** — five counts that were once pinned are now
+unpinned, silently, and the gate's own report is the only place that says so.
+🔴 The same failure shape as `Gap 534-H`: an instrument degraded into a no-op
+and nothing re-tested it.
+
+**Remedy, scoped.** For each of the five: either re-point the anchor at the
+sentence that now carries the count, or re-measure and restore the sentence.
+🔵 **Cost:** one pass, offline — the counts are all derivable from the shelves
+themselves. 🔴 **Do not "fix" it by deleting the register rows**, which is the
+move that produced `Gap 534-I`.
+
+### 🔴 `Gap 534-E` — `foundations.md` has no rule for what it counts, so its headline was a pass stale
+
+**The defect.** That file opened with *"Pass `p532` · **Fifty-eight**"* while
+`p533` filed **eleven** more rows beneath it without touching the header — the
+headline figure was wrong for a whole pass, in the first sentence a reader sees.
+🟡 `p534` republished it as arithmetic (58 + 11 + 3 = **seventy-two**, labelled
+*derived, not recounted*) rather than asserting a recount it had not performed.
+
+**Remedy, scoped.** Write down **what counts as a load-bearing system** — a row
+in a shelf table, yes; one of 222 addresses in the Moodle MCP census, no — then
+recount against that rule and have the same gate recompute it on every pass.
+🔵 **Cost:** one definition plus a counter. 🔴 **Until then, no total on that
+page should be quoted**, and this gaps file says so rather than letting the
+number stand.
+
+### 🔴 `Gap 534-F` — the EMEA demand leg is empty because "EMEA" is a sales territory
+
+**The defect.** `AI education EMEA {year} adoption regulation players` has now
+returned **zero education-specific results for two consecutive passes** (and
+EMEA classroom adoption has been a measured blank for **four**). What it returns
+is enterprise AI: the EU AI Act as an adoption driver, a CompTIA 2026 outlook
+🔴 **whose survey population is 1 012 US professionals**, and a **2023** Workday
+study. 🔵 **The diagnosis has moved from the window to the query** — no European
+ministry, university or researcher describes itself as "EMEA".
+
+**Remedy, scoped.** Keep running the mandated leg (its emptiness is the evidence
+for this gap) **and** add named instruments and jurisdictions beside it: the
+**OECD Digital Education Outlook**, **Eurydice** and Eurostat digital-education
+indicators, and country-language terms (*Bildung*, *éducation*, *onderwijs*,
+*istruzione*). 🔵 **Cost:** four extra queries on one leg. 🔴 **Why it matters
+commercially:** EMEA is this base's **strongest supply** region and its weakest
+demand region — the studio knows what to build there and not who needs it.
+
+### 🟡 `Gap 534-G` — platform rows carry a licence and no liveness read
+
+**The limit, stated at the moment of using it rather than later.**
+[`../verticals/solutions.md`](../verticals/solutions.md) §7 now reads archive
+state for two attachment points, and one of them —
+[`frappe/flow_client`](https://github.com/frappe/flow_client) — was **retired
+seven days before this pass** while three pages recommended its platform.
+🔴 **The other 30-plus platform rows on that page carry no liveness read at
+all**, and they were filed when the channel that serves the archive flag was
+believed closed.
+
+**Remedy, scoped.** One liveness column per platform row — archived flag plus
+last-push date, both on the HTML channel, both free now. 🔵 **Cost:** one
+request per row, ~30 requests. 🔵 **And the general rule this produces, which
+the file now states:** a permissive-but-dead attachment point is worse for a
+client than a copyleft-but-maintained one, because the second is an architecture
+decision and the first is an unbudgeted maintenance transfer.
+
+
 ## 🆕 `p533` — `2026-10-29` — **🟢 `532-B` CLOSES WITH A GATED, MATERIALITY-RANKED QUEUE WHOSE FIRST RUN SHOWED RECALL RANK 1 IS **UNGRANTED** AND RECALL RANK 18 IS **458,181★ BSD-3-CLAUSE**. 🔴 THREE REGISTERED (`533-A`…`533-C`), ONE OF THEM A DEFECT IN THIS BASE'S OWN "IS IT FILED?" TEST.**
 
 ### 🟢 `Gap 532-B` — CLOSED

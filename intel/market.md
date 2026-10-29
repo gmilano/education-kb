@@ -6,7 +6,7 @@ updated: 2026-10-29
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p532` · 2026-10-29.** Figures are attributed to the source that produced
+**Pass `p534` · 2026-10-29.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
 
@@ -190,9 +190,148 @@ inversion now runs the other way on evidence quality too:** LATAM is the
 with a published method — while **EMEA and APAC demand remain blanks**. The
 region usually treated as the under-evidenced leg is the only one with a census.
 
+## 🆕 `p534` — the four regional legs re-run: **one region moved, and it moved on supply**
+
+All four regional legs and all four global legs were run at `2026` (computed from
+the system date, not hardcoded). 🔵 **The headline is a reversal of the last six
+passes' shape:** the leg that produced something was **North America**, and what
+it produced was **code**, not a figure.
+
+| Region | Supply (addresses) | Demand / regulation | New? |
+|---|---|---|---|
+| **North America** | 🟢 **4 permissive addresses**, all institutional: [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) (MIT, 816 commits, **0★**), [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) (BSD-3), [`Ed-Fi-Alliance-OSS/Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) + [`AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) (both Apache-2.0, both 0★) | **36 %** of global market share; 🔴 **~10 %** of institutions with formal AI guidelines; 🔴 **71 %** of US teachers without AI training; *"a relative regulatory vacuum — no equivalent to the FDA for educational technology"*, with state-level piecemeal requirements (**Colorado, Texas**); Canada's **AIDA** 🔴 **not confirmed as law** in anything this leg returned | 🟢 **Supply: yes, 4.** 🟡 Demand: the three percentages are new to this base but come from a **statistics roundup that does not name its underlying data** — carried as secondary |
+| **EMEA** | 🔴 **0** | 🔴 **Zero education-specific results — second consecutive pass.** The leg returns enterprise-AI material: the **EU AI Act** as the adoption driver, CompTIA's 2026 skills outlook (🔴 whose survey is **1 012 US professionals**, so not EMEA data at all), Workday's **2023** study (60 % siloed data), Bandwidth/Cavell Feb 2026 on compliance complexity | 🔴 **No.** And the finding is about the **query**, not the region — see declared gaps |
+| **APAC** | 🔴 0 | **TCS × Pearson** multi-year AI learning alliance for employer skills gaps; **LearnUpon** opens a Sydney HQ with AI course authoring; **OpenAI appoints an ANZ policy lead** as Canberra tightens AI governance and copyright; 🔴 Singapore's named consultations are **financial-sector**, not education; one forecast puts APAC as the **fastest-growing region at 24.8 % CAGR (2026–2033)** | 🟡 **Commercial motion, no education-specific regulation.** The regulation this leg returned last pass (Korea's AI Basic Act, Vietnam's high-risk designation) did **not** reappear — treat its absence as a channel artefact, not a repeal |
+| **LATAM** | 🔴 0 | 🟢 **A second independent instrument, and it agrees with the first on the shape.** UNESCO **IESALC** (with UNU-IAS): 200 institutions, **19 countries**, **87 %** using AI in ≥1 area, 🔴 **26 %** with any formal framework. 🆕 **Digital Education Council**, with **Tec de Monterrey** and its Institute for the Future of Education: **92 % of students** and **79 % of faculty** actively engaging, 🔴 **~30 %** of LATAM universities with a published AI policy. Chile is furthest along (national AI policy since **2021**, bill in discussion); **Brazil and Colombia** have national strategies but **no education-sector rules**; Mexico's **SEP / ANUIES / Observatorio IA** recommendations are 🔴 **non-binding**; the **IDB**'s **ILIA** index covers 19 countries | 🟢 **Yes — the faculty/student split is new.** Two instruments, two methods, same conclusion: **adoption far ahead of governance** |
+
+🟢 **The durable conclusion survives a sixth re-check and is now corroborated
+rather than single-sourced:** LATAM pairs the region's highest measured adoption
+with the least scaffolding — **87 % using AI against 26 % with a framework**
+(IESALC), **92 % / 79 % engaging against ~30 % with a published policy** (DEC ×
+Tec de Monterrey). 🔵 Two separate instruments, built by different
+organisations, measuring different populations, producing the same **~60-point
+gap between use and governance**. That gap is the most reliable single number on
+this page.
+
+🔴 **Global market size got worse, not better, as evidence.** Three firms, same
+sector, overlapping years:
+
+| Firm | Figure | Implied 2026 | CAGR claimed |
+|---|---|---|---|
+| **The Business Research Company** | $7.52B (2025) → **$10.6B (2026)** | **$10.6B** | 40.9 % |
+| **IMARC** | $6.4B (2025) → $79.6B (2034) | ~$8.4B (interpolated) | 31.35 % |
+| **Persistence Market Research** | **$3.7B (2026)** → $14.1B (2033) | **$3.7B** | 21 % |
+
+🔴 **The high and low 2026 figures differ by 2.9×**, and all three are
+vendor-sponsored. 🟢 **The band is the honest answer** — *$3.7B–$10.6B for 2026,
+21–41 % CAGR* — and it should be quoted as a band in any client material, never
+as a point. 🔵 One adoption figure from the same sweep is worth more than all
+three: **teacher AI professional development went from 29 % (early 2024) to 50 %
+(late 2025)**, and **K-12 accounts for 45.62 % of adoption** against higher
+education being the largest *revenue* segment — the two halves of the sector
+pull in opposite directions on where the money and the users are.
+
+## 🆕 `p534` — three load-bearing prose claims restored, because a gate finally ran
+
+🔴 **`make gate-prose-claims` — run for the first time in at least eleven passes
+— reports **eleven** load-bearing claims as `CLAIM-LOST` or `ARCHIVE-ONLY`:
+present in this base's append-only history, **absent from the curated file that
+is supposed to carry them.** Three of the eleven belong to this file and are
+restored below with their evidence re-read this pass. 🔵 The other eight are
+listed, unrestored, in [`open-gaps.md`](open-gaps.md) — restoring a claim
+from memory is how a KB acquires confident errors, and eight of them turn on
+security advisories and jurisdiction holdings `p534` did not verify.
+
+- 🔴 **EMEA: there is still `no EMEA adoption rate` on this base.** Thirteen
+  passes of declared gap, and `p534`'s own leg returned zero education-specific
+  results for the second consecutive pass. 🔵 Written here in the file that
+  carries the regional picture, because an unstated gap is indistinguishable
+  from coverage — which is the entire reason the claim register exists.
+- 🟢 **LATAM: the Digital Education Council's *AI in Higher Education LATAM
+  Survey 2026* rests on `30,000+ responses` from **29** higher-education
+  institutions.** Re-verified this pass: **7,319 faculty responses** are
+  confirmed on the DEC's own pages; 🟡 the complementary **22,941 student**
+  figure appears only in a LinkedIn post by one of the authors and is carried as
+  *single-sourced*. 🔵 This population is why the LATAM numbers on this page
+  outrank every other region's evidence here: 30k responses with a published
+  method against roundups that do not name their data.
+- 🟢 **LATAM: ~30 % of universities have a `published AI-use policy` against
+  92 % student engagement**, and the contrast *is* the pitch — the bottleneck is
+  **governance, not adoption or capability**. 🟢 Corroborated this pass by a
+  second, independent instrument: UNESCO **IESALC** finds **26 %** of 200
+  institutions across 19 countries hold any formal framework while **87 %** use
+  AI in at least one area. 🆕 Two further DEC figures worth carrying: **94 % of
+  LATAM faculty expect to use AI in future teaching**, and **65 % of students
+  are concerned AI makes learning too shallow** — demand and distrust in the
+  same population, which is what a governance deliverable actually has to
+  answer.
+
+## 🆕 `p534` — the APAC regulatory holdings, restored first-hand and **one of them corrected**
+
+🔴 Three further claims `make gate-prose-claims` reported missing from this file
+are APAC regulatory holdings. 🟢 **Re-verified this pass rather than restored
+from memory — and the verification changed one of them.**
+
+**🟢 Singapore — `SG-AGENTIC-FIRST`.** IMDA's **Model AI Governance Framework
+for Agentic AI** was launched by Minister Josephine Teo at the World Economic
+Forum on **22 January 2026**, and is described by the government and by multiple
+law firms as the **world's first governance framework built specifically for
+agentic AI** — systems that plan, reason and act autonomously. 🔵 It rests on
+**four dimensions**: bound the risks up front, make humans *meaningfully*
+accountable, implement technical controls and processes, and enable end-user
+responsibility. 🟢 **Those four axes are the ones every recipe in
+[`../compose/patterns.md`](../compose/patterns.md) has to defend**, which is why
+this claim is load-bearing rather than background. 🔴 **It is explicitly
+voluntary** — where the EU, US, Korea and Vietnam bind by statute, Singapore
+deliberately does not — so it is the artefact to *show*, not a rule to comply
+with. 🟡 The "world's first" label is the framing of its own publishers and this
+pass did not independently establish that no earlier agent-specific framework
+exists.
+
+**🟡 Vietnam — `VN-CORPUS-TRIGGER`, restored with a condition the register
+omitted.** **Decision No. 33/2026/QD-TTg** (dated **30 June 2026**, effective
+**15 August 2026**) lists **46** high-risk AI systems across six sectors; its
+education appendix names **three**: self-learning content built from
+`uncontrolled data sources`; automated **assessment or ranking** of learners;
+and **biometric** monitoring of learner behaviour. 🔴 **The correction:** this
+base has carried the first category as making *"a RAG tutor over an unvetted
+corpus high-risk on the retrieval design alone."* The official text qualifies
+it — the category applies **where the system is deployed at large scale, with
+potential for systemic risk or widespread impact on learners**. 🟢 So the
+holding survives and is **narrower than this base stated**: a pilot is not
+automatically high-risk, a national rollout is, and *"not all AI systems used in
+these sectors will automatically be classified as high-risk."* 🔵 The
+consequence for a design is unchanged and still unusual: **a tutor with no
+grading feature anywhere in it can be high-risk on its retrieval design**, and
+an EU-conformant build has **no corpus-provenance artefact** to show for it.
+
+**🟢 Vietnam — `VN-EDU-DEADLINE`.** The conditional is the whole value, so it is
+stated as a conditional: education, healthcare and financial systems **already
+in operation before 15 August 2026** have an extended grace period and must
+comply by **`1 Sep 2027`**. 🔴 **Everything else — including anything deployed
+in the six months after the Decision — is due `1 March 2027`.** 🔵 For an
+engagement that means the **deployment date decides the deadline**, and a
+greenfield build started now inherits the *earlier* one.
+
 ## Opportunities by region
 
 ### North America
+
+> 🆕 **`p534` — this is the pass's strongest supply leg, and all four finds are
+> institutional 0★–5★ repositories, not products.** The engagement opening is
+> specific: **~10 % of North American institutions have formal AI guidelines and
+> 71 % of US teachers have no AI training**, against a sector with *no regulator*
+> and a state-by-state patchwork. 🟢 **What is newly buildable:** MIT Open
+> Learning's own stack is permissive end to end — [`learn-ai`](https://github.com/mitodl/learn-ai)
+> (**MIT**, four LangGraph agents, RAG eval, Opik/LangSmith/PostHog tracing) on
+> [`agent-kit`](https://github.com/mitodl/agent-kit) (**BSD-3-Clause**) — so a
+> university engagement can start from a peer institution's production code
+> rather than a vendor demo. 🔵 And the **Ed-Fi** data plane is the other half:
+> two Apache-2.0 repositories from the standards body US K-12 student records
+> move on, which is the governance artefact the 10 %-with-guidelines number says
+> nobody has. 🔴 Regional sizing disagrees with the global band by an order of
+> magnitude — $951M (2024) → $2 303.2M (2029) at 15.9 % for North America, on a
+> $3.7–10.6B global base — so **do not mix the two sources in one slide.**
 
 > 🆕 **`p533` — supply added on this leg.** [`autolab/Autolab`](https://github.com/autolab/Autolab)
 > (**Apache-2.0**, 808★, **Carnegie Mellon**) is the permissive autograding
@@ -329,6 +468,18 @@ recorded.**
 
 
 ### EMEA
+
+> 🔴 **`p534` — the demand leg returned zero education-specific results for the
+> second consecutive pass, and the fault is now attributed to the query.** What
+> came back was enterprise AI: the EU AI Act as an adoption driver, a CompTIA
+> 2026 outlook 🔴 **whose survey population is 1 012 US professionals**, and a
+> **2023** Workday study. 🔵 **Stated plainly so it cannot read as coverage:
+> this base still has no EMEA classroom-adoption measurement.** 🟢 The supply
+> leg remains the strongest of any region here — `get-it` (Politecnico di
+> Milano), `feedbacksystem` (THM), `edutelligence` (TU München), OpenOLAT,
+> ILIAS, Dolos (Ghent), Ralph (France Université Numérique) — so EMEA is the
+> region where this base knows **what to build with** and not **who needs it**.
+> → `Gap 534-F`.
 
 > 🆕 **`p533` — EMEA's supply leg extends again, and it is now the strongest on
 > this base by a clear margin.** 🟢 [`ls1intum/edutelligence`](https://github.com/ls1intum/edutelligence)
@@ -515,6 +666,19 @@ framing, where EMEA appears as the regulated region and little else.
 
 
 ### APAC
+
+> 🆕 **`p534` — commercial and policy motion, no education-specific regulation,
+> and no new addresses.** **TCS × Pearson** signed a multi-year AI learning
+> alliance aimed at employer skills gaps; **LearnUpon** opened a Sydney HQ with
+> AI course-authoring; **OpenAI appointed a policy lead for Australia and New
+> Zealand** as Canberra tightens AI governance and copyright. 🔴 The only named
+> regulator activity this leg returned — Singapore's consultations — is
+> **financial-sector, not education**, and last pass's Korean AI Basic Act and
+> Vietnamese high-risk designation did not reappear; 🔵 treat that as a channel
+> artefact, not a repeal. 🟡 One forecast puts APAC as the **fastest-growing
+> region at 24.8 % CAGR (2026–2033)**, which is consistent with this base's
+> observation that APAC already holds its largest *supply* of education agents
+> (DeepTutor, OpenMAIC, `dsh-openmaic`, Study-Mate, `ai-shifu`, `teacher-exam`).
 
 > 🆕 **`p533` — supply added on this leg.** 🟢 [`naufaldi/teacher-exam`](https://github.com/naufaldi/teacher-exam)
 > (*Ujian Sekolah*, **MIT**) generates **A4 print-ready exam sheets for
@@ -719,6 +883,21 @@ not a country** — this base's standing rule, and the reason these are here and
 not under APAC.
 
 ### LATAM
+
+> 🆕 **`p534` — the governance gap is now corroborated by a second, independent
+> instrument.** UNESCO **IESALC** (200 institutions, 19 countries): **87 %**
+> using AI in at least one area, **26 %** with any formal framework. 🆕 **Digital
+> Education Council with Tec de Monterrey**: **92 % of students** and **79 % of
+> faculty** actively engaging, **~30 %** of universities with a published policy.
+> 🔵 Different organisations, different populations, **the same ~60-point gap
+> between use and governance** — which is what makes it quotable. 🟢 **The
+> engagement shape this implies is policy-and-platform, not pilot:** Chile has a
+> national AI policy (2021) and a bill in discussion; **Brazil and Colombia**
+> have national strategies with **no education-sector rules**; Mexico's SEP,
+> ANUIES and Observatorio IA have issued **non-binding** recommendations. 🔴 **A
+> university here does not need a demo; it needs the artefact the 26 % already
+> have** — and this pass filed two Apache-2.0 governance artefacts from the
+> Ed-Fi Alliance that are directly adaptable to that deliverable.
 
 > 🆕 **`p533` — one new demand figure and one new supply artefact, and the
 > artefact comes with a licence lesson.** 🟢 The UNESCO IESALC instrument
@@ -1002,6 +1181,37 @@ essay marking calibrated on 11 147 real essays).
 ## Declared gaps this pass
 
 Written down because an unstated gap is indistinguishable from coverage.
+
+### 🆕 `p534` additions
+
+- 🔴 **EMEA classroom-adoption demand is a measured blank for the fourth
+  consecutive pass, and the diagnosis has moved from the window to the query.**
+  `AI education EMEA {year} adoption regulation players` returns enterprise-AI
+  material because **"EMEA" is a vendor's sales territory, not a term education
+  ministries or researchers use about themselves.** 🟢 **The remedy is to stop
+  running it as one leg:** query the named instruments and the named
+  jurisdictions — **OECD Digital Education Outlook**, **Eurydice**/Eurostat
+  digital-education indicators, and country terms (*Bildung*, *éducation*,
+  *onderwijs*) — rather than a regional acronym. 🔵 **Cost:** one pass. 🔴 **And
+  the mandated leg must still be run and reported**, because its emptiness is
+  itself the evidence for this gap.
+- 🔴 **North America's regional sizing and the global band are irreconcilable
+  and both are carried.** $951M (2024) → $2 303.2M (2029) at **15.9 %** for
+  North America sits under a global 2026 band of **$3.7B–$10.6B** at
+  **21–41 %** — i.e. the region said to hold **36 % of the market** is sized at
+  roughly a tenth of it. 🟢 One of the two is measuring a narrower segment and
+  neither says which. **Until that is resolved, no slide should put a regional
+  and a global figure side by side.**
+- 🟡 **The Canadian position is unresolved.** **AIDA** (the Artificial
+  Intelligence and Data Act) is described as *proposing* a foundation for
+  responsible AI, and 🔴 **nothing this leg returned confirms it is law.** It is
+  carried as a bill, not a statute, and a Canadian engagement needs the current
+  status read first-hand.
+- 🔴 **Three of this pass's four North American supply finds have 0 stars**, so
+  no popularity-ranked instrument will ever surface them. The regional supply
+  legs have been looking for *trending* repositories in a sector whose
+  institutional supply does not trend. → see `Gap 534-C` on
+  [`../agents/top.md`](../agents/top.md).
 
 ### 🆕 `p533` additions
 

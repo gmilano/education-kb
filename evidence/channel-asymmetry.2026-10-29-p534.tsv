@@ -1,0 +1,5 @@
+host	path_probed	curl_via_proxy	webfetch	verdict
+raw.githubusercontent.com	/ls1intum/edutelligence/main/LICENSE	200	not-needed	grant reads: WORKING on both, unchanged since p528
+github.com	/ls1intum/edutelligence	403	200	ASYMMETRY: HTML is readable through WebFetch and NOT through curl
+github.com	/orgs/learningequality/repositories?type=source	403	200	org enumeration with stars AND licence labels: WORKING
+api.github.com	/repos/pguso/agents-from-scratch	403	403	closed on BOTH channels; exact star counts unavailable this pass

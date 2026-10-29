@@ -6,11 +6,14 @@ updated: 2026-10-29
 
 # Compose Patterns — Education
 
-**Pass `p532` · 2026-10-29.** **Twenty-one** recipes. Every component named below was read
-from its repository page this pass, and **every licence was read from the licence
-file's own title block** (`raw.githubusercontent.com` is reachable while
-`github.com` returns HTTP 403 through the session proxy). No recipe uses a
-component this base has not verified.
+**Pass `p534` · 2026-10-29.** **Twenty-three** recipes. Every component named below
+was read from its repository page, and **every licence was read from the licence
+file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
+this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
+the HTML is 403 to `curl` and **200 through WebFetch**, which is how every
+component below now also carries an **archive-state** read.** 🔴 **That read
+immediately invalidated a component this file would have recommended** — see
+`P570`. No recipe uses a component this base has not verified.
 
 **The licence rule that shapes all eight:** the mainstream LMS cores are copyleft
 (Moodle GPL-3.0, Open edX / Canvas AGPL-3.0). Agents stay **permissive and
@@ -826,6 +829,133 @@ per-path grants · *which paths this deliverable actually ships* · verdict.
 🟢 **A benchmark you only ever *run* is a much easier case than a corpus you
 *redistribute*** — and separating those two uses is usually what unblocks the
 deal.
+
+## 🆕 `p534` — two patterns added, one grant corrected by a gate
+
+🟢 **`P569`** assembles a university AI service from **MIT Open Learning's own
+production code** — the find that closed `Gap 533-A`. 🟢 **`P570`** replaces the
+Frappe recipe this file would otherwise have recommended, because its agent
+layer was **archived seven days before this pass**. 🔴 **And `P570`'s first draft
+graded `frappe/frappe` as AGPL-3.0; `make gate-shelf-consistency` caught it
+against [`../repos/foundations.md`](../repos/foundations.md) before commit and
+the licence file settles it as MIT.** 🔵 Each pattern below also now carries a
+**security precondition** where its components have published advisories — see
+`P569`, whose Canvas bridge published **four advisories on 2026-10-25**, two of
+them **High**.
+
+## P569 — The university AI service, started from a peer university's production code (North America first; Global)
+
+**Brief.** A university wants a student-facing AI service — tutor, syllabus
+answers, video Q&A, resource recommendation — self-hosted, auditable, and
+extensible by its own staff after the studio leaves. 🔴 **This base's previous
+answer was to assemble a tutor from a pedagogical engine plus a framework and
+write the service layer.** That service layer already exists, under **MIT**,
+written by MIT Open Learning and running at `learn.mit.edu` — and `p534` found
+it at **0★**.
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Service | 🆕 [mitodl/learn-ai](https://github.com/mitodl/learn-ai) | 🟢 **MIT** · 🔴 0★ · **816 commits** | **Four education agents already wired**: resource recommender, syllabus bot, **VideoGPT**, **TutorBot** — LangGraph graphs served over **Django Channels** (streaming, not request/response) |
+| Pedagogy | [mitodl/open-learning-ai-tutor](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **MIT** · 1★ | The tutoring engine `learn-ai` serves. Keep them as a pair — they are one system split across two release cadences |
+| Agent toolchain | 🆕 [mitodl/agent-kit](https://github.com/mitodl/agent-kit) | 🟢 **BSD-3-Clause** · 5★ | `witan-core` (shared memory), `witan-council` (work coordination), `witan-code` (code graph), `agent-config-kit` CLI, MCP install helpers, Claude Code + Copilot agent definitions |
+| Observability | **Opik** + LangSmith + PostHog, as `learn-ai` already integrates them | per-vendor | 🟢 **Already wired, which is the rare part.** MIT runs Opik self-hosted at `opik.ol.mit.edu` — take that deployment shape when the client cannot send traces off-premises |
+| Eval | `learn-ai`'s own **RAG evaluation** harness + [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** | Retrieval quality from the repo, *pedagogical* quality from the benchmark. 🔵 They measure different failures and a client will ask about both |
+| LMS seam | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (read) + [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) (write) | 🟢 **MIT** · 308★ / 10★ | Canvas dominates US higher ed. 🔴 Do not fork Canvas itself — attach over LTI 1.3 + MCP |
+
+🔴 **Security precondition, added after reading the bridge's own advisories this
+pass — do not skip it.**
+[`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+published **four advisories on 2026-10-25**, two of them **High**. Pin
+**≥ 1.16.0** *and* **Node.js ≥ 22.18** (below that floor the patched release
+refuses to run `execute_typescript` at all, so upgrading the package alone leaves
+the deployment unpatched), or set `EXECUTE_TYPESCRIPT_ENABLED=false` and lose
+nothing this pattern needs. 🔴 **Even patched, code executed in local sandbox
+mode can still reach the caller's Canvas token**, and outbound network blocking
+there is best-effort (issue #157). 🔴 **And `GHSA-hmr8-mvr2-mvw5` is the one that
+bites *this* pattern specifically:** *"prompt-injected assistant could disclose
+course data or change grades through first-call write tools"* — which is exactly
+the write mount below. 🟢 **So the write server is not merely flag-gated, it is
+gated on a human confirmation for grade and enrolment calls**, and the tutor
+graph must never pass retrieved course text into a write tool's arguments
+without a confirmation step. That is the trend-12 thesis in operational form:
+the integration layer inherits the authority of the system it attaches to.
+
+**Wiring, concretely.** Stand up `learn-ai` as the service and `agent-kit` as the
+developer environment around it; keep `open-learning-ai-tutor` as a pinned
+dependency rather than vendoring it, because the two move on different cadences
+(this is trend 18 applied at the dependency level). Point the LangGraph model
+routing at whatever the engagement's sovereignty rules allow. Mount the Canvas
+MCP servers as tools on the TutorBot graph — **read server by default, write
+server behind an explicit flag and a course allow-list**, which is the governance
+pattern `leshamblin/MoodleMCP` demonstrates and this stack does not ship. Run the
+RAG eval harness in CI from day one; it is the artefact that makes the
+"is it working?" conversation answerable.
+
+**Effort.** 🟢 **4–6 weeks** to a pilot on one faculty's courses — the service,
+the four agents, the tracing and the eval harness are all inherited. Budget in
+the **corpus** (syllabi, lecture video, library holdings), the Canvas tenant
+negotiation, and institutional review. 🔴 **Not** in agent code.
+
+🔴 **What to check before promising it.** `learn-ai` has **0 stars and no
+forks**: the evidence is the **816 commits**, the named RC deployment
+(`rc.learn.mit.edu`, `api.rc.learn.mit.edu`) and the fact that a peer
+institution runs it — not the counter. Read the per-service setup in its README
+(the backend expects port 8005, the sandbox frontend 8003) and confirm the
+LangGraph and Django Channels versions against the client's Python estate.
+🔵 **And say out loud what this pattern really is:** adopting another
+university's internal service, which means inheriting its assumptions about
+identity, course structure and content licensing. That is a governance
+conversation, not a technical risk, and it is cheaper than the alternative.
+
+## 🆕 P570 — The Frappe-stack education engagement, after Flow was archived (Global; LATAM and APAC SMB-first)
+
+**Brief.** A school group or training provider already runs the **Frappe /
+ERPNext** stack for administration and wants agents on top of it. 🔴 **The
+obvious component is gone:** [`frappe/flow_client`](https://github.com/frappe/flow_client)
+— *"native AI agents, tools and triggers for Frappe"*, **89★** — was marked
+**`Public archive` on 2026-10-22**, seven days before this pass. 🔵 **This
+pattern exists because the archive flag is only readable on a channel this base
+believed was closed** (see `p534`'s channel correction), and without it this file
+would have recommended a retired dependency.
+
+| Layer | Component | Grant | Note |
+|---|---|---|---|
+| ERP / SIS | [frappe/education](https://github.com/frappe/education) | 🔴 **GPL-3.0** | School management on the Frappe stack. 🔴 **Not the same grant as Frappe LMS** |
+| LMS | [frappe/lms](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** · 3.4k★ | Network copyleft — decisive for a hosted deliverable |
+| Framework | [frappe/frappe](https://github.com/frappe/frappe) | 🟢 **MIT** — `The MIT License · Copyright (c) 2016-2021 Frappe Technologies Pvt. Ltd.`, read at **`develop/LICENSE`** (1 118 B, `bc6001a54ffc`) | 🔴 **This cell said `AGPL-3.0` when this pattern was first written, and `make gate-shelf-consistency` caught it against [`../repos/foundations.md`](../repos/foundations.md) *before commit*.** The framework is **permissive**; the *apps* on it are not (`education` GPL-3.0, `lms` AGPL-3.0). 🔵 Also note the default branch is **`develop`**, not `master` as the foundations row cites — rule 11 |
+| 🔴 Agent layer | ~~[frappe/flow_client](https://github.com/frappe/flow_client)~~ | 🔴 **AGPL-3.0 · ARCHIVED 2026-10-22** | ⛔ **Do not build on it.** No upstream, no security fixes, and AGPL anyway |
+| 🟢 Agent layer, instead | **Your own service against the Frappe REST API**, orchestrated with [mitodl/agent-kit](https://github.com/mitodl/agent-kit) (**BSD-3**) or plain LangGraph | 🟢 permissive | 🟢 **The REST boundary is also the licence boundary** — an external service calling Frappe's API does not inherit AGPL the way a vendored app does |
+| Retention | [open-spaced-repetition/fsrs.js](https://github.com/open-spaced-repetition/fsrs.js) | 🟢 **MIT** | Scheduling is solved; do not invent intervals |
+| Tutor | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** · 57★ | Mastery estimation (BKT) as one MCP server, mountable from outside the Frappe process |
+
+**Wiring, concretely.** Run the agents as a **separate service** that
+authenticates to Frappe over REST with a scoped API key — never as a Frappe app
+in the same process, which is both the licence boundary and the upgrade
+boundary. Model the student, course and enrolment reads as MCP tools over that
+API so the same tool surface works against ERPNext and, later, against a
+different SIS. Write-backs (attendance, grades, fee notes) go behind an explicit
+allow-list per site, exactly as the Moodle census's best-governed bridges do.
+
+**Effort.** 🟡 **6–8 weeks**, which is **2–3 weeks more** than the same
+engagement would have cost with Flow alive. 🟢 State that honestly in the
+estimate: the saving from a maintained upstream was real and it is gone.
+
+🟢 **One grant correction, found by a gate rather than by a reader.** The first
+draft of this pattern graded `frappe/frappe` as **AGPL-3.0** from the
+surrounding prose. `make gate-shelf-consistency` — which `p534` is the first
+pass in eleven to run — flagged it against the **MIT** cell on
+[`../repos/foundations.md`](../repos/foundations.md), and the licence file
+settles it: **`The MIT License`**, read at `develop/LICENSE`. 🔵 **The
+architectural consequence is the opposite of what the draft implied:** the
+*framework* is permissive and only the *apps* are copyleft, so a service built
+against Frappe's framework and API has more room than the AGPL cell suggested.
+
+🔴 **What to check before promising it.** Confirm whether Frappe has published a
+successor to Flow — this pass found none, and an archive without a named
+replacement is the signal that the vendor's own AI strategy has moved. 🔴 **And
+re-read the grants per app:** `education` is **GPL-3.0** and `lms` is
+**AGPL-3.0**, two different copyleft regimes on one stack, so a deliverable
+spanning both inherits both.
 
 ## Pattern selection
 

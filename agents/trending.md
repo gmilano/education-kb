@@ -4,6 +4,192 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p534` — `2026-10-29` — **🟢 `Gap 533-A` CLOSED ON ITS NAMED SCOPE: NINE ORGS ENUMERATED, AND MIT OPEN LEARNING TURNS OUT TO SHIP **THREE** AI REPOSITORIES WHERE THIS BASE HELD ONE — `mitodl/learn-ai` IS **MIT, 816 COMMITS, 0★** AND SERVES FOUR EDUCATION AGENTS. 🔴 THE BLOCKER THAT MADE ORG ENUMERATION LOOK IMPOSSIBLE WAS THIS BASE'S OWN WRONG SENTENCE: `github.com` IS **403 TO `curl` AND 200 THROUGH WEBFETCH**. 🔴 A BLANK LINE AT `top.md:197` HAS BEEN SPLITTING THE FLAGSHIP 34-ROW TABLE AND COMPILING A DATA ROW AS A COLUMN HEADER. 🟢 THE SEVEN-PASS SEARCH DROUGHT ENDS — BY EXACTLY ONE ADDRESS, AND IT IS A CURRICULUM. 🟢 TWO SHELF ROWS, BOTH REGIONALLY PLACED; THREE FOUNDATION ROWS.**
+
+### 🔴 The find: a university's production agent stack, 0★, invisible to every instrument here
+
+`p533` filed [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor)
+(**MIT**, **1★**) and stopped looking at the org. 🟢 **Enumerated this pass, MIT
+Open Learning ships three:**
+
+| Address | Grant (title block, read at source) | Stars | Depth | What it is |
+|---|---|---|---|---|
+| [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) | 🟢 **MIT** — `Copyright (c) 2024 Matt Bertrand` · 1 070 B · `d1ea675aa9bb` · `main` `1e297ab` | 🔴 **0** | **816 commits** | The **serving backend**: four education agents on **LangGraph** over **Django Channels** — resource recommender, syllabus, **VideoGPT**, **TutorBot** — with **RAG evaluation** and LangSmith / PostHog / **Opik** (`opik.ol.mit.edu`) tracing, against `rc.learn.mit.edu` |
+| [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) | 🟢 **BSD-3-Clause** — `Copyright (c) 2026, Tobias Macey` · 1 499 B · `8afd1cd502a7` | 5 | **551 commits**, 31 open PRs | The toolkit under both: `witan-council` / `witan-code` / `witan-core`, `agent-config-kit` CLI, skills, Claude Code + Copilot agent definitions, MCP install helpers |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | MIT | 1 | 159 commits | 🔵 Filed `p533` — the pedagogical engine, and the *smallest* of the three |
+
+🔵 **Why this is the shape `Gap 533-A` predicted and not a second anecdote.**
+TU München separated the platform (`Artemis`) from the intelligence
+(`edutelligence`). MIT separated the **engine** from the **service** from the
+**toolchain** — a three-way split, inside one org, with the filed repository
+being the *least* substantial of the three. 🔴 **Every ranked instrument on this
+base would prefer the 1★ engine to the 816-commit backend**, because the queue
+gates on grant and liveness and then orders by stars. Registered as
+`Gap 534-C`.
+
+### 🟢 The census, and the negatives are written down
+
+Nine orgs, all of them already cited on a curated page here
+([`../evidence/org-layer-diff.2026-10-29-p534.tsv`](../evidence/org-layer-diff.2026-10-29-p534.tsv)):
+
+| Org | AI-matching repos | Unfiled & permissive | Verdict |
+|---|---|---|---|
+| `mitodl` (307 repos) | 5 | 🟢 **2** | `learn-ai` (MIT), `agent-kit` (BSD-3). `semantic-mitopen` ungranted + stale since 2024 |
+| `Ed-Fi-Alliance-OSS` (33) | 2 | 🟢 **2** | `Fiona` and `AI-Tools-for-Ed-Fi-SDLC`, both **Apache-2.0**, both **0★** |
+| `openedx` | 1 | 🔴 0 | `openedx-ai-extensions` is **AGPL-3.0**, 17★ — the *official* AI plugin is copyleft. Filed as a licence trap |
+| `frappe` | 4 | 🔴 0 | `flow_client` (**AGPL-3.0**, 89★) is **`Public archive` as of 2026-10-22** — the AI layer of a vertical platform this base files three times has no upstream |
+| `learningequality` (238) | 2 | 🔴 **0** | 🔵 **Both matches are substring false positives** (`sushi-chef-aimhi`, `sushi-chef-aiep`). Kolibri's org ships **no AI-layer repository at all** — an informed blank, not a silence |
+| `1EdTech` | 🔴 0 | 0 | Standards body; zero matches |
+| `jupyterhub` | 🔴 0 | 0 | Zero matches, against **12** addresses already filed from this org |
+| `adlnet` | 🔴 0 | 0 | xAPI/LRS standards org; zero matches |
+| `openfun` | 3 | 🔴 0 | All three are **2023 conference artefacts**, 0★, two of three ungranted |
+
+🔴 **The method's own limit, stated rather than discovered later: the
+enumeration is keyword-scoped.** `frappe/flow_client` — the most consequential
+negative on this list — did **not** appear under `q=ai`; it took a second query
+on `flow`. 🔵 So an AI layer whose name does not contain "ai" is still invisible
+to this instrument, and four of the nine "zero matches" above are therefore
+weaker evidence than they look. → `Gap 534-A`.
+
+### 🔴 The blocker was a sentence in this base, and refuting it cost one request
+
+`p532` and `p533` both record *"`github.com` and `api.github.com` are both
+**HTTP 403** through this session's proxy"*, and `Gap 533-A` consequently
+scoped its own remedy as *"one API call per org"* — a cost it could not pay.
+🟢 **Measured this pass:**
+
+| Host | `curl` via proxy | WebFetch | Consequence |
+|---|---|---|---|
+| `raw.githubusercontent.com` | **200** | — | grant reads: unchanged |
+| `github.com/{owner}/{repo}` | 🔴 **403** | 🟢 **200** | stars, forks, commits, archive state, README — all readable |
+| `github.com/orgs/{org}/repositories?q=…` | 🔴 **403** | 🟢 **200** | 🟢 **the org enumeration `Gap 533-A` asked for, with star counts and licence labels** |
+| `api.github.com/repos/…` | 🔴 403 | 🔴 **403** | closed on both; **exact** star counts remain unavailable |
+
+🔵 **The lesson generalises past this pass: a blocked channel is evidence about
+that channel, never about the host.** Four passes treated an entire capability
+as unavailable on the strength of one `curl` result. → **shelf rule 15**.
+🟡 One honest cost: the HTML channel serves **rounded** stars (`1.1k`), so every
+figure this pass files is labelled page-rounded, and the exact counters `p529`
+promoted are still gone.
+
+### 🔴 A rendering defect in this base's own flagship table
+
+[`top.md`](top.md) carried a **blank line at line 197**, left by `p533`
+mid-table. 🔴 **It split the 34-row shelf into two tables, and the second had no
+header row — so its first data cell,
+`🆕 EduTelligence (Iris · Athena · Atlas)`, renders and compiles as a *column
+name*.** 🔵 This is precisely the failure this base forbids on the *input* side
+— "never leave a header or an example row as data" — arriving from the *output*
+side. Fixed this pass.
+
+🔴 **And then the interesting part, which is a retraction of the sentence this
+section first carried.** It said *"no gate caught it: every control here reads
+rows, not table boundaries."* 🟢 **False.** `make gate-tables` — *"ACTION p277
+— no shelf may publish a data row that renders as a table header"* — names
+**`cross-table-blank`** among its 15 controls and lists all ten curated files in
+its `SHELVES`. Reintroduced on purpose, the defect is caught **by name**:
+
+```
+🔴 1 table-structure defect(s):
+   agents/top.md:236	BLANK-SPLITS-TABLE	| 🆕 **EduTelligence** (Iris · Athena · Atlas) | …
+make: *** [Makefile:426: gate-tables] Error 1
+```
+
+🔴 **So the defect shipped for a full pass because the gate was not run — not
+because it did not exist.** 🔴 **And this pass nearly made it worse:** it wrote
+a replacement instrument before checking, and that instrument reported **115
+"violations" in files `p277` grades clean**. 🟢 `p277` was right — at
+[`../repos/trending.md`](../repos/trending.md)`:1739` the blank line separates
+**two complete tables**, the second with its own header *and* separator, which
+renders correctly. A blank splits a table only when what follows is **not** a
+new header/separator pair. **The duplicate was deleted rather than committed.**
+🔵 `Gap 534-D` is therefore registered and closed inside this pass, by
+retraction, and the general case is `Gap 534-H`: **a negative claim about the
+environment, once written into prose, is never re-tested** — the same mechanism
+that made `github.com` look closed for four passes.
+
+### 🟢 THE GATES RAN — first attested full run in at least eleven passes, and they found four defects no reader had
+
+🔴 **This base's README has recorded `make hooks` as DENIED (`Code from
+External`) for ten of eleven passes, and nothing in it is gate-attested.** 🟢
+**At `p534` it ran.** 65 gates, **47 green, 18 red**, no gate masking another
+(`p300`'s runner). 🔴 **A second invocation later in the pass was denied again**,
+so the capability is **intermittent, not restored** — but the individual
+`make gate-*` targets were permitted throughout, and that is enough.
+
+🟢 **What the run was worth, in defects it caught that nothing else did:**
+
+| Gate | What it found | Outcome |
+|---|---|---|
+| `gate-shelf-consistency` | 🔴 **A grant error `p534` had just written:** `P570`'s draft graded [`frappe/frappe`](https://github.com/frappe/frappe) **AGPL-3.0** against the **MIT** cell on [`../repos/foundations.md`](../repos/foundations.md) | 🟢 **Fixed before commit.** The licence file settles it — `The MIT License`, `develop/LICENSE`, 1 118 B, `bc6001a54ffc`. 🔵 The *framework* is permissive and only the *apps* are copyleft, which is the opposite of what the draft implied |
+| `gate-prose-claims` | 🔴 **Eleven load-bearing claims `CLAIM-LOST` or `ARCHIVE-ONLY`** — in this base's history, absent from the curated file that owed them | 🟢 **All eleven discharged, none from memory.** Eight restored first-hand, one recorded as **refuted**, one **corrected** on re-reading the source. Gate now **green** |
+| `gate-register-currency` | 🔴 Four shelves carried no `## 🆕 \`pN\`` header, so the gap register could not be checked against them | 🟢 Headers added; gate now **green** |
+| `gate-tables` | 🟢 Caught `p533`'s broken table **by name** when the defect was reintroduced on purpose | 🟢 Confirms the defect was a **not-run gate**, not a missing one |
+
+🟢 **The eleven prose claims, and what happened to each:**
+
+| Claim | Disposition at `p534` |
+|---|---|
+| `LATAM-DEC-POPULATION` | 🟢 **Restored and re-verified:** the DEC *AI in Higher Education LATAM Survey 2026* rests on **30 000+ responses** from **29** institutions; **7 319 faculty** confirmed on DEC's own pages, 🟡 the **22 941 student** figure single-sourced to an author's LinkedIn post and labelled so |
+| `LATAM-POLICY-GAP` | 🟢 Restored: **~30 %** with a published AI-use policy against **92 %** student engagement — and now corroborated by IESALC's **26 % / 87 %** |
+| `EMEA-ADOPTION-GAP` | 🟢 Restored: there is still **no EMEA adoption rate** on this base, 13 passes on |
+| `CANVAS-ADV-SANDBOX` | 🟢 **Restored first-hand** from the repository's advisory page: `GHSA-7pp5-29mw-9jq3`, **High, CVSS 7.8**, CWE-94 — sandbox escape via `child_process` in `execute_typescript`, **all versions < 1.16.0**, remote under HTTP transport |
+| `CANVAS-SEC-FLOOR` | 🟢 Restored: the fix **requires Node.js ≥ 22.18** and refuses to run below it — **upgrading the package alone leaves a deployment unpatched** |
+| `CANVAS-TOKEN-RESIDUAL` | 🟢 Restored: executed code **can still reach the caller's Canvas token**; outbound blocking in local mode is best-effort (issue #157) |
+| `SG-AGENTIC-FIRST` | 🟢 Restored: IMDA's **Model AI Governance Framework for Agentic AI**, launched at Davos **2026-01-22**, four dimensions, 🔴 **voluntary** — the artefact to show, not a rule to comply with |
+| `VN-EDU-DEADLINE` | 🟢 Restored **as a conditional**: systems in operation before **2026-08-15** are due **2027-09-01**; everything else **2027-03-01** |
+| `VN-CORPUS-TRIGGER` | 🟡 **Restored with a correction.** This base said a RAG tutor over an unvetted corpus is high-risk *"on the retrieval design alone"*. Decision 33's text qualifies it — **large-scale deployment with systemic risk or widespread impact on learners**. The holding survives, **narrower than stated** |
+| `NO-PERMISSIVE-PLATFORM` | 🔴 **Not restored — refuted.** *"No permissive education platform exists"* is false against this base's own shelves (`oppia` Apache-2.0, `OpenOLAT` Apache-2.0, `kolibri` MIT, `sakai` ECL-2.0). 🟢 Recorded as a dated **retraction** in the file that owed it, and the register row should be retired → `Gap 534-I` |
+| `T15-INTEGRATION-AUTHORITY` | 🟢 Restored into trend 12: **the integration layer inherits the authority** of the system it attaches to, and none of its defences |
+
+🔵 **The honest reading of this table is uncomfortable and worth stating: four of
+the eleven were security or regulatory facts about components these pages
+recommend.** A reader following `P490-1` before this pass would not have been
+told about a High-severity RCE in the default mode of the bridge it names. 🟢
+**The gate knew. It had known for passes. Nobody ran it.**
+
+🟡 **Still red after this pass** (unchanged, pre-existing, and not touched):
+`gate-offline`, `recount`, `gate-enumeration`, `gate-fold-identity`,
+`gate-alias-canonical`, `gate-author-key`, `gate-census-currency`,
+`gate-grant-path`, `gate-census-union`, `gate-i2-sweep-crosscheck`,
+`gate-union-currency`, `gate-action-answered`, `gate-case-collision`,
+`gate-promotion-ledger`, `gate-cell-reproduction`, and
+`gate-shelf-consistency`'s **two remaining** disagreements
+(`hkuds/deeptutor`, `openeducat/openeducat_erp`) — 🔵 **both of which live in
+[`../intel/open-gaps.md`](../intel/open-gaps.md), an append-only file this pass
+will not rewrite.** 🔴 `recount` reports **STALE=0, NO-ANCHOR=5 of 5**: no count
+is wrong, but all five anchors point at an `agents/top.md` MCP section and
+trends `T21`/`T24` that no longer exist → `Gap 534-J`.
+
+### 🟢 Generic web search: the drought ends, by one address, and it is not an agent
+
+All four mandated global legs run at `2026` (computed from the system date, not
+hardcoded):
+
+| Query | New shelf-grade addresses | What it returned |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | 🟢 **1** | [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) — **MIT**, **~1.1k★**, 262 forks, 12 lessons, topics `ai-education` + `open-source-education`. 🔴 **Fitness: `curriculum`** — nothing to deploy. Everything else was general-purpose (Hermes, Aider, Cline, CrewAI, AutoGen, LangGraph) |
+| `github trending education AI 2026` | 🔴 **0** | Third-party trackers only (Trendshift, GitTrend); `rohitg00/ai-engineering-from-scratch` and `h9-tect/AI-Roadmaps` are AI-engineering curricula, not education-sector repos |
+| `open source platform education ERP CRM MIT Apache` | 🔴 **0** | OpenEduCat, ERPNext (GPL-3.0), CK-ERP (dated) — 🔵 **and the leg's own answer is a negative worth filing: there is no MIT/Apache education ERP.** Every education ERP this base has found is GPL/LGPL/AGPL |
+| `AI education industry trends 2026` | 🔴 **0 addresses** | Demand signal only — and the forecasts disagree by **2.9×** for the same year; see [`../intel/trends.md`](../intel/trends.md) |
+
+🔵 **Seven passes of measurement, one usable address, and it is a teaching
+resource.** The standing conclusion holds and is now better evidenced: this
+sector's open-source supply is not *discoverable* by trend search, because its
+artefacts are institutional, national, 0★ or packaged as skills. 🟢 **What
+worked this pass was org enumeration of addresses this base already cited** —
+`learn-ai` has 0 stars and 816 commits and will never trend anywhere.
+
+### 🟢 Regional legs — all four run, and the gaps are named
+
+| Region | Supply (addresses) | Demand / policy | Verdict |
+|---|---|---|---|
+| **North America** | 🟢 **4** — `mitodl/learn-ai`, `mitodl/agent-kit`, `Ed-Fi-Alliance-OSS/Fiona`, `AI-Tools-for-Ed-Fi-SDLC` | 36 % of global market share; **~10 %** of institutions with formal AI guidelines; **71 %** of US teachers without AI training; no sector regulator, state-level patchwork (Colorado, Texas); Canada's **AIDA** not confirmed in law | 🟢 Strongest **supply** leg this pass, and all four finds are institutional rather than commercial |
+| **EMEA** | 🔴 **0 new** | 🔴 **Zero education-specific results, second pass running.** The leg returned enterprise-AI material (EU AI Act, CompTIA skills, data-governance complexity) and nothing on schools, ministries or universities | 🔴 **An informed blank, written down.** EMEA's *supply* leg remains the strongest on this base (`get-it`, `feedbacksystem`, `edutelligence`, OpenOLAT, ILIAS, Dolos, Ralph) while its *demand* leg will not resolve through this query. The query is the suspect → `Gap 534-F` |
+| **APAC** | 🔴 0 new | **TCS × Pearson** multi-year AI learning alliance; LearnUpon Sydney HQ + AI course authoring; **OpenAI appoints an ANZ policy lead** as Canberra tightens AI governance and copyright; Singapore's consultations are financial-sector, not education | 🟡 Commercial and policy motion, **no education-specific regulation found**; supply here is already this base's largest (DeepTutor, OpenMAIC, dsh-openmaic, Study-Mate, ai-shifu, teacher-exam) |
+| **LATAM** | 🔴 0 new | 🟢 **The strongest demand evidence of any region this pass.** UNESCO **IESALC** (with UNU-IAS), 200 institutions across **19 countries**: **87 %** use AI in at least one area, 🔴 **only 26 % have any formal framework**. Digital Education Council with **Tec de Monterrey**: **92 % of students / 79 % of faculty** actively engaging, 🔴 **~30 % of universities with a published policy**. Chile most advanced (national AI policy since 2021 + a bill); Brazil and Colombia have strategies but no education-sector rules; Mexico's SEP/ANUIES recommendations are **non-binding**. IDB's **ILIA** index covers 19 countries | 🟢 **A governance gap with a number on it** — 87 % adoption against 26 % frameworks is the clearest engagement opening on this base. Filed in [`../intel/market.md`](../intel/market.md) |
+
+
 ## 🆕 `p533` — `2026-10-29` — **🔴 THIS BASE FILED A 823★ MIT PLATFORM IN THREE PLACES AND NEVER ITS AI LAYER: `ls1intum/edutelligence` IS **MIT** AND CARRIES **THREE** DEPLOYED EDUCATION AGENTS (IRIS, ATHENA, ATLAS). 🟢 `Gap 532-B` CLOSED — THE QUEUE HAS A MATERIALITY COLUMN AND IT INVERTS THE ORDER: RECALL RANK **1** IS **UNGRANTED**, RECALL RANK **18** IS **BSD-3-CLAUSE, 458,181★**. 🔴 TWO PROBE BUGS THAT MANUFACTURE ABSENCE: RAW IS CASE-SENSITIVE (`README.MD`), AND A `repo:` BATCH DROPPED **3 OF 35** LIVE ADDRESSES SILENTLY. 🟢 FIVE SHELF ROWS, THREE REGIONALLY PLACED. 🔴 GENERIC WEB SEARCH: ZERO NEW SHELF-GRADE FINDINGS, SIXTH CONSECUTIVE PASS, ALL FOUR GLOBAL LEGS AND ALL FOUR REGIONAL LEGS RUN.**
 
 ### 🔴 The find: an institution ships the LMS and the agents as two artefacts

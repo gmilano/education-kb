@@ -4,6 +4,78 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p534` — `2026-10-29` — **🟢 THREE FOUNDATION ROWS, ALL THREE OFF AN ORG ENUMERATION THIS BASE BELIEVED IT COULD NOT RUN. 🔴 THE AI AGENT LAYER OF A VERTICAL PLATFORM FILED HERE THREE TIMES WAS **ARCHIVED SEVEN DAYS AGO** AND NOTHING NOTICED: `frappe/flow_client`, AGPL-3.0, 89★, `Public archive` 2026-10-22. 🔴 THE *OFFICIAL* OPEN EDX AI PLUGIN IS **AGPL-3.0** — "EXTEND OPEN EDX" READS PERMISSIVE BECAUSE `XBlock` IS APACHE-2.0, AND THE AI PLUGIN IS NOT. 🔴 THIS FILE'S HEADLINE COUNT WAS A FULL PASS STALE AND IS NOW ARITHMETIC, NOT AN ASSERTION. 🟢 ONE SEARCH-SOURCED ADDRESS IN SEVEN PASSES, FILED AS A **CURRICULUM**.**
+
+### 🟢 What was filed, and where it came from
+
+| Address | Grant (title block) | Stars | Fitness | Channel that found it |
+|---|---|---|---|---|
+| [`mitodl/agent-kit`](https://github.com/mitodl/agent-kit) | 🟢 **BSD-3-Clause** · 1 499 B · `8afd1cd502a7` | 5 | `infrastructure` | org enumeration (`mitodl`, 307 repos) |
+| [`Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) | 🟢 **Apache-2.0** · 11 357 B · `c71d239df917` | 🔴 0 | `reference-implementation` | org enumeration (`Ed-Fi-Alliance-OSS`, 33 repos) |
+| [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) | 🟢 **MIT** · 1 091 B · `f78cc6bf1d57` | **~1.1k** (page-rounded) · 262 forks | `curriculum` | 🟢 generic web search, leg 1 — **the first in seven passes** |
+
+🔵 **Two of three have five stars or fewer, and both are institutional.** The
+Ed-Fi Alliance governs the data standard US K-12 student records move on;
+`AI-Tools-for-Ed-Fi-SDLC` is that standards body publishing how it uses agents
+on its own codebase. There is no other open-source answer on this base to the
+*governance* half of an education engagement, and it has **zero stars**.
+
+### 🔴 Two liveness findings that a filed row cannot express
+
+**1. An archived AI layer under a live platform.**
+[`frappe/flow_client`](https://github.com/frappe/flow_client) — *"Frappe Flow,
+native AI agents, tools and triggers for Frappe"*, **AGPL-3.0**, **89★** — is
+labelled **`Public archive`, 2026-10-22**. This base files
+[`frappe/education`](https://github.com/frappe/education) (GPL-3.0),
+[`frappe/lms`](https://github.com/frappe/lms) (AGPL-3.0) and
+[`frappe/frappe`](https://github.com/frappe/frappe) across three pages, so the
+platform rows are fine — but **the agent layer a client would have reached for
+was retired seven days before this pass and no page here said so.** 🟢 The
+consequence is now written into [`../compose/patterns.md`](../compose/patterns.md):
+over Frappe, build on the **REST API**, not on Flow.
+
+🔵 **It is also three shelf rules firing at once.** Its default branch is
+**`develop`** (rule 11), its grant file is **`license.txt`** (rule 2), and it
+was only found by a *second* query on `flow` after `q=ai` missed it
+(`Gap 534-A`). A probe assuming `main` + `LICENSE` + `q=ai` misses it three
+separate ways.
+
+**2. The official Open edX AI plugin is copyleft.**
+[`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions)
+(**AGPL-3.0**, 17★, read at `main` `66d0792`, 34 523 B, `8486a10c4393`) is *"an
+edX platform plugin for housing tools and helpers for working with AI."* 🔴
+**The trap is inheritance by association:** `openedx/XBlock` is **Apache-2.0**
+and filed here as the extension point, so "extend Open edX with AI" reads
+permissive — and the repository that houses the AI helpers carries the
+platform's AGPL. 🟢 Build behind an XBlock or LTI boundary and the client's code
+stays theirs; vendor this plugin and §13 reaches the hosted service. Filed on
+[`../agents/top.md`](../agents/top.md) under licence traps.
+
+### 🔴 This file's own headline count was stale for a whole pass
+
+[`foundations.md`](foundations.md) opened with *"Pass `p532` ·
+**Fifty-eight**"* while `p533` filed **eleven** further rows beneath it without
+touching the header. 🟡 The figure is now published as **arithmetic** — 58 + 11
++ 3 = **seventy-two** — and labelled *derived, not recounted*, because several
+sections there are **censuses** (the Moodle MCP census alone covers 222
+addresses) and "rows in tables" is not the same quantity as "load-bearing
+systems". 🔵 A recount needs a stated rule for what counts, which this base has
+never written down → `Gap 534-E`. **Until it runs, no total on that page should
+be quoted.**
+
+### 🟢 The negatives, because a silence looks like coverage
+
+Of nine orgs enumerated, **five returned nothing**: `1EdTech`, `jupyterhub`
+(against **12** addresses already filed from it), `adlnet`, `learningequality`
+(🔵 its two `q=ai` hits are **substring false positives** — `sushi-chef-aimhi`,
+`sushi-chef-aiep` — so Kolibri's org ships **no AI-layer repo at all**), and
+`openfun`, whose three matches are **2023 conference artefacts** at 0★, two of
+them ungranted. 🔴 **Four of those five negatives are weaker than they look**,
+because the enumeration matched on the keyword `ai` and an AI layer need not be
+named for it — which is exactly how `frappe/flow_client` was nearly missed
+(`Gap 534-A`).
+
+
 ## 🆕 `p533` — `2026-10-29` — **🟢 `Gap 532-B` CLOSED: THE PROMOTION QUEUE NOW CARRIES **STARS, GRANT AND LIVENESS**, AND MEASURING ITS HEAD INVERTED IT. RECALL RANK **1** (16 PASSES, 104★) HAS **NO LICENCE FILE AT 15 PATHS**. RECALL RANK **18** IS **`freeCodeCamp` — BSD-3-CLAUSE, 458,181★**, 32× THE NEXT-LARGEST UNFILED ADDRESS. **4 OF 35** QUEUE-HEAD ADDRESSES ARE ARCHIVED OR OVER A YEAR STALE. 🟢 ELEVEN FOUNDATION ROWS ADDED, INCLUDING THE AUTOGRADER LAYER THIS BASE HAD NO ROW FOR.**
 
 ### 🔴 A recall count is not a priority, and this is how badly it misorders

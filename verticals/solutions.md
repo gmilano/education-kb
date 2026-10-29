@@ -6,12 +6,18 @@ updated: 2026-10-29
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p532` · 2026-10-29.** Every platform below is a real, running system that
-institutions already operate, with its licence read this pass from **the licence
-file's own title block** (`raw.githubusercontent.com` is reachable while
-`github.com` returns HTTP 403 through the session proxy). The question this file
-answers is not "what exists" but **"where does the AI attach, and what does the
-licence let us ship?"**
+**Pass `p534` · 2026-10-29.** Every platform below is a real, running system that
+institutions already operate, with its licence read from **the licence file's own
+title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
+carried for two passes — "`github.com` returns HTTP 403 through the session
+proxy" — is corrected: `github.com` HTML is 403 to `curl` and **200 through
+WebFetch**, so archive state, star counts and org listings are readable after
+all** ([`../evidence/channel-asymmetry.2026-10-29-p534.tsv`](../evidence/channel-asymmetry.2026-10-29-p534.tsv)).
+🔴 **That correction immediately earned its keep on this page:** it is how
+`p534` found that the AI agent layer of a platform filed here three times was
+**archived seven days ago** — see §7. The question this file answers is not
+"what exists" but **"where does the AI attach, and what does the licence let us
+ship?"**
 
 Odoo is to ERP what Moodle is to learning: the thing you customise rather than
 replace. In education the equivalents are below, grouped by the institutional
@@ -214,6 +220,42 @@ MIT repository**, and no row here pointed at it. Registered as `Gap 533-A`.
 > queue, not off a search — this base had described it eleven separate times and
 > filed it nowhere. 🟡 **No location stated** on the page or in the README, so it
 > is unplaced; `Crosstalk-Solutions` as an org name is not evidence of a country.
+
+## 🆕 `p534` — §7, liveness of the attachment point: the thing a licence cell cannot say
+
+A platform row answers *"where does the AI attach?"*. 🔴 **It does not say
+whether the attachment point is still maintained**, and this pass found two
+cases where that is the whole answer.
+
+| Attachment point | Platform it attaches to (filed here) | State read 2026-10-29 | What to do instead |
+|---|---|---|---|
+| 🔴 [`frappe/flow_client`](https://github.com/frappe/flow_client) — *"Frappe Flow: native AI agents, tools and triggers for Frappe"*, **AGPL-3.0**, **89★** | [`frappe/education`](https://github.com/frappe/education) (GPL-3.0), [`frappe/lms`](https://github.com/frappe/lms) (AGPL-3.0), [`frappe/frappe`](https://github.com/frappe/frappe) | 🔴 **`Public archive` as of 2026-10-22** — default branch `develop`, grant at `license.txt` | 🟢 **Build on the Frappe REST API**, not on Flow. The platform rows are unaffected; the agent layer has no upstream and must be treated as the studio's own code |
+| 🔴 [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) — *"plugin for housing tools and helpers for working with AI"*, **AGPL-3.0**, 17★ | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (AGPL-3.0), [`openedx/XBlock`](https://github.com/openedx/XBlock) (**Apache-2.0**) | 🟢 Live, pushed 2026-10-05 — 🔴 **but copyleft** | 🟢 Attach behind an **XBlock** (Apache-2.0) or an **LTI** boundary. 🔴 Vendoring this plugin pulls AGPL §13 into a hosted deliverable — and the trap is that `XBlock` being Apache-2.0 makes "extend Open edX with AI" *read* permissive |
+
+🔵 **The general rule for this file, which it did not previously state:** the
+licence governs what you may ship, and the **archive flag governs whether
+anyone will fix it**. A permissive-but-dead attachment point is worse for a
+client than a copyleft-but-maintained one, because the second is an
+architecture decision and the first is an unbudgeted maintenance transfer. 🟢
+Both flags are now readable on the same channel, so every platform row on this
+page should carry a liveness read — not yet done for the 30-plus rows above
+→ `Gap 534-G`.
+
+### 🟢 And one attachment point that *gained* an upstream: the US K-12 data plane
+
+[`Ed-Fi-Alliance-OSS`](https://github.com/Ed-Fi-Alliance-OSS) — the alliance
+governing the **Ed-Fi Data Standard** that US state education agencies move
+student records on, already filed here through
+[`Ed-Fi-Alliance-OSS/data-management-service`](https://github.com/Ed-Fi-Alliance-OSS/data-management-service)
+and [`edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) —
+ships **two Apache-2.0 AI repositories** that no page here held:
+[`Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) (an AI assistant for the
+Ed-Fi community) and
+[`AI-Tools-for-Ed-Fi-SDLC`](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC)
+(prompts, skills, hooks and agents for the Alliance's own SDLC). 🔵 **Both are
+0★ and both are Apache-2.0** — which makes the *data plane*, not the LMS, the
+newest permissive attachment surface on this page, and the only one whose
+upstream is a standards body rather than a vendor.
 
 ## The architecture this implies
 

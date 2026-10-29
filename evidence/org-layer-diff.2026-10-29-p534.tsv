@@ -1,0 +1,10 @@
+org	org_repos_total	query	matches	filed_before	unfiled_live_permissive	unfiled_copyleft	unfiled_ungranted_or_stale	note
+mitodl	307	q=ai&type=source	5	1	2	0	2	open-learning-ai-tutor filed p533; learn-ai + agent-kit unfiled; semantic-mitopen ungranted+stale-2024; apisix is a vendored upstream
+learningequality	238	q=ai&type=source	2	0	0	0	2	both matches are substring false positives (sushi-chef-aimhi, sushi-chef-aiep); org ships NO AI-layer repo
+openedx	-	q=ai&type=source	1	0	0	1	0	openedx-ai-extensions AGPL-3.0 17 stars -- the official Open edX AI plugin is copyleft
+1edtech	-	q=ai&type=source	0	0	0	0	0	zero matches; standards body, no AI layer
+ed-fi-alliance-oss	33	q=ai&type=source	2	0	2	0	0	Fiona + AI-Tools-for-Ed-Fi-SDLC, both Apache-2.0, both 0 stars
+jupyterhub	-	q=ai&type=source	0	0	0	0	0	zero matches; 12 addresses already filed from this org
+adlnet	-	q=ai&type=source	0	0	0	0	0	zero matches; xAPI/LRS standards org
+openfun	-	q=ai&type=source	3	0	0	0	3	all three are 2023 conference artefacts, 0 stars, two of three ungranted
+frappe	-	q=ai&type=source + q=flow	4	0	0	1	0	flow_client AGPL-3.0 89 stars ARCHIVED 2026-10-22 -- the AI agent layer of a filed vertical platform, retired

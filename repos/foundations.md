@@ -6,12 +6,21 @@ updated: 2026-10-29
 
 # Foundational Education Repos
 
-**Pass `p532` · 2026-10-29.** **Fifty-eight** load-bearing systems — `p531`'s
-fifty-five plus the **three** `p532` adds, every one of them an address this
-base already owned and had dropped — an education
-engagement is likely to inherit, extend or integrate against — not agents (those
-are in [`../agents/top.md`](../agents/top.md)), but the platforms and standards
-the agents must live beside.
+**Pass `p534` · 2026-10-29.** Load-bearing systems an education engagement is
+likely to inherit, extend or integrate against — not agents (those are in
+[`../agents/top.md`](../agents/top.md)), but the platforms, standards and
+toolkits the agents must live beside.
+
+🔴 **The count in this sentence was stale and is now stated as arithmetic rather
+than asserted.** This header read *"Pass `p532` · **Fifty-eight**"* while `p533`
+filed **eleven** further rows below it without touching it — so the headline
+number was wrong for a whole pass, in the one place a reader looks first.
+🟡 By pass arithmetic the figure is **fifty-eight + eleven (`p533`) + three
+(`p534`) = seventy-two**; it is *derived*, not recounted, because several
+sections here are **censuses** (the Moodle MCP census alone covers 222
+addresses) and a row count and a "load-bearing system" count are not the same
+quantity. 🔵 A recount against an explicit rule for what counts is `Gap 534-E`
+— and until it runs, no total on this page should be quoted.
 
 > 🟢 **`p530` adds a layer this file did not have: the e-learning standards
 > implementations.** Twelve repos — SCORM runtimes, xAPI learning record stores,
@@ -354,6 +363,51 @@ which return **`NOASSERTION`** and so are **not yet graded** — per shelf rule 
 that means *the title block has not been read*, not that a grant exists. 🔴 They
 are the highest-starred ungraded addresses left on the queue and the obvious
 first read for `p534`.
+
+## 🆕 `p534` — the institutional AI toolchain, off `Gap 533-A`'s org enumeration
+
+`Gap 533-A` said this base's "is it filed?" test matches on the **address**, so
+an institution that ships its platform in one repository and its intelligence in
+another reads as *filed* the moment the platform is. 🟢 **Nine orgs already
+cited on these pages were enumerated this pass** —
+[`../evidence/org-layer-diff.2026-10-29-p534.tsv`](../evidence/org-layer-diff.2026-10-29-p534.tsv)
+— and the three rows below are what came back that belongs on *this* page rather
+than on the agent shelf. Grants read first-hand from the licence file's title
+block, bytes and sha256 recorded in
+[`../evidence/grant-reads.2026-10-29-p534.tsv`](../evidence/grant-reads.2026-10-29-p534.tsv).
+
+| Repo | Licence (title block) | Stars | Fitness | Why it is foundational |
+|---|---|---|---|---|
+| 🆕 [mitodl/agent-kit](https://github.com/mitodl/agent-kit) | 🟢 **BSD-3-Clause** — `BSD 3-Clause License · Copyright (c) 2026, Tobias Macey` (1 499 B, `8afd1cd502a7`, `main` `431fde4`) | 5 | `infrastructure` | **The agent platform a real university's AI team actually runs.** Three `witan` packages — `witan-council` (work coordination), `witan-code` (a code graph for coding agents) and `witan-core` (shared memory) — plus the `agent-config-kit` CLI, reusable skills (`creating-skills`, `dependency-updates`, `deploy-verification`), custom agent definitions for **Claude Code and GitHub Copilot**, MCP install helpers (`witan-council`, `witan-code`, `toolhive-swe`) and six environment profiles. **551 commits**, docs on Read the Docs. 🔵 Education logic lives in [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai); *this* is the plumbing under it, and BSD-3-Clause makes it the most permissively licensed institutional agent toolkit on this base. |
+| 🆕 [Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC](https://github.com/Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC) | 🟢 **Apache-2.0** (11 357 B, `c71d239df917`, `main` `d42adc2`) | 🔴 0 | `reference-implementation` | *"Prompts, Skills, Hooks, Agents, etc. for use in the Ed-Fi Alliance software development lifecycle."* 🔵 Its value is **whose** SDLC it is: Ed-Fi governs the data standard that US K-12 student records move on, so this is the standards body publishing how it uses agents on its own codebase — a citable precedent for the governance conversation, which is the part of an education engagement that has no open-source answer anywhere else on this page. 🔴 Zero stars, pushed 2026-09-08. |
+| 🆕 [pguso/agents-from-scratch](https://github.com/pguso/agents-from-scratch) | 🟢 **MIT** — `MIT License · Copyright (c) 2025 AI Agents from Scratch Contributors` (1 091 B, `f78cc6bf1d57`, `main` `da3f9df`) | **~1.1k** (page-rounded) · 262 forks | `curriculum` | **Twelve lessons building an agent from a single local LLM call** — text in/out, tools, the agent loop, memory, planning, **evals and telemetry** — with no frameworks, no cloud APIs and no hidden reasoning. Topics include `ai-education` and `open-source-education`. 🔴 **Filed as a `curriculum`, and the distinction is the point:** there is nothing here to deploy for a client. It ramps a studio team, on a local model, without an API budget. 🔴 **It is also the only new address generic web search has produced in seven passes** — and the search snapshot's **796★** against the page's **~1.1k** is a ~38 % disagreement, which is why no star figure on these pages is search-sourced. |
+
+## 🆕 `p534` — a register claim this base has **refuted**, recorded rather than restored
+
+🔴 **`make gate-prose-claims` reports `NO-PERMISSIVE-PLATFORM` as `CLAIM-LOST`**
+— *"a declared gap that three patterns choose their base on"* — and asks this
+file to carry the sentence **"No permissive education platform exists"**.
+
+🟢 **It is recorded here as RETIRED, not restored, because this base's own
+shelves disprove it.** Three permissive full learning platforms are filed on
+this page:
+
+| Platform | Grant | Stars |
+|---|---|---|
+| [oppia/oppia](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | 7.0k |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** | 449 |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 1.2k |
+
+plus [sakaiproject/sakai](https://github.com/sakaiproject/sakai) under
+**ECL-2.0**, an Apache-2.0 derivative that is permissive in practice.
+
+🔵 **Why this is written down instead of simply dropped.** `p494` established
+that a deleted claim is indistinguishable from coverage — so the honest
+discharge of a refuted claim is a **dated retraction in the file that owed it**,
+naming the evidence that killed it. 🔴 **And the register row should now be
+retired**, because a gate that demands a false sentence will eventually be
+satisfied by someone re-asserting it. → noted in
+[`../intel/open-gaps.md`](../intel/open-gaps.md) under `Gap 534-I`.
 
 ## Licence map, for the architecture decision
 

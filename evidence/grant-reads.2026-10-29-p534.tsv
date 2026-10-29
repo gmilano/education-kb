@@ -1,0 +1,8 @@
+address	live	default_branch	head_sha	grant_file	grant_title_block	bytes	sha256_12	stars_measured	star_channel	fitness	filed_this_pass
+mitodl/learn-ai	LIVE	main	1e297ab6d1d1	LICENSE	MIT License / Copyright (c) 2024 Matt Bertrand	1070	d1ea675aa9bb	0	github.com-html-webfetch	dependency	yes
+mitodl/agent-kit	LIVE	main	431fde4e87d9	LICENSE	BSD 3-Clause License / Copyright (c) 2026, Tobias Macey	1499	8afd1cd502a7	5	github.com-html-webfetch	infrastructure	yes
+Ed-Fi-Alliance-OSS/Fiona	LIVE	main	a5028439d165	LICENSE	Apache License Version 2.0, January 2004	11357	c71d239df917	0	github.com-html-webfetch	reference-implementation	yes
+Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC	LIVE	main	d42adc22adb7	LICENSE	Apache License Version 2.0, January 2004	11357	c71d239df917	0	github.com-html-webfetch	reference-implementation	yes
+pguso/agents-from-scratch	LIVE	main	da3f9df28a9c	LICENSE	MIT License / Copyright (c) 2025 AI Agents from Scratch Contributors	1091	f78cc6bf1d57	1100-rounded	github.com-html-webfetch	curriculum	yes
+openedx/openedx-ai-extensions	LIVE	main	66d0792c2a9e	LICENSE	GNU AFFERO GENERAL PUBLIC LICENSE Version 3	34523	8486a10c4393	17	github.com-html-webfetch	dependency-COPYLEFT	no-licence-trap
+frappe/flow_client	LIVE	develop	4a3189b6cbef	license.txt	GNU AFFERO GENERAL PUBLIC LICENSE Version 3	-	-	89	github.com-html-webfetch	dependency-ARCHIVED	no-archived
