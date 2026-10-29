@@ -4,6 +4,107 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p524` — `2026-10-29` — **🟢 THIS SHELF'S ADAPTIVE-LEARNING CAPABILITY IS SPLIT ACROSS FOUR ROWS THAT EACH HOLD HALF OF IT, AND ONE MIT REPO HOLDS ALL OF IT — carried on this base as an **8★ one-line row in `repos/trending.md`**. [`skillcoco/skillcoco`](https://github.com/skillcoco/skillcoco) ships canonical 4-parameter **BKT** (`bkt.rs`, `10 504` B) *and* **SM-2** (`sm2.rs`, `16 827` B) *and* a BYOK LLM tutor in one tree, offline-first, **MIT on two independent grant channels**. 🔴 It is also `v0.1.0`, **not published on crates.io**, CLA-gated, and open-core behind a commercial trio — so the call is **lift `skillcoco-core`, do not adopt the platform**. 🔴 `Gap 521-D` is now proven **ENVIRONMENTAL, not evidential**: every EU primary host fails DNS on **both** channels available here.**
+
+### 🟢 The split this promotion closes
+
+The four rows this shelf already carries each hold part of "adaptive tutor", and **no one of them holds it all**:
+
+| Row | Licence | Knowledge tracing | LLM tutor loop | What it is missing |
+|---|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | 🟢 BKT | 🔴 none | No LLM layer — hint trees are authored, not generated |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | **MIT** | 🟢 DKT/SAKT family | 🔴 none | A research library, not a tutor — no learner-facing loop |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** | 🔴 none | 🟢 agentic | No mastery estimator — memory is transcript-shaped, not per-skill |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | 🟡 scheduling only | 🔴 none | Scheduling without mastery; and `p523` measured it **340 days** stale on code |
+| [`skillcoco/skillcoco`](https://github.com/skillcoco/skillcoco) | **MIT** | 🟢 **BKT + SM-2** | 🟢 **BYOK** | 🔴 Maturity: `v0.1.0`, API unstable, ~8★, single vendor |
+
+🔵 **That is the whole argument for the promotion.** Every other permissive route to "mastery-gated tutor" on this base requires welding two repos together; this one ships the weld.
+
+### 🟢 Verified this pass — every figure is served bytes at a pinned commit
+
+All reads below are against `skillcoco/skillcoco` @ **`805c6c784db5ad60a02d450dc1711f1b3e1381c6`** (`refs/heads/main`, resolved by `git ls-remote --symref` today):
+
+| Path | Bytes | What it establishes |
+|---|---|---|
+| `LICENSE` | **`1 103`** | **MIT**, holder *Gourav Shah (Initcron Systems Private Limited)* |
+| `skillcoco-core/Cargo.toml` | **`4 691`** | `license = "MIT"` declared — a **second, independent grant channel agreeing with the LICENSE bytes** |
+| `skillcoco-core/src/bkt.rs` | **`10 504`** | Canonical 4-parameter BKT, `update_mastery()`, unit tests present |
+| `skillcoco-core/src/sm2.rs` | **`16 827`** | Canonical SM-2, quality scale `0..5`, ease-factor update rule |
+| `CLA.md` | **`4 536`** | 🔴 Contributions are **CLA-gated** |
+| `CONTRIBUTING.md` | **`7 477`** | — |
+| `src-tauri/Cargo.toml` | **`3 502`** | Tauri 2 desktop host |
+
+🟢 **The BKT is real, not a stub.** `bkt.rs` implements the four canonical parameters with
+project defaults `p_know = 0.3`, `p_learn = 0.1`, `p_guess = 0.2`, `p_slip = 0.1`, a
+`MASTERY_THRESHOLD` of **`0.7`** used for prerequisite unlock gating, and the posterior-then-learning-step
+update `posterior + (1 - posterior) * p_learn`. Two unit tests assert mastery moves the right way
+on correct and incorrect observations.
+
+🟢 **The SM-2 is real too.** Quality `< 3` resets `repetitions → 0` and `interval → 1 day`;
+quality `>= 3` follows the standard `1, 6, interval × ease_factor` ladder; the ease-factor rule is
+`EF' = EF + (0.1 − (5 − q)(0.08 + (5 − q) × 0.02))`, floored at **`1.3`**.
+
+### 🟢 Why the core crate is liftable — the invariant that makes this a component, not a platform
+
+`skillcoco-core/Cargo.toml` carries an explicit **anti-leakage invariant (`D-02`)**: no `rusqlite`,
+`tauri`, `printpdf`, `image`, `qrcode`, `reqwest`, `tokio` or `async-trait` may appear in
+`[dependencies]`. Its actual dependency set is `serde`, `serde_json`, `thiserror`, `chrono`, `log`,
+`uuid`, `ed25519-dalek`, `pkcs8`, `sha2`, `hex` — **all portable to `wasm32-unknown-unknown`**.
+
+🔵 **So the algorithms are not welded to the desktop app.** BKT is pure math behind a `BktStore`
+trait; persistence is the host's problem (`rusqlite` in the Tauri app, IndexedDB on the web). A
+Globant engagement can take `skillcoco-core` into a Python/TS service via WASM, or into a Rust
+service directly, and keep its own datastore.
+
+### 🔴 The four caveats that keep this out of the top tier
+
+1. **Not on crates.io.** The manifest says *"API UNSTABLE until 1.0.0"* and defers publishing to
+   *"crates.io plans (Phase 8)"*. 🟡 So intake is a **git dependency pinned to a commit**, not
+   `cargo add` — pin `805c6c784db5`, do not float `main`.
+2. **Open-core with a CLA.** `CLA.md` (`4 536` B) gates contributions, and the project describes
+   commercial **SkillCoco Pro / Hub / Studio** built on the open core by **Initcron Systems Private
+   Limited**. 🔴 `Initcron` appears **nowhere else in this KB** — this is the first time the holder
+   is recorded here. The MIT grant on what is published is unaffected; the roadmap risk is that
+   future capability lands on the commercial side.
+3. **Holder divergence.** `Cargo.toml` declares `authors = ["School of DevOps & AI"]` while
+   `LICENSE` names *Gourav Shah (Initcron Systems Private Limited)*. 🟡 Two names for one grantor —
+   the same class this base tracks with `p139-source-header-holder`.
+4. **Scale.** ~8★ and *"built in the open since March 2026"*. 🔴 This is a **seven-month-old
+   single-vendor project**, and the shelf should say so next to the capability claim.
+
+🟢 **Net verdict: `PROMOTE AS COMPONENT`.** `skillcoco-core` is the only permissive asset on this
+base that puts a mastery estimator and a spaced-repetition scheduler behind one portable API. The
+*application* around it is too young to propose to a client; the *crate* is a legitimate build-on.
+
+### 🟡 A citation divergence, recorded because this base records them
+
+The README attributes BKT to **Corbett & Anderson, 1994**; `bkt.rs`'s own module doc says
+**1995**. 🔵 The canonical paper is usually cited as 1995 (*User Modeling and User-Adapted
+Interaction* 4(4), published 1994–95), so both are defensible and the *source file* is the channel
+to quote. Noted so a later pass does not "correct" the right one.
+
+### 🔴 `Gap 521-D` — closed as unclosable **from this environment**
+
+`p521` registered the EU Official Journal text of **Regulation (EU) 2026/1744** as unread because
+`eur-lex.europa.eu` would not resolve. This pass tried to close it and establishes something
+stronger: the block is **not a transient DNS failure and not specific to one host or one tool**.
+
+| Host | Shell (`getent` + `curl`) | `WebFetch` |
+|---|---|---|
+| `eur-lex.europa.eu` | 🔴 DNS FAIL, HTTP `000` | 🔴 `ENOTFOUND` |
+| `op.europa.eu` | 🔴 DNS FAIL, HTTP `000` | — |
+| `data.europa.eu` | 🔴 DNS FAIL, HTTP `000` | — |
+| `publications.europa.eu` | 🔴 DNS FAIL, HTTP `000` | — |
+| `digital-strategy.ec.europa.eu` | 🔴 DNS FAIL, HTTP `000` | — |
+| `artificialintelligenceact.eu` | 🔴 DNS FAIL, HTTP `000` | 🔴 `ENOTFOUND` |
+
+🟢 **So `Gap 521-D` is environmental, not evidential.** No amount of further research in this
+session will read that text; the EU primary-source domains must be **added to the session's network
+allowlist**. 🔵 Until then the Annex III date rests on convergent secondary reporting — which
+`p521`, `p513` and this pass now independently agree on — and the gap note should say *"requires
+allowlisting"* rather than *"not yet read"*, because the second phrasing invites four more passes
+to retry a call that cannot succeed.
+
 ## 🆕 `p523` — `2026-10-29` — **🔴 THE LIVENESS ROW THIS TABLE CALLS AUTHORITATIVE IS FALSIFIED BY A SHELF ADDRESS: `microsoft/autogen`'s committer date is ONE DAY OLD and its last code commit is `2026-03-25` — a **217-day** gap — because its last three commits are notices announcing its own retirement. 🔴 Its GitHub `archived` flag is **`false`**, so `p518`'s *"IS ARCHIVED"* is right about the posture and wrong about the flag, and every liveness channel on this base reads LIVE. 🟢 Fixed, not reported: `p523-code-vs-docs-liveness`, 38 offline checks — and 🔴 its own first draft graded `fsrs4anki` (MIT, **4,119★**) as retired off the words *"use archive link of the tutorial"*, the `p520` class in mirror image, caught by a positive control. 🟢 `fsrs4anki` is ALSO the shelf's largest promotion miss, and this pass places it.**
 
 ### 🔴 The falsification, reproducible in three commands

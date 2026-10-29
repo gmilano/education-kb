@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p524` — `2026-10-29` — **🟢 THE WINDOW'S REAL MOVEMENT IS NOT A STAR COUNT, IT IS A CAPABILITY THAT WAS ALREADY ON THIS BASE AND MIS-FILED: `skillcoco/skillcoco` sat as an **8★ one-line row in `repos/trending.md`** reading *"offline adaptive desktop app, terminal labs"* — and byte-level reads today show it is the **only MIT asset on this base carrying BKT *and* SM-2 *and* a BYOK LLM tutor in one tree**. 🔴 So the discovery channel worked and the *description* channel lost the finding: a row can be present, correctly licensed, correctly linked, and still invisible. 🟡 `DeepTutor`'s star channel disagrees with itself again — an aggregator published **48,093 (+2,371)** today against `p523`'s API read of **48,672** — and no new dated release landed.**
+
+### 🔴 The mis-filing, and what it costs
+
+| Channel | What it held on `skillcoco` before today | Verdict |
+|---|---|---|
+| Discovery | 🟢 Found it — present in `repos/trending.md` | worked |
+| Link | 🟢 Correct URL, resolves | worked |
+| Licence | 🟢 **MIT** — correct | worked |
+| Language | 🟢 **Rust** — correct | worked |
+| **Description** | 🔴 *"Offline adaptive desktop app, terminal labs"* | **lost the finding** |
+
+🔵 **Nothing in that row is wrong.** The row is simply describing the *application* when the asset is
+the *library* — and so the shelf's own "we have no permissive mastery-estimating tutor" position went
+unchallenged for as long as the row existed. 🟢 This is a distinct failure class from `p520`–`p523`'s
+licence and liveness errors: **a true row that does not surface its own capability.** Worth a
+positive control in a later pass — grep the shelf for assets whose README names an algorithm their
+row does not.
+
+### 🟢 What the bytes say (pinned `805c6c784db5`, served today)
+
+`bkt.rs` **`10 504`** B — canonical 4-parameter BKT, `MASTERY_THRESHOLD 0.7`, unit tests.
+`sm2.rs` **`16 827`** B — canonical SM-2, quality `0..5`, ease floor `1.3`.
+`LICENSE` **`1 103`** B MIT; `skillcoco-core/Cargo.toml` **`4 691`** B declares `license = "MIT"` —
+**two independent grant channels agreeing.** `CLA.md` **`4 536`** B 🔴 CLA-gated. BYOK across
+Anthropic / OpenAI / Gemini plus local **Ollama**; Tauri 2 + Rust + React 18, SQLite WAL, ~10 MB binary.
+Public since **March 2026**. Full argument and caveats: `agents/top.md` `p524`.
+
+### 🟡 Star-channel disagreement, second consecutive pass
+
+`HKUDS/DeepTutor`: a trending aggregator published **48,093 (+2,371)** for today, while `p523` read
+**48,672** from the API for the same day — a ~579 gap, same direction as `p523`'s finding. 🔵 The
+useful conclusion is unchanged and now repeated: **star counts on this base are a trend signal with a
+±1 k band, not a figure to quote to a client.** No dated `DeepTutor` release in the window; it holds
+at `v1.7.0`.
+
+### 🔴 Searched and came back empty — recorded so silence is not read as coverage
+
+An education-specific ranking of open-source AI agents does not exist in this window: the global
+query returns general agent roundups (Agenta, OpenHands, Langflow, LibreChat, CrewAI) with education
+appearing only as a *use-case chapter* inside
+[`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects)
+(**MIT**, `1 070` B) — already on this base. 🟢 The absence is itself stable across passes: the
+sector has platforms and tutors, and no curated agent index of its own.
+
 ## 🆕 `p523` — `2026-10-29` — **🔴 THE WINDOW'S BIGGEST MOVEMENT IS A PROJECT PUBLISHING ITS OWN OBITUARY AND EVERY LIVENESS FIELD READING IT AS ACTIVITY: `microsoft/autogen` (61,614★) committed `docs: add archive caution to landing page` YESTERDAY, its `archived` flag is **`false`**, and its last CODE commit is `2026-03-25` — **217 days**. 🟢 Dated releases in the window: none. `DeepTutor` holds at `v1.7.0`/88 tags on the git protocol for a second pass. 🔴 The star channel disagreed with itself twice today: the API read **48,672** while a trending aggregator published **48,093 (+2,371)** for the same day. 🟡 Discovery: an eighth axis, the API topic index, returns `total_count: 42` against `p522`'s page-read 42 — exact agreement, zero new.**
 
 ### Dated this window

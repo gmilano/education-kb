@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p524` — `2026-10-29` — **🟢 TWO RECIPES, BOTH BUILT ON THINGS THIS PASS VERIFIED FROM BYTES. `P542` is the **"model proposes, teacher disposes"** mastery gate — the one architecture that satisfies Oklahoma `S.B. 1734`, EU Annex III human-oversight AND India's NCF-SE *"educators must retain final authority over grading"* with a single design, because all three regions independently require that a human owns the grade. `P543` lifts `skillcoco-core` as a **WASM-portable crate** — the only permissive asset on this base holding BKT *and* SM-2 behind one API — and pins it by commit, because it is **not on crates.io**.**
+
+### 🟢 `P542` — The portable human-authority grading gate
+
+**The problem it solves.** Three regions now require, in law or framework, that a model not be the
+final authority on a grade:
+
+| Region | Instrument | The clause |
+|---|---|---|
+| North America | Oklahoma **`S.B. 1734`** | AI may not be the **main basis** for grading or discipline |
+| EMEA | EU AI Act **Annex III point 3** | Evaluating learning outcomes is high-risk → human-oversight duty (`2027-12-02`) |
+| APAC | India **`NCF-SE 2023`** | **"Educators must retain final authority over grading and feedback"** |
+
+🔵 **One architecture satisfies all three**, so build it once.
+
+**The wiring.**
+
+1. **Mastery estimator — [`skillcoco-core`](https://github.com/skillcoco/skillcoco) (MIT)**, module
+   `bkt.rs`. Feed it each graded observation as `is_correct: bool`; it returns a per-skill posterior
+   in `[0,1]`. Keep `MASTERY_THRESHOLD = 0.7` as the unlock gate. 🔵 Crucially it emits a
+   **probability, not a grade** — which is exactly the artefact a human-authority regime wants.
+2. **Tutor loop — [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0)** for the
+   learner-facing agentic session, or
+   [`vulinh1704/ai-tutor-agent`](https://github.com/vulinh1704/ai-tutor-agent) (**MIT**, FastAPI +
+   LangGraph, Socratic hints, rubric-based grading, session memory) when the engagement needs a
+   permissive, smaller surface it can own outright.
+3. **The gate itself — your code, ~200 lines.** Every model-produced score lands in a
+   `proposed_grade` table with `(learner, skill, score, rationale, model_id, posterior, status =
+   PROPOSED)`. Nothing is ever written to the gradebook from this path.
+4. **Teacher disposition — [`moodle/moodle`](https://github.com/moodle/moodle) (GPL-3.0)** or
+   [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (**Apache-2.0** — use this one when
+   the client will not take copyleft). A teacher-facing queue shows the proposal, the BKT posterior
+   and the rationale; `ACCEPTED` / `OVERRIDDEN` / `REJECTED` writes the gradebook and stamps the
+   human actor.
+5. **Evidence — the audit row is the deliverable.** `(proposal, posterior, human actor, timestamp,
+   disposition)` *is* the Annex III human-oversight record and the Oklahoma "not the main basis"
+   defence. 🟢 Log it from day one; retrofitting provenance is the expensive version.
+
+🔴 **The failure mode to design out:** rubber-stamping. A queue a teacher clears in one click
+satisfies the letter and not the clause. 🔵 Mitigation that also sells: surface the BKT posterior
+*disagreeing* with the model's score and route only those for mandatory review — it cuts teacher load
+(the actual LATAM buying trigger, per `intel/market.md`) while making the human decision real where
+it matters.
+
+🟡 **Licence shape:** steps 1–3 are MIT/Apache and stay yours. Step 4 is where copyleft enters —
+OpenOLAT (Apache-2.0) keeps the whole stack permissive if that is a client constraint.
+
+### 🟢 `P543` — Lifting `skillcoco-core` as a portable adaptive-learning crate
+
+**Why it is liftable.** `skillcoco-core/Cargo.toml` (`4 691` B, `license = "MIT"`) carries an explicit
+**anti-leakage invariant `D-02`**: no `rusqlite`, `tauri`, `reqwest`, `tokio`, `async-trait`,
+`printpdf`, `image` or `qrcode` in `[dependencies]`. Its real dependency set —
+`serde`, `serde_json`, `thiserror`, `chrono`, `log`, `uuid`, `ed25519-dalek`, `pkcs8`, `sha2`, `hex` —
+is **portable to `wasm32-unknown-unknown`**. 🔵 So the algorithms detach cleanly from the desktop app.
+
+**Intake, exactly.**
+
+```toml
+# 🔴 NOT on crates.io — the manifest defers publishing to "Phase 8" and says
+# "API UNSTABLE until 1.0.0". Pin the commit; never float `main`.
+[dependencies]
+skillcoco-core = { git = "https://github.com/skillcoco/skillcoco", rev = "805c6c784db5ad60a02d450dc1711f1b3e1381c6" }
+```
+
+**What you get, and the exact call shapes verified this pass.**
+
+- `bkt::update_mastery(&params, prior_mastery, is_correct) -> f64` — canonical 4-parameter BKT.
+  Project defaults `p_know = 0.3`, `p_learn = 0.1`, `p_guess = 0.2`, `p_slip = 0.1`; update is
+  `posterior + (1 - posterior) * p_learn`. `bkt::MASTERY_THRESHOLD == 0.7`.
+- `bkt::BktStore` — a **trait**, not a database. Implement `read_mastery(learner_id, module_id)`
+  against whatever you already run (Postgres, DynamoDB, IndexedDB). 🟢 This is why the crate does not
+  drag a datastore into your service.
+- `sm2` — canonical SM-2 (Wozniak 1987) on a `0..5` quality scale, returning the next
+  `(repetitions, ease_factor, interval)`. Quality `< 3` resets `repetitions → 0`, `interval → 1 day`;
+  `>= 3` follows `1, 6, interval × ease_factor`. Ease factor updates by
+  `EF' = EF + (0.1 − (5 − q)(0.08 + (5 − q) × 0.02))`, floored at **`1.3`**.
+
+**Three deployment shapes:**
+
+| Shape | How | When |
+|---|---|---|
+| Rust service | depend directly | you already run Rust |
+| **WASM in a TS/Python service** | `wasm-pack` the crate; call from Node or `wasmtime` | 🟢 the usual Globant case — keeps the estimator in one audited place |
+| Browser/offline | compile to `wasm32-unknown-unknown`, persist via IndexedDB | low-connectivity deployments; pair with [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (**MIT**) for the offline content layer |
+
+🔴 **Risks to put in the SOW, not discover later.** `v0.1.0` with breaking changes permitted in any
+`0.x`; ~8★ and public only since March 2026; **CLA-gated** contributions (`CLA.md`, `4 536` B); and
+**open-core** — commercial *Pro / Hub / Studio* sit above the MIT core, held by **Initcron Systems
+Private Limited**. 🟢 Mitigation: you are taking **two algorithm modules whose maths is published and
+stable since 1987 and 1995**, not a product dependency. Vendor the two files if the upstream posture
+changes — that is the whole point of lifting the crate rather than adopting the platform.
+
 ## 🆕 `p523` — `2026-10-29` — **🟢 THREE RECIPES, EACH BUILT ON SOMETHING THIS PASS MEASURED. `P539` is the dependency-intake gate that would have stopped `microsoft/autogen` entering three education cycles as live supply — it keys on days since the last CODE commit, because `archived`, `updated_at`, `ls-remote` and the committer date all read LIVE on a project 217 days dead. `P540` is the retention stack rebuilt on the link that is actually maintained: `fsrs-rs` (BSD-3-Clause, 6-day code gap), not `fsrs4anki` (MIT, 340 days). `P541` is the Moodle-gap wedge: core's AI subsystem names exactly three things it does not do, and this base has a permissive asset for each — including the only one that emits SCORM.**
 
 ---

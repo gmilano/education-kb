@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p524` — `2026-10-29` — **🟢 ELEVEN PLATFORM ROWS RE-RESOLVED LIVE THIS PASS, AND THE ONE OPERATIONAL FINDING IS A REF, NOT A LICENCE: `bigbluebutton` — the virtual-classroom row an engagement is most likely to probe — serves off **`v4.0.x-develop`**, so a path read at `main` or `master` returns **404 on a fully maintained project**. 🟢 With `oppia` and `kolibri` on `develop`, THREE live rows in this file would read dead to a `main`-assuming gate. 🔴 And the `OpenEduCat` path this KB cites needs care: `openeducat/openeducat` does NOT resolve — the repo is `openeducat_erp`, served off ref `19.0`.**
+
+### 🟢 Platform liveness, re-resolved today (`git ls-remote --symref`)
+
+| Platform | Repo | Default ref | HEAD | Read |
+|---|---|---|---|---|
+| Moodle | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | `46c042e7da65` | 🟢 LIVE |
+| Open edX | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | `7f0416cd75e2` | 🟢 LIVE |
+| Canvas | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `1c9f0bb8013e` | 🟢 LIVE |
+| Chamilo | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` | `bbb6ec898bc7` | 🟢 LIVE |
+| OpenOLAT | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` | `5b42ca47bd10` | 🟢 LIVE |
+| Sakai | [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` | `dd5d200698ae` | 🟢 LIVE |
+| Oppia | [`oppia/oppia`](https://github.com/oppia/oppia) | 🟡 `develop` | `6b9292ddd297` | 🟢 LIVE |
+| Kolibri | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟡 `develop` | `9ca1b5b13d7f` | 🟢 LIVE |
+| BigBlueButton | [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **`v4.0.x-develop`** | `799a973616bd` | 🟢 LIVE |
+| H5P | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` | `1e21b7a2da4e` | 🟢 LIVE |
+| OpenMeetings | [`apache/openmeetings`](https://github.com/apache/openmeetings) | `master` | `79b71bcb39f8` | 🟢 LIVE |
+| RosarioSIS | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 `mobile` | `25d568f6edca` | 🟢 LIVE — GPL-2.0 re-read `15 214` B |
+
+🔵 **The `v4.0.x-develop` case is the one to internalise.** Four of the twelve rows above
+(`bigbluebutton`, `oppia`, `kolibri`, `rosariosis`) do **not** answer at `main` or `master`. A
+platform-selection script that fetches `…/main/README.md` to confirm a candidate exists will discard
+a third of this file's live, maintained, correctly-licensed platforms. 🟢 Resolve the symref first.
+
+### 🔴 The `OpenEduCat` path, stated precisely
+
+`openeducat/openeducat` and `OpenEduCat/openeducat` **do not resolve** — `ls-remote` returns nothing.
+🟢 The correct repository is **`openeducat_erp`** (cited on this base under both `openeducat/` and
+`OpenEduCat/` owner casing), served off ref **`19.0`**, LGPL-3.0. 🔵 Same class as the
+`RosarioSIS/RosarioSIS` → `francoisjacquet/rosariosis` 404 this base already records: the *product*
+name and the *repository* name differ, and the product name is what gets typed. 🟡 For the
+LMS-plus-SIS question OpenEduCat answers (one database across LMS, SIS, fees and a parent app), the
+licence cell is the decision: **LGPL-3.0**, so customisation is hostable but derivative modules carry
+share-alike duties — flag it before a client builds on it.
+
+### 🟢 Permissive escape hatches on this shelf, restated with licence bytes
+
+For a client that will not take copyleft, this file's permissive platform rows are
+**`OpenOLAT`** (Apache-2.0, a full institutional LMS — the row that refutes *"the LMS layer is
+copyleft"*), **`sakai`** (ECL-2.0, an Apache-2.0 derivative), **`apache/openmeetings`** (Apache-2.0,
+ASF-governed virtual classroom), **`oppia`** (Apache-2.0), **`kolibri`** (MIT, offline-first) and
+**`openfun/richie`** (MIT, course-portal CMS). 🔴 `moodle`, `chamilo`, `h5p`, `bigbluebutton`,
+`rosariosis` (GPL-2.0) and `openeducat_erp` (LGPL-3.0) are the copyleft side — deployable, but
+derivative work carries obligations.
+
 ## 🆕 `p523` — `2026-10-29` — **🔴 THIS FILE IS SELLING A DEAD PLATFORM AND EVERY METADATA FIELD HIDES IT: `gongfuxiang/schoolcms` (292★, *中国首个开源学校教务管理系统*) reads `updated_at: 2026-10-15` and has **ONE branch** whose HEAD is a commit from **`2020-04-22`**; its last code change is **`2019-10-22`**. A **2 367-day** error, on a row an APAC engagement could be pointed at. 🟢 The other 14 platform rows measured this pass are all genuinely shipping, so this is a row to flag, not a tier to re-grade. 🟢 `p522` proved the licence cells are right (11/11); `p523` adds the cell they could never contain — whether anyone is still there.**
 
 ### 🔴 `gongfuxiang/schoolcms` — flagged, with the evidence

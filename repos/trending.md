@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p524` — `2026-10-29` — **🔴 THIS FILE HELD THE PASS'S BIGGEST FINDING AND UNDER-DESCRIBED IT: row `skillcoco/skillcoco` — *"Offline adaptive desktop app, terminal labs"*, 8★, MIT, Rust — is the **only asset on this base shipping BKT + SM-2 + a BYOK LLM tutor in one MIT tree**. Every cell in that row was CORRECT; the description was the cell that mattered and it described the app, not the library. 🟢 The row is now re-described here and promoted in `agents/top.md`. 🟡 `git ls-remote` re-resolved 9 education platform HEADs this pass: all live, and `bigbluebutton` serves off **`v4.0.x-develop`** — a ninth non-`main`/`master` default, which extends `p497`'s finding rather than contradicting it.**
+
+### 🟢 The re-described row
+
+| Repo | Licence | `LICENSE` B | HEAD (`ls-remote`, today) | What it actually is |
+|---|---|---|---|---|
+| [`skillcoco/skillcoco`](https://github.com/skillcoco/skillcoco) | **MIT** | `1 103` | `main` @ `805c6c784db5` | 🟢 Tauri 2 / Rust / React 18 offline learning app **whose `skillcoco-core` crate is a WASM-portable BKT + SM-2 library** — `bkt.rs` `10 504` B, `sm2.rs` `16 827` B. BYOK Anthropic/OpenAI/Gemini + local Ollama. 🔴 `v0.1.0`, not on crates.io, CLA-gated, open-core under Initcron Systems Private Limited |
+
+### 🟡 Default-ref sweep, re-resolved this pass
+
+Nine platform HEADs resolved by `git ls-remote --symref` today — 🟢 all nine live:
+
+| Repo | Default ref | HEAD |
+|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | `46c042e7da65` |
+| [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `master` | `7f0416cd75e2` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `1c9f0bb8013e` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` | `bbb6ec898bc7` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🟡 `develop` | `6b9292ddd297` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟡 `develop` | `9ca1b5b13d7f` |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` | `5b42ca47bd10` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` | `dd5d200698ae` |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **`v4.0.x-develop`** | `799a973616bd` |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` | `1e21b7a2da4e` |
+| [`apache/openmeetings`](https://github.com/apache/openmeetings) | `master` | `79b71bcb39f8` |
+
+🔵 **`bigbluebutton`'s `v4.0.x-develop` is the sharpest case yet** of `p497`'s point: a path-only
+probe at `main` or `master` returns **404 on a live, maintained project**, and a naive gate reads that
+as a dead repo. 🟢 Resolve the symref first, always — `oppia` and `kolibri` (`develop`) fail the same
+way.
+
+### 🔴 Channel note — the GitHub REST API is unavailable to this pass
+
+`api.github.com/repos/{owner}/{repo}` returns *"GitHub access to this repository is not enabled for
+this session"* for **every repo outside the session's own scope**, and `curl -sI https://github.com/…`
+returns **`403`** through the proxy. 🟢 So this pass's existence and liveness proofs run on
+**`git ls-remote --symref`** (resolves the ref and the HEAD SHA) and **`raw.githubusercontent.com`**
+(serves file bytes at a pinned commit) — both of which worked for every repo probed.
+🔵 Positive control that the channel is sound: `ls-remote` returned
+`ff7c85cee735…` for `fsrs4anki`, which **matches this base's own recorded `main @ ff7c85cee735`**
+exactly. 🟡 Consequence for the task's `curl -sI` instruction: it cannot verify a URL here — a `403`
+is the proxy, not a missing repo, and treating it as a 404 would delete real rows.
+
 ## 🆕 `p523` — `2026-10-29` — **🟢 `p522` RETIRED `Gap 475-E` BY NAMING THE GIT PROTOCOL'S ONE BLIND SPOT — *"`ls-remote` resolves ARCHIVED repositories too, so it proves motion and cannot prove maintenance"* — AND THIS PASS FINDS THE BLIND SPOT IS WIDER THAN THAT SENTENCE: the `archived` FLAG cannot prove maintenance either. `microsoft/autogen` is **`archived: false`**, committed yesterday, and 217 days dead. 🔴 And the trending channel's worst liveness error on this base is now measured: `gongfuxiang/schoolcms` reads `updated_at: 2026-10-15` on a repository whose only branch has not moved since **`2020-04-22`** — a **2 367-day** error on a published row. 🟢 The replacement instrument ships with 38 offline checks.**
 
 ### 🔴 The six channels, re-measured — and one row is new

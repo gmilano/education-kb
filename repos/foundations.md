@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p524` — `2026-10-29` — **🟢 THIS SHELF HAS A PERMISSIVE **ALGORITHM** LAYER AND HAS NEVER LISTED ONE: every adaptive-learning row here is either a platform (`moodle`, `OpenOLAT`, `oppia`) or a research library with no tutor (`pykt-toolkit`), and the gap between them — *a mastery estimator you can embed* — is filled by `skillcoco-core` (**MIT**, WASM-portable, BKT + SM-2), which this base carried only as an 8★ app row in `repos/trending.md`. 🟡 Default-ref sweep re-resolved: **11 platform HEADs, all live**, and `bigbluebutton` serves off **`v4.0.x-develop`** — a NINTH non-`main`/`master` default on this shelf, which strengthens `p497` rather than revising it. 🔴 One internal inconsistency found: this file records `rosariosis` at TWO different commits in two different rows.**
+
+### 🟢 The missing layer, named
+
+| Layer | Shelf rows | Licence shape |
+|---|---|---|
+| Institutional platform | `moodle`, `openedx`, `canvas-lms`, `chamilo`, `OpenOLAT`, `sakai` | 🟡 mostly copyleft; `OpenOLAT` (Apache-2.0) and `sakai` (ECL-2.0) permissive |
+| Content / delivery | `oppia`, `kolibri`, `h5p`, `openmeetings`, `bigbluebutton` | mixed |
+| Research library | `pykt-toolkit` (**MIT**) | 🔴 no learner-facing loop |
+| Tutor application | `OATutor` (**MIT**), `DeepTutor` (Apache-2.0) | 🔴 whole apps, not components |
+| 🟢 **Embeddable algorithm** | **`skillcoco-core` (MIT)** — *new to this shelf* | 🟢 **permissive, dependency-light, WASM-portable** |
+
+🔵 **Why this layer matters for a foundations shelf.** The other rows are things you *deploy*; this
+is the first that is a thing you *link*. For an engagement that already has an LMS and needs mastery
+estimation inside its own service, every other row is the wrong shape.
+
+**Verified at `skillcoco/skillcoco` @ `805c6c784db5`** (served bytes, today): `LICENSE` `1 103` B
+**MIT**; `skillcoco-core/Cargo.toml` `4 691` B declares `license = "MIT"` (second agreeing channel);
+`src/bkt.rs` `10 504` B; `src/sm2.rs` `16 827` B; `CLA.md` `4 536` B 🔴.
+Dependency set is `serde`, `serde_json`, `thiserror`, `chrono`, `log`, `uuid`, `ed25519-dalek`,
+`pkcs8`, `sha2`, `hex` — with a documented invariant (`D-02`) barring `rusqlite`, `tauri`, `reqwest`
+and `tokio` from `[dependencies]`, which is what makes it `wasm32-unknown-unknown`-portable.
+🔴 **Not on crates.io** (manifest: *"crates.io plans (Phase 8)"*, *"API UNSTABLE until 1.0.0"*) → intake
+by pinned git `rev`, never a floating `main`. Full caveats in `agents/top.md` `p524`; intake recipe
+is `compose/patterns.md` `P543`.
+
+### 🟡 Default-ref sweep — 11 rows re-resolved, all live
+
+`git ls-remote --symref` today: `moodle` `main`@`46c042e7da65` · `edx-platform` `master`@`7f0416cd75e2` ·
+`canvas-lms` `master`@`1c9f0bb8013e` · `chamilo-lms` `master`@`bbb6ec898bc7` ·
+`oppia` 🟡`develop`@`6b9292ddd297` · `kolibri` 🟡`develop`@`9ca1b5b13d7f` ·
+`OpenOLAT` `master`@`5b42ca47bd10` · `sakai` `master`@`dd5d200698ae` ·
+`bigbluebutton` 🔴**`v4.0.x-develop`**@`799a973616bd` · `h5p-php-library` `master`@`1e21b7a2da4e` ·
+`openmeetings` `master`@`79b71bcb39f8`.
+
+🟢 **`bigbluebutton` joins the non-default-ref set**, taking it to nine on this shelf alongside
+`rosariosis`→`mobile`, `openeducat_erp`→`19.0`, `ILIAS`→`release_11`, `Claroline`→`15.0`,
+`i-educar`→`2.12`, `oppia`/`kolibri`→`develop`. 🔵 A version-shaped default ref (`v4.0.x-develop`,
+`19.0`, `15.0`, `2.12`, `release_11`) is **normal in this sector**, not a smell — five of the nine
+take that form. Any probe that assumes `main`/`master` mis-grades **~35%** of this shelf, which is
+`p522`'s figure and it holds.
+
+### 🔴 Internal inconsistency in this file
+
+`rosariosis` is recorded at **two different commits**: line ~23 carries
+`2026-10-28` `25d568f6` (🟢 which `ls-remote` confirms as the live HEAD today —
+`25d568f6edca0415853fe47106e9a33a349c0704`), while the table row further down carries
+**`fa5f4b66caf4`**. 🟡 Not a licence or liveness error — the older row simply was not refreshed when
+the newer one was. 🟢 Recorded rather than silently patched, so a later pass can decide whether the
+lower table is meant to be a historical snapshot or a live cell; if live, `fa5f4b66caf4` is stale.
+
+### 🔴 Channel constraint for this and future passes
+
+The GitHub REST API answers *"GitHub access to this repository is not enabled for this session"* for
+**every repo outside this session's own scope**, and `curl -sI https://github.com/…` returns **`403`**
+through the proxy — so neither can verify a URL here. 🟢 Working channels are
+**`git ls-remote --symref`** and **`raw.githubusercontent.com`**. 🔵 Positive control: `ls-remote`
+returned `ff7c85cee735…` for `fsrs4anki`, matching this base's own recorded value exactly.
+🔴 **Consequence:** a `403` from `curl -sI` must never be read as a dead URL on this base — doing so
+would delete verified rows wholesale.
+
 ## 🆕 `p523` — `2026-10-29` — **🟢 `p522` RE-GRADED EVERY LICENCE CELL ON THIS SHELF AND GOT 23/23; `p523` RE-GRADES THE SAME SHELF ON LIVENESS AND THE SCORE IS WORSE: of 16 foundation and shelf rows measured by commit stream, **14 ship, 1 is 340 days stale, and 1 has not changed code since 2019**. 🔴 `microsoft/autogen` — a foundations row — is `archived: false`, committed yesterday, and its last code commit is `2026-03-25`. 🔴 `gongfuxiang/schoolcms` reads `updated_at: 2026-10-15` and has one branch whose HEAD is a commit from **`2020-04-22`**. 🟢 A licence cell is a property of bytes and holds for years; a liveness cell is a property of a moment and this shelf had none.**
 
 ### 🟢 The liveness attestation — the cell this shelf has never published

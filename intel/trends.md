@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p524` — `2026-10-29` — **🟢 TREND 1 IS A NEW FAILURE CLASS FOR THIS BASE AND IT IS THE OPPOSITE OF THE LAST FOUR PASSES': `p520`–`p523` all found rows whose CELLS WERE WRONG. This pass found a row whose cells were ALL RIGHT — correct link, correct MIT licence, correct language — and whose **description** lost the finding, leaving the shelf believing it had no permissive mastery-estimating tutor while holding one for several passes. 🔴 Trend 2: THREE REGIONS NOW INDEPENDENTLY REQUIRE A HUMAN TO OWN THE GRADE — Oklahoma `S.B. 1734`, EU Annex III, India `NCF-SE 2023` — which converts a compliance clause into a single portable architecture. 🔴 Trend 3: `Gap 521-D` is environmental, so some gaps on this base cannot be closed by research at all.**
+
+### 🟢 Trend 1 — The true-but-invisible row
+
+Four consecutive passes hardened this base against **wrong cells**: `p520` and `p522` on false
+permissive reads, `p521` on a date conflict, `p523` on liveness channels that read a 217-day-dead
+project as live. 🔵 All of those are *falsification* problems — a cell asserts something untrue.
+
+🔴 **`p524`'s finding is a different shape: nothing asserted was untrue.**
+`skillcoco/skillcoco` was on the shelf, linked correctly, licensed correctly (**MIT**), language
+correct (**Rust**), described as *"offline adaptive desktop app, terminal labs"* — a fair description
+of the application. The asset, though, is the **library inside it**: `skillcoco-core`, a WASM-portable
+crate carrying canonical BKT (`bkt.rs`, `10 504` B) and SM-2 (`sm2.rs`, `16 827` B).
+
+🟢 **The lesson generalises past this row.** A KB can be audited to perfection on licence and
+liveness and still fail its purpose, because **"is this cell true?" and "would a reader find this
+asset?" are different questions**, and only the first has instruments on this base. 🔵 A
+description cell that names the *deployable* while the *linkable* is the valuable part is a silent
+miss, and silence is the one error no verification pass catches. 🟡 Cheap instrument for a later
+pass: for every row, grep the upstream README for algorithm or library names absent from the row's
+own description.
+
+### 🔴 Trend 2 — Human grading authority is converging across all three major regions
+
+| Region | Instrument | Effect |
+|---|---|---|
+| North America | Oklahoma **`S.B. 1734`** | AI may not be the **main basis** for grading or discipline; written district policy before **2027–28** |
+| EMEA | EU AI Act **Annex III point 3** | Evaluating learning outcomes is high-risk → human oversight, from **`2027-12-02`** |
+| APAC | India **`NCF-SE 2023`** (Grade 3+, from **2026–27**) | **"Educators must retain final authority over grading and feedback"** |
+
+🟢 **Three bodies, three legal traditions, no coordination, one requirement.** This is the most
+portable constraint this base has recorded: it means the *same* architecture — model proposes, teacher
+disposes, decision logged — is compliant in all three regions, so the conformance work is a single
+investment rather than three. 🔵 `compose/patterns.md` `P542` is that architecture.
+🟡 It also sets a hard limit on the product category: **fully autonomous grading has no major market**
+as of this window. Anything sold as such is a regulatory liability in NA, EMEA and India alike.
+
+🔵 **Why the convergence is strategically bullish, not bearish.** A human-in-the-loop requirement
+makes the *teacher-workload* story the buyable one — which is exactly where LATAM demand already
+concentrates (HolonIQ's 2026 cohort shows AI positioning moving to teachers' tools, and the IDB's
+193-initiative review found 59% using generative AI). 🟢 Regulation and the strongest regional
+demand signal point at the same product.
+
+### 🔴 Trend 3 — Some gaps are environmental and will never close by researching harder
+
+`Gap 521-D` (the OJ text of **Regulation (EU) 2026/1744**) has survived `p513`, `p521`, `p522` and
+this pass. 🟢 This pass settles *why*: six EU primary hosts — `eur-lex.europa.eu`, `op.europa.eu`,
+`data.europa.eu`, `publications.europa.eu`, `digital-strategy.ec.europa.eu`,
+`artificialintelligenceact.eu` — fail DNS resolution on **both** channels available here (shell
+`getent`+`curl`, and `WebFetch`).
+
+🔵 **So the gap register needs a type distinction it does not have:** *evidential* gaps (more research
+may close them) versus **environmental** gaps (only a configuration change will). 🔴 Filed as
+evidential, an environmental gap silently taxes every future pass — four passes have now each spent a
+leg retrying a lookup that cannot succeed. 🟢 The fix is a sentence: mark `521-D`
+**"requires network allowlisting"** and stop re-attempting it until the policy changes.
+
+### 🟡 Trend 4 — Star counts remain unquotable, and the band is now measured twice
+
+`HKUDS/DeepTutor` read **48,672** (API, `p523`) against an aggregator's **48,093 (+2,371)** for the
+same day — the second consecutive pass with a disagreement in the same direction and roughly the same
+magnitude (~0.6 k). 🟢 Treat stars as a **trend signal with a ±1 k band**, never as a figure in a
+client deliverable. 🔵 The sector's underlying momentum claim is unaffected: DeepTutor rose from
+roughly 44 k to roughly 48 k within this window on every channel that reported it.
+
 ## 🆕 `p523` — `2026-10-29` — **🔴 THE LOAD-BEARING TREND IS THAT "MAINTAINED" HAS STOPPED BEING MEASURABLE FROM METADATA, AND THE SECTOR'S BIGGEST ARCHIVED FRAMEWORK PROVES IT: `microsoft/autogen` is `archived: false`, committed yesterday, and has not changed code since `2026-03-25`. 🔴 Trend 2 is the opposite failure on the same axis — `gongfuxiang/schoolcms` reads `updated_at: 2026-10-15` and has not moved since `2020-04-22`, a **2 367-day** error. 🟢 Trend 3: three consecutive passes have each built an instrument that was WRONG in a different direction, and in all three the saving control was a HAND verdict from the pass before. 🟡 Trend 4: the market's own 2026 number has a **2.8× spread** and the disagreement is definitional, not empirical.**
 
 ### 🔴 Trend 1 — the liveness signal the whole sector relies on has decoupled from maintenance
