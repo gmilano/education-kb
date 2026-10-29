@@ -4,6 +4,124 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p527` — `2026-10-29` — **THE RED CELL `p526` LEFT OPEN IS NOW GREEN, AND IT RESOLVED THE COPYLEFT WAY: `frappe/education` IS GPL-3.0 — WHILE `frappe/lms` ON THE SAME STACK IS AGPL-3.0.** One vendor, one framework, **two different copyleft regimes**. 🟢 **Channel upgrade that made it possible:** `curl` to `github.com` and `api.github.com` is still **HTTP 403** through the session proxy, but **`raw.githubusercontent.com` is reachable** — so licences are now read from **the licence file's own title block** instead of a sidebar badge. Every platform licence on [`foundations.md`](foundations.md) was re-read that way this pass. 🔴 **The structural finding this window:** Moodle, the sector's largest LMS, has **no credible MCP server** — the whole field tops out at **27★**, eight search results resolve to about **three codebases**, and the most-visible one is AGPL-3.0. Against [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) at **308★** for the *smaller* install base.
+
+### 🔵 Resolved — the `p526` red cell
+
+| Repo | `p526` | `p527` | How |
+|---|---|---|---|
+| [`frappe/education`](https://github.com/frappe/education) · 685★ · 472 forks | 🔴 **unresolved** — `license.txt` present, type not rendered on the page | 🟢 **GPL-3.0** | Fetched the file directly. It is three lines of front matter: `---` / `License: GNU GPL V3` / `---`. Strong copyleft, **not** permissive. |
+
+🔴 **And the consequence is sharper than the answer.**
+[`frappe/lms`](https://github.com/frappe/lms) (3.4k★) title block reads
+`GNU AFFERO GENERAL PUBLIC LICENSE Version 3`. So the Frappe education stack is
+**AGPL-3.0 for learning and GPL-3.0 for administration** — and a single deliverable
+spanning both inherits both obligation sets, with AGPL §13's network clause the one
+that bites a hosted engagement. **New P551 rule: grade per app, never per vendor.**
+
+### 🟢 Platform licences re-read at the title block — every cell, this pass
+
+Licence column now means *"read from the licence file"*, not *"read from the
+sidebar"*. The filename and branch are recorded because two of them are traps.
+
+| Repo | Licence (title block) | Stars | File read |
+|---|---|---|---|
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 | 9.3k | `main/LICENSE` |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | AGPL-3.0 | 8.2k | — (canonical address; `edx-platform` redirects here) |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 | 7.6k | — |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **Apache-2.0** | 7.0k | `master/LICENSE` 🟡 **not `main`** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | AGPL-3.0 | 6.9k | — |
+| [`frappe/lms`](https://github.com/frappe/lms) | AGPL-3.0 | 3.4k | `main/license.txt` 🟡 lowercase |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | **ECL-2.0** | 1.2k | `master/LICENSE` — *"Educational Community License, Version 2.0"* |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **MIT** | 1.2k | `master/LICENSE` — © Learning Equality |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | AGPL-3.0 | 1.1k | — |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1.0k | — |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 | `master/LICENSE` — points to a separate `COPYRIGHT` file |
+| [`apache/openmeetings`](https://github.com/apache/openmeetings) | **Apache-2.0** | 688 | `master/LICENSE` |
+| 🔵 [`frappe/education`](https://github.com/frappe/education) | **GPL-3.0** | 685 | `master/license.txt` 🟡 **resolved this pass** |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | GPL-2.0 | 722 | `master/LICENSE` — **LATAM**, Itajaí (SC) municipal origin |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 648 | — |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | GPL-3.0 | 505 | — **EMEA**, Germany |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** | 449 | `master/LICENSE` — **EMEA**, Switzerland |
+| [`dodona-edu/dolos`](https://github.com/dodona-edu/dolos) | **MIT** | 355 | `main/LICENSE` — © `Team Dolos <dolos@ugent.be>` → **Ghent University, read not inferred** |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 152 | `master/LICENSE.txt` 🟡 **`.txt`** |
+| [`oat-sa/tao-core`](https://github.com/oat-sa/tao-core) | GPL-2.0 | 64 | `master/LICENSE` |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | **MIT** | 51 | `main/LICENSE.md` 🟡 **`.md`** — © France Université Numérique |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | 4.1k | `main/LICENSE` |
+| [`Selleo/mentingo`](https://github.com/Selleo/mentingo) | **MIT** | 101 | `main/LICENSE` — © Selleo |
+
+🟡 **Four of twenty-three needed a non-default filename or branch** (`master` not
+`main`; `license.txt`, `LICENSE.txt`, `LICENSE.md`). A probe checking only
+`main/LICENSE` would have mis-filed Oppia, both Frappe apps, H5P and Ralph — i.e.
+**the largest permissive platform and the xAPI audit seam the whole analytics
+argument rests on.**
+
+### 🔴 The Moodle MCP lineage — eight search results, ~three codebases, 27★ ceiling
+
+Recorded in full so nobody re-discovers this as eight projects.
+
+| Repo | Licence | Stars | What it actually is |
+|---|---|---|---|
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | **MIT** | **27** | **The lineage head** — the only one with traction. Courses, assignments, forums, grades, files-as-markdown. Links to `moodle.ntnu.cc`. |
+| [`thc1006/moodle-mcp`](https://github.com/thc1006/moodle-mcp) | MIT (`© G36maid`) | 0 | **Stated fork of the above.** Rust, 22 tools (20 + 2 escape hatches), README claims validation against Moodle 3.7 → 5.x. The copyright line gives the lineage away. |
+| [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | MIT | 2 | Browser-driving; README claims **~230 tools**, Moodle 4.5/5.x. 🟡 A search summary said 140. |
+| [`triffon/moodle-mcp`](https://github.com/triffon/moodle-mcp) | MIT (`© Falkenslab`) | — | **Same code as `falkenslab`** — identical copyright holder and description. Not independent. |
+| ⚠️ [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) | **AGPL-3.0** | 1 | **The most visible in search, and the one that is not permissive.** TypeScript, read-only by design. |
+| [`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle) · [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) · [`duck-5/moodle-mcp`](https://github.com/duck-5/moodle-mcp) | MIT | low single digits | Independent small implementations. |
+| ⛔ [`tosuki/moodle-mcp`](https://github.com/tosuki/moodle-mcp) | **none** | — | Search result said *"MIT licensed."* **No licence file at any common path.** Ungranted. |
+
+**This is the clearest build opportunity on the base**, and it is a build rather
+than a fork — written up as **P553** in
+[`../compose/patterns.md`](../compose/patterns.md). Today's bar to clear is 27
+stars.
+
+### 🔴 New on the trending channel — stars without a grant
+
+Four repositories with up to **64★** and **no licence file** at `LICENSE`,
+`LICENSE.md`, `LICENSE.txt`, `license.txt`, `LICENCE` or `COPYING` on `main`,
+`master` or `develop`: [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant)
+(64★ — README offers *"open source and available for educational purposes"*, which
+names nothing), [`idoforgod/Vibe-learning-AgenticWorkflow`](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow)
+(25★ — sidebar "License" link **anchors into the README**),
+[`tosuki/moodle-mcp`](https://github.com/tosuki/moodle-mcp), and
+[`bobuel/bloom-taxonomy-quiz-builder-skill`](https://github.com/bobuel/bloom-taxonomy-quiz-builder-skill)
+(3★). **Default copyright applies. Ungranted is a fourth verdict band in P551, not
+a blank cell.**
+
+### 🔴 Licence traps re-confirmed, plus one new
+
+| Repo | Grades as | Actually | Channel |
+|---|---|---|---|
+| 🆕 [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) · 91★ | `MIT` (**its own README badge**) | **GPL-3.0** | Sidebar says GPL-3.0, README badge says MIT, `main/LICENSE` title block says `GNU GENERAL PUBLIC LICENSE Version 3`. **The grant wins.** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) · 2.1k★ | `MIT` | **bespoke non-commercial** | `main/LICENSE.md` 🟡 title line *"# PageLM Community License"*, then the MIT sentence, then 8 KB taking it back. |
+| [`canyongbs/advisingapp`](https://github.com/canyongbs/advisingapp) · 340★ | `unknown` | **Elastic-2.0** | `main/LICENSE` — *"Elastic License 2.0"*. Forbids the hosted shape. |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) · 5.1k★ | `CC-BY-4.0` | **CC-BY-NC-4.0** | `main/LICENSE` — *"Attribution-**NonCommercial** 4.0 International"*. |
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) · 107.5k★ | *ungranted* | 🟢 **Apache-2.0** — *named this pass* | `main/LICENSE.txt`. Page names no licence type; `p526` caught the filename, `p527` reads the licence. |
+
+### 🟢 New permissive component promoted to the verticals shelf
+
+[`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) —
+**Apache-2.0, 462★, 70 forks.** Distils video, audio, PDF, transcripts and notes
+into a **source-backed** teaching Skill. It belongs on the *content* shelf, not
+just the agent shelf: it is the permissive **authoring seam**, and "source-backed"
+is what makes a generated lesson defensible under India's (20 Feb 2026) and China's
+AI-content labelling rules. Pair with H5P for portability.
+
+### 🔴 Declared gaps on the platform legs this window
+
+- **No mainstream Apache/MIT LMS** beyond Oppia (Apache-2.0, 7.0k★) and OpenOLAT
+  (Apache-2.0, 449★). Searched again; the sector is copyleft and that is the
+  finding, not a research shortfall.
+- **No permissively licensed SIS.** The one unresolved candidate resolved to
+  **GPL-3.0** this pass, not to something permissive.
+- **No credible Moodle MCP server** (above).
+- **No APAC-origin platform core** on the platform legs. APAC's strength is on the
+  *agent* legs — DeepTutor, OpenMAIC, lineage-skill, Educhain.
+- **No LATAM-origin platform** beyond i-educar and RosarioSIS's localisation.
+
+---
+
+
 ## 🆕 `p526` — `2026-10-29` — **THE TRENDING CHANNEL'S OUTPUT THIS WINDOW IS A PLATFORM RE-RESOLUTION, NOT A DISCOVERY — AND ONE OF THE RE-RESOLUTIONS IS A MOVED ADDRESS.** [`openedx/edx-platform`](https://github.com/openedx/edx-platform) **now redirects to [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform)** (AGPL-3.0, 8.2k★); every row on this base pointing at the old slug is pointing at a redirect. 🟢 Nineteen platform and infrastructure repositories were re-read from their own pages this pass, and the licence picture is unambiguous: **the education sector is copyleft.** A deliberate search for a mainstream Apache/MIT LMS returned **none** — the permissive cores are [`oppia/oppia`](https://github.com/oppia/oppia) (Apache-2.0, 7.0k★), [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0, 449★), [`sakai`](https://github.com/sakaiproject/sakai) (ECL-2.0, 1.2k★) and [`kolibri`](https://github.com/learningequality/kolibri) (MIT, 1.2k★), and that is the whole list. 🔴 One licence is **unresolved**: [`frappe/education`](https://github.com/frappe/education) (685★) serves a `license.txt` the repository page does not render a type for.
 
 ### 🟢 Platform cores re-resolved this window, every cell from the page

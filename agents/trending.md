@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-29
 ---
 
+## 🆕 `p527` — `2026-10-29` — **THE VERIFICATION CHANNEL IMPROVED, AND IT IMMEDIATELY PAID: A SELF-CONTRADICTING LICENCE, FOUR UNGRANTED REPOS, AND A 462★ NEW ROW.** `curl` to `github.com` and `api.github.com` is still **HTTP 403** through the session proxy — but **`raw.githubusercontent.com` is not blocked.** Every licence on [`top.md`](top.md) is therefore now read from **the licence file's own title block**, which is what this base's own rule has demanded for seven passes and could not previously do. 🟢 **New shelf rows:** [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) (**Apache-2.0, 462★**, source-backed teacher Skills), [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) (MIT, 63★), [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) (Apache-2.0, 34★) — shelf goes **10 → 13**. 🔴 **New trap:** [`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) (91★) has a **README badge saying `MIT` and a licence file saying `GNU GPL v3`**. 🔴 **New category:** four repos with up to **64★** and **no licence file at all**.
+
+### 🟢 Top of shelf — both leaders moved, slightly
+
+| Agent | Stars `p526` | Stars `p527` | Δ | Release | Licence (title block) |
+|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 48.9k | **49.0k** | +0.1k | v1.7.0 · 2026-10-28 | Apache-2.0 ✅ |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 41.7k | **41.8k** | +0.1k | v1.3.0 · 2026-10-29 | MIT ✅ |
+
+Same-day re-read, so the movement is noise — recorded only to keep the series
+honest. 🟡 Aggregator cross-check: `agents-radar` #379 (29 Oct, 02:10 UTC) gave
+DeepTutor **+2,371 stars in a day** and **did not state a total**; `p526` logged
+aggregators at 46.0k-48.1k against a page value of 48.9k. **Fourth consecutive
+pass where the aggregators understate DeepTutor — prefer the repository page.**
+DeepTutor is also the *only* education repo in that report; the rest of the board
+is general-purpose (`transformers` 168.3k, `open-webui` 157.1k, `langchain`
+148.6k).
+
+### 🟢 Promoted to [`top.md`](top.md) this pass
+
+| Repo | Stars | Licence ✅ title block | Why it earned the row |
+|---|---|---|---|
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | **462** · 70 forks | **Apache-2.0** | Distils video, audio, PDF, transcripts and notes into a **source-backed** teaching Skill — short lessons, comprehension checks, feedback, review tracking. **The provenance is the product**, and provenance is where the governance gap, the evaluation gap and India/China's labelling rules all converge. Highest-starred new row this pass. |
+| [`SirhanMacx/Claw-ED`](https://github.com/SirhanMacx/Claw-ED) | 63 · 15 forks | **MIT** | Local-first lesson drafts, student materials and slides from the teacher's own curriculum. `v9.18.2026.1 · Beta`. Explicitly **single-teacher, not multi-tenant**, student features flagged experimental — the honesty is why it is useful: it maps exactly where a studio engagement starts. |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 34 · 5 forks | **Apache-2.0** | LangGraph agentic-RAG tutor, FastAPI + Next.js, LangSmith tracing, grounded in a curated corpus. Small, and the cleanest **readable reference architecture** for corpus-grounded tutoring on the shelf. |
+
+### 🟢 Newly *placed* — three agents that were "unplaced" last pass
+
+Placement came out of the licence files, which is the second payoff of the new
+channel.
+
+| Agent | Was | Now | Evidence |
+|---|---|---|---|
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | unplaced | **APAC (India)** | Licence copyright line: `Copyright (c) 2024-2025 Educhain (https://educhain.in)` — the `.in` domain is the only locational evidence anywhere on the repo, and it is *inside the licence file*. |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | unplaced | **APAC** 🟡 *inferred* | Chinese-first Socratic tutoring; DashScope (Alibaba Cloud) given as the example provider. Copyright `Li Zhengping`. No country field. |
+| [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | Global / LMIC | **EMEA origin + 🔴 LATAM data** | Licence copyright `Fab Inc` (UK-founded advisory, LMIC focus). Separately, the repo **credits Chile's Agencia de la Calidad de la Educación and CPEIP** for the exams CDPK is built from. **The code is EMEA; the pedagogical ground truth is Chilean.** |
+
+🔴 **The Chilean attribution is the most useful single discovery this pass.** This
+base has declared "no LATAM-origin education agent" for seven passes and it is
+still true — but LATAM's contribution on the agent legs turns out to be **data,
+not code**, and it has been sitting inside a 13★ MIT repository the whole time.
+Acted on in [`../compose/patterns.md`](../compose/patterns.md) **P552** and the new
+**P554**.
+
+### 🔴 New licence trap — the repository contradicts itself
+
+[`ahmedEid1/lumen`](https://github.com/ahmedEid1/lumen) · **91★** · 40 forks ·
+Essen, Germany (author)
+
+| Channel | Says |
+|---|---|
+| Sidebar / About | `GPL-3.0` |
+| **README badge** | **`License: MIT`** |
+| **Licence file title block** | **`GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007`** |
+
+**The grant wins. It is GPL-3.0.** A badge is a claim; a licence file is the grant.
+A genuinely good product shape — learner-owned private courses, course-scoped RAG
+with citations, BYOK keys, moderated catalogue — that **cannot be forked into a
+proprietary deliverable**. Read it, do not ship it. New rule 5 in **P551**.
+
+### 🔴 New category — stars, but **no grant at all**
+
+Not mislabelled: **ungranted**. No licence file at `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `license.txt`, `LICENCE` or `COPYING`, on `main`, `master` or
+`develop`. Default copyright applies; the code cannot be used.
+
+| Repo | Stars | What it offers instead |
+|---|---|---|
+| [`A-R007/Multi-Agent-Study-Assistant`](https://github.com/A-R007/Multi-Agent-Study-Assistant) | **64** · 15 forks | No licence in the sidebar. README's License section reads only *"This project is open source and available for educational purposes."* Names nothing, grants nothing. |
+| [`idoforgod/Vibe-learning-AgenticWorkflow`](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow) | 25 | A **"License" entry in the sidebar that anchors into the README**, not to a file. The most convincing version of the mistake. |
+| [`tosuki/moodle-mcp`](https://github.com/tosuki/moodle-mcp) | — | A search result described it as *"MIT licensed."* There is no licence file. |
+| [`bobuel/bloom-taxonomy-quiz-builder-skill`](https://github.com/bobuel/bloom-taxonomy-quiz-builder-skill) | 3 | Nothing. |
+
+**An absent grant is a harder blocker than a bad one** — there is nobody to
+negotiate the exception with. And a search summary is not a verification channel:
+it got `tosuki` wrong, and it got the next item wrong too.
+
+### 🟡 Corrections to the record
+
+- 🔴 **`wwrwbs/AI_AWE` is not ArguLens.** A search result attributed the arXiv
+  **ArguLens** paper (2608.17356, automated essay scoring) to this repository. The
+  repository (Apache-2.0, **2★**) mentions **neither ArguLens nor any arXiv
+  paper**; it is an "AI Scoring Platform" (Qwen classifier + LightGBM + Gradio) and
+  its citation URL is still a `<your-org>` placeholder. **The attribution is
+  unverified — do not repeat it.**
+- 🟢 **`rasbt/LLMs-from-scratch` licence now named:** **Apache-2.0**, read from
+  `LICENSE.txt`. `p526` recorded the filename trap but could not name the licence.
+- 🟢 **`Open TutorAI CE` BSD-3-Clause re-confirmed** at the title block
+  (`Copyright (c) 2023-2025 Mohamed El hajji / R2D-dev`, three-clause
+  redistribution terms). The `p526` correction from Apache-2.0 holds.
+- 🟡 **`canvas-mcp` still disagrees with itself on tool count** — "up to 102" in
+  About, "up to 128" in the README. Third pass carrying this.
+
+### 🔴 The gap that got sharper: no credible Moodle agent bridge
+
+Searched deliberately and verified every candidate. **Canvas has `canvas-mcp` at
+308★. Moodle — the larger install base — tops out at 27★.** The eight search
+results collapse to roughly **three codebases** once fork lineages are traced, and
+the most-visible one is AGPL-3.0. Full lineage table in
+[`../repos/foundations.md`](../repos/foundations.md); turned into a build recipe as
+**P553** in [`../compose/patterns.md`](../compose/patterns.md).
+
+### 🔴 Still missing, searched again this pass
+
+- **No LATAM-origin education agent.** Searched in Portuguese and Spanish framings.
+  [`Jeanikt/tutor-ai-agent`](https://github.com/Jeanikt/tutor-ai-agent) ("Manu",
+  MIT, **0★**) — Brazilian-Portuguese voice maths tutor on LiveKit, 1st grade to
+  university, ENEM-aligned, wires in Brazilian crisis lines (190, CVV 188), README
+  states *"in development"*, no public deployment.
+  [`H1bertto/professor-agent`](https://github.com/H1bertto/professor-agent) (MIT)
+  likewise early. Thoughtful, not yet buildable.
+- **No open-source assessment-integrity agent.** Unchanged;
+  [`dolos`](https://github.com/dodona-edu/dolos) remains classical and that is the
+  point. Automated scoring is thin — `AI_AWE` at 2★.
+- **No permissive SIS/advising agent.** `advisingapp` is Elastic-2.0.
+
+---
+
+
 ## 🆕 `p526` — `2026-10-29` — **TWO RELEASES IN 48 HOURS AT THE TOP OF THE SHELF, AND A NEW REPO SHAPE UNDERNEATH IT.** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) cut **v1.7.0 on 2026-10-28** and reads **48.9k★** today; [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) cut **v1.3.0 on 2026-10-29** — today — and reads **41.7k★**. Both permissive, both APAC-academic, 90k★ between them. 🟢 The real discovery this window is one layer down: a **full sweep of the GitHub `ai-tutor` topic** returned **20 repositories**, and the fast-growing tail is no longer applications but **agent *skills*** — `universal-examprep-skill` (361★), `universal-diagnostic-tutor-skill` (252★), `kaogong-skill` (210★), `education-skills` (119★). 🔴 **Verification channel degraded:** `curl` to `github.com` and `api.github.com` returns **HTTP 403** from the session proxy for every unattached repository, so stars below are **rounded page values**, not API integers.
 
 ### 🟢 Top of shelf — releases inside the window
