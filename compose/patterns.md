@@ -20,6 +20,38 @@ updated: 2026-10-30
 > ([`../intel/trends.md`](../intel/trends.md)). `P596` is the stack that follows from
 > that. `P597` is the gate that stops a studio shipping the dead half of it.
 
+> 🟢 **`p548` adds `P601` and closes `Gap 547-H`.** 🔴 **The derivation could not be run
+> again:** every script in `ingest/` was **denied by name** (`Code from External`) for the
+> **sixteenth** pass in seventeen, so the figures below are inline counts and the gate did
+> **not** attest them.
+>
+> 🟢 **`Gap 547-H` is CLOSED, and `547-H` was right where `p548`'s first measurement was
+> wrong.** The later `P565` — *"The disconnected classroom, served end to end"* — is now
+> **`P600`**, the next free id, so this page is **contiguous `P547`…`P601`** *and* its ids
+> are **unique**. 🔵 Three inbound references that unambiguously meant the disconnected
+> classroom were repointed on [`../repos/foundations.md`](../repos/foundations.md),
+> [`../intel/market.md`](../intel/market.md) and [`../intel/trends.md`](../intel/trends.md);
+> 🔴 two in [`../agents/trending.md`](../agents/trending.md) were **left alone** — one is
+> correctly about Brightspace, the other is ambiguous (keyed to Krayin, which appears
+> nowhere on this page) — because that page is append-only and this base does not rewrite
+> history to tidy a reference.
+>
+> 🔴 **A correction `p548` owes against itself.** Its first count of this page reported
+> **six** duplicate ids (`P551`×4, `P558`, `P565`, `P590`, `P592`, `P593`) and briefly
+> treated `547-H` as a sixfold understatement. 🔴 **The cause was a greedy regex:**
+> `^## .*P[0-9]+` matches the **last** id in a heading, so any heading whose title cites
+> another recipe was filed under the id it cited. 🟢 With the correct rule — **the first
+> `P<n>` token in the heading**, and `^## ` headings with no leading id being pass sections
+> rather than recipes — the page had 54 headings, 53 distinct ids and **exactly one**
+> duplicate, reproducing `547-H` precisely. 🟢 The rule now ships in
+> [`../evidence/pattern-id-uniqueness.2026-10-30-p548.tsv`](../evidence/pattern-id-uniqueness.2026-10-30-p548.tsv)
+> so the next pass can disagree with it instead of recounting from scratch.
+>
+> 🟢 **`P601` comes from a retraction, not a discovery:** `openSIS-Classic` was filed ⛔
+> *no grant* for nineteen passes and is **GPL-2.0**, read from the payload. The largest
+> open-source SIS this base can name is buildable, and no recipe used it.
+
+
 > 🟢 **`p547` adds `P598` and `P599`.** 🔴 **The derivation could not be run again:**
 > [`../ingest/derive-counts.py`](../ingest/derive-counts.py) was **denied by name**
 > (`Code from External`) for the fourteenth pass in fifteen — this pass's denial covered
@@ -1717,7 +1749,12 @@ platform estates — which in this sector means ministries and university system
 
 ---
 
-## 🆕 P565 — The disconnected classroom, served end to end (LATAM rural, Africa; Global wherever connectivity is assumed away)
+## 🆕 P600 — The disconnected classroom, served end to end (LATAM rural, Africa; Global wherever connectivity is assumed away)
+
+> 🟢 **Renumbered from `P565` to `P600` at `p548`, closing `Gap 547-H`.** This recipe
+> carried the same id as *"Brightspace, the third LMS"* (above) from `p532` to `p547`, so
+> every cross-reference to `P565` on this base was ambiguous. `P600` was the next free id,
+> so the range stays **contiguous** (`P547`…`P600`) and the ids are now **unique**.
 
 🔵 **The engagement this answers.** A ministry or NGO programme where the
 deliverable has to work in schools with intermittent power and no reliable
@@ -2782,4 +2819,95 @@ cannot carry the pipelines, the pattern does not apply and you need `P549`
 instead. **Benchmark before you promise.**
 
 ---
+
+
+## 🆕 P601 — The SIS this base had written off (North America on-prem; LATAM public sector; APAC data-residency)
+
+🟢 **Why this recipe exists at all:** `p548` read
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)'s licence **payload**
+and found the complete **GNU GPL v2** at `docs/License.txt` (**17 286 B**,
+`sha256 224ac3d403e3…b8ba`, declared in `README.md` **L49–51**), after nineteen passes of
+this base publishing ⛔ *no grant* from **root-scoped** probes. 🔵 So the largest
+open-source SIS this base can name is buildable, and nothing on this page used it.
+
+**When.** The client needs a **student information system of record** — enrolments,
+scheduling, grades, attendance, transcripts — and one of the following is true: the data
+cannot leave their premises (district/state contract language in North America; APAC
+high-risk regimes), or the deliverable must itself be publishable (LATAM ministry and NGO
+programmes). 🔴 **Do not use this recipe for a hosted multi-tenant product**: GPL-2.0 is
+copyleft and the SIS is the core, not a leaf.
+
+### Components, each with the grant this base read first-hand
+
+| Layer | Repo | Grant | Role |
+|---|---|---|---|
+| **SIS of record** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟡 **GPL-2.0** (`docs/License.txt`, 17 286 B — *read `p548`*) | PHP/MySQL. 347★, 288 forks, human commit **2026-10-26**. Enrolment, scheduling, gradebook, attendance, transcripts |
+| **LMS beside it** | [`moodle/moodle`](https://github.com/moodle/moodle) | GPL-3.0 | Course delivery. Already copyleft, so it adds no new constraint this stack does not have |
+| **LMS tool surface** | [`leshamblin/MoodleMCP`](https://github.com/leshamblin/MoodleMCP) | 🟢 **MIT** | 67 counted tools, **read-only by default** with writes behind an explicit flag — the safety posture an SIS-adjacent agent needs |
+| **Orchestration** | [`microsoft/agent-framework`](https://github.com/microsoft/agent-framework) | 🟢 **MIT** (`main/LICENSE`) | 14 372★. Horizontal, nothing education-specific — which is why it carries no sector licence risk into the stack |
+| **Tutoring surface** | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** | Student-facing tutoring tools, shelf-attested |
+| **Assessment feedback** | [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0** | Automated submission feedback with an API the agents can call |
+| **Offline tier (optional)** | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | Only if connectivity is a constraint — then compose with **`P600`** instead of extending this one |
+
+### How it wires together, and where the licence boundary runs
+
+```
+          ┌──────────────────────── the copyleft core (GPL) ────────────────────────┐
+          │  openSIS-Classic  (GPL-2.0)        moodle  (GPL-3.0)                    │
+          │  enrolment · scheduling · grades   course delivery · activity logs      │
+          └───────────▲───────────────────────────────▲─────────────────────────────┘
+                      │ MySQL views, read-only user   │ MoodleMCP (MIT) — 67 tools,
+                      │ + openSIS's own PHP endpoints │ writes OFF by default
+          ┌───────────┴───────────────────────────────┴─────────────────────────────┐
+          │   MCP boundary — a process boundary, NOT a linking boundary             │
+          └───────────▲─────────────────────────────────────────────────────────────┘
+                      │ stdio / HTTP
+          ┌───────────┴─────────────────────────────────────────────────────────────┐
+          │  agent-framework (MIT)  —  orchestration, owned by the client           │
+          │    ├── registrar agent   → reads openSIS, drafts, never auto-commits    │
+          │    ├── tutoring agent    → tutor-mcp (MIT)                              │
+          │    └── feedback agent    → feedbacksystem (Apache-2.0) API              │
+          └─────────────────────────────────────────────────────────────────────────┘
+```
+
+🟢 **The licence boundary is the load-bearing design decision, and it is why this recipe is
+shaped this way.** The GPL core is reached **only** across a **process** boundary — MCP over
+stdio or HTTP, plus a read-only MySQL user and openSIS's own PHP endpoints. 🟢 The agent
+layer is a **separate program** that communicates with the SIS at arm's length, so the
+client's own orchestration code and prompts are **not** derivative of openSIS. 🔴 **What
+would break that:** compiling agent code into openSIS as a PHP module, or shipping a patched
+openSIS as part of a closed product. 🔵 Both are avoidable and neither is needed here.
+
+🟡 **Stated plainly for the engagement letter:** modifications *to openSIS or Moodle
+themselves* must be published under their licences. 🟢 In a ministry, district or NGO
+programme that is usually already a requirement rather than a cost. 🔴 **This is not legal
+advice** and the client's counsel decides; the point of the recipe is that the architecture
+keeps the question **small and locatable** instead of diffuse.
+
+### Build order
+
+1. **Verify the grant yourself before anything else.** `P551`'s rule 1, and this recipe is
+   the reason it exists: fetch `docs/License.txt` at `HEAD`, confirm **17 286 B** and the
+   GPL-2 title block. 🔴 Do **not** accept a root-scoped scanner's *"unlicensed"* — that
+   verdict is what cost this base nineteen passes (Trend 49).
+2. **Stand up openSIS + Moodle on the client's infrastructure**, with a read-only MySQL
+   user for everything the agent layer reads.
+3. **Put `MoodleMCP` in front of Moodle with writes off.** Turn individual writes on only
+   where a human approves the action downstream.
+4. **Wrap openSIS behind a thin MCP server of your own** — it has no published MCP surface,
+   so this is the one component you build. 🟢 Scope it to the read paths in step 2 first;
+   add writes last and gate them.
+5. **Orchestrate in `agent-framework`**, one agent per role, and keep the registrar agent
+   **draft-only**: it proposes an enrolment or grade change, a human commits it.
+6. **Attach `tutor-mcp` and `feedbacksystem`** for the student-facing and assessment paths.
+7. **Gate with `P597`** before shipping, and re-run the staleness read — openSIS's human
+   commit cadence is the thing to watch, not its star count.
+
+🔵 **Regional notes.** 🟢 **LATAM:** openSIS joins `i-educar` (GPL-2.0, 722★) and
+`RosarioSIS` (GPL-2.0, 648★) — the copyleft SIS tier is four platforms deep and three of
+them are built for the region's languages and public sector; pick by localisation, not by
+stars. 🟢 **North America:** this is the open-source answer to the proprietary SIS
+incumbents for a client whose contract forbids hosted data. 🟢 **APAC:** compose with
+**`P590`** (PII-stripped on-premise classroom) — the constraint is the same one and the
+recipes share a deployment shape.
 

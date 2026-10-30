@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p548` — the vertical leg returned **nothing new** for the tenth pass, and the useful finding is a **retraction**: the platform this page told the field *"do not build on it"* has carried the **complete GNU GPL v2** the whole time, two directories down
+
+🔴 **The mandated vertical leg is saturated for a tenth pass.** `open source platform
+education ERP CRM MIT Apache` returned **OpenEduCat** (LGPL-3.0), **RosarioSIS** (GPL-2.0),
+**openSIS**, **ERPNext** and **SchoolTool** (discontinued 2016) — the *identical five* as
+`p547`, all already on this page. 🔵 Said plainly rather than dressed up: **this leg has
+not produced a new platform since `p538`.**
+
+### 🟢 The correction, stated before anything is built on it
+
+This page carried, since `p529`:
+
+> ⛔ **NO GRANT** · *"Do not build on it, and **do not believe the table that says you
+> can**."* … *"the first time this base has caught a secondary source asserting a grant
+> the repository does not carry."*
+
+🔴 **Every clause of that is wrong, and the secondary source was right.**
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) serves the **complete,
+verbatim GNU General Public License v2** at
+[`docs/License.txt`](https://github.com/OS4ED/openSIS-Classic/blob/master/docs/License.txt):
+
+| Attestation | Value, read first-hand at `HEAD` on 2026-10-30 |
+|---|---|
+| Path | `docs/License.txt` (**not** at the repository root) |
+| Bytes | **17 286** |
+| `sha256` | `224ac3d403e3603c63bda9671706308fd431e5cda850e1e708032b0f5aaeb8ba` |
+| Title block | *"GNU GENERAL PUBLIC LICENSE / Version 2, June 1991"* |
+| Closing block | the standard *"Ty Coon, President of Vice"* appendix — so the text is **complete**, not an excerpt |
+| Declared in prose | `README.md` **L49–51**: *"openSIS is an Open Source Project licensed under the GNU General Public License"*, linking that exact path |
+| Second copy | `docs/LICENSE.rtf`, **61 575 B** |
+| Root `LICENSE` | 🔴 **HTTP 404** |
+| `HEAD` | `8348cd06`, pushed **2026-10-26**, human committer |
+
+🟢 **Three independent channels agree** — the payload, the README's prose declaration, and
+an RTF duplicate of the same grant. 🔵 This is not a close call.
+
+### 🔴 Why this base got it wrong for nineteen passes, which is the transferable part
+
+🔴 **The probes were never shallow by accident — they were shallow by design, at ever
+greater breadth.** `p529` tested five root filenames (`LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `LICENCE`, `COPYING`). `p547` escalated to **159 filename variants**. 🔴
+**All 159 were root-scoped**, so the escalation bought nothing: *breadth at one directory
+is not depth*, and the file was always one `docs/` away.
+
+🔴 **Worse, this base had already touched the file.** `p448` published
+`openSIS Classic docs/License.txt = 17 286 B · 224ac3d403e3` — **the same byte count and
+the same blob prefix `p548` just re-read** — as a reproduction control, and
+`p545` recorded *"enumeration finds `docs/License.txt` + `docs/LICENSE.rtf`"* and filed it
+as *"a subtree question"*. 🔴 **So the path, the size and the hash were all on this base,
+and the shelf still published ⛔ NO GRANT, because nothing in the pipeline ever
+dereferenced the path it had already found.**
+
+🟢 **New verdict class, registered as `Gap 548-A`: `ENUMERATED-NOT-READ`.** An address
+whose licence path is known and whose payload has never been fetched is **not** an absence
+finding. It is an unread finding, and the two must not share a cell. 🔵 `p545`'s own
+generalisation was right and under-applied: *"an absence claim keyed to a payload path is
+a weaker claim than it looks."*
+
+### 🟡 What it changes for an engagement
+
+🟡 **GPL-2.0 is copyleft, so the architecture answer changes but does not open.** openSIS
+Classic is now a **lawful on-premise / self-host** starting point at **347★ / 288 forks**
+with a human commit **four days old** — and it is still **not** a hosted-SaaS answer. 🟢
+It joins RosarioSIS (GPL-2.0), i-educar (GPL-2.0) and Frappe Education (GPL-3.0) as the
+copyleft SIS tier, and it is the **largest** of them by stars. 🔵 The recipe is **`P601`**
+on [`../compose/patterns.md`](../compose/patterns.md).
+
+🔴 **The permissive-SIS finding is unchanged by this:** `GegoK12` (MIT, 54★) remains the
+only permissive row in §2, and a 54★ Laravel project is still the whole permissive tier.
+
 ## 🆕 `p547` — the vertical leg returned **nothing new** for the ninth pass, and the `de` supply leg found a vertical tier this page did not have: **three German schoolbook platforms that are systems of record for CONTENT, and reaching their content is itself the regulated act**
 
 🔴 **The mandated vertical leg is saturated.** `open source platform education ERP CRM MIT
@@ -11,7 +81,9 @@ Apache` returned **OpenEduCat** (LGPL-3.0, Odoo-based), **RosarioSIS** (GPL-2.0)
 **openSIS**, **ERPNext** and **SchoolTool** (🔴 discontinued 2016) — **all five already on
 this page**. 🟡 The **openSIS** licence disagreement (GPL vs a comparison table's
 Apache-2.0) is recorded as **unresolved** on [`../repos/foundations.md`](../repos/foundations.md)
-and **not** written here as either value.
+and **not** written here as either value. 🟢 **`p548` resolved it from the payload: GPL-2.0.**
+The "GPL" source was right and the Apache-2.0 comparison table was wrong — see the `p548`
+section at the top of this page.
 
 🟢 **What the German supply leg found instead is a vertical class this page has not
 carried.** `p455` established the EMEA inversion — PRONOTE, EcoleDirecte, Schulportal
@@ -367,7 +439,7 @@ near the administrative end of this page.
 | **i-educar** | [portabilis/i-educar](https://github.com/portabilis/i-educar) | GPL-2.0 · 722★ | REST/DB integration. Brazil's largest free school-management system, born in **Itajaí (SC)** municipal government, on the federal Public Software Portal since 2008. For Brazilian public-sector work this is the incumbent, not an option. |
 | **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 · 648★ | Module system + PostgreSQL. Strong ES/FR/PT localisation; common in small and mid-size schools. |
 | ⚠️ **Advising App** | [canyongbs/advisingapp](https://github.com/canyongbs/advisingapp) | **Elastic-2.0** · 340★ | **Reference only — do not build on it.** AI advising and recruitment CRM for colleges; Elastic-2.0 prohibits offering it as a hosted service, which is the engagement shape. Read it for its data model (advising notes, engagement signals, outreach journeys), then build that model yourself. |
-| 🔴 🆕 **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | ⛔ **NO GRANT** · 347★ · 288 forks | 🔴 **Do not build on it, and do not believe the table that says you can.** Marketed on its own page as a *"commercial grade, secure, scalable"* Student Information System, and a widely-cited third-party comparison lists it as **GPL-2.0**. `p529` probed it both ways: the GitHub API returns **no `license` key**, and ⛔ **no licence file exists at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE` or `COPYING` on `master`**. Default copyright applies. This is `tosuki/moodle-mcp`'s failure mode at **347 stars and 288 forks** — and the first time this base has caught a *secondary source asserting a grant the repository does not carry*. |
+| 🟢 🆕 **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🟡 **GPL-2.0** — *corrected at `p548`, read first-hand* · 347★ · 288 forks | 🟢 **It does carry a grant, and this page said for nineteen passes that it does not.** The grant is the **complete, verbatim GNU GPL v2** at [`docs/License.txt`](https://github.com/OS4ED/openSIS-Classic/blob/master/docs/License.txt) — **17 286 B**, `sha256 224ac3d4…b8ba`, opening on *"GNU GENERAL PUBLIC LICENSE / Version 2, June 1991"* and closing on the standard *"Ty Coon, President of Vice"* appendix. 🔵 **`README.md` L49–51 declares it in prose too**: *"openSIS is an Open Source Project licensed under the GNU General Public License"*, linking that exact path. 🔴 **`LICENSE` at the repository root is HTTP 404** — which is the whole of the error: `p529` probed five root filenames, `p547` probed **159 filename variants**, and every one of them was **root-scoped**. 🔴 So the widely-cited third-party comparison that lists openSIS as **GPL-2.0 was right**, and this page's *"do not believe the table that says you can"* is **retracted**. 🟡 Copyleft, so it is an on-premise/self-host answer, not a hosted-SaaS one — but it is **buildable**, and `P601` is the recipe. HEAD `8348cd06`, pushed **2026-10-26** by a human committer. |
 
 ### 🆕 The SIS gap, measured rather than declared (`p529`)
 
@@ -379,7 +451,7 @@ sorted by stars — **the global field at that threshold is four addresses**:
 | Address | Grant | ★ | State |
 |---|---|---|---|
 | [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** (API + title block) | 648 · 394 forks | 🟢 alive — pushed 28 Oct 2026 |
-| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | ⛔ **no grant** | 347 · 288 forks | 🟢 alive — pushed 26 Oct 2026 |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟡 **GPL-2.0** (`docs/License.txt`, 17 286 B — *corrected `p548`*) | 347 · 288 forks | 🟢 alive — pushed 26 Oct 2026 |
 | [`xrandx/Student-Information-Management-System`](https://github.com/xrandx/Student-Information-Management-System) | 🔴 AGPL-3.0 | 107 | ⛔ a university course project, last pushed **2021** |
 | [`OPTIMUM-LINKUP/Latest-Optimum-School-System`](https://github.com/OPTIMUM-LINKUP/Latest-Optimum-School-System) | 🔴 GPL-3.0 | 83 | ⛔ dead — last pushed **2017** |
 

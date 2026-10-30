@@ -1,0 +1,19 @@
+# p548 2026-10-30 — supply legs. 8 mandated English legs + 6 FRESH language corpora.
+# p547 measured that corpora saturate one at a time (de/vi/es yielded, zh/pt saturated).
+# p548 tests SIX unexhausted corpora in one pass to measure the half-life of that escape.
+leg	language	new_addresses	already_held_returned	note
+top open source AI agents education 2026 github MIT	en	0	hermes-agent, aider, Cline, CrewAI, AutoGen, LangGraph, microsoft/ai-agents-for-beginners, 500-AI-Agents	tenth consecutive English saturation
+github trending education AI 2026	en	0	ai-engineering-from-scratch, OPTIMETA/PAIDEIA, guru-latihan-dinamis, education-agent-skills, AI-Study-Group	every organic result already held
+open source platform education ERP CRM MIT Apache	en	0	OpenEduCat, RosarioSIS, openSIS, ERPNext, SchoolTool	identical five to p547; tenth vertical saturation
+AI education industry trends 2026	en	0	FIPSE, 134-bills-31-states, OECD Digital Education Outlook	demand leg, no addresses
+AI education {North America} 2026 adoption regulation players	en	0	FIPSE, COPPA, 134 bills / 31 states	all held
+AI education {EMEA} 2026 adoption regulation players	en	0	Bridge AI, Advanced Digital Skills EUR 25.4m, EU AI Act	2 NEW non-address claims (Ofqual; FR sovereign assistant)
+AI education {APAC} 2026 adoption regulation players	en	0	ASEAN Guide on AI Governance, Australia National AI Plan	all held
+AI education {LATAM} 2026 adoption regulation players	en	0	UNU LAC working paper, IDB fAIr Tech Radar, Ednova, UNESCO teacher shortage	all held
+agent IA education open source GitHub 2026 enseignant tuteur	fr	0	-	NEW CORPUS. Returned news/papers, no repo. 1 institutional lead (unresolvable host)
+オープンソース 教育 AI エージェント GitHub 2026 教師 学習支援	ja	0	instructional_agents, claude-education-skills	NEW CORPUS, saturated on first contact
+وكيل ذكاء اصطناعي تعليم مفتوح المصدر GitHub 2026 معلم	ar	0	instructional_agents, DeepTutor	NEW CORPUS, saturated on first contact
+ओपन सोर्स एआई एजेंट शिक्षा GitHub 2026 शिक्षक सहायक	hi	1	OpenMAIC, instructional_agents, DeepTutor, ai-tutor-rag-system	NEW CORPUS. 1 new: TechAtNYU/ClassroomLM
+오픈소스 교육 AI 에이전트 GitHub 2026 교사 학습	ko	0	DeepTutor, instructional_agents, Open-Education, free-ai-agents-resources	NEW CORPUS, saturated on first contact
+açık kaynak eğitim yapay zeka ajan GitHub 2026 öğretmen	tr	0	LangGraph, CrewAI, smolagents, AutoGPT, OpenHands	NEW CORPUS, zero education-specific artefacts
+# TOTAL: 14 legs, 1 new address, 0 promoted (ClassroomLM rejected: ungranted + 16 months stale).

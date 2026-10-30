@@ -23,6 +23,80 @@ updated: 2026-10-30
 > established it and `Gap 543-D` had opened a register precisely to stop it being
 > re-discovered.
 
+> 🟢 **`p548` adds Trends 49 and 50, and both are about the instrument rather than
+> the market — which is where this pass's evidence actually is.** Trend 49 is the
+> one to take to a client, because it changes how a due-diligence report should be
+> read: 🔴 **an "unlicensed" verdict in any open-source audit is usually a statement
+> about where somebody looked.** Trend 50 measures how long the multilingual-discovery
+> escape lasts. 🔵 Trend 47 (*the grant is the binding constraint*) is **reinforced,
+> not revised**: `p548`'s one new address is ungranted, making it 1 usable of 7
+> across two passes.
+
+## 🆕 Trend 49 — **An "unlicensed" verdict is a claim about the prober, not the project — and this base just proved it against itself at 347 stars**
+
+🔴 **The finding.** This base published ⛔ **no grant** for
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (347★, 288 forks) for
+**nineteen passes**, and told the field *"do not build on it, and do not believe the table
+that says you can."* 🔴 **The repository serves the complete, verbatim GNU GPL v2** at
+`docs/License.txt` — **17 286 B**, `sha256 224ac3d403e3…b8ba`, declared in prose at
+`README.md` **L49–51**, with a second RTF copy at 61 575 B. 🔴 Root `LICENSE`: **404**.
+
+🔴 **The mechanism, which is the transferable part.** Every probe was **root-scoped**:
+`p529` tested 5 root filenames, `p547` escalated to **159 filename variants** — all at the
+root. 🔴 **Breadth at one directory is not depth**, and escalating variants bought exactly
+nothing. 🔴 **`p448` had already published the file's byte count and blob prefix as a
+reproduction control** and the shelf still said ungranted, because nothing in the pipeline
+ever dereferenced a path it had already enumerated.
+
+🟢 **Why this is a sector trend and not a local bug.** Education platforms are
+disproportionately **long-lived institutional PHP/Java codebases** — openSIS, Moodle,
+Chamilo, ILIAS, Sakai, i-educar — whose repository conventions predate the
+`LICENSE`-at-root norm that modern tooling and every licence-detection API assume. 🔵 GitHub's
+own sidebar, SPDX scanners, SBOM tools and procurement questionnaires all read the root.
+🔴 **So in this sector specifically, "no licence detected" correlates with repository age,
+not with legal status**, and the older and more institutionally embedded a platform is, the
+more likely a root-scoped audit will mis-report it as unusable.
+
+🟡 **What a studio does with it.** 🟢 Treat every ⛔ *unlicensed* row in any inherited audit —
+including a client's own — as **unread, not absent**. Read the tree recursively, read the
+README's licence section, and read the **payload**, not the filename. 🔴 The failure is
+asymmetric and expensive in one direction: it **discards usable assets**, and it discards
+the oldest and largest ones first. 🔵 Recorded as verdict class `ENUMERATED-NOT-READ`
+(`Gap 548-A`) and as a three-field grant read — `declared`, `served`, **and the path**
+(`Gap 548-B`).
+
+## 🆕 Trend 50 — **Multilingual discovery works once per corpus, and five of six corpora saturate on first contact**
+
+🟢 **The measurement.** `p547` broke nine consecutive supply saturations by changing the
+query *language*, and concluded that corpora *"saturate one at a time."* 🔵 That predicts
+that six fresh corpora should yield roughly twice what three fresh ones did. 🔴 **`p548`
+ran it: six unexhausted corpora (`fr`, `ja`, `ar`, `hi`, `ko`, `tr`) returned ONE new
+address between them, against `p547`'s six from three corpora** — and the one is ungranted
+and sixteen months stale.
+
+| Pass | Fresh corpora | New addresses | Usable |
+|---|---|---|---|
+| `p547` | 3 (`de`, `vi`, `es`) | 6 | 🟡 1 |
+| `p548` | 6 (`fr`, `ja`, `ar`, `hi`, `ko`, `tr`) | 🔴 **1** | 🔴 **0** |
+
+🟢 **The discriminator is not language, it is where a country's education developers
+publish.** The corpora that yielded for `p547` — German, Vietnamese, Spanish — are ones
+whose national edtech developer communities **put code on GitHub with national-language
+descriptions**. 🔴 The corpora that saturated immediately route education-AI discussion into
+**blogs, news and journal papers** and return the *same English repositories* when asked
+for code. 🔴 **Turkish is the extreme case: the leg returned five general-purpose agent
+frameworks and not one education artefact.**
+
+🔵 **Said carefully, because the opposite reading is tempting and wrong:** this measures the
+**search channel**, not those countries' activity. Japan, Korea and the Gulf plainly build
+education AI; this base simply cannot see it through a keyword index in those languages.
+🟢 **The operational consequence:** multilingual discovery is a **one-shot** instrument per
+corpus, worth running on a corpus *once*, and the remaining unexhausted corpora are a
+depleting resource rather than a repeatable method. 🔴 For the regions behind the saturated
+corpora, a different instrument is needed — institutional registries, national procurement
+portals, conference proceedings — and this base does not have one.
+
+
 ## 🆕 Trend 47 — **The binding constraint on open education AI is not discovery, it is the grant — and the three ways it fails are not the ones anyone tests for**
 
 🔵 **Measured on `p547`'s whole yield, not on a sample.** Eight mandated English-language
@@ -1365,7 +1439,7 @@ reportable result rather than an empty pass.
   MIT, 1.2k★). `p532` adds
   [`Project-NOMAD`](https://github.com/Crosstalk-Solutions/Project-NOMAD)
   (**Apache-2.0, 41.3k★**) — the *server* side, model included. 🔵 The trend is
-  no longer an argument with one repo behind it; see **P565**.
+  no longer an argument with one repo behind it; see **`P600`** (`P565` until `p548`).
 - 🟢 **Confirmed.** The **agent-skills-not-applications** shift `p526` first
   named holds: three of this pass's four new shelf rows are *skills* on the open
   Agent Skills spec or a Claude Code skill (`claudemy`,

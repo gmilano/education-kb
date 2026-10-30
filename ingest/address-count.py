@@ -49,6 +49,13 @@ PLACEHOLDER = {
     "owner", "user", "username", "org", "organisation", "organization",
     "example", "your-org", "yourorg", "your-name", "someone", "foo", "repo",
     "slug", "account",
+    # p548: Gap 547-I recurred one page over. p546 documented these very rules in
+    # a TABLE inside repos/foundations.md and spelled the pattern `github.com/X/Y`,
+    # so `X/Y` was compiled as a real address -- which is the whole of the
+    # 176-vs-175 disagreement that 546-B and 547-F could not account for. The
+    # glyphs on that page are now bracketed AND single-letter metavariables are
+    # excluded here, because either fix alone regresses when the other is rewritten.
+    "x", "y", "z", "n", "a", "b", "abc", "test", "demo", "placeholder",
 }
 
 LINK_TEXT = re.compile(r"\[\s*([A-Za-z0-9._-]+/[A-Za-z0-9._-]+)\s*\]\(")

@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p548` — **this page's denominator was **176** for one pass because the table explaining the rule *matched the rule*. It is **175**, and `p546` was right all along**
+
+🟢 **Re-derived with the canonical rule after the fix: `repos/foundations.md` carries
+**175** addresses.** 🔴 `p547` published **176** and treated the `+1` over `p546`'s **175**
+as an unexplained rule disagreement (`Gap 547-F`). 🟢 **It was not a disagreement. It was
+one phantom address, and this page had written it itself.**
+
+### 🔴 The phantom, named
+
+🔴 In the `Gap 546-B` table below, `p546` documented its five extraction rules and spelled
+the pattern as **`github.com/X/Y`** — inside **table rows**. 🔴 The canonical rule extracts
+`github.com/⟨owner⟩/⟨repo⟩` pairs **from table rows**, and `X` is not in
+[`../ingest/address-count.py`](../ingest/address-count.py)'s `PLACEHOLDER` set, so **`X/Y`
+was compiled as a real repository address.**
+
+🟢 **Git dates it exactly.** The canonical rule, same code, over the committed page:
+
+| `p545` commit | `p546` commit | `p547` commit | `p548` worktree |
+|---|---|---|---|
+| **175** | 🔴 **176** | 176 | 🟢 **175** |
+
+🔵 **The increment landed in `p546`'s own commit — the commit that published `175`.** 🟢 So
+`p546` measured the page correctly and then inflated it by one in the act of explaining
+how. 🔴 `p547` read the inflated page and recorded the difference as a defect in the row
+definition; there was never a row definition at issue.
+
+### 🟢 Fixed in two places, because either alone regresses
+
+🟢 Exactly as `Gap 547-I` prescribed when it caught the identical defect on
+[`../agents/top.md`](../agents/top.md):
+
+1. 🟢 **On this page** — the rule table now writes `github.com/⟨owner⟩/⟨repo⟩` with bracket
+   glyphs, which the extractor cannot match.
+2. 🟢 **In the code** — single-letter metavariables (`x`, `y`, `z`, `n`, `a`, `b`) plus
+   `test`, `demo` and `placeholder` are added to `PLACEHOLDER` in
+   [`../ingest/address-count.py`](../ingest/address-count.py), with the reason in a comment
+   beside them.
+
+🔵 **Third instance on this base of the `| Nombre | Repo | Licencia |` class — a header or
+example row compiled as data — and every one of the three was committed by prose
+*documenting* an extraction rule, never by a real data row.** 🟢 Stated as a rule for later
+passes: **documentation of an extraction rule must never be placed where that rule can
+match it.**
+
+### 🟢 One address on this page is now live for a different reason than it was
+
+🟡 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (347★, 288 forks,
+pushed **2026-10-26**) was carried across this base as **⛔ no grant**. 🟢 **`p548` read the
+payload: GPL-2.0.** The complete GNU GPL v2 sits at `docs/License.txt` — **17 286 B**,
+`sha256 224ac3d403e3…b8ba` — declared in `README.md` **L49–51**, with root `LICENSE`
+returning **404**. 🔴 Every probe this base ran against it (5 filenames at `p529`, **159
+variants** at `p547`) was **root-scoped**. 🔵 Attestation on
+[`../verticals/solutions.md`](../verticals/solutions.md); the recipe is `P601` on
+[`../compose/patterns.md`](../compose/patterns.md).
+
 ## 🆕 `p547` — **`Gap 546-B` is CLOSED: this page's denominator is reproducible, by running [`ingest/address-count.py`](../ingest/address-count.py) rather than by trusting a sentence**
 
 🔴 **The defect, as `p546` stated it.** `p545` published *"162 shelf addresses"* for this
@@ -107,8 +162,8 @@ is the denominator of `p545`'s `162/162 LIVE`:
 |---|---|
 | markdown link **text** is `owner/repo` | **100** |
 | one address per table data row (row subjects) | **169** |
-| 🟢 **all `github.com/X/Y` pairs inside table data rows, deduped** — `p546`'s rule | 🟢 **175** |
-| all `github.com/X/Y` pairs anywhere on the page, deduped | **191** |
+| 🟢 **all `github.com/⟨owner⟩/⟨repo⟩` pairs inside table data rows, deduped** — `p546`'s rule | 🟢 **175** |
+| all `github.com/⟨owner⟩/⟨repo⟩` pairs anywhere on the page, deduped | **191** |
 | …excluding non-repository owner paths (`topics`, `orgs`, …) | **191** |
 | 🔴 `p545` reported | 🔴 **162** |
 
@@ -900,7 +955,7 @@ rule 8.
 | [opensalt/opensalt](https://github.com/opensalt/opensalt) | 🟢 **MIT** — 🔴 **ledger carried `GPL-3.0\|Apache-2.0`; corrected this pass** | 47 | *"Standards Alignment Tool."* Authoring, hosting and aligning academic standards (CASE/CFItem). 🔵 This is the repository that makes *"which standard does this question assess?"* answerable as data rather than as a prompt — the same job `corretor-enem` does for ENEM and `bncc-dev` for the BNCC, generalised. 🟢 **The grant correction matters:** it moved from "copyleft, check carefully" to permissive on one title-block read. |
 | [1EdTech/OpenCASE](https://github.com/1EdTech/OpenCASE) | `Apache-2.0` (API) | 11 | *"Implementations of CASE Server and Editor"*, from **1EdTech** itself — the standards body. The reference implementation behind the row above. |
 | [Ed-Fi-Alliance-OSS/Data-Management-Service](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) | `Apache-2.0` (API) | 12 | *"Code and design documentation for the Ed-Fi API Platform, successor to the Ed-Fi ODS/API."* 🔵 **North America's K-12 data-interoperability layer**, and the successor generation of it — the row to start from when an engagement's first problem is *"the student data is in six systems."* Its sibling [Ed-Fi-Alliance-OSS/edfi-oneroster](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) (Apache-2.0, 6★) serves a **OneRoster 1.2** API over an Ed-Fi ODS, and [theopenem/OneRoster.NET](https://github.com/theopenem/OneRoster.NET) (🟢 **MIT**, `master`) is the .NET client — 🔴 **one of the three addresses the API silently dropped this pass**, see shelf rule 14. |
-| [open-edge-platform/education-ai-suite](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** (`main/LICENSE`) | 2 | *"The Education AI Suite is a collection of open-source reference applications."* 🔵 **Two stars and worth more than its band suggests**, which is why `Gap 533-C` exists: this is **Intel's** `open-edge-platform`, so it is edge-and-on-premise reference architecture under a permissive grant, pushed **2026-10-29**. For `P565` (the disconnected classroom) and for any EMEA sovereignty engagement, vendor-backed on-prem reference code is scarcer than stars. |
+| [open-edge-platform/education-ai-suite](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** (`main/LICENSE`) | 2 | *"The Education AI Suite is a collection of open-source reference applications."* 🔵 **Two stars and worth more than its band suggests**, which is why `Gap 533-C` exists: this is **Intel's** `open-edge-platform`, so it is edge-and-on-premise reference architecture under a permissive grant, pushed **2026-10-29**. For `P600` (the disconnected classroom, `P565` until `p548`) and for any EMEA sovereignty engagement, vendor-backed on-prem reference code is scarcer than stars. |
 
 🟡 **Also measured, also unfiled, and deliberately *not* promoted:**
 [`tl-its-umich-edu/my-learning-analytics`](https://github.com/tl-its-umich-edu/my-learning-analytics)

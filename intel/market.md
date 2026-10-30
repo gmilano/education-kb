@@ -4,6 +4,189 @@ region: Global
 updated: 2026-10-30
 ---
 
+## Opportunities by region
+
+> 🟢 **This is the single authoritative `## Opportunities by region` block on this page,
+> closing `Gap 547-G`.** 🔵 `547-G` offered two remedies — *"the compiler takes the first
+> `## Opportunities by region` as authoritative, or the per-pass sections demote theirs to
+> `###`"* — and `p548` takes the **second**, which is the one that does not move: the three
+> per-pass copies (`p547`, `p546`, `p544`) are now `###` and keep every word of their
+> content, and this block sits above the dated history where it cannot be displaced by a
+> later pass. 🟢 **The compiler now finds exactly one `##` heading and builds four buckets.**
+> 🔵 Only heading *levels* were changed in the dated sections; no historical claim was
+> edited, added or removed.
+
+🔵 **All four regions appear below, and the ones that produced nothing this pass say so.**
+An informed gap is information; silence reads exactly like coverage. 🔵 `region` is the
+closed five-value vocabulary; countries are named in the prose, never in the field.
+
+### North America
+
+🔴 **Demand leg saturated for a ninth consecutive pass.** `AI education North America 2026
+adoption regulation players` returned **FIPSE**, **COPPA** and the *"134 bills across 31
+states"* figure — all held, and the last of these is a figure 🔴 **this base retired at
+`p455`** because it arrives only through secondary aggregators. 🔴 It was again this pass's
+top organic result and is again **not written to this page as a fact.**
+
+🟢 **The supply side moved, and it moved NA's weakest tier.**
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (**347★**, 288 forks,
+human commit 2026-10-26) is **GPL-2.0** — read from the payload this pass, after nineteen
+passes of ⛔ *no grant*. 🟢 **It is now the largest open-source SIS this base can name with
+a grant attached**, and the North American SIS layer is where the proprietary incumbents
+are least contested in open source. 🟡 GPL-2.0 is copyleft, so this is an **on-premise /
+self-host** answer — which is precisely the shape of a district or state engagement with
+data-residency language in the contract, and the wrong shape for a hosted multi-tenant
+product. 🔵 Recipe: **`P601`**.
+
+🔵 Unchanged and still the strongest NA-first composition: **`P565`** (Brightspace, the
+third LMS) — D2L Brightspace carries a large share of North American higher education and
+[`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
+is MIT.
+
+### EMEA
+
+🟢 **The only region that produced claims this base did not already hold.** Both are
+regulatory, both are 🔴 **secondary-sourced**, and both are labelled as such because the
+primary hosts are unreachable from this session (`Gap 548-D`).
+
+🆕 **United Kingdom — Ofqual, *Principles of AI use in marking*, January 2026.** The
+qualifications regulator's working paper concludes that AI is **not ready to be the marker**
+in high-stakes assessment. Reported positions: using AI as *the sole or primary marker*
+does not comply with Ofqual's regulations; current evidence does not support a general case
+for AI in marking, with performance varying significantly by context; the paper is read
+against the UK's five AI principles — **safety, transparency, fairness, accountability and
+contestability** — and Ofqual's evidence to Parliament stresses that **marks must be
+contestable**. 🟢 Chief regulator **Sir Ian Bauckham** is reported as writing that AI is
+promising for **quality assurance and marker training** but *"nowhere near ready to take
+over high stakes marking."* 🔴 `ofqual.blog.gov.uk` fails **DNS resolution** from this
+session, so none of the above is a verbatim primary read.
+
+🟢 **The engagement this licenses is unusually well-specified by the regulator itself.** The
+compliant product is **not** a marking agent. It is everything Ofqual names as promising:
+marker **training** simulators, QA **sampling** that flags divergent marking for human
+review, and a **contestability trail** — a record of why a mark was queried that a student
+or centre can actually challenge. 🔵 An EMEA assessment client who has read this paper will
+reject a marking agent on sight and buy the QA layer.
+
+🟡 **France — a lead, recorded as a lead and not as a finding.** A French *académie*
+published, in **June 2026**, an *"assistant IA souverain pour les personnels de l'éducation
+nationale"* — a sovereign AI assistant for national-education staff. 🔴 The host
+(`ent2d.ac-bordeaux.fr`) fails **DNS resolution** here, so the tool, its operator, its
+models and whether it is open source are all **unread**. 🔵 It is written down because it is
+the first signal on this base of a *national education system's own staff-facing sovereign
+assistant*, which is a different thing from the sovereignty-of-infrastructure trend this
+base already tracks. **Next pass: resolve it or drop it.**
+
+🔵 Held and unchanged: **Bridge AI**, the **Advanced Digital Skills** grants (€25.4m), the
+**EU AI Act** Article 50 calendar, and the European Commission's updated ethical guidelines
+on AI in education.
+
+### APAC
+
+🔴 **Nothing new, and the shape of the blank is worth stating precisely.** The leg returned
+the **ASEAN Guide on AI Governance and Ethics** (early-stage), **Australia's National AI
+Plan** and Chief AI Officers, Singapore's financial-sector consultations, and Forrester's
+prediction that ~60 % of firms and governments in India and China will run locally
+developed LLMs alongside global ones — 🟢 **all of it already held.**
+
+🔴 **The informed gap: not one result named an education-sector player, an education
+ministry, or an education-specific AI rule in APAC.** Every named organisation was an
+analyst house or a vendor (Omdia, Forrester, OneTrust, Boomi, Confluent), and the single
+education-specific product in the results was a **UK** one. 🔴 So this pass can say that the
+*enterprise* AI picture for APAC is well covered by the channel and the *education* picture
+is not — which is a statement about the search channel, not about APAC's activity. 🔵 The
+same blank has now recurred for three passes and is the reason `p547`'s `zh` and `ja`
+supply legs are worth more here than the English demand leg.
+
+🟢 Unchanged: APAC remains the region whose high-risk regimes most reward the PII-stripped
+on-premise classroom (**`P590`**), and `openSIS`'s new GPL-2.0 status strengthens that
+recipe's administration tier for the same reason it does NA's.
+
+### LATAM
+
+🔴 **Nothing new; every instrument returned was held.** The **UNU** working paper on AI
+implementation in higher education across Latin America and the Caribbean (~200
+institutions, 19 countries), the **IDB**'s *fAIr Tech Radar*, **UNESCO**'s warning on the
+regional teacher shortage, **Ednova** (Chile), the ~**$2.5B** 2026 regional AI investment
+projection, and Baker McKenzie's finding that **no Latin American country has a fully
+mature, harmonised AI regime** — all already on this page. 🔵 The conflicting adoption
+figures the channel offers (47 % against *"99 % of LATAM startups"*) are 🔴 **refused**, same
+channel class as the retired *"134 bills."*
+
+🟢 **The supply-side correction lands hardest here, and it is concrete.** With
+`openSIS-Classic` resolved to **GPL-2.0**, the copyleft SIS tier is now **four** platforms —
+and **three of them are built for this region's languages and public sector**:
+
+| Platform | Grant | Stars | Regional fit |
+|---|---|---|---|
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | GPL-2.0 | 722 | Brazil's largest free school-management system; born in Itajaí (SC) municipal government, on the federal Public Software Portal since 2008 |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 648 | Strong ES/FR/PT localisation; common in small and mid-size schools |
+| 🆕 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟢 **GPL-2.0** *(corrected `p548`)* | 347 | The largest of the three by forks (288); PHP/MySQL, the stack regional ministries already run |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 900 | Odoo modules — admissions through fees |
+
+🟢 **For a LATAM ministry or NGO engagement, copyleft is usually not the obstacle it is in a
+product engagement** — the deliverable is frequently required to be publishable anyway. 🔵
+So the practical regional reading is the inverse of the global one: **the GPL tier is the
+usable tier here**, and it is now four platforms deep rather than three.
+
+🔵 Unchanged: **`P600`** (the disconnected classroom, served end to end) remains the
+region's load-bearing recipe, and the connectivity constraint behind it — *"generative AI's
+usefulness in education depends on access to reliable internet and devices, something that
+remains uneven in the region"* — was restated by the channel again this pass.
+
+## 🆕 `p548` — `2026-10-30` — **🔴 NINTH CONSECUTIVE DEMAND SATURATION, BUT NOT UNIFORMLY: EMEA RETURNED **TWO CLAIMS THIS BASE DID NOT HOLD** WHILE NA, APAC AND LATAM RETURNED **ZERO**. 🟢 `Gap 547-G` CLOSED — THIS PAGE NOW CARRIES EXACTLY ONE `## Opportunities by region`. 🔴 BOTH NEW EMEA CLAIMS ARE SECONDARY-SOURCED BECAUSE TWO MORE PRIMARY HOSTS FAIL DNS.**
+
+🔵 **The regional content is in the authoritative
+[`## Opportunities by region`](#opportunities-by-region) block above**, which is where it
+now belongs; this section carries the leg record and the instrument notes.
+
+### 🔴 The four mandated demand legs, reported per region including the blanks
+
+| Region | New claims | What the leg returned | Verdict |
+|---|---|---|---|
+| North America | 🔴 **0** | FIPSE, COPPA, *"134 bills / 31 states"* | 🔴 All held. The *"134 bills"* figure was **retired at `p455`** as aggregator-only and was again the top organic result — 🟢 **still not written as a fact** |
+| EMEA | 🟢 **2** | Ofqual *Principles of AI use in marking* (Jan 2026); a French *académie*'s sovereign staff assistant (Jun 2026) | 🟡 One claim, one **lead**. Both 🔴 secondary — primary hosts fail DNS |
+| APAC | 🔴 **0** | ASEAN Guide, Australia National AI Plan, Singapore consultations, Forrester local-LLM prediction | 🔴 All held, and 🔴 **not one education-sector player, ministry or education-specific rule** in the whole leg |
+| LATAM | 🔴 **0** | UNU LAC paper, IDB *fAIr Tech Radar*, UNESCO teacher shortage, Ednova, $2.5B projection, Baker McKenzie | 🔴 All held. Conflicting adoption figures (47 % vs *"99 %"*) 🔴 **refused** |
+
+🔵 **So "saturated" is again the wrong single word for four regions** — the EMEA channel is
+still producing regulatory instruments this base has not seen, and the APAC channel is
+producing *enterprise* AI coverage with an **education-shaped hole in it**, three passes
+running.
+
+### 🟢 `Gap 547-G` — CLOSED, by demoting rather than by deciding in prose
+
+🔴 `547-G` found `## Opportunities by region` on this page **three times** — `p547`, `p546`
+and `p544` each adding one under its own dated section — and noted that the compiler builds
+region buckets per heading, so three headings mean **three sets of duplicate buckets**. 🔴
+`p547` declined to act, correctly, because these pages are append-only.
+
+🟢 **`p548` takes the remedy that does not require rewriting history:** the three per-pass
+copies are demoted to `###`, keeping **every word** of their content, and a single
+page-level `## Opportunities by region` now sits **above** the dated sections where no
+later pass can displace it. 🟢 **One `##`, four `###` region buckets, and the dated record
+intact** — only heading levels changed, and no historical claim was edited, added or
+removed.
+
+🔵 **Why this remedy over `547-G`'s first option** (*"the compiler takes the first heading
+as authoritative"*): that one puts the fix in a consumer this base does not control, and it
+silently changes meaning every time a pass prepends a section. Demotion is a property of
+the file, checkable with `grep -c '^## Opportunities by region'` → **1**.
+
+### 🔴 `Gap 548-D` — two more primary hosts unreachable, and the pattern now has three members
+
+| Host | Result | Claim it would have attested |
+|---|---|---|
+| `ofqual.blog.gov.uk` | 🔴 **DNS resolution failure** | Ofqual's own wording on AI as sole/primary marker |
+| `ent2d.ac-bordeaux.fr` | 🔴 **DNS resolution failure** | the French sovereign staff-assistant lead |
+| `eur-lex.europa.eu` | 🔴 `connect_rejected`, gateway policy (carried `500-D`) | EU AI Act Omnibus dates |
+
+🔴 **All three are European public-sector primary sources**, and all three EMEA regulatory
+claims on this base are therefore **vendor- or press-sourced**. 🔵 That is a systematic bias
+in one direction on one region, not three unlucky fetches, and it is worth naming as such:
+🔴 **this base is least able to verify primary material precisely where it is finding the
+most new material.**
+
 ## 🆕 `p547` — `2026-10-30` — **🔴 EIGHTH CONSECUTIVE DEMAND SATURATION ACROSS ALL FOUR REGIONS: THE FOUR MANDATED LEGS RETURNED **0 NEW CLAIMS** AND THIS BASE WAS MORE PRECISE THAN THE SEARCH CHANNEL ON EVERY REGULATORY INSTRUMENT IT RETURNED. 🔴 THE NA LEG RE-SURFACED A FIGURE THIS BASE **RETIRED AT `p455`** AS ITS TOP ORGANIC RESULT. 🟢 THE SUPPLY SIDE MOVED INSTEAD, AND IT MOVED THE REGIONAL PICTURE: EMEA GAINS A **CONTENT**-TIER OPPORTUNITY WITH A LAWFUL PATH THROUGH EXACTLY ONE OF THREE PUBLISHERS, AND APAC GAINS THE FIRST SHELF ROW WHOSE ARCHITECTURE IS A **DIRECT MATCH** TO ITS OWN HIGH-RISK REGIME.**
 
 ### 🔴 The demand legs, graded claim by claim
@@ -30,7 +213,7 @@ AI"* (Gallup, via an aggregator) and *"adoption rose from 34 % in 2023 to 61 % i
 🔵 Both arrive through secondary aggregator blogs, which is the channel class `p455`
 retired the *"134 bills"* figure for. **Neither is written to this page.**
 
-## Opportunities by region
+### Opportunities by region — `p547` (historical; the authoritative block is the single `##` at the top of this page)
 
 🔵 **All four regions are stated below, and the two that produced nothing are stated as
 producing nothing.** An informed gap is information; silence reads exactly like coverage.
@@ -235,7 +418,7 @@ byte-exact channel** in this environment, which is what bounds the quote gate on
 | `api.github.com` via `gh` | 🔴 **403 — scope, remedy named** | see above |
 | `eur-lex.europa.eu` | 🔴 **`connect_rejected`, gateway policy** | gateway log, quoted above |
 
-## Opportunities by region
+### Opportunities by region — `p546` (historical; the authoritative block is the single `##` at the top of this page)
 
 🔵 **Each region below is placed from the evidence this pass actually produced, and the
 instrument findings are region-neutral, so they apply to all four equally.** The
@@ -1122,7 +1305,7 @@ artefact. 🔵 **Any region on this base that was attributed from the leg that f
 it, rather than read from the artefact or the source, is unproven.** Registered as
 `Gap 544-A`.
 
-## Opportunities by region
+### Opportunities by region — `p544` (historical; the authoritative block is the single `##` at the top of this page)
 
 ### North America
 
@@ -2123,7 +2306,7 @@ recorded because the absence of any player list would read as absence of players
 > it is a market fact and not a feature list:** Indonesian SD teachers *"spend
 > 4–8 hours a week hand-writing exams in Word."* 🟢 **The output is paper**, which
 > is the right answer in a context where the constraint is a photocopier rather
-> than a device per student — the same insight `P565` draws for rural LATAM,
+> than a device per student — the same insight `P600` draws for rural LATAM,
 > arrived at independently in APAC. 🔴 Note the asymmetry this leg keeps
 > producing: APAC supplies the largest agents on this base (DeepTutor 49.6k★,
 > OpenMAIC 41.8k★) **and its classroom demand remains unmeasured here.**

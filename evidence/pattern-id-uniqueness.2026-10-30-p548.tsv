@@ -1,0 +1,14 @@
+# p548 2026-10-30 — Gap 547-H closed. Rule: the FIRST P<n> token in a `^## ` heading is that
+# heading's id; `^## ` headings with no leading P-id are pass sections, not recipes.
+# (A greedy `^## .*P[0-9]+` match reports the LAST id in the heading and invents duplicates:
+#  p548's own first attempt reported 6 duplicate ids. The rule below reproduces 547-H exactly.)
+state	headings_total	headings_with_id	distinct_ids	duplicate_ids	id_range	contiguous	unique
+before p548	59	54	53	P565 (x2: "Brightspace, the third LMS" / "The disconnected classroom")	P547-P599	yes	NO
+after p548	59	54	54	none	P547-P600	yes (54 ids over 54 values)	YES
+# Inbound references repointed (non-append-only pages only):
+file	ref_meant	action
+repos/foundations.md:903	disconnected classroom	P565 -> P600
+intel/market.md:2126	disconnected classroom	P565 -> P600
+intel/trends.md:1368	disconnected classroom	P565 -> P600
+agents/trending.md:2765	Brightspace	LEFT — correct as P565, and the page is append-only
+agents/trending.md:40029	AMBIGUOUS (Krayin; no Krayin in patterns.md)	LEFT — append-only history; recorded as unresolvable

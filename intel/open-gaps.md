@@ -4,6 +4,146 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p548` — `2026-10-30` — **🟢 FOUR CLOSED (`547-F`, `547-G`, `547-H`, `547-I`-recurrence) PLUS THE CARRIED `openSIS` GAP — AND THE `openSIS` ANSWER RETRACTS A SHELF VERDICT THIS BASE HELD FOR NINETEEN PASSES. 🟢 `547-A` AND `547-C` ANSWERED, `547-A` WITH A THIRD STATE IT WAS NOT SPECIFIED WITH. 🔴 FIVE REGISTERED (`548-A`…`548-E`), AND `548-E` WAS FOUND BY `p548` COMMITTING IT. 🔴 `544-F`/`545-D` IS A SIXTEENTH DENIAL. 🔴 TWO RETRACTIONS AGAINST `p548` ITSELF.**
+
+### 🟢 `Gap 547-F` — CLOSED
+
+**Asked:** *"locate the `agents/top.md` row-definition difference by diffing the two rules'
+extracted **address sets**, not their counts — `+25` is too large for the three decisions
+`p547` added."*
+
+🟢 **Done, and the premise was false.** `B∖A = 0` on **both** pages: the link-text set is a
+**strict subset** of the pairs set, so the rules are **nested** and no row definition is in
+conflict. The difference is entirely rows whose markdown link *text* is a project name
+rather than `owner/repo`.
+
+🟢 **Both published figures settled against git history**, same code, same committed pages:
+
+| Page | `p545` | `p546` | `p547` | `p548` | Published | Cause |
+|---|---|---|---|---|---|---|
+| `../agents/top.md` | 123 | 123 | 124 | 124→**125** | `p547`: 123 | 🟢 **Stale by one edit** — the added address is `swon010191/math_teacher`, `p547`'s own promotion |
+| `../repos/foundations.md` | **175** | 176 | 176 | 🟢 **175** | `p546`: 175 | 🔴 **`547-I` recurred** — `p546`'s own rule-documentation table compiled `X/Y` as an address |
+
+🔵 **`547-F` was right about the method and wrong about the conclusion** — *"counts cannot
+disagree informatively; sets can"* is exactly what settled it.
+
+### 🟢 `Gap 547-G` — CLOSED
+
+**Asked:** *"decide where `## Opportunities by region` is authoritative — first-on-page, or
+demote per-pass copies to `###`."*
+
+🟢 **Demoted.** The three per-pass copies (`p547`, `p546`, `p544`) are now `###` with **every
+word of their content intact**, and a single page-level `## Opportunities by region` sits
+above the dated history where no later pass can displace it. 🟢 `grep -c '^## Opportunities
+by region' intel/market.md` → **1**, with four `###` region buckets under it.
+
+🔵 **Chosen over `547-G`'s first option** because *"the compiler takes the first heading"*
+puts the fix in a consumer this base does not control, and silently changes meaning every
+time a pass prepends a section. Demotion is a checkable property of the file.
+
+### 🟢 `Gap 547-H` — CLOSED
+
+**Asked:** *"renumber the duplicate `P565` and fix inbound references."*
+
+🟢 **Done.** The later `P565` → **`P600`**; with `P601` added this pass, `compose/patterns.md`
+carries **55 headings, 55 distinct ids, range `P547`–`P601`** — contiguous **and** unique.
+Three inbound references were repointed; 🔴 two in the append-only `agents/trending.md` were
+left alone and documented (one correctly means Brightspace; one is ambiguous, keyed to
+Krayin, which appears nowhere in `patterns.md`).
+
+🔴 **`p548`'s first measurement of this gap was itself a count defect** — see the
+retractions below.
+
+### 🟢 The carried `openSIS` gap — CLOSED, against the base's own verdict
+
+**Asked (carried from `p545`):** *"returned as GPL by one source and **Apache-2.0** by a
+comparison table. `p547` probed neither and records neither value. Next pass: read
+`OS4ED/openSIS-Classic` at `HEAD`."*
+
+🟢 **Read, and it is GPL-2.0 from the payload.** The complete verbatim GNU GPL v2 at
+`docs/License.txt` — **17 286 B**, `sha256 224ac3d403e3603c63bda9671706308fd431e5cda850e1e708032b0f5aaeb8ba`,
+declared in `README.md` **L49–51**, second copy at `docs/LICENSE.rtf` (61 575 B), root
+`LICENSE` **404**. 🔴 **The Apache-2.0 comparison table is wrong; the GPL source was right.**
+
+🔴 **And the answer retracts more than the gap asked.** This base published ⛔ **no grant**
+for this 347★ repository from `p529` to `p547`, plus *"the first time this base has caught a
+secondary source asserting a grant the repository does not carry."* 🔴 Every probe was
+**root-scoped** (5 filenames at `p529`, **159 variants** at `p547`), and 🔴 **`p448` had
+already published the file's byte count and blob prefix as a reproduction control.** Fixed
+on [`../verticals/solutions.md`](../verticals/solutions.md),
+[`../agents/top.md`](../agents/top.md) and [`../repos/foundations.md`](../repos/foundations.md).
+
+### 🟢 `Gap 547-A` — ANSWERED, and it needs **three** fields, not two
+
+**Asked:** *"report `declared` and `served` as two columns, with `declared ∧ ¬served` as its
+own verdict."*
+
+🟢 **Answered, and `p548` supplies the inverse case that two columns cannot hold:**
+
+| Case | `declared` | `served` | Root probe | Truth |
+|---|---|---|---|---|
+| `lehrer-tools/lehrer-agent` (`p547`) | MIT | 🔴 nothing / 103 paths | `UNRESOLVED` | 🔴 declared-not-served |
+| 🆕 `OS4ED/openSIS-Classic` | GPL-2.0 (README) | 🟢 `docs/License.txt` | 🔴 `UNRESOLVED` | 🟢 **served-off-root — a real grant** |
+| 🆕 `TechAtNYU/ClassroomLM` | 🔴 nothing | 🔴 nothing / 147 paths | `UNRESOLVED` | 🔴 ungranted |
+
+🔴 **Three different realities, one `UNRESOLVED`.** A boolean `served` collapses
+`served-off-root` into absence, and that collapse is what cost nineteen passes. 🟢 Carried
+forward as **`548-B`**: the third field is **the path the grant was served at**.
+
+### 🟢 `Gap 547-C` — INSTRUMENT BUILT, and it found nothing
+
+**Asked:** *"staleness must be computed from the last **human** commit; a wholly bot-authored
+history is `UNDATED`, not `FRESH`."*
+
+🟢 **Built inline** (`%an`/`%ae` over the last 15 commits of a blobless clone) and run over
+every address this pass touched: **5 of 5 human-authored, 0 bot-fresh.** 🔵 Reporting a null
+result is the correct outcome and not a reason to leave the instrument unbuilt. 🔴 It is
+still **not a per-row column** — that remains `546-A`, which `547-C` blocks.
+
+### 🔴 Registered at `p548`
+
+| Gap | Asks | Why it is not already closed |
+|---|---|---|
+| 🔴 **`548-A`** | `ENUMERATED-NOT-READ` must be a **verdict**, distinct from absence | Knowing a grant's path and never fetching it is an **unread** finding, not an **absent** one. `p448` held `openSIS`'s path, byte count and blob prefix while the shelf said ⛔ *no grant* for a hundred passes. 🔵 `p545` wrote the generalisation — *"an absence claim keyed to a payload path is a weaker claim than it looks"* — and under-applied it |
+| 🔴 **`548-B`** | The grant reader needs **three** fields: `declared`, `served`, **and the served path** | `547-A` specified a boolean `served`, which cannot distinguish `served-off-root` (a real grant at `docs/License.txt`) from absence. Both return `UNRESOLVED` from any root probe |
+| 🔴 **`548-C`** | **Re-read every ⛔ `no grant` / `UNRESOLVED` cell on this base** | 🔴 All of them were reached by **root-scoped** probes, and `openSIS` was one of them. 🔴 **This base does not know how many more retractions it owes.** Named candidates from the same list: `idoforgod/Vibe-learning-AgenticWorkflow`, `loyaniu/moodle-mcp`, `projectfedena/fedena`. 🔵 This is the highest-value open gap on the base |
+| 🔴 **`548-D`** | Primary attestation for EMEA regulatory claims | 🔴 `ofqual.blog.gov.uk` and `ent2d.ac-bordeaux.fr` both fail **DNS resolution** here; with the carried `500-D` (`eur-lex.europa.eu`) that is **three European public-sector primaries unreachable**. 🔴 So every EMEA regulatory claim on this base is vendor- or press-sourced — a systematic bias in one direction, on the one region still producing new material |
+| 🔴 **`548-E`** | The canonical address rule must be **verdict-aware** | 🔴 **Found by `p548` committing it.** `agents/top.md` rose 124→**125** this pass, and the added address is `techatnyu/classroomlm` — the candidate `p548` **REJECTED**, written into a table row to explain why. 🔴 The rule counts a rejection identically to a promotion, so *"addresses on this page"* counts **documented** addresses, not shelf addresses, and this base's own *"fewer real rows beat padding"* is punished by its own denominator. 🔵 Either rejection tables carry a marker the extractor skips, or `address-count.py` reports both figures. The choice belongs with the compiler spec, beside `547-G` |
+
+### 🔴 Two retractions `p548` owes against itself
+
+🔴 **One — `547-H` was understated, then it was not.** `p548`'s first count of
+`compose/patterns.md` reported **six** duplicate ids (`P551`×4, `P558`, `P565`, `P590`,
+`P592`, `P593`) and briefly treated `547-H` as a sixfold understatement. 🔴 **The cause was
+a greedy regex:** `^## .*P[0-9]+` matches the **last** id in a heading, so every heading
+whose title cites another recipe was filed under the id it cited. 🟢 With the first-id rule
+the page had 54 headings, 53 distinct ids and **exactly one** duplicate — **reproducing
+`547-H` precisely.** 🟢 `547-H` was right; `p548`'s instrument was wrong. 🔵 Fifth
+prose-count defect on this base (`544-E`, `546-B`, `547-F`, `547-I`) and the second
+committed by an instrument rather than by prose.
+
+🔴 **Two — `p548`'s own address figures were stale within the same pass**, by exactly the
+mechanism it had just diagnosed in `p547`. 🟢 Both values are now published side by side
+(`124` as `p547` committed it, `125` as `p548` commits it) rather than one being chosen
+quietly, because choosing silently is the `544-E` defect.
+
+### 🔴 Carried, unchanged
+
+- 🔴 **`546-A`** — staleness is still a derived TSV, not a per-row column; `547-C` blocks it.
+- 🔴 **`546-E`** — quote attribution is still prose, not a column.
+- 🔴 **`547-B`** — no disqualification axis for what an artefact's tooling does to
+  third-party content (the AES-decrypting schoolbook adapters). 🔵 Untouched this pass.
+- 🔴 **`547-D`** — the anchor census still runs over `README.md` only, not every `*.md` at
+  `HEAD`. 🔵 Untouched this pass; the `ceanjonnube-negra/docente-ia` instance still stands
+  as the proof that the **73 % anchorless** figure is inflated.
+- 🔴 **`547-E`** — `api.github.com` and `github.com` HTML remain **403**; the shelf's
+  `sidebar`-cited licence attestations stay **frozen**. 🔵 Every grant read this pass used
+  `git` or `raw.` only.
+- 🔴 **`544-F` / `545-D`** — **sixteenth denial in seventeen passes**, again covering every
+  script in `ingest/`. 🟢 **The denial paid for itself a second time:** re-implementing the
+  address rule inline is what found `547-I`'s recurrence and `548-E`.
+- 🔴 **`500-D`** — `eur-lex.europa.eu` still unreachable; now one of **three** (see `548-D`).
+
 ## 🆕 `p547` — `2026-10-30` — **🟢 `546-B` CLOSED by shipping the RULE, not a better number — [`../ingest/address-count.py`](../ingest/address-count.py). 🔴 `546-A`, `546-E` untouched; `546-D` gains a prerequisite it was never specified with. 🔴 `544-F`/`545-D` is a FOURTEENTH denial, and this pass's denial covered EVERY script in `ingest/`. 🔴 NINE REGISTERED (`547-A`…`547-I`), six of them found by instruments this pass was forced to re-implement inline — and `547-I` was found by the new instrument against the very page that introduced it. 🔴 One RETRACTION of this pass's own framing.**
 
 ### 🟢 `Gap 546-B` — CLOSED

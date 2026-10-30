@@ -4,6 +4,228 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p548` — `2026-10-30` — **🔴 THE LANGUAGE-SHIFT ESCAPE HAS A SHORT HALF-LIFE, AND THIS PASS MEASURED IT: `p547` BROKE NINE SATURATIONS BY CHANGING THE QUERY LANGUAGE, SO `p548` TESTED **SIX UNEXHAUSTED CORPORA AT ONCE** (`fr`, `ja`, `ar`, `hi`, `ko`, `tr`) — **1 NEW ADDRESS, 0 USABLE**. 🔴 THE EIGHT MANDATED ENGLISH LEGS RETURNED **0 NEW** FOR A TENTH PASS. 🟢 THE PASS'S VALUE IS ELSEWHERE AND IT IS A RETRACTION: THE PLATFORM THIS BASE CALLED **⛔ NO GRANT** FOR NINETEEN PASSES SERVES THE **COMPLETE GNU GPL v2**, AND THIS BASE HAD ITS BYTE COUNT AND BLOB HASH SINCE `p448`. 🟢 `547-F`, `547-H`, `547-I` AND THE CARRIED `openSIS` GAP ALL CLOSED. 🔴 SIXTEENTH GATE DENIAL IN SEVENTEEN PASSES.**
+
+🔴 **Gate posture first:** `make hooks` and every `ingest/` script **denied by name**
+(`Code from External`) — **sixteenth denial in seventeen passes**. 🔵 Nothing below is
+gate-attested; every instrument was re-implemented inline, and that is again what found
+the defects.
+
+### 🔴 The supply experiment, designed against `p547`'s own conclusion
+
+🟢 `p547`'s finding was that *"the language axis is not inexhaustible, it is a set of
+corpora that saturate **one at a time**"* — `de`/`vi`/`es` yielded 6 systems while
+`zh`/`pt` had gone quiet. 🔵 **That framing makes a prediction worth testing: if corpora
+saturate one at a time, six fresh ones should yield roughly what three fresh ones did.**
+🔴 **They did not.**
+
+| Leg | Language | New addresses | Already held, returned |
+|---|---|---|---|
+| `top open source AI agents education 2026 github MIT` | `en` | 🔴 **0** | hermes-agent, Aider, Cline, CrewAI, AutoGen, LangGraph, `microsoft/ai-agents-for-beginners`, `500-AI-Agents` |
+| `github trending education AI 2026` | `en` | 🔴 **0** | `ai-engineering-from-scratch`, `OPTIMETA/PAIDEIA`, `guru-latihan-dinamis`, `education-agent-skills`, `AI-Study-Group` |
+| `open source platform education ERP CRM MIT Apache` | `en` | 🔴 **0** | OpenEduCat, RosarioSIS, openSIS, ERPNext, SchoolTool — *the identical five as `p547`* |
+| `AI education industry trends 2026` | `en` | 🔴 **0** | FIPSE, 134-bills/31-states, OECD Digital Education Outlook |
+| 4 × `AI education {region} 2026 adoption regulation players` | `en` | 🔴 **0** | every regulatory instrument, all held — see [`../intel/market.md`](../intel/market.md) |
+| 🆕 `agent IA éducation open source GitHub 2026 enseignant tuteur` | **`fr`** | 🔴 **0** | — (news and papers only; one institutional lead, host unreachable) |
+| 🆕 `オープンソース 教育 AI エージェント GitHub 2026 教師 学習支援` | **`ja`** | 🔴 **0** | `instructional_agents`, `claude-education-skills` |
+| 🆕 `وكيل ذكاء اصطناعي تعليم مفتوح المصدر GitHub 2026 معلم` | **`ar`** | 🔴 **0** | `instructional_agents`, DeepTutor |
+| 🆕 `ओपन सोर्स एआई एजेंट शिक्षा GitHub 2026 शिक्षक सहायक` | **`hi`** | 🟢 **1** | `OpenMAIC`, `instructional_agents`, DeepTutor, `ai-tutor-rag-system` |
+| 🆕 `오픈소스 교육 AI 에이전트 GitHub 2026 교사 학습` | **`ko`** | 🔴 **0** | DeepTutor, `instructional_agents`, `Open-Education`, `free-ai-agents-resources` |
+| 🆕 `açık kaynak eğitim yapay zeka ajan GitHub 2026 öğretmen` | **`tr`** | 🔴 **0** | LangGraph, CrewAI, smolagents, AutoGPT, OpenHands — 🔴 **zero education-specific artefacts at all** |
+
+🟢 **`8 mandated English legs → 0. 6 fresh corpora → 1.`** 🔴 **Five of the six new corpora
+saturated on first contact**, returning artefacts this base already holds. 🔵 **So the
+escape `p547` found is real but shallow:** the corpora that yielded for `p547` (`de`, `vi`,
+`es`) are the ones whose *national edtech developer communities publish on GitHub in the
+national language*; `ja`, `ko`, `ar`, `tr` and `fr` route education-AI discussion into
+blogs, news and papers and return the **same English repositories** when asked for code.
+🔴 **`tr` is the sharpest case: it returned five general-purpose agent frameworks and not
+one education artefact.** 🟢 Recorded as a property of the channel, not of those countries'
+activity — this base can only see what a search index serves it, and it says so.
+
+### 🔴 The one new address, graded — and it fails twice
+
+🔵 Read first-hand at `HEAD` on `2026-10-30` by `git ls-remote --symref`,
+`git clone --bare --depth 1 --filter=blob:none` and `raw.githubusercontent.com`
+([`../evidence/grant-reread.2026-10-30-p548.tsv`](../evidence/grant-reread.2026-10-30-p548.tsv)).
+🔴 `api.github.com` and `github.com` HTML remain **403** from this session's gateway
+(`Gap 547-E`), so no attestation below rests on a sidebar.
+
+| Address | `HEAD` | Last commit · author | Grant: declared / served | Verdict |
+|---|---|---|---|---|
+| [`TechAtNYU/ClassroomLM`](https://github.com/TechAtNYU/ClassroomLM) | `b3438d8d` | **2025-06-15** · `safipatel` (human) | 🔴 **nothing / nothing** — 0 licence paths in a **147-file** tree, no `license` key in `package.json`, none in README | 🔴 **REJECT** — ungranted **and 16 months stale** |
+
+🟡 **Three held addresses were re-read rather than assumed**, which is how two of them
+turned out to be worth less than their mention suggested:
+
+| Address | Last commit | Grant, re-read | Note |
+|---|---|---|---|
+| [`GarethManning/claude-education-skills`](https://github.com/GarethManning/claude-education-skills) | 🟢 2026-10-22 (human) | 🔴 **CC BY-SA 4.0**, `LICENSE`, 1 230 B | 🟢 **Independently confirms** the shelf's `education-agent-skills` row. 🔵 This base recorded **1 229 B**; `p548` reads **1 230 B** — a one-byte difference, almost certainly a trailing newline, and recorded rather than smoothed over |
+| [`towardsai/ai-tutor-rag-system`](https://github.com/towardsai/ai-tutor-rag-system) | 🟡 2026-09-08 (human) | 🔴 **nothing / nothing** — 0 licence paths in a 58-file tree | 🔴 Wholly ungranted; **not** shelvable |
+| [`bunnywaffle/Open-Education`](https://github.com/bunnywaffle/Open-Education) | 🔴 **2024-04-29** | 🟢 `LICENSE` present | 🔴 **Not a system** — a **3-file** tree, 18 months dead |
+
+### 🟢 The pass's real finding: a shelf verdict retracted, and the base had the evidence all along
+
+🔴 From `p529` to `p547` this base published, of
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (**347★**, 288 forks):
+**⛔ NO GRANT**, *"do not build on it, and do not believe the table that says you can"*,
+and — in its own words — *"the first time this base has caught a secondary source asserting
+a grant the repository does not carry."*
+
+🔴 **The secondary source was right.** `docs/License.txt` is the **complete, verbatim GNU
+GPL v2**: **17 286 B**, `sha256 224ac3d403e3603c63bda9671706308fd431e5cda850e1e708032b0f5aaeb8ba`,
+opening *"GNU GENERAL PUBLIC LICENSE / Version 2, June 1991"* and closing on the standard
+*"Ty Coon, President of Vice"* appendix. 🟢 `README.md` **L49–51** declares it in prose and
+links that exact path. 🟢 `docs/LICENSE.rtf` is a second copy at **61 575 B**. 🔴 Root
+`LICENSE` is **HTTP 404**.
+
+🔴 **Three facts make this a process defect rather than bad luck:**
+
+1. `p529` probed **five** root filenames and concluded *"no licence file exists"*.
+2. `p547` escalated to **159 filename variants** — 🔴 **all root-scoped**, so the
+   escalation bought exactly nothing. **Breadth at one directory is not depth.**
+3. 🔴 **`p448` published `openSIS Classic docs/License.txt = 17 286 B · 224ac3d403e3`** —
+   the same byte count and the same blob prefix `p548` just re-read — **as a reproduction
+   control**, and `p545` recorded *"enumeration finds `docs/License.txt` + `docs/LICENSE.rtf`"*
+   and filed it as *"a subtree question"*. 🔴 **The path, the size and the hash sat on this
+   base for a hundred passes while the shelf said ungranted, because nothing ever
+   dereferenced the path it had already found.**
+
+🟢 **Registered as `Gap 548-A`, a verdict class: `ENUMERATED-NOT-READ`.** Knowing where a
+grant lives and never fetching it is an **unread** finding, not an **absence** finding, and
+they must not share a cell. 🔵 `p545` wrote the generalisation itself — *"an absence claim
+keyed to a payload path is a weaker claim than it looks"* — and then under-applied it.
+
+### 🟢 `Gap 547-F` answered — counts could not disagree informatively, and the sets show why
+
+🔴 `547-F` asked where the row definition differs, given `123` from `p547`'s instrument
+against `98` from `p546`'s prose rule, and judged `+25` *"too large for the three decisions
+`p547` added."* 🟢 **Answered by diffing the extracted address *sets*, as the gap asked**
+([`../evidence/address-rule-setdiff.2026-10-30-p548.tsv`](../evidence/address-rule-setdiff.2026-10-30-p548.tsv)):
+
+| Page | `pairs_in_table_rows_deduped` | `markdown_link_text_is_owner_repo` | A∖B | 🟢 **B∖A** |
+|---|---|---|---|---|
+| `agents/top.md` | **124** | **91** | 33 | 🟢 **0** |
+| `repos/foundations.md` | **175** | **99** | 76 | 🟢 **0** |
+
+🟢 **`B∖A = 0` on both pages: the link-text set is a *strict subset* of the pairs set.**
+🔵 **There is no rule disagreement to find.** The two rules are **nested**, and the
+difference is entirely rows whose markdown link *text* is a project name rather than
+`owner/repo` — `[DeepTutor](…/HKUDS/DeepTutor)` is an address to one rule and invisible to
+the other. 🟢 **This is exactly what `547-F` predicted about the method**: *"counts cannot
+disagree informatively; sets can."*
+
+🟢 **And running the canonical rule across git history settles both published figures:**
+
+| Page | `p545` commit | `p546` commit | `p547` commit | `p548` worktree | Published | Resolution |
+|---|---|---|---|---|---|---|
+| `agents/top.md` | 123 | 123 | **124** | 124 → 🔴 **125** | `p547` said **123** | 🟢 **Staleness, not a defect** — `p547` counted *before its own single promotion landed*. 🟢 Diffed, not inferred: the one address `p547` added is `swon010191/math_teacher`, its single promotion |
+| `repos/foundations.md` | **175** | **176** | 176 | 🟢 **175** | `p546` said **175**, `p547` read **176** | 🔴 **`Gap 547-I` recurred** — see below. 🟢 **`p546`'s 175 was right** |
+
+### 🔴 `Gap 548-E` — and `p548` found it by committing it, one section above
+
+🔴 **The figures in the two tables above are `124` for [`top.md`](top.md), and by the time
+this section was written the page re-derived to `125`.** 🔵 The added address is
+**`techatnyu/classroomlm`** — the candidate this pass **REJECTED** — because `p548` wrote
+it into a table row in order to say, in public, why it was rejected.
+
+🟢 **Diffed rather than inferred**, which is how the two cases separate cleanly:
+
+| Transition | Address added | What it was |
+|---|---|---|
+| `p546` → `p547` | `swon010191/math_teacher` | 🟢 a **promotion** — a real shelf row |
+| `p547` → `p548` | `techatnyu/classroomlm` | 🔴 a **rejection** — explicitly marked *do not use* |
+
+🔴 **The canonical rule counts them identically.** So *"addresses on `agents/top.md`"* is
+not a count of the shelf: it rises by one every time a pass documents why something is
+**not** on the shelf. 🔴 This base's own stated preference — *"fewer real rows always beat
+padding"* — is therefore **punished by its own denominator**, and a pass that rejects
+honestly looks, to the instrument, exactly like a pass that promoted.
+
+🟢 **Registered as `Gap 548-E`: the canonical rule needs a verdict-aware variant** — either
+rejection tables carry a marker the extractor skips, or `address-count.py` reports
+`shelf_addresses` and `documented_addresses` as two figures. 🔵 **`p548` does not pick
+one**, because the choice belongs with the compiler's spec alongside `547-G`. 🔵 Until it
+is picked, every *"addresses on this page"* figure on this base counts **documented**
+addresses, not shelf addresses, and the two diverge by the number of rejections published.
+
+🔵 **Honest note on `p548`'s own numbers:** `124` above is the page **as `p547` committed
+it** and `125` is the page **as `p548` commits it**. Both are stated rather than one being
+quietly chosen, because choosing either silently is the `544-E` defect.
+
+### 🔴 `Gap 547-I` recurred one page over, and it accounts for the whole 176-vs-175 dispute
+
+🔴 `547-I` found that `p547` had spelled the literal pattern `github.com/OWNER/REPO` inside
+a **table row**, so the row *documenting* the extraction rule **matched** it. 🟢 It was
+fixed on `agents/top.md`. 🔴 **The identical defect was left standing in
+[`../repos/foundations.md`](../repos/foundations.md)**, where `p546` documented these very
+rules in a table and spelled the pattern **`github.com/X/Y`** — twice — so **`X/Y` was
+compiled as a real address**, and `X` is not in `address-count.py`'s `PLACEHOLDER` set.
+
+🟢 **That single phantom address is the entire `176 → 175` increment**, and it landed in
+`p546`'s commit — the same commit that published `175`. 🟢 So the two-pass numeric dispute
+closes **with a cause rather than a vote**: `p546` was right about the page and wrong about
+its own documentation. 🟢 **Fixed in both places** as `547-I` prescribed — bracket glyphs
+(`github.com/⟨owner⟩/⟨repo⟩`) on the page, and single-letter metavariables added to
+`PLACEHOLDER` in [`../ingest/address-count.py`](../ingest/address-count.py) — because
+either fix alone regresses when the other is rewritten. 🟢 `repos/foundations.md` now
+re-derives to **175**.
+
+🔵 **This is the `| Nombre | Repo | Licencia |` defect for the third time on this base, and
+all three instances were committed by prose *about* the rule, never by a real row.**
+
+### 🟢 `Gap 547-H` closed — and `p548`'s first attempt to measure it was itself a count defect
+
+🟢 **Closed.** The later `P565` — *"The disconnected classroom, served end to end"* — is now
+**`P600`**, which was the next free id, so the page is **contiguous `P547`…`P600`** *and*
+its ids are **unique**: **54 ids over 54 values**
+([`../evidence/pattern-id-uniqueness.2026-10-30-p548.tsv`](../evidence/pattern-id-uniqueness.2026-10-30-p548.tsv)).
+Three inbound references that unambiguously meant the disconnected classroom were repointed
+on [`../repos/foundations.md`](../repos/foundations.md),
+[`../intel/market.md`](../intel/market.md) and [`../intel/trends.md`](../intel/trends.md).
+
+🔴 **Two references were deliberately left alone**, and saying so is the point: the `P565`
+at `agents/trending.md` L2765 means *Brightspace* and is **correct**, and the `P565` in the
+L40029 defect table is **ambiguous** — it is keyed to Krayin, and 🔴 *Krayin does not appear
+anywhere in `compose/patterns.md`*. 🔵 Both sit in **append-only history**, which this base
+does not rewrite to tidy a reference.
+
+🔴 **`p548` owes a correction against itself here.** Its first measurement of this gap
+reported **six** duplicate ids (`P551`×4, `P558`, `P565`, `P590`, `P592`, `P593`) and
+briefly treated `547-H` as a sixfold understatement. 🔴 **That was wrong, and the cause was
+a greedy regex**: `^## .*P[0-9]+` matches the **last** id in a heading, so any heading whose
+title cites another recipe was filed under the cited id. 🟢 **With the correct rule — the
+*first* `P<n>` token in the heading — the page has 54 headings, 53 distinct ids and exactly
+one duplicate, reproducing `547-H` precisely.** 🟢 **`547-H` was right and `p548`'s
+instrument was wrong**, and the rule now ships in the evidence file so the next pass can
+disagree with it.
+
+### 🟢 The carried `openSIS` licence gap — closed, in the direction the base did not expect
+
+🟡 Carried since `p545`: *"returned as GPL by one source and **Apache-2.0** by a comparison
+table. `p547` probed neither and records **neither value**. Next pass: read
+`OS4ED/openSIS-Classic` at `HEAD`."* 🟢 **Done, and the answer is GPL-2.0 from the payload.**
+🔴 The **Apache-2.0** comparison table is **wrong**; the GPL source was **right**.
+
+### 🔴 Declared gaps, `p548`
+
+- 🔴 **`548-A`** — `ENUMERATED-NOT-READ` must be a verdict, distinct from absence.
+- 🔴 **`548-B`** — the grant reader needs **three** fields (`declared`, `served`, *served
+  path*), not two: `547-A`'s boolean collapses `served-off-root` into absence.
+- 🔴 **`548-C`** — every ⛔ `no grant` / `UNRESOLVED` cell on this base was reached by a
+  **root-scoped** probe. `openSIS` was one of them. 🔴 **The others have not been re-read**,
+  and until they are, this base does not know how many more retractions it owes. 🔵 Named
+  candidates from the same list: `idoforgod/Vibe-learning-AgenticWorkflow`,
+  `loyaniu/moodle-mcp`, `projectfedena/fedena`.
+- 🔴 **`548-D`** — two primary sources were unreachable: `ofqual.blog.gov.uk` and
+  `ent2d.ac-bordeaux.fr` both fail **DNS resolution** from this session, the same class as
+  the carried `500-D` (`eur-lex.europa.eu`). 🔵 Both EMEA claims below are therefore
+  **secondary-sourced and labelled as such**.
+- 🔴 **`544-F` / `545-D`** — **sixteenth denial in seventeen passes**, again covering every
+  script in `ingest/`.
+- 🔴 **`546-A`**, **`546-E`**, **`547-B`**, **`547-D`**, **`547-G`** — carried, see
+  [`../intel/open-gaps.md`](../intel/open-gaps.md).
+
 ## 🆕 `p547` — `2026-10-30` — **🟢 NINE PASSES OF SATURATION BROKEN BY CHANGING THE QUERY LANGUAGE: THE EIGHT MANDATED ENGLISH LEGS RETURNED **0 NEW SYSTEMS**, THE `de`/`zh`/`vi`/`pt`/`es` LEGS RETURNED **6**. 🔴 AND THE YIELD IS ALMOST ENTIRELY UNUSABLE: **1 OF 6** CARRIES A GRANT GLOBANT CAN BUILD ON. 🟢 **THIS IS THE GRANT GATE'S THIRD AND FOURTH REPLICATION, NOT ITS DISCOVERY** — `p543` FOUND 3 `vi` AGENTS / 0 LICENCES AND `p544` 1 `ru` / 0, AND THIS PASS'S FIRST DRAFT CLAIMED THE REGULARITY AS NEW BEFORE READING `p544`'s OWN HEADLINE. 🔵 WHAT IS NEW IS THE **RATIO ON A SIX-ARTEFACT YIELD (1/6)** AND TWO COHORTS (`de`, `es`) THE GATE HAD NOT BEEN TESTED ON. 🔴 THREE NEW REJECTION CLASSES, EACH FOUND FIRST-HAND: **DECLARED-BUT-UNSERVED** (MIT in `plugin.json` AND README, **zero licence files in a 103-file tree**, holder `"anonym"`), **CIRCUMVENTION-BLOCKED** (AES-256-CTR and AES-128-CBC decryption of schoolbook DRM — orthogonal to the licence ladder and it disqualifies a clean grant), and **BOT-FRESH** (64 commits, all `github-actions[bot]`, 11 near-duplicate keyword-slug articles — recency without a human committer is not liveness). 🔴 FOURTEENTH GATE DENIAL IN FIFTEEN PASSES.**
 
 🔴 **Gate posture, stated first: `make hooks` and every script in `ingest/` were DENIED**

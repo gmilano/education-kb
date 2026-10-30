@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p548` — `2026-10-30` — **🟢 `p547`'s TWO HEADLINE DISAGREEMENTS (**176 vs 175**, **123 vs 98**) ARE BOTH RESOLVED, AND NEITHER WAS A RULE DEFECT: ONE IS **STALENESS**, THE OTHER IS **`Gap 547-I` RECURRING ONE PAGE OVER** AND COMPILING `X/Y` AS A REAL ADDRESS. 🟢 `foundations.md` RE-DERIVES TO **175** AND `p546` WAS RIGHT. 🔴 NO NEW FOUNDATIONAL REPO FOR A TENTH PASS. 🔴 SIXTEENTH GATE DENIAL IN SEVENTEEN.**
+
+🔵 **The supply narrative, the six language legs and the `openSIS` retraction are on
+[`../agents/trending.md`](../agents/trending.md#-p548--2026-10-30).** This entry carries the
+instrument record.
+
+### 🟢 `Gap 547-F` — the two rules never disagreed; they are **nested**
+
+🔴 `547-F` read `123` against `98` and judged `+25` *"too large for the three decisions
+`p547` added (case-folding, `.git` stripping, owner exclusion), so a row definition
+genuinely differs and `p547` does not know where."* 🟢 **The sets locate it immediately**
+([`../evidence/address-rule-setdiff.2026-10-30-p548.tsv`](../evidence/address-rule-setdiff.2026-10-30-p548.tsv)):
+
+| Page | `pairs_in_table_rows_deduped` | `markdown_link_text_is_owner_repo` | A∖B | 🟢 **B∖A** |
+|---|---|---|---|---|
+| [`../agents/top.md`](../agents/top.md) | **124** *(as `p547` committed it; **125** as `p548` commits it — `Gap 548-E`)* | **91** | 33 | 🟢 **0** |
+| [`foundations.md`](foundations.md) | **175** | **99** | 76 | 🟢 **0** |
+
+🟢 **`B∖A = 0` on both pages**, so the link-text rule is a **strict subset** of the pairs
+rule and there is **no row definition in conflict**. 🔵 The gap is entirely rows whose
+markdown link *text* is a project name instead of `owner/repo`:
+`[DeepTutor](https://github.com/HKUDS/DeepTutor)` is one address to the pairs rule and
+**invisible** to the link-text rule. 🟢 `547-F` was right that *"counts cannot disagree
+informatively; sets can"* — and the thing the sets reveal is that the premise of the gap
+(two rules reading the same page differently) was false.
+
+### 🟢 The two published figures, settled against git history
+
+🟢 **The canonical rule, same code, run over the actual committed pages:**
+
+| Page | `p545` commit | `p546` commit | `p547` commit | `p548` worktree | Published | Resolution |
+|---|---|---|---|---|---|---|
+| [`../agents/top.md`](../agents/top.md) | 123 | 123 | **124** | 124 → 🔴 **125** | `p547`: **123** | 🟢 **Stale by one edit** — diffed, not inferred: the address `p547` added is `swon010191/math_teacher`, its single promotion. 🔴 `p548`'s own `+1` is `techatnyu/classroomlm`, a **rejection** — `Gap 548-E` |
+| [`foundations.md`](foundations.md) | **175** | **176** | 176 | 🟢 **175** | `p546`: **175** | 🔴 **`Gap 547-I`, recurred** — and `p546` was right about the page |
+
+### 🔴 `Gap 547-I` recurred here, on this very page's sibling, and it is the whole increment
+
+🔴 `547-I` found `p547` spelling the literal extraction pattern inside a **table row**, so
+the row documenting the rule **matched the rule**. 🟢 It was fixed on `agents/top.md`. 🔴
+**The same defect was standing untouched in [`foundations.md`](foundations.md)**: `p546`
+documented its five extraction rules in a table and wrote the pattern as **`github.com/X/Y`**
+— on two rows — so **`X/Y` was compiled as a real repository address**, and `X` is not in
+`address-count.py`'s `PLACEHOLDER` set.
+
+🟢 **`X/Y` is the entire `175 → 176` increment**, and git dates it to `p546`'s own commit —
+the same commit that published `175`. 🔵 **So `p546` measured its page correctly and then
+inflated it by documenting how.** 🟢 Fixed in **both** places, as `547-I` prescribed:
+bracket glyphs (`github.com/⟨owner⟩/⟨repo⟩`) in the prose table, **and** single-letter
+metavariables (`x`, `y`, `z`, `n`, `a`, `b`, `test`, `demo`, `placeholder`) added to
+`PLACEHOLDER` in [`../ingest/address-count.py`](../ingest/address-count.py) — either alone
+regresses when the other is rewritten.
+
+🔵 **Third instance of the `| Nombre | Repo | Licencia |` class on this base, and all three
+were committed by prose *about* an extraction rule — never by a real data row.** 🟢 Stated as
+a rule for later passes: **documentation of an extraction rule must never be placed where
+that rule can match it.**
+
+🟢 **And the code half of the fix paid off immediately, in a way `547-I` did not anticipate.**
+A broad sweep for placeholder-shaped addresses across all nine live pages found **three more
+instances `547-I` never located** — all in *this page's* append-only history
+(L332, L333 and L35576: two more `github.com/X/Y` rows and one surviving
+`github.com/owner/repo` row). 🔴 **This page is append-only and will not be rewritten to
+tidy them.** 🟢 **It does not need to be:** with `x`, `y` and `owner` now in `PLACEHOLDER`,
+the canonical rule **no longer compiles any of the three**, verified by probe
+(`x/y` → absent, `owner/repo` → absent). 🔵 **That is the whole argument for fixing an
+extraction defect in the code and not only on the page** — the code fix reaches backwards
+into history that must not be edited, and a glyph fix never can.
+
+🔵 **One true negative worth recording, since the sweep was deliberately broad:**
+`hendrycks/test` is **not** a placeholder — it is the MMLU benchmark repository, live at
+`4450500f923c`, and `test` is genuinely its name. 🟢 A placeholder sweep tuned to catch
+`X/Y` will flag it, and a pass that trusts the sweep over a `git ls-remote` would delete a
+real address. 🟢 The
+pattern is now explicit enough to state as a rule: **documentation of an extraction rule
+must never be placed where that rule can match it.**
+
+### 🟢 Canonical counts after the fix, all five pages
+
+| Page | `pairs_in_table_rows_deduped` |
+|---|---|
+| [`../agents/top.md`](../agents/top.md) | **125** 🔴 *(124 before this pass's rejection table — `Gap 548-E`)* |
+| [`foundations.md`](foundations.md) | 🟢 **175** *(was 176; the extra was `X/Y`)* |
+| [`../verticals/solutions.md`](../verticals/solutions.md) | **82** |
+| [`../compose/patterns.md`](../compose/patterns.md) | **177** |
+| [`../intel/market.md`](../intel/market.md) | **56** |
+
+### 🔴 No new foundational repo, tenth consecutive pass
+
+🔴 The `open source platform education ERP CRM MIT Apache` leg returned the **identical
+five** platforms as `p547` (OpenEduCat, RosarioSIS, openSIS, ERPNext, SchoolTool), all
+held. 🔴 Six fresh language corpora (`fr`, `ja`, `ar`, `hi`, `ko`, `tr`) produced **one**
+address between them and it is ungranted and 16 months stale. 🔵 **Nothing is added, and
+the absence is the record.**
+
+🟢 **One foundations-adjacent row did change value, though, and it changed upward:**
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (347★) is **GPL-2.0**,
+read from the payload at `docs/License.txt` (17 286 B, `sha256 224ac3d4…`), not the
+**⛔ no grant** this base published for nineteen passes. 🔵 Full attestation on
+[`../verticals/solutions.md`](../verticals/solutions.md).
+
 ## 🆕 `p547` — `2026-10-30` — **🟢 `Gap 546-B` CLOSED, AND NOT BY PRODUCING A BETTER NUMBER: [`ingest/address-count.py`](../ingest/address-count.py) SHIPS THE **RULE** ALONGSIDE THE COUNT, SO EVERY FIGURE ON THESE PAGES IS NOW RE-DERIVABLE BY RUNNING IT. 🔴 IT IMMEDIATELY DISAGREES WITH `p546`: **176 vs 175** ON `foundations.md` AND **123 vs 98** ON `agents/top.md` — AND THE DISAGREEMENT IS NOW *LOCATABLE*, WHICH IS THE ENTIRE POINT. 🔴 A CHANNEL THIS SHELF DEPENDS ON HAS BEEN RETIRED: `github.com` HTML AND `api.github.com` BOTH RETURN **403** FROM THIS SESSION'S GATEWAY, SO THE `sidebar` ATTESTATIONS CITED ACROSS THE LICENCE COLUMN **CANNOT BE RE-VERIFIED BY ANY LATER PASS UNDER THIS POLICY**. 🔴 NO NEW FOUNDATIONAL REPO. 🔴 FOURTEENTH GATE DENIAL IN FIFTEEN.**
 
 🔵 **Supply narrative, the six new systems and the three new rejection classes are on

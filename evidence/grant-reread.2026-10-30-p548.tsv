@@ -1,0 +1,11 @@
+# p548 2026-10-30 — grant re-read, declared vs served vs served-off-root (Gap 547-A refinement)
+# channel: git ls-remote + git clone --bare --depth 1 --filter=blob:none + raw.githubusercontent.com
+# api.github.com and github.com HTML are 403 from this session's gateway (Gap 547-E) — not used.
+address	head_sha	last_commit	last_author	author_class	declared_where	served_path	served_bytes	served_sha256	verdict
+OS4ED/openSIS-Classic	8348cd069aa2875511101ded9eaa9c86116884db	2026-10-26	Anwesha Roy	human	README.md L49-51 "licensed under the GNU General Public License"	docs/License.txt	17286	224ac3d403e3603c63bda9671706308fd431e5cda850e1e708032b0f5aaeb8ba	GPL-2.0 — CORRECTION, base published "NO GRANT"
+OS4ED/openSIS-Classic	8348cd069aa2875511101ded9eaa9c86116884db	2026-10-26	Anwesha Roy	human	-	docs/LICENSE.rtf	61575	-	GPL-2.0 (RTF duplicate of the same grant)
+OS4ED/openSIS-Classic	8348cd069aa2875511101ded9eaa9c86116884db	2026-10-26	Anwesha Roy	human	-	LICENSE (root)	HTTP404	-	served-off-root — root probe says UNRESOLVED, tree says GPL-2.0
+TechAtNYU/ClassroomLM	b3438d8d21d68f9882684cebed657acdef634461	2025-06-15	safipatel	human	NONE	NONE in 147-file tree	0	-	REJECT — ungranted AND 16 months stale
+GarethManning/claude-education-skills	135d6275e7db0657d70b147f46d3191c5430677d	2026-10-22	GarethManning	human	-	LICENSE	1230	-	CC BY-SA 4.0 — confirms the shelf row for education-agent-skills
+towardsai/ai-tutor-rag-system	89776d8511f62da05ed263fa1649119e2722b9c8	2026-09-08	Omar Solano	human	NONE	NONE in 58-file tree	0	-	REJECT — wholly ungranted
+bunnywaffle/Open-Education	1fac5bc05ac1dc6df315c3b14bb6301f891c524d	2024-04-29	Bunnywaffle	human	-	LICENSE	-	-	REJECT — 3-file tree, 18 months stale, not a system

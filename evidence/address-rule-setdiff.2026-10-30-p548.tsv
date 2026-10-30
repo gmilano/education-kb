@@ -1,0 +1,10 @@
+# p548 2026-10-30 — Gap 547-F answered by diffing SETS, not counts.
+# 547-F asked why the instrument reads 123 where p546's prose rule read 98 (+25, "too large
+# for the three decisions p547 added"). The sets show the rules are NESTED, not divergent.
+page	rule_A	count_A	rule_B	count_B	A_minus_B	B_minus_A	finding
+agents/top.md	pairs_in_table_rows_deduped	124	markdown_link_text_is_owner_repo	91	33	0	B is a STRICT SUBSET of A. The 33 are rows whose link TEXT is a project name, not owner/repo
+repos/foundations.md	pairs_in_table_rows_deduped	175	markdown_link_text_is_owner_repo	99	76	0	same nesting; no rule disagreement exists
+# Counts over git history, canonical rule, same code, same page:
+page	at_p545_commit	at_p546_commit	at_p547_commit	at_p548_worktree	published_figure	resolution
+agents/top.md	123	123	124	124	p547 published 123	STALENESS, not a rule defect — p547 counted before its own promotion landed
+repos/foundations.md	175	176	176	175 (after fix)	p546 published 175, p547 read 176	Gap 547-I RECURRED: p546 documented the rules in a TABLE spelling `github.com/X/Y`, so X/Y compiled as an address. p546's 175 was right.

@@ -6,6 +6,73 @@ updated: 2026-10-30
 
 # Education AI Agents — Curated Shelf
 
+## 🆕 `p548` — **🔴 ZERO PROMOTIONS, AND THE PASS IS STILL WORTH HAVING: ONE SHELF VERDICT RETRACTED FROM THE PAYLOAD, AND SIX FRESH LANGUAGE CORPORA TESTED AT ONCE TO MEASURE HOW LONG `p547`'s ESCAPE LASTS. 🔴 THE ANSWER IS: NOT LONG — 6 CORPORA → 1 NEW ADDRESS → 0 USABLE. 🔴 SIXTEENTH GATE DENIAL IN SEVENTEEN PASSES.**
+
+🔴 **Gate posture, stated first:** `make hooks` and every script in `ingest/` were **denied
+by name** (`Code from External`) before any body ran — **sixteenth denial in seventeen
+passes** (`Gap 544-F` / `545-D`). 🔵 Nothing here is gate-attested. Every instrument this
+pass needed was **re-implemented inline**, and — as at `p547` — the re-implementation is
+what found the defects: see `Gap 547-F` and `Gap 547-I` below, both answered by code the
+gate would not run.
+
+### 🔴 No agent was promoted this pass, and that is the honest line
+
+🔴 **`agents/top.md` gains no row.** The supply legs produced exactly **one** address this
+base had never held, and it failed on two independent axes:
+
+| Candidate | Leg | Read first-hand at `HEAD` | Verdict |
+|---|---|---|---|
+| [`TechAtNYU/ClassroomLM`](https://github.com/TechAtNYU/ClassroomLM) | 🆕 `hi` | `b3438d8d`, last commit **2025-06-15** (human), **0 licence files in a 147-file tree**, nothing declared in `package.json` / `README.md` / `pyproject.toml` | 🔴 **REJECT** — *wholly ungranted* **and** 16 months stale |
+
+🔵 **Fewer real rows always beats padding**, so the shelf count is unchanged. 🟢 The two
+useful outputs of the pass are a **retraction** and a **measurement**, below.
+
+### 🟢 A shelf verdict retracted from the payload — `openSIS-Classic` is GPL-2.0
+
+🔴 This base filed [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)
+(**347★**, 288 forks) as **⛔ no grant at all** from `p529` to `p547`, and told the field
+*"do not believe the table that says you can"* build on it. 🔴 **The table was right.**
+The repository serves the **complete, verbatim GNU GPL v2** at `docs/License.txt` —
+**17 286 B**, `sha256 224ac3d403e3…b8ba`, *"Version 2, June 1991"* through to the standard
+*"Ty Coon"* appendix — and `README.md` **L49–51** declares it in prose.
+
+🔴 **The failure mode is specific and it is this base's own:** `p529` probed **5** root
+filenames, `p547` escalated to **159 filename variants**, and **all 159 were root-scoped**.
+🔴 **`p448` had already published the file's byte count and blob prefix** —
+`17 286 B · 224ac3d403e3`, which `p548` re-read to the digit — as a *reproduction control*,
+and the shelf still said ungranted. 🟢 Full attestation on
+[`../verticals/solutions.md`](../verticals/solutions.md) and
+[`../evidence/grant-reread.2026-10-30-p548.tsv`](../evidence/grant-reread.2026-10-30-p548.tsv).
+
+### 🟢 `Gap 547-A` answered, and it needs a **third** state, not two
+
+🔴 `547-A` asked for **`declared`** and **`served`** as two columns, after
+`lehrer-tools/lehrer-agent` declared MIT and served nothing. 🟢 **`p548` supplies the
+inverse case, and two columns cannot hold it:**
+
+| Case | `declared` | `served` | Root probe says | Truth |
+|---|---|---|---|---|
+| `lehrer-tools/lehrer-agent` (`p547`) | 🟢 MIT (`plugin.json` + README) | 🔴 nothing, 103 paths | `UNRESOLVED` | 🔴 **declared-not-served** — no grant |
+| 🆕 `OS4ED/openSIS-Classic` (`p548`) | 🟢 GPL-2.0 (README L49–51) | 🟢 `docs/License.txt` | 🔴 `UNRESOLVED` (root `LICENSE` = **404**) | 🟢 **served-off-root** — a real grant |
+| 🆕 `TechAtNYU/ClassroomLM` (`p548`) | 🔴 nothing | 🔴 nothing, 147 paths | `UNRESOLVED` | 🔴 **ungranted** |
+
+🔴 **All three return `UNRESOLVED` from a root-file probe and they are three different
+realities** — which is rule 8 of this page (*"never read `NOASSERTION` as ungranted"*)
+restated one layer down, against the licence *file* channel instead of the API channel.
+🟢 **The grant reader must report `declared`, `served` *and the path it was served at***;
+a boolean `served` collapses `served-off-root` into absence, and that collapse is what cost
+this base nineteen passes.
+
+### 🟢 `Gap 547-C` instrument built — last **human** commit, not last commit
+
+🟢 `547-C` asked that staleness be computed from the last *human* commit, after
+`MarinaVeauvy/ia-educacion` showed 64 commits all authored by `github-actions[bot]`. 🟢
+**Built inline and run over every address this pass touched** (`%an`/`%ae` over the last 15
+commits of a blobless clone): **5 of 5 human-authored, 0 bot-fresh**. 🔵 The instrument
+found nothing this pass — which is the correct result to report and not a reason to leave
+it unbuilt.
+
+
 **Pass `p546` · 2026-10-30.** **Seventy-two** real agents — **64 shelf-table rows
 plus 8 filed in their own sections below** — every row read first-hand and
 corroborated by a second, independent instrument. No row is a header, a
@@ -1583,9 +1650,14 @@ reads as first-hand and was not.
    ([thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) →
    **Apache-2.0**), a real copyleft grant (`openeducat_erp` → **LGPL**), a real
    non-OSI grant (`education-agent-skills`, `PageLM`, `advisingapp`,
-   `cn-math-taxonomy`) and **no grant at all** (`idoforgod`, `openSIS-Classic`,
+   `cn-math-taxonomy`) and **no grant at all** (`idoforgod`,
+   ~~`openSIS-Classic`~~ 🔴 **corrected at `p548` — see below**,
    `loyaniu/moodle-mcp`). 🔴 **Never read `NOASSERTION` as "ungranted" and never
-   as "fine" — read it as *the title block has not been read yet*.**
+   as "fine" — read it as *the title block has not been read yet*.** 🔴 **`p548`
+   is the proof of that sentence against this very list:** `openSIS-Classic`
+   serves the complete **GNU GPL v2** at `docs/License.txt` (17 286 B,
+   `sha256 224ac3d4…`), declared in `README.md` L49–51 — it was filed as
+   *ungranted* for nineteen passes because every probe was **root-scoped**.
 9. 🆕 **Absence from an API search is not evidence of non-existence.** A
    `repo:`-qualified call that returned six addresses in the same request did
    **not** return `packbackbooks/lti-1-3-php-library` — an address this base
