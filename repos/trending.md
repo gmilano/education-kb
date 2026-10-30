@@ -4,6 +4,162 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p544` — `2026-10-30` — **🟢 AN INDEPENDENT RE-IMPLEMENTATION REPRODUCED THIS BASE'S LICENCE BYTES ON 3 OF 3 AND ITS `sha256` DIGESTS ON 2 OF 2 — AFTER FIRST WALKING STRAIGHT INTO `Gap 542-A`'s DOCUMENTED OFF-BY-ONE TRAP. 🔴 `Gap 543-A` NEEDED NO WORK: `probe-grant.sh` HAS RESOLVED THE DEFAULT BRANCH SINCE `p509` AND THE REGISTER DID NOT KNOW IT — ALL SEVEN OF ITS CLAIMS REPRODUCE. 🟢 `543-B` CLOSED **UNBUILDABLE ON A MEASUREMENT**: THE GIT CHANNEL RETURNS **200 AND NO `Location` HEADER AT ALL** FOR A RENAMED REPO. 🟢 `543-C` DELIVERED FOR ARCHIVE STATE AND MEASURED **NOT CLOSED** FOR STALENESS. 🔴 AND `repos/foundations.md`'s COUNT IS **NOT DERIVABLE** — 175 ADDRESSES AGAINST A CLAIMED SEVENTY-TWO.**
+
+🔵 **The supply narrative, the four language legs and the origin-axis correction
+are on [`../agents/trending.md`](../agents/trending.md#-p544--2026-10-30).** This
+entry carries the instrument record.
+
+### 🔴 Gate posture, stated first and without softening
+
+🔴 **`make hooks` was DENIED (`Code from External`), and so was
+[`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) itself.** Eleven denials
+in twelve passes. 🔵 **Nothing in `p544` is gate-attested.** Every figure below is
+an independent re-implementation of the contract, run inline. 🟢 That is the
+documented fallback this base already uses — `p455` re-implemented five contracts
+the same way — and this pass it produced a result worth more than the
+attestation would have been.
+
+### 🟢 The byte control — the re-implementation was wrong first, and the way it was wrong is the point
+
+🔴 **Low by exactly 1 byte on 3 of 3 repos carrying a recorded figure:**
+
+| Address | re-implementation, first attempt | this base's record | delta |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | `11 407` | **`11 408`** (`p543`) | 🔴 −1 |
+| `exelearning/exelearning` | `34 522` | **`34 523`** (`p413`/`p417`) | 🔴 −1 |
+| `THU-MAIC/OpenMAIC` | `1 064` | **`1 065`** (`p380`) | 🔴 −1 |
+
+🔵 **This is `Gap 542-A`'s trap, verbatim: `$(curl ...)` strips the trailing
+newline**, so any byte count taken through command substitution is one short.
+`p543` wrote the control down after hitting it; `p544` hit it again anyway. 🟢 **A
+control that catches an independent implementer on first contact is doing exactly
+what a control is for** — and the rule is worth restating in the imperative:
+**write the payload to a file and count the file; never count a command
+substitution.**
+
+🟢 **Counted correctly, the agreement is exact and reaches the digest:**
+
+| Address | ref | `p544` bytes | `p544` `sha256₁₂` | base record | verdict |
+|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` | **`11 408`** | `cd2f54e1e506` | `11 408` | 🟢 **AGREE** |
+| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | `main` | **`34 523`** | `0d96a4ff68ad` | `34 523` · `0d96a4ff68ad` | 🟢 **AGREE — bytes and digest** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `main` | **`1 065`** | `ba2525637432` | `1 065` · `ba2525637432` | 🟢 **AGREE — bytes and digest** |
+
+🔵 **A `sha256` is content-addressed: two digests matching across 164 passes and
+an independent implementation prove the payloads are identical with nothing left
+to argue about.** It is the strongest corroboration this base has of its own
+licence reads.
+[`../evidence/byte-control.2026-10-30-p544.tsv`](../evidence/byte-control.2026-10-30-p544.tsv).
+
+### 🟢 A fork-lineage grant result the control produced for free
+
+| Address | ref · HEAD | grant | bytes · `sha256₁₂` | maintenance |
+|---|---|---|---|---|
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | `master` · `3a192de99f37` | 🟢 Apache-2.0 (`LICENSE`) | `11 343` · `78b49eeaddbf` | 🔴 last commit **2020-06-03**; **the same HEAD `p390` recorded** |
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | `master` · `66d8e4e4b9bd` | 🟢 Apache-2.0 (`LICENSE.md`) | `11 343` · `78b49eeaddbf` | 🟢 **v6.4.4, 2026-09-23** |
+
+🟢 **Byte- and digest-identical: the Apache-2.0 grant is inherited unchanged
+across the fork**, under a *different filename* (`LICENSE` vs `LICENSE.md`) —
+which is why the probe's filename ladder matters and a single-filename probe would
+have read the fork as ungranted. 🔴 **Five years of divergence in maintenance, one
+grant.** 🔵 Neither is archived. This is why `Pattern AF` dates a component
+*after* proving lineage, and why the **fork** and not the spec body's original is
+the row on [`../repos/foundations.md`](../repos/foundations.md). 🔴 The pair is a
+registered alias/fork relation (`397-F`); **no new row is filed** — recording a
+second address for a held grant would be a duplicate, not supply.
+
+### 🟢 `Gap 543-A` — the instrument already did it, since `p509`
+
+🔴 **`543-A` prescribed: "resolve the default branch, never enumerate it."**
+[`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) line **117** runs
+`git ls-remote --symref`, and line **29** states the contract in words: *"The
+default branch is RESOLVED (git ls-remote --symref), never assumed."* 🔵 The
+capability predates the gap by 35 passes.
+
+🟢 **All seven of `543-A`'s branch claims re-resolved independently, and all seven
+AGREE:**
+
+| Address | resolved default ref | HEAD | `543-A` claimed | |
+|---|---|---|---|---|
+| `QingdaoU/Judger` | `newnew` | `d19a6dc192eb` | `newnew` | 🟢 |
+| `francoisjacquet/rosariosis` | `mobile` | `25d568f6edca` | `mobile` | 🟢 |
+| `portabilis/i-educar` | `2.12` | `e0c53f5a305a` | `2.12` | 🟢 |
+| `ls1intum/Artemis` | `develop` | `4e3b6890d483` | `develop` | 🟢 |
+| `frappe/flow_client` | `develop` | `4a3189b6cbef` | `develop` | 🟢 |
+| `krayin/laravel-crm` | `2.2` | `5eecae04634a` | `2.2` | 🟢 |
+| `cortezaproject/corteza` | `2026.9.x` | `229ac38e0ac1` | `2026.9.x` | 🟢 |
+
+🟢 **`Gap 542-B` closes as *wrong remedy*, exactly as `543-A` argued** — 19 % of
+the shelf has a non-`main` default and five sit outside `main|master|dev`, so
+enumeration cannot work. 🔴 **But `543-A`'s own prescription was redundant**, and
+that is `Gap 544-D`: the register restates solved work, now three times.
+[`../evidence/default-ref-resolution.2026-10-30-p544.tsv`](../evidence/default-ref-resolution.2026-10-30-p544.tsv).
+
+### 🟢 `Gap 543-B` — unbuildable, and the measurement is stronger than the gap's reasoning
+
+🔵 `543-B` blamed header access. 🟢 **Measured: there is no header.** With
+redirects disabled, `git ls-remote` against a **known-renamed** address returns:
+
+```
+=> Send header: GET /<old-owner>/<old-name>/info/refs?service=git-upload-pack HTTP/1.1
+<= Recv header: HTTP/1.1 200 OK
+```
+
+followed by the **renamed repository's full ref list** — and **no `Location`
+header is emitted at any point in the exchange**. 🔴 The git smart-HTTP channel
+serves the old address as if it were canonical. 🔵 **So the rename is not
+invisible because a header is unreadable; it is invisible because no redirect
+occurs.** An unrecorded rename cannot be discovered on this channel by any
+instrument, and a successor should not spend a pass trying.
+🟢 **What remains detectable is the *pair*** — identical refs at two addresses,
+which [`../ingest/alias-sweep.sh`](../ingest/alias-sweep.sh) already finds.
+
+### 🟢 `Gap 543-C` — delivered for archive state, measured **not closed** for staleness
+
+🟢 Archive state reads over `p534`'s channel (`github.com` HTML is 403 to `curl`,
+**200 through WebFetch**). Four rows read; **none archived**:
+
+| Address | archived | stars | forks | licence (sidebar) |
+|---|---|---|---|---|
+| `fairyofmiracle/edu_course_agent` | 🟢 no | 0 | 0 | 🔴 none shown |
+| `1EdTech/lti-1-3-php-library` | 🟢 no | 124 | 109 | Apache-2.0 |
+| `exelearning/exelearning` | 🟢 no | 153 | 36 | AGPL-3.0 |
+| `HKUDS/DeepTutor` | 🟢 no | **50.5k** *(rounded)* | 6.2k | Apache-2.0 |
+
+🔴 **A sample of four, labelled as a sample** — 139 shelf addresses at one
+WebFetch each is a pass of its own. 🔴 **And the channel does not serve a
+last-commit date**: "not shown" on all four. 🔵 **Archive state and staleness are
+therefore different questions on different channels** — archive state is a
+WebFetch field; staleness still needs `p392`'s blobless shallow clone. `543-C` is
+**closed for archive state and explicitly open for staleness** (`Gap 544-C`).
+[`../evidence/archive-state.2026-10-30-p544.tsv`](../evidence/archive-state.2026-10-30-p544.tsv).
+
+### 🔴 `Gap 543-E` — the derivation works for one figure and **cannot** work for the other
+
+🟢 **Built: [`../ingest/derive-counts.sh`](../ingest/derive-counts.sh).** It bounds
+the shelf table by its own heading and counts data rows.
+
+- 🟢 **`agents/top.md`: derived `64`, heading claims `64` — GREEN.** The figure is
+  derivable and currently correct.
+- 🔴 **`repos/foundations.md`: `175` distinct addresses in table rows against a
+  claimed seventy-two.** 🔵 **Not a discrepancy to fix by editing a number** —
+  several of this file's sections are **censuses** (the Moodle MCP census alone
+  covers 222 addresses) whose rows were never shelf rows.
+
+🔴 **So the durable fix `543-E` asked for is not a counting gate.** A gate over
+these tables would have to **guess** which rows are shelf rows, and an inferred
+count is precisely the *"inference becomes wrong data"* failure this base exists
+to avoid. 🟢 **The script therefore abstains loudly rather than guessing** — the
+one behaviour that keeps a wrong number off the page. The real remedy is a
+**row-level disposition marker**, registered as `Gap 544-E`.
+
+🔵 **`agents/top.md`'s second figure — "72 with the eight filed in their own
+sections above" — is not derivable either**, because those eight rows live in
+per-pass prose sections rather than in the shelf table. It is maintained by hand
+and is correct as of this pass: **64 + 8 = 72, unchanged, because `p544` shelved
+nothing.**
+
 ## 🆕 `p543` — `2026-10-30` — **🟢 `542-A` AND `542-H` FIXED IN THE INSTRUMENT, AND THE FIXED PROBE REPRODUCES ALL FOUR OF `p542`'s HAND-READ BYTE FIGURES EXACTLY (1 122 / 18 649 / 47 / 1 076). 🔴 WHILE BUILDING IT, THE PATCH'S OWN FIRST VERSION WAS WRONG BY ONE BYTE AND BY ONE ENCODING — `$(...)` STRIPS TRAILING NEWLINES AND `${#}` COUNTS CHARACTERS — WHICH IS WHY THE CONTROLS EXIST. 🔴 **`Gap 542-B`'s PROPOSED REMEDY IS MEASURABLY WRONG: 19 % OF THE SHELF HAS A NON-`main` DEFAULT AND FIVE REPOS SIT OUTSIDE `main|master|dev`.** 🟢 `542-C` DELIVERED FOR ALIAS PAIRS: 139/139 SHELF ADDRESSES LIVE, ZERO DEAD, ONE PAIR — THE KNOWN ONE.**
 
 🔵 **The supply narrative and the four language legs are on

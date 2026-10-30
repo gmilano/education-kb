@@ -4,6 +4,265 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p544` — `2026-10-30` — **🔴 `p543`'s `ru`-ZERO IS A QUERY-LANGUAGE ARTEFACT, NOT AN ABSENCE: THE **UKRAINIAN** LEG RETURNED A **RUSSIAN-ORIGIN** EDUCATION AGENT, SO QUERY-LANGUAGE AND ARTEFACT-ORIGIN ARE **INDEPENDENT AXES** AND TWELVE LEGS OF "CORPUS" REASONING CONFLATED THEM. 🔴 `p543`'s SURVIVING PREDICTOR IS **FALSIFIED**: `pl` AND `th` BOTH INDEX NAMED NATIONAL CURRICULA AND BOTH RETURNED **ZERO**. 🟢 THE GRANT GATE REPLICATES IN A SECOND ORIGIN — **4 DOMESTIC AGENTS, 2 ORIGINS, 0 LICENCES** — AND `Gap 543-D`'s REGISTER IS NOW PUBLISHED. 🔴 `Gap 543-A` WAS **ALREADY CLOSED IN THE INSTRUMENT SINCE `p509`** AND THE REGISTER DID NOT KNOW IT. 🔴 THE FOUR-REGION SWEEP RETURNED **0 NEW CLAIMS**, A SIXTH CONSECUTIVE SATURATION, AND THE MAINSTREAM SUPPLY CHANNEL RESTATED **19 OF 19**.**
+
+🔵 **Full narrative, the per-leg table and the register are on
+[`../agents/top.md`](../agents/top.md#-p544--query-language-and-artefact-origin-are-independent-axes)
+and [`../intel/measured-unusable.md`](../intel/measured-unusable.md).** This
+entry carries the dated trend record.
+
+### 🔴 What moved this week — and the honest answer is **the interpretation, not the shelf**
+
+🔴 **`p544` shelved zero agents, and that is the finding rather than a shortfall.**
+Four untried language legs and GitHub's own `ai-tutor` topic listing produced
+exactly **one** artefact this base had never recorded, and it carries **no
+licence**. The shelf stands at **64 table rows + 8 filed in their own sections =
+72**, unchanged. 🔵 **Fewer real rows beat padding**, and a pass that adds
+nothing to the shelf while correcting two carried conclusions has still moved
+the base.
+
+### 🔴 The result that reverses `p543` — a Ukrainian query returned a Russian artefact
+
+🔴 **`p543` concluded, in its own headline, that `ru` "RETURNED **ZERO**, BECAUSE
+WHAT IT PUBLISHES IS LOCALISED RANKINGS OF THE ENGLISH CORPUS."** 🟢 **`p544`'s
+`uk` leg returned [`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent)
+— and it is Russian.** Read first-hand: the README and UI are in **Russian**, the
+LLM gateways are **Cloud.ru** and **GigaSchool** (both Russian services), and the
+artefact's output is Russian **ДПО** professional-development paperwork. 196
+commits, **0★, 0 forks**, `main` @ `c425a51c2512`.
+
+🔴 **So Russian domestic education supply exists, and `p543`'s Russian-language
+query did not surface it.** The zero was a property of **the query**, not of the
+corpus and not of the country. 🔵 **This breaks the axis `p542` and `p543` were
+both built on.** Both passes attributed leg yield to *"whether the language
+indexes a distinct publishing corpus"* — a claim about the **artefact's origin**
+measured with an instrument that only sees the **query's language**. Those are
+two variables, and twelve legs' worth of conclusions treated them as one.
+
+🟢 **The sound reformulation, stated so it can be disconfirmed:** a leg's yield
+measures **which index the query reaches**, not what a country produces. An
+origin claim therefore requires reading the artefact — language of README, stack,
+hosting, the institution it names — and **never the leg it arrived on**. The
+register at [`../intel/measured-unusable.md`](../intel/measured-unusable.md)
+records origin that way, with the inference named as an inference.
+
+### 🔴 `p543`'s predictor, falsified on its own terms
+
+🔵 `p543` registered a specific survivor: *"the predictor that survives all twelve
+legs measured so far is a **named national institution or curriculum**."* 🟢 **The
+prediction was registered before measurement this pass** and the legs were chosen
+to test it.
+
+| Leg | Named national institution / curriculum? | Predicted | Measured | What came back |
+|---|---|---|---|---|
+| **`pl`** Polish | 🟢 Yes — *podstawa programowa*, **MEN** | **YIELD** | 🔴 **ABSENT** | Localisations and rankings of the English corpus; **no Polish-origin education artefact** |
+| **`th`** Thai | 🟢 Yes — **OBEC** national curriculum | **YIELD** | 🔴 **ABSENT** | Chinese and English repos, plus Thai-language DEV.to digests **of English repos** |
+| **`uk`** Ukrainian | 🟢 Yes — *Нова українська школа* | **YIELD** | 🟢 **YIELD** | 🔴 **One artefact — and Russian, not Ukrainian.** `nus.org.ua` appeared and published *course announcements*, not code |
+| **`nl`** Dutch | 🔴 No named national AI-education programme | **ABSENT** | 🟢 **ABSENT** | Only rows already held (`Zenglian990/AI_Tutor_Release`, `Selleo/mentingo`) |
+
+🔴 **Two of four predictions failed, and they failed in the direction that kills
+the predictor:** Poland and Thailand each index a named national curriculum and
+each returned **zero**. 🔵 A predictor that is present in four legs and predicts
+yield in two of them is not a predictor. **`p543`'s survivor does not survive
+`p544`.**
+
+🟡 **What is left standing, offered as a hypothesis and not as a finding:** every
+domestic artefact this base has found on this axis automates a **document the
+state obliges someone to produce** — TÜBİTAK **2209-A** proposal forms (`p543`),
+a Russian **ДПО** programme with its `наказ` number and labour-function code
+(`p544`), BTK **514**. 🔵 None of them automates a *curriculum*; they automate a
+**form**. 🔴 **This is one step from the error just corrected** — it is a claim
+about artefact origin built on four artefacts — so it is written here as the next
+thing to **test**, with the test named: a leg whose country publishes a
+curriculum but imposes no comparable mandatory form should return zero.
+
+### 🔴 The grant gate replicates — and it is now the strongest regularity on this axis
+
+🟢 **`p543` found 3 Vietnamese education agents and 0 licences. `p544` found 1
+Russian education agent and 0 licences.** Re-probed first-hand this pass at the
+**resolved** default ref, 10 filenames each:
+
+| Address | Origin | Head @ `p544` | Grant |
+|---|---|---|---|
+| [`MaiQuangPhuoc/edu_agents`](https://github.com/MaiQuangPhuoc/edu_agents) | APAC (Vietnam) | `main` · `03e43219c66a` | 🔴 `UNRESOLVED` |
+| [`dungptt-dng/smart-ict-classroom`](https://github.com/dungptt-dng/smart-ict-classroom) | APAC (Vietnam) | `main` · `a9c56b3b7496` | 🔴 `UNRESOLVED` |
+| [`minhdevtry/AI-Teacher-Assistant-Agent`](https://github.com/minhdevtry/AI-Teacher-Assistant-Agent) | APAC (Vietnam) | `main` · `f3bcc636da1d` | 🔴 `UNRESOLVED` |
+| 🆕 [`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent) | EMEA (Russia) | `main` · `c425a51c2512` | 🔴 `UNRESOLVED` |
+
+🔴 **Four artefacts, two unrelated origins, zero grants — so the class is stable
+and not a Vietnamese peculiarity.** 🟢 **The engagement consequence, stated
+plainly: non-English domestic education supply is real and is not available to
+build on.** Counting artefacts without reading grants overstates every regional
+supply claim this base makes. `Gap 543-D` asked for a published home for the
+class and it now has one:
+[`../intel/measured-unusable.md`](../intel/measured-unusable.md).
+
+### 🔴 The mainstream channel is exhausted: **19 of 19 restated**
+
+🟢 GitHub's own [`ai-tutor` topic listing](https://github.com/topics/ai-tutor)
+read through WebFetch (**822 repositories**, first 20 by stars) is a cleaner
+instrument than the trend digests `p542` and `p543` leant on — it is GitHub's own
+page, with star counts, not a third party's summary. 🔴 **Every one of its 20 rows
+except none was already on this base:** 19 of the 20 addresses are held, and the
+twentieth is `xch1986/AI-Tutor`, also held. **Zero new supply.**
+
+🔵 This replicates `p541`'s *9 of 9* and `p542`'s *English restated 9 of 9* on a
+**different and better channel**, which is what makes it worth recording rather
+than a fourth restatement: the saturation is a property of the **supply**, not of
+the digests.
+
+🟢 **One figure did move, and it is large.** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+reads **50.5k★ · 6.2k forks** on GitHub's sidebar against this base's precise
+**49 850** from `p537` — and README names **v1.7.0, 2026.10.28**. 🔴 The sidebar
+figure is **rounded** and must not be written as a precise count; recorded as
+`50.5k (rounded, sidebar)` beside `p537`'s exact read.
+
+### 🟢 `Gap 543-A` — closed, and the closure is that it was **never open**
+
+🔴 **`Gap 543-A` asked a successor to "resolve the default branch, never
+enumerate it". [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) has
+resolved it since `p509`** — line 117 runs `git ls-remote --symref`, and line 29
+documents the contract in words: *"The default branch is RESOLVED (git ls-remote
+--symref), never assumed."* 🔵 **The gap asked for capability the base already
+had.**
+
+🟢 **Verified rather than asserted.** All seven of `543-A`'s branch claims were
+re-resolved first-hand this pass, independently of the repo's script, and **all
+seven AGREE** ([`../evidence/default-ref-resolution.2026-10-30-p544.tsv`](../evidence/default-ref-resolution.2026-10-30-p544.tsv)):
+`QingdaoU/Judger`→`newnew`, `francoisjacquet/rosariosis`→`mobile`,
+`portabilis/i-educar`→`2.12`, `ls1intum/Artemis`→`develop`,
+`frappe/flow_client`→`develop`, `krayin/laravel-crm`→`2.2`,
+`cortezaproject/corteza`→`2026.9.x`. 🔵 So `543-A`'s **measurement** was sound and
+its **prescription** was redundant.
+
+🔴 **That is a third instance of one defect class, and it is now the class worth
+naming: the register restates solved work.** `543-E` is a count that restates
+itself stale; `543-F` is an analysis restated with its conclusion reversed;
+`543-A` is a **gap restating a capability**. 🔵 `p542` noted
+`gate-restated-presence` catches a restated *address*. It catches neither a
+restated analysis nor a restated gap — and a register that re-opens closed work
+costs a successor a whole pass.
+
+### 🟢 `Gap 543-B` — closed **unbuildable**, for a stronger reason than it recorded
+
+🔵 `543-B` said naming the new address of a renamed repo *"needs the redirect
+header, and `github.com` is 403 to `curl` while `WebFetch` returns a rendered
+page, not headers."* 🟢 **Measured this pass, the reason is stronger: there is no
+redirect to read.** A `git -c http.followRedirects=false ls-remote` against a
+known-renamed address returns **`HTTP/1.1 200 OK`** and serves the renamed
+repository's full ref list directly — **no `Location` header is emitted at any
+point**. 🔴 So the obstacle is not a header this environment cannot see; the git
+smart-HTTP channel **silently serves the old address as if it were canonical**.
+🔵 **Recorded as unworkable on this channel, with the measurement, so no
+successor spends a pass looking for a header that does not exist.**
+
+### 🟢 `Gap 543-C` — archive state is now a field, on a four-row sample with its limit stated
+
+🟢 Archive state reads cleanly over `p534`'s WebFetch channel and is filed for
+four rows ([`../evidence/archive-state.2026-10-30-p544.tsv`](../evidence/archive-state.2026-10-30-p544.tsv));
+**none of the four is archived.** 🔴 **It is a sample, not a sweep, and is
+labelled as one** — 139 shelf addresses at one WebFetch each is not affordable in
+a pass.
+
+🔴 **And the channel has a limit worth more than the sample:** it serves archive
+state, stars, forks and licence, but **not the last-commit date** — "not shown"
+on all four reads. 🔵 So **archive state and staleness are different questions on
+different channels**: archive state is a WebFetch read, staleness still needs
+`p392`'s blobless shallow clone. `543-C` is closed for archive state and
+**explicitly not closed for staleness**.
+
+### 🟢 An independent re-implementation reproduced this base's bytes **and digests** — after falling into `p543`'s own trap
+
+🔴 **`make hooks` and the repo's own scripts were DENIED again this pass**
+(`Code from External`), so every figure here was re-implemented from scratch
+rather than gate-attested. 🟢 **That accident produced the most reassuring result
+of the pass.**
+
+🔴 **The re-implementation was low by exactly 1 byte on 3 of 3 repos carrying a
+recorded figure** — DeepTutor `11407` vs `11 408`, exelearning `34522` vs
+`34 523`, OpenMAIC `1064` vs `1065`. 🔵 **This is precisely `Gap 542-A`'s
+documented trap:** `$(curl ...)` strips the trailing newline, so a byte count
+taken through command substitution is always one short. `p543` wrote that control
+down; `p544` walked into it anyway, which is the strongest possible argument that
+the control earns its place.
+
+🟢 **Avoided — writing the payload to a file and counting the file — the agreement
+is exact, and at the digest level:**
+
+| Address | `p544` read | This base's recorded figure | Verdict |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `11 408` B · `sha256₁₂ cd2f54e1e506` | `11 408` B (`p543`) | 🟢 **AGREE** |
+| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | `34 523` B · `sha256₁₂ 0d96a4ff68ad` | `34 523` B · `0d96a4ff68ad` (`p413`/`p417`) | 🟢 **AGREE on bytes AND digest** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `1 065` B · `sha256₁₂ ba2525637432` | `1 065` B · `ba2525637432` (`p380`) | 🟢 **AGREE on bytes AND digest** |
+
+🔵 **Two content-addressed digests matching across 164 passes and an independent
+implementation is the strongest corroboration this base has of its own licence
+reads.** [`../evidence/byte-control.2026-10-30-p544.tsv`](../evidence/byte-control.2026-10-30-p544.tsv).
+
+🟢 **A new read the control threw up for free:**
+[`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library)
+(`11 343` B, `sha256₁₂ 78b49eeaddbf`) and its maintained fork
+[`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library)
+(`11 343` B, `sha256₁₂ 78b49eeaddbf`) are **byte- and digest-identical** — the
+Apache-2.0 grant is **inherited unchanged across the fork**. 🔴 The upstream's
+HEAD is still `3a192de99f37`, the same sha `p390` recorded, with a last commit of
+**2020-06-03**; the fork ships **v6.4.4 (2026-09-23)**. 🔵 Neither is archived.
+**Identical grant, five years of divergence in maintenance** — which is why
+`Pattern AF` dates a component after proving its lineage, and why the fork and not
+the spec body's original is the one on [`../repos/foundations.md`](../repos/foundations.md).
+
+### 🔴 The four-region sweep — run in the mandated form, **0 new claims**, sixth consecutive saturation
+
+🟢 Run globally and once per region, as prescribed. 🔴 **Every claim returned is
+already on this base**, named here so the result is checkable rather than
+asserted: Regulation **(EU) 2026/1744** with its `2 Dec 2027` / `2 Aug 2026`
+split, **TEQSA** institutional action plans, Korea's **AI Basic Act** (22 Jan
+2026), **Vietnam**'s education-as-high-risk decision, UNESCO **IESALC**'s *87 %
+using / 26 % with a strategy* across 200 institutions in 19 countries, the
+UNESCO **LAC Observatory** (14 Apr 2026), the **K-12 AI Literacy and Readiness
+Act**, the student-authored **STUDENTS FIRST Act**, New York's **A 9190**, and the
+four dual-mandate states (Maryland, Idaho, Oklahoma, Virginia).
+
+🔴 **The EMEA demand leg is a measured blank for the sixth consecutive pass**, and
+the LATAM **regulation** sub-leg remains the genuine void `p543` named: no
+education-specific national rule for Brazil or Mexico surfaced. 🔵 **Stated
+explicitly so silence is not read as coverage.** Per-region detail on
+[`../intel/market.md`](../intel/market.md#opportunities-by-region).
+
+### 🟢 `Gap 544-A` … `Gap 544-F` registered
+
+- **`544-A`** — **the origin field on every row sourced from a language leg needs
+  re-reading.** `p544` proved a leg's language does not imply an artefact's
+  origin, and `p541`/`p542`/`p543` shelved rows off `es`, `pt`, `fr`, `id`, `zh`,
+  `vi`, `tr` and `it` legs. **Any row whose region was taken from the leg rather
+  than read from the artefact is unproven.** Census the shelf's `Region (origin)`
+  column for leg-derived values.
+- **`544-B`** — **the form-not-curriculum hypothesis is untested and must not be
+  cited until it is.** Four artefacts suggest domestic supply automates a
+  state-mandated *form*. The test is named above; run it before the claim appears
+  on a curated page.
+- **`544-C`** — **`Gap 543-C` is closed for archive state and open for
+  staleness**, on a channel measurement: WebFetch does not serve a last-commit
+  date. A staleness field needs `p392`'s blobless clone, and 139 of them is a
+  pass of its own.
+- **`544-D`** — **the register restates solved work, three times now
+  (`543-A`, `543-E`, `543-F`), and no gate catches it.** Before registering a
+  gap, `grep -rF` the prescription against `ingest/` and the standing gates.
+  `p416`'s standing suggestion already says this for shelves; it is not applied
+  to the register itself.
+- **`544-E`** — **`repos/foundations.md`'s count is not derivable and a counting
+  gate would have to guess.** 175 distinct addresses sit in its table rows
+  against a claimed seventy-two, because several sections are censuses. **Mark
+  each row's disposition, then derive.** See
+  [`../ingest/derive-counts.sh`](../ingest/derive-counts.sh), which reports the
+  derivable figure and abstains loudly on this one.
+- **`544-F`** — **`p544` has no gate attestation, for the eleventh time in
+  twelve passes.** `make hooks` and `ingest/probe-grant.sh` were both refused
+  `Code from External`. Every figure here is an independent re-implementation,
+  and three of them agree exactly with the base — but **agreement is not
+  attestation**, and a base whose gates have not run in twelve passes cannot
+  call itself gated.
+
 ## 🆕 `p543` — `2026-10-30` — **🔴 `p542`'s COSMOLOGY IS FALSIFIED BY RUSSIAN: A DISTINCT PUBLISHING CORPUS IS NECESSARY AND NOT SUFFICIENT — `ru` INDEXES HABR/DTF/thecode.media AND RETURNED **ZERO**, BECAUSE WHAT IT PUBLISHES IS LOCALISED RANKINGS OF THE ENGLISH CORPUS. 🟢 THE PREDICTOR THAT SURVIVES TWELVE LEGS IS A **NAMED NATIONAL INSTITUTION OR CURRICULUM** (TÜBİTAK 2209-A, BTK 514, GDPT 2018, BNCC, ENEM). 🔴 AND THE AXIS HAS A SECOND GATE `p542`'s METRIC COULD NOT SEE: THE **GRANT** — THE VIETNAMESE LEG FOUND **3 DOMESTIC EDUCATION AGENTS AND 0 LICENCES ON THREE CHANNELS**. 🟢 ONE AGENT SHELVED (71→72), THREE FOUNDATIONS FILED, `542-A`/`542-H` FIXED IN THE INSTRUMENT, `542-C` DELIVERED IN THE HALF THE ENVIRONMENT ALLOWS, AND **`542-B`'s OWN PROPOSED REMEDY MEASURED INSUFFICIENT ON 19 % OF THE SHELF**.**
 
 🔵 **Full narrative, the per-leg table, the shelved row and the five

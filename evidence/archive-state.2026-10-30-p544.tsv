@@ -1,0 +1,9 @@
+# p544 · 2026-10-30 · Gap 543-C. ARCHIVE STATE added to the row contract, read over WebFetch on github.com HTML
+# (p534's channel: the HTML is 403 to curl and 200 through WebFetch). A FOUR-ROW SAMPLE, not a sweep -- stated as a sample.
+# CHANNEL LIMIT, measured: this channel serves archive state, stars, forks and licence, but NOT the last-commit DATE.
+# Staleness therefore still needs a blobless shallow clone (p392's method) and is NOT closed by this read.
+slug	archived	archive_wording	stars	forks	licence_sidebar	last_commit_date_available
+fairyofmiracle/edu_course_agent	NO	no banner present	0	0	none shown	NO
+1EdTech/lti-1-3-php-library	NO	no banner present	124	109	Apache-2.0	NO
+exelearning/exelearning	NO	no banner present	153	36	AGPL-3.0	NO
+HKUDS/DeepTutor	NO	no banner present	50.5k (rounded)	6.2k	Apache-2.0	NO

@@ -6,10 +6,38 @@ updated: 2026-10-30
 
 # Foundational Education Repos
 
-**Pass `p543` · 2026-10-30.** Load-bearing systems an education engagement is
+**Pass `p544` · 2026-10-30.** Load-bearing systems an education engagement is
 likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms, standards and
 toolkits the agents must live beside.
+
+🔴 **`p544` filed no new row here, and the reason is worth more than a row would
+have been.** The four-region sweep and four language legs returned **no
+foundational system this page does not already hold**. 🟢 **The one new address
+measured — [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library)
+— was deliberately NOT filed**, and the measurement says why: it is Apache-2.0 at
+**`11 343` B, `sha256₁₂ 78b49eeaddbf`**, which is **byte- and digest-identical**
+to [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library),
+already on this page. 🔵 **The grant is inherited unchanged across the fork — under
+a different filename (`LICENSE` vs `LICENSE.md`), which is exactly why the probe
+walks a filename ladder and a single-filename probe would have read the fork as
+ungranted.** 🔴 The spec body's original is frozen at HEAD `3a192de99f37`, last
+commit **2020-06-03** — the same HEAD `p390` recorded — while the fork ships
+**v6.4.4 (2026-09-23)**. Neither is archived. 🟢 **Identical grant, five years of
+divergence in maintenance: the maintained fork is the right row and a second
+address for a held grant is a duplicate, not supply** (registered alias relation
+`397-F`).
+
+🔴 **`Gap 534-E` is now measured, and it cannot be closed by editing a number.**
+[`../ingest/derive-counts.sh`](../ingest/derive-counts.sh) finds **175 distinct
+GitHub addresses in this page's table rows** against the seventy-two claimed
+below. 🔵 **That is not a discrepancy to fix — it is the two quantities this
+header already warns about**, since several sections here are censuses whose rows
+were never load-bearing-system rows. 🟢 **So the script abstains rather than
+guessing**, because an inferred count is precisely the *"inference becomes wrong
+data"* failure this base exists to avoid. 🔴 **The remedy is a row-level
+disposition marker, registered as `Gap 544-E`** — and until it exists, this
+header's standing instruction holds: **no total on this page should be quoted.**
 
 🔴 **The count in this sentence was stale and is now stated as arithmetic rather
 than asserted.** This header read *"Pass `p532` · **Fifty-eight**"* while `p533`

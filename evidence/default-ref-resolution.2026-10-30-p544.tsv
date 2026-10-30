@@ -1,0 +1,11 @@
+# p544 · 2026-10-30 · Gap 543-A. Default ref RESOLVED via `git ls-remote --symref <url> HEAD`, not enumerated.
+# FINDING: this capability already existed at ingest/probe-grant.sh:117 (documented line 29) since p509.
+# Gap 543-A asked a successor to build what the base already had. All seven of its branch claims reproduce exactly.
+repo	live	resolved_default_ref	head_sha	gap543A_claimed	agrees
+QingdaoU/Judger	LIVE	newnew	d19a6dc192eb	newnew	AGREE
+francoisjacquet/rosariosis	LIVE	mobile	25d568f6edca	mobile	AGREE
+portabilis/i-educar	LIVE	2.12	e0c53f5a305a	2.12	AGREE
+ls1intum/Artemis	LIVE	develop	4e3b6890d483	develop	AGREE
+frappe/flow_client	LIVE	develop	4a3189b6cbef	develop	AGREE
+krayin/laravel-crm	LIVE	2.2	5eecae04634a	2.2	AGREE
+cortezaproject/corteza	LIVE	2026.9.x	229ac38e0ac1	2026.9.x	AGREE

@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p543` · 2026-10-30.** Every platform below is a real, running system that
+**Pass `p544` · 2026-10-30.** Every platform below is a real, running system that
 institutions already operate, with its licence read from **the licence file's own
 title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
 carried for two passes — "`github.com` returns HTTP 403 through the session
@@ -22,6 +22,62 @@ ship?"**
 Odoo is to ERP what Moodle is to learning: the thing you customise rather than
 replace. In education the equivalents are below, grouped by the institutional
 function they own.
+
+## 🆕 `p544` — **archive state becomes a row field**, and the channel that serves it does *not* serve staleness
+
+🔴 **`Gap 543-C` was registered on this page's own evidence, twice over.** `p534`
+found a platform's AI agent layer **archived seven days earlier** and nothing on
+this base would have noticed; `p543` found [`parkerj/eduTrac-SIS`](https://github.com/parkerj/eduTrac-SIS)
+**archived 2026-08-12** the same way. 🔵 **Twice is a class**, and the gap asked
+for archive state to join the row contract.
+
+🟢 **Delivered, with the method named.** Archive state is read over `p534`'s
+asymmetric channel — `github.com` HTML is **403 to `curl` and 200 through
+WebFetch** — and is now a field. **Four rows read this pass; none archived**
+([`../evidence/archive-state.2026-10-30-p544.tsv`](../evidence/archive-state.2026-10-30-p544.tsv)):
+
+| Address | archived | stars | forks | licence (sidebar) |
+|---|---|---|---|---|
+| [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🟢 **no** | 153 | 36 | **AGPL-3.0** |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 **no** | 124 | 109 | Apache-2.0 |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **no** | **50.5k** *(rounded)* | 6.2k | Apache-2.0 |
+| [`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent) | 🟢 **no** | 0 | 0 | 🔴 **none shown** |
+
+🔴 **It is a sample of four, labelled as a sample.** 139 shelf addresses at one
+WebFetch each is a pass of its own, and a partial sweep written as a complete one
+is worse than no sweep.
+
+### 🔴 The limit this read measured is worth more than the sample
+
+🔴 **The channel serves archive state, stars, forks and licence — and NOT the
+last-commit date.** "Not shown" on all four reads. 🔵 **So archive state and
+staleness are two different questions on two different channels:**
+
+| question | channel | status |
+|---|---|---|
+| **Is it archived?** | `github.com` HTML via WebFetch | 🟢 **readable — now a field** |
+| **When did it last move?** | `p392`'s blobless shallow clone | 🔴 **still unread; one clone per address** |
+
+🔴 **`Gap 543-C` is therefore closed for archive state and explicitly OPEN for
+staleness** (`Gap 544-C`). 🔵 **The distinction matters on this page more than
+anywhere else on the base:** an archived platform is a dead end a client must be
+told about, while a *stale but unarchived* platform may be a stable, finished
+system — `1EdTech/lti-1-3-php-library` has not moved since **2020-06-03** and is
+**not** archived, because LTI 1.3 is a settled specification. 🟢 **Reading
+staleness as abandonment would have thrown away a working reference
+implementation of a live standard.**
+
+### 🟢 `exelearning/exelearning` — re-read, and it corroborates this base at the digest level
+
+🟢 The AGPL-3.0 payload re-read first-hand at `main` · `bce8f990f237`:
+**`34 523` B, `sha256₁₂ 0d96a4ff68ad`** — 🟢 **byte- and digest-identical to the
+figure this base has carried since `p413`.** 🔵 A `sha256` is content-addressed,
+so this settles the reading rather than merely agreeing with it. 🔴 It remains
+**AGPL-3.0 and therefore not a permissive SCORM producer** — `p416`'s scarcity
+closure still rests on `Papermorph` alone, and `Gap 417-B`'s warning stands: this
+project's **legacy address `exelearning/iteexe` is GPL-2.0**, so copyleft
+**escalated** across the move and the family is a property of the *address*, never
+of the project name.
 
 ## 🆕 `p543` — the vertical leg returned **one** platform this base never held, and both of the claims attached to it were wrong
 

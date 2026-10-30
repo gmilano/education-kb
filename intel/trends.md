@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education AI — Current Trends
 
-**Pass `p543` · 2026-10-30.** **Thirty-nine** trends. Each one is stated so it could be
+**Pass `p544` · 2026-10-30.** **Forty-one** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -1483,6 +1483,83 @@ leg worth its cost.
 look identical, so a team scanning an Indonesian or Brazilian education market
 in English gets a confident, complete-looking, systematically short answer —
 and no signal that it is short.
+
+## 🆕 `p544` — Trend 40: **a search leg measures the index it reaches, not the place the artefact came from — and treating the two as one has already produced a wrong published finding**
+
+🔵 **Stated so it can be disconfirmed:** the language of a query predicts *which
+index answers it*. It does not predict the **origin** of what comes back. Any
+claim of the form *"language L's developers build X"* that was measured by
+querying in L is unsupported.
+
+🟢 **The disconfirming case that forced this trend, read first-hand.** `p543`
+published, as its headline, that the Russian leg *"RETURNED **ZERO** … because
+what that corpus publishes is localisations of the English corpus."* 🔴 `p544`'s
+**Ukrainian** leg returned
+[`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent)
+— **a Russian artefact**: Russian README and UI, **Cloud.ru** and **GigaSchool**
+gateways, Russian **ДПО** professional-development paperwork. 🔴 **Russian
+domestic education supply exists and the Russian-language query did not reach
+it.** The zero measured the query.
+
+🔴 **Why this is a trend and not a one-off correction:** `p542` and `p543` built
+*twelve legs* of conclusions on this conflation — "the yield tracks the corpus",
+"a distinct corpus is necessary and not sufficient" — and both statements are
+about artefact origin while both instruments only saw query language. 🔵 **Two
+variables, one measurement, two passes of published inference.**
+
+🟢 **What to do instead, concretely:** read origin off the artefact — README
+language, the stack's hosting and gateways, the institution or statute it names —
+and record *how* it was established. 🔵 This base's better rows already do exactly
+that (`oak-open-curriculum-ecosystem` marked *stated* on the National Curriculum
+for England; `agente-bncc-professores` on the BNCC and the MEC). 🔴 **What the
+column does not yet distinguish is "inferred from the artefact" from "inferred
+from the leg"**, which is `Gap 544-A`.
+
+🔴 **How this trend could be wrong:** if a wider sample showed that leg language
+and artefact origin coincide in, say, 95 % of cases, the conflation would be a
+tolerable approximation rather than an error. 🔵 **That sample does not exist on
+this base** — and the first counter-example appeared in the first four legs run
+after the claim was published, which is weak evidence for a high coincidence rate.
+
+## 🆕 `p544` — Trend 41: **domestic, non-English education supply is systematically ungranted — so "local open-source capability exists" and "you can build on it" are different claims**
+
+🔵 **Stated so it can be disconfirmed:** education-specific agents built for a
+domestic, non-English-speaking market are **real and live but carry no licence**,
+at a rate high enough that a regional supply claim is unsafe without a grant
+read.
+
+🟢 **The measurement, re-probed first-hand at `p544` at each repo's *resolved*
+default ref, 10 filenames each:**
+
+| Address | Origin | Head @ `p544` | Grant |
+|---|---|---|---|
+| [`MaiQuangPhuoc/edu_agents`](https://github.com/MaiQuangPhuoc/edu_agents) | APAC (Vietnam) | `main` · `03e43219c66a` | 🔴 `UNRESOLVED` |
+| [`dungptt-dng/smart-ict-classroom`](https://github.com/dungptt-dng/smart-ict-classroom) | APAC (Vietnam) | `main` · `a9c56b3b7496` | 🔴 `UNRESOLVED` |
+| [`minhdevtry/AI-Teacher-Assistant-Agent`](https://github.com/minhdevtry/AI-Teacher-Assistant-Agent) | APAC (Vietnam) | `main` · `f3bcc636da1d` | 🔴 `UNRESOLVED` |
+| [`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent) | EMEA (Russia) | `main` · `c425a51c2512` | 🔴 `UNRESOLVED` |
+
+🔴 **Four artefacts, two unrelated origins, zero grants.** 🟢 `p543` observed this
+in Vietnam and called it *regional*; `p544` found it again in an unrelated region,
+which **promotes it from a regional peculiarity to a property of the supply
+class**. 🔵 `Trend 39` is therefore **narrowed, not replaced**: its artefact-count
+vs usable-count gap is real, and its attribution to *region* was too narrow.
+
+🔵 **The consequence that changes what may be said to a client:** in these markets
+the honest answer to *"what local open-source foundations can we build on?"* is
+**"local capability exists and none of it is licensed for reuse."** 🔴 Counting
+artefacts without reading grants overstates every regional supply claim. 🟢 The
+cheapest corrective is to **ask** — one `LICENSE` commit moves a row from unusable
+to shelf-eligible — and the class now has a register at
+[`measured-unusable.md`](measured-unusable.md) so the next pass does not
+rediscover it.
+
+🔴 **How this trend could be wrong, and the honest weakness:** **n = 4**, and all
+four were found by the same discovery method (non-English search legs). 🔵 A
+licence-first search of the same markets — or a read of a domestic forge this
+environment cannot reach, which `p542` showed is the case for `gitee.com` and
+`gitlink.org.cn` — could turn up a granted domestic population this method is
+blind to. 🟢 **The claim is about what this instrument can see, and is written
+that way.**
 
 ## 🆕 `p543` — Trend 39: **a language leg's artefact count and its *usable* artefact count are different numbers, and the gap is regional**
 

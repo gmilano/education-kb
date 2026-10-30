@@ -1,0 +1,12 @@
+# p544 · 2026-10-30 · BYTE CONTROL. An independent re-implementation of the grant probe was low by
+# EXACTLY 1 BYTE on 3 of 3 repos carrying a recorded figure, reproducing p543 Gap 542-A s documented trap:
+#   bytes_cmdsubst = $(curl ...) | wc -c   -> command substitution STRIPS the trailing newline
+#   bytes_file_write = curl -o FILE; wc -c < FILE -> correct
+# base_recorded values: DeepTutor 11408 (p543) · exelearning 34523 sha 0d96a4ff68ad (p413/p417) · OpenMAIC 1065 sha ba2525637432 (p380)
+# RESULT: 3/3 byte figures and 2/2 sha256 digests reproduce EXACTLY once the trap is avoided.
+slug	ref	file	bytes_file_write	bytes_cmdsubst	delta	sha256_12	base_recorded	agrees
+HKUDS/DeepTutor	main	LICENSE	11408	11407	1	cd2f54e1e506	11408	AGREE
+exelearning/exelearning	main	LICENSE	34523	34522	1	0d96a4ff68ad	34523/0d96a4ff68ad	AGREE-BYTES-AND-DIGEST
+THU-MAIC/OpenMAIC	main	LICENSE	1065	1064	1	ba2525637432	1065/ba2525637432	AGREE-BYTES-AND-DIGEST
+1EdTech/lti-1-3-php-library	master	LICENSE	11343	11342	1	78b49eeaddbf	-	NEW-READ
+packbackbooks/lti-1-3-php-library	master	LICENSE.md	11343	11342	1	78b49eeaddbf	-	NEW-READ-IDENTICAL-TO-UPSTREAM

@@ -1,0 +1,13 @@
+# p544 · 2026-10-30 · FOUR UNTRIED LANGUAGE LEGS (pl, th, uk, nl), prediction REGISTERED BEFORE measurement.
+# PREDICTION (p543's surviving predictor): "a named national institution or curriculum" yields domestic supply.
+#   pl -> YIELD (podstawa programowa, MEN) | th -> YIELD (OBEC curriculum) | uk -> YIELD (Nova ukrainska shkola)
+#   nl -> ABSENT (no named national AI-education programme)
+# RESULT: 1 of 4 predictions correct on the stated axis. pl and th BOTH index named national curricula and returned ZERO.
+# => p543's predictor is FALSIFIED at p544.
+# AND THE DECISIVE RESULT: the uk leg returned a RUSSIAN-ORIGIN artefact. Query-language and artefact-origin
+# are INDEPENDENT axes; p542/p543 attributed yield to "the corpus of the query language" and conflated them.
+leg	query_language	predicted	measured	artefacts_returned	artefact_origin	granted	note
+pl	Polish	YIELD	ABSENT	0 domestic	-	-	Returned English+Chinese corpus localisations only; no Polish-origin education artefact. Named national curriculum present, yield zero.
+th	Thai	YIELD	ABSENT	0 domestic	-	-	Returned Chinese/English corpus and DEV.to Thai-language digests of English repos. Named national curriculum present, yield zero.
+uk	Ukrainian	YIELD	YIELD	1	EMEA (Russia)	NO	fairyofmiracle/edu_course_agent. NOT Ukrainian-origin: README/UI Russian, Cloud.ru + GigaSchool gateways, Russian DPO programme paperwork. Ungranted.
+nl	Dutch	ABSENT	ABSENT	0 domestic	-	-	No Dutch-origin artefact. Surfaced only already-held rows (Zenglian990/AI_Tutor_Release, Selleo/mentingo).

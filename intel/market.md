@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p542` · 2026-10-30.** Figures are attributed to the source that produced
+**Pass `p544` · 2026-10-30.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
 
@@ -748,9 +748,83 @@ base is therefore secondary-attributed by necessity, and says so on its row.**
 | **China — penalties to ¥50 M** under its generative-AI framework (registration + content labelling) | 🟡 **Filed, attributed to its secondary source, marked UNVERIFIED at primary.** General-AI instrument with an education consequence, not an education instrument. |
 | **eduTrac SIS** | 🟢 Filed to [`../verticals/solutions.md`](../verticals/solutions.md) — **GPL-3.0, archived 2026-08-12**, refuting the "MIT" claim that carried it. |
 
+## 🆕 `p544` — the four regional legs re-run: **zero new claims, and the supply side's licence problem is now cross-regional**
+
+🟢 **Run in the mandated form** — globally, then once per region for North
+America, EMEA, APAC and LATAM. 🔴 **Every claim returned is already on this base.
+Sixth consecutive saturation on demand, and this pass does not soften it.**
+
+🔵 **Named so the result is checkable rather than asserted.** The sweep returned:
+Regulation **(EU) 2026/1744** with its `2 Dec 2027` stand-alone / `2 Aug 2026`
+Article 50 split; Australia's **TEQSA** institutional action plans; Korea's **AI
+Basic Act** in force `2026-01-22`; **Vietnam**'s decision naming education a
+high-risk sector; UNESCO **IESALC + UNU-IAS** (*87 % of 200 institutions across
+19 countries using AI, 26 % with a formal strategy*); the UNESCO **LAC
+Observatory** (14 Apr 2026); the **K-12 AI Literacy and Readiness Act of 2026**;
+the student-authored **STUDENTS FIRST Act**; New York's **A 9190**; the four
+dual-mandate states (**Maryland, Idaho, Oklahoma, Virginia**); the **OECD 2026
+Digital Education Outlook**; Dubai's **KHDA** guidance; and the UK's light-touch
+sectoral model. 🔴 **All held. Not one is new.**
+
+| Region | What the leg returned | New to this base? |
+|---|---|---|
+| **North America** | 134 bills / 31 states (one tracker); the four dual-mandate states; `A 9190`'s ninth-grade floor; the **K-12 AI Literacy and Readiness Act**; **STUDENTS FIRST Act**; Gallup **60 %** of US teachers using AI; **55 %** of high-school principals not restricting access; the DC policy barring AI from grading, discipline, IEP decisions and teacher evaluation | 🔴 **No — all held.** 🔵 This is the **third consecutive pass** on which the NA leg has restated `p541`'s fifteen |
+| **EMEA** | **Regulation (EU) 2026/1744** (OJ `2026-07-24`), stand-alone Annex III high-risk at **`2027-12-02`**, embedded at **`2028-08-02`**, Art. 50 transparency live since **`2026-08-02`**; education high-risk because it gates access to education; UK light-touch; **KHDA**; **OECD** urging purpose-built over general-purpose | 🔴 **No — all held**, the date split included. 🔴 **Sources disagreed on the high-risk date again** (one still says Aug 2026); this base's `2026/1744` reading stands and the conflict is a **source-quality note, not a correction**. 🔴 **The DEMAND leg is a measured blank for the SIXTH consecutive pass** — queried for EMEA adoption and players it returned **US-only sampling frames** |
+| **APAC** | Korea **AI Basic Act** (`2026-01-22`, enforcement decrees still being finalised, penalty grace through 2026); **Vietnam** risk-based framework naming education high-risk; **TEQSA** requiring institutional genAI action plans from every higher-education provider; China's filings + synthetic-content labelling; Singapore toolkits/**AI Verify**; Australia/NZ/Malaysia sectoral; one forecast of APAC as fastest-growing | 🔴 **No — all held.** 🔴 **And still no K-12 or higher-ed APAC *adoption rate* in any result** — the region's regulation is well documented here and its **demand is not**, for a third pass |
+| **LATAM** | UNESCO **IESALC + UNU-IAS**: **87 %** of 200 institutions in 19 countries using AI, **26 %** with a formal strategy, adoption driven by individual academics rather than institutional strategy; **716** AI instruments across 23 countries with a fragmentation warning; the **LAC Observatory** and its partner list (CAF, CENIA, Cetic.br, ECLAC, Fundación Ceibal, Santillana, Tec de Monterrey, ProFuturo, IRCAI) | 🔴 **No — all held.** 🔴 **The regulation sub-leg remains a genuine void:** no education-specific national rule surfaced for **Brazil or Mexico**, replicating `p543` |
+
+### 🔴 The one thing that *did* move, and it is a supply finding that crosses regions
+
+🟢 **`p543` established that the non-English supply side has a licence problem
+and called it regional** — three Vietnamese education agents, zero licences.
+🔴 **`p544` found a fourth, in an unrelated region, with the same result:**
+[`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent),
+**EMEA (Russia)**, real, live, education-specific, **ungranted**.
+
+🔴 **So the licence problem is not regional — it is a property of
+domestic, non-English-corpus supply wherever it occurs.** Four artefacts, two
+unrelated origins (APAC/Vietnam and EMEA/Russia), **zero grants**. 🟢 The class now
+has a published register:
+[`measured-unusable.md`](measured-unusable.md).
+
+🔵 **The commercial consequence, stated plainly because it changes what may be
+promised in a pitch:** when a client in one of these markets asks what local
+open-source foundations exist, the honest answer is **"they exist and you cannot
+build on them."** 🔴 **Counting artefacts without reading grants overstates every
+regional supply claim on this page.** 🟢 The cheapest corrective action is also
+the one most likely to work: **ask for a licence.** A single `LICENSE` commit
+moves a row from unusable to shelf-eligible, and `ACTION p417-A` already
+prescribes exactly this for a LATAM address.
+
+🔴 **A methodological warning this pass earned, and it applies to every regional
+claim on this page.** `p544` proved that **the language of a query does not imply
+the origin of what it returns** — a Ukrainian-language leg returned a Russian
+artefact. 🔵 **Any region on this base that was attributed from the leg that found
+it, rather than read from the artefact or the source, is unproven.** Registered as
+`Gap 544-A`.
+
 ## Opportunities by region
 
 ### North America
+
+#### 🆕 `p544` — the NA leg restated for a third pass, so the opportunity is **sequencing**, not discovery
+
+🔴 **Nothing new was found, and the engagement implication is not "nothing to
+do."** The NA regulatory picture on this page is now **stable across three
+passes** — the four dual-mandate states, `A 9190`'s ninth-grade floor, the K-12
+AI Literacy and Readiness Act, STUDENTS FIRST. 🟢 **A stable picture is what makes
+a fixed-scope offer possible**: the governance artefacts are known, so the
+sellable work is **implementing** them rather than researching them.
+
+🟢 **The concrete asymmetry to sell against, from this page's own numbers:**
+Gallup puts **60 %** of US teachers using AI while **55 %** of high-school
+principals have not restricted access and most districts still have no formal
+student policy. 🔵 **Usage is ahead of governance by a wide margin, and the gap is
+measured rather than asserted.** The DC model — barring AI from grading,
+discipline, IEP decisions and teacher evaluation — is a **drafted, citable
+boundary set** a district engagement can adopt in week one instead of
+commissioning.
+
 
 #### 🆕 `p543` — two governance clauses promoted out of history, and they are the sellable artefacts
 
@@ -1056,6 +1130,30 @@ recorded.**
   **faculty workload**, which is what the `$169 M`-class funding actually buys.
 
 ### EMEA
+
+#### 🆕 `p544` — EMEA: the demand blank reaches **six passes**, and the supply side just gained an unusable row
+
+🔴 **Stated plainly so silence is not read as coverage: the EMEA *demand* leg is a
+measured blank for the sixth consecutive pass.** Queried for adoption and players
+it returned **US-only sampling frames**. 🔵 **There is still no EMEA education-AI
+market-size or vendor-share study on this base**, and that is a real gap in the
+record, not a gap in the region.
+
+🟢 **What EMEA does have is the clearest regulatory calendar of any region, and it
+is an engagement driver on its own:** Article 50 transparency duties are **already
+in force** (`2026-08-02`) while stand-alone Annex III high-risk obligations do not
+bite until **`2027-12-02`**. 🔵 **That 16-month split is the whole sequencing
+argument** — a chatbot-disclosure and AI-literacy workstream is due *now*, and the
+conformity-assessment work for assessment and admissions systems can be staged.
+
+🔴 **And EMEA is now where the ungranted-supply class turned up outside Asia.**
+[`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent)
+(Russia) is real, education-specific and carries **no licence** →
+[`measured-unusable.md`](measured-unusable.md). 🔵 Its subject matter is
+instructive regardless of its licence: it automates **mandatory
+professional-development paperwork**, and compliance-document generation is a
+demand signal this page has not otherwise captured for the region.
+
 
 #### 🆕 `p543` — Türkiye enters this page with licensed, institutionally-anchored supply
 
@@ -1471,6 +1569,30 @@ to prevent.
   the data-residency answer, and is Apache-2.0.
 
 ### APAC
+
+#### 🆕 `p544` — APAC: regulation well documented, **demand still unmeasured for a third pass**
+
+🔴 **The asymmetry is the finding and it has now held three passes:** this base
+documents APAC *regulation* in detail — Korea's **AI Basic Act** (in force
+`2026-01-22`, penalty grace through 2026), **Vietnam**'s education-as-high-risk
+designation, **TEQSA**'s requirement that *every* Australian higher-education
+provider file an institutional genAI action plan, China's filing and labelling
+regime, Singapore's **AI Verify** — and holds **no K-12 or higher-education APAC
+adoption rate at all**. 🔵 **Regulation without demand data is half a market map**,
+and the half that is missing is the half a pitch needs.
+
+🟢 **The strongest near-term offer is TEQSA-shaped and provider-wide by
+construction:** the action-plan obligation applies to all providers, is
+already executed, and is **documentation work with a named regulator and a
+defined artefact** — the least speculative engagement shape in any region on this
+page.
+
+🔴 **Vietnam remains the clearest education-specific rule in APAC and the place
+the ungranted-supply class was first measured** — three domestic education agents,
+zero licences ([`measured-unusable.md`](measured-unusable.md)). 🔵 **Local
+engineering capability is real there and is not licensed for reuse**, which is a
+build-not-adopt signal rather than an absence of talent.
+
 
 #### 🆕 `p543` — Vietnam has domestic education supply and no licences, which is itself the offer
 
@@ -1953,6 +2075,29 @@ not under APAC.
   is read here, never inferred.**
 
 ### LATAM
+
+#### 🆕 `p544` — LATAM: the governance deficit is the offer, and the regulation void is **still** a void
+
+🟢 **The most quotable pair of numbers on this page remains UNESCO IESALC +
+UNU-IAS, and it reproduced again this pass:** **87 %** of 200 institutions across
+19 countries use AI somewhere, **26 %** have a formal AI strategy. 🔵 **A
+61-point governance deficit, from a named primary with a stated sampling frame** —
+which is why it can be put in front of a client where this page's market-size
+bands cannot. 🟢 The study's own recommendation set (national AI strategies that
+include higher education, dedicated funding, national guidance, AI literacy and
+governance written into accreditation) is effectively **a scope of work already
+endorsed by the region's reference institution**.
+
+🔴 **And the void is unchanged:** asked directly for Brazilian and Mexican
+education-AI rules, the leg returned **PL 2338 still pending with no
+education-specific provision** and **nothing whatsoever for Mexico**. 🔵 **So
+LATAM institutional demand is evidenced and LATAM national education-AI regulation
+is not** — an engagement here is sold on institutional governance, not on
+compliance with a rule that does not yet exist. 🔴 Adoption *"driven by individual
+academics, researchers and students rather than institution-wide strategies"* is
+the mechanism behind the 87/26 split, and it means the buyer is usually the
+**institution trying to catch up with its own faculty**.
+
 
 #### 🆕 `p543` — the leg returned nothing absent, and the one promotion is a demand figure
 

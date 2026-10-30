@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Compose Patterns — Education
 
-**Pass `p543` · 2026-10-30.** **Thirty-seven** recipes. Every component named below
+**Pass `p544` · 2026-10-30.** **Thirty-eight** recipes. Every component named below
 was read from its repository page, and **every licence was read from the licence
 file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
 this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
@@ -2045,6 +2045,111 @@ estimate.**
    first**: `p541` measured **8 new addresses of 10** in Spanish and
    Portuguese against **0 of 5** in English.
 
+## 🆕 `p544` — one recipe added (`P593`), and **a licence contradiction corrected inside this very file**
+
+🔴 **The defect first, because it is the more useful finding.** `P592`'s component
+table called [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) **MIT**, and
+annotated the cell *"(carried; re-read at `p541`)"*. 🔴 **It is Apache-2.0**, read
+first-hand this pass at `main` · `1ea7df155447`: title block **`Apache License`**,
+**`11 408` B**, **`sha256₁₂ cd2f54e1e506`** — byte-identical to the figure this
+base has carried since `p543`.
+
+🔴 **Four other cells in this same file already said Apache-2.0** (`P556`,
+`P573`, `P583`, `P584`), as do
+[`../agents/top.md`](../agents/top.md)'s shelf row,
+[`../verticals/solutions.md`](../verticals/solutions.md),
+[`../intel/trends.md`](../intel/trends.md) and
+[`../intel/market.md`](../intel/market.md). 🔵 **So the base was right in nine
+places and wrong in one, and the wrong one is the one that claimed to have been
+re-read.** 🟢 **The lesson is narrow and worth keeping: a provenance note is not a
+provenance.** *"(carried; re-read at `pN`)"* is prose a successor can type without
+re-reading anything; a byte count and a digest are not. 🔴 **This matters here
+more than on a shelf** — a recipe's licence column is what a studio acts on, and
+MIT and Apache-2.0 impose different attribution and patent terms on a
+deliverable.
+
+🔴 **A second defect measured and left open rather than papered over:** this file
+carries **four different star figures for DeepTutor** — `49.0k`, `49.7k`, `50.0k`,
+`50.0k` — because each was rounded at a different pass. 🟢 GitHub's sidebar now
+reads **`50.5k`**, and this base's one *precise* figure is `p537`'s **49 850**.
+🔵 **A rounded number restated across passes becomes four numbers.** Registered as
+`Gap 544-G`: a component's volatile metrics belong in **one** place, and a recipe
+should cite it, not copy it.
+
+## P593 — The mandatory-form generator that is forbidden to invent its own identifiers (EMEA — Russia/Türkiye shape; portable to any national funder or regulator)
+
+**Brief.** 🟢 **The demand shape is evidenced by four artefacts across two
+unrelated regions, and `p544` is the pass that noticed they are all the same
+thing.** Every domestic, non-English education agent this base has found
+automates **a document the state obliges someone to produce** — a **TÜBİTAK
+2209-A** research proposal, a Russian **ДПО** professional-development programme,
+a **BTK 514** course record — and **none of them automates a curriculum**. 🔴
+**And every one of them is unlicensed**
+([`../intel/measured-unusable.md`](../intel/measured-unusable.md)), so the
+engagement is *build*, not *adopt*.
+
+🟢 **The architectural requirement they all converge on, and it is unusual enough
+to be the whole pattern:** the artefact's value is that certain fields are
+**NOT generated**. `fairyofmiracle/edu_course_agent` refuses to invent the order
+number (`наказ`) and the labour-function code; `captainmgc/tubitak-skills`
+verifies every DOI across three MCP servers rather than emitting a plausible one.
+🔵 **A hallucinated identifier on a legally load-bearing form is worse than a
+blank one**, because a blank is visible and a plausible fake is not.
+
+| Role | Component | Licence, read from the title block |
+|---|---|---|
+| 🔴 **Requirement evidence — READ, DO NOT FORK** | [fairyofmiracle/edu_course_agent](https://github.com/fairyofmiracle/edu_course_agent) (RU, ДПО) · [MaiQuangPhuoc/edu_agents](https://github.com/MaiQuangPhuoc/edu_agents) (VN, GDPT 2018) | 🔴 **NO GRANT** — `UNRESOLVED`, 10 filenames at the resolved ref, `p544` |
+| Funder-form skills + **verified** citation lookup | [captainmgc/tubitak-skills](https://github.com/captainmgc/tubitak-skills) | 🟢 **MIT** — `LICENSE` @`main`, `1 067` B *(`p543`)* |
+| Authoritative identifier source — **the gate that makes this safe** | the funder's / ministry's own registry, via MCP. Reference implementation: [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** — `LICENCE` @`main` *(`p543`)* |
+| Deterministic orchestration, fixed edges | [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | **MIT** *(carried)* |
+| Skill / occupation codes where the form demands them | [KonstantinosPetrakis/esco-skill-extractor](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** — `LICENSE` @`master` *(`p543`)* |
+| Launch inside the institution's LMS | [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 **Apache-2.0** — `LICENSE.md` @`master`, **`11 343` B · `sha256₁₂ 78b49eeaddbf`**, v6.4.4 (2026-09-23), re-read `p544` |
+| Audit trail of what was generated and by whom | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** — `LICENSE` @`main` *(`p543`)* |
+| Licence gate | [`P551`](#p551--licence-due-diligence-gate-run-this-first-every-engagement) | — |
+| Grant + archive precondition | [`P588`](#p588--licence-triage-as-a-billable-intake-step-before-any-architecture) + `p544`'s archive field | — |
+
+**Wiring.**
+
+1. **Model the form, not the subject.** Encode the target document as a schema
+   with every field typed, and mark each field **`GENERATED`** or
+   **`AUTHORITATIVE`**. 🔴 The `AUTHORITATIVE` set — order numbers, funder scheme
+   codes, labour-function codes, DOIs, curriculum identifiers — is the whole risk
+   surface.
+2. **Make `AUTHORITATIVE` fields unreachable by the model.** They are filled by a
+   **lookup against the issuing registry over MCP**, or they are left blank and
+   flagged. 🔵 **Never by generation, and never by a retrieval the model can
+   paraphrase.** `tubitak-skills`' DOI verification across three servers is the
+   shape; `oak-open-curriculum-ecosystem` is the reference for what a state body's
+   own registry-over-MCP looks like.
+3. **Orchestrate with fixed edges.** **LangGraph** with a deterministic graph, not
+   an autonomous loop — the same conclusion `edu_agents` reached independently for
+   a prescribed curriculum (`P592`). A form has a fixed shape; an agent that can
+   decide to skip a step is a liability.
+4. **Emit in the funder's own template.** DOCX/PPTX/PDF from the real template
+   file, not a lookalike. 🔴 **A regulator rejects on format before it reads
+   content**, which is why both evidence artefacts ship template-faithful export.
+5. **Log every field's provenance to an LRS.** `learnmcp-xapi` writes back over
+   xAPI, so each `AUTHORITATIVE` value carries *where it came from*. 🟢 This is
+   what converts the deliverable from a document into an **auditable** document —
+   and under the EU AI Act's Article 50 transparency duties, **already in force
+   since `2026-08-02`**, that audit trail is a compliance artefact, not a nicety.
+6. **Gate the components before step 1.** Run `P551`/`P588`, plus `p544`'s
+   **archive-state** read — `p543` shelved a platform archived two months earlier
+   and `p534` an agent layer archived seven days earlier, so archive state is a
+   precondition, not a detail.
+
+🔴 **Where this pattern must not be sold.** If the client's form is **not**
+state-mandated, the `AUTHORITATIVE`/`GENERATED` split costs more than it returns
+and `P589`'s course factory is the better shape. 🔵 **The whole justification for
+this architecture is that a wrong identifier has a legal consequence.**
+
+🟡 **Stated as a limit, not hidden:** the demand evidence is **n = 4** and all
+four artefacts were found by non-English search legs, which is a discovery method
+with a known bias (`Gap 544-B` names the test that would confirm or kill the
+form-not-curriculum reading). 🟢 **Every component above, by contrast, is granted
+and was read first-hand** — so the recipe is buildable today even if the market
+claim narrows.
+
 ## 🆕 `p543` — two recipes added (`P591`, `P592`), and the second one exists because its components are **unusable**
 
 🔵 Every component named below had its **grant read as bytes on `2026-10-30`**
@@ -2116,7 +2221,7 @@ is not "adopt these"; it is "build this, having learned from these".**
 | Role | Component | Licence |
 |---|---|---|
 | 🔴 **Requirement evidence — READ, DO NOT FORK** | [MaiQuangPhuoc/edu_agents](https://github.com/MaiQuangPhuoc/edu_agents) · [dungptt-dng/smart-ict-classroom](https://github.com/dungptt-dng/smart-ict-classroom) · [minhdevtry/AI-Teacher-Assistant-Agent](https://github.com/minhdevtry/AI-Teacher-Assistant-Agent) | 🔴 **NO GRANT on three channels** |
-| Curriculum-bounded tutoring core | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | **MIT** *(carried; re-read at `p541`)* |
+| Curriculum-bounded tutoring core | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** — 🔴 **corrected at `p544`; this cell read "MIT (carried; re-read at `p541`)" and was the only curated cell on the base that said so.** Title block `Apache License`, `11 408` B, `sha256₁₂ cd2f54e1e506`, read at `main` · `1ea7df155447` |
 | Deterministic orchestration | [LangGraph](https://github.com/langchain-ai/langgraph) | **MIT** *(carried)* |
 | Retrieval over the prescribed textbook | Qdrant + the client's own licensed corpus | Apache-2.0 *(carried)* |
 | Offline / low-spec delivery | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** *(carried)* |

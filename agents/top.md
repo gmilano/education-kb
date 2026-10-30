@@ -6,9 +6,45 @@ updated: 2026-10-30
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p543` · 2026-10-30.** **Seventy-two** real agents, every row read
-first-hand and corroborated by a second, independent instrument. No row is a
-header, a placeholder or an example.
+**Pass `p544` · 2026-10-30.** **Seventy-two** real agents — **64 shelf-table rows
+plus 8 filed in their own sections below** — every row read first-hand and
+corroborated by a second, independent instrument. No row is a header, a
+placeholder or an example. 🟢 **The 64 is now *derived from the table* rather than
+asserted beside it** ([`../ingest/derive-counts.sh`](../ingest/derive-counts.sh),
+green this pass), which is what `Gap 543-E` asked for.
+
+> 🔴 **`p544` corrects the axis the two previous passes were built on, and the
+> correction is the pass.** `p542` and `p543` both attributed a language leg's
+> yield to *the corpus the query language indexes*. 🔴 **That is a claim about an
+> artefact's ORIGIN, measured with an instrument that only sees the QUERY's
+> language — two variables treated as one.** 🟢 `p544`'s **Ukrainian** leg
+> returned a **Russian** artefact
+> ([`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent):
+> Russian README, **Cloud.ru** and **GigaSchool** gateways, Russian **ДПО**
+> paperwork), so `p543`'s headline finding — *"`ru` returned **zero**"* — was a
+> property of **the query**, not of the corpus and not of the country. 🔵 **An
+> origin claim requires reading the artefact; it can never be read off the leg
+> the artefact arrived on.** Registered as `Gap 544-A`: every region taken from a
+> leg rather than from an artefact is unproven.
+>
+> 🔴 **And `p543`'s surviving predictor is falsified.** It named *a named
+> national institution or curriculum* as the one survivor of twelve legs. `p544`
+> registered that prediction before measuring and ran four untried legs:
+> **Polish** (*podstawa programowa*, MEN) and **Thai** (OBEC) each index a named
+> national curriculum and each returned **zero**. 🔵 A predictor present in four
+> legs that predicts yield in two is not a predictor.
+>
+> 🟢 **What replicated instead is the grant gate, and it is now the strongest
+> regularity on this axis: four domestic education agents, two unrelated origins
+> (Vietnam, Russia), ZERO licences.** The class has a published home at
+> [`../intel/measured-unusable.md`](../intel/measured-unusable.md), closing
+> `Gap 543-D`. 🔴 **Supply is not usable supply** — counting artefacts without
+> reading grants overstates every regional supply claim this base makes.
+>
+> 🔴 **`p544` shelved nothing, and says so rather than padding.** Four language
+> legs plus GitHub's own `ai-tutor` topic listing (822 repositories) produced
+> **one** address new to this base, and it is ungranted. The mainstream channel
+> restated **19 of 19**.
 
 > 🟢 **`p543` ran four untried language legs (`ru`, `vi`, `tr`, `it`) and
 > `p542`'s hypothesis did not survive them.** p542 concluded the yield tracks
@@ -467,7 +503,7 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 64 verified education agents (72 with the eight filed in their own sections above: `p541`'s four, `p542`'s three, `p543`'s one)
+## Shelf — 64 verified education agents (72 with the eight filed in their own sections above: `p541`'s four, `p542`'s three, `p543`'s one; `p544` added none)
 
 🔴 **`p543`: this heading was stale by a whole pass.** It read *"68 with `p541`'s four"* while `p542` shelved three more below it without touching it — the same defect class `../repos/foundations.md` carries in its own header, found there by `p533` and still open as `Gap 534-E`. 🔵 **A count that lives in prose beside the rows it counts will go stale every time a pass adds a row and forgets the sentence.** The durable fix is a gate that derives the figure from the tables; registered this pass as `543-E`.
 
@@ -849,6 +885,112 @@ read the top 80 — carries figures this pass did **not** re-attest. And the
 census's own caveat still stands and is worth repeating: every tool count in
 this field is the repository's own claim, three repositories contradict
 themselves on it, so **tool counts here are marketing, not measurement.**
+
+## 🆕 `p544` — query-language and artefact-origin are independent axes
+
+🔴 **Two passes of conclusions rest on conflating them, and this section is the
+correction.** `p542` concluded the language axis *"is two axes, and the yield
+tracks the corpus, not the language."* `p543` narrowed that to *"a distinct
+publishing corpus is necessary and not sufficient,"* and proposed **a named
+national institution or curriculum** as the survivor. 🔵 Both measured **leg
+yield** and reasoned about **artefact origin**.
+
+🟢 **The disconfirming case, read first-hand.** `p544`'s **Ukrainian** leg
+returned exactly one artefact new to this base, and it is **Russian**:
+
+| | |
+|---|---|
+| **Address** | [`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent) |
+| **Found on** | the **`uk`** (Ukrainian) leg |
+| **Origin** | 🟡 **EMEA (Russia)** — *inferred, and the inference is named*: README and UI in **Russian**; LLM gateways **Cloud.ru** and **GigaSchool**, both Russian services; output is Russian **ДПО** professional-development paperwork. **The page states no country.** |
+| **What it is** | A methodologist's workstation — programme on the left, chat on the right. Builds a professional-development programme from an **ACR template**; exports **DOCX / PPTX / JSON**. Next.js UI + FastAPI. |
+| **Why it is interesting** | 🟢 **It refuses to invent the order number (`наказ`) and the labour-function code.** The artefact's value is that two legally load-bearing identifiers are *not* generated — the same instinct as `MaiQuangPhuoc/edu_agents` bounding the LLM to the textbook. |
+| **State at `p544`** | `main` · `c425a51c2512` · 196 commits · 🔴 **0★, 0 forks** · 🟢 not archived |
+| **Grant** | 🔴 **`UNRESOLVED`** — 10 filenames at the resolved default ref; sidebar shows no licence and does not say "no licence" |
+| **Disposition** | 🔴 **NOT SHELVED.** Filed to [`../intel/measured-unusable.md`](../intel/measured-unusable.md) — real, live, education-specific and **unusable**. |
+
+🔴 **So `p543`'s "`ru` returned zero" measured its Russian-language *query*, not
+Russian *supply*.** Russian domestic education supply exists; the Russian query
+did not reach it and a Ukrainian one did. 🔵 **The sound reformulation, written so
+it can be disconfirmed:** a leg's yield measures **which index the query
+reaches**. Origin must be read off the artefact — README language, stack,
+hosting, the institution it names — and **never off the leg**.
+
+🔴 **`Gap 544-A` follows directly and is the most consequential thing this pass
+leaves open:** `p541`, `p542` and `p543` shelved rows off `es`, `pt`, `fr`, `id`,
+`zh`, `vi`, `tr` and `it` legs. **Any shelf row whose `Region (origin)` was taken
+from its leg rather than read from the artefact is unproven.** 🟢 The shelf's
+better rows already do this correctly and say so — `oak-open-curriculum-ecosystem`
+is marked *stated* because its README names the National Curriculum for England,
+`agente-bncc-professores` because its README is Portuguese and names the BNCC and
+the MEC. 🔵 **The column already distinguishes *stated* from *inferred*; what it
+does not distinguish is *inferred from the artefact* vs *inferred from the leg*.**
+
+### 🔴 The predictor `p543` left standing, tested against a registered prediction and falsified
+
+🟢 **The prediction was written before the measurement** — p543's survivor was *a
+named national institution or curriculum* — and the four legs were chosen to test
+it ([`../evidence/language-legs.2026-10-30-p544.tsv`](../evidence/language-legs.2026-10-30-p544.tsv)).
+
+| Leg | Named national anchor? | Predicted | Measured | What came back |
+|---|---|---|---|---|
+| **`pl`** Polish | 🟢 *podstawa programowa*, **MEN** | **YIELD** | 🔴 **ABSENT** | Localised rankings of the English corpus; **no Polish-origin education artefact** |
+| **`th`** Thai | 🟢 **OBEC** national curriculum | **YIELD** | 🔴 **ABSENT** | Chinese and English repos; Thai-language digests **of English repos** |
+| **`uk`** Ukrainian | 🟢 *Нова українська школа* | **YIELD** | 🟢 **YIELD** | 🔴 one artefact, **Russian not Ukrainian**; `nus.org.ua` surfaced and publishes **course announcements, not code** |
+| **`nl`** Dutch | 🔴 none | **ABSENT** | 🟢 **ABSENT** | only already-held rows |
+
+🔴 **Two of four failed, in the direction that kills the predictor.** 🟡 **The
+hypothesis that remains, offered as the next thing to test and not as a
+finding:** every domestic artefact found on this axis automates **a document the
+state obliges someone to produce** — TÜBİTAK **2209-A** proposal forms, BTK
+**514**, a Russian **ДПО** programme with its `наказ` number and labour-function
+code — and **none automates a curriculum**. 🔵 They automate a **form**. 🔴 This is
+one step from the error just corrected, being a claim about origin built on four
+artefacts, so `Gap 544-B` names the test: **a leg whose country publishes a
+curriculum but imposes no comparable mandatory form should return zero.**
+
+### 🔴 Five candidates measured and NOT promoted
+
+| Candidate | Why not |
+|---|---|
+| [`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent) | 🔴 **Ungranted.** Real, live, education-specific; no licence at 10 filenames, sidebar or README. → [`../intel/measured-unusable.md`](../intel/measured-unusable.md) |
+| [`okvs/edu_2026`](https://github.com/okvs/edu_2026) | 🔴 **Rejected on category *and* grant.** `main` · `6dc6e8ffc9f4`, no licence file — and it is a **lesson repository about agents**, not an education agent. Teaching material about the tool is not the tool. |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | 🔴 **Already held as an alias/fork relation (`397-F`).** Apache-2.0, `11 343` B, `sha256₁₂ 78b49eeaddbf` — **byte- and digest-identical to the maintained fork already on [`../repos/foundations.md`](../repos/foundations.md)**. Its HEAD is still `3a192de99f37`, last commit **2020-06-03**. A second address for a held grant is a duplicate, not supply. |
+| [`Shreyas2639/EduAgent`](https://github.com/Shreyas2639/EduAgent) | 🔴 **Rejected on name collision.** Surfaced by an `"EduAgent"` query but is an unrelated LangGraph/FAISS tutor for **Python fundamentals** — not the K-9 project of the same name, which this base already holds as `Zenglian990/AI_Tutor_Release`. |
+| GitHub `ai-tutor` topic, top 20 by stars | 🔴 **19 of 20 already held, and the twentieth (`xch1986/AI-Tutor`) also held.** **Zero new supply** off GitHub's own listing of **822** repositories. |
+
+### 🟢 The mainstream channel is exhausted, measured on a better instrument
+
+🟢 `p542` and `p543` read trend **digests** — third-party summaries. 🟢 `p544` read
+**GitHub's own [`ai-tutor` topic page](https://github.com/topics/ai-tutor)**
+through WebFetch: 822 repositories, the first 20 by stars, with GitHub's own star
+counts. 🔴 **Every address on it is already here.** 🔵 Replicating `p541`'s *9 of
+9* and `p542`'s *9 of 9* on a **different and better channel** is what makes this
+worth recording: **the saturation is a property of the supply, not of the
+digests.**
+
+🔴 **One caution the channel forced, and it is a writing rule:** the topic page
+and the repository sidebar serve **rounded** star counts.
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) reads **`50.5k★ · 6.2k
+forks`** against this base's precise **49 850** from `p537` — README naming
+**v1.7.0, 2026.10.28**, Apache-2.0 re-read at **`11 408` B · `sha256₁₂
+cd2f54e1e506`**, not archived. 🟢 **Recorded as `50.5k (rounded, sidebar)` beside
+`p537`'s exact figure; a rounded number must never be written as a precise
+count.**
+
+### 🟢 This pass's figures are an independent re-implementation, and three of them match the base exactly
+
+🔴 **`make hooks` and [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) were
+both DENIED (`Code from External`)** — eleven denials in twelve passes — so every
+read here was re-implemented inline. 🔴 **The re-implementation was low by exactly
+one byte on 3 of 3 repos carrying a recorded figure, which is `Gap 542-A`'s
+documented trap** (`$(...)` strips the trailing newline). 🟢 **Counted correctly,
+it reproduces `11 408` / `34 523` / `1 065` and the digests `0d96a4ff68ad` and
+`ba2525637432` exactly.** 🔵 Two content-addressed digests matching across 164
+passes and an independent implementation is the strongest corroboration this base
+has of its own licence reads — detail on
+[`../repos/trending.md`](../repos/trending.md#-p544--2026-10-30). 🔴 **Agreement
+is not attestation** (`Gap 544-F`).
 
 ## 🆕 `p543` — the language axis has a **second gate**, and it is the grant
 

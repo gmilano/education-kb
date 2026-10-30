@@ -1,0 +1,7 @@
+# p544 · 2026-10-30 · Gap 543-D. Real, education-specific, LIVE, and UNGRANTED. Not shelf rows; not rejects.
+# Grant probe: 10 filenames at the RESOLVED default ref. UNRESOLVED = no grant file served at any of them.
+slug	live	default_ref	head_sha	grant	note
+MaiQuangPhuoc/edu_agents	LIVE	main	03e43219c66a	UNRESOLVED	10-filename probe at resolved ref
+dungptt-dng/smart-ict-classroom	LIVE	main	a9c56b3b7496	UNRESOLVED	10-filename probe at resolved ref
+minhdevtry/AI-Teacher-Assistant-Agent	LIVE	main	f3bcc636da1d	UNRESOLVED	10-filename probe at resolved ref
+fairyofmiracle/edu_course_agent	LIVE	main	c425a51c2512	UNRESOLVED	10-filename probe at resolved ref
