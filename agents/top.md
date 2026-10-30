@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p555` — `2026-10-30` — **🟢 `Gap 554-A` IS NOT A CHANNEL LOSS — IT IS A REGRESSION AGAINST `ACTION VV`, WHICH THIS BASE REGISTERED AT `p241` AND `p554` DID NOT APPLY. THE PLATFORM FIELD IS READABLE, AND ON **79** EDUCATION REPOSITORIES IT CONTRADICTS THE PAYLOAD **ZERO** TIMES. 🟢 THE STAR CHANNEL IS ALIVE: `DeepTutor` **51 571★**, WHICH IS THE FIGURE `p554` REFUSED.**
+
+🔴 **Gate posture, stated first: `make hooks` was not run** — the `Code from External`
+classifier denies it, as in thirteen of the last fourteen passes. 🟢 **But three of the four
+gates `p554` fixed WERE run directly at `HEAD`, and all three are GREEN** — which closes the
+qualification `p554` left open (`Gap 554-F`). 🔴 A fourth attempt at a gate *suite* was
+denied **after an identical command had already succeeded in this same session** — registered
+as `Gap 555-F`, because it means a denial is not a stable fact about a command.
+
+### 🔴 What `p554` got wrong, and why it is worth more than a repository row
+
+🔵 `p554` recorded `Gap 554-A` as *"the platform channel is gone"* and bounded four separate
+claims on it: no `license.spdx_id`, no stars or forks, `Trend 61` frozen at seven rows, and
+an aggregator's `~50 000★` for `DeepTutor` **refused for want of a first-hand channel**.
+
+🔴 **All four bounds were self-imposed.** `ACTION VV` — registered at **`p241`**, `2026-10-16`,
+313 passes before this one — already says it in one sentence:
+
+> 🟡 **`VV`** · *"Record the CHANNEL beside the sort key in every query-evidence table. The
+> GitHub search API is `403` via `curl` and `200` via the MCP server from the same
+> environment. 🔴 Eight passes of 'GitHub Trending went unqueried' may have been measuring
+> the TRANSPORT, not the channel."*
+
+🔴 `p554` tested **one** transport and generalised to the channel. Measured on this session,
+the five transports are **not** equivalent:
+
+| Transport | Result | Carries `license.spdx_id`? |
+|---|---|---|
+| `curl https://api.github.com/repos/{slug}` | 🔴 **403** | — |
+| `curl https://github.com/{slug}` (HTML) | 🔴 **403** | — |
+| `gh api repos/{owner}/{repo}` | 🔴 **403** — *"sessions are bound to their configured repositories"* | — |
+| `gh api search/repositories` | 🔴 **403** — *"this GitHub API path is not available"* | — |
+| **MCP `search_repositories`, `repo:`-filtered** | 🟢 **200** | 🟢 **yes** — with `stars`, `forks`, `default_branch`, `pushed_at`, `archived` |
+
+🔵 **`p549` already caught this base doing the same thing once** — *"a measurement ceiling two
+passes reported was self-imposed"*. 🔴 **It has now happened twice, five passes apart, and
+the second time the written remedy was already on the shelf.** That is the finding: this base's
+failure mode is not a missing instrument, it is an **unread register**.
+
+### 🟢 The platform channel, joined to the three `doc-channel.py` already reads
+
+🟢 Delivered: [`../ingest/platform-channel.py`](../ingest/platform-channel.py), which joins a
+committed harvest to `p554`'s 84-row doc-channel run and emits a four-channel verdict.
+🔵 Harvest: [`../evidence/platform-harvest.2026-10-30-p555.tsv`](../evidence/platform-harvest.2026-10-30-p555.tsv) ·
+run: [`../evidence/platform-channel.2026-10-30-p555.tsv`](../evidence/platform-channel.2026-10-30-p555.tsv).
+
+| Four-channel verdict | n | Reading |
+|---|---|---|
+| `FOUR-CHANNELS-CONSISTENT` | **61** | payload, README, manifest and platform all agree |
+| `PAYLOAD-UPHELD-DOC-IS-THE-OUTLIER` | **6** | 🟢 of `p554`'s 8 documentation disagreements, the platform sides with the **payload** |
+| `PLATFORM-DECLINES` | **6** | `NOASSERTION` — a licence file was found and could not be classified |
+| `THREE-CHANNEL-ONLY` | **5** | 🔴 absent from the search index; all 5 live on `git ls-remote` |
+| `FOUR-CHANNELS-SILENT` | **4** | 🟢 `p554`'s absence verdicts **strengthened** — four channels, not three |
+| `NON-STANDARD-GRANT-CONFIRMED-BY-PLATFORM-DECLINING` | **2** | both `learning-commons-org` artefacts |
+| **`PLATFORM-DISAGREES-WITH-PAYLOAD`** | 🟢 **0** | **the headline** |
+
+🟢 **`PLATFORM-DISAGREES-WITH-PAYLOAD` is ZERO of 79.** The platform field never once
+contradicts the grant payload on this shelf. 🔵 **What that settles:** `grant-verdict.py`'s
+payload-first design is now vindicated against an independent reader on 79 addresses, and
+`p554`'s ~10 % documentation-disagreement rate was **never evidence that the payload was
+wrong** — it was evidence that READMEs and manifests are worse readers than the payload, which
+is the opposite conclusion from the one a reader of `p554` alone would draw.
+
+### 🟢 The six rows where the platform upholds the payload against the documentation
+
+| Repository | payload | README / manifest said | platform `spdx_id` |
+|---|---|---|---|
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | 🔴 `CC-BY-4.0` (content licence) | 🟢 **MIT** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | 🔴 `LGPL`+MIT (vendored component) | 🟢 **MIT** |
+| [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) | **MIT** | 🔴 `BSD-3-Clause` (manifest) | 🟢 **MIT** |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | **GPL-3.0** | 🔴 `Apache-2.0` (a bundled **font**) | 🟢 **GPL-3.0** |
+| [`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle) | **MIT** | 🔴 `AGPL-3.0`+MIT (dependency) | 🟢 **MIT** |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** | 🔴 `ISC` (manifest) | 🟢 **MIT** |
+
+🔵 **This NARROWS `Gap 554-B` rather than closing it.** `554-B` asked for a
+`BUNDLED-THIRD-PARTY-GRANT` band to stop a README's third-party disclosure being read as the
+project's own family. 🟢 **For deciding the project's own family the band is no longer needed
+— the platform channel decides it, 3 of 3 on exactly the rows `554-B` named.** 🔴 **The
+band is still owed for the other half of `554-B`'s ask**: reporting the bundled families
+*prominently*, because an AGPL dependency in a hosted deliverable reaches network use whatever
+the root grant says. 🔵 Carried forward unchanged.
+
+### 🟢 The star channel, re-measured first-hand — including the figure `p554` refused
+
+🟢 Every number below is `stargazers_count` read on the MCP transport, `2026-10-30`.
+
+| Repository | `p554` state | measured `p555` | Δ |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔴 **refused** an aggregator's `~50 000★`; shelf held `51 323` | 🟢 **51 571★** · 6 316 forks · `Apache-2.0` | **+248** since `p554` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `41 889` | 🟢 **41 924★** · `MIT` | **+35** |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `274` | 🟢 **274★** · `MIT` | 🟢 **exact** |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | `387` | 🟢 **387★** · `MIT` | 🟢 **exact** |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `823` | 🟢 **823★** · `MIT` | 🟢 **exact** |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | `453` *(held, not re-measured)* | 🟢 **454★** · `MIT` | **+1** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `1.2k` (rounded) | 🟢 **1 162★** · `MIT` | exact figure now carried |
+
+🟢 **The shelves were accurate.** Four of seven are byte-exact against an independent channel
+after passes of being carried offline. 🔵 **Recorded because the opposite was worth checking:**
+`globant-kb`'s own rotation summary for the last education cycle still claims
+`educhain ~12k★` and `OATutor ~1.5k★` — **31× and 5.5× the measured values**. 🔴 Those
+figures are in the *rotation ledger*, not on these shelves; this base corrected them and the
+summary upstream never was.
+
+🟢 **And the aggregator dispersion is settled.** Three third-party digests gave `DeepTutor`
+**`~46 000`** (28 Oct), **`~50 600`** (30 Oct) and **`~50 000`** in the same window. The field
+says **`51 571`**. 🔵 The *highest* aggregator figure was the closest and still **1.9 % low**;
+`p554` was right to refuse all three, and right for the wrong reason — the channel existed.
+
+
 ## 🆕 `p554` — `2026-10-30` — **🟢 `553-E`'s THREE-CHANNEL VERDICT BUILT AND RUN AT `553-F`'s SAMPLE SIZE: **84** EDUCATION REPOSITORIES, AND **8 OF THEM CONTRADICT THEIR OWN DOCUMENTATION ABOUT THEIR LICENCE**. 🔴 THE WORST ONE IS ON THIS SHELF: AN **MIT BADGE** OVER TWO **CC BY-NC-SA** CORPORA. 🔴 TWO DEFECTS FOUND IN `p553`'s INSTRUMENT, ONE OF THEM CAUSED BY `553-A`'s OWN FIX, AND ONE IN THIS PASS'S INSTRUMENT ON ITS FIRST USE.**
 
 🔴 **Gate posture, stated first: `make hooks` was DENIED again** (`Code from External`) —

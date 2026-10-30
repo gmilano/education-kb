@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p555` — `2026-10-30` — **🟢 `Trend 65`: A PLATFORM `NOASSERTION` IS A FOUR-WAY AMBIGUOUS SIGNAL, AND ON THIS BASE **3 OF 8 ARE COSMETIC** — THE ARTEFACT IS PERMISSIVELY LICENSED AND EVERY TOOL SAYS OTHERWISE. 🟢 `Trend 66`: AN AGGREGATOR ATTACHES AI POLICY TO A COUNTRY'S MOST FAMOUS CURRICULUM BRAND, AND THE REAL INSTRUMENT IS ALWAYS A LATER, SUBJECT-LEVEL ONE.**
+
+🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 `gate-dates` run directly at
+`HEAD`: **0 `ASSERTED`**, 1 `ATTRIBUTED`. 🟢 `gate-tables` and `gate-region-headings` also green.
+
+### 🟢 `Trend 65` — `NOASSERTION` does not mean what this base was about to assume
+
+🔵 **The inference this pass drafted and then disproved:** that GitHub's `NOASSERTION` *detects*
+a composite or non-standard grant, and so hands this base a free classifier for the hardest
+class on these shelves. 🔴 **It does not.** Measured on **8 of 79** education repositories, the
+verdict has **four distinct causes**, and they call for opposite actions:
+
+| Cause | n | Example | What a reader must do |
+|---|---|---|---|
+| 🟢 **Presentation defect over a stock licence** | **3** | `OpenOLAT` — two blank lines above `Apache License` | 🟢 **nothing** — ship it; the grant is verbatim |
+| 🔴 **Genuine code/corpus or per-path split** | **3** | `learning-commons-org/evaluators` — MIT code, `CC BY-NC-SA 4.0` corpora | 🔴 read both grants; the corpus may forbid shipping |
+| 🔴 **Non-OSI source-available** | **1** | `Oriole-FDU/Wisepen` — `BUSL-1.1` | 🔴 priced door — commercial licence required |
+| 🔴 **Grant asserted, not carried** | **1** | `frappe/education` — a 19 B `license.txt` | 🔴 no grant exists to rely on |
+
+🟢 **So the signal is real and the classifier is not.** `NOASSERTION` says only *"this is not
+the stock text I expected"*. 🔵 **The discriminator that works** is containment — does the
+payload hold a known licence's **operative body**, verbatim? — implemented as
+[`../ingest/operative-body.py`](../ingest/operative-body.py), **9/9 controls**, and it is
+window-free by construction, which is why it survives the decoration that defeats `licensee`.
+
+🔴 **The commercially sharp half of `Trend 65`:** a cosmetic `NOASSERTION` makes a **permissive**
+artefact read as the riskiest thing on the shelf, in the single field that SBOM generators,
+licence scanners, GitHub's own sidebar and procurement reviewers all read. 🔴 **Three of this
+base's platforms are in that state, and one of them is the recommended EMEA base.** The failure
+is silent, it is in the safe-looking direction for the tool and the unsafe direction for the
+deal, and **no amount of reading the README fixes it** — `OpenOLAT`'s README is not where its
+Apache-2.0 grant lives.
+
+🟢 **The inverse exists too, and it is the reason this cannot be a one-way rule.**
+`openeducat/openeducat_erp` (901★) is the row where the platform field is **right** and this
+base's shelf was under-informed: it asserts LGPLv3 plus the full GPL text and ships **~10 %** of
+it, truncated before `END OF TERMS AND CONDITIONS`. 🔵 **A trend that said "distrust
+`NOASSERTION`" would have shipped that defect.** The trend is: **`NOASSERTION` is a question,
+and the payload is where it gets answered.**
+
+### 🟢 `Trend 66` — the famous-curriculum mis-attribution, observed twice in one return
+
+🔵 `Gap 554-G` carried two APAC leads from one aggregator: Indonesia's **Merdeka Belajar** and
+the Philippines' **MATATAG**, both named as shaping national AI-adoption guidance. 🟢 **Both
+grounded this pass, and both named the wrong instrument.**
+
+| Country | Aggregator named | The instrument that actually carries AI |
+|---|---|---|
+| 🇮🇩 Indonesia | 🔴 *Merdeka Belajar* (the flagship curriculum) | 🟡 **`Permendikdasmen No. 13/2025`** — an elective inserted between Arts. 32–33; schools may stay on **Kurikulum 2013 *or* Merdeka** |
+| 🇵🇭 Philippines | 🔴 *MATATAG* (the flagship curriculum) | 🟢 **`DepEd Order No. 003, s. 2026`** + **`CHED Memorandum Order No. 21, s. 2026`** — held on this base since `Gap 488-Q` |
+
+🟢 **The shape:** national AI-in-education content arrives through a **separate, later,
+subject-level instrument** — a regulation creating an elective, a department order setting
+rules — while the aggregator attaches it to **the curriculum brand a reader will recognise**.
+🔵 **Operational rule for this base:** a regional claim that names a famous curriculum should be
+treated as **probably mis-attributed** until the subject-level instrument is found, and the
+subject-level instrument is what a client engagement must be scoped against — because the two
+imply different work. A curriculum mandate creates a **procurement**; Indonesia's elective
+creates a **teacher-readiness problem**, which is a different deliverable at a different price.
+
+🔴 **And the attestation limit that bounds both rows:** all four hosts carrying the primary
+sources — `antaranews.com`, `bgtksumsel.kemendikdasmen.go.id`, `region8.deped.gov.ph`,
+`iesalc.unesco.org` — are **`000`** through this session's egress proxy. 🔵 Both rows are
+**ATTRIBUTED to the search channel, asserted by nothing**. `Gap 555-G`.
+
+
 ## 🆕 `p554` — `2026-10-30` — **🟢 `Trend 63`: ABOUT **ONE EDUCATION REPOSITORY IN TEN** CONTRADICTS ITS OWN DOCUMENTATION ABOUT ITS LICENCE — MEASURED ON 84, NOT ARGUED. 🟢 `Trend 64`: IN EDUCATION THE GOVERNING GRANT IS INCREASINGLY THE **CORPUS** LICENCE, NOT THE CODE LICENCE, AND THE CODE LICENCE IS THE ONE EVERY INDEX SHOWS.**
 
 🔴 **Gate posture: `make hooks` DENIED** (`Code from External`) — thirteenth denial in

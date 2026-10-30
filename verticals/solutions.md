@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p555` — `2026-10-30` — **🔴 THREE VERTICAL-SHELF PLATFORMS ARE **INVISIBLE TO EVERY TOOL THAT READS GITHUB'S LICENCE FIELD** — INCLUDING `OpenOLAT`, WHICH THIS PAGE RECOMMENDS AS *"THE BEST EMEA BASE"* ON THE STRENGTH OF A GRANT GITHUB WILL NOT SHOW. 🔴 AND `OpenEduCat` SHIPS ~10 % OF THE LICENCE TEXT IT ASSERTS.**
+
+🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 Three page-shape gates run
+directly at `HEAD`, all green — including `gate-tables`: *10 shelves, no row published as a header*.
+
+### 🔴 The procurement finding, stated first because it is the one that costs money
+
+🔵 This page's `OpenOLAT` row reads: *"**Apache-2.0** · 449★ — Fork it. Swiss-origin,
+Apache-2.0, assessment built in — **the best EMEA base when the deliverable must include
+proprietary extensions.**"* 🟢 **The row is correct.** The payload carries the **verbatim**
+Apache-2.0 operative body (proven in [`../repos/foundations.md`](../repos/foundations.md#-p555--2026-10-30)).
+
+🔴 **And GitHub's licence field for it is `NOASSERTION`.** So on the repository sidebar, in the
+GitHub API, and in **every SBOM generator, licence scanner and procurement tool keyed to that
+field**, `OpenOLAT` has *no licence*. 🔴 A client's reviewer checking the one place reviewers
+check sees nothing, and the most permissive outcome available on this shelf reads as the
+riskiest.
+
+| Platform | ★ | What this shelf says | What the platform field says | Verdict |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 449 | **Apache-2.0** | 🔴 `NOASSERTION` | 🟢 shelf **right**, field silent — **cosmetic** (two blank lines + truncated appendix) |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | 24 | Apache-2.0 | 🔴 `NOASSERTION` | 🟢 shelf **right**, field silent — **cosmetic** (whole file indented) |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 981 | MIT, composite per path | 🔴 `NOASSERTION` | 🟢 shelf **right** — MIT verbatim, `docs/` carved to `CC-BY-SA-4.0` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 901 | **LGPL-3.0** · 8 241 B | 🔴 `NOASSERTION` | 🔴 **field right, shelf under-informed** — see below |
+
+🟢 **Three of four: the shelf is more accurate than the platform.** 🔴 **The fourth inverts.**
+
+### 🔴 `OpenEduCat` asserts a licence it does not carry
+
+🔵 Its `LICENSE` says it is published under **LGPLv3**, *"and since the LGPL is a set of
+additional permissions on top of the GPL, the text of the GPL is included"*. 🔴 Canonical
+LGPL-3.0 is **42 098 B** and GPL-3.0 is **34 674 B**; this file is **8 241 B**. It carries
+`0. Additional Definitions` and `TERMS AND CONDITIONS` and **never reaches
+`END OF TERMS AND CONDITIONS`** — cut off mid-licence, holding **~10 %** of what it asserts.
+
+🟡 **What this does and does not change for a deliverable.** The project's **intent** is
+unambiguous — it names LGPLv3 in its own first sentence — and intent is what a court reads
+first. 🔴 But a copyleft grant whose text is **not carried** cannot be complied with by
+redistribution of that text, which is LGPL-3.0 §4's own requirement. 🔵 **Practical reading:
+treat `OpenEduCat` as LGPL-3.0 for risk purposes and as DEFECTIVE for compliance purposes** —
+a deliverable that vendors it must ship a complete LGPL-3.0 text of its own, not the one
+upstream provides. Registered as `Gap 555-C`.
+
+### 🟢 The MIT LMS layer this pass's own search said does not exist
+
+🔵 This pass's vertical query (`open source platform education LMS SIS MIT Apache 2026`)
+concluded: *"I did not find an MIT-licensed LMS or SIS in these results."* 🔴 **Refuted from
+this base's own shelf, first-hand on the platform field:**
+
+| Platform | ★ | `spdx_id` | Class |
+|---|---|---|---|
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | **1 162** | 🟢 **MIT** | offline-first LMS — the strongest permissive base for low-connectivity deployment |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | **823** | 🟢 **MIT** | interactive learning + automated assessment (TUM) |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 471 | 🟢 **Apache-2.0** | the component SDK — permissive even where Open edX core is AGPL-3.0 |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 449 | 🟢 **Apache-2.0** (field silent) | full LMS, assessment built in |
+
+🔵 **Why the search missed them:** vendor comparison blogs rank by market share, and the
+permissive platforms are not the popular ones. 🟢 **Standing conclusion reinforced:** on the
+licence axis, prose search is a *worse* reader than this base's own shelf, and the shelf should
+not be re-derived from it.
+
+### 🟢 The copyleft shape of the deployable platform layer, re-read on the field
+
+| `spdx_id` | Platforms | Reach for a Globant deliverable |
+|---|---|---|
+| `MIT` | Kolibri, Artemis, `frappe/frappe` | 🟢 unrestricted — proprietary extensions fine |
+| `Apache-2.0` | OpenOLAT, XBlock, feedbacksystem | 🟢 unrestricted + express patent grant |
+| `ECL-2.0` | Sakai | 🟡 Apache-derived, **patent grant scoped to the contributor's institution** — narrower than Apache-2.0 |
+| `GPL-2.0` / `GPL-3.0` | i-educar, RosarioSIS, Moodle, Chamilo, ILIAS, ERPNext | 🟡 deploy freely; **distribution** of a modified work carries source obligations |
+| `LGPL-3.0` | OpenEduCat | 🟡 linked modules only — 🔴 **and the text is defective** |
+| `AGPL-3.0` | Open edX, Canvas, `frappe/lms` | 🔴 **network use is distribution** — the hosted-deliverable trap |
+| `NOASSERTION` | — | 🔴 **never a licence verdict.** 3 of 4 on this page are cosmetic |
+
+
 ## 🆕 `p554` — `2026-10-30` — **🔴 A VERTICAL-SHELF PLATFORM'S README NEVER STATES ITS OWN LICENCE — THE ONLY LICENCE SENTENCE IN `h5p/h5p-php-library`'s `README.txt` IS ABOUT A **FONT**. 🟢 THE DEPLOY-VS-RESELL LINE GAINS A THIRD CHANNEL, AND ONE SPELLING COLLISION ON THIS PAGE IS FIXED.**
 
 🔴 **Gate posture: `make hooks` DENIED** (`Code from External`), thirteenth denial in

@@ -4,6 +4,91 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p555` — `2026-10-30` — **two recipes: a four-channel licence clearance that catches the false alarms `P609` would have raised, and the Indonesian teacher-readiness pilot the elective (not a mandate) actually calls for**
+
+🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 Three page-shape gates run
+directly at `HEAD`, all green.
+
+### 🟢 `P611` — Four-channel licence clearance, with the cosmetic/substantive split (any region, 1 week)
+
+🔵 **What this supersedes.** `P609` made a clearance gate executable against three channels —
+payload, README, manifest. 🔴 **Run on 79 education repositories it would raise 8 alarms, and
+3 of the 8 are false** — permissively licensed artefacts that GitHub's licence field declines to
+classify for whitespace reasons. 🔴 A clearance report with a 37 % false-alarm rate on its
+findings is not sellable twice.
+
+🟢 **The wiring, concretely:**
+
+1. **Harvest the platform field.** MCP `search_repositories`, `repo:`-filtered, ≤20 slugs per
+   call, `minimal_output: false`. 🔴 `curl` to `api.github.com`, `github.com` HTML,
+   `gh api repos/…` and `gh api search/repositories` are **all 403** — see the transport table in
+   [`../agents/top.md`](../agents/top.md#-p555--2026-10-30). Commit the result to `evidence/`.
+2. **Join it to the three-channel run:**
+   `python3 -I ingest/platform-channel.py evidence/doc-channel.<date>.tsv evidence/platform-harvest.<date>.tsv`
+   🟢 Prints `Gap 504-A`'s queried-vs-returned reconciliation to `stderr` on every run.
+3. **Split every `PLATFORM-DECLINES` row:**
+   `python3 -I ingest/operative-body.py <slug>:<branch> …`
+   🟢 `COSMETIC` → the operative body is verbatim present; ship, and attach the attestation.
+   🔴 `SUBSTANTIVE` → a human reads it.
+4. **Two-probe every absent address.** 🔴 The search index omitted **5 of 84** live
+   repositories. `git ls-remote https://github.com/<slug>` is the discriminator; an index
+   absence is never a repository absence.
+5. **Deliver two artefacts, not one.** The clearance table, **and** a per-platform *licence
+   attestation* for each `COSMETIC` row — the one-page proof that the grant is Apache-2.0 or MIT
+   when the client's own scanner says `NOASSERTION`.
+
+🟢 **Why step 5 is the billable half.** The client's blocker is not "what is the licence" — it is
+"my SBOM tool says this has none and legal will not sign". 🔵 On this shelf that is
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0 verbatim, field silent),
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) (same) and
+[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (MIT verbatim, `docs/` carved
+to `CC-BY-SA-4.0`).
+
+🟢 **Upstream contribution that costs an hour and pays every future engagement:** `OpenOLAT`'s
+`LICENSE` declines only because of **two leading blank lines and a truncated appendix**. A
+whitespace patch makes GitHub's field resolve to `Apache-2.0` for every downstream consumer.
+🔵 Same for `feedbacksystem` (de-indent the file).
+
+🔴 **What `P611` must not claim.** Containment is **not** governance — `pupilfirst` contains MIT
+verbatim *and* carves out `docs/`; pair every `COSMETIC` verdict with `grant-verdict.py`'s
+`composite()`. The operative-body vocabulary is **6 families** and does **not** cover CC, BSD,
+ECL or BUSL (`Gap 555-B`), so a `SUBSTANTIVE` verdict on a CC-licensed corpus means *"unknown"*,
+not *"bad"*.
+
+### 🟢 `P612` — Indonesia: provincial teacher-readiness on an offline-first MIT base (APAC, 6–8 weeks)
+
+🔵 **Why this is not an LMS engagement.** `Gap 554-G`'s grounding changed the shape of the work.
+Indonesia's school AI content is **`Permendikdasmen No. 13/2025`** — Coding and AI as an
+**elective**, offerable from grade 5 SD / 7 SMP / 10 SMA, gradual and **conditional on each
+school's readiness**. 🔴 **An elective is not a procurement.** Nobody is obliged to buy a
+platform; every school independently discovers it has no one who can teach the subject.
+
+🟢 **The stack, named:**
+
+| Layer | Repository | `spdx_id` | ★ | Why this one |
+|---|---|---|---|---|
+| Delivery | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT** | 1 162 | the **only** offline-first *and* permissive platform on these shelves — 38 provinces of uneven connectivity, and MIT permits a ministry-specific build with no source obligation |
+| Tutoring | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** | 60 | an MCP server turning any LLM into an ITS; swap the model for an on-device one where bandwidth fails |
+| Mastery model | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 🟢 **MIT** | 291 | Bayesian Knowledge Tracing — runs offline, no inference call per interaction |
+| Content generation | [`satvik314/educhain`](https://github.com/satvik314/educhain) | 🟢 **MIT** | 387 | lesson/assessment generation for teachers authoring their own elective material. 🔴 **pushed `2026-05-29` — 5 months stale; pin the commit** |
+| Assessment | [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** | 471 | permissive component SDK, usable even though Open edX core is AGPL-3.0 |
+
+🟢 **Wiring.** Kolibri is the offline channel and the sync boundary: content packs and learner
+records move by USB or intermittent link. `pyBKT` runs **inside** the Kolibri deployment, so
+mastery estimates need no network. `tutor-mcp` sits behind a provincial gateway, used only where
+connectivity exists, and degrades to `pyBKT`-driven practice where it does not. `educhain` runs
+**centrally, not at the edge** — a teacher-facing authoring service producing content packs that
+Kolibri distributes. 🔵 **Every row is MIT or Apache-2.0**, so a ministry build may be extended
+and redistributed with no copyleft reach — which is the whole reason not to start from Moodle
+(GPL-3.0) or Open edX (AGPL-3.0) here.
+
+🔴 **Stated as a bet, not a fact.** The Indonesian regulation, the one-million-teacher training
+plan and ImajiNation 2026 all reach this base **through the search channel only** —
+`bgtksumsel.kemendikdasmen.go.id` and `antaranews.com` are `000` through this session's proxy
+(`Gap 555-G`). 🔵 **Before this pattern is quoted to a client, the regulation's own text must be
+read.** The *stack* is verified first-hand on the platform field; the *demand* is not.
+
+
 ## 🆕 `p554` — `2026-10-30` — **two recipes: the clearance gate extended from one channel to three, and the APAC K-12 tutoring pilot this pass's three MIT rows make possible**
 
 🔴 **Gate posture: `make hooks` DENIED** (`Code from External`) — thirteenth denial in

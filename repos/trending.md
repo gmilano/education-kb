@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p555` — `2026-10-30` — **🟢 "TRENDING" IS READABLE AGAIN — `p554`'s *"the trending channel itself is now partly unreadable"* WAS A TRANSPORT VERDICT, NOT A CHANNEL ONE. 🔴 BUT THE INDEX THAT CARRIES IT **SILENTLY OMITS 5 OF 84 LIVE REPOSITORIES**, SO FIRST-HAND IS STILL NOT THE SAME AS COMPLETE.**
+
+🔴 **Gate posture: `make hooks` denied.** 🟢 Three page-shape gates green at `HEAD`.
+
+### 🟢 What changed about this page's channel
+
+🔵 `p554` wrote: *"`api.github.com` AND `github.com` HTML both return 403, so trending can only
+be observed through third-party digests."* 🟢 **The first clause is true and the conclusion is
+not.** `ACTION VV` (`p241`) recorded that the GitHub search API answers **200 via the MCP
+transport** from exactly this environment. It still does.
+
+🔵 **So this page's figures are first-hand again**, and per `ACTION VV` the transport is named
+beside each: *MCP `search_repositories`, `repo:`-filtered, `2026-10-30`*.
+
+### 🔴 The index omission rate, measured
+
+🟢 **84 addresses queried, 79 returned, `incomplete_results: false` on every call.**
+🔴 **5 omitted — 6.0 %** — and all five answer `git ls-remote`:
+[`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) (25 refs),
+[`PKulal/LMS`](https://github.com/PKulal/LMS) (6),
+[`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) (201),
+[`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) (224),
+[`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) (5).
+
+🔵 **An address absent from a search index is a fact about the index** — this base's own
+sentence, and it now has a rate attached to it. 🟢 `packbackbooks` returns **224 refs**, the
+identical figure a prior pass recorded when it last went missing: **the omission is stable.**
+
+🔴 **Consequence for every trend claim on this page:** a *"this repository is new"* verdict
+derived from the index is a lower bound, and a *"this repository is gone"* verdict derived from
+the index alone is **not supported at all**. The two-probe discriminator — index plus
+`ls-remote` — is the only form that distinguishes them, and `platform-channel.py` now prints
+the reconciliation on every run.
+
+### 🔴 Staleness, which the field carries and no digest does
+
+🟢 `pushed_at`, read first-hand, puts three shelf-relevant platforms outside a month:
+
+| Repository | `pushed_at` | age |
+|---|---|---|
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `2026-04-30` | 🔴 **~6 months** |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | `2026-08-14` | 🟡 ~2.5 months |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | `2026-05-29` | 🔴 **~5 months** |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `2025-12-09` | 🔴 **~11 months** |
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | `2026-06-29` | 🔴 **~4 months** |
+
+🔵 **`instructure/canvas-lms` is the one that should change a recommendation**: 6 892★, AGPL-3.0,
+and the public mirror has not been pushed in six months. 🟡 **Not adopted as abandonment** —
+Instructure develops Canvas internally and the open mirror has lagged before — but a six-month
+public-mirror gap is a fact a client engagement must be told, and no aggregator digest carries
+it.
+
+
 ## 🆕 `p554` — `2026-10-30` — **🔴 THE TRENDING CHANNEL ITSELF IS NOW PARTLY UNREADABLE: `api.github.com` AND `github.com` HTML BOTH RETURN **403** ON THIS SESSION, SO *TRENDING* CAN ONLY BE OBSERVED THROUGH THIRD-PARTY DIGESTS. 🟢 FOUR REPOSITORIES WERE STILL RESOLVED AND READ FIRST-HAND OVER `raw.`, WHICH IS THE ONLY CHANNEL LEFT.**
 
 🔴 **Gate posture: `make hooks` DENIED** — thirteenth in fourteen. 🟢 Four gates run

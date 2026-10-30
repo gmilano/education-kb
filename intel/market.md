@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p555` — `2026-10-30` — **🟢 `Gap 554-G` CLOSED, AND BOTH LEADS NAMED THE WRONG INSTRUMENT: INDONESIA'S AI CONTENT IS NOT IN MERDEKA BELAJAR AND THE PHILIPPINES' IS NOT IN MATATAG. 🔴 SIXTEENTH CONSECUTIVE DEMAND SATURATION — AND THE ONLY NEW REGULATORY FACT THIS PASS IS THE ONE THE GAP REGISTER ASKED FOR.**
+
+🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 `gate-region-headings` was
+run directly at `HEAD` and returns **`total 0`** — the canonical block carries all five
+vocabulary values, which is the fix `p554` made and could not verify post-splice.
+🟢 `gate-dates` also green: **0 `ASSERTED`**.
+
+### 🟢 `Gap 554-G` closed — and the aggregator's error has a shape worth naming
+
+🔵 `p554` received two APAC curriculum leads from a single low-reliability aggregator with no
+primary citation, refused both, and asked a successor to ground them against the Indonesian and
+Philippine ministries' own documents. 🟢 **Both are now resolved, and in both cases the
+curriculum the aggregator named is the wrong instrument.**
+
+🔴 **The Philippines lead was REDUNDANT, not merely unverified.** This base has held the
+Philippines' actual AI instruments since **`Gap 488-Q`**: **`DepEd Order No. 003, s. 2026`** and
+**`CHED Memorandum Order No. 21, s. 2026`**, plus **Project AGAP.AI** and the **₱100M** AI
+centre allocation. 🔴 **MATATAG is not among them.** This pass's dedicated search for a
+MATATAG–AI link returned *no source tying an AI memorandum to MATATAG learning areas* — the
+closest is a research paper that cites the MATATAG kindergarten guide while discussing the
+separate AI guidelines. 🟢 **So `p554` was right to refuse it, and the reason is stronger than
+it recorded: this base already held the better answer.**
+
+🟡 **The Indonesia lead is GENUINELY NEW — and it is not Merdeka Belajar.** `Permendikdasmen`
+is **0 occurrences** on this base before this pass.
+
+| | As the aggregator framed it | As reported by the search channel |
+|---|---|---|
+| Instrument | 🔴 *"Merdeka Belajar curriculum rollout"* | 🟡 **`Permendikdasmen No. 13/2025`** — a regulation inserting one article between Arts. 32–33 |
+| Status | 🔴 implied a new curriculum | 🟡 reportedly **explicitly not** a new curriculum; schools may remain on **Kurikulum 2013 *or* Merdeka** |
+| Subject | 🔴 implied curriculum-wide | 🟡 **Coding and AI as an ELECTIVE** (*mata pelajaran pilihan*) |
+| Reach | — | 🟡 offerable from **grade 5 SD / grade 7 SMP / grade 10 SMA**, from the **2025/2026** year, gradual and subject to each school's readiness |
+
+🔵 **Written ATTRIBUTED, not asserted, and here is why.** All four hosts carrying the primary
+sources for these claims are **`000` — no connect — through this session's egress proxy**:
+`antaranews.com`, `bgtksumsel.kemendikdasmen.go.id`, `region8.deped.gov.ph` and
+`iesalc.unesco.org`. 🔴 **That reproduces this base's standing policy-attestation gap for at
+least the second time** *(previously: "four of four hosts carrying this pass's policy primary
+sources are `000` on both channels")*. 🔵 **The durable conclusion, now with two
+observations: this session shape cannot attest education-policy primary sources at all**, and a
+pass must stop promising it. `Gap 555-G`.
+
+🟢 **The generalisable finding — an error shape, not a fact.** In both countries the aggregator
+attached AI policy to **the most recognisable curriculum brand in that country** (Merdeka
+Belajar; MATATAG) when the AI content in fact arrives through a **separate, later, subject-level
+instrument** that is curriculum-agnostic. 🔵 A regional claim naming a famous curriculum should
+therefore be treated as **probably mis-attributed** until the subject-level instrument is found.
+Recorded as `Trend 66`.
+
+### 🔴 The sixteenth saturation, and what it is now evidence of
+
+🟢 **Searches run, globally and once per region**, as the standing encargo requires:
+`top open source AI agents education 2026 github MIT` · `github trending education AI 2026` ·
+`open source platform education LMS SIS MIT Apache 2026` · `AI education industry trends 2026` ·
+and `AI education {North America | EMEA | APAC | LATAM} 2026 adoption regulation players`.
+
+🔴 **Novelty of every substantive return, tested against this base rather than assumed:**
+
+| Return | Occurrences already on this base | New? |
+|---|---|---|
+| UNESCO IESALC/UNU-IAS: 200 institutions, 19 countries, **87 %** use AI, **26 %** have a strategy | 🔴 held across 7 files | no |
+| Universidad de los Andes: **716** regulatory instruments, 23 countries | 🔴 held | no |
+| Regulation **(EU) 2026/1744** → Annex III to **2 December 2027** | 🔴 held (188 hits) | no |
+| NY **A 9190**; **K-12 AI Literacy and Readiness Act of 2026**; **STUDENTS FIRST Act** | 🔴 held | no |
+| Gallup **60 %** of US teachers; Maryland/Idaho/Oklahoma/Virginia | 🔴 held | no |
+| Korea **AI Basic Act** in force Jan 2026, **MSIT** 2026 grace period | 🔴 held | no |
+| Vietnam decision listing **education** among six high-risk sectors | 🔴 held | no |
+| PH **DepEd Order 003 s. 2026**, **AGAP.AI**, **₱100M** | 🔴 held since `Gap 488-Q` | no |
+| 🟡 **ID `Permendikdasmen No. 13/2025`** | 🟢 **0** | 🟢 **yes — and only because `554-G` asked** |
+
+🔵 **The reading that matters: the demand channel did not merely repeat itself — the one
+productive query this pass was the one the gap register directed.** A register entry
+out-performed four regional sweeps. 🟢 That is the strongest case yet for spending the first
+searches of a pass on open asks rather than on the standing query set.
+
+
 ## 🆕 `p554` — `2026-10-30` — **🔴 FIFTEENTH CONSECUTIVE DEMAND SATURATION, ALL FOUR LEGS BLANK TOGETHER FOR THE FOURTH TIME. 🟢 THE SUPPLY SIDE MOVED AND IT MOVED **ONE** REGION: THREE NEW MIT AGENT ROWS, ALL APAC. 🟢 `gate-region-headings` HAD BEEN RED SINCE `p548` BECAUSE THIS PAGE'S CANONICAL BLOCK WAS MISSING `### Global` — FOUND, AND FILLED WITH CONTENT.**
 
 🔴 **Gate posture: `make hooks` DENIED** (`Code from External`) — thirteenth denial in
@@ -254,6 +330,35 @@ automation** the defensible scope, not assessment.
 🔴 **Supply: none.** No North-America-placed permissively granted education artefact this
 pass.
 
+
+#### 🆕 `p555` — the permissive LMS layer is the North America play, and the licence field hides it
+
+🔴 **Demand side: no new fact.** Every NA return this pass — NY **A 9190**, the **K-12 AI
+Literacy and Readiness Act of 2026**, the **STUDENTS FIRST Act of 2026**, Gallup's **60 %** of
+US teachers, the four states (**Maryland, Idaho, Oklahoma, Virginia**) requiring both state
+guidance and district policy — is already held on this base. 🔵 Seventeenth pass in which the
+NA regulatory surface thickens and the NA *supply* does not move.
+
+🟢 **Supply side, new and measured:** the two strongest **MIT**-licensed LMS-class platforms on
+these shelves — [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+(**1 162★**) and [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) (**823★**) — plus
+[`openedx/XBlock`](https://github.com/openedx/XBlock) (**471★**, Apache-2.0).
+
+🟢 **The opportunity is procurement-shaped, not engineering-shaped.** US districts and
+universities are the market where a licence review is a **gate**, and this pass measured that
+three shelf platforms return `NOASSERTION` on the field every scanner reads — `OpenOLAT`
+(Apache-2.0 verbatim), `thm-mni-ii/feedbacksystem` (Apache-2.0 verbatim) and `pupilfirst`
+(MIT verbatim). 🟢 **Deliverable:** a one-page licence attestation per platform, generated by
+[`../ingest/operative-body.py`](../ingest/operative-body.py), that proves the operative body is
+present when GitHub will not say so. 🔵 That is a billable artefact in a market with an
+**April 2026 ADA accessibility deadline** already forcing platform review.
+
+🔴 **And one recommendation to re-check before any NA engagement:**
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) (6 892★, AGPL-3.0) has a
+public mirror **not pushed since `2026-04-30`** — six months. 🟡 Not abandonment; Instructure
+develops internally. But AGPL-3.0 plus a six-month mirror gap is a combination a client must be
+told about before it is designed around.
+
 ### EMEA
 
 🟢 **The only region that produced claims this base did not already hold.** Both are
@@ -460,6 +565,37 @@ a lead to verify.**
 the Act and remain accountable when they use third-party tools — which makes Annex III
 documentation and teacher AI-literacy material **in-scope deliverables**, not upsells.
 
+
+#### 🆕 `p555` — the EMEA base this page recommends is invisible to EMEA's own compliance tooling
+
+🔴 **Demand side: no new fact.** Regulation **(EU) 2026/1744** moving stand-alone Annex III
+high-risk obligations to **2 December 2027** (with embedded AI to **2 August 2028**), Article 50
+transparency duties from **2 August 2026**, and the Council of Europe's planned *Legal
+Instrument on AI in Education* are all already held. 🔵 One unadopted lead: a Spanish-language
+outlet claims the Commission approved binding AI-in-education rules on **15 April 2026**,
+effective **1 January 2027**. 🔴 **Uncorroborated by every other source in the same return and
+NOT adopted** — it would contradict the `2026/1744` deferral this base holds from stronger
+sources.
+
+🟢 **Supply side, and it is the sharpest regional finding this pass.**
+[`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (**449★**) is this page's
+recommended EMEA base precisely because it is **Apache-2.0** — permissive enough to carry
+proprietary extensions into a public-sector deliverable. 🟢 **Proven this pass: its payload
+carries the verbatim Apache-2.0 operative body.** 🔴 **And GitHub's licence field for it is
+`NOASSERTION`, for two blank lines and a truncated appendix.**
+
+🔴 **Why that bites hardest in EMEA.** The AI Act's high-risk regime requires **technical
+documentation and provenance** for a deployed education system; an EU public-sector procurement
+runs an SBOM and a licence scan; both read the field, and the field says nothing. 🟢 **The
+engagement:** Apache-2.0 attestation plus AI Act Annex IV documentation for an `OpenOLAT`
+deployment, with the licence defect fixed **upstream** — a two-line whitespace patch to
+`OpenOLAT/LICENSE` would make the field resolve and is the cheapest contribution on this shelf.
+
+🟡 **One EMEA platform to price differently:** [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)
+(1 240★) is **`ECL-2.0`**, confirmed first-hand this pass against sources that disagreed. ECL-2.0
+is Apache-derived but its **patent grant is scoped to the contributor's own institution** —
+materially narrower than Apache-2.0 for a consultancy shipping to a third party.
+
 ### APAC
 
 🔴 **Nothing new, and the shape of the blank is worth stating precisely.** The leg returned
@@ -630,6 +766,43 @@ schools):** India **26 %**, Thailand **25 %**, Singapore **28 %**, Japan **29 %*
 content labelling) creates **demand for the artefact class the region also supplies** —
 university-origin teaching platforms. 🔴 And it is the second consecutive pass where that
 supply arrives with a licence problem attached.
+
+
+#### 🆕 `p555` — Indonesia's AI mandate is an ELECTIVE bolted on by regulation, not a curriculum
+
+🟡 **`Gap 554-G` closed here.** Indonesia's school-level AI content does **not** arrive through
+Merdeka Belajar. As reported by this pass's search channel — 🔴 **attributed, because
+`bgtksumsel.kemendikdasmen.go.id` and `antaranews.com` are both `000` through this session's
+proxy** — the instrument is **`Permendikdasmen No. 13/2025`**, which inserts a single article
+between Arts. 32–33 creating **Coding and Artificial Intelligence as an ELECTIVE**
+(*mata pelajaran pilihan*), offerable from **grade 5 SD / 7 SMP / 10 SMA** from the **2025/2026**
+year, gradual and conditional on school readiness — and schools may remain on **Kurikulum 2013
+or Merdeka** either way.
+
+🟢 **Why the elective-not-mandate distinction is the commercially important half.** A mandate
+creates a procurement; an **elective** creates a **readiness problem**, because every school
+decides separately and most lack a teacher who can teach it. 🔵 Reported alongside: a planned
+**Coding-AI training programme for one million teachers** (older plan, progress unconfirmed) and
+**ImajiNation 2026**, a Kemendikdasmen/Assemblr EDU/Samsung visual-coding competition targeting
+**11 000+ participants from 2 000 schools across 38 provinces**. 🔴 None of these is
+first-hand-attested; all are search-channel returns.
+
+🟢 **The opportunity that follows from the shape:** not an LMS, but **teacher-enablement at
+provincial scale, offline-capable**. [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+(**1 162★, MIT**, pushed `2026-10-30`) is the only platform on these shelves built offline-first
+*and* permissively licensed — the right base for 38 provinces of uneven connectivity, and MIT
+means an Indonesian ministry deployment can be extended without source obligations.
+
+🔴 **Philippines: the lead was redundant.** MATATAG is **not** the Philippine AI instrument;
+`DepEd Order No. 003, s. 2026` and `CHED Memorandum Order No. 21, s. 2026` are, and this base has
+held both since `Gap 488-Q`. 🔵 Also held: Project **AGAP.AI** and the **₱100M** AI-centre
+allocation; newly reported this pass but **not adopted** (host `000`): **RM No. 250, s. 2026**
+rolling out *AI Ready ASEAN Philippines* to up to **1.5M** learners, teachers and parents in
+2026, and **MIT assisting the DepEd curriculum review free of charge**.
+
+🟡 **Korea / Vietnam, held, no change:** Korea's **AI Basic Act** in force January 2026 with
+**MSIT** treating 2026 as a guidance-first grace year; Vietnam's decision listing **education**
+among six high-risk sectors, automated assessment named.
 
 ### LATAM
 
@@ -839,6 +1012,42 @@ Brazil as nearly half the cohort, naming **Teachy** (AI lesson preparation, expa
 Asia) and Mexico's **Ginia** (AI-driven employability). 🔴 **None of these is open source**, so
 none becomes a shelf row.
 
+
+#### 🆕 `p555` — LATAM's supply blank is unchanged, and this pass can finally say it is not an instrument artefact
+
+🔴 **Demand side: no new fact, and the saturation here is total.** UNESCO IESALC/UNU-IAS
+(**200** institutions, **19** countries, **87 %** using AI in at least one area, **26 %** with a
+formal strategy), Universidad de los Andes' **716** regulatory instruments across 23 countries,
+*">80 % initiated since 2023"*, **85 %** of countries with an AI strategy but **only Brazil and
+Colombia** allocating budget, the UNESCO **Regional Observatory on AI in Education** (launched
+14 April 2026, with CAF, CENIA, Cetic.br, ECLAC, Fundación Ceibal, Tecnológico de Monterrey,
+ProFuturo, IRCAI), Google/IDB's **$5M** Google.org funding, **AI Week LATAM 2026** with SoftServe
+and NVIDIA — 🔴 **every one of these is already held on this base.**
+
+🔴 **Supply side: still blank.** No new LATAM-origin permissive education repository this pass.
+🔵 The LATAM addresses this base carries remain
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) (**722★, GPL-2.0**, Brazil) and
+[`academico-sis/academico`](https://github.com/academico-sis/academico), with
+`startin-lab/brujula-educativa`, `dsvi-b/corretor-enem`, `LabSirius/TutorIA`, `cortega26/chile-hub`
+and `Dramoscuello/simic` in the long tail.
+
+🟢 **What this pass adds, and it is the thing `Gap 484-G` has been waiting for.** `484-G`
+recorded that *"LATAM discovery is instrument-limited, not region-limited — this base cannot
+distinguish 'LATAM builds nothing' from 'GitHub search cannot find it'"*. 🟢 **The index's
+omission rate is now measured: 5 of 84 queried addresses — 6.0 % — are absent from the search
+index while live on `git ls-remote`.** 🔵 **So the blank is real at the order of magnitude that
+matters.** A 6 % index blind spot cannot hide a LATAM supply layer; it can hide one or two
+repositories. 🔴 `484-G` is therefore **NARROWED, not closed** — its owner-location sweep is
+still owed — but the "the index is hiding the region" hypothesis is now **bounded at ~6 %** and
+can stop being offered as an explanation for a blank this wide.
+
+🟢 **The engagement this shape actually supports:** LATAM's constraint is **governance capacity**
+(87 % using AI, 26 % with a strategy) against **fiscal capacity** (only 2 of 23 countries
+budgeting). 🔵 The sellable artefact is an **AI-governance starter kit for a university or
+ministry** — policy templates, an accreditation-ready AI-literacy module, and a licence-clearance
+gate — built on `i-educar` or Moodle where an institution already runs one. 🔴 **Carried over
+unchanged from prior passes, because the demand channel produced nothing to revise it with.**
+
 ### Global
 
 🟢 **Added at `p554`, and it is content rather than a shim: this block was missing a
@@ -872,6 +1081,37 @@ pass's five true contradictions are exactly that shape
 the defect is in publishing practice, not in a jurisdiction. It is **not** a claim that
 demand is uniform across the four regions — the four regional subsections above carry that,
 and they disagree with each other considerably.
+
+
+#### 🆕 `p555` — the cross-region artefact is now a PAIR of instruments, and one of them refutes a verdict the other produces
+
+🟢 This base's standing cross-region opportunity is **licence clearance as a billable artefact**.
+🟢 **This pass makes it materially stronger, because a clearance report that only reads GitHub's
+licence field is wrong on 8 of 79 education repositories — and wrong in BOTH directions.**
+
+| Tool reads… | Gets `OpenOLAT` wrong | Gets `openeducat_erp` wrong |
+|---|---|---|
+| GitHub licence field alone | 🔴 **yes** — `NOASSERTION` on verbatim Apache-2.0 | 🟢 no — correctly declines |
+| A project's own README alone | 🟢 no | 🔴 **yes** — README asserts LGPLv3 |
+| **payload + platform + operative-body containment** | 🟢 **no** | 🟢 **no** |
+
+🟢 **The two instruments, both committed this pass:**
+[`../ingest/platform-channel.py`](../ingest/platform-channel.py) (joins the platform field to the
+three channels `doc-channel.py` reads; `PLATFORM-DISAGREES-WITH-PAYLOAD` = **0 of 79**) and
+[`../ingest/operative-body.py`](../ingest/operative-body.py) (separates a **cosmetic**
+`NOASSERTION` from a **substantive** one; **9/9 controls**).
+
+🟢 **Measured value of the pair, in one number:** of 8 `NOASSERTION` rows, **3 are cosmetic**
+(the artefact is permissively licensed and every scanner says otherwise) and **5 are
+substantive**, of which **one is a genuine defect in a 901★ platform** — `openeducat_erp`
+shipping ~10 % of the licence text it asserts. 🔵 A clearance engagement that finds three
+false alarms and one real defect in a shelf of 79 is **exactly** the result that justifies the
+line item, in any region.
+
+🔴 **And the limit, carried so no proposal overstates it:** containment is not governance, the
+platform harvest is not scriptable end-to-end (`Gap 555-A`), the operative-body vocabulary covers
+**6 families and not CC, BSD, ECL or BUSL** (`Gap 555-B`), and policy primary sources are
+unattestable on this session shape (`Gap 555-G`).
 
 ## 🆕 `p553` — `2026-10-30` — **🔴 FOURTEENTH CONSECUTIVE DEMAND SATURATION. 🔴 THE RETIRED `134/31` FIGURE RETURNED A **FIFTH** TIME AND IS STILL NOT ADOPTED. 🟢 EMEA GAINS ITS FIRST CURRICULUM-PLACED PERMISSIVE SUPPLY ROW. 🔴 LATAM'S SUPPLY BLANK IS **NOT** BROKEN — THE ONE ARTEFACT FOUND IS A CITATION SHELL WHOSE LICENCE CONTRADICTS ITSELF ON THREE CHANNELS.**
 

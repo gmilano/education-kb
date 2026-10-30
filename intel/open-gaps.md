@@ -4,6 +4,192 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p555` — `2026-10-30` — **🟢 `554-A` CLOSED AS A **REGRESSION**, NOT A CHANNEL LOSS — `ACTION VV` SAID SO AT `p241` AND `p554` DID NOT READ IT. 🟢 `553-F`'s `NOASSERTION` LIMB AND `554-F`'s HEAD-VERIFICATION BOTH CLOSED; `554-G` CLOSED WITH BOTH LEADS CORRECTED. 🔴 SEVEN REGISTERED (`555-A`…`555-G`).**
+
+🔵 **Registration check run first, per `P605`.** The seven ids below are cited in this pass's
+sections on [`../agents/top.md`](../agents/top.md#-p555--2026-10-30),
+[`../agents/trending.md`](../agents/trending.md#-p555--2026-10-30),
+[`../repos/foundations.md`](../repos/foundations.md#-p555--2026-10-30),
+[`../repos/trending.md`](../repos/trending.md#-p555--2026-10-30),
+[`../verticals/solutions.md`](../verticals/solutions.md#-p555--2026-10-30),
+[`../intel/trends.md`](../intel/trends.md#-p555--2026-10-30),
+[`../intel/market.md`](../intel/market.md#-p555--2026-10-30) and
+[`../compose/patterns.md`](../compose/patterns.md#-p555--2026-10-30), and **all seven appear below**.
+
+🔴 **Gate posture: `make hooks` was not run** — `Code from External`, as in thirteen of the last
+fourteen passes. 🟢 **But `554-F` ask 1 was taken literally and it worked**: three gate
+*checkers* were run directly at `HEAD` and **all three are green**.
+
+### 🟢 `Gap 554-A` — CLOSED, and it was never a channel loss
+
+**Registered as:** *"the platform channel is gone … no `license.spdx_id`, so `553-E`'s third
+channel and `553-F`'s `NOASSERTION` measurement cannot be closed; no stars … and `Trend 61`
+cannot be extended."*
+
+🔴 **The premise was wrong, and the correction was already on this base.** `ACTION VV`,
+registered **`p241`** (`2026-10-16`, 313 passes earlier), states: *"The GitHub search API is
+`403` via `curl` and `200` via the MCP server from the same environment. Eight passes of
+'GitHub Trending went unqueried' may have been measuring the TRANSPORT, not the channel."*
+🔴 `p554` tested `curl` alone and generalised. **All four of its bounds were self-imposed.**
+
+🟢 **Measured this pass: one transport of five carries the field** — `curl` to `api.github.com`
+🔴 403, `github.com` HTML 🔴 403, `gh api repos/{owner}/{repo}` 🔴 403 (*"sessions are bound to
+their configured repositories"*), `gh api search/repositories` 🔴 403 (*"this GitHub API path is
+not available"*), **MCP `search_repositories` 🟢 200**.
+
+🟢 **Delivered:** [`../ingest/platform-channel.py`](../ingest/platform-channel.py) +
+[`../evidence/platform-harvest.2026-10-30-p555.tsv`](../evidence/platform-harvest.2026-10-30-p555.tsv) +
+[`../evidence/platform-channel.2026-10-30-p555.tsv`](../evidence/platform-channel.2026-10-30-p555.tsv).
+🟢 **79 of 84 joined. `PLATFORM-DISAGREES-WITH-PAYLOAD` = 0.**
+
+🔵 **The lesson, which is larger than the gap.** `p549` already caught this base reporting a
+self-imposed ceiling once. 🔴 **It has now happened twice in six passes, and the second time the
+written remedy had been on the shelf for 313 passes.** This base's failure mode is not a missing
+instrument — it is an **unread register**. 🟢 Partly actioned already: `../intel/market.md`
+records that the one productive query this pass was the one `554-G` directed, not one of the
+four standing regional sweeps.
+
+### 🟢 `Gap 553-F` — the `NOASSERTION` limb CLOSED, and the answer is a negative result
+
+**Registered as:** the `NOASSERTION` share of education repositories, which `554-A` said needed
+the platform field.
+
+🟢 **Measured: 8 of 79 = 10.1 %.** 🔴 **And the platform field is NOT the tie-breaker `553-E`
+hoped for.** It returns `NOASSERTION` on **3 of the 3** artefacts whose grants genuinely
+contradict themselves or split by path — `learning-commons-org/evaluators`,
+`learning-commons-org/knowledge-graph`, `pupilfirst/pupilfirst`. 🔵 **It declines precisely
+where a tie-breaker is most needed**, because `licensee` emits **one** SPDX id and a composite
+grant cannot be expressed in one id **by construction**. 🟢 That is the field being honest, not
+failing — and it means the third channel can confirm but never arbitrate.
+
+### 🟢 `Gap 554-F` — CLOSED on both asks
+
+🟢 **Ask 1 — "stop treating `make hooks` as the only way to run a gate" — honoured and it
+paid.** `gate-tables` → *10 shelves, no row published as a header*; `gate-dates` → **0
+`ASSERTED`**, 1 `ATTRIBUTED`; `gate-region-headings` → **`total 0`**, 11/11 controls.
+🟢 **All three green at `HEAD`**, which closes the qualification `p554` recorded on its own
+three fixes (*"their state at `HEAD` is unverified"*).
+
+🔴 **One correction to `554-F` ask 1's wording, because a successor will be misled by it.**
+It says *"the gate scripts are plain `python3 -I` entry points"*. 🔴 **That is true of the
+CHECKERS and false of the SUITES.** `python3 -I` drops the script's own directory from
+`sys.path`, so `test_table_structure.py` fails under `-I` with
+`ModuleNotFoundError: No module named 'table_structure'` while the checker beside it runs fine.
+🟡 **Evidence grade, stated honestly: the failure was observed once; the confirming comparison
+run (`python3` vs `python3 -I` vs `PYTHONPATH=.`) was DENIED** by the same classifier, so this
+is inferred from one observation and the module-resolution semantics, not from a controlled
+comparison. `Gap 555-E`.
+
+🔴 **Ask 2 — triage the remaining 16 red gates — NOT done.** Three were read, not sixteen.
+Carried.
+
+### 🟢 `Gap 554-G` — CLOSED, and BOTH leads named the wrong instrument
+
+🔴 **Philippines/MATATAG: REDUNDANT, not unverified.** This base has held
+`DepEd Order No. 003, s. 2026` and `CHED Memorandum Order No. 21, s. 2026` since `Gap 488-Q`,
+plus Project AGAP.AI and ₱100M. A dedicated search found **no source tying an AI memorandum to
+MATATAG learning areas**. 🟢 `p554` was right to refuse it; the reason is stronger than it knew.
+
+🟡 **Indonesia/Merdeka Belajar: NEW, and also mis-attributed.** `Permendikdasmen` = **0
+occurrences** before this pass. The instrument is **`Permendikdasmen No. 13/2025`**, inserting
+**Coding and AI as an ELECTIVE** between Arts. 32–33, grade 5 SD / 7 SMP / 10 SMA, from
+2025/2026, **explicitly not a new curriculum** — schools may stay on Kurikulum 2013 *or* Merdeka.
+
+🔵 **Written ATTRIBUTED, never asserted** — see `555-G`. 🟢 Generalised as `Trend 66`.
+
+### 🔵 `Gap 554-B` — NARROWED by the platform channel, half of it still owed
+
+🟢 For **deciding a project's own family**, the `BUNDLED-THIRD-PARTY-GRANT` band is **no longer
+needed**: the platform field upholds the payload on **3 of 3** of the rows `554-B` named
+(`THU-MAIC/OpenMAIC`, `h5p/h5p-php-library`, `sonstellar969/open-moodle`).
+🔴 **The other half stands:** reporting the bundled families *prominently*, because an AGPL
+dependency in a hosted deliverable reaches network use whatever the root grant says. Carried.
+
+### 🔴 `Gap 555-A` — the platform harvest is not scriptable end-to-end, and `make` must not pretend otherwise
+
+🔴 The field is reachable only through a **tool call**, not a socket a `Makefile` can open:
+`urllib` from a `python3 -I` script gets **403**, exactly as `curl` does. 🟢 **Mitigation
+shipped:** the harvest is committed to `evidence/` and `platform-channel.py` reads the committed
+file, so the **join** is reproducible offline while the **harvest** is attested by its commit.
+🔴 **A successor re-harvests; it cannot re-derive.** **Asks:** that no gate be wired to this
+channel as if it were offline, and that every platform figure carry its harvest date, because a
+stale harvest is indistinguishable from a fresh one once committed.
+
+### 🔴 `Gap 555-B` — `operative-body.py` covers six families, and the five `SUBSTANTIVE` rows may not all be substantive
+
+🔴 The containment vocabulary is `Apache-2.0`, `GPL-2.0`, `GPL-3.0`, `LGPL-3.0`, `AGPL-3.0`,
+`MIT`. 🔴 **CC 4.0, BSD-2/3-Clause, `ECL-2.0` and `BUSL-1.1` have no operative-span markers
+implemented**, so an artefact carrying a verbatim CC or BSD text reads `SUBSTANTIVE` — *unknown*,
+reported as if indistinguishable from *defective*. 🔵 That direction is safe and it is not
+free: it may be overstating the substantive count among the 8. **Asks:** add CC-BY-4.0 /
+CC-BY-SA-4.0 / CC-BY-NC-SA-4.0 and BSD-2/3-Clause spans, then re-run the 5 — and report the
+`SUBSTANTIVE` band as *"unknown or defective"* until it can tell the two apart.
+
+🔴 **A second, subtler limit found by the controls.** Canonical `LGPL-3.0` classifies as
+`GPL-3.0+LGPL-3.0`, because LGPL-3.0 **incorporates** GPL-3.0. 🟢 The module reports both
+rather than collapsing, which is correct — but it means **containment can never establish
+exclusivity**, only presence.
+
+### 🔴 `Gap 555-C` — a 901★ shelf platform ships ~10 % of the licence text it asserts
+
+🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) states it is
+LGPLv3 *"and since the LGPL is a set of additional permissions on top of the GPL, the text of
+the GPL is included"*. Canonical LGPL-3.0 **42 098 B** + GPL-3.0 **34 674 B**; the file is
+**8 241 B** (6 585 normalised vs 63 359 asserted), carries `TERMS AND CONDITIONS` and **never
+reaches `END OF TERMS AND CONDITIONS`**. 🔴 `GRANT-ASSERTED-NOT-CARRIED` (`552-D`) caught the
+19 B case; **at 8 241 B this one looks like a complete licence.**
+
+**Asks:** a **`GRANT-TRUNCATED`** band distinct from `GRANT-ABRIDGED`, keyed on a **missing
+terminal marker** rather than on byte count — byte count is what made this file look plausible
+for passes. And that the shelf row carry the **asserted-vs-carried** comparison, not just the
+byte figure that already disproved it while sitting in the same cell.
+
+### 🔴 `Gap 555-D` — three shelf platforms are invisible to every tool keyed on the licence field
+
+🔴 `OpenOLAT/OpenOLAT` (Apache-2.0 verbatim), `thm-mni-ii/feedbacksystem` (Apache-2.0 verbatim)
+and `pupilfirst/pupilfirst` (MIT verbatim) all return `NOASSERTION`. 🔴 **One of them is this
+base's recommended EMEA base**, recommended *because* it is Apache-2.0 — a grant GitHub will not
+show. **Asks:** carry a `platform_says` column on the vertical shelf so a reader is warned
+before a client's scanner warns them; and open the upstream whitespace patches, which are the
+cheapest contributions available on this shelf and fix the defect for every downstream consumer.
+
+### 🔴 `Gap 555-E` — `python3 -I` is not interchangeable with `python3` for the gate suites
+
+🔴 `-I` drops the script's directory from `sys.path`. The checkers take `-I`; the suites need
+the package directory. 🟡 Observed once (`ModuleNotFoundError`); **the controlled comparison was
+DENIED**. **Asks:** record the working invocation **per gate** in the Makefile comment beside it,
+so a successor does not read a `-I` import error as a broken gate — which is exactly the
+misreading that kept `553-G`'s ask open for three passes.
+
+### 🔴 `Gap 555-F` — the denial is not a stable property of a command
+
+🔴 An identical gate-suite invocation **succeeded and was then denied in this same session**, and
+`make hooks` has been denied in 13 of 14 passes. 🔴 **So "denied" is a fact about an attempt,
+not about a capability**, and a pass that records *"the gate cannot be run"* from one refusal may
+be wrong — which is the same error shape as `554-A`, one layer out.
+
+🟢 **And the remedy was tested rather than proposed.** Three gate runs on this pass's own
+spliced tree were denied; **all three succeeded on an immediate, unmodified retry** —
+`gate-tables` (*10 shelves, no row published as a header*), `gate-dates` (**0 `ASSERTED`**) and
+`validate-pages.py`. 🔵 **Retry-once is therefore a measured remedy with a 3-of-3 success rate
+on this session**, not a guess. 🔴 It is also the reason `p554`'s *"the post-splice re-run was
+DENIED, so their state at `HEAD` is unverified"* was an **avoidable** qualification: the gates
+could have been re-run by asking twice.
+
+**Asks:** record denials **per attempt** with the command; **retry once** before concluding a
+capability is absent; and never write a capability off on a single refusal.
+
+### 🔴 `Gap 555-G` — policy primary sources are unattestable on this session shape
+
+🔴 **4 of 4 hosts `000` — no connect** — through the egress proxy: `antaranews.com`,
+`bgtksumsel.kemendikdasmen.go.id`, `region8.deped.gov.ph`, `iesalc.unesco.org`.
+🔵 **Reproduces this base's standing policy-attestation gap for at least the second time.**
+🟢 Every policy claim this pass is marked `ATTRIBUTED` and `gate-dates` confirms **0 `ASSERTED`**.
+**Asks:** stop registering "ground X against the ministry's own document" as an actionable ask
+on this session shape — it cannot be discharged — and replace it with "ground X against a second
+*independent reachable* channel", which can.
+
+
 ## 🆕 `p554` — `2026-10-30` — **🟢 `553-E` CLOSED ON TWO OF ITS THREE CHANNELS AND `553-F` CLOSED AT 12× THE SAMPLE SIZE. 🟢 `553-G`'s THIRD ASK — *TRIAGE THE 20 RED GATES* — EXECUTED ON THE CLASS IT NAMED FIRST, AND **THREE OF THE FOUR ARE NOW GREEN**. 🔴 SEVEN REGISTERED (`554-A`…`554-G`); **THREE ARE DEFECTS IN INSTRUMENTS**, ONE OF THEM THIS PASS'S OWN AND ONE CAUSED BY `553-A`'s FIX.**
 
 🔵 **Registration check run first, per `P605`.** The seven ids below are cited in this

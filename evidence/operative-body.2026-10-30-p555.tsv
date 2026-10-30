@@ -1,0 +1,10 @@
+[canon] operative bodies loaded: 5/5 -> AGPL-3.0,Apache-2.0,GPL-2.0,GPL-3.0,LGPL-3.0
+repo	payload	bytes	noassertion_class	operative_bodies_present
+OpenOLAT/OpenOLAT	LICENSE	10982	COSMETIC	Apache-2.0
+thm-mni-ii/feedbacksystem	LICENSE	10785	COSMETIC	Apache-2.0
+openeducat/openeducat_erp	LICENSE	8241	SUBSTANTIVE	-
+pupilfirst/pupilfirst	LICENSE	1684	COSMETIC	MIT
+learning-commons-org/evaluators	LICENSE.md	1615	SUBSTANTIVE	-
+learning-commons-org/knowledge-graph	LICENSE.md	5789	SUBSTANTIVE	-
+Oriole-FDU/Wisepen	LICENSE	4539	SUBSTANTIVE	-
+frappe/education	license.txt	19	SUBSTANTIVE	-

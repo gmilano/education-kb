@@ -4,6 +4,76 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p555` — `2026-10-30` — **🟢 THE STAR CHANNEL `p554` DECLARED DEAD IS ALIVE ON A TRANSPORT THIS BASE DOCUMENTED AT `p241`. `DeepTutor` **51 571★** FIRST-HAND, WHICH RETIRES THREE AGGREGATOR FIGURES AT ONCE. 🟢 NO NEW AGENT ROW — THE ROW AXIS IS BLANK FOR THE SIXTEENTH CONSECUTIVE PASS, AND THAT IS NOW A MEASURED PROPERTY OF THE CHANNEL, NOT A GAP IN THE SWEEP.**
+
+🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 Three page-shape gates run
+directly at `HEAD`, all green. 🔴 One suite run was **denied after an identical command had
+succeeded in this same session** — `Gap 555-F`.
+
+### 🟢 The popularity channel, restored and attributed to its transport
+
+🔵 Per `ACTION VV`, the **channel is named beside every figure**: MCP `search_repositories`,
+`repo:`-filtered, `2026-10-30`. 🔴 `curl` to `api.github.com` and to `github.com` HTML are both
+**403** on this session, as they were for `p554`; so are `gh api repos/…` and
+`gh api search/repositories`. **One transport of five carries this field.**
+
+| Repository | stars | forks | `spdx_id` | `pushed_at` |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **51 571** | 6 316 | `Apache-2.0` | `2026-10-30` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 **41 924** | 6 485 | `MIT` | `2026-10-30` |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 40 779 | — | `GPL-3.0` | `2026-10-30` |
+| [`frappe/frappe`](https://github.com/frappe/frappe) | 11 032 | — | `MIT` | `2026-10-30` |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 8 213 | — | `AGPL-3.0` | `2026-10-30` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | 7 563 | — | `GPL-3.0` | `2026-10-30` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 6 892 | — | `AGPL-3.0` | 🔴 **`2026-04-30`** — 6 months |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 4 118 | — | `MIT` | 🟡 `2026-08-14` |
+| [`frappe/lms`](https://github.com/frappe/lms) | 3 355 | 1 566 | `AGPL-3.0` | `2026-10-30` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 1 240 | — | 🟢 **`ECL-2.0`** | `2026-10-30` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 162 | — | `MIT` | `2026-10-30` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 1 019 | — | `GPL-3.0` | `2026-10-30` |
+
+🟢 **Three aggregator figures retired in one read.** Digests gave `DeepTutor` **`~46 000`**
+(28 Oct), **`~50 600`** (30 Oct) and **`~50 000`** in the same window; the field says
+**`51 571`**. 🔵 The best of the three was still **1.9 % low**. `p554` refused all three and
+was right to — but it refused them for want of a channel it had.
+
+🟢 **`sakaiproject/sakai` = `ECL-2.0`, settled.** This pass's vertical-platform search returned
+*"sources disagree on Sakai: Educational Community Licence 2.0 vs Apache 2.0"*. The platform
+field says **`ECL-2.0`** — an Apache-2.0 derivative with a **patent clause scoped to the
+contributor's own institution**, which is not the same reach as Apache-2.0 and matters to a
+university engagement.
+
+### 🔴 The row axis: blank again, and now blank for a known reason
+
+🔴 **No new agent row this pass.** 🔵 Searches run: `top open source AI agents education 2026
+github MIT`, `github trending education AI 2026`, and the four regional legs. 🔴 **Every
+repository the generic agent query returned is either general-purpose (OpenClaw, CrewAI,
+OpenHands, Hermes) or already on these shelves.** The education-specific returns —
+`DeepTutor`, `Claw-ED`, `rasbt/LLMs-from-scratch` — are all held.
+
+🔵 **This is the sixteenth consecutive pass with no new row from the prose-search channel, and
+the base's own standing conclusion already explains it** *(carried from the `p-`series: "use
+`WebSearch` for the regulatory axis and `topic:`-scoped GitHub search for the row axis, and
+stop expecting either to do the other's job")*. 🟢 **What this pass adds is that the row axis
+has a second, measurable failure:** the GitHub search index **silently omits live
+repositories** — 5 of the 84 queried, every one of them answering `git ls-remote`. A sweep run
+on the index alone would have reported them absent.
+
+| Omitted by the index | `git ls-remote` | `raw` README |
+|---|---|---|
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | 🟢 **25 refs** | `200` |
+| [`PKulal/LMS`](https://github.com/PKulal/LMS) | 🟢 **6 refs** | `200` |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | 🟢 **201 refs** | `200` |
+| [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | 🟢 **224 refs** | `200` |
+| [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) | 🟢 **5 refs** | `200` |
+
+🟢 **`packbackbooks/lti-1-3-php-library` reproduces a prior pass EXACTLY: `224` refs, the same
+figure recorded when this address was last found absent from the index.** 🔵 So the omission
+is **stable, not transient** — a property of the index, and `Gap 504-A`'s standing
+reconciliation is now wired into `platform-channel.py`, which prints it on every run rather
+than when someone remembers to ask.
+
+
 ## 🆕 `p554` — `2026-10-30` — **🟢 THREE NEW MIT AGENT ROWS, AND ALL THREE ARE APAC — THE FIRST PASS IN THIS WINDOW WHERE THE AGENT SUPPLY MOVED IN ONE REGION AND ONLY ONE. 🔴 THE STAR CHANNEL IS DEAD ON THIS SESSION: `api.github.com` AND `github.com` HTML BOTH RETURN **403**, SO NO POPULARITY FIGURE IS ADOPTED THIS PASS — INCLUDING ONE AGGREGATOR'S `~50 000★` FOR `DeepTutor`.**
 
 🔴 **Gate posture, stated first: `make hooks` DENIED** (`Code from External`) — thirteenth

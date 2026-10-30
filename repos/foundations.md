@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p555` — `2026-10-30` — **🟢 THREE PLATFORM `NOASSERTION`s ON THIS BASE ARE **COSMETIC** — PROVEN, NOT ARGUED: THE FILES CARRY THE **VERBATIM** OPERATIVE BODY OF A STOCK LICENCE AND DIFFER ONLY IN DECORATION. 🔴 AND ONE 901★ SHELF ROW SHIPS **~10 %** OF THE LICENCE TEXT IT ASSERTS IT CONTAINS, TRUNCATED BEFORE `END OF TERMS`.**
+
+🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 Three page-shape gates run
+directly at `HEAD` and **all three green** — `gate-tables` *(10 shelves, no row published as a
+header)*, `gate-dates` *(0 `ASSERTED`)*, `gate-region-headings` *(`total 0`)*. 🔵 That closes
+the qualification `p554` left on its own three fixes.
+
+### 🟢 The question this pass nearly got wrong
+
+🔵 `platform-channel.py` found **8 of 79** education repositories on which GitHub's `licensee`
+returns **`NOASSERTION`**. 🔴 **The tempting inference — and this pass drafted it — was that
+`NOASSERTION` DETECTS a composite or non-standard grant**, which would hand this base a free
+classifier for the hardest class on these shelves.
+
+🔴 **It does not.** Hand-read and then measured, the eight split **four** ways. `NOASSERTION`
+means only *"not the stock text I expected"*, and four very different facts produce it.
+
+🟢 Delivered to tell them apart: [`../ingest/operative-body.py`](../ingest/operative-body.py).
+It answers exactly one question — **does this payload contain a known licence's operative body,
+VERBATIM?** — and refuses the others. 🟢 **Controls: 9/9 green**, five canonical texts
+classified `COSMETIC` and four negatives (`empty`, *family-named-not-carried*, a 19 B stub, a
+BUSL preamble) classified `SUBSTANTIVE`.
+🔵 Run: [`../evidence/operative-body.2026-10-30-p555.tsv`](../evidence/operative-body.2026-10-30-p555.tsv).
+
+### 🟢 The three COSMETIC declines — the grant is unambiguous and the platform is simply silent
+
+| Repository | payload | bytes | Why `licensee` balks | Operative body present |
+|---|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `LICENSE` | 10 982 B | 🔴 **two blank lines** before `Apache License`, truncated appendix | 🟢 **Apache-2.0, verbatim** |
+| [`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) | `LICENSE` | 10 785 B | 🔴 **every line indented**; the *"how to apply"* boilerplate hoisted above the licence | 🟢 **Apache-2.0, verbatim** |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | `LICENSE` | 1 684 B | 🔴 a carve-out preamble above the grant (`Gap 554-C`) | 🟢 **MIT, verbatim** |
+
+🟢 **The proof, so a successor need not take it on trust.** The normalised Apache-2.0 operative
+span — `TERMS AND CONDITIONS` … `END OF TERMS AND CONDITIONS`, **7 628 characters** — occurs
+**whole** inside both Apache payloads. Canonical normalises to `8 641` characters;
+`OpenOLAT` to `8 256` and `feedbacksystem` to `8 202`. 🔵 **Every byte of the difference is
+outside the operative span.** These two projects are Apache-2.0 as surely as the Apache
+Software Foundation is.
+
+🟢 **`pupilfirst` independently confirms `Gap 554-C` from the opposite window.** `554-C` found
+the operative MIT text sitting *below* `grant-verdict.py`'s 12-line title block and concluded
+the governing family is MIT. A containment test, which reads the **whole** payload and so has
+no window at all, returns **MIT present verbatim**. 🔵 **Two instruments making opposite bets
+about where the answer lives now agree on the answer** — which is the strongest form the
+`554-C` lesson could take.
+
+🔴 **The limit, stated because it is the point.** Containment is **not** governance.
+`pupilfirst` contains MIT verbatim **and still** assigns `docs/` to `CC-BY-SA-4.0`. A
+`COSMETIC` verdict says *the family's text is wholly present*; it never says *the family
+governs every path*. Composite detection stays with `grant-verdict.py`'s `composite()`, and the
+two rows must be read together.
+
+### 🔴 The SUBSTANTIVE five — and one of them is a shelf defect
+
+| Repository | ★ | payload | Why the decline is CORRECT |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **901** | `LICENSE` 8 241 B | 🔴 **asserts LGPLv3 + the full GPL text and carries neither** — see below |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 87 | `LICENSE.md` 1 615 B | 🔴 MIT code over **`CC BY-NC-SA 4.0`** corpora — a split the field cannot encode |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 164 | `LICENSE.md` 5 789 B | 🔴 `CC0` + `CC-BY-4.0` + MIT in one artefact |
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 122 | `LICENSE` 4 539 B | 🔴 **`BUSL-1.1`** — non-OSI source-available; no SPDX match by design |
+| [`frappe/education`](https://github.com/frappe/education) | 687 | `license.txt` **19 B** | 🔴 `GRANT-ASSERTED-NOT-CARRIED` (`Gap 552-D`) — the platform agrees |
+
+🔴 **`openeducat/openeducat_erp` is the one that changes a shelf row.** Its `LICENSE` states, in
+its own words:
+
+> *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3),
+> as included below. Since the LGPL is a set of additional permissions on top of the GPL, the
+> text of the GPL is included at the …"*
+
+🔴 **Measured against what it asserts:**
+
+| | bytes | normalised chars |
+|---|---|---|
+| canonical `LGPL-3.0` | 42 098 | 34 719 |
+| canonical `GPL-3.0` | 34 674 | 28 640 |
+| **what `openeducat_erp` ships** | **8 241** | **6 585** |
+
+🔴 It contains **neither licence in full**, carries `0. Additional Definitions` and
+`TERMS AND CONDITIONS` but **no `END OF TERMS AND CONDITIONS`** — so the file is **cut off
+mid-licence** — and holds **about one tenth** of the 63 359 normalised characters it asserts it
+includes. 🔵 **`frappe/education`'s 19 B `license.txt` made this class look like an outlier.
+At 8 241 B it looks like a complete licence, and is not.** Registered as `Gap 555-C`.
+
+🟢 **This base's shelf row for it is not wrong — it is under-informed.** The row reads
+*"**LGPL-3.0** · 8 241 B"*, which is what the file says of itself and the byte count that
+disproves it, sitting in the same cell for passes without the comparison being made.
+
+
 ## 🆕 `p554` — `2026-10-30` — **🟢 THE SHELF'S SHIPPABILITY VERDICT RE-READ ACROSS **80** ADDRESSES, NOT 17 — AND EXACTLY **TWO** FAMILIES MOVED, BOTH BECAUSE THE INSTRUMENT WAS WRONG. 🔴 ONE OF THE TWO WAS CAUSED BY `553-A`'s OWN FIX, AND IT WAS WRONG IN THE PERMISSIVE DIRECTION.**
 
 🔴 **Gate posture: `make hooks` DENIED** (`Code from External`), thirteenth denial in
