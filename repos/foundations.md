@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Foundational Education Repos
 
-**Pass `p541` · 2026-10-30.** Load-bearing systems an education engagement is
+**Pass `p542` · 2026-10-30.** Load-bearing systems an education engagement is
 likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms, standards and
 toolkits the agents must live beside.
@@ -74,6 +74,70 @@ quantity. 🔵 A recount against an explicit rule for what counts is `Gap 534-E`
 > shape of the market, and it drives the architecture: **build permissive agents
 > that integrate across a process or network boundary** (LTI, xAPI, REST, MCP)
 > rather than forking an AGPL core and inheriting its obligations.
+
+## 🆕 `p542` — one framework row off the French leg, and the Intel education suite read down to its components
+
+🟢 **One row filed.** [`Intelligent-Internet/ii-agent`](https://github.com/Intelligent-Internet/ii-agent)
+was **absent from this base entirely** — not in trending history, not on a
+live page — and it arrived on the **French** leg, which is the clearest single
+demonstration of `p542`'s corpus finding on
+[`../agents/trending.md`](../agents/trending.md#-p542--2026-10-30).
+
+| Repo | Licence (read as bytes) | Stars | Region (origin) | Why it is load-bearing here |
+|---|---|---|---|---|
+| 🆕 [`Intelligent-Internet/ii-agent`](https://github.com/Intelligent-Internet/ii-agent) | 🟢 **Apache-2.0** — `LICENSE` @`main`, **11 357 B**, canonical title block `Apache License / Version 2.0, January 2004` | **3.4k** · 524 forks | 🟡 Global — organisation `Intelligent-Internet`; country not stated on the page | *"II-Agent: a new open-source framework to build and deploy intelligent agents."* 156 commits. 🔵 **Filed as a foundation, not an agent, and the distinction is the point:** it is general agent infrastructure with **no education semantics at all**, which is precisely what an engagement wants underneath a tutor — the education-specific repos on this base are mostly *applications*, and swapping an application is expensive. **Apache-2.0 with its patent grant** puts it in the small set this base can hand a client without a licence conversation. ⚠️ **Not education-validated:** nothing on its page mentions teaching, tutoring or learners, so it is a substrate candidate on licence and generality, and **no pedagogy claim is made for it here.** |
+
+### 🔵 `p542` — `open-edge-platform/education-ai-suite`, read down to its components
+
+This base has carried the row since `p533` on licence and star count alone.
+Read first-hand this pass, it is more actionable than its **2 stars** suggest,
+and the shape of its numbers is the reason:
+
+- **2 stars against 14 forks.** 🟢 A forks-to-stars ratio **above 1** is the
+  signature of a repo being *derived from* rather than *bookmarked* — the
+  inverse of the entire rest of this page — and `p540` built a forks-per-star
+  ranking precisely to find this shape. **481 commits** behind it.
+- **Named components, as the tree lists them:** `ai-teaching-assistant`,
+  `smart-classroom`, `teacher-assistant-claw-demo`, `utils/flutter`. 🔵 The
+  README's two applications are **Smart Classroom** — *"an extensible framework
+  for processing, analyzing, and summarizing classroom sessions"*, with
+  classroom statistics, student re-identification and classroom summaries — and
+  **Teaching Assistant**, *"voice-first assistance in studying"* for
+  self-directed learning.
+- **Runtime:** audio and video pipelines *"accelerated with the OpenVINO™
+  toolkit"*, targeting Intel CPUs, integrated GPUs and **NPUs**. 🟢 That makes
+  it the only artefact on this page that is **on-premise by construction** —
+  which is the EMEA data-residency and LATAM connectivity answer, in hardware
+  rather than in policy.
+- ⚠️ **Its own disclaimer, carried verbatim:** the applications are *"intended
+  for reference and demonstration, not production."* It is a starting point and
+  a benchmark harness, **not a deployable product**, and no pattern on this
+  base should imply otherwise.
+- 🔴 **One correction to how it is addressed.** The parent monorepo
+  [`open-edge-platform/edge-ai-suites`](https://github.com/open-edge-platform/edge-ai-suites)
+  (Apache-2.0, `LICENSE` @`main` **11 351 B**, 140★ / **170 forks**) is
+  **absent from this base**, and it does **not** contain the education suite —
+  its README states the Education AI Suite *"is developed in its own
+  repository"*. 🔵 Worth knowing beyond this KB: the same monorepo carries
+  **Metro, Manufacturing, Retail, Robotics, Health and Life Sciences, and
+  Federal and Aerospace** AI suites under one Apache-2.0 grant, so five of
+  Globant's other industry KBs have a verified, permissive reference body
+  sitting at an address none of them hold.
+
+### 🔴 `p542` — the probe shape that lost a grant, stated here because it is this page's risk too
+
+[`ocademy-ai/machine-learning`](https://github.com/ocademy-ai/machine-learning)
+has **two** root grants — `LICENSE-CODE` (MIT, 1 122 B) and `LICENSE-TEXT`
+(CC-BY-4.0, 18 649 B) — and **nothing at `LICENSE`**. Twelve probes across
+`LICENSE`/`.md`/`.txt`/`COPYING` × `main`/`master` return 404. 🟢 **Adding
+`LICENSE-CODE` and `LICENSE-TEXT` to the probe surface is the whole fix.**
+🔴 **The exposure is concentrated on this page rather than the agent shelf,**
+because split-by-material-type grants are what *courseware and standards
+bodies* use, and that is what a foundations page collects. **Every "no grant
+found" verdict on a content-bearing repo here should be re-read as "not yet
+probed".** Full working in
+[`../agents/top.md`](../agents/top.md#-p542--the-licence-probes-shape-produced-one-false-negative-and-one-unnamed-grant-and-both-are-fixable).
+
 
 ## 🆕 `p540` — six rows off the gate-to-600, and the first forks-per-star ranking this base has run
 

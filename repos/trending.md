@@ -3,6 +3,52 @@ industry: education
 region: Global
 updated: 2026-10-30
 ---
+## 🆕 `p542` — `2026-10-30` — **🟢 ONE ABSENT FRAMEWORK FILED (`ii-agent`, Apache-2.0, 3.4k★) OFF THE **FRENCH** LEG. 🔴 TWO PROBE-SHAPE DEFECTS MEASURED: A **SPLIT GRANT** (`LICENSE-CODE` + `LICENSE-TEXT`) READS AS NO GRANT, AND A **`master`-ONLY** GRANT READS AS NO GRANT. 🔴 THE PART OF THE CHINESE CORPUS THAT SITS ON **CHINESE FORGES** IS UNREACHABLE FROM THIS ENVIRONMENT — THE GITHUB-HOSTED PART THIS BASE ALREADY HOLDS — SO "NO NON-GITHUB SUPPLY" HAS BEEN AN ENVIRONMENT ARTEFACT, NOT A FINDING.**
+
+🔵 **Full narrative, the per-leg corpus table and the fork-holder instrument
+are on [`../agents/trending.md`](../agents/trending.md#-p542--2026-10-30).**
+This entry carries the repository-side result only.
+
+### 🟢 Filed this pass — grant read as bytes, first-hand
+
+| Repo | Grant, as bytes | Stars / forks | Note |
+|---|---|---|---|
+| [`Intelligent-Internet/ii-agent`](https://github.com/Intelligent-Internet/ii-agent) | `LICENSE` @`main`, **11 357 B**, `Apache License / Version 2.0, January 2004` | **3 400** / 524 | General agent framework, 156 commits. **Absent from this base entirely** before this pass — not even in trending history. Reached on the **French** leg. Filed to [`foundations.md`](./foundations.md) as substrate; **no education claim attached.** |
+
+### 🔴 Measured this pass — the probe's shape, not the corpus
+
+| Repo | What the probe returns | What is actually there | Defect |
+|---|---|---|---|
+| [`ocademy-ai/machine-learning`](https://github.com/ocademy-ai/machine-learning) | 404 on **all twelve** of `LICENSE`/`.md`/`.txt`/`COPYING` × `main`/`master` | `LICENSE-CODE` **1 122 B MIT** (`Copyright (c) 2022 Ocademy`) **and** `LICENSE-TEXT` **18 649 B** `Attribution 4.0 International` | 🔴 **`Gap 542-A` — split grant by material type.** The correct licensing for a teaching corpus, and invisible to a probe that only asks for `LICENSE`. **3 049 commits, 231★, 88 forks** would have been logged as ungranted. |
+| [`minmaxflow/mini-kode`](https://github.com/minmaxflow/mini-kode) | 404 on `main` | `LICENSE` @**`master`**, **1 066 B**, `MIT License`, holder `minmaxflow` | 🔴 **`Gap 542-B` — branch assumption.** A grant on `master` is not a missing grant. The branch set must be `main\|master\|dev` on every probe. |
+| [`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) | 404 on all twelve | **nothing** — sidebar carries no licence entry either | 🟢 **Negative control, and it passes.** Two independent channels agree there is no grant, which is what distinguishes this row from the two above. AAAI 2025 Oral, 100★. |
+
+🔵 **Why these three belong in one table:** they are the same probe returning
+the same answer — *no grant* — for three different reasons, only one of which
+is true. 🟢 **A probe that cannot separate "absent", "elsewhere" and
+"other branch" is not a licence instrument, it is a `LICENSE`-at-`main`
+detector**, and this base has been reading its output as the former for
+hundreds of passes. **`542-A` and `542-B` together are a re-probe of the whole
+ungranted band, not two row fixes.**
+
+### 🔴 The forge gap, restated as unworkable
+
+| Forge | Probe | Result |
+|---|---|---|
+| `gitlink.org.cn` | DNS / WebFetch | 🔴 **does not resolve from this environment** |
+| `gitee.com` | HTTPS `CONNECT` through the session gateway | 🔴 **403 — policy denial**, logged by the proxy as `connect_rejected` |
+
+The Chinese leg named a real artefact on the first of these — **`fengxaio/EduAgent`**,
+a teaching multi-agent framework (lesson design, exercise generation,
+knowledge-point decomposition) — and it **cannot be read, licensed or shelved
+from here.** 🟢 **`Gap 542-D`: this changes the gap's remedy.**
+[`../intel/open-gaps.md`](../intel/open-gaps.md) has carried non-GitHub forges
+as *unworked*, which implies another pass would close it. It would not.
+**Every statement on this base of the form "no non-GitHub supply was found" is
+an artefact of the network policy and must be written as one** until the policy
+changes.
+
+
 ## 🆕 `p541` — `2026-10-30` — **🟢 EIGHTEEN ROWS FILED OFF THE PROMOTION DEBT, NOT OFF A SEARCH: **32 OF 37** RESIDUE ADDRESSES WERE IN TRENDING HISTORY AND NEVER A ROW. 🟢 THE BIG ONE IS **EMEA PUBLIC SECTOR** — SEVEN FINNISH NATIONAL REGISTRIES UNDER `EUPL`, LICENSED **BY REFERENCE**, WHICH IS WHY 540 PASSES MISSED THEM. 🟢 THE PERMISSIVE **QTI** ENGINE EXISTS (`qtiworks`, BSD-3). 🔴 THREE MIT GRANTS WERE HIDING AT `LICENSE.md` BEHIND A 45-BYTE STUB.**
 
 🔵 **Full narrative, the 20/20 restatement measurement, the language result and

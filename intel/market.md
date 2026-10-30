@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p541` · 2026-10-30.** Figures are attributed to the source that produced
+**Pass `p542` · 2026-10-30.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
 
@@ -636,6 +636,71 @@ own record.**
   deployed, 9 % measuring. Lead with efficacy measurement and the counterpart
   list the new UNESCO Observatory supplies.
 
+## 🆕 `p542` — the four regional legs re-run: **"saturated" was the wrong word for ten passes**
+
+**The four mandated regional legs were run in the mandated form, and then the
+supply legs were re-run in eight further languages.** 🔴 **The demand side
+restated almost everything, as it has since `p532`** — the NA 36 % share, the
+`$169 M` Q1 2026 federal commitment, the 134-bills-in-31-states tracker, the
+EU AI Act Article 50 date, Latam-GPT, UNESCO IESALC, the OECD *Digital
+Education Outlook*. 🟢 **But grading the claims against the committed tree
+rather than against memory gives a different verdict than "saturated":**
+
+| | Count | What it means |
+|---|---|---|
+| Claims already **filed** on a live page | — | the genuinely saturated part |
+| Claims held **only in trending history** | **6** | known, measured, **never filed** — `Gap 529-A` on the intel side |
+| Claims **absent from this base entirely** | **5** | filed below, this pass |
+
+🔵 **The six trending-only claims:** Singapore's *"Four Learns"* (COS,
+March 2026); the EC + OECD *Empowering Learners for the Age of AI* framework
+(18 June 2026); Council of the EU `ST-9003-2026` (11 May 2026); Ireland's
+Oide guidance; `moe.gov.sg` and CSET's translation of China's 2025 GenAI
+school guide; Europe EdTech 200 (2026) and OpenAI × IIT Madras.
+🟢 **The five absent ones:** Singapore's **AIEd Framework** and **EdTech
+Masterplan 2030**; China MOE's **2026 digital-education priorities** and the
+**AI + Education Action Plan** (2 April 2026, five departments); the **ASEAN
+Guide on AI Governance and Ethics**; the IDB **fAIr Tech Radar** (November
+2025); and **FIPSE**, the award vehicle behind the `$169 M` figure this base
+has carried as a bare number since `P515`.
+
+🔴 **So the honest restatement: the regional legs are not saturated — the
+promotion step is.** Ten passes have reported "demand saturated" on the
+strength of legs that were returning material this base had never filed.
+**"Already held" and "already filed" are different verdicts, and only the
+second one licenses a pass to stop looking.**
+
+### ⚠️ A verification limit that applies to every claim filed below
+
+**None of the five absent claims could be verified at its primary source from
+this environment.** `education.ec.europa.eu` **does not resolve** here, as
+`gitlink.org.cn` does not; the ministry and multilateral-bank domains were not
+reachable. 🟢 **Each claim below is therefore attributed to the secondary
+source that carried it and marked `unverified-at-primary`.** That is a real
+and stated limit: these are leads a consultant can act on by reading the
+primary document themselves, **not facts this base has measured** — which is a
+different standard from the repository rows, every one of which was read
+first-hand this pass.
+
+### 🔵 What each leg returned, including the blanks
+
+| Region | Supply (new, absent artefacts) | Demand/policy |
+|---|---|---|
+| **APAC** | 🟢 **`fengxaio/EduAgent`** named on the Chinese leg and **unreadable** — `gitlink.org.cn` does not resolve. `OpenMAIC` (Tsinghua) re-confirmed MIT/41.8k★; `Agent4Edu` (USTC-implied) confirmed **ungranted**. | 🟢 **Richest of the four this pass** — China MOE 2026 priorities and the five-department action plan; Singapore's AIEd Framework, EdTech Masterplan 2030 and Four Learns; the ASEAN Guide. |
+| **North America** | 🟡 `1111philo/learn` — AGPL-3.0, **archived 2026-04-17**, but a **named public-university consortium**, which is firmer region evidence than most rows carry. | 🟡 Restated, plus **FIPSE** as the vehicle behind the held `$169 M`. |
+| **LATAM** | 🔴 **Blank.** No LATAM-origin artefact surfaced on any leg this pass, including the Spanish and Portuguese re-runs that produced eight for `p541`. | 🟡 One absent instrument found: the IDB **fAIr Tech Radar**. |
+| **EMEA** | 🔴 **Blank on origin.** The French and German legs yielded supply (`ii-agent`, and `OpenMAIC` re-surfaced) but **neither artefact is EMEA-origin** — the leg's language did not predict the artefact's region. | 🟢 Dense and all trending-only: EC ethical-guidelines update, EC + OECD literacy framework, Council `ST-9003-2026`, Ireland's Oide. |
+
+🔴 **The EMEA result is the one to carry forward.** `p541` shelved two
+German-language teacher tools and read the language of a query as a proxy for
+the region of its supply. 🟢 **On this pass that proxy broke: a French-language
+query returned a framework with no stated country, and a German-language query
+returned a Chinese university's classroom.** **Language predicts the *corpus*,
+not the *region*** — and region still has to be read off the artefact, which is
+what [`../agents/top.md`](../agents/top.md#region-notes--what-is-read-and-what-is-inferred)
+already insists on. **No region was inferred from a query language this pass.**
+
+
 ## Opportunities by region
 
 ### North America
@@ -899,6 +964,31 @@ credible instruments here. Aggregator figures in the same search ranged from
 one vendor page asserted a 71% adaptive-platform forecast with no source. **Not
 recorded.**
 
+
+#### 🆕 `p542` — **FIPSE** named, and a consortium-placed artefact
+
+- 🟢 **The `$169 M` this base has carried since `P515` has a vehicle: FIPSE**
+  (the US Department of Education's Fund for the Improvement of Postsecondary
+  Education), reported as awards including support for responsible AI use.
+  **`unverified-at-primary`** — attributed to a market newsletter, and the
+  reachable sources do not name the programme consistently. 🔵 **Why it is
+  worth filing anyway:** a bare dollar figure cannot be bid against, while a
+  **named award vehicle can be looked up, has eligibility rules and has a
+  cycle.** This is the difference between a slide number and a pipeline entry,
+  and the next pass should read the FIPSE award list directly.
+- 🟢 **A named consortium, not an inferred country.** `1111philo/learn`
+  (AGPL-3.0, archived 2026-04-17) was built by the 11:11 Philosopher's Group
+  with **UIC Tech Solutions, the UIC TS Open Source Fund, Louisiana Tech and
+  the ULL Louisiana Educate Program** — public-university technology funds
+  commissioning agentic courseware. 🔵 **The artefact is archived and the
+  pattern is the finding:** state-university open-source funds are a buyer and
+  a co-developer in this region, and they publish under **AGPL**, which shapes
+  any derivative engagement before it starts.
+- 🔴 **Opportunity, stated against the constraint:** the strongest NA shape
+  remains integration into incumbent LMS/SIS estates, and the newly shelved
+  [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents)
+  (MIT, EACL 2026) is the first permissive asset on this base that addresses
+  **faculty workload**, which is what the `$169 M`-class funding actually buys.
 
 ### EMEA
 
@@ -1253,6 +1343,40 @@ systems**, as in EMEA proper. 🔴 **What it is not is a supply market.** Writin
 "Gulf: high adoption, high opportunity" without this would be the error `536-D` existed
 to prevent.
 
+#### 🆕 `p542` — the regulatory calendar is filled in, and all of it was trending-only
+
+- 🟡 **European Commission ethical guidelines on AI and data in teaching and
+  learning — updated 2026**, now covering the **EU AI Act and generative AI**,
+  with guiding questions, classroom scenarios, GDPR context and a revised
+  glossary; aimed mainly at **primary and secondary** educators. Reachable
+  sources disagree on the publication month (**March to June 2026**), and the
+  disagreement is shown rather than resolved. **`unverified-at-primary`** —
+  `education.ec.europa.eu` does not resolve from this environment.
+- 🟡 **EC + OECD, *Empowering Learners for the Age of AI: An AI Literacy
+  Framework for Primary and Secondary Education*, presented 18 June 2026.**
+  **`unverified-at-primary`**. 🔵 **The most engagement-relevant item in this
+  region**, because an AI-literacy *framework* is a curriculum and assessment
+  deliverable, not a compliance one — it is scoped work with a named owner.
+- 🟡 **Council of the EU `ST-9003-2026` (11 May 2026)** invites Member States
+  and the Commission to support safe, inclusive AI use by teachers and asks the
+  Commission to coordinate with the **AI Act's implementation in education**.
+  **`unverified-at-primary`.**
+- 🟡 **EU AI Act Article 50 transparency duties reported as applying since
+  2 August 2026**, with May 2026 draft Commission guidance on high-risk
+  classification said to include education examples. **`unverified-at-primary`**
+  — attributed to a secondary compliance guide; **this base already holds the
+  Article 50 span, and this is a date restatement, not a new claim.**
+- 🟡 **National layer is thin and that is the finding.** Only **Ireland's Oide**
+  guidance surfaced as a named national complement to the EU guidelines.
+  🔴 **No other EMEA ministry's AI-in-education guidance was reachable on this
+  pass** — an informed gap, not coverage: the region's *EU-level* calendar is
+  now well mapped here and its **member-state** layer is not.
+- 🔴 **And EMEA produced no EMEA-origin open-source artefact this pass.** The
+  French and German legs returned supply, but of Chinese and unstated origin.
+  **The region's build-ready assets on this base remain the EUPL public-sector
+  registries filed at `p541` plus the on-premise Intel suite** — which is also
+  the data-residency answer, and is Apache-2.0.
+
 ### APAC
 
 **🆕 `p541` — the region's supply keeps arriving under licences that are not
@@ -1560,6 +1684,56 @@ ministry documents. The China hours figure and the India Class-3 date should be
 confirmed against primary sources before they go in a client deck.
 
 
+#### 🆕 `p542` — the richest leg of the four, and two national programmes this base never held
+
+- 🔴 **China — MOE's 2026 digital-education priorities, absent from this base
+  until now.** A ministry meeting (reported **31 March 2026**) set 2026
+  priorities around integrating AI across **teaching, learning and
+  management**, supporting personalised learning, building interdisciplinary
+  skills, and explicitly **strengthening data security and personal
+  information protection**. A separate **AI + Education Action Plan**, dated
+  **2 April 2026 and issued by five departments**, is also reported.
+  **`unverified-at-primary`** — the action plan comes from a commercial
+  education guide and `en.moe.gov.cn` was not reachable from this environment.
+  🔵 **The data-security clause is the commercially important half:** it means
+  a China-facing education build is governed on *data handling* as much as on
+  pedagogy, which is the same constraint shape as EMEA's and not the usual
+  framing of this market.
+- 🔴 **Singapore — the AIEd Framework and EdTech Masterplan 2030, both
+  absent.** The **AI in Education (AIEd) Framework** rests on four principles —
+  **Agency, Inclusivity, Fairness and Safety** — and sits inside the broader
+  **EdTech Masterplan 2030**. **`unverified-at-primary`** (commercial blog).
+  🟡 The *"Four Learns"* framing this base holds in trending — *learn about AI,
+  learn to use AI, learn with AI, and most importantly learn beyond AI*, set
+  out by Minister of State Jasmin Lau at the **March 2026** Committee of Supply
+  — is the public articulation of that framework.
+- 🟢 **A concrete, actionable procurement rule, and it is first-order for a
+  build:** MOE states schools should use AI **selectively**, only where it
+  contributes meaningfully to learning outcomes, and that for commercial
+  off-the-shelf tools schools **must check that input data contains no
+  personally identifiable information** and complies with data-management
+  guidelines. 🔵 **That is a PII-stripping requirement on the ingress path of
+  any tool sold into Singapore schools** — an architectural constraint, not a
+  policy sentiment, and it is satisfied by on-premise or edge inference far
+  more cheaply than by a hosted API.
+- 🟡 **Entry age varies and is contested.** An MOE parliamentary reply notes
+  that some systems — **China, the UAE and the United Kingdom** — introduce AI
+  from **Primary 1**; Singapore's **Primary 4** entry point has been questioned
+  in Parliament. A commercial guide's claim that Singapore withholds AI tools
+  from Primary 1–3 **could not be confirmed** and is recorded as unconfirmed.
+- 🔴 **ASEAN Guide on AI Governance and Ethics — absent from this base**, and
+  reported as still early-stage, with the region expected to converge on common
+  principles (safety, transparency, accountability) while executing them
+  per-market. 🔵 **The practical consequence for a multi-country APAC
+  engagement is that there is no single conformity target** — which is what
+  this base's APAC pattern already assumes, and now has a named instrument for.
+- 🟢 **Supply remains APAC's strength, and this pass re-confirmed it
+  first-hand:** `OpenMAIC` (Tsinghua, **MIT**, 41.8k★, 6.5k forks, 805
+  commits) and `dsh-openmaic`, against `Agent4Edu` (USTC-implied, AAAI 2025
+  Oral) which is **ungranted and therefore not buildable**. **The region
+  produces the assets; the licence quality is uneven and must be read per
+  repo.**
+
 ### Global
 
 **🆕 `p541` — one global number this pass can stand behind, and one it refuses
@@ -1623,6 +1797,43 @@ self-hostable — the author calls it an early experimental prototype) and
 exam application). 🔵 **An author's name, a README's language and a domain are
 not a country** — this base's standing rule, and the reason these are here and
 not under APAC.
+
+#### 🆕 `p542` — a commercial reading of the corpus finding
+
+- 🟢 **The strongest transferable result this pass produced is not a market
+  number, it is a scanning defect with a price.** Running this base's own
+  discovery legs in nine languages showed that **what an English-keyed scan
+  returns is the English-publishing corpus**, and that languages whose
+  developers publish into GitHub in English (**German, Japanese, Korean —
+  0 new artefacts of 3**) behave completely differently from languages with a
+  separate corpus (**Indonesian and Chinese, 2 of 2 each**; Spanish and
+  Portuguese, 8 of 10 at `p541`).
+- 🔵 **Why that is a client-facing finding and not housekeeping:** any client
+  doing build-versus-buy or competitive scanning in an education market
+  **is running an English-keyed scan**, because that is what every tool
+  defaults to. In Indonesia, China, Brazil or Mexico that scan **systematically
+  under-reports local open-source supply and local competitors** — and the
+  client cannot see the omission, because a missing result looks exactly like
+  an absent one. 🟢 **"We scan your market in its own language" is a
+  differentiator that this pass measured rather than asserted**, and the
+  measurement is cheap to reproduce in front of a buyer.
+- 🔴 **With its hard limit named:** this base already holds Chinese
+  **GitHub-hosted** supply (`smartedu-dl-go`, `knowledge-grab`, `schoolcms`
+  and others), so the gap is narrower and sharper than "China is unreached" —
+  it is the part of the local supply that sits on **Chinese forges**
+  (**GitLink, Gitee**), which are **unreachable from this environment**:
+  `gitlink.org.cn` does not resolve, `gitee.com` is refused at the gateway.
+  🔵 **So the claim has a boundary: scanning in-language closes the *query*
+  gap and does not close the *access* gap.** A China-market scan needs network
+  reach into Chinese forges, which is a procurement and policy question before
+  it is a research one. **`Gap 542-D`.**
+- 🟢 **Three permissive, globally-placed assets were added this pass** —
+  `DaRL-GenAI/instructional_agents` (MIT, faculty workload),
+  `minmaxflow/mini-kode` (MIT, reference agent loop),
+  `ocademy-ai/machine-learning` (MIT code + CC-BY-4.0 content) — and
+  `Intelligent-Internet/ii-agent` (Apache-2.0) as substrate. ⚠️ All four carry
+  **no stated country**, which is why they are Global and not placed: **origin
+  is read here, never inferred.**
 
 ### LATAM
 
@@ -2101,6 +2312,39 @@ public data including education, with a per-dataset redistribution audit),
 [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) (MIT, ENEM
 essay marking calibrated on 11 147 real essays).
 
+
+#### 🆕 `p542` — one absent instrument found, and a supply blank reported as a blank
+
+- 🔴 **IDB *fAIr Tech Radar* (November 2025) — absent from this base entirely.**
+  *Exploring the Adoption of Artificial Intelligence in Latin America and the
+  Caribbean*, from the Inter-American Development Bank, characterises adoption
+  as advancing in a context marked by **structural gaps, developing regulatory
+  frameworks and heterogeneous digital capabilities**. **`unverified-at-primary`.**
+  🔵 **Why it belongs on this page:** this base's LATAM case has rested on
+  market-size forecasts and the ECLAC leader ranking. An **IDB** instrument is
+  a *development-bank* reading, which is the frame regional ministries and
+  multilateral buyers actually fund against — a different and more bankable
+  authority than a vendor forecast.
+- 🟡 **UNU + UNESCO IESALC working paper (September 2026)** maps AI adoption
+  across LAC universities along **teaching, research, community engagement,
+  administration and governance**. **`unverified-at-primary`**; IESALC itself is
+  already held here. 🟢 **The five-axis split is the useful part** — it gives an
+  engagement a diagnostic shape, and *administration* and *governance* are the
+  two axes this base's LATAM patterns have never addressed.
+- 🟡 **ECLAC (October 2025): Chile, Brazil and Mexico lead**, with gaps in
+  data, training and regulation; Baker McKenzie notes member states are at
+  **different stages** of AI regulatory development. Consistent with what this
+  base holds.
+- 🔴 **Supply: blank, and this is the result worth recording.** **No
+  LATAM-origin artefact surfaced on any leg this pass** — including the Spanish
+  and Portuguese re-runs, which produced **eight new artefacts for `p541` one
+  pass earlier.** 🔵 **Two readings, and this pass cannot separate them:**
+  either `p541` exhausted the readily-reachable Iberian-language supply, or
+  the single-pass sample is simply too small to be stable. 🟢 **Either way the
+  honest statement is that LATAM's agent-leg supply on this base still rests on
+  `p541`'s three artefacts plus `avit`, and nothing was added.** **That is an
+  informed blank, not coverage** — and it is the opposite of the region's
+  *demand* picture, which remains the best-evidenced of the four.
 
 ## Declared gaps this pass
 

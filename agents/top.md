@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p541` · 2026-10-30.** **Sixty-eight** real agents, every row read
+**Pass `p542` · 2026-10-30.** **Seventy-one** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
 
@@ -825,6 +825,141 @@ census's own caveat still stands and is worth repeating: every tool count in
 this field is the repository's own claim, three repositories contradict
 themselves on it, so **tool counts here are marketing, not measurement.**
 
+## 🆕 `p542` — the language axis is **two** axes, and the yield tracks the *corpus*, not the *language*
+
+**`p542` ran the mandated set in English and then in eight further languages —
+French, German, Japanese, Chinese, Korean, Arabic, Hindi and Indonesian.**
+`p541` measured 20/20 restated in English against 8-new-of-10 in Spanish and
+Portuguese, and called the English keying a **discovery** bias. 🟢 **The
+replication holds — this pass's English legs restated 9 of 9 — but the
+one-axis story does not survive the wider sweep.** Graded against the
+committed tree, the eight new legs produced **twelve distinct artefacts**:
+
+| Leg | Artefacts surfaced | Absent from this base | Trending-only (promotion debt) | Already on a live shelf |
+|---|---|---|---|---|
+| 🔴 English (4 global + 4 regional) | 9 | **0** | 0 | 9 |
+| 🟢 Indonesian | 3 | **2** | 0 | 1 |
+| 🟢 Chinese | 2 | **2** | 0 | 0 |
+| 🟡 French | 2 | 1 | 1 | 0 |
+| 🟡 Arabic | 2 | 1 | 1 | 0 |
+| 🟡 Hindi | 1 | 1 | 0 | 0 |
+| 🔴 German | 2 | 0 | 1 | 1 |
+| 🔴 Japanese | 1 | 0 | 0 | 1 |
+| 🔴 Korean | 0 education-specific | 0 | 0 | 0 |
+
+🔵 **The pattern is not "non-English yields".** German, Japanese and Korean —
+three languages with large, active developer populations — yielded **nothing
+absent from this base**, because their developers publish *into the same
+GitHub corpus, in English*. The legs that yielded are the ones whose developer
+corpus is genuinely separate: Indonesian and Chinese, **2 of 2 each**, with
+`p541`'s Spanish and Portuguese (8 of 10) still the strongest. 🟢 **So
+`Gap 540-B` should be re-stated: the bias is not the language of the query, it
+is whether that language indexes a distinct publishing corpus.** A leg earns
+its cost when the answer is yes; **de, ja and ko are measured negatives on
+this pass and this base should stop paying for them.** ⚠️ Stated as a limit:
+one pass of one leg each is a weak measurement, and a 0-of-2 German result is
+consistent with the leg being merely *narrow* rather than *empty*.
+
+🔴 **The second axis is not a bias, it is a wall.** The Chinese leg's two
+absent artefacts include **`fengxaio/EduAgent`** on **GitLink**
+(`gitlink.org.cn`), a Chinese forge — a teaching multi-agent framework
+covering lesson design, exercise generation and knowledge-point
+decomposition, structured as a plan/execute/reflect loop against any
+OpenAI-compatible endpoint. **It cannot be read from this environment at all:**
+`gitlink.org.cn` **does not resolve** here, and `gitee.com` is **refused at the
+gateway with a 403 on `CONNECT`**. [`../intel/open-gaps.md`](../intel/open-gaps.md)
+⚠️ **Scoped precisely: this base is not blind to Chinese supply** — it
+already holds Chinese GitHub-hosted repos (`smartedu-dl-go`,
+`knowledge-grab`, `schoolcms` and others). What it cannot see is the part of
+that corpus published on **Chinese forges**.
+has carried the non-GitHub-forge gap as *unworked*; it is measured now as
+**unworkable from this environment**, which is a different gap with a
+different remedy — **it needs a network-policy change, not another pass.**
+🟢 **Declared and deliberately not shelved:** `EduAgent` is named here, with no
+row, no licence and no star count, because its licence could not be read and no
+row on this shelf may rest on a search snippet.
+
+### 🟢 `p542` — three agents shelved (68 → 71), all three off non-English legs
+
+| Agent | Repo | Licence (read as bytes) | Stars | Region (origin) | What it does |
+|---|---|---|---|---|---|
+| 🆕 **Instructional Agents** | [DaRL-GenAI/instructional_agents](https://github.com/DaRL-GenAI/instructional_agents) | 🟢 **MIT** — `LICENSE` @`main`, **1 067 B**, title block `MIT License`, holder `DaRL-GenAI` | **490** · 106 forks | 🟡 Global — no affiliation stated on the page; paper authors Yao, Xu, Turnau, Kellam, Wei | *"(EACL'26 Main) Instructional Agents: Reducing Teaching Faculty Workload through Multi-Agent Instructional Design."* An instructional-design system on the **ADDIE** model: multiple LLM agents generate **syllabi, slides, scripts and assessments**, exposed through a web UI, a CLI **and a REST API**; Python 3.11+, 95 commits. Accepted to **EACL 2026 Main**, arXiv `2508.19611`. 🟢 **The first row on this shelf aimed at the *faculty workload* side of a course rather than the learner's side** — every tutor row here answers a student; this one *produces the course*, which is the half of an education engagement that is billed as delivery. Reached only via the **Arabic** leg. |
+| 🆕 **mini-kode** | [minmaxflow/mini-kode](https://github.com/minmaxflow/mini-kode) | 🟢 **MIT** — `LICENSE` @**`master`**, **1 066 B**, title block `MIT License`, holder `minmaxflow` | **305** · 31 forks | 🟡 Global — individual account, country not stated | *"An educational AI coding agent CLI."* A terminal coding agent on the OpenAI SDK: file/search/command tools, **MCP server integration**, multi-provider LLM support, an agent loop with streaming and **permission approval**, Ink TUI; 101 commits. 🔵 **Explicitly a teaching artefact** — the README calls it *"an educational project"* for understanding coding-agent architecture, which makes it the readable reference implementation this base has never had for **how an agent loop actually works**, as against the many repos that only *use* one. ⚠️ **Default branch is `master`, not `main`** — any probe pinned to `main` records this grant as absent. Reached via the **Indonesian** leg. |
+| 🆕 **Ocademy open ML book** | [ocademy-ai/machine-learning](https://github.com/ocademy-ai/machine-learning) | 🟡 **Split grant, both read first-hand** — `LICENSE-CODE` **1 122 B MIT** (`Copyright (c) 2022 Ocademy`) **+** `LICENSE-TEXT` **18 649 B CC-BY-4.0**; **nothing at `LICENSE`** | **231** · 88 forks | 🟡 Global — organisation `Ocademy`, an AI learning community; country not stated | *"Learn AI together, for free. AI learning and teaching resources for everyone."* **3 049 commits** — the deepest history of anything shelved this pass. A curated course/tutorial/book index, an interactive visual open book pitched at working adults, and the part that matters here: **GenAI prompts for teaching and learning, including an AI Tutor prompt**. 🟢 **The cleanly-licensed courseware body this base keeps needing:** MIT on the code, CC-BY-4.0 on the material — the pairing a client can actually ship, instead of a teaching corpus whose text has no grant. Reached via the **Indonesian** leg. |
+
+### 🟢 `p542` — a cheap instrument for the fork-vs-upstream question `p538` left as "a hand check"
+
+`p538` closed with: *"No instrument on this base can see fork-vs-upstream —
+that stays a hand check."* 🟢 **There is one, and it costs a single `raw`
+read: the licence file's own copyright line names the holder, and the holder
+does not change when a repo is forked.**
+
+Worked against this pass's own ambiguity. The Arabic leg surfaced
+[`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents)
+(490★, 106 forks, 95 commits), whose page states it **is a fork of**
+[`Hyan-Yao/instructional_agents`](https://github.com/Hyan-Yao/instructional_agents)
+(22★, **120 forks**, 65 commits). The counts invert the usual heuristics —
+"prefer the upstream" and "prefer the popular" point at different addresses.
+Read the grants instead:
+
+| Address | `LICENSE` bytes | Title block | Copyright holder **in the file** |
+|---|---|---|---|
+| [`Hyan-Yao/instructional_agents`](https://github.com/Hyan-Yao/instructional_agents) | **1 067 B** | `MIT License` | **`Copyright (c) 2025 DaRL-GenAI`** |
+| [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) | **1 067 B** | `MIT License` | **`Copyright (c) 2025 DaRL-GenAI`** |
+
+🔵 **Byte-identical, and both name `DaRL-GenAI`.** The personal account is
+carrying the lab's grant, not the other way round — which settles it:
+`DaRL-GenAI` is where the project's identity lives, the *fork* is the
+canonical address, and that is the address shelved above. 🟢 **Generalisable:
+when two addresses hold the same artefact, the canonical one is the one the
+licence file's copyright line names — a read that is cheap, deterministic, and
+already inside this base's evidence standard.** ⚠️ **Limits, stated:** it is
+silent when both copies name an individual, when the holder has renamed, or
+when a fork rewrote the grant; and it resolves **attribution, not activity** —
+a dead canonical repo stays dead. It is a tie-breaker, not a ranking.
+
+### 🔴 `p542` — the licence probe's *shape* produced one false negative and one unnamed grant, and both are fixable
+
+Two artefacts broke this base's probe on this pass, in opposite directions.
+
+**1. A split grant reads as no grant.** [`ocademy-ai/machine-learning`](https://github.com/ocademy-ai/machine-learning)
+returns **nothing** at `LICENSE`, `LICENSE.md`, `LICENSE.txt` or `COPYING` on
+`main` or `master` — **twelve probes, twelve misses** — while its sidebar
+reports *"MIT, CC-BY-4.0 licenses found"*. It has **two** grants, filed under
+names the probe never asks for:
+
+| Path | Bytes | Title block | Covers |
+|---|---|---|---|
+| `LICENSE-CODE` @`main` | **1 122 B** | `MIT License` · `Copyright (c) 2022 Ocademy` | the code |
+| `LICENSE-TEXT` @`main` | **18 649 B** | `Attribution 4.0 International` | the text and multimedia |
+
+🔵 **This is the base's *"grant is per-artefact"* band arriving through a new
+door** — not a repo that grants per-file, but one that **splits the grant by
+material type at the root.** That is the *correct* way to license a teaching
+corpus, which makes it the shape an education KB should expect to meet more
+often than any other. 🟢 **The fix is two entries of probe surface:** add
+`LICENSE-CODE` and `LICENSE-TEXT` to the candidate paths. 🔴 **Until that
+lands, every courseware repo on this base is a candidate false negative** —
+and "no grant found" on a courseware repo should be read as *not yet probed*.
+
+**2. A prepended preamble makes GitHub name nothing.** [`1111philo/learn`](https://github.com/1111philo/learn)
+shows a sidebar `License` link with **no licence name**, which this base would
+ordinarily log as an unnamed grant. The bytes are unambiguous: **35 240 B**,
+and at lines 19–20, **`GNU AFFERO GENERAL PUBLIC LICENSE` / `Version 3,
+19 November 2007`**. 🔵 **The classifier is silent because of the first
+eighteen lines** — the author prepended a program preamble (`1111 — An
+agentic learning app` / `Copyright (C) 2026 11:11 Philosopher's Group`) ahead
+of the licence text, which is exactly what the FSF's own "how to apply" notice
+instructs, and exactly what defeats a title-block match. 🟢 **So "the sidebar
+names nothing" is not evidence of an unnamed grant — it is an instruction to
+go read the bytes,** and here the read succeeds completely.
+⚠️ **Not shelved regardless:** **archived 2026-04-17**, read-only, 1★.
+🟢 **But it is placed in North America on firmer ground than most rows here** —
+built by the 11:11 Philosopher's Group with **UIC Tech Solutions, the UIC TS
+Open Source Fund, Louisiana Tech and the ULL Louisiana Educate Program**, which
+is a named public-university consortium rather than an inferred country.
+
+
 ## 🆕 `p541` — four agents off the **Spanish and Portuguese** legs, and what the language of a query costs
 
 🔵 **How these were found, because the method is the finding.** The mandated
@@ -893,6 +1028,14 @@ carries `'LICENÇA PÚBLICA GERAL'`** and names it `AGPL-3.0`. The base had the
 capability in one of its two classifiers and not the other. → `Gap 541-C`.
 
 ## ⚠️ Licence traps — repos that look permissive and are not
+
+### 🆕 `p542` — three new traps, and each one fails in a *different* layer
+
+| Repo | Sidebar says | The bytes say | The trap |
+|---|---|---|---|
+| [`HeyNina101/ai-agent-starter-kit`](https://github.com/HeyNina101/ai-agent-starter-kit) | `Apache-2.0, License licenses found` | `LICENSE` @`main` is the canonical **11 357 B Apache-2.0** | 🔴 **The README withdraws what the file grants.** It states the material is shared *"for educational purposes only"* and is for *"non-commercial, educational use"*. 388★ against **5 commits**: it is a *document bundle* re-published from OpenAI, Google, Anthropic and Google Cloud, so an Apache-2.0 file in the repo cannot be the grant on content the repo does not own. **Unusable for client work, whatever the sidebar says.** The failure is in the **prose vs. the file**, and the prose is the one with standing. |
+| [`TheFlameFoundation/AIBot-Prof-Helper`](https://github.com/TheFlameFoundation/AIBot-Prof-Helper) | `GPL-3.0 license` | `LICENSE` @`master` is **35 149 B GNU GPL v3** | 🔴 **A self-refuting README.** Line 97 reads *"This project is [MIT](./LICENSE) licensed"* — and the link it offers as its own proof resolves to the GPL-3.0 bytes. Sidebar and file agree; **only the prose is wrong, and it disproves itself.** 7★, 6 forks, 527 commits on `dev`, **archived 2025-03-10**. 🔵 Reached via the **Chinese** leg under the address **`MeetYourAI/AIProf`**, which this base holds in trending history — **that address is a stale redirect**, and the rename is the reason nine passes of star probes found nothing there. |
+| [`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) | no licence entry at all | **no file** at `LICENSE`/`.md`/`.txt`/`COPYING` × `main`/`master`/`dev` | 🔴 **No grant, agreed by two independent channels** — the sidebar's silence and twelve `raw` misses. *"Agent4Edu: Generating Learner Response Data by LLM-based Agents for Intelligent Education Systems"*, **AAAI 2025 Oral**, 100★, 17 forks, 66 commits; LLM learner-agents that simulate learner response data and problem-solving behaviour over learner profiles, memory and action simulation. 🟡 **Citable, not buildable** — and genuinely wanted, because synthetic learner-response data is the scarcest input in adaptive-learning work. Filed to the *stars but no grant at all* band; **the remedy is to ask `bigdata-ustc` for a grant, not to search again.** |
 
 Education repositories a naive licence probe grades as buildable. They are not.
 Every row re-read from the **licence file's title block** this pass.

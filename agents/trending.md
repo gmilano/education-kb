@@ -3,6 +3,161 @@ industry: education
 region: Global
 updated: 2026-10-30
 ---
+## 🆕 `p542` — `2026-10-30` — **🟢 THE LANGUAGE AXIS GENERALISES, BUT NOT AS A LANGUAGE AXIS: EIGHT NEW LEGS (fr/de/ja/zh/ko/ar/hi/id) RETURNED **7 ABSENT OF 12**, AND THE YIELD TRACKS WHETHER THE LANGUAGE INDEXES A **DISTINCT PUBLISHING CORPUS** — id AND zh 2-OF-2, de/ja/ko **0**. 🔴 ENGLISH RESTATED **9 OF 9**, REPLICATING p541. 🔴 THE zh CORPUS SITS ON FORGES THIS ENVIRONMENT **CANNOT REACH**: `gitlink.org.cn` DOES NOT RESOLVE, `gitee.com` IS 403 AT THE GATEWAY — THE FORGE GAP IS **UNWORKABLE**, NOT UNWORKED. 🟢 THREE AGENTS SHELVED (68→71), ONE FOUNDATION FILED, THREE LICENCE TRAPS, AND A **ONE-READ INSTRUMENT FOR FORK-VS-UPSTREAM** THAT p538 LEFT AS A HAND CHECK.**
+
+🔵 **Full narrative, the per-leg table, the three shelved rows, the
+fork-holder instrument and the two probe-shape defects are on
+[`../agents/top.md`](../agents/top.md#-p542--the-language-axis-is-two-axes-and-the-yield-tracks-the-corpus-not-the-language).**
+This entry carries the dated trend record.
+
+### 🟢 What moved this week
+
+- 🆕 **`THU-MAIC/OpenMAIC` re-confirmed first-hand at MIT, 41.8k★ / 6.5k forks,
+  805 commits** — and the re-read matters for a reason beyond currency.
+  **Two secondary sources reached on the German and Japanese legs assert the
+  project is AGPL-3.0.** It is not: the sidebar reads `MIT license`, and this
+  base's own `p541` read of the grant bytes (1 065 B, MIT) agrees. 🔴 **So the
+  non-English legs carry a measurably higher licence-error rate than they carry
+  new supply** — 1 of 1 licence claims from a non-English secondary source was
+  wrong on this pass — which is the argument for the rule this pass followed:
+  **a leg may nominate an address; only a byte read may license it.**
+- 🆕 **`DaRL-GenAI/instructional_agents`** — MIT, **490★**, 106 forks,
+  EACL 2026 Main, arXiv `2508.19611`. ADDIE-model multi-agent generation of
+  syllabi, slides, scripts and assessments, with a web UI, a CLI and a REST
+  API. **Shelved.** The first artefact on this base aimed at faculty workload
+  rather than learner response.
+- 🆕 **`minmaxflow/mini-kode`** — MIT (`master`, 1 066 B), **305★**, *"An
+  educational AI coding agent CLI"* with MCP integration and a
+  permission-approval agent loop. **Shelved.**
+- 🆕 **`ocademy-ai/machine-learning`** — MIT code + CC-BY-4.0 content,
+  **231★**, **3 049 commits**, carries an AI Tutor prompt set. **Shelved.**
+- 🆕 **`Intelligent-Internet/ii-agent`** — Apache-2.0, **3.4k★**, 524 forks.
+  Absent from this base entirely before this pass. **Filed to
+  [`../repos/foundations.md`](../repos/foundations.md) as substrate, with no
+  pedagogy claim attached.**
+- 🔴 **`MeetYourAI/AIProf` is a stale address.** It redirects to
+  **`TheFlameFoundation/AIBot-Prof-Helper`**, GPL-3.0 by both sidebar and
+  bytes, **archived 2025-03-10** — and its README still claims *"This project
+  is [MIT](./LICENSE) licensed"* while linking to the GPL text that refutes it.
+  **Not promoted.** The rename explains why probes against the held address
+  returned nothing for nine passes.
+- 🔴 **`bigdata-ustc/Agent4Edu`** — AAAI 2025 Oral, 100★, **no grant at all**,
+  confirmed by sidebar silence and twelve `raw` misses. **Not promoted.**
+- 🔴 **`1111philo/learn`** — AGPL-3.0 (35 240 B; the sidebar names nothing
+  because an 18-line program preamble precedes the licence text),
+  **archived 2026-04-17**, 1★. **Not promoted**, but **placed in North
+  America** on a named consortium: 11:11 Philosopher's Group with UIC Tech
+  Solutions, the UIC TS Open Source Fund, Louisiana Tech and the ULL Louisiana
+  Educate Program.
+
+### 🔴 The promotion-debt pattern holds on the intel legs too, and that is the week's second result
+
+`p541` measured **32 of 37** residue addresses as trending-only — known,
+measured, never filed. 🟢 **`p542` finds the same ratio on the *regional*
+legs, which nobody had graded that way.** Of the region-leg claims this pass
+surfaced, graded against the committed tree:
+
+| Claim | State in this base |
+|---|---|
+| Singapore's *"Four Learns"* (COS, March 2026) | 🟡 trending-only |
+| EC + OECD *Empowering Learners for the Age of AI* (18 June 2026) | 🟡 trending-only |
+| Council of the EU `ST-9003-2026` (11 May 2026) | 🟡 trending-only |
+| Ireland's Oide guidance | 🟡 trending-only |
+| `moe.gov.sg`, CSET's translation of China's 2025 GenAI school guide | 🟡 trending-only |
+| Europe EdTech 200 (2026), OpenAI × IIT Madras | 🟡 trending-only |
+| Singapore **AIEd Framework**, **EdTech Masterplan 2030** | 🔴 **absent** |
+| China MOE **2026 digital-education priorities**; **AI + Education Action Plan** (2 April 2026, five departments) | 🔴 **absent** |
+| **ASEAN Guide on AI Governance and Ethics** | 🔴 **absent** |
+| IDB **fAIr Tech Radar** (November 2025) | 🔴 **absent** |
+| US **FIPSE** award vehicle behind the held `$169 M` figure | 🔴 **absent** |
+
+🔵 **Eleven claims: six trending-only, five absent.** The six are
+`Gap 529-A`'s debt reproducing itself on the intel side of the base rather
+than the supply side, and the five absent ones are filed to
+[`../intel/market.md`](../intel/market.md) this pass. 🟢 **The generalisable
+reading: the regional legs are not saturated, the *promotion step* is.** Ten
+passes have reported "demand saturated" from legs that were in fact returning
+material the base had never filed — **"already held" and "already filed" are
+different verdicts, and only the second one licenses a pass to stop.**
+🔴 **And the five absent claims could not be verified at their primary
+sources from this environment:** `education.ec.europa.eu` **does not resolve**
+here, as `gitlink.org.cn` does not. They are filed **attributed to the
+secondary source that carried them, and marked unverified**, which is the
+honest state and not a finished one.
+
+### 🟢 `p542` gate attestation — 15 run individually, **13 green, 2 red, and both reds are inherited parser defects**
+
+`p541` established that `make hooks` is denied while the **individual gate
+targets are not**. Fifteen were run one at a time against this pass's tree:
+
+🟢 **Green (13):** `gate-tables`, `gate-region-headings`, `gate-dates`,
+`gate-bespoke-title`, `gate-address-shape`, `gate-prose-claims`,
+`gate-regional-leg`, `gate-region-place`, `gate-fork-direction`,
+`gate-restated-presence`, `gate-promotion`, `gate-identity`,
+`gate-shelf-fork`.
+
+🔴 **Red (2), and both were re-run at the pristine `p541` commit and fail
+there identically — so they are inherited, not introduced:**
+
+| Gate | What it reports | What is actually true |
+|---|---|---|
+| `gate-shelf-consistency` | `shmercer/writeAlizer` carries **BSD-3-Clause** in `intel/market.md` and **MIT** in `repos/foundations.md` | 🟢 **False positive — a parser defect.** The prose is *correct*: it names three **MIT** graders (`ggcheck`, `tblcheck`, `writeAlizer`) **"plus BSD-3-Clause `OpenOLAT/qtiworks`"**. The extractor binds a licence token to the **nearest preceding repository link**, so in one sentence listing several repos under different licences it attaches `qtiworks`'s grant to `writeAlizer`. **No page needs changing; the extractor needs a span rule.** |
+| `gate-grant-path` | *"the extractor found **ZERO** grant claims on the live shelves"* | 🔴 **The gate's own message names the alternative and it is the right one: the parser broke.** The live shelves are dense with grant paths — every row filed at `p541` and `p542` carries one (`LICENSE` @`main`, **1 067 B**, and so on). A result of **zero** cannot be a property of these pages. |
+
+🟢 **The `writeAlizer` grant was still read first-hand, because a false
+positive is only false once you have checked** — and the read reproduces a defect
+class this base already named at `p541` ("three MIT grants hiding at
+`LICENSE.md` behind a 45-byte stub"):
+
+| Path | Bytes | Content |
+|---|---|---|
+| `LICENSE` @`master` | **47 B** | `YEAR: 2025` / `COPYRIGHT HOLDER: Sterett H. Mercer` — **no licence name at all** |
+| `LICENSE.md` @`master` | **1 076 B** | `# MIT License` · `Copyright (c) 2025 Sterett H. Mercer` |
+| `DESCRIPTION` @`master` | 1 549 B | `Package: writeAlizer`, `Version: 1.7.4` — an **R package** |
+
+🔵 **And this pass can name the root cause `p541` left open: the stub is not
+sloppiness, it is the CRAN convention.** An R package declares
+`License: MIT + file LICENSE` in `DESCRIPTION`, and `LICENSE` then holds
+**only** the year and copyright holder — the licence *text* lives elsewhere.
+🟢 **So every R-based artefact on this base will show a sub-100-byte `LICENSE`
+and a real grant at `LICENSE.md`**, which makes this the third probe-shape
+defect of the pass, alongside `542-A` (split grants) and `542-B` (`master`).
+**Education research publishes heavily in R** — graders, psychometrics, IRT,
+BKT — so this is not an edge case on this base, it is a whole leg of it.
+
+- **`542-F`** — `gate-shelf-consistency` must bind a licence token to a
+  repository by **span containment**, not nearest-preceding-link. Until then
+  its reds need a hand check and **must not be treated as data defects.**
+- **`542-G`** — `gate-grant-path`'s extractor returns zero on shelves full of
+  grant paths. **It is a broken gate reporting green-adjacent noise**, and a
+  gate that cannot fail correctly is worse than an absent one.
+- **`542-H`** — add the **CRAN R-package shape** (`LICENSE` stub +
+  `LICENSE.md` grant + `DESCRIPTION` declaration) to the probe ladder as a
+  named case, and re-probe the R-language rows.
+
+### 🟢 `Gap 542-A` … `Gap 542-E` registered
+
+- **`542-A`** — probe surface misses split grants. Add `LICENSE-CODE` and
+  `LICENSE-TEXT`; **re-probe every content-bearing repo whose verdict is "no
+  grant"**, because that verdict is currently unreliable on exactly the repo
+  class this KB collects.
+- **`542-B`** — probe surface assumes `main`. `mini-kode`'s grant is on
+  `master`; the branch set must be `main|master|dev` everywhere, not per-probe.
+- **`542-C`** — **no instrument detects a renamed repository.**
+  `MeetYourAI/AIProf` → `TheFlameFoundation/AIBot-Prof-Helper` was found by
+  hand. A redirect check on every held address is cheap and would retire a
+  class of silent staleness.
+- **`542-D`** — the forge gap is **unworkable from this environment**, not
+  unworked: `gitlink.org.cn` unresolvable, `gitee.com` 403 at the gateway.
+  **Remedy is a network-policy change.** Until then every "no non-GitHub
+  supply" statement on this base is an artefact of the environment and must be
+  written as one.
+- **`542-E`** — **de, ja and ko legs are measured negatives** (0 absent of 3
+  artefacts). One pass each is weak evidence; **either re-measure once and
+  retire them, or stop claiming a general "language bias" the data does not
+  support.**
+
+
 ## 🆕 `p541` — `2026-10-30` — **🔴 THE MANDATED QUERY SET RETURNED TWENTY CANDIDATES AND TWENTY WERE ALREADY HERE — p540 MEASURED 4/5, p541 MEASURES 20/20. 🟢 THE SAME LEGS IN **SPANISH AND PORTUGUESE** RETURNED **8 NEW OF 10**, SO `Gap 540-B`'s ENGLISH KEYING IS A **DISCOVERY** BIAS AND NOT ONLY A CLASSIFIER ONE. 🟢 `Gap 540-A` WIRED AND STANDING. 🔴 AND THIS PASS NEARLY PUBLISHED A RESTATED PRESENCE AS ITS OWN HEADLINE — THE GATE GRADES ADDRESSES, NOT ANALYSES. 🟢 `make hooks` STILL DENIED, BUT THE **INDIVIDUAL GATE TARGETS ARE NOT**: **52 OF 68 GREEN, 16 RED, ALL NAMED** — FIRST ATTESTATION IN 14 PASSES. SIX REGISTERED (`541-A`…`541-F`).**
 
 ### 🔴 The measurement this pass exists to report

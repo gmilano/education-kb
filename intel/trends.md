@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education AI — Current Trends
 
-**Pass `p541` · 2026-10-30.** **Thirty-five** trends. Each one is stated so it could be
+**Pass `p542` · 2026-10-30.** **Thirty-eight** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -1415,3 +1415,94 @@ software **was** used. A liveness read stays mandatory.
 looking at the ratio, then compute it. If the 0.18–0.25 band fills in, or if
 any deploy-per-institution project lands below 0.15, the threshold is noise and
 only the direction survives.
+
+## 🆕 `p542` — Trend 36: **an English-keyed scan returns the English-publishing corpus, and the gap is invisible from inside it**
+
+**Stated so it can be wrong:** if the language of a discovery query were merely
+a *phrasing* choice, then running the same legs in any language would return
+roughly the same artefacts, and non-English legs would yield new supply at a
+rate close to zero.
+
+🟢 **Measured, and it is wrong in a specific way.** `p542` ran this base's
+mandated legs in English plus eight languages. English restated **9 of 9**.
+The eight new legs produced **12 distinct artefacts, 7 of them absent from a
+base holding 3 202 addresses**. But the yield is not spread evenly across
+"non-English":
+
+- **Distinct-corpus languages yield:** Indonesian **2 of 2**, Chinese
+  **2 of 2**, and `p541`'s Spanish and Portuguese **8 of 10**.
+- **Same-corpus languages do not:** German, Japanese and Korean yielded
+  **0 absent artefacts of 3**, because their developer populations publish into
+  the same GitHub corpus in English.
+
+🔵 **So the trend is sharper than "search in other languages":** the axis is
+**whether a language indexes a separate publishing corpus**, and only then is a
+leg worth its cost. 🔴 **The disconfirming evidence to watch for:** a single
+pass of one leg per language is a weak sample, and one German or Korean leg
+returning two absent artefacts next pass would falsify the negative half.
+**`Gap 542-E` asks for exactly that re-measurement rather than letting a
+one-pass negative harden into doctrine.**
+
+⚠️ **The part that makes this a trend and not a tip:** the omission is
+**invisible from inside the scan.** A missing result and an absent artefact
+look identical, so a team scanning an Indonesian or Brazilian education market
+in English gets a confident, complete-looking, systematically short answer —
+and no signal that it is short.
+
+## 🆕 `p542` — Trend 37: **the permissive end of education software is pedagogy; the administrative end is copyleft, and that is stable**
+
+**Stated so it can be wrong:** if licence choice in education software were
+independent of what the software *does*, then MIT and Apache repos would be
+spread evenly across tutoring, classroom, repository, SIS, ERP and CRM
+functions.
+
+🟢 **They are not, and `p542`'s vertical leg returned no counter-example.** The
+mandated `open source platform education ERP CRM MIT Apache` leg returned eight
+platforms — OpenEduCat, Moodle, Koha, Nextcloud, Jitsi, DSpace, LibreOffice,
+Odoo — and **not one permissive education ERP or CRM.** The administrative end
+is **copyleft or nothing**: OpenEduCat LGPLv3, ERPNext GPLv3, Odoo community
+LGPLv3. Meanwhile the newly shelved pedagogy-side artefacts are MIT
+(`instructional_agents`, `mini-kode`) and MIT + CC-BY-4.0 (`ocademy`).
+
+🔵 **The mechanism is plausible and worth stating as the reason:** administrative
+systems are sold as *hosted products* whose vendors use copyleft to protect a
+commercial edition, while pedagogy tools are published by *academics and
+individuals* optimising for citation and adoption. 🟢 **The engagement
+consequence is concrete:** an administrative build either accepts copyleft on
+the platform and keeps the AI layer across a process or network boundary, or it
+integrates against a hosted product. 🔴 **It is not a gap to be closed by
+searching harder** — this base has now run that leg to saturation for several
+passes, and should state the constraint instead of re-running the query.
+
+## 🆕 `p542` — Trend 38: **a licence verdict is only as good as the probe's shape, and three different defects all read out as "no grant"**
+
+**Stated so it can be wrong:** if a `LICENSE`-at-`main` probe were an adequate
+licence instrument, then "no grant found" would mean "no grant exists".
+
+🔴 **On this pass it meant three different things, and only one of them was
+true.** [`ocademy-ai/machine-learning`](https://github.com/ocademy-ai/machine-learning)
+has **two** grants under `LICENSE-CODE` (MIT) and `LICENSE-TEXT` (CC-BY-4.0)
+and returns 404 on twelve conventional probes;
+[`minmaxflow/mini-kode`](https://github.com/minmaxflow/mini-kode) keeps a
+canonical 1 066 B MIT file on **`master`**;
+[`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) genuinely
+has nothing. 🟢 **Three identical outputs, three different causes — absent,
+elsewhere, other-branch.**
+
+🔵 **Why this is a sector trend and not only this base's bug:** the
+split-grant shape (**code permissive, content CC-BY**) is the *correct* way to
+license a teaching corpus, so an education KB meets it more often than any
+other industry would. 🟢 **The trend, then: as education open source
+professionalises, its licensing gets more structurally precise and
+simultaneously harder for naive automated classifiers to read.** The
+corollary is a standing one — **on a content-bearing education repo, treat "no
+licence found" as "not yet probed"**, and read the bytes before writing the
+verdict (`Gap 542-A`, `542-B`).
+
+⚠️ **And a second-order case this pass measured:** GitHub's own sidebar names
+**nothing** for [`1111philo/learn`](https://github.com/1111philo/learn) because
+an 18-line program preamble — the form the FSF's own instructions recommend —
+precedes the AGPL-3.0 text. **Following the licence's own guidance defeats the
+platform's classifier**, so the artefacts most carefully licensed are among
+those most likely to read as unlicensed.
+

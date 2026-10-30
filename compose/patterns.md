@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Compose Patterns — Education
 
-**Pass `p541` · 2026-10-30.** **Thirty-five** recipes. Every component named below
+**Pass `p542` · 2026-10-30.** **Thirty-five** recipes. Every component named below
 was read from its repository page, and **every licence was read from the licence
 file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
 this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
@@ -2044,3 +2044,130 @@ estimate.**
    APAC or LATAM engagement, run the supply search **in the client's language
    first**: `p541` measured **8 new addresses of 10** in Spanish and
    Portuguese against **0 of 5** in English.
+
+## 🆕 `p542` — two recipes added (`P589`, `P590`), both built on components read first-hand this pass
+
+🔵 Every component named in the two recipes below had its **grant read as
+bytes** on `2026-10-30`, and the two new grant shapes this pass found
+(`LICENSE-CODE`/`LICENSE-TEXT`, and a grant on `master`) are written into the
+tables rather than normalised away — because a due-diligence gate that probes
+`LICENSE` at `main` will report both as ungranted (`Gap 542-A`, `542-B`).
+🔴 **Run [`P551`](#p551--licence-due-diligence-gate-run-this-first-every-engagement)
+first, as always — and patch its probe surface before you trust it on
+courseware.**
+
+## P589 — The course factory: attack faculty workload, not learner response (Global; North-America-funded)
+
+**Brief.** A university or a publisher wants to cut the cost of *producing* a
+course — syllabus, slides, scripts, assessments — rather than add another
+student-facing tutor. This is the half of the market that the US `$169 M`-class
+higher-ed funding actually buys, and until `p542` this base had **no permissive
+asset pointed at it**.
+
+| Role | Component | Licence (read as bytes, `2026-10-30`) |
+|---|---|---|
+| 🆕 Course generation (the core) | [DaRL-GenAI/instructional_agents](https://github.com/DaRL-GenAI/instructional_agents) | **MIT** · `LICENSE`@`main` **1 067 B** · 490★ · EACL 2026 Main |
+| 🆕 Licensed content body | [ocademy-ai/machine-learning](https://github.com/ocademy-ai/machine-learning) | **MIT** (`LICENSE-CODE`) **+ CC-BY-4.0** (`LICENSE-TEXT`) · 231★ · 3 049 commits |
+| 🆕 Agent substrate | [Intelligent-Internet/ii-agent](https://github.com/Intelligent-Internet/ii-agent) | **Apache-2.0** · `LICENSE`@`main` **11 357 B** · 3.4k★ |
+| Delivery target | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 |
+| Portable output | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | GPL-3.0 · 152★ |
+| Learner record | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) → [openfun/ralph](https://github.com/openfun/ralph) | **MIT** / **MIT** |
+| Acceptability gate | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) rubrics | **Apache-2.0** · 601★ |
+
+**Wiring.** `instructional_agents` is the pipeline, and the reason to start
+there rather than from a prompt chain is that it already implements **ADDIE**
+(Analyse, Design, Develop, Implement, Evaluate) as distinct agent stages, which
+is the model the client's own instructional designers are trained on — you are
+automating a process they recognise, not proposing a new one. Drive it through
+its **REST API**, not its CLI, so the factory is a service the LMS calls; its
+web UI becomes the designer's review console. **`ii-agent` sits underneath as
+the substrate** so that swapping model providers or adding tools does not mean
+re-writing the ADDIE stages — the education semantics stay in
+`instructional_agents`, the plumbing stays in `ii-agent`. 🟢 **`ocademy` is the
+seed corpus and the licence story**: its content is **CC-BY-4.0**, so generated
+courses derived from it can be shipped and attributed, which is the question
+that normally kills a course-factory pilot at legal review. Emit **H5P** so the
+artefacts outlive the platform; write every generation and review event to
+**Ralph** as xAPI through `learnmcp-xapi`, so "who approved this course" has an
+answer. The **k12 rubrics** run in CI over a fixed prompt set and a regression
+fails the build.
+
+**Hard constraint — build it in, not in the policy doc.** Course content is a
+*publication*, so the binding risk is provenance, not safety. Two rules,
+structural: (1) **every generated artefact carries the licence and attribution
+of its sources** — CC-BY-4.0 requires attribution, and a factory that loses it
+produces unshippable output at scale; (2) **a human commits, the agent drafts**,
+and the xAPI record names the committer — the same rule as `P547`, for the same
+reason. ⚠️ **And `instructional_agents` is a research artefact**: 95 commits, an
+EACL paper, no release cadence. Vendor the version you validate and expect to
+maintain your fork.
+
+**Effort.** 8-10 weeks. Weeks 1-2 REST deployment and `ii-agent` substrate;
+3-5 ADDIE stage tuning against the client's own course corpus; 6 `ocademy`
+seeding and attribution plumbing; 7 H5P emission; 8 xAPI and approval trail;
+9-10 rubric CI and a single-department pilot.
+
+---
+
+## P590 — The PII-stripped on-premise classroom, because APAC procurement asks for it in writing (APAC)
+
+**Brief.** Singapore MOE requires that for commercial off-the-shelf tools,
+schools **check that input data contains no personally identifiable information**
+and complies with data-management guidelines; China MOE's 2026 priorities put
+**data security and personal-information protection** beside the pedagogy. Both
+are ingress-path architecture requirements, and a hosted-API tutor cannot
+satisfy either cheaply. This recipe answers them in hardware.
+
+| Role | Component | Licence (read as bytes, `2026-10-30`) |
+|---|---|---|
+| 🆕 On-premise classroom analytics | [open-edge-platform/education-ai-suite](https://github.com/open-edge-platform/education-ai-suite) — `smart-classroom`, `ai-teaching-assistant` | **Apache-2.0** · `LICENSE`@`main` **11 351 B** · 2★ / **14 forks** · 481 commits |
+| Classroom delivery | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** · 41.8k★ · 6.5k forks · 805 commits |
+| Local inference | [ollama/ollama](https://github.com/ollama/ollama) · [vllm-project/vllm](https://github.com/vllm-project/vllm) | **MIT** / **Apache-2.0** |
+| 🆕 Agent-loop reference (for the PII gate) | [minmaxflow/mini-kode](https://github.com/minmaxflow/mini-kode) | **MIT** · `LICENSE`@**`master`** **1 066 B** · 305★ |
+| LMS of record | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 |
+| Learner record | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** |
+
+**Wiring.** The **Intel suite is the ingress**, and it is chosen for one
+property: its audio and video pipelines are *"accelerated with the OpenVINO™
+toolkit"* against Intel **CPUs, integrated GPUs and NPUs**, so classroom
+session processing — `smart-classroom`'s statistics, re-identification and
+session summaries — **runs on the school's own hardware and the raw media never
+leaves the building.** That is the PII requirement satisfied structurally
+rather than contractually. 🟢 **The PII gate is a separate process in front of
+everything else**, and `mini-kode` is on this table as the **reference
+implementation to copy, not a dependency to ship**: it is an explicitly
+educational agent loop with **permission approval** already modelled, which is
+exactly the shape the gate needs — every tool call pauses, is inspected, and is
+either stripped or refused. **`OpenMAIC` is the delivery surface** (lecturer,
+peer and assistant roles, slides, quizzes, whiteboard) and talks only to
+**local** inference via Ollama or vLLM. Moodle stays the system of record;
+Ralph takes the xAPI stream. 🔴 **Nothing in this stack calls a hosted model
+API**, which is the whole point — and it is why the pattern is `P590` and not a
+variant of `P549`.
+
+**Hard constraint — build it in, not in the policy doc.** (1) **Re-identification
+is the risk, not the feature.** `smart-classroom` offers student
+re-identification; in a jurisdiction that requires PII-free input this must be
+**off by default and separately authorised**, with the authorisation in the
+xAPI record. (2) **Selectivity is a stated procurement rule**, not a
+preference: Singapore MOE says AI should be used only where it contributes
+meaningfully to learning outcomes, so the deliverable needs a *named learning
+outcome per agent surface* — a feature with no outcome attached is a
+procurement liability. (3) ⚠️ **The Intel suite's own disclaimer, carried
+verbatim: the applications are *"intended for reference and demonstration, not
+production."*** Treat it as a benchmark harness and a starting point; the
+hardening is yours, and it is most of the work. 🔵 **Its 2-stars-to-14-forks
+ratio is the encouraging signal** — more parties are deriving from it than
+bookmarking it.
+
+**Effort.** 10-14 weeks. Weeks 1-2 hardware sizing and OpenVINO benchmarking on
+the client's actual devices; 3-4 PII gate (modelled on `mini-kode`'s approval
+loop) and the authorisation record; 5-7 `smart-classroom` hardening with
+re-identification off; 8-10 `OpenMAIC` against local inference; 11-12 Moodle and
+Ralph integration; 13-14 one-school pilot and the jurisdiction's
+data-management sign-off. 🔴 **The long pole is weeks 1-2** — if the hardware
+cannot carry the pipelines, the pattern does not apply and you need `P549`
+instead. **Benchmark before you promise.**
+
+---
+

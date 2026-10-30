@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p541` · 2026-10-30.** Every platform below is a real, running system that
+**Pass `p542` · 2026-10-30.** Every platform below is a real, running system that
 institutions already operate, with its licence read from **the licence file's own
 title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
 carried for two passes — "`github.com` returns HTTP 403 through the session
@@ -22,6 +22,42 @@ ship?"**
 Odoo is to ERP what Moodle is to learning: the thing you customise rather than
 replace. In education the equivalents are below, grouped by the institutional
 function they own.
+
+## 🆕 `p542` — the vertical leg returned eight platforms and **nothing new**, said plainly
+
+**The mandated vertical query (`open source platform education ERP CRM MIT
+Apache`) was run and it produced no new platform.** It returned
+**OpenEduCat** (LGPLv3, on Odoo), **Moodle**, **Koha**, **Nextcloud**,
+**Jitsi**, **DSpace**, **LibreOffice** and Odoo itself — **eight platforms,
+eight already on this page or named in its prose.** 🟢 **No row is added,
+and no row is padded to look like progress.** `p541` measured the agent legs
+at 20/20 restated; the vertical leg is the more saturated of the two, and has
+been for several passes.
+
+🔴 **One thing the leg did establish, which is worth more than a row:** it
+returned **no MIT- or Apache-licensed education ERP or CRM at all.** The
+permissive end of this page is LMS, classroom and repository software; the
+**administrative** end — SIS, ERP, CRM — is **copyleft or nothing**:
+OpenEduCat is LGPLv3, ERPNext is GPLv3, Odoo's community edition is LGPLv3.
+🟢 **That is a standing constraint on engagement shape, not a gap to close by
+searching harder:** an administrative build either accepts copyleft on the
+platform and keeps the AI layer at arm's length across a process or network
+boundary, or it integrates against a hosted product. **This page should stop
+running the ERP/CRM leg expecting a permissive answer and start stating the
+constraint.**
+
+🔵 **The one component-level addition this pass makes is on the Intel suite
+already held in [`../repos/foundations.md`](../repos/foundations.md)** —
+`open-edge-platform/education-ai-suite`, Apache-2.0, now read down to its named
+components (`ai-teaching-assistant`, `smart-classroom`,
+`teacher-assistant-claw-demo`), its OpenVINO/CPU-iGPU-NPU runtime, its
+**2-stars-to-14-forks** inversion, and its own disclaimer that the
+applications are *"intended for reference and demonstration, not
+production."* 🟢 **It is the only artefact on this base that is on-premise by
+construction**, which is the EMEA data-residency and LATAM connectivity answer
+expressed in hardware rather than in policy — and the only permissive thing
+near the administrative end of this page.
+
 
 ## 1. Learning delivery (LMS)
 
