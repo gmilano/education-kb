@@ -1,7 +1,46 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-30
+---
+
+## 🆕 `T275` — **A licence-channel file can WITHHOLD rights, so "no grant" and "a refusal" are different findings with different next actions**
+
+🔵 **This KB already reasons correctly from absence:** *"no licence file means all rights reserved —
+not usable, regardless of being public."* 🟢 **`T275` is the case where the author says so
+explicitly, and it changes the ACTION rather than the verdict.**
+
+🟢 **Measured.** [`idoforgod/Vibe-learning-AgenticWorkflow`](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow),
+recorded here as *"**NONE** … no mention of a licence anywhere in the README"*, serves
+**`COPYRIGHT.md`** — `395` B, `sha256₁₂ f9e2076e626b` — reading *"All rights reserved"* plus an
+explicit Korean prohibition on reproduction, distribution, modification and derivative works
+([`../evidence/result.copyright-refusal.2026-10-30-p177.tsv`](../evidence/result.copyright-refusal.2026-10-30-p177.tsv)).
+
+🔴 **Four states, and the two that matter are indistinguishable on every field this KB currently
+records:**
+
+| state | file in the licence channel? | rights granted? | correct next action |
+|---|---|---|---|
+| declared-not-served | 🔴 no | 🔴 no | ask upstream to add the file |
+| served-off-root | 🟢 yes (`docs/License.txt`, `NOTICE`) | 🟢 **yes** | 🟢 **use it** — the grant is real |
+| ungranted-silent | 🔴 no | 🔴 no | ask upstream for a grant |
+| 🆕 **served-and-refusing** | 🟢 **yes** (`COPYRIGHT.md`) | 🔴 **NO** | 🔴 **stop** — the answer is already written |
+
+🔴 **Rows 2 and 4 agree on "a licence-channel file is served" and are opposite realities.** Any
+pipeline keyed to *presence* promotes an all-rights-reserved repository; any pipeline keyed to *root
+filenames* rejects a real grant. 🔵 **Opposite errors from one missing field.**
+
+🟢 **The missing field is a predicate, not a path: `grants_rights`, read from the BODY.** Cheap
+first-pass heuristic: a licence-channel file **under ~`1` kB carrying no recognised licence title
+block** is a notice, and notices run both ways.
+
+🔵 **Why this is a trend rather than a curiosity, stated for an engagement:** the refusal was written
+by an author publishing in the open, with an active repository and recent human commits. 🔴 **Public
+is not permissive**, and *that* inverse — reading visibility as permission — is the one with legal
+consequences for a client. 🟢 **So the cheapest due-diligence step is also the most complete one:
+enumerate the tree and read what you find, instead of asking whether a guessed filename returns
+`200`.**
+
 ---
 
 ## Pass 176 — 2026-10-13

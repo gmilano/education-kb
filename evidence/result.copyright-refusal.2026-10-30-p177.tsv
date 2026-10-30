@@ -1,0 +1,2 @@
+subject	channel	path	bytes	sha256	head_commit_date	author_kind	prior_kb_record	p177_reading
+idoforgod/Vibe-learning-AgenticWorkflow	git ls-tree -r HEAD (full enumeration)	COPYRIGHT.md	395	f9e2076e626b5c6e	2026-02-28	human	"NONE — no LICENSE at root and no mention of a licence anywhere in the README"	served-and-refusing: a licence-channel file exists and affirmatively withholds every right

@@ -1,7 +1,41 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-30
+---
+
+## Pass 177 — 2026-10-30
+
+🔴 **No row added and no row promoted.** 🔵 The `5` addresses this pass read that this KB had not
+seen are on [`trending.md`](trending.md); `2` are ungranted, `1` is `17` months stale, `2` were
+already known here.
+
+🟢 **What `p177` adds to this file is a REFERENCE SET rather than a row: `33` repositories enumerated
+in full at `HEAD`** — every path, no filename vocabulary —
+[`../evidence/result.enumeration-groundtruth.2026-10-30-p177.tsv`](../evidence/result.enumeration-groundtruth.2026-10-30-p177.tsv).
+🔵 **It exists so that the `76` probe lists in `compose/code/` can be SCORED rather than compared to
+each other** (`ACTION KT`, registered for `p178`).
+
+🟢 **Two of this file's published readings reproduced exactly, by a different instrument, reported as
+confirmation and not as discovery:**
+
+| this file's row | `p177` enumeration | agreement |
+|---|---|---|
+| `projectfedena/fedena` · `NOTICE` only · root `LICENSE` **ABSENT** · `Apache-2.0` by licensor statement · `2016-07-20` | `4 608` files · `NOTICE` at root · **`680` B** · `sha256₁₂ 38af3b29e417` · no root `LICENSE` · `1 472` commits · `112` models · `886` Ruby files | 🟢 **exact** |
+| `foradian/fedena` · `NOTICE` only · `Apache-2.0` · `2012-10-12` | `4 568` files · `NOTICE` at root · same `680` B / same hash · no root `LICENSE` | 🟢 **exact** |
+
+🔵 **Worth one line on why a reproduction is worth publishing:** this KB's `Apache-2.0` reading on
+Fedena rests on a licensor statement in a file that is **not** `LICENSE` — exactly the shape that a
+root-filename probe reports as ungranted. 🟢 **An independent instrument arriving at the same bytes
+and the same hash is what makes the row safe to quote to a client's counsel.** 🔴 **The disqualifier
+is unchanged and still governs: `HEAD` is `2016-07-20`, so Fedena is a schema to read, not a platform
+to run.**
+
+🟢 **One absence hardened, and it is the more useful half.** [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp),
+recorded here as ungranted, has a **`13`-file tree with `0` licence-channel files at any depth under
+any name.** 🔵 **That converts *"`0` of `16` probed paths"* into *"there is no path `17`"*** — which
+is the statement `ACTION KJ` was reaching for and could not make from a probe list.
+
 ---
 
 ## Pass 176 — 2026-10-13

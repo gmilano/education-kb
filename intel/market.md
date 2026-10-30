@@ -1,7 +1,77 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-30
+---
+
+## Pass 177 — 2026-10-30
+
+🔵 **All four regions appear below, and the ones that produced nothing this pass say so.** An
+informed gap is information; silence reads exactly like coverage. 🔵 `region` is the closed
+five-value vocabulary — countries are named in the prose, never in the field.
+
+## Opportunities by region
+
+### North America
+
+🔴 **Demand leg saturated.** `AI education North America 2026 adoption regulation players` returned
+the *"`134` bills across `31` states"* aggregate figure as its top organic result, plus the **K-12 AI
+Literacy and Readiness Act of 2026** at House-committee stage and the student-drafted **STUDENTS
+FIRST Act of 2026** framework. 🔴 **The `134`/`31` figure reaches this pass only through secondary
+aggregators and is NOT written here as a fact.** 🔵 Nothing new on the supply side for this region.
+
+### EMEA
+
+🔴 **Primary attestation remains unavailable, and `p177` can now name the mechanism precisely.**
+`eur-lex.europa.eu`, `ofqual.blog.gov.uk`, `digital-strategy.ec.europa.eu` and
+`education.ec.europa.eu` **all fail DNS resolution** in this session — tested by two independent
+instruments (`curl` and a separate fetch path), **four distinct European public-sector hosts, zero
+reachable.**
+
+🟢 **The consequence is worth stating as a remedy rather than a lament: this is a CONFIGURATION limit,
+not a research limit.** No volume of further web search can produce a primary attestation while DNS
+fails; the hosts must be added to the session's network allowlist. 🔴 **Until then every EMEA
+regulatory claim available to this pass is vendor- or press-sourced** — a systematic bias in one
+direction, on the region that produces the most regulatory material.
+
+🟡 **So this pass's EMEA regulatory material is recorded as HELD, not as fact:** the deferral of
+Annex III education high-risk obligations to **`2027-12-02`** by **Regulation (EU) `2026/1744`**
+(applying from `2026-07-27`), the emotion-recognition-in-education ban in force since `2025-02-02`,
+and schools' standing as *deployers* rather than providers.
+
+### APAC
+
+🆕 🟢 **The one genuinely new regional datum this pass, and it is about grant PRACTICE rather than
+regulation.** The `ko` corpus was opened and saturated on first contact — `2` new addresses, both
+ungranted — but it produced this KB's first **explicit written refusal of rights**:
+[`idoforgod/Vibe-learning-AgenticWorkflow`](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow)
+serves `COPYRIGHT.md` (`395` B) reading *"All rights reserved"* plus a Korean prohibition on
+reproduction, distribution, modification and derivative works.
+
+🔵 **The engagement reading is a sourcing caution, not a market number.** In this corpus a missing
+`LICENSE` is **not** reliably an oversight that an upstream issue can fix. 🔴 **Some authors have
+written the refusal down, in a file no root-filename probe asks for.** 🟢 **Enumerate for a refusal
+before spending engagement time asking for a grant** (`T275`, `gap 139`).
+
+🟢 **Held and re-attested from the payload:** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC)
+(Tsinghua) is **`MIT`**, `1 065` B, `ba2525637432`, `HEAD` **2026-10-30**, `3 838` files — against a
+Korean trade article circulating it as `AGPL`. 🔵 **The strongest APAC asset here is permissive,
+committed today, and correctly recorded.**
+
+### LATAM
+
+🔴 **Nothing new, reported with its evidence rather than left blank.** `AI education LATAM Latin
+America 2026 adoption regulation Brazil Mexico edtech` returned **only** material already held: the
+**UNESCO LAC Observatory on AI in Education** (launched `2026-04-14`, with its CONALEP/DGETI pilot in
+Mexico), **Google.org's `$4.6M`** with the Raspberry Pi Foundation across nine countries targeting
+`1.25M` students by `2028`, **HolonIQ's 2026 LATAM EdTech 100** with Brazil at nearly half the cohort,
+**Ginia** (Mexico), and Brazil's **PL `2338/2023`**. 🔵 **Zero new addresses, zero new figures.**
+
+🟢 **One LATAM-relevant asset re-attested:** Fedena's `Apache-2.0` grant means a public-sector
+engagement needing a defensible assessment schema can **copy one under a permissive licence** instead
+of negotiating around `GPL` — 🔴 while still deploying a live copyleft SIS (`RosarioSIS`, `i-educar`)
+unmodified beside it, because Fedena itself cannot be run.
+
 ---
 
 ## Pass 176 — 2026-10-13

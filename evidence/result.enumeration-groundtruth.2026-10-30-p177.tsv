@@ -1,0 +1,29 @@
+slug	resolves	tree_files	grant_paths_n	served_path	bytes	sha256_12	family	declared_in_manifest	last_commit	last_author_kind
+A-R007/Multi-Agent-Study-Assistant	YES	19	0	-	-	-	NO-GRANT-IN-TREE	-	2025-11-04	human:7/bot:0
+DMontgomery40/mcp-canvas-lms	YES	36	0	-	-	-	NO-GRANT-IN-TREE	package.json ::   "license": "MIT",	2026-05-31	human:15/bot:0
+Fatima0923/AssessmentAI	YES	15	0	-	-	-	NO-GRANT-IN-TREE	-	2026-06-21	human:4/bot:0
+JustinoLM/STI-matematicas	YES	319	0	-	-	-	NO-GRANT-IN-TREE	-	2026-10-13	human:15/bot:0
+LeoLiu363/ai-video-understanding	YES	54	0	-	-	-	NO-GRANT-IN-TREE	-	2026-09-28	human:15/bot:0
+MaiQuangPhuoc/edu_agents	YES	1020	0	-	-	-	NO-GRANT-IN-TREE	-	2026-10-30	human:15/bot:0
+MarcosNahuel/moodle-mcp	YES	139	1	LICENSE	1065	f27341a8425b	MIT	package.json ::   "license": "MIT",	2026-05-03	human:15/bot:0
+NikolasSchaeffner/lehrer-agent	YES	103	0	-	-	-	NO-GRANT-IN-TREE	-	2026-04-06	human:4/bot:0
+OPTIMUM-LINKUP/Latest-Optimum-School-System	YES	4	1	LICENSE	35141	589ed823e9a8	GPL	-	2017-08-04	human:2/bot:0
+TechAtNYU/ClassroomLM	YES	147	0	-	-	-	NO-GRANT-IN-TREE	-	2025-06-15	human:15/bot:0
+bigdata-ustc/Agent4Edu	YES	49	0	-	-	-	NO-GRANT-IN-TREE	-	2026-09-29	human:15/bot:0
+bobuel/bloom-taxonomy-quiz-builder-skill	YES	6	0	-	-	-	NO-GRANT-IN-TREE	-	2026-09-05	human:13/bot:0
+ceanjonnube-negra/docente-ia	YES	164	0	-	-	-	NO-GRANT-IN-TREE	-	2026-10-28	human:15/bot:0
+dungptt-dng/smart-ict-classroom	YES	12	0	-	-	-	NO-GRANT-IN-TREE	-	2026-10-30	human:4/bot:0
+fairyofmiracle/edu_course_agent	YES	333	0	-	-	-	NO-GRANT-IN-TREE	-	2026-10-28	human:15/bot:0
+henriquebotelhogomes/educacao	YES	211	0	-	-	-	NO-GRANT-IN-TREE	-	2026-09-30	human:10/bot:0
+idoforgod/Vibe-learning-AgenticWorkflow	YES	128	1	COPYRIGHT.md	395	f9e2076e626b	UNIDENTIFIED	-	2026-02-28	human:15/bot:0
+jrsaguas/DocenteAgent	YES	24	0	-	-	-	NO-GRANT-IN-TREE	-	2026-09-29	human:15/bot:0
+lehrer-tools/lehrer-agent	YES	103	0	-	-	-	NO-GRANT-IN-TREE	-	2026-04-06	human:4/bot:0
+loyaniu/moodle-mcp	YES	13	0	-	-	-	NO-GRANT-IN-TREE	-	2026-06-28	human:15/bot:0
+minhdevtry/AI-Teacher-Assistant-Agent	YES	192	0	-	-	-	NO-GRANT-IN-TREE	package.json ::   "license": "UNLICENSED",	2026-07-03	human:15/bot:0
+projectfedena/fedena	YES	4608	8	NOTICE	680	38af3b29e417	Apache-2.0	-	2016-07-20	human:15/bot:0
+thc1006/moodle-mcp	YES	44	1	LICENSE	1064	5da1fff0a1db	MIT	Cargo.toml :: license = "MIT"	2026-10-15	human:15/bot:0
+tosuki/moodle-mcp	YES	20	0	-	-	-	NO-GRANT-IN-TREE	package.json ::   "license": "MIT",	2026-10-21	human:2/bot:0
+triffon/moodle-mcp	YES	592	1	LICENSE	1067	66fa873bd85d	MIT	package.json ::   "license": "MIT",	2026-10-19	human:15/bot:0
+upstream1119/Traceable-Ideological-Education-RAG	YES	178	0	-	-	-	NO-GRANT-IN-TREE	-	2026-10-13	human:15/bot:0
+xrandx/Student-Information-Management-System	YES	3	1	LICENSE	34523	8486a10c4393	AGPL	-	2021-06-15	human:8/bot:0
+mbzuai-oryx/OpenEarthAgent	YES	290	0	-	-	-	NO-GRANT-IN-TREE	-	2026-10-26	human:15/bot:0

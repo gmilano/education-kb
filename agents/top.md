@@ -1,7 +1,84 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-30
+---
+
+## Pass 177 — 2026-10-30
+
+🔴 **Scope stated before anything else, because this pass is narrower than the one registered for it:
+`p177` does NOT discharge `ACTION KN`, `KO`, `KP`, `KQ` or `KR`.** None of the five was run as
+specified — no `6`-shape × `10`-subject probe-list matrix, no `ETag` mechanism probe, no instrument
+repair sweep, no `dolos` read, no test-construction patch. 🔵 **All five stay registered, unmodified,
+for `p178`.** A pass that self-certified them on adjacent work would corrupt the one property this
+register is for.
+
+🟢 **What `p177` does contribute is a METHOD that `ACTION KN` cannot reach by its own design, plus one
+new subject fact and two independent reproductions.**
+
+🆕 🟢 **The method point, and it is the pass: `ACTION KN` compares `6` probe-list shapes against each
+other, which can measure AGREEMENT but never CORRECTNESS.** Six lists that all omit a path agree
+perfectly and are all wrong together — which is exactly the failure `p176` already recorded on Fedena,
+where a `12`-path guessed sweep returned `12 × 404` *including its own `README.md` control*. 🟢 **The
+missing term is a GROUND TRUTH, and it is available at lower cost than any probe list:
+`git clone --filter=blob:none --no-checkout` followed by `git ls-tree -r HEAD`, which returns EVERY
+path in the repository and guesses nothing.** 🔵 **Against that, all `76` lists become scoreable
+instead of merely comparable.** Reference set this pass: **`33` subjects enumerated in full**
+([`../evidence/result.enumeration-groundtruth.2026-10-30-p177.tsv`](../evidence/result.enumeration-groundtruth.2026-10-30-p177.tsv),
+`28` rows; supply legs `5` more), instrument at
+[`../compose/code/p177-tree-enumeration/enumerate-grant.sh`](../compose/code/p177-tree-enumeration/enumerate-grant.sh).
+
+🆕 🔴 **The new subject fact, and it inverts a published verdict without changing its outcome.** This
+KB records [`idoforgod/Vibe-learning-AgenticWorkflow`](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow)
+as *"**NONE** … No `LICENSE` at root and **no mention of a licence anywhere in the README** — it does
+not even make the unenforceable claim"*. 🟢 **Enumeration finds a licence-channel file: `COPYRIGHT.md`,
+`395` B, `sha256₁₂ f9e2076e626b`, `HEAD` `2026-02-28`, human-authored** — and it is not a grant, it is
+a refusal:
+
+> *"Copyright (c) 2026 최윤식 (Yoonsik, Choi) — **All rights reserved.** … 이 저작물의 모든 권리는
+> 저작자에게 있습니다. 저작자의 서면 허가 없이 이 저작물의 전부 또는 일부를 복제, 배포, 수정,
+> 2차 저작물 작성에 사용할 수 없습니다."*
+>
+> *(all rights in this work belong to the author; without the author's written permission no part may
+> be reproduced, distributed, modified, or used for derivative works)*
+
+🔵 **`Do not use` stands and is now better founded.** But the record is wrong on its reasoning — the
+author DID write something down, in two languages — and 🔴 **that changes what to do about it.** This
+KB's standing play on an ungranted artefact is to read the absence as copyright default and, where it
+matters, **ask upstream for a licence**. 🔴 **That play is wrong here: the author has already answered
+it in writing.** 🟢 **New rule, `T275` below: before spending engagement time asking for a grant,
+enumerate for a refusal.**
+
+🟢 **Two reproductions, reported as CONFIRMATION and not as discovery — both findings were already on
+this KB when `p177` measured them.**
+
+| This KB's existing claim | `p177`'s independent instrument | Agreement |
+|---|---|---|
+| `projectfedena/fedena` + `foradian/fedena`: `NOTICE` only, root `LICENSE` **ABSENT**, `Apache-2.0` by licensor statement, `2016-07-20` / `2012-10-12` | Full tree enumeration: `4 608` / `4 568` files, `NOTICE` at root, **680 B**, `sha256₁₂ 38af3b29e417`, no root `LICENSE` on either, `HEAD` dates identical | 🟢 **Exact** |
+| *"the real file is `README.markdown`"* — the `12 × 404` sweep | Both addresses resolve on `master`; readme is `README.markdown`; `1 472` commits, `112` models, `886` Ruby files on `projectfedena` | 🟢 **Exact** |
+| `loyaniu/moodle-mcp` recorded ungranted | Enumeration: **`13`-file tree, `0` grant paths at any depth, any name** | 🟢 **Confirmed, and by a strictly stronger channel** — a probe list can miss a file; an enumeration cannot |
+
+🔵 **The `loyaniu` row is the one worth noticing**, because it is the shape `ACTION KJ` could only
+approximate: `KJ` tested `0` of `16` paths on `4` published absence claims, which leaves open whether
+path `17` exists. 🟢 **Enumeration closes that form of doubt outright** — there is no path `17`.
+
+🔴 **`p177` ran supply legs and promoted nothing: `7` legs, `5` addresses this KB had not read, `0`
+usable.** `yg3988/learning-with-ai-tutor` (live `2026-10-21`, `26` files, `0` grant paths) and
+`janggoons/knu-edu-ai-agent-2026` (live `2026-10-22`, `65` files, `0` grant paths) are both ungranted;
+`Hasif50/Automated-Essay-Grader` is `MIT` from the payload (`1 433` B, `e5dc3777c5c4`) but `HEAD` is
+`2025-06-03`; `Dmoayad/essay-grader-llm` is `GPL`, `35 149` B; `THU-MAIC/OpenMAIC` is `MIT`, `1 065` B,
+`ba2525637432`, `HEAD` `2026-10-30`. 🔵 **The shelf is unchanged — `12` rows.**
+
+🔴 **One secondary source refuted in passing:** a Korean trade article circulates OpenMAIC as **AGPL**
+at **25 000★** under the headline that its *"licence information is still wrong"*. 🟢 Read from the
+payload at a `HEAD` committed today: `MIT`. **The article is the thing with the wrong licence
+information.**
+
+🔴 **Channel note, measured this pass:** every `api.github.com` field returned `None` and every
+`github.com` HTML `HEAD` request returned **`403`** through this session's proxy. 🟢 **The git
+transport answered all `33` subjects without a single failure** — so on this channel budget,
+enumeration is not merely more correct than probing, it is the only method that works at all.
+
 ---
 
 ## Pass 176 — 2026-10-13

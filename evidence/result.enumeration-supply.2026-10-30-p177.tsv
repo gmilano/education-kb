@@ -1,0 +1,6 @@
+slug	resolves	tree_files	grant_paths_n	served_path	bytes	sha256_12	family	declared_in_manifest	last_commit	last_author_kind
+yg3988/learning-with-ai-tutor	YES	26	0	-	-	-	NO-GRANT-IN-TREE	-	2026-10-21	human:10/bot:0
+janggoons/knu-edu-ai-agent-2026	YES	65	0	-	-	-	NO-GRANT-IN-TREE	-	2026-10-22	human:2/bot:0
+Hasif50/Automated-Essay-Grader	YES	23	1	LICENSE	1433	e5dc3777c5c4	MIT	-	2025-06-03	human:6/bot:0
+Dmoayad/essay-grader-llm	YES	8	1	LICENSE	35149	3972dc9744f6	GPL	-	2025-02-26	human:12/bot:0
+THU-MAIC/OpenMAIC	YES	3838	9	LICENSE	1065	ba2525637432	MIT	package.json ::   "license": "MIT",	2026-10-30	human:15/bot:0

@@ -1,7 +1,64 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-30
+---
+
+## Pass 177 — 2026-10-30
+
+🔴 **Verdicts on the five actions registered for `p177`: NONE DISCHARGED.** `ACTION KN`, `KO`, `KP`,
+`KQ` and `KR` were not run as specified. 🟢 **All five are carried forward to `p178` unmodified** —
+not re-scoped, not partially credited.
+
+🔵 **Stated this bluntly because the alternative is worse.** Each of the five names a falsifier and an
+anchor; `p177` did adjacent work on the same subject matter and could have described it as a partial
+discharge of `KN`. 🔴 **It is not one.** `KN` asks whether `6` probe-list shapes agree on `10`
+subjects; `p177` ran neither the `6` nor the `10`.
+
+### 🆕 🟢 What `p177` contributes instead — a term `ACTION KN` is missing
+
+🔴 **`ACTION KN`'s design can measure agreement between probe lists and cannot measure their
+correctness.** Its second limb — *"refuted if `≥1` list finds a grant that vocabulary `v1` MISSES"* —
+scores lists against **another list**. 🔴 **Six lists that all omit a path agree perfectly and are
+wrong together**, which is the failure `p176` already recorded on Fedena: a `12`-path sweep returned
+`12 × 404` **including its own `README.md` control**.
+
+🟢 **The missing term is a ground truth, and it costs less than any probe list:**
+
+```bash
+git clone --filter=blob:none --no-checkout -q "https://github.com/$slug" "$d"
+git -C "$d" ls-tree -r HEAD --name-only        # EVERY path. No vocabulary, no guessing.
+git -C "$d" cat-file -s "HEAD:$p"              # bytes
+git -C "$d" show "HEAD:$p" | sha256sum         # reproducible hash
+git -C "$d" log -15 --format='%ad %an'         # staleness + bot-vs-human, same clone
+```
+
+🟢 **Reference set delivered: `33` subjects enumerated in full**
+([`../evidence/result.enumeration-groundtruth.2026-10-30-p177.tsv`](../evidence/result.enumeration-groundtruth.2026-10-30-p177.tsv),
+`28` rows, plus `5` supply-leg rows). 🔵 **Against this, all `76` lists in `compose/code/` become
+scoreable rather than merely comparable — which is what `KN` should measure, and `p178` now can.**
+
+🔵 **Channel budget, measured, because it bears on every probe-based action in the register:** every
+`api.github.com` field returned `None` and every `github.com` HTML `HEAD` returned **`403`** through
+this session's proxy this pass. 🟢 **The git transport answered `33` of `33` subjects with zero
+failures.**
+
+### 🔴 Gaps OPENED by `p177`
+
+| gap | statement | falsifier |
+|---|---|---|
+| 🆕 🔴 **`gap 139`** | **A licence-channel file can withhold rights, so this KB's `grant / NONE` field is not sufficient and its "ask upstream" play is sometimes wrong.** `idoforgod/Vibe-learning-AgenticWorkflow` is recorded as *"NONE … no mention of a licence anywhere in the README"*; enumeration finds `COPYRIGHT.md` (`395` B, `f9e2076e626b`) reading *"All rights reserved"* plus an explicit Korean prohibition. The record's VERDICT is right and its REASONING is wrong, and the reasoning is what the next action keys on (`T275`) | 🔴 *Refuted if `0` of this KB's other published `NONE` / ungranted subjects carry any licence-channel file on full enumeration, in which case `Vibe-learning` is a singleton and `grants_rights` is not worth a field. ALSO refuted if `≥1` carries one that DOES grant rights, in which case the defect is larger than a missing predicate — it is a live false negative on a usable repository* |
+
+### 🔜 Registered for `p178`
+
+🔵 **`ACTION KN`, `KO`, `KP`, `KQ`, `KR` carry forward unchanged** — see the `p177` block above.
+Two added:
+
+| action | falsifier |
+|---|---|
+| 🆕 🟢 **`ACTION KS`** — settle `gap 139` by enumeration, not by probing: take every subject this KB publishes as `NONE` / ungranted / *"no licence"*, run the `p177` enumerator over all of them, and record for each whether a licence-channel file exists ANYWHERE in the tree and whether its body **grants or withholds** rights. Anchor: `result.enumeration-groundtruth.2026-10-30-p177.tsv` (`28` rows, `21` with `0` grant paths) and the `Vibe-learning` row restated at `p177` | 🔴 *Refuted if `0` subjects carry any licence-channel file, which makes `Vibe-learning` a singleton and closes `gap 139` as a curiosity. ALSO refuted if any file found GRANTS rights, in which case `gap 139` is understated and this KB owes a usability retraction rather than a reasoning correction* |
+| 🆕 🟢 **`ACTION KT`** — score the `76` probe lists against the `p177` ground truth, which is the measurement `ACTION KN` was specified to make and structurally cannot: for each list shape, compute how many of the `33` enumerated subjects it would resolve CORRECTLY (grant found where one exists, absence reported where none does). Report per-list precision and recall, not agreement. Anchor: `result.probelist-census.2026-10-13-p176.tsv` (`76` lists) × `result.enumeration-groundtruth.2026-10-30-p177.tsv` (`33` subjects) | 🔴 *Refuted if every list scores identically, which would mean `gap 135`'s `76`-fold duplication is genuinely cosmetic. ALSO refuted if the BEST list reaches `100` per cent on all `33`, in which case probe lists are adequate and enumeration buys only cost, not correctness — and `gap 135` should close* |
+
 ---
 
 ## 🔜 Registered for p177 — pre-registered with falsifiers

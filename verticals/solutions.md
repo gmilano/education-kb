@@ -1,7 +1,41 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-30
+---
+
+## Pass 177 — 2026-10-30
+
+🔴 **The vertical leg returned nothing this file does not already hold.** `open source platform
+education LMS SIS MIT Apache self-hosted 2026` returned **OpenOLAT** (`Apache-2.0`), **Open edX**
+(`AGPL`), **Canvas CE** (`AGPL`), **Sakai** (`ECL-2.0`), **RosarioSIS** (`GPL-2.0`) and
+**OpenEduCat** (`LGPL-3.0`) — 🟢 **all six already recorded here, all six with the licence this file
+publishes.**
+
+🔴 **And it repeated a false grant, which is the only reportable thing it did:** *"Frappe Learning is
+MIT licensed."* 🟢 **`frappe/lms` is `AGPL-3.0`** — this file's own reading, and `p177` re-confirms the
+address resolves at `HEAD` `2026-10-30` with `1 712` files. 🔵 **That the same false `MIT` claim is
+still the first result a global vertical query returns is a durable property of the secondary
+literature, not a one-off** — and it is the reason this file reads payloads instead of comparison
+tables.
+
+🟢 **The records-layer picture is unchanged and `p177` re-attested the permissive end of it by full
+tree enumeration**, since every one of these grants matters to a build/fork decision:
+
+| platform | address | resolves at `HEAD` | files | grant channel |
+|---|---|---|---|---|
+| **Academico** | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 🟢 **2026-10-28** | `738` | `MIT` |
+| **GegoK12** | [`Gego-K12/gegok12`](https://github.com/Gego-K12/gegok12) | 🟢 **2026-06-25** | `7 623` | `MIT` |
+| **openSIS Classic** | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🟢 **2026-10-26** | `5 656` | `GPL-2.0` |
+| **Fedena** | [`projectfedena/fedena`](https://github.com/projectfedena/fedena) | 🟡 **2016-07-20** | `4 608` | 🟡 `Apache-2.0` at `NOTICE`, no root `LICENSE` |
+
+🔵 **The engagement rule this file already reaches is unaffected:** a live copyleft system of record is
+deployed **unmodified and sat beside**, while a permissive one (`Academico`, `GegoK12`) can be built
+**inside**. 🟢 **Fedena's only role is as a permissively-granted SCHEMA** — its Indian **CCE**
+assessment model (`cce_exam_categories`, `cce_grade_sets`, `assessment_scores`, `assessment_tools`),
+cohort transfer and record-archival tables are readable and copyable under `Apache-2.0`. 🔴 **If
+anyone proposes running it, that is a misreading of the row.**
+
 ---
 
 ## Pass 176 — 2026-10-13

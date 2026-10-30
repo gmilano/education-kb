@@ -1,7 +1,44 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-30
+---
+
+## 2026-10-30 — p177
+
+🟢 **`33` repositories enumerated in full this pass — every path at `HEAD`, no filename vocabulary —
+and the output is offered as the GROUND TRUTH that the `76` probe lists in `compose/code/` can be
+scored against** ([`../evidence/result.enumeration-groundtruth.2026-10-30-p177.tsv`](../evidence/result.enumeration-groundtruth.2026-10-30-p177.tsv)).
+
+🔴 **Why a ground truth and not another list.** `ACTION KN` compares probe-list shapes **to each
+other**, which measures agreement. 🔴 **Six lists that all omit a path agree perfectly and are wrong
+together** — the Fedena `12 × 404` sweep this KB already recorded, where even the `README.md` control
+missed, because the file is `README.markdown`. 🟢 **Enumeration has no vocabulary to be wrong about.**
+
+**Distribution over the `28`-row core set:**
+
+| reading | n |
+|---|---|
+| 🟢 No licence-channel file anywhere in the tree — any name, any depth | **`21`** |
+| 🟢 Grant present and this KB's record already correct | **`5`** |
+| 🔴 Licence-channel file present that **withholds** rights (`COPYRIGHT.md`) | **`1`** |
+| 🟢 Grant at `NOTICE`, root `LICENSE` absent — already on this KB | **`1`** |
+
+🔵 **The `21` matter most and are the dullest to read:** they convert *"`0` of `16` probed paths"*
+into *"there is no path `17`"*. 🟢 **`loyaniu/moodle-mcp`** — this KB's most-starred Moodle bridge,
+recorded ungranted — has a **`13`-file tree with `0` grant paths**. 🔵 A different kind of statement
+from a probe miss, and the kind `ACTION KJ` could not make.
+
+🟢 **Two existing findings reproduced exactly by a different instrument**, reported as confirmation
+and **not** as discovery: Fedena's `NOTICE`-only `Apache-2.0` at both addresses (`680` B,
+`38af3b29e417`; `4 608` / `4 568` files; `HEAD` `2016-07-20` / `2012-10-12`), and `README.markdown`
+as the real readme filename on both.
+
+🔵 **Channel note, relevant to every probe-based action in the register:** `api.github.com` returned
+`None` on every field and `github.com` HTML `HEAD` returned **`403`** through this session's proxy.
+🟢 **git transport: `33` of `33`, zero failures.** Instrument:
+[`../compose/code/p177-tree-enumeration/enumerate-grant.sh`](../compose/code/p177-tree-enumeration/enumerate-grant.sh).
+
 ---
 
 ## 2026-10-13 — p176

@@ -1,7 +1,69 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-30
+---
+
+## Pass 177 — 2026-10-30
+
+🟢 **Two patterns. Pattern `1` SUPERSEDES p176's Pattern `5`; Pattern `2` is the client-facing
+deliverable that falls out of it.**
+
+### 🆕 🟢 Pattern `1` — no grant-path vocabulary at all *(SUPERSEDES p176's Pattern `5`, "one vocabulary instead of seventy-six")*
+
+🟢 **p176 was right that `76` lists should be `1`. `p177`'s correction is that the right number is
+`0`.** A vocabulary — however well merged — is a set of guesses, and its failures are silent and
+correlated: 🔴 the Fedena sweep returned `12 × 404` **including its own `README.md` control**, because
+the file is `README.markdown` and the grant is at `NOTICE`. 🔵 **Two filename-shaped probes missed and
+therefore AGREED, and agreement reads as a finding.**
+
+```bash
+# liveness, grant, served path, staleness and authorship — one clone, no filename list
+git clone --filter=blob:none --no-checkout -q "https://github.com/$slug" "$d"
+git -C "$d" ls-tree -r HEAD --name-only > tree.txt          # EVERY path
+grep -iE '(^|/)(licen[cs]e|copying|copyright|notice|unlicen[cs]e|eupl)' tree.txt
+git -C "$d" cat-file -s "HEAD:$p"                            # bytes
+git -C "$d" show    "HEAD:$p" | sha256sum                    # reproducible hash
+git -C "$d" show    "HEAD:$p" | head -40                     # the BODY — grant or refusal?
+git -C "$d" log -15 --format='%ad %an'                       # staleness + bot-vs-human
+```
+
+🔴 **Two exclusions, learned by this instrument getting them wrong on its first run.** Count only the
+project's **own** grant: filter `vendor/`, `node_modules/` and bundled asset trees, or Fedena reports
+**`8`** grant paths and OpenMAIC **`9`** when each has exactly **one** — the rest are
+`vendor/plugins/{paperclip,rspec-rails,searchlogic,will_paginate}` and
+`public/javascripts/{fckeditor,tiny_mce}`. 🔴 **And do not trust a shortest-path heuristic to pick the
+right file:** it happened to pick correctly both times here, by string length, not by rule.
+
+🔵 **Cost, measured this pass:** `33` subjects, `33` successes, zero failures — while
+`api.github.com` returned `None` on every field and `github.com` HTML `HEAD` returned **`403`**.
+🟢 **On this channel budget enumeration is not the more rigorous option, it is the only one that
+runs.**
+
+### 🆕 🟢 Pattern `2` — the dependency-grant report a client's counsel can reproduce
+
+🔵 **The ask, in the client's words:** *"can we build on these `40` dependencies?"* 🔴 Every quick
+answer — the API `license` field, a root-filename probe, a comparison table — has produced a **wrong
+verdict in both directions** on this KB's own subjects: a real `Apache-2.0` grant reported as absent
+(Fedena, served at `NOTICE`), and a repository with a licence-channel file that **withholds** every
+right (`Vibe-learning`, `COPYRIGHT.md`).
+
+🟢 **Deliverable: one TSV, one row per dependency, five fields — and the fifth is the one everybody
+omits.**
+
+| field | why it cannot be dropped |
+|---|---|
+| `declared` | manifest or README claim — 🔴 `Dmoayad/essay-grader-llm`'s README says `MIT`; the payload is `GPL`, `35 149` B |
+| `served` | a licence-channel file exists somewhere in the tree |
+| `served_path` | 🔴 `NOTICE` and `docs/License.txt` are real grants that a root probe reports as absent |
+| 🆕 `grants_rights` | 🔴 **the omitted one.** `COPYRIGHT.md` is served and **withholds** rights (`T275`). Read the **body**, never the path |
+| `last_human_commit` | 🔴 `%an` over recent commits — a bot-fresh repository looks maintained and is not |
+
+🟢 **The product is the reproducibility, not the verdict.** Every cell carries a byte count and a
+`sha256`, so the client's own counsel can re-derive it without trusting the pipeline — and on this
+KB's evidence that matters: a published byte count is exactly what let `p177` confirm Fedena's grant
+by an instrument that shares no code with the one that first read it.
+
 ---
 
 ## Pass 176 — 2026-10-13

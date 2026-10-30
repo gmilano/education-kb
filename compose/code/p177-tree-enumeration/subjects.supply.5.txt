@@ -1,0 +1,5 @@
+yg3988/learning-with-ai-tutor
+janggoons/knu-edu-ai-agent-2026
+Hasif50/Automated-Essay-Grader
+Dmoayad/essay-grader-llm
+THU-MAIC/OpenMAIC

@@ -1,7 +1,40 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-13
+updated: 2026-10-30
+---
+
+## 2026-10-30 — p177 — `7` legs, `5` new addresses, `0` usable; and one "no licence" row that turns out to carry a written REFUSAL
+
+🔴 **No promotion and no candidate admitted. The shelf stays `12` rows.** Every row below read
+first-hand at `HEAD` by full tree enumeration — no filename vocabulary
+([`../evidence/result.enumeration-supply.2026-10-30-p177.tsv`](../evidence/result.enumeration-supply.2026-10-30-p177.tsv)).
+
+| address | leg | `HEAD` | tree | grant paths, ANY depth or name | verdict |
+|---|---|---|---|---|---|
+| [`yg3988/learning-with-ai-tutor`](https://github.com/yg3988/learning-with-ai-tutor) | 🆕 `ko` | **2026-10-21** · human | `26` files | 🔴 **`0`** | 🔴 ungranted |
+| [`janggoons/knu-edu-ai-agent-2026`](https://github.com/janggoons/knu-edu-ai-agent-2026) | 🆕 `ko` | **2026-10-22** · human | `65` files | 🔴 **`0`** | 🔴 ungranted · lecture material, not a system |
+| [`Hasif50/Automated-Essay-Grader`](https://github.com/Hasif50/Automated-Essay-Grader) | assessment | **2025-06-03** | `23` files | 🟢 `LICENSE` **`1 433`** B · `e5dc3777c5c4` · **MIT** | 🟡 granted but `~17` months stale |
+| [`Dmoayad/essay-grader-llm`](https://github.com/Dmoayad/essay-grader-llm) | assessment | **2025-02-26** | `8` files | 🟢 `LICENSE` **`35 149`** B · **GPL** | 🔴 copyleft, and its README claims `MIT` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🆕 `ko` | **2026-10-30** | `3 838` files | 🟢 `LICENSE` **`1 065`** B · `ba2525637432` · **MIT** | 🟢 live and permissive — already known here |
+
+🔴 **The `ko` corpus saturated on first contact: `2` new addresses, both ungranted.** 🔵 Recorded as a
+dated datum, not a conclusion — one corpus is one sample.
+
+🔴 **The leg's only non-duplicate claim is false.** A Korean trade article circulates OpenMAIC as
+**AGPL** at **`25 000`★**, headlined that its *"licence information is still wrong"*. 🟢 Read from the
+payload at a `HEAD` committed today: **`MIT`, `1 065` B, `ba2525637432`**. 🔵 **The article is the
+thing with the wrong licence information** — a search summary is not a verification channel, in any
+language.
+
+🆕 🟢 **The pass's one new subject fact is a refusal rather than a grant.**
+[`idoforgod/Vibe-learning-AgenticWorkflow`](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow)
+— filed here as *"**NONE** … No `LICENSE` at root and **no mention of a licence anywhere in the
+README**"* — serves **`COPYRIGHT.md`**, `395` B, `sha256₁₂ f9e2076e626b`, `HEAD` `2026-02-28`, human:
+*"All rights reserved"* plus an explicit Korean prohibition on reproduction, distribution,
+modification and derivative works. 🔵 **`Do not use` stands; the REASONING changes, and the reasoning
+is what the next action keys on** — see `T275` and `gap 139`.
+
 ---
 
 ## 2026-10-13 — p176 — new candidates, licence bodies READ, deliberately NOT promoted
