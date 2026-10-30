@@ -1,7 +1,361 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-29
+updated: 2026-10-30
+---
+
+## 🆕 `p539` — `2026-10-30` — **🟢 THE EMPTY QUEUE IS SOLVED, AND THE BACKLOG'S HEAD TURNED OUT TO BE THE FIELD'S OWN INFRASTRUCTURE: 3 869 ADDRESSES, 96.2 % LIVE, GATED IN BULK. 🔴 `Gap 538-A` WAS A RESTATED ABSENCE — THIS BASE HAS GRADED FORK LINEAGE FROM FULL GIT HISTORIES SINCE `p404`, AND `gate-capability-absence` EXISTS TO CATCH EXACTLY THAT AND IS NOT POINTED AT THE GAP LEDGER. 🔴 THE PRE-REGISTERED FIGURE FIX, RUN ALONE, MADE ITS QUEUE WORSE (9 → 14) AND NEEDED FIVE MORE RULES TO REACH 3. 🟢 FOUR AGENTS SHELVED (62 TOTAL), EMEA'S MATURITY GAP ANSWERED BY THE STATE.**
+
+⏱️ **A note on this entry's date, so two stamps do not silently disagree.** This
+pass began on **2026-10-29** and crossed midnight UTC during it. Its evidence
+files therefore carry the `2026-10-29` stamp they were written with, while the
+frontmatter `updated:` on all eight pages reads **2026-10-30**. Nothing is
+inconsistent; it is one pass across a date boundary, recorded rather than tidied.
+
+### 🔴 The mandated trending leg, for the eleventh consecutive pass, returned nothing unfiled — and the false positive repeated with a *different* repository
+
+`p537` established that `github trending education AI 2026` does not index
+GitHub Trending: its non-DeepTutor results are auto-generated `agents-radar`
+issues. `p538` reproduced that and added a measured false positive —
+`JetBrains/thinkrail`, a 6k-star agentic **IDE**, offered as education supply.
+
+🟢 **`p539` ran the leg again and reproduces both findings**, and the false
+positive recurred in the same shape with new repositories: this pass's summary
+offered a **90K-star design language** and an **11K-star design-skills
+collection** from promotional blog posts, neither education. 🔵 **So `p538`'s
+rule — *"a trending leg's category claim is as unverified as its star count"* —
+is now attested twice, on different repositories, one pass apart. It is not an
+anecdote about `thinkrail`.
+
+🟢 **The one genuine signal the leg carries is DeepTutor, and it was re-read:**
+**50.0k★ · 6.2k forks**, Apache-2.0, no `forked from` line. `p538` measured
+**49 850★** at its own `HEAD`, so growth is real and continuous. 🔴 **And the
+leg's own summary disagreed with the page by ~2 000 stars** (it reported
+`47 975 (+2 371 today)`), which is the third consecutive pass on which the
+summary's star figure was stale against a first-hand read.
+
+### 🟢 `p538`'s central problem, solved: the queue now comes from `HISTORY`, and it is measured rather than guessed
+
+`p538` left the promotion queue **empty** and wrote that `p539` *"must either
+generate a new one (the `HISTORY` bucket holds 4 144 distinct addresses against
+240 filed — a 5.8 % filing rate) or find supply in a channel this base has not
+used."*
+
+🟢 **Two new instruments, and the second is the one that mattered.**
+
+[`../ingest/history-backlog.py`](../ingest/history-backlog.py) builds the
+backlog, carrying **as-written spelling through the history bucket** — which the
+prose ledger does not do, because its history scan discards the spelling and
+keeps only the comparison key. That is `p538`'s own defect sitting in a second
+place, and the history bucket is precisely where this pass's supply came from.
+
+🔴 **It also removed 25 addresses that were never repositories.** `OWNER/REPO`
+was ranked **fifth in the backlog, with 62 mentions across 31 files** — this
+base's own instrument docstrings and usage lines write it as an example, and the
+address extractor could not tell a placeholder from an address.
+`search/repositories` was there too, at 59 mentions: the REST endpoint this base
+queries, read as a repository. 🔵 **This is the brief's *"never leave a header or
+example row as data"* defect, in the address channel rather than the table
+channel** — and it had been compounding silently for as long as the ledger has
+existed.
+
+[`../ingest/backlog-gate.py`](../ingest/backlog-gate.py) then runs `p533`'s two
+**gates** — is it alive, does the grant let us build — in **bulk**, which is the
+only reason they ran at all. `p533` had the gates for a queue of twenty; this
+pass inherited 3 869.
+
+| Measurement | Value |
+|---|---|
+| `HISTORY` − `FILED` backlog | **3 869** |
+| 🟢 LIVE (`git ls-remote --symref`, all probed) | **3 725 — 96.2 %** |
+| 🔴 DEAD / PRIVATE | **148 — 3.8 %** |
+| grant-gated at the ranked head | **147 live of 150** |
+| 🟢 permissive at the head | **67 MIT · 18 Apache-2.0 · 2 BSD-3 · 1 ISC · 1 ECL-2.0 = 89** |
+| 🔴 copyleft at the head | 14 AGPL-3.0 · 8 GPL-3.0 · 3 GPL-2.0 · 2 LGPL |
+| 🔴 UNRESOLVED on 46 grant filenames | **17** |
+
+🔵 **The 96.2 % is the number that reframes the problem.** A 5.8 % filing rate
+sounds like a corpus full of dead links; it is not. **Almost the entire backlog
+is live, permissive at the head, and simply unfiled.** The deficit is promotion,
+not discovery — which is what `p502` suspected in one sentence and nothing since
+had measured.
+
+🔴 **And the head of the backlog is not obscure.** Ranked by how many of this
+base's own files name an address and never file it:
+`openedx/edx-platform` (**59 files, 243 mentions**), `jupyterhub/jupyterhub`
+(**44**), `plastic-labs/tutor-gpt` (37), `INGInious/INGInious` (34),
+`frappe/erpnext`, `apache/ofbiz-framework`, `huggingface/smolagents`,
+`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`, `DavidLMS/learnmcp-xapi`. **This base has been
+describing the education field's load-bearing infrastructure in prose for
+hundreds of passes without putting it in a row a successor can paste.**
+
+⚠️ **Channel correction a successor must not plan around.** `p502` recorded that
+*"the GitHub REST API answers"* and that `Gap 394-C` was refuted in scope.
+🔴 **It does not reproduce from this session: `api.github.com` is HTTP 403**, as
+is `curl` to `github.com`. What answers is **`git ls-remote` over HTTPS**,
+**`raw.githubusercontent.com`**, and a **page read**. The bulk gate is built on
+the first two and `Gap 538-A`'s reads on the third.
+
+### 🔴 `Gap 538-A` was a RESTATED ABSENCE — this base has graded fork lineage since `p404`, with two instruments and 23 passing controls
+
+`p538` wrote: *"No instrument here reads a 'forked from' line. 2 of 20 observed,
+unbounded above. `Gap 538-A`."* 🔴 **That sentence is literally true and
+substantively misleading, and this pass had half-built an instrument for it
+before checking.** What the base already has:
+
+| Instrument | What it grades | Controls | Gate |
+|---|---|---|---|
+| [`../compose/code/p404-fork-direction/`](../compose/code/p404-fork-direction/) | ONE same-name **pair**, from **full git histories** — commit-SHA sets, tree sets, root commits, HEAD ancestry | **11** | `make gate-fork-direction` 🟢 **PASS** this pass |
+| [`../compose/code/p405-group-lineage/`](../compose/code/p405-group-lineage/) | a whole name-collision **group**, in **O(N)** clones instead of O(N²), reusing `p404`'s `verdict.grade` so the two cannot drift; transitive families via connected components | **12** | `make gate-group-lineage` 🟢 **PASS** this pass |
+
+🔴 **And the base has already graded the exact cluster this pass ranked first.**
+`p405`'s README reports **`canvas-mcp` at 23 addresses, 20 clonable, 190 pairs
+graded**, and publishes the finding **"42 addresses are 27 projects — a 1.56×
+overstatement"**, with **7 of `canvas-mcp`'s 20 addresses genuinely sole
+projects**. `Gap 446-C` is closed on the same channel: *"Ten addresses, six
+projects" STANDS*, with `vishalsachdev` root `afe32c3e1721` and `r-huijts` root
+`731aa116052b` reproducing **to the digit** from independent clones.
+
+🔵 **The full-history channel is also STRICTLY STRONGER than the one `p538`
+asked for, and `p404` exists because of exactly that:** a squash-republish
+shares **zero** commits with its source and GitHub shows it **no `forked from`
+line at all**. A page read cannot see that case; a history read can. So the gap
+asked for a weaker instrument than the one already sitting in the repository.
+
+🔴 **The meta-finding, and it is worth more than any instrument this pass
+wrote.** `gate-capability-absence` (`p392`) was built for precisely this error —
+*"an absence keyed on CAPABILITY, not on string identity ... one whose
+refutation is in the base's own harvest log under different words"* — and **it
+did not catch `Gap 538-A`, because it runs over SHELF absences and not over the
+gap ledger.** The base has an instrument for declaring an absence that is
+already refuted, and it is not pointed at the place absences are declared.
+**`Gap 539-E`.**
+
+### 🟢 What was actually missing, and what this pass built instead
+
+`p404` grades a pair. `p405` grades a group **once you know the group.** Neither
+enumerates groups, and nothing here asked the prior question: **across the whole
+corpus, which repository names are held by more than one owner, and which of
+those collisions touch a FILED table row?** `canvas-mcp` was graded because
+somebody noticed it.
+
+[`../ingest/fork-candidates.py`](../ingest/fork-candidates.py) is therefore a
+**work-order generator for `p405`**, not a replacement for it — it says which
+groups to clone; `p405` says what they are. Any verdict a shelf cites must come
+from `p405`'s full-history grading, never from this file and never from a
+`forked from` line alone.
+
+| | Value |
+|---|---|
+| distinct repository names in the corpus | 3 812 |
+| names held by >1 owner (generic names excluded) | **187** |
+| 🔴 **FILED-vs-HISTORY** — a curated row names one side, history the other | **33** |
+| BOTH-FILED | 3 |
+| NEITHER-FILED | 151 |
+| 🔴 largest cluster | **`canvas-mcp` — 27 distinct owners**, up from the 23 `p405` graded |
+
+🔵 **Three collision rows the enumeration surfaced that nobody had looked at**,
+and each touches a row filed on a curated page this pass or earlier:
+`DavidLMS/learnmcp-xapi` beside `ashleycribb/learnmcp-xapi`;
+`HKUDS/DeepTutor` beside `cloudtoolbox/deeptutor`;
+`digitalcredentials/learner-credential-wallet` beside
+`openwallet-foundation-labs/learner-credential-wallet` — the last of which
+**`P581` names as a component**, so which of the two is canonical is a live
+question for that pattern rather than a curiosity.
+
+🟡 **Cheap triage was run as well, on the page channel, and it is recorded as
+triage and not as grading.** Eighteen addresses read first-hand; of the six
+highest-ranked **FILED** sides, **none carries a `forked from` line**:
+
+| Filed address | `forked from`? | Read |
+|---|---|---|
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 none | **308★ · 100 forks**, MIT |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟢 none | **104★ · 39 forks**, 🔴 **no licence in the sidebar** — README claims MIT |
+| [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 none | **124★ · 109 forks**, Apache-2.0 |
+| [`towardsai/ai-tutor-app`](https://github.com/towardsai/ai-tutor-app) | 🟢 none | **34★ · 5 forks**, Apache-2.0 |
+| [`learning-commons-org/agent-skills`](https://github.com/learning-commons-org/agent-skills) | 🟢 none | **40★ · 6 forks**, Apache-2.0 |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 none | **50.0k★ · 6.2k forks**, Apache-2.0 |
+
+🔴 **But "no `forked from` line" is NOT a verdict of independence**, and `p404`'s
+own reason for existing is why: the squash-republish case shows no such line.
+🟢 **The one known fork re-read through the same channel does carry it** —
+`Dymayo/moodler-mcp`, *forked from `GhaithAlHallak8/moodler-mcp`*, at **0★ and 0
+forks** against its upstream's 3★ and 40 documented tools — which calibrates the
+channel's *positive* precision and says nothing about its negatives.
+
+🔵 **Three collision shapes that are not forks, recorded so the next pass does
+not clone them.** (1) **Organisation renames** — `1EdTech/*` beside `IMSGlobal/*`
+is one body that changed its name, with `packbackbooks/*` the donating author.
+(2) **Independent implementations of an obvious name** — `r-huijts/canvas-mcp`
+(12★) is not a fork of `vishalsachdev/canvas-mcp` (308★); `p447` proved it from
+independent root commits. (3) **Unrelated projects** — `addyosmani/agent-skills`
+has nothing to do with `learning-commons-org/agent-skills`.
+
+### 🔴 The pre-registered figure fix was necessary, insufficient, and made things worse before it made them better
+
+`p538` pre-registered the fix for
+[`../ingest/crosspage-figure-claims.py`](../ingest/crosspage-figure-claims.py):
+*"join wrapped lines into rendered sentences before attributing a figure, and
+attribute to the NEAREST address rather than to the only one on the line. That
+collapses all six artefacts."*
+
+🔴 **Run alone, it took the queue from 9 rows to 14.** Joining blocks does not
+only re-attribute figures — it **drops `p538`'s guard**, which was *"skip any
+line carrying more than one address."* That guard was suppressing bad
+attributions and real claims at the same time, so recall rose and brought four
+further artefact shapes a line-based reader could never have produced.
+
+🟢 **Six rules were needed in total. Four of them are about what a number is
+NOT:**
+
+| Rule | The shape it fixes | Found on |
+|---|---|---|
+| **sentence bound** | a block joined whole let a figure reach an address twenty lines away | `mitodl/learn-ai` |
+| **nearest anchor** | a figure stranded at the start of a line belongs to the address that ended the line above | `anchore/syft`, `edulinq/autograder-py`, `learning-commons-org/evaluators` |
+| **ordinal pairing** | k addresses then k figures **in the same order** — `canvas-mcp (read) + canvas-lms-mcp (write) \| MIT · 308★ / 10★` | `bruchris/canvas-lms-mcp` |
+| **range** | `0★–5★` describes a **set**, not a member | `portabilis/i-educar` |
+| **aggregate** | *"three autograders **totalling** 2 337★"* is a sum, not a member's value | `jupyter/nbgrader` |
+| **blocker anchors** | a figure next to a **bare backticked** repo name belongs to it, not to the nearest URL | `portabilis/i-educar` |
+
+🔴 **And two defects this pass introduced into its own reader, both from the same
+line of code.** `p538` asserted the thousands separator is *"a space or an nbsp,
+**never a comma**"* — false on this base's own pages, which write `458,181★` on
+two pages and `458 181` on a third, so the reader **manufactured** a
+181-vs-458 181 contradiction between pages that agree. 🔴 **Then the comma fix
+manufactured a second one:** a separator class of `[comma nbsp space]*` glues any
+two nearby numbers, and `(BSD-3, 1 370★)` parsed as **31370**, inventing
+contradictions on `jupyter/nbgrader`, `ucbds-infra/otter-grader` and
+`submitty/submitty`. A thousands separator joins groups of **exactly three**
+digits, and that is now what the pattern requires.
+
+| State of the instrument | Cross-page queue |
+|---|---|
+| `p538`, line-based | 9 — *3 benign, 6 artefact, 0 actionable* |
+| 🔴 + the pre-registration, alone | **14** |
+| + sentence bound, range, ordinal | 7 |
+| 🔴 + comma | 8 |
+| + blocker anchors, aggregate, cell boundary | 6 |
+| 🟢 + strict thousands separator | **3 — *3 benign, 0 artefact, 0 actionable*** |
+
+🟢 **All six of `p538`'s artefacts collapsed and all three of its benign rows
+survived** — `dsvi-b/corretor-enem` 6→7, `ArnaudGuiovanna/tutor-mcp` 57→59,
+`GarethManning/education-agent-skills` 921→926, all real growth recorded between
+passes. That discrimination is what the fix was for.
+
+🔵 **And the ordinal rule was independently corroborated the same pass.** It
+predicted that `308★ / 10★` pairs onto `canvas-mcp` and `canvas-lms-mcp` by rank,
+giving canvas-mcp the 308. The `Gap 538-A` page read of
+`vishalsachdev/canvas-mcp` — done for an unrelated reason — returned **308★**.
+🔵 **Two instruments, built for different gaps, agreeing on a figure neither was
+pointed at is the strongest evidence this pass produced about either of them.**
+
+➡️ **Shelf rule 10.** **An instrument fixed in one place stays broken in every
+other place that shares its assumption, and nothing here looks for that.** `p530`
+taught the address *ledger* that a repository is named two ways, URL and bare
+backticked slug. Figure *attribution* still read one channel nine passes later,
+which is how `avit`'s 0★ reached `portabilis/i-educar` at 722★. The lesson was
+learned, written down, and not carried.
+
+### 🟢 Four agents shelved — and three of the four are anchored to a standard a government maintains
+
+| Agent | Grant | Read | Region (basis) |
+|---|---|---|---|
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 MIT | **16** · 4 forks | 🟡 Global — author unstated; **the LRS it targets is EMEA** (Ralph, France Université Numérique) |
+| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 MIT | **8** · 5 forks · **6 835 commits** | 🟢 **EMEA (England)** — *stated*: National Curriculum for England, Oak National Academy, EEF |
+| [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 MIT | **32** · 13 forks | 🟢 **EMEA (EU)** — *stated*: SKILLAB EU Horizon, ESCO/ISCO |
+| [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🟢 MIT | 🔴 **0** · 0 forks | 🟢 **LATAM (Brazil)** — *stated*: Portuguese README, BNCC, MEC |
+
+🟢 **`learnmcp-xapi` closes a gap this base has carried in prose since `p502`**,
+which wrote that *"the entire xAPI/LRS record layer sits in this file's history
+and on **no live shelf**."* It is the only artefact here that **writes** learner
+activity to a standards-compliant store rather than only reading from one — the
+difference between tutoring that is auditable and tutoring that is ephemeral.
+It is now the record half of **`P579`**.
+
+🟢 **EMEA's declared gap was MATURITY, and the state answered it.** `p538` closed
+the EMEA/APAC count imbalance with two **1★** rows by **one author** and said
+plainly: *"the live EMEA gap is maturity, and the region still has no education
+agent in three figures of stars."* The star ceiling is still unbroken — but the
+region now has **Oak National Academy shipping an MCP server over national
+curriculum data at 6 835 commits**, England's **Department for Education** at
+**19 739 commits** publishing its own *"Guidance for AI coding agents"*, and an
+**EU Horizon** project shipping ESCO extraction. 🔵 **Commits and institutions,
+not stars, are the right maturity measure for state-published software — and
+`Ed-Fi-ODS`'s 48 forks against 28 stars is the same signal: people deploy it,
+they do not admire it.**
+
+### 🔴 Two more rows that are real, permissive, large — and not education
+
+| Address | Grant | Read | Why it is filed anyway, and the caveat |
+|---|---|---|---|
+| [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 MIT | **6 500** · 1 100 forks | Policy enforcement, zero-trust identity, execution sandboxing, audit records; *"Covers 10/10 OWASP Agentic Top 10."* 🔴 **Education appears nowhere on its page, and it is a public preview.** 🟢 Filed to `foundations.md` because the 2026 education story is *governed* adoption and an Annex III tool needs exactly a policy gate and an audit record |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 MIT | **12 100** · 611 forks | *"Free and Open Source ERP software."* 🔴 **No education module** — accounting, inventory, manufacturing, HR, sales. 🟢 Filed to `solutions.md` as the **permissive ERP base to extend**, which is the honest answer to a leg that keeps returning no permissive education ERP |
+
+🔵 **Which produced the pass's cleanest structural finding, now three for three.**
+The *education-specific* platform layer on this base is consistently **copyleft**
+(ERPNext, Moodle, BigBlueButton, i-educar); the *permissive* layer is
+consistently **general-purpose** (Aureus, OFBiz, Flat's client). So the recurring
+engagement decision is not *which platform* — it is **integrate against the
+copyleft system of record, build the new surface on a permissive base.**
+
+🟢 **And the single largest permissive education-specific codebase on this base
+turned out to be sitting in its own history:**
+[`netless-io/flat`](https://github.com/netless-io/flat) — **MIT, 6 400★ · 876
+forks**, Agora's open-source classroom with whiteboard and **cloud recording**,
+**APAC (China)**. Filed to `solutions.md` §3 and now the capture layer of
+**`P582`**. 🔴 **Its MIT grant covers the client; the real-time transport is
+Agora's commercial SDK** — a per-minute cost no other pattern here carries.
+
+### 🔴 The standing gate suite is failing 17 of 66, it was failing before this pass, and no recent entry says so
+
+🟢 **Measured on both trees, because a claim about regressions needs a baseline.**
+`make hooks` was run on this pass's tree and on a clean worktree at `p538`'s
+commit `1e5fff4`:
+
+| Tree | Result |
+|---|---|
+| clean `HEAD` (`p538`) | 🔴 **49/66 green** — 17 red |
+| this pass's tree | 🔴 **49/66 green** — 17 red, **the same seventeen by name** |
+
+🟢 **So this pass introduces no gate regression**, and the two gates most
+relevant to its own work both pass: `gate-fork-direction` (11 controls) and
+`gate-group-lineage` (12). 🟢 **And `gate-promotion-ratchet` passes on the new
+work specifically** — *"filed 274 ≥ baseline 258 (p538)"*, with the filing rate
+up to **6.6 %**.
+
+🔴 **But the inherited 17 are real and they are not mentioned anywhere in the
+last four passes' entries.** The red set is `gate-offline`, `recount`,
+`gate-enumeration`, `gate-shelf-consistency`, `gate-register-currency`,
+`gate-fold-identity`, `gate-alias-canonical`, `gate-author-key`,
+`gate-census-currency`, `gate-grant-path`, `gate-census-union`,
+`gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`,
+`gate-case-collision`, `gate-promotion-ledger`, `gate-cell-reproduction`.
+🔴 **The last gate score recorded in this file at all was `47/63 gates green`,
+many passes ago.** Two of the failures state their own cause plainly:
+`gate-promotion-ledger` reports **83 findings** of the form *"recorded
+RESTORED-`p436` and is on NO live shelf"*, and `gate-cell-reproduction` reports
+**"zero published cells parsed — a parse fault, not a clean shelf"**.
+
+🔵 **Why this belongs in a trending entry and not only in a gap list.** This base
+runs 66 standing controls precisely so that a defect cannot survive by being
+unmentioned, and then publishes passes that do not report the controls' verdict.
+🟡 **A gate whose failure nobody writes down is a gate that is not running**, in
+every sense that matters. **`Gap 539-F`** — and the honest reading is that it
+outranks most of the supply work above, because 17 silent reds can hide exactly
+the class of defect the last ten passes have each found by hand.
+
+### What `p539` leaves
+
+- 🔴 **`Gap 539-A`** — **27 of the 33 FILED-vs-HISTORY collision rows have never been graded**, and the three that touch a filed row (`learnmcp-xapi`, `DeepTutor`, `learner-credential-wallet`) should go first — the last decides a component of **`P581`**. 🟢 **The instrument already exists: feed each group to `p405`'s `forkgroup.sh`.** Page-read triage is not a substitute, because a squash-republish shows no `forked from` line.
+- 🔴 **`Gap 539-E`** — `gate-capability-absence` (`p392`) catches an absence whose refutation is in this base's own files under different words. It runs over **shelf** absences and **not over the gap ledger**, which is why `Gap 538-A` was declared against two instruments and 23 passing controls that already existed. 🔵 **Point it at the gap ledger.** On this pass's evidence that is the highest-value gate change available, because it is the only one that audits the base's own self-knowledge.
+- 🔴 **`Gap 539-B`** — the backlog is **3 869** and this pass gated **150**. The other **3 719** are live, unranked past recall, and ungated. 🔵 **Pre-registered for `p540`: run the grant gate to 600 and rank the permissive residue by forks-per-star**, since this pass found twice that forks beat stars for institutional software.
+- 🟡 **`Gap 539-C`** — the figure reader will still coin-toss a block that names two addresses and states ONE figure exactly between them. No instance exists on this tree; it is unbounded above.
+- 🟡 **`Gap 539-D`** — `jupyterhub/jupyterhub` (named in **44** of this base's files) and `huggingface/smolagents` (**24**) are grant-attested by gate and **unread**, so neither carries a measured star count and both remain off the platform tables. Largest single piece of promotion debt left.
+- 🔴 **`Gap 538-B` HOLDS** — seven of the eleven Moodle codebases are still unread.
+- 🔴 **Canada returned nothing for the fourth consecutive pass**, and the LATAM legs returned **nothing on K-12 policy** and **nothing on private-sector edtech players**. Searched, empty, recorded as gaps rather than coverage.
+- 🔴 **`Gap 539-F`** — **17 of 66 standing gates are red** and have been since before this pass; no recent entry records the suite's verdict. 🔵 **Start with the two that name their own cause:** `gate-promotion-ledger`'s 83 `RESTORED-p436`-but-unshelved findings, and `gate-cell-reproduction`'s *"zero published cells parsed — a parse fault, not a clean shelf"*.
+- 🟢 **The queue is no longer empty.** `p538`'s central problem is retired: the backlog is measured, live, grant-gated at the head, and 89 permissive addresses sit at the top of it awaiting a page read.
+
 ---
 
 ## 🆕 `p538` — `2026-10-29` — **🟢 THE QUEUE IS EMPTY: ALL TWENTY ADDRESSES READ, SEVEN AGENTS SHELVED (58 TOTAL). 🔴 `p537`'S 45 % MIS-SPELLING RATE WAS MANUFACTURED BY THIS BASE'S OWN LEDGER — THE PROSE WAS RIGHT ALL ALONG. 🔴 THE MOODLE GAP CARRIED TWO FALSIFIED NUMBERS FOR NINE PASSES BESIDE A LINK TO THE PAGE THAT CORRECTED THEM. 🟢 EMEA IMBALANCE RETIRED.**

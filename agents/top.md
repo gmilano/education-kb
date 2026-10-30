@@ -1,12 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-29
+updated: 2026-10-30
 ---
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p538` · 2026-10-29.** **Fifty-eight** real agents, every row read
+**Pass `p539` · 2026-10-29.** **Sixty-two** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
 
@@ -394,10 +394,14 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 58 verified education agents
+## Shelf — 62 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
+| 🆕 **learnmcp-xapi** | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main` | 16 · 4 forks | 🟡 Global — author's country not stated; the **LRS it targets is EMEA** (Ralph, by France Université Numérique) | *"An open-source MCP server that enables AI agents to record and retrieve learning activities through xAPI-compliant Learning Record Stores."* Python, 32 commits on `main`. 🟢 **This row closes a gap this base has carried in prose since `p502`:** the whole xAPI/LRS record layer sat in trending history and on **no live shelf**. It is the only artefact here that writes a learner's activity **back** to a standards-compliant store rather than only reading from one — which is what makes an agent's tutoring auditable instead of ephemeral. |
+| 🆕 **oak-open-curriculum-ecosystem** | [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** — sidebar `MIT, License licenses found`; grant file `LICENCE` (British spelling) at `main` | 8 · 5 forks | 🟢 **EMEA (England)** — *stated*: README names the **National Curriculum for England (2014)**, **Oak National Academy** and the **Education Endowment Foundation** | *"A collection of tools for working with the Oak Open Curriculum Data, via API, SDK and MCP app."* Topics: `curriculum` · `mcp` · `mcp-server` · `open-data` · `openapi` · `sdk` · `elasticsearch`. **6 835 commits.** 🟢 **The maturity signal EMEA did not have:** `p538` closed the EMEA/APAC count imbalance with two 1★ rows by one author and said plainly that *"the live EMEA gap is maturity."* This is a state-funded national curriculum body shipping an **MCP server over its own curriculum data** — an engagement starts from the ontology, not from a scrape. |
+| 🆕 **esco-skill-extractor** | [KonstantinosPetrakis/esco-skill-extractor](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `master` | 32 · 13 forks | 🟢 **EMEA (EU)** — *stated*: built in the **SKILLAB EU Horizon** project against the EU's own **ESCO** taxonomy | *"Extract ESCO skills and ISCO occupations from texts such as job descriptions or CVs."* Topics: `esco` · `isco` · `skill-extraction` · `embeddings` · `sentence-transformer` · `cosine-similarity`. 🟢 **Why it is on an education shelf and not an HR one:** ESCO is the European Skills, Competences, Qualifications and Occupations taxonomy, so this is the **credential-to-labour-market mapping** every 2026 trend list calls for and almost nobody ships. It turns a course outcome into an EU-recognised skill code. 🔴 It does not read a transcript or a curriculum — the input is free text, and the mapping to a learner record is the studio's work. |
+| 🆕 **agente-bncc-professores** | [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main` | 🔴 0 · 0 forks | 🟢 **LATAM (Brazil)** — *stated*: README is in **Portuguese** and names the **BNCC** and the **MEC** (Ministério da Educação) as the source of the official PDF | *"Planos de aula e provas com gabarito ancorados nas habilidades oficiais da BNCC: busca semântica, Gemini ou DeepSeek, edição das questões e PDFs."* Lesson plans and answer-keyed exams anchored to official BNCC competency codes. Next.js 16 + TypeScript + Prisma + SQLite; topics `bncc` · `rag` · `embeddings` · `semantic-search` · `educacao`. 🟢 **It is anchored to a national standard rather than to a prompt**, which is the same shape as `corretor-enem`'s ENEM calibration and `oak-*`'s England curriculum. 🔴 **0★, 0 forks** — this is an architecture to read, not a dependency to take. |
 | **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **49 850** · 6 138 forks (re-measured `p537`) | APAC (Univ. of Hong Kong, HKUDS lab) | "Lifelong Personalized Tutoring." Multi-agent tutor with persistent learner memory, learning paths and mastery gates. README names **v1.7.0, 2026.10.28**. 6.1k forks. The largest open-source education agent on any shelf. |
 | **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | MIT | **41.8k** | APAC (Tsinghua University, MAIC group) | "Open Multi-Agent Interactive Classroom" — a one-click immersive classroom staffed by multiple agent roles (lecturer, peer, assistant). TypeScript / Next.js / React. News section names **v1.3.0, 2026-10-29**. 6.5k forks. |
 | **k12-teacher-skills** | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | 601 | North America (Anthropic, with Learning Commons) | Agent *skills* plus **eval rubrics** for K-12 teacher workflows. The rubrics matter more than the skills: they are a published yardstick for "is this agent pedagogically acceptable", which almost nothing else in this space ships. 108 forks. |

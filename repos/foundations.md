@@ -1,12 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-29
+updated: 2026-10-30
 ---
 
 # Foundational Education Repos
 
-**Pass `p538` · 2026-10-29.** Load-bearing systems an education engagement is
+**Pass `p539` · 2026-10-29.** Load-bearing systems an education engagement is
 likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms, standards and
 toolkits the agents must live beside.
@@ -74,6 +74,63 @@ quantity. 🔵 A recount against an explicit rule for what counts is `Gap 534-E`
 > shape of the market, and it drives the architecture: **build permissive agents
 > that integrate across a process or network boundary** (LTI, xAPI, REST, MCP)
 > rather than forking an AGPL core and inheriting its obligations.
+
+## 🆕 `p539` — the backlog's head was never obscure, it was the field's own infrastructure
+
+🔴 **The measurement that reframes this file.** `p538` left the promotion queue
+empty and set its successor a choice: generate a new queue from the `HISTORY`
+bucket — **4 120 distinct addresses against 262 filed** — or find an unused
+channel. `p539` built the queue
+([`../ingest/history-backlog.py`](../ingest/history-backlog.py)) and then
+gated it in bulk
+([`../ingest/backlog-gate.py`](../ingest/backlog-gate.py)), and the result is
+not a list of obscure repositories:
+
+| | Value |
+|---|---|
+| `HISTORY` − `FILED` (the backlog) | **3 869** |
+| 🟢 LIVE (`git ls-remote --symref`, all 3 873 probed) | **3 725 — 96.2 %** |
+| 🔴 DEAD / PRIVATE | 148 — 3.8 % |
+| Grant-gated at the ranked head | 147 of 150 live, **67 MIT · 18 Apache-2.0 · 2 BSD · 1 ISC · 1 ECL-2.0** |
+| 🔴 UNRESOLVED on 46 grant filenames | 17 |
+
+🔵 **So the 6.8 % filing rate is a promotion deficit, not a graveyard.** Only
+3.8 % of the backlog is dead. The top of it — ranked by how many of this base's
+own files name an address and never file it — reads
+`openedx/edx-platform` (**59 files, 243 mentions**), `jupyterhub/jupyterhub`
+(44 files), `plastic-labs/tutor-gpt` (37), `INGInious/INGInious` (34),
+`frappe/erpnext`, `apache/ofbiz-framework`, `huggingface/smolagents`,
+`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`. **This base has been describing the education
+field's load-bearing infrastructure in prose for hundreds of passes without
+putting it in a table row a successor can paste.**
+
+🟢 **Filed this pass, every figure read first-hand from the repository page:**
+
+| Repo | Licence | Stars · forks | Region | Why it is foundational |
+|---|---|---|---|---|
+| [AnubisLMS/Anubis](https://github.com/AnubisLMS/Anubis) | 🟢 **MIT** (`LICENSE` at `main`) | **382** · 54 | 🟢 **North America (USA)** — *stated*: *"battle tested at **NYU Tandon** for several semesters"* | *"Distributed LMS for automating Computing Science Courses From NYU."* Autogrades by running tests when a student pushes to their assignment repo, and serves browser **Cloud IDEs** (Theia) on **Kubernetes**. Topics `k8s` · `cloud-ide` · `learning-management-system`. 🟢 The only row here that is an LMS **and** an autograder **and** a per-student sandbox — the three pieces a code course needs and that this base has otherwise only had separately. |
+| [inducer/relate](https://github.com/inducer/relate) | 🟡 **MIT by README text only** — sidebar names **no** licence; README carries MIT-style permission text, `Copyright (C) 2014-15 Andreas Kloeckner` | **437** · 125 | 🟡 unplaced — no institution named on the page | *"RELATE is an Environment for Learning And TEaching."* Django courseware: content authored in **YAML + Markdown under git**, so an instructor previews new content while students still see the old version; sandboxed code questions with autograding plus optional human second-stage marking; grade book, class calendar, live in-class quizzes. 🔵 **The git-versioned-content model is the asset** — it is the only row here where course material is a reviewable commit. |
+| [Ed-Fi-Alliance-OSS/Ed-Fi-ODS](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 **Apache-2.0** (`LICENSE.txt` at `main`) | **28** · 48 | 🟢 **North America** — Ed-Fi Alliance, LLC in the copyright notice; the standard is US K-12 | *"The core code for the Ed-Fi Operational Data Store (ODS) and Ed-Fi ODS API."* 🟢 **The K-12 data substrate a US district engagement inherits whether or not anyone chose it.** 48 forks against 28 stars is the signature of an implementation base, not an audience — people deploy it, they do not admire it. 🔵 Pair with `1EdTech` for the standards layer: Ed-Fi carries the records, LTI/Caliper carry the events. |
+| [DFE-Digital/teaching-vacancies](https://github.com/DFE-Digital/teaching-vacancies) | 🟢 **MIT** (`LICENSE` at `main`) | **27** · 23 | 🟢 **EMEA (England)** — *stated*: *"a free job-listing service from the **Department for Education**"*, covering *"schools or trusts in England"* | **19 739 commits** on a live national government service, integrating **GOV.UK One Login** and DWP *Find a Job*. 🟢 **And it ships `AGENTS.md`, `CLAUDE.md` and `GEMINI.md` plus a documentation section titled *"Guidance for AI coding agents"*** — a state education department publishing its agent conventions in the open. 🔵 Read it for the conventions, not the domain: it is the clearest public example of how a public-sector education body expects agents to work inside its codebase. |
+| [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** (`LICENSE` at `main`) | **6 500** (page rounds to 6.5k) · 1 100 | ⚪ Global | *"Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10."* Sits between an agent and the actions it takes; every tool call or data access is checked against policy first, with agent identity, isolated execution and audit records. SDKs in several languages plus framework adapters and a CLI. 🔴 **Education is not mentioned anywhere on the page, and that is stated rather than glossed.** 🟢 It is filed here because the 2026 education story is *governed* adoption — an Annex III high-risk assessment tool needs exactly an audit record and a policy gate, and this is the only permissive artefact on this base that provides them. **Public preview.** |
+
+🔴 **Two rows the gate attested and this pass did NOT read first-hand**, recorded
+as such so a successor does not mistake a gate for a page read:
+[`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub)
+(**BSD-3-Clause**, `LICENSE` at `main`) and
+[`huggingface/smolagents`](https://github.com/huggingface/smolagents)
+(**Apache-2.0**, `LICENSE` at `main`). Both are grant-attested from the licence
+file's own bytes at the resolved default branch; **neither has a star count
+measured this pass**, so none is written. `jupyterhub` is named in **44** of
+this base's files and `smolagents` in **24**, and both remain unfiled on the
+platform tables above — the single largest piece of promotion debt left.
+
+🟢 **`apache/ofbiz-framework` proved the default-branch rule still earns its
+keep.** Its default branch is **`trunk`**, not `main` or `master`. `p509` found
+that defect, `p517` fixed it in
+[`../ingest/probe-grant.sh`](../ingest/probe-grant.sh), and the bulk gate
+inherits the fix — a probe that assumed `main` would have filed a top-20
+backlog address as UNRESOLVED.
 
 ## Platform cores
 

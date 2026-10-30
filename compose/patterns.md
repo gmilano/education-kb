@@ -1,12 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-29
+updated: 2026-10-30
 ---
 
 # Compose Patterns — Education
 
-**Pass `p538` · 2026-10-29.** **Twenty-nine** recipes. Every component named below
+**Pass `p539` · 2026-10-30.** **Thirty-three** recipes. Every component named below
 was read from its repository page, and **every licence was read from the licence
 file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
 this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
@@ -1647,4 +1647,149 @@ easy enough to make the legal one easy to skip.
 
 **Effort.** 4–6 weeks to a grounded tutor over one subject and one grade band,
 assuming the corpus question is already answered. **Indefinite if it is not.**
+
+## P579 — The auditable tutor: an AI tutor whose every interaction lands in a standards-compliant learner record (EMEA first; Global)
+
+**Brief.** An institution wants a tutor it can put in front of a regulator. The
+pedagogy is the easy half — this base has had a tutoring shelf for hundreds of
+passes. 🔴 **The half that has been missing on every live shelf until this pass
+is the record:** an interaction that exists only in a chat log is not evidence,
+and EU **Annex III** attaches to systems influencing access to qualifications.
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Record layer | 🆕 [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** · 16★ · 4 forks | *"Enables AI agents to **record and retrieve** learning activities through xAPI-compliant Learning Record Stores."* 🟢 **The only artefact on this base that writes learner activity back to a standards store** rather than only reading from one. Python, MCP server |
+| The store | **Ralph LRS**, named in `learnmcp-xapi`'s own README | per-project | 🟢 **Self-hostable and EMEA-domiciled** — by **France Université Numérique**. Processing stays in the institution, which moves the hardest conformity question off the table |
+| Mastery estimate | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 **MIT** · 57★ | Bayesian Knowledge Tracing over MCP — a **numeric, inspectable** mastery state, not a model's opinion. Go |
+| Tutor surface | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · 50.0k★ · 6.2k forks | The shelf's most-starred tutor; re-read this pass |
+| Policy gate | 🆕 [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | 🟢 **MIT** · 6.5k★ · 1.1k forks | Every tool call checked against policy before it runs, plus agent identity, sandboxed execution and **audit records**. Covers the OWASP Agentic Top 10. 🔴 **Public preview, and education is nowhere on its page** — it is general infrastructure used here for a specific purpose |
+| Pedagogical eval | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 **MIT** | Conformity asks whether the system is *accurate*, not only whether it is logged |
+
+**Wiring, concretely.** Mount `learnmcp-xapi` and `tutor-mcp` as two MCP servers
+behind the governance toolkit's policy engine — the toolkit sits between the
+tutor and both servers, so no statement reaches the LRS and no mastery write
+happens without passing policy first. The tutor graph's turn loop becomes:
+read mastery from `tutor-mcp` → generate → **emit an xAPI statement through
+`learnmcp-xapi` before replying** → update mastery. 🔵 **Emit before replying,
+not after**, or a crash loses exactly the interaction a regulator would ask
+about. Point `learnmcp-xapi` at a self-hosted Ralph instance inside the
+institution's boundary; the toolkit's audit log is the second, independent
+record and the two should be reconcilable by statement id.
+
+🔴 **The honest weaknesses.** `learnmcp-xapi` is **16★ with 32 commits** — this
+is a thin component carrying a load-bearing role, so budget to own it. The
+governance toolkit is a **public preview**. And xAPI statement *design* is the
+real work: a badly modelled verb vocabulary produces an audit trail nobody can
+query. 🟢 **Pair with 1EdTech's Caliper vocabulary** rather than inventing verbs.
+
+**Shape of the engagement.** 8–10 weeks: 2 for statement/verb modelling against
+the institution's own assessment language, 2 for the Ralph deployment and policy
+rules, 3 for the tutor and mastery integration, 2 for the conformity pack
+(Annex III documentation, audit queries, eval results). 🟢 **The deliverable a
+client actually buys is the conformity pack** — the tutor is the demo.
+
+## P580 — The national-curriculum engagement: start from the state's own ontology, not from a scrape (EMEA — England; the shape is portable)
+
+**Brief.** A ministry, academy trust or publisher wants AI lesson preparation and
+assessment aligned to the national curriculum. The default build scrapes
+curriculum text into a vector store and hopes. 🟢 **In England that is now
+unnecessary and strictly worse:** the curriculum is published as data, with an
+API, an SDK **and an MCP server**, by a state-funded body.
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Curriculum ontology + MCP | 🆕 [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** (`LICENCE` at `main`) · 8★ · **6 835 commits** | *"Tools for working with the Oak Open Curriculum Data, via API, SDK and MCP app."* **Oak National Academy** + **Education Endowment Foundation**, against the **National Curriculum for England (2014)**. Topics include `mcp-server`, `openapi`, `elasticsearch` |
+| Curriculum graph | [oaknational/oak-curriculum-ontology](https://github.com/oaknational/oak-curriculum-ontology) | 🟢 **MIT** (`LICENSE.md` at `main`) | The ontology behind the data. 🔴 **Grant attested by bulk gate this pass; stars not read** |
+| Lesson drafting | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** · 63★ | Local-first, works from the teacher's own curriculum files — point it at Oak data instead of a scrape. 🔴 Explicitly **single-teacher, not multi-tenant** |
+| Provenance-bearing skills | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 🟢 **Apache-2.0** · 462★ | Emits **source-backed** teacher skills — the citation back to the curriculum unit is the audit trail an inspector wants |
+| Assessment | [inducer/relate](https://github.com/inducer/relate) | 🟡 **MIT by README text only** — sidebar names no grant | Course content as **YAML + Markdown under git**, so a curriculum change is a reviewable commit and a diff. 437★ · 125 forks |
+| Agent conventions | 🆕 [DFE-Digital/teaching-vacancies](https://github.com/DFE-Digital/teaching-vacancies) | 🟢 **MIT** · 27★ · **19 739 commits** | 🔵 **Read, do not deploy.** It ships `AGENTS.md`, `CLAUDE.md` and *"Guidance for AI coding agents"* — this is how the **Department for Education** expects agents to behave in its codebases, which is what a public-sector review will measure you against |
+
+**Wiring, concretely.** Mount Oak's MCP server as the single source of
+curriculum truth; forbid the drafting agent from retrieving curriculum text from
+anywhere else, so every generated lesson carries an Oak unit identifier. Run
+`lineage-skill` over the institution's own materials to produce skills whose
+claims cite those identifiers. Hold the resulting lesson and assessment content
+in `relate`'s git-backed YAML, which gives the trust a reviewable history per
+curriculum change. 🟢 **The Oak identifier is the join key across the whole
+pattern** — drafting, assessment and reporting all key on it, which is what makes
+the output checkable by a person who never saw the model.
+
+🔴 **Weaknesses.** Oak's ecosystem repo is **8★** — mature by commits, tiny by
+community, so it is a dependency to watch. `Claw-ED` is single-tenant by design,
+so a trust-wide rollout needs an orchestration layer the pattern does not supply.
+`relate`'s grant is **README text with no sidebar licence** — get written
+confirmation before a commercial deployment. 🟡 **And the portability claim is
+untested:** the shape (national curriculum published as queryable data) is
+replicable in principle, but England is the only region where this base has found
+it shipped.
+
+**Shape of the engagement.** 6–8 weeks for a single-subject pilot; 12–14 for
+trust-wide, where most of the added time is multi-tenancy and SSO rather than AI.
+
+## P581 — Course outcome to labour-market credential: the skills layer every 2026 trend list asks for (EMEA/EU first)
+
+**Brief.** An institution or ministry wants to show that what it teaches maps to
+what employers hire for, and to issue a credential a third party can verify.
+🟢 **Both halves now exist permissively and this base had neither on a shelf
+before this pass.**
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Skills extraction | 🆕 [KonstantinosPetrakis/esco-skill-extractor](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** · 32★ · 13 forks | *"Extract **ESCO** skills and **ISCO** occupations from texts such as job descriptions or CVs."* Embeddings + sentence-transformer + cosine similarity. Built in the **SKILLAB EU Horizon** project |
+| The taxonomy | **ESCO** — European Skills, Competences, Qualifications and Occupations | EU-published | 🟢 **The external referent.** A skill code is checkable by an employer, a ministry and a regulator independently |
+| Credential wallet | [digitalcredentials/learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT** (`LICENSE` at `main`) | Verifiable credentials in a learner-held wallet. 🔴 Grant attested by bulk gate; stars not read this pass |
+| Standards validator | [1EdTech/digital-credentials-public-validator](https://github.com/1EdTech/digital-credentials-public-validator) | 🟢 **Apache-2.0** | Validate before you issue. 🔴 Grant attested by bulk gate; stars not read |
+| Records substrate | [Ed-Fi-Alliance-OSS/Ed-Fi-ODS](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) (NA) or the LRS from **P579** (EMEA) | 🟢 Apache-2.0 / MIT | Where the achievement actually lives before it becomes a credential |
+
+**Wiring, concretely.** Run the extractor over two corpora, not one: the
+institution's **course and module descriptions**, and a sample of **live job
+postings** in its region. The intersection is the alignment report; the
+difference in both directions is the finding a client pays for — taught skills no
+employer asks for, and demanded skills nobody teaches. Then, for a completed
+learner outcome, issue a verifiable credential carrying the ESCO codes, validate
+it against 1EdTech's validator **before** issuance, and hold the underlying
+achievement in Ed-Fi or the LRS.
+
+🔵 **Why the two-corpus design matters.** A one-corpus run produces a taxonomy
+mapping, which is a deliverable nobody can act on. The two-corpus run produces a
+*gap list* with a curriculum change attached to each row.
+
+🔴 **Weaknesses, plainly.** The extractor is **32★** and its README does not even
+define ESCO — budget to read its embedding approach properly before trusting a
+match. ESCO is **European**: the pattern does not transfer to North America
+without swapping in O*NET, which this base has not filed. And two of the five
+components are **gate-attested only**, so read their pages before committing.
+
+**Shape of the engagement.** 4 weeks for the alignment report alone (the sellable
+first slice), 10–12 for issuance end to end.
+
+## P582 — Classroom capture to courseware: the APAC seam, using the largest permissive education codebase on this base (APAC first)
+
+**Brief.** An institution runs live online classes and wants them to become
+reusable, searchable courseware rather than a folder of recordings.
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Classroom + capture | 🆕 [netless-io/flat](https://github.com/netless-io/flat) | 🟢 **MIT** · **6 400★** · 876 forks | Agora Flat's open-source classroom: interactive whiteboard, Electron desktop clients, and 🟢 **cloud recording** — the capture step most patterns assume and none supplied |
+| Video → courseware | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | 🟢 **Apache-2.0** · 462★ | *"Distill videos, PDFs, transcripts and notes into **source-backed** teacher Agent Skills"* — built for exactly this input |
+| Ingest fallback | [LeoLiu363/ai-video-understanding](https://github.com/LeoLiu363/ai-video-understanding) | ⛔ **Ungranted** | Local transcription + courseware OCR with timestamped Q&A. 🔴 **No licence file — read it, do not ship it** |
+| Tutor over the result | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** · 50.0k★ | Serves the distilled material back as lifelong personalised tutoring |
+| Record | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** · 16★ | So the replay is attributable per learner, per **P579** |
+
+**Wiring, concretely.** Flat's cloud-recording artefact plus its whiteboard
+stream are the ingest payload: pass both to `lineage-skill`, which emits skills
+whose claims cite the timestamp they came from. That citation is the whole value —
+a student asking "where did this come from?" gets a minute marker in the lesson
+they attended.
+
+🔴 **The commercial dependency is the thing to price first.** Flat's MIT grant
+covers the **client**; the real-time transport is **Agora's commercial SDK**. So
+this pattern has a per-minute cost that none of the others do, and it must be in
+the first conversation, not the last. 🔴 **And China's framework imposes
+mandatory registration and content-labelling obligations** on a deployed system —
+a generated lesson is generated content.
+
+**Shape of the engagement.** 6–8 weeks, of which 2 are Agora commercials and
+regional compliance rather than engineering.
 

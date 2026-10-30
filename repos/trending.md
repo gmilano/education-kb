@@ -1,7 +1,96 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-29
+updated: 2026-10-30
+---
+
+## 🆕 `p539` — `2026-10-30` — **🟢 THE BULK GATES RAN: 3 873 ADDRESSES PROBED FOR LIVENESS, 96.2 % ALIVE, AND THE HEAD OF THIS BASE'S OWN BACKLOG IS THE EDUCATION FIELD'S INFRASTRUCTURE. 🟢 FIVE REPOS FILED TO `foundations.md`, TWO PLATFORMS TO `solutions.md`. 🔴 THE PERMISSIVE EDUCATION ERP STILL DOES NOT EXIST, AND THAT IS NOW A MEASURED FINDING RATHER THAN A BLANK LEG.**
+
+### 🔴 The mandated GitHub-trending leg: eleventh consecutive pass with nothing unfiled, and the category false positive repeated
+
+`github trending education AI 2026` still does not index GitHub Trending. Its
+results are auto-generated `agents-radar` issues plus promotional blog posts.
+🔴 **`p538` measured one false positive (`JetBrains/thinkrail`, a 6k-star agentic
+IDE offered as education supply); `p539` got the same shape with new
+repositories** — a *"90K-star design language"* and an *"11K-star design-skills
+collection"*, neither education. 🔵 The rule holds twice now, one pass apart: **a
+trending leg's category claim is as unverified as its star count.**
+
+### 🟢 So the supply came from a measured backlog instead, and the measurement is the story
+
+Two new instruments — [`../ingest/history-backlog.py`](../ingest/history-backlog.py)
+and [`../ingest/backlog-gate.py`](../ingest/backlog-gate.py) — turned
+`p538`'s *"4 144 addresses against 240 filed"* into something actionable:
+
+| | Value |
+|---|---|
+| backlog (`HISTORY` − `FILED`) | **3 869** after removing 25 non-repositories |
+| 🟢 LIVE, `git ls-remote --symref` | **3 725 — 96.2 %** |
+| 🔴 DEAD / PRIVATE | 148 — 3.8 % |
+| grant-gated at the ranked head | 147 live of 150 |
+| 🟢 permissive | **89** (67 MIT · 18 Apache-2.0 · 2 BSD-3 · 1 ISC · 1 ECL-2.0) |
+| 🔴 UNRESOLVED on 46 filenames | 17 |
+
+🔴 **The backlog's top ten, by how many of this base's own files name an address
+and never file it:** `openedx/edx-platform` (**59 files**),
+`jupyterhub/jupyterhub` (**44**), `plastic-labs/tutor-gpt` (37),
+`INGInious/INGInious` (34), `felipedias-ie/blackboard-mcp` (31),
+`withmarbleapp/os-taxonomy` (30), `ZeKaiNie/universal-examprep-skill` (28),
+`DavidLMS/learnmcp-xapi` (28), `LearnPress/learnpress` (28), `sdv-dev/SDV` (28).
+
+🟢 **`apache/ofbiz-framework` justified `p517`'s instrument on its own.** Its
+default branch is **`trunk`** — a gate assuming `main`/`master` would have filed
+a top-20 backlog address as UNRESOLVED. `p509` found that defect, `p517` fixed it
+in [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh), and the bulk gate
+inherits it.
+
+### 🟢 Filed to [`foundations.md`](foundations.md) — every figure read first-hand
+
+| Repo | Grant | Stars · forks | Region | What it is |
+|---|---|---|---|---|
+| [`AnubisLMS/Anubis`](https://github.com/AnubisLMS/Anubis) | 🟢 MIT | **382** · 54 | 🟢 NA (USA) — *"battle tested at **NYU Tandon**"* | Distributed LMS that autogrades by running tests on student pushes **and** serves Theia Cloud IDEs on Kubernetes |
+| [`inducer/relate`](https://github.com/inducer/relate) | 🟡 **MIT by README text only** — no sidebar licence | **437** · 125 | 🟡 unplaced | Django courseware; content as **YAML + Markdown under git**, so a curriculum change is a reviewable diff |
+| [`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) | 🟢 Apache-2.0 | **28** · **48** | 🟢 NA | The US K-12 records substrate. 🔵 **48 forks against 28 stars — deployed, not admired** |
+| [`DFE-Digital/teaching-vacancies`](https://github.com/DFE-Digital/teaching-vacancies) | 🟢 MIT | **27** · 23 · **19 739 commits** | 🟢 EMEA (England) | England's **Department for Education**; ships `AGENTS.md`/`CLAUDE.md` and *"Guidance for AI coding agents"* |
+| [`microsoft/agent-governance-toolkit`](https://github.com/microsoft/agent-governance-toolkit) | 🟢 MIT | **6 500** · 1 100 | ⚪ Global | Policy gate, zero-trust identity, sandboxing, **audit records**; OWASP Agentic Top 10. 🔴 **Not education; public preview** |
+
+### 🟢 Filed to [`solutions.md`](../verticals/solutions.md)
+
+| Platform | Grant | Stars · forks | Region | Note |
+|---|---|---|---|---|
+| [`netless-io/flat`](https://github.com/netless-io/flat) | 🟢 MIT | 🔴 **6 400** · 876 | 🟢 **APAC (China)** — Agora/Shengwang | 🟢 **The largest permissive education-specific codebase on this base outside the tutoring shelf**, and it was sitting in this file's own history. Whiteboard, Electron clients, **cloud recording**. 🔴 MIT covers the client; transport is Agora's **commercial SDK** |
+| [`aureuserp/aureuserp`](https://github.com/aureuserp/aureuserp) | 🟢 MIT | **12 100** · 611 | ⚪ Global | *"Free and Open Source ERP software"*, Laravel + Filament. 🔴 **No education module** |
+
+### 🔴 The verticals leg's answer, stated as a finding instead of a blank
+
+`open source platform education ERP CRM MIT Apache` returned **no
+education-specific ERP or CRM under a permissive grant**, for the second pass
+running. 🟢 **What it returns is the finding:** the one ERP with a real education
+module is [`frappe/erpnext`](https://github.com/frappe/erpnext) at **GPL-3.0**,
+while the permissive suites (`aureuserp` MIT, `apache/ofbiz-framework`
+Apache-2.0, Krayin MIT, Huly Apache-2.0) have **no education module at all**.
+
+🔵 **Three for three on this base now.** The *education-specific* platform layer
+is copyleft (ERPNext, Moodle, BigBlueButton, i-educar); the *permissive* layer is
+general-purpose. **So the engagement decision is not which platform — it is
+integrate against the copyleft system of record and build the new surface on a
+permissive base.**
+
+### 🟢 Two unfiled addresses promoted out of the `1EdTech` standards cluster
+
+[`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library)
+was read first-hand for `Gap 538-A`: **124★ · 109 forks, Apache-2.0, no
+`forked from`** — canonical despite `packbackbooks/*` and `IMSGlobal/*` siblings,
+which are **the donating author and an organisation rename**, not forks. 🔵 **An
+org rename is a collision shape that looks exactly like a fork in a name index
+and is not one** — recorded so the next pass does not chase it.
+
+### What this file leaves for `p540`
+
+- 🔴 **`Gap 539-B`** — **3 719** live backlog addresses are still ungated. 🔵 **Pre-registered: gate to 600 and rank the permissive residue by forks-per-star**, which this pass found twice to be the better signal for institutional software (Ed-Fi 48/28; `teaching-vacancies` 23/27).
+- 🟡 **`Gap 539-D`** — `jupyterhub/jupyterhub` (**44** files) and `huggingface/smolagents` (**24**) are grant-attested and **unread**; no star count is written for either and both are still off the platform tables. The largest single piece of promotion debt here.
+- 🔴 `openedx/edx-platform` leads the backlog at **59 files and 243 mentions** and remains unfiled. It is almost certainly AGPL — **read it and file it with its grant, rather than leaving the field's largest platform in prose.**
+
 ---
 
 ## 🆕 `p538` — `2026-10-29` — **🟢 NINE PLATFORM ROWS FILED AND THE PROSE QUEUE IS EMPTY — PLACED IN **ALL FOUR REGIONS**, WHICH NO SEARCH LEG HAS EVER MANAGED. 🔴 THE MOODLE CENSUS'S CORRECTION WAS ALREADY HERE AND `agents/top.md` CONTRADICTED IT FOR NINE PASSES. 🟢 A NUMERIC CROSS-PAGE SWEEP NOW EXISTS.**

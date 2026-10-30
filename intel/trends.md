@@ -1,12 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-29
+updated: 2026-10-30
 ---
 
 # Education AI — Current Trends
 
-**Pass `p538` · 2026-10-29.** **Twenty-nine** trends. Each one is stated so it could be
+**Pass `p539` · 2026-10-29.** **Thirty-two** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -1118,3 +1118,112 @@ reportable result rather than an empty pass.
   *highest-in-the-world* teacher adoption, that gap is the region's commercial
   opening and its governance risk at the same time — which is what **P554**
   exists to sell.
+
+## 30. 🆕 The institutional source finally says what this base has been filing: **purpose-built beats general-purpose**, and the proof is anchoring to a named standard
+
+**The claim.** Education AI is converging on tools built against a *named,
+published standard* — a curriculum, a competency framework, an assessment rubric,
+a records schema — and generic assistants are losing the serious buyer.
+
+🟢 **Why it is a trend and not a preference, as of this pass.** The **OECD's 2026
+Digital Education Outlook** reportedly recommends institutions move beyond
+general-purpose AI tools toward **purpose-built educational AI**, and a separate
+2026 trend survey independently describes the field moving *away* from generic
+tools toward platforms with curriculum alignment and child-safety features. This
+base has been filing the evidence for that for hundreds of passes without a
+citation that was not its own prose.
+
+🟢 **The shelf is the corroboration, and the pattern is exact.** Every row this
+base has filed that survives contact with an institution is anchored to a
+standard someone else published and maintains:
+
+| Row | The standard it is anchored to | Who maintains the standard |
+|---|---|---|
+| `GuilhermeScarpini/agente-bncc-professores` | **BNCC** competency codes | MEC, Brazil |
+| `dsvi-b/corretor-enem` | **ENEM** five official competencies, calibrated on 11 147 examiner-marked essays | INEP, Brazil |
+| `oaknational/oak-open-curriculum-ecosystem` | **National Curriculum for England (2014)** | DfE / Oak National Academy |
+| `KonstantinosPetrakis/esco-skill-extractor` | **ESCO / ISCO** | European Commission |
+| `DavidLMS/learnmcp-xapi` | **xAPI** | ADL / 1EdTech ecosystem |
+| `Ed-Fi-Alliance-OSS/Ed-Fi-ODS` | **Ed-Fi** data standard | Ed-Fi Alliance |
+
+🔵 **The mechanism, which is what makes this sellable.** A standard supplies the
+one thing a generative system cannot generate: an **external referent**. A lesson
+plan tagged `EF06MA13` is checkable by someone who has never seen the model. That
+is simultaneously the pedagogy argument, the procurement argument and the
+regulatory argument — Annex III conformity is far cheaper when the output maps to
+a published code.
+
+🔴 **How to disconfirm it.** If a general-purpose assistant with no standards
+anchoring wins a national procurement in any region, or if the shelf's
+standards-anchored rows stay at 0–30★ for another ten passes while generic
+tutors grow, the trend is a preference of this base's filing criteria rather than
+a property of the market. 🔴 **And the honest weakness today is exactly that:**
+four of the six rows above are under 35★. The *institutions* behind the standards
+are real; the *adoption* of these particular implementations is not yet evidence.
+
+## 31. 🆕 **Education's permissive supply is institutional, and it is published by the state** — not by startups
+
+**The claim.** The permissive (MIT/Apache/BSD) education supply that is actually
+mature is increasingly coming from **government departments, national academies
+and publicly funded research projects**, not from companies.
+
+🟢 **The evidence this pass, all read first-hand.** England's **Department for
+Education** ships `teaching-vacancies` (MIT, **19 739 commits**) and publishes
+*"Guidance for AI coding agents"* inside it. **Oak National Academy** with the
+**Education Endowment Foundation** ships an API, SDK **and MCP server** over
+national curriculum data (MIT, **6 835 commits**). The **SKILLAB EU Horizon**
+project ships ESCO extraction (MIT). The **Ed-Fi Alliance** ships the US K-12
+records substrate (Apache-2.0, **48 forks against 28 stars**). **NYU Tandon**
+ships `Anubis` (MIT, 382★). Brazil's row sources its standard from the **MEC**'s
+own PDF.
+
+🔵 **Why it follows from the sector's economics.** A permissive grant is a gift,
+and the organisations that can afford to give away education infrastructure are
+the ones not selling it — public bodies with a statutory mandate and research
+projects with a grant to spend. Commercial education AI stays closed or
+copyleft-with-a-commercial-licence, which is trend 6's finding from the other
+direction.
+
+🟢 **What it changes for an engagement.** The starting asset is likelier to be a
+*public* repository with low stars, high commit counts and no community — which
+is a very different diligence problem from a popular startup repo. **Forks
+against stars is the better signal**: Ed-Fi's 48 forks against 28 stars means
+people deploy it, not that they admire it.
+
+🔴 **How to disconfirm it.** If the next ten permissive education rows filed here
+are company-authored, or if the state-published rows prove unmaintained on a
+liveness check, this is a sampling artefact of where this base has been looking.
+
+## 32. 🆕 **Regulation has stopped being a posture and become a calendar** — and the dates do not line up across regions
+
+**The claim.** Education AI compliance is now driven by specific dated
+obligations in each region, not by principles, and a multi-region institution
+faces a staggered schedule rather than one standard.
+
+🟢 **The dates, as read this pass.** Ohio districts had to adopt AI-use policies
+by **1 Jul 2026**; the ADA web-accessibility update for large US public
+institutions landed in **Apr 2026**; South Korea's **AI Basic Act** came into
+force **22 Jan 2026**; **Vietnam's** risk-based AI law took effect **1 Mar 2026**
+with **education named in its high-risk list**; **Australia's TEQSA** has already
+required every higher-education provider to submit a generative-AI risk action
+plan; and the EU's **Annex III high-risk** obligations fall on **2 Dec 2027**
+(standalone) and **Aug 2028** (embedded). **LATAM has no binding regional
+education date at all**, against 716 regulatory instruments across 23 countries.
+
+🔵 **Why the staggering is the commercial point.** Three of those dates have
+already passed, which means the buyer is out of compliance *now* rather than
+planning for later — and the EU's is far enough out to be a build window instead
+of an emergency. 🟢 A studio selling into both reads the same system two ways:
+**remediation** in APAC and North America, **design-for-conformity** in EMEA.
+
+🔴 **The caveat that must travel with this trend.** The EU dating is attested only
+by secondary sources that disagree with each other on how the delay was enacted
+(a *Digital Omnibus* amendment effective July 2026, published as **Regulation (EU)
+2026/1744** on 24 July 2026, versus a political agreement postponing to 2 Dec
+2027). 🔴 **Read the Official Journal before citing either to a client.** The
+Annex III *scope* is not in doubt; only the date's provenance is.
+
+🔴 **How to disconfirm it.** If the EU date slips again, or if any major
+jurisdiction replaces its dated obligation with a principles-based code, the
+"calendar" framing weakens back into posture.
+

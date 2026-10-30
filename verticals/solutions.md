@@ -1,12 +1,12 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-29
+updated: 2026-10-30
 ---
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p538` · 2026-10-29.** Every platform below is a real, running system that
+**Pass `p539` · 2026-10-29.** Every platform below is a real, running system that
 institutions already operate, with its licence read from **the licence file's own
 title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
 carried for two passes — "`github.com` returns HTTP 403 through the session
@@ -92,6 +92,7 @@ version of the rule, not a weaker one.
 |---|---|---|---|
 | **BigBlueButton** | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | LGPL-3.0 · 9.3k★ | Recording and transcript pipeline, plus the LMS integrations it already ships. README names **BBB 4.0**. Post-session summarisation, participation analytics and follow-up generation all hang off the recording artefacts — no core changes needed. |
 | **Apache OpenMeetings** | [apache/openmeetings](https://github.com/apache/openmeetings) | **Apache-2.0** · 688★ | Fork-friendly conferencing when the licence must be permissive end to end. Smaller community than BBB; take it only when LGPL is genuinely blocking. |
+| 🆕 **Agora Flat** | [netless-io/flat](https://github.com/netless-io/flat) | 🟢 **MIT** — sidebar `MIT license`, grant file `LICENSE` at `main`. Copyright **Agora Corporation** | 🔴 **6 400★ · 876 forks** (page rounds to 6.4k) — **the largest permissive education-specific codebase this base has filed outside the tutoring shelf.** Web, Windows and macOS client of the Agora Flat open-source classroom: interactive whiteboard, cloud recording, Electron desktop builds. Topics `online-classroom` · `virtual-classroom` · `whiteboard` · `e-learning` · `cloud-recording`. 🟢 **Region: APAC (China)** — Agora/Shengwang is Shanghai-based. 🟢 **Where AI attaches:** the cloud-recording artefact is the ingest point — a recorded class plus its whiteboard stream is exactly the input `lineage-skill` and `ai-video-understanding` want, and this is the only classroom platform here that produces it by default. 🔴 **The real-time transport is Agora's commercial SDK**, so the MIT grant covers the client, not the media plane. Budget for it. |
 
 ## 4. Content, assessment and records
 
@@ -325,6 +326,29 @@ open platform or an official client, and **no Arabic-language intelligent-tutori
 repository exists on this base at all**. The closest asset the full-text leg returned,
 [`h9-tec/Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) (**258★**),
 is a link list serving **no grant at 21 probed paths** and is not Gulf-origin.
+
+## 🆕 `p539` — §11, the ERP question answered honestly: there is no permissive education ERP, and that is the finding
+
+🔴 **The mandated verticals leg — `open source platform education ERP CRM MIT
+Apache` — returned no education-specific ERP or CRM under a permissive grant,
+for the second pass running.** What it returns is general business suites, and
+the one education-relevant ERP it names is **copyleft**. That is written down
+here rather than left as silence, because silence looks exactly like coverage:
+
+| Platform | Repo | Licence | Education module? | Verdict |
+|---|---|---|---|---|
+| 🆕 **Aureus ERP** | [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** — sidebar `MIT license`, grant file `LICENSE` at `master` | 🔴 **No.** Modules read: accounting, invoices, payments, inventory, manufacturing, products, purchases, sales, employees, recruitment, timeoff, timesheet, contacts, partners, projects, website | 🟢 **The permissive ERP base to extend.** **12 100★ · 611 forks** (page rounds to 12.1k), Laravel + FilamentPHP + PHP 8.3. 🔵 **This is the Odoo-shaped answer for education and it has no education module** — which makes it a starting point, not a solution: the student/enrolment/timetable domain is the studio's build, on a grant that permits it. |
+| **Apache OFBiz** | [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0** — grant file `LICENSE`, attested at the **resolved default branch `trunk`** | 🔴 No | 🟡 Java enterprise automation (ERP + CRM + warehouse). Named in this base's files repeatedly and never filed until now. Grant attested by bulk gate; **no star count read this pass**. |
+| **ERPNext** | [frappe/erpnext](https://github.com/frappe/erpnext) | 🔴 **GPL-3.0** | 🟢 **Yes** — Education is a listed type | 🔴 **The only ERP with a real education module is the one you cannot build a proprietary layer on.** Integrate over the REST API; do not fork. The `frappe/education` row in §2 carries the same constraint, resolved at `p526`. |
+
+🔵 **The generalisable shape, and it is now three for three.** On this base the
+*education-specific* platform layer is consistently copyleft (ERPNext, Moodle,
+BigBlueButton, i-educar) while the *permissive* layer is consistently
+general-purpose (Aureus, OFBiz, Flat's client). So the recurring engagement
+decision is not "which platform" — it is **integrate against the copyleft system
+of record, build the new surface on a permissive base.** Every pattern in
+[`../compose/patterns.md`](../compose/patterns.md) that survives contact with a
+real institution has that shape.
 
 ## 🆕 `p538` — §10, the plugin ecosystem claim gets its first artefact, and the anonymisation layer has no platform at all
 

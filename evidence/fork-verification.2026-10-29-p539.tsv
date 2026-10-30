@@ -1,0 +1,20 @@
+address	collision_name	side	forked_from	stars	forks	grant_sidebar	channel	note
+vishalsachdev/canvas-mcp	canvas-mcp	FILED	none	308	100	MIT license	repo page read	canonical; 27-owner collision cluster head
+r-huijts/canvas-mcp	canvas-mcp	HISTORY	none	12	10	MIT license	repo page read	independent implementation, not a fork of vishalsachdev
+DMontgomery40/mcp-canvas-lms	mcp-canvas-lms	FILED	none	104	39	NONE in sidebar	repo page read	README claims MIT; sidebar names no grant -- p533's finding reproduced
+1EdTech/lti-1-3-php-library	lti-1-3-php-library	FILED	none	124	109	Apache-2.0 license	repo page read	canonical despite packbackbooks/IMSGlobal siblings (org rename, not fork)
+towardsai/ai-tutor-app	ai-tutor-app	FILED	none	34	5	Apache-2.0 license	repo page read	canonical
+learning-commons-org/agent-skills	agent-skills	FILED	none	40	6	Apache-2.0 license	repo page read	canonical; addyosmani/agent-skills is unrelated
+HKUDS/DeepTutor	deeptutor	FILED	none	50000 (rounded 50.0k)	6200 (rounded 6.2k)	Apache-2.0 license	repo page read	canonical; cloudtoolbox/deeptutor sibling unread
+Dymayo/moodler-mcp	moodler-mcp	HISTORY	GhaithAlHallak8/moodler-mcp	0	0	License (unnamed)	repo page read	FORK -- confirms p538's hand finding by instrument-directed read
+DavidLMS/learnmcp-xapi	-	NEW	none	16	4	MIT license	repo page read	new shelf candidate
+DFE-Digital/teaching-vacancies	-	NEW	none	27	23	MIT license	repo page read	new shelf candidate
+oaknational/oak-open-curriculum-ecosystem	-	NEW	none	8	5	MIT license	repo page read	new shelf candidate
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	-	NEW	none	28	48	Apache-2.0 license	repo page read	new shelf candidate
+KonstantinosPetrakis/esco-skill-extractor	-	NEW	none	32	13	MIT license	repo page read	new shelf candidate
+netless-io/flat	-	NEW	none	6400 (rounded 6.4k)	876	MIT license	repo page read	new shelf candidate
+GuilhermeScarpini/agente-bncc-professores	-	NEW	none	0	0	MIT license	repo page read	new shelf candidate
+AnubisLMS/Anubis	-	NEW	none	382	54	MIT license	repo page read	new shelf candidate
+microsoft/agent-governance-toolkit	-	NEW	none	6500 (rounded 6.5k)	1100 (rounded 1.1k)	MIT license	repo page read	new shelf candidate; NOT education-specific
+aureuserp/aureuserp	-	NEW	none	12100 (rounded 12.1k)	611	MIT license	repo page read	new shelf candidate; no education module
+inducer/relate	-	NEW	none	437	125	NONE in sidebar	repo page read	README carries MIT-style text; sidebar names no grant
