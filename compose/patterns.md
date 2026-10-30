@@ -4,9 +4,145 @@ region: Global
 updated: 2026-10-30
 ---
 
+> 🟢 **`p546` adds `P596` and `P597`, taking the page to **51** recipes (`P547`…`P597`,
+> contiguous).** 🔴 **The derivation could not be run:**
+> [`../ingest/derive-counts.py`](../ingest/derive-counts.py) was **denied by name**
+> (`Code from External`) for the thirteenth pass in fourteen, so **51** is this pass's own
+> inline count of the `^## …P<n>` headings and the gate did **not** attest it. 🔵 Stated
+> rather than implied, because the previous three count defects on this base were all
+> prose figures that nobody could check.
+>
+> 🟢 **Both new recipes come from one measured finding and neither invents a component:**
+> for four of five interoperability standards on this base the **maintained**
+> implementation is not the one the standards body publishes
+> ([`../repos/trending.md`](../repos/trending.md#-p546--2026-10-30)), and the interop
+> standard is the **only** anchor class that survives a change of region
+> ([`../intel/trends.md`](../intel/trends.md)). `P596` is the stack that follows from
+> that. `P597` is the gate that stops a studio shipping the dead half of it.
+
+## 🆕 P596 — The portable tutoring stack: anchor on the standard, load the curriculum as data (all regions)
+
+**The problem it solves.** 73 % of the agents on this base's shelf are anchored to
+**nothing** and the anchored minority is mostly anchored to **one country** — BNCC, the
+National Curriculum for England, GDPT. 🔴 **An asset built on a curriculum anchor cannot
+be resold into another region**, which for a global studio is the whole economics. 🟢
+**This recipe inverts it:** the architecture anchors on **xAPI + LTI 1.3 + QTI**, and the
+curriculum becomes a **data set loaded into** that architecture rather than structure
+compiled into it.
+
+**Components — every one dated at `p546`, and every date is why it is here rather than its
+obvious alternative.**
+
+| Layer | Component | Licence | Last commit | Why this one |
+|---|---|---|---|---|
+| **Learning record store** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | Apache-2.0 | 🟢 **3 d** | 🔴 **not** [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) (**1.4 y**) — the reference implementation is the dead one |
+| **Record pipeline** | [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | Apache-2.0 | 🟢 **72 d** | moves statements between stores; what makes the record layer portable instead of captive |
+| **LMS attachment** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) *(Node)* | Apache-2.0 | 🟢 **16 d** | 🔴 **not** [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (**3.9 y**) — LTI 1.3 is alive in Node and PHP and **dead in Python**, which is the binding an AI stack reaches for first |
+| **LMS attachment** *(PHP estates)* | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | Apache-2.0 | 🟢 **13 d** | Moodle and Chamilo estates are PHP; same standard, live binding |
+| **Assessment interchange** | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) | Apache-2.0 | 🟢 **20 d** | 🔴 **not** [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) (**1.4 y**) |
+| **SCORM legacy** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | MIT | 🟢 **1 d** | the only live SCORM runtime here; needed for existing content estates |
+| **Mastery estimator** | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | 🟢 **1 d** | Bayesian Knowledge Tracing as **one MCP server**, not an application |
+| **Agent record bridge** | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | MIT | 🔴 **426 d** | 🔴 **READ, DO NOT TAKE.** The only artefact that writes agent activity *back* to an LRS — and it has not moved in 1.2 years. **Port the ~32-commit pattern onto `lrsql` directly** |
+| **Curriculum as data** | [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | MIT | 🟢 **8 d** | the reference shape for the whole recipe: a *national* curriculum served through an **API + MCP server**, so the country is a data set |
+| **Skills mapping** | [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | MIT | 🔴 **505 d** | 🔴 **READ, DO NOT TAKE.** ESCO itself is a maintained EU taxonomy; this binding is 1.4 y dead. Re-implement against the ESCO API |
+
+**Wiring, in order.**
+
+1. **Stand up the record layer first, not the agent.** `lrsql` behind `xapipe`. Every
+   tutoring interaction becomes an xAPI statement from day one; this is what makes the
+   engagement auditable under EMEA's Article 50 duties *and* saleable in North America.
+2. **Attach to the LMS through `ltijs`** (or the PHP library for Moodle/Chamilo estates).
+   🔵 The LMS stays the system of record for enrolment and grades — `p529`'s finding that
+   *the unit of LMS integration is the institution, not the product* still governs.
+3. **Mount `tutor-mcp` as the mastery estimator.** It speaks MCP, so any assistant can
+   use it, and it ships real BKT rather than a prompt that claims to track mastery.
+4. **Load the curriculum through an Oak-shaped adapter.** One adapter per country — Oak
+   for England, a BNCC adapter for Brazil (see `P555`) — all emitting the same internal
+   competency model. 🟢 **This is the step that makes the stack portable:** a new region
+   is a new adapter, not a new product.
+5. **Emit assessment as QTI 3** via `LongsightGroup/qti3`, so items survive a change of
+   platform; keep `scorm-again` only where a legacy content estate requires it.
+6. **Port, do not depend on, the two dead bindings.** `learnmcp-xapi`'s agent→LRS write
+   pattern and `esco-skill-extractor`'s ESCO mapping are both small and both abandoned;
+   re-implement each against the live layer underneath it.
+
+🔴 **What this recipe does not give you.** No agent in it is *itself* standards-anchored —
+the anchoring is the studio's work, which is precisely why it is billable. 🔴 And the
+portability claim has a limit worth stating to a client: a standard can be profiled
+per-jurisdiction, so "xAPI" in two countries is not automatically the same xAPI. 🟡 **Test
+it with `xapipe` between two deployments before promising portability.**
+
+**Effort.** 8–10 weeks for the record + LTI + mastery spine; **+2–3 weeks per additional
+country adapter** thereafter, which is the number to quote.
+
+## 🆕 P597 — The staleness gate: refuse a dependency by its commit date (run inside `P551`, after `P568`)
+
+**Why it exists.** `p545` reported every address on this base's shelves as **`LIVE`** and
+`p546` dated them: **28 of 175 foundations addresses have had no commit in over a year,
+six in over six years, and the stalest is 11.9 years old.** 🔴 **Two of `p545`'s own four
+new shelf promotions were over a year dead when they were promoted**, because the
+promotion instrument takes stars, forks and grants and **does not take a date**. 🔵 **A
+liveness check that only resolves the address cannot catch this. This gate is four lines
+of git.**
+
+**The instrument.** 🟢 Already written and published at
+[`../scratchpad/p546/staleness.sh`](../scratchpad/p546/staleness.sh):
+
+```bash
+# one network op per dependency, no file contents fetched, no working tree kept
+git clone --bare --depth 1 --filter=blob:none "https://github.com/$slug" "$d"
+git --git-dir="$d" symbolic-ref --short HEAD     # the branch, RESOLVED not guessed
+git --git-dir="$d" log -1 --format=%cI           # the date
+rm -rf "$d"
+```
+
+🟢 **Cost, measured:** **273 addresses in 96 seconds, zero failures**, and **304 KB** of
+transfer for a repository whose full shallow clone is **219 MB** — a **720×** saving on
+[`Ed-Fi-Alliance-OSS/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS), both
+reporting the same commit date.
+
+**The thresholds, and the three exceptions that stop it being a blunt instrument.**
+
+| Verdict | Rule |
+|---|---|
+| 🟢 **PASS** | last commit ≤ 90 days |
+| 🟡 **REVIEW** | 91–365 days — usable, name a maintenance owner in the proposal |
+| 🔴 **FAIL** | > 365 days — do not take as a dependency; port the pattern instead |
+
+- 🟡 **Exception 1 — ratified specifications.** [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec)
+  at 1.3 y is *finished*, not abandoned. **Apply the rule to implementations, never to
+  specs.**
+- 🟡 **Exception 2 — teaching material.** A tutorial repository is not a dependency, though
+  [`jupyterhub/jupyterhub-tutorial`](https://github.com/jupyterhub/jupyterhub-tutorial) at
+  **8.7 y** is still *wrong*, not merely old.
+- 🔴 **Exception 3 — release-branch projects, and this one has teeth.** A six-month default
+  branch can be a project that commits on release branches, so **check every head before
+  failing it**. 🟢 `p546` did exactly that for
+  [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms): **377 heads,
+  every one last committed `2026-04-30`**, including branches named for later releases. 🔵
+  The exception was tested and did not rescue it.
+
+**Wiring into `P551`.** Run this **after** the grant gates (`P556` grant-union, `P568`
+split-grant) and **before** architecture is written, because its output changes component
+choice rather than licence posture. 🟢 Its output is one row per dependency —
+`slug · branch · head_sha · committed_iso · age_days` — which is the same shape as
+[`../evidence/staleness-foundations.2026-10-30-p546.tsv`](../evidence/staleness-foundations.2026-10-30-p546.tsv)
+and drops straight into a proposal appendix.
+
+🔴 **The gate's honest limit:** a commit date measures *activity*, not *health*. A
+well-factored library finished two years ago may be a better dependency than a churning
+one, and this gate will fail the first and pass the second. 🔵 **So `FAIL` means
+"justify in writing", not "forbidden"** — and the justification belongs in the proposal
+where a client can see it.
+
 # Compose Patterns — Education
 
-**Pass `p545` · 2026-10-30.** 🟢 **derived recipes: **49**** — `P547`…`P595`, contiguous,
+**Pass `p546` · 2026-10-30.** 🟢 **recipes: **51**** — `P547`…`P597`, contiguous,
+🔴 **counted inline this pass, NOT gate-attested:**
+[`../ingest/derive-counts.py`](../ingest/derive-counts.py) was denied by name
+(`Code from External`) for the thirteenth pass in fourteen. The derivation below is the
+one that *would* have run, and it still fails if this sentence and the headings disagree —
+but nothing re-checked it this pass. 🔵 Previously `49` —
 counted from the headings by
 [`../ingest/derive-counts.py`](../ingest/derive-counts.py), which fails if this sentence
 and the headings disagree.

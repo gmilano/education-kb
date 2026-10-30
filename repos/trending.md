@@ -4,6 +4,158 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p546` — `2026-10-30` — **🟢 `Gap 544-C` CLOSED: EVERY SHELF ADDRESS NOW HAS A DATE — **273/273**, ZERO FAILURES, **96 SECONDS**. 🔴 AND THE FIELD IMMEDIATELY CONTRADICTS `p545`'s HEADLINE: **`162/162 LIVE` WAS TRUE AND MEANT ALMOST NOTHING** — **16 % OF THE FOUNDATIONS SHELF HAS NOT BEEN COMMITTED TO IN OVER A YEAR**, AND ITS STALEST ENTRY IS **11.9 YEARS** OLD. 🔴 AN ENTIRE NAMED PROJECT FAMILY ON THIS SHELF IS DEAD (**Apereo Learning Analytics Initiative, 5 REPOS, 6.7–11.9 y**). 🔴 `p545`'s **162** IS NOT REPRODUCIBLE BY ANY OF FIVE EXTRACTION RULES (100 / 169 / 175 / 191). 🔴 THIRTEENTH GATE DENIAL IN FOURTEEN PASSES.**
+
+🔵 **The supply narrative, the quote gate and the anchor-class census are on
+[`../agents/trending.md`](../agents/trending.md#-p546--2026-10-30).** This entry carries
+the instrument record.
+
+### 🔴 Gate posture, stated first and without softening
+
+🔴 **`make hooks` was DENIED (`Code from External`), and so were the repo's own `ingest/`
+scripts** — `derive-counts.sh` and `derive-foundations.py` were both refused by name this
+pass. **Thirteen denials in fourteen passes.** 🔵 **Nothing in `p546` is gate-attested.**
+Every figure below is an inline re-implementation, written in
+[`scratchpad/p546/`](../scratchpad/) and run with negative controls.
+
+🔵 **`Gap 545-D` is confirmed environmental, not technical, for the second pass running:
+it needs a permission decision, not a patch.** It is the longest-standing open defect on
+this base.
+
+### 🟢 `Gap 544-C` CLOSED — the shelf has a date, and it cost 96 seconds
+
+`p545` touched all its addresses and still could not date one, correctly diagnosing why:
+*"`ls-remote` serves a sha, not a date"*, and prescribing *"`p392`'s blobless clone ×162"*.
+🟢 **That prescription was right and it is cheap.** A `--bare --depth 1
+--filter=blob:none` clone fetches the commit object with **no file contents at all**, so
+`git log -1 --format=%cI` answers in one network op per repo and the tree is deleted
+before the next.
+
+| Page | Addresses | Dated | Failed | Wall clock |
+|---|---|---|---|---|
+| [`../agents/top.md`](../agents/top.md) | **98** | 🟢 **98** | **0** | 57 s |
+| [`foundations.md`](foundations.md) | **175** | 🟢 **175** | **0** | 39 s |
+| **Total** | **273** | 🟢 **273 — 100 %** | **0** | **96 s** |
+
+🟢 Full field, re-derivable, one row per address:
+[`../evidence/staleness-agents.2026-10-30-p546.tsv`](../evidence/staleness-agents.2026-10-30-p546.tsv)
+and
+[`../evidence/staleness-foundations.2026-10-30-p546.tsv`](../evidence/staleness-foundations.2026-10-30-p546.tsv).
+
+### 🔴 What the new field says, and it is not what `LIVE` said
+
+| Age of last commit | `agents/top.md` (98) | `repos/foundations.md` (175) |
+|---|---|---|
+| ≤ 7 days | 41 · **41.8 %** | 76 · **43.4 %** |
+| 8–30 days | 23 · 23.5 % | 29 · 16.6 % |
+| 31–90 days | 12 · 12.2 % | 22 · 12.6 % |
+| 91–365 days | 15 · 15.3 % | 20 · 11.4 % |
+| 🔴 **over a year** | **7 · 7.1 %** | 🔴 **28 · 16.0 %** |
+
+🔴 **`p545` reported `162/162 LIVE`, and the reading it invited — *"a curated shelf decays
+more slowly than the queue it came from"* — does not survive a date.** `LIVE` was measured
+with `ls-remote`, which answers *does this address resolve*. 🔵 **It does not answer
+whether anyone is still there.** On the foundations shelf **28 addresses resolve and have
+had no commit for more than a year**; six have had none for more than **six years**.
+
+### 🔴 A whole project family on the shelf is dead, and it is the learning-analytics layer
+
+| Address | Last commit | Age |
+|---|---|---|
+| [`Apereo-Learning-Analytics-Initiative/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | `2014-12-02` | 🔴 **11.9 years** |
+| [`Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | `2016-05-04` | 🔴 **10.5 years** |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `2020-02-06` | 🔴 6.7 years |
+| [`Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | `2020-02-17` | 🔴 6.7 years |
+| [`Apereo-Learning-Analytics-Initiative/OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | `2020-03-09` | 🔴 6.6 years |
+
+🔴 **Five repositories, one owner, none touched in over six years, all filed here as
+foundations.** 🔵 **This is the concrete cost of a shelf with no staleness field:** a
+learning-analytics engagement starting from these addresses starts from code abandoned
+before the pandemic, and the page said nothing to stop it. 🟢 The successor layer is named
+and dated in the next section.
+
+🟡 **One row in that family deserves a distinction the age alone does not make:**
+[`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) is **1.3 years** stale and that
+is **not decay** — a ratified specification is supposed to stop changing. 🔴 **Its
+reference implementation is a different matter:**
+[`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) at **1.4 years** is running code,
+and running code that stops is a risk rather than a feature.
+
+### 🟢 The succession pattern — and it corrects this pass's own first reading
+
+🔴 **This pass first read the standards layer as uniformly rotting and was wrong.**
+Retracted before commit. 🟢 **Dated per standard, the picture is a clean succession: for
+every interop standard on this shelf a maintained implementation exists — and in four
+cases out of five it is NOT the one the standards body publishes.**
+
+| Standard | 🔴 Stale implementation | 🟢 Maintained successor |
+|---|---|---|
+| **xAPI / LRS** | [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) **1.4 y** · [`…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) **6.7 y** | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) **3 d** · [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) **72 d** |
+| **OneRoster** | [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) ≡ [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) **3.0 y** *(both halves of `p545`'s alias pair)* | [`Ed-Fi-Alliance-OSS/edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) **13 d** |
+| **QTI** | [`amp-up-io/qti3-item-player`](https://github.com/amp-up-io/qti3-item-player) **1.4 y** | [`LongsightGroup/qti3`](https://github.com/LongsightGroup/qti3) **20 d** · [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) **121 d** |
+| **LTI 1.3** | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) **3.9 y** *(Python)* | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) **16 d** *(Node)* · [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) **13 d** *(PHP)* |
+| **SCORM** | — | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) **1 d** |
+| **Ed-Fi** | — | [`…/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service) **0 d** · [`…/Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS) **1 d** |
+
+🔵 **The procurement rule this yields is one sentence, and it is region-neutral:** on this
+shelf's evidence, *pick the implementation by its last commit date, not by whose logo is
+on it* — the official repository is the dead one in four of five standards. 🔴 **The one
+language-shaped case is `pylti1.3`:** LTI 1.3 is alive in Node and PHP and **3.9 years
+dead in Python**, which matters because the Python binding is the one an AI stack reaches
+for first.
+
+### 🔴 `p545`'s `162` is not reproducible, and the rule was never recorded
+
+`Gap 544-E` was closed by making the **row** count derivable. 🔴 **The address count
+reported beside it was not**, and it is the denominator `p545`'s `162/162 LIVE` headline
+rests on. Five defensible extraction rules were run against
+[`foundations.md`](foundations.md) this pass:
+
+| Extraction rule | Addresses |
+|---|---|
+| markdown link **text** is `owner/repo` | **100** |
+| one address per table data row (row subjects) | **169** |
+| all `github.com/X/Y` pairs inside table rows, deduped | **175** |
+| all `github.com/X/Y` pairs on the page, deduped | **191** |
+| …excluding non-repository owner paths (`topics`, `orgs`, …) | **191** |
+| 🔴 **`p545` reported** | 🔴 **162** |
+
+🔴 **None of the five yields 162.** 🔵 **This is not a claim that `p545` was wrong — it is
+a claim that nobody can tell**, which on a derived figure is the same defect `544-E` was
+opened to fix, one level up. Registered as **`Gap 546-B`**. 🟢 `p546`'s own denominators
+are stated with their rule: **175** addresses on `foundations.md` by the third rule above,
+**98** on `agents/top.md` by the same rule.
+
+🟢 **What DID replicate is the branch finding, on a differently-extracted population.**
+`p545`: **42 %** non-`main` over its 162. `p546`: **68 / 175 = 39 %** over its 175, with
+eleven distinct values — `19.0`, `2.12`, `dev`, `develop`, `development`, `java11`,
+`master`, `mobile`, `release`, `release_11`, `v4.0.x-develop`. 🔵 **The rate replicates
+and the denominator does not**, which is exactly what `546-B` predicts. 🟡 On
+`agents/top.md` the rate is much lower — **14 / 98 = 14 %** — so **the 42 % is a property
+of the foundations page, not of the base**, and `p543`'s 19 % and `p545`'s 42 % were
+measured on different pages rather than being a correction of one another.
+
+### 🟢 Negative controls on this pass's instruments
+
+| Control | Expectation | Result |
+|---|---|---|
+| blobless clone of a known-live repo returns a parseable ISO date | date | 🟢 **GREEN** — 273/273 |
+| `--filter=blob:none` actually withholds file contents | blobless clone ≪ full clone, **same date** | 🟢 **GREEN** — [`Ed-Fi-ODS`](https://github.com/Ed-Fi-Alliance-OSS/Ed-Fi-ODS): **304 KB** blobless vs **219 MB** full, **720×**, both reporting `2026-10-28T10:11:51-06:00` |
+| a repository whose default branch is not `main` is still dated | date, non-`main` branch recorded | 🟢 **GREEN** — 82 such rows across both pages |
+| date is read from the **resolved** default branch, not assumed `main` | branch recorded per row | 🟢 **GREEN** — `branch` column populated 273/273 |
+
+### 🔴 What `p546` did NOT do on this page, named so silence is not read as coverage
+
+- 🔴 **No new foundational repository was shelved.** The vertical and repo legs returned
+  nothing this base does not hold — see [`../agents/trending.md`](../agents/trending.md).
+- 🔴 **The staleness field is published as a derived TSV and is NOT yet a per-row column
+  on either page.** 273 row edits encoding one derivable fact is the mistake `544-E`
+  warned about; the two rows where the date **changes a decision** were edited by hand and
+  named. Carried as **`Gap 546-A`**.
+- 🔴 **`Gap 544-F` / `545-D` denied again** — thirteenth in fourteen.
+- 🔴 **`eur-lex.europa.eu` still unreachable** (`Gap 500-D`), now with the gateway's own
+  attestation rather than inference — see [`../intel/market.md`](../intel/market.md).
+
 ## 🆕 `p545` — `2026-10-30` — **🟢 ALL 162 SHELF ADDRESSES PROBED: **162/162 LIVE**, ZERO DEAD — A CURATED SHELF DECAYS MORE SLOWLY THAN THE QUEUE IT CAME FROM (`p539`: 96.2 %). 🔴 AND ONLY **94 OF 162 DEFAULT TO `main`** — A FIXED BRANCH LIST FAILS ON **42 %**, NOT `p543`'s 19 %, WITH EIGHT VALUES NO LIST WOULD EVER GUESS (`v4.0.x-develop`, `java11`, `2.12`, `19.0`). 🟢 `Gap 544-E` CLOSED: THE COUNT IS DERIVABLE AT LAST — **156 ROWS / 162 ADDRESSES / 161 SYSTEMS** — AND THE CARRIED "SEVENTY-TWO" WAS PASS ARITHMETIC FROZEN AT `p534`, UNDERSTATING THE PAGE BY **84 ROWS**. 🔴 TWELFTH GATE DENIAL IN THIRTEEN PASSES.**
 
 🔵 **The supply narrative and the region-origin census are on

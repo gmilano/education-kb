@@ -1,0 +1,103 @@
+{
+"A-R007/Multi-Agent-Study-Assistant": [],
+"AI-for-Education/pedagogy-benchmark": [
+"institution"
+],
+"ArnaudGuiovanna/tutor-mcp": [],
+"CAHLR/OATutor": [
+"standard"
+],
+"CaviraOSS/PageLM": [],
+"DMontgomery40/mcp-canvas-lms": [],
+"DaRL-GenAI/instructional_agents": [],
+"DavidLMS/learnmcp-xapi": [
+"standard"
+],
+"Ebimsv/AITutorAgent": [],
+"Ed-Fi-Alliance-OSS/Fiona": [
+"standard"
+],
+"GarethManning/education-agent-skills": [],
+"GeminiLight/SocialCoach": [
+"institution"
+],
+"GeminiLight/gen-mentor": [],
+"GhaithAlHallak8/moodler-mcp": [],
+"GuilhermeScarpini/agente-bncc-professores": [
+"curriculum",
+"institution",
+"form"
+],
+"H1bertto/professor-agent": [],
+"HKUDS/DeepTutor": [],
+"Jeanikt/tutor-ai-agent": [
+"curriculum"
+],
+"JuneYaooo/lineage-skill": [],
+"JustinoLM/STI-matematicas": [
+"institution"
+],
+"KonstantinosPetrakis/esco-skill-extractor": [
+"standard"
+],
+"LabSirius/TutorIA": [
+"institution"
+],
+"Li-Evan/Bloom": [],
+"Miaotofu01/Study-Mate": [],
+"MysterionRise/adaptive-knowledge-graph": [
+"standard"
+],
+"OPTIMETA/PAIDEIA": [],
+"SirhanMacx/Claw-ED": [],
+"THU-MAIC/OpenMAIC": [],
+"Teachable-AI-Lab/tutor_gym": [],
+"TovTechOrg/Tov-learn": [],
+"abhijeetgupta23/ai-agent-to-learn-faster-and-better": [],
+"ahmedEid1/lumen": [],
+"ai-shifu/ai-shifu": [],
+"anthropics/k12-teacher-skills": [],
+"assafkip/claudemy": [],
+"beltromatti/get-it": [],
+"bncc-dev/bncc-benchmark": [
+"curriculum"
+],
+"canyongbs/advisingapp": [],
+"florianchristophnowak-dot/capy-note": [],
+"florianchristophnowak-dot/prep-ybara": [],
+"learning-commons-org/evaluators": [],
+"learning-commons-org/knowledge-graph": [],
+"localis-ai/student-discovery-agent": [],
+"loyaniu/moodle-mcp": [],
+"ls1intum/edutelligence": [],
+"maiatechdev/avit": [
+"statute"
+],
+"minmaxflow/mini-kode": [],
+"naufaldi/teacher-exam": [],
+"oaknational/oak-open-curriculum-ecosystem": [
+"curriculum"
+],
+"ocademy-ai/machine-learning": [],
+"openedx/openedx-ai-extensions": [],
+"peancor/moodle-mcp-server": [],
+"sonowalvaibhav/gradeops": [],
+"startin-lab/brujula-educativa": [
+"institution"
+],
+"tanghua-git/skill-instructional-design": [],
+"thm-mni-ii/feedbacksystem": [
+"institution"
+],
+"tosuki/moodle-mcp": [],
+"towardsai/ai-tutor-app": [],
+"upstream1119/Traceable-Ideological-Education-RAG": [],
+"vanderbilt-data-science/knowledge-spaces": [],
+"vishalsachdev/canvas-mcp": [
+"statute",
+"institution"
+],
+"wenflow-org/wenflow": [],
+"xiaoyang111222/cn-math-taxonomy": [],
+"zhangl1001/civil-ai": []
+}

@@ -4,6 +4,142 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p546` — `2026-10-30` — **🔴 SEVENTH CONSECUTIVE DEMAND SATURATION ACROSS ALL FOUR REGIONS, NAMED CLAIM BY CLAIM. 🟢 TWO OF THIS BASE'S OWN RECORDED DIAGNOSES CORRECTED FROM PRIMARY ATTESTATION: `eur-lex` IS A **GATEWAY POLICY DENIAL** (ITS OWN LOG, QUOTED) AND THE GitHub API IS AN **AUTHORISATION SCOPE**, NOT A PROXY BLOCK. 🔵 THE SECOND CORRECTION CHANGES WHAT IS WORTH ASKING FOR.**
+
+### 🔴 The four-region demand sweep — saturated, and recorded claim by claim
+
+🔴 **Every claim the four mandated regional legs returned is already on this base.** Named
+so the result is checkable rather than merely asserted, with the one exception marked:
+
+| Region | What the leg returned | Already held? |
+|---|---|---|
+| **North America** | **134** AI-in-education bills across **31** states (MultiState, 2026 session); **Maryland, Idaho, Oklahoma, Virginia** the four states whose 2026 laws require *both* state guidance *and* mandatory district policy; **NY A 9190** limiting classroom AI to grade 9+; **K-12 AI Literacy and Readiness Act of 2026** advanced by the House Education and Workforce Committee; the student-authored **STUDENTS FIRST Act of 2026** (a proposal, not law); Gallup: **60 %** of US teachers using AI | 🔴 **All held** — `A 9190`, the Literacy Act, STUDENTS FIRST and the 134/31 figure are each already on this page or [`../agents/top.md`](../agents/top.md) |
+| **EMEA** | **Regulation (EU) 2026/1744** (*Digital Omnibus on AI*), OJ **24 Jul 2026**, applying since **27 Jul 2026**; Annex III stand-alone high-risk at **2 Dec 2027**, embedded at **2 Aug 2028**; Art. 50 transparency live since **2 Aug 2026**; education high-risk because it gates access; UK light-touch; Dubai **KHDA** guidance to private schools | 🔴 **All held** — `2026/1744` is on seven files here. 🟡 **One claim is new and weakly sourced:** a statistics roundup puts the European AI-in-education market at **USD 2.64 B (2026)** with **Finland, Estonia and the Netherlands** leading K-12 integration. 🔴 **Recorded as UNVERIFIED** — no sampling frame, no primary citation |
+| **APAC** | Korea's **AI Basic Act** in force **22 Jan 2026** with a guidance-first grace period through 2026; **Vietnam's Decision 33/2026/QD-TTg** naming education — automated assessment included — as high-risk; Singapore/Australia/NZ/Malaysia sectoral rather than standalone; China's registration and content-labelling duties; Australia's **TEQSA** requiring institutional generative-AI action plans | 🔴 **All held** |
+| **LATAM** | UNESCO's **Regional Observatory on AI in Education**, launched **14 Apr 2026** in Santiago, with **CAF, CENIA, Cetic.br, ECLAC, Fundación Ceibal, Fundación Santillana, Tecnológico de Monterrey, ProFuturo, Universidad del Desarrollo** and **IRCAI**; **UNESCO IESALC + UNU-IAS**: 200 institutions across 19 countries, **87 %** using AI in at least one area, **26 %** with a formal strategy; **Universidad de los Andes (2026)**: **716** AI instruments across 23 countries; Uruguay **75 %** of public-school teachers; Brazil **22 %** of schools with guidelines against **53 %** of administrators using AI | 🔴 **All held** |
+
+🔵 **This is the seventh consecutive demand saturation and the eighth on supply.** 🟢 **The
+honest reading is not that the regions are quiet — it is that the mandated query set has
+stopped being an instrument.** It returns this base's own contents. Registered as
+**`Gap 546-C`**: the query set needs replacing with channels that are not general web
+search, and the two candidates this pass actually proved work are the **git protocol**
+(273/273 dates, 96 s) and **`raw.githubusercontent.com`** (64/64 payloads).
+
+### 🟢 `Gap 500-D` — the diagnosis is upgraded from inference to the gateway's own log
+
+`Gap 500-D` has been open since `p500`: the claim that the *Digital Omnibus* is
+**Regulation (EU) 2026/1744** is single-sourced to vendor pages because
+`eur-lex.europa.eu` does not resolve, so **the steward's own text has never been read by
+this base.** 🔴 **Still true at `p546`** — but the reason is now attested rather than
+inferred.
+
+Two `eur-lex` URLs were requested and both returned `HTTP 000`. The session gateway's own
+status endpoint then named the cause, verbatim:
+
+> `"kind": "connect_rejected"`,
+> `"detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)"`,
+> `"host": "eur-lex.europa.eu:443"`
+
+🟢 **So this is a network-policy denial at the gateway, not a DNS failure, not a
+`eur-lex` outage and not a transient.** 🔵 **That distinction is the whole value of the
+upgrade: it converts an open gap into a request someone can grant.** The remedy is to
+allow `eur-lex.europa.eu` in this environment's network policy; nothing in the codebase
+can fix it. 🔴 **Until then every AI Act date on this page remains vendor-sourced**, and
+`2026/1744` is held on secondary corroboration only.
+
+### 🟢 The GitHub API is an authorisation scope, not a proxy block — and this changes the ask
+
+🔴 **This base has recorded the GitHub API as proxy-blocked for many passes.** 🟢 **It is
+not.** `gh`, which is pre-configured for this session's proxy, was pointed at a public
+repository and the API answered — with a **403 whose body names the cause and the
+remedy**:
+
+> *"GitHub access to this repository is not enabled for this session. Use `add_repo` to
+> request access."*
+
+🔵 **The request reached GitHub and GitHub replied.** The transport works; the
+**authorisation scope** excludes repositories this session is not attached to. 🟢 **Why
+the distinction is worth a section:** a proxy block is nobody's to grant, while a scope
+is — and it tells this base exactly which instruments are and are not buildable here.
+
+🔴 **It also sets a boundary this pass respected rather than worked around.** Attaching
+sixty-five third-party repositories to read one metadata field each would mint
+credentials against repositories Globant does not own. 🔵 **Not done, and not
+recommended.** The consequence is recorded instead: the GitHub **About** line has **no
+byte-exact channel** in this environment, which is what bounds the quote gate on
+[`../agents/trending.md`](../agents/trending.md#-p546--2026-10-30).
+
+### 🟢 Channel census, re-measured this pass
+
+| Channel | Verdict at `p546` | Evidence |
+|---|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** | 64/64 payloads fetched |
+| git smart-HTTP (`ls-remote`, blobless clone) | 🟢 **works** | 273/273 dated, 0 failures |
+| `github.com` HTML via **WebFetch** | 🟢 **200** | two trend digests read in full |
+| `github.com` HTML via `curl` | 🔴 **403** | 3/3 repositories |
+| `api.github.com` via `curl` | 🔴 **403** | 4/4 — body is GitHub's, not the proxy's |
+| `api.github.com` via `gh` | 🔴 **403 — scope, remedy named** | see above |
+| `eur-lex.europa.eu` | 🔴 **`connect_rejected`, gateway policy** | gateway log, quoted above |
+
+## Opportunities by region
+
+🔵 **Each region below is placed from the evidence this pass actually produced, and the
+instrument findings are region-neutral, so they apply to all four equally.** The
+succession rule — *pick a standards implementation by its last commit date, not by whose
+logo is on it* — is the one finding here that a studio can act on in any geography.
+
+### North America
+
+🟢 **The strongest opportunity this pass surfaces anywhere, and it is a maintenance fact
+rather than a market fact.** The **Ed-Fi Alliance** stack is the most actively maintained
+interop family on this base — `Data-Management-Service` **0 days**, `Ed-Fi-ODS` **1 day**,
+`Ed-Fi-AdminApp` **1 day**, `edfi-oneroster` **13 days**, `Fiona` **1 day** — and Ed-Fi is
+a **US K-12 data standard**. 🔵 A North American engagement can therefore start from a
+living data layer rather than building one, which is not true of any other region here.
+🔴 **The regulatory shape is 134 bills across 31 states with four states mandating
+district-level policy**, so the deliverable that sells is **policy-conformant
+auditability**, not capability.
+
+### EMEA
+
+🟢 **Sequencing is the whole argument, and it is unchanged and still correct:** Article 50
+transparency duties are **live now** (`2026-08-02`) while Annex III high-risk obligations
+for stand-alone education systems do **not** bite until **`2027-12-02`**. 🔵 So a
+transparency-and-marking layer is billable today and a conformity-assessment programme is
+a 2027 engagement that can be sold now. 🔴 **The demand leg is a measured blank for the
+seventh consecutive pass** — queried for EMEA adoption and players it returns US sampling
+frames; the one new figure (**USD 2.64 B**, Finland/Estonia/Netherlands leading) is
+recorded **unverified**. 🟢 **Supply, by contrast, is EMEA's strength:** `oak-open-curriculum-ecosystem`
+(England, state-funded, **8 days** fresh, 6 835 commits) is the maturity signal this
+region lacked, and it survives `p546`'s date field where two of its sibling promotions
+did not.
+
+### APAC
+
+🟢 **The largest open-source education agents on any shelf are APAC-origin and both are
+current** — `DeepTutor` (HKU) and `OpenMAIC` (Tsinghua), each with an October 2026
+release. 🔴 **And the compliance surface is the most fragmented of the four regions:**
+Korea's AI Basic Act in force since `2026-01-22`, Vietnam's Decision 33/2026/QD-TTg naming
+automated assessment high-risk, China's registration and labelling duties, Australia's
+TEQSA action plans, and Singapore/Australia/NZ/Malaysia sectoral rather than standalone.
+🔵 **The engagement shape that follows is a policy-parameterised deployment** — one
+architecture, per-jurisdiction policy nodes — because no single APAC regime generalises.
+
+### LATAM
+
+🟢 **The institutional scaffolding arrived this year and is named**: UNESCO's Regional
+Observatory on AI in Education, **Santiago, 14 Apr 2026**, with CAF, CENIA, Cetic.br,
+ECLAC, Fundación Ceibal, Fundación Santillana, Tecnológico de Monterrey, ProFuturo,
+Universidad del Desarrollo and IRCAI. 🔴 **And the governance gap is the opportunity,
+quantified:** **87 %** of 200 surveyed institutions across 19 countries use AI in at least
+one area while only **26 %** have a formal strategy, and **716** AI instruments across 23
+countries means fragmentation rather than coverage. 🟢 **Supply is curriculum-anchored and
+Brazilian**: three of the four curriculum-anchored agents on the whole shelf anchor on the
+**BNCC** (`agente-bncc-professores`, `Jeanikt/tutor-ai-agent`, `bncc-dev/bncc-benchmark`).
+🔴 **Which is also the warning** — see the anchor census on
+[`../intel/trends.md`](trends.md): a curriculum anchor is **non-portable by
+construction**, so a BNCC-anchored asset does not travel to the other three regions.
+
 # Education AI — Market Map and Opportunities
 
 **Pass `p545` · 2026-10-30.** Figures are attributed to the source that produced

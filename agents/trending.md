@@ -4,6 +4,185 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p546` — `2026-10-30` — **🟢 `Gap 545-A` DELIVERED: THE QUOTE GATE IS BUILT, RUN OVER **84 QUOTES / 89 SPANS**, AND IT FOUND **ZERO** avit-CLASS DEFECTS — AFTER FOUR DEFECTS IN **ITS OWN** CONSTRUCTION WERE FOUND AND FIXED, EACH OF WHICH HAD FAILED A CORRECT ROW. 🟢 IT REPRODUCES `p545`'s avit HAND READ **TO THE BYTE** (5 430 B, `grep` → `0`). 🔴 ITS REAL LIMIT IS NAMED: **ATTRIBUTION IS IN THE PROSE, NOT IN THE COLUMN**. 🟢 `Gap 545-B` ANSWERED: THE TREND DIGESTS ARE **ONE GENERATOR IN MANY ACCOUNTS** — AGREEMENT BETWEEN THEM IS NOT CORROBORATION, AND ONE OF THEM EMITS **`0` TOTAL STARS WITH `+2 870` TODAY**. 🟢 `Gap 544-B` ANSWERED AND THE TAXONOMY GAINED A CLASS IT DID NOT HAVE. 🔴 EIGHTH CONSECUTIVE SUPPLY SATURATION.**
+
+🔵 **The instrument record, the staleness census and the succession table are on
+[`../repos/trending.md`](../repos/trending.md#-p546--2026-10-30).** This entry carries the
+dated supply and interpretation record.
+
+### 🔴 What moved this week — the shelf did not, and two of last week's rows are over a year dead
+
+🔴 **`p546` shelved zero agents.** The four mandated region legs and the global supply,
+trending and vertical legs returned **no education agent this base does not already
+hold** — an **eighth consecutive saturation**. 🔵 **Fewer real rows beat padding.** The highest-starred
+address the global legs returned,
+[`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch)
+(~75.6k★), 🔴 **is already on [`../repos/foundations.md`](../repos/foundations.md) line
+189** — and it is a developer curriculum, not an education agent, so the agents shelf is
+the wrong page for it either way. 🟢 **`p546` does add something to it: a date.** The
+foundations row records *"~75k★ per secondary sources, **not read first-hand this
+pass**"*; the staleness field now reads **last commit `2026-10-29`, 0 days**, and its
+derivative [`komunite/ai-engineering`](https://github.com/komunite/ai-engineering) **1
+day** — 🔵 both live, which the row could not previously say.
+
+🟢 **What did move is that the shelf acquired a date, and the date demoted two rows
+promoted only one pass ago.**
+
+| Row | Promoted | Last commit | Age | Consequence |
+|---|---|---|---|---|
+| [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🆕 `p545`, to close a gap carried since `p502` | `2025-08-29` | 🔴 **426 d · 1.2 y** | row re-marked: **architecture, not dependency** |
+| [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🆕 `p545` | `2025-06-12` | 🔴 **505 d · 1.4 y** | row re-marked; **ESCO is maintained, this binding is not** |
+| [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🆕 `p545` | `2026-10-21` | 🟢 8 d | stands |
+| [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🆕 `p545` | `2026-10-21` | 🟢 8 d | stands |
+
+🔴 **Two of `p545`'s four promotions are over a year dead, and nothing in the promotion
+instrument could have seen it, because until this pass the base had no date.** 🔵 **That
+is the cost of `Gap 544-C` stated as a number rather than as a worry**, and it is why the
+gap was worth closing. Registered as **`Gap 546-D`**: the promotion ratchet
+([`../ingest/promotion-ratchet.py`](../ingest/promotion-ratchet.py)) takes stars, forks
+and grants as inputs and **does not take a commit date**.
+
+### 🟢 `Gap 545-A` — the quote gate, built and run
+
+`p545` asked for *"a gate against **payloads**"*, because `avit`'s row had attributed a
+phrase to an artefact that lacks it, and noted the defect is one **no re-reading of the
+base can catch** — the string really is there, one page over, as this base's own English
+gloss back-translated.
+
+🟢 **Built in three stages, each re-derivable from
+[`../scratchpad/p546/`](../scratchpad/):** extract `(row, address, quote)` triples from the
+page's tables → resolve each address's **default branch** (never guessed: `ls-remote
+--symref`) → clone the tree shallow, fold **every text file** to one normalised line, and
+`grep -F` the quote against the artefact itself. 🔵 **The payload is the whole artefact,
+not the README**, which is the strongest available test of the one thing `545-A` asked:
+*is this phrase anywhere in the thing we credited?*
+
+| Verdict | Count | Meaning |
+|---|---|---|
+| 🟢 **PASS** | **49** | the phrase is in the artefact's own files |
+| 🟡 **ABOUT-ONLY** | **30** | a `description`-field quote absent from the tree. 🔴 **Unadjudicable here** — the GitHub **About** line is metadata, not a file, and it has **no byte-exact channel** in this environment (see [`../intel/market.md`](../intel/market.md)) |
+| 🔴 **FAIL** | **5** | absent from the tree in a field the tree does hold |
+| **Dropped before probing** | **29** | 11 parser artefacts and self-quotes, 18 non-prose captures (topic lists, table markup) |
+
+🟢 **The instrument reproduces `p545`'s hand read exactly**, which is the control that
+matters most: `maiatechdev/avit`'s payload is **5 430 B** — `p545`'s figure to the byte —
+`grep -ic "janela pedag"` → **`0`**, and `grep -ic "15.100"` → **`1`**, independently
+confirming that the statute `p545` named as the real anchor *is* in the artefact while the
+quoted phrase is not.
+
+### 🔴 Four defects in the gate's **own** construction — each had failed a correct row
+
+🔵 **Recorded rather than quietly fixed, because a gate whose output is a verdict is
+invisible when it is wrong.** Each of these produced a FAIL on a row that is in fact
+correct, and the first run reported **63 of 94 quotes failing** — a 67 % failure rate that
+was the instrument, not the shelf.
+
+| # | Defect | The row it wrongly failed |
+|---|---|---|
+| **D1** | ` / ` is this base's **line-join** notation inside a quoted title block, not a literal | [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) — *"MIT License / Copyright (c) 2026 Taewoo Park"*. `LICENSE` at `main` (**1 068 B**) carries **both lines**; the slash is the base's. 🟢 Row **correct** |
+| **D2** | the quote regex straddled markdown emphasis and captured fragments | three "quotes" like `"*), and it states it is *"` — markup, never quotes |
+| **D3** | the self-attribution filter missed a base-internal quote | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) — *"…and this base's own `gate-enumeration`…"* is this base quoting itself |
+| **D4** | the fold stripped markdown **emphasis** but not markdown **link syntax** | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) — `LICENSE.md` line 1 is `The Evaluator code is licensed under [MIT](https://opensource.org/license/mit).`; the row quotes the **rendered** text. 🟢 Row **correct** |
+
+🟢 **After all four were fixed the instrument was re-run end to end rather than having its
+verdicts patched**, and PASS rose **44 → 49** while FAIL fell **6 → 5**.
+
+### 🔴 The gate's real limit, which is not a bug and will not be fixed by a better regex
+
+🔴 **Every one of the five residual FAILs is explained, and none is an `avit`-class
+defect.** Read in context:
+
+| Row | Quote | Why it is not a defect |
+|---|---|---|
+| [`florianchristophnowak-dot/prep-ybara`](https://github.com/florianchristophnowak-dot/prep-ybara) | *"Unterrichtsvorbereitungs-App"* | the row **says** it is the `description` — it sits in the *Region* cell as that cell's evidence. Correct row, mis-routed field |
+| [`tosuki/moodle-mcp`](https://github.com/tosuki/moodle-mcp) | *"MIT licensed."* | the row attributes it to **a search result** and its whole point is that **no licence file exists**. Correctly absent |
+| [`openedx/openedx-ai-extensions`](https://github.com/openedx/openedx-ai-extensions) | *"extend Open edX"* | the base's **own gloss** of an inheritance trap |
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | *"ten of eleven MIT"* | the base's **own** census arithmetic |
+| [`idoforgod/Vibe-learning-AgenticWorkflow`](https://github.com/idoforgod/Vibe-learning-AgenticWorkflow) | *"a grant exists"* | the base's **own** description of a sidebar trap |
+
+🔵 **So the finding is structural: a quote's attribution is stated in the PROSE — "its
+About line", "a search result described it as", "`p538` said plainly" — and it is NOT
+determined by which column the quote sits in.** 🔴 **Column routing was already the second
+attempt**; index routing was the first and put sixteen prose quotes in a *Stars* column,
+because this page holds **31 tables with different layouts**. Routing by each table's own
+**header** fixed that and still cannot see attribution. 🟢 Registered as **`Gap 546-E`**:
+the next gate must parse the attributing clause, and the five rows above are its ready-made
+test set. 🔵 **Its ceiling is already known, too** — for `description`-field quotes it will
+still return *unadjudicable* until the About line has a byte-exact channel.
+
+### 🟢 `Gap 545-B` — ANSWERED: the digests are one generator in many accounts
+
+`545-B` asked whether the seven accounts publishing identically-titled daily *"AI Open
+Source Trends"* issues are independent, and ruled that **until tested, agreement across
+digests must not be written as corroboration** — a thing this base had done twice.
+
+🟢 **Tested.** `api.github.com` is refused for unattached repositories, so two issues for
+the **same date** (`2026-10-30`) were read in full through WebFetch:
+[`yueguan/agents-radar#18`](https://github.com/yueguan/agents-radar/issues/18) and
+[`kouweizhu/agents-radar#720`](https://github.com/kouweizhu/agents-radar/issues/720).
+
+| Property | `yueguan#18` | `kouweizhu#720` | Reading |
+|---|---|---|---|
+| Title | `📈 AI Open Source Trends 2026-10-30` | `📈 AI Open Source Trends 2026-10-30` | 🔴 **identical template** |
+| Footer | *"This digest is auto-generated by agents-radar"* | *"This digest is auto-generated by agents-radar"* | 🔴 **identical template** |
+| `ollama/ollama` | **185 261** | **185 261** | 🔴 **identical to the star** |
+| `huggingface/transformers` | **168 331** | **168 331** | 🔴 **identical to the star** |
+| Top entries | `pbakaus/impeccable`, `JetBrains/thinkrail`, `obra/superpowers`, `elayadesign/ai-design-skills` | `ollama`, `transformers`, `tensorflow`, `pytorch` | 🟡 **different sets, different section order** |
+
+🔵 **Verdict: one generator, many accounts, same upstream snapshot.** Shared repositories
+carry **identical** figures, the title and footer are the same template, and only the
+selection and ordering differ. 🔴 **Agreement between two digests is therefore one
+measurement reported twice, and must never again be written as corroboration on this
+base.** `Gap 545-B` is **closed**, and `p545`'s caution was right.
+
+🔴 **The test also found something `545-B` did not ask for, and it is worse: the generator
+emits internally contradictory rows.** `yueguan#18` lists four repositories at **`0` total
+stars** with **`+2 870`, `+1 187`, `+1 117` and `+1 034` added today**. 🔵 **A repository
+cannot have zero stars and have gained 2 870 of them today.** 🟢 **This independently
+corroborates `p544`'s and `p545`'s finding that digest star figures are unreliable** —
+`p545` showed they disagree with each other, and `p546` shows one of them disagrees with
+**itself**. 🔴 Two further figures in the same table, `affaan-m/ECC` at **292 746** and
+`NousResearch/hermes-agent` at **258 533**, are implausible on their face and are
+**not carried**.
+
+### 🟢 `Gap 544-B` — ANSWERED, and the taxonomy gained a class it did not have
+
+`544-B` asked whether *form-not-curriculum* is a real anchor class; `p545` widened it on
+finding `avit`'s anchor is a **statute**, which is neither. 🟢 **Measured** over the **64**
+payloads this pass already held — offline, no network, named-term regexes over each
+artefact's own README
+([`../evidence/anchor-classes.2026-10-30-p546.json`](../evidence/anchor-classes.2026-10-30-p546.json)):
+
+| Anchor class | Artefacts | Share |
+|---|---|---|
+| **institution** (ministry, university, TÜBİTAK, UNESCO…) | 8 | 12.5 % |
+| 🆕 **standard** (xAPI · SCORM · LTI · OneRoster · Ed-Fi · ESCO · QTI) | **5** | **7.8 %** |
+| **curriculum** (BNCC, National Curriculum, GDPT, OBEC…) | 4 | 6.2 % |
+| **statute** (Lei 15.100, AI Act, FERPA, LGPD…) | 2 | 3.1 % |
+| **form** (plano de aula, ДПО, lesson-plan template) | 1 | 1.6 % |
+| 🔴 **no anchor of any class** | **47** | 🔴 **73 %** |
+
+🟢 **`544-B` is answered NO, and mechanically:** the single form-anchored artefact
+([`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores))
+is **also** curriculum- and institution-anchored. 🔵 **The form class never occurs alone,
+so it is not an independent class on this shelf's evidence.** Statute does occur alone —
+exactly once, `avit` — so **statute is independent and `form` is not**, which is the
+opposite of how `544-B` was framed.
+
+🟢 **The class the taxonomy was missing is `standard`, and it is more common than statute
+and as common as curriculum.** 🔵 **Why it is the one that matters commercially: an
+interop standard is the only anchor that is region-portable.** A BNCC anchor ties an asset
+to Brazil and an England-curriculum anchor ties it to England; **xAPI, LTI, QTI,
+OneRoster and Ed-Fi travel.** 🔴 **And the maintenance warning is on
+[`../repos/trending.md`](../repos/trending.md#-p546--2026-10-30):** for four of five
+standards the living implementation is **not** the one the standards body publishes.
+
+🔴 **The 73 % no-anchor figure is a floor, not a verdict**, and two limits are stated
+rather than buried: it is measured on **READMEs only** (the About line is unreachable),
+and the regexes are a **named list**, so an anchor the list does not name is counted as
+absent. 🔵 The direction of both errors is the same — **73 % over-states the anchorless
+share** — and the ranking between classes is unaffected.
+
 ## 🆕 `p545` — `2026-10-30` — **🟢 `Gap 544-A` CLOSED BY NARROWING IT FROM 64 ROWS TO 2: A LANGUAGE PLACES AN ARTEFACT **ONLY IF THAT LANGUAGE IS CONFINED TO ONE REGION** OF THE CLOSED VOCABULARY — `de`/`zh`/`id`/`vi` ARE, **`es` AND `pt` ARE NOT**. 🔴 BOTH EXPOSED ROWS SURVIVE ON REGION AND FAIL ON EVIDENCE, IN OPPOSITE DIRECTIONS: `TutorIA` HAD **BETTER** ANCHORS THAN IT CITED, AND `avit` CITED **A PHRASE THAT IS NOT IN THE ARTEFACT**. 🔴 THE PHANTOM QUOTE IS **TRACEABLE**: THE BASE BACK-TRANSLATED **ITS OWN ENGLISH GLOSS** ON `intel/market.md` AND CREDITED THE ARTEFACT. 🟡 THE **STATUTE** ANCHOR WIDENS `544-B` RATHER THAN CONFIRMING IT — AND THIS BASE ALREADY HELD THE STATUTE WITHOUT NOTICING IT WAS LOAD-BEARING. 🟢 `Gap 544-E` CLOSED: **156 SHELF ROWS DERIVED** AGAINST A CARRIED "SEVENTY-TWO" THAT WAS PASS ARITHMETIC FROZEN NINE PASSES AGO. 🟢 `545-C` NAMED AND CLOSED IN THE SAME PASS BECAUSE `544-D`'s OWN GREP RULE FOUND THE INSTRUMENT ALREADY BUILT. 🔴 SEVENTH CONSECUTIVE SUPPLY SATURATION.**
 
 🔵 **Full narrative, the confinement table and the two re-read rows are on

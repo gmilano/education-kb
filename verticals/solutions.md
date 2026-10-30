@@ -4,6 +4,90 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p546` — the vertical leg returned **nothing new** again, and the date field found the one thing on this page that changes an architecture decision: **the public Canvas LMS repository has not moved on ANY of its 377 branches since `2026-04-30`**
+
+🔴 **Supply result first, plainly: the vertical leg returned no platform this base does
+not already hold.** The mandated query (`open source platform education ERP CRM MIT
+Apache`) returned **OpenEduCat**, **ERPNext**, **Krayin CRM**, **NextCRM**, **Huly** and a
+2010 mailing-list post for `CK-ERP`. 🔵 **OpenEduCat and ERPNext are already filed and
+graded here; the CRMs are not education platforms; `CK-ERP` is sixteen years stale.**
+Stated so silence is not read as coverage.
+
+🟢 **What the leg did produce is a source-quality result in the same family as `p545`'s:**
+the query's own top results were **OpenEduCat's glossary pages in five languages**
+(`/es/`, `/fr/`, `/ar/`, `/pt-BR/`, `/zh/`), which describe *"an open-source ERP
+framework"* **without naming it or its licence**. 🔴 **That framework is Odoo, and the
+licence question `p545` answered for Frappe applies here identically** — this base grades
+the OpenEduCat layer **LGPL-3.0**, and the vendor's own glossary does not say so.
+
+### 🟢 Every platform on this page now carries a date — and one of them is an outlier
+
+🟢 `Gap 544-C` closed at `p546`; the method and the full field are on
+[`../repos/trending.md`](../repos/trending.md#-p546--2026-10-30) and
+[`../evidence/staleness-foundations.2026-10-30-p546.tsv`](../evidence/staleness-foundations.2026-10-30-p546.tsv).
+
+| Platform | Default branch | Last commit | Age |
+|---|---|---|---|
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | `2026-10-30` | 🟢 **0 d** |
+| [`frappe/frappe`](https://github.com/frappe/frappe) · [`frappe/lms`](https://github.com/frappe/lms) | `develop` | `2026-10-30` | 🟢 **0 d** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `master` | `2026-10-29` | 🟢 **0 d** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `master` | `2026-10-29` | 🟢 **0 d** |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `master` | `2026-10-29` | 🟢 **0 d** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 🟡 `release_11` | `2026-10-29` | 🟢 **0 d** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master` | `2026-10-29` | 🟢 **0 d** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) · [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` | `2026-10-28` | 🟢 **1 d** |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `master` | `2026-10-26` | 🟢 3 d |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 `19.0` | `2026-10-13` | 🟢 16 d |
+| [`frappe/education`](https://github.com/frappe/education) | `develop` | `2026-10-13` | 🟢 17 d |
+| 🔴 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | 🔴 **`2026-04-30`** | 🔴 **182 d · 0.5 y** |
+
+### 🔴 The Canvas outlier, measured hard before it is stated
+
+🔵 **A six-month-old default branch is not by itself evidence of a stalled project** —
+`p546`'s own rule is that release-branch projects commit elsewhere, and Canvas is exactly
+that shape. 🟢 **So it was checked across every branch, not just the default.** The
+repository publishes **377 heads**; fetched at their tips and sorted by commit date, the
+newest are:
+
+| Branch | Last commit |
+|---|---|
+| `beta` | `2026-04-30` |
+| `prod` | `2026-04-30` |
+| `stable/2026-05-20` | `2026-04-30` |
+| `stable/2026-05-06` | `2026-04-30` |
+| `stable/2026-04-22` | `2026-04-30` |
+| `master` | `2026-04-30` |
+
+🔴 **Nothing anywhere in the public repository has moved since `2026-04-30`, including the
+branches named for releases that post-date it** (`stable/2026-05-06`, `stable/2026-05-20`
+both stop on `2026-04-30`). 🔵 **Measured against the comparison set this is stark: every
+other major LMS on this page committed within the last day; Canvas stopped 182 days ago on
+all 377 branches at once.**
+
+🔴 **What this base does NOT claim, because it was not measured:** *why*. A simultaneous
+stop across every branch is the signature of a **mirror that stopped being pushed**, not
+of a project losing momentum commit by commit — candidate explanations include a move of
+the canonical repository, a change in what Instructure publishes, or a paused export. 🟢
+**None of them is established here, and `p546` asserts none.** 🔵 **The actionable part
+needs no cause:** for an engagement that plans to carry patches or track upstream, Canvas
+is currently a **snapshot rather than a stream**, and that is an architecture decision —
+whereas Moodle, Open edX, Sakai, Chamilo, ILIAS and OpenOLAT are all streams today.
+
+🟢 Registered as **`Gap 546-G`**: establish where Canvas development moved, if anywhere.
+🔴 The channel that would answer it cheaply — the GitHub API's `pushed_at` and the
+repository's own announcements — is refused for unattached repositories here (see
+[`../intel/market.md`](../intel/market.md)), so this needs either a scope decision or a
+first-hand read of Instructure's own release notes.
+
+### 🟡 Two default branches on this page are not `main` or `master`, and a fixed list would miss both
+
+🔵 Minor but load-bearing for anyone scripting against this page:
+[`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) defaults to
+**`release_11`** and [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)
+to **`19.0`**. 🟢 Both were resolved with `ls-remote --symref` rather than guessed, which
+is why both are dated above and neither 404'd — the failure mode `p543` and `p545` both
+measured at 19 % and 39–42 % of the wider shelf.
+
 # Education Verticals — Real Platforms to Build AI On
 
 **Pass `p545` · 2026-10-30.** Every platform below is a real, running system that

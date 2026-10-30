@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p546` — every address on this page is now **dated**, and the page's own denominator is **not reproducible**
+
+🟢 **`Gap 544-C` closed.** All **175** addresses extracted from this page's table rows
+were dated by blobless bare clone — **175/175, zero failures, 39 seconds**. Method and
+negative controls are on [`trending.md`](trending.md#-p546--2026-10-30); the field itself
+is one row per address in
+[`../evidence/staleness-foundations.2026-10-30-p546.tsv`](../evidence/staleness-foundations.2026-10-30-p546.tsv).
+
+🔴 **The field's first result is about this page: 28 of 175 addresses — 16.0 % — have had
+no commit in over a year, and six have had none in over six years.** `p545` reported
+`162/162 LIVE` and read it as slow decay. 🔵 **`LIVE` meant the address resolves. It did
+not mean anyone is there.**
+
+### 🔴 The dead tail, named rather than summarised
+
+| Address | Last commit | Age |
+|---|---|---|
+| [`Apereo-Learning-Analytics-Initiative/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | `2014-12-02` | 🔴 **11.9 y** |
+| [`Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | `2016-05-04` | 🔴 **10.5 y** |
+| [`jupyterhub/jupyterhub-tutorial`](https://github.com/jupyterhub/jupyterhub-tutorial) | `2018-02-01` | 🔴 8.7 y |
+| [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | `2020-02-06` | 🔴 6.7 y |
+| [`Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | `2020-02-17` | 🔴 6.7 y |
+| [`Apereo-Learning-Analytics-Initiative/OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | `2020-03-09` | 🔴 6.6 y |
+| [`KualiCo/rice`](https://github.com/KualiCo/rice) | `2020-07-01` | 🔴 6.3 y |
+| [`dougpenny/SwiftyPSCore`](https://github.com/dougpenny/SwiftyPSCore) | `2022-03-22` | 🔴 4.6 y |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | `2022-11-21` | 🔴 3.9 y |
+| [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) ≡ [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) | `2023-10-13` | 🔴 3.0 y *(both halves of `p545`'s alias pair)* |
+| [`jupyterhub/wrapspawner`](https://github.com/jupyterhub/wrapspawner) | `2024-04-08` | 🔴 2.6 y |
+| [`open-spaced-repetition/fsrs.js`](https://github.com/open-spaced-repetition/fsrs.js) | `2024-04-10` | 🔴 2.6 y |
+| [`classroom-resources/autograding-python-grader`](https://github.com/classroom-resources/autograding-python-grader) · [`…/autograding-io-grader`](https://github.com/classroom-resources/autograding-io-grader) | `2024-05-01` | 🔴 2.5 y |
+
+🔴 **`Apereo-Learning-Analytics-Initiative` is five of those rows and the whole family is
+dead** — the learning-analytics layer this page offers is the layer a studio must not
+start from. 🟢 **`p545` found the `OneRoster.NET` alias pair; `p546` adds that both halves
+have been still for three years**, so the alias is not merely redundant, it is redundant
+*and* abandoned.
+
+🟡 **Two distinctions the age column must not flatten:**
+
+- 🟡 [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) (**1.3 y**) is a **ratified
+  specification**. A spec that stops changing is finished, not abandoned. 🔴 Its
+  **reference implementation** [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS)
+  (**1.4 y**) is running code, and that is a liability rather than a feature.
+- 🟡 [`jupyterhub/jupyterhub-tutorial`](https://github.com/jupyterhub/jupyterhub-tutorial)
+  (**8.7 y**) is **teaching material**, not a dependency. The age is still worth stating —
+  an eight-year-old tutorial for a project that ships monthly is wrong, not merely old.
+
+🟢 **And the live majority is the headline this page should actually lead with: 105 of 175
+addresses — 60 % — committed within the last 30 days, 76 of them within 7 days.** The
+succession table on [`trending.md`](trending.md#-p546--2026-10-30) names the maintained
+replacement for every stale standards implementation above.
+
+### 🔴 `Gap 546-B` — this page's address count is not reproducible
+
+`Gap 544-E` made the **row** count derivable (**156** `SHELF` rows). 🔴 **The address count
+reported beside it — `162` — is not derivable by any rule `p546` could construct**, and it
+is the denominator of `p545`'s `162/162 LIVE`:
+
+| Extraction rule | Addresses |
+|---|---|
+| markdown link **text** is `owner/repo` | **100** |
+| one address per table data row (row subjects) | **169** |
+| 🟢 **all `github.com/X/Y` pairs inside table data rows, deduped** — `p546`'s rule | 🟢 **175** |
+| all `github.com/X/Y` pairs anywhere on the page, deduped | **191** |
+| …excluding non-repository owner paths (`topics`, `orgs`, …) | **191** |
+| 🔴 `p545` reported | 🔴 **162** |
+
+🔵 **This is not a claim that `162` was wrong — it is a claim that nobody can check it**,
+which on a derived figure is `544-E`'s defect one level up. 🟢 **`p546` states its rule
+with its number**, and every figure on this page's `p546` sections uses **175**.
+
 # Foundational Education Repos
 
 **Pass `p545` · 2026-10-30.** Load-bearing systems an education engagement is

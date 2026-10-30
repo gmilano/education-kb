@@ -6,12 +6,35 @@ updated: 2026-10-30
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p545` · 2026-10-30.** **Seventy-two** real agents — **64 shelf-table rows
+**Pass `p546` · 2026-10-30.** **Seventy-two** real agents — **64 shelf-table rows
 plus 8 filed in their own sections below** — every row read first-hand and
 corroborated by a second, independent instrument. No row is a header, a
 placeholder or an example. 🟢 **The 64 is *derived from the table* rather than
 asserted beside it** ([`../ingest/derive-counts.sh`](../ingest/derive-counts.sh)),
-which is what `Gap 543-E` asked for.
+which is what `Gap 543-E` asked for. 🔴 **`p546` could not re-derive it** — that
+script was denied by name (`Code from External`), thirteenth denial in fourteen
+passes — so **72 is carried, not re-attested, this pass**.
+
+> 🟢 **`p546` gives every address on this shelf a date for the first time** — **98/98**,
+> by blobless bare clone, in 57 seconds, closing `Gap 544-C`
+> ([`../evidence/staleness-agents.2026-10-30-p546.tsv`](../evidence/staleness-agents.2026-10-30-p546.tsv)).
+> 🔴 **And the date demoted two rows promoted one pass ago:**
+> [`learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (**426 d**) and
+> [`esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor)
+> (**505 d**) are both over a year dead and were both shelved at `p545` as live finds;
+> their rows now say so. 🔵 **65 % of this shelf committed within 30 days and 7.1 % has
+> not been touched in over a year** — the distribution is on
+> [`../repos/trending.md`](../repos/trending.md#-p546--2026-10-30).
+>
+> 🟢 **`p546` also built the quote gate `Gap 545-A` asked for** and ran it over **84
+> quotes / 89 spans** against each artefact's own files: **49 PASS, 30 unadjudicable
+> (the GitHub About line has no byte-exact channel here), 5 residual — and ZERO
+> `avit`-class defects.** 🔴 **Four defects were found in the gate's OWN construction
+> first, each of which had failed a correct row**; all four are named on
+> [`trending.md`](trending.md#-p546--2026-10-30). 🔵 **Its real limit is structural and is
+> now registered as `Gap 546-E`: a quote's attribution is stated in the PROSE — "its
+> About line", "a search result described it as" — and cannot be read off the column it
+> sits in.**
 
 > 🟢 **`p545` closes `Gap 544-A` by narrowing it from 64 rows to 2, and the rule that
 > does the narrowing is general.** A region read off an artefact's **language** is sound
@@ -517,9 +540,9 @@ which is what `Gap 543-E` asked for.
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
-| 🆕 **learnmcp-xapi** | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main` | 16 · 4 forks | 🟡 Global — author's country not stated; the **LRS it targets is EMEA** (Ralph, by France Université Numérique) | *"An open-source MCP server that enables AI agents to record and retrieve learning activities through xAPI-compliant Learning Record Stores."* Python, 32 commits on `main`. 🟢 **This row closes a gap this base has carried in prose since `p502`:** the whole xAPI/LRS record layer sat in trending history and on **no live shelf**. It is the only artefact here that writes a learner's activity **back** to a standards-compliant store rather than only reading from one — which is what makes an agent's tutoring auditable instead of ephemeral. |
+| 🆕 **learnmcp-xapi** | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main` | 16 · 4 forks | 🟡 Global — author's country not stated; the **LRS it targets is EMEA** (Ralph, by France Université Numérique) | *"An open-source MCP server that enables AI agents to record and retrieve learning activities through xAPI-compliant Learning Record Stores."* Python, 32 commits on `main`. 🟢 **This row closes a gap this base has carried in prose since `p502`:** the whole xAPI/LRS record layer sat in trending history and on **no live shelf**. It is the only artefact here that writes a learner's activity **back** to a standards-compliant store rather than only reading from one — which is what makes an agent's tutoring auditable instead of ephemeral. 🔴 **`p546` dates it: last commit `2025-08-29`, 426 days — 1.2 years.** It was promoted at `p545` to close a gap carried since `p502` and it has not been touched in over fourteen months. 🔵 **The gap it closed is real and this artefact does not close it in production** — read the row as an architecture, not as a dependency, and see the maintained xAPI successors on [`../repos/trending.md`](../repos/trending.md#-p546--2026-10-30). |
 | 🆕 **oak-open-curriculum-ecosystem** | [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** — sidebar `MIT, License licenses found`; grant file `LICENCE` (British spelling) at `main` | 8 · 5 forks | 🟢 **EMEA (England)** — *stated*: README names the **National Curriculum for England (2014)**, **Oak National Academy** and the **Education Endowment Foundation** | *"A collection of tools for working with the Oak Open Curriculum Data, via API, SDK and MCP app."* Topics: `curriculum` · `mcp` · `mcp-server` · `open-data` · `openapi` · `sdk` · `elasticsearch`. **6 835 commits.** 🟢 **The maturity signal EMEA did not have:** `p538` closed the EMEA/APAC count imbalance with two 1★ rows by one author and said plainly that *"the live EMEA gap is maturity."* This is a state-funded national curriculum body shipping an **MCP server over its own curriculum data** — an engagement starts from the ontology, not from a scrape. |
-| 🆕 **esco-skill-extractor** | [KonstantinosPetrakis/esco-skill-extractor](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `master` | 32 · 13 forks | 🟢 **EMEA (EU)** — *stated*: built in the **SKILLAB EU Horizon** project against the EU's own **ESCO** taxonomy | *"Extract ESCO skills and ISCO occupations from texts such as job descriptions or CVs."* Topics: `esco` · `isco` · `skill-extraction` · `embeddings` · `sentence-transformer` · `cosine-similarity`. 🟢 **Why it is on an education shelf and not an HR one:** ESCO is the European Skills, Competences, Qualifications and Occupations taxonomy, so this is the **credential-to-labour-market mapping** every 2026 trend list calls for and almost nobody ships. It turns a course outcome into an EU-recognised skill code. 🔴 It does not read a transcript or a curriculum — the input is free text, and the mapping to a learner record is the studio's work. |
+| 🆕 **esco-skill-extractor** | [KonstantinosPetrakis/esco-skill-extractor](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `master` | 32 · 13 forks | 🟢 **EMEA (EU)** — *stated*: built in the **SKILLAB EU Horizon** project against the EU's own **ESCO** taxonomy | *"Extract ESCO skills and ISCO occupations from texts such as job descriptions or CVs."* Topics: `esco` · `isco` · `skill-extraction` · `embeddings` · `sentence-transformer` · `cosine-similarity`. 🟢 **Why it is on an education shelf and not an HR one:** ESCO is the European Skills, Competences, Qualifications and Occupations taxonomy, so this is the **credential-to-labour-market mapping** every 2026 trend list calls for and almost nobody ships. It turns a course outcome into an EU-recognised skill code. 🔴 It does not read a transcript or a curriculum — the input is free text, and the mapping to a learner record is the studio's work. 🔴 **`p546` dates it: last commit `2025-06-12`, 505 days — 1.4 years, on default branch `master`.** The second of `p545`'s four promotions to be over a year dead. 🔵 **ESCO itself is a maintained EU taxonomy; this binding to it is not**, so the taxonomy is the asset and the adapter is the studio's to own. |
 | 🆕 **agente-bncc-professores** | [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main` | 🔴 0 · 0 forks | 🟢 **LATAM (Brazil)** — *stated*: README is in **Portuguese** and names the **BNCC** and the **MEC** (Ministério da Educação) as the source of the official PDF | *"Planos de aula e provas com gabarito ancorados nas habilidades oficiais da BNCC: busca semântica, Gemini ou DeepSeek, edição das questões e PDFs."* Lesson plans and answer-keyed exams anchored to official BNCC competency codes. Next.js 16 + TypeScript + Prisma + SQLite; topics `bncc` · `rag` · `embeddings` · `semantic-search` · `educacao`. 🟢 **It is anchored to a national standard rather than to a prompt**, which is the same shape as `corretor-enem`'s ENEM calibration and `oak-*`'s England curriculum. 🔴 **0★, 0 forks** — this is an architecture to read, not a dependency to take. |
 | **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **49 850** · 6 138 forks (re-measured `p537`) | APAC (Univ. of Hong Kong, HKUDS lab) | "Lifelong Personalized Tutoring." Multi-agent tutor with persistent learner memory, learning paths and mastery gates. README names **v1.7.0, 2026.10.28**. 6.1k forks. The largest open-source education agent on any shelf. |
 | **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | MIT | **41.8k** | APAC (Tsinghua University, MAIC group) | "Open Multi-Agent Interactive Classroom" — a one-click immersive classroom staffed by multiple agent roles (lecturer, peer, assistant). TypeScript / Next.js / React. News section names **v1.3.0, 2026-10-29**. 6.5k forks. |
