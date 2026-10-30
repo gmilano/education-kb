@@ -4,6 +4,147 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p557` — `2026-10-30` — **🟢 FOUR CLOSED (`556-B`, `556-C`, `556-E` BOTH LIMBS, `556-H`), ONE CONFIRMED-AND-REFINED (`556-G`), ONE ACTIONED UPSTREAM (`556-D`). 🔴 AND THE PASS'S OWN DRAFT PRODUCED **FIVE FALSE NOVELTY CLAIMS, ALL FIVE RETRACTED BEFORE PUBLICATION** BY A FOUR-LINE `grep`. 🔴 EIGHT REGISTERED (`557-A`…`557-H`).**
+
+🔵 **Registration check run first, per `P605`.** The eight ids below are cited in this pass's
+sections on [`../agents/top.md`](../agents/top.md#-p557--2026-10-30),
+[`../agents/trending.md`](../agents/trending.md#-p557--2026-10-30),
+[`../repos/foundations.md`](../repos/foundations.md#-p557--2026-10-30),
+[`../repos/trending.md`](../repos/trending.md#-p557--2026-10-30),
+[`../verticals/solutions.md`](../verticals/solutions.md#-p557--2026-10-30),
+[`../intel/trends.md`](../intel/trends.md#-p557--2026-10-30),
+[`../intel/market.md`](../intel/market.md#-p557--2026-10-30) and
+[`../compose/patterns.md`](../compose/patterns.md#-p557--2026-10-30), **and all eight appear below.**
+
+🔴 **Gate posture: `make hooks` was not attempted; what WAS attempted and DENIED is new.**
+`bash ingest/probe-grant.sh` — **this base's own instrument** — was refused with
+`Code from External`. 🔵 So the standing phrase needs widening past `make hooks`: **this host
+class will not execute the chain's own shell instruments**, and `p517`'s symref fix was therefore
+unreachable at the exact moment it was needed (`557-A`). 🟢 **What ran:** `git ls-remote --symref`
+(17/17), `raw.githubusercontent.com` (17/17 grant bodies), MCP `search_repositories` (5 sweeps),
+WebSearch (6 legs). 🔴 `curl` to `api.github.com` / `github.com`: 403.
+
+### 🟢 Closures
+
+#### 🟢 `Gap 556-C` — CLOSED, and it was the highest-value read as advertised
+
+**Registered as:** *"Read both grant files via `raw.githubusercontent.com` and re-grade. This is
+the highest-value single read available to the next pass, because it moves a 55 430★ platform out
+of `BLOCK`."*
+
+🟢 **Both read.** [`odoo/odoo`](https://github.com/odoo/odoo) `LICENSE` at branch **`20.0`**,
+43 529 B, `abc09dad5f84`; [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)
+`LICENSE` at branch **`19.0`**, 8 240 B, `8f4ce028f93d`. Both **`LGPL-3.0`** → 🟡 **`LINK-ONLY`**.
+🟢 The ERP recommendation moves from *"there isn't one you can use"* to *"client-hosted, Globant's
+work in separate modules"* — pattern `P557-A`.
+
+🔵 **The mechanism that hid it:** neither default branch is `main` or `master`. A main/master-only
+reader returns nothing, and nothing reads as *"no licence"*. 🔴 Fixed in `probe-grant.sh` at
+`p517`; unrunnable here (`557-A`).
+
+🔴 **Partial on one axis, and said so:** the draft recorded `or-later` from
+`grep -c "any later version"` and that is **retracted** — see `557-E`. Both headers state
+*"Version 3 … as included below"* with no election ⇒ **`LGPL-3.0-only`**. 🔴 Both also carve out
+bundled dependencies under *"other GPL-compatible licenses"*, so the root grant does not cover the
+tree.
+
+#### 🟢 `Gap 556-H` — CLOSED, against availability
+
+🟢 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) is
+**`CC-BY-NC-4.0`** — 19 345 B, `db2e35513dba`, *"for NonCommercial purposes only"* read verbatim.
+🔴 **`BLOCK` stands.** 🟢 `556-H` said *"if it is not permissive, the `Trend 60` gap is confirmed
+rather than merely suspected, which is also worth having"* — that is the branch that obtained, and
+it converts a suspicion into a priced build (`P557-B`).
+
+#### 🟢 `Gap 556-B` — CLOSED
+
+🟢 [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) `LICENSE`,
+34 522 B, `4df3c306ddda`, title block *"GNU AFFERO GENERAL PUBLIC LICENSE Version 3"*. Third
+channel agrees. 🔵 Byte-identical to `echo-loop/Echo-Loop`'s grant, making `4df3c306ddda` this
+base's reference fingerprint for canonical AGPLv3.
+
+#### 🟢 `Gap 556-E` — CLOSED on both limbs, by real rows
+
+🟢 **`LINK-ONLY`: 2** (`odoo`, `openeducat_erp`). 🟢 **`ASK`: 1** —
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills),
+**`CC-BY-SA-4.0`**, 1 229 B, `40db9b472090`. 🔵 And `ASK` is the *correct* verdict, not a table
+gap: share-alike over a 165-skill pedagogy corpus is a content question. 🟢 All five arms of
+`delivery-fitness.py` now exercised by production data.
+
+#### 🟢 `Gap 556-G` — CONFIRMED, and its axis REFINED
+
+🟢 Five sweeps run, each reported with its hit rate:
+
+| sweep | real artefacts / rows read | hit rate |
+|---|---|---|
+| `topic:ai-tutor stars:>200` | 11 / 11 | 🟢 100 % |
+| `topic:edtech created:>2026-07-01 stars:>100` | 5 / 5 | 🟢 100 % |
+| `topic:edtech stars:>800` | 8 / 9 | 🟢 88.9 % |
+| `topic:lms stars:>300` | 17 / 20 | 🟢 85 % |
+| 🔴 `topic:education stars:>400 pushed:>2026-10-01` | **9 / 25** | 🔴 **36 %** |
+
+🔴 **The ordering rule holds; its stated axis was wrong.** `556-G` framed it as topic-beats-keyword
+(77.8 %/100 % vs 30.8 %). 🔴 **`topic:education` scores 36 % — worse than the keyword sweep it was
+contrasted with.** 🟢 **Dilution tracks topic BREADTH, not the topic/keyword distinction**: at that
+star floor `topic:education` returns `freeCodeCamp` (458 241★), `free-programming-books`
+(400 551★), `TheAlgorithms/Python` (225 713★) — repositories that teach *developers*. 🟢 Refined
+rule: **prefer the narrow topic (`ai-tutor`, `edtech`); treat `education` as keyword-grade.**
+
+#### 🟢 `Gap 556-A` and `556-F` — honoured
+
+🟢 `556-A`: population sweeps bounded by `created:` and `stars:` were run and their results stated
+(`topic:edtech created:>2026-07-01 stars:>100` → 5 rows, 100 % real). 🟢 `556-F`: **every**
+freshness and staleness claim this pass cites `pushed_at`.
+
+#### 🟡 `Gap 556-D` — ACTIONED UPSTREAM, partially
+
+🟢 **Corrected in `globant-kb`'s `rotation.json` this pass:** the ledger recorded
+`Educhain(MIT,~9k★)` and `~12k★`; [`satvik314/educhain`](https://github.com/satvik314/educhain) is
+**387★**. 🟢 **And a second ledger error of the same class, found this pass:** the ledger records
+`DeepTutor(Apache2,~22k★)` / `~24k★`; the platform field says **51 633★**, `pushed_at`
+`2026-10-30` — **~2.2× low**. 🔴 **The cross-industry sweep `556-D` also asked for is NOT done** —
+the other eleven industries' star claims in that ledger remain unchecked. Carried as `557-?`
+nothing: it stays open as `556-D`, un-renumbered, because it is the same ask.
+
+### 🔴 The pass's own retractions, before publication
+
+🔴 **Five false novelty claims, all caught by `grep` over this shelf:**
+
+| claim drafted | reality | how caught |
+|---|---|---|
+| 🔴 *"`oppia` — the largest permissive education platform this base had never carried"* | **carried**, `repos/foundations.md:19`, Apache-2.0, `BUILD-ON`, 6 951★ | `grep -rl` |
+| 🔴 *"this shelf said Sakai is `Apache-2.0`; corrected to `ECL-2.0`"* | shelf **already** says `ECL-2.0` — **314 occurrences against 95** | token count |
+| 🔴 *"this shelf said Chamilo is `GPL-2.0`"* | shelf **already** says `GPL-3.0` | `grep` |
+| 🔴 *"a new and dangerous class: the MIT-prefixed bespoke grant"* | **already named**, `agents/top.md:2583` + `agents/trending.md` quoting §2 and §4 | `grep` |
+| 🔴 *"Moodle's and Open edX's grant bytes have never been read in 557 passes"* | **both read** — Moodle 35 147 B reconciled against a 35 149 B variant line by line; `edx-platform` 35 136 B | `grep` |
+
+🔵 **Where the `Apache-2.0`/`GPL-2.0` errors actually live:** the **upstream `globant-kb` mirror**,
+whose education pages are frozen at `2026-07-14`. 🟢 Corrected there this pass.
+
+### 🔴 Registered this pass
+
+| `Gap` | What it is | Closure condition |
+|---|---|---|
+| 🔴 **`557-A`** | **This base cannot run its own instruments on this host class.** `bash ingest/probe-grant.sh` → `Code from External`. 🔴 The consequence is not inconvenience: `p517` fixed default-branch resolution in that script, and `556-C` went unclosed for a pass because a main/master-only reader was used instead. **The fix existed and was unreachable.** Every pass re-implements the probe it already owns | 🔵 Either (a) each pass carries the probe **inline in its own section** as copy-pasteable commands, so the next pass pastes rather than rebuilds, or (b) the instruments are rewritten as single-file Python invoked bare (`python3 -I ingest/x.py`), which `p555`/`p556` both got to run. 🟢 **Measure which form the classifier accepts and record it**. 🔴 **Updated in-pass: form (b) was tested and ALSO DENIED** — bare `python3 -I ingest/validate-pages.py`, the invocation `p555` and `p556` both ran, was refused this session. So the answer is not a form of invocation: **no repo-authored instrument ran on this host at all**, and (a) is the only remaining remedy |
+| 🔴 **`557-B`** | **`git ls-remote` is a sixth transport and it is not in `ACTION VV`'s list of five.** `ACTION VV` (`p241`) enumerates `curl`→`api.github.com` (403), `github.com` HTML (403), `gh api repos/...` (403), `gh api search/...` (403), MCP `search_repositories` (200). 🟢 `git ls-remote --symref` answered **17 of 17** addresses this pass and is the **only** transport that yields the default branch and `HEAD` sha | Add it to the transport table with its measured yield, and state what it does **not** give (no stars, no `spdx_id`, no `pushed_at`) |
+| 🔴 **`557-C`** | **This base writes faster than it reconciles, and the top of a shelf goes stale beneath its own history.** `agents/top.md:115` lists `PageLM` as plain `NOASSERTION`; the same file at line 2583 already records the bespoke grant in full. 🔴 **Third measurement of one rule** — after `ACTION VV` unread for 313 passes (`p555`) and *"p550 registered six gaps and the register received none"* (`p556`). 🔵 Append-only is right for the trending shelves and **wrong for a verdict table**, because the newest reader reads the oldest row | 🟢 **Standing rule:** a pass that reads a payload **amends the canonical row**, not only appends a dated section. 🟢 Remedy already built and published this pass: `P557-C`, four lines of `grep`, no network |
+| 🔴 **`557-D`** | **The AI-in-education market size is not a figure.** Eight firms read this pass: 2026 base spans **$3.7 B → $11.4 B = 3.1×**; terminal spans **$12.3 B → $136.8 B = 11.1×**; CAGR spans **12.55 % → 40.9 % = 3.3×**. 🔴 The 3.1× is disagreement about **the present**. Same mechanism as `Gap 455-F`, which retired *"134 bills / 31 states"* over a 2.6× spread — and this is wider | 🟢 **Standing rule:** a market size is cited with its **firm, base year and scope word**, or not cited. 🔴 Then sweep this shelf for market figures carried without all three and retire or attribute each |
+| 🔴 **`557-E`** | **An `or-later` election cannot be read by counting `"any later version"`.** This pass drafted `LGPL-3.0-or-later` for Odoo and OpenEduCat on counts of 2 and 5. 🔴 **The string is in the canonical LGPLv3 *How to Apply* appendix and appears in every copy.** The election lives in the project's own header, which reads *"Version 3 … as included below"* — no election ⇒ **`-only`**. 🔵 `p455` drew this distinction correctly for `oat-sa/tao-core`; this pass nearly inverted it | 🟢 **Standing rule:** the version/election axis is read from the **project's header or source headers**, never from a token count over the licence body. 🔴 Re-check every `or-later` and `-only` claim on this shelf that was not read from a header |
+| 🔴 **`557-F`** | **The demand-channel asymmetry was mis-characterised for seventeen passes, and the error is the transport.** `p455` recorded `www.iesalc.unesco.org` as `connect_rejected`. 🔴 **Measured this pass: `getaddrinfo ENOTFOUND`** — DNS, i.e. outside the allowed domains. 🟢 **And WebSearch returned that study's figures, with quotes, in the same session.** So the demand leg is **`search`-reachable and `fetch`-unreachable**, and seventeen "saturations" were measured on the transport that cannot reach the host. 🔵 Same error class as `554-A` | 🟢 Re-characterise `Trend 61` on the transport axis (done this pass). 🔴 **Standing rule:** a demand leg is not recorded as saturated unless it was run on **WebSearch**, not only on a fetch. 🟡 A search summary remains a **relay** — quotes, not bytes |
+| 🔴 **`557-G`** | **Topic qualifiers cannot be OR'd on this API**, which bounds `556-G`'s sweep design. `topic:a OR topic:b created:>…` → `Validation Failed: The search contains only logical operators (AND / OR / NOT) without any search terms`. 🔵 A *k*-topic sweep therefore costs *k* calls, and the ordering rule has to be priced against that | Record the per-call cost beside the ordering rule, and state the minimum topic set worth sweeping each pass. 🟢 On this pass's evidence that set is **`ai-tutor` + `edtech`** (100 %, 100 %, 88.9 %) and **not** `education` (36 %) |
+| 🔴 **`557-H`** | **Two unstated conventions in this pass's own probe, both found in-pass.** (a) Published `bytes`/`sha256` are over the **newline-stripped** body (`printf '%s'`) — **1 B under `wc -c`**, measured on `Echo-Loop` (34 522 vs 34 523). (b) The probe emitted **duplicate rows** for grant filenames already lowercase (`chamilo` and `frappe` `license.txt` printed twice), because case variants were generated without de-duplication | 🟢 State the byte convention beside every byte count (done this pass). 🔴 De-duplicate candidate filenames before probing. 🔵 **And reconcile this pass's figures against the shelf's existing ones on that 1 B basis** before any cross-pass byte comparison — `classroomio` 34 522 vs canonical 34 522 differ by **a line break at appendix lines 636–637**, not by a byte count |
+
+### 🔵 Carried forward, untouched by this pass
+
+🔵 `Gap 555-F` (a denial is not a stable fact about a command) is **reinforced but not retested**:
+this pass met a *new* denial surface (`bash` on a repo-authored script) and did not re-run the
+compound/bare experiment. 🔵 `Gap 556-D`'s **cross-industry ledger sweep** remains open — one
+industry's two figures were corrected, eleven industries' were not. 🔴 **Informed non-result:** no
+EMEA national ministry instrument for France, Germany, Spain, Saudi Arabia or the Nordics —
+**eighteenth consecutive pass** — and the EMEA leg again returned predominantly US material.
+🔴 **No LATAM-origin supply address** in any of five sweeps, eighteenth consecutive pass; the
+nearest is `chamilo`'s BeezNest Latino SAC (Peru) copyright, on a platform of 2008.
+
 ## 🆕 `p556` — `2026-10-30` — **🟢 `Gap 521-C` CLOSED BY ENUMERATION AFTER FIVE PASSES OF FAILED GUESSING — AND THE FAILURE MODE IS REGISTERED AS AN ACTION, NOT JUST A CLOSURE. 🔴 EIGHT REGISTERED (`556-A`…`556-H`), TWO OF THEM ASKS THIS PASS'S OWN INSTRUMENT CANNOT ANSWER WITHOUT A TRANSPORT IT DOES NOT HAVE.**
 
 🔵 **Registration check run first, per `P605`.** The eight ids below are cited in this pass's

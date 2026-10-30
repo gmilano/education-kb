@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p557` — `2026-10-30` — **🟢 `Trend 60` CONFIRMED, NOT SUSPECTED: the curriculum graph is the scarce asset, and the best one in the market is `CC-BY-NC-4.0`. 🟢 THREE NEW TRENDS: the week's supply is **content-transform, not tutor** (`T67`); **this base writes faster than it reconciles**, measured on its own shelf (`T68`); and the first attitudinal series here moves **against** adoption in three of four APAC countries (`T69`).**
+
+### 🟢 `Trend 60` — CONFIRMED: the curriculum graph is the scarce asset
+
+`Trend 60` has held for several passes that the **prerequisite graph**, not the model and not the
+UI, is what an adaptive education product is actually short of. 🟢 **`Gap 556-H` was the test, and
+it resolved against availability.**
+
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) — **5 483★
+and 1 389 forks in twelve days**, 1 644 knowledge points, 2 403 prerequisite edges, 6 723 items
+aligned to the Chinese national curriculum, with an adaptive prerequisite diagnostic — is
+**`CC-BY-NC-4.0`** (19 345 B, `db2e35513dba`, *"for NonCommercial purposes only"*). 🔴 **`BLOCK`.**
+
+🔵 **Why this confirms rather than merely illustrates.** The market's attention found this asset
+immediately — 1 389 forks in twelve days is the clearest demand signal on the whole shelf. 🔴 **And
+there is no permissive substitute at any scale.** So the scarcity is not an artefact of this base's
+search; it is a property of the supply. 🟢 **The consequence is a priced line item, not a caveat:**
+a client-facing curriculum graph is **built**, and `P557-B` prices that build.
+
+### 🟢 `Trend 67` — The week's new supply is content-transform, not tutor
+
+🟢 Four of the five education addresses created in the last 27 days take a **source artefact** and
+emit a **lesson**: [`Papermorph`](https://github.com/DozenTwelve/Papermorph) (book → animated
+narrated lesson, MIT, 1 029★ in 27 d), [`claudemy`](https://github.com/assafkip/claudemy) (topic →
+cited audio course, MIT, 550★ in 16 d), [`frametell`](https://github.com/sitor-ai/frametell) (brief
+→ explainer video, AGPL, 441★ in 20 d) and
+[`book-to-skill`](https://github.com/virgiliojr94/book-to-skill) (PDF → agent skill, MIT,
+36 581★). 🔴 **None is a tutor.** The tutor cohort's newest member remains `learnharness`
+(`created_at` `2026-10-16`).
+
+🔵 **Why it matters commercially:** content transforms sit **upstream** of the tutor and have a far
+shorter path to value — they produce an artefact an institution can inspect before it trusts
+anything adaptive. 🟢 `Papermorph` declares **`scorm`** in its topics, which is the tell: it aims at
+the package boundary of an LMS the client already runs, so it needs no platform decision.
+🟡 **One cohort is not a trend line.** It is recorded at trend strength because the licence
+distribution reinforces it — three of the four are MIT — and flagged for confirmation next pass.
+
+### 🔴 `Trend 68` — This base writes faster than it reconciles, and the top of a shelf can go stale beneath its own history
+
+🔴 **Measured on this page's sibling.** [`../agents/top.md`](../agents/top.md)'s canonical table
+lists [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) as plain `NOASSERTION` with no
+verdict. 🔴 **The same file, further down, already records the grant in full** — *"Bespoke
+non-commercial — title line reads '# PageLM Community License'"*, with the payload's MIT-shaped
+opening noted; and [`../agents/trending.md`](../agents/trending.md) already quotes §4's
+revenue-share and §2's *"strictly prohibited"* redistribution.
+
+🔵 **So this pass began by "discovering" a licence class this base had already named**, and the
+re-discovery is retracted as a novelty claim. 🟢 **What it measures instead is more valuable: a
+finding can be read, written, and then lost to the top-of-page table that a reader actually
+consults.** 🔴 **Third measurement of the same rule** — after `p555`'s regression against a
+313-pass-old register entry (`ACTION VV`, unread for 313 passes) and `p556`'s *"p550 registered
+six gaps and the register received none of them"*.
+
+🟡 **The licence class itself stands and is restated for the canonical rows**: a bespoke grant
+whose first permission sentence is MIT's, then non-commercial, redistribution-prohibited,
+revenue-share-bearing, with a Partial Use Clause reaching a *design pattern*. 🟢 `p536`'s
+three-line title block catches it; a reader who greps `Permission is hereby granted` does not.
+
+🔴 **The actionable consequence**, and it is a process one: **a pass that reads a payload must
+amend the canonical row, not only append a dated section.** Append-only is the right rule for the
+two trending shelves; it is the wrong rule for a verdict table, because the newest reader reads
+the oldest row. `557-C`.
+
+### 🔴 `Trend 69` — The first attitudinal series on this base moves against adoption
+
+🟢 **Ipsos Education Monitor 2026**, support for **banning AI in schools**:
+
+| country | now | prior wave | direction |
+|---|---|---|---|
+| Australia | **52 %** | 47 % | 🔴 +5 |
+| South Korea | **31 %** | 27 % | 🔴 +4 |
+| Japan | **29 %** | 21 % | 🔴 **+8** |
+| Indonesia | **23 %** | — | lowest in the series |
+
+🔴 **Three of four moved toward banning, and Japan moved eight points.** 🔵 Every adoption figure
+this base carries — 87 % of LAC institutions, 60 % of US teachers, 92 %/79 % of LATAM
+students/faculty — measures **usage**. This is the first series measuring **consent**, and it runs
+the other way. 🟢 **The engagement consequence is concrete**: in APAC K-12, a pilot's hardest
+deliverable is not the model, it is the **inspectability** that lets a school answer a parent —
+which is what `P610` was already built for, now with a demand-side reason.
+
+### 🔵 Carried trends, re-measured this pass
+
+- 🟢 **`Trend 61` (supply read first-hand, demand relayed only) — re-characterised, not refuted.**
+  The asymmetry is real but it is a property of the **transport**, not the channel: the demand host
+  is `search`-reachable and `fetch`-unreachable (`557-F`). Seventeen passes recorded "saturation"
+  from the transport that cannot reach it.
+- 🔴 **Copyleft dominance in the LMS category — now quantified.** Of 17 real LMS addresses swept
+  this pass: **7 AGPL-3.0, 4 GPL, 3 `BUILD-ON`**. 🟢 **And every permissive exception is academic**
+  (Sakai ECL-2.0, OpenOLAT Apache-2.0, RELATE MIT) rather than commercial-SaaS. A product build
+  starts from an academic LMS or from nothing.
+- 🟡 **The Open edX / Tutor split.** The platform is Apache-2.0 (platform field, 🔴 bytes never
+  read in 557 passes); the distribution everyone actually installs,
+  [`overhangio/tutor`](https://github.com/overhangio/tutor), is **AGPL-3.0**. 🔵 A proposal that
+  claims productisable Open edX is describing the core and deploying the distribution.
+- 🔴 **Market sizing is not settled and should stop being quoted as if it were** — eight firms,
+  **3.1× on the 2026 base year**, 11.1× on the terminal, 3.3× on CAGR (`557-D`). Plus a **July 2026
+  scoping review of 474 studies** finding the efficacy literature fragmented and pedagogical design
+  poorly connected to technical capability.
+
 ## 🆕 `p556` — `2026-10-30` — **🟢 `Trend 62` OPENS: THE TUTORING LAYER HAS STOPPED SHIPPING AS SOFTWARE. **SEVEN OF THE ELEVEN** `topic:ai-tutor` REPOSITORIES ABOVE 200★ ARE AGENT *SKILLS* — FILES THAT RIDE A HARNESS — NOT APPLICATIONS. 🟢 `Trend 63` OPENS: DELIVERY FITNESS IS A MEASURABLE PROPERTY OF A SHELF, AND THIS ONE IS **40.5 % UNDELIVERABLE**.**
 
 ### 🟢 `Trend 62` — the tutor is now a file, not a server

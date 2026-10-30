@@ -1,0 +1,18 @@
+address	branch	head_sha12	grant_path	bytes_nl_stripped	sha256_12	spdx_read	delivery_verdict	stars	pushed_at	note
+openeducat/openeducat_erp	19.0	46a5d7d40082	LICENSE	8240	8f4ce028f93d	LGPL-3.0-only	LINK-ONLY	901	2026-10-29	default branch is neither main nor master; header states Version 3 with NO or-later election; bundled-dependency carve-out
+odoo/odoo	20.0	a55df600b515	LICENSE	43529	abc09dad5f84	LGPL-3.0-only	LINK-ONLY	55430	2026-10-29	as above; 55 430 star figure carried from p556 platform read, not re-read this pass
+xiaoyang111222/cn-math-taxonomy	main	068db3c25506	LICENSE	19345	db2e35513dba	CC-BY-NC-4.0	BLOCK	5483	2026-10-30	NonCommercial clause read verbatim; BLOCK stands; Trend 60 CONFIRMED
+amosblomqvist/learnharness	main	dc4c398d5167	LICENSE	34522	4df3c306ddda	AGPL-3.0	SELF-HOST-ONLY	4231	2026-10-29	556-B closed; byte-identical to Echo-Loop grant
+CaviraOSS/PageLM	main	228a36cd9169	LICENSE.md	8562	20a39a9c5993	bespoke PageLM Community License	BLOCK	2053	2026-10-29	MIT-PREFIXED BESPOKE: opens with MIT permission sentence, then non-commercial + redistribution ban + revenue share + partial-use clause
+GarethManning/education-agent-skills	main	135d6275e7db	LICENSE	1229	40db9b472090	CC-BY-SA-4.0	ASK	931	2026-10-22	first real row to reach the ASK arm
+DozenTwelve/Papermorph	main	31d8b583045f	LICENSE	1068	e16528680638	MIT	BUILD-ON	1029	2026-10-29	created 2026-10-03, 27 days old at this read
+classroomio/classroomio	main	79fe6f552566	LICENSE	34522	20b067f86de3	AGPL-3.0	SELF-HOST-ONLY	1736	2026-10-30	equal length to canonical AGPLv3, different digest: differs ONLY by a line break at appendix lines 636-637
+virgiliojr94/book-to-skill	master	7540eefbe749	LICENSE.md	1068	be9b04bccfb4	MIT	BUILD-ON	36581	2026-10-28	default branch master; 3 877 forks
+oppia/oppia	develop	6b9292ddd297	LICENSE	11357	58d1e17ffe51	Apache-2.0	BUILD-ON	6950	2026-10-30	default branch is develop; NOTICE also present (145 B, 8c5f22e02692)
+sakaiproject/sakai	master	c766b4f35902	LICENSE	11119	efbb3e5a1b9a	ECL-2.0	BUILD-ON	1240	2026-10-30	Educational Community License v2.0, Apache-derived; prior shelf said Apache-2.0
+academico-sis/academico	main	0d8c76db8a5f	LICENSE	1093	7ff3d1c30bb7	MIT	BUILD-ON	410	2026-10-28	permissive system of record (school management, Laravel+Filament)
+chamilo/chamilo-lms	master	385059d8bcbc	LICENSE	35146	c53a65c2fd56	GPL-3.0	SELF-HOST-ONLY	1019	2026-10-30	prior shelf said GPL-2.0; CORRECTED by bytes; second file license.txt 1613 B 440aa65f01a8 carries BeezNest Latino SAC (Peru) copyright
+frappe/lms	develop	cf5a078c2c64	license.txt	33892	543fa96aec22	AGPL-3.0	SELF-HOST-ONLY	3355	2026-10-30	default branch develop; lowercase grant filename
+echo-loop/Echo-Loop	main	5574fe21a676	LICENSE	34522	4df3c306ddda	AGPL-3.0	SELF-HOST-ONLY	4597	2026-10-30	AI English listening/speaking trainer; created 2026-05-07
+OpenOLAT/OpenOLAT	master	97059e00613f	LICENSE	10982	6dbc5b605ed0	Apache-2.0	BUILD-ON	449	2026-10-30	platform field said NOASSERTION; PROMOTED; NOTICE.TXT also present (14711 B, eab74dcec74e)
+inducer/relate	main	aca7c69cd4dd	LICENSE	1144	e6c20b652766	MIT	BUILD-ON	437	2026-10-29	platform field said NOASSERTION; PROMOTED; MIT/X Consortium wording

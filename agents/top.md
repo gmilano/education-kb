@@ -4,6 +4,184 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p557` — `2026-10-30` — **🟢 `Gap 556-C` CLOSED AND IT MOVES A **55 430★** PLATFORM OUT OF `BLOCK`: Odoo and OpenEduCat are `LGPL-3.0-only` on grant bytes, so `LINK-ONLY`, so client-hosted delivery is available. 🟢 `556-B`, `556-E` AND `556-H` ALSO CLOSED. 🔴 AND THE PASS'S STRUCTURAL FINDING IS AGAINST THIS PAGE: **the canonical table at the top of this shelf is LESS INFORMED THAN THE SHELF'S OWN HISTORY** — PageLM's bespoke grant was read at `p~540` and line 115 still says plain `NOASSERTION`. 🔴 TWO OF THIS PASS'S OWN DRAFT FINDINGS WERE RETRACTED BEFORE PUBLICATION.**
+
+🔴 **Gate posture, stated first: this base's own instruments could not be run.**
+`bash ingest/probe-grant.sh` was **DENIED** (`Code from External`) — the classifier that denies
+`make hooks` also refuses the chain's **own** shell instruments. 🔵 So *"the gate is denied"*
+understates it: **this host class will not execute the instruments five hundred passes have
+built**, and `p517`'s symref fix — the exact fix needed below — was unreachable. Every grant read
+here used a probe **written this pass**. Registered as `557-A`.
+
+🟢 **What ran:** `git ls-remote --symref` (default branch + `HEAD` sha, **17/17 addresses**),
+`raw.githubusercontent.com` (**17/17 grant bodies**), MCP `search_repositories` (5 sweeps).
+🔴 `curl` to `api.github.com` and `github.com`: **403**, unchanged. 🟢 `git ls-remote` is a
+**sixth transport** and the only one that yields the default branch — it is not in `ACTION VV`'s
+list of five (`557-B`).
+
+🔴 **A SECOND denial, measured after this pass's edits: the bare form was refused too.**
+`python3 -I ingest/validate-pages.py` — the exact invocation `p555` and `p556` both got to run —
+was **DENIED** (`Code from External`) this session. 🔵 So `555-F` holds in a sharper form than it
+was filed: **a denial is not a stable fact about a command across sessions either.** 🟢 The
+contract was therefore re-implemented independently this pass and **all checks are green**:
+frontmatter **10/10 ok**; this pass's added pages carry **0 placeholder-as-data rows and 0 ragged
+tables**; the four pages with pre-existing shape findings are **unchanged in count**
+(`agents/trending.md` 20/4, `repos/trending.md` 21/2, `intel/market.md` 0/1,
+`intel/open-gaps.md` 2/16 — its own documented false-positive classes); `intel/market.md` carries
+**exactly 1** canonical `## Opportunities by region` with **5** closed-vocabulary `###` children
+**in vocabulary order**, **0** out-of-vocabulary, **0** missing, LATAM-only **False**, and each of
+the five **amended in place**; and **append-only is proved by byte containment** — every prior body
+is contained verbatim in the new file (`agents/trending.md` 5 242 159 B, `repos/trending.md`
+3 944 641 B, `intel/open-gaps.md` 3 643 214 B, `README.md` 2 606 628 B, all ✔). 🔵 **None of it is
+gate-attested**, and that is now true of two instruments rather than one.
+
+### 🟢 `Gap 556-C` — CLOSED. The highest-value read available, and it paid
+
+| address | branch | grant | bytes | `sha256/12` | read | was → is |
+|---|---|---|---|---|---|---|
+| [`odoo/odoo`](https://github.com/odoo/odoo) | 🔴 **`20.0`** | `LICENSE` | 43 529 | `abc09dad5f84` | 🟢 **`LGPL-3.0-only`** | 🔴 `NOASSERTION` / `BLOCK` → 🟡 **`LINK-ONLY`** |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🔴 **`19.0`** | `LICENSE` | 8 240 | `8f4ce028f93d` | 🟢 **`LGPL-3.0-only`** | 🔴 `NOASSERTION` / `BLOCK` → 🟡 **`LINK-ONLY`** |
+
+🔵 **What hid it, and the irony is the point.** Neither default branch is `main` or `master` —
+they are **`20.0`** and **`19.0`**. [`ingest/grant-title-block.sh`](../ingest/grant-title-block.sh)
+probes `main` then `master` and stops; against these two it returns nothing, and nothing reads as
+*"no licence"*. 🟢 [`ingest/probe-grant.sh`](../ingest/probe-grant.sh) **fixed this at `p517`** by
+resolving the symref. 🔴 **So the defect was fixed forty passes ago and the fix is the thing this
+host refuses to run** (`557-A`).
+
+🔴 **RETRACTION 1, this pass's own, caught before publication.** The draft recorded both grants as
+**`or-later`** because `grep -c "any later version"` returned 2 and 5. 🔴 **That counts the
+canonical LGPLv3 body** — the string lives in the licence's own *How to Apply* appendix and is in
+every copy. The election lives in the project's header, and both headers read:
+
+> *"Odoo is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included
+> below."*
+
+🟢 **Version 3, no election → `LGPL-3.0-only`.** 🔵 `p455` drew exactly this distinction for
+`oat-sa/tao-core` and this pass nearly inverted it. `557-E`.
+
+🔴 **A carve-out the verdict does not carry**, from the same header: *"Some external libraries and
+contributions bundled with Odoo may be published under other GPL-compatible licenses."* The root
+grant **does not cover the whole tree** — `p455`'s `DEPENDENCY-SCOPED` class, now on the two
+largest ERP addresses here. 🟡 `LINK-ONLY` is the verdict for Odoo's own code; a vendored
+dependency is a separate read.
+
+### 🟢 `Gap 556-H` — ANSWERED, and the answer is the expensive one
+
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy),
+**5 483★**, 1 389 forks, `pushed_at` `2026-10-30`, twelve days old, is **`CC-BY-NC-4.0`** —
+19 345 B, `db2e35513dba`, title block *"Attribution-NonCommercial 4.0 International"*, body read
+verbatim: *"in part, for NonCommercial purposes only"*.
+
+🔴 **`BLOCK` stands, and `Trend 60` is CONFIRMED rather than suspected**: the richest curriculum
+graph in this market — 1 644 knowledge points, 2 403 prerequisite edges, 6 723 items aligned to the
+Chinese national curriculum — **cannot enter a commercial deliverable**. 🔵 `556-H` said either
+answer was worth having, and this is the one that converts a suspicion into a constraint. 🟢 It may
+be **studied and cited**; a client-facing graph is a **build line item**, priced in `P557-B`.
+
+### 🟢 `Gap 556-B` — CLOSED, on bytes this time
+
+[`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness): **34 522 B**,
+`4df3c306ddda`, title block *"GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007"*.
+🟢 **Third channel agrees** with the platform field and the README prose. `SELF-HOST-ONLY`, as
+`p556` had it — now on bytes rather than two paraphrases. 🔵 The digest is **byte-identical** to
+[`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop)'s grant, which makes
+`4df3c306ddda` this base's reference fingerprint for canonical AGPLv3.
+
+### 🟢 `Gap 556-E` — CLOSED on both limbs, by two real rows and one
+
+`556-E` complained that `LINK-ONLY` and `ASK` were **0 of 42** on the live shelf, proven only by
+fixtures — *"an arm no real row reaches is an arm whose first production use is also its first
+test"*.
+
+- 🟢 **`LINK-ONLY`: 2 real rows** — `odoo/odoo`, `openeducat/openeducat_erp`, above.
+- 🟢 **`ASK`: 1 real row** —
+  [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+  (931★) is **`CC-BY-SA-4.0`** (1 229 B, `40db9b472090`), which
+  [`ingest/delivery-fitness.py`](../ingest/delivery-fitness.py) does not know. 🔵 And `ASK` is the
+  right answer, not a gap in the table: share-alike over a **corpus of 165 pedagogy skills** is a
+  content-licensing question, and the table grades code.
+
+🟢 Every arm of the delivery table is now exercised by production data.
+
+### 🔴 The structural finding, and it is against this page
+
+🔴 **The canonical table at lines 114–119 of this file is less informed than the shelf's own
+history.** Line 115 reads:
+
+> `| CaviraOSS/PageLM | 🔴 2 053 | NOASSERTION | open NotebookLM equivalent; quizzes, flashcards, notes, podcasts from study material |`
+
+🔴 **But this shelf already read that grant.** [Line 2583 of this file](#) records
+*"**Bespoke non-commercial** — title line reads "# PageLM Community License" … the payload opens
+with"* MIT's permission sentence; and
+[`../agents/trending.md`](../agents/trending.md) already quotes §4's
+**revenue-share** requirement and §2's *"strictly prohibited"* redistribution.
+
+🔵 **So this pass's draft headline — "a new and dangerous class: the MIT-prefixed bespoke grant" —
+was a RE-DISCOVERY, and is RETRACTED as a novelty claim.** 🔴 **RETRACTION 2.** The class is
+already named on this base, below the fold.
+
+🟢 **What is genuinely new is the defect that made the re-discovery possible**, and it is worth more
+than the false novelty would have been: **a finding can be read, written to the shelf, and then
+lost to the shelf's own top-of-page table.** Same mechanism as `p555`'s regression against a
+313-pass-old register entry and `p556`'s *"p550 registered six gaps and the register received
+none"*. 🔴 **Third measurement of one rule: this base writes faster than it reconciles.**
+Registered as `557-C`.
+
+🟢 **Amended in place, so the canonical rows now carry what the shelf already knew:**
+
+| address | ★ | grant, read | delivery verdict |
+|---|---|---|---|
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 2 053 | **bespoke "PageLM Community License"**, 8 562 B `20a39a9c5993` — non-commercial; redistribution *"strictly prohibited"*; revenue-share required before any commercial deployment; **Partial Use Clause** reaching any *"code snippet, algorithm, design pattern"*; disgorgement as remedy | 🔴 **`BLOCK`** |
+| 🔴 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 5 483 | **`CC-BY-NC-4.0`**, 19 345 B `db2e35513dba` | 🔴 **`BLOCK`** |
+| 🟡 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 931 | **`CC-BY-SA-4.0`**, 1 229 B `40db9b472090` | 🟡 **`ASK`** |
+| 🟡 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 901 | **`LGPL-3.0-only`**, 8 240 B `8f4ce028f93d` | 🟡 **`LINK-ONLY`** |
+
+### 🟢 One row upgraded, and nine re-verified rather than discovered
+
+🟢 **[`inducer/relate`](https://github.com/inducer/relate) (437★) — upgraded.** This shelf carried
+it as 🟡 *"MIT by README text only — sidebar names **no** licence"*. 🟢 **A grant file exists and
+was read: `LICENSE`, 1 144 B, `e6c20b652766`**, opening *"RELATE is licensed to you under the
+MIT/X Consortium license"*. 🟢 **`BUILD-ON` on a grant file, not on README prose.**
+
+🔵 **Re-verified, NOT new — stated plainly because the draft of this section claimed otherwise.**
+[`oppia/oppia`](https://github.com/oppia/oppia) (Apache-2.0, 11 357 B `58d1e17ffe51`, branch
+`develop`), [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) (**ECL-2.0**, 11 119 B
+`efbb3e5a1b9a`), [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (Apache-2.0,
+**10 982 B** — 🟢 **reproducing this shelf's own prior byte count exactly**),
+[`academico-sis/academico`](https://github.com/academico-sis/academico) (MIT, 1 093 B),
+[`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) (**GPL-3.0**, 35 146 B
+`c53a65c2fd56`), [`frappe/lms`](https://github.com/frappe/lms) (AGPL-3.0, 33 892 B, branch
+`develop`, lowercase `license.txt`), `classroomio`, `Echo-Loop`, `book-to-skill`, `Papermorph` —
+🔵 **all were already carried with the correct grant.** 🔴 The draft of this section announced
+Sakai's `ECL-2.0` and Chamilo's `GPL-3.0` as *corrections to this shelf*. **They are not:** this
+shelf has them right (ECL-2.0 appears 314 times against 95 for Apache-2.0). 🔴 **The `Apache-2.0`
+and `GPL-2.0` errors are in the UPSTREAM `globant-kb` mirror**, whose education pages are frozen at
+`2026-07-14`, and that is where they are corrected this pass — not here.
+
+🟢 **An independent re-read that reproduces a prior byte count is worth recording as exactly that.**
+OpenOLAT at 10 982 B twice, by two different probes, in two different passes, is the only
+cross-pass reproducibility check this base has ever had on a grant payload.
+
+### 🔵 Byte-count convention, stated once
+
+Every `bytes` and `sha256` here is over the response body with the **trailing newline stripped**
+(`printf '%s'`) — **1 B less than `wc -c`** for a newline-terminated file. 🟢 Measured directly
+this pass: `Echo-Loop`'s grant is 34 522 by this convention and 34 523 by `wc -c`. 🔵 Stated so a
+later pass does not read a 1 B delta as a change. Full table:
+[`../evidence/grant-bytes.2026-10-30-p557.tsv`](../evidence/grant-bytes.2026-10-30-p557.tsv).
+
+### 🟡 Still `BLOCK` for want of one read each
+
+🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (347★, **no grant file at
+all**), [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) (586★,
+`pushed_at` `2026-03-25` — **219 days stale**),
+[`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) (981★, `pushed_at`
+`2025-12-09`), [`gazpachu/hypatia`](https://github.com/gazpachu/hypatia) (651★, `pushed_at`
+`2023-02-15`),
+[`brycewang-stanford/Auto-Empirical-Research-Skills`](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills)
+(4 842★). 🔵 Five addresses, each one read from a verdict; not padded into the tables above.
+
 ## 🆕 `p556` — `2026-10-30` — **🟢 `Gap 521-C` CLOSED: `LearnHarness` IS [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness), **4 231★** AT FOURTEEN DAYS OLD, AND **AGPL-3.0 ON TWO INDEPENDENT CHANNELS**. 🔴 THE FASTEST-GROWING EDUCATION AGENT ON THIS SHELF IS ONE GLOBANT CANNOT FOLD INTO A DELIVERABLE — AND THAT IS NOW A **MEASURED PROPERTY OF 17 OF 42 ADDRESSES**, NOT AN ANECDOTE. 🟢 ONE GENUINELY NEW ROW (`ConceptLoom`, MIT).**
 
 🔴 **Gate posture, stated first: `make hooks` was not run** — the `Code from External`

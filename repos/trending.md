@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p557` — `2026-10-30` — **🟢 FIVE SWEEPS, 70 ROWS, HIT RATES PUBLISHED BESIDE EACH — AND THE DILUTED CHANNEL IS `topic:education` (36 %), NOT KEYWORD SEARCH. 🔴 THE TOP OF THE `topic:edtech` BOARD IS AN UNUSABLE LICENCE FOR THE SECOND WEEK RUNNING.**
+
+🔵 **Sweeps run this pass**, MCP `search_repositories`, sorted by stars descending, each reported
+with its hit rate per `556-G`:
+
+| sweep | `total_count` | rows read | real education-sector artefacts | hit rate |
+|---|---|---|---|---|
+| `topic:ai-tutor stars:>200` | 11 | 11 | 11 | 🟢 **100 %** |
+| `topic:edtech created:>2026-07-01 stars:>100` | 5 | 5 | 5 | 🟢 **100 %** |
+| `topic:edtech stars:>800` | 9 | 9 | 8 | 🟢 **88.9 %** |
+| `topic:lms stars:>300` | 24 | 20 | 17 | 🟢 **85 %** |
+| 🔴 `topic:education stars:>400 pushed:>2026-10-01` | 96 | 25 | 9 | 🔴 **36 %** |
+
+🔴 **`total_count` is not rows read.** `topic:education` has 96 matches and this pass read the top
+25; `topic:lms` has 24 and this pass read 20. The hit rates above describe **the rows read**, not
+the populations. 🔵 Stated because a later pass comparing hit rates across windows will otherwise
+compare different denominators.
+
+### 🟢 Trending — `topic:edtech`, the board that matters for this industry
+
+| repo | ★ | forks | `spdx` | verdict | `pushed_at` | signal |
+|---|---|---|---|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **36 581** | 3 877 | 🟢 `MIT` | 🟢 `BUILD-ON` | `2026-10-28` | technical book → agent skill. Largest on the board by an order of magnitude |
+| 🔴 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **5 483** | 1 389 | 🔴 `CC-BY-NC-4.0` | 🔴 **`BLOCK`** | `2026-10-30` | 🔴 **second week at the top of this board, and now read: non-commercial.** 12 days old |
+| 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 2 053 | 280 | 🔴 bespoke | 🔴 **`BLOCK`** | `2026-10-29` | open NotebookLM equivalent. 🔴 Grant read this pass: redistribution prohibited, revenue-share, partial-use clause |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 1 736 | 409 | 🔴 `AGPL-3.0` | 🔴 `SELF-HOST-ONLY` | `2026-10-30` | customer-training platform |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 162 | 1 015 | 🟢 `MIT` | 🟢 `BUILD-ON` | `2026-10-30` | offline-first; 1 015 forks is the deployment signal, not the stars |
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | 1 141 | 138 | 🟢 `Apache-2.0` | 🟢 `BUILD-ON` | 🔴 `2026-06-29` | 🔴 **123 days stale.** Built at GDG AI Hack Milan 2026; permissive and apparently abandoned |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 1 029 | 142 | 🟢 `MIT` | 🟢 `BUILD-ON` | `2026-10-29` | 27 days old, SCORM-targeted |
+| 🟡 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 931 | 131 | 🟡 `CC-BY-SA-4.0` | 🟡 **`ASK`** | `2026-10-22` | 165 pedagogy skills; share-alike on a content corpus |
+
+🔴 **Two of the top three artefacts on the `edtech` board are `BLOCK`.** Together they are
+**7 536★** of attention that a studio cannot convert into a deliverable. 🔵 That is the single
+most decision-relevant number on this page and it is not a licence-pedantry point: it is where
+the week's mindshare went.
+
+### 🟢 Trending — `topic:lms`, and five licence facts the shelf had wrong or missing
+
+| repo | ★ | `spdx` | verdict | note |
+|---|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | 3 355 | 🔴 `AGPL-3.0` | 🔴 `SELF-HOST-ONLY` | read at `develop`/`license.txt` |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 2 436 | 🔴 `AGPL-3.0` | 🔴 `SELF-HOST-ONLY` | platform field only |
+| [`codelitdev/courselit`](https://github.com/codelitdev/courselit) | 1 291 | 🔴 `AGPL-3.0` | 🔴 `SELF-HOST-ONLY` | sells courses + digital downloads |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 1 240 | 🟢 **`ECL-2.0`** | 🟢 `BUILD-ON` | 🔵 re-verified on bytes; 🔴 the `Apache-2.0` error is the **upstream `globant-kb` mirror's**, not this shelf's |
+| [`xiaochong0302/course-tencent-cloud`](https://github.com/xiaochong0302/course-tencent-cloud) | 1 175 | 🔴 `GPL-2.0` | 🔴 `SELF-HOST-ONLY` | 🔵 APAC supply: a Chinese online-course system whose README states free commercial use — **and GPL-2.0 is what the field says**. Not reconciled this pass |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 1 131 | 🔴 `AGPL-3.0` | 🔴 `SELF-HOST-ONLY` | the practical Open edX deployment path |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 1 019 | 🔴 **`GPL-3.0`** | 🔴 `SELF-HOST-ONLY` | 🔵 re-verified; 🔴 the `GPL-2.0` error is the **upstream mirror's**. Second grant file carries **BeezNest Latino SAC, Peru** |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | 507 | 🔴 `GPL-3.0` | 🔴 `SELF-HOST-ONLY` | EMEA institutional |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 449 | 🟢 **`Apache-2.0`** | 🟢 `BUILD-ON` | 🟢 **10 982 B reproduces this shelf's own prior byte count exactly** — the first cross-pass reproducibility check on a grant payload |
+| [`inducer/relate`](https://github.com/inducer/relate) | 437 | 🟢 **`MIT`** | 🟢 `BUILD-ON` | 🟢 **UPGRADED**: shelf had *"MIT by README text only, sidebar names no licence"*; a `LICENSE` exists and was read (1 144 B) |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 410 | 🟢 `MIT` | 🟢 `BUILD-ON` | permissive system of record |
+
+🔵 **The `topic:lms` board's licence distribution is the structural finding**: of 17 real LMS
+addresses, **7 are AGPL-3.0, 4 are GPL, and 3 are `BUILD-ON`**. The LMS category is
+copyleft-dominated, and the three permissive exceptions — Sakai (ECL-2.0), OpenOLAT
+(Apache-2.0), relate (MIT) — are all **institutional/academic** rather than commercial-SaaS
+projects. 🟢 That is a selection rule a proposal can use: *for a product, start from the academic
+LMS; for a deployment, any of them will do.*
+
+### 🔴 Stale-but-permissive, flagged because the combination misleads
+
+| repo | ★ | `spdx` | `pushed_at` | days stale |
+|---|---|---|---|---|
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | 1 141 | 🟢 `Apache-2.0` | `2026-06-29` | 🔴 **123** |
+| [`safytech/ulearn`](https://github.com/safytech/ulearn) | 701 | 🟢 `MIT` | `2026-03-10` | 🔴 **234** |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 586 | 🔴 `NOASSERTION` | `2026-03-25` | 🔴 **219** |
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 981 | 🔴 `NOASSERTION` | `2025-12-09` | 🔴 **325** |
+| [`gazpachu/hypatia`](https://github.com/gazpachu/hypatia) | 651 | 🔴 `NOASSERTION` | `2023-02-15` | 🔴 **~1 353** |
+
+🔵 **A permissive licence on a dead repository is a liability, not an asset** — `BUILD-ON` says
+Globant may ship it, and says nothing about who patches it. 🟢 All five dates are `pushed_at`,
+per `556-F`.
+
 ## 🆕 `p556` — `2026-10-30` — **🟢 TOPIC-SCOPED SWEEPS BEAT KEYWORD SWEEPS 100 % TO 31 % ON THIS SPACE, MEASURED. 🟢 `topic:edtech stars:>800` RETURNS NINE ROWS AND **SEVEN** ARE REAL EDUCATION ARTEFACTS; THE KEYWORD EQUIVALENT RETURNS THIRTEEN AND **FOUR** ARE. 🔴 THE LARGEST "EDTECH" REPOSITORY ON GITHUB IS A PDF-TO-SKILL CONVERTER WITH **36 578★**.**
 
 🔵 Channel: MCP `search_repositories`, `2026-10-30`. `curl` to `api.github.com` and

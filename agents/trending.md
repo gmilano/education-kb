@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p557` — `2026-10-30` — **🟢 THE WEEK'S NEW SUPPLY IS A **CONTENT-TRANSFORM** COHORT, NOT A TUTOR COHORT: four addresses created in October turn a source artefact into a lesson, and three of the four are MIT. 🔴 `topic:education` IS THE DILUTED SWEEP (9/25), NOT KEYWORD SEARCH — `556-G`'s RULE HOLDS BUT ITS AXIS WAS WRONG. 🟢 `DeepTutor` IS AT **51 633★**, 2.2× THE UPSTREAM LEDGER'S FIGURE.**
+
+### 🟢 New this week — read first-hand, `created_at` within 27 days
+
+| address | ★ | `spdx` | verdict | age | signal |
+|---|---|---|---|---|---|
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | **1 029** | 🟢 `MIT` | 🟢 `BUILD-ON` | **27 d** | 1 029★ and **142 forks** in 27 days. Book → animated, narrated, interactive lesson. 🟢 **Declares `scorm` in its topics** — it aims at the LMS package boundary, which is the one integration an institution does not have to be persuaded to accept |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | 550 | 🟢 `MIT` | 🟢 `BUILD-ON` | **16 d** | topic → course of 2-minute audio lessons **with cited sources**. 🔵 The citation requirement is the interesting part: it is the first of this cohort to treat provenance as a feature rather than a disclaimer |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 441 | 🔴 `AGPL-3.0` | 🔴 `SELF-HOST-ONLY` | **20 d** | explainer video from an AI *director* agent; **local-first, any model**. 🔴 AGPL — and a video pipeline is exactly the component a studio would want to fold in, so the licence is the blocker, not the capability |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **5 483** | 🔴 `CC-BY-NC-4.0` | 🔴 **`BLOCK`** | **12 d** | 🔴 **The week's biggest artefact is unusable.** 5 483★, 1 389 forks, twelve days. Grant read this pass — see `agents/top.md` and `556-H` |
+
+🔵 **The shape of the cohort is the finding.** Four of the five October addresses above —
+`Papermorph`, `claudemy`, `frametell`, plus `book-to-skill` (36 581★, MIT, `pushed_at`
+`2026-10-28`) — are **content transforms**: they take a book, a topic, a PDF or a brief and emit
+a lesson, a course, a video. 🔴 **None of them is a tutor.** Last week's headline
+(`learnharness`, 4 231★ at 14 days, AGPL) was a tutor; this week's supply is upstream of the
+tutor, in production. 🟡 One cohort is not a trend and is not written up as one — but the
+direction is recorded so the next pass can confirm or kill it.
+
+### 🟢 Trajectories, on `pushed_at` and re-read platform fields
+
+| address | figure this pass | prior figure on this base | delta |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **51 633★**, 6 321 forks, `pushed_at` `2026-10-30` | `22k`–`24k★` (upstream rotation ledger, cycles 2–3) | 🔴 **the ledger is ~2.2× low**; `556-D` |
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | 4 231★ at 14 d (`p556` read) | *"1.5k in 9 days"* (third-party outlet) | 🟢 trajectory, not conflict |
+| [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 4 597★, `pushed_at` `2026-10-30` | already carried, `AGPL-3.0` | 🔵 grant bytes now read: `4df3c306ddda` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 6 950★, `pushed_at` `2026-10-30`, `Apache-2.0` | already carried at 6 951★ | 🔵 re-verified on bytes, 1★ drift |
+
+🔵 **Every freshness claim above cites `pushed_at`**, per `556-F`. 🔴 Nine of nine addresses read
+on both fields last pass returned `updated_at` = the read date; it ranks, it does not date.
+
+### 🔴 `Gap 556-G` holds, and its axis was wrong — measured on five sweeps
+
+`556-G` filed the rule as *"sweep by topic first and keyword second"*, on two topic sweeps at
+77.8 % and 100 % against a keyword sweep at 30.8 %. 🔴 **This pass ran five sweeps and the
+dilution does not track topic-vs-keyword. It tracks topic BREADTH.**
+
+| sweep | real education-sector artefacts | hit rate |
+|---|---|---|
+| `topic:ai-tutor stars:>200` | 11 of 11 | 🟢 **100 %** |
+| `topic:edtech created:>2026-07-01 stars:>100` | 5 of 5 | 🟢 **100 %** |
+| `topic:edtech stars:>800` | 8 of 9 | 🟢 **88.9 %** |
+| `topic:lms stars:>300` | 17 of 20 | 🟢 **85 %** |
+| 🔴 **`topic:education stars:>400 pushed:>2026-10-01`** | **9 of 25** | 🔴 **36 %** |
+
+🔴 **`topic:education` is diluted worse than `556-G`'s keyword sweep was.** At that star floor it
+returns programming-curriculum collections and developer tooling —
+[`freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) (458 241★),
+[`free-programming-books`](https://github.com/EbookFoundation/free-programming-books) (400 551★),
+[`TheAlgorithms/Python`](https://github.com/TheAlgorithms/Python) (225 713★),
+`30-seconds-of-code`, `carbon-app/carbon` — artefacts that teach *developers* and are not
+education-sector software. 🔵 **The repair to the rule:** prefer the **narrow** topic
+(`ai-tutor`, `edtech`) and treat `education` as a keyword-grade channel. 🟢 The one-miss rows are
+named, not silently dropped: `topic:edtech`'s miss is
+[`Kaustubh-Natuskar/moreThanFAANGM`](https://github.com/Kaustubh-Natuskar/moreThanFAANGM) (job
+listings); `topic:lms`'s three are `SWE-agent` (a coding agent, mis-tagged), `snapcast` (a
+multiroom audio player) and `awesome-open-source-systems` (a list).
+
+🔴 **And a bound on the rule, found by hitting it:** topic qualifiers **cannot be OR'd** on this
+API — `topic:a OR topic:b` returns `Validation Failed: The search contains only logical operators
+(AND / OR / NOT) without any search terms`. 🔵 A *k*-topic sweep therefore costs *k* calls, which
+is the budget the ordering rule has to be priced against. Registered as `557-G`.
+
+### 🟡 Informed non-results, so absence is not read as coverage
+
+🔴 **No new tutor-class agent above 150★ was created in the last 30 days** that this pass could
+find, across five sweeps. The tutor cohort's newest member remains `learnharness` (`2026-10-16`).
+🔴 **No LATAM-origin agent address** surfaced in any sweep this pass — the nearest is
+[`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms), whose second grant file carries
+**BeezNest Latino SAC, Peru** copyright, and that is a platform of 2008, not a 2026 agent.
+🔵 Eighteenth consecutive pass with no LATAM supply-side address; the demand side, this pass, is
+a different story — see [`../intel/market.md`](../intel/market.md#-p557--2026-10-30).
+
 ## 🆕 `p556` — `2026-10-30` — **🟢 THE WEEK'S FASTEST EDUCATION AGENT HAS A NAME AGAIN: `learnharness`, **4 231★ IN 14 DAYS**, AND IT IS `AGPL-3.0`. 🔴 THE ROW AXIS IS BLANK FOR A SEVENTEENTH PASS ON THE *AGENT* SHELF — BUT NOT ON THE TREND AXIS, WHERE THE OCTOBER COHORT IS NOW LEGIBLE AND **ITS LICENCE DISTRIBUTION IS THE STORY**.**
 
 🔵 Channel named beside every figure, per `ACTION VV`: MCP `search_repositories`,

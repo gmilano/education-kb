@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p557` — `2026-10-30` — **🟡 THE ERP TIER REOPENS, AND IT IS THE ONLY TIER THAT MOVED: Odoo (**55 430★**) and OpenEduCat are `LGPL-3.0-only` on grant bytes → `LINK-ONLY` → client-hosted delivery is available, where `p556` graded both `BLOCK`. 🟢 `inducer/relate` UPGRADED from README-prose to a read grant file. 🔵 AND NINE ROWS WERE RE-VERIFIED RATHER THAN DISCOVERED — stated because this section's draft claimed five of them as new, and they were already here.**
+
+🔵 **Every row below was read at `HEAD` this pass** — default branch resolved by
+`git ls-remote --symref`, body fetched from `raw.githubusercontent.com`, bytes and `sha256`
+over the newline-stripped body. Full table:
+[`../evidence/grant-bytes.2026-10-30-p557.tsv`](../evidence/grant-bytes.2026-10-30-p557.tsv).
+
+🔴 **The honest accounting first.** This pass read 17 grant payloads. **Three produced new
+information** (`odoo`, `openeducat_erp`, `inducer/relate`); **one produced a confirmed negative**
+(`cn-math-taxonomy`); **two closed register gaps on bytes** (`learnharness`,
+`education-agent-skills`); 🔵 **and nine reproduced what this shelf already carried correctly.**
+🟢 A re-read that reproduces a prior figure is worth recording as exactly that — OpenOLAT at
+**10 982 B twice, by two probes in two passes**, is the only cross-pass reproducibility check this
+base has on a grant payload — but it is not a discovery, and the draft of this section called five
+such rows new. 🔴 **Retracted.**
+
+### 🟢 Tier 1 — `BUILD-ON`: may be modified and shipped inside a closed deliverable
+
+| repo | ★ | `spdx` (read) | bytes · `sha256/12` | `pushed_at` | why it is a foundation |
+|---|---|---|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **6 950** | 🟢 `Apache-2.0` | 11 357 · `58d1e17ffe51` | `2026-10-30` | 🔵 **Carried since an earlier pass; re-verified on bytes this pass.** Its unit is the *exploration* — a branching lesson that responds to the specific wrong answer, not a page with a quiz at the end. Eleven years of pedagogy work, Apache-2.0, actively pushed. Default branch is 🔴 **`develop`** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 1 240 | 🟢 **`ECL-2.0`** | 11 119 · `efbb3e5a1b9a` | `2026-10-30` | institutional LMS for HE consortia. 🔵 Educational Community License v2.0 — Apache-derived, `BUILD-ON` either way. 🔵 This shelf already had it right (`ECL-2.0` appears 314× against 95× for `Apache-2.0`); 🔴 the `Apache-2.0` error is the **upstream `globant-kb` mirror's** |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 449 | 🟢 `Apache-2.0` | 10 982 · `6dbc5b605ed0` | `2026-10-30` | 🟢 **10 982 B reproduces this shelf's own prior byte count exactly** — the platform field says `NOASSERTION`, the shelf and this pass both read Apache-2.0. Institutional LMS across Swiss/German/Austrian universities — the permissive EMEA counterpart to Sakai. `NOTICE.TXT` also present (14 711 B, `eab74dcec74e`) |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 410 | 🟢 `MIT` | 1 093 · `7ff3d1c30bb7` | `2026-10-28` | 🔵 **Carried; re-verified on bytes.** The permissive system of record — school management on Laravel + Filament: enrolment, periods, courses, attendance, grades |
+| [`inducer/relate`](https://github.com/inducer/relate) | 437 | 🟢 `MIT` | 1 144 · `e6c20b652766` | `2026-10-29` | 🟢 **UPGRADED.** This shelf carried it as 🟡 *"MIT by README text only — sidebar names no licence"*; a `LICENSE` file exists and was read, opening *"RELATE is licensed to you under the MIT/X Consortium license"*. Course platform built for university teaching: versioned course content in git, timed/randomised assessment, fine-grained grading. MIT/X Consortium wording |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 162 | 🟢 `MIT` | *carried* | `2026-10-30` | offline-first learning platform — the one base that assumes no connectivity. Carried, unchanged |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 1 029 | 🟢 `MIT` | 1 068 · `e16528680638` | `2026-10-29` | content transform with a **SCORM** target: the foundation for "existing LMS, better content" rather than platform replacement |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **36 581** | 🟢 `MIT` | 1 068 · `be9b04bccfb4` | `2026-10-28` | PDF → agent skill, 3 877 forks. Default branch 🔴 **`master`** |
+
+### 🟡 Tier 2 — `LINK-ONLY`: link the library, publish changes to the library itself
+
+| repo | ★ | `spdx` (read) | bytes · `sha256/12` | caveat read from the same header |
+|---|---|---|---|---|
+| [`odoo/odoo`](https://github.com/odoo/odoo) | **55 430** | 🟡 **`LGPL-3.0-only`** | 43 529 · `abc09dad5f84` | 🔴 *"Some external libraries and contributions bundled with Odoo may be published under other GPL-compatible licenses"* — the root grant does not cover the whole tree |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 901 | 🟡 **`LGPL-3.0-only`** | 8 240 · `8f4ce028f93d` | same carve-out, same wording. 783 forks, `pushed_at` `2026-10-29` |
+
+🟢 **This is `Gap 556-C`'s payoff and it changes a recommendation, not just a cell.** With both
+graded `BLOCK`, the education-ERP answer was *"there isn't one you can use"*. At `LINK-ONLY` the
+answer is *"there is one, 55 430★ and 901★, and the engagement is client-hosted with Globant's
+work in separate modules"* — which is how Odoo integration is sold everywhere else anyway.
+🔴 **Not `or-later`**: both headers state Version 3 with no election, so forward combination is
+not available on the strength of this read.
+
+### 🔴 Tier 3 — `SELF-HOST-ONLY`: deployable for a client who runs it, not foldable into a product
+
+| repo | ★ | `spdx` (read) | bytes · `sha256/12` | note |
+|---|---|---|---|---|
+| [`frappe/lms`](https://github.com/frappe/lms) | 3 355 | 🔴 `AGPL-3.0` | 33 892 · `543fa96aec22` | default branch 🔴 **`develop`**, grant at lowercase `license.txt` — two of the three traps in one address |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 1 019 | 🔴 **`GPL-3.0`** | 35 146 · `c53a65c2fd56` | 🔵 re-verified; 🔴 the `GPL-2.0` error is the **upstream mirror's**. Second file `license.txt` (1 613 B, `440aa65f01a8`) carries **BeezNest Latino SAC, Peru** — the only LATAM-origin vendor on this tier |
+| [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) | 2 436 | 🔴 `AGPL-3.0` | *platform field* | `pushed_at` `2026-10-25`; grant bytes not read this pass |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 1 736 | 🔴 `AGPL-3.0` | 34 522 · `20b067f86de3` | 🔵 equal length to the canonical AGPLv3 but a different digest: it differs **only by a line break** at appendix lines 636–637. Recorded so a later pass does not read it as a bespoke grant |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 1 131 | 🔴 `AGPL-3.0` | *platform field* | the Docker Open edX distribution — the practical way Open edX is deployed |
+| [`echo-loop/Echo-Loop`](https://github.com/echo-loop/Echo-Loop) | 4 597 | 🔴 `AGPL-3.0` | 34 522 · `4df3c306ddda` | byte-identical to `learnharness`'s grant — canonical AGPLv3 |
+| [`sitor-ai/frametell`](https://github.com/sitor-ai/frametell) | 441 | 🔴 `AGPL-3.0` | *platform field* | local-first explainer-video agent |
+
+### 🔴 Tier 4 — `BLOCK` and `ASK`, named rather than dropped
+
+- 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) (2 053★) — **bespoke "PageLM
+  Community License"**, non-commercial, redistribution prohibited, revenue-share, partial-use
+  clause reaching a *design pattern*. `BLOCK`. 🔴 **Its first permission sentence is MIT's**
+  (`557-C`).
+- 🔴 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy)
+  (5 483★) — `CC-BY-NC-4.0`. `BLOCK`. The best curriculum graph in the market, unusable
+  commercially (`556-H`, `Trend 60`).
+- 🟡 [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+  (931★) — `CC-BY-SA-4.0` → **`ASK`**: a real licence the delivery table does not know. Share-alike
+  on adaptations of the *skills corpus* is a content question, not a code question, and it needs
+  counsel rather than a verdict.
+- 🔴 [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (347★) — **no grant file
+  at all**, on a repository that calls itself *"commercial grade"*. Carried from `p556`, unchanged.
+
+🟢 **`Gap 556-E` CLOSED on both limbs.** Its complaint was that `LINK-ONLY` and `ASK` were
+**0 of 42** on the live shelf and proven only by fixtures. They are now **2** real rows
+(`odoo`, `openeducat_erp`) and **1** real row (`education-agent-skills`) respectively. 🔵 Every
+arm of [`../ingest/delivery-fitness.py`](../ingest/delivery-fitness.py) is now exercised by
+production data.
+
+### 🔵 What this pass did NOT re-read, and what the shelf already holds
+
+🔵 **Four rows carry a verdict this pass did not re-verify:** `learnhouse` (2 436★),
+[`overhangio/tutor`](https://github.com/overhangio/tutor) (1 131★),
+[`moodle/moodle`](https://github.com/moodle/moodle) and
+[`openedx/edx-platform`](https://github.com/openedx/edx-platform).
+
+🔴 **The draft of this section asserted that Moodle's and Open edX's grant bytes had "never been
+read in 557 passes". That is false and is retracted.** 🟢 This shelf has read both: Moodle's
+`license.txt` at **35 147 B** against a **35 149 B** variant, reconciled line by line — *"differ
+on exactly four lines, all URL-scheme modernisations"*, with the byte arithmetic closing exactly —
+and `openedx/edx-platform` at **35 136 B**. 🔵 **That is a better byte-level reconciliation than
+anything this pass produced**, and the draft would have thrown it away.
+
+🔵 **The lesson is the same one `557-C` records**: this base's history is deeper than its
+top-of-page tables, and a pass that does not read the history re-derives it badly. 🟢 The check
+that caught all three of this section's false claims was mechanical and cheap — `grep` the shelf
+for each address before calling a row new — and is proposed as a standing pre-write step.
+
 ## 🆕 `p556` — `2026-10-30` — **🟢 THE FOUNDATION LAYER GRADED FOR DELIVERY FOR THE FIRST TIME: OF THE SIX LMS/SIS PLATFORMS A STUDIO WOULD ACTUALLY START FROM, **ONE** IS PERMISSIVE. 🔴 THE PERMISSIVE LMS OF SCALE IS `kolibri` AT **1 162★** — TWO ORDERS BELOW THE COPYLEFT ONES.**
 
 🔵 Channel: MCP `search_repositories`, `repo:`-filtered and topic-scoped, `2026-10-30`; every

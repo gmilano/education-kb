@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p557` — `2026-10-30` — **🔴 THE MARKET-SIZE FIGURE IS NOT A FIGURE: EIGHT RESEARCH FIRMS SPAN **3.1× ON THE 2026 BASE YEAR AND 11.1× ON THE TERMINAL** — same mechanism that retired `134/31`, and a standing rule is now proposed for it. 🟢 LATAM PAYS WITH INSTITUTIONS AND A DEPLOYMENT: the UNESCO LAC Observatory's eleven named partners, and a Chilean university running **194 pedagogical agents across ~100 courses**. 🔴 AND THE DEMAND CHANNEL ASYMMETRY IS RE-CHARACTERISED: the host is **search-reachable and fetch-unreachable**, which is not what seventeen passes of "saturation" recorded.**
+
+🔵 **All five regions are written below and amended in place in the authoritative
+[`## Opportunities by region`](#opportunities-by-region) block.** The legs that returned nothing
+new say so. 🔵 `region` is the closed five-value vocabulary; countries are named in the prose only.
+
+### 🔴 The market-size figure, surveyed rather than quoted
+
+🔴 **Eight firms, read this pass. The dispersion is the finding, not any row.**
+
+| firm | 2026 base | terminal | CAGR | note |
+|---|---|---|---|---|
+| Grand View Research *(as reported)* | **$11.4 B** | $57.2 B (2033) | 25.9 % | highest base |
+| The Business Research Company | **$10.6 B** | — | 40.9 % | the figure `p552` carried as "Research and Markets" |
+| Precedence Research | **$9.58 B** | **$136.79 B** (2035) | 34.52 % | 🔴 **highest terminal on record** |
+| Value Market Research | $8.51 B (2025) | $102.03 B (2034) | 31.78 % | translated secondary summary |
+| Straits Research | **$8.24 B** | $98.71 B (2034) | 36.4 % | |
+| IMARC Group | $6.4 B (2025) | $79.6 B (2034) | 31.35 % | |
+| giiresearch *(relay)* | **$6.02 B** | $12.30 B (2032) | 🔴 **12.55 %** | lowest CAGR by 3.3× |
+| Persistence Market Research | 🔴 **$3.7 B** | $14.1 B (2033) | 21.0 % | lowest base |
+
+🔴 **Base-year spread: $3.7 B → $11.4 B = 3.1×. Terminal spread: $12.3 B → $136.8 B = 11.1×.
+CAGR spread: 12.55 % → 40.9 % = 3.3×.** 🔵 These are not forecast disagreements about the future;
+**the 3.1× is disagreement about the present**, which is a definition problem, exactly as `p552`
+diagnosed on two sources. 🟢 This pass's contribution is the **denominator**: eight firms, not two,
+and the dispersion quantified.
+
+🔴 **The mechanism is `Gap 455-F`'s, re-run on a different figure.** `134 bills / 31 states` was
+retired because it was *one tracker* presented as *the* count, and three others disagreed by 2.6×.
+🔴 **An AI-in-education market size is the same shape, and worse: 3.1×.** 🟢 **Proposed standing
+rule (`557-D`): a market size on this base is cited with its firm, its base year and its scope
+word, or it is not cited.** 🔵 Segment figures, which are narrower and therefore more honest about
+what they measure, carried from `p552` unchanged: **agentic** AI in education **$2.37 B** (2026) →
+$11.83 B (2031); **AI tutors** $3.6 B (2026) → $17.7 B (2033).
+
+🔴 **One evidence-quality finding that should temper every figure above.** A **July 2026 scoping
+review of 474 studies** reports the research landscape *fragmented*, with **pedagogical design
+still poorly connected to technical capability**. 🔵 So the market is being sized confidently and
+the efficacy base is not settled. That belongs in a proposal's risk section, not its appendix.
+
+### 🟢 Regional legs, graded — and three of four were already shelved
+
+🔵 **Graded honestly against `p556`, which covered this surface one pass ago.** The run is hourly
+against channels that move weekly; most of what returned is already here.
+
+| leg | returned | grade |
+|---|---|---|
+| **North America** | US DoE **final supplemental priority on advancing AI in education, published `2026-04-13`**; **30 states** had issued guidance as of January 2026; Gallup **60 % of US teachers** use AI tools; College Board **55 % of principals** had not blocked generative AI on the school network | 🟡 **partly new** — the DoE priority date and the three adoption figures are new; the legislative surface is `p556`'s |
+| **EMEA** | EU AI Act: education high-risk obligations at **`2027-12-02`**; 🟢 **Article 50 transparency duties still begin `2026-08-02`** and are *not* delayed; South Africa's draft national AI policy — **Gazette Notice 3880 of 2026, `2026-04-10`**, reported **abrogated `2026-04-27`** | 🟡 **one new fact**: the Article 50 split. 🔴 The `2027-12-02` date is `p556`'s. 🔴 The South Africa status is **unconfirmed on two readings** and is relayed, not adopted |
+| **APAC** | **Ipsos Education Monitor 2026** on support for banning AI in schools: **Indonesia 23 %**, **South Korea 31 %** (from 27 %), **Japan 29 %** (from 21 %), **Australia 52 %** (from 47 %); Microsoft × **University of Sydney** educator-designed agents in production — nursing simulations, a 24/7 automotive study agent, academic-writing support, a sports-marketing mentor | 🟢 **new** — the Ipsos series is the first *attitudinal* trend line on this base, and it moves **against** adoption in three of four countries |
+| **LATAM** | 🟢 **UNESCO IESALC × UNU-IAS: 200 institutions, 19 countries — 87 % use AI in ≥1 area, 74 % in teaching and learning, only 26 % have a formal AI strategy**; **Universidad de los Andes 2026: 716 AI regulatory instruments across 23 countries and territories, >80 % initiated since 2023**; **UNESCO Observatory on AI in Education for LAC, launched `2026-04-14`, Santiago**; a **Chilean university running 194 pedagogical agents across ~100 courses and 4 600+ students** | 🟢 **substantially new** — `p556` carried the 87 %; the denominator (200/19), the **26 % strategy gap**, the 716-instrument count, the Observatory's partner list and the Chilean deployment are all new |
+
+### 🔴 The channel asymmetry, re-characterised — and seventeen passes described it wrongly
+
+🔴 `p455` recorded `www.iesalc.unesco.org` as refused at **CONNECT** (`connect_rejected`) by the
+network policy, and seventeen passes since have recorded demand nils as **saturation**.
+🔴 **Measured directly this pass: the host does not resolve at all** —
+`getaddrinfo ENOTFOUND www.iesalc.unesco.org`. That is **DNS**, not a connect refusal: the host is
+outside this environment's allowed domains.
+
+🟢 **And in the same session, WebSearch returned that study's findings with quoted figures.**
+🔵 **So the demand leg is `search`-reachable and `fetch`-unreachable**, and the two are different
+transports with different reach. 🔴 **Seventeen "saturations" were measured on the transport that
+cannot reach the host, in a session where the transport that can was available.** 🟢 That is why
+LATAM paid this pass after seventeen blanks — not because the channel moved, but because the leg
+was run on the channel that answers. Registered as `557-F`. 🔵 It is the same error class as
+`Gap 554-A`, where `p554` tested `curl` alone and generalised to "the platform channel is gone".
+
+🟡 **What this does not license.** A search summary is still a **relay**: it carries quotes, not
+bytes, and this base cannot verify a quoted figure against a primary it cannot fetch. 🟢 The
+mitigation stands — publish the **instrument number** (`Gazette Notice 3880 of 2026`,
+`Regulation (EU) 2026/1744`, `K-12 AI Literacy and Readiness Act of 2026`, `PL 2338/2023`) so a
+reader with primary access can check what this base could not.
+
+### 🔵 Competitor moves returned this pass
+
+- 🟢 **Instructure shipped an agent product in March 2026** — the Canvas incumbent is now selling
+  agents, not planning them. 🔵 A Canvas-replacement proposal now argues against a shipped
+  product, which is a materially different sale than it was two quarters ago.
+- 🟢 **Microsoft's delivery pattern is educator-authored agents**, not vendor-authored ones
+  (University of Sydney, above). 🔵 That is the pattern Globant competes with in HE: the
+  institution's own staff compose the agents and the vendor supplies the platform.
+- **Duolingo Q2 2026 (reported `2026-08-12`): $298.5 M revenue, +18 % YoY** — 🟡 secondary
+  aggregator, recorded as the consumer-side reference point, not adopted as a market figure.
+
+### 🔴 Informed non-results
+
+🔴 **No EMEA national ministry instrument** was found for France, Germany, Spain, Saudi Arabia or
+the Nordics — **eighteenth consecutive pass**, and the EMEA query again returned predominantly US
+material. 🔴 **No LATAM national AI law in force that reaches education**: Brazil's `PL 2338/2023`
+remains the furthest advanced, unchanged from `p556`. 🔴 **No Canadian federal education-AI
+instrument**; the NA leg remains a state/provincial surface. 🔵 All four recorded so absence is
+not read as coverage.
+
 ## 🆕 `p556` — `2026-10-30` — **🟢 THE EU'S HIGH-RISK DATE FOR EDUCATION IS NAMED WITH ITS INSTRUMENT FOR THE FIRST TIME: **REGULATION (EU) 2026/1744**, ANNEX III → **2 DECEMBER 2027**, ANNEX I → **2 AUGUST 2028**. 🟢 APAC GAINS TWO DATED NATIONAL MANDATES (INDIA CLASS 3, AY 2026-27; CHINA'S APRIL 2026 LITERACY PLAN). 🔴 LATAM'S SUPPLY BLANK HOLDS FOR A SEVENTEENTH PASS, AND THIS PASS RAN THE SPANISH/PORTUGUESE SWEEP THAT PROVES IT IS NOT AN INSTRUMENT ARTEFACT.**
 
 🔵 **All five regions are written below and in the authoritative
@@ -450,6 +544,22 @@ assessment layer, not the LMS**: `academico` (MIT), `jupyter/nbgrader` (BSD-3-Cl
 and `ucbds-infra/otter-grader` (BSD-3-Clause, 161★, UC Berkeley) are all `BUILD-ON`, and all
 three sit in exactly the Jupyter/Canvas/Gradescope estate a North American university already runs.
 
+
+🆕 **`p557` (`2026-10-30`).** 🟢 **Instrument and adoption figures, relayed:** the **US Department
+of Education published its final supplemental priority on advancing AI in education on
+`2026-04-13`**; **30 states** had issued AI-in-education guidance as of January 2026; Gallup puts
+**60 % of US teachers** using AI tools, and a College Board figure has **55 % of principals** not
+blocking generative AI on the school network. 🔴 **The `134 bills / 31 states` figure surfaced
+again and is again NOT adopted** — `Gap 455-F` retired it as one tracker among four disagreeing by
+2.6×.
+🟢 **Opportunity, and it moved against us this year:** **Instructure shipped an agent product in
+March 2026**. A Canvas-replacement pitch now argues against a *shipped* product rather than a
+roadmap, which is a materially harder sale. 🟢 **The counter-position is the permissive base:**
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) is **`ECL-2.0`** (11 119 B, read this
+pass) — the Educational Community License is what HE consortium procurement already recognises, and
+`BUILD-ON` means the deliverable can be the client's property. 🔵 Usage is ahead of governance here,
+so the sellable first phase is **policy-plus-pilot**, not platform replacement.
+
 ### EMEA
 
 🟢 **The only region that produced claims this base did not already hold.** Both are
@@ -731,6 +841,25 @@ consultation ongoing — 🟡 blog-sourced). 🔴 **An informed gap: no national
 was found this pass for France, Germany, Spain, Saudi Arabia or the Nordics**, and the search
 that should have produced them returned US material instead.
 
+
+🆕 **`p557` (`2026-10-30`).** 🟢 **The date split is the finding, and it changes what to sell
+first.** Education's **high-risk** obligations under the EU AI Act sit at **`2027-12-02`** for
+stand-alone Annex III systems (`Regulation (EU) 2026/1744`, carried from `p556`) — 🟢 **but
+Article 50 transparency duties still begin `2026-08-02` and were NOT delayed.** 🔵 So the
+near-term EMEA deliverable is **disclosure and transparency**, which is due now, rather than
+high-risk conformity, which is fourteen months out. A proposal that leads with conformity is
+selling the client's 2027 problem.
+🟡 **Africa, relayed and unconfirmed:** South Africa's draft national AI policy lists education as
+a priority sector — **Gazette Notice 3880 of 2026, `2026-04-10`**, reported **abrogated
+`2026-04-27`**. 🔴 Two readings disagree on current status; the instrument number is published so a
+reader with primary access can settle what this base cannot.
+🟢 **Supply:** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) is **`Apache-2.0`**
+(10 982 B — 🟢 reproducing this shelf's own prior byte count exactly), deployed across Swiss, German
+and Austrian institutions: the permissive EMEA counterpart to Sakai.
+🔴 **Informed gap, eighteenth consecutive pass:** no national ministry instrument found for France,
+Germany, Spain, Saudi Arabia or the Nordics; the EMEA query again returned predominantly US
+material.
+
 ### APAC
 
 🔴 **Nothing new, and the shape of the blank is worth stating precisely.** The leg returned
@@ -988,6 +1117,24 @@ found anywhere**: [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kao
 🟢 `Apache-2.0`) is a **multi-tenant platform for offline training institutions** with
 tenant→campus→teacher→student hierarchy and per-tenant model and billing policy — 🟢 the only
 row on this base built for the *operator* of a training business rather than for a learner.
+
+
+🆕 **`p557` (`2026-10-30`).** 🟢 **The first attitudinal series on this base, and it runs against
+adoption.** **Ipsos Education Monitor 2026**, support for *banning* AI in schools: **Australia
+52 %** (from 47), **Japan 29 %** (from 21 — the largest move in the series), **South Korea 31 %**
+(from 27), **Indonesia 23 %** (lowest). 🔵 Every other figure this base carries measures **usage**;
+this one measures **consent**, and three of four countries moved toward restriction.
+🟢 **Delivery pattern in production:** Microsoft × **University of Sydney** runs *educator-designed*
+agents — nursing simulations, a 24/7 automotive study agent, academic-writing support, a
+sports-marketing mentor. 🔵 That is the competitive shape in APAC HE: the institution's own staff
+compose the agents and the vendor supplies the platform.
+🔵 **Regulation, carried:** South Korea's **AI Basic Act in force `2026-01-22`**; **Vietnam's Law
+on Artificial Intelligence in force `2026-03-01`** (passed `2025-12-10`).
+🔴 **Supply signal, and it is blocked:** the region produced the week's largest education artefact —
+[`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy), 5 483★ and 1 389 forks in
+twelve days, aligned to the Chinese national curriculum — and it is **`CC-BY-NC-4.0`**, so `BLOCK`.
+🟢 **The engagement consequence of `Trend 69` is concrete:** in APAC K-12 the hardest deliverable is
+the **inspectability** that lets a school answer a parent, not the model.
 
 ### LATAM
 
@@ -1285,6 +1432,34 @@ region's connectivity profile exactly** — [`learningequality/kolibri`](https:/
 [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) (649★, 🟡 GPL-2.0,
 Spanish-language SIS) as the self-host options where an institution already runs them.
 
+
+🆕 **`p557` (`2026-10-30`).** 🟢 **The region paid this pass after seventeen recorded blanks — and
+the blanks were a transport artefact, not an absence** (`557-F`): the demand host is
+`search`-reachable and `fetch`-unreachable, and seventeen "saturations" were measured on the
+transport that cannot reach it.
+🟢 **The headline number is a gap, and the gap is the offer.** UNESCO **IESALC × UNU-IAS**, across
+**200 institutions in 19 countries**: **87 % use AI in at least one area**, **74 % in teaching and
+learning** — and **only 26 % have a formal AI strategy**. 🔵 Adoption is bottom-up, driven by
+individual academics and students ahead of institutional governance. 🟢 **So the sellable first
+engagement in LATAM HE is governance and strategy, not tooling** — the tooling is already in the
+building, unmanaged.
+🟢 **The regulatory surface is fragmenting, with a number on it:** a 2026 Universidad de los Andes
+study counts **716 AI-related regulatory instruments, rules and proposals across 23 countries and
+territories, more than 80 % initiated since 2023**. 🔴 No country in the region has an in-force
+general AI law reaching education; Brazil's `PL 2338/2023` remains furthest advanced.
+🟢 **The institutional buyer map, newly named:** the **UNESCO Observatory on AI in Education for
+Latin America and the Caribbean**, launched **`2026-04-14` in Santiago**, is led with **CAF**,
+**CENIA** (Chile), **Cetic.br/NIC.br** (Brazil), **ECLAC**, **Fundación Ceibal**, **Fundación
+Santillana**, **Tecnológico de Monterrey**, **ProFuturo**, **Universidad del Desarrollo** and
+**IRCAI**. 🔵 That is a partner list, and a partner list is a route to market.
+🟢 **And there is now a reference deployment at scale:** a **Chilean university running 194
+pedagogical agents across ~100 courses and 4 600+ students**. 🔵 The first LATAM deployment figure
+on this base that is countable rather than aspirational.
+🔵 **Supply:** [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) (**`GPL-3.0`**,
+35 146 B) carries **BeezNest Latino SAC, Peru** copyright — the one LATAM-origin platform here, and
+it dates from 2008. 🔴 **Informed gap, eighteenth consecutive pass: no LATAM-origin agent address
+surfaced in any of five supply sweeps.**
+
 ### Global
 
 🟢 **Added at `p554`, and it is content rather than a shim: this block was missing a
@@ -1386,6 +1561,28 @@ is exactly why it belongs in the `Global` bucket and not in any single region's.
 (both BSD-3-Clause) for assessment, `fsrs4anki` + `anki-mcp-server` (both MIT) for retention,
 `DeepTutor` (Apache-2.0) or `OpenMAIC` (MIT) for the agent layer, and `gen-mentor` (CC0-1.0,
 WWW 2025) as the only peer-reviewed architecture among them.
+
+
+🆕 **`p557` (`2026-10-30`).** 🔴 **Stop quoting a single market size.** Eight research firms read
+this pass: the **2026 base year spans $3.7 B → $11.4 B (3.1×)**, the terminal spans
+**$12.3 B → $136.8 B (11.1×)**, and CAGR spans **12.55 % → 40.9 % (3.3×)**. 🔵 The 3.1× is
+disagreement about **the present**. 🟢 Standing rule (`557-D`): cite a market size with its
+**firm, base year and scope word**, or not at all. 🔵 Narrower segment figures are more honest about
+what they measure: **agentic** AI in education **$2.37 B** (2026) → $11.83 B (2031); **AI tutors**
+$3.6 B (2026) → $17.7 B (2033).
+🔴 **And temper all of it:** a **July 2026 scoping review of 474 studies** finds the research
+landscape fragmented, with **pedagogical design still poorly connected to technical capability**.
+The market is being sized confidently on an efficacy base that is not settled — that belongs in a
+proposal's risk section.
+🟢 **Two structural facts for any region.** (1) **The curriculum graph is the scarce asset**
+(`Trend 60`, now **confirmed**): the best one in existence is `CC-BY-NC-4.0`, so it is a **priced
+build** (`P557-B`), not a dependency. (2) **The LMS category is copyleft-dominated** — of 17 real
+LMS addresses swept this pass, **7 are AGPL-3.0, 4 are GPL and 3 are `BUILD-ON`** — and **every
+permissive exception is academic** (Sakai `ECL-2.0`, OpenOLAT `Apache-2.0`, RELATE `MIT`). 🟢 For a
+product, start from an academic LMS; for a deployment, any of them will serve.
+🟡 **And read the distribution, not the core:** `openedx/edx-platform` is Apache-2.0, but
+[`overhangio/tutor`](https://github.com/overhangio/tutor) — the thing actually installed — is
+**AGPL-3.0**.
 
 ## 🆕 `p553` — `2026-10-30` — **🔴 FOURTEENTH CONSECUTIVE DEMAND SATURATION. 🔴 THE RETIRED `134/31` FIGURE RETURNED A **FIFTH** TIME AND IS STILL NOT ADOPTED. 🟢 EMEA GAINS ITS FIRST CURRICULUM-PLACED PERMISSIVE SUPPLY ROW. 🔴 LATAM'S SUPPLY BLANK IS **NOT** BROKEN — THE ONE ARTEFACT FOUND IS A CITATION SHELL WHOSE LICENCE CONTRADICTS ITSELF ON THREE CHANNELS.**
 

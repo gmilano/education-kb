@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p557` — `2026-10-30` — **🟡 `P557-A` is the pattern `Gap 556-C` unlocked: an education-ERP engagement on **OpenEduCat + Odoo at `LINK-ONLY`**, where the module boundary and the licence boundary are the same line. 🟢 `P557-B` prices the thing the market does not sell: a **permissive curriculum graph**, because the best one in existence is `CC-BY-NC-4.0`. 🟢 `P557-C` is a four-line pre-write check that caught three false claims in this pass.**
+
+### 🟡 `P557-A` — Education ERP on OpenEduCat + Odoo, 8–10 weeks, client-hosted
+
+🔵 **For:** a school network, private university or institutional group that needs admissions,
+student records, gradebook, fees and attendance in one system of record, with agents on top.
+🔵 **The constraint this pattern exists to satisfy:** `LGPL-3.0-only` — so Odoo may be **linked
+and extended**, never folded into a closed product, and the client hosts it.
+
+| Layer | Component | `spdx` (read at `HEAD`) | Verdict | Why this one |
+|---|---|---|---|---|
+| System of record | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) 901★ · 783 forks | 🟡 **`LGPL-3.0-only`** 8 240 B `8f4ce028f93d` | 🟡 `LINK-ONLY` | education ERP as Odoo addons: admissions, students, faculty, courses, exams, fees, library |
+| Platform | [`odoo/odoo`](https://github.com/odoo/odoo) **55 430★** | 🟡 **`LGPL-3.0-only`** 43 529 B `abc09dad5f84` | 🟡 `LINK-ONLY` | ORM, access rules, reporting, XML-RPC/JSON-RPC. Branch `20.0` |
+| Agent runtime | **Globant's own modules** — separate Odoo addons | 🟢 proprietary | 🟢 ships | 🟢 **This is the whole point: a new addon is a new module, and a module is a separate work** |
+| Tutor / learner loop | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) **51 633★** | 🟢 `Apache-2.0` | 🟢 `BUILD-ON` | runs **outside** the ERP as a service; the ERP is its roster and gradebook, not its host |
+| Content | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) 1 029★ | 🟢 `MIT` | 🟢 `BUILD-ON` | emits **SCORM**, which OpenEduCat's LMS side and any incumbent LMS both accept |
+| Retention | [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) 128★ | 🟢 `MIT` 1 067 B | 🟢 `BUILD-ON` | pluggable schedulers + FSRS; ships an MCP server, so the tutor can schedule review directly |
+
+🟢 **Wiring, concretely.** (1) OpenEduCat on the client's infrastructure — unmodified, so no LGPL
+publication obligation is triggered. (2) Globant's work ships as **separate addon modules** in
+`addons/globant_*`, calling Odoo's ORM in-process and exposing JSON-RPC to the agent layer.
+🔴 **The one rule that keeps this clean: never patch a file under `odoo/` or `openeducat_*/`.** A
+patch there is a modification of an LGPL work and comes back out; a new model, a new view and an
+inherited method in your own module do not. (3) `DeepTutor` runs as its own service and reads the
+roster over JSON-RPC; its learner memory is **Globant's schema in Globant's database**, which is
+what keeps the valuable artefact on the right side of the line. (4) `Papermorph` generates SCORM
+packages into OpenEduCat's content store. (5) `MindTrain`'s MCP server is registered with the
+tutor so a diagnosis becomes a scheduled review in the same turn.
+
+🔴 **The carve-out that must be read before contract, not after:** both LICENSE headers state
+*"Some external libraries and contributions bundled with Odoo may be published under other
+GPL-compatible licenses."* 🔵 The root grant does not cover the whole tree, so **a vendored
+dependency in scope is its own licence read** — one `probe-grant` run over the addons actually
+deployed, not over the repository root. 🟡 And the grant is **Version 3 only**: no or-later
+election, so nothing here may be relicensed forward on the strength of this read.
+
+🔵 **Timeline:** w1–2 OpenEduCat + Odoo `20.0` stood up, data model mapped to the client's
+registry; w2–4 Globant addon skeleton, JSON-RPC surface, auth; w4–6 `DeepTutor` service against
+the live roster; w6–8 `Papermorph` SCORM pipeline + `MindTrain` scheduling; w8–10 dependency
+licence sweep over the deployed addon set, and handover of a hosting runbook. 🔴 **Deliverable is
+a deployment plus Globant-owned modules — not a product.** If the client wants a product, this is
+the wrong base and `P556-A` is the right one.
+
+### 🟢 `P557-B` — Build the curriculum graph, 6–8 weeks, any region
+
+🔵 **For:** any adaptive-learning engagement, because **this is the component the market does not
+sell.** 🔴 `Gap 556-H` closed against availability: the best prerequisite graph in existence —
+[`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy), 1 644 knowledge points,
+2 403 prerequisite edges, 6 723 items, **5 483★ and 1 389 forks in twelve days** — is
+`CC-BY-NC-4.0` and therefore `BLOCK`. 🟢 `Trend 60` is now confirmed, so the graph is a **priced
+line item**, and this pattern is what that line item buys.
+
+| Step | Component | `spdx` | What it does |
+|---|---|---|---|
+| 1 — reference, **not dependency** | [`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 `CC-BY-NC-4.0` | 🔴 **read for its schema and its edge semantics; nothing copied.** 1 644 nodes / 2 403 edges is the shape to match. `CC-BY` permits citation; `NC` forbids the deliverable |
+| 2 — the client's own corpus | client curriculum, textbooks, past assessments | client-owned | 🟢 **the only lawful source of graph content** — and it is better content, because it matches what the client actually teaches |
+| 3 — extraction | an LLM pipeline + human review | Globant | nodes from syllabus and chapter structure; candidate prerequisite edges from "requires", "builds on", "assumes" language |
+| 4 — lesson structure | [`oppia/oppia`](https://github.com/oppia/oppia) **6 950★** | 🟢 `Apache-2.0` 11 357 B | explorations with **explicit misconception branches** — each graph node gets somewhere structured for a wrong answer to land |
+| 5 — validation | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 `MIT` | 🟢 **the edges are a hypothesis and this is the test**: if B truly requires A, mastery of A must predict performance on B. Edges that fail are deleted |
+| 6 — scheduling | [`shigella520/MindTrain`](https://github.com/shigella520/MindTrain) / FSRS | 🟢 `MIT` | traversal order becomes a review schedule |
+
+🟢 **Why step 5 is the one that makes this defensible.** A hand-authored prerequisite graph is an
+opinion. Run through `pykt` against real response data it becomes a **measured** claim, edge by
+edge — and the client owns both the graph and the evidence for it. 🔵 That is a deliverable with a
+moat, which is exactly what a `CC-BY-NC` competitor cannot hand anyone.
+
+🔵 **Timeline:** w1 schema from step 1 + corpus inventory; w2–4 extraction and expert review of
+nodes; w4–6 edge extraction and first `pykt` validation run; w6–8 prune failed edges, wire to
+Oppia explorations and FSRS. 🟡 **Scope honestly:** one subject, one grade band. The reference
+graph covers primary-to-high-school maths with 1 644 nodes and took a team; a six-week engagement
+delivers a validated slice, not a national curriculum.
+
+### 🟢 `P557-C` — The four-line check that caught three false claims in this pass
+
+🔵 **For:** every pass on this base, before it writes a word. 🔴 **This pass's draft claimed
+`oppia` was "never carried in 557 passes", claimed Sakai's `ECL-2.0` and Chamilo's `GPL-3.0` as
+corrections to this shelf, announced the MIT-prefixed bespoke grant as a new class, and asserted
+Moodle's and Open edX's grant bytes had never been read.** 🔴 **All five were false and all five
+were caught by `grep`.**
+
+```bash
+# Run before writing any row as new. One line per address under consideration.
+# Exits loudly if the shelf already knows the address.
+for slug in "$@"; do
+  hits=$(grep -rl "$slug" --include='*.md' . | wc -l)
+  if [ "$hits" -gt 0 ]; then
+    echo "CARRIED  $slug  (in $hits files) -> re-verification, NOT discovery"
+    grep -rhn "$slug" agents/top.md repos/foundations.md 2>/dev/null | head -2
+  else
+    echo "NEW      $slug"
+  fi
+done
+```
+
+🟢 **And the licence-claim form of the same check**, which is what caught the Sakai error — the
+shelf's own token counts settle whether a "correction" corrects anything:
+
+```bash
+grep -rhoE "ECL-2\.0|Apache-2\.0" --include='*.md' . | sort | uniq -c   # 314 vs 95
+```
+
+🔵 **Why this belongs in `compose/` rather than in a gap.** `557-C` registers the *finding* that
+this base writes faster than it reconciles; this is the *remedy*, it is four lines, it needs no
+network, and it survives the gate denials that stop everything else (`557-A`). 🟢 **Cost: one
+`grep` per address. Benefit, measured on this pass: five retractions that would otherwise have
+been published as findings.**
+
 ## 🆕 `p556` — `2026-10-30` — **🟢 TWO RECIPES THAT ARE PERMISSIVE END TO END, NAMED COMPONENT BY COMPONENT — AND THE FIRST ONE EXISTS BECAUSE 40.5 % OF THIS SHELF CANNOT BE DELIVERED. 🟢 PLUS A TRIAGE STEP THAT RUNS BEFORE ANY OF IT, OFFLINE, IN ONE COMMAND.**
 
 🔵 Every component below is named with its slug, its platform-verified `spdx_id` and its

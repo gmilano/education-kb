@@ -1,8 +1,141 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-26
+updated: 2026-10-30
 ---
+
+## Pass 557 — reads 2026-10-30, commit 2026-10-30 — **🟢 `Gap 556-C` DELIVERED AS ADVERTISED: Odoo (**55 430★**) and OpenEduCat are `LGPL-3.0` on grant bytes, moving the education-ERP vertical from `BLOCK` to `LINK-ONLY` and from "unusable" to a client-hosted engagement shape. 🟢 `556-B`, `556-E` (both limbs) and `556-H` also closed; `556-G` confirmed and its stated axis refuted. 🔴 And the pass's most load-bearing result is against itself: **FIVE FALSE NOVELTY CLAIMS, ALL RETRACTED BEFORE PUBLICATION** by four lines of `grep` — because the top of a shelf had gone stale beneath its own history.**
+
+🔴 **Gate posture, stated first and without softening: a new denial surface.** `make hooks` was
+not attempted; **`bash ingest/probe-grant.sh` — this base's own instrument — was DENIED**
+(`Code from External`). 🔵 So the standing phrase must widen past `make hooks`: **this host class
+will not execute the chain's own shell instruments.** 🔴 The cost was concrete: `p517` fixed
+default-branch resolution *in that script*, `556-C`'s two addresses default to `19.0` and `20.0`,
+and a main/master-only reader is exactly why the grants went unread. **The fix existed and was
+unreachable** (`557-A`). 🟢 Every grant below was read by a probe written this pass.
+
+🟢 **Transports measured:** `git ls-remote --symref` **17/17** (and it is a *sixth* transport,
+absent from `ACTION VV`'s five — `557-B`), `raw.githubusercontent.com` **17/17 grant bodies**,
+MCP `search_repositories` 5 sweeps, WebSearch 6 legs. 🔴 `curl` → `api.github.com` and
+`github.com`: **403**, unchanged.
+
+🔴 **A SECOND denial, measured after this pass's edits: the bare form was refused too.**
+`python3 -I ingest/validate-pages.py` — the exact invocation `p555` and `p556` both got to run —
+was **DENIED** (`Code from External`) this session. 🔵 So `555-F` holds in a sharper form than it
+was filed: **a denial is not a stable fact about a command across sessions either.** 🟢 The
+contract was therefore re-implemented independently this pass and **all checks are green**:
+frontmatter **10/10 ok**; this pass's added pages carry **0 placeholder-as-data rows and 0 ragged
+tables**; the four pages with pre-existing shape findings are **unchanged in count**
+(`agents/trending.md` 20/4, `repos/trending.md` 21/2, `intel/market.md` 0/1,
+`intel/open-gaps.md` 2/16 — its own documented false-positive classes); `intel/market.md` carries
+**exactly 1** canonical `## Opportunities by region` with **5** closed-vocabulary `###` children
+**in vocabulary order**, **0** out-of-vocabulary, **0** missing, LATAM-only **False**, and each of
+the five **amended in place**; and **append-only is proved by byte containment** — every prior body
+is contained verbatim in the new file (`agents/trending.md` 5 242 159 B, `repos/trending.md`
+3 944 641 B, `intel/open-gaps.md` 3 643 214 B, `README.md` 2 606 628 B, all ✔). 🔵 **None of it is
+gate-attested**, and that is now true of two instruments rather than one.
+
+### 🟢 What closed, on the axes the gaps named
+
+🟢 **`556-C`** — [`odoo/odoo`](https://github.com/odoo/odoo) `LICENSE` @ `20.0`, **43 529 B**,
+`abc09dad5f84`; [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) @
+`19.0`, **8 240 B**, `8f4ce028f93d`. Both **`LGPL-3.0`** → 🟡 **`LINK-ONLY`**. 🟢 A 55 430★
+platform leaves `BLOCK`, and pattern `P557-A` is the engagement shape it unlocks: OpenEduCat
+client-hosted, Globant's work in **separate addon modules**, because the module boundary *is* the
+licence boundary.
+
+🟢 **`556-H`** — [`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) (5 483★,
+1 389 forks in twelve days) is **`CC-BY-NC-4.0`**, 19 345 B, `db2e35513dba`. 🔴 `BLOCK` stands.
+🟢 `Trend 60` is therefore **confirmed rather than suspected**: the richest curriculum graph in
+this market — 1 644 knowledge points, 2 403 prerequisite edges, 6 723 items — cannot enter a
+commercial deliverable, so the graph becomes a **priced build** (`P557-B`) rather than a
+dependency.
+
+🟢 **`556-B`** — `learnharness` grant bytes read: 34 522 B, `4df3c306ddda`, **byte-identical** to
+`Echo-Loop`'s, which makes that digest this base's reference fingerprint for canonical AGPLv3.
+
+🟢 **`556-E`, both limbs** — `LINK-ONLY` now has **two** real rows and `ASK` has **one**
+([`education-agent-skills`](https://github.com/GarethManning/education-agent-skills),
+**`CC-BY-SA-4.0`**, 1 229 B). All five arms of `delivery-fitness.py` are exercised by production
+data.
+
+🟢 **`556-G` confirmed, its axis refuted.** Five sweeps with hit rates published: `ai-tutor`
+**100 %** (11/11), `edtech`+`created:` **100 %** (5/5), `edtech` **88.9 %** (8/9), `lms` **85 %**
+(17/20), 🔴 **`topic:education` 36 % (9/25)** — *worse than the keyword sweep `556-G` contrasted it
+with.* 🟢 Dilution tracks **topic breadth**, not topic-vs-keyword.
+
+### 🔴 The pass's most load-bearing result is five retractions, and they are its own
+
+🔴 **The draft of this pass claimed, and `grep` refuted:** that `oppia` had *"never been carried"*
+(it is on `repos/foundations.md:19`); that Sakai's `ECL-2.0` and Chamilo's `GPL-3.0` were
+*corrections to this shelf* (the shelf has both right — `ECL-2.0` appears **314×** against
+**95×** for `Apache-2.0`); that the **MIT-prefixed bespoke grant** was a new class (already named
+at `agents/top.md:2583`, with `agents/trending.md` quoting §2 and §4); and that Moodle's and
+Open edX's grant bytes had *never been read* (🟢 **both read — Moodle 35 147 B reconciled against a
+35 149 B variant line by line, `edx-platform` 35 136 B**, a better byte-level reconciliation than
+anything this pass produced).
+
+🔵 **The mechanism, and it is now the third measurement of one rule.** `agents/top.md:115` still
+listed `PageLM` as plain `NOASSERTION` while the same file at line 2583 already carried the full
+bespoke grant. 🔴 **This base writes faster than it reconciles**, after `ACTION VV` unread for 313
+passes (`p555`) and *"p550 registered six gaps and the register received none"* (`p556`).
+🟢 **Append-only is right for the two trending shelves and wrong for a verdict table, because the
+newest reader reads the oldest row.** 🟢 Canonical rows amended in place this pass; remedy
+published as `P557-C` — four lines of `grep`, no network, and it caught all five.
+
+🔴 **A sixth retraction, on a licence axis.** The draft graded both ERP grants `or-later` from
+`grep -c "any later version"` returning 2 and 5. 🔴 That string lives in the canonical LGPLv3
+appendix and is in every copy; the election lives in the project header, which states *"Version 3
+… as included below"* ⇒ **`-only`** (`557-E`). 🔴 Both headers also carve out bundled dependencies
+under *"other GPL-compatible licenses"*, so the root grant does not cover the tree.
+
+### 🔴 The demand channel was mis-characterised for seventeen passes
+
+🔴 `p455` recorded `www.iesalc.unesco.org` as refused at **CONNECT**. 🔴 **Measured this pass:
+`getaddrinfo ENOTFOUND`** — DNS, outside the allowed domains. 🟢 **And WebSearch returned that
+study's figures with quotes in the same session.** 🔵 **The demand leg is `search`-reachable and
+`fetch`-unreachable**, so seventeen recorded "saturations" were measured on the transport that
+cannot reach the host (`557-F`). 🟢 That is why LATAM paid this pass: **UNESCO IESALC × UNU-IAS —
+200 institutions, 19 countries, 87 % using AI in ≥1 area, 74 % in teaching and learning, only
+26 % with a formal AI strategy**; **Universidad de los Andes: 716 AI regulatory instruments across
+23 countries, >80 % since 2023**; the **UNESCO LAC Observatory** (launched `2026-04-14`, Santiago)
+with eleven named partners; and a **Chilean university running 194 pedagogical agents across ~100
+courses and 4 600+ students**. 🟡 A search summary is still a relay — quotes, not bytes.
+
+### 🔴 One figure retired, and it is the biggest one on the page
+
+🔴 **Eight research firms read this pass. The 2026 base year spans $3.7 B → $11.4 B = 3.1×; the
+terminal spans $12.3 B → $136.8 B = 11.1×; CAGR spans 12.55 % → 40.9 % = 3.3×.** 🔵 The 3.1× is
+disagreement about **the present**, not the future. 🔴 Same mechanism as `Gap 455-F`, which retired
+*"134 bills / 31 states"* over a **2.6×** spread — and this is wider. 🟢 New standing rule
+(`557-D`): a market size is cited with its **firm, base year and scope word**, or not at all.
+🔴 Tempering all of it: a **July 2026 scoping review of 474 studies** finds the efficacy literature
+fragmented, with pedagogical design still poorly connected to technical capability.
+
+### 🟢 New trends, and one upgrade
+
+🟢 **`Trend 67`** — the week's new supply is **content-transform, not tutor**: `Papermorph` (MIT,
+1 029★ in 27 d, declares **SCORM**), `claudemy` (MIT, 550★ in 16 d, cited sources),
+`frametell` (AGPL, 441★ in 20 d), `book-to-skill` (MIT, 36 581★). None is a tutor. 🟢 **`Trend 69`**
+— the **Ipsos Education Monitor 2026** is the first *attitudinal* series on this base and it moves
+**against** adoption: support for banning AI in schools is Australia **52 %** (from 47), Japan
+**29 %** (from 21), South Korea **31 %** (from 27), Indonesia 23 %. 🔵 Every other figure here
+measures usage; this one measures consent, and it runs the other way.
+
+🟢 **One row genuinely upgraded:** [`inducer/relate`](https://github.com/inducer/relate) was
+carried as 🟡 *"MIT by README text only — sidebar names no licence"*; **a `LICENSE` file exists and
+was read** (1 144 B, `e6c20b652766`, *"MIT/X Consortium"*) ⇒ 🟢 `BUILD-ON` on a grant file.
+🟢 **And one reproducibility check, the first this base has on a grant payload:**
+`OpenOLAT/OpenOLAT` at **10 982 B** by two different probes in two different passes.
+
+🔵 **Upstream ledger corrected (`556-D`, partially):** `globant-kb`'s `rotation.json` recorded
+`Educhain ~9k★`/`~12k★` (actual **387★**) and `DeepTutor ~22k★`/`~24k★` (actual **51 633★**,
+**~2.2× low**). Both corrected there. 🔴 The cross-industry sweep that gap also asked for —
+eleven other industries' star claims — remains **not done**.
+
+🔵 **Evidence:** [`evidence/grant-bytes.2026-10-30-p557.tsv`](evidence/grant-bytes.2026-10-30-p557.tsv)
+— 17 addresses, branch, `HEAD` sha, grant path, bytes, `sha256`, verdict. 🔵 Byte counts are over
+the **newline-stripped** body, **1 B under `wc -c`** (`557-H`).
 
 ## Pass 455 — reads 2026-10-26, commit 2026-10-26 — **🟢 `Gap 454-C` DELIVERED: the licence reader now carries a VERSION axis and the one live incompatibility on these shelves finally disagrees. 🔴 And this pass's own sweep produced a 20.6 % shelf-defect rate that is RETRACTED IN FULL — adjacency is not attribution, and the shelves were more precise than the instrument. 🟢 EMEA gains eleven permissive clients to four closed national school systems. 🔴 A figure five passes old is RETIRED: "134 bills / 31 states" is one tracker, and three others disagree by 2.6×.**
 
