@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p547` — `2026-10-30` — **🟢 `546-B` CLOSED by shipping the RULE, not a better number — [`../ingest/address-count.py`](../ingest/address-count.py). 🔴 `546-A`, `546-E` untouched; `546-D` gains a prerequisite it was never specified with. 🔴 `544-F`/`545-D` is a FOURTEENTH denial, and this pass's denial covered EVERY script in `ingest/`. 🔴 NINE REGISTERED (`547-A`…`547-I`), six of them found by instruments this pass was forced to re-implement inline — and `547-I` was found by the new instrument against the very page that introduced it. 🔴 One RETRACTION of this pass's own framing.**
+
+### 🟢 `Gap 546-B` — CLOSED
+
+**Asked:** *"this page's address count is not reproducible — five rules yield 100 / 169 /
+175 / 191 / 191 and `p545` published 162; nobody can tell."*
+
+🟢 **Delivered as code, not as arithmetic.** [`../ingest/address-count.py`](../ingest/address-count.py)
+names every rule, prints every count, designates one `CANONICAL` **in the source**, carries
+the non-repository owner set explicitly, and takes the page as an argument. 🟢 Published
+figures: `repos/foundations.md` **176**, `agents/top.md` **123**, `verticals/solutions.md`
+**82**, `compose/patterns.md` **174**, `intel/market.md` **56**. 🟢 Stability control: two
+runs on an unedited page agree (**176**, **176**).
+
+🔴 **It disagrees with `p546` (`175` / `98`) and the gap still closes**, because `546-B`
+asked for a figure anyone can re-derive and contest, not for a figure that matches.
+
+### 🔴 Registered at `p547`
+
+| Gap | Asks | Why it is not already closed |
+|---|---|---|
+| 🔴 **`547-A`** | The grant reader must report **`declared`** and **`served`** as two columns, with `declared ∧ ¬served` as its own verdict | `lehrer-tools/lehrer-agent` declares MIT in `plugin.json` **and** README and serves **no licence file at any of 103 paths**, holder `{"name": "anonym"}`. A root-file probe says `UNRESOLVED`; a metadata read says `MIT`. **Both are incomplete and they disagree.** `ingest/probe-grant.sh` reads files only |
+| 🔴 **`547-B`** | A disqualification axis **orthogonal to the licence ladder**: what an artefact's tooling does to third-party content | `bin/bibox` decrypts **AES-256-CTR**, `bin/cornelsen` **AES-128-CBC** (UrhG § 95a / InfoSoc Art. 6). 🔵 A hypothetically MIT-clean version would **still** be unusable, and nothing on this base grades for it. 🟢 `bin/klett` decrypts nothing — the axis is **per-adapter**, not per-repo |
+| 🔴 **`547-C`** | Staleness must be computed from the last **human** commit; a wholly bot-authored history is `UNDATED`, not `FRESH` | **Prerequisite for `546-D`.** `MarinaVeauvy/ia-educacion`: 64 commits, last `2026-10-29`, **all `github-actions[bot]`**, 11 near-duplicate keyword-slug articles. A recency ratchet would rank it **above** `Math_teacher` (`2026-09-17`, human) — the only promotable artefact of the pass |
+| 🔴 **`547-D`** | Re-run `544-B`'s anchor census over **every `*.md` at `HEAD`**, not `README.md` alone | `p546` flagged the README-only limit and could not quantify it. 🟢 `p547` has the instance: `ceanjonnube-negra/docente-ia` has **245 commits** and a `README.md` of **1 450 B of untouched `create-next-app` boilerplate**, while its SEP/`.gob.mx` institution anchor sits in `ESTADO_PROYECTO.md`. The **73 % anchorless** figure is inflated by projects documenting themselves in `AGENTS.md` / `CLAUDE.md` / `ESTADO_PROYECTO.md` |
+| 🔴 **`547-E`** | Every licence verdict this base keeps must rest on a `raw.` payload or a git read | `api.github.com` **and** `github.com` HTML both return **403** from this session's gateway (378 B JSON, *"GitHub access to this repository is not enabled for this session"*). 🔴 The shelf's licence column cites *"sidebar `MIT license`"* on many rows — **that channel is no longer readable here**, so those attestations are **frozen**, carried on the authority of the pass that read them |
+| 🔴 **`547-F`** | Locate the `agents/top.md` row-definition difference by diffing the two rules' extracted **address sets**, not their counts | `p547`'s instrument yields **123** where `p546`'s prose rule yielded **98**. 🔵 `+25` is too large for the three decisions `p547` added (case-folding, `.git` stripping, owner exclusion), so a row definition genuinely differs and **`p547` does not know where**. Counts cannot disagree informatively; sets can |
+| 🔴 **`547-G`** | Decide where `## Opportunities by region` is authoritative — first-on-page, or demote per-pass copies to `###` | [`market.md`](market.md) carries the heading **at least three times**, one per dated pass section. The compiler builds region buckets per heading, so **duplicate headings mean duplicate buckets**. 🔴 `p547` did **not** restructure 2 900 lines of append-only history; the choice belongs in the compiler's spec |
+| 🔴 **`547-H`** | Renumber the duplicate `P565` and fix inbound references | [`../compose/patterns.md`](../compose/patterns.md) has **54** `^## …P<n>` headings and **53 distinct ids**: `P565` labels both *"Brightspace, the third LMS"* and *"The disconnected classroom"*. 🔵 **Every cross-reference to `P565` is ambiguous**, and four passes described the page as *"contiguous"* — true of the range, false of the ids. Fourth prose-count defect after `544-E`, `546-B`, `547-F` |
+
+| 🔴 **`547-I`** | Documentation of an extraction rule must not be placed where the rule can match it; and `address-count.py`'s `PLACEHOLDER` set needs a test | 🔴 **Found by the instrument against the page that introduced it.** `repos/foundations.md` read **177** mid-pass against a pre-edit **176**, and the added address was **`owner/repo`** — the `p547` section had spelled the literal pattern inside a **table row**, so the row describing the rule matched it. 🔵 This is the `\| Nombre \| Repo \| Licencia \|` defect committed by the instrument's own documentation. 🟢 Fixed in **both** places (bracket glyphs in prose, `PLACEHOLDER` owners in code) because either alone regresses when the other is rewritten |
+
+### 🔴 A retraction `p547` owes, recorded against itself
+
+🔴 **This pass's first framing claimed that supply saturation had been "masking grant
+scarcity" and presented that as new.** 🔴 **It is not new.** `p543` found **3 Vietnamese
+agents / 0 licences**; `p544` found **1 Russian agent / 0 licences** and already named the
+grant gate *"the strongest regularity on this axis"*; `Gap 543-D` opened
+[`measured-unusable.md`](measured-unusable.md) **precisely so the class would stop being
+re-discovered** — its own text warns the three Vietnamese agents were *"on course to be
+re-discovered a fourth time."*
+
+🟢 **The register worked: it caught this pass committing the error the register exists to
+prevent.** 🟢 What survives as `p547`'s contribution is narrower and stated as such — the
+gate replicates in **two further corpora** (`de`, `es`), the ratio is computed over a
+**whole pass's yield (1 usable of 6)** for the first time, and **three of the six fail in
+ways the gate as specified does not see** (`547-A`, `547-B`, `547-C`).
+
+🔵 **A second, smaller retraction:** the convergence section's first draft counted **four**
+gated teacher agents and missed `MaiQuangPhuoc/edu_agents`, which this base already held
+and which chooses *"a deterministic pipeline over ReAct"*. **Five, not four** — under-
+counting the regularity the section argues for.
+
+### 🔴 Carried, unchanged
+
+- 🔴 **`546-A`** — staleness is still a derived TSV, not a per-row column. 🔵 `547-C` now
+  blocks it: the field must read the last **human** commit first.
+- 🔴 **`546-E`** — quote attribution is still prose, not a column.
+- 🔴 **`544-F` / `545-D`** — **fourteenth denial in fifteen passes.** 🔴 This pass's denial
+  covered **every** script in `ingest/`, not just `make hooks`. 🟢 **The denial paid for
+  itself once:** re-implementing the grant probe inline is what surfaced `547-A`, which the
+  shipped probe would have filed as a bare `UNRESOLVED`.
+- 🔴 **`500-D`** — `eur-lex.europa.eu` still unreachable; the Omnibus dates remain
+  vendor-sourced.
+- 🟡 **openSIS licence** — returned as GPL by one source and **Apache-2.0** by a comparison
+  table. 🔴 `p547` probed neither and records **neither value**. Next pass: read
+  `OS4ED/openSIS-Classic` at `HEAD`.
+
 ## 🆕 `p546` — `2026-10-30` — **🟢 `544-C` CLOSED (273/273 DATED, 96 s) AFTER BEING CARRIED AS "UNTOUCHED" — THE PRESCRIPTION WAS RIGHT AND CHEAP. 🟢 `545-A` DELIVERED, `545-B` ANSWERED, `544-B` ANSWERED AND REVERSED. 🟢 `500-D` UPGRADED FROM INFERENCE TO THE GATEWAY'S OWN LOG. 🔴 `544-F`/`545-D` IS A THIRTEENTH DENIAL. 🔴 SEVEN REGISTERED (`546-A`…`546-G`).**
 
 ### 🟢 `Gap 544-C` — CLOSED

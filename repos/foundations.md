@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p547` — **`Gap 546-B` is CLOSED: this page's denominator is reproducible, by running [`ingest/address-count.py`](../ingest/address-count.py) rather than by trusting a sentence**
+
+🔴 **The defect, as `p546` stated it.** `p545` published *"162 shelf addresses"* for this
+page. `p546` tried five extraction rules and got **100 / 169 / 175 / 191 / 191** — *"none of
+the five yields 162 … it is a claim that **nobody can tell**."*
+
+🟢 **The number this page now carries, with its rule attached:**
+
+| | |
+|---|---|
+| **Addresses on `repos/foundations.md`** | 🟢 **176** (at `p547`, after this pass's edits) |
+| Rule | `pairs_in_table_rows_deduped` — every GitHub `⟨owner⟩/⟨repo⟩` pair inside a table row, case-folded, trailing `.git` stripped, non-repository and placeholder owners excluded. 🔴 **The rule is written here with bracket glyphs on purpose:** spelling the literal pattern inside a table row makes the row itself match it, and the first draft of this section did exactly that — see `Gap 547-I` |
+| Where the rule lives | 🟢 [`ingest/address-count.py`](../ingest/address-count.py), designated `CANONICAL` **in the source** |
+| How to disagree with it | 🟢 `python3 ingest/address-count.py repos/foundations.md` |
+| Shelf **rows** (`Gap 544-E`, still derivable) | **156** |
+
+🔴 **It disagrees with `p546`'s 175 by one, and with `p546`'s `agents/top.md` figure of 98
+by twenty-five.** 🔵 **Neither delta is offered as a correction.** `p546` described its rule
+in prose; this pass's rule is that prose plus three decisions the prose leaves open
+(case-folding, `.git` stripping, the non-repository owner set). 🔴 **The `+25` is too large
+to be those three**, so the two row definitions genuinely differ and **`p547` does not yet
+know where** — registered as `Gap 547-F`, to be settled by diffing the extracted **address
+sets** rather than their counts. 🟢 **The gap closes anyway**, because what `546-B` asked
+for was not a better figure but a figure anyone can re-derive and contest in one command.
+
+🔵 **Full instrument record, the negative controls and the retired `github.com` read
+channel are on [`trending.md`](trending.md#-p547--2026-10-30).**
+
+🔴 **No new foundational repository was shelved at `p547`.** The English repo and vertical
+legs returned **OpenEduCat, RosarioSIS, openSIS, ERPNext and SchoolTool** — every one
+already held. The six new systems this pass found are **agents**, they are on
+[`../agents/trending.md`](../agents/trending.md#-p547--2026-10-30), and **five of the six
+carry no grant Globant can build on**.
+
+🟡 **One disagreement on this page's own subject matter is left OPEN rather than resolved
+in either direction:** the English vertical leg returned **openSIS** as GPL in one source
+and **Apache-2.0** in a comparison table. 🔴 `p547` did not probe it first-hand and so
+records **neither value**. 🔵 It is named because a comparison table is exactly the channel
+`p455` proved unreliable for licences, and the next pass should read `OS4ED/openSIS-Classic`
+at `HEAD` instead of re-reading the table.
+
 ## 🆕 `p546` — every address on this page is now **dated**, and the page's own denominator is **not reproducible**
 
 🟢 **`Gap 544-C` closed.** All **175** addresses extracted from this page's table rows

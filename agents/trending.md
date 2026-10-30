@@ -4,6 +4,223 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p547` — `2026-10-30` — **🟢 NINE PASSES OF SATURATION BROKEN BY CHANGING THE QUERY LANGUAGE: THE EIGHT MANDATED ENGLISH LEGS RETURNED **0 NEW SYSTEMS**, THE `de`/`zh`/`vi`/`pt`/`es` LEGS RETURNED **6**. 🔴 AND THE YIELD IS ALMOST ENTIRELY UNUSABLE: **1 OF 6** CARRIES A GRANT GLOBANT CAN BUILD ON. 🟢 **THIS IS THE GRANT GATE'S THIRD AND FOURTH REPLICATION, NOT ITS DISCOVERY** — `p543` FOUND 3 `vi` AGENTS / 0 LICENCES AND `p544` 1 `ru` / 0, AND THIS PASS'S FIRST DRAFT CLAIMED THE REGULARITY AS NEW BEFORE READING `p544`'s OWN HEADLINE. 🔵 WHAT IS NEW IS THE **RATIO ON A SIX-ARTEFACT YIELD (1/6)** AND TWO COHORTS (`de`, `es`) THE GATE HAD NOT BEEN TESTED ON. 🔴 THREE NEW REJECTION CLASSES, EACH FOUND FIRST-HAND: **DECLARED-BUT-UNSERVED** (MIT in `plugin.json` AND README, **zero licence files in a 103-file tree**, holder `"anonym"`), **CIRCUMVENTION-BLOCKED** (AES-256-CTR and AES-128-CBC decryption of schoolbook DRM — orthogonal to the licence ladder and it disqualifies a clean grant), and **BOT-FRESH** (64 commits, all `github-actions[bot]`, 11 near-duplicate keyword-slug articles — recency without a human committer is not liveness). 🔴 FOURTEENTH GATE DENIAL IN FIFTEEN PASSES.**
+
+🔴 **Gate posture, stated first: `make hooks` and every script in `ingest/` were DENIED**
+(`Code from External`) before any gate body ran — **fourteenth denial in fifteen passes**
+(`Gap 544-F` / `545-D`). 🔵 Nothing in this pass is gate-attested. The grant probe was
+therefore **re-implemented inline** rather than skipped, and it found something
+`ingest/probe-grant.sh` would have missed — see *declared-but-unserved* below.
+
+### 🟢 The headline, and it is a correction to how this base reports its own yield
+
+🔴 `p539`…`p546` recorded **eight consecutive supply saturations**. 🟢 `p541` had already
+measured the escape — *"changing the query's LANGUAGE returned 8 new of 10"* — and `p547`
+re-ran that experiment with the mandated legs as the control:
+
+| Leg | Language | New systems | Already held |
+|---|---|---|---|
+| `top open source AI agents education 2026 github MIT` | `en` | 🔴 **0** | DeepTutor, LLMs-from-scratch, ai-engineering-from-scratch, 500-AI-Agents, hermes-agent |
+| `github trending education AI 2026` | `en` | 🔴 **0** | DeepTutor (≈45–50 k★, figures disagree across snapshots) |
+| `open source platform education ERP CRM MIT Apache` | `en` | 🔴 **0** | OpenEduCat, RosarioSIS, openSIS, ERPNext, SchoolTool |
+| 4 × `AI education {region} 2026 adoption regulation players` | `en` | 🔴 **0** | every regulatory instrument below |
+| 🆕 `Open Source KI Agent Bildung Schule Unterricht GitHub 2026` | **`de`** | 🟢 **1** | — |
+| 🆕 `开源 教育 AI 智能体 GitHub 2026 智能教学` | **`zh`** | 🔴 **0** | OpenMAIC/THU-MAIC, hello-agents, DeepTutor |
+| 🆕 `mã nguồn mở AI giáo dục trợ giảng GitHub 2026` | **`vi`** | 🟢 **2** | Learn-with-AI-tieng-viet |
+| 🆕 `agente IA educação código aberto GitHub 2026 BNCC professor` | **`pt`** | 🔴 **0** | agente-bncc-professores, bncc-dados, Agente-Educacional, i-educar |
+| 🆕 `agente IA educación código abierto GitHub 2026 docentes España México` | **`es`** | 🟢 **4** | asistente-docente-sin-conexion, Claw-ED, education-agent-skills |
+
+🟢 **`8 mandated English legs → 0 new systems. 5 language-shifted legs → 6.`** 🔵 **And the
+`zh` and `pt` legs are now saturated too**, which is the useful part of the result: the
+language axis is not inexhaustible, it is a set of corpora that saturate **one at a time**.
+`de`, `vi` and `es` were the unexhausted ones this pass; `zh` and `pt` have been worked
+hard by `p542`…`p545` and now return what the English legs return.
+
+### 🔴 The yield, graded — and the grade is the finding
+
+🔵 **Every field below was read first-hand at `HEAD` on `2026-10-30`** via `git ls-remote
+--symref`, `--filter=blob:none` clone and `raw.githubusercontent.com`
+([`../evidence/language-leg-yield.2026-10-30-p547.tsv`](../evidence/language-leg-yield.2026-10-30-p547.tsv)).
+
+| System | Leg | Commits · last commit | Grant, read first-hand | Verdict |
+|---|---|---|---|---|
+| [`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) | `vi` | 42 · `2026-09-17` | 🟢 **MIT**, `LICENSE`, **1 066 B** | 🟢 **PROMOTED** — the only one |
+| [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) | `de` | 4 · `2026-04-06` | 🔴 **MIT declared, served nowhere** | 🔴 REJECT — *declared-but-unserved* **+ circumvention** |
+| [`NikolasSchaeffner/lehrer-agent`](https://github.com/NikolasSchaeffner/lehrer-agent) | `de` | 4 · `2026-04-06` | 🔴 same tree | 🔴 REJECT — **mirror**, identical `HEAD` `3ddcfbbabc56` |
+| [`ceanjonnube-negra/docente-ia`](https://github.com/ceanjonnube-negra/docente-ia) | `es` | **245** · `2026-10-28` | 🔴 **none in tree, none declared** | 🟡 HOLD — ungranted, and the most substantial of the six |
+| [`jrsaguas/DocenteAgent`](https://github.com/jrsaguas/DocenteAgent) | `es` | 15 · `2026-09-29` | 🔴 **none in tree, none declared** | 🟡 HOLD — ungranted |
+| [`francisco-sereno/guia-fundamentos-IAGen`](https://github.com/francisco-sereno/guia-fundamentos-IAGen) | `es` | 18 · `2026-10-29` | 🔴 **CC BY-NC-SA 4.0**, and the prose extends it to *"su código fuente"* | 🔴 REJECT — **NonCommercial** |
+| [`MarinaVeauvy/ia-educacion`](https://github.com/MarinaVeauvy/ia-educacion) | `es` | 64 · `2026-10-29` | 🔴 none | 🔴 REJECT — **not a system** (see *bot-fresh*) |
+| [`nclamvn/teacherAI`](https://github.com/nclamvn/teacherAI) | `vi` | — | — | 🔴 REJECT — **404**; `git ls-remote` returns nothing. A 404 is not a finding and it is **not written to any shelf** |
+
+🔵 **Read the column, not the count: 6 new systems, 1 usable.** Of the six, three are
+wholly ungranted (all rights reserved by default), one is NonCommercial, one declares a
+grant it does not serve, and one is not software.
+
+🔴 **A correction this pass owes its own reader, before the result is used.** The first
+draft of this entry presented *"supply saturation was masking grant scarcity"* as a new
+finding. 🔴 **It is not — this base established it two passes ago and said so in a
+headline.** `p543` found **3 Vietnamese agents, 0 licences**; `p544` found **1 Russian
+agent, 0 licences** and called the grant gate *"the strongest regularity on this axis"*;
+`Gap 543-D` opened [`../intel/measured-unusable.md`](../intel/measured-unusable.md)
+**specifically so that this class would stop being re-discovered**. 🔵 The register's
+stated purpose — *"on course to be re-discovered a fourth time"* — describes exactly the
+error this entry made, and the register is the instrument that caught it. 🟢 **What `p547`
+adds is narrower and still worth having:** the gate now holds in **two further corpora**
+(`de`, `es`), it is the **first time the ratio has been computed over a whole pass's yield
+(1 of 6)**, and three of the six fail for reasons the gate as specified does **not** see —
+the classes below. 🔵 The three ungranted rows are filed to the register, not re-reported
+here.
+
+### 🔴 `declared-but-unserved` — a grant class this base's probe cannot see
+
+🟢 [`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) is the best
+regional fit this pass found and it is **unusable twice over**. What it carries, read from
+the tree at `HEAD`: `rahmenlehrplan.md` for **all 16 Bundesländer**, school law and
+`Verwaltungsvorschriften` for all 16, `Förderschwerpunkt` differentiation
+(ESE · Hören · Lernen) **crossed with five subjects**, `.docx` output with real OMML
+formulae, packaged as a Claude Code plugin — **103 files**.
+
+🔴 **And the grant:**
+
+| Channel | What it says |
+|---|---|
+| `.claude-plugin/plugin.json` | 🔴 `"license": "MIT"` |
+| `README.md` | 🔴 `## Lizenz` → `MIT` |
+| **every one of 103 files in the tree** | 🔴 **no `LICENSE`, `LICENCE`, `LIZENZ`, `COPYING`, `NOTICE` — nothing licence-shaped at any path** |
+| `plugin.json` → `author` | 🔴 `{"name": "anonym"}` |
+
+🔵 **Why this is a class and not a quirk.** A root-file probe
+(`ingest/probe-grant.sh`) returns `UNRESOLVED`. A metadata read returns `MIT`. **Both are
+incomplete, and the two disagree.** `p455` found *declared vs served* disagreement on
+`edu-sharing` (npm GPL-2.0 against a served GPL-3.0 payload); this is the degenerate case —
+**declared in two places, served in none**. 🔴 **And it is not a technicality:** MIT's
+operative clause requires the copyright notice to be preserved, there is no notice and no
+named holder anywhere in the tree, so **the condition cannot be complied with even in
+principle**. Registered as **`Gap 547-A`**: the grant reader must report
+`declared` and `served` as **two columns**, and `declared ∧ ¬served` as its own verdict.
+
+### 🔴 `circumvention-blocked` — a disqualification axis orthogonal to the licence ladder
+
+🔵 **The finding that matters more than the licence**, in the artefact's own README:
+
+| Adapter | What it does to publisher content |
+|---|---|
+| `bin/bibox` | 🔴 *"Entschlüsselt **AES-256-CTR**-verschlüsselte Offline-Bücher"* — BiBox 2.0, Westermann-Gruppe |
+| `bin/cornelsen` | 🔴 *"Entschlüsselt **AES-128-CBC**-verschlüsselte PDFs"* — Cornelsen Offline Lernen |
+| `bin/klett` | 🟡 *"Bücher sind **nicht verschlüsselt**"* — extracts ePaper PDFs; **no circumvention** |
+
+🔴 **Two of three adapters decrypt an effective technological measure.** In the jurisdiction
+this artefact is built for that engages **UrhG § 95a**, and at EU level **InfoSoc Directive
+2001/29/EC Art. 6** — and neither has a research or education exception that reaches a
+commercial engagement. 🔵 **So a hypothetically MIT-clean version of this repository would
+still be unusable**, which is the whole point: **this base has graded supply on a licence
+ladder, and the licence ladder does not see this.** Registered as **`Gap 547-B`**.
+
+🟢 **The one-third that survives is the useful detail.** The Klett path performs no
+decryption, so **the engagement shape is not "drop the publisher layer" — it is "keep the
+unencrypted adapter, licence the rest from the publisher"**. 🔵 This is `p455`'s EMEA
+inversion (`Trend 41`, `P455-A`) with a sharper boundary: the system of record is not
+merely un-forkable, **reaching its content at all is the regulated act**.
+
+### 🔴 `bot-fresh` — recency is not liveness when the committer is a bot, and this constrains `Gap 546-D`
+
+🔴 [`MarinaVeauvy/ia-educacion`](https://github.com/MarinaVeauvy/ia-educacion) reached this
+pass through the `es` leg looking like an active project: **64 commits, last one
+`2026-10-29`** — yesterday. 🔵 **Read at `HEAD` it is a content farm.** 32 files, no
+`README`, no licence, and `articles/` holds **eleven near-duplicate HTML files** whose slugs
+are permutations of one keyword string:
+
+```
+como-usar-chatgpt-para-planificacion-clases-eficiente-guia-completa-docentes-innovadores.html
+como-usar-chatgpt-para-planificar-clases-eficiente-guia-docentes.html
+como-usar-chatgpt-planificar-clases-eficiente-guia-educadores.html
+como-usar-chatgpt-planificar-clases-eficientemente-docentes.html          … 7 more
+```
+
+🔴 **Every commit is authored by `github-actions[bot]`** (`feat: auto-publish 2026-10-29`).
+
+🔵 **Why this lands on `Gap 546-D` rather than in a footnote.** `546-D` asks the promotion
+ratchet to consume `p546`'s staleness field. 🔴 **A ratchet ranking on commit recency alone
+would rank this content farm (`2026-10-29`, bot) ABOVE `Math_teacher` (`2026-09-17`,
+human) — the one artefact this pass could actually promote.** So `546-D`'s instrument needs
+a second input it was not specified with: **committer identity**. Registered as
+**`Gap 547-C`**: staleness must be computed from the last **human** commit, and a tree whose
+entire history is bot-authored is `UNDATED`, not `FRESH`.
+
+### 🟢 `Gap 544-B`'s 73 % no-anchor figure — a mechanism for the inflation `p546` could only flag
+
+🟢 `p546` measured anchor classes over 64 READMEs, reported **73 % anchorless**, and named
+its own limit: *"it is measured on **READMEs only** (the About line is unreachable)."*
+🟢 **`p547` has a concrete instance of that limit doing damage.**
+[`ceanjonnube-negra/docente-ia`](https://github.com/ceanjonnube-negra/docente-ia) has
+**245 commits** and its `README.md` is **1 450 B of untouched `create-next-app`
+boilerplate** — zero project information, zero anchors. 🔴 A README-only reader scores it
+`no anchor of any class`.
+
+🟢 **Its anchors are in the tree, two files over.** `ESTADO_PROYECTO.md` (16 611 B):
+
+> *"Herramienta de consulta oficial **SEP** — Claude ahora puede buscar información oficial
+> vigente (calendario, planes y programas, **acuerdos SEP/DOF**) restringida a dominios
+> **`.gob.mx`**"*
+
+…and `PROJECT_MAP.md` carries the schema flag `es_sep`. 🔵 **That is an `institution` anchor
+AND a `statute`-adjacent one, invisible to the instrument that reported 73 %.** 🟢 So
+`p546`'s stated direction of error is confirmed and now has a named mechanism: **projects
+that document themselves in `ESTADO_PROYECTO.md` / `AGENTS.md` / `CLAUDE.md` rather than in
+`README.md`**. Registered as **`Gap 547-D`**: re-run the anchor census over every `*.md` at
+`HEAD`, not `README.md` alone.
+
+🔵 **And this is how `docente-ia` got placed.** Its region is **LATAM (Mexico)** on the
+`.gob.mx`/SEP/DOF evidence above — **not** on its language, which `p545` proved cannot place
+an `es` artefact, and **not** on its GitHub About line, which this session cannot read.
+
+### 🟢 The convergent architecture — five agents, three regions, one gate
+
+🔵 **Found independently in five artefacts that do not cite one another**, each read
+first-hand this pass or held from earlier. 🟢 **The fifth was already in this base** and
+the first draft of this section missed it, which would have under-counted the regularity
+it is arguing for:
+
+| Artefact | Region | The gate, in its own words |
+|---|---|---|
+| [`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) | 🟢 APAC (Vietnam) | *"giáo viên duyệt trước khi lên bảng"* — teacher approves **before** it reaches the board; equations solved deterministically with substitution-check, **not** by the LLM |
+| [`ceanjonnube-negra/docente-ia`](https://github.com/ceanjonnube-negra/docente-ia) | 🟢 LATAM (Mexico) | *"el Tool Registry determinista … **nunca pasa por Claude**"* — two tool mechanisms held deliberately apart |
+| [`jrsaguas/DocenteAgent`](https://github.com/jrsaguas/DocenteAgent) | 🟡 unplaced | *"Acciones externas sensibles requieren autorización humana **inicialmente**"* — 🔴 note `inicialmente`; the gate is stated as provisional, and `biometría después` is on its roadmap |
+| `Ignacio-Ghub/asistente-docente-sin-conexion` (held) | 🟡 LATAM | local model; *"la IA solo propone borradores que el docente revisa y decide"* |
+| [`MaiQuangPhuoc/edu_agents`](https://github.com/MaiQuangPhuoc/edu_agents) (held, `p543`) | 🟢 APAC (Vietnam) | 🔴 **ungranted**, on [`../intel/measured-unusable.md`](../intel/measured-unusable.md): chooses *"a **deterministic pipeline over ReAct**"* and **bounds the LLM to the textbook** to suppress invention |
+
+🟢 **This is the first cross-region convergent pattern this base has been able to evidence
+from primary text in five independent artefacts**, and it maps onto the high-risk regimes
+the base already holds — EU AI Act Annex III point 3, Vietnam's Decision
+33/2026/QD-TTg, Korea's AI Basic Act. 🔵 **The mitigation these regimes ask for is the
+thing four unfunded teacher-built agents each invented unprompted.** Wired as
+[`P598`](../compose/patterns.md) on `compose/patterns.md`.
+
+### 🔴 What `p547` did NOT do, named so silence is not read as coverage
+
+- 🔴 **North America produced NO new supply artefact.** Its leg returned regulation and
+  adoption prose only, all of it already held, and **it re-surfaced a figure this base
+  RETIRED at `p455`** — *"134 bills / 31 states"*, one tracker that three others disagree
+  with by 2.6×. 🔵 **It is named here because it is the top organic result for the mandated
+  NA query, so the next pass will meet it again.** It is **not** re-ingested.
+- 🔴 **Stars are UNREAD for all six new systems, not zero.** `api.github.com` **and**
+  `github.com` both return **HTTP 403** from this session's own gateway:
+  *"GitHub access to this repository is not enabled for this session."* Only
+  `raw.githubusercontent.com` and the git protocol are reachable. 🔴 **This retires a
+  channel the shelf depends on:** the `Licence (title block)` column cites
+  *"sidebar `MIT license`"* on many rows, and **that sidebar is no longer readable here**,
+  so those attestations cannot be re-verified by this or any later pass under this policy.
+  Registered as **`Gap 547-E`**.
+- 🔴 **`jrsaguas/DocenteAgent` is left UNPLACED.** Its commit timezone is `-06:00`, which is
+  a hint and not evidence, and `p545`'s rule forbids placing an `es` artefact on language.
+- 🔴 **No new foundational repo and no new vertical platform was shelved** — the English
+  vertical leg returned OpenEduCat / RosarioSIS / openSIS / ERPNext / SchoolTool, all held.
+  🟡 The unresolved **openSIS** licence disagreement (GPL vs a comparison table's
+  Apache-2.0) is **still** unresolved and is **not** recorded as either.
+- 🔴 **`Gap 546-A`, `546-E` untouched.** `Gap 546-B` is **closed** on
+  [`../repos/foundations.md`](../repos/foundations.md).
+
 ## 🆕 `p546` — `2026-10-30` — **🟢 `Gap 545-A` DELIVERED: THE QUOTE GATE IS BUILT, RUN OVER **84 QUOTES / 89 SPANS**, AND IT FOUND **ZERO** avit-CLASS DEFECTS — AFTER FOUR DEFECTS IN **ITS OWN** CONSTRUCTION WERE FOUND AND FIXED, EACH OF WHICH HAD FAILED A CORRECT ROW. 🟢 IT REPRODUCES `p545`'s avit HAND READ **TO THE BYTE** (5 430 B, `grep` → `0`). 🔴 ITS REAL LIMIT IS NAMED: **ATTRIBUTION IS IN THE PROSE, NOT IN THE COLUMN**. 🟢 `Gap 545-B` ANSWERED: THE TREND DIGESTS ARE **ONE GENERATOR IN MANY ACCOUNTS** — AGREEMENT BETWEEN THEM IS NOT CORROBORATION, AND ONE OF THEM EMITS **`0` TOTAL STARS WITH `+2 870` TODAY**. 🟢 `Gap 544-B` ANSWERED AND THE TAXONOMY GAINED A CLASS IT DID NOT HAVE. 🔴 EIGHTH CONSECUTIVE SUPPLY SATURATION.**
 
 🔵 **The instrument record, the staleness census and the succession table are on

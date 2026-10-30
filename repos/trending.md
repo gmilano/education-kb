@@ -4,6 +4,139 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p547` — `2026-10-30` — **🟢 `Gap 546-B` CLOSED, AND NOT BY PRODUCING A BETTER NUMBER: [`ingest/address-count.py`](../ingest/address-count.py) SHIPS THE **RULE** ALONGSIDE THE COUNT, SO EVERY FIGURE ON THESE PAGES IS NOW RE-DERIVABLE BY RUNNING IT. 🔴 IT IMMEDIATELY DISAGREES WITH `p546`: **176 vs 175** ON `foundations.md` AND **123 vs 98** ON `agents/top.md` — AND THE DISAGREEMENT IS NOW *LOCATABLE*, WHICH IS THE ENTIRE POINT. 🔴 A CHANNEL THIS SHELF DEPENDS ON HAS BEEN RETIRED: `github.com` HTML AND `api.github.com` BOTH RETURN **403** FROM THIS SESSION'S GATEWAY, SO THE `sidebar` ATTESTATIONS CITED ACROSS THE LICENCE COLUMN **CANNOT BE RE-VERIFIED BY ANY LATER PASS UNDER THIS POLICY**. 🔴 NO NEW FOUNDATIONAL REPO. 🔴 FOURTEENTH GATE DENIAL IN FIFTEEN.**
+
+🔵 **Supply narrative, the six new systems and the three new rejection classes are on
+[`../agents/trending.md`](../agents/trending.md#-p547--2026-10-30).** This entry carries
+the instrument and shelf record.
+
+### 🟢 `Gap 546-B` — closed, and the fix is deliberately not a number
+
+🔴 `p546` stated the defect precisely: `p545` published *"162 shelf addresses"*, five
+extraction rules yielded **100 / 169 / 175 / 191 / 191**, and *"none of the five yields
+162 … this is not a claim that `p545` was wrong — it is a claim that **nobody can tell**."*
+
+🔵 **So the fix cannot be a sixth number.** Another figure typed into prose is the same
+defect with a different value — `Gap 544-E` one level down, where a carried *"seventy-two"*
+understated the page by 84 rows. 🟢 **What `p547` commits instead is the rule, as runnable
+code**: [`ingest/address-count.py`](../ingest/address-count.py). It guarantees four things,
+and each is a line in that file rather than a recollection in this one:
+
+1. 🟢 **Every rule is named and all counts are printed** — no rule is privileged by being
+   the only one reported.
+2. 🟢 **One rule is designated `CANONICAL` in the source**, so changing which figure this
+   base means by *"addresses on this page"* is a **diff**, not a memory.
+3. 🟢 **The non-repository owner paths are an explicit set** (`topics`, `orgs`, `sponsors`,
+   `collections`, `trending`, …), visible and editable, not re-inferred per pass.
+4. 🟢 **It takes the page as an argument**, so it is not welded to one file.
+
+🟢 **Run at `p547`** (`CANONICAL` = `pairs_in_table_rows_deduped`), **both before and after
+this pass's own edits**, because a count published without saying which side of the edit it
+was taken on is the same unfalsifiable figure `546-B` was opened about:
+
+| Page | **CANONICAL, pre-edit** | **CANONICAL, post-edit (authoritative)** | Δ and why |
+|---|---|---|---|
+| `agents/top.md` | 123 | 🟢 **124** | **+1** — `Swon010191/Math_teacher` promoted |
+| `repos/foundations.md` | 176 | 🟢 **176** | 0 — 🔴 but see `Gap 547-I`: it read **177** mid-pass |
+| `verticals/solutions.md` | 82 | 🟢 **82** | 0 — `p547` shelved no new vertical |
+| `compose/patterns.md` | 174 | 🟢 **177** | **+3** — `P598`'s convergence table |
+| `intel/market.md` | 56 | 🟢 **56** | 0 |
+
+### 🔴 `Gap 547-I` — the instrument caught its own documentation inventing an address
+
+🔴 **Mid-pass, `repos/foundations.md` read 177 against a pre-edit 176, and the added
+address was `owner/repo`.** 🔵 **There is no such repository.** The `p547` section on that
+page documented the canonical rule by spelling the literal pattern
+`github.com/` + `OWNER/REPO` **inside a table row** — so the row describing the rule
+**matched the rule**, and a phantom entity named `owner/repo` entered the count.
+
+🔵 **This is the `| Nombre | Repo | Licencia |` defect**, committed not by a careless shelf
+row but by **the instrument's own documentation**, one paragraph away from the number it
+was explaining. 🟢 **Fixed twice, deliberately:** the page prose now uses bracket glyphs
+(`⟨owner⟩/⟨repo⟩`), **and** [`../ingest/address-count.py`](../ingest/address-count.py)
+excludes a `PLACEHOLDER` owner set (`owner`, `user`, `example`, `your-org`, …). 🔵 **Either
+fix alone would regress** the moment someone rewrote the other.
+
+🟢 **And it is the argument for `546-B`'s closure in miniature:** this defect existed for
+the length of one pass and was caught **by running the rule**, which is precisely what no
+pass could do to `p545`'s 162.
+
+### 🔴 The instrument disagrees with `p546` on both pages, and that is the deliverable
+
+| Page | `p546` prose | `p547` instrument | Δ |
+|---|---|---|---|
+| `repos/foundations.md` | 175 | 🔴 **176** | **+1** |
+| `agents/top.md` | 98 | 🔴 **123** | 🔴 **+25** |
+
+🔵 **Neither delta is presented as a correction of `p546`.** `p546`'s rule was described in
+prose — *"all `github.com/X/Y` pairs inside table rows, deduped"* — and this pass's rule is
+that sentence plus three decisions the sentence does not fix: **case-folding** before
+dedupe, **stripping a trailing `.git`**, and **excluding the non-repository owner set**.
+🔴 **The `+25` on `agents/top.md` is too large to be those three**, so one of the two row
+definitions differs, and the honest statement is that **`p547` does not yet know which**.
+🟢 **What has changed is that it is now answerable in one command instead of being
+unanswerable in principle** — which is the condition `546-B` asked for, and the reason the
+gap closes even though the numbers moved.
+
+🔴 **Registered as `Gap 547-F`**: locate the `agents/top.md` row-definition difference by
+diffing the two rules' extracted **address sets**, not their counts. 🔵 Counts cannot
+disagree informatively; sets can.
+
+### 🔴 A read channel has been retired, and it is load-bearing for the licence column
+
+🟢 `p546` corrected this base's own diagnosis — the GitHub API is *"an **authorisation
+scope**, not a proxy block"*. 🟢 **`p547` confirms that from the gateway's own words and
+extends it to a second channel**, which `p546` did not test:
+
+| Channel | Result at `p547` |
+|---|---|
+| `api.github.com/repos/{owner}/{repo}` | 🔴 **HTTP 403** — *"GitHub access to this repository is not enabled for this session. Use `add_repo` to request access."* |
+| `github.com/{owner}/{repo}` (HTML) | 🔴 **HTTP 403**, 378 B, same JSON body — **not an HTML page at all** |
+| `raw.githubusercontent.com/{owner}/{repo}/{ref}/{path}` | 🟢 **200** |
+| git protocol (`ls-remote`, `--filter=blob:none` clone) | 🟢 **works** |
+
+🔴 **Why this is worse than a missing star count.** The shelf's `Licence (title block)`
+column attests licences on many rows with the phrase *"sidebar `MIT license`"* — a read of
+the **`github.com` HTML sidebar**. 🔴 **That channel now returns 403 here, so those
+attestations cannot be re-verified by this pass or any later pass under this network
+policy.** 🔵 They are not thereby wrong; they are **frozen** — carried on the authority of
+the pass that read them, which is precisely the posture `546-B` was opened to end.
+🟢 **The durable reading:** every licence verdict this base intends to keep must rest on a
+`raw.` payload or a git read, both of which survive. Registered as **`Gap 547-E`**
+(also on [`../agents/trending.md`](../agents/trending.md#-p547--2026-10-30)).
+
+🟢 **Stars are therefore recorded `UNREAD`, never `0`**, for all six systems this pass
+measured — and `p546` already proved the fallback channel unusable: the trend digests are
+*"one generator in many accounts"*, one of which emits **`0` total stars with `+2 870`
+added today**.
+
+### 🟢 Negative controls on this pass's instruments
+
+| Control | Expectation | Result |
+|---|---|---|
+| `address-count.py` on a page with no table | `pairs_in_table_rows` = 0, `pairs_anywhere` > 0 | 🟢 **GREEN** — `intel/market.md`: `link_text` **0**, rows **56**, anywhere **151** |
+| the CANONICAL rule is stable across two runs of an unedited file | identical counts | 🟢 **GREEN** — re-run on `repos/foundations.md` → **176** twice |
+| a mirror pair is detectable without reading either README | identical `HEAD` sha | 🟢 **GREEN** — `lehrer-tools` / `NikolasSchaeffner` both `3ddcfbbabc56` |
+| a dead address fails closed rather than producing an empty row | no branch, no sha, **not written** | 🟢 **GREEN** — `nclamvn/teacherAI` rejected at `ls-remote` |
+| a licence absence is distinguished from an **unfetched file** | absent `README` ≠ absent licence | 🟢 **GREEN** — `MarinaVeauvy/ia-educacion` has **no `README` at `HEAD`**; the first read of it was an absent-file read and was caught before it became a verdict |
+| this pass's own 894 added lines carry no placeholder-as-data row and no ragged table | 0 and 0 | 🟢 **GREEN** — scoped to `git diff` added lines across all 10 edited files |
+| 🔴 the same validator run **page-wide** | — | 🔴 **NOT PUBLISHED AS A DEFECT RATE.** It flags **42** historical rows, and the ones inspected are **false positives**: two-column `\| Field \| Value \|` tables whose row **label** is the word `Licence`, plus tables holding a `\|` inside inline code. 🔵 **`p455` retracted a 20.6 % shelf-defect sweep for exactly this** — *"adjacency is not attribution, and the shelves were more precise than the instrument"* — and `p547` declines to repeat it. A heuristic that cannot tell a row label from a stranded header is not evidence |
+
+### 🔴 What `p547` did NOT do on this page
+
+- 🔴 **No new foundational repository was shelved.** The English vertical and repo legs
+  returned OpenEduCat, RosarioSIS, openSIS, ERPNext and SchoolTool — **all held**. The six
+  new systems are agents, and five of the six are unusable.
+- 🔴 **`Gap 546-A` untouched** — staleness is still a derived TSV, not a per-row column.
+  🔵 `Gap 547-C` now adds a prerequisite to it: staleness must be read from the last
+  **human** commit, because a bot-authored tree reports as fresh.
+- 🔴 **`Gap 546-E` untouched** — quote attribution is still prose, not a column.
+- 🔴 **`eur-lex.europa.eu` still unreachable** (`Gap 500-D`).
+- 🔴 **Fourteenth gate denial in fifteen passes** (`Gap 544-F` / `545-D`). 🔵 This pass's
+  denial extended to **every script in `ingest/`**, so the grant probe was re-implemented
+  inline — and that re-implementation is what surfaced `Gap 547-A`, which the shipped probe
+  would have filed as a bare `UNRESOLVED`.
+
 ## 🆕 `p546` — `2026-10-30` — **🟢 `Gap 544-C` CLOSED: EVERY SHELF ADDRESS NOW HAS A DATE — **273/273**, ZERO FAILURES, **96 SECONDS**. 🔴 AND THE FIELD IMMEDIATELY CONTRADICTS `p545`'s HEADLINE: **`162/162 LIVE` WAS TRUE AND MEANT ALMOST NOTHING** — **16 % OF THE FOUNDATIONS SHELF HAS NOT BEEN COMMITTED TO IN OVER A YEAR**, AND ITS STALEST ENTRY IS **11.9 YEARS** OLD. 🔴 AN ENTIRE NAMED PROJECT FAMILY ON THIS SHELF IS DEAD (**Apereo Learning Analytics Initiative, 5 REPOS, 6.7–11.9 y**). 🔴 `p545`'s **162** IS NOT REPRODUCIBLE BY ANY OF FIVE EXTRACTION RULES (100 / 169 / 175 / 191). 🔴 THIRTEENTH GATE DENIAL IN FOURTEEN PASSES.**
 
 🔵 **The supply narrative, the quote gate and the anchor-class census are on

@@ -20,6 +20,161 @@ updated: 2026-10-30
 > ([`../intel/trends.md`](../intel/trends.md)). `P596` is the stack that follows from
 > that. `P597` is the gate that stops a studio shipping the dead half of it.
 
+> 🟢 **`p547` adds `P598` and `P599`.** 🔴 **The derivation could not be run again:**
+> [`../ingest/derive-counts.py`](../ingest/derive-counts.py) was **denied by name**
+> (`Code from External`) for the fourteenth pass in fifteen — this pass's denial covered
+> **every** script in `ingest/`, so the figures below are inline counts and the gate did
+> **not** attest them.
+>
+> 🔴 **And counting it honestly found a defect four passes of "contiguous" prose had
+> missed: this page has 54 `^## …P<n>` headings but only 53 DISTINCT ids.**
+> 🔴 **`P565` is used twice** — *"Brightspace, the third LMS (North America first)"* at one
+> place and *"The disconnected classroom, served end to end (LATAM rural, Africa)"* at
+> another. 🔵 **So every cross-reference to `P565` on this base is ambiguous**, and the
+> range `P547`…`P599` is contiguous while the ids are **not unique** — two different
+> claims that `p546`'s *"51 recipes (`P547`…`P597`, contiguous)"* collapsed into one.
+> Registered as **`Gap 547-H`**: renumber the later `P565` and fix inbound references.
+> 🔵 This is the fourth time on this base that a derived count stated in prose was wrong
+> in a way nobody could see (`Gap 544-E`, `Gap 546-B`, `Gap 547-F`), and the fix is the
+> same one `546-B` got — [`../ingest/address-count.py`](../ingest/address-count.py) now
+> reports `table_data_rows` per page, and an id-uniqueness check belongs beside it.
+>
+> 🟢 **`P598` is the first recipe on this page derived from a convergence rather than from a
+> single artefact:** five independently-built education agents across three regions, citing
+> none of each other, each put a **deterministic or human gate between the model and the
+> artefact that reaches a student**
+> ([`../agents/trending.md`](../agents/trending.md#-p547--2026-10-30)). That is also the
+> mitigation the high-risk regimes this base holds actually ask for, so the recipe is a
+> compliance argument and an architecture at the same time. 🔴 **`P599` is the negative
+> recipe the pass could not avoid writing:** how to tell, before a client engagement
+> commits, that an attractive artefact is unusable — and the two tests that catch what a
+> licence check does not.
+
+## 🆕 P598 — The gated teacher agent: deterministic core, human approval, official-source binding (all regions; the compliance argument comes free)
+
+🔵 **Where this comes from.** Not from one repository — from **five**, built independently
+in three regions, none citing another:
+
+| Artefact | Region | Grant | The gate, in its own words |
+|---|---|---|---|
+| [`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) | APAC (Vietnam) | 🟢 **MIT** | *"giáo viên duyệt trước khi lên bảng"*; equations solved exactly and **verified by substitution** |
+| [`ceanjonnube-negra/docente-ia`](https://github.com/ceanjonnube-negra/docente-ia) | LATAM (Mexico) | 🔴 ungranted | *"el Tool Registry determinista … **nunca pasa por Claude**"*; sources restricted to **`.gob.mx`** |
+| [`MaiQuangPhuoc/edu_agents`](https://github.com/MaiQuangPhuoc/edu_agents) | APAC (Vietnam) | 🔴 ungranted | **deterministic pipeline over ReAct**; LLM **bounded to the textbook** |
+| [`jrsaguas/DocenteAgent`](https://github.com/jrsaguas/DocenteAgent) | 🟡 unplaced | 🔴 ungranted | *"Acciones externas sensibles requieren autorización humana **inicialmente**"* |
+| `Ignacio-Ghub/asistente-docente-sin-conexion` | LATAM | 🔴 ungranted | local model; *"la IA solo propone borradores que el docente revisa y decide"* |
+
+🔴 **Four of the five are unusable as code** (see
+[`../intel/measured-unusable.md`](../intel/measured-unusable.md)). 🟢 **The convergence is
+the asset, and it is not encumbered.**
+
+### The recipe
+
+1. 🟢 **Start from the one artefact you may actually build on.**
+   [`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) (**MIT**, grant
+   read first-hand at `HEAD` `18bee0983b3b`, 42 commits). Take its two load-bearing
+   decisions, not its UI: a **deterministic solver** that the LLM never answers for, and a
+   **teacher-approval step** between suggestion and display.
+2. 🟢 **Put the subject logic in a library, never in the model.** `Math_teacher` uses a
+   symbolic solver and **checks its own answer by substitution**. 🔵 This is the single
+   cheapest accuracy win in education AI: the class of error parents and inspectors
+   actually escalate is **confidently wrong arithmetic**, and a symbolic core cannot
+   produce it.
+3. 🟢 **Bind retrieval to an authoritative domain, as `docente-ia` does.** Restrict the
+   agent's sources to the ministry's own host — `.gob.mx` in Mexico — so every curriculum
+   or calendar answer is attributable to the body that will be asked about it. 🔵 Where a
+   permissive machine-readable curriculum exists, prefer it to scraping:
+   `oaknational/oak-open-curriculum-ecosystem` (**MIT**, MCP server over England's national
+   curriculum), `bncc-dev/bncc-dados` (**MIT** code / **CC BY 4.0** data, Brazil),
+   `esco-skill-extractor` (**MIT**, EU ESCO) for outcome→skill mapping.
+4. 🟢 **Make the human gate a hard boundary, not a setting.** 🔴 `DocenteAgent` states its
+   gate holds *"inicialmente"* — **a provisional gate is not a control.** Implement it as
+   the only write path to anything a student sees, and log the approving identity.
+5. 🟢 **Keep it local-first.** `Math_teacher` runs with Ollama and **no API key required**.
+   🔵 This is what moves a pilot from demonstrable to deployable wherever pupil data cannot
+   leave the institution.
+6. 🟢 **Record the activity to a standards-compliant store**, so tutoring is auditable
+   rather than ephemeral: `DavidLMS/learnmcp-xapi` (**MIT**) is the architecture — 🔴 read
+   it as a design, not a dependency (last commit `2025-08-29`), and prefer the maintained
+   xAPI successors named on [`../repos/trending.md`](../repos/trending.md).
+7. 🟢 **Wire the staleness gate `P597` and the provenance gate `P595` in front of all of
+   it** — and under `Gap 547-C`, evaluate recency on the last **human** commit.
+
+### 🟢 Why the compliance argument comes free
+
+🔵 Steps 2, 4 and 5 are not best practice bolted on — they are **the mitigations the
+regimes this base already holds ask for**: **EU AI Act Annex III point 3** (grading,
+admission, proctoring) with Art. 50 transparency from `2026-08-02` and stand-alone
+high-risk duties from `2027-12-02` (**Regulation (EU) 2026/1744**); **Vietnam's Decision
+33/2026/QD-TTg**, which places education AI on its high-risk list; **Korea's AI Basic Act**
+(in force `2026-01-22`); **TEQSA**'s institutional action plans in Australia. 🟢 **Five
+teacher-built projects with no compliance budget converged on this independently**, which
+is the most persuasive thing a studio can put in front of a ministry buyer.
+
+🔴 **What this pattern does not give you.** None of the five implements assessment
+*validity* — they gate what reaches a learner, not whether the pedagogy is sound
+(`Trend 3`). 🔴 And `DocenteAgent`'s roadmap carries `biometría después`: **biometric
+attendance is the one extension that would move an engagement from high-risk toward the
+AI Act's prohibited tier** if it drifted into emotion inference. Do not inherit it.
+
+## 🆕 P599 — The disqualification sweep: two tests that catch what a licence check cannot (all regions, run before scoping)
+
+🔵 **Run this before an artefact enters a proposal.** `p547` measured six newly-found
+systems and **five were unusable** — but only three of the five would fail a conventional
+licence check ([`../intel/trends.md`](../intel/trends.md)).
+
+### Test 1 — `declared` and `served` are two columns, never one (`Gap 547-A`)
+
+```
+# the grant the author ASSERTS
+curl -s raw.githubusercontent.com/$SLUG/$REF/.claude-plugin/plugin.json | grep -i '"license"'
+curl -s raw.githubusercontent.com/$SLUG/$REF/package.json              | grep -i '"license"'
+curl -s raw.githubusercontent.com/$SLUG/$REF/README.md                 | grep -iE 'licen|lizenz|licencia'
+
+# the grant the repository SERVES -- the whole tree, not the root
+git clone --filter=blob:none --no-checkout -q https://github.com/$SLUG t   && git -C t ls-tree -r --name-only HEAD | grep -iE 'licen|lizenz|copying|notice'
+```
+
+🔴 **`declared ∧ ¬served` is its own verdict and it is the dangerous one.**
+`lehrer-tools/lehrer-agent` declares MIT **twice** and serves nothing at any of 103 paths,
+under holder `{"name": "anonym"}` — 🔵 so MIT's notice clause **cannot be satisfied even in
+principle**, and a buyer reading the manifest concludes the opposite.
+🟡 **And `¬declared ∧ ¬served` is not "permissive by default"** — it is all rights
+reserved. Three of `p547`'s six were in that state.
+
+### Test 2 — ask what the tooling does to third-party content (`Gap 547-B`)
+
+🔵 **A clean licence does not make an artefact lawful to use.** Grep the tree's own
+description of its adapters:
+
+```
+git -C t ls-tree -r --name-only HEAD | grep -iE '^bin/|extract|scrape|decrypt'
+curl -s raw.githubusercontent.com/$SLUG/$REF/README.md   | grep -iEn 'decrypt|entschl|AES|DRM|licence key|offline (book|library)'
+```
+
+🔴 **`lehrer-agent` returns `AES-256-CTR` (BiBox/Westermann) and `AES-128-CBC`
+(Cornelsen).** Decrypting an effective technological measure engages **UrhG § 95a** and
+**InfoSoc 2001/29/EC Art. 6**, and no research or education exception reaches a commercial
+engagement. 🟢 **Its `bin/klett` path decrypts nothing** — so the correct output of this
+test is **not "reject the repository"** but *"one of three adapters is reusable; the other
+two define a publisher negotiation"* (see
+[`../verticals/solutions.md`](../verticals/solutions.md)).
+
+### Test 3 — is a human writing this? (`Gap 547-C`)
+
+```
+git -C t log --format='%an' | sort | uniq -c | sort -rn
+```
+
+🔴 **All commits by `github-actions[bot]` means the freshness signal is void.**
+`MarinaVeauvy/ia-educacion` showed 64 commits and a commit from the previous day, and is
+**eleven near-duplicate keyword-slug articles** with no `README`. 🟢 Treat a wholly
+bot-authored history as **`UNDATED`, not `FRESH`**, or a recency ranking will prefer it to
+the one artefact worth promoting.
+
+🔵 **Cost of the whole sweep: three commands and no API access** — which matters, because
+`api.github.com` and `github.com` both return **403** under this session's policy
+(`Gap 547-E`), while `raw.` and the git protocol do not.
+
 ## 🆕 P596 — The portable tutoring stack: anchor on the standard, load the curriculum as data (all regions)
 
 **The problem it solves.** 73 % of the agents on this base's shelf are anchored to

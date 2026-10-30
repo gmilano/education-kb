@@ -13,6 +13,77 @@ updated: 2026-10-30
 > the standards layer rotting uniformly; dated per standard it is a clean
 > succession, and the retraction is recorded in the trend itself.
 
+> 🟢 **`p547` adds Trends 47 and 48, both measured on this pass's own yield rather
+> than read from a channel.** Trend 47 is the one to take to a client: **across six
+> newly-found systems only one carried a usable grant**, and the three failure modes
+> are not the ones a licence ladder tests for. Trend 48 is an instrument warning with
+> a commercial edge — **a repository can be fresh, active and not written by a human**.
+> 🔴 **Trend 47 also records a retraction of this pass's own first framing**, which
+> claimed the grant-scarcity result as new when `p543` and `p544` had already
+> established it and `Gap 543-D` had opened a register precisely to stop it being
+> re-discovered.
+
+## 🆕 Trend 47 — **The binding constraint on open education AI is not discovery, it is the grant — and the three ways it fails are not the ones anyone tests for**
+
+🔵 **Measured on `p547`'s whole yield, not on a sample.** Eight mandated English-language
+legs returned **0** systems this base did not hold. Five language-shifted legs
+(`de` `zh` `vi` `pt` `es`) returned **6**. 🔴 **One of the six carries a grant Globant can
+build on.**
+
+| Failure mode | Count | What it looks like |
+|---|---|---|
+| 🟢 **usable** | **1** | `Swon010191/Math_teacher` — MIT, grant file read at `HEAD`, 1 066 B |
+| 🔴 **ungranted** | **3** | nothing licence-shaped in the tree, nothing declared anywhere — incl. one with **245 commits** |
+| 🔴 **NonCommercial** | **1** | CC BY-NC-SA 4.0, and the prose extends it to *"su código fuente"* |
+| 🔴 **declared-but-unserved** | **1** | MIT in `plugin.json` **and** README, **no licence file at any path**, holder `"anonym"` |
+| 🔴 **not software** | **1** | 64 bot commits over 11 near-duplicate keyword-slug HTML articles |
+
+🔴 **This is a replication, and the first draft of this trend wrongly claimed it as a
+discovery.** `p543` found **3 Vietnamese agents / 0 licences**; `p544` found **1 Russian
+agent / 0 licences** and already called the grant gate *"the strongest regularity on this
+axis"*; `Gap 543-D` opened
+[`measured-unusable.md`](measured-unusable.md) **so the class would stop being
+re-discovered**. 🔵 The register caught this pass making exactly the error the register
+exists to prevent, which is the strongest argument for keeping it.
+
+🟢 **What is genuinely new, and it is what a client should hear:** the gate now holds in
+**two further corpora** (`de`, `es`), and **two of the three failure modes above are
+invisible to a licence check.** A procurement step that reads `plugin.json` concludes MIT.
+A procurement step that reads the licence *file* concludes "no licence" and misses that the
+author asserted MIT twice. 🔴 **And a third mode is not about licensing at all** — see
+`Gap 547-B`: an artefact whose tooling decrypts AES-256-CTR schoolbook DRM is unusable
+**however it is licensed**, because the regulated act is reading the content
+(**UrhG § 95a**, **InfoSoc 2001/29/EC Art. 6**).
+
+🟢 **The action that follows is cheap and this base has prescribed it since `ACTION
+p417-A`: ask for the licence.** Three of six are otherwise shelf-eligible, the
+counterparties are identifiable individuals rather than corporations, and **one `LICENSE`
+commit** moves each from unusable to usable.
+
+## 🆕 Trend 48 — **A repository can be fresh, active and not written by a human — so recency is not liveness**
+
+🔴 [`MarinaVeauvy/ia-educacion`](https://github.com/MarinaVeauvy/ia-educacion) reached
+`p547` through the `es` supply leg presenting every signal of a live project: **64 commits,
+most recent `2026-10-29`** — the day before the pass. 🔵 **Read at `HEAD` it is a content
+farm:** 32 files, no `README`, no licence, and `articles/` holding **eleven near-duplicate
+HTML files** whose slugs are permutations of one keyword string
+(`como-usar-chatgpt-planificar-clases-eficiente…`). 🔴 **Every commit is authored by
+`github-actions[bot]`.**
+
+🔵 **Why this is a trend and not an anecdote.** `p546` closed `Gap 544-C` by dating every
+shelf address, and `Gap 546-D` asks the promotion ratchet to rank on that date. 🔴 **A
+ratchet ranking on recency alone would have placed this content farm above
+`Math_teacher`** (`2026-09-17`, human) — the only artefact in the pass that could be
+promoted. 🟢 **So the date field needs a second column it was never specified with:
+committer identity.** Registered as `Gap 547-C`: compute staleness from the last **human**
+commit, and treat a wholly bot-authored history as `UNDATED`, not `FRESH`.
+
+🟡 **The commercial edge.** Generated edtech content at this scale is now cheap enough to
+be ambient, and it is **indexed by the same channels a studio researches through**. 🔵 For
+a client this cuts two ways: diligence on an open-source dependency must read the
+**committer**, and a client whose own curriculum content competes for search attention is
+now competing with machine-generated near-duplicates of it.
+
 ## 🆕 Trend 44 — **A curriculum anchor is a border. An interop-standard anchor is a passport.**
 
 🟢 **Stated so it can be disconfirmed:** *of the anchors a domestic education agent can be

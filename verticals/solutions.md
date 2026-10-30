@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p547` — the vertical leg returned **nothing new** for the ninth pass, and the `de` supply leg found a vertical tier this page did not have: **three German schoolbook platforms that are systems of record for CONTENT, and reaching their content is itself the regulated act**
+
+🔴 **The mandated vertical leg is saturated.** `open source platform education ERP CRM MIT
+Apache` returned **OpenEduCat** (LGPL-3.0, Odoo-based), **RosarioSIS** (GPL-2.0),
+**openSIS**, **ERPNext** and **SchoolTool** (🔴 discontinued 2016) — **all five already on
+this page**. 🟡 The **openSIS** licence disagreement (GPL vs a comparison table's
+Apache-2.0) is recorded as **unresolved** on [`../repos/foundations.md`](../repos/foundations.md)
+and **not** written here as either value.
+
+🟢 **What the German supply leg found instead is a vertical class this page has not
+carried.** `p455` established the EMEA inversion — PRONOTE, EcoleDirecte, Schulportal
+Hessen, WebUntis: proprietary, un-forkable national systems reachable only through
+unofficial clients, so the engagement becomes *adapter + agent layer against a system of
+record the client does not control* (`Trend 41`, `P455-A`). 🔵 **Those four are systems of
+record for ADMINISTRATION — timetable, grades, attendance.** The three below are systems of
+record for **CONTENT**, and they behave differently in a way that matters commercially.
+
+| Platform | Publisher | Protection on offline content, as the adapter's own README describes it | What that means for an engagement |
+|---|---|---|---|
+| **BiBox 2.0** (`bibox2.westermann.de`) | Westermann-Gruppe | 🔴 **AES-256-CTR encrypted** offline books | 🔴 **Closed.** Decrypting it engages **UrhG § 95a** / **InfoSoc 2001/29/EC Art. 6**; no education exception reaches a commercial engagement |
+| **Cornelsen Offline Lernen** | Cornelsen-Gruppe | 🔴 **AES-128-CBC encrypted** PDFs | 🔴 **Closed**, same basis |
+| **Klett Lernen** | Klett-Gruppe | 🟢 *"Bücher sind **nicht verschlüsselt**"* — ePaper PDFs, search index, `Kopiervorlagen` | 🟡 **Open at the technical layer, licensed at the content layer** — extraction needs no circumvention, so the negotiation is about **copyright**, not about DRM |
+
+🔵 **Read the third row — it is the engagement.** The distinction between Klett and the
+other two is not a detail: it decides **whether there is a lawful path at all**. 🔴 Against
+BiBox and Cornelsen there is no adapter Globant can ship, at any licence, because the act
+of reading the content is the prohibited act. 🟢 Against Klett the technical path is clear
+and the remaining obstacle is a **content licence from the publisher** — an ordinary
+commercial conversation with a named counterparty.
+
+🟢 **So the EMEA content-tier engagement shape is: licence the corpus, then build the
+agent layer on top of a curriculum ontology you already hold.** The ontology is on these
+shelves and is permissive — **Oak National Academy's `oak-open-curriculum-ecosystem`**
+(MIT, England, 6 835 commits) for a national curriculum with an MCP server over it, and
+**`esco-skill-extractor`** (MIT, EU ESCO taxonomy) for outcome→skill mapping. 🔵 Neither
+requires a publisher.
+
+🔴 **And the artefact that demonstrated all of this is itself unusable.**
+[`lehrer-tools/lehrer-agent`](https://github.com/lehrer-tools/lehrer-agent) carries
+`Rahmenlehrpläne`, school law and `Verwaltungsvorschriften` for **all 16 Bundesländer** and
+`Förderschwerpunkt` differentiation across five subjects — and it declares MIT in two
+places while serving **no licence file at any path in its 103-file tree**, under the holder
+`"anonym"`. 🔵 It is filed on [`../intel/measured-unusable.md`](../intel/measured-unusable.md),
+not here, and the reasoning is `Gap 547-A` / `Gap 547-B` on
+[`../agents/trending.md`](../agents/trending.md#-p547--2026-10-30).
+
+🟢 **The one thing on this page to take from it without any licence question:** the
+`Förderschwerpunkt` × subject matrix is a **requirement**, not an asset — special-
+educational-needs differentiation crossed with subject is a dimension no platform on this
+page models, and a German state engagement will ask for it on day one.
+
 ## 🆕 `p546` — the vertical leg returned **nothing new** again, and the date field found the one thing on this page that changes an architecture decision: **the public Canvas LMS repository has not moved on ANY of its 377 branches since `2026-04-30`**
 
 🔴 **Supply result first, plainly: the vertical leg returned no platform this base does

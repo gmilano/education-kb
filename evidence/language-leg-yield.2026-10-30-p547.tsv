@@ -1,0 +1,14 @@
+# p547 — language-shifted supply legs vs the eight mandated English legs.
+# Every field below was read first-hand at HEAD via git/raw.githubusercontent.com on 2026-10-30.
+# stars: UNREAD — api.github.com AND github.com both return HTTP 403 from this session's
+# repo-scope gateway (gateway's own attestation, not inference). Only raw. + git reachable.
+slug	leg_language	live	default_branch	head_sha	commits	last_commit	grant_file	grant_bytes	declared_grant	verdict	region	region_evidence
+lehrer-tools/lehrer-agent	de	YES	main	3ddcfbbabc56	4	2026-04-06	NONE_IN_103_FILE_TREE	0	MIT (plugin.json + README "## Lizenz")	REJECT_DECLARED_UNSERVED+DRM	EMEA	tree carries rahmenlehrplan.md for all 16 Bundeslaender
+NikolasSchaeffner/lehrer-agent	de	YES	main	3ddcfbbabc56	4	2026-04-06	NONE_IN_103_FILE_TREE	0	MIT (same tree)	REJECT_MIRROR	EMEA	identical head_sha to lehrer-tools; all 4 commits authored by lehrer-tools
+Swon010191/Math_teacher	vi	YES	main	18bee0983b3b	42	2026-09-17	LICENSE	1066	MIT	PROMOTE	APAC	Vietnamese README + docs/HUONG_DAN_CAI_DAT.md; vi is region-confining per p545
+ceanjonnube-negra/docente-ia	es	YES	main	-	245	2026-10-28	NONE	0	NONE	HOLD_UNGRANTED	LATAM	ESTADO_PROYECTO.md: SEP/DOF lookups restricted to .gob.mx; schema flag es_sep
+jrsaguas/DocenteAgent	es	YES	master	-	15	2026-09-29	NONE	0	NONE	HOLD_UNGRANTED	UNKNOWN	no country evidence read first-hand; tz -06:00 is a hint, not evidence
+francisco-sereno/guia-fundamentos-IAGen	es	YES	main	-	18	2026-10-29	NONE	0	CC BY-NC-SA 4.0 (README prose, covers "y su codigo fuente")	REJECT_NONCOMMERCIAL	LATAM	author states Universidad de Chile VTI affiliation
+MarinaVeauvy/ia-educacion	es	YES	master	-	64	2026-10-29	NONE	0	NONE	REJECT_NOT_A_SYSTEM	n/a	32 files, 11 near-duplicate keyword-slug HTML articles, all commits by github-actions[bot]
+nclamvn/teacherAI	vi	NO	-	-	-	-	-	-	-	REJECT_404	n/a	git ls-remote returns nothing; a 404 is not a finding
+longnhgsvn/Learn-with-AI-tieng-viet	vi	YES	main	35987bee6333	6	2025-09-23	LICENSE	35149	GPL-3.0	ALREADY_HELD_STALE_13.2mo	APAC	already on trending shelves

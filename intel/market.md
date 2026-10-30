@@ -4,6 +4,160 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p547` — `2026-10-30` — **🔴 EIGHTH CONSECUTIVE DEMAND SATURATION ACROSS ALL FOUR REGIONS: THE FOUR MANDATED LEGS RETURNED **0 NEW CLAIMS** AND THIS BASE WAS MORE PRECISE THAN THE SEARCH CHANNEL ON EVERY REGULATORY INSTRUMENT IT RETURNED. 🔴 THE NA LEG RE-SURFACED A FIGURE THIS BASE **RETIRED AT `p455`** AS ITS TOP ORGANIC RESULT. 🟢 THE SUPPLY SIDE MOVED INSTEAD, AND IT MOVED THE REGIONAL PICTURE: EMEA GAINS A **CONTENT**-TIER OPPORTUNITY WITH A LAWFUL PATH THROUGH EXACTLY ONE OF THREE PUBLISHERS, AND APAC GAINS THE FIRST SHELF ROW WHOSE ARCHITECTURE IS A **DIRECT MATCH** TO ITS OWN HIGH-RISK REGIME.**
+
+### 🔴 The demand legs, graded claim by claim
+
+🔵 **Every instrument the four legs returned was checked against what this base already
+holds.** The result is not "nothing was found" — it is **"this base was more precise than
+the channel"**, which is a different and more useful statement:
+
+| Instrument the leg returned | Already held? | This base's version |
+|---|---|---|
+| EU AI Act high-risk for education from `2026-08-02` | 🔴 **held and SUPERSEDED** | 🟢 **Regulation (EU) 2026/1744** (Digital Omnibus) moves stand-alone Annex III duties to **`2027-12-02`**, embedded to **`2028-08-02`**; Art. 50 transparency still bites `2026-08-02` — carried across six files |
+| *"Digital Omnibus moved high-risk to 2 Dec 2027"* | 🟢 **held** | 🟡 Still **single-sourced to a vendor page** — `eur-lex.europa.eu` is a **gateway policy denial** (`Gap 500-D`), so the steward's own text remains unread |
+| Vietnam **Decision 33/2026/QD-TTg**, education in the high-risk list | 🟢 **held** | — |
+| Korea **AI Basic Act**, in force `2026-01-22` | 🟢 **held** | — |
+| Australia **TEQSA** institutional AI action plans | 🟢 **held** | — |
+| Dubai **KHDA** private-school AI guidance | 🟢 **held** | — |
+| US **K-12 AI Literacy and Readiness Act of 2026** (House committee) | 🟢 **held** | — |
+| 🔴 *"134 bills across 31 states"* | 🔴 **RETIRED at `p455`** | 🔴 **One tracker; three others disagree by 2.6×.** 🔵 Named here because it is the **top organic result** for the mandated NA query, so every later pass will meet it again. **Not re-ingested.** |
+| UNESCO LAC **Observatory on AI in Education** (CAF, CENIA, CETIC.br, ECLAC, Tec de Monterrey, ProFuturo, Fundación Ceibal) | 🟢 **held** | — |
+| *"68 countries now regulate AI in education (UNESCO)"* | 🔴 **not held, and NOT ingested** | 🔴 The returning source could not verify it either; a figure this base cannot attribute is **not written** |
+
+🔴 **Two adoption figures were returned and both are refused**: *"60 % of US teachers use
+AI"* (Gallup, via an aggregator) and *"adoption rose from 34 % in 2023 to 61 % in 2026"*.
+🔵 Both arrive through secondary aggregator blogs, which is the channel class `p455`
+retired the *"134 bills"* figure for. **Neither is written to this page.**
+
+## Opportunities by region
+
+🔵 **All four regions are stated below, and the two that produced nothing are stated as
+producing nothing.** An informed gap is information; silence reads exactly like coverage.
+🔵 **The instrument findings this pass are region-neutral** — the retired `github.com` read
+channel (`Gap 547-E`) and the reproducible address count (`Gap 546-B` closed) apply
+everywhere equally.
+
+### North America
+
+🔴 **`p547` produced NO new supply artefact for North America, and no new demand claim.**
+Stated plainly so it is not read as coverage: the mandated NA leg returned regulation and
+adoption prose only; every instrument in it was already held, one figure in it is
+**retired**, and two adoption percentages were **refused** on channel grounds.
+
+🟢 **The standing NA opportunity is unchanged and is still the strongest on this base**,
+because it rests on a maintenance fact rather than a market forecast: the **Ed-Fi Alliance**
+stack is the most actively maintained interop family here (`Data-Management-Service`,
+`Ed-Fi-ODS` — both dated within a day at `p546`), and `Ed-Fi-ODS` was `p546`'s blobless
+control (**304 KB** blobless vs **219 MB** full, same commit date).
+
+🟡 **One new NA-relevant consequence, and it is a diligence constraint rather than an
+opportunity.** With `github.com` and `api.github.com` both returning **403** to this
+session (`Gap 547-E`), **star counts, fork counts and sidebar licence badges are no longer
+readable here at all.** 🔵 For a US engagement whose procurement diligence conventionally
+cites GitHub popularity, this base can now supply only what survives: **the grant payload,
+the commit history and the resolved default branch** — which are the better evidence
+anyway, and `p546` had already shown the digest star figures to be unusable (one emits
+**`0` total stars with `+2 870` added today**).
+
+### EMEA
+
+🟢 **EMEA is where the regional picture actually moved this pass, and it gained a tier this
+page did not have.** `p455` established the EMEA inversion for systems of record for
+**administration** — PRONOTE, EcoleDirecte, Schulportal Hessen, WebUntis: proprietary,
+un-forkable, reachable only through unofficial clients. 🟢 **`p547` adds the systems of
+record for CONTENT**, and they do not behave the same way:
+
+| Publisher platform | Offline protection | Lawful path for a Globant engagement |
+|---|---|---|
+| **BiBox 2.0** (Westermann) | 🔴 AES-256-CTR | 🔴 **None at any licence** — reading the content is the regulated act (**UrhG § 95a**, **InfoSoc 2001/29/EC Art. 6**) |
+| **Cornelsen Offline Lernen** | 🔴 AES-128-CBC | 🔴 **None**, same basis |
+| **Klett Lernen** | 🟢 **unencrypted** | 🟡 **Open technically; licence the corpus** — an ordinary commercial negotiation with a named counterparty |
+
+🔵 **That one-of-three is the opportunity.** The engagement is **licence the Klett corpus,
+then build the agent layer on a curriculum ontology already held and permissive** —
+`oaknational/oak-open-curriculum-ecosystem` (MIT, 6 835 commits, MCP server over national
+curriculum data) and `esco-skill-extractor` (MIT, EU ESCO taxonomy) — **neither of which
+requires a publisher at all**.
+
+🔴 **And a procurement risk class EMEA buyers should be handed directly.** The best German
+artefact this pass found declares **MIT in `plugin.json` and in its README while serving no
+licence file at any path**, under the holder `{"name": "anonym"}` — so MIT's notice clause
+cannot be satisfied even in principle (`Gap 547-A`). 🔵 **A German state procurement that
+reads a manifest field as a grant would conclude this is MIT.** It is not usable, and the
+second reason is worse than the first (`Gap 547-B`).
+
+🟢 **A requirement, not an asset, and it will be asked for on day one:**
+`Förderschwerpunkt` differentiation (ESE · Hören · Lernen) **crossed with subject** — a
+dimension **no platform on [`../verticals/solutions.md`](../verticals/solutions.md)
+models**.
+
+### APAC
+
+🟢 **APAC gains the one promotable artefact of the pass, and the reason it is promotable is
+regulatory fit rather than popularity.**
+[`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) — **MIT**, grant
+file read first-hand (**1 066 B**), 42 commits, Vietnam — carries two properties that are
+exactly the mitigations a high-risk regime demands:
+
+1. 🟢 **The mathematics is deterministic, not generated** — equations solved exactly and
+   **verified by substitution**; the LLM never produces the answer.
+2. 🟢 **A teacher-approval gate** — *"giáo viên duyệt trước khi lên bảng"*; AI suggestions
+   reach the board only after a teacher passes them.
+
+🔵 **Why that is a market fact and not a code review.** **Vietnam's Decision
+33/2026/QD-TTg** places education AI on its high-risk list, and this base already holds
+**Korea's AI Basic Act** (in force `2026-01-22`) and **TEQSA**'s institutional action-plan
+requirement in Australia. 🟢 **An APAC engagement can therefore start from an MIT artefact
+whose architecture already encodes the human-oversight and determinism arguments**, rather
+than retrofitting them to a chatbot. It also runs **local-first with no API key**, which is
+what makes it deployable under a data-protection regime rather than only demonstrable.
+
+🔴 **The honest limit:** stars are **UNREAD** (`Gap 547-E`), last commit `2026-09-17`, and
+the open activity-interchange format is still marked *giai đoạn sau*. 🔵 This is a **starting
+point to own and extend**, not a dependency to adopt.
+
+### LATAM
+
+🟢 **LATAM produced the most substantial new artefact of the pass and cannot use it.**
+[`ceanjonnube-negra/docente-ia`](https://github.com/ceanjonnube-negra/docente-ia) —
+**245 commits**, last `2026-10-28` — is **Mexico-placed on first-hand evidence**, not on its
+language: `ESTADO_PROYECTO.md` describes a *"Herramienta de consulta oficial **SEP**"*
+restricted to **`.gob.mx`** domains (calendar, `planes y programas`, `acuerdos SEP/DOF`)
+and `PROJECT_MAP.md` carries the schema flag `es_sep`. 🔴 **It carries no grant in its tree
+and declares none anywhere.**
+
+🟢 **Its architecture is the transferable asset even though its code is not:** *"el Tool
+Registry determinista … **nunca pasa por Claude**"* — a deterministic tool registry held
+deliberately apart from LLM function-calling, plus **official-source restriction by
+domain**. 🔵 **That second idea is the one to carry into any public-sector education
+engagement in the region**: an agent that answers curriculum and calendar questions only
+from `.gob.mx` is answerable to a ministry in a way a general web search is not.
+
+🔴 **A second Chilean artefact is rejected on licence, first-hand:**
+[`francisco-sereno/guia-fundamentos-IAGen`](https://github.com/francisco-sereno/guia-fundamentos-IAGen)
+(Universidad de Chile, VTI) states **CC BY-NC-SA 4.0** and its prose extends the licence to
+*"este material educativo **y su código fuente**"* — 🔴 **NonCommercial reaches the code**,
+so it is unusable in an engagement and excellent as a reference.
+
+🟢 **The action this region has had prescribed since `ACTION p417-A` is now the highest-value
+move on the whole base, and `p547` makes the case numerically:** **ask for a licence.** Of
+six new systems this pass, **three are ungranted and otherwise shelf-eligible** — one with
+245 commits. 🔵 A single `LICENSE` commit moves each from unusable to shelf-eligible, and
+the counterparties are identifiable individuals, not corporations.
+
+### 🔴 A structural defect on this page, named because the spec forbids it
+
+🔴 **This page carries `## Opportunities by region` more than once** — each pass has added
+its own under its own dated section, so the heading now appears at least three times. 🔵 The
+compiler reads one heading per page to build region buckets, so **duplicate headings mean
+duplicate buckets**, which is the shape of defect `Gap 546-B` was about one level down.
+🔴 `p547` has **not** restructured 2 900 lines of dated history to fix it, because these
+pages are append-only and rewriting them destroys the record they exist to keep.
+🟢 **Registered as `Gap 547-G`**: either the compiler must take the **first**
+`## Opportunities by region` on the page as authoritative, or the per-pass sections must
+demote theirs to `###`. 🔵 The choice belongs in the compiler's spec, not in a pass's prose.
+
 ## 🆕 `p546` — `2026-10-30` — **🔴 SEVENTH CONSECUTIVE DEMAND SATURATION ACROSS ALL FOUR REGIONS, NAMED CLAIM BY CLAIM. 🟢 TWO OF THIS BASE'S OWN RECORDED DIAGNOSES CORRECTED FROM PRIMARY ATTESTATION: `eur-lex` IS A **GATEWAY POLICY DENIAL** (ITS OWN LOG, QUOTED) AND THE GitHub API IS AN **AUTHORISATION SCOPE**, NOT A PROXY BLOCK. 🔵 THE SECOND CORRECTION CHANGES WHAT IS WORTH ASKING FOR.**
 
 ### 🔴 The four-region demand sweep — saturated, and recorded claim by claim
