@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p551` — `2026-10-30` — **🔴 THE TRENDING CHANNEL SERVED FOUR DIFFERENT STAR LEVELS FOR ONE REPOSITORY ON ONE DAY, SPREAD 2 693. 🟢 AND THE PASS'S BEST REPO-SIDE SUPPLY CAME FROM A ZERO-STAR LIST, NOT FROM THE TRENDING LEG AT ALL.**
+
+🔵 **The candidate grades, the supply narrative and the `Gap 551-D` channel-shape
+registration are on [`../agents/trending.md`](../agents/trending.md#-p551--2026-10-30); the
+`Gap 551-C` verdict band is on [`../agents/top.md`](../agents/top.md#-p551--2026-10-30).**
+This entry carries the **trending channel** and the **repo-side finds**.
+
+### 🔴 The channel, measured again
+
+🔴 **`github.com/trending` remains `403` to this session.** The mandated leg
+`github trending education AI 2026` therefore returns third-party bot feeds — issues on
+`agents-radar` and `news-radar` forks — for the **thirteenth** consecutive pass.
+
+🔴 **Asked for the same repository on consecutive days, those feeds disagree with each
+other:**
+
+| repo | levels served, `2026-10-29`/`2026-10-30` | spread | 🟢 this base's own series |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **48 268** · **50 225** · **50 597** · **50 961** | **2 693** (**5.6 %**) | `49 850 → 51 247` across `p537`→`p549`, derived offline from 709 commits by [`../compose/code/p550-star-velocity/`](../compose/code/p550-star-velocity/README.md) |
+
+🟢 **`Gap 549-E`'s closure is what converts this from noise into a measurement.** Before
+`p550` built the offline velocity instrument, a feed's level claim was unfalsifiable here.
+Now it is checkable against a series this base owns and no feed can move. 🔴 **Recorded so
+that no successor quotes one of those four numbers as "the" star count** — any of them is
+within 5.6 % of being wrong.
+
+🟡 **One education repo was the only one the trending leg surfaced at all:** `DeepTutor`,
+already this base's most-attested address. 🔴 **The leg produced zero new addresses for the
+second consecutive pass.** That is written down rather than left as silence: the trending
+channel is, for this industry, a **re-attestation** channel and not a discovery one.
+
+### 🟢 Repo-side finds — from a channel the trending leg does not reach
+
+🟢 **Nine new addresses this pass, none of them from the trending leg.** They came from the
+README of a **zero-star, one-month-old MIT curated list**, which every ranking signal on
+these shelves would discard — the full table and the `Gap 551-D` registration are on
+[`../agents/trending.md`](../agents/trending.md#-p551--2026-10-30).
+
+| repo | grant, probed | liveness | disposition |
+|---|---|---|---|
+| [`kmhmubin/Face-Recognition-Attendance-System`](https://github.com/kmhmubin/Face-Recognition-Attendance-System) | 🟢 **MIT** 1 068 B | **584★** · 203 forks · pushed `2026-10-28` | 🟢 **Shelved** on [`foundations.md`](foundations.md#-p551--2026-10-30), `Gap 551-C` attached |
+| [`aashishrai3799/Automated-Attendance-System-using-CNN`](https://github.com/aashishrai3799/Automated-Attendance-System-using-CNN) | 🟢 **MIT** 1 071 B | **127★** · 40 forks · pushed `2026-09-17` | 🟢 **Shelved** on [`foundations.md`](foundations.md#-p551--2026-10-30), `Gap 551-C` attached |
+| [`GeoCoderDev/SIASIS`](https://github.com/GeoCoderDev/SIASIS) | 🟢 **MIT** 1 084 B | 🔴 stars `UNREAD(screen-unindexed)`; refs answer `c38da88d30bd` | 🟢 **Shelved** — the non-biometric one |
+| [`changeweb/Unifiedtransform`](https://github.com/changeweb/Unifiedtransform) | 🔴 GPL-3.0 35 148 B | LIVE `master` `23c5a27087d3` | 🟡 **Recorded, not shelved** — school management + accounting on Laravel; 🔴 README still advertises **Travis CI** badges, a stale-infrastructure signal worth a probe before anyone forks it |
+| [`amfoss/attendance-tracker`](https://github.com/amfoss/attendance-tracker) | 🔴 GPL-3.0 35 028 B | LIVE `master` `8c825c1b36c4` | 🔴 **Not shelved** — *"LabTrac"*, attendance by scanning for the club's own WiFi BSSIDs. Clever and **not generalisable**: it attests presence near a network, not in a classroom. Region `UNPLACED(org-hint-only)` — amFOSS reads Indian but the README does not state it |
+| [`AzeemIdrisi/QR-Attendance-System`](https://github.com/AzeemIdrisi/QR-Attendance-System) | 🔴 `UNRESOLVED-on-180-names` | LIVE `main` `d109f7a34deb` | 🔴 **Unread, not unlicensed** (`p517`'s rule) |
+| [`HarryFoster1812/AttendEase`](https://github.com/HarryFoster1812/AttendEase) | 🔴 `UNRESOLVED-on-180-names` | LIVE `main` `f5e42ab8cf7c` | 🔴 **Unread, not unlicensed** |
+| [`gopi-c-k/smart-attendance-app`](https://github.com/gopi-c-k/smart-attendance-app) | 🔴 `UNRESOLVED-on-180-names` | LIVE `master` `ba39fc0832f8` | 🔴 **Unread, not unlicensed** |
+| [`sandeeep-prajapati/Vidra`](https://github.com/sandeeep-prajapati/Vidra) | 🔴 `UNRESOLVED-on-180-names` | LIVE `main` `86a62c6887ac` | 🔴 **Unread, not unlicensed** |
+
+🔵 **Four of nine unread on the grant axis is this pass's honest yield** — reported as a
+fraction rather than dropped, because a dropped row looks identical to a row that was never
+found. 🔵 Evidence:
+[`../evidence/awesome-list-supply.2026-10-30-p551.tsv`](../evidence/awesome-list-supply.2026-10-30-p551.tsv).
+
 ## 🆕 `p550` — `2026-10-30` — **🟢 THE TRENDING CHANNEL IS STILL UNREADABLE, AND THIS PASS STOPPED NEEDING IT: VELOCITY IS NOW DERIVED FROM THIS BASE'S OWN 709 COMMITS, OFFLINE. 🟢 THE FEEDS' DAILY FIGURE IS CORROBORATED TO WITHIN TEN STARS — AND IT IS A BURST QUOTED AS A RATE, OFF BY 7× FROM THE SUSTAINED NUMBER.**
 
 🔵 **The six candidate grades, the `Gap 550-B` verdict band and the supply narrative are on

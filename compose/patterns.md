@@ -4,6 +4,121 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p551` — `2026-10-30` — **two recipes: the jurisdiction gate that `Gap 551-C` opened, and the registration check that `p550` needed and did not have**
+
+🔵 **Supporting measurements: [`../agents/top.md`](../agents/top.md#-p551--2026-10-30)
+(`Gap 551-A`, the `549-B` closure, the retraction),
+[`../repos/foundations.md`](../repos/foundations.md#-p551--2026-10-30) (the three MIT
+attendance foundations), [`../intel/market.md`](../intel/market.md#-p551--2026-10-30)
+(the `549-F` comparable field), [`../intel/trends.md`](../intel/trends.md) (`Trend 57`,
+`Trend 58`).**
+
+### 🟢 `P604` — Deployable biometric attendance: the jurisdiction gate, wired
+
+**The problem this solves.** This pass's two best-starred permissive finds are MIT-granted,
+maintained this quarter, and **not deployable in EMEA as written** — `Gap 551-C`. A client
+asking for attendance automation in a regulated market cannot fork either repository
+directly, and the shelf gives no signal that this is so.
+
+**Components, all granted and all read first-hand this pass or earlier:**
+
+| role | repo | licence |
+|---|---|---|
+| detection + recognition | [`kmhmubin/Face-Recognition-Attendance-System`](https://github.com/kmhmubin/Face-Recognition-Attendance-System) | **MIT** (1 068 B) |
+| model training half | [`aashishrai3799/Automated-Attendance-System-using-CNN`](https://github.com/aashishrai3799/Automated-Attendance-System-using-CNN) | **MIT** (1 071 B) |
+| **non-biometric fallback path** | [`GeoCoderDev/SIASIS`](https://github.com/GeoCoderDev/SIASIS) | **MIT** (1 084 B) |
+| record of truth / SIS | [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | GPL-3.0 — **kept at arm's length over its REST API, not forked** |
+| policy + audit substrate | [`frappe/education`](https://github.com/frappe/education) | GPL-3.0 — same arm's-length rule |
+
+**The wiring, and the four constraints that make it deployable rather than merely working:**
+
+1. **Templates never leave the device.** Run the recognition component **on the capture
+   device**; emit only a `(student_id, timestamp, confidence)` tuple to the SIS. The face
+   template is written to local encrypted storage with a **retention bound in code**, not in
+   a policy document. 🔵 This is what turns the biometric from a stored dataset into a
+   transient one.
+2. **A prohibited-inference denylist, compiled in.** The EU AI Act's school prohibition is on
+   **emotion recognition** (`2025-02-02`). The CNN component is trained for identity only;
+   the denylist is a **build-time assertion** that no affect, attention or engagement head
+   exists in the served model — a hard block, per
+   [`../intel/market.md`](../intel/market.md#-p551--2026-10-30)'s EMEA row, *not* a deployer
+   flag someone can switch on.
+3. **A human-confirm step before any consequence.** Recognition below a configured confidence
+   writes a **proposal**, never an attendance record. This mirrors the teacher-approval gate
+   this base already shelved on `Swon010191/Math_teacher` — *"giáo viên duyệt trước khi lên
+   bảng"* — and it is the mitigation Annex III asks for when a system assesses or monitors.
+4. **`SIASIS` as the non-biometric path, not the fallback.** For any tenant whose jurisdiction
+   or guardian consent forbids biometrics, `SIASIS` provides the **same downstream contract**
+   — tardiness-pattern detection, automatic guardian notification, Excel/Drive reporting,
+   bulk CSV intake — with no face data at all. 🟢 Build the SIS contract **first**, against
+   `SIASIS`; add recognition as one of two interchangeable capture adapters. That ordering is
+   what makes the regulated market the default rather than the exception.
+
+**Per-region configuration, from `Gap 549-F`'s comparable field:**
+
+| region | what this recipe must switch on |
+|---|---|
+| **EMEA** | biometric adapter **off** by default; Art. 50 disclosure at every learner-facing surface; emotion-inference denylist asserted at build |
+| **North America** | per-**district-tenant** policy object selecting the capture adapter; auditable exception records |
+| **APAC** | the capture adapter classified per jurisdiction; **deployment date recorded** — Vietnam's clock is `2027-03-01`, or `+6 months` if the system ran before `2026-08-15` |
+| **LATAM** | accreditation-grade evidence export switched on — `SIASIS`'s reporting layer is already most of it |
+
+🟢 **Accessibility, which is a compliance surface in North America and nearly free here.**
+`SIASIS` ships **voice-command and hotkey operation for blind users**. This base carries the
+**ADA web-accessibility update (Apr 2026, past)** for large US public institutions; that
+component answers part of it without new work.
+
+🔴 **What this recipe does not resolve.** Guardian-consent capture and the legal basis for
+processing a minor's biometric are **not** in any component here and are not invented. The
+recipe makes the biometric path *optional and bounded*; it does not make it lawful.
+**Effort: 6–8 weeks** for the non-biometric path end to end, **+4** for the bounded biometric
+adapter.
+
+### 🟢 `P605` — A pass that cannot lose its own registrations
+
+**The problem this solves.** `p550` registered six gaps with full reasoning and **none
+reached the register** — `Gap 551-A`. The failure was not carelessness; it was that nothing
+in this base could **see** the divergence, so the only safeguard was a pass remembering to
+update a 27 000-line page.
+
+**Components — both shipped this pass, both in [`../ingest/`](../ingest/):**
+
+| role | instrument |
+|---|---|
+| membership check | [`gap-register-audit.py`](../ingest/gap-register-audit.py) `--gap ID …` |
+| figure reproducibility | [`rule-revision.py`](../ingest/rule-revision.py) `--verify STAMP` |
+
+**The wiring, as a three-line close-out a pass runs on itself:**
+
+```sh
+# 1. every gap this pass registered must be ON the register. Exit 1 if not.
+python3 -I ingest/gap-register-audit.py --gap 551-A 551-B 551-C 551-D
+
+# 2. every derived figure this pass published must carry the CURRENT rule revision.
+python3 -I ingest/rule-revision.py --verify "$(grep -o 'pairs_in_table_rows_deduped@[0-9a-f]*' \
+    agents/top.md | head -1)"
+
+# 3. the pass's OWN added lines must pass the shape checks -- on the DIFF, never page-wide.
+git diff -U0 -- agents/ repos/ intel/ verticals/ compose/ | grep '^+' > /tmp/p551-added.txt
+python3 -I ingest/validate-pages.py
+```
+
+🔴 **Step 3 carries a constraint that is easy to get wrong and expensive when it is.**
+[`validate-pages.py`](../ingest/validate-pages.py)'s own docstring forbids quoting it
+page-wide: its `PLACEHOLDER_ROW` heuristic cannot distinguish a stranded header from a
+legitimate **row label**, and these pages use `| Licence | … |` two-column tables throughout.
+🟢 Run page-wide this pass it reports 3 pages clean and 4 "failing" on exactly that
+false-positive class — **the frontmatter half is exact and safe to quote; the shape half is
+not.** `p455` retracted a 20.6 % shelf-defect sweep for this error and its verdict stands:
+*"adjacency is not attribution, and the shelves were more precise than the instrument."*
+
+🟢 **Why this belongs in `compose/` and not only in `ingest/`.** The three checks are
+independently useful and **jointly** they close the loop a pass actually needs: *did my
+claims land, are my figures reproducible, is my own diff clean.* 🔵 Each exits non-zero, so
+the sequence is wireable into `make hooks` the moment the gate permits it — which is the
+difference between a standing check and the one-off that `ACTION QO` stayed for eleven
+passes.
+
 ## 🆕 `p550` — `2026-10-30` — **two recipes: the accreditation substrate this base has never had a permissive platform for, and the prerequisite graph the knowledge-tracing stack has always been missing**
 
 🔵 **Supporting measurements: [`../agents/top.md`](../agents/top.md#-p550--2026-10-30)

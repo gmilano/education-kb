@@ -1,0 +1,6 @@
+target	channel	result	note
+eur-lex.europa.eu/eli/reg/2026/1744/oj	curl via session proxy	CONNECT tunnel failed, 403	Gap 500-D reproduces
+eur-lex.europa.eu/eli/reg/2026/1744/oj	WebFetch (independent egress)	getaddrinfo ENOTFOUND	NEW: second channel, never previously recorded
+eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744	curl via session proxy	CONNECT tunnel failed, 403	alternate URI form, same refusal
+digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai	curl via session proxy	CONNECT tunnel failed, 403	Commission's own domain also unreachable
+artificialintelligenceact.eu	curl via session proxy	CONNECT tunnel failed, 403	secondary tracker also unreachable

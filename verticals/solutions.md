@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p551` — `2026-10-30` — **🔴 THE PLATFORM LEG IS SATURATED FOR A TWELFTH PASS AND THE RE-PHRASED SIBLING FOUND TWO MORE PLATFORMS — BOTH COPYLEFT. 🟢 THE SECTOR'S COPYLEFT VERDICT AT THIS LAYER (`Trend 56`) IS RE-CONFIRMED BY THE FIRST LEG THAT WAS DESIGNED TO BREAK IT.**
+
+🔵 **`Gap 551-A` (six registrations lost) and the `Gap 549-B` closure are on
+[`../agents/top.md`](../agents/top.md#-p551--2026-10-30); the `Gap 551-D` channel-shape
+registration is on [`../agents/trending.md`](../agents/trending.md#-p551--2026-10-30).** This
+entry carries the **platform layer**.
+
+### 🔴 The mandated leg, twelfth consecutive saturation
+
+🔴 **`open source platform education ERP CRM MIT Apache` returned the same five platforms for
+the twelfth consecutive pass** — **OpenEduCat** on Odoo at the head of them — and has produced
+nothing new since `p538`. 🟢 The leg's own results again declined to name a permissive
+education ERP: *"If you need an MIT or Apache-licensed education ERP specifically, the search
+didn't find one."* 🔵 That is this page's standing finding stated by the channel itself.
+
+### 🟡 The sibling leg found two platforms, and both are copyleft
+
+🟢 **`Gap 549-D`'s remedy was run** — a re-phrased sibling beside the saturated leg (details
+on [`../agents/trending.md`](../agents/trending.md#-p551--2026-10-30)). It reached two
+platform-layer artefacts this page had never held:
+
+| platform | grant, read first-hand at the title block | state | disposition |
+|---|---|---|---|
+| [`changeweb/Unifiedtransform`](https://github.com/changeweb/Unifiedtransform) | 🔴 **GPL-3.0** — `LICENSE` **35 148 B**, `GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007`, at `master` `23c5a27087d3` | School management **and accounting** on Laravel; v2.x with a maintained v1 branch | 🟡 **Recorded, not shelved.** 🔴 The README still advertises **Travis CI** build badges — a stale-infrastructure signal that should be probed before any fork |
+| [`OPTIMUM-LINKUP/open-source-school`](https://github.com/OPTIMUM-LINKUP/open-source-school) | 🔴 **GPL-3.0** — `LICENSE` **35 149 B**, title block read, at `main` `7b1f1636b096` | *"Gosfem"*, 6★, 3 forks, updated `2026-04-17` | 🟡 **Recorded, not shelved** — real and maintained this year, but thin for a platform tier |
+| [`cjhenry/ourschool`](https://github.com/cjhenry/ourschool) | 🔴 **AGPL-3.0** — `LICENSE` **34 523 B**, `GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007`, at `main` `520f31a537a6` | Homeschool-programme tracking | 🔴 **Not shelved** — scope is a household, not an institution; **AGPL** puts the hardest copyleft conversation of the three in front of a client fork. 🔴 Also **`Gap 549-C`'s second instance**: `total_count: 0` on the screen while refs and payload answer |
+
+🟢 **`Trend 56` re-confirmed by the leg designed to break it.** That trend reads: *"the sector
+is copyleft at the platform layer, and the first documented exception is 14 years old and
+nobody had found it"* — `ilios`, `p550`'s find. 🔴 **`p551` ran a deliberately different query
+at the same layer and got AGPL, GPL and GPL.** Three for three. 🟢 **That is the strongest
+evidence this page has for the copyleft verdict yet**, because it comes from a query chosen
+*not* to reproduce the saturated one.
+
+🔵 **The practical consequence is unchanged and now better evidenced:** at the platform layer
+a client either accepts copyleft, buys a commercial exception, or builds the platform tier and
+composes permissive components on top. 🟢 **The third route is what this base's permissive
+shelf is for** — and this pass added three MIT-granted attendance components to it on
+[`../repos/foundations.md`](../repos/foundations.md#-p551--2026-10-30), two of which carry
+**`Gap 551-C`**'s jurisdiction constraint.
+
 ## 🆕 `p550` — `2026-10-30` — **🟢 A 14-YEAR, MIT-LICENSED, 560-RELEASE CURRICULUM PLATFORM FROM A PUBLIC UNIVERSITY — AND THIS BASE HAD NEVER HEARD OF IT. 🟢 IT IS THE FIRST PERMISSIVELY GRANTED INSTITUTIONAL PLATFORM ON THIS PAGE, WHICH MAKES IT THE ONLY ONE A CLIENT CAN FORK WITHOUT A COPYLEFT CONVERSATION.**
 
 🔵 **The velocity instrument, `Gap 550-A` and this pass's retraction are on

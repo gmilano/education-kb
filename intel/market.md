@@ -106,6 +106,30 @@ an AI problem.
 generalises to any accredited professional programme; it is **not** a K-12 system and must
 not be proposed as one.
 
+#### 🆕 `p551` — twelfth consecutive saturation, and the one comparable field `Gap 549-F` asked for
+
+🔴 **Demand leg blank for the twelfth consecutive pass.** `AI education North America 2026
+adoption regulation players` returned **Maryland/Idaho/Oklahoma/Virginia** as the four states
+whose 2026 laws require *both* state guidance *and* mandatory district policy, **NY A 9190**,
+the **K-12 AI Literacy and Readiness Act of 2026**, the student-authored **STUDENTS FIRST
+Act**, NYC's **Traffic Light Framework** and Gallup teacher-use — 🔴 **every one already on
+this page.** Zero new addresses, zero new figures.
+
+🔴 **`134 bills / 31 states` surfaced for the THIRD time and is refused for the third time.**
+`p455` retired it — one tracker among four that disagree by **2.6×** — and the channel keeps
+serving it. 🟢 **Recorded as a property of this base, not of the web:** retirement does not
+propagate upstream, so a retired figure will keep arriving and must keep being declined.
+This pass adds nothing to the retirement but the third observation of it.
+
+🟢 **`Gap 549-F`'s comparable field — *what must a product enforce in code here*:**
+**per-tenant policy configuration, with a grade gate.** Four states mandate district-level
+policy adoption, which means the policy is **not** a product-level constant: a US K-12
+product needs a policy object **per district tenant**, and `A 9190` would add a **grade-level
+gate** (classroom AI from grade 9) with **documented exceptions** for diagnostics and special
+education. 🔵 An exception that cannot be audited is the compliance failure, not the
+exception.
+
+
 ### EMEA
 
 🟢 **The only region that produced claims this base did not already hold.** Both are
@@ -209,6 +233,39 @@ has named before: **mobility and credential portability across 27 jurisdictions*
 data-integration problem with a standard behind it, which is `Trend 44`'s passport
 argument.
 
+#### 🆕 `p551` — a seventh demand blank, and the primary source is now refused on TWO channels
+
+🔴 **Demand leg blank for the seventh consecutive pass.** `AI education EMEA 2026 adoption
+regulation players` returned **EU AI Act** high-risk framing, the **UK**'s light-touch
+principles, the **UAE/Dubai KHDA** guidance and UNESCO's 2024 generative-AI reference —
+🔴 **all held.** The results were again predominantly **US-sampled**: the leg's own sources
+state that coverage of Africa and the Middle East beyond the Gulf is thin, so the blank is
+partly a property of the query's reach and is written down as such.
+
+🔴 **`Gap 500-D` is attested on a second channel and remains OPEN.** The **Regulation (EU)
+2026/1744** reading — Annex III stand-alone duties to `2027-12-02`, embedded to `2028-08-02`,
+Art. 50 transparency live since `2026-08-02` — is carried across **six files here and is
+still single-sourced to a vendor page.** 🟢 This pass tried the steward's own text on an
+**independent egress path** (WebFetch, not the session proxy) and was refused there too:
+`getaddrinfo ENOTFOUND`. 🔵 Cell format, per `Gap 549-A`:
+`UNREAD(curl-403, webfetch-dns, commission-403, tracker-403)`. **Remedy:**
+`eur-lex.europa.eu` allowed in the session's network settings.
+
+🟡 **The leg did re-surface the date conflict** — one source still placing high-risk at
+August 2026 against the Omnibus deferral. 🔵 **This base's `2026/1744` reading stands and the
+conflict remains a source-quality note, not a correction**, which is the disposition `p549`
+and `p550` both reached. The third observation does not change it.
+
+🟢 **`Gap 549-F`'s comparable field — *what must a product enforce in code here*:**
+**disclosure at render, and a prohibited-inference denylist.** Art. 50 is **live now**, so
+every learner-facing surface must carry a machine-readable AI-generated disclosure **today**
+— not at the high-risk date. Emotion recognition in schools has been **prohibited since
+`2025-02-02`**, which is a **hard block in code, not a configuration flag a deployer can
+switch on.** Annex III logging and human-oversight scaffolding is designed now and enforced
+`2027-12-02`. 🔴 **This is the field that disqualifies two of this pass's three best supply
+finds** — see `Gap 551-C` on [`../agents/top.md`](../agents/top.md#-p551--2026-10-30).
+
+
 ### APAC
 
 🔴 **Nothing new, and the shape of the blank is worth stating precisely.** The leg returned
@@ -293,6 +350,29 @@ regimes are the ones that most reward a **local-first, teacher-gated** architect
 [`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) remains the only
 shelf row built that way — **0★**, and still the closest architectural match to Vietnam's
 own rule.
+
+#### 🆕 `p551` — regulation re-confirmed, adoption still absent for a fourth pass
+
+🔴 **Demand leg blank.** `AI education APAC 2026 adoption regulation players` returned
+**Korea's AI Basic Act** (in force `2026-01-22`, guidance-first grace through 2026),
+**Vietnam's Decision 33/2026/QD-TTg** naming education — automated assessment included — as
+high-risk, **Australia's TEQSA** institutional action plans, and sectoral approaches in
+Singapore/NZ/Malaysia. 🔴 **All held.**
+
+🔴 **No APAC K-12 or higher-education adoption RATE exists in any result, for the fourth
+consecutive pass.** 🟢 Written as an informed gap: this region's **regulation** is the
+best-documented of the four here and its **demand** is the worst. The only "players" list the
+leg produced was a market-research page naming Google, Microsoft, IBM, Pearson and Byju's —
+🔴 **not adopted**, no methodology, vendor-ranking shape.
+
+🟢 **`Gap 549-F`'s comparable field — *what must a product enforce in code here*:**
+**per-jurisdiction feature classification, with a dated compliance clock.** Vietnam requires
+each **assessment** feature to be classifiable as high-risk per jurisdiction with compliance
+by `2027-03-01` — **plus six months for systems already running before `2026-08-15`**, so the
+clock depends on deployment date and the product must record it. Australia requires a
+**per-provider action plan**, which is an **export**, not a policy page. 🔵 One product,
+several regimes: the enforcement unit here is the **(feature × jurisdiction)** pair.
+
 
 ### LATAM
 
@@ -396,6 +476,94 @@ engagement is sold against.
 **the governance**, not the model, and the **4 %** funding figure says who cannot pay for
 it — public universities — which makes **ministry- and consortium-level** engagement the
 commercially viable shape, not institution-by-institution.
+
+#### 🆕 `p551` — blank on demand for a second pass, and the supply expectation stays retired
+
+🔴 **Demand leg blank.** `AI education LATAM 2026 adoption regulation players` returned the
+**UNESCO IESALC** study (≈200 institutions, 19 countries — **87 %** using AI in at least one
+area, **74 %** in teaching and learning, **26 %** with a formal strategy, **9 %** evaluating
+implementation), **PISA 2025**'s nine-in-ten 15-year-olds across 13 countries, the
+**716** regulatory instruments across 23 countries (Universidad de los Andes), and the
+**UNESCO/CAF Observatory** launched `2026-04-14` with CENIA, Cetic.br, ECLAC, Ceibal,
+Fundación Santillana and Tec de Monterrey. 🔴 **Every figure already held.**
+
+🟢 **The retirement `p550` made holds and is re-confirmed rather than re-litigated:** this
+base stopped waiting for a LATAM platform tier. A LATAM engagement is an
+**adoption-and-governance** engagement built on **global supply**, and the region's demand
+evidence is the strongest of the four. 🔴 **This pass's one Spanish-language find,
+[`GeoCoderDev/SIASIS`](https://github.com/GeoCoderDev/SIASIS), is filed `UNPLACED` and not
+claimed for LATAM** — the school code `N° 20935` returned **no match in any ministry
+registry**, and Spanish is not region-confining. 🔵 That is the discipline the region's own
+row count depends on.
+
+🟢 **`Gap 549-F`'s comparable field — *what must a product enforce in code here*:**
+**an accreditation-grade evidence export.** There is **no binding instrument to comply with**,
+which is precisely why the enforcement surface is different: IESALC's recommendation to
+governments is to build AI governance **into accreditation and quality assurance**, and the
+measured gap is **87 % using against 9 % evaluating**. A product sold here must be able to
+emit **usage, outcome and review records a quality-assurance body can audit** — the artefact
+that closes a 78-point gap between using and evaluating. 🔵 **The weakest regulatory regime of
+the four generates the most demanding reporting requirement**, which is the inversion a
+regulation-only reading of this region would miss.
+
+
+## 🆕 `p551` — `2026-10-30` — **🟢 `Gap 549-F` CLOSED: THE FOUR REGIONS NOW CARRY ONE COMPARABLE FIELD, AND IT IS THE FIELD THAT DISQUALIFIES TWO OF THIS PASS'S THREE BEST SUPPLY FINDS. 🔴 TWELFTH CONSECUTIVE DEMAND SATURATION, ALL FOUR LEGS BLANK TOGETHER FOR THE SECOND PASS RUNNING. 🔴 THE RETIRED `134/31` FIGURE SURFACED A THIRD TIME.**
+
+🔵 **`Gap 551-A` (six registrations lost), the `Gap 549-B` closure, the `Gap 551-C` verdict
+band and this pass's retraction are on
+[`../agents/top.md`](../agents/top.md#-p551--2026-10-30).** This entry carries the
+**regional legs** and the **`549-F` closure**.
+
+### 🔴 The four legs, graded per region
+
+| leg | returned | new to this base |
+|---|---|---|
+| **North America** | MD/ID/OK/VA district-policy mandates, `A 9190`, K-12 AI Literacy Act, STUDENTS FIRST, NYC Traffic Light, Gallup teacher-use, 🔴 `134/31` again | 🔴 **0** — twelfth consecutive |
+| **EMEA** | EU AI Act high-risk framing, UK light-touch, KHDA, UNESCO 2024 | 🔴 **0** — seventh consecutive; results again **US-sampled** |
+| **APAC** | Korea `AI Basic Act`, Vietnam `Decision 33/2026/QD-TTg`, TEQSA, sectoral SG/NZ/MY | 🔴 **0**; 🔴 **no adoption rate for a fourth pass** |
+| **LATAM** | IESALC `87 %`/`74 %`/`26 %`/`9 %`, PISA 2025, Andes `716`, UNESCO/CAF Observatory | 🔴 **0** — second consecutive |
+
+🔴 **All four blank together for the second consecutive pass**, which is `Gap 550-F`'s finding
+confirmed rather than merely carried: *"the demand legs have hit their ceiling, and the next
+instrument is not a search."* 🟢 **This pass's new material came from the supply side and from
+a channel of a shape this base had never used** — a curated list, on
+[`../agents/trending.md`](../agents/trending.md#-p551--2026-10-30).
+
+### 🟢 `Gap 549-F` — CLOSED, with the field all four regions answered
+
+🟢 **Registered as:** *"one comparable field carried by every region every pass. The
+candidate, because all four produced an answer to it this pass, is **what must a product
+enforce in code here**."* 🟢 **Adopted, and carried in all four `####` blocks above.**
+
+| region | what a product must enforce **in code** | enforcement unit |
+|---|---|---|
+| **North America** | per-**district-tenant** policy object; grade gate (AI from grade 9) with **auditable** exceptions for diagnostics and special education | the **tenant** |
+| **EMEA** | AI-generated **disclosure at render** (Art. 50, live `2026-08-02`); **prohibited-inference denylist** — emotion recognition a hard block, not a deployer flag; Annex III logging designed now, enforced `2027-12-02` | the **surface** |
+| **APAC** | per-jurisdiction classification of each **assessment** feature; compliance clock that depends on **deployment date** (Vietnam `2027-03-01`, +6 months if running before `2026-08-15`); per-provider action-plan **export** | the **(feature × jurisdiction)** pair |
+| **LATAM** | **accreditation-grade evidence export** — usage, outcome and review records a quality-assurance body can audit | the **review cycle** |
+
+🟢 **Why this closes `549-F` where the previous field did not.** `p549`'s four blocks carried
+a governance-gap percentage, a statutory date, a count of mandating states and a commencement
+date — *"each is the best evidence its leg returned and none is the same quantity, so a reader
+cannot rank the regions on anything."* 🟢 **This field is the same quantity in all four**: a
+buildable requirement, with a named enforcement unit. 🟢 **And it ranks them** — EMEA's is the
+only one that **forbids** a capability outright, which is what makes it the binding constraint
+on a global product rather than the strictest of four similar ones.
+
+🔴 **It is also immediately load-bearing.** Applied to this pass's own supply, the EMEA row
+**disqualifies two of the three best finds** — both biometric attendance systems, MIT-granted
+and maintained this quarter. 🟢 **A comparable field that changes a shelf verdict in the pass
+that adopts it is not a formatting change**, and that is the argument `549-F` was registered
+to make. Verdict band: **`Gap 551-C`**; mitigation recipe: **`P604`**.
+
+### 🔴 Figures this pass refused to adopt
+
+| figure | source shape | why refused |
+|---|---|---|
+| `134 bills / 31 states` | one legislative tracker | 🔴 **Retired at `p455`** — four trackers disagree by **2.6×**. Third surfacing, third refusal |
+| Google / Microsoft / IBM / Pearson / Byju's as APAC "key players" | market-research vendor page | 🔴 No methodology, no education-specific basis; vendor-ranking shape |
+| `$12.3 B` market, `83 %` of institutions planning AI teaching assistants | vendor blog, attributed onward | 🔴 Unverified at the cited origin; this base does not carry re-attributed market sizing |
+| `60 %` vs `61 %` of US teachers using AI | Gallup, relayed by two aggregators | 🟡 **Held as already carried at `60 %`**; the `61 %` variant is a relay discrepancy, not a new measurement |
 
 ## 🆕 `p550` — `2026-10-30` — **🔴 ELEVENTH CONSECUTIVE DEMAND SATURATION, AND THE FIRST PASS IN WHICH ALL FOUR LEGS BLANKED TOGETHER — INCLUDING THE ONE THAT BROKE SATURATION LAST PASS. 🟢 THE SUPPLY SIDE MOVED INSTEAD, AND IT MOVED NORTH AMERICA: THE FIRST PERMISSIVELY GRANTED INSTITUTIONAL PLATFORM THIS BASE HAS EVER FILED, PLACED BY A COPYRIGHT LINE RATHER THAN BY A GUESS.**
 

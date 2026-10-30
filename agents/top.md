@@ -4,6 +4,179 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p551` — `2026-10-30` — **🔴 `p550` REGISTERED SIX GAPS AND NOT ONE REACHED THE REGISTER — THE PAGE A SUCCESSOR READS TO LEARN WHAT IS OWED WAS A WHOLE PASS STALE AND NOTHING IN THIS BASE COULD TELL. 🟢 `Gap 549-B` CLOSED WITH A RULE-REVISION STAMP. 🔴 `Gap 549-C` HAS A SECOND AND THIRD INSTANCE, ONE WITH A REFUSAL STRING THIS BASE HAD NEVER SEEN. 🔴 AND THE INSTRUMENT BUILT TO SIZE THE LEAK IS RETRACTED AS A MEASURE OF IT, INSIDE THIS PASS, BY ITS OWN SECOND DIALECT.**
+
+🟢 **Gate posture, stated first:** `ingest/` scripts **ran** this pass — `address-count.py`,
+`validate-pages.py`, `probe-grant.sh` and two new instruments all executed. That is the
+second consecutive pass with the gate open after seventeen denials.
+
+### 🔴 `Gap 551-A` — a gap announced in prose is not a registered gap
+
+🔴 **Measured, and it is this base's own newest rule turned on the pass that wrote it.**
+`p550` registered **six** gaps — `550-A` through `550-F` — with reasons, measurements and
+asks, cited across **five and six files each**, including its own
+[`compose/code/p550-star-velocity/README.md`](../compose/code/p550-star-velocity/README.md).
+🔴 **None of the six reached [`../intel/open-gaps.md`](../intel/open-gaps.md).** Verified by
+grep for the bare id, so it is not a matcher artefact — **zero occurrences in any written
+form** on the register, whose newest section is still `p549`'s.
+
+| gap | on register | cited in | status |
+|---|---|---|---|
+| `550-A` | **0** | `top.md`, `trending.md`, `foundations.md`, `solutions.md`, `patterns.md`, `p550-star-velocity/README.md` | 🔴 MISSING |
+| `550-B` | **0** | `top.md`, `trending.md`, `repos/trending.md`, `intel/trends.md`, `patterns.md` | 🔴 MISSING |
+| `550-C` | **0** | `top.md`, `repos/trending.md`, `p550-star-velocity/README.md` | 🔴 MISSING |
+| `550-D` | **0** | `top.md`, `foundations.md`, `repos/trending.md`, `p550-star-velocity/README.md` | 🔴 MISSING |
+| `550-E` | **0** | `foundations.md`, `repos/trending.md` | 🔴 MISSING |
+| `550-F` | **0** | `intel/market.md`, `p550-duplicate-definition-sweep/README.md` | 🔴 MISSING |
+| `549-A` | 3 | four files | 🟢 REGISTERED *(positive control)* |
+| `549-F` | 2 | `intel/market.md` | 🟢 REGISTERED *(positive control)* |
+
+🟢 **`p550` diagnosed this exact error and then committed it one object up.** Its own
+`Gap 550-A` reads *"a correction announced in prose is not a correction"*. A gap announced
+in prose is not a registered gap, and the register is the only page whose job is to answer
+*what is owed*. 🟢 **The six are written to the register by this pass**, and the instrument
+that found them ships with them:
+[`ingest/gap-register-audit.py`](../ingest/gap-register-audit.py), positive and negative
+controls above, exit code 1 on a missing registration so it can be gated rather than
+remembered.
+
+### 🔴 RETRACTION against `p551` itself — the leak has no size, and this pass withdraws the one it computed
+
+🔴 **The first run of this pass's own instrument printed `MISSING-FROM-REGISTER 125`, and
+that figure is RETRACTED.** A second honest dialect of the same matcher printed **481**.
+
+| rule | registered | cited | `MISSING` |
+|---|---|---|---|
+| `worded` — `Gap NNN-X` | 610 | 505 | **125** |
+| `any_form` — bare `` `NNN-X` `` too | 874 | 1 066 | **481** |
+
+🔴 **`worded` calls real registrations missing:** `547-I` sits on the register **seven
+times** as a bare backticked id with no preceding *"Gap"*. 🔴 **`any_form` over-collects**,
+reaching back to `100-A` and gathering tokens from id spaces that are not gaps. 🔵 **This is
+`p546`'s five-rules-five-counts situation exactly**, and its verdict transfers unchanged:
+*"This is not a claim that `p545` was wrong — it is a claim that nobody can tell."*
+
+🟢 **What survives is MEMBERSHIP, not the aggregate.** `--gap ID` answers by substring
+across every written form at once, which is the one question no dialect can dispute, and it
+is the mode the table above uses. 🟢 **The retraction is recorded in the instrument's own
+docstring**, under `WHAT THIS INSTRUMENT CANNOT DO, STATED FIRST`, so the next pass cannot
+quote the number without reading why it was withdrawn. 🔵 Registered as **`Gap 551-B`**: the
+aggregate needs a gap-id GRAMMAR, not a third regex.
+
+### 🟢 `Gap 549-B` — CLOSED, with the revision stamp it asked for
+
+🟢 **Asked for:** *"every derived figure carries the rule name **and** a revision — the cheap
+form being a hash over `PLACEHOLDER` + `NOT_A_REPO`."* 🟢 **Shipped:**
+[`ingest/rule-revision.py`](../ingest/rule-revision.py).
+
+```
+pairs_in_table_rows_deduped@dcfa99c9666c
+  CANONICAL    1   pairs_in_table_rows_deduped
+  NOT_A_REPO  18   about apps collections explore features join login marketplace new
+                   notifications orgs pricing readme search settings sponsors topics trending
+  PLACEHOLDER 25   a abc account b demo example foo n org organisation organization owner
+                   placeholder repo slug someone test user username x y your-name your-org
+                   yourorg z
+```
+
+🟢 **The inputs are read out of `address-count.py` by import, never retyped**, because a
+second copy would drift and that is the defect class being closed. 🟢 Members are sorted
+before hashing, so reformatting the rule does not move the stamp; the `CANONICAL`
+designation is hashed too, so redesignating it does. 🟢 `--verify STAMP` exits **1** on a
+stale stamp with the message *"the figure is not wrong — it is not reproducible under the
+current rule"*, which is `p549`'s finding made executable.
+
+🟢 **This pass's denominators, each carrying its revision:**
+
+| page | at `p550` `HEAD` | **after this pass** | delta | rule revision |
+|---|---|---|---|---|
+| [`top.md`](top.md) | 132 | **138** | +6 | `pairs_in_table_rows_deduped@dcfa99c9666c` |
+| [`../repos/foundations.md`](../repos/foundations.md) | 176 | **179** | +3 | `pairs_in_table_rows_deduped@dcfa99c9666c` |
+| [`../verticals/solutions.md`](../verticals/solutions.md) | 84 | **87** | +3 | `pairs_in_table_rows_deduped@dcfa99c9666c` |
+| [`../compose/patterns.md`](../compose/patterns.md) | 183 | **186** | +3 | `pairs_in_table_rows_deduped@dcfa99c9666c` |
+
+🟢 **Both columns are re-derivable and the cells are EDITED, not announced.** `p551`'s first
+draft of this table published the `p550` figures beside its own additions, which is
+`Gap 550-A` committed by the pass that registered its recovery — caught by re-running
+`address-count.py` after the edits rather than before. 🔵 **Shelf rule 21 applies to a
+pass's own denominators**, and the `+15` across four pages is this pass's address delta.
+
+🔴 **Stated limit, not left implied:** the stamp covers the rule's DATA inputs and not its
+extraction regexes (`LINK_TEXT`, `PAIR`) or its table-row detection. A change to either
+moves the counts without moving the stamp. Registered as **`Gap 551-B`** beside the
+aggregate problem.
+
+### 🔴 `Gap 549-C` — a second AND third instance, and a refusal string this base has never recorded
+
+🔴 **`549-C` was registered on one address (`PKulal/LMS`) and could be read as a curiosity.
+It is not.** Two of the five addresses this pass probed are invisible to the screen channel
+while answering on refs and payload:
+
+| repo | screen channel | refs probe | payload read first-hand |
+|---|---|---|---|
+| [`cjhenry/ourschool`](https://github.com/cjhenry/ourschool) | 🔴 `total_count: 0` | 🟢 answers, `main`, `520f31a537a6` | 🟢 `LICENSE` **34 523 B**, AGPL-3.0 title block |
+| [`GeoCoderDev/SIASIS`](https://github.com/GeoCoderDev/SIASIS) | 🔴 **`Validation Failed` — *"the listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them"*** | 🟢 answers, `master`, `c38da88d30bd` | 🟢 `LICENSE` **1 084 B**, MIT title block |
+| [`IJustDev/OpenSchool`](https://github.com/IJustDev/OpenSchool) | 🟢 `total_count: 1` | 🟢 answers | 🟢 35 150 B, GPL-3.0 — *negative control* |
+| [`OPTIMUM-LINKUP/open-source-school`](https://github.com/OPTIMUM-LINKUP/open-source-school) | 🟢 `total_count: 1` | 🟢 answers | 🟢 35 149 B, GPL-3.0 — *negative control* |
+
+🔴 **The `SIASIS` refusal is a new failure mode.** `PKulal/LMS` and `ourschool` return a
+quiet `total_count: 0` — a well-formed answer that happens to be false. `SIASIS` returns a
+**hard validation error naming non-existence or permission**, which reads like a definitive
+negative and is simply wrong: `git ls-remote` answers and the MIT payload fetched. 🟢 **So
+`549-C`'s ask stands and strengthens** — an absence claim requires the screen *and* the refs
+probe to agree — and gains a clause: **a screen ERROR is not a stronger absence signal than
+a screen zero; both are the same unreliable channel failing differently.**
+🔵 Evidence: [`../evidence/screen-vs-refs.2026-10-30-p551.tsv`](../evidence/screen-vs-refs.2026-10-30-p551.tsv).
+
+### 🔴 `Gap 551-C` — a new verdict band: **granted, permissive, runnable — and not deployable in the region that most needs it**
+
+🔴 **This pass's two best-starred permissive finds are biometric attendance systems**, and
+this base already holds the regulation that forbids the category where it would be sold.
+
+| repo | grant, read first-hand | stars (rule 17) | 🔴 the collision |
+|---|---|---|---|
+| [`kmhmubin/Face-Recognition-Attendance-System`](https://github.com/kmhmubin/Face-Recognition-Attendance-System) | 🟢 **MIT**, `LICENSE` **1 068 B**, title block `MIT License · Copyright (c) 2019 K.M.H.Mubin` | **584** · 203 forks · updated `2026-10-28` | OpenCV Haar + LBPH face recognition for roll-call |
+| [`aashishrai3799/Automated-Attendance-System-using-CNN`](https://github.com/aashishrai3799/Automated-Attendance-System-using-CNN) | 🟢 **MIT**, `LICENSE` **1 071 B**, title block `MIT License · Copyright (c) 2019 aashishrai3799` | **127** · 40 forks · updated `2026-09-17` | TensorFlow CNN real-time face identification |
+
+🔴 **Both are live, permissive, maintained this quarter and immediately unusable in EMEA as
+written.** This base carries, across six files, that **emotion recognition in schools has
+been prohibited under the EU AI Act since `2025-02-02`** (penalties to €35 M / 7 % turnover)
+and that **Annex III point 3 makes education high-risk** where a system gates access,
+assesses or monitors. Biometric identification of minors on school premises is the adjacent
+category, and neither repository carries a retention policy, a template-storage boundary, an
+on-device constraint or a human-confirm step.
+
+🟢 **Why this is a verdict BAND and not a rejection.** `Gap 550-B` established *"granted, and
+not runnable without a commercial subscription"* — a gap between the **licence** and the
+**running system**. `551-C` is its sibling one layer out: a gap between the **running system**
+and the **deployable** one, keyed to **jurisdiction** rather than to a vendor.
+🔴 **No licence probe, star count or liveness check on these shelves would surface it**, and
+both rows would otherwise read as this pass's best finds without qualification.
+🟢 The mitigation is a recipe, not a rejection — **`P604`** on
+[`../compose/patterns.md`](../compose/patterns.md#-p551--2026-10-30).
+
+### 🔵 What this pass did NOT resolve
+
+🔴 **`Gap 500-D` reproduces on a SECOND channel and is not closed.** The claim that the
+*Digital Omnibus* became **Regulation (EU) 2026/1744**, deferring Annex III high-risk duties
+to `2027-12-02`, is carried across six files here and is still **single-sourced to a vendor
+page**. `p551` tried to read the steward's own text:
+
+| target | channel | result |
+|---|---|---|
+| `eur-lex.europa.eu/eli/reg/2026/1744/oj` | `curl`, session proxy | 🔴 `CONNECT tunnel failed, 403` |
+| `eur-lex.europa.eu/eli/reg/2026/1744/oj` | **WebFetch, independent egress** | 🔴 **`getaddrinfo ENOTFOUND`** |
+| `digital-strategy.ec.europa.eu` (Commission's own) | `curl`, session proxy | 🔴 `403` |
+| `artificialintelligenceact.eu` | `curl`, session proxy | 🔴 `403` |
+
+🟢 **This is `Gap 549-A`'s cell format applied to a source rather than a field:**
+`UNREAD(curl-403, webfetch-dns, commission-403, tracker-403)`. 🔵 The gap was recorded as
+*"does not resolve under this session's network policy"* on one channel; it is now attested
+on **two independent egress paths**, which upgrades it from an untried possibility to a
+measured block. **Remedy unchanged and now better evidenced:** `eur-lex.europa.eu` must be
+allowed in the session's network settings. 🔵 Evidence:
+[`../evidence/primary-source-channels.2026-10-30-p551.tsv`](../evidence/primary-source-channels.2026-10-30-p551.tsv).
+
 # Education AI Agents — Curated Shelf
 
 ## 🆕 `p550` — **🟢 THE GATE OPENED: `address-count.py` RAN FOR THE FIRST TIME IN EIGHTEEN PASSES. 🟢 `Gap 549-E` CLOSED WITH AN INSTRUMENT THAT NEEDS NO NETWORK — AND ITS FIRST RUN FOUND THAT `p549`'s HEADLINE CORRECTION WAS NEVER APPLIED TO THE ROW IT CORRECTED. 🔴 THE LARGEST ROW ON THIS SHELF WAS STALE BY 1 473 STARS, NOT 1 397, AND IT STAYED STALE BECAUSE A PASS WROTE "CORRECTED HERE" INSTEAD OF EDITING THE CELL.**

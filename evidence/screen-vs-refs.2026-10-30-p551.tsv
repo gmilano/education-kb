@@ -1,0 +1,6 @@
+repo	screen_channel_verdict	refs_probe	head_sha	payload_read	verdict
+cjhenry/ourschool	total_count:0	git ls-remote --symref answers (main)	520f31a537a6	LICENSE 34523 B, AGPL-3.0 title block read	UNINDEXED-NOT-ABSENT (Gap 549-C, 2nd instance)
+GeoCoderDev/SIASIS	Validation Failed: "resources do not exist or you do not have permission"	git ls-remote --symref answers (master)	c38da88d30bd	LICENSE 1084 B, MIT title block read	UNINDEXED-NOT-ABSENT (Gap 549-C, 3rd instance, NEW refusal string)
+IJustDev/OpenSchool	total_count:1	git ls-remote --symref answers (master)	12856ce8468a	LICENSE 35150 B, GPL-3.0 title block read	screen and refs AGREE (control)
+OPTIMUM-LINKUP/open-source-school	total_count:1	git ls-remote --symref answers (main)	7b1f1636b096	LICENSE 35149 B, GPL-3.0 title block read	screen and refs AGREE (control)
+ishandutta2007/Awesome-Attendance-Management	total_count:1	git ls-remote --symref answers (main)	c7f8de1c318b	LICENSE 1068 B, MIT title block read	screen and refs AGREE (control)

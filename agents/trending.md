@@ -4,6 +4,118 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p551` — `2026-10-30` — **🟢 `Gap 549-D` CONFIRMED AND THEN REFINED AGAINST ITSELF: THE SATURATED LEG RETURNED THE SAME FIVE PLATFORMS FOR A TWELFTH PASS, THE RE-PHRASED SIBLING RETURNED FOUR NEW ADDRESSES — AND THE BEST SUPPLY CHANNEL OF THE PASS WAS A ZERO-STAR, ONE-DAY-OLD CURATED LIST THAT EVERY RANKING THIS BASE USES WOULD DISCARD. 🔴 THE TRENDING FEEDS DISAGREE BY 2 693 STARS ON ONE REPOSITORY ON ONE DAY.**
+
+🔵 **`Gap 551-A` (six lost registrations), the `Gap 549-B` closure, the `Gap 549-C` second
+and third instances and this pass's retraction are on
+[`top.md`](top.md#-p551--2026-10-30).** This entry carries the **supply legs**, the
+**candidate grades** and the **trending channel**.
+
+### 🟢 `Gap 549-D` — CONFIRMED, and the remedy works on a different axis than registered
+
+🟢 **Registered as:** *"when a mandated leg repeats its result set three passes running, run
+one re-phrased sibling beside it and record both, so that saturation is attributed to the
+query rather than reported as a property of the field."* 🟢 **Done, and both recorded.**
+
+| leg | run | result |
+|---|---|---|
+| **mandated** — `open source platform education ERP CRM MIT Apache` | 12th consecutive pass | 🔴 **OpenEduCat and the same four platforms. Zero new addresses.** Nothing new since `p538` |
+| **sibling** — `open source school management attendance gradebook platform MIT Apache license 2026 github self-hosted` | first run | 🟢 **Four addresses this base has never held** |
+
+🔴 **And here the remedy's limit shows, measured.** The four novel addresses graded out as
+**one archived**, **two GPL-3.0**, and **one MIT that is a curated list rather than a
+system** — so the sibling leg produced **novelty** and **zero shelf-grade permissive
+systems**. 🟢 **Refinement, which `549-D` did not anticipate:** novelty and grant quality are
+**separate axes**, and a re-phrased sibling fixes the first only. Attributing saturation to
+the query was right; expecting the fix to yield *better* supply rather than *different*
+supply was not stated and does not hold.
+
+### 🟢 The find of the pass: a zero-star list is a 69 %-novel supply channel
+
+🟢 **[`ishandutta2007/Awesome-Attendance-Management`](https://github.com/ishandutta2007/Awesome-Attendance-Management)**
+— 🟢 **MIT**, `LICENSE` **1 068 B**, title block `MIT License · Copyright (c) 2026 Ishan
+Dutta`, read first-hand at `main` `c7f8de1c318b`. **0 stars · 0 forks · created and pushed
+`2026-09-27`** — a single day's work, one month old, under every threshold this base has
+ever applied (`minStars: 200` in [`../ingest/config.json`](../ingest/config.json)).
+
+🟢 **Shelved as a CHANNEL, not as a row.** Its README carries **13 real repository
+addresses** once its own self-links and `sponsors/` are excluded, and **9 of the 13 were new
+to this base**:
+
+| address | held before `p551` | grant, probed first-hand |
+|---|---|---|
+| [`kmhmubin/Face-Recognition-Attendance-System`](https://github.com/kmhmubin/Face-Recognition-Attendance-System) | 🟢 **NEW** | **MIT** 1 068 B · **584★** · 203 forks |
+| [`aashishrai3799/Automated-Attendance-System-using-CNN`](https://github.com/aashishrai3799/Automated-Attendance-System-using-CNN) | 🟢 **NEW** | **MIT** 1 071 B · **127★** · 40 forks |
+| [`GeoCoderDev/SIASIS`](https://github.com/GeoCoderDev/SIASIS) | 🟢 **NEW** | **MIT** 1 084 B · stars `UNREAD(screen-unindexed)` |
+| [`changeweb/Unifiedtransform`](https://github.com/changeweb/Unifiedtransform) | 🟢 **NEW** | GPL-3.0 35 148 B — school management + accounting, Laravel |
+| [`amfoss/attendance-tracker`](https://github.com/amfoss/attendance-tracker) | 🟢 **NEW** | GPL-3.0 35 028 B — WiFi-BSSID proximity attendance, club-internal |
+| [`AzeemIdrisi/QR-Attendance-System`](https://github.com/AzeemIdrisi/QR-Attendance-System) | 🟢 **NEW** | 🔴 `UNRESOLVED-on-180-names` |
+| [`HarryFoster1812/AttendEase`](https://github.com/HarryFoster1812/AttendEase) | 🟢 **NEW** | 🔴 `UNRESOLVED-on-180-names` |
+| [`gopi-c-k/smart-attendance-app`](https://github.com/gopi-c-k/smart-attendance-app) | 🟢 **NEW** | 🔴 `UNRESOLVED-on-180-names` |
+| [`sandeeep-prajapati/Vidra`](https://github.com/sandeeep-prajapati/Vidra) | 🟢 **NEW** | 🔴 `UNRESOLVED-on-180-names` |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | held | — |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | held | — |
+| [`frappe/education`](https://github.com/frappe/education) | held | — |
+| [`ChurchCRM/CRM`](https://github.com/ChurchCRM/CRM) | held | — |
+
+🟢 **All nine are LIVE** — `git ls-remote --symref` answered for every one, default branches
+resolved rather than assumed. 🟢 **Three carry MIT grants read first-hand at the title
+block.** 🔴 **Four are `UNRESOLVED-on-180-names`, which `p517`'s rule says is *unread*, never
+*unlicensed*** — they are not graded here and are not rejected.
+
+🟢 **Why this matters beyond nine addresses.** This base's supply legs are **search
+queries**, and `549-D` showed a query saturates. A curated list is a **different channel
+shape**: one address yields many, it is maintained by a human with a topical interest, and
+its value is **independent of its own popularity**. 🔴 **Every ranking signal this base uses
+— stars, forks, age, `minStars: 200` — would have discarded this artefact**, and it
+out-supplied the mandated leg twelve-to-nothing and the re-phrased sibling nine-to-four.
+🔵 Registered as **`Gap 551-D`**: this base has no *channel-shape* axis — it ranks artefacts
+and has never asked whether an artefact's value is *as a row* or *as a channel*.
+🔵 Evidence: [`../evidence/awesome-list-supply.2026-10-30-p551.tsv`](../evidence/awesome-list-supply.2026-10-30-p551.tsv).
+
+### 🔴 The four sibling-leg candidates, graded
+
+| repo | grant, read first-hand | screen | grade |
+|---|---|---|---|
+| [`cjhenry/ourschool`](https://github.com/cjhenry/ourschool) | 🔴 **AGPL-3.0** — `LICENSE` **34 523 B**, title block `GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007` | 🔴 **`total_count: 0`** while refs answer — **`Gap 549-C` 2nd instance** | 🔴 **NOT SHELVED** — homeschool-program tracker; AGPL is a copyleft conversation before a client can fork |
+| [`IJustDev/OpenSchool`](https://github.com/IJustDev/OpenSchool) | 🔴 **GPL-3.0** — **35 150 B** title block read | 🟢 `total_count: 1` | 🔴 **REJECTED — archived**, 2★, last updated `2024-02-09` |
+| [`OPTIMUM-LINKUP/open-source-school`](https://github.com/OPTIMUM-LINKUP/open-source-school) | 🔴 **GPL-3.0** — **35 149 B** title block read | 🟢 `total_count: 1` | 🟡 **recorded, not shelved** — *"Gosfem"*, 6★, 3 forks, updated `2026-04-17`; real but thin |
+| [`ishandutta2007/Awesome-Attendance-Management`](https://github.com/ishandutta2007/Awesome-Attendance-Management) | 🟢 **MIT** — **1 068 B** title block read | 🟢 `total_count: 1` | 🟢 **SHELVED AS A CHANNEL**, above — 0★ and worth more than the other three combined |
+
+🟢 **`GeoCoderDev/SIASIS`, read for placement and filed `UNPLACED`.** Next.js 14 +
+PostgreSQL (Neon) + Resend + Google Drive reporting, built for one named school —
+*"Colegio Asunción 8 (N° 20935)"*. 🟢 **One property worth carrying regardless of its
+size:** *"Compatibilidad con comandos de voz y teclas rápidas para personas ciegas"* —
+voice-command and hotkey operation for blind users, built in rather than retrofitted, which
+is the April 2026 ADA-accessibility pressure answered by a single-school project.
+🔴 **Region `UNPLACED(stated-none, es-not-confining, school-code-unresolved)`**: the README
+is Spanish and the numbered-institution convention reads Peruvian, but `p545`'s rule forbids
+placing on a name, Spanish is **not** region-confining the way `vi` is (Spain is EMEA), and
+a search for the school code returned **no match in any ministry registry** — four
+candidate schools in Ecuador, Guatemala, Colombia and Spain, none of them this one.
+🟢 **Filed as unplaced rather than guessed LATAM.**
+
+### 🔴 The trending channel: 2 693 stars of same-day disagreement
+
+🔴 **`github.com/trending` is `403` to this session, so the mandated leg returns third-party
+bot feeds** (`agents-radar`, `news-radar` forks). Asked for `DeepTutor` on `2026-10-29` and
+`2026-10-30` they returned, as star **level**, four different numbers:
+
+| figure served | spread against the lowest |
+|---|---|
+| 48 268 | — |
+| 50 225 | +1 957 |
+| 50 597 | +2 329 |
+| **50 961** | **+2 693** |
+
+🟢 **`Gap 549-E`'s closure is what makes this readable rather than merely annoying.**
+`p550` derived velocity offline from this base's own 709 commits, so the feeds' level claims
+are now falsifiable against a series this base owns and no feed can move. 🔴 **A 5.6 %
+spread on one repository on one day is the measured precision of the only trending channel
+available here**, and it is recorded so that no successor quotes one of those four numbers
+as *the* star count. 🔵 The repo-side census is on
+[`../repos/trending.md`](../repos/trending.md#-p551--2026-10-30).
+
 ## 🆕 `p550` — `2026-10-30` — **🟢 THE GATE OPENED AFTER SEVENTEEN DENIALS AND THE CANONICAL INSTRUMENT RAN. 🟢 SIX CANDIDATES, FIVE NEW, ALL FIVE PERMISSIVELY GRANTED — THE BEST GRANT YIELD THIS BASE HAS MEASURED. 🔴 AND ONE OF THEM IS MIT CODE THAT CANNOT RUN WITHOUT A PAID CONSUMER SUBSCRIPTION, WHICH IS A VERDICT BAND NO LICENCE PROBE HERE WOULD EVER HAVE FOUND.**
 
 🔵 **The velocity instrument, `Gap 549-E`'s closure, `Gap 550-A` (a correction announced

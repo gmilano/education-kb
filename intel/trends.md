@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 Trend 57 — **The licence, the runtime and the *jurisdiction* are three separate gates, and only the first one is on any shelf**
+
+🟢 **Measured this pass, on this pass's own best finds.** `Trend 55` established that a grant
+answers *who owns the code*, not *whether you can run it* — `Gap 550-B`, a desktop app that
+is MIT and needs a paid consumer subscription to start. 🟢 **`p551` found the third gate, one
+layer further out.**
+
+| gate | question | what surfaces it | this pass's example |
+|---|---|---|---|
+| **licence** | may we fork it? | 🟢 a grant probe — [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) | MIT, 1 068 B, title block read |
+| **runtime** | can it start? | 🔴 nothing on these shelves — found by reading a README | `Gap 550-B` (ChatGPT Plus required) |
+| **jurisdiction** | may it be deployed *here*? | 🔴 nothing on these shelves — found only by holding the regulation beside the repo | **`Gap 551-C`** |
+
+🔴 **The instance.** This pass's two best-starred permissive finds —
+[`kmhmubin/Face-Recognition-Attendance-System`](https://github.com/kmhmubin/Face-Recognition-Attendance-System)
+(**584★**, MIT, updated `2026-10-28`) and
+[`aashishrai3799/Automated-Attendance-System-using-CNN`](https://github.com/aashishrai3799/Automated-Attendance-System-using-CNN)
+(**127★**, MIT) — are **biometric attendance systems**. Both pass the licence gate cleanly and
+both start. 🔴 **Neither is deployable in EMEA as written**: emotion recognition in schools has
+been **prohibited under the EU AI Act since `2025-02-02`** and Annex III point 3 makes
+education high-risk where a system assesses or monitors. Neither repository carries a
+retention policy, a template-storage boundary, an on-device constraint or a human-confirm step.
+
+🟢 **Why this is a trend and not a note about two repositories.** The three gates fail in
+**decreasing order of detectability**: a licence probe is a `curl`, a runtime constraint needs
+a README read, and a jurisdiction constraint needs the regulation **held beside** the
+artefact — which is the one thing a repository-shaped census never does. 🔴 **So a shelf
+built on star counts and licences will systematically over-promise in exactly the regions
+with the most regulation**, and the error grows as the shelf gets better at the first gate.
+
+🟢 **The consequence for an engagement is a sequencing one.** The *weakest* regulatory region
+in this base's four (LATAM, no binding instrument) imposes the **most demanding reporting**
+requirement — an accreditation-grade evidence export — while the strictest (EMEA) imposes a
+**prohibition**, which is cheaper to satisfy because it is a hard block rather than a
+feature. 🔵 A product designed against EMEA's denylist and LATAM's export is deployable in
+all four; one designed against star counts is deployable in none of them without rework.
+🔵 Recipe **`P604`** on [`../compose/patterns.md`](../compose/patterns.md#-p551--2026-10-30).
+
+---
+
+## 🆕 Trend 58 — **An artefact's value as a *channel* is independent of its value as a *row*, and every ranking signal this base uses measures only the row**
+
+🟢 **Measured, with a clean comparison in the same pass.** Three discovery legs ran against
+the same industry on the same day:
+
+| channel | shape | new addresses |
+|---|---|---|
+| `open source platform education ERP CRM MIT Apache` | mandated search query, **12th consecutive run** | 🔴 **0** |
+| re-phrased sibling query (`Gap 549-D`'s remedy) | search query, first run | 🟡 **4** |
+| [`ishandutta2007/Awesome-Attendance-Management`](https://github.com/ishandutta2007/Awesome-Attendance-Management) | **curated list**, 0★, one month old | 🟢 **9 of 13 listed** |
+
+🔴 **Every ranking signal on these shelves would have discarded the winner.** It has **0
+stars, 0 forks**, was created and pushed on a **single day** (`2026-09-27`), and sits far
+under [`../ingest/config.json`](../ingest/config.json)'s `minStars: 200`. 🟢 It out-supplied
+the mandated leg **twelve-to-nothing** and the re-phrased sibling **nine-to-four**.
+
+🟢 **The mechanism is structural, not luck.** A search query returns what an index ranks, so
+it **saturates** — `Gap 549-D` measured that, and a re-phrased sibling only moves the
+saturation point. A curated list is a **different shape**: one address yields many, it is
+assembled by a human with a topical interest rather than by a ranker, and **its usefulness
+does not depend on its own popularity.** 🔴 Popularity measures how many people found the
+list; it says nothing about how many addresses are *in* it.
+
+🔵 **What this base is missing, registered as `Gap 551-D`:** a **channel-shape axis**. Every
+disposition on these shelves grades an artefact *as a row* — grant, stars, liveness, region.
+None asks *"is this thing worth more as a channel than as a row?"* 🟢 This pass answered that
+question correctly only because the row was so obviously weak that the list had to be read
+for something else. 🔴 **An artefact that is a strong row and a strong channel would be
+graded on the row axis and its channel value never noticed** — which is the failure mode the
+axis exists to prevent, and it is not detectable from inside the current disposition set.
+
 ## 🆕 Trend 54 — **A burst rate and a sustained rate differ by 7×, and every trend feed publishes the burst**
 
 🟢 **Measured, not argued.** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor),

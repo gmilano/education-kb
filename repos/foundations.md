@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p551` — `2026-10-30` — **🟢 THIS PAGE'S DENOMINATOR NOW CARRIES A RULE *REVISION*, WHICH IS WHAT `Gap 549-B` SAID IT NEEDED TO BE REPRODUCIBLE AT ALL. 🟢 THE ATTENDANCE LAYER GAINS THREE MIT-GRANTED FOUNDATIONS — AND TWO OF THEM CANNOT BE DEPLOYED IN EMEA AS WRITTEN.**
+
+🔵 **`Gap 551-A` (six registrations lost), the `Gap 549-B` closure and this pass's retraction
+are on [`../agents/top.md`](../agents/top.md#-p551--2026-10-30); the supply-channel finding
+is on [`../agents/trending.md`](../agents/trending.md#-p551--2026-10-30).** This entry
+carries this page's **denominator** and its **foundational additions**.
+
+### 🟢 The denominator, stamped
+
+🟢 **`Gap 549-B` asked that every derived figure carry its rule name *and* a revision**,
+because `p546` and `p547` published **176** while `p543`–`p548` re-measure at **175** under
+the rule's current revision — *"both figures are right; neither is reproducible without its
+revision"*. 🟢 This page's figure now reads:
+
+| page | at `p550` `HEAD` | **after this pass** | rule revision |
+|---|---|---|---|
+| `repos/foundations.md` | 176 | **179** | `pairs_in_table_rows_deduped@dcfa99c9666c` |
+
+🟢 **The `+3` is this pass's three MIT attendance foundations, below — and the cell is edited
+rather than announced**, which is `Gap 550-A`'s shelf rule 21 applied to this page's own
+denominator.
+
+🟢 Re-derive with [`../ingest/address-count.py`](../ingest/address-count.py); re-derive the
+stamp with [`../ingest/rule-revision.py`](../ingest/rule-revision.py); check a carried stamp
+with `--verify`, which exits **1** and says *"the figure is not wrong — it is not
+reproducible under the current rule"*. 🔴 **The stamp does not cover the extraction regexes**
+— `Gap 551-B`.
+
+### 🟢 Three MIT foundations for a layer this page had thin
+
+🟢 **Attendance is the one administrative substrate every school system needs and this page
+carried almost nothing permissive for it** — `openSIS-Classic` (GPL), `rosariosis` (GPL) and
+`OpenEduCat` (LGPL) all put a copyleft conversation in front of a client fork. These three
+do not:
+
+| repo | licence, read first-hand at the title block | signal | what it is, and what it is *for* here |
+|---|---|---|---|
+| [`kmhmubin/Face-Recognition-Attendance-System`](https://github.com/kmhmubin/Face-Recognition-Attendance-System) | 🟢 **MIT** — `LICENSE` **1 068 B**, `MIT License · Copyright (c) 2019 K.M.H.Mubin`, at `master` `0e87a9a7ded5` | **584★** · 203 forks · updated **`2026-10-28`** | Python/OpenCV roll-call: Haar-cascade detection, LBPH recognition, CSV register, `yagmail` notification. 🟢 **Seven years old and touched two days ago** — the maturity profile this page prefers over a new repo with the same star count. 🔴 **`Gap 551-C` applies** |
+| [`aashishrai3799/Automated-Attendance-System-using-CNN`](https://github.com/aashishrai3799/Automated-Attendance-System-using-CNN) | 🟢 **MIT** — `LICENSE` **1 071 B**, `MIT License · Copyright (c) 2019 aashishrai3799`, at `master` `ed8ce0410055` | **127★** · 40 forks · updated `2026-09-17` | End-to-end TensorFlow CNN face identification. 🟢 The **model-training** half that the OpenCV repo does not have; the two compose rather than compete. 🔴 **`Gap 551-C` applies** |
+| [`GeoCoderDev/SIASIS`](https://github.com/GeoCoderDev/SIASIS) | 🟢 **MIT** — `LICENSE` **1 084 B**, `MIT License · Copyright (c) 2024 Juan Manuel Chavez Saldaña`, at `master` `c38da88d30bd` | 🔴 stars **`UNREAD(screen-unindexed)`** — **`Gap 549-C` 3rd instance** | Next.js 14 + PostgreSQL (Neon) + Resend + Google Drive. 🟢 **The non-biometric alternative**, and the only one of the three with a **notification and escalation** layer: automatic alerts to guardians on detected tardiness patterns, Excel reports to Drive, bulk CSV intake. 🟢 **Voice-command and hotkey operation for blind users**, built in |
+
+🔴 **The qualification that belongs on the row and not in a footnote.** The two best-starred
+of the three are **biometric**, and this base carries — across six files — that **emotion
+recognition in schools is prohibited under the EU AI Act since `2025-02-02`** and that
+**Annex III point 3** makes education systems high-risk where they assess or monitor. Neither
+repository has a retention policy, a template-storage boundary, an on-device constraint or a
+human-confirm step. 🟢 **They are foundations, not products**, and the gap between the two is
+exactly `Gap 551-C` — *granted, permissive, runnable, not deployable* — with recipe
+**`P604`** on [`../compose/patterns.md`](../compose/patterns.md#-p551--2026-10-30) as the
+mitigation path. 🟢 **`SIASIS` is the one of the three that carries no biometric at all**,
+which is why it earns a row despite an unreadable star count.
+
+🔴 **Four further addresses from the same channel are `UNRESOLVED-on-180-names`** —
+[`AzeemIdrisi/QR-Attendance-System`](https://github.com/AzeemIdrisi/QR-Attendance-System),
+[`HarryFoster1812/AttendEase`](https://github.com/HarryFoster1812/AttendEase),
+[`gopi-c-k/smart-attendance-app`](https://github.com/gopi-c-k/smart-attendance-app),
+[`sandeeep-prajapati/Vidra`](https://github.com/sandeeep-prajapati/Vidra). All four are
+**LIVE** with resolved default branches. 🔵 `p517`'s rule holds: **absence on a name list is
+not absence of a grant**, so they are recorded *unread* and are neither graded nor rejected.
+
 ## 🆕 `p550` — `2026-10-30` — **🟢 THE CANONICAL COUNTER RAN AND THIS PAGE IS `176`, NOT `175` — AND `p549` PREDICTED BOTH THE NUMBER AND THE REASON. 🟢 ONE FOUNDATIONAL ROW RE-ATTESTED EXACTLY, AND IT IS THE ROW THAT CAUGHT THIS PASS'S OWN INSTRUMENT LYING.**
 
 🔵 **The velocity instrument, `Gap 550-A` and the full retraction are on
