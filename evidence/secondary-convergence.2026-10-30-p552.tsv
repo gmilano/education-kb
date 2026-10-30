@@ -1,0 +1,16 @@
+# p552 -- Gap 500-D: the "single-sourced to a vendor page" characterisation, tested.
+# These are SEARCH-LAYER RETURNS, not first-hand page reads. Recorded at that level.
+organisation	type	asserts_2027-12-02	asserts_reg_number	adds
+Gibson Dunn	international law firm	yes	-	describes it at provisional-agreement stage (now stale)
+Stephenson Harwood	international law firm	yes	-	"postponed deadlines"
+DLA Piper	international law firm	yes	-	employment-law angle
+Winston Taylor	law firm	yes	-	"AI Digital Omnibus agreed"
+Usercentrics	vendor	yes	-	Art. 50 transparency unmoved
+sota.io	vendor	yes	2026/1744	"in force since 2026-07-27"
+alicelabs.ai	vendor	yes	-	full post-Omnibus timeline
+accuroai.co	vendor	yes	-	"delay is final"
+uniwise.eu	edtech vendor	yes	-	education-assessment specific
+# Procedural chronology returned by the search layer and NOT present on these shelves
+# before p552: European Parliament approval 2026-06-16; Council final adoption 2026-06-29.
+# VERDICT: "single-sourced to a vendor page" is REFUTED as a description of the evidence
+# base. The gap itself is NOT closed: the PRIMARY text remains unread on four channels.

@@ -1,0 +1,25 @@
+# p552 -- licence payloads read FIRST-HAND over raw.githubusercontent.com.
+# Channels measured this pass: raw=200, api.github.com=403, github.com HTML=403,
+# MCP github transport=OPEN (star/fork/date fields below come from MCP, per rule 17).
+slug	family	payload_bytes	sha256_12	path	stars	forks	note
+Shunli-Wang/CPR-Coach	MIT	1080	72b38a8e87a8	main/LICENSE	22	6	MIT confirmed on BOTH channels (payload + MCP license.key=mit)
+jungang/alumnet	MIT	1055	3bed3331b704	master/LICENSE	167	7	AI alumni/school-history system; RAG + Qdrant; APAC (zh)
+Oriole-FDU/Wisepen	BUSL-1.1	4539	7fc19489d6b2	main/LICENSE	122	14	NOT OSI. Excluded use NAMES "consulting deliverable". Change Date +4y -> Apache-2.0
+openeducat/openeducat_erp	LGPL	8241	528f84036800	master/LICENSE	-	-	confirms the vendor comparison table's LGPL-3.0 claim
+francoisjacquet/rosariosis	GPL-2.0	15214	d954e14e5c75	master/LICENSE	-	-	confirms GPL-2.0
+frappe/erpnext	GPL-3.0	34916	f333043685c8	master/license.txt	-	-	FALSE NEGATIVE on this pass's first probe -- see defect note
+frappe/education	UNREAD	19	1fcecf395312	master/license.txt	-	-	19 BYTES: "License: GNU GPL V3" -- an ASSERTION, not a grant text
+foradian/fedena	ABSENT	-	-	-	-	-	the ONLY Apache-2.0 SIS the search layer offered; does not resolve
+ai4ed/COMA-LessonPlan	NO-GRANT	-	-	-	19	15	LIVE, on-domain, no licence file on any probed branch/name
+eth-lre/PedagogicalRL	NO-GRANT	-	-	-	53	13	LIVE. EMNLP 2025 Oral. ETH Zurich -> EMEA-origin
+zamling/LecSlides_370K	NO-GRANT	-	-	-	4	0	LIVE. ICCV 2025 dataset
+dsz532/exegen	DEAD	-	-	-	-	-	404 on README and all licence names -- a curated list's dead citation
+#
+# WIDENED-LIST RE-PROBE (Gap 552-C). After `license.txt` was found missing from the
+# first name list, the three NO-GRANT verdicts were re-run over 10 filenames
+# (license.txt LICENSE.txt License.txt licence.txt LICENSE.md LICENSE LICENCE
+# COPYING license COPYING.txt) x 3 branches (main master dev). All non-200.
+# These are GENUINE absences, not name-list artefacts:
+ai4ed/COMA-LessonPlan	NO-GRANT-CONFIRMED	10 names x 3 branches	all non-200
+eth-lre/PedagogicalRL	NO-GRANT-CONFIRMED	10 names x 3 branches	all non-200; MCP returns no license field either
+zamling/LecSlides_370K	NO-GRANT-CONFIRMED	10 names x 3 branches	all non-200

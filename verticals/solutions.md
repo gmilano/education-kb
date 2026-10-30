@@ -4,6 +4,37 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p552` — `2026-10-30` — **🟢 THE VERTICAL SHELF GETS A LICENCE COLUMN IT CAN DEFEND: FOUR PLATFORM GRANTS READ FROM THE PAYLOAD, AND THE DEPLOY-VS-RESELL LINE DRAWN EXPLICITLY. 🔴 THE APACHE-2.0 OPTION ON OFFER DOES NOT RESOLVE.**
+
+🔵 This page's job is the platforms a client already runs, which an AI layer is built *on top
+of*. 🔴 For that job the licence question is **not** "can we read the code" but **"can we
+ship what we build on it"** — and those have different answers for every row below.
+
+| platform | role | grant (payload, first-hand) | 🟢 deploy & customise for a client | 🔴 embed in a Globant product |
+|---|---|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | ERP, with an education module | **GPL-3.0** · 34 916 B · `f333043685c8` | 🟢 yes — hosting is not distribution | 🔴 no |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | education ERP — students, finance, HR | **LGPL-3.0** · 8 241 B · `528f84036800` | 🟢 yes | 🟡 **linked modules only** — LGPL is the most permissive copyleft here |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | SIS — grades, scheduling, attendance, billing | **GPL-2.0** · 15 214 B · `d954e14e5c75` | 🟢 yes | 🔴 no |
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | university knowledge + agent platform | 🔴 **BUSL-1.1** · 4 539 B · `7fc19489d6b2` | 🔴 **NO — "consulting deliverable" is a named excluded use** | 🔴 no, until the per-version Change Date (+4 y → Apache-2.0) |
+| `foradian/fedena` | SIS | 🔴 **ABSENT** at the address the comparison table implies | — | — |
+
+🔴 **The WisePen row is the one to read twice.** It is the only platform here a university may
+deploy freely and **Globant may not deliver** — the opposite of the usual copyleft shape,
+where the constraint falls on redistribution rather than on who is doing the work. 🔵 `Gap
+552-B` on [`../agents/top.md`](../agents/top.md#-p552--2026-10-30).
+
+🟢 **The generalisable rule for this page, and it is new here:** a vertical platform needs
+**two** licence verdicts, not one — *deployable for a client* and *embeddable in a product* —
+because every row above answers them differently. A single `Licence` cell cannot carry that,
+and reading one as the other is how a GPL-3.0 platform gets quoted into a product proposal.
+
+🔵 The unchanged majority of this page — Moodle (GPL-3.0), Open edX (AGPL-3.0), Canvas
+(AGPL-3.0), Chamilo, ILIAS, Kolibri (MIT), OpenOLAT (Apache-2.0), BigBlueButton, H5P, Sakai —
+was **not re-probed this pass** and is carried, not re-attested. 🔴 Said plainly so the table
+above is not read as a re-verification of the whole page: **five rows were read, the rest were
+not.** 🔵 Evidence:
+[`../evidence/grant-probe.2026-10-30-p552.tsv`](../evidence/grant-probe.2026-10-30-p552.tsv).
+
 ## 🆕 `p551` — `2026-10-30` — **🔴 THE PLATFORM LEG IS SATURATED FOR A TWELFTH PASS AND THE RE-PHRASED SIBLING FOUND TWO MORE PLATFORMS — BOTH COPYLEFT. 🟢 THE SECTOR'S COPYLEFT VERDICT AT THIS LAYER (`Trend 56`) IS RE-CONFIRMED BY THE FIRST LEG THAT WAS DESIGNED TO BREAK IT.**
 
 🔵 **`Gap 551-A` (six registrations lost) and the `Gap 549-B` closure are on

@@ -4,6 +4,40 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p552` — `2026-10-30` — **🔴 THE ONE APACHE-2.0 STUDENT-INFORMATION SYSTEM THE SEARCH LAYER OFFERS DOES NOT EXIST AT THE ADDRESS IT IMPLIES. 🟢 TWO VENDOR LICENCE CLAIMS CONFIRMED FROM THE PAYLOAD, ONE REFUTED, ONE FOUND TO BE 19 BYTES OF ASSERTION.**
+
+🔵 The mandated vertical query (`open source platform {industry} ERP CRM MIT Apache`) returned
+a comparison table naming **Fedena** as the Apache-2.0 option among education ERP/SIS
+platforms, with OpenEduCat LGPL-3.0 and RosarioSIS GPL-2.0. 🔴 **Vendor comparison tables are
+not grants.** All four were read first-hand over `raw.githubusercontent.com`:
+
+| platform | vendor claim | payload, read first-hand | verdict |
+|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 🟢 **LGPL** · `master/LICENSE` **8 241 B** · `528f84036800` | 🟢 **confirmed** |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | GPL-2.0 | 🟢 **GPL-2.0** · `master/LICENSE` **15 214 B** · `d954e14e5c75` | 🟢 **confirmed** |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | *unstated — "could be MIT or GPL"* | 🟢 **GPL-3.0** · `master/license.txt` **34 916 B** · `f333043685c8` | 🟢 **resolved** — it is GPL-3.0, not MIT |
+| [`frappe/education`](https://github.com/frappe/education) | — | 🟡 `master/license.txt` **19 B**: `License: GNU GPL V3` | 🔴 **an assertion, not a grant** (`Gap 552-D`) |
+| `foradian/fedena` | 🔴 **"Apache-2.0"** | 🔴 **ABSENT** — 404 on README and on 10 licence filenames across 3 branches | 🔴 **REFUTED at this address** |
+
+🔴 **The one permissive option on offer is the one that does not resolve.** 🔵 Stated
+precisely, because the distinction matters: Fedena is a real product with a real history —
+what is refuted is **the GitHub address a comparison table implies for it**, and with it the
+idea that this base can pick up an Apache-2.0 SIS off the shelf. 🟢 If a Fedena source
+release exists elsewhere, finding it is a channel question, not a licence question, and it is
+**not** answered by the query that produced the claim.
+
+### 🔵 What this means for a foundations pick
+
+🔴 **Every verified education ERP/SIS on this page is copyleft** — LGPL, GPL-2.0, GPL-3.0.
+🟢 That is not a blocker and it is not nothing: for a **hosted** deployment GPL-3.0 imposes no
+distribution trigger, while **AGPL would**, and none of these is AGPL. 🔵 The practical rule
+for an engagement: **ERPNext (GPL-3.0) and OpenEduCat (LGPL-3.0) are safe to deploy and
+customise for a client; they are not safe to embed in a proprietary product Globant resells.**
+LGPL-3.0 makes OpenEduCat the more permissive of the two for linked-module work.
+
+🔵 Evidence:
+[`../evidence/grant-probe.2026-10-30-p552.tsv`](../evidence/grant-probe.2026-10-30-p552.tsv).
+
 ## 🆕 `p551` — `2026-10-30` — **🟢 THIS PAGE'S DENOMINATOR NOW CARRIES A RULE *REVISION*, WHICH IS WHAT `Gap 549-B` SAID IT NEEDED TO BE REPRODUCIBLE AT ALL. 🟢 THE ATTENDANCE LAYER GAINS THREE MIT-GRANTED FOUNDATIONS — AND TWO OF THEM CANNOT BE DEPLOYED IN EMEA AS WRITTEN.**
 
 🔵 **`Gap 551-A` (six registrations lost), the `Gap 549-B` closure and this pass's retraction

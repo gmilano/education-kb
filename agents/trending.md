@@ -4,6 +4,141 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p552` — `2026-10-30` — **🟢 `Gap 551-D` ANSWERED, AND THE SINGLE NUMBER `p551` ANSWERED IT WITH INVERTS THE RANKING: GRADED ON NOVELTY ALONE, THE TWO BEST CHANNELS THIS PASS FOUND ARE A GENERAL-LLM LIST AND `sindresorhus/awesome`, AND NEITHER CARRIES A SINGLE EDUCATION-INDUSTRY ROW. 🔴 A NEW VERDICT BAND, AND IT IS THE FIRST ONE KEYED TO *GLOBANT'S OWN BUSINESS MODEL*: `Oriole-FDU/Wisepen` IS BUSL-1.1 AND ITS EXCLUDED-USE CLAUSE NAMES "CONSULTING DELIVERABLE". 🔴 ONE INSTRUMENT DEFECT CAUGHT AGAINST THIS PASS'S OWN FIRST RUN.**
+
+🔴 **Gate posture, stated first: `make hooks` was DENIED** (`Code from External`) before any
+gate body ran — **the eleventh denial in twelve passes**. 🔵 Nothing in this pass is
+gate-attested. Every instrument below was written from scratch in the scratchpad and run with
+`python3 -I`; the repo's own suites were not executed.
+
+### 🟢 `Gap 551-D` — answered, with the answer `p551` could not have reached
+
+`551-D` asked for *"a disposition axis asking: is this artefact worth more as a channel than
+as a row?"* and observed that a 0-star curated list beat the mandated query 9-to-0. 🔴 **It
+graded channels on ONE number — novelty.** `p552` built the axis
+([`../ingest/channel-yield.py`](../ingest/channel-yield.py)) and ran it over seven lists:
+
+| channel | novel | in-domain | fit | graded on novelty alone |
+|---|---|---|---|---|
+| [`GeminiLight/awesome-ai-llm4education`](https://github.com/GeminiLight/awesome-ai-llm4education) | 5 | 2 | **40.0 %** | 🔴 6th of 7 |
+| [`Geralt-Targaryen/Awesome-Education-LLM`](https://github.com/Geralt-Targaryen/Awesome-Education-LLM) | 0 | 0 | — | 🔴 last — **on-domain and cites only arXiv** |
+| [`Developer-Y/cs-video-courses`](https://github.com/Developer-Y/cs-video-courses) | 19 | 4 | 21.1 % | 4th |
+| [`abla-ha/LLM-Educational-repo`](https://github.com/abla-ha/LLM-Educational-repo) | 123 | 2 | 1.6 % | 🔴 **2nd** |
+| [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | 670 | 23 | 3.4 % | 🔴 **1st-equal** |
+| [`uhub/awesome-llm`](https://github.com/uhub/awesome-llm) | 1 016 | 36 | 3.5 % | 🔴 **1st** |
+
+🔴 **The ranking inverts.** The list with the highest domain fit ranks sixth on novelty; the
+two that rank first and second are a general-LLM list and the root `awesome` index. 🔵 The
+mechanism is arithmetic and not incidental: **3.5 % of a large number beats 40 % of a small
+one on any absolute threshold**, and a general index is large by construction.
+
+🔴 **And the in-domain hits of the winners do not survive reading.** `uhub`'s and
+`sindresorhus`'s matches are `awesome-laravel-education`, `awesome-swift-education`,
+`awesome-css-learning`, `learn-to-program`, `llms_interview_notes` — **developer education,
+not the education industry.** 🔵 The keyword cannot separate *learning to code* from *AI for
+schools*, so even the rate-based reading overstates both. Registered as `Gap 552-A`.
+
+🟢 **What survives and is usable:** grade a channel on **fit rate**, never on an absolute
+count, and read the matches before promoting the channel. 🔵 Evidence:
+[`../evidence/channel-shape-yield.2026-10-30-p552.tsv`](../evidence/channel-shape-yield.2026-10-30-p552.tsv).
+
+### 🔴 `Gap 552-B` — a new verdict band: **granted, open to universities, and closed to us**
+
+[`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) — **122★ · 14 forks**, Fudan
+University Oriole Team — describes itself on GitHub as an *"Open-source platform for education
+and research"* and in its own README as a *开源* (open-source) platform. 🔴 **Its payload is
+Business Source License 1.1** (`main/LICENSE`, **4 539 B**, `7fc19489d6b2`, read first-hand),
+which is **not OSI-approved**. Its Additional Use Grant, quoted from the payload:
+
+> *"You may also make production use of the Licensed Work for personal, educational, academic
+> research, or other non-commercial purposes, provided that such use does not include offering
+> the Licensed Work … as part of a commercial product, paid service, hosted service, SaaS
+> offering, **consulting deliverable**, or revenue-generating business activity."*
+
+🔴 **This is the first row on these shelves whose licence names Globant's delivery model as
+the excluded use.** 🟢 **Change Date** four years from each version's release; **Change
+License Apache-2.0** — so it becomes buildable, per version, on a rolling four-year lag.
+
+🟢 **Why it is a BAND and not a rejection.** `Gap 550-B` is licence-vs-runtime (MIT code
+needing a paid plan). `Gap 551-C` is licence-vs-jurisdiction (MIT biometrics, illegal in EMEA).
+🔵 **`552-B` is licence-vs-BUSINESS-MODEL**: the artefact is genuinely open to the university
+that builds it in-house and specifically shut to the consultancy that would deliver it. A
+university client may adopt WisePen directly; **Globant may not ship it.** 🔴 No star count,
+liveness check or OSI-family probe on these shelves separates those two readings — the
+`BUSL-1.1` family alone does not, because the exclusion lives in a *parameter block*, not in
+the licence family.
+
+### 🔴 A defect caught against this pass's OWN first run
+
+🔴 **`p552`'s first grant probe reported `NO-PAYLOAD` for
+[`frappe/erpnext`](https://github.com/frappe/erpnext) and
+[`frappe/education`](https://github.com/frappe/education).** Both are false. The probe's
+filename list carried `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `license`
+— **and not `license.txt`**, which is where both keep it.
+
+| repo | first run | re-probed |
+|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 `NO-PAYLOAD` | 🟢 **GPL-3.0**, `master/license.txt` **34 916 B**, `f333043685c8` |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 `NO-PAYLOAD` | 🟡 `master/license.txt` **19 B**, `1fcecf395312` |
+
+🔵 **The generalisable error: an absence verdict is only as wide as the probe's name list.**
+`NO-GRANT` and `NOT-PROBED-THERE` are different findings and this instrument printed the first
+when it meant the second. 🟢 Corrected before publication; the corrected list is what
+[`../evidence/grant-probe.2026-10-30-p552.tsv`](../evidence/grant-probe.2026-10-30-p552.tsv)
+carries. Registered as `Gap 552-C`.
+
+### 🔴 `Gap 552-D` — a licence file that asserts a licence and does not carry one
+
+🔴 [`frappe/education`](https://github.com/frappe/education)'s `license.txt` is **19 bytes**
+in full: `License: GNU GPL V3`. 🔵 That is a *claim about* a grant, not a grant — no
+copyright line, no permission clause, no warranty disclaimer, nothing a reader could comply
+with. 🔴 **This base's title-block reader returns `UNREAD` on it, which is correct and is also
+indistinguishable from a fetch failure**, so a 19-byte assertion and a dead channel land in the
+same cell. **Asks:** a `GRANT-ASSERTED-NOT-CARRIED` verdict distinct from `UNREAD`.
+
+### 🔵 Region sweep — four legs run, nils written down
+
+| region | returned | new to these shelves |
+|---|---|---|
+| **North America** | State-level movement from guidance to binding rules; trackers disagree **2.6×** on bill counts (one reports 134 bills / 31 states, another ~100); Idaho SB 1227, NY A 9190 (direct student use gated to grade 9+), California AB 1159 (student data barred from model training); Mississippi embeds AI literacy in general education from Fall 2026; **no binding federal curriculum standard** | 🔴 **0 addresses.** 🔵 The 134/31 figure is the one `p455` RETIRED as single-tracker; it returned again and is still not corroborated |
+| **EMEA** | Digital Omnibus **Reg. (EU) 2026/1744**: Annex III education → `2027-12-02`, embedded → `2028-08-02`, Art. 50 unmoved (`2026-08-02`, marking grace to `2026-12-02`), Art. 5(1)(f) emotion ban live since `2025-02-02`; EUA Jan-2026 report urging European LLMs | 🟢 **1 address** ([`eth-lre/PedagogicalRL`](https://github.com/eth-lre/PedagogicalRL), ETH Zurich). 🟢 **And a sourcing upgrade — see `Gap 500-D` below** |
+| **APAC** | China: algorithm filing + security assessment, 550+ filed GenAI services; Japan: AI Basic Plan adopted `2026-07-14`, framework law without penalties; Singapore: voluntary (AI Verify); India: no dedicated AI law, DPDP Act extended; **Vietnam Decision 33/2026/QD-TTg names education among six high-risk sectors** | 🟢 **3 addresses** (`alumnet`, `Wisepen`, `LecSlides_370K`) — 🔵 APAC is again the supply leg, EMEA/NA the demand leg |
+| **LATAM** | UNESCO: Brazil **56 %** / Chile **55 %** of secondary teachers used AI in the prior year vs **36 %** OECD; IESALC: **87 %** of regional universities use AI, **26 %** have a strategy; Brazil **53 %** of administrators use AI, **22 %** have guidelines; HolonIQ LATAM EdTech 100 (Teachy, Vetto, Ginia, Talisis, Mattilda); UNESCO regional observatory launched Apr 2026 | 🔴 **0 addresses.** 🔵 The adoption/governance gap (87 % vs 26 %) is the standing LATAM thesis and is unchanged |
+
+🔴 **The standing nils, written down because silence reads like coverage:** Africa, the Middle
+East, UK, DACH and the Nordics returned **no education-specific adoption figures** again —
+the same blank `p531`, `p546` and `p551` recorded. 🔴 **North America and LATAM produced zero
+new addresses for this pass**, as they did for `p551`.
+
+### 🟢 `Gap 500-D` — the gap stands, its CHARACTERISATION does not
+
+🔴 **Two further channels measured, both closed** — `eur-lex.europa.eu` on a *second* path
+(`/legal-content/EN/TXT/?uri=OJ:L_202601744`, **WebFetch, `getaddrinfo ENOTFOUND`**) and
+`artificialintelligenceact.eu` on **WebFetch** (`ENOTFOUND`; `p551` had `curl`-403 only). The
+primary text is unread on **four** channels and the remedy is unchanged: `eur-lex.europa.eu`
+must be allowed in the session's network settings.
+
+🟢 **But the register's wording — *"still single-sourced to a vendor page"* — is now
+refutable.** This pass's search layer returned the same dates from **nine distinct
+organisations, four of them international law firms** (Gibson Dunn, Stephenson Harwood, DLA
+Piper, Winston Taylor), plus a **procedural chronology these shelves did not hold**: European
+Parliament approval `2026-06-16`, Council final adoption `2026-06-29`.
+🔵 **Stated at its true level: these are SEARCH-LAYER RETURNS, not first-hand page reads.**
+The claim moves from *single-sourced* to *convergent across independent secondary sources*;
+it does **not** move to *attested*. 🔵 Evidence:
+[`../evidence/secondary-convergence.2026-10-30-p552.tsv`](../evidence/secondary-convergence.2026-10-30-p552.tsv),
+[`../evidence/primary-source-channels.2026-10-30-p552.tsv`](../evidence/primary-source-channels.2026-10-30-p552.tsv).
+
+### 🔵 Saturation, measured again
+
+🔴 **22 of 24** ranked addresses returned by the MCP transport across two topic axes are
+already on these shelves — **91.7 %**, against `p497`'s **94.9 %**. 🟢 The two that were not:
+[`jungang/alumnet`](https://github.com/jungang/alumnet) (**167★**, 🟢 **MIT**, `master/LICENSE`
+1 055 B `3bed3331b704`) and [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen)
+(`552-B`). 🔵 **One query returned `total_count: 0` and was NOT published as a supply finding**
+— a control (`topic:education topic:ai stars:>100`) returned 29 and a second returned 167, so
+the zero was a query-shape artefact, not a drought.
+
 ## 🆕 `p551` — `2026-10-30` — **🟢 `Gap 549-D` CONFIRMED AND THEN REFINED AGAINST ITSELF: THE SATURATED LEG RETURNED THE SAME FIVE PLATFORMS FOR A TWELFTH PASS, THE RE-PHRASED SIBLING RETURNED FOUR NEW ADDRESSES — AND THE BEST SUPPLY CHANNEL OF THE PASS WAS A ZERO-STAR, ONE-DAY-OLD CURATED LIST THAT EVERY RANKING THIS BASE USES WOULD DISCARD. 🔴 THE TRENDING FEEDS DISAGREE BY 2 693 STARS ON ONE REPOSITORY ON ONE DAY.**
 
 🔵 **`Gap 551-A` (six lost registrations), the `Gap 549-B` closure, the `Gap 549-C` second

@@ -1,0 +1,6 @@
+# p552 -- Gap 500-D re-probed. Two FURTHER channels measured; both closed.
+target	channel	result	pass_first_measured
+eur-lex.europa.eu/eli/reg/2026/1744/oj	curl, session proxy	CONNECT tunnel failed, 403 (connect_rejected)	p551, reproduced p552
+eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744	WebFetch, independent egress	getaddrinfo ENOTFOUND	p552 (NEW -- a second eur-lex path)
+artificialintelligenceact.eu/developments/digital-omnibus-timeline-changes/	WebFetch, independent egress	getaddrinfo ENOTFOUND	p552 (NEW -- p551 had curl-403 only)
+digital-strategy.ec.europa.eu	curl, session proxy	403	p551

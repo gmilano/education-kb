@@ -130,6 +130,25 @@ education. 🔵 An exception that cannot be audited is the compliance failure, n
 exception.
 
 
+
+#### 🆕 `p552` — thirteenth consecutive demand saturation, and the retired figure returns a fourth time
+
+🔴 **Zero new NA addresses — thirteenth consecutive pass.** The mandated leg returned
+state-level movement already held here: Idaho **SB 1227**, New York **A 9190** (the grade-9
+age-gate), California **AB 1159** (student data barred from training models unless it
+directly benefits the school), Mississippi embedding AI literacy in general education from
+**Fall 2026**, and the **K-12 AI Literacy and Readiness Act** still only advanced out of
+committee.
+
+🔴 **The `134 bills / 31 states` figure surfaced a FOURTH time** and is again **not written
+to this page as a fact** — `p455` retired it, three other trackers disagree by **2.6×**, and
+this pass's own return paired it with a second, incompatible count (*"nearly 100 state bills"*,
+PIE Network). 🔵 **Two secondary trackers disagreeing inside one search return is the
+cleanest evidence yet that the figure is a tracker artefact**, not a count.
+
+🟡 **One adoption pair returned and is recorded as uncorroborated:** ~**90 %** of college
+students vs ~**54 %** of K-12 students using AI. 🔴 Single commercial source, no methodology
+given, and the gap is implausibly wide. **Not adopted** — named so the next pass recognises it.
 ### EMEA
 
 🟢 **The only region that produced claims this base did not already hold.** Both are
@@ -266,6 +285,38 @@ switch on.** Annex III logging and human-oversight scaffolding is designed now a
 finds** — see `Gap 551-C` on [`../agents/top.md`](../agents/top.md#-p551--2026-10-30).
 
 
+
+#### 🆕 `p552` — the Omnibus claim's SOURCING improves materially; the claim itself is unchanged
+
+🟢 **One new address, and it places EMEA on the supply side for the second pass running:**
+[`eth-lre/PedagogicalRL`](https://github.com/eth-lre/PedagogicalRL) — **53★**, **EMNLP 2025
+Oral**, ETH Zurich Learning & Reasoning group, multi-turn RL for *"aligning models to be
+tutors instead of answerers"*. 🔴 **It carries no licence file** (10 names × 3 branches, all
+non-200), so it is an EMEA *capability* this base can name and **cannot build on** —
+`Trend 59`.
+
+🟢 **`Gap 500-D`'s characterisation is now refutable, and that is this pass's EMEA result.**
+The register reads *"still single-sourced to a vendor page"*. This pass's search layer
+returned the same dates from **nine distinct organisations, four of them international law
+firms** — Gibson Dunn, Stephenson Harwood, DLA Piper, Winston Taylor — plus a **procedural
+chronology this base did not hold**: European Parliament approval **`2026-06-16`**, Council
+final adoption **`2026-06-29`**.
+
+🔵 **Stated at its true evidentiary level:** these are **search-layer returns, not first-hand
+page reads**. The status moves from *single-sourced* to *convergent across independent
+secondary sources*. 🔴 **It does not move to *attested*, and the gap stays open** — the
+primary text is unread on **four** channels now, with two measured this pass
+(`eur-lex` on a second path via WebFetch → `ENOTFOUND`; `artificialintelligenceact.eu` via
+WebFetch → `ENOTFOUND`).
+
+🔵 **The dates themselves are unchanged and this base remains more precise than the channel:**
+Annex III education → **`2027-12-02`**, embedded → **`2028-08-02`**, Art. 50 transparency
+unmoved at **`2026-08-02`** with the marking grace to **`2026-12-02`**, Art. 5(1)(f)
+emotion-inference ban live since **`2025-02-02`**. 🔴 **One return this pass again asserted
+the superseded `2 August 2026` high-risk date** — the standing `ACTION SH` sighting.
+
+🔴 **Standing nil, repeated so it is not read as coverage:** UK, DACH, Nordics, the Gulf and
+Africa returned **no education-specific adoption figures** again.
 ### APAC
 
 🔴 **Nothing new, and the shape of the blank is worth stating precisely.** The leg returned
@@ -374,6 +425,33 @@ clock depends on deployment date and the product must record it. Australia requi
 several regimes: the enforcement unit here is the **(feature × jurisdiction)** pair.
 
 
+
+#### 🆕 `p552` — APAC is the supply leg for a third consecutive pass, and it brings a licence problem with it
+
+🟢 **Three of this pass's four new addresses are APAC-origin**, placed by copyright line and
+language, not by inference:
+
+- [`jungang/alumnet`](https://github.com/jungang/alumnet) — **167★**, 🟢 **MIT** (1 055 B,
+  `3bed3331b704`). AI school-history exhibition and alumni management; RAG + Qdrant.
+  🔵 The **institutional-memory** use case, which no other row on these shelves covers.
+- [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) — **122★**, Fudan University,
+  🔴 **BUSL-1.1** — `Gap 552-B`.
+- [`zamling/LecSlides_370K`](https://github.com/zamling/LecSlides_370K) — **ICCV 2025**,
+  370 K lecture slides, 🔴 **no grant**.
+- [`Shunli-Wang/CPR-Coach`](https://github.com/Shunli-Wang/CPR-Coach) — 🟢 **MIT**, CPR skills
+  assessment.
+
+🔴 **The APAC supply advantage now comes with a licence tax.** Of four APAC artefacts, **two
+are permissive, one is source-available with a consulting exclusion, one is ungranted** —
+a 50 % usable rate on the region that has supplied this base's new rows for three passes.
+
+🔵 **Regulation returned, all held except one:** China's algorithm-filing and
+security-assessment regime (**550+** GenAI services filed by mid-2026); Japan's **AI Basic
+Plan** adopted **`2026-07-14`** under a framework law with no penalties; Singapore voluntary
+(Model AI Governance Framework, **AI Verify**); India with no dedicated AI statute, extending
+the **DPDP Act 2023**. 🟢 **Vietnam's `Decision 33/2026/QD-TTg`, naming education among six
+high-risk sectors, is held here and is the one APAC instrument that is structurally an EU
+Annex III analogue** — so `P490-2`'s conformity work transfers to it.
 ### LATAM
 
 🔴 **Nothing new; every instrument returned was held.** The **UNU** working paper on AI
@@ -506,6 +584,101 @@ that closes a 78-point gap between using and evaluating. 🔵 **The weakest regu
 the four generates the most demanding reporting requirement**, which is the inversion a
 regulation-only reading of this region would miss.
 
+
+
+#### 🆕 `p552` — zero supply for a third pass, and the governance gap is the whole opportunity
+
+🔴 **Zero new LATAM addresses.** The mandated leg returned demand-side material only, and
+none of it is new to this page.
+
+🟢 **The adoption/governance scissors is the region's commercial thesis and it widened
+again** — recorded with its sources because every figure here is secondary:
+
+| figure | value | source |
+|---|---|---|
+| secondary teachers who used AI in the prior year | **Brazil 56 %** · **Chile 55 %** vs **OECD 36 %** | UNESCO |
+| regional universities using AI | **87 %** | UNESCO IESALC |
+| …of those, with a formal AI strategy | 🔴 **26 %** | UNESCO IESALC |
+| Brazilian school administrators using AI | **53 %** | — |
+| …whose school has guidelines for it | 🔴 **22 %** | — |
+
+🔵 **Two independent institutional levels — universities and schools — show the same shape:
+adoption three to four times governance.** 🟢 **That is a governance-and-enablement
+engagement, not a build engagement**, and it is the one LATAM proposition on this base that
+does not depend on new open-source supply arriving.
+
+🔵 **Market and policy, carried:** HolonIQ's **2026 LATAM EdTech 100** (Brazil ~half the
+cohort; Teachy, Vetto, Mexico's Ginia, Talisis, Mattilda); Brazil's draft AI framework still
+under consideration and borrowing the EU's risk-based grammar, plus an EU–Brazil digital
+partnership; Chile's government-sponsored risk-based bill; **CENIA: 13 of 19** LAC countries
+studied do not teach early AI adoption in schools. 🟢 UNESCO's **regional AI-in-education
+observatory** (launched April 2026, with CAF, CENIA, Cetic.br, Ceibal, Fundación Santillana,
+Tecnológico de Monterrey, ProFuturo) is the region's convening body and the natural
+counterpart for a governance offer.
+## 🆕 `p552` — `2026-10-30` — **🟢 `Gap 500-D`'s CHARACTERISATION REFUTED WITHOUT THE GAP BEING CLOSED: THE OMNIBUS DATES ARE CONVERGENT ACROSS NINE ORGANISATIONS INCLUDING FOUR INTERNATIONAL LAW FIRMS, AND THE PRIMARY TEXT IS STILL UNREAD ON FOUR CHANNELS. 🔴 THIRTEENTH CONSECUTIVE DEMAND SATURATION. 🔴 THE RETIRED `134/31` FIGURE RETURNED A FOURTH TIME, THIS TIME BESIDE A SECOND TRACKER THAT CONTRADICTS IT INSIDE THE SAME SEARCH RETURN.**
+
+### 🔴 The four legs, graded per region
+
+| region | new claims | new addresses |
+|---|---|---|
+| North America | 🔴 **0** — all held. 🔴 `134/31` a **fourth** time, contradicted in-return by *"nearly 100 bills"* | 🔴 **0** (13th pass) |
+| EMEA | 🟢 **1 — a sourcing upgrade, not a new fact**: the Omnibus dates are convergent across nine organisations, and the EP/Council chronology (`2026-06-16` / `2026-06-29`) was not held here | 🟢 **1** ([`eth-lre/PedagogicalRL`](https://github.com/eth-lre/PedagogicalRL), 🔴 ungranted) |
+| APAC | 🔴 **0** — China filing regime, Japan's `2026-07-14` Basic Plan, Singapore voluntary, India DPDP, Vietnam `33/2026/QD-TTg`: **all held** | 🟢 **3** |
+| LATAM | 🔴 **0** — UNESCO/IESALC/HolonIQ figures all held | 🔴 **0** (3rd pass) |
+
+🔵 **Four legs, one new claim, four new addresses.** 🔴 The demand side of this page is
+saturated and has been for thirteen passes; **the supply side is where this base still
+moves**, and it moved APAC again.
+
+### 🟢 `Gap 500-D` — what changed and what did not
+
+🔴 **What did not change:** the primary text of **Regulation (EU) 2026/1744** is unread.
+Four channels, two measured this pass:
+
+| target | channel | result |
+|---|---|---|
+| `eur-lex.europa.eu/eli/reg/2026/1744/oj` | `curl`, session proxy | 🔴 `CONNECT tunnel failed, 403` |
+| `eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744` | **WebFetch** | 🔴 **`ENOTFOUND`** — 🆕 `p552`, a second `eur-lex` path |
+| `artificialintelligenceact.eu/.../digital-omnibus-timeline-changes/` | **WebFetch** | 🔴 **`ENOTFOUND`** — 🆕 `p552` (`p551` had `curl`-403 only) |
+| `digital-strategy.ec.europa.eu` | `curl`, session proxy | 🔴 `403` |
+
+🟢 **What changed:** the register's words *"single-sourced to a vendor page"* are no longer
+an accurate description of the evidence. **Nine distinct organisations** returned the same
+dates this pass — **Gibson Dunn, Stephenson Harwood, DLA Piper, Winston Taylor** (four
+international law firms), plus Usercentrics, sota.io, alicelabs.ai, accuroai.co and the
+edtech vendor uniwise.eu. 🔵 They are **not** mutually independent in the strong sense — all
+read the same OJ text — but they are independent of one another's *publication*, which is
+exactly what "single-sourced to a vendor page" denied.
+
+🔵 **Recorded at its true level and no higher: SEARCH-LAYER RETURNS, not first-hand page
+reads.** The status is now *convergent secondary*; it is not *attested*. 🔴 **The gap stays
+open** and the remedy is unchanged: `eur-lex.europa.eu` allowed in the session's network
+settings. 🔵 Evidence:
+[`../evidence/secondary-convergence.2026-10-30-p552.tsv`](../evidence/secondary-convergence.2026-10-30-p552.tsv),
+[`../evidence/primary-source-channels.2026-10-30-p552.tsv`](../evidence/primary-source-channels.2026-10-30-p552.tsv).
+
+### 🔴 Figures this pass refused to adopt
+
+| figure | why refused |
+|---|---|
+| `134 bills / 31 states` (NA) | 🔴 Retired at `p455`; **fourth** sighting; this pass's own return carried a contradicting *"nearly 100 bills"* from a second tracker |
+| ~`90 %` of college vs ~`54 %` of K-12 students using AI | 🔴 Single commercial source, no methodology, implausible spread |
+| `12 %` of university students submitting AI text in assessed work (up from `8 %`) | 🟡 Plausible and directionally useful, but single-sourced to a blog — **named, not adopted** |
+| Khanmigo `1.4 M+` users | 🔴 Vendor-style source; the originating page itself flags it for verification |
+
+### 🔵 Market size — the spread is a definition problem, and this pass can name it
+
+| source | 2026 | later | what it measures |
+|---|---|---|---|
+| Research and Markets | **$10.6 B** | $42.48 B (2030) | "AI in education", broad |
+| Mordor Intelligence | **$2.37 B** | ~$11.83 B (2031) | **agentic** AI in education, narrow |
+
+🟢 **The ~4.5× gap between the two is the most useful number on this table** — it is the
+price of the word *agentic*, and a proposal that quotes the broad figure for an agentic
+scope is overstating its market by that factor. 🔵 Segment shares returned this pass:
+**Intelligent Tutoring Systems 26.04 %** (2025); **Assessment & Feedback Agents** fastest at
+**44.36 % CAGR** to 2031 — 🔵 which is the segment `Gap 551-C`'s jurisdiction problem and
+`P604` both land on.
 
 ## 🆕 `p551` — `2026-10-30` — **🟢 `Gap 549-F` CLOSED: THE FOUR REGIONS NOW CARRY ONE COMPARABLE FIELD, AND IT IS THE FIELD THAT DISQUALIFIES TWO OF THIS PASS'S THREE BEST SUPPLY FINDS. 🔴 TWELFTH CONSECUTIVE DEMAND SATURATION, ALL FOUR LEGS BLANK TOGETHER FOR THE SECOND PASS RUNNING. 🔴 THE RETIRED `134/31` FIGURE SURFACED A THIRD TIME.**
 

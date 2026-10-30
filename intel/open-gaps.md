@@ -4,6 +4,150 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p552` — `2026-10-30` — **🟢 `Gap 551-D` CLOSED WITH AN INSTRUMENT THAT CONTRADICTS THE SINGLE NUMBER IT WAS BUILT FROM. 🟢 `Gap 500-D`'s CHARACTERISATION REFUTED WITHOUT THE GAP CLOSING. 🔴 FIVE REGISTERED (`552-A`…`552-E`), ONE OF WHICH IS A NEW VERDICT BAND. 🔴 ONE DEFECT CAUGHT AGAINST THIS PASS'S OWN FIRST RUN. 🔴 ELEVENTH GATE DENIAL IN TWELVE PASSES.**
+
+🔵 **Registration check run first, per `P605`.** The five ids below are cited in this pass's
+sections on [`../agents/top.md`](../agents/top.md#-p552--2026-10-30),
+[`../agents/trending.md`](../agents/trending.md#-p552--2026-10-30),
+[`../repos/trending.md`](../repos/trending.md#-p552--2026-10-30) and
+[`../intel/trends.md`](../intel/trends.md#-p552--2026-10-30), and **all five appear on this
+page below** — the failure mode `Gap 551-A` registered does not repeat this pass.
+
+### 🟢 `Gap 551-D` — CLOSED, and the closing measurement inverts the premise
+
+**Registered as:** *"a disposition axis asking — is this artefact worth more as a channel
+than as a row?"*, after a 0-star curated list beat the mandated query **9-to-0**.
+
+🟢 **Delivered:** [`../ingest/channel-yield.py`](../ingest/channel-yield.py), run over seven
+lists. 🔴 **And the axis `p551` proposed — novelty — ranks the channels backwards.**
+`uhub/awesome-llm` (**1 016** novel, **3.5 %** fit) and `sindresorhus/awesome` (**670**,
+**3.4 %**) rank first and second; the list with the highest fit
+(`GeminiLight/awesome-ai-llm4education`, **5** novel, **40.0 %**) ranks **sixth of seven**.
+🔵 Arithmetic, not accident: 3.5 % of a large number beats 40 % of a small one on any
+absolute threshold, and a general index is large by construction.
+
+🟢 **The rule that replaces it: grade a channel on FIT RATE, never on an absolute count, and
+read the matches before promoting the channel.** 🔵 Evidence:
+[`../evidence/channel-shape-yield.2026-10-30-p552.tsv`](../evidence/channel-shape-yield.2026-10-30-p552.tsv).
+🔴 The instrument's own `disposition` column still uses the ≥3 absolute threshold and is
+therefore wrong by this rule; it is left in place, **unused and documented as wrong in the
+docstring**, so the defect stays visible rather than being quietly deleted.
+
+### 🔴 `Gap 552-A` — the domain gate cannot tell *developer* education from the education *industry*
+
+🔴 **Found while closing `551-D`, against that closure's own numbers.** The in-domain hits
+that promoted the two "winning" channels are `awesome-laravel-education`,
+`awesome-swift-education`, `awesome-css-learning`, `learn-to-program`, `llms_interview_notes`
+— **learning to code, not AI for schools.** 🔵 So even the fit-rate reading overstates both
+channels, and the true education-industry fit of the two general lists is **near zero**.
+
+🔴 **The word "education" is doing two unrelated jobs** in this corpus and a slug-text
+keyword cannot separate them. **Asks:** a domain gate that reads the repository's own
+description and topics rather than its address — or, cheaper and honest, a rule that **a
+channel is never promoted on keyword counts alone, only after its matches are read.**
+🔵 `Trend` consequence recorded on [`../agents/trending.md`](../agents/trending.md#-p552--2026-10-30).
+
+### 🔴 `Gap 552-B` — a new verdict band: **granted, open to universities, closed to us**
+
+🔴 [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) (**122★**, Fudan University
+Oriole Team) describes itself as an *"Open-source platform for education and research"* and
+carries **Business Source License 1.1** (`main/LICENSE`, **4 539 B**, `7fc19489d6b2`, read
+first-hand). Its Additional Use Grant permits personal, educational, academic and
+non-commercial production use, and excludes *"commercial product, paid service, hosted
+service, SaaS offering, **consulting deliverable**, or revenue-generating business activity"*.
+
+🔴 **The first row on these shelves whose licence names Globant's delivery model as the
+excluded use** — in the licence text, not by inference from a family.
+🟢 **Change Date** four years per version; **Change License** Apache-2.0.
+
+🟢 **Completes a three-rung ladder:** `550-B` licence-vs-runtime · `551-C`
+licence-vs-jurisdiction · **`552-B` licence-vs-business-model.**
+🔴 **Asks:** for every non-OSI source-available grant, parse and carry the **Additional Use
+Grant** and the **Change Date** on the row — the family name does not answer the question,
+because two BUSL-1.1 repositories can differ completely.
+🟢 **Partly mitigated already:** recipe **`P606`** and
+[`../compose/code/p552-deliverable-clearance/clearance.py`](../compose/code/p552-deliverable-clearance/clearance.py)
+(**14/14 controls**) return two verdicts per row and refuse to guess on source-available
+families. 🔴 **The register half — carrying the parsed parameters onto the shelf rows
+themselves — is NOT done and is the open part.**
+
+### 🔴 `Gap 552-C` — an absence verdict is only as wide as the probe's filename list
+
+🔴 **Caught against this pass's own first run, before publication.** The grant probe printed
+`NO-PAYLOAD` for [`frappe/erpnext`](https://github.com/frappe/erpnext) and
+[`frappe/education`](https://github.com/frappe/education); **both were false.** The list
+carried `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `license` — **and not
+`license.txt`**, which is where both keep it. ERPNext is **GPL-3.0**, `master/license.txt`,
+**34 916 B**, `f333043685c8`.
+
+🔵 **`NO-GRANT` and `NOT-PROBED-THERE` are different findings** and the instrument printed the
+first when it meant the second. 🟢 **Contained before publication:** the three remaining
+`NO-GRANT` verdicts (`COMA-LessonPlan`, `PedagogicalRL`, `LecSlides_370K`) were re-run over
+**10 filenames × 3 branches** and all survive — they are genuine absences.
+🔴 **Asks:** one shared filename list, in `ingest/`, that every probe on this base reads, so
+the next instrument cannot carry a narrower one. 🔵 Evidence:
+[`../evidence/grant-probe.2026-10-30-p552.tsv`](../evidence/grant-probe.2026-10-30-p552.tsv).
+
+### 🔴 `Gap 552-D` — a grant file that asserts a licence and does not carry one
+
+🔴 [`frappe/education`](https://github.com/frappe/education)'s `license.txt` is **19 bytes in
+full**: `License: GNU GPL V3`. No copyright line, no permission clause, no warranty
+disclaimer — **a claim about a grant, not a grant.** 🔴 A title-block reader returns `UNREAD`,
+which is correct and is **indistinguishable from a fetch failure**, so a 19-byte assertion and
+a dead channel land in the same cell.
+**Asks:** a `GRANT-ASSERTED-NOT-CARRIED` verdict, distinct from both `UNREAD` and `NO-GRANT`.
+
+### 🔴 `Gap 552-E` — the supply ceiling is a licensing ceiling, and this base has no instrument for it
+
+🔴 **Measured:** of five novel addresses from the best channel, **one** carries a grant. The
+three ungranted ones are an **EMNLP 2025 Oral** (ETH Zurich), an **ICCV 2025** dataset, and a
+multi-agent lesson-plan system — live, on-domain, published at top venues, **unusable**.
+🔵 A paper acceptance creates an address; it does not create a grant.
+
+🟢 **Asks, and it is not a search instrument:** a **licence-request track** — a standing list
+of ungranted-but-wanted addresses with the ask sent and its date, so the base can measure
+*conversion* rather than re-discovering the same unusable rows each pass. 🔵 Recipe `P607`
+step 1 describes the ask; **nothing records whether it was made.**
+
+### 🟢 `Gap 500-D` — OPEN, and its CHARACTERISATION is now wrong
+
+🔴 **Still open.** The primary text of **Regulation (EU) 2026/1744** is unread on **four**
+channels; two were measured this pass —
+`eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744` via **WebFetch** (`ENOTFOUND`,
+a second `eur-lex` path) and `artificialintelligenceact.eu` via **WebFetch** (`ENOTFOUND`;
+`p551` had `curl`-403 only). **Remedy unchanged:** `eur-lex.europa.eu` allowed in the
+session's network settings.
+
+🟢 **But the wording *"still single-sourced to a vendor page"* is refuted.** Nine distinct
+organisations returned the same dates this pass, **four of them international law firms**
+(Gibson Dunn, Stephenson Harwood, DLA Piper, Winston Taylor), plus a procedural chronology
+this base did not hold — European Parliament approval **`2026-06-16`**, Council final
+adoption **`2026-06-29`**. 🔵 **Recorded at its true level: these are SEARCH-LAYER RETURNS,
+not first-hand page reads**, and the organisations are independent in *publication*, not in
+*source* — they all read the same OJ text. The status is **convergent secondary**, not
+attested. 🔵 Evidence:
+[`../evidence/secondary-convergence.2026-10-30-p552.tsv`](../evidence/secondary-convergence.2026-10-30-p552.tsv).
+🟡 **`Gap 550-A` was checked against this and does NOT apply — stated because the first
+draft of this entry got it wrong.** `550-A`'s rule is *"a pass that claims to correct a
+figure must diff the cell"*, and it governs **live shelf rows**. The two surviving
+*"single-sourced"* cells are at [`../intel/market.md`](../intel/market.md) inside `p547`'s
+dated section and on this page inside `p551`'s — **dated pass narratives, which this base
+does not rewrite** (`p548`: *"no historical claim was edited, added or removed"*). 🔵 So the
+remedy is not an edit: **the newest register entry is the authoritative status**, and this
+one supersedes `p551`'s. 🔴 **The real open part is structural** — a reader who greps
+`single-sourced` finds three hits and nothing in the two older ones points forward to this
+correction. **Asks:** either the register carries a single live status line per gap above the
+dated history, or superseded entries carry a forward pointer.
+
+### 🔵 Carried forward unchanged by `p552`
+
+`548-A` (`ENUMERATED-NOT-READ`), `548-E` (two-figure `shelf_addresses` / `documented_addresses`),
+`549-C`, `549-E`/`550-E` (velocity coverage), `551-A` (🟢 **not reproduced this pass** — all
+five ids registered here), `551-B` (gap-id grammar; the revision stamp still does not cover
+`address-count.py`'s extraction regexes), `551-C` (jurisdiction field on regulated rows — 🔵
+`552-B` is its sibling and neither is closed), `544-F`/`545-D` (**🔴 a denial again this
+pass**: `make hooks` refused, `Code from External`).
+
 ## 🆕 `p551` — `2026-10-30` — **🔴 `p550` REGISTERED SIX GAPS AND THIS PAGE RECEIVED NONE OF THEM — RECOVERED AND REGISTERED BELOW, WITH THE INSTRUMENT THAT FOUND THEM. 🟢 TWO CLOSED (`549-B` WITH CODE, `549-F` WITH A FIELD ALL FOUR REGIONS ANSWERED). 🔴 `549-C` HAS A SECOND AND THIRD INSTANCE. 🔴 FOUR REGISTERED (`551-A`…`551-D`). 🔴 ONE RETRACTION AGAINST `p551` ITSELF, CAUGHT BY ITS OWN SECOND DIALECT.**
 
 ### 🔴 `Gap 551-A` — a gap announced in prose is not a registered gap

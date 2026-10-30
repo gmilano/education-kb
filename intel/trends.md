@@ -4,6 +4,64 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p552` — `2026-10-30` — **🟢 `Trend 59`: ACADEMIC RELEASE PRACTICE, NOT DISCOVERY, IS THE BINDING CONSTRAINT ON EDUCATION-AI SUPPLY — 3 OF THIS PASS'S 5 BEST RESEARCH ARTEFACTS ARE LIVE, ON-DOMAIN AND UNGRANTED. 🟢 `Trend 60`: THE SOURCE-AVAILABLE LICENCE ARRIVES IN EDUCATION, AND IT EXCLUDES CONSULTANCIES BY NAME.**
+
+### 🟢 `Trend 59` — the supply ceiling is a licensing ceiling
+
+🔴 **Measured, not asserted.** The curated-list channel yielded five novel addresses; **one**
+carries a grant. The three that do not are not weak projects:
+
+- [`eth-lre/PedagogicalRL`](https://github.com/eth-lre/PedagogicalRL) — **53★**, **EMNLP 2025
+  Oral**, ETH Zurich Learning & Reasoning: multi-turn RL for *"aligning models to be tutors
+  instead of answerers"*. 🔵 The exact capability every tutoring engagement asks for.
+- [`zamling/LecSlides_370K`](https://github.com/zamling/LecSlides_370K) — **ICCV 2025**, a
+  370 K lecture-slide corpus.
+- [`ai4ed/COMA-LessonPlan`](https://github.com/ai4ed/COMA-LessonPlan) — **19★**, multi-agent
+  lesson-plan generation.
+
+🔴 **All three: live, on-domain, published at top venues, and with no licence file on 10
+filenames across 3 branches.** 🔵 **The trend:** education AI's research frontier is being
+published at a rate the shelves can see and **cannot use**. A paper acceptance creates an
+address; it does not create a grant. 🟢 **What follows for Globant:** for this domain the
+highest-value, lowest-cost intervention is often *asking* — a licence request to an academic
+group costs one email and converts a `NO-GRANT` row into a buildable one, and it is cheaper
+than reimplementing an EMNLP-Oral method. 🔵 `Gap 552-E`.
+
+### 🟢 `Trend 60` — source-available arrives, and the exclusion is aimed at us
+
+🔴 [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) (**122★**, Fudan) is
+**BUSL-1.1** while describing itself as open source. Its Additional Use Grant permits
+personal, educational, academic and non-commercial production use and excludes *"commercial
+product, paid service, hosted service, SaaS offering, **consulting deliverable**, or
+revenue-generating business activity"*.
+
+🔵 **Why this is a trend and not an anecdote:** BUSL is the licence a project picks when it
+wants adoption by its own community and revenue from everyone else. 🔴 **Education is a
+near-perfect fit for that shape** — the community is universities, who adopt freely, and the
+paying party is the integrator. 🔵 **Prediction, stated so a later pass can falsify it:** more
+university-origin education platforms will ship BUSL-1.1 or similar source-available terms,
+and the clause that bites Globant will be the *user-class* exclusion, not the copyleft
+trigger. 🟢 **Operational consequence today:** `BUSL`, `SSPL`, `Elastic`, `Fair Source` and
+`PolyForm` must each be read as a **parameter block**, not a family name — two BUSL-1.1
+repositories can differ completely on whether a deliverable may contain them.
+
+### 🔵 Market figures returned this pass — spread recorded, not averaged
+
+| source | 2026 size | later | note |
+|---|---|---|---|
+| Research and Markets | **$10.6 B** | $42.48 B by 2030 | the broad "AI in education" definition |
+| Mordor Intelligence | **$2.37 B** | ~$11.83 B by 2031 | **agentic AI in education specifically** — a narrower cut |
+| secondary blogs | $2.4 B – $11 B | — | 🔴 the spread *is* the definition problem, not disagreement |
+
+🔵 **The two anchors are not in conflict** — they measure different things, and a 4.5× gap
+between "AI in education" and "agentic AI in education" is the most useful single number on
+this table. 🟢 Segment detail worth carrying: **Intelligent Tutoring Systems 26.04 %** share
+(2025); **Assessment & Feedback Agents** the fastest-growing segment at **44.36 % CAGR** to
+2031. 🔴 **Efficacy is the counterweight and belongs next to the growth figure:** a cited NWEA
+2025 study found **0.1–0.2 SD** gains in maths — real, and about **half** the effect of
+high-quality human tutoring. 🔵 All figures here are secondary; none was read from a primary
+report.
+
 ## 🆕 Trend 57 — **The licence, the runtime and the *jurisdiction* are three separate gates, and only the first one is on any shelf**
 
 🟢 **Measured this pass, on this pass's own best finds.** `Trend 55` established that a grant

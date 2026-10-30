@@ -1,0 +1,14 @@
+# p552 -- Gap 551-D: a channel graded on TWO axes, not one.
+# novel = addresses the list carries that the shelves do not hold (diff, not estimate)
+# in_domain = of those, how many carry an education keyword in the SLUG (undercounts; see note)
+# NOTE: `in_domain` is a slug-text heuristic. It scores eth-lre/PedagogicalRL as 1 on
+# "pedagogical" and Shunli-Wang/CPR-Coach as 0 though it is a real skills-training corpus.
+# It UNDERCOUNTS and must not be quoted as a domain census.
+channel	bytes	addresses	novel	in_domain	fit_pct	p551_single_axis	p552_two_axis
+GeminiLight/awesome-ai-llm4education	94857	7	5	2	40.0	ROW-ONLY(5 novel)	HIGHEST FIT
+Geralt-Targaryen/Awesome-Education-LLM	15540	0	0	0	0.0	NEITHER	ON-DOMAIN, ZERO ROW YIELD (arXiv-only citations)
+wikit-ai/awesome-llm-courses	24064	1	0	0	0.0	NEITHER	archived 2026-07
+abla-ha/LLM-Educational-repo	54494	130	123	2	1.6	ROW-ONLY(123 novel)	NAME SAYS EDUCATION, CONTENT IS GENERAL LLM
+uhub/awesome-llm	205476	1064	1016	36	3.5	CHANNEL(1016 novel)	FALSE PROMOTE -- hits are DEVELOPER education
+sindresorhus/awesome	78320	673	670	23	3.4	CHANNEL(670 novel)	FALSE PROMOTE -- hits are DEVELOPER education
+Developer-Y/cs-video-courses	227069	19	19	4	21.1	CHANNEL(19 novel)	CS course material, not education industry

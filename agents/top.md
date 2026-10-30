@@ -4,6 +4,98 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p552` — `2026-10-30` — **🔴 A VERDICT BAND KEYED TO GLOBANT'S OWN DELIVERY MODEL: `Oriole-FDU/Wisepen` CALLS ITSELF OPEN SOURCE, IS BUSL-1.1, AND ITS EXCLUDED-USE CLAUSE NAMES "CONSULTING DELIVERABLE" IN SO MANY WORDS. 🟢 TWO MIT ROWS PROMOTED, BOTH READ FIRST-HAND. 🔴 ONE INSTRUMENT DEFECT CAUGHT AGAINST THIS PASS'S OWN FIRST RUN, AND ONE GRANT CLASS THIS BASE HAS NO VERDICT FOR.**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED**
+(`Code from External`) before any gate body ran. 🔴 That ends the two-pass run `p551`
+recorded — **eleven denials in twelve passes**. 🔵 Nothing here is gate-attested; every
+instrument was written from scratch and run with `python3 -I`.
+
+### 🟢 Promoted to the shelf — 3 rows, every grant read first-hand
+
+| Agent | Repo | Licence (payload) | Stars | Region (origin) | What it does |
+|---|---|---|---|---|---|
+| 🆕 **alumnet** | [`jungang/alumnet`](https://github.com/jungang/alumnet) | 🟢 **MIT** — `master/LICENSE` **1 055 B**, `3bed3331b704` | **167** · 7 forks | 🟢 **APAC** — Chinese-language UI and docs, 校史 (school-history) framing | AI school-history exhibition and alumni-management system: RAG over institutional archives with **Qdrant**, a Three.js "alumni star map", touch-screen exhibit mode. Vue 3 + Express + PostgreSQL, Docker. 🔵 The *institutional-memory* use case, which no other row on this shelf covers |
+| 🆕 **CPR-Coach** | [`Shunli-Wang/CPR-Coach`](https://github.com/Shunli-Wang/CPR-Coach) | 🟢 **MIT** — `main/LICENSE` **1 080 B**, `72b38a8e87a8` | **22** · 6 forks | 🟢 **APAC** — Fudan-affiliated author, `(c) 2023 Shunli Wang (王顺利)` in the title block | Benchmark **and** method for recognising *composite error actions* in **CPR skills training** — single- and multi-class error recognition over a filmed corpus. 🔵 This base's only permissive worked example of **automatic assessment of a physical procedure**: the shape of a certification-training engagement |
+| 🆕 **WisePen** | [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 🔴 **BUSL-1.1 — NOT OSI** — `main/LICENSE` **4 539 B**, `7fc19489d6b2` | **122** · 14 forks | 🟢 **APAC** — Fudan University Oriole Team, named in the Licensor field | Knowledge + agent collaboration platform for university teaching, learning and research. 🔴 **Shelved as a FLAG, not a recommendation** — see `Gap 552-B` |
+
+### 🔴 `Gap 552-B` — granted, open to universities, and closed to us
+
+🔴 [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) describes itself on GitHub as
+an *"Open-source platform for education and research"* and in its own README as a *开源*
+(open-source) platform. 🔴 **Its payload is Business Source License 1.1.** Quoted from the
+parameter block, read first-hand:
+
+> **Licensor:** Fudan University Oriole Team and WisePen contributors
+> **Additional Use Grant:** *"You may also make production use of the Licensed Work for
+> personal, educational, academic research, or other non-commercial purposes, provided that
+> such use does not include offering the Licensed Work, or any modified or derivative version
+> of it, as part of a commercial product, paid service, hosted service, SaaS offering,
+> **consulting deliverable**, or revenue-generating business activity."*
+> **Change Date:** four years from the release date of each version · **Change License:** Apache-2.0
+
+🔴 **This is the first row on these shelves whose licence names Globant's delivery model as
+the excluded use** — not as an inference from a copyleft family, but in the licence text.
+🟢 **The band is real and it cuts both ways:** a university client may adopt WisePen directly
+and lawfully, for exactly the purpose it was built for. **Globant may not ship it** in a
+consulting deliverable without a separate commercial licence from Fudan.
+
+🟢 **Where it sits in the ladder this base has been building:**
+
+| band | gap | the thing that is granted and still unusable |
+|---|---|---|
+| licence vs **runtime** | `550-B` | MIT code that needs a paid ChatGPT plan to run |
+| licence vs **jurisdiction** | `551-C` | MIT biometrics, prohibited in EMEA schools |
+| 🆕 licence vs **business model** | **`552-B`** | BUSL-1.1 open to the university, shut to the consultancy |
+
+🔴 **No probe on these shelves separates WisePen from a permissive row**, because the
+exclusion lives in a BUSL **parameter block**, not in the licence family — two BUSL-1.1
+repositories can differ completely on whether Globant may ship them. **Asks:** for any
+non-OSI source-available grant, parse and carry the **Additional Use Grant** and the
+**Change Date**, not just the family name.
+
+🟡 **Case note.** The search index serves `Oriole-FDU/Wisepen`; the project's own README links
+`Oriole-FDU/WisePen`. Both resolve. Recorded for the alias register rather than silently
+normalised.
+
+### 🔴 `Gap 552-C` — an absence verdict is only as wide as the probe's name list
+
+🔴 **Caught against this pass's own first run, before publication.** The grant probe reported
+`NO-PAYLOAD` for [`frappe/erpnext`](https://github.com/frappe/erpnext) and
+[`frappe/education`](https://github.com/frappe/education). **Both are false.** The filename
+list carried `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING` and `license` —
+**and not `license.txt`**, which is where both keep it.
+
+| repo | first run | re-probed with the widened list |
+|---|---|---|
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 `NO-PAYLOAD` | 🟢 **GPL-3.0** · `master/license.txt` **34 916 B** · `f333043685c8` |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 `NO-PAYLOAD` | 🟡 `master/license.txt` **19 B** · `1fcecf395312` → `552-D` |
+
+🔵 **`NO-GRANT` and `NOT-PROBED-THERE` are different findings**, and the instrument printed
+the first when it meant the second. 🔴 **Three of this pass's `NO-GRANT` verdicts
+(`COMA-LessonPlan`, `PedagogicalRL`, `LecSlides_370K`) were re-run against the widened list
+and survive it** — they are genuine absences, not name-list artefacts.
+
+### 🔴 `Gap 552-D` — a grant file that asserts a licence and does not carry one
+
+🔴 [`frappe/education`](https://github.com/frappe/education)'s `license.txt` is **19 bytes in
+full**: `License: GNU GPL V3`. 🔵 No copyright line, no permission clause, no warranty
+disclaimer — **a claim about a grant, not a grant.** A title-block reader returns `UNREAD`,
+which is correct and is **indistinguishable from a fetch failure**, so a 19-byte assertion and
+a dead channel land in the same cell. **Asks:** a `GRANT-ASSERTED-NOT-CARRIED` verdict.
+🔵 Evidence:
+[`../evidence/grant-probe.2026-10-30-p552.tsv`](../evidence/grant-probe.2026-10-30-p552.tsv).
+
+### 🔵 Channels measured this pass
+
+| channel | result |
+|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** — every grant above was read here |
+| `api.github.com` | 🔴 **403** — *"GitHub access to this repository is not enabled for this session"* |
+| `github.com` (HTML) | 🔴 **403** |
+| **MCP github transport** | 🟢 **OPEN for arbitrary repositories** — every star and fork count above. 🔵 Confirms `p497`; `T148`'s ranked-discovery limb is still open |
+| `eur-lex.europa.eu`, `artificialintelligenceact.eu` | 🔴 closed on **four** paths — `Gap 500-D` |
+
 ## 🆕 `p551` — `2026-10-30` — **🔴 `p550` REGISTERED SIX GAPS AND NOT ONE REACHED THE REGISTER — THE PAGE A SUCCESSOR READS TO LEARN WHAT IS OWED WAS A WHOLE PASS STALE AND NOTHING IN THIS BASE COULD TELL. 🟢 `Gap 549-B` CLOSED WITH A RULE-REVISION STAMP. 🔴 `Gap 549-C` HAS A SECOND AND THIRD INSTANCE, ONE WITH A REFUSAL STRING THIS BASE HAD NEVER SEEN. 🔴 AND THE INSTRUMENT BUILT TO SIZE THE LEAK IS RETRACTED AS A MEASURE OF IT, INSIDE THIS PASS, BY ITS OWN SECOND DIALECT.**
 
 🟢 **Gate posture, stated first:** `ingest/` scripts **ran** this pass — `address-count.py`,

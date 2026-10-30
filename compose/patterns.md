@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p552` — `2026-10-30` — **two recipes: the clearance gate `Gap 552-B` forced, and the one that turns an ungranted EMNLP-Oral method into something a client can actually be sold**
+
+### 🟢 `P606` — Two licence verdicts per row, before a platform reaches a proposal
+
+🔴 **The failure this prevents, measured this pass.**
+[`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) (**122★**, Fudan) calls itself
+an *"Open-source platform for education and research"*, is **BUSL-1.1**, and excludes
+*"consulting deliverable"* **by name**. A row that reads `122★ · open-source · university
+platform` is exactly the row that gets pasted into a capability deck. 🔴 **No probe on these
+shelves would have stopped it**, because the exclusion is in a BUSL *parameter block*, not in
+the family name.
+
+🟢 **Shipped and tested:**
+[`code/p552-deliverable-clearance/clearance.py`](code/p552-deliverable-clearance/clearance.py),
+**14/14 controls** ([`test_clearance.py`](code/p552-deliverable-clearance/test_clearance.py),
+run from its own directory — `p355-cwd-portability`).
+
+**Wiring, four steps:**
+
+1. **Read the payload first-hand** over `raw.githubusercontent.com` — the only GitHub channel
+   open to this session (`api`/HTML both `403`). 🔴 Use a filename list that includes
+   **`license.txt`**; omitting it cost this pass two false `NO-PAYLOAD` verdicts (`Gap 552-C`).
+2. **Classify from the title block**, never from a badge, a sidebar or a comparison table.
+   🔴 This pass refuted one vendor table outright (`foradian/fedena`, "Apache-2.0", **404**)
+   and confirmed two others.
+3. **Run `clearance.py`.** For an OSI family it returns the two verdicts and the rule behind
+   them. For BUSL/SSPL/Elastic/PolyForm/Fair Source it **refuses to guess**: it extracts the
+   Additional Use Grant and Change Date verbatim and returns `READ-THE-PARAMETERS`.
+4. **Carry both verdicts onto the row.** One `Licence` cell cannot hold them.
+
+**What it returns on this pass's real rows:**
+
+| row | family | deploy for client | embed in product |
+|---|---|---|---|
+| [`jungang/alumnet`](https://github.com/jungang/alumnet) | MIT | 🟢 yes | 🟢 yes |
+| [`Shunli-Wang/CPR-Coach`](https://github.com/Shunli-Wang/CPR-Coach) | MIT | 🟢 yes | 🟢 yes |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | GPL-3.0 | 🟢 yes — hosting is not distribution | 🔴 no |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 🟢 yes | 🟡 linked modules only |
+| **Open edX / Canvas** | **AGPL-3.0** | 🔴 **NO — network use IS distribution** | 🔴 no |
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | BUSL-1.1 | 🟡 `READ-THE-PARAMETERS` | 🔴 **no — named exclusion** |
+
+🔴 **The AGPL row is the one to re-read.** Standing a client's Open edX or Canvas instance up
+is a *network use* and triggers the source obligation — the opposite of the GPL-3.0 row
+directly above it. 🔵 `clearance.py` has that as a dedicated control precisely because it is
+the error a family-name check makes.
+
+### 🟢 `P607` — Shipping a tutoring capability whose best method is ungranted (any region, 8–12 weeks)
+
+🔴 **The problem, measured.** The strongest tutoring-alignment artefact this pass found is
+[`eth-lre/PedagogicalRL`](https://github.com/eth-lre/PedagogicalRL) — **53★**, **EMNLP 2025
+Oral**, ETH Zurich — multi-turn RL for *"aligning models to be tutors instead of answerers"*,
+which is the single most-requested behaviour in a tutoring engagement. 🔴 **It has no licence
+file** (10 filenames × 3 branches, all non-200), so it cannot be used. Two more of this
+pass's finds fail the same way (`Trend 59`).
+
+**The recipe — three tracks, run in parallel, because the cheapest one may land:**
+
+1. 🟢 **Ask.** Open an issue or email the group requesting an explicit MIT/Apache-2.0 grant.
+   🔵 **This costs one email and is the highest-expected-value step in the whole recipe** —
+   academic groups routinely omit a licence by oversight rather than intent, and a grant
+   converts an unusable row into a buildable one at zero engineering cost. 🔴 Until it lands,
+   the artefact is **read-only**: the paper may inform the design, the code may not be copied.
+2. 🟢 **Reimplement the behaviour, not the code, on granted parts.** The pedagogical objective
+   — withhold the answer, elicit the next step, score the *learner's* progress rather than the
+   model's correctness — is described in the paper and is not the code. Build it as a reward
+   model over a granted stack: [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit)
+   (MIT) for the mastery estimator that supplies the reward signal, and
+   [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) (MIT) for the BKT-backed tutoring loop
+   and content model.
+3. 🟢 **Ship the assessment half first, where the grants exist.**
+   [`Shunli-Wang/CPR-Coach`](https://github.com/Shunli-Wang/CPR-Coach) (MIT) is a working
+   example of *scoring a performance against a rubric of composite errors* — the same shape
+   as "score this worked solution", and it is deliverable today.
+
+🔴 **The jurisdiction gate from `P604` still applies and is not optional here.** A tutoring
+system that *assesses* or *monitors* is EU Annex III point 3 — **`2027-12-02`** for
+stand-alone systems under Reg. (EU) 2026/1744, with Art. 50 transparency live **now**
+(`2026-08-02`) and the Art. 5(1)(f) emotion-inference ban live since **`2025-02-02`**. 🔵 So:
+no affect detection, a human-confirm step on anything that gates access to a qualification,
+and a disclosure surface from day one. 🔵 The deferral to 2027 is **programme-planning time,
+not an exemption** — the conformity work is the same work, scheduled later.
+
+🟢 **Deliverable shape:** a tutoring loop on `OATutor` + `pykt-toolkit`, a pedagogy reward
+model reimplemented from the published method, a rubric-scoring component modelled on
+`CPR-Coach`, and the `P606` clearance table attached to every dependency in the proposal.
+
 ## 🆕 `p551` — `2026-10-30` — **two recipes: the jurisdiction gate that `Gap 551-C` opened, and the registration check that `p550` needed and did not have**
 
 🔵 **Supporting measurements: [`../agents/top.md`](../agents/top.md#-p551--2026-10-30)

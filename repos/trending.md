@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p552` — `2026-10-30` — **🔴 THE CURATED-LIST CHANNEL `p551` RANKED FIRST YIELDS **1 USABLE OF 5**: ONE MIT GRANT, THREE LIVE REPOSITORIES WITH NO LICENCE FILE AT ALL, AND ONE DEAD CITATION. 🟢 THAT REPRODUCES `p547`'S "1 USABLE OF 6" ON A DIFFERENT CHANNEL AND A DIFFERENT PASS.**
+
+🔵 `p551` measured the curated-list channel on **novelty** and it won 9-to-0 against the
+mandated query. 🔴 **Novelty is not yield.** `p552` carried all five of its novel addresses
+through to a first-hand grant read:
+
+| address | stars | grant, read first-hand | verdict |
+|---|---|---|---|
+| [`Shunli-Wang/CPR-Coach`](https://github.com/Shunli-Wang/CPR-Coach) | **22** · 6 forks | 🟢 **MIT**, `main/LICENSE` **1 080 B**, `72b38a8e87a8` | 🟢 **USABLE** — and MIT on **both** channels (payload read + MCP `license.key=mit`) |
+| [`eth-lre/PedagogicalRL`](https://github.com/eth-lre/PedagogicalRL) | **53** · 13 forks | 🔴 **no licence file** on any probed branch or name | 🔴 ungranted |
+| [`ai4ed/COMA-LessonPlan`](https://github.com/ai4ed/COMA-LessonPlan) | **19** · 15 forks | 🔴 **no licence file** | 🔴 ungranted |
+| [`zamling/LecSlides_370K`](https://github.com/zamling/LecSlides_370K) | **4** · 0 forks | 🔴 **no licence file** | 🔴 ungranted |
+| `dsz532/exegen` | — | 🔴 **404 on README and every licence name** | 🔴 **dead citation carried by the list** |
+
+🔴 **1 usable of 5 — 20 %.** 🟢 `p547` measured **1 of 6** on a different channel; two
+independent measurements now agree that this base's supply problem is **not discovery**.
+🔵 **The three ungranted ones are the painful part**: all three are real, live, on-domain
+research artefacts — [`eth-lre/PedagogicalRL`](https://github.com/eth-lre/PedagogicalRL) is
+an **EMNLP 2025 Oral** from ETH Zurich's Learning & Reasoning group, a multi-turn RL framework
+for *"aligning models to be tutors instead of answerers"*, and
+[`zamling/LecSlides_370K`](https://github.com/zamling/LecSlides_370K) is an **ICCV 2025**
+370 K lecture-slide corpus. 🔴 **Neither can be built on.** Academic release practice is the
+binding constraint on education-AI supply, not the volume of work being done.
+
+### 🟢 One address promoted to the shelves from this channel
+
+[`Shunli-Wang/CPR-Coach`](https://github.com/Shunli-Wang/CPR-Coach) — **MIT**, Python,
+pushed `2025-11-22`. A benchmark and method for recognising **composite error actions in CPR
+training**: single-class and multi-class error recognition over a filmed skills corpus.
+🔵 **Shelved with its relevance stated and not overstated**: it is *vocational skills
+assessment*, not classroom AI, and the slug-text domain gate scores it **0** — it is on these
+shelves because it was read, not because a keyword matched. 🟢 For Globant it is the only
+permissive worked example on this base of **automatic assessment of a physical procedure**,
+which is the shape of every certification-training engagement.
+
+### 🔴 The channel's own defect, measured
+
+🔴 **`dsz532/exegen` is cited by [`GeminiLight/awesome-ai-llm4education`](https://github.com/GeminiLight/awesome-ai-llm4education) and does not exist** — 404 on
+README and on every licence filename, on both `main` and `master`. 🔵 `p551` promoted the
+curated-list channel on a novelty count; **a novelty count cannot see a dead address**,
+because a dead address is novel. **A channel's grade needs a liveness leg**, and this pass's
+is the first on this base to carry one. 🔵 Evidence:
+[`../evidence/grant-probe.2026-10-30-p552.tsv`](../evidence/grant-probe.2026-10-30-p552.tsv).
+
 ## 🆕 `p551` — `2026-10-30` — **🔴 THE TRENDING CHANNEL SERVED FOUR DIFFERENT STAR LEVELS FOR ONE REPOSITORY ON ONE DAY, SPREAD 2 693. 🟢 AND THE PASS'S BEST REPO-SIDE SUPPLY CAME FROM A ZERO-STAR LIST, NOT FROM THE TRENDING LEG AT ALL.**
 
 🔵 **The candidate grades, the supply narrative and the `Gap 551-D` channel-shape
