@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p550` — `2026-10-30` — **🟢 THE TRENDING CHANNEL IS STILL UNREADABLE, AND THIS PASS STOPPED NEEDING IT: VELOCITY IS NOW DERIVED FROM THIS BASE'S OWN 709 COMMITS, OFFLINE. 🟢 THE FEEDS' DAILY FIGURE IS CORROBORATED TO WITHIN TEN STARS — AND IT IS A BURST QUOTED AS A RATE, OFF BY 7× FROM THE SUSTAINED NUMBER.**
+
+🔵 **The six candidate grades, the `Gap 550-B` verdict band and the supply narrative are on
+[`../agents/trending.md`](../agents/trending.md#-p550--2026-10-30).** This entry carries
+the **trending channel**, the **velocity census** and the **repo-side finds**.
+
+### 🔴 `github.com/trending` is still 403, and the mandated leg still returns bots
+
+🔴 `github trending education AI 2026` returned, as its top organic results, **eight
+auto-generated issue threads** titled *"📈 AI Open Source Trends 2026-10-29/30"* posted
+into third-party repositories — `agents-radar` and `news-radar` forks under `yueguan`,
+`kouweizhu`, `yaojiejia`, `bianzhilong2-ctrl`, `845421145-lang` and `datnguyenquy94` —
+plus two vendor blog posts. 🔴 **Not one is GitHub's own trending page.** `github.com`
+HTML remains **403** from this session's gateway (`Gap 547-E`).
+
+🟢 **`Trend 45` now has four consecutive observations** (`p546`, `p547`, `p549`, `p550`):
+one generator, many hats, and the hats are **forks of each other**. 🔵 The same six owners
+recur, which is the strongest evidence yet that the "diversity" of trend sources in this
+sector is a fork graph.
+
+### 🟢 This pass stopped arguing with the channel and replaced it
+
+🟢 **`Gap 549-E` is closed by [`../compose/code/p550-star-velocity/`](../compose/code/p550-star-velocity/README.md)**
+— rule `declared_star_cell/rev5`, **696 observations, 14 of 15 addresses queried, zero network calls**,
+reconstructed from this repository's own **709 commits**.
+
+🔴 **It did not work on the clone this session started with.** That clone was `--depth 1`;
+one commit is not a time series, and the instrument's failure mode is the dangerous
+kind — **it returns a flat series rather than an error**, which reads exactly like a
+quiet market. A bounded `git fetch --depth=1000` recovered the history. 🔵 **Shelf rule 20**
+records it.
+
+### 🟢 The velocity census — eight held addresses, derived offline
+
+| Address | Observations | Series | Sustained | 🟢 Exact today |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **149** | `40 600 → 50 500` over 30 d | 🟢 **+330 ★/day** | **51 323** · 6 293 |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 24 | `39 700 → 41 800` over 29 d | +72 ★/day | **41 889** · 6 485 |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 133 | `265 → 274` over 29 d | +0.3 ★/day | **274** · 164 |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 107 | `499 → 538` over 28 d | +1.4 ★/day | — |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 133 | `269 → 308` over 28 d | +1.4 ★/day | **308** · 100 |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 107 | `278 → 294` over 29 d | +0.6 ★/day | — |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 3 | `389 → 387` over 23 d | 🔴 **−0.1 ★/day** | **387** · 76 |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 🔴 **0** | — | — | **347** · 288 |
+
+🔴 **`educhain` is the only negative rate on this base**, and it corroborates a reading
+this base arrived at by prose: `pushed_at 2026-05-29` is **154 days**, and a project
+shedding stars over 23 days is not *"a stable utility"* — it is **stalling**. `Trend 46`
+applies.
+
+🔴 **`Gap 550-C`: `openSIS-Classic` has 0 observations across 709 commits.** Its counter
+has only ever been published in prose and in re-attestation tables that declare **no
+`Stars` column**, so no table-reading instrument can see it, date it, or catch it drifting.
+🔵 **A figure outside a declared column is a sentence, not data.**
+
+### 🟢 Grading the feeds' actual product
+
+| The feeds' claim | Window | 🟢 Derived from this base's own history | Verdict |
+|---|---|---|---|
+| *"2 371 stars today"* on `DeepTutor` | `p472 → p526`, 2 d | **44 177 → 48 900 = +2 361 ★/day** | 🟢 **CORROBORATED within 10 stars**, independently |
+| *"daily gain roughly 1 900–2 400"* | `p537 → now`, 1 d | **49 850 → 51 323 = +1 473 ★/day** | 🔴 **~30 % too high** |
+| implied sustained momentum | 30 d | **+330 ★/day** | 🔴 **off by 7×** |
+
+🟢 **`Trend 54`:** a burst rate and a sustained rate differ by most of an order of
+magnitude on the fastest-moving artefact in this sector, and **every feed publishes the
+burst**. 🔵 **The digests are not fabricating** — their single-day number checks out. They
+are **quoting a spike as a rate**, and a studio sizing "how fast is this moving" off one
+overstates the run rate sevenfold. 🟢 The better instrument was already in `git log`.
+
+### 🟢 Repo-side finds this pass
+
+| Repo | Grant | Scale | Disposition |
+|---|---|---|---|
+| 🆕 [`ilios/ilios`](https://github.com/ilios/ilios) | 🟢 **MIT**, `LICENSE` at `master`, **1 110 B** — `Copyright (c) 2017 The Regents of the University of California` | **88★** · 42 forks · **560 tags**, `v3.141.1` | 🟢 **Filed on [`../verticals/solutions.md`](../verticals/solutions.md#-p550--2026-10-30)** — curriculum management from **UCSF**, 14 years maintained |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | MIT | **291★** · **90 forks** · pushed `2026-10-28` | 🟢 **Held row re-attested exactly** — and it is the address that caught this pass's own instrument defect (`Gap 550-D`, on [`../agents/top.md`](../agents/top.md#-p550--2026-10-30)) |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | MIT | **39 150★** · 7 034 forks | 🔴 **NOT a repo find — a use-case index**, and `pushed 2026-07-27`, **95 days** stale. The single largest MIT artefact the agent legs returned, and it ships no runnable education code |
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | MIT | **75 673★** · 13 322 forks | 🔵 **Out of scope, stated:** a **curriculum**, like `rasbt/LLMs-from-scratch`. 🟢 Named because its scale invites mis-filing — it teaches AI engineering, it is not education-sector software |
+
+### 🔴 What `p550` did NOT do on this page
+
+- 🔴 **No new trending channel was found.** The substitute is still a third-party bot feed
+  and `github.com` is still 403. 🟢 What changed is that this base **no longer depends on
+  it** for velocity — not that the channel improved.
+- 🔴 **The velocity series covers 15 addresses of `176` on
+  [`foundations.md`](foundations.md) and `130` on [`../agents/top.md`](../agents/top.md).**
+  The instrument costs ~`addresses × commits × pages` `git show` calls and a 15-address run
+  is minutes, so a full-shelf sweep needs a per-commit blob cache first. Named as
+  **`Gap 550-E`** rather than left as an implied "all rows measured".
+- 🔴 **No star *level* was taken from a feed.** Every figure above is either this base's own
+  committed bytes or an exact MCP counter.
+
 ## 🆕 `p549` — `2026-10-30` — **🟢 GitHub TRENDING IS UNREADABLE FROM THIS SESSION AND THE SUBSTITUTE EVERY SOURCE OFFERS IS A THIRD-PARTY BOT FEED. 🟢 THE COUNTERS ARE READABLE AGAIN, SO THE FEEDS CAN BE *GRADED* RATHER THAN QUOTED — AND THEY DISAGREE WITH EACH OTHER BY 3 000 STARS ON THE SAME REPOSITORY ON THE SAME DAY.**
 
 🔵 **The supply narrative, the six grades, the `UNINDEXED-NOT-ABSENT` verdict class and the

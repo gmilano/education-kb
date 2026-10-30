@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p550` — `2026-10-30` — **two recipes: the accreditation substrate this base has never had a permissive platform for, and the prerequisite graph the knowledge-tracing stack has always been missing**
+
+🔵 **Supporting measurements: [`../agents/top.md`](../agents/top.md#-p550--2026-10-30)
+(velocity, `Gap 550-A`), [`../verticals/solutions.md`](../verticals/solutions.md#-p550--2026-10-30)
+(`ilios`), [`../intel/trends.md`](../intel/trends.md) (`Trend 55`, `Trend 56`).**
+
+### 🟢 `P7` — Accreditation-grade curriculum intelligence on a permissive platform (North America, 10–14 weeks)
+
+🔴 **The problem this solves, stated as a buyer states it.** An accredited professional
+programme must demonstrate, to a regulator, that every required competency is taught,
+assessed and resourced across a multi-year curriculum — and must produce that evidence on
+demand. 🟢 This is a **reporting and ontology** problem before it is an AI problem, and the
+AI is only trustworthy if it sits on a real curriculum model.
+
+**The stack, named concretely:**
+
+| Layer | Artefact | Grant | Why this one |
+|---|---|---|---|
+| Curriculum system of record | [`ilios/ilios`](https://github.com/ilios/ilios) | 🟢 **MIT** | 🟢 **The only permissively granted institutional platform on this base.** Longitudinal curriculum, competency mapping, **instructional hours**, role transitions, documented API (`docs/ilios_api.md`), **560 releases**, maintained since 2012 |
+| Delivery, where it already exists | Moodle / Canvas, left in place | GPL-3.0 / AGPL-3.0 | 🔵 Ilios's own README positions itself as the **backbone under** these, so the LMS is **not** migrated — which is what makes the engagement sellable |
+| LMS bridge | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) **308★** · MIT, or [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) **104★** | MIT (the latter **by manifest**, shelf rule 16) | Reads live course/assessment state so the report reflects what was *delivered*, not what was *planned* |
+| Competency → labour-market codes | [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | MIT | 🔴 **Optional and EMEA-specific** — ESCO is an EU taxonomy. For a US accreditor the competency framework is the accreditor's own; 🔴 **the adapter is studio work either way** (upstream is 1.4 years dead) |
+| Agent layer | **Build it.** Ilios API + an agent that answers *"show every competency with no assessment in year 3"* | — | 🔴 **No AI exists in Ilios and none is implied.** This is the studio's deliverable |
+| Evaluation | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) **605★** · Apache-2.0 | Apache-2.0 | 🔵 Its **eval rubrics**, not its skills — the only published yardstick in this sector for *"is this output pedagogically acceptable"* |
+
+🟢 **Wiring.** Ilios stays the system of record; the MCP bridge supplies delivered state;
+the agent is **read-only against both** and emits an accreditation narrative with every
+claim linked to an Ilios competency ID and a Canvas assessment. 🔴 **The agent must not
+write to the curriculum** — a regulator-facing record with an LLM write path is
+unauditable, and `Trend 1`'s governance gap is the thing being sold against.
+
+🟢 **Why `ilios` makes this pattern possible and no other platform does.** Every
+alternative is copyleft (`Trend 56`): forking Moodle or Open edX to add a curriculum
+ontology obliges the client to publish the fork. 🟢 **MIT means the extension is the
+client's.** 🔴 **Scope limit, stated:** Ilios is built for the **health professions**; the
+model generalises to any accredited professional programme and is **not** a K-12 system.
+
+🔴 **What is unproven here.** No AI integration with Ilios has been built or tested by
+this base. The grant, the releases, the API documentation and the liveness are
+first-hand; **the pattern is an architecture, not a validated deployment**, and should be
+costed with a 2-week discovery against a real Ilios instance.
+
+### 🟢 `P8` — A declared prerequisite graph over a statistical mastery estimator (any region, 6–8 weeks)
+
+🔴 **The gap this closes, and it is a real one in this base's own shelf.** The
+knowledge-tracing stack here — [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) **291★**,
+[`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) **453★**,
+[`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) **274★**, all MIT — **infers mastery
+over a skill set that someone else must declare.** 🔴 None of them ships the
+**prerequisite relation**: *what must be known before this*.
+
+| Layer | Artefact | Grant | Role |
+|---|---|---|---|
+| Prerequisite graph | [`miuuyy/Clew`](https://github.com/miuuyy/Clew) **212★** | 🟢 MIT | Topic/prerequisite graph: what a topic **requires** and what it **unlocks**; exports the graph and shares read-only learning context **over MCP** |
+| Mastery estimator | [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | MIT | Bayesian Knowledge Tracing, C++ core — per-skill mastery probability from response streams |
+| Model justification | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | MIT | Benchmarks BKT against deep KT on standard datasets — 🔵 **what you show the client to defend the estimator choice** |
+| Reference tutor integration | [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | MIT | BKT already in front of learners (ReactJS/Firebase) — the integration to copy |
+| Retention | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) **539★** | MIT | Spaced repetition over the mastered set; the learner keeps the deck |
+| Activity record | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | MIT | Writes activity **back** to an xAPI LRS so tutoring is auditable. 🔴 **426 days dead** — read as architecture, own the adapter |
+
+🟢 **Wiring.** Clew's graph supplies the **skill DAG**; `pyBKT` estimates mastery per node
+from learner responses; the next node is the **unmastered node whose prerequisites are
+all mastered** — a graph query, not a prompt. `pykt-toolkit` justifies the estimator;
+`anki-mcp-server` schedules retention; `learnmcp-xapi` records it to the LRS. 🔵 **The
+LLM's job shrinks to explanation and question generation** — the sequencing decision is
+deterministic and inspectable, which is the property `Swon010191/Math_teacher` earned its
+shelf row for.
+
+🔴 **The blocker, stated before anyone costs it: `Gap 550-B`.** Clew's **desktop app
+requires a ChatGPT Plus or Pro plan** (`Trend 55`). 🟢 **The code is MIT and the graph
+model is the asset.** 🔴 **The dependency is not deployable into a school.** So this
+pattern takes **Clew's graph schema and its MCP export contract** and reimplements the
+host against a self-hostable path — the same **Ollama/local-first** posture
+`Math_teacher` demonstrates. 🔵 **Budget it as "adopt the data model, rebuild the
+runtime"**, roughly 3 of the 6–8 weeks, and say so in the proposal rather than
+discovering it in week 4.
+
+🟢 **Why this is worth building at all:** `Trend 3` says *pedagogy is becoming measurable
+and almost nobody is measuring it*. A declared prerequisite DAG plus a calibrated mastery
+estimator is **measurable pedagogy** — every sequencing decision has a reason that
+survives a parent, a teacher and an auditor asking why.
+
+### 🔴 What `p550` did NOT do on this page
+
+- 🔴 **Neither pattern was built or run.** Both are architectures over artefacts whose
+  grants, releases and liveness were verified first-hand this pass; neither has been
+  deployed by this base.
+- 🔴 **No week count is evidence-backed.** `10–14` and `6–8` are estimates, labelled as
+  estimates, and the one decomposed claim (3 weeks to replace Clew's runtime) is the only
+  figure with a stated reason.
+- 🔴 **`frappe/flow_client` remains archived** (`2026-10-22`, AGPL-3.0), so the Frappe
+  agent layer is still build-it-yourself over the REST API — unchanged this pass.
+
 > 🟢 **`p546` adds `P596` and `P597`, taking the page to **51** recipes (`P547`…`P597`,
 > contiguous).** 🔴 **The derivation could not be run:**
 > [`../ingest/derive-counts.py`](../ingest/derive-counts.py) was **denied by name**

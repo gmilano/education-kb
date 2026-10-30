@@ -4,6 +4,109 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p550` — `2026-10-30` — **🟢 THE CANONICAL COUNTER RAN AND THIS PAGE IS `176`, NOT `175` — AND `p549` PREDICTED BOTH THE NUMBER AND THE REASON. 🟢 ONE FOUNDATIONAL ROW RE-ATTESTED EXACTLY, AND IT IS THE ROW THAT CAUGHT THIS PASS'S OWN INSTRUMENT LYING.**
+
+🔵 **The velocity instrument, `Gap 550-A` and the full retraction are on
+[`../agents/top.md`](../agents/top.md#-p550--2026-10-30).** This entry carries this
+page's **denominator** and its **re-attestations**.
+
+### 🟢 The denominator, from the instrument instead of from arithmetic
+
+🟢 [`../ingest/address-count.py`](../ingest/address-count.py) **was not denied this
+pass** — first time in eighteen passes, after seventeen denials by name. All four rules
+reported, `2026-10-30`:
+
+| Rule | `repos/foundations.md` |
+|---|---|
+| `markdown_link_text_is_owner_repo` | 99 |
+| `pairs_anywhere_on_page_deduped` | 193 |
+| 🟢 **`CANONICAL :: pairs_in_table_rows_deduped`** | 🟢 **176** |
+| `table_data_rows` | 262 |
+
+🔴 **`176` does not reproduce `p549`'s `175` — and that is `Gap 549-B` working, not
+failing.** `p549` wrote that re-running *today's* rule over *yesterday's* bytes returns
+175 where `p546`/`p547` correctly published **176**, because `p548` added `x` and `y` to
+the rule's `PLACEHOLDER` set. 🟢 **The figure is correct under the rule it names, and the
+rule's revision is what makes the two numbers comparable rather than contradictory.**
+🔵 Every count on this page from here on carries `pairs_in_table_rows_deduped` and the
+commit it was derived at, per `549-B`.
+
+🔴 **`Gap 548-E` is still open and this pass makes it worse, as registered.** `176`
+counts re-attestation rows and rejected candidates as "addresses". The
+`shelf_addresses` / `documented_addresses` split remains **unbuilt**; named so the
+number is not read as a shelf size.
+
+### 🟢 `CAHLR/pyBKT` — re-attested exactly, and it earned its keep twice
+
+| Row | This base published | 🟢 Exact, `p550` | Verdict |
+|---|---|---|---|
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | **291** | **291** · **90 forks** · MIT · pushed `2026-10-28` | 🟢 **exact match** |
+
+🟢 **And this row is the one that caught this pass's own instrument manufacturing a
+defect.** Its description cell reads *"the same lab behind
+[OATutor](https://github.com/CAHLR/OATutor)"*. `rev4` of this pass's velocity rule matched
+**this** row for the address `CAHLR/OATutor`, took **pyBKT's 291**, compared it against
+OATutor's own **274**, and reported that this base was publishing two figures for one
+repository. 🔴 **It was not. The rule was wrong.** Both cells on this base are exactly
+right: **pyBKT 291, OATutor 274**, measured independently.
+
+🔵 **Registered as `Gap 550-D`: citation is not attribution.** Fixed as
+`declared_star_cell/rev5` — the address must appear **before** the `Stars` column, in the
+row's identity columns, not in its prose. 🟢 **This page is the reason the fix exists**,
+because cross-referencing rows is precisely what makes it valuable: *"the same lab
+behind…"* is the sentence that makes `pyBKT` legible next to `OATutor`, and any
+instrument reading these pages must distinguish a row's **subject** from its
+**citations**. 🔴 `rev4` would have mis-attributed a figure to **every** address this base
+cross-references, and the richer the prose, the more wrong it would have got.
+
+### 🟢 Knowledge tracing, re-stated with figures rather than adjectives
+
+🟢 The knowledge-tracing stack on this page is the sector's best-evidenced foundational
+layer, and all three rows now carry exact counters:
+
+| Repo | Licence | 🟢 Exact, `p550` | Role |
+|---|---|---|---|
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | MIT | 453 *(held, not re-measured this pass)* | Benchmark library for deep knowledge tracing; standard datasets and prediction scenarios |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | MIT | 🟢 **291** · 90 forks | Bayesian Knowledge Tracing and extensions, C++ core, Berkeley CAHLR |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | MIT | 🟢 **274** · 164 forks | The **tutor** that puts BKT in front of a learner — ReactJS/Firebase |
+
+🔵 **The shape worth naming for an engagement:** these three are one lab's stack at three
+altitudes — the **model library** (`pyBKT`), the **benchmark harness** (`pykt-toolkit`),
+and the **deployed tutor** (`OATutor`) — all MIT, all from or adjacent to UC Berkeley.
+🟢 **A mastery-estimation engagement does not need to choose between them**; it takes
+`pyBKT` as the estimator, `pykt-toolkit` to justify the choice against baselines, and
+`OATutor` as the reference integration. 🔴 **What none of them ships is the
+prerequisite *graph*** — they infer mastery over a skill set that someone else must
+declare, which is exactly the gap [`miuuyy/Clew`](https://github.com/miuuyy/Clew) fills
+and is why it was shelved this pass.
+
+### 🟢 Velocity now applies to this page's rows too
+
+🟢 `Gap 549-E` is closed by
+[`../compose/code/p550-star-velocity/`](../compose/code/p550-star-velocity/README.md),
+which reads **this page's committed bytes** as a time series. Rows measured here:
+
+| Repo | Observations | Series | Sustained |
+|---|---|---|---|
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 2 | `281 → 291` over 29 d | +0.3 ★/day |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 133 | `265 → 274` over 29 d | +0.3 ★/day |
+
+🔴 **`Gap 550-E`:** the series covers **15 addresses of this page's 176**. The instrument
+costs roughly `addresses × commits × pages` `git show` calls and a 15-address run over 709
+commits takes minutes, so a full-shelf sweep needs a **per-commit blob cache** before it is
+affordable. 🔵 Named rather than left as an implied "all rows measured" — which is the
+`Gap 544-E` defect class (a carried figure standing in for an unmeasured population).
+
+### 🔴 What `p550` did NOT do on this page
+
+- 🔴 **No new foundational repo was added.** The platform leg returned only held, copyleft
+  systems; the one new platform (`ilios`, MIT) is a **product**, not a library, and is
+  filed on [`../verticals/solutions.md`](../verticals/solutions.md#-p550--2026-10-30).
+- 🔴 **`pykt-toolkit` was not re-measured.** Its `453` is carried from an earlier pass and
+  is labelled as carried, not as exact.
+- 🔴 **The 176 − 15 = 161 addresses on this page have no velocity series and no staleness
+  check.** That is the honest size of `Gap 550-E`.
+
 ## 🆕 `p549` — **the denominator is `175` and it was `175` at every one of the last six commits — but only under *this* rule revision. `p546` and `p547` were right too, under theirs.**
 
 🟢 **Re-derived inline from [`../ingest/address-count.py`](../ingest/address-count.py)'s own

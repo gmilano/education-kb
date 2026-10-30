@@ -4,6 +4,113 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 Trend 54 — **A burst rate and a sustained rate differ by 7×, and every trend feed publishes the burst**
+
+🟢 **Measured, not argued.** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor),
+derived offline from this base's own 709 commits by
+[`../compose/code/p550-star-velocity/`](../compose/code/p550-star-velocity/README.md):
+
+| Window | Movement | Rate |
+|---|---|---|
+| 2 days (`p472 → p526`) | `44 177 → 48 900` | 🔴 **+2 361 ★/day** |
+| 1 day (`p537 → p550`) | `49 850 → 51 323` | **+1 473 ★/day** |
+| **30 days** | `40 600 → 51 323` | 🟢 **+330 ★/day** |
+
+🟢 **The feeds are not fabricating.** `p549` recorded a digest claiming *"2 371 stars
+today"*; this base's independent derivation gives **+2 361 ★/day** over that window —
+**within ten stars**. 🔴 **What they are doing is quoting a spike as a rate.** The
+sustained figure is **7× lower**, and no feed publishes it, because a sustained rate is
+not news.
+
+🔵 **Why this is a trend and not a curiosity.** Momentum is the number that decides
+whether a studio treats an artefact as a dependency or as a reference. 🔴 **Sized off a
+trend digest, `DeepTutor` looks like it is adding a mid-sized project's entire star count
+every fortnight.** Sized off 30 days, it is growing fast but ordinarily. 🟢 **The correct
+instrument was already in `git log`** — a base that records its own figures over time can
+grade every velocity claim in its sector without the channel that makes them, and
+`Gap 547-E` proved that channel can vanish for passes at a time.
+
+🟢 **The operational rule: never quote a velocity without its window.** A delta is not a
+rate; a rate is not a trend.
+
+---
+
+## 🆕 Trend 55 — **An open-source grant answers who owns the code, not whether you can run it — and the second question is now the binding one**
+
+🔴 **The case.** [`miuuyy/Clew`](https://github.com/miuuyy/Clew) is **MIT**, grant read
+first-hand from the payload, clean title block, 9 releases, 212★. 🔴 **Its README:
+*"The desktop app requires a ChatGPT **Plus or Pro** plan and permission to use that
+plan."*** 🟢 The code is free. **The running system is gated on a third party's paid
+consumer subscription.**
+
+🔵 **No probe on this base would have caught it.** This base screens `LICENSE` payloads,
+manifests and registry metadata — `Trend 7` (*licences in this sector lie, and the lie is
+on the title line*), `Trend 8` (*no licence at all*), shelf rule 16 (*manifest
+declaration*). 🟢 **All three channels say MIT here, and all three are correct.** The gate
+is in the **install instructions**, which this base reads for version numbers and never
+for executability.
+
+🟢 **Registered as a verdict band (`Gap 550-B`): *granted, runtime commercially gated*.**
+It sits beside four bands this base already has, and it is the only one that is not about
+ownership:
+
+| Band | Question |
+|---|---|
+| granted / ungranted | is there a grant? |
+| not a *code* licence | is it a code grant? |
+| per-artefact | does it cover this file? |
+| manifest, payload missing | is the grant where it should be? |
+| 🆕 **runtime commercially gated** | 🆕 **can it be executed at all?** |
+
+🔴 **Why it is the binding one for an education buyer specifically.** An MIT tutor that
+needs every learner to hold a consumer AI subscription is **not deployable into a school
+system** — not on cost, not on procurement, and not on the child-data posture that
+`Trend 5`'s compliance windows describe. 🔴 **The licence audit passes and the deployment
+fails**, which is the most expensive order to discover those two facts in.
+
+🟢 **The remedy is a column, not an instrument:** record, per row, whether the artefact
+runs against a **self-hostable** model path. 🔵 This base already wrote the positive case
+without recognising it as an axis — [`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher)
+*"runs local-first with no API key required (Ollama)"*, which this base noted was *"what
+makes it deployable under a data-protection regime rather than only demonstrable."*
+🟢 **That sentence is this trend, written one pass early about one row.**
+
+---
+
+## 🆕 Trend 56 — **The sector is copyleft at the platform layer, and the first documented exception is 14 years old and nobody had found it**
+
+🟢 `Trend 6` says *"the sector is copyleft, and that decides the architecture."* 🔴 **Every
+institutional platform this base holds confirmed it:** Moodle **GPL-3.0**, Open edX
+**AGPL-3.0**, OpenEduCat **LGPL-3.0**, RosarioSIS **GPL-2.0**, openSIS **GPL-2.0**,
+ILIAS **GPL**, Sakai. 🔴 The mandated platform leg this pass asked for **MIT or Apache
+explicitly** and returned **none** — the search channel cannot find a permissive education
+platform because the sector's platforms are not permissive.
+
+🟢 **The exception: [`ilios/ilios`](https://github.com/ilios/ilios) — MIT, `Copyright (c)
+2017 The Regents of the University of California`, 560 releases, `v3.141.1`, continuously
+maintained since 2012, pushed the day before this pass.**
+
+🔵 **Three things make it a trend rather than one row.**
+
+1. 🔴 **It was invisible to eleven passes of the prescribed queries** and surfaced on a
+   topic/licence sweep instead. A 14-year-old, state-funded, permissively licensed
+   platform is exactly what the mandated leg asks for **by name**, and the leg has never
+   returned it. 🟢 `Trend 13` (*public education code is published more often than it is
+   findable*) now has its largest instance.
+2. 🟢 **88 stars.** Any star floor would have rejected it. Its real maturity signals are
+   **560 tags** and **243 open issues against 42 forks** — a running institutional system,
+   not a demo. 🔵 `Trend 47` and `p549`'s `oak-*` row said institutional artefacts
+   under-star; this is the strongest case yet.
+3. 🟢 **It positions itself UNDER the LMS, not against it** — *"for schools using Moodle or
+   Canvas, Ilios provides a **backbone of curricular information**."* 🔵 `Trend 12` says the
+   unit of LMS integration is the **institution**, not the product. Ilios is what that
+   looks like when someone builds it: the **curriculum ontology** the LMS does not own.
+
+🟢 **The commercial consequence.** A permissive platform changes what a studio can sell:
+fork, extend and ship without a copyleft conversation with client legal. 🔴 **That the
+only such platform in this sector sat unfound for eleven passes is a statement about the
+discovery channel, not about the supply.**
+
 > 🟢 **`p546` adds Trends 44, 45 and 46, and all three are measured rather than
 > read.** Trend 44 is the one to take to a client: **the only anchor that is
 > region-portable is the interoperability standard** — and the maintained

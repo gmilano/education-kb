@@ -6,6 +6,253 @@ updated: 2026-10-30
 
 # Education AI Agents — Curated Shelf
 
+## 🆕 `p550` — **🟢 THE GATE OPENED: `address-count.py` RAN FOR THE FIRST TIME IN EIGHTEEN PASSES. 🟢 `Gap 549-E` CLOSED WITH AN INSTRUMENT THAT NEEDS NO NETWORK — AND ITS FIRST RUN FOUND THAT `p549`'s HEADLINE CORRECTION WAS NEVER APPLIED TO THE ROW IT CORRECTED. 🔴 THE LARGEST ROW ON THIS SHELF WAS STALE BY 1 473 STARS, NOT 1 397, AND IT STAYED STALE BECAUSE A PASS WROTE "CORRECTED HERE" INSTEAD OF EDITING THE CELL.**
+
+🟢 **Gate posture, stated first, because it is news:** [`ingest/address-count.py`](../ingest/address-count.py)
+**was not denied this pass.** It ran, on all four shelf pages, and its `CANONICAL`
+figures are below. 🔵 **Seventeen denials in eighteen passes, and the eighteenth
+answered** — so the posture this base has carried since `p544` is a property of a
+*pass*, not of this session, which is exactly what `Trend 52` says about ceilings
+and is now confirmed on a second instrument.
+
+### 🟢 `Gap 549-E` — closed, by building what `p549` specified
+
+🔵 `p549` registered `Gap 549-E` (*"no instrument for a star **velocity**, only for a
+star **level**"*) and named the fix itself: *"`git log` over its published figures
+already **is** a time series."* 🟢 **Built this pass as
+[`../compose/code/p550-star-velocity/`](../compose/code/p550-star-velocity/README.md)**,
+rule `declared_star_cell/rev5`, **696 observations over 14 of 15 addresses queried**, derived from
+this repository's **own 709 commits** with **no network call at all**.
+
+🟢 **Why that property matters more than the numbers:** `Gap 547-E` cost this base
+two passes to a channel outage. An instrument that reads committed bytes **cannot be
+taken off the air**, so the one measurement the feeds sell is now the one measurement
+this base can always take.
+
+🔴 **The clone this session started with was `--depth 1`, so the instrument could not
+run on it** — one commit is not a time series. A bounded `git fetch --depth=1000`
+recovered **709 commits** and the series with it. 🔵 Recorded as **shelf rule 20**:
+*a history instrument needs history; a shallow clone silently reports a flat series
+rather than an error.* That failure mode returns `0` velocity for everything and
+looks exactly like a quiet market.
+
+### 🔴 `Gap 550-A` — a correction announced in prose is not a correction
+
+🔴 **`p549` wrote, as its own headline:** *"`HKUDS/DeepTutor` … 🔴 **stale by 1 397★
+(+2.8 %)** — **corrected here**"*, and published **51 247** in its re-attestation
+table. 🔴 **The shelf row was never edited.** It still read:
+
+```
+| **DeepTutor** | … | **49 850** · 6 138 forks (re-measured `p537`) | …
+```
+
+🟢 **Measured on the open channel this pass, `2026-10-30`: `51 323★` · `6 293` forks.**
+So the row was stale by **1 473**, not 1 397, and the figure `p549` announced as the
+correction was *itself* already 76 stars behind by the time this pass read it.
+
+🟢 **The row is edited this pass.** 🔵 **Registered as `Gap 550-A`, and it is a
+different defect from the one this base keeps filing.** `543-E` and `Gap 534-E` are
+about a **count in prose going stale beside its rows**. This is the inverse: a
+**correction in prose that never reached the row**, so the page simultaneously
+asserted the right figure and the wrong one, and a reader taking the shelf at face
+value got the wrong one. 🔴 The announcement is the part that felt like the work.
+
+🟢 **Shelf rule 21: a pass that claims to correct a figure must diff the cell.**
+"Corrected here" is a claim about an edit, and an edit is checkable. Had `p549` run
+the diff it claims, it would have found 125 rows and one unedited cell.
+
+### 🟢 The instrument's best output is the one nobody asked for: `SPLIT`
+
+🟢 The rule emits **both** figures when one commit publishes two for one address,
+rather than picking a winner. 🔴 **Three `SPLIT`s were raised on this base at `HEAD` —
+and only ONE of them survived verification:**
+
+| Address | Figures published in the SAME commit | 🟢 Exact, `2026-10-30` | Verdict |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **49 850** (shelf) vs **50.5k** (`../verticals/solutions.md`) | **51 323** · 6 293 forks · Apache-2.0 | 🔴 **both stale** — standing since `p544`, six passes |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **274** vs **291** | **274** · 164 forks · MIT | 🔴 **NOT A SPLIT — this instrument was wrong.** See the retraction below |
+| [`mitodl/open-learning-ai-tutor`](https://github.com/mitodl/open-learning-ai-tutor) | **0** vs **1** | 🔴 **unmeasurable on this channel** — a **fork**, invisible to repository search (**shelf rule 10**) | 🔴 **same defect class as the row above; withdrawn** |
+
+#### 🔴 A retraction `p550` owes against its own instrument, inside one pass
+
+🔴 **Two of the three `SPLIT`s above are defects in this pass's instrument, not in this
+base.** `rev4` of `declared_star_cell` required only that an address appear *somewhere*
+in a row that sits under a declared `Stars` column. 🔴 [`repos/foundations.md`](../repos/foundations.md)
+carries a row for [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) at **291★** whose
+description reads *"the same lab behind [OATutor](https://github.com/CAHLR/OATutor)"* —
+so the rule matched **pyBKT's row** for the address `CAHLR/OATutor`, took **pyBKT's**
+star figure, compared it with OATutor's own **274**, and accused this base of publishing
+two figures for one repository.
+
+🟢 **Measured to settle it: `CAHLR/pyBKT` is `291★` · 90 forks · MIT, exactly.** 🟢 **This
+base was right on both cells. The rule was wrong, and the "unsourced 291" sentence this
+pass drafted was itself the unsourced claim.**
+
+🟢 **Fixed as `declared_star_cell/rev5`, the identity-column constraint:** the address
+must appear in a cell **before** the `Stars` column — the row's identity columns — not
+in its trailing prose. On every shelf layout here the identity columns precede `Stars`
+(`| Agent | Repo | Licence | Stars | …`, `| Repo | Licence | Stars | …`), so *"before
+the stars column"* is the portable spelling of *"is this row **about** the address, or
+does it merely **cite** it"*.
+
+🔵 **Registered as `Gap 550-D`: citation is not attribution.** A cross-reference inside a
+description cell is the single most common thing on these pages — this base's whole value
+is that its rows explain each other — so **any** instrument that reads a row must decide
+whether the row is about an address or mentions one. 🔴 `rev4` would have mis-attributed
+a figure to **every** address this base cross-references, and the richer the prose got,
+the more wrong it would have been. 🟢 **`p549`'s lesson, re-learned one layer out:** its
+retraction came from re-implementing an extraction rule from memory; this one comes from
+writing a new rule that was never tested against the page's own idioms. **The fix in both
+cases was to read what the page actually contains before trusting what the rule returns.**
+
+🟢 **What survives the retraction:** the `DeepTutor` `SPLIT` is **real** — `49 850` sits
+in the shelf's own `Repo` column and `50.5k` in `../verticals/solutions.md`'s, both
+identity columns, both about `DeepTutor`. 🟢 **Both cells are edited this pass** — the
+shelf to `51 323 · 6 293` and `solutions.md` from the rounded `50.5k` to the exact figure
+— so the `SPLIT` is **closed by making the pages agree**, not by choosing a winner in
+prose. 🔵 The instrument's highest-value output therefore stands on the case that
+matters, and `Gap 550-A` is unaffected.
+
+### 🟢 Velocity, and the first grade this base can give a feed's actual product
+
+🟢 `p549` could only say the feeds' band was *"useless"*. 🟢 With a series, the claims
+are gradable:
+
+| Claim | Window | 🟢 This base's own history | Verdict |
+|---|---|---|---|
+| feeds: *"2 371 stars today"* | `p472 → p526` (2 days) | **44 177 → 48 900 = +2 361 ★/day** | 🟢 **CORROBORATED** — within 10 of the feed's figure, on an independent derivation |
+| feeds: *"daily gain roughly 1 900–2 400"* | `p537 → now` (1 day) | **49 850 → 51 323 = +1 473 ★/day** | 🔴 **too high by ~30 %** for the most recent day |
+| implied: a sustained rate | 30 days | **40 600 → 50 500 = +330 ★/day** | 🔴 **the feeds' number is a BURST, quoted as a RATE** |
+
+🟢 **`Trend 54` is the finding:** `DeepTutor`'s burst rate and its sustained rate
+differ by **7×**, and every feed publishes the burst. 🔵 **The commercial reading:**
+a studio sizing "how fast is this moving" off a trend digest overstates the run rate
+by most of an order of magnitude. The base's own history is the cheaper and better
+instrument, and it was already sitting in `git log`.
+
+### 🟢 One agent promoted — and a verdict band this shelf did not have
+
+| Agent | Repo | Licence (payload) | Stars | Region (origin) | What it does |
+|---|---|---|---|---|---|
+| 🆕 **Clew** | [miuuyy/Clew](https://github.com/miuuyy/Clew) | 🟢 **MIT** — `LICENSE` at `main`, **1 076 B**, read first-hand; title block `MIT License · Copyright (c) 2026 Aleksandr Vechenkov` | **212** · 19 forks | 🔴 **UNPLACED(stated-none, name-hint, cctld-hint)** — see below | *"An AI learning harness built around an interactive knowledge graph."* Takes what a learner already knows plus a goal and builds a **topic/prerequisite graph**, then teaches along it: select any topic to see what it requires and what it unlocks. **9 tags, latest `v1.0.0`** (shelf rule 19). Imports an **Obsidian vault**, exports Markdown or the graph, and shares **read-only learning context to other assistants over MCP**. 🟢 **Why it earns a row:** this shelf has tutors and it has content generators; this is the first artefact whose unit is the **prerequisite relation** — the thing an adaptive path actually needs and the thing `pyKT`-style knowledge tracing models statistically rather than declares. 🔴 **See the runtime gate below before costing anything on it.** |
+
+🔴 **`Gap 550-B` — a new verdict band: *granted, and not runnable without a
+commercial subscription*.** Clew's README states plainly: *"The desktop app requires
+a ChatGPT **Plus or Pro** plan and permission to use that plan."* 🟢 The **code** is
+MIT and the grant is clean at the payload. 🔴 **The running system is gated on a
+third party's paid consumer plan**, which no licence probe on this base would ever
+surface — this base screens `LICENSE` files, manifests and registries, and all three
+say MIT here.
+
+🔵 **Why this is a band and not a footnote.** This base already distinguishes
+*granted but not under a code licence*, *granted per-artefact*, *granted by manifest
+with the payload missing*, and *ungranted*. All four are about **who owns the
+code**. This one is about **what it takes to execute it**, and it is the band that
+matters most to a studio: an MIT grant that cannot be deployed into a school without
+buying every learner a consumer AI subscription is **architecturally interesting and
+commercially unusable as shipped**. 🟢 **Read Clew as the prerequisite-graph design
+plus its MCP export, and plan to replace the ChatGPT dependency** — the graph is the
+asset, the plan gate is not inherent to it.
+
+🔴 **Region: `UNPLACED`, with the channels named, per `Gap 549-A`'s cell format.**
+Two hints and no evidence: the copyright line names an individual, and `p545`'s rule
+forbids placing an artefact on a personal name; the homepage is `clew.my`, a Malaysian
+ccTLD, which is a **registrar fact, not an origin fact**. 🟢 Stating both hints and
+declining to place is the honest cell; a ccTLD would have put this row in APAC on
+evidence that costs $10 a year.
+
+### 🟢 Re-attestation — the top of the shelf, where `p549` measured the budget belongs
+
+🟢 **Exact counters, open channel, `2026-10-30`.** `p549` found that *"rounded page
+values decay fastest where the traffic is"*; the velocity series now says **how
+fast**, so this is the first re-measurement this base has aimed rather than spread.
+
+| Row | This base published | 🟢 Exact, `p550` | Drift | 🟢 Sustained rate from the series |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **49 850** · 6 138 (`p537`) | 🔴 **51 323** · **6 293** | 🔴 **+1 473** | **+330 ★/day** — re-measure every pass |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 41 877 · 6 485 | **41 889** · **6 485** | 🟢 +12 | +72 ★/day |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 308 · 100 | **308** · **100** | 🟢 **exact match** | +1.4 ★/day |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 274 | **274** · **164** | 🟢 **exact match** | +0.3 ★/day |
+| [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) | 291 | **291** · **90** | 🟢 **exact match** | — |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 387 · 76 | **387** · **76** | 🟢 exact match | −0.1 ★/day |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 347 · 288 | **347** · **288** | 🟢 exact match | 🔴 **no series — `Gap 550-C`** |
+
+🔴 **`satvik314/educhain` is `pushed_at 2026-05-29` — 154 days.** This base calls it
+*"a stable utility rather than an active project"*; five months of silence and a
+**negative** star rate (−0.1/day, the only negative figure in the series) support
+that reading and sharpen it: it is not stable, it is **stalling**, and `Trend 46`
+(`LIVE` is not `maintained`) applies.
+
+🔴 **`Gap 550-C`:** `openSIS-Classic` has **0 velocity observations** across 709
+commits. Its counter has only ever appeared in **prose and in re-attestation tables
+that declare no `Stars` column**, so no table-reading instrument can see it, date it
+or catch it going stale. 🔵 A figure that is not in a declared column is not data —
+it is a sentence, and `Gap 549-B`'s lesson applies to *position* as well as *rule*.
+
+### 🟢 `Gap 549-C` corroborated on an independent pass
+
+🟢 [`PKulal/LMS`](https://github.com/PKulal/LMS) was queried again this pass inside a
+five-address `repo:` batch. 🔴 **The batch returned `total_count: 4`** and that one
+address was the one missing — **the same silence `p549` recorded, reproduced a pass
+later from a different query shape.** 🟢 `UNINDEXED-NOT-ABSENT` is therefore a stable
+property of the artefact, not a transient indexing lag on one call, and the three
+channels that serve it (payload, refs, clone) remain open.
+
+### 🟢 Canonical denominators, from the instrument rather than from arithmetic
+
+🟢 [`ingest/address-count.py`](../ingest/address-count.py), `CANONICAL ::
+pairs_in_table_rows_deduped`, run `2026-10-30`:
+
+| Page | `CANONICAL` |
+|---|---|
+| `agents/top.md` | **130** |
+| `../repos/foundations.md` | **176** |
+| `../verticals/solutions.md` | **83** |
+| `../compose/patterns.md` | **180** |
+
+🔵 **Those four figures are the page bytes as committed at `p549`.** 🟢 **Re-run after this
+pass's own edits: `132` / `176` / `84` / `183`** — `+2` here (the `Clew` row and the
+`pyBKT` re-attestation row), `+1` on `../verticals/solutions.md` (`ilios`), `+3` on
+`../compose/patterns.md`. 🔵 Both figures are printed because `Gap 549-B` says a derived
+count is only reproducible when the rule *and the bytes it ran over* travel with it.
+
+🔵 **`130` reproduces `p549`'s figure exactly**, which retires the doubt `p549` raised
+against its own inline re-implementation. 🔴 **`176` does not reproduce `p549`'s
+`175`** — and `p549` predicted this: it is the `PLACEHOLDER`-set revision firing, so
+the figure is correct under today's rule and `p549`'s was correct under its own.
+🟢 `Gap 549-B` is behaving as designed; the rule revision is what makes the two
+numbers comparable instead of contradictory.
+
+🔴 **`Gap 548-E` remains open, and this pass measures it exactly rather than predicting
+it.** This pass adds **1** real shelf row (`Clew`) and the canonical denominator moves
+**`130` → `132`**. 🔴 **So `+1` shelf row cost `+2` denominator**, the extra being the
+`pyBKT` re-attestation row — and the `SPLIT` and velocity tables above contain a further
+dozen addresses that happen already to be counted. 🔵 **The instrument still grades a
+verification table identically to a shelf**, which is `548-E` behaving exactly as
+registered. 🟢 Its two-figure remedy — `shelf_addresses` beside `documented_addresses` —
+is **not built this pass**; named so the gap is not read as closed, and now with a
+measured `+1 → +2` ratio rather than an estimate.
+
+### 🔴 What `p550` did NOT do, named so silence is not read as coverage
+
+- 🔴 **The four regional demand legs returned ZERO new claims — eleventh consecutive
+  saturation, and the first time all FOUR legs blanked together.** `p549` broke
+  saturation on LATAM; this pass did not. Every claim is held: `134 bills / 31
+  states`, Maryland `SB 720`, New York `A 9190`, the `716` instruments across 23
+  countries, Cetic.br's `53 % / 22 %`, the `4 %` public-university funding figure,
+  `92 % / 79 %`, the UNESCO Observatory and ECLAC. Details per region on
+  [`../intel/market.md`](../intel/market.md#-p550--2026-10-30).
+- 🔴 **The `github trending` leg returned third-party bot feeds again** — `agents-radar`
+  and `news-radar` forks under six owners, plus two vendor blogs. `Trend 45` holds at
+  a fourth consecutive observation; `github.com` HTML remains **403** here.
+- 🔴 **Four of five new candidates were NOT shelved**, each for a stated reason, on
+  [`trending.md`](trending.md#-p550--2026-10-30).
+- 🔴 **No region was gained.** The one promotion is `UNPLACED`, so the EMEA/APAC/LATAM
+  shelf balance is unchanged by this pass.
+- 🔵 **The `SPLIT` on `mitodl/open-learning-ai-tutor` is left open**, because the only
+  channel that could settle it cannot see forks (shelf rule 10) and guessing between
+  `0` and `1` to clear a flag would be inventing the measurement.
+
 ## 🆕 `p549` — **🟢 THE MEASUREMENT CEILING TWO PASSES REPORTED WAS SELF-IMPOSED. THE CHANNEL THIS BASE DOCUMENTED AS *WORKING* IN ITS OWN SHELF RULE 17 ANSWERED EVERY ADDRESS ASKED OF IT THIS PASS — INCLUDING ALL SIX FILED AS `UNREAD` AT `p547`. 🔴 ZERO PROMOTIONS TO THIS SHELF, AND THE BIGGEST ROW ON IT WAS STALE BY 1 397 STARS.**
 
 🔴 **Gate posture, stated first:** `ingest/address-count.py` was **denied by name**
@@ -745,12 +992,13 @@ passes — so **72 is carried, not re-attested, this pass**.
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
+| 🆕 **Clew** | [miuuyy/Clew](https://github.com/miuuyy/Clew) | 🟢 **MIT** — `LICENSE` at `main`, **1 076 B**, read first-hand; title block `MIT License · Copyright (c) 2026 Aleksandr Vechenkov` | **212** · 19 forks | 🔴 **UNPLACED(stated-none, name-hint, cctld-hint)** — the copyright line names an individual and `p545`'s rule forbids placing on a personal name; the homepage `clew.my` is a **registrar fact, not an origin fact** | *"An AI learning harness built around an interactive knowledge graph."* Builds a **topic/prerequisite graph** from what a learner knows plus a goal, then teaches along it — select any topic to see what it requires and what it unlocks. **9 tags, latest `v1.0.0`** (shelf rule 19). Imports an **Obsidian vault**, exports Markdown or the graph, and shares **read-only learning context to other assistants over MCP**. 🟢 **Why it earns a row:** this shelf has tutors and content generators; this is the first artefact whose unit is the **prerequisite relation** — what an adaptive path actually needs, and what `pyKT`-class knowledge tracing infers statistically rather than declares. 🔴 **`Gap 550-B` applies: the desktop app *"requires a ChatGPT **Plus or Pro** plan"*.** The code is MIT and clean at the payload; the **running system is gated on a third party's paid consumer plan**, which no licence probe here would surface. Take the graph design and the MCP export; plan to replace the ChatGPT dependency. |
 | 🆕 **Math_teacher** | [Swon010191/Math_teacher](https://github.com/Swon010191/Math_teacher) | 🟢 **MIT** — grant file `LICENSE` at `main`, **1 066 B**, read first-hand at `HEAD` `18bee0983b3b`. 🔴 The `github.com` sidebar could **not** be read as corroboration: that channel returns **403** to this session (`Gap 547-E`) | 🔴 **UNREAD** — `api.github.com` and `github.com` both **403** from this session's gateway; recorded unread, never `0`. **42 commits** on `main` is the maturity signal that *is* readable | 🟢 **APAC (Vietnam)** — *stated*: Vietnamese README and `docs/HUONG_DAN_CAI_DAT.md`; `vi` is region-confining under `p545`'s rule | *"Nền tảng giảng dạy AI mã nguồn mở"* — an open-source **teaching** platform, not a chatbot beside the board: it turns what is written on an electronic whiteboard into interactive teaching activities (graphs, sliders, step-by-step answer reveal). Handwriting→formula recognition with a teacher confirm/correct step (Mock · Ollama Vision · Pix2Text). 🟢 **Two properties that put it on this shelf rather than in the queue:** (1) **the mathematics is deterministic, not generated** — linear/quadratic equations are solved exactly and **verified by substitution**, so the LLM never produces the answer; (2) **a teacher-approval gate** — *"giáo viên duyệt trước khi lên bảng"*, AI suggestions reach the board only after the teacher passes them. 🟢 It runs **local-first with no API key required** (Ollama), which is what makes it deployable under a data-protection regime rather than only demonstrable. 🟢 Knowledge panels carry **provenance** — author, revision, licence and offline cache for Wikipedia/Wikibooks content, with a reference-material warning. 🔵 **Why it matters regionally:** Vietnam's **Decision 33/2026/QD-TTg** puts education AI on its high-risk list, and this artefact's two gates are the mitigations such a regime asks for — built by a teacher-facing project, unprompted. 🔴 Last commit `2026-09-17` (43 days); Windows installer and `SHA256SUMS` published, `Open Teaching Activity` JSON format still marked *giai đoạn sau* (later phase) |
 | 🆕 **learnmcp-xapi** | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main` | 16 · 4 forks | 🟡 Global — author's country not stated; the **LRS it targets is EMEA** (Ralph, by France Université Numérique) | *"An open-source MCP server that enables AI agents to record and retrieve learning activities through xAPI-compliant Learning Record Stores."* Python, 32 commits on `main`. 🟢 **This row closes a gap this base has carried in prose since `p502`:** the whole xAPI/LRS record layer sat in trending history and on **no live shelf**. It is the only artefact here that writes a learner's activity **back** to a standards-compliant store rather than only reading from one — which is what makes an agent's tutoring auditable instead of ephemeral. 🔴 **`p546` dates it: last commit `2025-08-29`, 426 days — 1.2 years.** It was promoted at `p545` to close a gap carried since `p502` and it has not been touched in over fourteen months. 🔵 **The gap it closed is real and this artefact does not close it in production** — read the row as an architecture, not as a dependency, and see the maintained xAPI successors on [`../repos/trending.md`](../repos/trending.md#-p546--2026-10-30). |
 | 🆕 **oak-open-curriculum-ecosystem** | [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** — sidebar `MIT, License licenses found`; grant file `LICENCE` (British spelling) at `main` | 8 · 5 forks | 🟢 **EMEA (England)** — *stated*: README names the **National Curriculum for England (2014)**, **Oak National Academy** and the **Education Endowment Foundation** | *"A collection of tools for working with the Oak Open Curriculum Data, via API, SDK and MCP app."* Topics: `curriculum` · `mcp` · `mcp-server` · `open-data` · `openapi` · `sdk` · `elasticsearch`. **6 835 commits.** 🟢 **The maturity signal EMEA did not have:** `p538` closed the EMEA/APAC count imbalance with two 1★ rows by one author and said plainly that *"the live EMEA gap is maturity."* This is a state-funded national curriculum body shipping an **MCP server over its own curriculum data** — an engagement starts from the ontology, not from a scrape. |
 | 🆕 **esco-skill-extractor** | [KonstantinosPetrakis/esco-skill-extractor](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `master` | 32 · 13 forks | 🟢 **EMEA (EU)** — *stated*: built in the **SKILLAB EU Horizon** project against the EU's own **ESCO** taxonomy | *"Extract ESCO skills and ISCO occupations from texts such as job descriptions or CVs."* Topics: `esco` · `isco` · `skill-extraction` · `embeddings` · `sentence-transformer` · `cosine-similarity`. 🟢 **Why it is on an education shelf and not an HR one:** ESCO is the European Skills, Competences, Qualifications and Occupations taxonomy, so this is the **credential-to-labour-market mapping** every 2026 trend list calls for and almost nobody ships. It turns a course outcome into an EU-recognised skill code. 🔴 It does not read a transcript or a curriculum — the input is free text, and the mapping to a learner record is the studio's work. 🔴 **`p546` dates it: last commit `2025-06-12`, 505 days — 1.4 years, on default branch `master`.** The second of `p545`'s four promotions to be over a year dead. 🔵 **ESCO itself is a maintained EU taxonomy; this binding to it is not**, so the taxonomy is the asset and the adapter is the studio's to own. |
 | 🆕 **agente-bncc-professores** | [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main` | 🔴 0 · 0 forks | 🟢 **LATAM (Brazil)** — *stated*: README is in **Portuguese** and names the **BNCC** and the **MEC** (Ministério da Educação) as the source of the official PDF | *"Planos de aula e provas com gabarito ancorados nas habilidades oficiais da BNCC: busca semântica, Gemini ou DeepSeek, edição das questões e PDFs."* Lesson plans and answer-keyed exams anchored to official BNCC competency codes. Next.js 16 + TypeScript + Prisma + SQLite; topics `bncc` · `rag` · `embeddings` · `semantic-search` · `educacao`. 🟢 **It is anchored to a national standard rather than to a prompt**, which is the same shape as `corretor-enem`'s ENEM calibration and `oak-*`'s England curriculum. 🔴 **0★, 0 forks** — this is an architecture to read, not a dependency to take. |
-| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **49 850** · 6 138 forks (re-measured `p537`) | APAC (Univ. of Hong Kong, HKUDS lab) | "Lifelong Personalized Tutoring." Multi-agent tutor with persistent learner memory, learning paths and mastery gates. README names **v1.7.0, 2026.10.28**. 6.1k forks. The largest open-source education agent on any shelf. |
+| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **51 323** · 6 293 forks (re-measured `p550`) | APAC (Univ. of Hong Kong, HKUDS lab) | "Lifelong Personalized Tutoring." Multi-agent tutor with persistent learner memory, learning paths and mastery gates. README names **v1.7.0, 2026.10.28**. 6.1k forks. The largest open-source education agent on any shelf. |
 | **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | MIT | **41.8k** | APAC (Tsinghua University, MAIC group) | "Open Multi-Agent Interactive Classroom" — a one-click immersive classroom staffed by multiple agent roles (lecturer, peer, assistant). TypeScript / Next.js / React. News section names **v1.3.0, 2026-10-29**. 6.5k forks. |
 | **k12-teacher-skills** | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | 601 | North America (Anthropic, with Learning Commons) | Agent *skills* plus **eval rubrics** for K-12 teacher workflows. The rubrics matter more than the skills: they are a published yardstick for "is this agent pedagogically acceptable", which almost nothing else in this space ships. 108 forks. |
 | **anki-mcp-server** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | 538 | unplaced — no location on the org profile or in the copyright line | MCP server exposing Anki (spaced repetition) to any MCP-speaking assistant. README gives **0.27.0**. This is the retention half of a tutoring stack: the agent teaches, Anki makes it stick, and the learner keeps the deck. |

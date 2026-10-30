@@ -77,6 +77,35 @@ re-measured this pass, because it ships **eval rubrics** rather than prompts), a
 platform layer that would carry the audit trail is **not** NA-origin. 🔴 **That asymmetry is
 the NA gap:** the regime is the most prescriptive of the four regions and the open-source
 supply answering it is the thinnest.
+#### 🆕 `p550` — eleventh consecutive saturation, and the regulatory surface is now *thicker than the supply*
+
+🔴 **Zero new claims. Eleventh consecutive NA demand saturation.** The leg
+`AI education North America 2026 adoption regulation players` returned the *"134 bills
+across 31 states"* aggregate (🔴 **retired at `p455`**, surfaced again as a top organic
+result, again **not written here as a fact**), Maryland **SB 720**, New York **A 9190**,
+the **K-12 AI Literacy and Readiness Act of 2026**, **EO 14409** and Gallup's teacher-use
+figure. 🟢 **Every one is already on this page.**
+
+🔴 **No new NA supply artefact — eleventh consecutive pass.** 🟢 **The exception is not
+from the demand leg at all:** [`ilios/ilios`](https://github.com/ilios/ilios) came off an
+MCP topic sweep and is **North America by *stated* evidence of the strongest kind this
+base accepts** — `Copyright (c) 2017 The Regents of the University of California` in the
+licence payload itself, with the README naming **UCSF**.
+
+🟢 **The opportunity, stated commercially.** NA is the region where this base has
+repeatedly found **regulation without supply**: district AI-policy mandates, AI
+coordinators, appeal rights over AI-misuse findings. 🟢 **`ilios` changes the shape of the
+NA offer** — it is the **only permissively granted institutional platform** on
+[`../verticals/solutions.md`](../verticals/solutions.md), 560 releases deep, and its
+model is **longitudinal curriculum + competency + instructional hours**, which is the
+exact substrate an **accreditation-reporting** engagement needs. 🔵 Accreditation is the
+NA education buyer's non-discretionary spend, and it is a reporting problem before it is
+an AI problem.
+
+🔴 **Scope caveat, stated:** Ilios targets the **health professions**. Its model
+generalises to any accredited professional programme; it is **not** a K-12 system and must
+not be proposed as one.
+
 ### EMEA
 
 🟢 **The only region that produced claims this base did not already hold.** Both are
@@ -148,6 +177,38 @@ Mittelhessen), [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/
 [`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor)
 (MIT, EU **ESCO** taxonomy) — and 🔴 **two of those three are over a year without a commit**
 (`p546`'s dating), which is still EMEA's real weakness: **maturity, not count.**
+#### 🆕 `p550` — saturated, and the one number this base refused to adopt is still refused
+
+🔴 **Zero new claims. The EMEA demand leg is a measured blank for a fourth consecutive
+pass.** The leg returned **Regulation (EU) 2026/1744** (*Digital Omnibus*) timing — Annex
+III stand-alone high-risk at **2 Dec 2027**, embedded at **2 Aug 2028**, Art. 50
+transparency live since **2 Aug 2026** — plus UK light-touch, Dubai **KHDA** guidance, the
+**OECD *Digital Education Outlook 2026***, and the European Commission's Digital Education
+Action Plan. 🟢 **All held, across seven files here.**
+
+🔴 **The sources disagreed on the high-risk date again** — one gave `2026-08`, another the
+`2027-12` / `2028-08` pair. 🟢 **This base's `2026/1744` reading stands**; the conflict is
+a source-quality note, not a correction, and it is the third consecutive pass in which
+this base is **more precise than the channel** on the instrument that matters most to an
+EMEA build window.
+
+🔴 **The `USD 2.64 B (2026)` European market figure is STILL refused.** It resurfaced this
+pass with **Finland, Estonia and the Netherlands** named as K-12 leaders, and still
+arrives with **no sampling frame and no primary citation**. 🟢 It remains recorded as
+**UNVERIFIED** and is not promoted to a fact. 🔵 Two passes of the same unsourced figure
+is a reason to name it, not to adopt it.
+
+🟢 **`eur-lex.europa.eu` remains a gateway policy denial (`Gap 500-D`, open since
+`p500`)**, so the steward's own text is still unread and the Omnibus reading is still
+single-sourced to secondary channels. 🔴 Carried, not closed.
+
+🟢 **Supply:** no new EMEA artefact. [`OmarZen/scholarship-navigator`](https://github.com/OmarZen/scholarship-navigator)
+(MCP + skills over **56 Erasmus Mundus programmes**) was graded this pass and **not
+shelved** at 14★/2 forks — 🔵 but it is the right *shape* for an EMEA opportunity this base
+has named before: **mobility and credential portability across 27 jurisdictions** is a
+data-integration problem with a standard behind it, which is `Trend 44`'s passport
+argument.
+
 ### APAC
 
 🔴 **Nothing new, and the shape of the blank is worth stating precisely.** The leg returned
@@ -206,6 +267,33 @@ direct match to its own high-risk regime
 maths plus a teacher-approval gate — 🔴 re-measured this pass at **0★**, so read it as an
 architecture, not a dependency). 🔵 Recipes: **`P602`** (platform + AI layer) and **`P603`**
 (the three-channel grant probe) on [`../compose/patterns.md`](../compose/patterns.md).
+#### 🆕 `p550` — saturated on demand; the region's regime is unchanged and its supply is quiet
+
+🔴 **Zero new claims. Eleventh consecutive APAC saturation.** The leg returned Korea's
+**AI Basic Act** (in force **22 Jan 2026**, guidance-first grace period through 2026),
+**Vietnam's Decision 33/2026/QD-TTg** naming **education** among six high-risk sectors
+(automated assessment, behavioural monitoring), Australia's **TEQSA** institutional
+generative-AI action plans, the sectoral postures of Japan/Singapore/NZ/Malaysia, and
+China's registration and content-labelling duties. 🟢 **All held.**
+
+🔴 **The only "players" list the channel produced was a market-research page naming
+Google, Microsoft, IBM, Pearson and Byju's.** 🟢 **Not written to this page** — it is a
+vendor roll-call with no education-specific evidence, and this base has retired figures
+of exactly that provenance before.
+
+🟢 **APAC still holds the two largest artefacts in the sector**, and both moved this pass:
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) **51 323★** (Univ. of Hong Kong)
+and [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) **41 889★** (Tsinghua).
+🔵 **`Trend 2` — open-source education agents are APAC-academic and they are large —
+survives at a 30-day sustained rate of `+330 ★/day` on the larger of the two**, which is
+the first time this base can state that trend as a *rate* rather than a *level*.
+
+🔴 **No new APAC supply.** 🔵 `p549`'s observation stands unchanged: APAC's high-risk
+regimes are the ones that most reward a **local-first, teacher-gated** architecture, and
+[`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) remains the only
+shelf row built that way — **0★**, and still the closest architectural match to Vietnam's
+own rule.
+
 ### LATAM
 
 🔴 **Nothing new; every instrument returned was held.** The **UNU** working paper on AI
@@ -278,6 +366,117 @@ rather than one law — which is exactly the shape of an engagement artefact, no
 (BNCC competency codes, MIT, 🔴 0★). 🔵 **A standard-anchored artefact is the only kind that
 survives a 23-regime surface**, because the standard is the stable interface — which is
 `Trend 44`'s portability finding, arriving a second time from the demand side.
+#### 🆕 `p550` — the strongest region at `p549` returns **nothing new**, and that is the finding
+
+🔴 **Zero new claims — and this is the first pass in which ALL FOUR legs blanked
+together.** `p549` broke a ten-pass saturation here with a primary institutional study;
+`p550` did not. The leg returned, in full: UNESCO **IESALC** (≈200 institutions, 19
+countries, **87 %** adoption against **26 %** governance), the **4 %** dedicated-AI-funding
+figure for public universities, the Digital Education Council's **92 % / 79 %**,
+**Cetic.br**'s Brazilian **53 % / 22 %** split, the Universidad de los Andes count of
+**716** regulatory instruments across **23** countries (>80 % since 2023), and the UNESCO
+**Observatory on AI in Education for LAC** launched at **ECLAC**, Santiago. 🟢 **Every one
+already held.**
+
+🟢 **Saturation on a leg that was productive one pass ago is a measurement, not a
+failure.** 🔵 It says the **public, secondary-source surface for LATAM education AI is
+now fully ingested by this base** — `p549` took the last large primary study the channel
+offers, and what remains behind that surface is **primary institutional material the
+search channel does not index**: ministry procurement, Ceibal's and Cetic.br's raw
+instruments, individual university AI policies.
+
+🔴 **`Gap 550-F`:** this base has no channel for primary LATAM institutional documents,
+and the regional demand leg has now demonstrably exhausted the secondary one. 🟢 **The
+cheap next instrument is not another search** — it is **reading the governance documents
+the 26 % already published**, because those are the specifications a governance
+engagement is sold against.
+
+🟢 **The opportunity is unchanged and better evidenced than any other region's:**
+**87 % adoption against 26 % governance** is a 3-to-1 gap (`Trend 53`), the deliverable is
+**the governance**, not the model, and the **4 %** funding figure says who cannot pay for
+it — public universities — which makes **ministry- and consortium-level** engagement the
+commercially viable shape, not institution-by-institution.
+
+## 🆕 `p550` — `2026-10-30` — **🔴 ELEVENTH CONSECUTIVE DEMAND SATURATION, AND THE FIRST PASS IN WHICH ALL FOUR LEGS BLANKED TOGETHER — INCLUDING THE ONE THAT BROKE SATURATION LAST PASS. 🟢 THE SUPPLY SIDE MOVED INSTEAD, AND IT MOVED NORTH AMERICA: THE FIRST PERMISSIVELY GRANTED INSTITUTIONAL PLATFORM THIS BASE HAS EVER FILED, PLACED BY A COPYRIGHT LINE RATHER THAN BY A GUESS.**
+
+🟢 **The four mandated demand legs are reported in the single authoritative
+[`## Opportunities by region`](#opportunities-by-region) block above**, each with a dated
+`#### p550` subsection, each naming what it returned including the blanks.
+
+### 🔴 The four legs, graded per region
+
+| Region | Leg result | New claims |
+|---|---|---|
+| **North America** | `134 bills / 31 states` (🔴 retired at `p455`, surfaced again), Maryland **SB 720**, New York **A 9190**, **K-12 AI Literacy and Readiness Act of 2026**, **EO 14409**, Gallup teacher-use | 🔴 **0** — eleventh consecutive |
+| **EMEA** | **Regulation (EU) 2026/1744** timing, UK light-touch, Dubai **KHDA**, **OECD *Digital Education Outlook 2026***, EC Digital Education Action Plan | 🔴 **0** — fourth consecutive measured blank |
+| **APAC** | Korea **AI Basic Act** (22 Jan 2026 + grace), **Vietnam Decision 33/2026/QD-TTg**, Australia **TEQSA**, China registration/labelling, Japan/Singapore/NZ/Malaysia sectoral | 🔴 **0** — eleventh consecutive |
+| **LATAM** | UNESCO **IESALC** `87 % / 26 %`, the **4 %** public-university funding figure, DEC `92 % / 79 %`, **Cetic.br** `53 % / 22 %`, **716** instruments across **23** countries, UNESCO **Observatory** at **ECLAC** | 🔴 **0** — 🔴 **saturation resumed after one pass** |
+
+🔴 **`p549` broke a ten-pass saturation on LATAM with a primary institutional study.
+`p550` did not break any leg.** 🟢 **The honest reading is not that the pass failed — it
+is that the *secondary-source surface* for education AI demand is now fully ingested by
+this base across all four regions.** 🔵 Eleven passes of regulatory legs returning
+instruments this base already holds, more precisely than the channel states them, is a
+measurement of the **channel's** extent, not of the sector's.
+
+### 🟢 `Gap 550-F` — the demand legs have hit their ceiling, and the next instrument is not a search
+
+🔴 **Registered this pass.** Four regions × eleven passes of the same four prescribed
+queries has converged. 🔵 What is *not* ingested is the layer underneath: **ministry
+procurement documents, national observatory raw instruments, and the AI policies the
+governed minority have actually published** — LATAM's `26 %`, Europe/NA higher ed's
+`70 %`. 🟢 **Those are primary, they are not in the search channel's index, and they are
+the exact artefacts a governance engagement is sold against**: a client does not buy a
+summary of the governance gap, it buys a policy that survives its own regulator.
+
+🔴 **This base cannot currently reach them** — `eur-lex` is a gateway policy denial
+(`Gap 500-D`, open since `p500`), and `p548`'s unreachable-primary-host pattern has three
+members. 🟢 **Stating the ceiling is what makes the next pass's choice a choice**, rather
+than a twelfth identical sweep that returns the same instruments.
+
+### 🟢 The supply side moved, and it moved a region
+
+🟢 [`ilios/ilios`](https://github.com/ilios/ilios) — **MIT**, **88★**, **560 releases**,
+`v3.141.1`, 14 years maintained, **243 open issues**, pushed `2026-10-29`, filed on
+[`../verticals/solutions.md`](../verticals/solutions.md#-p550--2026-10-30).
+
+🟢 **It is placed on North America by the strongest evidence class this base accepts** —
+`Copyright (c) 2017 **The Regents of the University of California**`, read as bytes from
+the licence payload, with the README naming **UCSF**. 🔵 **Shelf rule 18 paid for itself
+here:** the grant was graded first and it settled placement **for free**, on a pass where
+the other promotion (`Clew`) consumed a region question and closed it as `UNPLACED`.
+
+🔴 **Why it matters commercially more than its star count suggests.** Every other
+institutional platform on this base is copyleft — Moodle GPL-3.0, Open edX AGPL-3.0,
+OpenEduCat LGPL-3.0, RosarioSIS and openSIS GPL-2.0. 🟢 **`ilios` is the only one a client
+can fork without a copyleft conversation**, and its model — longitudinal curriculum,
+competency mapping, instructional hours, accreditation reporting — is the substrate the NA
+buyer's non-discretionary spend already sits on. 🔵 `Trend 6` (*the sector is copyleft,
+and that decides the architecture*) now has its first documented exception, and the
+exception is the commercially useful one.
+
+### 🔴 Figures this pass refused to adopt
+
+| Figure | Source class | Disposition |
+|---|---|---|
+| *"134 bills across 31 states"* | secondary aggregator | 🔴 **Still retired** (`p455`). Top organic NA result for a fourth pass; still not a fact here |
+| *"European AI-in-education market **USD 2.64 B** (2026)"*, Finland/Estonia/Netherlands leading | statistics roundup, **no sampling frame, no primary citation** | 🔴 **UNVERIFIED, second pass running** — named, not promoted |
+| APAC "key players": Google, Microsoft, IBM, Pearson, Byju's | commercial market-research page | 🔴 **Not written** — a vendor roll-call with no education-specific evidence |
+
+🟢 **Three refusals in one pass is the page working.** 🔵 `Trend 47`'s discipline applied
+to *claims* rather than to *grants*: the cheap thing is to write the number down, and the
+thing that makes this page worth reading in an engagement is that it did not.
+
+### 🔴 What `p550` did NOT do on this page
+
+- 🔴 **No market-size figure was updated.** The global band is carried from `p529`'s
+  four-firm sizing; nothing this pass returned was primary enough to move it.
+- 🔴 **`Gap 500-D` is not closed.** `eur-lex` remains denied, so the **Digital Omnibus**
+  reading is still single-sourced to secondary channels — on seven files, from one class
+  of source.
+- 🔴 **No LATAM primary document was read**, which is precisely `Gap 550-F` and is named
+  rather than implied.
+
 ## 🆕 `p549` — `2026-10-30` — **🟢 TENTH CONSECUTIVE SATURATION ON THREE LEGS, BROKEN ON THE FOURTH: LATAM RETURNED A **PRIMARY INSTITUTIONAL STUDY** WITH THE CLEANEST COMMERCIAL NUMBER IN THIS DOCUMENT — `87 %` ADOPTION AGAINST `26 %` GOVERNANCE. 🟢 EMEA RETURNED A **SIXTEEN-MONTH DEADLINE MOVE** THAT CHANGES A PROGRAMME PLAN. 🔴 NA AND APAC RETURNED REGULATION ONLY.**
 
 🟢 **The four mandated demand legs are reported in the single authoritative

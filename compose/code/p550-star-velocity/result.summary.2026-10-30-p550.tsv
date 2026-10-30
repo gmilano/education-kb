@@ -1,0 +1,16 @@
+address	obs	first	last	days	net	per_day	frozen_since	split_now	rule
+HKUDS/DeepTutor	149	40600@?	50500@p549	30	9900	330.0	p549	49850/50500	declared_star_cell/rev5
+THU-MAIC/OpenMAIC	24	39700@?	41800@p527	29	2100	72.4	p527		declared_star_cell/rev5
+anthropics/k12-teacher-skills	3	541@?	601@p526	28	60	2.1	p526		declared_star_cell/rev5
+ankimcp/anki-mcp-server	107	499@?	538@p526	28	39	1.4	p526		declared_star_cell/rev5
+JuneYaooo/lineage-skill	4	448@?	462@p527	27	14	0.5	p527		declared_star_cell/rev5
+academico-sis/academico	2	404@?	409@p472	16	5	0.3	p472		declared_star_cell/rev5
+satvik314/educhain	3	389@?	387@p414	23	-2	-0.1	p414		declared_star_cell/rev5
+OS4ED/openSIS-Classic	0								declared_star_cell/rev5
+vishalsachdev/canvas-mcp	133	269@?	308@p526	28	39	1.4	p526		declared_star_cell/rev5
+Li-Evan/Bloom	107	278@?	294@p526	29	16	0.6	p526		declared_star_cell/rev5
+DMontgomery40/mcp-canvas-lms	2	103@p275	104@p533	12	1	0.1	p533		declared_star_cell/rev5
+mitodl/open-learning-ai-tutor	1	1@p530	1@p530	0	0		p530		declared_star_cell/rev5
+thm-mni-ii/feedbacksystem	2	24@?	24@p529	14	0	0.0	?		declared_star_cell/rev5
+CAHLR/OATutor	133	265@?	274@p526	29	9	0.3	p526		declared_star_cell/rev5
+CAHLR/pyBKT	2	281@?	291@p530	29	10	0.3	p530		declared_star_cell/rev5

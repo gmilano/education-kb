@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p550` — `2026-10-30` — **🟢 A 14-YEAR, MIT-LICENSED, 560-RELEASE CURRICULUM PLATFORM FROM A PUBLIC UNIVERSITY — AND THIS BASE HAD NEVER HEARD OF IT. 🟢 IT IS THE FIRST PERMISSIVELY GRANTED INSTITUTIONAL PLATFORM ON THIS PAGE, WHICH MAKES IT THE ONLY ONE A CLIENT CAN FORK WITHOUT A COPYLEFT CONVERSATION.**
+
+🔵 **The velocity instrument, `Gap 550-A` and this pass's retraction are on
+[`../agents/top.md`](../agents/top.md#-p550--2026-10-30); the candidate grades are on
+[`../agents/trending.md`](../agents/trending.md#-p550--2026-10-30).** This entry carries
+the **platform layer**.
+
+### 🟢 `ilios` — the grant this page has been missing
+
+| Platform | Repo | Grant, read as bytes | Scale | Region | What it is |
+|---|---|---|---|---|---|
+| 🆕 **Ilios** | [ilios/ilios](https://github.com/ilios/ilios) | 🟢 **MIT** — `LICENSE` at `master`, **1 110 B**, read first-hand; title block `The MIT License (MIT) · Copyright (c) 2017 **The Regents of the University of California**` | **88★** · 42 forks · **560 tags**, latest `v3.141.1` · **243 open issues** · pushed `2026-10-29` | 🟢 **North America (USA)** — ***stated in the grant payload itself***: UC Regents, and the README opens *"Curriculum Management from **UCSF**"* | *"Curriculum Management System for the Health Professions."* Tracks events, learning content and activities **over time** to build a view of a multi-year integrated curriculum; manages learners, instructors and their relationships to curricular material; tracks **educational hours, roles and role transitions** for internal and external participants; serves calendar/scheduling to learners. PHP/Symfony/Doctrine. 🟢 **It positions itself as a layer UNDER an LMS, not a rival to one** — the README: *"For schools using online learning systems such as **Moodle or Canvas**, Ilios provides a **backbone of curricular information**."* Comprehensive documented API (`docs/ilios_api.md`), themeable frontend per institution |
+
+🟢 **Why this is the most useful platform find on this page in many passes.**
+
+1. 🟢 **The region is *stated in the licence file*.** This base places rows on stated
+   evidence and has spent passes arguing about ccTLDs, commit timezones and README
+   languages (`p545`, `p547`, and `Clew` this pass). **A copyright line naming the Regents
+   of the University of California is not a hint** — it is the strongest region evidence
+   this base accepts, and it arrived in the cheapest field, which is **shelf rule 18
+   paying off**: the grant was graded first and it settled placement for free.
+2. 🟢 **It is MIT.** `Trend 6` says *"the sector is copyleft, and that decides the
+   architecture"* — this page carries Moodle (GPL-3.0), Open edX (AGPL-3.0), OpenEduCat
+   (LGPL-3.0), RosarioSIS (GPL-2.0), openSIS (GPL-2.0 by payload). 🔴 **Every institutional
+   platform on this page forces a copyleft conversation with client legal, except this one.**
+3. 🟢 **560 releases over 14 years.** `p549` added **shelf rule 19** (refs answer *"has it
+   ever cut a release"*). This is the highest tag count this base has measured on any
+   artefact: `v3.141.1` against `DeepTutor`'s 9 tags and `Clew`'s 9. 🔵 **The maturity
+   signal is not the star count** — 88★ would have had this rejected under a star floor,
+   and `Trend 47` plus `p549`'s `oak-*` row already established that institutional
+   artefacts under-star badly.
+4. 🟢 **243 open issues against 42 forks** reads as a **running institutional system with
+   real users**, the same signal `p548` used to shelve `feedbacksystem` (244 open issues
+   against 10 forks).
+
+🔴 **What it is not.** No AI, no agent, no LLM anywhere in it. 🟢 **That is why it belongs
+here and not on the agent shelf** — this page exists for *"real systems that can be
+customized with AI on top"*, and a documented API over a longitudinal curriculum model is
+the substrate an education agent actually needs. 🔵 The agent layer is the studio's to
+build; see [`../compose/patterns.md`](../compose/patterns.md#-p550--2026-10-30).
+
+🟡 **Sector caveat, stated.** Ilios is built for the **health professions** — medical,
+dental, pharmacy and nursing schools. The curriculum model (competency mapping,
+instructional hours, accreditation reporting) generalises to any accredited
+professional programme, and **accreditation reporting is the use case that funds the
+engagement**. It is not a K-12 system and should not be proposed as one.
+
+### 🟢 `DeepTutor`'s row on this page is corrected, not just noted
+
+🔴 This page published **`50.5k` *(rounded)*** for [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)
+while [`../agents/top.md`](../agents/top.md) published **`49 850`** — **two figures for
+one repository, in one commit, standing for six passes**. 🟢 Found mechanically by this
+pass's velocity instrument (the `SPLIT` guarantee), and **both cells are edited**: this
+page now carries **`51 323` · `6 293`**, exact, measured `2026-10-30`.
+
+🔵 **`Gap 550-A` is the lesson and it is a process one:** `p549` announced this very
+correction in prose (*"corrected here"*) and edited no cell. 🟢 **Shelf rule 21 — a pass
+that claims to correct a figure must diff the cell** — is recorded on
+[`../agents/top.md`](../agents/top.md#-p550--2026-10-30).
+
+### 🔴 The platform leg's own result, named rather than implied
+
+🔴 `open source platform education ERP CRM SIS LMS MIT Apache` returned **zero new
+platforms**: `OpenEduCat` (LGPL-3.0), `RosarioSIS` (GPL-2.0), `frappe/education`, Moodle,
+ILIAS, Sakai, `dotLRN` — **all held, all copyleft**. 🟢 **The mandated leg explicitly
+asked for MIT/Apache and returned none**, which is `Trend 6` surviving its most direct
+test: the search channel cannot find a permissive education platform because the sector's
+platforms are not permissive.
+
+🟢 **`ilios` did not come from that leg.** It came from an MCP topic sweep
+(`curriculum in:name,description license:mit pushed:>2026-10-01`). 🔵 **Fifth consecutive
+pass where the mandated supply legs return nothing and the unmandated channel returns the
+find** — and this time the find is the single most reusable artefact on this page.
+
+### 🟢 `PKulal/LMS` — the `UNINDEXED-NOT-ABSENT` row holds, and is now twice-measured
+
+🟢 `p549` filed [`PKulal/LMS`](https://github.com/PKulal/LMS) here as the cleanest grant on
+this base (**762 of 854 files carrying `SPDX-License-Identifier`**, Apache-2.0,
+REUSE-compliant) while being **invisible to GitHub search**. 🔴 **Re-probed this pass
+inside a five-address `repo:` batch: the batch returned `total_count: 4` and this was the
+missing address.** 🟢 **The verdict class is confirmed on an independent query shape a
+pass later** — not an indexing lag, a stable property. 🔵 Its **0 tags** (shelf rule 19)
+remain the honest counterweight: cleanest grant on the base, no release ever cut.
+
+### 🔴 What `p550` did NOT do on this page
+
+- 🔴 **No AI layer was verified on any platform.** `ilios` is filed on its curriculum
+  model and its API, both read first-hand; **no agent integration was tested**, and the
+  pattern on [`../compose/patterns.md`](../compose/patterns.md#-p550--2026-10-30) is an
+  architecture, not a validated deployment.
+- 🔴 **`openSIS-Classic`'s grant was not re-probed.** The API returns **no licence field at
+  all** for it this pass, consistent with `p548`'s payload-read GPL-2.0 retraction; the
+  payload itself was not re-read, so that verdict rests on `p548`.
+- 🔴 **Ilios's own AI posture was not investigated.** Whether UCSF has shipped or planned
+  any LLM feature is unknown here and was not guessed.
+
 ## 🆕 `p549` — the vertical leg saturated for an **eleventh** pass, and a **re-phrased sibling leg** broke it on its first run: one new platform, **Apache-2.0**, **REUSE-compliant at file level**, and **invisible to the GitHub search index**
 
 🔴 **The mandated vertical leg is saturated for an eleventh pass.** `open source platform
@@ -353,7 +449,7 @@ WebFetch** — and is now a field. **Four rows read this pass; none archived**
 |---|---|---|---|---|
 | [`exelearning/exelearning`](https://github.com/exelearning/exelearning) | 🟢 **no** | 153 | 36 | **AGPL-3.0** |
 | [`1EdTech/lti-1-3-php-library`](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 **no** | 124 | 109 | Apache-2.0 |
-| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **no** | **50.5k** *(rounded)* | 6.2k | Apache-2.0 |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **no** | **51 323** *(exact, `p550`)* | **6 293** | Apache-2.0 |
 | [`fairyofmiracle/edu_course_agent`](https://github.com/fairyofmiracle/edu_course_agent) | 🟢 **no** | 0 | 0 | 🔴 **none shown** |
 
 🔴 **It is a sample of four, labelled as a sample.** 139 shelf addresses at one

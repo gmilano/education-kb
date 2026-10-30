@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p550` — `2026-10-30` — **🟢 THE GATE OPENED AFTER SEVENTEEN DENIALS AND THE CANONICAL INSTRUMENT RAN. 🟢 SIX CANDIDATES, FIVE NEW, ALL FIVE PERMISSIVELY GRANTED — THE BEST GRANT YIELD THIS BASE HAS MEASURED. 🔴 AND ONE OF THEM IS MIT CODE THAT CANNOT RUN WITHOUT A PAID CONSUMER SUBSCRIPTION, WHICH IS A VERDICT BAND NO LICENCE PROBE HERE WOULD EVER HAVE FOUND.**
+
+🔵 **The velocity instrument, `Gap 549-E`'s closure, `Gap 550-A` (a correction announced
+but never applied), and this pass's retraction against its own rule are on
+[`top.md`](top.md#-p550--2026-10-30).** This entry carries the **supply legs**, the
+**six grades** and the **new verdict band**.
+
+🟢 **Gate posture:** [`../ingest/address-count.py`](../ingest/address-count.py) **ran** —
+first time in eighteen passes, after seventeen denials. 🔵 So the denial was a property of
+a *pass*, not of this session. `Trend 52` predicted exactly this and is now confirmed on a
+second instrument.
+
+### 🟢 The supply legs, named with what each returned
+
+| Leg | Result |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **General-purpose frameworks only** — `OpenHands`, `CrewAI`, `OpenClaw`, `Hermes Agent`, plus two course curricula. The one education-shaped hit, [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) (**39 150★**, MIT), is a **use-case index**, not an agent — and it is `pushed 2026-07-27`, **95 days** stale |
+| `github trending education AI 2026` | 🔴 **Eight auto-generated `agents-radar` / `news-radar` issue threads** under six third-party owners, plus two vendor blogs. **Not one is GitHub's own trending page**; `github.com` HTML stays **403** here. `Trend 45` holds at a **fourth** consecutive observation |
+| `open source platform education ERP CRM SIS LMS MIT Apache` | 🟡 Returned `OpenEduCat` (LGPL-3.0), `RosarioSIS` (GPL-2.0), `frappe/education`, Moodle, ILIAS — **all held, all copyleft**. 🟢 `Trend 6` (*the sector is copyleft*) survives its strongest direct test yet |
+| `AI education industry trends 2026` | 🔴 **Zero new claims.** Governance-over-capability, agentic lesson prep, purpose-built-over-general — all held |
+| MCP `repo:`-qualified census, 4 batches | 🟢 **Answered 19 of 20 addresses.** The one silence is [`PKulal/LMS`](https://github.com/PKulal/LMS) — **again** |
+| MCP topic/licence discovery sweep, 2 queries | 🟢 **The productive leg: 198 repositories, 17 education-shaped, 5 not held here** |
+
+🟢 **`Gap 549-C` corroborated independently.** `PKulal/LMS` was queried inside a
+five-address `repo:` batch; the batch returned **`total_count: 4`** and that address was
+the missing one. 🔴 **The same silence `p549` recorded, reproduced a pass later from a
+different query shape** — so `UNINDEXED-NOT-ABSENT` is a stable property of the artefact,
+not a lag on one call.
+
+### 🟢 The six grades — five new addresses, and the grant yield is the headline
+
+🔵 Graded **grant first**, per **shelf rule 18**. Every grant below was read **first-hand
+from `raw.githubusercontent.com`**, not from the API's licence field.
+
+| Candidate | Grant, read as bytes | Scale | Verdict |
+|---|---|---|---|
+| 🟢 [`miuuyy/Clew`](https://github.com/miuuyy/Clew) | 🟢 **MIT** — `LICENSE` at `main`, **1 076 B**, title block `MIT License · Copyright (c) 2026 Aleksandr Vechenkov` | **212★** · 19 forks · **9 tags**, `v1.0.0` · pushed `2026-10-29` | 🟢 **SHELVED** on [`top.md`](top.md#-p550--2026-10-30) — **with `Gap 550-B` attached**, below |
+| 🟢 [`ilios/ilios`](https://github.com/ilios/ilios) | 🟢 **MIT** — `LICENSE` at `master`, **1 110 B**, title block `The MIT License (MIT) · Copyright (c) 2017 **The Regents of the University of California**` | **88★** · 42 forks · **560 tags**, `v3.141.1` · 243 open issues · pushed `2026-10-29` | 🟢 **FILED on [`../verticals/solutions.md`](../verticals/solutions.md#-p550--2026-10-30)** — it is a **platform**, not an agent |
+| 🟡 [`Agentic-System-Lab/agent-loop-visualizer`](https://github.com/Agentic-System-Lab/agent-loop-visualizer) | 🟢 **Apache-2.0** — `LICENSE` at `main`, **11 358 B**, full text, **no copyright line** | **36★** · 2 forks · 🔴 **0 tags** · created `2026-10-24` | 🔴 **NOT SHELVED — six days old.** An **AI-literacy teaching** artefact (shows an agent loop executing step by step, local `gemma`/`qwen`). 🔵 Held as a **teaching aid**, not a dependency; re-grade when it has a release |
+| 🟡 [`rizukirr/no-vibe`](https://github.com/rizukirr/no-vibe) | 🟢 **MIT** — `LICENSE` at `main`, **1 065 B**, `Copyright (c) 2025 rizukirr` | **44★** · 🔴 **1 fork** · **35 tags**, `v3.1.0` · pushed `2026-10-30` | 🔴 **NOT SHELVED — out of sector.** *"Turn your AI coding agent into a tutor"* is **developer** upskilling, not education delivery. 🔵 **35 releases against 1 fork** is a maintainer shipping to themselves |
+| 🔴 [`Alamoooooooo/alamo-skills`](https://github.com/Alamoooooooo/alamo-skills) | 🟢 **Apache-2.0** — `LICENSE` at `main`, **11 357 B** | **12★** · 🔴 **0 forks** · 🔴 **0 tags** | 🔴 **NOT SHELVED — below the floor.** *"Scripts, not prompt packs"* and a mastery/spaced-review board is the right **shape**; 12★/0 forks is an architecture to read, per `Trend 47` |
+| 🔴 [`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | 🔴 **`NOASSERTION`** — API reports `license: other` | 353★ · 300 forks | 🔴 **REJECT on the grant**, and it is a general agent list, not education |
+
+🟢 **Five of five new addresses carry a permissive grant read from payload.** 🔵 **That is
+the best grant yield this base has measured** — against `Trend 47`, which says the binding
+constraint in this sector is *the grant*, not discovery. 🔴 **The constraint did not
+disappear; it moved.** Four of the five fail on **scale, age or sector**, and the fifth
+fails on something this base had no column for.
+
+### 🔴 `Gap 550-B` — a new verdict band: **granted, and not runnable without a commercial subscription**
+
+🔴 Clew's README states it plainly: *"The desktop app requires a ChatGPT **Plus or Pro**
+plan and permission to use that plan."* 🟢 The **code** is MIT and the payload is clean.
+🔴 **The running system is gated on a third party's paid consumer plan.**
+
+🔵 **Why this is a band and not a footnote.** This base already separates:
+
+| Band | The question it answers |
+|---|---|
+| granted / ungranted | is there a grant? |
+| granted, not under a *code* licence | is it a **code** grant? |
+| grant is **per-artefact** | does the grant cover **this file**? |
+| granted by **manifest**, payload missing (`rule 16`) | is the grant **where** it should be? |
+| 🆕 **granted, runtime commercially gated** | 🆕 **can it be executed at all?** |
+
+🟢 The first four are all about **who owns the code**. This one is about **what it takes to
+run it** — and it is the band that decides a studio engagement. 🔴 **An MIT grant that
+cannot be deployed into a school without buying every learner a consumer AI subscription
+is architecturally interesting and commercially unusable as shipped.** 🔵 No probe on this
+base would catch it: `LICENSE`, manifest and registry all say MIT, correctly. **The gate
+is in the README's install instructions**, which is the one place this base reads for
+*version numbers* and not for *executability*.
+
+🟢 **The remedy is cheap and it is a column, not an instrument:** record, per shelved row,
+whether the artefact runs against a **self-hostable** model path. Clew does not; the
+[`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) row *does*
+(*"local-first with no API key required"*), and this base already wrote that sentence
+without recognising it as the same axis.
+
+### 🟢 Velocity — the feeds' product, graded for the first time
+
+🔵 Full derivation on [`top.md`](top.md#-p550--2026-10-30) and in
+[`../compose/code/p550-star-velocity/`](../compose/code/p550-star-velocity/README.md).
+The one line that belongs here, because this page is where the feeds get quoted:
+
+🔴 **`DeepTutor`'s burst rate and its sustained rate differ by 7×, and every feed
+publishes the burst.** Burst `+2 361 ★/day` (`p472→p526`); sustained **`+330 ★/day`** over
+30 days. 🟢 The feeds' *"2 371 stars today"* is **corroborated** — within 10 stars, on an
+independent derivation from this base's own `git log`. 🔴 Their *"1 900–2 400 daily"* band
+is **~30 % high** for the most recent day (`+1 473`). 🔵 **So the digests are not
+fabricating; they are quoting a spike as a rate**, which is a different and more
+respectable error — and one a studio sizing momentum off them will still make.
+
+### 🔴 What `p550` did NOT do on this page
+
+- 🔴 **Zero promotions from the mandated agent legs.** The one shelved agent came off the
+  **MCP discovery sweep**, not off any of the four prescribed searches. 🔵 Fourth
+  consecutive pass where the mandated supply legs yield nothing and the unmandated one
+  yields everything.
+- 🔴 **No region gained.** The shelved row is `UNPLACED`; the EMEA/APAC/LATAM balance is
+  unchanged.
+- 🔴 **`no-vibe`'s 35 tags were not opened.** Whether a `v3.1.0` at 44★/1 fork reflects
+  real iteration or tag noise is a release-cadence question this base has no instrument
+  for — named, not guessed.
+
 ## 🆕 `p549` — `2026-10-30` — **🟢 A REPOSITORY CAN BE CLONEABLE AND INVISIBLE: THE BEST-GRANTED ARTEFACT THIS BASE HAS EVER READ IS **ABSENT FROM THE GitHub SEARCH INDEX**, AND EVERY CENSUS ON THIS BASE RUNS THROUGH THAT INDEX. 🟢 SIX CANDIDATES, ONE USABLE — AND THE USABLE ONE WAS FOUND BY A WEB SEARCH, NOT BY THE INSTRUMENT. 🔴 SEVENTEENTH GATE DENIAL IN EIGHTEEN PASSES.**
 
 🔴 **Gate posture first:** `ingest/address-count.py` **denied by name**
