@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education AI — Current Trends
 
-**Pass `p540` · 2026-10-30.** **Thirty-five** trends. Each one is stated so it could be
+**Pass `p541` · 2026-10-30.** **Thirty-five** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -279,6 +279,75 @@ the fourth verdict band on [`../agents/top.md`](../agents/top.md).
 growth, provenance staying absent from procurement questions, or the big skill
 libraries relicensing to Apache-2.0 — which would retire the licensing half
 without touching the packaging half.
+
+## 11. 🆕 The query language, not the query depth, is what bounds a sector census
+
+🔵 **Measured this pass, and it is the most actionable methodological result
+on this base.** The mandated research legs — run in English at full depth —
+produced **twenty candidates and zero new findings**: five supply addresses
+and fifteen regional policy claims, every one already held
+([`gate-restated-presence`](../compose/code/p541-restated-presence/) graded
+them against the committed tree, so this is a measurement rather than an
+impression). The **same legs in Spanish and Portuguese, at the same depth,
+returned eight new addresses out of ten.**
+
+🔴 **What that implies for anyone sizing an open-source sector:** an
+English-only census of education AI is not a census that is slightly
+incomplete, it is one that is **saturated and therefore looks finished**. The
+appearance of completeness is the failure. 🔵 `p529` established that
+*"saturated" is a property of the query, not of the region*; this pass shows
+the same holds for the **language** of the query, and the effect size is
+larger.
+
+🟢 **The practical form:** for a LATAM or Iberian engagement, run the supply
+survey in the client's own language before concluding anything about available
+components. For this base, the artefacts that turned up — an accessibility
+adapter from a Brazilian federal university, an offline teacher assistant for
+rural schools, a Moodle-exchanging skill pack from Spain — are **not** the
+kind of thing an English listicle surfaces, and none of them is a translation
+of something that is.
+
+## 12. 🆕 A licence title is a claim about a licence, and six of this sector's lie about the body underneath
+
+🔴 **The sector-specific finding, with a denominator.** Of the 37 unresolved
+grants in p540's residue, **six reproduce a stock licence body verbatim under
+a title that is not that licence** — `SATA` (MIT plus an obligation to star
+the repository), *PySilicon Research* (MIT restricted to non-commercial
+research), *O'Saasy License Agreement*, `snflwr.ai`'s *Proprietary Software
+License* (over a body a classifier reads as AGPL-3.0), `open-webui`'s clause-4
+branding restriction over BSD-3, and `INGInious`'s scoped *"most of the
+files"* AGPL.
+
+🔵 **Trend 7 on this page already said "licences in this sector lie, and the
+lie is on the title line." This pass measured the rate — 6 of 37, 16 % of the
+unresolved residue — and found the inverse case matters more:** the title is
+*honest* and the **body** is the thing that misleads an automated reader. A
+tool that matches licence bodies gets all six wrong in the dangerous
+direction, naming a permissive grant where the repository granted something
+narrower.
+
+🟢 **So the operational rule, which this base now enforces in code:** read the
+**title block** first, and refuse to name a family when the title is outside
+the stock table — whatever the body says. A false permissive verdict is the
+only licence error a studio actually builds on.
+
+## 13. 🆕 Public education code is published more often than it is findable
+
+🟢 **Seven national-scale education systems — curriculum, learner identity,
+study records, admissions, institution register, vocational plans, state
+funding — are published in the open by Finland's National Agency for
+Education, and this base held none of them as a row for 540 passes.** They
+were invisible to the grant instruments for a structural reason worth
+generalising: the `LICENSE` file **names** the licence (EUPL 1.1) and **points
+at a URL** instead of reproducing the text.
+
+🔵 **The pattern to expect elsewhere:** public-sector code follows
+jurisdictional licensing conventions — EUPL in the EU, and the version in force
+when the repository was created, not the current one. Six of these seven say
+**1.1** while every tool on this base knows only **1.2**. 🔴 Any sector census
+that grades grants by matching reproduced licence text will systematically
+**miss the public sector**, which is precisely the buyer an education
+engagement most often has.
 
 ## 10. The buyer is shifting from the learner to the teacher
 

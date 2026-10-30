@@ -1,0 +1,8 @@
+# p541 — Gap 540-A's registration file.
+# A candidate that is already FILED or in PROSE on a curated page fails
+# `gate-restated-presence` unless it is registered here WITH A REASON.
+# Format: address<TAB>reason.  A placeholder is not a reason.
+address	reason
+HKUDS/DeepTutor	carried deliberately: p541 updates its measured star count from the trending legs rather than re-shelving it as a find
+SirhanMacx/Claw-ED	carried deliberately: already shelved at p490; p541 re-encountered it through the mandated agent leg and files no new row
+portabilis/i-educar	carried deliberately: already shelved as the Brazilian SIS; p541 adds its sibling pre-matricula-digital, which is a different repository

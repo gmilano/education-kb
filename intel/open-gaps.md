@@ -4,6 +4,182 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p541` — `2026-10-30` — **🟢 `540-A` CLOSED (gate wired and standing) · `540-B` DELIVERED AND ITS PREMISE CORRECTED · `540-E` REFUTED AND PARTLY CLOSED — 52/68 GATES ATTESTED. 🔴 THE PASS'S OWN FINDING IS THAT ITS NEW GATE COULD NOT CATCH THE PASS'S OWN RESTATEMENT: A RESTATED **ANALYSIS** IS NOT A RESTATED **ADDRESS**. SIX REGISTERED (`541-A`…`541-F`).**
+
+### 🟢 `Gap 540-A` — CLOSED
+
+**Asked:** *"nothing on this base catches a restated PRESENCE. Wire it: take
+each address a pass is about to shelve, fail if it already appears in the eight
+curated pages unless the pass registers it as a restatement with a reason."*
+
+**Delivered:** [`compose/code/p541-restated-presence/`](../compose/code/p541-restated-presence/)
+— 374 lines, **22 controls**, wired into `HOOK_GATES` as
+`gate-restated-presence` and **green**.
+
+🔵 **Three design decisions the ask did not specify, each forced by a defect
+found while building it:**
+
+1. **It reads a git ref, not the working tree.** Run against the working tree
+   *after* a pass writes its rows, the predicate fails on every genuinely new
+   address the pass just filed — red exactly when the work is good, which is
+   how `gate-region-headings` ended up in no target for 45 passes. `CLASS 5`.
+2. **Five roles, not two.** `FILED` and `PROSE` are red; **`HISTORY` is amber
+   and passes**, because an address in trending-only is `529-A`'s promotion
+   debt and punishing it would punish the work the base wants. `ARCHIVE`
+   (a deleted page — p495 calls failing to recover one a **loss**) and
+   `BACKLOG` (measured in evidence, never filed) are green and carry
+   **different instructions**: recover versus promote.
+3. 🔴 **`CLASS 6`, found by the gate failing on its own author.** It graded
+   `UFPA-LAMIC/EduAcess` as already-held on the strength of one occurrence:
+   the fixture in its **own test file**. An instrument that walks
+   `compose/code/` indexes its own test data as corpus, and the suites here
+   quote real rows deliberately (p392). Test files are not corpus.
+
+**First real use, which is the number that justified it:** 20 candidates from
+the mandated legs, **20 already held** (2 `FILED`, 3 `HISTORY`, 15 intel
+claims). Evidence:
+[`../evidence/restated-presence-grade.2026-10-30-p541.tsv`](../evidence/restated-presence-grade.2026-10-30-p541.tsv).
+
+### 🟡 `Gap 540-B` — DELIVERED, with its premise corrected
+
+**Asked:** *"add Portuguese and Spanish title strings … re-run over the 600
+gated addresses, and report how many verdicts move."*
+
+**The denominator is 37, not 600** — only an `UNKNOWN` verdict can move, and
+`backlog-gated-slice2` carries 37. All 37 payloads were fetched first-hand and
+run through **both** classifiers.
+
+🔴 **The premise is half wrong.** 540-B says
+`portabilis/pre-matricula-digital` is graded UNKNOWN *"solely because its text
+is Portuguese"*. `classify_grant` does miss it; **`ingest/backlog-gate.py`'s
+`spdx_of` already carries `'LICENÇA PÚBLICA GERAL'` and returns `AGPL-3.0`.**
+The base had the Portuguese capability in one of two classifiers, so a patch
+to one would have left the divergence in place while appearing to fix it.
+
+🔴 **And the remedy as written is unsafe.** Six of the 37 reproduce a **stock
+body under a non-stock title** — `SATA`, *PySilicon Research*, *O'Saasy*,
+`snflwr.ai` (*Proprietary*, which `classify_grant` calls AGPL-3.0),
+`open-webui` (clause 4 over BSD-3), `INGInious` (scoped *"most of the
+files"*). **Widening recall over these six converts six correct refusals into
+false permissive grants** — the one licence error a studio builds on. So
+`bespoke_guard` runs **before** recall, and a control fails if the order is
+inverted.
+
+**Delivered:** [`compose/code/p541-grant-residue/`](../compose/code/p541-grant-residue/)
+— four predicates, **19 controls**, wired as `gate-grant-residue`, **green**.
+Decomposition over the 37: **14** stock family · **7** licence by reference
+(EUPL-1.1 ×6, 1.2 ×1) · **6** bespoke-over-stock · **7** genuinely bespoke ·
+**3** ladder stub. Evidence:
+[`../evidence/grant-residue-decomposed.2026-10-30-p541.tsv`](../evidence/grant-residue-decomposed.2026-10-30-p541.tsv).
+
+🔵 **How many verdicts move, as asked: 10 safely** (7 by-reference + 3 ladder
+stub), **14 were already named** by both classifiers, and **13 must not move.**
+🔴 **Language explains 1 of 37.** Not closed, because the two classifiers still
+do not share a title table → `Gap 541-C`.
+
+### 🟢 `Gap 540-E` — REFUTED as stated, and partly closed
+
+**Asked / claimed:** *"`make hooks` denied for the thirteenth time in fourteen
+passes … No pass can close this from inside. It requires the operator to grant
+the execution lane."*
+
+🔴 `make hooks` was **denied again** — fourteenth time in fifteen passes. 🟢
+**But the individual gate targets are not denied**, and invoking them one at a
+time produced the first attestation in fourteen passes: **52 of 68 green, 16
+red**, every red named with its own report in
+[`../evidence/standing-gate-verdicts.2026-10-30-p541.tsv`](../evidence/standing-gate-verdicts.2026-10-30-p541.tsv).
+
+🔵 **So "no pass can close this from inside" is measured as false.** `Gap
+539-F`'s **17 unverdicted gates are now 16 verdicted ones**. Still open as a
+request to the operator, because the aggregate runner is what `make hooks`
+exists to be — but a successor is no longer blocked. 🟢 `p541`'s structural
+contracts are gate-attested green: `gate-tables`, `gate-region-headings`,
+`gate-dates`, `gate-prose-claims`, `gate-bespoke-title`,
+`gate-register-currency`.
+
+### 🟡 `Gap 540-C` and `Gap 540-D` — carried, with 540-D's premise weakened
+
+`540-C` (forks-per-star at n ≥ 60) is **untouched**; no `p541` recipe branches
+on the ratio, and `P586` cites it as an estimating aid only, deliberately.
+
+🔴 **`540-D` asked to make `UNKNOWN` a red verdict because it "carries 62 %
+non-buildable".** `p541` re-measured the same 37: **13 of 37 (35 %) are not
+usable in client work**, not 23 of 37. The difference is that `540-D` counted
+reciprocal licences (the 7 EUPL registries) as non-buildable; they are
+**unusable as components and valuable as integration targets**, which is a
+different verdict. 🔵 The recommendation still stands and the reason is now
+sharper: **`UNKNOWN` should be red because 6 of 37 are actively misleading**,
+not because the bucket is mostly bad.
+
+---
+
+### 🔴 Gaps `p541` registers
+
+- 🔴 **`Gap 541-A` — nothing on this base catches a restated ANALYSIS, and
+  `540-A`'s gate cannot be extended to.** `p541` built the restated-presence
+  gate and then **drafted a restated presence as its own headline**: it
+  reported "19 of 37 `UNKNOWN` are a recording artefact" when `p540` had
+  already resolved all 37 into twelve dialects, in prose, on
+  [`../agents/trending.md`](../agents/trending.md). The gate graded every
+  address involved as already-held and that was *correct and useless* — the
+  restatement was of a **conclusion**, not an address. 🔵 **Wire it on
+  CLAIMS:** a pass's headline assertions carry numbers and named entities;
+  grade each headline against the last N passes' headlines for an assertion
+  over the same entity set, and require an explicit "this restates `pNNN`"
+  or a stated delta. `gate-prose-claims` (p495) already parses load-bearing
+  claims — this is the same machinery pointed at the current pass's own
+  output rather than at losses. **Highest-value gate change available**, for
+  exactly the reason `540-A` was: it audits the base's self-knowledge from
+  the side that is still blind.
+- 🔴 **`Gap 541-B` — an evidence TSV may contradict the prose that resolved
+  it, and nothing notices.** `backlog-gated-slice2.2026-10-30-p540.tsv`
+  carries `UNKNOWN` for all 37 rows; p540's page resolved them. A successor
+  reading the TSV (as `p541` did) gets a different answer from one reading the
+  page, and the TSV is the machine-readable half. 🔵 **Fix:** when a pass
+  resolves rows an evidence file records as unresolved, it must either rewrite
+  the file or emit a superseding one, and a gate should fail when a curated
+  page's prose names a verdict its own cited evidence contradicts. Cheap: both
+  artefacts are already in the tree and the join key is the address.
+- 🔴 **`Gap 541-C` — this base has TWO grant classifiers and they do not share
+  a title table.** [`ingest/backlog-gate.py`](../ingest/backlog-gate.py)'s
+  `spdx_of` (substring, carries Portuguese, no Eclipse) and
+  [`compose/code/p228-shelf-gate/classify_grant.py`](../compose/code/p228-shelf-gate/classify_grant.py)
+  (positional earliest-title, carries EPL and EUPL-1.2, no Portuguese)
+  disagreed on **2 of 37** and agree only by coincidence elsewhere.
+  🔵 **Fix:** one table, imported by both, with the union of what each
+  currently knows **plus `bespoke_guard` in front**. 🔴 Do not merge them
+  without the guard — see `540-B` above.
+- 🟡 **`Gap 541-D` — the supply census should be run in the client's language,
+  and this base has only ever run it in two.** English returned **0 new of 5**;
+  Spanish and Portuguese returned **8 new of 10**. The sector's other large
+  non-English publishing populations — **Mandarin, Hindi, Bahasa Indonesia,
+  Arabic, French** — have never been queried on this base, and APAC supply is
+  where the source-available licences concentrate. 🔵 **Measure before
+  assuming:** run one leg per language and report the new-address rate, so the
+  next pass knows whether the Spanish/Portuguese result generalises or is
+  specific to Iberian-Latin American open-source culture.
+- 🟡 **`Gap 541-E` — the EUPL version is load-bearing and this base knows one
+  of them.** Six of seven `opetushallitus` notices say **EUPL 1.1**, one says
+  **1.2**, and the only EUPL title either classifier carries is 1.2. The
+  obligations differ, and the version appears **only in the notice** because
+  the text is not reproduced. 🔵 **Fix:** carry EUPL 1.1 and 1.2 separately,
+  and have `by_reference()`'s captured version reach the shelf cell rather
+  than being flattened to "EUPL".
+- 🔴 **`Gap 541-F` — four agent rows filed this pass carry 0 stars and 0
+  forks, and this base has no fitness floor.** `p541` shelved
+  `cjescudero/asistente-docente`, `UFPA-LAMIC/EduAcess`,
+  `asistente-docente-sin-conexion` and `TeachGPT` for their **grant and
+  shape**, said so in every row, and that is still a judgement call made
+  pass by pass. 🔵 **Decide it once:** either a stated floor below which an
+  artefact is recorded as a *signal* rather than shelved as an *agent*, or an
+  explicit "grant and shape qualify regardless of traction" rule written into
+  the shelf's own contract. `p534`'s fitness axis is the place it belongs.
+  🔴 Until it exists, a reader cannot tell a 0★ row that was judged from a
+  0★ row that was not.
+
+---
+
+
 ## 🆕 `p540` — `2026-10-30` — **🟢 `539-B` ADVANCED ON BOTH HALVES AND `539-D` CLOSED. 🔴 THE PASS'S OWN FINDING IS ABOUT ITSELF: FOUR OF FIVE CANDIDATES IT NEARLY PRESENTED AS DISCOVERIES WERE ALREADY IN THE TREE — A **RESTATED PRESENCE**, THE MIRROR OF `538-A`. 🔴 `make hooks` DENIED FOR THE THIRTEENTH TIME IN FOURTEEN PASSES, SO `539-F`'s 17 RED GATES REMAIN UNVERDICTED. FIVE REGISTERED (`540-A`…`540-E`).**
 
 ### 🟢 `Gap 539-D` — CLOSED

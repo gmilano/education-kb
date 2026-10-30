@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Compose Patterns — Education
 
-**Pass `p540` · 2026-10-30.** **Thirty-five** recipes. Every component named below
+**Pass `p541` · 2026-10-30.** **Thirty-five** recipes. Every component named below
 was read from its repository page, and **every licence was read from the licence
 file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
 this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
@@ -1888,3 +1888,159 @@ two secondary sources.
 is reading the district's actual policy text. 🔴 **It does not generalise across
 districts for free** — the clause set is local, so build the classifier's rule
 set as configuration from day one.
+
+## P585 — The accessible-courseware retrofit: make an existing LMS's material usable by disabled students (LATAM first; the shape is global)
+
+🔵 **Why this pattern and not another.** Every delivery pattern on this base
+assumes a student who can read the screen. `p541` filed the first artefact
+that does not —
+[`UFPA-LAMIC/EduAcess`](https://github.com/UFPA-LAMIC/EduAcess), **MIT**
+(1,144 B, read first-hand), from a Brazilian federal university lab — and
+accessibility is a **procurement requirement** in most public education
+systems rather than a nice-to-have, which makes it a funded engagement rather
+than a pilot.
+
+**The stack, with grants read first-hand:**
+
+| Role | Component | Grant | Why this one |
+|---|---|---|---|
+| Material adapter | [`UFPA-LAMIC/EduAcess`](https://github.com/UFPA-LAMIC/EduAcess) | 🟢 **MIT** (1,144 B) | Converts course PDFs to **narrated audio** and text optimised for visual impairment, ADHD, autism and dyslexia. **AI plus regex heuristics**, so it degrades predictably rather than hallucinating |
+| Course system of record | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | The LMS the material already lives in. Adapter runs **beside** it over web services, never vendored in — the GPL boundary is the integration seam |
+| Delivery of adapted assets | [`openedx/XBlock`](https://github.com/openedx/XBlock) *or* Moodle's own file API | 🟢 Apache-2.0 / 🔴 GPL-3.0 | Serve the adapted artefact next to the original so the student picks |
+| Local inference | `ollama` | 🟢 MIT | The adaptation runs on institution hardware: student material with disability metadata is the most sensitive data in the building |
+
+**How to wire it, in the order that de-risks fastest:**
+
+1. **Start from one course, not the catalogue.** Export its PDFs via Moodle web
+   services. Run `EduAcess` over them. Put the audio and optimised text beside
+   the originals as additional resources.
+2. **Measure adaptation quality by hand on 20 documents before automating
+   anything.** The regex half is deterministic and auditable; the model half is
+   not. Separate the two in reporting so the institution can see which is which.
+3. **Only then add the agent layer.** A tutoring agent over adapted material is
+   a second phase, and `P579`'s learner-record wiring is where it belongs.
+
+🔴 **What will go wrong.** `EduAcess` carries **0 stars and 14 commits** — it
+is a working university prototype, not a maintained product. Treat it as **the
+reference implementation to harden**, budget for taking over maintenance, and
+read [`../agents/top.md`](../agents/top.md#-p541--four-agents-off-the-spanish-and-portuguese-legs-and-what-the-language-of-a-query-costs)
+before quoting it to a client.
+
+🟢 **Why it is still the right starting point:** nothing else on this base
+does this job at all, the grant is clean MIT, and the accessibility
+requirement it addresses is already written into the buyer's procurement rules.
+
+## P586 — The teacher skill pack on an LMS the institution already runs (EMEA first)
+
+🔵 **The unit of packaging in this sector is becoming the *skill*** — trend 9
+on [`../intel/trends.md`](../intel/trends.md) — and `p541` filed the first
+artefact on this base that ships one **with an LMS exchange format** rather
+than as a chat prompt:
+[`cjescudero/asistente-docente`](https://github.com/cjescudero/asistente-docente),
+**MIT** (1,075 B, titled, read first-hand).
+
+| Role | Component | Grant | Why this one |
+|---|---|---|---|
+| Teacher-facing skills | [`cjescudero/asistente-docente`](https://github.com/cjescudero/asistente-docente) | 🟢 **MIT** (1,075 B) | **Twelve skills**: organise sources, build materials, assess, return feedback. One source tree, packaged for **ChatGPT Work and Claude Cowork** |
+| The LMS seam | Moodle **GIFT** question-bank import/export | 🔴 GPL-3.0 (Moodle) | 🟢 **This is the part that matters.** GIFT is a text format Moodle imports natively, so generated items land in the real question bank with no plugin and no database access |
+| Assessment delivery | [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause** (2,058 B) | When the institution needs **QTI 2.1** rather than GIFT, this is the permissive engine `p541` filed |
+| Record of what happened | `yetanalytics/xapipe` | 🟢 Apache-2.0 | Feedback and attempts into an LRS, per `P579` |
+
+**The wiring:**
+
+1. **Fork the skill pack and cut it to three skills**, not twelve — the ones
+   the department actually asks for. Twelve skills is a demo; three that match
+   a real marking workflow is a deployment.
+2. **Generate into GIFT, import into a staging Moodle course, and have two
+   teachers mark the output against their own rubric.** The import path is the
+   whole technical risk and it is cheap to prove.
+3. **Export feedback back through the same seam.** The pack already does this;
+   do not rebuild it.
+4. **Add QTI via `qtiworks` only if the institution's assessment policy
+   requires standards-compliant items.** GIFT is enough for formative work.
+
+🔵 **Estimating aid, not a branch:** p540's forks-per-star ranking put
+import-as-dependency components at **≤ 0.182** and
+deploy-per-institution at **≥ 0.250**. A skill pack is the former; Moodle and
+`qtiworks` are the latter. 🔴 Per `Gap 540-C` the boundary is fitted to n = 14,
+so no step above branches on it.
+
+🔴 **The provenance clause to put in the statement of work.** The pack carries
+a `.zenodo.json`, so the author intends an archival DOI — good for citation,
+and it means **the upstream may be versioned academically rather than
+semantically**. Pin a commit.
+
+## P587 — The public-sector integration engagement: build against the state's own schemas (EMEA — Finland; the shape is portable across the EU)
+
+🟢 **`p541` filed seven national registries** Finland's National Agency for
+Education publishes in the open. For a ministry or agency buyer this replaces
+the most expensive part of a data-platform engagement — agreeing the model —
+with reading someone else's working one.
+
+| Layer | Component | Grant | Role in the build |
+|---|---|---|---|
+| Curriculum | [`opetushallitus/eperusteet`](https://github.com/opetushallitus/eperusteet) | 🟡 **EUPL-1.1+** by reference | The machine-readable national curriculum: the outcome vocabulary everything else keys to |
+| Learner identity | [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | 🟡 **EUPL-1.1+** | The national learner identifier — the join key |
+| Records | [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | 🟡 **EUPL-1.1+** | Study rights and completed studies |
+| Admissions | [`opetushallitus/ataru`](https://github.com/opetushallitus/ataru) | 🟡 **EUPL-1.2** | Applications and admissions |
+| Analytics over it | [`Apereo…/LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | 🟢 **ECL-2.0** (9,919 B) | 🟢 **The permissive half of the stack.** Risk models over the registry data |
+| Extractor pattern | [`Apereo…/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 🟢 **ECL-2.0** (11,087 B) | The template to copy when writing the extractor for *this* client's LMS |
+
+**The wiring, and the licence boundary that defines it:**
+
+1. **Read the schemas; do not vendor the services.** 🔴 EUPL is **reciprocal**
+   with an EU-law jurisdiction clause. The registries are **integration targets
+   and reference models**. Everything the studio writes sits on the
+   **ECL-2.0 / Apache side** of the boundary.
+2. **Build the extractor first**, modelled on `lap-sakai-extractor`, mapping the
+   client's LMS into the LAP schema.
+3. **Run `LearningAnalyticsProcessor` over it** for the risk model, and serve
+   results through `OpenDashboard-api` (**ECL-2.0**).
+4. **Check the version of every EUPL notice you rely on.** 🔴 Six of the seven
+   say **1.1** and one says **1.2**; the obligations differ and the notice is
+   the only place the version appears, because the text is **not reproduced in
+   the repository**.
+
+🔴 **Do not reuse `Apereo…/OpenLRS`**: its own description reads
+**"Deprecated"**. 🔴 And `KualiCo/rice` (**ECL-2.0**, 11,106 B) is available
+for the administrative workflow layer, but it is a large institutional
+middleware — take the workflow engine, not the suite.
+
+## P588 — Licence triage as a billable intake step, before any architecture (Global; APAC and LATAM first)
+
+🔵 **This pattern exists because `p541` measured the failure rate of not doing
+it.** Of 37 education repositories whose grants an automated pass could not
+resolve, **13 are not usable in client work** and **six of those read as
+permissive to a body-matching tool** — a `SATA`-titled MIT, a *Research*-titled
+MIT, a *License Agreement*-titled MIT, a *Proprietary*-titled body a classifier
+calls AGPL-3.0, `open-webui`'s clause-4 BSD, and a scoped *"most of the files"*
+AGPL. 🔴 **A studio that skips this step discovers it at integration, after the
+estimate.**
+
+**The instruments, all on this base and all offline:**
+
+| Step | Instrument | What it decides |
+|---|---|---|
+| 1. Is this actually new? | [`compose/code/p541-restated-presence/`](code/p541-restated-presence/) | Grades each candidate address against the committed tree: `FILED`/`PROSE` (already held), `HISTORY` (known, unfiled — **promote, don't re-discover**), `ARCHIVE` (recover), `BACKLOG`, `ABSENT`. Reads a **git ref**, so work in progress cannot self-match |
+| 2. Does the title agree with the body? | [`compose/code/p541-grant-residue/`](code/p541-grant-residue/) — `bespoke_guard()` | 🔴 **Runs before any recall widening.** A stock body under a non-stock title is **not** that family |
+| 3. Is the grant reproduced or referenced? | same — `by_reference()` | A short notice naming an authority plus a URL is a **real grant whose terms are not in the repository**, and whose **version** must be read off the notice |
+| 4. Did the ladder read a fill-in? | same — `stub_payload()` | A 45 B `YEAR: / COPYRIGHT HOLDER:` file is a template stub; the grant is one rung on, at `LICENSE.md` |
+| 5. What family is it? | [`ingest/backlog-gate.py`](../ingest/backlog-gate.py) · [`compose/code/p228-shelf-gate/classify_grant.py`](code/p228-shelf-gate/classify_grant.py) | 🔴 **Run both.** `p541` found they disagree, and that one already handles Portuguese while the other does not → `Gap 541-C` |
+
+**The sequence, and the reason it is this order:**
+
+1. **Run step 1 on the whole candidate list before reading anything.** `p541`
+   ran it on 20 mandated-leg candidates and **20 were already held**; the
+   reading budget it saved is the pattern's entire return.
+2. **Fetch grants as bytes, not as pages.** `raw.githubusercontent.com`
+   answered **200** for every address this pass probed while `github.com` HTML
+   answered **403** through the session proxy. Record the byte count — it is
+   the cheapest re-measurement a successor can make.
+3. **Steps 2–4 before step 5.** Every one of them can **overturn** a family
+   verdict, and running them after is how a false permissive grant reaches an
+   estimate.
+4. **Deliver the triage table itself.** Address, title block, byte count,
+   family, and the verdict — buildable, reference-only, or excluded. 🟢 For an
+   APAC or LATAM engagement, run the supply search **in the client's language
+   first**: `p541` measured **8 new addresses of 10** in Spanish and
+   Portuguese against **0 of 5** in English.

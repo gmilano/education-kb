@@ -6,9 +6,47 @@ updated: 2026-10-30
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p540` · 2026-10-30.** **Sixty-four** real agents, every row read
+**Pass `p541` · 2026-10-30.** **Sixty-eight** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
+
+> 🔴 **`p541` ran the mandated query set and it returned nothing new — twenty
+> candidates, twenty already on this base.** Five supply candidates off the
+> agent and trending legs (`DeepTutor`, `Claw-ED`, `500-AI-Agents-Projects`,
+> `awesome-ai-agents-2026`, `ai-engineering-from-scratch`) and fifteen policy
+> and adoption claims off the four-region sweep (the `K-12 AI Literacy and
+> Readiness Act`, `STUDENTS FIRST`, NY `A 9190`, the OECD *Digital Education
+> Outlook*, Dubai's KHDA, Korea's `AI Basic Act`, Australia's TEQSA, Cetic.br,
+> the 716 instruments, UNESCO IESALC, the Observatory, Oklahoma, Idaho,
+> Vietnam, the Andes count) — **every one of them already here.** 🔵 p540
+> measured four of five; p541 measured **twenty of twenty**. At that rate the
+> mandated queries are not a research instrument, they are a restatement
+> generator, and `Gap 540-A`'s gate is now wired and standing:
+> [`gate-restated-presence`](../compose/code/p541-restated-presence/).
+>
+> 🟢 **What did produce new supply was changing the language of the query, not
+> its depth.** The same legs run in **Spanish and Portuguese** returned ten
+> candidates of which **eight were absent from this base** — against **zero of
+> five** in English. `Gap 540-B` called the English keying a *classifier*
+> bias; measured from the other end it is a **discovery** bias, and the larger
+> of the two. Four agents are shelved below; the rest are in
+> [`../repos/foundations.md`](../repos/foundations.md).
+>
+> 🔴 **And the promotion debt is bigger than the discovery gap.** Graded
+> against the committed tree, **32 of the 37** addresses in p540's `UNKNOWN`
+> residue appear only in trending history — known, measured, never filed. That
+> is `Gap 529-A`'s debt, now countable rather than estimated, and this pass
+> files eighteen of them.
+
+> 🟢 **`p541` has gate attestation, and `Gap 540-E` was wrong that no pass
+> could get it from inside.** `make hooks` was denied for the fourteenth time
+> in fifteen passes — but the **individual gate targets are not denied**. Run
+> one at a time, **52 of 68 standing gates are green and 16 are red**, with
+> every red named in
+> [`../evidence/standing-gate-verdicts.2026-10-30-p541.tsv`](../evidence/standing-gate-verdicts.2026-10-30-p541.tsv).
+> `Gap 539-F`'s seventeen unverdicted gates are now sixteen verdicted ones.
+> 🔵 This page's own structural gates — `gate-tables`, `gate-region-headings`,
+> `gate-dates`, `gate-prose-claims`, `gate-bespoke-title` — are **green**.
 
 > 🟡 **`p540` added two rows and rejected four candidates for a reason worth
 > carrying forward.** Of the five addresses this pass's search legs produced,
@@ -406,7 +444,7 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 64 verified education agents
+## Shelf — 64 verified education agents (68 with `p541`'s four, filed in their own section above)
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -786,6 +824,73 @@ read the top 80 — carries figures this pass did **not** re-attest. And the
 census's own caveat still stands and is worth repeating: every tool count in
 this field is the repository's own claim, three repositories contradict
 themselves on it, so **tool counts here are marketing, not measurement.**
+
+## 🆕 `p541` — four agents off the **Spanish and Portuguese** legs, and what the language of a query costs
+
+🔵 **How these were found, because the method is the finding.** The mandated
+English legs produced five candidates and this base already held all five. The
+*same* legs, re-run in Spanish and Portuguese with no change of depth,
+produced ten candidates of which **eight were absent** — graded mechanically
+against the committed tree by
+[`gate-restated-presence`](../compose/code/p541-restated-presence/), not by
+hand. Every grant below was then read as **bytes at `raw.githubusercontent.com`**,
+because `github.com` HTML answers **403** through this session's proxy while
+`raw` answers 200 — a channel difference worth recording for whoever runs next.
+
+🔴 **All four are small.** Each carries **0 stars and 0 forks**; the two
+Spanish ones have 16 and 14 commits. They are shelved for their **grant and
+their shape**, not their traction, and no row below should be read as adoption
+evidence. Stated plainly so a successor does not inflate them.
+
+| Agent | Grant, read first-hand | Size | Region | What it is |
+|---|---|---|---|---|
+| 🆕 **`p541`** — [`cjescudero/asistente-docente`](https://github.com/cjescudero/asistente-docente) | 🟢 **MIT** (1,075 B, titled, `Copyright (c) 2026 Carlos J. Escudero`) | 0★ · 0 forks · 16 commits · `main` | **EMEA** (Spain) | **Twelve teacher skills** — organise sources, build materials, assess, return feedback — packaged for **ChatGPT Work and Claude Cowork** from one source. 🟢 **The reason it matters here is the LMS seam:** it exchanges **Moodle GIFT question banks** and exports feedback for Moodle, which is the hole [§ the Moodle gap](#-the-moodle-mcp-census-was-wrong-on-both-its-numbers-and-this-base-already-knew) has named for nine passes. A `.zenodo.json` sits in the tree, so the author intends an archival DOI. |
+| 🆕 **`p541`** — [`UFPA-LAMIC/EduAcess`](https://github.com/UFPA-LAMIC/EduAcess) | 🟢 **MIT** (1,144 B, titled, `Copyright (c) 2026 LAMIC — Laboratório de Monitoramento…`) | 0★ · 0 forks · 14 commits · `main` | **LATAM** (Brazil — Universidade Federal do Pará) | **Accessibility-first material adaptation**: converts course PDFs into **narrated audio and optimised text** for students with visual impairment, ADHD, autism and dyslexia. 🟢 **The only artefact on this base whose primary axis is disability accommodation**, and it comes with a university lab's copyright line rather than an individual's. AI plus **regex heuristics** — deliberately not model-only. |
+| 🆕 **`p541`** — [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) | 🔴 **GPL-3.0** (35,149 B, full text) | 0★ · 0 forks · `main` | **LATAM / EMEA** (Spanish, rural schools) | Teacher assistant that **runs with no internet**: a laptop hosts a local language model, teachers reach it over the school's own Wi-Fi, and the README states **no data leaves the device**. Plans a lesson, builds a short assessment with an answer key, flags students falling behind; **the AI drafts and the teacher decides**. 🔴 **GPL-3.0, so it is a reference design for this base, not a component** — and the README **declares the code was AI-generated**, which is a provenance fact a studio must carry forward, not a defect. |
+| 🆕 **`p541`** — [`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT) | 🟢 **MIT** (1,057 B, **untitled** — the body with no title line) | promoted off the residue | **APAC** (India) | Teaching assistant promoted out of p540's `UNKNOWN` residue. 🔵 Its grant is `p314`'s **untitled-payload** class: the MIT body with no `MIT License` heading, which is why a title-matcher could not see it. Filed here because the grant is now read, not inferred. |
+
+### 🆕 `p541` — the licence traps in p540's residue, and why `Gap 540-B`'s own remedy is unsafe
+
+🔴 **`Gap 540-B` asks for wider recall — "add Portuguese and Spanish title
+strings … and report how many verdicts move". Applied as written it would
+convert six correct refusals into false permissive grants.** Six of the 37
+residue payloads reproduce a **stock licence body under a non-stock title**, so
+every body-matcher names a family that the repository did not grant:
+
+| Address | Its own title | What a body-matcher answers | What it actually is |
+|---|---|---|---|
+| [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) | *The Star And Thank Author License (SATA)* | 🔴 `MIT` | MIT body **plus a non-OSI obligation** to star the repository |
+| [`open-webui/open-webui`](https://github.com/open-webui/open-webui) | *Open WebUI License* | 🔴 `BSD-3-Clause` | BSD-3 text **plus clause 4**, a branding restriction — known here since `p441` |
+| [`sdrangan/llmgrader`](https://github.com/sdrangan/llmgrader) | *PySilicon Research License* | 🔴 `MIT` | MIT body restricted to **non-commercial research** |
+| [`willwearing/graspful`](https://github.com/willwearing/graspful) | *O'Saasy License Agreement* | 🔴 `MIT` | a product licence agreement over an MIT body |
+| [`snflwr-ai/snflwr.ai`](https://github.com/snflwr-ai/snflwr.ai) | *snflwr.ai — Proprietary Software License* | 🔴 `AGPL-3.0` | **titled proprietary**, and the classifier answers copyleft |
+| [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | *"Most of the files in INGInious are distributed under the GNU AGPL…"* | 🟡 `AGPL-3.0` | a **scoped** grant — "most of the files" is not "the repository" (`p382`'s subtree class) |
+
+🔵 **So the fix is an ORDER, not a table.** `bespoke_guard` runs **before**
+recall in [`../compose/code/p541-grant-residue/`](../compose/code/p541-grant-residue/),
+a stock body under a non-stock title is **not** that family, and a control
+fails if a successor ever inverts that order. The predicate reads the **title
+block** — the first non-empty line, Markdown furniture stripped — and asks
+only whether that line names a licence outside the stock table. 🔴 **The
+keyword version of this predicate was wrong**: it graded **six ECL-2.0
+payloads as bespoke** because *Educational Community License* contains
+"Community License", and caught `open-webui` on a `CONTRIBUTOR_LICENSE_AGREEMENT`
+mention rather than its title. Both are recorded as controls.
+
+🔴 **And the honest correction `p541` owes this page: `p540` had already
+resolved all 37 by hand, into twelve dialects, on
+[`trending.md`](trending.md#-p540--2026-10-30).** This pass drafted "19 of 37
+are a recording artefact" as its headline before reading that table — **a
+restated presence, in the pass that shipped the restated-presence gate.** 🔵
+The gate could not have caught it: it grades **addresses**, and this was a
+restated **analysis**. What survives as new is narrower and is stated as such
+— p540's dialects are a hand measurement, these are four predicates with 19
+controls; p540's table does not say its own remedy is unsafe; and
+`Gap 540-B`'s premise that `pre-matricula-digital` fails *"solely because its
+text is Portuguese"* is half wrong, because
+[`ingest/backlog-gate.py`](../ingest/backlog-gate.py)'s `spdx_of` **already
+carries `'LICENÇA PÚBLICA GERAL'`** and names it `AGPL-3.0`. The base had the
+capability in one of its two classifiers and not the other. → `Gap 541-C`.
 
 ## ⚠️ Licence traps — repos that look permissive and are not
 

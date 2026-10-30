@@ -3,6 +3,59 @@ industry: education
 region: Global
 updated: 2026-10-30
 ---
+## 🆕 `p541` — `2026-10-30` — **🟢 EIGHTEEN ROWS FILED OFF THE PROMOTION DEBT, NOT OFF A SEARCH: **32 OF 37** RESIDUE ADDRESSES WERE IN TRENDING HISTORY AND NEVER A ROW. 🟢 THE BIG ONE IS **EMEA PUBLIC SECTOR** — SEVEN FINNISH NATIONAL REGISTRIES UNDER `EUPL`, LICENSED **BY REFERENCE**, WHICH IS WHY 540 PASSES MISSED THEM. 🟢 THE PERMISSIVE **QTI** ENGINE EXISTS (`qtiworks`, BSD-3). 🔴 THREE MIT GRANTS WERE HIDING AT `LICENSE.md` BEHIND A 45-BYTE STUB.**
+
+🔵 **Full narrative, the 20/20 restatement measurement, the language result and
+the gate attestation are on
+[`../agents/trending.md`](../agents/trending.md#-p541--2026-10-30).** This
+entry carries the repository-side result only.
+
+### 🟢 Filed this pass — all grants read as bytes, first-hand
+
+| Repo | Grant (bytes) | Class | Note |
+|---|---|---|---|
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | 🟡 EUPL-1.1+ (654 B notice) | by reference | National study-rights register. 23★ · 12 forks |
+| [`opetushallitus/eperusteet`](https://github.com/opetushallitus/eperusteet) | 🟡 EUPL-1.1+ (632 B) | by reference | **Machine-readable national curriculum** |
+| [`opetushallitus/ehoks`](https://github.com/opetushallitus/ehoks) | 🟡 EUPL-1.1+ (632 B) | by reference | Vocational competence plans |
+| [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | 🟡 EUPL-1.1+ (632 B) | by reference | National **learner identifier** |
+| [`opetushallitus/organisaatio`](https://github.com/opetushallitus/organisaatio) | 🟡 EUPL-1.1+ (632 B) | by reference | Institution register |
+| [`opetushallitus/valtionavustus`](https://github.com/opetushallitus/valtionavustus) | 🟡 EUPL-1.1+ (653 B) | by reference | State grant administration |
+| [`opetushallitus/ataru`](https://github.com/opetushallitus/ataru) | 🟡 **EUPL-1.2** (296 B) | by reference | Admissions — **the one that says 1.2** |
+| [`Apereo…/LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | 🟢 **ECL-2.0** (9,919 B) | sector licence | The LAP risk-model engine |
+| [`Apereo…/OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | 🟢 **ECL-2.0** (9,919 B) | sector licence | Analytics API |
+| [`Apereo…/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 🟢 **ECL-2.0** (9,919 B) | sector licence | 🟡 Explicitly `legacy` |
+| [`Apereo…/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 🟢 **ECL-2.0** (11,087 B) | sector licence | 🟢 The extractor **template** to copy |
+| [`KualiCo/rice`](https://github.com/KualiCo/rice) | 🟢 **ECL-2.0** (11,106 B) | sector licence | Kuali Rice middleware |
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause** (2,058 B) | — | 🟢 **QTI 2.1, permissively licensed** |
+| [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | 🟡 **AGPL-3.0, scoped** (34,764 B) | scoped grant | *"Most of the files"* — `p382`'s subtree class |
+| [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 🟢 **MIT** at `LICENSE.md` | ladder stub | `LICENSE` is a **45 B** `usethis` fill-in |
+| [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) | 🟢 **MIT** at `LICENSE.md` | ladder stub | `LICENSE` is **46 B** |
+| [`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) | 🟢 **MIT** at `LICENSE.md` | ladder stub | Scores **student writing quality** |
+| [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 🟢 **MIT** (1,055 B, untitled) | untitled payload | `p314`'s class, still live |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) | 🟡 **EPL-2.0** (14,197 B) | sector licence | Weak copyleft — beside, not inside |
+| [`CaminosMarina/curso-ia`](https://github.com/CaminosMarina/curso-ia) | 🟡 **SPLIT**: `CC BY-SA 4.0` content (1,900 B) + **MIT** code (`LICENSE-CODE`, 1,534 B) | split grant | 🔴 A roundup called this "MIT"; MIT covers `scripts/` only |
+| [`thalisantunes/eecri-2026-ia-artesanato`](https://github.com/thalisantunes/eecri-2026-ia-artesanato) | 🟢 **MIT** (1,080 B) | — | Reusable part is a **blind prompt-test harness across 5 models** |
+
+### 🔴 Probed and refused — recorded so nobody re-finds them
+
+| Repo | What it actually is |
+|---|---|
+| [`comercisandro/RecursoEducativoAbierto`](https://github.com/comercisandro/RecursoEducativoAbierto) | 🔴 **CC BY-NC-SA 4.0** — the **NonCommercial** term excludes client work. Licence served as a **Jekyll page**, not a payload |
+| [`amandasiqueirasouza1-ux/ia-para-professores`](https://github.com/amandasiqueirasouza1-ux/ia-para-professores) | 🔴 **No `LICENSE` at `HEAD`** (404). README promises MIT for code *"that may be included in future"* — a licence that is a **prediction** |
+| [`Vargontoc/educational-framework`](https://github.com/Vargontoc/educational-framework) | 🔴 **No `LICENSE` at `HEAD`**; the repository describes itself as a *"proyecto privado"* |
+| [`jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada`](https://github.com/jesusgarciafernandez/Aula-y-Comunidad-Educativa-Aumentada) | 🟡 Graded `ARCHIVE` by [`gate-restated-presence`](../compose/code/p541-restated-presence/) — it was shelved and **dropped in the `p490` rewrite**. A free edition under its own terms, not open source |
+
+### 🔵 The channel note a successor will want
+
+`github.com` HTML answered **403** through this session's proxy for every
+address probed; **`raw.githubusercontent.com` answered 200**. All grant bytes
+above were read that way, and `WebFetch` reached `github.com` where `curl`
+could not — so star and fork counts came from the page and licence bytes from
+`raw`. 🔵 **Two channels, recorded because the next pass will hit the same
+wall.**
+
+---
+
 
 ## 🆕 `p540` — `2026-10-30` — **🟢 GATE TO 600 DELIVERED (`Gap 539-B` HALF ONE): 450 NEW ADDRESSES PROBED, **63.3 % PERMISSIVE** — FAR ABOVE WHAT THIS FILE'S SHELF SUGGESTS, AND THE REASON IS SELECTION. 🔴 THE 37 `UNKNOWN` ARE THE STORY: ALL RESOLVE, IN TWELVE DIALECTS, AND **62 % OF THEM ARE NOT BUILDABLE**. 🟢 SIX PLATFORM ROWS FILED, INCLUDING `Gap 539-D`'s TWO. 🔴 ONE RANKED CANDIDATE IS LITERALLY DESCRIBED AS "Deprecated" — THE RATIO RANKS, IT DOES NOT VET.**
 

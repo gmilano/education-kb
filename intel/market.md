@@ -6,9 +6,42 @@ updated: 2026-10-30
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p540` · 2026-10-30.** Figures are attributed to the source that produced
+**Pass `p541` · 2026-10-30.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
+
+> 🔴 **`p541` ran the full four-region sweep in the mandated form and it
+> returned **fifteen claims, fifteen of them already on this base.** Named so
+> the result is checkable: the `K-12 AI Literacy and Readiness Act of 2026`
+> out of the House Education and Workforce Committee, the student-authored
+> `STUDENTS FIRST Act`, New York's `A 9190`, the four states with dual
+> guidance-plus-district-policy mandates (Maryland, Idaho, Oklahoma,
+> Virginia), the **OECD 2026 Digital Education Outlook**, Dubai's **KHDA**
+> guidance, Korea's **AI Basic Act** in force 22 Jan 2026, Vietnam's July 2026
+> high-risk designation covering education, Australia's **TEQSA** institutional
+> action plans, **Cetic.br**'s Brazilian school figures, the Universidad de los
+> Andes count of **716** instruments across 23 countries, **UNESCO IESALC**'s
+> 200 institutions in 19 countries, and the UNESCO **Observatory** launched in
+> Santiago on 14 Apr 2026. 🔵 **Every one was already here.** This is now the
+> fourth consecutive pass to find the regional *policy* legs saturated
+> (`p528`, `p531`, `p540`, `p541`), and the first to say it with a gate rather
+> than an impression — [`gate-restated-presence`](../compose/code/p541-restated-presence/).
+>
+> 🔵 **`p529`'s lesson held and generalised.** `p529` found the legs were
+> saturated on *policy* and untouched on *adoption evidence*. `p541` finds the
+> same axis in the **language of the query**: the identical legs run in
+> **Spanish and Portuguese** returned **eight new addresses out of ten**,
+> against **zero of five** in English. 🔴 **For a region this base exists to
+> serve, that is the finding** — a LATAM supply gap declared from an
+> English-only census is a gap in the instrument, not in the region.
+>
+> 🟢 **What moved on the demand side is one measured figure, and it is a
+> governance gap rather than an adoption one:** Brazil's Cetic.br reports
+> **53 % of school administrators using AI against 22 % whose school has
+> guidelines** — the same shape as UNESCO IESALC's **87 % using AI, 26 % with
+> a formal strategy** across 19 LATAM countries. Both were already on this
+> base; what is new is that they now sit beside a **supply** census in the same
+> language.
 
 > 🆕 **`p528` ran the full four-region sweep and reports the result plainly: the
 > regional *policy* picture did not move.** Every North America, EMEA and APAC
@@ -607,6 +640,20 @@ own record.**
 
 ### North America
 
+**🆕 `p541` — the automated-grading slot is now permissive, which changes what a
+district pilot can be.** `P584` (policy conformance) and every assessment
+pattern on this base previously had to route through copyleft graders. This
+pass filed three **MIT** graders whose licences were hidden one rung along the
+ladder — [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) and
+[`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) for statistics
+coursework, [`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer)
+for **student writing quality** — plus **BSD-3-Clause**
+[`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) for QTI 2.1
+delivery. 🟢 **For a US district or state engagement this is the difference
+between a grading pilot a vendor can ship and one that obliges source
+release.** 🔴 The regional policy picture is unchanged from `p540` and is not
+restated here; see the note at the head of this file.
+
 **🆕 `p540` — policy-conformance tooling, because 134 bills across 31 states
 produced policies nobody can enforce.** The 2026 session left districts with
 written AI policies (Maryland: 120 days from MSDE guidance; Oklahoma: before
@@ -854,6 +901,25 @@ recorded.**
 
 
 ### EMEA
+
+**🆕 `p541` — EMEA stops being this file's supply-poor region, and the reason is
+that its supply is state-owned.** The EMEA leg was a measured blank on
+*demand* at `p531` and the policy leg is saturated. The **supply** leg,
+re-read this pass, returned the largest block of **state-operated** education
+software on this base: Finland's National Agency for Education publishes
+**seven national registries** — curriculum, learner identity, study records,
+admissions, institution register, vocational plans and state funding — under
+**EUPL**, filed in
+[`../repos/foundations.md`](../repos/foundations.md#-emea-public-sector--opetushallitus-seven-national-registries-under-eupl)
+and placed as a platform layer in
+[`../verticals/solutions.md`](../verticals/solutions.md). 🔴 **EUPL is
+reciprocal and six of the seven are version 1.1, not 1.2** — so these are
+integration targets and data models, not components. 🟢 **The engagement shape
+that unlocks is a public-sector one**: an EMEA ministry or agency buyer gets a
+working, legally published national schema set to integrate against instead of
+a greenfield data model. 🟢 Spain also supplied the pass's strongest small
+agent — [`cjescudero/asistente-docente`](https://github.com/cjescudero/asistente-docente),
+**MIT**, twelve teacher skills that exchange **Moodle GIFT** question banks.
 
 **🆕 `p540` — the two duties already in force outrank the 2027 one.** The EU
 **AI-literacy duty** and the **ban on emotion recognition in education** have
@@ -1189,6 +1255,23 @@ to prevent.
 
 ### APAC
 
+**🆕 `p541` — the region's supply keeps arriving under licences that are not
+licences, and this pass can now name the rate.** Of the 37 unresolved grants
+in p540's residue, the **source-available** class is disproportionately APAC:
+[`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao)
+(*Source-Available License 1.0*),
+[`nakafaai/aksara`](https://github.com/nakafaai/aksara) (*Nakafa Source
+Available 2.0*), [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger)
+(MIT body under the `SATA` title, which adds a non-OSI obligation), and
+[`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce)
+(**all rights reserved**, in Chinese). 🔴 **None is buildable, and all four
+read as open at a glance** — three of them would pass a body-matching
+classifier. 🟢 **The regional read:** APAC education supply is abundant and
+its *grant* is the binding constraint, so an APAC engagement should budget a
+licence-triage step before an architecture step. India contributed the one
+promotable agent, [`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT)
+(**MIT**, untitled body). Policy for the region is unchanged from `p540`.
+
 **🆕 `p540` — one jurisdiction at a time, and Vietnam has the nearest hard
 date.** Vietnam's AI law (in force 1 Mar 2026) names **education** in its
 high-risk list and grants an **18-month** transition for systems already
@@ -1479,6 +1562,20 @@ confirmed against primary sources before they go in a client deck.
 
 ### Global
 
+**🆕 `p541` — one global number this pass can stand behind, and one it refuses
+to average.** 🟢 The **OECD 2026 Digital Education Outlook** recommends
+institutions move from general-purpose AI toward **purpose-built educational
+AI** — which is the demand-side statement of this base's whole thesis, and it
+is already held here. 🔴 **The market-size figures surfaced this pass
+disagree too widely to publish as one band**: one source projects roughly
+**$6 B (2024) → $32 B (2030)**, against the **$9.58 B → $42.48 B (2030, 41.5 %
+CAGR)** band this file already carries from better-attributed sources, and a
+third vendor page asserted precise figures with no method at all. **The
+disagreement is shown rather than averaged**, per this file's rule — an
+averaged number is a number nobody published. 🔵 The usable global signal is
+not a size but a **shape**: adoption is ahead of governance everywhere it was
+measured this pass, in every region, by a margin of 25–60 percentage points.
+
 **🆕 `p540` — the forks-per-star rule, offered as an estimating aid rather
 than a market claim.** On fourteen points read first-hand this pass,
 deploy-per-institution software sat at **f/★ ≥ 0.25** and import-as-dependency
@@ -1528,6 +1625,45 @@ not a country** — this base's standing rule, and the reason these are here and
 not under APAC.
 
 ### LATAM
+
+**🆕 `p541` — the LATAM supply gap this base has declared for many passes was
+substantially an instrument artefact, and here is the measurement.** Running
+the mandated supply legs in **Portuguese and Spanish** returned **eight
+addresses absent from this base out of ten**, against **zero of five** in
+English. 🟢 **What they are**, with grants read first-hand as bytes:
+[`UFPA-LAMIC/EduAcess`](https://github.com/UFPA-LAMIC/EduAcess) — **MIT**,
+from Universidade Federal do Pará, converting course PDFs into **narrated
+audio and optimised text** for students with visual impairment, ADHD, autism
+and dyslexia, the only **accessibility-first** artefact on this base;
+[`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion)
+— **GPL-3.0**, a teacher assistant that runs a local model with **no internet
+and no data leaving the device**, aimed at rural schools;
+[`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital)
+— **AGPL-3.0** (35,326 B, titled in Portuguese), the municipal **pre-enrolment
+front door** that sits in front of `i-educar`;
+[`thalisantunes/eecri-2026-ia-artesanato`](https://github.com/thalisantunes/eecri-2026-ia-artesanato)
+— **MIT**, whose reusable part is a **blind prompt-test harness across five
+models**.
+
+🔴 **Two of the eight are licence warnings a LATAM engagement should carry:**
+[`comercisandro/RecursoEducativoAbierto`](https://github.com/comercisandro/RecursoEducativoAbierto)
+is **CC BY-NC-SA 4.0** — the **NonCommercial** term rules it out for client
+work, and its licence is served as a Jekyll page rather than a payload — and
+[`amandasiqueirasouza1-ux/ia-para-professores`](https://github.com/amandasiqueirasouza1-ux/ia-para-professores)
+has **no `LICENSE` at `HEAD`** (404) while its README promises MIT for code
+*"that may be included in future"*: a licence that is a **prediction**, not a
+grant. 🔵 **Both are the ordinary texture of Portuguese- and Spanish-language
+education OSS**, and neither is visible to an English census at all.
+
+🟢 **The pitch this changes.** This file's LATAM sections have argued the
+region is strong on demand and thin on reusable supply. The demand evidence
+stands (Cetic.br: **53 %** of Brazilian school administrators using AI against
+**22 %** with guidelines; UNESCO IESALC: **87 %** / **26 %** across 19
+countries). 🔴 **The supply half needs restating: it was thin in this base's
+index, not in the region**, and the honest version of the pitch is that the
+components exist, are permissively licensed more often than not, and are
+small enough that a studio's value is integration and hardening rather than
+invention.
 
 **🆕 `p540` — stop selling adoption; sell evidence.** UNESCO IESALC, 200
 institutions across 19 countries: **87 %** use AI somewhere, **74 %** in

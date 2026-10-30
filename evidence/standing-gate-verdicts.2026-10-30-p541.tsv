@@ -1,0 +1,69 @@
+gate	verdict	detail
+	RED	# 1 finding(s) compose/code/p512-cell-frame/cell_frame.py	39	'.'	ADDR = re.compile(r'github\.com/([A-Za-z0-9][\w.-]*)/([\w.-]+?)(?=[)\]`,.\s]|$)') mak
+	RED	# Open edX	2	blend-ed/openedx-mcp, blend-ed/tutor-contrib-openedxmcp # 🔴 NO-ANCHOR means the sentence this claim checks is GONE from the shelf. Res
+	RED	# REFUTED=4 VERIFIED-ABSENT=120 QUEUE-UNENUMERATED=62 # FAIL: a shelf asserts an absent grant that an enumeration refutes. make: *** [Makefile:417: ga
+gate-tables	GREEN	-
+gate-conflict	GREEN	-
+gate-absence	GREEN	-
+gate-dates	GREEN	-
+gate-provenance	GREEN	-
+gate-identity	GREEN	-
+gate-ladder-case	GREEN	-
+gate-readme-channel	GREEN	-
+gate-restatement	GREEN	-
+gate-pin-grant	GREEN	-
+gate-evidence-store	GREEN	-
+gate-slug-oracle	GREEN	-
+gate-payload-pin	GREEN	-
+	RED	 LIVE	openeducat/openeducat_erp	LGPL-3.0	intel/open-gaps.md	24138	prose LIVE	openeducat/openeducat_erp	MIT	intel/open-gaps.md	3755	table make: *** [Ma
+gate-affero-rung	GREEN	-
+gate-family-coverage	GREEN	-
+gate-permissive-arm	GREEN	-
+gate-template-identity	GREEN	-
+gate-presentation-fold	GREEN	-
+gate-untitled-payload	GREEN	-
+gate-region-headings	GREEN	-
+gate-prose-claims	GREEN	-
+gate-register-currency	GREEN	-
+gate-bespoke-title	GREEN	-
+	RED	 archivo	hallazgo	slug	detalle #	total	0 make: *** [Makefile:1054: gate-fold-identity] Error 1
+gate-grant-scope	GREEN	-
+	RED	compose/patterns.md	P349-STALE-ADDRESS	digitalcredentials/learner-credential-wallet	register: stale address of learner-credential-wallet; canonical is
+	RED	repos/trending.md	P349-UNKEYED-AUTHORS	1 Contributor	no key named on the line (%ae / %an / identities) #	total	1 make: *** [Makefile:1253: gate-author
+gate-payload-digest	GREEN	-
+gate-address-shape	GREEN	-
+	RED	 rejected_non_addresses	39	40	STALE addresses_corrected	2839	3176	STALE make: *** [Makefile:751: gate-census-currency] Error 1
+	RED	 rows_without_a_path	0 🔴 FAIL — the extractor found ZERO grant claims on the live shelves. Either the shelves stopped publishing grant paths or t
+gate-carried-existence	GREEN	-
+gate-restated-presence	GREEN	-
+gate-grant-residue	GREEN	-
+gate-companion-closure	GREEN	-
+gate-bare-slug-channel	GREEN	-
+gate-refset-register	GREEN	-
+gate-domain-check	GREEN	-
+gate-region-place	GREEN	-
+gate-backlog-denominator	GREEN	-
+gate-dead-citation	GREEN	-
+gate-regional-leg	GREEN	-
+	RED	 got: ['NAME-REF-OR-PATH'] want: ['NAME-DOT-RUN', 'NAME-REF-OR-PATH'] make: *** [Makefile:704: gate-census-union] Error 1
+gate-ledger	GREEN	-
+gate-promotion-queue	GREEN	-
+	RED	🔴 p407-i2-sweep-crosscheck — 1 of 37 controls FAILED: - C21 the case-sensitivity specimens: got [], want ['ai-matrix-engine/aidream', 'mckaroff/g
+	RED	 channel_b_survivors	3351	3770	STALE union_addresses	3727	4173	STALE make: *** [Makefile:744: gate-union-currency] Error 1
+gate-subtree-grant	GREEN	-
+gate-offset-region	GREEN	-
+gate-shelf-fork	GREEN	-
+gate-capability-absence	GREEN	-
+gate-fork-direction	GREEN	-
+gate-group-lineage	GREEN	-
+	RED	 FAILED (failures=2) make: *** [Makefile:634: gate-action-answered] Error 1
+gate-commit-gate	GREEN	-
+	RED	 Ed-Fi-Alliance-OSS/Data-Management-Service repos/foundations.md:472, intel/market.md:729 Ed-Fi-Alliance-OSS/data-management-service verticals/solutio
+gate-conjunctive-grant	GREEN	-
+gate-branch-alias	GREEN	-
+gate-promotion	GREEN	-
+gate-recency	GREEN	-
+	RED	83 finding(s) 🔴 p436-promotion-ledger/live — a promotion claim is unadjudicated, the backlog GREW, or a restored row was dropped again (rows abov
+gate-grant-presence	GREEN	-
+	RED	🔴 p442: zero published cells parsed — a parse fault, not a clean shelf (P355) # p443: reproduction record read from 3 sweep(s): published-cell-re
+gate-promotion-ratchet	GREEN	-

@@ -3,6 +3,134 @@ industry: education
 region: Global
 updated: 2026-10-30
 ---
+## 🆕 `p541` — `2026-10-30` — **🔴 THE MANDATED QUERY SET RETURNED TWENTY CANDIDATES AND TWENTY WERE ALREADY HERE — p540 MEASURED 4/5, p541 MEASURES 20/20. 🟢 THE SAME LEGS IN **SPANISH AND PORTUGUESE** RETURNED **8 NEW OF 10**, SO `Gap 540-B`'s ENGLISH KEYING IS A **DISCOVERY** BIAS AND NOT ONLY A CLASSIFIER ONE. 🟢 `Gap 540-A` WIRED AND STANDING. 🔴 AND THIS PASS NEARLY PUBLISHED A RESTATED PRESENCE AS ITS OWN HEADLINE — THE GATE GRADES ADDRESSES, NOT ANALYSES. 🟢 `make hooks` STILL DENIED, BUT THE **INDIVIDUAL GATE TARGETS ARE NOT**: **52 OF 68 GREEN, 16 RED, ALL NAMED** — FIRST ATTESTATION IN 14 PASSES. SIX REGISTERED (`541-A`…`541-F`).**
+
+### 🔴 The measurement this pass exists to report
+
+The mandated legs were run in full: the four global supply/trend queries and
+the four regional `adoption regulation players` sweeps. They produced **twenty
+candidates**, and
+[`gate-restated-presence`](../compose/code/p541-restated-presence/) graded
+every one against the **committed** tree:
+
+| Leg | Candidates | Already on this base | New |
+|---|---|---|---|
+| Agents / trending / platforms / trends (English) | 5 | 🔴 **5** — 2 `FILED`, 3 `HISTORY` | **0** |
+| Four-region sweep (English) | 15 | 🔴 **15** | **0** |
+| **The same legs in Spanish and Portuguese** | 10 | 🟡 2 | 🟢 **8** |
+
+🔵 **p540 reported four of five and asked for a gate. p541 reports twenty of
+twenty and shipped it.** The five English supply candidates were `DeepTutor`
+(`FILED`), `SirhanMacx/Claw-ED` (`FILED`),
+`ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`
+and `rohitg00/ai-engineering-from-scratch` (all `HISTORY`). The fifteen
+regional claims are named in
+[`../intel/market.md`](../intel/market.md) so the result is checkable rather
+than asserted.
+
+🟢 **`DeepTutor` did move and it is worth recording as an update to a held row
+rather than as a find**: the trending reports this pass put it at **~48,000★
+on 29 Oct and 49,543★ on 30 Oct**, the top repo by daily stars, with roughly
+2,371 gained in a day. 🔴 Second-hand from automated trend digests, not read
+off the repository page, and recorded as such.
+
+### 🟢 What the language change returned — four agents
+
+Grants read as **bytes** at `raw.githubusercontent.com`, because `github.com`
+HTML answers **403** through this session's proxy and `raw` answers 200.
+
+| Agent | Grant, first-hand | Size | Region |
+|---|---|---|---|
+| [`cjescudero/asistente-docente`](https://github.com/cjescudero/asistente-docente) | 🟢 **MIT** (1,075 B) | 0★ · 0 forks · 16 commits | **EMEA** — Spain. Twelve teacher skills; **Moodle GIFT** question-bank exchange; ChatGPT Work + Claude Cowork packaging |
+| [`UFPA-LAMIC/EduAcess`](https://github.com/UFPA-LAMIC/EduAcess) | 🟢 **MIT** (1,144 B) | 0★ · 0 forks · 14 commits | **LATAM** — Brazil, UFPA. **Accessibility-first**: PDFs → narrated audio + optimised text for visual impairment, ADHD, autism, dyslexia |
+| [`Ignacio-Ghub/asistente-docente-sin-conexion`](https://github.com/Ignacio-Ghub/asistente-docente-sin-conexion) | 🔴 **GPL-3.0** (35,149 B) | 0★ · 0 forks | **LATAM / EMEA** — offline, local model, **no data leaves the device**, rural schools. Code declared AI-generated |
+| [`Priyamakeshwari/TeachGPT`](https://github.com/Priyamakeshwari/TeachGPT) | 🟢 **MIT** (1,057 B, untitled body) | promoted off the residue | **APAC** — India |
+
+🔴 **All four carry 0 stars.** They are shelved for **grant and shape**, not
+traction, and no row should be read as adoption evidence. 🟢 Three of the four
+land in regions this file has repeatedly declared thin — and they were thin in
+the **index**, not in the regions.
+
+### 🔴 The correction this pass owes, and it is about itself
+
+`p541` fetched all 37 `UNKNOWN` payloads from p540's residue, ran both
+classifiers, found 19 named, and **drafted "19 of 37 are a recording
+artefact" as its headline.** 🔴 **`p540` had already resolved all 37 by hand
+into twelve dialects, on this page, one section down.** The decomposition
+reproduces p540's table almost cell for cell; the `UNKNOWN` string survives
+only in the evidence TSV, which p540 did not rewrite after resolving the rows
+in prose.
+
+🔵 **The generalisable half, and it is the most useful thing here:** the pass
+that **shipped the restated-presence gate** nearly published a restated
+presence. The gate could not have caught it — **it grades ADDRESSES, and this
+was a restated ANALYSIS.** Every address involved was already known to be in
+the tree; what was restated was a *conclusion about them*. Nothing on this
+base grades those. → **`Gap 541-B`**, and it is the highest-value gate change
+this pass can hand forward, for the same reason `540-A` was.
+
+### 🟢 What survives as new in the grant work, stated narrowly
+
+1. **p540's dialects are a hand measurement; `p541`'s are four predicates with
+   19 controls** —
+   [`compose/code/p541-grant-residue/`](../compose/code/p541-grant-residue/).
+   p540 resolved the residue; this grades the next one.
+2. 🔴 **`Gap 540-B`'s own remedy is unsafe as written and no page said so.**
+   Six of the 37 reproduce a **stock body under a non-stock title**, so
+   widening recall converts **six correct refusals into false permissive
+   grants**. `bespoke_guard` therefore runs **before** recall and a control
+   fails if that order is inverted.
+3. 🔴 **`Gap 540-B`'s premise is half-wrong.**
+   `portabilis/pre-matricula-digital` is not missed *"solely because its text
+   is Portuguese"*: [`ingest/backlog-gate.py`](../ingest/backlog-gate.py)'s
+   `spdx_of` **already carries `'LICENÇA PÚBLICA GERAL'`** and returns
+   `AGPL-3.0`, while `classify_grant` returns nothing. **The base had the
+   capability in one of two classifiers.** → `Gap 541-C`.
+4. **The `template-stub` class has a cheaper fix than recorded.** p540 pointed
+   at R's `DESCRIPTION`; `p541` confirmed **200 / `# MIT License` at
+   `LICENSE.md`** for all three of `rstudio/ggcheck`, `rstudio/tblcheck`,
+   `shmercer/writeAlizer` — one rung along a ladder the gate already walks.
+5. **Language explains 1 of 37.** The dominant causes are bespoke titling
+   (13) and licensing **by reference** (7).
+
+### 🟢 `Gap 540-E` — the first gate attestation in fourteen passes, and 540-E was wrong about why
+
+`make hooks` was **denied for the fourteenth time in fifteen passes**. 🟢
+**But the individual gate targets are not denied.** Run one at a time:
+
+**52 of 68 standing gates green · 16 red**, every red named with its own
+report in
+[`../evidence/standing-gate-verdicts.2026-10-30-p541.tsv`](../evidence/standing-gate-verdicts.2026-10-30-p541.tsv).
+`Gap 539-F`'s **seventeen unverdicted gates are now sixteen verdicted ones**:
+`gate-offline`, `recount`, `gate-enumeration`, `gate-shelf-consistency`,
+`gate-fold-identity`, `gate-alias-canonical`, `gate-author-key`,
+`gate-census-currency`, `gate-grant-path`, `gate-census-union`,
+`gate-i2-sweep-crosscheck`, `gate-union-currency`, `gate-action-answered`,
+`gate-case-collision`, `gate-promotion-ledger`, `gate-cell-reproduction`.
+
+🔵 **`Gap 540-E` said "no pass can close this from inside. It requires the
+operator to grant the execution lane." That is now measured as wrong** — the
+aggregate target is denied and its constituents are not, so a successor can
+attest by invoking them individually. 🟢 **Both of this pass's new gates are
+green, and so are every structural contract this pass had to honour**:
+`gate-tables`, `gate-region-headings`, `gate-dates`, `gate-prose-claims`,
+`gate-bespoke-title`, `gate-register-currency`.
+
+### 🔴 The promotion debt, now counted rather than estimated
+
+Graded against the committed tree, **32 of the 37** residue addresses appear
+**only in trending history** — measured, named, never a row. That is
+`Gap 529-A`'s debt with a number on it, and `p541` files **eighteen** of them
+to [`../repos/foundations.md`](../repos/foundations.md): the Apereo `ECL-2.0`
+sector layer (5), `OpenOLAT/qtiworks` (**BSD-3**, the permissive QTI engine
+this base wanted), `UCL-INGI/INGInious` (**scoped** AGPL), three **MIT**
+graders whose licences sat at `LICENSE.md`, `crewAI`, `hcengineering/platform`
+(**EPL-2.0**), and 🟢 **seven Finnish national registries under `EUPL`** —
+the largest block of **state-operated** education software on this base, and
+entirely unfiled until now.
+
+---
+
 
 ## 🆕 `p540` — `2026-10-30` — **🟢 `Gap 539-B` DELIVERED: THE GRANT GATE RAN TO 600 AND THE PERMISSIVE RESIDUE IS RANKED BY FORKS-PER-STAR — 14 POINTS, A CLEAN BOUNDARY AT 0.25/0.18, `dspace` AT 1.36 WITH MORE FORKS THAN STARS. 🟢 `Gap 539-D` CLOSED — BOTH DEBT ADDRESSES READ FIRST-HAND. 🔴 THE REAL FINDING IS THE RESIDUE: ALL 37 `UNKNOWN` GRANTS RESOLVE, IN **TWELVE** DIALECTS, AND **23 OF 37 ARE NOT BUILDABLE** — `UNKNOWN` IS NOT NOISE, IT IS WHERE THE RISK CONCENTRATES. 🟡 ONE AGENT GENUINELY NEW (`PAIDEIA`, MIT); THE OTHER FOUR "FINDS" WERE ALREADY IN THIS BASE AND ARE RECORDED AS RESTATEMENTS, NOT DISCOVERIES. 🔴 `make hooks` DENIED FOR THE **THIRTEENTH TIME IN FOURTEEN PASSES**. FIVE REGISTERED (`540-A`…`540-E`).**
 

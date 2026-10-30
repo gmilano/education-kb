@@ -30,6 +30,8 @@ STORE_LOG ?= /tmp/education-kb-gate-evidence-store.log
 README_LOG := $(shell mktemp)
 REFSET_LOG ?= /tmp/education-kb-gate-refset-register.log
 PROMO_LOG ?= /tmp/education-kb-gate-promotion.log
+RESTATED_LOG ?= /tmp/education-kb-gate-restated-presence.log
+RESIDUE_LOG ?= /tmp/education-kb-gate-grant-residue.log
 LEDGER_LOG ?= /tmp/education-kb-gate-promotion-ledger.log
 # p531: the two logs that replace a status-masking pipe, plus the address-ledger gate's.
 LADDER_CENSUS_LOG ?= /tmp/education-kb-ladder-case-census.log
@@ -133,6 +135,7 @@ HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
              gate-alias-canonical gate-author-key gate-payload-digest \
              gate-address-shape gate-census-currency gate-grant-path \
              gate-carried-existence \
+             gate-restated-presence gate-grant-residue \
              gate-companion-closure gate-bare-slug-channel \
              gate-refset-register gate-domain-check \
              gate-region-place gate-backlog-denominator \
@@ -1495,3 +1498,22 @@ promotion-heads: ## p435 — ONLINE: the recency channel itself — HEAD commit 
 
 promotion-census: ## p434 — the unpromoted population with its family split.  A backlog, never a failure.
 	@$(PY) -I compose/code/p434-promotion-gate/promotion_gate.py census . || true
+
+# 🟢 p541 — Gap 540-A, the mirror of `gate-absence`.  p540 measured four of its
+# five candidates as already held; p541 measured TWENTY of twenty across the
+# mandated supply and four-region legs.  At that rate the mandated query set is
+# a restatement generator, and the only thing between it and the page was
+# whether a pass remembered to run four greps by hand.  Reads the nine pages
+# from a GIT REF, not the working tree, so a pass that has already written its
+# rows cannot self-match -- see the module docstring's CLASS 5.  No network.
+gate-restated-presence: ## p541 — Gap 540-A: no pass may present as a DISCOVERY an address the committed tree already holds, unless it registers the restatement with a reason
+	@cd compose/code/p541-restated-presence && { $(PY) -I test_restated_presence.py > $(RESTATED_LOG) 2>&1 || { echo "🔴 p541-restated-presence FAILED — the suite's own report follows:" ; sed "s/^/   /" $(RESTATED_LOG) ; false ; } ; } && echo "── p541-restated-presence (22 controls: the five roles, six false-positive classes — CLASS 6 found by this gate failing on its own author — the registration contract, and the fatal arm)" && echo "   PASS" || exit 1
+
+# 🟢 p541 — Gap 540-B, re-scoped by measurement.  540-B asked for Spanish and
+# Portuguese title strings; the 37 UNKNOWN payloads it pointed at were read
+# first-hand and language explains ONE of them.  Six would have become FALSE
+# PERMISSIVE GRANTS under the patch as asked, because a bespoke licence may
+# reproduce the MIT body verbatim under its own title.  The guard therefore
+# runs BEFORE recall, and this suite fails if that order is ever inverted.
+gate-grant-residue: ## p541 — Gap 540-B: a stock BODY under a non-stock TITLE is not that family, a referenced grant is not a reproduced one, and a template fill-in is not a grant
+	@cd compose/code/p541-grant-residue && { $(PY) -I test_grant_residue.py > $(RESIDUE_LOG) 2>&1 || { echo "🔴 p541-grant-residue FAILED — the suite's own report follows:" ; sed "s/^/   /" $(RESIDUE_LOG) ; false ; } ; } && echo "── p541-grant-residue (19 controls: the bespoke-title guard with its own FP-1 class, by-reference vs reproduced, the ladder stub, and the cost-ordering control)" && echo "   PASS" || exit 1

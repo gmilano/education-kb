@@ -1,0 +1,38 @@
+address	recorded_p540	spdx_of	classify_grant	residue_cause	detail	payload_bytes	safe_to_name
+AStheTECH/mewcp-google-classroom	UNKNOWN	unknown-text	NONE	BESPOKE	AStheTECH Community License (ACL)	6489	no
+Khan/tutoring-accuracy-dataset	UNKNOWN	unknown-text	NONE	BESPOKE	Evaluation Dataset License; Conditions of Use	2690	no
+aclascollege/polymath	UNKNOWN	unknown-text	NONE	BESPOKE	ODC Open Database License (ODbL)	25276	no
+heronerar/OpenGaokao	UNKNOWN	unknown-text	NONE	BESPOKE	OpenGaokao Source-Available License 1.0	15992	no
+nakafaai/aksara	UNKNOWN	unknown-text	NONE	BESPOKE	Nakafa Source Available License 2.0	11997	no
+sodadata/soda-core	UNKNOWN	unknown-text	NONE	BESPOKE	Elastic License 2.0	3804	no
+yuanjiusheng/cloud-learning-ce	UNKNOWN	unknown-text	NONE	BESPOKE	-	4117	no
+QingdaoU/Judger	UNKNOWN	MIT	MIT	BESPOKE-OVER-STOCK	The Star And Thank Author License (SATA)	1823	no
+UCL-INGI/INGInious	UNKNOWN	AGPL-3.0	AGPL-3.0	BESPOKE-OVER-STOCK	Most of the files in INGInious are distributed under the GNU AGPL v3 licence,	34764	no
+open-webui/open-webui	UNKNOWN	BSD-3-Clause	BSD-3-Clause	BESPOKE-OVER-STOCK	Open WebUI License	2819	no
+sdrangan/llmgrader	UNKNOWN	MIT	MIT	BESPOKE-OVER-STOCK	PySilicon Research License	1224	no
+snflwr-ai/snflwr.ai	UNKNOWN	MIT-like	AGPL-3.0	BESPOKE-OVER-STOCK	snflwr.ai — Proprietary Software License	2833	no
+willwearing/graspful	UNKNOWN	MIT	MIT	BESPOKE-OVER-STOCK	O'Saasy License Agreement	1439	no
+opetushallitus/ataru	UNKNOWN	unknown-text	NONE	BY-REFERENCE	EUPL 1.2	296	after-fix
+opetushallitus/ehoks	UNKNOWN	unknown-text	NONE	BY-REFERENCE	EUPL 1.1	632	after-fix
+opetushallitus/eperusteet	UNKNOWN	unknown-text	NONE	BY-REFERENCE	EUPL 1.1	632	after-fix
+opetushallitus/koski	UNKNOWN	unknown-text	NONE	BY-REFERENCE	EUPL 1.1	654	after-fix
+opetushallitus/oppijanumerorekisteri	UNKNOWN	unknown-text	NONE	BY-REFERENCE	EUPL 1.1	632	after-fix
+opetushallitus/organisaatio	UNKNOWN	unknown-text	NONE	BY-REFERENCE	EUPL 1.1	632	after-fix
+opetushallitus/valtionavustus	UNKNOWN	unknown-text	NONE	BY-REFERENCE	EUPL 1.1	653	after-fix
+rstudio/ggcheck	UNKNOWN	unknown-text	NONE	LADDER-STUB	-	45	after-fix
+rstudio/tblcheck	UNKNOWN	unknown-text	NONE	LADDER-STUB	-	46	after-fix
+shmercer/writeAlizer	UNKNOWN	unknown-text	NONE	LADDER-STUB	-	47	after-fix
+Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor	UNKNOWN	ECL-2.0	ECL-2.0	NAMED	ECL-2.0	9919	yes
+Apereo-Learning-Analytics-Initiative/OpenDashboard-api	UNKNOWN	ECL-2.0	ECL-2.0	NAMED	ECL-2.0	9919	yes
+Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	UNKNOWN	ECL-2.0	ECL-2.0	NAMED	ECL-2.0	9919	yes
+Apereo-Learning-Analytics-Initiative/OpenLRS	UNKNOWN	ECL-2.0	ECL-2.0	NAMED	ECL-2.0	11087	yes
+Apereo-Learning-Analytics-Initiative/lap-sakai-extractor	UNKNOWN	ECL-2.0	ECL-2.0	NAMED	ECL-2.0	11087	yes
+EducationalTestingService/skll	UNKNOWN	BSD-3-Clause	BSD-3-Clause	NAMED	BSD-3-Clause	1555	yes
+KualiCo/rice	UNKNOWN	ECL-2.0	ECL-2.0	NAMED	ECL-2.0	11106	yes
+OpenOLAT/qtiworks	UNKNOWN	BSD-3-Clause	BSD-3-Clause	NAMED	BSD-3-Clause	2058	yes
+PrairieLearn/PrairieLearn	UNKNOWN	AGPL-3.0	AGPL-3.0	NAMED	AGPL-3.0	36983	yes
+Priyamakeshwari/TeachGPT	UNKNOWN	MIT	MIT	NAMED	MIT	1057	yes
+Teachable-AI-Lab/tutor_gym	UNKNOWN	MIT	MIT	NAMED	MIT	1099	yes
+crewAIInc/crewAI	UNKNOWN	MIT	MIT	NAMED	MIT	1055	yes
+hcengineering/platform	UNKNOWN	unknown-text	EPL-2.0	NAMED	EPL-2.0	14197	yes
+portabilis/pre-matricula-digital	UNKNOWN	AGPL-3.0	NONE	NAMED	AGPL-3.0	35326	yes

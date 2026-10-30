@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Foundational Education Repos
 
-**Pass `p540` · 2026-10-30.** Load-bearing systems an education engagement is
+**Pass `p541` · 2026-10-30.** Load-bearing systems an education engagement is
 likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms, standards and
 toolkits the agents must live beside.
@@ -195,6 +195,127 @@ that defect, `p517` fixed it in
 [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh), and the bulk gate
 inherits the fix — a probe that assumed `main` would have filed a top-20
 backlog address as UNRESOLVED.
+
+## 🆕 `p541` — eighteen rows off the promotion debt, and the EMEA public-sector layer this base never filed
+
+🔵 **Where these came from.** Not from a search. p540 resolved the 37
+`UNKNOWN` grants in its residue into twelve dialects **in prose** and filed
+none of them. Graded against the committed tree by
+[`gate-restated-presence`](../compose/code/p541-restated-presence/),
+**32 of those 37 appear only in trending history** — measured, named, never a
+row. That is `Gap 529-A`'s promotion debt with a number on it. Every grant
+below was re-read first-hand this pass as **bytes at
+`raw.githubusercontent.com`** (`github.com` HTML answers 403 through this
+session's proxy) and the byte count is given so a successor can re-measure.
+
+### 🟢 The Apereo sector layer — `ECL-2.0`, a real OSI licence both classifiers now name
+
+🔵 **`ECL-2.0` is the Educational Community License**, Apache-2.0 with a
+patent clause rewritten for university consortia. It is permissive and
+Globant can build on it. It is also the single most common grant in this
+residue, which says something about where education's institutional code
+actually lives.
+
+| Repo | Grant (bytes read) | What it is | Reuse |
+|---|---|---|---|
+| [`Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor`](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | 🟢 **ECL-2.0** (9,919 B) | The LAP batch engine: pulls from an LRS and a SIS, runs risk models, writes scores back | 🟢 The reference pipeline for dropout-risk work |
+| [`Apereo-Learning-Analytics-Initiative/OpenDashboard-api`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | 🟢 **ECL-2.0** (9,919 B) | The API half of the analytics dashboard | 🟢 Serve LAP output to an LMS |
+| [`Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 🟢 **ECL-2.0** (9,919 B) | The dashboard UI, explicitly `legacy` | 🟡 Read for the data contract, not to deploy |
+| [`Apereo-Learning-Analytics-Initiative/lap-sakai-extractor`](https://github.com/Apereo-Learning-Analytics-Initiative/lap-sakai-extractor) | 🟢 **ECL-2.0** (11,087 B) | Extracts Sakai activity into the LAP schema | 🟢 The pattern to copy for a Moodle/Canvas extractor |
+| [`KualiCo/rice`](https://github.com/KualiCo/rice) | 🟢 **ECL-2.0** (11,106 B) | Kuali Rice — the middleware under Kuali's higher-ed administration suite (workflow, identity, business rules) | 🟡 Large and institutional; take the workflow engine, not the suite |
+
+🔴 **One warning carried from p540's ranking, not re-measured here:**
+`Apereo…/OpenLRS` is already on this base and its GitHub description reads
+**"Deprecated"**. The sector licence does not make a dead project live.
+
+### 🟢 Assessment and standards
+
+| Repo | Grant (bytes read) | What it is | Reuse |
+|---|---|---|---|
+| [`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) | 🟢 **BSD-3-Clause** (2,058 B — *"The QTIWorks source code is distributed under the 3-clause BSD licence"*) | A **QTI 2.1** assessment engine — delivery, response processing, scoring | 🟢 **The permissive QTI implementation this base has wanted.** Standards-compliant item banks without an AGPL obligation |
+| [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | 🟡 **AGPL-3.0, SCOPED** (34,764 B; the file opens *"Most of the files in INGInious are distributed under the GNU AGPL"*) | Automated grading of programming assignments, container-isolated, from UCLouvain | 🔴 **Copyleft and the grant is not repository-wide.** `p382`'s subtree class: "most of the files" obliges a per-path read before any reuse |
+
+### 🟢 The ladder's own blind spot — three MIT grants one rung further along
+
+🔴 **Each of these three serves a two-line template fill-in at `LICENSE`** —
+`YEAR: 2021 / COPYRIGHT HOLDER: …`, 45–47 B, written by R's
+`usethis::use_mit_license()` — **and the real MIT text at `LICENSE.md`.** A
+ladder that probes `LICENSE` and stops reads the fill-in and reports nothing.
+🔵 `p275` taught this base that *"the LADDER, not the slug, is the defect"*;
+this is that lesson in a shape its authors had not seen — **the file exists
+and is not a grant.** All three `LICENSE.md` reads were confirmed **200,
+`# MIT License`** this pass.
+
+| Repo | Grant | What it is |
+|---|---|---|
+| [`rstudio/ggcheck`](https://github.com/rstudio/ggcheck) | 🟢 **MIT** (at `LICENSE.md`; `LICENSE` is a 45 B stub) | Inspects student `ggplot2` code for automated grading of data-viz exercises |
+| [`rstudio/tblcheck`](https://github.com/rstudio/tblcheck) | 🟢 **MIT** (at `LICENSE.md`; `LICENSE` is a 46 B stub) | The table equivalent — grades student data frames against an expected result |
+| [`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) | 🟢 **MIT** (at `LICENSE.md`; `LICENSE` is a 47 B stub) | Automated scoring of **student writing quality** from scored corpora |
+
+🔵 **Why these three are worth a row:** automated grading of *statistics and
+writing* is the assessment case this base has otherwise only held for code.
+
+### 🟢 EMEA, public sector — `opetushallitus`, seven national registries under `EUPL`
+
+🟢 **This is the largest single block of **state-operated** education software
+on this base, and it was entirely unfiled.** The Finnish National Agency for
+Education publishes its production registries in the open. 🔴 **The grant is
+licensed *by reference*, not reproduced**: each `LICENSE` is a ~650 B English
+notice naming the **EUPL, Version 1.1 or subsequent** and pointing at
+`joinup.ec.europa.eu` for the text. 🔵 **The version matters and the base had
+it wrong by implication** — the only EUPL title either classifier carries is
+**1.2**, and six of these seven say **1.1**.
+
+| Repo | Grant (bytes read) | What it is |
+|---|---|---|
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | 🟡 **EUPL-1.1+** by reference (654 B notice) | The **national study-rights and completed-studies register**. 23★ · 12 forks |
+| [`opetushallitus/eperusteet`](https://github.com/opetushallitus/eperusteet) | 🟡 **EUPL-1.1+** by reference (632 B) | The **national curriculum** service — the machine-readable core curriculum |
+| [`opetushallitus/ehoks`](https://github.com/opetushallitus/ehoks) | 🟡 **EUPL-1.1+** by reference (632 B) | Personal competence-development plans for vocational students |
+| [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | 🟡 **EUPL-1.1+** by reference (632 B) | The national **learner-identifier** registry |
+| [`opetushallitus/organisaatio`](https://github.com/opetushallitus/organisaatio) | 🟡 **EUPL-1.1+** by reference (632 B) | The register of educational **institutions** |
+| [`opetushallitus/valtionavustus`](https://github.com/opetushallitus/valtionavustus) | 🟡 **EUPL-1.1+** by reference (653 B) | State **grant administration** for education providers |
+| [`opetushallitus/ataru`](https://github.com/opetushallitus/ataru) | 🟡 **EUPL-1.2** by reference (296 B — the one that says 1.2) | The national **application and admissions** system |
+
+🔴 **EUPL is reciprocal.** It is a copyleft licence with an EU-law
+jurisdiction clause, so these are **reference architectures and integration
+targets, not components to vendor into a client's proprietary stack.** 🟢
+What they are worth is the **data model**: a working, legally published,
+national-scale set of schemas for learners, institutions, curricula and
+admissions — the thing every EMEA public-sector education engagement has to
+invent otherwise.
+
+### 🟢 Two general-purpose rows the residue also returned
+
+| Repo | Grant (bytes read) | Note |
+|---|---|---|
+| [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 🟢 **MIT** (1,055 B, **untitled** body) | The multi-agent framework. 🔵 Filed because its grant was in the `UNKNOWN` residue for `p314`'s untitled-payload reason, not because this base lacked the name |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) | 🟡 **EPL-2.0** (14,197 B) | Huly platform — project/knowledge management. 🟡 **Weak copyleft**: file-level reciprocity, so it is usable alongside proprietary code but not inside it |
+
+### 🟢 Two Spanish-language curriculum repos, with a split grant worth reading as a model
+
+| Repo | Grant (bytes read) | Note |
+|---|---|---|
+| [`CaminosMarina/curso-ia`](https://github.com/CaminosMarina/curso-ia) | 🟡 **SPLIT — content `CC BY-SA 4.0`** (`LICENSE`, 1,900 B) **and code `MIT`** (`LICENSE-CODE`, 1,534 B, confirmed 200) | A Spanish self-study AI curriculum running LLM fundamentals → agents → **MCP** → n8n automation. 🟢 **The licence structure is the lesson**: it separates the course text from the scripts, names third-party material as retaining its own terms, and says so in the file. 🔴 A roundup described this repo as "MIT"; MIT covers `scripts/` and lesson snippets only |
+| [`thalisantunes/eecri-2026-ia-artesanato`](https://github.com/thalisantunes/eecri-2026-ia-artesanato) | 🟢 **MIT** (1,080 B, titled, `Copyright (c) 2026 Thalis Antunes de Souza`) | Workshop material from I EECri 2026 (Nova Porteirinha, MG, Brazil): slides, scripts, a prompt sheet, OpenSCAD models, and **blind prompt tests across five models**. 🔵 Thin on education-platform relevance; filed for the **blind-test methodology**, which is a reusable evaluation harness |
+
+### 🔴 What the residue returned that must NOT become a row
+
+🔵 Recorded so a successor does not re-discover them as finds. Seven payloads
+are genuinely outside the stock table and **none is a permissive software
+grant**: [`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao)
+(*OpenGaokao Source-Available License 1.0*),
+[`nakafaai/aksara`](https://github.com/nakafaai/aksara) (*Nakafa Source
+Available 2.0*), [`sodadata/soda-core`](https://github.com/sodadata/soda-core)
+(*Elastic License 2.0*),
+[`AStheTECH/mewcp-google-classroom`](https://github.com/AStheTECH/mewcp-google-classroom)
+(*AStheTECH Community License*),
+[`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset)
+(*Evaluation Dataset License* — field-of-use limited to evaluation),
+[`aclascollege/polymath`](https://github.com/aclascollege/polymath) (**ODbL**,
+a database share-alike and not a code grant), and
+[`yuanjiusheng/cloud-learning-ce`](https://github.com/yuanjiusheng/cloud-learning-ce)
+(**all rights reserved**, in Chinese). 🔴 Plus the six **bespoke-over-stock**
+traps listed on [`../agents/top.md`](../agents/top.md#-p541--the-licence-traps-in-p540s-residue-and-why-gap-540-bs-own-remedy-is-unsafe).
 
 ## Platform cores
 

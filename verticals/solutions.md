@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p540` · 2026-10-30.** Every platform below is a real, running system that
+**Pass `p541` · 2026-10-30.** Every platform below is a real, running system that
 institutions already operate, with its licence read from **the licence file's own
 title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
 carried for two passes — "`github.com` returns HTTP 403 through the session
@@ -234,6 +234,47 @@ MIT repository**, and no row here pointed at it. Registered as `Gap 533-A`.
 > queue, not off a search — this base had described it eleven separate times and
 > filed it nowhere. 🟡 **No location stated** on the page or in the README, so it
 > is unplaced; `Crosstalk-Solutions` as an org name is not evidence of a country.
+
+## 🆕 `p541` — §13, the **state-operated** platform layer: seven national registries, published in the open, and unfiled until now
+
+🔵 **This file's §1–§4 ask "which platform does the institution run?" This
+section asks a question the file had not: *which platform does the STATE
+run?*** For EMEA that answer is public, and it was sitting in p540's
+`UNKNOWN` residue because its grant is **licensed by reference** rather than
+reproduced — see
+[`../repos/foundations.md`](../repos/foundations.md#-emea-public-sector--opetushallitus-seven-national-registries-under-eupl)
+for the seven rows and their byte counts.
+
+| Layer | The Finnish national system | Grant | Why a studio cares |
+|---|---|---|---|
+| Curriculum | [`opetushallitus/eperusteet`](https://github.com/opetushallitus/eperusteet) | 🟡 EUPL-1.1+ | A **machine-readable national core curriculum**. `P580` had to build this shape from England's ontology; here it exists as running code |
+| Learner identity | [`opetushallitus/oppijanumerorekisteri`](https://github.com/opetushallitus/oppijanumerorekisteri) | 🟡 EUPL-1.1+ | A national learner identifier — the join key every analytics pattern on this base assumes and never names |
+| Study rights & records | [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | 🟡 EUPL-1.1+ | Study rights and completed studies. 23★ · 12 forks, and p540 ranked it **0.522 f/★** — deploy-per-institution |
+| Admissions | [`opetushallitus/ataru`](https://github.com/opetushallitus/ataru) | 🟡 EUPL-1.2 | National applications and admissions |
+| Institution register | [`opetushallitus/organisaatio`](https://github.com/opetushallitus/organisaatio) | 🟡 EUPL-1.1+ | The authoritative list of providers |
+| Vocational plans | [`opetushallitus/ehoks`](https://github.com/opetushallitus/ehoks) | 🟡 EUPL-1.1+ | Personal competence-development plans |
+| Funding | [`opetushallitus/valtionavustus`](https://github.com/opetushallitus/valtionavustus) | 🟡 EUPL-1.1+ | State grant administration |
+
+🔴 **The licence cell is honest about its own limit, which §12 established as
+this file's rule.** EUPL is **reciprocal** and carries an EU-law jurisdiction
+clause, so none of these is a component to vendor into a client's proprietary
+product. 🟢 **They are integration targets and data models** — and for an
+EMEA public-sector engagement that is worth more than a permissive component,
+because the schemas are the part a studio would otherwise have to negotiate.
+
+🔵 **The LATAM mirror of the same question, already on this base and now with
+its sibling read.** [`portabilis/i-educar`](https://github.com/portabilis/i-educar)
+is Brazil's largest free school-management system; this pass read its sibling
+[`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital)
+first-hand — **AGPL-3.0, 35,326 B, titled `LICENÇA PÚBLICA GERAL AFFERO GNU
+Versão 3`** — the **pre-enrolment** front door that municipal networks run
+before a learner reaches the SIS. 🔴 Both are AGPL: a network-service
+obligation, which for a hosted enrolment portal is the binding term.
+
+🟢 **The permissive assessment slot in §4 is now filled.**
+[`OpenOLAT/qtiworks`](https://github.com/OpenOLAT/qtiworks) is **BSD-3-Clause**
+(2,058 B) and implements **QTI 2.1** — delivery, response processing, scoring.
+Until this pass every QTI path on this base ran through a copyleft platform.
 
 ## 🆕 `p534` — §7, liveness of the attachment point: the thing a licence cell cannot say
 
