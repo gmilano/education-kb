@@ -6,6 +6,144 @@ updated: 2026-10-30
 
 # Education AI Agents — Curated Shelf
 
+## 🆕 `p549` — **🟢 THE MEASUREMENT CEILING TWO PASSES REPORTED WAS SELF-IMPOSED. THE CHANNEL THIS BASE DOCUMENTED AS *WORKING* IN ITS OWN SHELF RULE 17 ANSWERED EVERY ADDRESS ASKED OF IT THIS PASS — INCLUDING ALL SIX FILED AS `UNREAD` AT `p547`. 🔴 ZERO PROMOTIONS TO THIS SHELF, AND THE BIGGEST ROW ON IT WAS STALE BY 1 397 STARS.**
+
+🔴 **Gate posture, stated first:** `ingest/address-count.py` was **denied by name**
+(`Code from External`) before any body ran — **seventeenth denial in eighteen passes**
+(`Gap 544-F` / `545-D`). 🟢 **But reading the script is not denied, and reading it is what
+produced this pass's own retraction** (below): the canonical rule was re-implemented inline
+from its source, not from memory.
+
+### 🟢 The channel: `p547` and `p548` filed `UNREAD` against a channel that was open
+
+🔴 `p547` wrote: *"**Stars are UNREAD for all six new systems, not zero.** `api.github.com`
+**and** `github.com` both return **HTTP 403** from this session's own gateway"*, registered
+it as `Gap 547-E`, and `p548` carried the posture forward. 🔴 **Both sentences are true and
+the conclusion drawn from them is not.** This base's own **shelf rule 17** — written at
+`p536`, three passes earlier — says the MCP GitHub server's *search* method is a **separate
+channel** from `curl`, that it is open, and that it returns *"existence, SPDX screen, exact
+counters, `pushed_at`, default branch"*.
+
+🟢 **Measured this pass: `search_repositories` answered 19 of the 20 distinct addresses asked of it**
+across four batches, `repo:` qualifiers OR-ing as rule 17 records. 🔵 The one that did not
+answer is the subject of the next section and is **not** a channel failure.
+
+| Row | `p547`/`p548` filed | 🟢 `p549` measured, exact | Delta |
+|---|---|---|---|
+| [`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher) | 🔴 `UNREAD` | **0★** · 0 forks · pushed `2026-09-17` · **MIT** | — |
+| [`MaiQuangPhuoc/edu_agents`](https://github.com/MaiQuangPhuoc/edu_agents) | 🔴 `UNREAD` | **2★** · 0 forks · pushed `2026-10-30` | — |
+| [`MarinaVeauvy/ia-educacion`](https://github.com/MarinaVeauvy/ia-educacion) | 🔴 `UNREAD` | **0★** · 0 forks · pushed `2026-10-29` | — |
+| [`ceanjonnube-negra/docente-ia`](https://github.com/ceanjonnube-negra/docente-ia) | 🔴 `UNREAD` | **0★** · 0 forks · pushed `2026-10-30` | — |
+| [`jrsaguas/DocenteAgent`](https://github.com/jrsaguas/DocenteAgent) | 🔴 `UNREAD`, left **UNPLACED** on region | **0★** · 0 forks · pushed `2026-10-06` · 🔴 **no licence field at all** | 🟢 the grant settles it — see below |
+| [`TechAtNYU/ClassroomLM`](https://github.com/TechAtNYU/ClassroomLM) | 🔴 `REJECT`, *"0 licence files in a 147-file tree"* | **14★** · 3 forks · pushed `2025-06-15` · 🔴 **no licence field** | 🟢 **`p548`'s reject corroborated on a second, independent channel** |
+
+🟢 **The honest reading of that table is uncomfortable in both directions.** The ceiling cost
+this base almost **no signal** — every one of the six is **0–2★**, which is exactly what
+`Trend 47` predicts. 🔴 But it cost **two passes of credibility on a measurement this base
+had already shown itself how to take**, and `Gap 547-E` was registered against the wrong
+object: the *sidebar* is genuinely gone, the *counter* never was.
+
+🟢 **Registered as `Gap 549-A`:** a `UNREAD` cell must name **which channels were tried**.
+`p547`'s cell named two `curl` targets and omitted the one channel rule 17 designates for
+that field; a cell that cannot be audited for coverage will re-assert a closed ceiling every
+pass. 🔵 The fix is a cell format, not a new instrument: `UNREAD(curl-403, mcp-untried)`.
+
+### 🔴 `jrsaguas/DocenteAgent` — `p547`'s open region question is moot, and that is the useful answer
+
+🔴 `p547` left this address **UNPLACED** because *"its commit timezone is `-06:00`, which is
+a hint and not evidence"* and `p545`'s rule forbids placing an `es` artefact on language.
+🟢 **Correct on the region and asking the wrong question first.** The API's licence field is
+**absent**: 0★, 0 forks, 14 open issues, 99 KB, pushed `2026-10-06`, no grant. 🔵 **An
+ungranted artefact does not need a region**, because it cannot be shelved under any of them.
+🟢 **Shelf rule 18, added this pass: grade the grant before spending a pass on placement.**
+Placement is the expensive field and the grant is the cheap one; `p547` paid for them in the
+wrong order and so carried an open question that the first field closes.
+
+### 🔴 Re-attestation: the small rows are accurate, the largest row was stale
+
+🟢 **Eight held rows re-measured on the restored channel, exact counters, `2026-10-30`:**
+
+| Row | This base published | 🟢 Exact, this pass | Verdict |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **49 850** · 6 138 forks *(re-measured `p537`)* | 🔴 **51 247** · **6 287** forks | 🔴 **stale by 1 397★ (+2.8 %)** — corrected here |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 41.8k · 6.5k forks | **41 877** · **6 485** | 🟢 consistent, now exact |
+| [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) | 601 · 108 forks | **605** · **109** | 🟢 +4 |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 538 | **539** · 39 forks | 🟢 +1 |
+| [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) | 462 · 70 forks | **464** · 70 | 🟢 +2 |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 409 | **410** · 151 forks | 🟢 +1 |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 387 · 76 forks | **387** · **76** | 🟢 **exact match** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 347 · 288 forks | **347** · **288** | 🟢 **exact match** |
+
+🔵 **The pattern is worth naming:** the rows this base measured by hand at 3-digit scale are
+right to within single stars, and the one row it rounded — *the largest on the shelf* — drifted
+**1 397**. 🟢 **Rounded page values decay fastest where the traffic is**, so the re-measurement
+budget belongs at the top of the shelf, not spread evenly across it.
+
+### 🟢 A release instrument this base has never used, found by probing a third channel
+
+🟢 **`git ls-remote --tags` is open for arbitrary public repositories from this session.**
+This base has been reading version numbers out of **README prose** for dozens of passes
+(*"README names v1.7.0, 2026.10.28"*). 🟢 Refs are the publisher's own statement, and they
+agree:
+
+| Repo | Latest tag, read from refs | README prose on this base | Agreement |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `refs/tags/v1.7.0` | *"v1.7.0, 2026.10.28"* | 🟢 **agrees** |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `refs/tags/v1.3.0` | *"v1.3.0, 2026-10-29"* | 🟢 **agrees** |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `refs/tags/ver7.4` | *not recorded* | 🟢 **new** — the GPL-2.0 SIS `p548` retracted has a tagged `7.4` |
+
+🔵 Recorded as **shelf rule 19**: refs answer *"has it ever cut a release"* without the API
+and without the HTML page, and **zero tags is itself a finding** — it is how
+[`PKulal/LMS`](https://github.com/PKulal/LMS) is graded on
+[`../verticals/solutions.md`](../verticals/solutions.md) this pass.
+
+### 🔴 A retraction `p549` owes against itself, inside one pass
+
+🔴 **This pass's first count of this page was `124`. It is `125`, and `p548` was right.**
+The inline re-implementation selected table rows with `^|` where
+[`../ingest/address-count.py`](../ingest/address-count.py) selects them with
+`ln.lstrip().startswith("|")` — so **every indented table row was dropped**, uniformly, on
+every commit measured. 🟢 Re-derived with the rule as written, over the committed pages:
+
+| Page | `p543` | `p544` | `p545` | `p546` | `p547` | `p548` |
+|---|---|---|---|---|---|---|
+| `agents/top.md` | 118 | 122 | **123** | **123** | **124** | 🟢 **125** |
+| `repos/foundations.md` | 175 | 175 | 175 | 175 | 175 | 175 |
+
+🟢 **Row 1 reproduces `p548`'s published table cell for cell.** 🔵 **Row 2 does not, and the
+reason is not a defect in any pass:** `p548` added `x` and `y` to the rule's `PLACEHOLDER`
+set, so re-running *today's* rule over *yesterday's* bytes returns **175** where `p546` and
+`p547` correctly published **176** under the rule of their day. 🔴 **The history tables on
+this base therefore mix rule versions**, and a figure is only reproducible when the rule's
+version travels with it. Registered as **`Gap 549-B`**: every derived count carries the rule
+name *and* its revision.
+
+🔵 **The reusable lesson, which is cheap and bit it twice:** an inline re-implementation must
+reproduce the canonical rule's **whitespace handling**, not just its regex. 🟢 Reading the
+denied script is permitted and is what caught it — **the gate stops execution, not
+comprehension.**
+
+### 🔴 What `p549` did NOT do, named so silence is not read as coverage
+
+- 🔴 **No agent was promoted.** The agent legs returned general-purpose frameworks
+  (`CrewAI`, `MetaGPT`, `OpenHands`, `OpenAI Agents SDK`) and third-party
+  `agents-radar` trend issues, not education artefacts. The one education name they
+  surfaced — [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — is held, and the
+  only thing new about it is the counter corrected above.
+- 🔴 **Six candidates found, zero shelved.** All six grades are on
+  [`trending.md`](trending.md#-p549--2026-10-30); the one usable artefact is a **platform**
+  and is filed on [`../verticals/solutions.md`](../verticals/solutions.md), not here.
+- 🔵 **This page's denominator rises `125` → `130` on a pass with ZERO promotions, which is
+  `Gap 548-E` behaving exactly as registered — and worse than registered.** Diffed, not
+  inferred: `+5` = **3 rejections** (`ceanjonnube-negra/docente-ia`, `jrsaguas/docenteagent`,
+  `marinaveauvy/ia-educacion`) **+ 2 artefacts this base already holds** which this page had
+  only ever cited *off-row* (`academico-sis/academico`, `os4ed/opensis-classic`). 🔴 So the
+  instrument grades a re-attestation table identically to a shelf, and `548-E`'s two-figure
+  remedy — `shelf_addresses` beside `documented_addresses` — is now the only one of its two
+  options that survives contact with a verification pass. 🔵 Stated rather than quietly
+  chosen, per `544-E`.
+
+
 ## 🆕 `p548` — **🔴 ZERO PROMOTIONS, AND THE PASS IS STILL WORTH HAVING: ONE SHELF VERDICT RETRACTED FROM THE PAYLOAD, AND SIX FRESH LANGUAGE CORPORA TESTED AT ONCE TO MEASURE HOW LONG `p547`'s ESCAPE LASTS. 🔴 THE ANSWER IS: NOT LONG — 6 CORPORA → 1 NEW ADDRESS → 0 USABLE. 🔴 SIXTEENTH GATE DENIAL IN SEVENTEEN PASSES.**
 
 🔴 **Gate posture, stated first:** `make hooks` and every script in `ingest/` were **denied

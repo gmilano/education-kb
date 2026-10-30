@@ -43,6 +43,40 @@ third LMS) — D2L Brightspace carries a large share of North American higher ed
 [`RohanMuppa/brightspace-mcp-server`](https://github.com/RohanMuppa/brightspace-mcp-server)
 is MIT.
 
+
+#### 🆕 `p549` — regulation thickened, supply did not move for a tenth pass
+
+🔴 **No new NA supply artefact — tenth consecutive pass.** The leg
+`AI education North America 2026 adoption regulation players` again led with the
+*"134 bills across 31 states"* figure this base **retired at `p455`** (one tracker that three
+others disagree with by 2.6×). 🔵 Named so the next pass recognises it; **not re-ingested.**
+
+🟢 **What is new and citable is that the regime has moved from guidance to *mandate* in a
+countable set of states**, which changes what a district engagement must ship:
+
+- 🟢 **Four states now require both state-level guidance *and* district policy adoption** —
+  **Maryland**, **Idaho**, **Oklahoma**, **Virginia**. Maryland's package also calls for
+  district **AI coordinators**, i.e. a named human owner.
+- 🟢 **New York `A 9190`** limits classroom AI use to **grade 9 and above**, with exceptions
+  for diagnostics and special education. 🔵 **This is an age-gate in statute**, and it is the
+  first NA instrument on this base that a product must enforce in code rather than in policy.
+- 🟡 **`K-12 AI Literacy and Readiness Act of 2026`** advanced out of House committee —
+  🔴 **not law**, recorded as pending.
+- 🔵 **NYC** issued preliminary guidance (**March 2026**) on a traffic-light framework;
+  **Berkeley Law** barred AI from exams and credited coursework from **summer 2026**.
+- 🔵 The student-drafted **`STUDENTS FIRST Act of 2026`** (all 50 states, via AASA) proposes
+  AI-literacy instruction, no AI on graded assessments, and a **right to appeal an
+  AI-detection finding**. 🔴 A proposal, not law — but the appeal right is the clause a
+  vendor would have to build, so it is worth tracking.
+
+🟢 **The opportunity, stated as work:** NA's binding constraint is now **enforceable policy
+in the product** — per-grade gating, a named-owner audit trail, and an appealable
+AI-detection decision. 🔵 The agent shelf has exactly one artefact shaped like that
+([`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills), **605★**
+re-measured this pass, because it ships **eval rubrics** rather than prompts), and the
+platform layer that would carry the audit trail is **not** NA-origin. 🔴 **That asymmetry is
+the NA gap:** the regime is the most prescriptive of the four regions and the open-source
+supply answering it is the thinnest.
 ### EMEA
 
 🟢 **The only region that produced claims this base did not already hold.** Both are
@@ -81,6 +115,39 @@ base already tracks. **Next pass: resolve it or drop it.**
 **EU AI Act** Article 50 calendar, and the European Commission's updated ethical guidelines
 on AI in education.
 
+
+#### 🆕 `p549` — one date changed, and it changes a programme plan
+
+🔴 **No new EMEA supply artefact this pass.** The leg
+`AI education EMEA 2026 adoption regulation players` returned EU AI Act commentary only, and
+🔴 **no quantitative EMEA adoption figure survived sourcing** — the one number offered was
+US-derived. 🔵 Stated rather than left silent.
+
+🟢 **The one item worth recording is a deadline move, and sources conflict, so the conflict
+is recorded with it:**
+
+| Claim | Source class | Status on this base |
+|---|---|---|
+| Education AI is **Annex III high-risk** where a system evaluates learners, assigns them to programmes, detects prohibited behaviour in assessment, or gates access to qualifications | 🟢 held, primary-grounded | 🟢 **unchanged** |
+| Stand-alone Annex III high-risk obligations apply from **2 August 2026** | 🔵 guide | 🔴 **superseded by the next row** |
+| 🆕 The **Digital Omnibus** moves stand-alone Annex III obligations to **2 December 2027**, and AI embedded in regulated products to **2 August 2028** | 🟡 law-firm bulletin (April 2026) and consultancy commentary | 🟡 **RECORDED WITH ITS CONFLICT** — one source notes formal adoption still pending at the time of writing; the Commission's own timeline records amendments **adopted June 2026, in force 27 July 2026** |
+| 🔴 The **Official Journal text is the control** | — | 🔴 **UNREAD** — `eur-lex` is a **gateway policy denial** on this session (`Gap 500-D`, diagnosed from the gateway's own log at `p546`), so this base **cannot** close the date itself |
+
+🔴 **So the honest position is: the direction of travel is clear and the date is not
+closeable from here.** 🟢 **What that means commercially is unambiguous either way** — a
+2026 EMEA engagement has **more runway than the 2026 date implied**, and a programme plan
+built on *"conformity assessment by August 2026"* is planning against a date that two
+independent secondary sources say has moved by sixteen months.
+
+🔵 **Other EMEA positions, all held, none moved:** the UK stays principle-based through
+existing regulators; parts of Europe are restricting classroom phones. 🟢 The EMEA supply
+rows on this base remain the institutional ones —
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) (Apache-2.0, TH
+Mittelhessen), [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem)
+(MIT, England's national curriculum as an MCP server) and
+[`KonstantinosPetrakis/esco-skill-extractor`](https://github.com/KonstantinosPetrakis/esco-skill-extractor)
+(MIT, EU **ESCO** taxonomy) — and 🔴 **two of those three are over a year without a commit**
+(`p546`'s dating), which is still EMEA's real weakness: **maturity, not count.**
 ### APAC
 
 🔴 **Nothing new, and the shape of the blank is worth stating precisely.** The leg returned
@@ -102,6 +169,43 @@ supply legs are worth more here than the English demand leg.
 on-premise classroom (**`P590`**), and `openSIS`'s new GPL-2.0 status strengthens that
 recipe's administration tier for the same reason it does NA's.
 
+
+#### 🆕 `p549` — APAC produced the pass's **only** artefact, and its regime is the one that asks for it
+
+🟢 **The one new platform this pass is APAC-origin and placed on in-repo evidence**, not on
+language: [`PKulal/LMS`](https://github.com/PKulal/LMS) — **Apache-2.0**, REUSE-compliant at
+file level, multi-tenant, copyright **Pace Wisdom Solutions Pvt. Ltd.**, roadmap naming
+**India's DPDP Act** beside GDPR. 🔵 Full attestation on
+[`../verticals/solutions.md`](../verticals/solutions.md).
+
+🟢 **Regulatory picture, graded source by source:**
+
+- 🟢 **South Korea — `AI Basic Act` in force `22 January 2026`**, with MSIT signalling 2026
+  as effectively a **pilot year with limited enforcement**. 🟡 Law-firm sourced; the
+  enforcement posture is commentary, the commencement date is not.
+- 🔵 **Vietnam — `Decision No. 33/2026/QD-TTg`** lists **education** among six high-risk
+  sectors. 🔵 **Already held** — `p547` cited it on the `Math_teacher` row — and the sources
+  this pass **disagree on its date**, so the instrument stands and the date does not.
+- 🟢 **Australia — `TEQSA` requires *all* higher-education providers to file institutional
+  action plans** addressing generative-AI risk. 🔵 **This is the most operationally
+  demanding instrument in the region and the least discussed**: it is a per-institution
+  deliverable, which is a procurement trigger rather than a compliance cost.
+- 🔵 **Japan** principles-based with no penalties; **Singapore** toolkit-based (**AI
+  Verify**); **China** targeted rules. 🔵 The regional privacy floor is the binding layer in
+  practice — PDPA (SG, TH), PDPO (HK), Decree 13 (VN), PDP Law (ID), PIPA (KR), APPI (JP).
+- 🔵 **EU spillover is real for APAC vendors** selling into the EU; the Annex III date change
+  recorded under **EMEA** above applies to them too.
+- 🔴 **Market-research naming of "key vendors" (Google, Microsoft, IBM, Pearson, Byju's) is
+  NOT ingested** — it is a vendor-report list with no method attached, and this base has
+  retired that source class.
+
+🟢 **The opportunity, stated as work:** APAC is the only region where this base now holds
+**both** a permissive multi-tenant platform **and** a shelf row whose architecture is a
+direct match to its own high-risk regime
+([`Swon010191/Math_teacher`](https://github.com/Swon010191/Math_teacher), MIT, deterministic
+maths plus a teacher-approval gate — 🔴 re-measured this pass at **0★**, so read it as an
+architecture, not a dependency). 🔵 Recipes: **`P602`** (platform + AI layer) and **`P603`**
+(the three-channel grant probe) on [`../compose/patterns.md`](../compose/patterns.md).
 ### LATAM
 
 🔴 **Nothing new; every instrument returned was held.** The **UNU** working paper on AI
@@ -133,6 +237,96 @@ usable tier here**, and it is now four platforms deep rather than three.
 region's load-bearing recipe, and the connectivity constraint behind it — *"generative AI's
 usefulness in education depends on access to reliable internet and devices, something that
 remains uneven in the region"* — was restated by the channel again this pass.
+
+
+#### 🆕 `p549` — the strongest demand evidence of the four regions, from a primary institutional study
+
+🔴 **No new LATAM supply artefact.** The three LATAM-adjacent addresses touched this pass
+were re-measured, and all three are **0★**
+([`MarinaVeauvy/ia-educacion`](https://github.com/MarinaVeauvy/ia-educacion),
+[`ceanjonnube-negra/docente-ia`](https://github.com/ceanjonnube-negra/docente-ia),
+[`jrsaguas/DocenteAgent`](https://github.com/jrsaguas/DocenteAgent) — the last of which is
+🔴 **ungranted**, which closes `p547`'s open placement question by making it moot).
+
+🟢 **But LATAM returned this pass's best demand evidence, and it is a governance *gap*
+measured by an institution rather than a vendor:**
+
+| Finding | Figure | Source class |
+|---|---|---|
+| 🟢 **Higher-education AI use vs. formal framework** — the gap, in one study | **87 %** of institutions use AI in ≥1 area · 🔴 **26 %** have a formal framework | 🟢 **UNESCO IESALC**, 200 institutions across 19 countries — institutional, primary |
+| 🟢 **Brazil, schools** | **53 %** of school administrators use AI · 🔴 **22 %** have school-level guidelines | 🟢 **Cetic.br, 2026** — national statistical agency |
+| 🟡 Student / faculty engagement | **92 %** students · **79 %** faculty | 🟡 **Digital Education Council** LATAM survey 2026, with Tecnológico de Monterrey — survey, self-selected |
+| 🟢 **Regulatory fragmentation, counted** | **716** AI regulatory instruments, rules and legislative proposals across **23** countries and territories | 🟢 **Universidad de los Andes, 2026** — academic census |
+| 🔵 Regional institution-building | **UNESCO Observatory on AI in Education for LAC**, launched **April 2026, Santiago, Chile** | 🟢 primary (UNESCO) |
+
+🟢 **The two numbers that matter sit next to each other: `87 %` adoption against `26 %`
+governance, and `53 %` against `22 %` one level down.** 🔵 **That is a 3-to-1 and a 2.4-to-1
+gap between what is deployed and what is governed** — and it is the clearest commercial
+statement in this document, because the deliverable is not a model. **It is the framework,
+the audit trail and the staff capability that 61–74 % of these institutions do not have.**
+
+🟡 **The `716`-instrument count cuts the other way and must travel with the adoption
+figures:** there is no single regime to build against, so a LATAM product's compliance
+surface is **per-country by construction**. 🔵 The commentary consensus is that the region
+needs **common definitions, risk categories, audit principles and mutual recognition**
+rather than one law — which is exactly the shape of an engagement artefact, not a statute.
+
+🟢 **Where supply already exists for this:** the LATAM rows on this base are anchored to
+**national standards** rather than to prompts —
+[`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) (ENEM calibration) and
+[`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores)
+(BNCC competency codes, MIT, 🔴 0★). 🔵 **A standard-anchored artefact is the only kind that
+survives a 23-regime surface**, because the standard is the stable interface — which is
+`Trend 44`'s portability finding, arriving a second time from the demand side.
+## 🆕 `p549` — `2026-10-30` — **🟢 TENTH CONSECUTIVE SATURATION ON THREE LEGS, BROKEN ON THE FOURTH: LATAM RETURNED A **PRIMARY INSTITUTIONAL STUDY** WITH THE CLEANEST COMMERCIAL NUMBER IN THIS DOCUMENT — `87 %` ADOPTION AGAINST `26 %` GOVERNANCE. 🟢 EMEA RETURNED A **SIXTEEN-MONTH DEADLINE MOVE** THAT CHANGES A PROGRAMME PLAN. 🔴 NA AND APAC RETURNED REGULATION ONLY.**
+
+🟢 **The four mandated demand legs are reported in the single authoritative
+[`## Opportunities by region`](#opportunities-by-region) block above**, each with a
+`#### p549` subsection — including the regions that produced nothing, which say so. 🔵 This
+page carries **one** `##` region block by construction (`Gap 547-G`, closed at `p548`), and
+`p549` adds to that block rather than creating a second one.
+
+### 🔴 The four legs, graded per region
+
+| Leg | New claims | Of those, kept | Why |
+|---|---|---|---|
+| North America | regulation thickened | 🟢 **4 kept** (4 states mandating both tiers · NY `A 9190` grade-9 gate · `K-12 AI Literacy Act` pending · NYC March-2026 guidance) | 🔴 **0 supply** · 🔴 the `p455`-retired *"134 bills / 31 states"* figure led the results **again** and is **not** re-ingested |
+| EMEA | 1 date change | 🟡 **1 kept with its conflict** (Annex III → **2 Dec 2027**; embedded → **2 Aug 2028**) | 🔴 `eur-lex` is a gateway policy denial here (`Gap 500-D`), so this base **cannot** close the date; both readings are recorded |
+| APAC | 3 instruments | 🟢 **2 kept** (Korea `AI Basic Act` in force `22 Jan 2026` · Australia **TEQSA** per-provider action plans) | 🔵 Vietnam `33/2026/QD-TTg` already held, and this pass's sources disagree on its date · 🔴 vendor-report "key players" list **not ingested** |
+| LATAM | 5 findings | 🟢 **5 kept, 4 from primary institutions** | 🟢 UNESCO IESALC · Cetic.br · Universidad de los Andes · UNESCO LAC Observatory; 🟡 the Digital Education Council survey labelled as a survey |
+
+🟢 **The pattern across the four is worth stating because it inverts the usual one:** the
+**demand** side's best evidence this pass is **LATAM**, from institutions, with method
+attached — while **NA**, the region with the most prescriptive regime, produced **no supply
+artefact for the tenth consecutive pass**. 🔴 **An engagement is therefore better evidenced
+in LATAM and better regulated in NA, and this base's open-source supply answers neither
+well.**
+
+### 🔴 `Gap 549-F` — the regional opportunity blocks are not comparable, and that is a spec defect
+
+🔴 **Measured on this page:** the `#### p549` subsections above carry a **governance-gap
+percentage** for LATAM, a **statutory date** for EMEA, a **count of mandating states** for NA
+and a **commencement date plus a per-provider deliverable** for APAC. 🔵 Each is the best
+evidence its leg returned, and **none of them is the same quantity**, so a reader cannot rank
+the four regions on anything.
+
+🟢 **Registered as `Gap 549-F`:** the region block needs **one comparable field** carried by
+every region every pass — the candidate is *"what must a product enforce in code here"*,
+because all four regions produced an answer to it this pass (NA: per-grade gating and an
+appealable detection decision · EMEA: conformity assessment and human oversight on an
+Annex III system · APAC: a per-institution risk plan and a per-country privacy floor ·
+LATAM: a per-country compliance surface with no common definitions). 🔵 **`p549` does not
+add the field**, because adding a field to the authoritative block is a spec change that
+belongs beside `547-G` and `548-E` rather than inside one pass's section.
+
+### 🟢 `Gap 548-D` — the unreachable-primary-host pattern gains nothing this pass, and that is good news
+
+🔵 `548-D` recorded a third member of the unreachable-primary-host set. 🟢 **No new member
+this pass.** 🔴 `eur-lex` remains denied (`Gap 500-D`), which is the one that costs this page
+a fact it could otherwise close. 🟢 **Three channels were *gained* this pass instead**, all
+on the supply side and all recorded on [`../agents/trending.md`](../agents/trending.md): the
+MCP counter channel restored (shelf rule 17 was never closed), `git ls-remote` refs as a
+release instrument (shelf rule 19), and `git clone --depth 1` as a licence-census instrument.
 
 ## 🆕 `p548` — `2026-10-30` — **🔴 NINTH CONSECUTIVE DEMAND SATURATION, BUT NOT UNIFORMLY: EMEA RETURNED **TWO CLAIMS THIS BASE DID NOT HOLD** WHILE NA, APAC AND LATAM RETURNED **ZERO**. 🟢 `Gap 547-G` CLOSED — THIS PAGE NOW CARRIES EXACTLY ONE `## Opportunities by region`. 🔴 BOTH NEW EMEA CLAIMS ARE SECONDARY-SOURCED BECAUSE TWO MORE PRIMARY HOSTS FAIL DNS.**
 

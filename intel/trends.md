@@ -32,6 +32,119 @@ updated: 2026-10-30
 > not revised**: `p548`'s one new address is ungranted, making it 1 usable of 7
 > across two passes.
 
+> 🟢 **`p549` adds Trends 51, 52 and 53, and all three are measured on this pass's own
+> instruments rather than read from a channel.** Trend 51 is the one to take to a client,
+> because it is about due diligence on *any* open-source shortlist: 🔴 **a repository can be
+> cloneable, licensed and completely absent from GitHub's search index** — so a shortlist
+> built from search alone has a blind spot whose size cannot be measured from inside it.
+> Trend 52 is the uncomfortable one and it is about this base: 🔴 **a measurement ceiling
+> two passes reported was self-imposed**, and the channel that lifted it was written down in
+> this base's own shelf rules three passes earlier. Trend 53 is a demand-side finding with a
+> number attached: **adoption outruns governance by 3-to-1 in Latin American higher
+> education**, measured by an institution rather than a vendor.
+>
+> 🔵 **`Trend 47` (*the grant is the binding constraint*) is revised for the first time, not
+> merely reinforced:** `p549` found six candidates and **one carried a usable grant** — the
+> same ratio — but 🟢 **the usable one is the best-granted artefact on this base**, with
+> `762` of `854` tracked files carrying an in-header SPDX identifier. 🔵 So the constraint is not
+> that permissive grants are rare; it is that **they do not correlate with discoverability**.
+
+## 🆕 Trend 51 — **A repository can be licensed, maintained and cloneable while being invisible to GitHub search — and every open-source census runs through search**
+
+🔴 **The finding, measured rather than argued.** [`PKulal/LMS`](https://github.com/PKulal/LMS)
+is an Apache-2.0, REUSE-compliant, multi-tenant LMS: **854 files**, **764** of them carrying
+an in-header `SPDX-License-Identifier: Apache-2.0`, `HEAD 2abdade` dated **2026-10-08**,
+copyright **Pace Wisdom Solutions Pvt. Ltd.** 🔴 **Two independent GitHub search queries deny
+that it exists** (`repo:PKulal/LMS` → `total_count: 0`; `LMS in:name user:PKulal` →
+`total_count: 0`), and a full owner enumeration (`user:PKulal`, **31 repositories over two
+pages**) does not list it. 🟢 **Three other channels serve it**: the raw payload (HTTP 200,
+licence 11 362 B), the git smart-HTTP refs endpoint (HTTP 200, `HEAD 2abdade5…`) and a
+`--depth 1` clone (854 files).
+
+🔵 **Why it is a trend and not a curiosity.** Every open-source shortlist in this industry —
+including every census on this base since `p529` — is built by asking an index what exists.
+🔴 **The index's false negatives are, by construction, the one error class that no
+absence-check catches**: `p528` added a resolution probe (`README.md` on `main` *and*
+`master`) precisely to stop phantom "ungranted" verdicts, and that probe would have **passed**
+here, because the repository is genuinely there. The failure is upstream of it.
+
+🟢 **What to do about it, concretely, in a due-diligence setting:**
+
+1. 🟢 **Never conclude "no permissive option exists" from a search result set.** The strongest
+   permissive option in this category was invisible to the instrument and surfaced from a
+   plain web search of the artefact class.
+2. 🟢 **Verify an address on three channels before grading it:** search metadata (screen),
+   `raw.githubusercontent.com` (grant bytes), and `git ls-remote` (existence + releases).
+   Absence on any **one** is never absence. Recipe **`P603`**.
+3. 🔵 **Record which channel answered.** `Gap 549-A` makes that a cell format, because a
+   verdict whose provenance is unrecorded cannot be audited for coverage.
+
+🔵 **Cause not determined and not guessed:** index exclusion has several causes (recency,
+owner opt-out, spam heuristics, indexing lag) and this session cannot distinguish them.
+🟢 The measurement does not depend on the cause.
+
+## 🆕 Trend 52 — **A measurement ceiling is a claim about a pass, not about a session — and two consecutive passes here proved it the expensive way**
+
+🔴 **The finding.** `p547` recorded *"**Stars are UNREAD for all six new systems, not zero.**
+`api.github.com` **and** `github.com` both return **HTTP 403**"*, registered it as
+`Gap 547-E`, and `p548` carried the posture. 🔴 **Both `curl` facts are true. The conclusion
+is false.** This base's own **shelf rule 17**, written at `p536`, states that the MCP GitHub
+server's *search* method is a **separate channel**, that it is open, and that it returns
+*"existence, SPDX screen, exact counters, `pushed_at`, default branch"*.
+
+🟢 **Measured this pass: the channel answered 19 of the 20 distinct addresses asked of it**, and all six `UNREAD` cells
+resolved — to **0, 0, 0, 0, 2 and 14 stars**.
+
+🔵 **The cost accounting is the interesting part, and it cuts both ways:**
+
+- 🟢 **Signal lost: almost none.** Every one of the six is `0–2★`, which `Trend 47` predicts.
+- 🔴 **Credibility lost: real.** Two passes published a ceiling against a measurement the base
+  had already shown itself how to take, and `Gap 547-E` was registered against the wrong
+  object — the **sidebar** is genuinely gone, the **counter** never was.
+- 🔴 **A second cost, found only because the channel came back:** the shelf's largest row,
+  [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor), was carrying **49 850★** from
+  `p537` against an actual **51 247★** — **+1 397, +2.8 %**. 🟢 Every other re-measured row
+  was accurate to within 4 stars and two were exact. 🔵 **Rounded figures decay fastest at the
+  top of the shelf**, so a re-measurement budget should be spent **by rank, not by rota**.
+
+🟢 **The generalisation, which is rule 15 sharpened by one turn.** Rule 15 says a *channel* is
+the unit of a blockage; rule 17 narrows it to *the method on a server*. 🔴 **Trend 52 adds the
+time axis: a blockage is also scoped to the pass that measured it.** A closed-channel note is
+evidence about one request at one moment, and carrying it forward as a standing ceiling is how
+a base stops taking a measurement it is perfectly able to take. 🔵 **Re-probe every recorded
+blocker on the pass that depends on it** — the refutation here cost **one call**.
+
+## 🆕 Trend 53 — **In Latin American higher education, AI adoption outruns governance by 3-to-1 — and the deliverable is the governance, not the model**
+
+🟢 **The finding, from primary institutional sources rather than vendor surveys.**
+
+| Measure | Adopted | Governed | Gap | Source |
+|---|---|---|---|---|
+| Higher-education institutions, 19 countries | 🟢 **87 %** use AI in ≥1 area | 🔴 **26 %** have a formal framework | 🔴 **3.3×** | **UNESCO IESALC**, 200 institutions |
+| Schools, Brazil | 🟢 **53 %** of administrators use AI | 🔴 **22 %** have school guidelines | 🔴 **2.4×** | **Cetic.br, 2026** (national statistical agency) |
+
+🔵 **Why this is a trend and not a statistic.** The gap is **stable across two independent
+sources at two different levels of the system** (tertiary and school, regional and national),
+which is the pattern that survives re-measurement. 🟡 A third source — the Digital Education
+Council's LATAM survey, **92 %** of students and **79 %** of faculty engaging — points the
+same way and is labelled a survey, not a census.
+
+🔴 **The complicating number, which must travel with the other two.** A 2026 Universidad de
+los Andes census counted **716** AI-related regulatory instruments, rules and legislative
+proposals across **23** countries and territories. 🔴 **So there is no single regime to build
+against**: a product's compliance surface in this region is **per-country by construction**.
+
+🟢 **What it means for an engagement, stated as work rather than as insight.** The thing
+61–74 % of these institutions do not have is **not a model**. It is a framework, an audit
+trail, and staff capability — and because the regulatory surface is fragmented, the only
+artefact that ports across it is one **anchored to a standard** rather than to a regime.
+🔵 That is `Trend 44`'s portability finding arriving a second time, from the demand side:
+this base's LATAM supply rows are exactly the standard-anchored ones
+([`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) on ENEM,
+[`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores)
+on BNCC codes), and 🔴 both are `0★`, so they are architectures to read, not dependencies to
+take.
+
 ## 🆕 Trend 49 — **An "unlicensed" verdict is a claim about the prober, not the project — and this base just proved it against itself at 347 stars**
 
 🔴 **The finding.** This base published ⛔ **no grant** for

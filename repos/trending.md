@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p549` — `2026-10-30` — **🟢 GitHub TRENDING IS UNREADABLE FROM THIS SESSION AND THE SUBSTITUTE EVERY SOURCE OFFERS IS A THIRD-PARTY BOT FEED. 🟢 THE COUNTERS ARE READABLE AGAIN, SO THE FEEDS CAN BE *GRADED* RATHER THAN QUOTED — AND THEY DISAGREE WITH EACH OTHER BY 3 000 STARS ON THE SAME REPOSITORY ON THE SAME DAY.**
+
+🔵 **The supply narrative, the six grades, the `UNINDEXED-NOT-ABSENT` verdict class and the
+re-phrased-leg method finding are on
+[`../agents/trending.md`](../agents/trending.md#-p549--2026-10-30).** This entry carries the
+**trending channel** and the **counter census**.
+
+### 🔴 `github.com/trending` cannot be read here, and the mandated leg returns bots instead
+
+🔴 `github trending education AI 2026` returned, as its top nine organic results, **eight
+auto-generated issue threads** titled *"📈 AI Open Source Trends 2026-10-2x"* posted into
+third-party repositories (`agents-radar` and `news-radar` forks under
+`yueguan`, `kouweizhu`, `yaojiejia`, `bianzhilong2-ctrl`, `845421145-lang`,
+`datnguyenquy94`) plus two vendor blog posts. 🔴 **Not one of them is GitHub's own trending
+page**, and `github.com` HTML is **403** from this session's gateway (`Gap 547-E`).
+
+🟢 **What is new is that this base can now grade them.** With the counter channel restored
+(shelf rule 17, [`../agents/top.md`](../agents/top.md#-p549--2026-10-30)), the feeds' claims
+are falsifiable for the first time:
+
+| Claim, as the feeds state it | Exact value, MCP `search_repositories`, `2026-10-30` | Verdict |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) *"about 48 000 to 51 000 stars"*, daily gain *"roughly 1 900 to 2 400"* | 🟢 **51 247★** · 6 287 forks · pushed `2026-10-29T23:51` | 🟡 **upper bound right, band useless** — a **3 000-star** spread on one repository on one day |
+| *"today's top trending AI repo by new stars"* | 🔴 unverifiable — no open channel on this base serves a **time series** of stars | 🔴 **NOT INGESTED** |
+| [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) *"about 107 500 stars"* | 🔵 held address; not re-measured this pass (not an education artefact — a curriculum) | 🔵 out of scope |
+
+🔴 **Registered as `Gap 549-E`:** this base has **no instrument for a star *velocity***, only
+for a star *level*, and every trending feed trades in velocity. 🔵 The cheap fix is this
+base's own history: `git log` over its published figures already **is** a time series, at
+pass granularity — `DeepTutor` moved **49 850 → 51 247** between `p537` and `p549`. 🟢 So
+velocity is derivable from the base itself and does **not** require the channel the feeds use.
+
+### 🟢 Counter census — eight held addresses, exact, replacing rounded page values
+
+🟢 Full table with deltas on
+[`../agents/top.md`](../agents/top.md#-p549--2026-10-30). 🔴 **The one material staleness is
+the largest row:** `DeepTutor` at **+1 397★ (+2.8 %)** against the figure this base has
+carried since `p537`. 🟢 **Every other re-measured row was accurate to within 4 stars, and
+two were exact** (`educhain` 387 · 76, `openSIS-Classic` 347 · 288).
+
+🔵 **The finding is about where to spend a re-measurement budget:** rounded figures decay
+fastest at the top of the shelf, so **re-measure by rank, not by rota**.
+
+### 🟢 A release channel this base has never used
+
+🟢 **`git ls-remote --tags` is open from this session for arbitrary public repositories**, so
+*"has it cut a release"* no longer depends on README prose:
+
+| Repo | Latest tag, read from refs | Previously on this base |
+|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `v1.7.0` | README prose *"v1.7.0, 2026.10.28"* — 🟢 agrees |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `v1.3.0` (with `v1.3.0-rc.1`, `v1.2.1`, `v1.2.0-rc.2` behind it) | README prose *"v1.3.0, 2026-10-29"* — 🟢 agrees |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | `ver7.4` (`v7.3`, `v7.2`, `ver7.1` behind it) | 🟢 **new** — never recorded |
+| [`PKulal/LMS`](https://github.com/PKulal/LMS) | 🔴 **none** | 🟢 **new, and the absence is the finding** — pin a commit, not a tag |
+
+🔵 Recorded as **shelf rule 19** on [`../agents/top.md`](../agents/top.md). 🟢 It also
+corroborates two README-prose version claims this base has been carrying on trust, which is
+the first independent check either of them has had.
+
 ## 🆕 `p548` — `2026-10-30` — **🟢 `p547`'s TWO HEADLINE DISAGREEMENTS (**176 vs 175**, **123 vs 98**) ARE BOTH RESOLVED, AND NEITHER WAS A RULE DEFECT: ONE IS **STALENESS**, THE OTHER IS **`Gap 547-I` RECURRING ONE PAGE OVER** AND COMPILING `X/Y` AS A REAL ADDRESS. 🟢 `foundations.md` RE-DERIVES TO **175** AND `p546` WAS RIGHT. 🔴 NO NEW FOUNDATIONAL REPO FOR A TENTH PASS. 🔴 SIXTEENTH GATE DENIAL IN SEVENTEEN.**
 
 🔵 **The supply narrative, the six language legs and the `openSIS` retraction are on

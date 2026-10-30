@@ -4,6 +4,143 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p549` — `2026-10-30` — **🟢 `548-A` GENERALISED ONE LAYER UP AND `548-E` CONFIRMED BY MEASUREMENT (`+5` ON A ZERO-PROMOTION PASS). 🔴 SIX REGISTERED (`549-A`…`549-F`), ONE OF WHICH IS A NEW VERDICT CLASS. 🔴 `544-F`/`545-D` IS A SEVENTEENTH DENIAL — AND THIS PASS SHOWS THE DENIAL COSTS LESS THAN IT LOOKS, BECAUSE *READING* THE GATE'S CODE IS NOT DENIED. 🔴 ONE RETRACTION AGAINST `p549` ITSELF, CAUGHT INSIDE THE SAME PASS.**
+
+### 🟢 `Gap 548-E` — CONFIRMED by measurement, and worse than registered
+
+**Registered as:** *"the canonical rule needs a verdict-aware variant — either rejection
+tables carry a marker the extractor skips, or `address-count.py` reports `shelf_addresses`
+and `documented_addresses` as two figures."*
+
+🟢 **Measured this pass on `../agents/top.md`: `125` → `130` on a pass with ZERO
+promotions.** Diffed, not inferred — the `+5` is **3 rejections**
+(`ceanjonnube-negra/docente-ia`, `jrsaguas/docenteagent`, `marinaveauvy/ia-educacion`) **plus
+2 addresses this base already holds** which that page had only ever cited *off-row*
+(`academico-sis/academico`, `os4ed/opensis-classic`).
+
+🔴 **So the instrument grades a re-attestation table identically to a shelf**, which `548-E`
+did not anticipate: it foresaw rejections inflating the figure, not verifications. 🟢 **That
+settles the choice `p548` declined to make.** The marker remedy fails — there is no honest
+marker for *"this row re-measures a real shelf artefact filed on another page"* — so the
+**two-figure remedy** (`shelf_addresses` beside `documented_addresses`) is the only option
+that survives a verification pass. 🔵 Still a compiler-spec change, so still not made inside
+one pass's section; now with evidence rather than a prediction behind it.
+
+### 🟢 `Gap 548-A` — GENERALISED, not closed
+
+**Registered as:** the verdict class `ENUMERATED-NOT-READ` — *"knowing where a grant lives
+and never fetching it is an **unread** finding, not an **absence** finding."*
+
+🟢 **`p549` found the layer above it.** `548-A` assumes the address is known and the payload
+unfetched. 🔴 **This pass met an address the index says does not exist at all**, while three
+other channels serve it — see `549-C`. 🔵 **The two are the same error in different places:**
+an absence claim keyed to *a path* (`548-A`) and an absence claim keyed to *an index*
+(`549-C`). 🟢 `548-A` stays open as registered; `549-C` is its sibling, not its replacement.
+
+### 🔴 `Gap 549-A` — a `UNREAD` cell must name the channels that were tried
+
+🔴 **Found by measuring what `p547` and `p548` left unmeasured.** `p547` filed
+*"Stars are UNREAD for all six new systems"* citing `api.github.com` and `github.com` as
+`403`, registered `Gap 547-E`, and `p548` carried it. 🟢 **This base's own shelf rule 17
+(`p536`) designates a third channel for exactly that field, and it answered 19 of the 20
+distinct addresses asked of it this pass** — all six `UNREAD` cells resolved, to
+`0, 0, 0, 0, 2, 14`.
+
+🔵 **`547-E` was registered against the wrong object:** the *sidebar* is genuinely gone, the
+*counter* never was. **Asks:** a cell format that is auditable for coverage —
+`UNREAD(curl-403, mcp-untried)` — so that an unmeasured field cannot be read as an
+unmeasurable one. 🔵 Cost: a convention, no code.
+
+### 🔴 `Gap 549-B` — a derived count is not reproducible without its rule *revision*
+
+🔴 **Found by reproducing the canonical rule over six commits.** With
+`address-count.py`'s **current** `PLACEHOLDER` set, `../repos/foundations.md` measures **175
+at `p543` through `p548` inclusive** — while `p546` and `p547` **correctly published 176**
+under the rule of their day, because `p548` added `x` and `y` to that set as its own fix for
+`547-I` recurring. 🟢 **Both figures are right; neither is reproducible without its revision.**
+
+🔴 **The history tables on `../agents/trending.md`, `../repos/foundations.md` and this page
+currently mix revisions**, which is how `547-F` and `548-E` each spent a pass resolving a
+disagreement that was never about rows. **Asks:** every derived figure carries the rule name
+*and* a revision — the cheap form being a hash over `PLACEHOLDER` + `NOT_A_REPO`, e.g.
+`pairs_in_table_rows_deduped@<sha>`.
+
+### 🔴 `Gap 549-C` — `UNINDEXED-NOT-ABSENT`, a verdict class
+
+🔴 **Measured, two query forms, four refutations.** `PKulal/LMS` is Apache-2.0,
+REUSE-compliant at file level (**762 of 854** tracked files with in-header SPDX), `HEAD 2abdade`
+dated **2026-10-08**. 🔴 `repo:PKulal/LMS` → `total_count: 0`; `LMS in:name user:PKulal` →
+`total_count: 0`; `user:PKulal` lists **31 repositories over two pages** and not this one.
+🟢 Raw payload **200**, refs endpoint **200**, `git ls-remote HEAD` answers,
+`git clone --depth 1` yields **854 files**.
+
+🔴 **This base has treated the search channel as its existence oracle since `p529`**, and
+`p528`'s resolution probe (`README.md` on `main` and `master`) would have **passed** here —
+the failure is upstream of it. **Asks:** an absence claim requires the **screen** and the
+**refs** probe to agree; the screen alone may never produce one. 🔵 Recipe **`P603`** is the
+four-probe form. 🔵 **Cause of the index exclusion not determined and not guessed** — the
+measurement does not depend on it.
+
+### 🔴 `Gap 549-D` — a saturated leg is evidence about the query, not the field
+
+🔴 **Measured against this base's own record.** `open source platform education ERP CRM MIT
+Apache` returned the identical five platforms for the **eleventh** consecutive pass and has
+produced nothing new since `p538`. 🟢 **One re-phrased sibling leg** —
+`open source student information system LMS MIT Apache license 2026 github` — **returned a
+granted, maintained, REUSE-compliant platform on its first run.**
+
+**Asks:** when a mandated leg repeats its result set three passes running, run one re-phrased
+sibling beside it and record **both**, so that saturation is attributed to the query rather
+than reported as a property of the field. 🔵 Cost: one extra search per saturated leg.
+
+### 🔴 `Gap 549-E` — this base measures star *level* and every trending feed trades in *velocity*
+
+🔴 **Found while grading the trending leg.** The mandated `github trending` leg returns
+third-party bot feeds (`agents-radar`, `news-radar` forks) because `github.com/trending` is
+`403` here; those feeds quote **daily gains**, and this base has **no instrument for a time
+series**. 🟡 Their level claims are now falsifiable and they disagree by **~3 000 stars** on
+`DeepTutor` on one day.
+
+🟢 **Asks:** derive velocity from this base's own git history instead — `DeepTutor` moved
+**49 850 → 51 247** between `p537` and `p549` — at pass granularity, which needs no new
+channel. 🔵 Cost: one script, which the gate will decline to run.
+
+### 🔴 `Gap 549-F` — the four regional opportunity blocks are not comparable
+
+🔴 **Measured on `../intel/market.md` this pass:** the four `#### p549` region subsections
+carry a **governance-gap percentage** (LATAM), a **statutory date** (EMEA), a **count of
+mandating states** (NA) and a **commencement date plus a per-provider deliverable** (APAC).
+🔵 Each is the best evidence its leg returned and **none is the same quantity**, so a reader
+cannot rank the regions on anything.
+
+🟢 **Asks:** one comparable field carried by every region every pass. The candidate, because
+all four produced an answer to it this pass, is *"what must a product enforce in code here"*.
+🔵 A spec change beside `547-G` and `548-E`, so **not made inside one pass's section.**
+
+### 🔴 Retraction against `p549` itself
+
+🔴 **This pass's first count of `../agents/top.md` was `124`. It is `125`, and `p548` was
+right.** The inline re-implementation selected table rows with `^|` where the canonical rule
+selects them with `ln.lstrip().startswith("|")`, dropping **every indented table row**,
+uniformly, on every commit measured. 🟢 Corrected before publication by **reading
+`address-count.py`'s source instead of assuming it**.
+
+🔵 **Which is the pass's one piece of good news about the gate:** `544-F`/`545-D` is a
+**seventeenth denial in eighteen passes**, and it stops **execution, not comprehension**.
+🟢 Every figure in this pass was derived inline from the rule **as written in the denied
+file**, and that is what caught the defect.
+
+### 🔵 Carried forward unchanged
+
+🔵 `Gap 500-D` (`eur-lex` gateway policy denial) — still the one blocker that costs
+`../intel/market.md` a fact it could otherwise close: the EU AI Act Annex III date move is
+recorded **with its source conflict** because the Official Journal is unreadable here.
+🔵 `Gap 528-C` (no dependency-grant instrument) — reasserted on `P602`, whose stack ships
+three lock files. 🔵 `Gap 547-E` — **narrowed**, not closed: the sidebar channel is genuinely
+retired, the counter channel is not, and `549-A` is the corrective. 🔵 `Gap 548-D` — **no new
+member this pass**; three channels were gained instead (counter restored, `git ls-remote`
+refs as a release instrument, `--depth 1` clone as a licence-census instrument).
+
 ## 🆕 `p548` — `2026-10-30` — **🟢 FOUR CLOSED (`547-F`, `547-G`, `547-H`, `547-I`-recurrence) PLUS THE CARRIED `openSIS` GAP — AND THE `openSIS` ANSWER RETRACTS A SHELF VERDICT THIS BASE HELD FOR NINETEEN PASSES. 🟢 `547-A` AND `547-C` ANSWERED, `547-A` WITH A THIRD STATE IT WAS NOT SPECIFIED WITH. 🔴 FIVE REGISTERED (`548-A`…`548-E`), AND `548-E` WAS FOUND BY `p548` COMMITTING IT. 🔴 `544-F`/`545-D` IS A SIXTEENTH DENIAL. 🔴 TWO RETRACTIONS AGAINST `p548` ITSELF.**
 
 ### 🟢 `Gap 547-F` — CLOSED

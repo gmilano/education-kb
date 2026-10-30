@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p549` — the vertical leg saturated for an **eleventh** pass, and a **re-phrased sibling leg** broke it on its first run: one new platform, **Apache-2.0**, **REUSE-compliant at file level**, and **invisible to the GitHub search index**
+
+🔴 **The mandated vertical leg is saturated for an eleventh pass.** `open source platform
+education ERP CRM MIT Apache` returned **OpenEduCat** (LGPL-3.0), **RosarioSIS** (GPL-2.0),
+**openSIS**, **ERPNext** (GPL-3.0) and **SchoolTool** (discontinued 2016) — the *identical
+five* as `p547` and `p548` — plus the general-purpose tier (**Apache OFBiz**, **Krayin** MIT,
+**Aureus ERP** MIT, **iDURAR** MIT, **Odoo** GPL-3, **Twenty** AGPL-3.0), all held. 🔵 Said
+plainly: **this leg has not produced a new platform since `p538`.**
+
+🟢 **So this pass ran one re-phrased sibling leg beside it** —
+`open source student information system LMS MIT Apache license 2026 github` — **and it
+returned a platform on the first run.** 🔵 The method finding is registered as `Gap 549-D`
+on [`../agents/trending.md`](../agents/trending.md#-p549--2026-10-30): a leg that repeats its
+result set three passes running is evidence about the **query**, not about the field.
+
+### 🟢 New platform row
+
+| Platform | Repo | Grant, read first-hand | Scale | Region | What it is, and what it is not |
+|---|---|---|---|---|---|
+| 🆕 **LMS (Pace Wisdom)** | [`PKulal/LMS`](https://github.com/PKulal/LMS) | 🟢 **Apache-2.0** — root `LICENSE`, **11 362 B**, `sha256 a890392684288f18…`, complete title block *"Apache License / Version 2.0, January 2004"*. 🟢 **And at file level:** **762 of 854** tracked files carry an in-header `SPDX-License-Identifier: Apache-2.0`, declared through `REUSE.toml` + `.reuse/` + `LICENSES/` + `NOTICE` to **REUSE spec 3.3**. 🟡 Two scoped exceptions, both enumerated by path in `REUSE.toml`: **BSD-3-Clause** for *unmodified* Flutter template icons (© 2014 The Flutter Authors) and **`LicenseRef-PaceWisdom-Trademark`** (690 B) over **7 logo/icon paths**, which cites **Apache §6** and requires a modified redistribution to replace the logos | 🔴 **Stars UNMEASURABLE** (`mcp-unindexed`, `curl-403`) — **not `0`**. `HEAD 2abdade`, **`2026-10-08`**, author `Pace Wisdom Solutions Pvt Ltd`, **854 files**, 🔴 **zero git tags** → no release has ever been cut | 🟢 **APAC (India)** — *stated in-repo*: roadmap names **DPDP** beside GDPR, holder is an Indian `Pvt. Ltd.`, commit offset `+05:30`. 🔵 Placed on the entity and the statute, **not** on language | A **self-hosted, multi-tenant LMS**: one installation runs training programmes for many organisations, each onboarding its own trainers and students, with batches, a course builder (video / document / task / quiz), trainer and student portals, progress tracking and gamification. Python 3.13 · **Django 6** · DRF 3.16 · PostgreSQL 15+ · **React 19** + Vite · **Flutter** mobile app · Docker Compose. 🔴 **It is open-core and the withheld half is the assessment half** — Enterprise (paid) holds the Super Admin console, **assessments and certificates**, coding interviews, SSO, notifications, calendars, audit logs and advanced reporting. 🔴 **It ships no AI**: every AI feature is either 💎 Enterprise (AI test cases, AI starter code, AI-built SQL practice schema) or *Proposed, edition undecided* (chapter-scoped AI tutor chat, AI feedback drafts, plagiarism check). 🔴 **`SCORM / xAPI import` is also only Proposed** — one line, on a roadmap table, **not shipped** |
+
+### 🔵 Where it sits against the platforms already on this page
+
+🟢 **It is the only platform on this page that is permissively granted *and* file-level
+attested.** 🔵 The page's incumbents are copyleft at the repository
+(**Moodle** GPL-3.0, **Open edX** AGPL-3.0, **OpenEduCat** LGPL-3.0, **RosarioSIS** GPL-2.0,
+**openSIS-Classic** GPL-2.0 — the `p548` retraction) or permissive but not multi-tenant
+(**Kolibri** MIT, **academico** MIT at **410★**, re-measured this pass). 🟢 **So the shape it
+answers is specific:** a hosted, multi-tenant product where the grant has to survive a
+client's own licence scan, and where copyleft at the platform layer is the wrong answer.
+
+🔴 **Three things it is not, stated before anyone builds on it.**
+
+1. 🔴 **Not a Student Information System.** It has no admissions, enrolment-of-record,
+   transcript or guardian model. The SIS question on this page is still answered by
+   `openSIS-Classic` (**GPL-2.0**, `ver7.4` tagged — read from refs this pass),
+   `RosarioSIS` (GPL-2.0) and `academico` (MIT).
+2. 🔴 **Not release-managed.** Zero tags at `HEAD`, so there is no version to pin and no
+   upgrade path published. 🟡 Pin a commit, not a tag.
+3. 🔴 **Not dependency-cleared.** The repository grant is Apache-2.0; per `Gap 528-C` this
+   base has **no instrument that enumerates dependency grants**, and this one ships
+   `poetry.lock`, `frontend/package-lock.json` and a Flutter `pubspec.lock`. 🟢 **The
+   engagement's own licence scan is the control** — and unusually, this repository makes that
+   scan cheap: `REUSE.toml` is already there, so `reuse lint` is a one-line CI gate
+   (recipe **`P602`** on [`../compose/patterns.md`](../compose/patterns.md)).
+
+### 🟢 What the sibling leg returned besides it, graded rather than listed
+
+🔵 Four more addresses, **all granted, none usable** — grades, scales and dates on
+[`../agents/trending.md`](../agents/trending.md#-p549--2026-10-30):
+[`nduka4real/Student-Information-System-SIS-`](https://github.com/nduka4real/Student-Information-System-SIS-)
+(Apache-2.0, but the payload is zip archives),
+[`yosmisyael/lms-open-source-learning`](https://github.com/yosmisyael/lms-open-source-learning)
+(MIT, 3.1 years stale),
+[`bhavy1204/Learning-Managment-System`](https://github.com/bhavy1204/Learning-Managment-System)
+(MIT, coursework scale) and
+[`oompas/open-lms`](https://github.com/oompas/open-lms) (MIT, **19★** — held, and the counter
+is **new**: it was previously carried without one). 🟢 **OpenOLAT** (Apache-2.0) was returned
+again and is held.
+
+🔵 **One correction to the record on an address this page already carries:**
+[`oompas/open-lms`](https://github.com/oompas/open-lms) measures **19★ · 6 forks**, pushed
+**`2026-07-21`** — a Queen's University project, live within four months, which is a better
+liveness signal than this page has previously attached to it.
+
 ## 🆕 `p548` — the vertical leg returned **nothing new** for the tenth pass, and the useful finding is a **retraction**: the platform this page told the field *"do not build on it"* has carried the **complete GNU GPL v2** the whole time, two directories down
 
 🔴 **The mandated vertical leg is saturated for a tenth pass.** `open source platform

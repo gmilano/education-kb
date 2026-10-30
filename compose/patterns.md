@@ -82,6 +82,161 @@ updated: 2026-10-30
 > commits, that an attractive artefact is unusable — and the two tests that catch what a
 > licence check does not.
 
+> 🟢 **`p549` adds `P602` and `P603`, taking the page to **57** recipes
+> (`P547`…`P603`, contiguous).** 🔴 **The derivation could not be run:**
+> [`../ingest/derive-counts.py`](../ingest/derive-counts.py) and every other script in
+> `ingest/` were **denied by name** (`Code from External`) for the **seventeenth** pass in
+> eighteen, so **57** is this pass's own inline count of the `^## …P<n>` headings and the
+> gate did **not** attest it. 🟢 **What the gate could not stop was *reading* the scripts**,
+> and that is where this pass's retraction came from
+> ([`../repos/foundations.md`](../repos/foundations.md)).
+>
+> 🔵 **A false-duplicate warning for the next pass, measured so it is not re-discovered.**
+> **60** `##` headings on this page carry a `P<n>` id while only **57** ids are distinct, and
+> that is **not** `Gap 547-H` recurring: every id has exactly **one** defining heading, and
+> the surplus is **cross-references inside other recipes' titles** (`P551` is named in five:
+> `P556`, `P564`, `P568`, `P572`, `P597`) plus **pass-announcement headings** that list the
+> ids they added (`p542`→`P589`/`P590`, `p543`→`P591`/`P592`, `p544`→`P593`). 🟢 **Counting
+> headings finds duplicates that are not there; counting *definitions* does not.**
+>
+> 🟢 **Both new recipes come from measured findings and neither invents a component.**
+> `P602` exists because the one new platform this pass found
+> ([`PKulal/LMS`](https://github.com/PKulal/LMS), Apache-2.0, REUSE-compliant at file level)
+> ships **deliberately no AI** — every AI feature is behind a paid edition or on a roadmap —
+> so the AI layer is the studio's to own on a permissive base, which is the cleanest
+> starting position this page has ever been able to offer. `P603` is the gate that would
+> have found that platform earlier: it is the three-channel grant probe that
+> `Gap 549-C` (`UNINDEXED-NOT-ABSENT`) and `Trend 51` require.
+
+## 🆕 P602 — The Apache-2.0 multi-tenant LMS with the AI layer the vendor withheld (APAC-origin, portable; 6–9 weeks to a defensible pilot)
+
+🔵 **Where this comes from.** One measurement, taken this pass:
+[`PKulal/LMS`](https://github.com/PKulal/LMS) is a **multi-tenant LMS under Apache-2.0** whose
+`README.md` splits the product into a free **Community** edition (this repository) and a paid
+**Enterprise** edition — and **every AI feature sits on the paid side or on the roadmap**:
+
+| Feature | Edition in the vendor's own table |
+|---|---|
+| Coding questions with **AI test cases**, **AI starter code**, AI-generated SQL practice schema | 💎 **Enterprise (paid)** |
+| Chapter-scoped **AI tutor chat**, **AI feedback drafts for trainers**, plagiarism/similarity check | 🔵 *"Proposed (edition not yet decided)"* |
+| **`SCORM / xAPI import`** | 🔵 *"Proposed"* — 🔴 **not shipped** |
+| Assessments and certificates, SSO, audit logs, Super Admin console | 💎 **Enterprise (paid)** |
+
+🟢 **So the open base is a clean LMS with a hole exactly where the differentiating work is**,
+and the hole is permissively licensed. 🔴 **The same table is the warning:** assessment is
+Enterprise-only, so this is a platform to build **on**, never a product to deliver.
+
+### The recipe
+
+1. 🟢 **Take the platform at a commit, not a tag.** `git clone --depth 1` →
+   `HEAD 2abdade` (`2026-10-08`). 🔴 **`git ls-remote --tags` returns nothing**: no release
+   has ever been cut, so there is no version to pin and no published upgrade path. Fork,
+   pin the SHA, and own the rebase.
+2. 🟢 **Run `reuse lint` in CI on day one — it will pass, and that is the point.**
+   The repository already ships `REUSE.toml`, `.reuse/`, `LICENSES/` and `NOTICE` to **REUSE
+   spec 3.3**, with **762 of 854** tracked files carrying in-header SPDX identifiers. 🟡 Two scoped
+   exceptions are enumerated by path and must survive the fork: **BSD-3-Clause** on unmodified
+   Flutter template icons, and **`LicenseRef-PaceWisdom-Trademark`** on **7 logo paths** —
+   which, citing **Apache §6**, requires a modified redistribution to **replace those logos**.
+   🔵 **Step one of any white-label is therefore a logo swap, and it is a licence obligation,
+   not a design task.**
+3. 🟢 **Mount the tutor as a separate service, not as a platform fork.** Put
+   [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (**Apache-2.0**, **51 247★**,
+   `v1.7.0`, lifelong learner memory) behind the platform's DRF API and key its memory on the
+   platform's `organizations` + `accounts` tenant ids. 🔵 Grant-compatible: Apache-2.0 both
+   sides, so there is nothing to reconcile.
+4. 🟢 **Build the course material into teachable units with**
+   [`JuneYaooo/lineage-skill`](https://github.com/JuneYaooo/lineage-skill) (**Apache-2.0**,
+   **464★**): it distils video, PDF, transcripts and notes into **source-backed** teacher
+   skills. 🔵 It is the right component here because the platform's course builder already
+   holds video and documents — so the input exists and the output is traceable to it, which
+   is what an institution will ask about first.
+5. 🟢 **Add retention with** [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server)
+   (**MIT**, **539★**) as an MCP server. 🔵 The platform ships `gamification` and progress
+   tracking but **no spaced repetition**; this is the missing half of the learning loop and
+   the learner keeps the deck.
+6. 🟢 **Own the record layer, because the platform does not.** `SCORM / xAPI import` is
+   *Proposed*, so emit xAPI yourself with
+   [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) (**MIT**) into an
+   LRS. 🔴 **Read that component as an architecture, not a dependency** — `p546` dated it at
+   **426 days** without a commit. 🟢 **This is the step that makes the pilot defensible:** it
+   is what turns tutoring from ephemeral chat into an auditable learner record, which is the
+   `87 %`-adoption / `26 %`-governance gap on
+   [`../intel/market.md`](../intel/market.md) answered in code.
+7. 🟢 **Gate the AI with `P598`'s two decisions and**
+   [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills)
+   (**Apache-2.0**, **605★**) **eval rubrics**. 🔵 Rubrics, not prompts, are what a
+   procurement conversation can actually inspect.
+8. 🔴 **Close the assessment hole explicitly, in writing, before the pilot.** Assessments and
+   certificates are Enterprise-only. Either buy that edition, or build assessment as the
+   studio's own module against the open `curriculum` app — and **say which**, in the
+   statement of work. 🔵 Silence here is how an open-core pilot becomes a licence dispute.
+
+### Why the regions line up
+
+🟢 **APAC** is the natural first engagement: the platform is India-origin on in-repo evidence
+(**DPDP** named in its roadmap, holder an Indian `Pvt. Ltd.`), so data-residency language is
+already in the vendor's own vocabulary, and **Australia's TEQSA** per-provider action plans
+make the audit trail of step 6 a procurement trigger rather than a nicety. 🟢 **LATAM** is the
+second: the governance gap is measured (`Trend 53`) and multi-tenancy is how one ministry or
+one university group serves many institutions from one installation. 🟡 **EMEA** needs the
+Annex III conformity work layered on top — and has **more runway than the 2026 date implied**
+(see the deadline move on [`../intel/market.md`](../intel/market.md)). 🔴 **North America** is
+the hardest fit despite being the most regulated: NY `A 9190`'s grade-9 age gate and the
+four-state mandate for district policy both have to be enforced in the platform, and
+**nothing in this stack enforces them today.**
+
+### 🔴 What this recipe does not give you
+
+🔴 **No dependency-grant clearance.** Per `Gap 528-C` this base has no instrument that
+enumerates dependency grants, and this stack ships `poetry.lock`,
+`frontend/package-lock.json` and a Flutter `pubspec.lock`. 🟢 The repository-level grants are
+Apache-2.0 / MIT throughout, and the engagement's own licence scan remains the control —
+**but it is unusually cheap here**, because REUSE metadata already exists (step 2).
+
+## 🆕 P603 — The three-channel grant probe: the gate that stops a shortlist from missing what search cannot see
+
+🔵 **Where this comes from.** `Gap 549-C` and `Trend 51`, both measured this pass: the
+best-granted artefact on this base is **absent from the GitHub search index** while three
+other channels serve it. 🔴 **Every census on this base since `p529` asks an index what
+exists**, and this is the error class no absence-check catches.
+
+### The recipe — four probes, in cost order, and what each one may and may not conclude
+
+1. 🟢 **Screen** — MCP `search_repositories` with `repo:` qualifiers **OR-ed in one call**
+   (shelf rule 17). Returns existence, SPDX screen, **exact** star and fork counters,
+   `pushed_at`, `archived`, default branch. 🔴 **May conclude: "indexed, and here are its
+   counters."** 🔴 **May NOT conclude: "does not exist."** A null here is
+   `UNINDEXED-NOT-ABSENT` until probe 2 or 3 says otherwise. 🔴 And per shelf rules 8–9, the
+   SPDX field **screens; it never grades** — `NOASSERTION` has resolved to permissive,
+   copyleft, non-OSI *and* no grant on this base.
+2. 🟢 **Grade** — `raw.githubusercontent.com/<owner>/<repo>/<branch>/<path>`, reading the
+   **licence file's own title block**, its **byte count** and its **`sha256`**. 🔴 Probe the
+   **subtree**, not only the root: `Gap 548-A` (`ENUMERATED-NOT-READ`) was earned by 19
+   passes of ⛔ on `openSIS-Classic`, whose GPL-2.0 sat at `docs/License.txt` the whole time.
+   🔵 And check the **manifest** before recording an absence (shelf rule 16): `DESCRIPTION`,
+   `package.json`, `pyproject.toml`, `Cargo.toml`.
+3. 🟢 **Exist and date** — `git ls-remote <url> HEAD` and `git ls-remote --tags --refs`.
+   🟢 **This is the probe that refutes probe 1's null**, and it is also a **release
+   instrument** (shelf rule 19): the publisher's own tags, with **zero tags** a finding in
+   its own right. 🔵 It needs no API token and no HTML page.
+4. 🟢 **Census** — `git clone --depth 1` into an **empty directory**, then count
+   `SPDX-License-Identifier` headers against tracked files and read `REUSE.toml` /
+   `LICENSES/` if present. 🟢 **This is the only probe that distinguishes a repository-level
+   grant from a file-level one**, and it is what graded `PKulal/LMS` at **762 / 854**. 🔴 It
+   is also the only probe with a disk cost, so it runs **last and only on candidates that
+   passed 2**.
+
+### The gate, stated as a rule a later pass can enforce
+
+🟢 **A verdict cell records the probes that were run**, in the form
+`UNREAD(curl-403, mcp-untried)` or `UNMEASURABLE(mcp-unindexed, curl-403)` — `Gap 549-A`.
+🔴 **An absence claim requires probes 1 **and** 3 to agree**; probe 1 alone may never produce
+one. 🟢 **A grant claim cites a path, a byte count and a hash** — never a sidebar, never a
+search field, never a secondary source. 🔵 **And every recorded blocker is re-probed on the
+pass that depends on it**, which is `Trend 52`: the refutation that lifted two passes of
+self-imposed ceiling cost exactly **one call**.
+
 ## 🆕 P598 — The gated teacher agent: deterministic core, human approval, official-source binding (all regions; the compliance argument comes free)
 
 🔵 **Where this comes from.** Not from one repository — from **five**, built independently

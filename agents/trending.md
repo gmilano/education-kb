@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p549` — `2026-10-30` — **🟢 A REPOSITORY CAN BE CLONEABLE AND INVISIBLE: THE BEST-GRANTED ARTEFACT THIS BASE HAS EVER READ IS **ABSENT FROM THE GitHub SEARCH INDEX**, AND EVERY CENSUS ON THIS BASE RUNS THROUGH THAT INDEX. 🟢 SIX CANDIDATES, ONE USABLE — AND THE USABLE ONE WAS FOUND BY A WEB SEARCH, NOT BY THE INSTRUMENT. 🔴 SEVENTEENTH GATE DENIAL IN EIGHTEEN PASSES.**
+
+🔴 **Gate posture first:** `ingest/address-count.py` **denied by name**
+(`Code from External`) — **seventeenth denial in eighteen passes**. 🟢 **Reading** the
+script is not denied, and reading it is what produced this pass's own retraction on
+[`top.md`](top.md#-p549--2026-10-30).
+
+🔵 **The channel restoration, the `UNREAD` → exact conversion for all six of `p547`'s
+systems, the `1 397★` staleness correction on `DeepTutor` and shelf rules 18–19 are on
+[`top.md`](top.md#-p549--2026-10-30).** This entry carries the **supply legs**, the
+**grades** and the **new verdict class**.
+
+### 🟢 The headline: `UNINDEXED-NOT-ABSENT`
+
+🟢 [`PKulal/LMS`](https://github.com/PKulal/LMS) is an **Apache-2.0, REUSE-compliant,
+multi-tenant LMS** with **762 of its 854 tracked files carrying an `SPDX-License-Identifier`
+header**. 🔴 **It does not exist as far as the GitHub search API is concerned.**
+
+| Probe | Channel | Result |
+|---|---|---|
+| `repo:PKulal/LMS` | MCP `search_repositories` | 🔴 **`total_count: 0`** |
+| `LMS in:name user:PKulal` | MCP `search_repositories` | 🔴 **`total_count: 0`** |
+| `user:PKulal` (both pages) | MCP `search_repositories` | 🔴 **31 repositories, `LMS` in neither page** |
+| `raw.githubusercontent.com/PKulal/LMS/main/LICENSE` | payload | 🟢 **HTTP 200**, 11 362 B, `sha256 a890392684288f18…` |
+| `raw.githubusercontent.com/PKulal/LMS/main/README.md` | payload | 🟢 **HTTP 200**, 30 086 B |
+| `github.com/PKulal/LMS/info/refs?service=git-upload-pack` | git smart-HTTP | 🟢 **HTTP 200** |
+| `git ls-remote … HEAD` | git | 🟢 **`2abdade5958d98c3206d601f185c5041cf9870c5`** |
+| `git clone --depth 1` | git | 🟢 **854 files**, `HEAD 2abdade`, `2026-10-08T15:05:02+05:30` |
+
+🟢 **Registered as `Gap 549-C`, a verdict class: `UNINDEXED-NOT-ABSENT`.** 🔴 This base has
+treated the search channel as its **existence oracle** since `p529` — *"one call returns
+existence, SPDX grant, exact star and fork counts"* — and `p528` added a resolution step that
+probes **`README.md` on `main` and `master`** before grading, precisely so that *"a repo that
+404s on every path is **not** ungranted — it is **not there**."* 🔵 **That step is the right
+one and it is not the step a census takes**: a census asks the index what exists, and the
+index can be wrong in the direction no absence-check covers.
+
+🔴 **Why it matters commercially, not just methodologically.** The artefact the index cannot
+see is the **cleanest grant on this base** — cleaner than any of the 125 rows on
+[`top.md`](top.md) — and it was surfaced by a **mandated web-search leg**
+(`open source student information system LMS MIT Apache license 2026 github`), not by the
+instrument. 🔴 **So the size of this blind spot is unmeasurable by construction**: the only
+addresses that can reveal it are ones found some other way. 🔵 `548-A` said knowing where a
+grant lives and not fetching it is *unread*, not *absent*; `549-C` is the layer above —
+**not being listed is not not existing**, and the three cheap channels that refute it
+(payload, refs, clone) are all open from this session.
+
+🔵 **Cause not determined, and that is stated rather than guessed.** Search-index exclusion
+has several causes (recent creation, owner opt-out, spam heuristics, indexing lag) and this
+session cannot distinguish them. 🟢 **The measurement stands without the cause**: three
+channels serve the repository, two independent query forms deny it.
+
+### 🟢 The grade — the one usable artefact of six
+
+🟢 **Full attestation, read first-hand from a `--depth 1` clone at `HEAD 2abdade`:**
+
+| Field | Value |
+|---|---|
+| Repo | [`PKulal/LMS`](https://github.com/PKulal/LMS) |
+| Grant | 🟢 **Apache-2.0** — root `LICENSE`, **11 362 B**, complete title block *"Apache License / Version 2.0, January 2004"* through the standard appendix |
+| Grant, file level | 🟢 **762 of 854 tracked files carry `SPDX-License-Identifier: Apache-2.0`** in-header (**764** occurrences — two files declare it twice) |
+| Grant, declared | 🟢 `README.md` badge + `REUSE.toml` + `.reuse/` + `NOTICE` — **REUSE spec 3.3**, cited by path in the file itself |
+| Second licence | 🟢 **BSD-3-Clause** — scoped in `REUSE.toml` to *unmodified* Flutter template icons only, `SPDX-FileCopyrightText = "2014 The Flutter Authors"` |
+| Third licence | 🟡 **`LicenseRef-PaceWisdom-Trademark`** (690 B) — **7 enumerated logo/icon paths**, cites **Apache §6** explicitly, permits unmodified redistribution to describe origin, requires replacement of logos in a modified redistribution |
+| `HEAD` | `2abdade`, **`2026-10-08`**, committer `GitHub`, author **`Pace Wisdom Solutions Pvt Ltd`** |
+| Releases | 🔴 **zero tags** — `git ls-remote --tags` returns nothing (shelf rule 19) |
+| Stars | 🔴 **UNMEASURABLE**(`mcp-unindexed`, `curl-403`) — **not `0`**, and not `UNREAD`: no open channel carries the counter for an unindexed repository |
+| Stack | Python 3.13 · **Django 6** · DRF 3.16 · PostgreSQL 15+ · **React 19** + Vite · **Flutter** (`student_mobile_app/`) · Docker Compose |
+| Apps | `accounts` `analytics` `curriculum` `gamification` `lms_core` `organizations` `rbac` `settings` `frontend` `student_mobile_app` |
+| Region | 🟢 **APAC (India)** — *stated in-repo*, not inferred from language: the roadmap names **DPDP** beside GDPR, the copyright holder is an Indian **`Pvt. Ltd.`**, and the commit offset is `+05:30` |
+| Verdict | 🟢 **SHELVED as a platform** on [`../verticals/solutions.md`](../verticals/solutions.md) and [`../repos/foundations.md`](../repos/foundations.md) — **not** on [`top.md`](top.md) |
+
+🔴 **Two limits that must travel with the row, because the grant does not cover them.**
+
+1. 🔴 **It is open-core, and the withheld half is the assessment half.** `README.md` splits
+   the product: **Community (this repository, Apache-2.0)** = login, organisation admin,
+   course builder, trainer and student portals, progress tracking, gamification;
+   **Enterprise (paid)** = Super Admin console, **assessments and certificates**, coding
+   interviews, SSO, notifications, calendars, audit logs, advanced reporting. 🔵 For an
+   education engagement **assessment is usually the requirement**, so this is a platform to
+   build *on*, not a product to deliver.
+2. 🔴 **It ships no AI, and the roadmap is not the product.** Every AI feature named —
+   AI-generated test cases, AI starter code, AI-built SQL practice schemas — is marked
+   **💎 Enterprise**; *chapter-scoped AI tutor chat*, *AI feedback drafts for trainers* and
+   *plagiarism/similarity check* are under **“Proposed (edition not yet decided)”**. 🔴
+   **`SCORM / xAPI import` is in that same Proposed block** — it is **not** shipped, and a
+   reader who greps for `xAPI` finds exactly one line, on the roadmap table. 🟢 **This is the
+   opportunity, stated plainly:** the vendor has withheld the AI layer under a paid edition
+   and left the open edition clean, so the AI layer is **the studio's to own** on an
+   Apache-2.0 base — recipe **`P602`** on [`../compose/patterns.md`](../compose/patterns.md).
+
+### 🔴 The five rejections, each with the grant read authoritatively
+
+| Candidate | Grant | Scale | Read at | Verdict |
+|---|---|---|---|---|
+| [`nduka4real/Student-Information-System-SIS-`](https://github.com/nduka4real/Student-Information-System-SIS-) | 🟢 Apache-2.0 (API) | 1★ · 0 forks · 5 614 KB | pushed `2025-12-09` | 🔴 **REJECT** — the payload is **zip archives**, not a buildable tree; a granted artefact that is not a codebase |
+| [`yosmisyael/lms-open-source-learning`](https://github.com/yosmisyael/lms-open-source-learning) | 🟢 MIT (API) | 1★ · 0 forks · PHP | pushed `2023-09-30` | 🔴 **REJECT** — **3.1 years** stale |
+| [`bhavy1204/Learning-Managment-System`](https://github.com/bhavy1204/Learning-Managment-System) | 🟢 MIT (API) | 2★ · 0 forks · C++ · 184 KB | pushed `2025-03-05` | 🔴 **REJECT** — coursework scale, 1.6 years stale |
+| [`ishandutta2007/Awesome-Learning-Management-System`](https://github.com/ishandutta2007/Awesome-Learning-Management-System) | 🟢 MIT (API) | 1★ · 0 forks | created `2026-09-16`, pushed `2026-09-17` | 🔴 **NOT AN ARTEFACT** — a curated list. 🟢 **Logged as a discovery channel**, not a shelf row: it enumerates Canvas, Chamilo and Frappe LMS — all held on live pages — and **Sensei**, which this base has only ever carried in trending history, never on a live shelf |
+| [`TechAtNYU/ClassroomLM`](https://github.com/TechAtNYU/ClassroomLM) | 🔴 **none** (API: no licence field) | 14★ · 3 forks | pushed `2025-06-15` | 🔴 **REJECT re-confirmed** — `p548` graded it ⛔ from a 147-file tree walk; the API agrees on an **independent channel** |
+
+🟢 **Yield, stated as a fraction so it can be compared across passes: 6 candidates → 1
+usable → 0 agents.** 🔵 With `p547`'s `1 of 6` and `p548`'s `0 of 1`, that is **2 usable of
+13 across three passes** — `Trend 47` reinforced a third time, and the one usable artefact
+in those thirteen is a **platform**, not an agent.
+
+### 🔴 What the mandated legs returned, named per leg including the blanks
+
+| Leg (verbatim) | Returned | New to this base |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | general-purpose frameworks (CrewAI, MetaGPT, OpenHands, OpenAI Agents SDK, Hermes), `microsoft/ai-agents-for-beginners`, `rasbt/LLMs-from-scratch`, `rohitg00/ai-engineering-from-scratch`, `ashishpatel26/500-AI-Agents-Projects` | 🔴 **0** — all held or not education |
+| `github trending education AI 2026` | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) across several third-party `agents-radar` issue feeds, 48k–51k★ depending on snapshot | 🔴 **0 addresses** — 🟢 **1 correction**: the exact counter is **51 247**, and this base held **49 850** |
+| `open source platform education ERP CRM MIT Apache` | OpenEduCat (LGPL-3.0), RosarioSIS (GPL-2.0), openSIS, ERPNext (GPL-3.0), Apache OFBiz, Krayin (MIT), Aureus ERP (MIT), iDURAR (MIT), Odoo (GPL-3), Twenty (AGPL-3.0) | 🔴 **0** — the **identical** saturated set as `p547`/`p548`, now **eleventh** consecutive pass |
+| `AI education industry trends 2026` | 1EdTech *"experimentation → governance"*, HolonIQ *"selective AI acceleration"*, Campus Technology / THE Journal leader round-ups, classroom-phone restrictions | 🔵 framing only, no new instrument or figure that survives sourcing |
+| 🆕 `open source student information system LMS MIT Apache license 2026 github` *(this pass's own extra leg, run because the ERP/CRM leg has been saturated for ten passes)* | [`PKulal/LMS`](https://github.com/PKulal/LMS), OpenOLAT (Apache-2.0, held), [`oompas/open-lms`](https://github.com/oompas/open-lms) (MIT, **19★**, held), plus the four rejects above | 🟢 **1 usable, and it is this pass's headline** |
+
+🟢 **The extra leg is the finding about the method.** 🔴 Ten passes of
+`… ERP CRM MIT Apache` returned the same five platforms; **one leg re-phrased to the
+artefact class (`student information system LMS`) returned a granted, maintained,
+REUSE-compliant platform on its first run.** 🔵 **A saturated leg is evidence about the
+query, not about the field** — registered as `Gap 549-D`: when a mandated leg repeats its
+result set three passes running, run one re-phrased sibling leg beside it and record both.
+
+### 🔴 What `p549` did NOT do
+
+- 🔴 **North America produced NO new supply artefact** — for the tenth consecutive pass. Its
+  leg returned regulation and adoption prose only, and it **again** led with the
+  *"134 bills / 31 states"* figure this base **retired at `p455`**. 🔵 Named, not re-ingested.
+- 🔴 **EMEA produced NO new supply artefact.** Its leg returned EU AI Act commentary; the
+  **one** item worth recording is a date change, and it is on
+  [`../intel/market.md`](../intel/market.md).
+- 🔴 **LATAM produced NO new supply artefact.** The three LATAM-adjacent addresses touched
+  this pass were the `0★` ones re-measured on [`top.md`](top.md); 🟢 LATAM's yield this pass
+  is **demand-side and strong** — the UNESCO IESALC governance split, on
+  [`../intel/market.md`](../intel/market.md).
+- 🟢 **APAC produced the pass's one artefact** — `PKulal/LMS`, India, placed on in-repo
+  evidence (**DPDP**, `Pvt. Ltd.`), not on language.
+- 🔴 **No new foundational repo beyond that one platform, and no new agent.**
+
 ## 🆕 `p548` — `2026-10-30` — **🔴 THE LANGUAGE-SHIFT ESCAPE HAS A SHORT HALF-LIFE, AND THIS PASS MEASURED IT: `p547` BROKE NINE SATURATIONS BY CHANGING THE QUERY LANGUAGE, SO `p548` TESTED **SIX UNEXHAUSTED CORPORA AT ONCE** (`fr`, `ja`, `ar`, `hi`, `ko`, `tr`) — **1 NEW ADDRESS, 0 USABLE**. 🔴 THE EIGHT MANDATED ENGLISH LEGS RETURNED **0 NEW** FOR A TENTH PASS. 🟢 THE PASS'S VALUE IS ELSEWHERE AND IT IS A RETRACTION: THE PLATFORM THIS BASE CALLED **⛔ NO GRANT** FOR NINETEEN PASSES SERVES THE **COMPLETE GNU GPL v2**, AND THIS BASE HAD ITS BYTE COUNT AND BLOB HASH SINCE `p448`. 🟢 `547-F`, `547-H`, `547-I` AND THE CARRIED `openSIS` GAP ALL CLOSED. 🔴 SIXTEENTH GATE DENIAL IN SEVENTEEN PASSES.**
 
 🔴 **Gate posture first:** `make hooks` and every `ingest/` script **denied by name**

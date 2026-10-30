@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p549` — **the denominator is `175` and it was `175` at every one of the last six commits — but only under *this* rule revision. `p546` and `p547` were right too, under theirs.**
+
+🟢 **Re-derived inline from [`../ingest/address-count.py`](../ingest/address-count.py)'s own
+source** — the script is **denied by name** (`Code from External`, **seventeenth denial in
+eighteen passes**) but **reading** it is not denied, so the canonical rule was reproduced
+from the text rather than from recollection:
+
+| Page | `p543` | `p544` | `p545` | `p546` | `p547` | `p548` |
+|---|---|---|---|---|---|---|
+| `repos/foundations.md` | **175** | **175** | **175** | **175** | **175** | **175** |
+| [`../agents/top.md`](../agents/top.md) | 118 | 122 | 123 | 123 | 124 | 125 |
+
+🟢 **Row 2 reproduces `p548`'s published table cell for cell.** 🔴 **Row 1 does not**, and the
+reason is not a defect in `p546`, `p547` or `p548`:
+
+🔵 `p548` added `x` and `y` to the rule's `PLACEHOLDER` set — its own fix for `Gap 547-I`
+recurring on this page. 🟢 So re-running **today's** rule over **yesterday's** bytes returns
+`175` where `p546` and `p547` correctly published `176` under the rule **of their day**.
+🟢 **Both figures are right. Neither is reproducible without its rule revision.**
+
+🔴 **Registered as `Gap 549-B`:** every derived count on this base must carry the rule
+**name** *and* its **revision**, because the history tables on
+[`../agents/trending.md`](../agents/trending.md) and on this page currently mix revisions and
+so invite exactly the dispute `547-F` and `548-E` spent two passes resolving. 🔵 The cheap
+form is a rule hash: `pairs_in_table_rows_deduped@<sha of PLACEHOLDER+NOT_A_REPO>`.
+
+### 🔴 A retraction `p549` owes against itself, caught inside the same pass
+
+🔴 **This pass's first count of [`../agents/top.md`](../agents/top.md) was `124`. It is
+`125`.** The inline re-implementation selected table rows with `^|`, where the canonical rule
+selects them with `ln.lstrip().startswith("|")` — so **every indented table row was dropped**,
+uniformly, across every commit measured. 🟢 **Fixed by reading the script instead of assuming
+it**, which is the whole lesson: **the gate stops execution, not comprehension.**
+
+### 🟢 One new foundational address
+
+| Repo | Grant | Why it is foundational rather than an agent |
+|---|---|---|
+| 🆕 [`PKulal/LMS`](https://github.com/PKulal/LMS) | 🟢 **Apache-2.0**, root `LICENSE` 11 362 B complete title block — **and 762 of 854 tracked files carrying in-header `SPDX-License-Identifier`**, declared to **REUSE spec 3.3** via `REUSE.toml` / `.reuse/` / `LICENSES/` / `NOTICE` | A **multi-tenant LMS platform**, not a tutor: Django 6 + DRF + PostgreSQL + React 19 + a Flutter client, with `accounts` / `organizations` / `rbac` / `curriculum` / `analytics` / `gamification` as separable apps. 🟢 **It is the most rigorously granted artefact on this base** — the grant is machine-checkable with `reuse lint`, which no other row here supports. 🔴 **Zero git tags**, so pin a commit. 🔴 **Unindexed by GitHub search** (`Gap 549-C`), so no star counter exists on any open channel — recorded **UNMEASURABLE**, not `0`. Full attestation on [`../verticals/solutions.md`](../verticals/solutions.md) |
+
+🔵 **Counting note, per `544-E`:** this section adds that one address plus the addresses in
+the tables above it, so the page's `documented` figure moves while its `shelf` figure moves
+by **one**. 🟢 That divergence is `Gap 548-E`, and it is now visible on three pages in one
+pass — which is the argument for `548-E`'s two-figure remedy rather than its marker remedy.
+
 ## 🆕 `p548` — **this page's denominator was **176** for one pass because the table explaining the rule *matched the rule*. It is **175**, and `p546` was right all along**
 
 🟢 **Re-derived with the canonical rule after the fix: `repos/foundations.md` carries
