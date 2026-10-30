@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p560` — `2026-10-30` — **🔴 A NEW CHANNEL-DILUTION MECHANISM THAT A STARS FLOOR CANNOT TOUCH (`560-H`): a free-text `grading` leg returns **"enterprise-grade", "production-grade", "commercial-grade"** — **~4 of 25 rows were education**, and every one of the 21 misses had plenty of stars. 🟢 `558-C`'s PAIRED SWEEP REPRODUCED DIGIT-FOR-DIGIT (204 unfiltered / 2 filtered), AND `topic:education` IS THE PRODUCTIVE CHANNEL THIS PASS. 🔧 `frappe/education`'s DIGEST ON THIS PAGE IS SUPERSEDED — see below; this page is append-only, so the correction is recorded here rather than rewritten below.**
+
+### 🔴 `560-H` — adjectival collision: the dilution a stars floor does not catch
+
+🔴 **The leg:** `education OR tutor OR curriculum OR grading in:name,description stars:>40
+created:>2026-08-01 license:mit license:apache-2.0`. **61 total; 25 returned.**
+
+| what came back | rows |
+| --- | --- |
+| 🔴 `-grade` as a **marketing adjective** — "enterprise-grade", "production-grade", "commercial-grade", "launch-grade", "btop-grade", "creator-grade" | 🔴 **~15** |
+| 🔴 unrelated but matched on `education`/`tutor` in a dev-tooling sense (`deepseek-harness-tutorial`, `Microduck-build-tutorial`) | ~4 |
+| 🟢 genuinely education | 🟢 **4** — `madhvantyagi/Gnos`, `zuhairhalawa/studyai`, `BenyRonald77/uajy-academic-rag-chatbot`, `3yangyang9/DeepTutor-AILearning` |
+
+🔴 **Precision ≈ 16 %, and the mechanism is new.** `558-C`'s dilution was **low-signal rows** —
+0★, machine-shaped prose — and a `stars:>5` floor removed it. 🔴 **This dilution is high-star,
+well-maintained, real software that simply is not education:** `ShopifyAutoAuth` at **4 214★**,
+`huashu-motion` at 1 923★, `openclaw-enterprise` at 448★. 🟢 **A stars floor makes this *worse***,
+because the adjective is commonest in exactly the polished repositories a floor promotes.
+
+🟢 **Standing fix, and it is lexical rather than quantitative:** on a free-text supply leg, require
+the education token **at a word boundary** and exclude the `-grade` compound —
+`grading|grader` but never `[a-z]-grade` — or drop the free-text leg for a topic leg. 🔵 `topic:`
+channels do not have this failure mode, because a topic is an assigned label and an adjective is not.
+
+### 🟢 `558-C`'s paired sweep reproduced exactly, one week on
+
+| sweep | unfiltered | with `stars:>5` |
+| --- | --- | --- |
+| `topic:edtech created:>2026-10-23` | **204 total** | 🟢 **2 total, 2 returned, both real, both grant-read** |
+
+🟢 **Digit-for-digit what `p559` published** — same two rows
+([`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) 9★/16 forks,
+[`bayshores/godspeed`](https://github.com/bayshores/godspeed) 7★/0 forks), same counts, ~1 h later.
+🔵 That reproduction is also `560-E`'s evidence: the channel produced **no new promotable row**
+between two consecutive passes, which is what a ~55-minute cadence should be expected to show.
+
+🟢 **The productive channel this pass was `topic:education stars:>30 created:>2026-10-15` — 10 total,
+and it surfaced the pass's two best finds** plus the three BLOCK rows. 🔵 Recorded because the base
+has leaned on `topic:edtech` for several passes while `topic:education` carries an order of magnitude
+more live supply.
+
+### 🟢 Trending repos — graded, with forks carried per `559-E`
+
+| address | grant | ★ | forks | note |
+| --- | --- | --- | --- | --- |
+| 🟢 [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | **MIT** · 1 072 B `4450dee7f762` | 119 | 29 | 🟢 **Promoted to a graded row this pass** — Canvas LMS over MCP |
+| 🟢 [`BenyRonald77/uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot) | **MIT** · 1 068 B `dc10763308da` | 452 | 2 | 🆕 APAC, Indonesia; a deployed university RAG |
+| 🔴 [`DavidDingXu/hello-llm`](https://github.com/DavidDingXu/hello-llm) | 🔴 **PolyForm Noncommercial 1.0.0** · 4 563 B `c0ea4a896d2c` | 39 | 3 | 🆕 **BLOCK** |
+| 🔴 [`juliangonzalez-tech/notcooked`](https://github.com/juliangonzalez-tech/notcooked) | 🔴 **NO-GRANT**, 6 paths | 33 | 0 | 🆕 **BLOCK**, earned |
+| 🔴 [`whiteRabbit1313/awesome-digital-public-infrastructure`](https://github.com/whiteRabbit1313/awesome-digital-public-infrastructure) | 🔴 **NO-GRANT**, 6 paths | 82 | 0 | 🆕 **BLOCK**, earned |
+| 🔴 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 **CC-BY-NC-4.0** · **19 345 B** `db2e35513dba` 🟢 *reproduced under `strip()` this pass* | **5 484** | **1 389** | 🔴 **BLOCK** unchanged. HEAD `068db3c25506` — identical to `p557`'s, so the content never moved |
+
+### 🔧 Correction carried here rather than rewritten below — this page is append-only
+
+🔴 **This page records [`frappe/education`](https://github.com/frappe/education)'s 19 B
+`license.txt` at digest `73ce33ef2719`** (and, in an earlier Spanish-language block,
+`1fcecf395312`). 🟢 **`1fcecf395312` is correct; `73ce33ef2719` is not.**
+
+🟢 **Proof, and it is exhaustive because 19 bytes makes it exhaustive.** The file is
+`License: GNU GPL V3`, **no trailing newline**, so all four byte conventions give 19 B and one
+digest. **13 hash conventions × 6 byte conventions × 31 string variants × 3 encodings = 372
+candidates** produce neither `73ce33ef2719` nor `61408d3da518`. And
+`git clone --filter=blob:none` → `git log --all -- license.txt` returns **exactly one blob, ever**
+(`beca17940a71`), so content drift is excluded. 🔴 **Both alternatives were never measured** (`560-B`).
+
+🔵 **Amended in place on the two pages that permit it** — `agents/top.md` and
+`repos/foundations.md`. 🟢 **Not rewritten here**, because byte-containment of prior passes is this
+page's contract; the superseding value is recorded in this dated section instead.
+
 ## 🆕 `p559` — `2026-10-30` — **🔴 A TRENDING REPO WITH **NO GRANT AT ANY KNOWN PATH**: `datawhalechina/diy-llm` (~2 474★, relayed) returns 404 at all six filenames on its default branch — the first `NOASSERTION` this base has emitted having *earned* it. 🟢 AND THE SHELF-WIDE BRANCH SWEEP LANDS: **121 of 374** addresses are not on `main`, so **32.4 %** of this base's own repo rows defeat a naive grant read.**
 
 ### 🔴 Trending and unusable

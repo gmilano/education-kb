@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-30
 ---
 
+## Pass 560 — reads 2026-10-30, commit 2026-10-30 — **🔴 THE BASE'S OWN MEASUREMENT CONVENTION WAS WRONG, AND THE SHELF SETTLES IT 8-TO-1: `559-A` pinned *raw − 1 newline* from a single specimen; a 13-row census finds **`raw` on 8 rows, the pinned convention on 1, and a third convention nobody had named — `strip()` — on 1** (`560-A`). 🔴 **`560-B`: two of the three digests this base publishes for its smallest grant were NEVER MEASURED**, proven by enumerating that path's entire blob history — **one blob, ever** — against **372 digest candidates**. 🟢 `559-B`, `559-C`, `559-D` CLOSED; `559-E` SUPERSEDED ON A UNIT ERROR. 🟢 TWO NEW MIT AGENT ROWS, THREE BLOCKED ON FIRST-HAND EVIDENCE. 🔴 EIGHT REGISTERED.**
+
+🔴 **Gate posture, stated first. Fourth consecutive pass.** This base's committed instruments remain
+unreachable from the sessions that maintain it (`557-A`, `555-F`). 🟢 Everything below was
+re-implemented inline this pass and run; 🔵 **none of it is gate-attested.**
+
+🟢 **Transports measured:** `git ls-remote --symref` **23/23** addresses; `raw.githubusercontent.com`
+**26 status-gated grant reads**; 🆕 **`git clone --filter=blob:none --no-checkout` on 2 repositories
+— the new transport, and the only one that answers *"was this digest ever real?"***; MCP
+`search_repositories` **4 sweeps**; WebSearch **10 legs** (4 global, 4 regional, 2 follow-up).
+🔴 `curl` → `api.github.com` **403**; `WebFetch` → `www.future-ed.org` **`ENOTFOUND`**; `curl` →
+`gnu.org` **`000`**.
+
+### 🔴 The pass's central finding: this base could not reproduce its own figures
+
+🔴 **13 rows re-read first-hand with all four candidate conventions computed on each.** Full table:
+[`evidence/grant-reconciliation.2026-10-30-p560.tsv`](evidence/grant-reconciliation.2026-10-30-p560.tsv)
+(29 rows, 15 columns).
+
+| convention | rows | representative |
+| --- | --- | --- |
+| 🟢 **`raw`** — bytes as served | **8** | `arsnova/core` `35 147`, `frappe/lms` `33 893`, `educhain` `1 092`, and all four sub-200 B grants |
+| 🔴 `raw − 1 trailing newline` — **the pinned one** | **1** | `learnharness` `34 522` · `4df3c306ddda` |
+| 🔴 `raw − 1` or `strip()`, indistinguishable | 1 | `kolibri` `1 096` · `fa4c9d2697f9` |
+| 🔴 **`strip()`** — whitespace both ends | **1** | `cn-math-taxonomy` **`19 345`** · `db2e35513dba` |
+| 🔵 convention-invariant | 2 | `frappe/education` `19`, `OpenOLAT` `10 982` |
+
+🟢 **`cn-math-taxonomy` is the row that exposed the third convention**, and it is clean evidence
+because its HEAD (`068db3c25506`) is identical to `p557`'s — **the content never moved, the
+convention did**. 🔴 `p557` filed it under a column called `bytes_nl_stripped`, which on that file
+would give **18 939** — a fourth number. 🟢 **Adopted: publish `raw`, and name the convention beside
+the figure.**
+
+### 🔴 Two digests that were never measured, and one that was
+
+🔴 **[`frappe/education`](https://github.com/frappe/education)'s `license.txt` is 19 bytes** —
+`License: GNU GPL V3`, no trailing newline — so every convention gives one digest,
+🟢 **`1fcecf395312`**. The base also published 🔴 `61408d3da518` and 🔴 `73ce33ef2719`. **372 digest
+candidates** (13 hash conventions × 6 byte conventions × 31 string variants × 3 encodings) produce
+neither, and the path has **exactly one blob in its entire history** — so drift is excluded.
+🟢 **Amended in place** on `agents/top.md` and `repos/foundations.md`; recorded in
+`repos/trending.md`'s dated section rather than rewritten, because append-only byte containment is
+that page's contract.
+
+🟢 **The test generalises, and it is this pass's most reusable output.** On a digest mismatch,
+enumerate the path's blob history: *published digest **present*** ⇒ **stale** (measured right, file
+moved on); *absent from a single-blob history* ⇒ **manufactured**. 🟢 It **exonerated**
+[`frappe/frappe`](https://github.com/frappe/frappe), whose carried `b03bbdca4e0a` is a real
+historical blob — and which has 🔴 **three distinct blobs at exactly `1 118 B`**, proving that
+**a byte count cannot detect a licence change** (`560-F`).
+
+### 🟢 What else closed
+
+- 🟢 **`559-B`** — the sub-200 B sweep ran across all ten pages (~14 MB). **5 genuine sub-200 B grant figures; all re-read; none is a 404 body.** The 404 body reproduces at **14 B / `d5558cd419c8`** and appears on this shelf **only as a negative control**. 🟢 The gate is load-bearing and never fired here.
+- 🟢 **`559-C`** — canonical Apache-2.0 **re-pinned at `11 358 B` / `cfc7749b96f6`** from two independent sources; 🔴 `559-C`'s own `11 356` / `43070e2d4e53` reproduces from neither (`560-C`). Two rows re-graded *modified-but-equivalent*. 🔵 **The rule survived its own baseline** — grading on clauses rather than bytes produced the right verdict anyway.
+- 🟢 **`559-D`** — ten firms now carry a **scope word**, and the 2026 base spread widens to 🔴 **5.9×** (`$1.94 B → $11.4 B`). 🟢 **Ordered by scope breadth**, so the spread is decomposed rather than declared. 🟢 Precedence Research states the mechanism in print.
+- 🟢 **`559-F`** — re-probed; still 404 at six paths. 🟢 Two more earned `NO-GRANT` rows joined it, so the category has three members.
+- 🔴 **`559-E` superseded (`560-E`)** — a **5-pass** window for a **30-day** question on a base running **22–28 passes/day** is **≈3 h 40 m**. Both its rows read identical counts ~1 h later. 🟢 Re-expressed as dates: **D+7 `2026-11-02`**, **D+30 `2026-11-25`**.
+
+### 🟢 Supply this pass — 4 new addresses, 6 grants read, 3 blocked
+
+| row | grant | ★ / forks |
+| --- | --- | --- |
+| 🟢 [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | **MIT** · 1 072 B `4450dee7f762` | 119 / **29** |
+| 🟢 [`BenyRonald77/uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot) | **MIT** · 1 068 B `dc10763308da` | **452** / 2 |
+| 🔴 [`DavidDingXu/hello-llm`](https://github.com/DavidDingXu/hello-llm) | 🔴 **PolyForm Noncommercial 1.0.0** · 4 563 B | 39 / 3 |
+| 🔴 [`juliangonzalez-tech/notcooked`](https://github.com/juliangonzalez-tech/notcooked) | 🔴 **NO-GRANT**, 6 paths, earned | 33 / 0 |
+| 🔴 [`whiteRabbit1313/awesome-digital-public-infrastructure`](https://github.com/whiteRabbit1313/awesome-digital-public-infrastructure) | 🔴 **NO-GRANT**, 6 paths, earned | 82 / 0 |
+
+🟢 **`canvas-mcp` is the first agent-to-vertical bridge on this shelf** — an MIT, read-only MCP
+server in front of **AGPL Canvas LMS**, so no copyleft reaches the agent because the agent never
+links Canvas code. 🟢 It anchors the new pattern **`P560-B`**. 🔴 Read-only is a real limit: write
+paths go through Canvas REST under the institution's token policy.
+
+### 🟢 Demand this pass — placed per region, with the blanks named
+
+- 🟢 **EMEA — first new instrument in 21 passes, and it was a partition inside a date already carried.** `Regulation (EU) 2026/1744` deferred Annex III education to **2 Dec 2027**, but 🔴 **Article 50 transparency was NOT deferred and has applied since 2 Aug 2026**. The headline *"education delayed to 2027"* is true of the conformity programme and **false of the disclosure duty**.
+- 🟢 **LATAM — a second, independent measurement of `p559`'s gap.** UNESCO IESALC / UNU-IAS: **200 institutions, 19 countries, 87 % adoption vs 26 % formal strategy** (~3.3:1), at institution level, against `p559`'s teacher-level >50 % vs <10 %. 🟢 Two independent measurements of one gap is a finding, not a thesis.
+- 🟢 **APAC — the pass's best new address and its clearest BLOCK**, plus two dated statutes (Korea's AI Framework Act **22 Jan 2026**; Vietnam's Law on AI **1 Mar 2026**, Decree 142/2026 **30 Apr 2026**). 🔴 Vietnam's education grace date **not recorded** — three values in one session.
+- 🔴 **North America — one *negative* instrument.** `560-G`: **FutureEd's own page says 13 enacted** while sites citing that tracker say 52, 68 and 77, and MultiState says `134/31` — the figure `p553` retired, back a sixth time. 🟢 **No count adopted** (`557-D`, fifth refusal).
+- 🔴 **No new EMEA or LATAM supply.** 🔵 `558-H`'s correction restated: *"no LATAM-origin supply"* is **REFUTED** (12 addresses, Brazil 8, Argentina 4); the right sentence is *"nothing new arrived this pass"*.
+
+### 🔵 Contract checks, re-implemented and run
+
+🟢 **Frontmatter 10/10.** 🟢 **Exactly one `## Opportunities by region`** with **5** closed-vocabulary
+`###` children in vocabulary order, **0** out-of-vocabulary, LATAM-only **False**, and 🟢 **each of
+the five amended in place**. 🟢 **0 placeholder-as-data rows** and **0 ragged tables** in this pass's
+added sections. 🟢 **Append-only proved by byte containment** — `agents/trending.md`,
+`repos/trending.md` and `intel/open-gaps.md` all ✔; `agents/top.md`, `repos/foundations.md` and
+`intel/market.md` intentionally **not** contained, because this pass amended two digests and five
+region children **in place**. 🟢 **Gap-registration matrix published** (8 ids × 8 pages, 0 orphans)
+rather than asserted in prose — 🔵 because the prose form is the claim `557-C` caught this base
+making about work it had not done.
+
+🟢 **And the re-implemented validator earned its keep again by failing this pass's own draft.** The
+`560-H` register row rendered as a **ragged table** — four header pipes against five in the row,
+because the cell contained an escaped `\|` inside a regex. 🟢 **Caught before commit and rewritten**;
+tables in this pass's sections are now **34 checked, 0 ragged, 0 placeholder-as-data rows.**
+
+🟢 **Every address introduced this pass was resolved before publication, on the transport that
+works here.** 🔴 `curl` → `github.com` returns **403** through this proxy, so a `%{http_code}` check
+is worthless for link verification on this host class; 🟢 `git ls-remote --symref` answered
+**23 of 23 — 0 unresolved.** 🔵 And the sample corroborates `558-B` independently: **9 of 23 (39 %)
+are not on `main`** — `master` 5, `develop` 4 — against the full-shelf figure of 32.4 %.
+
 ## Pass 559 — reads 2026-10-30, commit 2026-10-30 — **🟢 `558-B` CLOSED BY MEASURING THE WHOLE SHELF, AND THE RESULT IS A DELIVERY FINDING, NOT A TOOLING ONE: a `main`-only grant read — the obvious way to build the licence gate every engagement stands up in week one — returns **404 for 121 of 374 addresses (32.4 %)**, and the sixteen it loses to *version* branches are `odoo` (`20.0`), `openeducat_erp` (`19.0`), `i-educar` (`2.12`), `ILIAS` (`release_11`), `bigbluebutton`, `tutor` and `ofbiz`. 🔴 **It would report `NOASSERTION` for both ERP bases and the entire LATAM public-sector stack.** 🟢 `558-C`, `558-D` closed and `558-A` discharged; seven registered.**
 
 🔴 **Gate posture, stated first. Third consecutive denial, third distinct instrument.**

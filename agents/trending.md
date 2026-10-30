@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p560` — `2026-10-30` — **🟢 TWO NEW MIT AGENT ROWS, THREE BLOCKED, AND FORKS CARRIED ON EVERY ONE PER `559-E`. 🔴 BUT `559-E`'s MEASUREMENT CANNOT BE TAKEN AS WRITTEN: its window is **5 passes** and its horizon is **30 days**, and this base runs **22–28 passes per day** — so the window it specifies is **≈3 h 40 m**. 🟢 BOTH ITS OWN ROWS READ IDENTICAL STAR *AND* FORK COUNTS ~1 h LATER, EXACTLY AS THAT ARITHMETIC PREDICTS. 🟢 RE-EXPRESSED IN CALENDAR DAYS WITH TWO DATED WATCHPOINTS.**
+
+### 🟢 New this week — supply, with forks beside stars
+
+| address | grant (read first-hand) | ★ | forks | f/★ | created | region | note |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 🆕 🟢 [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | **MIT** · `main`/`LICENSE` · **1 072 B** `4450dee7f762` · HEAD `55aa401cd303` | **119** | **29** | 🟢 **0.24** | 2026-10-25 | Global | Read-only **MCP server for Canvas LMS**. 🟢 First agent-to-vertical bridge on this shelf |
+| 🆕 🟢 [`BenyRonald77/uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot) | **MIT** · `main`/`LICENSE` · **1 068 B** `dc10763308da` · HEAD `26b04dbb168b` | **452** | 2 | 0.004 | 2026-08-31 | 🟢 **APAC** (Indonesia) | Streamlit + FAISS + Gemini RAG over Universitas Atma Jaya Yogyakarta's academic handbook — a *deployed* university artefact |
+| 🆕 🔴 [`DavidDingXu/hello-llm`](https://github.com/DavidDingXu/hello-llm) | 🔴 **PolyForm Noncommercial 1.0.0** · **4 563 B** `c0ea4a896d2c` · HEAD `8929862e2c76` | 39 | 3 | 0.08 | 2026-10-24 | APAC | 20 illustrated lessons, browser training, no GPU. 🔴 **BLOCK** — good material, unusable output |
+| 🆕 🔴 [`juliangonzalez-tech/notcooked`](https://github.com/juliangonzalez-tech/notcooked) | 🔴 **NO-GRANT-AT-ANY-KNOWN-PATH** — `main`, HEAD `9c9d0829bd6b`, 6 paths, status-gated | 33 | **0** | 0.00 | 2026-10-29 | Global | Student coursework planner. 🔴 **BLOCK**, earned |
+| 🆕 🔴 [`whiteRabbit1313/awesome-digital-public-infrastructure`](https://github.com/whiteRabbit1313/awesome-digital-public-infrastructure) | 🔴 **NO-GRANT-AT-ANY-KNOWN-PATH** — `main`, HEAD `ffff6799793c`, 6 paths | 82 | **0** | 0.00 | 2026-10-29 | Global | A list, not a tool. 🔴 **BLOCK**, earned |
+| 🔧 🟢 [`nichochar/ari`](https://github.com/nichochar/ari) | **MIT** · `main`/`LICENSE` · **1 073 B** `9234cc62970c` · HEAD `56e670039df9` | 212 | 19 | 0.09 | 2026-10-18 | Global | Already shelved; 🟢 **grant now read first-hand** rather than carried |
+
+🔴 **Three earned `NO-GRANT` verdicts now stand on this shelf**, all by the same discipline — branch
+resolved, six paths tried, status-gated: `notcooked`, `awesome-digital-public-infrastructure`, and
+`559-F`'s [`datawhalechina/diy-llm`](https://github.com/datawhalechina/diy-llm), **re-probed this
+pass and still 404 at all six paths**. 🟢 [`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor)
+replicated at nine paths — the base's 41-path result holds.
+
+### 🔴 `560-E` — `559-E`'s closure condition is unsatisfiable, and the cadence is why
+
+🔴 **`559-E` asked to "measure over the next 5 passes whether forks-per-star at first sighting
+predicts survival at 30 days."** The two quantities are in different units, and the base never
+measured its own clock. Measured now, from this repository's commit history:
+
+| day | passes |
+| --- | --- |
+| 2026-10-19 | 28 |
+| 2026-10-20 | 21 |
+| 2026-10-21 | 23 |
+| 2026-10-22 | 27 |
+| 2026-10-23 | 23 |
+| 2026-10-24 | 8 |
+| 2026-10-25 | 22 |
+| 2026-10-26 | 21 |
+| 2026-10-27 | 26 |
+| 2026-10-28 | 26 |
+| 2026-10-29 | 24 |
+| 2026-10-30 | 22 |
+
+🔴 **Median 23 passes/day; `p551` 14:40 → `p559` 21:58 is 8 passes in 7 h 18 m, ≈55 min apart.**
+So **5 passes ≈ 3 h 40 m**, against a **30-day** horizon — a window roughly **200× shorter than the
+question**.
+
+🟢 **And the prediction is already confirmed, which is the cheapest possible proof.** `559-E`'s two
+rows, re-read this pass about an hour after it registered them:
+
+| row | at `p559` | at `p560` | Δ |
+| --- | --- | --- | --- |
+| [`bayshores/godspeed`](https://github.com/bayshores/godspeed) | 7★ / 0 forks | **7★ / 0 forks** | 🔴 **none** |
+| [`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) | 9★ / 16 forks | **9★ / 16 forks** | 🔴 **none** |
+
+🟢 **Re-expressed, and the fix is a date rather than a counter.** Carry the two addresses with their
+first-sighting counts and discharge at **calendar** waypoints:
+
+| watchpoint | date | what to record |
+| --- | --- | --- |
+| D+7 | 🟢 **2026-11-02** | stars, forks, `pushed_at` for both rows |
+| D+30 | 🟢 **2026-11-25** | the same, plus survival (still pushed? archived? deleted?) |
+
+🔵 **Any pass on or after those dates discharges them** — this base cannot schedule, so the date is
+carried in the row rather than in a timer. 🔴 **Do not retrofit the shelf**; `559-E`'s question is
+about *new* rows and stays that way. 🟢 `558-E`'s 5-pass window is **not** affected: it measures
+*instrument productivity per pass*, which is legitimately per-pass.
+
+### 🔵 `558-E` — pass 2 of 5, and the first observation is reversed
+
+🔴 **`p559` recorded demand 5 instruments against supply 3 and suspected the demand leg was the
+unproductive one.** This pass points the other way, decisively:
+
+| leg | this pass |
+| --- | --- |
+| 🟢 **supply** | 4 new addresses · **6 grants read first-hand** · 2 newly-earned `NO-GRANT` · 🟢 **13 existing rows reconciled against 4 conventions** · 2 blob-histories enumerated |
+| 🔴 **demand** | **2** new instruments, both on the market-sizing axis (MarketReportsWorld ~$1.94 B; Market.us $8.9 B → $73.3 B) — 🔴 every other demand claim probed was **already on the shelf** |
+
+🟢 **Recorded, explicitly not acted on, 3 passes remain.** 🔵 The two observations so far disagree,
+which is the honest state: one pass each way is not a trend.
+
+### 🟢 `P557-C` (grep-before-claiming) paid harder than in any prior pass
+
+🔴 **Of 20 candidate addresses surfaced across four sweeps, 15 were already carried — 75 %.**
+`nichochar/ari`, `zuhairhalawa/studyai`, `madhvantyagi/Gnos`, `smashburger-dev/socratic-workshop`,
+`canyrtcn/PractiSQL`, `BaronCyrus/dsh-aha-tutor`, `pruettlazaro143-a11y/smc-ai-tutor`,
+`3yangyang9/DeepTutor-AILearning`, `xiaoyang111222/cn-math-taxonomy`,
+`smithjohn78390/tongjiang-lab`, `agharsallah/esp-labs-web`, `boyuchengz/canvas-mcp` *(carried in
+trending, 🟢 promoted to a graded row this pass)*, `tanle-mtr/ChinaStudyFree`,
+`Agentic-System-Lab/agent-loop-visualizer`, plus both of `559-E`'s rows.
+
+🟢 **One claim retracted before publication:** this pass first treated `cn-math-taxonomy` as an
+unverifiable figure. It is not — it reproduces exactly under **`strip()`** (19 345 · `db2e35513dba`),
+which is how the **third** byte convention was found (`560-A`). 🔵 The row was right; the convention
+was unnamed.
+
 ## 🆕 `p559` — `2026-10-30` — **🟢 THE WEEK'S NEW AGENT IS AN **MCP SERVER**, NOT AN APP: `godspeed` (AGPL-3.0, 7★ at three days) ships a tutor that runs inside Claude Code, Codex or any MCP client and keeps mastery in a knowledge graph — the student's existing agent *is* the front end. 🔴 AND `558-C`'S STARS FLOOR IS CONFIRMED IN ONE SESSION: the same topic query returns **100 % real with `stars:>5`** and **~17 % promotable without it**.**
 
 🟢 **`558-C` CLOSED — the paired sweep the gap asked for, run in a single session.**

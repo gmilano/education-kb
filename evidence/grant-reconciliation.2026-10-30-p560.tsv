@@ -1,0 +1,29 @@
+address	branch	head_sha12	grant_path	published_bytes	published_sha256_12	raw_bytes	raw_sha256_12	conv_bytes	conv_sha256_12	strip_bytes	strip_sha256_12	reproduces_under	verdict	note
+particify/arsnova-server	master	-	formatting/LICENSE	133	747c3a657b2b	133	747c3a657b2b	132	f70a443bcab4	132	f70a443bcab4	raw	ALL-RIGHTS-RESERVED	sub-200B row 1 of 5; real file, not a 404 body; 559-B
+w3c/vc-data-model	main	-	LICENSE.md	167	232da9c6c2b9	167	232da9c6c2b9	166	fa24348a19b8	166	fa24348a19b8	raw	POINTER-GRANT	sub-200B row 2 of 5; real file; 559-B
+ucbds-infra/ottr	master	-	LICENSE	108	de5d9459d263	108	de5d9459d263	107	44a4a1fc44e4	107	44a4a1fc44e4	raw	UNCLASSIFIED	sub-200B row 3 of 5; R YEAR/COPYRIGHT HOLDER template; 559-B
+12britz/awesome-free-models	main	-	LICENSE	137	99b4c41f664e	137	99b4c41f664e	136	e4481a54f6ec	136	e4481a54f6ec	raw	CC0-PARAPHRASE	sub-200B row 4 of 5; real file; 559-B
+frappe/education	develop	-	license.txt	19	1fcecf395312	19	1fcecf395312	19	1fcecf395312	19	1fcecf395312	all-four	GPL-3.0-DECLARED-ONLY	sub-200B row 5 of 5; convention-invariant (no trailing newline); ONE blob in all history
+particify/arsnova-server	master	-	core/LICENSE	35147	8ceb4b9ee5ad	35147	8ceb4b9ee5ad	35146	c53a65c2fd56	35146	c53a65c2fd56	raw	GPL-3.0	raw convention
+frappe/lms	develop	-	license.txt	33893	db1a87ba81e8	33893	db1a87ba81e8	33892	543fa96aec22	33892	543fa96aec22	raw	AGPL-3.0	raw convention
+satvik314/educhain	main	-	LICENSE	1092	e3321a1b62cd	1092	e3321a1b62cd	1091	8fff0565eab0	1091	8fff0565eab0	raw	MIT	raw convention
+tokenaii/Horus-Taleeq-0.2B-Base	main	-	LICENSE	1080	96c22722c817	1080	96c22722c817	1079	99767e43cb36	1079	99767e43cb36	raw	MIT	raw convention
+OpenOLAT/OpenOLAT	master	-	LICENSE	10982	6dbc5b605ed0	10982	6dbc5b605ed0	10982	6dbc5b605ed0	10982	6dbc5b605ed0	all-four	APACHE-2.0-MODIFIED	convention-invariant; 559-C figure CONFIRMED
+learningequality/kolibri	develop	-	LICENSE	1096	fa4c9d2697f9	1097	3c056b34a476	1096	fa4c9d2697f9	1096	fa4c9d2697f9	conv|strip	MIT	558-D figure CONFIRMED; conv convention
+amosblomqvist/learnharness	main	-	LICENSE	34522	4df3c306ddda	34523	0d96a4ff68ad	34522	4df3c306ddda	34502	0f1981d1a64e	conv	AGPL-3.0	the ONLY row that is conv and NOT strip
+xiaoyang111222/cn-math-taxonomy	main	068db3c25506	LICENSE	19345	db2e35513dba	19347	41003d4a7474	19346	3711f963c05d	19345	db2e35513dba	strip	CC-BY-NC-4.0 / BLOCK	THIRD convention; same HEAD as p557 evidence so content unchanged; p557 column named bytes_nl_stripped would give 18939
+frappe/frappe	develop	-	LICENSE	1118	b03bbdca4e0a	1118	bc6001a54ffc	1117	5e3f49a77298	1117	5e3f49a77298	none-current	MIT	STALE-BUT-REAL: b03bbdca4e0a IS blob 5dfc0fd5bd44 in history; 3 distinct blobs all exactly 1118 B; path license.txt renamed to LICENSE upstream
+frappe/erpnext	develop	-	license.txt	34916	f333043685c8	35149	3972dc9744f6	35148	8b1ba204bb69	35128	3743f7a4ab51	none	GPL-3.0	DRIFTED upstream +233 B since pinned; verdict unaffected
+Django-CRM/Django-CRM	master	-	LICENSE	1069	b197caf2	1101	293663d46bdc	1100	56d61fe622b9	1100	56d61fe622b9	none	MIT	DRIFTED upstream +32 B since pinned; verdict unaffected
+HKUDS/DeepTutor	main	1ea7df155447	LICENSE	-	-	11408	cd2f54e1e506	11407	596087a7f098	11407	596087a7f098	new-read	APACHE-2.0-MODIFIED	+50 B vs canonical; THREE operative-body edits, not just a filled appendix; 560-D
+apache.org CANONICAL Apache-2.0	-	-	LICENSE-2.0.txt	-	-	11358	cfc7749b96f6	11357	58d1e17ffe51	11357	58d1e17ffe51	new-pin	APACHE-2.0	canonical re-pinned; 559-C's 11356/43070e2d4e53 does NOT reproduce
+openedx/XBlock	master	-	LICENSE.TXT	-	-	11358	cfc7749b96f6	11357	58d1e17ffe51	11357	58d1e17ffe51	new-read	APACHE-2.0	byte-identical to apache.org copy; independent confirmation of the pin
+boyuchengz/canvas-mcp	main	55aa401cd303	LICENSE	-	-	1072	4450dee7f762	1071	daf2b1bad511	1071	daf2b1bad511	new-read	MIT	NEW supply; read-only MCP server for Canvas LMS; 119 stars / 29 forks
+BenyRonald77/uajy-academic-rag-chatbot	main	26b04dbb168b	LICENSE	-	-	1068	dc10763308da	1067	ca5fcdc5b8dd	1067	ca5fcdc5b8dd	new-read	MIT	NEW supply; APAC (Indonesia); 452 stars / 2 forks
+nichochar/ari	main	56e670039df9	LICENSE	-	-	1073	9234cc62970c	1072	6943d815f6fa	1072	6943d815f6fa	new-read	MIT	already shelved; grant now read first-hand
+DavidDingXu/hello-llm	main	8929862e2c76	LICENSE	-	-	4563	c0ea4a896d2c	4562	df23779e856a	4562	df23779e856a	new-read	POLYFORM-NONCOMMERCIAL-1.0.0 / BLOCK	NEW supply; non-commercial; 39 stars / 3 forks
+juliangonzalez-tech/notcooked	main	9c9d0829bd6b	-	-	-	-	-	-	-	-	-	n/a	NO-GRANT-AT-ANY-KNOWN-PATH / BLOCK	earned: branch resolved, 6 paths tried, status-gated; 33 stars / 0 forks
+whiteRabbit1313/awesome-digital-public-infrastructure	main	ffff6799793c	-	-	-	-	-	-	-	-	-	n/a	NO-GRANT-AT-ANY-KNOWN-PATH / BLOCK	earned, 6 paths; 82 stars / 0 forks
+datawhalechina/diy-llm	main	-	-	-	-	-	-	-	-	-	-	n/a	NO-GRANT-AT-ANY-KNOWN-PATH / BLOCK	559-F RE-PROBED this pass: still 404 at all six paths
+JushBJJ/Mr.-Ranedeer-AI-Tutor	main	-	-	-	-	-	-	-	-	-	-	n/a	NO-GRANT-AT-ANY-KNOWN-PATH / BLOCK	replicated at 9 paths this pass; base already carries it at 41 paths
+404-BODY NEGATIVE CONTROL	-	-	bogus-ref	14	d5558cd419c8	14	d5558cd419c8	14	d5558cd419c8	14	d5558cd419c8	all-four	NOT-A-GRANT	printf '404: Not Found' reproduces d5558cd419c8 exactly; appears on this shelf ONLY in control contexts

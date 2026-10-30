@@ -4,6 +4,63 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p560` — `2026-10-30` — **🟢 THE FIRST AGENT-TO-VERTICAL BRIDGE ON THIS SHELF, AND IT IS MIT: [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) puts an MCP server in front of **Canvas LMS**, a platform this page has carried since `p2` and never had a programmable path into. 🔴 AND THE LICENCE GATE THAT GUARDS THIS PAGE NEEDS A THIRD CONVENTION: `odoo` (`20.0`), `openeducat_erp` (`19.0`) and `i-educar` (`2.12`) are already lost to a `main`-only reader (`559-G`); now **`cn-math-taxonomy`'s figure only reproduces under `strip()`** (`560-A`).**
+
+### 🟢 The new row — a bridge, not another platform
+
+| platform | address | grant | ★ / forks | what it is |
+| --- | --- | --- | --- | --- |
+| 🆕 **canvas-mcp** | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | 🟢 **MIT** · `main`/`LICENSE` · **1 072 B** `4450dee7f762` · HEAD `55aa401cd303` | **119** / **29** | Read-only MCP server connecting Claude, ChatGPT and other assistants to **Canvas LMS** (Instructure). Node.js. Created 2026-10-25 |
+
+🟢 **Why this row is worth more than its star count.** Every agent row on this shelf so far has been
+a *replacement* for part of an LMS — a tutor, a grader, a course generator. This is the first that
+**reads the institution's existing system of record**. 🔵 Canvas community edition is **AGPL-3.0**,
+which is why so many engagements leave it in place rather than fork it; an MIT read-only MCP server
+beside it is the shape that actually ships: 🟢 **no copyleft reaches the agent, because the agent
+never links Canvas code — it speaks to Canvas over MCP.**
+
+🔴 **Read-only is a real limit, stated here so no proposal over-promises it.** Grade write-back,
+enrolment changes and assignment creation are **not** in scope for this server. A write path needs
+Canvas's own REST API under the institution's token policy, and that is an integration decision, not
+a dependency choice.
+
+### 🔵 The vertical shelf's licence posture, restated with this pass's correction
+
+🔴 **Nothing on this page changed licence. What changed is the base's ability to reproduce its own
+figures.** `560-A` found **three** byte conventions in live use, and this page's most-cited data
+asset is the row that exposed the third one:
+
+| row | published | `raw` | `conv` | `strip()` | which reproduces |
+| --- | --- | --- | --- | --- | --- |
+| 🔴 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **19 345 B** `db2e35513dba` | 19 347 `41003d4a7474` | 19 346 `3711f963c05d` | 🟢 **19 345 `db2e35513dba`** | 🟢 **`strip()` only** |
+
+🟢 **The HEAD sha is unchanged from `p557`'s evidence file (`068db3c25506`), so the content did not
+move — the convention did.** 🔵 `p557` filed it in a column named **`bytes_nl_stripped`**, which on
+this file would give **18 939**. 🟢 The row was measured correctly; the label cannot recover how, and
+`560-A` fixes that by naming the convention beside every figure.
+
+🔴 **The verdict is untouched and still the most commercially important one on this page:
+`CC-BY-NC-4.0` ⇒ `BLOCK`.** 1 644 knowledge points, 2 403 prerequisite edges, 6 723 curriculum-aligned
+items, **5 484★ / 1 389 forks** — the richest K-12 curriculum graph this base has found, and
+**NonCommercial**, so it cannot enter a client deliverable. 🔵 It remains usable as a *reference* for
+building an equivalent graph under a licence Globant can ship.
+
+### 🔵 Carried unchanged, and why each still stands
+
+| platform | grant | posture |
+| --- | --- | --- |
+| **Moodle** | GPL-3.0 | 🟡 copyleft — plugin boundary is the integration surface |
+| **Open edX** | AGPL-3.0 (`tutor` → branch `release`) | 🟡 as above; 🔴 `559-G` — not on `main` |
+| **Canvas LMS** | AGPL-3.0 | 🟢 **now reachable read-only over MIT** via `canvas-mcp` |
+| **Kolibri** | 🟢 **MIT** · `develop/LICENSE` · 1 096 B `fa4c9d2697f9` | 🟢 offline-first; grant **read**, not carried (`558-D`, re-confirmed `p560`) |
+| **OpenEduCat** | LGPL-3.0, branch `19.0` | 🟡 ERP/SIS; 🔴 `559-G` |
+| **Odoo** | LGPL-3.0, branch `20.0` | 🟡 ERP base; 🔴 `559-G` |
+| **i-educar** | branch `2.12` | 🟢 LATAM public-sector SIS (Brazil); 🔴 `559-G` |
+| **BigBlueButton** | branch `v4.0.x-develop` | 🟡 virtual classroom; 🔴 `559-G` |
+| **ILIAS** | branch `release_11` | 🟡 EMEA LMS; 🔴 `559-G` |
+| **OpenOLAT** | 🟢 **Apache-2.0** · 10 982 B `6dbc5b605ed0` | 🟢 the page's **only permissive full LMS**; modified-but-equivalent (`559-C`, re-graded `p560`) |
+| 🔴 **frappe/education** | **GPL-3.0 *declared only*** — `license.txt` is **19 B**: the whole file is `License: GNU GPL V3` | 🔴 digest 🟢 `1fcecf395312` (`560-B`); a stub that names a family and states no clause |
+
 ## 🆕 `p559` — `2026-10-30` — **🔴 THE PLATFORMS THIS SHELF RECOMMENDS ARE THE ONES A NAIVE LICENCE GATE CANNOT READ: `odoo` defaults to `20.0`, `openeducat_erp` to `19.0`, `i-educar` to `2.12`, `ILIAS` to `release_11`, `bigbluebutton` to `v4.0.x-develop`, `tutor` to `release`, `ofbiz-framework` to `trunk`. 🟢 All seven resolve and all seven 404 at `…/main/LICENSE`. 🟢 `OpenOLAT` grant read first-hand at `master`: Apache-2.0, operative sections complete.**
 
 ### 🔴 `559-G` — a vertical-layer finding, not a tooling trivium

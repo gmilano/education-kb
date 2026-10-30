@@ -4,6 +4,144 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p560` — `2026-10-30` — **🟢 TWO NEW PATTERNS, BOTH FROM THIS PASS'S OWN MEASUREMENTS: `P560-A` is the licence gate every engagement stands up in week one, now correct on all three axes this base has measured it failing on — **branch** (`559-G`: 1 row in 3 is not on `main`), **convention** (`560-A`: three are in live use), and **staleness** (`560-F`: a byte count cannot detect a licence edit). `P560-B` wires [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) in front of an institution's existing Canvas without touching its AGPL code.**
+
+### 🟢 `P560-A` — the licence gate, corrected on three axes
+
+🔴 **Why the obvious version is wrong, with this shelf's numbers.** A gate that reads
+`raw.githubusercontent.com/{repo}/main/LICENSE` and hashes it against a canonical copy fails three
+ways, each measured on this base:
+
+| failure | measured here | what the client sees |
+| --- | --- | --- |
+| 🔴 **branch** | **121 of 374** shelf addresses are not on `main` — 32.4 % (`558-B`); the 16 on *version* branches include `odoo` `20.0`, `openeducat_erp` `19.0`, `i-educar` `2.12`, `ILIAS` `release_11` | `NOASSERTION` for **both ERP bases and the whole LATAM public-sector stack** (`559-G`) |
+| 🔴 **convention** | **three** byte conventions in live use — `raw` (8 rows), `raw−1NL` (1), `strip()` (1) (`560-A`) | figures that cannot be reconciled between two runs of the same tool |
+| 🔴 **staleness** | `frappe/frappe` has **three distinct blobs at exactly 1 118 B** (`560-F`) | *"unchanged"* reported across a real licence edit |
+| 🔴 **canonical baseline** | Apache-2.0 is **11 358 B** `cfc7749b96f6`; `559-C`'s cited `11 356` / `43070e2d4e53` reproduces from no source (`560-C`) | every Apache row flagged against a baseline that does not exist |
+
+```bash
+#!/usr/bin/env bash
+# P560-A — licence gate for an education engagement. Supersedes P559-A.
+# Ships as one file so the client can read it; every number above is why a line is here.
+set -uo pipefail
+CANON_APACHE_RAW=11358; CANON_APACHE_SHA=cfc7749b96f6   # 560-C, two independent sources
+
+gate() {                                     # $1 = owner/repo
+  repo=$1
+  # (1) BRANCH — never assume main. 1 row in 3 is not on it (558-B).
+  br=$(git ls-remote --symref "https://github.com/$repo" HEAD \
+       | awk '/^ref:/{sub("refs/heads/","",$2); print $2; exit}')
+  [ -z "$br" ] && { echo "$repo UNREACHABLE"; return 2; }
+  head=$(git ls-remote "https://github.com/$repo" HEAD | cut -c1-12)
+
+  # (2) PATH ladder, status-gated. An ungated read writes a 404 BODY to disk and a
+  #     byte-counting pipeline records it as a 14 B grant, d5558cd419c8 (559-B).
+  for fn in LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.LESSER; do
+    code=$(curl -sS -w '%{http_code}' -o g.tmp \
+           "https://raw.githubusercontent.com/$repo/$br/$fn")
+    [ "$code" = 200 ] || continue
+
+    # (3) CONVENTION — emit all three and LABEL them. Three are in live use (560-A).
+    python3 -I - "$repo" "$br" "$head" "$fn" <<'PY'
+import sys, hashlib
+b = open('g.tmp','rb').read()
+repo, br, head, fn = sys.argv[1:5]
+for label, v in (('raw', b), ('conv', b[:-1] if b.endswith(b'\n') else b), ('strip', b.strip())):
+    print(f"{repo}\t{br}\t{head}\t{fn}\t{label}\t{len(v)}\t{hashlib.sha256(v).hexdigest()[:12]}")
+PY
+    # (4) GRADE ON CLAUSES, not bytes. 559-C: a modified-but-equivalent grant is still
+    #     the licence. Every digest mismatch found on this shelf has been that kind.
+    hdr=$(head -3 g.tmp)
+    for clause in 'Grant of Copyright License' 'Grant of Patent License' Redistribution Trademarks; do
+      grep -q "$clause" g.tmp || echo "  MISSING-OPERATIVE-CLAUSE: $clause"
+    done
+    return 0
+  done
+  echo "$repo branch=$br NO-GRANT-AT-ANY-KNOWN-PATH"   # the only honest NOASSERTION
+  return 1
+}
+
+# (5) STALENESS — run on a digest mismatch, before blaming anyone. 560-B / 560-F.
+#     published digest IN history  => measured right, file moved on  => STALE
+#     published digest absent, and history has ONE blob => never existed => MANUFACTURED
+was_it_ever_real() {                         # $1 = owner/repo  $2 = path  $3 = digest
+  d=$(mktemp -d)
+  git clone -q --no-checkout --filter=blob:none "https://github.com/$1" "$d" || return 2
+  ( cd "$d"
+    git log --all --format=%H -- "$2" | while read -r c; do git rev-parse "$c:$2" 2>/dev/null; done \
+    | sort -u | while read -r blob; do
+        printf '%s %s %s\n' "$blob" "$(git cat-file -s "$blob")" \
+               "$(git cat-file -p "$blob" | sha256sum | cut -c1-12)"
+      done | tee /dev/stderr | grep -q " $3$" \
+      && echo "STALE — $3 is a real historical blob" \
+      || echo "MANUFACTURED — $3 appears in no blob of this path" )
+  rm -rf "$d"
+}
+```
+
+🔵 **Stage 5 is the new one and it is what makes the gate defensible in an audit.** Before this pass
+the base could say a digest *disagreed*; it could not say **who was wrong**. On
+`frappe/education` the answer was *manufactured* (one blob, ever; neither carried digest among 372
+enumerated candidates); on `frappe/frappe` it was *stale* (four blobs, three at exactly 1 118 B, and
+the carried digest is one of them). 🟢 **Same symptom, opposite verdicts, settled by one call.**
+
+### 🟢 `P560-B` — read an institution's Canvas without inheriting its AGPL
+
+🟢 **The problem this solves.** Canvas community edition is **AGPL-3.0**, so the usual engagement
+shape leaves it running untouched and builds beside it — which until now meant no programmable path
+into the system of record. 🟢 [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp)
+is **MIT** (`main`/`LICENSE`, **1 072 B** `4450dee7f762`, HEAD `55aa401cd303`, 119★/29 forks) and
+read-only.
+
+```
+┌─ institution's existing Canvas LMS (AGPL-3.0 — untouched, not forked, not linked) ─┐
+│                              Canvas REST API + institution token                   │
+└───────────────────────────────┬────────────────────────────────────────────────────┘
+                                │  MCP (process boundary — no code linkage)
+                   ┌────────────▼─────────────┐
+                   │ canvas-mcp   MIT         │  read-only: courses, assignments,
+                   │ 1 072 B 4450dee7f762     │  submissions, deadlines
+                   └────────────┬─────────────┘
+                                │  MCP tools
+      ┌─────────────────────────▼──────────────────────────┐
+      │ agent layer — all permissive, all already shelved  │
+      │  · DeepTutor      Apache-2.0  (🔴 560-D: hand-edited — declare it in the SBOM) │
+      │  · educhain       MIT  1 092 B e3321a1b62cd  — course/assessment generation    │
+      │  · ari            MIT  1 073 B 9234cc62970c  — pen-and-paper tutoring loop     │
+      └─────────────────────────┬──────────────────────────┘
+                                │  write path: NOT canvas-mcp — see below
+                   ┌────────────▼─────────────┐
+                   │ Canvas REST, institution │  grades, enrolment, assignment creation
+                   │ token, audited           │
+                   └──────────────────────────┘
+```
+
+🟢 **Wiring, concretely.**
+
+1. **Stand up `canvas-mcp`** against the institution's Canvas with a **read-only** API token. The process boundary is the licence boundary: 🟢 the agent never links Canvas code, so AGPL §13 is not triggered by the agent.
+2. **Mount it as an MCP server** in the agent runtime. Tool surface: course lists, assignments, submissions, deadlines.
+3. **Attach the tutoring agent.** `DeepTutor` (Apache-2.0) for the lifelong-memory tutor; `educhain` (MIT, 1 092 B `e3321a1b62cd`) to generate assessments from course material; `ari` (MIT, 1 073 B `9234cc62970c`) where the institution wants a pen-and-paper loop rather than a chat window.
+4. 🔴 **Do not route writes through this server — it is read-only.** Grade write-back and enrolment changes go through Canvas's own REST API under the institution's token policy, with an audit log. 🔵 Stated because the read-only limit is easy to miss in a proposal and expensive to discover in a sprint.
+5. 🔴 **Run `P560-A` over every address above before sprint 1**, and carry the output as the SBOM's licence section. 🟢 DeepTutor **will** flag against a canonical Apache-2.0 hash — `11 408 B` vs `11 358 B`, three operative-body edits (`560-D`) — and that is a note to write, not a defect to fix.
+
+🔴 **What this pattern must NOT reach for, and why.** The richest curriculum graph on this shelf —
+[`cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy), 1 644 knowledge points,
+2 403 prerequisite edges, 6 723 items, 5 484★ — is **`CC-BY-NC-4.0`**. 🔴 **`BLOCK`.** It cannot
+enter a client deliverable at any layer of this diagram. 🟢 Use it as a *reference design* for
+building an equivalent graph under a shippable licence. 🔵 Same for
+[`hello-llm`](https://github.com/DavidDingXu/hello-llm) (**PolyForm Noncommercial 1.0.0**,
+`4 563 B` `c0ea4a896d2c`): good material, unusable output.
+
+### 🔵 Region fit for both patterns, stated per region rather than left to inference
+
+| region | fit |
+| --- | --- |
+| **North America** | 🟢 Strongest for `P560-B` — Canvas is the dominant HE LMS here, and the **April 2026 ADA accessibility deadline** gives the read-only layer an immediate, fundable use (accessible summaries, alt-format generation) before any write path is negotiated |
+| **EMEA** | 🟢 `P560-A` is the lead deliverable, not `P560-B`: 🔴 **Article 50 transparency is in force now** (2 Aug 2026) and Annex III conformity is due **2 Dec 2027**. A documented licence and provenance gate is the artefact a deployer under Art. 29 is asked for |
+| **APAC** | 🟢 `P560-B` adapts well to the region's own stacks — [`uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot) (MIT, 1 068 B `dc10763308da`) is a working Indonesian instance of exactly this shape over a university handbook. 🔴 Korea's labelling rules (decree, 22 Jan 2026) land on the agent layer |
+| **LATAM** | 🟢 Substitute **i-educar** (Brazilian public-sector SIS, branch `2.12`) for Canvas; 🔴 the `559-G` branch trap bites hardest here, which is precisely why stage 1 of `P560-A` exists. 🔵 With UNESCO IESALC measuring **87 % adoption against 26 % formal strategy**, the governance wrapper is the sale |
+| **Global** | 🟢 `P560-A` is region-independent and should be standard in week one of any education engagement |
+
 ## 🆕 `p559` — `2026-10-30` — **🟢 `P559-A`: THE LICENCE GATE EVERY ENGAGEMENT BUILDS IN WEEK ONE, BUILT CORRECTLY — because the obvious version returns `NOASSERTION` for **32.4 %** of this shelf, both ERP bases and the entire LATAM public-sector stack. 🟢 `P559-B`: THE PERMISSIVE-LMS ENGAGEMENT, now that a second MIT LMS exists — and the honest statement of what nine stars means.**
 
 ### 🟢 `P559-A` — a licence gate that is correct by construction

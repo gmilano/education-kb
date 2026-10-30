@@ -4,6 +4,177 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p560` — `2026-10-30` — **🔴 `559-A` PINNED THE WRONG CONVENTION, AND THE SHELF SETTLES IT 8-TO-1: of 13 grant rows re-read first-hand this pass, **8 reproduce at `raw`**, **1** at the pinned `raw − 1 newline`, **1** at a **third convention nobody had named (`strip()`)**, and 2 are convention-invariant. 🔴 **`560-B`: TWO OF THE THREE DIGESTS THIS BASE PUBLISHES FOR ITS SMALLEST GRANT ARE UNREPRODUCIBLE** — `frappe/education`'s 19-byte `license.txt` has **one blob in its entire history** and exactly **one** digest under 13 hash × 6 byte conventions. 🟢 AMENDED IN PLACE. 🟢 `559-B` CLOSED: all five sub-200 B figures are real files, **none is a 404 body**.**
+
+🔵 **Gate posture, fourth consecutive measurement.** This base's committed instruments remain
+unreachable from the sessions that maintain it (`557-A`, `555-F`, `p559`). 🟢 Every probe below was
+re-implemented inline this pass and run; 🔵 **none of it is gate-attested.**
+
+🟢 **Transports measured:** `git ls-remote --symref` **23/23** addresses; `raw.githubusercontent.com`
+**26 grant reads, status-gated**; `git clone --filter=blob:none --no-checkout` **2 repositories**
+(the new transport this pass, and the only one that answers *"was this digest ever real?"*);
+MCP `search_repositories` **4 sweeps**; WebSearch **10 legs**. 🔴 `curl` → `api.github.com` **403**,
+unchanged. 🔴 `WebFetch` → `www.future-ed.org` **`ENOTFOUND`** — `557-F`/`558-G` hold.
+
+### 🔴 `560-A` — the byte convention, settled by census instead of by one specimen
+
+🔴 **`559-A` pinned *raw minus one trailing newline* on the evidence of a single file.** This pass
+re-read **13 rows** that carry a published byte figure *and* digest, and computed all four candidate
+conventions on each. Full table: [`../evidence/grant-reconciliation.2026-10-30-p560.tsv`](../evidence/grant-reconciliation.2026-10-30-p560.tsv).
+
+| convention | rows | examples |
+| --- | --- | --- |
+| 🟢 **`raw`** (bytes as served) | **8** | `arsnova/core` `35 147`, `frappe/lms` `33 893`, `educhain` `1 092`, `Horus-Taleeq` `1 080`, and all four sub-200 B grants |
+| 🔴 `raw − 1 trailing newline` *(the pinned one)* | **1** | `learnharness` `34 522` · `4df3c306ddda` |
+| 🔴 `raw − 1` **or** `strip()`, indistinguishable | 1 | `kolibri` `1 096` · `fa4c9d2697f9` |
+| 🔴 **`strip()`** — whitespace from **both** ends | **1** | `cn-math-taxonomy` `19 345` · `db2e35513dba` |
+| 🔵 convention-invariant (no trailing newline at all) | 2 | `frappe/education` `19`, `OpenOLAT` `10 982` |
+
+🔴 **So three conventions are in live use, and the pinned one is the rarest of the three.**
+`strip()` and `raw − 1` coincide whenever a file ends in exactly one newline and nothing else, which
+is why no pass separated them — and they **diverge** the moment a file carries other surrounding
+whitespace. `cn-math-taxonomy` is that file: `19 347` raw, `19 346` conv, **`19 345` under `strip()`**,
+three different digests, and the published figure is the third.
+
+🔴 **And the evidence column name does not identify any of them.** `p557` recorded this row in a
+column called **`bytes_nl_stripped`**, which reads as *all* newlines stripped — on this file that
+would be **`18 939`**, a fourth number. 🔵 The row was measured correctly; the *label* cannot
+recover how.
+
+🟢 **Proposed standing rule, and it is `raw`:** publish `raw` bytes — what `wc -c` returns and what
+a client's own scanner computes — and name the convention beside the figure. 🔵 `raw` is already the
+shelf majority (8 of 11 determinate rows), and it is the only one of the three a third party will
+reproduce without being told the rule.
+
+### 🔴 `560-B` — two published digests that were never measured
+
+🔴 **[`frappe/education`](https://github.com/frappe/education)'s `license.txt` is 19 bytes**, content
+exactly `License: GNU GPL V3`, **no trailing newline**. This base publishes **three** digests for it:
+
+| digest | carried on | status |
+| --- | --- | --- |
+| 🟢 `1fcecf395312` | `agents/top.md`, `verticals/solutions.md`, `agents/trending.md` | **correct, and convention-invariant** — all four conventions give 19 B and this digest |
+| 🔴 `61408d3da518` | `agents/top.md` (`552-B` row), `repos/foundations.md` | 🔴 **matches nothing** |
+| 🔴 `73ce33ef2719` | `repos/trending.md` | 🔴 **matches nothing** |
+
+🟢 **Both alternatives were excluded by construction, not by assumption.** 19 bytes is the one case
+where the whole candidate space is enumerable, so it was enumerated: **13 hash conventions**
+(`sha256`/`sha1`/`md5`/`sha512`/git-blob-oid, ±newline, ±CRLF, ±case, ±strip) × **6 byte
+conventions** × **31 string variants** × 3 encodings = **372 digest candidates**, plus the decisive
+test — `git clone --filter=blob:none` and enumerate every blob this path has ever had across **all
+refs**:
+
+```
+$ git log --all --format=%H -- license.txt | while read c; do git rev-parse "$c:license.txt"; done | sort -u
+beca17940a71f750cb72d94f3bde984001707dda     # exactly ONE blob, ever
+```
+
+🔴 **One blob in the entire history** — so content drift is excluded, and neither digest can be
+recovered from this file at any commit under any convention. 🟢 **They were not measured.**
+🟢 **Amended in place** on both pages to `1fcecf395312`, with the wrong values recorded here rather
+than silently overwritten.
+
+🔵 **The test generalises, and it is this pass's reusable rule.** A digest mismatch alone does not
+say who was wrong. Enumerate the path's blob history:
+
+- 🟢 **published digest present in history** ⇒ the base measured it correctly and the file moved on. **Stale, not wrong.**
+- 🔴 **published digest absent from a single-blob history** ⇒ it was never there. **Manufactured.**
+
+🟢 **`frappe/frappe` is the first case and it exonerates the row.** Published `LICENSE` **1 118 B**
+· `b03bbdca4e0a`; measured today **1 118 B** · `bc6001a54ffc`. 🔴 Same length, different content —
+and the history holds **four blobs, three of them exactly `1 118 B` with three distinct digests**,
+one of which **is `b03bbdca4e0a`** (blob `5dfc0fd5bd44`). 🔴 **A byte count is therefore not a change
+detector:** three different versions of one MIT grant at an identical size. 🔵 Only the digest sees
+it. 🔴 The row's *path* is stale the same way — the shelf records `license.txt`, which **404s on
+`develop`**; upstream renamed it to `LICENSE`, and `license.txt` genuinely existed for four commits
+before that. **Right once, never re-read.**
+
+### 🟢 `559-B` CLOSED — the sub-200 B sweep, and it comes back clean
+
+🟢 **Registered as:** *"a sweep of this base's historical grant figures for any value under ~200 B,
+since any such row may be a 404 body recorded as a grant."* 🟢 **Run across all ten shelf pages**
+(≈14 MB), extracting every byte figure adjacent to a digest and excluding `$`-prefixed market sizes
+and stated deltas. **17 candidate values; 5 are genuine grant figures; all five were re-read
+first-hand this pass; none is a 404 body.**
+
+| row | published | re-read | what it actually is |
+| --- | --- | --- | --- |
+| [`frappe/education`](https://github.com/frappe/education) | **19 B** | 🟢 confirmed | the whole file is `License: GNU GPL V3` — a declared-only stub |
+| [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | **108 B** `de5d9459d263` | 🟢 confirmed at `raw` | R `YEAR:` / `COPYRIGHT HOLDER:` template |
+| [`particify/arsnova-server`](https://github.com/particify/arsnova-server) | **133 B** `747c3a657b2b` | 🟢 confirmed at `raw` | 🔴 `Copyright (c) 2020-present Particify … GbR` — all-rights-reserved, in `formatting/` |
+| [`12britz/awesome-free-models`](https://github.com/12britz/awesome-free-models) | **137 B** `99b4c41f664e` | 🟢 confirmed at `raw` | a CC0 **paraphrase**, not the instrument |
+| [`w3c/vc-data-model`](https://github.com/w3c/vc-data-model) | **167 B** `232da9c6c2b9` | 🟢 confirmed at `raw` | pointer grant — one URL, no grant sentence |
+
+🟢 **And the 404 body is pinned as a control rather than feared as a contaminant.**
+`printf '404: Not Found'` is **14 B** · **`d5558cd419c8`**, reproduced exactly this pass. 🟢 A
+full-text search of all ten pages finds that digest **only** in negative-control contexts — never
+as a row's grant. 🔵 So `559-B`'s mechanism is real, its gate is load-bearing, and **it never fired
+on this shelf**: the remaining twelve sub-200 B values are stated deltas (`1 B under wc -c`,
+`±1 B`, `+2 B`), model parameter counts (`0.2B`, `4B`, `9B`), fold-constant spans (`17 B`, `28 B`,
+`40 B`) and one deliberate **200-control** (`european-digital-credentials`'s `README.md`, 129 B).
+
+### 🟢 Two new agent rows, both grant-read first-hand
+
+| agent | address | grant | ★ / forks | region | why it matters |
+| --- | --- | --- | --- | --- | --- |
+| 🆕 **canvas-mcp** | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | 🟢 **MIT** · `main`/`LICENSE` · **1 072 B** `4450dee7f762` · HEAD `55aa401cd303` | **119** / **29** | Global | 🟢 Read-only **MCP server for Canvas LMS** — the first row on this shelf that bridges an agent to a vertical the shelf already carries, rather than replacing it. Forks-per-star **0.24** |
+| 🆕 **uajy-academic-rag-chatbot** | [`BenyRonald77/uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot) | 🟢 **MIT** · `main`/`LICENSE` · **1 068 B** `dc10763308da` · HEAD `26b04dbb168b` | **452** / 2 | 🟢 **APAC** (Indonesia) | A *deployed* university artefact — Streamlit + FAISS + Gemini over Universitas Atma Jaya Yogyakarta's academic handbook. 🔵 Supply row and demand evidence in one address |
+
+🔴 **Three rows BLOCKED this pass, each on first-hand evidence:**
+
+- 🔴 [`DavidDingXu/hello-llm`](https://github.com/DavidDingXu/hello-llm) — **PolyForm Noncommercial 1.0.0**, `4 563 B` `c0ea4a896d2c`, 39★/3 forks. A genuinely good 20-lesson build-a-tiny-LLM course that **cannot enter a client deliverable**.
+- 🔴 [`juliangonzalez-tech/notcooked`](https://github.com/juliangonzalez-tech/notcooked) — **earned `NO-GRANT-AT-ANY-KNOWN-PATH`**: branch resolved (`main`, HEAD `9c9d0829bd6b`), six paths tried, status-gated. 33★/**0 forks**.
+- 🔴 [`whiteRabbit1313/awesome-digital-public-infrastructure`](https://github.com/whiteRabbit1313/awesome-digital-public-infrastructure) — earned the same at six paths, HEAD `ffff6799793c`, 82★/0 forks.
+
+🟢 **`559-F` re-probed and unchanged:** [`datawhalechina/diy-llm`](https://github.com/datawhalechina/diy-llm)
+still returns **404 at all six paths** on `main`. 🟢 **`BLOCK` holds.** And
+[`JushBJJ/Mr.-Ranedeer-AI-Tutor`](https://github.com/JushBJJ/Mr.-Ranedeer-AI-Tutor) replicated at
+nine paths — the base's 41-path result stands.
+
+### 🔵 The probe, carried inline, now convention-explicit
+
+```bash
+# p560 probe. Changes from P559-A: (1) emit ALL THREE byte conventions, never one;
+# (2) label the convention beside the figure — 560-A: three are in live use on this shelf;
+# (3) on a digest mismatch, enumerate blob history before calling anyone wrong (560-B).
+probe_grant() {                                  # $1 = owner/repo
+  br=$(git ls-remote --symref "https://github.com/$1" HEAD \
+       | awk '/^ref:/{sub("refs/heads/","",$2); print $2; exit}')
+  [ -z "$br" ] && { echo "$1 UNREACHABLE"; return; }      # 558-B: 1 in 3 is not on main
+  for fn in LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.LESSER; do
+    code=$(curl -sS -w '%{http_code}' -o g.tmp \
+           "https://raw.githubusercontent.com/$1/$br/$fn")
+    [ "$code" = 200 ] || continue                          # 559-B: the gate is load-bearing
+    python3 -I - "$1" "$br" "$fn" <<'PY'
+import sys, hashlib
+b = open('g.tmp','rb').read()
+for label, v in (('raw', b),
+                 ('conv', b[:-1] if b.endswith(b'\n') else b),
+                 ('strip', b.strip())):
+    print(f"{sys.argv[1]} {sys.argv[2]} {sys.argv[3]} {label}="
+          f"{len(v)} sha256/12={hashlib.sha256(v).hexdigest()[:12]}")
+PY
+    return
+  done
+  echo "$1 branch=$br NO-GRANT-AT-ANY-KNOWN-PATH"          # the only honest NOASSERTION
+}
+
+# 560-B: was a published digest EVER real? The only transport that answers it.
+blob_history() {                                 # $1 = owner/repo  $2 = path
+  git clone -q --no-checkout --filter=blob:none "https://github.com/$1" /tmp/h && cd /tmp/h
+  git log --all --format=%H -- "$2" | while read c; do git rev-parse "$c:$2" 2>/dev/null; done \
+    | sort -u | while read blob; do
+        printf '%s %s ' "$blob" "$(git cat-file -s "$blob")"
+        git cat-file -p "$blob" | sha256sum | cut -c1-12
+      done
+}
+```
+
+🔵 **Why the second function is new.** Every prior pass could tell that a digest *disagreed*; none
+could tell **who was wrong**. `blob_history` separates *stale* from *manufactured* in one call, and
+it is what demoted `frappe/frappe` from a suspected bad row to a correctly-measured stale one, and
+promoted `frappe/education`'s two extra digests from suspect to **refuted**.
+
 ## 🆕 `p559` — `2026-10-30` — **🟢 `558-B` CLOSED BY MEASUREMENT AT FULL SHELF SCALE, AND THE NUMBER IS WORSE THAN THE SAMPLE: a naive `…/main/LICENSE` reader fails on **121 of 374** live addresses — 🔴 **32.4 %**, roughly one row in three — and the sixteen it loses to *version* branches are this shelf's most valuable verticals (`odoo` → `20.0`, `openeducat_erp` → `19.0`, `i-educar` → `2.12`, `ILIAS` → `release_11`). 🟢 `558-D` CLOSED: `kolibri`'s grant is READ, not carried. 🟢 `558-A` DISCHARGED: `p558`'s `PageLM` figure REPRODUCED EXACTLY — and the convention that reproduces it is now pinned, because the obvious alternative gives a different number.**
 
 🔵 **Gate posture, unchanged and now measured a third time.** `python3 -I ingest/gap-register-audit.py`
@@ -851,7 +1022,7 @@ with `python3 -I`, so a successor can re-read the same bytes rather than trust t
 
 | owed ask | what `p553` delivered | calibration case | result |
 |---|---|---|---|
-| 🟢 `552-D` — *"a `GRANT-ASSERTED-NOT-CARRIED` verdict distinct from `UNREAD`"* | `carried()` — a file must state an **operative clause**, not name a family | [`frappe/education`](https://github.com/frappe/education) | 🟢 `GRANT-ASSERTED-NOT-CARRIED` · `license.txt` **19 B** · `61408d3da518` |
+| 🟢 `552-D` — *"a `GRANT-ASSERTED-NOT-CARRIED` verdict distinct from `UNREAD`"* | `carried()` — a file must state an **operative clause**, not name a family | [`frappe/education`](https://github.com/frappe/education) | 🟢 `GRANT-ASSERTED-NOT-CARRIED` · `license.txt` **19 B** · `1fcecf395312` 🔧 **`560-B` AMENDED IN PLACE** — was `61408d3da518`, which reproduces under no convention and appears in no blob of this path's history (one blob, ever); the grant is 19 B `License: GNU GPL V3` |
 | 🟢 `552-B` — *"parse and carry the **Additional Use Grant** and the **Change Date**, not just the family name"* | `params()` — the BUSL/FSL parameter block, carried verbatim | [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 🟢 `NOT-SHIPPABLE-WITHOUT-COMMERCIAL-LICENCE` · AUG + Change Date + Change License + Licensor |
 
 🟢 **Two facts the parameter block carries that `p552`'s prose did not record**, both read

@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p560` — `2026-10-30` — **🟢 `559-C` CLOSED, AND THE RULE IT INSTALLED SAVED A VERDICT THE FIGURE IT INSTALLED WOULD HAVE LOST: canonical Apache-2.0 is **`11 358 B` / `cfc7749b96f6`** at `raw`, confirmed byte-identical from two independent sources — 🔴 **`559-C`'s own `11 356 B` / `43070e2d4e53` reproduces from neither.** 🟢 Two rows re-graded *modified-but-equivalent*; 🔴 **`560-D`: the shelf's flagship agent ships a hand-edited Apache-2.0 with THREE changes in the operative body**, not the "filled appendix" this base recorded. 🟢 `frappe/education`'s grant digest AMENDED IN PLACE (`560-B`).**
+
+### 🟢 `559-C` CLOSED — canonical re-pinned, two rows re-graded
+
+🟢 **Registered as:** *"re-grade every shelf row whose grant digest does not match a canonical
+digest, and distinguish *modified-but-equivalent* from *bespoke*."*
+
+🔴 **First, the baseline itself failed to reproduce.** `559-C` graded against *"canonical
+`11 356 B` / `43070e2d4e53`"*. Read from the instrument's own publisher:
+
+| source | raw | `sha256/12` | conv | `sha256/12` |
+| --- | --- | --- | --- | --- |
+| 🟢 [`apache.org/licenses/LICENSE-2.0.txt`](https://www.apache.org/licenses/LICENSE-2.0.txt) | **11 358** | **`cfc7749b96f6`** | 11 357 | `58d1e17ffe51` |
+| 🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) `master/LICENSE.TXT` | **11 358** | **`cfc7749b96f6`** | 11 357 | `58d1e17ffe51` |
+
+🟢 **Two independent sources, byte-identical** — a publisher copy and a shelf repository that never
+touched it. 🔴 **Neither gives `11 356` or `43070e2d4e53`.** 🟢 **Canonical Apache-2.0 on this base
+is now pinned at `11 358 B` / `cfc7749b96f6` (`raw`), with `11 357` / `58d1e17ffe51` at `conv`.**
+🔵 **`560-C`:** `559-C`'s figure is retired; its *rule* is what mattered and it held — see below.
+
+🟢 **Re-graded, both *modified-but-equivalent*:**
+
+| row | grant | Δ vs canonical | what changed | verdict |
+| --- | --- | --- | --- | --- |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `master/LICENSE` **10 982 B** `6dbc5b605ed0` 🟢 *figure re-confirmed, convention-invariant* | **−376 B** | drops `END OF TERMS AND CONDITIONS` and the `APPENDIX`; appends an OLAT-7.1 provenance note | 🟢 **Apache-2.0** — §§ 1–9 and all four operative grants present |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main/LICENSE` **11 408 B** `cd2f54e1e506`, HEAD `1ea7df155447` | **+50 B** | 🔴 **three edits in the operative body** plus a rewritten appendix — see `560-D` | 🟢 **Apache-2.0** on clauses, 🔴 **flagged** |
+
+🟢 **This is the distinction `559-C` asked for, and it is clause-shaped, not byte-shaped.**
+*Modified-but-equivalent* = header names the instrument **and** every operative clause is present,
+whatever the byte count. *Bespoke* = a grant whose operative text has no canonical ancestor
+(`PageLM`'s community licence, `w3c/vc-data-model`'s pointer grant). 🔵 On this shelf, **every
+digest mismatch found so far has been the first kind** — which is exactly why byte-equality is the
+wrong gate.
+
+### 🔴 `560-D` — the flagship agent's Apache-2.0 is edited in the operative body
+
+🔴 **This base recorded DeepTutor's `+50 B` as *"its appendix is filled in — a filled appendix is a
+copyright line"*. That is wrong about the mechanism.** A line-by-line diff against the publisher
+copy, whitespace-normalised, returns **four hunks, three of them in the operative text**:
+
+| § | canonical | DeepTutor |
+| --- | --- | --- |
+| 🔴 1 — *Definitions* (Contribution) | `submitted to Licensor for inclusion` | `submitted to **the** Licensor for inclusion` |
+| 🔴 1 — *Definitions* (Contributor) | `received by Licensor and` | `received by **the** Licensor and` |
+| 🔴 4 — *Redistribution* (NOTICE) | `excluding **those** notices that do not` | `excluding **any** notices that do not` |
+| 🔵 APPENDIX | `Copyright [yyyy] [name of copyright owner]` + the standard recommendation | `Copyright 2025 Data Intelligence Lab, The University of Hong Kong`, and a **garbled** paragraph: *"Please also get an \"Alarm or alarm\" copyright header … (Alarm is the umbrella trademark for a collection of Open Source projects)"* |
+
+🟢 **Verdict unchanged — Apache-2.0.** `Apache License` / `Version 2.0, January 2004` in the header;
+`Grant of Copyright License`, `Grant of Patent License`, `Redistribution`, `Trademarks` and
+`END OF TERMS AND CONDITIONS` all present; the three edits are grammatical or synonymous and change
+no obligation. 🔵 **`559-C`'s rule is what produced that verdict** — graded on header and operative
+clauses, with the appendix treated as absent. Byte-equality would have failed it, and `559-C`'s own
+(unreproducible) baseline figure would have failed it *for the wrong reason*.
+
+🔴 **But the row now carries a delivery flag, because the engagement consequence is real.** A
+client's licence-provenance scanner that hashes `LICENSE` against a canonical Apache-2.0 — the
+normal way these tools work — will flag the shelf's **largest education agent** as a non-standard
+licence, and the garbled appendix paragraph will not survive a legal read without explanation.
+🟢 **Shippable; not shippable silently.** 🔵 The appendix is non-operative, so the paragraph is
+cosmetic — say so in the SBOM note rather than leaving reviewers to find it.
+
+### 🟢 Foundation rows amended and confirmed this pass
+
+| row | change |
+| --- | --- |
+| 🔧 [`frappe/education`](https://github.com/frappe/education) | **AMENDED IN PLACE** at line 438: `61408d3da518` → 🟢 **`1fcecf395312`**. 🔴 The old digest reproduces under none of 13 hash × 6 byte conventions and appears in **no blob of this path's history — which has exactly one blob, ever** (`560-B`) |
+| 🟢 [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | `558-D`'s read **re-confirmed independently**: `develop/LICENSE`, **1 096 B** `fa4c9d2697f9` at `conv`, **1 097 B** `3c056b34a476` at `raw`. 🔵 This row is `conv`, and `560-A` records it as one of only two that are |
+| 🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | `559-C`'s figure re-confirmed: **10 982 B** `6dbc5b605ed0`, identical under all four conventions — the file carries no trailing newline |
+| 🔴 [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🔴 **DRIFTED.** Pinned at `34 916 B` `f333043685c8`; today `develop/license.txt` is **35 149 B** `3972dc9744f6` (`raw`), Δ **+233 B**. 🟢 GPL-3.0 verdict unaffected — the pin is stale, not the verdict (`560-F`) |
+| 🔴 [`frappe/frappe`](https://github.com/frappe/frappe) | 🔴 **PATH STALE.** The shelf records `license.txt`, which **404s on `develop`**; the grant is at `LICENSE`, **1 118 B** `bc6001a54ffc`. 🟢 The recorded digest `b03bbdca4e0a` **is a real historical blob** of that same file (`5dfc0fd5bd44`) — measured correctly, never re-read (`560-F`) |
+
+### 🔴 Three distinct 1 118-byte versions of one MIT grant — so a byte count cannot detect change
+
+🔴 **`frappe/frappe`'s `LICENSE` has four blobs across all refs; three are *exactly* `1 118 B` with
+three different digests.**
+
+| blob | bytes | `sha256/12` |
+| --- | --- | --- |
+| `5dfc0fd5bd44` | 1 118 | 🟢 **`b03bbdca4e0a`** — the figure this shelf carries |
+| `6919960f8ba9` | 1 118 | **`bc6001a54ffc`** — current on `develop` |
+| `956e51befb27` | 1 118 | `2117d5ef0d08` |
+| `fa8002f114fd` | 1 117 | `70559bfaf926` |
+
+🔵 **Consequence for any licence gate Globant stands up:** re-reading byte counts and comparing the
+number reports *"unchanged"* across a real licence edit. 🟢 **Compare digests, and keep the blob
+history to tell a stale pin from a wrong one.**
+
 ## 🆕 `p559` — `2026-10-30` — **🟢 `558-D` CLOSED: THE LAST TIER-1 ROW WITHOUT FIRST-HAND GRANT EVIDENCE NOW HAS IT. `learningequality/kolibri` reads `MIT License`, `Copyright (c) 2021 Learning Equality and other contributors`, **1 096 B**, `sha256/12` **`fa4c9d2697f9`**, at `develop` — row amended in place from *carried* to **read**. 🔴 AND A SECOND FOUNDATION GRANT IS A **MODIFIED** ONE: `OpenOLAT` ships Apache-2.0 with the non-operative APPENDIX removed (10 982 B against canonical 11 356 B), which a byte-equality licence check would flag as non-standard.**
 
 ### 🟢 `558-D` — `kolibri`, read
@@ -435,7 +522,7 @@ a pristine tree with `p553`'s edits stashed. 🔵 See `Gap 553-G`.
 | [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop/license.txt` **35 149 B** · `12e44685431e` | 🟡 **GPL-3.0** | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` |
 | [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | `main/LICENSE` **34 764 B** · `6fe8a35d4b67` | 🟡 **AGPL-3.0** | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` |
 | [`cjhenry/ourschool`](https://github.com/cjhenry/ourschool) | `main/LICENSE` **34 523 B** · `520f31a537a6` | 🟡 **AGPL-3.0** | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` |
-| [`frappe/education`](https://github.com/frappe/education) | `develop/license.txt` **19 B** · `61408d3da518` | 🔴 **names no family** | 🔴 `GRANT-ASSERTED-NOT-CARRIED` — `552-D`, closed |
+| [`frappe/education`](https://github.com/frappe/education) | `develop/license.txt` **19 B** · `1fcecf395312` 🔧 **`560-B` AMENDED IN PLACE** — was `61408d3da518`, which reproduces under no convention and appears in no blob of this path's history (one blob, ever); the grant is 19 B `License: GNU GPL V3` | 🔴 **names no family** | 🔴 `GRANT-ASSERTED-NOT-CARRIED` — `552-D`, closed |
 
 🔴 **Two readings on this shelf changed, and the change was in the instrument both times.**
 🔵 `frappe/erpnext` came back **AGPL-3.0** on this pass's first run and is **GPL-3.0** —

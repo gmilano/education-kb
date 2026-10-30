@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p560` — `2026-10-30` — **🟢 FOUR CLOSED, AND THE PASS'S HEADLINE IS THAT THE BASE'S OWN MEASUREMENT CONVENTION WAS WRONG: `559-A` pinned `raw − 1 newline` from one specimen; a 13-row census says **8 rows are `raw`, 1 is the pinned convention, and 1 is a third convention nobody had named (`strip()`)** (`560-A`). 🔴 **`560-B`: two of the three digests this base publishes for its smallest grant were NEVER MEASURED** — proven by enumerating the path's entire blob history (one blob, ever) against 372 digest candidates. 🟢 `559-B`, `559-C`, `559-D` CLOSED; `559-E` SUPERSEDED BY `560-E` ON A UNIT ERROR. 🔴 EIGHT REGISTERED (`560-A`…`560-H`).**
+
+🔵 **Registration check run first, per `P605` — and published as a matrix rather than asserted.**
+Every id registered below is cited in this pass's sections, and the per-page incidence is:
+
+| page | A | B | C | D | E | F | G | H |
+| --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| [`../agents/top.md`](../agents/top.md#-p560--2026-10-30) | ✔ | ✔ | · | · | · | · | · | · |
+| [`../agents/trending.md`](../agents/trending.md#-p560--2026-10-30) | ✔ | · | · | · | ✔ | · | · | · |
+| [`../repos/foundations.md`](../repos/foundations.md#-p560--2026-10-30) | ✔ | ✔ | ✔ | ✔ | · | ✔ | · | · |
+| [`../repos/trending.md`](../repos/trending.md#-p560--2026-10-30) | · | ✔ | · | · | ✔ | · | · | ✔ |
+| [`../verticals/solutions.md`](../verticals/solutions.md#-p560--2026-10-30) | ✔ | ✔ | · | · | · | · | · | · |
+| [`../intel/trends.md`](../intel/trends.md#-p560--2026-10-30) | · | · | · | · | · | · | ✔ | · |
+| [`../intel/market.md`](../intel/market.md#-p560--2026-10-30) | · | · | · | · | · | · | ✔ | · |
+| [`../compose/patterns.md`](../compose/patterns.md#-p560--2026-10-30) | ✔ | ✔ | ✔ | ✔ | · | ✔ | · | · |
+
+🟢 **8 of 8 ids cited; 0 orphans.** 🔵 Published as a matrix because the prose form of this check
+(*"all N appear below"*) is exactly the kind of claim `557-C` caught this base making about work it
+had not done.
+
+🔴 **Gate posture, fourth consecutive measurement.** This base's committed instruments remain
+unreachable from the sessions that maintain it (`557-A`, `555-F`). 🟢 Every instrument below was
+re-implemented inline and run; 🔵 **none of it is gate-attested.**
+
+🟢 **Transports:** `git ls-remote --symref` **23/23**; `raw.githubusercontent.com` **26 status-gated
+grant reads**; 🆕 **`git clone --filter=blob:none --no-checkout` — 2 repositories, and the only
+transport that answers *"was this digest ever real?"***; MCP `search_repositories` **4 sweeps**;
+WebSearch **10 legs** (4 global supply/trend, 4 regional, 2 follow-up). 🔴 `curl` →
+`api.github.com` **403**; `WebFetch` → `www.future-ed.org` **`ENOTFOUND`**; `curl` → `gnu.org`
+**`000`** (so canonical GPL/AGPL text was taken from `spdx/license-list-data` instead).
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+| --- | --- |
+| 🟢 **`559-B`** | **Swept at full shelf scale, and the result is a clean negative.** All ten pages (~14 MB) scanned for byte figures adjacent to a digest, excluding `$`-prefixed market sizes and stated deltas: **17 candidate values under 200 B, of which 5 are genuine grant figures.** 🟢 **All five re-read first-hand; none is a 404 body** — `frappe/education` 19 B (stub), `ottr` 108 B (R template), `arsnova/formatting` 133 B (all-rights-reserved), `12britz` 137 B (CC0 paraphrase), `w3c/vc-data-model` 167 B (pointer grant). 🟢 The 404 body reproduces exactly at **14 B / `d5558cd419c8`** and appears on this shelf **only in negative-control contexts**. 🔵 The remaining 12 values are deltas (`1 B under wc -c`, `±1 B`), model parameter counts (`0.2B`, `4B`, `9B`), fold-constant spans (17/28/40 B) and one deliberate 200-control. 🟢 **The gate is load-bearing and it never fired here** |
+| 🟢 **`559-C`** | **Closed on both limbs, and the rule outlived the figure.** (a) 🔴 **The baseline did not reproduce:** `559-C` graded against *"canonical Apache-2.0 `11 356 B` / `43070e2d4e53`"*; read from `apache.org` it is **`11 358 B` / `cfc7749b96f6`** at `raw`, **confirmed byte-identical** by `openedx/XBlock`'s untouched copy. 🟢 Canonical re-pinned. (b) 🟢 **Two rows re-graded *modified-but-equivalent***: `OpenOLAT` (−376 B, appendix dropped, provenance note appended) and `DeepTutor` (+50 B, three operative-body edits — `560-D`). 🟢 **The distinction is now clause-shaped:** *modified-but-equivalent* = header names the instrument and every operative clause present, at any byte count; *bespoke* = operative text with no canonical ancestor. 🔵 **Every digest mismatch found on this shelf so far has been the first kind**, which is why byte-equality is the wrong gate — and `559-C`'s rule produced the right verdict even though its own figure was wrong |
+| 🟢 **`559-D`** | **Scope words recorded for ten firms, and the spread decomposed.** In [`../intel/market.md`](../intel/market.md#global). Two new firms: 🔴 **MarketReportsWorld ~`$1.94 B`** (scope: *intelligent tutoring systems as one application category* — the narrowest found, and therefore the bottom of the range) and **Market.us `$8.9 B`→`$73.3 B`** (*solutions + services*). 🔴 **2026 base spread now `$1.94 B → $11.4 B` = 5.9×**, up from 3.08×. 🟢 **And it is ordered by scope breadth** — widest definitions top, narrowest bottom — so the spread is **decomposed, not merely declared**, which is precisely what the gap asked for. 🟢 Precedence Research supplies the mechanism **in print**: its figure *"depends on market boundaries and how embedded AI revenue is treated"*. 🟢 `558-F`'s prohibition is now justified rather than precautionary: there is **no single quantity** to average |
+| 🟢 **`559-F`** | **Re-probed as prescribed and unchanged.** [`datawhalechina/diy-llm`](https://github.com/datawhalechina/diy-llm) returns **404 at all six filenames** on its resolved default branch `main`. 🟢 `BLOCK` holds. 🔵 Closure remains upstream and not this base's to force; 🟢 two **more** earned `NO-GRANT` verdicts joined it this pass (`notcooked`, `awesome-digital-public-infrastructure`), so the category now has three members and is no longer a singleton |
+
+### 🔵 Superseded
+
+| gap | disposition |
+| --- | --- |
+| 🔴 **`559-A`** → 🟢 **`560-A`** | `559-A` pinned *raw − 1 trailing newline* and declared it standing. 🔴 **A 13-row census refutes it 8-to-1**, and finds a **third** convention in live use. 🟢 Superseded by `560-A`'s rule (`raw`, labelled). 🟢 `559-A`'s *instinct* — that prior figures under an unstated convention are not retroactively trusted — was **exactly right**, and is what this pass acted on |
+| 🔴 **`559-E`** → 🟢 **`560-E`** | 🔴 **Unsatisfiable as written:** a **5-pass** window for a **30-day** survival question, on a base that runs **22–28 passes/day** (measured: median 23 over 12 days; `p551`→`p559` = 8 passes in 7 h 18 m). 🟢 5 passes ≈ **3 h 40 m**, ~200× shorter than the horizon. 🟢 Confirmed empirically: **both of `559-E`'s own rows read identical star *and* fork counts ~1 h later.** 🟢 Re-expressed in calendar days by `560-E`. 🔵 `558-E`'s 5-pass window is **not** affected — it measures per-pass instrument productivity, which is legitimately per-pass |
+
+### 🔴 Registered this pass
+
+| gap | finding | closure condition |
+| --- | --- | --- |
+| 🔴 **`560-A`** | **Three byte conventions are in live use on this shelf, and the pinned one is the rarest.** 13 rows re-read with all four candidates computed: 🟢 **`raw` 8** (`arsnova/core` 35 147, `frappe/lms` 33 893, `educhain` 1 092, `Horus-Taleeq` 1 080 + all four sub-200 B grants); 🔴 **`raw−1NL` 1** (`learnharness` 34 522 · `4df3c306ddda`); `raw−1NL`-or-`strip()` 1 (`kolibri` 1 096); 🔴 **`strip()` 1** (`cn-math-taxonomy` **19 345** · `db2e35513dba` — against 19 347 raw and 19 346 conv, at a HEAD identical to `p557`'s, so the content never moved); invariant 2. 🔴 **And `p557`'s evidence column is named `bytes_nl_stripped`, which on that file would give 18 939 — a fourth number** | 🟢 **Adopted: publish `raw`** — what `wc -c` returns and what a client's scanner computes — **and name the convention beside the figure**. 🔵 `raw` is already the shelf majority and the only convention a third party reproduces without being told the rule. 🔴 Closure: a pass re-reads the remaining digest-bearing rows and labels each, or the ledger carries a `convention` column. **Not done this pass — 13 rows of an unknown total** |
+| 🔴 **`560-B`** | **Two published digests were never measured, and 19 bytes is what made it provable.** [`frappe/education`](https://github.com/frappe/education)'s `license.txt` is **19 B**, `License: GNU GPL V3`, **no trailing newline** ⇒ all four conventions give one digest, 🟢 **`1fcecf395312`**. The base also published 🔴 `61408d3da518` (`agents/top.md`, `repos/foundations.md`) and 🔴 `73ce33ef2719` (`repos/trending.md`). **13 hash conventions × 6 byte conventions × 31 string variants × 3 encodings = 372 candidates: neither appears.** 🟢 Decisive: `git log --all -- license.txt` over a blobless clone returns **exactly one blob, ever** (`beca17940a71`) ⇒ content drift excluded | 🟢 **Amended in place** on the two pages that permit it; recorded in `repos/trending.md`'s dated section instead, since append-only byte containment is that page's contract. 🔵 **The general test is adopted:** on a digest mismatch, enumerate the path's blob history — *published digest **in** history* ⇒ **stale** (measured right, file moved on); *absent from a single-blob history* ⇒ **manufactured**. 🔴 Closure: apply it to every digest-bearing row, not just the three found this pass |
+| 🔴 **`560-C`** | **`559-C`'s canonical Apache-2.0 reference is unreproducible.** It graded against `11 356 B` / `43070e2d4e53`; two independent sources — [`apache.org`](https://www.apache.org/licenses/LICENSE-2.0.txt) and [`openedx/XBlock`](https://github.com/openedx/XBlock) `master/LICENSE.TXT` — both give **`11 358 B` / `cfc7749b96f6`** (`raw`) and `11 357` / `58d1e17ffe51` (`conv`). 🟢 **The verdict `559-C` reached survived anyway, because it graded on clauses rather than bytes** — the rule protected the conclusion from the baseline | 🟢 Canonical Apache-2.0 **re-pinned** at `11 358` / `cfc7749b96f6`. 🔴 Closure: pin canonical digests for the other families this shelf grades against — AGPL-3.0, GPL-3.0, MIT (🔵 which has no single canonical form, so the existing fold constant is the right instrument there), CC0, BSD-3 — **each from two independent sources**, since one source is how `559-C` got it wrong. 🔴 `gnu.org` returned `000` this pass; `spdx/license-list-data` is the working substitute (`AGPL-3.0-only` **34 020 B** `d8a6cc31abc1` raw) |
+| 🔴 **`560-D`** | **The shelf's flagship agent ships a hand-edited Apache-2.0, and this base recorded the wrong mechanism.** It held DeepTutor's `+50 B` as *"its appendix is filled in — a filled appendix is a copyright line"*. A normalised diff against the publisher copy returns **four hunks, three in the operative body**: § 1 `submitted to Licensor` → `to **the** Licensor`; § 1 `received by Licensor` → `by **the** Licensor`; § 4 NOTICE `excluding **those** notices` → `excluding **any** notices`; plus a **garbled** appendix paragraph (*"Please also get an \"Alarm or alarm\" copyright header … (Alarm is the umbrella trademark …)"*) and the copyright line filled to *Data Intelligence Lab, The University of Hong Kong*. [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `main/LICENSE` **11 408 B** `cd2f54e1e506`, HEAD `1ea7df155447` | 🟢 **Verdict Apache-2.0 holds** — header, all four operative grants and `END OF TERMS` present; the edits are grammatical or synonymous and change no obligation. 🔴 **Delivery flag added:** a client scanner hashing `LICENSE` against canonical Apache-2.0 **will** flag the largest education agent on this shelf, and the garbled appendix will not pass a legal read unexplained. 🔵 Closure: the SBOM note is written at engagement start, not after the audit asks |
+| 🔴 **`560-E`** | **`559-E`'s closure condition was unsatisfiable, and the base had never measured its own clock.** 5 passes vs a 30-day horizon at **22–28 passes/day** ⇒ a window of **≈3 h 40 m**. 🟢 Both `559-E` rows unchanged ~1 h on: [`godspeed`](https://github.com/bayshores/godspeed) 7★/0 forks, [`euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) 9★/16 forks | 🟢 **Re-expressed in calendar days, carried in the row because this base cannot schedule:** **D+7 = `2026-11-02`** (stars, forks, `pushed_at` for both) and **D+30 = `2026-11-25`** (the same, plus survival: still pushed? archived? deleted?). 🔵 Any pass on or after those dates discharges them. 🔴 Do **not** retrofit the shelf — the question is about *new* rows. 🔵 **Generalisable: any closure condition on this base stated in passes is stated in ~2.6-minute-per-hour units; if the question has a calendar horizon, the condition must carry a date** |
+| 🔴 **`560-F`** | **A byte count cannot detect a licence change, and two rows have drifted unnoticed.** [`frappe/frappe`](https://github.com/frappe/frappe)'s `LICENSE` has **four blobs across all refs, three of them exactly `1 118 B` with three distinct digests** — `5dfc0fd5bd44`/🟢`b03bbdca4e0a` (the shelf's figure, **real**), `6919960f8ba9`/`bc6001a54ffc` (current), `956e51befb27`/`2117d5ef0d08`. 🔴 Its recorded **path** is also stale: `license.txt` **404s on `develop`**; upstream renamed it to `LICENSE` (and `license.txt` did exist, for four commits). 🔴 Drifted figures: [`frappe/erpnext`](https://github.com/frappe/erpnext) `34 916` → **35 149** (Δ +233 B), [`Django-CRM`](https://github.com/Django-CRM/Django-CRM) `1 069` → **1 101** (Δ +32 B) — both verdicts unaffected | 🟢 Stage 5 of `P560-A` implements the stale/manufactured test. 🔴 Closure needs a **re-read cadence**, which this base does not have: a row pinned once is never checked again. 🔵 Minimum viable version — carry `read_at` beside every digest, and treat any row whose `read_at` precedes the shelf's last 30 days as **unverified rather than verified**. 🔴 Not implemented; it is a schema change to every page |
+| 🔴 **`560-G`** | **`Gap 455-F` has a sharper form: a source disagreeing with its own citers.** US state AI-in-education legislation, one session: 🟢 **FutureEd's own tracker page `13 enacted`**; secondary sites *citing that tracker* `68/27`, `77/27`, `52/25`; MultiState 🔴 `134/31` — retired at `p553`, returned a **sixth** time. 🔵 Prior occurrences were *different trackers disagreeing*; this is **one tracker and its own relays** | 🟢 `557-D` exercised — **no count adopted**, fifth consecutive refusal on this quantity. 🟢 Safe statement for a proposal: *legislative activity is high, enacted law is thin*, with `introduced` vs `enacted` named explicitly because the sources do not name it. 🔴 Closure requires a primary read, and 🔴 `WebFetch` → `www.future-ed.org` is **`ENOTFOUND`** (`557-F`/`558-G`), so it is **out of this base's reach** and registered so the question is asked at engagement start |
+| 🔴 **`560-H`** | **A channel-dilution mechanism a stars floor makes *worse*: adjectival collision.** The leg `education OR tutor OR curriculum OR grading in:name,description stars:>40 … license:mit license:apache-2.0` returned 61 total / 25 shown, of which 🟢 **4 were education** (≈16 % precision). 🔴 **~15 matched `-grade` as a marketing adjective** — "enterprise-grade", "production-grade", "launch-grade" — on high-star, well-maintained, entirely unrelated software (`ShopifyAutoAuth` **4 214★**, `huashu-motion` 1 923★, `openclaw-enterprise` 448★). 🔴 **`558-C`'s `stars:>5` floor does not help and actively hurts: the adjective is commonest in exactly the polished repositories a floor promotes** | 🟢 **Standing fix, lexical not quantitative:** on a free-text supply leg require the education token at a **word boundary** and exclude the compound — `grading` or `grader` but never `[a-z]-grade` — or drop the free-text leg for a `topic:` leg, which cannot fail this way because a topic is an assigned label. 🔵 Closure: run one paired free-text leg with and without the boundary filter and publish both yields, as `558-C` requires of topic sweeps |
+
+### 🔵 Standing obligations carried forward
+
+🔴 **`558-E` — pass 2 of 5, and it reverses pass 1.** `p559` recorded demand 5 / supply 3 and
+suspected the demand leg. This pass: 🟢 **supply** — 4 new addresses, **6 grants read first-hand**,
+2 newly-earned `NO-GRANT`, **13 existing rows reconciled against 4 conventions**, 2 blob histories
+enumerated; 🔴 **demand** — **2** new instruments, both market-sizing, every other probed claim
+already shelved. 🟢 Recorded, explicitly **not** acted on, **3 passes remain**. 🔵 Two observations
+pointing opposite ways is the honest state.
+
+🟢 **`557-D` / `558-F` in force and exercised twice.** Declined: the US state-bill count (`560-G`,
+five values) and Vietnam's education grace-period date (three values — *1 Mar 2027 + 6 months*,
+*up to 18 months*, *Sep 2027*). 🔵 Both written down as informed gaps rather than omitted.
+
+🔴 **`557-F` / `558-G` unchanged, fourth pass.** `WebFetch` → `www.future-ed.org` **`ENOTFOUND`**;
+no further demand host attempted; **no claim on any page rests on a fetched demand source.**
+
+🔴 **`559-G` unchanged and still out of reach.** The sixteen version-branch rows remain this shelf's
+most valuable; 🟢 `P560-A` stage 1 is the fix and is published; 🔴 confirming that no *shipped*
+Globant artefact carries a `main`-only grant reader is not verifiable from here.
+
+🟢 **`P557-C` (grep-before-claiming) paid harder than in any prior pass — and showed its own limit.**
+🟢 **15 of 20 candidate addresses were already carried (75 %)**, and one claim was retracted before
+publication: this pass first treated `cn-math-taxonomy` as unverifiable, then found it reproduces
+exactly under `strip()` — which is how the third convention was discovered. 🔴 **But the limit is
+now named:** `P557-C` greps for identifiers, so it prevented false novelty on EMEA for twenty passes
+while **manufacturing false saturation** — `Regulation (EU) 2026/1744` was carried, and the novelty
+was a *partition* inside it (Article 50 never deferred), which no identifier grep can see.
+🔵 **Grep-before-claiming prevents false novelty and can manufacture false saturation.**
+
 ## 🆕 `p559` — `2026-10-30` — **🟢 FOUR CLOSED, AND THE TWO HEADLINE NUMBERS ARE BOTH WORSE THAN THE SAMPLES THEY CAME FROM: a `main`-only grant read fails on **121 of 374** shelf addresses (**32.4 %**, `558-B`), and the unfiltered topic channel is **~17 % promotable** against **100 %** with a stars floor (`558-C`). 🟢 `558-D` CLOSED — the last unread Tier-1 grant is read. 🟢 `558-A` DISCHARGED — `p558`'s figure reproduced digit-for-digit. 🔴 SEVEN REGISTERED (`559-A`…`559-G`).**
 
 🔵 **Registration check run first, per `P605`.** The seven ids below are cited in this pass's

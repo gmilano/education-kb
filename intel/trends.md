@@ -4,6 +4,108 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p560` — `2026-10-30` — **🟢 THE ONE EMEA OBLIGATION THAT IS LIVE TODAY, SEPARATED FROM THE ONE THAT IS NOT: Regulation (EU) 2026/1744 deferred Annex III education to **2 December 2027**, but 🔴 **Article 50 transparency was NOT deferred and has applied since 2 August 2026** — so an EMEA education engagement has a duty in force now and a conformity programme due in 2027. 🟢 `559-D` CLOSED on the market figure: scope words recorded, and the spread they explain **widened to 5.9×**. 🔴 `560-G`: the US state-bill count disagrees **with itself** — a tracker says 13, its own citers say 52, 68 and 77.**
+
+### 🟢 Trend — "AI in education" is now two markets, and the sizing proves it
+
+🟢 **`559-D` asked for each firm's scope word beside its figure.** With them recorded, the
+disagreement stops being noise and becomes a **boundary**:
+
+| firm | 2026 base | scope word — as the publisher states it |
+| --- | --- | --- |
+| Grand View Research | **$11.4 B** | 🟢 segments by **component: solution *and* services**; applications include learning platforms, virtual facilitators |
+| Research and Markets / Business Research Co. | $10.6 B → $42.48 B (2030) | 🔴 CAGR stated as **41.5 %** in one place and **40.9 %** in another — *within one publisher* |
+| Precedence Research | $9.58 B → $136.79 B (2035) | 🟢 **self-declared boundary-dependent** — its own notes say the figure depends on *"market boundaries and how embedded AI revenue is treated"* |
+| 🆕 Market.us *(relay)* | $8.9 B → $73.3 B (2033) | **solutions + services** |
+| Straits Research | $8.24 B | — |
+| IMARC Group | $6.4 B (2025) | — |
+| giiresearch *(relay)* | $6.02 B → $12.30 B (2032) | 🔴 lowest CAGR, **12.55 %** |
+| Persistence Market Research | $3.7 B | — |
+| 🆕 🔴 MarketReportsWorld | 🔴 **~$1.94 B** | **intelligent tutoring systems** as *one application category* — the narrowest cut found |
+| *(one vendor, unattributed)* | — | **AI-core products only**, excluding general-purpose AI tools and back-office systems |
+
+🔴 **Base-year spread is now `$1.94 B → $11.4 B = 5.9×`**, up from `558-F`'s 3.08×. 🟢 **And it is
+ordered by scope breadth:** the widest definitions (solutions **+ services**) sit at the top, the
+narrowest (a single application cut) at the bottom. 🟢 **That is the decomposition `559-D` asked for
+— the first time this base can say the spread is *explained* rather than merely *declared*.**
+
+🔴 **The prohibition therefore hardens rather than relaxes.** No single total, no midpoint, in any
+deck, summary or pattern — a midpoint across incompatible boundaries measures nothing that exists.
+🟢 **What survives and is safe to quote:** segment **rank order**, stable across every firm that
+breaks out segments — **K-12 first at ~34 %**.
+
+### 🟢 Trend — EMEA has a live duty and a deferred one, and they are not the same duty
+
+🟢 **Regulation (EU) 2026/1744** (the Digital Omnibus on AI) — OJ **24 July 2026**, in force
+**27 July 2026**:
+
+| obligation | date | status |
+| --- | --- | --- |
+| 🔴 **Article 50 transparency** | **2 August 2026** | 🔴 **IN FORCE NOW — not deferred** |
+| Annex III high-risk, *education included* | **2 December 2027** | 🟢 deferred from 2 August 2026 |
+| Annex I — AI embedded in regulated products | 2 August 2028 | 🟢 deferred |
+| Ban on **emotion recognition** in education | February 2025 | 🔴 in force since |
+
+🔵 **Why the split matters commercially, and it is the opposite of how the deferral was reported.**
+The headline *"education delayed to 2027"* is true of the conformity programme and false of the
+disclosure duty. 🟢 A tutor, chatbot or content generator deployed in an EU school **today** owes
+Article 50 disclosure **today**; grading, admissions and proctoring systems owe Annex III
+conformity by **2 December 2027**. 🔴 Schools are **deployers** under Article 29 and stay
+responsible even when the tool is a vendor's. 🔵 Enforcement splits: the **European AI Office**
+(DG CONNECT) over general-purpose model providers, national authorities over the rest.
+
+### 🔴 `560-G` — Trend: the US state-legislation count disagrees with itself
+
+🔴 **Same quantity, five values, one session — and the new detail is where the disagreement lives.**
+
+| source | figure |
+| --- | --- |
+| 🟢 **FutureEd's own tracker page** | **13 enacted** |
+| secondary sites citing *that tracker* | 68 bills / 27 states · 77 bills / 27 states · 52 bills / 25 states |
+| MultiState | 🔴 **134 bills / 31 states** — the figure `p553` **retired**, returned again |
+
+🔴 **So the spread is not between trackers; it is between a tracker and its own citers.** 🟢 Per
+`557-D` and `Gap 455-F` this pass **declines to record a single number** — the fifth consecutive
+refusal on this quantity. 🔵 What is safe: **legislative activity is high and enacted law is thin**,
+and anyone quoting a bill count must say whether it means *introduced* or *enacted*, because the
+sources do not.
+
+### 🟢 Trend — APAC regulation is now statutory, and education sits inside the grace periods
+
+- 🟢 **South Korea** — the **AI Framework Act** ("AI Basic Act") in force **22 January 2026**, enforcement decree the same day. Obligations relatively light for most deployers; generative-AI **labelling** rules sit in the decree, with NIA guidance issued. 🔵 A CSET translation lists a **student-assessment** item under a provision with its own January 2026 date; this base does **not** claim education-specific obligations beyond that until the statutory text is read.
+- 🟢 **Vietnam** — Law on AI passed **10 December 2025**, in force **1 March 2026**; the first comprehensive standalone AI regime in Southeast Asia, with **extraterritorial reach**. Implementing **Decree 142/2026** issued **30 April 2026**.
+- 🔴 **Vietnam's education grace period is not recorded**, per `557-D`: three sources give three answers in one session — *1 March 2027 + 6 months* for systems operating before 15 August 2026; *up to 18 months* for legacy high-risk health/education/finance; *September 2027*. 🔵 An informed gap, not coverage.
+- 🟢 **Japan** — light-touch, voluntary governance. **Australia** — no AI statute; its 2024 proposal named education among high-risk areas for mandatory guardrails. **China and Singapore** carry AI-in-education policies, and China, Japan, Korea and Singapore are integrating AI curricula.
+- 🔴 **Public opinion is moving the other way from policy.** Ipsos Education Monitor 2026: support for **banning** AI in schools rose in Japan **21 % → 29 %**, Australia **47 % → 52 %**, South Korea **27 % → 31 %**; Indonesia fell. 🔵 A regional rollout that assumes permission tracks capability is mispricing its change-management line.
+
+### 🟢 Trend — LATAM's gap is governance, and it is now one number
+
+🟢 **UNESCO IESALC with UNU-IAS, launched at Digital Learning Week 2026** — **200 institutions
+across 19 countries**: **87 %** use AI in at least one area, 🔴 **26 %** have a formal AI strategy.
+Adoption is driven by individual academics, researchers and students rather than institutional plans.
+
+🔵 **That 87/26 split is the LATAM engagement thesis in two numbers:** the demand is already
+present and the governance layer is the deliverable — policy, procurement, AI-literacy in
+accreditation — not the pilot.
+
+- 🟢 **UNESCO Regional Observatory on AI in Education for LAC** launched **14 April 2026, Santiago**, with CAF, CENIA, Cetic.br, ECLAC, Fundación Ceibal, Fundación Santillana, Tecnológico de Monterrey, ProFuturo, Universidad del Desarrollo and IRCAI.
+- 🟢 **Universidad de los Andes (2026):** **716 AI-related regulatory instruments and proposals across 23 countries and territories**, most begun since 2023. 🔴 Commentators describe the direction as **fragmentation**, which is a reason to design for policy variance per country rather than per region.
+
+### 🔵 Trend — North America: usage is ahead of policy, and the accessibility deadline is the forcing function
+
+- 🟢 **US Department of Education** published its final **supplemental priority on advancing AI in education** on **13 April 2026**.
+- 🟢 **UNESCO:** **70 %** of higher-education institutions in Europe *and* North America have or are developing AI guidance.
+- 🟡 **Gallup, relayed:** **60 %** of US teachers use AI tools — secondary attribution, flagged.
+- 🔴 Most US public schools still lack formal student-facing AI policies (Child Trends / Dept. of Education analysis). 🔵 Same shape as LATAM's 87/26, at a different altitude.
+- 🟢 **The April 2026 ADA accessibility deadline for large public institutions** is pushing procurement toward AI-enabled accessibility tooling — 🔵 the one trend this pass found where a *compliance* date is creating AI demand rather than constraining it.
+- 🟡 Khanmigo remains the contested public-funding case (North Carolina SB 1006, $10 M earmark). Named 2026 enactments, secondary and unverified: Idaho SB 1227, Ohio HB 96, Georgia SB 179, Maryland SB 720, Tennessee SB 1580.
+
+### 🔴 Informed non-results, written down so no silence reads as coverage
+
+- 🔴 **No new EMEA supply.** The regional legs returned regulation only; no EMEA-origin repository entered the shelf this pass.
+- 🔴 **No new LATAM supply.** Unchanged from `558-H`'s correction: the standing *"no LATAM-origin supply"* claim is **refuted** (12 addresses, Brazil 8, Argentina 4), but nothing new arrived this pass.
+- 🔴 **Efficacy base unsettled**, carried forward: a July 2026 scoping review of **474 studies** reports the field fragmented, with pedagogical design poorly connected to technical capability. 🔵 Belongs in a proposal's risk section.
+
 ## 🆕 `p559` — `2026-10-30` — **🟢 `Trend 72`: THE TUTOR IS BECOMING A **SERVER**. `godspeed` ships an AI tutor as an MCP server with no front end and no API keys — the student's existing agent is the client. 🟢 `Trend 73`: THE TOPIC CHANNEL IS DILUTED BY **TWO** PROCESSES, NOT ONE — machine-shaped seeding *and* single-owner portfolio dumps (6 of 30 rows from one account in one day). 🔴 `Trend 74`: A THIRD OF THIS BASE'S OWN ADDRESSES DEFEAT THE GRANT READ EVERY LICENCE GATE PERFORMS BY DEFAULT.**
 
 ### 🟢 `Trend 72` — tutor-as-MCP-server
