@@ -1,0 +1,85 @@
+repo	branch	payload_families	readme_families	pkg_families	verdict	evidence
+HKUDS/DeepTutor	main	Apache-2.0	-	Apache-2.0	CHANNELS-AGREE	readme=README.md[93B-window] pkg=pyproject.toml:license=text = "Apache-2.0 payload_verdict=SHIPPABLE-PERMISSIVE
+openfun/ralph	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[86B-window] pkg=pyproject.toml:license=file = "LICENSE.md payload_verdict=SHIPPABLE-PERMISSIVE
+frappe/education	develop	names no family	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=GRANT-ASSERTED-NOT-CARRIED
+CAHLR/OATutor	main	MIT	CC-BY-4.0	-	GRANT-DISAGREES-WITH-DOCUMENTATION	readme=README.md[331B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+vishalsachdev/canvas-mcp	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[372B-window] pkg=pyproject.toml:license=file = "LICENSE payload_verdict=SHIPPABLE-PERMISSIVE
+OS4ED/openSIS-Classic	master	-	-	-	ALL-CHANNELS-SILENT	readme=README.md[201B-window] pkg=NONE payload_verdict=UNRESOLVED-on-153-names
+AI-for-Education/pedagogy-benchmark	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[226B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+anthropics/k12-teacher-skills	main	Apache-2.0	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+DavidLMS/learnmcp-xapi	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[329B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+ArnaudGuiovanna/tutor-mcp	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[243B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+moodle/moodle	main	GPL-3.0	-	GPL-3.0	CHANNELS-AGREE	readme=README.md[577B-window] pkg=composer.json:license=GPL-3.0-or-later payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+frappe/lms	develop	AGPL-3.0	-	AGPL-3.0	CHANNELS-AGREE	readme=README.md[0B-window] pkg=package.json:license=AGPL-3.0-or-later payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+JuneYaooo/lineage-skill	main	Apache-2.0	Apache-2.0	-	CHANNELS-AGREE	readme=README.md[136B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+frappe/erpnext	develop	GPL-3.0	-	GPL-3.0	CHANNELS-AGREE	readme=README.md[0B-window] pkg=package.json:license=GPL-3.0 payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+GhaithAlHallak8/moodler-mcp	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[169B-window] pkg=pyproject.toml:license=text = "MIT payload_verdict=SHIPPABLE-PERMISSIVE
+CAHLR/pyBKT	master	MIT	-	MIT	CHANNELS-AGREE	readme=README.md[0B-window] pkg=setup.py:license==MIT payload_verdict=SHIPPABLE-PERMISSIVE
+portabilis/i-educar	2.12	GPL-2.0	-	GPL-2.0	CHANNELS-AGREE	readme=README.md[0B-window] pkg=composer.json:license=GPL-2.0-or-later payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+ls1intum/Artemis	develop	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[217B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+learningequality/kolibri	develop	MIT	-	MIT	CHANNELS-AGREE	readme=README.md[0B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+instructure/canvas-lms	master	AGPL-3.0	-	AGPL-3.0	CHANNELS-AGREE	readme=README.md[0B-window] pkg=package.json:license=AGPL-3.0 payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+THU-MAIC/OpenMAIC	main	MIT	LGPL+MIT	MIT	GRANT-DISAGREES-WITH-DOCUMENTATION	readme=README.md[618B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+Oriole-FDU/Wisepen	main	BUSL-1.1	-	-	DOC-SILENT	readme=README.md[108B-window] pkg=NONE payload_verdict=NOT-SHIPPABLE-WITHOUT-COMMERCIAL-LICENCE
+G36maid/moodle-mcp	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[148B-window] pkg=Cargo.toml:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+yetanalytics/lrsql	main	Apache-2.0+unknown-text	Apache-2.0	-	CHANNELS-AGREE	readme=README.md[104B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+openedx/XBlock	master	Apache-2.0	-	Apache-2.0	CHANNELS-AGREE	readme=README.rst[114B-window] pkg=pyproject.toml:license=Apache-2.0 payload_verdict=SHIPPABLE-PERMISSIVE
+openeducat/openeducat_erp	19.0	LGPL	LGPL	-	CHANNELS-AGREE	readme=README.md[215B-window] pkg=NONE payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+mitodl/learn-ai	main	MIT	-	BSD-3-Clause	GRANT-DISAGREES-WITH-DOCUMENTATION	readme=README.md[0B-window] pkg=pyproject.toml:license=BSD-3 payload_verdict=SHIPPABLE-PERMISSIVE
+learning-commons-org/evaluators	main	claims CC-BY-NC-SA-4.0	MIT	-	GRANT-DISAGREES-WITH-DOCUMENTATION	readme=README.md[326B-window] pkg=NONE payload_verdict=GRANT-ASSERTED-NOT-CARRIED
+francoisjacquet/rosariosis	mobile	GPL-2.0	-	GPL-2.0	CHANNELS-AGREE	readme=README.md[0B-window] pkg=package.json:license=GPL-2.0-or-later payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+dsvi-b/corretor-enem	master	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+ankimcp/anki-mcp-server	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[1114B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+PKulal/LMS	main	Apache-2.0	Apache-2.0	Apache-2.0	CHANNELS-AGREE	readme=README.md[244B-window] pkg=pyproject.toml:license=Apache-2.0 payload_verdict=SHIPPABLE-PERMISSIVE
+KonstantinosPetrakis/esco-skill-extractor	master	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+thm-mni-ii/feedbacksystem	dev	Apache-2.0	Apache-2.0	-	CHANNELS-AGREE	readme=README.md[193B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+satvik314/educhain	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[431B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+pykt-team/pykt-toolkit	main	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+openedx/openedx-platform	master	AGPL-3.0	AGPL-3.0	-	CHANNELS-AGREE	readme=README.rst[83B-window] pkg=NONE payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+oaknational/oak-open-curriculum-ecosystem	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[172B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+mitodl/agent-kit	main	BSD-3-Clause	BSD-3-Clause	-	CHANNELS-AGREE	readme=README.md[37B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+maiatechdev/avit	main	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+learning-commons-org/knowledge-graph	main	claims CC0-1.0	CC0-1.0+CC-BY-4.0+MIT	-	GRANT-DISAGREES-WITH-DOCUMENTATION	readme=README.md[1298B-window] pkg=NONE payload_verdict=GRANT-ASSERTED-NOT-CARRIED
+jupyterhub/jupyterhub-tutorial	master	BSD-3-Clause	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+h5p/h5p-php-library	master	GPL-3.0	Apache-2.0	GPL-3.0	GRANT-DISAGREES-WITH-DOCUMENTATION	readme=README.txt[72B-window] pkg=composer.json:license=GPL-3.0 payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+frappe/frappe	develop	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[124B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+fairyofmiracle/edu_course_agent	main	-	-	-	ALL-CHANNELS-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=UNRESOLVED-on-153-names
+dodona-edu/dolos	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[100B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+Swon010191/Math_teacher	main	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+LabSirius/TutorIA	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[294B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+yetanalytics/xapipe	main	Apache-2.0	Apache-2.0	-	CHANNELS-AGREE	readme=README.md[104B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+startin-lab/brujula-educativa	main	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+pupilfirst/pupilfirst	master	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[135B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE+COMPOSITE-GRANT-PER-PATH
+oas114/EduShield	main	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+mitodl/open-learning-ai-tutor	main	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+ls1intum/edutelligence	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[112B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+dougpenny/SwiftyPSCore	master	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[228B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+cortega26/chile-hub	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[84B-window] pkg=pyproject.toml:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+chamilo/chamilo-lms	master	GPL-3.0+unknown-text	-	GPL-3.0	CHANNELS-AGREE	readme=README.md[0B-window] pkg=package.json:license=GPL-3.0 payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+academico-sis/academico	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[87B-window] pkg=composer.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+OpenOLAT/OpenOLAT	master	Apache-2.0	Apache-2.0	Apache-2.0	CHANNELS-AGREE	readme=README.md[436B-window] pkg=pom.xml:licenses/name=Apache 2.0 Open Source L6icense payload_verdict=SHIPPABLE-PERMISSIVE
+MaiQuangPhuoc/edu_agents	main	-	-	-	ALL-CHANNELS-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=UNRESOLVED-on-153-names
+ILIAS-eLearning/ILIAS	release_11	GPL-3.0	-	GPL-3.0	CHANNELS-AGREE	readme=README.md[0B-window] pkg=package.json:license=GPL-3.0-or-later payload_verdict=SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS
+CycloneDX/cyclonedx-cli	main	Apache-2.0	Apache-2.0	-	CHANNELS-AGREE	readme=README.md[311B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+zhangl1001/civil-ai	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[145B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+tl-its-umich-edu/my-learning-analytics	master	Apache-2.0	-	Apache-2.0	CHANNELS-AGREE	readme=README.md[0B-window] pkg=package.json:license=Apache-2.0 payload_verdict=SHIPPABLE-PERMISSIVE
+theopenem/OneRoster.NET	master	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+sonstellar969/open-moodle	main	MIT	AGPL-3.0+MIT	MIT	GRANT-DISAGREES-WITH-DOCUMENTATION	readme=README.md[207B-window] pkg=pyproject.toml:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+sakaiproject/sakai	master	ECL-2.0	-	ECL-2.0	CHANNELS-AGREE	readme=README.md[0B-window] pkg=pom.xml:licenses/name=Educational Community License, Version 2.0 payload_verdict=SHIPPABLE-PERMISSIVE
+peancor/moodle-mcp-server	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[26B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+packbackbooks/lti-1-3-php-library	master	Apache-2.0	-	Apache-2.0	CHANNELS-AGREE	readme=README.md[0B-window] pkg=composer.json:license=Apache-2.0 payload_verdict=SHIPPABLE-PERMISSIVE
+open-spaced-repetition/fsrs4anki	main	MIT	-	-	DOC-SILENT	readme=README.md[100B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+open-spaced-repetition/fsrs.js	master	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[82B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+nso-india/esankhyiki-mcp	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[219B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+menthorlabs/menthor	main	Apache-2.0	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+loyaniu/moodle-mcp	main	-	-	-	ALL-CHANNELS-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=UNRESOLVED-on-153-names
+florianchristophnowak-dot/prep-ybara	main	MIT	-	MIT	CHANNELS-AGREE	readme=README.md[0B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+florianchristophnowak-dot/capy-note	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[62B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+Shunli-Wang/CPR-Coach	main	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+RohanMuppa/brightspace-mcp-server	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[103B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+Dramoscuello/simic	main	Apache-2.0	-	-	DOC-SILENT	readme=readme.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+DaRL-GenAI/instructional_agents	main	MIT	MIT	MIT	CHANNELS-AGREE	readme=README.md[568B-window] pkg=pyproject.toml:license=text = "MIT payload_verdict=SHIPPABLE-PERMISSIVE
+porridgeowefish/Learn-With-AI	main	MIT	MIT	-	CHANNELS-AGREE	readme=README.md[77B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE
+llwand1/xuelian-agent	main	MIT	-	MIT	CHANNELS-AGREE	readme=README.md[0B-window] pkg=package.json:license=MIT payload_verdict=SHIPPABLE-PERMISSIVE
+Zenglian990/AI_Tutor_Release	master	MIT	MIT	ISC	GRANT-DISAGREES-WITH-DOCUMENTATION	readme=README.md[121B-window] pkg=package.json:license=ISC payload_verdict=SHIPPABLE-PERMISSIVE
+KaynXu/awesome-ai-education	main	MIT	-	-	DOC-SILENT	readme=README.md[0B-window] pkg=NONE payload_verdict=SHIPPABLE-PERMISSIVE

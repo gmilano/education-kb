@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p554` — `2026-10-30` — **🟢 THREE NEW MIT AGENT ROWS, AND ALL THREE ARE APAC — THE FIRST PASS IN THIS WINDOW WHERE THE AGENT SUPPLY MOVED IN ONE REGION AND ONLY ONE. 🔴 THE STAR CHANNEL IS DEAD ON THIS SESSION: `api.github.com` AND `github.com` HTML BOTH RETURN **403**, SO NO POPULARITY FIGURE IS ADOPTED THIS PASS — INCLUDING ONE AGGREGATOR'S `~50 000★` FOR `DeepTutor`.**
+
+🔴 **Gate posture, stated first: `make hooks` DENIED** (`Code from External`) — thirteenth
+denial in fourteen passes; not gate-attested. 🟢 Four gates run directly instead, three now
+green — `Gap 554-F`.
+
+### 🔴 The channel loss, first, because it bounds everything below
+
+| Channel | Status this pass | Consequence |
+|---|---|---|
+| 🟢 `raw.githubusercontent.com` | **200** | 🟢 grant payloads, READMEs and manifests readable — all of this pass's facts come from here |
+| 🟢 `git ls-remote --symref` | **works** | 🟢 default branch and `HEAD` sha resolvable |
+| 🔴 `api.github.com` | **403** — *"GitHub access to this repository is not enabled for this session"* | 🔴 **no stars, no forks, no `license.spdx_id`, no pushed-at.** `553-E`'s and `553-F`'s platform limb is **unreachable**, not closed — `Gap 554-A` |
+| 🔴 `github.com` HTML | **403** | 🔴 the fallback for the above is gone too |
+
+🔴 **So a reported `DeepTutor ~50 000★ (+1 930 in a day)` from an automated trend-digest
+repository is NOT written to this base as a fact.** 🔵 `p553` recorded that this base's
+reporting channel *"disagrees with itself by 4 600 stars on one day"*; with the primary
+channel at 403 there is no way to adjudicate, so the figure is left in the search return
+where it was found.
+
+### 🟢 What is new this week — three agents, one index, all MIT
+
+| 🆕 | Repo | Grant (payload) | Branch | Region | Disposition, decided before it was written (`551-D`) |
+|---|---|---|---|---|---|
+| **Learn-With-AI** | [`porridgeowefish/Learn-With-AI`](https://github.com/porridgeowefish/Learn-With-AI) | 🟢 **MIT** | `main` | 🟢 APAC | 🟢 **Agent shelf** — a runnable local-first study agent |
+| **学练 agent** | [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent) | 🟢 **MIT** | `main` | 🟢 APAC | 🟢 **Agent shelf** — exam-practice agent, shipping builds this month |
+| **ZengLian AI Tutor** | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟡 **MIT** / 🔴 `ISC` in `package.json` | 🔴 `master` | 🟢 APAC | 🟢 **Agent shelf**, with the manifest conflict carried on the row |
+| **Awesome AI for Education** | [`KaynXu/awesome-ai-education`](https://github.com/KaynXu/awesome-ai-education) | 🟢 **MIT** | `main` | 🟢 Global — bilingual EN / zh-CN | 🔵 **Filed as a CHANNEL, not padded onto a shelf as rows** — per `551-D`. It is a human-reviewed, evidence-labelled index across teaching, assessment, tutoring, curriculum, school operations and teacher development. Its value is as a next pass's **input**, not as agent rows |
+
+🟢 **Three of three new agents are APAC.** 🔵 That is a placement, not a coincidence worth
+asserting a cause for: the three were found through a general trending query, not a regional
+one, and the regional query for APAC returned regulation only (`market.md`, 15th saturation).
+
+### 🔴 What the mandated trending query returned, and what it did not
+
+🔵 Query run: `github trending education AI 2026`. 🔴 It returned **no GitHub-native
+trending list** — every result was a third-party aggregator or a blog ranking, and two of
+the top results were **automated digest issues** inside other people's repositories.
+🟢 Three of the four rows above came instead from a **dated-release** query, and each was
+then resolved and read first-hand rather than taken from the digest.
+
+🔵 Already held, returned again and **not** re-added: `microsoft/generative-ai-for-beginners`,
+`rohitg00/ai-engineering-from-scratch`, `ashishpatel26/500-AI-Agents-Projects`,
+`HKUDS/DeepTutor`.
+
 ## 🆕 `p553` — `2026-10-30` — **🔴 GITHUB'S OWN `license` FIELD RETURNS `NOASSERTION` FOR **BOTH** OF THIS PASS'S INTERESTING GRANTS — THE BUSL-1.1 ROW AND THE ABRIDGED-CC0 ROW — SO A `license:` SEARCH FILTER IS BLIND TO EXACTLY THE SHAPES `552-B` AND `552-D` WERE BUILT TO NAME. 🔴 THE ONE LATAM-PLACED ARTEFACT IN FOUR PASSES CARRIES **THREE DIFFERENT LICENCES ON THREE CHANNELS**. 🔴 THE GATE RAN FOR THE FIRST TIME IN TWELVE PASSES AND IS RED ON 20 OF 68 CHECKS, PRE-EXISTING.**
 
 🔴 **Gate posture, stated first: `make hooks` RAN** — ending the eleven-denials-in-twelve

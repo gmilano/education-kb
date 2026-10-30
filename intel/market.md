@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p554` — `2026-10-30` — **🔴 FIFTEENTH CONSECUTIVE DEMAND SATURATION, ALL FOUR LEGS BLANK TOGETHER FOR THE FOURTH TIME. 🟢 THE SUPPLY SIDE MOVED AND IT MOVED **ONE** REGION: THREE NEW MIT AGENT ROWS, ALL APAC. 🟢 `gate-region-headings` HAD BEEN RED SINCE `p548` BECAUSE THIS PAGE'S CANONICAL BLOCK WAS MISSING `### Global` — FOUND, AND FILLED WITH CONTENT.**
+
+🔴 **Gate posture: `make hooks` DENIED** (`Code from External`) — thirteenth denial in
+fourteen passes, so this pass is **not gate-attested**. 🟢 But four gates were run
+**directly**, which is what `553-G`'s third ask demanded, and this page's two defects are
+fixed. 🔴 The post-splice re-run was DENIED, so their state at `HEAD` is unverified.
+`Gap 554-F`.
+
+### 🔴 The four mandated legs, and what each returned
+
+🔵 All four run. 🔴 **Every claim returned was already held by this base** — the fifteenth
+consecutive saturation, and the fourth time all four legs blanked together.
+
+| Leg | Query returned | New to this base |
+|---|---|---|
+| 🔴 **North America** | Maryland **SB 720**, New York **A 9190**, the **K-12 AI Literacy and Readiness Act of 2026**, and — for the **sixth** time — the retired `134 bills / 31 states` figure | 🔴 **0.** 🔴 `134/31` was **again** a top organic result and is **again not written to this page**: retired at `p455`, secondary-aggregator-only |
+| 🔴 **EMEA** | The **Digital Omnibus** dates (`2 Dec 2027` / `2 Aug 2028`), Article 4 AI-literacy duty since `2 Feb 2025`, the emotion-recognition ban, `Regulation (EU) 2026/1744`, the Commission/OECD **AI Literacy Framework** of June 2026 | 🔴 **0** — all held, and this base remains **more precise** than the search channel on the Omnibus conflict |
+| 🔴 **APAC** | Korea's **AI Basic Act** in force `22 Jan 2026` (high-impact includes education), **Vietnam**'s AI law in force `1 Mar 2026` with an 18-month education transition, India's AI-labelling IT Rules from `20 Feb 2026` | 🔴 **0** — all held |
+| 🔴 **LATAM** | UNESCO **IESALC** `87 %`/`74 %`/`26 %`/`9 %`, **PISA 2025**'s nine-in-ten across 13 countries, Brazil's `53 %`/`22 %`, the Andes count of **716** instruments across 23 countries, the UNESCO/CAF **Observatory** | 🔴 **0** — all held |
+
+🟡 **Two leads returned that this base does NOT hold, and neither is adopted as a fact.**
+Indonesia's **Merdeka Belajar** and the Philippines' **MATATAG** curriculum rollouts were
+named as shaping APAC AI-adoption guidance — **0 occurrences** on this base. 🔴 They arrived
+through a single low-reliability aggregator with no primary citation, so they are recorded
+**as leads for a successor to ground**, not written to the regional block. 🔵 Registered as
+an open ask under `Gap 554-G`.
+
+### 🟢 Where the supply moved — APAC, and only APAC
+
+🟢 Three new agent rows this pass, **all MIT, all read from the payload at a resolved
+branch, all APAC-origin**: [`porridgeowefish/Learn-With-AI`](https://github.com/porridgeowefish/Learn-With-AI),
+[`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent),
+[`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release).
+
+🔵 **Why this is commercially legible rather than a curiosity.** APAC's regulatory leg —
+Korea's high-impact tier, Vietnam's education transition period — is the one that most
+rewards an architecture the deployer can **inspect and host**. 🟢 `Learn-With-AI` is
+**local-first by design**; `AI_Tutor_Release` is a **curriculum-grounded RAG** system with
+its knowledge base in the repository. 🔵 Both are the shape an APAC high-impact assessment
+asks for, and both are MIT. 🔵 Recipe: **`P610`**.
+
+🔴 **Stated as a gap, not a gain:** the APAC supply found this pass is **China-origin and
+China-curriculum-bound** (PEP-aligned grades 1–12, Chinese-language UIs). That is a real
+limit on reuse in the rest of APAC, and it is why the recipe treats the curriculum layer as
+replaceable rather than as a feature.
+
+### 🔵 Regional demand, restated per region so no region's blank reads as coverage
+
+#### North America
+🔴 Blank for a **tenth** consecutive pass on new claims. 🟢 The supply-side position from
+`p553` stands unchanged: [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic)
+remains the largest open-source SIS this base can name with a grant attached, GPL-2.0, and
+therefore an **on-premise** answer.
+
+#### EMEA
+🔴 Blank on new claims. 🟢 The one EMEA-relevant movement is on the **supply** side and it
+is a correction, not a find: [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst)
+— an India-origin, EMEA- and globally-deployed learning platform — **is MIT**, not the
+CC-BY-4.0 this base recorded last pass. 🟢 That moves it from a Creative Commons row to a
+**permissive** one, which materially widens what an EMEA engagement may do with it.
+
+#### APAC
+🟢 **The only region that moved this pass.** Three MIT agent rows; see above.
+
+#### LATAM
+🔴 Blank on new claims, and 🔴 **the supply blank is not broken either.** 🔵 The one
+LATAM-placed artefact this base holds —
+[`juanmoisesd/ai-educational-impact-latin-america-dataset`](https://github.com/juanmoisesd/ai-educational-impact-latin-america-dataset)
+— was re-read this pass and its licence still contradicts itself. 🔴 **And the contradiction
+is worse than `553-E` recorded:** its README contains **two separate `## License`
+sections**, one stating **CC BY 4.0** and one stating *"licensed under the MIT License — see
+the LICENSE file for details"*, while the `LICENSE` file carries **abridged CC0-1.0**.
+🔴 **Three families, four assertions, one artefact** — and the MIT assertion points the
+reader directly at a file that does not contain MIT.
+
 ## Opportunities by region
 
 > 🟢 **This is the single authoritative `## Opportunities by region` block on this page,
@@ -231,7 +306,7 @@ is recorded with it:**
 | Claim | Source class | Status on this base |
 |---|---|---|
 | Education AI is **Annex III high-risk** where a system evaluates learners, assigns them to programmes, detects prohibited behaviour in assessment, or gates access to qualifications | 🟢 held, primary-grounded | 🟢 **unchanged** |
-| Stand-alone Annex III high-risk obligations apply from **2 August 2026** | 🔵 guide | 🔴 **superseded by the next row** |
+| 🔵 A 2026 vendor guide **reported** stand-alone Annex III high-risk obligations as applying from **2 August 2026** — **corrected on the next row: the Digital Omnibus moves them to 2 December 2027** | 🔵 guide | 🔴 **superseded; not this base's claim** |
 | 🆕 The **Digital Omnibus** moves stand-alone Annex III obligations to **2 December 2027**, and AI embedded in regulated products to **2 August 2028** | 🟡 law-firm bulletin (April 2026) and consultancy commentary | 🟡 **RECORDED WITH ITS CONFLICT** — one source notes formal adoption still pending at the time of writing; the Commission's own timeline records amendments **adopted June 2026, in force 27 July 2026** |
 | 🔴 The **Official Journal text is the control** | — | 🔴 **UNREAD** — `eur-lex` is a **gateway policy denial** on this session (`Gap 500-D`, diagnosed from the gateway's own log at `p546`), so this base **cannot** close the date itself |
 
@@ -763,6 +838,40 @@ Mexico, targeting **1.25 M students by 2028**. 🔵 **HolonIQ's 2026 LATAM EdTec
 Brazil as nearly half the cohort, naming **Teachy** (AI lesson preparation, expanded into
 Asia) and Mexico's **Ginia** (AI-driven employability). 🔴 **None of these is open source**, so
 none becomes a shelf row.
+
+### Global
+
+🟢 **Added at `p554`, and it is content rather than a shim: this block was missing a
+`Global` subsection, and `gate-region-headings` had been RED on exactly that since the
+block was made canonical at `p548`.** 🔵 The gate's vocabulary is five values; the block
+carried four. 🔵 It is filled with the one opportunity this base has measured that is
+genuinely not regional.
+
+🔴 **The opportunity is a defect in how open-source education software states its own
+licence, and it is 1 in 10.** Across **84** education repositories read on three channels
+this pass, **8 contradict their own documentation** about their grant, and **5 of those are
+true contradictions** rather than disclosed bundling. 🔵 Evidence:
+[`../evidence/doc-channel.2026-10-30-p554.tsv`](../evidence/doc-channel.2026-10-30-p554.tsv).
+
+🟢 **Why a studio can sell this.** Every client engagement that builds on open source needs
+a licence clearance, and the standard way to produce one — read the `LICENSE` file, or trust
+the platform's licence field — **is wrong about one repository in ten**, and wrong in the
+permissive direction often enough to matter. A clearance that reads **three** channels and
+reports disagreement instead of resolving it is a small, concrete deliverable that can be
+run in CI on day one of an engagement. 🔵 Recipe: **`P609`**.
+
+🔴 **The shape it finds most often is specific to education**, which is what makes it a
+vertical offer rather than a generic one: permissive **code** wrapped around **corpora and
+content** under Creative Commons terms — frequently **NonCommercial**. 🔵 Three of this
+pass's five true contradictions are exactly that shape
+([`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators),
+[`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph),
+[`CAHLR/OATutor`](https://github.com/CAHLR/OATutor)). 🔵 See `Trend 64`.
+
+🔴 **A limit on this block, stated rather than left to inference:** it is `Global` because
+the defect is in publishing practice, not in a jurisdiction. It is **not** a claim that
+demand is uniform across the four regions — the four regional subsections above carry that,
+and they disagree with each other considerably.
 
 ## 🆕 `p553` — `2026-10-30` — **🔴 FOURTEENTH CONSECUTIVE DEMAND SATURATION. 🔴 THE RETIRED `134/31` FIGURE RETURNED A **FIFTH** TIME AND IS STILL NOT ADOPTED. 🟢 EMEA GAINS ITS FIRST CURRICULUM-PLACED PERMISSIVE SUPPLY ROW. 🔴 LATAM'S SUPPLY BLANK IS **NOT** BROKEN — THE ONE ARTEFACT FOUND IS A CITATION SHELL WHOSE LICENCE CONTRADICTS ITSELF ON THREE CHANNELS.**
 

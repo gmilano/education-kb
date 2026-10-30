@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p554` — `2026-10-30` — **🔴 THE TRENDING CHANNEL ITSELF IS NOW PARTLY UNREADABLE: `api.github.com` AND `github.com` HTML BOTH RETURN **403** ON THIS SESSION, SO *TRENDING* CAN ONLY BE OBSERVED THROUGH THIRD-PARTY DIGESTS. 🟢 FOUR REPOSITORIES WERE STILL RESOLVED AND READ FIRST-HAND OVER `raw.`, WHICH IS THE ONLY CHANNEL LEFT.**
+
+🔴 **Gate posture: `make hooks` DENIED** — thirteenth in fourteen. 🟢 Four gates run
+directly, three green **when run**; 🔴 the post-splice re-run was DENIED. `Gap 554-F`.
+
+### 🔴 What "trending" can and cannot mean on this session
+
+🔵 Stated plainly because a later pass will otherwise read this page's silence as a quiet
+week: **this base cannot currently observe a star count, a fork count or a push date.**
+
+| Fact a trending shelf normally carries | Channel | Status |
+|---|---|---|
+| stars / forks / Δstars | `api.github.com` | 🔴 **403** |
+| the same, from the HTML page | `github.com` | 🔴 **403** |
+| default branch, `HEAD` sha | `git ls-remote --symref` | 🟢 works |
+| licence payload, README, manifest | `raw.githubusercontent.com` | 🟢 works |
+| the repository's own release notes | `raw.` on `README.md` | 🟢 works — **and this is what was used** |
+
+🟢 **So "trending" was re-grounded on a channel that survives: the project's own dated
+release notes in its README.** [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent)
+records website `v0.2.188` and Windows desktop `0.2.210` on **`2026-10-24`**, with entries
+on `2026-10-21` and `2026-10-22` — that is first-hand evidence of an actively shipping
+project, and it is stronger than a star delta from an aggregator.
+
+### 🟢 Resolved and read this pass
+
+| Repo | Branch | Grant (payload) | Signal, first-hand |
+|---|---|---|---|
+| [`porridgeowefish/Learn-With-AI`](https://github.com/porridgeowefish/Learn-With-AI) | `main` | 🟢 **MIT** | Local-first desktop app, three OSes, bilingual zh/en README |
+| [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent) | `main` | 🟢 **MIT** | Dated release notes `2026-10-21` → `2026-10-24` in-README |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🔴 `master` | 🟡 **MIT** / 🔴 `ISC` in manifest | **514 files at `HEAD`, 238 of them source** — counted with `git ls-tree -r`, because the name says `Release` and that had to be checked rather than believed |
+| [`KaynXu/awesome-ai-education`](https://github.com/KaynXu/awesome-ai-education) | `main` | 🟢 **MIT** | 🔵 Filed as a **channel** for a later pass, not as shelf rows (`551-D`) |
+
+### 🔴 What the mandated query returned
+
+🔵 `github trending education AI 2026` returned **zero** GitHub-native trending output. Its
+top results were two **automated digest issues** inside third-party `agents-radar` forks and
+several blog rankings. 🔴 Those digests are themselves a reporting channel this base has
+already caught contradicting itself (`p553`: 4 600 stars of disagreement in one day), and
+with the primary channel at 403 there is **no way to adjudicate them**, so none of their
+figures is adopted.
+
 ## 🆕 `p553` — `2026-10-30` — **🟢 A 39 155★ CHANNEL ADDED WITH ITS DISPOSITION DECIDED FIRST, PER `551-D`'s REPLACEMENT RULE — FILED AS A CHANNEL, NOT PADDED ONTO A SHELF AS ROWS. 🔴 THE MANDATED TRENDING QUERY RETURNED ONE ON-DOMAIN REPOSITORY AND THIS BASE ALREADY HELD IT. 🔴 ITS REPORTING CHANNEL DISAGREES WITH ITSELF BY 4 600 STARS ON ONE DAY.**
 
 🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the

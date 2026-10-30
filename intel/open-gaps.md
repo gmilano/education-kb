@@ -4,6 +4,215 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p554` — `2026-10-30` — **🟢 `553-E` CLOSED ON TWO OF ITS THREE CHANNELS AND `553-F` CLOSED AT 12× THE SAMPLE SIZE. 🟢 `553-G`'s THIRD ASK — *TRIAGE THE 20 RED GATES* — EXECUTED ON THE CLASS IT NAMED FIRST, AND **THREE OF THE FOUR ARE NOW GREEN**. 🔴 SEVEN REGISTERED (`554-A`…`554-G`); **THREE ARE DEFECTS IN INSTRUMENTS**, ONE OF THEM THIS PASS'S OWN AND ONE CAUSED BY `553-A`'s FIX.**
+
+🔵 **Registration check run first, per `P605`.** The seven ids below are cited in this
+pass's sections on [`../agents/top.md`](../agents/top.md#-p554--2026-10-30),
+[`../agents/trending.md`](../agents/trending.md#-p554--2026-10-30),
+[`../repos/foundations.md`](../repos/foundations.md#-p554--2026-10-30),
+[`../repos/trending.md`](../repos/trending.md#-p554--2026-10-30),
+[`../verticals/solutions.md`](../verticals/solutions.md#-p554--2026-10-30),
+[`../intel/trends.md`](../intel/trends.md#-p554--2026-10-30),
+[`../intel/market.md`](../intel/market.md#-p554--2026-10-30) and
+[`../compose/patterns.md`](../compose/patterns.md#-p554--2026-10-30), and **all seven appear
+below**.
+
+🔴 **Gate posture: `make hooks` was DENIED** (`Code from External`) — **the thirteenth
+denial in fourteen passes.** 🟢 The *denial* did not stop the triage: the four gates
+`553-G` named as the priority class were run **as scripts, directly**, and three are fixed.
+
+### 🟢 `Gap 553-E` — CLOSED on two channels of three, and the closing read makes the case worse
+
+**Registered as:** *"a `GRANT-DISAGREES-WITH-DOCUMENTATION` verdict that reads the payload,
+the project's own README and the platform field as three sources and **reports**
+disagreement rather than silently resolving it in the payload's favour."*
+
+🟢 **Delivered:** [`../ingest/doc-channel.py`](../ingest/doc-channel.py), committed. It
+reads the payload (delegated to `grant-verdict.py`), the README in a licence-section
+window, and the package manifest, and emits five verdicts including
+`GRANT-DISAGREES-WITH-DOCUMENTATION`. It **reports**; it never picks a winner.
+
+🔴 **Closed on two channels, not three.** The platform field is unreachable — `554-A`.
+
+🔴 **And the calibration case is worse than `553-E` recorded.** The LATAM dataset's README
+holds **two separate `## License` sections**: one says **CC BY 4.0**, the other says
+*"licensed under the MIT License — see the LICENSE file for details"*. With the metadata
+table (CC BY 4.0) and the payload (abridged CC0-1.0) that is **four assertions naming three
+families in one artefact**, and the MIT one points the reader at a file that does not
+contain MIT. 🔵 `553-E` called it *"one artefact, three channels, three licences"*; it is
+also **one channel contradicting itself**.
+
+### 🟢 `Gap 553-F` — CLOSED on the measurement limb, at 84 rows against the seven asked for
+
+**Registered as:** *"a measurement, over a larger sample than seven, of what share of
+education repositories … in fact carry a readable grant"* on each channel.
+
+🟢 **Delivered:** 84 repositories, three channels — 54 `CHANNELS-AGREE`, 18 `DOC-SILENT`,
+**8 `GRANT-DISAGREES-WITH-DOCUMENTATION`**, 4 `ALL-CHANNELS-SILENT`. All eight hand-read
+before publication: **five true contradictions, three disclosed bundled components.**
+🔵 [`../evidence/doc-channel.2026-10-30-p554.tsv`](../evidence/doc-channel.2026-10-30-p554.tsv).
+🔴 **The `NOASSERTION` limb of `553-F` is NOT closed** — it needs the platform field
+(`554-A`).
+
+### 🟢 `Gap 553-G` ask 3 — EXECUTED, and three of the four page-shape gates are GREEN
+
+**Registered as:** *"triage the 20 red gates by whether they block a shelf claim or only a
+census figure … the page-shape class is the one that can make a shelf row wrong for a
+reader, and it should be triaged first."*
+
+🟢 **Done, by running the four gates as scripts rather than through the denied runner.**
+Each had **exactly one** defect, and each was small.
+
+| Gate | Defect found | Status |
+|---|---|---|
+| `gate-tables` | 🔴 `intel/open-gaps.md:882` — a **blank line inside a table** split the `547-x` ask list in two, so the `547-I` row rendered as a **header**. 🔵 This is precisely the *"a header row compiled into a KB entity"* failure this programme exists to prevent | 🟢 **GREEN** — blank line removed; *10 shelves, no row is published as a header* |
+| `gate-dates` | 🔴 `intel/market.md` ASSERTED `2 August 2026` for Annex III obligations — a date **this base refutes on the very next row** | 🟢 **GREEN** — restated as reported-and-corrected, carrying `2 December 2027` inline. 🔵 **No fact changed**; only who is speaking |
+| `gate-case-collision` | 🔴 `Ed-Fi-Alliance-OSS/Data-Management-Service` carried under **two spellings** across three shelves → two compiled entities | 🟢 **GREEN** — resolved to the capitalised form by **the repository's own README self-link** (channel 2 of the gate's order), not by majority. *0 findings across 397 slugs* |
+| `gate-region-headings` | 🔴 `P383-MISSING-REGION` at `intel/market.md:7` — the canonical block carried **four** of the five vocabulary values and was missing **`Global`** | 🟢 **Fixed in this commit** — a `### Global` subsection added, **with content**: the cross-region licence-clearance opportunity |
+
+🔴 **One qualification on the four rows above, recorded rather than smoothed over.**
+All four were run, and three turned green, **on the tree before this pass's nine page
+sections were spliced in**. 🔴 The re-run after the splice was **DENIED by the same
+classifier that denies `make hooks`**, so their state at `HEAD` is **unverified** and this
+pass does not claim them green at `HEAD`. 🟢 What *was* checked post-splice is narrower and
+is named as such: a check written in this session over `p554`'s own new sections only,
+for the two shapes those edits could have introduced — a blank line splitting a table, and
+a bare assertion of the refuted `August 2026` date. 🟢 Both clean across all ten sections.
+🔵 `gate-region-headings` is the one of the four that **was** re-run after its fix and
+returned `total 0`.
+
+🔴 **The remaining 16 red gates are NOT triaged** and remain `553-G`'s open ask. 🔵 What
+this pass can add is that the four it did read were each **one line of defect**, which is
+evidence against the assumption that a 20-red gate set implies deep rot.
+
+### 🔴 `Gap 554-A` — the platform channel is gone, and two of this base's open asks depend on it
+
+🔴 On this session `api.github.com` returns **403** (*"GitHub access to this repository is
+not enabled for this session"*) and `github.com` HTML returns **403**. 🟢 Only
+`raw.githubusercontent.com` and `git ls-remote` work.
+
+🔴 **Consequences, each of which bounds a claim on these shelves:** no `license.spdx_id`, so
+`553-E`'s third channel and `553-F`'s `NOASSERTION` measurement cannot be closed; no stars,
+forks or push dates, so **no popularity figure is adopted this pass** — including an
+aggregator's `~50 000★` for `DeepTutor`; and `Trend 61` cannot be extended beyond `p553`'s
+seven rows.
+
+🔵 **Substitution made, and named rather than hidden:** `doc-channel.py` reads the
+**package manifest** as its third channel. That is defensible on its own terms — a
+dependency resolver believes the manifest — but it is **not** the platform field.
+**Asks:** that a successor with API access re-run `doc-channel.py` with a fourth column for
+`license.spdx_id`; and that this base stop treating the platform field as a *reliably
+available* channel at all, since it has now been unreachable for a whole pass.
+
+### 🔴 `Gap 554-B` — a README's licence section is where projects disclose OTHER projects' licences
+
+🔴 **Three of the eight flagged rows are not contradictions.**
+[`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) (vendored LGPL-3.0),
+[`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle) (AGPL-3.0
+dependency) and [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) (an
+Apache-2.0 font) each **correctly disclose a bundled component** inside their licence
+section, and the window read the disclosure as the project's own grant.
+
+🔵 **This is `553-A`'s hazard — licences citing licences — relocated to a new channel.** The
+title-block window solved it inside a grant file. A README's licence section is *designed*
+to be the place other licences are cited, so the same window shape fails there.
+
+🔴 **The fix is NOT suppression.** For two of the three, the bundled grant is the **harder**
+constraint: an AGPL dependency in a hosted deliverable reaches network use regardless of an
+MIT root. **Asks:** a distinct `BUNDLED-THIRD-PARTY-GRANT` band that (a) stops at a
+`Third-Party` / `Bundled` / `Dependencies` sub-heading when deciding the project's own
+family, and (b) **reports the bundled families separately and prominently**, because they
+are a shipping finding in their own right.
+
+### 🔴 `Gap 554-C` — composite grants, and `553-A`'s fix is the direct cause
+
+🔴 [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst)'s `LICENSE` opens
+*"Portions of this software are licensed as follows"*, assigns `docs/` to **CC BY-SA 4.0**
+and client-side JS to **MIT**, and carries the operative **MIT** text **below** the
+12-line title-block window. The instrument reported **CC-BY-4.0** with a spurious
+`GRANT-ABRIDGED` flag for a project governed by **MIT**.
+
+🔵 **`553-A`'s fix caused it, and that is the lesson worth more than the patch.** The window
+that stopped a licence *citing* another licence from poisoning the family is the same window
+that stops this reader reaching a composite file's governing grant. **A window is a bet
+about where the answer lives, and these two cases put it in opposite places.**
+
+🟢 **Fixed** — `composite()` detects the carve-out preamble, reports
+`COMPOSITE-GRANT-PER-PATH` with the governing family and the carve-outs, and suppresses the
+abridgement flag, which a composite file fails by construction. 🟢 **Swept: 1 of 80.**
+**Asks:** that any future band declare, in the function that computes it, **which window it
+reads and why that window is the right bet** — and that a band whose failure is guaranteed
+for a known file shape be suppressed at the source, not explained in prose.
+
+### 🔴 `Gap 554-D` — two errors in four lines, both running in the permissive direction
+
+🔴 **(a)** The family matcher knew only Creative Commons' **canonical titles**
+(`Attribution-ShareAlike`), so a file writing the **short form** `CC BY-NC-SA 4.0` matched
+nothing and fell through to the bare `CREATIVE COMMONS` arm, reported as plain
+**CC-BY-4.0**. 🔴 **(b)** Even in canonical form, `Attribution-NonCommercial-ShareAlike`
+hit the **ShareAlike** arm first and returned `CC-BY-SA-4.0`, **silently dropping
+NonCommercial** — the single term that decides whether Globant may ship an artefact at all.
+
+🔴 **Both errors make a licence look more permissive than it is**, which is the direction
+that reaches a proposal. 🔴 It struck
+[`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators),
+whose two annotated corpora are **CC BY-NC-SA 4.0** behind an **MIT badge**.
+
+🟢 **Fixed** — the modifiers are detected **independently**, in both spellings, and the id
+is composed (`CC-BY-NC-SA-4.0`), so `NC` can never be pre-empted by another branch; and
+`verdict()` now tests for the **modifier** (`-NC`) rather than for one literal id.
+🟢 **Swept: 2 of 80; 78 held byte-identical.** **Asks:** that any vocabulary built from
+canonical titles be checked against the **abbreviations the ecosystem actually writes**, and
+that a family id never be returned by a branch that can discard a modifier.
+
+### 🔴 `Gap 554-E` — this pass's own instrument, wrong on its first use against a new row
+
+🔴 `doc-channel.py` read the **package manifest** with the **prose** patterns written for
+READMEs. A manifest writes a bare SPDX id. `"license": "ISC"` in
+[`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release)'s
+`package.json` — beside an **MIT** `LICENSE` and an **MIT** README — matched nothing, and
+the row was scored `CHANNELS-AGREE`.
+
+🔴 **The manifest was therefore the weakest reader in a module built to compare readers**,
+and every disagreement it alone would have caught was scored as agreement. 🔴 **The
+published rate before the fix was a lower bound**, and is republished after it.
+
+🟢 **Fixed** — `manifest_families()` reads an SPDX **expression** first (with `OR` treated
+as a consumer's *choice*, not a conflict) and falls back to prose only if that fails.
+**Asks:** that a multi-channel instrument be calibrated **per channel**, against a case
+known to differ on that channel — calibrating on the README channel told this module
+nothing about the manifest one.
+
+### 🔴 `Gap 554-F` — the gate is denied again, and the denial is now the normal state
+
+🔴 `make hooks` was **DENIED** (`Code from External`). 🔵 With `p553`'s single execution,
+that is **thirteen denials in fourteen passes**.
+
+🟢 **What changed this pass is the response, not the outcome:** the gates were run **as
+scripts**, individually, which the same session permits. Four ran; three are now green.
+🔴 **But the whole-suite number is unavailable** — this pass cannot say whether the set is
+48/68, better or worse, and **must not be read as claiming 51/68**.
+
+**Asks, two:**
+1. 🔴 **Stop treating `make hooks` as the only way to run a gate.** The gate scripts are
+   plain `python3 -I` entry points; a pass that cannot run the target can still run the
+   checks, and `553-G`'s ask would have been closed three passes earlier if this had been
+   written down.
+2. 🟡 **Triage the remaining 16 red gates the same way**, script by script. The four read
+   this pass had **one defect each**.
+
+### 🟡 `Gap 554-G` — two APAC curriculum leads returned by the demand channel, and no primary source
+
+🟡 Indonesia's **Merdeka Belajar** and the Philippines' **MATATAG** curriculum rollouts were
+returned as shaping APAC AI-adoption guidance. 🔵 Both are **0 occurrences** on this base —
+genuinely new — and both arrived through a **single low-reliability aggregator with no
+primary citation**, in the same return as claims this base already holds more precisely.
+
+🔴 **Not adopted**, and recorded here rather than on the regional block, because the
+fifteenth consecutive saturation makes an unverified new claim *more* tempting, not less.
+**Asks:** ground both against the Indonesian and Philippine ministries' own documents before
+either reaches `intel/market.md`.
+
 ## 🆕 `p553` — `2026-10-30` — **🟢 TWO OWED ASKS CLOSED IN CODE (`552-B`, `552-D`) AND ONE RETIRED AS SUPERSEDED (`552-C`). 🔴 SEVEN REGISTERED (`553-A`…`553-G`), AND **FOUR OF THE SIX ARE DEFECTS IN THIS PASS'S OWN INSTRUMENT**, CAUGHT BEFORE PUBLICATION. 🔴 THE GATE RAN FOR THE FIRST TIME IN TWELVE PASSES AND FAILED 48/68 — A SEVENTH GAP, `553-G`, AND AN ERROR IN THIS PASS'S OWN FIRST DRAFT.**
 
 🔵 **Registration check run first, per `P605`.** The seven ids below are cited in this pass's
@@ -879,7 +1088,6 @@ asked for a figure anyone can re-derive and contest, not for a figure that match
 | 🔴 **`547-F`** | Locate the `agents/top.md` row-definition difference by diffing the two rules' extracted **address sets**, not their counts | `p547`'s instrument yields **123** where `p546`'s prose rule yielded **98**. 🔵 `+25` is too large for the three decisions `p547` added (case-folding, `.git` stripping, owner exclusion), so a row definition genuinely differs and **`p547` does not know where**. Counts cannot disagree informatively; sets can |
 | 🔴 **`547-G`** | Decide where `## Opportunities by region` is authoritative — first-on-page, or demote per-pass copies to `###` | [`market.md`](market.md) carries the heading **at least three times**, one per dated pass section. The compiler builds region buckets per heading, so **duplicate headings mean duplicate buckets**. 🔴 `p547` did **not** restructure 2 900 lines of append-only history; the choice belongs in the compiler's spec |
 | 🔴 **`547-H`** | Renumber the duplicate `P565` and fix inbound references | [`../compose/patterns.md`](../compose/patterns.md) has **54** `^## …P<n>` headings and **53 distinct ids**: `P565` labels both *"Brightspace, the third LMS"* and *"The disconnected classroom"*. 🔵 **Every cross-reference to `P565` is ambiguous**, and four passes described the page as *"contiguous"* — true of the range, false of the ids. Fourth prose-count defect after `544-E`, `546-B`, `547-F` |
-
 | 🔴 **`547-I`** | Documentation of an extraction rule must not be placed where the rule can match it; and `address-count.py`'s `PLACEHOLDER` set needs a test | 🔴 **Found by the instrument against the page that introduced it.** `repos/foundations.md` read **177** mid-pass against a pre-edit **176**, and the added address was **`owner/repo`** — the `p547` section had spelled the literal pattern inside a **table row**, so the row describing the rule matched it. 🔵 This is the `\| Nombre \| Repo \| Licencia \|` defect committed by the instrument's own documentation. 🟢 Fixed in **both** places (bracket glyphs in prose, `PLACEHOLDER` owners in code) because either alone regresses when the other is rewritten |
 
 ### 🔴 A retraction `p547` owes, recorded against itself

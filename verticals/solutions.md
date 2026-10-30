@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p554` — `2026-10-30` — **🔴 A VERTICAL-SHELF PLATFORM'S README NEVER STATES ITS OWN LICENCE — THE ONLY LICENCE SENTENCE IN `h5p/h5p-php-library`'s `README.txt` IS ABOUT A **FONT**. 🟢 THE DEPLOY-VS-RESELL LINE GAINS A THIRD CHANNEL, AND ONE SPELLING COLLISION ON THIS PAGE IS FIXED.**
+
+🔴 **Gate posture: `make hooks` DENIED** (`Code from External`), thirteenth denial in
+fourteen passes — not gate-attested. 🟢 Four gates run directly; three green **when run**, including
+`gate-case-collision`, which this page's own edit turned green. 🔴 The post-splice re-run
+was DENIED. `Gap 554-F`.
+
+### 🟢 The vertical shelf, read on three channels
+
+🔵 Added to [`p553`'s payload column](#-p553--2026-10-30): what the platform's **own
+documentation** says, read in a licence-section window by
+[`../ingest/doc-channel.py`](../ingest/doc-channel.py).
+
+| Platform | Payload grant | Its own documentation says | Channel verdict |
+|---|---|---|---|
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🟡 **GPL-3.0** (`master`, `package.json` agrees) | 🔴 `README.txt`'s **only** licence sentence: *"Open Sans font is licensed under Apache license, Version 2.0"* | 🔴 **`GRANT-DISAGREES-WITH-DOCUMENTATION`** — and the hand reading is worse than the flag: the README **never states the library's licence at all**. An integrator reading the README learns the licence of a typeface |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🟡 **AGPL-3.0** | 🟢 agrees | 🟢 `CHANNELS-AGREE` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 **AGPL-3.0** | 🟢 agrees | 🟢 `CHANNELS-AGREE` |
+| [`frappe/lms`](https://github.com/frappe/lms) | 🟡 **AGPL-3.0** | 🟢 `package.json` → `AGPL-3.0-or-later` | 🟢 `CHANNELS-AGREE` |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🟡 **GPL-3.0** | 🟢 agrees | 🟢 `CHANNELS-AGREE` |
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 🔴 **BUSL-1.1** | 🔵 silent | 🔵 `DOC-SILENT` — 🔴 the exclusion lives **only** in the payload, so a reader who checks the README learns nothing about it |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 asserts GPL-3.0, 19 B | 🔵 silent | 🔵 `DOC-SILENT` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🟡 **GPL-3.0** | 🟢 agrees | 🟢 `CHANNELS-AGREE` |
+
+🔵 **The pattern across the vertical shelf is reassuring and should be said as such:** the
+large institutional platforms are **consistent** across channels. 🔴 The disagreements this
+pass found cluster elsewhere — in **research and data** repositories, where the licence that
+matters is attached to a corpus rather than to code (`intel/trends.md`, `Trend 64`).
+
+### 🟡 A bundled grant can be harder than the root grant
+
+🔵 Three of eight flagged rows were, on hand reading, **correctly disclosed bundled
+components** rather than contradictions (`Gap 554-B`). 🔴 Two of the three matter more for a
+deliverable than the root licence does, and that is the finding:
+
+| Repo | Root | Bundled | Why it governs the engagement |
+|---|---|---|---|
+| [`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle) | 🟢 MIT | 🔴 **AGPL-3.0** (PyMuPDF, for PDF text extraction) | 🔴 An AGPL dependency in a **hosted** deliverable reaches network use. The MIT root is not the operative constraint |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT | 🟡 **LGPL-3.0-or-later** (`packages/mathml2omml`, vendored in-tree) | 🟡 Vendored, not merely depended on — dynamic-linking relief needs checking before it is assumed |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 🟡 GPL-3.0 | 🟢 Apache-2.0 (Open Sans) | 🟢 Benign — the font is the easy case, and it is the only one the README mentions |
+
+### 🟢 One repository, one spelling — `gate-case-collision` turned green here
+
+🔴 This page carried [`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service)
+as `…/data-management-service` while two other shelves carried the capitalised spelling.
+🔵 Two spellings of one repository compile to **two entities**. 🟢 Resolved to the
+capitalised form by **the repository's own self-link in its README** — channel 2 of the
+gate's priority order, not by majority and not by preference. 🟢 `gate-case-collision` now
+reports *0 findings across 397 distinct slugs*.
+
 ## 🆕 `p553` — `2026-10-30` — **🟢 ONE REAL SCHOOL-MANAGEMENT PLATFORM ADDED WITH ITS GRANT READ FROM THE PAYLOAD — AND ITS DEFAULT BRANCH IS `v31.0.00`, A SIXTH INSTANCE OF THE BRANCH-ASSUMPTION CLASS `509`/`516` REGISTERED. 🟢 THE DEPLOY-VS-RESELL LINE NOW CARRIES A MACHINE-CHECKED VERDICT PER ROW.**
 
 🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the
@@ -956,7 +1006,7 @@ page should carry a liveness read — not yet done for the 30-plus rows above
 [`Ed-Fi-Alliance-OSS`](https://github.com/Ed-Fi-Alliance-OSS) — the alliance
 governing the **Ed-Fi Data Standard** that US state education agencies move
 student records on, already filed here through
-[`Ed-Fi-Alliance-OSS/data-management-service`](https://github.com/Ed-Fi-Alliance-OSS/data-management-service)
+[`Ed-Fi-Alliance-OSS/Data-Management-Service`](https://github.com/Ed-Fi-Alliance-OSS/Data-Management-Service)
 and [`edfi-oneroster`](https://github.com/Ed-Fi-Alliance-OSS/edfi-oneroster) —
 ships **two Apache-2.0 AI repositories** that no page here held:
 [`Fiona`](https://github.com/Ed-Fi-Alliance-OSS/Fiona) (an AI assistant for the

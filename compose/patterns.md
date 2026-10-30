@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p554` — `2026-10-30` — **two recipes: the clearance gate extended from one channel to three, and the APAC K-12 tutoring pilot this pass's three MIT rows make possible**
+
+🔴 **Gate posture: `make hooks` DENIED** (`Code from External`) — thirteenth denial in
+fourteen passes, not gate-attested. 🟢 Four gates run directly; three green **when run** — 🔴 the post-splice re-run was DENIED, so their state at `HEAD` is unverified. `Gap 554-F`.
+
+### 🟢 `P609` — A three-channel licence clearance, run in CI (any region, 1 week)
+
+🔵 `P608` made a clearance gate executable against **one** channel: the grant payload.
+🔴 `Trend 63` measures that one channel as wrong-or-incomplete about **one repository in
+ten**, and `Trend 64` says the miss concentrates exactly where education engagements take
+their value — the corpus. `P609` adds the two channels that catch it.
+
+**Wiring, concretely:**
+
+1. **Instruments, both committed.**
+   [`../ingest/grant-verdict.py`](../ingest/grant-verdict.py) emits the payload verdict;
+   [`../ingest/doc-channel.py`](../ingest/doc-channel.py) emits
+   `repo · branch · payload_families · readme_families · pkg_families · verdict · evidence`.
+   Run both with `python3 -I`.
+2. **Input** — one `owner/repo` per line, from
+   [`../verticals/solutions.md`](../verticals/solutions.md),
+   [`../repos/foundations.md`](../repos/foundations.md) and
+   [`../agents/top.md`](../agents/top.md). Never from a search return.
+3. **Gate rule — fail the build on:** `NOT-SHIPPABLE-WITHOUT-COMMERCIAL-LICENCE`,
+   `NOT-SHIPPABLE-NONCOMMERCIAL-TERMS`, `GRANT-ASSERTED-NOT-CARRIED`,
+   `UNRESOLVED-on-153-names`, and 🆕 `GRANT-DISAGREES-WITH-DOCUMENTATION`.
+4. **Warn, do not fail, on:** `SHIPPABLE-PERMISSIVE+GRANT-ABRIDGED`,
+   `SHIPPABLE-PERMISSIVE+COMPOSITE-GRANT-PER-PATH` and `DOC-SILENT`. 🔵 A composite grant is
+   **normal and fine** — `pupilfirst` is a clean MIT project with a `docs/` carve-out. It
+   needs a human read, not a block.
+5. 🔴 **The corpus limb, which is the one that earns the week.** For every row whose
+   `readme_families` contains a **Creative Commons** family, open the licence section by
+   hand and answer one question: *does the NonCommercial or ShareAlike term attach to an
+   asset this engagement will ship?* 🔵 On this pass's sample that question fires on 4 of
+   84 rows and changes the answer on at least one of them.
+6. **Escalation** — a `NOT-SHIPPABLE` row is a **priced** door, not a shut one. The
+   parameter block carries the Licensor; for `Oriole-FDU/Wisepen` it carries a commercial
+   address. Route to legal with the text attached, already in the TSV.
+7. **Re-run cadence** — on every `head_sha` change.
+
+🔴 **What `P609` cannot do, in the recipe and not in a footnote:** it cannot read
+`api.github.com` on a session where that returns 403 (`Gap 554-A`), so **the platform
+licence field is not one of its three channels** — the third is the package manifest.
+🔴 And the README limb reads a *window*; a licence stated in a `docs/` page, a wiki or a
+`CONTRIBUTING.md` is invisible to it.
+
+### 🟢 `P610` — An APAC K-12 tutoring pilot on three MIT rows, built for an inspectable deployment (APAC, 6–8 weeks)
+
+🔵 Made possible by this pass's three new agent rows, all MIT, all read from the payload.
+🔵 Built for the APAC regulatory shape this base already holds: Korea's **AI Basic Act**
+high-impact tier (education named, in force `22 Jan 2026`) and Vietnam's **18-month
+education transition** (law in force `1 Mar 2026`).
+
+**Wiring, concretely:**
+
+1. **Tutoring loop** — [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release)
+   (MIT, branch **`master`**) for the RAG-over-curriculum pattern: a grade-banded knowledge
+   base, retrieval, and a mobile client with CI for Android and iOS already in-tree.
+   🔴 **Replace the curriculum layer, do not localise it** — its knowledge base is bound to
+   PRC PEP textbooks for grades 1–12 and does not transfer to another APAC jurisdiction.
+2. **Practice and feedback** — [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent)
+   (MIT) for question-bank retrieval and exam-style practice feedback, which is the loop
+   Korean and Vietnamese secondary programmes actually buy.
+3. **The offline/on-device leg** — [`porridgeowefish/Learn-With-AI`](https://github.com/porridgeowefish/Learn-With-AI)
+   (MIT, local-first, three desktop OSes). 🟢 **This is the component that answers the
+   high-impact assessment**: a deployer who can run the model and the learner data on
+   premises has a far shorter conformity argument than one who cannot.
+4. **System of record** — [`frappe/lms`](https://github.com/frappe/lms) (AGPL-3.0) or
+   [`GibbonEdu/core`](https://github.com/GibbonEdu/core) (GPL-3.0) for enrolment, markbook
+   and attendance. 🔴 Keep the AI services **out of process** and integrate over the
+   platform's own API, so no copyleft tree takes in proprietary code.
+5. **Mastery model** — [`CAHLR/pyBKT`](https://github.com/CAHLR/pyBKT) for Bayesian
+   knowledge tracing over the practice stream, so the pilot can report learning gain and
+   not only engagement.
+6. 🔴 **Clearance first, per `P609`.** Two of the components above carry findings: the
+   tutor's `package.json` says **ISC** while its `LICENSE` and README say **MIT**
+   (`554-E`), and any content pulled from [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor)
+   carries **CC BY 4.0** attribution per hint. Both are workable; neither should be
+   discovered after the SOW is signed.
+
+**Shape of the deliverable:** weeks 1–2 clearance and curriculum substitution; 3–5 the
+practice and tutoring loop on a single grade band; 6–8 the on-device leg plus the mastery
+report. 🔵 The deliverable that distinguishes it commercially is the **conformity file** —
+the clearance TSVs and the on-premise architecture, produced as artefacts rather than as
+assurances.
+
 ## 🆕 `p553` — `2026-10-30` — **two recipes: the clearance gate that is now runnable rather than described, and the EMEA tutoring pilot this pass's one new agent row makes possible**
 
 🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the

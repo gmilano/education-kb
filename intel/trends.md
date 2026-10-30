@@ -4,6 +4,71 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p554` — `2026-10-30` — **🟢 `Trend 63`: ABOUT **ONE EDUCATION REPOSITORY IN TEN** CONTRADICTS ITS OWN DOCUMENTATION ABOUT ITS LICENCE — MEASURED ON 84, NOT ARGUED. 🟢 `Trend 64`: IN EDUCATION THE GOVERNING GRANT IS INCREASINGLY THE **CORPUS** LICENCE, NOT THE CODE LICENCE, AND THE CODE LICENCE IS THE ONE EVERY INDEX SHOWS.**
+
+🔴 **Gate posture: `make hooks` DENIED** (`Code from External`) — thirteenth denial in
+fourteen passes, not gate-attested. 🟢 Four gates run directly; three green **when run** — 🔴 the post-splice re-run was DENIED, so their state at `HEAD` is unverified. `Gap 554-F`.
+
+### 🟢 `Trend 63` — the disagreement rate, measured
+
+🔵 `p553` found one artefact whose three channels named three licences and asked for a
+larger sample. 🟢 **84 education repositories, three channels each**: the grant payload at a
+resolved branch, the README read in a licence-section window, and the package manifest's
+licence field.
+
+| Verdict | Rows | Share |
+|---|---|---|
+| 🟢 `CHANNELS-AGREE` | 54 | 64 % |
+| 🔵 `DOC-SILENT` | 18 | 21 % |
+| 🔴 `GRANT-DISAGREES-WITH-DOCUMENTATION` | **8** | **9.5 %** |
+| 🔵 `ALL-CHANNELS-SILENT` | 4 | 5 % |
+
+🔴 **All eight were read by hand before this number was published.** Five are true
+contradictions; three are correctly-disclosed bundled components (`Gap 554-B`). 🟢 So the
+defensible statement is: **5 of 84 (6 %) contradict themselves outright, 8 of 84 (9.5 %)
+would fail a naive three-channel check**, and a reader who checks one channel learns the
+wrong thing about roughly one repository in ten either way.
+
+🔵 **Two things this number is not.** It is **not** a sample of GitHub — it is this base's
+own shelves plus four new rows, which are *better* documented than average because they
+survived prior passes' filters. 🔴 The true population rate is therefore most likely
+**higher**, not lower. And it is a **lower bound even on this sample**: before `554-E` was
+fixed the manifest channel was read with prose patterns and missed bare SPDX ids entirely.
+
+🟢 **Prediction, stated so a successor can falsify it:** the disagreement rate will be
+**higher** in repositories that ship data than in those that ship only code. 🔵 On this
+sample it already is — four of the five true contradictions involve a corpus, a dataset or
+authored content.
+
+### 🟢 `Trend 64` — the governing grant has moved from the code to the corpus
+
+🔴 **This is the trend with commercial teeth, and it is specific to education.** The
+artefacts a studio wants in this vertical are increasingly **content-bearing**: annotated
+corpora, hint and scaffold banks, curriculum knowledge graphs, benchmark sets. 🔴 Their
+**code** is permissive almost without exception. 🔴 Their **content** is not.
+
+| Artefact | Code | Content / corpus | What a naive read shows |
+|---|---|---|---|
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🟢 MIT | 🔴 **CC BY-NC-SA 4.0** — CLEAR Corpus, PERSUADE 2.0 | 🔴 an **MIT badge** |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | 🟢 MIT | 🔴 **per dataset, per download** — `Open` / `Open + Gated` / `Gated`, plus Terms of Use | 🔴 an **MIT badge** |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | 🟢 MIT | 🟡 **CC BY 4.0** on all hints and scaffolds, attribution recorded per JSON file | 🟡 an **MIT `LICENSE`** |
+| [`juanmoisesd/…-latin-america-dataset`](https://github.com/juanmoisesd/ai-educational-impact-latin-america-dataset) | — | 🔴 **CC0 (abridged) vs CC BY 4.0 vs MIT**, asserted in three places | 🔴 `NOASSERTION` |
+
+🔴 **The mechanism is not carelessness; it is structural.** A repository has **one**
+`LICENSE` file, one manifest field and one platform licence badge — all three designed for
+**code**. The content grant has nowhere canonical to live, so it goes into prose, and prose
+is the one channel no tool reads.
+
+🟢 **The operational rule this base should carry forward:** in education, **clear the corpus
+before the code**. The code licence is almost always the easy answer and almost never the
+binding one. 🔵 `P609` makes it a gate; `Trend 63` says how often it will fire.
+
+🔵 **Relation to `Trend 61`.** `p553` found the platform's licence field blind to non-OSI
+and abridged grants. `Trend 64` is the wider case: the field is blind to **everything that
+is not the code's licence**, which in this vertical is the part that decides the deal.
+🔴 This pass could not re-measure `Trend 61` — `api.github.com` is **403** on this session
+(`Gap 554-A`) — so `Trend 61` stands on `p553`'s seven rows and is **not** extended here.
+
 ## 🆕 `p553` — `2026-10-30` — **🟢 `Trend 61`: THE PLATFORM'S OWN LICENCE METADATA IS BLIND TO EXACTLY THE GRANTS THAT DECIDE A DELIVERABLE — GITHUB RETURNS `NOASSERTION` FOR BOTH THE BUSL-1.1 ROW AND THE ABRIDGED-CC0 ROW. 🟢 `Trend 62`: GRANT **COMPLETENESS** IS A SECOND AXIS, INDEPENDENT OF GRANT **FAMILY**, AND IT SHOWS UP IN RESEARCH AND DATA REPOSITORIES.**
 
 🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the

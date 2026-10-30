@@ -51,6 +51,7 @@ OUTPUT  TSV on stdout; full Additional Use Grant text on stderr-free stdout bloc
         when --params is passed.
 """
 import concurrent.futures as cf
+import re
 import subprocess
 import sys
 import urllib.error
@@ -147,6 +148,15 @@ CANONICAL_BYTES = {
     "MPL-2.0": 16700, "ISC": 750, "CC0-1.0": 7000, "CC-BY-4.0": 18000,
     "CC-BY-SA-4.0": 19000, "BUSL-1.1": 4300, "ECL-2.0": 11500,
 }
+
+
+# 🔵 p554 / Gap 554-D -- the SHORT forms of the Creative Commons modifiers, matched
+# on the upper-cased title block. Declared here, beside the family table, so the
+# window they are read in is the one `title_block()` defines and nothing else.
+_CC_SHORT = re.compile(r"\bCC[ -]BY\b")
+_CC_NC = re.compile(r"\bCC[ -]BY[ -][A-Z-]*NC\b")
+_CC_SA = re.compile(r"\bCC[ -]BY[ -][A-Z-]*SA\b")
+_CC_ND = re.compile(r"\bCC[ -]BY[ -][A-Z-]*ND\b")
 
 
 def normalise(body):
@@ -253,12 +263,28 @@ def spdx_of(body):
         return "ISC"
     if "CC0" in u or "CREATIVE COMMONS ZERO" in u:
         return "CC0-1.0"
-    if "ATTRIBUTION-SHAREALIKE" in u:
-        return "CC-BY-SA-4.0"
-    if "ATTRIBUTION-NONCOMMERCIAL" in u:
-        return "CC-BY-NC-4.0"
-    if "CREATIVE COMMONS" in u:
-        return "CC-BY-4.0"
+    # 🔴 p554 / Gap 554-D -- TWO ERRORS IN THE FOUR LINES THIS REPLACES, both running
+    # in the PERMISSIVE direction, which is the direction that reaches a proposal.
+    #   (a) SHORT FORMS WERE INVISIBLE. The arms matched `ATTRIBUTION-SHAREALIKE` and
+    #       `ATTRIBUTION-NONCOMMERCIAL` -- the words of Creative Commons' CANONICAL
+    #       TITLES. A file writing `CC BY-NC-SA 4.0` matched neither and fell through
+    #       to the bare `CREATIVE COMMONS` arm, reported as plain CC-BY-4.0.
+    #   (b) PRECEDENCE WAS WRONG EVEN IN CANONICAL FORM. `Attribution-NonCommercial-
+    #       ShareAlike` hit the SHAREALIKE arm FIRST and returned CC-BY-SA-4.0,
+    #       silently dropping NonCommercial -- the one term that decides whether
+    #       Globant may ship the artefact at all.
+    # 🔵 Both are fixed the same way: detect the MODIFIERS independently, in BOTH
+    # spellings, and compose the id. NC is never lost, because it is never a branch
+    # that another branch can pre-empt.
+    cc = ("CREATIVE COMMONS" in u) or bool(_CC_SHORT.search(u))
+    if cc:
+        nc = ("NONCOMMERCIAL" in u or "NON-COMMERCIAL" in u
+              or bool(_CC_NC.search(u)))
+        sa = "SHAREALIKE" in u or "SHARE-ALIKE" in u or bool(_CC_SA.search(u))
+        nd = "NODERIV" in u or bool(_CC_ND.search(u))
+        suffix = "".join(x for x in ("-NC" if nc else "", "-SA" if sa else "",
+                                     "-ND" if nd else ""))
+        return f"CC-BY{suffix}-4.0"
     if "MIT LICENSE" in u or "PERMISSION IS HEREBY GRANTED, FREE OF CHARGE" in u:
         return "MIT"
     if "REDISTRIBUTION AND USE IN SOURCE AND BINARY FORMS" in u:
@@ -366,6 +392,57 @@ def abridged(body, family):
     return None
 
 
+_COMPOSITE = re.compile(
+    r"portions of this (?:software|repository|work) are licen[cs]ed"
+    r"|licen[cs]ed as follows"
+    r"|all content residing under"
+    r"|the (?:following|remaining) (?:files|directories|components) are licen[cs]ed",
+    re.I)
+
+
+def composite(body):
+    """🔴 p554 / Gap 554-C -- A COMPOSITE GRANT ASSIGNS DIFFERENT FAMILIES TO
+    DIFFERENT PATHS, AND ITS CARVE-OUTS COME FIRST.
+
+    `pupilfirst/pupilfirst`'s `LICENSE` opens *"Portions of this software are licensed
+    as follows"*, gives `docs/` to CC BY-SA 4.0 and client-side JS to MIT, and only
+    THEN carries the operative MIT text that governs everything else. `title_block()`
+    -- Gap 553-A's fix, and correct for its own purpose -- reads 12 lines, sees the
+    CARVE-OUTS, and returns the first family it finds there. The instrument reported
+    **CC-BY-4.0** for a repository governed by **MIT**, then flagged it
+    `GRANT-ABRIDGED` for not reaching CC-BY's canonical size.
+
+    🔵 553-A's fix is the direct cause. The window that stopped a licence CITING
+    another licence from poisoning the family is the same window that stops this
+    reader from reaching a composite file's governing grant. A window is a bet about
+    WHERE the answer lives, and the two cases put it in opposite places.
+
+    🔴 FALSE-POSITIVE SURFACE OF THIS FUNCTION: a file that merely MENTIONS a path
+    ("all content residing under docs/ is generated") matches the third alternative
+    without being composite. The band therefore does not override a family on its own
+    -- it ADDS the per-path reading beside it and suppresses only the abridgement
+    flag, which is the one band a composite file is guaranteed to fail spuriously.
+    """
+    if not _COMPOSITE.search(body[:1200]):
+        return None
+    low = body.lower()
+    gov = None
+    if "permission is hereby granted, free of charge" in low:
+        gov = "MIT"
+    elif "redistribution and use in source and binary" in low:
+        gov = "BSD"
+    elif "you may not use this file except in compliance" in low:
+        gov = "Apache-2.0"
+    carve = []
+    for pat, fam in ((r"cc[ -]by[ -][a-z-]*nc[a-z-]*", "CC-BY-NC*"),
+                     (r"cc[ -]by[ -]sa", "CC-BY-SA-4.0"),
+                     (r"attribution-sharealike", "CC-BY-SA-4.0"),
+                     (r"\bgpl", "GPL*")):
+        if re.search(pat, low) and fam not in carve:
+            carve.append(fam)
+    return {"governing": gov, "carve_outs": carve}
+
+
 def verdict(hits):
     """One verdict per repo, over the UNION of grant files found.
     The stub rule (limit 3): a stub BESIDE a carried grant is the 542-H CRAN
@@ -394,7 +471,10 @@ def verdict(hits):
         detail = f"AUG={aug or '(none in payload)'} | CHANGE-DATE={cd or '-'} | CHANGE-LICENSE={cl or '-'}"
         return tag, "+".join(nonosi), detail
     copyleft = [f for f in fams if f.startswith(("GPL", "AGPL", "LGPL")) or f in ("CC-BY-SA-4.0",)]
-    if any(f in ("CC-BY-NC-4.0",) for f in fams) or "non-commercial" in excl or "noncommercial" in excl:
+    # 🔴 p554 / Gap 554-D, second limb: this test named ONE id. With composed ids it
+    # must test the MODIFIER, or `CC-BY-NC-SA-4.0` walks past the non-commercial gate
+    # into SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS on the strength of its ShareAlike half.
+    if any("-NC" in f for f in fams) or "non-commercial" in excl or "noncommercial" in excl:
         return "NOT-SHIPPABLE-NONCOMMERCIAL-TERMS", "+".join(fams), ""
     if copyleft:
         return "SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS", "+".join(fams), ""
@@ -447,7 +527,27 @@ def run(slug, show_params=False):
     full = {h["spdx"] for h in hits if h["carried"] and not h.get("abridged")}
     ab = [h["abridged"] for h in hits
           if h.get("abridged") and h["carried"] and h["spdx"] not in full]
-    if ab and tag.startswith("SHIPPABLE"):
+    # 🔴 p554 / Gap 554-C -- a COMPOSITE grant is abridged by construction: it carries
+    # one family's operative text and NAMES others for other paths, so it can never
+    # reach any single family's canonical size. The abridgement flag is therefore
+    # guaranteed-spurious here and is suppressed; the per-path reading replaces it.
+    comp = None
+    for h in hits:
+        c = composite(h["text"])
+        if c:
+            comp = c
+            break
+    if comp:
+        gov = comp["governing"]
+        detail = (f"COMPOSITE-GRANT-PER-PATH governing={gov or 'UNDETERMINED'}"
+                  f" carve-outs={'+'.join(comp['carve_outs']) or 'none-named'}"
+                  + (f" | {detail}" if detail else ""))
+        if gov in ("MIT", "BSD", "Apache-2.0") and not tag.startswith("NOT-SHIPPABLE"):
+            tag = "SHIPPABLE-PERMISSIVE+COMPOSITE-GRANT-PER-PATH"
+            fams = gov
+        else:
+            tag = f"{tag}+COMPOSITE-GRANT-PER-PATH"
+    elif ab and tag.startswith("SHIPPABLE"):
         tag = f"{tag}+GRANT-{ab[0]}"
     row = f"{slug}\tLIVE\t{branch}\t{sha}\t{files}\t{fams or '-'}\t{tag}\t{detail or '-'}"
     block = None

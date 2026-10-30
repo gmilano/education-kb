@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p554` — `2026-10-30` — **🟢 THE SHELF'S SHIPPABILITY VERDICT RE-READ ACROSS **80** ADDRESSES, NOT 17 — AND EXACTLY **TWO** FAMILIES MOVED, BOTH BECAUSE THE INSTRUMENT WAS WRONG. 🔴 ONE OF THE TWO WAS CAUSED BY `553-A`'s OWN FIX, AND IT WAS WRONG IN THE PERMISSIVE DIRECTION.**
+
+🔴 **Gate posture: `make hooks` DENIED** (`Code from External`), thirteenth denial in
+fourteen passes — **not gate-attested**. 🟢 Four gates run directly; three green **when run** — 🔴 the post-splice re-run was DENIED, so their state at `HEAD` is unverified. `Gap 554-F`.
+
+🔵 Every row below was read from the grant payload over `raw.githubusercontent.com` at a
+**resolved** default branch by [`../ingest/grant-verdict.py`](../ingest/grant-verdict.py).
+🔵 Full run: [`../evidence/grant-verdict.2026-10-30-p554.tsv`](../evidence/grant-verdict.2026-10-30-p554.tsv).
+
+### 🟢 The shelf at 80 addresses
+
+| Verdict | Rows |
+|---|---|
+| 🟢 `SHIPPABLE-PERMISSIVE` | **60** |
+| 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` | **11** |
+| 🔵 `UNRESOLVED-on-153-names` | **4** |
+| 🔴 `GRANT-ASSERTED-NOT-CARRIED` | **3** |
+| 🟢 `SHIPPABLE-PERMISSIVE+COMPOSITE-GRANT-PER-PATH` 🆕 | **1** |
+| 🔴 `NOT-SHIPPABLE-WITHOUT-COMMERCIAL-LICENCE` | **1** |
+
+### 🔴 The two rows that moved, and why neither is drift
+
+| Repo | `p553` reported | `p554` reads | Cause |
+|---|---|---|---|
+| [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst) | 🔴 **CC-BY-4.0**, `SHIPPABLE-PERMISSIVE+GRANT-ABRIDGED[1684B-of-~19000B]` | 🟢 **MIT**, `SHIPPABLE-PERMISSIVE+COMPOSITE-GRANT-PER-PATH` | 🔴 `554-C`. A **composite** `LICENSE`: *"Portions of this software are licensed as follows"* — `docs/` to CC BY-SA 4.0, client-side JS to MIT, **everything else MIT**, operative text below the 12-line window. The abridgement flag was spurious by construction: a composite file can never reach any single family's canonical size |
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | 🔴 family **`unknown-text`** | 🔴 **`claims CC-BY-NC-SA-4.0`** | 🔴 `554-D`. The file writes the **short form** `CC BY-NC-SA 4.0`; the matcher knew only the canonical title `Attribution-NonCommercial-ShareAlike`. 🔵 Verdict is still `GRANT-ASSERTED-NOT-CARRIED` — correctly: the file *states* grants, it does not carry one |
+
+🟢 **78 of 80 rows held byte-identical across the fix**, and `p553`'s five calibration rows
+re-read unchanged. 🔵 That is the measurement, not a reassurance: the sweep is in
+[`../evidence/composite-sweep.2026-10-30-p554.tsv`](../evidence/composite-sweep.2026-10-30-p554.tsv).
+
+### 🔵 How wide each defect class is, measured rather than guessed
+
+| Class | Rows affected, of 80 | Read |
+|---|---|---|
+| 🔴 `554-C` composite grants | **1** | 🟢 narrow — but it struck a shelf row and made an MIT project look like an abridged Creative Commons grant |
+| 🔴 `554-D` CC short forms invisible | **2** | 🔴 `pupilfirst` (CC-BY-**SA**) and `evaluators` (CC-BY-**NC**-SA). Both modifiers are the ones that change what may be shipped |
+
+🔴 **A limit of the sweep, stated so it is not read as coverage:** `composite-sweep.py`
+probes **7** grant filenames, not `grant-verdict.py`'s 153. Six rows read `NO-GRANT-FILE`
+there — including `moodle/moodle` and `OS4ED/openSIS-Classic`, **both of which do carry
+grants** under names outside that short list. The sweep measures the two defect classes; it
+is **not** an absence channel and must not be cited as one.
+
 ## 🆕 `p553` — `2026-10-30` — **🟢 THE FOUNDATIONS SHELF GETS A SHIPPABILITY VERDICT IT CAN DEFEND: 17 ADDRESSES RE-READ FROM THE PAYLOAD WITH A COMMITTED INSTRUMENT, AND THE EIGHT `AGPL`-RECORDED ROWS ALL HOLD. 🔴 THE ONE APACHE-2.0 ROW THAT LOOKED ABRIDGED WAS THE INSTRUMENT'S FAULT, NOT THE REPOSITORY'S.**
 
 🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the

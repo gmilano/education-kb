@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p554` — `2026-10-30` — **🟢 `553-E`'s THREE-CHANNEL VERDICT BUILT AND RUN AT `553-F`'s SAMPLE SIZE: **84** EDUCATION REPOSITORIES, AND **8 OF THEM CONTRADICT THEIR OWN DOCUMENTATION ABOUT THEIR LICENCE**. 🔴 THE WORST ONE IS ON THIS SHELF: AN **MIT BADGE** OVER TWO **CC BY-NC-SA** CORPORA. 🔴 TWO DEFECTS FOUND IN `p553`'s INSTRUMENT, ONE OF THEM CAUSED BY `553-A`'s OWN FIX, AND ONE IN THIS PASS'S INSTRUMENT ON ITS FIRST USE.**
+
+🔴 **Gate posture, stated first: `make hooks` was DENIED again** (`Code from External`) —
+**the thirteenth denial in fourteen passes**, so this pass is **not gate-attested** and
+`p553`'s 48/68 cannot be reproduced from here. 🟢 **But the four gates `553-G` asked a
+successor to triage first were run DIRECTLY, script by script, and all four are now
+understood — and three turned GREEN when run.** 🔴 The re-run after this pass's sections
+were spliced in was DENIED, so their state at `HEAD` is unverified. See `Gap 554-F`.
+
+🔵 Instruments, both committed and run with `python3 -I`:
+[`../ingest/doc-channel.py`](../ingest/doc-channel.py) (new) and
+[`../ingest/grant-verdict.py`](../ingest/grant-verdict.py) (patched, `554-C` + `554-D`).
+🔵 Evidence: [`../evidence/doc-channel.2026-10-30-p554.tsv`](../evidence/doc-channel.2026-10-30-p554.tsv)
+(84 rows), [`../evidence/grant-verdict.2026-10-30-p554.tsv`](../evidence/grant-verdict.2026-10-30-p554.tsv)
+(80 rows), [`../evidence/composite-sweep.2026-10-30-p554.tsv`](../evidence/composite-sweep.2026-10-30-p554.tsv) (80 rows).
+
+### 🔴 The finding that changes what a studio may ship: an MIT badge over NonCommercial corpora
+
+🔵 [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+has sat on these shelves as a readable row. Read on three channels it is **three different
+grants in one 1 615 B file**, and the asset an AI Studios engagement would actually want is
+the one that cannot be shipped.
+
+| What | Grant, read first-hand from `main/LICENSE.md` | What it means |
+|---|---|---|
+| 🟢 the evaluator **code** | **MIT** | 🟢 shippable |
+| 🟡 the evaluator **content** — prompts and settings | **CC BY 4.0** | 🟡 shippable **with attribution**; the prompt is the product here, and the obligation travels with it |
+| 🔴 **Annotated CLEAR Corpus** | **CC BY-NC-SA 4.0** | 🔴 **NonCommercial** — not available for a client deliverable. ShareAlike on top |
+| 🔴 **Annotated PERSUADE 2.0 Corpus** | **CC BY-NC-SA 4.0** | 🔴 Same. Both derive from upstream corpora carrying the same terms |
+
+🔴 **Every index a studio would consult says MIT.** The repository's README badge reads
+`License-MIT-green`. 🔴 And `p553`'s instrument reported the family as **`unknown-text`**
+and the verdict as `GRANT-ASSERTED-NOT-CARRIED` — correct that it is not a grant, **silent
+on the fact that it names a non-commercial one**. 🟢 After `554-D` the same file reads
+**`claims CC-BY-NC-SA-4.0`**, and the NonCommercial term is finally visible on the shelf.
+
+🔵 **The actionable line:** the code and the prompts are usable; **the annotated corpora are
+not**, and they are the part that took the labour. An evaluation harness built here must be
+re-grounded on a corpus Globant may license, or the engagement inherits an NC term.
+
+### 🔴 What the three channels disagree about, across 84 repositories
+
+🔵 Channels: the **grant payload** at a resolved default branch; the **README**, read in a
+licence-section window and not whole; and the **package manifest**'s licence field.
+
+| Verdict | Rows | Share |
+|---|---|---|
+| 🟢 `CHANNELS-AGREE` | **54** | 64 % |
+| 🔵 `DOC-SILENT` — payload speaks, documentation does not | **18** | 21 % |
+| 🔴 `GRANT-DISAGREES-WITH-DOCUMENTATION` | **8** | **9.5 %** |
+| 🔵 `ALL-CHANNELS-SILENT` | **4** | 5 % |
+
+🔴 **All eight were then read by hand, because a verdict that has not been graded is a
+claim.** They split into two bands, and the split matters more than the count.
+
+| Repo | Payload | Documentation says | Hand reading |
+|---|---|---|---|
+| [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | claims **CC-BY-NC-SA-4.0** | README badge **MIT** | 🔴 **true contradiction** — and the NC term is the one that decides shippability |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | **MIT** | README: *"All content in this repository is made available under CC BY 4.0"* | 🔴 **true split** — code MIT, hint/scaffold JSON carries attribution, per-file authoring credit |
+| [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph) | claims **CC0-1.0** | README: code MIT, **datasets licensed per publisher** — `Open` / `Open + Gated` / `Gated` | 🔴 **true, and unclearable repo-wide**: the licence is per dataset and sometimes per download |
+| [`mitodl/learn-ai`](https://github.com/mitodl/learn-ai) | **MIT** (`LICENSE` 1 070 B) | `pyproject.toml` → **BSD-3** | 🔴 **true** — the manifest a dependency resolver believes disagrees with the grant file |
+| [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | **MIT** | README **MIT**, `package.json` → **ISC** | 🔴 **true**, and 🔵 invisible until `554-E` was fixed |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | README names **LGPL-3.0-or-later** for `packages/mathml2omml` | 🟡 **bundled third party**, correctly disclosed — `Gap 554-B` |
+| [`sonstellar969/open-moodle`](https://github.com/sonstellar969/open-moodle) | **MIT** | README names **AGPL-3.0** for the PyMuPDF dependency | 🟡 **bundled third party** — 🔴 and an **AGPL dependency inside an MIT tree is the shipping constraint that matters here**, not the MIT |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | **GPL-3.0** | `README.txt`'s **only** licence sentence is about the **Open Sans font** (Apache-2.0) | 🟡 **bundled third party** — 🔴 and the README never states the library's own licence at all |
+
+🟢 **So: five true contradictions, three correctly-disclosed bundled components.** 🔵 The
+second band is not noise — for two of the three, the bundled grant (**LGPL**, **AGPL**) is a
+harder constraint than the root grant. It needs its own verdict, not suppression: `554-B`.
+
+### 🟢 Rows added to this shelf — three agents, all MIT, all read from the payload
+
+🔵 All three resolved with `git ls-remote --symref` and read at that branch. 🔵 Three of
+three are **APAC**-origin, which is where the agent supply moved this pass.
+
+| Agent | Repo | Grant (payload, first-hand) | Branch | Region | What it is |
+|---|---|---|---|---|---|
+| 🆕 **Learn-With-AI** | [`porridgeowefish/Learn-With-AI`](https://github.com/porridgeowefish/Learn-With-AI) | 🟢 **MIT** — payload and README agree | `main` | 🟢 **APAC** — bilingual zh/en, China-origin | **Local-first** desktop study agent (Windows/macOS/Linux): subject maps over the learner's own materials, then notes, spaced review, practice and a *teach-back* check. 🔵 The local-first architecture is the one that answers a data-residency clause without a hosting argument |
+| 🆕 **学练 agent** | [`llwand1/xuelian-agent`](https://github.com/llwand1/xuelian-agent) | 🟢 **MIT** — payload and `package.json` agree | `main` | 🟢 **APAC** — China | Exam-oriented study agent: question-bank retrieval, practice feedback, in-chat runnable HTML cards. Shipping actively — website and Windows desktop builds dated `2026-10-21` … `2026-10-24` in its own README |
+| 🆕 **ZengLian AI Tutor** | [`Zenglian990/AI_Tutor_Release`](https://github.com/Zenglian990/AI_Tutor_Release) | 🟡 **MIT** in `LICENSE` and README — 🔴 **`ISC` in `package.json`** (`554-E`) | 🔴 **`master`**, not `main` | 🟢 **APAC** — China, PRC grades 1–12, PEP-aligned | RAG tutor over a 1–12 curriculum knowledge base, Android APK + iOS IPA. 🟢 **The `Release` in its name is misleading and was checked, not assumed**: `HEAD` carries **514 files, 238 of them source**, plus APK/iOS/CI workflows. It is a source repository |
+
+🔴 **`AI_Tutor_Release`'s default branch is `master`.** 🔵 Resolved, never assumed — **a
+seventh instance of the branch-assumption class `p509` found and `p516` registered.** A
+probe that assumes `main` reports this agent as carrying no licence at all.
+
+### 🔴 Two defects in `p553`'s instrument, and one in this pass's own
+
+| id | Defect | Direction of the error | Swept |
+|---|---|---|---|
+| 🔴 `554-C` | **Composite grants.** [`pupilfirst/pupilfirst`](https://github.com/pupilfirst/pupilfirst)'s `LICENSE` opens *"Portions of this software are licensed as follows"*, gives `docs/` to CC BY-SA 4.0, and carries the operative **MIT** text below. `title_block()` — **`553-A`'s own fix** — reads 12 lines, sees only the carve-outs, and returned **CC-BY-4.0 + `GRANT-ABRIDGED`** | 🔴 wrong family for an MIT project, and a spurious abridgement flag on top | 🟢 **1 of 80** |
+| 🔴 `554-D` | **CC short forms, and NC precedence.** The matcher knew only the canonical titles (`Attribution-ShareAlike`), so `CC BY-NC-SA 4.0` fell through to plain **CC-BY-4.0**; and in canonical form `Attribution-NonCommercial-ShareAlike` hit the ShareAlike arm first and **dropped NonCommercial** | 🔴 **permissive direction — the direction that reaches a proposal** | 🟢 **2 of 80** |
+| 🔴 `554-E` | **This pass's own.** `doc-channel.py` read the package manifest with **prose** patterns, so a bare SPDX id (`ISC`) matched nothing. The manifest channel was the weakest reader in the module | 🔴 understated the disagreement rate | 🟢 re-measured; the pre-fix rate was a **lower bound** |
+
+🟢 **Both fixes were swept over the whole 80-row sample and exactly the two intended rows
+moved**; 78 held byte-identical. 🔵 `p553`'s five calibration rows (`erpnext`, `XBlock`,
+`Wisepen`, `frappe/education`, the LATAM dataset) all re-read unchanged.
+
 ## 🆕 `p553` — `2026-10-30` — **🟢 BOTH OF `p552`'S OWED ASKS CLOSED BY ONE COMMITTED INSTRUMENT — `552-B`'s PARAMETER BLOCK AND `552-D`'s `GRANT-ASSERTED-NOT-CARRIED` VERDICT. 🔴 AND THE INSTRUMENT CAUGHT **FOUR** DEFECTS IN ITSELF BEFORE PUBLICATION, **THREE OF THEM CREATED BY ITS OWN IMPROVEMENTS**. 🔴 THE GATE RAN FOR THE FIRST TIME IN TWELVE PASSES AND IS RED ON 20 OF 68 CHECKS — PRE-EXISTING, AND TWELVE PASSES OF DENIAL HAD BEEN HIDING IT. 🔴 GITHUB'S OWN LICENCE FIELD READS `NOASSERTION` FOR EXACTLY THE TWO GRANT SHAPES THE NEW VERDICTS WERE BUILT TO NAME.**
 
 🔴 **Gate posture, stated first and without softening: `make hooks` RAN, AND IT FAILED —
