@@ -6,9 +6,32 @@ updated: 2026-10-30
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p542` · 2026-10-30.** **Seventy-one** real agents, every row read
+**Pass `p543` · 2026-10-30.** **Seventy-two** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
+
+> 🟢 **`p543` ran four untried language legs (`ru`, `vi`, `tr`, `it`) and
+> `p542`'s hypothesis did not survive them.** p542 concluded the yield tracks
+> whether a language *indexes a distinct publishing corpus*. Russian indexes one
+> of the largest — Habr, DTF, `thecode.media`, all answering in Russian — and it
+> returned **zero** education artefacts. 🔵 **What that corpus publishes is
+> localisations of the English corpus** ("100 лучших ИИ-репозиториев на
+> GitHub"), not domestic supply, so a distinct corpus is necessary and not
+> sufficient. **The predictor that survives all twelve legs measured so far is
+> whether the language's developers are coding against a NAMED NATIONAL
+> INSTITUTION OR CURRICULUM** — TÜBİTAK 2209-A and BTK course 514 on the Turkish
+> leg, the GDPT 2018 curriculum on the Vietnamese one, BNCC and ENEM on
+> `p541`'s Portuguese leg. `de`, `ja`, `ko`, `it` and `ru` have no such anchor
+> in their results and all five returned nothing.
+>
+> 🔴 **And the axis has a second gate that `p542`'s metric could not see: the
+> grant.** The Vietnamese leg found **three** domestic, education-specific,
+> absent agents — and **none of the three carries a licence on any channel**
+> (180 filenames at the resolved branch, the sidebar, and the README prose).
+> 🟢 Counted p542's way (*absent artefacts*) the Vietnamese leg scores **3**;
+> counted the way this KB is for (*what Globant may build on*) it scores
+> **zero**. **The licensed, domestic, education-specific yield of four legs is
+> two rows**, and both are Turkish.
 
 > 🔴 **`p541` ran the mandated query set and it returned nothing new — twenty
 > candidates, twenty already on this base.** Five supply candidates off the
@@ -444,7 +467,9 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 64 verified education agents (68 with `p541`'s four, filed in their own section above)
+## Shelf — 64 verified education agents (72 with the eight filed in their own sections above: `p541`'s four, `p542`'s three, `p543`'s one)
+
+🔴 **`p543`: this heading was stale by a whole pass.** It read *"68 with `p541`'s four"* while `p542` shelved three more below it without touching it — the same defect class `../repos/foundations.md` carries in its own header, found there by `p533` and still open as `Gap 534-E`. 🔵 **A count that lives in prose beside the rows it counts will go stale every time a pass adds a row and forgets the sentence.** The durable fix is a gate that derives the figure from the tables; registered this pass as `543-E`.
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -824,6 +849,68 @@ read the top 80 — carries figures this pass did **not** re-attest. And the
 census's own caveat still stands and is worth repeating: every tool count in
 this field is the repository's own claim, three repositories contradict
 themselves on it, so **tool counts here are marketing, not measurement.**
+
+## 🆕 `p543` — the language axis has a **second gate**, and it is the grant
+
+**Four legs, run in Russian, Vietnamese, Turkish and Italian, with the
+prediction registered before the measurement**
+([`../scratchpad/p543/predictions.txt`](../scratchpad/p543/predictions.txt)).
+`it` was the designated control — same class as `p542`'s `de`/`ja`/`ko`, which
+returned zero.
+
+| Leg | Artefacts surfaced | Absent from the 3 798-address base | Education-specific **and** absent | Permissively granted | Domestic (not a localisation) | Prediction |
+|---|---|---|---|---|---|---|
+| `ru` Russian | 6 | 2 | **0** | 0 | 0 | 🔴 **wrong** — predicted yield |
+| `vi` Vietnamese | 5 | 4 | **3** | **0** | 3 | 🟢 right — predicted yield |
+| `tr` Turkish | 6 | 5 | **3** | 3 | 2 | 🟢 right — predicted yield |
+| `it` Italian *(control)* | 4 | 1 | **0** | 0 | 0 | 🟢 right — predicted zero |
+
+🔴 **`ru` is the falsifier.** It is not a small or English-publishing corpus:
+the leg returned Habr's *"100 лучших ИИ-репозиториев на GitHub в 2026 году"*,
+DTF, `braintools.ru` and `thecode.media` — four Russian-language outlets, all
+ranking the **same English-corpus repositories** this base already holds
+(`rasbt/LLMs-from-scratch`, `500-AI-Agents-Projects`, `OpenHands`, `goose`).
+🔵 **A distinct corpus that aggregates is a mirror, not a source.**
+
+### 🟢 One agent shelved (71 → 72), and its size is stated rather than implied
+
+| Agent | Licence, read as bytes | Scale | What it is | Region |
+|---|---|---|---|---|
+| [`captainmgc/tubitak-skills`](https://github.com/captainmgc/tubitak-skills) | **MIT**, `LICENSE` @`main`, **1 067 B** | 🔴 **0★, 0 forks, 4 commits** | Agent skill pack for writing and verifying a **TÜBİTAK 2209-A** undergraduate research proposal: DOI/source verification over `paper-search-mcp`, `arxiv-mcp-server` and `semantic-scholar-mcp`, flat-design figures, and `docx`/`pdf` output in TÜBİTAK's own form template. Installs with `npx skills add` into Claude Code, Cursor or Codex. | **EMEA** (Türkiye) |
+
+🔵 **Shelved for its category, not its traction, and the distinction is
+written into the row.** At 0★ and 4 commits this is the smallest asset on this
+shelf, and it would be dishonest to let the table imply otherwise. What earns
+it a row is that **no other asset on this base addresses a national research-
+funding workflow** — the agent-shaped work of getting a state grant proposal
+through an institution's rules. That is a category, and the shelf had a hole
+where it should be. 🔴 **An engagement would treat it as a worked example of
+the shape, not as a dependency.**
+
+### 🔴 Five candidates measured and NOT promoted, each for a different reason
+
+| Candidate | Read | Verdict |
+|---|---|---|
+| [`MaiQuangPhuoc/edu_agents`](https://github.com/MaiQuangPhuoc/edu_agents) | 2★, 0 forks, **75 commits**, 19 251 B README. Grade-10 Vietnamese curriculum (GDPT 2018): Q&A over course materials, test generation, personalised study paths, on LangGraph + Qdrant + RAG. **Notably it chooses a deterministic pipeline over ReAct for the education domain, and bounds the LLM to the textbook to suppress invention.** | 🔴 **No grant on three channels** — `UNRESOLVED` on 180 filenames at the resolved branch, sidebar silent, README silent. **The most interesting architecture the four legs returned, and unusable.** |
+| [`dungptt-dng/smart-ict-classroom`](https://github.com/dungptt-dng/smart-ict-classroom) | Web app for Vietnamese primary ICT teachers running a lab with **fewer machines than groups**: fair machine-turn scheduling, four rotating in-group roles, on- and off-machine tasks, session reports. Entry for the **Vietnam AI in Education Pioneer Award 2026** (Table A). | 🔴 **No grant on three channels.** A real classroom-constraint problem this base has no other asset for. |
+| [`minhdevtry/AI-Teacher-Assistant-Agent`](https://github.com/minhdevtry/AI-Teacher-Assistant-Agent) | *ZaloAgent* — class management over **Zalo Bot** in Vietnamese: intent routing, fee capture from text **and image OCR**, arrears reminders, invoices, monthly financial reports. NestJS 11 + Mastra + Prisma/PostgreSQL + BullMQ. | 🔴 **No grant on three channels.** Also the only **messaging-platform-native** teacher agent measured here. |
+| [`omergocmen/vibe-coder-kit`](https://github.com/omergocmen/vibe-coder-kit) | **MIT**, `LICENSE` @`main`, **1 067 B**. Four agent personas, 12 skills, 3 rule sets, persistent knowledge base for OpenCode/Claude Code. | 🔴 **Granted but not education.** A generic software-delivery agent framework. **Rejected on sector, not on licence** — shelving it would inflate this file with the generic agent supply that `../repos/foundations.md` already holds. |
+| [`ByMehmetKURUDev/kaynaklar`](https://github.com/ByMehmetKURUDev/kaynaklar) | Curated Turkish-annotated tool list. README names `Apache-2.0` and `GPL-3` — **those are the licences of the tools it links**, not its own. | 🔴 **Own grant absent.** A near-miss worth recording: a README that names licences reads to a keyword probe exactly like a README that grants one. |
+
+### 🟢 `p542`'s fork-holder instrument, corroborated independently and now twice-confirmed
+
+`p542` proposed reading the **licence file's copyright holder** as a one-read
+answer to the fork-vs-upstream question `p538` left as a hand check. 🟢 **It
+holds on a case p542 never saw.** `komunite/ai-engineering` carries
+`Copyright (c) 2026 Rohit Ghumare` in its own MIT file — the holder of
+[`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch),
+not of `komunite` — and **GitHub's own page independently states "forked from
+rohitg00/ai-engineering-from-scratch"**. 🔵 The HEAD shas differ
+(`4f6cbe73a12f` vs `fe6c657dfb8d`), so this is a **diverged** fork, not an
+alias; the Turkish localisation is filed to
+[`../repos/foundations.md`](../repos/foundations.md) **with its lineage on the
+row**, because a translation of an asset this base already holds is not new
+supply and must not be counted as such.
 
 ## 🆕 `p542` — the language axis is **two** axes, and the yield tracks the *corpus*, not the *language*
 

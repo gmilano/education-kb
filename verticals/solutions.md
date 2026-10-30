@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p542` · 2026-10-30.** Every platform below is a real, running system that
+**Pass `p543` · 2026-10-30.** Every platform below is a real, running system that
 institutions already operate, with its licence read from **the licence file's own
 title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
 carried for two passes — "`github.com` returns HTTP 403 through the session
@@ -22,6 +22,55 @@ ship?"**
 Odoo is to ERP what Moodle is to learning: the thing you customise rather than
 replace. In education the equivalents are below, grouped by the institutional
 function they own.
+
+## 🆕 `p543` — the vertical leg returned **one** platform this base never held, and both of the claims attached to it were wrong
+
+**The mandated vertical query (`open source platform education ERP CRM MIT
+Apache`) was run again.** Eleven platforms came back; **ten were already here
+or already named in this page's prose** (OpenEduCat, ERPNext/Frappe Education,
+Odoo, Dolibarr, Apache OFBiz, Huly, Corteza, Krayin, SuiteCRM, EspoCRM).
+🟢 **One was absent from the whole 3 798-address base: `eduTrac SIS`.** It is
+also the first thing on this page in several passes that was worth reading, and
+what it shows is a **secondary-source licence claim failing twice over**.
+
+| Platform | The claim the leg carried | What the bytes and the page say | Verdict |
+|---|---|---|---|
+| [`parkerj/eduTrac-SIS`](https://github.com/parkerj/eduTrac-SIS) | A curated "open source ERP/CRM" list names **eduTrac SIS** as **MIT**, *"a student information system for higher education"* | 🔴 **GPL-3.0**, `LICENSE` @`master`, **35 146 B**, sidebar `GPL-3.0 license`. **46★, 28 forks, 920 commits.** 🔴 **And it is ARCHIVED — *"This repository was archived by the owner on Aug 12, 2026"*.** Self-described as *"the most advanced open source student information system for higher education"* | 🔴 **Not in the build set, on two independent grounds.** The licence is copyleft, and the project is read-only since August. |
+
+🔵 **Two lessons, and the second is the reusable one.** First, the address this
+base had to find was not `parkerj/eduTracSIS` — that is `DEAD/PRIVATE` — but
+`parkerj/eduTrac-SIS`; **three of four plausible spellings do not resolve**, so
+a name from a list is a search key, not an address. Second, **a licence claim
+and an archive state are two different freshness questions and a curated list
+answers neither.** This page's standing rule — read the grant from the licence
+file's own title block — caught the licence error; only the **repository page**
+caught the archive, and `p534`'s channel asymmetry is what makes that page
+readable at all.
+
+### 🔴 The permissive-administration constraint holds for an eleventh pass, and now with the licences read
+
+`p542` stated as a standing constraint that the **administrative** end of this
+sector — SIS, ERP, CRM — is *"copyleft or nothing"*. 🟢 **`p543` tested that
+against the two permissive platforms the leg actually offered, and the
+constraint survives with a sharper edge:**
+
+| Platform | Licence, read as bytes | Default branch | Education-specific? |
+|---|---|---|---|
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | **MIT**, `LICENSE`, **1 078 B** | 🟡 **`2.2`** | 🔴 **No** — generic Laravel CRM |
+| [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | **Apache-2.0**, `LICENSE`, **11 358 B** | 🟡 **`2026.9.x`** | 🔴 **No** — generic low-code CRM/platform |
+
+🟢 **So the permissive administrative options are real but generic**, and the
+education-specific ones (OpenEduCat LGPLv3, ERPNext GPLv3, eduTrac GPL-3.0 and
+archived) are all copyleft. **An administrative education build therefore
+chooses between a copyleft education platform and a permissive generic one that
+must be taught the domain** — which is a genuine engagement fork, and the
+honest version of a question this page used to answer by listing platforms.
+
+🔴 **A probe-shape consequence, measured here and reported in full on
+[`../repos/trending.md`](../repos/trending.md):** both permissive platforms keep
+their default branch somewhere other than `main`, `master` or `dev` — `2.2` and
+`2026.9.x`. **The branch set `Gap 542-B` asked for would have reported both of
+these grants as absent.**
 
 ## 🆕 `p542` — the vertical leg returned eight platforms and **nothing new**, said plainly
 

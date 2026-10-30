@@ -1,0 +1,27 @@
+p543 — predictions registered BEFORE measurement (2026-10-30)
+
+H1 (p542's hypothesis, under test): language-leg yield tracks whether the
+language indexes a DISTINCT PUBLISHING CORPUS, not "non-English" per se.
+p542 measured: id 2/2, zh 2/2 absent; de 0, ja 0, ko 0.
+
+Untried legs chosen to put H1 at risk. Predictions:
+  ru (Russian)    -> YIELD   (distinct corpus; habr/ru-language READMEs)
+  vi (Vietnamese) -> YIELD   (same class as Indonesian)
+  tr (Turkish)    -> YIELD   (weakly; distinct corpus, smaller)
+  it (Italian)    -> ZERO    (CONTROL: same class as de/ja/ko — Italian devs
+                              publish into the English corpus)
+H1 is FALSIFIED if it yields and ru/vi return zero.
+
+H2: the mandated ENGLISH legs restate. p540 4/5, p541 20/20, p542 9/9.
+  Prediction: >=80% of English-leg claims already present in the tree.
+
+H3 (channel, measured before this was written): github.com HTML is 403 at the
+gateway for every path; raw.githubusercontent.com and git ls-remote are LIVE.
+  Prediction: NO star figure can be read first-hand this pass. Any star number
+  this pass publishes must be attributed to a prior pass or a secondary source,
+  never claimed as a first-hand read. Gap 542's star_surface ask is UNRUNNABLE.
+
+H4 (542-C): HEAD-sha identity via ls-remote detects a rename where the HTTP
+redirect check cannot run. Verified on the known case before writing this
+(AIProf == AIBot-Prof-Helper == 9125548dab00). Prediction: sweeping the shelf
+finds at least one MORE alias/rename nobody has recorded.

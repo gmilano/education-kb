@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Foundational Education Repos
 
-**Pass `p542` · 2026-10-30.** Load-bearing systems an education engagement is
+**Pass `p543` · 2026-10-30.** Load-bearing systems an education engagement is
 likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms, standards and
 toolkits the agents must live beside.
@@ -74,6 +74,39 @@ quantity. 🔵 A recount against an explicit rule for what counts is `Gap 534-E`
 > shape of the market, and it drives the architecture: **build permissive agents
 > that integrate across a process or network boundary** (LTI, xAPI, REST, MCP)
 > rather than forking an AGPL core and inheriting its obligations.
+
+## 🆕 `p543` — the teaching-corpus layer gains two rows, and one of them pays a 190-mention promotion debt
+
+🔵 **Why these belong here and not on the agent shelf.** A course corpus is not
+an agent: it is the **curriculum substrate** an engagement reuses when the
+client's ask is capability-building rather than a deployed tutor. This base
+already holds `ocademy-ai/machine-learning` and `rasbt/LLMs-from-scratch` in
+that layer; these two extend it, and one of them extends it **in a language
+other than English**, which no row in this layer did before.
+
+| Repo | Licence, read as bytes | Scale | What it is | Region |
+|---|---|---|---|---|
+| [`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch) | **MIT** (holder `Rohit Ghumare`) | ~75k★ per secondary sources, **not read first-hand this pass** | End-to-end AI-engineering curriculum — build, train and deploy — the English upstream of the row below. | **Global** |
+| [`kmkarakaya/btk_rag_bot_egitimi`](https://github.com/kmkarakaya/btk_rag_bot_egitimi) | **MIT**, `LICENSE` @`main`, **1 071 B** | **20★, 12 forks, 43 commits** | Turkish course corpus for **BTK** (Türkiye's ICT authority), course code **514**: *"Erişim Destekli Üretim (RAG) Tabanlı Sohbet Botları"* — **9 h 22 m, 9 sections, 55 lessons**, Colab notebooks, Gemini API, Gradio front ends. A complete, licensed, state-authority RAG curriculum. | **EMEA** (Türkiye) |
+| [`komunite/ai-engineering`](https://github.com/komunite/ai-engineering) | **MIT**, `LICENSE` @`main`, **1 070 B**, holder **`Rohit Ghumare`** — *the upstream's holder, not this repo's owner* | **8★, 1 fork, 1 147 commits** | 🟡 **Turkish localisation, and labelled as one.** 435 lessons / 20 phases / ~320 h, declared by GitHub as *"forked from rohitg00/ai-engineering-from-scratch"*. HEAD `4f6cbe73a12f` vs upstream `fe6c657dfb8d` — **diverged, not an alias.** | **EMEA** (Türkiye) |
+
+🔴 **The first row is the finding, and it is a promotion-debt finding, not a
+discovery one.** `rohitg00/ai-engineering-from-scratch` appears **190 times in
+this base's trending history and zero times on any curated page** — graded
+`HISTORY` by [`../ingest/claim-role.sh`](../ingest/claim-role.sh), built this
+pass. 🟢 **`p543` found it only because a Turkish fork of it walked in the
+front door**, which is `Gap 529-A`'s debt reproducing itself a third way: p541
+found it in an `UNKNOWN` residue, p542 found it on the regional legs, and p543
+found it **by following a localisation back to an upstream nobody had filed.**
+🔵 Its star figure is carried from secondary sources and marked as such — this
+pass read its **grant** first-hand and its **traction** not at all.
+
+🟢 **The localisation row earns its place for a reason beyond completeness.**
+It is this base's first measured instance of **an education curriculum being
+translated rather than re-invented**, and that is the shape an EMEA
+capability-building engagement actually takes: the pedagogy is upstream, the
+**language and the institutional framing** are the local work. 1 147 commits
+is not a translation pass, it is a maintained fork.
 
 ## 🆕 `p542` — one framework row off the French leg, and the Intel education suite read down to its components
 

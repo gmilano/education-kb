@@ -701,9 +701,74 @@ what [`../agents/top.md`](../agents/top.md#region-notes--what-is-read-and-what-i
 already insists on. **No region was inferred from a query language this pass.**
 
 
+## 🆕 `p543` — the four regional legs re-run: **the supply side has a licence problem, and it is regional**
+
+**Thirty-one claims off the mandated English legs and the four regional legs,
+graded by instrument rather than by memory**
+([`../ingest/claim-role.sh`](../ingest/claim-role.sh)): **22 `FILED`,
+6 `HISTORY`, 3 `ABSENT`.** Demand is saturated for an eleventh pass. 🟢 **What
+is *not* saturated, and what this pass can state for the first time with
+numbers, is that the regions differ in whether their domestic education supply
+is LICENSED at all.**
+
+| Leg | What it returned that this base did not hold | Licensed? |
+|---|---|---|
+| **North America** | Nothing absent. Two claims promoted out of history: **Berkeley Law's exam ban** and **Chicago's high-stakes-decision clause**. | — |
+| **EMEA** | **Two licensed Turkish assets** — `captainmgc/tubitak-skills` (MIT) and `kmkarakaya/btk_rag_bot_egitimi` (MIT, a **state ICT authority's** course) — plus a declared Turkish **localisation** of a held English curriculum. | 🟢 **Yes, all three MIT.** |
+| **APAC** | **Three domestic Vietnamese education agents**, all absent, all substantive. | 🔴 **No — zero grants on three channels.** |
+| **LATAM** | 🔴 **Nothing absent on either demand or supply.** Said plainly rather than left blank: the leg returned the UNESCO IESALC study, the Andes 716-instrument count, Ceibal, Cetic.br, CENIA and Tec de Monterrey — **every one already filed here.** One claim promoted out of history: the **Digital Education Council LATAM survey**. |
+
+🔵 **The finding is the asymmetry, and it changes how a regional engagement is
+scoped.** Türkiye's domestic education supply arrives **permissively licensed
+and institutionally anchored** — a state authority's course, a national
+funder's proposal workflow. Vietnam's arrives **unlicensed**: three real,
+well-built, education-specific agents that an engagement cannot legally
+build on. 🟢 **For APAC that converts a supply finding into a
+service offer — licensing, governance and productisation of domestic
+prototypes — rather than a component to adopt.** 🔴 **And it means a
+"what open source exists here" answer is incomplete without the grant: by
+artefact count Vietnam out-produced Türkiye on this pass; by usable artefact
+count it produced nothing.**
+
+### ⚠️ The verification limit on every claim in this section, stated precisely
+
+`p542` reported that five claims *"could not be verified at their primary
+sources"*, naming `education.ec.europa.eu` as unresolvable **to `curl`**.
+🟢 **`p543` retested on the other channel — the asymmetric one `p534` proved
+reads GitHub pages that `curl` cannot — and it fails there too**, as does
+`www.iesalc.unesco.org`. 🔵 **These hosts are outside the session's allowed
+network domains: a DNS allowlist, not a proxy rule and not a channel artefact.**
+🔴 **The remedy is a network-policy change** — the same class as `Gap 542-D`'s
+Chinese forges. **Every European Commission and UNESCO IESALC figure on this
+base is therefore secondary-attributed by necessity, and says so on its row.**
+
+| `ABSENT` claim this pass filed or refused | Disposition |
+|---|---|
+| **Singapore — MAS AI Risk Management Guidelines** (consultation, 2026) | 🔴 **Refused on sector.** MAS is the **Monetary Authority** of Singapore, a *financial* regulator; the leg returned a finance instrument under an education query. 🔵 Singapore's genuine education-sector gap remains `p542`'s: the **AIEd Framework** and **EdTech Masterplan 2030**, still absent. |
+| **China — penalties to ¥50 M** under its generative-AI framework (registration + content labelling) | 🟡 **Filed, attributed to its secondary source, marked UNVERIFIED at primary.** General-AI instrument with an education consequence, not an education instrument. |
+| **eduTrac SIS** | 🟢 Filed to [`../verticals/solutions.md`](../verticals/solutions.md) — **GPL-3.0, archived 2026-08-12**, refuting the "MIT" claim that carried it. |
+
 ## Opportunities by region
 
 ### North America
+
+#### 🆕 `p543` — two governance clauses promoted out of history, and they are the sellable artefacts
+
+🔴 **Neither of these was new to this base; both were trending-only until this
+pass** (`Gap 529-A`). 🟢 **Both are concrete enough to reuse in a policy
+engagement**, which is why they belong on a curated page:
+
+- **Berkeley Law** bans AI on **all exams and credited coursework** — a
+  blanket-prohibition template at a top-tier professional school.
+- **Chicago's** board-approved district policy bars AI as the **sole basis for
+  a high-stakes decision** — a *decision-rights* template rather than a
+  usage-ban template.
+
+🔵 **Those are the two poles of the North American policy space**, and an
+institution asking "what should our policy say" is really asking which pole it
+sits nearer. 🟢 **The opportunity is the instrument, not the model**: a
+decision-rights policy needs an audit trail per decision, which is an
+engineering deliverable; a usage ban needs assessment redesign, which is not.
 
 **🆕 `p541` — the automated-grading slot is now permissive, which changes what a
 district pilot can be.** `P584` (policy conformance) and every assessment
@@ -991,6 +1056,34 @@ recorded.**
   **faculty workload**, which is what the `$169 M`-class funding actually buys.
 
 ### EMEA
+
+#### 🆕 `p543` — Türkiye enters this page with licensed, institutionally-anchored supply
+
+🟢 **Two MIT assets, both anchored to a named national institution**, which is
+the pattern `p543` measured as the actual predictor of language-leg yield:
+
+- [`kmkarakaya/btk_rag_bot_egitimi`](https://github.com/kmkarakaya/btk_rag_bot_egitimi)
+  — **MIT**, a course corpus for **BTK**, Türkiye's ICT authority: course 514,
+  9 h 22 m, 55 lessons, Colab + Gemini + Gradio.
+- [`captainmgc/tubitak-skills`](https://github.com/captainmgc/tubitak-skills)
+  — **MIT**, agent skills for a **TÜBİTAK 2209-A** research proposal, producing
+  `docx`/`pdf` in the funder's own template.
+
+🔵 **And a third asset that is the more transferable observation:**
+[`komunite/ai-engineering`](https://github.com/komunite/ai-engineering) is a
+**declared, maintained Turkish fork** (1 147 commits) of a held English
+curriculum. 🟢 **That is the shape an EMEA capability-building engagement
+takes** — the pedagogy is upstream, and **the language and institutional
+framing are the local work.** It is cheaper than authoring and it is what the
+market is visibly already doing.
+
+🟡 **The regulatory anchor, promoted out of history this pass:** the **EU AI
+Office** and national authorities began enforcing the AI Act on
+**2026-08-02**, while `p380`'s **Regulation (EU) 2026/1744** (OJ 2026-07-24)
+defers the Annex III high-risk obligations — which cover proctoring,
+admissions and automated assessment — to **2 December 2027**. 🔴 **Both dates
+are attributed to secondary sources and marked unverified at primary**, because
+`education.ec.europa.eu` does not resolve from this session.
 
 **🆕 `p541` — EMEA stops being this file's supply-poor region, and the reason is
 that its supply is state-owned.** The EMEA leg was a measured blank on
@@ -1378,6 +1471,30 @@ to prevent.
   the data-residency answer, and is Apache-2.0.
 
 ### APAC
+
+#### 🆕 `p543` — Vietnam has domestic education supply and no licences, which is itself the offer
+
+🟢 **Three absent, substantive, education-specific Vietnamese agents**, found
+on the Vietnamese-language leg and read first-hand:
+
+| Asset | What it solves | Grant |
+|---|---|---|
+| [`MaiQuangPhuoc/edu_agents`](https://github.com/MaiQuangPhuoc/edu_agents) | Grade-10 **GDPT 2018** curriculum: Q&A, test generation, personalised paths. **Deliberately deterministic rather than ReAct, with the LLM bounded to the textbook.** | 🔴 **None** |
+| [`dungptt-dng/smart-ict-classroom`](https://github.com/dungptt-dng/smart-ict-classroom) | Primary ICT lab with **fewer machines than groups**: fair turn scheduling, rotating in-group roles. Vietnam AI in Education Pioneer Award 2026 entry. | 🔴 **None** |
+| [`minhdevtry/AI-Teacher-Assistant-Agent`](https://github.com/minhdevtry/AI-Teacher-Assistant-Agent) | Class management over **Zalo**, the national messaging platform: fee capture by text and OCR, arrears, invoices. | 🔴 **None** |
+
+🔵 **Read together they describe a market, not three projects:** the binding
+constraints are *scarce hardware*, *a prescribed national curriculum*, and *a
+messaging platform rather than an LMS as the teacher's interface*. **None of
+the 72 agents on this base's shelf is built for any of the three.**
+🟢 **The engagement shape follows: licensing, governance and productisation of
+domestic prototypes** — and the regulatory driver is already filed here,
+**Decision 33/2026/QD-TTg**, which names education among six high-risk
+sectors and makes automated assessment a compliance question.
+
+🔴 **Said plainly: by artefact count Vietnam out-produced Türkiye this pass;
+by *usable* artefact count it produced nothing.** A supply answer without the
+grant is not an answer.
 
 **🆕 `p541` — the region's supply keeps arriving under licences that are not
 licences, and this pass can now name the rate.** Of the 37 unresolved grants
@@ -1836,6 +1953,29 @@ not under APAC.
   is read here, never inferred.**
 
 ### LATAM
+
+#### 🆕 `p543` — the leg returned nothing absent, and the one promotion is a demand figure
+
+🔴 **An informed blank, not silence.** The LATAM leg returned the UNESCO
+IESALC study, the Universidad de los Andes **716-instrument** count, Uruguay's
+**Ceibal**, Brazil's **Cetic.br**, Chile's **CENIA** and the **Tec de
+Monterrey**–UNESCO agreement. 🟢 **Every one was already filed on this page** —
+graded `FILED`, not merely recognised, by
+[`../ingest/claim-role.sh`](../ingest/claim-role.sh).
+
+🟡 **One claim promoted out of trending history:** the **Digital Education
+Council's 2026 LATAM survey** — **92 % of students and 79 % of faculty**
+actively engaging with AI. 🔵 **Beside the IESALC institutional figure (87 % of
+~200 institutions in 19 countries using AI somewhere, **26 %** with a formal
+framework) it sharpens the pitch this base has made for several passes:** the
+region's gap is **not adoption and not enthusiasm — it is the governance
+artefact**, and the governance artefact is a deliverable.
+
+🔵 **What LATAM did *not* produce this pass, and it is worth naming:** no new
+domestic open-source supply. `p541`'s Spanish and Portuguese legs produced
+eight absent artefacts; the English-language regional leg produces none. **The
+language of the query, not the region of the question, is what moves the supply
+side here.**
 
 **🆕 `p541` — the LATAM supply gap this base has declared for many passes was
 substantially an instrument artefact, and here is the measurement.** Running

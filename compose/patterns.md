@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Compose Patterns — Education
 
-**Pass `p542` · 2026-10-30.** **Thirty-five** recipes. Every component named below
+**Pass `p543` · 2026-10-30.** **Thirty-seven** recipes. Every component named below
 was read from its repository page, and **every licence was read from the licence
 file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
 this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
@@ -2044,6 +2044,125 @@ estimate.**
    APAC or LATAM engagement, run the supply search **in the client's language
    first**: `p541` measured **8 new addresses of 10** in Spanish and
    Portuguese against **0 of 5** in English.
+
+## 🆕 `p543` — two recipes added (`P591`, `P592`), and the second one exists because its components are **unusable**
+
+🔵 Every component named below had its **grant read as bytes on `2026-10-30`**
+with the probe this pass repaired (`Gap 542-A`, `542-H`). 🔴 **`P592` is the
+first recipe on this page whose central finding is that you may not use the
+assets that prove the requirement** — three Vietnamese education agents carrying
+no licence on any channel. A pattern that pretends otherwise would be a
+liability, so the recipe is built as a **clean-room re-implementation against
+measured requirements**, which is a different engagement with a different price.
+
+## P591 — The national research-funding workflow, which no other asset on this base addresses (EMEA; Türkiye, portable to any national funder)
+
+**Brief.** A university research office — or a national funder itself — wants
+to raise the volume *and* the floor of quality of proposals submitted to a
+state grant programme. The work is not writing prose: it is **conforming to a
+funder's template, verifying every citation, and producing the exact artefact
+the form demands**, repeatedly, under a deadline. 🟢 **This base held 71 agents
+and none of them did this**, which is why `p543` shelved a 0★ repository.
+
+| Role | Component | Licence (read as bytes, `2026-10-30`) |
+|---|---|---|
+| 🆕 Proposal workflow (the core) | [captainmgc/tubitak-skills](https://github.com/captainmgc/tubitak-skills) | **MIT** · `LICENSE`@`main` **1 067 B** · 🔴 **0★, 4 commits** |
+| 🆕 Domain curriculum for upskilling the office | [kmkarakaya/btk_rag_bot_egitimi](https://github.com/kmkarakaya/btk_rag_bot_egitimi) | **MIT** · `LICENSE`@`main` **1 071 B** · 20★, 43 commits |
+| 🆕 Localisation precedent | [komunite/ai-engineering](https://github.com/komunite/ai-engineering) | **MIT** **1 070 B**, holder `Rohit Ghumare` — a declared fork of [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) |
+| Citation verification | `paper-search-mcp`, `arxiv-mcp-server`, `semantic-scholar-mcp` (named by the skill pack) | 🟡 **not read this pass — probe before use** |
+| Agent substrate | [Intelligent-Internet/ii-agent](https://github.com/Intelligent-Internet/ii-agent) | **Apache-2.0** · 3.4k★ *(carried from `p542`'s read)* |
+| Licence gate | [`P551`](#p551--licence-due-diligence-gate-run-this-first-every-engagement) | — |
+
+**Wiring.** Treat `tubitak-skills` as a **specification, not a dependency** —
+at 4 commits it is a worked example of the shape, and the shape is the value:
+a skill that knows *this* funder's call rules, *this* funder's form template,
+and emits `docx`/`pdf` the form accepts. Lift that structure onto `ii-agent` so
+the substrate is maintained by someone else, and keep **one skill per funder
+programme** rather than one general "grant writer" — the rules differ per call
+and they change annually, which is exactly the knowledge the office already
+has and cannot encode. 🟢 **Wire the three MCP citation servers as a hard gate,
+not a helper:** a proposal with a hallucinated DOI is worse than a late one,
+so an unverifiable reference fails the build. Use `btk_rag_bot_egitimi` as the
+**internal upskilling track** — it is a state authority's own 55-lesson RAG
+course, so the office learns the technology from a nationally-recognised
+curriculum rather than a vendor deck.
+
+**Hard constraint — the call rules are dated, and the asset says so.**
+`tubitak-skills` states its rules are *"2026 çağrısına göre"* and tells the
+user to check the current call announcement. 🔴 **Build that in: every
+generated proposal carries the call-document version it was written against,
+and the pipeline refuses to run against an expired call.** This is the same
+dated-premise failure `Gap 543`/`Gap 523` record for legal claims, and it bites
+harder here because a funder rejects on form.
+
+**Effort.** 5-7 weeks. Week 1 `P551` over every component including the three
+MCP servers; 2-3 re-implement the skill structure per target programme on
+`ii-agent`; 4 template-fidelity testing against accepted historical proposals
+the office supplies; 5 citation-verification gate; 6-7 pilot on one call, with
+the office's own reviewers scoring blind against unaided submissions.
+
+---
+
+## P592 — Capturing a requirement when the proof-of-requirement is unlicensed (APAC; Vietnam)
+
+**Brief.** `p543`'s Vietnamese leg found three domestic education agents that
+between them describe a market this base's 72 shelved agents do not serve:
+**scarce hardware**, **a prescribed national curriculum**, and **a messaging
+app rather than an LMS as the teacher's interface**. 🔴 **None of the three
+carries a licence** — `UNRESOLVED` across 180 filenames at the resolved
+default branch, a silent sidebar, and silent README prose. **So the engagement
+is not "adopt these"; it is "build this, having learned from these".**
+
+| Role | Component | Licence |
+|---|---|---|
+| 🔴 **Requirement evidence — READ, DO NOT FORK** | [MaiQuangPhuoc/edu_agents](https://github.com/MaiQuangPhuoc/edu_agents) · [dungptt-dng/smart-ict-classroom](https://github.com/dungptt-dng/smart-ict-classroom) · [minhdevtry/AI-Teacher-Assistant-Agent](https://github.com/minhdevtry/AI-Teacher-Assistant-Agent) | 🔴 **NO GRANT on three channels** |
+| Curriculum-bounded tutoring core | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | **MIT** *(carried; re-read at `p541`)* |
+| Deterministic orchestration | [LangGraph](https://github.com/langchain-ai/langgraph) | **MIT** *(carried)* |
+| Retrieval over the prescribed textbook | Qdrant + the client's own licensed corpus | Apache-2.0 *(carried)* |
+| Offline / low-spec delivery | [learningequality/kolibri](https://github.com/learningequality/kolibri) | **MIT** *(carried)* |
+| Licence gate | [`P551`](#p551--licence-due-diligence-gate-run-this-first-every-engagement) | — |
+
+**Wiring.** The three unlicensed projects converge on one architectural
+decision worth copying: **`edu_agents` chooses a deterministic pipeline over
+ReAct for the education domain and bounds the LLM to the textbook to suppress
+invention.** 🟢 **That is the right default for a prescribed national
+curriculum and it is the opposite of what a general tutor does** — so build on
+**LangGraph** with fixed edges, not an autonomous loop, and make "cite the
+textbook section or refuse" a structural property of retrieval rather than a
+prompt instruction. Take `smart-ict-classroom`'s constraint seriously:
+**scheduling under hardware scarcity is the product** in a lab with fewer
+machines than groups, and it is plain software — fair turn rotation and
+in-group role rotation, no model required. Deliver through **Kolibri** where
+connectivity is the binding constraint. And take the interface finding
+literally: if teachers run the class from a messaging app, the LMS is the
+system of record and **the chat surface is the UI**.
+
+**Hard constraint — the licence boundary is the deliverable's main risk.**
+🔴 **Do not vendor, fork, copy or paste from the three evidence repositories,
+and do not let a coding agent read them into a working tree.** An absent
+licence is not permission; it is reserved copyright. 🟢 **Capture the
+requirement as a written specification with the repositories cited as prior
+art, have the client sign that specification, and build clean.** Where a
+specific project is genuinely the right starting point, the honest route is
+commercial: **approach the authors for a grant or a contribution agreement** —
+all three are live and actively developed, and `edu_agents`' author is
+reachable through the repository. **That conversation is cheaper than the
+rewrite and it is the first thing to try.**
+
+**Regulatory driver, already on this base.** Vietnam's **Decision
+33/2026/QD-TTg** names education among six high-risk sectors and puts automated
+assessment in scope. 🟢 **So the audit trail is not optional polish** — every
+assessment decision needs its retrieval sources and its human approver on
+record, which is the one thing none of the three prototypes does.
+
+**Effort.** 10-12 weeks, and the first two are legal, not technical. Weeks 1-2
+specification and prior-art citation, plus the authorship approach above;
+3-4 `P551` over every component actually to be used; 5-7 deterministic
+LangGraph core bounded to the client's licensed textbook corpus; 8 scheduling
+module; 9 messaging-surface adapter; 10 Kolibri offline packaging; 11-12
+assessment audit trail and a one-school pilot.
+
+---
 
 ## 🆕 `p542` — two recipes added (`P589`, `P590`), both built on components read first-hand this pass
 

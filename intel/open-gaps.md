@@ -4,6 +4,157 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p543` — `2026-10-30` — **🟢 `542-A` AND `542-H` CLOSED IN THE INSTRUMENT, WITH `p542`'s FOUR HAND-READ BYTE FIGURES REPRODUCED EXACTLY. 🔴 `542-B` CLOSED AS **WRONG REMEDY** — ITS PROPOSED BRANCH LIST FAILS ON 19 % OF THE SHELF. 🟢 `542-C` DELIVERED FOR ALIAS PAIRS, ITS OTHER HALF DECLARED UNBUILDABLE HERE. 🔴 `542-D` GENERALISES: THE PRIMARY-SOURCE HOSTS FAIL ON **BOTH** CHANNELS, SO IT IS A DNS ALLOWLIST, NOT A PROXY RULE. 🔴 AND BOTH OF THIS PASS'S OWN PREDICTIONS FAILED. SIX REGISTERED (`543-A`…`543-F`).**
+
+### 🟢 `Gap 542-A` — CLOSED
+
+**Asked:** *"probe surface misses split grants. Add `LICENSE-CODE` and
+`LICENSE-TEXT`; re-probe every content-bearing repo whose verdict is 'no
+grant'."*
+
+**Delivered:** [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) now carries
+`LICENSE-TEXT`, `LICENSE-CONTENT`, `LICENSE-DOCS` and their `.md` forms, each
+expanded into case variants by `p530`'s generator. 🔵 **A correction to the ask:
+`LICENSE-CODE` was already on the list** — it went in at `p516` with the
+`bncc-dev` Portuguese pair. **Only its partner was missing**, which is why
+`ocademy` read as a half-grant rather than no grant at all. Reads
+`LICENSE-CODE[1122B],LICENSE-TEXT[18649B] → MIT,CC-BY-4.0`, matching p542's
+hand read to the byte.
+
+🔴 **The re-probe half is NOT done.** The ask was to re-probe *every*
+content-bearing repo whose verdict is "no grant"; `p543` re-probed the two
+known cases and the twelve addresses its own legs produced. **The shelf-wide
+re-probe stands open and is folded into `543-A`.**
+
+### 🟢 `Gap 542-H` — CLOSED
+
+**Asked:** *"add the CRAN R-package shape (`LICENSE` stub + `LICENSE.md` grant
++ `DESCRIPTION` declaration) to the probe ladder as a named case."*
+
+**Delivered:** a sub-100-byte file naming no licence is recorded as
+`[STUB:47B]` and **excluded from the SPDX union**; a repo whose only hits are
+stubs reports `STUB-ONLY-no-grant-text`, never a grant. `writeAlizer` reads
+`LICENSE[STUB:47B],LICENSE.md[1076B] → MIT`.
+
+🔵 **Three defects found in `p543`'s own patch by running p542's hand reads as
+controls, and recorded because they are generic to every shell instrument
+here:** `body=$(curl …)` strips the trailing newline (**every** size short by
+one), `${#body}` counts characters not bytes (wrong only for non-ASCII
+holders), and `head -c 4096` made the cap indistinguishable from the size.
+**A size measured through `$(...)` is not a size**, and this base publishes
+byte figures as its primary licence evidence.
+
+### 🔴 `Gap 542-B` — CLOSED AS **WRONG REMEDY**
+
+**Asked:** *"the branch set must be `main|master|dev` everywhere, not
+per-probe."*
+
+🔴 **Measured and refused.** The sweep of all 139 shelf addresses
+([`../evidence/alias-sweep.2026-10-30-p543.tsv`](../evidence/alias-sweep.2026-10-30-p543.tsv))
+finds **26 of 139 (19 %) off `main`**, and **five outside the proposed set**:
+`QingdaoU/Judger`→`newnew`, `francoisjacquet/rosariosis`→`mobile`,
+`portabilis/i-educar`→`2.12`, `ls1intum/Artemis`→`develop`,
+`frappe/flow_client`→`develop`. 🔴 **Plus both permissive platforms off this
+pass's vertical leg:** `krayin/laravel-crm`→`2.2`,
+`cortezaproject/corteza`→`2026.9.x`. **A branch list reports those two real
+grants as absent.**
+
+🔵 **And the remedy is a regression to a design already replaced.** `p509`
+found `i-educar`→`2.12` and wrote it into prose; `p516` reproduced it; `p517`
+fixed it by **resolving** the branch with `git ls-remote --symref`, which is
+what the probe does today. **Enumerating branches is the design that failed
+three times.** `mini-kode`'s `master` grant, the instance that prompted 542-B,
+was missed by a *hand* probe, not by this instrument.
+
+### 🟢 `Gap 542-C` — DELIVERED IN HALF, OTHER HALF DECLARED UNBUILDABLE (→ `543-B`)
+
+🔴 **The asked-for redirect check cannot be built here.** `github.com` returns
+**403 to `curl` on every path** — a nonexistent repository is also 403, so not
+even a 404 is distinguishable — and `WebFetch`, the channel `p534` proved
+asymmetric, returns a **rendered page, not headers**.
+
+🟢 **Built instead: [`../ingest/alias-sweep.sh`](../ingest/alias-sweep.sh).** A
+rename leaves two addresses serving the same object graph, so **identical HEAD
+shas identify an alias pair with no header at all**. Calibrated on p542's hand
+case (`MeetYourAI/AIProf` ≡ `TheFlameFoundation/AIBot-Prof-Helper` ≡
+`9125548dab00`). **Swept: 139/139 LIVE, zero dead, one alias pair —
+`Dymayo/moodler-mcp` ≡ `GhaithAlHallak8/moodler-mcp` ≡ `4e6139eb9c6b`**, which
+is the pair `p538` left as *"a hand check"*, **now proved by object graph**.
+
+### 🔴 `Gap 542-D` — GENERALISES BEYOND THE FORGES
+
+542-D concluded the Chinese forge gap needs a network-policy change. 🟢 **The
+same is now measured for primary-source verification.** `p542` reported
+`education.ec.europa.eu` as unresolvable **to `curl`**; `p543` retested on the
+**other** channel and it fails there too, as does `www.iesalc.unesco.org`.
+🔵 **These hosts are outside the session's allowed network domains — a DNS
+allowlist, not a proxy rule and not a channel artefact.** 🔴 **Consequence to
+keep writing on the rows: every European Commission and UNESCO IESALC figure
+on this base is secondary-attributed by necessity.**
+
+### 🟡 `Gap 542-E` — PARTLY ANSWERED, STILL OPEN FOR `de`/`ja`/`ko`
+
+542-E asked that the one-pass negatives be re-measured or the language claim
+dropped. 🟢 **`p543` added two more negatives (`ru`, `it`) rather than
+re-running p542's three, and the `ru` negative falsified the *positive* half of
+the trend** — see `Trend 36` as rewritten in
+[`trends.md`](trends.md). 🔴 **`de`, `ja` and `ko` remain one-pass negatives.**
+
+### 🔴 `Gap 540-E` — REFUTED, AND CLOSE IT
+
+540-E held that no pass could get gate attestation because `make hooks` is
+denied; `p541` and `p542` recorded the denial as standing (fourteenth and
+fifteenth of fifteen and sixteen passes). 🟢 **`p543` ran it and it executed in
+full, all 68 gates, unmasked.** **52/68 green here against 51/68 at the
+pristine `p542` commit**, the one-gate delta being `gate-register-currency`,
+RED at p542 and GREEN here. 🔴 **`p543` had itself written "denied for the
+fifteenth time" into its draft before trying the command, and had to correct
+it** — logged as the second instance of `543-F`.
+
+### 🟢 `Gap 542-F` / `542-G` — UNTOUCHED, AND NOT CLAIMED
+
+Both are parser defects in gates (`gate-shelf-consistency`'s span rule,
+`gate-grant-path`'s zero-result extractor). 🔴 **`p543` did not fix either and
+does not claim to.** They remain the two reds a successor should take first,
+because a gate that cannot fail correctly is worse than an absent one.
+
+### 🟢 `Gap 543-A` … `Gap 543-F` registered
+
+- **`543-A`** — **the shelf-wide licence re-probe `542-A` asked for.** The
+  probe is now correct on split grants, stubs and byte counts; **nothing has
+  re-run it over the base.** Every "no grant" verdict older than this pass was
+  produced by a probe with three known defects. **Re-probe the shelf and the
+  foundations layer, and publish the diff** — this is the largest single
+  correctness debt on this base.
+- **`543-B`** — **an unrecorded rename is undiscoverable from this
+  environment.** Alias *pairs* are detectable; naming the **new** address of a
+  repo renamed away to an address this base never held needs the redirect
+  header, and no channel here serves headers. **Record it as unbuildable, not
+  as unworked.**
+- **`543-C`** — **archive state has no gate.** `eduTrac-SIS` was archived
+  2026-08-12 and nothing here would have noticed; `p534` found an archived
+  agent layer the same way. **Twice is a class** — add archive state to the
+  shelf-row contract, read from the repository page.
+- **`543-D`** — **the `measured/unusable` class needs a published home.**
+  Three Vietnamese agents are real, education-specific, absent and ungranted.
+  They are not shelf rows and not rejects, and a trending entry alone means the
+  next pass rediscovers them.
+- **`543-E`** — **prose counts go stale every pass.** `../agents/top.md`'s
+  shelf heading read *"68 with `p541`'s four"* after p542 added three (corrected
+  this pass); `../repos/foundations.md` carries the same defect as `Gap 534-E`.
+  **Derive both figures from the tables in a gate.**
+- **`543-F`** — **`p543`'s own two predictions failed, and one failed by
+  restating a known analysis with the conclusion reversed.** H3 predicted the
+  HTML channel was lost; it is `p534`'s **known asymmetry**, and `WebFetch`
+  reads those pages fine. H4 predicted a new alias pair; the sweep found only
+  the known one. 🔵 `p542` observed that `gate-restated-presence` catches a
+  restated **address**, not a restated **analysis**. **H3 is the second
+  instance and the first where the restatement produced a *wrong* claim rather
+  than a merely redundant one** — which is the argument for pricing that gate
+  above the address one.
+
+---
+
 ## 🆕 `p541` — `2026-10-30` — **🟢 `540-A` CLOSED (gate wired and standing) · `540-B` DELIVERED AND ITS PREMISE CORRECTED · `540-E` REFUTED AND PARTLY CLOSED — 52/68 GATES ATTESTED. 🔴 THE PASS'S OWN FINDING IS THAT ITS NEW GATE COULD NOT CATCH THE PASS'S OWN RESTATEMENT: A RESTATED **ANALYSIS** IS NOT A RESTATED **ADDRESS**. SIX REGISTERED (`541-A`…`541-F`).**
 
 ### 🟢 `Gap 540-A` — CLOSED

@@ -20,6 +20,11 @@
 #   therefore GENERATED case variants, not three more hand-written rows -- a
 #   hand-written list is what failed twice.
 #
+#   p543 FOUND THE FIFTH AND SIXTH INSTANCES, both registered by p542:
+#   542-A a SPLIT grant by material type (LICENSE-CODE + LICENSE-TEXT) read as a
+#   half-grant, and 542-H a sub-100-byte CRAN stub contributing `unknown-text` to
+#   the union beside the real grant. Both are fixed below, in the instrument.
+#
 # WHAT IT GUARANTEES
 #   1. The default branch is RESOLVED (git ls-remote --symref), never assumed.
 #   2. Grant filenames are probed in 14 languages before any "no licence" verdict.
@@ -37,6 +42,11 @@ GRANT_NAMES=(
   # split code/data grants (bncc-dev pattern)
   LICENSE-CODIGO.md LICENSE-DADOS.md LICENSE-CODE LICENSE-CODE.md
   LICENSE-DATA LICENSE-DATA.md LICENSE-MIT LICENSE-APACHE
+  # p543 / Gap 542-A: ocademy-ai/machine-learning keeps MIT at LICENSE-CODE and
+  # CC-BY-4.0 at LICENSE-TEXT. LICENSE-CODE was already on this list; its partner
+  # was not, so the pair read as a half-grant -- the content half was invisible.
+  LICENSE-TEXT LICENSE-TEXT.md LICENSE-CONTENT LICENSE-CONTENT.md
+  LICENSE-DOCS LICENSE-DOCS.md
   # Portuguese
   LICENCA LICENCA.md LICENCA.txt LICENÇA LICENÇA.md
   # Spanish
@@ -119,14 +129,44 @@ for slug in "$@"; do
     enc=$(printf '%s' "$name" | od -An -tx1 | tr -d ' \n' \
           | sed 's/../%&/g' | sed 's/%2[fF]/\//g')
     url="https://raw.githubusercontent.com/${slug}/${branch}/${enc}"
-    body=$(curl -sfL --max-time 20 "$url" 2>/dev/null | head -c 4096)
-    if [ -n "$body" ]; then
-      found="${found:+$found,}$name"
+    # p543: read to a FILE, not to a command substitution. Three reasons, each
+    # found by running this probe against the two cases p542 read by hand:
+    #   1. `$(...)` strips trailing newlines, so a 47 B grant measured 46.
+    #   2. `${#body}` counts CHARACTERS, so a grant with one multi-byte glyph
+    #      measured 1 121 where the file is 1 122 B.
+    #   3. `head -c 4096` caps the read, so any larger grant reported 4096 and
+    #      the cap was indistinguishable from the true size.
+    # The byte figure is now `wc -c` on the whole payload and matches p542's
+    # hand reads exactly (47 B, 1 076 B, 1 122 B).
+    tmp=$(mktemp); : >"$tmp"
+    if curl -sfL --max-time 20 -o "$tmp" "$url" 2>/dev/null; then
+      nb=$(wc -c <"$tmp" | tr -d ' ')
+      body=$(head -c 4096 "$tmp")
+    else
+      nb=0; body=""
+    fi
+    rm -f "$tmp"
+    if [ "$nb" -gt 0 ]; then
       g=$(spdx_of "$body")
-      case ",$spdx," in *",$g,"*) ;; *) spdx="${spdx:+$spdx,}$g" ;; esac
+      # p543 / Gap 542-H -- the CRAN R-package shape. An R package declares
+      # `License: MIT + file LICENSE` in DESCRIPTION and leaves LICENSE holding
+      # only a year and a copyright holder (shmercer/writeAlizer: 47 B). That is
+      # a STUB, not a grant, and letting it contribute `unknown-text` to the
+      # union is how a real grant at LICENSE.md gets averaged away. Education
+      # research publishes heavily in R, so this is a leg of this base, not an
+      # edge case. A stub is RECORDED (it is evidence of the convention) and
+      # EXCLUDED from the spdx union.
+      if [ "$nb" -lt 100 ] && [ "$g" = "unknown-text" ]; then
+        found="${found:+$found,}${name}[STUB:${nb}B]"
+      else
+        found="${found:+$found,}${name}[${nb}B]"
+        case ",$spdx," in *",$g,"*) ;; *) spdx="${spdx:+$spdx,}$g" ;; esac
+      fi
     fi
   done
 
   [ -z "$found" ] && { found="UNRESOLVED-on-${#GRANT_NAMES[@]}-names"; spdx="UNRESOLVED"; }
+  # a repo whose ONLY hits were stubs has no readable grant on this channel
+  [ -n "$found" ] && [ -z "$spdx" ] && spdx="STUB-ONLY-no-grant-text"
   printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$slug" "LIVE" "$branch" "$sha" "$found" "$spdx"
 done

@@ -3,6 +3,95 @@ industry: education
 region: Global
 updated: 2026-10-30
 ---
+
+## 🆕 `p543` — `2026-10-30` — **🟢 `542-A` AND `542-H` FIXED IN THE INSTRUMENT, AND THE FIXED PROBE REPRODUCES ALL FOUR OF `p542`'s HAND-READ BYTE FIGURES EXACTLY (1 122 / 18 649 / 47 / 1 076). 🔴 WHILE BUILDING IT, THE PATCH'S OWN FIRST VERSION WAS WRONG BY ONE BYTE AND BY ONE ENCODING — `$(...)` STRIPS TRAILING NEWLINES AND `${#}` COUNTS CHARACTERS — WHICH IS WHY THE CONTROLS EXIST. 🔴 **`Gap 542-B`'s PROPOSED REMEDY IS MEASURABLY WRONG: 19 % OF THE SHELF HAS A NON-`main` DEFAULT AND FIVE REPOS SIT OUTSIDE `main|master|dev`.** 🟢 `542-C` DELIVERED FOR ALIAS PAIRS: 139/139 SHELF ADDRESSES LIVE, ZERO DEAD, ONE PAIR — THE KNOWN ONE.**
+
+🔵 **The supply narrative and the four language legs are on
+[`../agents/trending.md`](../agents/trending.md#-p543--2026-10-30).** This
+entry carries the instrument record.
+
+### 🟢 `Gap 542-A` and `Gap 542-H` — closed in [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh), with controls
+
+| Fix | What was wrong | What the probe does now |
+|---|---|---|
+| **`542-A`** split grant by material type | `LICENSE-CODE` was already on the 180-name list; **its partner `LICENSE-TEXT` was not**, so `ocademy-ai/machine-learning` read as a *half*-grant — the MIT code half visible, the CC-BY-4.0 content half invisible. | `LICENSE-TEXT`, `LICENSE-CONTENT`, `LICENSE-DOCS` and their `.md` forms added, each expanded into case variants by `p530`'s generator. Reads **`LICENSE-CODE[1122B],LICENSE-TEXT[18649B] → MIT,CC-BY-4.0`**. |
+| **`542-H`** the CRAN R-package shape | An R package declares `License: MIT + file LICENSE` in `DESCRIPTION` and leaves `LICENSE` holding **only a year and a holder** (`shmercer/writeAlizer`: 47 B). That stub contributed `unknown-text` to the SPDX union **beside the real grant**, diluting it. | A sub-100-byte file that names no licence is recorded as **`[STUB:47B]`** and **excluded from the union**; a repo whose only hits are stubs reports `STUB-ONLY-no-grant-text`, never a grant. Reads **`LICENSE[STUB:47B],LICENSE.md[1076B] → MIT`**. |
+
+🟢 **Both controls are `p542`'s own hand reads, and the figures now agree to
+the byte** — which makes the instrument an independent corroboration of p542
+rather than a replacement for it. **Two hand checks retired.**
+
+### 🔴 The patch's first version was wrong three ways, and only a control could have shown it
+
+🔵 **Recorded because the defect is generic to every shell instrument on this
+base.** The first patch emitted byte counts that disagreed with p542's hand
+reads by one: **46 B where p542 read 47 B**, **1 121 B where p542 read 1 122 B**,
+and **4 096 B for an 18 649 B file**.
+
+| Cause | Why it is invisible without a control |
+|---|---|
+| `body=$(curl ...)` — **command substitution strips trailing newlines** | Every grant file ends in a newline, so **every** size was short by exactly one. A systematic off-by-one looks like a rounding convention, not a bug. |
+| `${#body}` counts **characters, not bytes** | Only wrong for a payload containing a multi-byte glyph — so it is right on most files and wrong on the ones with a non-ASCII copyright holder. |
+| `head -c 4096` capped the read | The cap was **indistinguishable from the true size**: a 4 096 answer could mean "4 096 bytes" or "at least 4 096 bytes". |
+
+🟢 **Fixed by reading to a file and measuring with `wc -c`.** 🔵 **The
+generalisable half:** a size measured through `$(...)` is not a size, and this
+base publishes byte figures as its primary licence evidence.
+
+### 🔴 `Gap 542-B` — close it as **wrong remedy**, not as done
+
+542-B asked for the branch set to be `main|master|dev` *"everywhere, not
+per-probe"*. 🟢 **`p543` swept all 139 shelf addresses**
+([`../evidence/alias-sweep.2026-10-30-p543.tsv`](../evidence/alias-sweep.2026-10-30-p543.tsv)):
+**26 of 139 (19 %) do not default to `main`**, and **five are outside the set
+542-B proposed**:
+
+| Repo | Default branch | Would `main\|master\|dev` find it? |
+|---|---|---|
+| [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) | `newnew` | 🔴 No |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` | 🔴 No |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` | 🔴 No |
+| [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) | `develop` | 🔴 No |
+| [`frappe/flow_client`](https://github.com/frappe/flow_client) | `develop` | 🔴 No |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) *(vertical leg)* | `2.2` | 🔴 No |
+| [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) *(vertical leg)* | `2026.9.x` | 🔴 No |
+
+🔵 **`p509` already found `i-educar`→`2.12` and wrote it into prose; `p516`
+reproduced it; `p517` fixed it properly by *resolving* the branch with
+`git ls-remote --symref`.** 🔴 **So 542-B's remedy is a regression to the
+design `p517` replaced** — a list, which is what failed three times. The
+probe's existing behaviour is correct and the gap closes as *wrong remedy*.
+🟢 **The two permissive platforms off this pass's vertical leg are the proof:
+both grants are real and a branch list reports neither.**
+
+### 🟢 `Gap 542-C` — delivered for the half this environment permits, and the other half named unbuildable
+
+🔴 **The asked-for instrument cannot be built.** 542-C wanted *"a redirect
+check on every held address"*. `github.com` returns **403 to `curl` for every
+path** — including paths that do not exist, so not even a 404 is
+distinguishable — and the channel that *does* read those pages
+(`WebFetch`, `p534`'s asymmetry) returns a **rendered page, not headers**.
+
+🟢 **What is buildable: a rename leaves two addresses serving the same object
+graph, so identical HEAD shas identify an alias pair without any header.**
+[`../ingest/alias-sweep.sh`](../ingest/alias-sweep.sh), calibrated on the case
+p542 found by hand — `MeetYourAI/AIProf` and
+`TheFlameFoundation/AIBot-Prof-Helper` both answer **`9125548dab00`**.
+
+**Swept over all 139 shelf addresses:**
+
+- 🟢 **139 LIVE, 0 dead, 0 private.** The shelf carries no rotted address.
+- 🟡 **One alias pair: `Dymayo/moodler-mcp` ≡ `GhaithAlHallak8/moodler-mcp`,
+  both `4e6139eb9c6b`.** This is exactly the pair `p538` left as *"a hand
+  check"* and `p542` could not resolve — **now proved identical by object
+  graph**, so the shelf carries one project at two addresses.
+- 🔴 **`p543` predicted at least one *more* alias and was wrong** (`543-F`).
+  The registered prediction is in
+  [`../scratchpad/p543/predictions.txt`](../scratchpad/p543/predictions.txt).
+- 🔴 **The unbuildable half, registered as `543-B`:** naming the **new**
+  address of a repo renamed away to an address this base never recorded is
+  impossible here — `ls-remote` follows the rename silently and reports no name.
+
 ## 🆕 `p542` — `2026-10-30` — **🟢 ONE ABSENT FRAMEWORK FILED (`ii-agent`, Apache-2.0, 3.4k★) OFF THE **FRENCH** LEG. 🔴 TWO PROBE-SHAPE DEFECTS MEASURED: A **SPLIT GRANT** (`LICENSE-CODE` + `LICENSE-TEXT`) READS AS NO GRANT, AND A **`master`-ONLY** GRANT READS AS NO GRANT. 🔴 THE PART OF THE CHINESE CORPUS THAT SITS ON **CHINESE FORGES** IS UNREACHABLE FROM THIS ENVIRONMENT — THE GITHUB-HOSTED PART THIS BASE ALREADY HOLDS — SO "NO NON-GITHUB SUPPLY" HAS BEEN AN ENVIRONMENT ARTEFACT, NOT A FINDING.**
 
 🔵 **Full narrative, the per-leg corpus table and the fork-holder instrument

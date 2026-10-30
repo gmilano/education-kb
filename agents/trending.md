@@ -3,6 +3,165 @@ industry: education
 region: Global
 updated: 2026-10-30
 ---
+
+## 🆕 `p543` — `2026-10-30` — **🔴 `p542`'s COSMOLOGY IS FALSIFIED BY RUSSIAN: A DISTINCT PUBLISHING CORPUS IS NECESSARY AND NOT SUFFICIENT — `ru` INDEXES HABR/DTF/thecode.media AND RETURNED **ZERO**, BECAUSE WHAT IT PUBLISHES IS LOCALISED RANKINGS OF THE ENGLISH CORPUS. 🟢 THE PREDICTOR THAT SURVIVES TWELVE LEGS IS A **NAMED NATIONAL INSTITUTION OR CURRICULUM** (TÜBİTAK 2209-A, BTK 514, GDPT 2018, BNCC, ENEM). 🔴 AND THE AXIS HAS A SECOND GATE `p542`'s METRIC COULD NOT SEE: THE **GRANT** — THE VIETNAMESE LEG FOUND **3 DOMESTIC EDUCATION AGENTS AND 0 LICENCES ON THREE CHANNELS**. 🟢 ONE AGENT SHELVED (71→72), THREE FOUNDATIONS FILED, `542-A`/`542-H` FIXED IN THE INSTRUMENT, `542-C` DELIVERED IN THE HALF THE ENVIRONMENT ALLOWS, AND **`542-B`'s OWN PROPOSED REMEDY MEASURED INSUFFICIENT ON 19 % OF THE SHELF**.**
+
+🔵 **Full narrative, the per-leg table, the shelved row and the five
+rejections are on
+[`../agents/top.md`](../agents/top.md#-p543--the-language-axis-has-a-second-gate-and-it-is-the-grant).**
+This entry carries the dated trend record.
+
+### 🟢 What moved this week
+
+- 🆕 **`captainmgc/tubitak-skills`** — **MIT** (`LICENSE` @`main`, 1 067 B),
+  **0★, 0 forks, 4 commits**. Agent skills for a **TÜBİTAK 2209-A** research
+  proposal: DOI verification over three MCP servers, figures, and `docx`/`pdf`
+  in the funder's own form template. **Shelved — for its category, with its
+  size on the row.** No other asset on this base addresses a national
+  research-funding workflow.
+- 🆕 **`kmkarakaya/btk_rag_bot_egitimi`** — **MIT** (1 071 B), **20★, 12
+  forks, 43 commits**. A **state ICT authority's** RAG course: BTK course 514,
+  9 h 22 m, 9 sections, 55 lessons. **Filed to foundations.**
+- 🆕 **`komunite/ai-engineering`** — **MIT** (1 070 B), **8★, 1 147 commits**,
+  **a declared Turkish fork** of `rohitg00/ai-engineering-from-scratch`.
+  **Filed to foundations with its lineage on the row**, because a translation
+  of a held asset is not new supply.
+- 🟢 **`rohitg00/ai-engineering-from-scratch` filed at last.** **190 mentions
+  in this base's trending history, zero on any curated page** until this pass.
+  `Gap 529-A`'s promotion debt, found a third new way: **by following a
+  localisation back to the upstream nobody had filed.**
+- 🔴 **Three Vietnamese education agents, zero licences.**
+  [`MaiQuangPhuoc/edu_agents`](https://github.com/MaiQuangPhuoc/edu_agents)
+  (75 commits; grade-10 GDPT 2018 curriculum; **chooses a deterministic
+  pipeline over ReAct for the education domain and bounds the LLM to the
+  textbook to suppress invention** — the most interesting architecture the four
+  legs returned),
+  [`dungptt-dng/smart-ict-classroom`](https://github.com/dungptt-dng/smart-ict-classroom)
+  (a lab with fewer machines than groups: fair turn scheduling, four rotating
+  in-group roles; Vietnam AI in Education Pioneer Award 2026 entry) and
+  [`minhdevtry/AI-Teacher-Assistant-Agent`](https://github.com/minhdevtry/AI-Teacher-Assistant-Agent)
+  (*ZaloAgent* — Vietnamese class management over Zalo Bot, fee capture by text
+  **and image OCR**). **All three live, all three `UNRESOLVED` on 180
+  filenames, sidebar and README.** **Not promoted.**
+- 🔴 **`parkerj/eduTrac-SIS` — the vertical leg's one absent platform, and both
+  claims attached to it were wrong.** A curated list calls it MIT; it is
+  **GPL-3.0** (35 146 B) and **archived by its owner on 2026-08-12**. Details on
+  [`../verticals/solutions.md`](../verticals/solutions.md).
+- 🔴 **`thanhtantran/agents-radar` — a README-only MIT claim** (`p288`'s
+  class): the README says *MIT License*, the probe finds no grant file at the
+  resolved branch (`master`). It is also a **Vietnamese localisation of a trend
+  digest**, which is the `ru` pattern at repository scale.
+
+### 🔴 The English legs restated for a fourth consecutive pass — now measured with an instrument instead of by hand
+
+p540 measured 4 of 5, p541 **20 of 20**, p542 **9 of 9**. 🟢 **p543 built
+[`../ingest/claim-role.sh`](../ingest/claim-role.sh)** so the grading is
+reproducible rather than remembered, and it returns `p541`'s roles: **`FILED`**
+(on a curated non-trending page), **`HISTORY`** (trending or gap register only —
+`Gap 529-A`'s debt) and **`ABSENT`**.
+
+**Thirty-one claims off the four mandated English legs and the four regional
+legs: 22 `FILED`, 6 `HISTORY`, 3 `ABSENT`.**
+
+| `ABSENT` claim | What `p543` did with it |
+|---|---|
+| **eduTrac SIS** | 🟢 Filed to `../verticals/solutions.md` — and refuted on licence and archive state. |
+| **Singapore MAS AI Risk Management Guidelines** (consultation) | 🔴 **Rejected on sector.** MAS is the **Monetary Authority** of Singapore — a *financial* regulator. The leg returned a finance instrument under an education query. Singapore's real education-sector gap is still `p542`'s: the **AIEd Framework** and **EdTech Masterplan 2030**. |
+| **China: penalties to ¥50 M** under its AI framework | 🟡 Filed to `../intel/market.md` **attributed to its secondary source and marked unverified** — see the verification limit below. |
+
+🔵 **The 6 `HISTORY` claims are the more useful number**, and they say the same
+thing p542 said from the other end: **"already held" is not "already filed".**
+`EU AI Office` enforcement from 2026-08-02, the Digital Education Council's
+LATAM survey (92 % of students / 79 % of faculty), Berkeley Law's exam ban,
+Chicago's high-stakes clause, Krayin and Corteza — all known to this base, none
+on a curated page before this pass.
+
+### 🔴 A verification limit this pass can now state precisely, which `p542` could only state as a symptom
+
+`p542` reported that five claims *"could not be verified at their primary
+sources"* and named `education.ec.europa.eu` as not resolving **to `curl`**.
+🟢 **`p543` retested it on the other channel** — the one `p534` proved is
+asymmetric, and the one that reads GitHub pages this environment's `curl`
+cannot — **and it does not resolve there either**, nor does
+`www.iesalc.unesco.org`. 🔵 **So this is not a channel artefact and not a proxy
+rule: those hosts are outside the session's allowed network domains, which is a
+DNS-level allowlist.** The remedy is a **network-policy change**, exactly as
+`Gap 542-D` concluded for the Chinese forges. 🔴 **Until it changes, every
+policy and adoption figure on this base whose primary source is the European
+Commission or UNESCO IESALC is secondary-attributed by necessity, not by
+sloppiness** — and must keep saying so on the row.
+
+### 🟢 `p543` gate attestation — **`make hooks` RAN. All 68 gates, unmasked, and `Gap 540-E`'s premise is refuted.**
+
+🔴 **This section first said "denied for the fifteenth time in sixteen passes",
+written from the base's own history before the command was tried. It is
+wrong.** `make hooks` executed in full — *"p300 hooks runner — every gate ran,
+none masked"* — and this pass's own draft had to be corrected to say so.
+🔵 **Recorded as a defect of this pass**, because it is the identical failure
+mode `543-F` registers: a claim restated from the base's memory instead of
+measured, and wrong.
+
+| Tree | Green | Red |
+|---|---|---|
+| **`p543` (this tree)** | 🟢 **52 / 68** | 16 |
+| **pristine `p542` (`8a2e77c`, via `git worktree`)** | 51 / 68 | 17 |
+
+🟢 **The delta is one gate, in the right direction: `gate-register-currency`
+was RED at `p542`'s own commit and is GREEN here**, because this pass updated
+[`../intel/open-gaps.md`](../intel/open-gaps.md) in the same commit as the
+shelves. 🔵 **p542 could not have known** — it ran 15 gates individually and
+that was not one of them, which is exactly the blind spot a 68-gate runner
+exists to cover. 🟢 **Every one of the 16 reds is also red at the pristine
+commit, so `p543` introduced none**, and the structural gates for every file
+touched — `gate-tables`, `gate-region-headings`, `gate-dates`,
+`gate-prose-claims`, `gate-bespoke-title`, `gate-address-shape`,
+`gate-restated-presence` — are green.
+
+🔵 **Per-gate verdicts, with each red graded against the pristine tree, in
+[`../evidence/standing-gate-verdicts.2026-10-30-p543.tsv`](../evidence/standing-gate-verdicts.2026-10-30-p543.tsv).**
+🔴 **`Gap 540-E` should be closed as refuted**: three passes recorded `make
+hooks` as denied and the denial did not reproduce. **`542-F` and `542-G`
+remain the two reds a successor should take first.**
+
+### 🟢 `Gap 543-A` … `Gap 543-F` registered
+
+- **`543-A`** — **`Gap 542-B`'s proposed remedy is insufficient and the
+  measurement is in hand.** 26 of 139 shelf repos (**19 %**) have a non-`main`
+  default branch, and **five sit outside the `main|master|dev` set 542-B
+  asked for**: `QingdaoU/Judger`→`newnew`, `francoisjacquet/rosariosis`→`mobile`,
+  `portabilis/i-educar`→`2.12`, `ls1intum/Artemis`→`develop`,
+  `frappe/flow_client`→`develop` — plus `krayin/laravel-crm`→`2.2` and
+  `cortezaproject/corteza`→`2026.9.x` off the vertical leg. **Close 542-B as
+  *wrong remedy*: resolve the default branch, never enumerate it.**
+- **`543-B`** — **the other half of `542-C` is unbuildable here and should be
+  recorded as such rather than left looking unworked.** Alias *pairs* are now
+  detectable ([`../ingest/alias-sweep.sh`](../ingest/alias-sweep.sh)), but
+  naming the **new address** of a repo renamed away needs the redirect header,
+  and `github.com` is 403 to `curl` while `WebFetch` returns a *rendered page*,
+  not headers. **No instrument on this base can discover an unrecorded rename.**
+- **`543-C`** — **a licence claim and an archive state are different freshness
+  questions, and only one of them has a gate.** `eduTrac-SIS` was archived
+  2026-08-12 and nothing on this base would have noticed. `p534` found an
+  archived agent layer the same way — **twice is a class.** Add archive state to
+  the shelf-row contract.
+- **`543-D`** — **the ungranted-domestic-supply class needs a published home.**
+  Three Vietnamese agents are real, education-specific, absent and unusable.
+  They are not shelf rows and they are not rejects; filing them only in a
+  trending entry means the next pass rediscovers them. **A `measured/unusable`
+  register, or they will be re-found a fourth time.**
+- **`543-E`** — **a count that lives in prose beside the rows it counts goes
+  stale every pass.** `../agents/top.md`'s shelf heading said *"68 with p541's
+  four"* after p542 added three; `../repos/foundations.md` carries the same
+  defect as `Gap 534-E`. **Derive both figures from the tables in a gate.**
+- **`543-F`** — **`p543`'s own two predictions failed, and the gate `p542`
+  asked for would not have caught either.** H3 predicted the HTML channel was
+  lost (it is `p534`'s known asymmetry — a **restated analysis** with the
+  conclusion reversed) and H4 predicted the alias sweep would find a new pair
+  (it found only the known `moodler-mcp` one). 🔵 `p542` noted
+  `gate-restated-presence` catches a restated **address**, not a restated
+  **analysis**; **H3 is the second instance and the first where the restatement
+  produced a *wrong* claim, not merely a redundant one.**
+
 ## 🆕 `p542` — `2026-10-30` — **🟢 THE LANGUAGE AXIS GENERALISES, BUT NOT AS A LANGUAGE AXIS: EIGHT NEW LEGS (fr/de/ja/zh/ko/ar/hi/id) RETURNED **7 ABSENT OF 12**, AND THE YIELD TRACKS WHETHER THE LANGUAGE INDEXES A **DISTINCT PUBLISHING CORPUS** — id AND zh 2-OF-2, de/ja/ko **0**. 🔴 ENGLISH RESTATED **9 OF 9**, REPLICATING p541. 🔴 THE zh CORPUS SITS ON FORGES THIS ENVIRONMENT **CANNOT REACH**: `gitlink.org.cn` DOES NOT RESOLVE, `gitee.com` IS 403 AT THE GATEWAY — THE FORGE GAP IS **UNWORKABLE**, NOT UNWORKED. 🟢 THREE AGENTS SHELVED (68→71), ONE FOUNDATION FILED, THREE LICENCE TRAPS, AND A **ONE-READ INSTRUMENT FOR FORK-VS-UPSTREAM** THAT p538 LEFT AS A HAND CHECK.**
 
 🔵 **Full narrative, the per-leg table, the three shelved rows, the

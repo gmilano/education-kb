@@ -1,0 +1,69 @@
+gate	verdict_p543	verdict_p542_pristine	note
+gate-offline	RED	RED	inherited red, also red at pristine p542
+recount	RED	RED	inherited red, also red at pristine p542
+gate-enumeration	RED	RED	inherited red, also red at pristine p542
+gate-tables	GREEN	GREEN	-
+gate-conflict	GREEN	GREEN	-
+gate-absence	GREEN	GREEN	-
+gate-dates	GREEN	GREEN	-
+gate-provenance	GREEN	GREEN	-
+gate-identity	GREEN	GREEN	-
+gate-ladder-case	GREEN	GREEN	-
+gate-readme-channel	GREEN	GREEN	-
+gate-restatement	GREEN	GREEN	-
+gate-pin-grant	GREEN	GREEN	-
+gate-evidence-store	GREEN	GREEN	-
+gate-slug-oracle	GREEN	GREEN	-
+gate-payload-pin	GREEN	GREEN	-
+gate-shelf-consistency	RED	RED	inherited red, also red at pristine p542
+gate-affero-rung	GREEN	GREEN	-
+gate-family-coverage	GREEN	GREEN	-
+gate-permissive-arm	GREEN	GREEN	-
+gate-template-identity	GREEN	GREEN	-
+gate-presentation-fold	GREEN	GREEN	-
+gate-untitled-payload	GREEN	GREEN	-
+gate-region-headings	GREEN	GREEN	-
+gate-prose-claims	GREEN	GREEN	-
+gate-register-currency	GREEN	RED	FIXED by p543 (gap register no longer lags the shelves)
+gate-bespoke-title	GREEN	GREEN	-
+gate-fold-identity	RED	RED	inherited red, also red at pristine p542
+gate-grant-scope	GREEN	GREEN	-
+gate-alias-canonical	RED	RED	inherited red, also red at pristine p542
+gate-author-key	RED	RED	inherited red, also red at pristine p542
+gate-payload-digest	GREEN	GREEN	-
+gate-address-shape	GREEN	GREEN	-
+gate-census-currency	RED	RED	inherited red, also red at pristine p542
+gate-grant-path	RED	RED	inherited red, also red at pristine p542
+gate-carried-existence	GREEN	GREEN	-
+gate-restated-presence	GREEN	GREEN	-
+gate-grant-residue	GREEN	GREEN	-
+gate-companion-closure	GREEN	GREEN	-
+gate-bare-slug-channel	GREEN	GREEN	-
+gate-refset-register	GREEN	GREEN	-
+gate-domain-check	GREEN	GREEN	-
+gate-region-place	GREEN	GREEN	-
+gate-backlog-denominator	GREEN	GREEN	-
+gate-dead-citation	GREEN	GREEN	-
+gate-regional-leg	GREEN	GREEN	-
+gate-census-union	RED	RED	inherited red, also red at pristine p542
+gate-ledger	GREEN	GREEN	-
+gate-promotion-queue	GREEN	GREEN	-
+gate-i2-sweep-crosscheck	RED	RED	inherited red, also red at pristine p542
+gate-union-currency	RED	RED	inherited red, also red at pristine p542
+gate-subtree-grant	GREEN	GREEN	-
+gate-offset-region	GREEN	GREEN	-
+gate-shelf-fork	GREEN	GREEN	-
+gate-capability-absence	GREEN	GREEN	-
+gate-fork-direction	GREEN	GREEN	-
+gate-group-lineage	GREEN	GREEN	-
+gate-action-answered	RED	RED	inherited red, also red at pristine p542
+gate-commit-gate	GREEN	GREEN	-
+gate-case-collision	RED	RED	inherited red, also red at pristine p542
+gate-conjunctive-grant	GREEN	GREEN	-
+gate-branch-alias	GREEN	GREEN	-
+gate-promotion	GREEN	GREEN	-
+gate-recency	GREEN	GREEN	-
+gate-promotion-ledger	RED	RED	inherited red, also red at pristine p542
+gate-grant-presence	GREEN	GREEN	-
+gate-cell-reproduction	RED	RED	inherited red, also red at pristine p542
+gate-promotion-ratchet	GREEN	GREEN	-

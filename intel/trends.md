@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education AI — Current Trends
 
-**Pass `p542` · 2026-10-30.** **Thirty-eight** trends. Each one is stated so it could be
+**Pass `p543` · 2026-10-30.** **Thirty-nine** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -1437,17 +1437,94 @@ base holding 3 202 addresses**. But the yield is not spread evenly across
 
 🔵 **So the trend is sharper than "search in other languages":** the axis is
 **whether a language indexes a separate publishing corpus**, and only then is a
-leg worth its cost. 🔴 **The disconfirming evidence to watch for:** a single
-pass of one leg per language is a weak sample, and one German or Korean leg
-returning two absent artefacts next pass would falsify the negative half.
-**`Gap 542-E` asks for exactly that re-measurement rather than letting a
-one-pass negative harden into doctrine.**
+leg worth its cost.
+
+> ### 🔴 `p543` — REWRITTEN. The "distinct corpus" formulation above is **falsified**, by the disconfirming case the trend itself asked for
+>
+> `p542` named the evidence that would break it: *"a single pass of one leg per
+> language is a weak sample."* 🟢 **`p543` ran four untried legs — `ru`, `vi`,
+> `tr`, and `it` as a designated control — with the prediction registered
+> first** ([`../scratchpad/p543/predictions.txt`](../scratchpad/p543/predictions.txt)).
+>
+> 🔴 **Russian is the falsifier, and it falsifies the *positive* half rather
+> than the negative one.** Russian indexes one of the largest separate
+> publishing corpora on the internet — the leg returned Habr, DTF,
+> `braintools.ru` and `thecode.media`, four Russian-language outlets answering
+> in Russian — and it yielded **zero** education artefacts. 🔵 **Because what
+> that corpus publishes is *localised rankings of the English corpus*** —
+> Habr's *"100 лучших ИИ-репозиториев на GitHub в 2026 году"* ranks
+> `rasbt/LLMs-from-scratch`, `500-AI-Agents-Projects`, `OpenHands` and `goose`,
+> every one already on this base. **A distinct corpus that aggregates is a
+> mirror, not a source.** Distinctness is necessary and **not sufficient**.
+>
+> 🟢 **The predictor that survives all twelve legs measured so far is narrower
+> and more useful: whether the language's developers are coding against a
+> NAMED NATIONAL INSTITUTION OR CURRICULUM.** Every artefact the yielding legs
+> produced is anchored to one — **TÜBİTAK 2209-A** and **BTK course 514** (`tr`),
+> the **GDPT 2018** curriculum and the **Vietnam AI in Education Pioneer Award**
+> (`vi`), **BNCC** and **ENEM** (`p541`'s `pt`), a **provincial maths taxonomy**
+> (`p542`'s `zh`). 🔴 **The five legs with no such anchor in their results —
+> `de`, `ja`, `ko`, `it`, `ru` — returned nothing, which is now 0 absent
+> artefacts of 4 legs plus `p542`'s 0 of 3.**
+>
+> 🔵 **Why the refinement is worth more than the original:** "find a distinct
+> corpus" is not actionable, while **"find the country's curriculum, exam board
+> or research funder, then search in its language"** is a procedure. It also
+> explains the `it` control without appeal to corpus size: Italian education
+> developers in these results are not building against a named national
+> instrument.
+>
+> 🟡 **`Gap 542-E` is answered for the languages tested and stays open for
+> `de`/`ja`/`ko`**: `p543` added `ru` and `it` as negatives rather than
+> re-measuring p542's three, so those remain one-pass negatives.
 
 ⚠️ **The part that makes this a trend and not a tip:** the omission is
 **invisible from inside the scan.** A missing result and an absent artefact
 look identical, so a team scanning an Indonesian or Brazilian education market
 in English gets a confident, complete-looking, systematically short answer —
 and no signal that it is short.
+
+## 🆕 `p543` — Trend 39: **a language leg's artefact count and its *usable* artefact count are different numbers, and the gap is regional**
+
+**Stated so it can be wrong:** if open-source supply discovered in a national
+language were usable at roughly the rate English-corpus supply is, then the
+grant rate of artefacts found on a non-English leg would be close to the grant
+rate of this base's shelf as a whole (which is dominated by MIT and Apache-2.0).
+
+🔴 **Measured on this pass's four legs, and it is wrong by the widest margin
+this base has recorded on any supply axis.**
+
+| Leg | Education-specific artefacts found absent | Carrying a permissive grant |
+|---|---|---|
+| `vi` Vietnamese | **3** | 🔴 **0** |
+| `tr` Turkish | **3** | 🟢 **3** (one of them a localisation of a held upstream) |
+| `ru` Russian | 0 | — |
+| `it` Italian | 0 | — |
+
+🔵 **The Vietnamese three are not casual projects:** 75 commits and a 19 251 B
+README on `edu_agents`, a NestJS/Mastra/Prisma/BullMQ backend on `ZaloAgent`, a
+national award entry on `smart-ict-classroom`. **They carry no licence on any
+of three channels** — 180 filenames at the resolved default branch, the
+repository sidebar, and the README prose. 🟢 **Türkiye's three are MIT, and both
+of the non-fork ones are anchored to a state institution** (BTK, TÜBİTAK),
+which is likely the mechanism rather than a coincidence: **an artefact produced
+inside an institutional frame inherits a licensing habit; a teacher's or
+student's project does not.**
+
+🔴 **Why this matters more than it looks.** A market scan that counts artefacts
+concludes *Vietnam out-produced Türkiye this pass*. A scan that counts what can
+be built on concludes *Vietnam produced nothing*. 🟢 **Both are true and they
+imply opposite engagements** — adopt-and-extend in Türkiye, versus licensing,
+governance and productisation of domestic prototypes in Vietnam. **The grant is
+not a footnote on a supply finding; it is half of it.**
+
+⚠️ **The disconfirming evidence to watch for:** this is one pass of two
+yielding legs, n=6 artefacts. A Vietnamese leg next pass returning two
+MIT-licensed domestic agents would collapse the asymmetry into noise, and a
+Turkish leg returning three ungranted ones would too. 🔵 **The cheap test is
+`p541`'s Spanish and Portuguese artefacts: grade the grant rate of those eight
+retrospectively** — they are already on this base, and nobody has counted them
+that way.
 
 ## 🆕 `p542` — Trend 37: **the permissive end of education software is pedagogy; the administrative end is copyleft, and that is stable**
 
