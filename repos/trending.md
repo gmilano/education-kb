@@ -4,6 +4,116 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p545` — `2026-10-30` — **🟢 ALL 162 SHELF ADDRESSES PROBED: **162/162 LIVE**, ZERO DEAD — A CURATED SHELF DECAYS MORE SLOWLY THAN THE QUEUE IT CAME FROM (`p539`: 96.2 %). 🔴 AND ONLY **94 OF 162 DEFAULT TO `main`** — A FIXED BRANCH LIST FAILS ON **42 %**, NOT `p543`'s 19 %, WITH EIGHT VALUES NO LIST WOULD EVER GUESS (`v4.0.x-develop`, `java11`, `2.12`, `19.0`). 🟢 `Gap 544-E` CLOSED: THE COUNT IS DERIVABLE AT LAST — **156 ROWS / 162 ADDRESSES / 161 SYSTEMS** — AND THE CARRIED "SEVENTY-TWO" WAS PASS ARITHMETIC FROZEN AT `p534`, UNDERSTATING THE PAGE BY **84 ROWS**. 🔴 TWELFTH GATE DENIAL IN THIRTEEN PASSES.**
+
+🔵 **The supply narrative and the region-origin census are on
+[`../agents/trending.md`](../agents/trending.md#-p545--2026-10-30).** This entry carries
+the instrument record.
+
+### 🔴 Gate posture, stated first and without softening
+
+🔴 **`make hooks` was DENIED (`Code from External`)**, and so were the repo's own
+`ingest/` scripts. **Twelve denials in thirteen passes.** 🔵 **Nothing in `p545` is
+gate-attested.** Every figure below was re-implemented inline — and this pass that
+fallback was run **with three negative controls**, which is the part previous passes
+skipped.
+
+### 🟢 `Gap 544-E` closed — and the ask was wrong by one level
+
+🔴 **`544-E` asked for a *row-level* disposition marker.** Measured first:
+`repos/foundations.md` holds **180 data rows in 31 tables**, and **no table mixes
+dispositions.** 🟢 **Disposition is a property of the table, not of the row** — so a
+per-row marker would have been **180 edits encoding 31 facts**, each one a place to drift.
+🔵 **Declared per table instead**
+([`../ingest/foundations-disposition.tsv`](../ingest/foundations-disposition.tsv)) and
+derived by
+[`../ingest/derive-foundations.py`](../ingest/derive-foundations.py):
+
+| Disposition | Rows |
+|---|---|
+| 🟢 **`SHELF`** — load-bearing systems this page files | **156** |
+| 🔴 `CENSUS` — the Moodle MCP sample of 222 addresses | 13 |
+| 🔴 `METRIC` — measurement tables carrying no repo rows | 19 |
+| 🔴 `SUMMARY` — restatements of rows filed elsewhere | 7 |
+| | **195** rows, all accounted for |
+
+🔴 **The carried figure was not merely underivable, it was stale by nine passes.**
+*"Seventy-two"* was pass arithmetic — *"fifty-eight + eleven (`p533`) + three (`p534`)"* —
+**frozen at `p534` while `p535`…`p543` filed rows below it.** 🟢 **Derived: `156`. The
+header understated its own page by `84` rows.**
+
+### 🟢 The instrument failed twice while being built, and both failures are the design argument
+
+🔴 **Failure 1 — the manifest keyed on line numbers, and broke on the first edit of the
+page it describes.** The same pass that wrote the manifest also rewrote the page header;
+every heading shifted and the gate exited `2`. 🟢 **Re-keyed on the heading's own text**,
+which survives edits above it.
+
+🔴 **Failure 2 — the loader skipped all 31 declarations and derived `0`.** The keys *are*
+markdown headings, so every one of them begins with `#`, and the loader's comment rule was
+`startswith("#")`. 🟢 **Fixed to "a comment is a `#` line with no tab in it".** 🔵 **Both
+are recorded because a counting bug is invisible when the result is a number**: `0` looked
+exactly as much like an answer as `156` does.
+
+### 🟢 Three negative controls — a gate that has never failed is not known to work
+
+| Control | Expected | Measured |
+|---|---|---|
+| Header figure falsified `156` → `157` | RED | 🟢 `RED header claims 157, table derives 156`, exit **1** |
+| A declared table deleted from the manifest | RED, named | 🟢 `undeclared … L475 ## Platform cores`, exit **2** |
+| A manifest key renamed off the page | RED, named | 🟢 `manifest names a heading the page no longer carries`, exit **2** |
+| Restored | GREEN | 🟢 `GREEN header agrees with its tables`, exit **0** |
+
+### 🟢 `Gap 545-C` — closed in the pass that named it, because `544-D`'s rule was applied
+
+🟢 **`544-D` says `grep -rF` a prescription against `ingest/` before registering it.
+Applied, it changed the outcome:** the instrument was **already built** —
+[`../ingest/alias-sweep.sh`](../ingest/alias-sweep.sh), since `p543` — and had simply never
+been pointed at this page. All **162** shelf addresses swept with
+`git ls-remote --symref`
+([`../evidence/shelf-alias-branch-sweep.2026-10-30-p545.tsv`](../evidence/shelf-alias-branch-sweep.2026-10-30-p545.tsv)):
+
+| Result | Figure |
+|---|---|
+| 🟢 LIVE | **162 / 162 — 100 %** |
+| 🔴 DEAD / PRIVATE | **0** |
+| 🟡 Alias pairs (identical HEAD sha) | **1** — [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) ≡ [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET), both `4f96365d3108` |
+| 🟢 Distinct systems | **161** |
+
+🟢 **`162/162` against `p539`'s backlog figure of `96.2 %` live is the first direct
+evidence this base has that curation is doing work** — the shelf decays more slowly than
+the queue it was drawn from.
+
+### 🔴 The result an engagement will actually feel: `42 %` of the shelf does not default to `main`
+
+| Default branch | Count |
+|---|---|
+| `main` | **94** |
+| `master` | 46 |
+| `develop` | 12 |
+| `dev` | 2 |
+| 🔴 one-offs | **8** — `v4.0.x-develop` · `release_11` · `release` · `development` · `mobile` · `java11` · `2.12` · `19.0` |
+
+🟢 **This independently confirms `p543`'s closure of `542-B` as WRONG REMEDY, and
+strengthens it by more than double.** `p543` measured a fixed branch list failing on
+**19 %** of the shelf; measured here against default branches *actually served*, it fails
+on **42 %** — and **eight of those values no candidate list would ever contain.** 🔵 **The
+standing rule for every probe on this base: resolve the default branch with
+`ls-remote --symref`; never enumerate candidates.**
+
+### 🔴 What `p545` did not measure, named so silence is not read as coverage
+
+- 🔴 **`Gap 544-C` (staleness) is untouched.** `git ls-remote` returns a HEAD sha and **no
+  date**, so this sweep — which touched all 162 addresses — still cannot say how stale any
+  of them is. A date needs `p392`'s blobless clone, 162 times.
+- 🔴 **The alias sweep sees *current* identity only.** Two addresses that have since
+  diverged read as distinct, and a rename to an address this base never recorded is
+  invisible. Both are [`../ingest/alias-sweep.sh`](../ingest/alias-sweep.sh)'s own
+  documented limits, inherited here unchanged.
+- 🔴 **`agents/top.md`'s 162-address equivalent was not swept** — only
+  `repos/foundations.md`'s. The shelf's liveness is therefore **unmeasured** this pass.
+
+
 ## 🆕 `p544` — `2026-10-30` — **🟢 AN INDEPENDENT RE-IMPLEMENTATION REPRODUCED THIS BASE'S LICENCE BYTES ON 3 OF 3 AND ITS `sha256` DIGESTS ON 2 OF 2 — AFTER FIRST WALKING STRAIGHT INTO `Gap 542-A`'s DOCUMENTED OFF-BY-ONE TRAP. 🔴 `Gap 543-A` NEEDED NO WORK: `probe-grant.sh` HAS RESOLVED THE DEFAULT BRANCH SINCE `p509` AND THE REGISTER DID NOT KNOW IT — ALL SEVEN OF ITS CLAIMS REPRODUCE. 🟢 `543-B` CLOSED **UNBUILDABLE ON A MEASUREMENT**: THE GIT CHANNEL RETURNS **200 AND NO `Location` HEADER AT ALL** FOR A RENAMED REPO. 🟢 `543-C` DELIVERED FOR ARCHIVE STATE AND MEASURED **NOT CLOSED** FOR STALENESS. 🔴 AND `repos/foundations.md`'s COUNT IS **NOT DERIVABLE** — 175 ADDRESSES AGAINST A CLAIMED SEVENTY-TWO.**
 
 🔵 **The supply narrative, the four language legs and the origin-axis correction

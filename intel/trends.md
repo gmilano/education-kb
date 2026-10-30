@@ -6,10 +6,15 @@ updated: 2026-10-30
 
 # Education AI — Current Trends
 
-**Pass `p544` · 2026-10-30.** **Forty-one** trends. Each one is stated so it could be
+**Pass `p545` · 2026-10-30.** 🟢 **derived trends: **43****. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
+
+> 🟢 **`p545` adds Trends 42 and 43 and *narrows* Trend 40.** Trend 40 said a search leg
+> measures the index it reaches, not the artefact's origin. 🟢 **`p545` shows when reading
+> the artefact's own language is nonetheless sound — and the condition is sharp enough to
+> apply before the fact.** See Trend 42.
 
 > 🆕 **`p528`, a same-day second pass**, rewrote **Trend 4** (the Moodle reading
 > was wrong in shape), sharpened **Trend 9**, and added **Trend 11** on a
@@ -1659,4 +1664,53 @@ an 18-line program preamble — the form the FSF's own instructions recommend �
 precedes the AGPL-3.0 text. **Following the licence's own guidance defeats the
 platform's classifier**, so the artefacts most carefully licensed are among
 those most likely to read as unlicensed.
+
+## 🆕 `p545` — Trend 42: **an artefact's language places it only where that language is confined to one region — and for Spanish and Portuguese it is not**
+
+**The claim.** Reading a region off an artefact's own language is sound **if and only if
+that language is confined to a single region of a five-value vocabulary**
+(`North America · EMEA · APAC · LATAM · Global`). `de`, `zh`, `id` and `vi` are confined.
+🔴 **`es` and `pt` are not: both span EMEA and LATAM** — Spain and Portugal sit on one
+side, nineteen American states and Brazil on the other.
+
+**Why it matters commercially and not just methodologically.** A studio that places
+supply by language will systematically **mis-assign Iberian work to LATAM and LATAM work
+to EMEA**, in exactly the two languages where the region's supply is thickest. 🟢 The
+same trap is waiting in **French** (France is EMEA, Canada is North America) and would
+have fired silently on the next leg.
+
+**How it could be wrong.** If a shelf row placed on `de`, `zh`, `id` or `vi` turns out to
+originate outside the predicted region, the confinement rule is insufficient and
+something else is doing the work. 🟢 **Tested at `p545` on five such rows; none
+contradicted it.** The rule also says nothing about *Global* placements, which remain
+judgements.
+
+**What `p545` measured.** Seven shelf rows place a region on language. Five are confined
+and survive. The two that are not — [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA)
+(`es`) and [`maiatechdev/avit`](https://github.com/maiatechdev/avit) (`pt`) — **both have
+the right region and neither had the right evidence**: one cited three things that name no
+country while the artefact names Colombia four ways; the other cited a phrase **not present
+in the artefact at all.**
+
+## 🆕 `p545` — Trend 43: **the agentic segment of education AI is now priced separately — and it is about a quarter of the market, with tutoring as the wedge**
+
+**The claim.** Until this pass every figure on this base sized *AI in education entire*.
+🟢 **Mordor Intelligence now prices the agentic segment on its own: USD `2.37 B` (2026) →
+USD `11.83 B` (2031)**, against a whole-market 2026 band the research firms themselves put
+between **USD `6.4 B` and `11.4 B`**. 🟢 **Grand View Research** prices *AI tutors* at
+**USD `2.7 B` (2026)**, CAGR **30.5 %** to 2033. **So agentic is roughly a quarter of the
+whole, and tutoring is most of the agentic quarter.**
+
+**The go-to-market consequence, which is the useful part.** Mordor states it directly —
+*tutoring remains the gateway purchase that seeds broader platform penetration*. 🔵 **For
+an engagement that means the tutor is the door, not the product**: the administrative,
+assessment and records work is where the other three quarters are, and it is reached
+through a tutor deployment rather than sold beside one.
+
+**How it could be wrong.** 🔴 **The two figures overlap and are not additive**, and
+neither firm says where "agentic" stops and "tutor" starts — a definitional boundary, not
+a measurement. 🔴 **Both are research-firm marketing pages, not audited data.** If a third
+firm prices the agentic segment at half or double, the *ratio* claim fails and only the
+sequencing claim survives. 🟢 Stated as a ratio precisely because the absolute numbers are
+the weakest part.
 

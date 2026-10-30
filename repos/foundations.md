@@ -6,10 +6,28 @@ updated: 2026-10-30
 
 # Foundational Education Repos
 
-**Pass `p544` · 2026-10-30.** Load-bearing systems an education engagement is
+**Pass `p545` · 2026-10-30.** Load-bearing systems an education engagement is
 likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms, standards and
 toolkits the agents must live beside.
+
+🟢 **derived shelf rows: **156** · distinct addresses: **162** · distinct systems: **161**.**
+All three are produced by
+[`../ingest/derive-foundations.py`](../ingest/derive-foundations.py) from the tables
+themselves against a declared disposition per table
+([`../ingest/foundations-disposition.tsv`](../ingest/foundations-disposition.tsv)) and a
+declared alias relation ([`../ingest/foundations-alias.tsv`](../ingest/foundations-alias.tsv)),
+and the gate fails if this sentence and the tables disagree. 🔵 **This is the first total
+this page has been allowed to quote**, and the header's standing prohibition on quoting one
+is lifted with it. 🔵 **Three quantities, never conflated:** a *row* may name an upstream
+and its fork; an *address* may be an alias of another; a *system* is what an engagement
+actually inherits.
+
+🟢 **And all 162 were probed this pass, not assumed: `162 / 162 LIVE`**, zero dead, zero
+private ([`../evidence/shelf-alias-branch-sweep.2026-10-30-p545.tsv`](../evidence/shelf-alias-branch-sweep.2026-10-30-p545.tsv)).
+🔵 Worth stating beside `p539`'s backlog figure of **96.2 % live**: **a curated shelf decays
+more slowly than the queue it was drawn from**, which is the first direct evidence this base
+has that curation is doing work.
 
 🔴 **`p544` filed no new row here, and the reason is worth more than a row would
 have been.** The four-region sweep and four language legs returned **no
@@ -28,27 +46,81 @@ divergence in maintenance: the maintained fork is the right row and a second
 address for a held grant is a duplicate, not supply** (registered alias relation
 `397-F`).
 
-🔴 **`Gap 534-E` is now measured, and it cannot be closed by editing a number.**
-[`../ingest/derive-counts.sh`](../ingest/derive-counts.sh) finds **175 distinct
-GitHub addresses in this page's table rows** against the seventy-two claimed
-below. 🔵 **That is not a discrepancy to fix — it is the two quantities this
-header already warns about**, since several sections here are censuses whose rows
-were never load-bearing-system rows. 🟢 **So the script abstains rather than
-guessing**, because an inferred count is precisely the *"inference becomes wrong
-data"* failure this base exists to avoid. 🔴 **The remedy is a row-level
-disposition marker, registered as `Gap 544-E`** — and until it exists, this
-header's standing instruction holds: **no total on this page should be quoted.**
+### 🟢 `Gap 544-E` / `Gap 534-E` — CLOSED at `p545`, and the carried number was wrong by more than 2×
 
-🔴 **The count in this sentence was stale and is now stated as arithmetic rather
-than asserted.** This header read *"Pass `p532` · **Fifty-eight**"* while `p533`
-filed **eleven** further rows below it without touching it — so the headline
-number was wrong for a whole pass, in the one place a reader looks first.
-🟡 By pass arithmetic the figure is **fifty-eight + eleven (`p533`) + three
-(`p534`) = seventy-two**; it is *derived*, not recounted, because several
-sections here are **censuses** (the Moodle MCP census alone covers 222
-addresses) and a row count and a "load-bearing system" count are not the same
-quantity. 🔵 A recount against an explicit rule for what counts is `Gap 534-E`
-— and until it runs, no total on this page should be quoted.
+🔴 **The figure this header carried for eleven passes — *"seventy-two"* — was never a
+count. It was pass arithmetic** (*"fifty-eight + eleven (`p533`) + three (`p534`)"*),
+**frozen at `p534`, while `p535`…`p543` filed rows below it and none of them touched the
+sentence.** 🟢 **Derived from the tables, the figure is `156`.** The carried number
+understated this page by **84 rows**.
+
+🔵 **Why it could not be derived before, and what changed.** `p544`'s
+[`../ingest/derive-counts.sh`](../ingest/derive-counts.sh) found **175 distinct GitHub
+addresses** in this page's table rows and **abstained**, correctly: several sections here
+are **censuses**, and a census row was never a load-bearing-system row. `544-E` asked for
+**a row-level disposition marker**. 🟡 **Measured at `p545`, the unit is wrong by one
+level:** the page holds **180 data rows in 31 tables**, and **no table mixes dispositions**
+— disposition is a property of the *table*. A per-row marker would have been **180 edits
+encoding 31 facts**, each one a place to drift. 🟢 **Declared per table instead**, in
+[`../ingest/foundations-disposition.tsv`](../ingest/foundations-disposition.tsv), and
+derived by [`../ingest/derive-foundations.py`](../ingest/derive-foundations.py):
+
+| Disposition | Rows | What it means |
+|---|---|---|
+| 🟢 **`SHELF`** | **156** | Load-bearing systems this page files. **These, and only these, are counted.** |
+| 🔴 `CENSUS` | 13 | The Moodle MCP census — a 13-row sample of **222** addresses. An enumeration of a population, not supply this page filed. |
+| 🔴 `METRIC` | 5 | `p539`'s backlog measurement (LIVE/DEAD/grant-gate rates). Carries no repository rows at all. |
+| 🔴 `SUMMARY` | 7 | The licence-band map (4) and `p534`'s three-platform refutation (3) — both **restate rows filed elsewhere on this page**, so counting them double-counts. |
+| | **180** | every data row on the page, accounted for |
+
+🟢 **An undeclared table is an error, not a default:** the gate exits `2` and names it, so a
+section added by a later pass **cannot** silently re-break the count. 🟢 **And the
+declarations are re-resolved by heading *text* at run time**, not by the line numbers the
+manifest is written with, so ordinary editing does not re-point a declaration at a
+different section.
+
+🔴 **One thing this closure does NOT deliver, stated so it is not read into it.** 🔴 **The
+gate did not run under `make hooks`**, which was refused `Code from External` for the
+**twelfth time in thirteen passes**; it was run directly. **A green gate that the
+gate-runner never ran is evidence, not attestation** (`Gap 545-D`).
+
+🟢 **Three negative controls were run, because a gate that has never failed is not known to
+work:** the header figure falsified `156→157` → `RED`, exit `1`; a declared table deleted
+from the manifest → `RED`, names `## Platform cores`, exit `2`; a manifest key renamed off
+the page → `RED`, exit `2`. Restored, the gate returns `GREEN`, exit `0`.
+
+### 🟢 `Gap 545-C` — named and closed in the same pass, and the sweep paid for itself twice
+
+🔵 **`544-D` asks that a prescription be `grep -rF`'d against `ingest/` before it is
+registered. Applied here, it changed the outcome:** the instrument `545-C` would have asked
+for — [`../ingest/alias-sweep.sh`](../ingest/alias-sweep.sh) — **already existed since
+`p543`** and had simply never been run over this page. 🟢 **So the gap was closed rather
+than registered.** All 162 shelf addresses were swept with `git ls-remote --symref`:
+
+| Result | Figure |
+|---|---|
+| 🟢 LIVE | **162 / 162 — 100 %** |
+| 🔴 DEAD / PRIVATE | **0** |
+| 🟡 Alias pairs (identical HEAD sha) | **1** — [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) ≡ [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET), both `4f96365d3108` |
+| 🟢 **Distinct systems** | **161** |
+
+🔴 **And the sweep's second result is the one an engagement will feel: only `94` of `162`
+shelf repositories default to `main` — `42 %` do not.**
+
+| Default branch | Count |
+|---|---|
+| `main` | 94 |
+| `master` | 46 |
+| `develop` | 12 |
+| `dev` | 2 |
+| 🔴 one-offs | 8 — `v4.0.x-develop` · `release_11` · `release` · `development` · `mobile` · `java11` · `2.12` · `19.0` |
+
+🟢 **This independently confirms `p543`'s closure of `542-B` as WRONG REMEDY and
+strengthens it.** `542-B` proposed a fixed branch list and `p543` measured it failing on
+**19 %** of the shelf; measured here against *default branches actually served*, a fixed
+list fails on **42 %**, and **8 of those branches (`v4.0.x-develop`, `java11`, `2.12`,
+`19.0`) are values no list would ever guess.** 🔵 **The rule for any probe on this base:
+resolve the default branch, never enumerate candidates.**
 
 > 🟢 **`p530` adds a layer this file did not have: the e-learning standards
 > implementations.** Twelve repos — SCORM runtimes, xAPI learning record stores,

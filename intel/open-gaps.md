@@ -4,6 +4,94 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p545` — `2026-10-30` — **🟢 `544-A` CLOSED BY NARROWING (64 ROWS → 2, VIA A CONFINEMENT RULE). 🟢 `544-E` CLOSED WITH A DERIVED **156** AND THREE NEGATIVE CONTROLS. 🟢 `545-C` NAMED AND CLOSED IN THE SAME PASS BECAUSE `544-D`'s GREP RULE FOUND THE INSTRUMENT ALREADY BUILT. 🔴 `544-C` UNTOUCHED, `544-B` STILL UNRUN, AND `544-F` IS NOW A TWELFTH DENIAL. 🔴 THREE REGISTERED (`545-A`, `545-B`, `545-D`).**
+
+### 🟢 `Gap 544-A` — CLOSED
+
+**Asked:** *"census the shelf's `Region (origin)` column for leg-derived values; any row
+whose region was taken from the leg rather than read from the artefact is unproven."*
+
+**Delivered, and narrowed rather than ground out.** Seven shelf rows place a region on
+language. 🟢 **Five were never at risk, for a reason no page had stated: the language is
+confined to a single region of the closed five-value vocabulary** (`de`→EMEA,
+`zh`/`id`/`vi`→APAC). 🔴 **Two are not confined — `es` and `pt` both span EMEA and
+LATAM** — and both were re-read first-hand.
+
+🔵 **Both kept their region and lost their evidence, in opposite directions.**
+[`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) cited three things that name
+no country while the artefact names **"Risaralda, Colombia"**, the **Universidad
+Tecnológica de Pereira** and Colombia's **SNCTI**.
+[`maiatechdev/avit`](https://github.com/maiatechdev/avit) cited *"janela pedagógica"*,
+which **does not occur in the README** (`grep -ic` → `0`).
+
+🔴 **A correction to this pass's own first draft, caught before commit:** it called the
+statute anchor *"a kind this base had not catalogued"*. `grep -rF "15.100"` — `544-D`'s
+rule, applied late — finds it already on [`market.md`](market.md). **Retracted.**
+
+### 🟢 `Gap 544-E` / `Gap 534-E` — CLOSED
+
+**Asked:** *"mark each row's disposition, then derive."*
+
+**Delivered — and the ask was wrong by one level.** The page holds **180 data rows in 31
+tables** and **no table mixes dispositions**, so disposition is a property of the *table*.
+A per-row marker would have been **180 edits encoding 31 facts**.
+🟢 Declared per table in [`../ingest/foundations-disposition.tsv`](../ingest/foundations-disposition.tsv),
+derived by [`../ingest/derive-foundations.py`](../ingest/derive-foundations.py):
+**`SHELF` 156 · `CENSUS` 13 · `METRIC` 19 · `SUMMARY` 7**.
+
+🔴 **The carried figure was not merely underivable, it was stale by nine passes.**
+*"Seventy-two"* was pass arithmetic frozen at `p534`. **Derived: 156. Understated by 84.**
+
+🟢 **Three negative controls fire** (falsified header → `RED`/1; declared table deleted →
+`RED`/2, named; manifest key renamed off the page → `RED`/2). 🔴 **Two defects in the
+instrument's own construction are recorded rather than quietly fixed:** it first keyed on
+line numbers and broke on the first edit of the page it describes; then its comment rule
+`startswith("#")` skipped all 31 declarations — **because the keys are markdown headings**
+— and derived `0`. 🔵 **A counting bug is invisible when the result is a number.**
+
+### 🟢 `Gap 545-C` — NAMED AND CLOSED IN THE SAME PASS
+
+🟢 **`544-D` works.** Its rule — `grep -rF` a prescription against `ingest/` before
+registering it — found [`../ingest/alias-sweep.sh`](../ingest/alias-sweep.sh) **already
+built since `p543`** and never pointed at this page. All **162** shelf addresses swept:
+🟢 **`162/162 LIVE`**, **0** dead, **1** alias pair
+([`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) ≡
+[`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET), both
+`4f96365d3108`), **161 systems**.
+
+🔴 **And the sweep's second result is larger than its first:** only **94 of 162** repos
+default to `main` — **a fixed branch list fails on 42 %**, against `p543`'s 19 %, with
+eight values no list would hold (`v4.0.x-develop`, `java11`, `2.12`, `19.0`).
+
+### 🔴 Carried, and not pretended otherwise
+
+| Gap | State |
+|---|---|
+| **`544-B`** form-not-curriculum | 🔴 **UNRUN.** Now *wider*: `avit`'s anchor is a **statute**, neither form nor curriculum. Not cited as a finding on any curated page |
+| **`544-C`** staleness field | 🔴 **UNTOUCHED.** `p545` touched all 162 addresses and still cannot date one — `ls-remote` serves a sha, not a date. Needs `p392`'s blobless clone ×162 |
+| **`544-F`** no gate attestation | 🔴 **TWELFTH DENIAL IN THIRTEEN PASSES.** Re-registered as `545-D` |
+| **`544-G`** volatile metrics in one place | 🟡 **PARTIAL.** DeepTutor's figures live on `agents/trending.md` and are referenced, not restated |
+
+### 🟢 `Gap 545-A` … `545-D` registered — each `grep -rF`'d first, per `544-D`
+
+- **`545-A`** — 🔴 **a quote gate.** `avit`'s row attributed a phrase to a payload that
+  lacks it, and the phrase occurs **nowhere else on this base** while
+  [`market.md`](market.md) carries the same idea as the English *"pedagogical window"*.
+  🔴 **The base appears to have back-translated its own gloss and credited the artefact** —
+  an error **no re-reading of the base can catch**, because the string really is there, one
+  page over. Needs a gate against *payloads*. `grep -rF "quote"` over `ingest/`: nothing.
+- **`545-B`** — 🔴 **are the trend digests independent?** Seven accounts publish
+  identically-titled daily *"AI Open Source Trends"* issues; four probed serve four
+  different HEADs. 🟡 Looks like one generator in many accounts. **Until tested, agreement
+  across digests must not be written as corroboration** — this base has done so twice. The
+  test: compare two accounts' issue *bodies* for one date.
+- **`545-C`** — 🟢 **CLOSED ABOVE.**
+- **`545-D`** — 🔴 **`make hooks` refused `Code from External`**, and so were the repo's own
+  `ingest/` scripts. Every `p545` figure is an inline re-implementation, run with negative
+  controls. 🔵 **This is now the longest-standing open defect on this base and it is
+  environmental, not technical: it needs a permission decision, not a patch.**
+
+
 ## 🆕 `p543` — `2026-10-30` — **🟢 `542-A` AND `542-H` CLOSED IN THE INSTRUMENT, WITH `p542`'s FOUR HAND-READ BYTE FIGURES REPRODUCED EXACTLY. 🔴 `542-B` CLOSED AS **WRONG REMEDY** — ITS PROPOSED BRANCH LIST FAILS ON 19 % OF THE SHELF. 🟢 `542-C` DELIVERED FOR ALIAS PAIRS, ITS OTHER HALF DECLARED UNBUILDABLE HERE. 🔴 `542-D` GENERALISES: THE PRIMARY-SOURCE HOSTS FAIL ON **BOTH** CHANNELS, SO IT IS A DNS ALLOWLIST, NOT A PROXY RULE. 🔴 AND BOTH OF THIS PASS'S OWN PREDICTIONS FAILED. SIX REGISTERED (`543-A`…`543-F`).**
 
 ### 🟢 `Gap 542-A` — CLOSED

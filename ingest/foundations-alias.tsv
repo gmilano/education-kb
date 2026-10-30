@@ -1,0 +1,16 @@
+# foundations-alias.tsv -- Gap 545-C, closed at p545 in the same pass it was named.
+#
+# DECLARED alias relations among repos/foundations.md's SHELF addresses, so a "systems"
+# count can be derived from an "addresses" count instead of guessed. Produced by sweeping
+# all 162 shelf addresses with `git ls-remote --symref` (the contract of
+# ingest/alias-sweep.sh, re-implemented inline because `make hooks` and the repo's own
+# scripts are refused `Code from External`) and keeping every HEAD sha served by more than
+# one address. Evidence: evidence/shelf-alias-branch-sweep.2026-10-30-p545.tsv
+#
+# LIMIT, stated because it bounds the verdict: identical HEAD proves the two addresses
+# serve the same object graph RIGHT NOW. It cannot see a fork that has since diverged, and
+# it cannot name a rename to an address this base has never recorded. Both halves are
+# alias-sweep.sh's own documented limits and they are inherited here unchanged.
+#
+# COLUMNS (tab-separated): canonical / alias / head_sha / basis
+jdolny/OneRoster.NET	theopenem/OneRoster.NET	4f96365d3108	both addresses served HEAD 4f96365d3108 on 2026-10-30; same object graph

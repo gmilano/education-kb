@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p544` · 2026-10-30.** Every platform below is a real, running system that
+**Pass `p545` · 2026-10-30.** Every platform below is a real, running system that
 institutions already operate, with its licence read from **the licence file's own
 title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
 carried for two passes — "`github.com` returns HTTP 403 through the session
@@ -22,6 +22,47 @@ ship?"**
 Odoo is to ERP what Moodle is to learning: the thing you customise rather than
 replace. In education the equivalents are below, grouped by the institutional
 function they own.
+
+## 🆕 `p545` — the vertical leg returned **nothing new**, and the useful finding is that **the comparisons a client has already read are wrong on the licence that decides the architecture**
+
+🔴 **Supply result first, plainly: the vertical leg returned no platform this base does not
+already hold.** Moodle, Open edX, Canvas, Sakai, OpenEduCat, Frappe LMS, Frappe Education,
+ERPNext — all filed, all graded. 🔵 **Stated so silence is not read as coverage.**
+
+🟢 **What the leg did return is a source-quality result, and it is directly commercial.**
+The mainstream "best open-source LMS 2026" comparison articles — the ones a client's team
+will have read before the first call — **disagree with the payloads on the one field that
+determines whether a studio can ship a proprietary layer.**
+
+| Claim in the comparisons | Read first-hand at `p545` | Verdict |
+|---|---|---|
+| *"**Frappe LMS** is MIT licensed"* | [`frappe/lms`](https://github.com/frappe/lms) `license.txt` @`main` — **33 893 B**, `sha256₁₂ db1a87ba81e8`, title block **`GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007`** | 🔴 **FALSE. AGPL-3.0** — the §13 network clause, the single worst case for a hosted engagement |
+| *"OpenEduCat … Apache 2.0"* (snippet sat beside the Sakai section) | this base grades OpenEduCat **LGPL-3.0** | 🔴 **the comparison's own layout made the licence unattributable** — it is not a claim, it is a formatting artefact read as one |
+| *"Sakai — licence not confirmed"* | this base files the Apereo layer under **ECL-2.0**, a real OSI licence | 🟡 **the comparison simply does not know** |
+
+🟢 **The confusion has a cause this base can name, because it already filed it: the
+licence is per *app*, not per *vendor*.** Read first-hand this pass, all on default branch
+**`master`**:
+
+| Repository | Grant, read as bytes | `sha256₁₂` |
+|---|---|---|
+| [`frappe/frappe`](https://github.com/frappe/frappe) — the framework | 🟢 **MIT**, `LICENSE`, **1 118 B** | `b03bbdca4e0a` |
+| [`frappe/lms`](https://github.com/frappe/lms) — learning | 🔴 **AGPL-3.0**, `license.txt`, **33 893 B** | `db1a87ba81e8` |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) — ERP | 🔴 **GPL-3.0**, `license.txt`, **34 916 B** | `f333043685c8` |
+| [`frappe/education`](https://github.com/frappe/education) — school admin | 🔴 **GPL-3.0 *declared only*** — `license.txt` is **19 B**: the whole file is `License: GNU GPL V3` | `1fcecf395312` |
+
+🔵 **So "Frappe is MIT" is true of the framework and false of every education app on top
+of it** — which is exactly how a comparison article gets it wrong, and exactly the mistake
+a client will have inherited. 🟢 **`p545` adds the byte counts and digests to figures
+`p526` resolved by reading the text**, so the four rows are now content-addressed and a
+later pass can detect a relicensing without re-reading prose.
+
+🔴 **And the 19-byte case deserves its own sentence, because it is a legal risk and not a
+grading curiosity.** `frappe/education`'s entire licence file is **nineteen bytes naming a
+family**. There is no licence text, no copyright holder and no permission language — so
+there is nothing for a client's counsel to review. 🔵 This base already records it as a
+**non-OSI / declaration-only** grant; what `p545` adds is that **it is the administration
+app**, the one an engagement is most likely to need to extend.
 
 ## 🆕 `p544` — **archive state becomes a row field**, and the channel that serves it does *not* serve staleness
 

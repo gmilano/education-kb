@@ -6,7 +6,19 @@ updated: 2026-10-30
 
 # Compose Patterns — Education
 
-**Pass `p544` · 2026-10-30.** **Thirty-eight** recipes. Every component named below
+**Pass `p545` · 2026-10-30.** 🟢 **derived recipes: **49**** — `P547`…`P595`, contiguous,
+counted from the headings by
+[`../ingest/derive-counts.py`](../ingest/derive-counts.py), which fails if this sentence
+and the headings disagree.
+
+🔴 **`p544`'s header said "Thirty-eight", and that was wrong by eleven.** This page held
+**47** recipes (`P547`…`P593`) when that sentence was written. 🔵 **This is the third
+instance of one defect class, found a third way:** `p543` caught it in `agents/top.md`'s
+shelf heading, `p545` caught it in `repos/foundations.md` (*"seventy-two"* against a
+derived **156**), and now here. 🟢 **A count written in prose beside the rows it counts
+goes stale the moment a pass adds a row and forgets the sentence — so this one is no
+longer written, it is derived, and a gate fails if the sentence and the headings
+disagree.** Every component named below
 was read from its repository page, and **every licence was read from the licence
 file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
 this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
@@ -19,6 +31,91 @@ immediately invalidated a component this file would have recommended** — see
 (Moodle GPL-3.0, Open edX / Canvas AGPL-3.0). Agents stay **permissive and
 out-of-process**, talking over MCP, LTI 1.3, REST or xAPI. Where a recipe forks,
 it forks a permissive core.
+
+---
+
+## 🆕 P594 — the device-statute classroom tutor, built inside Brazil's `Lei 15.100/2025` exception (LATAM)
+
+**Brief.** A Brazilian state or municipal network must comply with **Lei nº 15.100 of
+13 January 2025**, which bans personal devices in *educação básica* during class, break
+and intervals — **excepting strictly pedagogical, teacher-mediated use.** The network does
+not want phones out of the classroom; it wants them usable **only** inside that exception.
+🟢 **The compliance artefact is therefore not a policy document — it is the teacher-opened
+session**, and that is what this recipe builds.
+
+| Role | Component | Licence, read as bytes |
+|---|---|---|
+| Reference architecture for the session model | 🆕 [maiatechdev/avit](https://github.com/maiatechdev/avit) | **MIT** — sidebar; 5 430 B README |
+| LMS of record (not forked) | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 — integrate over REST/LTI 1.3 |
+| Activity record, so the exception is auditable | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | **MIT** · `LICENSE` @`main` |
+| Learning Record Store | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** |
+| Policy gate + audit trail on every tool call | [microsoft/agent-governance-toolkit](https://github.com/microsoft/agent-governance-toolkit) | **MIT** · `LICENSE` @`main` |
+| BNCC competency anchoring for the lesson objective | [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | **MIT** · `LICENSE` @`main` |
+
+**Wiring.** The teacher opens a session against a **BNCC competency code** — `agente-bncc-professores`
+turns the code into the objective and the item bank, so the session's pedagogical purpose is
+*recorded before any device unlocks*. The session issues a code/QR; a learner's device is in
+scope **only** while that session is open, which is the statute's "teacher-mediated" limb
+made mechanical rather than promised. The tutor follows `avit`'s ladder — hints that
+withhold the answer, then a worked explanation after three unsuccessful attempts, then a
+similar exercise. Every turn is written as **xAPI** through `learnmcp-xapi` into Ralph, so
+the network can later demonstrate *which* minutes were pedagogical. The
+**agent-governance-toolkit** sits between the tutor and every tool call, giving the audit
+record and the policy gate the statute's mental-health-strategy duty will eventually be
+inspected against. 🔵 **The teacher dashboard shows class aggregates only; the learner sees
+their own session** — `avit`'s own split, and the one that keeps this out of the
+student-profiling conversation.
+
+**🔴 Hard constraints, stated as build rules and not as caveats.**
+1. 🔴 **`avit` is a prototype and its own README says so** — *"protótipo de demonstração.
+   Não há uso com dados reais de alunos até que a análise jurídica seja concluída."*
+   **Read it for the session model; do not take it as a dependency.** `0★ · 0 forks`.
+2. 🔴 **Moodle is GPL-3.0.** The tutor stays out-of-process across REST/LTI 1.3. Nothing in
+   this recipe forks an LMS core.
+3. 🔴 **Lei 15.100/2025 is a *device* statute, not an *AI* statute.** It says nothing about
+   models, automated assessment or profiling, and **Brazil's `PL 2338/2023` is still
+   pending in the Câmara.** 🔵 **Build as though the AI rules are coming**, because this
+   recipe's audit trail is cheap now and retrofitting one is not.
+4. 🟡 **Scope: *educação básica*.** Higher education is outside the statute and this
+   recipe's compliance argument does not transfer to it.
+
+**Effort.** 6–8 weeks to a one-network pilot, assuming Moodle is already running.
+
+---
+
+## 🆕 P595 — the dependency-provenance gate a studio ships in week one (all regions)
+
+**Brief.** Every engagement in this sector inherits open-source components whose licence
+decides the architecture — and **the comparison articles the client has already read are
+wrong about them.** `p545` measured a widely-cited 2026 LMS comparison calling
+[`frappe/lms`](https://github.com/frappe/lms) *"MIT"* when its `license.txt` is **33 893 B
+of AGPL-3.0**. 🟢 **This recipe is the gate that makes that discoverable on day one instead
+of at legal review.** It is this base's own instrument, generalised for client delivery.
+
+| Stage | How | Why this exact shape |
+|---|---|---|
+| 1. Resolve the default branch | `git ls-remote --symref <url> HEAD` | 🔴 **`p545` swept 162 shelf repos: only `94` default to `main` — `42 %` do not**, and eight serve values no candidate list would hold (`v4.0.x-develop`, `java11`, `2.12`, `19.0`). **Never enumerate branch candidates.** |
+| 2. Walk a filename ladder | `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `license.txt`, `LICENCE` (British), `LICENSE-CODE` + `LICENSE-TEXT` (split grants), each in case variants | 🔴 A single-filename probe misreads a fork as ungranted — [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem) ships **`LICENCE`**, and `frappe/*` ships lowercase **`license.txt`** |
+| 3. Read the **title block**, not the sidebar | first lines of the payload over `raw.githubusercontent.com` | 🔴 Sidebars round, mislabel and sometimes say nothing; the title block is the grant |
+| 4. Record **bytes + `sha256`** | `wc -c` and `sha256sum` on the payload | 🟢 Content-addressed, so a **relicensing** is detectable later without re-reading prose. `frappe/frappe` **MIT 1 118 B `b03bbdca4e0a`** vs `frappe/lms` **AGPL-3.0 33 893 B `db1a87ba81e8`** |
+| 5. Flag **stub grants** | any licence file under ~100 B | 🔴 [`frappe/education`](https://github.com/frappe/education)'s entire `license.txt` is **19 B** — `License: GNU GPL V3`. **A family name is not a grant**: no text, no holder, no permission language, nothing for counsel to review |
+| 6. Flag **alias pairs** | identical HEAD sha across two addresses | 🟡 `p545` found [`jdolny/OneRoster.NET`](https://github.com/jdolny/OneRoster.NET) ≡ [`theopenem/OneRoster.NET`](https://github.com/theopenem/OneRoster.NET) at `4f96365d3108`. **Two addresses, one system** — a dependency list that counts both overstates the surface |
+| 7. Check the grant **per app, not per vendor** | run 1–6 on every repo in the family | 🔴 **Frappe is the worked example:** framework **MIT**, LMS **AGPL-3.0**, ERP **GPL-3.0**, school admin **GPL-3.0 declared-only**. *"Frappe is MIT"* is true of one of four |
+
+**🔴 What this gate cannot see, stated so it is not oversold.**
+- 🔴 **Transitive grants.** The licence you ship is the **union of the grants you link** —
+  this base already recorded an MIT repo landing in the network-copyleft band because it
+  links AGPL-3.0 **PyMuPDF**. A repo-level probe is blind to it; you still need a
+  dependency scan.
+- 🔴 **Per-subtree grants.** [`krzysztofbury/librus-mcp`](https://github.com/krzysztofbury/librus-mcp)
+  is **MIT at root** and **GPL-3.0 under `legacy_reference/`**. A root-only read is wrong
+  about it.
+- 🔴 **Staleness.** `ls-remote` returns a HEAD sha and **no date**. Liveness is not
+  currency, and this gate measures only the first.
+
+**Effort.** 1–2 days to build, then it runs in CI. 🟢 **`p545` ran stages 1 and 6 over 162
+addresses and got `162/162 LIVE`, zero dead** — the gate is cheap and the sweep finishes in
+minutes.
 
 ---
 

@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p545` — `2026-10-30` — **🟢 `Gap 544-A` CLOSED BY NARROWING IT FROM 64 ROWS TO 2: A LANGUAGE PLACES AN ARTEFACT **ONLY IF THAT LANGUAGE IS CONFINED TO ONE REGION** OF THE CLOSED VOCABULARY — `de`/`zh`/`id`/`vi` ARE, **`es` AND `pt` ARE NOT**. 🔴 BOTH EXPOSED ROWS SURVIVE ON REGION AND FAIL ON EVIDENCE, IN OPPOSITE DIRECTIONS: `TutorIA` HAD **BETTER** ANCHORS THAN IT CITED, AND `avit` CITED **A PHRASE THAT IS NOT IN THE ARTEFACT**. 🔴 THE PHANTOM QUOTE IS **TRACEABLE**: THE BASE BACK-TRANSLATED **ITS OWN ENGLISH GLOSS** ON `intel/market.md` AND CREDITED THE ARTEFACT. 🟡 THE **STATUTE** ANCHOR WIDENS `544-B` RATHER THAN CONFIRMING IT — AND THIS BASE ALREADY HELD THE STATUTE WITHOUT NOTICING IT WAS LOAD-BEARING. 🟢 `Gap 544-E` CLOSED: **156 SHELF ROWS DERIVED** AGAINST A CARRIED "SEVENTY-TWO" THAT WAS PASS ARITHMETIC FROZEN NINE PASSES AGO. 🟢 `545-C` NAMED AND CLOSED IN THE SAME PASS BECAUSE `544-D`'s OWN GREP RULE FOUND THE INSTRUMENT ALREADY BUILT. 🔴 SEVENTH CONSECUTIVE SUPPLY SATURATION.**
+
+🔵 **Full narrative, the confinement table and the two re-read rows are on
+[`../agents/top.md`](../agents/top.md#-p545--a-language-places-an-artefact-only-when-the-language-is-confined-to-one-region).**
+This entry carries the dated trend record.
+
+### 🔴 What moved this week — and again it is the interpretation, not the shelf
+
+🔴 **`p545` shelved zero agents.** The four mandated region legs and the global supply
+legs returned **no education agent this base does not already hold** — a **seventh
+consecutive saturation**. 🔵 The shelf stands at **64 table rows + 8 filed in their own
+sections = 72**, unchanged. **Fewer real rows beat padding.**
+
+🟢 **What did move: three rows were corrected or upgraded, and two of the three
+corrections were to evidence rather than to verdicts.**
+
+| Row | Change | Why |
+|---|---|---|
+| [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | 🟢 evidence replaced; region **unchanged** | cited *"educación superior rural"* + Spanish + *Grupo Sirius*, **none of which names a country**; the artefact says **"Risaralda, Colombia"**, **Universidad Tecnológica de Pereira** and Colombia's **SNCTI** |
+| [`maiatechdev/avit`](https://github.com/maiatechdev/avit) | 🔴 **cited quote retracted**; region **unchanged** | *"janela pedagógica"* **does not occur in the README** (`grep -ic` → `0`, 5 430 B). Brazil is **never named**. The real anchor is the statute **Lei 15.100/2025** — 🔴 **which [`../intel/market.md`](../intel/market.md) already held**, glossed in English as *"the pedagogical window"*. The phantom quote looks like that gloss **back-translated and credited to the artefact** |
+| [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) | 🟢 *inferred* → **stated** | the 16 094 B README carries **中国** explicitly |
+
+### 🟢 The star figure, and the rounding rule `p544` wrote is immediately load-bearing
+
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — **Apache-2.0**, default branch
+`main`, **not archived**, release **v1.7.0 dated `2026.10.28`**.
+
+| Source | Figure | Kind |
+|---|---|---|
+| Repository sidebar, read `2026-10-30` | **`50.8k★ · 6.2k` forks** | 🔴 **rounded** |
+| Third-party trend digests, `2026-10-28` → `2026-10-30` | `~46 000` → `~50 200`, daily gains `+1 600`…`+2 370` | 🔴 **rounded, and they disagree with each other** |
+| This base, `p537`, API-exact | **`49 850`** | 🟢 precise |
+
+🔴 **The digests do not agree among themselves** — snapshots taken at different hours on
+the same day differ by thousands — **so they corroborate a direction, not a number.**
+🟢 **Recorded as a direction: DeepTutor is still the fastest-rising education agent on any
+channel this base reads, and the precise figure remains `p537`'s `49 850` until an exact
+one is read again.** 🔵 `p544`'s rule — *a rounded number must never be written as a
+precise count* — earned its keep within one pass.
+
+### 🔴 A channel caution: the trend-digest channel is many accounts, not many observers
+
+🔴 **Searching the mainstream trending channel this pass returned, as its top results,
+daily issues titled *"📈 AI Open Source Trends `<date>`"* from at least seven distinct
+accounts** — `duanyytop/agents-radar`, `kouweizhu/agents-radar`, `yaojiejia/agents-radar`,
+`845421145-lang/agents-radar`, `bianzhilong2-ctrl/agents-radar`,
+`fireKylinKing/agents-radar` and `HuggerHustle/ai-radar`. 🟢 **Probed: four of them are
+live and serve four *different* HEAD shas** (`0141bf2860f2`, `6543210d4e04`,
+`66be2cd0d135`, `010094518857`), so they are **not** byte-identical aliases.
+
+🟡 **The inference, marked as an inference:** identically-titled daily digests published by
+many unrelated-looking accounts on the same dates look like **one generator run in many
+accounts**, not like many independent observers. 🔴 **If that is right, then counting how
+many digests name a repository measures how many people installed the generator — and this
+base has twice taken agreement across digests as corroboration.** 🔵 **The test, named
+rather than assumed:** compare two accounts' issue *bodies* for the same date; identical
+bodies settle it. Registered as `Gap 545-B`.
+
+### 🟢 `Gap 544-A` … `Gap 544-G` — disposition
+
+| Gap | State at `p545` |
+|---|---|
+| **`544-A`** region taken from the leg | 🟢 **CLOSED.** Census run: 7 language-derived rows, 5 safe **by confinement**, 2 exposed, both re-read first-hand. Verdicts held; evidence replaced on both |
+| **`544-B`** form-not-curriculum untested | 🔴 **STILL UNTESTED**, and now **wider**: `avit` is anchored by a **statute**, which is neither a form nor a curriculum. Not cited on any curated page as a finding |
+| **`544-C`** staleness field | 🔴 **UNTOUCHED.** Needs `p392`'s blobless clone over 139 addresses; a pass of its own |
+| **`544-D`** register restates solved work | 🟢 **APPLIED, AND IT PAID.** `grep -rF` before registering found [`../ingest/alias-sweep.sh`](../ingest/alias-sweep.sh) already built since `p543`, so `545-C` was **closed instead of registered** |
+| **`544-E`** foundations count not derivable | 🟢 **CLOSED.** **156** shelf rows / **162** addresses / **161** systems, gate green, **three negative controls fire** |
+| **`544-F`** no gate attestation | 🔴 **NOT CLOSED — twelfth denial in thirteen passes.** Carried as `545-D` |
+| **`544-G`** volatile metrics in one place | 🟡 **PARTIAL.** DeepTutor's figures are written here, on the trending page, and referenced from the shelf rather than restated |
+
+### 🟢 `Gap 545-A` … `Gap 545-D` registered
+
+- **`545-A`** — 🔴 **a quote gate**, and `p545` raised its priority by tracing the one case
+  it has. `avit`'s row attributed *"janela pedagógica"* to a payload that does not contain
+  it, and the phrase occurs **nowhere else on this base** — while `intel/market.md`
+  carries the same idea as the English *"pedagogical window"*. 🔴 **A base that quotes its
+  own gloss and credits the artefact cannot catch the error by re-reading itself**, which
+  is precisely why this needs a gate against *payloads*, not a review. Every `*"…"*` on a
+  curated page should be checkable against the payload it is attributed to.
+  `grep -rF "quote"` over `ingest/` returns nothing, so this is new work, not a
+  restatement.
+- **`545-B`** — 🔴 **are the trend digests independent?** Compare two accounts' issue bodies
+  for the same date. Until answered, **agreement across digests must not be written as
+  corroboration**, and this base has done so twice.
+- **`545-C`** — 🟢 **CLOSED IN THIS PASS.** Alias relations among the 162 shelf addresses
+  swept, not inferred: **1** pair, **161** systems, **162/162 LIVE**.
+- **`545-D`** — 🔴 **`make hooks` refused `Code from External` for the twelfth time in
+  thirteen passes**, and so were the repo's own `ingest/` scripts. Every figure in `p545`
+  is an inline re-implementation, run with three negative controls. **A green gate the
+  gate-runner never ran is evidence, not attestation.** 🔵 This is now the longest-standing
+  open defect on this base and it is **environmental, not technical** — it needs a
+  permission decision, not a patch.
+
+
 ## 🆕 `p544` — `2026-10-30` — **🔴 `p543`'s `ru`-ZERO IS A QUERY-LANGUAGE ARTEFACT, NOT AN ABSENCE: THE **UKRAINIAN** LEG RETURNED A **RUSSIAN-ORIGIN** EDUCATION AGENT, SO QUERY-LANGUAGE AND ARTEFACT-ORIGIN ARE **INDEPENDENT AXES** AND TWELVE LEGS OF "CORPUS" REASONING CONFLATED THEM. 🔴 `p543`'s SURVIVING PREDICTOR IS **FALSIFIED**: `pl` AND `th` BOTH INDEX NAMED NATIONAL CURRICULA AND BOTH RETURNED **ZERO**. 🟢 THE GRANT GATE REPLICATES IN A SECOND ORIGIN — **4 DOMESTIC AGENTS, 2 ORIGINS, 0 LICENCES** — AND `Gap 543-D`'s REGISTER IS NOW PUBLISHED. 🔴 `Gap 543-A` WAS **ALREADY CLOSED IN THE INSTRUMENT SINCE `p509`** AND THE REGISTER DID NOT KNOW IT. 🔴 THE FOUR-REGION SWEEP RETURNED **0 NEW CLAIMS**, A SIXTH CONSECUTIVE SATURATION, AND THE MAINSTREAM SUPPLY CHANNEL RESTATED **19 OF 19**.**
 
 🔵 **Full narrative, the per-leg table and the register are on

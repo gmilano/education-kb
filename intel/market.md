@@ -6,9 +6,38 @@ updated: 2026-10-30
 
 # Education AI — Market Map and Opportunities
 
-**Pass `p544` · 2026-10-30.** Figures are attributed to the source that produced
+**Pass `p545` · 2026-10-30.** Figures are attributed to the source that produced
 them. Where sources disagree the disagreement is shown rather than averaged away,
 because an averaged number is a number nobody published.
+
+> 🟢 **`p545` adds the one band this page never had: a sizing of the *agentic* segment
+> by itself.** Every figure this base carried — `9.58B`, `42.48B`, `136.79B` — sizes **AI
+> in education entire**. 🟢 **Mordor Intelligence** prices *agentic AI in education and
+> learning technologies* at **USD 2.37 B (2026) → USD 11.83 B (2031)**, and **Grand View
+> Research** prices *AI tutors* at **USD 2.1 B (2025) → USD 2.7 B (2026)**, CAGR **30.5 %**
+> to 2033. 🔴 **The two overlap and are not additive** — different firms, different
+> definitions, and neither says where "agentic" stops and "tutor" starts. 🔵 **The usable
+> read is the ratio, not the number: on Mordor's own definition the agentic segment is
+> roughly a quarter of a whole-market band that the firms themselves put between
+> `USD 6.4 B` and `USD 11.4 B` for 2026.** Mordor also states the go-to-market shape
+> plainly — *tutoring remains the gateway purchase that seeds broader platform
+> penetration*.
+>
+> 🔴 **The four-region demand sweep returned no claim this base does not already hold —
+> a sixth consecutive saturation on the demand side, now matching the supply side's
+> seventh.** Named so the result is checkable: Idaho **SB 1227**, Maryland's 120-day
+> district deadline, the **SUNY** systemwide policy, NYC's March-2026 guidance and June
+> playbook, the **K-12 AI Literacy and Readiness Act of 2026**, the EU **Digital Omnibus
+> on AI (Regulation (EU) 2026/1744)** moving Annex III education duties to **2 Dec 2027**
+> with Article 50 transparency live since **2 Aug 2026**, Korea's **AI Basic Act**,
+> India's **20 Feb 2026** content-labelling duty, Brazil's **PL 2338/2023** still pending
+> in the Câmara, and **Peru** and **El Salvador** as the only LATAM states with a specific
+> AI law fully in force. 🔵 **Every one was already here.**
+>
+> 🔴 **And one figure is recorded only to be refused:** a secondary aggregator claims
+> *"AI-focused education startups crossed 2 800 in 2026, an 18× increase from 2023"*.
+> **No primary source, no methodology, no named counter. It is not adopted**, and it is
+> written down so a later pass does not rediscover it and believe it.
 
 > 🔴 **`p541` ran the full four-region sweep in the mandated form and it
 > returned **fifteen claims, fifteen of them already on this base.** Named so
@@ -807,6 +836,18 @@ it, rather than read from the artefact or the source, is unproven.** Registered 
 
 ### North America
 
+🆕 **`p545` — demand leg: saturated, nothing new.** Re-run in the mandated form, the leg
+returned **Idaho SB 1227** (statewide K-12 framework, AI-literacy standards, local
+policies, and a bar on AI *replacing* a teacher), **Maryland**'s 120-day deadline for
+aligned district policies, **NYC**'s March-2026 preliminary guidance with a June playbook
+and a rule that **student data may not be used to train models**, the **SUNY** systemwide
+policy putting AI literacy into general education for undergraduates entering **autumn
+2026**, and the **K-12 AI Literacy and Readiness Act of 2026**, introduced in April and
+**still not passed**. 🔵 **All already held.** 🔴 **One figure is explicitly NOT adopted:**
+a tracker's *"more than 1 500 AI-related bills introduced nationwide this year"* counts
+**all** AI bills, not education bills, and so cannot be compared with this page's retired
+*"134 bills / 31 states"* — **different quantity, not a correction of it.**
+
 #### 🆕 `p544` — the NA leg restated for a third pass, so the opportunity is **sequencing**, not discovery
 
 🔴 **Nothing new was found, and the engagement implication is not "nothing to
@@ -1130,6 +1171,18 @@ recorded.**
   **faculty workload**, which is what the `$169 M`-class funding actually buys.
 
 ### EMEA
+
+🆕 **`p545` — demand leg: saturated, and the deferral is confirmed from a second
+direction.** The leg returned the **Digital Omnibus on AI, Regulation (EU) 2026/1744**,
+moving Annex III high-risk duties for stand-alone education systems from **2 Aug 2026** to
+**2 Dec 2027** — a **16-month** extension — while **Article 50** transparency (telling a
+learner they are talking to an AI) has applied since **2 Aug 2026**, the
+**emotion-recognition ban in schools** since **February 2025**, and **Article 4** AI
+literacy throughout. 🔵 **All already held.** 🟢 **The one thing worth re-stating for an
+engagement:** admissions, assessment, placement and proctoring are the Annex III
+categories, so **the deferral buys build time, not an exemption** — and a tool that never
+leaves the teacher's machine (the posture `capy-note` takes) moves the processing question
+rather than deferring it.
 
 #### 🆕 `p544` — EMEA: the demand blank reaches **six passes**, and the supply side just gained an unusable row
 
@@ -1569,6 +1622,18 @@ to prevent.
   the data-residency answer, and is Apache-2.0.
 
 ### APAC
+
+🆕 **`p545` — demand leg: saturated.** The leg returned Korea's **AI Basic Act**, in force
+**22 Jan 2026** and the closest thing in the region to the EU Act; **China** regulating by
+service type (recommendation algorithms, deep synthesis, generative services, labelling of
+AI-generated content) rather than by one statute; **Japan**'s promotion-first Act on the
+Promotion of Research, Development and Utilisation of AI-Related Technologies
+(**28 May 2025**), with no penalties; and **India** with no dedicated AI statute but a
+binding labelling and provenance duty from **20 Feb 2026**. 🔵 **All already held.**
+🔴 **The leg's own blank, stated rather than left silent: it returned no current
+market-player analysis for AI education in any APAC country.** The regulatory picture is
+well covered on this page and **the commercial picture is not**, and a tracker search is
+not the instrument that will fix it.
 
 #### 🆕 `p544` — APAC: regulation well documented, **demand still unmeasured for a third pass**
 
@@ -2075,6 +2140,39 @@ not under APAC.
   is read here, never inferred.**
 
 ### LATAM
+
+🆕 **`p545` — demand leg: saturated on regulation, and the "void" `p543`/`p544` named is
+narrower than it looked.** The leg returned **Peru** and **El Salvador** as the only
+states with a specific AI law fully in force; Brazil's **PL 2338/2023**, approved by the
+Senate in December 2024 and **still pending in the Câmara**; Brazil's **MEC** guidance as
+*orientative, not binding*; **Mexico** with no national law or binding university
+guidance; and **Colombia** among the regional leaders on framework-building. 🔵 **All
+already held.**
+
+🟢 **But the void itself needs correcting, and the correction came from the supply leg,
+not this one.** `p544` recorded *"no education-specific national rule for Brazil or
+Mexico surfaced"*. 🔴 **For Brazil that is wrong, and this base already held the
+counter-example without noticing it:** **Lei nº 15.100 of 13 January 2025** (DOU
+14/01/2025) is a Brazilian **federal statute about education specifically** — it bans
+personal devices in *educação básica* during class, break and intervals, **excepting
+strictly pedagogical, teacher-mediated use**, and obliges school networks to publish
+mental-health strategies. 🟢 It is on this page already, two thousand lines below,
+attributed to [`maiatechdev/avit`](https://github.com/maiatechdev/avit) — **a repository
+whose entire product is the exception clause.**
+
+🔵 **The correct statement of the LATAM regulation gap is therefore narrower and more
+useful: what is missing is not education-specific national rules — Brazil has one in force
+— but *AI*-specific ones.** Lei 15.100/2025 is a device statute that an AI product must
+live inside; it says nothing about models, assessment or automated decisions. 🟡 **For
+Mexico the original claim stands**: no national law, no binding university guidance.
+
+🔴 **Two LATAM figures are recorded as NOT adopted.** A secondary source attributes to
+UNESCO that *"LATAM has the world's highest generative-AI adoption among university
+students while only 19 % of institutions have an approved internal rule"* — the shape is
+plausible and the original report was not reached. And a single outlet reports a
+**Colombian MinEducación June-2026 roadmap to 2028 with USD 412 M** attached; **the
+investment figure could not be corroborated against any official source** and is not
+adopted.
 
 #### 🆕 `p544` — LATAM: the governance deficit is the offer, and the regulation void is **still** a void
 

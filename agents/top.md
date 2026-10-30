@@ -6,12 +6,20 @@ updated: 2026-10-30
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p544` · 2026-10-30.** **Seventy-two** real agents — **64 shelf-table rows
+**Pass `p545` · 2026-10-30.** **Seventy-two** real agents — **64 shelf-table rows
 plus 8 filed in their own sections below** — every row read first-hand and
 corroborated by a second, independent instrument. No row is a header, a
-placeholder or an example. 🟢 **The 64 is now *derived from the table* rather than
-asserted beside it** ([`../ingest/derive-counts.sh`](../ingest/derive-counts.sh),
-green this pass), which is what `Gap 543-E` asked for.
+placeholder or an example. 🟢 **The 64 is *derived from the table* rather than
+asserted beside it** ([`../ingest/derive-counts.sh`](../ingest/derive-counts.sh)),
+which is what `Gap 543-E` asked for.
+
+> 🟢 **`p545` closes `Gap 544-A` by narrowing it from 64 rows to 2, and the rule that
+> does the narrowing is general.** A region read off an artefact's **language** is sound
+> **if and only if that language is confined to one region of this base's five-value
+> vocabulary**. `de`, `zh`, `id` and `vi` are confined; **`es` and `pt` are not** — both
+> span EMEA and LATAM. 🔴 **Both non-confined rows survive on region and fail on
+> evidence, in opposite directions**: `TutorIA` had **better** anchors than it cited,
+> and `avit` cited a phrase **that is not in the artefact**. 🔵 Full census below.
 
 > 🔴 **`p544` corrects the axis the two previous passes were built on, and the
 > correction is the pass.** `p542` and `p543` both attributed a language leg's
@@ -554,7 +562,7 @@ green this pass), which is what `Gap 543-E` asked for.
 | 🆕 **knowledge-spaces** | [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2025 Vanderbilt Data Science Institute`, read at `main` (1 089 B) | **30** | 🟢 **North America** (Vanderbilt University, Data Science Institute) — *stated* in the copyright line | **Fitness: reference implementation.** *"AI-powered Knowledge Space Theory for adaptive education. 10 Claude Code skills implementing the full KST pipeline — from course materials to knowledge graphs, adaptive assessment, personalized materials, and JIT instruction planning."* Python, 5 forks. 🟢 **The second row on this shelf built on a named, published learning theory rather than a prompt** — `OATutor` has Bayesian Knowledge Tracing, this has **Knowledge Space Theory** (Doignon & Falmagne), which models *what a learner can learn next* rather than *what they know now*. 🟡 **Pushed 2026-02-13 — eight months stale**, stated rather than softened: take the ten skills as a specification of the pipeline, not as maintained code. |
 | 🆕 **Shiksha-Copilot** | [microsoft/Shiksha-Copilot](https://github.com/microsoft/Shiksha-Copilot) | 🟢 **MIT** — title block `MIT License · Copyright (c) Microsoft Corporation`, read at `main` (1 140 B); **API agrees** | 🔴 **9** | 🟡 **APAC (India)** — *inferred from the product*: *shiksha* is Hindi/Sanskrit for education and the work is Microsoft Research India's; the org profile states no location for the repository | **Fitness: reference implementation.** Teacher-facing lesson-preparation copilot, 12 forks, pushed **2026-10-28**. 🔴 **Nine stars on a Microsoft repository, pushed yesterday** — and it is the only row on this shelf from a hyperscaler aimed at the *government-school* teacher rather than the institutional buyer. 🔵 Shelved on the origin and the target user, not the counter: trend 20 says popularity is anti-correlated with fitness in this sector, and a 9★ repo from Microsoft Research built for Indian state-board teachers is the cleanest instance of it this base has filed. |
 | 🆕 **Iris** (standalone *Pyris V2*) | [ls1intum/Iris](https://github.com/ls1intum/Iris) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2023 TUM Applied Software Engineering`, read at `main` (1 088 B) | — | 🟢 **EMEA (Germany)** — *stated*: TU München | **Fitness: dependency.** The **standalone** virtual tutor, separate from the `edutelligence` monorepo that shelf row 30 files. 🔴 **Named in a sentence on this page since `p533` as the proof of shelf rule 13 — and filed in no table row until now**, which is `Gap 535-E` landing on this file's own evidence. 🔴 **The `repo:`-qualified batch that measured the other nineteen addresses this pass dropped this one silently** — shelf rule 14 firing again, so its grant is read-only from `raw.githubusercontent.com` and its counter is left blank rather than guessed. |
-| 🆕 **TutorIA** | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Grupo Sirius`, read at `main` (1 068 B) | 🔴 **0** | 🟢 **LATAM** — *stated by the product*: *"educación superior rural"*, Spanish-language, Grupo Sirius | **Fitness: reference implementation.** *"Agente tutor virtual autónomo basado en IA para educación superior rural"* — an autonomous tutor agent aimed at **rural higher education**, pushed **2026-10-27**. 🟢 **The third LATAM-origin agent on this shelf, and the first built for the low-connectivity rural case** that [`../verticals/solutions.md`](../verticals/solutions.md) §6 says this sector assumes away. 🟡 Zero stars, zero forks: a signal and an architecture, not a dependency. |
+| 🆕 **TutorIA** | [LabSirius/TutorIA](https://github.com/LabSirius/TutorIA) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Grupo Sirius`, read at `main` (1 068 B) | 🔴 **0** | 🟢 **LATAM (Colombia)** — 🆕 **re-read at `p545`, and the evidence is replaced.** The row previously rested on *"educación superior rural"* + *Spanish-language* + *Grupo Sirius*, **none of which names a country**, and Spanish spans EMEA and LATAM. The artefact names the country four ways and the row cited none of them: **"Risaralda, Colombia"**, **Universidad Tecnológica de Pereira**, *Grupo de Investigación Sirius* and the **Sistema Nacional de Ciencia, Tecnología e Innovación (SNCTI)** that funds it. 🔵 Verdict unchanged, evidence sound for the first time | **Fitness: reference implementation.** *"Agente tutor virtual autónomo basado en IA para educación superior rural"* — an autonomous tutor agent aimed at **rural higher education**, pushed **2026-10-27**. 🟢 **The third LATAM-origin agent on this shelf, and the first built for the low-connectivity rural case** that [`../verticals/solutions.md`](../verticals/solutions.md) §6 says this sector assumes away. 🟡 Zero stars, zero forks: a signal and an architecture, not a dependency. |
 | 🆕 **brújula-educativa** | [startin-lab/brujula-educativa](https://github.com/startin-lab/brujula-educativa) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 startin-lab`, read at `main` (1 067 B) | 🔴 **0** | 🟢 **LATAM (Colombia)** — *stated by the product*: *"datos educativos abiertos de Colombia"* | **Fitness: reference implementation.** *"Agente público de consulta sobre datos educativos abiertos de Colombia."* Pushed 2026-09-21. 🟢 **The fourth LATAM-origin agent and the first anywhere on this shelf whose corpus is a national open-data portal rather than a curriculum document or a textbook** — the shape `P554`'s governance work implies and nothing here had built. 🔵 Pairs with [`cortega26/chile-hub`](https://github.com/cortega26/chile-hub) (MIT, 136★, filed on [`../repos/foundations.md`](../repos/foundations.md)) as Colombia-agent plus Chile-data: between them, two of the four LATAM systems whose ministry data a studio would actually query. |
 | 🆕 **assessment_agent** | [AIEd-Innovations/assessment_agent](https://github.com/AIEd-Innovations/assessment_agent) | 🟢 **Apache-2.0** — title block `Apache License · Version 2.0, January 2004`, read first-hand at `main` (**11 323 B**) | 🔴 **0** | ⚠️ unplaced — no country on the org profile and none in the copyright line | **Fitness: reference implementation.** Assessment-generation agent published by the `AIEd-Innovations` organisation; 1 fork, 8 open issues, pushed 2026-10-27. 🔵 **Promoted from the prose queue**, where it had been named in a sentence *on this page* since `p519` and filed in no table row on any page. 🔴 Its canonical owner spelling is **`AIEd-Innovations`**, not the `aied-innovations` the queue emits — see [§ the queue's case defect](#-the-promotion-queues-own-defect-it-lowercases-and-37--of-what-it-hands-you-is-mis-spelled). |
 | 🆕 **Autonomous-Exam-Proctoring-Grading-Agent** | [biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent](https://github.com/biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Prem Biswal`, read at **`master`** (1 067 B) | 🔴 **0** | ⚠️ unplaced — a personal-name copyright is not a country | **Fitness: reference implementation, and the only one on this shelf with no model vendor in the loop.** Self-described as *"a fully local, mathematics-driven AI exam system for autonomous proctoring, explainable cheating-risk prediction, automated grading and student performance analysis — **with no external AI APIs**"*. 🟢 **That last clause is the reason it is filed:** every other proctoring and grading candidate this base has met calls a hosted model, and a data-residency engagement (EU AI Act deployer, LGPD, a ministry tender) cannot. 🔴 **Zero stars, zero forks, pushed 2026-10-26** — read the code before proposing it; the claim is a README's, not a measurement of this base's. |
@@ -565,9 +573,9 @@ green this pass), which is what `Gap 543-E` asked for.
 | 🆕 **student-discovery-agent** | [localis-ai/student-discovery-agent](https://github.com/localis-ai/student-discovery-agent) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Nguyễn Võ Thanh Duy`, read at `main` (1 078 B) | 🔴 **0** · 2 forks | 🟢 **APAC (Vietnam)** — *stated by the product*: *"career guidance chatbot for **Vietnamese high school students**"* | **Fitness: reference implementation — and the README says so itself.** *"IHRD Career Agent … **Agent features are under design**"*: FastAPI + Next.js + PostgreSQL + Redis scaffolding with the agent layer not yet built. 🔵 **Filed anyway, and the reason is regulatory rather than technical:** Vietnam is the one APAC jurisdiction whose draft AI law names **education** as a high-risk sector by itself (automated assessment, behavioural monitoring), and this base held **no Vietnamese-origin education repository at all**. A half-built scaffold from inside that jurisdiction is worth more to an APAC engagement than a finished tool from outside it. Pushed 2026-10-29. |
 | 🆕 **ai-agent-to-learn-faster-and-better** | [abhijeetgupta23/ai-agent-to-learn-faster-and-better](https://github.com/abhijeetgupta23/ai-agent-to-learn-faster-and-better) | 🟢 **MIT** — title block `MIT License · Copyright (c) 2026 Abhijeet Gupta`, read at `main` (1 070 B) | **4** | ⚠️ unplaced | **Fitness: reference implementation, and the most interesting row of the eight.** *"Adaptive tutoring agent that personalises lesson modality from a learning-science knowledge graph, with a **first-class eval harness**."* 🟢 **Two of its declared topics are the two things this base has repeatedly recorded as missing from education-agent supply: `eval-harness` and `prompt-injection`.** Nine passes of trending entries have said no OSS education agent ships its own evaluation; this one claims to, at 4★, and it was sitting in prose on [`../intel/trends.md`](../intel/trends.md) while those entries were being written. 🔴 **The claim is unverified** — the harness has not been run from here, and 12 open issues against 0 forks is an early project, not a validated one. 🔵 `Gap 537-B` is to run it. |
 | 🆕 **moodle-mcp-server** | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | 🟢 **MIT** — sidebar `MIT license` | **45** · 14 forks | unplaced — no country on the page, no copyright line read | 🟢 **The most-starred *permissively granted* Moodle bridge this base has found.** Eight tools, and the set is unusual in being **teacher-side**: `get_courses`, `list_students`, `get_assignments`, `get_student_submissions`, `provide_assignment_feedback`, `get_quizzes`, `get_quiz_attempts`, `provide_quiz_feedback`. Two of the eight *write* — feedback on an assignment and on a quiz attempt — so it is a grading loop, not a read-only reporter. ⚠️ Sidebar says *"No description, website, or topics provided"*: the README is the only documentation. |
-| 🆕 **civil-ai** | [zhangl1001/civil-ai](https://github.com/zhangl1001/civil-ai) | 🟢 **MIT** — sidebar `MIT license` | **41** · 7 forks | APAC (China — Chinese civil-service exam is the reference application) | *"Local-first adaptive tutoring agent foundation reference implementation for iOS and Web."* README calls it *"a reusable, local-first foundation for building adaptive education Agents on iOS and Web"*, with the civil-service exam as one application over it (practice, grading, review, planning). 🟢 **The framing is the value: it ships as a foundation with a worked vertical on top**, which is the shape an engagement reuses. TypeScript / Vue. |
+| 🆕 **civil-ai** | [zhangl1001/civil-ai](https://github.com/zhangl1001/civil-ai) | 🟢 **MIT** — sidebar `MIT license` | **41** · 7 forks | 🟢 **APAC (China)** — 🆕 **upgraded from *inferred* to *stated* at `p545`**: the 16 094 B README carries the token **中国** explicitly, so the placement no longer rests on the reference application alone | *"Local-first adaptive tutoring agent foundation reference implementation for iOS and Web."* README calls it *"a reusable, local-first foundation for building adaptive education Agents on iOS and Web"*, with the civil-service exam as one application over it (practice, grading, review, planning). 🟢 **The framing is the value: it ships as a foundation with a worked vertical on top**, which is the shape an engagement reuses. TypeScript / Vue. |
 | 🆕 **wenflow** | [wenflow-org/wenflow](https://github.com/wenflow-org/wenflow) | 🟢 **MIT** — sidebar `MIT license` | **61** · 19 forks | APAC (China — Chinese-language README and description) | *"先说清你想解决的事，再开始学习"* — "state the problem you want to solve, then start learning." Clarifies a learner's goal in conversation, generates a learning path, teaches in rounds, schedules spaced review and tracks learning load; ships an admin dashboard and **simulated virtual learners** for testing the loop without real students. Vue 3 + TypeScript front end, Node/Express back end. ⚠️ README labels it 早期实验原型 — *early experimental prototype*. |
-| 🆕 **avit** | [maiatechdev/avit](https://github.com/maiatechdev/avit) | 🟢 **MIT** — sidebar `MIT license` | 0 · 0 forks | 🟢 **LATAM (Brazil)** — Portuguese-language README and UI, *"janela pedagógica"* framing | A **classroom-session** Socratic tutor, and the session model is the interesting part: the teacher opens a session with a code or QR, each student picks a path (*Investigar · Criar · Resolver · Colaborar*), and the tutor gives a **ladder of hints without revealing the answer** — after three unsuccessful hints it explains the steps and offers a similar exercise. React 19 + Vite + Tailwind 4 + TypeScript. ⚠️ README states it is a prototype with **no real student data until a legal review completes** — a reference implementation, not a dependency. |
+| 🆕 **avit** | [maiatechdev/avit](https://github.com/maiatechdev/avit) | 🟢 **MIT** — sidebar `MIT license` | 0 · 0 forks | 🟢 **LATAM (Brazil)** — 🔴 **re-read at `p545`; the previous evidence was partly unreadable.** The cited phrase ***"janela pedagógica" does not occur anywhere in the README*** (`grep -ic` → `0` on the 5 430 B payload), and **the artefact never names Brazil, the BNCC, the MEC or any city, state or school**. 🟢 **One anchor does carry it, and it is a kind this base had not catalogued: a STATUTE.** The README is built for *"o uso pedagógico mediado pelo professor previsto na **Lei 15.100/2025***" — Brazilian federal law of **13 Jan 2025** (DOU 14/01/2025), which bans personal devices in *educação básica* **except for strictly pedagogical use**. The product is the exception clause. 🔵 Verdict unchanged; evidence replaced | A **classroom-session** Socratic tutor, and the session model is the interesting part: the teacher opens a session with a code or QR, each student picks a path (*Investigar · Criar · Resolver · Colaborar*), and the tutor gives a **ladder of hints without revealing the answer** — after three unsuccessful hints it explains the steps and offers a similar exercise. React 19 + Vite + Tailwind 4 + TypeScript. ⚠️ README states it is a prototype with **no real student data until a legal review completes** — a reference implementation, not a dependency. |
 | 🆕 **skill-instructional-design** | [tanghua-git/skill-instructional-design](https://github.com/tanghua-git/skill-instructional-design) | 🟡 **MIT — README only.** The sidebar carries **no licence entry**; the grant is the line *"MIT © 2026 Tanghua (唐华)"* in the README | 2 · 0 forks | APAC (China — Chinese-language description, author 唐华) | A **multi-agent lesson-plan generator shipped as an agent *skill***, installable standalone or as an OpenClaw skill. Generates systematic K-12 lesson plans against named pedagogy — **ICAP**, **Bloom**, and 扶放有度 (gradual release of responsibility) — running the theory analysis internally and emitting plain-language output. 🟢 **The pedagogy is explicit and named**, which almost nothing else on this shelf does. ⚠️ Sidebar description says v3.0 while the README documents **v5.3**: the page contradicts itself on its own version. |
 | 🆕 **capy-note** | [florianchristophnowak-dot/capy-note](https://github.com/florianchristophnowak-dot/capy-note) | 🟢 **MIT** — sidebar `MIT license` | 1 · 0 forks | 🟢 **EMEA (German-speaking Europe)** — German-language description *"Effiziente Bewertung gescannter Schülerarbeiten"*, topics `lehrer` · `schule` · `unterricht` | **Offline desktop grading of scanned class exams**: PDF import, automatic segmentation of each student's work, task templates, annotation, **first and second correction layers** (the German *Erst-/Zweitkorrektur* convention), and a statistics dashboard. Electron + React + Vite. 🟢 **Fully offline is the posture the EU's 2 Dec 2027 high-risk band rewards** — assessment that influences access to qualifications is Annex III, and a tool that never leaves the teacher's machine moves the processing question entirely. |
 | 🆕 **prep-ybara** | [florianchristophnowak-dot/prep-ybara](https://github.com/florianchristophnowak-dot/prep-ybara) | 🟢 **MIT** — sidebar `MIT license` | 1 · 0 forks | 🟢 **EMEA (German-speaking Europe)** — description *"Unterrichtsvorbereitungs-App"*, topics `lehrer` · `schule` · `unterricht` | Lesson *preparation* rather than delivery: weekly timetable, teaching sequences and individual lessons on a **45-minute timeline** (the German lesson period), PDF export, backup/restore, plus a companion mobile web app *"Prép-ybara Pocket"*. Local Windows app on Electron + React. 🟡 Same author as `capy-note`, so the two are **one EMEA contributor, not two independent signals** — stated because a region count that double-counts an author overstates the region. |
@@ -885,6 +893,116 @@ read the top 80 — carries figures this pass did **not** re-attest. And the
 census's own caveat still stands and is worth repeating: every tool count in
 this field is the repository's own claim, three repositories contradict
 themselves on it, so **tool counts here are marketing, not measurement.**
+
+## 🆕 `p545` — a language places an artefact only when the language is **confined to one region**
+
+🟢 **`Gap 544-A` asked for a census of every shelf row whose `Region (origin)` came from a
+leg rather than from an artefact. Run at `p545`, the census returns `7` rows, and the
+finding is that `5` of them were never at risk — for a reason this base had never
+stated.**
+
+### 🟢 The rule, stated so it can be disconfirmed
+
+**A language-derived placement is sound if and only if the language is confined to a
+single region of this base's closed five-value vocabulary.** The vocabulary is the thing
+that makes this decidable: `North America · EMEA · APAC · LATAM · Global`.
+
+| Language on the shelf | Where it is spoken | Confined? | Consequence |
+|---|---|---|---|
+| `de` German | Germany · Austria · Switzerland | 🟢 **yes — all EMEA** | placement safe |
+| `zh` Chinese | China · Taiwan · Hong Kong · Singapore | 🟢 **yes — all APAC** | placement safe |
+| `id` Indonesian | Indonesia | 🟢 **yes — APAC** | placement safe |
+| `vi` Vietnamese | Vietnam | 🟢 **yes — APAC** | placement safe |
+| **`es` Spanish** | **Spain** + 19 American states | 🔴 **NO — EMEA *and* LATAM** | **unprovable from language** |
+| **`pt` Portuguese** | **Portugal** + **Brazil** | 🔴 **NO — EMEA *and* LATAM** | **unprovable from language** |
+
+🔵 **So the base has been right on the confined rows by luck of which languages its legs
+happened to index, not by method** — the confinement condition appears nowhere on any
+page, and the next leg in French (France EMEA **and** Canada North America) or Arabic
+would have broken it silently.
+
+### 🔴 The two exposed rows, re-read first-hand — both survive on region, both failed on evidence
+
+| Row | Cited evidence | What the artefact actually says | Verdict |
+|---|---|---|---|
+| [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) | *"educación superior rural"*, *Spanish-language*, *Grupo Sirius* — 🔴 **none of the three names a country** | 🟢 **"Risaralda, Colombia"** in the first line; **Universidad Tecnológica de Pereira**; *Grupo de Investigación Sirius*; funded under Colombia's **SNCTI** | 🟢 **LATAM correct — and the row cited none of the four anchors that carry it** |
+| [`maiatechdev/avit`](https://github.com/maiatechdev/avit) | *Portuguese-language README and UI*, *"janela pedagógica" framing* | 🔴 **`grep -ic "janela pedag"` → `0`** on the 5 430 B README: **the quoted phrase is not in the artefact.** 🔴 Brazil, BNCC, MEC, ENEM, city, state, school — **none appear.** 🟢 The one anchor: *"previsto na **Lei 15.100/2025**"* | 🟢 **LATAM (Brazil) correct — on an anchor the row never named** |
+
+🔴 **The `avit` defect is the more serious of the two, and it is not a region defect.**
+🟢 **And it is traceable — the phantom quote has a provenance, which makes it a mechanism
+rather than a slip.** `grep -rn "janela"` over the whole base returns the phrase in
+**exactly one curated place: the `avit` row itself.** Meanwhile
+[`../intel/market.md`](../intel/market.md) describes the same repository, in English, as
+*"built explicitly inside the **pedagogical window** Lei 15.100/2025 leaves open for
+phones in class"*.
+
+🔴 **So the most economical account is that this base's own English gloss — "pedagogical
+window" — was back-translated into Portuguese as *"janela pedagógica"*, acquired
+quotation marks in transit, and was attributed to the artefact's README.** 🟡 **Marked as
+an inference:** the two pages cannot be ordered in a shallow clone, so which came first is
+unverified. 🔵 **But the class is certain either way, and it is worse than the `JUnit 4
+"EPL"` error `p455` caught in its own prose.** That was a fact recalled from background
+knowledge. **This is the base quoting itself and crediting the source** — which no amount
+of re-reading *the base* would catch, because the string really is there, one page over.
+
+🟢 **A quote gate — every `*"…"*` on a curated page must occur in the payload it is
+attributed to — is the durable fix**, and it is registered as `Gap 545-A` rather than
+asserted as done.
+
+### 🟡 A third anchor class — and a correction to this section's own first draft
+
+🔴 **`p544` left a hypothesis explicitly untested: that domestic supply automates *a
+document the state obliges someone to produce* — a form, never a curriculum.** `avit`
+fits neither limb. It automates **no document at all**: it is a classroom tutor, and its
+national anchor is a **statute** — **Lei nº 15.100 of 13 January 2025** (DOU 14/01/2025),
+which bans personal devices in Brazilian *educação básica* **except for strictly
+pedagogical, teacher-mediated use**. 🟢 **The product is the exception clause.**
+
+🔴 **This section's first draft called the statute *"a kind this base had not
+catalogued". That was wrong and is retracted.*** `grep -rF "15.100"` —
+`544-D`'s own rule, applied late — finds it already on
+[`../intel/market.md`](../intel/market.md), attributed to this very repository:
+*"built explicitly inside the pedagogical window **Lei 15.100/2025** leaves open for
+phones in class"*. 🔵 **The base had read the statute and had not noticed it was the only
+thing placing the row.**
+
+🟡 **What survives the retraction, stated narrowly:** the anchor *taxonomy* — the one
+`544-B` reasons over — has **two** named members, *curriculum* (BNCC, GDPT 2018, National
+Curriculum for England) and *form* (TÜBİTAK 2209-A, BTK 514, Russian ДПО), and **a
+statute is neither.** 🔴 **This does not confirm `544-B` and must not be read as
+confirming it:** its test — *a country that publishes a curriculum but imposes no
+comparable mandatory form should return zero* — is **still unrun**. What `avit` does is
+**widen the hypothesis space before the test**, which is the honest order.
+
+### 🟢 One row upgraded, one alias pair found
+
+- 🟢 [`zhangl1001/civil-ai`](https://github.com/zhangl1001/civil-ai) — **upgraded from
+  *inferred* to *stated*.** Its 16 094 B README carries **中国** explicitly; the placement
+  no longer rests on "the civil-service exam is the reference application".
+- 🔴 **`TutorIA` is an alias *divergence*, not the byte-identical `397-F` class.** Its own
+  README tells the reader to clone
+  [`Sof1SP/tutorIA`](https://github.com/Sof1SP/tutorIA) — a **different owner** from the
+  address this base holds. Both serve a README; they are **not the same file**:
+
+  | Address | README bytes | `sha256₁₂` |
+  |---|---|---|
+  | [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (held) | `5 548` | `65c215a71712` |
+  | [`Sof1SP/tutorIA`](https://github.com/Sof1SP/tutorIA) (named in the clone command) | `5 907` | `fb42485d231b` |
+
+  🔵 **`397-F` covers addresses that are byte-identical; this pair is not**, so the
+  existing relation does not describe it. **A canonical repository whose own instructions
+  point at a divergent copy is a provenance hazard an engagement would hit on day one.**
+
+### 🔴 What this pass did NOT do, named so silence is not read as coverage
+
+- 🔴 **`Gap 544-C` (staleness) is untouched.** It needs `p392`'s blobless clone over 139
+  addresses and remains a pass of its own.
+- 🔴 **`Gap 544-B` is untested**, as above. The hypothesis is wider than it was and no
+  nearer confirmed.
+- 🔴 **`p545` shelved no new agent.** The four mandated region legs and the global supply
+  legs returned **no education agent this base does not already hold** — a **seventh
+  consecutive saturation**. 🔵 **Fewer real rows beat padding**; the shelf stands at
+  **64 + 8 = 72**, unchanged.
 
 ## 🆕 `p544` — query-language and artefact-origin are independent axes
 

@@ -1,0 +1,59 @@
+# foundations-disposition.tsv -- Gap 544-E. DECLARED dispositions for every table in
+# repos/foundations.md, so a count can be DERIVED instead of guessed or carried as prose.
+#
+# WHY A MANIFEST AND NOT A MARKER IN EVERY ROW: p544 registered 544-E as "mark each row's
+# disposition". Measured at p545 the page holds 180 data rows in 31 tables, and NO TABLE
+# MIXES DISPOSITIONS -- disposition is a property of the TABLE, not of the row. A per-row
+# marker would be 180 edits encoding 31 facts, each one a place to drift.
+#
+# WHY KEYED ON HEADING TEXT AND NOT ON A LINE NUMBER: p545's first draft of this manifest
+# keyed on line numbers and broke on the very first edit of the page it describes -- the
+# header rewrite in the same pass shifted every heading and the gate exited 2. The key is
+# therefore the heading's own text, which survives edits above it. Recorded rather than
+# quietly fixed, because the failure is the argument for the design.
+#
+# DISPOSITION VALUES
+#   SHELF   -- load-bearing systems this page files. These, and only these, are counted.
+#   CENSUS  -- an enumeration of a population (sampled or exhaustive). Not supply filed here.
+#   METRIC  -- a measurement table (counts, rates). Carries no repository rows.
+#   SUMMARY -- restates/groups rows filed elsewhere on the page. Counting it double-counts.
+#
+# A table present in the page and absent from this manifest is an ERROR, not a default:
+# derive-foundations.py exits 2 and names it, so a section added later cannot silently
+# re-break the count.
+#
+# COLUMNS (tab-separated): heading / table_ordinal / disposition / note
+## 🆕 `p543` — the teaching-corpus layer gains two rows, and one of them pays a 190-mention promotion debt	0	SHELF	p543 teaching-corpus rows
+## 🆕 `p542` — one framework row off the French leg, and the Intel education suite read down to its components	0	SHELF	p542 framework row
+## 🆕 `p540` — six rows off the gate-to-600, and the first forks-per-star ranking this base has run	0	SHELF	p540 gate-to-600 rows
+## 🆕 `p539` — the backlog's head was never obscure, it was the field's own infrastructure	0	METRIC	backlog LIVE/DEAD/grant-gate rates; no repo rows
+## 🆕 `p539` — the backlog's head was never obscure, it was the field's own infrastructure	1	SHELF	p539 filed rows
+### 🟢 The Apereo sector layer — `ECL-2.0`, a real OSI licence both classifiers now name	0	SHELF	Apereo ECL-2.0 sector layer
+### 🟢 Assessment and standards	0	SHELF	assessment and standards
+### 🟢 The ladder's own blind spot — three MIT grants one rung further along	0	SHELF	three MIT grants one rung along
+### 🟢 EMEA, public sector — `opetushallitus`, seven national registries under `EUPL`	0	SHELF	opetushallitus EUPL registries
+### 🟢 Two general-purpose rows the residue also returned	0	SHELF	general-purpose rows from residue
+### 🟢 Two Spanish-language curriculum repos, with a split grant worth reading as a model	0	SHELF	Spanish-language curriculum repos
+## Platform cores	0	SHELF	platform cores
+## Administration, records and integrity	0	SHELF	administration, records, integrity
+## 🆕 The Moodle MCP census — 🔴 **222 addresses, not eleven; ceiling 52★ and ungranted**	0	CENSUS	13-row sample of 222 addresses; not supply filed
+## 🆕 Standards, records and assessment — the integration layer (`p530`)	0	SHELF	p530 integration layer
+## 🆕 Serving the course — the JupyterHub deployment family (`p531`)	0	SHELF	p531 JupyterHub family
+## 🆕 The LTI libraries this base has described 55 times and never filed (`p531`)	0	SHELF	p531 LTI libraries
+## 🆕 Assessment science, and the licence-compliance instruments (`p531`)	0	SHELF	p531 assessment science
+## 🆕 Two platform rows the drop set also returned (`p531`)	0	SHELF	p531 drop-set platform rows
+## 🆕 The LMS agent-bridge layer completes — Blackboard was the hole (`p532`)	0	SHELF	p532 LMS agent-bridge layer
+## 🆕 The materiality-ranked queue's first eleven rows (`p533`)	0	SHELF	p533 materiality queue
+## 🆕 `p534` — the institutional AI toolchain, off `Gap 533-A`'s org enumeration	0	SHELF	p534 institutional AI toolchain
+## 🆕 `p534` — a register claim this base has **refuted**, recorded rather than restored	0	SUMMARY	restates 3 platforms filed above
+## 🆕 `p535` — the efficacy layer: **causal inference**, which this base argued for and never held	0	SHELF	p535 causal inference
+### The Learning Commons stack — three repositories, three different grants	0	SHELF	Learning Commons stack
+### The efficacy layer gains its missing half: **assignment**	0	SHELF	efficacy layer, assignment
+### The national data plane — four countries, four grants, all permissive	0	SHELF	national data plane
+## Licence map, for the architecture decision	0	SUMMARY	licence bands; groups rows filed elsewhere
+## 🆕 Gulf-origin supply — `Gap 536-D` answered, and the hole is a **grant** hole (`p537`)	0	SHELF	p537 Gulf-origin supply
+## 🆕 Nine platform rows promoted off the prose queue — and two are archived upstream (`p537`)	0	SHELF	p537 promoted platform rows
+## 🆕 Nine platform rows — the prose queue emptied, and placed in all four regions (`p538`)	0	SHELF	p538 platform rows, four regions
+### 🟢 `Gap 544-E` / `Gap 534-E` — CLOSED at `p545`, and the carried number was wrong by more than 2×	0	METRIC	p545 544-E disposition breakdown; carries no repository rows
+### 🟢 `Gap 545-C` — named and closed in the same pass, and the sweep paid for itself twice	0	METRIC	p545 shelf liveness/alias sweep results; carries no filed rows
+### 🟢 `Gap 545-C` — named and closed in the same pass, and the sweep paid for itself twice	1	METRIC	p545 default-branch distribution; carries no filed rows

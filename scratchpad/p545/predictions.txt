@@ -1,0 +1,46 @@
+p545 — PREDICTIONS REGISTERED BEFORE MEASUREMENT — 2026-10-30
+=============================================================
+
+AXIS: Gap 544-A. p544 proved a LEG's language does not imply an ARTEFACT's
+origin. p545 tests the narrower and more useful question the gap did not ask:
+when the region was read FROM THE ARTEFACT's own language, is that sound?
+
+HYPOTHESIS (H1) — THE CONFINEMENT RULE
+A language-derived regional placement is sound IF AND ONLY IF the language is
+confined to a single region of this base's five-value closed vocabulary.
+  - de  -> Germany/Austria/Switzerland      = EMEA only        CONFINED
+  - zh  -> China/Taiwan/HK/Singapore        = APAC only        CONFINED
+  - id  -> Indonesia                        = APAC only        CONFINED
+  - vi  -> Vietnam                          = APAC only        CONFINED
+  - es  -> Spain (EMEA) + 19 LATAM states   = SPANS TWO        NOT CONFINED
+  - pt  -> Portugal (EMEA) + Brazil (LATAM) = SPANS TWO        NOT CONFINED
+
+PREDICTION 1: every de/zh/id/vi-derived row on the shelf survives first-hand
+re-reading with its region unchanged. (Study-Mate, civil-ai, wenflow,
+skill-instructional-design, capy-note, prep-ybara, teacher-exam,
+student-discovery-agent)
+
+PREDICTION 2: LabSirius/TutorIA is graded GREEN "stated" on the evidence
+'"educacion superior rural", Spanish-language, Grupo Sirius'. None of those three
+names a country. PREDICT: the GREEN badge is NOT carried by the cited evidence.
+Sub-prediction 2a: an anchor IS findable off-page and resolves to a LATAM state
+(guess: Colombia). If it resolves to SPAIN the row is wrong in REGION, not only
+in grade.
+
+PREDICTION 3: maiatechdev/avit is graded GREEN "LATAM (Brazil)" on
+'Portuguese-language README and UI, "janela pedagogica"'. "janela pedagogica" is
+ordinary Portuguese, not Brazilian. PREDICT: no Brazil-specific anchor in the
+cited evidence; row must downgrade to YELLOW inferred unless a new anchor is read.
+
+PREDICTION 4: Jeanikt/tutor-ai-agent cites "Brazilian Portuguese" from the
+artefact's own description — country-specific. PREDICT: survives unchanged.
+
+PREDICTION 5 (the generalisation worth most if it holds): of the 64 shelf rows,
+the ONLY language-derived placements at risk are es and pt. The base has been
+safe on the rest BY LUCK OF WHICH LANGUAGES ITS LEGS HAPPENED TO INDEX, not by
+method, because the confinement condition is nowhere stated on any page.
+
+FALSIFIERS: P1 dies if any de/zh/id/vi row's artefact places it outside the
+predicted region. P5 dies if a non-es/pt language-derived row is found that
+spans two regions (candidate class: French -> France EMEA + Canada NA; Arabic ->
+EMEA only; English -> everywhere, but no row is placed on English alone).
