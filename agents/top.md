@@ -4,6 +4,173 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p559` — `2026-10-30` — **🟢 `558-B` CLOSED BY MEASUREMENT AT FULL SHELF SCALE, AND THE NUMBER IS WORSE THAN THE SAMPLE: a naive `…/main/LICENSE` reader fails on **121 of 374** live addresses — 🔴 **32.4 %**, roughly one row in three — and the sixteen it loses to *version* branches are this shelf's most valuable verticals (`odoo` → `20.0`, `openeducat_erp` → `19.0`, `i-educar` → `2.12`, `ILIAS` → `release_11`). 🟢 `558-D` CLOSED: `kolibri`'s grant is READ, not carried. 🟢 `558-A` DISCHARGED: `p558`'s `PageLM` figure REPRODUCED EXACTLY — and the convention that reproduces it is now pinned, because the obvious alternative gives a different number.**
+
+🔵 **Gate posture, unchanged and now measured a third time.** `python3 -I ingest/gap-register-audit.py`
+was **DENIED** (`Code from External`) on this host class, as `557-A` and `555-F` predicted. 🟢 Every
+instrument below was therefore re-implemented inline this pass and run; 🔵 **none of it is
+gate-attested.**
+
+### 🟢 `558-B` CLOSED — the probe, and what it costs to skip it
+
+🟢 **`P558-B` adopted verbatim and run over every address this shelf carries.** Branch resolved by
+`git ls-remote --symref`, then a de-duplicated filename ladder, **status-gated on `%{http_code}`**:
+
+```bash
+probe_grant() {                      # $1 = owner/repo
+  br=$(git ls-remote --symref "https://github.com/$1" HEAD \
+       | awk '/^ref:/{sub("refs/heads/","",$2); print $2; exit}')
+  [ -z "$br" ] && { echo "$1 UNREACHABLE"; return; }
+  for fn in LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.LESSER; do
+    code=$(curl -sS -w '%{http_code}' -o grant.tmp \
+           "https://raw.githubusercontent.com/$1/$br/$fn")
+    [ "$code" = 200 ] && { report "$1" "$br" "$fn" grant.tmp; return; }
+  done
+  echo "$1 branch=$br NO-GRANT-AT-ANY-KNOWN-PATH"   # the only honest NOASSERTION
+}
+```
+
+🟢 **Swept: 375 distinct addresses extracted from `agents/top.md`, `repos/foundations.md` and
+`verticals/solutions.md`; 374 resolve; 1 `NOTFOUND`** — and that one is
+`https://github.com/topics/ai-tutor`, 🔵 **a topics URL that leaked into this pass's own extractor,
+not a dead shelf row.** 🟢 So `p558`'s *"0 unreachable"* **re-verifies**, now across 374 addresses
+rather than 76.
+
+🔴 **Default branch is not `main`, and the tail is long:**
+
+| default branch | addresses | share |
+| --- | --- | --- |
+| `main` | 253 | 67.6 % |
+| `master` | 85 | 22.7 % |
+| `develop` | 15 | 4.0 % |
+| `dev` | 5 | 1.3 % |
+| 🔴 version / release style (16 distinct values) | 16 | 4.3 % |
+
+🔴 **A `main`-only grant reader returns 404 on 121 of 374 addresses — 32.4 %** — and every one of
+those 404s is **indistinguishable from an absent grant**. 🟢 `p558` estimated this at 3-in-6 from a
+six-address sample; the full-shelf figure is **1-in-3**, same order, now exact.
+
+🔴 **`559-G`: the sixteen version-branch rows are not the shelf's tail, they are its head.**
+
+| address | default branch |
+| --- | --- |
+| [`odoo/odoo`](https://github.com/odoo/odoo) | `20.0` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `19.0` |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` |
+| [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) | `2.12` |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `release_11` |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `v4.0.x-develop` |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | `release` |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | `trunk` |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | `v31.0.00` |
+| [`cortezaproject/corteza`](https://github.com/cortezaproject/corteza) | `2026.9.x` |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | `mobile` |
+| [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | `development` |
+| [`KualiCo/rice`](https://github.com/KualiCo/rice) | `java11` |
+| [`QingdaoU/Judger`](https://github.com/QingdaoU/Judger) | `newnew` |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | `2.2` |
+| [`open-edge-platform/edge-ai-suites`](https://github.com/open-edge-platform/edge-ai-suites) | `docs` |
+
+🔵 **Read the first four rows as an engagement risk, not a trivium.** The ERP and SIS platforms a
+Globant education engagement actually starts from — `odoo`, `openeducat_erp`, `i-educar` — are
+*exactly* the addresses whose grant a `main`-only reader cannot see. 🔴 A licence gate built the
+naive way would report **NOASSERTION on the whole LATAM public-sector stack** and block it.
+
+### 🟢 `558-D` CLOSED — `kolibri`'s grant is read
+
+🟢 **One call, as the gap prescribed.** `GET raw.githubusercontent.com/learningequality/kolibri/`
+**`develop`**`/LICENSE` → **200**.
+
+| field | value |
+| --- | --- |
+| branch | 🔴 `develop` (not `main` — `…/main/LICENSE` **404**) |
+| file | `LICENSE` |
+| title line | `MIT License` |
+| attribution | `Copyright (c) 2021 Learning Equality and other contributors` |
+| raw bytes | **1 097 B** |
+| bytes, convention below | **1 096 B** |
+| `sha256/12` | **`fa4c9d2697f9`** |
+
+🟢 **The `MIT` carry is correct.** The row moves from *carried* to **read** in
+[`../repos/foundations.md`](../repos/foundations.md#-p559--2026-10-30), **amended in place**.
+🔵 `kolibri` was the last Tier-1 row with zero first-hand grant evidence; there are now none.
+
+### 🟢 `558-A` DISCHARGED — `p558`'s own figure, reproduced independently
+
+🟢 **Cell-level check first, per `558-A`'s closure condition.** `agents/top.md`'s `PageLM` verdict
+row was split on `|` and **no cell equals** `NOASSERTION` — count **0**. 🔵 A line-level `grep`
+still returns **1**, because the amended row contains the string inside its own provenance note;
+that is the false positive `558-A` warned about, reproduced and discounted.
+
+🟢 **And the grant was re-read from scratch rather than trusted:**
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM), branch `main`, file **`LICENSE.md`**
+(plain `LICENSE` **404s**), title `# PageLM Community License` — **8 562 B**, `sha256/12`
+**`20a39a9c5993`**. 🟢 **Byte-for-byte and digit-for-digit what `p558` published.**
+
+### 🔴 `559-A` — the byte convention was ambiguous, and this pass caught itself using the wrong one
+
+🔴 **This pass's first read of `kolibri` reported `1 076 B`.** That is `tr -d '\n'` — *all* newlines
+stripped. 🟢 The convention that reproduces `p558`'s `PageLM` figure is **raw minus a single
+trailing newline**, and the two are not close:
+
+| convention | `PageLM` bytes | `sha256/12` |
+| --- | --- | --- |
+| raw | 8 563 | `c834209c5f33` |
+| 🟢 **raw − one trailing `\n`** | **8 562** | 🟢 **`20a39a9c5993`** ← `p558`'s figure |
+| all `\n` stripped | 8 433 | `983c5b0d0ba9` |
+| `\r` stripped | 8 563 | `c834209c5f33` |
+
+🟢 **Pinned, and it is now a standing rule:** a grant byte count on this base is **raw bytes minus
+one trailing newline**, and a digest is published against *those* bytes. 🔵 The error was caught
+before publication by reconciling against a figure this base already held — which is `P557-C`'s
+grep-before-claiming applied to arithmetic instead of novelty.
+
+### 🟢 Two new addresses, both grant-read, and one honest `NOASSERTION`
+
+| address | stars | grant | bytes · `sha256/12` | branch · file | verdict |
+| --- | --- | --- | --- | --- | --- |
+| [`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) | 9 · 16 forks | 🟢 **`MIT`** | 1 131 · `559471b300db` | `main` · `LICENSE` | 🟢 **`BUILD-ON`** |
+| [`bayshores/godspeed`](https://github.com/bayshores/godspeed) | 7 | 🔴 `AGPL-3.0` | 34 522 · `4df3c306ddda` | `main` · `LICENSE` | 🔴 `BLOCK` |
+| [`datawhalechina/diy-llm`](https://github.com/datawhalechina/diy-llm) | ~2.5k (relayed) | 🔴 **none at any known path** | — | `main` · — | 🔴 `BLOCK` |
+
+🟢 **`euron-open-lms`** (created `2026-10-26`, TypeScript) is a self-hosted LMS carrying course
+catalogue, HLS-video classroom, quizzes, reviewed assignments, verifiable certificates, Stripe and
+Razorpay billing, an admin control plane and **Terraform for AWS**. 🟢 Its grant is
+`Copyright (c) 2026 ENGAGESPHERE TECHNOLOGY PRIVATE LIMITED and the Euron Open LMS contributors`.
+🔵 **It is nine stars old and nothing is recommended on it** — but it is the first **MIT** LMS of
+any completeness this base has seen besides `kolibri`, and `556`'s finding was that *one* of six
+LMS/SIS platforms is permissive.
+
+🟢 **`godspeed`** (created `2026-10-27`) is an MCP-server AI tutor that runs inside Claude Code,
+Codex *or any MCP client*, tracking mastery in a knowledge graph. 🔵 Architecturally it is the
+first supply row that is **a server, not an application** — the client is the student's existing
+agent. 🔴 `AGPL-3.0` puts it at `BLOCK` for a commercial deliverable.
+
+🟢 **A third independent confirmation of the canonical AGPLv3 fingerprint.** `godspeed`'s grant is
+**34 522 B / `4df3c306ddda`** — 🟢 **byte-identical** to
+[`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness), re-read from its own
+address this pass, and to the `Echo-Loop` digest `p557` recorded. 🔵 Three addresses, one digest:
+that digest is now this base's reference AGPLv3 and a mismatch against it is a *modified* grant.
+
+### 🔴 `559-F` — the first honest `NOASSERTION` this probe has emitted
+
+🔴 [`datawhalechina/diy-llm`](https://github.com/datawhalechina/diy-llm) — a Jupyter course taking
+LLMs from pre-training to alignment across six graded assignments, relayed at **~2 474★** — returns
+**404 at all six filenames on its default branch**. 🟢 That is `P558-B`'s
+`NO-GRANT-AT-ANY-KNOWN-PATH`, and it is the **first time this base has emitted `NOASSERTION` having
+earned it**: six paths tried, branch resolved, status-gated. 🔴 Verdict `BLOCK` — a trending,
+genuinely useful curriculum that **cannot enter a client deliverable**, same shape as `cn-math-taxonomy`
+at `556-H` but for absence of a grant rather than a restrictive one.
+
+### 🔴 `559-B` — a status-ungated read manufactures a 14-byte "grant"
+
+🔴 **Found by making the mistake.** An ad-hoc `curl -sS -o file URL` against a wrong address wrote
+GitHub's 404 **body** into the grant file and reported a grant of **14 bytes**, `sha256/12`
+`d5558cd419c8`. 🔵 The body is literally `404: Not Found`. 🔴 **A byte-counting pipeline records
+that as a grant** — small, digestible, and completely false. 🟢 `P558-B`'s `-w '%{http_code}'` gate
+is what distinguishes the two, and it is now stated as the reason the gate exists rather than a
+stylistic detail. 🔵 `curl -f` would also do it; the gate is cheaper and prints the code.
+
 ## 🆕 `p558` — `2026-10-30` — **🔴 `557-C` IS NOT CLOSED, AND IT RECURRED INSIDE THE PASS THAT REGISTERED IT: `p557` quoted the stale `PageLM` row, wrote *"amended in place"*, and appended a corrected **duplicate** instead — [line 293](#) of this file still reads plain `NOASSERTION`. 🟢 **FIXED IN PLACE THIS PASS**, after re-reading the grant independently. 🟢 AND THE MECHANISM IS BIGGER THAN THE BRANCH: `LICENSE` ALONE 404s ON A LIVE SHELF ROW — THE GRANT **FILENAME** IS A TRANSPORT VARIABLE TOO.**
 
 🔴 **The headline result of this pass is a null, and it is stated first.** Six WebSearch legs

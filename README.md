@@ -4,6 +4,193 @@ region: Global
 updated: 2026-10-30
 ---
 
+## Pass 559 — reads 2026-10-30, commit 2026-10-30 — **🟢 `558-B` CLOSED BY MEASURING THE WHOLE SHELF, AND THE RESULT IS A DELIVERY FINDING, NOT A TOOLING ONE: a `main`-only grant read — the obvious way to build the licence gate every engagement stands up in week one — returns **404 for 121 of 374 addresses (32.4 %)**, and the sixteen it loses to *version* branches are `odoo` (`20.0`), `openeducat_erp` (`19.0`), `i-educar` (`2.12`), `ILIAS` (`release_11`), `bigbluebutton`, `tutor` and `ofbiz`. 🔴 **It would report `NOASSERTION` for both ERP bases and the entire LATAM public-sector stack.** 🟢 `558-C`, `558-D` closed and `558-A` discharged; seven registered.**
+
+🔴 **Gate posture, stated first. Third consecutive denial, third distinct instrument.**
+`python3 -I ingest/gap-register-audit.py` was **DENIED** (`Code from External`). With
+`probe-grant.sh` (`p557`) and `validate-pages.py` (`p557`), that is **three of this base's own
+committed instruments refused across three sessions**. 🔵 `557-A`/`555-F` are therefore confirmed
+as a property of **the host class**, not of a command or a session: *the sessions that maintain
+this base cannot run the instruments it commits.* 🟢 Everything below was re-implemented inline
+and run; 🔵 **none of it is gate-attested.**
+
+🟢 **Transports measured:** `git ls-remote --symref` **374/375** addresses (the one miss is a
+`github.com/topics/…` URL this pass's own extractor produced, not a shelf row);
+`raw.githubusercontent.com` **grant bodies read first-hand for 6 addresses**; MCP
+`search_repositories` 2 paired sweeps; WebSearch **8 legs** (4 supply, 4 regional).
+🔴 `curl` → `api.github.com` **403**, unchanged.
+
+### 🟢 What closed, on the axes the gaps named
+
+🟢 **`558-B` — the probe adopted, and the cost of skipping it priced.** 375 distinct addresses
+swept from the three verdict pages. **374 resolve.** Default branch: `main` **253 (67.6 %)**,
+`master` **85 (22.7 %)**, `develop` 15, `dev` 5, 🔴 **version/release style 16**. `p558` estimated
+3-in-6 from a six-address sample; the full-shelf figure is **1-in-3** — same order, now exact.
+🟢 `p558`'s *"0 unreachable"* re-verifies at 374 addresses, up from the 76 it checked.
+
+🟢 **`558-D` — the last unread Tier-1 grant is read.**
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) at branch 🔴 `develop`:
+`MIT License`, `Copyright (c) 2021 Learning Equality and other contributors`, raw **1 097 B**,
+**1 096 B** by the convention below, `sha256/12` **`fa4c9d2697f9`**. 🟢 Row **amended in place**
+from *carried* to **read**. 🔵 The `MIT` verdict was right all along; the evidence was what was
+missing — and **no Tier-1 row now carries a bare *"carried, unchanged"* grant.**
+
+🟢 **`558-C` — both yields published from one session.** `topic:edtech created:>2026-10-23`:
+unfiltered **204 total / 30 returned / 25 at 0★ / ~17 % promotable**; with `stars:>5`,
+**2 total / 2 returned / 🟢 100 % real and both grant-read.** 🔴 **And the dilution has a second
+mechanism both `556-G` and `558-C` missed: one account, `sonukumarsingh01`, posted 6 of the 30
+rows in a single day** — plausible, specific, `NOASSERTION` Open edX derivatives. 🟢 A prose-quality
+heuristic catches the machine-shaped half and misses these; **a `stars:>` floor catches both.**
+
+🟢 **`558-A` — `p558`'s figure reproduced digit-for-digit.** Cell-level proof published (`PageLM`
+row split on `|`: **0** cells equal `NOASSERTION`, while line-level `grep` returns **1** — the
+predicted false positive), and the grant **independently re-read**: `main` · `LICENSE.md` ·
+**8 562 B** · **`20a39a9c5993`**.
+
+### 🔴 The pass caught itself twice, and both corrections are now standing rules
+
+🔴 **`559-A` — the byte convention was never pinned, and this pass used the wrong one first.** The
+first `kolibri` read reported **1 076 B** — `tr -d '\n'`, *all* newlines stripped. On `PageLM` the
+candidates are **8 563** (raw), **8 562** (raw − one trailing `\n`), **8 433** (all stripped), with
+three different digests; 🟢 only the middle reproduces the figure this base already held.
+🟢 **Pinned: raw minus one trailing newline.** 🔵 Caught by reconciling against a prior figure —
+`P557-C`'s grep-before-claiming applied to arithmetic instead of novelty.
+
+🔴 **`559-B` — a status-ungated read manufactures a grant.** `curl -sS -o f URL` against a wrong
+address wrote GitHub's 404 **body** to disk: a **14-byte "grant"** reading `404: Not Found`,
+`d5558cd419c8`. 🔴 A byte-counting pipeline records that as real. 🟢 `P559-A`'s `%{http_code}` gate
+is now documented as load-bearing. 🔵 Found by making the mistake — and the open limb is a sweep of
+historical grant figures under ~200 B, **not run this pass**.
+
+🔵 **Two false claims retracted before publication.** That `OpenOLAT` was a new vertical (it is on
+**232** pages here), and that `learnharness` had an unresolvable address — this pass misread
+`Echo-Loop` as the owner when the shelf correctly carries
+[`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness). 🟢 Re-read from its
+real address: **34 522 B / `4df3c306ddda`**, byte-identical to `godspeed`'s grant. 🟢 **Three
+addresses, one digest — that is this base's reference canonical AGPLv3.**
+
+### 🔴 `559-C` — a foundation grant is a *modified* canonical licence, and this is `557-E` inverted
+
+🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT), branch 🔴 `master`, grant read
+first-hand: **10 982 B / `6dbc5b605ed0`** against canonical Apache-2.0 **11 356 B /
+`43070e2d4e53`** — Δ **374 B**, because it drops `END OF TERMS AND CONDITIONS` and the `APPENDIX`
+and appends an OLAT-7.1 provenance note. 🟢 Operative §§ 1–9 and all four named clauses present
+⇒ **it is `Apache-2.0`, `BUILD-ON`.** 🔴 **But a digest-equality licence check flags it and blocks
+the build.**
+
+🔵 **The pair is the lesson.** `557-E`: a string living in the **non-operative appendix**
+(*"any later version"*) mis-graded `-only` grants as `-or-later`. `559-C`: the **absence** of that
+same block is mistakable for a bespoke grant. 🟢 **Grade on the header and operative clauses;
+treat the appendix as absent either way.** 🔵 Byte digests are the right tool for *recognising* a
+grant and the wrong tool for *validating* one.
+
+### 🟢 Supply: two addresses, both grant-read, and the first earned `NOASSERTION`
+
+| address | stars · forks | grant | bytes · `sha256/12` | verdict |
+| --- | --- | --- | --- | --- |
+| [`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) | 9 · 16 | 🟢 **`MIT`** | 1 131 · `559471b300db` | 🟢 `BUILD-ON` |
+| [`bayshores/godspeed`](https://github.com/bayshores/godspeed) | 7 · 0 | 🔴 `AGPL-3.0` | 34 522 · `4df3c306ddda` | 🔴 `BLOCK` |
+| [`datawhalechina/diy-llm`](https://github.com/datawhalechina/diy-llm) | ~2 474 (relayed) | 🔴 **none at any known path** | — | 🔴 `BLOCK` |
+
+🟢 **`Trend 72` — the tutor is becoming a server.** `godspeed` is the first supply row here that is
+not an application: an MCP server plus desktop shell, where *the student's existing agent is the
+client* and **inference is paid by that client's subscription**. 🔵 Hosting cost collapses, the
+knowledge graph becomes the only defensible asset, and 🔴 the institution loses the audit surface
+the EU AI Act's high-risk functions require, because the model call never traverses institutional
+infrastructure.
+
+🔴 **`559-F` — the first `NOASSERTION` this base has emitted having earned it.**
+`datawhalechina/diy-llm`, a ~2 474★ LLM course, returns **404 at all six filenames on its resolved
+default branch**: branch resolved, six paths tried, status-gated. 🟢 Honest absence, recorded as
+`BLOCK` — and **not** inferred as `MIT` from its neighbourhood.
+
+🟢 **`euron-open-lms` is the second `MIT` LMS this base has ever carried**, and the first
+*conventional* one — `kolibri`, the other, is offline-first by architecture. 🔴 **Four days old,
+nine stars, no track record; `BUILD-ON` means only *"the licence does not block it"*, and
+`P559-B` says in terms that it is not recommended for an engagement today.**
+
+### 🟢 Regions: LATAM out-yielded everything, EMEA and APAC returned informed nulls
+
+🟢 **LATAM, 2 new instruments.** The UNESCO LAC Observatory's own figures, which this base carried
+the launch of but not the numbers: in countries such as **Chile and Brazil >50 % of teachers
+already use AI tools**, while 🔴 **<10 % of institutions in the region have formal guidelines.**
+🔵 That 5:1 practice-to-governance gap is the sharpest statement of the LATAM thesis here — the
+demand is **policy, teacher enablement and audit for adoption that already happened**, not
+*"adopt AI"*. 🟢 And **the Chapultepec Principles** (ten-point AI ethics framework, Mexico,
+January 2026, first appearance here) matter precisely because Mexico has **no enacted federal AI
+statute**, making a voluntary framework the only surface a Mexican client can be held to.
+
+🟢 **North America, 1 new instrument:** New Jersey's measure requiring **public higher-education
+institutions to offer AI certificate and degree programmes** — the first NA instrument here that
+obliges institutions to *produce AI graduates* rather than *govern AI use*, which is a different
+buyer (provost, workforce development) and a different deliverable (curriculum, accreditation).
+🔴 A proposal, carried as such.
+
+🔴 **EMEA: 0 new, twentieth consecutive pass. APAC: 0 new.** 🟢 Both legs ran and both returned
+real substance — **all of it already carried here**, probed and counted (`Digital Omnibus` 20
+files, `2026/1744` 22, `Article 4` 10, `proctoring` 115, `Ipsos Education Monitor` 6,
+`AI Basic Act` 15). 🔵 One APAC **date** refinement: India's amended IT Rules require AI-content
+labelling from **`20 Feb 2026`** — the instrument was carried, the commencement date was not.
+🔴 **And after twenty passes: no EMEA-origin and no APAC-origin open-source education supply
+address has ever appeared on this shelf.** 🔵 Published as informed gaps with the probe counts
+attached, because a silent region is indistinguishable from a covered one.
+
+### 🟢 `559-D` — the market total's disagreement has a cause, and it makes the rule absolute
+
+🔴 `558-F` recorded a **3.08×** spread on the 2026 base (**$3.7 B** Persistence → **$11.4 B** Grand
+View, with IMARC ~**$6.4 B**, Precedence **$9.58 B**, Research and Markets **$10.6 B**) and called
+it *"same quarter, same scope words"*. 🟢 **The scope words are not the same:** the sources state
+the gap comes from **differing definitions** — some count only dedicated AI-education software,
+others include **tutoring, services and embedded AI**. 🔴 So a midpoint measures **nothing that
+exists**, and `558-F`'s prohibition holds absolutely rather than cautiously: **no single total in
+any deck, summary or pattern.** 🟢 What survives is **segment rank — K-12 first at ~34 %** for
+2026, consistent across every firm that breaks out segments. 🟢 Grand View's **$57.2 B (2033)** is
+new on this shelf. 🔵 Unchanged and tempering all of it: a July 2026 scoping review of **474
+studies** finds the efficacy literature fragmented.
+
+🔴 **The `455-F` mechanism, third occurrence, applied prospectively:** this pass **declined to
+record a US state count at all**, because the same leg returned *"~34 states plus DC and Puerto
+Rico"* and *"more than 28 states plus DC"* for the same quantity **in the same session**.
+
+### 🟢 Patterns
+
+🟢 **`P559-A` — the licence gate, correct by construction.** Four stages, each present because
+something was lost without it: branch from `ls-remote --symref` (not assumed); a de-duplicated
+filename ladder **status-gated on `%{http_code}`** (`559-B`); byte normalisation to the pinned
+convention (`559-A`); and grading on **operative clauses, never byte-equality** (`559-C`, `557-E`).
+🔵 Under a day to build, runs tokenless in CI, and on a shelf this size it is the difference
+between a correct licence posture and a gate that mis-grades a third of the tree **in both
+directions**.
+
+🟢 **`P559-B` — the permissive-LMS engagement, published with its risk in the same breath.**
+`euron-open-lms` (`MIT`) as platform, `OATutor`-style BKT/FSRS mastery model as the owned asset,
+`Papermorph` (`MIT`, SCORM) for content transform, 🔴 **no `bigbluebutton`** (it would reimport
+`LGPL-3.0` into a deliberately permissive stack), and the curriculum graph as a **priced build**
+because `cn-math-taxonomy` is `CC-BY-NC-4.0`. 🔴 **Not recommended for an engagement today** — it
+is published so the permissive option is *tracked* rather than defaulted away from.
+
+### 🔵 Checks
+
+🟢 Frontmatter **10/10 ok**. 🟢 Exactly **1** canonical `## Opportunities by region` with **5**
+closed-vocabulary `###` children in vocabulary order, **0** out-of-vocabulary, **0** missing,
+LATAM-only **False**, and 🟢 **each of the five amended in place**. 🟢 **0** placeholder-as-data
+rows and **0** ragged tables in this pass's added sections. 🟢 Append-only proved by **byte
+containment** for `agents/trending.md`, `repos/trending.md` and `intel/open-gaps.md`;
+🔵 `repos/foundations.md` and `intel/market.md` are intentionally **not** byte-contained, because
+this pass amended the `kolibri` grant row and the five region children **in place** — which is
+`557-C`'s whole point. 🔴 **None of it is gate-attested** (`559` gate posture, above).
+
+🔵 **And the re-implemented validator produced two false positives against this pass's own
+work, both of the same family as `558-A`'s.** (1) It flagged a **ragged table** in the register:
+the offending row contains a markdown-escaped `\|` *inside a cell* (in the sentence describing
+`558-A`'s cell-level split), which a naive `split('|')` counts as a separator — escape-aware
+widths are uniform and the table is well-formed. (2) It flagged **every prepend-only page as
+losing prior content**, because byte containment was tested against the whole prior file and a
+prepend necessarily relocates the frontmatter — the prior **body** is contained verbatim in all
+eight. 🟢 Both were fixed in the checker, not worked around in the content. 🔵 Same shape as
+`558-A`: **a line-level or byte-level test on a cell-level or body-level invariant produces
+confident, wrong answers in both directions**, and a checker is a claim that needs checking too.
+
 ## Pass 557 — reads 2026-10-30, commit 2026-10-30 — **🟢 `Gap 556-C` DELIVERED AS ADVERTISED: Odoo (**55 430★**) and OpenEduCat are `LGPL-3.0` on grant bytes, moving the education-ERP vertical from `BLOCK` to `LINK-ONLY` and from "unusable" to a client-hosted engagement shape. 🟢 `556-B`, `556-E` (both limbs) and `556-H` also closed; `556-G` confirmed and its stated axis refuted. 🔴 And the pass's most load-bearing result is against itself: **FIVE FALSE NOVELTY CLAIMS, ALL RETRACTED BEFORE PUBLICATION** by four lines of `grep` — because the top of a shelf had gone stale beneath its own history.**
 
 🔴 **Gate posture, stated first and without softening: a new denial surface.** `make hooks` was

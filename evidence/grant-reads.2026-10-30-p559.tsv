@@ -1,0 +1,8 @@
+slug	branch	file	bytes_raw	bytes_convention	sha256_12	title_line	verdict
+learningequality/kolibri	develop	LICENSE	1097	1096	fa4c9d2697f9	MIT License	MIT
+CaviraOSS/PageLM	main	LICENSE.md	8563	8562	20a39a9c5993	# PageLM Community License	bespoke
+bayshores/godspeed	main	LICENSE	34523	34522	4df3c306ddda	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0
+amosblomqvist/learnharness	main	LICENSE	34523	34522	4df3c306ddda	GNU AFFERO GENERAL PUBLIC LICENSE	AGPL-3.0
+euron-sde-team/euron-open-lms	main	LICENSE	1132	1131	559471b300db	MIT License	MIT
+OpenOLAT/OpenOLAT	master	LICENSE	10983	10982	6dbc5b605ed0	Apache License	Apache-2.0 (appendix removed)
+datawhalechina/diy-llm	main	-	0	0	-	-	NOASSERTION (earned, 6 paths tried)

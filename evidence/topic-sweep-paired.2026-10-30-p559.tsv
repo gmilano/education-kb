@@ -1,0 +1,3 @@
+leg	query	total_count	returned	stars_ge1	stars_0	synthetic_sig	one_owner_rows	promotable_pct
+unfiltered	topic:edtech created:>2026-10-23	204	30	5	25	13	6	17
+stars-floor	topic:edtech created:>2026-10-23 stars:>5	2	2	2	0	0	0	100

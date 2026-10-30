@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p559` — `2026-10-30` — **🔴 THE PLATFORMS THIS SHELF RECOMMENDS ARE THE ONES A NAIVE LICENCE GATE CANNOT READ: `odoo` defaults to `20.0`, `openeducat_erp` to `19.0`, `i-educar` to `2.12`, `ILIAS` to `release_11`, `bigbluebutton` to `v4.0.x-develop`, `tutor` to `release`, `ofbiz-framework` to `trunk`. 🟢 All seven resolve and all seven 404 at `…/main/LICENSE`. 🟢 `OpenOLAT` grant read first-hand at `master`: Apache-2.0, operative sections complete.**
+
+### 🔴 `559-G` — a vertical-layer finding, not a tooling trivium
+
+🟢 **Measured this pass over 375 shelf addresses** (full table in
+[`../agents/top.md`](../agents/top.md#-p559--2026-10-30)): **121 of 374 — 32.4 %** are not on
+`main`, and **16 sit on version or release branches**. 🔴 The ones that matter here:
+
+| platform | default branch | what it is on this shelf |
+| --- | --- | --- |
+| [`odoo/odoo`](https://github.com/odoo/odoo) | `20.0` | 🟡 `LINK-ONLY` · `LGPL-3.0-only` · the 55 430★ ERP base (`556-C`) |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `19.0` | 🟡 `LINK-ONLY` · `LGPL-3.0-only` · education ERP on Odoo (`556-C`) |
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `2.12` | 🔴 `GPL-2.0` · Brazil's municipal SIS, federal Public Software Portal (`558-H`) |
+| [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) | `2.12` | 🔴 LATAM public-sector enrolment front end |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `release_11` | 🔴 `GPL-3.0` · EMEA (DE/CH) university LMS |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | `v4.0.x-develop` | 🔴 `LGPL-3.0` · the live-classroom layer |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | `release` | 🟢 `AGPL-3.0` · the Open edX deployment plane |
+| [`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) | `trunk` | 🟢 `Apache-2.0` · the permissive ERP alternative |
+
+🔵 **Why this is a delivery finding.** A Globant engagement that stands up an automated licence
+gate — a perfectly ordinary first-week task — and reads `…/main/LICENSE` will return
+**`NOASSERTION` for the entire LATAM public-sector stack and both ERP bases**, then either block
+the build or wave it through unlicensed. 🔴 Both failure modes are worse than having no gate.
+🟢 The fix is three lines: resolve the branch from `ls-remote --symref` first
+(`P559-A` in [`../compose/patterns.md`](../compose/patterns.md#-p559--2026-10-30)).
+
+### 🟢 `OpenOLAT` — grant read, verdict unchanged, gate implication new
+
+🟢 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — branch `master`, `LICENSE`,
+**10 982 B**, `sha256/12` **`6dbc5b605ed0`**, `Apache License / Version 2.0, January 2004`,
+operative §§ 1–9 and both grant clauses present. 🟢 **`Apache-2.0`, `BUILD-ON`.** 🔴 The file is
+**374 B short of canonical** because it drops `END OF TERMS AND CONDITIONS` and the `APPENDIX`,
+substituting a note that the codebase *"is initially based on the OLAT 7.1 release"* — see
+`559-C` in [`../repos/foundations.md`](../repos/foundations.md#-p559--2026-10-30).
+
+🔵 **`OpenOLAT` was already carried on this shelf** (232 files mention it) — 🟢 what is new is that
+its grant has now been **read** rather than relayed from a comparison blog. 🔴 The week's
+vertical-platform search leg returned Wikipedia's *"Apache 2.0"* for `OpenOLAT` and
+**conflicting** licences for Sakai (`Apache-2.0` vs `ECL-2.0`) and **no licence at all** for
+OpenEduCat. 🟢 This shelf already holds all three correctly — Sakai `ECL-2.0` (which appears
+**314×** here against 95× for `Apache-2.0`), OpenEduCat `LGPL-3.0-only` with grant bytes. 🔵 **Fifth
+consecutive pass in which the secondary-source vertical leg was less accurate than the shelf it
+was meant to extend.**
+
+### 🟢 New permissive entrant
+
+🟢 [`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) — **`MIT`**,
+1 131 B / `559471b300db`, 9★ · 16 forks, created `2026-10-26`. 🔵 A conventional self-hosted LMS
+(catalogue, HLS classroom, quizzes, reviewed assignments, verifiable certificates, Stripe +
+Razorpay, admin plane, Terraform for AWS). 🔴 **Four days old; recorded, not recommended.**
+🟢 Its significance is licensing, not maturity: the LMS layer of this shelf is otherwise
+`AGPL-3.0` (Open edX, Canvas CE), `GPL-3.0` (Moodle, ILIAS) or `MIT`-but-offline-first
+(`kolibri`). 🔵 Razorpay alongside Stripe places its author in the **APAC** payment market.
+
 ## 🆕 `p558` — `2026-10-30` — **🟢 THE DELIVERY SHAPE THIS PASS ADDS IS **INSIDE** THE CLIENT'S LMS, NOT BESIDE IT: the first Moodle-native AI course generator this base has seen (`moodle-local_lumination`, GPL-3.0) makes `Trend 67`'s content-transform a `local_` plugin — where Moodle's own GPL is the ambient licence and the plugin boundary is the delivery boundary. 🔴 0★ AND THREE DAYS OLD, SO NOTHING IS RECOMMENDED ON IT.**
 
 🔵 **No vertical row changed this pass.** 🟢 `p557`'s two verticals stand: the reopened

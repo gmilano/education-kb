@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p559` — `2026-10-30` — **🔴 A TRENDING REPO WITH **NO GRANT AT ANY KNOWN PATH**: `datawhalechina/diy-llm` (~2 474★, relayed) returns 404 at all six filenames on its default branch — the first `NOASSERTION` this base has emitted having *earned* it. 🟢 AND THE SHELF-WIDE BRANCH SWEEP LANDS: **121 of 374** addresses are not on `main`, so **32.4 %** of this base's own repo rows defeat a naive grant read.**
+
+### 🔴 Trending and unusable
+
+| address | relayed stars | grant | verdict |
+| --- | --- | --- | --- |
+| [`datawhalechina/diy-llm`](https://github.com/datawhalechina/diy-llm) | ~2 474 | 🔴 **none at `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `COPYING.LESSER`** | 🔴 `BLOCK` |
+
+🔵 `diy-llm` is a Jupyter course carrying LLM pre-training through alignment over six progressive
+coded assignments — 🟢 **exactly the artefact a Globant AI-literacy engagement would want to fork**
+— and 🔴 without a grant it cannot be forked into a deliverable at all. 🔵 Recorded as a *finding*,
+not a gap against the project: no-licence is a legitimate choice and the probe's job is to say so
+honestly rather than guess `MIT` from an `awesome-` neighbourhood.
+
+### 🔵 Relayed this window, not promoted
+
+🔵 These came back from aggregator pages and 🔴 **are relayed figures, not reads** — no grant probe
+was spent on them this pass because none is education-sector supply:
+[`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch)
+(~67.2k★ relayed, already on this shelf),
+`decodingai-magazine/building-a-coding-agent-from-scratch-course` (~1 071★),
+[`xiaolai/the-craft-of-selfteaching`](https://github.com/xiaolai/the-craft-of-selfteaching)
+(~18 883★, already on this shelf). 🟢 **Novelty-probed before writing**, per `P557-C`: of six
+candidates the week's aggregators offered, **four were already carried here**.
+
+### 🟢 The branch sweep, published in full because it re-verifies a prior pass
+
+🟢 **375 distinct addresses** extracted from `agents/top.md`, `repos/foundations.md` and
+`verticals/solutions.md`; **374 resolve via `git ls-remote --symref`**; the single `NOTFOUND` is
+`https://github.com/topics/ai-tutor`, 🔵 an artefact of this pass's own extractor rather than a
+dead row. 🟢 `p558`'s *"0 unreachable"* therefore **holds at 374 addresses**, up from the 76 it
+checked.
+
+| default branch | count | share |
+| --- | --- | --- |
+| `main` | 253 | 67.6 % |
+| `master` | 85 | 22.7 % |
+| `develop` | 15 | 4.0 % |
+| `dev` | 5 | 1.3 % |
+| 🔴 version / release style | 16 | 4.3 % |
+
+🔴 **`master` alone is 85 addresses — 22.7 %.** 🔵 The industry's rename to `main` is eight years
+old and this shelf is still two-thirds / one-quarter split; any tooling here that assumes `main`
+is wrong about **one row in three**.
+
 ## 🆕 `p558` — `2026-10-30` — **🔴 NOTHING WAS PROMOTED AND NOTHING SHOULD HAVE BEEN: the entire 3-day trending tail across two topics sits at **0–2★**. 🟢 THE PASS'S REPOSITORY FINDING IS A **TRANSPORT** ONE — `LICENSE` at `main` 404s on two live shelf rows for two different reasons, so a grant read is a **branch × filename** enumeration.**
 
 🔵 **GitHub trending was queried on the transport that answers** — MCP `search_repositories`, per

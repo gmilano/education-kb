@@ -4,6 +4,70 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p559` — `2026-10-30` — **🟢 FOUR CLOSED, AND THE TWO HEADLINE NUMBERS ARE BOTH WORSE THAN THE SAMPLES THEY CAME FROM: a `main`-only grant read fails on **121 of 374** shelf addresses (**32.4 %**, `558-B`), and the unfiltered topic channel is **~17 % promotable** against **100 %** with a stars floor (`558-C`). 🟢 `558-D` CLOSED — the last unread Tier-1 grant is read. 🟢 `558-A` DISCHARGED — `p558`'s figure reproduced digit-for-digit. 🔴 SEVEN REGISTERED (`559-A`…`559-G`).**
+
+🔵 **Registration check run first, per `P605`.** The seven ids below are cited in this pass's
+sections on [`../agents/top.md`](../agents/top.md#-p559--2026-10-30),
+[`../agents/trending.md`](../agents/trending.md#-p559--2026-10-30),
+[`../repos/foundations.md`](../repos/foundations.md#-p559--2026-10-30),
+[`../repos/trending.md`](../repos/trending.md#-p559--2026-10-30),
+[`../verticals/solutions.md`](../verticals/solutions.md#-p559--2026-10-30),
+[`../intel/trends.md`](../intel/trends.md#-p559--2026-10-30),
+[`../intel/market.md`](../intel/market.md#-p559--2026-10-30) and
+[`../compose/patterns.md`](../compose/patterns.md#-p559--2026-10-30), **and all seven appear below.**
+
+🔴 **Gate posture, third consecutive measurement.** `python3 -I ingest/gap-register-audit.py` was
+**DENIED** (`Code from External`) on this host class — so `557-A`'s and `555-F`'s finding now holds
+across three sessions and three different committed instruments (`probe-grant.sh`,
+`validate-pages.py`, `gap-register-audit.py`). 🔵 **The standing phrase is confirmed as a property
+of the host class, not of a command:** this base's committed instruments are unreachable from the
+sessions that maintain it. 🟢 Every check below was re-implemented inline this pass and run.
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+| --- | --- |
+| 🟢 **`558-B`** | **Probe adopted and run at full shelf scale.** 375 distinct addresses; **374 resolve**, 1 `NOTFOUND` (`github.com/topics/ai-tutor` — this pass's own extractor artefact, not a dead row). 🔴 **121/374 = 32.4 % are not on `main`**: `master` 85, `develop` 15, `dev` 5, **16 on version/release branches**. `p558` estimated 3-in-6 from six addresses; the full-shelf figure is **1-in-3**. 🟢 `P558-B`'s probe is now the only read permitted to emit `NOASSERTION`, and `559-G` names the sixteen rows it rescues |
+| 🟢 **`558-C`** | **Paired sweep run in one session, both yields published.** `topic:edtech created:>2026-10-23`: unfiltered `total_count` **204**, 30 returned, **25/30 at 0★**, 13/30 synthetic signature, 🔴 **~17 % promotable**; with `stars:>5` → `total_count` **2**, 🟢 **2/2 real and both grant-read (100 %)**. 🟢 Standing `stars:>5` floor adopted for topic sweeps, and a sweep published without one must publish its unfiltered yield beside it |
+| 🟢 **`558-D`** | **One call, as prescribed.** `…/kolibri/develop/LICENSE` → 200. `MIT License`, `Copyright (c) 2021 Learning Equality and other contributors`, raw **1 097 B**, **1 096 B** by convention, `sha256/12` **`fa4c9d2697f9`**. 🟢 Row amended **in place** in `repos/foundations.md` from *carried* to **read**. 🟢 The `MIT` carry was correct; the evidence was what was missing. 🔵 **Zero Tier-1 rows now carry a bare *"carried, unchanged"* grant** |
+| 🟢 **`558-A`** | **Discharged on both limbs.** (a) Cell-level proof published: the `PageLM` verdict row split on `\|` yields **0** cells equal to `NOASSERTION`, while a line-level `grep` returns **1** — the false positive `558-A` predicted, reproduced and discounted. (b) The grant was **re-read independently**: `main` · `LICENSE.md` · `# PageLM Community License` · **8 562 B** · **`20a39a9c5993`** — 🟢 digit-for-digit what `p558` published |
+
+### 🔴 Registered this pass
+
+| gap | finding | closure condition |
+| --- | --- | --- |
+| 🔴 **`559-A`** | **The byte convention was never pinned, and this pass caught itself using the wrong one.** The first read of `kolibri` reported **1 076 B** (`tr -d '\n'`, all newlines stripped). The convention that reproduces `p558`'s `PageLM` figure is **raw minus one trailing newline**, and on `PageLM` the three candidates give **8 563 / 8 562 / 8 433** with three different digests. 🔵 Caught before publication by reconciling against a figure this base already held | 🟢 **Adopted as standing and already in force:** a grant byte count on this base is **raw bytes minus one trailing newline**, and the digest is computed over *those* bytes. 🔵 Any pass publishing a byte figure states the convention or cites this gap. 🔴 Prior figures computed under an unstated convention are **not** retroactively trusted: a re-read is cheap and a reconciliation is the only proof |
+| 🔴 **`559-B`** | **A status-ungated read manufactures a grant.** `curl -sS -o f URL` against a wrong address wrote GitHub's 404 **body** to disk and produced a **14-byte "grant"**, `sha256/12` `d5558cd419c8`, content `404: Not Found`. 🔴 A byte-counting pipeline records it as a real, small, digestible grant | 🟢 Already implemented: `P559-A` stage 2 gates on `-w '%{http_code}'` and the gate is documented as load-bearing rather than hygienic. 🔵 Closure requires one more thing — **a sweep of this base's historical grant figures for any value under ~200 B**, since any such row may be a 404 body recorded as a grant. Not run this pass |
+| 🔴 **`559-C`** | **A foundation grant is a *modified* canonical licence, and byte-equality would flag it.** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) at branch `master` ships Apache-2.0 at **10 982 B / `6dbc5b605ed0`** against canonical **11 356 B / `43070e2d4e53`** — Δ **374 B** — dropping `END OF TERMS AND CONDITIONS` and the `APPENDIX` and appending an OLAT-7.1 provenance note. 🟢 Operative §§ 1–9, `Grant of Copyright License`, `Grant of Patent License`, `Redistribution` and `Trademarks` all present ⇒ **it is Apache-2.0** | 🟢 **Standing rule, and it is `557-E` inverted:** grade a grant on its **header and operative clauses**, never on byte-equality to a canonical copy; treat the appendix as absent either way. 🔵 At `557-E` a string *in* the non-operative appendix was mistaken for the licence election; here the appendix's *absence* is mistakable for a non-standard grant. 🔴 Closure: re-grade every shelf row whose grant digest does **not** match a canonical digest, and distinguish *modified-but-equivalent* from *bespoke* |
+| 🔴 **`559-D`** | **`558-F`'s 3.1× spread is definitional, not an error bar — and `558-F` had the reason wrong.** `558-F` recorded *"same quarter, same scope words"*. The sources state the opposite: the gap comes from **differing definitions**, some counting only dedicated AI-education software and others including **tutoring, services and embedded AI**. 🔴 Which means a midpoint of the published totals measures **nothing that exists** | 🟢 `558-F`'s prohibition holds **absolutely** rather than cautiously: no single total in any deck, summary or pattern; segment mix and rank order only (**K-12 first at ~34 %**, consistent across every firm that breaks out segments). 🔵 Closure: record each firm's **scope word** in the ledger beside its figure, so the spread can be decomposed instead of merely declared |
+| 🔴 **`559-E`** | **This base grades liveness on stars alone and carries no fork count on any row.** Two addresses of near-identical age and star count diverge sharply on forks: `godspeed` **7★ / 0 forks**, `euron-open-lms` **9★ / 16 forks**. 🔵 For a row under two weeks old, stars measure attention and forks measure **intent to use**, and this base cannot currently distinguish them | Carry `forks` beside `stars` on new supply rows, and measure over the next **5 passes** whether forks-per-star at first sighting predicts survival at 30 days. 🔵 Do **not** retrofit the whole shelf — the question is about *new* rows |
+| 🔴 **`559-F`** | **The first earned `NOASSERTION`.** [`datawhalechina/diy-llm`](https://github.com/datawhalechina/diy-llm) — a Jupyter LLM course (pre-training → alignment, six graded assignments), relayed at **~2 474★** — returns **404 at all six filenames on its resolved default branch**. 🟢 This is `P558-B`'s `NO-GRANT-AT-ANY-KNOWN-PATH` emitted **having earned it**: branch resolved, six paths tried, status-gated | 🟢 Verdict `BLOCK`, recorded. 🔵 Closure is upstream and not this base's to force: watch for a grant appearing. 🔴 **Do not infer `MIT` from neighbourhood** — this row sits in an `awesome-`adjacent corpus where that inference would be wrong |
+| 🔴 **`559-G`** | **The sixteen version-branch addresses are this shelf's most valuable rows, not its tail.** `odoo` → `20.0`, `openeducat_erp` → `19.0`, `i-educar` → `2.12`, `pre-matricula-digital` → `2.12`, `ILIAS` → `release_11`, `bigbluebutton` → `v4.0.x-develop`, `tutor` → `release`, `ofbiz-framework` → `trunk`, plus `GibbonEdu/core`, `corteza`, `rosariosis`, `terracotta`, `KualiCo/rice`, `QingdaoU/Judger`, `krayin/laravel-crm`, `edge-ai-suites`. 🔴 A `main`-only licence gate reports **`NOASSERTION` for both ERP bases and the entire LATAM public-sector stack** | 🟢 `P559-A` is the fix and is published. 🔵 Closure: confirm no *shipped* Globant artefact for an education client carries a `main`-only grant reader. 🔴 Out of this base's reach to verify — registered so the question is asked at engagement start rather than discovered in an audit |
+
+### 🔵 Standing obligations carried forward, unchanged
+
+🔴 **`558-E` — pass 1 of 5 recorded, and the first observation contradicts the hypothesis.**
+`558-E` suspected the demand leg was the unproductive one. This pass: **demand 5 new instruments**
+(NA 1, LATAM 2, Global 2; 🔴 EMEA **0**, APAC **0**) against **supply 3** (2 addresses grant-read +
+1 earned `NOASSERTION`). 🟢 Recorded, explicitly **not** acted on, 4 passes remain.
+
+🔴 **`557-D`, `558-F` in force and exercised:** this pass **declined to record a US state count**
+because the same leg returned *"~34 states plus DC and Puerto Rico"* and *"more than 28 states plus
+DC"* for the same quantity **in the same session** — the `455-F` mechanism, third occurrence.
+
+🔴 **`557-F` / `558-G` unchanged:** the demand leg remains `search`-reachable and
+`fetch`-unreachable; nothing was fetched from a demand host this pass and no claim rests on one.
+
+🟢 **`P557-C` (grep-before-claiming) paid again, and this is now routine rather than remarkable.**
+Of the week's candidate addresses, **four of six** aggregator finds were already carried
+(`rohitg00/ai-engineering-from-scratch`, `the-craft-of-selfteaching`, `OpenMAIC`, `Open-TutorAi`),
+`OpenOLAT` was already on 232 pages, and every EMEA and APAC demand finding probed as present.
+🔵 **Two false claims were retracted before publication:** that `OpenOLAT` was a new vertical, and
+that `learnharness` had an unresolvable address — the latter was this pass misreading `Echo-Loop`
+as the owner when the shelf carries [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness),
+🟢 which resolves and whose grant re-read **34 522 B / `4df3c306ddda`** is byte-identical to
+`godspeed`'s. 🟢 **Three addresses, one digest: that is now this base's reference AGPLv3.**
+
 ## 🆕 `p558` — `2026-10-30` — **🔴 `557-C` IS RE-OPENED, NOT CLOSED: the pass that registered *"this base writes faster than it reconciles"* then wrote *"amended in place"* about a row it did not amend. 🟢 FIXED IN PLACE THIS PASS AFTER AN INDEPENDENT RE-READ. 🟢 `557-B` CLOSED, `557-A`/`557-G`/`557-H` HONOURED IN FORM. 🔴 **AND `558-H` IS THE PASS'S WORST FINDING: *"no LATAM-origin supply"* WAS **CLOSED AS REFUTED AT `p133`** — 12 LATAM addresses, Brazil 8, Argentina 4 — AND THIS BASE HAS ASSERTED IT **7× SINCE**, COUNTING IT AS A "NINETEENTH CONSECUTIVE" NULL. 🔴 EIGHT REGISTERED (`558-A`…`558-H`).**
 
 🔵 **Registration check run first, per `P605`.** The eight ids below are cited in this pass's

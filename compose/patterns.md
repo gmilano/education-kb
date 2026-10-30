@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p559` — `2026-10-30` — **🟢 `P559-A`: THE LICENCE GATE EVERY ENGAGEMENT BUILDS IN WEEK ONE, BUILT CORRECTLY — because the obvious version returns `NOASSERTION` for **32.4 %** of this shelf, both ERP bases and the entire LATAM public-sector stack. 🟢 `P559-B`: THE PERMISSIVE-LMS ENGAGEMENT, now that a second MIT LMS exists — and the honest statement of what nine stars means.**
+
+### 🟢 `P559-A` — a licence gate that is correct by construction
+
+🔵 **The problem it solves, measured not assumed.** Any engagement shipping open source stands up
+a dependency-licence gate early. The natural implementation fetches
+`raw.githubusercontent.com/{owner}/{repo}/main/LICENSE`. 🔴 **Run against this shelf's 375
+addresses it returns 404 for 121 of them — 32.4 %** — and a 404 is indistinguishable from an
+absent grant. 🔴 Among the false negatives: [`odoo/odoo`](https://github.com/odoo/odoo) (`20.0`),
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (`19.0`),
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) (`2.12`),
+[`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) (`release_11`),
+[`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton)
+(`v4.0.x-develop`), [`overhangio/tutor`](https://github.com/overhangio/tutor) (`release`),
+[`apache/ofbiz-framework`](https://github.com/apache/ofbiz-framework) (`trunk`),
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) (`develop`).
+
+**Wire it as follows.** Four stages, each of which exists because something was lost without it:
+
+**1. Resolve the branch — never assume it.**
+```bash
+branch=$(git ls-remote --symref "https://github.com/$slug" HEAD \
+         | awk '/^ref:/{sub("refs/heads/","",$2); print $2; exit}')
+```
+🟢 `ls-remote --symref` is the **only** transport measured on this base that yields default branch
+*and* HEAD sha, and it is **6/6** where `curl` → `api.github.com` and `github.com` are **403**
+(`557-B`). 🔵 It needs no token.
+
+**2. Walk a filename ladder, status-gated.**
+```bash
+for fn in LICENSE LICENSE.md LICENSE.txt LICENCE COPYING COPYING.LESSER; do
+  code=$(curl -sS -w '%{http_code}' -o grant.bin \
+         "https://raw.githubusercontent.com/$slug/$branch/$fn")
+  [ "$code" = 200 ] && break
+done
+```
+🔴 **The `%{http_code}` gate is load-bearing, not hygiene.** Without it `curl -o` writes GitHub's
+404 **body** into `grant.bin` and the pipeline records a **14-byte grant** whose content is the
+string `404: Not Found` (`559-B`, found by making the mistake). 🔴 `LICENSE.md` rather than
+`LICENSE` is what [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) uses — filename is a
+variable on the same footing as branch.
+
+**3. Normalise bytes before digesting.**
+```bash
+printf '%s' "$(cat grant.bin)" > grant.norm        # raw minus ONE trailing newline
+bytes=$(wc -c < grant.norm); sha=$(sha256sum grant.norm | cut -c1-12)
+```
+🟢 **Pin this convention or figures stop reconciling across runs.** On `PageLM`: raw **8 563**,
+raw−trailing-`\n` **8 562 / `20a39a9c5993`**, all-newlines-stripped **8 433 / `983c5b0d0ba9`**
+(`559-A`). 🔵 Only the middle one reproduces the figure this base already held.
+
+**4. Grade on operative sections — never on byte equality.**
+🔴 [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) ships Apache-2.0 at **10 982 B**
+against canonical **11 356 B**, because it drops `END OF TERMS AND CONDITIONS` and the `APPENDIX`
+and appends its own OLAT-7.1 provenance note. 🟢 Operative §§ 1–9 and both grant clauses are
+intact, so it **is** Apache-2.0 — but a digest-equality check flags it and blocks the build
+(`559-C`). 🔵 Conversely `557-E`: the LGPL *"any later version"* string lives in the **appendix** of
+every copy, so matching on it mis-grades `-only` grants as `-or-later`. 🟢 **Match on the header
+and the operative clauses; treat the appendix as absent either way.**
+
+🟢 **The only honest `NOASSERTION`** is emitted when stage 1 resolved a branch and stage 2
+exhausted all six filenames — as it does for
+[`datawhalechina/diy-llm`](https://github.com/datawhalechina/diy-llm) (`559-F`), a ~2 474★ LLM
+course with no grant at any known path. 🔵 Anything else reports `UNRESOLVED`, which is an
+instrument failure and must not be graded as a licence fact.
+
+🔵 **Effort:** under a day to build, and it runs tokenless in CI. 🟢 **What it buys:** on a shelf
+this size it is the difference between a correct licence posture and a gate that silently
+mis-grades a third of the tree in **both** directions — blocking permissive dependencies and
+passing unlicensed ones.
+
+### 🟢 `P559-B` — the permissive-LMS engagement, stated with its risk
+
+🔵 **The constraint this addresses.** `556` graded the six LMS/SIS platforms a studio would
+realistically start from and found 🔴 **exactly one permissive** — `kolibri` (`MIT`), which is
+**offline-first by architecture**, a deliberate low-connectivity design rather than a general LMS.
+🔴 Everything else is copyleft: Open edX and Canvas CE `AGPL-3.0`, Moodle and ILIAS `GPL-3.0`,
+`bigbluebutton` `LGPL-3.0`, Odoo and OpenEduCat `LGPL-3.0-only`. 🔵 For a client who cannot accept
+copyleft in a hosted product, `P558-A`'s client-hosted-platform shape is the answer — but it
+requires the client to host.
+
+🟢 **What changed this pass.** [`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms)
+is **`MIT`** (1 131 B / `559471b300db`, read first-hand) and conventional: course catalogue,
+HLS-video classroom, quizzes, reviewed assignments, verifiable certificates, Stripe **and**
+Razorpay billing with subscriptions, an admin control plane, Terraform for AWS.
+
+**The composition, if it survives:**
+
+| layer | component | grant | why |
+| --- | --- | --- | --- |
+| platform | [`euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) | 🟢 `MIT` | 🟢 No copyleft reach into the deliverable — the whole point |
+| live classroom | 🔴 **not `bigbluebutton`** (`LGPL-3.0`) | — | 🔵 `euron-open-lms` carries HLS natively; adding BBB reimports copyleft |
+| mastery model | 🟢 build — `OATutor`'s BKT or FSRS, `MIT` | `MIT` | 🔵 The graph is the asset (`Trend 72`) |
+| content transform | `Papermorph` (`MIT`, declares SCORM) | 🟢 `MIT` | 🟢 `Trend 67`'s wave, permissive |
+| curriculum graph | 🔴 **priced build** | — | 🔴 `cn-math-taxonomy` is `CC-BY-NC-4.0` → `BLOCK` (`556-H`) |
+
+🔴 **And the honest risk statement, which is the point of including it.** `euron-open-lms` is
+**four days old with nine stars and sixteen forks** and has **no track record of any kind**. 🟢 Its
+`BUILD-ON` disposition means *"the licence does not block it"* and nothing more. 🔴 **This pattern
+is not recommended for an engagement today.** 🔵 It is published so that the permissive-LMS option
+is *tracked* — if this row is still live and growing in three months it is the most commercially
+useful address on the shelf, and if it is abandoned, `P558-A` remains the only answer and that is
+worth knowing deliberately rather than by default.
+
+🔵 **`godspeed` is deliberately absent from both patterns.** `AGPL-3.0` → `BLOCK`. 🟢 What is
+reusable from it is the **architecture** (`Trend 72`) — tutor as MCP server, inference paid by the
+learner's own client — and an architecture is not a dependency.
+
 ## 🆕 `p558` — `2026-10-30` — **🟢 `P558-A`: ONE ARCHITECTURE SERVES BOTH REOPENED COPYLEFT VERTICALS — the ERP (`Odoo`/`OpenEduCat`, `LGPL-3.0-only`) and the LMS (`Moodle`, `GPL-3.0`) are the same engagement twice: **client-hosted platform · Globant's module under the platform's grant · Globant's model layer in a separate service behind an API.** 🟢 `P558-B`: A GRANT-READ PROBE THAT IS CORRECT BY CONSTRUCTION — branch × filename, with the byte convention stated.**
 
 ### 🟢 `P558-A` — The copyleft-platform engagement, priced once and reused twice

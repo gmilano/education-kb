@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p559` — `2026-10-30` — **🟢 THE WEEK'S NEW AGENT IS AN **MCP SERVER**, NOT AN APP: `godspeed` (AGPL-3.0, 7★ at three days) ships a tutor that runs inside Claude Code, Codex or any MCP client and keeps mastery in a knowledge graph — the student's existing agent *is* the front end. 🔴 AND `558-C`'S STARS FLOOR IS CONFIRMED IN ONE SESSION: the same topic query returns **100 % real with `stars:>5`** and **~17 % promotable without it**.**
+
+🟢 **`558-C` CLOSED — the paired sweep the gap asked for, run in a single session.**
+Query `topic:edtech created:>2026-10-23`, `sort=updated`, both legs, same minute:
+
+| leg | `total_count` | returned | ≥1★ | 0★ | synthetic signature | promotable |
+| --- | --- | --- | --- | --- | --- | --- |
+| 🔴 unfiltered | 204 | 30 | 5 | **25** | **13 / 30** | 🔴 **~17 %** |
+| 🟢 `stars:>5` | 2 | 2 | 2 | 0 | 0 | 🟢 **100 % (2/2)** |
+
+🔴 **And the dilution has a second mechanism `556-G` and `558-C` both missed: one owner.**
+`sonukumarsingh01` contributed **6 of the 30** unfiltered rows — six Open edX derivative
+repositories, all created `2026-10-30`, all `NOASSERTION`. 🔵 That is **20 % of a sweep from a
+single account in one day**, and it is not synthetic-looking at all: the descriptions are specific
+and plausible. 🟢 So the topic channel is diluted by **two** distinct processes — machine-shaped
+seeding (`Name`+digits owners, `edtech-<thing>-<language>` slugs, MIT, 0★) **and** single-owner
+portfolio dumps — and only the second survives a prose-quality filter. 🟢 **A `stars:>` floor
+catches both; a readability heuristic catches neither.**
+
+🟢 **Standing rule adopted:** topic sweeps on this base carry **`stars:>5`**, and a sweep published
+without a stars floor must publish its unfiltered yield alongside, as this one does.
+
+### 🟢 New this week
+
+| address | created | stars | grant | why it is here |
+| --- | --- | --- | --- | --- |
+| [`bayshores/godspeed`](https://github.com/bayshores/godspeed) | `2026-10-27` | 7 | 🔴 `AGPL-3.0` | 🟢 First **MCP-server** tutor on this shelf: knowledge-graph mastery tracking, exam prep, desktop (Electron), **no API keys** — it borrows the user's agent |
+| [`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) | `2026-10-26` | 9 · 16 forks | 🟢 **`MIT`** | 🟢 Complete self-hosted LMS — HLS classroom, quizzes, graded assignments, certificates, Stripe + Razorpay, Terraform/AWS |
+
+🔵 **Neither is recommended on.** Both are under two weeks old and under ten stars; they are
+recorded because `558-C`'s filtered leg returned exactly these two and **both survived a grant
+read**, which is the first time the filtered leg has returned a 100 % real cohort of more than one.
+
+🔴 **`godspeed`'s forks are 0 against `euron-open-lms`'s 16 at a similar age and star count.**
+🔵 Forks-per-star is the cheaper liveness signal for a three-day-old row, and **this base does not
+carry it on any row** — registered as `559-E` rather than acted on.
+
+### 🔵 Supply movement, for `558-E`'s five-pass measurement
+
+🟢 `DeepTutor` stands at **51 571★** on this shelf's own current figure. 🔵 This pass contributes
+**2 new supply addresses + 1 earned `NOASSERTION`** against **2 new demand instruments** from four
+regional legs — recorded as **pass 1 of the 5** `558-E` asked for, and deliberately *not* used to
+conclude anything yet.
+
 ## 🆕 `p558` — `2026-10-30` — **🔴 THE THREE-DAY TUTOR COHORT TOPS OUT AT **2★**: all 19 addresses created since `2026-10-27` under `topic:ai-tutor` sit at **0–2 stars**, so there is nothing to promote and the number says so. 🔴 AND `topic:edtech`'s FRESH TAIL IS **40 % SYNTHETIC** — 6 of 15, all MIT, all 0★, all "typed service", owner names of the form `Name+4digits`.**
 
 🔵 **Two sweeps, one call each** — `topic:` qualifiers cannot be OR'd on this API (`557-G`), so a

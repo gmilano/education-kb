@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p559` — `2026-10-30` — **🟢 `558-D` CLOSED: THE LAST TIER-1 ROW WITHOUT FIRST-HAND GRANT EVIDENCE NOW HAS IT. `learningequality/kolibri` reads `MIT License`, `Copyright (c) 2021 Learning Equality and other contributors`, **1 096 B**, `sha256/12` **`fa4c9d2697f9`**, at `develop` — row amended in place from *carried* to **read**. 🔴 AND A SECOND FOUNDATION GRANT IS A **MODIFIED** ONE: `OpenOLAT` ships Apache-2.0 with the non-operative APPENDIX removed (10 982 B against canonical 11 356 B), which a byte-equality licence check would flag as non-standard.**
+
+### 🟢 `558-D` — `kolibri`, read
+
+| field | value |
+| --- | --- |
+| branch | 🔴 `develop` — `…/main/LICENSE` **404**, `…/develop/LICENSE` **200** |
+| file | `LICENSE` |
+| title line | `MIT License` |
+| attribution | `Copyright (c) 2021 Learning Equality and other contributors` |
+| raw bytes | 1 097 B |
+| bytes (raw − one trailing `\n`) | **1 096 B** |
+| `sha256/12` | **`fa4c9d2697f9`** |
+| channel | `raw.githubusercontent.com`, status-gated, branch resolved by `ls-remote --symref` |
+
+🟢 **The `MIT` carry was right all along.** 🔵 What was wrong was the *evidence*, not the verdict —
+and `558-D`'s point stands either way: the row that a `main`-only reader would have called
+unlicensed was also the row nobody had ever read. 🟢 **There are now zero Tier-1 rows carrying a
+bare *"carried, unchanged"* grant.**
+
+### 🔴 `559-C` — `OpenOLAT`'s Apache-2.0 is Apache-2.0 **minus the appendix**, and that matters for the gate
+
+🟢 **First-hand read:** [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT), branch
+🔴 **`master`** (a *third* default-branch value on this shelf's foundation layer), file `LICENSE`,
+**10 982 B**, `sha256/12` **`6dbc5b605ed0`**.
+
+| | canonical Apache-2.0 | `OpenOLAT` |
+| --- | --- | --- |
+| bytes | 11 356 | 🔴 **10 982** (Δ **374 B**) |
+| `sha256/12` | `43070e2d4e53` | `6dbc5b605ed0` |
+| `Apache License` / `Version 2.0, January 2004` header | 🟢 present | 🟢 present |
+| operative §§ 1–9 | 🟢 all present | 🟢 **all present** |
+| `Grant of Copyright License` · `Grant of Patent License` | 🟢 · 🟢 | 🟢 · 🟢 |
+| `Redistribution` · `Trademarks` | 🟢 · 🟢 | 🟢 · 🟢 |
+| `END OF TERMS AND CONDITIONS` | 🟢 present | 🔴 **absent** |
+| `APPENDIX: How to apply…` | 🟢 present | 🔴 **absent** |
+| trailing content | — | 🔵 project note: *"initially based on the OLAT 7.1 release"* |
+
+🟢 **Verdict: `Apache-2.0`, and safe to build on.** Every operative clause is intact; the missing
+374 B is the appendix, which is instructional boilerplate and grants nothing. 🔴 **But a licence
+gate that compares grant bytes to a canonical digest would flag `OpenOLAT` as a modified
+licence and stop the build.**
+
+🔵 **This is `557-E` inverted, and the pair is the general lesson.** At `557-E` a string living in
+the **non-operative appendix** (*"any later version"*) was mistaken for the licence **election**.
+Here the **absence** of that same non-operative block is mistakable for a **non-standard grant**.
+🟢 **Standing rule:** grade a grant on its **operative sections**, never on its byte-equality to a
+canonical copy. 🔵 Byte digests remain the right tool for *recognising* a grant (three addresses,
+one AGPLv3 digest, this pass) and the wrong tool for *validating* one.
+
+### 🟢 Foundation rows added
+
+| address | stars | grant | bytes · `sha256/12` | branch | disposition | note |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) | 9 · 16 forks | 🟢 **`MIT`** | 1 131 · `559471b300db` | `main` | 🟢 `BUILD-ON` | 🔵 **9 stars, four days old — recorded, not recommended.** The second **MIT** LMS this base has ever carried; HLS classroom, graded assignments, certificates, Stripe/Razorpay, Terraform/AWS |
+
+🔵 **Why a 9★ row is on the foundation shelf at all:** `556` established that of six LMS/SIS
+platforms a studio would realistically start from, **exactly one** (`kolibri`, `MIT`) is
+permissive, and `kolibri` is offline-first — a deliberate architectural constraint, not a general
+LMS. 🟢 `euron-open-lms` is the first permissive *conventional* LMS to appear. 🔴 At four days and
+nine stars it has **no track record whatsoever** and the disposition means only *"the licence does
+not block it"*.
+
 ## 🆕 `p558` — `2026-10-30` — **🔴 A TIER-1 ROW'S GRANT HAS NEVER BEEN BYTE-READ AND IS **UNREACHABLE AT `main`**: `learningequality/kolibri` is carried as `MIT` *"carried, unchanged"*, its default branch is 🔴 **`develop`**, and `GET …/main/LICENSE` returns **404**. 🟢 The grant IS there — at `develop`. 🔴 NO ROW WAS ADDED OR PROMOTED THIS PASS, AND THE 3-DAY SUPPLY TAIL (0–2★) IS WHY.**
 
 🔵 **No foundation row changed tier this pass.** 🟢 The eight Tier-1 and the Tier-2 rows stand
@@ -85,7 +148,7 @@ such rows new. 🔴 **Retracted.**
 | [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 449 | 🟢 `Apache-2.0` | 10 982 · `6dbc5b605ed0` | `2026-10-30` | 🟢 **10 982 B reproduces this shelf's own prior byte count exactly** — the platform field says `NOASSERTION`, the shelf and this pass both read Apache-2.0. Institutional LMS across Swiss/German/Austrian universities — the permissive EMEA counterpart to Sakai. `NOTICE.TXT` also present (14 711 B, `eab74dcec74e`) |
 | [`academico-sis/academico`](https://github.com/academico-sis/academico) | 410 | 🟢 `MIT` | 1 093 · `7ff3d1c30bb7` | `2026-10-28` | 🔵 **Carried; re-verified on bytes.** The permissive system of record — school management on Laravel + Filament: enrolment, periods, courses, attendance, grades |
 | [`inducer/relate`](https://github.com/inducer/relate) | 437 | 🟢 `MIT` | 1 144 · `e6c20b652766` | `2026-10-29` | 🟢 **UPGRADED.** This shelf carried it as 🟡 *"MIT by README text only — sidebar names no licence"*; a `LICENSE` file exists and was read, opening *"RELATE is licensed to you under the MIT/X Consortium license"*. Course platform built for university teaching: versioned course content in git, timed/randomised assessment, fine-grained grading. MIT/X Consortium wording |
-| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 162 | 🟢 `MIT` | *carried* | `2026-10-30` | offline-first learning platform — the one base that assumes no connectivity. Carried, unchanged |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 162 | 🟢 `MIT` | 🟢 **read** — `develop` · `LICENSE` · **1 096 B** · `sha256/12` **`fa4c9d2697f9`** | `2026-10-30` | offline-first learning platform — the one base that assumes no connectivity. 🟢 Grant read first-hand at `p559` (`558-D`): title line `MIT License`, `Copyright (c) 2021 Learning Equality and other contributors`. 🔴 `…/main/LICENSE` 404s — default branch is `develop` |
 | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 1 029 | 🟢 `MIT` | 1 068 · `e16528680638` | `2026-10-29` | content transform with a **SCORM** target: the foundation for "existing LMS, better content" rather than platform replacement |
 | [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | **36 581** | 🟢 `MIT` | 1 068 · `be9b04bccfb4` | `2026-10-28` | PDF → agent skill, 3 877 forks. Default branch 🔴 **`master`** |
 

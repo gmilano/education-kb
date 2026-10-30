@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p559` — `2026-10-30` — **🟢 `Trend 72`: THE TUTOR IS BECOMING A **SERVER**. `godspeed` ships an AI tutor as an MCP server with no front end and no API keys — the student's existing agent is the client. 🟢 `Trend 73`: THE TOPIC CHANNEL IS DILUTED BY **TWO** PROCESSES, NOT ONE — machine-shaped seeding *and* single-owner portfolio dumps (6 of 30 rows from one account in one day). 🔴 `Trend 74`: A THIRD OF THIS BASE'S OWN ADDRESSES DEFEAT THE GRANT READ EVERY LICENCE GATE PERFORMS BY DEFAULT.**
+
+### 🟢 `Trend 72` — tutor-as-MCP-server
+
+🟢 [`bayshores/godspeed`](https://github.com/bayshores/godspeed) (`AGPL-3.0`, 7★, created
+`2026-10-27`) is the first supply row on this shelf that **is not an application**. It is an MCP
+server plus a desktop shell: *"Claude Code, Codex or any MCP app teaches you step by step, tracks
+what you know in a knowledge graph, and preps you for exams. No API keys."*
+
+🔵 **Why this is a trend and not a curiosity.** Every tutor this base has carried — `DeepTutor`,
+`Educhain`, `OATutor`, `OpenTutorAI` — owns its interface and its model connection. 🟢 An MCP tutor
+owns **neither**: the client is whatever agent the learner already runs, and inference is paid for
+by that client's subscription. 🔴 Three consequences for delivery, stated as implications rather
+than measurements: the vendor's hosting cost collapses to near zero; the **knowledge graph becomes
+the only defensible asset**; and the institution loses the audit surface it would need under the
+EU AI Act's high-risk functions, because the model call never traverses institutional
+infrastructure.
+
+🔵 **`Trend 67`'s content-transform wave and this are the same underlying move** — supply is
+retreating from the expensive layer (hosting, inference, UI) toward the layer that is cheap to
+ship and hard to copy. 🔴 One address is not a trend; this is registered at `Trend 72` on the
+strength of the architecture being novel on a shelf of ~84 education agents, and it will be
+retracted if no second instance appears.
+
+### 🟢 `Trend 73` — the topic channel has two independent dilution mechanisms
+
+🟢 Measured in one session on `topic:edtech created:>2026-10-23`:
+
+| | unfiltered | `stars:>5` |
+| --- | --- | --- |
+| `total_count` | 204 | 2 |
+| returned | 30 | 2 |
+| 0★ | 🔴 25 / 30 | 0 |
+| synthetic signature | 🔴 13 / 30 | 0 |
+| 🔴 **one owner, one day** | **6 / 30** | 0 |
+| promotable | 🔴 ~17 % | 🟢 **100 %** |
+
+🔴 **The second mechanism is new and `556-G`/`558-C` both missed it.** `sonukumarsingh01` posted
+**six** Open edX derivative repositories on `2026-10-30`, all `NOASSERTION` — 20 % of the sweep
+from one account in a day. 🔵 Their descriptions are **specific and plausible** (branded Open edX
+with e-commerce, design-token theming, a plug-and-play AI assistant), so the prose-quality
+heuristic that catches `edtech-course-spend-guard-java` does **not** catch these. 🟢 Only a
+`stars:>` floor catches both. 🟢 Adopted as standing.
+
+🔵 **This refines `Trend 70` rather than replacing it.** `Trend 70` said corpus integrity, not
+discovery, limits the supply leg. 🟢 Still true — and the corpus is degraded by **ordinary
+portfolio behaviour** as much as by seeding, which means it will not be fixed by better spam
+detection upstream.
+
+### 🔴 `Trend 74` — the default-branch assumption is wrong about one row in three
+
+🔴 **121 of 374** addresses on this shelf are **not** on `main`: `master` 85, `develop` 15, `dev` 5,
+and **16 on version or release branches** (`odoo` → `20.0`, `openeducat_erp` → `19.0`, `i-educar` →
+`2.12`, `ILIAS` → `release_11`, `bigbluebutton` → `v4.0.x-develop`, `tutor` → `release`,
+`ofbiz-framework` → `trunk`).
+
+🔵 **Why this belongs in trends and not only in tooling notes.** A licence gate is standard
+first-week work on any engagement that ships open source, and the obvious implementation reads
+`…/main/LICENSE`. 🔴 On this shelf it returns **404 — indistinguishable from "no licence" — for
+32.4 % of addresses, including both ERP bases and the whole LATAM public-sector stack.** 🟢 The
+industry's `master` → `main` rename is eight years old and 22.7 % of these projects never moved;
+**version-branch defaults are a deliberate release-engineering choice that will never move.**
+🔵 So this is a permanent property of the ecosystem, not a transitional one.
+
+### 🔵 What did not move
+
+🔴 **EMEA returned no new instrument for the twentieth consecutive pass, and APAC none this
+pass** — both legs ran, both returned substance, and 🟢 **all of it probed as already carried
+here**. 🔵 Published as informed gaps with the probe counts attached, in
+[`market.md`](market.md#-p559--2026-10-30), because a silent region is indistinguishable from a
+covered one. 🔴 **No APAC-origin and no EMEA-origin open-source education supply address has ever
+appeared on this shelf** — twenty passes of EMEA demand findings against zero EMEA supply.
+
 ## 🆕 `p558` — `2026-10-30` — **🟢 `Trend 70`: THE TOPIC CHANNEL IS BEING SEEDED — 40 % of `topic:edtech`'s three-day tail is synthetic, which makes **corpus integrity**, not discovery, the limiting factor on this base's supply leg. 🟢 `Trend 71`: THE SUPPLY TAIL HAS A **STAR CEILING OF 2** ACROSS TWO TOPICS, SO "nothing promotable" IS NOW A MEASURED STATE RATHER THAN A SEARCH FAILURE. 🔴 AND THE DEMAND LEG SATURATED ON **ALL FOUR REGIONS AT ONCE** — 17 of 17 novelty probes already on this shelf.**
 
 ### 🟢 `Trend 70` — Corpus integrity is now the binding constraint on the supply leg
