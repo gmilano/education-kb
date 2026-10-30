@@ -1,0 +1,43 @@
+slug	stars	spdx_id	verdict	why
+HKUDS/DeepTutor	51608	Apache-2.0	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+THU-MAIC/OpenMAIC	41931	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+virgiliojr94/book-to-skill	36578	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+openedx/openedx-platform	8213	AGPL-3.0	SELF-HOST-ONLY	client-hosted only; network copyleft (AGPL s.13 / equivalent) reaches users served over a network, which is what a hosted pilot is
+moodle/moodle	7563	GPL-3.0	SELF-HOST-ONLY	client-hosted only; the whole derivative work is published
+oppia/oppia	6951	Apache-2.0	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+instructure/canvas-lms	6892	AGPL-3.0	SELF-HOST-ONLY	client-hosted only; network copyleft (AGPL s.13 / equivalent) reaches users served over a network, which is what a hosted pilot is
+xiaoyang111222/cn-math-taxonomy	5480	NOASSERTION	BLOCK	bespoke grant GitHub could not classify -- read the file by hand
+amosblomqvist/learnharness	4231	AGPL-3.0	SELF-HOST-ONLY	client-hosted only; network copyleft (AGPL s.13 / equivalent) reaches users served over a network, which is what a hosted pilot is
+open-spaced-repetition/fsrs4anki	4118	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+frappe/lms	3355	AGPL-3.0	SELF-HOST-ONLY	client-hosted only; network copyleft (AGPL s.13 / equivalent) reaches users served over a network, which is what a hosted pilot is
+CaviraOSS/PageLM	2053	NOASSERTION	BLOCK	bespoke grant GitHub could not classify -- read the file by hand
+classroomio/classroomio	1736	AGPL-3.0	SELF-HOST-ONLY	client-hosted only; network copyleft (AGPL s.13 / equivalent) reaches users served over a network, which is what a hosted pilot is
+jupyter/nbgrader	1370	BSD-3-Clause	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+Miaotofu01/Study-Mate	1278	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+sakaiproject/sakai	1240	ECL-2.0	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+learningequality/kolibri	1162	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+beltromatti/get-it	1141	Apache-2.0	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+DozenTwelve/Papermorph	1028	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+chamilo/chamilo-lms	1019	GPL-3.0	SELF-HOST-ONLY	client-hosted only; the whole derivative work is published
+GarethManning/education-agent-skills	931	NOASSERTION	BLOCK	bespoke grant GitHub could not classify -- read the file by hand
+openeducat/openeducat_erp	901	NOASSERTION	BLOCK	bespoke grant GitHub could not classify -- read the file by hand
+francoisjacquet/rosariosis	649	GPL-2.0	SELF-HOST-ONLY	client-hosted only; the whole derivative work is published
+GibbonEdu/core	635	GPL-3.0	SELF-HOST-ONLY	client-hosted only; the whole derivative work is published
+24kchengYe/human-skill-tree	586	NOASSERTION	BLOCK	bespoke grant GitHub could not classify -- read the file by hand
+ankimcp/anki-mcp-server	539	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+academico-sis/academico	410	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+satvik314/educhain	387	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+ZeKaiNie/universal-examprep-skill	363	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+OS4ED/openSIS-Classic	347	NONE	BLOCK	no grant at all: default copyright, all rights reserved
+karanb192/algo-sensei	299	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+Li-Evan/Bloom	294	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+SenmuuuuW/universal-diagnostic-tutor-skill	253	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+zuhairhalawa/studyai	248	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+artcc/freelingo	216	AGPL-3.0	SELF-HOST-ONLY	client-hosted only; network copyleft (AGPL s.13 / equivalent) reaches users served over a network, which is what a hosted pilot is
+nichochar/ari	212	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+Zproger/ConceptLoom	192	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+3yangyang9/DeepTutor-AILearning	169	Apache-2.0	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+ucbds-infra/otter-grader	161	BSD-3-Clause	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+h5p/h5p-php-library	153	GPL-3.0	SELF-HOST-ONLY	client-hosted only; the whole derivative work is published
+GeminiLight/gen-mentor	135	CC0-1.0	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE
+KeWang0622/kaogong-skill	212	MIT	BUILD-ON	may ship inside a closed deliverable; keep attribution/NOTICE

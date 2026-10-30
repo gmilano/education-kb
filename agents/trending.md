@@ -4,6 +4,101 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p556` — `2026-10-30` — **🟢 THE WEEK'S FASTEST EDUCATION AGENT HAS A NAME AGAIN: `learnharness`, **4 231★ IN 14 DAYS**, AND IT IS `AGPL-3.0`. 🔴 THE ROW AXIS IS BLANK FOR A SEVENTEENTH PASS ON THE *AGENT* SHELF — BUT NOT ON THE TREND AXIS, WHERE THE OCTOBER COHORT IS NOW LEGIBLE AND **ITS LICENCE DISTRIBUTION IS THE STORY**.**
+
+🔵 Channel named beside every figure, per `ACTION VV`: MCP `search_repositories`,
+`2026-10-30`, population sweeps and `repo:`-filtered reads. `curl` to `api.github.com` and to
+`github.com` HTML remain **403** on this session, as for `p554` and `p555`.
+
+### 🟢 New this week — the October cohort, enumerated rather than guessed
+
+🔵 Sweep: `education OR tutor OR learning in:name,description stars:>150 created:>2026-09-30`,
+sorted by stars. 🟢 **13 results; 4 are education artefacts and 9 are ML-research repositories
+that merely use the word "learning".** That ratio is itself the measurement — a keyword sweep
+of this space is **69 % noise**, which is why a topic-scoped sweep (`topic:ai-tutor`,
+`topic:edtech`) remains the better instrument and is run alongside it below.
+
+| Repository | ★ | forks | `spdx_id` | created | pushed | Delivery verdict | Note |
+|---|---|---|---|---|---|---|---|
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | 🟢 **4 231** | 657 | 🔴 **`AGPL-3.0`** | `2026-10-16` | `2026-10-29` | 🟡 `SELF-HOST-ONLY` | 🟢 **closes `Gap 521-C`.** Desktop agent harness, persistent knowledge graph, 30+ providers on the user's keys |
+| [`zuhairhalawa/studyai`](https://github.com/zuhairhalawa/studyai) | 248 | 4 | 🟢 `MIT` | `2026-10-18` | `2026-10-24` | 🟢 `BUILD-ON` | local-first university study platform; **237★ at `p555`, 248 now** |
+| [`nichochar/ari`](https://github.com/nichochar/ari) | 212 | 19 | 🟢 `MIT` | `2026-10-18` | `2026-10-30` | 🟢 `BUILD-ON` | *"learn stuff with pen + paper + AI"*; pushed **today** |
+| 🆕 [`Zproger/ConceptLoom`](https://github.com/Zproger/ConceptLoom) | 192 | 19 | 🟢 `MIT` | `2026-10-01` | 🟡 `2026-10-06` | 🟢 `BUILD-ON` | 🟢 **zero prior mentions on this base.** Learning workflow for `Codex`/`Claude Code`/`OpenCode`/`DeepSeek Harness`: maps knowledge, builds a path, checks understanding, persists across sessions |
+
+🔴 **One row of four carries 86.6 % of the cohort's stars, and it is the one that cannot be
+delivered.** `learnharness` alone is 4 231 of the cohort's 4 883; the three `BUILD-ON` rows
+together are **652**. 🔵 This is the sharpest statement of `Trend 61`'s problem yet: the
+permissive supply in this space is real but *small*, and the copyleft supply is where the
+velocity is.
+
+### 🔴 `updated_at` read `2026-10-30` for nine of nine — and the real push spread was 28 days
+
+🔵 This base already holds the qualitative claim (`agents/trending.md` carries it as *"`updated_at` is not a
+maintenance signal"* against a repository last pushed `2024-04-21` whose `updated_at` read
+`2026-10-12`; `repos/trending.md` carries the REST-API comparison where `updated_at` was
+🔴 *"wrong by ~706 d"*). 🟢 **What is new is
+a quantity on today's live shelf.** Nine repositories were read on **both** fields in one pass:
+
+| Repository | `updated_at` | `pushed_at` | days since push |
+|---|---|---|---|
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | `2026-10-30` | `2026-10-02` | 🔴 **28** |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | `2026-10-30` | `2026-10-20` | 🟡 10 |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | `2026-10-30` | `2026-10-21` | 🟡 9 |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | `2026-10-30` | `2026-10-22` | 🟡 8 |
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | `2026-10-30` | `2026-10-28` | 🟢 2 |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | `2026-10-30` | `2026-10-29` | 🟢 1 |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | `2026-10-30` | `2026-10-30` | 🟢 0 |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | `2026-10-30` | `2026-10-30` | 🟢 0 |
+| [`nichochar/ari`](https://github.com/nichochar/ari) | `2026-10-30` | `2026-10-30` | 🟢 0 |
+
+🔴 **`updated_at` is identical — to the day — for all nine, and the true spread is 28 days.**
+🔵 **Why it matters operationally and not just epistemically:** the MCP transport's
+`minimal_output=true` form returns `updated_at` and **not** `pushed_at`. Any sweep run in that
+cheaper form reads nine repositories as *"all touched today"*. 🟢 **ACTION `p556-F`: every
+freshness claim on this base must cite `pushed_at`, and a `minimal_output=true` sweep may
+rank but may never date.**
+
+🔵 One oddity recorded without a theory: [`classroomio/classroomio`](https://github.com/classroomio/classroomio)
+reports `pushed_at` `16:24Z` and `updated_at` `13:53Z` — the push field is **later** than the
+"updated" field on the same read.
+
+### 🟢 Stale at scale: 5 of 42, and the stalest is a `BLOCK`
+
+| Repository | ★ | last push | days | `spdx_id` |
+|---|---|---|---|---|
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 586 | `2026-03-25` | 🔴 **219** | 🔴 `NOASSERTION` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 6 892 | `2026-04-30` | 🔴 **183** | `AGPL-3.0` |
+| [`satvik314/educhain`](https://github.com/satvik314/educhain) | 387 | `2026-05-29` | 🔴 **154** | 🟢 `MIT` |
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | 1 141 | `2026-06-29` | 🔴 **123** | 🟢 `Apache-2.0` |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | 4 118 | `2026-08-14` | 🟡 **77** | 🟢 `MIT` |
+
+🟢 **15 of 42 were pushed on `2026-10-30` itself**, so this shelf is mostly live; the tail is
+the problem, and `canvas-lms` at 183 days is the one a reader is most likely to propose
+anyway because it is the seventh-largest row.
+
+### 🔴 `educhain` is **387★**, and Globant's own rotation ledger says `~9k` and `~12k`
+
+🔴 The `globant-kb` rotation ledger — the file that schedules this very pass — records
+`Educhain(MIT,~9k★)` for education cycle 2 and `Educhain(MIT,~12k★,v0.4-YouTube-to-course)`
+for cycle 3. 🟢 **The platform field says `387★`, 76 forks, last push `2026-05-29`.** 🔴 That
+is an overstatement of roughly **31×** on the row, carried in the ledger that drives the
+pipeline, and it has been copied forward across cycles. 🔵 The project is real, MIT and
+`BUILD-ON`; only the magnitude was invented, and a 12k-star claim is what makes a reader treat
+a five-month-dormant 387-star package as a safe dependency. Registered `556-D`.
+
+### 🟢 `DeepTutor`: the aggregator's licence error refuted on a second channel
+
+🔴 A Japanese-language outlet states `DeepTutor` is **`AGPL-3.0`**. 🟢 **Both first-hand
+channels say `Apache-2.0`**: the platform `spdx_id` field, and the README's own badge
+(*"License-Apache_2.0"*, linking to the repository's `LICENSE`). 🔵 `p555` settled the star
+figure against three aggregators; this settles the **licence** against one, and on the field
+that decides whether the largest education agent in the world is deliverable at all. 🟢 It is.
+🔵 Also first-hand this pass: **v1.7.0, `2026.10.28`** (*"Modular installation, a refreshed
+learning workspace, block notebooks with Dito, narrated video lessons"*), arXiv **`2604.26962`**,
+and the README's own News line *"40k stars in 9 months!"* dated `2026-09-20` — against
+**51 608** today, so the project's own copy is now 11.6k behind its own count.
+
+
 ## 🆕 `p555` — `2026-10-30` — **🟢 THE STAR CHANNEL `p554` DECLARED DEAD IS ALIVE ON A TRANSPORT THIS BASE DOCUMENTED AT `p241`. `DeepTutor` **51 571★** FIRST-HAND, WHICH RETIRES THREE AGGREGATOR FIGURES AT ONCE. 🟢 NO NEW AGENT ROW — THE ROW AXIS IS BLANK FOR THE SIXTEENTH CONSECUTIVE PASS, AND THAT IS NOW A MEASURED PROPERTY OF THE CHANNEL, NOT A GAP IN THE SWEEP.**
 
 🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 Three page-shape gates run

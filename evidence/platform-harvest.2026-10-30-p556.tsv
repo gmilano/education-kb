@@ -1,0 +1,52 @@
+# p556 2026-10-30 — education shelf platform harvest.
+# CHANNEL: MCP github search_repositories, repo:-filtered, minimal_output=false.
+# Transport note (ACTION VV): curl to api.github.com and github.com are 403 on this
+# session; gh api is 403; the MCP server answers 200 and carries license.spdx_id,
+# stargazers_count, forks_count and pushed_at. Every field below is first-hand from
+# that one transport, read 2026-10-30 ~18:40-18:46 UTC.
+# pushed_at is the code-push field. updated_at is NOT carried here: see p556's
+# finding that updated_at read 2026-10-30 for 9 of 9 repos whose real push spread
+# was 28 days.
+slug	stars	forks	spdx_id	pushed_at
+HKUDS/DeepTutor	51608	6320	Apache-2.0	2026-10-30
+THU-MAIC/OpenMAIC	41931	6488	MIT	2026-10-30
+virgiliojr94/book-to-skill	36578	3877	MIT	2026-10-28
+openedx/openedx-platform	8213	4379	AGPL-3.0	2026-10-30
+moodle/moodle	7563	7691	GPL-3.0	2026-10-30
+oppia/oppia	6951	-	Apache-2.0	2026-10-30
+instructure/canvas-lms	6892	3055	AGPL-3.0	2026-04-30
+xiaoyang111222/cn-math-taxonomy	5480	1388	NOASSERTION	2026-10-30
+amosblomqvist/learnharness	4231	657	AGPL-3.0	2026-10-29
+open-spaced-repetition/fsrs4anki	4118	165	MIT	2026-08-14
+frappe/lms	3355	1566	AGPL-3.0	2026-10-30
+CaviraOSS/PageLM	2053	280	NOASSERTION	2026-10-29
+classroomio/classroomio	1736	409	AGPL-3.0	2026-10-30
+jupyter/nbgrader	1370	-	BSD-3-Clause	2026-10-28
+Miaotofu01/Study-Mate	1278	60	MIT	2026-10-21
+sakaiproject/sakai	1240	1020	ECL-2.0	2026-10-30
+learningequality/kolibri	1162	1015	MIT	2026-10-30
+beltromatti/get-it	1141	138	Apache-2.0	2026-06-29
+DozenTwelve/Papermorph	1028	142	MIT	2026-10-29
+chamilo/chamilo-lms	1019	-	GPL-3.0	2026-10-30
+GarethManning/education-agent-skills	931	131	NOASSERTION	2026-10-22
+openeducat/openeducat_erp	901	-	NOASSERTION	2026-10-29
+francoisjacquet/rosariosis	649	395	GPL-2.0	2026-10-28
+GibbonEdu/core	635	-	GPL-3.0	2026-10-30
+24kchengYe/human-skill-tree	586	33	NOASSERTION	2026-03-25
+ankimcp/anki-mcp-server	539	39	MIT	2026-10-22
+academico-sis/academico	410	151	MIT	2026-10-28
+satvik314/educhain	387	76	MIT	2026-05-29
+ZeKaiNie/universal-examprep-skill	363	21	MIT	2026-10-27
+OS4ED/openSIS-Classic	347	288	NONE	2026-10-26
+karanb192/algo-sensei	299	62	MIT	2026-10-02
+Li-Evan/Bloom	294	44	MIT	2026-10-20
+SenmuuuuW/universal-diagnostic-tutor-skill	253	6	MIT	2026-09-24
+zuhairhalawa/studyai	248	4	MIT	2026-10-24
+artcc/freelingo	216	58	AGPL-3.0	2026-10-30
+nichochar/ari	212	19	MIT	2026-10-30
+Zproger/ConceptLoom	192	19	MIT	2026-10-06
+3yangyang9/DeepTutor-AILearning	169	4	Apache-2.0	2026-10-09
+ucbds-infra/otter-grader	161	-	BSD-3-Clause	2026-10-24
+h5p/h5p-php-library	153	-	GPL-3.0	2026-10-30
+GeminiLight/gen-mentor	135	23	CC0-1.0	2026-10-23
+KeWang0622/kaogong-skill	212	18	MIT	2026-10-12

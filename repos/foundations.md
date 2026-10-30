@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p556` — `2026-10-30` — **🟢 THE FOUNDATION LAYER GRADED FOR DELIVERY FOR THE FIRST TIME: OF THE SIX LMS/SIS PLATFORMS A STUDIO WOULD ACTUALLY START FROM, **ONE** IS PERMISSIVE. 🔴 THE PERMISSIVE LMS OF SCALE IS `kolibri` AT **1 162★** — TWO ORDERS BELOW THE COPYLEFT ONES.**
+
+🔵 Channel: MCP `search_repositories`, `repo:`-filtered and topic-scoped, `2026-10-30`; every
+`spdx_id`, star, fork and `pushed_at` below is the platform field. Graded by
+[`../ingest/delivery-fitness.py`](../ingest/delivery-fitness.py).
+
+### 🔴 The LMS/SIS foundation layer, with the delivery verdict attached
+
+| Repository | ★ | `spdx_id` | pushed | Verdict | Fitness |
+|---|---|---|---|---|---|
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | **8 213** · 4 379 forks | 🔴 `AGPL-3.0` | `2026-10-30` | 🟡 `SELF-HOST-ONLY` | The LMS + Studio behind most national MOOC estates. Python/Django. Network copyleft: client-hosted only |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **7 563** · 7 691 forks | 🟡 `GPL-3.0` | `2026-10-30` | 🟡 `SELF-HOST-ONLY` | The world's installed base. PHP. Plugin-first, so an AI layer rides as a plugin — but a *modified core* is published |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **6 951** | 🟢 **`Apache-2.0`** | `2026-10-30` | 🟢 `BUILD-ON` | 🟢 **The permissive exception at scale.** Interactive-lesson engine with built-in misconception handling — the closest thing on the shelf to a pedagogy framework rather than a content shell |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | **6 892** · 3 055 forks | 🔴 `AGPL-3.0` | 🔴 **`2026-04-30`** | 🟡 `SELF-HOST-ONLY` | 🔴 **183 days without a push** on the open mirror. The vendor ships SaaS; this repository is not the product |
+| [`frappe/lms`](https://github.com/frappe/lms) | **3 355** · 1 566 forks | 🔴 `AGPL-3.0` | `2026-10-30` | 🟡 `SELF-HOST-ONLY` | Rides the Frappe/ERPNext stack, so it inherits a real ERP underneath — the only LMS here with finance and HR next door |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 1 240 · 1 020 forks | 🟢 **`ECL-2.0`** | `2026-10-30` | 🟢 `BUILD-ON` | 🟢 Educational Community Licence 2.0 — Apache-2.0 plus an academic patent clause. Java. The HE-consortium option, permissive and nobody treats it as one |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 162 · 1 015 forks | 🟢 **`MIT`** | `2026-10-30` | 🟢 `BUILD-ON` | 🟢 **The only MIT LMS on the shelf.** Offline-first by design (SDG-4, OER) — which makes it the low-connectivity option for LATAM, Sub-Saharan Africa and rural APAC, not merely the cheap one |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 1 019 | 🟡 `GPL-3.0` | `2026-10-30` | 🟡 `SELF-HOST-ONLY` | Strong Spanish/French-language estate; the LMS with the deepest LATAM public-sector footprint |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 1 736 · 409 forks | 🔴 `AGPL-3.0` | `2026-10-30` | 🟡 `SELF-HOST-ONLY` | Svelte/Supabase, customer-training positioning. Modern stack, copyleft licence |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 649 · 395 forks | 🟡 `GPL-2.0` | `2026-10-28` | 🟡 `SELF-HOST-ONLY` | SIS: attendance, gradebook, scheduling. PHP. Spanish-language docs and a LATAM school footprint |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 635 | 🟡 `GPL-3.0` | `2026-10-30` | 🟡 `SELF-HOST-ONLY` | School-management platform, K-12 shaped, APAC origins (Hong Kong) |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 410 · 151 forks | 🟢 **`MIT`** | `2026-10-28` | 🟢 `BUILD-ON` | 🟢 **The permissive SIS.** Laravel + Filament, built for small and medium institutions — the one row here a studio can fork into a closed product |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 347 · 288 forks | 🔴 **`NONE`** | `2026-10-26` | 🔴 **`BLOCK`** | 🔴 **No licence file at all** on a repository whose own description says *"commercial grade"*. Default copyright. Not usable, at any price |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 901 | 🔴 `NOASSERTION` | `2026-10-29` | 🔴 **`BLOCK`** | 🔴 Education ERP on Odoo. Its own glossary states LGPLv3; the platform **declines to classify** the file in the repository. Grant and documentation disagree |
+
+🔴 **Four permissive rows of fourteen, and the biggest of them is `oppia` at 6 951★.** 🔵 Read
+the other way: **the three largest LMS platforms in the world are all copyleft**, and the
+permissive LMS of scale — `kolibri`, 1 162★ — is roughly **one seventh** the stars of `openedx`
+and **one sixth** of `moodle`. 🟢 **That asymmetry is the single most consequential structural
+fact on this page**, and it has an architectural consequence, not just a legal one: an
+education engagement that must ship closed source **cannot own the LMS**. It owns the agent
+layer and integrates the LMS over LTI/MCP. See `../compose/patterns.md#-p556`.
+
+### 🟢 The assessment layer is permissive, and it is where the agent work actually lands
+
+| Repository | ★ | `spdx_id` | pushed | Verdict | Fitness |
+|---|---|---|---|---|---|
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | **1 370** | 🟢 **`BSD-3-Clause`** | `2026-10-28` | 🟢 `BUILD-ON` | Assign/collect/autograde notebooks, with a release–collect–feedback cycle and a manual-grading UI. The Jupyter-estate standard |
+| [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) | 161 | 🟢 **`BSD-3-Clause`** | `2026-10-24` | 🟢 `BUILD-ON` | Python **and R** autograding, container-isolated, Gradescope/Canvas targets. UC Berkeley Data Science infrastructure |
+| [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) | **4 118** | 🟢 **`MIT`** | 🟡 `2026-08-14` | 🟢 `BUILD-ON` | FSRS: the retention scheduler, with an optimiser trained on review logs. 🟡 77 days since a push, but the algorithm is upstreamed into Anki itself |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 539 · 39 forks | 🟢 **`MIT`** | `2026-10-22` | 🟢 `BUILD-ON` | The bridge: exposes Anki to any MCP client, so an agent can write the cards it just decided the learner needs |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | 153 | 🟡 `GPL-3.0` | `2026-10-30` | 🟡 `SELF-HOST-ONLY` | The interactive-content standard embedded in Moodle, Canvas and Drupal. Copyleft, and it is the *content* layer, so it travels with the LMS anyway |
+
+🟢 **Every autograding row is permissive.** 🔵 This is the practical answer to the LMS problem:
+the layer a studio can own outright is **assessment and retention**, not delivery. `nbgrader`
+and `otter-grader` are both BSD-3-Clause; `fsrs4anki` and `anki-mcp-server` are both MIT. A
+closed deliverable can contain all four.
+
+### 🔵 What was searched and did not produce a foundation row
+
+🔵 `open source platform education ERP CRM MIT Apache` returned **ten results, nine of them
+pages of one vendor's own glossary** (`openeducat.org`, in six languages) and no independent
+source. 🔴 **An informed gap: there is no MIT- or Apache-licensed education ERP of scale.**
+The category's two candidates are `openeducat_erp` (🔴 `NOASSERTION`) and the Odoo base it
+rides, [`odoo/odoo`](https://github.com/odoo/odoo) (**55 430★**, 🔴 `NOASSERTION` on the
+platform field — LGPLv3 for the community edition by Odoo's own statement, which the platform
+again declines to confirm). 🔵 Both are therefore `BLOCK` under this pass's instrument until
+the grant file is read by hand, which this session's `403`s on `github.com` prevent.
+Registered `556-C`.
+
+
 ## 🆕 `p555` — `2026-10-30` — **🟢 THREE PLATFORM `NOASSERTION`s ON THIS BASE ARE **COSMETIC** — PROVEN, NOT ARGUED: THE FILES CARRY THE **VERBATIM** OPERATIVE BODY OF A STOCK LICENCE AND DIFFER ONLY IN DECORATION. 🔴 AND ONE 901★ SHELF ROW SHIPS **~10 %** OF THE LICENCE TEXT IT ASSERTS IT CONTAINS, TRUNCATED BEFORE `END OF TERMS`.**
 
 🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 Three page-shape gates run

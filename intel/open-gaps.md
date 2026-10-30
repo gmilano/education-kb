@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p556` — `2026-10-30` — **🟢 `Gap 521-C` CLOSED BY ENUMERATION AFTER FIVE PASSES OF FAILED GUESSING — AND THE FAILURE MODE IS REGISTERED AS AN ACTION, NOT JUST A CLOSURE. 🔴 EIGHT REGISTERED (`556-A`…`556-H`), TWO OF THEM ASKS THIS PASS'S OWN INSTRUMENT CANNOT ANSWER WITHOUT A TRANSPORT IT DOES NOT HAVE.**
+
+🔵 **Registration check run first, per `P605`.** The eight ids below are cited in this pass's
+sections on [`../agents/top.md`](../agents/top.md#-p556--2026-10-30),
+[`../agents/trending.md`](../agents/trending.md#-p556--2026-10-30),
+[`../repos/foundations.md`](../repos/foundations.md#-p556--2026-10-30),
+[`../repos/trending.md`](../repos/trending.md#-p556--2026-10-30),
+[`../verticals/solutions.md`](../verticals/solutions.md#-p556--2026-10-30),
+[`../intel/trends.md`](../intel/trends.md#-p556--2026-10-30),
+[`../intel/market.md`](../intel/market.md#-p556--2026-10-30) and
+[`../compose/patterns.md`](../compose/patterns.md#-p556--2026-10-30), **and all eight appear below.**
+
+🔴 **Gate posture: `make hooks` was not run** — `Code from External`, the fifteenth denial in
+sixteen passes. 🟢 **What ran at `HEAD`:** `ingest/validate-pages.py` before and after this
+pass's edits — **frontmatter 10/10 ok** both runs, and the shape arm's pre-existing findings
+unchanged in count and line (4 files, its own documented false-positive classes); and
+`ingest/delivery-fitness-controls.py`, **21 fixtures, 0 mismatches, all five arms exercised**.
+
+🟢 **A `make` target ran green: `make gate-delivery-fitness`**, added by this pass. 🔵 So the
+standing phrase *"the gate is denied"* is an over-generalisation: the classifier refuses
+`hooks` specifically, not `make`. 🔴 And `555-F` is independently re-confirmed — a *compound*
+shell invocation of `validate-pages.py` was denied **after** the identical bare invocation had
+already succeeded in this same session.
+
+### 🟢 `Gap 521-C` — CLOSED, and the lesson is bigger than the row
+
+**Registered as:** *"`LearnHarness` is reported at '1.5k stars in 9 days' and AGPL by a
+third-party outlet, and NO repository slug was resolvable. … Closure: resolve the slug, then one
+metadata read and one licence-byte read."*
+
+🟢 **Slug: [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness).**
+**4 231★**, 657 forks, `AGPL-3.0`, created `2026-10-16`, pushed `2026-10-29` — **14 days old**.
+🟢 Licence agrees on two independent channels: the platform `spdx_id`, and the README's own
+prose (*"is open source under the AGPL-3.0 license"*). 🟡 **The licence-byte read in the closure
+condition was NOT performed** — carried forward as `556-B`, so this closure is **partial on its
+own terms** and said so rather than claiming otherwise.
+
+🔵 **The outlet was not wrong, it was early.** *"1.5k in 9 days"* then; **4 231 at 14 days**
+now. 🔴 This base refused a correct figure for five passes because it could not reach the
+address behind it.
+
+| `Gap` | Registered | Closure | Status |
+|---|---|---|---|
+| 🟢 **`Gap 521-C`** | 🔴 `LearnHarness` unresolvable, star figure not carried, no row written | slug resolved, metadata read, licence agreed on two channels | 🟢 **CLOSED** (byte read deferred to `556-B`) |
+
+### 🔴 Registered this pass
+
+| `Gap` | What it is | Closure condition |
+|---|---|---|
+| 🔴 **`556-A`** | **ACTION — an unresolvable slug is not an unreachable repository.** `p521`–`p555` tried to reach `LearnHarness` by *address*: `repo:`-filtered reads of guessed owner spellings, which answer only when the guess is already right. `p556` reached it by *population*: one `created:>` + `stars:>` sweep sorted by stars, where it was **the top row**. 🔴 Every unresolved-slug gap this base has filed was closed by guessing or not at all. | **Standing rule:** before filing an unresolved-slug gap, run one population sweep bounded by `created:` and `stars:` and state its result. A gap filed without that sweep is incompletely filed |
+| 🔴 **`556-B`** | **`learnharness`'s grant file bytes were not read.** Two channels agree on `AGPL-3.0` (platform field, README prose) but no `LICENSE` was fetched. `github.com` and `api.github.com` are **403** on this session; `raw.githubusercontent.com` **did** serve the README, so the transport exists and was simply not used on the grant path | One read of `LICENSE` at `main` via `raw.githubusercontent.com`, with byte count and title block, as every other shelf row carries |
+| 🔴 **`556-C`** | **The education ERP category grades `BLOCK` on both candidates, and probably should not.** [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (901★) and [`odoo/odoo`](https://github.com/odoo/odoo) (**55 430★**, 34 145 forks) are both `NOASSERTION` on the platform field, and both are documented as **LGPLv3** elsewhere — by OpenEduCat's own glossary and by Odoo's own statement. 🔴 If LGPLv3 they grade 🟡 `LINK-ONLY`, which is workable, and the whole ERP recommendation changes from "unusable" to "usable, client-hosted" | Read both grant files via `raw.githubusercontent.com` and re-grade. 🔵 **This is the highest-value single read available to the next pass**, because it moves a 55 430★ platform out of `BLOCK` |
+| 🔴 **`556-D`** | **The upstream rotation ledger carries a star figure wrong by ~31×, and it drives this pipeline.** `globant-kb`'s `rotation.json` records `Educhain(MIT,~9k★)` for education cycle 2 and `Educhain(MIT,~12k★,v0.4)` for cycle 3. The platform field says [`satvik314/educhain`](https://github.com/satvik314/educhain) = **387★**, 76 forks, last push `2026-05-29`. 🔴 The error was copied forward between cycles, and a 12k-star claim is what makes a reader treat a five-month-dormant 387-star package as a safe dependency | Correct the entry in `globant-kb`'s ledger (done this pass, in that repository's own `rotation.json` status string) **and** sweep the ledger's other star claims across all twelve industries — none of them has been checked against a platform field |
+| 🔴 **`556-E`** | **Two of five arms of `delivery-fitness.py` are unexercised by the live shelf.** `LINK-ONLY` and `ASK` are **0 of 42**; they are proven only by [`../evidence/delivery-fitness-fixture.p556.tsv`](../evidence/delivery-fitness-fixture.p556.tsv). 🔵 An arm no real row reaches is an arm whose first production use is also its first test | Find one real LGPL/MPL/EPL education repository and one with a licence outside the table. 🔵 `556-C` would likely close the `LINK-ONLY` limb by itself |
+| 🔴 **`556-F`** | **ACTION — `updated_at` may rank but may never date.** Nine repositories read on both fields this pass returned `updated_at` = `2026-10-30` for **9 of 9**, while `pushed_at` spread over **28 days** (0 d to 28 d). The MCP transport's `minimal_output=true` form returns `updated_at` and **not** `pushed_at`, so any cheap sweep reads the whole cohort as "touched today" | **Standing rule:** every freshness or staleness claim on this base cites `pushed_at`. A `minimal_output=true` sweep may order rows and may not date them. 🔵 This base already holds the *qualitative* claim in two places; what was missing was a rule |
+| 🔴 **`556-G`** | **ACTION — topic-scoped sweeps beat keyword sweeps by a factor of two to three on this space, measured.** `topic:edtech stars:>800` → **7 of 9 = 77.8 %** real education artefacts. `topic:ai-tutor stars:>200` → **11 of 11 = 100 %**. The keyword equivalent, `education OR tutor OR learning in:name,description` → **4 of 13 = 30.8 %**, the other nine being ML-research repositories that merely use the word "learning" | **Standing rule:** sweep by topic first and keyword second, and report each sweep's hit rate beside its results. 🔵 The keyword sweep still earns its place — it is what found `learnharness` — so this is an ordering rule, not a replacement |
+| 🔴 **`556-H`** | **The single most valuable artefact on this shelf is unlicensable.** [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) — **5 480★ in twelve days**, 1 388 forks, **1 644 knowledge points, 2 403 prerequisite edges, 6 723 items** aligned to the Chinese national curriculum with an adaptive prerequisite diagnostic — is `NOASSERTION` → `BLOCK`. 🔵 `Trend 60` holds that the curriculum graph is the scarce asset in this market; this is the best one that exists and it cannot be used | Read the grant file. 🟢 **If it is permissive, this is the largest promotion available to this base in any industry**; if it is not, the `Trend 60` gap is confirmed rather than merely suspected, which is also worth having |
+
+### 🔵 Carried forward, untouched by this pass
+
+🔵 `Gap 555-F` (a denial is not a stable fact about a command: a suite run was refused after an
+identical command had succeeded in the same session) is **unchanged** — this pass did not
+attempt the suite, so it neither confirms nor refutes it. 🔴 **An informed non-result: no EMEA
+national ministry instrument was found this pass for France, Germany, Spain, Saudi Arabia or
+the Nordics**, and the EMEA regional query returned predominantly US material instead. Not
+registered as a numbered gap because it is the standing demand-leg saturation (`Trend 61`,
+seventeenth consecutive pass), recorded here so the absence is not read as coverage.
+
+
 ## 🆕 `p555` — `2026-10-30` — **🟢 `554-A` CLOSED AS A **REGRESSION**, NOT A CHANNEL LOSS — `ACTION VV` SAID SO AT `p241` AND `p554` DID NOT READ IT. 🟢 `553-F`'s `NOASSERTION` LIMB AND `554-F`'s HEAD-VERIFICATION BOTH CLOSED; `554-G` CLOSED WITH BOTH LEADS CORRECTED. 🔴 SEVEN REGISTERED (`555-A`…`555-G`).**
 
 🔵 **Registration check run first, per `P605`.** The seven ids below are cited in this pass's

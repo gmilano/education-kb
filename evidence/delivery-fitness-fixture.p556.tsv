@@ -1,0 +1,27 @@
+# p556 negative controls for ingest/delivery-fitness.py.
+# The live harvest exercises only three of the five arms (BUILD-ON,
+# SELF-HOST-ONLY, BLOCK): LINK-ONLY and ASK are 0 of 41 on it, so without this
+# fixture two arms of the instrument would ship UNRUN. Each row names the arm it
+# is there to prove.
+slug	stars	spdx_id	expect
+fixture/mit	1	MIT	BUILD-ON
+fixture/apache	1	Apache-2.0	BUILD-ON
+fixture/bsd3	1	BSD-3-Clause	BUILD-ON
+fixture/ecl2	1	ECL-2.0	BUILD-ON
+fixture/cc0	1	CC0-1.0	BUILD-ON
+fixture/lgpl3	1	LGPL-3.0	LINK-ONLY
+fixture/mpl2	1	MPL-2.0	LINK-ONLY
+fixture/epl2	1	EPL-2.0	LINK-ONLY
+fixture/gpl3	1	GPL-3.0	SELF-HOST-ONLY
+fixture/gpl2	1	GPL-2.0	SELF-HOST-ONLY
+fixture/agpl3	1	AGPL-3.0	SELF-HOST-ONLY
+fixture/eupl12	1	EUPL-1.2	SELF-HOST-ONLY
+fixture/ccbysa	1	CC-BY-SA-4.0	SELF-HOST-ONLY
+fixture/noassertion	1	NOASSERTION	BLOCK
+fixture/nogrant	1	NONE	BLOCK
+fixture/busl	1	BUSL-1.1	BLOCK
+fixture/elastic	1	Elastic-2.0	BLOCK
+fixture/ccbync	1	CC-BY-NC-4.0	BLOCK
+fixture/ccbyncsa	1	CC-BY-NC-SA-4.0	BLOCK
+fixture/sul	1	SUL-1.0	BLOCK
+fixture/invented	1	WTFPL-9.9	ASK

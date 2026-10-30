@@ -1517,3 +1517,17 @@ gate-restated-presence: ## p541 — Gap 540-A: no pass may present as a DISCOVER
 # runs BEFORE recall, and this suite fails if that order is ever inverted.
 gate-grant-residue: ## p541 — Gap 540-B: a stock BODY under a non-stock TITLE is not that family, a referenced grant is not a reproduced one, and a template fill-in is not a grant
 	@cd compose/code/p541-grant-residue && { $(PY) -I test_grant_residue.py > $(RESIDUE_LOG) 2>&1 || { echo "🔴 p541-grant-residue FAILED — the suite's own report follows:" ; sed "s/^/   /" $(RESIDUE_LOG) ; false ; } ; } && echo "── p541-grant-residue (19 controls: the bespoke-title guard with its own FP-1 class, by-reference vs reproduced, the ladder stub, and the cost-ordering control)" && echo "   PASS" || exit 1
+
+# 🟢 p556 — the question this base had never graded: not "what licence is this"
+# but "can it go in a client deliverable".  p552 found BUSL-1.1 excluding
+# "consulting deliverable" by name; p556 found that the fastest-growing education
+# agent on the shelf (amosblomqvist/learnharness, 4 231 stars at 14 days old) is
+# AGPL-3.0.  Both are delivery findings, and both were reached one repository at
+# a time.  The controls arm exists because the live shelf reaches only three of
+# the five verdict arms -- LINK-ONLY and ASK are 0 of 42 on it, so without the
+# fixture two arms would ship unrun (Gap 556-E).  No network.
+gate-delivery-fitness: ## p556 — Gap 556-E: every verdict arm is exercised before the grader is trusted, and the live shelf is re-graded from its committed harvest
+	@{ $(PY) -I ingest/delivery-fitness-controls.py || { echo "🔴 p556-delivery-fitness CONTROLS FAILED" ; false ; } ; } && echo "── p556-delivery-fitness (21 controls: all five arms — BUILD-ON, LINK-ONLY, SELF-HOST-ONLY, BLOCK, ASK — plus the NOASSERTION-is-BLOCK and NonCommercial limbs)" && echo "   PASS" && $(PY) -I ingest/delivery-fitness.py evidence/platform-harvest.2026-10-30-p556.tsv | tail -5 || exit 1
+
+delivery-fitness: ## p556 — the measurement alone: grade a harvest TSV against Globant's delivery model.  Never a failure.
+	@$(PY) -I ingest/delivery-fitness.py $(or $(HARVEST),evidence/platform-harvest.2026-10-30-p556.tsv)

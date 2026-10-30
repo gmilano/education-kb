@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p556` — `2026-10-30` — **🟢 THE VERTICAL LAYER NOW CARRIES A DELIVERY VERDICT, AND IT INVERTS THE USUAL RECOMMENDATION: THE TWO PLATFORMS A STUDIO CAN ACTUALLY OWN ARE `oppia` (Apache-2.0, 6 951★) AND `academico` (MIT, 410★) — NOT MOODLE, NOT OPEN edX, NOT CANVAS. 🔴 AND THE EDUCATION ERP CATEGORY IS `BLOCK` ON BOTH OF ITS CANDIDATES.**
+
+🔵 Channel: MCP `search_repositories`, `2026-10-30`, platform `spdx_id`. Graded by
+[`../ingest/delivery-fitness.py`](../ingest/delivery-fitness.py) ·
+run [`../evidence/delivery-fitness.2026-10-30-p556.tsv`](../evidence/delivery-fitness.2026-10-30-p556.tsv).
+
+### 🔴 The education ERP category, searched as the brief asks, and the answer is a gap
+
+🔵 Query run: `open source platform education ERP CRM MIT Apache`. 🔴 **Ten results; nine were
+pages of a single vendor's own glossary** (`openeducat.org`, served in six languages) and the
+tenth was the same site again. No independent source. 🔵 The vendor's glossary states the
+licensing position itself: *"which is why OpenEduCat uses LGPLv3"*.
+
+| Candidate | ★ | `spdx_id` (platform) | Stated elsewhere | Verdict |
+|---|---|---|---|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 901 | 🔴 `NOASSERTION` | LGPLv3, by the vendor's own glossary | 🔴 **`BLOCK`** — grant and documentation disagree |
+| [`odoo/odoo`](https://github.com/odoo/odoo) (the base it rides) | **55 430** · 34 145 forks | 🔴 `NOASSERTION` | LGPLv3 for Community, by Odoo's own statement | 🔴 **`BLOCK`** until read by hand |
+
+🔴 **An informed gap, stated plainly: there is no MIT- or Apache-licensed education ERP of
+scale.** 🔵 Both candidates are *probably* LGPLv3 — which would grade 🟡 `LINK-ONLY`, a
+perfectly workable verdict for an ERP a client self-hosts. 🔴 But "probably" is the whole
+problem: the platform declines to classify the file, and this session's `403` on
+`github.com` and `api.github.com` prevents the byte read that would settle it. Registered
+`556-C`. 🔵 **Until it is settled, an Odoo-based education proposal is a legal question, not a
+technical one** — and that is the opposite of how the category is usually presented.
+
+### 🟢 The platforms a studio can own, ranked by what the licence permits
+
+| Platform | ★ | `spdx_id` | Verdict | What it is, and what owning it means |
+|---|---|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | **6 951** | 🟢 **`Apache-2.0`** | 🟢 `BUILD-ON` | 🟢 **The largest permissive education platform in existence.** Interactive-lesson engine whose unit of content is an *exploration* with explicit misconception branches — i.e. it models *why* a learner got it wrong, which an LMS does not. Patent grant included. **This is the one to fork** |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | 1 240 | 🟢 **`ECL-2.0`** | 🟢 `BUILD-ON` | Educational Community Licence 2.0 = Apache-2.0 plus an academic patent clause. Full HE LMS in Java, consortium-governed. 🔵 **Permissive, and nobody in this market treats it as the permissive option** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 162 | 🟢 **`MIT`** | 🟢 `BUILD-ON` | Offline-first by architecture, not as a feature: content sync, local server, device-to-device. 🟢 **The right answer wherever connectivity is the constraint** — rural LATAM, Sub-Saharan Africa, remote APAC |
+| [`academico-sis/academico`](https://github.com/academico-sis/academico) | 410 | 🟢 **`MIT`** | 🟢 `BUILD-ON` | Laravel + Filament SIS for small/medium institutions: enrolment, periods, teachers, invoicing. 🟢 **The only permissive SIS on this base.** Small, readable, forkable |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | **7 563** | 🟡 `GPL-3.0` | 🟡 `SELF-HOST-ONLY` | The installed base, and the plugin API is the way in: a plugin that merely *calls* a hosted agent is a separate work, so the AI value can stay closed while the LMS stays GPL. 🔵 **Integrate, never fork** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | **8 213** | 🔴 `AGPL-3.0` | 🟡 `SELF-HOST-ONLY` | National-MOOC scale, XBlock extension model. 🔴 Network copyleft: an XBlock linked into the platform is the hard case, an LTI tool alongside it is not |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | **6 892** | 🔴 `AGPL-3.0` | 🟡 `SELF-HOST-ONLY` | 🔴 **183 days since a push.** The vendor's product is the SaaS; integrate via LTI 1.3 and the REST API, and do not plan on the open mirror moving |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | 1 019 | 🟡 `GPL-3.0` | 🟡 `SELF-HOST-ONLY` | The LMS with the deepest Spanish- and French-language public-sector footprint; the LATAM ministry default where Moodle is not |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 635 | 🟡 `GPL-3.0` | 🟡 `SELF-HOST-ONLY` | K-12 school management, APAC origin (Hong Kong): timetabling, behaviour, attendance |
+| [`francoisjacquet/rosariosis`](https://github.com/francoisjacquet/rosariosis) | 649 | 🟡 `GPL-2.0` | 🟡 `SELF-HOST-ONLY` | SIS with Spanish-language docs and a real LATAM school footprint. 🟡 GPL-**2.0**, so it is also the one row here that cannot be combined with GPL-3.0-only code |
+| [`frappe/lms`](https://github.com/frappe/lms) | 3 355 | 🔴 `AGPL-3.0` | 🟡 `SELF-HOST-ONLY` | 🟢 **The only LMS here with an ERP underneath it** (Frappe/ERPNext): fees, HR and accounting are already next door, which for a private-education client is most of the back office |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 1 736 | 🔴 `AGPL-3.0` | 🟡 `SELF-HOST-ONLY` | Svelte/Supabase, customer-training positioning; the most modern stack of any LMS here |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 347 | 🔴 **`NONE`** | 🔴 **`BLOCK`** | 🔴 **No licence file.** Default copyright on a repository whose description says *"commercial grade, secure, scalable"*. 🔴 **Remove from any shortlist** |
+
+🟢 **Four of thirteen platforms are permissive, and their combined star count (9 763) is less
+than `openedx` plus `moodle` alone (15 776).** 🔵 The usual shortlist for an education
+engagement — Moodle, Open edX, Canvas — is **the copyleft shortlist**, and it is arrived at by
+size rather than by licence. 🟢 **The permissive shortlist is `oppia` + `sakai` + `kolibri` +
+`academico`**, and this page now states it as such.
+
+### 🟢 The content and standards layer, which travels with the LMS either way
+
+🔵 [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) (153★, 🟡 `GPL-3.0`) is the
+interactive-content format already embedded in Moodle, Canvas, Drupal and Open edX — so an AI
+generator that *emits H5P* reaches every one of those estates without touching their code.
+🟢 [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) (1 028★, 🟢 `MIT`,
+🟢 `BUILD-ON`) **emits SCORM**, which is the same trick against the corporate-LMS estate.
+🔵 **Both are the cheapest integration surface in this whole page**: a standards-emitting
+generator is permissive, closed-deliverable-safe, and licence-indifferent to the LMS it lands in.
+
+
 ## 🆕 `p555` — `2026-10-30` — **🔴 THREE VERTICAL-SHELF PLATFORMS ARE **INVISIBLE TO EVERY TOOL THAT READS GITHUB'S LICENCE FIELD** — INCLUDING `OpenOLAT`, WHICH THIS PAGE RECOMMENDS AS *"THE BEST EMEA BASE"* ON THE STRENGTH OF A GRANT GITHUB WILL NOT SHOW. 🔴 AND `OpenEduCat` SHIPS ~10 % OF THE LICENCE TEXT IT ASSERTS.**
 
 🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 Three page-shape gates run

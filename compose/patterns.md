@@ -4,6 +4,103 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p556` — `2026-10-30` — **🟢 TWO RECIPES THAT ARE PERMISSIVE END TO END, NAMED COMPONENT BY COMPONENT — AND THE FIRST ONE EXISTS BECAUSE 40.5 % OF THIS SHELF CANNOT BE DELIVERED. 🟢 PLUS A TRIAGE STEP THAT RUNS BEFORE ANY OF IT, OFFLINE, IN ONE COMMAND.**
+
+🔵 Every component below is named with its slug, its platform-verified `spdx_id` and its
+delivery verdict from [`../ingest/delivery-fitness.py`](../ingest/delivery-fitness.py). No
+pattern on this page contains a `SELF-HOST-ONLY` or `BLOCK` row inside the deliverable; where
+one appears it is explicitly **outside** the perimeter, integrated over a protocol.
+
+### 🟢 `P556-A` — Permissive-end-to-end adaptive tutor, 6–8 weeks, closed deliverable
+
+🔵 **For:** a private-education or corporate-L&D client who needs the delivered system to be
+their property. 🔵 **The constraint this pattern exists to satisfy:** nothing in the deliverable
+may be copyleft, so the LMS cannot be forked — it can only be integrated.
+
+| Layer | Component | `spdx_id` | Verdict | Why this one |
+|---|---|---|---|---|
+| Agent / tutor loop | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) **51 608★** | 🟢 `Apache-2.0` | 🟢 `BUILD-ON` | v1.7.0 (`2026.10.28`) ships **MCP Services** per account and a **Partners** mechanism that consults external agent harnesses. Patent grant. The integration points this pattern needs are first-class, not bolted on |
+| Lesson engine | [`oppia/oppia`](https://github.com/oppia/oppia) **6 951★** | 🟢 `Apache-2.0` | 🟢 `BUILD-ON` | Explorations with explicit **misconception branches** — the tutor's diagnosis has somewhere structured to land |
+| Retention | [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki) **4 118★** | 🟢 `MIT` | 🟢 `BUILD-ON` | FSRS scheduler + optimiser trained on real review logs |
+| Retention bridge | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) 539★ | 🟢 `MIT` | 🟢 `BUILD-ON` | Lets the tutor **write the cards it just decided the learner needs**, over MCP |
+| Assessment | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) **1 370★** | 🟢 `BSD-3-Clause` | 🟢 `BUILD-ON` | Release→collect→autograde→feedback, with a manual-grading UI for the cases the agent should not decide |
+| Assessment (R/polyglot) | [`ucbds-infra/otter-grader`](https://github.com/ucbds-infra/otter-grader) 161★ | 🟢 `BSD-3-Clause` | 🟢 `BUILD-ON` | Python **and R**, container-isolated; Gradescope/Canvas targets |
+| Delivery shell | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) 1 162★ | 🟢 `MIT` | 🟢 `BUILD-ON` | The only MIT LMS of scale, offline-first — so the same build serves a low-connectivity deployment unchanged |
+| Content export | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) 1 028★ | 🟢 `MIT` | 🟢 `BUILD-ON` | **Emits SCORM**, so generated material also lands in the client's existing corporate LMS |
+| Reference architecture | [`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) 135★ | 🟢 `CC0-1.0` | 🟢 `BUILD-ON` | **WWW 2025 Industry Track oral**: goal-oriented multi-agent ITS. The only peer-reviewed architecture on this shelf, and public domain |
+
+🟢 **Wiring, concretely.** (1) `DeepTutor` runs the session loop; its **MCP Services** store is
+where `anki-mcp-server` is registered, so a diagnosis becomes a scheduled card in the same turn.
+(2) `fsrs4anki`'s optimiser runs nightly over the review log and returns scheduler parameters —
+this is the only component with a training step, and it needs review history, so it goes live in
+week 3 and improves from week 5. (3) `oppia` holds the lesson graph; the tutor selects an
+exploration and reads back which misconception branch the learner entered, which is a far better
+signal than a score. (4) `nbgrader` (or `otter-grader` where R is in scope) grades submissions;
+its **manual-grading queue is the human-in-the-loop gate** and is also the EU AI Act answer —
+see `P556-B`. (5) `Kolibri` is the shell; `Papermorph` exports SCORM for the client's incumbent
+LMS. (6) `gen-mentor` is read, not deployed: take its goal-decomposition design and skip its
+infrastructure.
+
+🔴 **Explicitly outside the deliverable:** the client's **Moodle** or **Canvas**, integrated over
+**LTI 1.3** and the REST API. 🔵 An LTI tool that *calls* a hosted agent is a separate work; an
+XBlock or a Moodle plugin linked into the platform is the hard case. 🟢 **Integrate, never fork**
+— that one sentence is the whole licence strategy of this pattern.
+
+🔵 **Timeline:** w1–2 `Kolibri` + `oppia` stood up, lesson graph imported; w2–4 `DeepTutor`
+configured, MCP services wired, `anki-mcp-server` live; w4–6 `nbgrader` pipeline and the manual
+gate; w6–8 LTI integration to the incumbent LMS, SCORM export, FSRS optimiser on real logs.
+
+### 🟢 `P556-B` — The EU AI Act high-risk conformity pilot, 10–12 weeks, EMEA
+
+🔵 **For:** an EMEA institution whose assessment or placement use of AI falls under **Annex III**
+and therefore under obligations now dated **`2027-12-02`** by `Regulation (EU) 2026/1744`.
+🟢 **The point of the pattern is that the conformity work is buildable now and the deadline is
+two years out**, so it is a programme to scope in 2026, not a scramble in 2027.
+
+| Requirement | Component that answers it | `spdx_id` | Verdict |
+|---|---|---|---|
+| Human oversight of grading decisions | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader)'s manual-grading queue — every autograded submission is reviewable before release | 🟢 `BSD-3-Clause` | 🟢 `BUILD-ON` |
+| Traceability of the teaching decision | [`oppia/oppia`](https://github.com/oppia/oppia) explorations: the misconception branch entered is a logged, named state, not an opaque score | 🟢 `Apache-2.0` | 🟢 `BUILD-ON` |
+| Provenance of taught content | [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) 363★ — **teaches from the institution's own slides with page citations** and names anti-hallucination as a design goal | 🟢 `MIT` | 🟢 `BUILD-ON` |
+| Data residency / no third-country transfer | [`artcc/freelingo`](https://github.com/artcc/freelingo)'s **Ollama-local** design as the reference, run on the institution's own hardware | 🔴 `AGPL-3.0` | 🟡 `SELF-HOST-ONLY` — **client-hosted, outside the deliverable** |
+| Content portability across the estate | [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) — already embedded in Moodle, Canvas, Drupal, Open edX | 🟡 `GPL-3.0` | 🟡 `SELF-HOST-ONLY` — **emit the format, do not link the library** |
+| Pedagogy evidence base | [`anthropics/k12-teacher-skills`](https://github.com/anthropics/k12-teacher-skills) **605★** (re-measured this pass; the shelf carried 601) — published **eval rubrics**, i.e. a yardstick for "is this pedagogically acceptable" | 🟢 `Apache-2.0` | 🟢 `BUILD-ON` |
+
+🟢 **The licence manoeuvre that makes this work:** `freelingo` and `h5p` are both copyleft and
+both stay **outside** the perimeter — `freelingo` as an architecture the client hosts, `h5p` as a
+*format the deliverable emits* rather than a library it links. 🔵 Emitting a format is not a
+derivative work, and it is how a permissive deliverable reaches a copyleft estate. 🟢 The same
+move makes `Papermorph`'s SCORM export valuable in `P556-A`.
+
+🔵 **Timeline:** w1–3 Annex III scoping against the institution's actual systems (which
+decisions, which learners, which consequences); w3–6 oversight and traceability built on
+`nbgrader` + `oppia`; w6–9 citation-grounded content pipeline; w9–12 the technical
+documentation and logging that the obligations require, written against the named regulation.
+
+### 🟢 `P556-C` — Triage before anything else, in one command, offline
+
+🔵 Both patterns above presuppose a step this base did not previously have: **grading candidate
+repositories against the delivery model before they reach a proposal.**
+
+```sh
+# 1. harvest the candidates' platform fields (MCP search_repositories, repo:-filtered)
+#    into a TSV with columns: slug, stars, forks, spdx_id, pushed_at
+# 2. grade them, offline:
+python3 -I ingest/delivery-fitness.py evidence/platform-harvest.2026-10-30-p556.tsv
+# 3. as a gate in CI, fail the build if any candidate is worse than permissive:
+python3 -I ingest/delivery-fitness.py HARVEST.tsv --max-verdict BUILD-ON
+# 4. prove the grader still works before trusting it (21 fixtures, all five arms):
+python3 -I ingest/delivery-fitness-controls.py
+```
+
+🔴 **What step 3 would have caught on this very shelf:** `openSIS-Classic` (🔴 `NONE` — no
+licence file, on a repository describing itself as *"commercial grade"*),
+`cn-math-taxonomy` (🔴 `NOASSERTION`, and the single most valuable curriculum artefact found in
+any pass), `PageLM`, `education-agent-skills`, `openeducat_erp`, `human-skill-tree` — and
+`learnharness`, the fastest-growing education agent of the month. 🟢 **Seventeen of
+forty-two addresses, each of which renders as "open source" in the sidebar a proposal-writer reads.**
+
+
 ## 🆕 `p555` — `2026-10-30` — **two recipes: a four-channel licence clearance that catches the false alarms `P609` would have raised, and the Indonesian teacher-readiness pilot the elective (not a mandate) actually calls for**
 
 🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 Three page-shape gates run

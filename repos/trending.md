@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p556` — `2026-10-30` — **🟢 TOPIC-SCOPED SWEEPS BEAT KEYWORD SWEEPS 100 % TO 31 % ON THIS SPACE, MEASURED. 🟢 `topic:edtech stars:>800` RETURNS NINE ROWS AND **SEVEN** ARE REAL EDUCATION ARTEFACTS; THE KEYWORD EQUIVALENT RETURNS THIRTEEN AND **FOUR** ARE. 🔴 THE LARGEST "EDTECH" REPOSITORY ON GITHUB IS A PDF-TO-SKILL CONVERTER WITH **36 578★**.**
+
+🔵 Channel: MCP `search_repositories`, `2026-10-30`. `curl` to `api.github.com` and
+`github.com`: **403**, unchanged from `p554`/`p555`.
+
+### 🟢 `topic:edtech stars:>800` — the trending shelf, with grants
+
+| Repository | ★ | forks | `spdx_id` | pushed | Verdict | What it is |
+|---|---|---|---|---|---|---|
+| [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) | 🟢 **36 578** | 3 877 | 🟢 `MIT` | `2026-10-28` | 🟢 `BUILD-ON` | 🔴 **The largest `edtech`-topic repository on GitHub, and it is a tool, not a platform**: turns a technical book PDF into an agent skill. Python, 2.5 MB repo |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | **5 480** | 1 388 | 🔴 `NOASSERTION` | `2026-10-30` | 🔴 `BLOCK` | **1 644 knowledge points, 2 403 prerequisite edges, 6 723 items**, aligned to the Chinese national curriculum, with an adaptive prerequisite diagnostic. The richest curriculum graph on this base — and unlicensable |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | **2 053** | 280 | 🔴 `NOASSERTION` | `2026-10-29` | 🔴 `BLOCK` | Community NotebookLM: study material → quizzes, flashcards, notes, podcasts. LangChain/Node/React |
+| [`classroomio/classroomio`](https://github.com/classroomio/classroomio) | 1 736 | 409 | 🔴 `AGPL-3.0` | `2026-10-30` | 🟡 `SELF-HOST-ONLY` | Svelte + Supabase LMS, customer-training positioning |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 1 162 | 1 015 | 🟢 `MIT` | `2026-10-30` | 🟢 `BUILD-ON` | Offline-first learning platform; SDG-4, OER |
+| [`beltromatti/get-it`](https://github.com/beltromatti/get-it) | 1 141 | 138 | 🟢 `Apache-2.0` | 🔴 **`2026-06-29`** | 🟢 `BUILD-ON` | Feynman-technique study tool with a knowledge graph and 3D visualisation; built at **GDG AI Hack Milan 2026**. 🔴 **123 days without a push** — a hackathon artefact, correctly licensed and not maintained |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 1 028 | 142 | 🟢 `MIT` | `2026-10-29` | 🟢 `BUILD-ON` | Turns books into animated, narrated, interactive web experiences; 🟢 **emits SCORM**, which is the one row here that speaks an LMS's native import format |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 931 | 131 | 🔴 `NOASSERTION` | `2026-10-22` | 🔴 `BLOCK` | **165 evidence-grounded skills** for teachers and school leaders: pedagogy, learning science, curriculum, assessment. The largest teacher-facing corpus found — behind an unclassifiable grant |
+
+🔵 Two of the nine rows the sweep returned are off-topic (a jobs list and an interview-prep
+list that carry the `edtech` label), so **7 of 9 = 77.8 %** are education artefacts — against
+**4 of 13 = 30.8 %** for the keyword sweep in `../agents/trending.md#-p556`. 🟢 **ACTION
+`p556-G`: sweep this space by topic first, keyword second, and report the hit rate of each.**
+
+### 🟢 `topic:ai-tutor stars:>200` — eleven rows, and the shape of the cohort
+
+🟢 **Every one of the eleven is a real tutoring artefact: a 100 % hit rate**, the cleanest
+instrument this base has on the agent layer.
+
+| Repository | ★ | `spdx_id` | Verdict | Note |
+|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **51 608** | 🟢 `Apache-2.0` | 🟢 `BUILD-ON` | v1.7.0, `2026.10.28` |
+| [`Miaotofu01/Study-Mate`](https://github.com/Miaotofu01/Study-Mate) | 1 278 | 🟢 `MIT` | 🟢 `BUILD-ON` | Chinese-language self-study companion: route, teach, build, repeat |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 586 | 🔴 `NOASSERTION` | 🔴 `BLOCK` | 30+ skills K-12→career on a cognitive-science frame. 🔴 219 days stale |
+| [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) | 539 | 🟢 `MIT` | 🟢 `BUILD-ON` | Anki over MCP |
+| [`ZeKaiNie/universal-examprep-skill`](https://github.com/ZeKaiNie/universal-examprep-skill) | 363 | 🟢 `MIT` | 🟢 `BUILD-ON` | 🟢 **Teaches from the learner's own slides with page citations** and states anti-hallucination as a design goal; runs on small cheap models |
+| [`karanb192/algo-sensei`](https://github.com/karanb192/algo-sensei) | 299 | 🟢 `MIT` | 🟢 `BUILD-ON` | DSA/LeetCode mentor: progressive hints rather than solutions |
+| [`Li-Evan/Bloom`](https://github.com/Li-Evan/Bloom) | 294 | 🟢 `MIT` | 🟢 `BUILD-ON` | Explicitly built on **Bloom's 2-sigma** result; Socratic, self-hostable |
+| [`SenmuuuuW/universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 253 | 🟢 `MIT` | 🟢 `BUILD-ON` | Diagnosis-first: no mode menu, the agent picks the next teaching step |
+| [`artcc/freelingo`](https://github.com/artcc/freelingo) | 216 | 🔴 `AGPL-3.0` | 🟡 `SELF-HOST-ONLY` | Self-hosted language learning, CEFR plans, voice, local LLMs via Ollama |
+| [`nichochar/ari`](https://github.com/nichochar/ari) | 212 | 🟢 `MIT` | 🟢 `BUILD-ON` | Pen-and-paper + AI, local-first |
+| [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) | 212 | 🟢 `MIT` | 🟢 `BUILD-ON` | Chinese civil-service exam prep — a *vertical* exam agent, the only one on this base |
+
+🟢 **Nine of eleven are `BUILD-ON`.** 🔵 **And seven of eleven are agent *skills*, not
+applications** — files that ride `Claude Code`, `Codex`, `Cursor` or `Antigravity` rather than
+servers that need hosting. That is the delivery-shape finding of this pass's trending axis: the
+tutoring layer has largely stopped shipping as software and started shipping as **instructions
+plus a harness**, which is both cheaper to adapt for a client and much harder to put behind a
+support contract.
+
+### 🟡 `topic:intelligent-tutoring-system stars:>100` — three rows, and the research one is `CC0`
+
+🔵 Only three repositories carry the topic above 100★: `fsrs4anki` (**4 118**, 🟢 MIT),
+`education-agent-skills` (931, 🔴 `NOASSERTION`) and
+[`GeminiLight/gen-mentor`](https://github.com/GeminiLight/gen-mentor) (135, 🟢 **`CC0-1.0`**) —
+the official code for *"LLM-powered Multi-agent Framework for Goal-oriented Learning in
+Intelligent Tutoring System"*, **WWW 2025 Industry Track oral**. 🟢 `CC0-1.0` grades
+`BUILD-ON`: public-domain dedication, the most permissive grant on this whole shelf. 🔵 **The
+only peer-reviewed ITS architecture on this base is also its least encumbered**, and at 135★
+nobody is looking at it.
+
+
 ## 🆕 `p555` — `2026-10-30` — **🟢 "TRENDING" IS READABLE AGAIN — `p554`'s *"the trending channel itself is now partly unreadable"* WAS A TRANSPORT VERDICT, NOT A CHANNEL ONE. 🔴 BUT THE INDEX THAT CARRIES IT **SILENTLY OMITS 5 OF 84 LIVE REPOSITORIES**, SO FIRST-HAND IS STILL NOT THE SAME AS COMPLETE.**
 
 🔴 **Gate posture: `make hooks` denied.** 🟢 Three page-shape gates green at `HEAD`.

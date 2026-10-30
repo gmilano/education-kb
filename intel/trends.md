@@ -4,6 +4,87 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p556` — `2026-10-30` — **🟢 `Trend 62` OPENS: THE TUTORING LAYER HAS STOPPED SHIPPING AS SOFTWARE. **SEVEN OF THE ELEVEN** `topic:ai-tutor` REPOSITORIES ABOVE 200★ ARE AGENT *SKILLS* — FILES THAT RIDE A HARNESS — NOT APPLICATIONS. 🟢 `Trend 63` OPENS: DELIVERY FITNESS IS A MEASURABLE PROPERTY OF A SHELF, AND THIS ONE IS **40.5 % UNDELIVERABLE**.**
+
+### 🟢 `Trend 62` — the tutor is now a file, not a server
+
+🔵 **Measured, not asserted.** `topic:ai-tutor stars:>200`, MCP transport, `2026-10-30`:
+eleven repositories, of which **seven declare themselves agent skills or plugins** in their own
+topics — `universal-examprep-skill`, `universal-diagnostic-tutor-skill`, `algo-sensei`,
+`Bloom`, `kaogong-skill`, `human-skill-tree`, `Study-Mate` — against four applications or
+servers (`DeepTutor`, `anki-mcp-server`, `freelingo`, `ari`).
+
+🟢 **Three consequences, in the order they hit an engagement:**
+
+1. 🟢 **Adaptation cost collapses.** A skill is prose plus a few scripts. `Bloom`'s whole
+   repository is **5 043 KB**; `algo-sensei`'s is **553 KB**. Re-pointing one at a client's
+   curriculum is an editing job, not a port.
+2. 🔴 **So does defensibility.** The same property that makes a skill cheap to adapt makes it
+   cheap for the client to adapt without you. 🔵 **The billable artefact is no longer the
+   tutor; it is the curriculum graph, the eval rubric and the integration.**
+3. 🟡 **Harness lock-in replaces platform lock-in.** These skills name their runtimes —
+   `Claude Code`, `Codex`, `Cursor`, `OpenCode`, `Antigravity`, `DeepSeek Harness`. 🟢 The
+   better ones name *several*: `universal-examprep-skill` lists five and states it *"runs
+   smoothly on small cheap models"*, which is the single most deployment-relevant sentence on
+   this shelf for a price-sensitive ministry client.
+
+🔵 **`Trend 62` is a restatement of nothing on this base** — the `../repos/trending.md` entries
+through `p555` record individual skills, and `p552`'s licence work touched delivery, but no
+pass has counted the skill-versus-application split on the tutoring layer. Counted here first.
+
+### 🟢 `Trend 63` — a shelf has a delivery-fitness distribution, and it is the number to lead with
+
+| Verdict | n of 42 | % |
+|---|---|---|
+| 🟢 `BUILD-ON` | **25** | 59.5 % |
+| 🟡 `SELF-HOST-ONLY` | **11** | 26.2 % |
+| 🔴 `BLOCK` | **6** | 14.3 % |
+
+🔴 **40.5 % of the verified education shelf cannot be folded into a client deliverable**, and
+the licence sidebar reads "open source" for all of it. 🔵 Within `SELF-HOST-ONLY`, six rows are
+**network copyleft** (`AGPL-3.0`) and five are plain strong copyleft — a distinction that
+matters precisely because a hosted education pilot is the exact fact pattern `AGPL s.13`
+describes. 🟢 The instrument is committed and offline:
+[`../ingest/delivery-fitness.py`](../ingest/delivery-fitness.py).
+
+🔵 **The inversion worth carrying into a proposal:** supply and deliverability run in opposite
+directions in this market. The three largest LMS platforms are copyleft; the largest permissive
+platform (`oppia`, 6 951★) is smaller than all three; and the fastest-growing agent of the month
+(`learnharness`, **4 231★ in 14 days**) is `AGPL-3.0`. 🟢 **Velocity is in the copyleft tier and
+ownership is in the permissive tier, and no single row gives both.**
+
+### 🟡 `Trend 61` — a seventeenth saturation on the demand leg, and the figures still refused
+
+🔵 `AI education industry trends 2026` returned nine sources, **all vendor blogs or trend
+pieces**, and the claims they carry are the ones this base has already refused: *"AI agents
+will take over 80 % of routine educational labour"* and *"83 % of institutions plan AI teaching
+assistant deployment by end of 2026"* — both 🔴 **unsourced to any primary survey** and
+therefore **not written to this base as facts**. 🔵 Market-size figures conflict between the
+same two sources (≈ $12.3 B and "past $12.5 B", both attributing HolonIQ), which is itself
+evidence they are being copied rather than read.
+
+🟢 **What the demand leg did produce, and it is directional rather than numeric:** the 2026
+consensus across all nine is a move *from pilots to governed everyday operation* — 1EdTech
+framing the question as *"how and under what conditions to use AI, not whether"*; HolonIQ
+calling it *"selective AI acceleration"* with weight on ethics, transparency and proven
+instructional value; Campus Technology expecting AI embedded in advising and admissions rather
+than standing alone. 🔵 **For a studio that is a governance-and-integration signal, not a
+model signal** — and it is consistent with `Trend 62`: if the tutor is a file, the work is
+everything around the file.
+
+### 🟢 `Trend 60` extended — the curriculum graph is the asset, and the best one is unlicensable
+
+🔴 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy)
+(**5 480★** in twelve days, 1 388 forks) publishes **1 644 knowledge points, 2 403 prerequisite
+edges and 6 723 items** aligned to the Chinese national curriculum, with an adaptive
+prerequisite diagnostic attached. 🟢 It is the most valuable single artefact found in any
+education pass. 🔴 Its grant is `NOASSERTION` → `BLOCK`. 🔵 **Read together with `Trend 62`
+this is the pass's sharpest strategic statement: the scarce thing is the graph, the graph
+exists, and the one that exists cannot be used.** `oaknational/oak-open-curriculum-ecosystem`
+(MIT, England) remains the only curriculum-placed permissive graph on this base, and it is
+three orders of magnitude smaller in stars.
+
+
 ## 🆕 `p555` — `2026-10-30` — **🟢 `Trend 65`: A PLATFORM `NOASSERTION` IS A FOUR-WAY AMBIGUOUS SIGNAL, AND ON THIS BASE **3 OF 8 ARE COSMETIC** — THE ARTEFACT IS PERMISSIVELY LICENSED AND EVERY TOOL SAYS OTHERWISE. 🟢 `Trend 66`: AN AGGREGATOR ATTACHES AI POLICY TO A COUNTRY'S MOST FAMOUS CURRICULUM BRAND, AND THE REAL INSTRUMENT IS ALWAYS A LATER, SUBJECT-LEVEL ONE.**
 
 🔴 **Gate posture: `make hooks` denied** (`Code from External`). 🟢 `gate-dates` run directly at

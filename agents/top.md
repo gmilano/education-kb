@@ -4,6 +4,143 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p556` — `2026-10-30` — **🟢 `Gap 521-C` CLOSED: `LearnHarness` IS [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness), **4 231★** AT FOURTEEN DAYS OLD, AND **AGPL-3.0 ON TWO INDEPENDENT CHANNELS**. 🔴 THE FASTEST-GROWING EDUCATION AGENT ON THIS SHELF IS ONE GLOBANT CANNOT FOLD INTO A DELIVERABLE — AND THAT IS NOW A **MEASURED PROPERTY OF 17 OF 42 ADDRESSES**, NOT AN ANECDOTE. 🟢 ONE GENUINELY NEW ROW (`ConceptLoom`, MIT).**
+
+🔴 **Gate posture, stated first: `make hooks` was not run** — the `Code from External`
+classifier denies it, as in fourteen of the last fifteen passes. 🟢 **What was run, directly
+at `HEAD`:** `ingest/validate-pages.py` before and after this pass's edits (frontmatter
+**10/10 ok** both times; the shape arm's four pre-existing findings are unchanged in count
+and line, per its own documented false-positive classes), and **this pass's own instrument
+plus its negative controls** — `ingest/delivery-fitness-controls.py`, **21 fixture rows,
+0 mismatches, all five verdict arms exercised**.
+
+🟢 **And one `make` target ran green this pass**: `make gate-delivery-fitness`, added by this
+pass. 🔵 That is a data point for `Gap 555-F` — the denial is attached to the *command*, not to
+`make` as such, so "the gate is denied" has been an over-generalisation on this base. A new
+target can be written and run; it is `hooks` specifically that the classifier refuses.
+🔴 **Counter-evidence in the same session:** one compound shell invocation of
+`validate-pages.py` was denied *after* the identical bare invocation had already succeeded —
+`555-F` holds, and the bare form was used instead.
+
+### 🟢 `Gap 521-C` closed — and the outlet was not wrong, it was early
+
+**Registered as:** *"`LearnHarness` is reported at '1.5k stars in 9 days' and AGPL by a
+third-party outlet, and NO repository slug was resolvable. No row was written and the star
+figure is not carried. If real, it is the fastest-growing education agent of the week and
+this base is blind to it. Closure: resolve the slug, then one metadata read and one licence-byte read."*
+
+🟢 **The slug is [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness).**
+🔵 **Why five passes could not find it, and this one could:** `521` through `555` looked for it
+by *address* — `repo:`-filtered reads of guessed owner spellings, which answer only if the
+guess is already right. This pass did not guess. It swept the **population**:
+`education OR tutor OR learning in:name,description stars:>150 created:>2026-09-30`, sorted by
+stars, on the MCP transport `ACTION VV` names. 🟢 **It is the top row of that sweep**, above
+every other repository in the window. 🔴 **The lesson is reusable and is registered below as
+`556-A`: a slug that cannot be guessed can still be enumerated, and this base's unresolved-slug
+gaps have all been closed by guessing or not at all.**
+
+| Field | Value | Channel |
+|---|---|---|
+| slug | [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | MCP `search_repositories`, population sweep, `2026-10-30` |
+| stars · forks | 🟢 **4 231** · 657 | platform field, same read |
+| `spdx_id` | 🟢 **`AGPL-3.0`** | platform field |
+| README prose | 🟢 **agrees** — *"is open source under the AGPL-3.0 license"* | `raw.githubusercontent.com/amosblomqvist/learnharness/main/README.md` |
+| `created_at` · `pushed_at` | `2026-10-16` · `2026-10-29` | platform field |
+| age at this read | 🟢 **14 days** | derived |
+
+🟢 **The outlet's figure was not an error.** It said *"1.5k stars in 9 days"*; the field now
+says **4 231 at 14 days**. 🔵 Both can be true, and together they are a trajectory, not a
+conflict — which is the opposite of how `521-C` filed it. 🔴 **This base refused a correct
+number for five passes because it could not reach the address behind it.** `p555` made the
+same class of error in the other direction and called it *"an unread register"*; this one is
+**an unattempted enumeration**.
+
+🔴 **What it is**, from the README, first-hand: a **desktop** app (macOS DMG, Windows x64,
+Linux AppImage/`.deb`), `npm install && npm run dev` for development, *"supports 30+ provider
+options, including OpenAI, Anthropic, Google, DeepSeek, and OpenRouter"* on the user's own
+keys. It plans lessons from what the learner already understands toward a goal and **keeps a
+persistent knowledge graph of what has been learned** — the same architectural bet as
+`DeepTutor`'s learner memory, reached from a local-first desktop direction rather than a
+server one. 🟡 Its pedagogy claims (*"Teaching builds understanding one reasoning step at a
+time"*, *"Confusions are repaired before anything is built on them"*) are **stated without
+evidence on the page**, and no eval is published — so it is a build to study, not a result to cite.
+
+🔴 **And the licence is the finding.** `AGPL-3.0`, confirmed on two channels. A desktop binary
+is the one shape where `s.13` arguably does not bite — but `s.5` still does the moment a
+derivative is distributed, and the delivery Globant sells is a modified build handed to a
+client. 🟢 **Verdict `SELF-HOST-ONLY`**, by the instrument below. 🔵 **Region: `UNPLACED(stated-none, name-hint)`** —
+`p545`'s rule forbids placing on a personal name, the README states no country, and the
+`learnharness.ai` ccTLD is Anguilla and therefore not a signal.
+
+### 🟢 The delivery question, finally asked as an instrument
+
+🔵 This base reads licences well and has never graded them against **the thing a studio
+actually asks**. `grant-verdict.py` says what a grant *is*; `platform-channel.py` says whether
+the channels *agree*. Neither answers *"can this go in a client deliverable"*. 🔴 `p552` found
+the sharpest case by hand (`Oriole-FDU/Wisepen`, BUSL-1.1, excluding *"consulting
+deliverable"* by name) and this pass found a second (`learnharness`, AGPL-3.0) — **two
+discoveries about delivery, both reached by reading one repository at a time.**
+
+🟢 Delivered: [`../ingest/delivery-fitness.py`](../ingest/delivery-fitness.py) — offline, reads
+a harvest TSV, maps `spdx_id` to one of five delivery verdicts, and has a gate form
+(`--max-verdict`). Controls: [`../ingest/delivery-fitness-controls.py`](../ingest/delivery-fitness-controls.py).
+Harvest: [`../evidence/platform-harvest.2026-10-30-p556.tsv`](../evidence/platform-harvest.2026-10-30-p556.tsv) ·
+run: [`../evidence/delivery-fitness.2026-10-30-p556.tsv`](../evidence/delivery-fitness.2026-10-30-p556.tsv) ·
+fixture: [`../evidence/delivery-fitness-fixture.p556.tsv`](../evidence/delivery-fitness-fixture.p556.tsv).
+
+| Verdict | n of 42 | % | What it means for a proposal |
+|---|---|---|---|
+| 🟢 `BUILD-ON` | **25** | 59.5 % | permissive: may be modified and shipped inside a closed deliverable |
+| 🟡 `SELF-HOST-ONLY` | **11** | 26.2 % | client runs it themselves; not foldable into a product |
+| 🔴 `BLOCK` | **6** | 14.3 % | no grant, or a bespoke grant GitHub cannot classify |
+| ⚪ `LINK-ONLY` | 0 | 0 % | 🔴 **arm unexercised by the live shelf** — proven only by fixture |
+| ⚪ `ASK` | 0 | 0 % | 🔴 **arm unexercised by the live shelf** — proven only by fixture |
+
+🔴 **40.5 % of this shelf — 17 of 42 addresses — cannot be folded into a Globant deliverable**,
+and the licence sidebar reads "open source" for every one of them. 🔵 That is the number this
+base has been one query away from for 555 passes.
+
+🔴 **A defect in this pass's own instrument, caught on its first run and fixed before
+publication.** The `SELF-HOST-ONLY` arm printed *"AGPL s.13 reaches network users"* over
+**the five plain-GPL rows**, which is false: plain GPL carries no network clause, and hosting a GPL work
+for a client triggers nothing extra. 🟢 The arm is now split — `NETWORK_COPYLEFT` (**6** rows,
+all `AGPL-3.0`) against plain strong copyleft (**5** rows: four `GPL-3.0`, one `GPL-2.0`) —
+because collapsing them loses the exact distinction the verdict exists to draw.
+
+### 🔴 The six `BLOCK` rows, and why two of them are the dangerous kind
+
+| Repository | ★ | `spdx_id` | Why blocked |
+|---|---|---|---|
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 **5 480** | `NOASSERTION` | **8th largest on the shelf.** 1 644 knowledge points, 2 403 prerequisite edges, 6 723 items — the richest K-12 curriculum graph found in any pass, behind a grant nobody can classify |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **2 053** | `NOASSERTION` | open NotebookLM equivalent; quizzes, flashcards, notes, podcasts from study material |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 931 | `NOASSERTION` | 165 pedagogy/assessment agent skills — the largest teacher-skill corpus on the shelf |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 901 | `NOASSERTION` | the education ERP on Odoo; its own glossary says LGPLv3, the platform declines to confirm |
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 586 | `NOASSERTION` | 🔴 also the stalest address on the shelf: **219 days** since a push |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) | 347 | 🔴 **`NONE`** | **no licence file at all** — default copyright, all rights reserved, on a repository that calls itself *"commercial grade"* |
+
+🔴 **`NOASSERTION` is worse than `NONE`, and that is why it grades `BLOCK` rather than `ASK`.**
+A missing licence is visibly missing. A bespoke one **still renders a licence in the sidebar**,
+so a reader stops looking — and two of these six sit in the top twelve of this shelf by stars.
+
+### 🟢 Two new shelf rows, and three stale cells corrected *in the cell*
+
+🟢 Added to the shelf below: **`learnharness`** and **`ConceptLoom`**
+([`Zproger/ConceptLoom`](https://github.com/Zproger/ConceptLoom), 🟢 **MIT**, **192★** · 19
+forks, created `2026-10-01`, pushed `2026-10-06`). 🔵 `ConceptLoom` is the one address in this
+pass's whole sweep with **zero prior mentions anywhere on this base** — `grep -rn` across every
+`.md`, `.tsv` and `.py` returns nothing. It maps a learner's existing knowledge, builds a path,
+checks understanding and persists progress across sessions, as a workflow for `Codex`,
+`Claude Code`, `OpenCode` and `DeepSeek Harness` rather than as an app. 🔴 At 24 days without
+a push it is a pattern to copy, not a dependency to take.
+
+🟢 **`p550`'s rule applied, not restated.** `p550` found that *"a pass wrote 'corrected here'
+instead of editing the cell"* and left the largest row on the shelf stale by 1 473 stars. This
+pass edits the cells: `DeepTutor` **51 323 → 51 608** (`p555` read **51 571** some forty
+minutes earlier — **+37**), `OpenMAIC` **41.8k → 41 931** (`p555`: 41 924 — **+7**),
+`anki-mcp-server` **538 → 539**. 🟢 And the shelf heading's count moves **65 → 67**, which is
+the `Gap 534-E` defect class caught in the act rather than after.
+
+
 ## 🆕 `p555` — `2026-10-30` — **🟢 `Gap 554-A` IS NOT A CHANNEL LOSS — IT IS A REGRESSION AGAINST `ACTION VV`, WHICH THIS BASE REGISTERED AT `p241` AND `p554` DID NOT APPLY. THE PLATFORM FIELD IS READABLE, AND ON **79** EDUCATION REPOSITORIES IT CONTRADICTS THE PAYLOAD **ZERO** TIMES. 🟢 THE STAR CHANNEL IS ALIVE: `DeepTutor` **51 571★**, WHICH IS THE FIGURE `p554` REFUSED.**
 
 🔴 **Gate posture, stated first: `make hooks` was not run** — the `Code from External`
@@ -1557,22 +1694,24 @@ passes — so **72 is carried, not re-attested, this pass**.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 65 verified education agents (73 with the eight filed in their own sections above: `p541`'s four, `p542`'s three, `p543`'s one; `p544` added none, `p547` added one)
+## Shelf — 67 verified education agents (75 with the eight filed in their own sections above: `p541`'s four, `p542`'s three, `p543`'s one; `p544` added none, `p547` added one, `p556` added two)
 
 🔴 **`p543`: this heading was stale by a whole pass.** It read *"68 with `p541`'s four"* while `p542` shelved three more below it without touching it — the same defect class `../repos/foundations.md` carries in its own header, found there by `p533` and still open as `Gap 534-E`. 🔵 **A count that lives in prose beside the rows it counts will go stale every time a pass adds a row and forgets the sentence.** The durable fix is a gate that derives the figure from the tables; registered this pass as `543-E`.
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
+| 🆕 **LearnHarness** | [amosblomqvist/learnharness](https://github.com/amosblomqvist/learnharness) | 🔴 **AGPL-3.0** — platform `spdx_id`, and the README's own prose agrees: *"is open source under the AGPL-3.0 license"*. 🟡 Grant-file bytes **not** read (`Gap 556-B`) | 🟢 **4 231** · 657 forks | 🔴 **UNPLACED(stated-none, name-hint)** — `p545`'s rule forbids placing on a personal name; the README states no country, and the `learnharness.ai` ccTLD is Anguilla | **Fitness: study, do not deliver.** *"An agent harness for learning."* Desktop app (macOS DMG, Windows x64, Linux AppImage/`.deb`); `npm install && npm run dev` for development; *"supports 30+ provider options, including OpenAI, Anthropic, Google, DeepSeek, and OpenRouter"* on the user's own keys. Plans lessons from what the learner already understands toward a goal and keeps a **persistent knowledge graph** of what has been learned — `DeepTutor`'s architectural bet reached from a local-first desktop direction. 🟢 **Closes `Gap 521-C`**, open since `p521`: created `2026-10-16`, so **4 231★ in 14 days** makes it the fastest-growing education agent this base has measured. 🔴 **And it is `AGPL-3.0`**, so `delivery-fitness.py` grades it `SELF-HOST-ONLY`: a desktop binary arguably escapes `s.13`, but `s.5` bites the moment a modified build is handed to a client, which is the delivery Globant sells. 🟡 Its pedagogy claims (*"Confusions are repaired before anything is built on them"*) are stated without evidence and no eval is published. |
+| 🆕 **ConceptLoom** | [Zproger/ConceptLoom](https://github.com/Zproger/ConceptLoom) | 🟢 **MIT** — platform `spdx_id`. 🟡 Grant-file bytes not read on this session (`github.com` **403**) | **192** · 19 forks | 🔴 **UNPLACED(stated-none)** — no country on the profile, in the README or in any grant line | **Fitness: pattern to copy.** *"AI-powered learning workflow for Codex, Claude Code, OpenCode and DeepSeek Harness that maps your knowledge, builds a personalized learning path, checks understanding, and saves progress across sessions."* 🟢 **The one address in this pass's whole sweep with ZERO prior mentions anywhere on this base** — `grep -rn` across every `.md`, `.tsv` and `.py` returns nothing. 🔵 It is `Trend 62` in miniature: multi-harness by design, shipping as a workflow rather than an application. 🔴 Created `2026-10-01`, pushed `2026-10-06` — **24 days without a push at 192★**, so take the pattern, not the dependency. |
 | 🆕 **Clew** | [miuuyy/Clew](https://github.com/miuuyy/Clew) | 🟢 **MIT** — `LICENSE` at `main`, **1 076 B**, read first-hand; title block `MIT License · Copyright (c) 2026 Aleksandr Vechenkov` | **212** · 19 forks | 🔴 **UNPLACED(stated-none, name-hint, cctld-hint)** — the copyright line names an individual and `p545`'s rule forbids placing on a personal name; the homepage `clew.my` is a **registrar fact, not an origin fact** | *"An AI learning harness built around an interactive knowledge graph."* Builds a **topic/prerequisite graph** from what a learner knows plus a goal, then teaches along it — select any topic to see what it requires and what it unlocks. **9 tags, latest `v1.0.0`** (shelf rule 19). Imports an **Obsidian vault**, exports Markdown or the graph, and shares **read-only learning context to other assistants over MCP**. 🟢 **Why it earns a row:** this shelf has tutors and content generators; this is the first artefact whose unit is the **prerequisite relation** — what an adaptive path actually needs, and what `pyKT`-class knowledge tracing infers statistically rather than declares. 🔴 **`Gap 550-B` applies: the desktop app *"requires a ChatGPT **Plus or Pro** plan"*.** The code is MIT and clean at the payload; the **running system is gated on a third party's paid consumer plan**, which no licence probe here would surface. Take the graph design and the MCP export; plan to replace the ChatGPT dependency. |
 | 🆕 **Math_teacher** | [Swon010191/Math_teacher](https://github.com/Swon010191/Math_teacher) | 🟢 **MIT** — grant file `LICENSE` at `main`, **1 066 B**, read first-hand at `HEAD` `18bee0983b3b`. 🔴 The `github.com` sidebar could **not** be read as corroboration: that channel returns **403** to this session (`Gap 547-E`) | 🔴 **UNREAD** — `api.github.com` and `github.com` both **403** from this session's gateway; recorded unread, never `0`. **42 commits** on `main` is the maturity signal that *is* readable | 🟢 **APAC (Vietnam)** — *stated*: Vietnamese README and `docs/HUONG_DAN_CAI_DAT.md`; `vi` is region-confining under `p545`'s rule | *"Nền tảng giảng dạy AI mã nguồn mở"* — an open-source **teaching** platform, not a chatbot beside the board: it turns what is written on an electronic whiteboard into interactive teaching activities (graphs, sliders, step-by-step answer reveal). Handwriting→formula recognition with a teacher confirm/correct step (Mock · Ollama Vision · Pix2Text). 🟢 **Two properties that put it on this shelf rather than in the queue:** (1) **the mathematics is deterministic, not generated** — linear/quadratic equations are solved exactly and **verified by substitution**, so the LLM never produces the answer; (2) **a teacher-approval gate** — *"giáo viên duyệt trước khi lên bảng"*, AI suggestions reach the board only after the teacher passes them. 🟢 It runs **local-first with no API key required** (Ollama), which is what makes it deployable under a data-protection regime rather than only demonstrable. 🟢 Knowledge panels carry **provenance** — author, revision, licence and offline cache for Wikipedia/Wikibooks content, with a reference-material warning. 🔵 **Why it matters regionally:** Vietnam's **Decision 33/2026/QD-TTg** puts education AI on its high-risk list, and this artefact's two gates are the mitigations such a regime asks for — built by a teacher-facing project, unprompted. 🔴 Last commit `2026-09-17` (43 days); Windows installer and `SHA256SUMS` published, `Open Teaching Activity` JSON format still marked *giai đoạn sau* (later phase) |
 | 🆕 **learnmcp-xapi** | [DavidLMS/learnmcp-xapi](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main` | 16 · 4 forks | 🟡 Global — author's country not stated; the **LRS it targets is EMEA** (Ralph, by France Université Numérique) | *"An open-source MCP server that enables AI agents to record and retrieve learning activities through xAPI-compliant Learning Record Stores."* Python, 32 commits on `main`. 🟢 **This row closes a gap this base has carried in prose since `p502`:** the whole xAPI/LRS record layer sat in trending history and on **no live shelf**. It is the only artefact here that writes a learner's activity **back** to a standards-compliant store rather than only reading from one — which is what makes an agent's tutoring auditable instead of ephemeral. 🔴 **`p546` dates it: last commit `2025-08-29`, 426 days — 1.2 years.** It was promoted at `p545` to close a gap carried since `p502` and it has not been touched in over fourteen months. 🔵 **The gap it closed is real and this artefact does not close it in production** — read the row as an architecture, not as a dependency, and see the maintained xAPI successors on [`../repos/trending.md`](../repos/trending.md#-p546--2026-10-30). |
 | 🆕 **oak-open-curriculum-ecosystem** | [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** — sidebar `MIT, License licenses found`; grant file `LICENCE` (British spelling) at `main` | 8 · 5 forks | 🟢 **EMEA (England)** — *stated*: README names the **National Curriculum for England (2014)**, **Oak National Academy** and the **Education Endowment Foundation** | *"A collection of tools for working with the Oak Open Curriculum Data, via API, SDK and MCP app."* Topics: `curriculum` · `mcp` · `mcp-server` · `open-data` · `openapi` · `sdk` · `elasticsearch`. **6 835 commits.** 🟢 **The maturity signal EMEA did not have:** `p538` closed the EMEA/APAC count imbalance with two 1★ rows by one author and said plainly that *"the live EMEA gap is maturity."* This is a state-funded national curriculum body shipping an **MCP server over its own curriculum data** — an engagement starts from the ontology, not from a scrape. |
 | 🆕 **esco-skill-extractor** | [KonstantinosPetrakis/esco-skill-extractor](https://github.com/KonstantinosPetrakis/esco-skill-extractor) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `master` | 32 · 13 forks | 🟢 **EMEA (EU)** — *stated*: built in the **SKILLAB EU Horizon** project against the EU's own **ESCO** taxonomy | *"Extract ESCO skills and ISCO occupations from texts such as job descriptions or CVs."* Topics: `esco` · `isco` · `skill-extraction` · `embeddings` · `sentence-transformer` · `cosine-similarity`. 🟢 **Why it is on an education shelf and not an HR one:** ESCO is the European Skills, Competences, Qualifications and Occupations taxonomy, so this is the **credential-to-labour-market mapping** every 2026 trend list calls for and almost nobody ships. It turns a course outcome into an EU-recognised skill code. 🔴 It does not read a transcript or a curriculum — the input is free text, and the mapping to a learner record is the studio's work. 🔴 **`p546` dates it: last commit `2025-06-12`, 505 days — 1.4 years, on default branch `master`.** The second of `p545`'s four promotions to be over a year dead. 🔵 **ESCO itself is a maintained EU taxonomy; this binding to it is not**, so the taxonomy is the asset and the adapter is the studio's to own. |
 | 🆕 **agente-bncc-professores** | [GuilhermeScarpini/agente-bncc-professores](https://github.com/GuilhermeScarpini/agente-bncc-professores) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main` | 🔴 0 · 0 forks | 🟢 **LATAM (Brazil)** — *stated*: README is in **Portuguese** and names the **BNCC** and the **MEC** (Ministério da Educação) as the source of the official PDF | *"Planos de aula e provas com gabarito ancorados nas habilidades oficiais da BNCC: busca semântica, Gemini ou DeepSeek, edição das questões e PDFs."* Lesson plans and answer-keyed exams anchored to official BNCC competency codes. Next.js 16 + TypeScript + Prisma + SQLite; topics `bncc` · `rag` · `embeddings` · `semantic-search` · `educacao`. 🟢 **It is anchored to a national standard rather than to a prompt**, which is the same shape as `corretor-enem`'s ENEM calibration and `oak-*`'s England curriculum. 🔴 **0★, 0 forks** — this is an architecture to read, not a dependency to take. |
-| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **51 323** · 6 293 forks (re-measured `p550`) | APAC (Univ. of Hong Kong, HKUDS lab) | "Lifelong Personalized Tutoring." Multi-agent tutor with persistent learner memory, learning paths and mastery gates. README names **v1.7.0, 2026.10.28**. 6.1k forks. The largest open-source education agent on any shelf. |
-| **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | MIT | **41.8k** | APAC (Tsinghua University, MAIC group) | "Open Multi-Agent Interactive Classroom" — a one-click immersive classroom staffed by multiple agent roles (lecturer, peer, assistant). TypeScript / Next.js / React. News section names **v1.3.0, 2026-10-29**. 6.5k forks. |
-| **k12-teacher-skills** | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | 601 | North America (Anthropic, with Learning Commons) | Agent *skills* plus **eval rubrics** for K-12 teacher workflows. The rubrics matter more than the skills: they are a published yardstick for "is this agent pedagogically acceptable", which almost nothing else in this space ships. 108 forks. |
-| **anki-mcp-server** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | 538 | unplaced — no location on the org profile or in the copyright line | MCP server exposing Anki (spaced repetition) to any MCP-speaking assistant. README gives **0.27.0**. This is the retention half of a tutoring stack: the agent teaches, Anki makes it stick, and the learner keeps the deck. |
+| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | **51 608** · 6 320 forks (re-measured `p556`; `p555` read 51 571 some forty minutes earlier) | APAC (Univ. of Hong Kong, HKUDS lab) | "Lifelong Personalized Tutoring." Multi-agent tutor with persistent learner memory, learning paths and mastery gates. README names **v1.7.0, 2026.10.28**. 6.1k forks. The largest open-source education agent on any shelf. |
+| **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | MIT | **41 931** · 6 488 forks (re-measured `p556`; `p555` read 41 924) | APAC (Tsinghua University, MAIC group) | "Open Multi-Agent Interactive Classroom" — a one-click immersive classroom staffed by multiple agent roles (lecturer, peer, assistant). TypeScript / Next.js / React. News section names **v1.3.0, 2026-10-29**. 6.5k forks. |
+| **k12-teacher-skills** | [anthropics/k12-teacher-skills](https://github.com/anthropics/k12-teacher-skills) | Apache-2.0 | **605** · 110 forks (re-measured `p556`) | North America (Anthropic, with Learning Commons) | Agent *skills* plus **eval rubrics** for K-12 teacher workflows. The rubrics matter more than the skills: they are a published yardstick for "is this agent pedagogically acceptable", which almost nothing else in this space ships. 108 forks. |
+| **anki-mcp-server** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | **539** · 39 forks (re-measured `p556`) | unplaced — no location on the org profile or in the copyright line | MCP server exposing Anki (spaced repetition) to any MCP-speaking assistant. README gives **0.27.0**. This is the retention half of a tutoring stack: the agent teaches, Anki makes it stick, and the learner keeps the deck. |
 | 🆕 **lineage-skill** | [JuneYaooo/lineage-skill](https://github.com/JuneYaooo/lineage-skill) | Apache-2.0 | **462** | APAC — *inferred*, see note | "Distill videos, PDFs, transcripts, and notes into **source-backed** teacher Agent Skills." Ingests course video, audio, PDF and notes and emits a Skill that teaches in short lessons, questions the learner, marks the answers and tracks review over time. **70 forks.** The highest-starred *new* row this pass, and the only agent on this shelf whose output is traceable to the source material it was built from. |
 | **Educhain** | [satvik314/educhain](https://github.com/satvik314/educhain) | MIT | 387 | **APAC (India)** — *newly placed*, see note | Python package for generating educational content (MCQs, lesson plans, flashcards) with generative AI. README labels **v0.3.13 (October 2024)** current, so treat it as a stable utility rather than an active project. 76 forks. |
 | **canvas-mcp** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 308 | North America (author's org field: Univ. of Illinois Urbana-Champaign) | MCP server bridging assistants to **Canvas LMS**, with skills for both students and educators. README names **v1.16.0, October 2026**, a security release. Tool count is still stated inconsistently — "up to 102 tools" in About, "up to 128 tools" in the README. 100 forks. |
