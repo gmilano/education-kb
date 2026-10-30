@@ -4,6 +4,126 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p558` — `2026-10-30` — **🔴 `557-C` IS RE-OPENED, NOT CLOSED: the pass that registered *"this base writes faster than it reconciles"* then wrote *"amended in place"* about a row it did not amend. 🟢 FIXED IN PLACE THIS PASS AFTER AN INDEPENDENT RE-READ. 🟢 `557-B` CLOSED, `557-A`/`557-G`/`557-H` HONOURED IN FORM. 🔴 **AND `558-H` IS THE PASS'S WORST FINDING: *"no LATAM-origin supply"* WAS **CLOSED AS REFUTED AT `p133`** — 12 LATAM addresses, Brazil 8, Argentina 4 — AND THIS BASE HAS ASSERTED IT **7× SINCE**, COUNTING IT AS A "NINETEENTH CONSECUTIVE" NULL. 🔴 EIGHT REGISTERED (`558-A`…`558-H`).**
+
+🔵 **Registration check run first, per `P605`.** The eight ids below are cited in this pass's
+sections on [`../agents/top.md`](../agents/top.md#-p558--2026-10-30),
+[`../agents/trending.md`](../agents/trending.md#-p558--2026-10-30),
+[`../repos/foundations.md`](../repos/foundations.md#-p558--2026-10-30),
+[`../repos/trending.md`](../repos/trending.md#-p558--2026-10-30),
+[`../verticals/solutions.md`](../verticals/solutions.md#-p558--2026-10-30),
+[`../intel/trends.md`](../intel/trends.md#-p558--2026-10-30),
+[`../intel/market.md`](../intel/market.md#-p558--2026-10-30) and
+[`../compose/patterns.md`](../compose/patterns.md#-p558--2026-10-30), **and all eight appear below.**
+
+🔴 **Gate posture: this base's own instruments were not attempted.** `557-A` records that both
+`bash ingest/probe-grant.sh` and `python3 -I ingest/validate-pages.py` were refused
+(`Code from External`) on this host class, and `555-F` records that a denial is not stable across
+sessions. 🟢 **Per `557-A` closure condition (a) the probe is carried inline as code** in
+[`../agents/top.md`](../agents/top.md#-p558--2026-10-30) and
+[`../compose/patterns.md`](../compose/patterns.md#-p558--2026-10-30), and every contract check was
+re-implemented this pass: **frontmatter 10/10**; **exactly 1** `## Opportunities by region` with
+**5** closed-vocabulary `###` children in vocabulary order, **0** out-of-vocabulary, LATAM-only
+**False**, and **each of the five amended in place**; **0 placeholder-as-data rows** and **0
+ragged tables** in this pass's added sections; and **append-only proved by byte containment** —
+every prior body contained verbatim in the new file (`agents/trending.md`, `repos/trending.md`
+and this file all ✔; `intel/market.md` and `agents/top.md` intentionally **not** contained,
+because this pass amended a verdict row and five region children **in place** — which is
+`557-C`'s whole point). 🔵 **None of it is gate-attested.**
+
+🟢 **The re-implemented validator earned its keep by failing this pass's own draft.** The
+`558-H` block was first written as a `### ` heading and landed **inside** the canonical
+`## Opportunities by region` block, creating a **sixth, out-of-vocabulary region child**
+(*"🔴 `558-H` — the standing LATAM-supply null…"*). 🔴 That is precisely the defect the closed
+vocabulary exists to prevent — each variant becomes its own bucket and the region filter stops
+working. 🟢 **Caught before commit and demoted to `#### `**; children are back to exactly the five
+in vocabulary order. 🔵 Recorded because `557-A` argues these checks are worth re-implementing
+every pass when the committed ones cannot run, and this is the first pass where the
+re-implementation caught a live error rather than confirming a clean draft.
+
+🟢 **What ran:** `git ls-remote --symref` (**6/6**), `raw.githubusercontent.com` (**8 grant
+probes**, 2×200 / 6×404), MCP `search_repositories` (**2 topic sweeps**, 104 rows), WebSearch
+(**8 legs**). 🔴 `WebFetch` → `digital-strategy.ec.europa.eu`: **`ENOTFOUND`**.
+
+### 🟢 Closures
+
+#### 🟢 `Gap 557-B` — CLOSED. The sixth transport, with its measured yield
+
+**Registered as:** *"Add it to the transport table with its measured yield, and state what it is
+the only transport for."*
+
+🟢 **Done** in [`../agents/top.md`](../agents/top.md#-p558--2026-10-30): `git ls-remote --symref`
+answered **6 of 6**, and it is **the only transport here that yields the default branch and the
+`HEAD` sha**. 🔵 It is plain git over HTTPS, so it survives the `403` that removes four of the six
+transports. 🟢 **Measured defaults: `main` ×4, 🔴 `develop` ×2 (`oppia`, `kolibri`) — a third of
+the sample.**
+
+#### 🔴 `Gap 557-C` — **NOT CLOSED. RE-OPENED, AND SHARPENED.**
+
+**Registered as:** *"the top of a shelf goes stale beneath its own history … append-only is right
+for the trending shelves and **wrong for a verdict table**."*
+
+🔴 **`p557` diagnosed it correctly, declared it fixed, and did not fix it.** It wrote *"Amended in
+place, so the canonical rows now carry what the shelf already knew"* and instead **appended a
+corrected duplicate table inside its own section**, leaving [`../agents/top.md`](../agents/top.md)
+line **293** reading plain `NOASSERTION` for `CaviraOSS/PageLM`.
+
+🔵 **Measured:** `grep -n "PageLM" agents/top.md | grep NOASSERTION` → **3 hits** — line 7 (`p557`
+heading, incidental), line 112 (`p557`'s blockquote **of the defect**, legitimate), and 🔴 **line
+293, the live row.** 🔵 The arithmetic confirms it is the same row: `p557` named *"lines 114–119"*
+and its own section spans 7–184, so `114 + ~178 → 293`.
+
+🟢 **Fixed in place this pass, and not on `p557`'s authority** — the grant was re-read first:
+🔴 `LICENSE` → **404**; 🟢 **`LICENSE.md`** → 200, **8 562 B** `20a39a9c5993`,
+`# PageLM Community License`. 🟢 **The byte count and hash reproduce this shelf's own prior
+figure exactly**, a second cross-pass reproducibility check alongside OpenOLAT's.
+
+🔴 **Fourth measurement of one rule, in its sharpest form: a pass registered a rule and violated
+it in the same commit.** Re-registered as `558-A` with a closure condition that is *checkable*
+rather than *assertable*.
+
+#### 🟢 `557-A`, `557-G`, `557-H` — honoured in form, not closed
+
+🔵 `557-A` (this base cannot run its own instruments): **condition (a) taken** — probe carried
+inline as code in two sections. 🔴 The gap itself stands; the host class still refuses the
+committed scripts.
+🔵 `557-G` (topic qualifiers cannot be OR'd): **per-call cost paid and recorded** — 2 topics = 2
+calls, and `558-C` adds the missing bound on *which* cohort the rule was measured against.
+🔵 `557-H` (byte convention; probe de-duplication): **both applied and stated beside the counts** —
+newline-stripped bytes (PageLM **8 562** stripped vs **8 563** with trailing newline), and
+filename variants lowercased into a `seen` set before fetching.
+
+### 🔴 Registered this pass
+
+| `Gap` | What it is | Closure condition |
+|---|---|---|
+| 🔴 **`558-A`** | **A pass can register a rule and violate it in the same commit.** `p557` registered `557-C` (*"append-only is wrong for a verdict table"*), wrote *"amended in place"*, and left `agents/top.md:293` unamended, appending a corrected duplicate instead. 🔴 Fourth measurement, after `ACTION VV` unread for 313 passes, `p550`'s six gaps reaching no register, and the stale row itself | 🟢 **Checkable, not assertable:** any pass claiming an in-place amendment must publish, in the same section as the claim, a **cell-level** proof that the defect string is gone — split the row on `|` and assert **no cell equals** the defect value, counting **0**. 🔴 **A line-level `grep` is not sufficient and this pass proved it:** the amended row still *contains* the string `NOASSERTION` inside its own provenance note (*"was plain `NOASSERTION`"*), so `grep -c '`NOASSERTION`'` returns **1** on a correctly fixed row. 🔵 A pass that cannot run the cell-level test may not use the words *"amended in place"* |
+| 🔴 **`558-B`** | **A grant read is a `branch × filename` enumeration, and this base has lost a grant on each axis.** `GET …/main/LICENSE` returned **404** for both [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) (grant is **`LICENSE.md`**) and [`learningequality/kolibri`](https://github.com/learningequality/kolibri) (default branch is **`develop`**). 🔴 Two 404s, two unrelated causes, and both are indistinguishable from a genuine absence. 🔵 **3 of 6** sampled addresses defeat a naive `…/main/LICENSE` read | Adopt `P558-B`'s probe (branch resolved by `ls-remote`, then a de-duplicated filename ladder incl. `COPYING`/`COPYING.LESSER`) as the **only** read permitted to emit `NOASSERTION`. 🟢 A shelf row may read `NOASSERTION` only when the probe printed `NO-GRANT-AT-ANY-KNOWN-PATH` |
+| 🔴 **`558-C`** | **`556-G`'s topic-sweep rule was measured on a `stars:>`-filtered cohort and does not transfer to the fresh tail.** `556-G` recorded 77.8 % / 100 % topic yield vs 30.8 % keyword and concluded *"sweep by topic first."* 🔴 On `topic:edtech created:>2026-10-27` **unfiltered**, yield is **60 %** (9/15) — **1.95×** the keyword rate, the **bottom** of the claimed 2–3× band. 🔴 The other 6 are synthetic: owner `Name`+4 digits, doubled keyword slugs, *"A typed … service"*, MIT, 0★ | Re-state `556-G` with the filter it was measured under, and set a **standing `stars:>` floor** for topic sweeps. 🟢 Next pass: run `topic:edtech created:>X` with and without `stars:>5` in the same session and publish both yields |
+| 🔴 **`558-D`** | **The only Tier-1 row with zero first-hand grant evidence is also the one a main-only reader would have called unlicensed.** [`learningequality/kolibri`](https://github.com/learningequality/kolibri) is carried as `MIT` *"carried, unchanged"* — no bytes, no `sha256`, never probed. 🔵 Its default branch is **`develop`**; `…/main/LICENSE` **404**, `…/develop/LICENSE` **200**. 🟢 The `200` is confirmed; the payload was **not** read this pass and that is stated rather than skipped | **One call:** `GET raw.githubusercontent.com/learningequality/kolibri/develop/LICENSE`, publish newline-stripped bytes + `sha256/12` + title line, and promote the row from *carried* to *read* — or correct it |
+| 🔴 **`558-E`** | **The supply and demand legs are run at equal frequency and are not equally productive.** This pass: demand **0 new findings from 4 regional legs** (17/17 probes already on shelf, first simultaneous four-region saturation); supply still moves daily (`DeepTutor` **+248★** between passes). 🔵 An hourly four-region demand sweep is returning nothing while costing the majority of the pass's search budget | Measure it rather than assume it: record new-findings-per-leg for supply vs demand over the next **5 passes**, then set the demand leg's cadence from the measurement. 🔵 Do **not** drop the demand leg on this pass's single observation |
+| 🔴 **`558-F`** | **The market total disagrees about the present by 3.1× and must not be cited as a number.** 2026 base **$11.4 B** (Grand View, as reported) vs 🔴 **$3.7 B** (Persistence); IMARC ~**$6.4 B** for 2025 — same quarter, same scope words. 🟢 **Rank order survives where magnitude does not:** every firm breaking out segments puts **K-12 first at ~34 %** for 2026 | **Standing rule, extending `557-D`:** this base publishes **segment mix and rank order** for client-facing use and carries totals only in the firm-attributed ledger. 🔵 No single total in any deck, summary or pattern |
+| 🔴 **`558-H`** | **A claim this base formally REFUTED AND STRUCK OUT at `p133` is still being asserted as a standing null — and it is the LATAM supply claim.** `p133`'s register row reads: ~~*No LATAM-origin supply*~~ — 🟢 *"**CLOSED BY p133 — REFUTED** … Probing `sigaa`, `suap` and `siu-guarani` returns **12 LATAM addresses** (Brazil 8, Argentina 4), of which 3 are teacher-facing … **This KB repeated 'no LATAM supply' four times; the supply was there under three platform nouns.**"* 🔴 **It then came back.** The phrase *"no LATAM-origin supply address … the nearest is `chamilo`'s BeezNest Latino SAC (Peru)"* now appears **7×** across `agents/trending.md` (2), `intel/market.md` (1) and `intel/open-gaps.md` (4), and has been carried as *"Nth consecutive pass"* for nineteen passes. 🔴 **And the refutation is independently re-confirmable from the current shelf:** [`portabilis/i-educar`](https://github.com/portabilis/i-educar), `GPL-2.0`, **722★**, is described on `intel/market.md` as *"Brazil's largest free school-management system; born in Itajaí (SC) municipal government, on the federal Public Software Portal since 2008"*, beside `corretor-enem` (ENEM) and `agente-bncc-professores` (BNCC, MIT). 🔴 **Fifth measurement of `558-A`'s rule and the worst of the five:** a struck-out claim was resurrected and re-counted, so the *"nineteenth consecutive pass"* tally is itself an artefact | 🟢 **(a) Retire the phrase in all 7 places**, replacing it with the two separately-true claims: *no LATAM-origin address in pass N's `created:>` window*, and *the shelf's LATAM-origin supply is `i-educar` + two standard-anchored agents*, with grants and stars. 🟢 **(b) Publish the corrected count and reset the consecutive-pass tally to the window claim only.** 🔵 **(c) ACTION — the general rule:** before carrying any *"Nth consecutive"* null forward, `grep` the register for the same claim **struck out**; `p133` used `~~strikethrough~~` and nineteen passes did not look for it |
+| 🔴 **`558-G`** | **`557-F` is a class, not a host.** `digital-strategy.ec.europa.eu` → **`getaddrinfo ENOTFOUND`** (DNS, outside allowed domains) while **WebSearch returned that same page's substance in the same session** — the second host measured this way after `www.iesalc.unesco.org`. 🔴 So every *"primary unreachable, claim labelled secondary"* note on `intel/market.md` describes the **transport**, not the source | Sweep `intel/market.md` for `connect_rejected` / *"primary unreachable"* annotations and re-label each as **`fetch`-unreachable, `search`-reachable**, with the measured failure mode. 🟢 Publish the count corrected |
+
+### 🔵 Carried forward, untouched by this pass
+
+🔵 **`556-D`'s cross-industry ledger sweep remains open** — and this pass could not advance it:
+the upstream `globant-kb` `rotation.json` records `Educhain(MIT,~9k★)` and `~12k★` against a
+platform figure of **387★**, and eleven other industries' ledgers were not checked. 🔴 **This pass
+read that file and confirms the erroneous figures are still present.**
+🔵 **`555-F`** (a denial is not a stable fact about a command) is **neither confirmed nor refuted**
+— this pass did not attempt the committed instruments at all, on `557-A`'s evidence.
+🔴 **Informed non-results, recorded so absence is not read as coverage:** no EMEA national ministry
+**demand** instrument for France, Germany, Spain, Saudi Arabia or the Nordics — **nineteenth
+consecutive pass**; 🟢 but an EMEA **supply** address aligned to a national curriculum
+([`nzengi/dubbai`](https://github.com/nzengi/dubbai), Türkiye **MEB**, 0★) **was** found, which is
+new in kind if not in weight. 🔴 **No LATAM-origin address in either sweep** — 🔵 **but that is a 3-day-window claim, and the
+carried phrase around it is false.** The nearest *new* candidate,
+[`luumlabs/aula`](https://github.com/luumlabs/aula), was examined and its origin **explicitly not
+inferred** from a Spanish-language name. 🔴 **See `558-H`: *"no LATAM-origin supply"* was CLOSED
+AS REFUTED BY `p133` and this base has gone on asserting it ever since.**
+
 ## 🆕 `p557` — `2026-10-30` — **🟢 FOUR CLOSED (`556-B`, `556-C`, `556-E` BOTH LIMBS, `556-H`), ONE CONFIRMED-AND-REFINED (`556-G`), ONE ACTIONED UPSTREAM (`556-D`). 🔴 AND THE PASS'S OWN DRAFT PRODUCED **FIVE FALSE NOVELTY CLAIMS, ALL FIVE RETRACTED BEFORE PUBLICATION** BY A FOUR-LINE `grep`. 🔴 EIGHT REGISTERED (`557-A`…`557-H`).**
 
 🔵 **Registration check run first, per `P605`.** The eight ids below are cited in this pass's

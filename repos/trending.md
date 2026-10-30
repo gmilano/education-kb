@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p558` — `2026-10-30` — **🔴 NOTHING WAS PROMOTED AND NOTHING SHOULD HAVE BEEN: the entire 3-day trending tail across two topics sits at **0–2★**. 🟢 THE PASS'S REPOSITORY FINDING IS A **TRANSPORT** ONE — `LICENSE` at `main` 404s on two live shelf rows for two different reasons, so a grant read is a **branch × filename** enumeration.**
+
+🔵 **GitHub trending was queried on the transport that answers** — MCP `search_repositories`, per
+`ACTION VV` — and on WebSearch for the aggregator digests. 🟢 Both answered. 🔴 Neither produced a
+promotable repository.
+
+| sweep / leg | result |
+|---|---|
+| `topic:ai-tutor created:>2026-10-27` | 19 rows, 🔴 **max 2★** |
+| `topic:edtech created:>2026-10-27` | 85 total / 15 read, 🔴 **max 1★**, 🔴 **6 synthetic** |
+| WebSearch `github trending education AI 2026` | 🔴 aggregator digests only; top signal `DeepTutor` at **`50 597★`** — 🟢 **~1 000★ BEHIND this shelf's first-hand `51 608★`** |
+| WebSearch `open source platform education ERP CRM MIT Apache` | 🔴 returned OpenEduCat/Odoo only — both already read at `p557`; **no MIT/Apache SIS or ERP surfaced at all** |
+
+🟢 **The ERP leg's null is worth stating plainly, because it is the second pass to produce it:**
+asked directly for an **MIT or Apache** education ERP/SIS, the open web returns **LGPL-3.0
+OpenEduCat on Odoo** and nothing else. 🔵 `p557` graded that pair `LINK-ONLY`; this pass confirms
+there is **no permissive alternative to route around it**. The largest permissive thing in the
+category remains [`academico-sis/academico`](https://github.com/academico-sis/academico) (MIT,
+410★) — three orders of magnitude smaller than Odoo and not an ERP.
+
+### 🔴 The grant-read defect, measured on rows this shelf already carries
+
+🔵 Full probe rows: [`../evidence/grant-bytes.2026-10-30-p558.tsv`](../evidence/grant-bytes.2026-10-30-p558.tsv).
+
+| row | `GET …/main/LICENSE` | why | correct address |
+|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **404** | wrong **filename** | 🟢 `main` + **`LICENSE.md`** → 200, **8 562 B** `20a39a9c5993` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 **404** | wrong **branch** | 🟢 **`develop`** + `LICENSE` → 200 |
+
+🔴 **Two 404s, two unrelated causes, and both look exactly like "this project has no licence."**
+🟢 Eight grant probes ran this pass: **2 × 200, 6 × 404**, and the 404s carry the information.
+Registered as `558-B`.
+
+🔵 **Byte convention, stated beside the counts per `557-H`(a):** `bytes` and `sha256/12` are taken
+over the **newline-stripped** body (`printf '%s'`), which is **1 B under `wc -c`** — measured again
+this pass on PageLM (**8 562** stripped vs **8 563** with trailing newline). 🔵 Filename variants
+are lowercased into a `seen` set before fetching, per `557-H`(b), so no row is emitted twice.
+
+### 🟢 `git ls-remote --symref` — 6 / 6, and it is the only transport that dates the branch
+
+| address | default branch | `HEAD` sha |
+|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | `main` | `228a36cd9169` |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `main` | `1ea7df155447` |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🔴 **`develop`** | `6b9292ddd297` |
+| [`inducer/relate`](https://github.com/inducer/relate) | `main` | `aca7c69cd4dd` |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 **`develop`** | `6351dbafee75` |
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | `main` | `dc4c398d5167` |
+
+🟢 **Two of six — a third of this sample — do not default to `main` or `master`.** 🔵 That is the
+base rate behind `556-C`'s Odoo/OpenEduCat miss, and it is high enough that branch resolution is
+not an edge case. Closes `557-B`.
+
 ## 🆕 `p557` — `2026-10-30` — **🟢 FIVE SWEEPS, 70 ROWS, HIT RATES PUBLISHED BESIDE EACH — AND THE DILUTED CHANNEL IS `topic:education` (36 %), NOT KEYWORD SEARCH. 🔴 THE TOP OF THE `topic:edtech` BOARD IS AN UNUSABLE LICENCE FOR THE SECOND WEEK RUNNING.**
 
 🔵 **Sweeps run this pass**, MCP `search_repositories`, sorted by stars descending, each reported

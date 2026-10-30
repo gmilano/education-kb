@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p558` — `2026-10-30` — **🟢 THE DELIVERY SHAPE THIS PASS ADDS IS **INSIDE** THE CLIENT'S LMS, NOT BESIDE IT: the first Moodle-native AI course generator this base has seen (`moodle-local_lumination`, GPL-3.0) makes `Trend 67`'s content-transform a `local_` plugin — where Moodle's own GPL is the ambient licence and the plugin boundary is the delivery boundary. 🔴 0★ AND THREE DAYS OLD, SO NOTHING IS RECOMMENDED ON IT.**
+
+🔵 **No vertical row changed this pass.** 🟢 `p557`'s two verticals stand: the reopened
+education-ERP tier (Odoo + OpenEduCat, `LGPL-3.0-only` → 🟡 `LINK-ONLY`, client-hosted with
+Globant's work in separate modules) and the permissive academic LMS shortlist (Sakai `ECL-2.0`,
+OpenOLAT `Apache-2.0`, RELATE `MIT`, Oppia `Apache-2.0`, Kolibri `MIT`, Academico `MIT`).
+
+### 🟢 Vertical 3 — the in-LMS plugin, as a *shape* rather than a recommendation
+
+| address | ★ | grant | what it is |
+|---|---|---|---|
+| [`lum-earth/moodle-local_lumination`](https://github.com/lum-earth/moodle-local_lumination) | 🔴 **0** | 🟡 `GPL-3.0` | *"Lumination AI Course Generator for Moodle: generate a complete Moodle course from a PDF"* |
+
+🔴 **It is not recommendable and is not recommended:** 0★, created `2026-10-28`, no community, no
+release. 🟢 **The shape is worth recording even though the address is not**, because it resolves a
+tension this base has carried for several passes:
+
+🔵 **The tension.** `Trend 67` finds the week's supply is content-transform, not tutor, and that
+transforms *"sit upstream of the tutor and have a far shorter path to value."* 🔴 But every
+transform address this base has catalogued — `Papermorph`, `claudemy`, `frametell`,
+`book-to-skill` — emits an artefact **outside** the institution's platform, which means the
+engagement still owes an integration. 🟢 `Papermorph` was the partial answer because it targets
+**SCORM**, the package boundary. 🟢 **A `local_` plugin is the complete answer: it emits native
+course objects inside the LMS of record, so there is no package, no import step and no second
+system.**
+
+🟡 **And the licence question answers itself.** Moodle is **GPL-3.0**, so a Moodle plugin is GPL-3.0
+by construction; the grant is not a constraint Globant chooses, it is the platform's ambient
+condition. 🟢 **The delivery verdict is therefore `LINK-ONLY`-equivalent and entirely ordinary:**
+the client hosts Moodle, the plugin is a deliverable published under GPL-3.0, and anything Globant
+wants to keep closed lives in a **separate service the plugin calls** — the identical boundary
+`p557` drew for Odoo/OpenEduCat.
+
+🔵 **Which makes the two reopened verticals the same engagement twice:** copyleft platform the
+client hosts, Globant's module in the platform's grant, Globant's model/agent layer in its own
+service behind an API. 🟢 **One architecture serves both the ERP and the LMS vertical**, and
+`P558-A` prices it once.
+
+### 🔵 Open edX, noted and not promoted
+
+🔵 [`sonukumarsingh01/starlent-openedx-ecommerce`](https://github.com/sonukumarsingh01/starlent-openedx-ecommerce)
+(0★, **no grant field**, `2026-10-30`) is a branded Open edX + e-commerce *showcase*. 🔴 No grant,
+no stars, explicitly a portfolio piece — **not a vertical row.** 🟢 Recorded only because Open edX
+(`AGPL-3.0`) remains the largest platform in this category and this base has no permissive
+substitute for it; a showcase is not evidence of one.
+
 ## 🆕 `p557` — `2026-10-30` — **🟡 THE EDUCATION-ERP VERTICAL REOPENS: Odoo + OpenEduCat are `LGPL-3.0-only`, so the engagement is **client-hosted with Globant's work in separate modules** — the shape Odoo integration already has everywhere else. 🔵 AND THE PERMISSIVE LMS SHORTLIST — Sakai (ECL-2.0), OpenOLAT (Apache-2.0), RELATE (MIT), all academic — IS RE-VERIFIED ON BYTES RATHER THAN EXTENDED.**
 
 ### 🟡 Vertical 1 — Education ERP, reopened by `Gap 556-C`

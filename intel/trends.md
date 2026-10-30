@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p558` — `2026-10-30` — **🟢 `Trend 70`: THE TOPIC CHANNEL IS BEING SEEDED — 40 % of `topic:edtech`'s three-day tail is synthetic, which makes **corpus integrity**, not discovery, the limiting factor on this base's supply leg. 🟢 `Trend 71`: THE SUPPLY TAIL HAS A **STAR CEILING OF 2** ACROSS TWO TOPICS, SO "nothing promotable" IS NOW A MEASURED STATE RATHER THAN A SEARCH FAILURE. 🔴 AND THE DEMAND LEG SATURATED ON **ALL FOUR REGIONS AT ONCE** — 17 of 17 novelty probes already on this shelf.**
+
+### 🟢 `Trend 70` — Corpus integrity is now the binding constraint on the supply leg
+
+🔴 **Six of fifteen `topic:edtech` rows created since `2026-10-27` are not education software.**
+They share a four-part signature — owner handle `CapitalisedName`+**4 digits**, keyword-stuffed
+and sometimes doubled slug (`spend-cap-spend-cap`, `device-dashboard-device-dashboard`),
+description opening *"A typed … service"*, and MIT/0★/same-3-day-window. 🔵 Rows in
+[`../agents/trending.md`](../agents/trending.md#-p558--2026-10-30).
+
+🟢 **Why this is a trend and not an annoyance.** For 550-odd passes this base's supply problem has
+been *discovery*: finding the real repository behind an aggregator's claim. 🔴 **The problem
+inverts here.** The topic channel now returns more rows than before and a declining share of them
+are real, so the next increment of recall costs more in filtering than it returns in findings.
+🟢 **The practical consequence is a rule, already applied in this pass's sweeps:** a `stars:>`
+floor is not an optimisation on this channel, it is the filter that makes the channel usable at
+all. 🔵 `556-G`'s 77.8 %/100 % yields were measured *with* such a floor; the unfiltered tail
+yields **60 %** (`558-C`).
+
+🔵 **And it is a client-facing observation, not only an internal one.** Any engagement that
+proposes *"we will survey the open-source landscape for your vertical"* is buying into this same
+channel. 🟢 **Globant's differentiator is the filter, not the search** — which is precisely what
+this base is.
+
+### 🟢 `Trend 71` — The three-day supply tail has a measured star ceiling of 2
+
+| sweep | rows | 🔴 max ★ |
+|---|---|---|
+| `topic:ai-tutor created:>2026-10-27` | 19 / 19 read | 🔴 **2** |
+| `topic:edtech created:>2026-10-27` | 85 total, top 15 by stars | 🔴 **1** |
+
+🟢 **This converts a recurring non-statement into a number.** Passes have reported *"nothing
+promotable this window"* without bounding it, which is indistinguishable from not having looked.
+🔵 **Bounded: the ceiling is 2★, against a lowest carried shelf row of ~350★ — two orders of
+magnitude.** 🟢 So the correct reading of a quiet window is **"the cohort exists and is uniformly
+tiny"**, not "the channel failed".
+
+🔵 **Composition, which is the more durable finding:** the cohort is **language-learning-dominated**
+(English, German, TOEIC, workplace English), and **three of its members are agent *skills* rather
+than applications** (`eml-skill`, `teach-me`, `ai4education-skill`). 🟢 `Trend 67`'s
+content-transform direction holds, and `book-to-skill`'s *unit of distribution is a skill file*
+continues to reproduce at the bottom of the market.
+
+### 🔴 `Trend 61` extended — the demand leg saturated on all four regions simultaneously
+
+🔴 **Seventeen novelty probes were run against this shelf before any regional claim was drafted.
+All seventeen were already here**, with firm and base-year attribution: `UAE`, `KHDA`,
+Korea's `AI Basic Act`, `Vietnam`, New York `A 9190`, the US DoE *supplemental priority*,
+`Universidad de los Andes`/`716`, the UNESCO LATAM `Observatory`, `CENIA`, `Ceibal`, the EU
+`omnibus`, `2 December 2027`, `IMARC`, `25.9 %`, the K-12 `34 %` share, `Ipsos`, `ls-remote`.
+
+🟢 **This is the first pass to measure demand-leg saturation on every region at once**, rather
+than reporting EMEA's and inferring the rest. 🔵 Previous passes recorded *"EMEA returned
+predominantly US material"* (eighteen consecutive) and *"NA demand leg saturated"* (ninth
+consecutive) as separate observations; 🟢 **run together with a `grep` gate in front of them, all
+four legs return zero.**
+
+🔵 **What that implies about cadence, stated as a question this base should answer rather than a
+conclusion it has earned:** an hourly demand-side sweep of four regions is returning nothing new,
+while the supply side still moves daily (`DeepTutor` +248★ between passes). 🟢 The legs are not
+equally productive and are currently run at equal frequency. Registered as `558-E`.
+
+### 🟢 `Trend 60` — unchanged, and the ERP null now reinforces it
+
+🔵 `Trend 60` (the curriculum graph is the scarce asset) and `p557`'s closure of `556-H` against
+availability stand untouched. 🟢 **This pass adds a parallel null one layer down:** asked directly
+for a permissive education **ERP/SIS**, the web returns LGPL-3.0 OpenEduCat-on-Odoo and nothing
+else — second consecutive pass. 🔵 So the scarcity is not confined to the curriculum graph; the
+**system of record** is equally unavailable permissively. 🟢 Both are build-or-copyleft decisions,
+and `P558-A` is shaped by that.
+
 ## 🆕 `p557` — `2026-10-30` — **🟢 `Trend 60` CONFIRMED, NOT SUSPECTED: the curriculum graph is the scarce asset, and the best one in the market is `CC-BY-NC-4.0`. 🟢 THREE NEW TRENDS: the week's supply is **content-transform, not tutor** (`T67`); **this base writes faster than it reconciles**, measured on its own shelf (`T68`); and the first attitudinal series here moves **against** adoption in three of four APAC countries (`T69`).**
 
 ### 🟢 `Trend 60` — CONFIRMED: the curriculum graph is the scarce asset

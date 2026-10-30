@@ -4,6 +4,102 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p558` — `2026-10-30` — **🟢 `P558-A`: ONE ARCHITECTURE SERVES BOTH REOPENED COPYLEFT VERTICALS — the ERP (`Odoo`/`OpenEduCat`, `LGPL-3.0-only`) and the LMS (`Moodle`, `GPL-3.0`) are the same engagement twice: **client-hosted platform · Globant's module under the platform's grant · Globant's model layer in a separate service behind an API.** 🟢 `P558-B`: A GRANT-READ PROBE THAT IS CORRECT BY CONSTRUCTION — branch × filename, with the byte convention stated.**
+
+### 🟢 `P558-A` — The copyleft-platform engagement, priced once and reused twice
+
+🔵 **Why one pattern rather than two.** `p557` reopened the education-ERP vertical by reading
+Odoo and OpenEduCat as `LGPL-3.0-only` (🟡 `LINK-ONLY`). This pass finds the LMS-plugin shape
+(`moodle-local_lumination`, GPL-3.0) sitting in the identical legal and architectural position.
+🟢 **The licence boundary and the module boundary coincide in both**, so the same three-layer
+split is the answer, and the only thing that changes is which platform's ORM the module calls.
+
+**Layer 1 — the platform, client-hosted, untouched.**
+- ERP route: [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (901★,
+  `LGPL-3.0-only`, 8 240 B `8f4ce028f93d`) on [`odoo/odoo`](https://github.com/odoo/odoo)
+  (**55 430★**, `LGPL-3.0-only`, 43 529 B `abc09dad5f84`) — admissions, student records,
+  gradebook, fees.
+- LMS route: **Moodle** (`GPL-3.0`) — the course, enrolment and gradebook of record.
+- 🔴 **No fork of either.** A closed fork is not available under `-only` copyleft, and a fork is
+  also the thing that makes the next upgrade the client's problem.
+
+**Layer 2 — Globant's module, published under the platform's own grant.**
+- ERP route: an Odoo **addon module** calling the ORM / XML-RPC.
+- LMS route: a Moodle **`local_` plugin** emitting native course objects — the shape
+  [`lum-earth/moodle-local_lumination`](https://github.com/lum-earth/moodle-local_lumination)
+  demonstrates. 🔴 Not that repository: 0★, three days old. **The shape.**
+- 🟢 This layer is thin by design: schema, hooks, UI surface, and calls outward. 🟡 It is
+  LGPL/GPL and that is accepted up front, not discovered at delivery.
+
+**Layer 3 — the model and agent layer, Globant's own service, separate process.**
+- 🟢 **This is where everything proprietary lives**, and it is a separate deployable behind an
+  HTTP/JSON boundary, so no copyleft reaches it.
+- Build-on components, all 🟢 `BUILD-ON` on this shelf: [`oppia/oppia`](https://github.com/oppia/oppia)
+  (`Apache-2.0`, 6 950★) for the adaptive *exploration* — a branching lesson that responds to the
+  specific wrong answer; [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph)
+  (`MIT`, 1 029★) for source → lesson with a **SCORM** target when the client's platform is
+  neither Odoo nor Moodle; [`inducer/relate`](https://github.com/inducer/relate) (`MIT`, 437★) as
+  the reference for git-versioned course content and randomised assessment.
+- 🔴 **The curriculum graph is built, not adopted** — `Trend 60`, confirmed by `556-H`:
+  `cn-math-taxonomy` is the best one in the market and is `CC-BY-NC-4.0` → `BLOCK`. 🟢 Price it as
+  a deliverable (`P557-B`), not as an integration.
+
+**Wiring, concretely.** Platform → module (native API: Odoo ORM / Moodle `local_` hooks) → one
+outbound call per learner event to the Layer-3 service → service returns the next step, the
+generated course object, or the mastery verdict → module writes it back as a native platform
+object. 🟢 **One integration point, one direction, no shared database.**
+
+🔵 **What makes this safe rather than merely legal:** the thing a client most often asks to keep
+closed — the model prompts, the mastery logic, the curriculum graph — is in Layer 3, which never
+links the copyleft code. 🔴 **The failure mode to avoid is vendoring:** both Odoo and OpenEduCat
+carve out *"external libraries and contributions bundled … under other GPL-compatible licenses"*,
+so a vendored dependency is its own licence read, not covered by the root grant.
+
+🟢 **Delivery note:** this is the ordinary Odoo integration shape that Globant already runs in
+other industries, which is the strongest argument for it — the education engagement inherits a
+delivery model that is not new to the studio.
+
+### 🟢 `P558-B` — A grant-read probe that is correct by construction
+
+🔵 Three passes have now lost a grant to the transport rather than the project: `556-C` (branch),
+`558-B` (filename, ×2). 🟢 **The probe below is the minimum that cannot produce a false
+`NOASSERTION`.** It is carried inline per `557-A`, because this host class refuses this base's own
+committed scripts.
+
+```bash
+# Resolve the branch first — 2 of 6 shelf rows default to `develop`, not `main` (558-B).
+# Then enumerate filenames — PageLM's grant is LICENSE.md and plain LICENSE 404s.
+# bytes/sha256 over the NEWLINE-STRIPPED body (printf '%s'): 1 B under `wc -c` (557-H a).
+# Lowercase filename variants into `seen` before fetching: no duplicate rows (557-H b).
+read_grant() {
+  slug=$1
+  sym=$(git ls-remote --symref "https://github.com/$slug" HEAD 2>/dev/null) || return 1
+  br=$(echo "$sym"  | awk '/^ref:/{sub("refs/heads/","",$2); print $2}')
+  sha=$(echo "$sym" | awk '/HEAD$/{print substr($1,1,12)}')
+  [ -z "$br" ] && { echo "$slug UNRESOLVED"; return 1; }
+  seen=''
+  for n in LICENSE LICENSE.md LICENSE.txt LICENCE LICENCE.md COPYING COPYING.LESSER; do
+    key=$(echo "$n" | tr 'A-Z' 'a-z')
+    case " $seen " in *" $key "*) continue ;; esac
+    seen="$seen $key"
+    out=$(curl -sS --max-time 25 -w '\n%{http_code}' \
+          "https://raw.githubusercontent.com/$slug/$br/$n") || continue
+    code=$(printf '%s' "$out" | tail -1)
+    body=$(printf '%s' "$out" | sed '$d')
+    [ "$code" = 200 ] || continue
+    printf '%s\t%s\t%s\t%s\t%s\t%s\n' "$slug" "$br" "$sha" "$n" \
+      "$(printf '%s' "$body" | wc -c)" \
+      "$(printf '%s' "$body" | sha256sum | cut -c1-12)"
+    return 0
+  done
+  echo "$slug@$br NO-GRANT-AT-ANY-KNOWN-PATH"   # <- the only honest negative
+}
+```
+
+🔴 **The last line is the point.** A probe that tries one path may only ever say *"I did not find
+a grant at the path I tried"*; this one earns the right to say *"no grant at any known path"*, and
+only that sentence should ever reach a shelf as `NOASSERTION`.
+
 ## 🆕 `p557` — `2026-10-30` — **🟡 `P557-A` is the pattern `Gap 556-C` unlocked: an education-ERP engagement on **OpenEduCat + Odoo at `LINK-ONLY`**, where the module boundary and the licence boundary are the same line. 🟢 `P557-B` prices the thing the market does not sell: a **permissive curriculum graph**, because the best one in existence is `CC-BY-NC-4.0`. 🟢 `P557-C` is a four-line pre-write check that caught three false claims in this pass.**
 
 ### 🟡 `P557-A` — Education ERP on OpenEduCat + Odoo, 8–10 weeks, client-hosted

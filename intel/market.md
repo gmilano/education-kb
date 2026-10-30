@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p558` — `2026-10-30` — **🔴 ALL FOUR REGIONAL DEMAND LEGS RETURNED ZERO NEW INFORMATION IN THE SAME PASS — 17 of 17 novelty probes were already on this shelf, with firm and base-year attribution. 🟢 THAT IS THE FIRST SIMULTANEOUS FOUR-REGION SATURATION MEASUREMENT THIS BASE HAS TAKEN, and it is reported as a number rather than as four separate shrugs. 🟢 `557-D`'s STANDING RULE IS ALREADY IN FORCE ON THIS PAGE AND THE SPREAD IT WARNS ABOUT WIDENED AGAIN. 🔴 AND THE LATAM CHILD DISPROVES THIS BASE'S OWN STANDING LATAM-SUPPLY NULL — A CLAIM `p133` STRUCK OUT AS REFUTED AND NINETEEN PASSES KEPT ASSERTING (`558-H`).**
+
+🔵 **Method, run before drafting rather than after.** Each regional leg's findings were
+`grep`-checked against all ten pages of this base *before* a word was written. 🟢 This is `p557`'s
+lesson applied prospectively: `p557` drafted five novelty claims and retracted all five to a
+four-line `grep`. 🔴 **This pass drafted none, because the gate ran first.**
+
+| probe | already on shelf | probe | already on shelf |
+|---|---|---|---|
+| `UAE` (nationwide K-12 AI curriculum) | 🔴 yes | `Universidad de los Andes` / `716` | 🔴 yes |
+| `KHDA` (Dubai private-school guidance) | 🔴 yes | UNESCO LATAM `Observatory` | 🔴 yes |
+| Korea `AI Basic Act` | 🔴 yes | `CENIA` | 🔴 yes |
+| `Vietnam` AI law | 🔴 yes | `Ceibal` | 🔴 yes |
+| New York `A 9190` | 🔴 yes | EU `omnibus` | 🔴 yes |
+| US DoE *supplemental priority* | 🔴 yes | `2 December 2027` | 🔴 yes |
+| K-12 `34 %` segment share | 🔴 yes | `IMARC` | 🔴 yes |
+| `25.9 %` CAGR | 🔴 yes | `Ipsos` Education Monitor | 🔴 yes |
+| `git ls-remote` | 🔴 yes | — | — |
+
+🟢 **17 / 17.** 🔵 Each of the five `## Opportunities by region` children below is **amended in
+place** with this pass's result for that region — including the four whose result is *nothing new*,
+because an unamended region reads as an unvisited one.
+
+### 🔴 `Gap 557-D` — the rule is in force, and the spread widened
+
+🔵 `557-D` set the standing rule: *"a market size is cited with its firm, base year and scope
+words."* 🟢 **This page already complies** — the ledger carries firm-attributed rows (Grand View
+`$11.4 B` base / 25.9 %; Persistence 🔴 `$3.7 B` base / 21.0 %; Straits `$8.24 B` → `$98.71 B`
+2034 / 36.4 %). 🔵 Nothing on this page states a bare figure.
+
+🔴 **This pass's legs returned a new low and a new firm, so the spread is wider than `557-D`
+recorded:** IMARC at **~$6.4 B for 2025**, and a 2026 base of **$11.4 B** against Persistence's
+**$3.7 B** — 🔴 **a 3.1× disagreement about the present, from firms publishing in the same
+quarter.**
+
+🟢 **The operational consequence, which is the only reason to keep measuring this:** a market-size
+figure is unusable as an engagement input and **must not appear in a client deck as a single
+number**. 🔵 What *is* usable from this pass's legs is the **segment** claim — K-12 at ~**34 %**
+share for 2026 — because every firm that breaks out segments agrees K-12 leads, even while
+disagreeing about the total by 3×. 🟢 **Rank order is robust where magnitude is not.** Registered
+as `558-F`.
+
+### 🔵 The transport finding behind the regional nulls, and it is not a null
+
+🔴 `WebFetch` → `digital-strategy.ec.europa.eu` (the European Commission's own AI page):
+**`getaddrinfo ENOTFOUND`** — DNS, i.e. outside this session's allowed domains. 🟢 **And WebSearch
+returned that same page's substance in the same session**, including the omnibus commencement and
+the high-risk date dispute.
+
+🟢 **This is the second host on which `557-F` has been measured**, after `www.iesalc.unesco.org`,
+and the two together promote it from a host quirk to a **class**: 🔵 **the demand leg is
+`search`-reachable and `fetch`-unreachable.** 🔴 Which means every *"primary source unreachable,
+claim labelled secondary"* note on this page is describing the **transport**, not the source's
+availability — exactly as `557-F` warned about seventeen prior "saturations". Registered as
+`558-G`.
+
 ## 🆕 `p557` — `2026-10-30` — **🔴 THE MARKET-SIZE FIGURE IS NOT A FIGURE: EIGHT RESEARCH FIRMS SPAN **3.1× ON THE 2026 BASE YEAR AND 11.1× ON THE TERMINAL** — same mechanism that retired `134/31`, and a standing rule is now proposed for it. 🟢 LATAM PAYS WITH INSTITUTIONS AND A DEPLOYMENT: the UNESCO LAC Observatory's eleven named partners, and a Chilean university running **194 pedagogical agents across ~100 courses**. 🔴 AND THE DEMAND CHANNEL ASYMMETRY IS RE-CHARACTERISED: the host is **search-reachable and fetch-unreachable**, which is not what seventeen passes of "saturation" recorded.**
 
 🔵 **All five regions are written below and amended in place in the authoritative
@@ -324,6 +380,14 @@ closed five-value vocabulary; countries are named in the prose, never in the fie
 
 ### North America
 
+🆕 **`p558` — `2026-10-30`: no new NA instrument. 🔴 Tenth consecutive saturated leg.** The
+`AI education North America 2026 adoption regulation players` leg returned the US DoE
+*supplemental priority*, the `K-12 AI Literacy and Readiness Act`, the MD/ID/OK/VA
+district-policy mandates, New York `A 9190`, `STUDENTS FIRST`, Gallup teacher-use and the
+*"134 bills / 31 states"* figure — 🔴 **all seven already on this page**, and the last is still
+the figure 🔴 **this base retired at `p455`** for arriving only through secondary aggregators.
+🟢 It was again a top organic result and is again **not written here as a fact**.
+
 🔴 **Demand leg saturated for a ninth consecutive pass.** `AI education North America 2026
 adoption regulation players` returned **FIPSE**, **COPPA** and the *"134 bills across 31
 states"* figure — all held, and the last of these is a figure 🔴 **this base retired at
@@ -561,6 +625,22 @@ pass) — the Educational Community License is what HE consortium procurement al
 so the sellable first phase is **policy-plus-pilot**, not platform replacement.
 
 ### EMEA
+
+🆕 **`p558` — `2026-10-30`: no new EMEA instrument. 🔴 Nineteenth consecutive pass, and the leg
+again returned predominantly US material.** Everything EMEA-shaped it did return — the UAE's
+nationwide K-12 AI curriculum mandate, Dubai **KHDA**'s private-school guidance, the EU
+**omnibus** commencement and the high-risk date dispute (`August 2026` vs **`2 December 2027`**
+for stand-alone Annex III and `2 August 2028` for embedded systems) — 🔴 **is already on this
+page.** 🔵 The primary host for the last of these, `digital-strategy.ec.europa.eu`, is
+🔴 **`getaddrinfo ENOTFOUND`** from this session while WebSearch serves its substance — see
+`558-G`, which is why that date dispute remains labelled secondary.
+
+🟢 **One genuinely new EMEA observation, and it is on the *supply* leg:**
+[`nzengi/dubbai`](https://github.com/nzengi/dubbai) — a Turkish-language AI tutor built to the
+**MEB** (Türkiye's Ministry of National Education) curriculum. 🔴 **0★, no grant field, created
+`2026-10-28`** → not promoted and not recommended. 🔵 Recorded because nineteen passes of EMEA
+nulls have been about the demand leg; this is an EMEA **supply** address aligned to a national
+curriculum, which is the artefact the demand leg keeps implying should exist.
 
 🟢 **The only region that produced claims this base did not already hold.** Both are
 regulatory, both are 🔴 **secondary-sourced**, and both are labelled as such because the
@@ -862,6 +942,20 @@ material.
 
 ### APAC
 
+🆕 **`p558` — `2026-10-30`: no new APAC instrument. 🔴 Saturated.** The leg returned Korea's
+**AI Basic Act** (in force `22 Jan 2026`), **Vietnam**'s AI law and its 🟢 **18-month education
+transition** (so education systems in operation at commencement have until `1 Sep 2027`),
+Australia's National AI Plan, Japan's and Singapore's voluntary frameworks, China's targeted
+rules, and the **Ipsos** Education Monitor 2026 attitudinal series — 🔴 **all already on this
+page**, including the Vietnam transition arithmetic.
+
+🟢 **APAC-origin supply is now routine rather than notable:** three of nineteen addresses in this
+pass's `topic:ai-tutor` cohort are Chinese-language and nationally-scoped
+([`Francisewais/OnlineJudge-withAitutor`](https://github.com/Francisewais/OnlineJudge-withAitutor),
+[`hujm2023/rka`](https://github.com/hujm2023/rka) targeting the 软考 systems-architect exam,
+[`Cognifair/eml-skill`](https://github.com/Cognifair/eml-skill)). 🔴 **All at 0★** — present, not
+promotable.
+
 🔴 **Nothing new, and the shape of the blank is worth stating precisely.** The leg returned
 the **ASEAN Guide on AI Governance and Ethics** (early-stage), **Australia's National AI
 Plan** and Chief AI Officers, Singapore's financial-sector consultations, and Forrester's
@@ -1137,6 +1231,62 @@ twelve days, aligned to the Chinese national curriculum — and it is **`CC-BY-N
 the **inspectability** that lets a school answer a parent, not the model.
 
 ### LATAM
+
+🆕 **`p558` — `2026-10-30`: no new LATAM instrument, and no LATAM-origin address *in this pass's
+two sweeps*. 🔴 BUT THE STANDING PHRASE FOR THAT NULL IS WRONG, AND THIS SECTION DISPROVES IT —
+see `558-H` below.** The leg returned the UNESCO IESALC × UNU-IAS study (200
+institutions, 19 countries — 87 % using AI in ≥1 area, 74 % in teaching and learning, only 26 %
+with a formal AI strategy), the **Universidad de los Andes** count of **716** regulatory
+instruments across 23 countries with >80 % initiated since 2023, the UNESCO regional
+**Observatory** launched `14 Apr 2026` in Santiago, and its partner roster (**CAF**, **CENIA**,
+**Cetic.br/NIC.br**, **ECLAC**, **Fundación Ceibal**, **Fundación Santillana**, **Tecnológico de
+Monterrey**, **ProFuturo**, **Universidad del Desarrollo**, **IRCAI**) — 🔴 **every one already on
+this page.**
+
+🔵 **The nearest LATAM-origin supply candidate was examined and the inference refused:**
+[`luumlabs/aula`](https://github.com/luumlabs/aula) (`AGPL-3.0`, 1★, `2026-10-28`) — *aula* is
+"classroom" in Spanish and Portuguese, 🔴 **but the owner's location was not established, so no
+origin is claimed.** A Spanish-language repository name is not a LATAM origin, and this base has
+mis-attributed on weaker evidence before.
+
+#### 🔴 `558-H` — the standing LATAM-supply null is contradicted by this very section
+
+🔴 **The carried phrase reads:** *"No LATAM-origin supply address in any of five sweeps, Nth
+consecutive pass; **the nearest is `chamilo`'s BeezNest Latino SAC (Peru) copyright**, on a
+platform of 2008."* 🔴 **The second clause is false, and the evidence is a few paragraphs above
+it on this same page:**
+
+| address | grant | ★ | LATAM origin, as this page already states it |
+|---|---|---|---|
+| [`portabilis/i-educar`](https://github.com/portabilis/i-educar) | `GPL-2.0` | 🟢 **722** | 🟢 *"Brazil's largest free school-management system; born in **Itajaí (SC) municipal government**, on the **federal Public Software Portal** since 2008"* |
+| [`dsvi-b/corretor-enem`](https://github.com/dsvi-b/corretor-enem) | — | — | anchored to **ENEM**, Brazil's national exam |
+| [`GuilhermeScarpini/agente-bncc-professores`](https://github.com/GuilhermeScarpini/agente-bncc-professores) | `MIT` | 🔴 0 | anchored to **BNCC** competency codes, Brazil's national curriculum |
+
+🟢 **`i-educar` is a 722★ platform of municipal-government origin listed on Brazil's federal
+Public Software Portal.** 🔴 It is a stronger LATAM-origin claim than `chamilo`'s Peruvian
+*copyright line* by every measure this base uses, and it is **already carried on this page, in
+the LATAM child, in a table headed *"three of them are built for this region's languages and
+public sector"***.
+
+🔵 **What is actually true** is the narrow claim: **no LATAM-origin address appeared in this
+pass's sweeps** — which is a statement about a 3-day `created:>` window, not about the shelf.
+🔴 **Stated as *"the nearest is chamilo"*, it asserts a shelf-level absence that the shelf
+refutes**, and it has been repeated for nineteen consecutive passes.
+
+🔴 **Fifth measurement of `558-A`'s rule — *this base writes faster than it reconciles* — and the
+first on a *regional* claim rather than a licence cell.** The previous four were a stale verdict
+row (`557-C`), an unread register entry (`p555`), six gaps reaching no register (`p556`), and a
+rule violated in the commit that registered it (`558-A`). 🟢 This one is the most consequential
+for a client conversation: it understates Globant's LATAM starting position in the region the
+studio is most often engaged for.
+
+🔵 **Standing asymmetry, restated with the correction applied:** LATAM has the strongest
+*demand* evidence on this page — a first-hand multi-country adoption study with institutional
+denominators, which no other region here has — and *thin but non-zero* supply evidence —
+🔴 **not "none", which is what this page has been saying.** 🟢 For an engagement that means the
+LATAM opportunity is **build on a copyleft public-sector base** (`i-educar`, GPL-2.0, already
+inside Brazilian municipalities) rather than build from nothing, and the 87 %/26 % gap —
+adoption without strategy — is the thing being sold into.
 
 🔴 **Nothing new; every instrument returned was held.** The **UNU** working paper on AI
 implementation in higher education across Latin America and the Caribbean (~200
@@ -1461,6 +1611,18 @@ it dates from 2008. 🔴 **Informed gap, eighteenth consecutive pass: no LATAM-o
 surfaced in any of five supply sweeps.**
 
 ### Global
+
+🆕 **`p558` — `2026-10-30`: the Global bucket is where this pass's only new market finding sits,
+and it is a widening, not a figure.** 🔴 The AI-in-education market size disagrees about **the
+present** by **3.1×** — a 2026 base of **$11.4 B** (Grand View, as reported) against **$3.7 B**
+(Persistence), with IMARC at ~**$6.4 B for 2025** — from firms publishing in the same quarter.
+🟢 **So no total is usable as an engagement input and none should reach a client deck as a single
+number** (`558-F`).
+
+🟢 **What survives the spread is rank order, not magnitude:** every firm that breaks out segments
+puts **K-12 first at ~34 %** share for 2026. 🔵 Segment *mix* is therefore citable where segment
+*size* is not — and that is the form a studio actually needs, because it determines which buyer to
+build for, not how big a slide's number is.
 
 🟢 **Added at `p554`, and it is content rather than a shim: this block was missing a
 `Global` subsection, and `gate-region-headings` had been RED on exactly that since the

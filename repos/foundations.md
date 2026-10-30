@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p558` — `2026-10-30` — **🔴 A TIER-1 ROW'S GRANT HAS NEVER BEEN BYTE-READ AND IS **UNREACHABLE AT `main`**: `learningequality/kolibri` is carried as `MIT` *"carried, unchanged"*, its default branch is 🔴 **`develop`**, and `GET …/main/LICENSE` returns **404**. 🟢 The grant IS there — at `develop`. 🔴 NO ROW WAS ADDED OR PROMOTED THIS PASS, AND THE 3-DAY SUPPLY TAIL (0–2★) IS WHY.**
+
+🔵 **No foundation row changed tier this pass.** 🟢 The eight Tier-1 and the Tier-2 rows stand
+exactly as `p557` left them, including its three genuine movements (`odoo`, `openeducat_erp`,
+`inducer/relate`). 🔵 This section adds **one defect against an existing row** and **one closed
+transport gap**, and claims nothing else.
+
+### 🔴 `learningequality/kolibri` — the weakest-evidenced row on the Tier-1 shelf
+
+| field | shelf, before this pass | measured this pass |
+|---|---|---|
+| grant | 🟡 `MIT` — ***carried***, no bytes, no `sha256` | — |
+| default branch | *not recorded* | 🔴 **`develop`** (`git ls-remote --symref`, `HEAD` `6351dbafee75`) |
+| `GET …/kolibri/main/LICENSE` | *never attempted* | 🔴 **404** |
+| `GET …/kolibri/develop/LICENSE` | *never attempted* | 🟢 **200** |
+
+🔴 **So the one Tier-1 row carrying a bare *"carried, unchanged"* is also the row a main-only
+reader would have reported as having no licence.** 🔵 The two facts are not a coincidence: a row
+that is never re-probed is a row whose transport quirks are never discovered.
+
+🟢 **`MIT` is almost certainly right** — Kolibri is a long-established MIT project and no channel
+contradicts it. 🔴 **But it is the only Tier-1 row with zero first-hand grant evidence on this
+base**, and `BUILD-ON` is the tier where being wrong is most expensive. 🔵 **The byte read was
+not performed this pass** — the branch was resolved and the `200` confirmed at `develop`, which is
+the hard part, and the payload read is a one-call closure. Registered as `558-D`, with the
+closure condition written so the next pass cannot repeat this pass's omission.
+
+🔵 **Why the read was deferred rather than taken:** this pass's probe budget went to the two
+*unexplained* 404s (`558-B`), and a confirmed `200` at a resolved branch is a known-good address.
+🟢 Stated rather than quietly skipped, per `556-B`'s precedent — `p556` deferred exactly this kind
+of byte read, said so, and `p557` closed it.
+
+### 🟢 Branch audit of the Tier-1 shelf — a third of the sample is not `main`
+
+| address | default branch | consequence for a grant reader |
+|---|---|---|
+| [`oppia/oppia`](https://github.com/oppia/oppia) | 🔴 `develop` | 🟢 already flagged on this shelf |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 `develop` | 🔴 **was not flagged — `558-D`** |
+| [`inducer/relate`](https://github.com/inducer/relate) | 🟢 `main` | — |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🟢 `main` | 🔴 but the **filename** is `LICENSE.md`, not `LICENSE` |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `main` | — |
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | 🟢 `main` | — |
+
+🟢 **2 of 6 default to `develop`; 1 of 6 hides its grant behind an extension.** 🔴 **Three of six
+addresses — half the sample — defeat a naive `…/main/LICENSE` read.** 🔵 That is the measured base
+rate this base should assume, not the exception it has been treating it as.
+
+### 🔴 No new foundation surfaced, and the ERP leg returned the same two rows
+
+🔵 `open source platform education ERP CRM MIT Apache student information system` returned
+**OpenEduCat** (LGPL-3.0, on Odoo) and a dormant 2010 project (`CK-ERP`), and nothing permissive.
+🟢 **Second consecutive pass to produce this null**: there is no MIT/Apache education ERP at scale
+to route around `p557`'s `LINK-ONLY` grading. 🔵 The permissive system-of-record remains
+[`academico-sis/academico`](https://github.com/academico-sis/academico) (MIT, 410★), which is
+school management, not ERP, and is ~135× smaller than Odoo by stars.
+
 ## 🆕 `p557` — `2026-10-30` — **🟡 THE ERP TIER REOPENS, AND IT IS THE ONLY TIER THAT MOVED: Odoo (**55 430★**) and OpenEduCat are `LGPL-3.0-only` on grant bytes → `LINK-ONLY` → client-hosted delivery is available, where `p556` graded both `BLOCK`. 🟢 `inducer/relate` UPGRADED from README-prose to a read grant file. 🔵 AND NINE ROWS WERE RE-VERIFIED RATHER THAN DISCOVERED — stated because this section's draft claimed five of them as new, and they were already here.**
 
 🔵 **Every row below was read at `HEAD` this pass** — default branch resolved by

@@ -1,0 +1,9 @@
+# p558 2026-10-30 — transport + grant probe. bytes/sha256 over NEWLINE-STRIPPED body (printf '%s'), per 557-H(a).
+slug	default_branch	head_sha12	grant_path	http	bytes_nlstripped	sha256_12	note
+CaviraOSS/PageLM	main	228a36cd9169	LICENSE	404	-	-	plain LICENSE does not exist
+CaviraOSS/PageLM	main	228a36cd9169	LICENSE.md	200	8562	20a39a9c5993	"# PageLM Community License" — reproduces shelf figure exactly
+learningequality/kolibri	develop	6351dbafee75	LICENSE	404(main)/200(develop)	-	-	grant unreachable at main; reachable at develop
+HKUDS/DeepTutor	main	1ea7df155447	-	-	-	-	ls-remote only; shelf star/grant figures not re-read this pass
+oppia/oppia	develop	6b9292ddd297	-	-	-	-	default branch develop, already flagged on shelf
+inducer/relate	main	aca7c69cd4dd	-	-	-	-	ls-remote confirms main
+amosblomqvist/learnharness	main	dc4c398d5167	-	-	-	-	ls-remote confirms main

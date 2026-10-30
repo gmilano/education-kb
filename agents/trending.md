@@ -4,6 +4,97 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p558` — `2026-10-30` — **🔴 THE THREE-DAY TUTOR COHORT TOPS OUT AT **2★**: all 19 addresses created since `2026-10-27` under `topic:ai-tutor` sit at **0–2 stars**, so there is nothing to promote and the number says so. 🔴 AND `topic:edtech`'s FRESH TAIL IS **40 % SYNTHETIC** — 6 of 15, all MIT, all 0★, all "typed service", owner names of the form `Name+4digits`.**
+
+🔵 **Two sweeps, one call each** — `topic:` qualifiers cannot be OR'd on this API (`557-G`), so a
+*k*-topic sweep costs *k* calls. Full rows: [`../evidence/sweeps.2026-10-30-p558.tsv`](../evidence/sweeps.2026-10-30-p558.tsv).
+
+| sweep | `total_count` | read | 🔴 max ★ in cohort |
+|---|---|---|---|
+| `topic:ai-tutor created:>2026-10-27` | 19 | **19 / 19** | 🔴 **2** |
+| `topic:edtech created:>2026-10-27` | 85 | top **15** by stars | 🔴 **1** |
+
+🟢 **Nothing in either cohort clears any plausible shelf threshold**, and that is the finding. 🔵
+This base's lowest-starred carried row is ~350★; the entire three-day supply is two orders of
+magnitude below it.
+
+### 🔴 `topic:edtech`'s fresh tail is being seeded, and it bounds a standing rule
+
+🔴 **Six of the fifteen `topic:edtech` rows are one artefact wearing fifteen hats:**
+
+| address | ★ | grant | description shape |
+|---|---|---|---|
+| [`alexchen-20/edtech-monthly-spend-cap-…`](https://github.com/alexchen-20/edtech-monthly-spend-cap-spend-cap-edtech-python-a) | 0 | MIT | "Python course delivery service with … monthly hard cap" |
+| [`JethroRhodes8268/edtech-rtc-session-service`](https://github.com/JethroRhodes8268/edtech-rtc-session-service) | 0 | MIT | "A **typed** Node service for deadline-aware edtech RTC rooms" |
+| [`GriffinHayes7823/edtech-course-ab-cutover`](https://github.com/GriffinHayes7823/edtech-course-ab-cutover) | 0 | MIT | "A **typed** Python course delivery split with stable learner bucketing" |
+| [`KillianBerg5391/edtech-ab-assignment-service`](https://github.com/KillianBerg5391/edtech-ab-assignment-service) | 0 | MIT | "A **typed** course experiment service with stable learner bucketing" |
+| [`ElowenMorr8472/edtech-device-status-dashboard-…`](https://github.com/ElowenMorr8472/edtech-device-status-dashboard-device-dashboard-edtech-go-m) | 0 | MIT | "A small Go service that streams edtech device status" |
+| [`MarcoRossi7342/java-edtech-pdf-report-mailer`](https://github.com/MarcoRossi7342/java-edtech-pdf-report-mailer) | 0 | MIT | "Spring-style Java service that emails overdue course reports" |
+
+🔵 **The shared signature is four-fold and none of it is about education:** owner handle =
+`CapitalisedName` + **four digits**; repository name = keyword-stuffed slug, twice over in two
+cases (`spend-cap-spend-cap`, `device-dashboard-device-dashboard`); description opens *"A typed
+… service"*; MIT, 0★, created inside the same 3-day window. 🔴 **These are not education
+artefacts. They are `topic:edtech` being used as a distribution channel.**
+
+🔴 **This bounds `556-G`, which is one of this base's standing rules.** `556-G` measured
+topic-scoped sweeps at **77.8 %** (`topic:edtech stars:>800`) and **100 %** (`topic:ai-tutor
+stars:>200`) real-education yield against **30.8 %** for the keyword equivalent, and concluded
+*"sweep by topic first."* 🟢 **The rule holds — and its measurement was taken on a
+`stars:>`-filtered cohort.** 🔴 On the **unfiltered fresh tail** the same topic yields **60 %**
+(9/15). 🟢 **So the honest form of the rule is: topic-scoped sweeps beat keyword sweeps *on
+established cohorts*; on the fresh tail a `stars:>` floor is doing most of the work, and without
+one the topic yields **1.95×** the keyword rate — the **bottom** of `556-G`'s
+claimed 2–3× band rather than above it.** Registered as `558-C`.
+
+### 🔵 What the real rows in the cohort actually are, placed by origin
+
+🟢 **The three-day cohort is dominated by language learning, not STEM** — `adaptive-english-tutor`,
+`adaptive-english-lab`, `DevTalk` (workplace English), `gloryvocab` (TOEIC, AGPL-3.0),
+`german-course` (MIT, A1 with spaced repetition). 🔵 Four of the nine real `edtech` rows and five
+of the nineteen `ai-tutor` rows are language. 🔵 Consistent with `Trend 67`: the cheap, verifiable
+transform ships first.
+
+🟢 **Two are agent *skills*, not applications** — [`Cognifair/eml-skill`](https://github.com/Cognifair/eml-skill)
+(MIT, mastery-learning agent skill: prerequisite diagnostic → micro-explanation → Feynman
+restatement → two-item check) and [`SNSuperNova/teach-me`](https://github.com/SNSuperNova/teach-me)
+(MIT, one concept at a time with misconception checks), plus
+[`sahmoli/ai4education-skill`](https://github.com/sahmoli/ai4education-skill) (MIT, bilingual
+source-grounded reading feed). 🔵 The `book-to-skill` pattern continues: the unit of distribution
+is a skill file, not a product.
+
+🟢 **One is Moodle-native and that is the commercially interesting shape** —
+[`lum-earth/moodle-local_lumination`](https://github.com/lum-earth/moodle-local_lumination)
+(**GPL-3.0**, 0★): *"Lumination AI Course Generator for Moodle: generate a complete Moodle course
+from a PDF."* 🔵 0★ and three days old, so **no row is promoted**; recorded because it is the
+first address this base has seen that puts `Trend 67`'s content-transform **inside** the LMS the
+client already runs, as a `local_` plugin. 🟡 GPL-3.0 is Moodle's own grant, so the licence is not
+the obstacle it looks like — the plugin boundary is the delivery boundary.
+
+### 🔴 Informed non-results, stated so absence is not read as coverage
+
+🔴 **No LATAM-origin address in either of this pass's sweeps.** 🔵 **Scoped deliberately:** that
+is a claim about a 3-day `created:>` window, **not** about this base — the carried phrase *"no
+LATAM-origin supply address … the nearest is `chamilo`'s BeezNest Latino SAC (Peru)"* is
+🔴 **false**, and [`../intel/market.md`](../intel/market.md#-p558--2026-10-30) `558-H` shows why:
+[`portabilis/i-educar`](https://github.com/portabilis/i-educar) (GPL-2.0, **722★**, Itajaí (SC)
+municipal origin, on Brazil's federal Public Software Portal) is already on the shelf.
+🔵 The nearest *new* candidate this pass is [`luumlabs/aula`](https://github.com/luumlabs/aula)
+(AGPL-3.0, 1★) — *aula* is "classroom" in Spanish and Portuguese, but **the owner's location was
+not established and the inference is explicitly not drawn.** A Spanish-language repository name
+is not a LATAM origin.
+
+🟢 **An EMEA-origin, nationally-aligned address exists this pass, below threshold:**
+[`nzengi/dubbai`](https://github.com/nzengi/dubbai) — Turkish-language AI tutor, described as
+aligned to the **MEB** (Türkiye's Ministry of National Education) curriculum. 🔴 **0★, no grant
+field**, so it is not promoted. 🔵 Recorded because eighteen passes of *"no EMEA national
+instrument"* have been about the **demand** leg; this is a **supply** address built to a national
+curriculum, which is the thing the demand leg keeps implying should exist.
+
+🟢 **APAC-origin supply is present and unremarkable now** — `Francisewais/OnlineJudge-withAitutor`
+(MIT, Chinese), `hujm2023/rka` (MIT, Chinese 软考 systems-architect exam),
+`Cognifair/eml-skill` (MIT, Chinese). 🔵 Three of nineteen, none above 0★.
+
 ## 🆕 `p557` — `2026-10-30` — **🟢 THE WEEK'S NEW SUPPLY IS A **CONTENT-TRANSFORM** COHORT, NOT A TUTOR COHORT: four addresses created in October turn a source artefact into a lesson, and three of the four are MIT. 🔴 `topic:education` IS THE DILUTED SWEEP (9/25), NOT KEYWORD SEARCH — `556-G`'s RULE HOLDS BUT ITS AXIS WAS WRONG. 🟢 `DeepTutor` IS AT **51 633★**, 2.2× THE UPSTREAM LEDGER'S FIGURE.**
 
 ### 🟢 New this week — read first-hand, `created_at` within 27 days

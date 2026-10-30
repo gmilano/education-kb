@@ -4,6 +4,145 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p558` — `2026-10-30` — **🔴 `557-C` IS NOT CLOSED, AND IT RECURRED INSIDE THE PASS THAT REGISTERED IT: `p557` quoted the stale `PageLM` row, wrote *"amended in place"*, and appended a corrected **duplicate** instead — [line 293](#) of this file still reads plain `NOASSERTION`. 🟢 **FIXED IN PLACE THIS PASS**, after re-reading the grant independently. 🟢 AND THE MECHANISM IS BIGGER THAN THE BRANCH: `LICENSE` ALONE 404s ON A LIVE SHELF ROW — THE GRANT **FILENAME** IS A TRANSPORT VARIABLE TOO.**
+
+🔴 **The headline result of this pass is a null, and it is stated first.** Six WebSearch legs
+(global supply, GitHub trending, verticals, trends, and one per region) and two MCP topic sweeps
+produced **no new supply address and no new demand instrument**. 🟢 That is a *measurement*, not a
+shrug — the probes and counts are below, and `p558` would rather publish a quantified null than
+pad the shelf.
+
+🟢 **What ran:** `git ls-remote --symref` (**6/6** addresses, default branch + `HEAD` sha),
+`raw.githubusercontent.com` (**8 grant probes**, 2×200 / 6×404 — the 404s are the finding),
+MCP `search_repositories` (**2 topic sweeps**), WebSearch (**8 legs**).
+🔴 `WebFetch` → `digital-strategy.ec.europa.eu`: **`getaddrinfo ENOTFOUND`**.
+
+🔴 **Gate posture.** This base's own instruments were **not attempted** this pass: `557-A` records
+that `bash ingest/probe-grant.sh` and `python3 -I ingest/validate-pages.py` were both refused
+(`Code from External`) on this host class, and `555-F` records that a denial is not stable across
+sessions either. 🟢 Per `557-A`'s closure condition (a), **the probe is carried inline in this
+section as code** rather than referenced, and every check below was re-implemented this pass.
+
+```bash
+# p558 probe — default branch + HEAD sha, then grant bytes.
+# bytes/sha256 are over the NEWLINE-STRIPPED body (printf '%s'), per 557-H(a): 1 B under `wc -c`.
+# Filename variants are lowercased into a `seen` set before fetching, per 557-H(b): no duplicate rows.
+for slug in CaviraOSS/PageLM learningequality/kolibri oppia/oppia; do
+  sym=$(git ls-remote --symref "https://github.com/$slug" HEAD 2>/dev/null)
+  br=$(echo "$sym" | awk '/^ref:/{sub("refs/heads/","",$2); print $2}')
+  sha=$(echo "$sym" | awk '/HEAD$/{print substr($1,1,12)}')
+  seen=""
+  for n in LICENSE LICENSE.md LICENSE.txt LICENCE; do
+    key=$(echo "$n" | tr 'A-Z' 'a-z'); case " $seen " in *" $key "*) continue;; esac; seen="$seen $key"
+    out=$(curl -sS --max-time 25 -w '\n%{http_code}' \
+          "https://raw.githubusercontent.com/$slug/$br/$n")
+    code=$(printf '%s' "$out" | tail -1); body=$(printf '%s' "$out" | sed '$d')
+    [ "$code" = "200" ] && printf '%s@%s %s -> %s B %s\n' "$slug" "$br" "$n" \
+      "$(printf '%s' "$body" | wc -c)" "$(printf '%s' "$body" | sha256sum | cut -c1-12)"
+  done
+done
+```
+
+### 🔴 `Gap 557-C` — NOT CLOSED. The pass that registered the rule then broke it
+
+`557-C` says, in its own words: *"this base writes faster than it reconciles, and the top of a
+shelf goes stale beneath its own history … append-only is right for the trending shelves and
+**wrong for a verdict table**."*
+
+🟢 **`p557` diagnosed it correctly.** It quoted the defective row verbatim, cited the line where
+the grant had already been read, retracted its own false novelty claim, and registered the rule.
+🔴 **Then it wrote:** *"Amended in place, so the canonical rows now carry what the shelf already
+knew"* — and **it did not amend the row.** It appended a *second, corrected* table inside its own
+`p558`-adjacent section and left the original untouched.
+
+🔵 **Measured, not asserted:**
+
+| probe | result |
+|---|---|
+| `grep -n "PageLM" agents/top.md \| grep "NOASSERTION"` | 🔴 **3 hits** |
+| line 112 | 🟢 `p557`'s **blockquote** of the defect — legitimate, it is a quotation |
+| line 7 | 🟢 `p557`'s own section heading — incidental |
+| **line 293** | 🔴 **the actual row, still plain `NOASSERTION`** |
+
+🔵 **And line 293 *is* the row `p557` meant.** `p557` named *"lines 114–119"*; its own section
+occupies lines 7–184, so inserting ~178 lines above the row moves `114 → ~292`. The arithmetic
+lands on 293, and the row at 293 is character-for-character the row quoted at 112.
+
+🟢 **Fixed in place this pass, and not on `p557`'s authority.** The grant was re-read first:
+
+| address | grant path | bytes · `sha256/12` | title line, read |
+|---|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 `LICENSE` → **404** | — | plain `LICENSE` **does not exist** |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🟢 **`LICENSE.md`** → 200 | **8 562** · `20a39a9c5993` | `# PageLM Community License` |
+
+🟢 **8 562 B and `20a39a9c5993` reproduce this shelf's own prior figure exactly** — a second
+cross-pass reproducibility check on a grant payload, alongside OpenOLAT's. 🔵 So the shelf's read
+was right and only its *table* was wrong, which is precisely `557-C`'s claim.
+
+🔴 **Fourth measurement of the rule, and the sharpest form yet:** after `ACTION VV` unread for 313
+passes (`p555`), `p550`'s six gaps reaching no register (`p556`), and the stale row itself
+(`p557`) — **a pass can now register a rule and violate it in the same commit.** Registered as
+`558-A`.
+
+### 🟢 The grant **filename** is a transport variable, and this is new
+
+🔵 `556-C` established that the grant **branch** is a variable: neither Odoo nor OpenEduCat has a
+`main`/`master` default, and a main-only reader returns nothing that reads as *"no licence"*.
+🟢 **This pass adds the orthogonal axis, measured on two live shelf rows:**
+
+| row | branch axis | filename axis |
+|---|---|---|
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🟢 `main` — not the problem | 🔴 **`LICENSE` 404; grant is `LICENSE.md`** |
+| [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🔴 **default is `develop`** | 🟢 `LICENSE` — not the problem |
+
+🔴 **`LICENSE` at `main` returns `404` for *both* rows, for two entirely different reasons.** A
+reader that tries one path and reports *"no grant"* is wrong twice over, and its two failures are
+indistinguishable from each other and from a genuine absence. 🟢 **A grant read is therefore a
+2-D enumeration — branch × filename — and neither dimension can be assumed.** Registered as
+`558-B`.
+
+### 🟢 `Gap 557-B` — CLOSED. `git ls-remote` is the sixth transport, with its yield
+
+**Registered as:** *"Add it to the transport table with its measured yield, and state what it is
+the only transport for."*
+
+| transport | yield this pass | what it alone gives |
+|---|---|---|
+| `curl` → `api.github.com` | 🔴 **403** (unchanged, per `ACTION VV`) | — |
+| `curl` → `github.com` HTML | 🔴 **403** | — |
+| `gh api repos/...` | 🔴 **403** | — |
+| `gh api search/...` | 🔴 **403** | — |
+| MCP `search_repositories` | 🟢 **200** — 2 sweeps, 104 rows | stars, `spdx_id`, `created_at`, `pushed_at` at population scale |
+| 🟢 **`git ls-remote --symref`** | 🟢 **6 / 6 addresses** | 🟢 **the default branch and the `HEAD` sha — nothing else here yields either** |
+
+🟢 **Measured defaults:** `main` for `PageLM`, `DeepTutor`, `relate`, `learnharness`; 🔴 **`develop`
+for `oppia` *and* `kolibri`**. 🔵 `oppia`'s `develop` was already flagged on this shelf;
+**`kolibri`'s was not** — see [`../repos/foundations.md`](../repos/foundations.md#-p558--2026-10-30).
+
+🔵 **Why it is worth a table row rather than a footnote:** `ls-remote` is plain git over HTTPS, so
+it survives the exact 403 that removes four of the six transports, and it is the only one that can
+tell a grant reader *where to look* before it looks.
+
+### 🔴 Zero new agents, and the aggregator that looked like one was stale
+
+🔵 **Five addresses surfaced by this pass's WebSearch legs were `grep`-checked against this shelf
+before any of them was written up. All five were already here:**
+
+| surfaced address | already on shelf? |
+|---|---|
+| `HKUDS/DeepTutor` | 🔴 yes — and see below |
+| `Claw-ED` | 🔴 yes — `agents/top.md` ×3, `agents/trending.md` ×51, `repos/trending.md` ×13 |
+| `ai-digital-teacher` | 🔴 yes — `agents/trending.md` ×7, `repos/trending.md` ×7 |
+| `claudemy` | 🔴 yes — `agents/top.md` ×1, `agents/trending.md` ×20 |
+| `frametell` | 🔴 yes — `agents/trending.md` ×20, `repos/trending.md` ×8 |
+
+🟢 **The `DeepTutor` figure is the instructive one, and it runs the other way.** Two independent
+aggregator digests gave **`50 597★`** for `2026-10-30`. 🔴 **This shelf holds `51 608★`** (`p557`,
+first-hand). 🟢 **So the aggregator is not ahead of this base, it is ~1 000★ behind it** — and
+`p555`'s decision to refuse an aggregator's `~50 000★` *"for want of a first-hand channel"* is
+vindicated on the number as well as on the principle. 🔵 `DeepTutor`'s star count was **not
+re-read this pass**; the shelf's figure stands as `p557` left it and is not restated as fresh.
+
 ## 🆕 `p557` — `2026-10-30` — **🟢 `Gap 556-C` CLOSED AND IT MOVES A **55 430★** PLATFORM OUT OF `BLOCK`: Odoo and OpenEduCat are `LGPL-3.0-only` on grant bytes, so `LINK-ONLY`, so client-hosted delivery is available. 🟢 `556-B`, `556-E` AND `556-H` ALSO CLOSED. 🔴 AND THE PASS'S STRUCTURAL FINDING IS AGAINST THIS PAGE: **the canonical table at the top of this shelf is LESS INFORMED THAN THE SHELF'S OWN HISTORY** — PageLM's bespoke grant was read at `p~540` and line 115 still says plain `NOASSERTION`. 🔴 TWO OF THIS PASS'S OWN DRAFT FINDINGS WERE RETRACTED BEFORE PUBLICATION.**
 
 🔴 **Gate posture, stated first: this base's own instruments could not be run.**
@@ -290,7 +429,7 @@ because collapsing them loses the exact distinction the verdict exists to draw.
 | Repository | ★ | `spdx_id` | Why blocked |
 |---|---|---|---|
 | [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 🔴 **5 480** | `NOASSERTION` | **8th largest on the shelf.** 1 644 knowledge points, 2 403 prerequisite edges, 6 723 items — the richest K-12 curriculum graph found in any pass, behind a grant nobody can classify |
-| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **2 053** | `NOASSERTION` | open NotebookLM equivalent; quizzes, flashcards, notes, podcasts from study material |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 🔴 **2 053** | 🔴 **bespoke "PageLM Community License"** — `LICENSE.md`, **8 562 B** `20a39a9c5993`; non-commercial, redistribution *"strictly prohibited"*, revenue-share required before any commercial deployment → 🔴 **`BLOCK`**. 🟢 *Amended in place at `p558`; was plain `NOASSERTION`, which `p557` claimed to have fixed and did not (`558-A`)* | open NotebookLM equivalent; quizzes, flashcards, notes, podcasts from study material |
 | [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 931 | `NOASSERTION` | 165 pedagogy/assessment agent skills — the largest teacher-skill corpus on the shelf |
 | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 901 | `NOASSERTION` | the education ERP on Odoo; its own glossary says LGPLv3, the platform declines to confirm |
 | [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) | 586 | `NOASSERTION` | 🔴 also the stalest address on the shelf: **219 days** since a push |
