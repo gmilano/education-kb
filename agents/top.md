@@ -4,6 +4,106 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p553` — `2026-10-30` — **🟢 BOTH OF `p552`'S OWED ASKS CLOSED BY ONE COMMITTED INSTRUMENT — `552-B`'s PARAMETER BLOCK AND `552-D`'s `GRANT-ASSERTED-NOT-CARRIED` VERDICT. 🔴 AND THE INSTRUMENT CAUGHT **FOUR** DEFECTS IN ITSELF BEFORE PUBLICATION, **THREE OF THEM CREATED BY ITS OWN IMPROVEMENTS**. 🔴 THE GATE RAN FOR THE FIRST TIME IN TWELVE PASSES AND IS RED ON 20 OF 68 CHECKS — PRE-EXISTING, AND TWELVE PASSES OF DENIAL HAD BEEN HIDING IT. 🔴 GITHUB'S OWN LICENCE FIELD READS `NOASSERTION` FOR EXACTLY THE TWO GRANT SHAPES THE NEW VERDICTS WERE BUILT TO NAME.**
+
+🔴 **Gate posture, stated first and without softening: `make hooks` RAN, AND IT FAILED —
+48 of 68 gates green, 20 red.** 🟢 The *denial* run `p552` recorded as *"eleven denials in
+twelve passes"* has ended — the gate executed. 🔴 **But this pass is NOT gate-attested, and an
+earlier draft of this section claimed it was.** The claim came from reading `$?` after a
+pipe, which returns the exit status of `head`, not of `make`. 🟢 **The 20 red gates are not
+`p553`'s doing** — the identical red set was reproduced on a pristine tree with this pass's
+edits stashed, so twelve passes of denial had been concealing a gate that fails on its own.
+🔵 Registered as `Gap 553-G`. 🔵 Every claim below is additionally backed by an
+instrument committed to [`../ingest/grant-verdict.py`](../ingest/grant-verdict.py) and run
+with `python3 -I`, so a successor can re-read the same bytes rather than trust this prose.
+
+### 🟢 Both owed asks closed, by one instrument, against `p552`'s own hand reads
+
+`p552` left two asks on this page. Both are now answered in code, and both were
+**calibrated against the cases `p552` read by hand** before being pointed at anything new.
+
+| owed ask | what `p553` delivered | calibration case | result |
+|---|---|---|---|
+| 🟢 `552-D` — *"a `GRANT-ASSERTED-NOT-CARRIED` verdict distinct from `UNREAD`"* | `carried()` — a file must state an **operative clause**, not name a family | [`frappe/education`](https://github.com/frappe/education) | 🟢 `GRANT-ASSERTED-NOT-CARRIED` · `license.txt` **19 B** · `61408d3da518` |
+| 🟢 `552-B` — *"parse and carry the **Additional Use Grant** and the **Change Date**, not just the family name"* | `params()` — the BUSL/FSL parameter block, carried verbatim | [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 🟢 `NOT-SHIPPABLE-WITHOUT-COMMERCIAL-LICENCE` · AUG + Change Date + Change License + Licensor |
+
+🟢 **Two facts the parameter block carries that `p552`'s prose did not record**, both read
+first-hand from `main/LICENSE` (**4 539 B**, `c6c062719ada`): the Licensed Work is
+**`(c) 2026`**, so the four-year Change Date runs from a 2026 release and **Apache-2.0 does
+not reach this code before 2030**; and the licence names a **commercial-licensing contact**
+(`jzsun24@m.fudan.edu.cn`). 🔵 The second is the actionable one — `552-B` is a *priced* door,
+not a closed one, and the price has an address.
+
+### 🔴 Four defects, caught against this instrument's own runs, before publication
+
+🔴 **Three of the four were created by improvements, not by carelessness**, and that is the
+finding worth carrying forward.
+
+| id | the defect | how it was caught | status |
+|---|---|---|---|
+| 🔴 `553-A` | family matched over the **whole payload**, so GPL-3.0 read as **AGPL-3.0** — GPL-3.0 **s13 is titled *"Use with the GNU Affero General Public License"*** | [`frappe/erpnext`](https://github.com/frappe/erpnext) came back `AGPL-3.0` where `p552` hand-read **GPL-3.0**. `p552` was right | 🟢 fixed — family reads the **title block** only |
+| 🔴 `553-B` | `noncommercially` in **GPL-3.0 s6(d)** — a *permitted* mode of conveying — read as a non-commercial **restriction** | same row returned `NOT-SHIPPABLE-NONCOMMERCIAL-TERMS` for plain GPL | 🟢 fixed — exclusion scan **gated by OSI family** |
+| 🔴 `553-C` | `NOT-CARRIED` **false positive on a real grant**: no CC0 waiver verb was on the operative list, and the payload writes `"AS-IS"` where the list carried `as is` | the **only LATAM-placed artefact in four passes** was filed as a bare assertion | 🟢 fixed — waiver verbs added, hyphens and quotes normalised |
+| 🔴 `553-D` | the **new** `ABRIDGED` band's own false positive — a 545 B `NOTICE.txt` read as an abridged Apache grant beside a complete 11 358 B one | [`openedx/XBlock`](https://github.com/openedx/XBlock), a row already on these shelves | 🟢 fixed — abridgement resolved **over the union**, as the 542-H stub rule already did |
+
+🔴 **`553-A` is the one a successor must not lose.** `p543` removed a `head -c 4096` cap
+because it made a 35 KB grant measure 4 096 B. **Removing it was correct and it de-protected
+every whole-body keyword matcher in this base** — the cap had been acting as a title-block
+anchor that nobody had declared. [`probe-grant.sh`](../ingest/probe-grant.sh) gets `erpnext`
+right **by accident**: s13 of a 35 KB licence falls outside its 4 KB window. 🔵 Licences cite
+other licences — GPL s13 names AGPL, BUSL names Apache-2.0 as its *Change License* — so a
+full-payload family matcher is wrong by construction, not by bad luck.
+
+🟢 **And the sweep says the published shelves are clean.** Eight rows this base records as
+`AGPL` were re-read with the title-block matcher. 🟢 **All eight hold**: the six genuine
+AGPL-3.0 rows ([`openedx/openedx-platform`](https://github.com/openedx/openedx-platform),
+[`instructure/canvas-lms`](https://github.com/instructure/canvas-lms),
+[`frappe/lms`](https://github.com/frappe/lms), [`cjhenry/ourschool`](https://github.com/cjhenry/ourschool),
+[`xrandx/Student-Information-Management-System`](https://github.com/xrandx/Student-Information-Management-System),
+[`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious)) plus
+[`frappe/frappe`](https://github.com/frappe/frappe) (**MIT**, 1 118 B) and `openedx/XBlock`
+(**Apache-2.0**). 🔵 `553-A` was **latent and introduced by this pass**, not leaked into
+published data — stated because an unstated sweep looks exactly like no sweep.
+
+### 🟢 Promoted to the shelf — 1 row, and it is placed in the region this base is thinnest on
+
+| Agent | Repo | Licence (payload, read first-hand) | Stars | Region (origin) | What it does |
+|---|---|---|---|---|---|
+| 🆕 **Braiinz Education** | [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) | 🟢 **Apache-2.0** — `main/LICENSE` **11 356 B**, `8ea9ec00f1c8` | 🔴 **0** · 1 fork | 🟢 **EMEA** — *"aligned with French curriculum"*; agents named `Tuteur Socratique`, `Coach Pratique`, `Diagnostiqueur` | Three composed tutoring agents: Socratic questioning, project-based practice, and a diagnostician that builds a roadmap scheduled with **FSRS spaced repetition**. Python 3.12, delivered over Telegram |
+
+🔴 **Shelved with two flags, both stated rather than discovered later.** It is **`v0.1 alpha`
+at 0 stars** — a design, not an adoption signal. And it is **`Gap 550-B` in its purest
+form**: an Apache-2.0 grant whose runtime is a **paid Claude API key**, so the licence is
+free and the deployment is not. 🟢 **Why it still earns a row:** this base's EMEA supply leg
+has been the thinnest of the four, and this is a permissively granted, curriculum-*placed*
+artefact with a deliberate pedagogy — the FSRS scheduler and the Socratic/diagnostic split
+are reusable designs even where the code is not adopted.
+
+### 🔵 Confirmed, not promoted — the Apache claim on this base's largest row, read first-hand
+
+🔵 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) is **Apache-2.0, confirmed from
+the payload** — `main/LICENSE` **11 408 B**, `1ea7df155447`. 🔵 It stands at **51 506★ ·
+6 308 forks**, pushed `2026-10-30 14:15 UTC`. 🟢 **Worth recording because the prior basis
+was weaker than the row looked:** the Apache claim reaching these shelves came via a
+third-party listing. It is now read from the grant.
+
+### 🔴 Two rows measured and NOT promoted
+
+| Address | What it is | Verdict, first-hand | Why it is not a row |
+|---|---|---|---|
+| [`Naresh1401/education-tutor-agent`](https://github.com/Naresh1401/education-tutor-agent) | LangChain/LangGraph Socratic tutor, FastAPI + ChromaDB | 🔴 `UNRESOLVED-on-153-names` — **no grant file exists** | Live, **0★**, 34 KB. Reproduces `p552`'s *"live repositories with no licence file at all"* on a fourth address |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | Curated index of agent use cases incl. education | 🟢 **MIT** — `main/LICENSE` **1 070 B**, `9beeb721c2af` | **39 155★**, and it is a **channel, not a row** — dispositioned under `552-A`/`551-D`. Filed on [`../repos/trending.md`](../repos/trending.md#-p553--2026-10-30) |
+
+### 🔵 Channels measured this pass
+
+| channel | result |
+|---|---|
+| `raw.githubusercontent.com` | 🟢 **200** — every grant byte count and sha above was read here |
+| `git ls-remote --symref` | 🟢 **open** — every default branch above was **resolved**, not assumed |
+| **MCP github transport** | 🟢 **open for arbitrary repositories** — every star, fork and push timestamp above |
+| `api.github.com` (shell) | 🔴 **403/empty** — unchanged from `p552` |
+| `make hooks` | 🟡 **RAN** — first non-denial in twelve passes — and **FAILED 48/68**, with the same 20 red gates on a pristine tree (`553-G`) |
+
 ## 🆕 `p552` — `2026-10-30` — **🔴 A VERDICT BAND KEYED TO GLOBANT'S OWN DELIVERY MODEL: `Oriole-FDU/Wisepen` CALLS ITSELF OPEN SOURCE, IS BUSL-1.1, AND ITS EXCLUDED-USE CLAUSE NAMES "CONSULTING DELIVERABLE" IN SO MANY WORDS. 🟢 TWO MIT ROWS PROMOTED, BOTH READ FIRST-HAND. 🔴 ONE INSTRUMENT DEFECT CAUGHT AGAINST THIS PASS'S OWN FIRST RUN, AND ONE GRANT CLASS THIS BASE HAS NO VERDICT FOR.**
 
 🔴 **Gate posture, stated first and without softening: `make hooks` was DENIED**

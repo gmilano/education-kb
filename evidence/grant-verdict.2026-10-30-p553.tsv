@@ -1,0 +1,18 @@
+repo	live	default_branch	head_sha	grant_files	families	verdict	parameters
+braiinz94/braiinz-education	LIVE	main	8ea9ec00f1c8	LICENSE[11356B]	Apache-2.0	SHIPPABLE-PERMISSIVE	-
+juanmoisesd/ai-educational-impact-latin-america-dataset	LIVE	main	8593310e7f75	LICENSE[1259B:ABRIDGED[1259B-of-~7000B-canonical]]	CC0-1.0	SHIPPABLE-PERMISSIVE+GRANT-ABRIDGED[1259B-of-~7000B-canonical]	-
+Naresh1401/education-tutor-agent	LIVE	main	2cb9dcf317c1	-	-	UNRESOLVED-on-153-names	-
+GibbonEdu/core	LIVE	v31.0.00	a36b70a5a76e	LICENSE[35121B]	GPL-3.0	SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS	-
+HKUDS/DeepTutor	LIVE	main	1ea7df155447	LICENSE[11408B]	Apache-2.0	SHIPPABLE-PERMISSIVE	-
+ashishpatel26/500-AI-Agents-Projects	LIVE	main	9beeb721c2af	LICENSE[1070B]	MIT	SHIPPABLE-PERMISSIVE	-
+frappe/education	LIVE	develop	61408d3da518	license.txt[19B:ASSERTION-ONLY]	names no family	GRANT-ASSERTED-NOT-CARRIED	-
+Oriole-FDU/Wisepen	LIVE	main	c6c062719ada	LICENSE[4539B]	BUSL-1.1	NOT-SHIPPABLE-WITHOUT-COMMERCIAL-LICENCE	AUG=You may make non-production use of the Licensed Work. You may also make production use of the Licensed Work for personal, educational, academic research, or other non-commercial purposes, provided that such use does not include offering the Licensed Work, or any modified or derivative version of it, as part of a commercial product, paid service, hosted service, SaaS offering, consulting deliverable, or revenue-generating business activity. Any commercial or revenue-generating production use requires a separate commercial license from the Licensor. | CHANGE-DATE=Four years from the release date of each version of the Licensed Work. | CHANGE-LICENSE=Apache License, Version 2.0 For commercial licensing, please contact: [jzsun24@m.fudan.edu.cn]
+frappe/erpnext	LIVE	develop	12e44685431e	license.txt[35149B]	GPL-3.0	SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS	-
+openedx/openedx-platform	LIVE	master	0a2dfcbaefa2	LICENSE[35136B]	AGPL-3.0	SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS	-
+instructure/canvas-lms	LIVE	master	1c9f0bb8013e	LICENSE[34520B]	AGPL-3.0	SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS	-
+frappe/lms	LIVE	develop	cf5a078c2c64	license.txt[33893B]	AGPL-3.0	SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS	-
+frappe/frappe	LIVE	develop	f72e403c9c6c	LICENSE[1118B]	MIT	SHIPPABLE-PERMISSIVE	-
+cjhenry/ourschool	LIVE	main	520f31a537a6	LICENSE[34523B]	AGPL-3.0	SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS	-
+xrandx/Student-Information-Management-System	LIVE	master	3f4cc0784180	LICENSE[34523B]	AGPL-3.0	SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS	-
+UCL-INGI/INGInious	LIVE	main	6fe8a35d4b67	LICENSE[34764B]	AGPL-3.0	SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS	-
+openedx/XBlock	LIVE	master	4b3f5246f43f	LICENSE.TXT[11358B],NOTICE.txt[545B:ABRIDGED[545B-of-~11350B-canonical]]	Apache-2.0	SHIPPABLE-PERMISSIVE	-

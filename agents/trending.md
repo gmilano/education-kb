@@ -4,6 +4,85 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p553` — `2026-10-30` — **🔴 GITHUB'S OWN `license` FIELD RETURNS `NOASSERTION` FOR **BOTH** OF THIS PASS'S INTERESTING GRANTS — THE BUSL-1.1 ROW AND THE ABRIDGED-CC0 ROW — SO A `license:` SEARCH FILTER IS BLIND TO EXACTLY THE SHAPES `552-B` AND `552-D` WERE BUILT TO NAME. 🔴 THE ONE LATAM-PLACED ARTEFACT IN FOUR PASSES CARRIES **THREE DIFFERENT LICENCES ON THREE CHANNELS**. 🔴 THE GATE RAN FOR THE FIRST TIME IN TWELVE PASSES AND IS RED ON 20 OF 68 CHECKS, PRE-EXISTING.**
+
+🔴 **Gate posture, stated first: `make hooks` RAN** — ending the eleven-denials-in-twelve
+*denial* run `p552` recorded — **and it FAILED, 48 of 68 gates green.** 🟢 The identical red
+set reproduces on a pristine tree with this pass's edits stashed, so none of it is `p553`'s.
+🔵 `Gap 553-G`. 🔵 Instrument: [`../ingest/grant-verdict.py`](../ingest/grant-verdict.py),
+committed, `--names` self-documenting, run with `python3 -I`. 🔵 Evidence:
+[`../evidence/grant-verdict.2026-10-30-p553.tsv`](../evidence/grant-verdict.2026-10-30-p553.tsv),
+17 addresses.
+
+### 🔴 `Gap 553-F` — the platform's licence field is blind to the grants that decide a deliverable
+
+🔴 Seven addresses were read on **two** channels this pass: the grant payload over
+`raw.githubusercontent.com`, and GitHub's own `license.spdx_id` over the MCP transport.
+**They disagree on exactly the two rows that matter.**
+
+| Address | GitHub `license.spdx_id` | Payload, read first-hand | Agree? |
+|---|---|---|---|
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 🔴 **`NOASSERTION`** (*"Other"*) | 🔴 **BUSL-1.1**, with a `consulting deliverable` exclusion | 🔴 **no** |
+| [`juanmoisesd/ai-educational-impact-latin-america-dataset`](https://github.com/juanmoisesd/ai-educational-impact-latin-america-dataset) | 🔴 **`NOASSERTION`** (*"Other"*) | 🟡 **CC0-1.0, abridged** — 1 259 B of a ~7 000 B legal code | 🔴 **no** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | 🟢 Apache-2.0, **11 408 B** | 🟢 yes |
+| [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) | 🟢 `Apache-2.0` | 🟢 Apache-2.0, **11 356 B** | 🟢 yes |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🟢 `GPL-3.0` | 🟢 GPL-3.0, **35 121 B** | 🟢 yes |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🟢 `MIT` | 🟢 MIT, **1 070 B** | 🟢 yes |
+| [`Naresh1401/education-tutor-agent`](https://github.com/Naresh1401/education-tutor-agent) | 🔴 **field absent** | 🔴 no grant on **153 names** | 🟢 yes — both say *nothing* |
+
+🔴 **The mechanism makes this worse than a 2-of-7 error rate.** GitHub's detector matches
+against a canonical licence corpus; it returns `NOASSERTION` when it **cannot** match. So it
+fails in precisely two cases: a **non-OSI source-available** grant it does not carry, and an
+**abridged** grant that no longer matches its template. 🔴 Those are `552-B` and `553-C` —
+the two bands this base built verdicts for **because they decide whether Globant may ship**.
+🔵 A discovery pipeline that filters `license:apache-2.0` sees neither row; one that reads
+`NOASSERTION` as *"no licence"* throws away a priced commercial door and a public-domain
+dataset together.
+
+🟢 **Rule, stated so it binds a successor:** the platform licence field is usable as a
+**hint** and never as a **verdict or a discovery filter**. The payload decides.
+
+### 🔴 `Gap 553-E` — one artefact, three channels, three different licences
+
+🔴 [`juanmoisesd/ai-educational-impact-latin-america-dataset`](https://github.com/juanmoisesd/ai-educational-impact-latin-america-dataset)
+is the **only LATAM-placed artefact this base has found in four passes**, and it does not
+agree with itself.
+
+| channel, read first-hand | what it says |
+|---|---|
+| `main/LICENSE` (**1 259 B**, `8593310e7f75`) | 🟡 **CC0-1.0** — carries the waiver sentence, **abridged**: no s2/s3/s4 of the ~7 KB legal code |
+| `main/README.md`, its own metadata table | 🔴 **`License: CC BY 4.0`** |
+| GitHub `license.spdx_id` | 🔴 **`NOASSERTION`** |
+
+🔴 **CC0 and CC BY 4.0 are not interchangeable for a deliverable.** CC0 waives; CC BY
+**requires attribution**. A benchmark or training corpus assembled from this dataset carries
+an attribution obligation under one reading and none under the other, and **the repository
+asserts both**. 🔴 **And the abridgement is not cosmetic for this row's own region:** the
+clause the 1 259 B file omits includes CC0 **s3, the Public License Fallback** — the
+provision that makes CC0 operate where a copyright waiver is not recognised in law, which is
+most of LATAM's civil-law jurisdictions.
+
+🔵 **What the artefact actually is**, so it is not overclaimed: a **citation shell**. 54 KB,
+`HTML`, **0★**, last pushed `2026-04-08`; the data itself lives on Mendeley Data under
+**DOI `10.17632/vtc55dyc4n.1`**, published `2026-03-03`. The repository holds the citation,
+the ORCID and the licence contradiction — not the dataset.
+
+🔴 **So LATAM's supply blank is NOT broken this pass.** 🔵 Stated plainly because a row in a
+table would have looked like coverage: the region produced one addressable artefact, it is a
+pointer rather than an implementation, and its grant is unresolved across three channels.
+**Asks:** a `GRANT-DISAGREES-WITH-DOCUMENTATION` verdict — the payload, the project's own
+README and the platform field read as three sources, with disagreement reported rather than
+silently resolved in the payload's favour.
+
+### 🔵 What moved on the shelves this pass
+
+| Address | Move | Grant, read first-hand |
+|---|---|---|
+| [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) | 🟢 **promoted** to [`../agents/top.md`](../agents/top.md#-p553--2026-10-30) — EMEA, French curriculum | 🟢 Apache-2.0, **11 356 B** |
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🟢 **promoted** to [`../verticals/solutions.md`](../verticals/solutions.md#-p553--2026-10-30) | 🟢 GPL-3.0, **35 121 B** |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🔵 **confirmed** — Apache claim now read from the payload, not a listing | 🟢 Apache-2.0, **11 408 B** |
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🔵 filed as a **channel**, per `551-D` | 🟢 MIT, **1 070 B** |
+
 ## 🆕 `p552` — `2026-10-30` — **🟢 `Gap 551-D` ANSWERED, AND THE SINGLE NUMBER `p551` ANSWERED IT WITH INVERTS THE RANKING: GRADED ON NOVELTY ALONE, THE TWO BEST CHANNELS THIS PASS FOUND ARE A GENERAL-LLM LIST AND `sindresorhus/awesome`, AND NEITHER CARRIES A SINGLE EDUCATION-INDUSTRY ROW. 🔴 A NEW VERDICT BAND, AND IT IS THE FIRST ONE KEYED TO *GLOBANT'S OWN BUSINESS MODEL*: `Oriole-FDU/Wisepen` IS BUSL-1.1 AND ITS EXCLUDED-USE CLAUSE NAMES "CONSULTING DELIVERABLE". 🔴 ONE INSTRUMENT DEFECT CAUGHT AGAINST THIS PASS'S OWN FIRST RUN.**
 
 🔴 **Gate posture, stated first: `make hooks` was DENIED** (`Code from External`) before any

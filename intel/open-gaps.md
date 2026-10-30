@@ -4,6 +4,204 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p553` — `2026-10-30` — **🟢 TWO OWED ASKS CLOSED IN CODE (`552-B`, `552-D`) AND ONE RETIRED AS SUPERSEDED (`552-C`). 🔴 SEVEN REGISTERED (`553-A`…`553-G`), AND **FOUR OF THE SIX ARE DEFECTS IN THIS PASS'S OWN INSTRUMENT**, CAUGHT BEFORE PUBLICATION. 🔴 THE GATE RAN FOR THE FIRST TIME IN TWELVE PASSES AND FAILED 48/68 — A SEVENTH GAP, `553-G`, AND AN ERROR IN THIS PASS'S OWN FIRST DRAFT.**
+
+🔵 **Registration check run first, per `P605`.** The seven ids below are cited in this pass's
+sections on [`../agents/top.md`](../agents/top.md#-p553--2026-10-30),
+[`../agents/trending.md`](../agents/trending.md#-p553--2026-10-30),
+[`../repos/foundations.md`](../repos/foundations.md#-p553--2026-10-30),
+[`../repos/trending.md`](../repos/trending.md#-p553--2026-10-30),
+[`../verticals/solutions.md`](../verticals/solutions.md#-p553--2026-10-30),
+[`../intel/trends.md`](../intel/trends.md#-p553--2026-10-30),
+[`../intel/market.md`](../intel/market.md#-p553--2026-10-30) and
+[`../compose/patterns.md`](../compose/patterns.md#-p553--2026-10-30), and **all seven appear on
+this page below** — the failure mode `Gap 551-A` registered does not repeat this pass.
+
+🔴 **Gate posture: `make hooks` RAN — and FAILED, 48 of 68 gates green.** `p552` recorded
+*eleven denials in twelve passes*; the **denial** has ended, but this pass is **not
+gate-attested**. 🔵 Registered below as `Gap 553-G`, together with the reading error in this
+pass's own first draft that briefly claimed otherwise.
+
+### 🟢 `Gap 552-B` — CLOSED, and the closing read adds two facts the prose did not hold
+
+**Registered as:** *"for any non-OSI source-available grant, parse and carry the Additional
+Use Grant and the Change Date, not just the family name."*
+
+🟢 **Delivered:** `params()` in [`../ingest/grant-verdict.py`](../ingest/grant-verdict.py),
+which parses the BUSL/FSL `Key: value` parameter block across wrapped lines and carries it
+verbatim. Verdict for [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen):
+🔴 `NOT-SHIPPABLE-WITHOUT-COMMERCIAL-LICENCE`.
+
+🟢 **Two facts the block carries that `p552` did not record:** the Licensed Work is
+**`(c) 2026`**, so a four-year Change Date means **Apache-2.0 does not reach this code before
+2030**; and the licence names a commercial-licensing contact, **`jzsun24@m.fudan.edu.cn`**.
+🔵 `552-B` is therefore a **priced door, not a shut one**, and the price has an address.
+
+### 🟢 `Gap 552-D` — CLOSED
+
+**Registered as:** *"a `GRANT-ASSERTED-NOT-CARRIED` verdict distinct from `UNREAD`."*
+
+🟢 **Delivered:** `carried()` — a grant file must state an **operative clause**, not name a
+family. [`frappe/education`](https://github.com/frappe/education)'s 19 B `license.txt` now
+returns 🔴 `GRANT-ASSERTED-NOT-CARRIED`, which is distinct from both `UNRESOLVED` (nothing
+found on 153 names) and a dead channel.
+
+### 🔵 `Gap 552-C` — RETIRED AS SUPERSEDED, not closed by argument
+
+`552-C` recorded that an absence verdict is only as wide as the probe's name list, after
+`license.txt` was missing from a hand-written list. 🔵 The list is now **generated** — 153
+names from 44 bases with case variants — inside a committed instrument that prints it with
+`--names`. 🔵 **Retired rather than closed** because the underlying truth is permanent: any
+name list is finite. What changed is that the list is now inspectable and versioned, so the
+miss cannot recur *silently*.
+
+### 🔴 `Gap 553-A` — a full-payload family matcher is wrong by construction, because licences cite licences
+
+🔴 **Caught against this instrument's own first run.** [`frappe/erpnext`](https://github.com/frappe/erpnext)
+returned **AGPL-3.0** where `p552` hand-read **GPL-3.0**. `p552` was right. **GPL-3.0 section
+13 is titled** *Use with the GNU Affero General Public License* — so `AFFERO` appears inside
+a plain GPL payload.
+
+🔴 **The mechanism is the part worth carrying:** `p543` removed a `head -c 4096` cap because
+it made a 35 KB grant measure 4 096 B. **Removing it was correct, and it de-protected every
+whole-body keyword matcher in this base** — the cap had been acting as an undeclared
+title-block anchor. [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh) reads `erpnext`
+correctly **by accident**: s13 falls outside its 4 KB window.
+
+🟢 **Fixed** — family reads the **title block** (12 non-empty lines / 700 B) only.
+🟢 **Swept** — eight rows this base records as `AGPL` were re-read: all eight hold, so
+`553-A` was **latent and introduced by this pass**, not leaked into published data.
+**Asks:** that any future matcher declare its window, and that the base treat *cross-licence
+citation* as a known hazard rather than rediscovering it.
+
+### 🔴 `Gap 553-B` — a keyword scan cannot tell a permission from a prohibition
+
+🔴 The first run returned `NOT-SHIPPABLE-NONCOMMERCIAL-TERMS` for plain GPL-3.0. **GPL-3.0
+contains `noncommercially` exactly once — in s6(d), describing a *permitted* mode of
+conveying.** 🟢 **Fixed** — the exclusion scan is **gated by family**: an OSI-approved family
+is never scanned for non-commercial exclusions, because the OSD forbids them.
+🔴 **What remains open:** the scan still finds only exclusions that are **worded**. A
+source-available licence that shuts integrators out without using any of the scanned phrases
+reads `SOURCE-AVAILABLE-NO-WORDED-EXCLUSION` and is not safe. **Asks:** a second,
+non-keyword limb — or an explicit refusal to verdict non-OSI families without a human read.
+
+### 🔴 `Gap 553-C` — the symmetric error to `552-D`, and it struck the only LATAM row
+
+🔴 **Caught on the new verdict's first real use.**
+[`juanmoisesd/ai-educational-impact-latin-america-dataset`](https://github.com/juanmoisesd/ai-educational-impact-latin-america-dataset)
+carries a 1 259 B CC0 payload whose operative sentence is *Affirmer hereby ... waives,
+abandons, and surrenders all of Affirmer's Copyright and Related Rights*. **That is a grant.**
+`carried()` called it an assertion, for two reasons that are both typography and neither law:
+no CC0 **waiver** verb was on the operative list (it was written from permissive and copyleft
+grants, which *permit* where a dedication *waives*), and the payload writes `"AS-IS"` where
+the list carried `as is`.
+
+🔴 **Why it is registered and not silently fixed:** `552-D` asked for a verdict separating a
+19-byte claim from a dead channel, and got one. **The symmetric error — a real grant filed as
+a claim because its vocabulary is not on a hand-written list — is the same defect class with
+one sign flipped, and it is worse here, because `NOT-CARRIED` reads as a disqualification.**
+It would have struck **the only LATAM-placed artefact in four passes** off the shelf on a
+hyphen.
+
+🟢 **Fixed** on three limbs: waiver verbs added; hyphens and smart quotes normalised before
+matching; and a **third band**, `GRANT-ABRIDGED`, added — a grant can be **carried and still
+incomplete**. **Asks:** that every future verdict list its own false-positive surface in the
+function that computes it, as `carried()` now does.
+
+### 🔴 `Gap 553-D` — the new band's own false positive, 40 minutes after the band was added
+
+🔴 `GRANT-ABRIDGED` flagged [`openedx/XBlock`](https://github.com/openedx/XBlock) — a row
+already on these shelves carrying **complete** Apache-2.0 at `LICENSE.TXT` (**11 358 B**)
+*and* a 545 B `NOTICE.txt` that names the Apache License in its opening lines. The band read
+the NOTICE as an abridged grant.
+
+🔵 **The fix is the rule the module already applied to stubs (`542-H`) and failed to apply to
+its own new band: resolve over the UNION, not per file.** A family is abridged only if **no**
+file of that family reaches canonical size. 🔴 **The lesson is narrower and more useful than
+the fix:** writing the union rule in a docstring did not make it apply to the next band added
+in the same file. **Asks:** the union rule belongs in one shared helper that every band must
+call, not in prose each band is trusted to have read.
+
+### 🔴 `Gap 553-E` — one artefact, three channels, three different licences
+
+🔴 The LATAM row does not agree with itself: `main/LICENSE` carries **CC0-1.0 (abridged)**,
+its own `README.md` metadata table states **`License: CC BY 4.0`**, and GitHub's
+`license.spdx_id` returns **`NOASSERTION`**. 🔴 **CC0 and CC BY 4.0 are not
+interchangeable** — CC BY requires attribution, CC0 waives. A corpus built from this dataset
+carries an attribution obligation under one reading and none under the other, **and the
+repository asserts both.**
+
+🔵 Compounding it: the omitted CC0 clauses include **s3, the Public License Fallback** — the
+provision that makes CC0 operate where a bare waiver is not recognised in law, **which is
+most of LATAM's civil-law jurisdictions.** **Asks:** a `GRANT-DISAGREES-WITH-DOCUMENTATION`
+verdict that reads the payload, the project's own README and the platform field as three
+sources and **reports** disagreement rather than silently resolving it in the payload's
+favour.
+
+### 🔴 `Gap 553-F` — the platform's licence field is blind to exactly the grants that decide a deliverable
+
+🔴 Seven addresses read on two channels; GitHub's `license.spdx_id` disagrees with the payload
+on **two**, and both are the rows whose licence changes what Globant may do:
+`Oriole-FDU/Wisepen` (**BUSL-1.1** → `NOASSERTION`) and the LATAM dataset (**abridged CC0** →
+`NOASSERTION`).
+
+🔵 **Structural, not a bug.** The detector matches a canonical corpus and emits `NOASSERTION`
+when it cannot match — so it fails for **non-OSI source-available** grants and for
+**abridged** ones. 🔴 Those are `552-B` and `553-C`: the two bands this base built verdicts
+for *because* they decide shippability. **The platform is most silent where the stakes are
+highest.** **Asks:** a standing rule, enforced in `P608`, that the platform licence field is
+never used as a discovery filter or a verdict; and a measurement, over a larger sample than
+seven, of what share of education repositories reading `NOASSERTION` in fact carry a readable
+grant.
+
+### 🔴 `Gap 553-G` — the gate stopped being denied, and what it reported was that it fails
+
+🟢 **The denial run ended.** `p552` recorded `make hooks` as DENIED (`Code from External`) —
+*eleven denials in twelve passes*. On `p553` the gate **executed**.
+
+🔴 **And it failed: 48 of 68 gates green, 20 red.**
+
+| RED gate | RED gate | RED gate | RED gate |
+|---|---|---|---|
+| `gate-offline` | `recount` | `gate-enumeration` | `gate-tables` |
+| `gate-dates` | `gate-shelf-consistency` | `gate-region-headings` | `gate-fold-identity` |
+| `gate-alias-canonical` | `gate-author-key` | `gate-census-currency` | `gate-grant-path` |
+| `gate-census-union` | `gate-ledger` | `gate-i2-sweep-crosscheck` | `gate-union-currency` |
+| `gate-action-answered` | `gate-case-collision` | `gate-promotion-ledger` | `gate-cell-reproduction` |
+
+🟢 **None of the 20 is `p553`'s doing, and that is measured rather than asserted.** The gate
+was re-run on a **pristine tree** with this pass's nine page edits stashed: **identical exit
+status, identical 48/68, byte-identical RED set.** 🔵 So the red is **pre-existing**, and
+twelve passes of denial had been concealing a gate that fails on its own.
+
+🔴 **The second half of this gap is an error in this pass's own first draft, and it is
+recorded rather than quietly fixed.** `p553` initially wrote *"`make hooks` RAN AND PASSED —
+first gate-attested pass in twelve"* into **all nine pages**. The claim came from reading
+`$?` after a pipe:
+
+    make hooks 2>&1 | head -15; echo "exit: $?"     # reports head's status, not make's
+
+🔵 `head` exits `0` whether or not `make` failed, so a failing gate read as a passing one.
+🔴 **This is `Gap 546`'s defect class in a new place** — a figure produced by a measurement
+whose method was not written down beside it — and it is worse here than a wrong number,
+because *"gate-attested"* is the claim on which a successor would trust every other figure in
+the pass. 🟢 Corrected in all nine pages before commit; the correction is on the record
+because an unlogged correction is how the next pass inherits the same habit.
+
+**Asks, three, in priority order:**
+
+1. 🔴 **Never read a pipeline's `$?` for the status of a non-final command.** Use
+   `${PIPESTATUS[0]}`, or redirect to a file and check `make`'s own status. This belongs in
+   the hooks runner's own documentation, not in a pass's memory.
+2. 🔴 **A successor must not read `p552` and earlier as gate-attested.** Eleven of twelve
+   passes were DENIED, and the twelfth — this one — is RED. **No pass in this window is
+   attested.** The denial was never evidence that the gate would have passed.
+3. 🟡 **Triage the 20 red gates by whether they block a shelf claim or only a census figure.**
+   🔵 First read of the names suggests two classes: *ledger/census/union/recount* gates, which
+   concern this base's self-inventory, and *tables/dates/region-headings/case-collision*
+   gates, which concern published page shape. 🔴 The second class is the one that can make a
+   shelf row wrong for a reader, and it should be triaged first.
+
 ## 🆕 `p552` — `2026-10-30` — **🟢 `Gap 551-D` CLOSED WITH AN INSTRUMENT THAT CONTRADICTS THE SINGLE NUMBER IT WAS BUILT FROM. 🟢 `Gap 500-D`'s CHARACTERISATION REFUTED WITHOUT THE GAP CLOSING. 🔴 FIVE REGISTERED (`552-A`…`552-E`), ONE OF WHICH IS A NEW VERDICT BAND. 🔴 ONE DEFECT CAUGHT AGAINST THIS PASS'S OWN FIRST RUN. 🔴 ELEVENTH GATE DENIAL IN TWELVE PASSES.**
 
 🔵 **Registration check run first, per `P605`.** The five ids below are cited in this pass's

@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p553` — `2026-10-30` — **two recipes: the clearance gate that is now runnable rather than described, and the EMEA tutoring pilot this pass's one new agent row makes possible**
+
+🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the
+first time in twelve passes it was not DENIED — and it **FAILED, 48 of 68 gates green**.
+🟢 **None of the 20 red gates is this pass's doing**: the identical red set was reproduced on
+a pristine tree with `p553`'s edits stashed. 🔵 See `Gap 553-G`.
+
+### 🟢 `P608` — A grant gate that runs in CI, not a rule that lives in a pass's head (any region, 1 week)
+
+🔵 `p552`'s `P606` specified *two licence verdicts per row before a platform reaches a
+proposal*. 🔴 It specified them as a **procedure**. `p553` makes it an executable gate, which
+is the difference `Gap 551-A` is about: a rule announced in prose is not an enforced rule.
+
+**Wiring, concretely:**
+
+1. **Instrument** — [`../ingest/grant-verdict.py`](../ingest/grant-verdict.py), committed.
+   `python3 -I ingest/grant-verdict.py owner/repo ...` emits TSV:
+   `repo · live · default_branch · head_sha · grant_files · families · verdict · parameters`.
+2. **Input** — the candidate list for the engagement, one `owner/repo` per line, taken from
+   [`../verticals/solutions.md`](../verticals/solutions.md) and
+   [`../agents/top.md`](../agents/top.md) rather than from a search return.
+3. **Gate rule** — fail the build on `NOT-SHIPPABLE-WITHOUT-COMMERCIAL-LICENCE`,
+   `NOT-SHIPPABLE-NONCOMMERCIAL-TERMS`, `GRANT-ASSERTED-NOT-CARRIED` and
+   `UNRESOLVED-on-153-names`. 🔵 **Warn, do not fail**, on
+   `SHIPPABLE-PERMISSIVE+GRANT-ABRIDGED` — an abridged grant needs a human read, not a block.
+4. **Escalation path** — a `NOT-SHIPPABLE` row is **not** a dead row. The parameter block
+   carries the Licensor and, for `Oriole-FDU/Wisepen`, a commercial-licensing address. Route
+   it to legal with the AUG text and the Change Date attached, both already in the TSV.
+5. **Re-run cadence** — on every `head_sha` change. 🔴 A grant is not immutable: this pass
+   read `frappe/erpnext` at **two branches** carrying **different byte counts** of the same
+   family.
+
+🔴 **What this gate cannot do, stated in the recipe and not in a footnote:** it finds an
+exclusion only if the exclusion is **worded** (`553-B`'s limit), and a `SHIPPABLE` verdict
+means *no exclusion found in this text*, never *cleared by counsel*.
+
+### 🟢 `P609` — A French-curriculum tutoring pilot on a permissive stack (EMEA, 8–10 weeks)
+
+🟢 **Why EMEA, and why now:** this pass promoted
+[`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) —
+**Apache-2.0**, read first-hand — the first curriculum-*placed* permissive tutoring agent set
+on these shelves, and it is placed in the region whose supply leg has been thinnest.
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Pedagogy | [`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) | 🟢 Apache-2.0, **11 356 B** | Three separated agents — Socratic tutor, practice coach, diagnostician — plus **FSRS** scheduling. The *design* is the asset; it is `v0.1 alpha` at **0★** |
+| Student records | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🟡 GPL-3.0, **35 121 B** | Real SIS with markbook and attendance. Read **over its schema, out of process**, so the GPL boundary is never crossed |
+| Model runtime | an EU-hosted open-weights serving stack | 🟢 per that stack | 🔴 **Required substitution, not an optimisation** — see below |
+| Assessment design | [`Shunli-Wang/CPR-Coach`](https://github.com/Shunli-Wang/CPR-Coach) | 🟢 MIT (`p552`) | Only permissive worked example on these shelves of **automatic assessment of a procedure** — the shape of the diagnostic leg |
+
+🔴 **The substitution at layer 3 is the whole point of the recipe.** `braiinz-education` ships
+against a **paid Claude API key**, which puts it squarely in **`Gap 550-B`**: an Apache-2.0
+grant whose runtime is not free. 🔵 For an EMEA school engagement that is also a
+**jurisdictional** constraint and not only a cost one — the EU AI Act makes the school the
+**deployer**, and admissions, grading and proctoring uses sit in the **Annex III high-risk**
+class. 🟢 **So the pilot's first week of work is replacing the model client**, not building
+pedagogy: keep the three agents and the FSRS scheduler, swap the inference call.
+
+🔴 **Two constraints to put in the statement of work before week 1**, both from
+[`../intel/market.md`](../intel/market.md#emea): the **emotion-recognition ban in schools**
+has applied since **February 2025** — the diagnostician must infer from *answers*, never from
+affect (`Gap 551-C`); and **Article 4 AI-literacy duty** has applied since **February 2025**,
+so teacher-facing literacy material is **in scope, not an upsell**.
+
+🔵 **Weeks:** 1–2 runtime substitution and `P608` clearance gate · 3–5 Gibbon schema adapter,
+out of process · 6–8 diagnostic calibration against the French curriculum packs · 9–10
+teacher-literacy pack and Annex III documentation.
+
 ## 🆕 `p552` — `2026-10-30` — **two recipes: the clearance gate `Gap 552-B` forced, and the one that turns an ungranted EMNLP-Oral method into something a client can actually be sold**
 
 ### 🟢 `P606` — Two licence verdicts per row, before a platform reaches a proposal

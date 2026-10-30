@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p553` — `2026-10-30` — **🟢 `Trend 61`: THE PLATFORM'S OWN LICENCE METADATA IS BLIND TO EXACTLY THE GRANTS THAT DECIDE A DELIVERABLE — GITHUB RETURNS `NOASSERTION` FOR BOTH THE BUSL-1.1 ROW AND THE ABRIDGED-CC0 ROW. 🟢 `Trend 62`: GRANT **COMPLETENESS** IS A SECOND AXIS, INDEPENDENT OF GRANT **FAMILY**, AND IT SHOWS UP IN RESEARCH AND DATA REPOSITORIES.**
+
+🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the
+first time in twelve passes it was not DENIED — and it **FAILED, 48 of 68 gates green**.
+🟢 **None of the 20 red gates is this pass's doing**: the identical red set was reproduced on
+a pristine tree with `p553`'s edits stashed. 🔵 See `Gap 553-G`.
+
+### 🟢 `Trend 61` — the licence field fails precisely where the money is
+
+🔴 Seven addresses were read on two channels this pass: the grant payload, and GitHub's own
+`license.spdx_id`. 🔴 **They disagree on two of seven, and the two are the only rows whose
+licence changes what Globant may do.**
+
+| Address | GitHub `license.spdx_id` | Payload, first-hand | Consequence |
+|---|---|---|---|
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 🔴 `NOASSERTION` | 🔴 **BUSL-1.1**, excludes `consulting deliverable` | 🔴 A priced commercial door, invisible to a `license:` filter |
+| [`juanmoisesd/ai-educational-impact-latin-america-dataset`](https://github.com/juanmoisesd/ai-educational-impact-latin-america-dataset) | 🔴 `NOASSERTION` | 🟡 **CC0-1.0, abridged** | 🔴 A public-domain dedication, read as *no licence* |
+| five other rows read this pass | 🟢 matches | 🟢 matches | 🟢 agreement where the family is canonical and complete |
+
+🔵 **Why this is structural and not a bug.** GitHub matches against a canonical licence
+corpus and emits `NOASSERTION` when it **cannot** match. So it fails in exactly two cases: a
+**non-OSI source-available** grant it does not carry, and an **abridged** grant that no
+longer matches a template. 🔴 Those are `Gap 552-B` and `Gap 553-C` — the two bands this base
+built verdicts for *because* they decide shippability. **The platform is most silent where
+the stakes are highest.**
+
+🟢 **Prediction, stated so a later pass can falsify it:** as source-available licensing
+spreads in education (`Trend 60`), the share of education repositories reading `NOASSERTION`
+will **rise**, and that rise will be misread as a rise in unlicensed code. 🔵 It is not. It
+is a rise in licences the detector does not carry. **Rule:** the platform licence field is a
+hint, never a verdict and never a discovery filter.
+
+### 🟢 `Trend 62` — completeness is a second axis, and nothing on these shelves measured it
+
+🔵 This base has graded grants on **family** for 553 passes. `p553` adds the axis the LATAM
+row forced: **is the grant the whole legal code, or an excerpt of it?**
+
+| Address | Family | Bytes carried | Canonical | Reading |
+|---|---|---|---|---|
+| [`juanmoisesd/ai-educational-impact-latin-america-dataset`](https://github.com/juanmoisesd/ai-educational-impact-latin-america-dataset) | CC0-1.0 | **1 259 B** | ~7 000 B | 🟡 **abridged** — title, disclaimer, Statement of Purpose, waiver sentence; **no s2, s3 or s4** |
+| [`frappe/education`](https://github.com/frappe/education) | asserts GPL-3.0 | **19 B** | ~35 000 B | 🔴 **not carried at all** — a family name |
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | BUSL-1.1 | **4 539 B** | ~4 300 B | 🟢 complete, parameter block included |
+
+🔴 **Abridgement is not cosmetic, and the LATAM row shows why in its own region.** The clause
+the 1 259 B file drops includes CC0 **s3, the Public License Fallback** — the provision that
+makes CC0 operate where a bare copyright waiver is not recognised in law, **which is most of
+LATAM's civil-law jurisdictions.** 🔵 So the one artefact this base has placed in LATAM is
+missing the clause that would make its own dedication work there.
+
+🔵 **Why this is a trend and not an anecdote:** an abridged grant is what you get when a
+licence is **copy-pasted from a web page** rather than installed from a template — the
+Creative Commons *deed* summary rather than the legal code. 🟢 Research and dataset
+repositories are where this base finds it, because their authors are researchers publishing a
+DOI, not maintainers wiring a licence into a release process.
+
+### 🔵 Market figures returned this pass — spread recorded, not averaged
+
+| figure | source class | value |
+|---|---|---|
+| AI-in-education market, 2026 | secondary, vendor blog | *past* **$12.5 B** in 2026 |
+| AI-in-education market, 2026 | secondary, HolonIQ cited | **$12.3 B** globally by 2026 |
+
+🔵 **Both secondary; the spread is ~1.6 % and is recorded rather than averaged**, per this
+base's standing rule. 🔴 One widely repeated claim — *83 % of institutions plan AI teaching
+assistant deployment* — traces to a **secondary citation of an EDUCAUSE survey** that the
+search channel could not resolve to the primary instrument. **Not adopted.**
+
 ## 🆕 `p552` — `2026-10-30` — **🟢 `Trend 59`: ACADEMIC RELEASE PRACTICE, NOT DISCOVERY, IS THE BINDING CONSTRAINT ON EDUCATION-AI SUPPLY — 3 OF THIS PASS'S 5 BEST RESEARCH ARTEFACTS ARE LIVE, ON-DOMAIN AND UNGRANTED. 🟢 `Trend 60`: THE SOURCE-AVAILABLE LICENCE ARRIVES IN EDUCATION, AND IT EXCLUDES CONSULTANCIES BY NAME.**
 
 ### 🟢 `Trend 59` — the supply ceiling is a licensing ceiling

@@ -149,6 +149,36 @@ cleanest evidence yet that the figure is a tracker artefact**, not a count.
 🟡 **One adoption pair returned and is recorded as uncorroborated:** ~**90 %** of college
 students vs ~**54 %** of K-12 students using AI. 🔴 Single commercial source, no methodology
 given, and the gap is implausibly wide. **Not adopted** — named so the next pass recognises it.
+#### 🆕 `p553` — fourteenth consecutive demand saturation, and the retired figure returns a fifth time
+
+🔴 **Zero new demand claims.** The mandated leg `AI education North America 2026 adoption
+regulation players` returned nothing this base did not already hold.
+
+🔴 **The `134/31` figure, fifth sighting.** *134 AI-in-education bills across 31 states in
+2026* again surfaced as a top organic result. 🔵 **Retired at `p455`; return recorded at
+`p547`, `p551`, `p552` and now `p553`. Recorded, not adopted.** 🔵 Five independent sightings
+is evidence about the channel's citation habits, not about the number.
+
+🟡 **One instrument named that this base can act on, at committee stage, not law:** the
+**`K-12 AI Literacy and Readiness Act of 2026`**, advanced by the House Education and
+Workforce Committee. 🔵 Carried as *pending*, with the stage stated, because a committee
+advance is not an obligation.
+
+🔵 **Regime texture re-confirmed, nothing moved:** the governance-lags-usage shape holds —
+state-level action is cautious and transparency-oriented rather than adoption-mandating;
+**Maryland, Idaho, Oklahoma and Virginia** are reported to require both state guidance and
+district-level policy; **New York A 9190** would limit classroom AI to grade 9 and above with
+diagnostic and special-education exceptions; and the **DC** education office's non-mandatory
+`2026-27` policy bars AI from **grading, discipline, IEP decisions and teacher evaluations**.
+
+🟢 **The DC exclusion list is the commercially useful item on this leg**, and it is stable
+across passes: it marks out, in one document, the four uses a North American public-sector
+proposal should not build — which makes **teacher workload reduction and administrative
+automation** the defensible scope, not assessment.
+
+🔴 **Supply: none.** No North-America-placed permissively granted education artefact this
+pass.
+
 ### EMEA
 
 🟢 **The only region that produced claims this base did not already hold.** Both are
@@ -317,6 +347,44 @@ the superseded `2 August 2026` high-risk date** — the standing `ACTION SH` sig
 
 🔴 **Standing nil, repeated so it is not read as coverage:** UK, DACH, Nordics, the Gulf and
 Africa returned **no education-specific adoption figures** again.
+#### 🆕 `p553` — the first curriculum-placed permissive supply row this region has carried
+
+🟢 **Supply moved, and it moved the region that has been thinnest.**
+[`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) —
+**Apache-2.0**, read first-hand from `main/LICENSE` (**11 356 B**, `8ea9ec00f1c8`) — is
+placed in EMEA by its own content, not by inference: it is *aligned with French curriculum*,
+its agents are named `Tuteur Socratique`, `Coach Pratique` and `Diagnostiqueur`, and it ships
+French curriculum packs as JSON. 🔴 **Flagged on two counts:** `v0.1 alpha` at **0★ / 1 fork**,
+and its runtime is a **paid Claude API key** — `Gap 550-B` in its purest form.
+
+🟢 **Why it still changes this region's picture:** every prior EMEA supply observation on this
+page has been a platform or a benchmark. This is the first **permissively granted, curriculum-
+placed tutoring agent set**, and the reusable asset is the *design* — the Socratic /
+practice / diagnostic separation and the **FSRS** spaced-repetition scheduler — which
+survives a runtime swap. 🔵 Recipe: [`../compose/patterns.md`](../compose/patterns.md#-p553--2026-10-30) `P609`.
+
+🔴 **Zero new demand claims** — the mandated leg returned nothing this base did not hold. The
+EMEA demand leg is now blank for a **ninth** pass.
+
+🔵 **Regime dates re-confirmed on this pass's channel, none moved:**
+
+| instrument | date | status |
+|---|---|---|
+| **Digital Omnibus**, Reg. (EU) `2026/1744` | OJ **24 Jul 2026**, applied **27 Jul 2026** | 🔵 convergent again; `Gap 500-D` stays open — primary text still unread on four channels |
+| emotion-recognition ban in schools | applied **Feb 2025** | 🔵 re-confirmed — the basis of `Gap 551-C` |
+| Article 4 AI-literacy duty | applied **Feb 2025** | 🔵 re-confirmed |
+| chatbot transparency duties | **Aug 2026** | 🔵 re-confirmed |
+| admissions / grading / proctoring | **Annex III high-risk** | 🔵 re-confirmed |
+
+🟡 **One claim returned that this base does not hold, and it is single-sourced:** a
+Commission-and-OECD **AI literacy framework (`AILit`)** published **June 2026**. 🔴 Reported
+by one Substack piece and not corroborated on this pass's channel. **Not adopted; carried as
+a lead to verify.**
+
+🟢 **The deployer framing is the commercially useful item:** schools are **deployers** under
+the Act and remain accountable when they use third-party tools — which makes Annex III
+documentation and teacher AI-literacy material **in-scope deliverables**, not upsells.
+
 ### APAC
 
 🔴 **Nothing new, and the shape of the blank is worth stating precisely.** The leg returned
@@ -452,6 +520,42 @@ Plan** adopted **`2026-07-14`** under a framework law with no penalties; Singapo
 the **DPDP Act 2023**. 🟢 **Vietnam's `Decision 33/2026/QD-TTg`, naming education among six
 high-risk sectors, is held here and is the one APAC instrument that is structurally an EU
 Annex III analogue** — so `P490-2`'s conformity work transfers to it.
+#### 🆕 `p553` — the supply leg for a fourth consecutive pass, and still the only region whose regime asks for what it ships
+
+🔵 **Supply, carried over rather than new:** [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen)
+(Fudan, **122★ · 14 forks**, TypeScript) remains this region's standing supply observation,
+and `p553` closed the question `p552` opened about it — it is **BUSL-1.1**, its Additional Use
+Grant excludes **consulting deliverable** by name, its Change Date runs **four years from a
+`(c) 2026` release** (so Apache-2.0 does not reach it before **2030**), and it names a
+commercial-licensing contact. 🟢 **A priced door, not a shut one.** See
+[`../agents/top.md`](../agents/top.md#-p553--2026-10-30).
+
+🔴 **Zero new demand claims** — the mandated leg returned nothing this base did not hold.
+
+🔵 **Regime texture, re-confirmed and flagged where single-sourced:**
+
+| jurisdiction | instrument or programme | sourcing |
+|---|---|---|
+| **China** | AI-generated-content labelling, applicable **1 Sep 2025**; generative-AI services (2023), deep synthesis (2022), recommendation algorithms (2022) | 🟢 convergent across sources |
+| **China + UAE** | the only national **compulsory** AI curricula, from the **2025-26** school year | 🔴 **single secondary source — not adopted** |
+| **India** | AI and computational thinking as compulsory subjects **from Class 3, 2026-27**, via the IndiaAI Mission | 🟡 secondary; flagged |
+| **India** | IT Rules amendment — AI-generated content must carry prominent labels and provenance markers **from 20 Feb 2026** | 🟡 secondary; **contradicted inside the same search return** by a second source asserting *India: no AI law* |
+| **Japan** | promotion without penalties; voluntary guidelines and industry self-regulation | 🟢 convergent |
+
+🔴 **One contradiction recorded rather than resolved:** two sources in the same return say
+India has a **20 Feb 2026 labelling obligation** and that India has **no AI law**. 🔵 Both are
+carried; neither is adopted. **This is the `552-A`-adjacent failure one level up — a channel
+that returns a claim and its negation and ranks both highly.**
+
+🔵 **Public-attitude figures returned (Ipsos Education Monitor 2026, support for banning AI in
+schools):** India **26 %**, Thailand **25 %**, Singapore **28 %**, Japan **29 %**, Malaysia
+**29 %**. 🔵 Recorded as a *spread across one instrument*, not averaged.
+
+🟢 **Commercially useful shape:** APAC is the only region whose regime (mandatory curricula,
+content labelling) creates **demand for the artefact class the region also supplies** —
+university-origin teaching platforms. 🔴 And it is the second consecutive pass where that
+supply arrives with a licence problem attached.
+
 ### LATAM
 
 🔴 **Nothing new; every instrument returned was held.** The **UNU** working paper on AI
@@ -615,6 +719,97 @@ studied do not teach early AI adoption in schools. 🟢 UNESCO's **regional AI-i
 observatory** (launched April 2026, with CAF, CENIA, Cetic.br, Ceibal, Fundación Santillana,
 Tecnológico de Monterrey, ProFuturo) is the region's convening body and the natural
 counterpart for a governance offer.
+#### 🆕 `p553` — zero supply for a fourth pass, and the one candidate fails on its own licence
+
+🔴 **The supply blank stands, and it is written down rather than filled.** `p553` found
+exactly one LATAM-*placed* addressable artefact,
+[`juanmoisesd/ai-educational-impact-latin-america-dataset`](https://github.com/juanmoisesd/ai-educational-impact-latin-america-dataset),
+and it fails three tests:
+
+| test | result |
+|---|---|
+| an implementation? | 🔴 **no** — 54 KB citation shell; the data lives on Mendeley Data, DOI `10.17632/vtc55dyc4n.1`, published `2026-03-03` |
+| grant resolved? | 🔴 **no** — `LICENSE` carries **CC0-1.0 abridged** (1 259 B of ~7 000 B), `README` states **CC BY 4.0**, GitHub reads **`NOASSERTION`** — `Gap 553-E` |
+| adoption? | 🔴 **0★ / 0 forks**, last pushed `2026-04-08` |
+
+🔴 **And the abridgement bites this region specifically.** The clauses the 1 259 B file omits
+include CC0 **s3, the Public License Fallback** — the provision that makes CC0 operate where a
+bare copyright waiver is **not recognised in law**, which is the position in most of LATAM's
+civil-law jurisdictions. 🔵 The one artefact placed in LATAM is missing the clause that would
+make its own dedication work there.
+
+🔴 **Zero new demand claims** — the mandated leg returned nothing this base did not hold. The
+LATAM demand leg is blank for a **third** pass, and supply for a **fourth**.
+
+🔵 **The demand picture this base already holds, re-confirmed on this pass's channel:**
+teacher AI use from **TALIS 2024** — Brazil **56 %**, Chile **55 %**, Colombia **53 %**,
+Costa Rica **52 %**, against an OECD average of **36 %**; **Cetic.br** — **53 %** of school
+administrators use AI while only **22 %** report school guidelines; **UNESCO IESALC** —
+**87 %** of regional universities use AI, **26 %** have a formal strategy, **9 %** evaluate
+implementation.
+
+🟢 **The governance gap *is* the whole opportunity, and it is now triangulated by three
+independent instruments** (TALIS, Cetic.br, IESALC) all showing the same shape: adoption far
+ahead of policy. 🔵 That is the most durable commercial finding on this page — an AI
+**governance and evaluation** engagement is better supported by evidence in LATAM than an AI
+**deployment** engagement.
+
+🔵 **Institutional movement carried as context, not as demand:** UNESCO's regional
+**Observatory on AI in Education for LAC** launched **14 Apr 2026** (advisory council
+including the OECD and the OEI), with a **Mexico pilot from August 2026** co-building centres
+of excellence with **CONALEP** and **DGETI**; and **Google.org** committed **$4.6 M** with the
+Raspberry Pi Foundation to scale *Experience AI* across nine countries including Brazil and
+Mexico, targeting **1.25 M students by 2028**. 🔵 **HolonIQ's 2026 LATAM EdTech 100** records
+Brazil as nearly half the cohort, naming **Teachy** (AI lesson preparation, expanded into
+Asia) and Mexico's **Ginia** (AI-driven employability). 🔴 **None of these is open source**, so
+none becomes a shelf row.
+
+## 🆕 `p553` — `2026-10-30` — **🔴 FOURTEENTH CONSECUTIVE DEMAND SATURATION. 🔴 THE RETIRED `134/31` FIGURE RETURNED A **FIFTH** TIME AND IS STILL NOT ADOPTED. 🟢 EMEA GAINS ITS FIRST CURRICULUM-PLACED PERMISSIVE SUPPLY ROW. 🔴 LATAM'S SUPPLY BLANK IS **NOT** BROKEN — THE ONE ARTEFACT FOUND IS A CITATION SHELL WHOSE LICENCE CONTRADICTS ITSELF ON THREE CHANNELS.**
+
+🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the
+first time in twelve passes it was not DENIED — and it **FAILED, 48 of 68 gates green**.
+🟢 **None of the 20 red gates is this pass's doing**: the identical red set was reproduced on
+a pristine tree with `p553`'s edits stashed. 🔵 See `Gap 553-G`.
+
+### 🔴 The four mandated regional legs, graded on the comparable field `Gap 549-F` installed
+
+| region | new demand claim this base did not hold | new supply | regime movement |
+|---|---|---|---|
+| North America | 🔴 **none** — fourteenth consecutive saturation | 🔴 none | 🟡 one instrument named (`K-12 AI Literacy and Readiness Act of 2026`, committee stage) |
+| EMEA | 🔴 **none** | 🟢 **one** — `braiinz-education`, Apache-2.0, French curriculum | 🔵 dates re-confirmed, nothing moved |
+| APAC | 🔴 **none** | 🟡 one, carried over — `Wisepen` (BUSL-1.1) | 🔵 unchanged |
+| LATAM | 🔴 **none** | 🔴 **none that survives reading** — see below | 🔴 still no education-specific instrument found |
+
+🔴 **The retired figure, fifth sighting.** The NA leg again returned *134 AI-in-education
+bills across 31 states in 2026* as a top organic result. 🔵 **This base retired that figure at
+`p455` and `p547`, `p551` and `p552` each recorded its return. It is recorded, not adopted,
+for a fifth time.** 🔵 Recording the sighting rather than dropping it is deliberate: a figure
+that keeps resurfacing across independent channels is evidence about the *channel*, not about
+the number.
+
+### 🔴 Why LATAM's blank stands, stated rather than filled with a row
+
+🔵 The LATAM supply leg has been blank for three passes. `p553` found exactly one
+LATAM-*placed* addressable artefact —
+[`juanmoisesd/ai-educational-impact-latin-america-dataset`](https://github.com/juanmoisesd/ai-educational-impact-latin-america-dataset)
+— and it does not clear the bar:
+
+| test | result |
+|---|---|
+| is it an implementation? | 🔴 **no** — 54 KB citation shell; the data lives on Mendeley Data, DOI `10.17632/vtc55dyc4n.1` |
+| is its grant resolved? | 🔴 **no** — `LICENSE` says CC0-1.0 (abridged), `README` says CC BY 4.0, GitHub says `NOASSERTION` (`553-E`) |
+| adoption signal? | 🔴 **0★**, last pushed `2026-04-08` |
+
+🔴 **So: zero LATAM supply for a fourth consecutive pass.** 🔵 Written down explicitly because
+a table row would have looked exactly like coverage, and an informed blank is a finding.
+
+### 🔵 Market figures returned this pass — spread recorded, not averaged
+
+🔵 AI-in-education market 2026: **$12.5 B** (*past* that milestone, secondary vendor source)
+against **$12.3 B** (HolonIQ, cited secondarily) — a ~1.6 % spread, **recorded, not
+averaged**. 🔴 The repeated *83 % of institutions plan AI teaching-assistant deployment* claim
+resolves only to a secondary citation of an EDUCAUSE survey and is **not adopted**.
+
 ## 🆕 `p552` — `2026-10-30` — **🟢 `Gap 500-D`'s CHARACTERISATION REFUTED WITHOUT THE GAP BEING CLOSED: THE OMNIBUS DATES ARE CONVERGENT ACROSS NINE ORGANISATIONS INCLUDING FOUR INTERNATIONAL LAW FIRMS, AND THE PRIMARY TEXT IS STILL UNREAD ON FOUR CHANNELS. 🔴 THIRTEENTH CONSECUTIVE DEMAND SATURATION. 🔴 THE RETIRED `134/31` FIGURE RETURNED A FOURTH TIME, THIS TIME BESIDE A SECOND TRACKER THAT CONTRADICTS IT INSIDE THE SAME SEARCH RETURN.**
 
 ### 🔴 The four legs, graded per region

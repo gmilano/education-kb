@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p553` — `2026-10-30` — **🟢 ONE REAL SCHOOL-MANAGEMENT PLATFORM ADDED WITH ITS GRANT READ FROM THE PAYLOAD — AND ITS DEFAULT BRANCH IS `v31.0.00`, A SIXTH INSTANCE OF THE BRANCH-ASSUMPTION CLASS `509`/`516` REGISTERED. 🟢 THE DEPLOY-VS-RESELL LINE NOW CARRIES A MACHINE-CHECKED VERDICT PER ROW.**
+
+🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the
+first time in twelve passes it was not DENIED — and it **FAILED, 48 of 68 gates green**.
+🟢 **None of the 20 red gates is this pass's doing**: the identical red set was reproduced on
+a pristine tree with `p553`'s edits stashed. 🔵 See `Gap 553-G`.
+
+### 🟢 Added to the vertical shelf
+
+| Platform | Repo | Grant (payload, first-hand) | Stars | Region | What it is, and where the AI goes |
+|---|---|---|---|---|---|
+| 🆕 **Gibbon** | [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🟡 **GPL-3.0** — `v31.0.00/LICENSE` **35 121 B**, `a36b70a5a76e` | **635** · 427 forks | 🟢 **Global** — Hong Kong origin, international-school install base | Mature PHP/MySQL school management platform: timetabling, attendance, markbook, student records, parent portal. Live — pushed `2026-10-30`, first commit `2013`. 🔵 The AI layer belongs **beside** it, reading its markbook and attendance tables over its own schema, never inside the GPL-3.0 tree |
+
+🔴 **Its default branch is `v31.0.00`** — not `main`, not `master`. 🔵 Resolved with
+`git ls-remote --symref`, never assumed. **This is a sixth instance of the defect class
+`p509` found and `p516` registered**, and it is why every byte count on these shelves is
+taken at a resolved branch: a probe that assumes `main` reports this platform as carrying
+**no licence at all**.
+
+### 🔵 The deploy-vs-resell line, now per-row and machine-checked
+
+🔵 `p552` drew this line in prose. 🟢 `p553` attaches a verdict to each row, read from the
+payload by [`../ingest/grant-verdict.py`](../ingest/grant-verdict.py).
+
+| Platform | Family | Verdict | What it means for a client engagement |
+|---|---|---|---|
+| [`GibbonEdu/core`](https://github.com/GibbonEdu/core) | 🟡 GPL-3.0 | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` | Deploy and customise for the client freely; derivative modules distributed to them carry GPL-3.0. Keep proprietary AI services **out of process** |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | 🟡 GPL-3.0 | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` | Same shape. 🔵 Branch is `develop`; grant is **35 149 B** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | 🟡 AGPL-3.0 | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` | 🔴 AGPL reaches **network use** — a hosted deliverable triggers source provision to its users |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🟡 AGPL-3.0 | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` | 🔴 Same network-use reach |
+| [`Oriole-FDU/Wisepen`](https://github.com/Oriole-FDU/Wisepen) | 🔴 BUSL-1.1 | 🔴 `NOT-SHIPPABLE-WITHOUT-COMMERCIAL-LICENCE` | 🔴 The Additional Use Grant names **consulting deliverable** as an excluded use. 🟢 A priced door, not a shut one: `jzsun24@m.fudan.edu.cn`; Change Date is **four years from a `(c) 2026` release**, so Apache-2.0 does not reach this code before **2030** |
+| [`frappe/education`](https://github.com/frappe/education) | 🔴 asserts GPL-3.0 | 🔴 `GRANT-ASSERTED-NOT-CARRIED` | 🔴 Its `license.txt` is **19 B** — a family name and nothing else. Obtain a written grant before it reaches a proposal |
+
 ## 🆕 `p552` — `2026-10-30` — **🟢 THE VERTICAL SHELF GETS A LICENCE COLUMN IT CAN DEFEND: FOUR PLATFORM GRANTS READ FROM THE PAYLOAD, AND THE DEPLOY-VS-RESELL LINE DRAWN EXPLICITLY. 🔴 THE APACHE-2.0 OPTION ON OFFER DOES NOT RESOLVE.**
 
 🔵 This page's job is the platforms a client already runs, which an AI layer is built *on top

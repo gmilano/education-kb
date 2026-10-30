@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p553` — `2026-10-30` — **🟢 A 39 155★ CHANNEL ADDED WITH ITS DISPOSITION DECIDED FIRST, PER `551-D`'s REPLACEMENT RULE — FILED AS A CHANNEL, NOT PADDED ONTO A SHELF AS ROWS. 🔴 THE MANDATED TRENDING QUERY RETURNED ONE ON-DOMAIN REPOSITORY AND THIS BASE ALREADY HELD IT. 🔴 ITS REPORTING CHANNEL DISAGREES WITH ITSELF BY 4 600 STARS ON ONE DAY.**
+
+🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the
+first time in twelve passes it was not DENIED — and it **FAILED, 48 of 68 gates green**.
+🟢 **None of the 20 red gates is this pass's doing**: the identical red set was reproduced on
+a pristine tree with `p553`'s edits stashed. 🔵 See `Gap 553-G`.
+
+### 🔴 The mandated trending query, and what it actually yielded
+
+🔴 `github trending education AI 2026` returned, as its only on-domain education row,
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) — **already on these shelves**.
+🔵 Its figures moved materially and are re-read first-hand: **51 506★ · 6 308 forks**, pushed
+`2026-10-30 14:15 UTC`, Apache-2.0 confirmed from `main/LICENSE` (**11 408 B**, `1ea7df155447`).
+
+🔴 **The channel reporting it is itself the finding.** The top results were
+**auto-generated daily `AI Open Source Trends` issues**, mirrored across at least five
+unrelated repositories (`agents-radar` under three different owners, `news-radar`), and their
+star counts **disagree with each other for the same repository on the same day**:
+
+| source, same repository | date | stars reported |
+|---|---|---|
+| `agents-radar` issue (one owner) | `2026-10-28` | ~**46 000** |
+| `news-radar` / `agents-radar` issues | `2026-10-30` | **50 597** |
+| MCP transport, read first-hand this pass | `2026-10-30 16:13 UTC` | **51 506** |
+
+🔵 A **4 600-star spread on one day** across mirrors of one generator. 🔴 `github.com/trending`
+itself remains **403** from this session, so the ranked-discovery limb of `T148` stays open
+and these mirrors remain the only trending channel — **usable for discovery, never for a
+figure.**
+
+### 🟢 One channel promoted, dispositioned before any row was lifted from it
+
+| Channel | Grant, read first-hand | Stars | Disposition |
+|---|---|---|---|
+| [`ashishpatel26/500-AI-Agents-Projects`](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🟢 **MIT** — `main/LICENSE` **1 070 B**, `9beeb721c2af` | **39 155** · 7 034 forks | 🔵 **channel, not rows** — education is one of ~10 industry sections; last pushed `2026-07-27` |
+
+🔵 **Dispositioned under `551-D`'s replacement rule** — *grade a channel on fit rate, never on
+an absolute count, and read the matches before promoting the channel.* 🔴 At **39 155★** this
+is exactly the shape `552-A` warned about: a large general index whose absolute in-domain
+count looks impressive and whose fit rate is low. 🔵 Recorded as a channel to re-harvest, and
+**no row was lifted from it onto a shelf unread.**
+
+### 🔴 Two addresses read and left off the shelves
+
+| Address | Read | Why it is not promoted |
+|---|---|---|
+| [`Naresh1401/education-tutor-agent`](https://github.com/Naresh1401/education-tutor-agent) | 🔴 `UNRESOLVED-on-153-names` · `2cb9dcf317c1` | Live, **0★**, 34 KB, **no grant file at all** — a fourth instance of `p552`'s *live repositories with no licence* measurement |
+| [`juanmoisesd/ai-educational-impact-latin-america-dataset`](https://github.com/juanmoisesd/ai-educational-impact-latin-america-dataset) | 🟡 CC0-1.0 **abridged**, 1 259 B · `8593310e7f75` | Citation shell, not an implementation; its licence contradicts itself across three channels — `553-E` |
+
 ## 🆕 `p552` — `2026-10-30` — **🔴 THE CURATED-LIST CHANNEL `p551` RANKED FIRST YIELDS **1 USABLE OF 5**: ONE MIT GRANT, THREE LIVE REPOSITORIES WITH NO LICENCE FILE AT ALL, AND ONE DEAD CITATION. 🟢 THAT REPRODUCES `p547`'S "1 USABLE OF 6" ON A DIFFERENT CHANNEL AND A DIFFERENT PASS.**
 
 🔵 `p551` measured the curated-list channel on **novelty** and it won 9-to-0 against the

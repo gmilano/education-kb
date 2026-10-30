@@ -4,6 +4,45 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p553` — `2026-10-30` — **🟢 THE FOUNDATIONS SHELF GETS A SHIPPABILITY VERDICT IT CAN DEFEND: 17 ADDRESSES RE-READ FROM THE PAYLOAD WITH A COMMITTED INSTRUMENT, AND THE EIGHT `AGPL`-RECORDED ROWS ALL HOLD. 🔴 THE ONE APACHE-2.0 ROW THAT LOOKED ABRIDGED WAS THE INSTRUMENT'S FAULT, NOT THE REPOSITORY'S.**
+
+🔴 **Gate posture, stated first and corrected before commit: `make hooks` RAN — for the
+first time in twelve passes it was not DENIED — and it **FAILED, 48 of 68 gates green**.
+🟢 **None of the 20 red gates is this pass's doing**: the identical red set was reproduced on
+a pristine tree with `p553`'s edits stashed. 🔵 See `Gap 553-G`.
+
+### 🟢 What a foundations pick can now be graded on
+
+🔵 Every row below was read from the grant payload over `raw.githubusercontent.com` at a
+**resolved** default branch, by [`../ingest/grant-verdict.py`](../ingest/grant-verdict.py).
+🔵 Full run: [`../evidence/grant-verdict.2026-10-30-p553.tsv`](../evidence/grant-verdict.2026-10-30-p553.tsv).
+
+| Repo | Grant file, bytes, sha | Family | Shippability verdict |
+|---|---|---|---|
+| [`frappe/frappe`](https://github.com/frappe/frappe) | `develop/LICENSE` **1 118 B** · `f72e403c9c6c` | 🟢 **MIT** | 🟢 `SHIPPABLE-PERMISSIVE` |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | `master/LICENSE.TXT` **11 358 B** · `4b3f5246f43f` | 🟢 **Apache-2.0** | 🟢 `SHIPPABLE-PERMISSIVE` |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `master/LICENSE` **35 136 B** · `0a2dfcbaefa2` | 🟡 **AGPL-3.0** | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master/LICENSE` **34 520 B** · `1c9f0bb8013e` | 🟡 **AGPL-3.0** | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` |
+| [`frappe/lms`](https://github.com/frappe/lms) | `develop/license.txt` **33 893 B** · `cf5a078c2c64` | 🟡 **AGPL-3.0** | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` |
+| [`frappe/erpnext`](https://github.com/frappe/erpnext) | `develop/license.txt` **35 149 B** · `12e44685431e` | 🟡 **GPL-3.0** | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` |
+| [`UCL-INGI/INGInious`](https://github.com/UCL-INGI/INGInious) | `main/LICENSE` **34 764 B** · `6fe8a35d4b67` | 🟡 **AGPL-3.0** | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` |
+| [`cjhenry/ourschool`](https://github.com/cjhenry/ourschool) | `main/LICENSE` **34 523 B** · `520f31a537a6` | 🟡 **AGPL-3.0** | 🟡 `SHIPPABLE-WITH-COPYLEFT-OBLIGATIONS` |
+| [`frappe/education`](https://github.com/frappe/education) | `develop/license.txt` **19 B** · `61408d3da518` | 🔴 **names no family** | 🔴 `GRANT-ASSERTED-NOT-CARRIED` — `552-D`, closed |
+
+🔴 **Two readings on this shelf changed, and the change was in the instrument both times.**
+🔵 `frappe/erpnext` came back **AGPL-3.0** on this pass's first run and is **GPL-3.0** —
+`p552`'s hand read was right. The cause is `553-A`: **GPL-3.0 section 13 is titled** *Use
+with the GNU Affero General Public License*, so a whole-payload family matcher finds
+`AFFERO` inside a plain GPL. 🔵 `openedx/XBlock` came back flagged as an **abridged** Apache
+grant because its 545 B `NOTICE.txt` names the Apache License beside a complete 11 358 B
+`LICENSE.TXT` — `553-D`. Both are fixed in the instrument; **both are recorded here because
+the shelf's numbers would otherwise look like they drifted on their own.**
+
+🔵 **Note for a successor reading `frappe/erpnext`:** `p552` recorded `master/license.txt` at
+**34 916 B**. Both figures are correct — the default branch is **`develop`** (resolved, not
+assumed), and the two branches carry different byte counts of the **same GPL-3.0 grant**. The
+title block was read on **both** branches to settle it.
+
 ## 🆕 `p552` — `2026-10-30` — **🔴 THE ONE APACHE-2.0 STUDENT-INFORMATION SYSTEM THE SEARCH LAYER OFFERS DOES NOT EXIST AT THE ADDRESS IT IMPLIES. 🟢 TWO VENDOR LICENCE CLAIMS CONFIRMED FROM THE PAYLOAD, ONE REFUTED, ONE FOUND TO BE 19 BYTES OF ASSERTION.**
 
 🔵 The mandated vertical query (`open source platform {industry} ERP CRM MIT Apache`) returned
