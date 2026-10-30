@@ -1,0 +1,15 @@
+address	stars	forks	forks_per_star	grant	class	read_by	note
+dspace/dspace	1100	1500	1.364	BSD-3-Clause	deploy-per-institution	webfetch-sidebar	Institutional repository; forks EXCEED stars
+Apereo-Learning-Analytics-Initiative/OpenLRS	47	38	0.809	ECL-2.0	deploy-per-institution	webfetch-sidebar	Repository description reads "Deprecated" - do not shelve as live
+PrairieLearn/PrairieLearn	527	410	0.778	AGPL-3.0 + MIT + proprietary-EE	deploy-per-institution	webfetch-sidebar	Split grant; sidebar cannot name it
+dmitry-viskov/pylti1.3	138	84	0.609	MIT	deploy-per-institution	webfetch-sidebar	LTI 1.3 Advantage Tool; no "forked from" line
+yetanalytics/xapipe	17	9	0.529	Apache-2.0	deploy-per-institution	webfetch-sidebar	LRSPipe xAPI forwarding middleware
+opetushallitus/koski	23	12	0.522	EUPL-1.1-or-later	deploy-per-institution	webfetch-sidebar	22744 commits at this read vs 22212 recorded at p-prior: +532
+ucfopen/pylti1.3	3	1	0.333	MIT	deploy-per-institution	webfetch-sidebar	n too small to carry weight; same name as dmitry-viskov/pylti1.3
+ucfopen/canvasapi	681	192	0.282	MIT	deploy-per-institution	webfetch-sidebar	Default branch is "develop", not main or master
+jupyterhub/jupyterhub	8400	2100	0.250	BSD-3-Clause	deploy-per-institution	webfetch-sidebar	Gap 539-D: first measured star count on this base
+Teachable-AI-Lab/tutor_gym	11	2	0.182	MIT	import-as-dependency	webfetch-sidebar	Tutoring-agent evaluation environments
+GarethManning/education-agent-skills	928	130	0.140	CC-BY-SA-4.0	import-as-dependency	webfetch-readme	Content licence, not a code grant
+EducationalTestingService/skll	561	69	0.123	BSD-3-Clause	import-as-dependency	webfetch-sidebar	SciKit-Learn Laboratory, Educational Testing Service
+huggingface/smolagents	30100	3200	0.106	Apache-2.0	import-as-dependency	webfetch-sidebar	Gap 539-D: first measured star count on this base
+OPTIMETA/PAIDEIA	91	4	0.044	MIT	import-as-dependency	webfetch-sidebar	Claude Code plugin; new to this base at p540

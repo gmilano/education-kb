@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p540` — `2026-10-30` — **🟢 GATE TO 600 DELIVERED (`Gap 539-B` HALF ONE): 450 NEW ADDRESSES PROBED, **63.3 % PERMISSIVE** — FAR ABOVE WHAT THIS FILE'S SHELF SUGGESTS, AND THE REASON IS SELECTION. 🔴 THE 37 `UNKNOWN` ARE THE STORY: ALL RESOLVE, IN TWELVE DIALECTS, AND **62 % OF THEM ARE NOT BUILDABLE**. 🟢 SIX PLATFORM ROWS FILED, INCLUDING `Gap 539-D`'s TWO. 🔴 ONE RANKED CANDIDATE IS LITERALLY DESCRIBED AS "Deprecated" — THE RATIO RANKS, IT DOES NOT VET.**
+
+🔵 **Full narrative, calibration of both instruments, and the twelve-dialect
+table are on [`../agents/trending.md`](../agents/trending.md#-p540--2026-10-30).
+This entry carries the repository-side result only.**
+
+### 🟢 The gate, extended 150 → 600
+
+450 `LIVE` addresses from
+[`backlog-live.2026-10-29-p539.tsv`](../evidence/backlog-live.2026-10-29-p539.tsv),
+`p539`'s 150 excluded, probed at the **resolved default branch** across six
+grant filenames (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `COPYING.md`,
+`LICENCE`). Evidence:
+[`backlog-gated-slice2.2026-10-30-p540.tsv`](../evidence/backlog-gated-slice2.2026-10-30-p540.tsv).
+
+| Verdict | n | Share |
+|---|---|---|
+| 🟢 MIT | 208 | 46.2 % |
+| 🟢 Apache-2.0 | 68 | 15.1 % |
+| 🔴 no grant file at six names | 69 | 15.3 % |
+| 🟡 grant present, title unrecognised | 37 | 8.2 % |
+| 🔴 GPL family | 27 | 6.0 % |
+| 🔴 AGPL-3.0 | 20 | 4.4 % |
+| 🟡 CC-\* | 8 | 1.8 % |
+| 🟢 BSD | 8 | 1.8 % |
+| 🔴 MPL-2.0 / LGPL-3.0 | 4 | 0.9 % |
+| 🟢 Unlicense | 1 | 0.2 % |
+
+🔴 **3 269 of 3 869 remain ungated.** `Gap 539-B` is advanced, not closed.
+
+🔵 **Why 63.3 % permissive here against a copyleft shelf — and it is not a
+contradiction.** The shelf is assembled from search legs that surface
+*platforms*, and in this sector platforms are the copyleft end (Moodle GPL-3.0,
+Open edX and Canvas AGPL-3.0). The backlog is assembled from whatever any pass
+ever *mentioned in prose*, and prose mentions skew to small permissive tools.
+**Two populations, two honest numbers**; quoting either as "the licence shape of
+education open source" without naming which one is sampled is the error to
+avoid.
+
+### 🔴 The `UNKNOWN` residue, resolved — and it is where the risk lives
+
+Every one of the 37 unrecognised titles was read at its resolved branch.
+Evidence:
+[`unknown-residue-graded.2026-10-30-p540.tsv`](../evidence/unknown-residue-graded.2026-10-30-p540.tsv).
+
+🟢 **None was unnameable.** 🔴 **23 of 37 — 62 % — are not buildable
+permissively**, against ~0 % in the named-permissive buckets. Four examples that
+would each have cost a studio real money if rounded to "probably fine":
+
+| Repo | Looks like | 🔴 Actually is |
+|---|---|---|
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | an assessment platform, 527★ / **410 forks** | **three grants in one file** — CE is AGPL-3.0, UIUC-copyright portions MIT, and `apps/prairielearn/src/ee/` is a proprietary Enterprise Edition under its own licence. The GitHub sidebar **cannot name it** |
+| [`heronerar/OpenGaokao`](https://github.com/heronerar/OpenGaokao) | "Open" in the name | **"OpenGaokao Source-Available License 1.0"** |
+| [`Khan/tutoring-accuracy-dataset`](https://github.com/Khan/tutoring-accuracy-dataset) | a Khan Academy open dataset | an **"Evaluation Dataset License"** — internal AI-model evaluation only, no product use |
+| [`sodadata/soda-core`](https://github.com/sodadata/soda-core) | an OSS data-quality library | **Elastic License 2.0** — no managed-service offering |
+
+🟡 **One dialect is a regional bias.**
+[`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital)
+is ordinary AGPL-3.0, graded `UNKNOWN` **only because the licence text is in
+Portuguese**. An English-keyed classifier under-grades LATAM supply, and
+"no grant found" reads downstream as "no supply". → `Gap 540-B`.
+
+### 🟢 Six platform rows filed to [`foundations.md`](foundations.md)
+
+All six read first-hand via `WebFetch` on `github.com`; grants confirmed at the
+resolved branch. `f/★` is forks-per-star, the ranking `Gap 539-B` asked for.
+
+| Repo | Grant | ★ | Forks | f/★ | Why it is filed |
+|---|---|---|---|---|---|
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3-Clause | 1.1k | **1.5k** | **1.364** | Institutional repository; **more forks than stars**, the strongest institutional signal measured here |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3-Clause | 8.4k | 2.1k | 0.250 | `Gap 539-D`. Named in 44 files, never measured until now |
+| [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 MIT | 681 | 192 | 0.282 | Canvas LMS Python client, UCF. 🟡 Default branch is **`develop`** |
+| [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | 🟢 Apache-2.0 | 17 | 9 | 0.529 | LRSPipe — xAPI statement forwarding governed by xAPI Profiles |
+| [`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) | 🟢 BSD-3-Clause | 561 | 69 | 0.123 | ETS's ML experiment runner — the assessment-science end |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 Apache-2.0 | 30.1k | 3.2k | 0.106 | `Gap 539-D`. Named in 24 files, never measured until now |
+
+### 🔴 Two the ranking surfaced and this pass did **not** file
+
+- 🔴 [`Apereo-Learning-Analytics-Initiative/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) — ECL-2.0, 47★ / 38 forks, **f/★ 0.809**, second-highest in the whole ranking. 🔴 **Its repository description is the single word "Deprecated".** 🔵 **This is the ratio's limit, demonstrated on its own output: f/★ measures how software was *used*, which is past tense. It ranks; it does not vet.** A liveness read stays mandatory before any promotion.
+- 🔴 [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) — **f/★ 0.778**, and a genuinely significant assessment platform, but the split grant above makes it a [`solutions.md`](../verticals/solutions.md) **warning row**, not a foundation. Filed there instead.
+
+### 🟡 A name-collision pair, recorded for the lineage work
+
+[`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) (MIT, **3★ / 1 fork**,
+`master`) and [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3)
+(MIT, **138★ / 84 forks**, `master`) carry the same name and the **same
+one-line description** — *"LTI 1.3 Advantage Tool"*. 🔴 **Neither page shows a
+`forked from` line.** This base files the `dmitry-viskov` row. 🟡 The
+`ucfopen` address is cited **27 times across 12 files** of this base's prose
+while holding 3 stars — a mention-vs-substance divergence worth one pass's
+attention. 🔵 Handed to `Gap 539-A`'s lineage queue rather than guessed at
+here; `p405`'s `forkgroup.sh` is the instrument, and it needs the execution lane
+`Gap 540-E` is blocked on.
+
+### 🔴 Instrument calibration, stated because nothing here is gate-attested
+
+🔴 **`make hooks` was denied before any body ran (`Code from External`) — the
+thirteenth denial in fourteen passes.** The two working instruments were
+calibrated first:
+
+- A non-existent address returns **`404`, 14 B**; a non-existent branch on a
+  live repository returns **`404`**. So a `200` is a payload, not a proxy
+  artefact.
+- 🟡 **A `200` on `master` does not prove the branch exists.**
+  `jupyterhub/jupyterhub` serves byte-identical **11 640 B** READMEs at `main`
+  and `master`. That is the legacy alias `gate-branch-alias` has graded since
+  `p428` — **cited, not re-registered as new.**
+
 ## 🆕 `p539` — `2026-10-30` — **🟢 THE BULK GATES RAN: 3 873 ADDRESSES PROBED FOR LIVENESS, 96.2 % ALIVE, AND THE HEAD OF THIS BASE'S OWN BACKLOG IS THE EDUCATION FIELD'S INFRASTRUCTURE. 🟢 FIVE REPOS FILED TO `foundations.md`, TWO PLATFORMS TO `solutions.md`. 🔴 THE PERMISSIVE EDUCATION ERP STILL DOES NOT EXIST, AND THAT IS NOW A MEASURED FINDING RATHER THAN A BLANK LEG.**
 
 ### 🔴 The mandated GitHub-trending leg: eleventh consecutive pass with nothing unfiled, and the category false positive repeated

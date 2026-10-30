@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education Verticals — Real Platforms to Build AI On
 
-**Pass `p539` · 2026-10-29.** Every platform below is a real, running system that
+**Pass `p540` · 2026-10-30.** Every platform below is a real, running system that
 institutions already operate, with its licence read from **the licence file's own
 title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis this header
 carried for two passes — "`github.com` returns HTTP 403 through the session
@@ -326,6 +326,50 @@ open platform or an official client, and **no Arabic-language intelligent-tutori
 repository exists on this base at all**. The closest asset the full-text leg returned,
 [`h9-tec/Awesome_Arabic_NLP`](https://github.com/h9-tec/Awesome_Arabic_NLP) (**258★**),
 is a link list serving **no grant at 21 probed paths** and is not Gulf-origin.
+
+## 🆕 `p540` — §12, the licence cell this file cannot fill from a sidebar, and a platform that proves it
+
+🔴 **This file's method — read the licence file's own title block — has a
+failure mode, and `p540` measured how common it is.** Across 450 newly gated
+backlog addresses, **37 (8.2 %)** served a grant file whose title names no known
+licence. Every one resolved on a hand read; **23 of 37 (62 %) are not buildable
+permissively**, against ~0 % in the named buckets. 🔵 **For this file the rule
+is: a platform whose licence cell cannot be filled from one line is not
+"unclear", it is 62 % likely to be restricted.** Treat it as red until read.
+
+### 🔴 The platform that demonstrates it — and it is a significant one
+
+| Platform | What it is | 🔴 Licence, actually | Verdict |
+|---|---|---|---|
+| [PrairieLearn/PrairieLearn](https://github.com/PrairieLearn/PrairieLearn) | *"Online problem-driven learning system."* **527★ · 410 forks** (f/★ **0.778** — institutional deployment pattern, third of fourteen ranked). Randomised, auto-graded, problem-driven assessment at scale; originated at the University of Illinois and now run by PrairieLearn, Inc. | **Three grants in one file.** The **Community Edition** (everything outside `apps/prairielearn/src/ee/`) is **AGPL-3.0**. Portions copyright the **University of Illinois Board of Trustees** and outside contributors are **MIT**. Everything under `apps/prairielearn/src/ee/` is the **Enterprise Edition**, under its own separate licence. All client-side JavaScript is AGPL-3.0 regardless. | 🔴 **Attachment point, never a base.** Integrate across the API or LTI; do not fork, and do not assume the directory you need is in the CE. 🟡 **The GitHub sidebar cannot name this licence** — it renders a bare "License" link. Anything that reads the sidebar will report it as unknown, and anything that reads only the first line will report it as a bare copyright notice. |
+
+🔵 **This is the fifth measured instance of `Gap 536-B`'s split-grant class and
+the largest by deployment**, which is the argument for making `UNKNOWN` a red
+verdict rather than an amber one (→ `Gap 540-D`): the class does not cluster in
+abandoned repositories, it clusters in **commercially successful ones**, because
+a split grant is what a company does when it open-sources a product and keeps a
+tier.
+
+### 🔴 A ranked candidate this pass refused to file, and the reason generalises
+
+[`Apereo-Learning-Analytics-Initiative/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS)
+— **ECL-2.0** (Educational Community License 2.0, OSI-approved, Apache-derived),
+47★ · 38 forks, **f/★ 0.809**, second of fourteen on this pass's institutional
+ranking. 🔴 **Its repository description is the single word "Deprecated".**
+
+🔵 **The Apereo Learning Analytics Initiative estate is in the same state** —
+`LearningAnalyticsProcessor`, `OpenDashboard-legacy` (the name says it),
+`OpenDashboard-api` and `lap-sakai-extractor`, all ECL-2.0. 🟢 **Recorded here
+as a negative result with a licence family attached, because it is useful:** the
+learning-analytics layer has a mature, permissively-licensed, education-sector
+reference implementation, and it is **not maintained**. An engagement that needs
+an LRS should read these for their data model and ship
+[`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) (Apache-2.0,
+live) for the pipeline — not adopt OpenLRS.
+
+🔵 **And the generalisable rule, which this pass's own ranking forced:**
+forks-per-star measures how software *was* used, past tense. **It ranks; it does
+not vet.** No platform enters this file on a ratio without a liveness read.
 
 ## 🆕 `p539` — §11, the ERP question answered honestly: there is no permissive education ERP, and that is the finding
 

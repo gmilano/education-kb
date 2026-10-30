@@ -1,0 +1,38 @@
+address	branch	grant_file	resolved_spdx	dialect	buildable_permissive	note
+PrairieLearn/PrairieLearn	master	LICENSE	AGPL-3.0 + MIT + proprietary-EE	split-grant	no	CE is AGPL-3.0; UIUC-copyright portions MIT; apps/prairielearn/src/ee/ is Enterprise Edition under its own LICENSE
+portabilis/pre-matricula-digital	2.12	LICENSE	AGPL-3.0	non-English-copy	no	"LICENCA PUBLICA GERAL AFFERO GNU" - standard AGPL-3.0 text in Portuguese
+opetushallitus/koski	master	LICENSE.txt	EUPL-1.1-or-later	jurisdiction-licence	no	Finnish National Board of Education
+opetushallitus/ehoks	master	LICENSE	EUPL-1.1-or-later	jurisdiction-licence	no	Finnish National Board of Education
+opetushallitus/oppijanumerorekisteri	master	LICENSE.txt	EUPL-1.1-or-later	jurisdiction-licence	no	Finnish National Board of Education
+opetushallitus/organisaatio	master	LICENSE.txt	EUPL-1.1-or-later	jurisdiction-licence	no	Finnish National Board of Education
+opetushallitus/valtionavustus	master	LICENSE.txt	EUPL-1.1-or-later	jurisdiction-licence	no	Finnish National Board of Education, 2026 copyright line
+opetushallitus/eperusteet	master	LICENSE.txt	EUPL-1.1-or-later	jurisdiction-licence	no	Finnish National Board of Education
+opetushallitus/ataru	master	LICENSE.md	EUPL-1.2-or-later	jurisdiction-licence	no	"Finnish National Agency for Education" - newer agency name AND newer EUPL version than its six siblings
+yuanjiusheng/cloud-learning-ce	master	LICENSE	proprietary	non-English-copy	no	Chinese: "版权所有 ... 保留所有权利" = all rights reserved
+Khan/tutoring-accuracy-dataset	main	LICENSE	bespoke-restricted	field-of-use	no	"Evaluation Dataset License" - internal AI-model evaluation only
+AStheTECH/mewcp-google-classroom	main	LICENSE.md	bespoke-restricted	source-available	no	"AStheTECH Community License (ACL)" - all rights reserved header
+UCL-INGI/INGInious	main	LICENSE	AGPL-3.0	leading-whitespace	no	Title line is indented two spaces, which defeats a line-anchored matcher
+Apereo-Learning-Analytics-Initiative/lap-sakai-extractor	master	LICENSE	ECL-2.0	sector-licence	yes	Educational Community License 2.0 - OSI-approved, Apache-2.0 derivative
+Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor	master	LICENSE	ECL-2.0	sector-licence	yes	Educational Community License 2.0
+Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	master	LICENSE	ECL-2.0	sector-licence	yes	Educational Community License 2.0
+Apereo-Learning-Analytics-Initiative/OpenDashboard-api	master	LICENSE	ECL-2.0	sector-licence	yes	Educational Community License 2.0
+Apereo-Learning-Analytics-Initiative/OpenLRS	master	LICENSE	ECL-2.0	sector-licence	yes	Educational Community License 2.0 - repository description reads "Deprecated"
+KualiCo/rice	java11	LICENSE.txt	ECL-2.0	sector-licence	yes	Educational Community License 2.0 - Kuali middleware
+OpenOLAT/qtiworks	master	LICENSE.txt	BSD-3-Clause	untitled-or-prefaced	yes	Prefaced by a sentence naming the licence before the text
+open-webui/open-webui	main	LICENSE	BSD-3-Clause + branding clause	titled-variant	no	Clause 4 forbids removing "Open WebUI" branding above 50 end users per rolling 30 days
+QingdaoU/Judger	newnew	LICENSE	SATA (MIT + attribution demand)	bespoke-restricted	no	"Star And Thank Author License" - MIT plus a non-OSI obligation
+rstudio/ggcheck	main	LICENSE	MIT (R stub)	template-stub	yes	Two-line "YEAR: / COPYRIGHT HOLDER:" stub; the SPDX id lives in DESCRIPTION
+rstudio/tblcheck	main	LICENSE	MIT (R stub)	template-stub	yes	Two-line "YEAR: / COPYRIGHT HOLDER:" stub
+shmercer/writeAlizer	master	LICENSE	MIT (R stub)	template-stub	yes	Two-line "YEAR: / COPYRIGHT HOLDER:" stub
+aclascollege/polymath	main	LICENSE	ODbL	data-licence	no	Open Database License - share-alike on the database, not a code grant
+sdrangan/llmgrader	main	LICENSE	bespoke-restricted	source-available	no	"PySilicon Research License"
+crewAIInc/crewAI	main	LICENSE	MIT	untitled-or-prefaced	yes	Untitled MIT: opens on the copyright line, then "Permission is hereby granted"
+Teachable-AI-Lab/tutor_gym	main	LICENSE	MIT	untitled-or-prefaced	yes	Untitled MIT; sidebar names MIT
+Priyamakeshwari/TeachGPT	main	LICENSE.md	MIT	untitled-or-prefaced	yes	Untitled MIT
+nakafaai/aksara	main	LICENSE	bespoke-restricted	source-available	no	"Nakafa Source Available License 2.0", effective 2026-10-24
+snflwr-ai/snflwr.ai	main	LICENSE	proprietary	source-available	no	"Proprietary Software License ... All rights reserved"
+heronerar/OpenGaokao	main	LICENSE	bespoke-restricted	source-available	no	"OpenGaokao Source-Available License 1.0" - "Open" in the name, not in the grant
+hcengineering/platform	develop	LICENSE	EPL-2.0	sector-licence	no	Eclipse Public License 2.0 - weak copyleft, OSI-approved
+sodadata/soda-core	main	LICENSE	Elastic-2.0	source-available	no	Elastic License 2.0 - no managed-service use
+willwearing/graspful	main	LICENSE.md	bespoke-restricted	source-available	no	"O'Saasy License Agreement"
+EducationalTestingService/skll	main	LICENSE.txt	BSD-3-Clause	untitled-or-prefaced	yes	"New BSD License", Educational Testing Service

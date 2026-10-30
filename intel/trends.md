@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Education AI — Current Trends
 
-**Pass `p539` · 2026-10-29.** **Thirty-two** trends. Each one is stated so it could be
+**Pass `p540` · 2026-10-30.** **Thirty-five** trends. Each one is stated so it could be
 *wrong* — a trend you cannot disconfirm is a slogan. Where this pass's evidence
 **narrowed or contradicted** a trend carried from `p526`, that is marked and the
 trend is rewritten rather than quietly restated.
@@ -1227,3 +1227,122 @@ Annex III *scope* is not in doubt; only the date's provenance is.
 jurisdiction replaces its dated obligation with a principles-based code, the
 "calendar" framing weakens back into posture.
 
+## 33. 🆕 **"Unknown licence" is not missing information — it is a 62 % probability of a restricted one**
+
+**The claim.** In education open source, a repository whose grant file exists
+but whose title names no standard licence is **far more likely to be restricted
+than permissive**. The `UNKNOWN` bucket is not where the data is thin; it is
+where the risk concentrates.
+
+**The evidence, measured this pass.** 450 live backlog addresses were probed at
+their resolved default branch (`p540`, extending `Gap 539-B`'s gate from 150 to
+600). **37 — 8.2 % — served a grant whose title the matcher could not name.**
+Every one was then read by hand, and 🟢 **none was unnameable**. 🔴 **23 of
+37 (62 %) are not buildable permissively**, against ~0 % in the MIT / Apache /
+BSD buckets, which are permissive by construction. Evidence:
+[`../evidence/unknown-residue-graded.2026-10-30-p540.tsv`](../evidence/unknown-residue-graded.2026-10-30-p540.tsv).
+
+**Twelve dialects, and they are not random.** `source-available` bespoke
+licences (7), sector licences the matcher never heard of (`ECL-2.0` ×6,
+`EPL-2.0`), jurisdiction licences (`EUPL` ×7), untitled permissive payloads (5),
+R template stubs (3), **non-English copies of standard texts** (2), and one each
+of titled-variant, split-grant, leading-whitespace, field-of-use and
+data-licence.
+
+🔵 **Why the restricted ones cluster here, mechanically.** A permissive licence
+is adopted by copying a canonical text, which keeps its title line intact. A
+restricted licence is **drafted**, and a drafted licence gets a bespoke
+name — `Nakafa Source Available License 2.0`, `OpenGaokao Source-Available
+License 1.0`, `O'Saasy License Agreement`, `Evaluation Dataset License`. 🔴
+**The title line is unrecognisable precisely because somebody wrote it on
+purpose**, and the purpose was usually to retain something. `PrairieLearn`
+(527★ · 410 forks) is the fully-worked case: three grants in one file, and the
+GitHub sidebar renders a bare "License" link naming nothing.
+
+**What follows for a studio.** An unresolved `UNKNOWN` must gate **red**, not
+amber. The cost of resolving one is a single file read; the cost of rounding it
+to "probably fine" is discovering at integration time that the directory you
+need is the vendor's enterprise tier.
+
+🔴 **How to disconfirm it.** Gate a further 600 addresses and grade their
+`UNKNOWN` residue. If the non-buildable share falls below roughly 30 %, the
+62 % is a small-sample artefact of this slice and the rule weakens to "read
+it", which is advice rather than a trend. n = 37 here, and that is stated.
+
+## 34. 🆕 **Grant classifiers are English-keyed, so the open-source map systematically under-counts LATAM**
+
+**The claim.** Tooling that identifies a licence by matching its English title
+line will record non-English licence files as "no grant found", and downstream
+that reads as "no supply". The effect is not uniform across regions — it falls
+hardest on exactly the regions whose projects document in their own language.
+
+**The evidence.** [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital),
+a Brazilian school pre-enrolment platform, serves the **standard AGPL-3.0 text
+in Portuguese** — *"LICENÇA PÚBLICA GERAL AFFERO GNU, Versão 3, 19 de novembro
+de 2007"*. This base's gate graded it `UNKNOWN`. It is ordinary AGPL-3.0 and
+always was. A second instance in the same 450-address slice,
+`yuanjiusheng/cloud-learning-ce`, reserves all rights **in Chinese** and was
+equally invisible.
+
+🔵 **Why this is a trend and not a bug report.** Every published count of "how
+much permissive education software exists in LATAM" that this base or anyone
+else has produced was produced by an English-keyed instrument. 🔴 **Those
+counts are lower bounds, and nobody has been saying so.** This base has
+declared LATAM supply gaps repeatedly across its history; this pass is the
+first that can say part of that gap is **measurement, not absence** — and can
+say it with an instance rather than a suspicion.
+
+**What follows.** Add Portuguese and Spanish title strings for the
+GPL / AGPL / MIT / Apache families before quoting any regional supply figure,
+and re-run over the addresses already gated to see how many verdicts move
+(→ `Gap 540-B`). Until that number exists, every "no grant found" on a LATAM
+address is unsafe to repeat.
+
+🔴 **How to disconfirm it.** Add the strings, re-run over the 600 gated
+addresses, and if **zero** verdicts move beyond the one instance already known,
+this is an anecdote and not a trend. The denominator is available and the fix
+is cheap, so there is no excuse for carrying it unmeasured for more than a pass
+or two.
+
+## 35. 🆕 **Fork count divided by star count separates software you run from software you import — and the star count does not**
+
+**The claim.** In this sector, forks-per-star is a usable proxy for *deployment
+model*: software an institution runs its own copy of accumulates forks relative
+to attention; software an institution imports as a dependency does not.
+
+**The evidence.** Fourteen repositories, every star and fork count read
+first-hand this pass, **classed first by what the software is** and only then
+ordered by the ratio
+([`../evidence/forks-per-star-rank.2026-10-30-p540.tsv`](../evidence/forks-per-star-rank.2026-10-30-p540.tsv)).
+🟢 **The classes separated with an empty band:** every deploy-per-institution
+point at **f/★ ≥ 0.250**, every import-as-dependency point at **≤ 0.182**, no
+instance in the 0.068 between them.
+
+| | f/★ | |
+|---|---|---|
+| [`dspace/dspace`](https://github.com/dspace/dspace) | **1.364** | 🟢 more forks than stars — institutional repository |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 0.250 | last point above the band |
+| [`Teachable-AI-Lab/tutor_gym`](https://github.com/Teachable-AI-Lab/tutor_gym) | 0.182 | first point below it |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 0.106 | 30.1k★ and firmly a dependency |
+
+🔵 **Stars do not do this.** `smolagents` (30.1k★) and `jupyterhub` (8.4k★) are
+both large, both widely used, and land on opposite sides — because popularity
+and deployment model are different properties, and only one of them tells a
+studio whether to budget for carrying a fork.
+
+**What follows.** `f/★ ≥ 0.25` → fork it, budget migrations and local schema.
+`f/★ ≤ 0.15` → pin it, budget version drift. Between, or under ~50 stars → the
+ratio says nothing; read the repository.
+
+🔴 **Two limits, stated rather than buried.** **n = 14**, one sector, one hour —
+a boundary fitted to fourteen points is a hypothesis, and `Gap 540-C`
+re-measures at n ≥ 60 before any recipe may depend on it. And 🔴 **the ratio
+ranks without vetting**: the second-placed repository on this very ranking,
+[`Apereo…/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS)
+at 0.809, describes itself as *"Deprecated"*. Forks-per-star measures how
+software **was** used. A liveness read stays mandatory.
+
+🔴 **How to disconfirm it.** Class 60 repositories by deployment model without
+looking at the ratio, then compute it. If the 0.18–0.25 band fills in, or if
+any deploy-per-institution project lands below 0.15, the threshold is noise and
+only the direction survives.

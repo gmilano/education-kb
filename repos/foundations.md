@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Foundational Education Repos
 
-**Pass `p539` · 2026-10-29.** Load-bearing systems an education engagement is
+**Pass `p540` · 2026-10-30.** Load-bearing systems an education engagement is
 likely to inherit, extend or integrate against — not agents (those are in
 [`../agents/top.md`](../agents/top.md)), but the platforms, standards and
 toolkits the agents must live beside.
@@ -74,6 +74,70 @@ quantity. 🔵 A recount against an explicit rule for what counts is `Gap 534-E`
 > shape of the market, and it drives the architecture: **build permissive agents
 > that integrate across a process or network boundary** (LTI, xAPI, REST, MCP)
 > rather than forking an AGPL core and inheriting its obligations.
+
+## 🆕 `p540` — six rows off the gate-to-600, and the first forks-per-star ranking this base has run
+
+🟢 **`Gap 539-B` asked for exactly this:** *"run the grant gate to 600 and rank
+the permissive residue by forks-per-star."* Both halves delivered. 450 further
+`LIVE` backlog addresses were probed at their resolved default branch (**600 of
+3 869 now gated**; 3 269 remain), and the permissive residue was ranked.
+Every row below was then read first-hand on `github.com` for its star and fork
+counts — none is from memory, and none is gate-attested, because `make hooks`
+was denied again (`Gap 540-E`).
+
+| Repo | Licence | Stars · forks | **f/★** | Why it is foundational |
+|---|---|---|---|---|
+| [dspace/dspace](https://github.com/dspace/dspace) | 🟢 BSD-3-Clause | 1.1k · **1.5k** | 🟢 **1.364** | *"(Official) The DSpace digital asset management system that powers your Institutional Repository."* **More forks than stars** — the strongest institutional signal this base has measured. Every university that runs DSpace runs *its own* DSpace, which is what the ratio detects. The repository layer is where theses, datasets and OER already live, so it is the corpus an institutional RAG grounds on **before** anyone builds a tutor. |
+| [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3-Clause | 8.4k · 2.1k | 0.250 | *"Multi-user server for Jupyter notebooks."* 🟢 **`Gap 539-D` closed by this row** — named in **44** of this base's files since `p531` and never carrying a measured star count until now. The standard way an institution gives every student an isolated, resourced compute environment; the substrate under every "AI teaching assistant in a notebook" pattern on [`../compose/patterns.md`](../compose/patterns.md). |
+| [ucfopen/canvasapi](https://github.com/ucfopen/canvasapi) | 🟢 MIT | 681 · 192 | 0.282 | *"Python API wrapper for Instructure's Canvas LMS. Easily manage courses, users, gradebooks, and more."* Maintained by the University of Central Florida. Canvas itself is AGPL-3.0, so this is the **process-boundary** route this file's licence rule prescribes: integrate across the API, do not fork the core. 🟡 **Default branch is `develop`**, not `main` or `master` — pin accordingly. |
+| [yetanalytics/xapipe](https://github.com/yetanalytics/xapipe) | 🟢 Apache-2.0 | 17 · 9 | 0.529 | *"LRSPipe is an xAPI Statement forwarding/middleware process governed directly by xAPI Profiles."* The piece between a Learning Record Store and everything downstream: filter, transform and forward learner statements under a declared Profile rather than ad-hoc code. 🟢 Completes the xAPI leg `learnmcp-xapi` opened on the agent shelf — that one *writes* statements, this one *routes* them. 🔴 17★: small, and the Profile governance is the reason to take it, not the community. |
+| [EducationalTestingService/skll](https://github.com/EducationalTestingService/skll) | 🟢 BSD-3-Clause | 561 · 69 | 0.123 | *"SciKit-Learn Laboratory (SKLL) makes it easy to run machine learning experiments."* From **Educational Testing Service** — the organisation behind TOEFL and the GRE. Configuration-driven experiment running with the reproducibility discipline assessment work demands; the pairing for the efficacy layer `p535` filed. 🟡 Graded `UNKNOWN` by the title gate because its payload reads *"New BSD License"*. |
+| [huggingface/smolagents](https://github.com/huggingface/smolagents) | 🟢 Apache-2.0 | 30.1k · 3.2k | 0.106 | *"🤗 smolagents: a barebones library for agents that think in code."* 🟢 **`Gap 539-D` closed by this row** — named in **24** of this base's files and never measured. The minimal agent loop to reach for when LangGraph or CrewAI is more framework than a single tutoring or grading task needs. |
+
+### 🔵 How to read the `f/★` column — and its two stated limits
+
+Fourteen points were classed **first by what the software is** (does an
+institution run its own copy, or import it as a dependency?) and only then
+ordered by forks-per-star. Evidence:
+[`../evidence/forks-per-star-rank.2026-10-30-p540.tsv`](../evidence/forks-per-star-rank.2026-10-30-p540.tsv).
+🟢 **The classes separated with an empty band between them**: every
+deploy-per-institution point at **≥ 0.250**, every import-as-dependency point at
+**≤ 0.182**, no instance in between. Star counts do not do this —
+`smolagents` (30.1k) and `jupyterhub` (8.4k) are both large and land on opposite
+sides.
+
+> **f/★ ≥ 0.25 → fork it.** Institutions run their own copy. Budget for
+> carrying a fork: migrations, upgrades, local schema.
+> **f/★ ≤ 0.15 → pin it.** It is a dependency. Budget for version drift.
+> **Between, or under ~50 stars → the ratio says nothing.** Read the repository.
+
+🔴 **Limit one: n = 14, one sector, one hour.** A boundary fitted to fourteen
+points is a hypothesis. → `Gap 540-C` re-measures at n ≥ 60 before any recipe
+may depend on the threshold.
+
+🔴 **Limit two, demonstrated on the ranking's own output: the ratio ranks, it
+does not vet.** [`Apereo-Learning-Analytics-Initiative/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS)
+(ECL-2.0, 47★ · 38 forks) scored **0.809** — second of fourteen — and its
+repository description is the single word **"Deprecated"**. Forks-per-star
+measures how software *was* used, which is past tense. A liveness read stays
+mandatory before promotion, and this row is **not filed** above.
+
+### 🔴 What the gate found that does not become a row — and why it matters more than the rows
+
+37 of the 450 addresses served a grant file whose title the matcher could not
+name. 🟢 **Every one resolved on a hand read** — not one was unnameable — across
+**twelve** dialects. 🔴 **23 of 37 (62 %) are not buildable permissively**,
+against ~0 % in the named-permissive buckets. `UNKNOWN` is not noise; it is
+where this sector's non-buildable grants concentrate, at roughly eight times the
+base rate. Full table and evidence on
+[`trending.md`](trending.md#-p540--2026-10-30) and
+[`../evidence/unknown-residue-graded.2026-10-30-p540.tsv`](../evidence/unknown-residue-graded.2026-10-30-p540.tsv).
+
+🟡 **One dialect is a regional bias against the region this base exists to
+serve.** [`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital)
+is ordinary AGPL-3.0, graded `UNKNOWN` **only because its licence text is in
+Portuguese**. An English-keyed classifier under-grades LATAM supply, and
+"no grant found" reads downstream as "no supply". → `Gap 540-B`.
 
 ## 🆕 `p539` — the backlog's head was never obscure, it was the field's own infrastructure
 

@@ -6,9 +6,21 @@ updated: 2026-10-30
 
 # Education AI Agents — Curated Shelf
 
-**Pass `p539` · 2026-10-29.** **Sixty-two** real agents, every row read
+**Pass `p540` · 2026-10-30.** **Sixty-four** real agents, every row read
 first-hand and corroborated by a second, independent instrument. No row is a
 header, a placeholder or an example.
+
+> 🟡 **`p540` added two rows and rejected four candidates for a reason worth
+> carrying forward.** Of the five addresses this pass's search legs produced,
+> **four were already in this tree** — the `open-webui` branding clause (known
+> since `p441`), `opetushallitus/koski`'s EUPL grant, `ECL-2.0` as a sector
+> licence family, and `GarethManning/education-agent-skills` (already shelved,
+> 78 mentions). 🔵 **One in five survived a pre-write check against the
+> committed tree**, and that check cost four `grep` invocations. `Gap 540-A`
+> asks for it as a gate: `gate-capability-absence` catches a **restated
+> absence**; nothing here catches a **restated presence**, which is the more
+> common failure. 🔴 Nothing on this page is gate-attested — `make hooks` was
+> denied for the thirteenth time in fourteen passes (`Gap 540-E`).
 
 > 🟢 **`p538` emptied `p537`'s queue — all twenty addresses read first-hand —
 > and the headline is that `p537`'s own headline was an artefact of this base's
@@ -394,7 +406,7 @@ header, a placeholder or an example.
 > actually lives. **Until it exists, an engagement's own licence scan is the
 > control, not this file.**
 
-## Shelf — 62 verified education agents
+## Shelf — 64 verified education agents
 
 | Agent | Repo | Licence (title block) | Stars | Region (origin) | What it does |
 |---|---|---|---|---|---|
@@ -460,6 +472,8 @@ header, a placeholder or an example.
 | 🆕 **skill-instructional-design** | [tanghua-git/skill-instructional-design](https://github.com/tanghua-git/skill-instructional-design) | 🟡 **MIT — README only.** The sidebar carries **no licence entry**; the grant is the line *"MIT © 2026 Tanghua (唐华)"* in the README | 2 · 0 forks | APAC (China — Chinese-language description, author 唐华) | A **multi-agent lesson-plan generator shipped as an agent *skill***, installable standalone or as an OpenClaw skill. Generates systematic K-12 lesson plans against named pedagogy — **ICAP**, **Bloom**, and 扶放有度 (gradual release of responsibility) — running the theory analysis internally and emitting plain-language output. 🟢 **The pedagogy is explicit and named**, which almost nothing else on this shelf does. ⚠️ Sidebar description says v3.0 while the README documents **v5.3**: the page contradicts itself on its own version. |
 | 🆕 **capy-note** | [florianchristophnowak-dot/capy-note](https://github.com/florianchristophnowak-dot/capy-note) | 🟢 **MIT** — sidebar `MIT license` | 1 · 0 forks | 🟢 **EMEA (German-speaking Europe)** — German-language description *"Effiziente Bewertung gescannter Schülerarbeiten"*, topics `lehrer` · `schule` · `unterricht` | **Offline desktop grading of scanned class exams**: PDF import, automatic segmentation of each student's work, task templates, annotation, **first and second correction layers** (the German *Erst-/Zweitkorrektur* convention), and a statistics dashboard. Electron + React + Vite. 🟢 **Fully offline is the posture the EU's 2 Dec 2027 high-risk band rewards** — assessment that influences access to qualifications is Annex III, and a tool that never leaves the teacher's machine moves the processing question entirely. |
 | 🆕 **prep-ybara** | [florianchristophnowak-dot/prep-ybara](https://github.com/florianchristophnowak-dot/prep-ybara) | 🟢 **MIT** — sidebar `MIT license` | 1 · 0 forks | 🟢 **EMEA (German-speaking Europe)** — description *"Unterrichtsvorbereitungs-App"*, topics `lehrer` · `schule` · `unterricht` | Lesson *preparation* rather than delivery: weekly timetable, teaching sequences and individual lessons on a **45-minute timeline** (the German lesson period), PDF export, backup/restore, plus a companion mobile web app *"Prép-ybara Pocket"*. Local Windows app on Electron + React. 🟡 Same author as `capy-note`, so the two are **one EMEA contributor, not two independent signals** — stated because a region count that double-counts an author overstates the region. |
+| 🆕 **PAIDEIA** | [OPTIMETA/PAIDEIA](https://github.com/OPTIMETA/PAIDEIA) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main`, read first-hand: *"MIT License / Copyright (c) 2026 Taewoo Park"* | 91 · 4 forks | 🟡 Global — author's country not stated on the page; no national curriculum, ministry or language anchor in the README, so **not placed** | *"Paideia — a Claude Code plugin that forms exam readiness locally. Stop renting your own learning."* Turns a student's **own** course materials — lecture notes, homework, marked solutions — into a per-course study graph held as **editable markdown on their own disk**, with local OCR for handwritten work. 88 commits on `main`. 🟢 **Why it earns a row:** every other tutoring artefact on this shelf starts from a model's prior or a vendor's curriculum. This one starts from the artefacts the learner already has and keeps them local — the only architecture here that needs **no data-protection conversation before a pilot**, which is the usual blocker in EMEA (AI Act deployer duties) and increasingly in US K-12. 🔴 **4 forks.** An architecture to read, not a dependency to take. Filed by `p540`; **0 prior mentions anywhere in this tree** — the only one of five `p540` candidates that was not already here. |
+| 🆕 **tutor_gym** | [Teachable-AI-Lab/tutor_gym](https://github.com/Teachable-AI-Lab/tutor_gym) | 🟢 **MIT** — sidebar `MIT license`; grant file `LICENSE` at `main` is an **untitled payload** (opens on the copyright line, then *"Permission is hereby granted"*), which is why the title-keyed gate graded it `UNKNOWN` — `p314`'s untitled class, still live | 11 · 2 forks | 🟡 Global — Teachable AI Lab; the systems it harnesses (CTAT, OATutor) are 🟢 **North America** (CMU, UC Berkeley) | *"Automated tutor environments for evaluating learning & tutoring agents."* Harnesses that run LLM-tutor and simulated-student evaluations against **CTAT**, **Apprentice** and **OATutor**. 🟢 **It fills a hole this base has carried since its earliest passes:** tutoring agents have been shelved here throughout and there has never been a way to *evaluate* one. `OATutor` is already on this shelf, so the pairing needs no adapter. 🔴 **11★, 2 forks** — the value is the evaluation protocol, not the code volume; treat the harness as a specification to re-implement if it goes quiet. |
 
 **Licence split:** **39 × MIT, 11 × Apache-2.0, 1 × BSD-3-Clause** — all
 fifty-one buildable, every cell read from the licence file's title block.

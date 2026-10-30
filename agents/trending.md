@@ -4,6 +4,227 @@ region: Global
 updated: 2026-10-30
 ---
 
+## 🆕 `p540` — `2026-10-30` — **🟢 `Gap 539-B` DELIVERED: THE GRANT GATE RAN TO 600 AND THE PERMISSIVE RESIDUE IS RANKED BY FORKS-PER-STAR — 14 POINTS, A CLEAN BOUNDARY AT 0.25/0.18, `dspace` AT 1.36 WITH MORE FORKS THAN STARS. 🟢 `Gap 539-D` CLOSED — BOTH DEBT ADDRESSES READ FIRST-HAND. 🔴 THE REAL FINDING IS THE RESIDUE: ALL 37 `UNKNOWN` GRANTS RESOLVE, IN **TWELVE** DIALECTS, AND **23 OF 37 ARE NOT BUILDABLE** — `UNKNOWN` IS NOT NOISE, IT IS WHERE THE RISK CONCENTRATES. 🟡 ONE AGENT GENUINELY NEW (`PAIDEIA`, MIT); THE OTHER FOUR "FINDS" WERE ALREADY IN THIS BASE AND ARE RECORDED AS RESTATEMENTS, NOT DISCOVERIES. 🔴 `make hooks` DENIED FOR THE **THIRTEENTH TIME IN FOURTEEN PASSES**. FIVE REGISTERED (`540-A`…`540-E`).**
+
+### 🔴 First, the thing `p538` taught this base, applied to itself
+
+`Gap 538-A` was declared against two instruments and 23 passing controls that
+already existed — a **restated absence**. This pass found four repositories it
+was about to present as finds, checked each against the committed tree before
+writing a word, and **four of the five were already here**:
+
+| Candidate | Claimed as | Already in this base? |
+|---|---|---|
+| [`open-webui/open-webui`](https://github.com/open-webui/open-webui) branding clause | 🔴 "BSD-3 that is not BSD-3" | 🔴 **Known since `p441`.** `repos/trending.md:430`, `README.md:4081`, and a whole evidence directory `compose/code/p441-bsd-variant/` |
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) EUPL | 🔴 "a state estate nobody has filed" | 🔴 **Known.** `agents/trending.md:32627` already carries it at 23★, EUPL-1.1-or-later, 22 212 commits |
+| `ECL-2.0` as an education-sector licence family | 🔴 "a licence family new to this base" | 🔴 **Known.** `sakaiproject/sakai` is filed ECL-2.0, and the licence census at `agents/trending.md:10488` counts ECL-2.0 in its own band |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 🔴 "new from the trending leg" | 🔴 **Already shelved** — 78 mentions, 2 table rows |
+| [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) | 🟢 new | 🟢 **Genuinely new — 0 mentions anywhere in the tree** |
+
+🔵 **One in five survived.** That ratio is the useful number, not the four
+rejections: a trending leg that looks productive is mostly re-finding this base's
+own corpus, and only a pre-write check against the committed tree can tell the
+difference. 🟢 **The check cost four `grep` invocations.** It is now the first
+thing this pass's successor should do, and `Gap 540-A` asks for it as a gate.
+
+### 🟢 What `p540` did add, and what it measured it with
+
+🔴 **`make hooks` was denied before any body ran (`Code from External`) — the
+thirteenth denial in fourteen passes.** Nothing below is gate-attested. The two
+instruments that *do* work in this lane were calibrated before use:
+
+- **`raw.githubusercontent.com` grant probe.** Calibrated against a non-existent
+  address (`404`, 14 B) and a non-existent branch on a live repository
+  (`404`) — so a `200` means a payload, not a proxy artefact. 🟡 **A `200` on
+  `master` does not mean the branch exists:** `jupyterhub/jupyterhub` serves
+  byte-identical 11 640 B READMEs at `main` and `master`. That is the legacy
+  alias `gate-branch-alias` has graded since `p428`, cited rather than
+  re-registered.
+- **`WebFetch` on `github.com`**, which `p535` established is the only host it
+  resolves. Used for every star and fork count below; none is from memory.
+
+### 🟢 `Gap 539-D` — CLOSED. Both debt addresses read, and they land on opposite sides of the boundary
+
+`p539` called these *"the largest single piece of promotion debt left"* — two
+grant-attested addresses, named in 44 and 24 of this base's files, with **no
+measured star count** and off every platform table.
+
+| Repo | Grant (sidebar) | Stars | Forks | Forks/star | Default branch |
+|---|---|---|---|---|---|
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3-Clause | **8.4k** | **2.1k** | **0.250** | `main` |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 Apache-2.0 | **30.1k** | **3.2k** | **0.106** | `main` |
+
+🔵 **They are 3.6× apart on stars and 2.4× apart the other way on the ratio**,
+and that is the whole point of the next section: JupyterHub is software an
+institution *runs*, `smolagents` is a library an institution *imports*, and the
+fork ratio separates them where the star count does not.
+
+### 🟢 `Gap 539-B` — the pre-registered task, delivered on both halves
+
+**Asked:** *"run the grant gate to 600 and rank the permissive residue by
+forks-per-star."*
+
+**Half one — the gate.** 450 addresses taken from
+[`backlog-live.2026-10-29-p539.tsv`](../evidence/backlog-live.2026-10-29-p539.tsv),
+filtered to `LIVE`, with `p539`'s own 150 excluded, probed at the resolved
+default branch across six grant filenames. **600 of 3 869 now gated.** Evidence:
+[`backlog-gated-slice2.2026-10-30-p540.tsv`](../evidence/backlog-gated-slice2.2026-10-30-p540.tsv).
+
+| Verdict | Count | Share of 450 |
+|---|---|---|
+| 🟢 MIT | 208 | 46.2 % |
+| 🟢 Apache-2.0 | 68 | 15.1 % |
+| 🔴 no grant file at six probed names | 69 | 15.3 % |
+| 🟡 grant present, **title unrecognised** | 37 | 8.2 % |
+| 🔴 GPL family | 27 | 6.0 % |
+| 🔴 AGPL-3.0 | 20 | 4.4 % |
+| 🟡 CC-\* | 8 | 1.8 % |
+| 🟢 BSD | 8 | 1.8 % |
+| 🔴 MPL-2.0 / LGPL-3.0 | 4 | 0.9 % |
+| 🟢 Unlicense | 1 | 0.2 % |
+
+🔵 **The permissive share — 285 of 450, 63.3 % — is far higher than this file's
+shelf tables suggest**, and the reason is selection: the shelf is built from
+search legs that surface platforms, and platforms are the copyleft end of this
+sector. The backlog is built from whatever any pass ever *mentioned*, and prose
+mentions skew to small permissive tools.
+
+### 🔴 Half two's precondition turned out to be the pass's real finding: the 37 `UNKNOWN` are not noise
+
+The ranking needed the permissive set to be correct, so the 37 unrecognised
+titles were graded by hand, every one read at its resolved branch. Evidence:
+[`unknown-residue-graded.2026-10-30-p540.tsv`](../evidence/unknown-residue-graded.2026-10-30-p540.tsv).
+
+🟢 **Every single one resolved. Not one was unnameable.** The matcher failed in
+**twelve** distinct dialects:
+
+| Dialect | n | Why an English title-matcher misses it | Buildable? |
+|---|---|---|---|
+| `source-available` | 7 | bespoke licence with a plausible first paragraph (`Nakafa`, `OpenGaokao`, `O'Saasy`, `Elastic-2.0`, `PySilicon`, `AStheTECH`, proprietary) | 🔴 no |
+| `sector-licence` | 7 | `ECL-2.0` ×6 (Apereo ×5, Kuali) and `EPL-2.0` — real OSI licences the matcher never heard of | 🟢 6 yes, 1 weak-copyleft |
+| `jurisdiction-licence` | 7 | `EUPL` ×7, all `opetushallitus` | 🔴 no (reciprocal) |
+| `untitled-or-prefaced` | 5 | MIT/BSD with no title line — `p314`'s untitled-payload class, **still live** | 🟢 yes |
+| `template-stub` | 3 | the R two-line `YEAR: / COPYRIGHT HOLDER:` stub; the SPDX id is in `DESCRIPTION` | 🟢 yes |
+| `non-English-copy` | 2 | standard AGPL-3.0 **in Portuguese**; "all rights reserved" **in Chinese** | 🔴 no |
+| `titled-variant` | 1 | `open-webui` — BSD-3 text under its own name, plus clause 4 | 🔴 no |
+| `split-grant` | 1 | `PrairieLearn` — three grants in one file | 🔴 no |
+| `leading-whitespace` | 1 | `INGInious` — AGPL title indented two spaces | 🔴 no |
+| `field-of-use` | 1 | `Khan/tutoring-accuracy-dataset` — evaluation only | 🔴 no |
+| `data-licence` | 1 | `ODbL` — share-alike on a database, not a code grant | 🔴 no |
+| `bespoke-restricted` | 1 | `SATA` — MIT plus a non-OSI obligation | 🔴 no |
+
+🔴 **And here is the number that should change how this base treats the
+bucket: 23 of 37 are NOT buildable — 62 %.** In the named-permissive buckets the
+figure is 0 % by construction. **`UNKNOWN` is where the non-buildable grants
+concentrate, at roughly eight times the base rate of the gated population.** Any
+pass that rounds an unresolved `UNKNOWN` toward "probably fine" is wrong about it
+five times in eight.
+
+🔵 **Two of the twelve dialects are a regional bias, and it runs against the
+region this base exists to serve.** `portabilis/pre-matricula-digital` is
+ordinary AGPL-3.0 — the matcher missed it only because the text is in
+**Portuguese**. An English-keyed grant classifier systematically under-grades
+**LATAM** supply, and under-grading reads downstream as "no grant found", which
+reads as "no supply". → `Gap 540-B`.
+
+### 🟢 Half two — the ranking, and the boundary is clean
+
+Fourteen points, each **classed first by what the software is** (does an
+institution run its own copy, or import it?) and only then ordered by the ratio.
+Evidence: [`forks-per-star-rank.2026-10-30-p540.tsv`](../evidence/forks-per-star-rank.2026-10-30-p540.tsv).
+
+| Repo | ★ | Forks | **f/★** | Grant | Class |
+|---|---|---|---|---|---|
+| [`dspace/dspace`](https://github.com/dspace/dspace) | 1.1k | **1.5k** | 🟢 **1.364** | BSD-3-Clause | deploy-per-institution |
+| [`Apereo…/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 47 | 38 | 0.809 | ECL-2.0 | 🔴 **description reads "Deprecated"** |
+| [`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) | 527 | 410 | 0.778 | 🔴 AGPL+MIT+EE | deploy-per-institution |
+| [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 138 | 84 | 0.609 | MIT | deploy-per-institution |
+| [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | 17 | 9 | 0.529 | Apache-2.0 | deploy-per-institution |
+| [`opetushallitus/koski`](https://github.com/opetushallitus/koski) | 23 | 12 | 0.522 | EUPL-1.1+ | deploy-per-institution |
+| [`ucfopen/pylti1.3`](https://github.com/ucfopen/pylti1.3) | 3 | 1 | 0.333 | MIT | 🟡 n too small |
+| [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 681 | 192 | 0.282 | MIT | deploy-per-institution |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 8.4k | 2.1k | **0.250** | BSD-3-Clause | deploy-per-institution |
+| — | — | — | 🔵 *boundary* | — | — |
+| [`Teachable-AI-Lab/tutor_gym`](https://github.com/Teachable-AI-Lab/tutor_gym) | 11 | 2 | **0.182** | MIT | import-as-dependency |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | 928 | 130 | 0.140 | 🔴 CC-BY-SA-4.0 | import-as-dependency |
+| [`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) | 561 | 69 | 0.123 | BSD-3-Clause | import-as-dependency |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 30.1k | 3.2k | 0.106 | Apache-2.0 | import-as-dependency |
+| [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) | 91 | 4 | 0.044 | MIT | import-as-dependency |
+
+🟢 **The classes separate perfectly and the gap is empty**: every
+deploy-per-institution point sits at **≥ 0.250**, every import-as-dependency
+point at **≤ 0.182**, and nothing falls in the 0.068 between them. Stars do not
+do this — `smolagents` (30.1k) and `jupyterhub` (8.4k) are both large and land
+on opposite sides.
+
+🔴 **Said plainly: n = 14, from one sector, read in one hour.** A boundary
+fitted to fourteen points is a hypothesis, not a constant. 🔵 **What makes it
+worth carrying anyway is that the classing was done independently of the
+ratio** — by reading what each repository *is* — and the ratio reproduced it
+without a single inversion. → `Gap 540-C` asks for it at n ≥ 60 before any
+recipe depends on the threshold.
+
+🔵 **The usable form, for an engagement:**
+
+> **f/★ ≥ 0.25 → fork it.** This is software institutions run their own copy of.
+> Budget for carrying a fork: migrations, upgrades, local schema.
+> **f/★ ≤ 0.15 → pin it.** This is a dependency. Budget for version drift, not
+> for a fork.
+> **Between, or n < 50 stars → the ratio says nothing.** Read the repository.
+
+🟡 **And it immediately pays for itself twice.** `dspace` at **1.364** — more
+forks than stars — is the strongest institutional signal this base has measured,
+and the ratio *alone* would also have promoted `OpenLRS` at 0.809, whose
+repository description is the single word **"Deprecated"**. 🔴 **The ratio
+ranks; it does not vet.** A liveness read stays mandatory.
+
+### 🟢 Two agents shelved — and only one of them is a discovery
+
+🟢 **[`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) — MIT · 91★ · 4
+forks · `main` · 88 commits.** Grant read first-hand at
+`main/LICENSE`: *"MIT License / Copyright (c) 2026 Taewoo Park"*. A Claude Code
+plugin that turns a student's **own** course materials — lecture notes,
+homework, marked solutions — into a per-course study graph held as editable
+markdown on their disk, with local OCR for handwritten work. 🔵 **Why it earns a
+row on a studio shelf:** every tutoring agent on this shelf starts from a model's
+prior or from a vendor's curriculum. This one starts from the artefacts the
+learner already has and keeps them local, which is the only architecture on this
+page that needs no data-protection conversation before a pilot. 🔴 **4 forks.
+It is an architecture to read, not a dependency to take.**
+
+🟢 **[`Teachable-AI-Lab/tutor_gym`](https://github.com/Teachable-AI-Lab/tutor_gym)
+— MIT (untitled payload) · 11★ · 2 forks · `main`.** *"Automated tutor
+environments for evaluating learning & tutoring agents"* — harnesses that run
+LLM tutor and simulated-student evaluations against **CTAT**, **Apprentice** and
+**OATutor**. 🟢 **It fills a named hole:** this base has shelved tutoring agents
+since its earliest passes and has never held a way to *evaluate* one, and
+`OATutor` is already on this shelf, so the pairing is immediate. 🔴 11★ — the
+harness is early; the value is the evaluation protocol, not the code volume.
+
+### 🔴 The mandated trending leg, for the twelfth consecutive pass, and the false positive repeated a third time
+
+`p537` established that `github trending education AI 2026` does not index
+GitHub Trending; `p538` and `p539` reproduced it, each with a different
+off-target false positive. 🔴 **`p540` reproduces it again.** The leg returned
+`rohitg00/ai-engineering-from-scratch` (an AI-engineering tutorial, not education
+technology) and `MadsLorentzen/ai-job-search` (a job-search tool) as "education
+trending", alongside the two genuine hits above. 🔵 **Three passes, three
+different false positives, one shape: the summariser treats "a repository that
+teaches something" as education supply.** The leg is kept because it produced
+`PAIDEIA`, which nothing else did — but its yield is one in four and should be
+stated as such every time.
+
+### 🔜 Gaps registered by `p540`
+
+- 🔴 **`Gap 540-A`** — **four of five candidates this pass nearly presented as finds were already in the committed tree**, caught only by an ad-hoc pre-write `grep`. 🔵 **Wire it:** a gate that takes each address a pass is about to shelve and fails if it already appears in the eight curated pages without being registered as a restatement. `gate-capability-absence` is the nearest existing instrument; this is its mirror image — a restated **presence**.
+- 🔴 **`Gap 540-B`** — **the grant classifier is English-keyed, and that is a LATAM bias.** `portabilis/pre-matricula-digital` is ordinary AGPL-3.0 misgraded solely because the text is Portuguese. 🔵 **Cheap fix with a measurable denominator:** add Portuguese and Spanish title strings for the GPL/AGPL/MIT/Apache families, re-run over the 600 gated addresses, and report how many verdicts move. Until then every "no grant found" on a LATAM address is unsafe.
+- 🟡 **`Gap 540-C`** — the forks-per-star boundary is fitted to **n = 14** from one sector in one hour. 🔵 **Re-measure at n ≥ 60** off the 285 permissive addresses already gated, classing each independently of the ratio before computing it, and report whether the empty band at 0.18–0.25 survives. **No recipe may depend on the threshold until it does.**
+- 🟡 **`Gap 540-D`** — **`UNKNOWN` carries 62 % non-buildable against ~0 % in the named buckets**, so a pass that leaves it unresolved is carrying concentrated risk silently. 🔵 **Make it a first-class verdict:** `UNKNOWN` should gate **red**, not amber, until a human or a later pass resolves it. 37 of 450 is an hour's work at this pass's rate; 8.2 % of the remaining 3 269 is roughly 270.
+- 🔴 **`Gap 540-E`** — **`make hooks` denied for the thirteenth time in fourteen passes** (`Code from External`), so `Gap 539-F`'s 17 red gates are **still unverdicted** and nothing in this pass is gate-attested. 🔵 This is not an effort problem and no pass can close it from inside. **It needs the operator to grant the execution lane**, and it should be reported upward on every pass until it is granted or declined.
+- 🔴 **`Gap 539-B` is advanced, not closed** — 600 of 3 869 gated. **3 269 remain.**
+- 🟢 **`Gap 539-D` CLOSED** — both addresses read first-hand, both now carry measured star counts.
+- 🔴 **`Gap 538-B` HOLDS** — seven of the eleven Moodle codebases are still unread. Untouched by this pass.
+
 ## 🆕 `p539` — `2026-10-30` — **🟢 THE EMPTY QUEUE IS SOLVED, AND THE BACKLOG'S HEAD TURNED OUT TO BE THE FIELD'S OWN INFRASTRUCTURE: 3 869 ADDRESSES, 96.2 % LIVE, GATED IN BULK. 🔴 `Gap 538-A` WAS A RESTATED ABSENCE — THIS BASE HAS GRADED FORK LINEAGE FROM FULL GIT HISTORIES SINCE `p404`, AND `gate-capability-absence` EXISTS TO CATCH EXACTLY THAT AND IS NOT POINTED AT THE GAP LEDGER. 🔴 THE PRE-REGISTERED FIGURE FIX, RUN ALONE, MADE ITS QUEUE WORSE (9 → 14) AND NEEDED FIVE MORE RULES TO REACH 3. 🟢 FOUR AGENTS SHELVED (62 TOTAL), EMEA'S MATURITY GAP ANSWERED BY THE STATE.**
 
 ⏱️ **A note on this entry's date, so two stamps do not silently disagree.** This

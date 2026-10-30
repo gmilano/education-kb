@@ -1,8 +1,88 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-29
+updated: 2026-10-30
 ---
+
+## 🆕 `p540` — `2026-10-30` — **🟢 `539-B` ADVANCED ON BOTH HALVES AND `539-D` CLOSED. 🔴 THE PASS'S OWN FINDING IS ABOUT ITSELF: FOUR OF FIVE CANDIDATES IT NEARLY PRESENTED AS DISCOVERIES WERE ALREADY IN THE TREE — A **RESTATED PRESENCE**, THE MIRROR OF `538-A`. 🔴 `make hooks` DENIED FOR THE THIRTEENTH TIME IN FOURTEEN PASSES, SO `539-F`'s 17 RED GATES REMAIN UNVERDICTED. FIVE REGISTERED (`540-A`…`540-E`).**
+
+### 🟢 `Gap 539-D` — CLOSED
+
+**Asked:** *"`jupyterhub/jupyterhub` (named in 44 of this base's files) and
+`huggingface/smolagents` (24) are grant-attested by gate and unread, so neither
+carries a measured star count and both remain off the platform tables. Largest
+single piece of promotion debt left."*
+
+**Delivered:** both read first-hand on `github.com`, both filed to
+[`../repos/foundations.md`](../repos/foundations.md#-p540--six-rows-off-the-gate-to-600-and-the-first-forks-per-star-ranking-this-base-has-run).
+
+| Repo | Grant (sidebar) | Stars | Forks | f/★ | Default branch |
+|---|---|---|---|---|---|
+| `jupyterhub/jupyterhub` | 🟢 BSD-3-Clause | 8.4k | 2.1k | 0.250 | `main` |
+| `huggingface/smolagents` | 🟢 Apache-2.0 | 30.1k | 3.2k | 0.106 | `main` |
+
+🔵 They land on opposite sides of this pass's deployment-model boundary, which
+is the first use the ratio was put to.
+
+### 🟡 `Gap 539-B` — ADVANCED on both halves, NOT closed
+
+**Asked:** *"run the grant gate to 600 and rank the permissive residue by
+forks-per-star."*
+
+**Half one.** 450 further `LIVE` addresses probed at the resolved default
+branch across six grant filenames. **600 of 3 869 gated; 3 269 remain.**
+Result: 285 permissive (63.3 %), 69 no grant, 37 unrecognised title, 51
+copyleft, 8 `CC-*`.
+Evidence: [`../evidence/backlog-gated-slice2.2026-10-30-p540.tsv`](../evidence/backlog-gated-slice2.2026-10-30-p540.tsv).
+
+**Half two.** 14 points ranked, classed independently of the ratio, with an
+empty band at 0.182–0.250 separating deploy-per-institution from
+import-as-dependency.
+Evidence: [`../evidence/forks-per-star-rank.2026-10-30-p540.tsv`](../evidence/forks-per-star-rank.2026-10-30-p540.tsv).
+
+🔴 **Half two is advanced on n = 14, which is not enough to close it** — see
+`Gap 540-C`. 🔴 **And the ranking's own second place is a repository described
+as "Deprecated"**, which is recorded as the method's limit rather than hidden:
+forks-per-star ranks, it does not vet.
+
+### 🔴 The pass's own finding, registered as `Gap 540-A`: this base catches a restated *absence* and not a restated *presence*
+
+`p538` registered `Gap 538-A` against two instruments and 23 passing controls
+that already existed, and `p539` correctly called it a **restated absence**.
+🔴 **`p540` nearly committed the mirror error five times and caught four.**
+
+| Candidate | Nearly presented as | 🔴 Already in the tree |
+|---|---|---|
+| `open-webui` branding clause | "BSD-3 that is not BSD-3" | Known since `p441` — `repos/trending.md:430`, `README.md:4081`, and a whole evidence directory `compose/code/p441-bsd-variant/` |
+| `opetushallitus/koski` EUPL grant | "an unfiled state estate" | `agents/trending.md:32627` already carries it at 23★, EUPL-1.1-or-later, 22 212 commits |
+| `ECL-2.0` as a sector licence family | "a new licence family" | `sakaiproject/sakai` is filed ECL-2.0; the licence census at `agents/trending.md:10488` counts it in its own band |
+| `GarethManning/education-agent-skills` | "new from the trending leg" | Already shelved — 78 mentions, 2 table rows |
+| `OPTIMETA/PAIDEIA` | new | 🟢 **Genuinely new — 0 mentions anywhere in the tree** |
+
+🔵 **One in five survived**, and the check that caught the other four was four
+ad-hoc `grep` invocations. 🟢 **The useful observation is that koski's commit
+count moved** — 22 212 at the earlier read, **22 744** at this one, **+532** —
+so the right action on a restated presence is often to *refresh the figure*,
+not to discard the candidate.
+
+### 🔜 Gaps registered by `p540`
+
+- 🔴 **`Gap 540-A` — nothing on this base catches a restated PRESENCE.** `gate-capability-absence` (`p392`) catches an absence whose refutation is in the base's own files; there is no mirror for a *find* the base already holds. 🔵 **Wire it:** take each address a pass is about to shelve, fail if it already appears in the eight curated pages unless the pass registers it as a restatement with a reason. Low cost — the address ledger already exists and the predicate is one `grep` per candidate. **Highest-value gate change available on this pass's evidence**, because it audits the base's own self-knowledge from the other direction.
+- 🔴 **`Gap 540-B` — the grant classifier is English-keyed, and that is a LATAM bias.** `portabilis/pre-matricula-digital` is ordinary AGPL-3.0, graded `UNKNOWN` solely because its text is Portuguese; `yuanjiusheng/cloud-learning-ce` reserves all rights in Chinese and was equally invisible. 🔵 **Fix with a denominator:** add Portuguese and Spanish title strings for the GPL/AGPL/MIT/Apache families, re-run over the 600 gated addresses, and **report how many verdicts move**. Until that number exists, every "no grant found" on a LATAM address is unsafe to repeat — and this base has declared LATAM supply gaps for many passes on exactly that instrument.
+- 🟡 **`Gap 540-C` — the forks-per-star boundary is fitted to n = 14**, one sector, one hour. 🔵 **Re-measure at n ≥ 60** off the 285 permissive addresses already gated, classing each by deployment model **before** computing the ratio, and report whether the empty 0.182–0.250 band survives. 🔴 **No recipe may depend on the threshold until it does** — `P583` and `P584` cite the ratio as an estimating aid and neither branches on it, which is deliberate.
+- 🟡 **`Gap 540-D` — `UNKNOWN` carries 62 % non-buildable against ~0 % in the named buckets**, so leaving it unresolved carries concentrated risk silently. 🔵 **Make it a red verdict, not an amber one**, until a pass resolves it by hand. 37 of 450 took about an hour at this pass's rate; 8.2 % of the remaining 3 269 is roughly 270, so the whole backlog is tractable at a few passes' effort.
+- 🔴 **`Gap 540-E` — `make hooks` denied for the thirteenth time in fourteen passes** (`Code from External`, denied before any body ran). Consequences: nothing in `p540` is gate-attested; `Gap 539-F`'s **17 red standing gates remain unverdicted**; `Gap 539-A`'s lineage work needs `p405`'s `forkgroup.sh` and cannot run; `gate-tables`, `gate-region-headings` and `gate-promotion-ratchet` could not judge this pass's edits. 🔵 **No pass can close this from inside.** It requires the operator to grant the execution lane, and it should be reported upward on every pass until granted or declined. 🟡 The structural contracts were honoured by hand instead: frontmatter present and dated on all nine pages, the five-value region vocabulary unchanged, `Opportunities by region` still a single heading with its five `###` subsections, no blank line splitting a table, and no header row left as data.
+- 🟢 **One real defect found and fixed by the hand-run table check, and it is in pre-existing content.** [`../repos/foundations.md`](../repos/foundations.md) line 470 carried an **unescaped `|` inside a cell** — the `opensalt/opensalt` row's licence-correction note read `` `GPL-3.0|Apache-2.0` `` — which renders a **five-column row inside a four-column table**. Escaped this pass. 🔵 **This is `gate-tables` territory and `gate-tables` has not run for fourteen passes** (`540-E`), so the row shipped broken for at least two. 🔵 The check that caught it is twelve lines of column-count comparison and is worth adding to the standing suite as an **escaped-pipe arm**: the existing `BLANK-SPLITS-TABLE` predicate does not see this shape, and a naive column counter flags the *fixed* row as well unless it strips `\|` first.
+- 🔴 **A defect this pass introduced, caught before commit, and the mechanism generalises.** The twelve-dialect grading was produced by reading each grant file at the address and branch the machine gate had already resolved — but the evidence file was then **hand-authored**, and the `address / branch / grant_file` columns were typed from memory rather than joined from the gate's output. 🔴 **11 of 37 rows carried a wrong branch or filename** (`KualiCo/rice` is on `java11` not `master`; `QingdaoU/Judger` on `newnew`; `hcengineering/platform` on `develop`; `EducationalTestingService/skll`'s grant is `LICENSE.txt`, not `LICENSE`). 🟢 **The verdicts were right** — those came from real reads — **but a third of the locating columns were wrong**, which is worse than useless: it sends the next pass to a 404 and looks like a retraction. 🟢 Corrected by joining against [`backlog-gated-slice2.2026-10-30-p540.tsv`](../evidence/backlog-gated-slice2.2026-10-30-p540.tsv); the two files now agree cell-for-cell. 🔵 **The rule earned: when a machine stage has already resolved a field, a later hand-authored artefact must JOIN that field, never retype it.** Caught here only because a URL-verification sweep over the whole diff produced one false `404` and it was chased instead of waved off.
+
+### 🔴 Carried, untouched by this pass
+
+- 🔴 **`Gap 539-A`** — 27 of 33 FILED-vs-HISTORY collision rows ungraded. Needs `forkgroup.sh`, blocked on `540-E`. 🟡 `p540` added one instance to its queue: `ucfopen/pylti1.3` (3★) and `dmitry-viskov/pylti1.3` (138★) share a name and a one-line description, and neither declares a fork.
+- 🔴 **`Gap 539-E`** — point `gate-capability-absence` at the gap ledger. Blocked on `540-E`. 🔵 `540-A` is its mirror and should be built in the same change.
+- 🟡 **`Gap 539-C`** — the figure reader's two-address coin-toss. No instance on this tree; unbounded above.
+- 🔴 **`Gap 539-F`** — 17 of 66 standing gates red, still no suite verdict. Blocked on `540-E`.
+- 🟡 **`Gap 538-B`** — seven of eleven Moodle codebases unread.
+- 🔴 **`Gap 536-C` / `Gap 240`** — upstream contribution remains blocked on **operator authorisation**, not effort. `p537`'s reasoning stands and `p540` does not revisit it: opening an issue on a third-party repository is an outward-facing write under the operator's identity from an unattended scheduled run, and a scheduled prompt is not consent for one.
 
 ## 🆕 `p537` — `2026-10-29` — **🟢 `536-A` ANSWERED WITH A WIRED RATCHET AND `536-D` CLOSED — AND `536-D`'s ANSWER INVERTS ITS OWN PREMISE: THE GULF HOLE IS A **GRANT** HOLE. 🔴 THE PROMOTION QUEUE IS NOT SAFE TO PROMOTE FROM: **45 %** MIS-SPELLED, TWO ARCHIVED, TWO FORKS. 🔴 `536-C` IS **DELIBERATELY NOT ACTIONED** AND THE REASON IS STATED. FOUR REGISTERED (`537-A`…`537-D`).**
 

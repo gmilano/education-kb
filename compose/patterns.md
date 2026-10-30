@@ -6,7 +6,7 @@ updated: 2026-10-30
 
 # Compose Patterns — Education
 
-**Pass `p539` · 2026-10-30.** **Thirty-three** recipes. Every component named below
+**Pass `p540` · 2026-10-30.** **Thirty-five** recipes. Every component named below
 was read from its repository page, and **every licence was read from the licence
 file's own title block** over `raw.githubusercontent.com`. 🟢 **The parenthesis
 this header carried — "`github.com` returns HTTP 403" — is corrected at `p534`:
@@ -1793,3 +1793,98 @@ a generated lesson is generated content.
 **Shape of the engagement.** 6–8 weeks, of which 2 are Agora commercials and
 regional compliance rather than engineering.
 
+
+## P583 — The efficacy audit: prove the AI a LATAM institution already bought actually worked (LATAM first; the shape is global)
+
+**Brief.** UNESCO IESALC surveyed 200 higher-education institutions across 19
+countries in Latin America and the Caribbean: **87 %** use AI somewhere, **74 %**
+in teaching and learning, **26 %** hold a formal AI strategy, and 🔴 **9 %
+evaluate what their AI use delivers.** 🔵 **Ninety-one percent of institutions
+that already spent the money cannot say whether it worked** — and unlike an
+adoption pitch, that buyer has a budget line to defend to a rector, a ministry
+or an accreditor. This recipe does not deploy AI. It **measures AI that is
+already deployed**, which is the engagement the region's numbers actually
+describe.
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| Learner-record feed | [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | 🟢 Apache-2.0 | Forwards and filters xAPI statements **governed by a declared xAPI Profile**, so the measurement has a schema an auditor can read rather than ad-hoc ETL. 17★ · 9 forks — small, and the Profile governance is why it is here |
+| Statement source | [`DavidLMS/learnmcp-xapi`](https://github.com/DavidLMS/learnmcp-xapi) | 🟢 MIT | Already on this base's agent shelf. It is the piece that makes an agent's tutoring **write back** to a Learning Record Store instead of evaporating into a chat log — without it there is nothing to audit |
+| LMS extraction | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 MIT | Grades, enrolments and course structure out of Canvas across the API boundary. Canvas is AGPL-3.0; **do not fork it**. 🟡 Default branch is `develop` — pin it, not `main` |
+| Experiment harness | [`EducationalTestingService/skll`](https://github.com/EducationalTestingService/skll) | 🟢 BSD-3-Clause | Configuration-driven ML experiments from **Educational Testing Service** — the organisation behind TOEFL and the GRE. The provenance is the point: a rector will accept a method from ETS that they will not accept from a consultancy's notebook |
+| Causal estimator | the causal-inference layer filed at `p535` | 🟢 permissive | Adoption is self-selected, so a raw before/after comparison measures who opted in. This is the layer that makes the answer a finding rather than a correlation |
+| Institutional corpus | [`dspace/dspace`](https://github.com/dspace/dspace) | 🟢 BSD-3-Clause | Where theses, datasets and OER already live. **1.1k★ · 1.5k forks — f/★ 1.364**, the strongest institutional-deployment signal this base has measured, which means the client very likely already runs one |
+
+**How it wires together.** `canvasapi` pulls the pre-period and post-period
+gradebook and enrolment data; `learnmcp-xapi` supplies interaction-level
+statements for whatever agent is already in use; `xapipe` normalises both into
+one Profile-governed stream; `skll` runs the specification as a configuration
+file so the whole analysis is a reviewable artefact rather than a notebook; the
+`p535` estimator corrects for self-selection into AI use. Output is one
+document: *what changed, for whom, by how much, and with what confidence.*
+
+**Why it is sellable here specifically.** 🟢 Counterparts now have names. The
+**Observatory on Artificial Intelligence in Education for Latin America and the
+Caribbean** launched **14 April 2026**, UNESCO-led with **CAF**, **CENIA**
+(Chile), **Cetic.br** (Brazil), **ECLAC**, **Fundación Ceibal** (Uruguay),
+**Fundación Santillana**, **Tecnológico de Monterrey**, **ProFuturo**,
+**Universidad del Desarrollo** and **IRCAI**. An efficacy method published
+through that network is worth more than the same method sold institution by
+institution.
+
+🔴 **Where it breaks.** If the institution has no LRS and no interaction
+logging, there is no pre-period and the first engagement is instrumentation,
+not measurement — say so in week one rather than discovering it in week four.
+🔴 And `xapipe` is a 17-star project: read it before depending on it, and be
+ready to carry it.
+
+**Shape of the engagement.** 8–10 weeks. Weeks 1–2 instrumentation audit,
+3–5 extraction and normalisation, 6–8 estimation, 9–10 the document and its
+defence. 🔵 It converts a sunk cost into a renewal argument, which is why it
+sells to a buyer who will not fund another pilot.
+
+## P584 — Policy conformance over an existing LMS: proving a district's AI rules are being followed (North America first)
+
+**Brief.** The 2026 US state legislative session produced **134 AI-in-education
+bills across 31 states**. Maryland gives all 24 districts **120 days from MSDE
+guidance** to adopt aligned policies; Oklahoma requires a written district AI
+policy before the 2027-28 school year and — 🟡 per a secondary source this pass
+could not confirm against the enrolled text — bars AI from being **the primary
+basis for grading, discipline, placement or other high-stakes decisions**. 🔵
+**Districts now have policies and no way to demonstrate compliance with them.**
+That is the product: not a tutor, an evidence trail.
+
+| Layer | Component | Grant | Why this one |
+|---|---|---|---|
+| LMS reader | [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) | 🟢 MIT | Reads gradebook changes, enrolment and course structure across the API boundary — no AGPL inheritance from the Canvas core |
+| LTI attachment | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | 🟢 MIT | 138★ · 84 forks. The LTI 1.3 Advantage route into an LMS the district will not let you fork. 🟡 A same-named `ucfopen/pylti1.3` exists at 3★ with an identical description and **neither declares a fork** — pin the owner, not the name |
+| Event stream | [`yetanalytics/xapipe`](https://github.com/yetanalytics/xapipe) | 🟢 Apache-2.0 | Profile-governed forwarding, so "an AI touched this grade" is a typed statement rather than a log line |
+| Agent loop | [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 🟢 Apache-2.0 | 30.1k★ · 3.2k forks, **f/★ 0.106 — a dependency, not a fork**. Reach for it rather than a full framework when the task is one classification per event |
+| Compute substrate | [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | 🟢 BSD-3-Clause | 8.4k★ · 2.1k forks, **f/★ 0.250 — run your own copy, budget the fork.** The standard way a district gives staff isolated, resourced analysis environments |
+
+**How it wires together.** The LTI 1.3 tool registers once per district tenant;
+`canvasapi` polls grade and enrolment changes; each change becomes an xAPI
+statement through `xapipe` tagged with whether an AI system contributed and in
+what role; a `smolagents` loop classifies each statement against the district's
+written policy clauses; the output is a per-course, per-term conformance report
+an administrator can hand to a board. 🔵 **The deliverable is the report, and
+the report is what the statute created demand for.**
+
+🔵 **Reuse the second surface while you are there.** The **ADA
+web-accessibility update** landed for large public institutions in April 2026
+and is the compliance surface AI demonstrably helps with — captioning, alt
+text, reading-level adjustment — over the same content inventory this pipeline
+already enumerates. Scoping both together roughly halves the second one.
+
+🔴 **Where it breaks.** The policy clauses are prose, and a classifier over
+prose will disagree with a human reader at the margin. **Ship it as evidence
+for a human decision, never as the decision** — which is also what Oklahoma's
+provision requires, so the architectural constraint and the legal one point the
+same way. 🔴 And verify the Oklahoma status against the legislature's own
+record before putting it in a proposal; this base has a conflict on it between
+two secondary sources.
+
+**Shape of the engagement.** 6–8 weeks for one district tenant, of which week 1
+is reading the district's actual policy text. 🔴 **It does not generalise across
+districts for free** — the clause set is local, so build the classifier's rule
+set as configuration from day one.
