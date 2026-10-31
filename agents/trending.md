@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (ninth pass · `p571`) — 🔴 a total nil on four axes, and the finding is that this base had already found what it was looking for
+
+🔴 **Zero addresses new to this base, on every channel opened.** Eight `WebSearch`
+legs and four GitHub topic axes, **67 rows read, 0 new**.
+
+| channel | rows | new to base |
+| --- | --: | --: |
+| 🔴 `WebSearch` — the eight mandated legs | 8 | 🔴 **0** — **ninth consecutive nil** |
+| 🔴 [`topic:question-generation`](https://github.com/topics/question-generation) (241) | 20 | 🔴 **0** |
+| 🔴 [`topic:essay-scoring`](https://github.com/topics/essay-scoring) (17) | 17 | 🔴 **0** |
+| 🔴 [`topic:language-learning`](https://github.com/topics/language-learning) (4.8k) | 10 | 🔴 **0** |
+| 🔴 [`topic:mooc`](https://github.com/topics/mooc) (661) | 20 | 🔴 **0** |
+
+### 🔴 The retraction this section exists to make
+
+🔴 **`p571` initially drafted `topic:question-generation` as a virgin axis and its
+top rows as five new addresses. Both claims were false, and they were caught
+before publication by grepping `trending.md` rather than the shelf pages.**
+
+- 🔴 **Pass 85 (`2026-10-09`) bought the axis** — 227 repositories then, 241 now —
+  and recorded *"An item-generation tier exists now, 5 of 5 MIT."*
+- 🔴 **`Gap 352` refuses rows 21–227 at ~30% precision**: a costed decision,
+  re-affirmed, explicitly *"not an omission."* `p571` re-read the top twenty and
+  **confirms the refusal was right.**
+- 🔴 Every other address this pass surfaced — `read-frog`, `Echo-Loop`,
+  `LLPlayer`, `hypatia`, `scikit-learn-mooc`, `course-tencent-cloud`,
+  `cefr-asag-corpus`, `ProTACT`, `CorrecaoRedacao` — **was already held.**
+
+🔵 **The method failure, recorded because it is cheap to repeat: this pass built
+its "what do we already have" inventory by grepping the SHELF pages
+(`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`) and not the
+63k-line `trending.md` history.** A shelf grep reports absences the history
+refutes. 🟢 **Rule: inventory against `trending.md` and `intel/open-gaps.md`, which
+are where this base records what it has seen — the shelves only record what it
+promoted.**
+
+### 🟢 What the pass did deliver, which is a hygiene fix rather than a discovery
+
+🔴 **Seven item-generation rows found at pass 85 were on ZERO shelf pages at
+`HEAD`** — verified before writing — while `P-571-A` kept shipping *"nothing
+permissive generates psychometrically defensible items"* with a bare model prompt
+in its authoring slot.
+
+🟢 **Now shelved** in [`../repos/foundations.md`](../repos/foundations.md), with
+grants carrying **two independent reads**: pass 85's recorded byte count and a
+`p571` re-read. 🟢 **Five of five re-read rows matched exactly** — `patil-suraj`
+1,068 B · `Questgen.ai` 1,077 B · `lmqg` 1,065 B · `question_generator` 1,073 B ·
+`Leaf` 1,073 B — corroborating both the earlier reads and the instrument.
+
+### 🔴 `topic:essay-scoring` vs `topics/automated-essay-scoring` — a tag-variant decoy
+
+| tag | population | ★ ceiling | permissive grants |
+| --- | --: | --: | --: |
+| 🟢 `topics/automated-essay-scoring` (pass 84) | **35** | — | 🟢 **8**, incl. `ProTACT` **BSD-3-Clause** |
+| 🔴 `topic:essay-scoring` 🆕 `p571` | 🔴 **17** | 🔴 **34** | 🔴 **0** |
+
+🔵 **The same capability splits across two tags and the short form is the empty
+one.** Sweeping only the short form would have produced *"no permissive AES
+exists"* — **contradicting this base's own pass-84 record of eight permissive
+grants.** 🟢 **Rule: when a capability has both a long hyphenated tag and a short
+one, sweep the LONG form; the short form collects the abandoned and the
+unlicensed.**
+
+🟡 Two Brazilian rows re-probed for grants this pass —
+`renan-aalmeida/AES_Enem_Competencia5` and `DaviSantos-23/Reda-o` — **both exist,
+neither grants anything**, reproducing `Gap 235`'s finding (*the Portuguese
+essay-scoring tier is ungranted, not absent*) on a second independent tag.
+
 ## 2026-10-31 (eighth pass · `p570`) — four axes nobody had ever queried, and the one that paid was `topic:rubric`
 
 🟢 **`8` addresses new to a 569-pass base**, from four GitHub topic axes that

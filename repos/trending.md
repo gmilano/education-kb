@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (ninth pass · `p571`) — 🔴 four axes, 67 rows, zero new addresses; the yield was promoting a pass-85 tier that no shelf page had ever carried
+
+🔴 **Nil on every channel.** `topic:question-generation` (**241**),
+`topic:essay-scoring` (**17**), `topic:language-learning` (**4.8k**) and
+`topic:mooc` (**661**) returned **0 addresses new to this base**, as did the eight
+mandated `WebSearch` legs — **ninth consecutive nil** on that channel.
+
+🔴 **`topic:question-generation` was bought at pass 85** (227 repositories then)
+and `Gap 352` refuses rows 21–227 at **~30% precision**. `p571` re-read the top
+twenty and **confirms that refusal.**
+
+### 🟢 The hygiene fix: seven rows promoted from history to the shelf
+
+🔴 **All seven were on ZERO shelf pages at `HEAD`**, 86 passes after discovery.
+Grants below carry **pass 85's byte count and a `p571` re-read**; 🟢 **5 of 5
+re-reads matched exactly.**
+
+| Repo | Licence (file) | ★ | Read status |
+| --- | --- | --: | --- |
+| [patil-suraj/question_generation](https://github.com/patil-suraj/question_generation) | **MIT** (1,068 B) | 1,100 | 🟢 re-read ✅ matches |
+| [ramsrigouthamg/Questgen.ai](https://github.com/ramsrigouthamg/Questgen.ai) | **MIT** (1,077 B) | 952 | 🟢 re-read ✅ matches |
+| [asahi417/lm-question-generation](https://github.com/asahi417/lm-question-generation) | **MIT** (1,065 B) | 366 | 🟢 re-read ✅ matches · **9 languages**, ⚠️ no `pt` |
+| [artitw/text2text](https://github.com/artitw/text2text) | 🟡 **MIT + rider** (1,325 B) | 305 | 🔴 `Gap 353`/`P922` rider **read verbatim this pass**: *"…you agree to abide by the licensing requirements set forth by the respective components used."* Dependency closure must be cleared separately |
+| [AMontgomerie/question_generator](https://github.com/AMontgomerie/question_generator) | **MIT** (1,073 B) | 298 | 🟢 re-read ✅ matches |
+| [KristiyanVachev/Leaf-Question-Generation](https://github.com/KristiyanVachev/Leaf-Question-Generation) | **MIT** (1,073 B) | 139 | 🟢 re-read ✅ matches · **distractors** |
+| [PragatiVerma18/MLH-Quizzet](https://github.com/PragatiVerma18/MLH-Quizzet) | **MIT** (1,069 B) | 97 | 🟡 carried from pass 85 · takes **teacher PDFs** |
+
+🔴 **The trap, re-confirmed:**
+[`KristiyanVachev/Question-Generation`](https://github.com/KristiyanVachev/Question-Generation)
+is **GPL-3.0** (35,149 B) at **495★** — same author as the MIT `Leaf` row, 3.5× the
+stars. **Star-sorting this axis returns the copyleft sibling first.**
+
+### ⚠️ Instrument — `P914` reproduced with the opposite symptom
+
+🔴 `curl -sI | head -1` reads **200 for every slug** (`P914`, pass 85). 🔴 **`p571`
+adds: the same command with `-w "%{http_code}"` reads 403 for every slug** — real
+and fabricated alike. 🔵 **`curl -sI` against this proxy is uninformative in BOTH
+directions, and which wrong answer you get depends on your flags.** 🟢 Only the
+rendered page (fabricated control → **404**) and `raw.githubusercontent.com`
+(**200** + bytes) discriminate. 🔴 `api.github.com` is scoped to the harness
+repository this session, so the *"GitHub REST index"* claimed in
+[`foundations.md`](foundations.md)'s header **was unavailable for this pass**.
+
 ## 2026-10-31 (eighth pass · `p570`) — `topic:rubric` answers `187` and had never been queried once in 569 passes
 
 🟢 **Seven new addresses from one axis**, all granted — the layer this base

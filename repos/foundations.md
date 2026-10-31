@@ -17,6 +17,91 @@ older rows carry GitHub's licence determination and say so where it matters.
 overwhelmingly **copyleft** — the opposite of the agent layer. Two exceptions
 have now been established, and one of them is new this pass and important.
 
+## Ninth pass (`p571`, 2026-10-31) — 🔴 zero new addresses, and the pass's whole value is a shelving defect: a tier this base FOUND at pass 85 never reached this page
+
+🔴 **`derived foundations rows: **7**` added this pass, and not one is a new
+address.** All seven were discovered by **pass 85 (`2026-10-09`)**, recorded in
+[`../agents/trending.md`](../agents/trending.md) as *"An item-generation tier
+exists now, 5 of 5 MIT"* — and then **never promoted to a shelf page.** Verified
+against `HEAD` before this pass wrote anything:
+
+| repo | on `agents/top.md` at HEAD | on this page at HEAD |
+| --- | --: | --: |
+| all seven item-generation rows | 🔴 **0** | 🔴 **0** |
+
+🔴 **Meanwhile [`../compose/patterns.md`](../compose/patterns.md) `P-571-A` has
+been shipping the opposite claim** — *"nothing permissive generates
+psychometrically defensible items"* — with its item-authoring step left to a bare
+model prompt. 🔵 **The base knew since pass 85; its shelf and its patterns did
+not.** This is trend 11 (*a closed gap keeps being published*) in its mirror
+image: **an open finding that never got published.** It is corrected below.
+
+### ⚠️ What this pass did NOT find, stated plainly
+
+🔴 **`topic:question-generation` is NOT a virgin axis, and any claim that it is
+would be false.** Pass 85 bought it (**227 repositories** then, **241** now) and
+`Gap 352` records it as **deliberately refused at ~30% precision** — a costed
+decision, not an omission. This pass re-opened it and confirmed that decision:
+re-reading its top twenty returned **zero addresses new to this base**. 🔴 **Nine
+consecutive passes with no new address from `WebSearch`**, and this pass adds
+**four topic axes with no new address either**
+(`question-generation`, `essay-scoring`, `language-learning`, `mooc`).
+
+### 🟢 The item-generation tier, now shelved
+
+Grants below carry **two independent reads**: the byte count pass 85 recorded, and
+a re-read this pass over `raw.githubusercontent.com`. 🟢 **Five of five re-read
+rows matched the recorded byte count exactly** — which corroborates the earlier
+reads and the instrument at the same time.
+
+| Repo | Licence (file) | ★ | Region | Build-on? | What it adds |
+| --- | --- | --: | --- | --- | --- |
+| [patil-suraj/question_generation](https://github.com/patil-suraj/question_generation) | **MIT** (1,068 B ✅ re-read, *"Copyright (c) 2020 Suraj Patil"*) | 1,100 | Global | ✅ permissive | The axis's **reference implementation** — answer-aware and multitask QA-QG as a HuggingFace `pipeline`. The most-starred permissive generator; recorded *"unplaced"* at pass 85. |
+| [ramsrigouthamg/Questgen.ai](https://github.com/ramsrigouthamg/Questgen.ai) | **MIT** (1,077 B ✅ re-read, *"Copyright (c) 2020 Ramsri Goutham Golla"*) | 952 | ⚠️ see note | ✅ permissive | 🟢 **Ships item *types*, not one task**: MCQ with distractors, boolean (yes/no), FAQ, paraphrase, answer prediction. T5 + sense2vec. Closest to what an assessment unit orders. |
+| [asahi417/lm-question-generation](https://github.com/asahi417/lm-question-generation) | **MIT** (1,065 B ✅ re-read, *"Copyright (c) 2024 asahi417"*) | 366 | Global | ✅ permissive | 🟢 **The multilingual row.** `pip install lmqg`; question **and answer** generation in **9 languages** (`en/fr/ja/ko/ru/it/es/de/zh`), HuggingFace checkpoints, **ACL 2023** system-demonstration paper, 385 commits. ⚠️ **No Portuguese.** |
+| [artitw/text2text](https://github.com/artitw/text2text) | 🟡 **MIT + rider** (`master/LICENSE.txt`, **1,325 B**, CRLF, *"Copyright (c) artitw"* — no year) | 305 | Global | ⚠️ **read the rider** | Multilingual text-to-text toolkit (tokenisation, embeddings, BM25/TF-IDF search, translation, language id). 🔴 **`Gap 353`/`P922`'s dependency-closure rider, read verbatim this pass** — three lines appended after the MIT warranty clause: *"This open source software utilizes other open source components with their own licensing agreements. As the consumer of this software, you agree to abide by the licensing requirements set forth by the respective components used."* 🔵 **Not a field-of-use restriction and not a copyleft trigger** — it is an acknowledgement that the grant does not cover the dependency tree, which is true of every package but is here made contractual. ⚠️ It means **the dependency closure must be cleared separately**; the row is usable, the diligence is not optional. 🟢 The rest of this pattern does not need it — skip the row if that clearance is not budgeted. |
+| [AMontgomerie/question_generator](https://github.com/AMontgomerie/question_generator) | **MIT** (1,073 B ✅ re-read, *"Copyright (c) 2020 Adam Montgomerie"*) | 298 | Global | ✅ permissive | Long-form prose → QA pairs, with an answer-aware evaluator that **ranks** generated questions. Over-generate then rank. |
+| [KristiyanVachev/Leaf-Question-Generation](https://github.com/KristiyanVachev/Leaf-Question-Generation) | **MIT** (1,073 B ✅ re-read, *"Copyright (c) 2018 Kristiyan Vachev"*) | 139 | Global | ✅ permissive | 🟢 **Distractor generation** — MCQs *with wrong-answer options*. The step a general LLM does worst, and exactly what `itembank lint` rejects on. |
+| [PragatiVerma18/MLH-Quizzet](https://github.com/PragatiVerma18/MLH-Quizzet) | **MIT** (1,069 B) | 97 | Global | ✅ permissive | 🟢 **Takes teacher PDFs** and emits a quiz — the only row whose input is the artefact a teacher already has. |
+
+⚠️ **One unresolved region conflict, recorded rather than silently picked.** Pass
+85 placed `Questgen.ai` as **APAC**. Its licence file names
+**"Ramsri Goutham Golla"** — an **individual** — and this base's `p570` instrument
+places a repository **only when the holder is an institution**. 🔵 The two rules
+disagree: the `p570` instrument says `Global`, pass 85's placement says `APAC`,
+and the repository page states no location. **Left as a flagged conflict for a
+later pass to resolve at source; do not quote the region to a client.**
+
+🔴 **The licence trap on this axis, already paid for once by this base.**
+[`KristiyanVachev/Question-Generation`](https://github.com/KristiyanVachev/Question-Generation)
+is **GPL-3.0** (35,149 B) at **495★** — the **same author** as the MIT `Leaf` row
+above, with **3.5× the stars**. A star-sorted sweep returns the copyleft sibling
+first. Pass 85 recorded this under `P171` alongside three more GPL-3.0 rows of
+**identical 35,148 B payload**, and warned that a `grep -i Affero` classifier
+calls 4 of 4 of them AGPL and is **wrong 4 of 4 times**.
+
+### 🔴 `topic:essay-scoring` is a tag-variant decoy — and that is the one genuinely new finding on this page
+
+| tag | population | ★ ceiling | permissive grants | status |
+| --- | --: | --: | --: | --- |
+| 🟢 `topics/automated-essay-scoring` | **35** | — | 🟢 **8** (incl. `doheejin/ProTACT`, **BSD-3-Clause**) | **swept at pass 84, 100% precision** |
+| 🔴 `topic:essay-scoring` 🆕 | 🔴 **17** | 🔴 **34** | 🔴 **0 shelvable** | 🆕 swept `p571` |
+
+🔵 **The same capability splits across two tags, and the shorter variant is the
+near-empty one.** Had `p571` swept only `topic:essay-scoring`, it would have
+concluded *"no permissive AES exists"* — **contradicting this base's own pass-84
+record of eight permissive grants.** 🟢 **The rule: when a capability has a
+hyphenated long-form tag and a short-form tag, sweep the LONG form.** The short
+form collects the abandoned and the unlicensed.
+
+🟡 **What the 17 add that pass 84 did not already hold: nothing shelvable, and one
+regional corroboration.** Three are Brazilian/Portuguese-language ENEM-adjacent
+(`IC-Redacoes-UTFPR/CorrecaoRedacao` — already on this base — plus
+`renan-aalmeida/AES_Enem_Competencia5` and `DaviSantos-23/Reda-o`, **both
+re-probed this pass, both with no licence grant**) and three are Korean. 🔵 That
+reproduces this base's standing LATAM finding — *the Portuguese essay-scoring tier
+is **ungranted**, not absent* (`Gap 235`) — on a second, independent tag.
+
 ## Eighth pass (`p570`, 2026-10-31) — two structural results, and one of them is a warning about this base's newest rule
 
 🟢 **`derived foundations rows: **9**` added this pass** — seven in a new layer

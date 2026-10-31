@@ -675,6 +675,111 @@ the four never-swept axes — `topic:academic-integrity` (121 results) and
 in-base. **Not every unswept axis hides a finding, and reporting the two nils is
 what makes the one hit credible.**
 
+## 16. A finding recorded in this base's history does not reach its shelf, and nothing was checking the difference (high confidence — measured first-hand, with a verified HEAD check)
+
+🔵 **This is trend 11 (*a closed gap keeps being published*) in its mirror image: an
+OPEN finding that never got published.** Trend 11 catches the base repeating a null
+it had already refuted. `p571` catches the opposite — the base **holding an asset
+it never shelved**, and simultaneously **shipping a pattern that asserts the asset
+is missing.**
+
+🟢 **The measurement.** Pass 85 (`2026-10-09`) recorded *"An item-generation tier
+exists now, **5 of 5 MIT**"* in `agents/trending.md`. Checked against `HEAD` at
+`p571`, **86 passes later**:
+
+| page | item-generation rows present at HEAD |
+| --- | --: |
+| `agents/top.md` | 🔴 **0 of 7** |
+| `repos/foundations.md` | 🔴 **0 of 7** |
+| `compose/patterns.md` `P-571-A` | 🔴 asserts *"nothing permissive generates psychometrically defensible items"*, authoring slot left to a **bare model prompt** |
+
+🔴 **So the base's history, its shelves and its patterns disagreed with each other
+for 86 passes, and no instrument compared them.**
+
+🔵 **Why this is structural rather than an oversight, which is what makes it a
+trend.** `agents/trending.md` is **63,000 lines**; the shelf pages are hundreds.
+The history is append-only and grows every pass; the shelf is curated and grows
+rarely. 🔴 **An inventory built by grepping the shelves — the obvious and cheap
+move, and the one `p571` itself made first — reports absences that the history
+refutes.** `p571` drafted five "new" addresses and a "never queried in 570 passes"
+claim on exactly that mistake, and caught it only by grepping `trending.md`
+afterwards.
+
+🟢 **The corrective, as a procedure, and it is one line:** build the
+already-have inventory from **`trending.md` + `intel/open-gaps.md`**, never from
+the shelf pages. The shelves record what was *promoted*; the history records what
+was *seen*. 🔵 **Generalises to every industry base on this harness**, all of which
+have the same append-only-history / curated-shelf split.
+
+🔴 **A second-order consequence worth stating: a saturated base's failure mode
+flips from under-collection to under-promotion.** Nine consecutive passes of
+`WebSearch` nils and four fully-saturated topic axes at `p571` mean discovery is
+largely done. 🟢 **In that regime the highest-yield work is auditing
+history-against-shelf, not buying new channels** — `p571` produced seven shelf
+rows and a corrected pattern from **zero new addresses**.
+
+## 17. Tag variants split a capability's population, and the short form is the empty one (high confidence — measured first-hand)
+
+🟢 **Measured on automated essay scoring, where this base holds both tags:**
+
+| tag | population | ★ ceiling | permissive grants |
+| --- | --: | --: | --: |
+| 🟢 `topics/automated-essay-scoring` (pass 84) | **35** | — | 🟢 **8**, incl. `doheejin/ProTACT` **BSD-3-Clause** |
+| 🔴 `topic:essay-scoring` (`p571`) | 🔴 **17** | 🔴 **34** | 🔴 **0** |
+
+🔴 **Had `p571` swept only the short tag it would have published *"no permissive
+automated-essay-scoring implementation exists"* — contradicting this base's own
+pass-84 record of eight permissive grants on the long tag.** The short form
+collects the abandoned, the coursework and the ungranted; the 34★ ceiling is the
+signature.
+
+🟢 **Rule, checkable before spending: when a capability has both a long hyphenated
+tag and a short synonym, sweep the LONG form.** 🔵 This refines `P909`/`P910`'s
+existing precision rule, which scored tags by **word count** — word count predicts
+*precision*, and this predicts *population completeness*. They are different
+failures: a low-precision tag wastes the budget, a short-form tag **manufactures a
+false null**, which is worse because it gets published.
+
+🔵 **It also explains a standing regional result rather than overturning it.** The
+short tag's 17 rows include three Brazilian/Portuguese-language ENEM-adjacent
+repositories; two were re-probed at `p571`
+(`renan-aalmeida/AES_Enem_Competencia5`, `DaviSantos-23/Reda-o`) and **neither
+grants anything** — reproducing `Gap 235`'s conclusion that the Portuguese
+essay-scoring tier is **ungranted, not absent** on a second, independent tag. 🟢
+The permissive asset in that tier remains the **corpus** (`lplnufpi/essay-br`,
+MIT, human-graded on ENEM C1–C5), not a scorer.
+
+## 18. The prescribed verification command fails in both directions on this harness, and the direction depends on the flags (high confidence — measured with controls, reproducing `P914`)
+
+🟢 **Pass 85 recorded `P914`:** `curl -sI https://github.com/<slug> | head -1`
+reads the agent proxy's `HTTP/1.1 200 Connection Established` and therefore
+reports **200 for every slug on earth, including one invented thirty seconds
+ago.** 🔴 **`p571` reproduces the hazard with the opposite symptom:** the same
+command read via `-o /dev/null -w "%{http_code}"` returns **403 for every
+github.com URL**, real and fabricated alike.
+
+| read of the same command | known-real | fabricated control | the wrong answer it produces |
+| --- | --- | --- | --- |
+| 🔴 `curl -sI \| head -1` | 200 | **200** | ⛔ everything verifies — **admits fabrications** |
+| 🔴 `curl -sI -w "%{http_code}"` | **403** | 403 | ⛔ nothing verifies — **would delete real rows** |
+| 🟢 rendered repository page | name + ★ + licence | 🟢 **404** | ✅ discriminates |
+| 🟢 `raw.githubusercontent.com/…/LICENSE` | 🟢 **200** + bytes + holder | 🔴 404 | ✅ the grant instrument |
+
+🔵 **The generalisable point is stronger than `P914` alone.** It is not that curl
+reports a misleading 200; it is that **`curl -sI` against this proxy carries no
+information in either direction**, and a pass inherits whichever error its flags
+happen to produce. 🔴 A pass reading 403 as *"repository gone"* would **delete
+verified rows**; one reading 200 as *"verified"* would **admit fabrications**.
+🟢 **Therefore: calibrate on a known-real AND a known-fabricated control before
+trusting any pass's verification, and record which channel answered each row.**
+
+🔴 **Also unstable across passes: `api.github.com`.** At `p568` it was reachable
+and `foundations.md`'s header still claims metadata from the *"GitHub REST
+index"*. At `p571` it is **scoped to the harness repository** — every other path
+returns `"GitHub access to this repository is not enabled for this session"`. 🔵
+**A channel claim in a page header is a statement about one past session, not a
+standing property.** Date it or drop it.
+
 ## Declared gaps
 
 - **Most trend sources are vendor blogs or market-research summaries.** The load-

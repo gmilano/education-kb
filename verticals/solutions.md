@@ -143,6 +143,52 @@ integration, and Chinese-language documentation throughout. 🔴 **Those are two
 different grades of evidence and this page does not pretend otherwise** — see
 `569-E`.
 
+## Ninth pass (`p571`, 2026-10-31) — 🔴 two platform axes swept, no new platform; and `topic:mooc` is a large, correctly-named, nearly empty channel
+
+🔴 **No row added.** Two axes never swept *for platforms* were opened —
+[`topic:mooc`](https://github.com/topics/mooc) (**661** repositories) and
+[`topic:language-learning`](https://github.com/topics/language-learning)
+(**4.8k**) — and **every platform they returned is already on this page or on this
+base**: `gazpachu/hypatia`, `INRIA/scikit-learn-mooc`,
+`xiaochong0302/course-tencent-cloud`, `designfuchen/word-atlas`,
+`mengxi-ream/read-frog`, `echo-loop/Echo-Loop`, `umlx5h/LLPlayer`.
+
+🟢 **One grant newly read this pass:**
+[`umlx5h/LLPlayer`](https://github.com/umlx5h/LLPlayer) is **GPL-3.0** at
+**4,400★** — the media player for language learners carried on this page without a
+licence column. ⛔ Copyleft; attach, do not fork.
+
+### 🔵 The structural finding: a 661-repository axis named after a delivery model contains almost no delivery software
+
+🔴 **Exactly two of `topic:mooc`'s top twenty are platforms, and both are
+disqualified** — `gazpachu/hypatia` (**GPL-2.0**, 651★, README states the project
+is *"currently in hibernation"*) and `xiaochong0302/course-tencent-cloud`
+(**GPL-2.0**, 1,200★, already shelved). The other eighteen are:
+
+- **Course materials and solution repositories** — `fastai/course-v3`,
+  `INRIA/scikit-learn-mooc` (⚠️ **CC-BY-4.0**, a *content* licence on a code repo;
+  EMEA/INRIA, France), Coursera assignment answers, algorithm-course sample code.
+- 🔴 **Downloaders and attendance-automation scrapers** — `Foair/course-crawler`,
+  `MoocDownloader/MoocDownloader`, and `cxOrz/chaoxing-signin`, which automates
+  check-in on 学习通. **Tools built to extract from or game MOOC platforms, not to
+  run them.**
+
+🔵 **So an axis can be large, precisely named for the thing you want, and still
+hold nothing shelvable — and that is a different result from an unswept axis.** 🟢
+It is now measured rather than assumed, which is what stops a later pass buying it
+again. 🔴 Note this is *not* the low-precision failure `P909` describes: `mooc`
+is a single word but has **no meaning outside education**, so by `P923`'s
+selection rule it should have been a good channel. **`P923` predicts precision,
+not shelvability** — the rows are on-topic and still unusable.
+
+🔴 **`topic:language-learning` (4.8k) yields no platform either, and its leaders
+are consumer apps under copyleft** — `read-frog` **GPL-3.0** (10,200★),
+`Echo-Loop` **AGPL-3.0** (4,600★), `LLPlayer` **GPL-3.0** (4,400★). ⛔ The AGPL row
+is the one to flag to a studio that *hosts* client solutions: AGPL reaches a
+hosted service, so it is a **prohibition, not a threshold**. 🟢 `word-atlas`
+(3,500★) from that axis is **already on this page**, which serves as a negative
+control confirming the sweep reached the right population.
+
 ## Eighth pass (`p570`, 2026-10-31) — no new platform qualified, and the content-grant lesson now belongs on this page
 
 🔴 **Measured null, stated rather than left silent.** Four GitHub topic axes

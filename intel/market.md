@@ -710,6 +710,36 @@ education-specific player list any source offered was dated 2019. The APAC
 governance rows on this page remain the Australian regulator exercise
 (**7 of 39** universities with documented operational governance).
 
+#### 🆕 `p571` (`2026-10-31`) — two instruments this page did not carry: India's labelling duty and Vietnam's education-specific transition
+
+🔴 **Most of what the APAC leg returned, this page already held** — Korea's **AI
+Basic Act**, the **Ipsos Education Monitor 2026** ban-support figures, China's
+targeted measures and Singapore's **AI Verify** are all already recorded above.
+🟢 **Two instruments were genuinely absent, and both are dated and operational.**
+
+| 🆕 instrument | what it requires | date | why it matters here |
+| --- | --- | --- | --- |
+| 🟢 **India — amended IT Rules** | AI-generated content must carry **prominent labels** *and* **provenance markers** | **from 20 Feb 2026** | 🔵 **Absent from every page of this base before `p571`.** It applies directly to AI-authored courseware and assessment items — so **provenance emission is a build requirement, not a nicety**, and it is a *content* duty rather than a risk-classification duty, which makes it the cheapest AI-education obligation in the region to comply with and the easiest to fail silently. |
+| 🟢 **Vietnam — Law on AI** | systems **already in operation** get a transition: **12 months** generally, **18 months** for **education**, health and finance | **in force 1 Mar 2026** | 🟢 **Education is named explicitly, alongside health and finance** — the regulator's own risk ranking. The 18-month clock implies a remediation deadline around **Sep 2027** for institutions that have *already* deployed. This page previously carried Vietnam only in `intel/open-gaps.md`. |
+
+🟢 **Opportunities, placed.**
+
+1. 🟢 **Vietnam is the most precisely dated remediation engagement in any region on
+   this page.** Not a greenfield build: an **inventory → gap assessment →
+   conformity** sequence for systems already running, against a statutory clock
+   with education singled out. Sell it before Q3 2027, not after.
+2. 🟢 **India's duty is an engineering task with a fixed deliverable.** Labels plus
+   **provenance markers** on generated content is exactly what the newly shelved
+   item-generation tier must emit at generation time — it cannot be reconstructed
+   afterwards. Wired as a required step in `P-574-A`
+   ([`../compose/patterns.md`](../compose/patterns.md)), not an option.
+3. 🔵 **Both instruments reinforce the region's existing counter-signal, not against
+   it.** The Ipsos figures already on this page (Australia **52%** support for
+   banning AI in education; Japan 21→29%; Korea 27→31%) mean the defensible APAC
+   framing stays **integrity, oversight and provenance** — and these two
+   instruments are *precisely* provenance and transition obligations. The
+   regulatory and the public mood point the same way.
+
 ### LATAM
 
 **The best-evidenced adoption-governance gap in the world, from the most
@@ -898,6 +928,39 @@ education alliance launched 2025. The **World Bank's WDR 2026** is on AI.
 country and no repository-level asset.** Both country-level K-12 policy (Brazil,
 Mexico) and LATAM repository supply remain unmeasured by search; the two rows
 above came from the `stars:<50` band, not from the regional leg.
+
+#### 🆕 `p571` (`2026-10-31`) — the leg was re-run and returned nothing this page did not hold
+
+🔴 **Reported as a measured nil rather than omitted.** `p571` re-ran the mandated
+regional legs for **North America**, **EMEA** and **LATAM**. Every substantive
+fact returned was **already on this page**: for North America, **North Carolina
+Session Law 2026-41**, the Maryland package and the 134-bills/31-states count; for
+EMEA, **Regulation (EU) 2026/1744** moving the stand-alone Annex III education
+deadline to **2 December 2027**, the Art. 4 literacy duty, the Art. 50
+transparency date and the emotion-recognition prohibition; for LATAM, the
+fragmented-framework picture, Mexico's 2026 binding obligations, the **UNESCO
+LAC Observatory** partner list, **IDB-TN-3241** and **ECLAC/ILIA**.
+
+🔵 **Which makes this the ninth consecutive pass in which the `WebSearch` channel
+produced no new address and — now measured on the intel layer too for these three
+regions — no new fact.** 🟢 The one region where the leg *did* pay is **APAC**;
+see its `p571` subsection.
+
+🔴 **Two gaps re-confirmed rather than closed, and the remedy is to stop re-running
+the same leg:**
+
+- 🔴 **LATAM 2026 classroom-adoption rates are still absent.** The leg returns
+  rich policy, institutional and academic coverage and **zero quantified
+  classroom adoption**, for a second consecutive pass. 🔵 Query **CETIC.br** and
+  national statistics offices directly — a Brazilian national-statistics asset was
+  located at `p570` — rather than re-running the regional leg, which has now
+  failed twice on this specific question.
+- 🔴 **Canada and Mexico still return no education-*specific* instrument.** The
+  North America leg was **US-only for a fifth consecutive pass**. This matches
+  `Gap 348`'s already-recorded reframing: neither has a *sectoral* instrument;
+  both have horizontal policy that **delegates to the education ministry**. 🔵 The
+  gap is therefore closed as a premise and open only as a *ministry-level* probe
+  — stop searching for a statute that the record says does not exist.
 
 ### Global
 

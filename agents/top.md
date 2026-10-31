@@ -43,6 +43,72 @@ pass's own discovery query (`topic:ai-education stars:>150 pushed:>2026-10-20`)
 returns the **same 6 repositories**, all already shelved. The axis is exhausted;
 the population is not, and the capability sweep is the proof.
 
+## Ninth pass (`p571`, 2026-10-31) — 🔴 the shelf holds at `24` and the pass found NOTHING new; its value is that it caught this base contradicting itself
+
+🟢 **`derived shelf: **24**` — unchanged.** 🔴 **And this pass's honest headline is
+a nil: zero addresses new to this base, from eight `WebSearch` legs AND four
+GitHub topic axes.**
+
+| channel | legs / rows | addresses NEW to this base |
+| --- | --: | --: |
+| 🔴 `WebSearch`, the eight mandated legs (4 global, 4 regional) | 8 | 🔴 **`0`** — **ninth consecutive nil** |
+| 🔴 `topic:question-generation` (241) | 20 | 🔴 **`0`** — bought at **pass 85**; `Gap 352` refuses it at ~30% precision |
+| 🔴 `topic:essay-scoring` (17) | 17 | 🔴 **`0`** — a tag-variant decoy, see below |
+| 🔴 `topic:language-learning` (4.8k) | 10 | 🔴 **`0`** — `read-frog`, `Echo-Loop`, `LLPlayer`, `word-atlas` all already held |
+| 🔴 `topic:mooc` (661) | 20 | 🔴 **`0`** — `hypatia`, `scikit-learn-mooc`, `course-tencent-cloud` all already held |
+
+🔵 **Four axes, 67 rows read, zero new addresses. That is a saturation
+measurement, and it is worth more than a padded row would have been.**
+
+### 🔴 The defect this pass caught: a tier found at pass 85 never reached any shelf, while a pattern kept asserting it was missing
+
+Pass 85 (`2026-10-09`) recorded *"An item-generation tier exists now, **5 of 5
+MIT**"*. 🔴 **Verified against `HEAD` this pass: all seven item-generation rows
+were on ZERO shelf pages** — absent from this page and from
+[`../repos/foundations.md`](../repos/foundations.md) alike — while
+[`../compose/patterns.md`](../compose/patterns.md) `P-571-A` continued to ship
+*"nothing permissive generates psychometrically defensible items"* with its
+authoring step left to a bare model prompt.
+
+🟢 **Fixed this pass:** the tier is shelved in
+[`../repos/foundations.md`](../repos/foundations.md), `P-571-A`'s premise is
+amended, and `P-574-A` wires it concretely. 🔵 **The lesson generalises past
+education: this base's `trending` history is 63k lines and its shelves are
+hundreds — a discovery recorded in history is not shelved, and nothing was
+checking the difference.** An inventory grep of the *shelf* files (which is how
+this pass started) reports an absence that the *history* files refute.
+
+🔵 **Why these rows still do not belong on THIS page:** they are libraries and
+fine-tuned T5 checkpoints, not agents. The shelf gate is correct to exclude them;
+the defect was that no page included them at all.
+
+### ⚠️ Instrument note — `P914` reproduced, with a sharper failure mode
+
+🟢 **Pass 85 already recorded (`P914`) that the brief's prescribed
+`curl -sI https://github.com/<slug>` is dangerous**: the agent proxy answers
+`HTTP/1.1 200 Connection Established` first, so `curl -sI | head -1` reads **200
+for every slug on earth, including one invented thirty seconds ago.**
+
+🔴 **This pass adds the other half: the same command with different flags gives the
+opposite wrong answer.** With `-o /dev/null -w "%{http_code}"` it returns **403
+for every github.com URL — real and fabricated alike.**
+
+| read of the same command | known-real repo | fabricated control | wrong answer it produces |
+| --- | --- | --- | --- |
+| 🔴 `curl -sI \| head -1` (`P914`) | 200 | **200** | ⛔ everything verifies — **admits fabrications** |
+| 🔴 `curl -sI -w "%{http_code}"` 🆕 | **403** | 403 | ⛔ nothing verifies — **would delete real rows** |
+| 🟢 rendered repository page | name + ★ + licence | 🟢 **HTTP 404** | ✅ discriminates |
+| 🟢 `raw.githubusercontent.com/…/LICENSE` | 🟢 **200** + bytes + holder | 🔴 404 | ✅ the grant instrument |
+
+🔵 **So the hazard is not "curl says 200"; it is that `curl -sI` against this proxy
+is uninformative in BOTH directions and the direction depends on your flags.**
+🔴 `api.github.com` is additionally unavailable this session — scoped to the
+harness repository, every other path returning
+`"GitHub access to this repository is not enabled for this session"` — so the
+header claim on [`../repos/foundations.md`](../repos/foundations.md) that metadata
+comes from the *"GitHub REST index"* **did not hold for `p571`**. Rows added this
+pass say which channel answered.
+
 ## Eighth pass (`p570`, 2026-10-31) — the shelf holds at `24`, and the pass's yield was in a layer this page does not own
 
 🟢 **`derived shelf: **24**` — unchanged, and reported as a measured null rather

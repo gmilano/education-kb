@@ -941,6 +941,17 @@ The sixth pass found that the buyable artefact is the **gate**, not the generato
 is the first in this KB that can answer *"prove a human marked everything a
 machine could not defensibly mark."*
 
+🆕 **Amended `p571` — the premise above is half false, and the base knew it.** The
+sentence bundles two claims. 🟡 **"Psychometrically defensible" still holds:**
+nothing permissive *calibrates*, so the gate remains the buyable artefact and this
+pattern still produces the conformity evidence. 🔴 **"Nothing permissive generates
+items" is false, and was false when this pattern was written** — pass 85
+(`2026-10-09`) recorded a 7-row MIT item-generation tier in `agents/trending.md`
+that reached **no shelf page and no pattern for 86 passes**. 🟢 It is now shelved
+in [`../repos/foundations.md`](../repos/foundations.md) and wired in **`P-574-A`**.
+🔵 **Use `P-574-A` to author and this pattern to mark and prove** — the authoring
+step below should no longer be a bare model prompt.
+
 **Components:**
 
 | Role | Component | Licence | Note |
@@ -1069,6 +1080,108 @@ the engineering is in the integration and the voice quality, not in the
 components. ⛔ **`harry0703/MoneyPrinterTurbo` (MIT, 136,744★) is explicitly not
 in this pattern** — it is short-form social video, and its star count makes it the
 most likely asset to be mis-offered here as courseware tooling.
+
+## P-574-A — Multilingual item factory feeding a human-provable gate (6–8 weeks)
+
+**For:** awarding bodies, universities with central assessment units, national exam
+agencies, and corporate-training clients needing **volume** item authoring in more
+than one language, on their own infrastructure.
+**Region:** **APAC** first — `lmqg` ships evaluated `ja/ko/zh` models, and
+**India's amended IT Rules require prominent labels and provenance markers on
+AI-generated content from 20 Feb 2026**, which this pipeline emits by
+construction. **EMEA** for `fr/de/it/es` plus the **Art. 50** transparency duty
+(**2 Aug 2026**). **LATAM** for Spanish — 🔴 **not Portuguese**, see the limits.
+
+**Why this pattern exists, and it is a correction rather than a discovery.**
+`P-571-A` below leaves its item-authoring step to *"the model"* — a bare LLM
+prompt — on the stated premise that *"nothing permissive generates
+psychometrically defensible items."* 🔴 **Pass 85 (`2026-10-09`) had already found
+a 7-row, permissively-licensed item-generation tier and recorded it in
+`agents/trending.md`; it reached no shelf page and no pattern for 86 passes.**
+🟢 `p571` shelved it ([`../repos/foundations.md`](../repos/foundations.md)) and
+this pattern is the first to wire it. 🟡 **The other half of `P-571-A`'s premise
+stands:** nothing here *calibrates*, so this pattern authors and `P-571-A` marks
+and proves.
+
+**Components** — grants carry pass 85's byte count plus a `p571` re-read; **5 of 5
+re-reads matched exactly**.
+
+| Role | Component | Licence | Note |
+| --- | --- | --- | --- |
+| Source-material ingestion | [docling-project/docling](https://github.com/docling-project/docling) | **MIT** | Client syllabus/textbooks/past papers → markdown+JSON with table structure. Every item must trace to a source document. |
+| **Multilingual generator** | [asahi417/lm-question-generation](https://github.com/asahi417/lm-question-generation) | **MIT** (1,065 B) | 🟢 **Load-bearing.** `pip install lmqg`. Question **and answer** generation in **9 languages** (`en/fr/ja/ko/ru/it/es/de/zh`), HuggingFace checkpoints, **ACL 2023** system-demonstration paper, 385 commits. The only evaluated multilingual option on the base. |
+| Item-**type** generator | [ramsrigouthamg/Questgen.ai](https://github.com/ramsrigouthamg/Questgen.ai) | **MIT** (1,077 B) | The shapes an assessment unit orders: MCQ with distractors, boolean, FAQ, paraphrase, answer prediction. T5 + sense2vec. ⚠️ Region **disputed** (pass 85 said APAC; the grant names an individual) — do not quote it. |
+| **Distractor specialist** | [KristiyanVachev/Leaf-Question-Generation](https://github.com/KristiyanVachev/Leaf-Question-Generation) | **MIT** (1,073 B) | 🟢 MCQs **with wrong-answer options**. ⚠️ **Use the MIT `Leaf` repo** — the same author's `Question-Generation` is **GPL-3.0** with 3.5× the stars, so a star-sorted pick takes the copyleft one. |
+| Candidate **ranker** | [AMontgomerie/question_generator](https://github.com/AMontgomerie/question_generator) | **MIT** (1,073 B) | Answer-aware evaluator that **ranks** generated questions. Over-generate → rank → gate. |
+| Teacher-PDF entry point | [PragatiVerma18/MLH-Quizzet](https://github.com/PragatiVerma18/MLH-Quizzet) | **MIT** (1,069 B) | 🟢 Takes **teacher PDFs** and emits a quiz — the only row whose input is the artefact a teacher already has. Good pilot surface. |
+| Baseline / control | [patil-suraj/question_generation](https://github.com/patil-suraj/question_generation) | **MIT** (1,068 B) | The axis's reference implementation. Use as the control when benchmarking the above. |
+| ⚠️ Broad toolkit | [artitw/text2text](https://github.com/artitw/text2text) | 🟡 **MIT + rider** (1,324 B) | 🔴 **`Gap 353`/`P922`: a dependency-closure rider, 256 B over canonical MIT.** Clear it with counsel or skip the row — the rest of the pipeline does not need it. |
+| **The gate** | [onionviolet/itembank](https://github.com/onionviolet/itembank) | **MIT** (1,068 B) | 🟢 `itembank lint` **blocks CI on error** — unexplained distractors, answer-position skew, select/key mismatch, duplicate stems. **A model may author; it may not merge.** |
+| Rubric advisory | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | ⚠️ **code MIT · prompts CC BY 4.0 · corpora CC BY-NC-SA** | Advisory on generated *content* only. ⛔ Bring your own corpus for a billable suite. |
+| Telemetry / provenance | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | xAPI LRS: every item generated, ranked, linted, overridden — timestamped. **This is the provenance record India's rules ask for.** |
+| Dashboards | [openfun/warren](https://github.com/openfun/warren) · [openfun/potsie](https://github.com/openfun/potsie) | **MIT** · **MIT** | Jsonnet dashboards ship as reviewable code. |
+| Drift baseline | [evidentlyai/evidently](https://github.com/evidentlyai/evidently) | **Apache-2.0** | Baseline the generators' output distribution; re-run on every model or prompt change. |
+| LMS attachment | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** | LTI 1.3 launch into Moodle/Canvas/Open edX without touching platform code. |
+
+**Wiring:**
+
+1. **Ingest the curriculum** with `docling`. Chunk to **passage** size — every
+   generator here takes a paragraph, not a chapter.
+2. **Route by language, not by preference.** `lmqg` for any of its 9 languages
+   (`TransformersQG(language="es")`); `Questgen.ai`, `Leaf` and `MLH-Quizzet` are
+   **English-only** and carry the richer item types. 🔵 For a non-English
+   engagement `lmqg` *is* the pipeline and the others are unavailable — size the
+   estimate accordingly.
+3. **Over-generate, then rank.** Generate 5–10× the required items; rank with
+   `question_generator`'s answer-aware evaluator. Never ship first-pass output.
+4. **Generate distractors as a separate step** (`Leaf`, or `Questgen.ai`'s
+   sense2vec path). Distractors are the quality ceiling of an MCQ bank and the
+   thing the gate rejects.
+5. **Write into `itembank`'s markdown format, never into a database.** The format
+   is the contract; `itembank lint` blocks the merge, `itembank guard` keeps live
+   banks out of the repository.
+6. **Emit provenance at generation time** — model id, checkpoint or prompt hash,
+   source document, language, timestamp — into `ralph` as xAPI. 🟢 This satisfies
+   **India's 20 Feb 2026 labelling-and-provenance duty** and **EU Art. 50**, and
+   **it cannot be reconstructed afterwards.**
+7. **Hand scoring to `P-571-A`.** Objective items score deterministically in
+   `itembank`'s runtime with **no model in the path**; **short-answer stays pending
+   for a human.**
+8. **Baseline in `evidently`** so *"item quality changed in March"* is answerable.
+
+🔴 **Honest limits — state all six before quoting.**
+
+- 🔴 **These are T5-era models (grants dated 2018–2024) and a current frontier LLM
+  will out-write them on English fluency.** Do not sell them as better generators.
+  Sell the four things they actually give: **determinism**, **on-premises
+  execution** (data residency, no per-item API cost at volume), **evaluated
+  multilingual coverage with a published paper**, and a **distractor step** general
+  models handle poorly. 🟢 With no residency, volume or multilingual constraint,
+  a prompted LLM behind the same `itembank` gate is the honest recommendation.
+- 🔴 **The repository licence does not cover the model weights.** All rows are MIT,
+  but the fine-tuned **checkpoints are distributed on HuggingFace under their own
+  terms** and base models carry their own (T5 is Apache-2.0). ⚠️ **Check each
+  model card separately** — the same licence-layering trap `p570` recorded for
+  content carve-outs, one layer down.
+- 🔴 **No Portuguese.** `lmqg`'s 9 languages exclude `pt`. 🟢 **But the corpus
+  exists:** `lplnufpi/essay-br` is **MIT** and human-graded on **ENEM C1–C5**, so a
+  Brazilian engagement is a *trainable* build, not a blank sheet. 🔴 Spanish is the
+  harder case despite `lmqg` covering `es`: `Gap 237` records **no rubric and no
+  graded corpus** for Spanish, so scoring there needs an annotation programme
+  first. **Generation and scoring have opposite coverage in the two languages** —
+  read that before scoping either.
+- 🔴 **Nothing here calibrates.** No difficulty or discrimination parameters:
+  `eribean/girth` (MIT) last shipped **2022**, `inuyasha2012/pypsy` (MIT) **2018**,
+  `meyerjp3/psychometrics` has **no licence file**, R options are copyleft. **A
+  generated bank is uncalibrated until it has been sat.** `P-572-A` is the
+  calibration engagement.
+- 🔴 **Do not promise automated essay marking.** `topics/automated-essay-scoring`
+  holds 35 repositories with 8 permissive grants but **no production-grade
+  implementation**, and the short-tag variant `topic:essay-scoring` is emptier
+  still (17 rows, 34★ ceiling). Extended-response marking is `P-571-A`'s **human**
+  path.
+- ⚠️ **`itembank` ships no QTI** and its MCP surface is unshipped. Integrate over
+  its key-free JSON session protocol (`start`/`next`/`submit`/`report`/`teach`).
 
 ## Declared gaps
 
