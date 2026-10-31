@@ -4,6 +4,79 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p566` — `2026-10-31` — **🟢 `565-A` CLOSED BY A CLASSIFICATION THAT DOES NOT READ DESCRIPTIONS: of `p565`'s `280` Canvas rows, `187` (`66.8 %`) are structurally Canvas LMS — so its own headline was an upper bound by `1.5 ×`, exactly as it warned.** 🟢 **And the `101` rows `p565` said *"cannot be classified from metadata at all"* are now classified: `60` of them ARE Canvas LMS.**
+
+🔵 **Scope stated first.** Every figure below is first-hand: trees and manifests from blobless
+clones (`--filter=blob:limit=16k`), platform metadata inherited from `p565`'s committed census row
+lists. 🔴 **None of it is gate-attested** for the recipe path — `make hooks` denied a **ninth**
+consecutive time — 🟢 but per `565-F` the committed instruments themselves run, and this pass used
+them rather than asserting they were unreachable.
+
+### 🟢 The instrument `565-A` asked for, built
+
+🟢 `565-A`'s closure condition was *"a classification of the `280` that does **not** depend on
+description text — e.g. probe each tree for a Canvas API base path or `canvas`/`instructure` SDK
+dependency in its manifest."* 🟢 **Built exactly that:** every tree enumerated, up to `60`
+source/manifest files per repository read, and a row counted Canvas LMS when any of them references
+`instructure` · `/api/v1/courses` · `canvas.instructure` · `CANVAS_API` · `canvasapi` ·
+`*.instructure.com`.
+
+| `canvas-mcp in:name`, `280` rows | rows | share |
+| --- | :-: | :-: |
+| 🟢 **structurally Canvas LMS** | **`187`** | 🟢 **`66.8 %`** |
+| 🔴 **no Canvas-LMS marker — a different "canvas"** | **`93`** | 🔴 **`33.2 %`** |
+
+🟢 **So `p565`'s `280` was an upper bound by `1.5 ×`, and it said so before it circulated** — which
+is the practice working. 🔵 The defensible population figure for this field is **`187`**.
+
+### 🟢 The payoff is in the rows metadata could not reach
+
+🔴 `p565` recorded that **`101` rows (`36.1 %`) have an EMPTY description** and *"cannot be
+classified from metadata at all."* 🟢 **`101` reproduces exactly. And `60` of those `101`
+(`59.4 %`) are Canvas LMS** — `60` repositories this base could not have placed by any
+metadata-only instrument.
+
+🟢 **And the description channel's error turns out to be ASYMMETRIC, which is the instrument
+finding:**
+
+| description channel | rows | structurally confirmed | error |
+| --- | :-: | :-: | --- |
+| names `canvas lms` / `instructure` / `lms` | `94` | **`93`** | 🟢 **over-claims by `1` (`1.1 %`)** |
+| has a description, does **not** name them | `85` | **`34`** | 🔴 **under-claims by `34`** |
+| 🔴 **empty** | `101` | **`60`** | 🔴 **unclassifiable — the dominant failure** |
+
+🟢 **When a maintainer names the platform, they are right `98.9 %` of the time.** 🔴 **The channel
+fails by SILENCE, not by inaccuracy** — `94` rows of `280` say what they are, and `186` either say
+nothing or say something else. 🔵 **Consequence for every star-and-description discovery sweep this
+base runs: the correction for inaccuracy is worth `1` row; the correction for absence is worth `94`.**
+
+🟢 Row list, all `280` with marker counts and both description axes:
+[`canvas-structural-classification`](../evidence/canvas-structural-classification.2026-10-31-p566.tsv).
+
+### 🟢 The foundation layer this closes to — `99` buildable, structurally-confirmed Canvas LMS agents
+
+| | rows |
+| --- | :-: |
+| structurally Canvas LMS **and** permissive on the platform field | `75` |
+| 🟢 structurally Canvas LMS **and** permissive **only via manifest** | 🟢 **`24`** |
+| 🟢 **TOTAL buildable foundation rows on this field** | 🟢 **`99`** |
+
+🔴 **`24` of the `99` — `24.2 %` — were invisible to this base until this pass read manifests.**
+🔵 Compare what `p565` could offer a studio: a hand-picked tier of `8`. 🟢 **The field supports a
+foundation layer an order of magnitude larger, and a quarter of it only exists if the licence gate
+reads manifests.**
+
+### 🔵 The `93` non-Canvas rows are a real population, and naming them is not optional
+
+🔴 `p565` estimated *"`≥23` name a DIFFERENT 'canvas'"*. 🟢 Structurally it is **`93`**, and the
+sweep surfaced what they are: 🔵 **Power Apps canvas apps** (`shawngrech-cmd/power-apps-canvas-claude-mcp-builder`),
+**SVG and HTML drawing surfaces** (`brnyxx/svg-canvas-mcp`, `dev1912-sbt/html-canvas-mcp`),
+**Material 3 editors** (`thanhdc-dev/m3e-canvas-mcp` — Vietnamese, APAC), **audit canvases**
+(`tudadada/canvas-audit-mcp`), alongside `p565`'s named Figma · Obsidian · Canvas Medical EHR ·
+CanvasXpress · Canva. 🟢 **`m3e-canvas-mcp` is the control that validates the instrument**: it is
+MIT, it is in the census, it is APAC, and it is correctly classified **out** — the probe is not
+simply matching the word `canvas`. 🔴 Their target systems are not enumerated → `566-A`.
+
 ## 🆕 `p565` — `2026-10-31` — **🟢 `564-C` CLOSED AND ITS PREMISE REFUTED: North America was never absent — it was the wrong platform. `canvas-mcp in:name` answers `total_count: 280` (2× the Moodle field) and its HEAD is a `310★` University of Illinois server.** 🟢 **`564-A` CLOSED WITH A NUMBER: `137` distinct codebases of `140`, over-count `3` (`2.1 %`).** 🟢 **`564-B` CLOSED as a negative on its own population — and then PAID on another: 2 of 3 Canvas `NO-GRANT` verdicts are MIT in `package.json`.** 🔴 `564-D`/`563-C` BLOCKED: `moodle.org` is `NXDOMAIN` on this host.
 
 🔵 **Scope stated first.** This pass opened a **second platform channel**. Every figure below is

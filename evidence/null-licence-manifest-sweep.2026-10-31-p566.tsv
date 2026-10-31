@@ -1,0 +1,342 @@
+full_name	platform	files	lic_paths	manifests	manifest_licence	verdict	canvas_markers	tool_decls	mutating_verbs
+plyght/canvas-mcp	canvas	17	0	package.json		NO_GRANT	CANVAS_LMS:9	2	9
+r1ckyIn/canvas-ed-mcp	canvas	7	1			LIC_FILE_PRESENT	CANVAS_LMS:3	49	5
+lucanardinocchi/canvas-mcp	canvas	15	0	package.json	package.json=MIT	MANIFEST_GRANT	CANVAS_LMS:3	19	5
+boyuchengz/canvas-mcp	canvas	40	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:9	26	2
+aryankeluskar/canvas-mcp	canvas	29	1	package.json	package.json=ISC	LIC_FILE_PRESENT	CANVAS_LMS:6	8	7
+mbcrosiersamuel/canvas-mcp	canvas	10	0	package.json		NO_GRANT	CANVAS_LMS:3	4	0
+ahnopologetic/canvas-lms-mcp	canvas	17	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:5	22	3
+Shashwatpog/poke-canvas-mcp	canvas	7	1			LIC_FILE_PRESENT	CANVAS_LMS:2	8	0
+admin978/canvas-mcp	canvas	19	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:5	10	0
+HinnliDev/Canvas-CEServer-MCP	canvas	4	1			LIC_FILE_PRESENT		7	0
+DMontgomery40/mcp-canvas-lms	canvas	36	0	package.json	package.json=MIT	MANIFEST_GRANT	CANVAS_LMS:17	52	25
+yunwoong7/aws-nova-canvas-mcp	canvas	23	1	pyproject.toml		LIC_FILE_PRESENT		0	0
+NoahWeiss123/CanvasMCP-Poke	canvas	9	0	package.json		NO_GRANT	CANVAS_LMS:1	0	1
+r-huijts/canvas-mcp	canvas	31	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:13	69	37
+wassermanproductions/master-canvas-mcp	canvas	8	2	package.json	package.json=MIT	LIC_FILE_PRESENT		0	0
+YYKKCC-kevin/Canvas-MCP-for-students	canvas	22	0	pyproject.toml		NO_GRANT	CANVAS_LMS:9	31	1
+orionkabeza/canvas-mcp	canvas	5	0			NO_GRANT	CANVAS_LMS:2	19	9
+CorCvusRamboChen/canvas-session-mcp	canvas	19	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:4	1	0
+jqyyy23/Canvas-LMS-MCP-	canvas	36	0	package.json		NO_GRANT	CANVAS_LMS:3	8	0
+brilliant751/tongji-canvas-mcp	canvas	19	0	pyproject.toml		NO_GRANT	CANVAS_LMS:3	5	0
+taciturnaxolotl/canvas-mcp	canvas	18	1	package.json		LIC_FILE_PRESENT	CANVAS_LMS:1	1	9
+pigeek/canvas-mcp	canvas	16	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT		0	0
+JohannsenLum/canvas-api-mcp	canvas	72	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:37	19	15
+AdityaPrakash-26/Canvas-MCP	canvas	189	1	pyproject.toml		LIC_FILE_PRESENT	CANVAS_LMS:54	11	0
+Gediontkd/mcp-nova-canvas	canvas	9	0	pyproject.toml		NO_GRANT		1	0
+n00bvn/CanvasMCPClient	canvas	186	1	backend/pyproject.toml,frontend/package.json,package.json		LIC_FILE_PRESENT		0	189
+colehollander10-netizen/canvas-student-mcp-server	canvas	8	0	package.json		NO_GRANT	CANVAS_LMS:3	14	0
+teejballa/Claude-for-Canvas-MCP	canvas	7	0	package.json		NO_GRANT	CANVAS_LMS:3	1	0
+lcrzhang/canvas-mcp	canvas	47	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:2	0	0
+vishalsachdev/canvas-mcp	canvas	516	1	package.json,pyproject.toml	pyproject.toml=LICENSE	LIC_FILE_PRESENT	CANVAS_LMS:15	1	10
+arthurcuri/mcp-instructure-canvas	canvas	110	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:28	18	7
+tylergibbs1/canvas-mcp	canvas	18	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:1	11	2
+Haris320/canvas-mcp	canvas	30	0	package.json		NO_GRANT	CANVAS_LMS:6	1	1
+looooonk/canvas-mcp	canvas	40	0	pyproject.toml		NO_GRANT	CANVAS_LMS:12	8	4
+Mattlo0546/canvas-mcp	canvas	13	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:3	10	0
+shu-silc-osc/canvas-chaoxing-silc-mcp	canvas	136	3	legacy/canvas-insearch/pyproject.toml,vendor/canvas-mcp/pyproject.toml	vendor/canvas-mcp/pyproject.toml=LICENSE	LIC_FILE_PRESENT	CANVAS_LMS:13	5	17
+omniboyOK/siglo21-canvas-mcp	canvas	79	0	package.json	package.json=MIT	MANIFEST_GRANT	CANVAS_LMS:4	0	5
+Gowindude/canvas-mcp	canvas	13	0			NO_GRANT	CANVAS_LMS:7	51	2
+bruchris/canvas-lms-mcp	canvas	501	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:25	0	82
+Brian-Two/canvas-mcp-assistance	canvas	168	0	backend/package.json,frontend/package.json,package.json	package.json=MIT	MANIFEST_GRANT	CANVAS_LMS:13	0	33
+mklemos/canvas-mcp	canvas	4	0			NO_GRANT	CANVAS_LMS:2	0	0
+Alejandro-Valadez/canvas-mcp	canvas	17	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:3	20	5
+hakimjanov/Canvas-MCP	canvas	42	0	pyproject.toml		NO_GRANT	CANVAS_LMS:5	18	0
+app-appplayer/mcp_canvas	canvas	101	1	pubspec.yaml		LIC_FILE_PRESENT		0	0
+Moriz82/canvas-mcp	canvas	11	0	pyproject.toml		NO_GRANT	CANVAS_LMS:6	15	1
+andycjm17/canvas-mcp	canvas	14	1			LIC_FILE_PRESENT	CANVAS_LMS:2	0	0
+mhadifilms/canvas-mcp	canvas	34	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:19	30	6
+AlexCh121/canvas-mcp-dist	canvas	48	0			NO_GRANT		0	0
+DA0806/canvas-student-mcp	canvas	10	0			NO_GRANT	CANVAS_LMS:4	29	0
+nintang/canvas-lms-mcp	canvas	28	0	package.json		NO_GRANT	CANVAS_LMS:19	16	3
+Sarthak-Neupane/CanvasMCPServer	canvas	211	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:13	0	0
+Kuria-Mbatia/Canvas-MCP-server	canvas	88	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:33	0	27
+semyonfox/canvas-mcp	canvas	74	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:30	121	77
+temujinkz/canvas-poke-mcp	canvas	7	1			LIC_FILE_PRESENT	CANVAS_LMS:2	9	0
+carainc/canvas-medical-mcp	canvas	23	1	package.json,packages/server/package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:2	9	1
+lennyitb/canvas-viewer-mcp	canvas	55	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:13	17	11
+q973946080/jiflow-canvas-mcp	canvas	64	1	package.json	package.json=MIT	LIC_FILE_PRESENT		0	1
+enkhbold470/canvas-lms-mcp	canvas	14	0			NO_GRANT	CANVAS_LMS:2	0	0
+zerob13/canvas-sketchpad-mcp	canvas	33	1	package.json		LIC_FILE_PRESENT	CANVAS_LMS:1	0	10
+awesome-town/canvas-mcp-skills	canvas	15	1			LIC_FILE_PRESENT	CANVAS_LMS:4	0	0
+mateusferrao/canvas-mcp-server	canvas	120	0	package.json		NO_GRANT	CANVAS_LMS:9	35	20
+mk-imagine/canvas-mcp	canvas	152	0	clients/gemini/package.json,package.json,packages/core/package.json,packages/teacher/package.json		NO_GRANT	CANVAS_LMS:9	19	28
+kaushikgunasekaren/canvas-grader-mcp	canvas	21	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:4	20	3
+r1ckyIn/canvas-ed-mcp-remote	canvas	10	1			LIC_FILE_PRESENT	CANVAS_LMS:3	9	2
+guanweiqiang/obsidian-canvas-mcp	canvas	53	0	package.json		NO_GRANT		10	0
+1jehuang/canvas-cli-and-mcp	canvas	8	0	package.json		NO_GRANT	CANVAS_LMS:4	21	15
+SAMLAY-c/canvas-mcp	canvas	25	0			NO_GRANT		4	2
+neuhausi/canvasxpress-mcp	canvas	307	1	pyproject.toml	pyproject.toml=LICENSE	LIC_FILE_PRESENT		20	2
+Fireiscoolsolo/canvas-lms-mcp-local	canvas	37	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:6	1	47
+Fireiscoolsolo/canvas-lms-mcp-server	canvas	35	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:8	1	55
+Zalasyu/Canvas-MCP	canvas	0	0			NO_GRANT		0	0
+dinyorik/canvas-mcp	canvas	8	0	pyproject.toml		NO_GRANT	CANVAS_LMS:2	6	0
+GodPuffin/canvas-mcp	canvas	46	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:4	1	5
+edly-io/canvas-mcp	canvas	16	0	pyproject.toml	pyproject.toml=MIT	MANIFEST_GRANT	CANVAS_LMS:9	25	3
+brnyxx/svg-canvas-mcp	canvas	42	0	package.json	package.json=MIT	MANIFEST_GRANT		105	6
+moisesbritez92/canvas-mcp	canvas	26	0	package.json		NO_GRANT		28	7
+javohir73/mcp-server-canvas-lms	canvas	86	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:20	1	2
+mehdi6132/canvas-mcp	canvas	24	1	package.json		LIC_FILE_PRESENT	CANVAS_LMS:12	29	3
+UE2020/canvas-mcp	canvas	8	0	Cargo.toml,package.json		NO_GRANT	CANVAS_LMS:2	1	2
+pragya-jha-cloud/Canvas-MCP	canvas	0	0			NO_GRANT		0	0
+abhi-ashar/canvas-mcp	canvas	8	0	package.json		NO_GRANT	CANVAS_LMS:2	7	0
+akassh9/canvas-mcp	canvas	13	0	package.json	package.json=ISC	MANIFEST_GRANT	CANVAS_LMS:5	15	2
+thesupersupersigma/canvas-mcp	canvas	31	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:8	17	6
+a-ariff/canvas-mcp	canvas	13	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:6	1	0
+zhenghh04/canvas-mcp	canvas	43	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:27	0	1
+AvatarGaia/canvas-mcp	canvas	10	1	package.json	package.json=MIT	LIC_FILE_PRESENT		0	1
+dhruvbhambhani/canvas-mcp	canvas	17	0			NO_GRANT	CANVAS_LMS:4	16	0
+Abhinav-ranish/Canvas-MCP	canvas	11	0	package.json		NO_GRANT		0	0
+AmroJSawan/figma-canvas-local-mcp	canvas	260	1	package.json	package.json=MIT	LIC_FILE_PRESENT		39	15
+salvadoracuna/canvas-mcp	canvas	13	0	pyproject.toml		NO_GRANT	CANVAS_LMS:5	10	0
+Canvas-LMS-MCP/canvas-teacher-mcp	canvas	177	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:4	0	19
+pratham-2097/canvas-mcp	canvas	31	0	package.json		NO_GRANT	CANVAS_LMS:5	12	1
+Aadi-FTC-12868/canvas-mcp	canvas	10	0	package.json		NO_GRANT	CANVAS_LMS:2	0	5
+BharathVyaas/Canvas-MCP	canvas	8	0	package.json		NO_GRANT		0	3
+mflynn326-collab/canvas-mcp	canvas	18	0	pyproject.toml		NO_GRANT	CANVAS_LMS:6	23	20
+rickyegl/canvas-mcp	canvas	0	0			NO_GRANT		0	0
+cabrt/canvas-mcp	canvas	6	0	pyproject.toml		NO_GRANT	CANVAS_LMS:2	23	0
+kschoonmaker32/canvas-mcp	canvas	4	0	package.json	package.json=ISC	MANIFEST_GRANT		0	0
+chiptoe-svg/canvas-mcp	canvas	28	0	pyproject.toml	pyproject.toml=Providedas-is;seeREADME	MANIFEST_GRANT	CANVAS_LMS:10	8	6
+TechSupportz/canvas-mcp	canvas	11	0			NO_GRANT		0	4
+awesome-town/canvas-mcp-node	canvas	84	0	package.json		NO_GRANT	CANVAS_LMS:27	58	0
+cal-poly-dxhub/canvas-mcp	canvas	7	1	pyproject.toml	pyproject.toml=MIT-0	LIC_FILE_PRESENT	CANVAS_LMS:3	17	0
+zihan1997/canvas-mcp	canvas	14	0	pyproject.toml		NO_GRANT	CANVAS_LMS:6	10	0
+fireballff/canvas-mcp	canvas	90	1	installer/package.json,installer/src-tauri/Cargo.toml,package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:13	2	0
+Slush97/canvas-mcp	canvas	27	1	package.json		LIC_FILE_PRESENT	CANVAS_LMS:2	40	9
+darenhua/canvas-mcp	canvas	10	0	server/pyproject.toml		NO_GRANT	CANVAS_LMS:2	16	1
+jsilvanus/canvas-mcp	canvas	1	0			NO_GRANT		0	0
+The-greenpanter/canvas-mcp	canvas	19	0			NO_GRANT		12	0
+JusticeRox98577/Canvas-Mcp	canvas	9	0	package.json		NO_GRANT	CANVAS_LMS:2	13	2
+KadhirTheEngineer/Canvas-MCP	canvas	39	0	pyproject.toml	pyproject.toml=MIT	MANIFEST_GRANT	CANVAS_LMS:9	35	0
+ichung32-rgb/canvas-mcp	canvas	5	0	package.json	package.json=ISC	MANIFEST_GRANT	CANVAS_LMS:2	19	2
+diegoadborges/canvas-mcp	canvas	6	0			NO_GRANT	CANVAS_LMS:3	5	0
+brynjar2605/canvas-mcp	canvas	78	1	package.json		LIC_FILE_PRESENT	CANVAS_LMS:21	2	1
+JonathanDesta/Canvas-MCP	canvas	8	0			NO_GRANT		14	1
+SOVRN144/canvas-mcp	canvas	86	1	package.json,services/ocr-webhook/package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:4	1	33
+devinsmorse/Canvas-MCP	canvas	12	0			NO_GRANT		0	0
+ldecasanova/canvas-mcp	canvas	25	0	package.json		NO_GRANT	CANVAS_LMS:6	10	0
+sohumsuthar/canvas-mcp	canvas	9	0	package.json		NO_GRANT	CANVAS_LMS:2	1	0
+evanap003300/canvas-mcp	canvas	17	0	package.json		NO_GRANT	CANVAS_LMS:8	13	1
+duggsha/canvas-mcp	canvas	16	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:1	0	0
+joshrad-dev/canvas-mcp	canvas	8	0	pyproject.toml		NO_GRANT	CANVAS_LMS:4	9	0
+sophiath2005/canvas-mcp	canvas	5	0			NO_GRANT	CANVAS_LMS:1	5	0
+pranavkarthik10/canvas-mcp	canvas	19	0	package.json	package.json=MIT	MANIFEST_GRANT	CANVAS_LMS:4	19	8
+saulyez/canvas-mcp	canvas	16	0			NO_GRANT	CANVAS_LMS:8	6	2
+AlejandroVallejo1/canvas-mcp	canvas	39	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:11	58	1
+daskol/canvas-mcp	canvas	15	1	go.mod		LIC_FILE_PRESENT	CANVAS_LMS:4	0	0
+anaylab/canvas-mcp	canvas	40	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:8	31	8
+nicolasmilic/CANVAS-MCP	canvas	7	0	canvas-mcp/pyproject.toml		NO_GRANT	CANVAS_LMS:3	13	0
+theatornqvist/canvas-mcp	canvas	6	0			NO_GRANT	CANVAS_LMS:3	18	0
+jakobwennberg/canvas-mcp	canvas	16	1			LIC_FILE_PRESENT	CANVAS_LMS:4	9	0
+ludwigawra/canvas-mcp	canvas	7	0	pyproject.toml		NO_GRANT	CANVAS_LMS:4	25	0
+Siciy/CanvasMCP	canvas	20	0	package.json		NO_GRANT	CANVAS_LMS:11	0	0
+bobbyhiddn/Canvas-MCP	canvas	16	0	pyproject.toml		NO_GRANT		0	0
+caleb-media-studio/canvas-mcp	canvas	35	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:7	3	13
+judacas/CanvasMCP	canvas	29	0			NO_GRANT	CANVAS_LMS:20	0	11
+jayabdulraman/canvas-mcp	canvas	14	0	package.json		NO_GRANT	CANVAS_LMS:5	0	0
+overtimepog/CanvasMCP	canvas	23	0	pyproject.toml		NO_GRANT	CANVAS_LMS:6	20	1
+frazier-at-cpcc/CanvasMCP	canvas	10	0	package.json		NO_GRANT	CANVAS_LMS:3	0	10
+PuttTim/canvas-mcp	canvas	89	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:15	79	3
+alexmickelson/canvasMCP	canvas	104	1	mix.exs		LIC_FILE_PRESENT		0	0
+Axfff/CanvasMCP	canvas	3	1			LIC_FILE_PRESENT		0	0
+lnauten04-design/Canvas_MCP	canvas	0	0			NO_GRANT		0	0
+guirguispierre/canvasMCP	canvas	13	1	package.json	package.json=GPL-3.0-or-later	LIC_FILE_PRESENT	CANVAS_LMS:1	0	2
+adityas0604/MCP-Canvas	canvas	9	0			NO_GRANT	CANVAS_LMS:2	14	0
+canvasbuilder/canvasbuilder-mcp	canvas	8	1	package.json	package.json=MIT	LIC_FILE_PRESENT		9	6
+JamesWHomer/CanvasMCP	canvas	27	0	package.json	package.json=ISC	MANIFEST_GRANT	CANVAS_LMS:4	35	6
+ari310126/canvas_mcp	canvas	26	1			LIC_FILE_PRESENT	CANVAS_LMS:2	58	27
+jsteezg/canvas-mcpay	canvas	4	0			NO_GRANT	CANVAS_LMS:1	13	0
+jordanlein/Canvas_MCP	canvas	20	0	package.json		NO_GRANT	CANVAS_LMS:9	0	1
+443pablo/mcp-canvas	canvas	7	0			NO_GRANT	CANVAS_LMS:4	42	3
+LeeJordan95/canvas-mcp	canvas	66	1	pyproject.toml	pyproject.toml=LICENSE	LIC_FILE_PRESENT	CANVAS_LMS:10	99	9
+davidcwhite/mcp_canvas	canvas	101	0	package.json	package.json=MIT	MANIFEST_GRANT		0	9
+alexherman11/Canvas_MCP	canvas	19	1	package.json	package.json=ISC	LIC_FILE_PRESENT	CANVAS_LMS:5	2	34
+aurascalesoftware/canvashand-mcp	canvas	2	0			NO_GRANT		0	0
+CanvasKeep/canvaskeep-mcp	canvas	10	1	package.json	package.json=MIT	LIC_FILE_PRESENT		12	0
+izhechev/CanvasMCP_KPIs	canvas	98	0	package.json	package.json=UNLICENSED	MANIFEST_GRANT	CANVAS_LMS:15	0	33
+Joyanne05/canvas-mcp-server	canvas	8	0	pyproject.toml		NO_GRANT	CANVAS_LMS:3	6	0
+RyK57/canvas-mcp-server	canvas	24	0	package.json		NO_GRANT	CANVAS_LMS:2	20	0
+XiyaoWang0519/Canvas_MCP	canvas	41	0	package.json	package.json=MIT	MANIFEST_GRANT	CANVAS_LMS:6	26	5
+Lunar-arch/canvasMCP	canvas	66	0	mcp-server/package.json,package.json		NO_GRANT	CANVAS_LMS:3	3	5
+yuziyang-dev/pm_canvas_mcp	canvas	30	0	package.json,pm-canvas-mcp-server-kit/package.json		NO_GRANT	CANVAS_LMS:7	0	10
+CreveXTech/canvas-lms-mcp	canvas	31	0	package.json		NO_GRANT	CANVAS_LMS:5	1	0
+Drastixs/mcp-canvas-lms	canvas	42	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:16	54	27
+smrik/canvas-mcp-server	canvas	17	0			NO_GRANT	CANVAS_LMS:6	14	0
+sariel2029/claude-canvas-mcp	canvas	4	0			NO_GRANT		4	2
+Omm2005/canvas-mcp-server	canvas	5	0			NO_GRANT		2	0
+lehr007-coder/canvas-mcp-worker	canvas	3	0			NO_GRANT		0	0
+blanca-cg/canvas-mcp-http	canvas	27	1	package.json		LIC_FILE_PRESENT	CANVAS_LMS:11	50	25
+FSPR2005/canvas-mcp-itam	canvas	6	1			LIC_FILE_PRESENT	CANVAS_LMS:1	0	0
+hamid-vakilzadeh/CanvasMCP	canvas	145	0	package.json,pyproject.toml		NO_GRANT	CANVAS_LMS:28	0	2
+techserverbz/excalidraw-canvas-mcp	canvas	37	1	package.json	package.json=MIT	LIC_FILE_PRESENT		0	50
+MisterCommand/mcp-canvas-lms	canvas	1871	77	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:9	0	15
+stromy-org/deliverable-canvas-mcp	canvas	52	0	pyproject.toml		NO_GRANT		0	0
+harl00/canvas-mcp-server	canvas	21	0	package.json	package.json=MIT	MANIFEST_GRANT	CANVAS_LMS:4	20	5
+ciaranqnexted/canvas-chat-mcp	canvas	55	0	frontend/package.json,package.json		NO_GRANT	CANVAS_LMS:3	0	3
+charlieellington/design-canvas-mcp	canvas	11	1	package.json	package.json=MIT	LIC_FILE_PRESENT		4	3
+Ait0u5hi/canvas-scholar-mcp	canvas	46	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:19	49	15
+ZxZxZ143/canvas_mcp	canvas	183	0	pyproject.toml		NO_GRANT	CANVAS_LMS:6	15	5
+karilaa-dev/remote-canvas-mcp	canvas	23	0	package.json		NO_GRANT	CANVAS_LMS:12	39	2
+nagalikith/easygrade-canvaslms-mcp	canvas	34	1	pyproject.toml		LIC_FILE_PRESENT	CANVAS_LMS:4	48	2
+sweeden-ttu/canvas-lms-mcp	canvas	138	1			LIC_FILE_PRESENT	CANVAS_LMS:20	21	6
+CharityDEX/voiceos-canvas-mcp	canvas	20	0	package.json		NO_GRANT	CANVAS_LMS:13	20	0
+matthewghuang/canvas-sfu-mcp	canvas	11	0			NO_GRANT	CANVAS_LMS:6	8	0
+TylerFlar/claude-canvas-mcp	canvas	25	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:19	55	11
+Willebrew/nql-canvas-mcp	canvas	26	0	package.json		NO_GRANT	CANVAS_LMS:6	0	5
+zfd0/krita-canvas-mcp	canvas	58	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT		59	4
+jamubc/canvas-mcp-tool	canvas	84	1	package.json	package.json=Apache-2.0WITHCommons-Clause	LIC_FILE_PRESENT	CANVAS_LMS:21	0	11
+misaelvillaverde/pixel-canvas-mcp	canvas	5	0	package.json		NO_GRANT		1	0
+jpablomm/mcp-hackathon-canvas	canvas	17	1			LIC_FILE_PRESENT	CANVAS_LMS:3	17	0
+hsg-tools/hsg-canvas-mcp	canvas	4	0	package.json		NO_GRANT		0	0
+InfuseED/mcp-canvas-fastapi	canvas	0	0			NO_GRANT		0	0
+mtgibbs/canvas-lms-mcp	canvas	115	1	deno.json		LIC_FILE_PRESENT	CANVAS_LMS:7	5	2
+MaraniMatias/mcp-and-canvas	canvas	12	0	package.json	package.json=MIT	MANIFEST_GRANT		8	10
+Jylebum/mcp-canvas-connector	canvas	0	0			NO_GRANT		0	0
+2799662352/sora-canvas-mcp	canvas	46	0	package.json		NO_GRANT		7	31
+the-ansible/canvas-mcp-server	canvas	15	0	package.json		NO_GRANT		0	80
+hyusap/canvas-mcp-docker	canvas	7	0			NO_GRANT	CANVAS_LMS:1	0	0
+Sijun52/my_canvas_mcp	canvas	24	0	pyproject.toml		NO_GRANT		37	0
+lumetra-io/engram-canvas-mcp	canvas	6	1			LIC_FILE_PRESENT		0	0
+felisawiley/canvas-mcp-tool	canvas	21	2	pyproject.toml		LIC_FILE_PRESENT	CANVAS_LMS:5	5	0
+CharlieCardenasToledo/mcp-canvas-server	canvas	79	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:14	224	34
+MahammadNuriyev62/sketch-canvas-mcp	canvas	15	0	package.json		NO_GRANT		0	0
+duyanhtu/canvas_app_mcp	canvas	25	0			NO_GRANT		0	0
+Kdude43ver/Canvas-API-MCP	canvas	18	0	package.json		NO_GRANT	CANVAS_LMS:7	11	0
+chrischall/canvas-parent-mcp	canvas	86	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:26	18	3
+jpablomm/mcp-canvas-hackathon	canvas	6	1			LIC_FILE_PRESENT	CANVAS_LMS:2	12	3
+HrudithL/Canvas-MCP-Server	canvas	22	0			NO_GRANT	CANVAS_LMS:5	74	18
+brockcraft/homebrew-canvas-mcp	canvas	3	0			NO_GRANT		0	0
+ousiqwq/comfyui-canvas-mcp	canvas	36	1	package.json,pyproject.toml	pyproject.toml=AGPL-3.0-or-later	LIC_FILE_PRESENT		15	5
+Codernoob000/designops-mcp-canvas	canvas	24	0	mcp-server/package.json,visual-canvas/package.json		NO_GRANT		0	0
+dev1912-sbt/html-canvas-mcp	canvas	13	0	package.json	package.json=ISC	MANIFEST_GRANT		0	0
+oskarcode/canvas-mcp-oskar	canvas	9	0	package.json		NO_GRANT	CANVAS_LMS:1	2	0
+F0rklift-Certified/Canvas-MCP-Server	canvas	19	0	package.json	package.json=ISC	MANIFEST_GRANT	CANVAS_LMS:1	9	0
+GarthDB/rust-canvas-mcp	canvas	17	0	Cargo.toml	Cargo.toml=MIT	MANIFEST_GRANT	CANVAS_LMS:5	0	0
+rikhinkavuru/canvas-poke-mcp	canvas	7	1			LIC_FILE_PRESENT	CANVAS_LMS:2	8	0
+Cocomong98/commit-canvas-mcp	canvas	25	0	pyproject.toml		NO_GRANT		1	3
+zwanner/canvas-mcp-server	canvas	18	0	package.json	package.json=MIT	MANIFEST_GRANT	CANVAS_LMS:8	4	0
+CharlieCardenasToledo/canvas-lms-mcp	canvas	260	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:27	0	43
+1337isnot1337/canvas-lms-mcp	canvas	46	0	package.json,packages/mcp-core/package.json,packages/mcp-http-node/package.json,relay/package.json		NO_GRANT	CANVAS_LMS:6	1	9
+Linklee-sad/Canvas-Agent-MCP	canvas	42	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:6	14	0
+OsmondJiang/Cognitive-Canvas-MCP	canvas	40	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT		6	0
+Unity-Environmental-University/canvas-lint-mcp	canvas	7	0	pyproject.toml		NO_GRANT		0	0
+robertdyates-dotcom/canvas-mcp-aws-	canvas	0	0			NO_GRANT		0	0
+riverpease15/canvas-mcp-server	canvas	6	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:1	5	0
+vtnguye0325/canvas-lms-mcp	canvas	1	0			NO_GRANT		0	0
+elblanco2/canvas-announcements-mcp	canvas	0	0			NO_GRANT		0	0
+mrchris-ai/codex_canvas_mcp	canvas	19	0	pyproject.toml		NO_GRANT	CANVAS_LMS:10	0	0
+Omm2005/Canvas-LMS-MCP	canvas	20	0	package.json		NO_GRANT	CANVAS_LMS:2	3	0
+StackkedJohn/Limitless-Canvas-MCP	canvas	19	0	package.json	package.json=MIT	MANIFEST_GRANT		0	4
+Sanchez244/canvas-lms-mcp	canvas	43	0	package.json	package.json=MIT	MANIFEST_GRANT	CANVAS_LMS:4	12	2
+enkhbold470/mcp-server-canvas	canvas	9	0	package.json		NO_GRANT	CANVAS_LMS:3	1	0
+skarnz/skarnz_canvas_mcp	canvas	0	0			NO_GRANT		0	0
+rbrtlol/canvas-readonly-mcp	canvas	45	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:13	21	0
+tudadada/canvas-audit-mcp	canvas	43	0	example/package.json,package.json,packages/canvas-audit-core/package.json,packages/canvas-audit-mcp/package.json,packages/canvas-audit-playwright/package.json	packages/canvas-audit-core/package.json=MIT;packages/canvas-audit-mcp/package.json=MIT;packages/canvas-audit-playwright/package.json=MIT	MANIFEST_GRANT		0	0
+JaeYu-Dev/canvas-mcp-connector	canvas	8	1	pyproject.toml	pyproject.toml=MIT	LIC_FILE_PRESENT		0	0
+amzonmeeee/HKUST_Canvas_MCP	canvas	197	2	pyproject.toml,web/package.json	pyproject.toml=MIT	LIC_FILE_PRESENT	CANVAS_LMS:24	0	35
+akash0820/canvas-mcp-agent	canvas	49	0	package.json		NO_GRANT	CANVAS_LMS:7	84	5
+davidcwhite/open_canvas_mcp	canvas	254	2	apps/agents/package.json,apps/web/package.json,package.json,packages/evals/package.json,packages/shared/package.json	apps/agents/package.json=MIT;packages/shared/package.json=MIT	LIC_FILE_PRESENT		0	5
+diegodox/map-canvas-mcp	canvas	16	0	package.json		NO_GRANT		1	0
+toddbartholow/irq-canvas-mcp	canvas	30	1	pyproject.toml	pyproject.toml=LICENSE	LIC_FILE_PRESENT	CANVAS_LMS:5	81	3
+3108482409song-commits/Canvas-AIGC-MCP	canvas	17	2	package.json	package.json=AGPL-3.0-only	LIC_FILE_PRESENT		1	20
+srivatbalaji/canvas-mcp-server	canvas	5	0	package.json		NO_GRANT		0	0
+vkumar04/canvas-mcp-lite	canvas	51	0	pyproject.toml		NO_GRANT	CANVAS_LMS:16	0	4
+SvalTek/artifact-canvas-mcp	canvas	43	0	deno.json		NO_GRANT		11	13
+Aitidi/tapnow-canvas-mcp	canvas	55	0	package.json		NO_GRANT		2	5
+risnake/canvas-mcp-server	canvas	20	0	package.json	package.json=ISC	MANIFEST_GRANT	CANVAS_LMS:2	40	12
+terraceonhigh/Canvas-MCP-Server	canvas	16	0	package.json		NO_GRANT	CANVAS_LMS:2	7	0
+swiftkimani/figma-canvas-mcp	canvas	35	1	Cargo.toml	Cargo.toml=MIT	LIC_FILE_PRESENT		0	0
+vishalsachdev/canvas-lms-mcp-extension	canvas	2010	91	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:8	0	0
+Ciender/cohesion-canvas-mcp	canvas	89	1	package.json	package.json=MIT	LIC_FILE_PRESENT		0	0
+TomasThrawat/Hyouka-Remote-Canvas-MCP	canvas	6	1			LIC_FILE_PRESENT		0	0
+Mm4168/canvas-lms-mcp-server	canvas	4290	248	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:6	17	2
+bhargava-gumpula/claude-canvas-mcp-files	canvas	5	0			NO_GRANT	CANVAS_LMS:2	9	0
+ch923dev/canvas-ade-mcp	canvas	160	0	package.json	package.json=MIT	MANIFEST_GRANT		28	16
+brockcraft/canvas-mcp-for-claude	canvas	18	1	mcpb/pyproject.toml		LIC_FILE_PRESENT	CANVAS_LMS:5	4	3
+Sliking/stateless-mcp-canvas	canvas	19	0	package.json,packages/frontend/package.json,packages/mcp-server/package.json		NO_GRANT		7	9
+MuhammedAdel68/aiu-canvas-mcp-server	canvas	10	0	package.json		NO_GRANT	CANVAS_LMS:3	1	0
+kuaizhongqiang/UnityAgentCanvasMCP	canvas	49	1			LIC_FILE_PRESENT		0	2
+ZakSir/edu-tools-mcp-canvas	canvas	3	1			LIC_FILE_PRESENT		0	0
+openputergit/wide-canvas-mcpsbkvv--tkmdxrk	canvas	1	0			NO_GRANT		0	0
+bughide010/nova-canvas-mcp-server	canvas	0	0			NO_GRANT		0	0
+thanhdc-dev/m3e-canvas-mcp	canvas	14	0	package.json	package.json=MIT	MANIFEST_GRANT		6	0
+kbates97/GoCanvas-Readonly-MCP	canvas	14	0	pyproject.toml		NO_GRANT	CANVAS_LMS:2	16	1
+a-ariff/canvas-student-mcp-server	canvas	83	0	package.json,packages/cloudflare-canvas-api/package.json,packages/remote-mcp-server-authless/package.json	package.json=MIT;packages/cloudflare-canvas-api/package.json=MIT	MANIFEST_GRANT	CANVAS_LMS:21	15	22
+mandaza/mcp-canvas-lms-student	canvas	36	1	package.json	package.json=ISC	LIC_FILE_PRESENT	CANVAS_LMS:8	0	2
+josephdempsey/json-canvas-mcp-app	canvas	27	0	package.json		NO_GRANT		0	2
+jdlongmire/ThinxAI-Canvas-MCP	canvas	21	0	pyproject.toml		NO_GRANT		0	0
+felipeneivadc/Demo-MCP-Power-Apps-Canvas	canvas	9	0			NO_GRANT		0	0
+openputergit/wide-canvas-mcpyxkxm-2qswhal8	canvas	3	0	package.json		NO_GRANT		0	0
+sakudiff/DLSU_Canvas_MCP_Server	canvas	8	0	pyproject.toml		NO_GRANT	CANVAS_LMS:4	42	1
+AnonymousOnyx22/canvas-lms-student-mcp	canvas	37	1	package.json	package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:20	3	0
+casss20/UCF-Ops-Board-dashboard-study-planner-and-Canvas-MCP	canvas	15	0	canvas-mcp/pyproject.toml		NO_GRANT	CANVAS_LMS:6	16	4
+openclaw-mcp-vps/infinite-canvas-templates	canvas	13	0	package.json		NO_GRANT		0	0
+jdlongmire/canvas-bot-with-mcp-option	canvas	24	0	pyproject.toml		NO_GRANT		0	0
+shawngrech-cmd/power-apps-canvas-claude-mcp-builder	canvas	14	0	package.json	package.json=MIT	MANIFEST_GRANT		0	5
+Yanis-Bouchelaghem/canvas-mcp-app-v2	canvas	82	0	frontend/package.json,mcp/package.json	mcp/package.json=ISC	MANIFEST_GRANT	CANVAS_LMS:1	4	2
+openclaw-mcp-vps/canvas-lms-grade-export-formatter	canvas	13	0	package.json		NO_GRANT		0	0
+loyaniu/moodle-mcp	moodle	13	0	pyproject.toml		NO_GRANT		24	0
+franciscodngferreira/Moodle-MCP	moodle	18	0	pyproject.toml		NO_GRANT		6	1
+openclaw-mcp-vps/canvas-grade-export-formatter	canvas	13	0	package.json		NO_GRANT		0	0
+1alexandrer/moodle-mcp-2	moodle	2	0			NO_GRANT		0	0
+onbirdev/moodle-webservice_mcp	moodle	20	0	version.php	version.php=// it under the terms of the GNU General Public License as published by	MANIFEST_GRANT		0	0
+neicedai/canvaslab-3d-mcp	canvas	135	0	runtime3d/package.json		NO_GRANT		26	44
+Marcus2012/MCP_Moodle	moodle	0	0			NO_GRANT		0	0
+dsamborschi/moodle-mcp	moodle	27	0			NO_GRANT		0	1
+RoeeLanger/MoodleMCP	moodle	14	0	mcp-server/package.json		NO_GRANT		4	0
+ONPUslop/el-moodle-mcp	moodle	14	0	pyproject.toml		NO_GRANT		11	0
+chema9233/mcp-moodle	moodle	12	0	moodle-mcp-server/package.json		NO_GRANT		8	1
+NicolasViruel/moodle-utn-mcp	moodle	747	0	materias/programacion-4/unidad-1-spring-boot/proyecto-entregado/sistema-gestion-pedidos-nicolas-viruel/pom.xml,materias/programacion-4/unidad-5-sqlmodel-react/Viruel_Nicolas_U5_Fullstack/frontend/package.json,materias/programacion-4/unidad-6-relaciones-estado/Viruel_Nicolas_U6_Categorias_Productos/frontend/package.json,materias/programacion-4/unidad-7-server-state-navegacion/Viruel_Nicolas_U7_FoodStore/frontend/package.json,materias/programacion-4/unidad-8-formularios-tablas/Viruel_Nicolas_U8_FoodStore/frontend/package.json,package.json		NO_GRANT		0	0
+akmal2405/moodle-mcp	moodle	8	0	package.json		NO_GRANT		2	1
+smirnovlad/moodle-mcp	moodle	2	0			NO_GRANT		0	0
+Nasus20202/MoodleMCP	moodle	201	0	package.json,packages/e2e/package.json,packages/server/package.json,packages/shared/package.json,packages/web/package.json		NO_GRANT		0	25
+DeepLearningHarness-Team/Moodle-MCP	moodle	0	0			NO_GRANT		0	0
+l4ent/moodle-mcp	moodle	12	0	package.json	package.json=ISC	MANIFEST_GRANT		2	3
+garciavazquez/mcp-moodle	moodle	10	0	package.json	package.json=ISC	MANIFEST_GRANT		16	0
+Sergio-Oracle/mcp-moodle	moodle	7	0			NO_GRANT		116	4
+ink-waffle/moodle-mcp	moodle	30	0	package.json	package.json=MIT	MANIFEST_GRANT		40	7
+windshifter1/Moodle-MCP	moodle	1	0			NO_GRANT		0	0
+Azur1337/moodle-mcp	moodle	28	0	pyproject.toml		NO_GRANT		0	0
+tboy1128/moodle-mcp	moodle	3	0	package.json		NO_GRANT		1	0
+qns2/moodle-mcp	moodle	10	0	package.json	package.json=MIT	MANIFEST_GRANT		3	2
+OGjoyce/mcp-moodle	moodle	0	0			NO_GRANT		0	0
+gecitemre/moodle-mcp	moodle	4	0			NO_GRANT		11	0
+dwani-ai/moodle-mcp	moodle	48	0	pyproject.toml		NO_GRANT		9	3
+pablogventura/mcp-moodle	moodle	27	0	pyproject.toml		NO_GRANT		12	8
+tosuki/moodle-mcp	moodle	20	0	package.json	package.json=MIT	MANIFEST_GRANT		8	4
+Nainsi27/moodle-mcp-server	moodle	3	0			NO_GRANT		6	0
+linomck/moodle-mcp	moodle	12	0	package.json	package.json=MIT	MANIFEST_GRANT		0	0
+canvas-mcp/adaptive-card-research-canvas-ai	canvas	503	3	adaptive-cards-mcp/package.json,adaptive-cards-mcp/packages/core/package.json,adaptive-cards-mcp/packages/vscode-extension/package.json,canvas-mcp-server/package.json	adaptive-cards-mcp/package.json=MIT;adaptive-cards-mcp/packages/core/package.json=MIT;adaptive-cards-mcp/packages/vscode-extension/package.json=MIT;canvas-mcp-server/package.json=MIT	LIC_FILE_PRESENT	CANVAS_LMS:1	0	10
+Charansai021/Moodle-MCP-Server	moodle	16	0	package.json	package.json=CC-BY-SA-4.0	MANIFEST_GRANT		0	6
+Hiroya-319/moodle-mcp-server	moodle	0	0			NO_GRANT		0	0
+tidely/moodle-mcp	moodle	34	0	Cargo.toml,crates/api/Cargo.toml,crates/cli/Cargo.toml,crates/mcp/Cargo.toml,crates/mock/Cargo.toml,crates/sync/Cargo.toml		NO_GRANT		0	0
+githubbzxs/unnc-moodle-mcp	moodle	22	0	pyproject.toml		NO_GRANT		17	1
+jeongjisung690/Moodle---MCP-server	moodle	16	0			NO_GRANT		5	1
+jctovar/mcp-moodle	moodle	45	0	package.json	package.json=MIT	MANIFEST_GRANT		0	1
+tab11pm/moodle_math_mcp	moodle	11	0	package.json	package.json=ISC	MANIFEST_GRANT		6	0
+jtuttas/moodle-agent-mcp	moodle	24	0	package.json		NO_GRANT		18	1
+lucasbiz/moodle-mcp	moodle	46	0	package.json		NO_GRANT		1	1
+dddanielliu/NCCU-Moodle-MCP	moodle	24	0	pyproject.toml		NO_GRANT		16	7
+Sedahoo/iiit-moodle-mcp	moodle	7	0	pyproject.toml		NO_GRANT		15	2
+francis-vargas/mcp_agent_moodle	moodle	10	0			NO_GRANT		0	5
+CarlosLiberJesus/school-moodle-mcp	moodle	19	0	package.json		NO_GRANT		0	3
+AlpETuna/MonashMoodleMCP	moodle	7	0			NO_GRANT		0	0
+Punyo/NITechMoodleMCPServer	moodle	25	0	build.gradle.kts,gradle.properties		NO_GRANT		0	0
+yhajjar/moodle-mcp-server	moodle	13	0	moodle-mcp-server/package.json		NO_GRANT		13	1
+EduardoKrausME/moodle-block_mcp	moodle	16	0	version.php	version.php=// it under the terms of the GNU General Public License as published by	MANIFEST_GRANT		0	0
+eledia/moodle-webservice_eledia_mcp	moodle	100	1	public/webservice/elediamcp/version.php	public/webservice/elediamcp/version.php=// it under the terms of the GNU General Public License as published by	LIC_FILE_PRESENT		0	0
+dracero/moodle_cetec_mcp	moodle	9	0	pyproject.toml		NO_GRANT		4	0
+virgosfredianilorenzo-cyber/mcp_moodle_totara	moodle	21	0	package.json		NO_GRANT		7	3
+ssdasari777/moodle-mcp-project	moodle	6	0			NO_GRANT		0	0
+shabrej15/moodle-mcp-server	moodle	1	0			NO_GRANT		0	0
+sultantemuruly/moodle-nu-mcp	moodle	33	0	pyproject.toml		NO_GRANT		0	1
+enovation/moodle-local_mcp_helper	moodle	0	0			NO_GRANT		0	0
+CarvalhoJeo/moodle-unisinos-mcp	moodle	15	0	package.json		NO_GRANT		9	2
+yusufwib01/moodle-mcp-server	moodle	123	0	package.json		NO_GRANT		0	0
+Sergio-Oracle/moodle-local-mcp-quiz	moodle	13	0	version.php	version.php=// @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later	MANIFEST_GRANT		0	0
+shuyuaw/moodle-mcp-explorer	moodle	135	0	package.json	package.json=MIT	MANIFEST_GRANT		18	9
+micaherne/moodle-plugin-db-mcp	moodle	10	0	package.json	package.json=MIT	MANIFEST_GRANT		0	0
+oktayevin/moodle-student-mcp	moodle	7	0	package.json		NO_GRANT		19	5
+ntakei-sti/moodle-mcp-server	moodle	4	0			NO_GRANT		5	1
+jmoskaliuk/moodle-runbot-mcp	moodle	4252	143	moodle-plugins/local_runbotadmin/version.php,package.json		LIC_FILE_PRESENT		28	70

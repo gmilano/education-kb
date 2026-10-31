@@ -1,0 +1,10 @@
+full_name	tool_names	mutating	mutating_examples
+vishalsachdev/canvas-mcp	116	48	add_module_item,assign_peer_review,bulk_delete_announcements,bulk_grade_submissions,bulk_update_pages,calculate_grade_scenarios
+boyuchengz/canvas-mcp	1	0	
+DMontgomery40/mcp-canvas-lms	54	13	canvas_create_account_report,canvas_create_assignment,canvas_create_conversation,canvas_create_course,canvas_create_quiz,canvas_create_user
+lucanardinocchi/canvas-mcp	0	0	
+r1ckyIn/canvas-ed-mcp	0	0	
+bruchris/canvas-lms-mcp	210	62	add_group_member,comment_on_submission,create_appointment_group,create_assignment,create_assignment_group,create_assignment_override
+JohannsenLum/canvas-api-mcp	7	1	upload_file
+Fireiscoolsolo/canvas-lms-mcp-server	211	44	add_favorite_course,add_recipients,archive_conversation,batch_update_conversations,create_bookmark,create_content_export
+awesome-town/canvas-mcp-node	0	0	

@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p566` — `2026-10-31`
+
+> **🟢 `44` permissive agents recovered from a population this base had written off** — `18.8 %` of
+> the `234` rows the platform reported as unknown-licence, including a **`104★`** asset. 🔴 **No new
+> tier this week: the movement is in what was already there and could not be seen.** Append-only:
+> history below is untouched.
+
+### 🟢 The week's delta is a RE-READ, not a discovery
+
+🔵 **Worth saying plainly, because it is unusual for this page:** the shelf grew by `44` buildable
+rows this pass and **not one of them is new to GitHub.** They were all in `p565`'s committed census
+row lists, all carrying `license: null` on the platform field, and all carrying a permissive grant
+in a manifest nobody had opened. 🟢 **The movement is in the instrument, not the field.**
+
+| what moved | count |
+| --- | :-: |
+| 🟢 permissive agents recovered by manifest read | **`44`** |
+| 🟢 — `MIT` | `32` |
+| 🔴 — **`ISC`** | `11` |
+| 🔵 — `Unlicense` | `1` |
+| 🟢 addresses genuinely **new to this base** | **`5`** |
+| 🔴 addresses new from the **eight prose legs** | 🔴 **`0`** |
+
+### 🟢 Fastest movers on the field, re-measured
+
+| agent | repo | ★ | signal |
+| --- | --- | :-: | --- |
+| 🟢 **canvas-mcp (read-only)** | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | **119** | 🔴 **`119★` in six days** (created `2026-10-25`). 🟢 **Read-only posture CONFIRMED this pass on a byte read** — `README` and `CONTRIBUTING` both enforce it, `0` mutating tool declarations, and its only two `POST` sites are MCP-transport calls in `test/` |
+| 🔴 **Canvas MCP (UIUC)** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **310** | 🔴 **The head carries the tier's HEAVIEST write surface — `48` of `116` tool declarations mutate (`41.4 %`)**, the highest measured share. `102` tools claimed; `116` names extracted |
+| 🟢 **mcp-canvas-lms** | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **104** | 🟢 **MIT, and only a manifest read finds it.** Tool count reproduces its own description **exactly: `54`** |
+
+🔵 **The read this base can defend about momentum on this field: the fast mover is read-only and
+the head is not.** 🔴 So "fast-growing" and "safe to point at a gradebook" are independent
+properties, and `565-E`'s suggestion that they correlate is refuted — see
+[`../agents/top.md`](../agents/top.md#-p566--2026-10-31).
+
+### 🟢 Five addresses new to this base this week
+
+| agent | repo | grant | ★ | why it is here |
+| --- | --- | --- | :-: | --- |
+| **rust-canvas-mcp** | [`GarthDB/rust-canvas-mcp`](https://github.com/GarthDB/rust-canvas-mcp) | 🟢 **MIT** (`Cargo.toml`, `a30ec47c4f6a`) | 0 | 🔵 **first Rust implementation measured on this field** — and the only recovery of the pass from a non-npm manifest other than two `pyproject.toml`s |
+| **moodle-plugin-db-mcp** | [`micaherne/moodle-plugin-db-mcp`](https://github.com/micaherne/moodle-plugin-db-mcp) | 🟢 **MIT** (`package.json`, `282ba46d78b2`) | 0 | 🟢 **Names the `download.moodle.org/api/1.3/pluglist.php` endpoint that `563-C`/`564-D`/`565-C` have all been blocked on** |
+| **canvas-mcp-assistance** | [`Brian-Two/canvas-mcp-assistance`](https://github.com/Brian-Two/canvas-mcp-assistance) | 🟢 **MIT** (`package.json`, `4d96cc9d1fbb`) | 2 | `168` files — *"AI-Powered Learning Platform"*, the largest tree of the five |
+| **moodle-mcp** | [`qns2/moodle-mcp`](https://github.com/qns2/moodle-mcp) | 🟢 **MIT** (`package.json`, `d3f5dd427625`) | 0 | Courses, **SCORM**, quizzes — the only SCORM surface in the set |
+| **canvas-mcp** | [`akassh9/canvas-mcp`](https://github.com/akassh9/canvas-mcp) | 🔴 **ISC** (`package.json`, `1b8b57ab7b9e`) | 0 | 🔴 The `ISC` case: permissive, OSI-approved, and discarded by this base's own *"MIT / Apache 2.0 / BSD"* line |
+
+### 🔴 The prose-demand channel NILS for a THIRD consecutive pass — and this time the candidates are named
+
+🔴 **Eight legs ran** (4 global, 4 regional; year computed, not hardcoded). 🔴 **`9` GitHub address
+candidates returned; `9` were already on this base**, checked by literal grep before anything was
+drafted — `microsoft/ai-agents-for-beginners`, `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`,
+`ArturoNereu/AI-Study-Group`, `rohitg00/ai-engineering-from-scratch`, `speedyapply/2026-AI-College-Jobs`,
+`avinash201199/free-ai-agents-resources` among them.
+
+🔴 **`22` prose-fact candidates returned; `21` matched the base literally.** 🟢 **The one apparent
+miss is an instrument artefact, not a finding:** *"169 million"* does not match, while **`$169` and
+`FIPSE` are both held on the same pages** — a **notation** variant of a fact this base already
+carries. 🔵 **That is `562-A`'s class firing inside the registration check itself**, for the third
+pass running: a figure matched by its token form rather than its structure attributes to the wrong
+entity — here, to a nil.
+
+🟢 **Recorded as an informed gap, not as coverage.** `p564` (16 candidates, 0 new), `p565` (0 new),
+`p566` (0 new): **the prose-demand channel is saturated for this industry at this cadence.** 🔵 A
+property of the channel worth keeping, and now on its third sighting: *"`134` bills / `31` states"*
+— retired by `p455` — was returned again by the global trends leg and **was not re-adopted**.
+
+🔴 **Regional legs, stated per region because an unplaced finding is worth less than a placed one:**
+
+| leg | addresses new | what it returned |
+| --- | :-: | --- |
+| **North America** | 🔴 `0` | Market-share estimates (`36–38 %` of global) and a Technavio `86 %` genAI-adoption figure — both held. 🔵 The region's *supply* facts came from the platform channel, not here |
+| **EMEA** | 🔴 `0` | 🔴 **The leg largely degenerated into general-enterprise AI** — EU ethical-guidelines update, `EUR 25.4m` Advanced Digital Skills grants, UK `GBP 200m+` Adoption Summit, Europe EdTech 200, `ICS.AI`: all held |
+| **APAC** | 🔴 `0` | 🔴 **Degenerated hardest** — the only education-specific item the leg surfaced was about the **UK**. ASEAN Guide and Forrester's India/China local-LLM figure: held |
+| **LATAM** | 🔴 `0` | 🟢 **The richest of the four**: Digital Education Council LATAM survey (`92 %` students / `79 %` faculty), UNESCO IESALC `200` institutions / `19` countries, UNU-IAS working paper — all held |
+
+🟢 **Channel property worth recording: the EMEA and APAC legs do not return education-specific
+supply at all** — they return enterprise-AI prose with the industry word substituted. 🔴 That is a
+measured deficiency of the query template, not evidence that those regions are quiet.
+🟢 Row list: [`prose-leg-registration-check`](../evidence/prose-leg-registration-check.2026-10-31-p566.tsv).
+
 ## 🆕 `p565` — `2026-10-31`
 
 > **🟢 Eight MIT-licensed Canvas LMS agents new to this base — a whole tier, not a row.** The

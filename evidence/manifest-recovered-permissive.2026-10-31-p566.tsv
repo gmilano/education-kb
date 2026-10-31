@@ -1,0 +1,45 @@
+full_name	platform	stars	platform_spdx	manifest_path	recovered_spdx	structural_canvas_lms	description
+DMontgomery40/mcp-canvas-lms	canvas	104	null	package.json	MIT	yes	Version 2.2 - 54 tools available - an MCP server for interacting with the Canvas LMS API. This server allows you to manage courses, assignments, enrollments, and grades within Canvas.
+lucanardinocchi/canvas-mcp	canvas	26	null	package.json	MIT	yes	MCP server that connects Claude to Canvas LMS - manage coursework through natural conversation
+ink-waffle/moodle-mcp	moodle	6	null	package.json	MIT	no	MCP server for any Moodle site: courses, deadlines, grades, forums, messages, search and downloads
+Brian-Two/canvas-mcp-assistance	canvas	2	null	package.json	MIT	yes	
+omniboyOK/siglo21-canvas-mcp	canvas	2	null	package.json	MIT	yes	MCP no oficial del canvas de universidad siglo 21
+brnyxx/svg-canvas-mcp	canvas	1	null	package.json	MIT	no	svg-canvas-drawing-mcp
+edly-io/canvas-mcp	canvas	0	null	pyproject.toml	MIT	yes	MCP server for interacting with the Canvas LMS
+akassh9/canvas-mcp	canvas	0	null	package.json	ISC	yes	Read-only Canvas LMS MCP server for Claude
+kschoonmaker32/canvas-mcp	canvas	0	null	package.json	ISC	no	
+KadhirTheEngineer/Canvas-MCP	canvas	0	null	pyproject.toml	MIT	yes	if chat gpt can make this it can do your homework
+ichung32-rgb/canvas-mcp	canvas	0	null	package.json	ISC	yes	Canvas
+pranavkarthik10/canvas-mcp	canvas	0	null	package.json	MIT	yes	
+JamesWHomer/CanvasMCP	canvas	0	null	package.json	ISC	yes	An MCP server deployable on Vercel for Canvas by Infrastructure
+izhechev/CanvasMCP_KPIs	canvas	0	null	package.json	UNLICENSED	yes	
+davidcwhite/mcp_canvas	canvas	0	null	package.json	MIT	no	
+XiyaoWang0519/Canvas_MCP	canvas	0	null	package.json	MIT	yes	
+MisterCommand/mcp-canvas-lms	canvas	0	null	package.json	MIT	yes	MCP server for accessing the Canvas LMS for students
+harl00/canvas-mcp-server	canvas	0	null	package.json	MIT	yes	Canvas LMS MCP server — connect Claude to Canvas to surface subjects, assignments, grades, and build live artifacts in Claude Desktop
+MaraniMatias/mcp-and-canvas	canvas	0	null	package.json	MIT	no	
+dev1912-sbt/html-canvas-mcp	canvas	0	null	package.json	ISC	no	A persistent, locally hosted HTML server for AI agents to render and iterate on web interfaces.
+F0rklift-Certified/Canvas-MCP-Server	canvas	0	null	package.json	ISC	yes	A Model Context Protocol server that gives Claude access to your Canvas LMS course materials - turning it into a study assistant grounded in your actual coursework.
+zwanner/canvas-mcp-server	canvas	0	null	package.json	MIT	yes	Canvas MCP Server
+GarthDB/rust-canvas-mcp	canvas	0	null	Cargo.toml	MIT	yes	High-performance Rust MCP server for Canvas LMS API integration
+StackkedJohn/Limitless-Canvas-MCP	canvas	0	null	package.json	MIT	no	
+Sanchez244/canvas-lms-mcp	canvas	0	null	package.json	MIT	yes	MCP server exposing Canvas LMS (courses, assignments, modules, files, submissions) to Claude Code
+tudadada/canvas-audit-mcp	canvas	0	null	packages/canvas-audit-core/package.json	MIT;packages/canvas-audit-mcp/package.json=MIT;packages/canvas-audit-playwright/package.json=MIT	no	
+ch923dev/canvas-ade-mcp	canvas	0	null	package.json	MIT	no	
+risnake/canvas-mcp-server	canvas	0	null	package.json	ISC	yes	
+vishalsachdev/canvas-lms-mcp-extension	canvas	0	null	package.json	MIT	yes	A Model Context Protocol Extension for Claude Desktop to run locally and connect to a Canvas LMS
+Mm4168/canvas-lms-mcp-server	canvas	0	null	package.json	MIT	yes	Canvas LMS MCP Server for n8n AI-Agent Workflows
+a-ariff/canvas-student-mcp-server	canvas	0	null	package.json	MIT;packages/cloudflare-canvas-api/package.json=MIT	yes	Model Context Protocol (MCP) server for Canvas LMS - TypeScript implementation with API token authentication for secure Claude Desktop integration
+thanhdc-dev/m3e-canvas-mcp	canvas	0	null	package.json	MIT	no	MCP server cho M3E Canvas (editor phác thảo giao diện Material 3 Expressive trên trình duyệt).
+Yanis-Bouchelaghem/canvas-mcp-app-v2	canvas	0	null	mcp/package.json	ISC	yes	
+shawngrech-cmd/power-apps-canvas-claude-mcp-builder	canvas	0	null	package.json	MIT	no	
+canvas-mcp/adaptive-card-research-canvas-ai	canvas	0	null	adaptive-cards-mcp/package.json	MIT;adaptive-cards-mcp/packages/core/package.json=MIT;adaptive-cards-mcp/packages/vscode-extension/package.json=MIT;canvas-mcp-server/package.json=MIT	yes	
+jctovar/mcp-moodle	moodle	0	null	package.json	MIT	no	A simple moodle mcp, useful for user operations
+l4ent/moodle-mcp	moodle	0	null	package.json	ISC	no	
+garciavazquez/mcp-moodle	moodle	0	null	package.json	ISC	no	
+qns2/moodle-mcp	moodle	0	null	package.json	MIT	no	MCP server for Moodle LMS - manage courses, SCORM, quizzes and users via Claude
+tosuki/moodle-mcp	moodle	0	null	package.json	MIT	no	A production-grade Model Context Protocol (MCP) server for university Moodle LMS portals, featuring interactive Microsoft Teams SSO (2FA) authentication, internal AJAX service integration, and automated course material downloading.
+linomck/moodle-mcp	moodle	0	null	package.json	MIT	no	
+tab11pm/moodle_math_mcp	moodle	0	null	package.json	ISC	no	
+shuyuaw/moodle-mcp-explorer	moodle	0	null	package.json	MIT	no	A comprehensive web application that implements and tests Moodle's Model Context Protocol (MCP) functions. Features a dashboard to connect to Moodle instances, test MCP tools (courses, users, assignments, quizzes, grades, calendar), view real-time API responses, and explore the MCP ecosystem. · Built with Manus
+micaherne/moodle-plugin-db-mcp	moodle	0	null	package.json	MIT	no	An MCP server for the Moodle plugin database

@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p566` — `2026-10-31` — **🟢 `565-A`, `565-B` AND `565-E` ALL CLOSED BY POPULATION MEASUREMENT — and all three close by REFUTING a figure a predecessor published from a three-repo sample. `234` rows read, `44` permissive recovered (`18.8 %`, not `p565`'s `66.7 %`); `280` Canvas rows classified structurally → `187`; Canvas write surface `28.0 %` against Moodle's `32.9 %`.** 🟢 **`565-C` NOT closed but its endpoint is NAMED and its cause RE-ATTRIBUTED from NXDOMAIN to a proxy `403`.** 🔴 **SIX REGISTERED (`566-A`…`566-F`).**
+
+🔵 **Registration check run first, per `P605`, and `p564`'s lesson applied as a precondition rather
+than discovered afterwards:** the derivation excludes `P-566-A`/`P-566-B`/`P-566-C` recipe ids
+before matching, because a bare `566-[A-F]` match cannot tell a *recipe id* from a *gap citation*.
+🟢 Cost of applying a predecessor's lesson up front: zero, for the second consecutive pass.
+
+| page | A | B | C | D | E | F |
+| --- | :-: | :-: | :-: | :-: | :-: | :-: |
+| [`../agents/top.md`](../agents/top.md#-p566--2026-10-31) | · | ✔ | ✔ | ✔ | · | · |
+| [`../agents/trending.md`](../agents/trending.md#-p566--2026-10-31) | · | · | · | · | · | · |
+| [`../repos/foundations.md`](../repos/foundations.md#-p566--2026-10-31) | ✔ | · | · | · | · | · |
+| [`../repos/trending.md`](../repos/trending.md#-p566--2026-10-31) | · | · | · | · | · | · |
+| [`../verticals/solutions.md`](../verticals/solutions.md#-p566--2026-10-31) | · | · | · | · | ✔ | · |
+| [`../intel/trends.md`](../intel/trends.md#-p566--2026-10-31) | · | · | · | · | · | · |
+| [`../intel/market.md`](../intel/market.md#-p566--2026-10-31) | · | · | · | · | · | · |
+| [`../compose/patterns.md`](../compose/patterns.md#-p566--2026-10-31) | · | · | · | · | · | ✔ |
+
+🟢 **6 of 6 ids cited; 0 orphans.** 🟡 Four pages cite none — the two trending pages carry this
+pass's shelf delta, and `intel/trends.md` and `intel/market.md` carry its trends and its regional
+placement, not its gaps.
+
+🟢 **Gate posture — `565-F`'s correction applied, not re-asserted.** 🔴 `make hooks` was denied a
+**ninth** consecutive time. 🟢 Per `565-F`, that denial attaches to the `make` recipe and not to the
+instruments; this pass therefore **did not** repeat `p558`–`p564`'s false claim that the committed
+instruments are unreachable. 🟢 **Five committed instruments run and published as measured:** `validate-pages.py`,
+`gap-register-audit.py`, `address-count.py`, `crosspage-figure-claims.py` and `derive-counts.py`
+all executed under `python3 -I <path>` — second consecutive pass confirming `565-F`.
+
+| instrument | result on this pass |
+| --- | --- |
+| `validate-pages.py` | 🟢 **All nine `p566` sections CLEAN.** 🔴 `4` pages carry findings (`agents/trending.md`, `repos/trending.md`, `intel/market.md`, `intel/open-gaps.md`) — 🟢 **`0` of `32` findings fall inside a `p566` section**, verified by line range against each section's measured bounds. All inherited |
+| `derive-counts.py` | 🔴 `agents/top.md` **RED** (`derived=68`, `claimed=67`) — 🟢 **identical to `p565`'s recorded arrival baseline, so unchanged by this pass.** `compose/patterns.md` and `intel/trends.md` AMBER for absent header claims, also inherited |
+| `gap-register-audit.py` | 🔵 Runs; its two dialects disagree (`MISSING=123` worded vs `475` any-form) and it says so itself — both upper bounds, neither this base's leak size |
+| `crosspage-figure-claims.py` | 🔵 Runs; queue rows are `±1` star drifts between passes, the instrument's own documented artefact class |
+| `address-count.py` | 🟢 Runs; canonical pair counts emitted for the three pages it covers |
+
+🔵 And the inputs this pass depended on were the census row lists `565-D` forced into `evidence/` —
+🟢 **without them the `234`-row re-read would have been impossible, which is `565-D` paying off one
+pass after adoption.** 🟢 **Six new row lists committed this pass, same rule.**
+
+### 🟢 Transports
+
+| transport | result this pass |
+| --- | --- |
+| 🟢 **`git clone --filter=blob:limit=16k --no-checkout`** | 🟢 **WORKS — the pass's primary instrument.** `341` repositories, complete tree enumeration + every manifest read, **`0` clone failures**, measured at **`0.74 s`/repo** |
+| `git cat-file -p HEAD:<path>` | 🟢 **WORKS** — grants and sources read from the clone with no extra fetch (blobs `≤16 k` arrive with the clone) |
+| `git rev-list --max-parents=0` / `git rev-parse HEAD:<path>` | 🟢 **WORKS** — root commits and blob digests on the `5` new addresses |
+| `WebSearch` | 🟢 8 legs (4 global, 4 regional) — 🔴 **`0` addresses and `0` facts new to this base** |
+| 🔴 `curl` → `download.moodle.org` | 🔴 **`CONNECT tunnel failed, response 403`** — proxy **policy** denial, not DNS |
+| 🔴 `WebFetch` → `download.moodle.org` | 🔴 `ENOTFOUND`; harness names the cause: *"outside the session's allowed network domains"* |
+| 🔴 `getent` → `*.moodle.org`, `moodle.net` | 🔴 **whole zone negative**; `github.com` positive as control |
+| `curl -I` → `github.com` | 🔴 `400`/`403` — `555-F`, unchanged |
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+| --- | --- |
+| 🟢 **`565-B`** | **CLOSED WITH THE NUMBER IT ASKED FOR, over the exact population it specified (`173 + 61 = 234`).** 🟢 **`45` rows (`19.2 %`) carry a manifest grant; `44` (`18.8 %`) are permissive** — `MIT` `32`, 🔴 **`ISC` `11`**, `Unlicense` `1`; **`189` (`80.8 %`) `NO-GRANT` confirmed**; 🔴 **`0` carry a project-root licence file.** 🔴 **And it closes by REFUTING `p565`'s own rate:** `2 of 3` = `66.7 %` was a three-repo sample; the population is `18.8 %`, over-stated **`3.5 ×`**. 🔴 **`p565`'s *attribution* also fails** — Canvas `19.7 %` vs Moodle `16.4 %`, `3.3` points apart, so it is not a platform property; 🟢 **the predictor is the npm manifest: `34.7 %` with `package.json` against `2.6 %` without, `13.3 ×`.** 🔴 `564-B`'s `0 of 3` on Moodle is refuted too. 🟢 Row lists committed |
+| 🟢 **`565-A`** | **CLOSED by exactly the instrument it prescribed** — a classification not depending on description text. 🟢 **`187 of 280` (`66.8 %`) structurally Canvas LMS; `93` (`33.2 %`) a different "canvas"** — 🔴 `4 ×` `p565`'s own *"`≥23`"* estimate. 🟢 **The `101` empty-description rows `p565` called unclassifiable are classified: `60` (`59.4 %`) are Canvas LMS.** 🟢 **And the channel's error is asymmetric** — `93 of 94` (`98.9 %`) confirm when the description names the platform, against `34` under-claims and `101` silences. 🟢 **`99` structurally-confirmed permissive Canvas LMS agents, `24` visible only via manifest** |
+| 🟢 **`565-E`** | **CLOSED on the tier, and BOTH its questions answered.** 🟢 `p447`'s instrument re-run across four registration idioms: **`599` tool declarations, `168` mutating = `28.0 %`**, against Moodle's **`136 of 414` = `32.9 %`**. 🟢 **Answer 1: the Canvas tier is NOT systematically more read-only.** 🔴 **Answer 2: fast movers are NOT systematically more read-only** — the `119★`-in-six-days mover is read-only (confirmed on a byte read) while the **`310★` head mutates on `41.4 %`, the tier's heaviest surface.** 🟢 Calibrated on two exact reproductions (`54`, `211`). 🔴 Recall `6 of 9` repos, stated before the figure → `566-B`; tier-scope only → `566-F` |
+| 🟢 **`565-D` paid off one pass after adoption** | 🟢 Its standing rule — *"any published band, census or count commits its row list"* — is the reason this pass could re-read `p565`'s populations at all. 🔵 **Recorded as evidence the rule works, not merely as compliance with it.** `6` new row lists committed this pass |
+| 🔴 **`565-C` / `564-D` / `563-C`** | 🔴 **NOT closed — but materially advanced on both axes it was stuck on.** 🟢 **The endpoint is NAMED:** `https://download.moodle.org/api/1.3/pluglist.php`, official and versioned, found inside [`micaherne/moodle-plugin-db-mcp`](https://github.com/micaherne/moodle-plugin-db-mcp) — a repository recovered by *this pass's licence axis*, after three passes of prose legs failed to produce it. 🔴 **And the cause is RE-ATTRIBUTED:** not NXDOMAIN but **a proxy `CONNECT … 403`**, i.e. network policy, with the harness stating it in words. 🟢 **Whole-zone measurement kills two of `565-C`'s own three proposed remedies** — `moodle.org`, `download.moodle.org`, `api.moodle.org`, `stats.moodle.org` and `moodle.net` are all denied, so no mirror or alternate hostname exists to try. Carried forward as **one** actionable request → `566-E` |
+
+### 🔴 Corrected and retracted this pass
+
+| item | disposition |
+| --- | --- |
+| 🔴 **This pass's OWN `7` `LIC_FILE_PRESENT` verdicts** | 🔴 **ALL SEVEN RETRACTED BEFORE PUBLICATION.** Root-level licence files: **`0 of 7`**. Four matched a **vendored `node_modules/**/LICENSE`** (up to **`4 268`** vendored paths in one repo), one matched **`library_docs/.../license-ref.md`** (documentation about Canvas's licence endpoint), one a **subproject** root, one a **plugin payload**. 🟢 The platform's `null` was correct on every one. 🟢 Caught by reading each path's **scope** before any table was written |
+| 🔴 **`564-B`'s prescription, as adopted by `p565`** | 🔴 **PARTIALLY WITHDRAWN.** *"Enumerate the complete tree instead of guessing filenames"* is right about filenames and **wrong without a scope rule**: at population scale, unscoped tree enumeration over-reports, catastrophically on vendored-npm repositories. 🔵 `p565` could not see this because it ran the instrument on `14` hand-picked repos, none of which vendored. 🟢 **Rule adopted: a licence path is evidence about the repository only at its root (or a declared package root); deeper, it is evidence about a dependency or subproject.** 🔴 Not gated → `566-D` |
+| 🔴 **`p565`'s *"error rate is POPULATION-DEPENDENT … severe on the JavaScript/TypeScript head"*** | 🔴 **Half-right, and the framing is WITHDRAWN.** The mechanism (npm declares in-manifest by convention) is confirmed; the attribution to **platform** is refuted — the ecosystem axis cuts across Canvas and Moodle alike, `19.7 %` vs `16.4 %`. 🟢 Restated as: **the defect is an ecosystem property, not a vertical one** |
+| 🔴 **The HTTP-verb write-surface axis** | 🔴 **RETIRED before publication, and the reason generalises past this base: MCP's JSON-RPC transport is itself `POST`**, so every MCP server shows mutating verbs, read-only ones included. 🟢 Verified on `boyuchengz/canvas-mcp`, whose only two `POST` sites are MCP-transport calls **in `test/`**. 🟢 **Only the tool-declaration axis is sound** — `p447` chose correctly and this pass supplies the why. 🔵 This pass's `mutating_verbs` column ships in the evidence TSV and backs **no** published claim |
+| 🔴 **How this base reads `NXDOMAIN`** | 🔴 **CORRECTED, against `555-F` and every pass since.** This container resolves nothing directly — all egress is proxied — so a DNS negative is a statement about the **allow-list**, not about whether a host exists. 🟢 `p565`'s reading of `moodle.org` as an unreachable/absent host is withdrawn |
+| 🔴 *"`134` bills / `31` states"* | 🔴 **Returned by the global trends leg for the THIRD consecutive pass. Still NOT re-adopted** — `p455` retired it (one tracker; three others disagree by `2.6 ×`). 🔵 The channel property is now well established: a retired figure keeps being returned by the query that produced it |
+| 🔴 **This pass's own prose-leg "miss"** | 🔴 **Retracted as a finding.** *"169 million"* failed a literal grep while **`$169` and `FIPSE` are both held on the same pages** — a **notation** variant, not a new fact. 🔵 `562-A`'s class, firing inside the registration check itself for the third pass running |
+
+### 🔴 Registered this pass
+
+| gap | finding | closure condition |
+| --- | --- | --- |
+| 🔴 **`566-A`** | **The `93` non-Canvas-LMS rows are a measured population with no taxonomy.** They are confirmed *not* Canvas LMS, and the sweep incidentally surfaced Power Apps canvas apps, SVG/HTML drawing surfaces, Material 3 editors and audit canvases alongside `p565`'s named Figma · Obsidian · Canvas Medical EHR · CanvasXpress · Canva — 🔴 but **no row-by-row target-system classification exists**, so this base cannot say how much of a name-census is contamination by *which* system | 🟢 Extend the structural probe to a **multi-target fingerprint set** (Figma / Obsidian / Power Apps / SVG-DOM / EHR / Material 3) and publish the `93` with a target per row. 🔵 The clone and tree enumeration are already paid for — this is one more grep pass over trees already measured. **Not built** |
+| 🔴 **`566-B`** | **The tool-declaration extractor's recall is `6 of 9` on the tier and UNMEASURED on the field.** `lucanardinocchi/canvas-mcp` (`26★`, MIT), `r1ckyIn/canvas-ed-mcp` (`18★`, APAC, Univ. of Sydney) and `awesome-town/canvas-mcp-node` return **`0`** tool names across four idioms, and `boyuchengz` under-reads at `1`. 🔴 **So `28.0 %` is a figure over the repos the instrument could read, not over the tier** — and `565-E`'s own framing is inherited by the same limit | 🟢 Add the missing idioms (camelCase object literals were added this pass and did not fix these three; next candidates are schema-array registration and generated tool manifests), then **publish recall as a number alongside every mutation share**. 🔵 Second leg worth the same clone: run it over the `187` structurally-confirmed rows, not the `9`-repo tier. **Not built** |
+| 🔴 **`566-C`** | **This base's own stated licence focus discards measured permissive supply.** The standing line is *"MIT / Apache 2.0 / BSD"*; this pass recovered **`11` `ISC`** and **`1` `Unlicense`** grants among `44`. 🔴 Both are OSI-approved and carry no copyleft or network clause, so **a gate implemented to this base's own brief throws away `12` of the `44` repositories the expensive manifest read just found** — a second defect composing with the first | 🟢 Replace the name list with a **property test** — OSI-approved, no copyleft, no network clause — admitting `ISC`, `0BSD`, `Unlicense`, `MIT-0` on the test rather than on membership. 🔵 Then re-run it over every industry on this harness, because the focus sentence is shared boilerplate, not education-specific. **Not built** |
+| 🔴 **`566-D`** | **The root-scope rule is adopted but nothing enforces it.** This pass produced `7 of 7` false positives without it, and the failure is silent — a vendored tree simply returns a licence path and an unscoped instrument believes it. 🔴 No committed instrument in `ingest/` currently bounds a licence-path match to the repository root | 🟢 Add the scope rule to `probe-grant.sh` / `grant-verdict.py` as a gate: reject any licence-path match at depth > 0 unless it is a declared package root, and exclude `node_modules`/`vendor`/`site-packages` outright. 🔵 Then re-attest the `NO-GRANT`/`EMPTY` verdicts `p558`–`p565` published, since none were produced under the rule. **Not built** |
+| 🔴 **`566-E`** | **`563-C`/`564-D`/`565-C` now reduce to ONE request, and it is outside this session's power.** The endpoint is named and official (`https://download.moodle.org/api/1.3/pluglist.php`); the cause is a proxy policy `403`; the **whole `*.moodle.org` zone plus `moodle.net`** is denied, which eliminates the mirror and alternate-hostname branches `565-C` proposed for itself. 🔴 The standing consequence is unchanged: this base **cannot distinguish a Moodle Partner shipping through official channels from one that has shipped nothing** | 🟢 Add `*.moodle.org` to the session's permitted network domains, then read `api/1.3/pluglist.php` and census the plugin directory for `mcp` components. 🔵 **Resolve `563-C`, `564-D`, `565-C` and this together — they are now one request, not four gaps.** **Not built** |
+| 🔴 **`566-F`** | **The write-surface measurement covers the `9`-repo named tier, not the `187`-row field.** `28.0 %` is the tier's rate; the field's is unknown, and the tier was selected by stars and by `p565`'s attention — 🔴 **exactly the selection `p564` showed is blind to the vendor and institution layers**, both of which ship at `0★`. `edly-io/canvas-mcp` (vendor) and `omniboyOK/siglo21-canvas-mcp` (LATAM institution) are in the field and not in the tier | 🟢 Run the tool-declaration extractor over all `187` structurally-confirmed rows and publish the field-wide mutation share with its recall. 🔵 Then test the question the tier cannot answer: **do vendor- and institution-maintained connectors mutate less than hobby ones?** **Not built** |
+
 ## 🆕 `p565` — `2026-10-31` — **🟢 `564-A`, `564-B` AND `564-C` ALL CLOSED — and `564-C` closed by REFUTING ITS OWN PREMISE: North America was never absent, it was the wrong platform. `canvas-mcp in:name` = `280` rows, head `310★` (UIUC, MIT, FERPA ×5).** 🟢 **`564-A` closed with a number: `137` of `140`.** 🔴 **`564-D`/`563-C` BLOCKED — `moodle.org` is `NXDOMAIN` on this host.** 🔴 **SIX REGISTERED (`565-A`…`565-F`).**
 
 🔵 **Registration check run first, per `P605`, and published as measured rather than asserted.**

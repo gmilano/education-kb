@@ -1,0 +1,281 @@
+full_name	stars	platform_spdx	structural_canvas_lms	marker_hits	desc_names_canvas	desc_empty	description
+vishalsachdev/canvas-mcp	310	MIT	yes	15	yes	no	Canvas LMS MCP server — up to 102 tools and 8 agent skills for students & educators. Works with Claude, Cursor, Codex, and 40+ agents.
+boyuchengz/canvas-mcp	119	MIT	yes	9	yes	no	Read-only MCP server that connects Claude, ChatGPT and other AI assistants to Canvas LMS.
+DMontgomery40/mcp-canvas-lms	104	null	yes	17	yes	no	Version 2.2 - 54 tools available - an MCP server for interacting with the Canvas LMS API. This server allows you to manage courses, assignments, enrollments, and grades within Canvas.
+n00bvn/CanvasMCPClient	78	MIT	no	0	no	no	Canvas MCP Client is an open-source, self-hostable dashboard application built around an infinite, zoomable, and pannable canvas. It provides a unified interface for interacting with multiple MCP (Model Context Protocol) servers through a flexible, widget-based system.
+lucanardinocchi/canvas-mcp	26	null	yes	3	yes	no	MCP server that connects Claude to Canvas LMS - manage coursework through natural conversation
+r1ckyIn/canvas-ed-mcp	18	MIT	yes	3	yes	no	MCP server for Canvas LMS and Ed Discussion integration
+plyght/canvas-mcp	14	null	yes	9	yes	no	Canvas LMS MCP server
+r-huijts/canvas-mcp	12	MIT	yes	13	yes	no	Model Context Protocol server for Canvas LMS
+aryankeluskar/canvas-mcp	11	ISC	yes	6	yes	no	Collection of Canvas LMS and Gradescope tools for the model context protocol. Query your courses, find resources, and chat with your upcoming assignments.
+mbcrosiersamuel/canvas-mcp	11	null	yes	3	yes	no	An MCP Server for Canvas / Instructure to help pull Assignment details and deadlines
+bruchris/canvas-lms-mcp	10	MIT	yes	25	yes	no	Canvas LMS MCP server — read courses, assignments, submissions, rubrics, quizzes; grade and comment from any AI agent
+Shashwatpog/poke-canvas-mcp	9	MIT	yes	2	no	no	mcp to integrate canvas with poke
+YYKKCC-kevin/Canvas-MCP-for-students	8	null	yes	9	no	yes	
+ahnopologetic/canvas-lms-mcp	7	MIT	yes	5	no	yes	
+HinnliDev/Canvas-CEServer-MCP	6	MIT	no	0	no	no	Read-only Streamable HTTP MCP bridge for inspecting Sky: Children of the Light processes and memory through Canvas CEServer.
+NoahWeiss123/CanvasMCP-Poke	5	null	yes	1	no	no	This is a locally hosted read-only MCP server to give tools to Poke to read Canvas data: courses, assignments, files, pages, modules, announcements, discussions, quizzes, calendar events, and to-dos.
+admin978/canvas-mcp	4	MIT	yes	5	yes	no	Local-first Canvas LMS MCP server. Stdio transport, ~125 lines of Python.
+yunwoong7/aws-nova-canvas-mcp	4	MIT	no	0	no	no	MCP server for generating and editing images using AWS Bedrock’s Nova Canvas model
+CorCvusRamboChen/canvas-session-mcp	4	MIT	yes	4	yes	no	Connect Claude, Cursor, Codex & other AI assistants to Canvas LMS with your normal login — no access token needed. Read-only MCP server.
+jqyyy23/Canvas-LMS-MCP-	4	null	yes	3	yes	no	Read-only MCP server for Canvas LMS: deadlines, announcements, and grades in Claude. Uses your browser session, so no admin token needed.
+JohannsenLum/canvas-api-mcp	3	MIT	yes	37	yes	no	Canvas MCP server for Canvas LMS: 16 curated student tools plus a gateway reaching all 1,116 Canvas API endpoints
+AdityaPrakash-26/Canvas-MCP	3	null	yes	54	no	yes	
+orionkabeza/canvas-mcp	3	null	yes	2	yes	no	MCP server wrapping the Canvas LMS REST API so Claude can act as a study assistant
+wassermanproductions/master-canvas-mcp	3	MIT	no	0	no	no	Headless MCP server for Master Canvas — read/edit a project (boards, cards, prompts, shot order, assets) and build generator-ready handoff packages from Hermes, Claude Code, Codex, or any MCP client. Zero dependencies. MIT.
+shu-silc-osc/canvas-chaoxing-silc-mcp	3	MIT	yes	13	no	no	Preview: local Student Center feasibility experiment with read-only Canvas student/shared MCP tools. Chaoxing not implemented yet.
+lcrzhang/canvas-mcp	2	MIT	yes	2	yes	no	Read-only MCP server for Canvas LMS with deny-by-default scoping
+pigeek/canvas-mcp	2	MIT	no	0	no	no	Model Context Protocol (MCP) server that enables AI agents to create rich, real-time visualizations using A2UI.   Supports configurable canvas sizes optimized for TV/Chromecast casting.
+taciturnaxolotl/canvas-mcp	2	NOASSERTION	yes	1	no	no	a fancy canvas mcp server!
+brilliant751/tongji-canvas-mcp	2	null	yes	3	no	no	支持连接到同济的canvas系统，以完成日常事务
+Brian-Two/canvas-mcp-assistance	2	null	yes	13	no	yes	
+Kuria-Mbatia/Canvas-MCP-server	2	MIT	yes	33	no	yes	
+Gediontkd/mcp-nova-canvas	2	null	no	0	no	no	noval-canvas mcp server
+arthurcuri/mcp-instructure-canvas	2	MIT	yes	28	yes	no	Canvas LMS MCP server with REST and GraphQL, file transfers, Telegram reminders, and optional local Codex/Claude agents. Guided setup and opt-in automation.
+colehollander10-netizen/canvas-student-mcp-server	2	null	yes	3	yes	no	MCP server for Canvas LMS - gives Claude access to your grades, assignments, files, and announcements as a student.
+teejballa/Claude-for-Canvas-MCP	2	null	yes	3	no	no	This is a custom built MCP server for Claude that connects it to Canvas, with assignment, announcement, to do viewing capabilities.
+omniboyOK/siglo21-canvas-mcp	2	null	yes	4	no	no	MCP no oficial del canvas de universidad siglo 21
+Haris320/canvas-mcp	1	null	yes	6	yes	no	Open-source Model Context Protocol server that integrates Claude with Canvas LMS, enabling students to access assignments, grades, deadlines, and feedback directly within Claude conversations.
+looooonk/canvas-mcp	1	null	yes	12	no	yes	
+tylergibbs1/canvas-mcp	1	MIT	yes	1	yes	no	MCP server for Canvas LMS over the REST API — coursework, deadlines, grades, submissions, discussions, and messages for AI agents.
+Mattlo0546/canvas-mcp	1	MIT	yes	3	yes	no	Canvas LMS MCP server for Claude, Codex & Cursor: courses, modules, deadlines, announcements and lecture-slide download. University SSO sign-in, no API token. Oxford by default; any Canvas site.
+Gowindude/canvas-mcp	1	null	yes	7	yes	no	MCP server connecting Claude to Canvas LMS
+semyonfox/canvas-mcp	1	MIT	yes	30	yes	no	MCP server for Canvas LMS. Read-only by default, for students using their own access token.
+Alejandro-Valadez/canvas-mcp	1	MIT	yes	3	yes	no	MCP server that connects Claude to Canvas LMS - manage coursework through natural conversation
+mklemos/canvas-mcp	1	null	yes	2	no	no	Canvas MCP server for UCSB students to access Canvas data in Claude Desktop
+mk-imagine/canvas-mcp	1	null	yes	9	yes	no	An MCP Server for Canvas (Instructure) for instructors
+hakimjanov/Canvas-MCP	1	null	yes	5	yes	no	MCP server for Canvas LMS — gives AI agents access to assignments, grades, announcements, and course data
+Moriz82/canvas-mcp	1	null	yes	6	yes	no	Canvas LMS MCP server for Claude Code — OAuth via mitmproxy-sniffed iOS tokens, macOS Keychain storage
+mhadifilms/canvas-mcp	1	MIT	yes	19	yes	no	MCP server for Canvas LMS that works without an API key, by reusing the browser session you already have
+andycjm17/canvas-mcp	1	MIT	yes	2	yes	no	Read-only MCP server for Canvas LMS — ask your AI client what's due this week
+Sarthak-Neupane/CanvasMCPServer	1	MIT	yes	13	no	no	A MCP server for the Canvas
+app-appplayer/mcp_canvas	1	MIT	no	0	no	yes	
+neuhausi/canvasxpress-mcp	1	MIT	no	0	no	yes	
+q973946080/jiflow-canvas-mcp	1	MIT	no	0	no	no	Standalone MCP server for safe local canvas graph operations with scoped access, revision checks, and durable operation receipts.
+nintang/canvas-lms-mcp	1	null	yes	19	no	yes	
+DA0806/canvas-student-mcp	1	null	yes	4	no	no	Canvas Student MCP Server for AI assistants using FastMCP
+lennyitb/canvas-viewer-mcp	1	MIT	yes	13	yes	no	Read-only MCP server exposing Canvas LMS coursework to an AI assistant, including assignments the Canvas dashboard hides.
+AlexCh121/canvas-mcp-dist	1	null	no	0	no	yes	
+temujinkz/canvas-poke-mcp	1	MIT	yes	2	no	no	Connect your university Canvas account to Poke through my MCP
+awesome-town/canvas-mcp-skills	1	MIT	yes	4	yes	no	Generic Claude skills for canvas-mcp — plan lessons, assessments, modules, courses on Canvas LMS. Built at Franklin School, adaptable to any school.
+mateusferrao/canvas-mcp-server	1	null	yes	9	no	yes	
+carainc/canvas-medical-mcp	1	MIT	yes	2	no	yes	
+guanweiqiang/obsidian-canvas-mcp	1	null	no	0	no	yes	
+Canvas-LMS-MCP/canvas-teacher-mcp	1	MIT	yes	4	yes	no	Canvas LMS for instructors over MCP — build pages and quizzes, and grade
+zerob13/canvas-sketchpad-mcp	1	MIT	yes	1	no	no	AI Canvas Drawing Service with MCP Server
+enkhbold470/canvas-lms-mcp	1	null	yes	2	no	yes	
+kaushikgunasekaren/canvas-grader-mcp	1	MIT	yes	4	yes	no	MCP server that helps teachers and TAs grade Canvas LMS submissions and leave SpeedGrader feedback
+awesome-town/canvas-mcp-node	1	null	yes	27	yes	no	FERPA-aware Canvas LMS MCP server (Node + TypeScript). 30 tools, persistent per-course pseudonym maps, execute_typescript escape hatch, one-click .mcpb installer.
+brnyxx/svg-canvas-mcp	1	null	no	0	no	no	svg-canvas-drawing-mcp
+Fireiscoolsolo/canvas-lms-mcp-server	1	MIT	yes	8	yes	no	Self-hosted Canvas LMS MCP server for students: 211 tools in Claude on the web, desktop and phone, with an OAuth-protected tunnel and multi-computer failover. Free Windows setup app.
+r1ckyIn/canvas-ed-mcp-remote	1	MIT	yes	3	yes	no	Canvas LMS + Ed Discussion MCP Server for ChatGPT (Render deployment)
+1jehuang/canvas-cli-and-mcp	1	null	yes	4	yes	no	Canvas LMS CLI and MCP server
+Fireiscoolsolo/canvas-lms-mcp-local	1	MIT	yes	6	yes	no	Canvas LMS MCP server for students: 211 tools for grades, deadlines and assignments in Claude Desktop and other AI apps. Runs on your computer. Free Windows setup app.
+javohir73/mcp-server-canvas-lms	1	MIT	yes	20	yes	no	Minimal, student-focused, strictly read-only MCP server for Canvas LMS
+AmroJSawan/figma-canvas-local-mcp	1	MIT	no	0	no	no	MCP server that gives AI assistants full read/write access to Figma — extract design systems, create components, manage variables, and debug plugins in real time. Runs conflict-free alongside figma-console-mcp.
+SAMLAY-c/canvas-mcp	0	null	no	0	no	yes	
+GodPuffin/canvas-mcp	0	MIT	yes	4	no	yes	
+edly-io/canvas-mcp	0	null	yes	9	yes	no	MCP server for interacting with the Canvas LMS
+moisesbritez92/canvas-mcp	0	null	no	0	no	no	MCP con la intencion de que la IA haga diseños en CANVAS
+dinyorik/canvas-mcp	0	null	yes	2	yes	no	A minimal Model Context Protocol (MCP) server that exposes Canvas LMS data to Claude.
+Zalasyu/Canvas-MCP	0	null	no	0	no	yes	
+mehdi6132/canvas-mcp	0	MIT	yes	12	yes	no	Personal study assistant for Canvas LMS as an MCP server for Claude Desktop. Tracks deadlines, grades, and course feedback in one place.
+zhenghh04/canvas-mcp	0	MIT	yes	27	yes	no	MCP server for Canvas LMS — 47 tools so an AI assistant can run your course. Built for instructors; tiered safety, no admin needed.
+UE2020/canvas-mcp	0	null	yes	2	no	no	Canvas MCP (model context protocol) which doesn't require an API key. Uses reverse engineered endpoints.
+akassh9/canvas-mcp	0	null	yes	5	yes	no	Read-only Canvas LMS MCP server for Claude
+thesupersupersigma/canvas-mcp	0	MIT	yes	8	no	no	pray for my chem test tmrw pls 🙏🙏🙏
+chiptoe-svg/canvas-mcp	0	null	yes	10	no	no	A local stdio MCP server for your own Canvas account, for use with Codex
+abhi-ashar/canvas-mcp	0	null	yes	2	no	yes	
+a-ariff/canvas-mcp	0	MIT	yes	6	yes	no	Canvas LMS MCP server - query courses, assignments, grades and more
+pragya-jha-cloud/Canvas-MCP	0	null	no	0	no	yes	
+Abhinav-ranish/Canvas-MCP	0	null	no	0	no	yes	
+AvatarGaia/canvas-mcp	0	MIT	no	0	no	no	stdio shim for TeamAgent Canvas MCP (数字员工能力) — 把仅支持 stdio 的 MCP 客户端接到 streamable-http 端点
+dhruvbhambhani/canvas-mcp	0	null	yes	4	yes	no	Open source MCP server for Canvas LMS
+pratham-2097/canvas-mcp	0	null	yes	5	no	no	Personal read-only remote MCP server for University of Cincinnati Canvas
+salvadoracuna/canvas-mcp	0	null	yes	5	yes	no	MCP server for Canvas LMS - read courses, assignments, announcements, files and grades from any MCP client
+Aadi-FTC-12868/canvas-mcp	0	null	yes	2	yes	no	MCP server connecting Claude to Canvas LMS
+fireballff/canvas-mcp	0	MIT	yes	13	yes	no	MCP server for Canvas LMS — query assignments from Claude, ChatGPT, Gemini, and OpenRouter agents
+BharathVyaas/Canvas-MCP	0	null	no	0	no	yes	
+SOVRN144/canvas-mcp	0	MIT	yes	4	no	yes	
+mflynn326-collab/canvas-mcp	0	null	yes	6	yes	no	Let Claude manage your Canvas LMS courses (MCP server) and set up the Overleaf MCP for your LaTeX projects
+brynjar2605/canvas-mcp	0	MIT	yes	21	no	no	Read-only MCP server + sync engine for RU Canvas
+cabrt/canvas-mcp	0	null	yes	2	yes	no	Read-only Canvas LMS MCP server — 23 tools for courses, assignments, grades, and deadlines
+kschoonmaker32/canvas-mcp	0	null	no	0	no	yes	
+rickyegl/canvas-mcp	0	null	no	0	no	yes	
+TechSupportz/canvas-mcp	0	null	no	0	no	yes	
+cal-poly-dxhub/canvas-mcp	0	MIT	yes	3	no	yes	
+Slush97/canvas-mcp	0	MIT	yes	2	no	yes	
+KadhirTheEngineer/Canvas-MCP	0	null	yes	9	no	no	if chat gpt can make this it can do your homework
+zihan1997/canvas-mcp	0	null	yes	6	no	yes	
+darenhua/canvas-mcp	0	null	yes	2	no	yes	
+JusticeRox98577/Canvas-Mcp	0	null	yes	2	no	yes	
+The-greenpanter/canvas-mcp	0	null	no	0	no	yes	
+ichung32-rgb/canvas-mcp	0	null	yes	2	no	no	Canvas
+jsilvanus/canvas-mcp	0	null	no	0	no	no	A Canvas: you describe, AI draws.
+ldecasanova/canvas-mcp	0	null	yes	6	no	yes	
+sohumsuthar/canvas-mcp	0	null	yes	2	yes	no	Canvas LMS MCP server for Claude Desktop — connects your Canvas Instructure account to Claude via the Model Context Protocol
+diegoadborges/canvas-mcp	0	null	yes	3	no	yes	
+JonathanDesta/Canvas-MCP	0	null	no	0	no	yes	
+anaylab/canvas-mcp	0	MIT	yes	8	yes	no	Canvas LMS MCP server (stdio + HTTP transport) for Claude
+devinsmorse/Canvas-MCP	0	null	no	0	no	yes	
+evanap003300/canvas-mcp	0	null	yes	8	no	no	mcp server for interfacing with canvas through claude code.
+AlejandroVallejo1/canvas-mcp	0	MIT	yes	11	yes	no	MCP server for Canvas LMS - Access courses, assignments, grades, announcements, messages, files, and more from Claude
+pranavkarthik10/canvas-mcp	0	null	yes	4	no	yes	
+duggsha/canvas-mcp	0	MIT	yes	1	no	no	Read-only Canvas context for MCP-compatible assistants. Free local server with no model or Dugg subscription required.
+saulyez/canvas-mcp	0	null	yes	8	no	no	MCP server for Canvas for students. 
+joshrad-dev/canvas-mcp	0	null	yes	4	no	yes	
+daskol/canvas-mcp	0	Apache-2.0	yes	4	yes	no	A local read-only MCP server for Instructure Canvas LMS.
+PuttTim/canvas-mcp	0	MIT	yes	15	no	no	A repository for canvas-mcp
+sophiath2005/canvas-mcp	0	null	yes	1	no	yes	
+theatornqvist/canvas-mcp	0	null	yes	3	no	yes	
+bobbyhiddn/Canvas-MCP	0	null	no	0	no	no	MCP server for Thoughtorio-style canvas diagram rendering
+nicolasmilic/CANVAS-MCP	0	null	yes	3	no	yes	
+LeeJordan95/canvas-mcp	0	MIT	yes	10	no	yes	
+ludwigawra/canvas-mcp	0	null	yes	4	no	no	MCP for Canavs Education, lets student connect Canvas to AI tools
+jakobwennberg/canvas-mcp	0	MIT	yes	4	yes	no	Canvas LMS MCP (Chalmers only)
+caleb-media-studio/canvas-mcp	0	MIT	yes	7	no	no	Unofficial Self-hosted Canvas MCP for students and educators.
+jayabdulraman/canvas-mcp	0	null	yes	5	yes	no	Canvas MCP turns AI agents into safer course-operations assistants for Canvas LMS. It helps faculty and instructional teams move faster on repetitive course setup, content updates, quiz/rubric creation, and grading workflows while keeping production guardrails around permissions, retries, audit logs, and unsafe content.
+judacas/CanvasMCP	0	null	yes	20	no	yes	
+Siciy/CanvasMCP	0	null	yes	11	no	yes	
+frazier-at-cpcc/CanvasMCP	0	null	yes	3	no	yes	
+alexmickelson/canvasMCP	0	MIT	no	0	no	yes	
+overtimepog/CanvasMCP	0	null	yes	6	yes	no	an MCP to interact with CanvasLMS
+JamesWHomer/CanvasMCP	0	null	yes	4	no	no	An MCP server deployable on Vercel for Canvas by Infrastructure
+Lunar-arch/canvasMCP	0	null	yes	3	no	yes	
+guirguispierre/canvasMCP	0	GPL-3.0	yes	1	no	no	Read-only MCP server for Canvas, deployable to Cloudflare Workers
+Axfff/CanvasMCP	0	Apache-2.0	no	0	no	yes	
+hamid-vakilzadeh/CanvasMCP	0	null	yes	28	yes	no	MCP server for Canvas LMS
+izhechev/CanvasMCP_KPIs	0	null	yes	15	no	yes	
+canvasbuilder/canvasbuilder-mcp	0	MIT	no	0	no	no	MCP server for Canvas Builder — let AI agents build, refine, publish, and download real multi-page websites.
+adityas0604/MCP-Canvas	0	null	yes	2	yes	no	MCP Server to connect with canvas LMS
+ari310126/canvas_mcp	0	MIT	yes	2	no	yes	
+lnauten04-design/Canvas_MCP	0	null	no	0	no	yes	
+alexherman11/Canvas_MCP	0	MIT	yes	5	yes	no	An MCP server I'm hosting for Canvas LMS (The class schedule and task managing software almost all universities use). It exposes quite a few integrations that are useful to students like reading assignments, getting course files, and tracking grades. It is plug and play, with no local setup required.
+davidcwhite/mcp_canvas	0	null	no	0	no	yes	
+jordanlein/Canvas_MCP	0	null	yes	9	no	yes	
+443pablo/mcp-canvas	0	null	yes	4	no	yes	
+jsteezg/canvas-mcpay	0	null	yes	1	yes	no	Canvas LMS MCP server for Claude — works from any device, computer off 
+XiyaoWang0519/Canvas_MCP	0	null	yes	6	no	yes	
+CanvasKeep/canvaskeep-mcp	0	MIT	no	0	no	no	MCP server for CanvasKeep: let Claude Code, Codex and other AI tools generate Excalidraw diagrams in your workspace
+ZxZxZ143/canvas_mcp	0	null	yes	6	yes	no	Read-only Canvas LMS MCP integration for Codex: layered Python services, bounded queries and secure managed file downloads.
+aurascalesoftware/canvashand-mcp	0	null	no	0	no	no	Figma MCP server and plugin: AI agents read and edit live Figma files, no Figma API token.
+CreveXTech/canvas-lms-mcp	0	null	yes	5	yes	no	MCP server for Canvas LMS — ask Claude about your courses, assignments, grades, and files
+Drastixs/mcp-canvas-lms	0	MIT	yes	16	yes	no	Canvas LMS MCP server with automatic OAuth authentication via the Canvas mobile app flow
+RyK57/canvas-mcp-server	0	null	yes	2	yes	no	Read-only MCP server for the Canvas LMS REST API
+Joyanne05/canvas-mcp-server	0	null	yes	3	yes	no	A custom MCP server that connects to the Canvas LMS API, enabling Claude to fetch live course data, assignments, deadlines, and announcements, and automate academic workflows through AI-driven tooling.
+yuziyang-dev/pm_canvas_mcp	0	null	yes	7	no	yes	
+sweeden-ttu/canvas-lms-mcp	0	MIT	yes	20	yes	no	MCP Server for connecting agents to Instructure Canvas LMS
+blanca-cg/canvas-mcp-http	0	MIT	yes	11	no	yes	
+Omm2005/canvas-mcp-server	0	null	no	0	no	yes	
+techserverbz/excalidraw-canvas-mcp	0	MIT	no	0	no	no	Customized Excalidraw infinite canvas with MCP integration for Claude Code — per-file routing, file sidebar, collapsible blocks, API-connected shapes, disk persistence
+smrik/canvas-mcp-server	0	null	yes	6	yes	no	MCP server that pulls Canvas LMS course materials into Obsidian automatically (dormant)
+sariel2029/claude-canvas-mcp	0	null	no	0	no	yes	
+zfd0/krita-canvas-mcp	0	MIT	no	0	no	no	Krita Canvas MCP — 将 Krita 封装为 MCP 工具集 + 闭环绘画 Agent，由 LLM 逐笔驱动、实时观测画布快照与差异热力图，迭代完成对目标图像的过程重建。
+lehr007-coder/canvas-mcp-worker	0	null	no	0	no	yes	
+FSPR2005/canvas-mcp-itam	0	MIT	yes	1	no	no	Conecta Claude Code con tu Canvas del ITAM (alumnos). Basado en vishalsachdev/canvas-mcp.
+CharlieCardenasToledo/canvas-lms-mcp	0	MIT	yes	27	yes	no	Canvas LMS MCP server — read courses, assignments, submissions, rubrics, quizzes; grade and comment from any AI agent
+MisterCommand/mcp-canvas-lms	0	null	yes	9	yes	no	MCP server for accessing the Canvas LMS for students
+stromy-org/deliverable-canvas-mcp	0	null	no	0	no	no	Provider-portable canvas storage MCP for strategic deliverables (proposals, briefs, frameworks)
+Ait0u5hi/canvas-scholar-mcp	0	MIT	yes	19	yes	no	A student-focused Model Context Protocol server for Canvas LMS. Ask your AI assistant what's due, how you're doing, and what you've missed — it reads your Canvas directly.
+karilaa-dev/remote-canvas-mcp	0	null	yes	12	no	yes	
+harl00/canvas-mcp-server	0	null	yes	4	yes	no	Canvas LMS MCP server — connect Claude to Canvas to surface subjects, assignments, grades, and build live artifacts in Claude Desktop
+ciaranqnexted/canvas-chat-mcp	0	null	yes	3	no	no	**Nexi**, a student-facing chatbot connected to a Canvas MCP
+charlieellington/design-canvas-mcp	0	MIT	no	0	no	no	MCP server for Design Canvas — control the infinite canvas from AI coding agents
+CharlieCardenasToledo/mcp-canvas-server	0	MIT	yes	14	yes	no	MCP server for Canvas LMS — lets AI assistants manage courses, grades, quizzes, and more via natural language. 51 tools for teachers.
+nagalikith/easygrade-canvaslms-mcp	0	MIT	yes	4	yes	no	This repository contains an MCP (Model Context Protocol) server that automates common tasks in Canvas LMS using the official Canvas API. It gives LLMs a safe, structured way to perform routine operations on behalf of instructors, admins, or developers.
+jamubc/canvas-mcp-tool	0	NOASSERTION	yes	21	no	yes	
+Willebrew/nql-canvas-mcp	0	null	yes	6	no	yes	
+CharityDEX/voiceos-canvas-mcp	0	null	yes	13	no	yes	
+TylerFlar/claude-canvas-mcp	0	MIT	yes	19	yes	no	MCP server with 55 tools for Canvas LMS: courses, assignments, grades, discussions and files
+matthewghuang/canvas-sfu-mcp	0	null	yes	6	no	no	MCP server exposing SFU Canvas via browser-based CAS + DUO authentication (camofox)
+mtgibbs/canvas-lms-mcp	0	MIT	yes	7	yes	no	MCP server connecting Claude to Canvas LMS for querying grades, assignments, and academic data
+the-ansible/canvas-mcp-server	0	null	no	0	no	no	MCP server wrapping the Canvas API for Claude Code integration
+jpablomm/mcp-hackathon-canvas	0	MIT	yes	3	no	yes	
+OsmondJiang/Cognitive-Canvas-MCP	0	MIT	no	0	no	no	An MCP-powered workspace that helps AI organize ideas, map dependencies, manage tasks, and maintain context, enabling smarter reasoning and execution.
+misaelvillaverde/pixel-canvas-mcp	0	null	no	0	no	no	Pixel canvas MCP server
+2799662352/sora-canvas-mcp	0	null	no	0	no	no	Dual-entry tldraw canvas MCP server (HTTP + stdio) for Sora / Miau canvas integrations.
+chrischall/canvas-parent-mcp	0	MIT	yes	26	no	yes	
+hsg-tools/hsg-canvas-mcp	0	null	no	0	no	no	Remote Canvas MCP for HSG StudyNet
+MaraniMatias/mcp-and-canvas	0	null	no	0	no	yes	
+InfuseED/mcp-canvas-fastapi	0	null	no	0	no	no	FastAPI-based Canvas MCP Server
+Jylebum/mcp-canvas-connector	0	null	no	0	no	yes	
+duyanhtu/canvas_app_mcp	0	null	no	0	no	yes	
+felisawiley/canvas-mcp-tool	0	NOASSERTION	yes	5	no	yes	
+Sijun52/my_canvas_mcp	0	null	no	0	no	no	문서화 전문 Agent
+hyusap/canvas-mcp-docker	0	null	yes	1	no	yes	
+MahammadNuriyev62/sketch-canvas-mcp	0	null	no	0	no	no	MCP App serving a sketch canvas for visual explanations in Claude
+HrudithL/Canvas-MCP-Server	0	null	yes	5	no	yes	
+lumetra-io/engram-canvas-mcp	0	MIT	no	0	no	no	Engram memory recipe for Canvas MCP Client — stdio bridge into Canvas's MCP config (until they add native bearer auth).
+Kdude43ver/Canvas-API-MCP	0	null	yes	7	no	yes	
+Codernoob000/designops-mcp-canvas	0	null	no	0	no	yes	
+ousiqwq/comfyui-canvas-mcp	0	NOASSERTION	no	0	no	no	Live ComfyUI canvas editing and local management alongside official Comfy MCP. No second agent.
+jpablomm/mcp-canvas-hackathon	0	MIT	yes	2	no	yes	
+oskarcode/canvas-mcp-oskar	0	null	yes	1	no	yes	
+brockcraft/homebrew-canvas-mcp	0	null	no	0	no	no	Homebrew tap for canvas-mcp-for-claude
+dev1912-sbt/html-canvas-mcp	0	null	no	0	no	no	A persistent, locally hosted HTML server for AI agents to render and iterate on web interfaces.
+1337isnot1337/canvas-lms-mcp	0	null	yes	6	yes	no	MCP for Canvas LMS
+rikhinkavuru/canvas-poke-mcp	0	MIT	yes	2	yes	no	Read-only Canvas LMS MCP server for Poke: deadlines, assignments, announcements, grades, and calendar events over text.
+F0rklift-Certified/Canvas-MCP-Server	0	null	yes	1	yes	no	A Model Context Protocol server that gives Claude access to your Canvas LMS course materials - turning it into a study assistant grounded in your actual coursework.
+Cocomong98/commit-canvas-mcp	0	null	no	0	no	no	pommit 배포
+zwanner/canvas-mcp-server	0	null	yes	8	no	no	Canvas MCP Server
+GarthDB/rust-canvas-mcp	0	null	yes	5	yes	no	High-performance Rust MCP server for Canvas LMS API integration
+akash0820/canvas-mcp-agent	0	null	yes	7	no	yes	
+swiftkimani/figma-canvas-mcp	0	MIT	no	0	no	no	MCP server that reads a live Figma canvas over a local plugin bridge and reconstructs it as code. Rust, no API token, no rate limit.
+Linklee-sad/Canvas-Agent-MCP	0	MIT	yes	6	no	yes	
+vkumar04/canvas-mcp-lite	0	null	yes	16	yes	no	Lean, instructor-focused Canvas LMS MCP server built on FastMCP
+mrchris-ai/codex_canvas_mcp	0	null	yes	10	no	no	Local mcp that allows me to connect to Canvas via the ChatGPT Desktop app
+riverpease15/canvas-mcp-server	0	MIT	yes	1	yes	no	Python MCP server to integrate Canvas LMS with Claude
+Unity-Environmental-University/canvas-lint-mcp	0	null	no	0	no	yes	
+robertdyates-dotcom/canvas-mcp-aws-	0	null	no	0	no	no	Gemini Spark Parent Agent
+vtnguye0325/canvas-lms-mcp	0	null	no	0	no	yes	
+rbrtlol/canvas-readonly-mcp	0	MIT	yes	13	yes	no	Read-only MCP server for Canvas LMS
+elblanco2/canvas-announcements-mcp	0	null	no	0	no	no	MCP server for managing canvas-announcements repository updates
+StackkedJohn/Limitless-Canvas-MCP	0	null	no	0	no	yes	
+amzonmeeee/HKUST_Canvas_MCP	0	MIT	yes	24	yes	no	MCP Server for Canvas ELMS, modified for HKUST users.
+Omm2005/Canvas-LMS-MCP	0	null	yes	2	no	yes	
+Sanchez244/canvas-lms-mcp	0	null	yes	4	yes	no	MCP server exposing Canvas LMS (courses, assignments, modules, files, submissions) to Claude Code
+enkhbold470/mcp-server-canvas	0	null	yes	3	no	yes	
+tudadada/canvas-audit-mcp	0	null	no	0	no	yes	
+Aitidi/tapnow-canvas-mcp	0	null	no	0	no	no	Local stdio MCP for Tapnow desktop canvas editing, native material references, and generation
+ch923dev/canvas-ade-mcp	0	null	no	0	no	yes	
+davidcwhite/open_canvas_mcp	0	MIT	no	0	no	yes	
+skarnz/skarnz_canvas_mcp	0	null	no	0	no	yes	
+toddbartholow/irq-canvas-mcp	0	MIT	yes	5	yes	no	A Model Context Protocol server for Canvas LMS integration
+JaeYu-Dev/canvas-mcp-connector	0	MIT	no	0	no	yes	
+3108482409song-commits/Canvas-AIGC-MCP	0	AGPL-3.0	no	0	no	no	Canvas AIGC MCP bridge for operating Infinite Canvas with Codex and Claude
+diegodox/map-canvas-mcp	0	null	no	0	no	no	地図MCP
+SvalTek/artifact-canvas-mcp	0	null	no	0	no	no	A local live canvas for MCP artifacts, including interactive A2UI documents.
+Ciender/cohesion-canvas-mcp	0	MIT	no	0	no	no	a cohesion canvas mcp server
+srivatbalaji/canvas-mcp-server	0	null	no	0	no	yes	
+risnake/canvas-mcp-server	0	null	yes	2	no	yes	
+terraceonhigh/Canvas-MCP-Server	0	null	yes	2	no	yes	
+Sliking/stateless-mcp-canvas	0	null	no	0	no	no	Collaborative pixel art canvas powered by stateless MCP on Cloudflare Workers - no handshake, no sessions, every pixel is a stateless tool call
+kuaizhongqiang/UnityAgentCanvasMCP	0	MIT	no	0	no	yes	
+MuhammedAdel68/aiu-canvas-mcp-server	0	null	yes	3	no	no	Local MCP server for retrieving AIU Canvas course content
+vishalsachdev/canvas-lms-mcp-extension	0	null	yes	8	yes	no	A Model Context Protocol Extension for Claude Desktop to run locally and connect to a Canvas LMS
+Mm4168/canvas-lms-mcp-server	0	null	yes	6	yes	no	Canvas LMS MCP Server for n8n AI-Agent Workflows
+brockcraft/canvas-mcp-for-claude	0	MIT	yes	5	yes	no	Canvas extension for Claude Desktop: lets Claude read and edit your Canvas LMS courses with a course guard on every change. One-click install.
+jdlongmire/ThinxAI-Canvas-MCP	0	null	no	0	no	no	MCP server for rendering hierarchical canvas diagrams as PNGs (forked from bobbyhiddn/Canvas-MCP)
+TomasThrawat/Hyouka-Remote-Canvas-MCP	0	MIT	no	0	no	no	Remote editable SVG canvas MCP for Key, deployed on Vercel. No local plugin required.
+bhargava-gumpula/claude-canvas-mcp-files	0	null	yes	2	no	no	Claude canvas MCP files
+openputergit/wide-canvas-mcpsbkvv--tkmdxrk	0	null	no	0	no	no	Generated by Wide Canvas
+kbates97/GoCanvas-Readonly-MCP	0	null	yes	2	no	yes	
+ZakSir/edu-tools-mcp-canvas	0	MIT	no	0	no	yes	
+a-ariff/canvas-student-mcp-server	0	null	yes	21	yes	no	Model Context Protocol (MCP) server for Canvas LMS - TypeScript implementation with API token authentication for secure Claude Desktop integration
+bughide010/nova-canvas-mcp-server	0	null	no	0	no	no	sm
+sakudiff/DLSU_Canvas_MCP_Server	0	null	yes	4	yes	no	Standalone Canvas LMS MCP Server for DLSU — integrates with Claude Desktop, Antigravity, Cursor, Opencode, Pi, and Qwen Code
+neicedai/canvaslab-3d-mcp	0	null	no	0	no	yes	
+AnonymousOnyx22/canvas-lms-student-mcp	0	MIT	yes	20	yes	no	Free read only Canvas LMS server for AI apps. Due dates, grades, missing work and announcements.
+mandaza/mcp-canvas-lms-student	0	ISC	yes	8	no	yes	
+josephdempsey/json-canvas-mcp-app	0	null	no	0	no	yes	
+thanhdc-dev/m3e-canvas-mcp	0	null	no	0	no	no	MCP server cho M3E Canvas (editor phác thảo giao diện Material 3 Expressive trên trình duyệt).
+jdlongmire/canvas-bot-with-mcp-option	0	null	no	0	no	no	Canvas Engine - Hierarchical diagram engine with YAML-to-PNG rendering, optional MCP integration
+Yanis-Bouchelaghem/canvas-mcp-app-v2	0	null	yes	1	no	yes	
+felipeneivadc/Demo-MCP-Power-Apps-Canvas	0	null	no	0	no	yes	
+openputergit/wide-canvas-mcpyxkxm-2qswhal8	0	null	no	0	no	no	Generated by Wide Canvas
+shawngrech-cmd/power-apps-canvas-claude-mcp-builder	0	null	no	0	no	yes	
+casss20/UCF-Ops-Board-dashboard-study-planner-and-Canvas-MCP	0	null	yes	6	no	yes	
+canvas-mcp/adaptive-card-research-canvas-ai	0	null	yes	1	no	yes	
+openclaw-mcp-vps/infinite-canvas-templates	0	null	no	0	no	no	OpenClaw auto-generated tool: infinite-canvas-templates
+openclaw-mcp-vps/canvas-grade-export-formatter	0	null	no	0	no	no	OpenClaw auto-generated tool: canvas-grade-export-formatter
+openclaw-mcp-vps/canvas-lms-grade-export-formatter	0	null	no	0	yes	no	OpenClaw auto-generated tool: canvas-lms-grade-export-formatter

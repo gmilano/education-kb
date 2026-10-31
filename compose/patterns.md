@@ -4,6 +4,125 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p566` — `2026-10-31` — three recipes, all from this pass's first-hand measurement
+
+### 🟢 `P-566-A` — **Permissive-supply recovery sweep before any build decision** (3–5 days)
+
+🔵 **Why this is now the first thing a studio runs on any engagement, not an afterthought.** This
+pass measured that **`18.8 %` of the repositories a procurement gate marks unknown-licence are
+actually permissive**, and that the recovery is **`13.3 ×`** more likely on npm projects. 🔴 On this
+field that gate was hiding `44` buildable repositories including a `104★`, `54`-tool asset.
+
+**Wire it together:**
+
+1. **Census the field.** `mcp__github__search_repositories` with `minimal_output: false` so
+   `license.spdx_id` comes back. Page to completion; commit the row list (`565-D`).
+2. **Split on the manifest, not the licence.** Rank the `license: null` rows by whether the tree
+   carries a `package.json`. 🟢 **Read that half first** — `34.7 %` pays against `2.6 %`.
+3. **Enumerate trees blobless.** `git clone --filter=blob:limit=16k --no-checkout <url>`, then
+   `git ls-tree -r --name-only HEAD`. 🟢 **Measured at `0.74 s` per repository; `341` repositories
+   swept with zero failures.** Never guess filenames — `564-B`'s prescribed list could not reach a
+   Kotlin/Gradle project at all.
+4. 🔴 **Scope the licence-path match to the repository root.** A `LICENSE` at depth > 0 is evidence
+   about a **dependency or a subproject**. This pass's first run produced `7 of 7` false positives
+   without this rule, four of them from vendored `node_modules` trees carrying up to **`4 268`**
+   licence paths.
+5. **Read every manifest actually present**, language-dependently: `package.json` / `composer.json`
+   / `deno.json` (`"license"`), `pyproject.toml` (`license` or `License ::` classifier),
+   `Cargo.toml`, `*.gemspec`, `pom.xml` (`<licenses><name>`), `build.gradle.kts`.
+6. 🔴 **Gate on permissiveness, not on a name list.** Accept OSI-approved, no-copyleft, no
+   network-clause. 🟢 A *"MIT / Apache 2.0 / BSD"* list drops **`11` `ISC` and `1` `Unlicense`** of
+   the `44` recovered here.
+7. **Commit the row list and the digests.** Blob digest plus byte count per grant, per `561-D`.
+
+**Repos to run it against on this field, already measured:**
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) (`104★`, MIT via
+`package.json`), [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp)
+(`26★`), [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) (`6★`),
+[`omniboyOK/siglo21-canvas-mcp`](https://github.com/omniboyOK/siglo21-canvas-mcp) (**LATAM**),
+[`GarthDB/rust-canvas-mcp`](https://github.com/GarthDB/rust-canvas-mcp) (Rust),
+[`edly-io/canvas-mcp`](https://github.com/edly-io/canvas-mcp) (vendor layer).
+🟢 Full list: [`manifest-recovered-permissive`](../evidence/manifest-recovered-permissive.2026-10-31-p566.tsv).
+
+🔵 **Deliverable:** a licence-attested shelf with a committed row list, and a named count of how
+much permissive supply the client's existing gate is discarding.
+
+---
+
+### 🟢 `P-566-B` — **Write-surface triage for an LMS agent fleet, before anything touches a gradebook** (1–2 weeks)
+
+🔵 **Why it has to be done per-tool and not per-repo.** This pass measured **`28.0 %` of the Canvas
+tier's tool declarations as mutating** (`168` of `599`) against **`32.9 %`** for the Moodle
+connector tier (`p447`'s `136 of 414`). 🔴 **Neither field is read-only, and the `310★` head is the
+worst case at `41.4 %`.**
+
+**Wire it together:**
+
+1. **Extract tool-name declarations across all four idioms** — `@mcp.tool`/`@server.tool` followed
+   by `def <name>`, an explicit string in `server.tool(` / `.registerTool(` / `.addTool(`, a JS
+   object literal `name:`, and a Python dict `"name":`. 🔴 **Recall is the whole game: a
+   single-idiom extractor read `vishalsachdev/canvas-mcp` at `5` tools when it ships `≈102`.**
+2. 🔴 **Never count HTTP verbs.** MCP's JSON-RPC transport is itself `POST`, so every server —
+   read-only ones included — shows `POST` call sites. 🟢 Verified on
+   [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp): its only two `POST` sites
+   are in `test/` and are transport calls.
+3. **Classify by name semantics**: mutating when the name starts or ends with
+   `create|update|delete|submit|add|set|grade|enroll|upload|post|assign|comment|reply|edit|remove|archive`.
+4. 🟢 **Calibrate before trusting the number.** Two exact reproductions available on this field:
+   `DMontgomery40/mcp-canvas-lms` → **`54`**, matching its own stated `54 tools`; and
+   `Fireiscoolsolo/canvas-lms-mcp-server` → **`211`**, matching `p565`'s recorded `211`.
+   🔴 Declare the repos the extractor returns `0` for rather than scoring them read-only.
+5. **Split the deployment on the measurement**, which is the deliverable:
+   🟢 `boyuchengz/canvas-mcp` (MIT, `119★`, read-only confirmed in `README` **and**
+   `CONTRIBUTING`) for every student-facing surface;
+   🔴 the mutating tools of [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+   (`48` of `116`) and [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp)
+   (`62` of `210`, grades **and** comments) behind a human-approval step;
+   🔴 [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) — a gateway to
+   all `1 116` Canvas API endpoints — **never** exposed without an endpoint allow-list.
+6. 🔴 **Hold back the unmeasurable ones.** `lucanardinocchi/canvas-mcp`, `r1ckyIn/canvas-ed-mcp`
+   (APAC, Univ. of Sydney) and `awesome-town/canvas-mcp-node` yield `0` tool names on this
+   extractor. 🟢 **Unmeasured is not read-only** — treat every tool as mutating until counted.
+7. 🔴 **Scope caveat to state to the client:** this measurement covers the `9`-repo named tier, not
+   the `187` structurally-confirmed rows. 🟢 The tier is the part a studio would actually deploy;
+   🔴 the field-wide mutation rate is **not built** → `566-F`.
+
+🔵 **Deliverable:** a per-tool mutation inventory, an approval boundary drawn on it, and a named
+list of connectors held back for want of a measurement.
+
+---
+
+### 🟢 `P-566-C` — **Structural classification of a homonym-contaminated field** (2–4 days)
+
+🔵 **Why a name census is not a field census.** `canvas-mcp in:name` answers `280`; **`187`
+(`66.8 %`) are Canvas LMS** and **`93` are a different "canvas"** — Figma, Obsidian, Power Apps
+canvas apps, SVG and HTML drawing surfaces, Material 3 editors, Canvas Medical EHR, CanvasXpress,
+Canva. 🔴 **A field sized by name over-states itself by `1.5 ×` here**, and `p565`'s own estimate of
+the contamination (*"`≥23`"*) was low by `4 ×`.
+
+**Wire it together:**
+
+1. **Enumerate the tree** (same blobless clone as `P-566-A` — one clone serves both recipes).
+2. **Probe for the target system's fingerprint, not its name.** Here: `instructure` ·
+   `/api/v1/courses` · `canvas.instructure` · `CANVAS_API` · `canvasapi` · `*.instructure.com`,
+   read across up to `60` source and manifest files per repository.
+3. 🔴 **Do not fall back to the description.** Measured on this field, the description channel is
+   right `98.9 %` of the time **when it speaks** and silent on `36.1 %` of rows — of which
+   **`59.4 %` are genuine.** 🟢 **The correction for absent descriptions is worth `94` rows; the
+   correction for inaccurate ones is worth `1`.**
+4. 🟢 **Keep a negative control in the output.**
+   [`thanhdc-dev/m3e-canvas-mcp`](https://github.com/thanhdc-dev/m3e-canvas-mcp) is MIT, is in the
+   census, and is a Material 3 design canvas — it must classify **out**. If it classifies in, the
+   probe is matching the word rather than the system.
+5. **Intersect with `P-566-A`'s licence verdicts** to get the only number a studio should quote:
+   🟢 **`99` structurally-confirmed permissive Canvas LMS agents**, `24` of them visible only
+   because manifests were read.
+
+🟢 Row list: [`canvas-structural-classification`](../evidence/canvas-structural-classification.2026-10-31-p566.tsv).
+
+🔵 **Deliverable:** a field size a client can be quoted without a `1.5 ×` correction arriving later,
+and a classification that works on the third of the field that documents nothing.
+
 ## 🆕 `p565` — `2026-10-31` — three recipes, all from this pass's first-hand Canvas census
 
 ### 🟢 `P-565-A` — **FERPA-safe agentic Canvas access for a North American university** (8–10 weeks)

@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p566` — `2026-10-31`
+
+### 🔴 T1 — A small-sample flip rate published as a property is the most expensive kind of wrong, and this base did it last pass
+
+🟢 **`p565` measured a licence-gate flip on three repositories, got `2 of 3`, and wrote it up as a
+`66.7 %` property of a population.** 🟢 **Measured over all `234` unknown-licence rows, the rate is
+`18.8 %`** — and even restricted to the npm half where the mechanism actually lives, `34.7 %`.
+🔴 **`p565` over-stated it by `3.5 ×`.**
+
+🔵 **Why this is a trend and not just a correction.** `564-B` sampled the Moodle side and got
+`0 of 3`, concluding the axis does not pay there; `p565` sampled the Canvas side and got `2 of 3`,
+concluding it pays enormously. 🔴 **Both were three-repo samples and both generalised, in opposite
+directions, from the same instrument.** 🟢 The population answer is that **the two platforms are
+`3.3` points apart** (`19.7 %` / `16.4 %`) and **neither sample was near it.**
+
+**Signal**: `565-D` already made this base commit a row list with every published band. 🟢 The rule
+this pass adds is the complementary one: **commit the denominator too.** A rate whose denominator is
+`3` is an anecdote wearing a percentage.
+
+### 🟢 T2 — The real axis of licence illegibility is the package ecosystem, not the vertical
+
+🟢 **`13.3 ×`.** Rows carrying a `package.json` yield a readable grant `34.7 %` of the time; rows
+without one, `2.6 %`. 🔵 npm declares licences in the manifest by convention; PyPI, Gradle, Composer
+and Cargo projects mostly do not, or declare them somewhere a filename list never reaches
+(`p565` learned this when `564-B`'s prescribed filenames could not have reached a Kotlin/Gradle
+project at all).
+
+**Signal**: 🟢 **This transfers off this industry unchanged.** Any KB on this harness sweeping any
+vertical for permissive supply should expect the same shape: **the JavaScript third of its field is
+systematically under-reported by a file-shaped gate, and the rest is not.** 🔵 `GarthDB/rust-canvas-mcp`
+is the instructive exception — a `Cargo.toml` that *does* declare `license = "MIT"`, recovered this
+pass, and one of only three non-npm recoveries out of `44`.
+
+### 🔴 T3 — Procurement vocabulary is a second, independent gate defect, and this base wrote it into its own brief
+
+🔴 **`11` of the `44` recovered grants are `ISC`.** 🟢 `ISC` is OSI-approved and functionally
+`BSD-2-Clause`. 🔴 **This base's own standing focus line reads *"MIT / Apache 2.0 / BSD"***, so a
+gate implemented to it recovers `32` of the `44` and discards `12` — **after** the expensive
+manifest read has already found them.
+
+**Signal**: 🔵 The failure mode is specific and worth naming: **a licence allow-list enumerated by
+name rather than by property.** 🟢 The fix is to gate on *permissiveness* — OSI-approved, no
+copyleft, no network clause — and let `ISC`, `0BSD`, `Unlicense` and `MIT-0` through on that test
+rather than on membership of a three-item list.
+
+### 🔴 T4 — `NXDOMAIN` carries no information about whether a host exists, and this base has been reading it as if it did
+
+🟢 **`p565` recorded `moodle.org` as `ENOTFOUND` on `WebFetch`, exit `56` on `curl`, negative on
+`getent`, and read that as the host being unreachable.** 🔴 **The measured cause is a policy
+denial:** `curl` returns **`CONNECT tunnel failed, response 403`** from the agent proxy, and the
+harness states it in words — *"outside the session's allowed network domains."*
+
+🔵 **The general correction:** this container resolves nothing directly, because all egress is
+proxied. 🔴 **So a DNS negative here is a statement about the allow-list, not about the internet.**
+🟢 Every `NXDOMAIN` this base has recorded since `555-F` should be re-read as *"not permitted"*
+unless a direct-resolution control says otherwise.
+
+**Signal**: 🟢 The practical payoff is that the remedy gets specific. `565-C` offered three
+branches — mirror, alternate API host, or the directory's own JSON endpoint. 🟢 **The endpoint is
+now named** (`https://download.moodle.org/api/1.3/pluglist.php`, official and versioned) 🔴 **and
+the entire `*.moodle.org` zone plus `moodle.net` is denied**, which kills the other two branches.
+**One actionable request replaces three open guesses.**
+
+### 🟢 T5 — The supply channel is now out-performing the demand channel at answering demand-channel questions
+
+🔵 **Three passes have prescribed reading Moodle's plugin directory and none produced the address.**
+🟢 **A repository recovered by the manifest-licence axis did** —
+[`micaherne/moodle-plugin-db-mcp`](https://github.com/micaherne/moodle-plugin-db-mcp), MIT, `0★`,
+`10` files, invisible to this base until this pass.
+
+**Signal**: 🔴 The prose-demand channel has now nilled for **three consecutive passes** on this
+industry (`16` candidates, then `0`, then `0` new addresses and `0` new facts from `22` candidates).
+🟢 **Meanwhile the platform-supply channel produced `44` recoveries, `5` new addresses, a corrected
+field size and the answer to a blocked gap in the same pass.** 🔵 The allocation conclusion this
+base can defend: **at this cadence, legs spent on prose are near-worthless for this industry and
+legs spent on manifests are not.**
+
+### 🔴 T6 — The description field fails by SILENCE, not by inaccuracy, and that inverts how a discovery sweep should be corrected
+
+🟢 **Measured on all `280` Canvas rows:** where a maintainer names the platform, they are right
+**`93 of 94` — `98.9 %`**. 🔴 Where they do not, the row is Canvas LMS anyway **`34`** times; and
+**`101` rows say nothing at all**, of which **`60` are Canvas LMS**.
+
+**Signal**: 🔵 **Correcting for inaccurate descriptions buys `1` row. Correcting for absent ones
+buys `94`.** 🟢 So every star-and-description discovery sweep on this harness is mis-tuned: effort
+belongs in *classifying the silent third*, not in distrusting the ones that speak. 🔴 `36.1 %` of
+this field ships with an empty description, and `p565` wrote that those rows *"cannot be classified
+from metadata at all"* — correct, and the reason the instrument had to stop using metadata.
+
+### 🔴 T7 — MCP's transport is `POST`, so HTTP verbs cannot measure an agent's write surface
+
+🟢 **A `119★` read-only Canvas server returned `2` mutating HTTP call sites.** Read in context, both
+are in `test/app.test.js` and both are **the MCP JSON-RPC transport's own `POST`** — one a protocol
+call, one an auth-negative test. 🟢 **Neither is a Canvas write; the read-only claim stands.**
+
+**Signal**: 🔴 **Every MCP server posts, including the ones that write nothing.** 🟢 So the
+verb-counting axis is unsound in principle for this entire artefact class, and the
+**tool-declaration axis** (`p447`'s) is the only sound one. 🔵 `p447` chose correctly; this pass
+supplies the reason, and retires the alternative before it could be published as a figure.
+
+### 🔵 T8 — "Fast-growing" and "safe near a gradebook" are independent properties
+
+🟢 **Measured on the Canvas tier:** the fastest mover on this base's education record
+(`boyuchengz`, `119★` in six days) is **read-only**, enforced in `CONTRIBUTING`. 🔴 **The head
+(`vishalsachdev`, `310★`, a university server that names FERPA five times) mutates on `41.4 %` of
+its tool declarations — the heaviest write surface in the tier.**
+
+**Signal**: 🔴 `565-E` proposed that fast movers might be *"systematically more read-only"*. 🟢
+**Refuted as a rule, confirmed for exactly one repository.** 🔵 The engagement consequence is a
+pairing rather than a pick: **the read-only fast mover for student-facing surfaces, the head's write
+tools behind human approval** — and `28.0 %` of the tier's declarations mutating (against Moodle's
+`32.9 %`) is the number that makes the approval step non-optional.
+
 ## 🆕 `p565` — `2026-10-31`
 
 ### 🔴 T1 — A region can be absent because the QUERY is wrong, and this base published that absence for three passes

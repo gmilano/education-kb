@@ -4,6 +4,166 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p566` — `2026-10-31` — **🟢 `565-B` CLOSED WITH THE NUMBER IT ASKED FOR: all `234` unknown-licence rows read, and `44` carry a permissive grant the platform never reported — `18.8 %` of the field this base has been treating as unusable.** 🔴 **And it closes by REFUTING `p565`'s own flip rate: `2 of 3` was a three-repo sample on the head; the population rate is `18.8 %`, not `66.7 %`.**
+
+🔵 **The axis is not the platform. It is the manifest.** `p565` read its `2 of 3` flip as
+*"POPULATION-DEPENDENT … near-harmless on Python/Kotlin single-author repos and severe on the
+JavaScript/TypeScript head"*, and attributed it to **Canvas vs Moodle**. 🟢 **Measured over both
+complete populations, that attribution does not hold:** Canvas recovers `19.7 %`, Moodle
+`16.4 %` — **`3.3` points apart.** 🟢 **What does predict a recovery is whether the repository
+carries a `package.json`:**
+
+| population, all `234` unknown-licence rows | rows | permissive recovered | rate |
+| --- | :-: | :-: | :-: |
+| 🟢 rows **with** a `package.json` | `118` | **`41`** | 🟢 **`34.7 %`** |
+| 🔴 rows **without** one | `116` | `3` | 🔴 **`2.6 %`** |
+| **ratio** | — | — | 🟢 **`13.3 ×`** |
+
+🔴 **So the mechanism `p565` half-saw is real and its framing was wrong.** npm declares licences
+in the manifest by convention; that convention is distributed across **both** platforms, and
+Moodle's npm rows flip just as readily as Canvas's. 🔵 **Consequence for procurement: the gate
+defect does not attach to a vertical, it attaches to an ecosystem** — which means it cannot be
+avoided by choosing a platform, only by reading manifests.
+
+### 🟢 The `234`-row read — method, and every count's row list committed
+
+🟢 **`341` repositories cloned blobless (`--filter=blob:limit=16k --no-checkout`), complete tree
+enumerated, every manifest actually present read.** 🔴 **Zero clone failures.** Instrument
+calibrated against `p565`'s own published verdicts before the population ran: `DMontgomery40/mcp-canvas-lms`
+→ `0` licence-shaped paths, `package.json=MIT`, `36` files, and `Sedahoo/iiit-moodle-mcp` → `7`
+files, `0` licence-shaped paths, `pyproject.toml` carrying no grant. 🟢 **Both reproduce `p565`
+exactly.**
+
+| verdict over the `234` | rows | share |
+| --- | :-: | :-: |
+| 🔴 **`NO-GRANT` confirmed** | **`189`** | `80.8 %` |
+| 🟢 **manifest grant present** | **`45`** | `19.2 %` |
+| 🟢 — of which **permissive** | **`44`** | 🟢 **`18.8 %`** |
+| 🔴 **project-root licence file present** | **`0`** | 🔴 **`0.0 %`** |
+
+🟢 Row lists: [`null-licence-manifest-sweep`](../evidence/null-licence-manifest-sweep.2026-10-31-p566.tsv)
+(all `341`) and [`manifest-recovered-permissive`](../evidence/manifest-recovered-permissive.2026-10-31-p566.tsv)
+(the `44`), per `565-D`.
+
+### 🔴 The gate defect, sized — and a SECOND one this base wrote into its own brief
+
+🔴 **A filename-only licence gate discards `44` buildable repositories on this field**, headed by a
+**`104★`** asset. 🟢 But the recovered grants are not all MIT, and that is the second finding:
+
+| recovered SPDX id | rows |
+| --- | :-: |
+| 🟢 `MIT` | **`32`** |
+| 🔴 **`ISC`** | **`11`** |
+| 🔵 `Unlicense` | `1` |
+
+🔴 **`11` of the `44` are `ISC`, and this base's own standing focus line reads *"MIT / Apache 2.0 /
+BSD"*.** 🟢 `ISC` is OSI-approved and functionally equivalent to `BSD-2-Clause` — it is **not** a
+restriction Globant has to price. 🔴 **So a gate written to this base's own stated vocabulary
+recovers `32` of the `44` and throws away the other `12`** (`ISC` + `Unlicense`), *after* the
+manifest axis has already done the hard work of finding them. 🔵 **Two independent defects compose:
+one loses the file, the other loses the identifier.** → `566-C`
+
+### 🔴 RETRACTED BEFORE PUBLICATION — and it retracts `564-B`'s prescription, which `p565` adopted
+
+🔴 **This pass's first run reported `7` rows carrying a licence file the platform had called
+`null`.** 🟢 **All `7` are false positives, caught by reading the path's scope before any table was
+written:**
+
+| repo | matched path | depth | what it actually is |
+| --- | --- | :-: | --- |
+| `MisterCommand/mcp-canvas-lms` | `node_modules/@modelcontextprotocol/sdk/LICENSE` | `2` | 🔴 vendored dependency — **`1 841`** vendored paths |
+| `vishalsachdev/canvas-lms-mcp-extension` | `node_modules/@modelcontextprotocol/sdk/LICENSE` | `2` | 🔴 vendored — **`1 973`** |
+| `Mm4168/canvas-lms-mcp-server` | `node_modules/@colors/colors/LICENSE` | `2` | 🔴 vendored — **`4 268`** |
+| `jmoskaliuk/moodle-runbot-mcp` | `node_modules/@hono/node-server/LICENSE` | `2` | 🔴 vendored — **`4 091`** |
+| `AdityaPrakash-26/Canvas-MCP` | `library_docs/canvas/reference/license-ref.md` | `2` | 🔴 **documentation about Canvas's licence endpoint**, not a grant |
+| `canvas-mcp/adaptive-card-research-canvas-ai` | `adaptive-cards-mcp/LICENSE` | `1` | 🔵 a **subproject**, not the repository |
+| `eledia/moodle-webservice_eledia_mcp` | `public/webservice/elediamcp/LICENSE` | `2` | 🔵 the **plugin payload**, not the repository |
+
+🟢 **Root-level licence files: `0 of 7`. The platform's `null` was correct on every one.**
+
+🔴 **`564-B` prescribed *"enumerate the complete tree instead of guessing filenames"*, `p565`
+adopted it and called the upgrade *"beyond what it asked"*. 🔴 Run at population scale, tree
+enumeration WITHOUT A SCOPE RULE over-reports — and on a vendored-npm repository it over-reports by
+four thousand paths.** 🔵 `p565` never saw this because it ran the instrument on `14` hand-picked
+repositories, none of which vendored its dependencies. 🟢 **Rule adopted this pass:** a licence
+path is evidence about the repository **only at the repository root** (or a declared package root);
+at any greater depth it is evidence about a *dependency* or a *subproject*. 🔴 Not gated → `566-D`.
+
+🔵 **This is `562-A`'s class for the third consecutive pass, and the variant is new each time** —
+`p565` matched a token in prose (`sub**mit**s`), this pass matched a correct structure in the
+**wrong scope**. 🟢 The generalisation the base can now defend: **match on structure, and bound the
+structure's scope.**
+
+### 🟢 Five addresses new to this base — grants read first-hand, `0` licence files at root on every one
+
+| agent | repo | grant (how it was read) | ★ | what it does |
+| --- | --- | --- | :-: | --- |
+| **rust-canvas-mcp** | [`GarthDB/rust-canvas-mcp`](https://github.com/GarthDB/rust-canvas-mcp) | 🟢 **MIT** — `Cargo.toml`, `1 355 B` / `a30ec47c4f6a` | 0 | 🔵 **the only Rust implementation measured on this field**; Canvas LMS API integration |
+| **moodle-plugin-db-mcp** | [`micaherne/moodle-plugin-db-mcp`](https://github.com/micaherne/moodle-plugin-db-mcp) | 🟢 **MIT** — `package.json`, `895 B` / `282ba46d78b2` | 0 | 🟢 **MCP server over Moodle's plugin database — it NAMES the endpoint `565-C` is blocked on** |
+| **canvas-mcp-assistance** | [`Brian-Two/canvas-mcp-assistance`](https://github.com/Brian-Two/canvas-mcp-assistance) | 🟢 **MIT** — `package.json`, `1 830 B` / `4d96cc9d1fbb` | 2 | `168` files; *"AI-Powered Learning Platform"* — the largest tree among the five |
+| **moodle-mcp** | [`qns2/moodle-mcp`](https://github.com/qns2/moodle-mcp) | 🟢 **MIT** — `package.json`, `758 B` / `d3f5dd427625` | 0 | Courses, **SCORM**, quizzes — the only SCORM surface in this set |
+| **canvas-mcp** | [`akassh9/canvas-mcp`](https://github.com/akassh9/canvas-mcp) | 🔴 **ISC** — `package.json`, `614 B` / `1b8b57ab7b9e` | 0 | 🔴 Read-only Canvas server — **the `ISC` case `566-C` is about** |
+
+🟢 **Five distinct root commits, five distinct blob digests, `0` root-level licence files.** 🔵 All
+five were invisible to this base for as long as discovery ran on the platform licence field.
+
+### 🔵 What the Canvas tier's write surface actually is — `565-E`, and it answers BOTH its questions
+
+🟢 **`p447`'s instrument re-run on the Canvas tier.** Tool-name declarations extracted across four
+registration idioms (`@mcp.tool`→`def`, explicit string in `server.tool(`, JS object literal
+`name:`, Python dict `"name":`). 🔴 **It reached `6 of 9` tier repositories** — recall stated
+before the figure, not after.
+
+| measure | Moodle connector tier (`p447`) | 🟢 Canvas tier (this pass) |
+| --- | :-: | :-: |
+| tool declarations read | `414` | **`599`** |
+| 🔴 **mutating** | **`136`** | **`168`** |
+| share | `32.9 %` | 🟢 **`28.0 %`** |
+
+🟢 **Answer to `565-E`'s first question: the Canvas tier is NOT systematically more read-only than
+the Moodle one.** `28.0 %` against `32.9 %` — comparable, slightly lower, and nowhere near the
+read-only posture the tier's framing suggested.
+
+🟢 **Calibration, because a tool count is only worth its reproduction:** `DMontgomery40/mcp-canvas-lms`
+→ **`54`**, against the **`54 tools`** its own description states. `Fireiscoolsolo/canvas-lms-mcp-server`
+→ **`211`**, against the **`211 tools`** `p565` recorded. 🟢 **Two exact independent reproductions.**
+`vishalsachdev/canvas-mcp` → `116` against a `README` claiming *"up to `102`"* — 🔵 a `13.7 %`
+over-read, disclosed.
+
+🔴 **Answer to `565-E`'s second question — are the fast movers systematically more read-only? NO,
+and the head is the counter-example:**
+
+| repo | ★ | tools | mutating | share |
+| --- | :-: | :-: | :-: | :-: |
+| 🔴 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — **the head** | **310** | `116` | `48` | 🔴 **`41.4 %` — the HIGHEST in the tier** |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 10 | `210` | `62` | `29.5 %` |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 104 | `54` | `13` | `24.1 %` |
+| [`Fireiscoolsolo/canvas-lms-mcp-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server) | 1 | `211` | `44` | `20.9 %` |
+| [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | 3 | `7` | `1` | `14.3 %` |
+| 🟢 [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) — **the fastest mover** | **119** | — | 🟢 **`0`** | 🟢 **read-only** |
+
+🟢 **The `310★` head carries the tier's heaviest write surface, and the `119★`-in-six-days fast
+mover carries none.** 🔵 So the hypothesis holds for exactly one repository and fails as a rule.
+
+### 🟢 `boyuchengz`'s read-only claim — CONFIRMED on a byte read, and it retires an instrument
+
+🟢 Its `README` states *"Every tool is read-only. No write endpoints are wrapped"* and its
+`CONTRIBUTING.md` enforces *"New tools must stay read-only"*. 🔴 **An HTTP-verb scan nevertheless
+returned `2` mutating call sites**, so they were read in context: **both are in `test/app.test.js`,
+and both are the MCP transport's own `POST`** — one a JSON-RPC call, one an auth-negative test.
+🟢 **Neither is a Canvas write. The claim stands.**
+
+🔴 **Instrument retired before publication, and the reason generalises past this base: counting
+mutating HTTP verbs cannot measure an MCP server's write surface, because MCP's JSON-RPC transport
+is itself `POST`.** Every MCP server posts, read-only ones included. 🟢 **Only the
+tool-declaration axis is sound** — `p447` picked the right instrument and this pass can now say
+*why*. 🔵 This pass's own `mutating_verbs` column is published in the evidence TSV and **is not
+used in any claim above**.
+
+🟢 Row list: [`canvas-write-surface-tooldecls`](../evidence/canvas-write-surface-tooldecls.2026-10-31-p566.tsv).
+🔴 `3 of 9` repos yield `0` names (`lucanardinocchi`, `r1ckyIn`, `awesome-town/canvas-mcp-node`) —
+recall gap, unmeasured over the full field → `566-B`.
+
 ## 🆕 `p565` — `2026-10-31` — **🟢 THE SHELF GAINS A PLATFORM TIER IT DID NOT HAVE, AND IT IS THE PERMISSIVE ONE: eight MIT-licensed Canvas LMS agents, grants read first-hand, headed by a `310★` University of Illinois server with `102` tools.** 🔴 **And the licence instrument that found two of them is one `564-B` said might not exist: `package.json`, not a `LICENSE` file.**
 
 🔵 **Why this tier was missing.** For three passes this base censused `moodle mcp in:name` and

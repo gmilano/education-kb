@@ -1,0 +1,8 @@
+full_name	platform	stars	files_in_tree	matched_licence_path	path_depth	scope	root_level_licence_files	verdict
+AdityaPrakash-26/Canvas-MCP	canvas	3	189	library_docs/canvas/reference/license-ref.md	2	documentation, not a grant	0	FALSE POSITIVE
+MisterCommand/mcp-canvas-lms	canvas	0	1871	node_modules/@modelcontextprotocol/sdk/LICENSE	2	vendored dependency (1841 vendored paths)	0	FALSE POSITIVE
+vishalsachdev/canvas-lms-mcp-extension	canvas	0	2010	node_modules/@modelcontextprotocol/sdk/LICENSE	2	vendored dependency (1973 vendored paths)	0	FALSE POSITIVE
+Mm4168/canvas-lms-mcp-server	canvas	0	4290	node_modules/@colors/colors/LICENSE	2	vendored dependency (4268 vendored paths)	0	FALSE POSITIVE
+canvas-mcp/adaptive-card-research-canvas-ai	canvas	0	503	adaptive-cards-mcp/LICENSE	1	subproject, not repository root	0	FALSE POSITIVE
+eledia/moodle-webservice_eledia_mcp	moodle	1	100	public/webservice/elediamcp/LICENSE	2	plugin payload, not repository root	0	FALSE POSITIVE
+jmoskaliuk/moodle-runbot-mcp	moodle	0	4252	node_modules/@hono/node-server/LICENSE	2	vendored dependency (4091 vendored paths)	0	FALSE POSITIVE

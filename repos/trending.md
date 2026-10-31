@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p566` — `2026-10-31`
+
+> **🟢 The shelf delta this week is `+44` buildable repositories and `+5` new addresses — recovered
+> by reading manifests, not by discovering projects.** 🔴 **And the week's biggest number is a
+> correction: `p565`'s `280`-row Canvas field is `187` rows once classified structurally.**
+> Append-only: history below is untouched.
+
+### 🟢 Field size, corrected
+
+| field | `p565` published | 🟢 `p566` measured | delta |
+| --- | :-: | :-: | --- |
+| `canvas-mcp in:name` rows | `280` | `280` | 🟢 reproduces exactly |
+| **actually Canvas LMS** | 🔴 not measured | 🟢 **`187`** (`66.8 %`) | 🔴 **`p565`'s headline was an upper bound by `1.5 ×`** |
+| 🔴 a different "canvas" | *"`≥23`"* | 🔴 **`93`** (`33.2 %`) | 🔴 **`4 ×` its own estimate** |
+| buildable (structurally Canvas **and** permissive) | — | 🟢 **`99`** | 🟢 of which **`24`** visible only via manifest |
+
+🟢 Row list: [`canvas-structural-classification`](../evidence/canvas-structural-classification.2026-10-31-p566.tsv).
+
+### 🟢 Trending by recovery — the rows that moved onto the shelf this week
+
+| repo | platform field | 🟢 read from manifest | ★ | signal |
+| --- | :-: | :-: | :-: | --- |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 `null` | 🟢 **MIT** | **104** | 🔴 **The highest-star asset a filename-only gate throws away.** `54` tools, reproduced exactly |
+| [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp) | 🔴 `null` | 🟢 **MIT** | 26 | Coursework management; 🔴 tool extraction yields `0` names — recall gap |
+| [`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) | 🔴 `null` | 🟢 **MIT** | 6 | 🟢 **The Moodle-side recovery that refutes `564-B`'s `0 of 3`** — courses, deadlines, grades, forums |
+| [`Brian-Two/canvas-mcp-assistance`](https://github.com/Brian-Two/canvas-mcp-assistance) | 🔴 `null` | 🟢 **MIT** | 2 | 🟢 **new address**, `168` files |
+| [`omniboyOK/siglo21-canvas-mcp`](https://github.com/omniboyOK/siglo21-canvas-mcp) | 🔴 `null` | 🟢 **MIT** | 2 | 🟢 **LATAM** — Universidad Siglo 21, Argentina. 🔵 Held since `p565`; **its grant is only legible this pass** |
+| [`GarthDB/rust-canvas-mcp`](https://github.com/GarthDB/rust-canvas-mcp) | 🔴 `null` | 🟢 **MIT** (`Cargo.toml`) | 0 | 🟢 **new address** — only **Rust** implementation measured on this field |
+| [`micaherne/moodle-plugin-db-mcp`](https://github.com/micaherne/moodle-plugin-db-mcp) | 🔴 `null` | 🟢 **MIT** | 0 | 🟢 **new address** — names the plugin-list endpoint `565-C` is blocked on |
+| [`edly-io/canvas-mcp`](https://github.com/edly-io/canvas-mcp) | 🔴 `null` | 🟢 **MIT** | 0 | 🔵 **vendor layer** — Edly is a commercial Open edX provider, shipping at `0★`. Confirms `p564`'s vendor-invisibility finding on the **Canvas** side |
+| [`akassh9/canvas-mcp`](https://github.com/akassh9/canvas-mcp) | 🔴 `null` | 🔴 **ISC** | 0 | 🟢 **new address**; 🔴 the identifier this base's own gate vocabulary drops |
+| [`tosuki/moodle-mcp`](https://github.com/tosuki/moodle-mcp) | 🔴 `null` | 🟢 **MIT** | 0 | *"production-grade"* self-description; held, grant newly legible |
+
+🟢 Full `44`: [`manifest-recovered-permissive`](../evidence/manifest-recovered-permissive.2026-10-31-p566.tsv).
+
+### 🔴 What the GitHub trending channel returned, and it is a nil
+
+🔴 The `github trending {industry} AI {year}` leg returned **`5` repository candidates and `0` new
+addresses** — `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`, `ArturoNereu/AI-Study-Group`,
+`rohitg00/ai-engineering-from-scratch`, `speedyapply/2026-AI-College-Jobs`, every one already held.
+🔵 **Third consecutive pass this leg has produced nothing new**, and the aggregator sources it
+reaches (`trendshift.io`, `gittrend.io`) returned counts without labelling whether they are stars —
+🔴 unusable as a figure, recorded rather than guessed at.
+
+### 🟢 The npm concentration, because it governs where to look next
+
+| the `234` unknown-licence rows | rows | recovered | rate |
+| --- | :-: | :-: | :-: |
+| 🟢 carries `package.json` | `118` | **`41`** | 🟢 **`34.7 %`** |
+| 🔴 does not | `116` | `3` | 🔴 **`2.6 %`** |
+
+🟢 **`13.3 ×`.** 🔵 **Operative instruction for the next sweep of any industry on this harness:
+rank unknown-licence rows by whether they carry an npm manifest before spending a read on them** —
+one third of the npm half pays, one fortieth of the rest does.
+
 ## 🆕 `p565` — `2026-10-31`
 
 > **🟢 A SECOND PLATFORM CHANNEL OPENS, and it is bigger than the one this base has censused for

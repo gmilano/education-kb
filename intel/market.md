@@ -4,6 +4,133 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p566` — `2026-10-31` — **🟢 THE BUILDABLE FIELD IS `2.4 ×` WHAT THIS MAP SAID: `99` structurally-confirmed permissive Canvas LMS agents against the tier of `8` `p565` priced — and `24` of the `99` exist only if the licence gate reads manifests.** 🔴 **The prose-demand channel NILS for a third consecutive pass across all four regions.**
+
+🔴 **Stated first, because it governs how much of this section to trust.** Eight prescribed legs
+ran (4 global, 4 regional) and returned **zero addresses and zero facts new to this base** — the
+third consecutive nil ([`../agents/trending.md`](../agents/trending.md#-p566--2026-10-31)). 🟢
+**What paid was supply again**, and the regional placements below are built from first-hand
+repository evidence, not from the prose legs.
+
+### 🟢 Supply, re-sized — the number a studio actually negotiates against
+
+| | `p565` | 🟢 `p566` |
+| --- | :-: | :-: |
+| Canvas rows discovered | `280` | `280` |
+| 🟢 **actually Canvas LMS** | not measured | 🟢 **`187`** |
+| 🟢 **permissive AND structurally confirmed** | a tier of `8` | 🟢 **`99`** |
+| 🔴 of those, invisible to the platform licence field | — | 🔴 **`24` (`24.2 %`)** |
+| 🔴 permissive rows lost to a filename-only gate, both platforms | — | 🔴 **`44`** |
+
+🔵 **The commercial reading.** A procurement gate that reads `LICENSE` files and trusts the
+platform's licence field **under-reports permissive supply on this field by `44` repositories,
+`18.8 %` of everything it marks unknown** — headed by a `104★`, `54`-tool asset. 🔴 **And a gate
+written to this base's own stated *"MIT / Apache 2.0 / BSD"* vocabulary drops a further `12`**,
+because `11` of the recovered grants are **`ISC`** and one is `Unlicense` — both permissive, both
+OSI-recognised, neither in the vocabulary. 🟢 **Two defects compose, and together they are the
+difference between a shelf of `8` and a shelf of `99`.**
+
+### 🔵 Market-size figures — returned again, not re-adopted
+
+🔴 The global trends leg returned the familiar spread: AI-in-education at **`$6.4B` (2025)**,
+**`$3.7B` (2026) → `$14.1B` (2033)**, and *"about `$11B` globally in 2026"* — 🔴 **three
+incompatible definitions from three commercial firms**, which is the same dispersion this base
+recorded at `p455` and did not resolve. 🟢 **Not re-adopted as a figure.** 🔵 K-12 as *"≈`34 %`
+share in 2026"* and North America as *"`36–38 %` of the global market"* are both held already.
+🔴 *"`134` bills / `31` states"* was returned for the third pass running and **remains retired**
+(one tracker; three others disagree by `2.6 ×`).
+
+## Opportunities by region
+
+### North America
+
+🟢 **The strongest position on this map, and this pass widens it.** `p565` withdrew `p564`'s claim
+that NA had *"no local open precedent"*; `p566` sizes what the precedent actually is: **`99`
+buildable Canvas LMS agents**, the platform that dominates US higher education, with **`4` named NA
+institutions** on the field (UIUC, UCSB, Cincinnati, Franklin School).
+
+🔴 **The constraint to price is FERPA, and the write surface is now measured rather than assumed.**
+The tier's tool declarations mutate at **`28.0 %`** — comparable to the Moodle connector tier's
+**`32.9 %`** (`p447`), so **the Canvas field is not the read-only option an engagement might hope
+for.** 🔴 **And the head is the worst case: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+(`310★`, UIUC, FERPA named `5 ×` in its own `README`) mutates on `41.4 %` of its declarations** —
+the highest share in the tier. 🟢 **The procurement-ready counterpart exists and is confirmed:**
+[`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) (`119★`, MIT) is read-only on a
+byte read, with `CONTRIBUTING` enforcing it. 🔵 **Sell the pairing, not the head alone:
+read-only for student-facing surfaces, the head's write tools behind human approval.**
+
+🔴 **The highest-value relicensing ask on this base is unchanged and is still the FERPA row:**
+[`awesome-town/canvas-mcp-node`](https://github.com/awesome-town/canvas-mcp-node) — FERPA-aware,
+per-course pseudonym maps — is **`NO-GRANT` on two axes**, while its sibling `canvas-mcp-skills` is
+MIT. Single named reachable maintainer.
+
+### EMEA
+
+🔴 **An informed gap, and the gap is in the channel rather than the region.** The EMEA leg returned
+**zero addresses** and **zero education-specific supply** — it degenerated into general-enterprise
+AI (EU ethical-guidelines update, `EUR 25.4m` Advanced Digital Skills grants, UK `GBP 200m+` AI
+Adoption Summit, Europe EdTech 200, `ICS.AI`), all of it already held. 🟢 **Recorded explicitly:
+this is a measured deficiency of the query template, not evidence that EMEA is quiet.**
+
+🟢 **What this pass can nevertheless place here.** The vertical that governs an EMEA engagement is
+still **Moodle** (`ILIAS` and `Chamilo` behind it), not Canvas — and the Moodle side is where the
+manifest axis was supposed not to pay. 🔴 **It paid: `16.4 %`**, refuting `564-B`'s `0 of 3`. 🟢 So
+**the `61`-row Moodle unknown-licence population is worth a read for an EMEA engagement**, and
+[`ink-waffle/moodle-mcp`](https://github.com/ink-waffle/moodle-mcp) (MIT, `6★`, courses/deadlines/
+grades/forums) is the recovered head of it. 🔴 **The Moodle-Partner question — who ships officially
+— remains unanswerable on this host:** the endpoint is now named
+(`download.moodle.org/api/1.3/pluglist.php`) and the **whole `*.moodle.org` zone is denied by
+network policy** ([`../verticals/solutions.md`](../verticals/solutions.md#-p566--2026-10-31)).
+🔵 For an EMEA engagement that is a real procurement blind spot and should be declared to the client
+rather than papered over.
+
+### APAC
+
+🔴 **The weakest leg of the four, and it failed hardest.** The APAC prose leg returned **zero
+addresses** and its only education-specific item **was about the United Kingdom**. 🟢 Written down
+as an informed gap.
+
+🟢 **The supply channel placed APAC anyway, on two rows.**
+[`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) (MIT, `18★`, University of
+Sydney) remains the region's institution row — 🔴 and this pass must flag that **its tool count
+could not be extracted** (`0` names recovered across four idioms), so **its write surface is
+unmeasured** and it should not be pointed at a gradebook on this base's word. 🔵 Second row, from
+the structural classification: [`thanhdc-dev/m3e-canvas-mcp`](https://github.com/thanhdc-dev/m3e-canvas-mcp)
+is Vietnamese, MIT, and **correctly classified OUT of the LMS field** — it is a Material 3 design
+canvas. 🟢 It is the control that proves the instrument is not simply matching the word *canvas*,
+and it is a reminder that an APAC row in a census is not automatically an APAC *education* row.
+
+### LATAM
+
+🟢 **The richest of the four prose legs — and still `0` new addresses.** It returned the Digital
+Education Council LATAM survey (`92 %` of students, `79 %` of faculty actively engaging; `29`
+universities, with Tec de Monterrey), UNESCO IESALC's `200` institutions across `19` countries, and
+the UNU-IAS working paper on AI in LAC higher education. 🟢 **All held. The region's adoption story
+is well covered on this base; its *supply* story is one row.**
+
+🟢 **That row is now legible, which is this pass's LATAM contribution:**
+[`omniboyOK/siglo21-canvas-mcp`](https://github.com/omniboyOK/siglo21-canvas-mcp) — *"MCP no oficial
+del canvas de universidad siglo 21"*, Universidad Siglo 21, Córdoba, Argentina — has been held
+since `p565`, 🔴 but its grant read `null` on the platform field. 🟢 **Read from `package.json` this
+pass: MIT.** 🔵 **So the only LATAM institution-attached agent on this field was, until this pass,
+indistinguishable from unlicensed** — the gate defect has a regional cost, and it lands hardest
+where the field is thinnest.
+
+🔴 **The standing LATAM asymmetry is unchanged and should be quoted honestly to a client:
+world-leading engagement (`92 %`/`79 %`) against a governance deficit UNESCO IESALC calls
+*"particularly pronounced"*, and `45 %` of institutions with AI guidance against `70 %` in Europe
+and North America.** 🟢 The sellable shape remains: **adoption is not the problem, governance is**.
+
+### Global
+
+🟢 **One finding is regionless and transfers to every other industry on this harness.** The
+predictor of a recoverable licence is **not** the vertical, the region or the platform — it is
+whether the repository carries an **npm manifest**: `34.7 %` recovery with `package.json` against
+`2.6 %` without, a **`13.3 ×`** ratio. 🔵 **So the gate defect is an ecosystem property.** A studio
+cannot avoid it by choosing a platform or a geography, only by reading manifests — and the cheapest
+possible version of that policy is to rank unknown-licence rows by the presence of a
+`package.json` before spending a read on any of them.
+
 ## 🆕 `p565` — `2026-10-31` — **🟢 NORTH AMERICA IS NO LONGER A HOLE IN THIS MAP — it holds the head of the field, once the field is the right one. `canvas-mcp` `280` rows, `4` NA institutions, a `310★` UIUC server, and FERPA as the region's distinguishing constraint.** 🔴 **The prose-demand channel NILS for a third consecutive pass, and the 2026 market total disagrees with itself by `3×`.**
 
 🔴 **Stated first, because it governs how much of this section to trust.** Eight prescribed legs

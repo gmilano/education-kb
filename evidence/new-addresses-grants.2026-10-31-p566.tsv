@@ -1,0 +1,6 @@
+full_name	stars	grant_spdx	grant_manifest	blob_digest	manifest_bytes	root_commit	files_in_tree	root_level_licence_files	note
+GarthDB/rust-canvas-mcp	0	MIT	Cargo.toml	a30ec47c4f6a	1355	62e4d718dc41	17	0	only Rust implementation measured on this field
+micaherne/moodle-plugin-db-mcp	0	MIT	package.json	282ba46d78b2	895	3d89f46a10b0	10	0	names the download.moodle.org pluglist endpoint that 565-C needs
+qns2/moodle-mcp	0	MIT	package.json	d3f5dd427625	758	bd51629c12ab	10	0	courses, SCORM, quizzes
+Brian-Two/canvas-mcp-assistance	2	MIT	package.json	4d96cc9d1fbb	1830	1c5bc4e0acfa	168	0	"AI-Powered Learning Platform"
+akassh9/canvas-mcp	0	ISC	package.json	1b8b57ab7b9e	614	77b5b0336f53	13	0	ISC - discarded by an MIT/Apache/BSD-only gate

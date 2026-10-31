@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p566` — `2026-10-31` — **🟢 `565-C`'s ENDPOINT IS NAMED AT LAST — `https://download.moodle.org/api/1.3/pluglist.php`, Moodle's own versioned plugin-list API, found inside a repository this base did not hold.** 🔴 **And `p565`'s diagnosis of the blockage is CORRECTED: it is not name resolution, it is a proxy POLICY denial — `CONNECT tunnel failed, response 403`.**
+
+🔵 **Why this matters for a vertical engagement and not only for the gap register.** `563-C`,
+`564-D` and `565-C` have all prescribed reading **Moodle's plugin directory** — the instrument that
+distinguishes a Moodle Partner shipping through official channels from one that has shipped
+nothing. 🔴 Three passes recorded it as unreachable; none identified *what* to call or *why* the
+call failed.
+
+### 🟢 What to call — and it came from the supply channel, not the prose channel
+
+🟢 [`micaherne/moodle-plugin-db-mcp`](https://github.com/micaherne/moodle-plugin-db-mcp) (**MIT**,
+`package.json` `895 B` / `282ba46d78b2`, `10` files, new to this base this pass) is an MCP server
+over Moodle's plugin database, and reading its tree gives the address directly:
+
+| what `565-C` asked for | 🟢 found |
+| --- | --- |
+| *"the directory's own JSON endpoint on a different hostname"* | 🟢 **`https://download.moodle.org/api/1.3/pluglist.php`** — official, **versioned** (`api/1.3`) |
+
+🔵 **The route is worth noting as much as the address:** three prose legs across three passes never
+produced it; **one repository recovered by the manifest-licence axis did.** 🟢 The supply channel
+answered a question the demand channel was asked three times.
+
+### 🔴 Why it still cannot be called — and `p565`'s cause is withdrawn
+
+🔴 `p565` recorded `moodle.org` as `ENOTFOUND` / `curl` exit `56` / `getent` negative and read that
+as the host being unreachable. 🟢 **Measured on the transport that actually carries egress here,
+the cause is different:**
+
+| transport | result, `2026-10-31` |
+| --- | --- |
+| 🔴 `curl` → `download.moodle.org/api/1.3/pluglist.php` | 🔴 **`CONNECT tunnel failed, response 403`** — the agent proxy **refusing the domain** |
+| 🔴 `WebFetch` → same URL | 🔴 `ENOTFOUND`, and the harness states the cause: ***"outside the session's allowed network domains"*** |
+| 🟢 `curl` → `github.com` | 🟢 reachable — positive control |
+
+🔴 **So the blockage is a NETWORK-POLICY denial, not a missing or dead host.** 🔵 `getent` reports
+`NXDOMAIN` because this container resolves nothing directly — all egress is proxied — so a DNS
+negative here carries **no information about whether a host exists.** 🟢 That is a general
+correction to how this base has read `NXDOMAIN` since `555-F`.
+
+### 🟢 And the whole zone was measured, which KILLS the remedy `565-C` proposed for itself
+
+| host | resolves from this session |
+| --- | :-: |
+| `moodle.org` | 🔴 **no** |
+| `download.moodle.org` | 🔴 **no** |
+| `api.moodle.org` | 🔴 **no** |
+| `stats.moodle.org` | 🔴 **no** |
+| `moodle.net` | 🔴 **no** |
+| `github.com` | 🟢 **yes** (control) |
+
+🔴 **The entire `*.moodle.org` zone plus `moodle.net` is denied.** 🟢 **So `565-C`'s own proposed
+remedy — *"a mirror, an API host that does resolve, or the directory's own JSON endpoint on a
+different hostname"* — is refuted in two of its three branches:** the JSON endpoint exists and is
+named, and it is **inside the denied zone**, as is every alternate Moodle hostname tried. 🟢 **The
+remedy is now exactly one thing: allow `*.moodle.org` in the session's network settings.** 🔵 A gap
+narrowed from three open branches to one actionable request is closure-grade progress even though
+the gap stays open. → `566-E`
+
+### 🔵 What a studio should do about the vertical in the meantime
+
+🟢 **The Moodle-Partner question is answerable without `moodle.org`, just not completely.** This
+base already holds four vendor-maintained Moodle-MCP artefacts at `0★` (`Teci-AI` paired server and
+plugin, `studiolxd`, `almabay/placecom`, and `eledia` — 🔴 archived into a commercial suite). 🟢
+**`eledia/moodle-webservice_eledia_mcp` gained a measured detail this pass:** its only
+licence-shaped path is `public/webservice/elediamcp/LICENSE`, **inside the plugin payload rather
+than at the repository root** — the shape a Moodle plugin ships in, and the shape a root-scoped
+gate correctly reports as `null` for the repository. 🔵 **For a Moodle engagement that is the
+operative fact: plugin-shaped repositories declare their grant where the plugin lives, so price the
+payload, not the root.**
+
+🔴 **Unchanged and still the stricter grant of the two LMS verticals:** `instructure/canvas-lms` is
+**`AGPL-3.0`** (network-use clause) against `moodle/moodle`'s `GPL-3.0` — `p565`'s pin,
+`35 149 B` / `3972dc9744f6`, not re-probed this pass.
+
 ## 🆕 `p565` — `2026-10-31` — **🟢 THE SECOND LMS VERTICAL IS NOW ON THIS BASE, AND ITS GRANT IS STRICTER THAN MOODLE'S: `instructure/canvas-lms` is `AGPL-3.0` — the network-use clause — against Moodle's `GPL-3.0`.** 🔴 **And `564-D`/`563-C` CANNOT BE CLOSED ON THIS HOST: `moodle.org` does not resolve.**
 
 🔵 **Why this section changes.** For three passes the only LMS vertical this base priced was
