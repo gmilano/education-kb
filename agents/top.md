@@ -7,7 +7,7 @@ updated: 2026-10-31
 # Top AI agents for education
 
 <!-- machine-readable count claim, p569, for ingest/derive-counts.py -->
-`derived shelf: **24**` — the shelf table below, counted with that gate's own row
+`derived shelf: **29**` — the shelf table below, counted with that gate's own row
 regex. 🔴 Not the same figure as an unbounded `## The shelf` → next-`##` scan, which
 derives **33** by swallowing the two `###` sub-tables; see `568-E` / `569-C`.
 
@@ -42,6 +42,76 @@ different claim from the one the previous pass retracted. Re-running the fourth
 pass's own discovery query (`topic:ai-education stars:>150 pushed:>2026-10-20`)
 returns the **same 6 repositories**, all already shelved. The axis is exhausted;
 the population is not, and the capability sweep is the proof.
+
+## Tenth pass (`p572`, 2026-10-31) — 🟢 THE NIL BROKE, AND IT BROKE ON A NEVER-SWEPT AXIS OF `44` REPOSITORIES — while the real finding is that this base has seen `3,455` addresses and shelved `170`
+
+🟢 **`derived shelf: 29`, up from `24`.** 🟢 **`12` addresses new to a 571-pass
+base, after NINE consecutive nil passes** — and not one of them came from the
+eight mandated legs.
+
+| channel | legs / rows | addresses NEW to this base |
+| --- | --: | --: |
+| 🔴 `WebSearch`, the eight mandated legs (4 global, 4 regional) | 8 | 🔴 **`0`** — **TENTH consecutive nil** |
+| 🟢 [`topic:lesson-plan`](https://github.com/topics/lesson-plan) (**44** results) | 10 | 🟢 **`6`** |
+| 🟢 [`topic:handwriting-recognition`](https://github.com/topics/handwriting-recognition) (**672**) | 10 | 🟢 **`6`** |
+| 🔴 [`topic:flashcards`](https://github.com/topics/flashcards) (**3.3k**) | 10 | 🔴 **`1`** — `read-frog`, `word-atlas`, `LibreLingo` all already held |
+| 🔴 [`topic:curriculum`](https://github.com/topics/curriculum) (**1.5k**) | 10 | 🔴 **`0`** — the `topic:mooc` pattern exactly: course *materials*, not delivery software |
+| 🟢 `raw.githubusercontent.com` grant reads | 32 addresses | 🟢 **`28` grants read byte-for-byte**, 2 proved ungranted at 40 probes each |
+| 🟢 `git clone --filter=blob:none` + `git rev-list` | 8 | 🟢 **8 exact commit counts, 0 failures** |
+| 🔴 `curl -sI` → `github.com` / `api.github.com` | 2 | 🔴 **403 both.** The harness's prescribed link check is unavailable; existence proved by `raw` 200/404 with a fabricated control instead |
+
+### 🟢 `topic:lesson-plan` is the smallest productive axis this base has ever swept
+
+🟢 **`44` results — and `6` of the top `10` were new.** 🔵 The reason the big axes
+are exhausted and this one was not: **`44` repositories is too small a field to
+reach any "top" list**, so nine passes of star-sorted sweeping could not see it.
+🟢 The field is also **overwhelmingly non-anglophone** — mainland-China K-12,
+Malaysian Chinese Independent Schools (独中), a Chinese medical-licensing toolkit —
+which is why **four of the six new rows place outside North America on first-hand
+evidence**, against three passes that published "EMEA/APAC gained no placed row".
+
+🔴 **And every one of them is thin.** The six new `lesson-plan` rows carry
+`5`, `7`, `8`, `16`, `41` and `2` commits. 🔵 **This is a template tier, not a
+dependency tier**, and it is shelved as such: the value is the *feature taxonomy*
+these teachers converged on independently (lesson plan → courseware → item bank →
+dictation/marking), not the code.
+
+### 🔴 The pass's largest finding is about this base, not about GitHub
+
+🔴 **`3,455` distinct GitHub addresses appear in this base's own history.
+`170` of them — `4.9 %` — have ever reached a shelf page.** 🔵 A low rate is
+*correct* for a curated shelf; the defect is not the rate but **what sits in the
+discard**. Ranked by recurrence, the top of the unshelved list is not noise:
+
+| address | times seen | status |
+| --- | --: | --- |
+| `openedx/edx-platform` | **218** | 🔴 **LINKING DEFECT** — named `15×` in shelf prose, **never with its address** |
+| `openedx/XBlock` | **123** | 🔴 absent entirely — **Apache-2.0**, now shelved |
+| `bruchris/canvas-lms-mcp` | **115** | 🔴 absent entirely — **MIT**, now shelved |
+| `ls1intum/Artemis` | **97** | 🔴 absent entirely — **MIT**, now shelved |
+| `opencast/opencast` | **93** | 🔴 absent entirely — **ECL-2.0**, now shelved |
+| `francoisjacquet/rosariosis` | **92** | 🔴 absent entirely — GPL-2.0, now shelved |
+| `frappe/erpnext` | **84** | 🔴 absent entirely — GPL-3.0, now shelved |
+| `GibbonEdu/core` | **83** | 🔴 absent entirely — GPL-3.0, now shelved |
+| `yetanalytics/lrsql` | **70** | 🔴 absent entirely — **Apache-2.0**, now shelved |
+
+🔴 **Four of those nine are permissive, and the whole LTI 1.3 / xAPI integration
+layer — the plumbing every LMS engagement actually bills for — was absent from
+every shelf page in this KB while being re-found `70`–`123` times.** 🟢 **`11` of
+the `12` tested are absent *entirely*, not merely unlinked**, so this is a
+shelving failure and not a citation-style quibble. 🔵 **Rule, stated to transfer:
+discovery and shelving are different pipelines, and this base has been measuring
+only the first.** Registered as `572-A`.
+
+### 🔵 Method note: the mandated legs are now measurably the weakest channel
+
+🔵 Across **ten** passes the eight mandated `WebSearch` legs have produced **zero**
+addresses new to this base. This pass they also re-served a figure this base
+**retired at `p455`** ("134 bills / 31 states"), which `p455` demoted after three
+other trackers disagreed by `2.6×`. 🟢 **The two *targeted* intel queries run
+instead of a tenth re-run — Cetic.br and Canadian provincial guidance — both
+returned placeable material** (see [`../intel/market.md`](../intel/market.md)).
+🔵 The leg text is not the problem; **re-running an exhausted query is**.
 
 ## Ninth pass (`p571`, 2026-10-31) — 🔴 the shelf holds at `24` and the pass found NOTHING new; its value is that it caught this base contradicting itself
 
@@ -301,6 +371,11 @@ local-supply story and its build-on-it story remain about different repositories
 
 | Agent | Repo | Licence | ★ | Region | What it is |
 | --- | --- | --- | --: | --- | --- |
+| canvas-lms-mcp | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | **MIT** (1,070 B ✅ first-hand, `main/LICENSE`) | 10 | North America | 🟢 **Shelved at last: this base has seen this address `115` times across its history and never once placed it.** "Canvas LMS MCP server — read courses, assignments, submissions, rubrics, quizzes; grade and comment from any AI agent." TypeScript, 446 commits. 🔵 `p565` concluded that **`canvas-mcp` is the North America answer** and withdrew its own Moodle-based NA recommendation on exactly that ground — then the concrete Canvas MCP server the sweeps kept returning stayed unshelved for seven more passes. Sidebar and grant file agree. |
+| lesson-plan-magic | [revjake1/lesson-plan-magic](https://github.com/revjake1/lesson-plan-magic) | **MIT** (1,069 B ✅ first-hand) | 1 | North America | "K-12 lesson planning AI plugin for Cowork & Claude Code — learns your voice, fills your district's template, and generates standards-aligned…" 🟢 **The district-template framing is the commercially interesting part** — it is the first row in this KB that targets the US *district* procurement unit rather than a teacher or an institution. 🔴 **Thin: 16 commits over a 3-day span, first commit `2026-04-21`, 1★.** Graded as a pattern to copy, not a dependency to adopt. |
+| lesson-plan-skill | [Dragon-01-you/lesson-plan-skill](https://github.com/Dragon-01-you/lesson-plan-skill) | **MIT** (1,070 B ✅ first-hand, `master/LICENSE`) | 4 | APAC | "AI-Powered Lesson Plan Generator for Claude Code \| 智能教案生成器 - 5分钟生成完整教案". Python, packaged with `pyproject.toml`. 🔴 **Thin: 5 commits, every one dated `2026-08-06`, span 0 days.** A single-sitting repository. Shelved because the axis it came from is new to this base, not because the artefact is mature. |
+| dsh-teacher-kit | [LeonhardJY/dsh-teacher-kit](https://github.com/LeonhardJY/dsh-teacher-kit) | **MIT** (1,071 B ✅ first-hand) | 2 | APAC | DSH plugin for mainland-China secondary teachers: exam papers, item-bank assembly, dictation sheets, lesson plans, courseware, whole-lesson bundles, plus `docx`/`pptx` batch processing against the school's own blank template. 🟢 **States `全程本机运行，不联网、不收集数据` — runs entirely on the local machine, no network, no data collection.** That is a *data-residency* property, which is the single most common blocker in school procurement. 🔴 7 commits, created `2026-10-28` (three days old). |
+| teacher-workbench | [deepseek-harness-java/teacher-workbench](https://github.com/deepseek-harness-java/teacher-workbench) | ⛔ **NO LICENCE** — 40 probes | 2 | APAC | Java teacher workbench: 学情热力 (learning heatmaps), 错题归集 (error-item collection), 分层练习 (tiered practice), 教案初稿 (lesson-plan drafts), 作文批改 (essay marking) — a genuinely well-chosen feature set for the market it names. 🔴 **Ungranted, and this is now evidenced to the hilt: `4` branches × `10` filenames including case variants = `40` probes, all 404.** Default is exclusive copyright. Read it for the feature taxonomy; ship nothing from it. |
 | DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 52,208 | APAC | Lifelong personalised tutoring; multi-agent pipelines over LLM + RAG. Python, created 2025-12-28. Data Intelligence Lab, University of Hong Kong. **Still the largest education agent on GitHub.** Fourth-pass reading, 2026-10-31 10:42 UTC: **52,208★**, **6,394 forks** (6,388 at 09:40), 256 open issues, pushed 10:39 the same day; the homepage field now carries `arxiv.org/abs/2604.26962`. |
 | OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | 41,984 | APAC | **The most consequential new row in this KB.** "Open Multi-Agent Interactive Classroom" — turns a topic or uploaded documents into an interactive lesson with AI teachers *and* AI classmates: slides, quizzes, simulations, speech, whiteboard, live discussion. Exports PPTX, single-file offline HTML, or classroom ZIP. TypeScript (Next.js 16/React 19), **6,501 forks** read at 10:10 UTC (6,502 at 09:40), 212 open issues, `v1.3.0` dated 2026-10-29. Created **2026-03-11** — 42k★ in under eight months. `LICENSE` reads "MIT License, Copyright (c) 2026 THU-MAIC"; contact domain is `tsinghua.edu.cn`. |
 | DIO Agent | [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | ⛔ **NO LICENCE** — see note | 2,750 | LATAM | **The first LATAM-origin education agent found in three passes, and it cannot be built on.** A study-mentor agent bundle: `AGENTS.md`, `CLAUDE.md`, and `skills/` with one `SKILL.md` per skill (study planning, hinting without answering, concept explanation, web search, portfolio review, career guidance). Runs on Claude Code, Codex, OpenCode, Antigravity, Hermes. 347 forks, created 2026-05-27. README is Portuguese; org links `dio.me`, a bootcamp/`formações` platform. **Licence defect, now verified by three methods:** the API returns **no `license` field at all**, the repo page names none, and this pass fetched all five standard licence filenames on both branches over `raw.githubusercontent.com` — all 404. Default is exclusive copyright, i.e. all rights reserved. Fork and read, do not ship. |

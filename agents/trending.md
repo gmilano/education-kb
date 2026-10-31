@@ -4,6 +4,74 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (tenth pass · `p572`) — 🟢 the ten-pass nil is broken, by the smallest axis on the board
+
+🟢 **`12` addresses new to a 571-pass base.** 🔴 **`0` of them from the eight
+mandated legs, which are now `10` for `10` on nil.**
+
+| channel | rows | new to base |
+| --- | --: | --: |
+| 🔴 `WebSearch` — the eight mandated legs | 8 | 🔴 **0** — **tenth consecutive nil** |
+| 🟢 [`topic:lesson-plan`](https://github.com/topics/lesson-plan) (**44**) | 10 | 🟢 **6** |
+| 🟢 [`topic:handwriting-recognition`](https://github.com/topics/handwriting-recognition) (**672**) | 10 | 🟢 **6** |
+| 🔴 [`topic:flashcards`](https://github.com/topics/flashcards) (**3.3k**) | 10 | 🔴 **1** |
+| 🔴 [`topic:curriculum`](https://github.com/topics/curriculum) (**1.5k**) | 10 | 🔴 **0** |
+
+### 🟢 New this week — agents and teacher-facing skills
+
+- 🟢 [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) —
+  **MIT** (1,070 B, first-hand), **10★**, 446 commits, **North America**. Canvas
+  MCP: courses, assignments, submissions, rubrics, quizzes; grades and comments
+  from any agent. 🔴 **Seen `115` times in this base's history and never shelved
+  until now** — while `p565` was concluding that Canvas MCP *is* the NA answer.
+- 🟢 [`revjake1/lesson-plan-magic`](https://github.com/revjake1/lesson-plan-magic) —
+  **MIT** (1,069 B), **1★**, 16 commits / 3-day span, **North America**. Fills a
+  *district* template; the first row here aimed at the US district procurement unit.
+- 🟢 [`Dragon-01-you/lesson-plan-skill`](https://github.com/Dragon-01-you/lesson-plan-skill) —
+  **MIT** (1,070 B), **4★**, 5 commits all on `2026-08-06`, **APAC**.
+- 🟢 [`LeonhardJY/dsh-teacher-kit`](https://github.com/LeonhardJY/dsh-teacher-kit) —
+  **MIT** (1,071 B), **2★**, 7 commits, created `2026-10-28`, **APAC**. Runs
+  **fully local, no network, no data collection** — a procurement property, stated
+  by the project itself.
+- 🔴 [`deepseek-harness-java/teacher-workbench`](https://github.com/deepseek-harness-java/teacher-workbench) —
+  ⛔ **UNGRANTED at 40 probes** (4 branches × 10 filenames, all 404), **2★**, **APAC**.
+  Good feature taxonomy, unusable code.
+- 🔴 [`abmarkguo/medical-exam-teacher-toolkit`](https://github.com/abmarkguo/medical-exam-teacher-toolkit) —
+  **MIT** (1,098 B — body read, the `+28 B` is only a longer copyright line), **1★**,
+  **APAC**. 🔴 **Held back from the shelf on provenance: `41` commits every one
+  dated `2026-07-27`, and the first commit in the repository is `Add CITATION.cff`.**
+  Not `570-A`-grade synthetic, but a repository does not begin with its citation file.
+
+### 🔴 Three rows the sweep surfaced that a licence column would have mis-sold
+
+- 🔴 [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) — **2.1k★**, described
+  as "community driven version of NotebookLM". 🔴 **"PageLM Community License",
+  8,563 B, bespoke and non-OSI: non-commercial only; redistribution *"strictly
+  prohibited"*; commercial use requires an executed revenue-sharing agreement; the
+  grant is revocable.** 🔴 **Seen `59` times in this base's history, never once with
+  its licence recorded.** HARD BLOCK for a studio.
+- 🔴 [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) —
+  **5.6k★**, **CC BY-NC 4.0** (19,347 B). A curriculum-aligned knowledge graph —
+  1,644 knowledge points, 2,403 prerequisite edges, 6,723 items, adaptive
+  prerequisite diagnosis. 🔴 **NonCommercial: the whole value is the data and the
+  data is the part that is blocked.** Seen `36` times, never shelved.
+- 🔴 [`chewyenhan/malaysia-uec-teacher-workflow`](https://github.com/chewyenhan/malaysia-uec-teacher-workflow) —
+  **MIT by first line, and that reading is wrong.** `LICENSE.md` is **2,876 B** and
+  contains a **path table**: `SKILL.md`, `README.md`, `agents/`, `references/`,
+  `evals/`, `examples/` → **CC BY-NC-SA 4.0**; only `scripts/` and `tests/` → MIT.
+  🔴 **The substance is NonCommercial *and* ShareAlike; the MIT covers the glue.**
+
+### 🟢 A never-swept capability tier: handwriting → text
+
+🔵 `topic:handwriting-recognition` (**672**) had never been swept, and it answers a
+real education job: **marking handwritten work**. Six new addresses, five with
+first-hand permissive grants — shelved in
+[`../repos/foundations.md`](../repos/foundations.md), since none is an education
+agent. 🔴 One of them, `githubharald/DeslantImg`, reads **MIT** and carries a
+**GPL-3.0 licence surface** via `Py-BOBYQA`; see that page.
+
+---
+
 ## 2026-10-31 (ninth pass · `p571`) — 🔴 a total nil on four axes, and the finding is that this base had already found what it was looking for
 
 🔴 **Zero addresses new to this base, on every channel opened.** Eight `WebSearch`

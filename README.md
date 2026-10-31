@@ -4,6 +4,119 @@ region: Global
 updated: 2026-10-31
 ---
 
+## Pass 572 — reads 2026-10-31, commit 2026-10-31 — **🟢 THE TEN-PASS SEARCH NIL BROKE ON A `44`-REPOSITORY AXIS — and the pass's real result is an audit of this base rather than of GitHub: `3,455` ADDRESSES SEEN ACROSS 571 PASSES, `170` EVER SHELVED, and the entire LTI 1.3 / xAPI integration layer was sitting in the discard after being re-found `70`–`123` TIMES EACH. 🟢 `569-E` AND `570-B` CLOSED, plus two intel gaps `p571` prescribed the remedy for. 🔴 AND TWO OF THIS BASE'S OWN LICENCE INSTRUMENTS ARE WRONG: the copyleft grader on `6 of 8` GPL rows, the grant ladder on a `40.8k★` ERP. FIVE REGISTERED (`572-A`…`572-E`).**
+
+### 🟢 The central result: this base's discard pile held its most useful tier
+
+🔴 **`3,455` distinct GitHub addresses appear in this base's own history.
+`170` — `4.9 %` — have ever reached a shelf page.** 🔵 A selective shelf is
+correct, so the rate is not the defect. **What was in the discard is.**
+
+| address | times re-found | shelf status before this pass |
+| --- | --: | --- |
+| `openedx/edx-platform` | **218** | named `15×` in prose, **never with its address** |
+| `openedx/XBlock` | **123** | absent entirely — **Apache-2.0** |
+| `bruchris/canvas-lms-mcp` | **115** | absent entirely — **MIT** |
+| `ls1intum/Artemis` | **97** | absent entirely — **MIT** |
+| `opencast/opencast` | **93** | absent entirely — **ECL-2.0** |
+| `yetanalytics/lrsql` | **70** | absent entirely — **Apache-2.0** |
+
+🟢 **`11` of the `12` tested were absent from every shelf page *entirely* — not
+named, not linked.** So this is a shelving failure, not a citation quibble.
+🔴 **The LTI 1.3 and xAPI layer — the plumbing every LMS engagement actually bills
+for — was missing from this KB while the sweeps kept handing it back.** 🟢 All
+twelve are now shelved with grants read byte-for-byte. Registered `572-A`.
+
+🔵 **`p571` found this same defect class one pass earlier, by hand. It recurred
+because nothing was instrumented.** The census is now a four-line step.
+
+### 🟢 The nil broke, and the axis that broke it was too small to rank
+
+🟢 **`12` addresses new to a 571-pass base**, after **nine** consecutive nil
+passes. 🔴 **Zero of them from the eight mandated legs, which are now `10` for
+`10`.** 🟢 `topic:lesson-plan` holds **44** repositories — *too small a field to
+surface on any star-sorted list*, which is exactly why nine passes could not see
+it — and **6 of its top 10 were new**. 🟢 It is also overwhelmingly
+non-anglophone, so **four of six new rows place outside North America on
+first-hand evidence**. 🔴 Every one is thin (`5`–`41` commits): shelved as a
+**template tier, not a dependency tier**.
+
+🟢 `topic:handwriting-recognition` (**672**) was also never swept and answers a
+real job — **marking handwritten work** — yielding five permissive rows and one
+trap.
+
+### 🔴 Two of this base's licence instruments are wrong, both proven, both fixed
+
+🔴 **The copyleft grader (`572-E`): a "GNU AFFERO" body grep misgrades GPL-3.0 as
+AGPL-3.0 on `6 of 8` GPL-family grants, because GPL-3.0 §13 names the Affero
+licence.** 🟢 Discriminator that works: **title line + Affero reference count —
+`3` is the incidental §13 cross-reference, `15` is a real AGPL.** 🔴 This is
+commercially load-bearing, not taxonomic: **AGPL-3.0 §13 imposes a network
+source-offer obligation and GPL-3.0 does not**, so the error wrongly blocks six
+usable repositories.
+
+🔴 **The grant ladder (`572-B`): a `5`-filename × `2`-branch ladder false-nulled
+`openedx/XBlock` (Apache-2.0, at `LICENSE.TXT` — uppercase extension, and `raw`
+paths are case-sensitive) and `frappe/erpnext` (GPL-3.0, at lowercase
+`license.txt` on a `develop` default branch) — a `50 %` false-`NOASSERTION` rate
+on this sample.** 🟢 Re-run at `4` branches × `10` filenames: both resolved, and
+the two genuine nulls held at **40 probes each**.
+
+### 🟢 `570-B` closed, and the cheap detector caught a mechanism the regex missed
+
+🟢 **Byte-count deviation worked on first use.** `5` of `32` grants deviated;
+bodies read on all five. 🟢 **`chewyenhan/malaysia-uec-teacher-workflow` reads
+"MIT" on line one and its `LICENSE.md` is a `2,876 B` PATH TABLE** putting
+`SKILL.md`, `agents/` and `references/` under **CC BY-NC-SA 4.0** with MIT on only
+`scripts/` and `tests/`. 🔵 **Fifth distinct split-grant mechanism, and the
+scope-clause regex missed it while the byte count caught it.** 🟡 **Calibration
+recorded honestly: deviation is a screen, not a verdict** — two deviants were
+clean MIT with nothing but a longer copyright line.
+
+🔴 **Three high-star education repositories that read as open source and are not:**
+`CaviraOSS/PageLM` (2.1k★ — bespoke non-OSI licence, non-commercial,
+redistribution *prohibited*, revenue-sharing required, revocable; **seen `59×`,
+licence never recorded**), `xiaoyang111222/cn-math-taxonomy` (5.6k★ — **CC BY-NC
+4.0** on the knowledge graph that *is* the product), and the Malaysia row above.
+🔵 **The pattern: the code is given away and the content is withheld — and in
+education the content is the product.**
+
+### 🟢 Both intel gaps `p571` prescribed a remedy for are closed, at a stated grade
+
+🟢 **The remedy worked and the generic legs failed again in the same pass.**
+**LATAM classroom rates** (open two passes) turned out to be a missing
+**population**, not a missing source: the page held *administrator* rates and
+lacked students and teachers. Now **`~70%` student use against `32%` receiving
+guidance — a 38-point school-level governance gap mirroring UNESCO's 61-point
+higher-ed gap.** **Canada** is placed after five US-only passes: **4 of 13**
+provinces have formal guidance, **no** Ontario ministry memorandum, and **the
+operative buyer is the school board** — which makes age-gating and parental
+consent product requirements, not configuration.
+
+🔴 **Both at grade `C†`, and labelled: `cetic.br` and `www.otffeo.on.ca` do not
+resolve from this session, so neither primary was read.** One teacher figure
+(`58%`) is single-secondary and marked **do not quote**.
+
+### 🟢 `569-E` closed — and stating the grades exposed what the old column hid
+
+🟢 [`intel/market.md`](intel/market.md)'s regional table now carries a **grade per
+count**. 🔴 **Three of its four rows are not regional counts at all**: `60%` is
+US-only, `7 of 39` is Australia-only, the EMEA governance figure blends Europe
+*with* North America. **Only the LATAM row is a genuine multi-country
+measurement** — which inverts the table's apparent balance and needed saying
+before any of it reached a client deck.
+
+### 🔵 Honest scope of this pass
+
+🔵 `curl -sI` on `github.com` and `api.github.com` is **403** here, so the
+harness's prescribed link check was unavailable; existence was proved instead by
+`raw.githubusercontent.com` **200/404 against a fabricated control**, which
+discriminated correctly. 🔵 Star and commit figures come from rendered pages and
+are, per `570-A`, **claims a repository makes about itself** — the licence text,
+the dependency manifest and the behaviour of the code are the only signals read
+here that an author cannot manufacture. 🔴 `567-A` is untouched for a fifth pass.
+
+
 ## Pass 569 — reads 2026-10-31, commit 2026-10-31 — **🟢 THE STAR FLOOR WAS THE GAP. `13` addresses new to a 569-pass base came out of `stars:<50` in one sweep, against `0` from eight search legs — and TWO OF THEM CLOSE GAPS THIS BASE PUBLISHED FOR FIVE AND SIX PASSES. 🟢 `568-A`'s INSTRUMENT BUILT, RUN, AND IT REPRODUCES ITS OWN FOUNDING CASE COLD. 🔴 AND `568-A` RECURRED INSIDE THE PASS THAT REGISTERED IT. SIX REGISTERED (`569-A`…`569-F`).**
 
 ### 🟢 The central result: an absence this base published six times was a property of its own sort

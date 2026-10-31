@@ -1,0 +1,15 @@
+slug	branch	file	http	bytes	spdx	scope_clause	firstline
+openedx/edx-platform	master	LICENSE	200	35136	AGPL	-	                    GNU AFFERO GENERAL PUBLIC LICENSE
+openedx/XBlock	-	-	404	0	NOASSERTION	-	no grant found main|master x5 filenames
+ls1intum/Artemis	main	LICENSE	200	1091	MIT	-	MIT License
+opencast/opencast	master	LICENSE	200	11340	UNKNOWN	-	Educational Community License, Version 2.0 (ECL-2.0)
+francoisjacquet/rosariosis	master	LICENSE	200	15214	GPL	-	                    GNU GENERAL PUBLIC LICENSE
+frappe/erpnext	-	-	404	0	NOASSERTION	-	no grant found main|master x5 filenames
+GibbonEdu/core	main	LICENSE	200	35121	AGPL	-	GNU GENERAL PUBLIC LICENSE
+yetanalytics/lrsql	main	LICENSE	200	11357	Apache-2.0	-	                                 Apache License
+yetanalytics/lrs	master	LICENSE	200	11357	Apache-2.0	-	                                 Apache License
+plastic-labs/tutor-gpt	main	LICENSE	200	35149	AGPL	-	                    GNU GENERAL PUBLIC LICENSE
+Open-TutorAi/open-tutor-ai-CE	main	LICENSE	200	1531	UNKNOWN	-	Copyright (c) 2023-2025 Mohamed El hajji On behalf of all R2
+bruchris/canvas-lms-mcp	main	LICENSE	200	1070	MIT	-	MIT License
+dmitry-viskov/pylti1.3	master	LICENSE	200	1070	MIT	-	MIT License
+packbackbooks/lti-1-3-php-library	master	LICENSE.md	200	11343	Apache-2.0	-	                                 Apache License

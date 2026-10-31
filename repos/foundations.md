@@ -6,8 +6,15 @@ updated: 2026-10-31
 
 # Foundational open source repos for education
 
-The substrate an education engagement builds on or integrates with. Star counts
-and metadata on this page come from the **GitHub REST index** on 2026-10-31.
+The substrate an education engagement builds on or integrates with. 🔴 **Star counts and metadata on this page do NOT come from the GitHub REST
+index** — `api.github.com` answers **403** to this session, scoped to the harness
+repository. `p571` flagged this header as false and it survived the pass that
+flagged it; `p572` corrects it. Figures on rows added or re-read in the tenth pass
+were read from the **rendered repository page**, and every licence from the
+**grant file itself** over `raw.githubusercontent.com`. 🔵 Per `570-A`: a star or
+commit count is a claim a repository makes about itself; the licence text, the
+dependency manifest and the behaviour of the code are the only signals here that
+an author cannot unilaterally manufacture.
 **Licences on rows added or re-read in the fourth pass were read from the licence
 file itself** over `raw.githubusercontent.com` (HTTP 200 from this session, while
 `api.github.com` and `github.com` HTML are 403), with byte counts recorded;
@@ -16,6 +23,71 @@ older rows carry GitHub's licence determination and say so where it matters.
 **Read the licence column before the star column.** The platforms of record are
 overwhelmingly **copyleft** — the opposite of the agent layer. Two exceptions
 have now been established, and one of them is new this pass and important.
+
+## Tenth pass (`p572`, 2026-10-31) — 🟢 THE LTI 1.3 AND xAPI LAYER WAS MISSING FROM THIS KB ENTIRELY, AFTER BEING RE-FOUND BETWEEN `70` AND `123` TIMES EACH
+
+🟢 **Ten rows added, `7` of them permissive, and the tier they form is the one
+every LMS engagement bills for: the integration plumbing.**
+
+🔴 **This base has seen `3,455` distinct GitHub addresses across its history and
+placed `170` of them on a shelf page — `4.9 %`.** 🔵 A selective shelf is correct;
+**what was sitting in the discard is not.** Ranked by how many times the base
+re-found an address without ever shelving it, the head of the unshelved list was
+`openedx/edx-platform` (`218×`), `openedx/XBlock` (`123×`),
+`bruchris/canvas-lms-mcp` (`115×`), `ls1intum/Artemis` (`97×`),
+`opencast/opencast` (`93×`), `francoisjacquet/rosariosis` (`92×`),
+`frappe/erpnext` (`84×`), `GibbonEdu/core` (`83×`), `yetanalytics/lrsql` (`70×`).
+
+🟢 **`11` of the `12` addresses tested were absent from every shelf page
+*entirely* — not named in prose, not linked, absent.** Only `edx-platform` was a
+pure linking defect. 🔵 **So the gap was in shelving, not in discovery: this base
+found this material repeatedly and had no step that placed it.** Registered as
+`572-A`.
+
+### 🟢 The permissive integration tier, now placed
+
+| layer | repo | licence | why it matters |
+| --- | --- | --- | --- |
+| LTI 1.3 (Python) | `dmitry-viskov/pylti1.3` | **MIT** | attach to any LMS without forking it |
+| LTI 1.3 (PHP) | `packbackbooks/lti-1-3-php-library` | **Apache-2.0** | the Moodle-native side |
+| xAPI store | `yetanalytics/lrsql` | **Apache-2.0** | where learning-analytics statements land |
+| Open edX components | `openedx/XBlock` | **Apache-2.0** | permissive components on an AGPL platform |
+| Canvas control | `bruchris/canvas-lms-mcp` | **MIT** | shelved in [`../agents/top.md`](../agents/top.md) |
+
+🔵 **The XBlock/edx-platform split is the single most useful licence fact added
+this pass**: `XBlock` is Apache-2.0, `edx-platform` is AGPL-3.0. Client course
+components can stay permissive on top of a copyleft platform.
+
+### 🔴 Two instrument defects in this base's own grant ladder, both proven and both fixed
+
+🔴 **A `5`-filename × `2`-branch ladder returned `NOASSERTION` for `4` addresses
+this pass. Two of those four were the instrument's fault.**
+
+| address | ladder said | truth | cause |
+| --- | --- | --- | --- |
+| `openedx/XBlock` | NOASSERTION | **Apache-2.0**, 11,358 B | file is `LICENSE.TXT` — **uppercase extension**, and `raw` paths are case-sensitive |
+| `frappe/erpnext` | NOASSERTION | **GPL-3.0**, 35,149 B | file is `license.txt` — **lowercase** — and the default branch is **`develop`**, not `main`/`master` |
+| `deepseek-harness-java/teacher-workbench` | NOASSERTION | 🟢 **genuinely ungranted** | confirmed at **40 probes** |
+| `0x454447415244/HandwritingRecognitionSystem` | NOASSERTION | 🟢 **genuinely ungranted** | confirmed at **40 probes** |
+
+🔴 **A `50 %` false-`NOASSERTION` rate on this sample**, and the two it got wrong
+were a `471★` Apache-2.0 framework and a `40.8k★` ERP. 🟢 **Fix applied and
+re-run: `4` branches (`main`, `master`, `develop`, `trunk`) × `10` filenames
+including case variants — both resolved, both genuine nulls held.** 🔵 Corroborates
+`p558` from a different direction: that pass found `121 of 374` addresses 404 on a
+`main`-only read because of *version* branches; this one finds the same class of
+failure from *filename case* and a `develop` default. **Ask (`572-B`): the ladder
+must vary case and branch, and `NOASSERTION` must never be published from fewer
+than the full ladder.**
+
+### 🟢 A control worth recording: the sidebar and the grant file agreed `7` of `7`
+
+🟢 For `Artemis`, `opencast`, `lrsql`, `pylti1.3`, `lti-1-3-php-library`,
+`canvas-lms-mcp` and `rosariosis`, the GitHub sidebar licence matched the
+byte-for-byte grant read. 🔵 **So the sidebar is reliable for licence *identity*
+— and `570-B`'s `word-atlas` plus this pass's `malaysia-uec-teacher-workflow`
+prove it is still blind to licence *scope*.** The rule that survives both:
+**trust the sidebar for which licence, never for what it covers.**
 
 ## Ninth pass (`p571`, 2026-10-31) — 🔴 zero new addresses, and the pass's whole value is a shelving defect: a tier this base FOUND at pass 85 never reached this page
 
@@ -56,6 +128,16 @@ reads and the instrument at the same time.
 
 | Repo | Licence (file) | ★ | Region | Build-on? | What it adds |
 | --- | --- | --: | --- | --- | --- |
+| [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | **MIT** (1,070 B ✅ first-hand, `master/LICENSE`; sidebar agrees) | 138 | Global | ✅ permissive | 🟢 **"LTI 1.3 Advantage Tool" — the integration standard, in Python, under MIT.** Seen `95×` in this base's history and never shelved. Every engagement that attaches AI to Moodle / Canvas / Open edX / Blackboard without forking it goes through LTI 1.3, and this is the permissive Python implementation of it. 84 forks. |
+| [packbackbooks/lti-1-3-php-library](https://github.com/packbackbooks/lti-1-3-php-library) | **Apache-2.0** (11,343 B ✅ first-hand, `master/LICENSE.md`) | 54 | North America | ✅ permissive | "A library used for building IMS-certified LTI 1.3 tool providers in PHP." 🟢 **The PHP side of the same standard — which is the side Moodle is written in.** Seen `75×`, never shelved. Packback is a Chicago company. |
+| [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | **Apache-2.0** (11,357 B ✅ first-hand, `main/LICENSE`) | 144 | North America | ✅ permissive | 🟢 **"A SQL-based Learning Record Store" — the xAPI backbone, Apache-2.0.** 2,276 commits, 41 forks, Clojure. Learning analytics engagements need somewhere to put statements; this is the permissive place. Seen `70×` (plus `85×` for the sibling `yetanalytics/lrs`), never shelved. |
+| [openedx/XBlock](https://github.com/openedx/XBlock) | **Apache-2.0** (11,358 B ✅ first-hand, `master/LICENSE.TXT`) | 471 | North America | ✅ permissive | 🟢 **"Framework for building custom learning components that run in the Open edX LMS!"** — and the licence split is the commercially decisive fact: **XBlock is Apache-2.0 while `edx-platform` itself is AGPL-3.0**, so a client's own course components can be built and kept under a permissive grant without the platform's network copyleft reaching them. 🔴 Seen `123×`, never shelved. 🔵 Its grant was invisible to this base's own ladder until this pass — the file is `LICENSE.TXT`, **uppercase extension**, and `raw.githubusercontent.com` paths are case-sensitive. |
+| [githubharald/CTCDecoder](https://github.com/githubharald/CTCDecoder) | **MIT** (1,071 B ✅ first-hand, `master/LICENSE.md`) | 838 | EMEA | ✅ permissive | CTC decoding algorithms — best path, beam search, lexicon search, prefix search, token passing. **62 commits since `2017-10-09`** (3,036-day span). Deps are `numpy`, `editdistance`, `pytest` only — **licence surface clean**. The decode stage of any handwritten-work marking pipeline. |
+| [githubharald/WordDetector](https://github.com/githubharald/WordDetector) | **MIT** (1,071 B ✅ first-hand, `master/LICENSE.md`) | 276 | EMEA | ✅ permissive | Detects handwritten words by classic image processing — no model to train, no GPU. Deps `numpy`, `opencv-python`, `scikit-learn`, `matplotlib`, `path` — **all permissive, surface clean**. The segmentation stage: it turns a scanned worksheet into word crops. |
+| [arthurflor23/handwritten-text-recognition](https://github.com/arthurflor23/handwritten-text-recognition) | **MIT** (1,074 B ✅ first-hand, `master/LICENSE`) | 308 | Global | ✅ permissive | Handwritten Text Recognition — **3,645 commits over a 2,700-day span**, by far the most substantial history in this tier. 🔵 Deps include `tensorflow`, `mlflow` (both Apache-2.0) and `openai` (MIT) — permissive, but the `openai` dependency means the default path calls a **paid external API**, which is a data-residency question in schools, not a licence one. |
+| [githubharald/DeslantImg](https://github.com/githubharald/DeslantImg) | ⚠️ **MIT grant (1,071 B) / GPL-3.0 SURFACE** — see note | 156 | EMEA | ⚠️ **link-only** | Deslanting: sets slanted handwriting upright before recognition. 🔴 **`master/LICENSE.md` is a clean 1,071 B MIT — and `requirements.txt` pins `Py-BOBYQA>=1.3`, which is GPL-3.0 (verified first-hand: 35,147 B, title "GNU GENERAL PUBLIC LICENSE", Version 3).** Py-BOBYQA is imported in-process for the deslanting optimisation, so **distributing a combined work triggers GPL-3.0 on it**. GPL-3.0 has no §13 network clause, so *hosting* a service is not itself the trigger — *shipping client code* is. 🟢 **Third instance of this mechanism in this KB** (after `ai-learning-os`/PyMuPDF and `text2text`), reached by a third independent route. 🔵 Use `WordDetector` + `CTCDecoder` instead: same author, same pipeline, permissive all the way down. |
+| [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🔴 **BSD-3-Clause** (1,531 B ✅ first-hand; sidebar agrees) — **CORRECTION** | 114 | Global † | ✅ permissive | "An open-source project designed to provide an educational and collaborative AI-powered platform." 195 forks. 🔴 **This base's own rotation history recorded this project as `Apache2` (`education_cycle3`). It is not: the grant is BSD-3-Clause** — "All rights reserved" plus the three numbered conditions including non-endorsement — and **two independent reads agree** (grant body + GitHub sidebar). 🔵 **Why the correction has commercial weight rather than being pedantry: BSD-3-Clause carries no express patent grant, Apache-2.0 does.** For a studio taking procurement questions from a university, that is the difference between two answers. Holder is an individual ("Mohamed El hajji On behalf of all R2D-dev"), so region stays `Global †` under `569-E`'s grade convention. |
+| [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** (35,136 B ✅ first-hand, title reads "GNU AFFERO GENERAL PUBLIC LICENSE") | 8,200 | North America | ⚠️ **network copyleft** | "The Open edX LMS & Studio, powering education sites around the world!" 4,400 forks. 🔴 **Shelved here to close a linking defect, not because the platform is new to this KB: it is named `15×` across shelf prose and this is the first time its address appears on any shelf page.** The harness's own bar is that every row carry a real repo URL; a project named in prose without one cannot be checked, cloned or licence-probed by anyone downstream. 🔴 AGPL-3.0 §13 means a hosted deployment must offer source to its users — the reason this KB routes integrations through LTI/XBlock rather than forks. |
 | [patil-suraj/question_generation](https://github.com/patil-suraj/question_generation) | **MIT** (1,068 B ✅ re-read, *"Copyright (c) 2020 Suraj Patil"*) | 1,100 | Global | ✅ permissive | The axis's **reference implementation** — answer-aware and multitask QA-QG as a HuggingFace `pipeline`. The most-starred permissive generator; recorded *"unplaced"* at pass 85. |
 | [ramsrigouthamg/Questgen.ai](https://github.com/ramsrigouthamg/Questgen.ai) | **MIT** (1,077 B ✅ re-read, *"Copyright (c) 2020 Ramsri Goutham Golla"*) | 952 | ⚠️ see note | ✅ permissive | 🟢 **Ships item *types*, not one task**: MCQ with distractors, boolean (yes/no), FAQ, paraphrase, answer prediction. T5 + sense2vec. Closest to what an assessment unit orders. |
 | [asahi417/lm-question-generation](https://github.com/asahi417/lm-question-generation) | **MIT** (1,065 B ✅ re-read, *"Copyright (c) 2024 asahi417"*) | 366 | Global | ✅ permissive | 🟢 **The multilingual row.** `pip install lmqg`; question **and answer** generation in **9 languages** (`en/fr/ja/ko/ru/it/es/de/zh`), HuggingFace checkpoints, **ACL 2023** system-demonstration paper, 385 commits. ⚠️ **No Portuguese.** |

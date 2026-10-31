@@ -1,7 +1,7 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-30
+updated: 2026-10-31
 ---
 
 # Measured / Unusable — the ungranted-domestic-supply register
@@ -20,6 +20,36 @@ trending entry, and were on course to be **re-discovered a fourth time**.
 A region can have domestic AI-in-education engineering and offer Globant nothing
 to build on. Counting artefacts without reading grants overstates every regional
 supply claim on this base.
+
+
+## `p572` (2026-10-31) — six additions, three of them high-star repositories that read as open source
+
+| address | ★ | what the grant actually says | verdict |
+| --- | --: | --- | --- |
+| [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) | 2,100 | **"PageLM Community License"**, 8,563 B, bespoke and non-OSI. Grant is for *"personal, educational, or non-commercial research purposes"* only. **"Redistribution of the Software, in whole or in part, in source or binary form, is strictly prohibited"** without written permission. Commercial use requires a **revenue-sharing agreement executed in advance**; absent one, use is *"material breach and immediate termination"*. The licence is **revocable**. | ⛔ **HARD BLOCK.** Cannot be shipped, redistributed, hosted commercially, or bundled. 🔴 Seen **59×** in this base's history with its licence never recorded. |
+| [`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy) | 5,600 | **CC BY-NC 4.0** (19,347 B). Covers the asset that *is* the product: 1,644 knowledge points, 2,403 prerequisite edges, 6,723 curriculum-aligned items. | ⛔ **BLOCK for commercial delivery.** NonCommercial. 🔵 Usable as a *reference schema* for a graph built from scratch; the edges themselves cannot ship. Seen **36×**, never shelved. |
+| [`chewyenhan/malaysia-uec-teacher-workflow`](https://github.com/chewyenhan/malaysia-uec-teacher-workflow) | 2 | `LICENSE.md`, **2,876 B**, is a **path table**, and the first line says "MIT". `SKILL.md`, `README.md`, `agents/`, `references/`, `evals/`, `examples/` → **CC BY-NC-SA 4.0**. Only `scripts/`, `tests/` → MIT. Explicitly grants no rights to textbooks, school templates or student data, and reserves separate commercial licensing. | ⛔ **BLOCK on the substance**, MIT on the glue. 🔴 **Fifth distinct split-grant mechanism in this KB — a path table — and it defeated the scope-clause regex while the byte count caught it.** |
+| [`githubharald/DeslantImg`](https://github.com/githubharald/DeslantImg) | 156 | `LICENSE.md` is a clean **MIT**, 1,071 B. `requirements.txt` pins **`Py-BOBYQA>=1.3`**, verified first-hand as **GPL-3.0** (35,147 B, title "GNU GENERAL PUBLIC LICENSE", Version 3). Imported in-process. | ⚠️ **LINK-ONLY / avoid in distributed work.** Distributing a combined work triggers GPL-3.0. No §13, so hosting alone is not the trigger. 🟢 Substitute: `WordDetector` + `CTCDecoder`, same author, permissive throughout. |
+| [`deepseek-harness-java/teacher-workbench`](https://github.com/deepseek-harness-java/teacher-workbench) | 2 | **No grant at 40 probes** — 4 branches (`main`, `master`, `develop`, `trunk`) × 10 filenames including case variants, all 404. | ⛔ **UNGRANTED** → exclusive copyright. Read the feature taxonomy; ship nothing. |
+| [`0x454447415244/HandwritingRecognitionSystem`](https://github.com/0x454447415244/HandwritingRecognitionSystem) | 465 | **No grant at 40 probes.** A 465★ CNN-RNN handwriting system with no licence file on any probed branch. | ⛔ **UNGRANTED** → exclusive copyright. The most-starred ungranted row in this KB. |
+
+### 🟡 Held back from the shelf on provenance, not licence
+
+- [`abmarkguo/medical-exam-teacher-toolkit`](https://github.com/abmarkguo/medical-exam-teacher-toolkit) —
+  **MIT**, 1,098 B (body read: the `+28 B` over standard is only a longer copyright
+  line, no carve-out). 🔴 **`41` commits, every one dated `2026-07-27`, and the
+  repository's first commit is `Add CITATION.cff`.** Not `570-A`-grade synthetic —
+  the dates are not internally contradictory — but a repository does not begin with
+  its citation file, and 41 same-day commits is an import, not a history.
+  **Licence clean, provenance unestablished.**
+
+### 🔵 A convention worth recording
+
+- [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) — 355★, **ARCHIVED**,
+  `LICENSE` is **570 B**. 🔵 **The Apache-2.0 licence text is 11,358 B; a ~570 B
+  "Apache" file is the boilerplate *header notice*, not a grant.** Treat an
+  Apache claim under ~1 kB as an assertion to verify, not a licence to rely on.
+  (Compare this pass's genuine Apache grants: 11,340 / 11,343 / 11,357 / 11,358 B.)
 
 ## The register
 

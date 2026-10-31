@@ -100,6 +100,93 @@ risk control in this document and it has already caught a real defect. See
 
 ---
 
+
+## `p572` (2026-10-31) — three patterns, every component licence read byte-for-byte this pass
+
+### 🟢 `P-572-A` — Handwritten coursework → marked feedback, permissive end to end
+
+🔵 **The job:** a school or university receives work on paper, wants it digitised,
+marked against a rubric, and the outcome recorded where analytics can see it.
+🟢 **Every component below carries a first-hand permissive grant read this pass,
+and the one trap on the obvious path is named.**
+
+| stage | component | licence (read) | note |
+| --- | --- | --- | --- |
+| 1. segment | [`githubharald/WordDetector`](https://github.com/githubharald/WordDetector) | **MIT** 1,071 B | classic CV — **no model, no GPU**; turns a scanned sheet into word crops |
+| 2. ⛔ *do not* deslant with | [`githubharald/DeslantImg`](https://github.com/githubharald/DeslantImg) | MIT grant / **GPL-3.0 surface** | `Py-BOBYQA>=1.3` is GPL-3.0 and in-process — **skip this stage or reimplement it** |
+| 3. recognise | [`arthurflor23/handwritten-text-recognition`](https://github.com/arthurflor23/handwritten-text-recognition) | **MIT** 1,074 B | 3,645 commits; ⚠️ its default path pulls `openai`, a **paid external API** — swap for a local model where student data cannot leave |
+| 4. decode | [`githubharald/CTCDecoder`](https://github.com/githubharald/CTCDecoder) | **MIT** 1,071 B | beam/lexicon/prefix search; **a lexicon raises accuracy on subject vocabulary** |
+| 5. mark | [`patil-suraj/question_generation`](https://github.com/patil-suraj/question_generation) + an LLM marker | **MIT** 1,068 B | over-generate → rank → gate, per `P-574-A` |
+| 6. return the grade | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | **MIT** 1,070 B | LTI 1.3 **Assignment & Grade Services** passback into the LMS the client already runs |
+| 7. record | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** 11,357 B | xAPI statements; the analytics substrate |
+
+🔵 **Wiring:** scan → `WordDetector` crops → `handwritten-text-recognition`
+logits → `CTCDecoder` with a subject lexicon → text → rubric marking →
+`pylti1.3` AGS grade passback → xAPI statement to `lrsql`.
+🟢 **Licence posture: MIT/Apache-2.0 throughout, nothing copyleft, nothing
+NonCommercial, and the single GPL-3.0 exposure on the obvious path is excluded by
+name.** 🔵 **Shape:** 6–8 weeks for one subject and one LMS; stages 1–4 are the
+risk, 6–7 are a week.
+
+### 🟢 `P-572-B` — Attach AI to the LMS the client already runs, without forking it
+
+🔵 **The job:** the client runs Moodle, Canvas or Open edX. They want agent
+features. Forking is the instinct and it is the expensive mistake — **Open edX and
+Canvas are AGPL-3.0, so a hosted fork owes source to its users under §13.**
+
+🟢 **The licence-safe spine, by platform:**
+
+| platform | attach with | licence | why this and not a fork |
+| --- | --- | --- | --- |
+| Moodle (GPL-3.0) | [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) | **Apache-2.0** | PHP-native, IMS-certified; the tool stays yours |
+| Canvas (AGPL-3.0) | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | **MIT** | courses, assignments, submissions, rubrics, quizzes; **grades and comments from any agent** |
+| Open edX (AGPL-3.0) | [`openedx/XBlock`](https://github.com/openedx/XBlock) | **Apache-2.0** | 🟢 **the key fact: components are Apache-2.0 even though the platform is AGPL-3.0** — client course logic stays permissive |
+| any / Python | [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) | **MIT** | the generic LTI 1.3 route |
+| analytics | [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) | **Apache-2.0** | one xAPI store behind all of them |
+
+🔵 **Wiring:** agent service (your code, your licence) ← LTI 1.3 launch / MCP ←
+LMS. Grades return over **AGS**; events land in `lrsql`; **no platform source is
+modified, so no platform licence reaches the client's code.**
+🟢 **This is the pattern that makes the copyleft question go away**, and it is why
+the integration tier added this pass matters more than any platform on the shelf.
+🔵 **Shape:** 4–6 weeks per platform; the second platform is half the first.
+
+### 🟡 `P-572-C` — Teacher lesson-planning pack, local-first for data residency
+
+🔵 **The job:** teachers want lesson plans, courseware, item banks and marking help
+in their own template, and the procurement blocker is almost never features — it is
+**whether student data leaves the building**.
+
+🟢 **Reference implementations to study, both MIT, both read this pass:**
+[`LeonhardJY/dsh-teacher-kit`](https://github.com/LeonhardJY/dsh-teacher-kit)
+(MIT, 1,071 B) — **states it runs fully on the local machine, no network, no data
+collection**, and covers exam papers, item-bank assembly, dictation sheets, lesson
+plans, courseware and `docx`/`pptx` batch processing against the school's own blank
+template; and
+[`revjake1/lesson-plan-magic`](https://github.com/revjake1/lesson-plan-magic)
+(MIT, 1,069 B) — fills a **US district** template and targets standards alignment.
+
+🔴 **Both are thin (7 and 16 commits). Treat them as the specification, not the
+dependency** — the feature chain they converge on independently
+(**lesson plan → courseware → item bank → dictation → marking**) is the
+transferable asset.
+
+⛔ **Two components a naive build would reach for and must not:**
+[`chewyenhan/malaysia-uec-teacher-workflow`](https://github.com/chewyenhan/malaysia-uec-teacher-workflow)
+— its `SKILL.md`, `agents/` and `references/` are **CC BY-NC-SA 4.0**; and
+[`xiaoyang111222/cn-math-taxonomy`](https://github.com/xiaoyang111222/cn-math-taxonomy)
+— its prerequisite graph is **CC BY-NC 4.0**. 🔵 Both are excellent and both are
+NonCommercial; read them for structure and build the artefact fresh.
+
+🔴 **Declared gap (`572-C`): there is no permissively licensed, curriculum-aligned
+prerequisite knowledge graph on these shelves.** The best one located —
+`cn-math-taxonomy`, 1,644 nodes and 2,403 edges — is NonCommercial, and the
+adaptive-sequencing layer of this pattern therefore has **no permissive supply**.
+Said plainly rather than filled with something that does not exist.
+
+🔵 **Shape:** 6–8 weeks, and the local-only deployment posture is the deliverable
+as much as the prompts are.
+
 ## P-568-A — LTI-attached AI tutor over a copyleft LMS (6–8 weeks)
 
 **For:** any client on Moodle, Open edX, Canvas or Chamilo who wants AI tutoring

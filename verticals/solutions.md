@@ -10,10 +10,41 @@ Real, deployed systems that run an institution's operations — the education
 equivalent of Odoo for ERP. These are the systems a client already has, and the
 systems an AI layer gets attached to.
 
+## Tenth pass (`p572`, 2026-10-31) — 🟢 FIVE PLATFORMS ADDED, ONE OF THEM **MIT**, ALL FIVE RE-FOUND BETWEEN `83` AND `93` TIMES WITHOUT EVER BEING SHELVED
+
+🟢 **`ls1intum/Artemis` is the headline: a full academic platform under MIT**,
+from TU München, with the university named inside the grant itself. Every other
+platform on this page is GPL-, AGPL-, LGPL- or ECL-licensed. 🔵 For a client who
+wants to modify a platform and keep the modifications, Artemis is the only row
+here that allows it.
+
+🔴 **All five were absent from every shelf page in this KB** while this base's own
+sweeps returned them `83`–`93` times each. The audit behind that number is
+`572-A`, recorded in [`../repos/foundations.md`](../repos/foundations.md):
+**`3,455` addresses seen across the base's history, `170` ever shelved.**
+
+🟢 **Two platform categories this page was missing entirely are now filled:**
+**lecture capture** (`opencast`, ECL-2.0) and a **true SIS** (`rosariosis`,
+GPL-2.0 — enrolment, scheduling, attendance, billing, which is not what an LMS
+does). 🟢 And the **ERP** the already-shelved `frappe/lms` is built on —
+`frappe/erpnext`, `40.8k★` with an Education module — is now on the page beside it.
+
+🔵 **Licence posture across this page, stated once so an engagement can read it
+off:** `Artemis` **MIT** → fork freely · `opencast` **ECL-2.0**, `Sakai`
+**Apache-2.0** → fork, mind the narrowed patent grant · `Odoo`/`OpenEduCat`
+**LGPL-3.0** → link, don't modify · `Moodle`/`Gibbon`/`ILIAS`/`i-educar`/`ERPNext`
+**GPL-2.0/3.0** → attach over API or LTI · `Open edX`/`Canvas`/`frappe-lms`
+**AGPL-3.0** → §13 network source-offer obligation on any hosted deployment.
+
 ## Education ERP / Student Information Systems
 
 | Platform | Repo | Licence | ★ | Region | What it runs |
 | --- | --- | --- | --: | --- | --- |
+| Artemis | [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | 🟢 **MIT** (1,091 B ✅ first-hand; sidebar agrees) | 824 | EMEA | 🟢 **The most permissively licensed full academic platform in this KB, and it was absent from every shelf page while being re-found `97` times.** "Artemis - Interactive Learning with Automated Feedback": programming exercises with automatic assessment, quizzes, modelling, text and file-upload exercises, exam mode. 396 forks. 🟢 **Region is first-hand, not inferred: the grant's own copyright line reads *"Copyright (c) 2026 TUM Applied Education Technologies"*** — Technische Universität München, under `p571`'s institution-holder instrument. 🔵 **Compare the field: Moodle GPL-3.0, Open edX AGPL-3.0, Canvas AGPL-3.0, ILIAS GPL-3.0, Sakai Apache-2.0 — Artemis is MIT.** For a client that wants to ship a modified platform without publishing the modifications, this is the only row on this page that permits it outright. |
+| Opencast | [opencast/opencast](https://github.com/opencast/opencast) | **ECL-2.0** (11,340 B ✅ first-hand; sidebar agrees) | 509 | EMEA | "The free and open source solution for automated video capture and distribution at scale." 260 forks. 🔵 **ECL-2.0 is the Educational Community License — an Apache-2.0 derivative, OSI-approved, whose patent grant is narrowed to the contributing institution's own claims** rather than Apache's broader grant. Permissive and buildable; the patent-clause difference is the one thing to put in front of a procurement lawyer. The lecture-capture layer nothing else on this page provides, and it was absent from every shelf while being re-found `93` times. |
+| ERPNext | [frappe/erpnext](https://github.com/frappe/erpnext) | **GPL-3.0** (35,149 B ✅ first-hand, `develop/license.txt`) | 40,800 | APAC | "Free and Open Source Enterprise Resource Planning (ERP)." 13,400 forks — **the largest star count on this page by a factor of ten**, and it was absent from every shelf page. Ships an **Education** domain module (students, programs, enrolment, assessment, fees, instructors). India (Frappe Technologies). 🔴 Copyleft: attach over its REST API rather than fork, the same posture this KB takes to Odoo and i-educar. 🔵 **Its grant was invisible to this base's ladder until this pass: the file is lowercase `license.txt` and the default branch is `develop`.** The sibling `frappe/lms` (AGPL-3.0) was already shelved — the ERP it is built on was not. |
+| RosarioSIS | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | **GPL-2.0** (15,214 B ✅ first-hand, Version 2, `affero=0`) | 649 | Global | "RosarioSIS Student Information System for school management." 395 forks, PHP, with a GitLab mirror the README names as co-primary. 🔵 **A true SIS — enrolment, scheduling, grades, attendance, billing, discipline — which is a different product from an LMS and a category this page was thin on.** Widely deployed in Spanish- and French-speaking school systems; the project ships localisations including `es` and `fr`. 🔴 **GPL-2.0, not 3** — so it carries no patent grant and no §13, and it is *not* upgradeable-by-default. Attach, do not fork. Re-found `92` times, never shelved. |
+| Gibbon | [GibbonEdu/core](https://github.com/GibbonEdu/core) | **GPL-3.0** (35,121 B ✅ first-hand — 🔴 **not AGPL**; sidebar agrees) | 636 | Global | "Gibbon is a flexible, open source school management platform designed to make life better for teachers, students, parents and leaders." 428 forks, PHP. 🔴 **This base's naive copyleft detector called it AGPL-3.0; the licence title line reads "GNU GENERAL PUBLIC LICENSE" and the three Affero mentions are GPL-3.0's own §13 cross-reference.** The distinction decides whether a hosted deployment owes source to its users — GPL-3.0 does not. Re-found `83` times, never shelved. |
 | Odoo | [odoo/odoo](https://github.com/odoo/odoo) | **LGPL-3.0** (file, not sidebar) | 55,400 | EMEA | "Odoo. Open Source Apps To Grow Your Business." The canonical open-source ERP and the comparison point this KB is measured against. The sidebar names **no** licence; `LICENSE` on the default branch (`20.0`) states *"Odoo is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3)"*. A closed application may *link* it; modifications to Odoo itself stay open. This explains OpenEduCat's LGPL-3.0 by inheritance. Odoo SA is Belgian; the repository page does not state a location. |
 | Frappe LMS | [frappe/lms](https://github.com/frappe/lms) | AGPL-3.0 | 3,400 | APAC | "Easy to use, 100% open source LMS." Built on the Frappe framework, so it inherits Frappe's ERP primitives. India. |
 | OpenEduCat | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 902 | APAC | "Comprehensive Open Source ERP for Educational Institutes" — admissions, students, faculty, courses, exams, library, fees. **LGPL-3.0, not MIT/Apache**: linkable from closed applications, but modifications to it stay open. OpenEduCat's own website names Odoo as its underlying framework; the GitHub page never mentions Odoo. India. |

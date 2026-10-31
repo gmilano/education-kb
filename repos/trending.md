@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (tenth pass · `p572`) — 🟢 `12` new addresses, and the week's real story is a shelving audit
+
+🔴 **The eight mandated legs are `10` for `10` on nil.** 🟢 **Two never-swept
+GitHub axes produced `12` addresses new to a 571-pass base.**
+
+| axis | results | rows read | new to base |
+| --- | --: | --: | --: |
+| 🟢 [`topic:lesson-plan`](https://github.com/topics/lesson-plan) | **44** | 10 | 🟢 **6** |
+| 🟢 [`topic:handwriting-recognition`](https://github.com/topics/handwriting-recognition) | **672** | 10 | 🟢 **6** |
+| 🔴 [`topic:flashcards`](https://github.com/topics/flashcards) | **3.3k** | 10 | 🔴 **1** |
+| 🔴 [`topic:curriculum`](https://github.com/topics/curriculum) | **1.5k** | 10 | 🔴 **0** |
+| 🔴 `WebSearch`, eight mandated legs | — | 8 | 🔴 **0** |
+
+### 🟢 Trending into this KB: the integration layer it never had
+
+🔵 These are not new *to GitHub* — they are new to this base's **shelves**, after
+being re-found between `70` and `123` times each across 571 passes. The audit that
+found them is the pass's main result (`572-A`).
+
+- 🟢 [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) — **MIT**, 138★ — LTI 1.3 Advantage Tool, Python
+- 🟢 [`packbackbooks/lti-1-3-php-library`](https://github.com/packbackbooks/lti-1-3-php-library) — **Apache-2.0**, 54★ — IMS-certified LTI 1.3, PHP
+- 🟢 [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) — **Apache-2.0**, 144★ — SQL-based xAPI Learning Record Store, 2,276 commits
+- 🟢 [`openedx/XBlock`](https://github.com/openedx/XBlock) — **Apache-2.0**, 471★ — **permissive components on an AGPL-3.0 platform**
+- 🟢 [`ls1intum/Artemis`](https://github.com/ls1intum/Artemis) — **MIT**, 824★ — TU München; see [`../verticals/solutions.md`](../verticals/solutions.md)
+- 🟢 [`opencast/opencast`](https://github.com/opencast/opencast) — **ECL-2.0**, 509★ — lecture capture at scale
+
+### 🟢 The handwriting tier — a never-swept capability with a real education job
+
+🔵 Marking handwritten work. Five permissive rows, one booby-trapped:
+
+- 🟢 [`githubharald/CTCDecoder`](https://github.com/githubharald/CTCDecoder) — **MIT**, 838★, 62 commits since 2017
+- 🟢 [`githubharald/WordDetector`](https://github.com/githubharald/WordDetector) — **MIT**, 276★ — classic CV, no GPU
+- 🟢 [`arthurflor23/handwritten-text-recognition`](https://github.com/arthurflor23/handwritten-text-recognition) — **MIT**, 308★, **3,645 commits**
+- 🔴 [`githubharald/DeslantImg`](https://github.com/githubharald/DeslantImg) — **MIT grant, GPL-3.0 surface** via `Py-BOBYQA>=1.3`
+- 🔴 [`MyScript/MyScriptJS`](https://github.com/MyScript/MyScriptJS) — 355★, **ARCHIVED**, and its `LICENSE` is **570 B**: the Apache-2.0 *header notice*, not the 11,358 B licence text. 🔵 **Rule: a ~570 B "Apache" file is a boilerplate header, not a grant.**
+- 🔴 [`0x454447415244/HandwritingRecognitionSystem`](https://github.com/0x454447415244/HandwritingRecognitionSystem) — 465★, **ungranted at 40 probes**
+
+### 🔴 The copyleft-grading defect this pass found in its own instrument
+
+🔴 **A body `grep` for "GNU AFFERO" misgrades GPL-3.0 as AGPL-3.0, because
+GPL-3.0 §13 names the Affero licence.** On the `8` GPL-family grants read this
+pass it was wrong on **`6`**: `Obsidian_to_Anki`, `Anki-Android`, `GibbonEdu/core`,
+`plastic-labs/tutor-gpt`, `frappe/erpnext` and `Py-BOBYQA` are all **GPL**, not
+AGPL. 🟢 **The discriminator that works, and it is cheap: the licence TITLE line
+plus the Affero reference COUNT — `3` is GPL-3.0's incidental §13 cross-reference,
+`15` is an actual AGPL-3.0** (`LibreLingo`: 15; `edx-platform`: title says AFFERO).
+🔵 **Why it matters commercially rather than taxonomically: AGPL-3.0 §13 imposes a
+network source-offer obligation and GPL-3.0 does not.** Misgrading GPL→AGPL
+wrongly blocks six usable repositories; the reverse creates real exposure on a
+hosted deployment. 🔵 Same class as `p454`'s GPLv2-as-LGPL window defect.
+
+---
+
 ## 2026-10-31 (ninth pass · `p571`) — 🔴 four axes, 67 rows, zero new addresses; the yield was promoting a pass-85 tier that no shelf page had ever carried
 
 🔴 **Nil on every channel.** `topic:question-generation` (**241**),

@@ -44,16 +44,70 @@ AI tutor" even means commercially. See [`trends.md`](trends.md).
 This is the most robustly evidenced finding in the KB. It now holds with primary
 or near-primary evidence on all four regions, which was not true a pass ago.
 
-| Region | Use | Governance | Source quality |
-| --- | --- | --- | --- |
-| LATAM (higher ed) | **87%** of institutions use AI in ≥1 area | **26%** have a formal AI strategy; **55%** have no AI budget; public universities **4%** dedicated funding | **Strongest** — UNESCO IESALC with UNU-IAS, 200 institutions, 19 countries |
-| EMEA (schools) | **63%** of teachers | ~70% of institutions in Europe/North America have or are developing guidance (UNESCO) | **Strong** — two independent surveys agree exactly |
-| North America (schools) | **60%** of US teachers (Gallup) | Most US public schools still lack a formal student AI policy (Child Trends / Dept of Education) | Medium — survey + joint analysis |
-| APAC (higher ed) | Not measured by use rate | **7 of 39** Australian universities document operational governance structures | Medium — but now **primary**: a regulator's own 100%-response exercise plus a peer-reviewed document analysis |
+| Region | Use | Governance | Grade (`569-E`) | Source quality |
+| --- | --- | --- | --- | --- |
+| LATAM (higher ed) | **87%** of institutions use AI in ≥1 area | **26%** have a formal AI strategy; **55%** have no AI budget; public universities **4%** dedicated funding | 🟢 **A — primary, named instrument**, `n=200`, 19 countries | **Strongest** — UNESCO IESALC with UNU-IAS, 200 institutions, 19 countries |
+| EMEA (schools) | **63%** of teachers | ~70% of institutions in Europe/North America have or are developing guidance (UNESCO) | 🔵 **B — two independent surveys agree**; the ~70% figure is region-blended (Europe *and* North America) and so is **not** a clean EMEA count | **Strong** — two independent surveys agree exactly |
+| North America (schools) | **60%** of US teachers (Gallup) | Most US public schools still lack a formal student AI policy (Child Trends / Dept of Education) | 🔵 **B — national survey, but `US`-only; it is not a North America count.** `p572` adds Canada at grade `C†` below | Medium — survey + joint analysis |
+| APAC (higher ed) | Not measured by use rate | **7 of 39** Australian universities document operational governance structures | 🟢 **A — primary**, a regulator's own 100%-response exercise; 🔴 but Australia-only, so it is not an APAC count either | Medium — but now **primary**: a regulator's own 100%-response exercise plus a peer-reviewed document analysis |
+
+
+🟢 **`569-E` is closed here.** The ask was that the regional counts *state their
+grade per count*, not merely a blended "source quality". They now do, on the
+scale this KB has been using informally since `p569`:
+
+| grade | meaning |
+| --- | --- |
+| 🟢 **A** | primary instrument, named, with a stated denominator |
+| 🔵 **B** | national survey or two agreeing independent surveys, but **not** region-wide |
+| 🟡 **C** | single secondary source relaying a primary this session could not read |
+| **†** | region assigned by inference (holder, language, ministry) rather than stated by the source |
+
+🔴 **And writing the grades down exposes something the blended column was hiding:
+three of the four rows are not actually regional counts.** `60%` is US, not North
+America. `7 of 39` is Australia, not APAC. The EMEA governance figure blends
+Europe *with* North America. 🔵 **Only the LATAM row is a genuine multi-country
+regional measurement** — which inverts this table's apparent balance and should be
+said out loud before any of it reaches a client deck.
 
 ## Opportunities by region
 
 ### North America
+
+#### 🟡 `p572` — Canada, after five consecutive passes of a US-only North America leg
+
+🟢 **The US-only gap is broken, by the same method that worked for LATAM: a
+targeted query instead of a sixth re-run of the regional leg.** 🔴 At grade `C†` —
+`www.otffeo.on.ca` also fails to resolve from this session, so the primary
+discussion paper was **not** read.
+
+🔵 **The finding is structural and it is useful precisely because it is negative:
+Canada has no federal AI-in-education instrument, and the province is the wrong
+unit too — the real unit is the school board.**
+
+| level | state | grade |
+| --- | --- | --: |
+| Federal | No national AI-in-education rule; teacher federations describe the landscape as incoherent | 🟡 C |
+| Provincial | **4 of 13** provinces/territories have issued formal AI guidance — **Ontario, Quebec, Alberta, British Columbia** | 🟡 C† |
+| Ontario ministry | **No ministry memorandum on AI**; guidance comes from a provincial working group and from ECNO | 🟡 C† |
+| School boards | The operative layer: **Ottawa Catholic** limits generative AI to ages **13+**; **Halton DSB** requires **parental consent**; **Peel DSB** publishes a teacher guide; **Upper Canada DSB** encourages supervised exploration | 🟡 C† |
+| Board-level coverage | **42.3%** of Ontario boards reported to have any formal student AI policy (Fraser Institute, June 2026) | 🔴 **D — unverified against the Fraser Institute itself; do not quote** |
+| Professional bodies | **Ontario Teachers' Federation** discussion paper (Jan/Mar 2026) asks for a **province-led AI in Education Advisory Council**; Quebec's *Prêt pour l'IA* recommends AI literacy from kindergarten to university | 🟡 C† |
+
+🟢 **The engagement consequence, and it is a different sale from the US one.** In
+the US this KB sells against a state-law patchwork. **In Canada the buyer is the
+board**, there are ~`72` boards in Ontario alone, and **a majority appear to have
+no policy at all** — so the sellable asset is a *policy-and-implementation
+template* that a board can adopt, not a platform. 🔵 It also means **age-gating
+and parental-consent handling are product requirements, not configuration**:
+Ottawa Catholic's 13+ rule and Halton's consent requirement are already live
+constraints that any deployed student-facing agent must satisfy on day one.
+
+🔴 **`572-E` registered: three of the five Canadian claims above rest on a single
+secondary source each, and the two primaries that would settle them
+(`www.otffeo.on.ca`, and the Fraser Institute) are unreachable from this
+session.** Canada is now *present* on this page rather than absent — at `C†`, and
+labelled as such.
 
 🟢 **New in the eighth pass (`p570`): two university-published assessment assets
 placed from their grants** — [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr)
@@ -741,6 +795,50 @@ targeted measures and Singapore's **AI Verify** are all already recorded above.
    regulatory and the public mood point the same way.
 
 ### LATAM
+
+#### 🟡 `p572` — the missing LATAM *classroom* rates, found where `p571` said to look, at grade `C†`
+
+🟢 **The gap was real and the prescribed remedy worked. `p571` recorded: "query
+CETIC.br and ministries, stop re-running legs" — the targeted query returned
+quantified classroom adoption; the generic regional leg, run again this pass,
+returned none.**
+
+🔵 **And the reason this sat open for two passes is now clear: it was never a
+missing *source*, it was a missing *population*.** This page already carried
+Cetic.br at **53% of school administrators using AI, 22% reporting school
+guidelines**. What was absent was the **classroom**: students and teachers.
+
+| population | figure | instrument | grade |
+| --- | --- | --- | --: |
+| High-school students (internet users) using generative AI for schoolwork | **~70%** ("seven in ten") | **TIC Educação**, Cetic.br / NIC.br | 🟡 **C†** |
+| Those who received school guidance on that use | **32%** | same | 🟡 **C†** |
+| Teachers using generative AI in school activities | **58%** | relayed by *O Povo* **attributing** TIC Educação | 🔴 **D — do not quote** |
+| School administrators (already on this page) | **53%** use / **22%** guidelines | Cetic.br | 🔵 B |
+
+🔴 **Why `C†` and not `A`, stated plainly: `cetic.br` does not resolve from this
+session.** It is outside the sandbox's permitted network domains
+(`getaddrinfo ENOTFOUND`), so **the primary was not read** — these figures come
+through search-result relay, with the `~70%` corroborated by the Cetic.br release
+*title* itself ("Sete em cada dez alunos do Ensino Médio usam IA generativa em
+pesquisas escolares, revela TIC Educação"). 🔴 **The `58%` teacher figure is
+single-secondary and the search's own summary could not confirm it against
+Cetic.br — it is recorded as `D` and must not be quoted to a client.**
+
+🔴 **An unresolved conflict, registered rather than papered over (`572-D`):** this
+page attributes its administrator figures to **"Cetic.br (2026)"**, while the
+edition reachable this pass is **TIC Educação 2024**, with its book PDF stamped
+`2025-12-17` and the sectoral study `2025-11-24`. 🔵 Either the page's `(2026)` is
+a publication-year label for 2024 fieldwork, or there are two editions in play. **A
+survey year and a publication year are different things and this KB is currently
+asserting one as the other.** Resolving it needs the primary, which needs
+`cetic.br` allowed in the session's network settings.
+
+🟢 **What it is worth even at `C†`:** the student-to-guidance spread — **~70%
+using, 32% guided** — is a **38-point** governance gap at school level that
+mirrors, almost exactly, the **61-point** gap UNESCO measured in LATAM higher
+education (87% use, 26% strategy). 🔵 **Two independent instruments, two different
+education tiers, the same shape.** That is the single most quotable LATAM finding
+in this KB, and it is now evidenced at both tiers rather than one.
 
 **The best-evidenced adoption-governance gap in the world, from the most
 authoritative source in the KB.** The **UNESCO IESALC** study (with UNU-IAS),

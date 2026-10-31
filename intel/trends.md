@@ -14,6 +14,69 @@ GitHub's own index rather than read from a source, that is said explicitly —
 those are the most reliable items on this page and the least likely to appear
 anywhere else.
 
+
+## `p572` (2026-10-31) — trends 15–18
+
+### 🟢 15. The permissive supply in education is in the *plumbing*, not the platforms
+
+🔵 Every full education platform of any scale is copyleft — Moodle GPL-3.0,
+Open edX AGPL-3.0, Canvas AGPL-3.0, ILIAS GPL-3.0, ERPNext GPL-3.0, Gibbon
+GPL-3.0, RosarioSIS GPL-2.0, Odoo/OpenEduCat LGPL-3.0 — with **two** exceptions
+now on the shelf: **Sakai (Apache-2.0)** and, found this pass, **Artemis (MIT)**.
+🟢 **But the integration layer is almost entirely permissive**: LTI 1.3 in Python
+(**MIT**) and PHP (**Apache-2.0**), the xAPI store (**Apache-2.0**), Open edX's
+component framework (**Apache-2.0**), Canvas MCP (**MIT**).
+
+🔵 **The trend to state to a client: you do not win the licence argument by
+choosing a different platform, you win it by never forking the one they already
+run.** The permissive supply is positioned exactly where integration happens,
+which is also where the billable work is.
+
+### 🔴 16. "Open source" in education increasingly means a bespoke source-available licence
+
+🔴 Three of this pass's higher-star education finds are **not** open source
+despite reading that way: **`CaviraOSS/PageLM`** (2.1k★) ships a bespoke
+*"PageLM Community License"* — non-commercial, redistribution **prohibited**,
+commercial use gated behind a **revenue-sharing agreement**, and **revocable**;
+**`xiaoyang111222/cn-math-taxonomy`** (5.6k★) is **CC BY-NC 4.0**; and
+**`chewyenhan/malaysia-uec-teacher-workflow`** puts its substance under
+**CC BY-NC-SA 4.0** while the MIT covers only `scripts/` and `tests/`.
+
+🔵 **The pattern is consistent: the code is given away and the *content* is
+withheld** — wordlists, knowledge graphs, item banks, audio. In education the
+content *is* the product, so a content carve-out is a commercial block even when
+the repository is genuinely generous with its code. 🔵 **Read the content licence
+before the code licence in this industry.**
+
+### 🟢 17. Teacher lesson-planning tooling is being built as an agent *skill*, by teachers, outside the anglophone web
+
+🟢 `topic:lesson-plan` holds **44** repositories — small enough that nine passes of
+star-sorted sweeping never reached it — and its content is striking: these are
+Claude Code / Cowork / DSH **plugins and skills**, not applications, written
+largely in Chinese and Malaysian-Chinese school contexts, converging independently
+on the same feature chain: **lesson plan → courseware → item bank → dictation →
+marking**.
+
+🟢 **One of them states a property no commercial vendor leads with:
+`全程本机运行，不联网、不收集数据` — runs entirely locally, no network, no data
+collection.** 🔵 That is the single most common blocker in school procurement
+being treated as a headline feature, by a 2★ repository, three days old.
+
+### 🔴 18. Self-reported repository metrics are the weakest evidence in this KB, and the fix is cheap
+
+🔴 Carried forward from `570-A` and now reinforced: **stars and commit counts are
+claims a repository makes about itself.** `570-A` caught a `2,137`-commit
+synthetic history; this pass found the opposite failure mode — **`arthurflor23`
+shows `3,642/3,645` author-date-equals-committer-date across a genuine 7.4-year
+project**, so that check *alone* flags honest repositories that push directly
+rather than merge pull requests.
+
+🟢 **The signals an author cannot unilaterally manufacture are the licence text,
+the dependency manifest, and the behaviour of the code.** This pass read `28`
+grants and `7` dependency manifests byte-for-byte and found **three** commercial
+blocks and **one** GPL-3.0 licence surface hiding behind a clean MIT file — none
+of which any star or commit figure would have shown.
+
 ## 1. Education AI has stopped shipping as applications and started shipping as agent skills (high confidence — measured first-hand)
 
 **Measured, not reported — and this pass the measurement is complete.**
