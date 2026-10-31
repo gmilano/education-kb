@@ -725,6 +725,200 @@ not a setup cost.
 
 ---
 
+## P-570-A — Textbook-in, multi-format course-out: the client's own material as the starting point (6–8 weeks)
+
+**For:** any institution or training provider that already owns the material —
+textbooks, past papers, lecture PDFs, scanned worksheets — and wants it turned
+into usable digital courseware. **This is the pattern the fifth pass's capability
+sweep made possible**, and it inverts the usual pitch: it does not generate new
+content that competes with the client's faculty, it **migrates what they already
+have**.
+**Region:** Global. Every component is permissive and every one runs on-premises.
+
+**Why this pattern exists.** Four passes of this KB described the
+content-*production* layer (`ppt-master`, `Papermorph`, `Claudemy`) and had no
+**ingestion** layer at all, because every sweep filtered on an education topic
+and no document parser carries one. The capability sweep returned sixteen
+permissive components, three above 69,000★. **The ingestion step is the
+commercially better place to start**: generating material competes with the
+client's own authors, while ingesting their corpus is migration work — scopeable,
+valuable, and not replicable with a chatbot subscription.
+
+**Components — every licence read from the licence file on 2026-10-31:**
+
+| Role | Component | Licence | Note |
+| --- | --- | --- | --- |
+| Primary document → structured text | [docling-project/docling](https://github.com/docling-project/docling) | **MIT** (1,072 B) | 69,909★. PDF/DOCX/**PPTX**/XLSX/HTML → markdown or JSON, **table structure preserved**. MIT, so the default choice. |
+| STEM/formula-heavy fallback | [opendatalab/MinerU](https://github.com/opendatalab/MinerU) | ⚠️ **Apache-2.0 + additional terms** (3,301 B) | 82,860★. Best on formulas, tables, multi-column. **Carries a mandatory attribution duty — see step 5.** Branch `master`. |
+| Scanned / handwritten input | [PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) | **Apache-2.0** (11,376 B) | 92,024★. Strongest CJK and handwriting. For exam scripts and worksheets. |
+| Offline OCR fallback | [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract) | **Apache-2.0** (11,358 B) | 77,267★, 100+ languages, no model licence, no inference bill. The ministry/offline answer. |
+| Mixed legacy estates | [Unstructured-IO/unstructured](https://github.com/Unstructured-IO/unstructured) | **Apache-2.0** (11,360 B) | Use when the input is a repository of mixed formats rather than a book. |
+| Knowledge structuring | [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | **MIT** (1,090 B) | Knowledge Space Theory: material → knowledge graph → adaptive assessment. The pedagogical spine, from a named university. |
+| Quality gate | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | **code MIT / prompts CC BY 4.0** | ⚠️ corpora are **CC BY-NC-SA 4.0** — bring your own. |
+| Deck output | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | **MIT** (1,069 B) | Native `.pptx` against the client's own template. |
+| In-place document editing | [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | **Apache-2.0** (11,375 B) | 32,854★. For "update our 400 existing lesson plans", which `ppt-master` cannot do. |
+| Typesetting | [tw93/Kami](https://github.com/tw93/Kami) | **MIT** (1,061 B) | Layout rules so output does not look machine-made. The cheapest fix for teacher rejection. |
+| Audio + captions | [denizsafak/abogen](https://github.com/denizsafak/abogen) | **MIT** (1,069 B) | EPUB/PDF → narrated audio **with synchronised captions** — an accessibility deliverable, a transcript and a search index from one run. |
+| Retention scheduling | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** (1,079 B) | FSRS as an algorithm. Build it in; do not invent a review schedule. |
+| Delivery | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** (1,072 B) | Package into the untouched copyleft LMS. See **P-569-A**. |
+
+**Wiring:**
+
+1. **Triage the corpus before writing any code.** Split the client's material
+   into three buckets: born-digital text (→ `docling`), formula- and
+   table-heavy STEM (→ `MinerU`), and scanned or handwritten (→ `PaddleOCR`, or
+   `tesseract` where nothing may leave the premises). **The triage is the
+   estimate** — mixing these in one pipeline is the usual reason this work
+   overruns.
+2. **Extract to a single intermediate representation** (markdown + JSON with
+   structure preserved) and **keep it as the versioned asset.** Every later
+   output is a render of it. This is also what makes the deliverable ownable:
+   the client ends up owning their corpus in an open format, which has value
+   independent of whatever is generated from it.
+3. **Impose structure before generating anything.** Run `knowledge-spaces` to
+   derive the knowledge graph and prerequisite ordering. Skipping this yields a
+   pile of generated units with no learning sequence — the most common failure of
+   AI courseware and the one a teacher spots immediately.
+4. **Gate, then render.** Score units with `evaluators` rubrics; only then
+   render to decks (`ppt-master`), edited documents (`OfficeCLI`), typeset PDFs
+   (`Kami`) and narrated audio with captions (`abogen`). Attach FSRS scheduling
+   to anything that needs retention.
+5. **If `MinerU` is in the shipped pipeline, the attribution duty is a product
+   requirement, not a legal footnote.** Its licence obliges any online service
+   built on it to state prominently — in the interface or public documentation —
+   that MinerU is used, with **automatic termination** on breach. Route this to
+   the client's engineering and UX teams at design time. **If that is
+   unacceptable to the client, use `docling` (MIT) and accept weaker formula
+   handling** — that trade is the decision, and it belongs to the client.
+6. **Deliver through SCORM into the untouched platform of record** (P-569-A), or
+   over LTI 1.3 if a live tutor is also in scope (P-568-A).
+
+**What the client is buying.** Their own institutional knowledge, in an open
+structured format they own, rendered into every format their learners and
+platforms need. **What to be honest about:** ingestion quality on degraded scans
+is genuinely variable and no amount of model choice fixes a bad scan — quote a
+**sample-based** accuracy measurement on the client's real documents before
+committing to a volume price. Run that sample in week one.
+
+---
+
+## P-570-B — Accessibility remediation of the document estate (4–6 weeks)
+
+**For:** public-sector education bodies, universities and school systems facing
+an accessibility conformance obligation over a large back-catalogue of PDFs.
+**Region:** **EMEA** primarily — the **European Accessibility Act** — and
+**North America**, where updated **ADA** web-accessibility guidance has obliged
+large public institutions since April 2026. Applicable anywhere procurement
+specifies WCAG or PDF/UA.
+
+**Why this pattern exists.** This KB has carried accessibility remediation as a
+North American opportunity since the third pass with **no open-source component
+behind it** — scoped as audit-only, via `canvas-mcp`'s accessibility-auditor
+skill. The capability sweep found a remediation engine, so the offer can change
+from *finding* defects to *fixing* them, which is a materially larger engagement.
+
+**Components:**
+
+| Role | Component | Licence | Note |
+| --- | --- | --- | --- |
+| PDF accessibility automation | [opendataloader-project/opendataloader-pdf](https://github.com/opendataloader-project/opendataloader-pdf) | **Apache-2.0** (11,358 B) | 30,129★, Java, 2,881 forks. Topics include **`eaa`**, **`pdf-ua`**, `tagged-pdf`, `a11y`. **The only accessibility-as-a-feature asset in this KB.** |
+| Structure extraction | [docling-project/docling](https://github.com/docling-project/docling) | **MIT** | Heading hierarchy and table structure — the inputs tagging needs. |
+| Scanned-document OCR | [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract) | **Apache-2.0** | A scanned PDF has no text layer and therefore **cannot** be made accessible without OCR first. |
+| Audio alternative | [denizsafak/abogen](https://github.com/denizsafak/abogen) | **MIT** | Narrated audio with synchronised captions as an alternative format. |
+| Live-session captioning | [collabora/WhisperLive](https://github.com/collabora/WhisperLive) | **MIT** (Collabora Ltd., **EMEA**) | Lecture captioning, where the obligation extends to live teaching. |
+| LMS-side audit | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | **MIT** | Its accessibility-auditor skill, for the Canvas-resident content. |
+
+**Wiring:**
+
+1. **Inventory and classify.** Separate tagged PDFs, untagged born-digital PDFs
+   and scanned images. Only the middle group is cheap; the third needs OCR first
+   and the first may already pass.
+2. **OCR the scans** (`tesseract`, on-premises — these are often student records).
+3. **Extract structure** with `docling`, then **generate tagged, PDF/UA-oriented
+   output** with `opendataloader-pdf`.
+4. **Produce alternative formats** — narrated audio with captions (`abogen`) —
+   because several conformance regimes accept an accessible alternative where
+   remediating the original is disproportionate.
+5. **Audit what stays inside the LMS separately** with `canvas-mcp`'s auditor.
+6. **Deliver a conformance evidence pack**, not just fixed files: what was
+   remediated, what was given an alternative, what was exempted and why.
+
+**What the client is buying.** A regulator-facing evidence pack plus a remediated
+estate, at a cost per document no manual process can match. **What to be honest
+about: automated tagging is not conformance.** These tools produce structurally
+tagged output; **WCAG and PDF/UA conformance requires human judgement** on
+reading order, alt text and table semantics. Quote automation plus **sampled
+human review**, and never let a client believe a tool signed off their legal
+obligation. The evidence pack must say which documents a human checked.
+
+---
+
+## P-570-C — Efficacy trial for an AI tutor already in production (6–8 weeks)
+
+**For:** a client who has deployed an AI tutor — often one bought or piloted
+before this engagement — and is being asked by a board, a ministry or a funder
+whether it actually works.
+**Region:** Global. Strongest fit in **APAC** (Singapore's **AI Verify** makes
+*evidence of testing* the deliverable; Korea's AI Basic Act imposes
+human-oversight duties on high-impact education AI) and in **EMEA**, where Annex
+III conformity work will need evidence of performance.
+
+**Why this pattern exists, and its limits stated up front.** Six consecutive
+passes of this KB have recorded that **no education-specific agent observability
+or runtime regression tooling exists**. That is still true. What this pass found
+is the adjacent thing: an **Apache-2.0 randomised-controlled-trial platform**
+that attaches to the LMS over LTI. **It answers "did this intervention change
+outcomes" and not "has the tutor degraded since Tuesday."** Both questions get
+asked; only the first now has an open-source answer, and conflating them is the
+mistake this pattern exists to prevent.
+
+**Components:**
+
+| Role | Component | Licence | Note |
+| --- | --- | --- | --- |
+| Randomised trial harness | [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | **Apache-2.0** (11,323 B) | LTI plug-in: treatment variation inside real assignments, random assignment, **informed consent hidden from the teacher**, non-consenting students filtered from exports, identifiers stripped. Branch `development`. ⚠️ Licence names no licensor (template placeholders). 21★ — small. |
+| Pedagogical-knowledge baseline | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | 1,143 teacher-qualification questions. Measures whether the model knows how to *teach*. |
+| Output-quality rubrics | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | **code MIT / prompts CC BY 4.0** | ⚠️ **corpora CC BY-NC-SA 4.0 — the regression suite must source its own corpus.** |
+| Mastery measurement | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | **MIT** (1,073 B) | BKT behind MCP — an independent mastery estimate, not the tutor's own self-report. |
+| Behavioural telemetry | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | xAPI LRS. The event stream the trial analyses. |
+
+**Wiring:**
+
+1. **Fix the outcome measure before touching the tutor.** Assessment scores,
+   completion, or an independent mastery estimate from `tutor-mcp` — decided and
+   written down first. A trial whose outcome is chosen after the data arrives is
+   not a trial.
+2. **Get the ethics apparatus in place early, because it is the long pole.**
+   `terracotta`'s consent model (hidden from the teacher, non-consenting students
+   filtered from exports, identifiers stripped) is designed for exactly this, but
+   institutional review timelines are measured in weeks and run in parallel with
+   nothing. Start day one.
+3. **Randomise within assignments, not between classes.** Class-level assignment
+   confounds the teacher with the treatment, which is the standard way education
+   pilots produce uninterpretable results. `terracotta` varies content *inside*
+   an assignment for this reason.
+4. **Stand up a model-side baseline too** — `pedagogy-benchmark` for pedagogical
+   knowledge, `evaluators` rubrics on generated output, **on a corpus the
+   engagement sources itself** (the bundled CLEAR and PERSUADE 2.0 corpora are
+   non-commercial and cannot ship in a billable deliverable).
+5. **Stream telemetry into `ralph`** so behavioural data is available alongside
+   outcome data.
+6. **Report the null if it is null.** The commercial value here is the client's
+   ability to defend a decision to a board or a regulator, and a trial that can
+   only produce good news defends nothing.
+
+**What the client is buying.** Defensible evidence about a system they already
+run — the artefact a funder, ministry or Annex III conformity assessment asks
+for. **What to be honest about, twice over:** `terracotta` is a **21★** project
+and should be treated as a methodology implementation to be understood and
+possibly forked, not as vendor software; and **this is not monitoring.** If the
+client's actual question is "will we know when it breaks", the answer today is
+that they will need a bespoke harness, because open source does not supply one —
+which is also, as this KB has recorded for six passes, the clearest unmet build
+opportunity in the industry.
+
+---
+
 ## Declared gaps
 
 - **No pattern for Blackboard, Brightspace or Google Classroom.** No agent

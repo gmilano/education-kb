@@ -3,6 +3,82 @@ industry: education
 region: Global
 updated: 2026-10-31
 ---
+## 2026-10-31 (fifth pass) — the capability sweep ran, and the horizontal layer is bigger than all of education open source combined
+
+**The fourth pass left an instruction: *"sweep by capability (`topic:pptx`,
+`topic:text-to-speech`, `topic:pdf`, `topic:ocr`) crossed with licence, not by
+industry topic."* It was the most valuable line in this KB.** Here is what it
+returned.
+
+| Repo | Licence (read from file) | ★ | Role in an education engagement |
+| --- | --- | --: | --- |
+| [PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) | **Apache-2.0** (11,376 B) | **92,024** | OCR; strongest Chinese-language and handwriting support. Handwritten exam scripts. |
+| [opendatalab/MinerU](https://github.com/opendatalab/MinerU) | ⚠️ **Apache-2.0 + commercial thresholds** (3,301 B) | **82,860** | PDF → markdown/JSON; formulas, tables, multi-column. STEM textbooks. |
+| [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract) | **Apache-2.0** (11,358 B) | **77,267** | Reference OCR, 100+ languages, fully offline. Ministry and offline-first work. |
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | **MIT** (1,070 B) | **75,894** | Not a tool — a forkable, rebrandable AI-engineering **curriculum**. |
+| [docling-project/docling](https://github.com/docling-project/docling) | **MIT** (1,072 B) | **69,909** | PDF/DOCX/PPTX/XLSX → markdown or JSON with table structure. **The pick of the layer.** |
+| [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | **Apache-2.0** (11,375 B) | **32,854** | Agent-driven **editing** of the client's existing Office documents. |
+| [opendataloader-project/opendataloader-pdf](https://github.com/opendataloader-project/opendataloader-pdf) | **Apache-2.0** (11,358 B) | **30,129** | PDF parsing **plus accessibility automation** — topics include `eaa`, `pdf-ua`. |
+| [dream-num/univer](https://github.com/dream-num/univer) | **Apache-2.0** (10,173 B) | 22,832 | Embeddable sheets/docs/slides SDK — in-product editing surfaces. |
+| [Unstructured-IO/unstructured](https://github.com/Unstructured-IO/unstructured) | **Apache-2.0** (11,360 B) | 15,651 | ETL for mixed legacy document estates. |
+| [supertone-oss-archive/supertonic](https://github.com/supertone-oss-archive/supertonic) | **MIT** (1,070 B) | 13,757 | On-device multilingual TTS — **but `archived: true`**. |
+| [tw93/Kami](https://github.com/tw93/Kami) | **MIT** (1,061 B) | 12,173 | Typesetting rules so generated courseware looks professional. |
+| [genspark-ai/genoffice](https://github.com/genspark-ai/genoffice) | **Apache-2.0** (11,345 B) | 11,418 | Local-first open Office suite; pairs with offline tutors. |
+| [Blaizzy/mlx-audio](https://github.com/Blaizzy/mlx-audio) | **MIT** (1,070 B) | 8,165 | TTS/STT on Apple Silicon. |
+| [denizsafak/abogen](https://github.com/denizsafak/abogen) | **MIT** (1,069 B) | 6,179 | EPUB/PDF → audiobook **with synchronised captions**. |
+| [gradio-app/fastrtc](https://github.com/gradio-app/fastrtc) | **MIT** (1,071 B) | 4,637 | WebRTC plumbing for a **spoken** tutor. |
+| [collabora/WhisperLive](https://github.com/collabora/WhisperLive) | **MIT** (1,085 B, Collabora Ltd.) | 4,339 | Live lecture transcription and captioning. **EMEA.** |
+| [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** (1,079 B) | 4,119 | FSRS — the modern spaced-repetition scheduler, as an algorithm. |
+
+**Sixteen permissive repositories; five above 30,000★; three above 69,000★.** For
+scale: the largest *education-specific* asset in this KB is DeepTutor at 52,208★,
+and the whole education-agent shelf summed is smaller than `PaddleOCR` alone.
+**The horizontal layer is where the engineering leverage in education AI actually
+is**, and four passes of industry-topic sweeping could not see any of it.
+
+### The generalisable lesson
+
+A sweep filtered on an industry topic measures **how a repository markets
+itself**, not what it does. Tools an industry depends on are tagged by
+**capability**, because their authors sell to everyone. `docling` does not say
+"education" anywhere; it is nonetheless the first component in any serious
+courseware pipeline. **Sweep both axes, or report an undercount.** This applies
+to every other industry KB in this collection, not only education.
+
+### Three licence findings that a licence column cannot carry
+
+1. **`MinerU` is Apache-2.0 *plus* additional terms** — a shape this KB had not
+   seen. `master/LICENSE.md` (3,301 B) requires a **separate commercial licence
+   above 100 M MAU or USD 20 M monthly revenue**, imposes a **prominent
+   attribution obligation on any online service** built with it, and
+   **auto-terminates** all rights on breach. The thresholds are irrelevant to an
+   education engagement; **the attribution clause is a product requirement** that
+   has to reach the client's engineering and UX teams, not just their lawyers.
+   GitHub reports this as `NOASSERTION`.
+2. **`supertonic` is MIT, 13,757★, 1,566 forks — and archived.** Only the
+   `archived` field says so; the licence and the star count both look excellent.
+   The code runs and the grant is perpetual, but there will be no patches. **Check
+   the flag before shelving on stars.**
+3. **`terracotta`'s Apache licence still has the template placeholders in it** —
+   literally `Copyright {yyyy} {name of copyright owner}`. GitHub's "Apache-2.0"
+   determination is right and the grant **names no licensor**. Usable; a diligence
+   note.
+
+### Sub-gaps still open inside the layer just opened
+
+- **Assessment-item generators**: nothing permissive and education-specific
+  surfaced. The closest assets generate *content*, not *psychometrically
+  defensible items*, and the distinction is what an exam board buys.
+- **Lecture-video tooling was not swept.** `harry0703/MoneyPrinterTurbo` (MIT,
+  136,744★) surfaced incidentally and is **short-form social video, not lecture
+  content** — it is deliberately not shelved and should not be offered as
+  courseware tooling. A `topic:video` sweep is the next pass's job.
+- **No open-source learning-analytics dashboard** still, sixth pass — only the
+  LRS (`openfun/ralph`) that would feed one.
+
+---
+
+
 
 ## 2026-10-31 (fourth pass) — the largest MIT repo in this KB was found by a listicle, and "no permissive education platform" needs qualifying
 

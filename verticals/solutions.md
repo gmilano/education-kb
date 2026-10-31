@@ -107,6 +107,31 @@ not a matter of taste — it is forced by licensing:
   firm about the wrong scope. The search that found the counter-example was an
   index query (`topic:lms license:mit stars:>80`), not a web search; the web
   channel returned the same vendor glossary for the fourth time.
+- **The ERP/CRM commentary gap reproduced for a fifth pass, with the same
+  artefact.** `open source platform education LMS SIS MIT Apache` returned
+  **nine of ten results from `openeducat.org`** — the same vendor comparison and
+  glossary pages in ten localisations that passes two through four recorded. At
+  five consecutive passes this is no longer worth re-running: **the web channel
+  has one answer for this query and it is an advertisement.** Index queries
+  (`topic:lms license:mit`) are the only channel that has ever returned a
+  counter-example here.
+- **One genuinely useful thing the web channel did surface: Sakai.**
+  [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) is **Apache-2.0**,
+  stewarded by the **Apereo Foundation**, and originated in a 2004 consortium of
+  Michigan, Indiana, MIT and Stanford. It is already recorded in
+  [`../repos/foundations.md`](../repos/foundations.md) and is **cross-referenced
+  here deliberately**, because it is the one *institutional LMS of record* with a
+  permissive licence — and this page's central doctrine ("do not fork the platform
+  of record") has a real exception in it that a reader of this page alone would
+  miss. The honest qualifier from the same sources: Sakai has a **smaller
+  community and slower release cadence** than Moodle, which is why it is not the
+  default recommendation despite the better licence.
+- **Two licence facts worth pinning, since both circulate wrongly.** Open edX is
+  **AGPL-3.0**, not Apache — the MIT-and-Harvard origin story leads people to
+  assume otherwise, and the licence is the opposite of what that history
+  suggests. Canvas publishes its core under **AGPL-3.0**. Both are attach-only.
+  `dotLRN`, which appears in older academic literature as an MIT-origin LMS, was
+  **not verified this pass** and should not be offered to anyone.
 - **No LATAM education ERP outside Brazil** surfaced again this pass. `i-educar`
   remains the single LATAM row and it is Brazil-specific.
 - **Nextcloud (files) and Jitsi (conferencing) are still unverified.** Real

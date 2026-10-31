@@ -96,6 +96,36 @@ commitments total roughly **USD 3.6 bn** in AI workforce and deployment spending
    education stack where a client can own a proprietary derivative outright, over
    the corpus (theses, datasets, faculty output) a research agent most wants.
 
+**Added on the fifth pass — three items, one of which changes a technical
+recommendation above.**
+
+- **California AB 1159 would bar using student data to train AI models.** This is
+  a different kind of rule from the policy-and-guidance laws above: it constrains
+  the *training* pipeline, not classroom use. For any engagement that touches
+  Californian student records, it makes the **local-first** architecture a
+  compliance feature rather than a preference — see
+  [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) and
+  `genspark-ai/genoffice` in [`../repos/foundations.md`](../repos/foundations.md).
+  Status is a bill, not a law; do not quote it as enacted.
+- **At least 29 states have a current or former AI-in-education task force or
+  commission** (Education Commission of the States). That is the pre-legislative
+  pipeline behind the 134 bills, and it is a mapped list of named bodies — i.e. a
+  business-development target list, not just a statistic.
+- **55% of high-school principals report their schools have not blocked or
+  restricted AI tool access.** Read alongside "most schools have no formal
+  student AI policy", this says the common state is **neither governed nor
+  blocked** — unmanaged use. That is the honest framing for a district
+  conversation, and it is a stronger opener than a compliance threat because it
+  describes what the principal already knows.
+- **Opportunity 3 above now has an open-source component, which it did not when
+  it was written.**
+  [`opendataloader-project/opendataloader-pdf`](https://github.com/opendataloader-project/opendataloader-pdf)
+  (**Apache-2.0, 30,129★**) automates **PDF accessibility** and tagged-PDF/PDF-UA
+  output. ADA-driven remediation of institutional document estates was previously
+  scoped as audit-only via `canvas-mcp`'s auditor skill; it can now be scoped as
+  **audit plus automated remediation**, which is a materially larger engagement.
+  See pattern `P-570-B`.
+
 #### Canada (inside North America — not a separate region value)
 
 Education is **exclusively provincial**, so there is no national policy to find —
@@ -222,6 +252,47 @@ deliverable**.
 4. **Citation-provenance tooling for government documents.** Sold directly off
    the South African withdrawal.
 
+**Added on the fifth pass — the nearest EU date in this KB is now one month
+away, and it is not the high-risk one.**
+
+- **2 December 2026: Article 50 marking of synthetic content, for systems already
+  on the market.** The transparency track — which the Digital Omnibus did *not*
+  defer — carries this deadline for machine-readable marking and watermarking of
+  AI-generated output on systems already placed on the market. **Every
+  content-generating tool in this KB produces exactly the artefacts this covers**
+  (generated decks, narrated lessons, interactive texts), so a client already
+  running one in the EU has roughly a month, and the remedy is engineering, not
+  policy. This is the most actionable EMEA date on this page and it is **13
+  months earlier** than the Annex III date most guidance leads with.
+- **The deferral itself reproduced independently this pass**: Annex III
+  stand-alone high-risk **2026-08-02 → 2027-12-02** (16 months), embedded
+  **2027-08-02 → 2028-08-02** (12 months), via **Regulation (EU) 2026/1744**,
+  published in the Official Journal **24 July 2026**, in force **27 July 2026**,
+  after Council approval **29 June 2026**. Multiple independent legal
+  commentaries agree. *One* source in this pass's sweep still headlines that the
+  Act "has not been formally delayed" — it is wrong, and it is the error the
+  trends page already flags as circulating.
+- ⚠️ **One row on the compliance table could not be corroborated this pass.** The
+  "AI-generated intimate imagery / abuse material ban, December 2026" entry
+  remains **single-source**. The December 2026 EU date this pass *can* corroborate
+  from several sources is the Article 50 marking deadline above. These may have
+  been conflated somewhere upstream. Keep the Article 50 item and treat the other
+  as unverified until a second source appears.
+- **OECD *Digital Education Outlook 2026*** recommends institutions move beyond
+  general-purpose AI tools toward **purpose-built educational AI** — a
+  supranational source for the "purpose-built beats general-purpose" trend that
+  had been carried mainly on vendor commentary.
+- **Gulf: Dubai's KHDA has issued explicit responsible-AI guidance to private
+  schools.** The first named Gulf education regulator instrument in this KB. EMEA
+  in this KB has been EU-plus-UK-plus-Africa; the Gulf private-school market is a
+  distinct, well-funded buyer and this is the hook into it. Single-source;
+  verify before client use.
+- **Accessibility is the EMEA-specific technical wedge.**
+  `opendataloader-pdf` carries an **`eaa`** topic — the **European Accessibility
+  Act** — plus `pdf-ua` and tagged-PDF output. Accessibility conformance is a
+  procurement gate across European public education that nothing else in this KB
+  answers. See pattern `P-570-B`.
+
 ### APAC
 
 **The region's evidence base improved sharply this pass and is no longer
@@ -299,6 +370,54 @@ strongest available argument for staging a rollout behind teacher capability.
    buy-in reached <30% adoption and then lost its official status. Any
    national-rollout proposal should carry an adoption-risk section citing it.
 
+**Added on the fifth pass — the two Asian regimes are now specific enough to
+scope work against, and one of them regulates RAG directly.**
+
+- **Vietnam: Decision 33 is the instrument, and it names three education
+  systems.** The AI Law (No. 134/2025/QH15) took effect **1 March 2026**;
+  **Decision 33**, effective **15 August 2026**, publishes the high-risk list —
+  **46 systems across six sectors**, education among them with **three** entries:
+  (1) AI that **automatically tests, evaluates or ranks learners**; (2) AI that
+  **monitors and analyses learner behaviour**; (3) **self-study tools that
+  generate educational content from uncontrolled data sources.** **The third is
+  the one to read twice.** Every retrieval-augmented tutor in this KB generates
+  content from sources it does not curate — that is the architecture, not a
+  misuse of it. A RAG tutor sold into Vietnam is **presumptively high-risk**
+  unless the corpus is controlled, which turns "curated corpus" from a quality
+  choice into a regulatory one. Several sources note that listed systems are
+  high-risk chiefly where AI output is the **sole** basis for a decision with no
+  human in the loop, so human-in-the-loop review is also a classification lever.
+  Existing education systems have a transition to about **1 September 2027**.
+- **Korea: correction to this KB's record — the Enforcement Decree is not
+  pending.** The compliance table has carried "enforcement decrees pending". The
+  **Decree entered into force on 22 January 2026 alongside the Act**. What is
+  deferred is *enforcement*, specifically: **fact-finding and fines are suspended
+  for at least one year from 22 January 2026**, except in extreme cases such as
+  loss of life. Education appears as a named **high-impact** area — the sources
+  specify **evaluation of students in early childhood, elementary and secondary
+  education** — carrying risk-management, user-protection and human-oversight
+  duties. **So the obligations are live now and the penalties are not**, which is
+  a far better sales position than "pending decrees": a client can be brought into
+  conformance inside the grace window.
+- **Singapore procures frameworks, not rules.** **AI Verify** is a testing and
+  accountability toolkit rather than a statute — meaning the deliverable in
+  Singapore is **evidence of testing**, which pairs directly with the evaluation
+  layer in [`../repos/foundations.md`](../repos/foundations.md) and with
+  `terracotta`'s randomised-trial apparatus.
+- **China's regime is the most assertive** — mandatory registration, content
+  labelling obligations, penalties. Note the awkward commercial fact this creates:
+  the two largest permissive education agents in this KB (**DeepTutor**, HKU;
+  **OpenMAIC**, Tsinghua) and the strongest OCR (**PaddleOCR**, Baidu) are all
+  Chinese-origin, so **an engagement anywhere is likely sourcing from the most
+  heavily regulated AI jurisdiction in the region.** The licences are clean; the
+  supply-chain question a client's risk committee will ask is not about licences.
+- **Japan remains light-touch and voluntary** — no education-specific instrument
+  located.
+- **Market shape:** market-research sources put **APAC as the fastest-growing
+  region** for AI in education, with China, India and Japan dominating spend, and
+  name Google, Microsoft, IBM, Pearson and Byju's as key players. Vendor-sourced;
+  quote as direction, not as figures.
+
 ### LATAM
 
 **The best-evidenced adoption-governance gap in the world, from the most
@@ -363,6 +482,41 @@ Higher Education LATAM Survey 2026* in English and Spanish.
    Portuguese) proves the regional demand for study-mentor agents — **but it is
    unlicensed** (see [`../agents/top.md`](../agents/top.md)), so it is evidence,
    not a component.
+
+**Added on the fifth pass — two new sources, and the budget finding is the one
+to sell on.**
+
+- **An October 2026 regional AI index across 20 LATAM economies gives the
+  governance gap a sharper edge than the institutional data did.** **85%** of
+  countries have a national AI strategy in place or under development and **75%**
+  have formally designated a lead institution — but **only Brazil and Colombia
+  explicitly allocate budget** within their national instruments. Top tier:
+  **Brazil, Chile and Uruguay**. More than half of countries have incorporated AI
+  into school curricula. **The pattern mirrors the institutional finding one level
+  up:** strategy without funding at country level, exactly as UNESCO IESALC found
+  87% use against 26% strategy and 55% with no AI budget at institution level.
+  **Two independent levels of the same system show the same defect** — the
+  artefact exists, the money does not — which is a far stronger basis for a
+  funding-and-roadmap engagement than either finding alone.
+- **The Digital Education Council's LATAM 2026 survey corroborates adoption at
+  the individual level: 92% of students and 79% of faculty actively engaging with
+  AI**, from **over 30,000 responses across 29 higher-education institutions**,
+  produced with **Tecnológico de Monterrey's Institute for the Future of
+  Education**. Note what this adds rather than repeats: IESALC measured
+  *institutions*; this measures *people inside them*, and the two agree. Tec de
+  Monterrey's involvement also makes it a citeable regional partner rather than
+  an external observer.
+- **UNESCO IESALC's causal reading should be quoted directly in pitches:**
+  adoption is being driven by **faculty, researchers and students**, not by
+  institutional policy or strategic guidance. The buyer is therefore being asked
+  to catch up with their own staff — which is a different conversation from
+  being asked to innovate, and an easier one to fund.
+- ⚠️ **A widening-inequality signal, October 2026:** regional reporting describes
+  Latin America facing AI inequality as **compute and adoption gaps widen**. This
+  cuts against the offline/low-resource optimism elsewhere in this KB and argues
+  for the **offline-first and local-inference** assets (`Kolibri`, `tesseract`,
+  `PAIDEIA`, `WordLink`'s in-browser model) rather than hosted-model designs in
+  the region's less-resourced systems.
 
 ### Global
 

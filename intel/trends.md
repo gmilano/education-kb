@@ -105,11 +105,12 @@ it from fresh sources and added two things it did not have.** The table stands:
 | EU AI Act — **Article 50 transparency duties** | **Not deferred. In force since 2026-08-02** |
 | EU AI Act — stand-alone Annex III high-risk (incl. education) | Deferred to **2027-12-02** by the Digital Omnibus amendment, in effect late July 2026 |
 | EU AI Act — AI embedded in regulated products | Deferred to **2028-08-02** |
-| EU — AI-generated intimate imagery / abuse material ban | Coming into force **December 2026** |
+| EU — **Article 50 marking of synthetic content, systems already on the market** | **2026-12-02** — machine-readable marking/watermarking of AI-generated output. **The nearest EU deadline in this KB, roughly one month out**, and 13 months earlier than the Annex III date most guidance leads with ← *new on the fifth pass, multi-source* |
+| EU — AI-generated intimate imagery / abuse material ban | ⚠️ **Still single-source, and not corroborated on the fifth pass.** Carried as "December 2026". The December 2026 EU date that *does* corroborate from several sources is the Article 50 marking deadline above; the two may have been conflated upstream. Treat as unverified |
 | **Council of Europe** — Legal Instrument on AI in Education | **Planned for 2026**, "establishing rules to protect the integrity of education"; follows a 2025 recommendation. Binds by ratification across 46 states, so it reaches non-EU Europe ← *new this pass, single-source* |
 | North Carolina **Session Law 2026-41** | State model policy **2026-12-31**, district policies **2027-06-30**, teacher training **2028-06-30** ← *new this pass; the nearest statutory deadline in this KB* |
-| South Korea AI Basic Act | **In force 2026-01-22**; enforcement decrees pending, guidance-first grace period through 2026 |
-| Vietnam AI law | Passed **2025-12-10**, **effective 2026-03-01**; high-risk designation covers education incl. automated assessment. **Systems already in operation get 12 months' transition — 18 in education, health care and finance, i.e. to ≈2027-09-01** ← *new this pass* |
+| South Korea AI Basic Act | **In force 2026-01-22** — and the **Enforcement Decree entered into force the same day**, correcting this table's earlier "decrees pending". The grace is on *penalties*: **fact-finding and fines suspended for ≥1 year from 2026-01-22**, except extreme cases such as loss of life. Education named **high-impact**, specifically *evaluation of students in early childhood, elementary and secondary education* ← *corrected and sharpened on the fifth pass* |
+| Vietnam AI law | Law **No. 134/2025/QH15**, **effective 2026-03-01**. The high-risk list is **Decision 33**, effective **2026-08-15**: **46 systems across six sectors**, with **three** in education — (1) automatic **testing/evaluation/ranking** of learners, (2) **monitoring and analysis of learner behaviour**, (3) **self-study tools generating content from uncontrolled data sources**. Existing education systems transition to ≈**2027-09-01** ← *instrument named and categories enumerated on the fifth pass* |
 | Australia (TEQSA) | Institutional generative-AI action plans required of **all** higher-ed providers — **100% response rate achieved** |
 
 **What is new.** First, the postponement is attributed by multiple independent
@@ -322,6 +323,124 @@ most persuasive available argument that **citation provenance is a deliverable,
 not a nicety**. It is also why this KB states its method, names its sources, and
 records what it could not verify.
 
+## 9. The layer education AI actually runs on is horizontal, permissive, and was invisible to this KB for four passes (high confidence — measured first-hand)
+
+**This is the fifth pass's main finding, and it is a correction to the shape of
+the whole KB rather than an addition to it.**
+
+Every sweep in passes one to four filtered on an education topic. Running the
+capability axes instead (`topic:ocr`, `topic:pdf`, `topic:pptx`,
+`topic:text-to-speech`) returned **sixteen permissively licensed repositories,
+five above 30,000★ and three above 69,000★** — `PaddleOCR` (Apache-2.0, 92,024★),
+`MinerU` (82,860★), `tesseract` (Apache-2.0, 77,267★), `docling` (MIT, 69,909★),
+`OfficeCLI` (Apache-2.0, 32,854★), `opendataloader-pdf` (Apache-2.0, 30,129★).
+
+**For scale: the largest education-specific asset in this KB is DeepTutor at
+52,208★, and the entire education-agent shelf summed is smaller than `PaddleOCR`
+alone.**
+
+**Why this is a trend and not just a gap-closure.** It says where the engineering
+value in education AI sits. The education-specific layer supplies *pedagogy* —
+learner models, tutoring loops, assessment design — and it is thin, young and
+licence-inconsistent. The horizontal layer supplies *capability* — ingestion,
+OCR, speech, document generation — and it is enormous, mature, and permissive.
+**A credible education build is therefore mostly horizontal components with a
+thin education-specific layer on top**, which is close to the inverse of how this
+KB's first four passes implicitly described the market.
+
+**The commercial consequence.** It reorders what an engagement should start with.
+Generating new material competes with the client's own faculty. **Ingesting the
+material the client already owns** — the textbook, the past papers, the lecture
+notes, the scanned worksheets — is *migration* work: easier to scope, easier to
+value, and impossible for the client to replicate with a chatbot subscription.
+See pattern **P-570-A**.
+
+**The method lesson generalises past education**, and it should be carried to
+every other industry KB in this collection: *a sweep filtered on an industry
+topic measures how a repository markets itself, not what it does.* Tools an
+industry depends on are tagged by capability, because their authors sell to
+everyone. Sweep both axes or report an undercount.
+
+## Licence-structure trend, extended: two more shapes, and "Creative Commons" now spans the whole range
+
+The licence-shape catalogue in this KB grew from five to **seven** this pass, and
+the two additions sit at opposite ends.
+
+**Shape 6 — Apache-2.0 *plus commercial thresholds and an attribution duty*
+(`MinerU`, 82,860★).** `master/LICENSE.md` (3,301 B, read first-hand) grants
+Apache-2.0 "subject to the additional terms below", then imposes: a **separate
+commercial licence above 100 M MAU or USD 20 M monthly revenue**; a **prominent
+attribution obligation** on any online service built with it; and **automatic
+termination** of all rights on breach of either. GitHub reports the whole thing as
+`NOASSERTION`.
+
+**Read the two clauses differently.** The threshold is commercially irrelevant to
+any education engagement — no school system has 100 M MAU, and the clause is
+aimed at hyperscalers. **The attribution clause is not irrelevant at all**: it is
+a *product* requirement that lands on the client's UI and public documentation,
+so it has to reach their engineering and UX teams and not just their legal
+review. This is the first licence in this KB whose main consequence is a
+**design** obligation rather than a distribution one.
+
+**Shape 7 — CC0-1.0, a public-domain dedication (`gen-mentor`, 135★,
+WWW 2025 oral).** 7,048 bytes of CC0: no attribution, no share-alike, no notice.
+**More permissive than MIT.**
+
+**And that juxtaposition is the actual finding.** Last pass rejected the two
+best-curated pedagogy libraries in open source *because they were Creative
+Commons* — `Auto-Empirical-Research-Skills` (CC BY-SA 4.0, 4,843★) and
+`education-agent-skills` (CC BY-SA 4.0, 932★). This pass shelved a peer-reviewed
+tutoring framework *because it was Creative Commons*. **"It's Creative Commons"
+now predicts nothing about usability in this KB: the family spans the most
+permissive grant on the shelf and the two most commercially obstructive ones.**
+The only reliable move is the one this KB adopted two passes ago — read the file,
+every time.
+
+## Metadata hygiene: two fields that a licence column cannot express (measured first-hand)
+
+Both were caught this pass only because they were checked explicitly, and both
+look like clean findings if they are not.
+
+- **`archived: true`.** `supertone-oss-archive/supertonic` is **MIT**,
+  **13,757★**, **1,566 forks**, on-device multilingual TTS with bindings for ten
+  languages — an almost ideal offline read-aloud component. It is **archived**.
+  The grant is perpetual and the code still runs, but there will be no patches,
+  no security fixes and no new languages. **Stars and licence are both excellent
+  and both irrelevant to that fact.** A shelf built on stars-plus-licence would
+  have recommended it without qualification.
+- **An Apache licence with the template placeholders still in it.**
+  `terracotta-education/terracotta`'s `LICENSE` is unmodified Apache-2.0
+  boilerplate including the literal `Copyright {yyyy} {name of copyright owner}`.
+  GitHub's "Apache-2.0" determination is correct and the grant **names no
+  licensor**. Usable; a diligence note on any deliverable that depends on it.
+
+**The general rule this suggests**, after five passes of licence work: the
+licence answers *may we*, and it is the field this KB has learned to read
+properly. It does not answer *should we* — `archived`, `pushed_at`, open-issue
+ratios and the presence of a named licensor do, and they are cheaper to check
+than a licence file.
+
+## Region attribution: recoverable for institutions, not for people (measured first-hand)
+
+The fourth pass concluded region was unobtainable — `search_users` exposes no
+`location`, `api.github.com` returns 403 — and left seven rows `Global`. **That
+was true of individuals and false of institutions.** An institutional copyright
+holder names itself in the grant, and reading the licence file placed
+`feedbacksystem` to **EMEA** ("Technische Hochschule Mittelhessen"),
+`knowledge-spaces` to **North America** ("Vanderbilt Data Science Institute") and
+`WhisperLive` to **EMEA** ("Collabora Ltd.").
+
+**The limit was then tested, which is the part worth keeping.** All seven
+`Global` rows were re-probed against the instrument and **none resolved**: every
+holder is an individual or a pseudo-collective, and one Apache boilerplate
+carries no copyright line at all. So the rule is conditional —
+**region is recoverable from the licence file if and only if the copyright holder
+is an institution** — and the `Global` rows stay `Global` for a stated reason
+instead of for want of a method. Two holders whose *names* read Korean and French
+are both recorded `Global`, deliberately: a personal name is not a country, and
+inventing a region to fill a closed-vocabulary column is how a filter starts
+lying.
+
 ## Declared gaps
 
 - **Most trend sources are vendor blogs or market-research summaries.** The load-
@@ -369,3 +488,31 @@ records what it could not verify.
   the index, not the listicles". **Both channels are required; next pass should
   sweep by capability (`topic:pptx`, `topic:text-to-speech`, `topic:pdf`,
   `topic:ocr`, `topic:scorm`) crossed with licence.**
+
+### Added on the fifth pass
+
+- **Sixth consecutive pass with no education-specific agent observability or
+  runtime regression tooling.** Two differently shaped queries returned nothing
+  new. The gap narrowed by one notch and not by the expected route:
+  `terracotta-education/terracotta` (Apache-2.0, 21★) provides **randomised
+  controlled trials inside LMS assignments**, with informed consent hidden from
+  the teacher and student identifiers stripped from exports. That is **efficacy
+  measurement** — "did this intervention change outcomes" — and it is the first
+  open-source answer to that question in this KB. It is **not** drift detection.
+  A tutor in production still has no open-source way to detect that it has
+  degraded, and that remains the clearest unmet build opportunity in the industry.
+- **Assessment-item generation is a newly *specific* gap.** The capability sweep
+  found abundant permissive tooling for generating *content* and none for
+  generating **psychometrically defensible items**. That distinction is what an
+  exam board or certification body actually buys, and nothing located addresses
+  it.
+- **Lecture-video tooling remains unswept.** `harry0703/MoneyPrinterTurbo` (MIT,
+  136,744★) surfaced incidentally and is **short-form social video, not lecture
+  content**; it is deliberately not shelved. A `topic:video` capability sweep is
+  the next pass's job, on the evidence that capability sweeps are where the volume
+  has been.
+- **Market sizing is unchanged and still vendor-only, now at five passes.** The
+  2026 figure reproduced again at **USD 10.6 bn** from the ResearchAndMarkets
+  family, with **USD 42.48 bn by 2030**; HolonIQ's **USD 12.3 bn** also
+  reproduced. **No independent estimate has been located in five passes.** Quote
+  the range, never a point.

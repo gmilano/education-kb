@@ -87,6 +87,7 @@ it match the curriculum?"* — and the layer where licences stop being binary.
 | --- | --- | --- | --: | --- | --- |
 | [learning-commons-org/knowledge-graph](https://github.com/learning-commons-org/knowledge-graph) | ⚠️ **split: code MIT, datasets "By data publisher"** | 164 | Global | ⚠️ conditional | "The data layer for smarter educational AI" — enriched datasets linking academic standards, curricula, learning progressions and instructional guidance under one schema, reachable via browser explorer, agent plugins, local files, a REST API **and an MCP server**. Run by Learning Commons (`learningcommons.org`), country not stated. **Licence mechanics matter here:** the API reports `NOASSERTION` because the file is `LICENSE.md` and because the grant is split — README badges read "License for Knowledge Graph code: MIT" and "License for Knowledge Graph datasets: By data publisher", and **some datasets are gated**. The code is safe; each dataset must be cleared individually. |
 | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | ⚠️ **three-tier split: code MIT · prompts CC BY 4.0 · two corpora CC BY-NC-SA 4.0** | 87 | Global | ⚠️ **conditional — the corpora are non-commercial** | "Evaluation for AI outputs against trusted educational rubrics" — research-backed rubrics for scoring generated instructional content. TypeScript, 17 forks, pushed 2026-10-31. **The only rubric-scoring asset located in this KB**, and the natural quality gate in front of any content-generating agent. **Licence RESOLVED in the fourth pass** by reading `main/LICENSE.md` (1,615 B), after three passes carried it as unresolved. It grants: *evaluator **code** → MIT*; *evaluator **content**, i.e. the prompts and settings → CC BY 4.0*; ***Annotated CLEAR Corpus** → CC BY-NC-SA 4.0*; ***Annotated PERSUADE 2.0 Corpus** → CC BY-NC-SA 4.0*. **The code and the rubric prompts are commercially usable with attribution; the two annotated corpora are NC and cannot ship in a billable deliverable or a commercial regression suite.** The upstream originals (CommonLit's CLEAR Corpus, PERSUADE 2.0) are themselves CC BY-NC-SA 4.0, so there is no cleaner version upstream to substitute — an engagement must bring its own corpus. Note the direction: this is the **inverse** of its sibling `knowledge-graph` (code MIT / data by publisher). |
+| [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | **Apache-2.0** (file, 11,323 B — see note) | 21 | Global | ✅ permissive | **Efficacy measurement, and the only asset in five passes that narrows the evaluation gap.** *"Tool for Education Research with RAndomized COnTrolled TriAls"* — an **LTI plug-in to the LMS** that differentiates the contents of online assignments into experimental treatment variations and assigns students randomly between them. It also carries the ethics apparatus that makes that legal in a school: **informed consent hidden from the teacher**, non-consenting participants filtered out of result summaries and exports, and student identifiers stripped from exports. Java, 9 forks, branch **`development`**, created 2021-05-10, pushed 2026-10-29. **Be precise about what it is:** this measures *"did this intervention change outcomes"* under randomisation — it is **not** runtime monitoring and will not tell you a deployed tutor has drifted. ⚠️ Its `LICENSE` is unmodified Apache boilerplate with the template placeholders intact (`Copyright {yyyy} {name of copyright owner}`), so the grant **names no licensor**; the `NOTICE` credits Oxford University for LTI cookie-handling code. Origin not establishable from this session, recorded Global. |
 | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | 13 | EMEA | ✅ permissive | 1,143 questions from real teacher-qualification exams — CDPK (920, general pedagogy) and SEND (223, special needs). Measures whether a model knows how to *teach*, not whether it knows the subject. |
 
 ## Content-production layer (new in the fourth pass)
@@ -107,6 +108,63 @@ learning*. Nothing here knows whether the deck it generated is pedagogically
 sound or on-syllabus — which is exactly what the evaluation layer above is for,
 and why pattern **P-569-B** wires a quality gate between them rather than
 shipping generator output directly.
+
+## Document-ingestion layer (new in the fifth pass — the capability sweep)
+
+The fourth pass closed with an instruction to itself: *sweep by capability
+(`topic:pptx`, `topic:text-to-speech`, `topic:pdf`, `topic:ocr`), not by industry
+topic.* **This is what that sweep returned, and it is the largest layer in this
+KB by an order of magnitude.** Every education engagement begins with the
+client's existing material — textbooks, past papers, lecture PDFs, scanned
+worksheets — and **none** of these tools carries an education topic, which is why
+five passes of industry-topic sweeping never saw them.
+
+| Repo | Licence | ★ | Region | Build-on? | What it is |
+| --- | --- | --: | --- | --- | --- |
+| [PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) | **Apache-2.0** (file, 11,376 B) | **92,024** | APAC | ✅ permissive | *"Turn any PDF or image document into structured data for your AI."* The highest-starred asset in this entire knowledge base. Strongest **Chinese-language and handwriting** OCR in open source, which is the deciding factor for scanned worksheets and handwritten exam scripts. Pushed 2026-09-16; **11,594 forks**, 259 open issues. Baidu's PaddlePaddle organisation (China). |
+| [opendatalab/MinerU](https://github.com/opendatalab/MinerU) | ⚠️ **Apache-2.0 + commercial thresholds** — read the note | **82,860** | APAC | ⚠️ conditional (thresholds are far above any education engagement) | *"Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows."* Strong on **formulas, tables and multi-column academic layout** — i.e. STEM textbooks, the hardest input in education. **6,857 forks**, branch **`master`**, pushed 2026-10-31. **The licence is a shape this KB had not catalogued.** GitHub reports `NOASSERTION`; `master/LICENSE.md` (3,301 B) reads *"MinerU is licensed under Apache License 2.0 and is subject to the additional terms below"*, then adds: **(1)** a separate commercial licence is required above **100 million MAU or USD 20 million monthly revenue**; **(2)** an **attribution obligation** — any online service built on MinerU must state prominently, in the interface or public documentation, that MinerU is used; **(3)** automatic termination of all rights if either is breached. **For Globant the thresholds are irrelevant and clause 2 is not** — it is a deliverable requirement that must reach the client's product team, not just legal. |
+| [tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract) | **Apache-2.0** (file, 11,358 B) | **77,267** | Global | ✅ permissive | The reference OCR engine, LSTM-based, **100+ languages**, **10,879 forks**, pushed 2026-10-28. Runs fully offline on commodity hardware with no model licence and no inference bill — which is why it, and not a hosted vision model, is the realistic answer for ministry and offline-first work (see pattern `P-568-F`). |
+| [docling-project/docling](https://github.com/docling-project/docling) | **MIT** (file, 1,072 B) | **69,909** | Global | ✅ permissive | *"Get your documents ready for gen AI."* **The pick of this layer for most education work, and on licence grounds as much as technical ones: MIT, where its larger rivals are Apache-with-terms or Apache.** PDF, DOCX, **PPTX**, XLSX and HTML → clean markdown or JSON with layout and **table structure** preserved. Python, 5,222 forks, pushed 2026-10-31. `main/LICENSE`: *"Copyright The Docling Contributors"* — a collective holder, so **no region is assigned**, though the project is widely associated with IBM Research and is now under the LF AI & Data Foundation; neither is verifiable from this session and neither is asserted here. |
+| [opendataloader-project/opendataloader-pdf](https://github.com/opendataloader-project/opendataloader-pdf) | **Apache-2.0** (file, 11,358 B) | **30,129** | Global | ✅ permissive | *"PDF Parser for AI-ready data. **Automate PDF accessibility.** Open-source."* The differentiator is in its topics: `accessibility`, `a11y`, `pdf-accessibility` and **`eaa`** — the **European Accessibility Act**. Java, **2,881 forks**, pushed 2026-10-30. **This is the only asset in this KB that addresses accessibility compliance as a product feature**, and accessibility conformance is a procurement gate in EMEA public education that nothing else here answers. See pattern `P-570-B`. |
+| [Unstructured-IO/unstructured](https://github.com/Unstructured-IO/unstructured) | **Apache-2.0** (file `LICENSE.md`, 11,360 B) | 15,651 | Global | ✅ permissive | Open-source ETL for LLMs: 20+ document types into a uniform structured form, with first-class LangChain integration. The **pipeline** choice rather than the single-document choice — right when a client hands over a repository of mixed legacy material rather than a textbook. 1,377 forks. |
+
+## Narration, speech and retention layer (new in the fifth pass)
+
+The accessibility and language side of the same sweep. Education's two
+highest-volume accessibility requirements — **read-aloud** and **captions** — are
+served entirely by permissive horizontal tooling.
+
+| Repo | Licence | ★ | Region | Build-on? | What it is |
+| --- | --- | --: | --- | --- | --- |
+| [supertone-oss-archive/supertonic](https://github.com/supertone-oss-archive/supertonic) | **MIT** (file, 1,070 B, "Supertone Inc.") | 13,757 | APAC | ⚠️ **ARCHIVED — read before shelving** | *"Lightning-Fast, On-Device, Multilingual TTS — running natively via ONNX."* Bindings for Swift, Kotlin/Java, C++, C#, Go, Rust, Node, Python, Flutter and **WebGPU**; 1,566 forks. On-device multilingual TTS with an MIT grant is close to ideal for offline read-aloud. **But the `archived` flag is `true`** — the organisation is literally named `supertone-oss-archive`. The grant is clean and perpetual and the code still runs; **there will be no fixes, no security patches and no new languages.** Fork it deliberately or not at all. *The only reason this row is honest is that the `archived` field was checked — stars and licence both look excellent.* |
+| [Blaizzy/mlx-audio](https://github.com/Blaizzy/mlx-audio) | **MIT** (file, 1,070 B) | 8,165 | Global | ✅ permissive | TTS, STT and speech-to-speech on **Apple Silicon** via MLX. The practical choice when the client's constraint is "it must run on the teacher's MacBook", which in private-school and university faculty estates is common. Pushed 2026-10-31. |
+| [denizsafak/abogen](https://github.com/denizsafak/abogen) | **MIT** (file, 1,069 B) | 6,179 | Global | ✅ permissive | *"Generate audiobooks from **EPUBs, PDFs** and text with **synchronized captions**."* Kokoro-82M under the hood. **Synchronised captions are the whole point**: a caption track is simultaneously an accessibility deliverable, a search index and a transcript, and this produces all three from the material a client already owns. The shortest path from "here is our textbook" to an accessible audio course. |
+| [collabora/WhisperLive](https://github.com/collabora/WhisperLive) | **MIT** (file, 1,085 B, "Vineet Suryan, **Collabora Ltd.**") | 4,339 | **EMEA** | ✅ permissive | Near-real-time Whisper: live transcription and captioning of lectures, with TensorRT and OpenVINO backends. **Region placed from the licence file's own copyright line** — Collabora Ltd. is a UK company. Live captioning is an accessibility obligation in most EMEA higher-education estates. |
+| [gradio-app/fastrtc](https://github.com/gradio-app/fastrtc) | **MIT** (file, 1,071 B) | 4,637 | Global | ✅ permissive | *"The python library for real-time communication."* The plumbing a **spoken** tutor needs — WebRTC audio in and out with STT/TTS hooks — rather than another model. The missing piece between a text tutor and a conversational one. |
+| [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** (file, 1,079 B) | 4,119 | Global | ✅ permissive | The **Free Spaced Repetition Scheduler** — a modern, ML-fitted replacement for SM-2, used as Anki's scheduler. **The retention layer's algorithm, permissively licensed**, where `anki-mcp-server` on the agent shelf only gives an agent control of the Anki *application*. 165 forks, 8 open issues. Build FSRS in; do not invent a review schedule. |
+
+## Deck and document generation — extending the fourth pass's layer
+
+The fourth pass found `ppt-master` (MIT, 71,498★) through a listicle. The
+capability sweep confirms it sits in a **cohort**, which matters because
+single-repo dependencies on a 71k★ project with unverifiable provenance are a
+risk a client will ask about.
+
+| Repo | Licence | ★ | Region | Build-on? | What it is |
+| --- | --- | --: | --- | --- | --- |
+| [iOfficeAI/OfficeCLI](https://github.com/iOfficeAI/OfficeCLI) | **Apache-2.0** (file, 11,375 B) | 32,854 | Global | ✅ permissive | *"The first and best Office suite purpose-built for AI agents to read, edit and automate"* — DOCX, XLSX, PPTX from a CLI. The **agent-facing** alternative to `ppt-master`'s generate-from-scratch model: it edits the client's existing documents in place, which is what "update our 400 lesson plans" actually requires. C#, single binary, no Office install needed; 2,234 forks, created 2026-03-15. |
+| [dream-num/univer](https://github.com/dream-num/univer) | **Apache-2.0** (file `dev/LICENSE`, 10,173 B) | 22,832 | Global | ✅ permissive | *"The Office Harness for AI Agents"* — embeddable spreadsheets, docs, slides and canvas as an SDK. Branch **`dev`**. Use when the deliverable is an **in-product editing surface** (a worksheet the student fills in) rather than a file. |
+| [genspark-ai/genoffice](https://github.com/genspark-ai/genoffice) | **Apache-2.0** (file, 11,345 B) | 11,418 | Global | ✅ permissive | *"Free, open-source AI Office suite"* — Docs, Sheets, Slides, PDF, Markdown and HTML editors, **local-first**, LibreOffice-backed. Pairs with `PAIDEIA` for a fully offline authoring stack. |
+| [tw93/Kami](https://github.com/tw93/Kami) | **MIT** (file, 1,061 B) | 12,173 | Global | ✅ permissive | *"Layout rules and templates that let AI agents export PDF, PPTX…"* — **typesetting quality**, which is the usual reason generated courseware looks unusable to a teacher. The cheapest fix for the "it works but it looks wrong" objection. |
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | **MIT** (file, 1,070 B) | **75,894** | Global | ✅ permissive | Not a tool — **courseware**. A full AI-engineering curriculum, 13,381 forks, #1 on GitHub Trending 2026-05-24. **MIT means a client's internal academy can fork, rebrand and extend it**, which is the single fastest route to a credible AI-upskilling programme and is worth more to a corporate-L&D buyer than any generator on this page. Rejected from the agent shelf (see [`../agents/top.md`](../agents/top.md)) because it has no learner model. |
+
+**How this layer changes the economics.** The content-production layer generates;
+this layer **ingests what the client already owns**. That ordering is the
+commercial point: an engagement that starts by generating new material competes
+with the client's own faculty, while one that starts by ingesting the existing
+textbook, past papers and lecture notes is **migration work**, which is easier to
+scope, easier to value and impossible for the client to do with a chatbot
+subscription. Pattern **P-570-A** wires the two together.
 
 ## The LMIC supply side — `AI-for-Education` (closes a three-pass gap)
 
@@ -233,14 +291,25 @@ licence-clean routes are:
 - **No open-source learning-analytics *dashboard* was located**, only the LRS
   (`ralph`) that feeds one. The presentation layer of learning analytics appears
   to be entirely commercial; not re-verified this pass.
-- **Horizontal tooling is systematically under-covered, and the cost is now
-  quantified.** `ppt-master` — **MIT, 71,498★**, the largest permissive repo in
-  this KB — went unfound for four passes because every sweep filtered on an
-  education topic and it carries none. The same blind spot presumably hides
-  document parsers, TTS pipelines, assessment-item generators and video tooling
-  that education depends on and nobody tags `education`. **Next pass: sweep by
-  capability (`topic:pptx`, `topic:text-to-speech`, `topic:pdf`, `topic:ocr`,
-  `topic:scorm`) crossed with licence, not by industry topic.**
+- ~~**Horizontal tooling is systematically under-covered.**~~ **Swept and closed
+  on the fifth pass — and the prediction was an understatement.** The fourth pass
+  guessed the blind spot hid "document parsers, TTS pipelines, assessment-item
+  generators and video tooling". The capability sweep returned **sixteen
+  permissively licensed repositories, five of them above 30,000★ and three above
+  69,000★** — `PaddleOCR` (92,024), `MinerU` (82,860), `tesseract` (77,267),
+  `ai-engineering-from-scratch` (75,894), `docling` (69,909), `OfficeCLI`
+  (32,854), `opendataloader-pdf` (30,129). **The horizontal layer is larger than
+  the entire education-specific supply in this KB combined**, and it had been
+  invisible for four passes to a filter nobody questioned. Two sub-gaps remain
+  open: **assessment-item generators** returned nothing permissive and
+  education-specific, and **video tooling** was not swept (`MoneyPrinterTurbo`,
+  MIT, 136,744★, surfaced incidentally and is short-form social video, not
+  lecture content — it is not shelved and should not be treated as courseware).
+- **The generalisable lesson, since it will recur in every other industry KB:**
+  a sweep filtered on an industry topic measures *how a repository markets
+  itself*, not what it does. The tools an industry runs on are usually tagged by
+  **capability**, because their authors are selling to everyone. Sweep both axes
+  or report an undercount.
 - **`ulearn`'s maturity is unassessed beyond its stack.** 701★ MIT is the largest
   permissive LMS found and Laravel 5.8 is five major versions behind. Nobody
   should be told it is a starting point without an upgrade estimate attached.

@@ -6,22 +6,37 @@ updated: 2026-10-31
 
 # Top AI agents for education
 
-Every row below was verified on 2026-10-31. **The fourth pass changed the
-verification method again, and this time decisively:** star counts and metadata
-come from the **GitHub REST index** (`search_repositories` via MCP,
-`minimal_output: false`), and **licences are now read from the licence file
-itself** over `raw.githubusercontent.com`, which answers HTTP 200 from this
-session while `api.github.com` and `github.com` HTML both return 403. Earlier
-passes could read only GitHub's *determination* of a licence; this one reads the
-**text**, with byte counts recorded. Twenty-one licence files were read.
+Every row below was verified on 2026-10-31. **The fifth pass swept the axis the
+fourth pass named as blind: capability topics rather than industry topics.** The
+fourth pass closed with an explicit instruction — *"sweep by capability
+(`topic:pptx`, `topic:text-to-speech`, `topic:pdf`, `topic:ocr`) and licence, not
+only by industry topic"* — and that sweep returned a large, permissively licensed
+**horizontal supply layer** which is shelved in
+[`../repos/foundations.md`](../repos/foundations.md), not here, because none of it
+is an education agent.
 
-**Nineteen agents qualified, up from fourteen.** The five new rows were not a
-market movement — they were a **blind axis**. The fourteen-row shelf was swept
-from `topic:ai-tutor` and `topic:agent-skills topic:education`; adding
-`topic:ai-education stars:>150 pushed:>2026-10-20` returned six repositories of
-which **five were not on the shelf**, the largest at 1,034★. The previous pass's
-saturation reading was true of its axes and false as a claim about the
-population. Six candidates were rejected and are listed with reasons.
+**Twenty-four agents qualified, up from nineteen.** The five new rows came from
+two axes the industry-topic sweeps cannot reach:
+`topic:intelligent-tutoring-system` and `topic:learning-analytics`. Both are
+small populations (5 repositories each above the star floor) and **both were
+unswept in four passes** — which is why a 135★ WWW-2025 oral-track system and the
+KB's **first verifiable EMEA-origin education agent** were both missing.
+
+**Two standing gaps moved this pass:**
+
+- **EMEA agent origin is no longer empty.** `thm-mni-ii/feedbacksystem` is
+  **Apache-2.0** and its licence file reads *"Copyright 2021 Technische
+  Hochschule Mittelhessen"* — a named German university, in the grant itself.
+- **Region became recoverable for institutional publishers.** See the method note:
+  the licence file's copyright line places a repository when the holder is an
+  **institution**, and the seven rows this KB records as `Global` were re-probed
+  against that instrument and **stay Global** — their holders are individuals.
+
+**The `topic:ai-education` axis is now genuinely saturated**, which is a
+different claim from the one the previous pass retracted. Re-running the fourth
+pass's own discovery query (`topic:ai-education stars:>150 pushed:>2026-10-20`)
+returns the **same 6 repositories**, all already shelved. The axis is exhausted;
+the population is not, and the capability sweep is the proof.
 
 ## The shelf
 
@@ -46,6 +61,11 @@ population. Six candidates were rejected and are listed with reasons.
 | Cram Engine | [liuliu667/cram-engine](https://github.com/liuliu667/cram-engine) | MIT | 176 | APAC | A **four-stage interactive cram skill grounded in learning science**: get the material understood, retained, and usable on exam answers inside a fixed time budget. Chinese-language; topics `learning-sciences`, `aied`. Created 2026-06-06. Shelved because it is the only row that models **time-boxed revision** — the request a client actually receives before an exam season. MIT, `main/LICENSE` 1,064 B. |
 | OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT | 158 | Global | Block-based adaptive learning workspace that runs **locally**: upload material, get notes, quizzes, flashcards and an adaptive tutor, over 10+ LLM providers, with a knowledge graph. Python/TypeScript, 38 forks. **Star-count correction:** an earlier cycle of this KB recorded OpenTutor at ~900★; the API says **158**. The earlier figure was wrong. |
 | Pedagogy Benchmark | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | 13 | EMEA | Not a tutor — an **evaluator**. 1,143 questions from real teacher-qualification exams: CDPK (920, general pedagogy) and SEND (223, Special Educational Needs and Disabilities). Code for *Benchmarking the Pedagogical Knowledge of Large Language Models*. Its parent organisation is the LMIC-focused supply side this KB spent three passes failing to find — see [`../repos/foundations.md`](../repos/foundations.md). |
+| GenMentor | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | **CC0-1.0** | 135 | Global | **Peer-reviewed, and released into the public domain — the most permissive grant in this KB.** Official code for *"LLM-powered Multi-agent Framework for Goal-oriented Learning in Intelligent Tutoring System"*, **WWW 2025 Industry Track, accepted as an Oral presentation**. Goal-oriented tutoring: it works backwards from a stated learner goal to a skill gap to a path. TypeScript, 23 forks, created 2024-11-16, pushed 2026-10-30. `main/LICENSE`, **7,048 B: "Creative Commons Legal Code — CC0 1.0 Universal"** — a public-domain dedication, so a derivative needs neither attribution nor share-alike. **The one row on this shelf with both an academic citation and no licence friction at all.** Same owner as `SocialCoach`; origin not stated, recorded Global. |
+| tutor-mcp | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | MIT | 61 | Global | **The attach-boundary tutor: an MCP server that turns any LLM into an intelligent tutoring system.** Implements **Bayesian Knowledge Tracing** behind the MCP protocol, so the mastery model lives in the server and the model is swappable — the inverse of every app-shaped row here. **Go**, 10 forks, created 2026-03-30, pushed 2026-10-31. `main/LICENSE` 1,073 B, "Copyright (c) 2026 Arnaud Guiovanna". Shelved below the usual star bar for one reason: it is the only asset in this KB that puts a **real BKT scheduler** on the permissive side of an attach boundary, which is exactly what pattern [`P-568-A`](../compose/patterns.md) has had to hand-roll. Origin not stated. |
+| Knowledge Spaces | [vanderbilt-data-science/knowledge-spaces](https://github.com/vanderbilt-data-science/knowledge-spaces) | MIT | 30 | **North America** | **Region placed from the licence text, not inferred.** `main/LICENSE` 1,090 B: *"Copyright (c) 2025 **Vanderbilt Data Science Institute**"*. Ten Claude Code skills implementing the full **Knowledge Space Theory** pipeline: course materials → knowledge graph → adaptive assessment → personalised materials → just-in-time instruction planning. Python, 5 forks, created 2026-02-12. **The only row where a named research university publishes an agent-skill bundle permissively** — which makes it the reference citation when a North American institutional client asks whether this is academically grounded. Small and young; cite it, do not stake a deployment on it. |
+| THM Feedbacksystem | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | Apache-2.0 | 24 | **EMEA** | **The EMEA-origin gap, open for four passes, closes here.** *"Intelligent, personalised feedback for students using artificial intelligence"* — automated checking and feedback on student submissions, in production use in university teaching. TypeScript, 10 forks, default branch **`dev`** (no `main`), created 2018-08-17, pushed 2026-10-28. `dev/LICENSE` 10,785 B: *"Copyright 2021 **Technische Hochschule Mittelhessen** — Licensed under the Apache License, Version 2.0"*. **Read the caveat as loudly as the finding:** 244 open issues on 24 stars, and an eight-year-old codebase that predates LLM tutoring entirely. This is a **provenance** asset and a reference deployment for a European university conversation — it is not a product to ship. |
+| Paideia | [OPTIMETA/PAIDEIA](https://github.com/OPTIMETA/PAIDEIA) | MIT | 91 | Global | **Fully local exam readiness — the data-residency answer.** A Claude Code plugin that *"forms exam readiness locally. Stop renting your own learning."* Runs on **Ollama** with **Qwen3-VL** for vision, does its own **OCR**, and writes into **Obsidian** markdown; maths and physics. Python, 4 forks, created 2026-04-21, pushed 2026-10-31. `main/LICENSE` 1,068 B, "Copyright (c) 2026 Taewoo Park". **Why it matters commercially:** every sovereignty-constrained engagement in this KB — EMEA public sector, Vietnam, Korea — asks for a tutor that sends no student data anywhere, and this is the only row that is local-first by construction rather than by configuration. Holder is an individual, so no region is assigned. |
 
 ### Carried with a known defect
 
@@ -143,6 +163,10 @@ it must *teach*, assume a skill bundle.
 | [AFRICAN-AI-NETWORK/learnhouse](https://github.com/AFRICAN-AI-NETWORK/learnhouse) | **A 0★ fork, and the trap this pass nearly fell into.** It surfaced as the leading hit for an African education-AI search and the organisation name reads as African supply side. It is a fork of [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) (**AGPL-3.0** plus a separate Enterprise Licence, 2.4k★, maintainer Badr B. / `@swve`, country not stated), with 0 stars and 1 fork and no stated African content. The African signal is the **org name only**. Same failure mode as the `NelsonSpencer/canvas-mcp` fork rejected on the previous pass: an organisation name is not provenance. |
 | [profitsylivester-ux/tujifunze-agent](https://github.com/profitsylivester-ux/tujifunze-agent) | **MIT (README), 0★, 11 commits, no releases, empty Languages panel.** LangGraph + MCP + Qwen 2.5 decision-support agent tracking multi-term learner trajectories and producing cited plain-language student profiles with human-in-the-loop oversight. Built for the **African Agentic AI Design Challenge, Education track**; "Tujifunze" is Swahili; no country stated. Below the shelf bar, but **logged as a watch item and as evidence**: it is the first African-context education agent this KB has located in three passes, and its design — citations plus mandatory human review over learner records — is the right shape for ministry work. |
 
+| [anandpatikat/guru-latihan-dinamis](https://github.com/anandpatikat/guru-latihan-dinamis) | **NO LICENCE FILE, 115★ — and the second time a placed regional finding has been blocked by licence rather than by absence.** *"Revolutionizing Indonesian Exam Prep: AI Teacher Tools 2026"* — teacher tools built against **Kurikulum Merdeka**, Indonesia's national curriculum, with `indonesia` and `kurikulum-merdeka` among its topics. TypeScript/HTML monorepo (Hono, Drizzle, Effect-TS, Better Auth), created 2026-06-28, pushed 2026-10-31, 0 forks; built for a hackathon (`cerebral-valley`). All five standard licence filenames probed on `main` over `raw.githubusercontent.com` — **every one 404s**, so default exclusive copyright applies. **The pattern now has three instances** (`dio-agent`, LATAM, 2,750★; `guru-latihan-dinamis`, APAC-Indonesia, 115★; `mcp-canvas-lms`, North America, 104★): *the regionally placed education agents this KB finds are disproportionately the ones with no usable grant.* Recorded as a supply signal — a national-curriculum-aligned agent exists for Indonesia — and as unusable. |
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | **MIT, 75,894★ — the largest MIT-licensed repository this KB has ever located, and not an education agent.** *"Learn AI Engineering! Learn it. Build it. Ship it for others."* Python/Rust/TypeScript, **13,381 forks**, created 2026-03-18, pushed 2026-10-31; reached **#1 on GitHub Trending on 2026-05-24**. `main/LICENSE` 1,070 B, "Copyright (c) 2026 Rohit Ghumare". It is a **curriculum**, not a tutor: no learner model, no assessment loop, no runtime. Logged here rather than shelved because padding the shelf with it would misrepresent the agent population — the same judgement the fourth pass made for `ppt-master`. It is, however, a genuine **courseware asset**: see [`../repos/foundations.md`](../repos/foundations.md). |
+| [ArturoNereu/AI-Study-Group](https://github.com/ArturoNereu/AI-Study-Group) | **NO LICENCE FILE, 1,372★.** A curated resource list ("Resources to learn AI"), surfaced by the prescribed `github trending education AI 2026` search. Both probes on `main` 404. An awesome-list with no grant: read it, link it, copy nothing from it. |
+
 ## Method note — the two channels that work, and the three that do not
 
 **Existence and metadata: the GitHub REST index.** Every repository URL on this
@@ -158,6 +182,44 @@ confirmation to two standing defects. **Read the file, on every plausible
 filename and on every branch** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`,
 `licence`, `COPYING`, against both `main` and `master`. `human-skill-tree` is
 AGPL-3.0 on `master` and 404 on `main`.
+
+**Region, for institutional publishers: the licence file's copyright line.** The
+fourth pass declared owner country unobtainable — `search_users` exposes no
+`location` and `api.github.com` is 403 — and left seven rows `Global`. That
+conclusion was right about *people* and wrong about *institutions*. An
+institutional copyright holder names itself in the grant:
+
+| Read from the licence file | Places |
+| --- | --- |
+| "Copyright 2021 Technische Hochschule Mittelhessen" | `feedbacksystem` → **EMEA** |
+| "Copyright (c) 2025 Vanderbilt Data Science Institute" | `knowledge-spaces` → **North America** |
+| "Copyright (c) 2026 THU-MAIC" (+ `tsinghua.edu.cn` contact) | `OpenMAIC` → APAC |
+| "GIP FUN MOOC" | `openfun/richie` → EMEA |
+| "ENGAGESPHERE TECHNOLOGY PRIVATE LIMITED" | `euron-open-lms` → APAC |
+
+**And the limit is as important as the rule, because it was tested.** All seven
+`Global` rows were re-probed against this instrument this pass. **None resolved**
+— every holder is an individual or a pseudo-collective: "Anatoly Tarnavsky"
+(`anki-mcp-server`), "Zijin Zhang" (`OpenTutor`), "TedKaczynski" (`Papermorph`),
+"Assaf Kipnis" (`Claudemy`), "OrionSheep and WordLink contributors" (`WordLink`),
+"Discover AI contributors" (`AILearningGuide`), and `SocialCoach`'s Apache
+boilerplate, which carries **no copyright line at all**. So: **region is
+recoverable from the licence file if and only if the copyright holder is an
+institution.** Those rows stay `Global`, now for a stated reason rather than for
+want of an instrument. A personal name is not a country — `PAIDEIA`'s holder
+reads Korean and `tutor-mcp`'s reads French, and both are recorded `Global`.
+
+**Two traps in the metadata that a licence column cannot show:**
+
+- **`archived: true`.** `supertone-oss-archive/supertonic` is MIT, 13,757★,
+  1,566 forks — and **archived**, which only the `archived` field says. The
+  licence is clean and the code is frozen. Check the flag before shelving on
+  stars.
+- **An Apache licence with the template placeholders still in it.**
+  `terracotta-education/terracotta`'s `LICENSE` is unmodified Apache-2.0
+  boilerplate, including the literal `Copyright {yyyy} {name of copyright
+  owner}`. GitHub's determination of "Apache-2.0" is correct; the grant names
+  **no licensor**. Usable, and a diligence note.
 
 **Three channels that do not work from this session, each failing in a way that
 could be mistaken for a finding:**
@@ -260,3 +322,47 @@ could be mistaken for a finding:**
   its own corpus**; it cannot ship the one that exists. A tutor in production
   still has no open-source way to detect that it has drifted. This remains the
   clearest unmet build opportunity in the industry.
+
+### Added on the fifth pass
+
+- **The capability axis was swept, and it is where the volume is.** Four queries
+  (`topic:text-to-speech license:mit`, `topic:ocr`, `topic:pptx`,
+  plus `topic:intelligent-tutoring-system` / `topic:learning-analytics`) returned
+  a permissive layer far larger than the entire education-agent population:
+  **docling 69,909★ (MIT), PaddleOCR 92,024★ (Apache-2.0), tesseract 77,267★
+  (Apache-2.0), MinerU 82,860★, OfficeCLI 32,854★ (Apache-2.0)**. None is an
+  education agent and none is shelved here. **The lesson generalises past this
+  KB:** the education-specific supply is thin and the *horizontal* supply that
+  education work actually runs on is enormous, permissive, and invisible to every
+  industry-topic sweep. Shelved in
+  [`../repos/foundations.md`](../repos/foundations.md).
+- **`topic:ai-education` is saturated — and this is the narrow claim, not the one
+  that was retracted.** The fourth pass's own discovery query re-run this pass
+  returns the identical 6 repositories, all shelved. Stating it as "the axis is
+  exhausted" is supportable; stating it as "the population is covered" is the
+  error the fourth pass corrected, and the capability sweep above is why.
+- **No education-specific agent *observability* or *runtime regression* tooling
+  was found — sixth consecutive pass.** Two differently shaped queries returned
+  nothing new: a text search for evaluation/benchmark assets under
+  `topic:education` returned **0 results**, and the ITS/learning-analytics sweeps
+  surfaced no monitor. **But the gap is now one notch less absolute**, and the
+  asset that narrows it is not an AI tool:
+  [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta)
+  (**Apache-2.0**, 21★, Java) is an **LTI-attached randomised-controlled-trial
+  platform** for education research — random assignment, treatment variation
+  inside real assignments, consent hidden from the teacher, non-consenting
+  participants filtered from exports, identifiers stripped. That is **efficacy
+  measurement**, not drift detection: it answers "did this intervention work",
+  which no other asset in this KB does, and it still does not answer "has the
+  tutor in production degraded since Tuesday". Both are needed; one now exists.
+- **The regional-supply finding sharpened into something uncomfortable.** Across
+  five passes, the education agents this KB has managed to place in a region are
+  **systematically the licence-defective ones** — `dio-agent` (LATAM, 2,750★, no
+  licence), `guru-latihan-dinamis` (Indonesia, 115★, no licence),
+  `mcp-canvas-lms` (North America, 104★, no licence file). The regionally
+  *placeable* and the legally *usable* sets barely intersect, and the reason is
+  structural: regional provenance is easiest to read off hackathon and community
+  projects, which are the least likely to have had a licence conversation. **For
+  a client this means the local-supply story and the build-on-it story are
+  usually about different repositories**, and conflating them is the most
+  expensive mistake available on this page.
