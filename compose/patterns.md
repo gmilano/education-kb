@@ -11,7 +11,7 @@ with its licence named, and every pattern obeys the one hard constraint of this
 industry: **the platform of record is copyleft, so you attach to it, you do not
 fork it.**
 
-Shared rule for all five patterns — the licence boundary:
+Shared rule for all seven patterns — the licence boundary:
 
 ```
   [ client's LMS of record ]          GPL-3.0 / AGPL-3.0  ← never forked, never patched
@@ -25,6 +25,24 @@ Shared rule for all five patterns — the licence boundary:
             │
   [ Globant-built layer ]             your licence, your IP
 ```
+
+**Shared step 0 — licence preflight (half a day, added 2026-10-31, second pass).**
+Before any component enters a statement of work, fetch its **licence file** and
+record branch and path. Do not accept a sidebar or a README sentence. The second
+pass ran this on six repos and four came back different from the sidebar
+reading, including one with **no licence file at all** while its README claimed
+MIT (`DMontgomery40/mcp-canvas-lms`). The failure modes are specific:
+
+- *no licence file* → default exclusive copyright. **Disqualified**, regardless
+  of the README.
+- *wrong version* → `openSIS-Classic` is GPL-**2.0**, not GPL-3.0: no patent
+  grant, and incompatible with GPL-3.0-only code in the same binary.
+- *unparsed but present* → Odoo (LGPL-3.0) and `frappe/education` (GPL-3.0) both
+  name no licence in the sidebar and are perfectly licensed in the file.
+
+One `curl` per dependency, written into the SoW appendix. It is the cheapest
+risk control in this document and it has already caught a real defect. See
+[`../intel/trends.md`](../intel/trends.md) for the measured results.
 
 ---
 
@@ -193,6 +211,115 @@ starting; it is that it already started without them.
 
 ---
 
+## P-568-F — Africa: national strategy to institutional policy, offline-first (8–10 weeks)
+
+**For:** a ministry or university system in a country with a national AI
+strategy on paper and no institutional capacity behind it. **Region: EMEA**
+(Africa sits inside the EMEA value — see
+[`../intel/market.md`](../intel/market.md)).
+
+**Why this pattern now exists.** The first pass of this KB declared "no
+Africa-specific pattern" because the *demand evidence was missing*, while naming
+Kolibri as the obvious component. The second pass found the evidence, so the
+pattern can be written: **AU Continental AI Strategy** names education a
+priority sector; **Zimbabwe** (National AI Strategy 2026–2030) and **Ghana**
+(2025–2035, plus a July 2026 draft curriculum putting **AI literacy in
+kindergarten through Primary 6**) have funded mandates; and only **14%** of
+higher-education respondents can confirm their institution has an AI policy,
+against **69% who do not know** (Frontiers, 2026).
+
+**The two constraints that shape it:** connectivity cannot be assumed, and the
+deficit is *institutional awareness*, not tooling. A cloud-first tutor
+deployment answers neither.
+
+**Wiring — permissive and offline-capable end to end:**
+1. **Delivery substrate** —
+   [`learningequality/kolibri`](https://github.com/learningequality/kolibri)
+   (**MIT**, 1.2k★). Offline-first by design; the only platform in this KB built
+   for intermittent connectivity. MIT means the deployment and any derivative
+   stay licence-clean.
+2. **Institutional corpus** —
+   [`DSpace/DSpace`](https://github.com/DSpace/DSpace) (**BSD-3-Clause**, 1.1k★)
+   as the repository of record for curriculum material, theses and local
+   language content. Permissive, so a client-specific derivative is permitted —
+   see P-568-G.
+3. **Model hosting** — local/edge inference, not an API dependency. The
+   connectivity constraint and the data-residency question resolve the same way.
+4. **Curriculum alignment artefact** — the **Ghana KG–P6 AI-literacy curriculum
+   draft** is the most procurement-ready single item in the region. Build the
+   content packs against it; they are reusable across Anglophone systems.
+5. **Policy instrumentation** — the deliverable that closes the 69%
+   don't-know gap is *not* software: an institutional AI policy template derived
+   from the national strategy, plus the training records and usage telemetry
+   (xAPI → [`openfun/ralph`](https://github.com/openfun/ralph), MIT) that prove
+   it is live. Ship this *first*; it is what the mandate is actually missing.
+6. **Quality gate** —
+   [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+   (MIT), whose **SEND** subset (223 questions) matters in systems with limited
+   specialist-teacher provision.
+
+**Why it holds up:** steps 1, 2, 5 and 6 are MIT or BSD-3-Clause — **the only
+pattern in this document with no copyleft component anywhere in it**, because
+Africa's institutions are less likely to be locked to an incumbent Moodle or
+Canvas estate. That is the one structural advantage of a late-starting market.
+
+**Sell it on the strategy, not the software.** The buyer has a national mandate
+and no implementation path. Lead with step 5.
+
+**Caveats, stated plainly.** South Africa's draft National AI Policy status is
+**contested** (Gazette Notice 3880 of 2026 versus a tracker marking it
+withdrawn) — do not build a pitch on it without the primary record. Namibia has
+no national strategy at all. And the **supply side of this region is unmapped**:
+no African education platform or agent repository appears anywhere in this KB,
+so every component above is imported. Partnering locally is a gap-closing move,
+not a courtesy.
+
+---
+
+## P-568-G — Permissive research-corpus agent on DSpace (4–6 weeks)
+
+**For:** a university that wants AI discovery over its own scholarly output —
+theses, datasets, faculty publications, grey literature — and wants to **own the
+result**. **Regions:** all.
+
+**Why this is the exception in this document.** Every other pattern here is an
+*attachment* to something Globant may not fork. This one is not.
+[`DSpace/DSpace`](https://github.com/DSpace/DSpace) is **BSD-3-Clause** —
+verified in the sidebar and in `LICENSE` on `main` ("Copyright (c) 2002-2021,
+LYRASIS") on 2026-10-31. It is the **only platform of record in this KB that
+permits a proprietary derivative.** If a client needs owned IP in the substrate
+rather than beside it, this is the one place in the education stack where that is
+available, and it happens to sit on the corpus a RAG agent most wants.
+
+**Wiring:**
+1. **Substrate** — DSpace (BSD-3-Clause). Fork or extend freely; the derivative
+   may stay closed. Java.
+2. **Retrieval layer** — build it *into* the repository rather than beside it,
+   which the licence permits and which is why this pattern is shorter than
+   P-568-A: no LTI handshake, no plugin approval, no change-control queue on
+   someone else's AGPL platform.
+3. **Agent surface** — reuse the MCP shape the rest of the field has
+   standardised on (four of six agents in [`../agents/top.md`](../agents/top.md)
+   are MCP servers) so the corpus is reachable from whatever assistant the
+   institution adopts later. Do not invent a bespoke connector.
+4. **Course-facing delivery** — when results need to appear inside the LMS,
+   attach *that* step with [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs)
+   (Apache-2.0). The copyleft boundary applies to the LMS, not to DSpace.
+5. **Library-system adjacency** — if the engagement also touches the catalogue,
+   [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha) is **GPL-3.0**:
+   back inside the attach-don't-fork rule. Note Koha takes contributions through
+   its **own bug tracker, not GitHub issues** — plan the upstreaming path.
+
+**The trap to avoid:** DSpace's permissive licence tempts a full fork. Fork only
+what the retrieval layer needs and track upstream, or the client inherits a
+maintenance burden on a Java platform in exchange for IP they may not need.
+
+**Honest sizing.** DSpace is 1.1k★ — an order of magnitude below Moodle or
+Canvas. This is a narrower engagement than the LMS patterns and should be priced
+and pitched as such. Its value is the licence position, not the market size.
+
+---
+
 ## APAC note — no standalone pattern, and why
 
 APAC is the most deadline-driven region (Korea's AI Basic Act in force
@@ -218,6 +345,21 @@ Two APAC-specific build notes:
 - **No pattern for Blackboard, Brightspace or Google Classroom.** No agent
   population for these platforms reached verification this run, so no recipe is
   offered rather than a speculative one.
-- **No Africa-specific pattern.** No African education-AI findings surfaced this
-  run; `learningequality/kolibri` (MIT, offline-first) is the obvious component
-  for low-connectivity deployments but the regional demand evidence is missing.
+- ~~**No Africa-specific pattern.**~~ **Closed on the second pass of
+  2026-10-31**: the regional demand and policy evidence was found, and the
+  pattern is written up as **P-568-F** above, with Kolibri (MIT) as predicted
+  plus DSpace (BSD-3-Clause). Its own caveats are stated in place.
+- **No Canada pattern, deliberately.** Canadian findings are now in
+  [`../intel/market.md`](../intel/market.md), but the two engagement shapes are
+  **P-568-C run per board** (Ontario — ~58% of boards have no student AI policy
+  and no ministry template is coming) and a reinstatement case in Quebec, where
+  a **March 2025 directive suspended AI assistants**. Same artefacts, different
+  trigger, so no new recipe — but **francophone delivery is a hard requirement**
+  in Quebec, which is a staffing constraint rather than a technical one.
+- **No pattern uses an EMEA-origin or LATAM-origin agent**, because none is
+  shelved — the agent layer is imported in both regions while the attachment
+  layer is local (`ralph`/France, H5P/Norway, Tutor/France, `ltijs`/Brazilian
+  maintainer). See [`../agents/top.md`](../agents/top.md).
+- **Africa's supply side is unmapped.** P-568-F composes entirely imported
+  components. Until an African education repo is verified, local partnership is
+  part of the pattern rather than an optional extra.

@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (second pass) — one real discovery, found by changing method rather than watching stars
+
+**Framing, so the trend record stays honest:** written the same day as the
+section below, so **no star movement is claimed and no trending-digest position
+is restated**. Everything here came from fetching licence **files** and from
+checking a repository category the earlier pass had not looked at. Three of the
+four findings are corrections to this KB's own record.
+
+### The discovery: DSpace is BSD-3-Clause
+
+[`DSpace/DSpace`](https://github.com/DSpace/DSpace) — **BSD-3-Clause**, 1.1k★,
+Java, "(Official) The DSpace digital asset management system that powers your
+Institutional Repository." Licence confirmed in the sidebar **and** in `LICENSE`
+on `main` ("BSD 3-Clause License, Copyright (c) 2002-2021, LYRASIS").
+
+This matters out of proportion to 1.1k★. Every other platform of record in this
+KB is GPL or AGPL — Moodle, Open edX, Canvas, Chamilo, Tutor, i-educar,
+`frappe/education`, Koha. DSpace is the **only one that permits a proprietary
+derivative**, and it holds the corpus a RAG agent most wants: theses, datasets,
+faculty output, grey literature. It narrows this KB's standing claim that no
+permissive platform of record exists — that is now true of the **LMS** category
+only, not of the institutional repository, where the permissive option *is* the
+category leader. New pattern **P-568-G** in
+[`../compose/patterns.md`](../compose/patterns.md) is built on it.
+
+It did not surface by watching stars or trending digests. It surfaced because
+the earlier pass listed DSpace among "adjacent systems named but not verified"
+and this pass went and verified it. **Declared gaps are a better lead source than
+the trending feed.**
+
+### Three corrections to this KB's record, all from reading licence files
+
+| Repo | Recorded as | Actually | Why it matters |
+| --- | --- | --- | --- |
+| [`odoo/odoo`](https://github.com/odoo/odoo) (55.4k★) | unverified, "canonical ERP example" only | **LGPL-3.0** (`LICENSE`, branch `20.0`) | Closes a declared gap. Sidebar names **no** licence. Explains `openeducat`'s LGPL-3.0 by inheritance. |
+| [`frappe/education`](https://github.com/frappe/education) (687★) | "Not named on repo page — confirm before use" | **GPL-3.0** (`license.txt`) | GPL-3.0, *not* AGPL-3.0 like Frappe's other projects. Resolved. |
+| [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) (347★) | "GPL (per README)" | **GPL-2.0** (`docs/License.txt`) | Version is load-bearing: GPL-2.0 has no patent grant and is incompatible with GPL-3.0-only code. |
+
+Also newly verified: [`Koha-Community/Koha`](https://github.com/Koha-Community/Koha)
+— **GPL-3.0 or later**, 597★, integrated library system; contributions go through
+the project's **own bug tracker, not GitHub issues**, which changes any
+upstreaming plan.
+
+### The method finding, which outlasts the individual facts
+
+Six repos were checked by file rather than by sidebar; **four disagreed with the
+sidebar reading**. A sidebar that names no licence hides three different
+conditions that look identical: present-but-unparsed (Odoo, Frappe),
+present-but-a-different-version (openSIS), and **no grant at all**
+(`DMontgomery40/mcp-canvas-lms` — see [`../agents/trending.md`](../agents/trending.md)).
+Only fetching the file tells them apart. This is now a standing rule in
+[`../intel/trends.md`](../intel/trends.md) and shared **step 0** of every recipe
+in [`../compose/patterns.md`](../compose/patterns.md).
+
+**Counter-note:** the stricter method did not overturn this KB's structural
+claim. Every correction moved a repo *within* copyleft or into unresolved; none
+moved a platform of record into permissive. DSpace was found by widening scope,
+not by re-reading what was already on the page.
+
+---
+
 ## 2026-10-31 — the trending channel is saturated for platforms; the movement is in agents
 
 **The honest finding: no new foundational education *platform* repo trended this

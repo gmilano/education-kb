@@ -4,6 +4,69 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (second pass) — no new star movement; three licence/verification findings
+
+**Read this as verification history, not momentum.** This section was written
+the same day as the pass below it, so **no new agent appeared and no star count
+is restated** — DeepTutor's 52.0k★ reading from the earlier section stands as the
+day's figure. What changed is what is *known* about the shelf. Recorded here
+because the trend this file exists to capture includes how reliable the record
+is, and because the next pass should not re-derive any of it.
+
+### 1. A shelved agent has no licence at all
+
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms)
+(104★) was shelved on the earlier pass as "MIT (README; not in sidebar)". Fetching
+the file shows the README's own link is broken: `LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `LICENCE`, `COPYING` and `license` all **404 on both `main` and
+`master`**. The README says *"MIT License - see [LICENSE](LICENSE) file for
+details"* and that file does not exist, so the default is exclusive copyright.
+**Downgraded to licence-unresolved** in [`top.md`](top.md); use
+`vishalsachdev/canvas-mcp` (MIT, LICENSE present) instead. This is the first
+outright licence defect found in this KB's agent shelf.
+
+### 2. First EMEA-origin education agent located — and it does not qualify
+
+[`braiinz94/braiinz-education`](https://github.com/braiinz94/braiinz-education) —
+**Apache-2.0** code with **CC-BY-SA-4.0** content, **0★**, `v0.1 alpha`, 37
+commits, no releases. Three named agents (Tuteur Socratique, Coach Pratique,
+Diagnostiqueur with FSRS spaced repetition), a French-curriculum pack,
+PISA-aligned diagnostics, tests and CI. **Not shelved** — 0★ alpha is below the
+bar applied to everyone else — but logged as a **watch item**, for two reasons
+worth carrying forward:
+
+- It is the **only EMEA-origin education agent found in two passes**. The shelf
+  is 3× North America, 2× APAC, 1× Global and **zero EMEA**, which is a regional
+  hole the earlier pass did not name and [`top.md`](top.md) now declares.
+- Its **dual code/content licence split** (permissive code, share-alike
+  curriculum) is the right shape for curriculum work and is not something any
+  shelved agent does. Worth watching as a pattern even if this repo stalls.
+
+Re-check next pass: stars, a tagged release, and whether the roadmap's
+evaluation harness lands.
+
+### 3. LATAM agent gap re-confirmed by a second search strategy
+
+The earlier pass declared no LATAM-origin education agent. Re-searched in
+Spanish/Portuguese terms (`open source education AI agent LATAM Brazil Spanish
+github MIT 2026 tutor`) — still nothing. The region's flagship open-source AI
+asset is **Latam-GPT** (Chile-led consortium, Spanish and Portuguese primary
+content), which is a **model, not a tutor**, and whose licence was not
+established from the sources seen. Two independent strategies now support this
+gap: treat it as a real absence, not a missed query. *(Contrast with the LATAM
+**regulatory** gap, which a Spanish-language search did close — see
+[`../intel/market.md`](../intel/market.md).)*
+
+### Aggregator reliability — a second data point
+
+A search result on this pass asserted **DeepTutor is MIT**. The repository
+sidebar says **Apache-2.0**, which is what this KB records. The earlier section
+below documented aggregators getting DeepTutor's *star count* wrong across a
+17.8k–42k spread; they get the *licence* wrong too. Verify on the repository
+page, and for anything Globant will build on, in the licence **file**.
+
+---
+
 ## 2026-10-31 — DeepTutor is the week's story, and it is a genuine breakout
 
 **Headline:** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0)

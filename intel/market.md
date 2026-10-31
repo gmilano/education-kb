@@ -49,6 +49,10 @@ the sales thesis:
 | Region | Adoption | Governance | Source |
 | --- | --- | --- | --- |
 | North America | 60% of US teachers use AI tools | Most US public schools still lack formal student AI policies | Gallup; Child Trends / US Dept. of Education |
+| EMEA (schools) | **63%** of EU teachers use AI at least partly to generate explanations or practice exercises; **41%** do not use it for grading/summative assessment at all | Only **~30%** of EU teachers have had AI-focused training; only **~1/3** of national curricula include AI competences | European Commission, School Education Gateway teacher survey, Apr 2026 (n=1,130, secondary-skewed) |
+| EMEA (schools, independent corroboration) | **63%** teacher AI use | — | Sanoma Learning European Teacher Survey 2026 — **20,000+ teachers across 14 countries** |
+| EMEA — UK | — | **49%** of schools have no AI policy for staff *or* students | National Education Union, via secondary reporting |
+| EMEA — Africa (higher ed) | — | **14%** confirm an institutional AI policy; **17%** report none; **69% do not know** | Frontiers in Education study, 2026 |
 | EMEA + North America (higher ed) | — | ~70% of institutions have or are developing guidance | secondary summary |
 | LATAM (higher ed) | 87% of institutions use AI in ≥1 area | Only 26% have a formal AI strategy | UNESCO IESALC / UNU-IAS, 200 institutions across 19 countries |
 | APAC | China, India, Japan lead the regional market | Patchwork: binding law in Korea/Vietnam, light-touch in Japan/Singapore/Australia | Ken Research; Latham & Watkins |
@@ -80,9 +84,50 @@ region) and an xAPI/LRS audit trail that evidences compliance. The grade-9
 threshold in NY-style bills makes **age-gating and per-cohort policy enforcement**
 a concrete, specifiable deliverable.
 
+#### Canada (inside North America — not a separate region value)
+
+**Closing the first pass's "Canada is effectively unrepresented" gap.** The
+structural fact is constitutional: **education is exclusively provincial in
+Canada, so there is no national policy and there will not be one.** The federal
+level does not have the jurisdiction, and provincial education ministers'
+discussion of AI at their **June 2026 council meeting in Quebec City** was
+reportedly marked by friction over federal overreach. Plan per province.
+
+- **Quebec — the furthest along, and the most restrictive.** A **November 2024**
+  Ministry of Education guide covers pedagogical, ethical and legal questions
+  for education staff. A **March 2025 government directive suspended the use of
+  AI assistants**. A separate *Prêt pour l'IA* report sets out **12
+  recommendations** for responsible use. Quebec is the one jurisdiction in this
+  KB that has actively *withdrawn* permission — an engagement there starts from
+  reinstatement conditions, not adoption.
+- **Ontario — no province-wide rule, policy made at board level.** The Ministry
+  has issued no Policy/Program Memorandum on AI, and there is no province-wide
+  ChatGPT ban. Individual boards fill the gap: **Upper Canada DSB** and
+  **Kawartha Pine Ridge** have published staff and student guidance, and the
+  Ontario Catholic trustees' association published a **September 2025** policy
+  paper for Catholic boards. A **June 2026 Fraser Institute survey** reported
+  only **42.3% of Ontario school boards have any formal AI policy for students**
+  (secondary source — treat cautiously).
+- **Coverage elsewhere:** a 2023 legislative scan found only **British Columbia,
+  Quebec and Ontario** had taken concrete steps; one later source adds Alberta.
+
+**Opportunity.** Ontario is a **72-board addressable market for the same
+deliverable** — nearly 58% of boards have no student AI policy and no ministry
+template is coming, so the district-policy instrumentation work described above
+for US states applies here without the statutory deadline, sold on liability
+rather than compliance. Quebec is the opposite engagement: a suspension to be
+lifted, where evaluation evidence (`pedagogy-benchmark`) and the *Prêt pour
+l'IA* recommendations are the gating artefacts. **Francophone delivery capability
+is a hard requirement in Quebec**, and it is also what makes the one EMEA-origin
+agent candidate, `braiinz94/braiinz-education` (French curriculum), worth the
+watch item recorded in [`../agents/top.md`](../agents/top.md).
+
 **Players.** State education departments and legislatures, US Dept. of
 Education, teachers' unions (NEA, AFT, California Teachers Association),
-Instructure/Canvas, Khan Academy. Note the contested procurement: North Carolina
+Instructure/Canvas, Khan Academy. **Canada:** provincial ministries (Quebec's
+Ministère de l'Éducation, Ontario's Ministry of Education), the Council of
+Ministers of Education Canada, individual school boards as the real buyers in
+Ontario, Canadian Teachers' Federation, Fraser Institute (research). Note the contested procurement: North Carolina
 lawmakers are defending a USD 10 m earmark in Senate Bill 1006 for Khanmigo —
 evidence that large single-vendor AI tutoring buys are now politically exposed,
 which favours integrator-led, platform-neutral alternatives.
@@ -111,9 +156,88 @@ it the natural substrate for an EU-sovereign build. The OECD's 2026 Digital
 Education Outlook recommending **purpose-built educational AI over
 general-purpose tools** is a direct mandate for vertical work.
 
+**Demand-side evidence — added on the second pass of 2026-10-31, closing the
+gap the first pass declared.** The first pass found no EMEA adoption study. There
+are in fact two, and they agree on the headline number:
+
+- **European Commission, School Education Gateway teacher survey (Apr 2026)**,
+  n=1,130, secondary-skewed: **63%** use AI at least partly for generating
+  explanations or practice exercises, but **41% do not use it for grading or
+  summative assessment at all.** Read those together: European teachers have
+  adopted AI for *preparation* and stayed away from *judgement* — which is
+  exactly the Annex III boundary, reached by professional instinct before the
+  regulation bites.
+- **Sanoma Learning European Teacher Survey 2026**, **20,000+ teachers across 14
+  countries** — an industry survey, but by far the largest sample anywhere in
+  this KB — independently reports teacher AI use at **63%**, and its headline
+  finding is that teachers *want tools built for education*. That is trend 3 in
+  [`trends.md`](trends.md) corroborated at 20k-teacher scale rather than by an
+  OECD recommendation alone.
+- **The capability deficit is training, not willingness:** only **~30%** of EU
+  teachers have had AI-focused training (eunews reports 29.7%) and only **~1/3**
+  of national curricula include AI competences.
+- **Two European Commission reports published 2026-09-22**: one on generative AI
+  in teaching and learning, and the **Eurydice** report *Digital education at
+  school in Europe 2026: Bridging gaps in access, teaching and learning*. These
+  are the authoritative member-state-level source and the right citation for
+  client material. The OECD also published *Empowering Learners for the Age of
+  AI* in June 2026.
+
+**Second EMEA opportunity, from that data.** The gap is **teacher capability**,
+not teacher willingness: 63% use against ~30% trained. Training-plus-tooling as
+a single engagement — purpose-built assistant, teacher enablement, and the
+Annex III oversight evidence produced as a by-product of the training records —
+is specifiable from these numbers alone. The 41%-avoid-grading figure also tells
+you where *not* to aim first.
+
+#### Africa (inside EMEA — not a separate region value)
+
+**This was a declared coverage hole in the first pass. It is activity, not
+absence.** Africa falls inside the EMEA bucket; findings are placed here rather
+than in a new region value.
+
+- **African Union Continental AI Strategy** names education a priority sector —
+  the continental frame any national programme is aligned to.
+- **Zimbabwe** adopted a **National AI Strategy 2026–2030**, six pillars,
+  education among the covered sectors.
+- **Ghana**'s **National AI Strategy 2025–2035** calls for primary-level data
+  science and coding, ethics education and teacher training; a **July 2026 draft
+  computing curriculum revision** adds **AI literacy from kindergarten to
+  Primary 6** — the most concrete curriculum-level mandate found in the region.
+- **South Africa** published a final draft **National AI Policy** in the
+  *Government Gazette* (**Notice 3880 of 2026, 10 April 2026**), including STEAM
+  curricula, community AI centres and a proposed national AI office. **Status is
+  contested:** a separate policy tracker lists the draft as *withdrawn*. Do not
+  cite South Africa as settled policy without checking the Gazette directly.
+- **Mauritius** ran a *National Learn-AI School Innovation Challenge* (2026).
+- **Rwanda** has a National AI Policy but inconsistent institutional adoption.
+  **Namibia** has no cohesive national AI strategy at all.
+- **Institutional governance is near-absent where it matters most:** in the
+  Frontiers higher-education survey, **69% of respondents did not know** whether
+  their institution had an AI policy, 17% said there was none, and only **14%**
+  confirmed one.
+
+**Opportunity.** The 14%-confirmed / 69%-don't-know figure is a *sharper*
+governance deficit than LATAM's 87/26 — and unlike LATAM it sits against named
+national strategies (Zimbabwe, Ghana, Rwanda, South Africa draft) that create
+funded implementation mandates with no institutional capacity behind them.
+National-strategy-to-institutional-policy translation is the engagement shape,
+and the Ghana KG–P6 curriculum revision is the most procurement-ready single
+item. Pair with `learningequality/kolibri` (MIT, offline-first) for
+connectivity-constrained deployment — see
+[`../compose/patterns.md`](../compose/patterns.md) P-568-F.
+
+**Caveat on sources.** The African findings rest on analysis pieces, a
+Wikipedia entry and one peer-reviewed study. A frequently-repeated **USD 3 bn**
+figure for continental AI/STEM centre rollout 2025–2027 is an **advocacy
+estimate, not an official figure** — excluded from any client-facing number.
+
 **Players.** European AI Office, UNESCO, OECD, UK DfE and existing sector
-regulators, KHDA (Dubai). Platform-side: Moodle's European install base, Tutor /
-Open edX (France), H5P (Norway), France Université Numérique (`ralph`).
+regulators, KHDA (Dubai). **Africa:** African Union (Continental AI Strategy),
+national ICT/education ministries of Ghana, Zimbabwe, Rwanda and South Africa,
+CIPESA (policy analysis). Platform-side: Moodle's European install base, Tutor /
+Open edX (France), H5P (Norway), France Université Numérique (`ralph`), OpenOlat
+(frentix GmbH, Switzerland).
 
 ### APAC
 
@@ -153,11 +277,30 @@ adoption driven by individual academics, researchers and students rather than
 institutional strategy, and running ahead of any consistent approach to privacy,
 bias, academic integrity or evaluation.
 
-**Regulatory context.** Fragmented: a 2026 Universidad de los Andes study counted
-**716 AI-related regulatory instruments, rules and legislative proposals across
-23 countries and territories, over 80% initiated since 2023**. Mexico's generic
+**Regulatory context.** Fragmented. The **Universidad de los Andes study, with
+the Konrad Adenauer Foundation, published August 2026**, counted **716
+AI-related regulatory instruments, rules and legislative proposals across 23
+countries and territories, over 80% initiated since 2023** — and its own
+conclusion is the useful part: *legislar rápido no es legislar bien*
+("legislating fast is not legislating well"). **Mexico is the second most
+prolific producer with 126 instruments, behind only Brazil.** Mexico's generic
 AI regulation seeks to replicate the EU risk model (dated ALSUR source — treat as
 such).
+
+**Education-specific regulation — closing the first pass's declared gap.** The
+first pass found none and said so. A Spanish-language search located it, and the
+picture is thin but real:
+
+| Country | Instrument | Binding? | What it does |
+| --- | --- | --- | --- |
+| **Peru** | **Ley N.º 31814 (2023)**, regulated by **Decreto Supremo N.º 115-2025-PCM** | **Yes** | The region's **first and only specific AI law**. The 2025 implementing decree prohibits certain uses and **names education among the sensitive domains**. School-level application detail was not located. |
+| **Chile** | MINEDUC, ***PotencIA el aprendizaje*** (2025) | No — guidance | School-sector orientation document, explicitly not a closed norm. Chile also has a Política Nacional de IA (2021) and a bill in progress (**Boletín 16821-19**) that the current government reportedly does not want passed as drafted. |
+| **Brazil** | **PL 2338** | Not yet | Sources conflict on status: one January 2026 survey says no norm in force, another says no law and no active debate, a third projects entry into force in 2026. **Verify in the Congresso Nacional record before citing.** |
+
+**The honest summary:** Latin America has **no unified regulatory framework for
+AI in higher education**; Chile and Brazil have national AI strategies without
+education-sector regulation, and **Peru is the sole jurisdiction with a binding
+instrument that names education at all.**
 
 **Opportunity.** The 87/26 gap is a directly addressable **institutional AI
 strategy and governance** engagement, and UNESCO's own recommendations name the
@@ -204,22 +347,57 @@ integrator's position rather than a model vendor's.
 
 Recorded explicitly, because a silent gap is indistinguishable from coverage.
 
-- **EMEA: no dedicated EMEA-wide 2026 education-AI adoption study was found.**
-  The search `AI education EMEA 2026 adoption regulation players` returned mostly
-  US state activity and EU regulatory analysis. EMEA adoption evidence above is
-  either EU-regulatory or a blended "Europe and North America" higher-ed figure.
-  A follow-up on EU member-state education guidance or UK DfE policy is the way
-  to close this.
-- **EMEA: Africa is absent.** No African education-AI findings surfaced this run,
-  despite Africa falling inside the EMEA bucket. This is a real coverage hole,
-  not an absence of activity.
-- **LATAM: no education-specific AI regulation was found.** The LATAM regulatory
-  picture above is general AI policy. Education-specific regulatory instruments in
-  the region were not located.
+### Closed on the second pass of 2026-10-31
+
+The first pass declared five gaps. Four are now closed, and the record of how is
+kept so the method is repeatable.
+
+- ~~**EMEA: no dedicated EMEA-wide 2026 adoption study.**~~ **Closed.** Two
+  exist and agree: the **European Commission School Education Gateway teacher
+  survey (Apr 2026, n=1,130)** and the **Sanoma Learning European Teacher Survey
+  2026 (20,000+ teachers, 14 countries)**, both at **63%** teacher AI use. Plus
+  **two Commission reports of 2026-09-22**, including the **Eurydice** report
+  *Digital education at school in Europe 2026*, which is the member-state-level
+  source. *What made the difference:* searching the institution
+  (`European Commission ... survey`) rather than the region acronym — "EMEA" is
+  a Globant bucket, not a term European bodies publish under.
+- ~~**EMEA: Africa is absent.**~~ **Closed.** AU Continental AI Strategy,
+  Zimbabwe's National AI Strategy 2026–2030, Ghana's 2025–2035 strategy plus its
+  July 2026 KG–P6 AI-literacy curriculum draft, South Africa's contested Gazette
+  draft, Mauritius, Rwanda, Namibia — and a **14% / 17% / 69%-don't-know**
+  institutional-policy split. It was a search gap, not an activity gap.
+- ~~**LATAM: no education-specific AI regulation found.**~~ **Closed, and the
+  answer is "almost none, for a reason."** Peru's **Ley 31814 + DS
+  115-2025-PCM** is the only binding instrument naming education; Chile's
+  MINEDUC *PotencIA el aprendizaje* is guidance; Brazil's **PL 2338** status is
+  contested. *What made the difference:* searching in **Spanish**. The
+  English-language query returned nothing because the instruments are not
+  published or discussed in English.
+- ~~**North America: Canada unrepresented.**~~ **Closed, and the finding is
+  structural:** education is exclusively provincial, so there is no national
+  policy to find. Quebec has a 2024 guide and a **March 2025 directive
+  suspending AI assistants**; Ontario has no ministry memorandum and only
+  **42.3%** of its boards have a student AI policy.
+
+### Still open
+
 - **APAC: adoption figures are market-research vendor outputs**, not primary
-  government or institutional survey data.
-- **North America: Canada is effectively unrepresented.** Regional results were
-  almost entirely US; Canadian provincial policy did not surface.
+  government or institutional survey data. This is now the **weakest-evidenced
+  region in the KB** — the EMEA closure above has overtaken it, and APAC is the
+  one region with no primary teacher- or institution-level survey behind its
+  numbers. Priority for the next pass.
+- **South Africa's National AI Policy status is genuinely unresolved** — the
+  Gazette (Notice 3880 of 2026, 10 April 2026) versus a tracker marking the
+  draft withdrawn. Needs the primary Gazette record, not another secondary read.
+- **Brazil's PL 2338 status is contradicted across three sources.** Check the
+  Congresso Nacional record directly.
+- **Market-size figures are still all vendor outputs.** No independent estimate
+  was located in either pass; the USD 10.6–12.3 bn range stands as a range.
+- **Africa has no mapped supply side.** Demand and policy are now evidenced, but
+  no African education platform or agent repository appears anywhere in this KB.
+  See [`../repos/foundations.md`](../repos/foundations.md).
+- **A continental "USD 3 bn" African AI/STEM rollout figure is advocacy, not
+  official** — deliberately excluded from the numbers above.
 - **Vendor-source caveat.** Most trend and market sources in this run are vendor
   blogs or market-research summaries. The UNESCO IESALC figures and the named
   statutes are the most authoritative items on this page; percentages attributed

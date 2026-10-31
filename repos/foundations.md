@@ -40,6 +40,25 @@ integration actually touches.
 | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 153 | EMEA | ⛔ copyleft | The H5P interactive-content runtime. **Licence correction:** earlier passes of this KB recorded H5P as MIT. It is **GPL-3.0**. Norway. |
 | [openfun/ralph](https://github.com/openfun/ralph) | MIT | 51 | EMEA | ✅ permissive | Learning Record Store for learning analytics; consumes xAPI statements. The permissive LRS option. France Université Numérique (France). |
 
+## Adjacent systems of record (added second pass, 2026-10-31)
+
+Not learning platforms, but systems a university or school district already
+runs, and the systems an AI layer is repeatedly asked to search across. Verified
+by reading the repository page *and* the licence file itself.
+
+| Repo | Licence | ★ | Region | Build-on? | What it is |
+| --- | --- | --- | --: | --- | --- |
+| [DSpace/DSpace](https://github.com/DSpace/DSpace) | **BSD-3-Clause** | 1,100 | North America | ✅ permissive | "(Official) The DSpace digital asset management system that powers your Institutional Repository." Java. **The most permissively licensed platform of record found anywhere in this KB** — BSD-3-Clause, confirmed in the sidebar and in `LICENSE` on `main` ("BSD 3-Clause License, Copyright (c) 2002-2021, LYRASIS"). LYRASIS is a US non-profit. |
+| [Koha-Community/Koha](https://github.com/Koha-Community/Koha) | GPL-3.0 | 597 | Global | ⛔ copyleft | "Koha is a free software integrated library system (ILS)." The repo page states GPL v3 *or later* and notes the project uses its own bug tracker rather than GitHub issues — relevant to any contribution plan. Origin country is not stated on the repository page. |
+
+**Why DSpace matters more than its star count suggests.** Every other platform
+of record in education is GPL or AGPL. DSpace is BSD-3-Clause, which means the
+one category where a client *can* have a proprietary derivative is the
+institutional repository — theses, datasets, faculty output, grey literature.
+That is also the corpus a RAG-based research or discovery agent most wants. If
+an engagement needs a licence-clean substrate rather than an attachment, this is
+the only verified place in the education stack where that is available.
+
 ## What this means in practice
 
 A client on Moodle, Open edX, Canvas or Chamilo cannot have AI features
@@ -63,4 +82,19 @@ basis of the recipes in [`../compose/patterns.md`](../compose/patterns.md).
   (Apache-2.0) and Kolibri (MIT) are the largest permissive options and both
   serve narrower jobs than a university LMS. If a client needs a permissive
   substrate, the honest answer is that they will be assembling one, not adopting
-  one.
+  one. **Qualified on the second pass of 2026-10-31:** this holds for the *LMS*
+  category only. For the **institutional repository** category a permissive
+  platform of record does exist and is the category leader —
+  [`DSpace/DSpace`](https://github.com/DSpace/DSpace), **BSD-3-Clause**. The
+  earlier blanket statement was too strong.
+- **Licence hygiene is itself a finding.** Checking licence *files* rather than
+  sidebars on the second pass turned up two defects elsewhere in this KB:
+  `DMontgomery40/mcp-canvas-lms` claims MIT in its README and ships **no LICENSE
+  file at all** (see [`../agents/top.md`](../agents/top.md)), and
+  `frappe/education` — recorded here and in
+  [`../verticals/solutions.md`](../verticals/solutions.md) as licence-unknown —
+  is **GPL-3.0** per its own `license.txt`. Read the file, not the sidebar.
+- **Still open: no African-origin repo appears anywhere on this page.** Regional
+  demand evidence was found on the second pass (see
+  [`../intel/market.md`](../intel/market.md)), but no African education platform
+  or agent repository surfaced. The supply side of that region remains unmapped.
