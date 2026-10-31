@@ -1,8 +1,101 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-30
+updated: 2026-10-31
 ---
+
+## 🆕 `p561` — `2026-10-31` — **🔴 ZERO NEW ADDRESSES, AND THE NULL IS FULLY INSTRUMENTED FOR ONCE: **40 repositories** enumerated off GitHub's own `topic:ai-tutor` (829 tagged) and `topic:ai-education` (565 tagged) pages, star counts and all — 🔴 **every single one that clears this shelf's bar is ALREADY ON IT.** 🟢 That is a saturation measurement with a denominator, not a shrug. 🟢 THE PASS SPENT ITS BUDGET ON GRADING INSTEAD: **25 rows re-read, 4 graded canonical-verbatim that a byte gate flags, 2 instances of `560-D`'s retired mechanism recovered.** 🔵 `560-E`'s DATED WATCHPOINTS ARE **NOT YET DUE**.**
+
+🔵 **This page is append-only.** The grading results live in
+[`../agents/top.md`](../agents/top.md#-p561--2026-10-31) (`561-F`, `561-G`) and the pins in
+[`../repos/foundations.md`](../repos/foundations.md#-p561--2026-10-31) (`561-A`…`561-E`); what is
+recorded here is **supply**, and what supply did this pass.
+
+### 🔴 The supply leg — a null with a denominator
+
+🟢 **Channel: GitHub's own topic pages, read directly.** `topic:` channels were already the
+productive ones (`558-C`) and cannot suffer `560-H`'s adjectival collision, because a topic is an
+assigned label and `-grade` is not a topic.
+
+| channel | tagged total | enumerated this pass | 🔴 new to this shelf |
+| --- | --- | --- | --- |
+| `topic:ai-tutor` | **829** | 20 (page 1 of N) | 🔴 **0** |
+| `topic:ai-education` | **565** | 20 (page 1 of N) | 🔴 **0** |
+
+🔴 **40 of 40 already shelved.** Checked by address against all ten pages:
+[`DeepTutor`](https://github.com/HKUDS/DeepTutor) 51.7k★ ·
+[`Study-Mate`](https://github.com/Miaotofu01/Study-Mate) 1.3k ·
+[`ChatTutor`](https://github.com/HugeCatLab/ChatTutor) 1.3k ·
+[`agents-from-scratch`](https://github.com/pguso/agents-from-scratch) 1.1k ·
+[`Papermorph`](https://github.com/DozenTwelve/Papermorph) 1.0k ·
+[`education-agent-skills`](https://github.com/GarethManning/education-agent-skills) 931 ·
+[`human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) 586 ·
+[`claudemy`](https://github.com/assafkip/claudemy) 552 ·
+[`anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) 539 ·
+[`Bloom`](https://github.com/Li-Evan/Bloom) 295 ·
+[`universal-diagnostic-tutor-skill`](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) 253 ·
+[`freelingo`](https://github.com/artcc/freelingo) 217 ·
+[`ari`](https://github.com/nichochar/ari) 212 ·
+[`cram-engine`](https://github.com/liuliu667/cram-engine) 176 ·
+[`OpenTutor`](https://github.com/zijinz456/OpenTutor) 157 ·
+[`mentingo`](https://github.com/Selleo/mentingo) 102 — and 24 more, all held.
+
+🟢 **Why the denominator matters.** Nine passes of "saturated" on this page have been **leg
+outcomes**: a query returned nothing new. 🟢 **This is the first time the channel's own population
+count is published beside the yield** — 829 + 565 tagged, 40 read, 0 new. 🔴 It also bounds the
+claim honestly: **40 of 1 394 is 2.9 % of the tagged population**, so what is measured is that *the
+high-star head of both topics is exhausted*, **not** that the topics are. 🔵 `558-C`'s paired-sweep
+discipline, applied to a null.
+
+### 🔵 `560-H`'s closure condition, and why it is not discharged here
+
+🟢 **`560-H` asks for one paired free-text leg, with and without the word-boundary filter, both
+yields published.** 🔴 **Not run this pass**, and the reason is recorded rather than glossed: the
+free-text channel on this base runs through `search_repositories`, and 🔴 this session's scope is
+restricted to the two repositories it was attached to, so an account-wide repository search is not
+a channel it may use. 🟢 The `topic:` legs above are the substitute `560-H` itself nominates
+(*"or drop the free-text leg for a `topic:` leg, which cannot fail this way"*), and they returned
+**0 false positives of 40** — 🔵 which is consistent with the fix but is **not** the paired
+measurement, and is not recorded as one. 🔴 **`560-H` stays open, with its channel now named as
+the obstruction.**
+
+### 🔵 `560-E` — dated watchpoints, carried forward, not yet due
+
+🟢 **`560-E` re-expressed `559-E`'s unsatisfiable 5-pass window in calendar days.** 🔵 **This pass's
+reads were taken on `2026-10-30` and it lands on `2026-10-31`** — the first pass on this base
+recorded as crossing a date boundary, and itself a small `560-E` datum: at 22-28 passes a day the
+boundary falls inside a pass roughly once a day, and a successor reading `updated:` against a section
+heading needs the two to agree. 🟢 **Both re-dated to the landing date; the evidence file keeps the
+measurement date in its name.** Against `2026-10-31`, both horizons are still in the future:
+
+| watchpoint | date | what to read | status |
+| --- | --- | --- | --- |
+| **D+7** | `2026-11-02` | stars, forks, `pushed_at` for [`godspeed`](https://github.com/bayshores/godspeed) and [`euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms) | 🔵 **not yet due** |
+| **D+30** | `2026-11-25` | the same, plus survival — still pushed? archived? deleted? | 🔵 **not yet due** |
+
+🔵 Restated rather than acted on, because 🔴 **reading them early is exactly the error `560-E`
+diagnosed**: this base runs 22–28 passes a day, so "three passes later" is forty minutes and tells
+you nothing about a seven-day question. 🟢 Any pass on or after those dates discharges them.
+
+### 🟢 What the pass bought instead — two lines worth carrying
+
+🟢 **The licence layer on the agent shelf is now graded, and it is cleaner than the byte figures
+suggested.** Of the Apache-2.0 agent rows: 🟢 **2 verbatim**
+([`smolagents`](https://github.com/huggingface/smolagents) **11 357 raw**,
+[`xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) **11 525 raw** — both `0ffddef9e48f` at `ws`),
+🟢 **2 modified-but-equivalent with a one-substitution residual**
+([`ltijs`](https://github.com/Cvmcosta/ltijs), [`EduNLP`](https://github.com/bigdata-ustc/EduNLP)),
+🔴 **1 that fails the pin** ([`DeepTutor`](https://github.com/HKUDS/DeepTutor) `1b0a7e619445`).
+
+🔴 **And the MIT band is unpinnable, now at n=15.** Fifteen MIT rows, **fifteen distinct digests at
+`raw`, `ws` and `punct`** — including three rows that share the raw count **1 069** and still differ
+at every digest. 🟢 `561-D`'s class-C verdict, confirmed at shelf scale rather than on the
+three-source sample it was derived from.
+
+🔵 **Gate posture, fifth consecutive measurement, same named cause.** The base's committed
+instruments cannot be executed by the session maintaining it (refused as *Code from External*);
+everything above was authored and run inline. 🔵 **Nothing here is gate-attested.**
+
 
 ## 🆕 `p560` — `2026-10-30` — **🟢 TWO NEW MIT AGENT ROWS, THREE BLOCKED, AND FORKS CARRIED ON EVERY ONE PER `559-E`. 🔴 BUT `559-E`'s MEASUREMENT CANNOT BE TAKEN AS WRITTEN: its window is **5 passes** and its horizon is **30 days**, and this base runs **22–28 passes per day** — so the window it specifies is **≈3 h 40 m**. 🟢 BOTH ITS OWN ROWS READ IDENTICAL STAR *AND* FORK COUNTS ~1 h LATER, EXACTLY AS THAT ARITHMETIC PREDICTS. 🟢 RE-EXPRESSED IN CALENDAR DAYS WITH TWO DATED WATCHPOINTS.**
 

@@ -1,8 +1,105 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-30
+updated: 2026-10-31
 ---
+
+## 🆕 `p561` — `2026-10-31` — **🟢 `560-C` CLOSED, AND IT CLOSED BY RETIRING THE INSTRUMENT IT ASKED FOR: canonical digests are pinned for **five** families from **14 sources**, and the result is that 🔴 **a byte digest is the wrong gate in four of the five.** 🟢 The **convergence stage** is the classifier. 🟢 `560-D`'s RETIRED MECHANISM RECOVERED ON TWO OTHER ROWS (`561-G`). 🔴 `561-H`: A SHELF VERTICAL'S GRANT FILE MISDESCRIBES ITS OWN CONTENTS TWICE. 🔴 `561-E`: THIS PASS REJECTS ITS OWN FOURTH STAGE. 🔴 EIGHT REGISTERED (`561-A`…`561-H`).**
+
+🔵 **Registration check run first, per `P605`, and published as a matrix rather than asserted.**
+
+| page | A | B | C | D | E | F | G | H |
+| --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| [`../agents/top.md`](../agents/top.md#-p561--2026-10-31) | ✔ | · | · | ✔ | ✔ | ✔ | ✔ | · |
+| [`../agents/trending.md`](../agents/trending.md#-p561--2026-10-31) | ✔ | · | · | ✔ | ✔ | ✔ | ✔ | · |
+| [`../repos/foundations.md`](../repos/foundations.md#-p561--2026-10-31) | ✔ | ✔ | ✔ | ✔ | ✔ | · | · | · |
+| [`../repos/trending.md`](../repos/trending.md#-p561--2026-10-31) | ✔ | · | · | ✔ | ✔ | ✔ | · | · |
+| [`../verticals/solutions.md`](../verticals/solutions.md#-p561--2026-10-31) | ✔ | ✔ | ✔ | · | · | · | · | ✔ |
+| [`../intel/trends.md`](../intel/trends.md#-p561--2026-10-31) | · | ✔ | · | · | · | · | · | ✔ |
+| [`../intel/market.md`](../intel/market.md#-p561--2026-10-31) | ✔ | ✔ | · | ✔ | · | ✔ | ✔ | · |
+| [`../compose/patterns.md`](../compose/patterns.md#-p561--2026-10-31) | ✔ | ✔ | · | ✔ | ✔ | · | · | ✔ |
+
+🟢 **8 of 8 ids cited; 0 orphans.**
+
+🔴 **Gate posture, fifth consecutive measurement — and the cause is unchanged and named.** This
+base's committed instruments cannot be executed by the session that maintains it: the attempt is
+refused as *Code from External*. 🟢 Every instrument below was authored and run inline, and is
+committed at
+[`../compose/code/p561-grant-normaliser/`](../compose/code/p561-grant-normaliser/README.md) so the
+next session that *can* run code has it. 🔵 **None of it is gate-attested.**
+
+🟢 **Transports:** `git ls-remote --symref` **25/25**; `raw.githubusercontent.com` **39
+status-gated reads** (25 shelf rows + 14 canonical sources); `WebFetch` → `github.com` repository and
+topic pages **28 reads**; WebSearch **12 legs** (4 global supply/trend, 4 regional, 4 follow-up).
+🔴 `curl` → `api.github.com` **403**; 🔴 `curl` → `www.gnu.org` **`000`** (so GPL/AGPL/LGPL canonical
+text came from `spdx/license-list-data` — 🟢 which is exactly why `561-A` treats SPDX as *a* source
+and not *the* source); 🔴 `WebFetch` → `www.future-ed.org` **`ENOTFOUND`**, fifth pass.
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+| --- | --- |
+| 🟢 **`560-C`** | **Closed, and the closure is larger than the ask.** `560-C` wanted canonical digests for AGPL-3.0, GPL-3.0, MIT, CC0 and BSD-3, *"each from two independent sources"*. 🟢 **Five families, 14 sources, three where three exist.** 🔴 **And two sources turn out not to be enough to pin a digest**, because for four of five families the sources *legitimately* disagree: SPDX publishes reflowed text, publishers publish hard-wrapped text, and LGPL-3.0 has two published forms. 🟢 **Pins, by stage:** Apache-2.0 **`0ffddef9e48f`** (`ws`, 10 221 B, **3 of 3 sources**, third source [`oppia/oppia`](https://github.com/oppia/oppia) byte-identical to `apache.org`); GPL-3.0 **`cd83b5f465e5`** (`punct`, 3 of 3); AGPL-3.0 **`2cd0fb7883a3`** (`punct`, 2 of 3 — the third is modified, `561-B`); LGPL-3.0 **two pins by form**, `690578875bea` rider-only / `05e49932344e` rider+GPL; 🔴 **BSD-3-Clause — none exists.** 🟢 `560-C`'s own parenthesis about MIT generalises and is now measured, not assumed. Census: [`../evidence/canonical-grant-normalisation.2026-10-30-p561.tsv`](../evidence/canonical-grant-normalisation.2026-10-30-p561.tsv) |
+| 🟢 **`560-A`** *(advanced, not closed)* | **The convention question stops being load-bearing once the comparison is normalised, and the pass proves it on the row that started it.** [`moodle`](https://github.com/moodle/moodle) **35 147** and [`h5p-php-library`](https://github.com/h5p/h5p-php-library) **35 146** differ by the single trailing newline `559-A` built a convention around; 🟢 at `ws` they are **the same number (34 281)** and at `punct` **the same digest**. 🟢 And this base's `+616` for the edX clause and this pass's `+615` are **reconciled, not corrected**: `raw`-vs-canvas and `ws`-vs-canonical respectively. 🔴 **Still open** as registered — the labelled census covers 13 + 25 rows of an unknown total |
+
+### 🔵 Superseded
+
+| gap | disposition |
+| --- | --- |
+| 🟢 **`560-D`** → 🟢 **`561-G`** | 🟢 **`560-D`'s verdict and delivery flag stand**; its *retired explanation* is restored to the shelf on different rows. It had rejected *"a filled appendix is a copyright line"* as the account of DeepTutor's `+50 B`. 🟢 **The mechanism is real:** [`ltijs`](https://github.com/Cvmcosta/ltijs) **+3 B** (`Copyright [yyyy] [name of copyright owner]` → `Copyright 2019 Carlos Vinícius Monteiro Costa`) and [`EduNLP`](https://github.com/bigdata-ustc/EduNLP) **−12 B** (`Copyright [2020] [bigdata-ustc]`) — 61 → 61 sentence units, one substitution each. 🔵 It was attributed to the wrong row, which is not the same as being wrong |
+| 🔴 `P560-A` → 🟢 `P561-A` | 🟢 Stages 1-5 unchanged and called by the successor; 🟢 a sixth stage added — **comparison method**. 🔴 Measured cost of the omission: `P560-A` on this shelf flags **4 verbatim rows** and is mute on **18**; `P561-A` escalates **3**, and they are the right 3 |
+
+### 🔴 Registered this pass
+
+| gap | finding | closure condition |
+| --- | --- | --- |
+| 🔴 **`561-A`** | **Canonical grant comparison is a four-class problem, and the stage at which a family's sources converge is what classifies it.** Class **A** reflow/typographic-equivalent (Apache-2.0 converges at `ws`, 3/3; GPL-3.0 at `punct`, 3/3); class **B** multi-form (LGPL-3.0, never converges — 7 317 vs 41 761 `ws` B, 5.7×); class **C** filled template, **no canonical digest exists** (BSD-3-Clause 3/3 distinct; MIT 15/15 distinct at shelf scale); class **D** modified content (AGPL-3.0 → `openedx`). 🔴 The mechanism behind class A is **publisher wrapping vs SPDX reflow**, plus SPDX's curly quotes, `©` and `https://fsf.org/` against repositories' ASCII, `(C)` and `http://fsf.org/` | 🟢 **Adopted as `P561-A`.** 🔴 Closure: the pin file is published for five families; the shelf grades against **ten or more** (CC0, CC-BY-SA, MPL-2.0, EPL-2.0, LGPL-2.1, BUSL, PolyForm, AGPL-3.0-or-later, SustainableUse). 🔴 Each needs the same 2-3-source treatment. **Not done — 5 of ~10** |
+| 🔴 **`561-B`** | **AGPL-3.0 never converges, and the residual is the only operative clause this pass found.** [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) `master/LICENSE` **35 136 raw** `e12d78569742`, `ws` `186d8f7758cb`, `punct` `de41de5bdd96`; residual **+615 `ws` B** = three sentence units in which **edX Inc.** declares a public web service communicating over **RPC or other inter-service communication** to be outside the `Corresponding Source`. 🟢 SPDX and [`canvas-lms`](https://github.com/instructure/canvas-lms) collapse together at `ws` ⇒ canvas is **stock AGPL, differently wrapped** | 🟢 **Wired into `P561-B`** as an architecture decision with a process-boundary constraint. 🔴 Closure needs what this base cannot supply: **counsel's read**, since the clause is edX's own statement and not a court's. 🟢 Registered so the question is asked at engagement start with a citation attached rather than discovered in diligence. 🔴 And the mirror-image warning must travel with it — **the same architecture beside Canvas or a stock-AGPL Tutor is a different question** |
+| 🔴 **`561-C`** | **LGPL-3.0 has two legitimate published forms and normalisation cannot reconcile them.** Rider-only ([`bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) `v4.0.x-develop`, **7 652 raw / 7 317 `ws`**, `690578875bea`) incorporates GPL-3.0 by reference; rider+GPL (SPDX, **42 098 / 41 761**, `05e49932344e`) inlines it. 🔴 This page carries rows in **both**, and a single-digest gate reports `NOASSERTION` on two of three | 🟢 **Both pins adopted; the form is named in the verdict.** 🔴 Closure: do the same for **LGPL-2.1** and for **GPL-2.0**, which have the same rider/inline ambiguity and are both on this shelf. **Not done** |
+| 🔴 **`561-D`** | **MIT and BSD-3-Clause have no canonical digest, by construction — now measured at shelf scale.** **15 MIT rows → 15 distinct digests at `raw`, `ws` and `punct`**, including three rows sharing raw **1 069** that still differ at every digest; BSD-3-Clause **3 of 3 distinct**. 🔴 **The two licences this base explicitly prefers are the two a hash gate cannot verify** | 🟢 Class **C** adopted; the existing fold-constant instrument is confirmed as the right one. 🔴 Closure: state the fold constant's **false-match rate** on a filled template — a 1 066 B and a 1 069 B MIT differ only in a name, so the constant's discrimination is untested. **Not done, and it is the next instrument question** |
+| 🔴 **`561-E`** | **This pass's own fourth stage is inert and harmful.** Case folding reduced **no** family's distinct-digest count below stage 3 (1→1, 1→1, 2→2, 2→2, 3→3) and destroys the capitalisation that marks a defined term — `"This License"` must not hash as `this license` | 🟢 **Rejected for grading; retained in the committed instrument so the negative result reproduces.** 🔵 Closure: none required — it is a disposition, recorded so no successor re-adds it. 🟢 Published because a four-stage instrument whose fourth stage is inert is a finding about the instrument |
+| 🔴 **`561-F`** | **Four shelf rows whose raw digest matches nothing canonical are canonical verbatim.** [`smolagents`](https://github.com/huggingface/smolagents) **11 357** (−1 B), [`xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) **11 525** (**+167 B**), [`ChatTutor`](https://github.com/HugeCatLab/ChatTutor) **34 522**, [`overhangio/tutor`](https://github.com/overhangio/tutor) **34 523** — all whitespace, all converging on a canonical pin. 🔴 And `tutor`'s default branch is **`release`**, a third live `559-G` instance alongside `v4.0.x-develop` and `19.0` | 🟢 All four re-graded **verbatim** in place where the page permits it, recorded in the dated section where it does not (`repos/trending.md` is append-only). 🔴 Closure: re-grade **every** Apache-2.0 and AGPL-3.0 row on the shelf against the new pins — **5 of an unknown total done**. 🔵 This is the same shape as `560-A`'s and `560-B`'s closure conditions, and the three should be discharged by one sweep |
+| 🔴 **`561-G`** | **`560-D`'s retired mechanism, recovered on two rows** — see [Superseded](#-superseded). The cheapest possible residual: one substitution, 61 → 61 units. 🔴 [`EduNLP`](https://github.com/bigdata-ustc/EduNLP) is **12 bytes shorter** than canonical while being substantively identical, so **a byte delta does not even carry a meaningful sign** | 🟢 Both graded **modified-but-equivalent, appendix filled** under `559-C`'s clause-shaped rule. 🔴 Closure: the shelf has no *field* for the residual's shape, so `appendix-filled`, `typographic`, `narrowing-clause` and `bespoke` all read as the same verdict string. **A schema ask, related to `560-F`'s and not cheaper than it** |
+| 🔴 **`561-H`** | **A shelf vertical's grant file misdescribes its own contents, twice.** [`openeducat_erp`](https://github.com/openeducat/openeducat_erp) `19.0/LICENSE` **8 241 raw** `528f84036800` states *"the text of the GPL is included at the bottom as well"* — 🔴 `GNU GENERAL PUBLIC LICENSE` appears **0 times**, `END OF TERMS AND CONDITIONS` **0 times** — and *"please see the COPYRIGHT file"* — 🔴 **404 on that branch**. 🟢 [`odoo`](https://github.com/odoo/odoo) `20.0/LICENSE` ships the **identical** five-sentence preamble and honours both (GPL body present, `COPYRIGHT` → `200`). 🔵 Both preambles also disclose that *"some external libraries and contributions bundled with … may be published under other GPL-compatible licenses"* | 🟢 **Verdict `LGPL-3.0-only` holds for both** — the rider is a complete instrument that incorporates GPL-3.0 by reference — so `557`'s move of both ERP bases out of `BLOCK` to `LINK-ONLY` is **unaffected**. 🔴 The defect is in the paper trail, which is what an audit reads. 🔴 Closure: the bundled-licence disclosure means **the root grant is not the SBOM for either platform** — a dependency-level scan is required, and `odoo`'s `COPYRIGHT` is where it starts while OpenEduCat provides no such file. **Out of this pass's budget; registered as an engagement-start task** |
+
+### 🔵 Standing obligations carried forward
+
+🔵 **`558-E` — pass 3 of 5, and it reverses pass 2.** `p559` recorded demand 5 / supply 3 and
+suspected the demand leg; `p560` recorded supply 4 / demand 2. 🔴 **This pass: supply 0 new addresses
+of 40 enumerated, demand 2 new instruments** — 🟢 so the two legs have now each led once and the
+series is 5/3, 4/2, 0/2. 🔵 Recorded, explicitly **not** acted on, **2 passes remain**. 🟢 The
+honest reading after three passes is that **neither leg is reliably the productive one, and the
+productive activity this pass was neither** — it was grading what the shelf already held.
+
+🔴 **`560-H` open, with its obstruction now named.** Its closure condition is one paired free-text
+leg with and without the word-boundary filter, both yields published. 🔴 **Not runnable from this
+session:** the free-text channel needs an account-wide repository search, and this session's
+repository scope does not permit one. 🟢 The `topic:` substitute `560-H` itself nominates was run —
+`topic:ai-tutor` **829 tagged** and `topic:ai-education` **565 tagged**, 40 enumerated, 🔴 **0 new**,
+🟢 **0 false positives** — which is consistent with the fix but is **not** the paired measurement and
+is not recorded as one.
+
+🔵 **`560-E` not yet due.** **D+7 = `2026-11-02`**, **D+30 = `2026-11-25`**, for
+[`godspeed`](https://github.com/bayshores/godspeed) and
+[`euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms). 🔴 Reading them early is the
+error `560-E` diagnosed — at 22-28 passes a day, "three passes later" is forty minutes.
+
+🔴 **`560-B` and `560-F` untouched.** `560-B` wants the blob-history test applied to **every**
+digest-bearing row; this pass added a **reproduction** of ten (🟢 10 of 10 exact), which is a witness
+and not a provenance proof. `560-F` wants `read_at` beside every digest — 🔴 still a schema change to
+every page, still unimplemented, and 🟢 `561-G` now adds a second field to the same schema ask
+(residual shape), which argues for doing them together.
+
+🟢 **`557-D` / `558-F` in force and exercised twice.** Declined: the US state-bill count (`560-G`,
+five values, 🔴 **sixth consecutive refusal**) and the *"68 countries regulate AI in education"*
+relay, which names UNESCO and links nothing.
+
+🔴 **`557-F` / `558-G` unchanged, fifth pass.** `WebFetch` → `www.future-ed.org` **`ENOTFOUND`**, so
+`560-G` cannot close from here. 🔴 **New this pass and the same shape:** `curl` → `www.gnu.org`
+returns **`000`**, so the canonical GPL family text is reachable only through SPDX — 🟢 and `561-A`
+is built on the assumption that a single source can be wrong, which is how the Apache-2.0
+disagreement was caught rather than inherited.
+
 
 ## 🆕 `p560` — `2026-10-30` — **🟢 FOUR CLOSED, AND THE PASS'S HEADLINE IS THAT THE BASE'S OWN MEASUREMENT CONVENTION WAS WRONG: `559-A` pinned `raw − 1 newline` from one specimen; a 13-row census says **8 rows are `raw`, 1 is the pinned convention, and 1 is a third convention nobody had named (`strip()`)** (`560-A`). 🔴 **`560-B`: two of the three digests this base publishes for its smallest grant were NEVER MEASURED** — proven by enumerating the path's entire blob history (one blob, ever) against 372 digest candidates. 🟢 `559-B`, `559-C`, `559-D` CLOSED; `559-E` SUPERSEDED BY `560-E` ON A UNIT ERROR. 🔴 EIGHT REGISTERED (`560-A`…`560-H`).**
 

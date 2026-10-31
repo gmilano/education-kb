@@ -1,8 +1,98 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-30
+updated: 2026-10-31
 ---
+
+## 🆕 `p561` — `2026-10-31` — **🟢 THE NEW PIN GRADES FOUR SHELF ROWS TO *CANONICAL-VERBATIM* THAT A BYTE GATE WOULD HAVE FLAGGED AS MODIFIED — [`smolagents`](https://github.com/huggingface/smolagents) at **11 357 raw**, [`xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) at **11 525 raw**, [`ChatTutor`](https://github.com/HugeCatLab/ChatTutor) and [`tutor`](https://github.com/overhangio/tutor) at **34 522/34 523**. 🟢 `560-D`'s *"filled appendix"* MECHANISM IS REAL AND WAS PINNED TO THE WRONG ROW: it is [`ltijs`](https://github.com/Cvmcosta/ltijs) and [`EduNLP`](https://github.com/bigdata-ustc/EduNLP), one substitution each. 🔴 AND DeepTutor IS NOW MEASURED AS **THE ONLY** Apache-2.0 AGENT ROW ON THIS SHELF THAT FAILS THE PIN — 1 of 4, not an anecdote.**
+
+🟢 **25 shelf rows re-read first-hand and graded against `p561`'s canonical pins**
+(`561-A`…`561-E`, in [`../repos/foundations.md`](../repos/foundations.md#-p561--2026-10-31)).
+🔵 Convention: `raw` = `wc -c`, per `560-A`; `ws`/`punct` = the normalisation stages.
+Census: [`../evidence/canonical-grant-normalisation.2026-10-30-p561.tsv`](../evidence/canonical-grant-normalisation.2026-10-30-p561.tsv).
+
+### 🟢 `561-F` — four rows the raw digest was never going to grade
+
+| row | branch | `raw` B | `sha256/12` `raw` | `punct` | 🟢 verdict |
+| --- | --- | --- | --- | --- | --- |
+| 🟢 [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | `main` | **11 357** | `c71d239df917` | `0ffddef9e48f` | 🟢 **Apache-2.0, verbatim** |
+| 🟢 [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | `master` | **11 525** | `a1587287ff04` | `0ffddef9e48f` | 🟢 **Apache-2.0, verbatim** |
+| 🟢 [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | `main` | **34 522** | `20b067f86de3` | `2cd0fb7883a3` | 🟢 **AGPL-3.0, verbatim** |
+| 🟢 [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **`release`** | **34 523** | `0d96a4ff68ad` | `2cd0fb7883a3` | 🟢 **AGPL-3.0, verbatim** |
+
+🔴 **Not one of those four raw figures equals any canonical raw figure this base holds.**
+`11 357` is one byte under `apache.org`'s `11 358`; `11 525` is **167 bytes over** it; `34 522` and
+`34 523` are 502 and 503 over SPDX's AGPL `34 020`. 🟢 **All four are byte-for-byte the canonical
+instrument once whitespace is folded.** 🔵 A client's scanner hashing `LICENSE` against a canonical
+copy flags all four — and every flag is false.
+
+🔴 **`overhangio/tutor`'s default branch is `release`.** Neither `main` nor `master`. 🟢 A third
+live instance of `559-G` found this pass, alongside BigBlueButton's `v4.0.x-develop` and
+`openeducat_erp`'s `19.0` — 🔵 consistent with `559-G`'s **32.4 %** at full shelf scale, and a
+reminder that the branch is resolved, never assumed.
+
+### 🟢 `561-G` — `560-D`'s mechanism was right; its row was wrong
+
+🔴 **`560-D` retired the explanation** *"its appendix is filled in — a filled appendix is a
+copyright line"* as the account of DeepTutor's `+50 B`, having found three operative-body edits
+instead. 🟢 **The mechanism it retired is nevertheless real, and this pass found two clean
+instances** — each a single substitution, 61 → 61 sentence units, nothing else:
+
+| row | `raw` B vs canonical | the one substitution |
+| --- | --- | --- |
+| 🟢 [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) `master/LICENSE` | **11 361** (+3) | `Copyright [yyyy] [name of copyright owner]` → `Copyright 2019 Carlos Vinícius Monteiro Costa` |
+| 🟢 [`bigdata-ustc/EduNLP`](https://github.com/bigdata-ustc/EduNLP) `master/LICENSE` | **11 346** (−12) | `Copyright [yyyy] [name of copyright owner]` → `Copyright [2020] [bigdata-ustc]` |
+
+🟢 **Both verdicts: Apache-2.0, *modified-but-equivalent*, appendix filled** — `559-C`'s
+clause-shaped distinction, now with the cheapest possible residual. 🔵 Note `EduNLP` is **12 bytes
+SHORTER** than canonical while being substantively identical: 🔴 **a byte count does not even carry
+a sign that means anything.**
+
+### 🔴 DeepTutor, graded — the census `560-D` could not take
+
+| Apache-2.0 agent rows graded this pass | result |
+| --- | --- |
+| 🟢 [`smolagents`](https://github.com/huggingface/smolagents), [`xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | 🟢 **verbatim** — converge on `0ffddef9e48f` |
+| 🟢 [`ltijs`](https://github.com/Cvmcosta/ltijs), [`EduNLP`](https://github.com/bigdata-ustc/EduNLP) | 🟢 **modified-but-equivalent** — appendix filled, one substitution |
+| 🔴 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) `main/LICENSE` **11 408 B** `cd2f54e1e506` | 🔴 **fails the pin** — `ws`/`punct` `1b0a7e619445`, matching nothing |
+
+🔴 **DeepTutor is the only one.** 🟢 Verdict **Apache-2.0 still holds** (`560-D`: header, all four
+operative grants and `END OF TERMS` present; the edits are grammatical or synonymous and change no
+obligation) — 🔴 **but it is now the measured exception rather than an anecdote**, and the shelf's
+largest agent row by stars is the one a client's audit will stop on. 🟢 `560-D`'s closure condition
+stands as written: **the SBOM note is drafted at engagement start, not after the audit asks.**
+
+### 🔴 `561-D` at shelf scale — 15 MIT rows, 15 distinct digests
+
+🔴 **Every MIT-family row read this pass has a distinct digest at `raw`, `ws` *and* `punct`:**
+[`agent-framework`](https://github.com/microsoft/agent-framework) 1 141 ·
+[`OATutor`](https://github.com/CAHLR/OATutor) 1 105 ·
+[`kolibri`](https://github.com/learningequality/kolibri) 1 097 ·
+[`educhain`](https://github.com/satvik314/educhain) 1 092 ·
+[`anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) 1 074 ·
+[`Bloom`](https://github.com/Li-Evan/Bloom) / [`Papermorph`](https://github.com/DozenTwelve/Papermorph) / [`claudemy`](https://github.com/assafkip/claudemy) 1 069 ·
+[`OpenTutor`](https://github.com/zijinz456/OpenTutor) / [`learn-agentic-ai`](https://github.com/panaversity/learn-agentic-ai) 1 068 ·
+[`instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) 1 067 ·
+[`pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) 1 066 ·
+[`cram-engine`](https://github.com/liuliu667/cram-engine) / [`Study-Mate`](https://github.com/Miaotofu01/Study-Mate) 1 064 ·
+[`mentingo`](https://github.com/Selleo/mentingo) 1 062.
+
+🟢 **Exactly as `561-D` predicts for a filled-template family** — `<year>` and `<owner>` are
+per-project, so no canonical digest exists and normalisation cannot manufacture one. 🔵 Two rows
+sharing a raw byte count (1 069 ×3, 1 068 ×2) **still differ at every digest**, which is the
+clearest possible statement that a byte count is not an identity. 🟢 The fold-constant instrument
+remains the right one for MIT and, per `561-D`, for BSD-3-Clause.
+
+🔵 **And the one row that is neither:**
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+`main/LICENSE` **1 230 B** `f952182df4eb` sits in the same size band as the MIT rows but is a
+**CC BY-SA 4.0 human-readable deed** — it says so in its own last line, pointing at
+`creativecommons.org/licenses/by-sa/4.0/legalcode`. 🔴 Against `p561`'s legal-code reference
+(**18 375 B** `cde7883b9050`, SPDX) it is short by **17 145 B**. 🟢 Pointer grant, verdict
+CC BY-SA 4.0; 🔴 **and ShareAlike reaches 165 pedagogy assets**, so an adapted skill set leaves an
+engagement under CC BY-SA 4.0. 🔵 Stated here because the licence band and the file size both
+*look* MIT and are not.
+
 
 ## 🆕 `p560` — `2026-10-30` — **🔴 `559-A` PINNED THE WRONG CONVENTION, AND THE SHELF SETTLES IT 8-TO-1: of 13 grant rows re-read first-hand this pass, **8 reproduce at `raw`**, **1** at the pinned `raw − 1 newline`, **1** at a **third convention nobody had named (`strip()`)**, and 2 are convention-invariant. 🔴 **`560-B`: TWO OF THE THREE DIGESTS THIS BASE PUBLISHES FOR ITS SMALLEST GRANT ARE UNREPRODUCIBLE** — `frappe/education`'s 19-byte `license.txt` has **one blob in its entire history** and exactly **one** digest under 13 hash × 6 byte conventions. 🟢 AMENDED IN PLACE. 🟢 `559-B` CLOSED: all five sub-200 B figures are real files, **none is a 404 body**.**
 

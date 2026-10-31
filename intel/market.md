@@ -1,8 +1,60 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-30
+updated: 2026-10-31
 ---
+
+## 🆕 `p561` — `2026-10-31` — **🟢 LATAM OUT-YIELDS THE OTHER THREE REGIONS **2 TO 0**, AND ONE OF THE TWO IS THE GOVERNANCE GAP EXPRESSED AS A PROCUREMENT FACT: **55 % of Latin American and Caribbean universities have NO SPECIFIC AI BUDGET** (UNESCO IESALC, ~200 institutions across 19 countries) — the same study behind this shelf's `87 % / 26 %`. 🔴 NORTH AMERICA, EMEA AND APAC RETURNED **ZERO** NEW INSTRUMENTS, ALL THREE PROBED AND ALL THREE PUBLISHED WITH THE LEG THAT PROVES IT. 🔴 `560-G`'s SELF-DISAGREEING BILL COUNT RETURNED A **SEVENTH** TIME AND IS REFUSED A SIXTH.**
+
+🟢 **All five region children amended in place** — [North America](#north-america),
+[EMEA](#emea), [APAC](#apac), [LATAM](#latam), [Global](#global) — under the single canonical
+`## Opportunities by region`, in closed-vocabulary order, **5 of 5**, **0 out-of-vocabulary**,
+LATAM-only **False**.
+
+### 🟢 The regional legs, graded — and the asymmetry is the result
+
+| region | leg run | instruments returned | 🆕 new to this shelf |
+| --- | --- | --- | --- |
+| 🔴 **North America** | `AI education North America 2026 adoption regulation players` | 9 | 🔴 **0** |
+| 🔴 **EMEA** | `AI education EMEA Europe Middle East Africa 2026 adoption regulation players` | 7 | 🔴 **0** |
+| 🔴 **APAC** | `AI education APAC Asia Pacific 2026 adoption regulation players` | 8 | 🔴 **0** |
+| 🟢 **LATAM** | `AI education LATAM Latin America 2026 adoption regulation players` | 9 | 🟢 **2** |
+
+🟢 **`p559` found the same shape** — LATAM paying while the other three returned nothing — and
+`p560` found LATAM paying again. 🟢 **Three consecutive passes with the same regional asymmetry is
+no longer an observation about a pass; it is a property of the channel**, and the honest reading is
+that this base's **non-LATAM demand surface is saturated at this query depth** while LATAM's is not.
+🔵 Which is the opposite of what a LATAM-heavy base would expect, and is recorded because it bears
+on where the next pass should spend its legs.
+
+### 🟢 The two new LATAM instruments
+
+| instrument | figure | source | why it is worth a row |
+| --- | --- | --- | --- |
+| 🟢 **No AI budget line** | 🔴 **55 %** of LAC universities have **no specific AI budget** | UNESCO IESALC 2026, ~200 HEIs / 19 countries | 🟢 **The governance gap as a procurement fact.** `87 % use / 26 % have a strategy` says institutions are unready; **`55 % have no budget` says there is no line item to sell against** — a different and more actionable constraint |
+| 🟢 **Google.org LAC programme target** | **1.25 M students by 2028**, nine countries | Google.org AI-education rollout | 🔵 New *detail* on an instrument this base already holds (the **$4.6 M** commitment); 🟢 the target converts a grant figure into a reach figure |
+
+🟢 **Why the budget number changes a proposal.** A studio pitching into a region where **87 %
+already use AI** and **26 % have a strategy** is selling governance. 🔴 A studio pitching where
+**55 % have no budget code for it** is selling *into a procurement vacuum* — the engagement has to
+be funded from an existing line (digital transformation, accreditation, student retention) or it has
+nowhere to land. 🔵 That is a sequencing instruction, not a market size.
+
+### 🔴 Figures this pass refused to adopt
+
+| quantity | values seen | disposition |
+| --- | --- | --- |
+| 🔴 US state AI-in-education bills, one session | `13 enacted` (FutureEd's own tracker) · `52/25` · `68/27` · `77/27` · 🔴 `134/31` (MultiState) | 🔴 **Refused, sixth consecutive time** (`557-D`). `560-G`'s diagnosis stands: one tracker disagreeing with **its own citers**. 🔴 A primary read is still blocked — `WebFetch` → `www.future-ed.org` **`ENOTFOUND`**, fifth pass |
+| 🔴 Global "AI in education" market, 2026 base | `$1.94 B` … `$11.4 B` — **5.9×** | 🔴 **No single value adopted** (`558-F`, justified at `559-D`). This pass's legs returned `$9.58 B` (Precedence), `$10.6 B` (Research and Markets), `$11.4 B` (Grand View), `$8.9 B` (Market.us) — 🟢 **all four already in the [Global](#global) ledger with their scope words**, so the leg confirmed the spread rather than widening it |
+| 🔴 Countries regulating AI in education | `68` (attributed to UNESCO 2025, uncited) | 🔴 **Not adopted** — the relay names UNESCO but links nothing, and this base has been burned by exactly that shape (`560-G`) |
+
+### 🔵 Transport posture on the demand leg, unchanged for a fifth pass
+
+🔴 `WebFetch` → `www.future-ed.org` **`ENOTFOUND`** (`557-F` / `558-G`). 🔴 `curl` → `www.gnu.org`
+**`000`**. 🟢 WebSearch answered all 12 legs. 🔵 The demand channel remains **search-reachable and
+fetch-unreachable** for the primary US tracker, which is `557`'s re-characterisation and still the
+reason `560-G` cannot close from here.
+
 
 ## 🆕 `p560` — `2026-10-30` — **🟢 `559-D` CLOSED AND THE SPREAD IS NOW *DECOMPOSED*: with each firm's scope word recorded, the 2026 base year runs **`$1.94 B → $11.4 B` = 5.9×** (up from `558-F`'s 3.08×) and 🟢 **it is ordered by scope breadth** — widest definitions at the top, a single application category at the bottom. 🟢 EMEA YIELDS ITS FIRST NEW INSTRUMENT IN 21 PASSES, AND IT WAS HIDING INSIDE A DATE THIS SHELF ALREADY HELD: **Article 50 transparency was NOT deferred and has applied since 2 August 2026.** 🟢 LATAM'S 87/26 IS A SECOND, INDEPENDENT MEASUREMENT OF `p559`'s GAP. 🔴 `560-G`: THE US BILL COUNT DISAGREES WITH ITS OWN SOURCE.**
 
@@ -498,6 +550,10 @@ closed five-value vocabulary; countries are named in the prose, never in the fie
 
 ### North America
 
+🆕 **`p561` — `2026-10-31`: 🔴 ZERO NEW INSTRUMENTS, AND THE LEG IS PUBLISHED SO THE NULL IS NOT MISTAKEN FOR COVERAGE.** The North America leg returned **nine** instruments and 🔴 **this base already held all nine**: Gallup **60 % of US teachers** using AI tools; College Board **55 % of principals** not blocking generative AI; Maryland **SB 720** (AI Ready Schools Act) and the four-state set requiring **both** state guidance and district policy adoption (Idaho, Maryland, Oklahoma, Virginia); New York **A 9190** restricting classroom AI to grade 9 and above with diagnostic and special-education exceptions; the US Department of Education's **April 2026 supplemental priority** on advancing AI in education; the House Education and Workforce Committee advancing the **K-12 AI Literacy and Readiness Act of 2026**; North Carolina **SB 1006**'s **$10 M Khanmigo** earmark; and **70 %** of higher-education institutions in Europe and North America having or developing AI guidance.
+🔴 **`560-G` returned a seventh time and is refused a sixth** — see [Figures this pass refused to adopt](#-figures-this-pass-refused-to-adopt). 🟢 The safe proposal sentence is unchanged: *legislative activity is high, enacted law is thin*, with `introduced` and `enacted` named separately because the sources do not name them.
+🟢 **What is actionable here is on the supply side, not the demand side.** `p561` graded this region's two most-deployed permissive bases first-hand: [`jupyterhub`](https://github.com/jupyterhub/jupyterhub) **BSD-3-Clause** and [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) **BSD-3-Clause** — 🔴 and neither matches any canonical BSD-3 digest, because the family has none (`561-D`). 🔵 For a North America engagement that means the autograding stack is **permissive and unpinnable**: the licence verdict is sound, and any client gate that expects a canonical hash for it will fail on correct files.
+
 🆕 **`p560` — `2026-10-30`: 🔴 ONE NEW NA INSTRUMENT, AND IT IS A *NEGATIVE* ONE — the state-bill
 count disagrees with itself.** 🟢 **FutureEd's own tracker page says `13 enacted`**; secondary sites
 **citing that same tracker** report `68 bills / 27 states`, `77 bills / 27 states` and
@@ -778,6 +834,10 @@ pass) — the Educational Community License is what HE consortium procurement al
 so the sellable first phase is **policy-plus-pilot**, not platform replacement.
 
 ### EMEA
+
+🆕 **`p561` — `2026-10-31`: 🔴 ZERO NEW INSTRUMENTS — a 22nd pass without EMEA supply and now a demand leg that returned only held facts.** The leg returned **seven** instruments, all already shelved: **Regulation (EU) 2026/1744** deferring Annex III education to **2 December 2027** and Annex I to **2 August 2028**; 🟢 **Article 50 transparency NOT deferred and in force since 2 August 2026** (`p560`'s EMEA find, re-confirmed by an independent relay this pass); Dubai **KHDA** guidance to private schools; **China and the UAE** as the two states running compulsory national AI curricula since the 2025-26 school year; Kenya's **National AI Strategy 2025-2030**; South Africa's draft national AI policy **published 10 April 2026 and abrogated 27 April 2026**; and the African Union's **2024 continental AI strategy**.
+🔵 **Africa remains the region's thin half, and it is thin in a specific way:** the leg returns *strategies* and *directives* (Kenya's strategy, Nigeria's NERDC robotics-and-AI curriculum directive, the AU framework) and 🔴 **no deployment, no procurement and no supply**. 🟢 Both relays name the same cause — a shortage of qualified computing teachers in Nigeria and Kenya — so the constraint is **delivery capacity, not policy**. 🔵 That is a Globant-shaped gap and it is written down as one rather than left as an absence.
+🟢 **The region's one new fact this pass is a supply fact, and it comes from `p561`'s instrument.** [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) — the reference MOOC base for EMEA public-sector and university deployments — ships an AGPL-3.0 with **+615 `ws` bytes of operative text that narrows §13**: a public web service speaking to Open edX over RPC or other inter-service communication is declared **not** part of the `Corresponding Source` (`561-B`). 🟢 **For an EMEA engagement that is the difference between a service tier that must be published and one that need not be**, and it is invisible to a byte-level scanner — which, under the AI Act's conformity documentation, is exactly the artefact a client will have.
 
 🆕 **`p560` — `2026-10-30`: 🟢 THE FIRST EMEA INSTRUMENT IN TWENTY-ONE PASSES, AND IT WAS HIDING
 INSIDE A DATE THIS SHELF ALREADY CARRIED.** 🔴 This base has recorded `Regulation (EU) 2026/1744`
@@ -1136,6 +1196,10 @@ material.
 
 ### APAC
 
+🆕 **`p561` — `2026-10-31`: 🔴 ZERO NEW INSTRUMENTS.** The APAC leg returned **eight**, all held: South Korea's **AI Basic Act in force 22 January 2026**, the region's first comprehensive AI statute; **Vietnam's Law on Artificial Intelligence from 1 March 2026**, with education among the sectors carrying a longer transition (🔴 the exact grace period is still a `557-D` refusal — three incompatible values); India's amended IT rules requiring **labels and provenance markers on AI-generated content from 20 February 2026**; India's **Class 3 AI curriculum from AY 2026-27**; China's **April 2026 AI-literacy plan**; Australia's reliance on existing law plus voluntary guidance, Japan's voluntary guidelines and Singapore's **AI Verify**; UNESCO's observation that China, Japan, the Republic of Korea and Singapore are already integrating AI curricula; and the **Ipsos Education Monitor 2026** split on banning AI in schools (support rising in Japan and Australia, lower in Indonesia).
+🔵 **South Korea stays the region's most useful negative case**, and it is held: the mandatory AI-textbook programme ran ahead of readiness, adoption sat **below 30 %** by March, and the National Assembly **stripped the textbooks of official status**. 🟢 A proposal into APAC can price readiness assessment on that precedent rather than on an abstraction.
+🟢 **The supply side moved here and it moved through grading, not discovery.** [`bigdata-ustc/EduNLP`](https://github.com/bigdata-ustc/EduNLP) — the region's educational-NLP base — was re-read first-hand: **11 346 raw** `8aaf2e630b1c`, 🔴 **12 bytes SHORTER** than canonical Apache-2.0, and 🟢 **substantively identical**, the whole residual being one filled appendix line (`Copyright [2020] [bigdata-ustc]`, `561-G`). 🔵 An APAC engagement inheriting a client's byte-diff gate would see a *negative* delta on a verbatim licence; 🟢 the normalised pin resolves it in one comparison.
+
 🆕 **`p560` — `2026-10-30`: 🟢 APAC SUPPLIED THIS PASS'S BEST NEW ADDRESS AND ITS CLEAREST BLOCK —
 the region is now the shelf's most productive supply source two passes running.**
 🟢 **New, MIT, grant read first-hand:** [`BenyRonald77/uajy-academic-rag-chatbot`](https://github.com/BenyRonald77/uajy-academic-rag-chatbot)
@@ -1470,6 +1534,12 @@ twelve days, aligned to the Chinese national curriculum — and it is **`CC-BY-N
 the **inspectability** that lets a school answer a parent, not the model.
 
 ### LATAM
+
+🆕 **`p561` — `2026-10-31`: 🟢 TWO NEW INSTRUMENTS, AND LATAM OUT-YIELDS THE OTHER THREE REGIONS **2 TO 0** FOR THE THIRD CONSECUTIVE PASS.**
+🟢 **New — the governance gap as a procurement fact:** 🔴 **55 % of Latin American and Caribbean universities have no specific AI budget** (UNESCO IESALC 2026, ~200 institutions across 19 countries — the same study that gives this shelf `87 % use at least one AI application` and `26 % have a formal strategy`). 🟢 This is the most directly actionable LATAM number this base holds, because it names the obstruction as **a missing line item** rather than a missing policy: an engagement has to be funded out of digital transformation, accreditation or student-retention budget, or it has nowhere to land. 🔵 The report's own recommendation — public funding for AI governance in higher education — is the counterpart ask.
+🟢 **New — reach, on an instrument already held:** Google.org's LAC AI-education programme targets **1.25 million students by 2028** across nine countries, against the **$4.6 M** commitment this base already carries.
+🔵 **Confirmed and not new** (seven instruments): Universidad de los Andes' **716 AI-related regulatory instruments across 23 countries**, most begun since 2023; the Digital Education Council's **92 % of students / 79 % of faculty** engaging with AI; Uruguay's **Ceibal at 75 %** of public-school teachers; Brazil's **Cetic.br at 65 %** of internet users aged 9-17 and **53 % of school administrators using AI against 22 % with guidelines**; UNESCO's **LAC Observatory on AI in Education**, launched April 2026 at ECLAC in Santiago; HolonIQ's **2026 Latin America EdTech 100** with Brazil at roughly **69 %** of active regional edtechs and **$2.6 B** of investment; and **Teachy** (Brazil) expanding beyond the region.
+🔴 **The LATAM supply blank holds for an eighteenth pass**, and the fragmentation warning is the reason it matters: commentators on the 716-instrument count argue the region is drifting toward **incompatible national rules** and press for common definitions, risk categories and mutual recognition. 🟢 A multi-country LATAM engagement should therefore budget **per-jurisdiction compliance work it cannot amortise** — which is the opposite of the EU single-market assumption, and is where this region's delivery cost actually sits.
 
 🆕 **`p560` — `2026-10-30`: 🟢 THE LATAM THESIS NOW HAS A SECOND, INDEPENDENT MEASUREMENT AT
 INSTITUTIONAL SCALE — AND IT IS THE SAME RATIO.** 🟢 **UNESCO IESALC with UNU-IAS**, launched at
@@ -1900,6 +1970,11 @@ it dates from 2008. 🔴 **Informed gap, eighteenth consecutive pass: no LATAM-o
 surfaced in any of five supply sweeps.**
 
 ### Global
+
+🆕 **`p561` — `2026-10-31`: 🔵 THE MARKET LEDGER IS UNCHANGED AND THE LEG CONFIRMS IT RATHER THAN WIDENING IT.** This pass's global sizing leg returned **$9.58 B** (Precedence Research, 2026 base, self-declared boundary-dependent), **$10.6 B → $42.48 B by 2030 at 41.5 % CAGR** (Research and Markets), **$11.4 B → $57.2 B by 2033 at 25.9 % CAGR** (Grand View Research) and **$8.9 B → $73.3 B by 2033 at 35.10 % CAGR** (Market.us) — 🟢 **all four already in this ledger with their scope words recorded** (`559-D`). 🔴 The 2026 base spread stays **`$1.94 B → $11.4 B` = 5.9×** and 🔴 **no single value is adopted** (`558-F`).
+🔵 **One relay added a fifth framing and it was refused:** Technavio's **45 % CAGR** is reported against an *absolute increase* (`USD 3 367.8 M` of growth, 2026-2030), not a total — 🔴 so it is not commensurable with the others and is not entered. 🟢 Exactly the scope-word discipline `559-D` installed, exercised on a new firm.
+🟢 **The global supply picture gained a structural fact this pass, from `p561`'s grading rather than from a market report.** Across 25 shelf rows re-read first-hand: 🟢 **the permissive layer is larger than the byte figures suggested** — four rows whose raw digests match nothing canonical are canonical **verbatim** (`561-F`), and 🔴 **the one row with a genuinely modified operative grant is the platform layer, not the agent layer** ([`openedx/openedx-platform`](https://github.com/openedx/openedx-platform), `561-B`). 🔵 For a studio deciding where to put its legal review hours, that inverts the obvious allocation: the agents are mostly clean, and **the LMS underneath them is where the clause is**.
+🔴 **And the unpinnable families are the ones Globant builds on.** MIT (15 rows, 15 distinct digests) and BSD-3-Clause (3 of 3 distinct) are **class C — no canonical digest exists** (`561-D`), which is to say the two licences this base explicitly prefers are the two a hash-based client gate cannot verify. 🟢 `P561-A` in [`../compose/patterns.md`](../compose/patterns.md#-p561--2026-10-31) is the gate that handles that; 🔵 the ask at engagement start is to agree the *method*, because the client's scanner will not have one.
 
 🆕 **`p560` — `2026-10-30`: 🟢 `559-D` CLOSED — THE SCOPE WORDS ARE RECORDED, AND THE SPREAD THEY
 EXPLAIN IS WIDER THAN ANY PASS HAS PUBLISHED: `$1.94 B → $11.4 B` ON THE 2026 BASE YEAR = 🔴 **5.9×**,

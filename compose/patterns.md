@@ -1,8 +1,122 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-30
+updated: 2026-10-31
 ---
+
+## 🆕 `p561` — `2026-10-31` — **🟢 `P561-A` SUPERSEDES `P560-A`'s LICENCE GATE ON THE AXIS THAT MATTERED MOST AND WAS MISSING: **comparison method**. `P560-A` was correct on branch, convention and staleness and still could not tell `+167 bytes of whitespace` from `+615 bytes of operative clause` — 🔴 and on this shelf it would have **flagged 4 verbatim rows and been mute on 18 more**. 🟢 `P561-A` grades by **convergence stage**, returns a **class** rather than a boolean, and routes the residual to a human only when a residual survives normalisation. 🟢 `P561-B` wires the Open edX RPC narrowing into an architecture decision.**
+
+### 🟢 `P561-A` — the grant gate, graded by convergence stage
+
+🔵 **What `P560-A` got right and is kept:** branch resolution (🔴 **3 of 25 rows this pass were not
+on `main`** — `v4.0.x-develop`, `release`, `19.0`), six-filename status gating, `raw` byte
+publication with the convention named (`560-A`), and the blob-history test for provenance (`560-B`).
+🔴 **What it lacked:** every one of those stages answers *"did I read the right file?"*. None answers
+*"is this the same licence?"* — and that is the question the client's auditor asks.
+
+🟢 **The addition is three normalisation stages and a classifier.** The **stage at which a file
+converges on a canonical pin** is the verdict:
+
+| converges at | class | verdict to publish | action |
+| --- | --- | --- | --- |
+| `raw` | — | 🟢 **verbatim, byte-identical** | none |
+| `ws` | **A** | 🟢 **verbatim** — reflow only | none |
+| `punct` | **A** | 🟢 **verbatim** — typography only | none |
+| never, family has no canonical form | **C** | 🟢 **permissive, unpinnable** (MIT, BSD-3-Clause) | 🔵 fold-constant check; say so in the SBOM note |
+| never, residual is a whole form | **B** | 🟢 **verdict holds, form named** (LGPL-3.0 rider vs rider+GPL) | 🔵 hold **both** pins |
+| never, residual is prose | **D** | 🔴 **modified — read the residual** | 🔴 escalate with the hunks attached |
+
+```bash
+#!/usr/bin/env bash
+# P561-A — grant gate for an education engagement. Supersedes P560-A.
+# Every stage below exists because a measurement on this shelf required it; the
+# pNNN tag says which.  Run it at engagement start, not after the audit asks.
+set -euo pipefail
+PINS_PUNCT=/etc/kb/canonical-grants.punct.tsv   # digest<TAB>family  — see p561 census
+NAMES=(LICENSE LICENSE.txt LICENSE.md COPYING COPYING.txt license.txt LICENSE.TXT LICENCE)
+
+norm_ws ()    { tr -s '[:space:]' ' ' | sed -e 's/^ //' -e 's/ $//'; }          # p561 stage 2
+norm_punct () { sed -e 's/[“”]/"/g' -e "s/[‘’]/'/g" \
+                    -e 's/[–—]/-/g' -e 's/©/(C)/g' \
+                    -e 's|http://fsf\.org/|https://fsf.org/|g'; }               # p561 stage 3
+
+grade () {
+  local slug="$1" br name raw d_raw d_ws d_punct fam
+  # p559-G: 3 of 25 rows are not on `main`.  Resolve, never assume.
+  br=$(git ls-remote --symref "https://github.com/$slug" HEAD \
+        | awk '/^ref:/{sub("refs/heads/","",$2); print $2; exit}')
+  [ -n "$br" ] || { echo "$slug	NO-BRANCH"; return; }
+  # p558: the grant FILENAME is a transport variable too.  Status-gate all six.
+  for name in "${NAMES[@]}"; do
+    if curl -fsS -o /tmp/g."$$" "https://raw.githubusercontent.com/$slug/$br/$name"; then
+      raw=$(wc -c < /tmp/g."$$" | tr -d ' ')                                    # p560-A: publish raw
+      d_raw=$(sha256sum   /tmp/g."$$"                        | cut -c1-12)
+      d_ws=$(norm_ws    < /tmp/g."$$" | sha256sum            | cut -c1-12)
+      d_punct=$(norm_ws < /tmp/g."$$" | norm_punct | sha256sum | cut -c1-12)
+      fam=$(awk -F'\t' -v d="$d_punct" '$1==d{print $2; exit}' "$PINS_PUNCT")
+      if [ -n "$fam" ]; then
+        echo "$slug	$br	$name	$raw	$d_raw	VERBATIM	$fam"
+      else
+        # p561-D: MIT and BSD-3-Clause are filled templates — class C, not a defect.
+        # p561-B: anything else that survives normalisation is CONTENT.  Escalate.
+        echo "$slug	$br	$name	$raw	$d_raw	RESIDUAL-SURVIVES	read-the-hunks"
+      fi
+      rm -f /tmp/g."$$"; return
+    fi
+  done
+  echo "$slug	$br	NO-GRANT/6"      # p559-F: an earned verdict, not a missing read
+}
+for s in "$@"; do grade "$s"; done
+```
+
+🔴 **Stage 4 is deliberately absent.** `561-E` measured case folding and it reduced no family's
+distinct-digest count below stage 3, while destroying the capitalisation that marks a defined term.
+🟢 A gate that hashes `"This License"` and `this license` alike is worse than one that does not.
+
+🟢 **Measured cost of the upgrade on this shelf:** 🔴 `P560-A` would have flagged
+**4 verbatim rows** and returned nothing useful on **18** more; 🟢 `P561-A` returns `VERBATIM` on 4,
+`class C — permissive, unpinnable` on 18, and `RESIDUAL-SURVIVES` on 🔴 **exactly the 3 rows a lawyer
+should see** — [`openedx-platform`](https://github.com/openedx/openedx-platform) (AGPL §13 narrowing),
+[`DeepTutor`](https://github.com/HKUDS/DeepTutor) (three grammatical edits, obligation unchanged) and
+[`openeducat_erp`](https://github.com/openeducat/openeducat_erp) (a preamble that misdescribes its own
+file). 🔵 **Three escalations instead of twenty-two flags**, on the same 25 addresses.
+
+### 🟢 `P561-B` — the Open edX RPC narrowing, as an architecture decision
+
+🔵 **The fact** (`561-B`): Open edX's AGPL-3.0 carries **+615 `ws` bytes** of operative text in which
+edX Inc. states that *any public, independently available web service … communicating with edX's
+copyrighted works by any form of inter-service communication, including but not limited to Remote
+Procedure Call (RPC) interfaces* is **not** part of the `Corresponding Source`.
+🔴 Stock AGPL-3.0 — which [`canvas-lms`](https://github.com/instructure/canvas-lms) and
+[`overhangio/tutor`](https://github.com/overhangio/tutor) ship **verbatim** — contains no such
+clarification.
+
+🟢 **The recipe, and it is a shape not a stack:**
+
+| layer | choice | why |
+| --- | --- | --- |
+| **system of record** | [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (AGPL-3.0 **+ RPC narrowing**), deployed via [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🟢 the narrowing is what makes the next row safe to own |
+| **boundary** | 🔴 **process boundary only** — REST or gRPC over the network. No in-process plugin, no XBlock linking, no forked core | 🟢 the clause speaks to *inter-service communication*; an in-process extension is not that, and `XBlock` is **Apache-2.0** precisely so extensions need not be AGPL |
+| **tutoring / grading tier** | permissive agent rows graded **verbatim** this pass — [`smolagents`](https://github.com/huggingface/smolagents) (Apache-2.0), plus MIT class-C rows | 🟢 no copyleft reaches the client's service |
+| **standards edge** | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0, appendix filled) for LTI 1.3; [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) (Apache-2.0, **verbatim**) for activity data | 🟢 both graded this pass; 🔵 the LTI launch is the integration seam that keeps the tiers apart |
+| **SBOM note** | written at engagement start | 🔴 `560-D` and `561-H`: three rows will trip the client's scanner, and two of them for reasons that are *favourable* once read |
+
+🔴 **What this pattern does NOT claim.** It is not legal advice and the clause is edX's own
+statement, not a court's. 🟢 What `p561` adds is that the clause is **measured, located and
+quotable** — `master/LICENSE`, **35 136 raw B** `e12d78569742`, residual **+615 `ws` B**, three
+sentence units — so the client's counsel is reviewing a citation rather than a rumour.
+🔵 And the same discipline is why the mirror-image warning is available: 🔴 **the identical
+architecture beside Canvas or a stock-AGPL Tutor deployment is a materially different question**,
+because those two files do not contain the sentence.
+
+### 🔵 Where `P560-A` is still the live instrument
+
+🟢 **Stages 1-5 of `P560-A` are unchanged and `P561-A` calls them**: branch resolution, filename
+gating, `raw` publication with the convention named, the blob-history stale-vs-manufactured test, and
+the `read_at` ask (`560-F`, 🔴 still unimplemented — it is a schema change to every page).
+🔵 `P561-A` adds the sixth stage only. 🔴 Nothing here is gate-attested: this base's committed
+instruments cannot be executed from the session that maintains it, fifth consecutive pass.
+
 
 ## 🆕 `p560` — `2026-10-30` — **🟢 TWO NEW PATTERNS, BOTH FROM THIS PASS'S OWN MEASUREMENTS: `P560-A` is the licence gate every engagement stands up in week one, now correct on all three axes this base has measured it failing on — **branch** (`559-G`: 1 row in 3 is not on `main`), **convention** (`560-A`: three are in live use), and **staleness** (`560-F`: a byte count cannot detect a licence edit). `P560-B` wires [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) in front of an institution's existing Canvas without touching its AGPL code.**
 

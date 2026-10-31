@@ -1,8 +1,150 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-30
+updated: 2026-10-31
 ---
+
+## 🆕 `p561` — `2026-10-31` — **🟢 `560-C` CLOSED, AND IT CLOSES BY RETIRING THE INSTRUMENT IT ASKED FOR: canonical digests are now pinned for **five** families from **14 sources** — but 🔴 **a byte digest is the wrong gate in four of the five**, and the proof is that the **stage at which a family's sources converge under normalisation is what classifies the family**. 🟢 Apache-2.0 converges at `ws` **3 of 3**; GPL-3.0 at `punct` **3 of 3**; 🔴 AGPL-3.0 **never converges** and its residual is edX Inc.'s RPC clause; 🔴 LGPL-3.0 never converges and its residual is a **form**; 🔴 BSD-3-Clause is **3 of 3 distinct at every stage** — no canonical digest exists. 🔴 **Stage 4 rejected by its own data.****
+
+🟢 **`560-C` asked for:** *"pin canonical digests for the other families this shelf grades
+against — AGPL-3.0, GPL-3.0, MIT, CC0, BSD-3 — each from two independent sources, since one
+source is how `559-C` got it wrong."* 🟢 **Done, at three sources where three exist**, and the
+answer is better than the question: two sources are not enough to *pin* a digest, because for
+four of five families the two sources **legitimately disagree**.
+
+Instrument committed at
+[`../compose/code/p561-grant-normaliser/`](../compose/code/p561-grant-normaliser/README.md);
+full census at
+[`../evidence/canonical-grant-normalisation.2026-10-30-p561.tsv`](../evidence/canonical-grant-normalisation.2026-10-30-p561.tsv).
+
+### 🟢 `561-A` — the pin table, by convergence stage
+
+🔵 **Four stages.** `raw` = the bytes (`560-A`'s adopted convention). `ws` = every whitespace run
+collapsed to one space, stripped — dissolves **reflow**. `punct` = curly quotes and dashes folded to
+ASCII, `©`→`(C)`, `fsf.org`/`gnu.org` URL schemes normalised — dissolves **typography**.
+`case` = lowercased.
+
+| family | sources | distinct `raw` | distinct `ws` | distinct `punct` | 🟢 **canonical pin** | class |
+| --- | :-: | :-: | :-: | :-: | --- | --- |
+| 🟢 **Apache-2.0** | 3 | 2 | 🟢 **1** | 1 | **`0ffddef9e48f`** · `ws` · **10 221 B** | **A** reflow-equivalent |
+| 🟢 **GPL-3.0** | 3 | 3 | 2 | 🟢 **1** | **`cd83b5f465e5`** · `punct` | **A** typographic |
+| 🔴 **AGPL-3.0** | 3 | 3 | 2 | 🔴 **2** | **`2cd0fb7883a3`** · `punct` · *2 of 3 sources* | **D** one source **modified** |
+| 🔴 **LGPL-3.0** | 2 | 2 | 2 | 🔴 **2** | **two pins, by form** — see `561-C` | **B** multi-form |
+| 🔴 **BSD-3-Clause** | 3 | 3 | 3 | 🔴 **3** | 🔴 **none exists** | **C** filled template |
+
+🟢 **Apache-2.0 is settled, and by a third source.** `apache.org` **11 358 B** `cfc7749b96f6`,
+[`oppia/oppia`](https://github.com/oppia/oppia) `develop/LICENSE` **11 358 B** `cfc7749b96f6`
+(byte-identical, independently), and SPDX **10 280 B** `074e6e32c86a` — 🟢 **all three collapse to
+`0ffddef9e48f` at `ws`.** 🔴 **The 1 078 B SPDX delta is whitespace, nothing else.** 🔵 Worth
+stating plainly because this pass's own first hypothesis was that the delta was the *appendix*
+(`560-D`'s territory) and 🔴 **that hypothesis was wrong** — measurement, not inference, settled it.
+🟢 `560-C`'s re-pin of `11 358` / `cfc7749b96f6` at `raw` **holds, now at three sources**.
+
+🟢 **GPL-3.0 needed stage 3, and the mechanism is punctuation.** SPDX ships
+`“ ”`, `©` and `https://fsf.org/`; the repositories ship `" "`, `(C)` and `http://fsf.org/`.
+A sentence-level diff of the normalised texts returns **232 → 232 units with zero sentences added
+or removed** — the entire `ws`-stage disagreement is character-width.
+
+| source | `raw` B | `sha256/12` `raw` | `ws` B | `punct` |
+| --- | --- | --- | --- | --- |
+| 🟢 [`moodle/moodle`](https://github.com/moodle/moodle) `main/COPYING.txt` | **35 147** | `8ceb4b9ee5ad` | 34 281 | 🟢 `cd83b5f465e5` |
+| 🟢 [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) `master/LICENSE.txt` | **35 146** | `c53a65c2fd56` | 34 281 | 🟢 `cd83b5f465e5` |
+| 🟢 SPDX `GPL-3.0-only.txt` | 34 674 | `fb981668c18a` | 34 448 | 🟢 `cd83b5f465e5` |
+
+🟢 **And this dissolves a `560-A` artefact at last.** Moodle and h5p differ by **exactly 1 raw
+byte** — the trailing newline that `559-A` pinned a whole convention around. 🟢 **At `ws` they are
+the same number (34 281) and at `punct` the same digest.** 🔵 `560-A`'s labelling rule stays
+(publish `raw`, name the convention); 🟢 **but the convention question stops being load-bearing the
+moment the comparison is normalised.**
+
+### 🔴 `561-B` — AGPL-3.0 does not converge, and that is the instrument working
+
+🔴 **Three sources, three raw figures, and *two* that survive every stage.** SPDX **34 020 B**
+`d8a6cc31abc1` and [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms)
+`master/LICENSE` **34 520 B** `57c8ff33c9c0` 🟢 **collapse together** at `ws` (33 687 B
+`0a7e77a9ebe3`) — so canvas-lms ships **stock AGPL-3.0, differently wrapped**.
+🔴 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) `master/LICENSE`
+**35 136 B** `e12d78569742` does **not**: `ws` **34 302 B** `186d8f7758cb`, `punct`
+`de41de5bdd96`. 🔴 **A residual of +615 `ws` bytes that no stage removes.**
+
+🟢 **A sentence-level diff names it — three units, all added, all operative:**
+
+| # | added text (abridged) |
+| --- | --- |
+| 1 | `edX Inc.` |
+| 2 | *"wishes to state, in clarification of the above license terms, that any public, independently available web service offered over the network and communicating with edX's copyrighted works by any form of inter-service communication, including but not limited to Remote Procedure Call (RPC) interfaces,"* |
+| 3 | *"\"Corresponding Source\" of this work … do not include source code files for programs used solely to provide those public, independently available web services."* |
+
+🟢 **This base already held the clause** — `repos/trending.md` carries *"+616-byte edX Inc. RPC
+scope clarification"*. 🟢 **It is the same fact, and the two numbers now reconcile under `560-A`:**
+**+616** is `raw` against canvas-lms (35 136 − 34 520); **+615** is `ws` against the canonical
+(34 302 − 33 687). 🔵 Neither was wrong; **neither was labelled**, which is precisely the defect
+`560-A` registered.
+
+🟢 **Why this is the pass's load-bearing result.** Five families went through the same four stages
+blind. 🟢 **Four converged or failed for *formatting* reasons; exactly one failed for a *clause*,
+and it is the one clause on this shelf that changes a delivery obligation.** 🔵 The instrument was
+not told which family to flag — **its failure to converge is the signal**, and the signal landed on
+the right row. That is a negative control this base did not have before.
+
+### 🔴 `561-C` — LGPL-3.0 has two legitimate forms, and normalisation cannot reconcile them
+
+| source | `raw` B | `ws` B | `punct` | what it is |
+| --- | --- | --- | --- | --- |
+| 🟢 [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) `v4.0.x-develop/LICENSE` | **7 652** | **7 317** | `690578875bea` | 🟢 **rider-only** — the GNU-published shape, which *incorporates* GPL-3.0 by reference |
+| 🟢 SPDX `LGPL-3.0-only.txt` | **42 098** | **41 761** | `05e49932344e` | 🟢 **rider + GPL-3.0 concatenated** |
+
+🔴 **5.7× apart at every stage**, and both are correct. Their first lines are the same instrument
+(`GNU LESSER GENERAL PUBLIC LICENSE / Version 3, 29 June 2007`); 🟢 the difference is whether the
+publisher inlined the GPL text it points at. 🔴 **So for LGPL-3.0 the pin must name the form**, and
+a scanner that holds one form will report `NOASSERTION` on the other.
+
+🔵 **This is not academic for this shelf.** `odoo` and `openeducat_erp` are `LGPL-3.0-only` — the
+two ERP bases `557`'s gap-closure moved out of `BLOCK` — and BigBlueButton is the shelf's
+conferencing row. 🟢 All three are gradeable; 🔴 **none of them against a single digest.**
+
+### 🔴 `561-D` — BSD-3-Clause has no canonical digest, by construction
+
+| source | `raw` B | `ws` B | `punct` |
+| --- | --- | --- | --- |
+| SPDX `BSD-3-Clause.txt` | 1 460 | 1 453 | `65e7987f847f` |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) `main/LICENSE` | **1 512** | 1 492 | `1aa7d784220b` |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) `main/LICENSE` | **1 475** | 1 469 | `33df044acb3a` |
+
+🔴 **3 distinct at `raw`, 3 at `ws`, 3 at `punct`.** The template carries `<year>` and `<owner>`
+placeholders that every project fills differently, 🟢 **so there is nothing to pin and no amount of
+normalisation creates one.** 🟢 `560-C`'s own parenthesis about MIT — *"which has no single
+canonical form, so the existing fold constant is the right instrument there"* — 🟢 **generalises to
+BSD-3-Clause, now measured rather than assumed.** 🔵 Both are **class C**: fold-constant families.
+
+### 🔴 `561-E` — stage 4 is rejected, by this pass's own data
+
+🔴 **Case folding earned nothing.** It reduced **no** family's distinct-digest count below stage 3
+(Apache 1→1, GPL 1→1, AGPL 2→2, LGPL 2→2, BSD-3 3→3), 🔴 **and it destroys the one typographic
+signal that carries legal meaning** — capitalisation is how these instruments mark a defined term,
+so `"This License"` and `this license` must not hash alike. 🟢 **Stage 4 stays in the committed
+instrument so the negative result reproduces, and is not used for grading.** 🔵 Recorded here
+rather than quietly dropped, because a four-stage instrument whose fourth stage is inert is a
+finding about the instrument.
+
+### 🟢 Reproduction — 10 of 10 raw figures match the shelf
+
+🟢 **Ten grants were read first-hand this pass, through branch resolution and status gating, with
+no reference to what this base already held.** 🟢 **Every `raw` byte count and digest that the
+shelf already carries reproduced exactly** — `cfc7749b96f6`, `8ceb4b9ee5ad`, `c53a65c2fd56`,
+`57c8ff33c9c0`, `e12d78569742`, `e3a994d82e64`, `3a83d5b8e22c`, `7069c7e8d60e`, `a1587287ff04`,
+`f952182df4eb`. 🔵 **Zero disagreements.** 🟢 After `560-B` found two *manufactured* digests on this
+base, an all-green independent reproduction of a ten-row block is worth publishing as a number.
+
+🔴 **Branch resolution earned its place again:** BigBlueButton's default branch is
+**`v4.0.x-develop`**, and adlnet/xAPI-Spec's is `master` — 🔴 two of ten rows a `…/main/LICENSE`
+reader loses, consistent with `559-G`'s 32.4 %.
+
+🔵 **Gate posture, fifth consecutive measurement, unchanged and with the same named cause.** This
+base's committed instruments cannot be executed by the session that maintains it — the attempt is
+refused as *Code from External*. 🟢 Every instrument above was authored and run inline this pass;
+🔵 **none of it is gate-attested.**
+
 
 ## 🆕 `p560` — `2026-10-30` — **🟢 `559-C` CLOSED, AND THE RULE IT INSTALLED SAVED A VERDICT THE FIGURE IT INSTALLED WOULD HAVE LOST: canonical Apache-2.0 is **`11 358 B` / `cfc7749b96f6`** at `raw`, confirmed byte-identical from two independent sources — 🔴 **`559-C`'s own `11 356 B` / `43070e2d4e53` reproduces from neither.** 🟢 Two rows re-graded *modified-but-equivalent*; 🔴 **`560-D`: the shelf's flagship agent ships a hand-edited Apache-2.0 with THREE changes in the operative body**, not the "filled appendix" this base recorded. 🟢 `frappe/education`'s grant digest AMENDED IN PLACE (`560-B`).**
 

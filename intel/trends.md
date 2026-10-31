@@ -1,8 +1,77 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-30
+updated: 2026-10-31
 ---
+
+## 🆕 `p561` — `2026-10-31` — **🟢 THE TREND THIS PASS CAN ACTUALLY EVIDENCE IS A MISMATCH, AND IT IS MEASURED: **grants are published as prose and verified as bytes**, and the two have drifted far enough apart that **4 of 25 shelf rows are canonical VERBATIM while matching no canonical byte figure**, while 🔴 **the one row with a genuinely modified operative clause sits in the platform layer where nobody was looking**. 🔴 15 MIT rows → **15 distinct digests**; BSD-3-Clause → **3 of 3 distinct**. 🔴 THE TWO LICENCES GLOBANT PREFERS ARE THE TWO A HASH GATE CANNOT VERIFY.**
+
+### 🟢 Trend — licence verification became a delivery gate, and the instrument did not keep up
+
+🔵 **Why this is a trend and not a quirk.** Three forces converged on the same artefact in 2026:
+EMEA's **Regulation (EU) 2026/1744** puts education AI in Annex III with conformity documentation due
+**2 December 2027**; North America's procurement side now asks for an SBOM as a matter of course; and
+the supply this base tracks moved from a handful of platforms to **hundreds of small, fast-moving
+agent repositories**. 🟢 **All three terminate in the same question — *what is this licensed under?*
+— and the tooling that answers it compares bytes.**
+
+🔴 **Measured this pass, across 25 shelf rows and 14 canonical sources:**
+
+| what a byte gate does | measured incidence |
+| --- | --- |
+| 🔴 flags a **verbatim** canonical grant as modified | 🔴 **4 of 25 rows** — `smolagents` −1 B, `xAPI-Spec` **+167 B**, `ChatTutor` +502 B, `tutor` +503 B, all whitespace |
+| 🔴 cannot pin the family at all | 🔴 **18 of 25 rows** — 15 MIT + 3 BSD-3-Clause, filled templates, no canonical form exists |
+| 🔴 reports `NOASSERTION` on a correct file because the branch is not `main` | 🔴 **3 of 25** — `v4.0.x-develop`, `release`, `19.0`/`20.0` |
+| 🟢 correctly flags a **modified operative clause** | 🟢 **1 of 25** — [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) |
+
+🟢 **So the gate is right once and wrong, or mute, twenty-four times.** 🔵 And the one time it is
+right, it is right for the wrong reason: it reports *"differs from canonical"* and leaves a lawyer to
+discover that the difference **narrows** AGPL §13 in the client's favour (`561-B`). 🔴 A flag that
+cannot distinguish `+167 bytes of whitespace` from `+615 bytes of operative clause` is not a control.
+
+### 🟢 Trend — the clause risk migrated from the agent layer to the platform layer
+
+🔵 **This base spent nine passes building a licence-trap discipline on agents**, and it was the right
+place to look in 2025: AGPL and bespoke grants on fast-moving tutoring repositories. 🟢 **The grading
+this pass inverts it.** Of the Apache-2.0 agent rows: 2 verbatim, 2 modified-but-equivalent with a
+single filled-appendix line, 🔴 **1 failing the pin**
+([`DeepTutor`](https://github.com/HKUDS/DeepTutor), and its edits change no obligation). 🔴 Of the
+AGPL **platform** rows: 2 verbatim, **1 carrying a real operative narrowing**.
+
+🟢 **The trend, stated for a proposal:** *the agent layer has standardised on permissive grants and
+is mostly verbatim; the differentiated licence terms are now in the LMS and ERP layer underneath it.*
+🔴 Two live instances beyond Open edX, both found by the same instrument this pass:
+[`openeducat_erp`](https://github.com/openeducat/openeducat_erp)'s grant file **asserts a GPL body it
+does not contain and points at a `COPYRIGHT` file that 404s** (`561-H`), while
+[`odoo`](https://github.com/odoo/odoo) ships the identical preamble and honours both pointers.
+🔵 Nobody finds that by reading the agent shelf.
+
+### 🔵 Trend — the regional demand surface is saturating unevenly, and that is now three passes old
+
+| pass | NA | EMEA | APAC | LATAM |
+| --- | :-: | :-: | :-: | :-: |
+| `p559` | 🔴 0 | 🔴 0 | 🔴 0 | 🟢 2 |
+| `p560` | 🟢 1 *(negative)* | 🟢 1 | 🔴 0 | 🟢 1 |
+| 🆕 `p561` | 🔴 0 | 🔴 0 | 🔴 0 | 🟢 **2** |
+
+🟢 **Three consecutive passes, same shape.** 🔵 The reading this base can defend is **not** that LATAM
+is a richer market — the sizing ledger says nothing of the kind — but that **LATAM's instrument supply
+is still being created while the other three regions' is already indexed**. 🟢 UNESCO's LAC Observatory
+launched April 2026; IESALC's institutional study is 2026; the Andes regulatory count is 2026. 🔴 The
+EU AI Act, the Korean Basic Act and the US state trackers were all shelved passes ago.
+🔵 **Consequence for the next pass: the marginal leg is worth more in LATAM and more in *supply* than
+in demand anywhere.**
+
+### 🔴 The one regulatory fact worth re-stating because it is live *today*
+
+🟢 **Article 50 transparency has applied since 2 August 2026 and was NOT deferred.** Regulation (EU)
+2026/1744 moved the **Annex III high-risk** obligations for education to **2 December 2027** and
+Annex I to **2 August 2028** — 🔴 **but not Article 50.** 🟢 So an EMEA education engagement has a
+**duty in force now** (disclose that content and interaction are AI-generated) and a **conformity
+programme due in 2027**. 🔵 Independently re-confirmed this pass by a relay that does not cite
+`p560`'s source. 🔴 Standards for the high-risk tier are still unfinished, so `2027-12-02` is a
+planning date, not a guarantee.
+
 
 ## 🆕 `p560` — `2026-10-30` — **🟢 THE ONE EMEA OBLIGATION THAT IS LIVE TODAY, SEPARATED FROM THE ONE THAT IS NOT: Regulation (EU) 2026/1744 deferred Annex III education to **2 December 2027**, but 🔴 **Article 50 transparency was NOT deferred and has applied since 2 August 2026** — so an EMEA education engagement has a duty in force now and a conformity programme due in 2027. 🟢 `559-D` CLOSED on the market figure: scope words recorded, and the spread they explain **widened to 5.9×**. 🔴 `560-G`: the US state-bill count disagrees **with itself** — a tracker says 13, its own citers say 52, 68 and 77.**
 

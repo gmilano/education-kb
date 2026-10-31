@@ -1,8 +1,91 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-30
+updated: 2026-10-31
 ---
+
+## 🆕 `p561` — `2026-10-31` — **🟢 TEN GRANT FIGURES THIS PAGE PUBLISHES WERE RE-READ BLIND AND **10 OF 10 REPRODUCED EXACTLY** — the first all-green independent reproduction of a grant block on this base, and it lands two passes after `560-B` proved two published digests were **manufactured**. 🔴 BUT THE SAME READ SHOWS THE FIGURES WERE NEVER THE PROBLEM: **4 rows whose raw digest matches nothing canonical are canonical VERBATIM**, and 🔴 **15 MIT rows produce 15 distinct digests at every normalisation stage**. 🔴 `561-E`: THIS PASS'S OWN STAGE 4 IS REJECTED BY ITS OWN DATA.**
+
+🔵 **This page is append-only**, so the reconciliations below are recorded here rather than
+rewritten into the rows above. 🟢 Where a row's figure is *superseded* rather than merely confirmed,
+it is said so explicitly, with both numbers and both conventions named per `560-A`.
+
+### 🟢 The reproduction census — 10 of 10
+
+🟢 **Read blind:** default branch resolved with `git ls-remote --symref`, six candidate grant
+filenames status-gated on `raw.githubusercontent.com`, `raw` bytes from `wc -c`, `sha256/12`.
+🔵 No reference to this base's held figures until after the read.
+
+| address | branch | path | `raw` B | `sha256/12` | vs shelf |
+| --- | --- | --- | --- | --- | --- |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | `COPYING.txt` | 35 147 | `8ceb4b9ee5ad` | 🟢 **match** |
+| [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) | `master` | `LICENSE.txt` | 35 146 | `c53a65c2fd56` | 🟢 **match** |
+| [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | `LICENSE` | 34 520 | `57c8ff33c9c0` | 🟢 **match** |
+| [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `master` | `LICENSE` | 35 136 | `e12d78569742` | 🟢 **match** |
+| [`bigbluebutton/bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) | **`v4.0.x-develop`** | `LICENSE` | 7 652 | `e3a994d82e64` | 🟢 **match** |
+| [`oppia/oppia`](https://github.com/oppia/oppia) | `develop` | `LICENSE` | 11 358 | `cfc7749b96f6` | 🟢 **match** |
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | `master` | `LICENSE` | 11 525 | `a1587287ff04` | 🟢 **match** |
+| [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | `main` | `LICENSE` | 1 512 | `3a83d5b8e22c` | 🟢 **match** |
+| [`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) | `main` | `LICENSE` | 1 475 | `7069c7e8d60e` | 🟢 **match** |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `main` | `LICENSE` | 1 230 | `f952182df4eb` | 🟢 **match** |
+
+🟢 **Zero disagreements.** 🔵 Worth a number because `560-B` had just established that this base can
+publish a digest it never measured: the honest reading is that **the manufacturing was local to
+three figures**, not a property of the grant block, and the block now has an independent witness.
+🔴 It does **not** discharge `560-B`'s closure condition, which is to apply the blob-history test to
+*every* digest-bearing row — 🔵 a reproduction is not a provenance proof, and ten rows is not every
+row.
+
+### 🔴 What the same read supersedes — the figures were right and the gate was wrong
+
+🔴 **Four rows on this shelf carry a raw digest that matches no canonical copy, and all four are
+canonical verbatim** (`561-F`):
+
+| row | `raw` B | distance from canonical `raw` | `punct` | 🟢 verdict |
+| --- | --- | --- | --- | --- |
+| [`huggingface/smolagents`](https://github.com/huggingface/smolagents) | 11 357 | **−1 B** vs `apache.org` 11 358 | `0ffddef9e48f` | 🟢 Apache-2.0 verbatim |
+| [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) | 11 525 | **+167 B** | `0ffddef9e48f` | 🟢 Apache-2.0 verbatim |
+| [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) | 34 522 | **+502 B** vs SPDX AGPL 34 020 | `2cd0fb7883a3` | 🟢 AGPL-3.0 verbatim |
+| [`overhangio/tutor`](https://github.com/overhangio/tutor) | 34 523 | **+503 B** | `2cd0fb7883a3` | 🟢 AGPL-3.0 verbatim |
+
+🔴 **`xAPI-Spec` is the sharpest case: 167 bytes over canonical Apache-2.0, every one of them
+whitespace.** 🟢 A verdict column that reads *"differs from canonical, +167 B"* was never wrong about
+the bytes; it was **asking the wrong question of them**.
+
+🔴 **And the MIT band cannot be pinned at all** — 15 rows read, **15 distinct digests at `raw`, `ws`
+and `punct`**, with three rows sharing raw `1 069` and still differing at every digest. 🟢 Class C
+(`561-D`): a filled-template family has no canonical form, and the fold-constant instrument this
+base already uses is the right one.
+
+### 🔴 `561-E` — the pass rejects its own fourth stage
+
+🔴 **Stage 4 (case folding) reduced no family's distinct-digest count below stage 3** — Apache-2.0
+1→1, GPL-3.0 1→1, AGPL-3.0 2→2, LGPL-3.0 2→2, BSD-3-Clause 3→3 — 🔴 **and it destroys the
+capitalisation that marks a defined term**, so `"This License"` would hash as `this license`.
+🟢 **Kept in the committed instrument so the negative result reproduces; not used for grading.**
+🔵 Published because a four-stage instrument whose fourth stage is inert is a finding about the
+instrument, and this base's own history (`553`, `554`, `560`) is that instruments are where the
+defects are.
+
+### 🔵 Channel note — the topic legs, with their population counts
+
+🟢 `topic:ai-tutor` **829 tagged**, `topic:ai-education` **565 tagged**; 40 enumerated off page 1 of
+each; 🔴 **0 new to this shelf.** 🔵 Published as `40 / 1 394 = 2.9 %`, so the claim is *the high-star
+head is exhausted*, not *the topics are*. 🔴 `560-H`'s paired free-text leg was **not** run — the
+free-text channel needs an account-wide repository search, which this session's repository scope
+does not permit; the obstruction is now named on the gap rather than left as an unexplained absence.
+
+### 🔵 Transports and posture
+
+🟢 `git ls-remote --symref` **25/25** addresses answered. 🟢 `raw.githubusercontent.com` **39
+status-gated grant reads** across 25 shelf rows and 14 canonical sources. 🟢 `WebFetch` → `github.com`
+repository and topic pages **28 reads**. 🟢 WebSearch **12 legs** (4 global, 4 regional, 4 follow-up).
+🔴 `curl` → `api.github.com` **403**, unchanged for a fifth pass. 🔴 `curl` → `www.gnu.org` **`000`**,
+unchanged — so canonical GPL/AGPL/LGPL text came from `spdx/license-list-data`, and `561-A` treats
+SPDX as *a* source rather than *the* source, which is why the Apache-2.0 disagreement was caught.
+🔵 Gate posture: committed instruments not executable from this session (*Code from External*),
+fifth consecutive measurement.
+
 
 ## 🆕 `p560` — `2026-10-30` — **🔴 A NEW CHANNEL-DILUTION MECHANISM THAT A STARS FLOOR CANNOT TOUCH (`560-H`): a free-text `grading` leg returns **"enterprise-grade", "production-grade", "commercial-grade"** — **~4 of 25 rows were education**, and every one of the 21 misses had plenty of stars. 🟢 `558-C`'s PAIRED SWEEP REPRODUCED DIGIT-FOR-DIGIT (204 unfiltered / 2 filtered), AND `topic:education` IS THE PRODUCTIVE CHANNEL THIS PASS. 🔧 `frappe/education`'s DIGEST ON THIS PAGE IS SUPERSEDED — see below; this page is append-only, so the correction is recorded here rather than rewritten below.**
 

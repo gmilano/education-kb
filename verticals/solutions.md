@@ -1,8 +1,97 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-30
+updated: 2026-10-31
 ---
+
+## 🆕 `p561` — `2026-10-31` — **🔴 `561-H`: OPENEDUCAT'S GRANT FILE CONTRADICTS ITSELF TWICE, AND ODOO'S IDENTICAL PREAMBLE IS ACCURATE ON BOTH POINTS. [`openeducat_erp`](https://github.com/openeducat/openeducat_erp) `19.0/LICENSE` says *"the text of the GPL is included at the bottom as well"* — 🔴 **`GNU GENERAL PUBLIC LICENSE` appears ZERO times in the file** — and *"please see the COPYRIGHT file"* — 🔴 **which 404s on that branch.** 🟢 [`odoo`](https://github.com/odoo/odoo) `20.0/LICENSE` ships the same five-sentence preamble and honours both: GPL body present, `COPYRIGHT` → `200`. 🟢 BOTH VERDICTS HOLD; the defect is in the paper trail, which is what an audit reads.**
+
+🟢 **Found by instrument, not by browsing.** `p561`'s normaliser
+([`../repos/foundations.md`](../repos/foundations.md#-p561--2026-10-31), `561-A`) grades a grant by
+the **stage at which it converges** on a canonical pin. Both ERP rows **failed to converge at every
+stage**, which is the instrument's signal to go and read the residual. 🔵 That is the whole point of
+`561-B`: non-convergence is not noise, it is an instruction.
+
+### 🔴 `561-H` — the two ERP bases, measured
+
+| platform | branch | `raw` B | `sha256/12` `raw` | LGPL form shipped | preamble's own claims |
+| --- | --- | --- | --- | --- | --- |
+| 🔴 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **`19.0`** | **8 241** | `528f84036800` | 🔴 **rider-only** (~7.6 KB shape) | 🔴 **both false** — no GPL body; `COPYRIGHT` **404** |
+| 🟢 [`odoo/odoo`](https://github.com/odoo/odoo) | **`20.0`** | **43 529** | `abc09dad5f84` | 🟢 **rider + GPL** | 🟢 **both true** — GPL body present with `END OF TERMS AND CONDITIONS`; `COPYRIGHT` **200** |
+
+🟢 **The preamble is word-for-word the same in both**, modulo the product name:
+
+> *"For copyright information, please see the COPYRIGHT file. OpenEduCat is published under the GNU
+> LESSER GENERAL PUBLIC LICENSE, Version 3 (LGPLv3), as included below. Since the LGPL is a set of
+> additional permissions on top of the GPL, the text of the GPL is included at the bottom as well.
+> Some external libraries and contributions bundled with OpenEduCat may be published under other
+> GPL-compatible licenses. For these, please refer to the relevant source files and/or license
+> files, in the source code tree."*
+
+🔴 **Checks run on `openeducat_erp` `19.0/LICENSE`:** `GNU LESSER GENERAL PUBLIC LICENSE` ×2,
+🔴 `GNU GENERAL PUBLIC LICENSE` **×0**, 🔴 `END OF TERMS AND CONDITIONS` **×0**; the file ends
+mid-rider on the proxy-acceptance paragraph. 🟢 **On `odoo` `20.0/LICENSE`:**
+`GNU GENERAL PUBLIC LICENSE` ×1, `END OF TERMS AND CONDITIONS` ×1, closing `***` separator present.
+
+🟢 **Why both verdicts survive.** LGPL-3.0 *is* a set of additional permissions that incorporates
+GPL-3.0 **by reference** — `561-C` measured the GNU-published rider-only form at **7 652 raw /
+7 317 `ws`** on BigBlueButton and it is a complete, self-sufficient instrument. 🟢 So
+**`LGPL-3.0-only` holds for OpenEduCat**, and `557`'s closure moving both ERP bases out of `BLOCK`
+to `LINK-ONLY` is **unaffected**. 🔴 What fails is the *paper trail*, and the paper trail is what a
+client's legal review actually reads.
+
+🔴 **The third sentence is the one that costs money, and it is in both files.** *"Some external
+libraries and contributions bundled with … may be published under other GPL-compatible licenses."*
+🔵 So the root grant is **not** the SBOM for either platform: a GPL-compatible bundle can include
+**GPL-3.0-or-later** components, which are not `LINK-ONLY`. 🟢 **Practical consequence for an ERP
+engagement:** the licence question is settled at the root and **re-opened per bundled dependency**,
+and the scan has to walk the tree — `odoo`'s `COPYRIGHT` file is where that walk starts, and
+🔴 **OpenEduCat does not provide one on the branch it ships.**
+
+### 🔴 `561-C` applied — the form is a delivery variable for this page
+
+🟢 **LGPL-3.0 has two legitimate published forms and no single canonical digest** (`561-C`):
+rider-only **`690578875bea`** (7 317 `ws` B) and rider+GPL **`05e49932344e`** (41 761 `ws` B) —
+🔴 **5.7× apart, both correct.** This page carries rows in **both** forms, and neither matches the
+other's pin:
+
+| row | form | why it matters here |
+| --- | --- | --- |
+| 🟢 [`bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) `v4.0.x-develop` | rider-only, **verbatim** | 🟢 the reference specimen `561-C` pinned the rider-only form from |
+| 🔴 [`openeducat_erp`](https://github.com/openeducat/openeducat_erp) `19.0` | rider-only **+ preamble** | 🔴 asserts the other form in prose; ships this one |
+| 🟢 [`odoo`](https://github.com/odoo/odoo) `20.0` | rider+GPL **+ preamble** | 🟢 consistent |
+
+🔴 **A single-digest LGPL gate reports `NOASSERTION` on two of these three**, whichever form it
+holds. 🟢 The gate for this page must therefore hold **both** pins and name the form in the verdict
+— implemented as stage 3 of `P561-A` in
+[`../compose/patterns.md`](../compose/patterns.md#-p561--2026-10-31).
+
+### 🟢 The AGPL layer on this page is now graded, and it is cleaner than expected
+
+| row | branch | `raw` B | `punct` | verdict |
+| --- | --- | --- | --- | --- |
+| 🟢 [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | `master` | 34 520 | `2cd0fb7883a3` | 🟢 **AGPL-3.0, verbatim** |
+| 🟢 [`overhangio/tutor`](https://github.com/overhangio/tutor) | 🔴 **`release`** | 34 523 | `2cd0fb7883a3` | 🟢 **AGPL-3.0, verbatim** |
+| 🔴 [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) | `master` | 35 136 | `de41de5bdd96` | 🔴 **AGPL-3.0 + edX Inc. RPC narrowing** |
+
+🟢 **Two of three are stock AGPL-3.0 despite three different raw byte counts** — the normaliser's
+clearest result on this page. 🔴 **The third is the one worth a lawyer's hour**, and its residual is
++615 `ws` bytes of *operative* text that **narrows** AGPL §13: a public, independently available web
+service communicating with Open edX over RPC or other inter-service communication is declared **not**
+part of the `Corresponding Source` (`561-B`).
+
+🔵 **And that narrowing runs in Globant's favour**, which is why it must be read rather than flagged:
+🟢 **a service placed beside Open edX and speaking to it over RPC does not pull the platform's
+network copyleft onto that service** under the licence as edX publishes it. 🔵 Stock AGPL-3.0 — which
+is what [`canvas-lms`](https://github.com/instructure/canvas-lms) and
+[`tutor`](https://github.com/overhangio/tutor) ship — carries **no such clarification**, so the same
+architecture beside Canvas is a materially different question. 🔴 **Three AGPL LMS rows, two distinct
+legal postures, and the raw byte counts do not tell you which is which.**
+
+🔵 **`560-A` labelling, applied:** this base's `+616` for the edX clause (`repos/trending.md`) and
+this pass's `+615` are the **same fact** at `raw`-vs-canvas and `ws`-vs-canonical respectively. 🟢
+Reconciled, not corrected.
+
 
 ## 🆕 `p560` — `2026-10-30` — **🟢 THE FIRST AGENT-TO-VERTICAL BRIDGE ON THIS SHELF, AND IT IS MIT: [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) puts an MCP server in front of **Canvas LMS**, a platform this page has carried since `p2` and never had a programmable path into. 🔴 AND THE LICENCE GATE THAT GUARDS THIS PAGE NEEDS A THIRD CONVENTION: `odoo` (`20.0`), `openeducat_erp` (`19.0`) and `i-educar` (`2.12`) are already lost to a `main`-only reader (`559-G`); now **`cn-math-taxonomy`'s figure only reproduces under `strip()`** (`560-A`).**
 

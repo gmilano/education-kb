@@ -1,0 +1,15 @@
+family	class	source	url	raw_B	sha12_raw	ws_B	sha12_ws	sha12_punct	sha12_case
+Apache-2.0	A/ws	publisher apache.org	https://www.apache.org/licenses/LICENSE-2.0.txt	11358	cfc7749b96f6	10221	0ffddef9e48f	0ffddef9e48f	948703bcf1cb
+Apache-2.0	A/ws	spdx Apache-2.0	https://raw.githubusercontent.com/spdx/license-list-data/main/text/Apache-2.0.txt	10280	074e6e32c86a	10221	0ffddef9e48f	0ffddef9e48f	948703bcf1cb
+Apache-2.0	A/ws	oppia/oppia develop/LICENSE	https://raw.githubusercontent.com/oppia/oppia/develop/LICENSE	11358	cfc7749b96f6	10221	0ffddef9e48f	0ffddef9e48f	948703bcf1cb
+GPL-3.0	A/punct	spdx GPL-3.0-only	https://raw.githubusercontent.com/spdx/license-list-data/main/text/GPL-3.0-only.txt	34674	fb981668c18a	34448	1183eb50923e	cd83b5f465e5	a79632c204db
+GPL-3.0	A/punct	moodle/moodle main/COPYING.txt	https://raw.githubusercontent.com/moodle/moodle/main/COPYING.txt	35147	8ceb4b9ee5ad	34281	0366f6619935	cd83b5f465e5	a79632c204db
+GPL-3.0	A/punct	h5p/h5p-php-library master/LICENSE.txt	https://raw.githubusercontent.com/h5p/h5p-php-library/master/LICENSE.txt	35146	c53a65c2fd56	34281	0366f6619935	cd83b5f465e5	a79632c204db
+AGPL-3.0	D/content	spdx AGPL-3.0-only	https://raw.githubusercontent.com/spdx/license-list-data/main/text/AGPL-3.0-only.txt	34020	d8a6cc31abc1	33687	0a7e77a9ebe3	2cd0fb7883a3	7a5ebd3f7b0d
+AGPL-3.0	D/content	instructure/canvas-lms master/LICENSE	https://raw.githubusercontent.com/instructure/canvas-lms/master/LICENSE	34520	57c8ff33c9c0	33687	0a7e77a9ebe3	2cd0fb7883a3	7a5ebd3f7b0d
+AGPL-3.0	D/content	openedx/openedx-platform master/LICENSE	https://raw.githubusercontent.com/openedx/openedx-platform/master/LICENSE	35136	e12d78569742	34302	186d8f7758cb	de41de5bdd96	975c98fb2243
+LGPL-3.0	B/form	spdx LGPL-3.0-only	https://raw.githubusercontent.com/spdx/license-list-data/main/text/LGPL-3.0-only.txt	42098	996af0513df2	41761	6576b2ae0357	05e49932344e	7d285b9a516e
+LGPL-3.0	B/form	bigbluebutton v4.0.x-develop/LICENSE	https://raw.githubusercontent.com/bigbluebutton/bigbluebutton/v4.0.x-develop/LICENSE	7652	e3a994d82e64	7317	690578875bea	690578875bea	5374bc68d327
+BSD-3-Clause	C/template	spdx BSD-3-Clause	https://raw.githubusercontent.com/spdx/license-list-data/main/text/BSD-3-Clause.txt	1460	5a93d5831e12	1453	65e7987f847f	65e7987f847f	253ff9563d5f
+BSD-3-Clause	C/template	jupyter/nbgrader main/LICENSE	https://raw.githubusercontent.com/jupyter/nbgrader/main/LICENSE	1512	3a83d5b8e22c	1492	1aa7d784220b	1aa7d784220b	dd26166d6577
+BSD-3-Clause	C/template	jupyterhub/jupyterhub main/LICENSE	https://raw.githubusercontent.com/jupyterhub/jupyterhub/main/LICENSE	1475	7069c7e8d60e	1469	64539bc126bd	33df044acb3a	b76debae3c2b
