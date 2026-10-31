@@ -4,6 +4,110 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (third pass) — EMEA gets a permissive platform; Africa gets a supply side
+
+**Method note first, because it explains everything below.** The GitHub REST API
+was reachable this pass through the MCP GitHub server (earlier passes recorded it
+blocked). Licences come from `license.spdx_id`, star counts from
+`stargazers_count`, and `license:<spdx> repo:<owner>/<name>` serves as a cheap
+second opinion. Querying the index rather than the open web is what produced both
+findings below. **No star movement is claimed** — this is discovery.
+
+### Discovery 1: a permissively licensed AI-native LMS, from Poland
+
+[`Selleo/mentingo`](https://github.com/Selleo/mentingo) — **MIT**, 102★, 31 forks,
+TypeScript, created 2024-08-01, pushed 2026-10-30. "Open-source AI-native LMS with
+AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS,
+Thinkific, Teachable and Open edX." Ships **SCORM and xAPI**; white-label is a
+stated goal; topics include `corporate-training` and `compliance-training`.
+Maintained by **Selleo**, whose GitHub profile states its location as **Poland**.
+
+**Why 102 stars is the most consequential number in this file.** Every pattern in
+this KB until now has been an *attachment*, because every platform of record is
+copyleft and cannot be forked into a proprietary product. `mentingo` is the first
+AI-native LMS a client can **fork, rebrand and keep closed**. It does not displace
+Moodle — at 102★ with 105 open issues it carries adoption risk a Moodle install
+does not — but it changes the available answer in corporate L&D from "attach" to
+"own". New pattern **P-568-J** in
+[`../compose/patterns.md`](../compose/patterns.md), with a mandatory
+technical-spike gate before anyone commits to substrate replacement.
+
+It also makes an **entirely permissive, entirely EMEA-origin stack** assemblable
+for the first time: `mentingo` (Poland, MIT) + `openfun/ralph` (France, MIT) +
+`ltijs` (Apache-2.0) + `pedagogy-benchmark` (MIT).
+
+### Discovery 2: the African supply side exists — it is an organisation, not a repo
+
+Three consecutive passes declared *"no African education platform or agent
+repository appears anywhere in this KB."* **Closed.**
+
+[`AI-for-Education`](https://github.com/AI-for-Education) — *"Empowering Education
+in LMIC's with AI"*, *"a collaborative hub for developing and sharing AI tools and
+resources aimed at revolutionizing education in low and middle-income countries."*
+**19 repositories, 10 of them MIT** (`license:mit org:AI-for-Education`).
+
+| Repo | ★ | What it is |
+| --- | --: | --- |
+| [lesson-plan-parse-mbsse](https://github.com/AI-for-Education/lesson-plan-parse-mbsse) | 1 | **Sierra Leone MBSSE** Maths and Language Arts lesson plans → structured JSON. MIT. |
+| [luganda-linguistic-benchmarks](https://github.com/AI-for-Education/luganda-linguistic-benchmarks) | 0 | **Luganda** (Uganda) linguistic benchmarks |
+| [global-proficiency-framework](https://github.com/AI-for-Education/global-proficiency-framework) / [gpf-alignment](https://github.com/AI-for-Education/gpf-alignment) | 0 / 1 | Digitising the **Global Proficiency Framework** and automating alignment to it |
+| [nemoasr-android](https://github.com/AI-for-Education/nemoasr-android) | 1 | **On-device** ASR (Kotlin) — the only connectivity-independent asset in this KB |
+| [voice-ai-evaluation-framework](https://github.com/AI-for-Education/voice-ai-evaluation-framework) | 1 | Evaluation harness for voice AI |
+| [pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | 13 | Already shelved — its **parent org** is the find |
+
+**Read honestly: this is a supply side measured in single-digit stars.** It is a
+toolkit, not a market, and most of it is pre-1.0. But it is MIT, it is pointed at
+named African ministries and languages, and it is the only thing of its kind
+located in three passes. The organisation's **own location is not stated**, so
+African *artefacts* are now mapped while African-*domiciled* publishers are not.
+The gap narrowed; it did not vanish.
+
+### Discovery 3: `NOASSERTION` is three different things
+
+[`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph)
+(164★) and [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+(87★) both report `NOASSERTION` from the API. For the first, reading the repo
+shows why: the file is **`LICENSE.md`**, and the grant is **split** — README
+badges read *"License for Knowledge Graph code: MIT"* and *"License for Knowledge
+Graph datasets: By data publisher"*, with **some datasets gated**. The code
+clears; each dataset must be cleared individually.
+
+That is a materially different state from `digitalinnovationone/dio-agent`
+(2,750★), which has **no `license` field at all** and is genuinely unlicensed, and
+from `DMontgomery40/mcp-canvas-lms` (104★), which **claims MIT in prose with no
+file**. Three states, one ambiguous API value. The step-0 preflight in
+[`../compose/patterns.md`](../compose/patterns.md) now enumerates all three, plus
+a fourth: **a content licence on code-shaped work** (`Auto-Empirical-Research-Skills`,
+4,843★, CC BY-SA 4.0).
+
+These two repos also fill a real hole: they are the **only rubric-scoring and
+standards-alignment assets** located in this KB, and therefore the only way to
+show a client that generated instructional content was *measured*.
+
+### Correction: an org name is not provenance
+
+The African-education search's top hit,
+[`AFRICAN-AI-NETWORK/learnhouse`](https://github.com/AFRICAN-AI-NETWORK/learnhouse),
+is a **0★ fork** of [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse)
+— **AGPL-3.0 plus a separate Enterprise Licence**, 2.4k★, 593 forks, maintainer
+Badr B. (`@swve`), country not stated. The upstream is now a row in
+[`foundations.md`](foundations.md) and
+[`../verticals/solutions.md`](../verticals/solutions.md), carrying the lesson its
+licence teaches: **an AGPL core with features withheld under a commercial licence
+looks open in a licence column and is not open in a feature matrix.**
+
+### Standing finding, now firm enough to stop calling it a gap
+
+**There is no permissively licensed education ERP.** Three passes of the
+prescribed `open source platform education ERP CRM MIT Apache` search return
+OpenEduCat's own marketing glossary plus general-purpose CRMs (Krayin MIT,
+NextCRM MIT, Huly Apache-2.0) and ERPNext (GPL-3.0). The education ERP category
+is LGPL (OpenEduCat, Odoo) or GPL/AGPL (Frappe ×2, i-educar, openSIS) **without
+exception**. That is the answer, not a missing search.
+
+---
+
+
 ## 2026-10-31 (second pass) — one real discovery, found by changing method rather than watching stars
 
 **Framing, so the trend record stays honest:** written the same day as the

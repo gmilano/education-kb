@@ -6,191 +6,248 @@ updated: 2026-10-31
 
 # Current trends — education AI
 
-Research date 2026-10-31. Six trends, each with the evidence behind it and the
-confidence it deserves.
+Confidence is stated per trend. Where a trend was **measured first-hand** from
+GitHub's own index rather than read from a source, that is said explicitly —
+those are the most reliable items on this page and the least likely to appear
+anywhere else.
 
-## 1. From experimentation to governance (high confidence — every source agrees)
+## 1. Education AI has stopped shipping as applications and started shipping as agent skills (high confidence — measured first-hand)
 
-The single most consistent finding of this run. 1EdTech frames 2026 as the year
-AI in education shifts "from experimentation to governance." Tutorflow describes
-the main change as a shift from experimentation to operational use. Campus
-Technology's industry panel expects AI to move from experimentation to **embedded
-infrastructure** in higher education — admissions, advising, administration.
+**The biggest change since the previous pass, and it is measured, not reported.**
+Querying GitHub directly for `topic:agent-skills topic:education stars:>50`
+returns **13 repositories**. Seven of the fourteen agents on
+[`../agents/top.md`](../agents/top.md) are skill bundles — markdown instruction
+sets (`SKILL.md`, `AGENTS.md`, `CLAUDE.md`) loaded by an existing harness, with
+**no runtime, no service and no API**. The cohort, by stars:
 
-**Why it matters commercially:** governance work is budgeted, repeatable and
-auditable in a way pilots never were. The buyer changes from an innovation team
-to an operations or compliance owner.
+| Repo | ★ | Licence | What it is |
+| --- | --: | --- | --- |
+| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 4,843 | **CC BY-SA 4.0** | 23,000+ skills for empirical research across 8 social-science disciplines; CoPaper.AI / Stanford REAP |
+| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | 2,750 | **none** | Brazilian study-mentor agent bundle; runs on 5 named harnesses |
+| [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 1,201 | MIT | PDFs/books/papers → traceable interactive learning pages |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 586 | unresolved | K-12→career skill tree, 30+ skills, ships an MCP server |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 295 | MIT | Bloom's 2-sigma as a skill **plus** a self-hostable app |
+| [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | 213 | MIT | Chinese civil-service exam prep |
+| [read2017/learn-anything-with-AI](https://github.com/read2017/learn-anything-with-AI) | 203 | MIT | Project-driven mastery learning |
+| [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | 119 | MIT | Teaching/tutoring skill collection incl. *gaokao* |
 
-## 2. Agentic use cases are the named 2026 capability (high confidence)
+**Why this matters more than it looks.** Three consequences for an engagement:
 
-Educativa names AI agents as the year's big development, specifically agents
-that **plan lessons and draft assessments for teacher review** — note the
-human-in-the-loop framing, which is also what the high-risk regimes require.
-HolonIQ expects focus on agentic use cases alongside ethics and transparency.
+1. **There may be nothing to host.** The deliverable is a prompt contract. That
+   collapses infrastructure cost and collapses the recurring-revenue story with
+   it. Price the authoring and the maintenance, not the running.
+2. **Versioning and evaluation become the hard problems.** A skill bundle has no
+   semver discipline, no test suite by convention, and changes behaviour when the
+   *harness* or the *model* changes underneath it — neither of which the client
+   controls. This is the strongest argument for the evaluation layer in trend 7.
+3. **Licence screening gets harder, not easier.** The largest member of the
+   cohort is **CC BY-SA 4.0** — a share-alike *content* licence on a code-shaped
+   artefact, which propagates to derivatives of the skill text. The
+   second-largest has **no licence at all**. A skill bundle looks like
+   documentation and is governed like a work of authorship.
 
-**Measured corroboration:** the field is visibly agentic and visibly MCP-shaped.
-Four of six agents on [`../agents/top.md`](../agents/top.md) are MCP servers, and
-the one breakout project is agent-native by design — DeepTutor ships multi-step
-agent pipelines (`Deep Solve`, `Deep Research`) rather than a chat wrapper.
+The cohort is also **overwhelmingly APAC-origin** (six of the eight above are
+Chinese-language or China-maintained), with a Stanford exception at the top and a
+Brazilian one in second place.
 
-## 3. Purpose-built beats general-purpose (high confidence — incl. an OECD mandate)
+## 2. From experimentation to governance (high confidence — every source agrees)
 
-The **OECD's 2026 Digital Education Outlook recommends moving toward
-purpose-built educational AI rather than general-purpose tools.** Teachbetter
-independently calls the move away from generic AI tools toward platforms
-purpose-built for education "the defining trend." HolonIQ's framing — **proven
-instructional benefit over broad personalisation promises** — is the same trend
-stated as an evidentiary bar.
+The consistent framing across industry sources: AI moves from standalone pilots
+into admissions, advising, learning and administration as embedded
+infrastructure. HolonIQ expects attention to shift to ethics, transparency,
+agentic use cases and *proven instructional benefit* over broad personalisation
+promises; 1EdTech frames it as evolving from isolated use cases to coordinated,
+policy-guided ecosystems. The hard numbers behind it are in
+[`market.md`](market.md): 87/26 in LATAM, 63% teacher use in EMEA, 60% in the US,
+7-of-39 operational governance in Australia. **The gap between use and governance
+is the market.**
 
-**Upgraded on the second pass of 2026-10-31 — now the best-evidenced trend in
-this KB.** The first pass rested on an OECD recommendation plus a vendor blog.
-The **Sanoma Learning European Teacher Survey 2026** asked **20,000+ teachers
-across 14 European countries** and its headline is literally that teachers are
-adopting AI rapidly *but want tools built for education*. That is the same claim
-measured on the largest sample anywhere in this research, from the demand side
-rather than as a policy recommendation. The OECD's June 2026 *Empowering
-Learners for the Age of AI* is a second OECD publication pointing the same way.
+## 3. Purpose-built beats general-purpose (high confidence)
 
-So the trend now has three independent legs: an **institutional mandate**
-(OECD), **20,000 teachers** saying it themselves (Sanoma), and an
-**evidentiary bar** (HolonIQ's "proven instructional benefit"). It is no longer
-a soft trend.
+Vendors and analysts converge on movement away from generic assistants toward
+platforms built for education. This KB's own evidence agrees from the supply
+side: the two largest education agents in the world are **purpose-built
+education** projects from universities (DeepTutor/HKU, OpenMAIC/Tsinghua), not
+education wrappers on general agents — and the prescribed "top open source AI
+agents education" search returns only general-purpose listicles, i.e. the
+*commentary* layer still has no education-specific map while the *code* layer
+clearly does.
 
-**Why it matters:** this is an explicit institutional mandate against "we
-connected ChatGPT to it," and it is the clearest validation of vertical,
-integrator-delivered work in the whole research set.
+## 4. The compliance calendar and the capability calendar have come apart (high confidence — re-verified independently, and extended)
 
-## 4. The compliance calendar and the capability calendar have come apart (high confidence)
-
-A genuine counter-trend, and the detail most likely to be gotten wrong:
+The previous pass recorded this correctly and in detail; this pass **re-verified
+it from fresh sources and added two things it did not have.** The table stands:
 
 | Regime | Status on 2026-10-31 |
 | --- | --- |
 | EU AI Act — stand-alone Annex III high-risk (incl. education) | Deferred to **2027-12-02** by the Digital Omnibus amendment, in effect late July 2026 |
 | EU AI Act — AI embedded in regulated products | Deferred to **2028-08-02** |
+| EU AI Act — **Article 50 transparency duties** | **Not deferred. In force since 2026-08-02** ← *new this pass* |
 | EU — AI-generated intimate imagery / abuse material ban | Coming into force **December 2026** |
 | South Korea AI Basic Act | **In force 2026-01-22**; enforcement decrees pending, guidance-first grace period through 2026 |
-| Vietnam AI law | **Effective 2026-03-01**; high-risk designation covers education incl. automated assessment, reaching systems live before 2026-08-15 |
-| Australia (TEQSA) | Institutional generative-AI action plans required of **all** higher-ed providers |
+| Vietnam AI law | **Effective 2026-03-01**; high-risk designation covers education incl. automated assessment |
+| Australia (TEQSA) | Institutional generative-AI action plans required of **all** higher-ed providers — **100% response rate achieved** ← *new this pass* |
 
-**Widely-repeated error to avoid:** guidance still in circulation says EU
-high-risk obligations apply from **August 2026**. That was superseded by the
-Digital Omnibus. Capability deadlines in Asia now land *before* Europe's.
+**What is new.** First, the postponement is attributed by multiple independent
+legal commentaries to **Regulation (EU) 2026/1744**, in force 27 July 2026 after
+Council approval on 29 June 2026 — a citeable instrument, where the previous pass
+had only "the Digital Omnibus amendment". Second, and more useful commercially:
+**Article 50 transparency duties were not part of the deferral** and have applied
+since **2 August 2026**. The calendar therefore has *two* tracks, and conflating
+them misprices the work in both directions: **transparency obligations are live
+today; conformity assessment is ~14 months out.**
 
-## 5. Adoption is ahead of governance, and it is measured (high confidence in LATAM, medium elsewhere)
+**Widely-repeated error to avoid, restated because it is still in circulation:**
+guidance claiming EU high-risk obligations apply from August 2026 was superseded.
+Enforcement *machinery* (the AI Office and national authorities) did begin on
+2 August 2026 — which is probably the source of the confusion — but the high-risk
+*duties* did not.
 
-- **LATAM, strongest evidence:** UNESCO IESALC / UNU-IAS, 200 institutions in 19
-  countries — **87% use AI in at least one area; 26% have a formal AI strategy.**
-  Adoption is driven by individual academics and students, not institutions.
-- **North America:** 60% of US teachers use AI tools (Gallup), while most US
-  public schools lack formal student AI policies (Child Trends / US Dept. of
-  Education). 30 states had issued guidance as of January 2026.
-- **Higher ed, Europe + North America:** ~70% of institutions have or are
-  developing guidance — the furthest-along segment.
-- **EMEA, added second pass — and the gap here is *training*, not policy:**
-  **63%** of EU teachers use AI at least partly for explanations or practice
-  (European Commission School Education Gateway survey, Apr 2026, n=1,130;
-  corroborated at 63% by Sanoma across 20,000+ teachers), while only **~30%**
-  have had AI training and only **~1/3** of national curricula include AI
-  competences. In the UK, **49%** of schools have no AI policy for staff or
-  students (NEU). One counter-signal worth noting: **41% of EU teachers do not
-  use AI for grading or summative assessment at all** — the one place adoption
-  has *not* run ahead, and it happens to be the Annex III high-risk boundary.
-- **EMEA/Africa, added second pass — the sharpest deficit in the entire KB:**
-  only **14%** of higher-education respondents confirm an institutional AI
-  policy, **17%** say there is none, and **69% do not know** (Frontiers in
-  Education, 2026). "Don't know" is worse than "none": it means the policy
-  question has not reached the people using the tools.
-- **Canada, added second pass — a genuine outlier.** Quebec issued a **March
-  2025 directive suspending the use of AI assistants**: the only jurisdiction in
-  this research where governance moved *ahead* of adoption by withdrawing it.
-  Ontario, by contrast, has no ministry memorandum and **42.3%** board coverage.
+Meanwhile the capability calendar runs on weeks: OpenMAIC went from repository
+creation (2026-03-11) to 41,981★ and `v1.3.0` in under eight months. Capability
+deadlines in Asia still land before Europe's.
 
-The gap is the market. It is also a risk the client already owns, which makes it
-an easier conversation than a net-new capability pitch.
+## 5. Adoption is ahead of governance, and it is now measured on all four regions (high confidence)
 
-**Ranked by severity, the governance deficit now reads:** Africa (14% confirmed,
-69% unaware) → LATAM (87% use, 26% strategy) → UK (49% no policy) → Ontario
-(42.3% board coverage) → EU (policy maturing, training at ~30%) → Quebec
-(suspended, i.e. governed by prohibition). That ordering is a territory-
-prioritisation input, and it did not exist before this pass.
+Previously high-confidence only in LATAM. Now:
 
-## 6. Credentials and skills-based models (medium confidence — single source)
+- **LATAM** — UNESCO IESALC/UNU-IAS, 200 institutions, 19 countries: **87%** use,
+  **26%** strategy, **55%** no budget, **4%** dedicated funding at public
+  universities. Cetic.br: Brazil **53%** of administrators use AI, **22%** have
+  guidelines. Ceibal: **75%** of Uruguayan public-school teachers.
+- **EMEA** — **63%** teacher use, from two independent surveys that agree exactly
+  (European Commission School Education Gateway, April 2026, n=1,130; Sanoma
+  Learning, 20,000+ teachers, 14 countries). Eurydice's *Digital education at
+  school in Europe 2026* is the member-state source.
+- **North America** — **60%** of US teachers (Gallup); most public schools have no
+  formal student AI policy; **134** state bills across **31** states; **42.3%** of
+  Ontario boards have a student AI policy.
+- **APAC** — now primary: TEQSA's **100%-response** institutional census, and
+  operational governance structures documented in only **7 of 39** Australian
+  universities (AJET). MEXT's pilot covers **478 schools** in **149
+  municipalities** — under **2%** of Japanese schools.
 
-1EdTech points to the long-anticipated rise of **digital credentials and digital
-competencies**, with employer expectations accelerating a skills-driven model.
-Only one source in this run raised it, so it is logged as a watch item rather
-than an established trend. It is worth watching because it is interoperability
-work, which is where the permissive licences are.
+## 6. Mandated content without teacher buy-in fails, and there is now a measured case (medium-high confidence — single country, strong detail)
 
-## Licence-structure trend (measured first-hand this run, not reported)
+**South Korea's AI textbooks reached below 30% adoption by March, and lawmakers
+subsequently removed their official status.** This is the first instance in this
+KB of a national education-AI mandate being measured and then *reversed*. Set
+against Singapore's approach — a **Teacher AI Literacy Professional Learning
+Roadmap** with one compulsory module by end 2026 and two recommended by end 2027,
+i.e. capability before content — it reads as a real design lesson rather than an
+anecdote: **fund the teacher, not the artefact.** Any national-rollout proposal
+should carry an adoption-risk section citing Korea.
 
-Not a press trend — an observation from verifying 25 repositories on
-2026-10-31, and it has been stable across this KB's history:
+## 7. Evaluation is the missing layer, and the absence is now specific (high confidence — measured first-hand)
 
-**The AI layer is being built permissively on top of a copyleft substrate.**
-5 of 6 education agents are MIT (1 Apache-2.0). Every platform of record is
-GPL/AGPL. Every standard integration boundary — LTI 1.3, xAPI, LRS, MCP — is
-Apache-2.0 or MIT. The ecosystem is, in effect, standardising on
-attach-don't-fork. Design accordingly; see
-[`../compose/patterns.md`](../compose/patterns.md).
+Three passes of searching have located exactly **three** evaluation assets for
+education AI:
 
-**One correction this run:** H5P was recorded as MIT in earlier passes of this
-KB. It is **GPL-3.0**. Verified on the repository page.
+- [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+  — MIT, 13★, 1,143 questions from real teacher-qualification exams (CDPK 920,
+  SEND 223). Measures whether a model knows how to **teach**.
+- [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+  — `NOASSERTION`, 87★, research-backed **rubrics** for scoring generated
+  instructional content.
+- [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph)
+  — code MIT / datasets per-publisher, 164★, standards-and-curriculum data layer
+  with an MCP server, used to check **alignment**.
 
-## Licence hygiene: the sidebar is not the licence (measured second pass, 2026-10-31)
+**None of the three is a runtime monitor.** There is no open-source way to detect
+that a deployed tutor has drifted, regressed after a model upgrade, or started
+teaching something off-syllabus. Given trend 1 — skill bundles whose behaviour
+changes when the harness or model changes beneath them — this is the single
+largest unmet need in education AI, and it is where every region's governance gap
+actually bites.
 
-A method finding, and it changes how this KB should be maintained. The first
-pass read licences off repository **sidebars**; the second pass fetched the
-licence **files**. Four of six repos checked that way came back different from
-what the sidebar implied:
+## 8. Credentials and skills-based models (medium confidence — still single-source)
 
-| Repo | Sidebar said | The file says |
+1EdTech continues to point to digital credentials as a key development, with
+employer expectations accelerating a skills-driven ecosystem. **No second
+independent source surfaced on this pass either**, so this remains a watch item
+rather than a trend. Three passes without corroboration is itself informative:
+it suggests the credentials story is being carried by the standards body with an
+interest in it.
+
+## Licence-structure trend (measured first-hand)
+
+**The agent layer is permissive; the platform layer is not — and the exception
+appeared this pass.** Eleven of fourteen shelved agents are MIT, two Apache-2.0.
+Platforms of record are AGPL/GPL almost without exception. The new exception,
+**`Selleo/mentingo` (MIT, Poland, 102★)**, is the first AI-native LMS a client
+can fork and keep closed; **`DSpace` (BSD-3-Clause)** remains the only
+permissive platform of record at category-leader scale, in the institutional
+repository.
+
+A second structural finding, now firm after three passes: **there is no
+permissively licensed education ERP.** The whole category is LGPL (OpenEduCat,
+Odoo) or GPL/AGPL (Frappe ×2, i-educar, openSIS). This is no longer recorded as
+a search gap; it is recorded as the answer.
+
+## Licence hygiene: the sidebar is not the licence, and `NOASSERTION` is three different things (measured; sharpened this pass)
+
+The method rule stands — **read the file, not the sidebar** — and this pass added
+a mechanism and a correction.
+
+**The mechanism:** GitHub's REST API (`license.spdx_id`, `stargazers_count`) was
+reachable this run via the MCP GitHub server, after earlier passes recorded it as
+proxy-blocked. It is strictly better than reading rendered pages, because it
+returns GitHub's own licence determination. It also supports a cheap
+*corroborating* query: `license:mit repo:owner/name` returns zero results if
+GitHub detects no MIT grant — which independently re-confirmed the
+`mcp-canvas-lms` defect that earlier passes established by 404-ing filenames.
+
+**The correction:** `NOASSERTION` does **not** mean "unlicensed". Three distinct
+states collapse into it or near it:
+
+| State | Example | What it actually means |
 | --- | --- | --- |
-| `odoo/odoo` | *no licence named* | **LGPL-3.0** (`LICENSE`, branch `20.0`) |
-| `frappe/education` | *no licence named* | **GPL-3.0** (`license.txt`) |
-| `OS4ED/openSIS-Classic` | *no licence named*; README says "GPL" | **GPL-2.0** specifically (`docs/License.txt`) |
-| `DMontgomery40/mcp-canvas-lms` | *no licence named*; README says "MIT — see LICENSE file" | **no licence file exists** — 404 on six filename variants across both branches |
+| Licence file present, non-standard filename, **split grant** | `learning-commons-org/knowledge-graph` (164★) | `LICENSE.md`; README badges read **code MIT / datasets "By data publisher"**, some datasets **gated**. Code safe; each dataset cleared individually. |
+| Licence claimed in prose, **file absent** | `DMontgomery40/mcp-canvas-lms` (104★) | README says "MIT License - see LICENSE file"; that file 404s on every name and both branches. Default: exclusive copyright. |
+| **No licence field at all** | `digitalinnovationone/dio-agent` (2,750★) | Genuinely unlicensed. All rights reserved. |
 
-**Three distinct conditions look identical in a sidebar**: the licence is
-present but unparsed by GitHub (Odoo, Frappe), the licence is present but a
-different *version* than claimed (openSIS — GPL-2.0 has no patent grant and is
-incompatible with GPL-3.0-only code), or **there is no grant at all**
-(mcp-canvas-lms). The last is a procurement blocker, not a formatting detail:
-without a licence file the default is exclusive copyright, whatever the README
-says.
+And a fourth shape that is not ambiguous, just wrong for the artefact: a
+**content licence on code-shaped work** — `Auto-Empirical-Research-Skills`
+(4,843★) under **CC BY-SA 4.0**, share-alike, the largest education agent-skills
+repo in existence.
 
-**Standing rule for this KB:** a licence recorded for a repo Globant would build
-on must come from the licence file, with the branch and path noted. Sidebar-only
-licences are a claim, not a verification. Version numbers matter as much as
-family names.
+**Across three passes, every licence defect found has been in the agent layer.**
+Platforms state copyleft clearly and accurately. The fast-moving layer claims MIT
+loosely, ships share-alike, or says nothing — and does so at thousands of stars,
+where it is most likely to be adopted without checking.
 
-**Counter-note — the structural claim survived the stricter method.** Every
-correction above moved a repo *within* copyleft or into unresolved; none moved a
-platform of record into permissive. The one genuine permissive discovery,
-`DSpace/DSpace` (**BSD-3-Clause**), was found by checking a category the first
-pass had not looked at, and it narrows the "no permissive substrate" claim to
-the LMS category rather than overturning it.
+## A governance trend about AI itself, which belongs here (high confidence)
+
+**South Africa's draft National AI Policy was withdrawn because its citations
+were fabricated.** Gazetted 10 April 2026 (Notice 3880); withdrawal announced 26
+April 2026 and formalised in a Gazette of 12 June 2026; cause: at least **10% of
+the academic references in the reference list were fictitious**.
+
+A national AI policy failed on provenance. For an education client — whose entire
+product is claims about what is true, assessed against a syllabus — this is the
+most persuasive available argument that **citation provenance is a deliverable,
+not a nicety**. It is also why this KB states its method, names its sources, and
+records what it could not verify.
 
 ## Declared gaps
 
-- **Most trend sources are vendor blogs or market-research summaries**, not
-  independent studies. The OECD, UNESCO, 1EdTech, the **European Commission /
-  Eurydice** reports of 2026-09-22 and named statutes are the load-bearing
-  citations; vendor percentages were excluded where unverifiable.
-- ~~**No African or Canadian trend evidence.**~~ **Closed on the second pass of
-  2026-10-31** — both are now in trend 5 and in
-  [`market.md`](market.md). African evidence is one peer-reviewed study plus
-  analysis pieces; Canadian evidence is provincial documents plus one think-tank
-  survey. Thinner than the EU material, so weighted accordingly.
-- ~~**No education-specific LATAM regulatory trend.**~~ **Closed, and the trend
-  is that there barely is one:** Peru's Ley 31814 + DS 115-2025-PCM is the
-  region's only binding instrument naming education, Chile's MINEDUC document is
-  guidance, Brazil's PL 2338 is contested. The Universidad de los Andes /
-  Konrad Adenauer study (Aug 2026) frames the regional pattern as volume without
-  quality — *legislar rápido no es legislar bien*.
-- **Still open — APAC is now the weakest-evidenced region**, resting on
-  market-research vendor outputs with no primary survey behind them. The EMEA
-  closure this pass overtook it. Priority for the next pass.
-- **Trend 6 (credentials) is still single-source** and unchanged; no second
-  source surfaced on this pass, so it stays a watch item rather than a trend.
+- **Most trend sources are vendor blogs or market-research summaries.** The load-
+  bearing citations are OECD, UNESCO/IESALC, 1EdTech, the European Commission and
+  Eurydice reports, TEQSA, the AJET study, named statutes — and, for trends 1, 7
+  and the licence sections, **this KB's own first-hand measurements of GitHub's
+  index**, which are the most reliable items here.
+- **EU AI Act primary text not read.** The 2 December 2027 Annex III date is
+  consistent across many legal commentaries citing Regulation (EU) 2026/1744, but
+  the Official Journal was not fetched. This KB now gives date-specific advice;
+  the next pass should read the OJ.
+- **Trend 8 (credentials) is single-source for the third consecutive pass** and
+  stays a watch item.
+- **Trend 6 rests on one country.** Korea's reversal is well detailed but it is
+  one case; Singapore's contrast is a policy design, not yet an outcome.
+- **No runtime evaluation tooling exists to recommend** (trend 7). Stated as a
+  finding, but it means the governance advice this KB gives cannot currently be
+  *operationalised* with open-source components. That is an honest limit on the
+  whole page.
+- **The agent-skills cohort has no provenance metadata.** Region was assigned
+  from README language and maintainer org only; several members have no stated
+  country and are left unassigned rather than guessed.

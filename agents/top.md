@@ -6,82 +6,141 @@ updated: 2026-10-31
 
 # Top AI agents for education
 
-Every row below was verified first-hand on 2026-10-31 by reading the repository
-page itself. Licence, star count and description are what the repo states — not
-what an aggregator or listicle reports. Where a repo's sidebar and README
-disagree, both readings are given.
+Every row below was verified on 2026-10-31. **This pass changed the verification
+method:** licence and star count are read from the **GitHub REST API** (via the
+`search_repositories` MCP tool, `minimal_output: false`), which returns
+`license.spdx_id` and `stargazers_count` as GitHub itself computes them. Earlier
+passes of this KB recorded the API as proxy-blocked and fell back to reading
+rendered repo pages; it is reachable this run, and it is strictly better —
+GitHub's own licence detector is the thing being quoted, not a sidebar
+rendering. Where a repo's README disagrees with the API, both readings are given.
 
-**Six agents qualified.** That is the real count, not a target. Two candidates
-found during this run were rejected and are listed under *Rejected* with the
-reason, because an informed rejection is worth more than a padded table.
+**Fourteen agents qualified, up from six.** The jump is a method artefact as much
+as a market one: searching GitHub's index directly (`topic:ai-tutor`,
+`topic:agent-skills topic:education`) surfaces a population that no listicle
+covers. Three candidates were rejected and are listed with reasons.
 
 ## The shelf
 
 | Agent | Repo | Licence | ★ | Region | What it is |
 | --- | --- | --- | --: | --- | --- |
-| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 52,000 | APAC | Lifelong personalised tutoring. Multi-agent pipelines (`Deep Solve`, `Deep Research`) over LLM + RAG. `v1.7.0`, dated 2026.10.28. Data Intelligence Lab, University of Hong Kong. Docker image at `ghcr.io/hkuds/deeptutor`. |
-| Canvas MCP | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 310 | North America | The most established Canvas LMS MCP server. Sidebar says "up to 102 tools and 8 agent skills"; README says 128 tools. `v1.16.0` (Oct 2026), 1,206 commits on `main`. Ships agent skills incl. pre-semester course audit and accessibility auditor. |
-| OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | 274 | North America | Open-source intelligent tutoring system with Bayesian Knowledge Tracing, in React + Firebase. Published at CHI '23. Owning org is CAHLR; a UC Berkeley connection is indicated by the authors and a Berkeley press link but is not stated on the repo page. |
-| mcp-canvas-lms | [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | MIT claimed in README only — **no LICENSE file in the repo** | 104 | North America | Canvas LMS API MCP server, `v2.2`, 54 tools, runnable as a container. TypeScript by file layout (`tsconfig.json`); the Languages panel is empty. **Licence defect, verified 2026-10-31 (second pass):** the README says "MIT License - see [LICENSE](LICENSE) file for details", but that file does not exist — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING` and `license` all return 404 on both `main` and `master`. The grant is a README sentence pointing at a missing file. Treat as licence-unresolved until the maintainer adds it; prefer `vishalsachdev/canvas-mcp` (MIT, LICENSE present). |
-| moodle-mcp | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT | 27 | APAC | Rust MCP server letting agents operate Moodle: courses, assignments, forums, grades, files-as-markdown. Validated live against Moodle 3.7 → 5.x. The only Rust implementation found in this field. |
-| Pedagogy Benchmark | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | 13 | Global | Not a tutor — an **evaluator**. 1,143 questions drawn from real teacher-qualification exams: CDPK (920, general pedagogy) and SEND (223, Special Educational Needs and Disabilities). Code for the paper *Benchmarking the Pedagogical Knowledge of Large Language Models*. |
+| DeepTutor | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 52,167 | APAC | Lifelong personalised tutoring; multi-agent pipelines over LLM + RAG. Python, 6,388 forks, created 2025-12-28, pushed 2026-10-31. Data Intelligence Lab, University of Hong Kong. **Still the largest education agent on GitHub.** |
+| OpenMAIC | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | 41,981 | APAC | **The most consequential new row in this KB.** "Open Multi-Agent Interactive Classroom" — turns a topic or uploaded documents into an interactive lesson with AI teachers *and* AI classmates: slides, quizzes, simulations, speech, whiteboard, live discussion. Exports PPTX, single-file offline HTML, or classroom ZIP. TypeScript (Next.js 16/React 19), 6,502 forks, `v1.3.0` dated 2026-10-29. Created **2026-03-11** — 42k★ in under eight months. `LICENSE` reads "MIT License, Copyright (c) 2026 THU-MAIC"; contact domain is `tsinghua.edu.cn`. |
+| DIO Agent | [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | ⛔ **NO LICENCE** — see note | 2,750 | LATAM | **The first LATAM-origin education agent found in three passes, and it cannot be built on.** A study-mentor agent bundle: `AGENTS.md`, `CLAUDE.md`, and `skills/` with one `SKILL.md` per skill (study planning, hinting without answering, concept explanation, web search, portfolio review, career guidance). Runs on Claude Code, Codex, OpenCode, Antigravity, Hermes. 347 forks, created 2026-05-27. README is Portuguese; org links `dio.me`, a bootcamp/`formações` platform. **Licence defect, verified by two methods:** the API returns **no `license` field at all** and the repo page names none. Default is exclusive copyright. Fork and read, do not ship. |
+| Study-Mate | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | MIT | 1,280 | APAC | Self-study companion agent: builds a route through a subject, teaches it, and sets projects, with spaced repetition. JavaScript, 60 forks, created 2026-09-17. Chinese-language. |
+| learn-from-materials | [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | MIT | 1,201 | APAC | Turns PDFs, books and papers into interactive learning webpages that stay traceable to the source and carry quizzes and notes. Python, 109 forks, created 2026-09-08. The closest thing on the shelf to a document-to-course pipeline. |
+| anki-mcp-server | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | MIT | 539 | Global | MCP server giving an agent control of **Anki**, the spaced-repetition flashcard system. TypeScript, 39 forks, created 2025-09-29. The retention layer: the one verified way to hand an agent a real SRS scheduler instead of reimplementing one. Origin not stated. |
+| SocialCoach | [GeminiLight/SocialCoach](https://github.com/GeminiLight/SocialCoach) | Apache-2.0 | 463 | Global | Social-emotional learning by role-play: conflict handling and communication skills with personalised feedback. TypeScript, 60 forks, created 2026-09-03. The only verified **SEL** agent found; SEL is a budget line in K-12 that no other row addresses. Origin not stated. |
+| Exam Cram Coach | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | MIT | 364 | APAC | Exam-prep tutor that teaches **from the instructor's own slides with page citations**, crops figures, and quizzes from real homework. Explicitly engineered against hallucination (`anti-hallucination` topic) and to run on small cheap models. Python, created 2026-06-24. |
+| Canvas MCP | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 310 | North America | The most established Canvas LMS MCP server. Sidebar: "up to 102 tools and 8 agent skills"; README has said 128. Python, 101 forks, created 2025-02-28. Ships agent skills including pre-semester course audit and accessibility auditor. |
+| Bloom | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | MIT | 295 | APAC | Socratic private tutor that reads how a learner actually learns; Bloom's 2-sigma research packaged as an agent skill **plus** a self-hostable FastAPI/React app. 44 forks, created 2026-03-10. The clearest instance of the skill-and-app dual shape (see [`../intel/trends.md`](../intel/trends.md)). |
+| OATutor | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | 274 | North America | Intelligent tutoring system with **Bayesian Knowledge Tracing**, React + Firebase. 164 forks — the highest fork-to-star ratio on the shelf, which is what a teaching-materials project looks like in use. Published at CHI '23. Owning org CAHLR; a UC Berkeley connection is indicated by the authors, not stated on the repo page. |
+| kaogong-skill | [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | MIT | 213 | APAC | High-stakes civil-service exam preparation (行测/申论/职测/综应), including a wrong-answer review loop. Python, created 2026-04-06. Shelved as the reference example of **one named credential, fully modelled** — the shape a client asks for by name. |
+| OpenTutor | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | MIT | 158 | Global | Block-based adaptive learning workspace that runs **locally**: upload material, get notes, quizzes, flashcards and an adaptive tutor, over 10+ LLM providers, with a knowledge graph. Python/TypeScript, 38 forks. **Star-count correction:** an earlier cycle of this KB recorded OpenTutor at ~900★; the API says **158**. The earlier figure was wrong. |
+| Pedagogy Benchmark | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | 13 | EMEA | Not a tutor — an **evaluator**. 1,143 questions from real teacher-qualification exams: CDPK (920, general pedagogy) and SEND (223, Special Educational Needs and Disabilities). Code for *Benchmarking the Pedagogical Knowledge of Large Language Models*. Its parent organisation is the LMIC-focused supply side this KB spent three passes failing to find — see [`../repos/foundations.md`](../repos/foundations.md). |
+
+### Carried with a known defect
+
+| Agent | Repo | Licence | ★ | Region | Note |
+| --- | --- | --- | --: | --- | --- |
+| mcp-canvas-lms | [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | ⛔ MIT claimed in README only — **no LICENSE file** | 104 | North America | Canvas LMS MCP server, `v2.2`, 54 tools, containerised. **Defect re-confirmed this pass by a second, independent method:** querying GitHub's own licence index (`license:mit repo:DMontgomery40/mcp-canvas-lms`) returns **zero results**, so GitHub detects no MIT grant either. Earlier passes established the same thing by 404-ing every licence filename on both branches. Two methods now agree. Prefer `vishalsachdev/canvas-mcp`. |
+| moodle-mcp | [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT | 27 | APAC | Rust MCP server operating Moodle: courses, assignments, forums, grades, files-as-markdown. Validated against Moodle 3.7 → 5.x. Only Rust implementation found. No defect — listed here because at 27★ and created 2026-10-12 it is too young to carry an engagement alone. |
 
 ## Why this shelf is shaped the way it is
 
-**The agent layer is permissive; the platform layer is not.** Five of six rows
-above are MIT, one is Apache-2.0. Every major platform of record these agents
-attach to is copyleft (see [`../repos/foundations.md`](../repos/foundations.md)).
-That asymmetry is the single most consequential fact for a Globant engagement:
-the integration surface is buildable, the substrate is not forkable on
-commercial terms. The composition pattern that follows from it is written up in
-[`../compose/patterns.md`](../compose/patterns.md).
+**The agent layer is permissive; the platform layer is not.** Eleven of fourteen
+shelved rows are MIT, two Apache-2.0, one unlicensed. Every platform of record
+these agents attach to is copyleft, with two exceptions now documented in
+[`../repos/foundations.md`](../repos/foundations.md). The integration surface is
+buildable; the substrate mostly is not forkable on commercial terms. The
+composition pattern that follows is in [`../compose/patterns.md`](../compose/patterns.md).
 
-**The field clusters on two LMS platforms.** Canvas and Moodle account for five
-of six rows. There is no comparable agent population for Blackboard, Brightspace
-or Google Classroom — small Brightspace and Google Classroom MCP servers exist
-per aggregator listings but none reached the verification bar this run.
+**Education AI has stopped shipping as applications.** Seven of fourteen rows are
+**agent skills** — markdown instruction bundles loaded by an existing harness
+(Claude Code, Codex, OpenCode, Cursor, Antigravity) — not deployable services.
+This is the single biggest change since the previous pass and it is measured, not
+reported: `topic:agent-skills topic:education stars:>50` returns 13 repositories,
+led by one at 4,843★. Consequences for an engagement are in
+[`../intel/trends.md`](../intel/trends.md); the short version is that the
+"product" a client now adopts may be a prompt contract, with no runtime to host
+and no API to version.
 
-**MCP is the dominant integration shape.** Four of six are MCP servers. An
-engagement that needs LMS data in an agent should assume MCP as the transport
-rather than designing a bespoke connector.
+**Origin has concentrated in APAC.** Seven of fourteen rows are APAC, and the two
+largest (52k★, 42k★) are both Chinese-university projects — HKU and Tsinghua.
+North America holds three, LATAM one (unlicensed), EMEA one (13★), Global three.
+An engagement sourcing from this shelf is sourcing from APAC whether or not it
+intends to.
+
+**MCP is still the integration shape, but no longer the dominant one.** Three
+rows are MCP servers (Canvas ×2, Moodle, Anki). Where an agent must *reach into*
+a system of record, assume MCP; where it must *teach*, assume a skill bundle.
 
 ## Rejected this run, with reasons
 
 | Candidate | Why it is not on the shelf |
 | --- | --- |
-| [NelsonSpencer/canvas-mcp](https://github.com/NelsonSpencer/canvas-mcp) | A **fork** of `vishalsachdev/canvas-mcp` with **0 stars**. Advertises "80+ tools and 5 agent skills" — fewer than the upstream it forked. Use the upstream. |
-| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | **AGPL-3.0** and **1 star**. The licence is the disqualifier for a build-on recommendation, not the star count; recorded here so the next pass does not re-discover it. Its design note is still useful: it works through Moodle Web Services, so it needs no plugin install. |
-| [braiinz94/braiinz-education](https://github.com/braiinz94/braiinz-education) | **Apache-2.0, 0★, `v0.1 alpha`, 37 commits, no releases.** Found on the second pass of 2026-10-31 while hunting specifically for a non-US/non-APAC agent. It is a *real* project, not a stub — three named agents (Tuteur Socratique, Coach Pratique, Diagnostiqueur with FSRS spaced repetition), French-curriculum pack, PISA-aligned diagnostics, test suite, CI. Code Apache-2.0, educational content CC-BY-SA-4.0. **Not shelved:** 0★ and alpha is below the bar this shelf applies to everyone. Logged as a *watch item* because it is the only EMEA-origin education agent located in two passes, and because a dual code/content licence split is the right shape for curriculum work. Re-check next pass. |
+| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | **4,843★ — would be the third-largest row — and rejected on licence.** A library of 23,000+ agent skills for empirical research across eight social-science disciplines, maintained by CoPaper.AI from Stanford REAP (North America). The README badge reads **"License: CC BY-SA 4.0"** — a *content* licence with share-alike. Derivatives of the skill text must be released under the same terms, which is the opposite of what a client wants from a billable methodology asset. The most valuable rejection on this page: it is the largest education agent-skills repo in existence and it is share-alike. |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | **AGPL-3.0**, 217★. Self-hosted AI language-learning platform (CEFR plans, voice conversation, flashcards, spaced repetition, local or cloud LLMs) — technically a good fit and licence-disqualified for a proprietary derivative. Author Arturo Carretero Calvo; **location not stated**, so no region is assigned to it. Recorded so the next pass does not re-discover it. |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | **Licence unresolved**, 586★. "AI-Powered Skill Tree for Lifelong Human Learning", 30+ skills K-12 → career, cognitive-science framing, ships an MCP server. Queried against GitHub's licence index for both MIT and Apache-2.0: **neither matches**, so it is not permissively licensed as far as GitHub can tell. Genuinely interesting design; needs its licence file read before it can be shelved. **Priority watch item.** |
+| [AFRICAN-AI-NETWORK/learnhouse](https://github.com/AFRICAN-AI-NETWORK/learnhouse) | **A 0★ fork, and the trap this pass nearly fell into.** It surfaced as the leading hit for an African education-AI search and the organisation name reads as African supply side. It is a fork of [`learnhouse/learnhouse`](https://github.com/learnhouse/learnhouse) (**AGPL-3.0** plus a separate Enterprise Licence, 2.4k★, maintainer Badr B. / `@swve`, country not stated), with 0 stars and 1 fork and no stated African content. The African signal is the **org name only**. Same failure mode as the `NelsonSpencer/canvas-mcp` fork rejected on the previous pass: an organisation name is not provenance. |
+| [profitsylivester-ux/tujifunze-agent](https://github.com/profitsylivester-ux/tujifunze-agent) | **MIT (README), 0★, 11 commits, no releases, empty Languages panel.** LangGraph + MCP + Qwen 2.5 decision-support agent tracking multi-term learner trajectories and producing cited plain-language student profiles with human-in-the-loop oversight. Built for the **African Agentic AI Design Challenge, Education track**; "Tujifunze" is Swahili; no country stated. Below the shelf bar, but **logged as a watch item and as evidence**: it is the first African-context education agent this KB has located in three passes, and its design — citations plus mandatory human review over learner records — is the right shape for ministry work. |
+
+## Method note — how URLs were verified this pass, and why not with `curl`
+
+Every repository URL on this page was confirmed to exist by a **GitHub REST API
+lookup** (`search_repositories` with `repo:owner/name`), which returns the repo's
+id, licence, star count and push date — existence plus metadata in one call. In
+addition, the 22 rows carried over from earlier passes were re-confirmed live in
+two bulk queries.
+
+**`curl -sI` does not work from this session and must not be used as the check.**
+A sweep of all 57 github.com URLs on this page returned **HTTP 403 for every
+single one**, including `moodle/moodle` and `odoo/odoo`. That is the session's
+outbound HTTPS proxy refusing raw requests to github.com, not a statement about
+any repository. A pass that treated those 403s as findings would have deleted
+the entire KB. **If `curl` returns a uniform status for every URL, the check is
+measuring the network, not the data** — switch to the API.
 
 ## Declared gaps
 
 - **No published ranking of education AI agents exists.** The prescribed search
-  `top open source AI agents education 2026 github MIT` returned only
-  general-purpose agent listicles (OpenHands, CrewAI, OpenClaw, OpenAI Agents
-  SDK) with an education angle bolted on. This shelf is assembled from
-  first-hand repo verification because there was nothing to copy.
-- **Aggregator tool counts are unreliable.** `vishalsachdev/canvas-mcp` is
-  reported at 99, 102 and 128 tools across its own sidebar, its own README and a
-  third-party listing. Treat any tool count as version-specific.
-- **Star counts for DeepTutor are moving too fast to cite loosely.** Third-party
-  listings ranged from 17.8k to 42k while the repo page itself read 52.0k on
-  2026-10-31. Only the repo page figure is used above.
-- **LATAM: no LATAM-origin education agent qualified this run.** `ltijs`
-  (Apache-2.0, 373★) has a Brazilian maintainer but is spec infrastructure, not
-  an agent, so it sits in foundations instead. **Re-searched on the second pass**
-  with a Spanish/Portuguese-language query (`open source education AI agent LATAM
-  Brazil Spanish github MIT 2026 tutor`): still nothing. The region's flagship
-  open-source AI asset is **Latam-GPT** (Chile-led consortium, Spanish and
-  Portuguese primary content) — a *model*, not a tutor, and its licence was not
-  established from the sources seen. Two independent search strategies now
-  support this gap, so treat it as a real absence rather than a missed query.
-- **EMEA: no EMEA-origin education agent is on the shelf either** — a regional
-  hole not named in the first pass. All six shelved agents are North America
-  (3), APAC (2) or Global (1). The only EMEA candidate found in two passes,
-  `braiinz94/braiinz-education`, is 0★ alpha (see *Rejected*). For EMEA
-  engagements the agent layer is therefore imported; the *attachment* layer is
-  local (`openfun/ralph`, MIT, France; H5P, Norway; Tutor, France).
-- **Aggregator licence claims are wrong, not just stale.** A second-pass search
-  result asserted DeepTutor is MIT. The repository sidebar says **Apache-2.0**,
-  which is what this KB records. Same failure mode as the star counts: verify on
-  the repo page, never from a listicle.
+  `top open source AI agents education 2026 github MIT` returned, for the third
+  consecutive pass, general-purpose agent listicles with an education angle
+  bolted on, plus one aggregator that misreported licences. This shelf is
+  assembled from GitHub's own index because there is nothing to copy. The
+  practical lesson is now firm: **query the index, not the listicles.**
+- ~~**LATAM: no LATAM-origin education agent qualified.**~~ **Closed, with a
+  sting.** Two prior passes searched in English and in Spanish/Portuguese prose
+  and concluded the absence was real. It was not — it was a *search-surface*
+  gap. Querying GitHub directly with Portuguese and Spanish terms
+  (`tutor OR educación OR educacao OR escola OR aprendizaje IA agente stars:>20`)
+  returned [`digitalinnovationone/dio-agent`](https://github.com/digitalinnovationone/dio-agent)
+  at **2,750★** — larger than every North American row on this shelf. It is
+  **unlicensed**, so the finding is simultaneously a closure and a new blocker.
+  Correction to this KB's record: the earlier "two independent search strategies
+  support this gap" was overconfident. Both strategies searched the *web*; neither
+  searched the *index*.
+- **EMEA agent origin is still effectively empty.** The one EMEA row
+  (`pedagogy-benchmark`, 13★) is an evaluator, not a tutor. The previous pass's
+  only EMEA candidate, `braiinz94/braiinz-education`, remains 0★ alpha. For EMEA
+  engagements the *agent* layer is imported; the *platform* layer is now local
+  and permissive — see `Selleo/mentingo` (MIT, Poland) in
+  [`../repos/foundations.md`](../repos/foundations.md).
+- **Three rows have no stated geographic origin** (`anki-mcp-server`,
+  `SocialCoach`, `OpenTutor`) and are recorded as **Global** rather than guessed
+  at. Region is a closed vocabulary here; inventing a value to fill a column is
+  how a filter starts lying.
+- **Two shelf candidates remain licence-unresolved** (`human-skill-tree` 586★,
+  `Auto-Empirical-Research-Skills` 4,843★ CC BY-SA 4.0) and one shelved row is
+  licence-defective (`mcp-canvas-lms`). Across three passes, **licence defects
+  cluster in the agent layer, not the platform layer** — platforms state
+  copyleft clearly; agents claim MIT loosely, or say nothing.
+- **Star counts for the two leaders move by thousands per week.** DeepTutor read
+  52,167 and OpenMAIC 41,981 at 09:40 UTC on 2026-10-31, both from the API, both
+  pushed that same day. Any figure here is a timestamped reading, not a level.
+- **No education-specific agent *observability* or *regression* tooling was
+  found.** `pedagogy-benchmark` (knowledge) and `learning-commons-org/evaluators`
+  (rubric scoring, licence-unresolved) are the only evaluation assets located;
+  neither is a runtime monitor. A tutor in production has no open-source way to
+  detect that it has drifted. This is the clearest unmet build opportunity on the
+  page.

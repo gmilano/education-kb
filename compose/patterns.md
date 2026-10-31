@@ -11,7 +11,7 @@ with its licence named, and every pattern obeys the one hard constraint of this
 industry: **the platform of record is copyleft, so you attach to it, you do not
 fork it.**
 
-Shared rule for all seven patterns — the licence boundary:
+Shared rule for all eleven patterns — the licence boundary:
 
 ```
   [ client's LMS of record ]          GPL-3.0 / AGPL-3.0  ← never forked, never patched
@@ -26,19 +26,37 @@ Shared rule for all seven patterns — the licence boundary:
   [ Globant-built layer ]             your licence, your IP
 ```
 
-**Shared step 0 — licence preflight (half a day, added 2026-10-31, second pass).**
-Before any component enters a statement of work, fetch its **licence file** and
-record branch and path. Do not accept a sidebar or a README sentence. The second
-pass ran this on six repos and four came back different from the sidebar
-reading, including one with **no licence file at all** while its README claimed
-MIT (`DMontgomery40/mcp-canvas-lms`). The failure modes are specific:
+**Shared step 0 — licence preflight (half a day; method upgraded 2026-10-31,
+third pass).** Before any component enters a statement of work, establish its
+licence from the **GitHub REST API** (`license.spdx_id`) and then **read the
+licence file** for anything the API reports as `NOASSERTION`. Do not accept a
+sidebar or a README sentence. Across three passes this check has caught a defect
+in roughly half the repos run through it. The failure modes, with the live
+example to cite in a SoW appendix:
 
-- *no licence file* → default exclusive copyright. **Disqualified**, regardless
-  of the README.
+- *no licence field at all* → genuinely unlicensed, default exclusive copyright.
+  **Disqualified.** `digitalinnovationone/dio-agent` — **2,750★** and no licence.
+- *licence claimed in prose, file absent* → **disqualified**, regardless of the
+  README. `DMontgomery40/mcp-canvas-lms` says "MIT License - see LICENSE file";
+  that file 404s on every name and both branches, and GitHub's own licence index
+  returns zero results for it.
+- *`NOASSERTION` but actually a **split grant*** → **conditionally usable, per
+  asset.** `learning-commons-org/knowledge-graph`: `LICENSE.md` with code **MIT**
+  and datasets **"By data publisher"**, some datasets gated. The code clears; each
+  dataset must be cleared individually.
+- *content licence on code-shaped work* → **usable but viral on the text.**
+  `brycewang-stanford/Auto-Empirical-Research-Skills`, 4,843★, **CC BY-SA 4.0**:
+  share-alike propagates to derivatives of the skill text. Fatal for a billable
+  methodology asset, fine for internal reference.
 - *wrong version* → `openSIS-Classic` is GPL-**2.0**, not GPL-3.0: no patent
-  grant, and incompatible with GPL-3.0-only code in the same binary.
-- *unparsed but present* → Odoo (LGPL-3.0) and `frappe/education` (GPL-3.0) both
-  name no licence in the sidebar and are perfectly licensed in the file.
+  grant, incompatible with GPL-3.0-only code in the same binary.
+- *unparsed but present* → Odoo (LGPL-3.0) and `frappe/education` (GPL-3.0) name
+  no licence in the sidebar and are perfectly licensed in the file.
+
+A cheap corroborating trick worth knowing: `license:mit repo:owner/name` in
+GitHub repository search returns **zero results** when GitHub detects no MIT
+grant. It is a second, independent opinion for the cost of one query, and it is
+how the `mcp-canvas-lms` defect was re-confirmed on the third pass.
 
 One `curl` per dependency, written into the SoW appendix. It is the cheapest
 risk control in this document and it has already caught a real defect. See
@@ -320,25 +338,201 @@ and pitched as such. Its value is the licence position, not the market size.
 
 ---
 
-## APAC note — no standalone pattern, and why
+## P-568-H — APAC award-integrity and assessment reform, Australia-first (8–10 weeks)
 
-APAC is the most deadline-driven region (Korea's AI Basic Act in force
-2026-01-22; Vietnam effective 2026-03-01 reaching systems live before
-2026-08-15 and naming education/automated assessment explicitly; TEQSA action
-plans required of all Australian providers), but it needs **P-568-D run per
-jurisdiction** rather than a distinct recipe — the conformity artefacts are the
-same, the thresholds differ by country.
+**For:** Australian higher-education providers (and the ASEAN institutions that
+follow TEQSA's lead) that have an institutional gen-AI action plan on file and no
+operational governance behind it.
+**Region:** APAC.
 
-Two APAC-specific build notes:
-- **Moodle is an APAC product** (Moodle HQ, Perth, Australia). Moodle depth is a
-  home-region capability here, not an import.
-- [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) (MIT, Rust) is the
-  verified APAC-origin Moodle agent, validated against **Moodle 3.7 → 5.x** —
-  useful precisely because APAC institutional Moodle estates run old versions.
-- Avoid [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server)
-  for build-on work (**AGPL-3.0**), but borrow its design choice: it works through
-  **Moodle Web Services**, so it needs no plugin installed on the client's server
-  — which matters when you cannot get change-control approval on the LMS.
+**Why this is now a pattern rather than a note.** The previous pass declined to
+write an APAC recipe, on the view that the region needed P-568-D run per
+jurisdiction. Two pieces of evidence found on this pass change that: TEQSA
+required a credible gen-AI action plan addressing **risk to award integrity**
+from *every* Australian provider and received a **100% response rate**, and a
+peer-reviewed AJET national document analysis of **39** universities found
+operational governance structures documented in only **7**. So there is a named
+population of ~32 institutions that have a filed plan, a regulator that has read
+it, and no machinery underneath. That is a pattern, not a per-country variant of
+an EU one — the driver is **award integrity**, not conformity assessment.
+
+**Wiring:**
+1. **Pick the assessment posture first.** TEQSA's own follow-up resource names
+   three that have emerged: programme-wide assessment reform, assuring learning
+   in every unit, or a combination. This is a curriculum decision and it sets
+   everything downstream — do not start with tooling.
+2. **Attach to Moodle, which is a home-region product.** Moodle HQ is in Perth.
+   Use [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0) for the
+   LTI 1.3 boundary, and
+   [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) (MIT, Rust) for
+   agent read access — it is validated against **Moodle 3.7 → 5.x**, which
+   matters because APAC institutional estates run old versions. Borrow the design
+   choice of the AGPL-licensed `csmediapro/moodle-mcp-server` without using it:
+   work through **Moodle Web Services** so no plugin install is needed on the
+   client's server, which is usually the real blocker.
+3. **Instrument integrity as evidence, not assertion.** Every AI-assisted step in
+   an assessment flow emits an **xAPI** statement into a self-hosted
+   [`openfun/ralph`](https://github.com/openfun/ralph) (MIT) LRS: what the student
+   was shown, what the agent drafted, which human approved it. Award integrity is
+   an evidentiary claim and this is what makes it auditable.
+4. **Gate the generated material.** Score assessment items with
+   [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+   (rubrics — **clear its licence at step 0**) and the model's pedagogical
+   knowledge with [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark)
+   (MIT). Without this the deliverable is an opinion.
+5. **Package:** the governance structures the AJET study found missing —
+   decision rights, escalation path, review cadence, a register of AI-touched
+   assessments — plus the xAPI evidence trail and the evaluation results.
+
+**Adoption-risk section is mandatory in this region, and cite Korea for it.**
+South Korea's AI textbooks reached **below 30% adoption by March** and lawmakers
+then **removed their official status**. Contrast Singapore, which mandated
+*teacher capability* first (one compulsory AI module by end 2026, two more
+recommended by end 2027). The lesson to put in front of an executive sponsor:
+**fund the teacher, not the artefact.**
+
+**Per-jurisdiction note (still true):** for Vietnam — risk-based law effective
+**2026-03-01**, with education and automated assessment named high-risk — and for
+Korea's AI Basic Act (in force **2026-01-22**, guidance-first grace period
+through 2026), run **P-568-D**'s conformity artefacts against local thresholds.
+The artefacts are the same; the thresholds differ.
+
+---
+
+## P-568-I — Multi-agent interactive classroom on OpenMAIC (4–6 weeks)
+
+**For:** any client who wants course material turned into taught, interactive
+lessons rather than documents — corporate L&D, exam-prep providers, universities
+building a self-study track.
+**Region:** Global (component origin APAC).
+
+**Why this pattern exists now.** [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC)
+is **MIT**, **41,981★**, TypeScript, `v1.3.0` dated 2026-10-29, from Tsinghua —
+and it did not exist when this KB's earlier patterns were written (repo created
+2026-03-11). It is the largest permissively licensed, *deployable* education
+application in existence: topic or uploaded documents in, interactive lesson out,
+with AI teachers **and AI classmates**, slides, quizzes, simulations, speech,
+whiteboard and live discussion. MIT means the client owns the derivative.
+
+**Wiring:**
+1. **Stand it up on its own stack, not the client's LMS.** Node.js ≥ 22.19,
+   pnpm ≥ 10, PostgreSQL 16. It is a separate application by design — which is
+   exactly what the copyleft constraint wants.
+2. **Attach it to the LMS of record across LTI 1.3** with `ltijs` (Apache-2.0):
+   launch a lesson from inside Moodle/Canvas, write the quiz result back through
+   Assignment & Grade Services. The client's platform is never touched.
+3. **Feed it the client's corpus.** Its document-to-lesson path is the integration
+   point. Where the material is scattered across an institutional repository, pull
+   from **DSpace** (BSD-3-Clause) as in P-568-G.
+4. **Use its export formats as the commercial hedge.** It exports **PPTX**, a
+   **single offline HTML file**, and a classroom ZIP. The offline HTML export is
+   the answer to low-connectivity delivery *and* to a client who will not host a
+   new service: you can ship the artefact without shipping the platform.
+5. **Add retention.** OpenMAIC teaches; it does not schedule revision. Pair with
+   [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) (MIT,
+   539★) so an agent writes cards into a real spaced-repetition scheduler instead
+   of a reimplemented one.
+6. **Gate and evidence it** exactly as in P-568-H step 4 and step 3.
+
+**Risks to state plainly.** 211 open issues and eight months of existence. Pin a
+commit, not a tag, and budget for upstream churn. Its origin is a Chinese
+university, which is a procurement question in some public-sector contexts and
+should be raised early rather than discovered at security review.
+
+---
+
+## P-568-J — Permissive AI-native LMS substrate, EMEA (6–8 weeks)
+
+**For:** corporate L&D and compliance-training clients who want an AI-native
+learning platform they can **own, rebrand and keep closed** — not an attachment
+to someone else's copyleft LMS.
+**Region:** EMEA.
+
+**Why this is newly possible.** Every previous pattern in this file is an
+*attachment*, because every platform of record is copyleft. [`Selleo/mentingo`](https://github.com/Selleo/mentingo)
+is **MIT**, from **Selleo (Poland)**, and describes itself as a self-hosted
+alternative to Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX, with
+an AI Mentor and role-play, **SCORM and xAPI** built in, and white-labelling as a
+stated goal. It is the first time this KB can offer substrate replacement rather
+than boundary attachment.
+
+**Wiring:**
+1. **Fork it, and mean it.** MIT: the derivative is the client's. This is the
+   whole point of the pattern and the only reason to prefer it over P-568-A.
+2. **Keep the standards boundaries anyway.** It ships xAPI, so point telemetry at
+   a self-hosted `openfun/ralph` (MIT, France) rather than its internal store —
+   that keeps analytics portable if the client later outgrows it. SCORM support
+   is the migration path *in* from an incumbent LMS.
+3. **Compose the tutor layer rather than writing one.** `Li-Evan/Bloom` (MIT) for
+   Socratic tutoring, `GeminiLight/SocialCoach` (Apache-2.0) for the role-play
+   and conflict-handling content that maps directly onto compliance training, and
+   `dmoshehun-prog/learn-from-materials` (MIT) to turn the client's existing PDFs
+   and policies into traceable lessons.
+4. **An entirely permissive, entirely EMEA-origin stack is assemblable** —
+   `mentingo` (Poland, MIT) + `ralph` (France, MIT) + `ltijs` (Apache-2.0) +
+   `pedagogy-benchmark` (MIT). For a client with data-sovereignty or
+   supply-chain-origin requirements, that combination is the differentiator;
+   state it explicitly in the proposal.
+
+**Risks to state plainly, because this one is easy to oversell.** 102★, 31 forks,
+**105 open issues**. SSO, accessibility conformance, data residency and
+Moodle migration were **not** verified by this KB. Scope a two-week technical
+spike against the client's actual non-functional requirements *before* committing
+to substrate replacement; if the spike fails, fall back to P-568-A, which is
+mature.
+
+---
+
+## P-568-K — Governance harness for agent-skill deliverables (3–4 weeks)
+
+**For:** any client adopting education AI that arrives as **agent skills** —
+markdown instruction bundles loaded by Claude Code, Codex, OpenCode, Cursor or
+Antigravity — rather than as a hosted application.
+**Region:** Global.
+
+**Why this is the most contemporary pattern in this file.** Seven of the fourteen
+agents on [`../agents/top.md`](../agents/top.md) are skill bundles, and
+`topic:agent-skills topic:education stars:>50` returns 13 repositories led by one
+at 4,843★. A skill bundle has **no runtime to monitor, no semver by convention,
+no test suite by convention**, and its behaviour changes when the harness or the
+underlying model changes — neither of which the client controls. Clients are
+adopting these today with no governance at all.
+
+**Wiring:**
+1. **Licence-screen every bundle first** (step 0 above). This cohort is where the
+   defects are: the largest member is **CC BY-SA 4.0** (share-alike on the skill
+   text), the second-largest (**2,750★**) has **no licence**. A skill bundle looks
+   like documentation and is governed like a work of authorship.
+2. **Pin the harness and the model, and write both into the contract.** The
+   deliverable is a prompt contract evaluated by a third party's runtime. If the
+   model version is not pinned, the behaviour the client accepted is not the
+   behaviour they will get.
+3. **Build the regression suite the ecosystem does not have.** Freeze a golden set
+   of task → expected-property pairs for the client's own syllabus. Score with
+   `learning-commons-org/evaluators` (rubrics) for content quality and
+   `pedagogy-benchmark` (MIT) for pedagogical knowledge. Run it on every harness
+   or model change. **This is the missing runtime-monitoring layer identified in
+   [`../intel/trends.md`](../intel/trends.md), built by hand because nothing
+   open-source provides it.**
+4. **Check curriculum alignment, do not assume it.** `learning-commons-org/knowledge-graph`
+   (code MIT, datasets per-publisher, ships an MCP server) links academic
+   standards and curricula; where the client has no rich national standard, use
+   `AI-for-Education/gpf-alignment` (MIT) against the **Global Proficiency
+   Framework**.
+5. **Require citation provenance as an acceptance criterion.** Prefer bundles
+   engineered for it — `ZeKaiNie/universal-examprep-skill` (MIT) teaches from the
+   instructor's own slides **with page citations** and is explicitly built against
+   hallucination. Then cite the reason: **South Africa's draft National AI Policy
+   was withdrawn because at least 10% of its academic references were
+   fictitious.** That is the cheapest executive-level argument available for
+   provenance work, and it is a matter of public record.
+
+**What the client is buying.** Authoring and maintenance, not hosting. Say so in
+the pricing conversation: infrastructure cost collapses, and the
+recurring-revenue story has to be the regression suite and the model-upgrade
+re-certification, not the servers.
+
+---
 
 ## Declared gaps
 
@@ -356,10 +550,29 @@ Two APAC-specific build notes:
   a **March 2025 directive suspended AI assistants**. Same artefacts, different
   trigger, so no new recipe — but **francophone delivery is a hard requirement**
   in Quebec, which is a staffing constraint rather than a technical one.
-- **No pattern uses an EMEA-origin or LATAM-origin agent**, because none is
-  shelved — the agent layer is imported in both regions while the attachment
-  layer is local (`ralph`/France, H5P/Norway, Tutor/France, `ltijs`/Brazilian
-  maintainer). See [`../agents/top.md`](../agents/top.md).
-- **Africa's supply side is unmapped.** P-568-F composes entirely imported
-  components. Until an African education repo is verified, local partnership is
-  part of the pattern rather than an optional extra.
+- ~~**No APAC pattern.**~~ **Closed as P-568-H above**, on evidence the previous
+  pass did not have: TEQSA's 100%-response institutional census and the AJET
+  finding that only **7 of 39** Australian universities document operational
+  governance. The driver turned out to be **award integrity**, not conformity
+  assessment, which is why it is a pattern and not a per-jurisdiction run of
+  P-568-D.
+- ~~**No pattern uses an EMEA-origin agent.**~~ **Partly closed.** The *agent*
+  layer in EMEA is still imported, but **P-568-J** is built on an EMEA-origin
+  permissive **platform** (`Selleo/mentingo`, MIT, Poland) and composes an
+  entirely EMEA-origin permissive stack with `ralph` (France) and
+  `pedagogy-benchmark`. **LATAM remains unclosed and the reason is now specific:**
+  the one LATAM-origin agent found (`digitalinnovationone/dio-agent`, 2,750★) is
+  **unlicensed**, so it cannot enter a pattern. It is evidence of demand, not a
+  component.
+- ~~**Africa's supply side is unmapped.**~~ **Closed, and P-568-F should be
+  revised to use it.** `AI-for-Education` (MIT, LMIC-focused) publishes a Sierra
+  Leone **MBSSE** lesson-plan parser, Luganda benchmarks, Global Proficiency
+  Framework alignment, and on-device Android ASR for no-connectivity classrooms —
+  see [`../repos/foundations.md`](../repos/foundations.md). Every repo is 0–13★,
+  so local partnership stays part of the pattern, but P-568-F no longer has to
+  compose *entirely* imported components. **Next pass: rewrite P-568-F around
+  these components rather than around Kolibri alone.**
+- **No pattern has been run end to end.** Every recipe here is composed from
+  verified components with stated licences; none has been executed on a client
+  engagement by this KB. Durations are estimates, not measured delivery times,
+  and should be presented as such.
