@@ -490,8 +490,8 @@ markdown instruction bundles loaded by Claude Code, Codex, OpenCode, Cursor or
 Antigravity — rather than as a hosted application.
 **Region:** Global.
 
-**Why this is the most contemporary pattern in this file.** Seven of the fourteen
-agents on [`../agents/top.md`](../agents/top.md) are skill bundles, and
+**Why this is the most contemporary pattern in this file.** **Six of the
+fourteen** agents on [`../agents/top.md`](../agents/top.md) are skill bundles, and
 `topic:agent-skills topic:education stars:>50` returns 13 repositories led by one
 at 4,843★. A skill bundle has **no runtime to monitor, no semver by convention,
 no test suite by convention**, and its behaviour changes when the harness or the

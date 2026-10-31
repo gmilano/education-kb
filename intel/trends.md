@@ -15,10 +15,10 @@ anywhere else.
 
 **The biggest change since the previous pass, and it is measured, not reported.**
 Querying GitHub directly for `topic:agent-skills topic:education stars:>50`
-returns **13 repositories**. Seven of the fourteen agents on
+returns **13 repositories**. **Six of the fourteen** agents on
 [`../agents/top.md`](../agents/top.md) are skill bundles — markdown instruction
 sets (`SKILL.md`, `AGENTS.md`, `CLAUDE.md`) loaded by an existing harness, with
-**no runtime, no service and no API**. The cohort, by stars:
+**no runtime, no service and no API**. The cohort on GitHub, by stars:
 
 | Repo | ★ | Licence | What it is |
 | --- | --: | --- | --- |

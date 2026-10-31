@@ -48,16 +48,19 @@ covers. Three candidates were rejected and are listed with reasons.
 
 ## Why this shelf is shaped the way it is
 
-**The agent layer is permissive; the platform layer is not.** Eleven of fourteen
-shelved rows are MIT, two Apache-2.0, one unlicensed. Every platform of record
+**The agent layer is permissive; the platform layer is not.** Of the fourteen
+shelf rows, **11 are MIT, 2 Apache-2.0, and 1 has no licence at all**. Every platform of record
 these agents attach to is copyleft, with two exceptions now documented in
 [`../repos/foundations.md`](../repos/foundations.md). The integration surface is
 buildable; the substrate mostly is not forkable on commercial terms. The
 composition pattern that follows is in [`../compose/patterns.md`](../compose/patterns.md).
 
-**Education AI has stopped shipping as applications.** Seven of fourteen rows are
-**agent skills** — markdown instruction bundles loaded by an existing harness
-(Claude Code, Codex, OpenCode, Cursor, Antigravity) — not deployable services.
+**Education AI has stopped shipping as applications.** **Six of fourteen** shelf
+rows are **agent skills** — markdown instruction bundles loaded by an existing
+harness (Claude Code, Codex, OpenCode, Cursor, Antigravity) rather than
+deployable services: `dio-agent`, `Study-Mate`, `learn-from-materials`,
+`Exam Cram Coach`, `Bloom` and `kaogong-skill`. `Bloom` ships as a skill **and**
+a self-hostable app, which is the hybrid shape to expect next.
 This is the single biggest change since the previous pass and it is measured, not
 reported: `topic:agent-skills topic:education stars:>50` returns 13 repositories,
 led by one at 4,843★. Consequences for an engagement are in
@@ -65,15 +68,18 @@ led by one at 4,843★. Consequences for an engagement are in
 "product" a client now adopts may be a prompt contract, with no runtime to host
 and no API to version.
 
-**Origin has concentrated in APAC.** Seven of fourteen rows are APAC, and the two
-largest (52k★, 42k★) are both Chinese-university projects — HKU and Tsinghua.
-North America holds three, LATAM one (unlicensed), EMEA one (13★), Global three.
-An engagement sourcing from this shelf is sourcing from APAC whether or not it
-intends to.
+**Origin has concentrated in APAC.** Of the fourteen shelf rows, **seven are
+APAC** — and the two largest (52k★, 42k★) are both Chinese-university projects,
+HKU and Tsinghua. The rest: **Global 3, North America 2, LATAM 1 (unlicensed),
+EMEA 1 (13★)**. Adding the two defect-table rows below puts North America at 3
+and APAC at 8. An engagement sourcing from this shelf is sourcing from APAC
+whether or not it intends to.
 
-**MCP is still the integration shape, but no longer the dominant one.** Three
-rows are MCP servers (Canvas ×2, Moodle, Anki). Where an agent must *reach into*
-a system of record, assume MCP; where it must *teach*, assume a skill bundle.
+**MCP is still the integration shape, but no longer the dominant one.** Two shelf
+rows are MCP servers (`canvas-mcp`, `anki-mcp-server`), and so are both rows in
+the defect table (`mcp-canvas-lms`, `moodle-mcp`) — four of the sixteen agents on
+this page. Where an agent must *reach into* a system of record, assume MCP; where
+it must *teach*, assume a skill bundle.
 
 ## Rejected this run, with reasons
 
