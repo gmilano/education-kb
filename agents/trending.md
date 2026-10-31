@@ -4,6 +4,65 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 — DeepTutor is the week's story, and it is a genuine breakout
+
+**Headline:** [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0)
+read **52.0k★** on its repository page on 2026-10-31, shipping **`v1.7.0` dated
+2026.10.28**. GitHub Trending digests for 30–31 Oct recorded daily gains of
+roughly **+1,900 to +2,282 stars**, the largest single-day gain in those
+datasets. It is the top education-related repository on GitHub Trending.
+
+**This is shipping, not just trending.** A release dated three days before the
+star spike, plus a published container image (`ghcr.io/hkuds/deeptutor`),
+distinguishes it from attention-only projects. Data Intelligence Lab, University
+of Hong Kong — **APAC**.
+
+**Star counts in circulation are badly stale — do not cite third parties.**
+Observed this week across aggregators: 17.8k (hyper.ai), ~25k (DEV.co), 42k
+(AI/TLDR), 49.5–50.6k (30 Oct digests), 51.8k and 52.0k (31 Oct). Only the
+repository page figure is recorded here. One aggregator page contradicted itself
+within a single document, calling the project both "fully open source under
+Apache 2.0" and proprietary; the Apache-2.0 reading is confirmed by the repo's
+own sidebar.
+
+### Verified this week
+
+| Agent | Licence | ★ | Region | Note |
+| --- | --- | --: | --- | --- |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | Apache-2.0 | 52,000 | APAC | `v1.7.0` 2026.10.28; multi-agent `Deep Solve` / `Deep Research` pipelines |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | MIT | 310 | North America | `v1.16.0` (Oct 2026), 1,206 commits; tool count stated as 102 (sidebar) vs 128 (README) |
+| [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | MIT | 274 | North America | ITS with Bayesian Knowledge Tracing, React + Firebase; CHI '23 |
+| [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | MIT (README) | 104 | North America | `v2.2`, 54 tools |
+| [G36maid/moodle-mcp](https://github.com/G36maid/moodle-mcp) | MIT | 27 | APAC | Rust; validated Moodle 3.7 → 5.x |
+| [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | 13 | Global | 1,143 teacher-exam questions; CDPK 920 + SEND 223 |
+
+### Two rejections, recorded so they are not rediscovered
+
+- [`NelsonSpencer/canvas-mcp`](https://github.com/NelsonSpencer/canvas-mcp) — a
+  **fork** of `vishalsachdev/canvas-mcp` at **0★**, advertising *fewer* tools
+  (80+) than its upstream. Not a finding.
+- [`csmediapro/moodle-mcp-server`](https://github.com/csmediapro/moodle-mcp-server) —
+  **AGPL-3.0**, 1★. Useful design note (works via Moodle Web Services, no plugin
+  install needed), wrong licence for build-on work.
+
+### Gaps this week
+
+- **No published ranking of education AI agents exists.** The prescribed query
+  `top open source AI agents education 2026 github MIT` returned only
+  general-purpose agent listicles with an education angle (OpenHands, CrewAI,
+  OpenClaw, OpenAI Agents SDK). This week's shelf is first-hand verification
+  only.
+- **No LATAM-origin education agent** qualified this week.
+- **No Blackboard / Brightspace / Google Classroom agent** reached verification;
+  aggregators list small servers (e.g. a ~14★ MIT Brightspace server) but none
+  were confirmed first-hand.
+- **Raw `curl` to github.com is policy-blocked in this environment (HTTP 403 at
+  the proxy).** A 403 is not a 404 and verifies nothing. All verification this
+  week was done by fetching and reading the repository page itself.
+
+---
+
+
 ## 🆕 `p567` — `2026-10-31`
 
 > **🔴 ZERO new addresses, and for once the pass says plainly why that is the right outcome: the

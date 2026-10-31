@@ -4,6 +4,84 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 — the trending channel is saturated for platforms; the movement is in agents
+
+**The honest finding: no new foundational education *platform* repo trended this
+week.** The GitHub discovery legs for education infrastructure returned nothing
+new — the platforms of record (Moodle, Open edX, Canvas, Sakai, Chamilo,
+Kolibri) are mature, slow-moving codebases that do not appear on trending lists.
+This is a saturated channel, not an untried one, and recording that is the point
+of a dated entry.
+
+**Where movement actually is:** the agent/tutor layer. See
+[`../agents/trending.md`](../agents/trending.md) —
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (Apache-2.0) at
+**52.0k★**, `v1.7.0`, gaining ~1,900–2,282★/day across 30–31 Oct digests, the
+top education repo on GitHub Trending.
+
+**Education-adjacent trending, for context:**
+[`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) read
+**107.6k★** on its repository page on 2026-10-31 (~107.5k★ in the 30 Oct digests) — a notebook series for building a GPT-style
+model from scratch. It is a *learning resource about* LLMs rather than education
+infrastructure, so it is noted here and not shelved in foundations.
+
+### Foundations re-verified first-hand this week (2026-10-31)
+
+Star counts and licences read from the repository pages, not aggregators.
+
+| Repo | Licence | ★ | Region | Permissive? |
+| --- | --- | --: | --- | :-: |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | AGPL-3.0 | 8,200 | North America | ⛔ |
+| [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | 7,600 | APAC | ⛔ |
+| [oppia/oppia](https://github.com/oppia/oppia) | Apache-2.0 | 7,000 | Global | ✅ |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | ECL-2.0 | 1,200 | North America | ✅ |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | MIT | 1,200 | Global | ✅ |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | AGPL-3.0 | 1,100 | EMEA | ⛔ |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1,000 | EMEA | ⛔ |
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | Apache-2.0 | 956 | North America | ✅ |
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | Apache-2.0 | 373 | Global | ✅ |
+| [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 153 | EMEA | ⛔ |
+| [openfun/ralph](https://github.com/openfun/ralph) | MIT | 51 | EMEA | ✅ |
+
+### Two corrections to this KB's own record
+
+- **H5P is GPL-3.0, not MIT.** Earlier passes recorded
+  [`h5p/h5p-php-library`](https://github.com/h5p/h5p-php-library) as MIT. The
+  repository sidebar reads **GPL-3.0**. This matters: H5P interactive content was
+  being treated as build-on material and it is not.
+- **The canonical Open edX path is `openedx/openedx-platform`.** A fetch of
+  `openedx/edx-platform` resolves to it; use the canonical name.
+
+### Verticals re-verified first-hand this week
+
+| Repo | Licence | ★ | Region |
+| --- | --- | --: | --- |
+| [frappe/lms](https://github.com/frappe/lms) | AGPL-3.0 | 3,400 | APAC |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | LGPL-3.0 | 902 | APAC |
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | GPL-2.0 | 722 | LATAM |
+| [frappe/education](https://github.com/frappe/education) | **not named on repo page** | 687 | APAC |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 (README badge) | 449 | EMEA |
+| [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | GPL (README) | 347 | North America |
+
+**`frappe/education` is the one row this week with an unresolved licence.** Its
+sidebar links a License section but the page text does not name a licence. Frappe's
+sibling projects are AGPL-3.0; that is an inference, not a reading, so the row
+ships as unresolved rather than guessed.
+
+### Gaps this week
+
+- **No new foundational platform repo** — channel saturated (stated above).
+- **No permissive platform of record at Moodle/Open edX scale exists.** Oppia
+  (Apache-2.0) and Kolibri (MIT) are the largest permissive options and serve
+  narrower jobs. A client needing a permissive substrate assembles one.
+- **No African-origin education repo** surfaced this week.
+- **Method note:** raw `curl` to github.com returns **HTTP 403 from the session
+  proxy** — a policy denial, not a 404. All figures above come from reading the
+  repository pages.
+
+---
+
+
 ## 🆕 `p567` — `2026-10-31`
 
 > **🔴 `0` new addresses from the trending channel for a fourth consecutive pass — the GitHub
