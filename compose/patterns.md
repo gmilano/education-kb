@@ -7,7 +7,7 @@ updated: 2026-10-31
 # Compose patterns — education
 
 <!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
-`derived recipes: **30**` — recipe headings on this page, counted with that gate's
+`derived recipes: **29**` — recipe headings on this page, counted with that gate's
 own id regex (family-suffixed form, `P-572-A`). 🔴 **`p573` recomputed this: the
 claim read `24` while the regex counted `28` before this pass's two additions.**
 🔵 The gap is `P-573-A/B/C` and `P-574-A`, registered by earlier passes without
@@ -120,7 +120,7 @@ passes that registered pattern ids ahead of the pass counter, so this pass —
 `p573` — publishes as **`P-575-*`**. 🔵 Pattern ids on this page are **not** pass
 numbers and should not be read as a chronology.
 
-### 🟢 `P-575-A` — Permissive item-calibration and adaptive-testing pipeline, no copyleft anywhere (6–8 weeks)
+## P-575-A — 🟢 Permissive item-calibration and adaptive-testing pipeline, no copyleft anywhere (6–8 weeks)
 
 **When to use it.** The client wants to own a closed, rebrandable assessment
 product — an item bank, a calibration step and an adaptive delivery policy — and
@@ -165,7 +165,7 @@ this pipeline produced.
 🔵 **Weeks:** 1–2 ingest and schema; 3–4 calibration and parameter store; 5–6
 `catsim` policy validation harness; 7–8 skill reporting and drift job.
 
-### 🟡 `P-575-B` — Arm's-length GPL psychometrics: use `mirt` and `TAM` without creating a derivative work (4–6 weeks)
+## P-575-B — 🟡 Arm's-length GPL psychometrics: use `mirt` and `TAM` without creating a derivative work (4–6 weeks)
 
 **When to use it.** The client's psychometrician, awarding body, ministry or
 academic board **requires output from the canonical R packages**. That is a
@@ -1674,6 +1674,108 @@ energy and enterprise.**
 **Effort:** 1 week per industry, 3 axes. Repeat quarterly, not hourly — the band
 turns over fast but a quarter is the shortest interval over which a commit
 history means anything.
+
+## 🆕 `p574` — 2026-10-31 — two recipes off the accessibility and QTI layer
+
+🔵 `P-576-A` is the conformance programme whose deliverable outlives the deadline;
+`P-576-B` is assessment delivery that keeps a `GPL-3.0` front-end out of a client
+product. Both licences were read byte-for-byte this pass — see
+[`../repos/foundations.md`](../repos/foundations.md) and
+[`../intel/market.md`](../intel/market.md) for the regional placement.
+
+## P-576-A — Accessibility conformance programme for an LMS estate, with an evidence trail that outlives the deadline (6–8 weeks)
+
+🔵 **The buyer and the trigger.** A public school district, state system or public
+university in the United States has a **dated obligation** — `April 26, 2027`
+(population ≥ 50,000) or `April 26, 2028` (below that, and special districts) — to
+bring web content and mobile apps to **WCAG 2.1 AA**, PDFs, Word documents,
+spreadsheets and presentations included. In EMEA the same work is driven by
+`EN 301 549` under the Web Accessibility Directive, and in Brazil by `LBI` art. 63
+with no deadline but an active public prosecutor. 🔴 **The dates have already moved
+once this year** (see [`../intel/market.md`](../intel/market.md)), which is the
+argument for selling the *inventory*, not the date.
+
+🟢 **The stack, every licence read byte-for-byte this pass** (evidence:
+[`../evidence/accessibility-qti-licence-bytes.2026-10-31-p574.tsv`](../evidence/accessibility-qti-licence-bytes.2026-10-31-p574.tsv)):
+
+| layer | component | grant | how it is used — and the licence posture that follows |
+| --- | --- | --- | --- |
+| Course-content scanner | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | 🔴 **GPL-3.0-only** (`35,147 B`; `package.json` + `composer.json` agree) | **Canvas estates only.** Deploy **unmodified** in its own container, authenticate over the LMS API, send patches upstream. 🔴 Do **not** vendor it into a client product or a Globant-branded platform. |
+| Permissive LMS alternative | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** (`10,982 B`) | Where the client is *choosing* a platform rather than remediating one. The only permissively granted institutional LMS on these shelves. |
+| CI gate on content and templates | [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents) | 🟢 **MIT** (`1,069 B`) | Eleven **WCAG 2.2 AA** review specialists, run per pull request on the courseware repository and the theme. Vendorable into the client's pipeline. |
+| Design-system remediation | [plugin87/ux-ui-agent-skills](https://github.com/plugin87/ux-ui-agent-skills) | 🟢 **MIT** (`1,073 B`) | Fixes defects at the **template** level (tokens, components, contrast) so a thousand courses inherit one fix. |
+| Estate-wide crawl | [liip/TheA11yMachine](https://github.com/liip/TheA11yMachine) | 🟡 **`BSD-3-Clause` in `package.json`, no licence file** | Internal auditing tool only. 🔴 A manifest-only grant has **no notice text to reproduce**, so do not ship it to the client; either obtain a grant clarification or replace it before delivery. |
+| Learner-side adaptation | [ContentSquare/readapt](https://github.com/ContentSquare/readapt) · [evoluteur/braille-tools](https://github.com/evoluteur/braille-tools) · [dasher-project/dasher-web](https://github.com/dasher-project/dasher-web) · [mthebaud/predict4all](https://github.com/mthebaud/predict4all) | 🟢 Apache-2.0 / MIT / MIT / Apache-2.0 | Dyslexia reading adaptation, Grade-1 Braille rendering, gaze-and-switch text entry, AAC word prediction. All four are shippable in a client deliverable. |
+| Document estate | — | — | 🔵 **Do not rebuild it here**: `P-570-B` on this page already covers remediation of the document estate. `P-576-A` is the **platform-and-evidence** half; run them together. |
+
+🟢 **The deliverable, and this is the part that is worth money after the date
+moves:**
+
+1. A **per-course conformance inventory** — course id, owner, enrolment, defect
+   classes, WCAG criteria failed, date last checked, remediation state.
+2. A **remediation backlog ranked by enrolment**, so the first fix reaches the most
+   learners, not the first alphabetical department.
+3. A **re-check job** that re-runs the agents on every change and re-stamps the
+   date, so the inventory never silently ages.
+4. A **standard decision**: baseline **2.1 AA** for the US scope, deliver **2.2
+   AA** where EMEA or APAC content is in play (`EN 301 549` v4.1.1 and Australia
+   both land on 2.2 in 2026) — the MIT agents already enforce 2.2, so the
+   over-delivery is free.
+
+🔵 **Weeks.** 1–2: estate inventory and platform discovery. 2–4: UDOIT (or
+OpenOLAT pilot) stood up, agents in CI on the theme. 4–6: template-level fixes,
+backlog ranked, learner-side adaptations piloted with the disability services
+office. 6–8: re-check job, evidence pack, handover to the client's own
+accessibility coordinator.
+
+🔴 **State the licence boundary in the SoW, in one sentence per component.** The
+scanner and the platforms in this layer are **copyleft**; the CI agents and the
+learner-side adaptations are **permissive**. A client who believes they bought a
+product they can resell has bought the wrong thing, and this is the layer where
+that misunderstanding is most likely — because the copyleft component is the one
+that produces the visible output.
+
+## P-576-B — Standards-conformant, accessible assessment delivery without inheriting GPL on the item bank (8–10 weeks)
+
+🔵 **The buyer.** An exam board, ministry, professional certification body or
+university assessment centre that must deliver tests which survive an appeal: the
+item bank has to be portable, the delivery has to be accessible, and the scores
+have to be defensible. 🟢 **The interchange contract is `QTI`**, and this pass read
+the whole `topic:qti` population (`52` repositories) — so the licence map below is
+the complete picture, not a sample.
+
+| layer | component | grant | posture |
+| --- | --- | --- | --- |
+| Delivery platform | [oat-sa/tao-core](https://github.com/oat-sa/tao-core) + [oat-sa/extension-tao-itemqti](https://github.com/oat-sa/extension-tao-itemqti) | 🔴 **GPL-2.0-only** (`18,025 B`; `composer.json` agrees) | **TAO**, the QTI-native platform of record (OAT SA, Luxembourg). **Client-hosted, deployed unmodified.** Custom work goes in **separate TAO extensions**; those are derivative, so if anything is ever *distributed*, GPL-2.0 governs it. 🔵 GPL-2.0 has **no §13**, so a hosted deployment alone triggers no source-offer obligation — unlike the AGPL rows in this layer. Put the distribution question to the client's counsel in week 1, in writing. |
+| Legacy item ingest | [rolfis/qti-convert](https://github.com/rolfis/qti-convert) | 🟢 **Apache-2.0** (`11,357 B`) | The **only permissively licensed QTI tool in the population.** Converts a Canvas QTI export to JSON/Word; wrap it as the ingest step and ship it. |
+| Second ingest path | [Learnosity/learnosity-qti](https://github.com/Learnosity/learnosity-qti) | 🔴 **GPL-2.0** (`18,264 B`, on `develop`) | Run as an **external CLI step in a container**, never linked into client code. Use only if the client has Learnosity-format items. |
+| Item rendering | [Citolab/qti-components](https://github.com/Citolab/qti-components) | 🔴 **GPL-3.0** (`35,199 B`) | 🔴 **Do not embed in a proprietary front-end.** Either deliver items through TAO's own (already-GPL, arm's-length) delivery, or build the renderer. This is the single most likely accidental GPL-3.0 contamination point in the recipe. |
+| Accessible sittings | [mthebaud/predict4all](https://github.com/mthebaud/predict4all) | 🟢 **Apache-2.0** | AAC word prediction for candidates using switch or gaze input in an accommodated sitting. |
+| Sign-language channel | [sign-language-translator/sign-language-translator](https://github.com/sign-language-translator/sign-language-translator) | 🟢 **Apache-2.0** (`11,364 B`; `pyproject.toml` agrees) | 🔴 **Not** [`sign/translate`](https://github.com/sign/translate), which is **CC BY-NC-SA** — noncommercial, and therefore unusable in a paid deliverable however good it is. In **Brazil this is not optional**: Libras is statutory (`Lei 10.436/2002`). |
+| Item statistics | — | — | 🔵 Compose with **`P-575-A`** (permissive Python calibration) for item parameters and equating; **`P-575-B`** if the client's statistician insists on `mirt`/`TAM`, which are GPL and must stay arm's-length. |
+
+🟢 **Deliverables.** A QTI-in/QTI-out item bank the client owns outright; a
+client-hosted TAO deployment with named extensions; an **accessibility
+conformance statement for the delivery surface** (the same evidence artefact
+`P-576-A` produces, scoped to the test player); an accommodations matrix mapping
+each supported accommodation to the component that provides it; and a licence
+register naming every component, its grant, its byte count and its distribution
+posture.
+
+🔵 **Weeks.** 1–2: item inventory, licence register, counsel sign-off on the
+distribution question. 2–4: TAO stood up client-side, ingest path built on
+`qti-convert`. 4–6: accommodations (AAC input, sign-language channel, contrast and
+keyboard paths) and the conformance statement. 6–8: calibration via `P-575-A`,
+equating plan. 8–10: pilot sitting with the disability services office, appeal
+rehearsal, handover.
+
+🔴 **The failure mode this recipe exists to prevent.** The obvious build — take
+`qti-components` for the renderer because it is the cleanest code in the
+population, and wrap TAO — produces a **GPL-3.0 front-end inside a client
+product**, which is the one outcome nobody in the room will have priced. The
+grants here were read byte-for-byte precisely because the convenient choice and
+the safe choice are different repositories.
+
 
 ## P-573-A — Rubric regression gate: prove the tutor has not degraded since Tuesday (4–6 weeks)
 

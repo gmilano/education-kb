@@ -23,6 +23,26 @@ institutions plan AI teaching assistant deployments by end of 2026" attributed
 to EDUCAUSE (not traceable to EDUCAUSE in any source seen across three passes),
 and "AI agents will take over 80% of routine educational labour" (unsupported).
 
+## 🆕 `p574` — 2026-10-31 — the `2026` spread is now **2.9×**, and the LATAM figure on offer is off by three orders of magnitude
+
+🔴 **Four 2026 estimates were served by this pass's mandated legs and they do not
+reconcile:** IMARC `$6.4B` (for 2025), Persistence `$3.7B` (2026) → `$14.1B`
+(2033), The Business Research Company `~$10.6B` (2026) at `40.9 %` CAGR, and New
+Market Pitch `~$11B` (2026). 🔴 **Low to high at the same year is `$3.7B` →
+`$10.6B` — a factor of `2.9`.** Published as a range, per this page's standing
+rule; no reconciliation is attempted and none of these is a primary.
+Persistence also puts **K-12 at `~34 %`** of the 2026 market — recorded, single
+secondary, grade `C`.
+
+🔴 **A regional figure this page REFUSES to publish.** A commercial geography
+report offers *"Rest of Latin America AI in education ≈ `USD 18.2M` (2024) →
+`USD 36M` (2029)"*. 🔴 Against the same vendor family's global 2026 figures of
+`$10B`+ and its North America share of `36 %`, a `$18M` regional total is a
+**scope or unit mismatch**, not a small market. 🔵 It is recorded here so the next
+pass does not re-import it as a LATAM market size. See
+[`measured-unusable.md`](measured-unusable.md) for this page's convention on
+figures that are measured and then declined.
+
 ### 🔴 `p573` (2026-10-31) — the range widens *downward*, and this KB's CAGR is the outlier
 
 🔴 **Two further vendor estimates read this pass, and they do not sit inside the
@@ -108,6 +128,77 @@ said out loud before any of it reaches a client deck.
 ## Opportunities by region
 
 ### North America
+
+#### 🔴 `p574` — the one dated education obligation in this region MOVED, and this base had never recorded it at all
+
+🔴 **`Title II` appears `0` times in `573` passes of this base — README, gap
+register and every shelf page.** It is the ADA's title covering state and local
+government, and the DOJ web/mobile accessibility rule under it is the only
+education compliance obligation on these shelves with **calendar dates**.
+
+🔵 **What the rule requires:** conformance to **WCAG 2.1 Level AA** for web
+content and mobile apps, explicitly including PDFs, Word documents, spreadsheets
+and presentations posted by the entity. Public schools, districts and public
+colleges and universities are covered as **instrumentalities** of state and local
+government.
+
+🔴 **What changed in 2026, and why a stale read is dangerous in both
+directions:** an **interim final rule** extended both compliance dates by **one
+year**.
+
+| entity class | superseded date | current date |
+| --- | --- | --- |
+| Public entities, total population **≥ 50,000** | `April 24, 2026` | 🔴 **`April 26, 2027`** |
+| Public entities **< 50,000**, and **special district** governments | `April 26, 2027` | 🔴 **`April 26, 2028`** |
+
+🔵 The interim final rule is reported as published and effective **`April 20,
+2026`**, with comments open to **`June 22, 2026`**. 🟢 **The technical standard did
+not change and the obligation was not suspended** — only the dates moved.
+
+🔴 **Grade `C†`, and the reason is a channel denial, not a research choice.** Both
+primaries were attempted and neither resolved on this harness:
+
+| primary attempted | result |
+| --- | --- |
+| 🔴 `WebFetch` → `www.ada.gov` (the rule's own page) | 🔴 **`getaddrinfo ENOTFOUND`** — outside this session's permitted network domains |
+| 🔴 `WebFetch` → `www.federalregister.gov` (the rule text) | 🔴 **`getaddrinfo ENOTFOUND`** — same class |
+
+🔵 **Ask (`574-E`): allow `ada.gov` and `federalregister.gov` in the session's
+network settings.** Until then every date on this block is secondary. 🔴 **Two
+secondary conflicts are left open rather than papered over:** one source dates the
+superseded large-entity deadline `April 22, 2026` rather than `April 24`, and one
+places **special districts at 2027 regardless of population** while the others say
+2028. 🟡 A separate **HHS** Section 504 deadline in **May 2026** is reported as
+still standing; single secondary, **do not quote**.
+
+🟢 **What this does to the North America sale, and it sharpens `p572`'s finding
+rather than replacing it.** `p572` established that the operative unit here is the
+**school board**, not the ministry. This block gives that unit a **dated
+obligation and a budget line**:
+
+- 🟢 The only off-the-shelf remediation tool in the open-source supply is
+  **North America-origin**: [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT)
+  (University of Central Florida), **GPL-3.0-only**, agreed across its licence
+  file, `package.json` and `composer.json`. 🔴 Copyleft, so the engagement shape is
+  **deploy-and-patch-upstream**, not vendor-into-product.
+- 🟢 The agent layer that can run in CI over course content is **MIT**:
+  [`Community-Access/accessibility-agents`](https://github.com/Community-Access/accessibility-agents)
+  (`431★`, WCAG 2.2 AA) and
+  [`plugin87/ux-ui-agent-skills`](https://github.com/plugin87/ux-ui-agent-skills)
+  (`3.1k★`).
+- 🔵 **The deliverable is the evidence trail, not the scan.** A date can move
+  again; a dated per-course conformance inventory is what survives both the move
+  and the complaint. Recipe: [`../compose/patterns.md`](../compose/patterns.md)
+  `P-576-A`.
+
+🟡 **Demand-side signal, single secondary, grade `C`:** a Gallup study reported
+via a newsletter puts **over `60 %` of college students using AI weekly** for
+coursework while **roughly half** of their institutions discourage or prohibit it
+— the same adoption-ahead-of-governance shape this page records for every region.
+🔵 Market share claims for the region also disagree: `36 %` of the global market
+at `$3.68B` (2026) → `$32B` (2030) from one vendor, `38 %` for 2025 from another,
+and "dominant, `41.7 %` of forecast growth" from a third.
+
 
 #### 🟡 `p572` — Canada, after five consecutive passes of a US-only North America leg
 
@@ -331,6 +422,57 @@ office**, not the school.
 
 
 ### EMEA
+
+#### 🟢 `p574` — the accessibility instrument for EMEA education is **not** the EAA, and this region holds the layer's strongest origin supply
+
+🔴 **The instrument that governs a public university or school in the EU is the
+Web Accessibility Directive — `(EU) 2016/2102` — with `EN 301 549` as its
+technical standard.** The European Accessibility Act (`Directive (EU) 2019/882`,
+applying from **`28 June 2025`**) is the one every vendor blog names, and it
+matters here for **private** e-learning products and services, not for the public
+institution's own site. 🔵 Conflating them is the cheapest mistake available on
+this block: it puts the obligation on the wrong party.
+
+🔴 **A dated technical change is coming and it is the one worth planning for:**
+`EN 301 549` **v4.1.1** is expected during **2026** and is reported to pull in
+**WCAG 2.2 AA**. 🟢 **So remediation scoped to 2.1 AA will need a second pass.**
+Target **2.2 AA now** — which is also the level the two MIT agent bundles in
+[`../repos/foundations.md`](../repos/foundations.md) already enforce, and the level
+Australia is moving to (see `APAC`). Grade `C` (vendor and consultancy sources;
+the standard itself was not read).
+
+🟢 **The origin result, and it is this base's strongest EMEA supply finding to
+date: `7` of the layer's `29` addresses are EMEA-origin**, against `1` for North
+America and `0` established for APAC and LATAM.
+
+| address | grant (first-hand) | origin |
+| --- | --- | --- |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** (`10,982 B`) | frentix GmbH, Switzerland |
+| [liip/TheA11yMachine](https://github.com/liip/TheA11yMachine) | 🟡 manifest-only `BSD-3-Clause`, no licence file | Liip AG, Switzerland |
+| [ContentSquare/readapt](https://github.com/ContentSquare/readapt) | **Apache-2.0** (`11,357 B`) | Contentsquare, France |
+| [mthebaud/predict4all](https://github.com/mthebaud/predict4all) | **Apache-2.0** (`11,357 B` at `LICENCE`) | France |
+| [asterics/Asterics-AAC](https://github.com/asterics/Asterics-AAC) | 🔴 **AGPL-3.0** (`34,523 B`) | AsTeRICS, EU-funded (Austria) |
+| [oat-sa/tao-core](https://github.com/oat-sa/tao-core) + [extension-tao-itemqti](https://github.com/oat-sa/extension-tao-itemqti) | 🔴 **GPL-2.0** (`18,025 B`) | OAT SA, Luxembourg |
+| [Citolab/qti-components](https://github.com/Citolab/qti-components) | 🔴 **GPL-3.0** (`35,199 B`) | Citolab / Cito, Netherlands |
+
+🟢 **Two of the seven are permissive and both are French**, which is the first
+time this base can name a *country* for permissive EMEA supply in a layer rather
+than a single repository. 🔴 **But the platform tier is copyleft across the
+board** — TAO (`GPL-2.0`), `qti-components` (`GPL-3.0`), Asterics (`AGPL-3.0`,
+with a §13 network obligation on any hosted deployment) — so the EMEA engagement
+is an integration-and-assurance engagement on client-hosted copyleft, not a
+product build. Recipe: [`../compose/patterns.md`](../compose/patterns.md)
+`P-576-B`.
+
+🟡 **Policy signals from the mandated leg, single secondary (one newsletter), grade
+`C` — recorded, not quotable:** the European Commission updating its ethical
+guidelines on AI in education and signing three Advanced Digital Skills grant
+agreements worth **€25.4m**; the UK's first AI Adoption Summit committing
+**£200m+**, of which **£100m** expands Bridge AI and **£53m** goes to regional
+initiatives. 🔴 **Both carry day-and-month dates (`9 June`, `8 June`) with no
+year** in the source, so the year is **not established** — the same
+survey-year-versus-publication-year defect `572-D` registered for Cetic.br.
+
 
 🟢 **New in the eighth pass (`p570`): EMEA has locally published, permissively
 granted assessment science — three countries, read from the grants themselves.**
@@ -633,6 +775,56 @@ and one that a documented training programme satisfies.
 
 ### APAC
 
+#### 🟡 `p574` — India is the only APAC jurisdiction with an **education-specific** accessibility instrument, and the region contributes `0` established rows to the layer
+
+🟢 **India, and it is education-specific rather than general disability law —
+which makes it the most actionable accessibility position in the region:**
+
+- 🟢 An **Accessibility Code for Educational Institutions** was notified on
+  **`10 January 2024`**.
+- 🟢 An **AICTE** circular (February 2024) carries accessibility guidelines for
+  higher education, citing **RPwD Act ss. 16–18** (Chapter III, Education) as the
+  duty of educational institutions.
+- 🔵 The web standard is **GIGW 3.0**, reported as aligned to **WCAG 2.1 AA**, with
+  the **RPwD Act 2016** and Rules 2017 as the statutory base.
+- 🔵 The Supreme Court (**Rajive Raturi**) is reported to have directed the Union
+  Government to define mandatory, enforceable standards with timelines — so the
+  direction of travel is from guidance to obligation.
+
+🟢 **Australia:** the base instrument is the **Disability Discrimination Act
+1992**, and the 2026 development is a move to **WCAG 2.2 AA**, explicitly
+dovetailing with `EN 301 549` v4.1.1. 🟢 **This is the one cross-regional
+convergence on this page: EMEA and APAC land on the same technical target in the
+same year**, which makes a single remediation standard sellable across both.
+
+🔴 **Japan: recorded as UNRESOLVED, deliberately.** The standard is **JIS X
+8341-3**; two sources of comparable quality disagree on whether it aligns to
+**WCAG 2.0 AA** or **WCAG 2.1**, and the legal base cited is the 2014
+disability-discrimination act applying to public institutions. 🔵 This page
+publishes **no** version for Japan rather than picking one — the difference
+decides whether a remediation scope is one pass or two.
+
+🔴 **Declared gap, stated as a gap because silence reads as coverage:** this pass
+searched for an education-specific digital accessibility mandate in **Japan,
+Korea, Singapore and China** and **found none**. That is an informed absence from
+two targeted queries, not an exhaustive finding. Registered `574-D`.
+
+🔴 **Supply: `0` of the layer's `29` addresses could be placed in APAC**, and the
+mechanism is instructive — this base places origin from the **copyright line of
+the licence file**, and the two plausibly APAC-origin candidates
+([`dxli94/WLASL`](https://github.com/dxli94/WLASL), `1.3k★`, and
+[`ZechengLi19/Awesome-Sign-Language`](https://github.com/ZechengLi19/Awesome-Sign-Language),
+`231★`) **carry no licence file at all**. 🔵 **So an ungranted repository is also a
+region-unplaceable one: the licence is doing double duty as the provenance
+record.** That is a new observation about this base's own instrument and is
+registered with `574-B`.
+
+🟡 **One adoption signal, single secondary, grade `C`:** the Philippines'
+Department of Education and Google certifying **more than one million teachers**
+in Gemini through *Project S.I.N.A.G.* Recorded; not quotable without a second
+source.
+
+
 **The region's evidence base improved sharply this pass and is no longer
 vendor-only** — which retires the standing gap that called APAC the
 weakest-evidenced region.
@@ -926,6 +1118,53 @@ than institution-level, adoption.
 
 
 ### LATAM
+
+#### 🔴 `p574` — Brazil's digital accessibility duty exists, its standard exists, and its REGULATION does not — plus a refutation of a date this pass nearly published
+
+🔴 **The claim this block was nearly built on is false.** A 2026 Brazilian trade
+article frames **`11 March`** as *"um marco na acessibilidade digital do
+Brasil"*, and read quickly that looks like a compliance deadline in the current
+year. 🟢 **It is a commemorative date**: `PL 2251/2025` in the Senate creates a
+**Dia Nacional da Acessibilidade Digital**, and states have already enacted it
+(Pernambuco, `Lei 19.201/2026`). 🔵 Recorded because the next pass will meet the
+same article: **there is no `11 March 2026` Brazilian accessibility deadline.**
+
+🟢 **What is actually true, and it is a better sales position than a deadline:**
+
+| element | state |
+| --- | --- |
+| 🟢 The duty | **`LBI` (Lei 13.146/2015) art. 63** obliges digital accessibility on the sites of **companies headquartered in Brazil and government bodies alike** — in force since 2015 |
+| 🟢 The technical standard | **`ABNT NBR 17225`**, published **`11 March 2025`** — a real national web-accessibility standard |
+| 🔴 The regulation | **MISSING.** Art. 63 has never been regulated; making the ABNT standard a binding reference requires a **federal decree** that does not exist |
+| 🔴 The enforcement | **Prosecutorial.** The **MPF** has recommended the federal government regulate art. 63 within **45 days** and is litigating to have the courts impose that duty; the public prosecutor's office is the single most active actor in Brazilian digital-accessibility cases |
+
+🔵 **So the LATAM engagement is procurement-and-litigation-driven, not
+calendar-driven** — the opposite of North America. The buyer is an institution
+that wants to be defensible before a *promotoria* inquiry, and the deliverable is
+the same evidence trail `P-576-A` builds, with no date to point at.
+
+🟢 **A statutory channel North America and EMEA do not have, and it changes which
+repository you may use.** **Libras** — Brazilian Sign Language — is statutory
+(`Lei 10.436/2002`, `Decreto 5.296/2004`), so sign-language support is a
+*procurement item* in Brazil rather than a nice-to-have. 🔴 **And this is exactly
+where the layer's licensing bites:** the field's flagship,
+[`sign/translate`](https://github.com/sign/translate) (`797★`), is
+**CC BY-NC-SA** — noncommercial, so it cannot be in a paid deliverable. 🟢 **The
+substitute is first-hand verified:**
+[`sign-language-translator/sign-language-translator`](https://github.com/sign-language-translator/sign-language-translator)
+— **Apache-2.0**, licence file `11,364 B`, `pyproject.toml` agrees, `380★`,
+designed precisely for building a translator for a *specific* sign language.
+
+🟡 **One regional evidence item from the mandated leg, grade `C`:** a **UNESCO
+IESALC** working paper with **UNU-IAS**, dated **September 2026**, mapping AI use
+across Latin American and Caribbean universities in five areas — teaching,
+research, community engagement, administration and governance. 🔵 Worth a primary
+read next pass; the publication itself was not fetched.
+
+🔴 **Supply: `0` of the layer's `29` addresses are LATAM-origin.** Stated as a
+gap, not left silent — and consistent with `p572`'s finding that this base's
+origin instrument can only place **institutional** publishers.
+
 
 #### 🟡 `p572` — the missing LATAM *classroom* rates, found where `p571` said to look, at grade `C†`
 

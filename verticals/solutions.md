@@ -10,6 +10,38 @@ Real, deployed systems that run an institution's operations — the education
 equivalent of Odoo for ERP. These are the systems a client already has, and the
 systems an AI layer gets attached to.
 
+## 🆕 `p574` — twelfth pass, 2026-10-31 — 🟢 THE ASSESSMENT-DELIVERY AND ACCESSIBILITY VERTICAL, which this base has never held: **TAO** is the QTI platform of record and it is `GPL-2.0`
+
+🔵 **Why this page needed it.** Every row above runs *teaching* or *records*. The
+third system an institution actually operates is **assessment delivery** — the
+thing that must survive an audit, an appeal and an accommodation request — and
+this page held no row for it. 🔴 The adjacent obligation is dated: in the United
+States `April 26, 2027` / `April 26, 2028` under the ADA Title II web rule, and in
+the EU `EN 301 549` under the Web Accessibility Directive. See
+[`../intel/market.md`](../intel/market.md).
+
+| Platform | Repo | Licence | ★ | Region | What it runs |
+| --- | --- | --- | --: | --- | --- |
+| **TAO** | [oat-sa/tao-core](https://github.com/oat-sa/tao-core) | **GPL-2.0-only** (licence file `18,025 B`; `composer.json` agrees) | — (unread) | EMEA | The **QTI-native** computer-based testing platform, OAT SA (Luxembourg). Item banking, delivery, proctored sittings, results. Used by ministries and exam boards; the reference implementation standards-conformance arguments are made against. 🔴 **GPL-2.0 — deploy it, do not vendor it.** |
+| **TAO / QTI items** | [oat-sa/extension-tao-itemqti](https://github.com/oat-sa/extension-tao-itemqti) | **GPL-2.0** (licence file `18,025 B`) | — (unread) | EMEA | TAO's item authoring and rendering extension — the part that reads and writes **QTI** itself. 🟢 New to this base entirely: `0` mentions in `573` passes. |
+| **UDOIT** | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | **GPL-3.0-only** (`35,147 B`; `package.json` **and** `composer.json` agree) | 117 | North America | The Universal Design Online content Inspection Tool: scans a **Canvas** course's content for accessibility defects and fixes them in place. University of Central Florida. 🟢 **The nearest thing to an off-the-shelf Title II remediation tool in open source.** |
+| **Cboard** | [cboard-org/cboard](https://github.com/cboard-org/cboard) | **GPL-3.0-only** (`35,141 B`; `package.json` agrees) | 766 | Global | Browser-based **AAC** board with text-to-speech, used in classrooms for non-verbal learners. Deployed, multilingual, and the obvious host for an AI symbol-prediction layer. |
+
+🔴 **All four are copyleft, and that is the finding, not an accident of
+sampling.** The permissive supply in this layer is converters and browser
+extensions (see [`../repos/foundations.md`](../repos/foundations.md)); the
+*platforms* are GPL. 🔵 **The engagement shape that follows** is the one `p557`
+established for the education-ERP vertical: **client-hosted, deployed unmodified,
+customisation in separately licensed extensions, patches upstream.** It is a
+services engagement, not a product one — and it is sellable precisely because the
+deadline is the client's, not the vendor's.
+
+🟢 **One existing row corrected on this page by a first-hand read:** `OpenOlat`'s
+licence cell said *"Apache-2.0 (README badge; sidebar unnamed)"*. The licence file
+at `master` is **`10,982 B` of Apache-2.0**, with a `14,712 B` `NOTICE.TXT`
+alongside. The badge was right; it is now **measured**, which is the difference
+between a citation and a claim.
+
 ## Eleventh pass (`p573`, 2026-10-31) — 🟢 THE SIS AXIS IS NOW MEASURABLY EXHAUSTED: `topic:student-information-system` (**187**) read 20 deep, **zero** new, and every platform-grade row was already on this page
 
 🔵 **This is a completeness result, and it is the first one this page can
@@ -112,7 +144,7 @@ off:** `Artemis` **MIT** → fork freely · `opencast` **ECL-2.0**, `Sakai`
 | Moodle | [moodle/moodle](https://github.com/moodle/moodle) | GPL-3.0 | 7,600 | APAC | The default institutional LMS worldwide; the vast plugin ecosystem is the customisation surface. Perth, Australia. |
 | LearnHouse | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | **AGPL-3.0 + separate Enterprise Licence** | 2,400 | Global | "The Next-gen Open Source learning platform for everyone." Next.js / FastAPI / Postgres / Redis, 593 forks, ships "LearnHouse AI: The Teachers and Students copilot". **Added this pass.** The licence shape is the lesson: an AGPL core with features withheld under a commercial licence means the public repo is not the whole product — check feature parity before promising a self-hosted build. Maintainer Badr B. (`@swve`); country not stated. |
 | Chamilo | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | GPL-3.0 | 1,000 | EMEA | LMS built around ease of use and accessibility; notable francophone and LATAM deployments. |
-| OpenOlat | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | Apache-2.0 (README badge; sidebar unnamed) | 449 | EMEA | "Learning Management System OpenOlat," by **frentix GmbH, Switzerland**. A permissively licensed *institutional* LMS — rare, and one a commercial derivative could be built from. |
+| OpenOlat | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** (licence file `10,982 B`, read first-hand `p574`; `NOTICE.TXT` `14,712 B`) | 449 | EMEA | "Learning Management System OpenOlat," by **frentix GmbH, Switzerland**. A permissively licensed *institutional* LMS — rare, and one a commercial derivative could be built from. |
 | Mentingo | [Selleo/mentingo](https://github.com/Selleo/mentingo) | **MIT** | 102 | **EMEA** | **The new permissive option, and the one to read carefully.** "Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX." TypeScript, 31 forks, pushed 2026-10-30. Ships **SCORM and xAPI**; white-label is a stated goal; topics include `corporate-training` and `compliance-training`, so the natural fit is **enterprise L&D rather than a university registrar**. Selleo's GitHub profile states **Poland**. MIT per the API. At 102★ with 105 open issues it carries adoption risk a Moodle install does not — but it is the only AI-native LMS a client can fork, rebrand and keep closed. |
 | ULEARN | [safytech/ulearn](https://github.com/safytech/ulearn) | **MIT** (licence file, 1,066 B) | 701 | Global | **The largest MIT-licensed LMS located anywhere**, 299 forks. And the stack is the whole story: **Laravel 5.8 + React 16.9**, both long past end of life. Permissive and forkable in principle; in practice a fork is a framework-upgrade project before it is a product. Quote the upgrade or do not quote the platform. |
 | Richie | [openfun/richie](https://github.com/openfun/richie) | **MIT** (licence file, 1,079 B) | 318 | **EMEA** | A Django **CMS for building education portals**, designed to front Open edX and Moodle course catalogues. 94 forks. **Region placed from the licence file's own copyright line — "GIP FUN MOOC"**, i.e. France Université Numérique, the same publisher as the MIT LRS `openfun/ralph`. The catalogue-and-marketing tier of an institution's estate, permissively licensed, from a European public publisher. |

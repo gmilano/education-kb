@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (twelfth pass · `p574`) — 🔴 no new education agent for the second week, and the week's real signal is that **the agent supply answering the 2027 accessibility deadline is horizontal MIT, not educational**
+
+🔴 **The four mandated `WebSearch` legs are `12` for `12` on nil** for agent
+addresses new to this base. This week they returned
+`microsoft/ai-agents-for-beginners`, `goose`, `pguso/agents-from-scratch` and SEO
+roundups; the only two education-shaped names in the whole sweep —
+`OPTIMETA/PAIDEIA` and `GarethManning/education-agent-skills` — are **already in
+this base's history** (`1`/`19` prior mentions). 🔵 The leg is not broken, it is
+**saturated**: it reaches the roundup layer, and this base passed that layer
+hundreds of passes ago.
+
+🟢 **Two MIT agent bundles qualified on licence and were shelved in
+[`../repos/foundations.md`](../repos/foundations.md), not here**, under the fourth
+pass's standing rule that a horizontal capability layer is not an education agent:
+
+| agent bundle | grant (first-hand) | ★ | what it enforces |
+| --- | --- | --: | --- |
+| [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents) | **MIT**, licence file `1,069 B`, `package.json` agrees | 431 | Eleven review specialists on **WCAG 2.2 AA**, for Claude Code / GitHub Copilot / Claude Desktop |
+| [plugin87/ux-ui-agent-skills](https://github.com/plugin87/ux-ui-agent-skills) | **MIT**, licence file `1,073 B`, `package.json` agrees | 3,100 | DTCG tokens, 52 components, **WCAG 2.2 AA–AAA**, 138 design systems |
+
+🔴 **The gap this leaves is now specific and registered (`574-C`): there is no
+education-specific accessibility agent** — nothing that reads a course, a cohort
+or an IEP and acts on it. The nearest candidate,
+[`Jojobeans1981/Ember-Campfire-Edition`](https://github.com/Jojobeans1981/Ember-Campfire-Edition)
+("AI-powered dyslexia intervention platform", 24★), **has no licence file on a
+44-name ladder**, so it is unshelvable rather than merely small.
+
+🔵 **Signal worth recording about the week's noise:** the mandated trends leg
+re-served **"134 bills / 31 states"**, the figure `p455` retired five months of
+passes ago, as a March 2026 fact. 🔴 **That is the second recorded re-service in
+three passes** (`p572` logged the first). A retired figure does not stay retired
+in the channel — only on the shelf.
+
+---
+
 ## 2026-10-31 (eleventh pass · `p573`) — 🔴 no new agent, and the week's finding is that the correctly-named axis is **exhausted**
 
 🔴 **`0` addresses new to this base from any agent axis.** 🔴 **The four mandated

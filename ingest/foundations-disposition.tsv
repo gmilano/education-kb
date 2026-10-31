@@ -23,37 +23,73 @@
 # re-break the count.
 #
 # COLUMNS (tab-separated): heading / table_ordinal / disposition / note
-## 🆕 `p543` — the teaching-corpus layer gains two rows, and one of them pays a 190-mention promotion debt	0	SHELF	p543 teaching-corpus rows
-## 🆕 `p542` — one framework row off the French leg, and the Intel education suite read down to its components	0	SHELF	p542 framework row
-## 🆕 `p540` — six rows off the gate-to-600, and the first forks-per-star ranking this base has run	0	SHELF	p540 gate-to-600 rows
-## 🆕 `p539` — the backlog's head was never obscure, it was the field's own infrastructure	0	METRIC	backlog LIVE/DEAD/grant-gate rates; no repo rows
-## 🆕 `p539` — the backlog's head was never obscure, it was the field's own infrastructure	1	SHELF	p539 filed rows
-### 🟢 The Apereo sector layer — `ECL-2.0`, a real OSI licence both classifiers now name	0	SHELF	Apereo ECL-2.0 sector layer
-### 🟢 Assessment and standards	0	SHELF	assessment and standards
-### 🟢 The ladder's own blind spot — three MIT grants one rung further along	0	SHELF	three MIT grants one rung along
-### 🟢 EMEA, public sector — `opetushallitus`, seven national registries under `EUPL`	0	SHELF	opetushallitus EUPL registries
-### 🟢 Two general-purpose rows the residue also returned	0	SHELF	general-purpose rows from residue
-### 🟢 Two Spanish-language curriculum repos, with a split grant worth reading as a model	0	SHELF	Spanish-language curriculum repos
-## Platform cores	0	SHELF	platform cores
-## Administration, records and integrity	0	SHELF	administration, records, integrity
-## 🆕 The Moodle MCP census — 🔴 **222 addresses, not eleven; ceiling 52★ and ungranted**	0	CENSUS	13-row sample of 222 addresses; not supply filed
-## 🆕 Standards, records and assessment — the integration layer (`p530`)	0	SHELF	p530 integration layer
-## 🆕 Serving the course — the JupyterHub deployment family (`p531`)	0	SHELF	p531 JupyterHub family
-## 🆕 The LTI libraries this base has described 55 times and never filed (`p531`)	0	SHELF	p531 LTI libraries
-## 🆕 Assessment science, and the licence-compliance instruments (`p531`)	0	SHELF	p531 assessment science
-## 🆕 Two platform rows the drop set also returned (`p531`)	0	SHELF	p531 drop-set platform rows
-## 🆕 The LMS agent-bridge layer completes — Blackboard was the hole (`p532`)	0	SHELF	p532 LMS agent-bridge layer
-## 🆕 The materiality-ranked queue's first eleven rows (`p533`)	0	SHELF	p533 materiality queue
-## 🆕 `p534` — the institutional AI toolchain, off `Gap 533-A`'s org enumeration	0	SHELF	p534 institutional AI toolchain
-## 🆕 `p534` — a register claim this base has **refuted**, recorded rather than restored	0	SUMMARY	restates 3 platforms filed above
-## 🆕 `p535` — the efficacy layer: **causal inference**, which this base argued for and never held	0	SHELF	p535 causal inference
-### The Learning Commons stack — three repositories, three different grants	0	SHELF	Learning Commons stack
-### The efficacy layer gains its missing half: **assignment**	0	SHELF	efficacy layer, assignment
-### The national data plane — four countries, four grants, all permissive	0	SHELF	national data plane
-## Licence map, for the architecture decision	0	SUMMARY	licence bands; groups rows filed elsewhere
-## 🆕 Gulf-origin supply — `Gap 536-D` answered, and the hole is a **grant** hole (`p537`)	0	SHELF	p537 Gulf-origin supply
-## 🆕 Nine platform rows promoted off the prose queue — and two are archived upstream (`p537`)	0	SHELF	p537 promoted platform rows
-## 🆕 Nine platform rows — the prose queue emptied, and placed in all four regions (`p538`)	0	SHELF	p538 platform rows, four regions
-### 🟢 `Gap 544-E` / `Gap 534-E` — CLOSED at `p545`, and the carried number was wrong by more than 2×	0	METRIC	p545 544-E disposition breakdown; carries no repository rows
-### 🟢 `Gap 545-C` — named and closed in the same pass, and the sweep paid for itself twice	0	METRIC	p545 shelf liveness/alias sweep results; carries no filed rows
-### 🟢 `Gap 545-C` — named and closed in the same pass, and the sweep paid for itself twice	1	METRIC	p545 default-branch distribution; carries no filed rows
+# p574: the row below was REMOVED, not edited. Its heading left repos/foundations.md in an
+# earlier rewrite (the page carries no `p543` string at all), so the manifest named a
+# heading the page no longer has and derive-foundations.py exited 2 on it -- which means
+# EVERY later declaration in this file, including three filed this pass, was never read.
+# A stale key here is not a cosmetic defect: it silences the whole gate. Removed key was:
+#   "## 🆕 `p543` -- the teaching-corpus layer gains two rows ... 190-mention promotion debt" 0 SHELF
+#STALE-p574 ## 🆕 `p542` — one framework row off the French leg, and the Intel education suite read down to its components ~ 0 ~ SHELF ~ p542 framework row
+#STALE-p574 ## 🆕 `p540` — six rows off the gate-to-600, and the first forks-per-star ranking this base has run ~ 0 ~ SHELF ~ p540 gate-to-600 rows
+#STALE-p574 ## 🆕 `p539` — the backlog's head was never obscure, it was the field's own infrastructure ~ 0 ~ METRIC ~ backlog LIVE/DEAD/grant-gate rates; no repo rows
+#STALE-p574 ## 🆕 `p539` — the backlog's head was never obscure, it was the field's own infrastructure ~ 1 ~ SHELF ~ p539 filed rows
+#STALE-p574 ### 🟢 The Apereo sector layer — `ECL-2.0`, a real OSI licence both classifiers now name ~ 0 ~ SHELF ~ Apereo ECL-2.0 sector layer
+#STALE-p574 ### 🟢 Assessment and standards ~ 0 ~ SHELF ~ assessment and standards
+#STALE-p574 ### 🟢 The ladder's own blind spot — three MIT grants one rung further along ~ 0 ~ SHELF ~ three MIT grants one rung along
+#STALE-p574 ### 🟢 EMEA, public sector — `opetushallitus`, seven national registries under `EUPL` ~ 0 ~ SHELF ~ opetushallitus EUPL registries
+#STALE-p574 ### 🟢 Two general-purpose rows the residue also returned ~ 0 ~ SHELF ~ general-purpose rows from residue
+#STALE-p574 ### 🟢 Two Spanish-language curriculum repos, with a split grant worth reading as a model ~ 0 ~ SHELF ~ Spanish-language curriculum repos
+#STALE-p574 ## Platform cores ~ 0 ~ SHELF ~ platform cores
+#STALE-p574 ## Administration, records and integrity ~ 0 ~ SHELF ~ administration, records, integrity
+#STALE-p574 ## 🆕 The Moodle MCP census — 🔴 **222 addresses, not eleven; ceiling 52★ and ungranted** ~ 0 ~ CENSUS ~ 13-row sample of 222 addresses; not supply filed
+#STALE-p574 ## 🆕 Standards, records and assessment — the integration layer (`p530`) ~ 0 ~ SHELF ~ p530 integration layer
+#STALE-p574 ## 🆕 Serving the course — the JupyterHub deployment family (`p531`) ~ 0 ~ SHELF ~ p531 JupyterHub family
+#STALE-p574 ## 🆕 The LTI libraries this base has described 55 times and never filed (`p531`) ~ 0 ~ SHELF ~ p531 LTI libraries
+#STALE-p574 ## 🆕 Assessment science, and the licence-compliance instruments (`p531`) ~ 0 ~ SHELF ~ p531 assessment science
+#STALE-p574 ## 🆕 Two platform rows the drop set also returned (`p531`) ~ 0 ~ SHELF ~ p531 drop-set platform rows
+#STALE-p574 ## 🆕 The LMS agent-bridge layer completes — Blackboard was the hole (`p532`) ~ 0 ~ SHELF ~ p532 LMS agent-bridge layer
+#STALE-p574 ## 🆕 The materiality-ranked queue's first eleven rows (`p533`) ~ 0 ~ SHELF ~ p533 materiality queue
+#STALE-p574 ## 🆕 `p534` — the institutional AI toolchain, off `Gap 533-A`'s org enumeration ~ 0 ~ SHELF ~ p534 institutional AI toolchain
+#STALE-p574 ## 🆕 `p534` — a register claim this base has **refuted**, recorded rather than restored ~ 0 ~ SUMMARY ~ restates 3 platforms filed above
+#STALE-p574 ## 🆕 `p535` — the efficacy layer: **causal inference**, which this base argued for and never held ~ 0 ~ SHELF ~ p535 causal inference
+#STALE-p574 ### The Learning Commons stack — three repositories, three different grants ~ 0 ~ SHELF ~ Learning Commons stack
+#STALE-p574 ### The efficacy layer gains its missing half: **assignment** ~ 0 ~ SHELF ~ efficacy layer, assignment
+#STALE-p574 ### The national data plane — four countries, four grants, all permissive ~ 0 ~ SHELF ~ national data plane
+#STALE-p574 ## Licence map, for the architecture decision ~ 0 ~ SUMMARY ~ licence bands; groups rows filed elsewhere
+#STALE-p574 ## 🆕 Gulf-origin supply — `Gap 536-D` answered, and the hole is a **grant** hole (`p537`) ~ 0 ~ SHELF ~ p537 Gulf-origin supply
+#STALE-p574 ## 🆕 Nine platform rows promoted off the prose queue — and two are archived upstream (`p537`) ~ 0 ~ SHELF ~ p537 promoted platform rows
+#STALE-p574 ## 🆕 Nine platform rows — the prose queue emptied, and placed in all four regions (`p538`) ~ 0 ~ SHELF ~ p538 platform rows, four regions
+#STALE-p574 ### 🟢 `Gap 544-E` / `Gap 534-E` — CLOSED at `p545`, and the carried number was wrong by more than 2× ~ 0 ~ METRIC ~ p545 544-E disposition breakdown; carries no repository rows
+#STALE-p574 ### 🟢 `Gap 545-C` — named and closed in the same pass, and the sweep paid for itself twice ~ 0 ~ METRIC ~ p545 shelf liveness/alias sweep results; carries no filed rows
+#STALE-p574 ### 🟢 `Gap 545-C` — named and closed in the same pass, and the sweep paid for itself twice ~ 1 ~ METRIC ~ p545 default-branch distribution; carries no filed rows
+### 🟢 The permissive tier — ten rows a client engagement may actually ship	0	SHELF	p574 accessibility/QTI permissive tier
+### 🔴 The copyleft, noncommercial and manifest-only tier — thirteen rows that are link-only, arm's-length or blocked	0	SHELF	p574 accessibility/QTI copyleft+NC+manifest-only tier
+### 🔵 The licence-band census of the whole layer — a measurement, not supply	0	METRIC	p574 licence bands over 29 addresses; no new supply
+# p574: the p568 rewrite replaced most of this page and left 33 keys naming absent
+# headings and 22 live tables undeclared, so the gate exited 2 before reading anything.
+# The 22 below are re-declared from each table own header row. Dispositions are a
+# JUDGEMENT a later pass may correct; the alternative was leaving the gate dead.
+### 🟢 Permissive rows the same sweep produced — small, but genuinely usable	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+### 🔴 Two corrections to rows this base already ships — both are missing grants	0	SUMMARY	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+### 🔵 Method note — the mandated verification command is broken on this harness, and the fix also reads better data	0	METRIC	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+### 🔵 Method note — the mandated verification command is broken on this harness, and the fix also reads better data	1	METRIC	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+### 🟢 The permissive integration tier, now placed	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+### 🔴 Two instrument defects in this base's own grant ladder, both proven and both fixed	0	METRIC	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Ninth pass (`p571`, 2026-10-31) — 🔴 zero new addresses, and the pass's whole value is a shelving defect: a tier this base FOUND at pass 85 never reached this page	0	METRIC	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+### 🟢 The item-generation tier, now shelved	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+### 🔴 `topic:essay-scoring` is a tag-variant decoy — and that is the one genuinely new finding on this page	0	CENSUS	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Platforms of record	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+### Permissive platforms one tier down — new in the fourth pass	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Interoperability and analytics layer	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Content, standards and evaluation layer (new this pass)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Rubric and evaluation layer (new in the eighth pass — the axis 569 passes never swept)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Content-production layer (new in the fourth pass)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Document-ingestion layer (new in the fifth pass — the capability sweep)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Narration, speech and retention layer (new in the fifth pass)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Assessment and item-bank layer (new in the sixth pass)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Lecture-video layer (new in the sixth pass — the fifth pass's `topic:video` ask)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Deck and document generation — extending the fourth pass's layer	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## The LMIC supply side — `AI-for-Education` (closes a three-pass gap)	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+## Adjacent systems of record	0	SHELF	p574 re-declared after the p568 rewrite (was undeclared; gate was dead)
+### 🔴 The split, stated as the engagement decision it actually is	0	SUMMARY	p574: declared for p573, which added the table and not its declaration
+### 🟢 The R/CRAN psychometric tier, now placed — every grant read from `DESCRIPTION`	0	SHELF	p574: declared for p573, which added the table and not its declaration

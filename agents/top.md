@@ -43,6 +43,59 @@ pass's own discovery query (`topic:ai-education stars:>150 pushed:>2026-10-20`)
 returns the **same 6 repositories**, all already shelved. The axis is exhausted;
 the population is not, and the capability sweep is the proof.
 
+## 🆕 `p574` — twelfth pass, 2026-10-31 — 🔴 NO NEW AGENT QUALIFIED AGAIN, and the reason is worth more than a row: the layer the `2027`/`2028` **accessibility deadlines** create demand for has **agent-shaped MIT supply that is horizontal, not educational** — `2` MIT agent bundles enforcing **WCAG 2.2 AA**, shelved in [`../repos/foundations.md`](../repos/foundations.md) under the fourth pass's own rule
+
+🔵 **Why this pass went looking here.** `p572` shelved the LTI 1.3 / xAPI plumbing
+layer after finding it in the discard pile. This pass asked the next question —
+*what else does an LMS engagement bill for that this base has never named?* — and
+the answer is **digital accessibility**, which is the one education obligation on
+these shelves with a **dated legal deadline in two regions**. 🔴 **`Title II`
+appears `0` times in `573` passes of this base's history: not in the README, not in
+the gap register, not on any shelf page.**
+
+### 🟢 Six GitHub axes, none of them ever queried in 573 passes, `911` repositories visible
+
+| axis | repositories | prior queries in this base | new addresses read |
+| --- | --: | --: | --: |
+| 🟢 [`topic:accessibility` × `topic:education`](https://github.com/search?q=topic%3Aaccessibility+topic%3Aeducation&type=repositories) | **425** | 🔴 `0` | 4 |
+| 🟢 [`topic:dyslexia`](https://github.com/topics/dyslexia) | **257** | 🔴 `0` | 5 |
+| 🟢 [`topic:aac` × `topic:accessibility`](https://github.com/search?q=topic%3Aaac+topic%3Aaccessibility&type=repositories) | **126** | 🔴 `0` | 6 |
+| 🟢 [`topic:qti`](https://github.com/topics/qti) | **52** | 🔴 `0` | 8 |
+| 🟢 [`topic:wcag` × `topic:accessibility`](https://github.com/search?q=topic%3Awcag+topic%3Aaccessibility&type=repositories) | **29** | 🔴 `0` | 3 |
+| 🟢 [`topic:sign-language`](https://github.com/topics/sign-language) (`stars:>80`) | **22** | 🔴 `0` | 4 |
+
+🟢 **`29` addresses read byte-for-byte, `13` of them new to a 573-pass base, and
+`24 of 25` checked were absent from EVERY shelf page.** Full grant reads in
+[`../evidence/accessibility-qti-licence-bytes.2026-10-31-p574.tsv`](../evidence/accessibility-qti-licence-bytes.2026-10-31-p574.tsv)
+(`30` rows: `29` addresses + `1` fabricated control, which answered
+`DEAD-OR-ABSENT`, so the channel discriminates).
+
+### 🔴 Why no row was added to THIS page
+
+🔴 **The two qualifying MIT artefacts are not education agents.** The fourth pass
+set the rule this page still runs on — *a horizontal capability layer is shelved in
+`foundations.md`, not here, because none of it is an education agent* — and both
+of this pass's MIT finds are exactly that:
+
+- [`Community-Access/accessibility-agents`](https://github.com/Community-Access/accessibility-agents)
+  — **MIT**, licence file `1,069 B`, `package.json` agrees — **431★**. Eleven
+  review specialists enforcing **WCAG 2.2 AA** for Claude Code, GitHub Copilot and
+  Claude Desktop. Agent-shaped, and **domain-agnostic**: nothing in it knows what a
+  course is.
+- [`plugin87/ux-ui-agent-skills`](https://github.com/plugin87/ux-ui-agent-skills)
+  — **MIT**, licence file `1,073 B`, `package.json` agrees — **3.1k★**. DTCG
+  tokens, 52 components, **WCAG 2.2 AA–AAA**, 138 design systems.
+
+🟢 **Both are shelved, with first-hand grants, in
+[`../repos/foundations.md`](../repos/foundations.md).** 🔵 This is the second
+consecutive pass whose honest result for this page is *a placed gap rather than a
+row*, and the gap is now specific: **there is no education-specific accessibility
+agent — nothing that reads a course, a cohort or an IEP and acts on it.** The
+nearest candidate found,
+[`Jojobeans1981/Ember-Campfire-Edition`](https://github.com/Jojobeans1981/Ember-Campfire-Edition)
+(an AI dyslexia-intervention platform, 24★), **carries no licence file on a
+44-name ladder** — so it is unshelvable, not merely small. Registered `574-C`.
+
 ## Eleventh pass (`p573`, 2026-10-31) — 🔴 NO NEW AGENT QUALIFIED, and the pass's result for this page is a **gap with a name**: there is no usable learner-simulation agent, which is how a tutor gets tested before it meets a student
 
 🔴 **Two agent-native axes were swept to exhaustion of their top rows and yielded

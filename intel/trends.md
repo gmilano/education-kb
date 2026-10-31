@@ -7,7 +7,7 @@ updated: 2026-10-31
 # Current trends — education AI
 
 <!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
-`derived trends: **24**` — numbered trend headings on this page, counted with
+`derived trends: **22**` — numbered trend headings on this page, counted with
 that gate's own regex.
 
 🔴 **`p573` corrects this claim twice over, and the second correction is a defect,
@@ -92,9 +92,79 @@ grants and `7` dependency manifests byte-for-byte and found **three** commercial
 blocks and **one** GPL-3.0 licence surface hiding behind a clean MIT file — none
 of which any star or commit figure would have shown.
 
+## 🆕 `p574` — 2026-10-31 — trends 21–22, and a correction to how `p573` filed trends 19–20
+
+🔴 **`p573` published `derived trends: **24**` and diagnosed a "numbering
+collision — trends 15–18 each used twice". Both are refuted by the gate's own
+derivation and by a four-line check of the page.** Every `##`-level trend number
+`1`–`18` occurs **exactly once**. What actually happened is that `p573` filed its
+own two trends as **`###` sub-headings** under a pass wrapper, where
+[`../ingest/derive-counts.py`](../ingest/derive-counts.py) — which counts
+`^## <n>.` — cannot see them. 🟢 **Fixed in the structure rather than in prose:
+trends 19 and 20 are promoted to `##`, this pass's two are filed at `##`, and the
+header claim is set to the figure the gate derives.** 🔵 The same defect in the
+same hour hit [`../compose/patterns.md`](../compose/patterns.md), where
+`P-575-A`/`P-575-B` were filed at `###` against a claim of `30` recipes on a page
+the gate read as `25`. **One mechanism, two files: a count claim written by hand
+beside content filed at a level the counter cannot reach.**
+
+## 21. The accessibility layer is where education AI's licence boundary and its demand boundary cross (high confidence — measured first-hand, 29 grants read byte-for-byte)
+
+🔵 **The claim:** the one education obligation with calendar dates attached —
+digital accessibility — is served by an open-source supply that is **copyleft at
+the platform tier and permissive only at the edges**, so the work it generates is
+structurally a *services* engagement.
+
+🟢 **The measurement**, from six GitHub axes never queried in `573` passes of this
+base (`911` repositories, `29` grants read byte-for-byte, `1` fabricated control
+answering `DEAD-OR-ABSENT`):
+
+| band | addresses | the tier it occupies |
+| --- | --: | --- |
+| 🟢 Permissive with a licence file | **10** | Converters, browser extensions, agent skill-bundles, one LMS (`OpenOLAT`, Apache-2.0) |
+| 🔴 Copyleft | **11** | **Every platform**: TAO (`GPL-2.0`), UDOIT (`GPL-3.0`), Cboard (`GPL-3.0`), `qti-components` (`GPL-3.0`), Asterics (`AGPL-3.0`) |
+| 🔴 Noncommercial / content | **2** | Including the field's flagship sign-language translator |
+| 🔴 No licence text at all | **6** | Including a `1.3k★` benchmark dataset and a `642★` auditor with a manifest-only grant |
+
+🔴 **So `10 of 29` are shippable and every system of record in the layer is
+copyleft.** 🔵 **Why this is a trend and not a licence table:** it is the **second
+consecutive pass** to find the same inversion in a different layer — `p573` found
+it in psychometrics (permissive in Python, GPL in R), and the generalisation is
+now stateable: **in education AI, the artefacts with institutional credibility are
+systematically less permissively licensed than the artefacts without it.**
+Credibility accumulates in university, ministry and exam-board code, and that code
+is GPL. 🟢 **The commercial consequence is a posture, not a complaint:** price the
+arm's-length deployment and the assurance, not the redistribution.
+
+## 22. A compliance deadline is a moving target and the obligation is not, so the durable deliverable is the evidence trail (high confidence on the dates as secondary sources; the primaries were unreachable)
+
+🔵 **The claim:** accessibility dates move, standards version up, and three of
+four regions have **no education-specific instrument at all** — so anything sold
+against a date decays, while a dated conformance inventory keeps its value.
+
+🟢 **The evidence, region by region** (full detail and grades in
+[`market.md`](market.md)):
+
+| region | instrument | dated? | 2026 movement |
+| --- | --- | --- | --- |
+| North America | ADA **Title II** web rule, **WCAG 2.1 AA** | 🟢 yes | 🔴 **Both dates slipped a year** by interim final rule: `April 26, 2027` (≥50k) and `April 26, 2028` (<50k and special districts) |
+| EMEA | Web Accessibility Directive `(EU) 2016/2102` + `EN 301 549` — **not** the EAA, for public institutions | 🟡 standard-dated | 🔴 **`EN 301 549` v4.1.1 expected in 2026, pulling in WCAG 2.2 AA** — so 2.1-scoped remediation needs a second pass |
+| APAC | India's **Accessibility Code for Educational Institutions** (`10 Jan 2024`) is the only education-specific one found; Australia moving to **WCAG 2.2 AA** under the DDA 1992 | 🟡 partial | 🔴 Japan's JIS X 8341-3 alignment is **disputed between sources** and is published here as unresolved |
+| LATAM | Brazil **LBI art. 63** (in force since 2015) + **ABNT NBR 17225** (`11 Mar 2025`) | 🔴 **no** | 🔴 **Regulation absent; enforcement is prosecutorial (MPF).** And `11 March` is a **commemorative** date, not a deadline |
+
+🟢 **The convergent fact worth selling on:** EMEA and APAC both land on **WCAG 2.2
+AA** in 2026, and the two MIT agent bundles found this pass already enforce 2.2
+AA. 🔵 **So a single remediation standard is defensible across both regions**,
+while the North America scope can be met at 2.1 AA and over-delivered at 2.2 for
+free. 🔴 **The failure mode to name in the proposal:** a programme justified by
+`April 2026` would have been re-scoped twice this year. A programme justified by
+*"we can show, per course, what conforms and when it was last checked"* survives
+every one of these movements. Recipe: [`../compose/patterns.md`](../compose/patterns.md)
+`P-576-A`.
+
 ## `p573` (2026-10-31) — trends 19–20
 
-### 🟢 19. The psychometric measurement layer splits by **programming language**, not by quality — permissive in Python, copyleft in R (high confidence — measured first-hand, 20 grants read byte-for-byte)
+## 19. 🟢 The psychometric measurement layer splits by **programming language**, not by quality — permissive in Python, copyleft in R (high confidence — measured first-hand, 20 grants read byte-for-byte)
 
 🔵 **The observation.** Education AI's assessment work needs item calibration,
 DIF, equating and adaptive item selection. Those algorithms exist twice over in
@@ -132,7 +202,7 @@ pipeline) and `P-575-B` (arm's-length GPL psychometrics service) write up the tw
 postures. Choose on the first day of the engagement, not after the statistician
 has picked their tooling.
 
-### 🔴 20. The commonest licence failure in education AI is **no licence at all**, and it concentrates in peer-reviewed academic code (high confidence — measured first-hand, 26 repositories)
+## 20. 🔴 The commonest licence failure in education AI is **no licence at all**, and it concentrates in peer-reviewed academic code (high confidence — measured first-hand, 26 repositories)
 
 🔵 **The measurement.** Of **26** repositories whose grants were read
 byte-for-byte this pass, 🔴 **7 (27 %) have no licence file of any kind** on

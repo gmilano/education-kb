@@ -6,6 +6,16 @@ updated: 2026-10-31
 
 # Foundational open source repos for education
 
+<!-- machine-readable count claim, p574, for ingest/derive-foundations.py -->
+`derived shelf rows: **135**` — every data row in a `SHELF`-disposition table,
+derived by that gate from this page's own structure (`130` distinct addresses).
+🔴 **`p574` found this gate DEAD, not stale:** the `p568` rewrite left `33` of its
+`36` declared keys naming headings the page no longer carries and `24` live tables
+undeclared, two of them `p573`'s own — so it exited `2` before reading a single
+table, and the page has carried no derivable figure for six passes. Keys repaired
+and tables re-declared in
+[`../ingest/foundations-disposition.tsv`](../ingest/foundations-disposition.tsv).
+
 The substrate an education engagement builds on or integrates with. 🔴 **Star counts and metadata on this page do NOT come from the GitHub REST
 index** — `api.github.com` answers **403** to this session, scoped to the harness
 repository. `p571` flagged this header as false and it survived the pass that
@@ -23,6 +33,95 @@ older rows carry GitHub's licence determination and say so where it matters.
 **Read the licence column before the star column.** The platforms of record are
 overwhelmingly **copyleft** — the opposite of the agent layer. Two exceptions
 have now been established, and one of them is new this pass and important.
+
+## 🆕 `p574` — the accessibility and assessment-interchange layer: `911` repositories across **six axes this base has never queried**, and its grants run the OPPOSITE way from the agent layer
+
+🟢 **`derived foundations rows: **23**` added this pass**, from a single coherent
+capability layer: the tooling an institution needs to meet a **digital
+accessibility** obligation, plus the **QTI** interchange tier that carries
+assessment items between systems. 🔵 Why it matters more than its star counts
+suggest: this is the one education obligation with a **dated legal deadline** —
+`April 26, 2027` and `April 26, 2028` in the United States, and `EN 301 549`
+under the EU's Web Accessibility Directive — and see
+[`../intel/market.md`](../intel/market.md) for the regional placement.
+
+🔴 **`Title II`, `WCAG`-as-an-axis, `topic:dyslexia`, `topic:aac`,
+`topic:sign-language` and `topic:qti` appear `0` times as queries in `573` passes
+of this base's history.** The six axes hold **`911`** repositories between them.
+
+### 🟢 The permissive tier — ten rows a client engagement may actually ship
+
+| Repo | Licence (first-hand) | ★ | Region | Why it is here |
+| --- | --- | --: | --- | --- |
+| [plugin87/ux-ui-agent-skills](https://github.com/plugin87/ux-ui-agent-skills) | **MIT** (`1,073 B`; `package.json` agrees) | 3,100 | Global | DTCG tokens, 52 components, **WCAG 2.2 AA–AAA**, 138 design systems. Template-level remediation, agent-shaped. |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **Apache-2.0** — licence file `10,982 B`, `NOTICE.TXT` `14,712 B`, **both read byte-for-byte this pass** | 449 | EMEA | Institutional LMS, frentix GmbH (Switzerland). 🟢 This base carried it as *"Apache-2.0 (README badge; sidebar unnamed)"* — the badge is now a **measured grant**. |
+| [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents) | **MIT** (`1,069 B`; `package.json` agrees) | 431 | Global | Eleven review specialists enforcing **WCAG 2.2 AA** for Claude Code, GitHub Copilot and Claude Desktop. The compliance layer as agents. |
+| [sign-language-translator/sign-language-translator](https://github.com/sign-language-translator/sign-language-translator) | **Apache-2.0** (`11,364 B`; `pyproject.toml` agrees) | 380 | Global | Python framework for building custom sign-language ↔ text translators. 🟢 **The permissive alternative to the field's flagship, which is noncommercial.** |
+| [OpenDyslexic/extension](https://github.com/OpenDyslexic/extension) | 🔴 **CONFLICT — `MIT` in the licence file (`1,073 B`), `ISC` in `package.json`** | 117 | Global | OpenDyslexic typeface browser extension. Both limbs are permissive, so the conflict is a hygiene defect rather than a block — but it is a real two-channel disagreement. |
+| [dasher-project/dasher-web](https://github.com/dasher-project/dasher-web) | **MIT** (`1,109 B`; `package.json` agrees) | 55 | Global | Dasher zooming text entry — gaze and switch input in the browser. |
+| [evoluteur/braille-tools](https://github.com/evoluteur/braille-tools) | **MIT** (`1,073 B`; `package.json` agrees) | 43 | Global | Grade-1 Braille rendering for web content, JS + CSS only. |
+| [ContentSquare/readapt](https://github.com/ContentSquare/readapt) | **Apache-2.0** (`11,357 B`) | 39 | EMEA | Reading adaptation for dyslexia; published by Contentsquare (France). |
+| [mthebaud/predict4all](https://github.com/mthebaud/predict4all) | **Apache-2.0** (`11,357 B`, at **`LICENCE`**) | 23 | EMEA | Multilingual next-word prediction for AAC input (France). 🔵 The grant sits at the **British spelling** — see the instrument note below. |
+| [rolfis/qti-convert](https://github.com/rolfis/qti-convert) | **Apache-2.0** (`11,357 B`) | 22 | Global | Converts a Canvas QTI export to Word or JSON. 🟢 **The only permissively licensed QTI tool found on a 52-repository axis.** |
+
+### 🔴 The copyleft, noncommercial and manifest-only tier — thirteen rows that are link-only, arm's-length or blocked
+
+| Repo | Licence (first-hand) | ★ | Region | Why it is here |
+| --- | --- | --: | --- | --- |
+| [OptiKey/OptiKey](https://github.com/OptiKey/OptiKey) | **GPL-3.0** (`LICENSE.txt` `35,144 B`, Affero refs `3`) | 4,400 | Global | Full computer control and speech by eye gaze. The largest artefact in this layer, and copyleft. |
+| [sign/translate](https://github.com/sign/translate) | 🔴 **CC BY-NC-SA** (`LICENSE.md` `17,404 B`) — **NONCOMMERCIAL** | 797 | Global | The field's flagship real-time sign-language translation application. 🔴 **A client deliverable cannot include it.** |
+| [cboard-org/cboard](https://github.com/cboard-org/cboard) | **GPL-3.0-only** (`35,141 B`, Affero refs `3`; `package.json` agrees) | 766 | Global | Browser AAC board with text-to-speech; widely deployed in schools. |
+| [liip/TheA11yMachine](https://github.com/liip/TheA11yMachine) | 🟡 **Manifest-only — `BSD-3-Clause` in `package.json`, NO licence file on a 44-name ladder** | 642 | EMEA | Crawling accessibility auditor (Liip AG, Switzerland). A `POINTER`, not a grant: usable, but the notice obligation has no text to reproduce. |
+| [asterics/Asterics-AAC](https://github.com/asterics/Asterics-AAC) | **AGPL-3.0** (`34,523 B`, Affero refs `16`; `package.json` agrees) | 129 | EMEA | AAC app from the EU-funded AsTeRICS project (Austria). 🔴 **§13 network source-offer obligation** on any hosted deployment. |
+| [chipmates/agoracosmica](https://github.com/chipmates/agoracosmica) | **AGPL-3.0** (`34,523 B`, Affero refs `16`) | 150 | Global | Thirty historical figures, narrated and conversational — a talkable library. Same §13 exposure. |
+| [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) | **GPL-3.0-only** (`35,147 B`, Affero refs `3`; `package.json` **and** `composer.json` agree) | 117 | North America | **The Universal Design Online content Inspection Tool** — scans Canvas course content for accessibility defects and fixes them in place. University of Central Florida. 🟢 **The closest thing to an off-the-shelf Title II remediation tool in open source**, and three channels agree on its grant. |
+| [oat-sa/qti-sdk](https://github.com/oat-sa/qti-sdk) | **GPL-2.0** (`18,025 B`) | 86 | EMEA | The reference PHP QTI SDK. |
+| [mulberrysymbols/mulberry-symbols](https://github.com/mulberrysymbols/mulberry-symbols) | 🔴 **CONFLICT — `CC BY-SA` in `LICENSE.txt` (`260 B`), `ISC` in `package.json`** | 62 | Global | AAC symbol set for adults with language difficulties. 🔴 **The asset is content, so the content licence governs** — and a `260 B` grant is a pointer-length file, not a licence text. |
+| [Learnosity/learnosity-qti](https://github.com/Learnosity/learnosity-qti) | **GPL-2.0** (`18,264 B`, on the **`develop`** default branch) | 26 | Global | QTI 2.1 items ↔ Learnosity JSON. 🔵 A `main`/`master`-only probe would have missed it — `p558`'s mechanism, third instance. |
+| [Citolab/qti-components](https://github.com/Citolab/qti-components) | **GPL-3.0** (`LICENSE.md` `35,199 B`, Affero refs `3`; `package.json` says `GPLv3`) | 18 | EMEA | QTI item renderer web components (Citolab / Cito, Netherlands). 🔴 **Front-end components under GPL-3.0 cannot be embedded in a proprietary client front-end.** |
+| [oat-sa/tao-core](https://github.com/oat-sa/tao-core) | **GPL-2.0-only** (`18,025 B`; `composer.json` agrees) | — (unread) | EMEA | **TAO** — the QTI-native assessment platform, OAT SA (Luxembourg). The platform of record for standards-conformant computer-based testing. |
+| [oat-sa/extension-tao-itemqti](https://github.com/oat-sa/extension-tao-itemqti) | **GPL-2.0** (`18,025 B`) | — (unread) | EMEA | TAO's QTI item authoring and delivery extension. 🟢 **New to this base entirely** — `0` prior mentions in `573` passes. |
+
+### 🔵 The licence-band census of the whole layer — a measurement, not supply
+
+| band | addresses | share | what it means for a deliverable |
+| --- | --: | --: | --- |
+| 🟢 Permissive with a licence **file** (MIT / Apache-2.0) | **10** | `34 %` | Shippable. One of the ten (`OpenDyslexic/extension`) disagrees with its own manifest. |
+| 🔴 Copyleft (GPL-2.0 / GPL-3.0 / AGPL-3.0) | **11** | `38 %` | Arm's-length service or unmodified deployment only. Two are **AGPL** and carry a §13 network obligation. |
+| 🔴 Noncommercial or content-licensed | **2** | `7 %` | `sign/translate` (CC BY-NC-SA) and `mulberry-symbols` (CC BY-SA). In accessibility the **asset** is the product, so a content carve-out is a commercial block — `572-C`'s mechanism in a second layer. |
+| 🔴 No licence text at all | **6** | `21 %` | Four with nothing anywhere (`nenad/CSV2QTI`, [`dxli94/WLASL`](https://github.com/dxli94/WLASL) — **1.3k★**, the WACV 2020 sign-language dataset — [`ZechengLi19/Awesome-Sign-Language`](https://github.com/ZechengLi19/Awesome-Sign-Language), `Jojobeans1981/Ember-Campfire-Edition`) and two manifest-only (`liip/TheA11yMachine`, `TBosak/ability`). |
+
+🔴 **So the headline is a ratio, not a row: `10 of 29` in this layer are
+shippable, against `11` copyleft, `2` noncommercial and `6` ungranted.** 🔵 This
+is the **second** layer in two passes where the licence boundary and the
+credibility boundary run in opposite directions — `p573` found it in
+psychometrics (permissive Python, GPL R), and here the standards-conformant QTI
+implementations (**TAO**, `qti-sdk`, `qti-components`) and the one real Canvas
+remediation tool (**UDOIT**) are all copyleft, while the permissive tier is
+converters and browser extensions.
+
+### 🔴 Two defects in the grant reader itself, both reproducible, both new mechanisms
+
+1. 🔴 **A GPL version line is not canonical text.** `OptiKey/OptiKey`'s licence
+   reads **`Version 3, 29th June 2007`** — with the ordinal suffix. Every version
+   probe on this harness, including
+   [`../ingest/probe-grant.sh`](../ingest/probe-grant.sh), tests for
+   `Version 3, 29 June 2007`, so a **4.4k★** GPL-3.0 repository grades as
+   unversioned `GPL-?`. 🔵 **GPL-2.0 vs GPL-3.0 is not taxonomy** — the patent
+   grant, the Apache-2.0 compatibility direction and the §13 posture all differ.
+   The safe reading here used the **byte band** (`35,144 B` is GPL-3-sized;
+   GPL-2.0 is `~18 kB` on this sample) plus `p572-E`'s Affero-reference count.
+2. 🔴 **A licence may be Markdown, and a version probe reads the markup.**
+   `loventures/loplatform` publishes AGPL-3.0 as `LICENSE.md` with a `===`
+   underlined title and the version in emphasis — `_Version 3, 19 November 2007_`.
+   🔵 `p378`'s presentation-fold class, now reaching the **version** field rather
+   than the template field.
+
+🟢 **And `p572-E`'s prescribed discriminator reproduced cold on new specimens:**
+Affero references came in at **`3`** on every GPL body read this pass
+(`UDOIT`, `OptiKey`, `cboard`, `qti-components`) and **`16`** on every real AGPL
+(`Asterics-AAC`, `agoracosmica`, `loplatform`). 🟢 **`7 of 7`, no overlap** — the
+cheap discriminator holds on a sample it was not built from.
 
 ## Eleventh pass (`p573`, 2026-10-31) — 🟢 THE PSYCHOMETRIC MEASUREMENT LAYER SPLITS BY **LANGUAGE**, NOT BY QUALITY: the Python tier this base already shelved is permissive, the R/CRAN tier it never saw is GPL almost without exception
 

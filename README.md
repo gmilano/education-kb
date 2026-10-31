@@ -4,6 +4,140 @@ region: Global
 updated: 2026-10-31
 ---
 
+## Pass 574 — reads 2026-10-31, commit 2026-10-31 — **🟢 THE ACCESSIBILITY AND ASSESSMENT-INTERCHANGE LAYER, FOUND ON SIX AXES THIS BASE HAD NEVER QUERIED IN `573` PASSES: `911` REPOSITORIES WITH DENOMINATORS, `29` GRANTS READ BYTE-FOR-BYTE, `13` ADDRESSES NEW — AND `24 OF 25` HAD NEVER REACHED A SHELF PAGE. 🔴 THE LAYER'S LICENSING RUNS BACKWARDS: `10` SHIPPABLE AGAINST `11` COPYLEFT, `2` NONCOMMERCIAL AND `6` WITH NO LICENCE AT ALL — EVERY PLATFORM OF RECORD IS GPL. 🔴 AND `p573` COMMITTED `841` INSERTIONS WITHOUT A REGISTER ENTRY, A README SECTION, OR A CORRECT COUNT CLAIM ON EITHER PAGE IT COUNTED. 🟢 `572-E` CLOSED COLD; THREE DEAD-OR-RED GATES REPAIRED. SEVEN REGISTERED (`574-A`…`574-G`).**
+
+### 🟢 The central result: the one education obligation with calendar dates had `0` mentions in this base
+
+🔴 **`Title II` appears `0` times across `573` passes** — not in this README, not
+in the gap register, not on any shelf page. It is the ADA title covering state and
+local government, and the DOJ web rule under it obliges **WCAG 2.1 AA** on every
+public school district's, college's and university's web content, **PDFs, Word
+documents, spreadsheets and presentations included**.
+
+🔴 **And the dates moved this year**, which is why a stale read is dangerous in
+both directions: an interim final rule reported as published and effective
+**`April 20, 2026`** extended both compliance dates by a year — **`April 26,
+2027`** for public entities of population ≥ 50,000 and **`April 26, 2028`** for
+smaller entities and special districts. 🔴 **Graded `C†`: both primaries
+(`ada.gov`, `federalregister.gov`) answer `getaddrinfo ENOTFOUND` on this
+harness** (`574-E`).
+
+### 🟢 Six axes, `911` repositories, and the supply reads backwards
+
+| axis | repositories | prior queries in `573` passes |
+| --- | --: | --: |
+| `topic:accessibility` × `topic:education` | **425** | 🔴 `0` |
+| `topic:dyslexia` | **257** | 🔴 `0` |
+| `topic:aac` × `topic:accessibility` | **126** | 🔴 `0` |
+| `topic:qti` | **52** | 🔴 `0` |
+| `topic:wcag` × `topic:accessibility` | **29** | 🔴 `0` |
+| `topic:sign-language` (`stars:>80`) | **22** | 🔴 `0` |
+
+🔴 **`29` grants read byte-for-byte** (one fabricated control → `DEAD-OR-ABSENT`,
+so the channel discriminates): **`10` permissive with a licence file, `11`
+copyleft** (2 AGPL, with §13 exposure), **`2` noncommercial or content-licensed**,
+**`6` with no licence text at all.**
+
+🟢 **Every platform of record in the layer is copyleft** — `TAO` (`GPL-2.0`,
+Luxembourg), `UDOIT` (`GPL-3.0`, University of Central Florida), `Cboard`
+(`GPL-3.0`), `Citolab/qti-components` (`GPL-3.0`), `Asterics-AAC` (`AGPL-3.0`) —
+while the permissive tier is converters, browser extensions and two MIT agent
+bundles. 🔵 **Second consecutive pass with this inversion in a different layer**
+(`p573` found it in psychometrics), so the generalisation is now stateable: **in
+education AI the artefacts with institutional credibility are systematically less
+permissively licensed than the artefacts without it.** Trend 21.
+
+🔴 **The field's flagship sign-language translator, `sign/translate` (`797★`), is
+`CC BY-NC-SA`** — unusable in a paid deliverable, and that bites hardest in
+**Brazil**, where Libras is statutory (`Lei 10.436/2002`). 🟢 The Apache-2.0
+substitute is verified: `sign-language-translator/sign-language-translator`
+(`380★`, `pyproject.toml` agrees).
+
+### 🔴 The pass's second finding is about the previous pass
+
+🔴 **`p573` (commit `281ab5c`) wrote `841` insertions across `11` files and
+touched neither `README.md` nor `intel/open-gaps.md`** — so its findings existed
+only in a commit message, and `gate-register-currency` was **RED at HEAD while the
+commit went in anyway.** 🔵 The gate is advisory; that is the defect (`574-A`).
+🟢 This pass restates `p573`'s findings in the register so they are not lost.
+
+🔴 **Both of `p573`'s machine-readable count claims were wrong, by one mechanism:**
+it filed trends `19`–`20` and recipes `P-575-A`/`P-575-B` at **`###`** level, where
+the counters (`^## <n>.`, `^## …P-<n>-<X> —`) cannot see them, then wrote claims of
+`24` trends and `30` recipes against pages the gate read as `18` and `25`.
+🔴 **Its "numbering collision — trends 15–18 each used twice" is REFUTED:** every
+`##`-level number `1`–`18` occurs exactly once. 🟢 Headings promoted, claims set to
+the derived figures, **both gates GREEN.**
+
+### 🟢 Three gates repaired, and one of them had been dead for six passes
+
+🔴 **`repos/foundations.md`'s count gate was DEAD, not stale** (`574-B`): the
+`p568` rewrite left **`33` of `36`** declared keys naming absent headings and
+**`24`** live tables undeclared, and `derive-foundations.py` **exits `2` on the
+first stale key** — so for six passes it never read a table and its one line of
+output looked like a small fix. 🟢 Repaired; the page now derives **`135` shelf
+rows / `130` addresses** against a written claim.
+
+🔴 **And the field it all sits in, published here for the first time (`574-G`):
+`make hooks` reports `46/68` green, `22` RED, and `gate-promotion-ratchet` records
+the filed count FALLING from `258` (`p538`) to `191`** with no pass having made the
+explicit edit the ratchet requires. 🟢 This pass fixed three and **deliberately
+left the rest** — repairing a gate one does not understand is how a wrong figure
+becomes a green one.
+
+🔴 **And the two count derivers were in NO make target at all** —
+`grep -n "derive-counts\|derive-foundations" Makefile` returned **nothing**, so
+`make hooks` had never judged a count claim in this base's history. 🔵 `p338`'s
+class, and the reason `p573`'s wrong claims could be committed at all. 🟢 **Wired
+in as `gate-derived-counts`: `make hooks` now runs `69` gates.**
+
+🟢 **Measured before and after, so the claim is a delta and not an impression:
+`46/68` green with `22` red before this pass wrote, `48/69` green with `21` red
+after.** 🔵 The two it moved are the newly wired `gate-derived-counts` and
+**`gate-register-currency`, which went green because this pass wrote the register
+entry `p573` omitted** — the gate wants a `## 🆕 \`pN\`` header on every live
+shelf, and five of them had none. 🔴 **The other `21` are untouched and listed in
+`574-G`.**
+
+### 🟢 `572-E` closed cold, on a sample it was not built from
+
+🟢 `p572` prescribed a discriminator for the GPL-versus-AGPL grep defect: the
+licence **title line** plus the **Affero reference count**. Implemented and run
+over this layer, it answers **`3`** on every GPL body (`UDOIT`, `OptiKey`,
+`cboard`, `qti-components`) and **`16`** on every real AGPL (`Asterics-AAC`,
+`agoracosmica`, `loplatform`) — **`7 of 7`, no overlap.** 🔵 `3` is GPL-3.0 §13's
+incidental cross-reference to the Affero licence; `16` is a licence that actually
+is Affero.
+
+### 🔵 Regional placement, all four regions, with the gaps declared
+
+- 🟢 **North America** — the dated obligation above; the one off-the-shelf
+  remediation tool is NA-origin and `GPL-3.0`; the sale is a **board-adoptable
+  programme with an evidence trail**, sharpening `p572`'s school-board finding.
+- 🟢 **EMEA** — 🔴 the governing instrument is the **Web Accessibility Directive
+  `(EU) 2016/2102`** with `EN 301 549`, **not** the EAA (which reaches private
+  e-learning products from `28 June 2025`); `EN 301 549` **v4.1.1** is expected in
+  2026 pulling in **WCAG 2.2 AA**. 🟢 **`7 of 29` addresses are EMEA-origin** — the
+  strongest EMEA supply result this base has recorded.
+- 🟡 **APAC** — **India is the only education-specific instrument found**
+  (Accessibility Code for Educational Institutions, `10 Jan 2024`; AICTE circular;
+  `GIGW 3.0`); Australia moves to **WCAG 2.2 AA**; 🔴 Japan's `JIS X 8341-3`
+  alignment is **disputed between sources and published here as unresolved**;
+  🔴 nothing education-specific found for Japan, Korea, Singapore or China
+  (`574-D`), and `0 of 29` addresses place in APAC.
+- 🔴 **LATAM** — Brazil's duty (`LBI` art. 63) and standard (`ABNT NBR 17225`,
+  `11 Mar 2025`) both exist and the **regulation does not**; enforcement is
+  **prosecutorial (MPF)**. 🟢 **And a date this pass nearly published is refuted:
+  `11 March` is a commemorative day (`PL 2251/2025`), not a deadline.**
+
+🟢 **Two recipes:** `P-576-A` (LMS accessibility conformance programme whose
+deliverable is the dated per-course inventory, so it outlives the deadline) and
+`P-576-B` (QTI assessment delivery that keeps `GPL-3.0` front-end components out
+of a client product). 🔵 Evidence:
+`evidence/accessibility-qti-licence-bytes.2026-10-31-p574.tsv`.
+
+---
+
 ## Pass 572 — reads 2026-10-31, commit 2026-10-31 — **🟢 THE TEN-PASS SEARCH NIL BROKE ON A `44`-REPOSITORY AXIS — and the pass's real result is an audit of this base rather than of GitHub: `3,455` ADDRESSES SEEN ACROSS 571 PASSES, `170` EVER SHELVED, and the entire LTI 1.3 / xAPI integration layer was sitting in the discard after being re-found `70`–`123` TIMES EACH. 🟢 `569-E` AND `570-B` CLOSED, plus two intel gaps `p571` prescribed the remedy for. 🔴 AND TWO OF THIS BASE'S OWN LICENCE INSTRUMENTS ARE WRONG: the copyleft grader on `6 of 8` GPL rows, the grant ladder on a `40.8k★` ERP. FIVE REGISTERED (`572-A`…`572-E`).**
 
 ### 🟢 The central result: this base's discard pile held its most useful tier

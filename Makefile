@@ -122,7 +122,7 @@ PASS ?= p381
 # per-gate verdict, and exits non-zero if any failed -- same exit-code contract, no
 # masking.  A gate that cannot mask its siblings is the only kind whose green means
 # anything.
-HOOK_GATES = gate-offline recount gate-enumeration gate-tables gate-conflict \
+HOOK_GATES = gate-offline recount gate-derived-counts gate-enumeration gate-tables gate-conflict \
              gate-absence gate-dates gate-provenance gate-identity gate-ladder-case \
              gate-readme-channel gate-restatement gate-pin-grant gate-evidence-store \
              gate-slug-oracle gate-payload-pin gate-shelf-consistency \
@@ -867,6 +867,17 @@ enumerate: ## ACTION p275 — enumerate trees for a slug list: make enumerate SL
 
 # 🟢 p274: T37 was written as an amendment in p272 and violated by the two passes after it.
 # An amendment that is not built is not an amendment, so it is a target now.  No network.
+# 🔴 p574: the two COUNT DERIVERS were in NO make target. `ingest/derive-counts.py` and
+# `ingest/derive-foundations.py` were built after three recorded stale-count defects (p543,
+# p545 twice) and `grep -n "derive-counts\|derive-foundations" Makefile` returned NOTHING, so
+# `make hooks` has never judged a count claim. That is `p338`'s class exactly — a gate with a
+# passing suite, in no target — and it is HOW p573 committed `derived trends: 24` against a page
+# holding 18 and `derived recipes: 30` against a page holding 25. Wired in here, where it is
+# judged every pass rather than when someone remembers to run it by hand.
+gate-derived-counts: ## p574 — the count derivers, wired into hooks (they were in no target)
+	@$(PY) -I ingest/derive-counts.py . || exit 1
+	@$(PY) -I ingest/derive-foundations.py . || exit 1
+
 recount: ## ACTION p274 — T37 as code: re-derive every registered quantity from the rows
 	@$(PY) -I compose/code/p274-quantity-recount/recount.py --root . || exit 1
 	@echo "   (STALE rows above are NOT a failure signal yet — see the register's own note)"

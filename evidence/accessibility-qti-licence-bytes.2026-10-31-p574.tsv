@@ -1,0 +1,31 @@
+repo	branch	head	grant_file	bytes	title_line	affero_refs	verdict	manifest
+ucfopen/UDOIT	main	33d2133129c4	LICENSE:35147B:GNU GENERAL PUBLIC LICENSE:aff=3:GPL-3.0	-	-	-	READ	package.json=>    "license": "GPL-3.0-only",; | composer.json=>    "license": "GPL-3.0-only",;
+OpenOLAT/OpenOLAT	master	97059e00613f	LICENSE:10982B:Apache License:aff=0:Apache-2.0 | NOTICE.TXT:14712B:Apache License:aff=0:Apache-2.0	-	-	-	READ	-
+oat-sa/qti-sdk	master	30cd59194c7c	LICENSE:18025B:GNU GENERAL PUBLIC LICENSE:aff=0:GPL-2.0	-	-	-	READ	composer.json=>	"license" : [;
+oat-sa/tao-core	develop	dabc1c180e9f	LICENSE:18025B:GNU GENERAL PUBLIC LICENSE:aff=0:GPL-2.0	-	-	-	READ	composer.json=>    "license": "GPL-2.0-only",;
+oat-sa/extension-tao-itemqti	develop	eb0fbdc9ce93	LICENSE:18025B:GNU GENERAL PUBLIC LICENSE:aff=0:GPL-2.0	-	-	-	READ	composer.json=>    "license": [;
+Citolab/qti-components	main	c345a78b5d89	LICENSE.md:35199B:GNU GENERAL PUBLIC LICENSE:aff=3:GPL-3.0	-	-	-	READ	package.json=>  "license": "GPLv3",;
+Learnosity/learnosity-qti	develop	8ebee8850596	LICENSE:18264B:GNU GENERAL PUBLIC LICENSE:aff=0:GPL-2.0	-	-	-	READ	composer.json=>    "license": [;
+rolfis/qti-convert	main	9d4f95a70f67	LICENSE:11357B:Apache License:aff=0:Apache-2.0	-	-	-	READ	-
+nenad/CSV2QTI	master	b8542084560a	UNRESOLVED-on-44-names	-	-	-	READ	-
+loventures/loplatform	main	e9dd896be794	LICENSE.md:34354B:GNU Affero General Public License:aff=16:GNU Affero General Public License?AFFERO-REFS-16	-	-	-	READ	-
+evoluteur/braille-tools	master	9e619716f642	LICENSE.md:1073B:MIT License:aff=0:MIT	-	-	-	READ	package.json=>  "license": "MIT",;
+OpenDyslexic/extension	main	4b781ccdf36f	LICENSE:1073B:MIT License:aff=0:MIT	-	-	-	READ	package.json=>	"license": "ISC",;
+ContentSquare/readapt	master	c76b44a0b831	LICENSE:11357B:Apache License:aff=0:Apache-2.0	-	-	-	READ	-
+mthebaud/predict4all	master	944be0e6babf	LICENCE:11357B:Apache License:aff=0:Apache-2.0	-	-	-	READ	-
+TBosak/ability	master	86a1fa9bbe82	UNRESOLVED-on-44-names	-	-	-	READ	package.json=>  "license": "ISC",;
+Jojobeans1981/Ember-Campfire-Edition	main	066eb486146f	UNRESOLVED-on-44-names	-	-	-	READ	-
+chipmates/agoracosmica	main	955e7498bcee	LICENSE:34523B:GNU AFFERO GENERAL PUBLIC LICENSE:aff=16:AGPL-3.0	-	-	-	READ	-
+sign/translate	master	928d49ffe223	LICENSE.md:17404B:Creative Commons Attribution-NonCommercial-ShareAlike :aff=0:Creative Commons Attribution-NonCommercial-ShareAlike 	-	-	-	READ	-
+sign-language-translator/sign-language-translator	main	cca5f3a1fda4	LICENSE:11364B:Apache License:aff=0:Apache-2.0	-	-	-	READ	pyproject.toml=>license = "Apache-2.0";
+dxli94/WLASL	master	ac00e6be631c	UNRESOLVED-on-44-names	-	-	-	READ	-
+ZechengLi19/Awesome-Sign-Language	main	253da1243401	UNRESOLVED-on-44-names	-	-	-	READ	-
+Community-Access/accessibility-agents	main	7597f1a2cd31	LICENSE:1069B:MIT License:aff=0:MIT	-	-	-	READ	package.json=>  "license": "MIT",;
+plugin87/ux-ui-agent-skills	main	def84a70fadc	LICENSE:1073B:MIT License:aff=0:MIT	-	-	-	READ	package.json=>  "license": "MIT",;
+OptiKey/OptiKey	main	b0800b241784	LICENSE.txt:35144B:GNU GENERAL PUBLIC LICENSE:aff=3:GNU GENERAL PUBLIC LICENSE	-	-	-	READ	-
+cboard-org/cboard	master	30ce75b97968	LICENSE.txt:35141B:GNU GENERAL PUBLIC LICENSE:aff=3:GPL-3.0	-	-	-	READ	package.json=>  "license": "GPL-3.0-only",;
+asterics/Asterics-AAC	master	7111498a4469	LICENSE:34523B:GNU AFFERO GENERAL PUBLIC LICENSE:aff=16:AGPL-3.0	-	-	-	READ	package.json=>  "license": "AGPL-3.0",;
+liip/TheA11yMachine	master	b66654881e9a	UNRESOLVED-on-44-names	-	-	-	READ	package.json=>  "license": "BSD-3-Clause",;
+mulberrysymbols/mulberry-symbols	master	fa94a93ca1b5	LICENSE.txt:260B:Creative Commons Attribution-Share Alike License. :aff=0:Creative Commons Attribution-Share Alike License. 	-	-	-	READ	package.json=>  "license": "ISC",;
+dasher-project/dasher-web	main	6507bd386833	LICENSE:1109B:MIT License:aff=0:MIT	-	-	-	READ	package.json=>  "license": "MIT",;
+gmilano/p574-fabricated-control-does-not-exist	DEAD-OR-ABSENT	-	-	-	-	-	NO-SUCH-REPO	-

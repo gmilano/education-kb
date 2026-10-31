@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (twelfth pass · `p574`) — 🟢 `13` addresses new to a 573-pass base, from **six axes never queried in this base's history**, and `911` repositories now have a denominator
+
+🟢 **The axis table, with denominators read off GitHub's own result counts:**
+
+| axis | repositories | prior queries in `573` passes | read | new to this base |
+| --- | --: | --: | --: | --: |
+| [`topic:accessibility` × `topic:education`](https://github.com/search?q=topic%3Aaccessibility+topic%3Aeducation&type=repositories) | **425** | 🔴 `0` | 10 | 🟢 **4** |
+| [`topic:dyslexia`](https://github.com/topics/dyslexia) | **257** | 🔴 `0` | 10 | 🟢 **5** |
+| [`topic:aac` × `topic:accessibility`](https://github.com/search?q=topic%3Aaac+topic%3Aaccessibility&type=repositories) | **126** | 🔴 `0` | 10 | 🟢 **6** |
+| [`topic:qti`](https://github.com/topics/qti) | **52** | 🔴 `0` | 10 | 🟢 **8** |
+| [`topic:wcag` × `topic:accessibility`](https://github.com/search?q=topic%3Awcag+topic%3Aaccessibility&type=repositories) | **29** | 🔴 `0` | 10 | 🟢 **3** |
+| [`topic:sign-language`](https://github.com/topics/sign-language) `stars:>80` | **22** | 🔴 `0` | 10 | 🟢 **4** |
+
+🔵 Addresses recur across axes (`dyslexia` and `accessibility × education` share
+rows), so the per-axis column sums above the `13` distinct new addresses — the
+distinct figure is the one to quote.
+
+🟢 **`29` grants read byte-for-byte this pass**, plus one fabricated control that
+answered `DEAD-OR-ABSENT` — so the channel discriminates. Evidence:
+[`../evidence/accessibility-qti-licence-bytes.2026-10-31-p574.tsv`](../evidence/accessibility-qti-licence-bytes.2026-10-31-p574.tsv).
+
+🔴 **The layer's licensing runs against the agent layer's:** `10` permissive,
+`11` copyleft (2 of them AGPL), `2` noncommercial/content, `6` with no licence
+text at all. 🔴 **And `24 of 25` of these addresses had never reached a shelf page
+in this base** — `572-A`'s discovery-versus-shelving defect, recurring on a whole
+capability layer rather than on scattered rows.
+
+🟢 **Rows that move a standing gap:**
+
+- [`oat-sa/extension-tao-itemqti`](https://github.com/oat-sa/extension-tao-itemqti)
+  — **GPL-2.0**, `18,025 B` — the **TAO** QTI item extension. `0` prior mentions
+  in `573` passes, while `oat-sa/tao-core` had `5` README mentions and `34`
+  trending-log mentions and **never a shelf row**. Both are shelved now.
+- [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) — **Apache-2.0**
+  confirmed from the licence file at `10,982 B`, replacing this base's
+  *"README badge; sidebar unnamed"* cell with a measured grant.
+- [`ucfopen/UDOIT`](https://github.com/ucfopen/UDOIT) — **GPL-3.0-only**,
+  agreed across licence file, `package.json` **and** `composer.json`: three
+  channels, one answer.
+
+---
+
 ## 2026-10-31 (eleventh pass · `p573`) — 🟢 `13` new addresses, all from one layer: the **psychometric measurement tier**, and it is GPL
 
 🔴 **The four mandated `WebSearch` legs are `11` for `11` on nil.** 🟢 **Three
