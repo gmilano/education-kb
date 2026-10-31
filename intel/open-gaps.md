@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p564` — `2026-10-31` — **🟢 `563-A` CLOSED ON A COMPLETE READ (140 of 140) AND CLOSED AS A NEGATIVE — the 100 unread rows hold NOTHING above `1★`, which RETIRES the query.** 🟢 **Six addresses new to this base, grants read as payload bytes; ONE permissive.** 🔴 **The prose legs NILLED for a second consecutive pass — 16 candidates, 16 already held.** 🔴 FOUR REGISTERED (`564-A`…`564-D`).
+
+🔵 **Registration check run first, per `P605`, and published as a matrix rather than asserted.**
+🔴 **And the matrix below was CORRECTED before commit.** The first derivation reported `564-A` and
+`564-B` cited on `compose/patterns.md`; 🔴 **both were false positives** — that page's recipes are
+named **`P-564-A`** and **`P-564-B`**, and a bare `564-[AB]` match cannot tell a *recipe id* from a
+*gap citation*. 🟢 Re-derived with `P-`-prefixed matches excluded, and the corrected matrix is
+what appears here. 🔵 **This is `562-A`'s instrument class, caught in the registration check
+itself**: a pattern that reads an identifier without its qualifying prefix attributes it to the
+wrong entity. 🟢 Cost: zero, because the check ran before commit — which is what the check is for.
+
+| page | A | B | C | D |
+| --- | :-: | :-: | :-: | :-: |
+| [`../agents/top.md`](../agents/top.md#-p564--2026-10-31) | · | · | · | ✔ |
+| [`../agents/trending.md`](../agents/trending.md#-p564--2026-10-31) | · | · | · | · |
+| [`../repos/foundations.md`](../repos/foundations.md#-p564--2026-10-31) | ✔ | ✔ | · | · |
+| [`../repos/trending.md`](../repos/trending.md#-p564--2026-10-31) | ✔ | · | ✔ | · |
+| [`../verticals/solutions.md`](../verticals/solutions.md#-p564--2026-10-31) | · | · | · | ✔ |
+| [`../intel/trends.md`](../intel/trends.md#-p564--2026-10-31) | · | · | ✔ | · |
+| [`../intel/market.md`](../intel/market.md#-p564--2026-10-31) | · | · | ✔ | · |
+| [`../compose/patterns.md`](../compose/patterns.md#-p564--2026-10-31) | · | · | · | ✔ |
+
+🟢 **4 of 4 ids cited; 0 orphans.** 🟡 `agents/trending.md` cites none — it carries this pass's
+shelf delta, not its gaps.
+
+🔴 **Gate posture, seventh consecutive measurement, cause unchanged.** This base's committed
+instruments cannot be executed by the session that maintains it. 🟢 Every instrument this pass
+used was re-implemented inline; the census, the grant reads and the registration matrix were all
+derived by grep/`curl` against live sources and committed text. 🔵 **None of it is gate-attested.**
+
+### 🟢 Transports — and one scoping fact that is new, stated narrowly
+
+| transport | result this pass |
+| --- | --- |
+| `mcp__github__search_repositories` | 🟢 **WORKS** — 4 discovery queries + the 2-page census (`140` rows); returns `license.spdx_id` on `minimal_output: false` |
+| `raw.githubusercontent.com` (`curl`) | 🟢 **WORKS** — ~26 status-gated reads across 6 repos × 4 grant filenames |
+| `git ls-remote` | 🟢 **WORKS** — 4 addresses; the instrument that proved `enovation` is **empty** (`0` refs) |
+| `WebSearch` | 🟢 8 legs (4 global, 4 regional) — 🔴 **16 candidates, 0 new** |
+| `mcp__github__get_file_contents` | 🔴 **DENIED — session-scoped.** Refuses any repository outside `gmilano/*` |
+| `curl -I` → `github.com` | 🔴 **403 on all 14 URLs, uniformly** — 🟢 **a `555-F` instance, not 14 dead repos** |
+
+🟢 **The URL check was re-run on a transport that answers, and this is worth keeping.** A
+`curl -I` sweep of every address cited in this pass returned **`403` for all 14** — uniform, which
+is the signature of a refusal attached to the **command** rather than to the facts. 🔵 **`555-F`
+names exactly this**: a denial is not a stable fact about a command. 🟢 Re-verified with
+`git ls-remote`: **14 of 14 exist**, 13 carrying refs — and `enovation/moodle-local_mcp_helper`
+answering with **`0` refs**, independently reconfirming the `EMPTY` verdict from a second
+transport. 🔴 **Had the `403` been read as a 404, this pass would have withdrawn fourteen true
+addresses.**
+
+🔴 **What that scoping fact is NOT.** It is **not** a claim that the platform API is a new
+channel — `p563` drafted that claim and **retracted it correctly**, because the API is in
+`agents/top.md`'s channel table and `p529` took census figures from it. 🟢 **The narrow, true
+statement:** on this transport, platform **metadata** (search, `spdx_id`, stars, refs) is readable
+for *any* public repository, while platform **file contents** are readable only for repositories
+attached to the session. 🔵 **Consequence for method:** grant *payloads* must come from
+`raw.githubusercontent.com`, which is also what `562-A`'s gate wants — a payload, not a field.
+🟢 This is consistent with, and does not contradict, the standing `curl → api.github.com` **403**.
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+| --- | --- |
+| 🟢 **`563-A`** | **CLOSED on a complete read, and closed as a NEGATIVE.** It recorded `total_count: 140`, `p563`'s top-40 read, and *"~100 unread."* 🟢 **All 140 read this pass**, `total_count` reproducing `140` exactly. Distribution: **`7`** rows at `≥9★`, **`25`** at `≥2★`, **`43`** at `≥1★`, 🔴 **`97` (`69.3 %`) at `0★`** — and 🔴 **ZERO rows above `1★`** among the 100 `p563` had not read. 🔵 **The whole `≥2★` head sat inside `p563`'s top 40.** 🟢 **Retirement, not just a closure:** no future pass should spend a leg re-reading this query by stars. 🟢 **But the tail was not valueless** — it yielded **6 addresses new to this base** and the vendor-layer finding below |
+| 🟢 **`561-D` reinforced** | An MIT payload measured at **`1 063 B`**, **below** this base's recorded `1 064`–`1 069 B` spread, on a licence unambiguous from its first line. 🔵 The variance is the copyright line (`Copyright (c) 2026 12dora`). 🔴 **Not a correction to any pin** — it is independent confirmation of the adopted rule: *publish the folded digest, never the folded length* |
+| 🟡 **`p563`'s duplicate caveat instantiated** | `p563` cautioned that name-matching includes near-duplicates. 🟢 Instances now **named**: `moodle-local_mcpconnector` under **two unrelated vendors**; `moodle-local_placecom_mcp` under two owners; `1alexandrer` holding **4 of the 140**. 🔴 Carried forward as `564-A` rather than closed |
+
+### 🔴 Registered this pass
+
+| gap | finding | closure condition |
+| --- | --- | --- |
+| 🔴 **`564-A`** | **`140` name-matches are not `140` distinct codebases, and the duplicates are now measured.** `moodle-local_mcpconnector` appears under `Teci-AI` **and** `studiolxd` (unrelated vendors, same plugin name); `moodle-local_placecom_mcp` under `almabay` **and** `RohanParmar22`; `1alexandrer` holds `moodle-mcp`, `-2`, `-test`, `-v102` — **4 of the 140** | 🟢 A **de-duplicated** count of the field, by canonical plugin name and owner, so the `140` (and the looser `222` from `p529`) stop being read as codebase counts. **Not built** |
+| 🔴 **`564-B`** | **The four `NO-GRANT`/`EMPTY` verdicts were graded by file *absence*, not by reading a grant.** Four filenames probed per repo (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`), each `404`. 🔴 A licence declared in a **manifest field** — `package.json`, `composer.json`, `pyproject.toml`, or a Moodle `version.php` header — would not be caught | 🟢 Re-probe the four addresses for manifest-declared licences before any of them is cited as unlicensed in an engagement. **Not built** |
+| 🔴 **`564-C`** | **North America's absence from the institution census is measured on name/description text only.** `0` US or Canadian institutions across `140` rows, against APAC `7` and EMEA `10`. 🔴 A US institution naming itself differently, or building against **Canvas** rather than Moodle, would be invisible to this query | 🟢 A per-institution leg against US/Canadian university **Canvas and Moodle** deployments, which would also test whether the absence is real or an artefact of platform mix. 🔵 `canvas-mcp in:name` is already a shape this base has run |
+| 🔴 **`564-D`** | **A Moodle Partner (`enovation`) has reserved the plugin name `local_mcp_helper` and pushed nothing** — `0` refs, `created == updated 2026-06-02`. 🔵 The partner layer is staking the integration surface ahead of shipping, and it is invisible to every popularity-ranked instrument on this base | 🟢 Read **Moodle's own plugin directory** for `local_mcp_helper` and the `Teci`/`studiolxd`/`almabay` connectors, to establish what is actually shipped versus named on GitHub. 🔵 **Same instrument as `563-C`** — resolve the two together |
+
 ## 🆕 `p562` — `2026-10-31` — **🟢 `561-D` AND `561-F` CLOSED, AND `561-F` CLOSED WITH THE DENOMINATOR IT WAS MISSING: **91 in-family rows**, of which 🔴 **38 (41.8 %) are canonically verbatim while a raw-byte gate calls them modified.** 🟢 `p561`'s PINS REPRODUCE **14 OF 14** FROM AN INDEPENDENT RE-IMPLEMENTATION. 🔴 **AND THIS PASS RETRACTS TWELVE OF ITS OWN FINDINGS IN FULL — it re-committed `p455`'s adjacency error, twice, in one hour.** 🔴 EIGHT REGISTERED (`562-A`…`562-H`).**
 
 🔵 **Registration check run first, per `P605`, and published as a matrix rather than asserted.**

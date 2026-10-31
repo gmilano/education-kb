@@ -4,6 +4,111 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p564` — `2026-10-31` — **🟢 `563-A` CLOSED BY MEASUREMENT: all 140 rows of `moodle mcp in:name` read, and the 100 `p563` left unread contain ZERO repositories above `1★`.** 🔵 **But the tail is not worthless — it is where the *vendor* and *institution* layers live, and star-ranked discovery misses both structurally because both ship at `0★`.** 🟢 **Six addresses new to this base; one permissive.**
+
+🔴 **The eight prescribed discovery legs are exhausted for a SECOND consecutive pass — and this
+time the candidate list is named rather than asserted.** `p563` wrote that the generic legs
+*"returned FOURTEEN candidates and ZERO new addresses."* This pass ran all eight (4 global,
+4 regional) and returned **sixteen** candidates. 🔴 **All sixteen were already on this base**,
+checked by literal grep before any of them was drafted:
+
+| candidate returned by the prose legs | already held in |
+| --- | --- |
+| `TEQSA` higher-ed genAI action plans (APAC) | `agents/top.md`, `intel/market.md`, `intel/trends.md` |
+| NY `A 9190` 9th-grade restriction | `agents/top.md`, `intel/market.md`, `compose/patterns.md` |
+| NC `SB 1006` — `$10M` Khanmigo earmark | `intel/market.md`, `intel/trends.md`, `intel/open-gaps.md` |
+| Colombia `CONPES 4144` | `intel/market.md`, `compose/patterns.md`, `README.md` |
+| the `134 bills / 31 states` count | `intel/market.md`, `intel/trends.md` (and `560-G`'s dispute) |
+| `K-12 AI Literacy and Readiness Act of 2026` | `intel/market.md`, `agents/trending.md` |
+| US DoE final supplemental priority | `intel/market.md`, `intel/trends.md` |
+| Digital Education Council `45 398`-response survey | `intel/market.md`, `intel/trends.md` |
+| Dubai `KHDA` private-school guidance | `verticals/solutions.md`, `intel/market.md` |
+| Latin American AI Index 2026 | `intel/open-gaps.md` |
+| Vietnam's six high-risk sectors | held (`Vietnam` on 72 files) |
+| Korea Basic Act + textbook reversal | held (`Basic Act` on 42 files) |
+| `MD`/`ID`/`OK`/`VA` district-policy laws | held |
+| China + UAE compulsory curricula | held |
+| DC `OSSE` grading/IEP prohibitions | `intel/market.md`, `intel/trends.md` |
+| `IESALC` institutional study | held (53 files) |
+
+🟢 **Recorded as an informed gap, not as coverage.** 🔵 The reading this base can defend: the
+prose-demand channel is **saturated** for this industry at this cadence, and `p563`'s conclusion
+generalises — two independent passes, sixteen and fourteen candidates, zero new addresses between
+them.
+
+### 🟢 `Gap 563-A` — CLOSED, and closed as a negative
+
+`563-A` recorded that `moodle mcp in:name` answers `total_count: 140`, that `p563` read **the top
+40 by stars**, and that **~100 were unread**. 🟢 **This pass read all 140** (two pages of 100 and
+40, sorted by stars, `mcp__github__search_repositories`).
+
+| measure, `2026-10-31`, platform | value |
+| --- | --- |
+| `total_count` for `moodle mcp in:name` | 🟢 **140** — reproduces `p563` exactly |
+| rows read this pass | 🟢 **140 of 140** |
+| rows at **`≥9★`** | 🔴 **7** |
+| rows at **`≥2★`** | 🔴 **25** |
+| rows at **`≥1★`** | 🔴 **43** |
+| rows at **`0★`** | 🔴 **97 of 140 (69.3 %)** |
+| rows **above `1★`** among the 100 `p563` had not read | 🔴 **ZERO** |
+
+🟢 **So the whole `≥2★` head sat inside `p563`'s top 40, and the unread remainder was tail.**
+🔵 **Consequence, and it is a retirement:** re-reading this query by stars is finished work —
+no future pass should spend a leg on it. 🔴 **What that does NOT license** is the inference that
+the tail is empty of value; the next two sections measure the opposite.
+
+### 🔵 The instrument finding — why a star-ranked read cannot see the vendor layer
+
+🟢 **Four vendor-maintained Moodle-MCP artefacts sit in the `0★` tail**, and this base already
+holds all four (`Teci-AI` paired server **and** plugin, `studiolxd`'s SLXD connector,
+`almabay`'s `placecom`, and `eledia`'s — 🔴 **archived**, its description stating it is *"now part
+of the eLeDia.ai Suite free"*, an open→commercial migration). 🔵 **They are invisible to a
+star-ranked sweep by construction**: a Moodle Partner shipping a plugin to paying customers has
+no reason to accumulate stars. 🟢 **Measured consequence:** `p563`'s top-40 read found 16 new
+addresses; this pass's full read found **6 more** that a star cut would never reach.
+
+### 🟢 Six addresses new to this base — grants read first-hand from payload bytes
+
+🔵 **Placed by *stated institution*, never by a personal name** — `p545`'s rule, applied. Grants
+read from `raw.githubusercontent.com` (status-gated, 4 candidate filenames each), not from the
+platform's `license` field, which is what `562-A`'s gate requires of a row-level verdict.
+
+| Repo | Institution stated | Region | Grant — first-hand | bytes · `sha256`/12 |
+| --- | --- | :-: | --- | --- |
+| [`12dora/waseda-moodle-mcp`](https://github.com/12dora/waseda-moodle-mcp) | Waseda University, Japan | APAC | 🟢 **MIT** — `Copyright (c) 2026 12dora` | `1 063 B` · `d3dc53f9558a` |
+| [`AmritSanjeev2007/UoB-moodle-mcp`](https://github.com/AmritSanjeev2007/UoB-moodle-mcp) | University of Bath, UK | EMEA | 🔴 **GPL-3.0** — stock FSF text, no author copyright asserted | `35 149 B` · `3972dc9744f6` |
+| [`Sedahoo/iiit-moodle-mcp`](https://github.com/Sedahoo/iiit-moodle-mcp) | IIIT Hyderabad, India | APAC | 🔴 **NO-GRANT** — code present (2 refs, README `200`) | — |
+| [`AlpETuna/MonashMoodleMCP`](https://github.com/AlpETuna/MonashMoodleMCP) | Monash University, Australia | APAC | 🔴 **NO-GRANT** — code present (2 refs, README `200`) | — |
+| [`Punyo/NITechMoodleMCPServer`](https://github.com/Punyo/NITechMoodleMCPServer) | Nagoya Inst. of Technology, Japan | APAC | 🔴 **NO-GRANT** — code present (2 refs, no README) | — |
+| [`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper) | Enovation — a **Moodle Partner** | EMEA | 🔴 **EMPTY — `0` refs** | — |
+
+🔴 **One of six is permissive.** 🟢 That is the number a Globant engagement should carry, not the
+six.
+
+### 🔴 The Enovation row is not an unlicensed repository — it is a *reserved name*, and the distinction matters
+
+🟢 **`git ls-remote` returns zero refs**, all four grant filenames `404`, `README.md` `404`, and
+`created_at == updated_at == 2026-06-02T08:48:54Z`. 🔵 **A Moodle Partner has staked the plugin
+name `local_mcp_helper` and pushed nothing.** 🔴 **Graded `EMPTY`, never `NO-GRANT`** — conflating
+the two would put a non-existent codebase on the shelf as if it carried a licence question.
+🔵 For an engagement the signal is the opposite of a dead end: **the partner layer is reserving
+Moodle MCP plugin names ahead of shipping**, which is where a client's incumbent integrator
+already sits. Registered as `564-D`.
+
+### 🟢 `DeepTutor` — the shelf head, re-read, and it drifted *within the same day*
+
+| | `p563` (`2026-10-31`) | 🟢 this pass (`2026-10-31`) |
+| --- | --- | --- |
+| ★ | `51 771` | 🟢 **`51 837`** (**+66**, same calendar day) |
+| Grant | Apache-2.0 | 🟢 **Apache-2.0** — `spdx_id`, platform field, reproduced |
+| Forks · open issues | — | 🟢 `6 355` · `284` |
+| Created · pushed | — | 🟢 `2025-12-28` · `2026-10-30` |
+
+🔴 **This is not a correction to `p563`.** Both figures were read from the platform on the same
+date; the delta is intraday drift. 🔵 **The rule it supports:** a star count on this base is
+accurate to a *day*, not to a figure, and two passes disagreeing by tens on one date are both
+right.
+
 ## 🆕 `p563` — `2026-10-31` — **🔴 THE GENERIC DISCOVERY LEGS ARE EXHAUSTED: the eight prescribed queries and two star-ranked GitHub sweeps returned FOURTEEN candidates and ZERO new addresses.** 🟢 **The pass's supply came from the two instruments `p562` named instead — a per-country leg (EMEA's African half) and a platform-API census (16 new Moodle addresses).**
 
 🔴 **This pass's first draft claimed the GitHub REST API was a new channel and that the Moodle

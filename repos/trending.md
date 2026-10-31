@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p564` — `2026-10-31`
+
+> **🟢 The `moodle mcp in:name` census is COMPLETE — 140 of 140 read.** `563-A` closed as a
+> negative, plus **6 addresses new to this base**. Append-only: history below is untouched.
+
+### 🟢 The full distribution — the figure `563-A` asked for
+
+🟢 `total_count: 140`, reproducing `p563` exactly. 🟢 **All 140 read this pass** (pages of 100 and
+40, sorted by stars); `p563` had read the top 40.
+
+| band | rows | share |
+| --- | :-: | :-: |
+| `≥9★` | 🔴 **7** | 5.0 % |
+| `≥2★` | 🔴 **25** | 17.9 % |
+| `≥1★` | 🔴 **43** | 30.7 % |
+| `0★` | 🔴 **97** | **69.3 %** |
+| **above `1★` among `p563`'s 100 unread** | 🔴 **0** | **0 %** |
+
+🟢 **The head is `7` repositories.** 🔴 **The remaining 133 are a long tail of single-author
+university artefacts**, which is `p529`/`p538`'s finding reproduced on a complete read rather
+than a top-40 sample.
+
+### 🔴 `564-A` — 140 name-matches are NOT 140 distinct codebases, and here are the measured duplicates
+
+`p563` cautioned that *"name-matching includes forks and near-duplicates."* 🟢 **Instances, now
+named:**
+
+| collision | owners | what it is |
+| --- | --- | --- |
+| `moodle-local_mcpconnector` | `Teci-AI` **and** `studiolxd` | 🔴 **two unrelated vendors, same plugin name** |
+| `moodle-local_placecom_mcp` | `almabay` **and** `RohanParmar22` | 🔴 same plugin, two owners |
+| `moodle-mcp` ×4 | `1alexandrer` alone | 🔴 `moodle-mcp`, `-2`, `-test`, `-v102` — one author, **4 of the 140** |
+
+🔵 So the `140` is an upper bound on distinct codebases, and the `222` carried since `p529` is a
+looser one still. 🔴 **Neither figure counts distinct codebases**, and `p563` said so — this pass
+supplies the instances rather than the caveat. Closure: a de-duplicated count.
+
+### 🟢 Where the tail is, geographically — supply placed by stated institution
+
+🔵 The institution-specific clones are a **map of where agentic LMS access is being built**, and
+it is the one discovery surface on this base that places *supply* rather than demand.
+
+| Region | Institutions named across the 140 |
+| :-: | --- |
+| **APAC** | 🟢 Waseda · Nagoya Inst. of Technology · Tokyo Univ. of Technology · NCCU (Taiwan) · UNNC Ningbo ×2 · IIIT Hyderabad · Monash |
+| **EMEA** | 🟢 Univ. of Bath · ASE Bucharest · ONPU Odesa · MIREA · FH JOANNEUM · ETH Zürich · NAK · Zewail City (Egypt) · a Swiss target · one multi-target covering UCL/KCL/LSE/Cambridge/Warwick |
+| **LATAM** | 🟢 UTN (Argentina) · Unisinos (Brazil) · CETEC |
+| **North America** | 🔴 **NONE — zero US or Canadian institutions among 140 rows** |
+
+🔴 **North America's absence is written down because an unprobed region looks exactly like a
+covered one.** 🟡 Scope: measured on repository **name and description text only**, so a US
+institution naming itself differently would be missed → `564-C`.
+
+### 🔵 The vendor layer, and why stars cannot see it
+
+🟢 Four vendor artefacts sit at `0★` (`Teci-AI` server **+** plugin, `studiolxd`/SLXD, `almabay`,
+and `eledia`'s — 🔴 **archived into the commercial** *"eLeDia.ai Suite free"*). All four were
+already held. 🔵 **A partner shipping to paying customers accrues no stars**, so a star-ranked
+sweep misses the commercial layer by construction — which is the reason `p563`'s top-40 read left
+six addresses on the table.
+
 ## 🆕 `p563` — `2026-10-31`
 
 > **🟢 16 Moodle-bridge addresses new to this base.** Append-only: history below is untouched.

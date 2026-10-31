@@ -4,6 +4,88 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p564` — `2026-10-31` — **🔴 THE PROSE-DEMAND CHANNEL IS SATURATED: eight legs, SIXTEEN candidates, ZERO new — second consecutive pass, and this time the candidate list is named.** 🟢 **Supply answered instead: a complete 140-row census that places institutions by region — and NORTH AMERICA IS ABSENT FROM IT.**
+
+🔴 **Named rather than asserted.** `p563` reported fourteen candidates and zero new addresses from
+the generic legs. This pass ran all eight (4 global, 4 regional), returned **sixteen**, and
+🔴 **every one was already on this base** — the per-candidate table with holding files is in
+[`../agents/top.md`](../agents/top.md#-p564--2026-10-31). 🔵 **Two independent passes agreeing
+makes this a property of the channel, not of a pass**: for this industry at this cadence, prose
+demand is saturated.
+
+🟢 **So this pass spent its budget where `p561`–`p563` said the marginal leg was worth more — in
+*supply*** — and the instrument was a complete platform census rather than a star-ranked sample.
+
+### 🟢 The one demand figure re-read, and it drifted within the day
+
+🟢 `HKUDS/DeepTutor` — **`51 837★`** (`p563`: `51 771`, same date, **+66**), `Apache-2.0`
+reproduced from the platform `spdx_id`, `6 355` forks, `284` open issues. 🔴 **Not a correction**:
+same channel, same day, intraday drift. 🔵 Star counts on this base are accurate to a day.
+
+## Opportunities by region
+
+🔵 **Placement rule applied throughout:** region comes from a **stated institution**, never from a
+personal name or a language hint (`p545`). Rows that cannot be placed that way are left
+**UNPLACED** rather than guessed.
+
+### North America
+
+🔴 **A measured absence, and it is the headline for this region.** Across all **140** rows of the
+`moodle mcp in:name` field, **zero** name a US or Canadian institution — while APAC names seven
+and EMEA ten. 🔵 **The reading this base can defend** is not that North American universities
+lack agentic LMS access, but that **they are not building it in public under this name**, which
+is consistent with the region's demand-side picture already on this base (district AI policy
+mandates, procurement of commercial tutors such as the `$10M` Khanmigo earmark). 🟢 **Opportunity:
+the build-vs-buy gap is widest here** — the region procures finished tutors while other regions
+publish integration code, so a studio engagement in North America starts with **no local open
+precedent to reuse** and should price integration work accordingly rather than assuming a
+community artefact exists. 🟡 Measured on name/description text only → `564-C`.
+
+### EMEA
+
+🟢 **Ten institutions named**, the densest *regulatory* and now second-densest *supply* region:
+Univ. of Bath, ASE Bucharest, ONPU Odesa, MIREA, FH JOANNEUM, ETH Zürich, NAK, Zewail City
+(Egypt), a Swiss target, and one multi-target covering UCL/KCL/LSE/Cambridge/Warwick.
+🔴 **But the EMEA grant state is the worst of any region**: its one graded head,
+`AmritSanjeev2007/UoB-moodle-mcp`, is **GPL-3.0** (`35 149 B`, `3972dc9744f6`), and its one
+vendor entrant, **Enovation**, is an **empty name reservation**.
+🟢 **Opportunity:** the **partner layer is staking Moodle MCP plugin names before shipping**, so
+an EMEA engagement should expect the client's existing Moodle Partner to be the incumbent on the
+integration surface — and should propose the `Teci-AI` fork-vs-call shape (GPL plugin + separately
+licensed server) that keeps Globant's deliverable clear of the GPL.
+🟡 Zewail City (Egypt) sits at `0★`, so it **confirms rather than refutes** `p563`'s finding that
+there is no African-origin open-source education agent above trivial stars.
+
+### APAC
+
+🟢 **Seven institutions named — the densest supply region on this base**: Waseda, Nagoya Inst. of
+Technology, Tokyo Univ. of Technology, NCCU (Taiwan), UNNC Ningbo ×2, IIIT Hyderabad, Monash.
+🟢 **And it holds the only permissive grant found this pass** —
+`12dora/waseda-moodle-mcp`, **MIT**, `1 063 B`/`d3dc53f9558a`.
+🔴 **Three of four APAC addresses carry NO grant at all** (IIIT Hyderabad, Monash, Nagoya), with
+code present and no licence file — unusable as-is however good the code.
+🟢 **Opportunity:** APAC is where a studio can actually *reuse* rather than rebuild — one MIT
+reference implementation plus six sibling institutions with the same problem. 🔵 The concrete
+move is to consolidate them, and the **unlicensed three are a relicensing conversation, not a
+dead end**: single-author university repos whose authors are identifiable and reachable.
+
+### LATAM
+
+🟢 **Three institutions named — UTN (Argentina), Unisinos (Brazil), CETEC** — all already held by
+this base, and 🔴 **nothing new arrived this pass**. 🟢 The standing position is unchanged from
+`558-H`'s correction: the *"no LATAM-origin supply"* claim remains **refuted** (12 addresses,
+Brazil 8, Argentina 4), but **no new LATAM-origin permissive education repository surfaced**.
+🔴 **This is the third consecutive pass in which LATAM supply did not grow.**
+🔵 **A correction to this base's own standing directive.** `p561`–`p563` concluded that *"the
+marginal leg is worth more in LATAM and more in supply than in demand anywhere."* 🟢 The
+**supply** half held and paid this pass — but it paid in **APAC and EMEA**, not LATAM. 🔴 So the
+LATAM half of that directive has now failed to pay on three consecutive attempts, and the honest
+restatement is: **supply is the right axis; LATAM is not where supply is currently being
+created.** 🟢 **Opportunity, unchanged and still real:** `i-educar` and the Brazilian/Argentine
+cluster remain the region's reusable base, and LATAM's instrument supply is still being created
+(UNESCO's LAC Observatory, April 2026; IESALC 2026) rather than indexed — but a studio should
+**not** expect a LATAM Moodle-MCP artefact to exist to build on.
+
 ## 🆕 `p563` — `2026-10-31` — **🟢 EMEA'S AFRICAN HALF IS NO LONGER UNPROBED: the per-country leg `p562` named as the right instrument was run, and it paid — named deployments, one peer-reviewed, all commercial.** 🔴 **And the code leg NILLED: there is no African-origin open-source education agent above trivial stars.**
 
 🟢 **`p562` wrote that EMEA *"is not an African blank plus a European shelf — it is a European

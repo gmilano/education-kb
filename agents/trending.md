@@ -4,6 +4,42 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p564` — `2026-10-31`
+
+> **🟢 Six addresses new to this base, one permissive — and a retirement.** `563-A` closes as a
+> negative: the `moodle mcp in:name` tail holds **nothing above `1★`**. Append-only; history
+> below is untouched.
+
+### 🟢 New to the shelf this pass — institution-placed, grants read from payload bytes
+
+| Repo | Institution stated | Region | Grant (first-hand) | ★ | Created |
+| --- | --- | :-: | --- | :-: | --- |
+| [`12dora/waseda-moodle-mcp`](https://github.com/12dora/waseda-moodle-mcp) | Waseda University, Japan | APAC | 🟢 **MIT** `1 063 B`/`d3dc53f9558a` | `0` | `2026-10-14` |
+| [`AmritSanjeev2007/UoB-moodle-mcp`](https://github.com/AmritSanjeev2007/UoB-moodle-mcp) | University of Bath, UK | EMEA | 🔴 **GPL-3.0** `35 149 B`/`3972dc9744f6` | `0` | `2026-10-15` |
+| [`Sedahoo/iiit-moodle-mcp`](https://github.com/Sedahoo/iiit-moodle-mcp) | IIIT Hyderabad, India | APAC | 🔴 **NO-GRANT** (code, 2 refs) | `0` | `2026-10-19` |
+| [`AlpETuna/MonashMoodleMCP`](https://github.com/AlpETuna/MonashMoodleMCP) | Monash University, Australia | APAC | 🔴 **NO-GRANT** (code, 2 refs) | `0` | `2025-12-07` |
+| [`Punyo/NITechMoodleMCPServer`](https://github.com/Punyo/NITechMoodleMCPServer) | Nagoya Inst. of Technology, Japan | APAC | 🔴 **NO-GRANT** (code, 2 refs) | `0` | `2025-07-07` |
+| [`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper) | Enovation — **Moodle Partner** | EMEA | 🔴 **EMPTY — `0` refs**, name reserved | `0` | `2026-06-02` |
+
+🔴 **All six at `0★`.** 🔵 That is the point, not a disclaimer: they were unreachable by a
+star-ranked read, and `p563`'s top-40 cut is exactly why this base had none of them.
+
+### 🟢 `DeepTutor`, re-read from the platform — and it moved intraday
+
+| Repo | Grant (`spdx_id`, platform) | ★ (`2026-10-31`) | Forks | Open issues | Pushed |
+| --- | --- | --- | --- | --- | --- |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 `Apache-2.0` | 🟢 **`51 837`** (`p563`: `51 771`, **+66** same day) | `6 355` | `284` | `2026-10-30` |
+
+🔴 **Not a correction.** Same date, same channel, +66 — intraday drift. 🔵 Star counts on this
+base are accurate to a day, not to a figure.
+
+### 🔴 The generic legs NILLED again — second consecutive pass
+
+🟢 Eight legs run (4 global, 4 regional). **16 candidates, 16 already held**, verified by grep
+before drafting — the per-candidate table is in
+[`../agents/top.md`](../agents/top.md#-p564--2026-10-31). 🔴 **Zero new agents from prose.**
+🔵 Two independent passes now agree, so this is a property of the channel, not of a pass.
+
 ## 🆕 `p563` — `2026-10-31`
 
 > **🟢 New channel, not new agents.** The discovery legs returned **zero** new shelf-grade

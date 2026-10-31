@@ -4,6 +4,57 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p564` — `2026-10-31` — **🔵 THE MOODLE PARTNER LAYER HAS ENTERED THE MCP FIELD, AND IT IS INVISIBLE TO EVERY INSTRUMENT THIS BASE RANKS BY POPULARITY.** 🟢 One partner has reserved a plugin name and shipped nothing.
+
+Moodle remains the sector's largest LMS and the single most likely platform under a Globant
+education engagement. 🟢 **This pass read the `moodle mcp in:name` field to completion — 140 of
+140 rows** ([census in `../repos/foundations.md`](../repos/foundations.md#-p564--2026-10-31)) —
+and the finding that matters for an engagement is **who** is building, not how many.
+
+### 🔵 Three populations, one query, and they do not mix
+
+| Population | Where it sits | Stars | What it means for an engagement |
+| --- | --- | :-: | --- |
+| **Open heads** | top `7` rows | 🟢 `9`–`54★` | 🟢 The only rows a star-ranked sweep sees; this base holds all of them |
+| **Institution clones** | the long tail | 🔴 `0`–`2★` | 🔵 Single-university artefacts — **not reusable**, but they map where demand is real |
+| **Vendor / Partner plugins** | the `0★` tail | 🔴 `0★` | 🔴 **The incumbent integrator a client already pays** — and structurally invisible |
+
+🔴 **The third row is the one that changes a recommendation.** A Moodle Partner shipping a plugin
+to paying customers accrues no stars, so every popularity-ranked instrument on this base misses
+the commercial layer **by construction** — not by oversight.
+
+### 🟢 The partner artefacts, named
+
+| Artefact | Actor | State |
+| --- | --- | --- |
+| [`Teci-AI/moodle-mcp-connector`](https://github.com/Teci-AI/moodle-mcp-connector) **+** [`moodle-local_mcpconnector`](https://github.com/Teci-AI/moodle-local_mcpconnector) | Teci | 🟢 **A paired server + Moodle plugin** — the correct shape (see the fork-vs-call rule below) |
+| [`studiolxd/moodle-local_mcpconnector`](https://github.com/studiolxd/moodle-local_mcpconnector) | Studio LXD | 🟢 Connector into the proprietary `lmsmcp` / SLXD suite |
+| [`almabay/moodle-local_placecom_mcp`](https://github.com/almabay/moodle-local_placecom_mcp) | Almabay | 🟡 No description; grant unread |
+| [`eledia/moodle-webservice_eledia_mcp`](https://github.com/eledia/moodle-webservice_eledia_mcp) | eLeDia | 🔴 **ARCHIVED** — *"now part of the eLeDia.ai Suite free"*: **open → commercial** |
+| [`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper) | **Enovation** (Moodle Partner) | 🔴 **EMPTY — `0` refs**, `created == updated 2026-06-02` |
+
+### 🔴 The Enovation row: a reserved name, not an abandoned codebase
+
+🟢 `git ls-remote` returns **zero refs**; `README.md` and all four grant filenames `404`.
+🔵 **A Moodle Partner has staked `local_mcp_helper` and pushed nothing.** 🔴 **Graded `EMPTY`,
+never `NO-GRANT`** — the two are different facts and conflating them would shelve a non-existent
+codebase as a licence question.
+
+🔵 **What a studio should take from it.** The partner layer is **reserving Moodle MCP plugin
+names ahead of shipping**. In an engagement where the client already has a Moodle Partner, the
+integration surface is being staked out *now*, and the open rows are not the competition — the
+partner is. 🟡 Whether Enovation's helper ships through **Moodle's plugin directory** instead of
+GitHub is unresolved → `564-D`, and it is the same question as `563-C`.
+
+### 🟢 The fork-vs-call rule, unchanged and reinforced
+
+🔵 `p563` established — against `p383` — that a Moodle extension's licence obligation turns on
+**FORK-vs-CALL**, not in-tree-vs-out-of-tree. 🟢 **The `Teci-AI` pair is that rule's textbook
+shape**: a **GPL plugin** inside Moodle exposing web-service functions, plus a **separately
+licensed MCP server** that *calls* them over HTTP. 🟢 The GPL reaches the plugin; it does not
+reach the server. 🔵 **This is the shape to propose**, and a partner has now independently
+arrived at it.
+
 ## 🆕 `p563` — `2026-10-31` — **🔵 THE LICENCE OF A MOODLE EXTENSION IS DECIDED BY WHERE IT RUNS, NOT BY WHO WRITES IT — and that governs every Moodle engagement on this shelf.**
 
 Moodle is the sector's largest LMS and the single most likely platform under a Globant education

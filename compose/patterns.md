@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p564` — `2026-10-31` — two recipes, both from this pass's complete first-hand census
+
+### 🟢 `P-564-A` — **Consolidate the APAC university Moodle bridges onto the one permissive base** (6–8 weeks)
+
+🔵 **Why APAC and not LATAM.** This pass's census is the first on this base to place *supply* by
+region, and it says plainly where reusable code is: **APAC 7 institutions, EMEA 10, LATAM 3,
+North America 0** — and APAC holds the **only permissive grant found this pass**. 🔴 `p561`–`p563`
+directed the marginal supply leg at LATAM; it has not paid for three passes
+([restated in `../intel/trends.md`](../intel/trends.md#-p564--2026-10-31)). 🟢 This recipe follows
+the measurement instead of the directive.
+
+**The base to start from — one row, because only one is buildable:**
+
+| Role | Repo | Grant (payload, first-hand) |
+| --- | --- | --- |
+| 🟢 **Reference implementation** | [`12dora/waseda-moodle-mcp`](https://github.com/12dora/waseda-moodle-mcp) — Waseda, Japan | 🟢 **MIT**, `1 063 B` / `d3dc53f9558a` |
+
+**The siblings it generalises to — same problem, three different grant states:**
+
+| Repo | Institution | Grant state | What you must do about it |
+| --- | --- | --- | --- |
+| [`Sedahoo/iiit-moodle-mcp`](https://github.com/Sedahoo/iiit-moodle-mcp) | IIIT Hyderabad | 🔴 **NO-GRANT** | 🔵 Relicensing ask — single author, reachable |
+| [`AlpETuna/MonashMoodleMCP`](https://github.com/AlpETuna/MonashMoodleMCP) | Monash | 🔴 **NO-GRANT** | 🔵 Relicensing ask |
+| [`Punyo/NITechMoodleMCPServer`](https://github.com/Punyo/NITechMoodleMCPServer) | Nagoya Inst. of Tech. | 🔴 **NO-GRANT** (Kotlin) | 🟡 Read for design only — **do not vendor** |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | — | 🟡 `27★`, Rust, held by this base | 🟢 Second opinion on tool surface |
+
+**Wiring, concretely.**
+1. 🟢 **Fork `12dora/waseda-moodle-mcp`** (MIT — the only row that permits this without a
+   conversation). Keep its `LICENSE` and add your copyright line; 🔵 the payload length will
+   change and **that is expected** — grade by digest, never by length (`561-D`).
+2. 🟢 **Keep the Moodle side a separate GPL plugin.** Do not fork Moodle. Expose what you need as
+   **web-service functions** and have the MCP server *call* them over HTTP — 🔵 this is `p563`'s
+   **FORK-vs-CALL** rule, and `Teci-AI`'s paired `moodle-mcp-connector` +
+   `moodle-local_mcpconnector` is an independent arrival at the same shape. 🟢 The GPL reaches the
+   plugin; it does not reach your server.
+3. 🟡 **Normalise the auth surface, because the census says this is where the tail fragments.**
+   The 140 rows split across Moodle **web-service tokens**, **university SSO** (Microsoft Teams,
+   Google), and **scraping**. 🟢 Build token-first, SSO as an adapter.
+4. 🔴 **Do not vendor the three `NO-GRANT` repos** — absence of a licence is not permission.
+   🟢 Read them for tool-surface design, and open the relicensing ask in parallel.
+5. 🟢 **Ship read-only first.** The `0★` tail is overwhelmingly read-only (deadlines, grades,
+   materials); the write paths (grading, authoring) are where the **vendors** are, which is the
+   next recipe.
+
+🟢 **Why this is consolidation, not greenfield.** Seven institutions have independently built the
+same bridge and 🔴 **six of the seven cannot be reused at all** — three unlicensed, one GPL, one
+empty, one a single-university scraper. 🔵 The engagement value is a **maintained, permissive,
+multi-tenant** server where there are currently seven single-tenant ones.
+
+### 🔵 `P-564-B` — **Win the Moodle write surface before the Partner layer closes it** (4–6 weeks, discovery-led)
+
+🔴 **This recipe exists because of a blind spot this pass measured, not because of a repo.**
+Popularity-ranked discovery cannot see the commercial layer: a Moodle Partner shipping to paying
+customers accrues **no stars**, so every star-ranked instrument on this base misses it by
+construction.
+
+**What the `0★` tail actually contains:**
+
+| Actor | Artefact | State — and what it tells you |
+| --- | --- | --- |
+| **Enovation** (Moodle Partner) | [`moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper) | 🔴 **EMPTY, `0` refs** — a **name reserved**, nothing shipped |
+| Teci | [`moodle-mcp-connector`](https://github.com/Teci-AI/moodle-mcp-connector) + [`moodle-local_mcpconnector`](https://github.com/Teci-AI/moodle-local_mcpconnector) | 🟢 Paired server + plugin — **the correct shape, already built** |
+| Studio LXD | [`moodle-local_mcpconnector`](https://github.com/studiolxd/moodle-local_mcpconnector) | 🟡 Connector into the **proprietary** `lmsmcp` / SLXD suite |
+| eLeDia | [`moodle-webservice_eledia_mcp`](https://github.com/eledia/moodle-webservice_eledia_mcp) | 🔴 **ARCHIVED into a commercial suite** — open → paid, completed |
+
+**How to use this in an engagement.**
+1. 🔴 **Assume the client's Moodle Partner is the incumbent on the integration surface**, and find
+   out *which* partner before proposing anything. The open rows are not the competition.
+2. 🟢 **Read the direction of travel**: eLeDia's artefact is **archived into a paid suite** and
+   Enovation's name is **reserved but unshipped**. 🔵 The write surface (authoring, grading) is
+   being staked out *now* and is not yet settled.
+3. 🟢 **Differentiate on what the partners are not shipping**: the census shows the open field is
+   `0★` read-only clients and the vendor field is closed-source write connectors. 🔵 A
+   **permissive, auditable write path with unreleased-grade drafting** is unoccupied — and
+   [`toshieji/moodle-grading-mcp`](https://github.com/toshieji/moodle-grading-mcp) (`0★`, grading
+   I/O, writes **unreleased** drafts) is the only open artefact aimed at it.
+4. 🟡 **Check Moodle's own plugin directory, not GitHub, for what a partner has actually
+   shipped** — `563-C` and `564-D` both turn on this, and a GitHub mirror is not evidence of the
+   shipped plugin.
+
 ## 🆕 `p563` — `2026-10-31` — two recipes, both from this pass's first-hand census
 
 ### 🟢 `P-563-A` — **Consolidate the permissive Moodle bridges into one maintained MCP server** (6–8 weeks)

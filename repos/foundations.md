@@ -4,6 +4,66 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p564` — `2026-10-31` — **🟢 `563-A` CLOSED ON A COMPLETE READ: 140 of 140 rows, and the `0★` share is `69.3 %`.** 🔴 **The tail adds no star-ranked candidate — and that retires the query.** 🟢 **Six addresses new to this base; exactly ONE is permissive.**
+
+🟡 **Scope first, because this section's predecessors got their denominators wrong twice.**
+This pass ran the **narrow** query `moodle mcp in:name` → `total_count: 140`, 🟢 **and read all
+140** rather than a top-40 sample. 🟢 That is consistent with — and narrower than — the **`222`
+addresses** carried since `p529` from a broader sweep. 🔴 **140 is not a correction to 222 and
+must not be read as one.** 🔴 **Neither counts distinct codebases** — the measured duplicates are
+in [`trending.md`](trending.md#-p564--2026-10-31) (`564-A`).
+
+### 🟢 The ceiling, re-measured on a complete read
+
+| | base held (`p529`, `p538`, `p563`) | 🟢 complete read, `2026-10-31` |
+| --- | --- | --- |
+| `total_count` | `140` (`p563`, narrow) | 🟢 **`140`** — reproduced |
+| rows actually read | `40` (`p563`) | 🟢 **`140`** |
+| the head | `loyaniu/moodle-mcp` at `54★` | 🟢 **`54★`, reproduced** |
+| rows `≥9★` | unmeasured | 🔴 **`7`** |
+| rows `0★` | unmeasured | 🔴 **`97` (`69.3 %`)** |
+| candidates above `1★` in the unread tail | unknown (`563-A`) | 🔴 **`0`** |
+
+🟢 **`Gap 563-A` CLOSED.** 🔵 **And it closes as a retirement**: the field's star-ranked head is
+`7` repositories and this base holds all of them, so no future pass should spend a leg
+re-reading this query by stars.
+
+### 🟢 The permissive heads — unchanged, and reproduced from the platform
+
+🟢 `loyaniu/moodle-mcp` holds the ceiling at **`54★`** with 15 forks, pushed `2026-10-30` —
+`p563`'s figure, reproduced. 🔴 Its `license` field is still `null`; 🟡 the stock Moodle plugin
+should be taken from **Moodle's plugin directory, not from a GitHub mirror** (`563-C`, open).
+
+### 🟢 Six addresses new to this base — and only one is buildable
+
+🔵 Grants read from `raw.githubusercontent.com` **as payload bytes**, not from the platform's
+`license` field — which is what `562-A`'s gate requires of any row-level licence verdict.
+
+| Repo | Institution stated | Region | Grant — payload, first-hand | bytes · `sha256`/12 | Globant can build on it? |
+| --- | --- | :-: | --- | --- | :-: |
+| [`12dora/waseda-moodle-mcp`](https://github.com/12dora/waseda-moodle-mcp) | Waseda University, Japan | APAC | 🟢 **MIT** | `1 063 B` · `d3dc53f9558a` | 🟢 **YES** |
+| [`AmritSanjeev2007/UoB-moodle-mcp`](https://github.com/AmritSanjeev2007/UoB-moodle-mcp) | Univ. of Bath, UK | EMEA | 🔴 **GPL-3.0** (stock FSF text) | `35 149 B` · `3972dc9744f6` | 🔴 **NO** — copyleft |
+| [`Sedahoo/iiit-moodle-mcp`](https://github.com/Sedahoo/iiit-moodle-mcp) | IIIT Hyderabad, India | APAC | 🔴 **NO-GRANT** — code present | — | 🔴 **NO** |
+| [`AlpETuna/MonashMoodleMCP`](https://github.com/AlpETuna/MonashMoodleMCP) | Monash, Australia | APAC | 🔴 **NO-GRANT** — code present | — | 🔴 **NO** |
+| [`Punyo/NITechMoodleMCPServer`](https://github.com/Punyo/NITechMoodleMCPServer) | Nagoya Inst. of Tech., Japan | APAC | 🔴 **NO-GRANT** — code present | — | 🔴 **NO** |
+| [`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper) | Enovation — **Moodle Partner** | EMEA | 🔴 **EMPTY — `0` refs** | — | 🔴 **N/A** |
+
+🔴 **`1` of `6`.** 🟢 **And `NO-GRANT` here means absence measured, not assumed**: four candidate
+filenames (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`) each `404`, with `git ls-remote`
+confirming refs exist so the repository is not merely empty. 🟡 **A licence declared in a
+manifest field instead** (`package.json`, `composer.json`, `pyproject.toml`) would not be caught
+by a filename probe → `564-B`.
+
+### 🟢 Independent support for `561-D`'s adopted rule — publish the digest, never the length
+
+🟢 This pass measured an MIT payload at **`1 063 B`**. 🟢 The MIT lengths already on this base
+span **`1 064`–`1 069 B`**. 🔵 **The spread is the copyright line**: `Copyright (c) 2026 12dora`
+is short, and the length moves with it. 🔴 **This is NOT a correction to any pin** — it is the
+same licence, and the variation is why `561-D` adopted *"publish the folded digest, never the
+folded length."* 🟢 An independent measurement arriving **below** the recorded range, on a
+licence that is unambiguously MIT from its own first line, is the strongest form that rule's
+confirmation can take.
+
 ## 🆕 `p563` — `2026-10-31` — **🟢 16 ADDRESSES NEW TO THIS BASE, and the ceiling re-measured: `loyaniu/moodle-mcp` at `54★` with `license: null` CONFIRMED from the platform field.** 🔴 **And a licence rule this pass drafted WRONG and corrected against `p383`: the question is FORK-vs-CALL, not in-tree-vs-out-of-tree — and Moodle already ships the MCP surface in its own plugin directory.**
 
 🟡 **Scope stated first, because this section's predecessors got their denominators wrong twice.**

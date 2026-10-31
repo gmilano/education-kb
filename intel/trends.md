@@ -4,6 +4,77 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p564` — `2026-10-31`
+
+### 🔴 T1 — The prose-demand channel is saturated, and two passes now agree
+
+🟢 **Measured, not inferred.** `p563` ran the eight prescribed legs and got **14 candidates, 0 new
+addresses**. This pass ran the same eight and got **16 candidates, 0 new addresses** — each one
+checked by literal grep against all eight pages before it was drafted
+([table](../agents/top.md#-p564--2026-10-31)). 🔵 **Two independent passes, same shape, so this is
+a property of the channel rather than of a pass**: for this industry at this cadence, the prose
+legs are finished work.
+
+🔵 **What follows for cadence.** 🔴 This does **not** mean the legs should be dropped — a
+saturated channel still detects *change*, and the cost of running it is eight searches. 🟢 It
+means **no pass should budget its findings against them.** The supply instruments paid this pass;
+the prose legs did not, for the second time running.
+
+### 🟢 T2 — `563-A` closed as a NEGATIVE, and a query retired
+
+🟢 All **140** rows of `moodle mcp in:name` read (`p563` read the top 40). 🔴 **The 100 unread
+rows contained ZERO repositories above `1★`**; `69.3 %` of the field sits at exactly `0★`.
+🔵 **The head of this field is seven repositories and this base holds all seven**, so
+star-ranked re-reads of this query are retired. 🟢 A closed gap that ends future spending is
+worth more than one that opens a new leg.
+
+### 🔵 T3 — The trend the census actually exposes: popularity-ranking is blind to the commercial layer
+
+🔴 **This is the pass's reusable finding.** Three populations share one query and never mix:
+the **open heads** (`9`–`54★`), the **institution clones** (`0`–`2★`), and the **vendor/Partner
+plugins** (`0★`). 🔵 A Moodle Partner shipping to paying customers **has no reason to accumulate
+stars**, so every popularity-ranked instrument on this base misses the commercial layer *by
+construction, not by oversight*.
+
+🟢 **Measured cost of that blindness:** `p563`'s top-40 read found 16 new addresses; the complete
+read found **6 more**, including a **Moodle Partner's reserved plugin name** that no star cut
+would ever surface. 🔵 **Generalisation worth carrying:** on this base, a `0★` row from a
+*named commercial actor* is a stronger engagement signal than a `50★` row from an individual.
+
+### 🟢 T4 — Agentic LMS access is being built per-institution, and the map has a hole
+
+🟢 Institutions named across the 140: **APAC 7, EMEA 10, LATAM 3, North America 0.**
+🔴 **Zero US or Canadian institutions.** 🔵 The defensible reading is not that North America
+lacks agentic LMS access but that **it is not being built in public under this name** — which
+fits the region's demand-side profile already on this base (district policy mandates, procurement
+of commercial tutors). 🟡 Measured on name/description text only → `564-C`.
+
+🔵 **Shape of the trend:** the rest of the world is publishing *integration code*; North America
+is *buying finished product*. 🟢 Both are real markets, and they call for opposite engagement
+postures.
+
+### 🔴 T5 — A standing directive of this base has now failed three times, and it should be restated
+
+🟢 `p561`–`p563` concluded: *"the marginal leg is worth more in LATAM and more in supply than in
+demand anywhere."* 🟢 **The supply half held and paid** — six new addresses this pass, all from
+supply instruments. 🔴 **The LATAM half did not, for the third consecutive pass**: the new
+addresses are APAC (4) and EMEA (2), and LATAM supply did not grow.
+
+🔵 **Honest restatement:** **supply is the right axis; LATAM is not currently where supply is
+being created.** 🟢 This does not retract `558-H` — the *"no LATAM-origin supply"* claim stays
+refuted at 12 addresses — and it does not touch the finding that LATAM's *instrument* supply is
+still being created rather than indexed. 🔴 **It does mean a pass should stop spending its
+marginal supply leg in LATAM expecting new code**, and should spend it where the census says code
+is appearing: APAC first, EMEA second.
+
+### 🟢 T6 — Independent confirmation that licence *length* is not an identifier
+
+🟢 An MIT payload measured at **`1 063 B`** this pass, against a recorded spread of
+**`1 064`–`1 069 B`** on this base. 🔵 **The copyright line is the whole variance**
+(`Copyright (c) 2026 12dora` is short). 🔴 **Not a correction to any pin** — same licence,
+unambiguous from its own first line. 🟢 It is `561-D`'s adopted rule earning its keep:
+*publish the folded digest, never the folded length.*
+
 ## 🆕 `p563` — `2026-10-31`
 
 ### 🔴 T1 — The newest section is where stale figures get re-derived, and this pass nearly did it again
