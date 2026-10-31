@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p565` — `2026-10-31`
+
+> **🟢 A SECOND PLATFORM CHANNEL OPENS, and it is bigger than the one this base has censused for
+> three passes.** `canvas-mcp in:name` → `total_count: 280`, read to completion, head at `310★`.
+> **🟢 `564-A` closed at `137` of `140`.** Append-only: history below is untouched.
+
+### 🟢 The Canvas LMS field, read to completion — the new trending surface
+
+🔵 **Why this belongs in a trending record:** two of the three `≥100★` rows were created **this
+month**, and one of them **six days ago**.
+
+| Repo | ★ | forks | created | pushed | Grant (payload/manifest) | Signal |
+| --- | :-: | :-: | :-: | :-: | --- | --- |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **310** | **101** | `2025-02-28` | `2026-10-31` | 🟢 MIT `5385a26e2fac` | 🟢 **`102` tools + `8` agent skills; UIUC; FERPA ×5** |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | 🟢 **119** | **29** | 🔴 **`2026-10-25`** | `2026-10-30` | 🟢 MIT `4450dee7f762` | 🔴 **`119★` in SIX DAYS** — the fastest education-MCP ramp on this base |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟢 **104** | **39** | `2024-12-05` | `2026-10-13` | 🟢 MIT (`package.json`) | 🟢 `54` tools, v2.2 — the oldest head |
+| [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp) | 26 | 8 | `2026-02-06` | `2026-10-29` | 🟢 MIT (`package.json`) | 🟢 Permissive only on the manifest axis |
+| [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) | 18 | 3 | `2025-11-18` | `2026-10-14` | 🟢 MIT `06dcddbb6908` | 🔵 Canvas **+ Ed Discussion**; USyd (APAC) |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 10 | 4 | `2026-04-12` | `2026-10-30` | 🟢 MIT `c29329c5ef3b` | 🔴 **grades and comments — a WRITE surface** |
+
+🟢 **Band distribution over all `280`:** `≥100★` **3** · `≥10★` **11** · `≥2★` **36** ·
+`≥1★` **74** · `0★` **206** (`73.6 %`). 🔴 **`0 of 280` are platform forks.** Census:
+[`evidence/canvas-mcp-census.2026-10-31-p565.tsv`](../evidence/canvas-mcp-census.2026-10-31-p565.tsv).
+
+### 🟢 `564-C` — North America, placed on supply for the first time
+
+🔴 `p564` measured **`0`** US/Canadian institutions across the `140` Moodle rows and registered the
+platform-mix question. 🟢 **Answered: four NA institutions, and one of them holds the field head.**
+
+| Repo | Institution | Region | ★ |
+| --- | --- | :-: | :-: |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **Univ. of Illinois Urbana-Champaign** | **North America** | **310** |
+| [`awesome-town/canvas-mcp-node`](https://github.com/awesome-town/canvas-mcp-node) · [`-skills`](https://github.com/awesome-town/canvas-mcp-skills) | 🟢 **Franklin School** — **FERPA-aware**, per-course pseudonym maps | **North America** | 1 · 1 |
+| [`mklemos/canvas-mcp`](https://github.com/mklemos/canvas-mcp) | 🟢 UC Santa Barbara | **North America** | 1 |
+| [`pratham-2097/canvas-mcp`](https://github.com/pratham-2097/canvas-mcp) | 🟢 Univ. of Cincinnati | **North America** | 0 |
+| [`omniboyOK/siglo21-canvas-mcp`](https://github.com/omniboyOK/siglo21-canvas-mcp) | 🟢 Universidad Siglo 21, Argentina | **LATAM** | 2 |
+| [`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp) | 🟢 Oxford (default target) | **EMEA** | 1 |
+| [`brynjar2605/canvas-mcp`](https://github.com/brynjar2605/canvas-mcp) | 🟡 *"RU Canvas"* — unexpanded | **UNPLACED** | 0 |
+| [`brilliant751/tongji-canvas-mcp`](https://github.com/brilliant751/tongji-canvas-mcp) | 🟢 Tongji University, China | **APAC** | 2 |
+| [`shu-silc-osc/canvas-chaoxing-silc-mcp`](https://github.com/shu-silc-osc/canvas-chaoxing-silc-mcp) | 🟢 Shanghai University SILC | **APAC** | 3 |
+
+🔵 **`Mattlo0546` appears in BOTH censuses** — the same author shipped a `moodle-mcp` and a
+`canvas-mcp`. 🟢 A single builder treating the two platforms as one problem is the clearest
+possible argument for the consolidated adapter in
+[`../compose/patterns.md`](../compose/patterns.md#-p565--2026-10-31).
+
+🔴 **Two rows my own first regex claimed as North American are RETRACTED before publication.**
+`Cocomong98/commit-canvas-mcp` matched `/mit /` inside *"com**mit**-canvas"*, and
+`jamubc/canvas-mcp-tool` has an **empty description** and matched nothing real. 🔵 **This is
+`562-A`'s and `p455`'s class exactly** — an identifier read without its qualifying context — and
+it fired twice in one hour in a pass that opened by quoting the rule. 🟢 Cost: zero, because the
+check ran before the table was written.
+
 ## 🆕 `p564` — `2026-10-31`
 
 > **🟢 The `moodle mcp in:name` census is COMPLETE — 140 of 140 read.** `563-A` closed as a

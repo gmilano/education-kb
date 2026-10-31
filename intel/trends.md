@@ -4,6 +4,155 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p565` — `2026-10-31`
+
+### 🔴 T1 — A region can be absent because the QUERY is wrong, and this base published that absence for three passes
+
+🟢 **The pass's central finding, and it is a correction.** `p563` and `p564` censused
+`moodle mcp in:name` and recorded **zero** US or Canadian institutions. `p564` built a
+recommendation on it: North America *"procures finished tutors while other regions publish
+integration code"*, so an engagement there *"starts with no local open precedent to reuse."*
+
+🔴 **Withdrawn.** `canvas-mcp in:name` answers **`total_count: 280`** — twice the Moodle field —
+and its head is a **`310★`** server from the **University of Illinois Urbana-Champaign** with
+`102` tools, `101` forks and an MIT payload. 🟢 **North America was not absent from the
+education-MCP field; it was absent from the *Moodle* education-MCP field, because US higher
+education runs Canvas.**
+
+🔵 **The reusable lesson, and it is sharper than "run more queries."** `p564` wrote that *"an
+unprobed region looks exactly like a covered one"* and then wrote the absence down — correctly,
+as an informed gap. 🟢 **What made it recoverable was registering the mechanism** (`564-C`:
+*"an artefact of platform mix"*) rather than only the number. 🔴 **A census inherits the market
+share of whatever platform it names**, so a single-platform census of a multi-platform market
+measures the platform, not the market.
+
+### 🟢 T2 — A shared name in this field is HOMONYMY, not duplication — and the over-count is `2.1 %`, not `40 %`
+
+🟢 `564-A` CLOSED with a number: **`137` distinct codebases of `140` rows.**
+
+🔴 **And `p564`'s framing was directionally misleading.** It named three "collisions" and implied
+the `140` was substantially inflated. 🟢 Measured on blob hashes: **one** is real duplication
+(`1alexandrer` ×4 → one codebase; `29 of 33` blobs byte-identical), and **two are refuted** — the
+`moodle-local_mcpconnector` pair shares **exactly one blob, the stock `GPL-3.0` `LICENSE`**, and
+the `placecom` pair shares **exactly one blob, a plugin icon**. 🔵 **`45` rows are named
+`moodle-mcp` and they are `45` independent projects**, from `3 KB` to `17 MB`, created across
+eighteen months.
+
+🔴 **The instrument lesson is the part worth carrying.** `p446` graded duplicates by **root
+commit** and was right to; this pass tried it and got **`11` distinct root commits from `11`
+candidates**. 🟢 **Root-commit identity detects FORKS. It cannot detect RE-UPLOADS**, because
+copying files into a fresh `git init` always mints a new root. 🔵 **The platform fork flag said
+the same thing — `0 of 140` and `0 of 280` are forks** — which means in this field both
+identity instruments this base owns return *"all distinct"* by construction, and only content
+hashing answers the question.
+
+### 🟢 T3 — A filename-only licence gate is wrong at a rate that depends on the LANGUAGE of the population
+
+🟢 `564-B` asked whether `NO-GRANT` verdicts graded by file absence would survive a manifest read.
+🔴 **On its own population: yes, `3 of 3` confirmed** — this pass enumerated each complete tree by
+blobless clone (`0` licence-shaped paths) and read every manifest present. 🟢 **On the Canvas
+population: no, and badly — `2 of 3` verdicts FLIP to MIT**, including
+[`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) at **`104★`
+with `54` tools.**
+
+| population | language | filename probe wrong |
+| --- | --- | :-: |
+| Moodle tail (`p564`'s four) | Python, Kotlin | 🟢 **`0 of 3`** |
+| Canvas heads (this pass) | JavaScript, TypeScript | 🔴 **`2 of 3` — `66.7 %`** |
+
+🔵 **The mechanism:** `npm` declares licences in `package.json` by convention, so a JS/TS project
+has no reason to ship a `LICENSE` file; a Python or Kotlin project that omits the file usually
+really has no grant. 🟢 **Fourth independent instrument agreeing with `558-B`, `559-B` and
+`562-A`: licensing is clause- and convention-shaped, while procurement tooling is file-shaped.**
+🔴 And `564-B`'s own prescribed filename list (`package.json`, `composer.json`, `pyproject.toml`,
+`version.php`) **could not have reached one of its four targets** — `Punyo` is Kotlin/Gradle.
+🟢 **Enumerate the tree; do not guess filenames.**
+
+### 🔴 T4 — The permissive share of an education-LMS tier is a property of the PLATFORM, not the industry
+
+🟢 Measured, same instrument, same week:
+
+| tier | permissive heads | share |
+| --- | :-: | :-: |
+| Moodle MCP (`p564`, 6 addresses) | `1` | 🔴 **`17 %`** |
+| 🟢 **Canvas MCP (this pass, 9 addresses)** | **`8`** (7 MIT payloads + 2 manifest MIT, 1 refused) | 🟢 **`89 %`** |
+
+🔵 **Why, and it is not culture.** Moodle plugins live **inside** a `GPL-3.0` tree, so a plugin
+inherits copyleft and `GPL-3.0` is the honest licence for one. 🟢 Canvas integrations are
+**out-of-tree API clients** — they never link Canvas code, so their authors are free to pick MIT,
+and they do. 🔴 **Canvas LMS core is `AGPL-3.0`** (read first-hand this pass: `34 520 B` /
+`57c8ff33c9c0`, `AFFERO` present) — **stricter** than Moodle's `GPL-3.0` — and the tier above it is
+nonetheless the permissive one. 🟢 **The generalisable rule: the extension MECHANISM sets the
+licence of the ecosystem, not the licence of the platform.** A plugin architecture propagates
+copyleft; an API boundary does not.
+
+### 🟢 T5 — FERPA is North America's distinguishing technical constraint, and exactly one artefact addresses it
+
+🟢 **`FERPA` appears `0` times across the `140` Moodle rows and is named `5×` in the Canvas head's
+own `README`.** 🔵 The field's one dedicated artefact —
+[`awesome-town/canvas-mcp-node`](https://github.com/awesome-town/canvas-mcp-node), *"FERPA-aware …
+persistent per-course pseudonym maps"* — 🔴 **is `NO-GRANT`**, confirmed on two axes this pass.
+
+🔵 **For a studio this is the cleanest opportunity on the page:** the compliance capability that a
+North American education client must have is the one capability the open field has not made
+reusable. 🟢 Either a relicensing ask to a single named maintainer, or a clean-room
+de-identification layer over the MIT tier.
+
+### 🔴 T6 — The prose-demand channel is settled: three passes, zero discoveries
+
+🟢 `p563`: `14` candidates, `0` new. `p564`: `16` candidates, `0` new. 🔴 **This pass: eight legs,
+`0` new addresses**, output consisting of market-research summaries and vendor blogs. 🟢 **Three
+independent passes agree, so this is a property of the channel.** 🔵 `p449` established the cause —
+an **hourly** schedule against a **daily** channel — so the nils carry near-zero information and
+no pass should budget its findings against them. 🔴 **Do not drop the legs**: a saturated channel
+still detects change, and this pass's legs did detect one thing — a **retired** figure
+(*"`134` bills / `31` states"*) still being returned by the query that produced it. 🟢 Retirement
+has to live in this base's text, never in the hope the source stops saying it.
+
+### 🟢 T9 — Seven passes called this base's own instruments unreachable, and nobody had tried running one
+
+🔴 `make hooks` has been denied on this host for **eight consecutive passes**, and from `p558`
+onward that hardened into a standing sentence: the committed instruments *"cannot be executed by
+the session that maintains it."* 🟢 **This pass tested it. Five instruments ran, first try:**
+`ingest/validate-pages.py`, `gap-register-audit.py`, `address-count.py`,
+`crosspage-figure-claims.py`, `derive-counts.py` — each as `python3 -I <path>` from the repo root.
+
+🔵 **The mechanism is the Makefile's own documented failure mode, read backwards.** Its header
+explains at length that the gate stayed a one-off because *"the suites only pass from their own
+directory"* and therefore *"could not be invoked from the place a hook runs."* 🔴 **Seven passes
+read a denial of the `make` RECIPE as a denial of the INSTRUMENTS**, wrote *"none of it is
+gate-attested"*, and stopped testing. 🟢 **It paid immediately:** `validate-pages.py` attested
+that all ten of this pass's sections are clean, and `derive-counts.py` surfaced an **inherited
+RED** (`agents/top.md`: `derived=68`, `claimed=67`) that no pass since `p558` could have seen.
+
+🔴 **The generalisable error is not about `make`.** It is that **a negative result about a wrapper
+was generalised to its contents, and then carried as settled for seven passes because each pass
+inherited the sentence instead of the measurement.** 🔵 `555-F` already says *"a denial is not a
+stable fact about a command"*; `p564` applied it to a `curl -I` **403** and recovered fourteen true
+addresses. 🟢 **The same rule applied one level up recovers an entire gate** — so the rule needs
+restating with scope: **a denial is a fact about the exact invocation that was denied, and about
+nothing above or below it.** → `565-F`
+
+### 🔵 T7 — The 2026 market total for this industry disagrees with itself by `3×`
+
+🟢 Three summaries, one quantity, same year: `$3.7 B`, `~$11 B`, and `$8.3 B` (2025) → `$57.2 B`
+(2033). 🔴 **A `3.0×` spread, no primary source among them.** 🟢 Per `559-D` this base publishes
+the **range** and refuses the point estimate. 🔵 The defensible sentence for a client deck: *the
+market is large and growing fast and nobody credible agrees on its size* — which is a more useful
+thing to say than a borrowed number, because it tells the client not to anchor a business case on
+one.
+
+### 🔴 T8 — This pass's own instrument produced two false positives, both caught before publication
+
+🔴 A `grep` for `mit` in a `README` returned a hit on *"sub**mit**s"*; a regex for North American
+institutions matched *"com**mit**-canvas-mcp"*. 🟢 Both retracted before any table was written,
+by reading the bytes in context. 🔵 **`562-A` and `p455` name this exact class** — an identifier
+read without its qualifying context — and `p562` re-broke it *while holding the sentence*.
+🟢 **It fired twice in this pass too.** 🔴 **The honest conclusion is not "be careful":** a
+substring match on a licence or place name is **unsound in principle**, because the tokens are
+substrings of common English words. 🟢 **Match on structure** — a manifest field, a payload's
+first line, a stated institution — **never on a token appearing somewhere in prose.**
+
 ## 🆕 `p564` — `2026-10-31`
 
 ### 🔴 T1 — The prose-demand channel is saturated, and two passes now agree

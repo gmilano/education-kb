@@ -1,0 +1,141 @@
+full_name	owner	name	fork	stars	size_kb	default_branch	spdx_field	created	pushed	description
+loyaniu/moodle-mcp	loyaniu	moodle-mcp	false	54	59	main	null	2025-04-04	2026-06-29	A Model Context Protocol (MCP) server implementation that provides capabilities to interact with Moodle LMS
+peancor/moodle-mcp-server	peancor	moodle-mcp-server	false	45	8	main	MIT	2025-03-08	2026-02-22	
+G36maid/moodle-mcp	G36maid	moodle-mcp	false	27	1635	main	MIT	2026-10-12	2026-10-20	MCP server that lets AI agents operate Moodle: courses, assignments, forums, grades and files-as-markdown.
+onbirdev/moodle-webservice_mcp	onbirdev	moodle-webservice_mcp	false	18	182	main	null	2025-12-09	2026-07-23	A Moodle web service plugin that implements the MCP for seamless integration with AI assistants
+1alexandrer/moodle-mcp	1alexandrer	moodle-mcp	false	18	6742	master	MIT	2026-04-16	2026-04-21	MCP server template for moodle.com educational platform
+SaadRahman01/moodle-mcp	SaadRahman01	moodle-mcp	false	10	148	main	MIT	2026-06-06	2026-06-06	Model Context Protocol server giving AI assistants live access to moodledev.io docs, Hooks API, capabilities, XMLDB, and the Moodle Jira tracker.
+IsaacAnwar/moodle-mcp	IsaacAnwar	moodle-mcp	false	9	25	main	MIT	2026-10-04	2026-10-30	Give Claude (or any MCP agent) read-only access to your Moodle: courses, materials, deadlines, grades. Claude Code plugin with guided setup.
+ink-waffle/moodle-mcp	ink-waffle	moodle-mcp	false	6	302	main	null	2026-09-17	2026-10-01	MCP server for any Moodle site: courses, deadlines, grades, forums, messages, search and downloads
+Ilya-Grigoryev/moodle-student-mcp	Ilya-Grigoryev	moodle-student-mcp	false	6	186	main	MIT	2026-03-12	2026-10-27	MCP server for Moodle LMS – tools for site info, courses, contents, and assignments
+GhaithAlHallak8/moodler-mcp	GhaithAlHallak8	moodler-mcp	false	4	952	main	MIT	2026-04-11	2026-09-19	Moodle LMS MCP server: talk to your Moodle in plain English
+Snaw80/moodle-mcp	Snaw80	moodle-mcp	false	4	29	main	MIT	2026-05-18	2026-06-13	MCP server exposing Moodle Web Services to Claude, Cursor, and other AI assistants
+MarkyMarkMa/unnc-moodle-mcp	MarkyMarkMa	unnc-moodle-mcp	false	4	393	main	MIT	2026-10-05	2026-10-05	非官方 UNNC Moodle 课件同步工具：macOS + Chrome，包含首次设置向导与 Codex skill。
+leshamblin/MoodleMCP	leshamblin	MoodleMCP	false	2	460	main	MIT	2026-01-24	2026-08-30	An MCP server that lets an AI assistant read and write Moodle in plain language. Reads, writes, and safety limits are kept separate, so nothing touches live data by accident.
+Nasus20202/MoodleMCP	Nasus20202	MoodleMCP	false	2	676	main	null	2026-10-10	2026-10-30	Remote Model Context Protocol server for Moodle running on Cloudflare Workers
+falkenslab/moodle-mcp	falkenslab	moodle-mcp	false	2	17332	main	MIT	2026-10-11	2026-10-28	MCP server for agents to work in Moodle
+Mattlo0546/moodle-mcp	Mattlo0546	moodle-mcp	false	2	36	main	MIT	2026-10-16	2026-10-20	Moodle MCP server for Claude, Codex & Cursor: courses, deadlines, materials and lecture-slide download. University SSO sign-in, no token. UCL, King's KEATS, LSE, Cambridge, Warwick & any Moodle.
+ralstonraphael/moodle-mcp	ralstonraphael	moodle-mcp	false	2	103	main	MIT	2026-10-19	2026-10-19	Your Moodle as MCP tools for Claude: deadlines, course files, grades, announcements. Plus a moodle CLI.
+Neudron/moodle-mcp	Neudron	moodle-mcp	false	2	114	main	MIT	2026-09-23	2026-09-23	Moodle course extractor + MCP server in Rust (token-file auth, offline-first sync)
+Faixiang/moodle-mcp	Faixiang	moodle-mcp	false	2	246	main	MIT	2026-10-26	2026-10-26	Zero-dependency MCP server for the Moodle Web Service API — read-only course, assignment, quiz, deadline and file tools for Claude, Cursor and any MCP client. Actively maintained · v1.3.0 · 8 tools · docs in 10 languages.
+1RAFTIK1/mirea-moodle-mcp	1RAFTIK1	mirea-moodle-mcp	false	2	213	main	MIT	2026-09-24	2026-10-13	MCP-сервер: Claude Desktop ↔ СДО РТУ МИРЭА (online-edu.mirea.ru) — дедлайны, материалы, сдача работ, дашборд
+NicolasViruel/moodle-utn-mcp	NicolasViruel	moodle-utn-mcp	false	2	155427	master	null	2026-07-29	2026-10-19	Agente conectado via MCP para el consumo de la informacion de la facultad
+kaduvelasco/moodle-dev-mcp	kaduvelasco	moodle-dev-mcp	false	2	4170	main	GPL-3.0	2026-03-27	2026-05-20	MCP server that connects AI assistants (Claude, Gemini and others) directly to Moodle's internal structure to accelerate plugin development
+EduardoKrausME/moodle-local_mcp	EduardoKrausME	moodle-local_mcp	false	2	10949	master	GPL-3.0	2026-10-06	2026-10-29	
+haolamnm/moodle-mcp-srv	haolamnm	moodle-mcp-srv	false	2	869	main	Apache-2.0	2026-06-24	2026-07-23	Your Moodle dashboard, available to AI.
+jtuttas/MoodleMcp	jtuttas	MoodleMcp	false	1	40	main	MIT	2026-04-19	2026-10-23	
+lmscloud-io/moodle-mcp-server	lmscloud-io	moodle-mcp-server	false	1	42	main	GPL-3.0	2025-12-29	2026-05-08	
+sebasfn9710dev/moodle-mcp-forum-summarizer	sebasfn9710dev	moodle-mcp-forum-summarizer	false	1	59	master	MIT	2025-08-14	2025-09-23	MCP server for Moodle, browse courses, forums, discussions, and posts directly from Claude Desktop, with optional AI-powered summaries for quick insights and gap detection.
+MarcosNahuel/moodle-mcp	MarcosNahuel	moodle-mcp	false	1	823	main	MIT	2026-04-19	2026-05-03	MCP server for Moodle. Lets AI agents publish pedagogical content via Web Services with guaranteed idempotency.
+ShinonomeLabo/moodle-mcp	ShinonomeLabo	moodle-mcp	false	1	586	main	MIT	2025-05-29	2026-02-11	MCP Server for Moodle
+Nicolas-Prn/moodle-mcp	Nicolas-Prn	moodle-mcp	false	1	96	main	MIT	2026-10-18	2026-10-18	MCP server giving AI assistants (Claude, Codex, Cursor...) read access to your Moodle courses
+armenbarseghyan/moodle-mcp	armenbarseghyan	moodle-mcp	false	1	716	main	NOASSERTION	2026-10-03	2026-10-03	Read-only MCP server for Moodle (FH JOANNEUM) in Go, with Claude Code skills
+franciscodngferreira/Moodle-MCP	franciscodngferreira	Moodle-MCP	false	1	39	master	null	2026-07-12	2026-07-14	MCP server that pulls ETH Moodle course content for exam study
+FiredMosquito831/ase-moodle-mcp	FiredMosquito831	ase-moodle-mcp	false	1	365	main	Apache-2.0	2026-10-12	2026-10-30	MCP server, CLI and plugin for Moodle BL@ASE (online.ase.ro): courses, assignments, forums, grades, quizzes and deadlines for Claude Code, Codex, opencode and Antigravity.
+jonycheung/deadsimple-moodle-mcp	jonycheung	deadsimple-moodle-mcp	false	1	236	main	GPL-3.0	2026-08-10	2026-10-10	
+csmediapro/moodle-mcp-server	csmediapro	moodle-mcp-server	false	1	587	main	AGPL-3.0	2026-05-15	2026-10-22	Open-source MCP server that connects AI agents to Moodle LMS data through Moodle Web Services.
+1alexandrer/moodle-mcp-2	1alexandrer	moodle-mcp-2	false	1	1	main	null	2026-04-19	2026-04-19	
+alnyx-dev/PGEK-moodle-mcp	alnyx-dev	PGEK-moodle-mcp	false	1	17	main	MIT	2026-09-08	2026-09-08	
+1alexandrer/moodle-mcp-test	1alexandrer	moodle-mcp-test	false	1	6577	main	MIT	2026-04-19	2026-04-19	
+ONPUslop/el-moodle-mcp	ONPUslop	el-moodle-mcp	false	1	67	main	null	2026-10-05	2026-10-05	el.op.edu.ua - mcp server
+ernesto-butto/moodle-mcp-server	ernesto-butto	moodle-mcp-server	false	1	110	main	MIT	2026-01-31	2026-02-08	MCP server for Moodle LMS with multi-course support - enables AI assistants like Claude to manage courses, students, assignments, and quizzes. Enhanced fork with list_courses, get_course_contents, and dynamic courseId parameter.
+blank6890/moodle-mcp-server	blank6890	moodle-mcp-server	false	1	118	main	MIT	2026-09-12	2026-09-19	
+eledia/moodle-webservice_eledia_mcp	eledia	moodle-webservice_eledia_mcp	false	1	548	51	null	2026-06-26	2026-09-23	Umgezogen: webservice_elediamcp ist jetzt Teil der eLeDia.ai Suite free
+1alexandrer/moodle-mcp-v102	1alexandrer	moodle-mcp-v102	false	1	6572	main	MIT	2026-04-20	2026-04-20	
+RoeeLanger/MoodleMCP	RoeeLanger	MoodleMCP	false	0	45	main	null	2026-05-06	2026-05-19	
+Niclassslua/MoodleMCP	Niclassslua	MoodleMCP	false	0	114	main	MIT	2026-10-27	2026-10-29	
+gustavowkayser/moodle-mcp	gustavowkayser	moodle-mcp	false	0	48	main	MIT	2026-04-22	2026-04-23	A MCP server for the Moodle Web Services API
+dsamborschi/moodle-mcp	dsamborschi	moodle-mcp	false	0	25	master	null	2026-09-21	2026-09-21	
+chema9233/mcp-moodle	chema9233	mcp-moodle	false	0	36	main	null	2026-09-20	2026-09-20	mcp cliente para cline
+Marcus2012/MCP_Moodle	Marcus2012	MCP_Moodle	false	0	0	main	null	2026-10-10	2026-10-10	
+ijaureguialzo/moodle-mcp	ijaureguialzo	moodle-mcp	false	0	23	master	Apache-2.0	2026-06-12	2026-06-12	Configuración de MCP en moodle.
+jctovar/mcp-moodle	jctovar	mcp-moodle	false	0	127	main	null	2026-02-04	2026-06-19	A simple moodle mcp, useful for user operations
+akmal2405/moodle-mcp	akmal2405	moodle-mcp	false	0	20	main	null	2026-08-06	2026-08-06	Prototype MCP server for Moodle LMS — exposes deadlines and grades as AI-queryable tools. Built and tested against Moodle's public demo instance; architecture supports any Moodle site with API access.
+l4ent/moodle-mcp	l4ent	moodle-mcp	false	0	693	master	null	2026-04-12	2026-04-16	
+Sergio-Oracle/mcp-moodle	Sergio-Oracle	mcp-moodle	false	0	48	main	null	2026-06-03	2026-06-03	mcp-moodle
+duck-5/moodle-mcp	duck-5	moodle-mcp	false	0	216	main	MIT	2026-10-20	2026-10-22	Model Context Protocol (MCP) server & OpenAPI bridge connecting AI assistants to Moodle LMS
+smirnovlad/moodle-mcp	smirnovlad	moodle-mcp	false	0	3	main	null	2026-03-30	2026-03-30	An MCP (Model Context Protocol) server for Moodle LMS, enabling AI assistants to interact with courses, assignments, grades, and calendar events.
+garciavazquez/mcp-moodle	garciavazquez	mcp-moodle	false	0	20	main	null	2026-03-23	2026-03-27	
+qns2/moodle-mcp	qns2	moodle-mcp	false	0	17	main	null	2026-04-06	2026-05-15	MCP server for Moodle LMS - manage courses, SCORM, quizzes and users via Claude
+Stone-padadin/Moodle-MCP	Stone-padadin	Moodle-MCP	false	0	10	main	MIT	2026-10-05	2026-10-05	
+zahraabouzeid/moodle-mcp	zahraabouzeid	moodle-mcp	false	0	125	main	AGPL-3.0	2026-10-30	2026-10-30	Read-only MCP server that gives LLMs access to courses, files and assignments on any Moodle, in Rust
+DeepLearningHarness-Team/Moodle-MCP	DeepLearningHarness-Team	Moodle-MCP	false	0	0	main	null	2026-10-23	2026-10-23	Moodle-MCP
+a2br/moodle-mcp	a2br	moodle-mcp	false	0	104	main	MIT	2026-09-24	2026-10-18	
+windshifter1/Moodle-MCP	windshifter1	Moodle-MCP	false	0	76	main	null	2026-08-28	2026-08-29	
+Azur1337/moodle-mcp	Azur1337	moodle-mcp	false	0	23	main	null	2026-05-17	2026-05-17	
+tboy1128/moodle-mcp	tboy1128	moodle-mcp	false	0	7	main	null	2026-04-10	2026-04-10	
+tosuki/moodle-mcp	tosuki	moodle-mcp	false	0	8378	main	null	2026-10-21	2026-10-21	A production-grade Model Context Protocol (MCP) server for university Moodle LMS portals, featuring interactive Microsoft Teams SSO (2FA) authentication, internal AJAX service integration, and automated course material downloading.
+dwani-ai/moodle-mcp	dwani-ai	moodle-mcp	false	0	1728	main	null	2026-05-17	2026-05-17	
+av-leschinskiy/moodle-mcp	av-leschinskiy	moodle-mcp	false	0	477	main	MIT	2026-10-21	2026-10-30	MCP-сервер над REST API Moodle: курсы, задания, сдачи, оценивание
+gecitemre/moodle-mcp	gecitemre	moodle-mcp	false	0	7	main	null	2025-07-08	2025-07-10	
+Raindancer118/moodle-mcp	Raindancer118	moodle-mcp	false	0	86	main	WTFPL	2026-09-29	2026-09-29	Archived — merged into https://github.com/Raindancer118/nak-api
+arewecoding/moodle-mcp	arewecoding	moodle-mcp	false	0	109	main	MIT	2026-10-13	2026-10-14	Read-only remote MCP server on Cloudflare Workers that exposes your Moodle site to Gemini and Claude — courses, deadlines, announcements, messages, forums, grades, and files. Google single-account sign-in; the Moodle token never leaves the server.
+DenizCiger/moodle-mcp	DenizCiger	moodle-mcp	false	0	68	main	MIT	2026-10-19	2026-10-19	MCP server for Moodle: courses, materials, assignments, deadlines, grades, quizzes and forums for AI agents
+pablogventura/mcp-moodle	pablogventura	mcp-moodle	false	0	24	main	null	2026-04-15	2026-04-15	
+tidely/moodle-mcp	tidely	moodle-mcp	false	0	104	master	null	2026-10-06	2026-10-11	Moodle MCP & CLI for agentic workflows
+OGjoyce/mcp-moodle	OGjoyce	mcp-moodle	false	0	0	main	null	2025-09-11	2025-09-11	this mcp will allow me to enroll users in self paced within a prompt
+ahadchattha2198-art/moodle-mcp	ahadchattha2198-art	moodle-mcp	false	0	6599	main	MIT	2026-05-02	2026-09-15	
+kadmalcun/moodle-mcp	kadmalcun	moodle-mcp	false	0	102	main	MIT	2026-10-30	2026-10-30	東京工科大学の Moodle を AI から読むためのローカル MCP サーバー
+CastaliaInstitute/moodle-mcp	CastaliaInstitute	moodle-mcp	false	0	30	main	MIT	2026-04-07	2026-04-07	MCP server for Moodle: courses + optional IMS CC import
+linomck/moodle-mcp	linomck	moodle-mcp	false	0	70	main	null	2025-10-24	2025-11-06	
+lucasbiz/moodle-mcp	lucasbiz	moodle-mcp	false	0	90	main	null	2026-10-04	2026-10-04	
+khairu-aqsara/moodle_dev_mcp	khairu-aqsara	moodle_dev_mcp	false	0	20	main	MIT	2025-06-12	2025-06-12	Moodle Developer Documentation MCP Server
+Charansai021/Moodle-MCP-Server	Charansai021	Moodle-MCP-Server	false	0	631	main	null	2026-07-13	2026-07-13	MCP server integrating Moodle LMS with AI assistant
+CarlosAndreFerreira/moodle-obsidian-mcp	CarlosAndreFerreira	moodle-obsidian-mcp	false	0	122	main	MIT	2026-10-20	2026-10-24	Moodle-Obsidian Doctoral MCP Server with Automatic SSO Mobile Token Catcher
+ragcon-ai/moodle-mcp-server	ragcon-ai	moodle-mcp-server	false	0	21	main	AGPL-3.0	2026-03-27	2026-03-27	Install script for moodle-mcp-server on ubuntu
+AgentiviumAI/moodle-mcp-server	AgentiviumAI	moodle-mcp-server	false	0	3	main	MIT	2026-08-24	2026-08-24	
+Dathis/swiss-moodle-mcp	Dathis	swiss-moodle-mcp	false	0	472	main	MIT	2026-09-16	2026-09-29	
+Nainsi27/moodle-mcp-server	Nainsi27	moodle-mcp-server	false	0	3	main	null	2026-06-04	2026-06-04	
+k3arjun/moodle-mcp-server	k3arjun	moodle-mcp-server	false	0	17	master	MIT	2026-03-17	2026-03-17	
+githubbzxs/unnc-moodle-mcp	githubbzxs	unnc-moodle-mcp	false	0	129	main	null	2026-10-08	2026-10-08	宁波诺丁汉大学 Moodle 只读 MCP：课程信息查询与课件增量下载
+OmarAli-prod/zewailcity-moodle-mcp	OmarAli-prod	zewailcity-moodle-mcp	false	0	66	main	MIT	2026-10-24	2026-10-24	
+silas037/moodle-mcp-bridge	silas037	moodle-mcp-bridge	false	0	10	main	NOASSERTION	2026-02-28	2026-02-28	Secure, Dockerized Model Context Protocol (MCP) server for Moodle LMS integration.
+tab11pm/moodle_math_mcp	tab11pm	moodle_math_mcp	false	0	26	main	null	2026-09-08	2026-09-08	
+jtuttas/moodle-agent-mcp	jtuttas	moodle-agent-mcp	false	0	956	master	null	2026-06-03	2026-10-27	MCP Server für Claude Code/Desktop: Moodle-Monitoring, Abgaben lesen & benoten, Quiz-Ergebnisse, Nachrichten senden & empfangen
+theredbluepill/moodle-mcp-server	theredbluepill	moodle-mcp-server	false	0	55	main	Apache-2.0	2025-06-16	2025-06-16	Moodle MCP Server
+sernobre/moodle-mcp-sernobre	sernobre	moodle-mcp-sernobre	false	0	447	main	MIT	2026-08-03	2026-08-09	
+jeongjisung690/Moodle---MCP-server	jeongjisung690	Moodle---MCP-server	false	0	159	main	null	2025-05-23	2025-06-02	this is a Moodle assistant 
+mendy23/moodle-mcp-server	mendy23	moodle-mcp-server	false	0	53	main	MIT	2026-04-11	2026-04-18	
+Hiroya-319/moodle-mcp-server	Hiroya-319	moodle-mcp-server	false	0	0	main	null	2025-05-09	2025-05-09	
+shuyuaw/moodle-mcp-explorer	shuyuaw	moodle-mcp-explorer	false	0	284	main	null	2026-04-17	2026-04-20	A comprehensive web application that implements and tests Moodle's Model Context Protocol (MCP) functions. Features a dashboard to connect to Moodle instances, test MCP tools (courses, users, assignments, quizzes, grades, calendar), view real-time API responses, and explore the MCP ecosystem. · Built with Manus
+francis-vargas/mcp_agent_moodle	francis-vargas	mcp_agent_moodle	false	0	58152	main	null	2026-08-24	2026-08-24	
+toshieji/moodle-grading-mcp	toshieji	moodle-grading-mcp	false	0	309	main	MIT	2026-06-25	2026-10-19	MCP server exposing Moodle Web Services as grading I/O — fetch submissions, write unreleased grade drafts (stdio, 7 tools)
+dddanielliu/NCCU-Moodle-MCP	dddanielliu	NCCU-Moodle-MCP	false	0	242	main	null	2026-09-16	2026-09-16	MCP for NCCU Moodle
+yhajjar/moodle-mcp-server	yhajjar	moodle-mcp-server	false	0	13221	master	null	2026-02-21	2026-02-21	
+maldalur/moodle-mcp-server	maldalur	moodle-mcp-server	false	0	198	main	MIT	2025-11-10	2025-11-27	
+Sedahoo/iiit-moodle-mcp	Sedahoo	iiit-moodle-mcp	false	0	70	main	null	2026-10-19	2026-10-19	MCP server for IIIT Hyderabad Moodle (courses.iiit.ac.in)
+12dora/waseda-moodle-mcp	12dora	waseda-moodle-mcp	false	0	2106	main	MIT	2026-10-14	2026-10-15	MCP server for Waseda University Moodle (wsdmoodle): assignments & deadlines, timetable, syllabus and grades in Claude, ChatGPT, Cursor and other AI assistants. 早稲田 Moodle × AI / 早稻田 Moodle MCP
+CarlosLiberJesus/school-moodle-mcp	CarlosLiberJesus	school-moodle-mcp	false	0	419	main	null	2025-05-21	2025-07-30	Explandir o Moodle API para um formato MCP que se possa usar num agente
+yusufwib01/moodle-mcp-server	yusufwib01	moodle-mcp-server	false	0	185	main	null	2026-05-16	2026-05-16	
+AlpETuna/MonashMoodleMCP	AlpETuna	MonashMoodleMCP	false	0	8	main	null	2025-12-07	2026-10-18	
+DDotSalazar/moodle-student-mcp	DDotSalazar	moodle-student-mcp	false	0	216	main	MIT	2026-05-01	2026-05-01	
+leandrobocon/leandrobocon-moodle-mcp	leandrobocon	leandrobocon-moodle-mcp	false	0	10	main	MIT	2026-09-29	2026-09-29	MCP para moodle
+Punyo/NITechMoodleMCPServer	Punyo	NITechMoodleMCPServer	false	0	58	master	null	2025-07-07	2025-08-05	名古屋工業大学のMoodleを操作するためのMCPサーバー
+arunl/moodle-mcp-server	arunl	moodle-mcp-server	false	0	951	master	NOASSERTION	2026-01-13	2026-02-04	MCP Server for interacting with Moodle LMS - access courses, assignments, grades, and more through AI assistants
+PM84/moodle-mcp-server	PM84	moodle-mcp-server	false	0	24	master	MIT	2026-01-29	2026-01-29	
+EduardoKrausME/moodle-block_mcp	EduardoKrausME	moodle-block_mcp	false	0	21	master	null	2026-10-20	2026-10-20	
+Teci-AI/moodle-mcp-connector	Teci-AI	moodle-mcp-connector	false	0	203	main	MIT	2026-10-21	2026-10-23	MCP server that connects AI agents to Moodle for reading and authoring course content. Maintained by Teci
+AnonymousOnyx22/moodle-student-mcp	AnonymousOnyx22	moodle-student-mcp	false	0	171	main	MIT	2026-10-14	2026-10-30	Free read only Moodle server for AI apps. Due dates, assignments, grades and announcements.
+virgosfredianilorenzo-cyber/mcp_moodle_totara	virgosfredianilorenzo-cyber	mcp_moodle_totara	false	0	141	main	null	2026-07-19	2026-07-19	
+Teci-AI/moodle-local_mcpconnector	Teci-AI	moodle-local_mcpconnector	false	0	104	main	GPL-3.0	2026-10-21	2026-10-23	Moodle local plugin that adds course-authoring web service functions for moodle-mcp-connector. Maintained by Teci.
+jmoskaliuk/moodle-runbot-mcp	jmoskaliuk	moodle-runbot-mcp	false	0	17942	main	null	2026-04-09	2026-04-20	
+CarvalhoJeo/moodle-unisinos-mcp	CarvalhoJeo	moodle-unisinos-mcp	false	0	44	main	null	2026-10-23	2026-10-23	Read-only MCP server for Unisinos Moodle (courses, deadlines, assignments, grades, forums) — local stdio or Cloudflare Workers
+dracero/moodle_cetec_mcp	dracero	moodle_cetec_mcp	false	0	23	main	null	2025-05-17	2025-07-09	
+shabrej15/moodle-mcp-server	shabrej15	moodle-mcp-server	false	0	0	main	null	2026-02-04	2026-02-04	
+sultantemuruly/moodle-nu-mcp	sultantemuruly	moodle-nu-mcp	false	0	52	main	null	2026-09-29	2026-09-29	
+tcpassos/moodle-student-mcp	tcpassos	moodle-student-mcp	false	0	123	main	MIT	2026-06-08	2026-10-18	
+ssdasari777/moodle-mcp-project	ssdasari777	moodle-mcp-project	false	0	3	main	null	2026-04-21	2026-04-21	
+ntakei-sti/moodle-mcp-server	ntakei-sti	moodle-mcp-server	false	0	10	main	null	2025-09-25	2025-09-25	
+studiolxd/moodle-local_mcpconnector	studiolxd	moodle-local_mcpconnector	false	0	1042	main	GPL-3.0	2026-08-07	2026-10-20	Moodle plugin that connects your Moodle site to Studio LXD's lmsmcp (SLXD suite): manage courses, content, grading and reports from AI assistants like ChatGPT or Claude via the Model Context Protocol.
+stojandev/moodle-downloader-mcp	stojandev	moodle-downloader-mcp	false	0	80	main	MIT	2026-08-06	2026-08-06	Moodle Downloader MCP — download any Moodle site for offline / AI-agent use (CLI + MCP server)
+oktayevin/moodle-student-mcp	oktayevin	moodle-student-mcp	false	0	31	main	null	2026-03-23	2026-04-20	
+Jawadh-Salih/moodle-mcp-server	Jawadh-Salih	moodle-mcp-server	false	0	85	main	MIT	2026-03-16	2026-04-04	A Model Context Protocol (MCP) server that connects Claude to any Moodle LMS. Built for students — view courses, grades, assignments, deadlines, and notifications through Claude.
+MiaLaMala/Moodle-MCP-Server	MiaLaMala	Moodle-MCP-Server	false	0	168	main	MIT	2026-04-22	2026-07-22	Ein MCP-Server für die Lernplattform Moodle
+Hefi002/tfg-mcp-moodle-server	Hefi002	tfg-mcp-moodle-server	false	0	296	main	GPL-3.0	2025-10-08	2026-01-26	This is a repository created to store the development of an MCP server whose purpose is to connect the Moodle platform with AI agents. This project is part of a final degree project.
+AmritSanjeev2007/UoB-moodle-mcp	AmritSanjeev2007	UoB-moodle-mcp	false	0	14	main	GPL-3.0	2026-10-15	2026-10-15	A model context provider to allow LLMs to access and read content from a University of Bath's moodle account. This requires that a user has valid credentials and is able to access content on moodle.
+almabay/moodle-local_placecom_mcp	almabay	moodle-local_placecom_mcp	false	0	196	main	GPL-3.0	2026-10-19	2026-10-23	
+Sergio-Oracle/moodle-local-mcp-quiz	Sergio-Oracle	moodle-local-mcp-quiz	false	0	12	main	null	2026-06-03	2026-06-03	Moodle plugin local_mcp_quiz — Web Service API pour créer des quiz via MCP (Model Context Protocol)
+enovation/moodle-local_mcp_helper	enovation	moodle-local_mcp_helper	false	0	0	main	null	2026-06-02	2026-06-02	
+RohanParmar22/moodle-local_placecom_mcp	RohanParmar22	moodle-local_placecom_mcp	false	0	558	main	GPL-3.0	2026-09-21	2026-10-23	
+micaherne/moodle-plugin-db-mcp	micaherne	moodle-plugin-db-mcp	false	0	42	main	null	2025-11-03	2025-11-05	An MCP server for the Moodle plugin database
+x-name15/moodle-mcp-for-ai-agents	x-name15	moodle-mcp-for-ai-agents	false	0	133	lang/es	GPL-3.0	2026-03-16	2026-03-17	Personal MCP tool that I use to provide Moodle context to different AI clients (Experimental)

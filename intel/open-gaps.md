@@ -4,6 +4,83 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p565` — `2026-10-31` — **🟢 `564-A`, `564-B` AND `564-C` ALL CLOSED — and `564-C` closed by REFUTING ITS OWN PREMISE: North America was never absent, it was the wrong platform. `canvas-mcp in:name` = `280` rows, head `310★` (UIUC, MIT, FERPA ×5).** 🟢 **`564-A` closed with a number: `137` of `140`.** 🔴 **`564-D`/`563-C` BLOCKED — `moodle.org` is `NXDOMAIN` on this host.** 🔴 **SIX REGISTERED (`565-A`…`565-F`).**
+
+🔵 **Registration check run first, per `P605`, and published as measured rather than asserted.**
+🟢 **And `p564`'s correction was applied as a precondition this time, not discovered afterwards:**
+the derivation excludes `P-565-A`/`P-565-B`/`P-565-C` recipe ids before matching, because
+`p564` learned the hard way that a bare `565-[A-E]` match cannot tell a *recipe id* from a *gap
+citation*. 🟢 Cost of applying a predecessor's lesson up front: zero.
+
+| page | A | B | C | D | E | F |
+| --- | :-: | :-: | :-: | :-: | :-: | :-: |
+| [`../agents/top.md`](../agents/top.md#-p565--2026-10-31) | · | ✔ | · | · | ✔ | · |
+| [`../agents/trending.md`](../agents/trending.md#-p565--2026-10-31) | · | · | · | · | ✔ | · |
+| [`../repos/foundations.md`](../repos/foundations.md#-p565--2026-10-31) | ✔ | · | · | ✔ | · | · |
+| [`../repos/trending.md`](../repos/trending.md#-p565--2026-10-31) | · | · | · | · | · | · |
+| [`../verticals/solutions.md`](../verticals/solutions.md#-p565--2026-10-31) | · | · | ✔ | · | · | · |
+| [`../intel/trends.md`](../intel/trends.md#-p565--2026-10-31) | · | · | · | · | · | ✔ |
+| [`../intel/market.md`](../intel/market.md#-p565--2026-10-31) | ✔ | · | · | · | · | · |
+| [`../compose/patterns.md`](../compose/patterns.md#-p565--2026-10-31) | · | · | · | ✔ | ✔ | · |
+
+🟢 **6 of 6 ids cited; 0 orphans.** 🟡 `repos/trending.md` cites none — it carries this pass's
+shelf delta, not its gaps. 🔵 **The matrix was re-derived after `565-F` was added mid-pass**, so
+the table above is the measurement and not the draft it replaced.
+
+🟢 **Gate posture — CORRECTED, and the correction is against seven of this base's own passes.**
+🔴 `make hooks` was denied an eighth consecutive time. 🟢 **But `p558`–`p564`'s conclusion that the
+committed instruments are unreachable is FALSE and was never tested:** `validate-pages.py`,
+`gap-register-audit.py`, `address-count.py`, `crosspage-figure-claims.py` and `derive-counts.py`
+**all ran** this pass under `python3 -I <path>`. 🔵 **The `make` recipe was denied; the instruments
+were not.** 🟢 **Arrival baseline:** `derive-counts.py` reports `agents/top.md` **RED**
+(`derived=68`, `claimed=67`) — 🔴 **inherited**, reproduced from `git show HEAD:agents/top.md`,
+not this pass's. 🟢 **All ten `p565` sections are CLEAN** and every flagged page's findings sit far
+below them. → `565-F`
+
+### 🟢 Transports
+
+| transport | result this pass |
+| --- | --- |
+| `mcp__github__search_repositories` | 🟢 **WORKS** — `140`-row Moodle census (2 pages) + `280`-row Canvas census (3 pages), `license.spdx_id` on `minimal_output: false` |
+| `raw.githubusercontent.com` (`curl`) | 🟢 **WORKS** — ~60 status-gated reads; calibrated control pair green (`README.md` → `200`, `NO_SUCH_FILE_p565` → `404`) |
+| `git ls-remote --symref` | 🟢 **WORKS** — default-branch resolution on 6 addresses; reconfirmed `enovation` at **`0` refs** |
+| 🟢 **`git clone --filter=blob:none`** | 🟢 **WORKS — new instrument this pass.** Complete tree enumeration + root commits + blob digests on 14 repositories |
+| `WebSearch` | 🟢 8 legs (4 global, 4 regional) — 🔴 **`0` addresses new to this base** |
+| `curl -I` → `github.com` | 🔴 **`403`** — `555-F`, unchanged |
+| `curl` → `api.github.com` | 🔴 **`403`** — unchanged |
+| 🔴 `WebFetch` **and** `curl` → `moodle.org` | 🔴 **`ENOTFOUND` / exit `56`.** `getent` does not resolve it; **`github.com` resolves as a positive control** → `565-C` |
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+| --- | --- |
+| 🟢 **`564-C`** | **CLOSED, and its own premise REFUTED.** It asked whether North America's `0`-institution count was *"an artefact of platform mix."* 🟢 **It is.** `canvas-mcp in:name` → **`total_count: 280`** (`2.0×` Moodle's `140`), read **`280 of 280`**, head [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) at **`310★`** / `101` forks / **MIT** (`1 071 B`, `5385a26e2fac`) / **UIUC** / **FERPA ×5**. 🟢 **`4` NA institutions** named (UIUC, UCSB, Cincinnati, Franklin School) against Moodle's `0`. 🔴 **`p564`'s recommendation that NA has *"no local open precedent to reuse"* is WITHDRAWN** — it has the largest and most permissive precedent in the industry |
+| 🟢 **`564-A`** | **CLOSED with the number it asked for: `137` distinct codebases of `140` rows** (over-count `3`, **`2.1 %`**). 🔴 **Root-commit identity — `p446`'s instrument — is the WRONG one here and that is the finding:** `11 of 11` candidates returned distinct roots, because a re-upload into a fresh `git init` always mints a new root, and `0 of 140` are platform forks. 🟢 Settled on **blob hashes**: `1alexandrer` ×4 → **one** codebase (`29 of 33` blobs identical) + a 2-file stub; 🔴 **both cross-owner "collisions" REFUTED** — `mcpconnector` shares **exactly one blob and it is the stock `GPL-3.0` `LICENSE`**, `placecom` shares **exactly one blob, `pix/icon.png`**. 🔵 **A shared name in this field is homonymy: `45` rows named `moodle-mcp` are `45` projects** |
+| 🟢 **`564-B`** | **CLOSED as a negative on its own population — then PAID on another.** 🟢 Upgraded past what it asked: complete **tree enumeration** per repo rather than a filename list — `3 of 3` live `NO-GRANT`s confirmed (`0` licence-shaped paths; every manifest present read), `enovation` `EMPTY` reconfirmed on a third transport. 🔴 **Its own prescribed filename list could not have reached `Punyo` at all** — Kotlin/Gradle. 🟢 **And the same question on the Canvas tier FLIPS `2 of 3`**: `DMontgomery40/mcp-canvas-lms` (**`104★`, `54` tools**) and `lucanardinocchi/canvas-mcp` are **MIT in `package.json`**. 🔴 **A filename-only gate discards a `104★` MIT asset** |
+| 🟢 **`561-D` reinforced, third pass running** | **Six MIT payloads → six distinct digests, spanning `1 056`–`1 091 B`** — wider than this base's previously recorded `1 063`–`1 069 B`. 🟢 Independent confirmation of the adopted rule, *publish the folded digest, never the folded length* |
+| 🟢 **`p564`'s `GPL-3.0` pin reproduced EXACTLY** | `35 149 B` / `3972dc9744f6`, byte-identical (`cmp`) on **three independent repositories** across **two transports** (blobless clone `cat-file`, and `raw.githubusercontent.com`). 🟢 The cleanest pin reproduction available: same bytes, different addresses, different channels |
+| 🔴 **`564-D` / `563-C`** | 🔴 **NOT closed — BLOCKED, cause named.** Both prescribe reading **Moodle's own plugin directory**. `moodle.org` returns `ENOTFOUND` on `WebFetch`, exit `56` on `curl`, and does not resolve via `getent`, **while `github.com` resolves**. 🟢 Recorded as a blocked instrument with a passing control, per `555-F`, **not as a nil**. Carried forward → `565-C` |
+
+### 🔴 Corrected and retracted this pass
+
+| item | disposition |
+| --- | --- |
+| 🔴 **`p564`'s `≥2★` band = `25`** | 🔴 **Does not reproduce — measured `24`.** 🟢 `total_count` `140`, `0★` `97`, `≥1★` `43`, `≥9★` `7` and the `54★` ceiling **all reproduce exactly**; the histogram sums to `140`, so `24` is internally consistent. 🔴 **The cause cannot be settled**, because `p564` published band counts **without a row list** → `565-D`. 🟢 Remedy applied *this* pass, not deferred: both row lists committed as evidence |
+| 🔴 **Two of this pass's OWN findings, retracted before publication** | 🔴 A `mit` grep hit *"sub**mit**s"*; an NA-institution regex matched *"com**mit**-canvas-mcp"* (and an empty description). 🟢 Both caught by reading the bytes in context before any table was written. 🔵 **`562-A`/`p455`'s class, which `p562` re-broke while holding the sentence** — and it fired twice here too. 🟢 **Standing conclusion adopted: match on STRUCTURE (manifest field, payload first line, stated institution), never on a token appearing in prose** — a substring match on `mit` is unsound in principle |
+| 🔴 *"`134` bills / `31` states"* | 🔴 **Returned again by the global trends leg. NOT re-adopted** — `p455` retired it (one tracker; three others disagree by `2.6×`). 🔵 Property of the channel worth keeping: a retired figure keeps being returned by the query that produced it |
+| 🔴 **`p564`'s North America recommendation** | 🔴 **WITHDRAWN IN FULL** (see `564-C` above). The absence was real as measured and false as generalised |
+
+### 🔴 Registered this pass
+
+| gap | finding | closure condition |
+| --- | --- | --- |
+| 🔴 **`565-A`** | **This pass's own new headline figure is an upper bound, and it says so before it circulates.** Of the `280` Canvas rows: **`100`** name Canvas LMS/Instructure/LMS in their description, 🔴 **`≥23` name a DIFFERENT "canvas"** (Figma · Obsidian · SVG · AWS Nova Canvas · **Canvas Medical EHR** · CanvasXpress · *Sky: Children of the Light* · Canva), and 🔴 **`101` (`36.1 %`) have an EMPTY description** and cannot be classified from metadata at all | 🟢 A classification of the `280` that does **not** depend on description text — e.g. probe each tree for a Canvas API base path or `canvas`/`instructure` SDK dependency in its manifest. 🔵 The instrument already exists: this pass's blobless-clone tree enumeration. **Not built** |
+| 🔴 **`565-B`** | **The manifest-licence axis was measured on `6` repositories and it flipped `2`. The population it should run over is `173 + 61`.** `canvas-mcp in:name` has **`173` rows with `license: null`** on the platform field and the Moodle field has **`61`** — 🔴 **`234` rows whose permissive status is unknown**, against a measured flip rate of **`2 of 3` on JS/TS** | 🟢 Run tree-enumeration + manifest read over all `234` `null`-licence rows and publish the corrected permissive share per platform. 🔵 This sizes how much permissive supply this base has been **under-reporting**, which is the number a procurement gate is wrong by. **Not built** |
+| 🔴 **`565-C`** | **`564-D` and `563-C` are both blocked on one unreachable host.** `moodle.org` does not resolve from this session on any transport tried (`WebFetch` `ENOTFOUND`, `curl` exit `56`, `getent` negative), with `github.com` resolving as a control. 🔴 The consequence is specific: this base **cannot distinguish a Moodle Partner that ships through Moodle's directory from one that has shipped nothing**, and `enovation/moodle-local_mcp_helper` is exactly that case | 🟢 Either `moodle.org` is added to the session's permitted network domains, or an alternate read of Moodle's plugin directory is found (a mirror, an API host that does resolve, or the directory's own JSON endpoint on a different hostname). 🔵 **Resolve `563-C`, `564-D` and this together.** **Not built** |
+| 🔴 **`565-D`** | **A census figure published without its row list is not re-checkable, and this pass hit the consequence.** `p564`'s `≥2★` band (`25`) disagrees with this pass's complete re-read (`24`) while every other band in the same table reproduces exactly — 🔴 **and the disagreement cannot be attributed**, to a star drift or to an arithmetic slip, because there is no row list to diff | 🟢 Adopt as a **standing rule**: any published band, census or count commits its row list to `evidence/` in the same pass. 🟢 **Already satisfied for this pass's two censuses** — [`moodle-mcp-census-rowlist`](../evidence/moodle-mcp-census-rowlist.2026-10-31-p565.tsv) and [`canvas-mcp-census`](../evidence/canvas-mcp-census.2026-10-31-p565.tsv). 🔵 Needs promoting from this pass's practice to a gate |
+| 🔴 **`565-E`** | **The Canvas tier's write surface is unmeasured, and the tier reaches the gradebook.** `bruchris/canvas-lms-mcp` **grades and comments**; `DMontgomery40/mcp-canvas-lms` touches grades across `54` tools; `JohannsenLum/canvas-api-mcp` gateways **all `1 116` Canvas API endpoints**; while `boyuchengz` (`119★` in six days) is **deliberately read-only**. 🔴 Nobody has counted how many of this tier's tool declarations **mutate** | 🟢 Run `p447`'s instrument on the Canvas tier — it found **`136 of 414`** Moodle-connector tool declarations mutating. 🔵 Second question worth the same leg: are the **fast movers systematically more read-only** than the slow ones? 🔴 Until it runs, `P-565-A` treats every Canvas tool as potentially mutating. **Not built** |
+| 🟢 **`565-F`** | **This base's committed instruments ARE reachable, and seven passes asserted otherwise without testing it.** `make hooks` is denied on this host, and `p558`–`p564` generalised that into *"the committed instruments cannot be executed by the session that maintains it"*. 🟢 **Five ran this pass under `python3 -I <path>`** — `validate-pages.py`, `gap-register-audit.py`, `address-count.py`, `crosspage-figure-claims.py`, `derive-counts.py`. 🔴 **The denial attaches to the `make` recipe, not the instrument** — which is the Makefile's own documented failure mode (*"could not be invoked from the place a hook runs"*) read backwards | 🟢 Enumerate every instrument in `ingest/` and `compose/code/` by direct invocation, record which run and which genuinely need the recipe, and replace the standing *"none of it is gate-attested"* sentence with a per-instrument attestation list. 🔵 **Then re-attest `p558`–`p564`'s findings against the instruments that do run.** **Not built** |
+
 ## 🆕 `p564` — `2026-10-31` — **🟢 `563-A` CLOSED ON A COMPLETE READ (140 of 140) AND CLOSED AS A NEGATIVE — the 100 unread rows hold NOTHING above `1★`, which RETIRES the query.** 🟢 **Six addresses new to this base, grants read as payload bytes; ONE permissive.** 🔴 **The prose legs NILLED for a second consecutive pass — 16 candidates, 16 already held.** 🔴 FOUR REGISTERED (`564-A`…`564-D`).
 
 🔵 **Registration check run first, per `P605`, and published as a matrix rather than asserted.**

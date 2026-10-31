@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p565` — `2026-10-31` — **🟢 THE SHELF GAINS A PLATFORM TIER IT DID NOT HAVE, AND IT IS THE PERMISSIVE ONE: eight MIT-licensed Canvas LMS agents, grants read first-hand, headed by a `310★` University of Illinois server with `102` tools.** 🔴 **And the licence instrument that found two of them is one `564-B` said might not exist: `package.json`, not a `LICENSE` file.**
+
+🔵 **Why this tier was missing.** For three passes this base censused `moodle mcp in:name` and
+reported North America absent. 🟢 `564-C` asked whether that was *"an artefact of platform mix."*
+🔴 **It was.** Canvas LMS is the dominant LMS in US higher education, and its MCP field is
+**twice the size** of Moodle's with a head **5.7× larger**.
+
+### 🟢 Canvas LMS agents — grants read as payload bytes or manifest fields, first-hand
+
+| Agent | Repo | Licence (how it was read) | ★ | What it does |
+| --- | --- | --- | :-: | --- |
+| **Canvas MCP (UIUC)** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** — payload, `1 071 B` / `5385a26e2fac` | **310** | 🟢 **`102` tools + `8` agent skills** for students and educators; `101` forks; **FERPA** handling named `5×` in its own `README`; Univ. of Illinois Urbana-Champaign |
+| **canvas-mcp (read-only)** | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | 🟢 **MIT** — payload, `1 072 B` / `4450dee7f762` | **119** | 🔴 **`119★` in six days** (created `2026-10-25`). Deliberately **read-only** bridge for Claude/ChatGPT; Node |
+| **mcp-canvas-lms** | [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟢 **MIT** — 🔴 **`package.json`, not a file** | **104** | `54` tools, v2.2: courses, assignments, enrolments, **grades**. Oldest head (`2024-12-05`) |
+| **canvas-mcp** | [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp) | 🟢 **MIT** — 🔴 **`package.json`, not a file** | 26 | Coursework management in conversation; TypeScript |
+| **canvas-ed-mcp** | [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) | 🟢 **MIT** — payload, `1 056 B` / `06dcddbb6908` | 18 | 🔵 Canvas **plus Ed Discussion** — the only two-system row in the tier; Univ. of Sydney (APAC) |
+| **canvas-lms-mcp** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT** — payload, `1 070 B` / `c29329c5ef3b` | 10 | 🔴 **A WRITE surface**: reads rubrics and quizzes, and **grades and comments** from any agent |
+| **canvas-api-mcp** | [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | 🟢 **MIT** — payload, `1 070 B` / `f01d2f81a436` | 3 | `16` curated student tools **plus a gateway reaching all `1 116` Canvas API endpoints** |
+| **canvas-lms-mcp-server** | [`Fireiscoolsolo/canvas-lms-mcp-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server) | 🟢 **MIT** — payload, `1 091 B` / `86321f3ea183` | 1 | **`211` tools**, OAuth-protected tunnel, multi-computer failover |
+
+🟢 **8 of 9 Canvas heads are permissive — `7` MIT read as bytes, `2` MIT read from a manifest.**
+🔵 Compare the Moodle equivalent (`p564`): **`1` of `6`**. 🟢 **This is the first education-LMS
+tier on this base where a studio can build on the majority of the field rather than the exception.**
+
+### 🔴 The one refusal in the tier, and it is the FERPA row
+
+🔴 [`awesome-town/canvas-mcp-node`](https://github.com/awesome-town/canvas-mcp-node) — *"FERPA-aware
+Canvas LMS MCP server, `30` tools, persistent per-course pseudonym maps"* — is **`NO-GRANT`**, and
+this pass measured that on **two** axes: four grant filenames `404`, **and** `package.json`
+carrying no `license` field. 🔵 **Its sibling** [`canvas-mcp-skills`](https://github.com/awesome-town/canvas-mcp-skills)
+**is MIT.** 🔴 **So the most regulation-aware artefact in the North American tier is the one that
+cannot be built on** — a relicensing ask to a named, reachable single maintainer, and the highest-value
+such ask on this base.
+
+### 🟢 `564-B` CLOSED — and the gap paid on a population it was not asked about
+
+🟢 `564-B` held that four `NO-GRANT`/`EMPTY` verdicts were graded *"by file absence, not by reading
+a grant"*, and asked for a manifest re-probe. 🟢 **Run, and upgraded beyond what it asked:** instead
+of guessing filenames this pass **enumerated the complete tree** of each repository by blobless
+clone, then read every manifest actually present.
+
+| Repo | files in tree | licence-shaped paths | manifests actually read | verdict |
+| --- | :-: | :-: | --- | --- |
+| `Sedahoo/iiit-moodle-mcp` | `7` | 🔴 **`0`** | `pyproject.toml` — no `license`, no classifiers | 🔴 **NO-GRANT confirmed** |
+| `AlpETuna/MonashMoodleMCP` | `7` | 🔴 **`0`** | `requirements.txt` (carries no licence field) | 🔴 **NO-GRANT confirmed** |
+| `Punyo/NITechMoodleMCPServer` | `25` | 🔴 **`0`** | 🔵 **`build.gradle.kts`, `gradle.properties`, `settings.gradle.kts`, `libs.versions.toml`, `META-INF/MANIFEST.MF`** | 🔴 **NO-GRANT confirmed** |
+| `enovation/moodle-local_mcp_helper` | — | — | none — `0` refs | 🔴 **EMPTY confirmed, third transport** |
+
+🔴 **`564-B`'s own prescribed filename list could never have reached one of its four targets.** It
+named `package.json`, `composer.json`, `pyproject.toml` and `version.php`; `Punyo` is a
+**Kotlin/Gradle** project and declares nothing in any of them. 🟢 **Lesson: the manifest axis is
+language-dependent, so enumerate the tree instead of guessing filenames.**
+
+🟢 **And the same question, asked of the Canvas tier, FLIPS TWO VERDICTS OF THREE:**
+
+| Repo | filename probe | 🟢 manifest read | consequence |
+| --- | :-: | :-: | --- |
+| `DMontgomery40/mcp-canvas-lms` (**104★**, 54 tools) | 🔴 `NO-GRANT` | 🟢 **`MIT`** | 🔴 **A filename-only gate discards a `104★` MIT asset** |
+| `lucanardinocchi/canvas-mcp` (26★) | 🔴 `NO-GRANT` | 🟢 **`MIT`** | 🔴 Same |
+| `awesome-town/canvas-mcp-node` | 🔴 `NO-GRANT` | 🔴 `ABSENT` | 🟢 True negative |
+
+🔴 **`2 of 3` — `66.7 %` — on the Canvas population, against `0 of 3` on the Moodle one.** 🔵 **The
+error rate of a filename-only licence gate is POPULATION-DEPENDENT**: it is near-harmless on
+Python/Kotlin single-author repos and it is severe on the JavaScript/TypeScript head, because npm
+declares licences in the manifest by convention. 🟢 This is the fourth independent instrument to
+say the same thing as `558-B`'s `32.4 %` `main`-only 404 rate, `559-B`'s sub-200 B grants and
+`562-A`'s `41.8 %` verbatim-but-flagged rate: **licensing is clause- and convention-shaped while
+procurement tooling is file-shaped.** 🔴 The whole-population sizing is **not built** → `565-B`.
+
+🔵 **And the write-surface question this tier raises is unmeasured** — `bruchris` grades,
+`DMontgomery40` touches grades, `JohannsenLum` gateways `1 116` endpoints, while `boyuchengz`
+is deliberately read-only. `p447` measured exactly this for the Moodle connector tier
+(`136 of 414` tool declarations mutate); nobody has run it on Canvas → `565-E`.
+
 ## 🆕 `p564` — `2026-10-31` — **🟢 `563-A` CLOSED BY MEASUREMENT: all 140 rows of `moodle mcp in:name` read, and the 100 `p563` left unread contain ZERO repositories above `1★`.** 🔵 **But the tail is not worthless — it is where the *vendor* and *institution* layers live, and star-ranked discovery misses both structurally because both ship at `0★`.** 🟢 **Six addresses new to this base; one permissive.**
 
 🔴 **The eight prescribed discovery legs are exhausted for a SECOND consecutive pass — and this

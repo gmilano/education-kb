@@ -1,0 +1,8 @@
+full_name	default_branch	files_in_tree	licence_shaped_paths	manifests_present	manifest_licence_field	verdict_after_p565
+Sedahoo/iiit-moodle-mcp	main	7	0	pyproject.toml	ABSENT (no license, no classifiers)	NO-GRANT CONFIRMED
+AlpETuna/MonashMoodleMCP	main	7	0	requirements.txt	N/A (pip requirements carry no licence field)	NO-GRANT CONFIRMED
+Punyo/NITechMoodleMCPServer	master	25	0	build.gradle.kts;gradle.properties;settings.gradle.kts;libs.versions.toml;META-INF/MANIFEST.MF	ABSENT (all five read)	NO-GRANT CONFIRMED
+enovation/moodle-local_mcp_helper	(none)	0	0	none	N/A	EMPTY CONFIRMED (0 refs, 3rd transport)
+DMontgomery40/mcp-canvas-lms	main	-	0 (4 filenames 404)	package.json	MIT	VERDICT FLIPPED -> MIT
+lucanardinocchi/canvas-mcp	main	-	0 (4 filenames 404)	package.json	MIT	VERDICT FLIPPED -> MIT
+awesome-town/canvas-mcp-node	main	-	0 (4 filenames 404)	package.json	ABSENT	NO-GRANT CONFIRMED

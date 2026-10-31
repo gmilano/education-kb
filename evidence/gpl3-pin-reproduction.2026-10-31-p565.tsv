@@ -1,0 +1,4 @@
+full_name	path	bytes	sha256_12	transport	cmp_vs_uob
+Teci-AI/moodle-local_mcpconnector	LICENSE	35149	3972dc9744f6	blobless clone + cat-file	IDENTICAL
+studiolxd/moodle-local_mcpconnector	LICENSE	35149	3972dc9744f6	blobless clone + cat-file	IDENTICAL
+AmritSanjeev2007/UoB-moodle-mcp	LICENSE	35149	3972dc9744f6	raw.githubusercontent.com	(reference, p564 pin)

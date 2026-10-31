@@ -4,6 +4,99 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p565` — `2026-10-31` — **🟢 THE SECOND LMS VERTICAL IS NOW ON THIS BASE, AND ITS GRANT IS STRICTER THAN MOODLE'S: `instructure/canvas-lms` is `AGPL-3.0` — the network-use clause — against Moodle's `GPL-3.0`.** 🔴 **And `564-D`/`563-C` CANNOT BE CLOSED ON THIS HOST: `moodle.org` does not resolve.**
+
+🔵 **Why this section changes.** For three passes the only LMS vertical this base priced was
+Moodle. 🟢 `564-C`'s closure (see [`../repos/foundations.md`](../repos/foundations.md#-p565--2026-10-31))
+establishes that **Canvas LMS is the platform under a North American engagement**, so its grant and
+its shape have to be priced here rather than inferred.
+
+### 🟢 The two LMS verticals, grants read first-hand this pass
+
+| Platform | Repo | Default branch | Grant — payload bytes | bytes · `sha256`/12 | Engagement consequence |
+| --- | --- | :-: | --- | --- | --- |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `main` | 🔴 **`GPL-3.0`** (`COPYING.txt`) | `35 147` · `8ceb4b9ee5ad` · `AFFERO`=**0** | 🟡 Copyleft on distribution. Plugins are the sanctioned extension point |
+| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 **`master`** | 🔴 **`AGPL-3.0`** (`LICENSE`) | `34 520` · `57c8ff33c9c0` · `AFFERO`=**1** | 🔴 **The network-use clause bites.** A hosted modification must offer source **to its users** |
+
+🔴 **This is the single most consequential licence difference on this base for a delivery shape.**
+Moodle's `GPL-3.0` is triggered by **distribution**; Canvas's `AGPL-3.0` is triggered by **letting
+users interact with a modified instance over a network** — which is exactly what hosting an LMS
+is. 🟢 **So the two platforms demand opposite integration shapes:**
+
+| | Moodle (`GPL-3.0`) | Canvas LMS (`AGPL-3.0`) |
+| --- | --- | --- |
+| 🟢 **Safe shape** | A **plugin** in the sanctioned tree, or an out-of-tree MCP server calling web services | 🟢 **An out-of-tree MCP server calling the REST/GraphQL API — and nothing else** |
+| 🔴 **Shape to refuse** | Forking core and shipping it | 🔴 **Forking core and hosting it for the client's users** |
+
+🔵 **And this is why the whole permissive Canvas MCP tier matters commercially**: every one of the
+eight MIT rows in [`../agents/top.md`](../agents/top.md#-p565--2026-10-31) is an **API client**, not
+a core modification. 🟢 **The tier sits entirely outside the AGPL boundary by construction** — the
+copyleft question never arises, and a studio can take MIT code and keep its own work closed.
+
+🔴 **`instructure/canvas-lms` defaults to `master`, not `main`** — so `558-B`'s `main`-only grant
+read would return `404` and report `NOASSERTION` for the **entire North American LMS vertical**.
+🟢 That is `559-B`'s finding reproduced on a seventeenth address, and the remedy is unchanged:
+resolve the default branch with `git ls-remote --symref` before reading any grant.
+
+### 🔴 `564-D` and `563-C` — BLOCKED, with the cause named on two transports
+
+🟢 Both gaps prescribed the same instrument: *"Read **Moodle's own plugin directory** for
+`local_mcp_helper` and the `Teci`/`studiolxd`/`almabay` connectors, to establish what is actually
+shipped versus named on GitHub."*
+
+| probe | result |
+| --- | --- |
+| `WebFetch` → `https://moodle.org/plugins/?q=mcp` | 🔴 **`getaddrinfo ENOTFOUND moodle.org`** |
+| `curl` → `https://moodle.org/plugins/` | 🔴 **exit `56`, HTTP `000`** |
+| `getent hosts moodle.org` | 🔴 **does not resolve** |
+| `getent hosts github.com` — **positive control** | 🟢 **resolves** |
+
+🔴 **`moodle.org` is outside this session's permitted network domains.** 🟢 **Recorded as a blocked
+instrument with a named cause and a passing control, not as a nil** — `555-F` is explicit that a
+denial is not a stable fact about the world, and `p562`'s six-pass `www.future-ed.org`
+`ENOTFOUND` is the same class. 🔵 **Both gaps carry forward unchanged** → `565-C`, which asks for
+the one thing that would unblock them.
+
+🟡 **What survives from `564-D` without the directory read:** `enovation/moodle-local_mcp_helper`
+is **`EMPTY`** — `0` refs, reconfirmed this pass from `git ls-remote`, now a **third** independent
+measurement. 🔴 **The claim that must NOT be made** is that Enovation has shipped nothing: a Moodle
+Partner can ship entirely through Moodle's directory and never populate its GitHub mirror, and that
+is precisely the hypothesis this host cannot test.
+
+### 🟢 The vertical shelf, restated with the new tier in place
+
+| Platform | Repo | Licence | Role in an engagement |
+| --- | --- | --- | --- |
+| **Moodle** | [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` | 🟢 LMS for EMEA, APAC, LATAM public sector and most of the world |
+| **Canvas LMS** | [`instructure/canvas-lms`](https://github.com/instructure/canvas-lms) | 🔴 `AGPL-3.0` | 🟢 **LMS for North American higher education** — new on this base this pass |
+| **Open edX** | [`openedx/edx-platform`](https://github.com/openedx/edx-platform) | `AGPL-3.0` | 🟢 MOOC-grade, national and corporate programmes |
+| **OpenEduCat** | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `LGPL-3.0` | 🟢 Education **ERP** on Odoo — admissions, SIS, gradebook (`p557`: `BLOCK` → `LINK-ONLY`). 🔴 Default branch **`19.0`** |
+| **Odoo** | [`odoo/odoo`](https://github.com/odoo/odoo) | `LGPL-3.0` | 🟢 The ERP/CRM base OpenEduCat extends (`p557`, `55 430★`, branch `20.0`) |
+| **Chamilo** | [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `GPL-2.0` | 🟢 Lightweight LMS, strong LATAM public-sector footprint |
+| **ILIAS** | [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `GPL-3.0` | 🟢 DACH institutional LMS (branch `release_11`) |
+
+🔴 **One row in the table above was CORRECTED before commit, and it is this pass's own error.**
+The draft wrote `OpenEduCat-Inc/OpenEduCat`; 🔴 **`git ls-remote` returns `0` refs for it** — a dead
+address. 🟢 The live one is [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)
+(**`999` refs, default branch `19.0`**), which is what this base already records **284×**. 🔴 **And the aggravating fact: this base had already condemned that exact
+address, repeatedly.** `repos/trending.md` records it as **`404`** at four separate points and
+`agents/trending.md` at three more — *"alias is ABSENT, not a redirect"* — and one of those rows
+even notes that the **sibling `globant-kb/education/verticals/solutions.md` still links it** as a
+stale `v6` snapshot. 🔵 **So this is `p557`'s class exactly** — *"the top of a shelf had gone stale
+beneath its own history"* — except inverted: **the history was right and this pass's new row was
+the stale one.** 🟢 The remedy is the one `p557` already prescribed: **grep this base for an
+address before writing it onto a page**, which costs one line and would have caught it.
+
+🔵 **One transport note that matters for anyone re-checking this.** `curl -I` **could not have
+caught it** — it returns **`403` for every GitHub URL on this host (`555-F`)**, so a URL check
+that trusted `curl` would have passed a dead link as readily as a live one. 🟢 **All `25` GitHub
+addresses cited in this pass were verified with `git ls-remote`; `24` carried refs on the first
+attempt and this was the one that did not.**
+
+🔵 **Reading for a studio:** every LMS vertical on this shelf is copyleft, and **two of the five are
+AGPL**. 🟢 **The commercially reusable layer is never the platform — it is the MCP/API tier above
+it**, and that tier is now majority-MIT on Canvas and `1-in-6` on Moodle.
+
 ## 🆕 `p564` — `2026-10-31` — **🔵 THE MOODLE PARTNER LAYER HAS ENTERED THE MCP FIELD, AND IT IS INVISIBLE TO EVERY INSTRUMENT THIS BASE RANKS BY POPULARITY.** 🟢 One partner has reserved a plugin name and shipped nothing.
 
 Moodle remains the sector's largest LMS and the single most likely platform under a Globant

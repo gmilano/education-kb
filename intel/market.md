@@ -4,6 +4,142 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p565` — `2026-10-31` — **🟢 NORTH AMERICA IS NO LONGER A HOLE IN THIS MAP — it holds the head of the field, once the field is the right one. `canvas-mcp` `280` rows, `4` NA institutions, a `310★` UIUC server, and FERPA as the region's distinguishing constraint.** 🔴 **The prose-demand channel NILS for a third consecutive pass, and the 2026 market total disagrees with itself by `3×`.**
+
+🔴 **Stated first, because it governs how much of this section to trust.** Eight prescribed legs
+ran (4 global, 4 regional) and returned **zero addresses new to this base** — the third
+consecutive nil ([`../agents/trending.md`](../agents/trending.md#-p565--2026-10-31)). 🟢 **What
+paid instead was supply**, from the platform channel, and the regional placements below are built
+from **stated institutions in first-hand platform metadata**, not from prose.
+
+### 🔴 The 2026 market total disagrees with itself by `3×`, so this base publishes the range
+
+🟢 Three market-research figures were returned for the **same** quantity — AI in education, 2026:
+
+| source shape | 2026 value | horizon |
+| --- | --- | --- |
+| market-research summary A | `$8.3 B` (2025) | → `$57.2 B` by 2033 |
+| market-research summary B | 🔴 **`$3.7 B`** | → `$14.1 B` by 2033 |
+| market-research summary C | 🔴 **`~$11 B`** | — |
+
+🔴 **`$3.7 B` to `$11 B` is a `3.0×` spread on a single year**, and none of the three is a primary
+source. 🟢 **Per `559-D`'s rule this base publishes the range and refuses the point estimate** —
+a studio sizing an engagement from any one of these numbers is sizing it from a press release.
+🔵 The honest statement for a deck: *the market is large and growing fast, and nobody credible
+agrees on its size.*
+
+🔴 **And one figure stays RETIRED.** The global trends leg again returned *"`134` bills in `31`
+states"*. 🟢 `p455` retired it — one tracker, three others disagreeing by `2.6×` — and **it is not
+re-adopted here.**
+
+## Opportunities by region
+
+🔵 **Placement rule, unchanged (`p545`):** region comes from a **stated institution**, never from a
+personal name or a language hint. Unplaceable rows are left **UNPLACED**.
+
+### North America
+
+🟢 **The region's status on this base is REVERSED this pass.** `p564` recorded *"zero US or Canadian
+institutions"* across `140` Moodle rows and asked whether that was a platform artefact (`564-C`).
+🔴 **It was.** US higher education runs **Canvas LMS**, not Moodle.
+
+| measure | value |
+| --- | --- |
+| Canvas MCP field size | 🟢 **`280`** (vs Moodle `140`) |
+| field head | 🟢 [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — **`310★`**, `101` forks, **MIT**, **Univ. of Illinois Urbana-Champaign** |
+| NA institutions named | 🟢 **`4`** — UIUC · UC Santa Barbara · Univ. of Cincinnati · Franklin School |
+| the region's distinguishing constraint | 🔴 **FERPA** — named `5×` in the head's own `README`, and the basis of an entire artefact (`awesome-town/canvas-mcp-node`, *"persistent per-course pseudonym maps"*) |
+
+🟢 **Opportunity, and it is now the opposite of what `p564` advised.** `p564` concluded the region
+*"procures finished tutors while other regions publish integration code"* and that an engagement
+there *"starts with no local open precedent to reuse."* 🔴 **That is withdrawn.** North America has
+**the largest, most permissive and most compliance-aware open precedent in this industry** — it was
+simply on the other LMS. 🟢 **The engagement shape:** start from the MIT Canvas tier, and treat
+**FERPA de-identification as the billable differentiator**, because exactly one artefact in the
+field addresses it and that one is `NO-GRANT` — a relicensing ask, or a clean reimplementation, is
+the highest-value single move available in this region.
+
+🟡 **Demand-side context, soft sources, flagged as such:** NA is put at `36 %` of the global market
+(`$3.68 B`, 2026) by one summary and `38 %` by another; `~70 %` of institutions in Europe and North
+America are said to have or be developing AI guidance. 🔴 US AI regulation remains **a state
+patchwork with no comprehensive federal statute**, with `COPPA` governing child-directed products.
+🟡 A single unverified source reports `$169 M` in US FIPSE awards including responsible-AI support
+in Q1 2026 — **not adopted as a figure.**
+
+### EMEA
+
+🟢 **Supply: the densest *regulatory* region and, on Moodle, the densest supply region — `10`
+institutions** (Univ. of Bath, ASE Bucharest, ONPU Odesa, MIREA, FH JOANNEUM, ETH Zürich, NAK,
+Zewail City, a Swiss target, and one multi-target covering UCL/KCL/LSE/Cambridge/Warwick), plus
+🟢 **Oxford** in the Canvas field ([`Mattlo0546/canvas-mcp`](https://github.com/Mattlo0546/canvas-mcp), MIT).
+
+🔵 **The structural fact for EMEA is that it builds on the copyleft platform.** The one EMEA Moodle
+grant read first-hand (`p564`, `AmritSanjeev2007/UoB-moodle-mcp`) is **`GPL-3.0`** — stock FSF text,
+`35 149 B` / `3972dc9744f6`, and this pass **reproduced that pin exactly on two further independent
+addresses** (`Teci-AI` and `studiolxd`). 🔴 **So an EMEA engagement inherits copyleft from the
+regional supply itself**, not merely from the platform.
+
+🟡 **Regulatory, from the legs:** the EU AI Act's **AI-literacy obligations** have been in force
+since `2025-02-02`; the Commission **updated its ethical guidelines on AI in education** and signed
+**three Advanced Digital Skills grant agreements worth `€25.4 M`**. 🟡 The UK committed `£200 M+` to
+AI adoption at a June 2026 summit (`£100 M` Bridge AI, `£53 M` regional) — 🔴 **workplace-focused,
+not schools**, and recorded as such rather than counted as education spend.
+
+🔴 **Named gap:** the legs returned **no EMEA edtech vendors and no Gulf-state education AI
+programmes**, and the adoption figures they did return were enterprise surveys. An informed blank.
+
+### APAC
+
+🟢 **Supply: `7` institutions on Moodle** (Waseda, Nagoya Inst. of Technology, Tokyo Univ. of
+Technology, NCCU Taiwan, UNNC Ningbo ×2, IIIT Hyderabad, Monash) 🟢 **plus `3` in the Canvas
+field** — Univ. of Sydney ([`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp),
+MIT, `18★`), Tongji University, and Shanghai University SILC.
+
+🟢 **APAC holds the only permissive Moodle grant found in `p564`** (`12dora/waseda-moodle-mcp`, MIT)
+**and the only two-system Canvas row** (Canvas **+ Ed Discussion**). 🔵 **Opportunity: APAC is where
+the reusable code is on both platforms**, and the Sydney row is the template for the multi-system
+adapter — because a real student's work does not live in one system.
+
+🟡 **Regulatory, soft:** the **ASEAN Guide on AI Governance and Ethics** is early-stage; Australia
+has a **National AI Plan** and **Chief AI Officers**; a vendor prediction expects **mandatory bot
+disclosure** in APAC customer service during 2026, which would reach student-facing chatbots.
+🟡 Forrester forecast that `60 %` of firms and governments in India and China would integrate
+**locally developed LLMs** alongside global ones, naming education as a target sector — 🔴 **a
+forecast, not a measurement.**
+
+🔴 **Named gap:** no APAC education-sector adoption figure, no named education regulator and no
+2026 schools/universities AI policy was returned. An informed blank.
+
+### LATAM
+
+🟢 **Supply: `3` institutions on Moodle** (UTN Argentina, Unisinos Brazil, CETEC) 🟢 **plus a
+fourth, new this pass, in the Canvas field** —
+[`omniboyOK/siglo21-canvas-mcp`](https://github.com/omniboyOK/siglo21-canvas-mcp), *"MCP no oficial
+del canvas de universidad siglo 21"*, **Universidad Siglo 21, Argentina**.
+
+🔴 **The three-pass LATAM supply directive still has not paid, and this pass does not pretend
+otherwise.** `p561`–`p563` aimed the marginal supply leg at LATAM; it returned one `2★` row this
+pass against North America's `310★` head. 🟢 **Recorded as a measured asymmetry, not an absence** —
+LATAM *is* building, on both platforms, at single-author scale.
+
+🟡 **Demand, soft but the most primary-source-adjacent of the four regions:** **UNESCO IESALC with
+UNU-IAS** published a working paper mapping AI use across LAC universities on five dimensions
+(teaching, research, community engagement, administration, governance). 🟡 An *AI in Higher Education
+LATAM Survey* reports very high student use — AI *"no longer a novelty"* for under- and
+post-graduates. 🟡 **ECLAC** ranks **Chile, Brazil and Mexico** as regional leaders across `100+`
+indicators; the **IDB**'s *fAIr Tech Radar* (Nov 2025) frames adoption against structural gaps and
+developing regulatory frameworks. 🔴 **UNESCO warns of a severe regional teacher shortage** — which
+is the demand driver that makes tutoring automation a public-sector priority rather than a
+convenience.
+
+🔴 **One market figure explicitly NOT adopted:** *"Rest of Latin America AI-in-education `≈$18.2 M`
+(2024), `~12.1 %` CAGR."* 🔵 It is a **residual-category cut** that excludes Brazil and Mexico, so
+it is not a LATAM total and would understate the region by an order of magnitude if quoted as one.
+
+🔴 **Named gap:** no national AI-in-schools policy for Brazil, Mexico or Chile was returned by the
+LATAM leg, and `564-C`'s instrument has no LATAM equivalent — there is no *"is it the other
+platform?"* test run for this region yet → `565-A` covers the classification half of it.
+
 ## 🆕 `p564` — `2026-10-31` — **🔴 THE PROSE-DEMAND CHANNEL IS SATURATED: eight legs, SIXTEEN candidates, ZERO new — second consecutive pass, and this time the candidate list is named.** 🟢 **Supply answered instead: a complete 140-row census that places institutions by region — and NORTH AMERICA IS ABSENT FROM IT.**
 
 🔴 **Named rather than asserted.** `p563` reported fourteen candidates and zero new addresses from

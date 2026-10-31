@@ -4,6 +4,117 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p565` — `2026-10-31` — **🟢 `564-C` CLOSED AND ITS PREMISE REFUTED: North America was never absent — it was the wrong platform. `canvas-mcp in:name` answers `total_count: 280` (2× the Moodle field) and its HEAD is a `310★` University of Illinois server.** 🟢 **`564-A` CLOSED WITH A NUMBER: `137` distinct codebases of `140`, over-count `3` (`2.1 %`).** 🟢 **`564-B` CLOSED as a negative on its own population — and then PAID on another: 2 of 3 Canvas `NO-GRANT` verdicts are MIT in `package.json`.** 🔴 `564-D`/`563-C` BLOCKED: `moodle.org` is `NXDOMAIN` on this host.
+
+🔵 **Scope stated first.** This pass opened a **second platform channel**. Every figure below is
+first-hand: platform metadata from `mcp__github__search_repositories`, grant payloads from
+`raw.githubusercontent.com` as bytes, and codebase identity from blobless clones. 🔴 **None of it
+is gate-attested** — `make hooks` was denied for the **eighth consecutive pass**.
+
+### 🟢 `564-C` CLOSED — and the absence was an artefact of platform mix
+
+🟢 `564-C` asked for *"a per-institution leg against US/Canadian university **Canvas** and Moodle
+deployments, which would also test whether the absence is real or an artefact of platform mix."*
+🟢 **It is an artefact.** Canvas LMS is Instructure's product and the dominant LMS in US higher
+education; Moodle dominates everywhere else. 🔴 **Censusing only Moodle made North America look
+empty.**
+
+| | `moodle mcp in:name` | 🟢 `canvas-mcp in:name` |
+| --- | :-: | :-: |
+| `total_count` | `140` | 🟢 **`280`** — **2.0×** |
+| rows read this pass | 🟢 `140 / 140` | 🟢 **`280 / 280`** |
+| the head | `loyaniu/moodle-mcp` **`54★`** | 🟢 **`vishalsachdev/canvas-mcp` `310★`** — **5.7×** |
+| rows `≥100★` | `0` | 🟢 **`3`** |
+| rows `≥10★` | `7` | 🟢 **`11`** |
+| rows `0★` | `97` (`69.3 %`) | `206` (`73.6 %`) |
+| `MIT` on the platform field | `57` | 🟢 **`97`** |
+| **NA institutions named** | 🔴 **`0`** | 🟢 **`4`** |
+| `FERPA` mentioned anywhere | 🔴 **`0`** | 🟢 **yes — the head names it `5×`** |
+
+🟢 **The head is North American and it is the largest education-LMS MCP asset this base has ever
+placed:** [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — **`310★`**,
+`101` forks, **`102` tools + `8` agent skills**, pushed `2026-10-31`, and its `README` states
+**University of Illinois Urbana-Champaign** and names **FERPA** five times.
+
+### 🟢 The Canvas heads, grants read as payload bytes
+
+🔵 Per `562-A`: a payload, never a field.
+
+| Repo | ★ | Grant — payload, first-hand | bytes · `sha256`/12 | Globant can build on it? |
+| --- | :-: | --- | --- | :-: |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **310** | 🟢 **MIT** | `1 071` · `5385a26e2fac` | 🟢 **YES** |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | **119** | 🟢 **MIT** | `1 072` · `4450dee7f762` | 🟢 **YES** |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **104** | 🟢 **MIT — `package.json`, not a file** | — | 🟢 **YES** |
+| [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp) | 26 | 🟢 **MIT — `package.json`, not a file** | — | 🟢 **YES** |
+| [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) | 18 | 🟢 **MIT** | `1 056` · `06dcddbb6908` | 🟢 **YES** |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 10 | 🟢 **MIT** | `1 070` · `c29329c5ef3b` | 🟢 **YES** |
+| [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | 3 | 🟢 **MIT** | `1 070` · `f01d2f81a436` | 🟢 **YES** |
+| [`Fireiscoolsolo/canvas-lms-mcp-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server) | 1 | 🟢 **MIT** | `1 091` · `86321f3ea183` | 🟢 **YES** |
+| [`awesome-town/canvas-mcp-node`](https://github.com/awesome-town/canvas-mcp-node) | 1 | 🔴 **NO-GRANT** — tree *and* manifest read | — | 🔴 **NO** |
+
+🟢 **8 of 9 permissive, 7 of them MIT read as bytes.** 🔵 Contrast the Moodle equivalent from
+`p564`: **1 of 6**. 🟢 **This is the first education-LMS tier on this base where the permissive
+share is the majority rather than the exception.**
+
+### 🔴 `280` is an UPPER BOUND, and this pass states its own caveat rather than leaving it for `p566`
+
+🔵 `564-A` existed because `p563`/`p564` let `140` circulate as a codebase count. 🟢 **The same
+discipline, applied to this pass's own new figure, before it circulates:**
+
+| class of the `280` | rows | basis |
+| --- | :-: | --- |
+| 🟢 description names Canvas LMS / Instructure / LMS | **`100`** | description text |
+| 🔴 description names a **different** "canvas" | **`≥23`** | Figma · Obsidian · SVG · AWS Nova Canvas · Canvas Medical EHR · CanvasXpress · *Sky: Children of the Light* · Canva |
+| 🟡 **description EMPTY — unclassifiable from metadata** | 🔴 **`101`** | `36.1 %` of the field |
+
+🔴 **So `280` is not `280` Canvas-LMS codebases**, and `101` rows cannot be classified from
+metadata at all → `565-A`. 🟢 The three head rows and all nine grant-read rows above are
+confirmed Canvas LMS from their own `README`/description.
+
+### 🟢 `564-A` CLOSED — `137` of `140`, and two of p564's three named collisions are REFUTED
+
+🟢 Method, in the order it was applied: the platform **fork flag** (`0 of 140` are forks),
+then **root-commit identity** (`p446`'s instrument), then **blob-hash content overlap**.
+
+🔴 **Root-commit identity is the WRONG instrument here, and that is itself the finding.** All
+`11` duplicate candidates returned **`11` distinct root commits and `11` distinct HEAD trees** —
+because copying files into a fresh `git init` *always* produces a new root commit. 🔵 `p446`
+graded Canvas/Moodle duplicates by root commit correctly, but that population contained **forks**;
+this one contains **re-uploads**, and on re-uploads root commit returns *"all distinct"* by
+construction.
+
+🟢 **Settled on blob hashes instead:**
+
+| p564's named collision | verdict | measurement |
+| --- | --- | --- |
+| `1alexandrer` ×4 | 🟢 **DUPLICATION CONFIRMED** | `moodle-mcp-test` vs `-v102`: **`29` of `33`/`34` blobs byte-identical**; `20`–`21` shared with the canonical repo. `moodle-mcp-2` is **`README.md` + `wrangler.toml` only — not a codebase** |
+| `moodle-local_mcpconnector` ×2 | 🔴 **DUPLICATION REFUTED** | `Teci-AI` (`61` files) vs `studiolxd` (`143` files) share **exactly `1` blob — and it is the stock `GPL-3.0` `LICENSE`** |
+| `moodle-local_placecom_mcp` ×2 | 🔴 **DUPLICATION REFUTED** | `almabay` (`101`) vs `RohanParmar22` (`180`) share **exactly `1` blob — `pix/icon.png`, `11 911 B`** |
+| `unnc-moodle-mcp` ×2 *(this pass)* | 🔴 **DISTINCT** | **`0` shared blobs** — two students, one university, independent code |
+
+🟢 **The de-duplicated count `564-A` asked for: `137` distinct codebases of `140` rows.** The
+over-count is **`3`**, i.e. **`2.1 %`** — the three redundant `1alexandrer` rows. 🔴 **This is
+nothing like `p446`'s `40 %` Canvas/Moodle over-count**, and `p564`'s framing — *"`140` name-matches
+are not `140` distinct codebases"* — is true only in that narrow sense: **`97.9 %` of them are.**
+🔵 **The reusable lesson: in this field a shared name is usually HOMONYMY, not duplication.** `45`
+rows are called `moodle-mcp` and they are `45` independent projects, spanning `3 KB` to `17 MB`,
+created across eighteen months. Census:
+[`evidence/dedup-root-commit-sweep.2026-10-31-p565.tsv`](../evidence/dedup-root-commit-sweep.2026-10-31-p565.tsv).
+
+### 🔴 One of `p564`'s published band figures does not reproduce, and it cannot be settled
+
+🟢 A complete re-read of the identical query reproduces `total_count` **`140`**, the `0★` count
+**`97`**, the `≥1★` count **`43`**, the `≥9★` count **`7`** and the `54★` ceiling — **exactly.**
+🔴 **But `≥2★` measures `24`, where `p564` published `25`.** 🟡 The histogram sums to `140`
+(`97 + 19 + 12 + 3 + 2 + 1 + 1 + 2 + 1 + 1 + 1`), so **`24` is internally consistent.**
+
+🔴 **The cause cannot be established, and the reason is a method defect rather than a star
+drift:** `p564` published **band counts without the row list**, so there is nothing to diff
+against. 🟢 **Remedy applied in this pass rather than deferred** — the full `140`-row list is now
+committed at
+[`evidence/moodle-mcp-census-rowlist.2026-10-31-p565.tsv`](../evidence/moodle-mcp-census-rowlist.2026-10-31-p565.tsv),
+and the `280`-row Canvas list beside it. → `565-D` registers the standing rule.
+
 ## 🆕 `p564` — `2026-10-31` — **🟢 `563-A` CLOSED ON A COMPLETE READ: 140 of 140 rows, and the `0★` share is `69.3 %`.** 🔴 **The tail adds no star-ranked candidate — and that retires the query.** 🟢 **Six addresses new to this base; exactly ONE is permissive.**
 
 🟡 **Scope first, because this section's predecessors got their denominators wrong twice.**

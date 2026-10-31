@@ -4,6 +4,61 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p565` — `2026-10-31`
+
+> **🟢 Eight MIT-licensed Canvas LMS agents new to this base — a whole tier, not a row.** The
+> fastest ramp on this base's education record: `119★` in **six days**. Append-only: history
+> below is untouched.
+
+### 🔴 The signal of the week: `boyuchengz/canvas-mcp` — `119★` in six days
+
+**Repo**: [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) — **MIT**
+(`1 072 B` / `4450dee7f762`, payload read) — **`119★`, `29` forks**
+**Created `2026-10-25`, pushed `2026-10-30`.**
+
+🔵 **Why it matters.** This base has censused education-MCP fields for three passes and the
+steepest ramp it had recorded was `loyaniu/moodle-mcp` reaching `54★` over **eighteen months**.
+🔴 **This row passed twice that in six days.** 🟢 And the design choice is the interesting part:
+it is **deliberately read-only** — *"Read-only MCP server that connects Claude, ChatGPT and other
+AI assistants to Canvas LMS"* — which is the opposite of the capability race the Moodle tier ran.
+🔵 **Read-only is a feature in a student-data context**, and `565-E` should test whether the
+Canvas tier's fast movers are systematically more read-only than its slow ones.
+
+### 🟢 The tier's head, and it is North American and FERPA-aware
+
+**Repo**: [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) — **MIT**
+(`1 071 B` / `5385a26e2fac`) — **`310★`, `101` forks**, pushed **`2026-10-31`** (today)
+
+🟢 **`102` tools and `8` agent skills**, and its own `README` names **University of Illinois
+Urbana-Champaign** and **FERPA** five times. 🔴 **This single row refutes `p564`'s North America
+absence** — the region was not missing from the education-MCP field, it was missing from the
+*Moodle* education-MCP field, because US higher education runs Canvas.
+
+### 🟢 Three more worth a studio's attention this week
+
+| Repo | Licence | ★ | Why now |
+| --- | --- | :-: | --- |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | 🟢 MIT (`package.json`) | **104** | 🔴 **A filename-only licence gate reports this unlicensed.** `54` tools, v2.2, oldest head in the tier (`2024-12-05`) |
+| [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | 🟢 MIT (`f01d2f81a436`) | 3 | 🔵 **`16` curated tools + a gateway to all `1 116` Canvas API endpoints** — the "escape hatch" shape, at `3★` |
+| [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 MIT (`c29329c5ef3b`) | 10 | 🔴 **Grades and comments** — a write surface into the gradebook, pushed `2026-10-30` |
+
+### 🔴 The prose-demand channel NILS for a THIRD consecutive pass
+
+🟢 All eight prescribed legs ran (4 global, 4 regional). 🔴 **Zero addresses new to this base.**
+🔵 `p563` returned `14` candidates and `0` new; `p564` returned `16` and `0`; this pass returns
+`0` new from eight legs whose output was market-research summaries and vendor blogs. 🟢 **Three
+independent passes now agree, so this is settled: for this industry at this cadence the prose
+channel detects change but does not discover supply.**
+
+🔴 **And one leg re-surfaced a figure this base RETIRED.** The global trends leg returned
+*"`134` bills in `31` states"* — 🟢 **`p455` retired exactly that figure** on the ground that it is
+one tracker and three others disagree by `2.6×`. 🔴 **It is not re-adopted.** 🔵 Worth recording as
+a property of the channel: a retired figure keeps being returned by the same query that produced
+it, so retirement has to live in this base's own text, never in the hope the source stops saying it.
+
+🟢 **Where the pass's supply actually came from: the platform channel**, as `p564` predicted when
+it wrote that the marginal leg is worth more in supply than in demand.
+
 ## 🆕 `p564` — `2026-10-31`
 
 > **🟢 Six addresses new to this base, one permissive — and a retirement.** `563-A` closes as a

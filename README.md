@@ -4,6 +4,133 @@ region: Global
 updated: 2026-10-31
 ---
 
+## Pass 565 — reads 2026-10-31, commit 2026-10-31 — **🟢 `564-A`, `564-B` AND `564-C` ALL CLOSED, AND THE BIGGEST ONE CLOSED BY REFUTING ITS OWN PREMISE: North America was never absent from this industry's open supply — **this base was censusing the wrong LMS.** `canvas-mcp in:name` answers **`280`** (2× the Moodle field it has read for three passes) and its head is a **`310★`** University of Illinois server, **MIT**, `102` tools, naming **FERPA** five times. 🔴 **`p564`'s North America recommendation is WITHDRAWN IN FULL.** 🟢 `564-A` closed with a number — **`137` distinct codebases of `140`** — and **two of its three named duplicate pairs are REFUTED on blob hashes.** 🔴 **A filename-only licence gate is wrong on `2 of 3` JS/TS repos, one of them a `104★` MIT server.** 🔴 SIX REGISTERED — one of them a CORRECTION TO THIS BASE'S OWN GATE POSTURE.**
+
+### 🟢 Gate posture, stated first — and this pass REFUTES the claim seven of its predecessors made
+
+🔴 `make hooks` was **denied on this host**, an eighth consecutive time. 🟢 **But the standing
+conclusion drawn from that — that this base's committed instruments "cannot be executed by the
+session that maintains it" (`p564`, and in substance `p558`–`p563`) — is FALSE, and it was never
+tested.** 🟢 **Five committed instruments were invoked directly this pass and all five ran:**
+
+| instrument | invocation | result |
+| --- | --- | --- |
+| 🟢 `ingest/validate-pages.py` | `python3 -I ingest/validate-pages.py` | 🟢 **RAN** — 10 pages checked, `4` with findings |
+| 🟢 `ingest/gap-register-audit.py` | same shape | 🟢 **RAN** — two dialects, `registered=655/977` |
+| 🟢 `ingest/address-count.py` | same shape | 🟢 **RAN** — per-page canonical address counts |
+| 🟢 `ingest/crosspage-figure-claims.py` | same shape | 🟢 **RAN** |
+| 🟢 `ingest/derive-counts.py` | same shape | 🟢 **RAN** — and it found a **RED** (below) |
+
+🔵 **What was actually denied is the `make` RECIPE, not the instrument.** 🔴 **This is the
+Makefile's own documented failure mode, inverted:** its header explains the gate stayed a one-off
+because *"the suites only pass from their own directory"* and so *"could not be invoked from the
+place a hook runs."* 🟢 Seven passes then read a *recipe* denial as an *instrument* denial and
+stopped trying. 🔴 **Cost: seven passes of findings described as "not gate-attested" that could
+have been attested in part.** → `565-F`
+
+🟢 **Arrival baseline, measured before this pass wrote anything** — `ingest/derive-counts.py` on
+the **inherited** commit reports `agents/top.md shelf: derived=68, claimed=67` → 🔴 **RED, and it
+is INHERITED, not this pass's**: the identical figures come back from `git show HEAD:agents/top.md`.
+🟢 **And this pass introduced no new finding:** all ten `p565` sections are **CLEAN** under
+`validate-pages.py`'s own checks, and every one of the `4` flagged pages carries its findings at
+line numbers far below this pass's sections (lowest: `intel/open-gaps.md` line `579`, against a
+section ending at line `75`).
+
+🟢 **Transports measured:** `mcp__github__search_repositories` **5 census pages (`140` + `280`
+rows, both complete)**; `raw.githubusercontent.com` **~60 status-gated reads** (control pair
+`200`/`404` green); `git ls-remote --symref` **6 addresses**; 🟢 **`git clone --filter=blob:none`
+— a new instrument this pass — `14` repositories** enumerated to the blob; `WebSearch` **8 legs**
+(4 global, 4 regional). 🔴 `curl` → `api.github.com` **403**; `curl -I` → `github.com` **403**
+(`555-F`, not 14 dead repos); 🔴 **`moodle.org` `ENOTFOUND` on `WebFetch` *and* `curl`, with
+`github.com` resolving as a positive control.**
+
+### 🟢 The pass's central result: a region was missing from a map because the map had one platform on it
+
+🟢 **`564-C` asked the right question in the right form** — whether North America's zero-institution
+count was *"real or an artefact of platform mix"* — and the answer is **artefact**.
+
+| | `moodle mcp in:name` | 🟢 `canvas-mcp in:name` |
+| --- | :-: | :-: |
+| `total_count` | `140` | 🟢 **`280`** |
+| the head | `54★` | 🟢 **`310★`** |
+| rows `≥100★` | `0` | 🟢 **`3`** |
+| permissive heads | `1 of 6` (`17 %`) | 🟢 **`8 of 9` (`89 %`)** |
+| **NA institutions** | 🔴 **`0`** | 🟢 **`4`** |
+| `FERPA` | 🔴 `0` | 🟢 **named `5×` by the head** |
+
+🔴 **What this costs `p564`:** its conclusion that a North American engagement *"starts with no
+local open precedent to reuse"* and should *"price integration work accordingly rather than
+assuming a community artefact exists"* **is withdrawn.** 🟢 The region has the **largest, most
+permissive and most compliance-aware** open tier in the industry. 🔵 **The transferable lesson is
+not "run more queries":** a single-platform census of a multi-platform market **measures the
+platform, not the market** — and it inherits that platform's market share as a silent denominator.
+
+🟢 **Why the absence was nonetheless recoverable:** `p564` registered the **mechanism**, not just
+the number. A gap that says *"this might be an artefact of X"* is closable; a gap that says
+*"North America is absent"* is not.
+
+### 🟢 `564-A` closed at `137` of `140` — and the right-looking instrument was the wrong one
+
+🔴 **Root-commit identity returned `11` distinct roots from `11` duplicate candidates**, and the
+platform fork flag returns **`0 of 140`** and **`0 of 280`** forks. 🔵 **Both of this base's
+identity instruments answer *"all distinct"* by construction here**, because this field contains
+**re-uploads**, not forks, and copying files into a fresh `git init` always mints a new root.
+🟢 **Blob hashing settled it**, and it split `p564`'s three named collisions **1 confirmed, 2
+refuted** — the `mcpconnector` pair shares **exactly one blob, the stock `GPL-3.0` `LICENSE`**;
+the `placecom` pair shares **exactly one blob, a plugin icon**. 🟢 **Over-count: `3` rows,
+`2.1 %`** — not `p446`'s `40 %`, and **`97.9 %` of the `140` are distinct codebases.**
+
+### 🔴 The delivery finding: the licence gate every engagement builds in week one is wrong, for a fourth distinct reason
+
+| instrument | the obvious gate's error |
+| --- | --- |
+| `558-B` | `main`-only read → `404` on **`32.4 %`** of addresses |
+| `559-B` | genuine grants **under `200 B`** discarded |
+| `562-A` | **`41.8 %`** canonically verbatim, flagged modified |
+| 🟢 **`565`** | 🔴 **filename-only probe wrong on `2 of 3` JS/TS repos** |
+
+🟢 `564-B` asked whether `NO-GRANT` verdicts graded by **file absence** survive a manifest read.
+🔴 On its own four targets, yes — `3 of 3` confirmed by **complete tree enumeration**, and
+`enovation` `EMPTY` on a third transport. 🔴 **But its own prescribed filename list could not have
+reached one of them** (`Punyo` is Kotlin/Gradle), 🔴 **and on the Canvas tier the same question
+flips `2 of 3`**: [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms)
+— **`104★`, `54` tools** — is **MIT in `package.json`**. 🔵 **The error rate is a property of the
+population's LANGUAGE**, because `npm` declares licences in the manifest by convention.
+
+### 🟢 And one structural result about ecosystems, which generalises past this industry
+
+🟢 **Canvas LMS core is `AGPL-3.0`** (read first-hand: `34 520 B` / `57c8ff33c9c0`, `AFFERO`
+present, default branch **`master`**) — **stricter** than Moodle's `GPL-3.0` — **and its extension
+tier is `89 %` permissive against Moodle's `17 %`.** 🔵 **The extension MECHANISM sets the licence
+of the ecosystem, not the licence of the platform:** Moodle plugins live *inside* a copyleft tree
+and inherit it; Canvas integrations are *out-of-tree API clients* and inherit nothing. 🟢 **For a
+studio this inverts the intuition** — the stricter platform is the one whose ecosystem you can
+build a closed product on.
+
+### 🔴 This pass's own corrections
+
+🔴 **`p564`'s `≥2★` band does not reproduce** — `24` measured against `25` published, while
+`total_count`, `0★`, `≥1★`, `≥9★` and the `54★` ceiling all reproduce **exactly**. 🔴 **The cause
+cannot be attributed**, because `p564` published band counts without a row list → `565-D`, with
+the remedy applied in this pass rather than deferred: both censuses' full row lists are committed
+to `evidence/`.
+
+🔴 **Two of this pass's own findings were retracted before publication.** A `mit` grep matched
+*"sub**mit**s"*; an NA-institution regex matched *"com**mit**-canvas-mcp"*. 🔵 **`562-A`/`p455`'s
+class — which `p562` re-broke while quoting the rule — and it fired twice here too.** 🟢 So the
+conclusion adopted is not *"be careful"* but a rule with teeth: **match on structure — a manifest
+field, a payload's first line, a stated institution — never on a token appearing in prose.**
+A substring search for `mit` is unsound **in principle**.
+
+### 🔴 Demand: three passes, zero discoveries — settled
+
+🟢 Eight legs ran. 🔴 **`0` addresses new to this base**, after `p563`'s `14`-candidate nil and
+`p564`'s `16`-candidate nil. 🟢 **Three independent passes agree, so it is a property of the
+channel** (`p449`: an hourly schedule against a daily channel). 🔴 One leg re-surfaced
+*"`134` bills / `31` states"* — **retired by `p455`, not re-adopted.** 🔴 The 2026 market total
+disagrees with itself by **`3.0×`** (`$3.7 B` vs `~$11 B`), so per `559-D` this base publishes the
+range and refuses the point estimate.
+
 ## Pass 562 — reads 2026-10-31, commit 2026-10-31 — **🟢 `561-F` AND `561-D` CLOSED, AND THE FIRST CLOSED WITH THE DENOMINATOR IT CALLED UNKNOWN: **91** in-family rows re-graded, and 🔴 **38 of 91 — `41.8 %` — are canonically VERBATIM while a raw-byte licence gate calls them MODIFIED.** 🟢 `p561`'s PINS REPRODUCE **14 OF 14 / 70 OF 70 QUANTITIES** FROM AN INDEPENDENT RE-IMPLEMENTATION — the cleanest check this base has taken in the gate's absence. 🔴 **AND TWELVE OF THIS PASS'S OWN FINDINGS ARE RETRACTED IN FULL: it re-committed `p455`'s adjacency error, twice, in one hour.** 🔴 ALL FOUR REGIONAL LEGS NIL. 🔴 EIGHT REGISTERED.**
 
 🔴 **Gate posture, stated first. Sixth consecutive pass.** This base's committed instruments remain

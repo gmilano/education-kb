@@ -4,6 +4,114 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p565` — `2026-10-31` — three recipes, all from this pass's first-hand Canvas census
+
+### 🟢 `P-565-A` — **FERPA-safe agentic Canvas access for a North American university** (8–10 weeks)
+
+🔵 **Why this is now the strongest education recipe on this base.** `564-C`'s closure moved North
+America from *"no local open precedent"* to **the largest and most permissive tier in the
+industry** — and it exposed one gap: the field's only FERPA-aware artefact is the one row that
+cannot be built on.
+
+**The stack, every grant read first-hand this pass:**
+
+| Role | Repo | Grant (how read) | Why this one |
+| --- | --- | --- | --- |
+| 🟢 **Base MCP server** | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** — payload `1 071 B` / `5385a26e2fac` | `310★`, `102` tools + `8` agent skills, `101` forks, maintained by a **UIUC** practitioner, pushed today |
+| 🟢 **Read-only variant for the student-facing tier** | [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | 🟢 **MIT** — payload `1 072 B` / `4450dee7f762` | Deliberately read-only — the correct blast radius for a student chatbot |
+| 🟢 **Instructor/grading tier** | [`bruchris/canvas-lms-mcp`](https://github.com/bruchris/canvas-lms-mcp) | 🟢 **MIT** — payload `1 070 B` / `c29329c5ef3b` | The one head that **writes**: grades, comments, rubrics |
+| 🟢 **Long-tail API escape hatch** | [`JohannsenLum/canvas-api-mcp`](https://github.com/JohannsenLum/canvas-api-mcp) | 🟢 **MIT** — payload `1 070 B` / `f01d2f81a436` | Gateway over all **`1 116`** Canvas API endpoints for the request nobody anticipated |
+| 🔴 **De-identification — BUILD, do not take** | ~~[`awesome-town/canvas-mcp-node`](https://github.com/awesome-town/canvas-mcp-node)~~ | 🔴 **NO-GRANT** (4 filenames `404` **and** `package.json` has no `license`) | 🔴 **Read it for the design, not the code** — *"persistent per-course pseudonym maps"* is the right idea |
+
+**Wiring:**
+
+1. 🟢 **Do not fork Canvas.** `instructure/canvas-lms` is **`AGPL-3.0`** (`34 520 B` /
+   `57c8ff33c9c0`, `AFFERO` present, default branch **`master`**). Hosting a modified instance
+   obliges you to offer source **to its users**. 🟢 Every repo above is an out-of-tree **REST/GraphQL
+   client**, so the copyleft boundary is never crossed and the studio's own layer stays closed.
+2. 🟢 Stand up `vishalsachdev/canvas-mcp` against the client's Canvas with a **scoped API token**,
+   not an admin one.
+3. 🔴 **Insert the pseudonym layer between the MCP server and the model, before any pilot touches
+   real students.** Per-course stable pseudonyms, mapping held server-side, names and student IDs
+   never reaching the model context. This is the billable differentiator — **one artefact in a
+   `280`-row field addresses it and it is unlicensed.**
+4. 🟢 Split privileges by tier: `boyuchengz` (read-only) for students, `bruchris` for instructors,
+   `JohannsenLum` behind a feature flag for the long tail.
+5. 🔵 Gate the grading tier behind human confirmation. 🔴 The write-surface size of this tier is
+   **unmeasured** — `p447` found `136 of 414` Moodle-connector tool declarations mutate; nobody has
+   run that count on Canvas → `565-E`. **Until it is run, treat every Canvas tool as potentially
+   mutating.**
+
+🔵 **Sell it as:** FERPA-safe agentic access to the system of record, built on a permissive base the
+client's own faculty already maintain — not a rebuild.
+
+### 🟢 `P-565-B` — **One MCP surface over BOTH LMSs, for a multi-campus or multi-region client** (6–8 weeks)
+
+🔵 **The evidence this is a real need, not an architecture diagram:**
+[`Mattlo0546`](https://github.com/Mattlo0546/canvas-mcp) **appears in both of this pass's censuses**
+— the same author shipped a `moodle-mcp` and a `canvas-mcp`. 🟢 And
+[`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) (MIT, `18★`, Univ. of Sydney)
+already federates **two** systems (Canvas **+ Ed Discussion**), because a student's work does not
+live in one place.
+
+| Role | Repo | Grant |
+| --- | --- | --- |
+| 🟢 Canvas leg | [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT `5385a26e2fac` |
+| 🟢 Moodle leg | [`12dora/waseda-moodle-mcp`](https://github.com/12dora/waseda-moodle-mcp) | 🟢 MIT `d3dc53f9558a` — **the only permissive Moodle grant on this base** |
+| 🟢 Two-system precedent to copy | [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) | 🟢 MIT `06dcddbb6908` |
+
+**Wiring:**
+
+1. 🟢 Define a **course/assignment/submission/grade** domain model and map both LMSs onto it. The
+   two APIs differ in shape but not in these nouns.
+2. 🔴 **Do not merge the two codebases.** Keep each leg a separate MCP server and federate above
+   them — the Moodle leg sits next to a `GPL-3.0` plugin ecosystem and the Canvas leg next to an
+   `AGPL-3.0` core, and **keeping them apart keeps both copyleft boundaries intact.**
+3. 🟢 Normalise identity last, not first: a per-institution pseudonym map per `P-565-A`, shared
+   across both legs so one student is one pseudonym.
+4. 🔵 **Region fit:** Canvas leg for North America, Moodle leg for EMEA/APAC/LATAM — which is
+   exactly this pass's institution census (NA `4` Canvas institutions vs `0` Moodle; EMEA `10` and
+   APAC `7` on Moodle).
+
+### 🔵 `P-565-C` — **The licence gate that actually works, as a billable week-one deliverable** (1 week)
+
+🔴 **Why it is a deliverable and not a chore.** Every engagement stands up a licence gate in week
+one, and this base has now measured **four** independent ways the obvious implementation is wrong:
+
+| instrument | the obvious gate's error |
+| --- | --- |
+| `558-B` | 🔴 `main`-only grant read → **`404` for `121 of 374` addresses (`32.4 %`)** |
+| `559-B` | 🔴 Genuine grants **under `200 B`** exist and get discarded as stubs |
+| `562-A` | 🔴 **`38 of 91` (`41.8 %`)** in-family payloads are **canonically verbatim** while a raw-byte gate calls them modified |
+| 🟢 **`565` (this pass)** | 🔴 **A filename-only probe is wrong on `2 of 3`** JS/TS repos — including a `104★` MIT server |
+
+**The gate, in the order the steps must run:**
+
+1. 🟢 **Resolve the default branch first** — `git ls-remote --symref <url> HEAD`. 🔴 Never assume
+   `main`: `instructure/canvas-lms` is `master`, `Punyo/NITechMoodleMCPServer` is `master`, and
+   `odoo` is `20.0`.
+2. 🟢 **Enumerate the whole tree, do not guess filenames** —
+   `git clone --filter=blob:none --no-checkout --depth 1`, then `git ls-tree -r --name-only HEAD`.
+   🔴 This is what `564-B` should have prescribed: its four-filename list could not reach a
+   Kotlin/Gradle project at all.
+3. 🟢 **If no licence-shaped path exists, read the manifests that are actually present** —
+   `package.json`, `composer.json`, `pyproject.toml`, `Cargo.toml`, `*.gradle.kts`, `version.php`,
+   `META-INF/MANIFEST.MF`. 🔴 **`2 of 3` Canvas `NO-GRANT` verdicts flip to MIT at this step.**
+4. 🟢 **Grade on the payload's own first line and digest, never on its length.** 🔴 `561-D`'s rule,
+   and this pass widened the evidence for it: **six MIT payloads → six distinct digests, spanning
+   `1 056`–`1 091 B`.** 🟢 A length tells you nothing; a digest tells you everything.
+5. 🟢 **Match on structure, never on a substring.** 🔴 This pass's own first-cut regexes matched
+   `mit` inside *"sub**mit**s"* and *"com**mit**-canvas"*. A token search over prose is unsound in
+   principle.
+6. 🟢 **Publish the row list with every count.** 🔴 `p564` published band counts without one and
+   this pass could not reconcile a `24`-vs-`25` disagreement as a result → `565-D`.
+
+🔵 **Pin to hand the client as the gate's self-test:** stock `GPL-3.0` is **`35 149 B` /
+`3972dc9744f6`** — reproduced byte-identically this pass on **three independent repositories**
+(`AmritSanjeev2007/UoB-moodle-mcp`, `Teci-AI/moodle-local_mcpconnector`,
+`studiolxd/moodle-local_mcpconnector`). 🟢 A gate that does not reproduce that digest is
+misconfigured before it is ever pointed at the client's own code.
+
 ## 🆕 `p564` — `2026-10-31` — two recipes, both from this pass's complete first-hand census
 
 ### 🟢 `P-564-A` — **Consolidate the APAC university Moodle bridges onto the one permissive base** (6–8 weeks)
