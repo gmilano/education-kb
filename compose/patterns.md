@@ -4,6 +4,100 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p563` — `2026-10-31` — two recipes, both from this pass's first-hand census
+
+### 🟢 `P-563-A` — **Consolidate the permissive Moodle bridges into one maintained MCP server** (6–8 weeks)
+
+🔵 **Why this is a consolidation and not a greenfield build.** The field runs to **`222`
+addresses** on `p529`'s broad sweep (this pass read the top 40 of a narrower 140-row query
+first-hand), and it is 🔴 **dozens of single-author university artefacts rebuilding the same
+bridge** — `mirea`, `unnc`, `utn`, `el-`(ONPU), `PGEK`,
+`ase`. Nobody has converged, tool vocabularies sit at **8, 22, 24 and 40 tools** with no two
+agreeing, and 🔴 **the field's most-starred implementation cannot be built on at all**:
+[`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) (54★) resolves to `license: null`.
+🟢 Consolidating nine permissive implementations is cheaper than a greenfield bridge and arrives
+with users attached.
+
+**🟢 Start from the stock plugin, not from a fork — `p383` already found the foundation.**
+Moodle's **own plugin directory** ships `webservice_mcp` (release `2026-07-23`, Moodle 4.5–5.2),
+serving Moodle's external functions as **MCP tools over JSON-RPC 2.0**, gated on the
+`webservice/mcp:use` capability. 🟢 **Install it, call it, and keep the agent in its own
+repository: that is permissive delivery with no copyleft obligation**, because consuming a
+`GPL-3.0` plugin over its JSON-RPC surface is not a derivative work — **forking** it would be.
+🔴 **So `P-563-A` applies only where the stock plugin cannot be used:** Moodle **below 4.5**,
+estates that will not install a new plugin, or a tool surface the plugin does not expose.
+🟡 And check `Gap 563-C` first — the plugin's apparent GitHub mirror resolves to `license: null`,
+so take it from the plugin directory.
+
+**If and only if the stock plugin is ruled out — base selection on grant and maintenance, never on stars:**
+
+| Role in the build | Repo | Grant | ★ | Pushed | Why this one |
+|---|---|---|---|---|---|
+| 🟢 **Fork base** | [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | 🟢 `MIT` | 27 | 🟢 `2026-10-20` | the lineage's real head (not the `thc1006` fork), **Rust → one static binary**, which is what on-prem university IT will actually accept. 22-tool vocabulary |
+| 🟢 **Tool-surface donor** | [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | 🟢 `MIT` | 4 | `2026-09-19` | the **richest vocabulary in the field at 40 tools** — port its surface onto the base |
+| 🟢 **Second donor** | [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 🟢 `MIT` | 45 | 🔴 `2026-02-22` | harvest its tool surface, 🔴 **do not base on it** — eight months unpushed |
+| 🟢 **Role-scoping pattern** | [`Ilya-Grigoryev/moodle-student-mcp`](https://github.com/Ilya-Grigoryev/moodle-student-mcp) | 🟢 `MIT` | 6 | 🟢 `2026-10-27` | the only **role-scoped** bridge seen; lift its student-only surface as the least-privilege default |
+| 🟢 **Liveness reference** | [`IsaacAnwar/moodle-mcp`](https://github.com/IsaacAnwar/moodle-mcp) | 🟢 `MIT` | 9 | 🟢 `2026-10-30` | most recently pushed permissive bridge — track its API drift |
+| 🔴 **Specification only** | [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | 🔴 **none** | 54 | `2026-06-29` | 🔴 **ungranted — copy no code.** Read its *tool list* as a requirements checklist only |
+
+**Wiring:**
+
+1. **Moodle side** — enable the web-service API; create a **dedicated service user** with a
+   capability-scoped role per persona (student / teacher / admin) and one token each. 🔵 The
+   bridge never holds admin capability for a student-facing session; least privilege is enforced
+   on the **Moodle role**, not in the agent prompt.
+2. **Bridge** — fork `G36maid/moodle-mcp`; port the `moodler-mcp` 40-tool surface and
+   `peancor`'s; adopt `moodle-student-mcp`'s role scoping as the default profile. Publish the
+   **union vocabulary** as a versioned tool manifest — 🟢 *that manifest, not the binary, is the
+   thing the field is missing.*
+3. **Agent layer** — [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+   (🟢 931★, pedagogy/assessment skills) for the teacher-facing workflows, and
+   [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (🟢 51 803★) for the learner-facing
+   tutoring loop, both consuming the bridge over MCP.
+4. **Grant hygiene** — keep the consolidated bridge in **its own repository** (not a Moodle
+   fork) under `MIT`/`Apache-2.0`; record each donor's `spdx_id` and attribution in `NOTICE`.
+   🔴 Re-read every donor's grant at merge time from the platform field **and** the grant
+   payload — `Pattern L` on this base is explicit that a badge does not tell you what the payload
+   grants, and the API reports GitHub's *match*, not the bytes (`Gap 556-B`).
+
+🟡 **Open before committing:** the four tool vocabularies have **not** been diffed
+tool-by-tool on this base, so "union vocabulary" is a plan, not a measured scope — and ~100 of
+the 140 addresses are unread (`Gap 563-A`). Scope the port only after that diff.
+
+---
+
+### 🔵 `P-563-B` — **Low-bandwidth SMS/WhatsApp tutor for African deployments** (unserved shape — recorded as a build thesis, not a ready recipe)
+
+🟢 **Why it is on this list:** the per-country leg found real, evidenced AI-in-education in
+Africa — **M-Shule** (Kenya, SMS/WhatsApp/Telegram since 2017, refugees in Kakuma and Dadaab,
+30+ Kenyan counties, 🟢 **a peer-reviewed outcome study in the *British Journal of Educational
+Technology*, 2025**) and **AltSchool Africa** (Nigeria, "AI for 10M Africans", 50+ pilot centres,
+250 000+ learners) — and 🔴 **both are commercial with no open-source grant.**
+
+🔴 **And the code leg nilled:** a GitHub API search for African-origin education agents returned
+**35 results, none of them education repositories.** There is no African-origin open-source
+education agent above trivial stars.
+
+🔵 **The constraint that makes this a distinct build, not a port:** this market runs on **SMS and
+WhatsApp**, chosen for 2G reach and feature phones. The whole agent shelf on this base assumes a
+browser, a modern runtime and often a GPU. 🟢 **A tutor whose entire interaction budget is a
+160-character message and whose inference runs server-side is a different architecture**, not a
+responsive-design variant.
+
+What can be composed from this shelf, and what cannot:
+
+| Layer | Status |
+|---|---|
+| Pedagogy / assessment logic | 🟢 **available** — `GarethManning/education-agent-skills` (931★, MIT-family skills) |
+| Curriculum grounding pattern | 🟢 **available as a reference implementation** — `ThallesYVasconcelos/Agente-Educacional` (EduRAG, MIT): national-curriculum RAG with page-level citations and a Self-RAG hallucination check. Built for Brazil's BNCC; **the pattern transfers, the corpus does not** |
+| Turn-level tutoring loop | 🟡 **adaptable** — `HKUDS/DeepTutor`'s persistent learner model, but its UI assumptions must be discarded |
+| 🔴 **SMS/WhatsApp channel adapter with a low-bandwidth session model** | 🔴 **NO verified open-source base on this shelf.** This is the missing piece and the actual build |
+
+🔴 **Stated as a gap, not sold as a recipe:** this base has verified **no** open-source SMS/
+WhatsApp education channel adapter, and the two named operators are closed. Until a channel
+adapter is verified or written, `P-563-B` is a **thesis with evidence behind it**, not a wiring
+diagram. Registered as `Gap 563-B`: find or write the low-bandwidth channel layer.
+
 ## 🆕 `p562` — `2026-10-31` — **🟢 `P562-A`: THE LICENCE GATE A STUDIO SHOULD ACTUALLY SHIP IN WEEK ONE — wired from four Apache-2.0 scanners this shelf already carries, plus the normalising comparator that stops it rejecting **41.8 %** of the components the proposal recommended. 🔵 Concrete because every component, pin and clause test in it was run first-hand this pass.**
 
 🔴 **The problem this pattern exists to solve is measured, not imagined.** A naive licence gate —

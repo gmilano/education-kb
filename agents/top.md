@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p563` — `2026-10-31` — **🔴 THE GENERIC DISCOVERY LEGS ARE EXHAUSTED: the eight prescribed queries and two star-ranked GitHub sweeps returned FOURTEEN candidates and ZERO new addresses.** 🟢 **The pass's supply came from the two instruments `p562` named instead — a per-country leg (EMEA's African half) and a platform-API census (16 new Moodle addresses).**
+
+🔴 **This pass's first draft claimed the GitHub REST API was a new channel and that the Moodle
+census was "off by an order of magnitude". Both were false, and both contradicted corrections
+already on this base — the exact defect
+[§ the Moodle correction](#-the-moodle-mcp-census-was-wrong-on-both-its-numbers-and-this-base-already-knew)
+names.** The claims were withdrawn before they were written to the shelf. Recorded because the
+near-miss is the reusable part:
+
+| Claim drafted | Why it was false |
+|---|---|
+| 🔴 *"the REST API is reachable **this pass** — prior passes recorded it blocked"* | 🟢 **It has been a documented channel for dozens of passes.** This file's own channel table already reads `MCP search_repositories │ 200 — 2 sweeps, 104 rows │ stars, spdx_id, created_at, pushed_at at population scale`, and `p529` took its census figures from it |
+| 🔴 *"`NOASSERTION` is a grant state the prose channel cannot see"* | 🟢 **Held in all eight files**, plus four `compose/code` READMEs — `p201`'s licence-channel work named it |
+| 🔴 *"the census shelved thirteen addresses; the field is ~140"* | 🟢 [`../repos/foundations.md`](../repos/foundations.md) has headed its Moodle section **"222 addresses, not eleven; ceiling 52★ and ungranted"** since `p529`. **222 > 140.** The thirteen-address figure is a *sub-census* this file quotes, already corrected one page away |
+
+🔵 **The lesson is the one `Gap 538-C` already registered**: a numeric claim about an address on
+one page is not compared against the same address on another, and `crosspage.py` keys on licence
+tokens, not numbers. 🔴 **An incoming pass reading only the newest section will re-derive the
+stale figure every time.** This is now the *third* recorded instance of this defect class.
+
+### 🟢 What actually survives from this pass's legs
+
+**Two measured deltas**, both from the platform field:
+
+| Address | base held | 🟢 read `2026-10-31` | Δ |
+|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `51 571★` (`p555`) | 🟢 **`51 803★`** · 6 348 forks · 281 open issues · pushed `2026-10-31` | **+232** |
+| [`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp) | `52★`, ungranted (`p529`) | 🟢 **`54★`**, `license: null` | **+2**, 🟢 **ungranted CONFIRMED** |
+
+🔴 An aggregator on the same leg offered `~50 000★` for `DeepTutor` — **1.6 % low**, and
+`p562`'s refusal of it was correct. 🔵 `DeepTutor` was created `2025-12-28` and still pushes
+daily: at 51.8 k★ with 6 348 forks it is no longer a spike, it is **the category's incumbent**.
+
+**Saturation, measured rather than asserted.** Every fact the eight queries returned was held —
+IESALC's 87/74/26/9, the LAC Observatory, the 716 instruments, Ipsos, Gallup's 60 %, the 134
+bills across 31 states, `NY A 9190`, the K-12 AI Literacy Act, `$42.48 B`/`40.9 %`, Vietnam's AI
+Law, PISA 2025, Ceibal, ProFuturo, IRCAI, LearnHarness, Maryland. Two star-ranked GitHub sweeps
+(`stars:>50 pushed:>2026-09-01`; `topic:education topic:ai`) surfaced **fourteen** repositories
+and 🔴 **all fourteen were held**: `education-agent-skills`, `judge0`, `classroomio`,
+`learnhouse`, `PageLM`, `penecho`, `Echo-Loop`, `Wisepen`, `AI-Marker-Suite`, `zoonk`,
+`kaogong-shuati`, `OpenTutor`, `ai-shifu`, `StealthHumanizer`.
+
+🟢 **Supply did not stop; the *generic* surface is simply exhausted at 563 passes.** The two legs
+that paid were both ones `p562` named in advance: a **per-country leg**, which returned EMEA's
+African half entire ([`../intel/market.md`](../intel/market.md)), and a **narrow-query API
+census**, which returned 16 addresses new to this base
+([`../repos/foundations.md`](../repos/foundations.md)). 🟢 **Registered as the standing
+instruments. The generic eight are a regression test, not a discovery leg.**
+
 ## 🆕 `p562` — `2026-10-31` — **🟢 `561-F` CLOSED WITH THE DENOMINATOR IT LACKED: every Apache-2.0 and AGPL-3.0 row this base sells was re-graded against `p561`'s pins — **91 rows**, not *"5 of an unknown total"* — and 🔴 **38 of 91 (41.8 %) are canonically VERBATIM while a raw-byte gate reports them MODIFIED.** 🟢 `p561`'s pins REPRODUCE **14 of 14** from an independent re-implementation. 🔴 **AND THIS PASS'S OWN 12 APPARENT SHELF DEFECTS ARE RETRACTED IN FULL — it made `p455`'s adjacency error twice in one hour.**
 
 🟢 **The population is now named.** 104 `(repo, family)` pairs carrying `Apache-2.0` or `AGPL-3.0`

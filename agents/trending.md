@@ -4,6 +4,62 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p563` — `2026-10-31`
+
+> **🟢 New channel, not new agents.** The discovery legs returned **zero** new shelf-grade
+> agents this pass; the movement is in **how** the shelf is read. History below, untouched.
+
+### 🟢 The authoritative figure: `DeepTutor` read from the platform, not an aggregator
+
+| Repo | Grant (`spdx_id`, platform) | ★ (platform, `2026-10-31`) | Forks | Open issues | Created | Pushed |
+|---|---|---|---|---|---|---|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟡 read separately — API star leg only | 🟢 **51 803** | 6 348 | 281 | `2025-12-28` | `2026-10-31` |
+
+🔴 An aggregator on the same leg offered **`~50 000★`**; the shelf carried **`51 571★`**.
+🟢 **The API settles it at `51 803★`** — the aggregator was low, the shelf was close, and
+`p562`'s refusal of the aggregator figure is vindicated. 🔵 **`DeepTutor` is now ten months old
+and still pushing daily** (created `2025-12-28`, pushed today): at 51.8 k★ with 6 348 forks it is
+not a spike any more, it is **the category's incumbent**.
+
+### 🔴 Fourteen discovery candidates, fourteen already held
+
+Two independent GitHub API legs — one by stars-and-recency (`stars:>50 pushed:>2026-09-01`), one
+by `topic:education topic:ai` — surfaced: `education-agent-skills`, `judge0`, `classroomio`,
+`learnhouse`, `PageLM`, `penecho`, `Echo-Loop`, `Wisepen`, `AI-Marker-Suite`, `zoonk`,
+`kaogong-shuati`, `OpenTutor` (`zijinz456`), `ai-shifu`, `StealthHumanizer`. 🔴 **All fourteen
+were already on this base.** Recorded so the blank is not mistaken for coverage: **the
+star-ranked discovery surface for education AI is exhausted at 563 passes.**
+
+### 🟢 Where the movement actually was: the Moodle bridge field
+
+**16 new addresses** and a corrected field size (`total_count: 140` against a shelved census of
+thirteen) — full census, licences and the copyleft-tracks-integration-shape finding in
+[`../repos/foundations.md`](../repos/foundations.md). The trending signal inside it:
+
+| Repo | Grant | ★ | Pushed | Signal |
+|---|---|---|---|---|
+| [`IsaacAnwar/moodle-mcp`](https://github.com/IsaacAnwar/moodle-mcp) | 🟢 `MIT` | 9 | 🟢 **`2026-10-30`** | most recently pushed **permissive** bridge in the field |
+| [`FiredMosquito831/ase-moodle-mcp`](https://github.com/FiredMosquito831/ase-moodle-mcp) | 🟢 `Apache-2.0` | 1 | 🟢 `2026-10-30` | |
+| [`Ilya-Grigoryev/moodle-student-mcp`](https://github.com/Ilya-Grigoryev/moodle-student-mcp) | 🟢 `MIT` | 6 | 🟢 `2026-10-27` | 🔵 only **role-scoped** bridge seen — student-only surface |
+| [`EduardoKrausME/moodle-local_mcp`](https://github.com/EduardoKrausME/moodle-local_mcp) | 🔴 `GPL-3.0` | 2 | 🟢 `2026-10-29` | in-tree Moodle plugin — copyleft by construction |
+| [`falkenslab/moodle-mcp`](https://github.com/falkenslab/moodle-mcp) | 🟢 `MIT` | 2 | 🟢 `2026-10-28` | |
+
+🔴 **Against that: [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server)
+(45★, `MIT`) — the base's permissive ceiling — has not been pushed since `2026-02-22`.**
+🔵 **Star rank and maintenance rank disagree in this field**, and seven bridges pushed inside the
+last two weeks while the ceiling sat still for eight months.
+
+### 🔴 Instrument note — a claim this pass drafted and withdrew
+
+🔴 **This pass nearly recorded the GitHub REST API as a *new* channel and `NOASSERTION` as a
+*new* grant state. Both are long-held**: [`../agents/top.md`](../agents/top.md) already carries
+`MCP search_repositories` in its channel table at population scale, `p529` took its census
+figures from it, and `NOASSERTION` appears in all eight files plus four `compose/code` READMEs.
+🔵 **What is true is narrower and worth keeping:** `curl` to `github.com` and `api.github.com`
+both answer `403` from this session, so the MCP server is the **only** working first-hand
+channel here — and the API reports the platform's *match*, not the grant file's bytes, so
+`Gap 556-B` stays open. Full withdrawal note in [`../agents/top.md`](../agents/top.md).
+
 ## 🆕 `p562` — `2026-10-31` — **🔴 ZERO NEW ADDRESSES FOR A SECOND CONSECUTIVE PASS — but both of this shelf's two largest agents SHIPPED A RELEASE IN THE LAST 72 HOURS, and one of them refutes a licence claim being published about it right now. 🟢 `DeepTutor` **51.8k★ · v1.7.0 · 2026-10-28**; 🟢 `OpenMAIC` **41.9k★ · v1.3.0 · 2026-10-29**. 🔴 A trade blog is calling `DeepTutor` MIT; it is **Apache-2.0**, read first-hand this pass.**
 
 🔵 **This page is append-only.** The grading work this pass is on

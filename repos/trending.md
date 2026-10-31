@@ -4,6 +4,55 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p563` — `2026-10-31`
+
+> **🟢 16 Moodle-bridge addresses new to this base.** Append-only: history below is untouched.
+
+### 🟡 Denominator, stated before the rows — this section's predecessors got it wrong twice
+
+This pass ran the **narrow** query `moodle mcp in:name` → `total_count: 140`, and read the
+**top 40 by stars** first-hand. 🟢 **That is consistent with, and narrower than, the `222
+addresses` [`foundations.md`](foundations.md) has carried since `p529`** — a broader sweep.
+🔴 **140 is NOT a correction to 222.** ~100 of the 140 are unread (`Gap 563-A`), and name-matching
+includes forks and near-duplicates, so neither figure counts distinct codebases.
+
+### 🆕 New addresses this pass (16), with platform-resolved grants
+
+| Repo | ★ | Grant (`spdx_id`) | Lang | Pushed |
+|---|---|---|---|---|
+| [`Mattlo0546/moodle-mcp`](https://github.com/Mattlo0546/moodle-mcp) | 2 | 🟢 `MIT` | Python | `2026-10-20` |
+| [`ralstonraphael/moodle-mcp`](https://github.com/ralstonraphael/moodle-mcp) | 2 | 🟢 `MIT` | Python | `2026-10-19` |
+| [`Neudron/moodle-mcp`](https://github.com/Neudron/moodle-mcp) | 2 | 🟢 `MIT` | **Rust** | `2026-09-23` |
+| [`1RAFTIK1/mirea-moodle-mcp`](https://github.com/1RAFTIK1/mirea-moodle-mcp) | 2 | 🟢 `MIT` | **Go** | `2026-10-13` |
+| [`kaduvelasco/moodle-dev-mcp`](https://github.com/kaduvelasco/moodle-dev-mcp) | 2 | 🔴 `GPL-3.0` | — | `2026-05-20` |
+| [`haolamnm/moodle-mcp-srv`](https://github.com/haolamnm/moodle-mcp-srv) | 2 | 🟢 `Apache-2.0` | Python | `2026-07-23` |
+| [`sebasfn9710dev/moodle-mcp-forum-summarizer`](https://github.com/sebasfn9710dev/moodle-mcp-forum-summarizer) | 1 | 🟢 `MIT` | Python | `2025-09-23` |
+| [`ShinonomeLabo/moodle-mcp`](https://github.com/ShinonomeLabo/moodle-mcp) | 1 | 🟢 `MIT` | TypeScript | `2026-02-11` |
+| [`Nicolas-Prn/moodle-mcp`](https://github.com/Nicolas-Prn/moodle-mcp) | 1 | 🟢 `MIT` | Python | `2026-10-18` |
+| [`armenbarseghyan/moodle-mcp`](https://github.com/armenbarseghyan/moodle-mcp) | 1 | 🔴 **`NOASSERTION`** | **Go** | `2026-10-03` |
+| [`franciscodngferreira/Moodle-MCP`](https://github.com/franciscodngferreira/Moodle-MCP) | 1 | 🔴 none | Python | `2026-07-14` |
+| [`jonycheung/deadsimple-moodle-mcp`](https://github.com/jonycheung/deadsimple-moodle-mcp) | 1 | 🔴 `GPL-3.0` | **PHP** | `2026-10-10` |
+| [`alnyx-dev/PGEK-moodle-mcp`](https://github.com/alnyx-dev/PGEK-moodle-mcp) | 1 | 🟢 `MIT` | Python | `2026-09-08` |
+| [`1alexandrer/moodle-mcp-test`](https://github.com/1alexandrer/moodle-mcp-test) | 1 | 🟢 `MIT` | TypeScript | `2026-04-19` |
+| [`1alexandrer/moodle-mcp-2`](https://github.com/1alexandrer/moodle-mcp-2) | 1 | 🔴 none | — | `2026-04-19` |
+| [`ONPUslop/el-moodle-mcp`](https://github.com/ONPUslop/el-moodle-mcp) | 1 | 🔴 none | Python | `2026-10-05` |
+| [`ernesto-butto/moodle-mcp-server`](https://github.com/ernesto-butto/moodle-mcp-server) | 1 | 🟢 `MIT` | TypeScript | `2026-02-08` |
+
+### 🔵 What the shape of this list means
+
+🟡 **Almost every one is a single-author institutional artefact** — `mirea` (MIREA, Moscow),
+`unnc` (Nottingham Ningbo), `utn` (UTN, Argentina), `el-` (ONPU, Odesa), `PGEK`, `ase`.
+🔵 **This is not a market with contenders. It is dozens of students independently rebuilding the
+same bridge against their own university's Moodle** — which is what *"fragmentation with no
+convergence"* looks like from underneath, and 🟢 **exactly the condition under which one
+well-maintained permissive bridge consolidates the demand.** Recipe in
+[`../compose/patterns.md`](../compose/patterns.md).
+
+🟢 **Five languages now carry a permissive Moodle bridge** — Python, TypeScript, JavaScript,
+**Rust** (two: `G36maid` 27★, `Neudron` 2★) and **Go** (`1RAFTIK1`). 🔴 **PHP carries none**, and
+[`../repos/foundations.md`](../repos/foundations.md) shows why: PHP means in-tree plugin, and
+Moodle core's `GPL-3.0` propagates.
+
 ## 🆕 `p562` — `2026-10-31` — **🟢 THE WHOLE APACHE/AGPL SHELF WAS RE-READ BLIND — **91 in-family rows** — AND THE REPRODUCTION RATE IS THE HEADLINE: `p561`'s 14 pins came back **14 of 14 EXACT** from an independently re-implemented instrument. 🔴 AND A FIGURE *THIS PAGE'S NEIGHBOUR* PUBLISHES IS STILL ON THE RETIRED CONVENTION: `sakai` at `11 119 B` against this pass's `11 120 B`.**
 
 🔵 **This page is append-only**, so the reconciliations below are recorded here rather than rewritten

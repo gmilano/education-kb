@@ -4,6 +4,95 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p563` — `2026-10-31` — **🟢 EMEA'S AFRICAN HALF IS NO LONGER UNPROBED: the per-country leg `p562` named as the right instrument was run, and it paid — named deployments, one peer-reviewed, all commercial.** 🔴 **And the code leg NILLED: there is no African-origin open-source education agent above trivial stars.**
+
+🟢 **`p562` wrote that EMEA *"is not an African blank plus a European shelf — it is a European
+shelf with an unprobed African half, and the right instrument is a per-country leg."* That leg
+ran this pass.** It returned six facts, 🟢 **none of which this base held** (`M-Shule`,
+`AltSchool Africa`, the `8.1 %` adoption figure, the six-country UNESCO pilot, Nigeria's NDEPS
+and the `250 000` learner figure all returned **zero** prior hits across all eight files).
+
+### 🔵 The architectural reason the open-source shelf does not reach this market
+
+Africa's shipped AI-in-education runs on **SMS and WhatsApp**, not on web applications — a
+channel chosen for 2G reach, feature phones and intermittent connectivity. 🔵 **That is a
+delivery-channel constraint, and it is why the agent shelf on this base — which assumes a
+browser, a modern runtime and often a GPU — does not intersect this market at all.**
+🟢 **An agent that speaks SMS/WhatsApp against a low-bandwidth budget is an unserved shape, and
+it is the one build this region's evidence actually calls for.**
+
+## Opportunities by region
+
+### North America
+
+🔴 **Nil new supply this pass — fifth consecutive measured blank, recorded rather than left
+silent.** The leg returned Gallup's 60 % teacher-use figure, the 134 bills across 31 states, the
+Maryland/Idaho/Oklahoma/Virginia mandatory-district-policy quartet, `NY A 9190`, the US DoE
+supplemental priority of `2026-04-13` and the K-12 AI Literacy and Readiness Act — 🔴 **all
+already shelved.** 🟡 The standing opportunity is unchanged: governance is the stated barrier,
+not capability, so **the sellable artefact is the policy-and-evaluation layer**, not another
+tutor.
+
+### EMEA
+
+🟢 **The pass's new supply, all of it. European half: no new instruments — the regulatory picture
+is stable for a sixth consecutive leg** (`Regulation (EU) 2026/1744`, Annex III education
+→ `2027-12-02`, Annex I → `2028-08-02`, Article 50 transparency live since `2026-08-02`).
+🟢 **African half, probed first-hand per country:**
+
+| Player | Country | What it is | Grant |
+|---|---|---|---|
+| **M-Shule** | 🟢 Kenya (Nairobi), operating since **2017** | SMS + WhatsApp + Telegram + web learning platform. AI drafts quizzes, recaps and five-minute *"Refresh"* sessions. Delivered to refugees in **Kakuma** and **Dadaab**, farmers in Tanzania, and families across **30+ Kenyan counties** | 🔴 **commercial — no open-source licence found** |
+| **AltSchool Africa** | 🟢 Nigeria | Commercial digital learning platform; **20 000** students enrolled from Nigeria, Kenya, Ghana, Rwanda and the UK as of Sep 2023. CEO **Adewale Yusuf**. **"AI for 10M Africans"** initiative; AI-literacy network reported at **50+ pilot centres** across Ghana, Nigeria, Uganda and Kenya serving **250 000+ learners** | 🔴 **commercial** |
+
+🟢 **M-Shule carries the strongest evidence base of any artefact on this leg, in either
+half:** a peer-reviewed study in the ***British Journal of Educational Technology*** (2025)
+found that literacy material delivered through its SMS platform **improved learning outcomes**.
+🔵 **That is a randomised-evidence claim for an AI-assisted delivery channel, and this base holds
+no European or North American equivalent** — the rigour is in Africa, and the shelf had none
+of it.
+
+🟡 **Founder attribution is unresolved and is recorded as such:** Tracxn gives *Julie Otieno,
+2016*; an October-2026 article gives *Claire Mongeau*. Two sources, two names, not reconciled —
+carried as conflicting, not adopted.
+
+**Policy, per country:**
+- 🟢 **Kenya** — National AI Strategy **2025–2030** names education and skills development, proposing teacher training and AI content in schools. 🔴 **Generative-AI adoption reported at `8.1 %`**, behind South Africa. 🔵 **The binding constraint is named as implementation, not policy**: a rural teacher without reliable connectivity, devices or training cannot act on a strategy document.
+- 🟡 **Nigeria** — the **National Digital Economy Policy and Strategy (2020–2030)** references AI, but education use is assessed as **aspirational rather than systemic**.
+- 🟡 **South Africa** — draft national AI policy; its **education pillar covers STEAM curricula and community AI centres**. (This base already carries the `2026-04-10` publication / `2026-04-27` reported abrogation pair, still unconfirmed on two readings.)
+- 🟢 **UNESCO** is piloting **AI-readiness assessments across six Southern African countries** to guide national AI-in-education policy. 🆕 New to this base.
+
+🔴 **And the code leg nilled, explicitly.** A GitHub API search for African-origin education
+agents (`Kenya`, `Nigeria`, `Africa`, `Swahili`, `curriculum` across name, description and
+readme) returned **35 results of which not one was an education repository** — the ranking
+filled with crypto and MCP repositories matching unrelated tokens. 🔴 **There is no
+African-origin open-source education agent above trivial stars.** 🟢 **So EMEA's African half is
+now *characterized* rather than unprobed:** real deployments, commercial, channel-first, one
+peer-reviewed, and **open-source-absent**. That is a finding, not a gap.
+
+### APAC
+
+🔴 **Nil new supply — every instrument returned was held.** South Korea's AI Basic Act
+(`2026-01-22`), **Vietnam's Law on AI in force `2026-03-01` with an 18-month transition for
+education**, China's registration and content-labelling regime with penalties to ¥50 M, India's
+AI-content labelling (`2026-02-20`), Japan's voluntary posture, Singapore's AI Verify, and the
+Ipsos Education Monitor 2026 ban-support movements (Japan 21→29 %, Australia 47→52 %, Korea
+27→31 %, Indonesia 30→23 %) — 🔴 **all already shelved.** 🟢 APAC remains the region with the
+most *code* supply on this base (`Echo-Loop`, `Wisepen`, `AI-Marker-Suite`, `kaogong-shuati`),
+and all four were held too.
+
+### LATAM
+
+🔴 **Nil new supply — a measured blank, stated rather than inferred.** The leg returned UNESCO
+IESALC's 87 % / 74 % / 26 % / 9 % figures, the LAC Observatory (launched `2026-04-14`), the
+Universidad de los Andes count of **716 regulatory instruments across 23 countries**, PISA 2025's
+nine-in-ten chatbot use across 13 countries, and Brazil's 53 %-of-administrators / 22 %-with-
+guidelines split — 🔴 **all already shelved.** 🟡 The standing LATAM reading is unchanged and
+still the sharpest opportunity statement on this base: **adoption is high, governance is
+absent** (26 % with a strategy, 9 % evaluating), so the sellable artefact is **evaluation and
+governance**, and the region's shipped open-source strength remains **school management**
+(`portabilis/i-educar`), not agents.
+
 ## 🆕 `p562` — `2026-10-31` — **🔴 ALL FOUR REGIONAL LEGS RETURNED ZERO NEW INSTRUMENTS IN THE SAME PASS — the second simultaneous four-region saturation this base has measured, and every null is published with the probe that proves it. 🟢 THE ONE THING THE DEMAND SIDE PAID THIS PASS IS A *PARTITION INSIDE A DATE ALREADY CARRIED*: the US DoE priority is shelved as **published `2026-04-13`** and this pass's source gives it **effective `13 May 2026`** (`562-E`). 🔴 `560-G`'s SELF-DISAGREEING BILL COUNT RETURNED AN EIGHTH TIME AND IS REFUSED A SEVENTH.**
 
 🔵 **Legs run:** WebSearch **8** — 4 global (supply, trending, verticals, trends) and 4 regional

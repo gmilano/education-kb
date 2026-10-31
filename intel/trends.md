@@ -4,6 +4,80 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p563` — `2026-10-31`
+
+### 🔴 T1 — The newest section is where stale figures get re-derived, and this pass nearly did it again
+
+🔴 **This pass drafted three claims that were all false and all contradicted corrections already
+on this base**: that the GitHub REST API was a newly-opened channel (it is in `agents/top.md`'s
+channel table and `p529` took census figures from it), that `NOASSERTION` was a state the prose
+channel could not see (it is held in all eight files), and that the Moodle census was *"off by an
+order of magnitude"* (`foundations.md` has headed that section **"222 addresses, not eleven"**
+since `p529` — above this pass's narrower 140, not below it). 🟢 **All three were withdrawn
+before reaching the shelf.**
+
+🔵 **This is the third recorded instance of the defect class `Gap 538-C` names:** a numeric claim
+about an address on one page is never compared against the same address on another, and
+`crosspage.py` keys on **licence tokens, not numbers**. 🔴 **An incoming pass that reads only the
+newest section will re-derive the stale figure every time** — the file's own corrections sit
+thousands of lines below the head. 🟢 **The durable fix is a numeric cross-page gate**, and until
+it exists the mitigation is procedural: **grep the base for a figure before publishing it as
+new.** That grep is what caught all three here.
+
+### 🔴 T2 — Discovery by star rank is exhausted for education AI; the surface that still pays is the API and the per-country leg
+
+The eight prescribed queries plus two GitHub star-ranked discovery legs returned **zero** new
+shelf-grade agents and **zero** new repos: fourteen candidates surfaced, **fourteen held**.
+🔵 **The signal is about instruments, not supply.** The same session's *API census* leg returned
+**16 new addresses** and a field size an order of magnitude above the shelved one, and the
+*per-country* leg returned EMEA's entire African half. 🟢 **Generic queries are now a regression
+test on this base. Discovery means the platform API, or a country.**
+
+### 🔵 T3 — In open-source LMS extension, the licence question is *fork or call* — and calling is already available
+
+Across 40 Moodle-MCP implementations read first-hand, every in-tree PHP plugin is `GPL-3.0` or
+ungranted and every permissive one is an out-of-tree bridge. 🔴 **This pass first read that as
+"permissive requires an out-of-tree bridge". That is wrong**, and `p383` already held the
+correction: Moodle's **own plugin directory** ships `webservice_mcp` (release `2026-07-23`),
+serving external functions as MCP tools over **JSON-RPC 2.0** gated on `webservice/mcp:use`, and
+an agent can read and write the LMS through it **with no fork and therefore no GPL exposure.**
+
+🟢 **The real rule: consuming a `GPL-3.0` plugin over its API is not a derivative work; forking
+it is.** The language split is a *proxy* for fork-vs-call — PHP authors are modifying Moodle,
+everyone else is calling it — not a cause. 🔵 **The trend worth watching is that the cheapest
+permissive path is now an install rather than a build**, which moves the Moodle opportunity on
+this base from *"write a bridge"* to *"wire the stock plugin to an agent"*.
+
+### 🔴 T4 — The permissive ceiling of a fragmented field is not its maintained head
+
+`peancor/moodle-mcp-server` (45★, `MIT`) is this base's permissive ceiling and has not been
+pushed since `2026-02-22`. Seven bridges pushed inside the last two weeks, the most active
+permissive one being `IsaacAnwar/moodle-mcp` at **9★**. 🔵 **Star rank and maintenance rank
+disagree by a factor of five here**, and in a field of single-author institutional artefacts
+that is the normal case, not an anomaly. 🟢 **Consolidation bases should be selected on recent
+commit activity and grant state, never on stars.**
+
+### 🔵 T5 — Africa's AI-in-education is channel-first, commercial, and carries the leg's only randomised evidence
+
+Kenya's **M-Shule** (SMS/WhatsApp/Telegram, since 2017, refugees in Kakuma and Dadaab, 30+
+Kenyan counties) and Nigeria's **AltSchool Africa** ("AI for 10M Africans", 50+ pilot centres
+across four countries, 250 000+ learners) are both 🔴 **commercial, with no open-source grant**.
+🟢 **And M-Shule carries a peer-reviewed outcome study** — *British Journal of Educational
+Technology* (2025), SMS-delivered literacy material improving learning outcomes. 🔵 **This base
+holds no European or North American equivalent: the strongest evidence on the shelf is
+African.** The architectural consequence is the actionable part: this market runs on **SMS and
+WhatsApp for 2G reach and feature phones**, so 🟢 **a low-bandwidth, SMS/WhatsApp-native agent is
+an unserved shape** — and the browser-and-GPU agent shelf does not touch it.
+
+### 🟡 T6 — Carried unchanged: the regulatory picture is stable, and stability is the finding
+
+A sixth consecutive leg returned `Regulation (EU) 2026/1744` with Annex III education at
+`2027-12-02`, Annex I at `2028-08-02`, and Article 50 transparency **already in force since
+`2026-08-02`**. 🟢 `p560`'s partition — **the conformity programme is deferred to 2027, the
+disclosure duty is live now** — has survived six independent legs unchanged and is safe to put
+in a client proposal. 🔴 Still single-sourced to law-firm and consultancy commentary: no
+EUR-Lex or OJ page has been reachable from this session.
+
 ## 🆕 `p562` — `2026-10-31` — **🟢 A NEW TREND THIS SHELF CAN NOW STATE AS A RATE RATHER THAN AN ANECDOTE: *"permissively licensed"* AND *"clears a licence gate"* HAVE COME APART, AND THE GAP IS **41.8 %** OF THE APACHE/AGPL ROWS THIS BASE SELLS. 🟢 AND THE AGENTIC-TUTOR TIER HAS SETTLED INTO A RELEASE CADENCE: BOTH TOP ROWS SHIPPED INSIDE 72 HOURS.**
 
 ### 🟢 `T562-A` — the licence-gate gap is now a measured quantity, and it is a delivery risk

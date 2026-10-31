@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p563` — `2026-10-31` — **🔵 THE LICENCE OF A MOODLE EXTENSION IS DECIDED BY WHERE IT RUNS, NOT BY WHO WRITES IT — and that governs every Moodle engagement on this shelf.**
+
+Moodle is the sector's largest LMS and the single most likely platform under a Globant education
+engagement. 🟢 **This pass read 40 Moodle-MCP implementations' grants first-hand from the GitHub
+API** ([census in `../repos/foundations.md`](../repos/foundations.md)) and the grant state sorts
+cleanly by **integration shape**:
+
+| What you do with Moodle's code | Example | Grant consequence for what **you** ship |
+|---|---|---|
+| 🟢 **Call it** — install the stock plugin, talk to it over JSON-RPC / the web-service API from your own process | Moodle's own `webservice_mcp` plugin (directory release `2026-07-23`, Moodle 4.5–5.2), gated on `webservice/mcp:use` | 🟢 **No copyleft obligation on your agent.** Separate program, deployed infrastructure. Your repo stays `MIT`/`Apache-2.0` |
+| 🔴 **Fork it** — modify an in-tree plugin or Moodle itself | any `local_*` / `webservice_*` fork | 🔴 **`GPL-3.0` attaches to your derivative** and travels with delivery |
+
+🔵 **The question is not "in-tree or out-of-tree" — it is "do we fork, or do we call?"**
+🟢 **Calling is almost always available, and it is the cheaper answer**, because Moodle already
+ships the MCP surface in its own plugin directory. 🔴 This pass first drafted the rule as
+*"permissive requires an out-of-tree bridge"*, which is **wrong** — it would have pushed an
+engagement into rewriting a bridge it could simply have installed.
+
+> 🟢 **Standing rule for Moodle work on this shelf:** install the stock plugin and keep the agent
+> in its own repository. Fork only for a capability the web-service surface genuinely cannot
+> express — and when you must fork, `GPL-3.0` is not a risk to manage but **the only available
+> outcome**, so it belongs in the commercial conversation at proposal time.
+
+🟡 **Limits:** the GPL's reach across process and API boundaries is argued rather than judicially
+settled, and nothing here is legal advice. 🟡 Note also `Gap 563-C`: the plugin's apparent GitHub
+mirror [`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp)
+(18★) resolves to `license: null` on the platform field — **take the plugin from Moodle's plugin
+directory, not from that mirror**, until its grant is located.
+
+### 🔴 The customisation target itself is unchanged, and still unserved
+
+Moodle has the largest install base and plugin ecosystem in the sector and 🔴 **still no serious
+agent bridge**: the field's most-starred implementation
+([`loyaniu/moodle-mcp`](https://github.com/loyaniu/moodle-mcp), 🟢 **54★** confirmed this pass)
+resolves to 🔴 **`license: null`** on the platform — **no grant at all**, so it cannot be built
+on. Compare `canvas-mcp` at 308★ with a grant. 🟡 **But the gap is narrower than this shelf has been
+calling it.** `p383` found the MCP surface already shipping in **Moodle's own plugin directory**,
+so the opportunity is not *"write a bridge"* — it is 🟢 **"install the stock plugin and wire an
+agent to it"**, with a consolidated permissive bridge needed only where the plugin cannot be used
+(Moodle < 4.5, estates that will not install it, or an unexposed tool surface). See
+[`../compose/patterns.md`](../compose/patterns.md).
+
 ## 🆕 `p562` — `2026-10-31` — **🟢 THE APEREO TIER'S GRANT IS `ECL-2.0` AND THIS PASS PINNED IT AS *UNPINNABLE* — 4 sources, 4 distinct digests at five normalisation stages, and the one thing all four share is the clause that matters: **the patent grant is narrowed to education**. 🟢 THAT IS A PROCUREMENT ADVANTAGE AND A DILIGENCE QUESTION IN THE SAME SENTENCE, AND THIS PAGE NOW STATES BOTH.**
 
 🔵 **Nothing about the three rows' *verdicts* changes.** [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai),

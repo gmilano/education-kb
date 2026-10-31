@@ -4,6 +4,115 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p563` — `2026-10-31` — **🟢 16 ADDRESSES NEW TO THIS BASE, and the ceiling re-measured: `loyaniu/moodle-mcp` at `54★` with `license: null` CONFIRMED from the platform field.** 🔴 **And a licence rule this pass drafted WRONG and corrected against `p383`: the question is FORK-vs-CALL, not in-tree-vs-out-of-tree — and Moodle already ships the MCP surface in its own plugin directory.**
+
+🟡 **Scope stated first, because this section's predecessors got their denominators wrong twice.**
+This pass ran the **narrow** query `moodle mcp in:name`, which answers `total_count: 140`, and
+read the **top 40 by stars** first-hand. 🟢 **That is consistent with — and narrower than — the
+`222 addresses` this section has carried since `p529`**, which came from a broader sweep. 🔴 **140
+is not a correction to 222 and must not be read as one.** ~100 of the 140 are unread
+(`Gap 563-A`), and name-matching includes forks and near-duplicates, so neither figure counts
+distinct codebases.
+
+### 🟢 The ceiling, re-measured — the `p529`/`p538` finding holds and gains a figure
+
+| | base held (`p529`, `p538`) | 🟢 platform field, `2026-10-31` |
+|---|---|---|
+| `loyaniu/moodle-mcp` stars | `52★` | 🟢 **`54★`** (+2) |
+| `loyaniu/moodle-mcp` grant | *"no licence entry in its sidebar and none in its title block"* | 🟢 **`license: null`** — the platform resolves **no grant at all** |
+
+🟢 So the field's most-starred bridge with the richest tool vocabulary (24 tools) is **confirmed
+unbuildable-on from two independent channels**. The commercial consequence `p538` drew is
+unchanged: the practical permissive shelf remains `peancor` (MIT, 45★), `GhaithAlHallak8`
+(MIT, 40 tools) and `G36maid` (MIT, Rust, 22 tools).
+
+### 🔵 The reading that decides the build posture: copyleft tracks the integration shape
+
+🟡 **This is an inference over facts already on this base, not a new measurement.** Sorting the
+40 first-hand rows by language, the grant state stops looking author-dependent:
+
+| Integration shape | Language in practice | Grant states observed in the 40 |
+|---|---|---|
+| **In-Moodle plugin** (`local_*`, `webservice_*`) | PHP | 🔴 `GPL-3.0` ×2, ungranted ×1 — **no permissive instance** |
+| **External bridge** (speaks Moodle's web-service API) | Python · TypeScript · Rust · Go · JavaScript | 🟢 `MIT` ×24, `Apache-2.0` ×2, `GPL-3.0` ×2, `NOASSERTION` ×1, ungranted ×6 |
+
+🔴 **This pass first drafted the rule as *"an external bridge is the only shape that can be
+delivered permissively"*. That is WRONG, and `p383` already holds the correction**: Moodle's own
+plugin directory ships a `webservice_mcp` plugin (release `2026-07-23`, Moodle 4.5–5.2) serving
+external functions as **MCP tools over JSON-RPC 2.0**, gated on `webservice/mcp:use`, and `p383`
+recorded that an agent can read and write the LMS through it **"with no fork and therefore no GPL
+exposure."**
+
+🟢 **The rule that is actually right is about FORKING, not about being in-tree:**
+
+> 🟢 **Consuming** a `GPL-3.0` Moodle plugin over its JSON-RPC/web-service surface creates **no
+> copyleft obligation on the agent** — it is a separate program talking to deployed
+> infrastructure.
+> 🔴 **Forking or modifying** an in-tree plugin produces a derivative work of Moodle, and
+> `GPL-3.0` obligations attach to what you ship.
+
+🔵 **So the licence question is not "in-tree or out-of-tree" but "do we fork or do we call?"** —
+and the cheapest permissive answer is to **call the stock plugin and keep the agent in its own
+repository.** What the language split in the table above actually shows is that **anyone writing
+PHP here is modifying Moodle** (hence copyleft or ungranted), while anyone writing Python, TS,
+Rust or Go is **calling it** — the languages are a proxy for fork-vs-call, not a cause.
+
+🟡 **Limits:** `n = 3` on the PHP side, and the GPL's reach across process and API boundaries is
+argued rather than judicially settled. Nothing here is legal advice; verify per engagement.
+
+### 🔴 A discrepancy worth a probe: the official plugin's mirror resolves to NO licence
+
+[`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) — **18★**,
+PHP, the name of the plugin `p383` found in **Moodle's own plugin directory** — resolves on the
+platform field to 🔴 **`license: null`**. 🔵 **Moodle's plugin-directory policy requires
+GPL-compatible licensing**, so either this mirror is not the directory plugin, or it carries its
+grant somewhere the platform cannot resolve (a header block rather than a `LICENSE` path — the
+case `p383`'s own *"granted elsewhere"* correction describes). 🔴 **Not resolved this pass.**
+Registered as `Gap 563-C`: establish whether this repository is the directory plugin's canonical
+source and where its grant lives. 🟡 **Until then the stock plugin should be taken from Moodle's
+plugin directory, not from this mirror.**
+
+### 🟢 The permissive heads, with platform grants and activity
+
+| Repo | ★ | Grant (`spdx_id`) | Lang | Pushed | Note |
+|---|---|---|---|---|---|
+| [`peancor/moodle-mcp-server`](https://github.com/peancor/moodle-mcp-server) | 45 | 🟢 `MIT` | JavaScript | 🔴 `2026-02-22` | the permissive ceiling — and 🔴 **eight months unpushed** |
+| [`G36maid/moodle-mcp`](https://github.com/G36maid/moodle-mcp) | 27 | 🟢 `MIT` | Rust | 🟢 `2026-10-20` | the lineage's real head; on the official MCP SDK |
+| 🆕 [`1alexandrer/moodle-mcp`](https://github.com/1alexandrer/moodle-mcp) | 18 | 🟢 `MIT` | TypeScript | `2026-04-21` | best-starred TS bridge |
+| 🆕 [`SaadRahman01/moodle-mcp`](https://github.com/SaadRahman01/moodle-mcp) | 10 | 🟢 `MIT` | Python | `2026-06-06` | |
+| 🆕 [`IsaacAnwar/moodle-mcp`](https://github.com/IsaacAnwar/moodle-mcp) | 9 | 🟢 `MIT` | JavaScript | 🟢 **`2026-10-30`** | **most recently pushed permissive bridge in the field** |
+| 🆕 [`Ilya-Grigoryev/moodle-student-mcp`](https://github.com/Ilya-Grigoryev/moodle-student-mcp) | 6 | 🟢 `MIT` | Python | 🟢 `2026-10-27` | 🔵 the only **role-scoped** bridge seen — student-only surface |
+| [`GhaithAlHallak8/moodler-mcp`](https://github.com/GhaithAlHallak8/moodler-mcp) | 4 | 🟢 `MIT` | Python | `2026-09-19` | the 40-tool vocabulary |
+| 🆕 [`Neudron/moodle-mcp`](https://github.com/Neudron/moodle-mcp) | 2 | 🟢 `MIT` | Rust | `2026-09-23` | **second** Rust implementation |
+| 🆕 [`haolamnm/moodle-mcp-srv`](https://github.com/haolamnm/moodle-mcp-srv) | 2 | 🟢 `Apache-2.0` | Python | `2026-07-23` | |
+| 🆕 [`FiredMosquito831/ase-moodle-mcp`](https://github.com/FiredMosquito831/ase-moodle-mcp) | 1 | 🟢 `Apache-2.0` | Python | 🟢 `2026-10-30` | |
+
+🔴 **The permissive ceiling is the least active member of the live set.** `peancor` (45★) has not
+been pushed since **February**, while `IsaacAnwar`, `FiredMosquito831`, `Ilya-Grigoryev`,
+`falkenslab`, `Faixiang`, `Mattlo0546` and `ralstonraphael` all pushed inside the last two weeks.
+🔵 **Star rank and maintenance rank disagree by a factor of five here**, and a consolidation base
+must be chosen on the second — the selection rule is written into
+[`../compose/patterns.md`](../compose/patterns.md).
+
+### The 16 addresses new to this base
+
+`Mattlo0546/moodle-mcp` (2★ MIT Py) · `ralstonraphael/moodle-mcp` (2★ MIT Py) ·
+`Neudron/moodle-mcp` (2★ MIT Rust) · `1RAFTIK1/mirea-moodle-mcp` (2★ MIT Go) ·
+`kaduvelasco/moodle-dev-mcp` (2★ GPL-3.0) · `haolamnm/moodle-mcp-srv` (2★ Apache-2.0 Py) ·
+`sebasfn9710dev/moodle-mcp-forum-summarizer` (1★ MIT Py) · `ShinonomeLabo/moodle-mcp` (1★ MIT TS) ·
+`Nicolas-Prn/moodle-mcp` (1★ MIT Py) · `armenbarseghyan/moodle-mcp` (1★ `NOASSERTION` Go) ·
+`franciscodngferreira/Moodle-MCP` (1★ ungranted Py) ·
+`jonycheung/deadsimple-moodle-mcp` (1★ GPL-3.0 PHP) · `1alexandrer/moodle-mcp-2` (1★ ungranted) ·
+`alnyx-dev/PGEK-moodle-mcp` (1★ MIT Py) · `1alexandrer/moodle-mcp-test` (1★ MIT TS) ·
+`ONPUslop/el-moodle-mcp` (1★ ungranted Py) · `ernesto-butto/moodle-mcp-server` (1★ MIT TS)
+
+🟡 **Almost every one is a single-author institutional artefact** — `mirea` (MIREA, Moscow),
+`unnc` (Nottingham Ningbo), `utn` (UTN, Argentina), `el-` (ONPU, Odesa), `PGEK`, `ase`.
+🔵 **This is not a market with contenders. It is dozens of students independently rebuilding the
+same bridge against their own university's Moodle** — which is what `p529`'s *"fragmentation with
+no convergence"* looks like from underneath, and 🟢 **exactly the condition under which one
+well-maintained permissive bridge consolidates the demand.**
+
 ## 🆕 `p562` — `2026-10-31` — **🟢 `p561`'s PINS REPRODUCE 14 OF 14 FROM AN INDEPENDENT RE-IMPLEMENTATION — the first time a successor has rebuilt this base's grant instrument from its own spec and landed on its predecessor's numbers. 🔴 AND THE SPEC IS NOT WHAT PINNED THEM: the committed stage-3 description omits the *direction* of its URL fold, and the faithful prose reading MISMATCHES 8 OF 14 (`562-B`). 🟢 `561-A` EXTENDED TO A SIXTH FAMILY — `ECL-2.0`, THE EDUCATION-SPECIFIC ONE — WHICH HAS NO CANONICAL DIGEST AT ANY OF FIVE STAGES (`562-C`).**
 
 ### 🟢 The calibration, run before the sweep and reported whether or not it passed
