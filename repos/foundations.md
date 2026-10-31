@@ -24,6 +24,129 @@ older rows carry GitHub's licence determination and say so where it matters.
 overwhelmingly **copyleft** — the opposite of the agent layer. Two exceptions
 have now been established, and one of them is new this pass and important.
 
+## Eleventh pass (`p573`, 2026-10-31) — 🟢 THE PSYCHOMETRIC MEASUREMENT LAYER SPLITS BY **LANGUAGE**, NOT BY QUALITY: the Python tier this base already shelved is permissive, the R/CRAN tier it never saw is GPL almost without exception
+
+🔵 **Why this pass went looking here.** This base already publishes two patterns
+that depend on real psychometrics — `P-571-A` (defensible assessment) and
+`P-572-A` (item calibration and score equating) — and `P-573-C` was registered for
+"locally published institutional psychometrics". **None of them named a
+calibration library.** So the measurement layer was swept directly.
+
+🟢 **Result: `20` addresses read byte-for-byte, `13` of them new to a 572-pass
+base.** 🔴 **And the finding is a licence boundary that runs straight through the
+middle of the layer.**
+
+### 🔴 The split, stated as the engagement decision it actually is
+
+| tier | where it lives | grant | usable in a closed client deliverable? |
+| --- | --- | --- | --- |
+| 🟢 **Python / JVM** — already on this base's shelves | `girth`, `catsim`, `pyirt`, `EduCDM`, `pypsy`, `pykt-toolkit`, `EduStudio`, `pyedmine`, `EduData` | 🟢 **MIT / BSD-3 / Apache-2.0** | 🟢 **Yes** |
+| 🔴 **R / CRAN** — absent from every shelf page until now | `mirt`, `TAM`, `sirt`, `CDM`, `GDINA`, `dina`, `measr`, `psychmeta`, `galamm`, `ShadowCAT`, `catIRTtools` | 🔴 **GPL-2/GPL-3 family, `11` of `12`** | 🔴 **No — arm's length only** |
+| 🟢 the one permissive R exception | `OpenMx/OpenMx` | 🟢 **Apache-2.0** | 🟢 **Yes** |
+
+🔴 **This is commercially load-bearing, and it is not a taxonomy quibble.**
+`mirt`, `TAM`, `sirt` and `GDINA` are the implementations that **exam boards,
+ministries and peer reviewers actually accept** for IRT calibration, DIF and
+score equating. They are GPL. The permissive Python tier is perfectly good code,
+but it does not carry the same evidentiary standing in a psychometric report.
+🟢 **So an assessment engagement picks one of two postures deliberately —
+`P-575-A` and `P-575-B` below write both of them up — rather than discovering the
+constraint after the statistician has already chosen their tooling.**
+
+### 🟢 The R/CRAN psychometric tier, now placed — every grant read from `DESCRIPTION`
+
+🔵 Star counts are as displayed on the topic pages (`topic:psychometrics` **518**,
+`topic:item-response-theory` **154**, `topic:cognitive-diagnosis` **19**,
+`topic:computerized-adaptive-testing` **24**); 🔴 **this session cannot reach
+`api.github.com`**, so treat them as page-rounded, not API-exact.
+
+| Package | Repo | Licence (read first-hand) | ★ | Region | What it does |
+| --- | --- | --- | --: | --- | --- |
+| mirt | [philchalmers/mirt](https://github.com/philchalmers/mirt) | 🔴 **GPL (>= 3)** (`DESCRIPTION`) | — | North America | **The de facto standard multidimensional IRT package.** Unidimensional and multidimensional item-response models, EM and MH-RM estimation, DIF, item fit, plausible values. If a client's psychometrician names one tool, it is this one. |
+| TAM | [alexanderrobitzsch/TAM](https://github.com/alexanderrobitzsch/TAM) | 🔴 **GPL (>= 2)** (`DESCRIPTION`) | 19 | EMEA | "Test Analysis Modules" — Rasch and 2PL/3PL calibration, **plausible-value generation and weighting**, the machinery large-scale assessments (PISA-style) are actually analysed with. |
+| sirt | [alexanderrobitzsch/sirt](https://github.com/alexanderrobitzsch/sirt) | 🔴 **GPL (>= 2)** (`DESCRIPTION`) | 27 | EMEA | Supplementary IRT models — **linking and equating**, local dependence, DETECT, invariance testing. The equating half of `P-572-A`. |
+| CDM | [alexanderrobitzsch/CDM](https://github.com/alexanderrobitzsch/CDM) | 🔴 **GPL (>= 2)** (`DESCRIPTION`) | 23 | EMEA | Cognitive diagnosis modelling — DINA, DINO, GDINA, skill-profile classification. Maps responses to **mastery of named skills**, which is what a competency report needs. |
+| GDINA | [Wenchao-Ma/GDINA](https://github.com/Wenchao-Ma/GDINA) | 🔴 **GPL-3** (`DESCRIPTION`) | 33 | North America | The GDINA-family reference implementation: Q-matrix validation, item-level model comparison, classification accuracy. 🟢 **New to this base — `0` prior sightings in `3,168` ledger rows.** |
+| measr | [r-dcm/measr](https://github.com/r-dcm/measr) | 🔴 **GPL (>= 3)** (`DESCRIPTION`) | 13 | North America | **Bayesian** diagnostic classification models via Stan, with built-in model-fit and reliability output. The modern, better-documented route into CDM. |
+| dina | [tmsalab/dina](https://github.com/tmsalab/dina) | 🔴 **GPL (>= 2)** (`DESCRIPTION`) | 17 | North America | DINA parameter estimation with a Gibbs sampler. Small, single-purpose, readable. 🟢 **New to this base.** |
+| ShadowCAT | [Karel-Kroeze/ShadowCAT](https://github.com/Karel-Kroeze/ShadowCAT) | 🔴 **GPL-3** (`DESCRIPTION`) | 12 | EMEA | **Multidimensional computerised adaptive testing using shadow testing** — content-constraint-respecting item selection, the part a naive CAT loop gets wrong. 🟢 **New to this base.** |
+| psychmeta | [psychmeta/psychmeta](https://github.com/psychmeta/psychmeta) | 🔴 **GPL (>= 3)** (`DESCRIPTION`) | 70 | North America | Psychometric **meta-analysis** — artefact correction, credibility intervals. The tool for "does this intervention work across studies", i.e. the evidence layer behind `P-570-C`. 🟢 **New to this base.** |
+| galamm | [ropensci/galamm](https://github.com/ropensci/galamm) | 🔴 **GPL (>= 3)** (`DESCRIPTION`) | 37 | EMEA | Generalised additive **latent and mixed models** — growth/longitudinal learner modelling with latent variables. rOpenSci-reviewed. 🟢 **New to this base.** |
+| catIRTtools | [ecaybek/catIRTtools](https://github.com/ecaybek/catIRTtools) | 🔴 **GPL** (35,822 B `LICENSE`) | 6 | EMEA | CAT simulation and calibration helpers. Türkiye-published. 🟢 **New to this base.** |
+| piraid | [UUPharmacometrics/piraid](https://github.com/UUPharmacometrics/piraid) | 🟡 **LGPL (>= 2)** (`DESCRIPTION`) | 10 | EMEA | Pharmacometric IRT model development. 🔵 Out-of-domain, but **LGPL** — the one R row a closed application may *link*. Uppsala. 🟢 **New to this base.** |
+| **OpenMx** | [OpenMx/OpenMx](https://github.com/OpenMx/OpenMx) | 🟢 **Apache-2.0** (`DESCRIPTION`: "Apache License (== 2.0)") | 102 | North America | 🟢 **The single permissively licensed R psychometrics engine located in this sweep.** Structural equation modelling, latent-variable and multi-group models, matrix-algebra backend. **If an engagement must do latent-variable measurement in R *and* ship a closed derivative, this is the only row on this table that allows it.** 🟢 **New to this base.** |
+
+### 🟢 Permissive rows the same sweep produced — small, but genuinely usable
+
+| Repo | Licence (first-hand) | ★ | Region | Why it is here |
+| --- | --- | --- | --: | --- |
+| [JuliaPsychometricsBazaar/ComputerAdaptiveTesting.jl](https://github.com/JuliaPsychometricsBazaar/ComputerAdaptiveTesting.jl) | 🟢 **MIT** (1,073 B) | 6 | Global | Modular CAT library in Julia — ability estimators, item selectors, termination rules as swappable parts. 🟢 **The only permissive *framework* for adaptive testing found in `24` CAT repositories.** 🟢 **New to this base.** |
+| [englishcentral/ovlt](https://github.com/englishcentral/ovlt) | 🟢 **MIT** (1,070 B) | 10 | Global | **Open Vocabulary Level Test** — a published, calibrated vocabulary instrument, not a framework. Rare: an actual *item bank* under MIT. 🟢 **New to this base.** |
+| [KonkovDV/fsp-talent](https://github.com/KonkovDV/fsp-talent) | 🟢 **MIT** (1,094 B) | 0 | — | IRT-based adaptive test inside a talent-matching platform, Docker Compose. 🔵 Shelved as a **worked example of wiring IRT into a product**, not as a dependency. 🟢 **New to this base.** |
+
+### 🔴 Two corrections to rows this base already ships — both are missing grants
+
+🔴 **A repository with no licence file is exclusively copyrighted by default.** Two
+rows already on this base's shelves fail that test, and neither carries the caveat:
+
+| Row | Where it is cited | What `HEAD` actually has |
+| --- | --: | --- |
+| [meyerjp3/psychometrics](https://github.com/meyerjp3/psychometrics) (114★, Java) | 🔴 **`9` live KB files** | 🔴 **NO licence file** — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` all 404. The Java CTT/IRT library this base recommends cannot legally be shipped in a client deliverable. |
+| [bigdata-ustc/Agent4Edu](https://github.com/bigdata-ustc/Agent4Edu) (100★, AAAI 2025) | 🔴 **`4` live KB files** | 🔴 **NO licence file.** A peer-reviewed paper is not a grant. |
+| [patriciamar/ShinyItemAnalysis](https://github.com/patriciamar/ShinyItemAnalysis) (47★) | 🟡 `5` live KB files | 🟡 **GPL-3** (`DESCRIPTION`) — correct and usable, but it was carried here without the copyleft flag. |
+
+🔴 **And the same failure mode dominates the new academic CDM rows: `5` of the `7`
+repositories found under `topic:cognitive-diagnosis` have no licence file at all** —
+[inuyasha2012/vipsy](https://github.com/inuyasha2012/vipsy),
+[kervias/DCD](https://github.com/kervias/DCD),
+[CSLiJT/HCD-code](https://github.com/CSLiJT/HCD-code),
+[Mr-nnng/ICD](https://github.com/Mr-nnng/ICD),
+[ShawnYu98/RDGT](https://github.com/ShawnYu98/RDGT).
+🔵 All five are real, all five back published papers (SIGKDD, NeurIPS, TKDE,
+ICDM), and **none may be used.** Read the method, reimplement it.
+
+### 🔵 Method note — the mandated verification command is broken on this harness, and the fix also reads better data
+
+🔴 **`curl -sI https://github.com/…` returns `403` for every URL on this
+session — real repositories and invented ones alike.** Controls run this pass:
+
+| probe | result |
+| --- | --- |
+| `github.com/openedx/XBlock` (real) | 🔴 `403` |
+| `github.com/this-does-not-exist-xyz123/nope` (invented) | 🔴 `403` |
+| `api.github.com/repos/…` | 🔴 `403` — "GitHub access to this repository is not enabled for this session" |
+
+🔴 **So the prescribed check cannot discriminate, and it fails *unsafely*: a `403`
+reads as "not a 404", i.e. as evidence the repo exists.** 🟢 **`raw.githubusercontent.com/{owner}/{repo}/HEAD/{path}` discriminates correctly**, with
+a positive and two negative controls:
+
+| probe | result |
+| --- | --- |
+| `raw…/openedx/XBlock/HEAD/LICENSE.TXT` | 🟢 `200` |
+| `raw…/HKUDS/DeepTutor/HEAD/README.md` | 🟢 `200` |
+| `raw…/nonexistent-owner-xyz987/nope/HEAD/README.md` | 🟢 `404` |
+| `raw…/HKUDS/DeepTutor/HEAD/NOSUCHFILE.md` | 🟢 `404` |
+
+🟢 **Second-order gain: the same channel returns licence *bytes*, so existence and
+grant are settled in one probe** — no sidebar, no inference. 🟢 **And the
+R-specific lesson: an R package declares its grant in `DESCRIPTION` (`License:`),
+not in a `LICENSE` file.** 🔴 **That is exactly why `12` GPL R packages would read
+as "no licence found" to this base's filename ladder** — the ladder was never
+wrong about the files, it was looking in a language whose convention it did not
+know. Evidence: `evidence/psychometrics-licence-bytes.2026-10-31-p573.tsv`,
+`evidence/python-tier-licence-bytes.2026-10-31-p573.tsv`,
+`evidence/cat-tier-licence-bytes.2026-10-31-p573.tsv`.
+
+### 🔴 Gate posture and the mandated legs — `11` for `11`
+
+🔴 **The four mandated `WebSearch` legs returned `0` addresses new to this base,
+and `0` education-specific repositories of any kind.** They returned general
+agent-framework roundups (CrewAI, OpenHands, Langflow, LibreChat) and SEO
+listicles. 🔵 That is the **eleventh** consecutive nil for this channel, and this
+pass reproduces the prior passes' conclusion rather than merely restating it.
+🟢 **Every one of the `13` new addresses came from GitHub topic sweeps.**
+
+
 ## Tenth pass (`p572`, 2026-10-31) — 🟢 THE LTI 1.3 AND xAPI LAYER WAS MISSING FROM THIS KB ENTIRELY, AFTER BEING RE-FOUND BETWEEN `70` AND `123` TIMES EACH
 
 🟢 **Ten rows added, `7` of them permissive, and the tier they form is the one

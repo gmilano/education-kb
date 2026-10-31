@@ -7,8 +7,12 @@ updated: 2026-10-31
 # Compose patterns — education
 
 <!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
-`derived recipes: **24**` — recipe headings on this page, counted with that gate's
-own id regex (family-suffixed form, `P-572-A`).
+`derived recipes: **30**` — recipe headings on this page, counted with that gate's
+own id regex (family-suffixed form, `P-572-A`). 🔴 **`p573` recomputed this: the
+claim read `24` while the regex counted `28` before this pass's two additions.**
+🔵 The gap is `P-573-A/B/C` and `P-574-A`, registered by earlier passes without
+the count being refreshed — the same stale-claim defect this base records as a
+trend.
 
 Concrete recipes. Every component is a repo verified first-hand on 2026-10-31
 with its licence named — and for everything added or re-read in the fourth pass,
@@ -99,6 +103,126 @@ risk control in this document and it has already caught a real defect. See
 [`../intel/trends.md`](../intel/trends.md) for the measured results.
 
 ---
+
+
+## `p573` (2026-10-31) — two patterns, and they are the two halves of one decision
+
+🔵 **Both come out of the eleventh pass's central finding** (see
+[`../intel/trends.md`](../intel/trends.md) trend 19): the psychometric
+measurement layer is **permissive in Python and GPL in R**, and the R tier is the
+one a client's psychometrician and their exam board actually trust. 🟢 **Every
+component grant below was read byte-for-byte this pass** from
+`raw.githubusercontent.com` — `evidence/psychometrics-licence-bytes.2026-10-31-p573.tsv`
+and `evidence/python-tier-licence-bytes.2026-10-31-p573.tsv`.
+
+🔴 **Note on ids:** `P-573-*` and `P-574-A` were already consumed by earlier
+passes that registered pattern ids ahead of the pass counter, so this pass —
+`p573` — publishes as **`P-575-*`**. 🔵 Pattern ids on this page are **not** pass
+numbers and should not be read as a chronology.
+
+### 🟢 `P-575-A` — Permissive item-calibration and adaptive-testing pipeline, no copyleft anywhere (6–8 weeks)
+
+**When to use it.** The client wants to own a closed, rebrandable assessment
+product — an item bank, a calibration step and an adaptive delivery policy — and
+has **no external body that must bless the psychometrics**. Corporate L&D,
+certification startups, ed-tech product teams.
+
+**Components — every grant verified first-hand, `p573`:**
+
+| role | component | grant (first-hand) |
+| --- | --- | --- |
+| IRT calibration (1PL/2PL/3PL, GRM), ability estimation | [eribean/girth](https://github.com/eribean/girth) | 🟢 **MIT** (`LICENSE.txt`) |
+| CAT policy: item selection, ability estimators, stopping rules, **offline simulation of examinees** | [douglasrizzo/catsim](https://github.com/douglasrizzo/catsim) | 🟢 **BSD-3-Clause** (`LICENSE`) |
+| skill-level reporting: DINA / IRT / MIRT / neural cognitive diagnosis | [bigdata-ustc/EduCDM](https://github.com/bigdata-ustc/EduCDM) | 🟢 **Apache-2.0** |
+| alternative/second-opinion IRT engine | [17zuoye/pyirt](https://github.com/17zuoye/pyirt) · [inuyasha2012/pypsy](https://github.com/inuyasha2012/pypsy) | 🟢 **MIT** · **MIT** |
+| knowledge tracing / learner modelling over response streams | [ZhijieXiong/pyedmine](https://github.com/ZhijieXiong/pyedmine) · [HFUT-LEC/EduStudio](https://github.com/HFUT-LEC/EduStudio) · [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** ×3 |
+| benchmark datasets for pre-calibration sanity checks | [bigdata-ustc/EduData](https://github.com/bigdata-ustc/EduData) | 🟢 **Apache-2.0** |
+| worked reference for a *calibrated* item bank's shape | [englishcentral/ovlt](https://github.com/englishcentral/ovlt) | 🟢 **MIT** |
+| permissive CAT framework if the stack is not Python | [JuliaPsychometricsBazaar/ComputerAdaptiveTesting.jl](https://github.com/JuliaPsychometricsBazaar/ComputerAdaptiveTesting.jl) | 🟢 **MIT** |
+
+**Wiring.**
+1. **Item bank in** (CSV / QTI export from the client's LMS) → normalise to a
+   response matrix. Use `EduData`'s loaders as the schema reference rather than
+   inventing one.
+2. **Calibrate with `girth`** → persist item parameters (`a`, `b`, `c`) in a
+   plain table the client owns. This table, not the code, is the asset.
+3. **Validate the adaptive policy offline in `catsim`** *before* any learner sees
+   it: simulate examinees at known ability levels, check that the policy recovers
+   their θ within tolerance and respects content constraints. 🟢 **This is the
+   step that substitutes for the learner-simulation agent this KB cannot legally
+   ship** (`573-A` in [`../agents/top.md`](../agents/top.md)).
+4. **Skill profiles with `EduCDM`** → "mastered / not mastered" per named
+   competency, which is what a certification report has to say.
+5. **Re-estimate on live data** with `pyedmine` or `pykt-toolkit` for drift.
+
+🔴 **The honest limitation, state it in the proposal.** This pipeline is
+permissive end to end and the client may keep every modification closed. 🔴 **It
+is *not* the toolchain an exam board, ministry or journal reviewer will recognise.**
+If that recognition is required, this pattern is the wrong half of the decision —
+use `P-575-B`, or run `P-575-B` as a one-off external validation of the parameters
+this pipeline produced.
+
+🔵 **Weeks:** 1–2 ingest and schema; 3–4 calibration and parameter store; 5–6
+`catsim` policy validation harness; 7–8 skill reporting and drift job.
+
+### 🟡 `P-575-B` — Arm's-length GPL psychometrics: use `mirt` and `TAM` without creating a derivative work (4–6 weeks)
+
+**When to use it.** The client's psychometrician, awarding body, ministry or
+academic board **requires output from the canonical R packages**. That is a
+reasonable requirement, not a preference — these are the implementations the
+field's evidentiary standards were written around.
+
+**Components — all grants read from `DESCRIPTION`, `p573`:**
+
+| role | component | grant (first-hand) |
+| --- | --- | --- |
+| multidimensional IRT, DIF, item fit, plausible values | [philchalmers/mirt](https://github.com/philchalmers/mirt) | 🔴 **GPL (>= 3)** |
+| Rasch/2PL/3PL calibration, plausible values, weighting (large-scale assessment) | [alexanderrobitzsch/TAM](https://github.com/alexanderrobitzsch/TAM) | 🔴 **GPL (>= 2)** |
+| **linking and equating**, local dependence, invariance | [alexanderrobitzsch/sirt](https://github.com/alexanderrobitzsch/sirt) | 🔴 **GPL (>= 2)** |
+| Q-matrix validation, classification accuracy | [Wenchao-Ma/GDINA](https://github.com/Wenchao-Ma/GDINA) | 🔴 **GPL-3** |
+| Bayesian DCM with built-in fit and reliability output | [r-dcm/measr](https://github.com/r-dcm/measr) | 🔴 **GPL (>= 3)** |
+| content-constrained multidimensional CAT | [Karel-Kroeze/ShadowCAT](https://github.com/Karel-Kroeze/ShadowCAT) | 🔴 **GPL-3** |
+| latent-variable / SEM work where a **permissive** engine suffices | [OpenMx/OpenMx](https://github.com/OpenMx/OpenMx) | 🟢 **Apache-2.0** |
+
+**The posture, and it is an engineering boundary rather than a licence
+negotiation.** GPL obligations attach to **distributing a derivative work**. So:
+
+1. 🟢 **Run the R tier as its own process, in its own container, from unmodified
+   upstream CRAN sources**, with the upstream `LICENSE`/`DESCRIPTION` files
+   shipped intact alongside it.
+2. 🟢 **Cross the boundary with data, not linkage** — files, or a thin HTTP
+   endpoint (`plumber`), or batch `Rscript`. **Calibration output is data; data is
+   not a derivative work.**
+3. 🟢 **The client operates that container.** Globant's deliverable is the
+   orchestration, the item bank, the UI and the audit trail — none of which
+   links, embeds or statically compiles any GPL code.
+4. 🔴 **Do not:** vendor modified copies, statically link, embed R into a
+   proprietary binary, or ship a single artefact that contains both the GPL
+   packages and the closed product.
+
+🟢 **Two pieces of genuine relief worth putting in front of the client's
+counsel.** 🟢 **First: none of these packages is AGPL.** `p573` read every grant
+and found GPL-2, GPL-3 and LGPL only — so **there is no §13 network
+source-offer obligation**, which is the clause that makes hosted deployments
+painful. 🔵 This matters because this base's own naive copyleft detector has
+previously misgraded GPL-3 as AGPL-3 (its §13 cites Affero by name); the
+`DESCRIPTION` read settles it. 🟢 **Second: the separate-process posture also
+sidesteps the GPL-2/GPL-3 compatibility problem** — `TAM`, `sirt` and `CDM` are
+GPL (>= 2) while `GDINA` and `ShadowCAT` are GPL-3, and combining those into one
+linked artefact raises a question that **never arises if nothing is linked.**
+
+🔴 **Limitation, stated plainly: this is an engineering posture, not legal
+advice.** The client's counsel signs off on the boundary before the first
+`Rscript` runs. 🔵 And if the client's own policy forbids GPL anywhere in the
+estate — some do, regardless of linkage — then `OpenMx` (Apache-2.0) is the only
+R row that survives, and the honest answer is that it covers latent-variable
+modelling but **not** IRT calibration or equating. At that point go back to
+`P-575-A` and tell the client what evidentiary standing they are trading away.
+
+🔵 **Weeks:** 1 boundary design and counsel sign-off; 2–3 containerised R service
+with pinned CRAN versions and licence manifest; 4 calibration and equating runs
+reproduced against the client's historical data; 5–6 audit trail, versioned
+parameter releases, handover.
 
 
 ## `p572` (2026-10-31) — three patterns, every component licence read byte-for-byte this pass

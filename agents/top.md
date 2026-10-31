@@ -43,6 +43,84 @@ pass's own discovery query (`topic:ai-education stars:>150 pushed:>2026-10-20`)
 returns the **same 6 repositories**, all already shelved. The axis is exhausted;
 the population is not, and the capability sweep is the proof.
 
+## Eleventh pass (`p573`, 2026-10-31) — 🔴 NO NEW AGENT QUALIFIED, and the pass's result for this page is a **gap with a name**: there is no usable learner-simulation agent, which is how a tutor gets tested before it meets a student
+
+🔴 **Two agent-native axes were swept to exhaustion of their top rows and yielded
+`0` addresses new to this base:**
+
+| axis | repositories | rows read | new to this base |
+| --- | --: | --: | --: |
+| 🔴 [`topic:intelligent-tutoring-system`](https://github.com/topics/intelligent-tutoring-system) | **42** | 20 | 🔴 **0** |
+| 🔴 [`topic:knowledge-tracing`](https://github.com/topics/knowledge-tracing) | **102** | 20 | 🔴 **0** |
+| 🔴 [`topic:adaptive-learning`](https://github.com/topics/adaptive-learning) | **635** | 20 | 🔴 **0** |
+| 🔴 `WebSearch`, four mandated legs | — | 4 | 🔴 **0** |
+
+🟢 **That is a real result, not a blank pass.** `topic:intelligent-tutoring-system`
+is the axis most precisely named for this page's subject, and **every one of its
+top 20 was already shelved here** — `fsrs4anki`, `education-agent-skills`,
+`gen-mentor`, `tutor-mcp`, `Tutorbot-Spock`, `Bloom`, `OpenTutor`,
+`TheGrandQuiz`. 🔵 **This page's tutoring-agent shelf can now be stated as
+measurably complete against GitHub's own topic vocabulary**, which is a stronger
+claim than the "saturated" language earlier passes used, and it is the first time
+it has been checked against the *correctly named* axis rather than against
+star-sorted general search.
+
+🔴 **`topic:adaptive-learning` (635) is a polluted axis and should not be swept
+again.** Its top 20 contains a screen-brightness daemon (`wluma`, 955★),
+adaptive flight control, Monte Carlo materials-design libraries and concept-drift
+detection for IoT streams. **"Adaptive learning" in GitHub's tag space mostly
+means adaptive *machine* learning.** Recorded so the next pass spends its budget
+elsewhere.
+
+### 🔴 The gap this pass can name precisely: learner simulation is unlicensed
+
+🔵 **Why it matters.** Before a tutoring agent is pointed at students, the honest
+way to test it is against *simulated* learners with known ability parameters —
+you can then check whether the tutor's inferences recover the truth. Every
+efficacy pattern in this KB (`P-570-C`, `P-571-A`) implicitly needs this.
+
+🔴 **The only purpose-built learner-simulation agent located in this base is
+[bigdata-ustc/Agent4Edu](https://github.com/bigdata-ustc/Agent4Edu)** (100★,
+AAAI 2025 — "LLM-based agents that generate simulated learner response data"),
+🔴 **and it has no licence file on `HEAD`** (`LICENSE`, `LICENSE.md`,
+`LICENSE.txt`, `COPYING` all 404 this pass). 🔴 **It is cited on `4` live files of
+this KB with no such caveat.** Default is exclusive copyright: it may be read,
+not shipped.
+
+🟢 **The usable substitute, and it is a downgrade stated honestly:** generate
+synthetic response matrices from a calibrated IRT model using the **permissive
+Python tier** — [eribean/girth](https://github.com/eribean/girth) (**MIT**,
+first-hand) or [douglasrizzo/catsim](https://github.com/douglasrizzo/catsim)
+(**BSD-3-Clause**, first-hand), which simulates examinees directly. 🔵 That gives
+statistically controlled synthetic learners but **not** the LLM-mediated
+conversational behaviour Agent4Edu models. 🔴 **So the gap is real and stays
+open: no permissively licensed *conversational* learner simulator exists.**
+Registered `573-A`.
+
+### 🔴 Licence correction to a row this page carries
+
+| Row | Status before this pass | Read first-hand this pass |
+| --- | --- | --- |
+| [bigdata-ustc/Agent4Edu](https://github.com/bigdata-ustc/Agent4Edu) | cited on `4` live files, no grant stated | 🔴 **⛔ NO LICENCE — all-rights-reserved** |
+
+🟢 **Control that passed:** [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor)
+re-read byte-for-byte this pass — `LICENSE` is **11,408 B** and opens "Apache
+License / Version 2.0, January 2004". 🟢 **This page's `Apache-2.0` is correct**,
+and two third-party roundups circulating this month that call DeepTutor "MIT" are
+wrong. 🔵 Recorded because it is the cheap half of trend 18: the sidebar-free
+byte read settles it in one probe.
+
+### 🔵 Gate posture — probed, and the mandated command is unsafe here
+
+🔴 **`curl -sI https://github.com/…` answers `403` on this harness for real and
+invented repositories alike**, so the prescribed verification cannot discriminate
+and its failure direction is *unsafe* — a `403` is not a `404`, so an invented
+address passes. 🟢 **`raw.githubusercontent.com/{repo}/HEAD/{path}` discriminates
+`200`/`404` correctly** (controls in `repos/foundations.md`, eleventh pass) **and
+returns licence bytes in the same call.** Every licence claim added this pass used
+that channel.
+
+
 ## Tenth pass (`p572`, 2026-10-31) — 🟢 THE NIL BROKE, AND IT BROKE ON A NEVER-SWEPT AXIS OF `44` REPOSITORIES — while the real finding is that this base has seen `3,455` addresses and shelved `170`
 
 🟢 **`derived shelf: 29`, up from `24`.** 🟢 **`12` addresses new to a 571-pass

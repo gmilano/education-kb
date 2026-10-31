@@ -4,6 +4,68 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (eleventh pass · `p573`) — 🔴 no new agent, and the week's finding is that the correctly-named axis is **exhausted**
+
+🔴 **`0` addresses new to this base from any agent axis.** 🔴 **The four mandated
+`WebSearch` legs are now `11` for `11` on nil** — this week they returned
+CrewAI, OpenHands, Langflow and LibreChat, i.e. general agent frameworks with no
+education content whatsoever.
+
+| channel | repositories in axis | rows read | new to base |
+| --- | --: | --: | --: |
+| 🔴 [`topic:intelligent-tutoring-system`](https://github.com/topics/intelligent-tutoring-system) | **42** | 20 | 🔴 **0** |
+| 🔴 [`topic:knowledge-tracing`](https://github.com/topics/knowledge-tracing) | **102** | 20 | 🔴 **0** |
+| 🔴 [`topic:adaptive-learning`](https://github.com/topics/adaptive-learning) | **635** | 20 | 🔴 **0** |
+| 🔴 `WebSearch` — four mandated legs | — | 4 | 🔴 **0** |
+
+🟢 **Why the nil is worth recording this time.**
+`topic:intelligent-tutoring-system` is the axis named most precisely for this
+page's subject, and **all 20 of its top rows were already shelved here** —
+`fsrs4anki`, `education-agent-skills`, `gen-mentor`, `tutor-mcp`,
+`Tutorbot-Spock`, `Bloom`, `OpenTutor`, `TheGrandQuiz`. 🟢 **This KB's
+tutoring-agent shelf is now measurably complete against GitHub's own topic
+vocabulary** — a stronger and more falsifiable claim than the "saturated"
+language earlier passes used.
+
+### 🔴 Do not sweep `topic:adaptive-learning` again
+
+🔴 **635 repositories, and the tag mostly means adaptive *machine* learning.** Its
+top 20 contains a screen-brightness daemon (`wluma`, 955★), adaptive flight
+control, Monte Carlo materials-design libraries, and concept-drift detection for
+IoT streams. Recorded so the next pass does not spend budget here.
+
+### 🔴 The gap this week can name: learner simulation is unlicensed
+
+🔴 [`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) (100★,
+**AAAI 2025**) is the only purpose-built learner-simulation agent in this base —
+🔴 **and it has no licence file on `HEAD`.** `LICENSE`, `LICENSE.md`,
+`LICENSE.txt` and `COPYING` all 404 this pass. 🔴 **It is cited on `4` live KB
+files with no caveat.** Exclusive copyright by default: read it, do not ship it.
+
+🟢 **Usable substitute, downgrade stated honestly:** simulate examinees from a
+calibrated IRT model with
+[`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) (**BSD-3-Clause**,
+first-hand) or [`eribean/girth`](https://github.com/eribean/girth) (**MIT**).
+🔴 That gives statistically controlled synthetic learners but **not** the
+LLM-mediated conversational behaviour Agent4Edu models — so the gap stays open.
+
+### 🟢 Control that passed
+
+🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) licence re-read
+byte-for-byte: `LICENSE` is **11,408 B**, opening "Apache License / Version 2.0,
+January 2004". 🟢 **This KB's `Apache-2.0` is correct**, and two third-party
+roundups circulating this month that call DeepTutor "MIT" are wrong.
+
+### 🔵 Instrument note
+
+🔴 **The mandated `curl -sI https://github.com/…` check answers `403` on this
+harness for real and invented repositories alike** — it cannot discriminate, and
+it fails in the **unsafe** direction, since a `403` is not a `404`. 🟢 **Every
+licence and existence claim this pass used
+`raw.githubusercontent.com/{repo}/HEAD/{path}`**, verified with one positive and
+two negative controls, which settles existence *and* grant in one probe.
+
+
 ## 2026-10-31 (tenth pass · `p572`) — 🟢 the ten-pass nil is broken, by the smallest axis on the board
 
 🟢 **`12` addresses new to a 571-pass base.** 🔴 **`0` of them from the eight

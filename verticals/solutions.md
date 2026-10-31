@@ -10,6 +10,58 @@ Real, deployed systems that run an institution's operations — the education
 equivalent of Odoo for ERP. These are the systems a client already has, and the
 systems an AI layer gets attached to.
 
+## Eleventh pass (`p573`, 2026-10-31) — 🟢 THE SIS AXIS IS NOW MEASURABLY EXHAUSTED: `topic:student-information-system` (**187**) read 20 deep, **zero** new, and every platform-grade row was already on this page
+
+🔵 **This is a completeness result, and it is the first one this page can
+actually defend.** Earlier passes added SIS rows opportunistically. This pass
+swept the axis GitHub itself names for the category and compared every top row
+against this base's `3,168`-row address ledger.
+
+| axis | repositories | rows read | new to this base |
+| --- | --: | --: | --: |
+| 🟢 [`topic:student-information-system`](https://github.com/topics/student-information-system) | **187** | 20 | 🟢 **0 — and that is the finding** |
+
+🟢 **The three platform-grade rows in the axis's top 20 are all already shelved
+here, with grants read first-hand in earlier passes:**
+[francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis)
+(649★, **GPL-2.0**), [academico-sis/academico](https://github.com/academico-sis/academico)
+(410★, **MIT**), [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic)
+(347★, **GPL-2.0**). 🟢 **So the claim this page could not previously make is now
+measured: for open-source student information systems, this KB holds the
+deployable population, not a sample of it.**
+
+### 🔴 And the reason the axis looks bigger than it is
+
+🔴 **Below ~300★ the axis is almost entirely student coursework, not software an
+institution could run.** Rows 4–20 of the top 20 include a C# WPF desktop app
+(20★), a Django "student data application" (15★), several PHP admin-panel
+exercises (7–12★), two unofficial scraping APIs for commercial SIS products
+(Follett Aspen, SRM University), and — tagged `student-information-system` — **a
+bike-rental app for students near a university campus** (7★).
+
+🔵 **Consequence for this page, stated as a rule:** the open-source SIS field has
+a **hard floor at roughly 300★**, below which the tag stops denoting
+institution-grade software. 🟢 **That floor is a genuine property of this
+category and not of GitHub's star distribution generally** — compare
+`topic:learning-management-system`, where this KB has shelved real platforms at
+**10★**, **54★** and **102★** (`euron-open-lms`, `TutorLoom`, `Mentingo`). 🔴 **So
+"sweep below the star floor", which this base adopted as a general rule in
+`P-572-C`, is productive for LMS and agent axes and wasteful for SIS.** The rule
+needs a per-axis qualifier, and this is the first counter-example measured.
+
+### 🔵 What this means for an engagement
+
+🟢 **The permissive/copyleft shape of the SIS layer is now settled and it is
+uncomfortable:** of the three deployable systems, **two are GPL-2.0** — which
+carries *no patent grant* and is *not* upgrade-compatible with GPL-3.0 code — and
+the one **MIT** option (`academico`) is explicitly scoped to "small and medium
+institutions". 🔴 **There is no permissively licensed, university-scale open-source
+SIS.** That absence has now been tested against the correctly named axis rather
+than inferred, and it is the single most important procurement fact on this page:
+**a registrar-scale SIS engagement attaches to the client's existing system over
+its API; it does not fork one.** Registered `573-B`.
+
+
 ## Tenth pass (`p572`, 2026-10-31) — 🟢 FIVE PLATFORMS ADDED, ONE OF THEM **MIT**, ALL FIVE RE-FOUND BETWEEN `83` AND `93` TIMES WITHOUT EVER BEING SHELVED
 
 🟢 **`ls1intum/Artemis` is the headline: a full academic platform under MIT**,

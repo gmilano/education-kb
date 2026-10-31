@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (eleventh pass · `p573`) — 🟢 `13` new addresses, all from one layer: the **psychometric measurement tier**, and it is GPL
+
+🔴 **The four mandated `WebSearch` legs are `11` for `11` on nil.** 🟢 **Three
+never-swept GitHub axes produced `13` addresses new to a 572-pass base**, and they
+form a single coherent layer rather than a scatter.
+
+| axis | repositories | rows read | new to base |
+| --- | --: | --: | --: |
+| 🟢 [`topic:psychometrics`](https://github.com/topics/psychometrics) | **518** | 20 | 🟢 **~8** |
+| 🟢 [`topic:item-response-theory`](https://github.com/topics/item-response-theory) | **154** | 20 | 🟢 **overlapping** |
+| 🟢 [`topic:cognitive-diagnosis`](https://github.com/topics/cognitive-diagnosis) | **19** | 19 (all) | 🟢 **7** |
+| 🟢 [`topic:computerized-adaptive-testing`](https://github.com/topics/computerized-adaptive-testing) | **24** | 20 | 🟢 **5** |
+| 🔴 [`topic:student-information-system`](https://github.com/topics/student-information-system) | **187** | 20 | 🔴 **0 — axis exhausted** |
+| 🔴 [`topic:knowledge-tracing`](https://github.com/topics/knowledge-tracing) | **102** | 20 | 🔴 **0** |
+| 🔴 `WebSearch` — four mandated legs | — | 4 | 🔴 **0** |
+
+### 🔴 Trending into this KB: the layer its own assessment patterns assumed existed
+
+🔵 These are not new *to GitHub* — several are decade-old CRAN packages. **They
+are new to this base**, which had shelved the *Python* psychometrics tier and
+never seen the *R* one. 🔴 **And the R tier is copyleft almost without
+exception**, which is the week's real news.
+
+- 🔴 [`philchalmers/mirt`](https://github.com/philchalmers/mirt) — **GPL (>= 3)** — the de facto standard multidimensional IRT package
+- 🔴 [`alexanderrobitzsch/TAM`](https://github.com/alexanderrobitzsch/TAM) — **GPL (>= 2)**, 19★ — Rasch/2PL/3PL, plausible values, weighting
+- 🔴 [`alexanderrobitzsch/sirt`](https://github.com/alexanderrobitzsch/sirt) — **GPL (>= 2)**, 27★ — **linking and equating**
+- 🔴 [`alexanderrobitzsch/CDM`](https://github.com/alexanderrobitzsch/CDM) — **GPL (>= 2)**, 23★ — DINA/DINO/GDINA skill profiles
+- 🔴 [`Wenchao-Ma/GDINA`](https://github.com/Wenchao-Ma/GDINA) — **GPL-3**, 33★ — Q-matrix validation, classification accuracy
+- 🔴 [`r-dcm/measr`](https://github.com/r-dcm/measr) — **GPL (>= 3)**, 13★ — Bayesian DCM via Stan
+- 🔴 [`tmsalab/dina`](https://github.com/tmsalab/dina) — **GPL (>= 2)**, 17★ — DINA via Gibbs sampler
+- 🔴 [`Karel-Kroeze/ShadowCAT`](https://github.com/Karel-Kroeze/ShadowCAT) — **GPL-3**, 12★ — content-constrained multidimensional CAT
+- 🔴 [`psychmeta/psychmeta`](https://github.com/psychmeta/psychmeta) — **GPL (>= 3)**, 70★ — psychometric meta-analysis
+- 🔴 [`ropensci/galamm`](https://github.com/ropensci/galamm) — **GPL (>= 3)**, 37★ — latent/mixed longitudinal learner models
+- 🔴 [`ecaybek/catIRTtools`](https://github.com/ecaybek/catIRTtools) — **GPL**, 6★ — CAT simulation, Türkiye-published
+- 🟡 [`UUPharmacometrics/piraid`](https://github.com/UUPharmacometrics/piraid) — **LGPL (>= 2)**, 10★ — the one *linkable* R row
+
+### 🟢 The permissive rows the same sweep produced
+
+- 🟢 [`OpenMx/OpenMx`](https://github.com/OpenMx/OpenMx) — **Apache-2.0**, 102★ — 🟢 **the single permissive R psychometrics engine found.** SEM and latent-variable models. If an engagement must do latent-variable measurement in R *and* ship a closed derivative, this is the only option.
+- 🟢 [`JuliaPsychometricsBazaar/ComputerAdaptiveTesting.jl`](https://github.com/JuliaPsychometricsBazaar/ComputerAdaptiveTesting.jl) — **MIT** (1,073 B), 6★ — the only permissive *CAT framework* in 24 CAT repositories
+- 🟢 [`englishcentral/ovlt`](https://github.com/englishcentral/ovlt) — **MIT** (1,070 B), 10★ — Open Vocabulary Level Test: a real **calibrated item bank** under MIT, which is rare
+- 🟢 [`KonkovDV/fsp-talent`](https://github.com/KonkovDV/fsp-talent) — **MIT** (1,094 B) — worked example of wiring IRT into a shipping product
+
+### 🔴 Seven repositories with no grant at all — five of them peer-reviewed
+
+🔴 **`7` of the `26` repositories read byte-for-byte this pass have no licence
+file of any kind**, and they are the published research, not the abandoned toys:
+[`Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) (AAAI 2025),
+[`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) (114★, and
+🔴 **cited on `9` live files of this KB**),
+[`kervias/DCD`](https://github.com/kervias/DCD) (NeurIPS 2023),
+[`CSLiJT/HCD-code`](https://github.com/CSLiJT/HCD-code) (SIGKDD 2022),
+[`ShawnYu98/RDGT`](https://github.com/ShawnYu98/RDGT) (TKDE 2024),
+[`inuyasha2012/vipsy`](https://github.com/inuyasha2012/vipsy),
+[`Mr-nnng/ICD`](https://github.com/Mr-nnng/ICD).
+🔴 **A paper at NeurIPS licenses nothing.** Reimplement from the method; do not
+vendor the repository.
+
+### 🔵 Why this layer was invisible for 572 passes
+
+🔴 **An R package declares its grant in `DESCRIPTION` (`License:`), not in a
+`LICENSE` file.** 🔴 **This base's grant ladder probes filenames, so `12` GPL
+packages would have read as "no licence found."** 🟢 The fix is a per-ecosystem
+manifest check — `DESCRIPTION`, `pyproject.toml`, `Project.toml`, `Cargo.toml`,
+`*.gemspec` — not a longer list of filename variants.
+
+
 ## 2026-10-31 (tenth pass · `p572`) — 🟢 `12` new addresses, and the week's real story is a shelving audit
 
 🔴 **The eight mandated legs are `10` for `10` on nil.** 🟢 **Two never-swept

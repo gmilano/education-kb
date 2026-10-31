@@ -23,6 +23,41 @@ institutions plan AI teaching assistant deployments by end of 2026" attributed
 to EDUCAUSE (not traceable to EDUCAUSE in any source seen across three passes),
 and "AI agents will take over 80% of routine educational labour" (unsupported).
 
+### 🔴 `p573` (2026-10-31) — the range widens *downward*, and this KB's CAGR is the outlier
+
+🔴 **Two further vendor estimates read this pass, and they do not sit inside the
+range published above.**
+
+| source | 2026 | horizon | implied CAGR |
+| --- | --- | --- | --- |
+| Precedence Research | **USD 9.58 bn** | USD 136.79 bn (2035) | **~34.5 %** |
+| Grand View Research | **USD 11.4 bn** | USD 57.2 bn (2033) | **25.9 %** |
+| four-firm spread reported alongside them | **USD 6.4 – 11.4 bn** | — | — |
+
+🔴 **So the honest 2026 band is `USD 6.4 – 12.5 bn` across six vendors, not
+`10.6 – 12.5`.** The low end exists and this page was clipping it.
+
+🔴 **And the correction that matters more: the `~41 % CAGR to USD 42.5 bn by
+2030` carried at the top of this section is the outlier of the set.** The two
+best-documented forecasts available this pass imply **25.9 %** and **~34.5 %**.
+🔵 Those horizons differ (2030 / 2033 / 2035) and a shorter horizon mechanically
+flatters a CAGR, so the figures are not strictly comparable — **but 41 % is above
+every independent reading, and no source this pass reproduced it.** 🟢 **Quote
+`25–35 %` to a client and name the uncertainty.** Point estimates on this page
+remain unquotable.
+
+🟢 **Segment anchor, new:** Future Market Insights puts **AI in K-12** at **USD
+0.70 bn (2026)** rising to roughly **USD 18.5 bn (2036)**. 🔵 Useful because it
+sizes the segment this KB's district-facing work actually sells into, and it shows
+K-12 is **~6–7 %** of the total — the money is in higher education and corporate
+L&D, which is where the permissive-licence constraint bites hardest.
+
+🟢 **Regional shares, first time measured on this page:** North America is the
+largest region at **~36 %** of the market; **APAC is the fastest-growing at
+35.3 % CAGR**. 🔵 This is the quantitative backing for a claim this KB has been
+making qualitatively for several passes.
+
+
 ## The structural market fact
 
 The buyable asset in education AI is not the model and not the platform — it is
@@ -264,6 +299,36 @@ regulation players` leg returned ZERO repository-level assets.** It returned
 market-research summaries and vendor blogs only. That is the sixth consecutive
 pass in which the regional search legs produced no new address in any region —
 see the Global section.
+
+#### 🟢 `p573` (2026-10-31) — fresh regulatory and adoption readings
+
+🔴 **Governance is state-level and still mostly non-binding.** A legislative
+tracker counted **nearly 100 state bills this session** that could directly
+affect students' use of AI in K-12, with **student-data protection the single
+most common focus**. 🔵 Trackers disagree on coverage — one reports **35 states
+plus Puerto Rico** with official AI guidance or policy, another **~34 states plus
+DC and Puerto Rico** — so treat the count as approximate and **only a few states
+mandate district policies**. Idaho (`ID SB 1227`) is the worked example of an
+enacted framework: local policies, literacy standards, data privacy.
+
+🔴 **There is still no binding federal AI curriculum standard** (stated as of May
+2026). Federal action is strategy and grants: **Executive Order 14277** (2025) set
+up a White House task force and directed agencies toward AI literacy and educator
+training.
+
+🟢 **Higher education is where binding policy is actually landing.** **SUNY has
+set a systemwide AI policy across all 64 campuses, with AI literacy built into
+general education for incoming undergraduates from Fall 2026** — a single
+procurement conversation covering 64 institutions. Florida is moving to require
+AI rules across its **28 state colleges**.
+
+🔴 **The binding constraint is data, not AI law.** FERPA and COPPA shape what can
+be deployed, and the **amended COPPA rule carried a general compliance date of
+22 April 2026** — now in force. 🟢 **Commercial consequence: in this region the
+local-first, no-network tooling this KB shelves is not a nice-to-have, it is the
+thing that clears procurement.** The buying unit is the **district or the system
+office**, not the school.
+
 
 ### EMEA
 
@@ -537,6 +602,35 @@ at its licence file while owing **AGPL-3.0 §13** on the one service a hosted
 engagement would run. For a public-sector EMEA buyer with a hosting mandate,
 read `NOTICE.md` before the licence file (`P-572-B`).
 
+#### 🟢 `p573` (2026-10-31) — the deadline moved, and the gap it opened is the sellable window
+
+🔴 **The high-risk obligations for education AI were deferred.** Sources this pass
+attribute the change to **Regulation (EU) 2026/1744**, which moved the AI Act
+deadline for **stand-alone high-risk education systems from 2 August 2026 to
+2 December 2027**. ⚠️ **Not verified against the Official Journal this pass** —
+commentary only (law-firm and vendor blogs), and at least one source still
+publishes the old August 2026 date. **Check EUR-Lex before putting the date in a
+client deliverable.**
+
+🟢 **What did *not* move, and this is the commercially important half: the
+Article 50 transparency obligations still apply from 2 August 2026.** Any
+student-facing chatbot must disclose that it is AI. 🔴 **So a European institution
+is in scope *today* for disclosure and logging while its conformity deadline sits
+13 months out.**
+
+🟢 **That gap is a sequencing offer, not a problem:** ship disclosure, interaction
+logging and human-review records now — they are required now and they are the
+evidentiary base the Annex III conformity package (`P-568-D`) is assembled from
+later. Selling the conformity package first inverts the client's actual calendar.
+
+🔴 **Fixed boundaries worth restating:** **emotion-recognition AI has been banned
+in schools since February 2025** — no grace period, no deferral. The **high-risk
+categories** are admissions, assessment, exam proctoring and **behaviour
+monitoring during tests**. 🔵 The staff **AI-literacy duty was softened** from
+*ensuring* a level of AI literacy to *taking measures* toward it — a lower bar,
+and one that a documented training programme satisfies.
+
+
 ### APAC
 
 **The region's evidence base improved sharply this pass and is no longer
@@ -793,6 +887,43 @@ targeted measures and Singapore's **AI Verify** are all already recorded above.
    framing stays **integrity, oversight and provenance** — and these two
    instruments are *precisely* provenance and transition obligations. The
    regulatory and the public mood point the same way.
+
+#### 🟢 `p573` (2026-10-31) — fastest-growing region, most fragmented rulebook, and a counter-trend in public opinion
+
+🟢 **APAC is the fastest-growing region at 35.3 % CAGR** (against North America's
+~36 % *share*). 🔴 **And there is no single regulatory model to design against.**
+**South Korea, China and Vietnam have binding AI rules**; **Japan, Singapore,
+Hong Kong, Australia and India** rely mainly on existing law, guidance and
+targeted instruments.
+
+🟢 **Curriculum mandates are the region's distinctive demand driver, and they are
+national in scale:**
+- **India** has announced **AI and computational thinking as compulsory from
+  Class 3 beginning in the 2026–27 academic year.**
+- **China** has made **AI compulsory for school students from age six**, and
+  governs public-facing generative AI through a **filing gate run by the
+  Cyberspace Administration (CAC)**.
+- **UNESCO** records China, Japan, the Republic of Korea and Singapore as already
+  integrating AI-focused school curricula.
+
+🔴 **Dated compliance edges to design around:** **India's amended IT Rules on
+labelling synthetic content took effect 20 February 2026.** **Vietnam's high-risk
+AI decision explicitly covers education, including automated assessment, with the
+grace period for education systems ending 1 September 2027.**
+
+🔴 **The counter-trend, and it is the most useful thing on this block: public
+support for *banning* AI in schools is rising in two of the region's largest
+markets.** Ipsos Education Monitor 2026 records support for a ban up from **21 %
+to 29 % in Japan** and **27 % to 31 % in South Korea**. 🔵 Everywhere else this KB
+measures, the story is adoption outrunning governance; here a mandate-led rollout
+is moving **ahead of parental consent**. 🟢 **Commercial consequence: in Japan and
+Korea, the deliverable that sells is the one with a parent- and teacher-facing
+transparency story attached, not the one with the best model.**
+
+🟢 **Deployment signal:** **all 20 Malaysian public universities have enabled
+Gemini for Education** — the region's clearest example of system-level, rather
+than institution-level, adoption.
+
 
 ### LATAM
 
@@ -1060,6 +1191,42 @@ the same leg:**
   gap is therefore closed as a premise and open only as a *ministry-level* probe
   — stop searching for a statute that the record says does not exist.
 
+#### 🟢 `p573` (2026-10-31) — the policy deficit is now measured, and it is the product
+
+🔴 **Student adoption is near-total and institutional policy is near-absent.** A
+Digital Education Council survey with **over 30,000 responses** reports **92 % of
+students using AI regularly and 67 % at least weekly**, alongside an explicit
+finding of **a lack of formal AI-use policies in Latin American universities**.
+
+🔴 **Country detail:**
+- **Mexico** — *"no existe una ley o regulación nacional que oriente su
+  implementación ni lineamientos obligatorios."* One 2026 study claims **over
+  80 % of Mexican higher-education institutions lack a clear normative
+  framework**; ⚠️ **single weak source, figure not independently confirmed** —
+  carry the direction, not the number.
+- **Brazil** — the **general AI bill sits in the Chamber of Deputies**, expected
+  to come into force in 2026. Brazil and Colombia have advanced **national AI
+  strategies but no education-sector regulation.**
+- **Regional** — a 2026 academic review of **52 policy documents** concludes the
+  region shows **significant regulatory fragmentation**, with many universities
+  **adopting international frameworks without the capacity to implement them.**
+
+🟢 **The clearest institutional signal this pass: on 27 October 2026 in Madrid,
+rectors of around twenty Ibero-American universities publicly called for shared
+regulation of AI**, together with language and mobility measures. 🔵 Four days
+before this pass — the freshest demand signal in this KB, and it comes from the
+buyers themselves.
+
+🟢 **Commercial consequence, and it is different in kind from the other three
+regions: here the gap is not tooling and not law — it is implementation
+capacity.** An institution that has adopted a UNESCO or EU-shaped framework it
+cannot operationalise does not need a model; it needs the policy turned into
+procedures, controls and staff training. 🟢 **That is the billable unit, and
+`P-568-E` already describes it** — this pass supplies the evidence that the
+demand is institutional and self-declared rather than inferred from student
+behaviour.
+
+
 ### Global
 
 - 🔴 **Read `Global` on this page as "unplaced", and know that `p570` found a
@@ -1118,6 +1285,29 @@ UNESCO IESALC's survey. 🟢 **Every regional paragraph above is built from them
 evidence to stop spending the discovery budget there. 🟢 **Reallocated this pass;
 `P-572-C` is the replacement method and it is written to be run on every other
 industry on this harness.**
+
+#### 🟢 `p573` (2026-10-31) — adoption figures, and the first large RCT this KB can cite
+
+🟢 **Adoption, Digital Education Council (published July 2026): student AI use at
+88 %, faculty at 77 %.** 🔵 Consistent with this page's standing finding, and the
+faculty figure is the one that has moved — the student/faculty gap is closing.
+
+🟢 **The efficacy evidence this KB has been missing now exists.** A **University
+of Maryland working paper (October 2026)** reports a **randomised trial of 2,379
+undergraduates** using a GPT-4o tutor inside course platforms. 🔴 **The result is
+cautionary: tutor *design* determines whether learning improves or degrades** —
+coverage frames it as AI tutors having both beaten good teaching and cut grades,
+depending on design.
+
+🔵 **Why this matters more than a market figure.** Every efficacy claim in this KB
+has until now rested on vendor studies or single-institution pilots. 🟢 **This is
+a large randomised trial with a null-or-negative arm, which is precisely the
+evidence an institutional buyer's academic board asks for.** 🟢 **It converts
+`P-570-C` (efficacy trial for a tutor already in production) from a
+nice-to-have into a defensible, citable necessity** — and it is the strongest
+available argument against shipping a tutor without an evaluation harness.
+⚠️ **Working paper, not yet peer-reviewed; read before quoting.**
+
 
 ## Declared gaps — what was searched and not found
 

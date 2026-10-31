@@ -7,7 +7,22 @@ updated: 2026-10-31
 # Current trends — education AI
 
 <!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
-`derived trends: **15**` — numbered trend headings on this page.
+`derived trends: **24**` — numbered trend headings on this page, counted with
+that gate's own regex.
+
+🔴 **`p573` corrects this claim twice over, and the second correction is a defect,
+not a stale number.** The claim read **15**; the regex counts **24**. 🔴 **The
+difference is not drift — it is a numbering collision: trends `15`, `16`, `17` and
+`18` are each used *twice on this page for different trends*.** The `p572` block
+at the top opened a new series at 15 (permissive supply in the plumbing;
+source-available licences; lesson-planning as agent skill; self-reported metrics)
+while the body already carried a 15–18 on entirely different subjects (vocabulary
+artefacts; findings not reaching the shelf; tag variants; the verification
+command). 🔵 **So `24` headings express only `20` distinct trend numbers, and four
+of those numbers are ambiguous references.** 🟢 `p573`'s own additions are
+numbered **19** and **20**, which were free. 🔴 **A citation to "trend 16" on this
+page currently resolves to two different claims — anything referencing 15–18
+should name the subject, not the number, until the series is renumbered.**
 
 Confidence is stated per trend. Where a trend was **measured first-hand** from
 GitHub's own index rather than read from a source, that is said explicitly —
@@ -76,6 +91,93 @@ the dependency manifest, and the behaviour of the code.** This pass read `28`
 grants and `7` dependency manifests byte-for-byte and found **three** commercial
 blocks and **one** GPL-3.0 licence surface hiding behind a clean MIT file — none
 of which any star or commit figure would have shown.
+
+## `p573` (2026-10-31) — trends 19–20
+
+### 🟢 19. The psychometric measurement layer splits by **programming language**, not by quality — permissive in Python, copyleft in R (high confidence — measured first-hand, 20 grants read byte-for-byte)
+
+🔵 **The observation.** Education AI's assessment work needs item calibration,
+DIF, equating and adaptive item selection. Those algorithms exist twice over in
+open source — once in Python/JVM, once in R — and **the two populations have
+almost disjoint licensing.**
+
+| tier | grants read this pass | result |
+| --- | --: | --- |
+| 🟢 Python / JVM | 9 | 🟢 **MIT ×5, Apache-2.0 ×2, BSD-3 ×1** (+1 ungranted) |
+| 🔴 R / CRAN | 12 | 🔴 **GPL-family ×11, LGPL ×1** |
+| 🟢 R, permissive exception | 1 | 🟢 **`OpenMx/OpenMx` — Apache-2.0** |
+
+🔴 **Why this is a trend and not a coincidence.** It follows the two communities'
+distribution channels. **CRAN's culture and its dominant packages are GPL**, and
+an R package that wants to depend on `mirt` or `TAM` inherits that; **PyPI has no
+such centre of gravity**, and the education-ML packages were published out of
+labs that default to MIT. 🔵 **Neither community chose this with a commercial
+deliverable in mind, and that is exactly why it catches engagements late.**
+
+🔴 **The consequence is not symmetric, because the two tiers are not
+interchangeable in *evidentiary* terms.** `mirt`, `TAM`, `sirt` and `GDINA` are
+the implementations **exam boards, ministries and peer reviewers accept**. The
+permissive Python tier is good code with less standing in a psychometric report.
+🔴 **So the licence boundary and the credibility boundary run in opposite
+directions** — the code you may ship is the code your client's statistician
+trusts least.
+
+🟢 **Prediction, falsifiable next pass:** this split will hold for any
+measurement-adjacent axis where the academic practice lives in R —
+check `topic:structural-equation-modeling` and `topic:meta-analysis`. 🔵 If either
+returns a majority-permissive population, this trend is weaker than stated.
+
+🟢 **What to do with it:** `P-575-A` (permissive Python-only calibration
+pipeline) and `P-575-B` (arm's-length GPL psychometrics service) write up the two
+postures. Choose on the first day of the engagement, not after the statistician
+has picked their tooling.
+
+### 🔴 20. The commonest licence failure in education AI is **no licence at all**, and it concentrates in peer-reviewed academic code (high confidence — measured first-hand, 26 repositories)
+
+🔵 **The measurement.** Of **26** repositories whose grants were read
+byte-for-byte this pass, 🔴 **7 (27 %) have no licence file of any kind** on
+`HEAD` — not `LICENSE`, `LICENSE.md`, `LICENSE.txt` or `COPYING`.
+
+🔴 **And they are not the abandoned toys. They are the published research:**
+
+| repo | standing | grant |
+| --- | --- | --- |
+| [bigdata-ustc/Agent4Edu](https://github.com/bigdata-ustc/Agent4Edu) | **AAAI 2025**, 100★ | 🔴 **none** |
+| [meyerjp3/psychometrics](https://github.com/meyerjp3/psychometrics) | 114★ Java CTT/IRT library | 🔴 **none** |
+| [kervias/DCD](https://github.com/kervias/DCD) | **NeurIPS 2023** | 🔴 **none** |
+| [CSLiJT/HCD-code](https://github.com/CSLiJT/HCD-code) | **SIGKDD 2022** | 🔴 **none** |
+| [ShawnYu98/RDGT](https://github.com/ShawnYu98/RDGT) | **TKDE 2024** | 🔴 **none** |
+| [inuyasha2012/vipsy](https://github.com/inuyasha2012/vipsy) | IRT/CDM variational inference | 🔴 **none** |
+| [Mr-nnng/ICD](https://github.com/Mr-nnng/ICD) | interpretable CDM for ITS | 🔴 **none** |
+
+🔴 **The inference this field keeps making, and it is wrong: that peer review
+implies permission.** A paper at NeurIPS or SIGKDD licenses nothing. **Code with
+no grant is exclusively copyrighted** — readable, reimplementable, **not
+shippable**. 🔵 The methods are published and free to reimplement from the paper;
+the *repository* is not free to vendor.
+
+🔴 **Why this bites harder in education than elsewhere.** The state of the art in
+learner modelling, cognitive diagnosis and knowledge tracing **is** academic
+code — there is no industrial alternative to fall back on, the way there is for,
+say, web frameworks. 🔴 **So "the best available implementation" and "an
+implementation you may use" diverge systematically in this industry.**
+
+🟢 **Operational rule, cheap and now proven on this harness:** read the grant
+bytes before a component enters a deliverable, and treat a missing file as a
+**hard stop**, not a question to resolve later. 🟢 **One `raw.githubusercontent.com`
+probe settles existence and grant together** (trend 18's channel), 🔴 **while the
+`curl -sI https://github.com/…` check this base is instructed to use returns `403`
+for real and invented repositories alike on this session — it cannot discriminate,
+and it fails in the unsafe direction.** `P-573-B` is the gate; this trend is the
+measured reason it is needed.
+
+🟢 **Second-order finding worth carrying to every industry base here: a licence
+*ladder* that probes filenames will never find an R package's grant, because R
+declares it in `DESCRIPTION`.** 🔴 **That single convention gap made `12` GPL
+packages look ungranted.** A per-ecosystem manifest check (`DESCRIPTION`,
+`pyproject.toml`, `Project.toml`, `*.gemspec`, `Cargo.toml`) belongs in the
+instrument, not a longer list of filename variants.
+
 
 ## 1. Education AI has stopped shipping as applications and started shipping as agent skills (high confidence — measured first-hand)
 
