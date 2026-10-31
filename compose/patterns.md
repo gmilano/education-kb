@@ -6,8 +6,8 @@ updated: 2026-10-31
 
 # Compose patterns — education
 
-<!-- machine-readable count claim, p569, for ingest/derive-counts.py -->
-`derived recipes: **21**` — recipe headings on this page, counted with that gate's
+<!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
+`derived recipes: **24**` — recipe headings on this page, counted with that gate's
 own id regex (family-suffixed form, `P-572-A`).
 
 Concrete recipes. Every component is a repo verified first-hand on 2026-10-31
@@ -1350,3 +1350,163 @@ energy and enterprise.**
 **Effort:** 1 week per industry, 3 axes. Repeat quarterly, not hourly — the band
 turns over fast but a quarter is the shortest interval over which a commit
 history means anything.
+
+## P-573-A — Rubric regression gate: prove the tutor has not degraded since Tuesday (4–6 weeks)
+
+**For:** any client already running an AI tutor, content generator or marking
+assistant in production, who cannot currently answer *"is it still as good as it
+was at go-live?"*
+**Region:** **Global**. 🔵 Highest urgency in **EMEA**, where an **AI Act Annex
+III** evaluation-of-learning-outcomes system must hold post-market monitoring
+evidence by **2 December 2027**, and in **North America**, where the four 2026
+state laws requiring district-level AI policy imply an audit someone must pass.
+
+**Why this pattern exists, and why it could not be written before this pass.**
+This KB published *"no education-specific evaluation or regression tooling
+exists"* for six passes. 🟢 **The scoring machinery does exist** — it is tagged
+`rubric`, not `education` (see trend 15) — and it is permissive. 🔴 **What still
+does not exist is a drift *detector*, so this pattern builds the detector out of
+scoring parts.** That distinction is the whole design: you are not buying
+monitoring, you are constructing it from a deterministic scorer plus a pinned
+corpus plus a generic drift tool.
+
+| Role | Component | Licence | Why this one |
+| --- | --- | --- | --- |
+| Trajectory scoring | [`alphadl/AdaRubrics`](https://github.com/alphadl/AdaRubrics) | **Apache-2.0** | 🟢 The only asset found that scores a **multi-turn trajectory** rather than one output — and every tutor in this KB is multi-turn. |
+| Deterministic re-scoring | [`CurveAhoead/ScoreRune`](https://github.com/CurveAhoead/ScoreRune) **code only** | **Apache-2.0** | 🔴 **Use the code, never cite the history** — its 2,137-commit log is synthetic (`570-A`). Deterministic, two runtimes, **no model in the scoring path**, which is what makes a regression gate reproducible. |
+| Education rubrics + prompts | [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators) | ⚠️ code **MIT**, prompts **CC BY 4.0**, corpora **CC BY-NC-SA** | 🔴 **Take the code and the prompts. Do NOT ship the CLEAR or PERSUADE corpora** — they are non-commercial, and the upstream originals are too. |
+| Pinned corpus | **the client's own** historical outputs, frozen | client's | 🔴 **The load-bearing step.** The corpus that exists cannot be shipped, so the engagement must mint one: 300–500 real interactions, human-scored once, versioned. |
+| Skill-bundle scoring | [`AndrewNgGirl/SkillLens`](https://github.com/AndrewNgGirl/SkillLens) | **MIT** | Where the deliverable *is* a prompt contract — which is **15 of the 25** agents in this KB. |
+| Item-side gate | [`onionviolet/itembank`](https://github.com/onionviolet/itembank) | **MIT** | `itembank lint` blocks on error; short-answer items never auto-graded. Reuse rather than re-implement. |
+| Drift alerting | [`evidentlyai/evidently`](https://github.com/evidentlyai/evidently) | **Apache-2.0** | 🔴 Generic, not education-aware — it watches the *score series* this pattern produces, not the pedagogy. |
+| Evidence trail | [`Sion612/rubrictrail`](https://github.com/Sion612/rubrictrail) | **Apache-2.0** | Criterion → evidence link, which is the shape an audit file needs. ⚠️ Dormant since Aug 2026: read as a design reference. |
+
+**Wiring:**
+
+1. **Freeze a corpus in week 1, before any tooling.** 300–500 real interactions,
+   stratified by subject, learner level and language. 🔴 **Everything downstream
+   is worthless without this and it is the step clients resist**, because it
+   needs teacher time. Price it explicitly.
+2. **Human-score it once** against a rubric taken from `evaluators`' prompts
+   (CC BY 4.0 — attribute, do not relicense). This is the ground truth; it is
+   produced once and never regenerated.
+3. **Stand up `ScoreRune` as the deterministic scorer** and calibrate it against
+   the human scores until agreement is stated as a number. 🔴 **Report the
+   agreement figure to the client as the gate's accuracy** — a scorer that
+   disagrees with teachers is a false-alarm generator.
+4. **Add `AdaRubrics` for the trajectory dimension** — did the session actually
+   progress, or did it produce eight individually acceptable turns that went
+   nowhere? Single-output scoring cannot see this.
+5. **Run both nightly against the frozen corpus** and push the score series into
+   `evidently`. Alert on distribution shift, not on single scores.
+6. **Keep the criterion → evidence links** (`rubrictrail`'s shape) so a regulator
+   or accreditor can be shown *why* a score was given, not just the score.
+7. 🔴 **Re-run the gate on every model, prompt and retrieval change** — the point
+   is to catch a silent provider-side model update, which is the most common real
+   cause of drift and the one no client monitors today.
+
+**What to tell the client up front:** 🟢 *"You will be able to prove the tutor
+still meets the standard, with permissive code and your own evidence."* 🔴
+*"Nobody in open source will alert you that it drifted — we are building that
+from scoring parts, and the quality of the alert is the quality of the corpus you
+give us in week one."*
+
+## P-573-B — Provenance gate: verify a component before it enters a client deliverable (1 week, reusable across every industry base)
+
+**For:** Globant's own studio practice. 🔵 **This is the pattern most likely to
+transfer unchanged to the gaming, legal, financial, healthcare, media, retail,
+travel, technology, automotive, energy and enterprise bases on this harness** —
+nothing in it is education-specific.
+**Region:** **Global**.
+
+**Why this pattern exists.** 🔴 **Two of this KB's own ranking signals have now
+been shown forgeable, one of them one pass after it was adopted.** `p569` replaced
+a star floor with commit density because the floor was discarding good libraries.
+`p570`'s first never-swept axis returned a **35★ / 2,137-commit** repository whose
+history is synthetic. 🔵 **Stars need other people; commits need a loop.** Any
+shortlist built on self-reported repository metadata is a shortlist built on
+claims the author controls.
+
+| Check | Command / instrument | What it catches |
+| --- | --- | --- |
+| **1. Grant exists** | `raw.githubusercontent.com/<r>/{main,master,dev}/{LICENSE,LICENSE.md,LICENSE.txt,COPYING,licence}` | 🔴 Branch and filename traps. `human-skill-tree` is AGPL on `master` and 404 on `main`; probing only `main` manufactures a false "no licence". |
+| **2. Grant is whole** | read the **body**, not the SPDX name | 🔴 **Four carve-out shapes, and only the first is API-visible:** separate content licence · per-directory grant · obligation inherited from an in-process dependency (`ai-learning-os` ← PyMuPDF, AGPL) · 🆕 **a `Scope:` clause inside the permissive file itself** (`word-atlas`, `570-B`). |
+| **3. Manifest agrees** | `package.json` · `DESCRIPTION` · `pyproject.toml` · `NOTICE.md` | 🟢 Catches a real grant a stub `LICENSE` hides (`guess`: 52-byte `LICENSE`, MIT in `DESCRIPTION`) and a dependency surface (`calibrate`: `dependencies` absent — verified, not assumed). |
+| **4. History is plausible** | 🆕 [`../ingest/history-plausibility.py`](../ingest/history-plausibility.py) | 🔴 **The new one.** Monotonic low-variance commits/year; commit conventions predating their own timestamps; author≠committer divergence of exactly zero; a repo whose first commit is a `refactor:`. |
+| **5. Adoption is real** | stars **and** forks **and** distinct authors **and** `archived` | 🔴 `archived: true` is invisible in a licence or star read (`supertonic`: MIT, 13,757★, frozen). Two `noreply` authors on a "12-year" project is a tell. |
+| **6. Figures are timestamped** | record the read time with the number | 🔴 Star counts move hourly (DeepTutor: +41 in 62 minutes measured here) and third-party digests emit impossible rates. **A star count is a reading, not a level.** |
+
+**Wiring:**
+
+1. **Run checks 1–3 before reading the README.** Licence first is not pedantry:
+   it is the only check whose failure makes every other answer irrelevant.
+2. **Run check 4 on anything admitted on commit density**, which costs one
+   `git clone --filter=blob:none`. 🔴 **Mandatory whenever stars are low and
+   commits are high** — exactly the profile the sub-floor census (`P-572-C`) is
+   designed to surface, so these two patterns must be run as a pair.
+3. **Record every verdict with its evidence string** — byte count of the licence
+   file, the branch it was found on, the manifest field, the commit histogram.
+   🔵 A verdict with no evidence string is re-derived from scratch next pass; this
+   KB has measurably paid that cost.
+4. **Carry defects forward rather than dropping the row.** `ScoreRune` is in this
+   KB *with its defect named*, because the code is usable and the next reader
+   would otherwise re-discover the same 2,137 and believe it.
+
+**The honest limit:** none of these six checks establishes that code **works**.
+They establish that it may be used, that it exists, and that its self-reported
+history is not fabricated. 🔴 **Validation is still engineering** — `P-572-A`'s
+cross-estimator harness is what that looks like.
+
+## P-573-C — EMEA assessment engagement on locally published institutional psychometrics (8–10 weeks)
+
+**For:** a European ministry, exam board, national testing institute or
+university consortium that must evidence an **AI Act Annex III** system by
+**2 December 2027** and would prefer not to base it on imported tooling.
+**Region:** **EMEA**.
+
+**Why this pattern exists and could not be written before this pass.** 🔴 This KB
+recorded *"EMEA gained no placed row"* for three consecutive passes and offered
+EMEA clients US- and APAC-origin psychometrics. 🟢 **`p570` placed three EMEA
+rows from the grants themselves** — and the rows were already in-tree, already
+licence-read, with only the region column blank. **The supply never changed; the
+instrument did** (`569-D`).
+
+| Role | Component | Licence | Provenance — the point of this pattern |
+| --- | --- | --- | --- |
+| Test analysis of record | [`dexter-psychometrics/dexter`](https://github.com/dexter-psychometrics/dexter) | ⚠️ **LGPL-3** — attach, do not fork | 🟢 **Cito**, the Dutch **national testing institute** (`jesse.koops@cito.nl` in `Authors@R`). The strongest EMEA institutional provenance in this KB. |
+| Large-scale assessment models | [`cran/TAM`](https://github.com/cran/TAM) | GPL-2+ — attach | 🟢 **IPN Leibniz Institute**, Kiel (`ipn.uni-kiel.de`). ⚠️ Grant lives in `DESCRIPTION`; **GitHub's sidebar shows no licence** — do not let a reviewer read that as unlicensed. |
+| Latent-variable modelling | [`yrosseel/lavaan`](https://github.com/yrosseel/lavaan) | GPL-2+ — attach | 🟢 **Ghent University**. |
+| Item calibration + equating | [`DaniyalMlk/calibrate`](https://github.com/DaniyalMlk/calibrate) | **MIT** | 🔴 `0.1.0`, 0★, one author — **permissive and pre-adoption.** The only component here you may embed. |
+| Item gate | [`onionviolet/itembank`](https://github.com/onionviolet/itembank) | **MIT** | Blocking linter; deterministic scoring, **no model in the scoring path** — the conformity artefact Annex III evaluation needs. |
+| Autograding | [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | **BSD-3** | **UC Berkeley**; R-native, so it sits beside `dexter` rather than fighting it. |
+| Efficacy evidence | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | **Apache-2.0** | LTI-attached randomised trials with consent handling. ⚠️ Grant **names no licensor** (template placeholders intact). |
+| Regression gate | **P-573-A** above | — | Post-market monitoring is an Annex III obligation, not an optional extra. |
+
+**Wiring:**
+
+1. **Lead with provenance, not architecture.** 🟢 The opening slide is that the
+   measurement core is published by **Cito, IPN Leibniz and Ghent** — three named
+   public institutions in three member states. That is the procurement argument;
+   the technical one follows.
+2. 🔴 **Draw the copyleft boundary on day one.** `dexter`, `TAM` and `lavaan` are
+   **LGPL/GPL** — they run as an **analysis service behind a process boundary**,
+   invoked over a queue or REST, never linked into a proprietary product. This is
+   the same doctrine this KB applies to the LMS of record: **attach, do not
+   fork.**
+3. **Put `calibrate` and `itembank` inside the product** — both MIT — and keep
+   the GPL analysis tier outside it.
+4. **Validate `calibrate` against `dexter` or `TAM`**, not instead of them:
+   `P-572-A`'s cross-estimator harness, with the national-institute
+   implementation as the reference. 🟢 **Two independently written estimators
+   agreeing to a stated tolerance is the assurance evidence that a 0★ library
+   cannot supply**, and here the reference carries a national institute's name.
+5. **Attach `ottr` for marking** and `terracotta` for efficacy claims.
+6. **Stand up P-573-A as the monitoring obligation** and keep its evidence trail
+   from go-live.
+
+🔴 **State the gap honestly in the same conversation:** this is a **measurement**
+story, not a tutoring one. The EMEA *agent* layer is still effectively empty — one
+24★ university feedback system and one 13★ evaluator — so the tutor itself will
+be APAC- or US-origin, or built. **Conflating the two is the most expensive
+mistake available on this page**, and it is the regional version of a finding this
+KB has carried for four passes.

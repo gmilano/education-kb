@@ -1,0 +1,11 @@
+label	commits	span	years	ramp	monotonic	anach/pre17	diverge	authors	verdict	genesis
+CurveAhoead/ScoreRune	2137	2014-06-10..2026-09-06	13	1.69	True	408/408	0	2	IMPLAUSIBLE: RAMP(monotonic,low-variance); ANACHRON(408/408 pre-2017 conv-commits); DIVERGE(0 across multi-year history); GENESIS(repo begins by refactoring)	refactor: evidence kinds
+alphadl/AdaRubrics	50	2026-02-22..2026-08-24	1	1.0	False	0/0	0	2	plausible	init: project skeleton with build config and dependencies
+Sion612/rubrictrail	45	2026-08-12..2026-08-31	1	1.0	False	0/0	0	1	plausible	Release RubricTrail v0.2.0
+OpenEnvision/AutoRubric-as-Reward	27	2026-05-06..2026-09-25	1	1.0	False	0/0	0	3	plausible	Initial commit
+AndrewNgGirl/SkillLens	12	2026-05-05..2026-05-17	1	1.0	False	0/0	0	1	plausible	Initial open-source release
+AI9Stars/LLM-Rubrics-Survey	17	2026-05-31..2026-07-02	1	1.0	False	0/0	0	2	plausible	Initial commit
+designfuchen/word-atlas	14	2026-10-25..2026-10-31	1	1.0	False	0/0	0	1	plausible	词光 Word Atlas v1.0: app, dataset and docs
+hanskepper/SMART-GRADE	200	2026-07-08..2026-10-09	1	1.0	False	0/0	0	2	plausible	Initial commit
+CONTROL:philchalmers/mirt	3467	2010-09-10..2026-10-22	17	658.0	False	1/2113	19	21	plausible	improved the README file and made some corrections to the in
+CONTROL:dexter-psychometrics/dexter	276	2017-02-08..2026-07-24	10	34.5	False	0/0	1	7	plausible	version 0.1.7

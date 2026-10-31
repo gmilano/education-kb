@@ -17,6 +17,35 @@ older rows carry GitHub's licence determination and say so where it matters.
 overwhelmingly **copyleft** — the opposite of the agent layer. Two exceptions
 have now been established, and one of them is new this pass and important.
 
+## Eighth pass (`p570`, 2026-10-31) — two structural results, and one of them is a warning about this base's newest rule
+
+🟢 **`derived foundations rows: **9**` added this pass** — seven in a new layer
+below, two in placements.
+
+🟢 **Result 1: the evaluation layer was never missing. Its vocabulary was.**
+Six consecutive passes closed with *"no education-specific agent observability or
+regression tooling was found"*, searching `evaluation`, `benchmark` and
+`observability` under `topic:education`. 🔴 **The axis those assets actually live
+on is [`topic:rubric`](https://github.com/search?q=topic%3Arubric), which answers
+`187` results and which 569 passes never queried** — `topic:rubric` appeared
+**zero** times in every live page of this base. 🟢 **Seven of its top ten are new
+addresses**, all granted, and they are shelved in the new layer below. 🔵 **The
+generalisable lesson, and it will repeat in every other industry base on this
+harness: a six-pass absence can be a property of the search vocabulary rather
+than of the field. This base measured the star floor at `p569` and the topic
+vocabulary at `p570`, and both times the absence dissolved.**
+
+🔴 **Result 2: the admission rule this base adopted ONE PASS AGO is gameable, and
+the first never-swept axis produced the counterexample.** `p569` moved the
+tooling layer from a star gate to a **commit-count** gate, because a star floor
+was discarding this base's best rows. 🔴 **`CurveAhoead/ScoreRune` reads 35★ and
+`2,137` commits dated from `2014-06-10` — and the history is synthetic.** A star
+gate needs other people; **a commit gate needs a loop**, so commit count is
+*cheaper* to forge than the signal it replaced. 🟢 An instrument now exists,
+[`../ingest/history-plausibility.py`](../ingest/history-plausibility.py),
+authored and run this pass and validated against two real controls. See `570-A`
+and the layer note below.
+
 ## Platforms of record
 
 | Repo | Licence | ★ | Region | Build-on? | What it is |
@@ -88,9 +117,68 @@ it match the curriculum?"* — and the layer where licences stop being binary.
 | Repo | Licence | ★ | Region | Build-on? | What it is |
 | --- | --- | --- | --: | --- | --- |
 | [learning-commons-org/knowledge-graph](https://github.com/learning-commons-org/knowledge-graph) | ⚠️ **split: code MIT, datasets "By data publisher"** | 164 | Global | ⚠️ conditional | "The data layer for smarter educational AI" — enriched datasets linking academic standards, curricula, learning progressions and instructional guidance under one schema, reachable via browser explorer, agent plugins, local files, a REST API **and an MCP server**. Run by Learning Commons (`learningcommons.org`), country not stated. **Licence mechanics matter here:** the API reports `NOASSERTION` because the file is `LICENSE.md` and because the grant is split — README badges read "License for Knowledge Graph code: MIT" and "License for Knowledge Graph datasets: By data publisher", and **some datasets are gated**. The code is safe; each dataset must be cleared individually. |
-| [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | ⚠️ **three-tier split: code MIT · prompts CC BY 4.0 · two corpora CC BY-NC-SA 4.0** | 87 | Global | ⚠️ **conditional — the corpora are non-commercial** | "Evaluation for AI outputs against trusted educational rubrics" — research-backed rubrics for scoring generated instructional content. TypeScript, 17 forks, pushed 2026-10-31. **The only rubric-scoring asset located in this KB**, and the natural quality gate in front of any content-generating agent. **Licence RESOLVED in the fourth pass** by reading `main/LICENSE.md` (1,615 B), after three passes carried it as unresolved. It grants: *evaluator **code** → MIT*; *evaluator **content**, i.e. the prompts and settings → CC BY 4.0*; ***Annotated CLEAR Corpus** → CC BY-NC-SA 4.0*; ***Annotated PERSUADE 2.0 Corpus** → CC BY-NC-SA 4.0*. **The code and the rubric prompts are commercially usable with attribution; the two annotated corpora are NC and cannot ship in a billable deliverable or a commercial regression suite.** The upstream originals (CommonLit's CLEAR Corpus, PERSUADE 2.0) are themselves CC BY-NC-SA 4.0, so there is no cleaner version upstream to substitute — an engagement must bring its own corpus. Note the direction: this is the **inverse** of its sibling `knowledge-graph` (code MIT / data by publisher). |
+| [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | ⚠️ **three-tier split: code MIT · prompts CC BY 4.0 · two corpora CC BY-NC-SA 4.0** | 87 | Global | ⚠️ **conditional — the corpora are non-commercial** | "Evaluation for AI outputs against trusted educational rubrics" — research-backed rubrics for scoring generated instructional content. TypeScript, 17 forks, pushed 2026-10-31. ~~**The only rubric-scoring asset located in this KB**~~ — 🔴 **struck `2026-10-31` (`p570`): the `topic:rubric` sweep returned seven further granted rubric-scoring assets, four of them Apache-2.0. The claim was true of this base's search vocabulary, not of the field. See the rubric layer below.** Still the natural quality gate in front of any content-generating agent, and still the only one carrying a peer-reviewed education corpus. **Licence RESOLVED in the fourth pass** by reading `main/LICENSE.md` (1,615 B), after three passes carried it as unresolved. It grants: *evaluator **code** → MIT*; *evaluator **content**, i.e. the prompts and settings → CC BY 4.0*; ***Annotated CLEAR Corpus** → CC BY-NC-SA 4.0*; ***Annotated PERSUADE 2.0 Corpus** → CC BY-NC-SA 4.0*. **The code and the rubric prompts are commercially usable with attribution; the two annotated corpora are NC and cannot ship in a billable deliverable or a commercial regression suite.** The upstream originals (CommonLit's CLEAR Corpus, PERSUADE 2.0) are themselves CC BY-NC-SA 4.0, so there is no cleaner version upstream to substitute — an engagement must bring its own corpus. Note the direction: this is the **inverse** of its sibling `knowledge-graph` (code MIT / data by publisher). |
 | [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | **Apache-2.0** (file, 11,323 B — see note) | 21 | Global | ✅ permissive | **Efficacy measurement, and the only asset in five passes that narrows the evaluation gap.** *"Tool for Education Research with RAndomized COnTrolled TriAls"* — an **LTI plug-in to the LMS** that differentiates the contents of online assignments into experimental treatment variations and assigns students randomly between them. It also carries the ethics apparatus that makes that legal in a school: **informed consent hidden from the teacher**, non-consenting participants filtered out of result summaries and exports, and student identifiers stripped from exports. Java, 9 forks, branch **`development`**, created 2021-05-10, pushed 2026-10-29. **Be precise about what it is:** this measures *"did this intervention change outcomes"* under randomisation — it is **not** runtime monitoring and will not tell you a deployed tutor has drifted. ⚠️ Its `LICENSE` is unmodified Apache boilerplate with the template placeholders intact (`Copyright {yyyy} {name of copyright owner}`), so the grant **names no licensor**; the `NOTICE` credits Oxford University for LTI cookie-handling code. Origin not establishable from this session, recorded Global. |
 | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | MIT | 13 | EMEA | ✅ permissive | 1,143 questions from real teacher-qualification exams — CDPK (920, general pedagogy) and SEND (223, special needs). Measures whether a model knows how to *teach*, not whether it knows the subject. |
+
+## Rubric and evaluation layer (new in the eighth pass — the axis 569 passes never swept)
+
+The layer that answers *"did the agent's output meet the standard, and can I
+prove it again next Tuesday?"* — the **regression** half of the evaluation gap
+this base has published as open for six consecutive passes.
+
+🟢 **Why it was missing.** Every prior sweep looked for `evaluation`, `benchmark`
+or `observability` **under `topic:education`** and returned nothing. The assets
+are tagged by **capability**, on
+[`topic:rubric`](https://github.com/search?q=topic%3Arubric) — **187 results**,
+and a string that appeared **zero times** in every live page of this base before
+this pass. 🔴 **The gap was a vocabulary artefact, exactly as the star floor was
+a sort artefact at `p569`.**
+
+🔵 **What this layer is and is not.** None of these is an education-specific
+*drift detector*; the honest gap statement below is narrower than it was, not
+closed. What they are is **scoring machinery you can pin, version and re-run** —
+which is the missing half of pattern `P-568-K`, whose regression suite has had to
+be hand-rolled because `learning-commons-org/evaluators` cannot ship its corpora
+commercially.
+
+| Repo | Licence | ★ | Commits | Region | Build-on? | What it is |
+| --- | --- | --: | --: | --- | --- | --- |
+| 🆕 [alphadl/AdaRubrics](https://github.com/alphadl/AdaRubrics) | **Apache-2.0** (`main/LICENSE`, 10,761 B — ⚠️ **no copyright line**, see note) | 368 | 50 | Global | ✅ permissive | 🟢 **The pick of this layer, and the first asset in this base that evaluates an *agent trajectory* rather than a finished artefact.** Adaptive dynamic rubric evaluation: the rubric is generated and adapted per task instead of being fixed in advance, which is what makes it applicable to a tutoring *session* — a multi-turn interaction whose quality is not visible in any single response. Python, pushed `2026-08-24`, 50 commits from `2026-02-22`, 2 authors. 🔵 **Why it matters for an engagement:** every tutor in this KB is a multi-turn agent, and until this row the only evaluation assets here scored **single generated documents**. ⚠️ Pre-adoption: 368★ is real traction for a research artefact and is not an install base. |
+| 🆕 [Sion612/rubrictrail](https://github.com/Sion612/rubrictrail) | **Apache-2.0** (`main/LICENSE`, 11,324 B — ⚠️ no copyright line) | 130 | 45 | Global | ✅ permissive | Local-first assignment planner that keeps **evidence links** from a rubric criterion back to the work that satisfies it. TypeScript, `v0.2.0`, 45 commits `2026-08-12`→`2026-08-31`, single author. 🔵 **The audit-trail shape**, and the only row here that models the *criterion → evidence* link explicitly — which is what an accreditation review or an AI Act Annex III evaluation file actually has to produce. 🔴 **Dormant two months**; read it as a design reference, not a dependency. |
+| 🆕 [AI9Stars/LLM-Rubrics-Survey](https://github.com/AI9Stars/LLM-Rubrics-Survey) | **MIT** (`main/LICENSE`, 1,068 B, "Copyright (c) 2026 methanechen") | 71 | 17 | Global | ✅ permissive | Survey and bibliography of rubric use across the LLM lifecycle — rubrics as evaluation criteria, as training signal and as reward. **Not a runtime**: shelved because it is the literature map for this layer, and because it is the cheapest way to brief a client's academic stakeholder that rubric-based evaluation is a methodology with a corpus behind it rather than a consultant's invention. |
+| 🆕 [OpenEnvision/AutoRubric-as-Reward](https://github.com/OpenEnvision/AutoRubric-as-Reward) | **Apache-2.0** (`main/LICENSE`, 10,757 B — ⚠️ no copyright line) | 58 | 27 | Global | ✅ permissive | Auto-generated rubrics used as the **reward signal** for training — turning implicit preference data into explicit, inspectable criteria. Python, 3 authors, `2026-05-06`→`2026-09-25`. 🔵 **Relevant where a client wants a tutor tuned to its own pedagogy** rather than to generic helpfulness: the rubric becomes the spec, and the spec is readable by the teaching lead instead of buried in a preference dataset. |
+| 🆕 [AndrewNgGirl/SkillLens](https://github.com/AndrewNgGirl/SkillLens) | **MIT** (`main/LICENSE`, 1,079 B, "Copyright (c) 2026 SkillLens contributors") | 44 | 12 | Global | ✅ permissive | Self-hosted web tool for **scoring and reviewing agent skills**. 🟢 **Directly relevant to this KB's central structural finding** — that *15 of the 25 agents* on [`../agents/top.md`](../agents/top.md) have no runtime and ship as markdown skill bundles. If the deliverable is a prompt contract, the quality gate must score prompt contracts, and this is the only asset found that does. 🔴 **12 commits over 12 days in May 2026 and nothing since**: the idea is the asset here, not the code. |
+| 🆕 [hanskepper/SMART-GRADE](https://github.com/hanskepper/SMART-GRADE) | **MIT** (`main/LICENSE`, 1,068 B, "Copyright (c) 2026 HANS KEPPER") | 3 | **200** | **EMEA†** | ✅ permissive | 🟢 **The first African-origin education asset in this base with a verified permissive grant**, and a row a star gate discards outright: **3★ against 200 commits** (`2026-07-08`→`2026-10-09`). Progressive web app tracking grades across subjects, terms and *sequences* — **`séquence` is the Cameroonian/francophone-African school reporting period**, not a generic term, and the schema is built around it rather than around semesters. 🔵 **Why this row is worth more than its stars:** three passes hunted African supply and found an **org-name trap** (`AFRICAN-AI-NETWORK/learnhouse`, a 0★ fork) and an **ungranted** hackathon entry (`tujifunze-agent`). This is neither — it is a small, granted, commit-dense artefact built against a real national school calendar. ⚠️ **It is a gradebook, not AI**: the value is the curriculum-calendar schema to build on, and the provenance. 🔴 **`EMEA†` is a schema artefact, not a geography claim — see the region note below.** |
+| 🔴 [CurveAhoead/ScoreRune](https://github.com/CurveAhoead/ScoreRune) | **Apache-2.0** (`main/LICENSE`, 11,358 B — ⚠️ no copyright line) | 35 | ⛔ **2,137 — SYNTHETIC, see `570-A`** | Global | ⚠️ **code yes, history no** | 🔴 **Carried as a warning, and it is the most important row on this page.** A **deterministic** rubric engine for reviewing AI responses, Python + C# runtimes — on substance an excellent fit for this layer, because *deterministic* is precisely what a regression gate needs and what `itembank` independently chose for scoring. 🔴 **But its git history is fabricated.** `2,137` commits dated `2014-06-10`→`2026-09-06`, and all four plausibility checks fire: commits per year run `117,141,150,155,161,165,170,175,181,185,185,198` — **monotonic, 1.69× max:min across 12 years**, where the real control `philchalmers/mirt` runs `1,111,349,658,411,…,91` at **658×**; **408 of 408 pre-2017 commits carry Conventional Commits prefixes**, a convention that postdates them; **author date equals committer date on all 2,137 commits** (real control: 19 divergent); and **the repository's first commit is `refactor: evidence kinds`** — a repository cannot begin by refactoring. 🟢 **The ~154 commits dated 2026 look genuine and the code appears real**: use the code on its merits, cite **35★ / 2 authors / three months** as its provenance, and **never quote the 2,137**. Evidence: [`../evidence/history-plausibility.2026-10-31-p570.tsv`](../evidence/history-plausibility.2026-10-31-p570.tsv). |
+
+🔴 **Rejected from this layer:**
+[`tc-imba/canvas-auto-rubric`](https://github.com/tc-imba/canvas-auto-rubric)
+(33★) — **no grant** at 5 filenames × 3 branches, **and** last pushed
+`2022-12-27`. Doubly disqualified; logged so no successor re-triages it.
+
+### 🔴 The region note this layer forces, and it is a schema finding
+
+🔴 **Region is structurally unrecoverable from an Apache-2.0 grant, and this base's
+placement rule does not say so.** The standing rule (`p568`) is *"the licence
+file's copyright line places a repository when the holder is an institution"*.
+🔴 **Apache-2.0's template has no copyright line to fill** — its only occurrence
+of the word is the boilerplate definition *"'Licensor' shall mean the copyright
+owner…"*. **Four of four** Apache rows above were probed and **none carries a
+holder**. 🔵 So the rule is **licence-family-dependent**: recoverable for MIT and
+BSD, where the holder line is part of the text an author must edit; **never**
+recoverable from Apache-2.0, regardless of whether the holder is an institution.
+This is why five of seven new rows here are `Global`. Registered as `570-C`.
+
+🔴 **And `EMEA†` on `SMART-GRADE` is the closed vocabulary failing visibly.**
+The artefact is **Cameroonian**. The permitted values are
+`North America | EMEA | APAC | LATAM | Global`, so Sub-Saharan Africa resolves to
+**EMEA** — the same bucket as Germany and the Netherlands. 🔵 **The consequence is
+not cosmetic: this base publishes EMEA counts that are read as market
+measurements, and they silently conflate Western European public-sector
+procurement with African school IT.** The `†` marks artefact-grade evidence per
+`569-E`; the Africa conflation is registered separately as `570-E`. **The country
+is in the prose because the field cannot hold it.**
 
 ## Content-production layer (new in the fourth pass)
 
@@ -183,6 +271,47 @@ layer is now complete *in capability* and thin *in assurance*:
   MML output against a known-good reference (the stale-but-MIT
   [`eribean/girth`](https://github.com/eribean/girth), or R's `mirt`) and keep
   the comparison as the evidence the stars cannot supply. Wired as `P-572-A`.
+- 🟢 **`569-D` RAN, AND THE R TIER IS NOW PLACED — the largest regional movement
+  in this base in several passes.** `569-D` asked a successor to *"re-probe the R
+  tier"* on `DESCRIPTION`'s `Authors@R`, after `p569` placed one row that way.
+  **Nine rows probed, `7` carry `DESCRIPTION`, `6` place from an institutional
+  email domain in the grant's own author field:**
+
+  | Repo | `Authors@R` / `Maintainer` domain | Named entity | Region |
+  | --- | --- | --- | --- |
+  | [`dexter-psychometrics/dexter`](https://github.com/dexter-psychometrics/dexter) | `jesse.koops@cito.nl` | **Cito**, the Dutch national testing institute (Arnhem, NL) | 🟢 **EMEA** |
+  | [`yrosseel/lavaan`](https://github.com/yrosseel/lavaan) | `Yves.Rosseel@UGent.be` | **Ghent University** (BE) | 🟢 **EMEA** |
+  | [`cran/TAM`](https://github.com/cran/TAM) | `robitzsch@ipn.uni-kiel.de` | **IPN Leibniz Institute for Science and Mathematics Education**, Kiel (DE) | 🟢 **EMEA** |
+  | [`ucbds-infra/ottr`](https://github.com/ucbds-infra/ottr) | `cpyles@berkeley.edu` | **UC Berkeley** Division of Computing & Data Science | 🟢 **North America** |
+  | [`shmercer/writeAlizer`](https://github.com/shmercer/writeAlizer) | `sterett.mercer@ubc.ca` | **University of British Columbia** (CA) | 🟢 **North America** |
+  | [`SidneyBissoli/educabR`](https://github.com/SidneyBissoli/educabR) | gmail — 🔴 grant places nothing | 🟡 `Title:` reads *"…Brazilian Education Data from **INEP**"*, Brazil's national education-statistics institute; README is Portuguese | 🟡 **LATAM†** |
+  | [`philchalmers/mirt`](https://github.com/philchalmers/mirt) | `rphilip.chalmers@gmail.com` | individual | Global |
+
+  🟢 **Three EMEA placements in one probe, and `dexter`'s holder is a national
+  public assessment operator** — the same institutional class as France
+  Université Numérique, and the strongest EMEA provenance asset this base holds.
+  🔴 **Read what this does and does not change:** this base has been publishing
+  *"EMEA gained no placed row"* for three consecutive passes, and the rows were
+  **already in-tree and already read** — only their region was blank. **The
+  supply did not change; the instrument did.** An EMEA engagement can now be
+  shown locally-published, permissively granted psychometrics from three
+  countries.
+  🔵 **`educabR` is `LATAM†`** — artefact-grade per `569-E`, since the grant names
+  an individual and only the package's purpose places it.
+- 🔴 **But `569-D`'s proposed generalisation does NOT hold, and this pass
+  measured the limit.** `569-D` asked for the rule to read *"a named legal entity
+  in the grant **OR in a prescribed manifest field** (`DESCRIPTION`'s
+  `Authors@R`, `package.json`'s `author`)"*. 🟢 The R half works: **7 of 7**
+  CRAN-shaped repositories carry `DESCRIPTION` with an author email, **because
+  CRAN mandates the field.** 🔴 **The npm half does not: of 7 new rows probed for
+  `package.json`, 5 have none at all and the 2 that do name no author** —
+  `rubrictrail`'s only locating field is a `sion612.github.io` homepage, which
+  places nothing. 🔵 **So manifest-placement yield is a property of the packaging
+  ecosystem's policy, not of manifests**: it works wherever a registry *enforces*
+  authorship (CRAN, and by the same logic Debian, CPAN, CRAN-like archives) and
+  fails wherever authorship is optional (npm, PyPI without metadata discipline).
+  Restate the rule that way or it will be applied to npm and read as an absence.
+  Registered as `570-D`.
 - 🔴 **The stale permissive libraries are still stale** and are now useful as a
   *baseline* rather than as a dependency:
   [`eribean/girth`](https://github.com/eribean/girth) (127★, MIT, last pushed
@@ -379,9 +508,21 @@ licence-clean routes are:
   (`mcp-canvas-lms`), ship share-alike content licences on code-shaped artefacts
   (`Auto-Empirical-Research-Skills`, CC BY-SA 4.0, 4,843★), or state nothing at
   2,750★. The substrate is honest; the fast-moving layer is not.
-- **No open-source learning-analytics *dashboard* was located**, only the LRS
+- ~~**No open-source learning-analytics *dashboard* was located**, only the LRS
   (`ralph`) that feeds one. The presentation layer of learning analytics appears
-  to be entirely commercial; not re-verified this pass.
+  to be entirely commercial; not re-verified this pass.~~ 🔴 **STRUCK
+  `2026-10-31` (`p570`) — and this is `568-A`'s THIRD live instance, on a third
+  page.** `p568` refuted this sentence by shelving
+  [`openfun/warren`](https://github.com/openfun/warren) and
+  [`openfun/potsie`](https://github.com/openfun/potsie), both **MIT**, both from
+  **France Université Numérique**. `p569` struck the copy on
+  [`trending.md`](trending.md):179 **and left this one standing.** 🔵 **The
+  mechanism is the measured cost of `569-A`'s own residual:**
+  `ingest/absence-claims.py` reports and cannot gate, its `27` narrow-tier
+  collisions were never triaged into a baseline, and so a claim its own author
+  had already refuted survived a further pass on a page nobody re-read.
+  **An instrument that reports is worth exactly as much as the triage nobody
+  ran.** The gap register's entry is `569-A`; its first ask is now overdue twice.
 - ~~**Horizontal tooling is systematically under-covered.**~~ **Swept and closed
   on the fifth pass — and the prediction was an understatement.** The fourth pass
   guessed the blind spot hid "document parsers, TTS pipelines, assessment-item
@@ -401,6 +542,49 @@ licence-clean routes are:
   itself*, not what it does. The tools an industry runs on are usually tagged by
   **capability**, because their authors are selling to everyone. Sweep both axes
   or report an undercount.
+### Added on the eighth pass (`p570`)
+
+- 🔴 **The evaluation gap is NARROWER, not closed, and the narrow statement is
+  the useful one.** Seven granted rubric-scoring assets now exist on this page.
+  **None of them is a runtime drift detector.** What a client can now be told:
+  *"you can pin, version and re-run a rubric-based quality gate over your tutor's
+  outputs and over its multi-turn trajectories, with permissive code"* — which
+  was not true last pass. What remains untrue: *"you will be alerted when the
+  deployed tutor degrades."* `evidentlyai/evidently` (Apache-2.0) remains the
+  generic pick for that and is not education-aware. **Seventh consecutive pass
+  with no education-specific runtime monitor; this is still the clearest unmet
+  build opportunity in the industry.**
+- 🔴 **A commit count is now a claim this base must verify, not a datum it may
+  read.** `p569` made commit density the admission signal for this layer;
+  `p570` found a `2,137`-commit synthetic history on the first never-swept axis.
+  [`../ingest/history-plausibility.py`](../ingest/history-plausibility.py) is
+  committed and runs; **its four checks cost one shallow clone per candidate and
+  should run before any row is admitted on commit density.** The instrument
+  reproduces its founding case and passes two real controls (`mirt`, `dexter`).
+  🔵 **Generalises past education: any base on this harness that shortlists on
+  commit count inherits this exposure.**
+- 🔴 **Four of four Apache-2.0 rows name no licensor.** Not a defect in any one
+  repository — Apache-2.0's template simply has no copyright line, and GitHub's
+  "Apache-2.0" determination is correct in every case. **It means region is
+  unrecoverable from an Apache grant by construction**, and it means the
+  `terracotta` observation this base recorded as a one-off trap is in fact the
+  normal case for that licence family. See `570-C`.
+- 🔴 **The closed region vocabulary has no Africa value, and this base's EMEA
+  counts are therefore not a market measurement.** `SMART-GRADE` (Cameroon) is
+  recorded `EMEA†` because the five permitted values leave nowhere else to put
+  it. 🔵 **State the grade and the country whenever an EMEA count is quoted**, or
+  an African school-IT artefact and a German research institute read as the same
+  market. Registered as `570-E`. The field is not the place to fix this — the
+  vocabulary is closed on purpose and inventing `Africa` would break every
+  downstream filter; the fix is the `†` marker plus the country in prose.
+- 🔴 **`568-A` has now recurred on three separate pages across three passes.**
+  The learning-analytics-dashboard sentence struck above was refuted by `p568`,
+  struck on one page by `p569`, and survived on this one. **The instrument that
+  catches this class exists and does not gate**, because `569-A`'s triage of the
+  27 collisions into a baseline was not done at `p569` and was not done here
+  either — this pass spent its budget on discovery and verification. 🔵 **It is
+  now the oldest cheap unfinished item in this base and it should be the next
+  pass's first action, before any search leg runs.**
 - **`ulearn`'s maturity is unassessed beyond its stack.** 701★ MIT is the largest
   permissive LMS found and Laravel 5.8 is five major versions behind. Nobody
   should be told it is a starting point without an upgrade estimate attached.

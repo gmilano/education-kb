@@ -4,6 +4,149 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (eighth pass · `p570`) — four axes nobody had ever queried, and the one that paid was `topic:rubric`
+
+🟢 **`8` addresses new to a 569-pass base**, from four GitHub topic axes that
+appeared **zero or near-zero times** in every live page of this base. 🔴 **And
+`WebSearch` returned `0` new addresses for the SEVENTH consecutive pass — this
+time measured on the intel layer too, where the nil is total.**
+
+| channel | legs / rows | addresses NEW to this base |
+| --- | --: | --: |
+| 🔴 `WebSearch`, the eight mandated legs (4 global, 4 regional) | 8 | 🔴 **`0`** — **seventh consecutive nil** |
+| 🟢 `github.com/search`, four never-swept axes, star-sorted | 40 | 🟢 **`8`** (`7` from `topic:rubric` alone) |
+
+### 🔴 The `WebSearch` nil is now measured on BOTH layers, and that is new
+
+🔴 Prior passes recorded *"0 addresses new to this base"*. This pass asked the
+sharper question — **does the search channel yield new *intel* even when it
+yields no repositories?** — and token-probed all twelve distinct factual claims
+the eight legs returned against the live tree:
+
+> `FIPSE` · `134 bills` · `Ofqual` · `Digital Education Council` · `IESALC` ·
+> `€25.4m` · `AI Adoption Summit` · `Gallup` · `Digital Education Outlook` ·
+> `Europe EdTech 200` · `Tecnológico de Monterrey` · `Monterrey`
+
+🔴 **Twelve of twelve were already in-base.** So the nil is not an
+address-level artefact of this base's shortlisting — **the mandated search legs
+are returning a commentary layer this base has already fully absorbed.** 🔵 The
+reallocation `p569` made formally is now justified on two independent layers
+rather than one, and a successor should keep running the legs (they are cheap and
+they are the harness's contract) while expecting the yield to be **zero** and
+budgeting discovery to the index.
+
+### 🟢 The axis that paid, with denominators
+
+| axis | results | head rows new to base | verdict |
+| --- | --: | --: | --- |
+| 🟢 [`topic:rubric`](https://github.com/search?q=topic%3Arubric) | **187** | 🟢 **7 of 10** | **The real blind spot.** `topic:rubric` appeared **0** times in every live page before this pass |
+| 🟡 `topic:spaced-repetition` | **3.2k** | 🟡 2 of 10 | Head is huge (`read-frog` 10.2k★) and **already in-base**; the two new rows are a 6-day-old 3.5k★ app and a 2.5k★ knowledge garden |
+| 🔴 `topic:academic-integrity` | **121** | 🔴 **0 of 10** | 🟢 **Genuinely already covered** — a reassuring null |
+| 🔴 `topic:automated-grading` | **49** | 🔴 **0 of 10** | 🟢 Already covered; the whole axis is tiny (top row 8★) |
+
+🔵 **Two nils here are good news and should be read as such:** on the two axes a
+reader would most expect an education base to have missed —
+cheating-detection and auto-marking — **ten of ten head rows were already
+recorded.** Coverage claims in this base are mostly sound; the failure was
+specific and lexical.
+
+### 🔴 `570-A` — the admission rule adopted at `p569` is gameable, and the proof arrived one pass later
+
+🔴 `p569` moved the tooling layer off a star floor and onto **commit count**,
+because the floor had discarded this base's best rows. 🔴
+[`CurveAhoead/ScoreRune`](https://github.com/CurveAhoead/ScoreRune): **35★,
+`2,137` commits, history from `2014-06-10`** — and the history is **synthetic**.
+
+| check | `ScoreRune` | control `philchalmers/mirt` | control `dexter` |
+| --- | --- | --- | --- |
+| commits/year max:min | 🔴 **1.69×**, monotonic 12 yrs | 🟢 **658×**, bursty | 🟢 **34.5×** |
+| pre-2017 Conventional-Commits prefixes | 🔴 **408 / 408 (100%)** | 🟢 1 / 2,113 | 🟢 0 / 0 |
+| author date ≠ committer date | 🔴 **0** of 2,137 | 🟢 19 of 3,467 | 🟢 1 of 276 |
+| first commit in repo | 🔴 **`refactor: evidence kinds`** | 🟢 `improved the README…` | 🟢 `version 0.1.7` |
+| distinct authors | 🔴 2 (both GH noreply) | 🟢 21 | 🟢 7 |
+
+🔵 **A star gate is gamed by recruiting other people. A commit gate is gamed with
+a loop.** The signal `p569` adopted is **cheaper to forge than the one it
+replaced**, and this base swapped one gameable scalar for another inside a single
+pass. 🟢 **The remedy is built, not proposed:**
+[`../ingest/history-plausibility.py`](../ingest/history-plausibility.py) —
+authored and run this pass, `exit 0`, reproduces its founding case and **passes
+two real controls**. 🟢 **The code is probably fine and the 2026 commits look
+real**: cite `35★ / 2 authors / three months`, use the code on its merits, and
+never quote the `2,137`. Evidence:
+[`../evidence/history-plausibility.2026-10-31-p570.tsv`](../evidence/history-plausibility.2026-10-31-p570.tsv).
+
+### 🔴 `570-B` — a three-tier grant with the carve-out written INSIDE the MIT file
+
+🔴 [`designfuchen/word-atlas`](https://github.com/designfuchen/word-atlas) —
+**3,500★ in six days**, 14 commits, first commit `2026-10-25`. `main/LICENSE` is
+**1,299 B**, not the standard ~1,068, and the extra bytes are the finding:
+
+> *"**Scope:** This license covers project code, original interface artwork, and
+> technical documentation. Vocabulary learning content, third-party media, and
+> generated recordings are governed separately by `CONTENT_LICENSE.md`."*
+
+🟢 `CONTENT_LICENSE.md`, read this pass, grants **three** tiers: code + UI **MIT**
+· the Fraunces typeface **SIL OFL 1.1** · and the `data/` wordlist, the
+illustrations and the audio **CC BY 4.0** — *"to the extent of the rights the
+maintainers can grant."* 🔴 **And the disclosure that decides it for a client:
+the content was generated by AI models (LLM text, image-model illustrations,
+ElevenLabs synthetic audio), auto-validated and NOT reviewed entry by entry, with
+no accuracy warranty.** 🔵 **So a licence-column read says `MIT` and misses that
+the entire product value — 7,298 vocabulary entries with UK/US audio — is
+attribution-encumbered, hedged as to title, machine-generated, unreviewed, and
+carries an upstream TTS rights question.** 🔴 **Sixth split-grant instance and a
+new mechanism**: the carve-out is in the MIT file's own body, where neither a
+licence API, a `NOTICE` read, nor a per-directory check would find it. `568-D`'s
+decision (single `Licence` column + inline ⚠️ marker) holds and is applied.
+
+### 🟢 `569-D` closed: three EMEA placements out of one probe
+
+🟢 **Nine R-tier rows probed on `DESCRIPTION`'s `Authors@R`; six placed** —
+🟢 `dexter` → **Cito**, the Dutch national testing institute (**EMEA**) ·
+`lavaan` → **Ghent University** (**EMEA**) · `TAM` → **IPN Leibniz Institute**,
+Kiel (**EMEA**) · `ottr` → **UC Berkeley** (**North America**) · `writeAlizer` →
+**UBC** (**North America**) · `educabR` → **INEP**, Brazil (**LATAM†**,
+artefact-grade). 🔴 **This base published *"EMEA gained no placed row"* for three
+consecutive passes while these rows sat in-tree, already read, with only the
+region column blank. The supply never changed; the instrument did.** Full table
+in [`../repos/foundations.md`](../repos/foundations.md).
+
+### 🟢 First African-origin education asset with a verified grant
+
+🟢 [`hanskepper/SMART-GRADE`](https://github.com/hanskepper/SMART-GRADE) — **MIT**
+(1,068 B), **3★ against 200 commits**, a PWA whose schema is built around the
+**`séquence`**, the Cameroonian/francophone-African school reporting period.
+🔴 Three prior passes hunted African supply and found an **org-name trap**
+(`AFRICAN-AI-NETWORK/learnhouse`, a 0★ fork) and an **ungranted** hackathon entry
+(`tujifunze-agent`). This is a third thing: small, granted, commit-dense, built
+against a real national school calendar. ⚠️ **It is a gradebook, not AI** — the
+asset is the calendar schema and the provenance. 🔴 Recorded **`EMEA†`** because
+the closed five-value vocabulary has **no Africa value**; see `570-E`.
+
+### 🔴 Gate posture, probed not inherited (`569-B`)
+
+🔴 `python3 -I ingest/validate-pages.py` → **DENIED**, verbatim *"Code from
+External"*, **third consecutive pass**. 🟢 `python3 -I` on this session's **own**
+new instrument → **RAN, `exit 0`**. 🔴 `curl` → `github.com` / `api.github.com` →
+**403, 3 of 3** including `moodle/moodle`, so the harness's prescribed
+`curl -sI` link check is **unavailable in this session**; existence was proved by
+**successful `git clone` (8/8)** and **`raw.githubusercontent.com` 200s (9/10)**
+instead, which are stronger.
+
+### 🟢 `569-F` — policy decided, as the gap asked
+
+🟢 `569-F` asked this base to **decide either way** whether opening a licence
+issue on a third-party repository is in its remit. 🔴 **Decision: OUT OF REMIT.**
+This session's own operating rules state that a GitHub comment notifies real
+people and is to be posted only when the user asks for one; an unprompted issue
+on a stranger's repository is an outward-facing action this base has no mandate
+for. 🔵 **Recorded so no successor re-derives it** — the `569` passes of ungranted
+rejections stay rejections, and the remedy for a client who needs one of them is
+to approach the author themselves, which is a decision with a name on it.
+
+---
+
 ## 2026-10-31 (seventh pass · `p569`) — a tutor tier exists below the star floor, and this base's own gate denial inverted again
 
 **Four new tutor-class agents, all MIT, none admissible to the shelf — and the

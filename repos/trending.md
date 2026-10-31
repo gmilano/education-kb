@@ -4,6 +4,67 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (eighth pass · `p570`) — `topic:rubric` answers `187` and had never been queried once in 569 passes
+
+🟢 **Seven new addresses from one axis**, all granted — the layer this base
+published as an open gap for six consecutive passes.
+
+| axis | results | new to base | grants read |
+| --- | --: | --: | --- |
+| 🟢 [`topic:rubric`](https://github.com/search?q=topic%3Arubric) | **187** | 🟢 **7 of 10** | 🟢 **7 of 7** — 4 Apache-2.0, 3 MIT |
+| 🟡 `topic:spaced-repetition` | **3.2k** | 2 of 10 | 🟢 2 of 2 MIT |
+| 🔴 `topic:academic-integrity` | **121** | **0 of 10** | — |
+| 🔴 `topic:automated-grading` | **49** | **0 of 10** | 🟢 1 of 1 MIT |
+
+### 🟢 The rubric layer, as shelved
+
+All seven are in [`foundations.md`](foundations.md) under a new **rubric and
+evaluation layer**. Headline rows:
+
+| Repo | Licence | ★ | Commits | What it adds that this base did not have |
+| --- | --- | --: | --: | --- |
+| [`alphadl/AdaRubrics`](https://github.com/alphadl/AdaRubrics) | Apache-2.0 (10,761 B) | 368 | 50 | 🟢 **The first asset here that evaluates an agent *trajectory***, not a finished document — the right shape for a multi-turn tutor |
+| [`Sion612/rubrictrail`](https://github.com/Sion612/rubrictrail) | Apache-2.0 (11,324 B) | 130 | 45 | Criterion → **evidence link**, i.e. the audit trail an accreditation or AI Act Annex III file must produce |
+| [`AI9Stars/LLM-Rubrics-Survey`](https://github.com/AI9Stars/LLM-Rubrics-Survey) | MIT (1,068 B) | 71 | 17 | The literature map — rubric evaluation as a methodology with a corpus, not a consultant's invention |
+| [`OpenEnvision/AutoRubric-as-Reward`](https://github.com/OpenEnvision/AutoRubric-as-Reward) | Apache-2.0 (10,757 B) | 58 | 27 | Rubric as **training signal**: tune a tutor to a client's pedagogy with the spec readable rather than buried in preference data |
+| [`AndrewNgGirl/SkillLens`](https://github.com/AndrewNgGirl/SkillLens) | MIT (1,079 B) | 44 | 12 | 🟢 Scores **agent skills** — and 15 of the 25 agents in this base ship as skill bundles with no runtime |
+| [`hanskepper/SMART-GRADE`](https://github.com/hanskepper/SMART-GRADE) | MIT (1,068 B) | 3 | **200** | 🟢 First **African-origin** education asset here with a verified grant; schema built on the Cameroonian `séquence` |
+| [`CurveAhoead/ScoreRune`](https://github.com/CurveAhoead/ScoreRune) | Apache-2.0 (11,358 B) | 35 | ⛔ **2,137 SYNTHETIC** | 🔴 Deterministic rubric engine — good code, **forged history**. See `570-A` |
+
+🔴 **Rejected:** [`tc-imba/canvas-auto-rubric`](https://github.com/tc-imba/canvas-auto-rubric)
+(33★) — **no grant** at 5 filenames × 3 branches **and** last pushed
+`2022-12-27`. Doubly disqualified; logged so no successor re-triages it.
+
+### 🔴 Two new rows from `topic:spaced-repetition`, and one of them is the pass's licence finding
+
+🔴 [`designfuchen/word-atlas`](https://github.com/designfuchen/word-atlas) —
+**3,500★ in six days**, **14 commits**, MIT at **1,299 B** whose extra bytes
+carve the content out to **CC BY 4.0** via `CONTENT_LICENSE.md`, with the
+wordlist, illustrations and audio **AI-generated and not reviewed entry by
+entry**. Sixth split-grant instance, new mechanism (carve-out inside the MIT
+body). `570-B`. 🟡 [`oldwinter/knowledge-garden`](https://github.com/oldwinter/knowledge-garden)
+— MIT (1,066 B, "Copyright (c) 2022 oldwinter"), 2,500★, an Obsidian-based
+personal knowledge base; recorded as a **retention-pattern reference**, not an
+education platform.
+
+🟢 **The head of this axis was already in-base** — `read-frog` (10.2k★),
+`Echo-Loop` (4.6k★), `fsrs4anki` (4.1k★), `LibreLingo` (2.6k★, ⚠️ **public
+archive**), `obsidian-spaced-repetition` (2.6k★), `orbit` (1.8k★), `engram`
+(1.5k★), `memo` (1.9k★). 🔵 **8 of 10 already recorded on an axis never formally
+swept** is a coverage result worth stating: this base's retention layer is in
+better shape than its gap register implied.
+
+### 🟢 `569-D` ran — the R tier is placed, three EMEA rows out of one probe
+
+🟢 `dexter` → **Cito** (NL national testing institute) · `lavaan` → **Ghent** ·
+`TAM` → **IPN Leibniz Kiel** · `ottr` → **UC Berkeley** · `writeAlizer` →
+**UBC** · `educabR` → **INEP** Brazil (`LATAM†`). 🔴 **`570-D`: the extension does
+not generalise to npm** — 5 of 7 new rows have no `package.json` at all.
+**Manifest placement works where a registry mandates authorship (CRAN), not
+because it is a manifest.**
+
+---
+
 ## 2026-10-31 (seventh pass · `p569`) — the star floor was hiding a whole field, and `13` new addresses came out of the band the sort cannot reach
 
 **`568-C` asked for one thing: a commit-count read on the shortlisting path, and

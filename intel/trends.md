@@ -6,8 +6,8 @@ updated: 2026-10-31
 
 # Current trends — education AI
 
-<!-- machine-readable count claim, p569, for ingest/derive-counts.py -->
-`derived trends: **13**` — numbered trend headings on this page.
+<!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
+`derived trends: **15**` — numbered trend headings on this page.
 
 Confidence is stated per trend. Where a trend was **measured first-hand** from
 GitHub's own index rather than read from a source, that is said explicitly —
@@ -178,7 +178,17 @@ i.e. capability before content — it reads as a real design lesson rather than 
 anecdote: **fund the teacher, not the artefact.** Any national-rollout proposal
 should carry an adoption-risk section citing Korea.
 
-## 7. Evaluation is the missing layer, and the absence is now specific (high confidence — measured first-hand)
+## 7. Evaluation is the missing layer, and the absence is now specific (high confidence — measured first-hand) — 🟡 **HALF-SUPERSEDED `2026-10-31` (`p570`), see trend 15**
+
+> 🟡 **Dated correction, `2026-10-31` (`p570`).** The *regression* half of this
+> trend is **wrong as a supply claim** and was wrong for six passes: seven granted
+> rubric-scoring assets exist on
+> [`topic:rubric`](https://github.com/search?q=topic%3Arubric) (187 results), an
+> axis this base never queried, and they are now shelved in
+> [`../repos/foundations.md`](../repos/foundations.md). The ***observability***
+> half stands — there is still no education-specific detector for a deployed
+> tutor drifting, seventh consecutive pass. Read what follows as accurate about
+> runtime monitoring and as superseded about scoring machinery.
 
 Three passes of searching have located exactly **three** evaluation assets for
 education AI:
@@ -584,6 +594,86 @@ network-copyleft obligation onto the one directory a studio would host.
 and `NOTICE`, then price the swap. In this instance a BSD-3 or MIT PDF parser in
 place of one AGPL dependency clears the whole platform (`P-572-B`). 🔴 **What is
 expensive is finding out after deployment.**
+
+## 14. Provenance is now forged at the layer this field just started trusting (high confidence — measured first-hand, with controls)
+
+🔴 **A git history can be synthetic, and nobody checks.** This KB moved its
+tooling-layer admission signal from **stars** to **commit count** at `p569`,
+for a good reason: a star floor was discarding genuinely useful libraries
+(`calibrate`, 0★ / 214 commits; `itembank`, 3★ / 1,175 commits). 🔴 **One pass
+later, the first never-swept axis returned
+[`CurveAhoead/ScoreRune`](https://github.com/CurveAhoead/ScoreRune): 35★,
+`2,137` commits, history beginning `2014-06-10` — and the history is
+manufactured.**
+
+| check | `ScoreRune` | control `mirt` (real, 16 yrs) | control `dexter` (real, 10 yrs) |
+| --- | --- | --- | --- |
+| commits/year, max:min | 🔴 **1.69×** and monotonic for 12 years | 🟢 **658×** | 🟢 **34.5×** |
+| pre-2017 commits using Conventional-Commits prefixes | 🔴 **408 / 408** | 🟢 1 / 2,113 | 🟢 0 / 0 |
+| commits where author date ≠ committer date | 🔴 **0** of 2,137 | 🟢 19 of 3,467 | 🟢 1 of 276 |
+| subject of the repository's first commit | 🔴 **`refactor: evidence kinds`** | 🟢 `improved the README…` | 🟢 `version 0.1.7` |
+| distinct author addresses | 🔴 **2**, both GitHub `noreply` | 🟢 21 | 🟢 7 |
+
+🔵 **Why this is a trend and not an anecdote: the economics changed direction.**
+Buying stars requires other people, or at least accounts that look like them.
+**Synthesising a 12-year commit history requires a loop and `GIT_AUTHOR_DATE`.**
+So the moment a community — this KB, a procurement checklist, a "trending" digest
+— starts rewarding commit density, it has adopted a signal that is **strictly
+cheaper to forge than the one it replaced.** Every base on this harness that
+shortlists on commit count has the same exposure.
+
+🟢 **What to do, and it is cheap.** Read commit count **only together with its
+date distribution**. Real histories are *bursty* — a launch spike, a plateau, a
+quiet year, a revival. A smooth monotonic ramp is a generator artefact. Three
+further checks cost nothing: commit-message conventions that postdate their own
+timestamps, author/committer date divergence of exactly zero across thousands of
+commits, and a repository whose first commit is a `refactor:`. 🟢 Implemented as
+[`../ingest/history-plausibility.py`](../ingest/history-plausibility.py),
+authored and run this pass; it reproduces its founding case and passes both
+controls above. Evidence:
+[`../evidence/history-plausibility.2026-10-31-p570.tsv`](../evidence/history-plausibility.2026-10-31-p570.tsv).
+
+🔴 **The uncomfortable corollary for this page.** Every star count and commit
+count quoted anywhere in this KB is a *claim made by a repository about itself*.
+Stars have a known failure mode this base already documents (third-party digests
+reporting impossible rates). Commits now have one too. **The only signals read so
+far that an author cannot unilaterally manufacture are the licence text, the
+dependency manifest, and the behaviour of the code.**
+
+## 15. A multi-pass "gap" is often a vocabulary artefact, not an absence (high confidence — measured first-hand, twice in two passes)
+
+🔴 **This KB published *"no education-specific agent evaluation or regression
+tooling exists"* for six consecutive passes.** It searched `evaluation`,
+`benchmark` and `observability` under `topic:education`, got nothing, and
+escalated the claim each pass until it read as the industry's clearest unmet
+build opportunity. 🟢 **The assets were on
+[`topic:rubric`](https://github.com/search?q=topic%3Arubric) — 187 results — and
+the string `topic:rubric` appeared ZERO times in every live page of this base
+before `p570`.** Seven of its top ten were addresses new to a 569-pass base, all
+granted, four Apache-2.0.
+
+🔵 **This is the second consecutive pass in which a long-published absence
+dissolved on contact with a different access method, not with new supply:**
+
+| pass | published absence | what actually caused it |
+| --- | --- | --- |
+| `p569` | *"the `topic:ai-tutor` axis is saturated"*, four passes | 🔴 **The sort.** `816` results by stars, `793` at `stars:<50` — 97% of the field sat below the floor the base ranked by |
+| `p570` | *"no education-specific evaluation tooling exists"*, six passes | 🔴 **The vocabulary.** The layer is tagged `rubric`, a word the base never queried |
+
+🟢 **The generalisable control, and it is the cheapest quality gate available to
+any industry base on this harness:** before publishing an absence, state the
+**query** that failed and the **denominator** it returned. An absence with no
+query attached is unfalsifiable, and this base has now twice shipped one for
+multiple passes. 🔵 An absence claim should carry three things — *the query, the
+result count, and the date* — and `569-A`'s second ask (a mandatory date stamp on
+every absence claim; **414 of 565** currently carry none) is the first third of
+that control.
+
+🔴 **Note what did *not* dissolve, because the discipline cuts both ways.** Two of
+the four never-swept axes — `topic:academic-integrity` (121 results) and
+`topic:automated-grading` (49) — returned **ten of ten** head rows already
+in-base. **Not every unswept axis hides a finding, and reporting the two nils is
+what makes the one hit credible.**
 
 ## Declared gaps
 

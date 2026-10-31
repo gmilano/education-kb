@@ -143,6 +143,66 @@ integration, and Chinese-language documentation throughout. 🔴 **Those are two
 different grades of evidence and this page does not pretend otherwise** — see
 `569-E`.
 
+## Eighth pass (`p570`, 2026-10-31) — no new platform qualified, and the content-grant lesson now belongs on this page
+
+🔴 **Measured null, stated rather than left silent.** Four GitHub topic axes
+never swept in 569 passes were queried this pass — `topic:rubric` (187 results),
+`topic:spaced-repetition` (3.2k), `topic:academic-integrity` (121),
+`topic:automated-grading` (49). 🔴 **None returned a vertical education platform.**
+The eight new addresses they produced are **evaluation tooling and learning
+apps**, shelved in [`../repos/foundations.md`](../repos/foundations.md). The
+platform tier of this industry is not discoverable on capability axes — it is
+found, as this page's own history shows, on `topic:lms`, `topic:sis` and
+`topic:student-information-system` with a licence filter.
+
+### 🔴 The finding this page must absorb: a content carve-out can live INSIDE the MIT file
+
+🟢 `568-D` established the convention this page already applies — a single
+`Licence` column plus an inline ⚠️ marker naming the carve-out. 🔴 **`p570` found
+the sixth instance and a mechanism that defeats every check this base runs**, and
+although the repository itself is a learning app rather than a platform, **the
+mechanism is most dangerous here**, because a vertical education platform *ships
+curriculum content* by definition.
+
+[`designfuchen/word-atlas`](https://github.com/designfuchen/word-atlas)
+(**3,500★ in six days**) carries `main/LICENSE` at **1,299 B** — standard MIT is
+~1,068 — and the surplus is a `Scope:` clause in the MIT body itself:
+
+> *"This license covers project code, original interface artwork, and technical
+> documentation. Vocabulary learning content, third-party media, and generated
+> recordings are governed separately by `CONTENT_LICENSE.md`."*
+
+| scope | licence |
+| --- | --- |
+| code + UI design | **MIT** |
+| Fraunces typeface | **SIL OFL 1.1** |
+| wordlist (`data/`), illustrations, audio recordings | **CC BY 4.0** — *"to the extent of the rights the maintainers can grant"* |
+
+🔴 **Three tiers, and the attribution-encumbered tier is the entire product
+value.** 🔴 **Plus a disclosure that decides procurement:** the content was
+produced by AI models — LLM text, image-model illustrations, **ElevenLabs
+synthetic audio** — auto-validated and **not reviewed entry by entry**, supplied
+as-is with **no accuracy warranty**, and the maintainers **hedge whether they
+hold the rights they are granting.**
+
+🔵 **The checklist item for every platform on this page, stated as a rule because
+four separate mechanisms have now been catalogued:** a platform's grant must be
+read for **four** carve-out shapes, and only the first is visible to a licence
+API —
+
+1. a **separate content licence** for datasets or curricula (`knowledge-graph`,
+   `open-question-bank`);
+2. a **per-directory** grant (`human-skill-tree`'s dual-licensed `skills/`);
+3. an **obligation inherited from an in-process dependency**
+   (`ai-learning-os`, AGPL-3.0 via PyMuPDF — *nobody chose it*);
+4. 🆕 **a scope clause inside the permissive file's own body** (`word-atlas`) —
+   which a `NOTICE` read, a per-directory check and a dependency audit **all
+   miss**, because the file that limits the grant *is* the grant.
+
+🔴 **The operational consequence for a client deliverable: if a platform ships
+content, "MIT" on the repository is a statement about the code and about nothing
+else, until the content tier has been read by name.**
+
 ## How to read this page
 
 **The operations layer is copyleft almost without exception — but the exception
@@ -237,6 +297,25 @@ not a matter of taste — it is forced by licensing:
   on two end-of-life frameworks. The genuinely usable permissive set today is
   **OpenOlat, Academico, Richie, Mentingo and DSpace** — and only DSpace is a
   category leader.
+- 🔴 **No vertical platform was discoverable on a capability axis — a null worth
+  recording so it is not re-run.** Four never-swept axes (`topic:rubric`,
+  `topic:spaced-repetition`, `topic:academic-integrity`,
+  `topic:automated-grading`; denominators `187 / 3.2k / 121 / 49`) returned
+  **zero** platforms. 🔵 **This is the mirror image of the fifth pass's
+  capability-sweep finding:** sweeping by capability finds the *horizontal*
+  supply and the *tooling*; the platform tier only answers to platform topics
+  with a licence filter. **Both axes are required, and they return different
+  layers** — do not substitute one for the other.
+- 🔴 **A fourth carve-out mechanism now exists and the page's reading rule is
+  updated above.** `word-atlas`'s grant is limited by a `Scope:` clause **inside
+  the MIT file**, which no instrument this base runs would catch — not the
+  licence API, not a `NOTICE` read, not a per-directory check, not a dependency
+  audit. 🔵 **For this page the exposure is structural rather than incidental:
+  every platform here that ships curriculum, item banks or media has the same
+  surface**, and only `knowledge-graph`, `evaluators`, `open-question-bank` and
+  `ai-learning-os` have actually been read for it. **The remaining rows are
+  unread on their content tier**, and that is a stated gap rather than a clean
+  bill.
 - **Mentingo's maturity is unverified beyond its metadata.** MIT, Poland, xAPI
   and SCORM are confirmed from the API and profile. Whether it can actually carry
   an institutional deployment — SSO, accessibility conformance, data residency,

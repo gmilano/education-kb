@@ -43,6 +43,81 @@ pass's own discovery query (`topic:ai-education stars:>150 pushed:>2026-10-20`)
 returns the **same 6 repositories**, all already shelved. The axis is exhausted;
 the population is not, and the capability sweep is the proof.
 
+## Eighth pass (`p570`, 2026-10-31) — the shelf holds at `24`, and the pass's yield was in a layer this page does not own
+
+🟢 **`derived shelf: **24**` — unchanged, and reported as a measured null rather
+than a quiet absence.** Four axes were swept that **569 passes had never
+queried**, and the result for *this* page is honest and small:
+
+| axis queried (never swept before `p570`) | results | new addresses | agents qualifying here |
+| --- | --: | --: | --: |
+| `topic:rubric` | **187** | 🟢 **7** | 🔴 **0** — all seven are evaluators or tooling |
+| `topic:spaced-repetition` | **3.2k** | 🟡 2 | 🔴 **0** — learning apps, not agents |
+| `topic:academic-integrity` | **121** | 🔴 **0** — all ten head rows already in-base | 🔴 **0** |
+| `topic:automated-grading` | **49** | 🔴 **0** — all ten head rows already in-base | 🔴 **0** |
+
+🔵 **Two of the four axes were already covered without this page knowing it** —
+`academic-integrity` and `automated-grading` returned **ten of ten** addresses
+already recorded somewhere in this base, which is a genuine and reassuring
+result about coverage. 🟢 **`topic:rubric` was the real blind spot**, and its
+seven rows are shelved in [`../repos/foundations.md`](../repos/foundations.md)
+under a new **rubric and evaluation layer**, because none of them is an agent and
+padding this shelf with evaluators would misrepresent the agent population — the
+same judgement the fourth pass made for `ppt-master` and the fifth for the
+capability sweep.
+
+### 🟢 What the sweep did for this page: the evaluation gap this page has published for six passes is narrower
+
+🔴 This page's longest-standing declared gap reads *"No education-specific agent
+**observability** or **regression** tooling was found — sixth consecutive
+pass."* 🟢 **The regression half moves**, and the reason it never moved before is
+a property of the queries, not the field: every prior sweep searched
+`evaluation` / `benchmark` / `observability` **under `topic:education`**, while
+the assets sit on `topic:rubric` — a string that appeared **zero times** in every
+live page of this base before this pass. 🟢 **[`alphadl/AdaRubrics`](https://github.com/alphadl/AdaRubrics)**
+(Apache-2.0, 368★) is the first asset in this KB that evaluates an **agent
+trajectory** rather than a finished document, which is the right shape for a
+multi-turn tutor. 🔴 **The observability half does not move: there is still no
+education-specific runtime drift detector, seventh consecutive pass.**
+
+### 🔴 The pass's warning, and it is about this base's newest rule
+
+🔴 **`p569` adopted commit count as the admission signal for the tooling layer.
+`p570` found the counterexample on the first axis it applied the rule to.**
+[`CurveAhoead/ScoreRune`](https://github.com/CurveAhoead/ScoreRune) reads **35★
+with `2,137` commits dated from `2014-06-10`** — and the history is **synthetic**:
+monotonic `1.69×` commits-per-year across 12 years against the real control's
+`658×`, **408 of 408** pre-2017 commits carrying a commit convention that
+postdates them, **zero** author/committer date divergence across all 2,137, and a
+first commit reading `refactor:`. 🔵 **A star gate is gamed by recruiting other
+people; a commit gate is gamed with a loop.** The replacement signal is *cheaper*
+to forge than the one it replaced. 🟢 The check is now an instrument —
+[`../ingest/history-plausibility.py`](../ingest/history-plausibility.py),
+authored and run this pass, validated against two real controls — and the rule
+this page should carry forward is: **commit density admits a row only together
+with its date distribution.** See `570-A`.
+
+🔵 **The `p569` watch item is NOT yet due.** `voyage` and `throughline` were
+left for `p573` and are deliberately untouched here; nothing in this pass
+supersedes that instruction.
+
+### 🔴 Gate posture — probed, not inherited (`569-B` satisfied)
+
+🔴 **`python3 -I ingest/validate-pages.py` → DENIED**, verbatim
+*"Code from External"* — **third consecutive pass**, so `p569`'s reading holds
+and `p565`'s does not, in this session. 🟢 **`python3 -I` on an instrument this
+session authored → RAN, `exit 0`** (`ingest/history-plausibility.py`),
+confirming `569-B`'s corollary a second time: code this session writes is not
+"external". 🔴 **`curl` → `github.com` and `api.github.com`: 403, re-probed, 3 of
+3 including `moodle/moodle`** — so the harness's prescribed `curl -sI` URL check
+**cannot be run from this session at all**, and existence was instead verified by
+**successful `git clone`** (8 of 8 candidates) and **`raw.githubusercontent.com`
+200s** (9 of 10), both of which are strictly stronger evidence than a HEAD
+request. 🔵 **A pass that reported those 403s as dead links would have deleted
+live repositories**; the uniform-status rule on this page is what prevents it.
+
+---
+
 ## Seventh pass (`p569`, 2026-10-31) — no new agent qualified again, and this time the floor itself was tested
 
 🟢 **The shelf is unchanged at `24` rows. What changed is that this pass tested
@@ -315,6 +390,20 @@ institutional copyright holder names itself in the grant:
 | "GIP FUN MOOC" | `openfun/richie` → EMEA |
 | "ENGAGESPHERE TECHNOLOGY PRIVATE LIMITED" | `euron-open-lms` → APAC |
 
+🔴 **New limit, measured at `p570`: the rule is LICENCE-FAMILY-DEPENDENT and
+cannot work at all on Apache-2.0.** Apache-2.0's template contains **no copyright
+line** — its only use of the word is the boilerplate *"'Licensor' shall mean the
+copyright owner…"* definition. **Four of four** Apache rows probed this pass
+(`AdaRubrics`, `rubrictrail`, `AutoRubric-as-Reward`, `ScoreRune`) carry **no
+holder**, so region is unrecoverable from them **by construction, whether or not
+the holder is an institution**. The `terracotta` placeholder observation this
+page recorded as a one-off trap is the *normal case* for that family. 🔵 And the
+companion extension works where a **registry mandates authorship**: `p570` placed
+**six** R-tier rows from `DESCRIPTION`'s `Authors@R` (three EMEA, two North
+America, one LATAM†) because CRAN enforces the field, while **5 of 7** npm-shaped
+rows have no `package.json` at all. See `570-C`, `570-D` and
+[`../repos/foundations.md`](../repos/foundations.md).
+
 **And the limit is as important as the rule, because it was tested.** All seven
 `Global` rows were re-probed against this instrument this pass. **None resolved**
 — every holder is an individual or a pseudo-collective: "Anatoly Tarnavsky"
@@ -459,8 +548,14 @@ could be mistaken for a finding:**
   returns the identical 6 repositories, all shelved. Stating it as "the axis is
   exhausted" is supportable; stating it as "the population is covered" is the
   error the fourth pass corrected, and the capability sweep above is why.
-- **No education-specific agent *observability* or *runtime regression* tooling
-  was found — sixth consecutive pass.** Two differently shaped queries returned
+- 🟡 **No education-specific agent *observability* or *runtime regression*
+  tooling was found — sixth consecutive pass.** 🟢 **Half-superseded `2026-10-31`
+  (`p570`): the *regression* half is now supplied** by the `topic:rubric` layer in
+  [`../repos/foundations.md`](../repos/foundations.md) — seven granted assets,
+  including the first that scores an **agent trajectory** (`AdaRubrics`,
+  Apache-2.0, 368★). 🔴 **The *observability* half stands, seventh consecutive
+  pass:** nothing education-specific detects a deployed tutor drifting. Read the
+  original sentence below as true of its date and half-true now. Two differently shaped queries returned
   nothing new: a text search for evaluation/benchmark assets under
   `topic:education` returned **0 results**, and the ITS/learning-analytics sweeps
   surfaced no monitor. **But the gap is now one notch less absolute**, and the
