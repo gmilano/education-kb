@@ -10,6 +10,46 @@ Real, deployed systems that run an institution's operations — the education
 equivalent of Odoo for ERP. These are the systems a client already has, and the
 systems an AI layer gets attached to.
 
+## 🆕 `p575` — thirteenth pass, 2026-10-31 — 🔴 **the education ERP vertical: the search leg implied MIT/Apache, the licence file says LGPL-3.0, and the default branch is `19.0`**
+
+🔵 **Why this row needed a correction and not just an entry.** The mandated
+`open source platform education ERP CRM MIT Apache` leg returned **OpenEduCat** as
+the education-specific answer and said its licence was not stated — correctly
+flagging that it should be checked. 🔴 **Checked: it is `LGPL-3.0`, not MIT and not
+Apache-2.0.** Anyone who took the leg's framing at face value would have planned a
+vendoring strategy the grant does not permit.
+
+| Platform | Repo | Licence (read first-hand) | Default branch | Region | What it runs |
+| --- | --- | --- | --- | --- | --- |
+| **OpenEduCat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | **LGPL-3.0** (licence file `8,240 B`, opening line *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE"*) | 🔴 **`19.0`** — not `main`, not `master` | Global (India-origin vendor) | Student information and institution ERP built **on the Odoo framework**: admissions, students, faculty, courses, batches, attendance, exams, library, fees. 🟢 **The education-sector Odoo this page has pointed at generically for passes without naming the licence or the branch.** |
+
+🔴 **The branch finding is the reusable one.** `git ls-remote --symref` resolves
+`openeducat_erp`'s `HEAD` to **`19.0`** — the Odoo-style release-numbered branch. 🔵 A
+probe that assumes `main` or `master` **does not get a wrong answer, it gets a 404 and
+reports the repository dead** — the exact failure mode `P977` recorded for
+`openedx/edx-platform`'s heads→tags move, now reproduced on a second platform. 🟢 Any
+grant, version or manifest read against this repository must resolve `HEAD` first.
+
+🟢 **What LGPL-3.0 means here, stated as the engagement decision.** LGPL is the
+*weak* copyleft rung: you may **link** proprietary code against it and ship that
+combination, provided the LGPL'd component itself stays LGPL and remains replaceable.
+🔵 So for OpenEduCat the doctrine is slightly softer than this base's standing
+"attach, do not fork" rule: **an AI layer that calls OpenEduCat over its API or as a
+separate Odoo module is clean, and a patch to OpenEduCat's own files is LGPL and must
+be published.** 🔴 It is still not a codebase to absorb into a proprietary product.
+
+🔵 **Where this sits against the rest of the page.** Every platform of record on these
+shelves is now confirmed copyleft — Moodle (GPL-3.0), Open edX (AGPL-3.0), TAO
+(GPL-2.0), UDOIT (GPL-3.0), Cboard (GPL-3.0), OpenEduCat (**LGPL-3.0**). 🟢 **OpenEduCat
+is the weakest rung of the six**, which makes it the most permissive system of record
+this industry offers — and that is a genuinely useful thing to know before an ERP
+engagement.
+
+🔴 **Not shelved, and why:** [`fotinikafida/text-to-moodle`](https://github.com/fotinikafida/text-to-moodle)
+(`3★`) produces restorable Moodle `.mbz` course packages — relevant to the platform
+this page's largest row runs — but its grant is a **Creative Commons** licence
+(`7,047 B`), which is a *content* licence, not a software licence. 🔵 Usable as
+courseware, not as a component.
 ## 🆕 `p574` — twelfth pass, 2026-10-31 — 🟢 THE ASSESSMENT-DELIVERY AND ACCESSIBILITY VERTICAL, which this base has never held: **TAO** is the QTI platform of record and it is `GPL-2.0`
 
 🔵 **Why this page needed it.** Every row above runs *teaching* or *records*. The

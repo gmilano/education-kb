@@ -7,8 +7,10 @@ updated: 2026-10-31
 # Foundational open source repos for education
 
 <!-- machine-readable count claim, p574, for ingest/derive-foundations.py -->
-`derived shelf rows: **135**` — every data row in a `SHELF`-disposition table,
-derived by that gate from this page's own structure (`130` distinct addresses).
+`derived shelf rows: **142**` — every data row in a `SHELF`-disposition table,
+derived by that gate from this page's own structure (`137` distinct addresses). 🟢 `p575` added `7`
+rows (the horizontal accessibility layer), all `7` addresses new to this page, and **declared both of
+its tables in the manifest** — the omission that killed this gate for six passes (`574-B`).
 🔴 **`p574` found this gate DEAD, not stale:** the `p568` rewrite left `33` of its
 `36` declared keys naming headings the page no longer carries and `24` live tables
 undeclared, two of them `p573`'s own — so it exited `2` before reading a single
@@ -34,6 +36,56 @@ older rows carry GitHub's licence determination and say so where it matters.
 overwhelmingly **copyleft** — the opposite of the agent layer. Two exceptions
 have now been established, and one of them is new this pass and important.
 
+## 🆕 `p575` — thirteenth pass, 2026-10-31 — 🟢 the horizontal accessibility layer that the education axis cannot see, and 🔴 **three of this pass's own seven "ungranted" verdicts were refuted by its own second probe**
+
+🔵 **Why these rows are here and not on `agents/top.md`.** `574-C`'s sweep found the
+engineering in this layer sits on `topic:screen-reader` (**594** repositories), and
+none of it knows what a course is. Under the fourth pass's standing rule that a
+horizontal capability layer is not an education agent, it is shelved here. 🟢 **This
+is the layer the `P-575-A` BUILD recommendation stands on** — because the
+education-specific tier it would replace tops out at `7★`.
+
+| Component | Repo | Grant (read first-hand) | ★ | Region | What it gives an education build |
+| --- | --- | --- | --: | --- | --- |
+| **NVDA** | [nvaccess/nvda](https://github.com/nvaccess/nvda) | **GPL-2.0** — ⚠️ **not** in `LICENSE`: in **`copying.txt`** (`53,407 B`), and `pyproject.toml` agrees (`license = {file = "copying.txt"}`) | 2,700 | Global | The free Windows screen reader that students actually use. 🔴 **GPL-2.0 — the reference target you test against, never a dependency you ship.** |
+| **guidepup** | [guidepup/guidepup](https://github.com/guidepup/guidepup) | **MIT** (`1,068 B`, `main/LICENSE`) | 591 | Global | 🟢 **Screen-reader automation for tests** — drives NVDA and VoiceOver from a test suite. This is the row that turns an accessibility duty into a **CI gate**, and it is permissive. Copyright `2023 Craig Morten`. |
+| **virtual-screen-reader** | [guidepup/virtual-screen-reader](https://github.com/guidepup/virtual-screen-reader) | **MIT** (`1,068 B`, `main/LICENSE`) | 158 | Global | Screen-reader *simulator* for tests — runs in CI with no real assistive tech installed. 🟢 The cheap half of the same gate. |
+| **Odilia** | [odilia-app/odilia](https://github.com/odilia-app/odilia) | **MIT OR Apache-2.0** (dual) — ⚠️ **no root licence file**; grant stated in `README.md` | 173 | Global | Fast Rust screen reader for Linux desktops — the relevant target wherever the client's lab images are Linux. 🟢 Permissive, unlike NVDA. |
+| **RigelA** | [mzdk100/rigela](https://github.com/mzdk100/rigela) | **Apache-2.0** (`11,336 B`, `master/LICENSE`) | 150 | APAC | Screen reader written in pure Rust, Chinese-language project. 🟢 **Permissive and APAC-origin** — the combination this base is usually short of. |
+| **EaseView** | [Ropaxyz/EaseView](https://github.com/Ropaxyz/EaseView) | **MIT** (`1,067 B`, `main/LICENSE`) | 2 | Global | Windows screen colour-overlay for readability — the standard dyslexia-adjacent accommodation, as a vendorable component. Copyright `2026 Ross Paxton`. 🔴 2★. |
+| **TechSpecsTVI** | [mrhunsaker/TechSpecsTVI2023](https://github.com/mrhunsaker/TechSpecsTVI2023) | **Apache-2.0** (`11,351 B`, `main/LICENSE`) | 0 | North America | Not code — the **equipment specification** a Teacher of the Visually Impaired works from. 🔵 Shelved because a procurement-shaped document is what an engagement is actually asked for. |
+
+### 🔴 `575-A` — this pass's own probe produced **three false "ungranted" verdicts out of seven**, and the defect generalises to a published figure
+
+🔴 **Measured, on this pass's own work.** The first probe read six grant paths
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`, `LICENSE-MIT`) and
+returned **`NO-LICENCE-FILE` for seven repositories**. A second probe over a wider
+path set — adding `copying.txt`, the README and the dependency manifests —
+**refuted three of those seven**:
+
+| repository | first probe | second probe | where the grant actually was |
+| --- | --- | --- | --- |
+| [nvaccess/nvda](https://github.com/nvaccess/nvda) | 🔴 `NO-LICENCE-FILE` | 🟢 **GPL-2.0** | **`copying.txt`** (`53,407 B`) — lowercase, non-standard name |
+| [odilia-app/odilia](https://github.com/odilia-app/odilia) | 🔴 `NO-LICENCE-FILE` | 🟢 **MIT OR Apache-2.0** | **`README.md`** — dual grant, no licence file at all |
+| [IronCountySchoolDistrict/iep-printing-php](https://github.com/IronCountySchoolDistrict/iep-printing-php) | 🔴 `NO-LICENCE-FILE` | 🟢 **MIT** | **`composer.json`** (`"license": "MIT"`) |
+
+🔵 **The lesson is not "probe more paths".** It is that **"no licence file" is a claim
+about the prober's path list, not about the repository** — and this base publishes a
+figure of exactly that shape. 🔴 **`p573`'s "`7 of 26` repositories have no licence
+file", restated by `p574` and cited on several pages, was produced by a probe of this
+same class and has never been re-run against `copying.txt`, a README grant or a
+manifest.** 🟡 It should be read as an **upper bound** until re-audited, which is
+`575-A`'s ask. 🟢 The control still holds: a fabricated address
+(`FAKE-CONTROL-ORG/this-repo-does-not-exist-575`) answered `DEAD-OR-ABSENT` on both
+probes, so the channel does discriminate absence from error — it was the *path set*
+that was wrong, not the method.
+
+🟢 **And the `572-E` Affero discriminator reproduced COLD for the third time**, on a
+sample it was not built from: Affero references `= 3` on every GPL body
+(`SEALApplication`, `chatpaths`, `minecraft-access`, `nvda`) and `= 15–18` on every
+real AGPL (`aba-clinical-agent` `15`, `LectureFlow` `15`, `zacess` `15`, `AlloFlow`
+`18`). **8 of 8, no overlap.** 🔵 Twice-validated became thrice-validated; this is
+now the cheapest reliable grant discriminator on this harness.
 ## 🆕 `p574` — the accessibility and assessment-interchange layer: `911` repositories across **six axes this base has never queried**, and its grants run the OPPOSITE way from the agent layer
 
 🟢 **`derived foundations rows: **23**` added this pass**, from a single coherent

@@ -7,7 +7,7 @@ updated: 2026-10-31
 # Current trends — education AI
 
 <!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
-`derived trends: **22**` — numbered trend headings on this page, counted with
+`derived trends: **24**` — numbered trend headings on this page, counted with
 that gate's own regex.
 
 🔴 **`p573` corrects this claim twice over, and the second correction is a defect,
@@ -108,6 +108,94 @@ same hour hit [`../compose/patterns.md`](../compose/patterns.md), where
 the gate read as `25`. **One mechanism, two files: a count claim written by hand
 beside content filed at a level the counter cannot reach.**
 
+## 🆕 `p575` — 2026-10-31 — trends 23–24, both filed at `##` so the counter can see them
+
+🔵 Filed at `##` deliberately. `p573` filed its two trends as `###` sub-headings where
+[`../ingest/derive-counts.py`](../ingest/derive-counts.py) cannot see them, and `p574`
+had to promote them. This pass does not repeat that.
+
+## 23. Regulation is promulgated by jurisdiction, so it cannot be found by region — and twelve passes of a region-level search leg proved it the expensive way (high confidence — measured first-hand, prescription and result in consecutive passes)
+
+🔴 **The measurement.** This base's mandated regional search legs
+(`AI {industry} {region} {year} adoption regulation players`) **failed to reach a
+single education-specific regulatory instrument in twelve consecutive passes.** Each
+time they returned market-research summaries, cross-sector enterprise AI surveys and
+consultancy blogs. 🔵 Twelve passes is enough to call it structural rather than
+unlucky.
+
+🟢 **`574-D` diagnosed it and prescribed the fix: query by jurisdiction, not by
+region. Run this pass, it worked on the first attempt** — Korea's AI Basic Act (in
+force `22 Jan 2026`, education a named high-impact sector), Singapore's MOE AIEd
+Framework and dated teacher-training mandate, Japan's MEXT ver. 2.0 guidelines, and
+Australia's Framework plus the Disability Standards that actually bind. 🟢 **Four
+jurisdictions, one pass, after twelve passes of nil.**
+
+🔵 **Why it works, stated as the general rule: "EMEA" and "APAC" are *market*
+categories, and no legislature publishes to them.** A statute is enacted by a
+jurisdiction, indexed under its own name, and discussed in its own language. A
+region-shaped query can only ever reach the layer that *aggregates* across
+jurisdictions — which is analyst content, and analyst content is exactly what those
+twelve passes returned.
+
+🟢 **The corollary, and it is actionable for every base on this harness: a region
+field is the right way to *store* a finding and the wrong way to *search* for one.**
+This KB's closed region vocabulary (`North America` / `EMEA` / `APAC` / `LATAM` /
+`Global`) is correct as a filter and useless as a query. 🔴 **The LATAM leg has now
+failed the same way thirteen times** — no national instrument for Brazil, Mexico or
+Chile has ever been reached — and `575-E` asks for the same per-jurisdiction method
+there, with this pass's APAC result as the evidence that it works.
+
+🔵 **An evidenced absence has the same shape and the same value.** China was queried
+twice this pass and returned nothing; because the queries were English-language, that
+is recorded as **an informed gap with a named next channel** (query in Chinese, read
+`SAC/TC28`) rather than as coverage. 🔵 **Silence and an absence are
+indistinguishable in a KB unless the absence is written down** — which is this base's
+oldest standing rule, here applied to a jurisdiction instead of a repository.
+
+## 24. "No licence file" is a property of the probe, not of the repository — and a published ungranted count is therefore an upper bound until its path set is stated (high confidence — measured first-hand, three refutations out of seven on this pass's own work)
+
+🔴 **Measured on this pass's own probe, which is the strongest place to find it.** A
+six-path grant probe (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `LICENCE`, `COPYING`,
+`LICENSE-MIT`) returned `NO-LICENCE-FILE` for **seven** repositories. A second probe
+over a wider path set **refuted three of the seven**:
+
+| repository | where the grant actually was | would a reasonable probe find it? |
+| --- | --- | --- |
+| [nvaccess/nvda](https://github.com/nvaccess/nvda) | **`copying.txt`** (`53,407 B`), GPL-2.0, confirmed in `pyproject.toml` | 🔴 lowercase, non-standard filename |
+| [odilia-app/odilia](https://github.com/odilia-app/odilia) | **`README.md`** — "MIT OR Apache-2.0", no licence file at all | 🔴 no file to find |
+| [IronCountySchoolDistrict/iep-printing-php](https://github.com/IronCountySchoolDistrict/iep-printing-php) | **`composer.json`** (`"license": "MIT"`) | 🔴 manifest only |
+
+🔵 **The three failure modes are distinct and all three are ordinary**: a
+non-standard filename, a grant stated in prose, and a grant stated only in a
+dependency manifest. **None of them is exotic, and `nvda` is the most-used screen
+reader in education.** So the error rate here is not a freak result — it is what a
+narrow path set does to any real population.
+
+🔴 **The consequence for this base is specific.** `p573` published "**`7 of 26`
+repositories have no licence file**", `p574` restated it, and it is cited on several
+live pages as evidence that academic education code is systematically ungranted. 🔴
+**It was produced by a probe of this same class and has never been re-run against
+`copying.txt`, a README grant or a manifest.** 🟡 **It must be read as an upper bound,
+not a count**, until re-audited — `575-A`.
+
+🟢 **What keeps this a measurement rather than a worry: the control held.** A
+fabricated address answered `DEAD-OR-ABSENT` on both probes, so the channel does
+distinguish a missing repository from a failed read. **The method was sound; the path
+set was wrong** — and those are different defects with different fixes.
+
+🔵 **The general rule, and it is the inverse of a rule this base already trusts.**
+`570-A` holds that a licence file is one of the few signals an author cannot
+unilaterally manufacture — true, and it is why this base reads grants byte-for-byte.
+🔴 **But its contrapositive does not hold: the *absence* of a licence file at a path
+you chose is not evidence of an ungranted repository.** 🟢 **So any ungranted claim
+must publish its path set alongside the count**, exactly as a star count must publish
+its read time. A number without its instrument is not a measurement.
+
+🔴 **And the inverse tell exists too, found on the same axis.**
+[`ncreighton/…iep-debug-dashboard…`](https://github.com/ncreighton/special-education-iep-debug-dashboard-and-log-analyzer-vs-code-extension)
+has a README reading **"MIT — see [LICENSE](LICENSE)"** and **no `LICENSE` file at that
+path.** 🔵 A README grant can rescue a grant the probe missed *or* assert one that was
+never there, so **a README is a pointer to check, never a verdict to record.**
 ## 21. The accessibility layer is where education AI's licence boundary and its demand boundary cross (high confidence — measured first-hand, 29 grants read byte-for-byte)
 
 🔵 **The claim:** the one education obligation with calendar dates attached —

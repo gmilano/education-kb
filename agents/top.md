@@ -7,9 +7,12 @@ updated: 2026-10-31
 # Top AI agents for education
 
 <!-- machine-readable count claim, p569, for ingest/derive-counts.py -->
-`derived shelf: **29**` — the shelf table below, counted with that gate's own row
-regex. 🔴 Not the same figure as an unbounded `## The shelf` → next-`##` scan, which
-derives **33** by swallowing the two `###` sub-tables; see `568-E` / `569-C`.
+`derived shelf: **35**` — the shelf table below, counted with that gate's own row
+regex, bounded at the first `###`. 🔴 **Not** the figure the gate actually derives: its
+scan runs `## The shelf` → next `##` and so swallows `### Carried with a known defect`
+and `### Agent-skill bundles`, deriving **44**. 🔵 `p574` recorded that spread as `33`;
+`p575` remeasured it at **44 against 35**, and the `9`-row difference is exactly those
+two sub-tables. See `568-E`, now quantified as `575-B`.
 
 Every row below was verified on 2026-10-31. **The fifth pass swept the axis the
 fourth pass named as blind: capability topics rather than industry topics.** The
@@ -43,6 +46,53 @@ pass's own discovery query (`topic:ai-education stars:>150 pushed:>2026-10-20`)
 returns the **same 6 repositories**, all already shelved. The axis is exhausted;
 the population is not, and the capability sweep is the proof.
 
+## 🆕 `p575` — thirteenth pass, 2026-10-31 — 🟢 `574-C` closed as a **BUILD recommendation**: the education-specific special-education layer is a hobby tier, and the `topic:iep` axis tops out at **7★**
+
+🟢 **`574-C` prescribed four axes and all four were swept, with denominators read off
+GitHub's own result counts:** `topic:special-education` (**89**),
+`topic:assistive-technology` × `topic:education` (**27**), `topic:iep` (**34**) and
+`topic:screen-reader` (**594**) — **`744` repositories across four axes never queried
+in `574` passes.**
+
+🔴 **The answer `574-C` asked for is the one it guessed: there is no mature,
+education-specific, permissively licensed accessibility agent, and the reason is
+not licensing — it is that nobody has built one.** The education-specific tier is a
+**hobby tier**, and the star ladder is the whole finding:
+
+| axis | repositories | top ★ | then | verdict |
+| --- | --: | --: | --- | --- |
+| `topic:special-education` | **89** | **101** | 10, 7, 5, 4, 3, 3, 3, 1, 1 | 🔴 one repo above 11★ |
+| `topic:iep` | **34** | **7** | 3, 3, 2, 1, 1, 1, 0, 0, 0 | 🔴 **the entire axis is under 8★** |
+| `topic:assistive-technology` × `education` | **27** | **8** | 4, 3, 3, 2, 1, 1, 1, 1, 0 | 🔴 nothing above 8★ |
+| `topic:screen-reader` | **594** | **2,700** | 728, 591, 431, 291, 173, 158, 150 | 🟢 real engineering — but **horizontal** |
+
+🔵 **Read those two bottom rows together and the recommendation writes itself.** The
+`screen-reader` axis has NVDA at `2.7k★` and a tested automation layer at `591★`;
+the `iep` axis — the one that names the artefact every US special-education
+engagement turns on — **has nothing above 7★.** The supply is not badly licensed,
+it is **absent**, and `574-C` was right to say that an informed absence is the more
+valuable answer. 🟢 **So: BUILD, on the horizontal layer, shelved in
+[`../repos/foundations.md`](../repos/foundations.md).** The recipe is
+[`P-575-A`](../compose/patterns.md).
+
+🟢 **Six rows did qualify** — MIT, every grant read byte-for-byte from the licence
+file itself — and they are shelved below. 🔴 **Five of the six are at or under 3★,
+and the shelf says so in each row**; they are shelved because the axis is new and
+the fit is exact, not because the artefact is mature. The one real find is
+**`mcd-together-order`** (`101★`, MIT): the **first MCP-native AAC agent** this base
+has seen, and it is **pre-pilot by its own admission** — no student trials, one ¥12
+order created and never paid.
+
+🔴 **A defect in this page's own count gate, measured exactly (`575-B`).** The header
+claim below reads `29` and it is **correct about the shelf table**. But
+[`../ingest/derive-counts.py`](../ingest/derive-counts.py) scans `## The shelf` →
+**next `##`**, which swallows `### Carried with a known defect` and `### Agent-skill
+bundles`, and derives **`38`** — so the gate, if it could compare at all, would call
+a right page RED by `9` rows. 🔵 **It cannot compare**: it reads the claim with
+`re.search(r"(\d+)", lines[start])` from the *heading line*, `## The shelf` carries
+no digit, so the gate has **AMBERed on this page since it was written** while the
+prose figure drifts unchecked. 🔵 That is `568-E` — but quantified: `29` against
+`38`, and the two `###` sub-tables are exactly the `9`.
 ## 🆕 `p574` — twelfth pass, 2026-10-31 — 🔴 NO NEW AGENT QUALIFIED AGAIN, and the reason is worth more than a row: the layer the `2027`/`2028` **accessibility deadlines** create demand for has **agent-shaped MIT supply that is horizontal, not educational** — `2` MIT agent bundles enforcing **WCAG 2.2 AA**, shelved in [`../repos/foundations.md`](../repos/foundations.md) under the fourth pass's own rule
 
 🔵 **Why this pass went looking here.** `p572` shelved the LTI 1.3 / xAPI plumbing
@@ -532,6 +582,12 @@ local-supply story and its build-on-it story remain about different repositories
 | THM Feedbacksystem | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | Apache-2.0 | 24 | **EMEA** | **The EMEA-origin gap, open for four passes, closes here.** *"Intelligent, personalised feedback for students using artificial intelligence"* — automated checking and feedback on student submissions, in production use in university teaching. TypeScript, 10 forks, default branch **`dev`** (no `main`), created 2018-08-17, pushed 2026-10-28. `dev/LICENSE` 10,785 B: *"Copyright 2021 **Technische Hochschule Mittelhessen** — Licensed under the Apache License, Version 2.0"*. **Read the caveat as loudly as the finding:** 244 open issues on 24 stars, and an eight-year-old codebase that predates LLM tutoring entirely. This is a **provenance** asset and a reference deployment for a European university conversation — it is not a product to ship. |
 | Paideia | [OPTIMETA/PAIDEIA](https://github.com/OPTIMETA/PAIDEIA) | MIT | 91 | Global | **Fully local exam readiness — the data-residency answer.** A Claude Code plugin that *"forms exam readiness locally. Stop renting your own learning."* Runs on **Ollama** with **Qwen3-VL** for vision, does its own **OCR**, and writes into **Obsidian** markdown; maths and physics. Python, 4 forks, created 2026-04-21, pushed 2026-10-31. `main/LICENSE` 1,068 B, "Copyright (c) 2026 Taewoo Park". **Why it matters commercially:** every sovereignty-constrained engagement in this KB — EMEA public sector, Vietnam, Korea — asks for a tutor that sends no student data anywhere, and this is the only row that is local-first by construction rather than by configuration. Holder is an individual, so no region is assigned. |
 
+| mcd-together-order | [littlebordercollie/mcd-together-order](https://github.com/littlebordercollie/mcd-together-order) | **MIT** (1,308 B ✅ first-hand, `main/LICENSE`) | 101 | APAC | 🟢 **The first MCP-native AAC agent in this base, and the only credible education-specific find on four never-queried axes.** 麦麦一起点: a student in a 培智学校 (special-needs school) picks a meal from a few picture cards with short audio; the parent then checks list, store and price and pays through official McDonald's channels. A local service calls **McDonald's own MCP** for stores, items and prices. 🔴 **Pre-pilot, and says so: 10 commits, no student trials run, one ¥12 trial order created and never paid.** A contest prototype, not a product. 🔵 Region placed by language and by the 培智学校 framing — the grant's copyright line reads "mcd-together-order contributors" and places nothing (`574-F`). |
+| shravyamudra | [tejasbhor/shravyamudra](https://github.com/tejasbhor/shravyamudra) | **MIT** (1,069 B ✅ first-hand, `main/LICENSE`) | 1 | APAC | Real-time text → **Indian Sign Language** gesture translation with learning modules, Python. 🟢 **The second India-specific row on these shelves**, and it lands against the one education-specific accessibility instrument this base has confirmed (the AICTE / RPwD code, `574-D`). 🔴 1★ — shelved for the axis and the jurisdiction fit, not for maturity. |
+| SPLWD | [VoxDroid/SPLWD](https://github.com/VoxDroid/SPLWD) | **MIT** (1,061 B ✅ first-hand, `main/LICENSE`) | 3 | Global | PHP school-management system **for students with learning and working disabilities**, role-based dashboards. 🟢 The only *administrative* system on the special-education axis — every other row there is a single-learner tool. 🔵 Copyright line reads `Izeno`, which places no region. |
+| worksheet-generator | [ellmos-ai/worksheet-generator](https://github.com/ellmos-ai/worksheet-generator) | **MIT** (1,068 B ✅ first-hand, `main/LICENSE`) | 1 | Global | Generates **individualised worksheets** for educational and therapeutic professionals, Python. 🔵 The differentiation step an IEP goal actually needs, and the nearest thing on this axis to a reusable component. 🔴 1★. |
+| AAC-Web_Project | [manavrenjith/AAC-Web_Project](https://github.com/manavrenjith/AAC-Web_Project) | **MIT** (1,084 B ✅ first-hand, `main/LICENSE`) | 3 | Global | Flask **AAC** board with text-to-speech. 🔵 Permissive where the deployed AAC platform this base already shelves (`cboard`, GPL-3.0) is copyleft — so this is the row you may vendor. 🔴 3★, student-project scale. |
+| special-education-due-process-complaint | [b33kman/special-education-due-process-complaint](https://github.com/b33kman/special-education-due-process-complaint) | **MIT** (1,068 B ✅ first-hand, `main/LICENSE`) | 1 | North America | Chat-app plugin that drafts **IDEA due process complaints**. 🟢 **The only row on these shelves that acts on education *law* rather than education content** — IDEA is the US statute behind every IEP, and the complaint is its enforcement instrument. 🔵 Copyright `2026 Mark Beekman`. 🔴 1★. |
 ### Carried with a known defect
 
 | Agent | Repo | Licence | ★ | Region | Note |

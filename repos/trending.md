@@ -4,6 +4,58 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (thirteenth pass · `p575`) — 🟢 `744` repositories on four never-queried axes, `29` grants read byte-for-byte — and 🔴 **this pass refuted three of its own "ungranted" verdicts, which puts a published figure in doubt**
+
+🟢 **The axis table, denominators read off GitHub's own result counts:**
+
+| axis | repositories | prior queries in `574` passes | read | new to this base |
+| --- | --: | --: | --: | --: |
+| [`topic:screen-reader`](https://github.com/search?q=topic%3Ascreen-reader&type=repositories) | **594** | 🔴 `0` | 10 | 🟢 **7** |
+| [`topic:special-education`](https://github.com/search?q=topic%3Aspecial-education&type=repositories) | **89** | 🔴 `0` | 10 | 🟢 **9** |
+| [`topic:iep`](https://github.com/search?q=topic%3Aiep&type=repositories) | **34** | 🔴 `0` | 10 | 🟢 **10** |
+| [`topic:assistive-technology` × `topic:education`](https://github.com/search?q=topic%3Aassistive-technology+topic%3Aeducation&type=repositories) | **27** | 🔴 `0` | 10 | 🟢 **8** |
+
+🔵 Addresses recur across axes (`special-education` and `iep` share rows), so the
+per-axis column sums above the distinct total — **`744` repositories, `28` addresses
+read, `25` new to this base.**
+
+🔴 **The licensing of this layer, and it is the mirror image of the agent layer's.**
+Of the `28` addresses read: **`11` permissive** (MIT ×9, Apache-2.0 ×2), **`8`
+copyleft** — and of those, **`4` are AGPL-3.0**: `aba-clinical-agent`, `LectureFlow`,
+`zacess` and `AlloFlow`. 🔵 **An AGPL rate of `4` in `28` is the highest this base has
+measured on any education axis.** Three of the four are single-developer tools built
+in 2026, which suggests the default licence chooser rather than a deliberate network
+-copyleft strategy — but the obligation binds either way.
+
+🟢 **The `572-E` Affero discriminator reproduced COLD for the third time, `8` of `8`,
+no overlap:** Affero references `= 3` on every GPL body (`SEALApplication`,
+`chatpaths`, `minecraft-access`, `nvda`) against `= 15–18` on every real AGPL
+(`aba-clinical-agent` `15`, `LectureFlow` `15`, `zacess` `15`, `AlloFlow` `18`).
+
+🔴 **`575-A` — this pass's first probe produced three FALSE "ungranted" verdicts, and
+it is the same defect class the base keeps finding in gates.** Seven repositories came
+back `NO-LICENCE-FILE` from a six-path probe; a wider second probe refuted **three**:
+[`nvaccess/nvda`](https://github.com/nvaccess/nvda) is **GPL-2.0** in **`copying.txt`**
+(`53,407 B`, confirmed by `pyproject.toml`),
+[`odilia-app/odilia`](https://github.com/odilia-app/odilia) is **MIT OR Apache-2.0**
+stated only in its **README**, and
+[`IronCountySchoolDistrict/iep-printing-php`](https://github.com/IronCountySchoolDistrict/iep-printing-php)
+is **MIT** in **`composer.json`**. 🔵 **"No licence file" is a claim about the prober's
+path list, not about the repository.** 🔴 **And this base publishes a figure of exactly
+that shape** — `p573`'s "`7 of 26` have no licence file", restated by `p574` and cited
+across several pages, was produced by a probe of this class and has never been re-run
+against `copying.txt`, a README grant or a manifest. 🟡 **Read it as an upper bound
+until re-audited.** 🟢 The control held throughout: a fabricated address answered
+`DEAD-OR-ABSENT` on both probes, so the channel discriminates absence from error — the
+*path set* was wrong, not the method.
+
+🟢 **`git ls-remote --symref` ×29, `0` failures, and it earned its place again:**
+**[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) resolves
+its default branch to `19.0`** — not `main`, not `master`. A `main`/`master` probe
+loses the repository entirely and reports it dead. 🔵 `3` of `29` resolved to something
+other than `main`/`master` this pass (`19.0`, `dev`, and `master` where `main` was
+assumed).
+
 ## 2026-10-31 (twelfth pass · `p574`) — 🟢 `13` addresses new to a 573-pass base, from **six axes never queried in this base's history**, and `911` repositories now have a denominator
 
 🟢 **The axis table, with denominators read off GitHub's own result counts:**

@@ -4,6 +4,165 @@ region: Global
 updated: 2026-10-31
 ---
 
+## Pass 575 — reads 2026-10-31, commit 2026-10-31 — **🟢 `574-C` CLOSED AS A BUILD RECOMMENDATION: `744` REPOSITORIES ON FOUR AXES NEVER QUERIED IN `574` PASSES, AND THE `topic:iep` AXIS — THE ARTEFACT EVERY US SPECIAL-EDUCATION ENGAGEMENT TURNS ON — TOPS OUT AT `7★`. 🟢 `574-D` SUBSTANTIALLY CLOSED: KOREA'S AI BASIC ACT BINDS EDUCATION AS A NAMED HIGH-IMPACT SECTOR, PLUS SINGAPORE, JAPAN AND AUSTRALIA — AFTER TWELVE PASSES OF REGION-LEVEL NIL. 🔴 `574-F`'s PRESCRIBED REMEDY REFUTED: `0 of 7` REPOSITORIES CARRY `CITATION.cff`. 🔴 AND THIS PASS REFUTED THREE OF ITS OWN SEVEN "UNGRANTED" VERDICTS, WHICH PUTS A FIGURE THIS BASE PUBLISHES IN DOUBT. SIX REGISTERED (`575-A`…`575-F`), ONE OF THEM A VERIFIER THAT CERTIFIES NOTHING.**
+
+### 🟢 The central result: the gap was real, the licensing was not the problem, and the answer is BUILD
+
+`574-C` asked whether an education-specific, permissively licensed accessibility
+agent exists, and prescribed four axes. All four were swept, with denominators read
+off GitHub's own result counts: `topic:screen-reader` (**594**),
+`topic:special-education` (**89**), `topic:iep` (**34**),
+`topic:assistive-technology` × `topic:education` (**27**) — **`744` repositories,
+none of these axes ever queried in `574` passes.**
+
+🔴 **The education-specific tier is a hobby tier, and the star ladder is the finding.**
+`topic:iep` — named for the *Individualized Education Program*, the legal artefact
+every US special-education engagement turns on — holds `34` repositories and **the
+largest has `7★`**. `topic:special-education` has exactly one repository above `11★`.
+🟢 Meanwhile `topic:screen-reader` carries **NVDA at `2,700★`** and a tested **MIT**
+automation layer at `591★`.
+
+🔵 **So the supply is not badly licensed — it is absent**, and `574-C` was right that
+an informed absence is the more valuable answer. **Recipe filed: `P-577-A`** — build
+the thin education-specific layer (a tool that knows what a course, a cohort and an
+accommodation are, and ranks defects by *which student is blocked* rather than by WCAG
+clause) on the mature horizontal layer, with the GPL systems of record deployed and
+called rather than vendored.
+
+🟢 **Six education-specific agents did qualify on licence**, every grant read
+byte-for-byte, and are shelved: `mcd-together-order` (**101★**, the first MCP-native
+AAC agent in this base), `shravyamudra`, `SPLWD`, `worksheet-generator`,
+`AAC-Web_Project`, `special-education-due-process-complaint`. 🔴 **Five of the six are
+at or under `3★` and each row says so.** The one real find is **pre-pilot by its own
+admission**: `10` commits, no student trials, one ¥12 order created and never paid.
+
+### 🟢 `574-D` closed on four jurisdictions, and the method is the reusable part
+
+🔴 `574-D` recorded that the mandated **region-level** search leg had failed to reach
+education-specific regulation in **twelve consecutive passes**, and prescribed
+**per-jurisdiction** queries. 🟢 **Run this pass, the prescription worked on the first
+attempt:**
+
+- 🟢 **Korea — the one binding obligation.** The **AI Basic Act** and its Enforcement
+  Decree took effect **`22 January 2026`**, and **education is a NAMED high-impact
+  sector**: risk management, explanation, user protection, human oversight and
+  generative-output labelling. MSIT grace of **`≥1` year**; a delay to **2029**
+  proposed. **The first binding education-specific AI duty on these shelves outside
+  the EU AI Act and the US ADA Title II rule.** Package filed as **`P-577-B`**.
+- 🟢 **Singapore — the densest dated programme in the region.** MOE **AIEd Framework**
+  (Agency / Inclusivity / Fairness / Safety) inside **EdTech Masterplan 2030**; "Four
+  Learns" (COS 2026, parliamentary reply `6 May 2026`); **Teacher AI Literacy Roadmap,
+  Aug 2026 — three compulsory modules, one due end-2026 and two by 2027**; Authoring
+  Copilot and Learning Assistant shipped Jan 2026; **a Primary-4 access floor with
+  P1–P3 excluded** — an age floor is a product requirement, and this base held none
+  from any jurisdiction before now.
+- 🟢 **Japan — MEXT genAI guidelines ver. 2.0, December 2024** (provisional July 2023;
+  separate higher-education guidance July 2023).
+- 🟢 **Australia — an education-specific framework whose duty sits elsewhere**, which
+  is itself the finding: the **Framework for Generative AI in Schools** (6 principles,
+  25 guiding statements, accessibility under *Fairness*, reviewed ≥12-monthly) is
+  🔴 **voluntary**; the enforceable obligation is the **Disability Standards for
+  Education 2005 (Cth)** under the DDA 1992, and 🟢 **Victoria requires the
+  accessibility check *before* deployment** — the cleanest procurement checkpoint on
+  these shelves.
+- 🔴 **China — searched twice, not found**, in English only. Recorded as an informed
+  gap with a named channel (`575-D`), not as coverage.
+
+🔵 **Filed as trend 23: "EMEA" and "APAC" are market categories and no legislature
+publishes to them.** A region field is the right way to **store** a finding and the
+wrong way to **search** for one. 🟢 `575-E` asks for the same method on LATAM, where
+the identical failure now stands at thirteen passes.
+
+### 🔴 The pass's second finding is about its own instrument
+
+🔴 **A six-path grant probe returned `NO-LICENCE-FILE` for `7` repositories; a wider
+second probe refuted three of them.** [`nvaccess/nvda`](https://github.com/nvaccess/nvda)
+is **GPL-2.0** in **`copying.txt`** (`53,407 B`, confirmed by `pyproject.toml`),
+[`odilia-app/odilia`](https://github.com/odilia-app/odilia) is **MIT OR Apache-2.0**
+stated only in its **README**, and
+[`IronCountySchoolDistrict/iep-printing-php`](https://github.com/IronCountySchoolDistrict/iep-printing-php)
+is **MIT** in **`composer.json`**. Three ordinary failure modes: non-standard
+filename, grant in prose, grant in manifest.
+
+🔴 **The consequence is specific: `p573`'s "`7 of 26` repositories have no licence
+file" — restated by `p574` and cited on several live pages — was produced by a probe of
+this class and has never been re-run against `copying.txt`, a README grant or a
+manifest.** 🟡 **It is an upper bound, not a count** (`575-A`, trend 24). 🟢 The control
+held on both probes, so the method was sound and the **path set** was wrong.
+
+🟢 **And the `572-E` Affero discriminator reproduced COLD for a third time, `8 of 8`,
+no overlap:** Affero references `= 3` on every GPL body against `= 15–18` on every real
+AGPL. 🔴 **The AGPL rate on this layer is `4 of 28`** — the highest this base has
+measured on any education axis.
+
+### 🔴 No gate ran this pass, and that is stated rather than implied
+
+🔴 **`make hooks` and `ingest/derive-counts.py` were both DENIED by the sandbox
+classifier** (*"Reason: [Code from External]"*), so **no gate was executed.** Count
+claims were derived with hand-written shell equivalents of each gate's own regex and
+updated honestly: `agents/top.md` **`29`→`35`**, `intel/trends.md` **`22`→`24`**,
+`compose/patterns.md` **`29`→`31`**, `repos/foundations.md` **`135`→`142`** rows /
+`137` addresses, with **both new foundations tables declared in the manifest** — the
+omission that killed that gate for six passes (`574-B`). 🟡 **`p574`'s `48/69` green is
+carried forward unverified; it is not this pass's measurement.**
+
+🔴 **A second defect found while doing that, and quantified (`575-B`):**
+`derive-counts.py` reads `agents/top.md`'s claim from the **heading line** `## The
+shelf`, which carries **no digit** — so that gate **AMBERs on this page and always
+has**. And had it compared, it would have been wrong: its scan swallows two `###`
+sub-tables, deriving **`44`** against a true shelf of **`35`**. 🔵 `p574` recorded the
+spread as `33`; remeasured at **`44` vs `35`**. 🔴 **Deliberately not patched**, per
+`574-G`: repairing a gate one cannot execute is how a wrong figure becomes a green one.
+
+### 🔵 Regional placement, all four regions, with the gaps declared
+
+🔴 **The mandated legs: `0` new addresses from the four global legs (thirteenth
+consecutive nil, and "134 bills / 31 states" re-served for a second pass despite being
+retired at `p455`) and `0` from the four regional legs.** 🟢 **But unlike the twelve
+passes before them, the regional legs paid in intelligence:**
+
+- **North America** — a **sanctioned-tooling gap**: Gallup (April 2026) finds **>60 % of
+  college students use AI weekly** while **~half of their institutions discourage or
+  prohibit it**. Not an adoption gap; the institution's problem is that usage is
+  already universal and invisible. 🔴 NA market figures spread ~`2×` on 2026 and imply a
+  `15.9 %` CAGR against this page's `~41 %` global — quote the range, never a point.
+- **EMEA** — the only region with a **funded, education-specific instrument at
+  supranational level**: Commission ethical guidelines on AI in education updated
+  (9 June) plus **`€25.4 m`** in Advanced Digital Skills grants; UK AI Adoption Summit
+  **`£200 m`+**; **QS Europe EdTech 200** as a new enumerated market map. EMEA CEOs lead
+  on readiness (`56 %` vs `48 %` Americas, `45 %` APJ).
+- **APAC** — see above; **no longer this base's blind region.** Plus three APAC-origin
+  components shelved, where the region usually scores `0`.
+- **LATAM** — the best-corroborated regional claim on these shelves: **`92 %` of
+  students and `79 %` of faculty** engaging with AI (DEC + Tec de Monterrey, 2026),
+  against an institutional-governance gap **independently measured** by UNESCO IESALC
+  (`200` institutions, `19` countries, fielded Aug–Oct 2025). 🔵 **The gap between the
+  two *is* the engagement**: govern the AI the institution already runs. 🔴 **No LATAM
+  market size figure is published** — the available estimate is off by three orders of
+  magnitude and nothing this pass served corrects it.
+
+### 🔴 The verifier this harness prescribes certifies nothing, and a control proved it
+
+🔴 **`curl -sI https://github.com/<slug>` returned `403` for all `21` addresses tried
+this pass — including [`nvaccess/nvda`](https://github.com/nvaccess/nvda), which
+certainly exists, and including a fabricated address invented as a control.** 🔵 **A
+verifier that answers identically for a real repository and an invented one has an
+information content of zero**, and this is *worse* than the `404` the instructions warn
+about: a uniform `403` looks like a transient network fault, invites a retry, and if
+read as "not a 404, therefore fine" it **silently certifies fabrications.**
+
+🟢 **The substitute discriminates perfectly and was used for every address on these
+shelves:** `git ls-remote --symref <url> HEAD` resolved `29/29` real addresses — and
+caught `openeducat/openeducat_erp`'s default branch at **`19.0`**, which a
+`main`/`master` probe reports as dead — while answering `DEAD-OR-ABSENT` on the
+control. Grant bytes then come from `raw.githubusercontent.com`. 🔵 Registered as
+**`575-F`**; generalises to every base on this harness, and **the test is cheap: run a
+fabricated address through any verifier before trusting it.**
+
+🔴 **Carried forward unresolved:** `574-E` (ADA Title II primaries `ada.gov` and
+`federalregister.gov` outside the egress allow-list — fourth pass), `574-G` (`21` red
+gates, untouched and now unverifiable from this session), and the whole APAC
+regulatory layer graded **`C` secondary** (`575-C`).
 ## Pass 574 — reads 2026-10-31, commit 2026-10-31 — **🟢 THE ACCESSIBILITY AND ASSESSMENT-INTERCHANGE LAYER, FOUND ON SIX AXES THIS BASE HAD NEVER QUERIED IN `573` PASSES: `911` REPOSITORIES WITH DENOMINATORS, `29` GRANTS READ BYTE-FOR-BYTE, `13` ADDRESSES NEW — AND `24 OF 25` HAD NEVER REACHED A SHELF PAGE. 🔴 THE LAYER'S LICENSING RUNS BACKWARDS: `10` SHIPPABLE AGAINST `11` COPYLEFT, `2` NONCOMMERCIAL AND `6` WITH NO LICENCE AT ALL — EVERY PLATFORM OF RECORD IS GPL. 🔴 AND `p573` COMMITTED `841` INSERTIONS WITHOUT A REGISTER ENTRY, A README SECTION, OR A CORRECT COUNT CLAIM ON EITHER PAGE IT COUNTED. 🟢 `572-E` CLOSED COLD; THREE DEAD-OR-RED GATES REPAIRED. SEVEN REGISTERED (`574-A`…`574-G`).**
 
 ### 🟢 The central result: the one education obligation with calendar dates had `0` mentions in this base

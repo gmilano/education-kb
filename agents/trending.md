@@ -4,6 +4,60 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (thirteenth pass · `p575`) — 🔴 **the thirteenth consecutive agent-search nil**, and the week's real signal is that the `topic:iep` axis — the artefact every US special-education engagement turns on — **has nothing above 7★**
+
+🔴 **`13` for `13`.** The four mandated global `WebSearch` legs returned
+`microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`,
+`rohitg00/ai-engineering-from-scratch`, `OPTIMETA/PAIDEIA`,
+`GarethManning/education-agent-skills`, `goose`, `awesome-ai-agents` and a row of SEO
+roundups — **every one already in this base's history, and zero addresses new.** 🔵 The
+leg is not broken, it is **saturated**: it reaches the roundup layer and this base
+passed that layer hundreds of passes ago. 🔴 **It also re-served "134 bills / 31
+states" (dated "as of March 2026"), the figure `p455` retired — the second
+consecutive pass to be handed it.**
+
+🟢 **The axis sweep paid where search did not: `744` repositories across the four
+axes `574-C` prescribed, none ever queried in `574` passes.**
+
+| axis | repositories | prior queries | top ★ | new agents shelved |
+| --- | --: | --: | --: | --: |
+| [`topic:special-education`](https://github.com/search?q=topic%3Aspecial-education&type=repositories) | **89** | 🔴 `0` | 101 | 🟢 **4** |
+| [`topic:iep`](https://github.com/search?q=topic%3Aiep&type=repositories) | **34** | 🔴 `0` | 🔴 **7** | 🟢 **1** |
+| [`topic:assistive-technology` × `topic:education`](https://github.com/search?q=topic%3Aassistive-technology+topic%3Aeducation&type=repositories) | **27** | 🔴 `0` | 8 | 🟢 **1** |
+| [`topic:screen-reader`](https://github.com/search?q=topic%3Ascreen-reader&type=repositories) | **594** | 🔴 `0` | 2,700 | 🔵 `0` — horizontal, shelved in [`../repos/foundations.md`](../repos/foundations.md) |
+
+🟢 **Six agents qualified on licence and are shelved** in
+[`top.md`](./top.md) — every grant read byte-for-byte from the licence file:
+`mcd-together-order` (MIT, `1,308 B`, **101★**), `shravyamudra` (MIT, `1,069 B`),
+`SPLWD` (MIT, `1,061 B`), `worksheet-generator` (MIT, `1,068 B`), `AAC-Web_Project`
+(MIT, `1,084 B`) and `special-education-due-process-complaint` (MIT, `1,068 B`).
+
+🟢 **The one real find: [`littlebordercollie/mcd-together-order`](https://github.com/littlebordercollie/mcd-together-order)
+— the first MCP-native AAC agent this base has seen.** 麦麦一起点: a student in a
+培智学校 picks a meal from picture cards with short audio; a local service calls
+**McDonald's own MCP** for stores, items and prices; the parent checks the order and
+pays through official channels. 🔴 **And it is pre-pilot by its own admission — `10`
+commits, no student trials, one ¥12 order created and never paid.** Shelved as a
+pattern to copy, not a dependency to adopt.
+
+🔴 **The finding that matters more than any row: the education-specific tier of this
+layer is a hobby tier.** `topic:iep` — the axis named for the *Individualized
+Education Program*, the legal artefact every US special-education engagement turns on
+— holds `34` repositories and **the largest has `7★`**. Meanwhile `topic:screen-reader`
+carries NVDA at `2,700★` and a tested MIT automation layer at `591★`. 🟢 **So
+`574-C` closes as a BUILD recommendation, not a missing row** — see
+[`P-575-A`](../compose/patterns.md). The supply is not badly licensed; it is absent.
+
+🔴 **`ncreighton` — a new instrument signal worth recording.** Three of the ten
+`topic:iep` results share one owner, carry `0`–`1★`, and are a "VS Code extension", a
+"spreadsheet of pre-built calculators" and a **Notion template**. One
+([`…iep-debug-dashboard…`](https://github.com/ncreighton/special-education-iep-debug-dashboard-and-log-analyzer-vs-code-extension))
+has a README that reads **"MIT — see [LICENSE](LICENSE)"** and **no `LICENSE` file
+exists at that path.** 🔵 A README grant pointing at an absent file is a cheap,
+checkable tell for generated filler, and it is the inverse of `575-A`: there the
+README *rescued* a grant the probe missed, here it **asserts one that is not there.**
+Neither direction can be trusted without reading the target.
+
 ## 2026-10-31 (twelfth pass · `p574`) — 🔴 no new education agent for the second week, and the week's real signal is that **the agent supply answering the 2027 accessibility deadline is horizontal MIT, not educational**
 
 🔴 **The four mandated `WebSearch` legs are `12` for `12` on nil** for agent

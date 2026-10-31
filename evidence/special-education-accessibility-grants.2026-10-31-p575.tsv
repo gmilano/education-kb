@@ -1,0 +1,35 @@
+# p575 2026-10-31 -- grant bytes read first-hand over raw.githubusercontent.com.
+# Channel: git ls-remote --symref <slug> HEAD  -> default branch, then
+#          curl -sf https://raw.githubusercontent.com/<slug>/<branch>/<path>
+# affero_refs is the 572-E discriminator: 3 => GPL body cross-reference, 15-18 => real AGPL.
+# probe1_verdict is the SIX-PATH probe; probe2 widened the path set and refuted three (575-A).
+repo	default_branch	grant_path	bytes	licence	affero_refs	probe1_verdict	note
+littlebordercollie/mcd-together-order	main	LICENSE	1308	MIT	0	MIT	shelved agents/top.md; 101 stars; first MCP-native AAC agent in this base
+Autism-Technology-Research-Syndicate/SEALApplication	main	LICENSE	35148	GPL-3.0	3	GPL-3.0	deprecated by its own description
+open-behavior-analysis/aba-clinical-agent	main	LICENSE	34522	AGPL-3.0	15	AGPL-3.0	ABA clinical supervision; AGPL
+PrimoPan/LingoLift	main	-	0	NONE	-	NO-LICENCE-FILE	probe2 also found none; ungranted stands
+Apomera/AlloFlow	main	LICENSE	35441	AGPL-3.0	18	AGPL-3.0	highest affero-ref count in sample
+lucidInsomniac/Cognitive-Learning-App	main	-	0	NONE	-	NO-LICENCE-FILE	probe2 also found none; ungranted stands
+VoxDroid/SPLWD	main	LICENSE	1061	MIT	0	MIT	shelved; copyright line "Izeno" places no region
+manavrenjith/AAC-Web_Project	main	LICENSE	1084	MIT	0	MIT	shelved; permissive AAC where cboard is GPL-3.0
+ellmos-ai/worksheet-generator	main	LICENSE	1068	MIT	0	MIT	shelved; copyright 2026 Lukas Geiger
+ShouldBeQuincy/LectureFlow	main	LICENSE	34522	AGPL-3.0	15	AGPL-3.0	lecture transcription/translation
+gyund/chatpaths	main	LICENSE	35148	GPL-3.0	3	GPL-3.0	public archive
+Ropaxyz/EaseView	main	LICENSE	1067	MIT	0	MIT	shelved repos/foundations.md; copyright 2026 Ross Paxton
+zacesshq/zacess	main	LICENSE	34570	AGPL-3.0	15	AGPL-3.0	Rust high-contrast reader
+tejasbhor/shravyamudra	main	LICENSE	1069	MIT	0	MIT	shelved; Indian Sign Language; APAC
+mrhunsaker/TechSpecsTVI2023	main	LICENSE	11351	Apache-2.0	0	Apache-2.0	shelved foundations; TVI equipment spec, not code
+fotinikafida/text-to-moodle	main	LICENSE	7047	CC	0	CC	content licence, not software; NOT shelved as component
+b33kman/special-education-due-process-complaint	main	LICENSE	1068	MIT	0	MIT	shelved; IDEA due process complaints; North America
+IronCountySchoolDistrict/iep-printing-php	master	composer.json	1272	MIT	0	NO-LICENCE-FILE	575-A REFUTATION: grant in manifest only
+nathanjones4323/wj-iv-report-automator	master	-	0	NONE	-	NO-LICENCE-FILE	probe2 also found none; ungranted stands
+ncreighton/special-education-iep-debug-dashboard-and-log-analyzer-vs-code-extension	main	README.md	1832	MIT-CLAIMED	0	NO-LICENCE-FILE	README says "MIT - see LICENSE" and NO LICENSE file exists: inverse tell
+nvaccess/nvda	master	copying.txt	53407	GPL-2.0	3	NO-LICENCE-FILE	575-A REFUTATION: non-standard filename; pyproject.toml agrees
+guidepup/guidepup	main	LICENSE	1068	MIT	0	MIT	shelved foundations; 591 stars; drives real NVDA/VoiceOver in CI
+guidepup/virtual-screen-reader	main	LICENSE	1068	MIT	0	MIT	shelved foundations; 158 stars
+odilia-app/odilia	main	README.md	2880	MIT OR Apache-2.0	0	NO-LICENCE-FILE	575-A REFUTATION: dual grant in prose, no licence file
+mzdk100/rigela	master	LICENSE	11336	Apache-2.0	0	Apache-2.0	shelved foundations; 150 stars; APAC-origin permissive
+minecraft-access/minecraft-access	dev	LICENSE	35148	GPL-3.0	3	GPL-3.0	default branch is dev, not main/master
+Bitshank-2338/clicky-windows	main	LICENSE	1070	MIT	0	MIT	offline screen-reading assistant, Ollama
+openeducat/openeducat_erp	19.0	LICENSE	8240	LGPL-3.0	0	LGPL-3.0	verticals: default branch 19.0; search leg implied MIT/Apache, it is LGPL
+FAKE-CONTROL-ORG/this-repo-does-not-exist-575	-	-	-	DEAD-OR-ABSENT	-	DEAD-OR-ABSENT	fabricated control: channel discriminates absence from error

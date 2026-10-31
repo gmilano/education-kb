@@ -7,7 +7,7 @@ updated: 2026-10-31
 # Compose patterns — education
 
 <!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
-`derived recipes: **29**` — recipe headings on this page, counted with that gate's
+`derived recipes: **31**` — recipe headings on this page, counted with that gate's
 own id regex (family-suffixed form, `P-572-A`). 🔴 **`p573` recomputed this: the
 claim read `24` while the regex counted `28` before this pass's two additions.**
 🔵 The gap is `P-573-A/B/C` and `P-574-A`, registered by earlier passes without
@@ -105,6 +105,134 @@ risk control in this document and it has already caught a real defect. See
 ---
 
 
+## `p575` (2026-10-31) — two patterns: the BUILD recommendation `574-C` asked for, and the first binding-obligation package outside the EU and the US
+
+🔵 **On the ids.** This pass files **`P-577-A`** and **`P-577-B`**, not `P-575-*`:
+`P-575-A/B` and `P-576-A/B` were allocated forward by earlier passes and are live on
+this page. Families stay contiguous (`568`…`577`), which is what
+[`../ingest/derive-counts.py`](../ingest/derive-counts.py) checks.
+
+## P-577-A — 🟢 Education-specific accessibility remediation agent, built on the horizontal layer because the vertical one does not exist (8–10 weeks)
+
+🔴 **This is a BUILD recipe, and it is here because `574-C` asked the right question
+and got an honest answer.** `574-C` asked whether an education-specific, permissively
+licensed accessibility agent exists. 🟢 **Four axes swept, `744` repositories: it does
+not.** `topic:iep` holds `34` repositories and **the largest has `7★`**;
+`topic:special-education` has exactly one repository above `11★`. 🔵 **The supply is
+not badly licensed — it is absent.** Meanwhile the *horizontal* layer is mature and
+permissive. So you build the thin education-specific part and buy the rest.
+
+**What you are building:** an agent that reads a course in the client's LMS, finds the
+accessibility defects that actually block a student, fixes what can be fixed
+mechanically, and produces the evidence trail an audit or an accommodation request
+will demand.
+
+**Components, every grant read byte-for-byte on 2026-10-31:**
+
+| role | component | grant | why this one |
+| --- | --- | --- | --- |
+| **CI accessibility gate** | [guidepup/guidepup](https://github.com/guidepup/guidepup) `591★` | **MIT** (`1,068 B`) | Drives **real** NVDA and VoiceOver from a test suite. Turns a duty into a gate. |
+| **Gate, cheap tier** | [guidepup/virtual-screen-reader](https://github.com/guidepup/virtual-screen-reader) `158★` | **MIT** (`1,068 B`) | Simulated screen reader — runs in CI with no assistive tech installed. Use for every commit; use the real one at release. |
+| **Conformance review** | [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents) `431★` | **MIT** | Eleven **WCAG 2.2 AA** review specialists. 🔴 Knows nothing about courses — that is the part you write. |
+| **Course-level remediation** | [ucfopen/UDOIT](https://github.com/ucfopen/UDOIT) `117★` | 🔴 **GPL-3.0** | Already scans a **Canvas** course and fixes defects in place. **Deploy it, call it, do not vendor it.** |
+| **Reading accommodation** | [Ropaxyz/EaseView](https://github.com/Ropaxyz/EaseView) | **MIT** (`1,067 B`) | Colour-overlay accommodation as a vendorable component. |
+| **AAC surface** | [manavrenjith/AAC-Web_Project](https://github.com/manavrenjith/AAC-Web_Project) | **MIT** (`1,084 B`) | Permissive AAC + TTS, where the deployed platform (`cboard`) is GPL-3.0. |
+| **Differentiation** | [ellmos-ai/worksheet-generator](https://github.com/ellmos-ai/worksheet-generator) | **MIT** (`1,068 B`) | Individualised worksheets — the output an IEP goal actually needs. |
+| **Target of record** | [nvaccess/nvda](https://github.com/nvaccess/nvda) `2.7k★` | 🔴 **GPL-2.0** (in **`copying.txt`**) | The screen reader students use. **A test target, never a dependency.** |
+
+**Wiring:**
+1. **Gate first, before any agent.** Put `virtual-screen-reader` in the per-commit
+   suite and `guidepup` driving real NVDA in the release suite. 🔵 Do this first
+   because it is the only step that produces a *regression* signal — without it you
+   cannot prove a remediation did not break something else.
+2. **Scan with what exists.** Stand up **UDOIT** against the client's Canvas instance
+   **as a deployed service** and call it over its own interface. 🔴 It is GPL-3.0:
+   crossing that boundary with your own code makes your code GPL-3.0 too.
+3. **Write the thin vertical layer — this is the actual build.** An agent that knows
+   what a *course*, a *cohort* and an *accommodation* are: it reads UDOIT's findings
+   plus the course structure, ranks defects by **which student is actually blocked**
+   rather than by WCAG clause number, and routes each to a fix, a human, or an
+   accommodation. 🔵 **Nothing in open source does this** — that is the finding, and
+   it is why this is a build.
+4. **Fix mechanically where it is safe.** Alt-text drafting, heading structure,
+   table headers, contrast, caption cleanup — all reviewable diffs, none auto-merged.
+5. **Emit the evidence trail, and treat it as the deliverable.** Per-course
+   conformance state, dated, with the standard version named and the scan tool
+   version pinned. 🔵 Per **trend 22**, the deadline moves and the obligation does
+   not: the evidence trail is the durable artefact.
+
+🔴 **Licence boundary, stated once:** everything you *ship* is MIT. **UDOIT (GPL-3.0)
+and NVDA (GPL-2.0) are deployed and tested against, never linked.** Keep that line
+and the deliverable stays proprietary.
+
+🔴 **What not to do: do not start from the education-specific repositories on this
+axis.** They are `1`–`7★` single-sitting projects. Read
+[`littlebordercollie/mcd-together-order`](https://github.com/littlebordercollie/mcd-together-order)
+(MIT, `101★`) for its **interaction design** — picture-card selection with a parent
+verification step is genuinely well judged — but note it is **pre-pilot by its own
+admission**: `10` commits, no student trials, one ¥12 order created and never paid.
+**Copy the pattern, do not adopt the dependency.**
+
+🟡 **Jurisdictional hooks, so the same build sells in four places:** US **ADA Title
+II** (`April 26, 2027` / `2028`, WCAG 2.1 AA — dates graded `C†`, `574-E`); EU **EN
+301 549** under the Web Accessibility Directive; **India** AICTE / RPwD ss. 16–18 with
+GIGW 3.0 at WCAG 2.1 AA; **Australia** Disability Standards for Education 2005 (Cth),
+where **Victoria requires the accessibility check *before* deployment** — the cleanest
+procurement checkpoint on these shelves.
+
+## P-577-B — 🔴 Korea high-impact AI compliance package for an education deployment (6–8 weeks, and the grace period is the window)
+
+🟢 **Why this pattern exists now.** Korea's **AI Basic Act** and its Enforcement
+Decree took effect **`22 January 2026`**, and **education is a named high-impact
+sector** — the first *binding* education-specific AI obligation on these shelves
+outside the EU AI Act and the US Title II rule. 🟡 **MSIT is operating at least one
+year of forbearance through 2026**, deferring investigations and fines except for
+serious social harm. 🔵 **So the commercial shape is unusual and worth naming: the
+obligation is live, the enforcement is not yet, and a client who builds the artefacts
+during the grace period pays far less than one who retrofits them after.** 🔴 A bill
+proposing delay to **January 2029** is in play — the date is contested, the duty is
+not.
+
+**The five statutory duties, and the artefact each one needs:**
+
+| duty | artefact | component |
+| --- | --- | --- |
+| **Risk management** | A dated risk register per deployed model, versioned with the model | 🔵 Reuse the `P-568-D` EU AI Act Annex III package — the control families overlap substantially |
+| **Explanation** | Per-decision rationale a student or parent can read | 🔴 Hardest for a tutor built on RAG: log retrieved context with the output, or you cannot reconstruct the decision later |
+| **User protection** | Appeal route, human contact, data boundary | — |
+| **Human oversight** | A human decision point on anything consequential | 🟢 The **read-only default** of `P-568-B` is the right posture: an education agent writes nothing to a record of consequence without review |
+| **GenAI output labelling** | Machine-and-human-visible marking on generated output | 🟢 Cheapest duty to satisfy and the one most often missed — do it at generation, not at render |
+
+**Wiring:**
+1. **Classify the deployment.** Any system touching teaching, assessment or student
+   records in Korea is high-impact. 🔵 Assume in scope and argue out, not the reverse.
+2. **Reuse the EU package.** `P-568-D` already produces the risk register, the data
+   governance record and the human-oversight design. Map, do not rebuild.
+3. **Instrument explanation at generation time.** Log model id, prompt version,
+   retrieved context ids and output together. 🔴 **Retrofitting this is the single
+   most expensive step** — a system in production for a year has no history to
+   reconstruct.
+4. **Label generated output at the source.** Mark it where it is produced so the mark
+   survives export, copy and LMS rendering.
+5. **Date the evidence and keep it.** Per **trend 22** and because the compliance date
+   is contested between 2026 and 2029, the defensible position is a **continuous,
+   dated trail**, not a one-off certification against whichever date holds.
+
+🔵 **Where this lands commercially.** Korea is the one APAC jurisdiction on these
+shelves with a statute rather than guidance; **Singapore** next door has a dated
+*mandate* of a different kind — three compulsory teacher AI modules, one due end-2026
+and two by 2027 — which is a services engagement with the same deadline shape. 🟢
+**The same evidence-trail machinery serves both**, and `P-568-D` serves the EU. 🔴
+**Do not sell this against Japan or China:** Japan's MEXT instrument is guidance and
+its `JIS X 8341-3` version is disputed between equal-quality sources, and no Chinese
+education AI or `GB`/`GB/T` accessibility instrument has been reached in two queries
+(`575-D`).
+
+🟡 **Provenance, stated plainly: every Korea and Singapore item in this pattern is
+`C`-graded** — from policy trackers, law-firm briefings and local news, not from MSIT,
+the statute text or MOE publications. 🔵 **`575-C` asks for the primaries** before any
+of this enters a client deliverable. The control families are reliable; the dates
+need first-hand confirmation.
 ## `p573` (2026-10-31) — two patterns, and they are the two halves of one decision
 
 🔵 **Both come out of the eleventh pass's central finding** (see
