@@ -4,6 +4,34 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `2026-10-31` — `p577` — the platform layer licenses copyleft end to end, and that decides the architecture
+
+🟢 **Twelve foundations re-verified from their repository pages** (see
+[`foundations.md`](foundations.md)). The result is a single clean fact:
+
+**Every learning platform of record is copyleft.** GPL-3.0 — Moodle (7.6k★), Chamilo
+(1.0k★), H5P (154★). AGPL-3.0 — Open edX (8.2k★), Canvas (6.9k★), Frappe LMS (3.4k★),
+LearnHouse (2.4k★). LGPL-3.0 — OpenEduCat (903★). The **only** permissive seats are
+**Sakai (ECL-2.0, 1.2k★)**, **Oppia (Apache-2.0, 7.0k★)**, **nbgrader (BSD-3, 1.4k★)** and
+**ltijs (Apache-2.0, 373★)**.
+
+🔵 **Why it matters more than any individual repo:** the agent layer licenses the opposite
+way — 15 of 16 verified agents are MIT/Apache/BSD. So the copyleft question is decided
+entirely by **integration style**, which is a choice. Build the AI as an external **LTI 1.3**
+tool with `ltijs` and never fork the LMS; AGPL-3.0 reaches network-served modifications,
+so forking Canvas or Open edX and hosting it for a client can oblige disclosure.
+
+🔴 **Repo rename caught:** `openedx/edx-platform` now **redirects to
+`openedx/openedx-platform`**. Older links in this KB and in client material point at the
+old name.
+
+🔴 **Declared gap, and it is a supply gap not a search gap: no permissively licensed,
+production-grade LMS exists.** Oppia (Apache-2.0) is the nearest and it is an explorations
+platform, not course management. If a client refuses copyleft, Sakai (ECL-2.0) is the only
+platform of record available — 1.2k★. No verified open-source SIS exists apart from
+OpenEduCat (LGPL-3.0). No foundation repo verified as originating in Africa or the Middle
+East this pass.
+
 ## 🆕 `2026-10-31` — `p576`, fourteenth pass — 🟢 **two layers that `575` passes never reached, both behind a broken query form: autograding (permissive throughout) and Portuguese-language education (copyleft throughout)**
 
 🟢 **The autograding and submission layer — `topic:autograder` `128`, `topic:autograding`

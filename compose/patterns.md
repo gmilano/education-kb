@@ -6,6 +6,125 @@ updated: 2026-10-31
 
 # Compose patterns — education
 
+## p577 — 2026-10-31 — six recipes, every component verified
+
+Each pattern names the exact repositories, their licences, and how they wire
+together. Every component was verified on 2026-10-31. Licences are stated because
+in education they decide the architecture (see
+[`../repos/foundations.md`](../repos/foundations.md)).
+
+### P1 — AI tutor beside the LMS, without forking it (any region)
+
+**The default pattern. Use this unless there is a reason not to.**
+
+```
+Client LMS (unforked)                    Globant-built, permissive
+Moodle GPL-3.0 / Canvas AGPL-3.0  <--LTI 1.3-->  ltijs (Apache-2.0)
+Open edX AGPL-3.0                                      |
+        |                                       DeepTutor (Apache-2.0)
+        \-----------------xAPI----------------->  potsie (MIT) on Grafana
+```
+
+- **Seam:** `Cvmcosta/ltijs` (Apache-2.0, 373★) registers the AI service as an LTI
+  1.3 tool. The LMS is never modified.
+- **Tutor engine:** `HKUDS/DeepTutor` (Apache-2.0, 52.7k★) behind the LTI launch.
+- **Telemetry:** emit xAPI statements; render with `openfun/potsie` (MIT, 11★)
+  Grafana dashboards. **Not** `openfun/warren` — its README says proof of concept.
+- **Why it matters:** engagement code stays outside the AGPL boundary. Forking
+  Canvas or Open edX and hosting it for a client can oblige disclosure of the
+  modifications; this pattern never raises the question.
+- **Effort:** 6–8 weeks to a production pilot.
+
+### P2 — Mastery-tracked practice with real psychometrics (all permissive)
+
+For a client who wants adaptive practice and will be asked to defend it.
+
+1. `satvik314/educhain` (MIT, 387★) generates the item bank from curriculum text.
+2. `AI-for-Education/pedagogy-benchmark` (MIT, 13★) gates the generated items —
+   it is built from exams developed by Chile's Agencia de la Calidad de la
+   Educación and CPEIP, so it tests pedagogical knowledge, not just correctness.
+3. `eribean/girth` (MIT, 127★) calibrates item difficulty and discrimination (IRT).
+4. `douglasrizzo/catsim` (BSD-3-Clause, 153★) simulates adaptive item selection
+   **before** any learner sees it.
+5. `CAHLR/OATutor` (MIT, 274★) runs the tutoring loop with Bayesian Knowledge
+   Tracing over the calibrated bank.
+
+Every licence here is MIT or BSD. Steps 3 and 4 are what separate this from a
+chatbot that guesses: the adaptivity is measured before deployment.
+
+### P3 — Autograded technical coursework with proof it worked (North America)
+
+1. `jupyter/nbgrader` (BSD-3-Clause, 1.4k★) releases and autogrades notebooks.
+2. LLM partial-credit feedback layered on the deterministic autograde — never
+   replacing it.
+3. `Cvmcosta/ltijs` (Apache-2.0) surfaces it inside the client's Canvas.
+4. `terracotta-education/terracotta` (Apache-2.0, 21★) runs the randomised
+   evaluation: it assigns content variations to student groups, hides consent from
+   the instructor, and strips identifiers from exports.
+
+Step 4 is the differentiator in North American higher education, where the buyer
+increasingly asks for evidence of effect rather than a demo.
+
+### P4 — Multi-agent classroom simulation for teacher training (APAC-sourced, MIT)
+
+1. `THU-MAIC/OpenMAIC` (MIT, 42.2k★) provides the simulated multi-agent classroom.
+2. `huggingface/smolagents` (Apache-2.0, 30.2k★) adds role agents — disengaged
+   student, parent, department head — around it.
+3. Score the trainee's responses against `pedagogy-benchmark` (MIT).
+
+The two largest education agents in open source (OpenMAIC 42.2k, DeepTutor 52.7k)
+are both APAC-origin and both permissive. A teacher-training engagement can be
+built almost entirely on APAC open source.
+
+### P5 — EU-compliant self-hosted deployment (EMEA)
+
+1. Client's own infrastructure; Moodle (GPL-3.0) or Open edX (AGPL-3.0) **unforked**.
+2. P1's `ltijs` tool and `DeepTutor`, self-hosted — no learner data leaves the
+   client's estate, which is what the EU AI Act and GDPR conversation turns on.
+3. Use `thm-mni-ii/feedbacksystem` (Apache-2.0, 24★) as the **reference
+   implementation** for feedback generation: a German public higher-education
+   institution already ships it, which is a procurement argument, not just a
+   technical one.
+4. Document the deployment against the European Commission's AI literacy
+   framework for primary and secondary education, and — for England, for anything
+   touching marking — Ofqual's January 2026 principles for AI in high-stakes
+   marking.
+5. Dashboards: `potsie` (MIT), self-hosted Grafana.
+
+**Effort:** 10–12 weeks; the compliance documentation is a real work package, not
+an afterthought.
+
+### P6 — Spanish-language curriculum content (LATAM)
+
+1. `csepulvedai/libro-3d-interactivo` (MIT, 14★) is the **pattern** for
+   curriculum-aligned interactive content: Three.js 3D pop-up books, Chilean-Spanish
+   narration, mapped to a named curriculum objective (OA 13).
+2. `satvik314/educhain` (MIT) generates the content at volume.
+3. `pedagogy-benchmark` (MIT) gates it — already built on Chilean MINEDUC exams.
+4. Deliver into Moodle or Chamilo (GPL-3.0), which is what the region actually runs,
+   via the P1 LTI seam.
+
+**Caveat, stated plainly:** the LATAM-origin repositories are 13–14 stars and
+skill-shaped. Treat them as *patterns to reimplement*, not as dependencies to
+build a client deliverable on. The reusable asset in LATAM is the curriculum
+alignment method and the Spanish-language evaluation set, not the code.
+
+## What these patterns deliberately avoid
+
+- **Forking any LMS.** Every pattern attaches from outside.
+- **`openfun/warren`** in client-facing work — its own README disclaims production
+  readiness.
+- **`bigdata-ustc/Agent4Edu`** — no licence file, so it cannot enter a deliverable
+  regardless of its AAAI 2025 oral.
+- **Unlicensed or micro-repos as dependencies.** Where only a micro-repo exists,
+  the pattern says to reimplement it.
+
+---
+
+## Prior passes (superseded, retained for history)
+
+### (archived) Compose patterns — education
+
 <!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
 `derived recipes: **34**` — recipe headings on this page, counted with that gate's
 own id regex (family-suffixed form, `P-572-A`). 🟢 **`p576` filed `P-578-A`, `P-578-B` and

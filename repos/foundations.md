@@ -6,6 +6,65 @@ updated: 2026-10-31
 
 # Foundational open source repos for education
 
+## p577 — 2026-10-31 — verified foundations
+
+All twelve rows verified on 2026-10-31 by reading each repository page directly
+(see the method note in [`../agents/top.md`](../agents/top.md): `curl -sI` returns
+403 for every GitHub URL in this environment, real or fake, so WebFetch was used).
+
+| Repo | Licence | Stars | Role in an education build |
+|---|---|---|---|
+| https://github.com/openedx/openedx-platform | AGPL-3.0 | 8.2k | Open edX LMS & Studio. **Note: `openedx/edx-platform` now redirects here — the repository was renamed.** Any older link in this KB or a client doc points at the old name. |
+| https://github.com/moodle/moodle | GPL-3.0 | 7.6k | The default LMS of record worldwide, especially in EMEA and LATAM public education. |
+| https://github.com/oppia/oppia | Apache-2.0 | 7.0k | Learning platform built on interactive explorations. **The largest permissively licensed platform in education.** |
+| https://github.com/instructure/canvas-lms | AGPL-3.0 | 6.9k | Canvas, the open LMS by Instructure. Dominant in North American higher education. |
+| https://github.com/frappe/lms | AGPL-3.0 | 3.4k | Lightweight full-stack LMS on the Frappe framework. Fast to stand up for a pilot. |
+| https://github.com/learnhouse/learnhouse | AGPL-3.0 | 2.4k | Next-generation open-source learning platform. **Enterprise features sit under a separate Enterprise Licence** — read it before scoping. |
+| https://github.com/jupyter/nbgrader | BSD-3-Clause | 1.4k | Assignment release and autograding for notebooks. Permissive, and the cleanest grading seam for technical curricula. |
+| https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | Apereo Foundation teaching/research/collaboration suite. **ECL-2.0 is an Apache-2.0 derivative** — the most permissive LMS of record. |
+| https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LMS focused on ease of use and accessibility. Strong francophone and LATAM footprint. |
+| https://github.com/openeducat/openeducat_erp | LGPL-3.0 | 903 | Education ERP (Odoo-based): admissions, fees, SIS and LMS on one database. The ERP-shaped entry point. |
+| https://github.com/Cvmcosta/ltijs | Apache-2.0 | 373 | LTI 1.3 tool provider. The supported way to attach anything to any of the platforms above **without forking them**. |
+| https://github.com/h5p/h5p-php-library | GPL-3.0 | 154 | H5P core library for interactive content. Embedded by Moodle, Canvas and Open edX alike. |
+
+## The licensing fact that should drive every education engagement
+
+**Every learning platform of record is copyleft.** GPL-3.0 (Moodle, Chamilo,
+H5P), AGPL-3.0 (Open edX, Canvas, Frappe LMS, LearnHouse), LGPL-3.0 (OpenEduCat).
+The only permissive seats at this table are **Sakai (ECL-2.0)**, **Oppia
+(Apache-2.0)**, **nbgrader (BSD-3-Clause)** and **ltijs (Apache-2.0)**.
+
+AGPL-3.0 is the sharp one: it reaches network-served modifications, so forking
+Canvas or Open edX and hosting it for a client can oblige disclosure of the
+modifications.
+
+**The architectural consequence, and it is the same in every region:** do not fork
+the LMS. Build the AI as an **external LTI 1.3 tool** with `ltijs` (Apache-2.0),
+talk to the platform over LTI and xAPI, and keep engagement code outside the
+copyleft boundary. The agent layer licenses permissively
+([`../agents/top.md`](../agents/top.md): 15 of 16 are MIT/Apache/BSD), so the only
+thing that forces a copyleft decision is the integration style — which is a
+choice, not a constraint.
+
+## Declared gaps
+
+- **No permissively licensed, production-grade LMS exists.** Oppia (Apache-2.0) is
+  the nearest thing and it is an explorations platform, not a course-management
+  system. If a client requires a permissive LMS, the honest answer is that the
+  supply is absent, not that it is hard to find.
+- **No verified open-source Student Information System** separate from an LMS was
+  found beyond OpenEduCat (LGPL-3.0).
+- **Africa and the Middle East**: no foundation repository was verified as
+  originating there this pass.
+
+---
+
+## Prior passes (superseded, retained for history)
+
+Not re-verified. Figures below predate p577.
+
+### (archived) Foundational open source repos for education
+
 <!-- machine-readable count claim, p574, for ingest/derive-foundations.py -->
 `derived shelf rows: **154**` — every data row in a `SHELF`-disposition table,
 derived by that gate from this page's own structure (`149` distinct addresses). 🟢 `p576`

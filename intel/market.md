@@ -6,6 +6,30 @@ updated: 2026-10-31
 
 # Education AI — market map and opportunities
 
+## p577 — 2026-10-31 — verified regional evidence
+
+Repository placements below are verified from the repository pages themselves
+(2026-10-31). Policy items carry a date and an institution. Market-size figures
+are reported with their spread and are **not** safe to quote — see
+[`trends.md`](trends.md).
+
+**Where the open-source supply actually is, by region:**
+
+| Region | Verified open-source education agents originating there | Weight |
+|---|---|---|
+| APAC | `HKUDS/DeepTutor` (Apache-2.0, 52.7k★, Univ. of Hong Kong); `THU-MAIC/OpenMAIC` (MIT, 42.2k★, Tsinghua); `bigdata-ustc/Agent4Edu` (**no licence**, 100★, USTC) | **Dominant.** The two largest education agents anywhere, both permissive |
+| North America | `CAHLR/OATutor` (MIT, 274★, UC Berkeley); `terracotta-education/terracotta` (Apache-2.0, 21★); `jupyter/nbgrader` (BSD-3, 1.4k★) | Research-grade and rigorous, but small |
+| EMEA | `thm-mni-ii/feedbacksystem` (Apache-2.0, 24★, TH Mittelhessen, Germany); `openfun/warren` (MIT, 17★, PoC); `openfun/potsie` (MIT, 11★) | Present but tiny; public-institution provenance is the asset |
+| LATAM | `AI-for-Education/pedagogy-benchmark` (MIT, 13★, built on Chilean MINEDUC exams); `csepulvedai/libro-3d-interactivo` (MIT, 14★, Univ. de Los Lagos, Chile) | Tiny and skill-shaped; the curriculum-alignment method is the reusable asset, not the code |
+| Global | `Cvmcosta/ltijs` (Apache-2.0); `oppia/oppia` (Apache-2.0, 7.0k★); `satvik314/educhain` (MIT); `zijinz456/OpenTutor` (MIT); `eribean/girth` (MIT); `douglasrizzo/catsim` (BSD-3) | The integration and psychometrics layer, unplaceable by origin |
+
+**The structural commercial shift:** OpenAI's country-level education programme
+with eight national partners (Q1 2026) moves buying from school-by-school sales
+toward national infrastructure deals. That changes the counterparty from a
+district to a ministry in every region, and it favours firms that can deliver
+compliance documentation alongside software.
+
+
 ## Market size — published as a range, because the sources disagree
 
 **USD 10.6–12.5 bn (2026), growing to USD 42.5 bn by 2030 on a ~41% CAGR.**
@@ -306,6 +330,21 @@ said out loud before any of it reaches a client deck.
 ## Opportunities by region
 
 ### North America
+
+**p577 — 2026-10-31.** Regulation is **per-state, not federal**: 134 bills across
+31 states tracked as of March 2026 (privacy, classroom restrictions, curriculum),
+plus COPPA constraints on anything K-12, plus a separate Canadian provincial
+layer. Scope compliance per jurisdiction, never once for "the US".
+Funding signal: US Dept of Education released $169M in FIPSE awards including
+responsible-AI use (secondary sources; not confirmed against a primary source).
+Market share estimates for the region range **36%–42%** across firms — direction
+only. Vendor-survey adoption claims (e.g. "86% of institutions use generative AI")
+are low confidence.
+**Opportunity:** Canvas (AGPL-3.0) dominates higher ed, so the LTI-tool pattern
+(`ltijs` + `DeepTutor`) plus **`terracotta` (Apache-2.0) for randomised
+evidence of effect** is the differentiated offer — this buyer increasingly asks
+for proof, not a demo. See `compose/patterns.md` P3.
+
 
 #### 🆕 `p576` — the sanctioned-tooling gap, and the figures to quote as a range
 
@@ -664,6 +703,22 @@ WCAG 2.1 AA). 🔴 **`574-E` stays open**: `ada.gov` and `federalregister.gov` a
 outside this session's egress allow-list, so the one dated obligation on these shelves
 remains **secondary-only for a fourth pass.**
 ### EMEA
+
+**p577 — 2026-10-31.** Compliance frame is the **EU AI Act + GDPR**. The
+education-specific instruments to write against: the **European Commission's AI
+literacy framework for primary and secondary education** (on the Council of the EU
+agenda for the European Education Area 2026–2030), the **Council of Europe AI and
+Education expert group** (whose member-state survey reports weak monitoring and
+regulation), and, for England, **Ofqual's January 2026 principles for AI in
+high-stakes marking**. UK, Germany and France together are reported at 60%+ of
+regional market value; Italy flagged as emerging on vocational-training recovery
+funds.
+**Opportunity:** data residency is the deal-maker. Self-hosted, unforked Moodle or
+Open edX with a permissive LTI tool keeps learner data in the client estate, and
+`thm-mni-ii/feedbacksystem` (Apache-2.0) is a German public-institution reference
+implementation — a procurement argument as much as a technical one. Compliance
+documentation is a billable work package. See `compose/patterns.md` P5.
+
 
 #### 🆕 `p576` — 🟢 Spain ships the artefacts, and they are the reusable part
 
@@ -1082,6 +1137,22 @@ ministry-level education AI adoption figures for any single EMEA state.** The
 regional leg returns EU-level policy and cross-sector enterprise surveys; it does not
 reach a national education ministry.
 ### APAC
+
+**p577 — 2026-10-31.** **This is where the open-source supply lives.**
+`HKUDS/DeepTutor` (Apache-2.0, 52.7k★) and `THU-MAIC/OpenMAIC` (MIT, 42.2k★) are
+the two largest education agents in open source and both are permissively
+licensed — an APAC-sourced engagement can be built almost entirely on them.
+Regulation is **fragmented by jurisdiction**; Forrester expects no APAC-wide
+framework, with 2026 regional priorities being sovereignty, security and
+responsible deployment. Named demand drivers: India's Digital Education Mission
+and China's AI-in-education policies. Market reported as the fastest-growing
+region (one firm: $591.6M in 2024 → $1,848.1M by 2029, 20.9% CAGR — vendor figure).
+**Watch item:** unlicensed academic releases are a recurring APAC pattern
+(`Agent4Edu`, AAAI 2025 oral, 100★, no licence file). Check the grant before
+scoping anything on a paper repo.
+**Opportunity:** teacher-training simulation on OpenMAIC + `smolagents`
+(`compose/patterns.md` P4), and sovereign self-hosted tutoring per jurisdiction.
+
 
 #### 🟡 `p574` — India is the only APAC jurisdiction with an **education-specific** accessibility instrument, and the region contributes `0` established rows to the layer
 
@@ -1530,6 +1601,26 @@ jurisdiction with an education-*specific* accessibility code** (AICTE / RPwD ss.
 GIGW 3.0 at WCAG 2.1 AA), and `shravyamudra` is the first shelved component that lands
 against it.
 ### LATAM
+
+**p577 — 2026-10-31.** **ECLAC (Oct 2025)** ranks **Chile, Brazil and Mexico** as
+regional leaders across 100+ indicators of capability, research, adoption and
+governance, and finds persistent gaps in data, training and regulation. The **IDB
+fAIr Tech Radar (Nov 2025)** describes adoption advancing against structural gaps
+and developing regulatory frameworks. **UNESCO IESALC with UNU-IAS** maps
+university AI use across teaching, research, community engagement, administration
+and governance.
+**Platform reality:** the region runs Moodle and Chamilo (both GPL-3.0), not
+Canvas — so the LTI-attachment pattern applies with Spanish- and
+Portuguese-language content generation on top.
+**Verified local artifacts are tiny:** `pedagogy-benchmark` (MIT, 13★, built from
+Chile's Agencia de la Calidad de la Educación and CPEIP exams) and
+`libro-3d-interactivo` (MIT, 14★, Univ. de Los Lagos, Chilean curriculum OA 13).
+Treat them as patterns to reimplement, not dependencies. The reusable assets are
+the **curriculum-alignment method** and the **Spanish-language evaluation set**.
+**Gap, stated explicitly:** LATAM market size is **not credibly published**. One
+firm's ≈US$18.2M (2024) figure is three orders of magnitude off regional peers and
+should not be used. Do not size a LATAM deal from this page.
+
 
 #### 🆕 `p576` — the region now has instruments, and its own-language open-source supply is a hobby tier
 
@@ -1981,6 +2072,20 @@ corrects it, so **no LATAM market *size* figure is published on this page** — 
 adoption and governance measurements above, which are first-party survey outputs
 rather than vendor extrapolations.
 ### Global
+
+**p577 — 2026-10-31.** 2026 global market estimates span **≈US$3.7B to ≈US$11.4B**
+across research firms — a ~3× spread of incompatible methodologies, not a
+consensus. K-12 reported at ~34% share. The **OECD Digital Education Outlook 2026**
+warns AI improves learning only where pedagogy stays in control, which is the
+citation for an evidence-first engagement narrative.
+**The cross-region architectural constant:** the agent layer is permissive (15 of
+16 verified agents are MIT/Apache/BSD) while every LMS of record is copyleft
+(GPL/AGPL/LGPL). Attach, never fork — `ltijs` (Apache-2.0) is the keystone in
+every region. See `repos/foundations.md`.
+**The global capability gap:** one verified pedagogy benchmark against sixteen
+agents. The industry builds tutors faster than it can show they teach — and a
+studio that can measure learning gain is differentiated everywhere.
+
 
 - 🔴 **Read `Global` on this page as "unplaced", and know that `p570` found a
   structural reason it is over-counted.** Region here is recovered from the

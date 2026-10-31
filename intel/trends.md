@@ -6,6 +6,99 @@ updated: 2026-10-31
 
 # Current trends — education AI
 
+## p577 — 2026-10-31
+
+### The dated, checkable items
+
+These are the items with a date and an institution attached. Everything else in
+the search layer was unusable (see *On the evidence* below).
+
+- **Ofqual published principles for AI use in high-stakes marking in England**
+  (January 2026). The first regulator-issued position on AI inside summative
+  assessment in a major market. It constrains any EMEA engagement that touches
+  marking.
+- **US state legislatures: 134 bills across 31 states** tracked on AI in
+  education as of March 2026, covering privacy, classroom restrictions and
+  curriculum. There is no comprehensive federal statute, so compliance is
+  per-state.
+- **US Department of Education released $169M in FIPSE awards** including support
+  for responsible AI use. Reported via secondary sources; not confirmed against a
+  primary government source this pass.
+- **European Commission AI literacy framework for primary and secondary
+  education**, carried on the Council of the EU agenda for the European Education
+  Area 2026–2030. This is the document to write EMEA deliverables against.
+- **Council of Europe AI and Education expert group** continues to meet
+  (Strasbourg), and its member-state survey reports a lack of rigorous monitoring
+  and regulation of AI in education. A second working conference on the regulatory
+  dimensions was held in October.
+- **OpenAI launched a country-level education programme with eight national
+  partners** in Q1 2026. This is the structural trend that matters commercially:
+  buying shifts from school-by-school sales toward **national infrastructure
+  deals**, which changes who Globant competes with and who signs.
+- **OECD Digital Education Outlook 2026** warns that AI improves learning only
+  where pedagogy stays in control — the standard citation for an
+  evidence-first engagement narrative.
+- **ECLAC (October 2025)** ranks Chile, Brazil and Mexico as the LATAM leaders
+  across 100+ indicators of capability, research, adoption and governance, and
+  finds persistent gaps in data, training and regulation.
+- **IDB fAIr Tech Radar (November 2025)** on AI adoption in Latin America and the
+  Caribbean: adoption advancing against structural gaps, developing regulatory
+  frameworks and heterogeneous digital capabilities.
+- **UNESCO IESALC with UNU-IAS** published a working paper mapping AI use in
+  Latin American and Caribbean universities across teaching, research, community
+  engagement, administration and governance.
+
+### The technical trend, from the repository evidence rather than commentary
+
+1. **The agent layer is permissive; the platform layer is copyleft.** 15 of 16
+   verified education agents are MIT/Apache/BSD, while every LMS of record is
+   GPL/AGPL/LGPL. This asymmetry is stable and it is the main architectural fact
+   in the industry right now.
+2. **The two largest education agents in open source are both APAC academic
+   projects** — `HKUDS/DeepTutor` (Apache-2.0, 52.7k★, University of Hong Kong)
+   and `THU-MAIC/OpenMAIC` (MIT, 42.2k★, Tsinghua) — and both are permissive.
+   Education AI's open-source centre of gravity is not in North America.
+3. **Multi-agent classrooms became a real category**, not a demo: OpenMAIC's
+   framing is a simulated classroom with multiple interacting agents, at 42.2k
+   stars.
+4. **Tutoring is converging on local-first and self-hosted.** `OpenTutor` (MIT)
+   advertises running locally across 10+ LLM providers; `godspeed` reuses a local
+   coding agent as the tutor. This matters for EMEA data-residency and for
+   under-resourced deployments alike.
+5. **Assessment and psychometrics remain a permissive, under-used layer** — IRT
+   (`girth`, MIT), adaptive-testing simulation (`catsim`, BSD-3), autograding
+   (`nbgrader`, BSD-3). This is where a credible adaptive-learning claim comes
+   from, and almost nobody wires it in.
+6. **Evaluation instruments are scarce.** One verified pedagogy benchmark
+   (`pedagogy-benchmark`, MIT, 13★) against sixteen agents. The industry can build
+   tutors faster than it can tell whether they teach.
+7. **Unlicensed academic releases are a recurring blocker**, `bigdata-ustc/Agent4Edu`
+   being the clear case: AAAI 2025 oral, 100 stars, no licence file.
+
+### Market sizing — do not quote these numbers
+
+2026 estimates for the global AI-in-education market range from **≈US$3.7B to
+≈US$11.4B** depending on the research firm — a spread of roughly 3×. Regional
+shares for North America range from 36% to 42% across firms. These are
+incompatible methodologies, not a consensus with error bars. **Use them for
+direction only; do not put a figure in a client deck sourced from this page.**
+
+### On the evidence
+
+The general-web search layer for this industry has degraded badly. Queries for
+trending education AI repositories return SEO content farms (`aiindigo.com`,
+`news.spill.org`, `yoursocial.it.com`, `giikorea.co.kr`) that recycle each other's
+numbers, and no authoritative ranked list of open-source education agents exists
+anywhere. **That is why every repository row in this KB is verified individually
+rather than harvested from a listicle.** Treat search as a way to find candidate
+names and dated policy events, and nothing else.
+
+---
+
+## Prior passes (superseded, retained for history)
+
+### (archived) Current trends — education AI
+
 <!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
 `derived trends: **28**` — numbered trend headings on this page, counted with
 that gate's own regex (`^## (\d+)\. `). 🟢 **`p576` filed trends `25`–`28`**, all four at

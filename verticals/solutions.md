@@ -6,6 +6,54 @@ updated: 2026-10-31
 
 # Vertical education platforms (customisable with AI on top)
 
+## p577 — 2026-10-31 — verified platforms and the AI layer each one accepts
+
+These are the real systems a client already runs, or would plausibly adopt. All
+licences and star counts verified 2026-10-31 from the repository pages. The last
+column is the part Globant builds.
+
+| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+|---|---|---|---|---|---|---|
+| Moodle | https://github.com/moodle/moodle | GPL-3.0 | 7.6k | LMS | EMEA and LATAM public education, ministries, universities | LTI 1.3 tutor tool via `ltijs`; feedback generation modelled on `thm-mni-ii/feedbacksystem`; xAPI out to `openfun/potsie` dashboards |
+| Open edX | https://github.com/openedx/openedx-platform | AGPL-3.0 | 8.2k | LMS / MOOC | National and corporate MOOC programmes; the shape national deals take | Same LTI tool; `educhain` for item banks; do **not** fork — AGPL reaches network-served modifications |
+| Canvas | https://github.com/instructure/canvas-lms | AGPL-3.0 | 6.9k | LMS | North American higher education | `terracotta` (Apache-2.0) for randomised evaluation of the intervention; `nbgrader` for technical autograding; LTI tutor |
+| Oppia | https://github.com/oppia/oppia | Apache-2.0 | 7.0k | Explorations / content platform | Low-bandwidth and underserved contexts | The one platform you can fork freely. Generate explorations with `educhain`, validate with `pedagogy-benchmark` |
+| Frappe LMS | https://github.com/frappe/lms | AGPL-3.0 | 3.4k | LMS | Fast pilots, corporate L&D | Stand up in days for a pilot; attach the same LTI tool rather than modifying it |
+| LearnHouse | https://github.com/learnhouse/learnhouse | AGPL-3.0 | 2.4k | LMS | Modern self-hosted deployments | Check the **separate Enterprise Licence** on enterprise features before scoping |
+| Sakai | https://github.com/sakaiproject/sakai | ECL-2.0 | 1.2k | LMS / research collaboration | Research universities (Apereo) | **The permissive platform of record** (ECL-2.0 derives from Apache-2.0) — the right base if the client refuses copyleft |
+| Chamilo | https://github.com/chamilo/chamilo-lms | GPL-3.0 | 1.0k | LMS | Francophone and LATAM, accessibility-focused | Spanish-language content generation; accessibility-first tutor UI |
+| OpenEduCat | https://github.com/openeducat/openeducat_erp | LGPL-3.0 | 903 | **Education ERP / SIS** | Institutes needing admissions, fees, SIS and LMS on one database | The Odoo-of-education: admissions triage, fee-collection prediction, timetable optimisation as Odoo modules |
+| H5P | https://github.com/h5p/h5p-php-library | GPL-3.0 | 154 | Interactive content | Embedded inside Moodle, Canvas and Open edX | Generate H5P content types from curriculum text; it is the content format all three LMSs already render |
+| nbgrader | https://github.com/jupyter/nbgrader | BSD-3-Clause | 1.4k | Autograding | Technical and data curricula | Permissive. LLM-assisted partial-credit feedback on top of deterministic autograding |
+| ltijs | https://github.com/Cvmcosta/ltijs | Apache-2.0 | 373 | **Integration layer** | Every platform above | Not a platform — the seam. This is where the AI service lives |
+
+## How to read this table
+
+The first ten rows are the systems of record and are almost all copyleft. The last
+two are the permissive tools you actually build with. **ltijs is the keystone**: it
+is what lets a permissively licensed AI service serve a copyleft LMS without the
+licence question ever arising.
+
+OpenEduCat is the direct analogue of Odoo for ERP — one database spanning
+admissions, fees, student records and learning — and is the only verified
+open-source system in this set that covers SIS as well as LMS. It is LGPL-3.0,
+which is materially weaker copyleft than AGPL and permits linked modules.
+
+## Declared gaps
+
+- **No permissive production LMS.** Sakai (ECL-2.0) is the closest, at 1.2k stars.
+- **No verified open-source proctoring or assessment-delivery platform** was found
+  that is both permissive and maintained.
+- **QTI and accessibility tooling licenses backwards** from the rest of the
+  stack — the platforms of record in that layer are copyleft. Carried from a prior
+  pass and not re-verified here.
+
+---
+
+## Prior passes (superseded, retained for history)
+
+### (archived) Vertical education platforms
+
 Real, deployed systems that run an institution's operations — the education
 equivalent of Odoo for ERP. These are the systems a client already has, and the
 systems an AI layer gets attached to.

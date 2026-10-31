@@ -6,6 +6,121 @@ updated: 2026-10-31
 
 # Top AI agents for education
 
+## p577 — 2026-10-31 — verified shelf
+
+Every row below was verified individually on 2026-10-31 by fetching its GitHub
+repository page and reading the licence, star count and description off that page.
+No row is carried over on trust from an earlier pass. Rows that failed
+verification, or that turned out not to be education tools, are listed under
+*Rejected this pass* and are not in the table.
+
+**16 agents qualified.** They are ordered by size, and each is placed in a region
+when the repository itself supports a placement.
+
+| Agent | Repo | Licence | Stars | Region | What it is |
+|---|---|---|---|---|---|
+| DeepTutor | https://github.com/HKUDS/DeepTutor | Apache-2.0 | 52.7k | APAC | Lifelong personalised tutoring. The largest open-source education agent found in any region. HKUDS (University of Hong Kong). |
+| OpenMAIC | https://github.com/THU-MAIC/OpenMAIC | MIT | 42.2k | APAC | Open Multi-Agent Interactive Classroom — a one-click immersive multi-agent learning experience. Tsinghua (THU-MAIC). |
+| Oppia | https://github.com/oppia/oppia | Apache-2.0 | 7.0k | Global | Free online learning platform built around interactive "explorations". Both a platform and an authoring model. |
+| nbgrader | https://github.com/jupyter/nbgrader | BSD-3-Clause | 1.4k | Global | Assigns and autogrades Jupyter notebooks. The autograding seam for technical coursework. |
+| educhain | https://github.com/satvik314/educhain | MIT | 387 | Global | Python package that generates educational content with generative AI. Item-bank and worksheet generation. |
+| ltijs | https://github.com/Cvmcosta/ltijs | Apache-2.0 | 373 | Global | Turns an application into a full LTI 1.3 tool provider. The integration seam into any LMS without forking it. |
+| OATutor | https://github.com/CAHLR/OATutor | MIT | 274 | North America | Intelligent tutoring system with Bayesian Knowledge Tracing (ReactJS + Firebase). UC Berkeley CAHLR. |
+| OpenTutor | https://github.com/zijinz456/OpenTutor | MIT | 159 | Global | Block-based adaptive learning workspace that runs locally; self-hosted, 10+ LLM providers. |
+| catsim | https://github.com/douglasrizzo/catsim | BSD-3-Clause | 153 | Global | Computerised Adaptive Testing simulator. Lets you simulate item selection before exposing learners to it. |
+| girth | https://github.com/eribean/girth | MIT | 127 | Global | Item Response Theory package for Python. Item calibration. |
+| feedbacksystem | https://github.com/thm-mni-ii/feedbacksystem | Apache-2.0 | 24 | EMEA | Intelligent, personalised feedback for students. Technische Hochschule Mittelhessen (Germany) — the org slug `thm-mni-ii` is the institution and faculty. |
+| Terracotta | https://github.com/terracotta-education/terracotta | Apache-2.0 | 21 | North America | LMS plug-in that randomly assigns content variations to student groups for controlled education experiments, with consent hidden from the instructor and identifiers stripped from exports. |
+| warren | https://github.com/openfun/warren | MIT | 17 | EMEA | Learning-analytics visualisation toolkit (xAPI). **Its own README states it is a proof of concept, not yet suitable for production** — do not put it in front of a client. Org `openfun`; affiliation not stated on the repo page. |
+| libro-3d-interactivo | https://github.com/csepulvedai/libro-3d-interactivo | MIT | 14 | LATAM | Claude Code skill producing interactive 3D pop-up educational books in Three.js, with Chilean-Spanish narration, aligned to Chilean curriculum objective OA 13. Author at Universidad de Los Lagos, Chile. |
+| pedagogy-benchmark | https://github.com/AI-for-Education/pedagogy-benchmark | MIT | 13 | LATAM | Benchmark of the pedagogical knowledge of LLMs, built from exams developed by Chile's Agencia de la Calidad de la Educación and CPEIP. The only verified evaluation instrument on this shelf. |
+| potsie | https://github.com/openfun/potsie | MIT | 11 | EMEA | Grafana dashboard suite for learning analytics. The production-ready alternative to `warren` for dashboards. |
+
+### Licence position
+
+Fifteen of the sixteen are MIT, Apache-2.0 or BSD-3-Clause — all buildable. The
+agent layer licenses *permissively*, which is the opposite of the platform layer
+(see [`../repos/foundations.md`](../repos/foundations.md), where every LMS of
+record is copyleft). That asymmetry is the single most useful fact on this page:
+the AI can be built permissively and attached to a copyleft LMS from the outside.
+
+### Rejected this pass
+
+These were on the shelf, or were candidates, and do not belong on it:
+
+- **github.com/plugin87/ux-ui-agent-skills** — MIT, 3.1k stars, and **not
+  an education tool at all**. It is a design-system knowledge layer for coding
+  agents ("Turn Claude into a senior design architect"). It mentions no student,
+  learner or classroom use. It was the second-highest-starred row on the previous
+  shelf, which is how a miscategorisation survives: size reads as credibility.
+- **github.com/bigdata-ustc/Agent4Edu** — 100 stars, AAAI 2025 oral
+  presentation, and **no licence file**. Academically real, legally unusable for
+  client work. Merit does not substitute for a grant.
+- **github.com/littlebordercollie/mcd-together-order** — 101 stars. A
+  prototype for ordering at McDonald's through MCP, so that students with
+  intellectual disabilities can choose meals from picture cards and a parent
+  completes the purchase. It is assistive communication, not tutoring; the README
+  states it is a contest prototype with **no trial with students yet**; and the
+  licence type is not named on the repository page. Three independent reasons not
+  to recommend it.
+- **github.com/bayshores/godspeed** — AGPL-3.0 and **7 stars**. Fails the
+  permissive-licence bar and any reasonable size floor. It is a fork of
+  LearnHarness.
+- **Ten `github.com/topics/...` URLs** (`topic:adaptive-learning`,
+  `topic:qti`, `topic:knowledge-tracing`, `topic:dyslexia`, `topic:flashcards`,
+  `topic:sign-language`, `topic:curriculum`, `topic:lesson-plan`,
+  `topic:handwriting-recognition`, `topic:intelligent-tutoring-system`) were
+  sitting in repository columns. A topic listing page is a **search axis**, not a
+  repository. It cannot be cloned, has no licence, and must never compile into an
+  entity.
+
+### Corrections to figures this base has been publishing
+
+Verified today against the repository pages. The previous star figures were wrong
+in both directions, so they were not a consistent scaling error — they were not
+measured:
+
+| Repo | Previously published | Verified 2026-10-31 |
+|---|---|---|
+| HKUDS/DeepTutor | ~24k | **52.7k** |
+| CAHLR/OATutor | ~1.5k | **274** |
+| zijinz456/OpenTutor | ~9xx | **159** |
+| thm-mni-ii/feedbacksystem | flagship EMEA agent | **24** |
+
+### Method correction — the prescribed URL verifier certifies nothing
+
+The standing instruction is to verify every URL with `curl -sI`. In this
+environment **that check cannot distinguish a real repository from a fabricated
+one.** The agent proxy returns `HTTP 403` for every `github.com` URL, including a
+control URL that does not exist:
+
+```
+403  https://github.com/moodle/moodle                     (real)
+403  github.com/gmilano/nonexistent-repo-xyz      (does not exist)
+```
+
+`gh api repos/<owner>/<name>` is also unavailable — GitHub API access is scoped to
+`gmilano/globant-kb` and returns "GitHub access to this repository is not enabled
+for this session" for every third-party repo. The proxy itself is healthy
+(`bundleCoversEveryHost: true`, no recent relay failures), so this is policy, not
+breakage.
+
+**WebFetch does discriminate**, and is the verifier that works: a real repository
+returns its licence, stars and description; a non-existent one returns `HTTP 404`.
+Every row on this page was verified that way. Any future pass that reports
+`curl -sI` output as verification is reporting noise.
+
+---
+
+## Prior passes (superseded, retained for history)
+
+Everything below predates p577 and was **not** re-verified. The figures in it are
+known to be unreliable — see the corrections table above. It is kept because it
+records the search axes that have been swept, which is still useful, and because
+`agents/trending.md` references it.
+
+### (archived) Top AI agents for education
+
 <!-- machine-readable count claim, p569, for ingest/derive-counts.py -->
 `derived shelf: **39**` — the shelf table below, counted with that gate's own row
 regex, bounded at the first `###`. 🟢 **`p576` added `4` rows** (`L.A.R.A`,

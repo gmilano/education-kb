@@ -4,6 +4,41 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `2026-10-31` — `p577` — the shelf was audited instead of extended, and three rows were not education
+
+**This week's finding is a defect in what this base had already shipped, not a new agent.**
+All 16 rows now on [`top.md`](top.md) were re-verified individually against their
+repository pages. Three were removed and the figures on four were wrong.
+
+- 🔴 **`plugin87/ux-ui-agent-skills` (MIT, 3.1k★) is not an education tool.** It is a
+  design-system layer for coding agents — "Turn Claude into a senior design architect" —
+  with no student, learner or classroom use anywhere on the page. It was the
+  second-largest row on the shelf. Size had been reading as credibility.
+- 🔴 **`bigdata-ustc/Agent4Edu` has no licence file** (100★, AAAI 2025 oral). Unusable in
+  client work however good the paper is.
+- 🔴 **`littlebordercollie/mcd-together-order`** (101★) is a McDonald's ordering prototype
+  for students with intellectual disabilities — assistive communication, not tutoring —
+  whose README states no trial with students has been run, and whose licence type is not
+  named on the page.
+- 🔴 **`bayshores/godspeed`**: AGPL-3.0, **7★**, a fork of LearnHarness. Below any bar.
+- 🔴 **Ten `github.com/topics/...` URLs were sitting in repository columns.** A topic page
+  is a search axis, not a repo: no clone, no licence, must never compile to an entity.
+
+🟢 **Star figures corrected, and they were wrong in both directions — so they were never
+measured:** `DeepTutor` ~24k → **52.7k**; `OATutor` ~1.5k → **274**; `OpenTutor` ~9xx →
+**159**; `feedbacksystem`, published as the flagship EMEA agent → **24**.
+
+🟢 **Genuinely new to this base: `THU-MAIC/OpenMAIC` (MIT, 42.2k★)** — Open Multi-Agent
+Interactive Classroom, Tsinghua. With `DeepTutor` (Apache-2.0, 52.7k★) that makes the two
+largest education agents in open source **both APAC-origin and both permissive**.
+
+🔵 **Method correction that invalidates prior verification claims.** The prescribed
+`curl -sI` check returns **403 for every github.com URL in this environment, including a
+control URL that does not exist** — it cannot tell a real repo from a fabricated one.
+`gh api repos/...` is refused (API scoped to `gmilano/globant-kb`). **WebFetch
+discriminates** (real → licence/stars; fake → 404) and is what every row above was
+verified with. Any past pass citing `curl -sI` as verification cited noise.
+
 ## 🆕 `2026-10-31` — `p576`, fourteenth pass — 🔴 **a query form, not the supply, was producing this base's zeros**
 
 🔴 **The signal of the week is an instrument, not an agent.** `topic:X OR topic:Y` in a
