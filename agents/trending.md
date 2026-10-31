@@ -4,6 +4,50 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `2026-10-31` — `p576`, fourteenth pass — 🔴 **a query form, not the supply, was producing this base's zeros**
+
+🔴 **The signal of the week is an instrument, not an agent.** `topic:X OR topic:Y` in a
+GitHub search URL returns **`0 results`** where the singles return hundreds
+(`93`+`128`, `410`+`378`, `131`). **Six axes in this base were recorded in that form**, and
+any nil they produced is void — `576-A`, trend 25. 🟢 **Honest counterweight: re-running
+four of them as singles found `18` of the `24` top repositories already shelved.** The
+defect corrupted published denominators, not discovery.
+
+🟢 **Four agents shelved, all small, star counts stated plainly:**
+
+1. **[BootlegYouki/L.A.R.A](https://github.com/BootlegYouki/L.A.R.A)** — **MIT** (1,113 B),
+   **`5★`**, APAC. *Offline, LAN-based classroom with a hybrid Socratic **SLM** tutor and
+   paperless quizzes for Philippine elementary schools (DepEd Grades 1–6).* 🔵 Offline +
+   LAN-local + deliberately small model answers the connectivity and data-residency
+   constraints that stop school deployments in this market. 🔴 A capstone project, and the
+   **top of its entire axis**: `topic:deped` holds `10` repositories, none above `5★`.
+2. **[dongsheng123132/gaokao-mentor-wisdom](https://github.com/dongsheng123132/gaokao-mentor-wisdom)**
+   — **MIT** (1,072 B), **`66★`**, APAC. Gaokao major/institution advice *"整理成结构化 JSON
+   数据集… 方便 AI 应用直接集成调用"* — advice deliberately shaped as a typed dataset for direct AI
+   integration. 🔵 The packaging is the lesson; the editorial bias of a single commentator
+   travels with the content.
+3. **[Zylcyl/gaokao-advisor](https://github.com/Zylcyl/gaokao-advisor)** — **MIT**
+   (1,056 B), **`19★`**, APAC. Multi-skill coordination architecture over the same
+   decision. 🔴 Admissions rules are annual: treat the encoded logic as perishable.
+4. **[csepulvedai/libro-3d-interactivo](https://github.com/csepulvedai/libro-3d-interactivo)**
+   — **MIT** (1,086 B), **`14★`**, LATAM 🇨🇱. Claude Code skill building interactive 3D
+   pop-up educational books in Three.js. 🟢 **A usable LATAM grant is rarer on these
+   shelves than a popular LATAM repository** — compare `DIO Agent`, `2,750★` and
+   unshippable for want of any licence — and **Chile's Mineduc now owns an AI curriculum
+   mandate from pre-school onward**, which is exactly this artefact's audience.
+
+🔴 **Nothing new on the axis that mattered most.** `topic:intelligent-tutoring-system`
+(**`43`**) was reachable only through the broken OR form, and its head —
+`open-spaced-repetition/fsrs4anki` at **`4,100★`** — plus `tutor-mcp` (**MIT**, MCP-native
+ITS) and `GenMentor` (**CC0-1.0**, WWW '25) were **already shelved**. 🔵 Recorded so the
+next pass does not re-run it hopefully.
+
+🔴 **And a warning about this pass's own instrument:** the grant probe fetched **nothing**
+for `8` real repositories (`curl` read a `-w` string starting with `@` as a filename) while
+the fabricated control still answered `DEAD-OR-ABSENT` and so still looked like a pass.
+**The control exercised only the `ls-remote` branch** (`576-D`). Byte counts were also
+`0`–`2` B low until re-measured by piping straight to `wc -c`.
+
 ## 2026-10-31 (thirteenth pass · `p575`) — 🔴 **the thirteenth consecutive agent-search nil**, and the week's real signal is that the `topic:iep` axis — the artefact every US special-education engagement turns on — **has nothing above 7★**
 
 🔴 **`13` for `13`.** The four mandated global `WebSearch` legs returned

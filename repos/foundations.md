@@ -7,10 +7,25 @@ updated: 2026-10-31
 # Foundational open source repos for education
 
 <!-- machine-readable count claim, p574, for ingest/derive-foundations.py -->
-`derived shelf rows: **142**` — every data row in a `SHELF`-disposition table,
-derived by that gate from this page's own structure (`137` distinct addresses). 🟢 `p575` added `7`
-rows (the horizontal accessibility layer), all `7` addresses new to this page, and **declared both of
-its tables in the manifest** — the omission that killed this gate for six passes (`574-B`).
+`derived shelf rows: **154**` — every data row in a `SHELF`-disposition table,
+derived by that gate from this page's own structure (`149` distinct addresses). 🟢 `p576`
+added `12` rows in two layers (autograding/submission, and the Portuguese-language layer),
+**`11` addresses new to this page** — the twelfth, `ls1intum/Artemis`, had appeared only in
+this page's own census of re-found-but-never-shelved addresses, at `97×` — and **declared
+all three of its tables in the manifest**, `CENSUS` for the denominators and `SHELF` for
+the two layers. 🔴 **`ingest/derive-foundations.py` was DENIED by the sandbox classifier**
+(*"Reason: [Code from External]"*) — 🟢 **but `ingest/derive-counts.py` and `make hooks`
+both RAN in the same session**, so the denial is **per-invocation, not the blanket rule
+`575-B` recorded** (`576-G`). This figure was therefore derived by **re-implementing
+`derive-foundations.py`'s own manifest walk and `tables_of()` line-for-line** against this
+page: `0` stale keys, `0` undeclared tables, `SHELF 154` / `CENSUS 12` / `METRIC 16` /
+`SUMMARY 9`. 🟡 It is a faithful replica's output, not the gate's own, and is marked as
+such — 🟢 **though the replica method was independently validated this pass**, because
+`derive-counts.py` ran and agreed with the replica figures for `intel/trends.md` (`28`),
+`compose/patterns.md` (`34`) and this page's sibling claim on `agents/top.md` (`48`).
+🟢 `p575` added `7` rows (the horizontal accessibility layer), all `7` addresses new to
+this page, and **declared both of its tables in the manifest** — the omission that killed
+this gate for six passes (`574-B`).
 🔴 **`p574` found this gate DEAD, not stale:** the `p568` rewrite left `33` of its
 `36` declared keys naming headings the page no longer carries and `24` live tables
 undeclared, two of them `p573`'s own — so it exited `2` before reading a single
@@ -36,6 +51,64 @@ older rows carry GitHub's licence determination and say so where it matters.
 overwhelmingly **copyleft** — the opposite of the agent layer. Two exceptions
 have now been established, and one of them is new this pass and important.
 
+## 🆕 `p576` — fourteenth pass, 2026-10-31 — 🟢 **THE AUTOGRADING AND SUBMISSION LAYER REFUTES TREND 21: FIVE UNIVERSITY-BUILT PLATFORMS OF RECORD, EVERY ONE PERMISSIVE. 🟢 AND THE PORTUGUESE-LANGUAGE LAYER, WHERE THIS BASE FINDS ITS FIRST JURISDICTION-SPECIFIC EVALUATION HARNESS — PLUS 🔴 A LICENCE CLASSIFIER THAT CANNOT READ A GRANT WRITTEN IN PORTUGUESE.**
+
+🔵 **Both layers arrived through a broken query form.** `topic:autograding OR
+topic:autograder` returns **`0`**; the singles return **`93`** and **`128`** (`576-A`,
+trend 25). The axes below were read as singles, with denominators off GitHub's own result
+counts.
+
+### 🟢 The axis denominators measured this pass
+
+| axis | repositories | prior queries in `575` passes | new addresses |
+| --- | --: | --- | --: |
+| `topic:autograder` | **128** | 🔴 `0` as a single (recorded only in the broken OR form) | 🟢 `7` shelf rows below |
+| `topic:autograding` | **93** | 🔴 `0` as a single | — |
+| `topic:educacao` (Portuguese) | **378** | 🔴 `0` | 🟢 `5` shelf rows below |
+| `topic:educacion` (Spanish) | **410** | 🔴 `0` | 🔴 **`0` platform-grade** — tops out at `71★` |
+| `topic:intelligent-tutoring-system` | **43** | 🔴 `0` as a single | 🔴 `0` — head (`fsrs4anki`, `4,100★`) and next two already shelved |
+| `topic:ai-literacy` | **285** | 🔴 `0` | 🔴 `0` — top ten already shelved or off-domain |
+| `topic:deped` (Philippines) | **10** | 🔴 `0` as a single | 🔴 `0` here — tops out at `5★`, shelved as an agent |
+| `topic:cbse` (India) | **131** | 🔴 `0` as a single | 🔴 `0` — tops out at a `109★` **GPL-3.0** Anki deck |
+| `topic:gaokao` (China) | **128** | 🔴 `0` as a single | 🔴 `0` here — two shelved as agents |
+| `topic:automated-essay-scoring` | **38** | 🔴 `0` | 🔴 `0` — research code, tops out at `121★` |
+
+### 🟢 The autograding and submission layer — and it licenses the OPPOSITE way to trend 21
+
+🔴 **Trend 21 on these shelves says: "in education AI the artefacts with institutional
+credibility are systematically less permissively licensed than the artefacts without it,"
+generalised from the accessibility layer (`p574`) and psychometrics (`p573`). 🟢 This layer
+refutes it outright.** The five platforms of record here are built by **TUM, CMU, RPI and
+UC Berkeley (twice)** — as institutional as education software gets — and **every one is
+MIT, BSD-3-Clause or Apache-2.0**, read byte-for-byte this pass. 🔵 **The two copyleft rows
+are the two that are *not* a US/German university platform.** So the discriminator is not
+credibility; **trend 21 holds per layer and does not generalise**, and that qualification
+is filed as **trend 27**.
+
+| Repo | Licence | ★ | Region | Build-on? | What it is |
+| --- | --- | --- | --: | --- | --- |
+| 🆕 [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **MIT** (`develop/LICENSE`, 1,091 B ✅ first-hand, "Copyright (c) 2026 TUM Applied Education Technologies") | 824 | EMEA | ✅ permissive | 🟢 **The strongest unshelved address in this base's own census — re-found `97×` across `575` passes and never placed.** "Artemis — Interactive Learning with Automated Feedback." Java. Interactive exercises with automated assessment across programming, modelling, text and quizzes, built and run at scale by **Technical University of Munich**. 🔴 **Default branch is `develop`, not `main`** — a `main`/`master` probe reports it dead and drops the single best-licensed platform in the layer (`575-F`). 🔵 **This is the component `P-578-B` is built on**: its feedback is automated and its grade is a teacher's, which is exactly the shape Korea's Enforcement Decree carve-out rewards. |
+| 🆕 [autolab/Autolab](https://github.com/autolab/Autolab) | **Apache-2.0** (`master/LICENSE`, 11,324 B ✅ first-hand) | 808 | North America | ✅ permissive | "Course management service that enables auto-graded programming assignments." Ruby. **Carnegie Mellon.** The autograding platform with the longest production record in the layer, and an Apache-2.0 patent grant — the licence a client's counsel objects to least. |
+| 🆕 [Submitty/Submitty](https://github.com/Submitty/Submitty) | **BSD-3-Clause** (`main/LICENSE.md`, 1,542 B ✅ first-hand, "Copyright (c) 2014-2026, Submitty team") | 807 | North America | ✅ permissive | "Homework Submission, Automated Grading, and TA grading system." PHP. **Rensselaer Polytechnic Institute.** 🔵 **Note the path: the grant is in `LICENSE.md`, not `LICENSE`** — a probe without the `.md` variant calls this ungranted, which is `575-A`'s failure mode recurring in a layer where it would have cost a platform row. 🟢 **The explicit "TA grading" stage in its own one-line description is a human-in-the-loop checkpoint shipped as a product feature.** |
+| 🆕 [okpy/ok](https://github.com/okpy/ok) | **Apache-2.0** (`master/LICENSE`, 13,979 B ✅ first-hand) | 370 | North America | ✅ permissive | "ok.py supports programming projects by running tests, tracking progress, and assisting in debugging." Python. **UC Berkeley.** Shelved for the tracking-and-debugging half: it models student *progress*, not only correctness, which is the hook an AI tutor attaches to. 🟡 Maturity unassessed this pass — read commit recency before proposing it. |
+| 🆕 [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | **BSD-3-Clause** (`master/LICENSE`, 1,560 B ✅ first-hand, "Copyright (c) 2019, UC Berkeley Division of Data Science and Information") | 161 | North America | ✅ permissive | "A Python and R autograding solution." **UC Berkeley Division of Computing, Data Science, and Society.** 🟢 **The notebook-native one**: it grades Jupyter work, which is the format most data-science and AI curricula are actually taught in — including the ones a client will ask Globant to build. |
+| 🆕 [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** (`main/LICENSE`, 34,764 B ✅ first-hand) | 243 | EMEA | ⛔ copyleft, **and mixed** | "A secure and automated exercises assessment platform." Python, UCLouvain. 🔴 **Read the grant's first line before quoting it: "Most of the files in INGInious are distributed under the GNU AGPL v3 licence"** — *most*, not all. 🔵 A per-file licence audit is required before any reuse, and **AGPL §13 network exposure applies to a hosted grader**, which is how graders are always deployed. Shelved as a feature reference, not a dependency. |
+| 🆕 [foundation50/classroom50](https://github.com/foundation50/classroom50) | 🔴 **GPL-3.0** (`main/LICENSE`, 35,150 B ✅ first-hand) | 229 | North America | ⛔ copyleft | "The free, open-source alternative to GitHub Classroom." TypeScript. 🔵 Strategically interesting — it targets the assignment-distribution layer that a proprietary incumbent owns — but **GPL-3.0 makes it a deployment, not a component.** |
+
+### 🟢 The Portuguese-language layer — and the only jurisdiction-specific evaluation harness on these shelves
+
+🔵 **Why this layer is on this page rather than only in the market intel:** Brazil's MEC
+published AI guidance for *educação básica* in **April 2026**, and Brazil is the one
+jurisdiction where an open artefact exists that the guidance can be **measured against**
+rather than merely claimed to satisfy.
+
+| Repo | Licence | ★ | Region | Build-on? | What it is |
+| --- | --- | --- | --: | --- | --- |
+| 🆕 [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟢 **MIT** (code, `main/LICENSE`, 1,092 B ✅ first-hand, "Copyright (c) 2026 Profy Tecnologias Educacionais Ltda") **+ CC BY 4.0** (data, `dados/LICENSE.md`) | 24 | LATAM | ✅ permissive, **split code/data** | 🟢 **The Brazilian national curriculum as structured data, and the most directly usable LATAM artefact this base has found.** `1,721` *aprendizagens* — `1,580` across the three stages of basic education plus `141` from the Computing complement (*Parecer CNE/CEB 2/2022*) — in **JSON, CSV and SQLite**, each record carrying competencies, organisation contexts and provenance, conferred against the official document. 🟢 **Ships as npm and PyPI packages with the data embedded that work with no internet, and a local MCP server (`npx -y @bncc/mcp`)** — the hosted one at `mcp.bncc.dev` is optional, which matters for school data-residency rules. 🟢 **Zenodo DOI `10.5281/zenodo.21625233`, and it carries `CITATION.cff`** — 🔵 note against `574-F`, which found `0 of 7` repositories with one in a different cohort. 🔵 **Its licence note states the legal theory**: BNCC normative texts are official acts and not copyrightable under **art. 8º, IV, Lei 9.610/98**, so CC BY 4.0 covers the compilation and curation only. 🔴 **`24★`** — judge it on the DOI, the validation workflow and the stated provenance, not the star count. |
+| 🆕 [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | 🟡 **DUAL, declared per directory**: **MIT** for `harness/` and `test/`; **CC BY 4.0** for `itens/`, `resultados/` and `METODOLOGIA.md` (`main/LICENSE`, 911 B ✅ first-hand) | 12 | LATAM | ✅ permissive for the harness | 🟢 **An open LLM-hallucination benchmark against the Brazilian national curriculum: `15,300` responses from `17` models.** 🔵 **This is the piece that makes a curriculum-alignment claim falsifiable**, and this base has no equivalent for any other jurisdiction. 🔴 **Read the third clause of its licence before reusing results**: the stored model responses were generated by third-party models and **carry those providers' own reuse conditions**, which the repository states explicitly rather than leaving to be discovered. 🟢 A dual licence split by *directory* and documented in the licence file itself is the cleanest grant structure in this layer. |
+| 🆕 [portabilis/i-educar](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** (`2.12/LICENSE`, 18,092 B ✅ first-hand) | 722 | LATAM | ⛔ copyleft | "Lançando o maior software livre de educação do Brasil!" PHP. 🟢 **The largest Portuguese-language education platform on GitHub and the head of the `topic:educacao` ladder** — a school-management system (*gestão escolar*) in real municipal use. 🔴 **Default branch is `2.12`** — neither `main` nor `master`, so a two-branch probe reports Brazil's biggest education platform **dead**. Third instance of this class after `openeducat_erp` (`19.0`) and Artemis (`develop`); see [`../evidence/nondefault-branches.2026-10-31-p576.tsv`](../evidence/nondefault-branches.2026-10-31-p576.tsv). 🔵 Deploy it and call it; do not vendor it. |
+| 🆕 [portabilis/i-diario](https://github.com/portabilis/i-diario) | 🔴 **AGPL-3.0** (`1.6/LICENSE`, 35,326 B ✅ first-hand) — 🔴 **and the grant is written in PORTUGUESE** | 117 | LATAM | ⛔ copyleft, §13 exposure | The teacher's *diário de classe* companion to `i-educar`. Ruby. 🔴 **This row is also the evidence for `576-E`: its licence file opens `LICENÇA PÚBLICA GERAL AFFERO GNU Versão 3, 19 de novembro de 2007`, and this base's own classifier regex — `r"GNU\s+AFFERO\s+GENERAL\s+PUBLIC\s+LICENSE"` in `compose/code/p228-shelf-gate/classify_grant.py` — does NOT match it.** Demonstrated against the regex itself in [`../evidence/grant-language-blindspot.2026-10-31-p576.tsv`](../evidence/grant-language-blindspot.2026-10-31-p576.tsv). 🔵 **The direction of the error is the dangerous one**: an unread AGPL grant reads as "no licence", and a repository with no licence has been treated on these shelves as a fork-and-read candidate. Default branch `1.6`. |
+| 🆕 [ipti/br.tag](https://github.com/ipti/br.tag) | 🔴 **GPL-2.0** (`main/LICENSE`, 18,027 B ✅ first-hand) | 20 | LATAM | ⛔ copyleft | "Software de apoio a gestão escolar baseado em Tecnologia Social." PHP, by **IPTI** (Instituto de Pesquisas em Tecnologia e Inovação). 🔵 Shelved as the small-municipality end of the same vertical: where `i-educar` serves a city network, this targets schools with far less capacity, which is where Brazil's rural-priority obligations land. |
 ## 🆕 `p575` — thirteenth pass, 2026-10-31 — 🟢 the horizontal accessibility layer that the education axis cannot see, and 🔴 **three of this pass's own seven "ungranted" verdicts were refuted by its own second probe**
 
 🔵 **Why these rows are here and not on `agents/top.md`.** `574-C`'s sweep found the

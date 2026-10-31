@@ -1,0 +1,26 @@
+# p576 / 576-B — can this harness reach a government or IGO primary?  Answer: no, as a CLASS.
+# Channel A: curl -sS -o /dev/null -w '%{http_code}' https://<host>/   (000 = no connection)
+# Channel B: WebFetch, which reports getaddrinfo ENOTFOUND for the same hosts.
+# The LAST ROW IS A FABRICATED CONTROL and it answers IDENTICALLY, so the verdict carries
+# no information about whether the host exists.  575-C's "fetch the primaries" is unexecutable.
+host	jurisdiction	curl_code	webfetch	verdict
+www.gov.br	Brazil (MEC)	000	ENOTFOUND	UNREACHABLE
+educacionsuperior.sep.gob.mx	Mexico (SEP)	000	ENOTFOUND	UNREACHABLE
+www.minciencia.gob.cl	Chile (Minciencia)	000	ENOTFOUND	UNREACHABLE
+abc.gob.ar	Argentina (Buenos Aires prov.)	000	ENOTFOUND	UNREACHABLE
+www.mineducacion.gov.co	Colombia (MinEducación)	000	-	UNREACHABLE
+rest.hcdn.gob.ar	Argentina (Diputados)	000	-	UNREACHABLE
+www.alcaldiabogota.gov.co	Colombia (norm repository)	000	-	UNREACHABLE
+www.camara.gov.co	Colombia (Cámara)	000	-	UNREACHABLE
+www.mext.go.jp	Japan (MEXT)	000	-	UNREACHABLE
+www.moe.gov.sg	Singapore (MOE)	000	-	UNREACHABLE
+www.boe.es	Spain (official gazette)	000	-	UNREACHABLE
+www.congreso.es	Spain (Congress)	000	-	UNREACHABLE
+intef.es	Spain (INTEF, education ministry body)	000	-	UNREACHABLE
+code.intef.es	Spain (INTEF)	000	-	UNREACHABLE
+unesdoc.unesco.org	UNESCO	000	-	UNREACHABLE
+www.oecd.org	OECD	000	-	UNREACHABLE
+raw.githubusercontent.com	(control, reachable)	301	-	REACHABLE
+github.com	(control, reachable)	400	-	REACHABLE
+FAKE-CONTROL-576-does-not-exist.gob.ar	FABRICATED CONTROL	000	-	NON-DISCRIMINATING
+FAKE-CONTROL-576-not-real.es	FABRICATED CONTROL	000	-	NON-DISCRIMINATING

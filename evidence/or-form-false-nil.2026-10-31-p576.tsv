@@ -1,0 +1,19 @@
+# p576 / 576-A — GitHub topic search: the `topic:X OR topic:Y` URL form returns a FALSE NIL.
+# Channel: WebFetch -> https://github.com/search?q=<query>&type=repositories&s=stars&o=desc
+# Read 2026-10-31.  Singles are the control: a form that returns 0 where its own components
+# return hundreds is not measuring absence.
+query_form	query	results	verdict
+OR-form	topic:autograding OR topic:autograder	0	FALSE-NIL ("Your search did not match any repositories")
+single	topic:autograding	93	REAL
+single	topic:autograder	128	REAL
+OR-form	topic:educacion OR topic:educacao	0	FALSE-NIL
+single	topic:educacion	410	REAL
+single	topic:educacao	378	REAL
+OR-form	topic:cbse OR topic:ncert	0	FALSE-NIL
+single	topic:cbse	131	REAL
+OR-form	topic:rubric OR topic:essay-scoring OR topic:automated-essay-scoring	0	FALSE-NIL
+single	topic:automated-essay-scoring	38	REAL
+single	topic:deped	10	REAL
+single	topic:gaokao	128	REAL
+single	topic:intelligent-tutoring-system	43	REAL
+single	topic:ai-literacy	285	REAL

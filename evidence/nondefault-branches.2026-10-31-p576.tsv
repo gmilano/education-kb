@@ -1,0 +1,11 @@
+# p576 — 575-F corroboration.  Repositories whose default branch is NEITHER main NOR master.
+# A main/master-only probe reports each of these DEAD and would drop a platform of record.
+slug	default_branch	note
+portabilis/i-educar	2.12	Brazil's largest free school-management system; a main/master probe calls it dead
+ls1intum/Artemis	develop	TUM autograding platform; LICENSE only resolves on develop
+openeducat/openeducat_erp	19.0	found by p575, repeated here as the first case of the class
+Zylcyl/gaokao-advisor	master	master, not main — still caught by a two-branch probe
+inuyasha2012/vipsy	master	master
+meyerjp3/psychometrics	master	master
+learningequality/kolibri	develop	ALREADY ON THESE SHELVES as MIT -- and its default branch is `develop`, so a main/master probe calls this base's reference offline-education platform dead
+portabilis/pre-matricula-digital	2.12	alive, verified by ls-remote; grant NOT read this pass and the row says so

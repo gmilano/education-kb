@@ -4,6 +4,172 @@ region: Global
 updated: 2026-10-31
 ---
 
+## Pass 576 — reads 2026-10-31, commit 2026-10-31 — **🟢 `575-E` CLOSED ON THE FIRST ATTEMPT: SIX LATAM JURISDICTIONS HAVE DATED EDUCATION-AI INSTRUMENTS AND COLOMBIA'S IS A STATUTE, AFTER THIRTEEN PASSES IN WHICH THE REGION-LEVEL LEG REACHED NONE. 🟢 `575-D` CLOSED: CHINA ON THE FIRST CHINESE-LANGUAGE QUERY, AND JAPAN'S `JIS` DISPUTE WAS A CATEGORY ERROR. 🔴 `575-C`'s PRESCRIPTION IS UNEXECUTABLE — `16` GOVERNMENT AND IGO HOSTS, FOUR CONTINENTS, ALL UNREACHABLE AND INDISTINGUISHABLE FROM A TYPO — 🟢 BUT THE SUBSTITUTE CHANNEL WAS FOUND. 🔴 AND A QUERY FORM THIS BASE USED SIX TIMES RETURNS A FALSE ZERO. SIX REGISTERED (`576-A`…`576-F`).**
+
+### 🟢 The central result: the method generalises, and now it has done so twice
+
+`p575` broke a twelve-pass APAC nil by querying **per jurisdiction, in the jurisdiction's
+own language**, and filed it as trend 23. 🟢 **This pass ran that method on LATAM, where the
+same leg had failed thirteen times, and reached six jurisdictions on the first attempt —
+then ran it on China and closed the last unreached jurisdiction in the base.** 🔵 Two
+consecutive passes in which the same prescription paid on the first attempt is no longer a
+lucky result; it is a method, and the thing it replaces — a region-level search leg — has
+now failed **fourteen** times.
+
+🟢 **Colombia is the headline: `Ley 2626 de 2026`, the "Ley de Educación Digital", expedida
+`24 August 2026`** — the first **binding** education-AI instrument in LATAM on these
+shelves, and the first anywhere on them that works by **curricular mandate** rather than
+risk regulation. It puts **AI, programming, computational thinking, data science and digital
+citizenship** into *Tecnología e Informática* across *básica* and *media*; declares digital
+education **part of the fundamental right to a quality education**; orders a **malla
+curricular obligatoria por ciclos**; obliges **MEN** to revise the standards **at least
+every three years** with a **Comisión Nacional de Educación Digital**; creates an
+**Observatorio Nacional de Educación Digital** that must publish implementation and gap
+data; and carries a teacher-training programme, a neutrality clause and rural priority.
+🔴 **Obligatory in official schools.**
+
+🔵 **Why that is worth more than a policy note: the three-year revision cycle makes the work
+recurring, and the Observatorio makes the outcome published and auditable.** Filed as
+**`P-578-C`**.
+
+🔴 **And the pass refuted the region's loudest secondary claim.** "AI is already mandatory
+in Argentine schools" **does not hold nationally**: the federal instrument is a **bill**
+amending art. `11` of Ley 26.206, and no Consejo Federal resolution number could be found
+in two searches. 🟢 What is real is **sub-national** — CABA, Buenos Aires province, Misiones
+— 🔵 **so in Argentina the buying unit is the province or the city, the opposite of
+Colombia.** 🔴 Mexico is an **informed absence**, corroborated against the DOF: an April
+decálogo asking institutions to write **their own** lineamientos, and no published acuerdo.
+
+### 🟢 China closes, and Japan's open dispute turns out to have been a category error
+
+🟢 **One Chinese-language query reached what two English ones had not:**
+**《"人工智能+教育"行动计划》(`教科信〔2026〕1号`, MOE + four departments, April 2026)**, the
+**《中小学生成式人工智能使用指南（2025年版）》**, the **通识教育指南**, revised Information
+Technology curriculum standards, and 🟢 **two national standards of December 2025 — education
+data classification/grading, and general requirements for large-screen interactive teaching
+terminals**, the first **hardware conformance gate** on these shelves. The Action Plan
+obliges localities to set **class hours per school stage** and to **classify and grade
+safety-protection standards for AI education applications**.
+
+🔴 **Say "curriculum standards", not "compulsory course"** — the latter is media
+interpretation of the MOE text. 🔴 **No accessibility `GB`/`GB/T` standard for education was
+found on a second attempt, now in the right language**; it stays an informed gap.
+
+🟢 **Japan: `JIS X 8341-3` has no version on these shelves because MEXT's guideline never
+referenced it.** The guideline is
+「**初等中等教育段階における生成AIの利活用に関するガイドライン（Ver.2.0）**」, **`2024-12-26`**,
+and it **neither bans nor mandates**. 🔵 `575-D`'s "version dispute" was a question about a
+relationship that does not exist — which is a different and better answer than a missing
+fact.
+
+### 🔴 The instrument results, and there are four of them
+
+🔴 **`576-A` — a query form was manufacturing this base's zeros.** `topic:X OR topic:Y`
+returns **`0 results`** where the singles return **`93`**+**`128`**, **`410`**+**`378`**,
+**`131`**, **`38`**. 🔴 **Six axes in this base were recorded in that form**, and any nil
+they produced is void. 🟢 **The honest half: re-running four as singles found `18` of the
+`24` top-of-ladder repositories already shelved — the defect corrupted published
+denominators, not discovery.** 🔵 It attacks this base's most valuable product, the
+*informed absence*, because a fabricated nil is indistinguishable from an earned one.
+
+🔴 **`576-B` — "fetch the primary" is not a task this harness can perform, and the
+prescription should be retired.** `16` government and IGO hosts across four continents —
+including **`unesdoc.unesco.org`** and **`www.oecd.org`** — all answer `000` / `ENOTFOUND`,
+🔴 **and so do two fabricated control hosts**, so the verdict has zero information content.
+🔵 That is `575-F`'s defect in a third instrument. 🟢 **The substitute works: `WebSearch`
+with `allowed_domains` set to the blocked host.** It returned `Ley 2626` at **article
+level** from a norms repository this session cannot open, and Spain's **INTEF Guía v2.0
+(`08/09/2026`)** from `intef.es`. 🔵 **That lifts a jurisdiction from `C` to `B` — normative
+text read, host unreachable — which is the best grade this harness can produce.** `574-E`
+is retired into this finding after five passes of being re-issued as a retryable task.
+
+🔴 **`576-C` — `575-A`'s figure corrected, its rate refuted, and a worse failure mode
+found.** Re-probing the `7` ungranted verdicts over a **stated `23`-path set** refuted
+**`1 of 7`**, not `3 of 7`: **the corrected figure is `6 of 26`, published with its
+instrument.** 🔴 **And the one refutation does not help** — `meyerjp3/psychometrics` carries
+**GPL-3.0-or-later in its `pom.xml` header comment** and **Apache-2.0 in the same file's
+`<licenses>` element and its README**. 🔵 **Mutually contradictory grants in one repository
+is a new failure mode, and a narrow probe silently picks the permissive side.** 🔴 **`0 of
+26` moved into the shippable tier.**
+
+🔴 **`576-D` — a control that exercises one branch certifies nothing about the other, found
+in this pass's own work.** The grant probe fetched **nothing** for `8` real repositories —
+`curl` reads a `-w` format beginning `@` as a filename — **while the fabricated control
+still answered `DEAD-OR-ABSENT`, because that verdict comes from the `git ls-remote` branch
+and never touches `raw.githubusercontent.com`.** 🔵 The output looked exactly like a clean
+run: an empty table and a passing control. 🔵 Byte counts were also `0`–`2` B low until
+re-measured by piping to `wc -c`.
+
+### 🟢 Two layers added, and one of them refutes a published trend
+
+🟢 **The autograding and submission layer** (`topic:autograder` **`128`**,
+`topic:autograding` **`93`**, both reachable only past `576-A`): **`Artemis` MIT (TUM, branch
+`develop`), `Autolab` Apache-2.0 (CMU), `Submitty` BSD-3 (RPI, grant in `LICENSE.md`), `ok`
+Apache-2.0 and `otter-grader` BSD-3 (UC Berkeley)** — 🔴 **five university-built platforms of
+record, every one permissive, which refutes trend 21's generalisation** (`576-F`, trend 27).
+🔵 `Artemis` had been re-found **`97×`** by this base's own census and never shelved.
+
+🟢 **The Portuguese-language layer** (`topic:educacao` **`378`**, never queried):
+`portabilis/i-educar` **GPL-2.0, branch `2.12`** — 🔵 the largest Portuguese-language
+education platform on GitHub, which a `main`/`master` probe calls dead — `i-diario`
+**AGPL-3.0, branch `1.6`**, `ipti/br.tag` **GPL-2.0**, and 🟢 **the two permissive artefacts
+that make the layer sellable: `bncc-dev/bncc-dados`** (MIT code + CC BY 4.0 data — Brazil's
+national curriculum as `1,721` verified *aprendizagens* in JSON/CSV/SQLite, offline npm and
+PyPI packages, a **local MCP server**, Zenodo DOI) **and `bncc-dev/bncc-benchmark`** (MIT
+harness + CC BY 4.0 items — `15,300` responses from `17` models scored for hallucination
+**against the BNCC**). 🔵 **The only jurisdiction-specific evaluation harness on these
+shelves**, and what makes `P-578-A` a falsifiable claim rather than a marketing one.
+
+🔴 **`576-E` — and the layer exposed a blind spot in this base's own classifier.**
+`i-diario`'s licence opens **`LICENÇA PÚBLICA GERAL AFFERO GNU Versão 3`**, and this base's
+AGPL regex (`r"GNU\s+AFFERO\s+GENERAL\s+PUBLIC\s+LICENSE"`) **does not match it** — verified
+against the regex itself. 🔵 **In a base whose purpose includes LATAM coverage, the licence
+classifier cannot read a grant written in the region's languages, and the error runs in the
+dangerous direction: strong copyleft presents as no licence at all.**
+
+### 🔴 Supply, placed by region, with the gaps declared
+
+🔴 **`0` new addresses from the four mandated global legs — fourteenth consecutive nil**, and
+every candidate they served was already in this base. 🔴 **`0` from the four regional legs**,
+though three of the four explicitly advised querying per country, which is `575-E`'s
+prescription arriving unprompted. 🟢 **`1,431` repositories measured with denominators across
+nine single-topic axes**, `24` top-of-ladder addresses read, **`6` new**, **`4` shelved** —
+all four thin and their star counts stated in the rows.
+
+🔴 **The LATAM supply finding is the one to carry into a bid:** `topic:educacion` holds
+**`410`** repositories and **tops out at `71★`**, a JavaScript course — **no Spanish-language
+platform tier exists**, while Portuguese has one. 🔵 **So the mandates are arriving in
+jurisdictions whose own-language open-source supply cannot meet them**, which makes a
+Colombian engagement a **build**, and says so with a measured denominator rather than an
+impression.
+
+### 🟢 And the pass's last result is the one that cost the most to not know: the gates run
+
+🟢 **`make hooks` RAN** — *"every gate ran, none masked"* — **`48/69` green, `21` RED**, and
+🟢 **`ingest/derive-counts.py` RAN and agreed with every figure this pass derived by
+replica**: `patterns 34/34` GREEN, `trends 28/28` GREEN, `agents/top.md derived=48
+claimed=None` AMBER, which is `575-B`'s diagnosis confirmed by the gate itself. 🔴
+**`ingest/derive-foundations.py` was DENIED in the same session, and a later re-attempt of
+`derive-counts.py` — the very invocation that had just succeeded — was denied too.** 🔵 **So
+the denial is per-invocation and not deterministic**, let alone the blanket rule `575-B`
+recorded; three passes of count claims were marked unverified on the strength of a single
+denial (`576-G`). 🔵 **Same error shape as `576-A` and `575-F`: one negative observation
+promoted to a property of the instrument without a second trial** — now this base's most
+frequently repeated mistake, found three times in two passes.
+
+🟢 **`574-G` is therefore measured rather than assumed**, and `p574`'s figure reproduces
+exactly. 🟢 **Two of its recorded reds are now green** (`gate-derived-counts`,
+`gate-register-currency` — the latter because this pass wrote the register entry), 🔴 with
+`recount` red in their place — 🟢 **and `recount` was proven pre-existing by stashing this
+pass's edits and reproducing the identical `STALE=0 NO-ANCHOR=5 of 5` at pristine `HEAD`.**
+🔵 `gate-promotion-ratchet` names its own remedy and it was **deliberately not taken**: the
+filed count stands at **`244`** against a ratchet of **`258`**, 🟢 **moved the right way by
+this pass (`191` at `p575` → `244`)** and the ratchet left alone, per `574-G`'s own rule.
+
+🟡 The one figure still carried on a replica is `repos/foundations.md`'s **`154` rows /
+`149` addresses**, derived by re-implementing `derive-foundations.py`'s manifest walk
+line-for-line — **`0` stale keys, `0` undeclared tables** — and marked as a replica on the
+page.
 ## Pass 575 — reads 2026-10-31, commit 2026-10-31 — **🟢 `574-C` CLOSED AS A BUILD RECOMMENDATION: `744` REPOSITORIES ON FOUR AXES NEVER QUERIED IN `574` PASSES, AND THE `topic:iep` AXIS — THE ARTEFACT EVERY US SPECIAL-EDUCATION ENGAGEMENT TURNS ON — TOPS OUT AT `7★`. 🟢 `574-D` SUBSTANTIALLY CLOSED: KOREA'S AI BASIC ACT BINDS EDUCATION AS A NAMED HIGH-IMPACT SECTOR, PLUS SINGAPORE, JAPAN AND AUSTRALIA — AFTER TWELVE PASSES OF REGION-LEVEL NIL. 🔴 `574-F`'s PRESCRIBED REMEDY REFUTED: `0 of 7` REPOSITORIES CARRY `CITATION.cff`. 🔴 AND THIS PASS REFUTED THREE OF ITS OWN SEVEN "UNGRANTED" VERDICTS, WHICH PUTS A FIGURE THIS BASE PUBLISHES IN DOUBT. SIX REGISTERED (`575-A`…`575-F`), ONE OF THEM A VERIFIER THAT CERTIFIES NOTHING.**
 
 ### 🟢 The central result: the gap was real, the licensing was not the problem, and the answer is BUILD

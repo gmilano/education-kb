@@ -4,6 +4,48 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `2026-10-31` — `p576`, fourteenth pass — 🟢 **two layers that `575` passes never reached, both behind a broken query form: autograding (permissive throughout) and Portuguese-language education (copyleft throughout)**
+
+🟢 **The autograding and submission layer — `topic:autograder` `128`, `topic:autograding`
+`93`, both `0` as singles in `575` passes because only the disjunction was ever recorded.**
+🔴 **And it refutes trend 21**: five platforms of record by **TUM, CMU, RPI and UC Berkeley
+(×2)**, every one permissive.
+
+| Repo | Licence (read first-hand) | ★ | Signal |
+| --- | --- | --: | --- |
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | 🟢 **MIT** (1,091 B, branch **`develop`**) | 824 | 🟢 **This base's own census re-found it `97×` across `575` passes and never shelved it.** TUM. Automated feedback, teacher-owned grade — the shape `P-578-B` needs. |
+| [autolab/Autolab](https://github.com/autolab/Autolab) | 🟢 **Apache-2.0** (11,324 B) | 808 | CMU. Longest production record in the layer; patent grant included. |
+| [Submitty/Submitty](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** (1,542 B, **`LICENSE.md`**) | 807 | RPI. 🔵 Grant is in `LICENSE.md` — a probe without the `.md` variant calls it ungranted. Ships an explicit **"TA grading"** stage. |
+| [okpy/ok](https://github.com/okpy/ok) | 🟢 **Apache-2.0** (13,979 B) | 370 | UC Berkeley. Models student *progress*, not just correctness. |
+| [ucbds-infra/otter-grader](https://github.com/ucbds-infra/otter-grader) | 🟢 **BSD-3-Clause** (1,560 B) | 161 | UC Berkeley DCDSS. Notebook-native — the format AI curricula are actually taught in. |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🔴 **AGPL-3.0** (34,764 B) | 243 | 🔴 Its own grant says *"**Most** of the files…"* — per-file audit required; §13 bites a hosted grader. |
+| [foundation50/classroom50](https://github.com/foundation50/classroom50) | 🔴 **GPL-3.0** (35,150 B) | 229 | "The free, open-source alternative to GitHub Classroom." A deployment, not a component. |
+
+🟢 **The Portuguese-language layer — `topic:educacao` `378`, never queried.** 🔴 Every
+platform row copyleft; 🟢 the two *data* artefacts permissive, and they are the valuable
+ones.
+
+| Repo | Licence (read first-hand) | ★ | Signal |
+| --- | --- | --: | --- |
+| [bncc-dev/bncc-dados](https://github.com/bncc-dev/bncc-dados) | 🟢 **MIT** code **+ CC BY 4.0** data (1,092 B) | 24 | 🟢 **Brazil's national curriculum as verified structured data: `1,721` aprendizagens**, JSON/CSV/SQLite, provenance per record, **offline npm + PyPI packages**, **local MCP server**, Zenodo DOI, `CITATION.cff` present. |
+| [bncc-dev/bncc-benchmark](https://github.com/bncc-dev/bncc-benchmark) | 🟡 **MIT** harness **+ CC BY 4.0** items/results (911 B) | 12 | 🟢 **The only jurisdiction-specific evaluation harness on these shelves**: `15,300` responses from `17` models scored for hallucination against the BNCC. 🔴 Stored responses carry third-party model terms. |
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** (18,092 B, branch **`2.12`**) | 722 | 🟢 Head of the axis — *"o maior software livre de educação do Brasil"*. 🔴 A `main`/`master` probe reports it **dead**. |
+| [portabilis/i-diario](https://github.com/portabilis/i-diario) | 🔴 **AGPL-3.0** (35,326 B, branch **`1.6`**) | 117 | 🔴 **Grant written in Portuguese** — this base's classifier regex cannot match it (`576-E`). |
+| [ipti/br.tag](https://github.com/ipti/br.tag) | 🔴 **GPL-2.0** (18,027 B) | 20 | IPTI, "Tecnologia Social" — the small-municipality end of the vertical. |
+
+🔴 **The Spanish-language counterpart is a hobby tier and this is the placed finding:**
+`topic:educacion` holds **`410`** repositories and **tops out at `71★`** (a JavaScript
+course). Below it: teaching materials, a Moodle attendance plugin for Chile's **SENCE**
+(`29★`), a Spanish vocational grading app (`9★`). 🔵 **Colombia has just mandated an AI
+curriculum by statute into a supply that has no platform tier** — so a Colombian engagement
+builds (`P-578-C`).
+
+🟡 **Other axes read as singles, all nil for new platform-grade supply:** `topic:ai-literacy`
+(**285**), `topic:intelligent-tutoring-system` (**43**, head `fsrs4anki` **4,100★** already
+shelved), `topic:cbse` (**131**, tops out at a **GPL-3.0** Anki deck, `109★`),
+`topic:gaokao` (**128**), `topic:deped` (**10**, nothing above `5★`),
+`topic:automated-essay-scoring` (**38**, research code, head `121★`).
+
 ## 2026-10-31 (thirteenth pass · `p575`) — 🟢 `744` repositories on four never-queried axes, `29` grants read byte-for-byte — and 🔴 **this pass refuted three of its own "ungranted" verdicts, which puts a published figure in doubt**
 
 🟢 **The axis table, denominators read off GitHub's own result counts:**

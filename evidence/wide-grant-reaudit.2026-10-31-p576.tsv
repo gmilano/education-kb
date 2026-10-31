@@ -1,0 +1,24 @@
+# PATH-SET: LICENSE LICENSE.md LICENSE.txt LICENSE.rst LICENCE LICENCE.md license LICENSE-MIT COPYING copying.txt COPYING.txt COPYING.md DESCRIPTION package.json composer.json pyproject.toml setup.py setup.cfg Cargo.toml pom.xml build.gradle README.md README.rst 
+slug	default_branch	path	bytes	grant
+inuyasha2012/vipsy	master	-	-	NO-GRANT-ON-WIDE-PATH-SET
+kervias/DCD	main	-	-	NO-GRANT-ON-WIDE-PATH-SET
+CSLiJT/HCD-code	main	-	-	NO-GRANT-ON-WIDE-PATH-SET
+Mr-nnng/ICD	main	-	-	NO-GRANT-ON-WIDE-PATH-SET
+ShawnYu98/RDGT	main	-	-	NO-GRANT-ON-WIDE-PATH-SET
+meyerjp3/psychometrics	master	pom.xml	3751	License as published by
+meyerjp3/psychometrics	master	README.md	3401	licensed under the Apache Lice
+bigdata-ustc/Agent4Edu	main	-	-	NO-GRANT-ON-WIDE-PATH-SET
+FAKE-CONTROL-ORG-576/this-repo-does-not-exist	DEAD-OR-ABSENT	-	-	DEAD-OR-ABSENT
+# ---
+# p576 / 576-C — re-audit of 575-A.  The 7 NO-LICENCE-FILE verdicts from p573's probe,
+# re-run over the 23-path set printed on line 1, with the default branch resolved by
+# `git ls-remote --symref` first and a fabricated control in the batch.
+# RESULT: 1 of 7 refuted (meyerjp3/psychometrics), not 3 of 7.  p575's refutation rate
+# does NOT reproduce on this cohort, so it is layer-dependent, not a constant.
+# CORRECTED FIGURE: 6 of 26 carry no grant on a 23-path set (was published as "7 of 26").
+# AND THE REFUTATION DOES NOT HELP: meyerjp3/psychometrics carries TWO INCOMPATIBLE grants
+#   pom.xml header comment -> "GNU General Public License ... either version 3 ... or any later version"
+#   pom.xml <licenses>     -> "The Apache Software License, Version 2.0"
+#   README.md              -> "The library is licensed under the Apache License, Version 2.0."
+# so 0 of 26 moved into the shippable tier.  A narrow probe reading only <licenses> or only
+# the README would have shelved it as permissive.  That is the dangerous direction of error.

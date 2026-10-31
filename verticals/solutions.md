@@ -10,6 +10,29 @@ Real, deployed systems that run an institution's operations — the education
 equivalent of Odoo for ERP. These are the systems a client already has, and the
 systems an AI layer gets attached to.
 
+## 🆕 `p576` — fourteenth pass, 2026-10-31 — 🟢 **BRAZIL'S VERTICAL SYSTEM OF RECORD, FOUND ON A LANGUAGE AXIS THIS BASE HAD NEVER QUERIED — AND ITS DEFAULT BRANCH IS `2.12`, SO A `main`/`master` PROBE CALLS THE LARGEST PORTUGUESE-LANGUAGE EDUCATION PLATFORM ON GITHUB DEAD**
+
+🔵 **The axis:** `topic:educacao` holds **`378`** repositories and had **never been queried
+in `575` passes** — it was reachable only through `topic:educacion OR topic:educacao`,
+which returns **`0`** (`576-A`, trend 25). Its Spanish counterpart `topic:educacion`
+(**`410`**) 🔴 **has no platform tier at all**: it tops out at `71★`, a JavaScript course.
+
+| Platform | Repo | Licence | ★ | Region | What it runs |
+| --- | --- | --- | --: | --- | --- |
+| **i-Educar** | [portabilis/i-educar](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** (`2.12/LICENSE`, 18,092 B ✅ first-hand) | 722 | LATAM | 🟢 **"Lançando o maior software livre de educação do Brasil!"** — municipal *gestão escolar*: enrolment, student records, grades, reporting. PHP. The system a Brazilian municipal network already has, and therefore the system an AI layer gets attached to. 🔴 **Default branch `2.12`.** Third instance of the non-default-branch class on these shelves after `openeducat_erp` (`19.0`) and `Artemis` (`develop`). |
+| **i-Diário** | [portabilis/i-diario](https://github.com/portabilis/i-diario) | 🔴 **AGPL-3.0** (`1.6/LICENSE`, 35,326 B ✅ first-hand) — 🔴 **grant written in Portuguese** | 117 | LATAM | The teacher-facing *diário de classe*: attendance, marks, lesson records, syncing to i-Educar. Ruby. 🔴 **`576-E`'s evidence**: the licence opens `LICENÇA PÚBLICA GERAL AFFERO GNU Versão 3` and this base's own classifier regex cannot match it. 🔵 **AGPL §13 matters here specifically** — this is the component a teacher reaches over the network. |
+| **pré-matrícula digital** | [portabilis/pre-matricula-digital](https://github.com/portabilis/pre-matricula-digital) | 🟡 not read this pass | 21 | LATAM | Enrolment-vacancy and waiting-list management, integrated with i-Educar. Listed for completeness of the family; 🟢 **alive — `ls-remote` resolves `HEAD` to `2.12`** — 🔴 **but the grant was NOT read this pass, so do not treat it as cleared.** |
+| **br.tag** | [ipti/br.tag](https://github.com/ipti/br.tag) | 🔴 **GPL-2.0** (`main/LICENSE`, 18,027 B ✅ first-hand) | 20 | LATAM | School management "baseado em Tecnologia Social", by **IPTI**. The small-municipality end of the same vertical — which is where Brazil's rural-priority obligations land. |
+
+🔴 **The whole Brazilian vertical is copyleft**, every row of it. 🔵 **So the engagement
+shape is fixed by the licences before anyone argues about it: deploy these and call them
+over their APIs; put the AI in a separate process with its own licence.** That is the same
+conclusion `P-568-A` reached for copyleft LMSs, now with a Portuguese-language system of
+record to name. 🟢 **And the permissive piece that makes the pairing worth selling sits one
+page over**: [`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados) (**MIT** code,
+**CC BY 4.0** data) supplies the national curriculum as structured data with a **local MCP
+server** — see `P-578-A`.
+
 ## 🆕 `p575` — thirteenth pass, 2026-10-31 — 🔴 **the education ERP vertical: the search leg implied MIT/Apache, the licence file says LGPL-3.0, and the default branch is `19.0`**
 
 🔵 **Why this row needed a correction and not just an entry.** The mandated

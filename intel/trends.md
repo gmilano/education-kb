@@ -7,8 +7,13 @@ updated: 2026-10-31
 # Current trends — education AI
 
 <!-- machine-readable count claim, p570, for ingest/derive-counts.py -->
-`derived trends: **24**` — numbered trend headings on this page, counted with
-that gate's own regex.
+`derived trends: **28**` — numbered trend headings on this page, counted with
+that gate's own regex (`^## (\d+)\. `). 🟢 **`p576` filed trends `25`–`28`**, all four at
+`##` level so the counter can see them, and verified the page afterwards: ids `1`–`28`
+complete, **no gaps and no duplicate numbers**. 🟢 **AND THE GATE RAN AND AGREED**:
+`ingest/derive-counts.py` reports `intel/trends.md trends: derived=28 claimed=28` —
+**GREEN**. 🔵 `575-B`'s "no gate can run" was over-generalised from a single denial
+(`576-G`).
 
 🔴 **`p573` corrects this claim twice over, and the second correction is a defect,
 not a stale number.** The claim read **15**; the regex counts **24**. 🔴 **The
@@ -107,6 +112,120 @@ same hour hit [`../compose/patterns.md`](../compose/patterns.md), where
 `P-575-A`/`P-575-B` were filed at `###` against a claim of `30` recipes on a page
 the gate read as `25`. **One mechanism, two files: a count claim written by hand
 beside content filed at a level the counter cannot reach.**
+
+## 🆕 `p576` — 2026-10-31 — trends 25–28, all four filed at `##` with the counter's own `^## <n>. ` form
+
+## 25. A disjunctive search query can manufacture an informed absence — the form returns zero where its own components return hundreds (high confidence — measured first-hand on four pairs, with single-topic controls)
+
+🔴 **`topic:X OR topic:Y` in a GitHub search URL returns `0 results` and the words "Your
+search did not match any repositories."** Queried singly, the same topics return:
+
+| pair, as a disjunction | result | component singles |
+| --- | --: | --- |
+| `topic:autograding OR topic:autograder` | 🔴 **0** | 🟢 `93` and `128` |
+| `topic:educacion OR topic:educacao` | 🔴 **0** | 🟢 `410` and `378` |
+| `topic:cbse OR topic:ncert` | 🔴 **0** | 🟢 `131` and (not run) |
+| `topic:rubric OR topic:essay-scoring OR topic:automated-essay-scoring` | 🔴 **0** | 🟢 `38` on the third alone |
+
+🔵 **Why this is a trend and not a footnote.** This base's most valuable output is the
+*informed absence* — "we searched this axis and the supply is not there" — and it sells
+precisely because it is expensive to produce honestly. **A query form that fabricates
+zeros attacks exactly that product.** A nil from a broken form is indistinguishable, in a
+commit message or on a shelf page, from a nil that was earned.
+
+🔴 **Measured in this base: six axes were recorded in the broken form** —
+`topic:deped OR topic:nigeria` (×6), `topic:cbse OR topic:ncert` (×6),
+`topic:kaoyan OR topic:gaokao` (×3), `topic:special-education OR topic:iep` (×2),
+`topic:intelligent-tutoring-system OR topic:learning-analytics`,
+`topic:autograding OR topic:autograder`. 🟡 One of the six is not void:
+`topic:special-education OR topic:iep` was reported by `p575` as `89` and `34`
+**separately**, so the disjunction there is shorthand in prose rather than a query that
+ran.
+
+🟢 **And the honest half, which is the part a client should hear.** Four of the voided axes
+were re-run as singles and read deep: of the `24` top-of-ladder repositories they returned,
+**`18` were already in this base**. 🔵 **So the defect corrupted the published denominators,
+not the discovery** — the supply had been reached by other axes. Six addresses were new and
+all six are small. **The lesson is not "we missed a layer"; it is "a number we published was
+produced by an instrument we had not tested."**
+
+🔵 **Generalises unchanged to every base on this harness, and the test is cheap:** before
+trusting a nil, run each disjunct as its own query. **This is `575-F`'s discipline — put a
+control through the instrument — applied to the search leg rather than the verify leg.**
+
+## 26. Education AI regulation is arriving in two incompatible shapes, and they have different buyers (high confidence — eight jurisdictions read first-hand this pass and last)
+
+🔵 **The risk-regulation shape** — EU AI Act Annex III, Korea's AI Framework Act, the US ADA
+Title II rule. It asks: *is this system high-impact, and can you evidence your controls?*
+🟢 **Its buyer is compliance, legal and procurement**, its deliverable is an evidence trail,
+and its deadline is a date (`April 26, 2027` / `2028`; `22 January 2026`).
+
+🔵 **The curricular-mandate shape** — 🟢 **Colombia's `Ley 2626 de 2026`**, 🟢 **China's
+`"人工智能+教育"行动计划` (`教科信〔2026〕1号`)**, 🟢 **Chile's assignment of curricular-base
+updates to Mineduc**, 🟢 **Argentina's CABA making AI mandatory content**. It asks:
+*is this subject taught, by whom, with what class hours, measured how?* 🟢 **Its buyer is
+the curriculum directorate and teacher-training budget**, its deliverable is **content,
+teacher capability and a measurement surface**, and its deadline is a school year.
+
+🔴 **A pitch built for one shape does not sell to the other**, and this base spent fourteen
+passes implicitly assuming the first. 🔵 **The second is where LATAM and China actually
+are** — and it is the larger budget, because training a million teachers costs more than
+documenting a model.
+
+🟢 **Two concrete tells that the curricular shape is real and dated:** Colombia obliges MEN
+to revise the subject's standards **at least every three years** and to stand up an
+**Observatorio Nacional de Educación Digital** that publishes implementation and gap data;
+China requires localities to set **class-hour requirements per school stage** and to
+**classify and grade safety-protection standards for AI education applications**.
+🔵 **Both create recurring, published, auditable work** — the best commercial property a
+regulation can have.
+
+## 27. Trend 21 holds per layer and does not generalise — the autograding layer licenses the opposite way (high confidence — refuted first-hand, five platform grants read byte-for-byte)
+
+🔴 **Trend 21 on these shelves reads: "in education AI the artefacts with institutional
+credibility are systematically less permissively licensed than the artefacts without it,"
+generalised from accessibility (`p574`) and psychometrics (`p573`).** 🟢 **The autograding
+and submission layer refutes it.** Its platforms of record are built by **TUM, CMU, RPI and
+UC Berkeley (twice)** and every one is permissive, read byte-for-byte this pass:
+**Artemis MIT**, **Autolab Apache-2.0**, **Submitty BSD-3-Clause**, **ok Apache-2.0**,
+**otter-grader BSD-3-Clause**. 🔴 The two copyleft rows — **INGInious AGPL-3.0**,
+**classroom50 GPL-3.0** — are the two that are *not* a US or German university platform.
+
+🔵 **So credibility is not the discriminator, and the corrected statement is narrower and
+more useful: licensing in education AI is a property of the LAYER, and must be measured per
+layer rather than inferred from one.** 🟡 Three layers, three verdicts: accessibility
+copyleft-dominated, psychometrics split by **programming language** (trend 19), autograding
+permissive throughout. 🔵 **The practical rule for a bid: never predict a layer's licence
+posture from a neighbouring layer's — probe it.** Each of these three cost one pass to
+measure and would have been wrong if assumed.
+
+## 28. Where a regulator exempts human-final-decision systems, compliance stops being paperwork and becomes an architecture choice (high confidence on the carve-out as secondary; the primary is unreachable from this harness)
+
+🟢 **Korea's AI Framework Act Enforcement Decree provides that where a human intervenes in
+the final decision, the system is judged controllable and is excluded from high-impact
+AI.** 🔵 Education's named high-impact instance is **`학생평가` — student assessment** (given
+as early-childhood, primary and secondary student evaluation), and only where the system
+materially affects life, bodily safety or fundamental rights.
+
+🔵 **Put those two together and the engineering decision dominates the compliance
+decision.** A grading pipeline where the model proposes and the **teacher disposes** is not
+a high-impact system that has been documented well; it is **outside the classification**,
+and therefore outside risk management, explainability, user-protection and oversight duties
+— with the notification duty (art. `31`) and its **`KRW 30 million`** fine not engaged for
+that system either. 🟢 A pipeline where the model's output is released to the student
+unmediated is inside, and every one of those duties attaches.
+
+🟢 **This is buildable today with permissively licensed components, which is why it is a
+trend and not a legal note:** **Submitty ships a "TA grading" stage as a product feature**,
+and **Artemis's own one-line description is "Interactive Learning with Automated
+Feedback"** — automated *feedback*, teacher-owned *grade*. 🔵 **The regulator and the
+pedagogy want the same architecture**, which is the rare case where a compliance
+constraint improves the product. Filed as **`P-578-B`**.
+
+🔴 **Grade honestly: the carve-out is read from law-firm and policy-tracker summaries, not
+from `law.go.kr`**, which like every other government host is unreachable from this harness
+(`576-B`). 🟡 Control families are reliable; **do not quote the carve-out's exact wording to
+a client without the statute text.**
 
 ## 🆕 `p575` — 2026-10-31 — trends 23–24, both filed at `##` so the counter can see them
 

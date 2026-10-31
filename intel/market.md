@@ -23,6 +23,98 @@ institutions plan AI teaching assistant deployments by end of 2026" attributed
 to EDUCAUSE (not traceable to EDUCAUSE in any source seen across three passes),
 and "AI agents will take over 80% of routine educational labour" (unsupported).
 
+## 🆕 `p576` — 2026-10-31 — 🟢 **`575-E` CLOSED ON THE FIRST ATTEMPT: SIX LATAM JURISDICTIONS HAVE DATED EDUCATION-AI INSTRUMENTS, AND COLOMBIA'S IS A STATUTE — AFTER THIRTEEN PASSES IN WHICH THE REGION-LEVEL LEG REACHED NONE. 🔴 AND THE REGION'S LOUDEST SECONDARY CLAIM, "AI IS ALREADY MANDATORY IN ARGENTINE SCHOOLS", IS REFUTED AT THE LEVEL IT WAS STATED.**
+
+🟢 **The prescription worked, and that is now twice in two passes.** `p575` broke a
+twelve-pass APAC nil by querying **per jurisdiction, in the jurisdiction's language**
+(trend 23). This pass ran the identical method on LATAM, where the same leg had failed
+**thirteen** times, and reached six jurisdictions on the first attempt. The full table,
+with grades and binding/non-binding marked per row, is in
+[`../evidence/latam-jurisdiction-instruments.2026-10-31-p576.tsv`](../evidence/latam-jurisdiction-instruments.2026-10-31-p576.tsv).
+
+🔵 **Why this belongs on a market page and not only a policy one:** a curricular mandate
+is a *procurement trigger with a date*. Colombia's statute obliges a subject to be taught
+that most of its teachers were never trained to teach, in a country whose own open-source
+supply in its own language tops out at `71★` (measured this pass — see below). That gap is
+the engagement.
+
+### 🟢 The one binding instrument: Colombia, `Ley 2626 de 2026`
+
+🟢 **`Ley 2626 de 2026`, the "Ley de Educación Digital", expedida `24 August 2026`** —
+🟢 **the first binding education-AI instrument in LATAM on these shelves**, and the first
+anywhere on them that works by **curricular mandate** rather than by risk regulation. Read
+at article level through a domain-restricted search (`576-B`), it:
+
+- updates **Tecnología e Informática** in *básica* and *media* to carry **computational
+  thinking, programming, artificial intelligence, data science and digital citizenship**;
+- declares digital education **part of the fundamental right to a quality education**;
+- orders a **malla curricular obligatoria, progresiva y articulada por ciclos**;
+- obliges **MEN** to review the subject's lineamientos and standards **at least every three
+  years**, with a **Comisión Nacional de Educación Digital**;
+- creates an **Observatorio Nacional de Educación Digital** to publish implementation and
+  gap data — 🔵 **a government-published measurement surface, which is unusual and is
+  directly useful to a bidder**;
+- carries an **ideological-neutrality clause** on content, a **teacher training and updating
+  programme**, and **priority for rural and ethnic-community schools**;
+- is 🔴 **obligatory in official (public) schools**, where the equity constraint bites.
+
+🟡 A separate bill, **`PL 418/2026C`**, would add an article `3A` on responsible AI and
+social-media use. **It is in trámite and is not law** — recorded so the two are not merged.
+
+### 🔴 The refutation: Argentina
+
+🔴 **Secondary sources state that "AI is already mandatory in Argentine schools." It does
+not hold at the national level.** The federal instrument is a **bill** amending art. `11`
+of **Ley 26.206**; **no Consejo Federal de Educación resolution number could be found in
+two searches**, and the one source asserting a CFE approval gives none. 🟢 **What is real is
+sub-national**: **CABA** (AI and digital protection as mandatory content, phased), **Buenos
+Aires province** (*IA Generativa en la educación*, `2026-03`, criteria of use for provincial
+schools), and **Misiones** (marco orientador with its Secretaría de IA, tied to **Ley VI
+Nº 347**). 🔵 **The commercial consequence is concrete: in Argentina the buying unit is the
+province or the city, not the nation** — the opposite of Colombia.
+
+### 🔵 The rest of the region, placed
+
+🟡 **Brazil — guidance, not duty, and it is the better-funded of the two tracks.** MEC
+published a **documento orientador for educação básica in `April 2026`** — **four pillars**
+(critical understanding, intentional pedagogical use, rights protection, professional
+development) and **ten diretrizes** for school networks, with a **teacher-training course
+opened alongside it**. Behind it sits the **Referencial para o Uso e Desenvolvimento
+Responsáveis de Inteligência Artificial na Educação** (**SEGAPE/MEC**), put to **public
+consultation in October 2025**, which asks higher-education institutions to stand up **AI
+governance guidelines and ethics committees**. 🔵 Neither is binding; both are buyable.
+
+🟡 **Chile — the instrument is a science-ministry policy that assigns work to the education
+ministry.** The updated **Política Nacional de Inteligencia Artificial** carries **177
+measures**, of which **100 fall due in 2026**, and **Mineduc owns the update of the
+curricular bases to address AI from pre-school onward**. Mineduc's Centro de Innovación has
+shipped the teacher guide **«PotencIA el Aprendizaje»**, disseminated through *Ciudadanía
+Digital* with webinars and regional workshops.
+
+🔴 **Mexico — an informed absence, and this pass corroborated the absence rather than
+assuming it.** A DOF-restricted search found **no published AI-in-education acuerdo or
+lineamiento**. What exists is the **ENIAG** survey and a **ten-action decálogo** presented
+to rectors on **`2026-04-15`**, whose second action asks institutions to set **their own**
+lineamientos, with a national higher-education AI policy stated as a *goal*. 🔵 **So in
+Mexico the institution is the regulator for now**, which makes institutional governance the
+sellable unit. 🟡 One published federal instrument does touch the classroom — a **DOF entry
+of `2026-09-22` on responsible device use in schools** — but it is a **phones and personal
+electronics rule** that mentions AI mainly for education information systems. Recorded here
+so it is not mistaken for an AI rule.
+
+🟡 **Peru** — Minedu announced AI for learning planning in **205 rural schools for 2026**.
+🟡 **Dominican Republic** — a ministry statement on teacher training dated **`2026-10-29`**,
+with no instrument text reached.
+
+### 🔴 The LATAM market *size* is still not published, and this pass did not fix it
+
+🔴 **`p574` recorded that the available LATAM figure is off by three orders of magnitude.
+This pass served it again** — "**USD 18.2 m (2024), 12.1 % CAGR to 2029**" — from a
+market-research geography page. 🔵 **A region with `92 %` student engagement and a national
+statute cannot have a market two orders of magnitude smaller than a single enterprise
+deal.** It stays **unpublished on these shelves**, and the honest line to a client is that
+the regional sizing does not exist, not that it is small.
+
 ## 🆕 `p575` — 2026-10-31 — 🟢 **`574-D` substantially closed: four APAC jurisdictions have education-specific AI instruments and Korea's is binding**, and every region on this page moved for the first time in thirteen passes
 
 🟢 **The method finding first, because it is the reusable one.** `574-D` recorded that
@@ -48,6 +140,60 @@ sector** — risk management, explanation, user protection, human oversight and 
 output labelling, under a `≥ 1`-year MSIT grace period with a proposed delay to 2029
 in play. 🔵 **The first binding education-specific AI duty on these shelves outside the
 EU AI Act and the US ADA Title II rule.** See `### APAC` below.
+
+#### 🆕 `p576` — 🟢 China closes the last unreached jurisdiction, and Korea's rule narrows to one that can be designed around
+
+🟢 **`575-D` CLOSED. China was reached on the first Chinese-language query** — the query
+language was the entire barrier, exactly as trend 23 predicts. The instruments:
+
+- 🟢 **《"人工智能+教育"行动计划》, document number `教科信〔2026〕1号`**, issued by the
+  **Ministry of Education with four other departments, April 2026**. It requires localities
+  to produce **curriculum guides**, to **define class-hour requirements per school stage**,
+  and — 🔵 the commercially sharp clause — to **classify and grade safety-protection
+  standards for AI education applications** (`分类分级确定人工智能教育应用的安全防护标准`).
+- 🟢 **《中小学生成式人工智能使用指南（2025年版）》** — a **generative-AI use guide for
+  primary and secondary students**, the direct analogue of Japan's MEXT guideline.
+- 🟢 **《中小学人工智能通识教育指南（2025年版）》** — AI general-education guide, same vintage.
+- 🟢 **Revised compulsory-education and senior-secondary Information Technology curriculum
+  standards.**
+- 🟢 **Two national standards, December 2025, effective on publication:
+  《教育数据分类分级指南》** (education data classification and grading) and
+  **《大屏幕交互式智能教学终端通用要求》** (general requirements for large-screen interactive
+  smart teaching terminals). 🔵 **A hardware conformance standard is a procurement gate**,
+  and this base held none from any jurisdiction before now.
+- 🟢 **February 2026**, national basic-education work conference: push AI into **curriculum
+  standards, daily teaching *and* exam evaluation**.
+
+🔴 **Two honest limits.** Sources describing this as a "compulsory course" are **media
+interpretation** — the MOE text speaks of curriculum standards and locally-set class hours,
+so do not say "compulsory" to a client. And **no `无障碍` (accessibility) `GB`/`GB/T`
+standard applicable to education was reached on a second attempt, now in the right
+language** — it stays an informed gap.
+
+### 🔴 Korea: a correction to this base's own claim, and the carve-out that changes the build
+
+🔴 **`p575` published that "education is a NAMED high-impact sector" under the AI Framework
+Act. The precise reading is narrower: the named instance is `학생평가` — student
+assessment**, given as early-childhood, primary and secondary student evaluation, and it
+qualifies only where the system **materially affects life, bodily safety or fundamental
+rights**. 🔵 **Not all education AI is high-impact**, and a claim on these shelves is
+corrected accordingly.
+
+🟢 **And the Enforcement Decree carries a carve-out this base had not recorded: where a
+human intervenes in the final decision, the system is judged controllable and is excluded
+from high-impact AI.** 🔵 **That turns compliance into an architecture decision** — a
+grading or placement pipeline in which the teacher makes the final call sits outside the
+high-impact obligations entirely. **Filed as `P-578-B`**, and it is the most actionable
+regulatory finding of this pass.
+
+🟡 **Quantified exposure:** notification duty (**art. `31`**), an administrative fine of up
+to **`KRW 30 million`** for failure to pre-notify, and a **watermark / labelling duty on
+generative output**. 🟡 An MSIT **amendment to the Enforcement Decree was resolved at Cabinet
+on `2026-07-14`** — single source, flagged, not relied on.
+
+🟡 **Japan, now exact:** 「**初等中等教育段階における生成AIの利活用に関するガイドライン
+（Ver.2.0）**」, **`2024-12-26`** (provisional Ver.1.0, July 2023). 🔴 It **neither bans nor
+mandates** (`一律禁止も義務付けもしない`) — guidance, not duty.
 
 🔴 **Market size: unchanged and still a range, and this pass widened the regional
 spread rather than narrowing it.** The NA figures served this pass imply a **`15.9 %`
@@ -160,6 +306,29 @@ said out loud before any of it reaches a client deck.
 ## Opportunities by region
 
 ### North America
+
+#### 🆕 `p576` — the sanctioned-tooling gap, and the figures to quote as a range
+
+🔴 **Quote NA as a range, never a point.** This pass's leg returned **`36 %` of the global
+market valued at `USD 3.68 bn` for 2026** from one vendor and **`38 %` share for 2025** from
+another, against a third claiming **`86 %` of educational organizations have adopted
+generative AI** in the region. 🔵 Those are not reconcilable, and `p575` already recorded
+that NA figures spread ~`2×` on 2026 and imply a `15.9 %` CAGR against this page's ~`41 %`
+global.
+
+🟢 **The durable, non-vendor facts:** around **`70 %` of institutions in Europe and North
+America have or are developing AI guidance**; **federal money is moving** (reported
+**`USD 169 m`** in FIPSE awards including responsible-AI use, Q1 2026 — 🔴 not confirmed in a
+primary, because `federalregister.gov` and `ada.gov` remain unreachable, now for a fifth
+pass, see `576-B`); and adoption in public schools is **budget-constrained**, not
+interest-constrained.
+
+🔵 **The shape of the NA engagement is unchanged and now twice-corroborated: usage is
+already universal and invisible, and the institution's problem is sanctioning it** —
+Gallup's **>`60 %` of college students using AI weekly against ~half of institutions
+discouraging or prohibiting it** (`p575`). Add **COPPA** for anything touching under-13s,
+and the **ADA Title II** dates (**`April 26, 2027`** / **`April 26, 2028`**) as the only
+education obligation on these shelves with calendar dates.
 
 #### 🔴 `p574` — the one dated education obligation in this region MOVED, and this base had never recorded it at all
 
@@ -495,6 +664,33 @@ WCAG 2.1 AA). 🔴 **`574-E` stays open**: `ada.gov` and `federalregister.gov` a
 outside this session's egress allow-list, so the one dated obligation on these shelves
 remains **secondary-only for a fourth pass.**
 ### EMEA
+
+#### 🆕 `p576` — 🟢 Spain ships the artefacts, and they are the reusable part
+
+🟢 **The EMEA leg paid in *deliverable-shaped* material this pass, which is rarer than
+policy news.** Spain's **INTEF** — a body of the education ministry — published **version
+`2.0` of the «Guía sobre el uso de la inteligencia artificial en el ámbito educativo»,
+dated `08/09/2026`** (original 2024), orienting schools and teachers toward pedagogical,
+ethical and safe integration. Alongside it, **Code INTEF's Observatorio de la IA** publishes
+a **«modelo de declaración de uso de la IA»**, a **«semáforo de uso»**, a set of ethical
+principles and proposed learning situations.
+
+🔵 **Why that matters commercially: a use-declaration template and a traffic-light usage
+policy are exactly the two artefacts every institution asks a consultancy to write.** They
+exist, in Spanish, from a ministry body, under a government publication. 🟢 **Reuse them and
+sell the integration**, rather than billing for a policy document that is already published.
+
+🟢 **Two frameworks to align a deliverable to:** **UNESCO's AI competency framework for
+teachers** — **`15` competencies across `5` dimensions and `3` progression levels** (acquire,
+deepen, create) — and a **student AI-literacy framework dated `18/06/2026`** structured as
+**four domains: interact, create, manage, shape**. 🔵 The student framework is the first
+age-differentiated AI-literacy structure on these shelves for primary and secondary.
+
+🟢 Carried from `p575`, still the region's distinguishing fact: **EMEA is the only region
+with a funded, education-specific instrument at supranational level** (Commission ethical
+guidelines updated `9 June`, **`€25.4 m`** in Advanced Digital Skills grants, UK AI Adoption
+Summit **`£200 m`+**), with the **QS Europe EdTech 200** as the enumerated market map and
+EMEA CEOs leading on readiness (`56 %` vs `48 %` Americas, `45 %` APJ).
 
 #### 🟢 `p574` — the accessibility instrument for EMEA education is **not** the EAA, and this region holds the layer's strongest origin supply
 
@@ -1334,6 +1530,58 @@ jurisdiction with an education-*specific* accessibility code** (AICTE / RPwD ss.
 GIGW 3.0 at WCAG 2.1 AA), and `shravyamudra` is the first shelved component that lands
 against it.
 ### LATAM
+
+#### 🆕 `p576` — the region now has instruments, and its own-language open-source supply is a hobby tier
+
+🟢 **See this pass's section at the top of this page for the six jurisdictions and
+`Ley 2626 de 2026`.** What belongs here is the consequence: **the mandates are arriving in
+jurisdictions whose local-language open-source supply cannot meet them.**
+
+🔴 **Measured first-hand this pass, with denominators read off GitHub's own result counts:**
+
+| axis | repositories | top of the star ladder |
+| --- | --: | --- |
+| `topic:educacion` (Spanish) | **410** | 🔴 **`71★`** — a JavaScript course, not a product |
+| `topic:educacao` (Portuguese) | **378** | 🟢 **`722★`** — `portabilis/i-educar`, a real platform of record |
+
+🔵 **The two languages are not in the same condition, and that is the finding.**
+🔴 **Spanish-language supply has no platform tier at all**: below the `71★` course
+repository sit teaching materials, a Moodle attendance plugin for **Chile's SENCE** platform
+(`29★`), and a Spanish vocational-training grading app (`9★`). 🟢 **Portuguese-language
+supply does have one** — `portabilis/i-educar` (**`722★`, `GPL-2.0`**, default branch
+**`2.12`**), with `i-diario` (**`117★`, `AGPL-3.0`**, branch **`1.6`**) and `ipti/br.tag`
+(**`20★`, `GPL-2.0`**) around it — 🔴 **and every one of them is copyleft.**
+
+🟢 **Brazil also has the one artefact in this whole base that a curricular mandate can be
+validated against**, and it is permissive where it counts:
+**[`bncc-dev/bncc-dados`](https://github.com/bncc-dev/bncc-dados)** — the **Base Nacional
+Comum Curricular as structured, verified data: `1,721` aprendizagens** (`1,580` across the
+three stages of basic education plus `141` from the Computing complement, *Parecer CNE/CEB
+2/2022*), in **JSON, CSV and SQLite**, each record carrying competencies, organisation
+contexts and provenance, checked against the official document. **Code MIT, data CC BY 4.0**,
+Zenodo **DOI `10.5281/zenodo.21625233`**, **npm and PyPI packages with the data embedded
+that work with no internet**, and a **local MCP server** (`npx -y @bncc/mcp`). 🔵 Its
+licence note states the legal basis — BNCC normative texts are official acts and not
+copyrightable under **art. 8º, IV, Lei 9.610/98** — so the CC BY 4.0 covers the compilation
+and curation, held by **Profy Tecnologias Educacionais Ltda**.
+
+🟢 **And beside it, a measurement instrument:**
+**[`bncc-dev/bncc-benchmark`](https://github.com/bncc-dev/bncc-benchmark)** — an open
+**LLM-hallucination benchmark against the BNCC**, `15,300` responses from `17` models.
+**Dual-licensed: MIT for `harness/` and `test/`, CC BY 4.0 for the item bank, results and
+methodology**, with an explicit warning that the stored model responses were generated by
+third-party models and carry their own reuse conditions. 🔵 **This is the only
+jurisdiction-specific evaluation harness on these shelves**, and it is what makes
+**`P-578-A`** sellable: a Brazilian deployment can be *measured* against the national
+curriculum, not merely claimed to align with it.
+
+🔵 **Carried, still the best-corroborated regional claim here:** **`92 %` of students and
+`79 %` of faculty** engaging with AI (DEC + Tec de Monterrey, 2026) against an
+institutional-governance gap independently measured by **UNESCO IESALC** (`200`
+institutions, `19` countries, fielded Aug–Oct 2025). 🟢 **New this pass:** a **UNESCO IESALC
+/ UNU-IAS working paper dated September 2026** maps AI adoption across Latin American and
+Caribbean universities on teaching, research, community engagement, administration and
+governance — a second mapping instrument, independent of the first.
 
 #### 🔴 `p574` — Brazil's digital accessibility duty exists, its standard exists, and its REGULATION does not — plus a refutation of a date this pass nearly published
 

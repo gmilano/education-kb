@@ -7,12 +7,22 @@ updated: 2026-10-31
 # Top AI agents for education
 
 <!-- machine-readable count claim, p569, for ingest/derive-counts.py -->
-`derived shelf: **35**` — the shelf table below, counted with that gate's own row
-regex, bounded at the first `###`. 🔴 **Not** the figure the gate actually derives: its
-scan runs `## The shelf` → next `##` and so swallows `### Carried with a known defect`
-and `### Agent-skill bundles`, deriving **44**. 🔵 `p574` recorded that spread as `33`;
-`p575` remeasured it at **44 against 35**, and the `9`-row difference is exactly those
-two sub-tables. See `568-E`, now quantified as `575-B`.
+`derived shelf: **39**` — the shelf table below, counted with that gate's own row
+regex, bounded at the first `###`. 🟢 **`p576` added `4` rows** (`L.A.R.A`,
+`gaokao-mentor-wisdom`, `gaokao-advisor`, `libro-3d-interactivo`), all `4` addresses new to
+this base, every grant read first-hand and every byte figure re-measured by piping to
+`wc -c`. 🔴 **Not** the figure the gate actually derives: its scan runs `## The shelf` →
+next `##` and so swallows `### Carried with a known defect` and `### Agent-skill bundles`,
+deriving **48**. 🔵 `p574` recorded that spread as `33`; `p575` remeasured it at
+**44 against 35**, and `p576` at **48 against 39** — the `9`-row difference is exactly those
+two sub-tables, unchanged. See `568-E`, now quantified as `575-B`.
+
+🟢 **CORRECTION TO `575-B`, AND IT IS THIS PASS'S BEST NEWS: THE GATE RAN.**
+`python3 -I ingest/derive-counts.py` **executed from this session**, so `575-B`'s
+"no gate can run" was over-generalised from a single denial. 🟢 **It derived `48` against
+`claimed=None` and reported `AMBER no count in the shelf heading; nothing to compare
+against` — confirming `575-B`'s diagnosis exactly, and confirming this claim block's own
+predicted figure of `48`.** 🔴 Still **deliberately not patched**, per `574-G`.
 
 Every row below was verified on 2026-10-31. **The fifth pass swept the axis the
 fourth pass named as blind: capability topics rather than industry topics.** The
@@ -45,6 +55,59 @@ different claim from the one the previous pass retracted. Re-running the fourth
 pass's own discovery query (`topic:ai-education stars:>150 pushed:>2026-10-20`)
 returns the **same 6 repositories**, all already shelved. The axis is exhausted;
 the population is not, and the capability sweep is the proof.
+
+## 🆕 `p576` — fourteenth pass, 2026-10-31 — 🔴 **FOUR AGENTS ADDED, ALL FOUR THIN, AND THE PASS'S REAL RESULT FOR THIS PAGE IS THAT A QUERY FORM THIS BASE HAS USED SIX TIMES RETURNS A FALSE ZERO**
+
+🔴 **`topic:X OR topic:Y` in a GitHub search URL returns `0 results` — "Your search did
+not match any repositories" — where the same two topics, queried singly, return hundreds.**
+Measured with controls on four pairs:
+
+| query | results |
+| --- | --: |
+| `topic:autograding OR topic:autograder` | 🔴 **0** |
+| `topic:autograding` | 🟢 **93** |
+| `topic:autograder` | 🟢 **128** |
+| `topic:educacion OR topic:educacao` | 🔴 **0** |
+| `topic:educacion` / `topic:educacao` | 🟢 **410** / **378** |
+| `topic:cbse OR topic:ncert` | 🔴 **0** |
+| `topic:cbse` | 🟢 **131** |
+
+🔴 **This base has recorded six axes in that form** — `topic:deped OR topic:nigeria` (×6),
+`topic:cbse OR topic:ncert` (×6), `topic:kaoyan OR topic:gaokao` (×3),
+`topic:special-education OR topic:iep` (×2),
+`topic:intelligent-tutoring-system OR topic:learning-analytics`,
+`topic:autograding OR topic:autograder`. **Any nil they produced is void.** Registered as
+**`576-A`**, filed as **trend 25**, evidence in
+[`../evidence/or-form-false-nil.2026-10-31-p576.tsv`](../evidence/or-form-false-nil.2026-10-31-p576.tsv)
+and [`../evidence/or-form-axes-in-base.2026-10-31-p576.tsv`](../evidence/or-form-axes-in-base.2026-10-31-p576.tsv).
+
+🟢 **And the honest half, which matters more than the defect:** four of those axes were
+re-run as singles and read deep. **Of the `24` top-of-ladder repositories they returned,
+`18` were already in this base** — so **the broken form corrupted this base's published
+denominators, not its discovery.** 🔵 The supply had been reached by other axes. **Six
+addresses were new, and every one is small**; four of them qualified on licence and are
+shelved below, with their star counts stated plainly.
+
+🟢 **`topic:intelligent-tutoring-system` (`43`) is the one axis where the void nil hid
+something real** — its head is `open-spaced-repetition/fsrs4anki` at **`4,100★`**, and
+`tutor-mcp` and `GenMentor`, already on this shelf, both sit on it. 🔵 Nothing new to shelve
+there; the axis belongs in the method note so the next pass does not re-run it hopefully.
+
+🔴 **A second instrument result, about this pass's own probe.** The grant probe silently
+fetched **nothing** for `8` real repositories — `curl` read a `-w` format string beginning
+with `@` as *"load format from file"* and errored on every call — **while the fabricated
+control still returned `DEAD-OR-ABSENT` and so still looked like a pass.** 🔵 **The control
+exercised only the `git ls-remote` branch, and therefore certified nothing about the
+`raw.githubusercontent.com` branch it was there to protect.** Caught, fixed, re-run.
+Registered as **`576-D`**: *a control must exercise every branch of the instrument it
+certifies* — the same family as `575-F`, found the same way, in this pass's own work.
+
+🔴 **Byte counts in this pass were initially `0`–`2` B low**, because `$(...)` strips
+trailing newlines: this page's existing `1,068 B` for `education-skills` was right and the
+probe's `1,067 B` was wrong. 🟢 **Every byte figure written this pass was re-measured by
+piping straight to `wc -c`**, and the two instruments agree once the offset is known. 🔵
+Trend 24 — *a count without its instrument is not a measurement* — applied to this base's
+own byte figures.
 
 ## 🆕 `p575` — thirteenth pass, 2026-10-31 — 🟢 `574-C` closed as a **BUILD recommendation**: the education-specific special-education layer is a hobby tier, and the `topic:iep` axis tops out at **7★**
 
@@ -552,6 +615,10 @@ local-supply story and its build-on-it story remain about different repositories
 
 | Agent | Repo | Licence | ★ | Region | What it is |
 | --- | --- | --- | --: | --- | --- |
+| L.A.R.A | [BootlegYouki/L.A.R.A](https://github.com/BootlegYouki/L.A.R.A) | **MIT** (1,113 B ✅ first-hand, `main/LICENSE`) | 5 | APAC | 🟢 **The whole `topic:deped` axis in one row, and the design is better than its star count.** "Offline LAN-Based Classroom with Hybrid Socratic SLM Tutor and Paperless Quizzes for Philippine Elementary Schools (DepEd Grades 1-6)." 🔵 **Three properties that are hard to buy and expensive to build: offline, LAN-local, and a *small* language model chosen deliberately** — which together answer the connectivity and data-residency constraints that stop school deployments in exactly this market. 🔴 **`5★`, and it is a capstone project by its own README.** Shelved as a design to copy, not a dependency to adopt. 🔵 It is also the top of its axis: `topic:deped` holds **`10`** repositories and **nothing on it exceeds `5★`**. |
+| gaokao-mentor-wisdom | [dongsheng123132/gaokao-mentor-wisdom](https://github.com/dongsheng123132/gaokao-mentor-wisdom) | **MIT** (1,072 B ✅ first-hand, `main/LICENSE`) | 66 | APAC | 🟢 **Shelved for its shape, not its content: a domain corpus deliberately structured for machine consumption.** `张雪峰语录大全 · 高考志愿填报指南` — university-major selection, institution recommendations and employment-prospect analysis for the gaokao admissions decision, "整理成结构化 JSON 数据集，方便考生家长查阅，也方便 AI 应用直接集成调用" — *organised as a structured JSON dataset, for families to consult and for AI applications to integrate directly*. 🔵 **That last clause is the pattern worth stealing**: the asset is advice turned into a typed dataset, which is what makes it composable. 🔴 Content is one commentator's corpus, so the editorial bias travels with it. |
+| gaokao-advisor | [Zylcyl/gaokao-advisor](https://github.com/Zylcyl/gaokao-advisor) | **MIT** (1,056 B ✅ first-hand, `master/LICENSE`) | 19 | APAC | `高考志愿填报智能顾问` — a gaokao application adviser built on a **multi-skill coordination architecture**. 🔵 Shelved as the agent-shaped counterpart to the row above: same decision, same market, one supplies the structured corpus and this one the orchestration. 🔴 **`19★`, default branch `master`.** Thin, and the admissions rules it encodes are annual — treat the logic as perishable. |
+| libro-3d-interactivo | [csepulvedai/libro-3d-interactivo](https://github.com/csepulvedai/libro-3d-interactivo) | **MIT** (1,086 B ✅ first-hand, `main/LICENSE`) | 14 | LATAM | 🟢 **The only LATAM-origin agent artefact found this pass, and it is permissively licensed — which is not the regional norm on this page.** A Claude Code skill that builds interactive 3D pop-up educational books in Three.js, with narration and a guide cursor. Author `Cristian Sepúlveda-Irribarra`. 🔵 Contrast it with `DIO Agent` further up this shelf — `2,750★`, LATAM, and **unusable because it carries no licence at all**. 🔴 **`14★`.** Shelved because a usable LATAM grant is rarer here than a popular LATAM repository, and because **Chile's Mineduc now owns an AI curriculum mandate from pre-school onward** (see [`../intel/market.md`](../intel/market.md)) — a pre-school-facing, permissively licensed Chilean artefact is directly on that line. |
 | canvas-lms-mcp | [bruchris/canvas-lms-mcp](https://github.com/bruchris/canvas-lms-mcp) | **MIT** (1,070 B ✅ first-hand, `main/LICENSE`) | 10 | North America | 🟢 **Shelved at last: this base has seen this address `115` times across its history and never once placed it.** "Canvas LMS MCP server — read courses, assignments, submissions, rubrics, quizzes; grade and comment from any AI agent." TypeScript, 446 commits. 🔵 `p565` concluded that **`canvas-mcp` is the North America answer** and withdrew its own Moodle-based NA recommendation on exactly that ground — then the concrete Canvas MCP server the sweeps kept returning stayed unshelved for seven more passes. Sidebar and grant file agree. |
 | lesson-plan-magic | [revjake1/lesson-plan-magic](https://github.com/revjake1/lesson-plan-magic) | **MIT** (1,069 B ✅ first-hand) | 1 | North America | "K-12 lesson planning AI plugin for Cowork & Claude Code — learns your voice, fills your district's template, and generates standards-aligned…" 🟢 **The district-template framing is the commercially interesting part** — it is the first row in this KB that targets the US *district* procurement unit rather than a teacher or an institution. 🔴 **Thin: 16 commits over a 3-day span, first commit `2026-04-21`, 1★.** Graded as a pattern to copy, not a dependency to adopt. |
 | lesson-plan-skill | [Dragon-01-you/lesson-plan-skill](https://github.com/Dragon-01-you/lesson-plan-skill) | **MIT** (1,070 B ✅ first-hand, `master/LICENSE`) | 4 | APAC | "AI-Powered Lesson Plan Generator for Claude Code \| 智能教案生成器 - 5分钟生成完整教案". Python, packaged with `pyproject.toml`. 🔴 **Thin: 5 commits, every one dated `2026-08-06`, span 0 days.** A single-sitting repository. Shelved because the axis it came from is new to this base, not because the artefact is mature. |

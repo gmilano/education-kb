@@ -1,0 +1,22 @@
+# p576 / 575-E CLOSED — LATAM education-AI instruments reached PER JURISDICTION, after
+# thirteen consecutive passes of region-level nil.  Method: query in the jurisdiction's
+# own language (trend 23, proven on APAC by p575 and on LATAM here).
+# GRADE: every row is C-graded secondary unless marked.  No government host is reachable
+# from this harness (576-B), so no row was read from its primary.  Channel that DID reach
+# normative text: domain-restricted WebSearch (allowed_domains), which is new this pass.
+jurisdiction	instrument	date	binding?	grade	what it obliges
+Colombia	Ley 2626 de 2026 "Ley de Educacion Digital"	2026-08-24	YES - statute	B (normative text read via domain-restricted search of alcaldiabogota.gov.co)	Updates Tecnologia e Informatica in basica y media to carry computational thinking, programming, AI, data science, digital citizenship; declares digital education part of the fundamental right to quality education; obligatory curriculum by cycles; MEN to review standards at least every 3 years with the Comision Nacional de Educacion Digital; MEN to create an Observatorio Nacional de Educacion Digital; ideological-neutrality clause; teacher training programme; priority to rural and ethnic-community schools
+Colombia	PL 418/2026C (adds art. 3A to Ley 2626)	2026 (in tramite)	NO - bill	C	Would add critical thinking, autonomy and responsible AI/social-media use to basica y media
+Brazil	MEC documento orientador, IA na educacao basica	2026-04	NO - orienting	C	4 pillars (critical understanding, intentional pedagogical use, rights protection, professional development) + 10 diretrizes for school networks; teacher-training course opened alongside
+Brazil	Referencial para o Uso e Desenvolvimento Responsaveis de IA na Educacao (SEGAPE/MEC)	2025-10 consultation	NO - reference	C	Human oversight, transparency, data governance, teacher training; asks HEIs to set up AI governance guidelines and ethics committees
+Chile	Politica Nacional de Inteligencia Artificial (updated), Ministerio de Ciencia	2026	NO - policy	C	177 measures in the action plan, 100 due 2026; Mineduc owns updating curricular bases to address AI from pre-school
+Chile	Mineduc Centro de Innovacion guide "PotencIA el Aprendizaje"	2026	NO - guidance	C	Guidance for pedagogical teams on using AI; disseminated via Ciudadania Digital with webinars and regional workshops
+Mexico	NONE PUBLISHED - informed absence	-	NO	B (absence corroborated by a DOF-restricted search)	SEP presented ENIAG (2026-04-15) and a 10-action decalogo asking institutions to set their OWN lineamientos; goal is a future national policy for higher education. No DOF publication found.
+Mexico	DOF entry on responsible device use in schools	2026-09-22	YES - published	C	A phones/personal-electronics rule; mentions AI mainly for education information systems. NOT an AI-in-education rule, recorded so it is not mistaken for one.
+Mexico	Programa Nacional de Educacion Superior 2026-2030 (DOF)	2026	planning	C	Includes "potenciar el uso pedagogico de tecnologias digitales e IA"
+Argentina	NO NATIONAL BINDING INSTRUMENT - claim REFUTED	-	NO	B	Secondary sources state "AI is already mandatory in Argentine schools". Not supported: the federal instrument is a BILL amending art. 11 of Ley 26.206; no Consejo Federal de Educacion resolution number could be found in two searches.
+Argentina	CABA (city) - AI and digital protection as mandatory content	2026	sub-national	C	Announced as mandatory, phased
+Argentina	Buenos Aires province - "IA Generativa en la educacion"	2026-03	sub-national guidance	C	Sets criteria of use for provincial schools
+Argentina	Misiones province - marco orientador, with Secretaria de IA	2026	sub-national	C	Person-centred approach, tied to Ley VI No 347
+Peru	Minedu AI for learning planning in rural schools	2026	programme	C	205 rural schools announced for 2026
+Dominican Republic	Ministry statement on teacher training for AI in schools	2026-10-29	programme	C	Digital transformation and teacher training; no instrument text found

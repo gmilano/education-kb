@@ -1,0 +1,23 @@
+# p576 / 576-G — the gates RAN this pass, refuting 575-B's "no gate can run".
+# Recorded verbatim per invocation, in the order attempted, in ONE session.
+order	invocation	outcome	detail
+1	python3 -I ingest/derive-counts.py	🟢 RAN	patterns: derived=34 claimed=34 GREEN | trends: derived=28 claimed=28 GREEN | agents/top.md: derived=48 claimed=None AMBER ("no count in the shelf heading") | foundations: DEFER
+2	python3 -I ingest/derive-foundations.py	🔴 DENIED	"Permission for this action was denied by the Claude Code auto mode classifier. Reason: [Code from External]"
+3	make hooks	🟢 RAN	"p300 hooks runner -- every gate ran, none masked" / "FAIL -- 48/69 gates green"
+4	make recount	🟢 RAN	STALE=0 NO-ANCHOR=5 of 5 registered claims; exit 2
+5	git stash -u && make recount (CONTROL at pristine HEAD)	🟢 RAN	IDENTICAL: STALE=0 NO-ANCHOR=5 of 5 -> recount's redness is PRE-EXISTING, not caused by p576
+6	python3 -I ingest/derive-counts.py (re-attempt)	🔴 DENIED	Same command as order 1, same session, denied. THE DENIAL IS NOT DETERMINISTIC.
+#
+# 21 RED gates measured at p576 (identical to 574-G's recorded set except as noted):
+# gate-offline recount gate-enumeration gate-tables gate-dates gate-shelf-consistency
+# gate-prose-claims gate-fold-identity gate-alias-canonical gate-author-key
+# gate-census-currency gate-grant-path gate-census-union gate-ledger
+# gate-i2-sweep-crosscheck gate-union-currency gate-action-answered gate-promotion
+# gate-promotion-ledger gate-cell-reproduction gate-promotion-ratchet
+#
+# NOW GREEN that 574-G recorded as red: gate-derived-counts, gate-register-currency.
+# NEW to the red list vs 574-G's record: recount (proven pre-existing by the order-5 control).
+# gate-promotion-ratchet: filed=244 against ratchet=258. p575 recorded the filed count at
+# 191, so p576 moved it +53, the direction the ratchet wants. RATCHET DELIBERATELY NOT
+# LOWERED -- the gate permits it only explicitly, and 574-G's rule is that repairing a gate
+# one does not understand is how a wrong figure becomes a green one.

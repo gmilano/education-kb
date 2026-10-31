@@ -1,0 +1,23 @@
+# p576 — grants read byte-for-byte this pass.  Channel: git ls-remote --symref (branch +
+# liveness) then raw.githubusercontent.com (bytes).  Path set:
+# LICENSE LICENSE.md LICENSE.txt LICENCE COPYING copying.txt DESCRIPTION package.json
+# composer.json pyproject.toml README.md
+# Fabricated control -> DEAD-OR-ABSENT, so the channel discriminates.
+slug	default_branch	path	bytes	grant	axis
+ArnaudGuiovanna/tutor-mcp	main	LICENSE	1072	MIT	topic:intelligent-tutoring-system
+bncc-dev/bncc-dados	main	LICENSE	1091	MIT (code) + CC BY 4.0 (data, dados/LICENSE.md)	topic:educacao
+bncc-dev/bncc-benchmark	main	LICENSE	910	DUAL: MIT (harness/, test/) + CC BY 4.0 (itens/, resultados/, METODOLOGIA.md)	topic:educacao
+portabilis/i-educar	2.12	LICENSE	18091	GPL-2.0	topic:educacao
+open-spaced-repetition/fsrs4anki	main	LICENSE	1078	MIT	topic:intelligent-tutoring-system
+ls1intum/Artemis	develop	LICENSE	1090	MIT	topic:autograding
+BootlegYouki/L.A.R.A	main	LICENSE	1112	MIT	topic:deped
+flysheep-ai/education-skills	main	LICENSE	1067	MIT	topic:gaokao
+dongsheng123132/gaokao-mentor-wisdom	main	LICENSE	1071	MIT	topic:gaokao
+Zylcyl/gaokao-advisor	master	LICENSE	1055	MIT	topic:gaokao
+brayandiazc/aprendiendo-javascript	main	LICENSE	1069	MIT	topic:educacion
+csepulvedai/libro-3d-interactivo	main	LICENSE	1085	MIT	topic:educacion
+Raagaception/raagaception-12STD-CBSE-deck	main	LICENSE	35148	GPL-3.0	topic:cbse
+mizaelsouto/CursoTecnico	main	LICENSE	1083	MIT	topic:educacao
+TaiMaBenJi/knowledge-commons	main	LICENSE	1066	MIT	topic:gaokao
+GeminiLight/gen-mentor	main	LICENSE	7047	CC0-1.0	topic:intelligent-tutoring-system
+FAKE-CONTROL-576/nope	DEAD-OR-ABSENT	-	-	DEAD-OR-ABSENT	control

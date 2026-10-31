@@ -1,0 +1,12 @@
+# p576 / 576-E — the grant classifier is ENGLISH-ONLY, demonstrated against its own regex.
+# Regex under test, copied from compose/code/p228-shelf-gate/classify_grant.py line 29:
+#   ("AGPL-3.0", r"GNU\s+AFFERO\s+GENERAL\s+PUBLIC\s+LICENSE")
+# Run with python3 -I against the two bodies below.  The repository is plainly AGPL-3.0;
+# the classifier cannot see it, because the title is translated AND reordered.
+body	licence_in_fact	regex_verdict
+GNU AFFERO GENERAL PUBLIC LICENSE Version 3, 19 November 2007	AGPL-3.0	MATCH
+LICENÇA PÚBLICA GERAL AFFERO GNU Versão 3, 19 de novembro de 2007 (portabilis/i-diario, branch 1.6, LICENSE, 35,325 B)	AGPL-3.0	NO MATCH
+# Consequence: in a base whose stated purpose includes LATAM coverage, the licence
+# classifier is blind to licence files written in the region's own languages.  A
+# Portuguese or Spanish AGPL/GPL body reads as ungranted, which is the DANGEROUS
+# direction: an unseen copyleft grant looks like "no licence" and then like "ours".

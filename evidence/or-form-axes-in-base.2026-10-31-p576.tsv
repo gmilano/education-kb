@@ -1,0 +1,9 @@
+# p576 / 576-A — OR-form axes this base has RECORDED, found by grep over *.md/*.tsv.
+# Any nil these produced is void.  Count = occurrences of the literal form in the base.
+axis_as_recorded	occurrences	status
+topic:deped OR topic:nigeria	6	VOID-IF-NIL — re-run as singles (topic:deped = 10 this pass)
+topic:cbse OR topic:ncert	6	VOID — re-measured this pass: OR=0, topic:cbse=131
+topic:kaoyan OR topic:gaokao	3	VOID-IF-NIL — topic:gaokao = 128 this pass
+topic:special-education OR topic:iep	2	NOT-VOID — p575 reported 89 and 34 separately; the OR form is shorthand in prose
+topic:intelligent-tutoring-system OR topic:learning-analytics	1	VOID-IF-NIL — topic:intelligent-tutoring-system = 43 this pass, head 4,100 stars
+topic:autograding OR topic:autograder	1	VOID — measured this pass: OR=0, singles 93 and 128
