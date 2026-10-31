@@ -4,6 +4,256 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (fourth pass) — the licence *files* became readable, and a whole agent cohort turned out to be hiding behind one topic axis
+
+**Two things happened this pass, and both are method findings with immediate
+consequences for the shelf.**
+
+**First, `raw.githubusercontent.com` answers from this session.** Every earlier
+pass recorded `api.github.com` and `github.com` HTML as **403** and worked around
+it — the third pass by querying the REST index through the MCP GitHub server,
+earlier ones by reading rendered pages. All of that remains true: both still
+return 403 this run, and the MCP server's `get_file_contents` is **repo-scoped**
+and refuses any repository outside this session's two attached repos. But
+`https://raw.githubusercontent.com/{owner}/{repo}/{branch}/LICENSE` returns
+**HTTP 200**. **This KB can now read licence files byte-for-byte for the first
+time.** Twenty-one were read this pass. Three standing licence questions closed,
+two by first-hand text and one by a third independent method.
+
+**Second, the shelf's sweeps had a blind axis.** The fourteen-agent shelf was
+assembled from `topic:ai-tutor` and `topic:agent-skills topic:education`. Running
+`topic:ai-education stars:>150 pushed:>2026-10-20` returns **6 repositories, of
+which 5 were not on the shelf** — including one at **1,034★** and one at
+**932★**. The previous pass's saturation finding was real for the axes it swept
+and **wrong as a claim about the population**. Corrected below, and the
+correction is the pass's main result.
+
+### 1. `human-skill-tree` — licence resolved, and it is a shape this KB has not seen
+
+[`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree)
+— **586★**, 33 forks, TypeScript, created 2026-03-07. Carried as a **priority
+watch item** since the third pass, when GitHub's licence index returned neither
+MIT nor Apache for it and every licence filename 404'd.
+
+**It is `AGPL-3.0` — and its `skills/` directory is dual-licensed.** Read from
+`master/LICENSE`, 1,063 bytes: "GNU AFFERO GENERAL PUBLIC LICENSE Version 3 …
+Copyright (c) 2026 Human Skill Tree Contributors", followed by a section headed
+`DUAL LICENSING NOTE`: *"The SKILL.md files in the `skills/` directory may be
+used under either this AGPL-3.0 license OR the MIT license, at your option."*
+
+Two lessons, both reusable:
+
+- **Per-directory dual licensing is a real shape.** The platform is disqualified
+  for a proprietary derivative; the **skill bundles inside it are MIT at the
+  adopter's option**. One repository, two answers, and a licence *column* cannot
+  express it. This is the fifth distinct licence shape this KB has catalogued.
+- **Probing only `main` manufactures false negatives.** Its default branch is
+  **`master`**. Every `main/LICENSE*` probe 404s; `master/LICENSE` is 200. Earlier
+  passes' "no licence file" readings are only as good as their branch list.
+
+### 2. `learning-commons-org/evaluators` — resolved, and it carries a **non-commercial** clause the patterns were about to walk into
+
+[`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
+— **87★**, 17 forks, TypeScript. Carried as `NOASSERTION` / "licence must be read
+before use" since the third pass. `main/LICENSE.md` read in full, 1,615 bytes.
+**It is a three-tier split grant:**
+
+| Asset | Licence | Commercial use |
+| --- | --- | --- |
+| Evaluator **code** | **MIT** | ✅ clear |
+| Evaluator **content** — the prompts and settings | **CC BY 4.0** | ✅ clear, attribution required |
+| **Annotated CLEAR Corpus** (annotations and enhancements by Learning Commons) | **CC BY-NC-SA 4.0** | ⛔ **non-commercial** |
+| **Annotated PERSUADE 2.0 Corpus** (same) | **CC BY-NC-SA 4.0** | ⛔ **non-commercial** |
+
+**This is load-bearing and it is close to a defect in this KB's own advice.**
+`evaluators` is the only rubric-scoring asset in the KB, and pattern
+**P-568-K** tells an engagement to score deliverables with it. That advice
+survives — **the code is MIT and the rubric prompts are CC BY 4.0** — but the two
+**annotated corpora are NC** and cannot ship inside a billable client
+deliverable or a commercial regression suite. The upstream originals (CommonLit's
+CLEAR Corpus, PERSUADE 2.0) are themselves CC BY-NC-SA 4.0, so there is no
+cleaner version upstream to substitute.
+
+Note the direction of the split, because it is the **inverse** of its sibling:
+`learning-commons-org/knowledge-graph` is code-MIT / data-by-publisher;
+`evaluators` is code-MIT / prompts-CC-BY / **corpora-NC**. Same org, same
+`NOASSERTION` from the API, two different grants, one of which is commercially
+fatal for part of the artefact. `NOASSERTION` now has **four** documented
+meanings in this KB.
+
+### 3. Five new MIT agents the shelf's sweeps missed, the largest at 1,034★
+
+All five licence-verified **first-hand from the licence file** this pass.
+
+| Agent | ★ | Licence | Region | What it is |
+| --- | --: | --- | --- | --- |
+| [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 1,034 | **MIT** | Global | Turns books into **animated, narrated, interactive** web experiences. JavaScript, 143 forks, created **2026-10-03** — 1,034★ in four weeks. Topics include **`scorm`** and `interactive-textbook`, so it targets the installed courseware base, not just the web. |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | 557 | **MIT** | Global | "Open-source alternative to Udemy and Coursera": give it a topic, it researches the web and builds a course of **2-minute audio lessons with cited sources**. Python, 67 forks, created **2026-10-14**. ElevenLabs TTS. **Cited sources as a design feature** is rare on this shelf and matters for provenance work. |
+| [orionsheep/wordlink](https://github.com/orionsheep/wordlink) | 262 | **MIT** | Global | Vocabulary learning on a **fine-tuned 1.5B model (SFT+DPO) that runs offline in the browser** via WebGPU. TypeScript, 38 forks. Topics include `sdg4` (UN Sustainable Development Goal 4) and the Qwen/ModelScope stack. **The only in-browser offline model in this KB.** |
+| [Fazmin/AILearningGuide](https://github.com/Fazmin/AILearningGuide) | 242 | **MIT** | Global | Interactive desktop app, **51 labs** across ML fundamentals, transformers, RAG, agents, fine-tuning and quantisation. TypeScript + ONNX, **offline-first**, created 2026-10-05. AI-literacy delivery as a shippable artefact. |
+| [liuliu667/cram-engine](https://github.com/liuliu667/cram-engine) | 176 | **MIT** | APAC | A four-stage interactive cram skill grounded in learning science — get the material understood, retained, and usable on exam answers in limited time. Chinese-language; topics `learning-sciences`, `aied`. |
+
+**Why `Papermorph` and `claudemy` are the two to watch.** Both were created in
+**October 2026** and both are **content-transform** agents rather than tutors —
+the shape the `p557` pass identified as the week's new supply and which has now
+produced its first four-figure repository. `Papermorph`'s SCORM topic is the
+commercially interesting detail: SCORM is what the installed LMS base actually
+ingests, and until this pass the KB had **no** SCORM component at any layer.
+
+One provenance note, recorded rather than hidden: `Papermorph`'s `LICENSE`
+copyright line reads **"Copyright (c) 2026 TedKaczynski"** — a pseudonym. The MIT
+grant is valid text regardless, but a copyright holder who cannot be identified
+is a diligence item for a client deliverable, not a blocker.
+
+### 4. The agent-skills cohort: count unchanged at 13, licences now **fully** measured
+
+`topic:agent-skills topic:education stars:>50` returns **13 repositories** — the
+same count as the third pass, which is a genuine saturation reading on that axis.
+What is new is that the third pass reported only the leader; this pass enumerated
+all thirteen **and read every licence file**. The distribution:
+
+| Repo | ★ | Licence (read first-hand this pass) |
+| --- | --: | --- |
+| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 4,843 | ⛔ **CC BY-SA 4.0** — 620 B, "Creative Commons Attribution-ShareAlike 4.0 International" |
+| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | 2,750 | ⛔ **none** — all five filenames 404 on **both** branches |
+| [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 1,201 | ✅ MIT |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 586 | ⚠️ **AGPL-3.0**, `skills/` **dual AGPL-3.0 / MIT** |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 295 | ✅ MIT |
+| [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | 213 | ✅ MIT |
+| [read2017/learn-anything-with-AI](https://github.com/read2017/learn-anything-with-AI) | 203 | ✅ MIT — "Copyright (c) 2026 liangzhe" |
+| [ystemsrx/sql-to-ER](https://github.com/ystemsrx/sql-to-ER) | 192 | — **rejected, not an education agent** (see below) |
+| [cuic19053-hue/awesome-student-ai-skills](https://github.com/cuic19053-hue/awesome-student-ai-skills) | 147 | ✅ MIT — 35 Chinese university application-document skills (大创申报书, 挑战杯, 国家奖学金) |
+| [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | 119 | ✅ MIT — teaching/tutoring collection incl. *gaokao* |
+| [nuwa-skills/montessori-skill](https://github.com/nuwa-skills/montessori-skill) | 78 | ✅ MIT — Montessori pedagogy as a skill, "Copyright (c) 2026 Panmax" |
+| [ljx-chase/research-field-onboarding](https://github.com/ljx-chase/research-field-onboarding) | 75 | ✅ MIT — "LI Junxiang and Ziyan Zhou (Anna)" |
+| [henryyu333/assignment-check](https://github.com/henryyu333/assignment-check) | 53 | ✅ MIT — pre-submit rubric/citation/evidence checker |
+
+**The cohort is 11 MIT, 1 share-alike, 1 unlicensed, 1 dual-grant — and the two
+non-permissive ones are the two largest.** That inversion is the single most
+useful sentence in this file for a delivery lead: **in the education agent-skills
+cohort, popularity is anti-correlated with licence usability.** The third pass
+asserted something close to this from two data points; it is now measured across
+the whole cohort with a denominator.
+
+### 5. The second-largest education skills library is *also* share-alike
+
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+— **932★**, 131 forks, TypeScript, created 2026-03-01, pushed 2026-10-31.
+**165 evidence-grounded AI skills for teachers, school leaders and EdTech
+builders**: pedagogy, learning science, curriculum design, assessment,
+competency-based education, inclusive design, retrieval practice. Runs on Claude,
+Codex and Hermes. On substance it is the best-targeted education skills library
+this KB has found — written for the *professional* buyer rather than the student.
+
+**`main/LICENSE`, 1,230 bytes: "Creative Commons Attribution-ShareAlike 4.0
+International, Copyright (c) 2026 Gareth Manning". Rejected.**
+
+That makes **two** share-alike libraries at the top of this category
+(4,843★ and 932★), both read first-hand. The third pass called
+`Auto-Empirical-Research-Skills` "the most valuable rejection on the page" and
+treated it as an instance. **It is a pattern:** authors of large pedagogical
+skill libraries reach for CC licences because the artefact reads as writing, and
+CC BY-SA is the default an author picks when they want credit and openness. The
+consequence for Globant is fixed and worth stating in a SoW: **the best-curated
+pedagogy content in open source cannot be absorbed into a proprietary
+methodology asset.** It can be used internally, referenced, and pointed at — not
+rebadged.
+
+### 6. Rejected this pass, with reasons
+
+| Candidate | ★ | Why not |
+| --- | --: | --- |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 932 | **CC BY-SA 4.0**, read first-hand. Share-alike on the skill text. The most substantively relevant rejection in this KB — 165 skills aimed squarely at teachers and school leaders. |
+| [ystemsrx/sql-to-ER](https://github.com/ystemsrx/sql-to-ER) | 192 | Surfaces inside `topic:agent-skills topic:education` and is **not an education agent** — it converts SQL/DBML to ER diagrams. Tagged `education` because it is used in database *courses*. Logged so the next pass does not re-triage it; it is the clearest instance of topic-tag dilution in this cohort. |
+| [bayshores/godspeed](https://github.com/bayshores/godspeed) | 7 | **AGPL-3.0.** Already recorded at `p559`. Re-read this pass from the API: 7★ unchanged since, created 2026-10-27, pushed 2026-10-31. Still too small and still copyleft. |
+| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 4,843 | Rejection **upgraded in evidence**: the third pass rejected it on a README badge; this pass read `main/LICENSE` (620 B) and it is CC BY-SA 4.0 in the file. |
+
+### 7. The fresh-tutor channel is empty again, and now with a denominator
+
+- `topic:ai-tutor created:>2026-10-25 stars:>3` → **1 repository**:
+  `bayshores/godspeed` (AGPL-3.0, 7★), already on the record. **No new
+  promotable tutor in six days.**
+- `topic:edtech created:>2026-10-24 stars:>5` → **2 repositories**: `godspeed`
+  and [`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms)
+  (**MIT**, 10★, created 2026-10-26) — a platform, not an agent, carried to
+  [`../repos/trending.md`](../repos/trending.md).
+
+Both nulls are consistent with the eighteen-pass pattern on the *tutor* axis. The
+cohort that moved this pass was **content-transform**, not tutoring — which is
+the fourth consecutive pass to show that, and now the strongest supply-side trend
+in the KB.
+
+### 8. Star readings, timestamped — and a digest figure that does not reproduce
+
+| Repo | Reading | Time (UTC) | Delta vs. third pass (09:40) |
+| --- | --: | --- | --- |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | **52,208★** | 10:42 | **+41** in ~62 min |
+| [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **41,984★** | 10:10 | **+3** in ~30 min |
+
+DeepTutor: Apache-2.0, 6,394 forks, 256 open issues, pushed **2026-10-31 10:39**
+— i.e. within three minutes of being read. Its homepage field now carries an
+arXiv link, `arxiv.org/abs/2604.26962`. OpenMAIC: MIT, 6,501 forks, 212 open
+issues, pushed 2026-10-31 01:53.
+
+**The digest claim does not reproduce.** A third-party trend digest reports
+DeepTutor at **+2,282 stars on 2026-10-31**. Sustained, that is ~95★/hour;
+measured first-hand across this window it ran at **41★/hour**. One hour is a thin
+sample and star arrivals cluster by timezone, so this does not refute the daily
+figure — but it does mean **no pass should quote +2,282 as a rate**. Quote the
+two timestamped readings instead. The same digest family was recorded at `p546`
+emitting "0 total stars with +2,870 today", so its arithmetic has failed audit
+before.
+
+### 9. The prescribed listicle search failed for the fourth consecutive pass
+
+`top open source AI agents education 2026 github MIT` returned general-purpose
+agent rankings (OpenHands, CrewAI, AutoGen, Hermes) plus
+`ashishpatel26/500-AI-Agents-Projects`, a catalogue of use cases rather than
+agents. **Zero education-specific agent rankings exist.** Four passes is enough:
+this is not a gap in the search, it is a property of the commentary layer, and
+the shelf will continue to be assembled from GitHub's index.
+
+**But the listicle channel did earn its keep once this pass**, and the lesson is
+worth recording because it cuts against the KB's own doctrine: the prescribed
+`github trending education AI 2026` search surfaced
+[`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) — **MIT, 71,498★**,
+the largest permissively licensed repository anywhere in this KB — which **none**
+of the index sweeps found, because it carries no education topic. It is written
+up in [`../repos/trending.md`](../repos/trending.md) and shelved in
+[`../repos/foundations.md`](../repos/foundations.md) rather than here, for the
+reason given there. **Index sweeps find what is tagged; the open web finds what is
+famous. The KB needs both, and the third pass's "query the index, not the
+listicles" was too strong.**
+
+### Declared gaps — this pass
+
+- **The EU AI Act Official Journal text cannot be read from this session, and
+  that is now established rather than deferred.** The third pass named reading it
+  "the highest-value single action available to the next pass". Attempted:
+  **`eur-lex.europa.eu` does not resolve** from this session, and neither does
+  the `artificialintelligenceact.eu` mirror — the same class of failure as
+  `camara.leg.br`. This is a **network-policy constraint, not a research gap**.
+  It should stop being queued as an action item and start being a request to
+  allow the domain. Everything the KB says about Regulation (EU) 2026/1744
+  remains multi-source secondary.
+- **Owner location is not obtainable this session**, so four of the five new
+  agents are **Global**. `search_users` returns only login, id and avatar — no
+  `location` field — and `api.github.com` is 403, so the profile cannot be read
+  any other way. Region was assigned only where the *artefact* states it:
+  `cram-engine` is APAC on Chinese-language content and a Chinese exam-prep
+  target. Guessing from a maintainer's name would have placed `claudemy` and
+  `Papermorph`; both are left Global.
+- **`Papermorph`'s copyright holder is a pseudonym.** MIT text is valid; the
+  holder is unidentifiable. Diligence item.
+- **No education-specific agent observability or regression tooling found, fifth
+  consecutive pass.** This pass *narrowed* the fallback: the rubric layer
+  (`evaluators`) is usable commercially for **code and prompts** but its two
+  annotated corpora are **NC**, so even the hand-built regression suite of
+  **P-568-K** must source its own corpus. The gap got slightly worse, not better.
+- **13 of 13 agent-skills licences read; 0 of 13 have a stated version or test
+  suite.** The versioning problem named in trend 1 is unmeasured because there is
+  nothing to measure it with.
+
 ## 2026-10-31 (third pass) — the method changed, and it moved the shelf from 6 agents to 14
 
 **What actually happened this pass:** the GitHub REST API became reachable

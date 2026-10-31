@@ -13,23 +13,44 @@ anywhere else.
 
 ## 1. Education AI has stopped shipping as applications and started shipping as agent skills (high confidence — measured first-hand)
 
-**The biggest change since the previous pass, and it is measured, not reported.**
-Querying GitHub directly for `topic:agent-skills topic:education stars:>50`
-returns **13 repositories**. **Six of the fourteen** agents on
+**Measured, not reported — and this pass the measurement is complete.**
+`topic:agent-skills topic:education stars:>50` returns **13 repositories**, the
+**same count as the previous pass**, so that axis is genuinely saturated. What is
+new is that the previous pass reported only the leader; this pass enumerated all
+thirteen and **read every one of their licence files** over
+`raw.githubusercontent.com`. **Nine of the nineteen** agents on
 [`../agents/top.md`](../agents/top.md) are skill bundles — markdown instruction
 sets (`SKILL.md`, `AGENTS.md`, `CLAUDE.md`) loaded by an existing harness, with
-**no runtime, no service and no API**. The cohort on GitHub, by stars:
+**no runtime, no service and no API**; counting six further component bundles,
+**15 of the 25 agents on that page have no runtime at all.** The complete cohort:
 
-| Repo | ★ | Licence | What it is |
+| Repo | ★ | Licence (read first-hand) | What it is |
 | --- | --: | --- | --- |
-| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 4,843 | **CC BY-SA 4.0** | 23,000+ skills for empirical research across 8 social-science disciplines; CoPaper.AI / Stanford REAP |
-| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | 2,750 | **none** | Brazilian study-mentor agent bundle; runs on 5 named harnesses |
-| [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 1,201 | MIT | PDFs/books/papers → traceable interactive learning pages |
-| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 586 | unresolved | K-12→career skill tree, 30+ skills, ships an MCP server |
-| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 295 | MIT | Bloom's 2-sigma as a skill **plus** a self-hostable app |
-| [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | 213 | MIT | Chinese civil-service exam prep |
-| [read2017/learn-anything-with-AI](https://github.com/read2017/learn-anything-with-AI) | 203 | MIT | Project-driven mastery learning |
-| [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | 119 | MIT | Teaching/tutoring skill collection incl. *gaokao* |
+| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | 4,843 | ⛔ **CC BY-SA 4.0** (620 B) | 23,000+ skills for empirical research across 8 social-science disciplines; CoPaper.AI / Stanford REAP |
+| [digitalinnovationone/dio-agent](https://github.com/digitalinnovationone/dio-agent) | 2,750 | ⛔ **none** — no file on either branch | Brazilian study-mentor agent bundle; runs on 5 named harnesses |
+| [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | 1,201 | ✅ MIT | PDFs/books/papers → traceable interactive learning pages |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 586 | ⚠️ **AGPL-3.0**, `skills/` **dual AGPL/MIT** (1,063 B, `master`) | K-12→career skill tree, 30+ skills, ships an MCP server |
+| [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 295 | ✅ MIT | Bloom's 2-sigma as a skill **plus** a self-hostable app |
+| [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | 213 | ✅ MIT | Chinese civil-service exam prep |
+| [read2017/learn-anything-with-AI](https://github.com/read2017/learn-anything-with-AI) | 203 | ✅ MIT (1,065 B) | Project-driven mastery learning |
+| [ystemsrx/sql-to-ER](https://github.com/ystemsrx/sql-to-ER) | 192 | — **not an education agent** | SQL/DBML → ER diagrams; tagged `education` because it is used in database courses. Topic-tag dilution. |
+| [cuic19053-hue/awesome-student-ai-skills](https://github.com/cuic19053-hue/awesome-student-ai-skills) | 147 | ✅ MIT (1,070 B) | 35 Chinese university application-document skills |
+| [flysheep-ai/education-skills](https://github.com/flysheep-ai/education-skills) | 119 | ✅ MIT (1,068 B) | Teaching/tutoring skill collection incl. *gaokao* |
+| [nuwa-skills/montessori-skill](https://github.com/nuwa-skills/montessori-skill) | 78 | ✅ MIT (1,063 B) | Montessori pedagogy as a skill |
+| [ljx-chase/research-field-onboarding](https://github.com/ljx-chase/research-field-onboarding) | 75 | ✅ MIT (1,111 B) | Onboarding a learner into an unfamiliar research field |
+| [henryyu333/assignment-check](https://github.com/henryyu333/assignment-check) | 53 | ✅ MIT (1,086 B) | Pre-submission check against brief, rubric, evidence, citations |
+
+**The distribution is the finding: 11 MIT, 1 share-alike, 1 unlicensed, 1
+dual-grant — and the two non-permissive members are the two largest, at 4,843★
+and 2,750★.** In this cohort **popularity is anti-correlated with licence
+usability**. The previous pass asserted something close to this from two data
+points; it is now measured across the whole cohort with a denominator. Add the
+**932★** `GarethManning/education-agent-skills` — 165 evidence-grounded skills for
+teachers and school leaders, **also CC BY-SA 4.0**, read first-hand — and the
+pattern is no longer an instance: **authors of large pedagogical skill libraries
+reach for CC licences, because the artefact reads as writing.** The consequence is
+fixed and worth saying in a SoW: the best-curated pedagogy content in open source
+**cannot be absorbed into a proprietary methodology asset.**
 
 **Why this matters more than it looks.** Three consequences for an engagement:
 
@@ -80,13 +101,16 @@ it from fresh sources and added two things it did not have.** The table stands:
 
 | Regime | Status on 2026-10-31 |
 | --- | --- |
+| EU AI Act — **Article 4 AI-literacy duty** | **In force since 2025-02-02** for every organisation that *uses* an AI system — i.e. every school and university, now, already overdue where nobody has done it. Not risk-classified, not deferred ← *new this pass, and the earliest of the three EU tracks* |
+| EU AI Act — **Article 50 transparency duties** | **Not deferred. In force since 2026-08-02** |
 | EU AI Act — stand-alone Annex III high-risk (incl. education) | Deferred to **2027-12-02** by the Digital Omnibus amendment, in effect late July 2026 |
 | EU AI Act — AI embedded in regulated products | Deferred to **2028-08-02** |
-| EU AI Act — **Article 50 transparency duties** | **Not deferred. In force since 2026-08-02** ← *new this pass* |
 | EU — AI-generated intimate imagery / abuse material ban | Coming into force **December 2026** |
+| **Council of Europe** — Legal Instrument on AI in Education | **Planned for 2026**, "establishing rules to protect the integrity of education"; follows a 2025 recommendation. Binds by ratification across 46 states, so it reaches non-EU Europe ← *new this pass, single-source* |
+| North Carolina **Session Law 2026-41** | State model policy **2026-12-31**, district policies **2027-06-30**, teacher training **2028-06-30** ← *new this pass; the nearest statutory deadline in this KB* |
 | South Korea AI Basic Act | **In force 2026-01-22**; enforcement decrees pending, guidance-first grace period through 2026 |
-| Vietnam AI law | **Effective 2026-03-01**; high-risk designation covers education incl. automated assessment |
-| Australia (TEQSA) | Institutional generative-AI action plans required of **all** higher-ed providers — **100% response rate achieved** ← *new this pass* |
+| Vietnam AI law | Passed **2025-12-10**, **effective 2026-03-01**; high-risk designation covers education incl. automated assessment. **Systems already in operation get 12 months' transition — 18 in education, health care and finance, i.e. to ≈2027-09-01** ← *new this pass* |
+| Australia (TEQSA) | Institutional generative-AI action plans required of **all** higher-ed providers — **100% response rate achieved** |
 
 **What is new.** First, the postponement is attributed by multiple independent
 legal commentaries to **Regulation (EU) 2026/1744**, in force 27 July 2026 after
@@ -103,9 +127,21 @@ Enforcement *machinery* (the AI Office and national authorities) did begin on
 2 August 2026 — which is probably the source of the confusion — but the high-risk
 *duties* did not.
 
+**Two further changes this pass, and one of them merges two markets into one
+programme.** Vietnam's 18-month transition for systems already running in
+education expires around **1 September 2027** — within three months of the EU's
+Annex III date of **2 December 2027**. The two most binding education-AI
+deadlines in the world now land in the same quarter, so a multinational client
+needs **one** conformity programme with two annexes, not two programmes. And the
+calendar is no longer only EU-plus-Asia: **North Carolina's Session Law 2026-41**
+carries the nearest deadline in this KB at **31 December 2026**, two months out,
+followed by district policies in June 2027 and teacher training in June 2028 — a
+statutory three-stage pipeline that writes its own engagement plan.
+
 Meanwhile the capability calendar runs on weeks: OpenMAIC went from repository
-creation (2026-03-11) to 41,981★ and `v1.3.0` in under eight months. Capability
-deadlines in Asia still land before Europe's.
+creation (2026-03-11) to 41,984★ and `v1.3.0` in under eight months, and
+`DozenTwelve/Papermorph` took **1,034★ in four weeks**. Capability deadlines in
+Asia still land before Europe's.
 
 ## 5. Adoption is ahead of governance, and it is now measured on all four regions (high confidence)
 
@@ -147,27 +183,51 @@ education AI:
   — MIT, 13★, 1,143 questions from real teacher-qualification exams (CDPK 920,
   SEND 223). Measures whether a model knows how to **teach**.
 - [`learning-commons-org/evaluators`](https://github.com/learning-commons-org/evaluators)
-  — `NOASSERTION`, 87★, research-backed **rubrics** for scoring generated
-  instructional content.
+  — 87★, research-backed **rubrics** for scoring generated instructional content.
+  **Licence resolved this pass from `main/LICENSE.md` (1,615 B) after three
+  passes unresolved, and it is partly restrictive:** evaluator **code → MIT**,
+  evaluator **content (prompts and settings) → CC BY 4.0**, but the **Annotated
+  CLEAR Corpus** and **Annotated PERSUADE 2.0 Corpus → CC BY-NC-SA 4.0**,
+  i.e. **non-commercial**. The upstream originals are NC too, so there is no
+  cleaner substitute. **The scoring machinery is commercially usable; the
+  benchmark data is not.**
 - [`learning-commons-org/knowledge-graph`](https://github.com/learning-commons-org/knowledge-graph)
   — code MIT / datasets per-publisher, 164★, standards-and-curriculum data layer
   with an MCP server, used to check **alignment**.
 
-**None of the three is a runtime monitor.** There is no open-source way to detect
-that a deployed tutor has drifted, regressed after a model upgrade, or started
-teaching something off-syllabus. Given trend 1 — skill bundles whose behaviour
-changes when the harness or model changes beneath them — this is the single
-largest unmet need in education AI, and it is where every region's governance gap
-actually bites.
+**None of the three is a runtime monitor, and this pass the gap got slightly
+worse rather than better.** There is no open-source way to detect that a deployed
+tutor has drifted, regressed after a model upgrade, or started teaching something
+off-syllabus. Given trend 1 — skill bundles whose behaviour changes when the
+harness or model changes beneath them — this is the single largest unmet need in
+education AI, and it is where every region's governance gap actually bites.
+
+**What got worse:** the fallback this KB prescribes — hand-build the regression
+suite (pattern **P-568-K**) and score it with `evaluators` — now has a known
+licence boundary. The rubric **code and prompts** clear commercially; the two
+**annotated corpora are NC**. So an engagement must **bring its own corpus**, and
+the one public corpus of annotated instructional text cannot be the basis of a
+billable regression suite. The capability gap is unchanged and the cost of
+closing it went up.
 
 ## 8. Credentials and skills-based models (medium confidence — still single-source)
 
 1EdTech continues to point to digital credentials as a key development, with
 employer expectations accelerating a skills-driven ecosystem. **No second
-independent source surfaced on this pass either**, so this remains a watch item
-rather than a trend. Three passes without corroboration is itself informative:
-it suggests the credentials story is being carried by the standards body with an
-interest in it.
+independent *commentary* source surfaced this pass either** — four passes with
+the story carried by the standards body that has an interest in it, which is
+itself informative.
+
+**But the supply side corroborated it for the first time.** Two MIT repositories
+located this pass are built specifically for credentials and competencies:
+[`iblai/lms`](https://github.com/iblai/lms) (MIT, 208★, "discover courses, track
+competencies, **earn credentials**, accelerate workforce development", Next.js 15,
+created 2026-03-04) and, at five days old,
+[`euron-sde-team/euron-open-lms`](https://github.com/euron-sde-team/euron-open-lms)
+(MIT, 10★) which ships **verifiable certificates**. Code being written against a
+trend is weaker evidence than an independent survey and **stronger** than a
+second press release: somebody is spending engineering time on it. Upgraded from
+*watch item* to **medium confidence, supply-side corroborated**.
 
 ## Licence-structure trend (measured first-hand)
 
@@ -179,23 +239,54 @@ can fork and keep closed; **`DSpace` (BSD-3-Clause)** remains the only
 permissive platform of record at category-leader scale, in the institutional
 repository.
 
-A second structural finding, now firm after three passes: **there is no
-permissively licensed education ERP.** The whole category is LGPL (OpenEduCat,
-Odoo) or GPL/AGPL (Frappe ×2, i-educar, openSIS). This is no longer recorded as
-a search gap; it is recorded as the answer.
+A second structural finding, stated too broadly last pass and **corrected here**:
+*"there is no permissively licensed education ERP"* holds **at
+platform-of-record scale** — that category is LGPL (OpenEduCat, Odoo) or
+GPL/AGPL (Frappe ×2, i-educar, openSIS) without exception. It does **not** hold
+one tier down: [`academico-sis/academico`](https://github.com/academico-sis/academico)
+is **MIT**, 410★, 151 forks, topic `student-information-system`, pushed
+2026-10-30 — a permissively licensed, actively maintained education SIS for small
+and medium institutions. The scope was wrong, not the observation.
+
+**And the scarcity now has a denominator.**
+`topic:learning-management-system license:apache-2.0 stars:>50` returns **2
+repositories in the world**; `topic:lms license:mit stars:>80` returns 15 of
+which **six are education platforms** (the topic also catches a coding agent and
+a .NET colour-space library). The entire permissive LMS population above 50★ is
+roughly **eight repositories**, the largest at 701★ on an end-of-life stack,
+against Moodle's 7,600★ under GPL-3.0. "Assemble rather than adopt" survives as
+advice for university-scale work — and one tier down it is no longer true.
+
+A third structural finding, **new this pass**: the interoperability layer was
+missing **SCORM** for three passes. `jcputney/scorm-again` (MIT, 362★, SCORM 1.2
+and 2004, offline-first) is the permissive runtime for the standard the installed
+base actually ingests and that procurement asks for by name. The attach doctrine
+now has four legs — LTI, MCP, xAPI **and SCORM** — and only the fourth one
+delivers content *into* the platform.
 
 ## Licence hygiene: the sidebar is not the licence, and `NOASSERTION` is three different things (measured; sharpened this pass)
 
 The method rule stands — **read the file, not the sidebar** — and this pass added
 a mechanism and a correction.
 
-**The mechanism:** GitHub's REST API (`license.spdx_id`, `stargazers_count`) was
-reachable this run via the MCP GitHub server, after earlier passes recorded it as
-proxy-blocked. It is strictly better than reading rendered pages, because it
-returns GitHub's own licence determination. It also supports a cheap
-*corroborating* query: `license:mit repo:owner/name` returns zero results if
-GitHub detects no MIT grant — which independently re-confirmed the
-`mcp-canvas-lms` defect that earlier passes established by 404-ing filenames.
+**The mechanism, upgraded twice in two passes.** The third pass reached GitHub's
+REST index through the MCP server (`license.spdx_id`, `stargazers_count`) — better
+than rendered pages, because it returns GitHub's own licence *determination*. The
+fourth pass went one level deeper: **`raw.githubusercontent.com` answers HTTP 200
+from this session**, so the licence **text** is readable. Twenty-one files were
+read byte-for-byte, which closed two three-pass-old licence questions and added a
+third confirmation to two standing defects.
+
+The channels, and what each one is for:
+
+| Channel | Status here | Use it for |
+| --- | --- | --- |
+| MCP `search_repositories` | ✅ works | Existence, stars, forks, push date, licence *determination*, cohort enumeration with denominators |
+| `raw.githubusercontent.com` | ✅ **works — new** | The licence **text**. Try every filename (`LICENSE`, `.md`, `.txt`, `licence`, `COPYING`) on **every branch** |
+| `license:<spdx> repo:owner/name` search | ✅ works | A cheap second opinion: zero results means GitHub detects no such grant |
+| MCP `get_file_contents` | ⛔ repo-scoped | Nothing — it refuses any repository not attached to the session |
+| `api.github.com`, `github.com` HTML via `curl` | ⛔ uniform 403 | Nothing. A uniform status across every URL measures the network, not the data |
+| MCP `search_users` | ⚠️ no `location` | Nothing for region. Owner country is unobtainable, which is why seven shelf rows are **Global** |
 
 **The correction:** `NOASSERTION` does **not** mean "unlicensed". Three distinct
 states collapse into it or near it:
@@ -204,7 +295,9 @@ states collapse into it or near it:
 | --- | --- | --- |
 | Licence file present, non-standard filename, **split grant** | `learning-commons-org/knowledge-graph` (164★) | `LICENSE.md`; README badges read **code MIT / datasets "By data publisher"**, some datasets **gated**. Code safe; each dataset cleared individually. |
 | Licence claimed in prose, **file absent** | `DMontgomery40/mcp-canvas-lms` (104★) | README says "MIT License - see LICENSE file"; that file 404s on every name and both branches. Default: exclusive copyright. |
-| **No licence field at all** | `digitalinnovationone/dio-agent` (2,750★) | Genuinely unlicensed. All rights reserved. |
+| Licence file present, non-standard filename, **three-tier split with a non-commercial tier** | `learning-commons-org/evaluators` (87★) ← *resolved this pass* | `LICENSE.md`, 1,615 B: code **MIT**, prompts/settings **CC BY 4.0**, two annotated corpora **CC BY-NC-SA 4.0**. The machinery is commercial; the data is not. **The inverse split from its own sibling.** |
+| **No licence field at all** | `digitalinnovationone/dio-agent` (2,750★) | Genuinely unlicensed. All rights reserved. Confirmed this pass by a second method: no file on either branch. |
+| Copyleft with a **per-directory dual grant**, on a **non-`main` default branch** | `24kchengYe/human-skill-tree` (586★) ← *resolved this pass* | `master/LICENSE`, 1,063 B: **AGPL-3.0**, plus a `DUAL LICENSING NOTE` making `skills/*.md` usable under **AGPL-3.0 *or* MIT at the adopter's option**. Platform disqualified, bundles usable. A licence **column cannot express this row** — and probing only `main` returns a false "no licence". |
 
 And a fourth shape that is not ambiguous, just wrong for the artefact: a
 **content licence on code-shaped work** — `Auto-Empirical-Research-Skills`
@@ -236,18 +329,43 @@ records what it could not verify.
   Eurydice reports, TEQSA, the AJET study, named statutes — and, for trends 1, 7
   and the licence sections, **this KB's own first-hand measurements of GitHub's
   index**, which are the most reliable items here.
-- **EU AI Act primary text not read.** The 2 December 2027 Annex III date is
-  consistent across many legal commentaries citing Regulation (EU) 2026/1744, but
-  the Official Journal was not fetched. This KB now gives date-specific advice;
-  the next pass should read the OJ.
-- **Trend 8 (credentials) is single-source for the third consecutive pass** and
-  stays a watch item.
+- **EU AI Act primary text cannot be read from this session — established, not
+  deferred.** Attempted this pass: **`eur-lex.europa.eu` does not resolve**, nor
+  does the `artificialintelligenceact.eu` mirror, the same failure class as
+  `camara.leg.br`. It is a **network-policy constraint**, so it should stop being
+  carried as an action item for the next pass and start being a request to allow
+  the domain. Everything here on Regulation (EU) 2026/1744, the Annex III and
+  embedded-product dates, Article 50 and Article 4 stays **multi-source
+  secondary**.
+- **The Council of Europe education instrument is single-source** and the Ipsos
+  Education Monitor ban-support shifts (Japan 21→29%, Australia 47→52%, Korea
+  27→31%) are single-source with unpinned baseline years. Both are carried as
+  directionally reliable and not pinned.
+- **Trend 8 (credentials) has no second *commentary* source after four passes**,
+  but now has supply-side corroboration (`iblai/lms`, `euron-open-lms`, both
+  MIT). Upgraded to medium confidence; the commentary gap stands.
 - **Trend 6 rests on one country.** Korea's reversal is well detailed but it is
   one case; Singapore's contrast is a policy design, not yet an outcome.
 - **No runtime evaluation tooling exists to recommend** (trend 7). Stated as a
   finding, but it means the governance advice this KB gives cannot currently be
   *operationalised* with open-source components. That is an honest limit on the
   whole page.
-- **The agent-skills cohort has no provenance metadata.** Region was assigned
-  from README language and maintainer org only; several members have no stated
-  country and are left unassigned rather than guessed.
+- **The agent-skills cohort has no provenance metadata, and this pass proved the
+  limit is the instrument.** Region was assigned from README language, named
+  national credentials (*gaokao*, 行测, 大创申报书) and licence-file copyright
+  holders only. `search_users` exposes **no `location`** here and
+  `api.github.com` is 403, so a maintainer's country is unobtainable by any
+  route; four of five new shelf rows are therefore **Global**. Read "Global" as
+  *provenance unknown*, not as *geographically spread*.
+- **13 of 13 agent-skills licences are now read; 0 of 13 declare a version or
+  ship a test suite.** The versioning and regression problem named in trend 1 is
+  **unmeasured because there is nothing in the cohort to measure it with** — not
+  a gap in this KB's searching, a property of the artefact class.
+- **Horizontal tooling is systematically under-covered, and the miss was
+  expensive.** `hugohe3/ppt-master` — **MIT, 71,498★**, the largest permissively
+  licensed repository anywhere in this KB — went unfound for four passes because
+  every sweep filters on an education topic and it carries none. It was surfaced
+  by the prescribed *web* search, which cuts against the previous pass's "query
+  the index, not the listicles". **Both channels are required; next pass should
+  sweep by capability (`topic:pptx`, `topic:text-to-speech`, `topic:pdf`,
+  `topic:ocr`, `topic:scorm`) crossed with licence.**

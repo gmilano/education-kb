@@ -4,6 +4,166 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (fourth pass) — the largest MIT repo in this KB was found by a listicle, and "no permissive education platform" needs qualifying
+
+**Method note.** `raw.githubusercontent.com` answers **HTTP 200** from this
+session, while `api.github.com` and `github.com` HTML remain **403** and the MCP
+server's `get_file_contents` is repo-scoped to this session's own repositories.
+So this pass combined two channels: **GitHub's REST index** via MCP
+`search_repositories` for discovery and metadata, and **raw licence files** for
+the grant. **Every licence below was read from the licence file, byte count
+stated.** That is a first for this KB — earlier passes could only read GitHub's
+*determination* of a licence, never the text.
+
+### 1. `ppt-master` — MIT, 71,498★, and the index sweeps could never have found it
+
+[`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) — **MIT**
+(`main/LICENSE` **and** `master/LICENSE`, 1,069 B each, "MIT License"),
+**71,498★**, **5,578 forks**, Python, created **2025-12-10**, pushed 2026-10-30.
+"AI turns documents or topics into real, native PowerPoint decks — with native
+shapes, transitions and animations, data-backed charts and tables on demand,
+audio narration from speaker notes, and support for your own `.pptx` templates."
+
+**It is the largest permissively licensed repository anywhere in this knowledge
+base** — 1.4× DeepTutor (52,208★, Apache-2.0) and 1.7× OpenMAIC (41,984★, MIT).
+
+**And this KB missed it for four passes because it carries no education topic.**
+Its topics are `ai-agent`, `aippt`, `office`, `powerpoint`,
+`powerpoint-generation`, `ppt`, `pptx`, `presentation`, `slide`, `slides`. Every
+index sweep this KB runs filters on `topic:ai-tutor`, `topic:ai-education`,
+`topic:edtech`, `topic:agent-skills topic:education` or `topic:lms`. **A
+horizontal tool that an industry depends on is invisible to a vertical sweep.**
+It was surfaced by the prescribed `github trending education AI 2026` web search
+— the channel the third pass had just finished arguing should be abandoned in
+favour of the index. Both channels are necessary; neither is sufficient.
+
+**Why it belongs in an education KB despite not being an education project.**
+Lecture decks, courseware and teacher-facing material are the highest-volume
+artefact in the industry, `.pptx` is the format schools and universities actually
+exchange, and **"support for your own `.pptx` templates" is institutional
+branding compliance** — the thing that normally kills generated-content pilots.
+Audio narration from speaker notes is a lecture-capture path for free. It is
+shelved in [`foundations.md`](foundations.md) as a **content-production**
+component, deliberately **not** on the agent shelf in
+[`../agents/top.md`](../agents/top.md): it is not an education agent and padding
+the shelf with it would misrepresent the agent population. New pattern
+**P-569-B** composes it.
+
+### 2. The interoperability layer finally has **SCORM** — permissively
+
+[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) — **MIT**
+(`master/LICENSE`, 1,072 B, "Copyright (c) 2020 Jonathan Putney"), **362★**, 85
+forks, TypeScript, pushed 2026-10-30. "A modern SCORM JavaScript runtime
+library." Supports **SCORM 1.2, SCORM 2004 and cross-frame**, and is tagged
+`offline-first`.
+
+**This closes a hole the KB never named.** Three passes built the attach doctrine
+on **LTI 1.3** (`ltijs`, Apache-2.0), **MCP** (MIT servers) and **xAPI → LRS**
+(`xAPI-Spec` Apache-2.0, `ralph` MIT) — and omitted the standard that the
+installed base actually ingests. xAPI is the better specification and **SCORM is
+the incumbent**: it is what corporate L&D procurement asks for by name and what
+`Selleo/mentingo` ships alongside xAPI. A permissive, maintained SCORM runtime
+means Globant-built courseware can be delivered into a client's existing LMS
+**without touching the LMS and without an xAPI migration project first**. It is
+now the fourth leg of the licence-clean boundary.
+
+### 3. "There is no permissively licensed education ERP" — the finding needs a boundary
+
+The third pass promoted this from gap to firm finding: *"the education ERP
+category is LGPL (OpenEduCat, Odoo) or GPL/AGPL (Frappe ×2, i-educar, openSIS)
+without exception."* **That holds for institution-scale ERP and it does not hold
+one tier down.**
+
+[`academico-sis/academico`](https://github.com/academico-sis/academico) —
+**MIT** (`main/LICENSE`, 1,094 B, "Copyright (c) 2020 Thomas Debay and project
+contributors"), **410★**, **151 forks**, PHP (Laravel + Filament), pushed
+2026-10-30, topic **`student-information-system`**. "Laravel & Filament-based
+school management platform for small and medium institutions."
+
+A permissively licensed, actively maintained, education-specific **SIS**. The
+410★/151-fork ratio is the signature of a system in real deployment rather than a
+starred-and-forgotten project. **The honest statement of the finding is now:**
+there is no permissive education ERP *at platform-of-record scale*; at
+small-and-medium-institution scale there is one, and it is MIT. A language school,
+training institute or private school group is a different buyer from a
+university registrar, and for that buyer a proprietary derivative is now
+possible. [`../verticals/solutions.md`](../verticals/solutions.md) is corrected
+accordingly.
+
+### 4. The permissive-LMS population, measured with a denominator
+
+| Repo | ★ | Licence (read first-hand) | Region | Note |
+| --- | --: | --- | --- | --- |
+| [safytech/ulearn](https://github.com/safytech/ulearn) | 701 | **MIT**, 1,066 B, "Copyright (c) 2019 ulearnpro" | Global | The **largest MIT-licensed LMS** located. 299 forks. **Stack caveat is decisive:** Laravel **5.8** + React **16.9**, both long past end of life. A fork is a framework-upgrade project before it is a product. |
+| [academico-sis/academico](https://github.com/academico-sis/academico) | 410 | **MIT**, 1,094 B | Global | See above. Laravel + Filament, current stack, pushed yesterday. |
+| [openfun/richie](https://github.com/openfun/richie) | 318 | **MIT**, 1,079 B, **"Copyright (c) 2018-present GIP FUN MOOC"** | **EMEA** | Django CMS for building **education portals**; integrates with Open edX and Moodle. **Region placed from the licence file itself** — GIP FUN MOOC is France Université Numérique, the same publisher as `openfun/ralph` (MIT LRS, already in this KB). |
+| [iblai/lms](https://github.com/iblai/lms) | 208 | **MIT**, 1,063 B, "Copyright (c) 2026 ibl.ai" | Global | "Skills intelligence platform — discover courses, track competencies, earn credentials." Next.js 15 / React 19, created 2026-03-04. **The first open-source asset this KB has found for the digital-credentials trend.** |
+| [Azure/Moodle](https://github.com/Azure/Moodle) | 185 | **MIT**, 1,090 B, "Copyright (c) Microsoft Corporation" | Global | Tooling for scalable **Moodle clusters on Azure**. Not a platform: **MIT deployment tooling wrapped around a GPL-3.0 platform** — the attach-don't-fork doctrine as practised by Microsoft. 187 forks on 185★, i.e. used as a template. |
+| [pacewisdomhq/TutorLoom](https://github.com/pacewisdomhq/TutorLoom) | 54 | **Apache-2.0**, 11,362 B (full licence text) | APAC | Self-hosted **multi-tenant** LMS: course builder, trainer and student portals, progress tracking. Django + React + Flutter, created **2026-10-07**. Explicit "moodle-alternative" and `corporate-training`. Region inferred from the publisher `pacewisdomhq`; **not stated on the repo**, so treat the placement as soft. |
+| [euron-sde-team/euron-open-lms](https://github.com/euron-sde-team/euron-open-lms) | 10 | **MIT**, 1,132 B, "Copyright (c) 2026 **ENGAGESPHERE TECHNOLOGY PRIVATE LIMITED** and the Euron Open LMS contributors" | APAC | Created **2026-10-26** — five days old. Course catalogue, HLS-video classroom, quizzes, reviewed assignments, **verifiable certificates**, Stripe **and Razorpay** billing, Terraform for AWS. **Two India signals**: the "Private Limited" company suffix and the Razorpay integration. 16 forks on 10★ at five days is unusual. Too young to carry an engagement. |
+
+**The denominator, which is the useful part.**
+`topic:learning-management-system license:apache-2.0 stars:>50` returns **2
+repositories in the world** — `TutorLoom` (54★, three weeks old) and
+`AcademicsToday/academicstoday-django` (Apache-2.0 confirmed, `LICENSE.md`
+11,358 B, 220★, **created 2015** and effectively stale).
+`topic:lms license:mit stars:>80` returns **15**, and the topic is badly
+polluted: it includes `SWE-agent` (20,693★, a coding agent), `Colourful` (298★, a
+.NET **colour-space** library — "LMS" as in long/medium/short cone response) and
+`freeitsm` (118★, an ITSM tool). **Six of the fifteen are education platforms.**
+
+So the scarcity claim this KB has made for four passes is now quantified rather
+than asserted: **the entire permissively licensed LMS population above 50★ is
+about eight repositories, the largest is 701★ on an end-of-life stack, and
+Moodle alone has 7,600★ under GPL-3.0.** "Assemble rather than adopt" stands as
+advice — but one tier down, `academico` and `richie` are real choices.
+
+### 5. One archived trap
+
+[`microsoftarchive/Learn-LTI`](https://github.com/microsoftarchive/Learn-LTI) —
+MIT, **132★**, 52 forks, an LTI tool to surface the Microsoft Learn catalogue
+inside an LMS. **`archived: true`.** It reads as exactly the component an
+engagement would reach for, it is permissive, and it is dead. The `microsoftarchive`
+org name is the only warning on the URL. Logged so it is recognised, not
+rediscovered.
+
+### 6. Carried forward unchanged, re-read this pass
+
+`Selleo/mentingo` (MIT, EMEA/Poland) reads **102★**, 31 forks, 105 open issues,
+pushed 2026-10-30 — identical to the third pass's figures. Its topic list
+confirms **`scorm`**, **`xapi`**, **`white-label`**, `corporate-training` and
+`compliance-training` first-hand, which is the evidence behind the KB's advice to
+aim it at corporate L&D rather than a university registrar.
+
+### Declared gaps — this pass
+
+- **Region is unplaceable for most new rows.** `search_users` returns login, id
+  and avatar only in this session — **no `location`** — and `api.github.com` is
+  403, so a maintainer's country cannot be read at all. Three placements this
+  pass are evidence-based (`richie` from the licence file's "GIP FUN MOOC";
+  `TutorLoom` and `euron-open-lms` from publisher and payment-stack signals,
+  flagged as inferred) and the rest are **Global**. The KB's region field stays
+  honest at the cost of being sparse.
+- **No permissive platform of record at Moodle/Open edX scale.** Unchanged, and
+  now with a measured population behind it (see §4). The institutional-repository
+  exception (`DSpace`, BSD-3-Clause) and the AI-native-LMS exception
+  (`mentingo`, MIT) both stand.
+- **`ppt-master`'s provenance is unverified.** 71,498★ and the owner profile
+  cannot be read from this session. Its topic `aippt` and the demo site are the
+  only origin signals; **no region is assigned**. For a repository this central
+  to pattern P-569-B that is a real diligence gap, and it is the one thing on
+  this page a client-facing use should check independently.
+- **`ulearn`'s maturity is not assessed beyond its stack.** 701★ MIT is
+  attractive and Laravel 5.8 is five major versions behind. Nobody should be told
+  it is a starting point without an upgrade estimate.
+- **Horizontal tooling is systematically under-covered.** `ppt-master` was missed
+  because the sweeps are vertical. The same blind spot presumably hides document
+  parsers, TTS pipelines, assessment-item generators and video tools that
+  education depends on and that nobody tags `education`. **Next pass: sweep by
+  *capability* (`topic:pptx`, `topic:text-to-speech`, `topic:pdf`,
+  `topic:ocr`) and licence, not by industry topic.** That is the most valuable
+  action this pass can hand forward.
+
 ## 2026-10-31 (third pass) — EMEA gets a permissive platform; Africa gets a supply side
 
 **Method note first, because it explains everything below.** The GitHub REST API

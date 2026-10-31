@@ -7,11 +7,18 @@ updated: 2026-10-31
 # Compose patterns — education
 
 Concrete recipes. Every component is a repo verified first-hand on 2026-10-31
-with its licence named, and every pattern obeys the one hard constraint of this
-industry: **the platform of record is copyleft, so you attach to it, you do not
-fork it.**
+with its licence named — and for everything added or re-read in the fourth pass,
+**the licence text itself was read, not GitHub's summary of it**. Every pattern
+obeys the one hard constraint of this industry: **the platform of record is
+copyleft, so you attach to it, you do not fork it.**
 
-Shared rule for all eleven patterns — the licence boundary:
+**New in the fourth pass:** **P-569-A** (SCORM delivery — the attach doctrine
+finally covers content moving *into* the platform) and **P-569-B** (the courseware
+factory, built on the 71,498★ MIT content-production layer that four passes of
+education-topic sweeps could not see). **P-568-K** carries a licence correction
+that changes what it may ship.
+
+Shared rule for all thirteen patterns — the licence boundary:
 
 ```
   [ client's LMS of record ]          GPL-3.0 / AGPL-3.0  ← never forked, never patched
@@ -20,17 +27,27 @@ Shared rule for all eleven patterns — the licence boundary:
             │  attach ONLY across a standard, permissively licensed boundary:
             ├── LTI 1.3 ....... Cvmcosta/ltijs        Apache-2.0  (launch + grades back)
             ├── MCP ........... canvas-mcp/moodle-mcp MIT         (agent reads LMS data)
-            └── xAPI → LRS .... adlnet/xAPI-Spec      Apache-2.0  (telemetry out)
-                                openfun/ralph         MIT
+            ├── xAPI → LRS .... adlnet/xAPI-Spec      Apache-2.0  (telemetry out)
+            │                   openfun/ralph         MIT
+            ├── SCORM ......... jcputney/scorm-again  MIT         (courseware IN)
             │
   [ Globant-built layer ]             your licence, your IP
 ```
 
-**Shared step 0 — licence preflight (half a day; method upgraded 2026-10-31,
-third pass).** Before any component enters a statement of work, establish its
-licence from the **GitHub REST API** (`license.spdx_id`) and then **read the
-licence file** for anything the API reports as `NOASSERTION`. Do not accept a
-sidebar or a README sentence. Across three passes this check has caught a defect
+**Shared step 0 — licence preflight (half a day; method upgraded again
+2026-10-31, fourth pass).** Before any component enters a statement of work,
+establish its licence from the **GitHub REST index** (`license.spdx_id`) and then
+**read the licence file itself** over
+`https://raw.githubusercontent.com/{owner}/{repo}/{branch}/{filename}`, which
+answers HTTP 200 from this session while `api.github.com` and `github.com` HTML
+return 403 and MCP `get_file_contents` refuses third-party repositories. **Read
+the file for every component, not only the ones the API flags** — the two licence
+questions this KB carried longest were both resolved by reading text the API had
+summarised as `NOASSERTION` or matched against no filter. Try **every filename**
+(`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `licence`, `COPYING`) on **every
+branch**: `24kchengYe/human-skill-tree` is AGPL-3.0 on `master` and 404 on
+`main`, and two passes recorded it unresolved for exactly that reason. Do not
+accept a sidebar or a README sentence. Across three passes this check has caught a defect
 in roughly half the repos run through it. The failure modes, with the live
 example to cite in a SoW appendix:
 
@@ -45,9 +62,24 @@ example to cite in a SoW appendix:
   and datasets **"By data publisher"**, some datasets gated. The code clears; each
   dataset must be cleared individually.
 - *content licence on code-shaped work* → **usable but viral on the text.**
-  `brycewang-stanford/Auto-Empirical-Research-Skills`, 4,843★, **CC BY-SA 4.0**:
-  share-alike propagates to derivatives of the skill text. Fatal for a billable
-  methodology asset, fine for internal reference.
+  `brycewang-stanford/Auto-Empirical-Research-Skills`, 4,843★, **CC BY-SA 4.0**,
+  and `GarethManning/education-agent-skills`, 932★, **also CC BY-SA 4.0** — the
+  two largest education skill libraries in existence, both read from the licence
+  file this pass. Share-alike propagates to derivatives of the skill text: fatal
+  for a billable methodology asset, fine for internal reference. **Expect this
+  shape whenever the artefact is pedagogy written in markdown.**
+- *split grant with a **non-commercial** tier* → **the trap that matters most to
+  a consultancy, because the restricted tier is the part you were going to
+  ship.** `learning-commons-org/evaluators`, 87★: code **MIT**, prompts
+  **CC BY 4.0**, and the **Annotated CLEAR and PERSUADE 2.0 corpora
+  CC BY-NC-SA 4.0 — non-commercial.** The scoring machinery clears; the benchmark
+  data does not. **Check every tier of a split grant for `NC`, not just the
+  first.**
+- *copyleft with a **per-directory** dual grant* → **partly usable, and no
+  licence column can say so.** `24kchengYe/human-skill-tree`, 586★: AGPL-3.0
+  overall, with `skills/*.md` available under **AGPL-3.0 or MIT at your option**.
+  The platform is disqualified; the bundles inside it are not. Record the
+  directory, not just the repository.
 - *wrong version* → `openSIS-Classic` is GPL-**2.0**, not GPL-3.0: no patent
   grant, incompatible with GPL-3.0-only code in the same binary.
 - *unparsed but present* → Odoo (LGPL-3.0) and `frappe/education` (GPL-3.0) name
@@ -507,13 +539,27 @@ adopting these today with no governance at all.
    deliverable is a prompt contract evaluated by a third party's runtime. If the
    model version is not pinned, the behaviour the client accepted is not the
    behaviour they will get.
-3. **Build the regression suite the ecosystem does not have.** Freeze a golden set
-   of task → expected-property pairs for the client's own syllabus. Score with
-   `learning-commons-org/evaluators` (rubrics) for content quality and
-   `pedagogy-benchmark` (MIT) for pedagogical knowledge. Run it on every harness
-   or model change. **This is the missing runtime-monitoring layer identified in
+3. **Build the regression suite the ecosystem does not have — and source your own
+   corpus.** Freeze a golden set of task → expected-property pairs for the
+   client's own syllabus. Score with `learning-commons-org/evaluators` for content
+   quality and `pedagogy-benchmark` (MIT, 1,143 teacher-qualification questions)
+   for pedagogical knowledge. Run it on every harness or model change. **This is
+   the missing runtime-monitoring layer identified in
    [`../intel/trends.md`](../intel/trends.md), built by hand because nothing
    open-source provides it.**
+
+   ⚠️ **Licence correction, fourth pass — read this before quoting the work.**
+   `evaluators` is a **three-tier grant** (`main/LICENSE.md`, 1,615 B, read
+   first-hand): the **code is MIT** and the **rubric prompts and settings are
+   CC BY 4.0**, both fine commercially with attribution — but its **Annotated
+   CLEAR Corpus** and **Annotated PERSUADE 2.0 Corpus** are **CC BY-NC-SA 4.0,
+   non-commercial**, and the upstream originals are NC too, so there is nothing
+   cleaner to substitute. **The scoring machinery goes into a billable
+   deliverable; those two corpora do not.** The golden set must be built from the
+   client's own syllabus and assessed work — better practice anyway, since a
+   client-specific corpus is what makes the suite meaningful, but now also a
+   licence requirement. **Price the corpus construction explicitly**; it is the
+   line nobody budgets for.
 4. **Check curriculum alignment, do not assume it.** `learning-commons-org/knowledge-graph`
    (code MIT, datasets per-publisher, ships an MCP server) links academic
    standards and curricula; where the client has no rich national standard, use
@@ -531,6 +577,151 @@ adopting these today with no governance at all.
 the pricing conversation: infrastructure cost collapses, and the
 recurring-revenue story has to be the regression suite and the model-upgrade
 re-certification, not the servers.
+
+---
+
+## P-569-A — SCORM courseware delivery into an untouched LMS (4–6 weeks)
+
+**For:** any client whose platform of record is copyleft (Moodle, Open edX,
+Canvas, Chamilo) and who wants **AI-generated or AI-assisted courseware delivered
+into it** without a platform project, an xAPI migration, or an LTI integration
+review.
+**Region:** Global. Strongest fit where procurement specifies SCORM by name,
+which in practice means corporate L&D, compliance training and public-sector
+tenders.
+
+**Why this pattern exists, and why it did not until now.** Three passes of this
+KB built the attach doctrine on **LTI 1.3**, **MCP** and **xAPI** — launch, read,
+telemetry — and omitted the one standard that moves *content inward*. xAPI is the
+better specification and **SCORM is the incumbent**: every platform on
+[`../verticals/solutions.md`](../verticals/solutions.md) ingests it, and
+`Selleo/mentingo` ships it alongside xAPI because buyers ask for it. The fourth
+pass located a permissive, maintained runtime, so the gap closes.
+
+**Components — every licence read from the licence file on 2026-10-31:**
+
+| Role | Component | Licence | Note |
+| --- | --- | --- | --- |
+| SCORM runtime | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** (1,072 B) | SCORM 1.2, SCORM 2004, cross-frame, `offline-first`. 362★, 85 forks, pushed 2026-10-30. |
+| Deck/courseware generation | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | **MIT** (1,069 B) | 71,498★. Native `.pptx` with the **client's own template** — i.e. branding compliance, which is what kills generated-content pilots. |
+| Interactive conversion | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | **MIT** (1,069 B) | 1,034★. Books → animated, narrated, interactive web experiences; already carries a `scorm` topic. |
+| Quality gate | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | **code MIT / prompts CC BY 4.0** | ⚠️ its two annotated corpora are **CC BY-NC-SA 4.0**; bring your own corpus. See step 0. |
+| Pedagogical check | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT** | 1,143 teacher-qualification questions (CDPK 920, SEND 223). |
+| Telemetry (optional) | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | If the client wants learner data out as well as content in. |
+
+**Wiring:**
+
+1. **Establish the SCORM version the client's LMS actually consumes.** 1.2 and
+   2004 are not interchangeable and the installed base is split. `scorm-again`
+   supports both; the LMS decides which one you ship. Ask for a sample package
+   that already imports successfully and match it.
+2. **Generate the artefact, do not generate the package.** Produce decks with
+   `ppt-master` against the client's own `.pptx` template, or interactive units
+   with `Papermorph`. Keep generation separate from packaging so the quality gate
+   sits between them.
+3. **Gate before packaging.** Score every unit with `evaluators` rubrics for
+   content quality and sample-check the generating model against
+   `pedagogy-benchmark`. **A SCORM package is an opaque zip once imported** — the
+   LMS will not tell you the content was wrong, and neither will the learner
+   until the cohort has finished. This is the step that distinguishes the pattern
+   from a content farm.
+4. **Package with `scorm-again` and import through the client's normal course
+   upload.** No LMS code is touched, no plugin is installed, no platform upgrade
+   is blocked, and the licence boundary is never crossed — the GPL/AGPL platform
+   simply consumes a file, which is exactly what it was built to do.
+5. **Keep the source artefacts, version them, and hand them over.** The
+   deliverable the client owns is the generator configuration, the template and
+   the gated source units — not the zip. Re-packaging is then a build step.
+
+**What the client is buying.** Courseware at a cadence their authoring team
+cannot match, delivered through a route their platform team does not have to
+approve. **What to be honest about:** SCORM telemetry is thin compared with xAPI
+(completion, score, time — not behaviour), so if the engagement's value story is
+learning analytics, this pattern is the wrong one and **P-568-A** with an LRS is
+the right one. Say which is being bought.
+
+---
+
+## P-569-B — Courseware factory: syllabus in, gated multi-format units out (6–8 weeks)
+
+**For:** a client with a large existing corpus — textbooks, lecture notes,
+ministry curriculum PDFs, internal training manuals — and a mandate to turn it
+into teachable material far faster than their authoring capacity allows.
+**Region:** Global. The LMIC and ministry variant is noted at the end and it is
+materially different.
+
+**Why this is now possible and was not a pass ago.** The content-production layer
+in [`../repos/foundations.md`](../repos/foundations.md) did not exist in this KB
+before the fourth pass, because every sweep filtered on an education topic and
+**the largest component carries none**. `hugohe3/ppt-master` is **MIT with
+71,498★** — the largest permissively licensed repository anywhere in this
+knowledge base, 1.4× DeepTutor — and it generates native PowerPoint from
+documents or topics, with the client's own template, data-backed charts, and
+**audio narration from speaker notes**. That last feature is a lecture-capture
+path for free.
+
+**Components — licences read first-hand 2026-10-31:**
+
+| Role | Component | Licence | What it contributes |
+| --- | --- | --- | --- |
+| Deck and lecture generation | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | **MIT** | Documents/topics → native `.pptx`: shapes, transitions, animations, charts, tables, **narration from speaker notes**, client templates. 5,578 forks. |
+| Interactive/animated units | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | **MIT** | Books → animated, narrated, interactive web experiences. For the material that should not be a deck. |
+| Self-paced audio course | [assafkip/claudemy](https://github.com/assafkip/claudemy) | **MIT** | Topic → course of **2-minute audio lessons with cited sources**. The only generator here that starts from citations. |
+| Document→study-page | [dmoshehun-prog/learn-from-materials](https://github.com/dmoshehun-prog/learn-from-materials) | **MIT** | PDFs/books/papers → traceable interactive pages with quizzes. 1,201★. |
+| Retention layer | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | **MIT** | Hands the pipeline a real spaced-repetition scheduler instead of reimplementing one. |
+| Standards alignment | [learning-commons-org/knowledge-graph](https://github.com/learning-commons-org/knowledge-graph) | **code MIT / data per publisher** | Checks units against academic standards and curricula; ships an MCP server. Clear each dataset individually. |
+| Quality gate | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) + [pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | **MIT / CC BY 4.0** + **MIT** | ⚠️ `evaluators`' two annotated corpora are **non-commercial**; the golden set comes from the client's syllabus. |
+| Delivery | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** | Into the existing LMS (see **P-569-A**). |
+
+**Wiring:**
+
+1. **Classify the corpus by target format before generating anything.** Expository
+   material → `ppt-master` decks. Narrative or conceptual material that benefits
+   from motion → `Papermorph`. Material learners consume while commuting →
+   `claudemy` audio. Reference material learners need to *search* →
+   `learn-from-materials` pages. **Routing is the pattern's intellectual content;
+   generating is the cheap part**, and a factory that sends everything through one
+   generator produces 400 identical decks nobody opens.
+2. **Pin the client's template and brand on day one.** `ppt-master`'s `.pptx`
+   template support is the single feature that gets generated decks past an
+   institution's communications team. Do this before volume, not after.
+3. **Align to the standard, then gate on quality.** Run every unit through
+   `knowledge-graph` for standards alignment, then `evaluators` rubrics for
+   quality, then sample the generating model against `pedagogy-benchmark`. **Three
+   checks, because they fail differently:** alignment catches off-syllabus,
+   rubrics catch badly written, the benchmark catches a model that does not know
+   how to teach.
+4. **Attach spaced repetition rather than inventing it.** Emit flashcards from
+   gated units into Anki via `anki-mcp-server`. Retention is the part of the value
+   story a client can actually measure, and the scheduler is a solved problem.
+5. **Package and deliver over SCORM** (P-569-A), keeping source artefacts and
+   generator configuration as the versioned deliverable.
+6. **Require citation provenance as an acceptance criterion**, and use `claudemy`
+   as the reference for what that looks like in a generator rather than bolted on
+   afterwards. The argument to make to an executive is on the public record:
+   **South Africa's draft National AI Policy was withdrawn because at least 10% of
+   its academic references were fictitious.**
+
+**The LMIC / ministry variant.** Swap the front end: parse the national
+curriculum with `AI-for-Education/lesson-plan-parse-mbsse` (MIT — real Sierra
+Leone **MBSSE** lesson plans, PDF → structured JSON), align with
+`AI-for-Education/gpf-alignment` (MIT) against the **Global Proficiency
+Framework** where no rich national standard exists, deliver offline through
+`learningequality/kolibri` (MIT) instead of SCORM, and add
+`AI-for-Education/nemoasr-android` (on-device ASR) where literacy or devices are
+the binding constraint. For vocabulary and language work,
+[`orionsheep/wordlink`](https://github.com/orionsheep/wordlink) (MIT, 262★) runs
+a fine-tuned 1.5B model **entirely in the browser via WebGPU** — no connectivity
+and no inference bill, which is the only configuration that survives a
+low-bandwidth classroom.
+
+**What the client is buying.** Throughput with a quality floor, and the floor is
+the product. **What to be honest about:** none of these generators knows whether
+its output teaches. The gate is hand-built, the corpus behind it must be the
+client's own for licence reasons as well as validity, and **nothing here monitors
+the pipeline after go-live** — see the standing evaluation gap in
+[`../intel/trends.md`](../intel/trends.md). Quote the gate as a permanent cost,
+not a setup cost.
 
 ---
 
@@ -572,6 +763,36 @@ re-certification, not the servers.
   so local partnership stays part of the pattern, but P-568-F no longer has to
   compose *entirely* imported components. **Next pass: rewrite P-568-F around
   these components rather than around Kolibri alone.**
+- ~~**No pattern delivers content *into* the platform of record.**~~ **Closed as
+  P-569-A.** Three passes built the attach doctrine on LTI, MCP and xAPI —
+  launch, read, telemetry — and never noticed that **nothing moved courseware
+  inward**, which is what procurement actually asks for and what every platform
+  on this KB's own verticals page ingests. `jcputney/scorm-again` (MIT, 362★,
+  SCORM 1.2 + 2004) closes it. The gap survived three passes because the doctrine
+  was built from the *integration* literature, where xAPI is the modern answer,
+  rather than from what a buyer specifies.
+- **The content-production layer arrived late and the next pass should expect
+  more of it.** `ppt-master` (**MIT, 71,498★**) is the largest permissively
+  licensed repository in this KB and went unfound for four passes because every
+  sweep filters on an education topic and it carries none. **P-569-B** is built on
+  it. Assume the same blind spot still hides document parsers, TTS pipelines,
+  assessment-item generators and video tooling: sweep by **capability**
+  (`topic:pptx`, `topic:text-to-speech`, `topic:pdf`, `topic:ocr`, `topic:scorm`)
+  crossed with licence.
+- **Every quality gate in this file now has a licence boundary through it.**
+  `evaluators` is code-MIT / prompts-CC-BY-4.0 / **corpora-CC-BY-NC-SA-4.0**, and
+  the upstream corpora are NC too. So the golden set in **P-568-K**, **P-569-A**
+  and **P-569-B** must be built from the client's own syllabus — which is better
+  practice and is now also a licence requirement. **It is also an unbudgeted
+  line in most proposals**, and the main reason these three patterns should not be
+  quoted from their component list alone.
+- **No pattern uses `academico` yet.** `academico-sis/academico` (MIT, 410★,
+  151 forks, `student-information-system`) is the permissive education SIS whose
+  non-existence this KB asserted for three passes. It is a real option for a
+  small-or-medium-institution client and there is no recipe built on it. **Next
+  pass: a permissive-SIS pattern for the language-school / training-institute /
+  private-school-group buyer**, which is a different buyer from every pattern
+  currently in this file.
 - **No pattern has been run end to end.** Every recipe here is composed from
   verified components with stated licences; none has been executed on a client
   engagement by this KB. Durations are estimates, not measured delivery times,

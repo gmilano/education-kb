@@ -60,7 +60,13 @@ product.** A 2026 legislative tracker counts **134 AI-in-education bills across
 31 states**, concentrated on data privacy, classroom restrictions and curriculum
 integration. Four states — **Maryland, Idaho, Oklahoma and Virginia** — passed
 2026 laws requiring *both* state guidance *and* mandatory district-level AI
-policy adoption; Maryland's package also mandates AI coordinators. New York's
+policy adoption; Maryland's package (**SB 720**) also mandates AI coordinators.
+**North Carolina's Session Law 2026-41 is the one with dates on it, and the first
+is two months away:** a **state model policy due 31 December 2026**, **local
+district policies due 30 June 2027**, and **teacher AI-literacy training due
+30 June 2028**. That is a three-stage, statutory, date-certain pipeline in a
+single state — the cleanest procurement trigger in the region and the one to lead
+with, because the deadline sequence writes the engagement plan by itself. New York's
 **A 9190** would restrict classroom AI to ninth grade and above, with exceptions
 for diagnostics and special education. Federally, the **K-12 AI Literacy and
 Readiness Act of 2026** has advanced out of House committee.
@@ -112,8 +118,29 @@ to **Regulation (EU) 2026/1744**, in force 27 July 2026, after Council approval
 on 29 June 2026. **Article 50 transparency duties were *not* delayed** and have
 applied since 2 August 2026.
 
-What that means commercially: the **transparency** work is due now and the
-**conformity-assessment** work has roughly fourteen more months. The Annex III
+**A third track was missed by both earlier passes and it is the earliest one of
+all: Article 4.** The AI Act's **AI-literacy obligation has applied since
+2 February 2025** to every organisation that *uses* an AI system — which is every
+school and every university now running AI tools, regardless of whether they
+build anything. It is not risk-classified, not deferred, and already overdue
+wherever nobody has done it. Of the three EU tracks, this is the only one whose
+deadline is in the **past**, and it is the cheapest possible entry point to an
+EMEA education engagement: AI-literacy training is a deliverable, not a
+conformity programme.
+
+**And the EU is not the only EMEA instrument track.** The **Council of Europe**
+roadmap for Responsible AI in Education lists a planned **Legal Instrument on AI
+in Education — "establishing rules to protect the integrity of education"** for
+**2026**, following its 2025 recommendation on AI in teaching and learning. The
+Council of Europe is a 46-state body wider than the EU and its instruments bind
+by ratification, so a client in a non-EU European state (UK, Switzerland, Norway,
+Türkiye, Western Balkans) has an education-specific track that the AI Act
+analysis does not cover. *Single-source this pass; treat as a watch item with a
+named instrument rather than an established obligation.*
+
+What that means commercially: the **AI-literacy** work is already late, the
+**transparency** work is due now, and the **conformity-assessment** work has
+roughly fourteen more months. The Annex III
 deferral was already on this KB's record from the previous pass and is
 re-verified here from fresh sources; the **Article 50** half and the Regulation
 (EU) 2026/1744 citation are new. Note the likely source of the confusion in the
@@ -132,20 +159,28 @@ schools, and the **UAE** is — with China — one of only two countries running
 **compulsory national AI curriculum**, since the 2025–26 school year.
 
 **Opportunities.**
-1. **Annex III conformity programmes, sold on the real date.** Learner
+1. **Article 4 AI-literacy programmes — the obligation that is already
+   overdue.** In force since **2 February 2025** for every organisation using AI
+   systems, i.e. every school and university with a generative-AI tool in the
+   building. No risk classification, no deferral, no conformity assessment:
+   training, records and a policy. It is the smallest credible first engagement
+   in EMEA and the only one where the client is *behind* rather than preparing.
+   `Fazmin/AILearningGuide` (MIT, 242★, 51 labs, offline-first — see
+   [`../agents/top.md`](../agents/top.md)) is a shippable starting artefact.
+2. **Annex III conformity programmes, sold on the real date.** Learner
    assessment, programme assignment and qualification-access systems are
    high-risk; the deadline is **2 December 2027**. Selling this as a 2026
    emergency is now wrong and a client who checks will notice.
-2. **Article 50 transparency, sold as the live one.** In force since 2 August
+3. **Article 50 transparency, sold as the live one.** In force since 2 August
    2026 and **not** part of the deferral. Smaller, faster, and the honest "start
    here" — and the one place where a client who was told "nothing applies until
    2027" has been misadvised.
-3. **The permissive-substrate play is European.** `Selleo/mentingo` (MIT,
+4. **The permissive-substrate play is European.** `Selleo/mentingo` (MIT,
    **Poland**) is the only AI-native LMS a client can fork and keep closed, and
    it ships SCORM and xAPI. Pair with `openfun/ralph` (MIT, France) for the LRS
    and `Cvmcosta/ltijs` (Apache-2.0) for LTI. An **entirely permissive, entirely
    EMEA-origin stack** is now assemblable — that was not true a pass ago.
-4. **Gulf national-curriculum delivery.** The UAE's compulsory AI curriculum is a
+5. **Gulf national-curriculum delivery.** The UAE's compulsory AI curriculum is a
    funded, centrally mandated content-and-training programme.
 
 #### Africa (inside EMEA — not a separate region value)
@@ -213,10 +248,17 @@ guidance rather than penalties. Its education-specific experiment is the
 cautionary one: **AI textbook adoption sat below 30% by March**, and lawmakers
 subsequently **removed their official status**.
 
-**Vietnam** adopted a comprehensive risk-based AI law effective **1 March 2026**,
-and a follow-on decision designates high-risk systems in six sectors
-**including education**, reported to cover **automated assessment** — the most
-directly education-binding instrument in the region. **China** maintains the most
+**Vietnam** adopted a comprehensive risk-based AI law — passed by the National
+Assembly on **10 December 2025**, effective **1 March 2026** — and a follow-on
+decision designates high-risk systems in six sectors **including education**,
+reported to cover **automated assessment**: the most directly education-binding
+instrument in the region. **New this pass, and it changes the sales calendar:
+systems already in operation get a transition period of 12 months, extended to
+18 months in health care, education and finance.** So an education system already
+running when the law took effect has until approximately **1 September 2027** —
+which is within three months of the EU's Annex III date of 2 December 2027. The
+two most binding education-AI deadlines in the world now land in the same
+quarter, and a multinational client needs one programme, not two. **China** maintains the most
 comprehensive framework (mandatory registration, strict content labelling) and
 runs, with the UAE, one of the world's only two compulsory national AI curricula.
 **Japan** is light-touch and voluntary; **MEXT's** generative-AI pilot reached
@@ -227,6 +269,18 @@ generative AI **for school administration at 17.2%, up 14.5 points year on year*
 Learning Roadmap** (one compulsory module by end 2026, two more recommended by
 end 2027), and has commissioned a **survey of teacher and student AI use** under
 its MOE Rapid Research Fund for H1 2026 — **results not yet published**.
+
+**Public opinion is moving against classroom AI in three APAC markets, and it is
+now measured over time.** The **Ipsos Education Monitor 2026** records rising
+support for *banning* AI in schools: **Japan 21% → 29%**, **Australia 47% →
+52%**, **South Korea 27% → 31%**. Australia and New Zealand sit highest in the
+region; the Asian markets surveyed are lower but trending the same way. This is
+the first attitudinal **time series** in this KB, and it is a risk datum rather
+than an opportunity: in Australia, **a majority now supports a ban** in the same
+market where TEQSA has made institutional AI plans mandatory. A proposal that
+assumes public permission is reading the regulator and ignoring the electorate.
+Pair it with the Korean textbook reversal below — the two together are the
+strongest available argument for staging a rollout behind teacher capability.
 
 **Opportunities.**
 1. **Award-integrity and assessment-reform programmes, Australia first.** TEQSA
@@ -358,13 +412,19 @@ Higher Education LATAM Survey 2026* in English and Spanish.
 - **Market-size figures remain entirely vendor outputs.** Three passes, no
   independent estimate. The USD 10.6–12.5 bn range stands as a range, and the
   2030/CAGR figures inherit the same provenance.
-- **EU AI Act primary text still not read, across two passes.** The Annex III
-  postponement to 2 December 2027 is consistent across many secondary legal
-  sources, several of which cite **Regulation (EU) 2026/1744**, and the Article 50
-  carve-out is consistent across the same set — but the Official Journal text has
-  never been fetched by this KB. Since this page now gives date-specific advice a
-  client will plan budget around, reading the OJ is the highest-value single
-  action available to the next pass.
+- **EU AI Act primary text cannot be read from this session, and that is now
+  established rather than deferred.** The third pass named reading the Official
+  Journal "the highest-value single action available to the next pass". It was
+  attempted this pass and it is **not achievable from here**:
+  `eur-lex.europa.eu` does **not resolve**, and neither does the
+  `artificialintelligenceact.eu` mirror — the same failure class as
+  `www.camara.leg.br`. This is a **network-policy constraint, not a research
+  gap**, and it should stop being queued as an action item: it is a request to
+  allow the domain in the session's network settings. Everything this page says
+  about **Regulation (EU) 2026/1744**, the 2 December 2027 Annex III date, the
+  2 August 2028 embedded-product date, the undeferred Article 50 duties and the
+  Article 4 literacy obligation remains **multi-source secondary**, consistent
+  across independent legal commentaries, and unverified against the OJ.
 - **South Africa has no replacement draft** and no announced date beyond
   FY2026/27.
 - **Singapore's MOE teacher/student AI survey is commissioned but unpublished.**
@@ -375,6 +435,21 @@ Higher Education LATAM Survey 2026* in English and Spanish.
   remain unmapped.
 - **A continental "USD 3 bn" African AI/STEM rollout figure is advocacy, not
   official** — still excluded from the numbers above.
+- **LATAM returned nothing new this pass, and that is recorded rather than left
+  silent.** The prescribed regional search
+  (`AI education LATAM Latin America 2026 adoption regulation players`) returned
+  the UNESCO IESALC study, the Observatory launch, Ceibal, Cetic.br, the
+  Universidad de los Andes instrument count and Tecnológico de Monterrey —
+  **every one of which was already on this page from the previous pass**. No new
+  institution, instrument or figure. For the region where Globant has the deepest
+  presence, the evidence base is now **stable rather than growing**, which is a
+  different thing from under-researched: the 87/26 gap has been the headline for
+  three passes and nothing has moved it.
+- **The Council of Europe education instrument is single-source.** Named,
+  dated 2026, and carried as a watch item, not an obligation.
+- **The Ipsos Education Monitor 2026 ban-support figures are single-source** and
+  the earlier comparison year is not stated in what was read, so the shifts are
+  directionally reliable and the baselines are not pinned.
 - **No independent audit of the UNESCO IESALC figures.** They are the most
   authoritative numbers on this page and they are single-source. The 26%
   strategy figure in particular was reported as "about a quarter" by one relay
