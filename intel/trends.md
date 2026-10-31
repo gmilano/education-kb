@@ -6,6 +6,62 @@ updated: 2026-10-31
 
 # Current trends — education AI
 
+## 🆕 `p578` — `2026-10-31` — trends 29–30, filed at `##` with the counter's own `^## <n>. ` form
+
+## 29. On an education topic axis, the highest-starred repository is usually not an education tool — so a sweep that reads only the head of the ladder returns nothing usable (high confidence — measured first-hand on five axes this pass, third independent instance in two passes)
+
+🔵 **The claim.** Ranking an education `topic:` axis by stars puts horizontal infrastructure
+at the top, because infrastructure is used by more people than any classroom tool. The
+education artefact sits mid-ladder.
+
+🟢 **Measured, five axes, `1,434` repositories:**
+
+| axis | head by stars | ★ | is the head an education tool? | where the usable row sat |
+| --- | --- | --: | --- | --- |
+| `topic:stem-education` | `goplus/xgo` | 9.5k | 🔴 **no — a programming language** | `goplus/spx`, **8th** |
+| `topic:learning-path` | `shovanch/fullstack-web-developer-path` | 3.5k | 🔴 no — a curated reading list | `miuuyy/Clew`, **7th** |
+| `topic:tutoring` | `plastic-labs/tutor-gpt` | 933 | 🟡 yes, but **GPL-3.0**, so unusable | rows **5–6** |
+| `topic:literacy` | `plastic-labs/tutor-gpt` | 933 | 🟡 same row, same problem | `vgwb/Antura`, **2nd** |
+| `topic:math-education` | `tiwe0/GeoChat` | 125 | 🟢 **yes** | **1st** |
+
+🔵 **Prior instances, independently found:** `p577` removed `plugin87/ux-ui-agent-skills`
+(MIT, 3.1k★, a design-system layer for coding agents) from the agent shelf — *"size reads as
+credibility"* — and `p572` recorded that the smallest axis it had ever swept
+(`topic:lesson-plan`, 44 repositories) was its most productive. **Three instances, three
+passes, two of them on this pass's own evidence.**
+
+🟢 **What it changes operationally.** The ladder must be read to roughly rank `8`, and the
+**licence and the category** checked before the star count is allowed to matter. 🔴 **And the
+inverse holds too**: the one axis whose head *was* the right answer (`topic:math-education`)
+is the smallest of the five. **Axis size predicts head quality negatively.**
+
+## 30. The best-known open-source AI tutor is copyleft, so the "obvious" answer in this market is the unshippable one (high confidence — grant read first-hand; it heads two independent axes)
+
+🔴 **The fact.** [`plastic-labs/tutor-gpt`](https://github.com/plastic-labs/tutor-gpt) —
+"AI tutor powered by Theory-of-Mind reasoning", **933★** — is **GPL-3.0**. It is the head of
+**both** `topic:tutoring` (466 repositories) and `topic:literacy` (115), and it is **3.4×**
+the largest North-America-placed row on this base's agent shelf.
+
+🔵 **Why it is a trend and not a row.** This base has published since `p568` that the
+education **agent** layer licenses permissively while the **platform** layer licenses
+copyleft, and that asymmetry is the architecture argument every pattern here rests on. 🔴
+**The most visible agent in the market is the counter-example**, and it is the one a client
+will have found before the first meeting. The asymmetry holds **statistically** — 15 of the
+16 rows `p577` verified are MIT/Apache/BSD, and this pass adds 4 more permissive rows — but
+it **does not hold at the top of the distribution**, which is the part a buyer sees.
+
+🟢 **The sellable consequence, and it is concrete.** The answer to *"why aren't you just
+using tutor-gpt?"* is: GPL-3.0 reaches derivative works, so a hosted multi-tenant tutor
+built from it owes source to the client **and** constrains what the client can then do with
+it — and the permissive stack that replaces it is now nameable on one line: **`Clew` (MIT)**
+for sequencing, **`DeepTutor` (Apache-2.0)** for the tutoring loop, **`Coding-Tutor`/DICT
+(Apache-2.0)** for the evidence it works, **`ltijs` (Apache-2.0)** for the LMS seam. 🔵 That
+sentence is the deliverable of this trend.
+
+🟡 **Caveat, stated.** `tutor-gpt` is still worth *reading* — its Theory-of-Mind user
+modelling (via `Honcho`) is the most-starred design in this space, and a clean-room
+reimplementation of an idea is not a derivative work. Reading it is safe; linking it is not.
+
 ## p577 — 2026-10-31
 
 ### The dated, checkable items

@@ -4,6 +4,39 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `2026-10-31` — `p578` — **the STEM axis's 9.5k-star head is a programming language, and its small sibling is the real education engine**
+
+🟢 **[`goplus/spx`](https://github.com/goplus/spx) — Apache-2.0, `124★` — a
+Scratch-compatible Go/XGo 2D game engine for STEM education**, verified from its
+repository page this pass. Shelved in
+[`foundations.md`](foundations.md): it is **the only permissive block-to-code engine on
+these shelves**, which is the layer a primary or lower-secondary curriculum engagement
+actually ships against.
+
+🔴 **Why it was invisible for 577 passes.** It sits on
+[`topic:stem-education`](https://github.com/search?q=topic%3Astem-education&type=repositories)
+(**`235`** repositories, **never queried**), underneath a head that is not an education tool
+at all: **`goplus/xgo`, `9.5k★`, a programming language**. 🔵 Second instance of the class
+`p577` named — on an education axis, the largest row is often horizontal, and a sweep that
+reads only the head of the ladder finds nothing usable.
+
+🔵 **The ladder, read rather than headlined.** Below `xgo` the axis holds
+`PetoiCamp/OpenCat-Old` (`1.4k★`, robot-cat hardware, and the repository is named *Old*),
+`aaryansamanta/nextgen-ai` (`492★`, a student organisation, not software), two `goplus`
+toolchain repositories (`gogen` `171★`, `ixgo` `147★`), `iamankushpandit/Gume` (`95★`, ESP32
+game-console firmware) and `arm-education/RPi-Pico-projects-for-schools` (`31★`, a
+project-based book). 🔴 **One education engine in the whole top ten**, and it was in eighth
+place by stars.
+
+🔵 **Licence posture of the new row, stated against trend 21.** The agent layer licenses
+permissively and the platform layer copyleft; `p576` refuted the generalisation for the
+autograding layer. The **engine** layer now adds a third data point on the permissive side:
+Apache-2.0, from an organisation that also publishes its compiler and interpreter under the
+same grant. 🔵 One row is not a layer — recorded as a data point, not a finding.
+
+🔴 **And the axis's own gap:** nothing on it addresses **assessment** of what a learner built.
+`spx` is a runtime; the evidence that a pupil learned something has to come from elsewhere.
+
 ## 🆕 `2026-10-31` — `p577` — the platform layer licenses copyleft end to end, and that decides the architecture
 
 🟢 **Twelve foundations re-verified from their repository pages** (see

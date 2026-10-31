@@ -6,6 +6,82 @@ updated: 2026-10-31
 
 # Top AI agents for education
 
+## p578 — 2026-10-31 — **four agents added, every one from an axis never queried in 577 passes, and the head of the largest of those axes is GPL-3.0**
+
+🟢 **The shelf is `20`.** The sixteen rows `p577` verified stand unchanged — they were
+verified the same day, by the same instrument, and nothing on this pass contradicts them.
+The four rows below are **new addresses to this base**, each verified this pass by fetching
+its repository page and reading the licence, star count and description off that page.
+
+| Agent | Repo | Licence | Stars | Region | What it is |
+|---|---|---|---|---|---|
+| Clew | https://github.com/miuuyy/Clew | MIT | 214 | Global | **Prerequisite-graph learning harness.** You state what you know and what you want to learn; it builds an interactive map of topics and prerequisites and proposes a path. Ships as a desktop app (graphs stored locally) and as a ChatGPT plugin. The curriculum-sequencing layer this base had no permissive component for. |
+| Antura | https://github.com/vgwb/Antura | BSD-2-Clause (code); CC-BY-4.0 (art and media) | 128 | EMEA | **Literacy and language-learning game for children.** Unity 6.x, iOS / Android / desktop. Ships Arabic, **Darija**, English, French and Polish. Descends from the Antura *EduApp4Syria* game. 🟢 **The largest EMEA-placeable row on this shelf — 5.3× `feedbacksystem` (24★)** — and the only one with a non-Latin-script content pipeline. |
+| GeoChat | https://github.com/tiwe0/GeoChat | Apache-2.0 | 125 | Global | **Local-first AI maths visualisation over GeoGebra.** Describe a construction in natural language; it builds it on the canvas, checks it and explains it beside the figure. Reads the live canvas and the current selection; 2D and 3D; native tool calling; bring-your-own API key; keys and chat history stay on the device. Tauri + React + Bun, macOS and Windows. |
+| Coding-Tutor | https://github.com/iwangjian/Coding-Tutor | Apache-2.0 | 92 | Global | **Traver** (trace-and-verify) dialogue-tutoring agent — knowledge tracing plus turn-by-turn verification — shipped with **DICT**, an evaluation protocol that pairs **simulated students** with coding tests, plus trained verifier checkpoints (`jwanglvy/Verifier-7B`). ACL 2025 Findings, arXiv `2502.13311`. |
+
+### 🟢 `Coding-Tutor` partly closes the gap `p573` named
+
+`p573` registered, for this page, that *"there is no usable learner-simulation agent, which
+is how a tutor gets tested before it meets a student."* **DICT is that instrument, under
+Apache-2.0**: simulated students paired with pre- and post-tests, with the dialogues
+(`output/dialogue.zip`) and the verifier checkpoints published. 🔴 **It is not a general
+learner simulator** — the task domain is code, and the coding tasks come from
+`EvoCodeBench-2403`, which must be downloaded separately under its own terms. So the gap
+narrows from *absent* to *domain-bound*, which is a different engagement conversation.
+
+### 🔴 Rejected this pass, and the first rejection is the head of the axis
+
+- **`plastic-labs/tutor-gpt` — GPL-3.0, 933★.** It heads **two** of the five axes swept
+  (`topic:tutoring` and `topic:literacy`) and is **the largest dedicated tutoring agent
+  this base has found outside APAC** — 3.4× the largest North-America-placed row on this
+  shelf. 🔴 **And it is copyleft**, so it fails the permissive bar every pattern on
+  [`../compose/patterns.md`](../compose/patterns.md) is built to. Recorded rather than
+  shelved: a studio that reaches for "the obvious open-source AI tutor" lands here, and
+  needs to be told why it cannot ship it.
+- **`eth-lre/mathtutorbench` — 46★, EMNLP 2025 Oral, and the grant contradicts itself on
+  its own page.** The badge reads *License: CC BY 4.0*; the closing text reads
+  *"Attribution-**ShareAlike** 4.0 International"*. 🔴 Either way it is a **content**
+  licence on a code-and-benchmark repository. Unusable as a dependency until the holder
+  resolves it — and it is painful, because an EMEA-origin pedagogical benchmark is exactly
+  what this base is short of (it holds one evaluation instrument, `pedagogy-benchmark`,
+  and that one is LATAM).
+- **`Doenet/DoenetApps` — AGPL-3.0, 17★.** Copyleft and below any size floor. No funder or
+  affiliation is stated on the page, so the NSF-style provenance a reader might assume
+  from `doenet.org` **is not evidenced** and is not recorded.
+- **`goplus/xgo` — 9.5k★, heads `topic:stem-education`, and is a programming language.**
+  Second instance of the class `p577` caught with `ux-ui-agent-skills`: the biggest row on
+  an education axis need not be an education tool. Its sibling `goplus/spx` (Apache-2.0,
+  124★) **is** the education artefact in that org and is shelved one page over, in
+  [`../repos/foundations.md`](../repos/foundations.md), because it is an engine, not an agent.
+
+### 🔵 Skill bundles found this pass — components, not shelf rows
+
+The standing convention (see *Agent-skill bundles* below) holds, and it costs a big row to
+honour it: **`SenmuuuuW/universal-diagnostic-tutor-skill` is MIT and 254★** — larger than
+**13 of the 16** rows `p577` verified — and is still **not** shelved, because it is one
+narrow instruction set rather than an agent an engagement is built around. Same disposition
+for `ndpvt-web/deeptutor-claude-skill` (37★) and `lowwwbank/anything-to-course` (29★), both
+already known to [`trending.md`](trending.md). 🔵 Recorded explicitly so a later pass does
+not read their absence as an oversight and "fix" it.
+
+### 🔵 Adoption caveat on `GeoChat`, stated because it is not in the licence field
+
+Its README grants **GeoChat's own source and documentation** under Apache-2.0. The
+GeoGebra component it drives is a **separate work under its own terms, which were not read
+this pass.** Read them before shipping GeoChat to a client; the permissive grant on the
+wrapper says nothing about the engine inside it.
+
+### 🔵 Method — the verifier is still `WebFetch`, and `curl -sI` is still noise
+
+`p577`'s method correction was re-exercised, not assumed: every row and every rejection
+above came from a `WebFetch` of the repository page. The axis denominators came from
+single-topic GitHub search URLs — never the `topic:X OR topic:Y` form, which `p576` proved
+returns a false zero (`576-A`). Denominators in
+[`../evidence/axis-denominators.2026-10-31-p578.tsv`](../evidence/axis-denominators.2026-10-31-p578.tsv),
+row-by-row verdicts in
+[`../evidence/verified-repos.2026-10-31-p578.tsv`](../evidence/verified-repos.2026-10-31-p578.tsv).
+
 ## p577 — 2026-10-31 — verified shelf
 
 Every row below was verified individually on 2026-10-31 by fetching its GitHub

@@ -6,6 +6,28 @@ updated: 2026-10-31
 
 # Foundational open source repos for education
 
+## p578 — 2026-10-31 — one addition, from an axis never queried in 577 passes
+
+| Repo | Licence | Stars | Region | Layer | Why it is here |
+|---|---|---|---|---|---|
+| https://github.com/goplus/spx | Apache-2.0 | 124 | Global | Block-to-code runtime | **Scratch-compatible Go/XGo 2D game engine for STEM education.** The only permissive block-to-code engine on these shelves, and therefore the one place a primary / lower-secondary computing curriculum can be built without a copyleft dependency at the runtime layer. Verified 2026-10-31 from the repository page. |
+
+🔵 **Region.** The page states no country or affiliation. The owning organisation also
+publishes the XGo compiler (`gogen`) and interpreter (`ixgo`) and the About section links
+`xbuilder.com`; those are **weak** APAC signals and are **not** sufficient under this base's
+own placement rule, so the row is `Global`.
+
+🔴 **Found underneath a head that is not an education tool.**
+[`topic:stem-education`](https://github.com/search?q=topic%3Astem-education&type=repositories)
+holds **`235`** repositories and had never been queried. Its top row is `goplus/xgo` at
+**`9.5k★`** — **a programming language**. `spx` was eighth by stars. Second instance of the
+miscategorisation class `p577` caught on the agent shelf; see
+[`trending.md`](trending.md) for the full ladder.
+
+🔴 **The layer's own gap, declared:** this axis carries **no assessment component**. `spx`
+runs what a pupil builds; nothing on the axis evidences what the pupil learned. That seam
+has to be bought from the autograding layer (`p576`) or built.
+
 ## p577 — 2026-10-31 — verified foundations
 
 All twelve rows verified on 2026-10-31 by reading each repository page directly

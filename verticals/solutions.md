@@ -6,6 +6,31 @@ updated: 2026-10-31
 
 # Vertical education platforms (customisable with AI on top)
 
+## p578 — 2026-10-31 — one addition, and it is the first *permissive* operations system on this page
+
+| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+|---|---|---|---|---|---|---|
+| MyClass | https://github.com/t1112000/tutor-management-app | **MIT** | 110 | **Tutoring-business operations** | Private tutors, tutoring centres, shadow-education providers — the tier that has no LMS and runs on spreadsheets | Scheduling and billing are already modelled, so the AI work is demand forecasting, churn and attendance risk, and parent-facing progress summaries. Attach `Clew` (MIT) for the learning path and `GeoChat` (Apache-2.0) for maths sessions |
+
+🟢 **Why this row matters more than its star count.** Every system of record on this page is
+copyleft — GPL, AGPL, LGPL, with `Sakai` (ECL-2.0) the one permissive exception at the LMS
+tier. **`MyClass` is MIT and it is an operations system**, not a seam: students, schedules,
+bills, Next.js 15 + Postgres, Sequelize migrations, NextAuth, Docker, self-hosted. For the
+first time on this page a client's system of record can be **forked** rather than integrated
+around. 🔵 That inverts the standing recommendation (*"deploy these and call them over their
+APIs"*) **for this tier only** — it does not touch the LMS tier, where the conclusion stands.
+
+🔵 **Region: APAC, on the application's own design** — `Asia/Ho_Chi_Minh` timezone, VND
+currency formatting and a Vietnamese quick-start section. The owner is an individual account
+and the page states no country, so this is the lower-confidence placement channel, not the
+grant.
+
+🔴 **Scope it honestly.** `110★`, an individual maintainer, and no multi-tenant or
+accounting-compliance claim on the page. It is the right base for a **tutoring-centre
+pilot** and the wrong base for a ministry. The tier it serves — private supplementary
+tutoring — is also the tier most exposed in APAC regulatory swings, which belongs in the
+risk section of any proposal built on it.
+
 ## p577 — 2026-10-31 — verified platforms and the AI layer each one accepts
 
 These are the real systems a client already runs, or would plausibly adopt. All

@@ -6,6 +6,40 @@ updated: 2026-10-31
 
 # Education AI — market map and opportunities
 
+## p578 — 2026-10-31 — **the regional legs returned nothing this page did not already hold, and that is the finding**
+
+🔴 **All four mandated regional `WebSearch` legs went nil on intel, not only on addresses —
+the first time on this register.** Every fact served was checked against this base by token
+before anything was written, and every one was already here: the EU **Digital Omnibus**
+deferral of stand-alone Annex III obligations to **`2 December 2027`**; Korea's **AI Basic
+Act** in force **`22 January 2026`**; Vietnam's AI law effective **`1 March 2026`** with
+education among its high-risk sectors; Australia's **TEQSA** generative-AI action plans;
+Dubai **KHDA** guidance to private schools; UNESCO **IESALC** `87 %` of institutions using
+AI against `26 %` with a strategy (200 institutions, 19 countries); **Cetic.br** `53 %` of
+Brazilian school administrators using AI against `22 %` with guidelines; the UNESCO **LAC
+Observatory** launched **`14 April 2026`**; Universidad de los Andes' **`716`** regulatory
+instruments across 23 countries; North Carolina **Session Law 2026-41**; Maryland **SB 720**;
+**SUNY**'s autumn-2026 AI-literacy requirement; and the **`USD 10.6 bn` (2026) → `42.48 bn`
+(2030)** sizing.
+
+🔵 **`Gap 440-C` is now realised rather than predicted.** It reads that the regulatory
+channel is saturated and four legs a pass are being spent to confirm it. This pass is the
+confirmation: **the legs are not broken, they are finished.** The channel that still pays is
+the one `p576` proved — **per-jurisdiction queries in the jurisdiction's own language** — and
+it should take those four slots.
+
+🔴 **The North America leg re-served "134 bills across 31 states", dated "as of March 2026"
+— the figure `p455` retired.** Third consecutive pass to be handed it (`p575`, `p576`,
+`p578`); the `Gap 417-A` sighting counter should read **nine**. The figure is carried on the
+`### North America` subsection below with that provenance attached and must not be re-dated.
+
+🟡 **One sourcing note worth keeping.** The EMEA leg surfaced a disagreement *inside* its own
+results on when education obligations bite — one guide saying August 2026, a later one
+(updated 1 September 2026) saying `2 December 2027`. This base already holds the later date,
+and the leg's own advice was to verify against the Official Journal, which **is not reachable
+from this harness** (`Gap 521-D`, open and unclosable from this session class). The date is
+carried as **secondary, twice-attested**, which is what it has always been here.
+
 ## p577 — 2026-10-31 — verified regional evidence
 
 Repository placements below are verified from the repository pages themselves
@@ -330,6 +364,16 @@ said out loud before any of it reaches a client deck.
 ## Opportunities by region
 
 ### North America
+
+**p578 — 2026-10-31.** 🔴 No movement. The leg re-served the retired **"134 bills / 31
+states (as of March 2026)"** figure for the third consecutive pass — treat the number above
+as **provenance-flagged, not current**. 🟢 **What changed is the supply, not the demand:**
+the largest dedicated tutoring agent this base has found outside APAC,
+`plastic-labs/tutor-gpt` (**933★**), is **GPL-3.0**. **Opportunity:** this is the region
+whose buyer most often arrives having already found that repository. The sellable answer is
+the permissive stack — `Clew` (MIT) for sequencing, `Coding-Tutor`/DICT (Apache-2.0) for
+evidence that the tutor works, `terracotta` (Apache-2.0) for randomised effect — attached to
+Canvas over `ltijs`, with the licence argument made **once, in writing, in the proposal**.
 
 **p577 — 2026-10-31.** Regulation is **per-state, not federal**: 134 bills across
 31 states tracked as of March 2026 (privacy, classroom restrictions, curriculum),
@@ -703,6 +747,20 @@ WCAG 2.1 AA). 🔴 **`574-E` stays open**: `ada.gov` and `federalregister.gov` a
 outside this session's egress allow-list, so the one dated obligation on these shelves
 remains **secondary-only for a fourth pass.**
 ### EMEA
+
+**p578 — 2026-10-31.** 🟢 **The region's supply gap narrowed for the first time in this
+base's history.** [`vgwb/Antura`](https://github.com/vgwb/Antura) — **BSD-2-Clause** code,
+CC-BY-4.0 assets, **128★**, Unity 6.x, shipping **Arabic, Darija, English, French and
+Polish**, descended from the *EduApp4Syria* game — is **5.3× the largest EMEA row this base
+carried** and the only one with a **non-Latin-script content pipeline**.
+**Opportunity:** Gulf and North-African engagements (the KHDA-regulated private-school tier,
+and Arabic-first literacy programmes) have until now had to be quoted as greenfield here.
+`Antura` makes them a **localisation-and-instrumentation** engagement instead: fork the game
+under BSD-2, add a dialect, wire xAPI out to `potsie` (MIT) for the evidence the funder asks
+for. 🔴 **And the region's evaluation gap did not close:** `eth-lre/mathtutorbench` (EMNLP
+2025 Oral) carries **two contradictory content licences on one page** and cannot be used as
+a dependency — so an EU AI Act Annex III conformity file still has **no EMEA-origin
+pedagogical benchmark** to cite.
 
 **p577 — 2026-10-31.** Compliance frame is the **EU AI Act + GDPR**. The
 education-specific instruments to write against: the **European Commission's AI
@@ -1137,6 +1195,19 @@ ministry-level education AI adoption figures for any single EMEA state.** The
 regional leg returns EU-level policy and cross-sector enterprise surveys; it does not
 reach a national education ministry.
 ### APAC
+
+**p578 — 2026-10-31.** 🟢 **The region keeps supplying the permissive tier, and this pass it
+supplied the *operations* layer rather than the model layer.**
+[`t1112000/tutor-management-app`](https://github.com/t1112000/tutor-management-app) (MyClass,
+**MIT**, 110★, Vietnamese localisation) is the **first permissive system of record** on
+[`../verticals/solutions.md`](../verticals/solutions.md) — every other one is copyleft.
+**Opportunity:** the private supplementary-tutoring tier across Vietnam, Indonesia and the
+Philippines runs on spreadsheets and has no LMS; MyClass is forkable, so the offer is a
+**white-label tutoring-centre platform** with demand forecasting, attendance risk and
+parent-facing progress summaries on top — a build, not an integration. 🔴 **Scope the
+regulatory exposure explicitly:** supplementary tutoring is the sub-sector most exposed to
+policy swings in this region, so the proposal needs a migration story for the data if the
+business model is restricted.
 
 **p577 — 2026-10-31.** **This is where the open-source supply lives.**
 `HKUDS/DeepTutor` (Apache-2.0, 52.7k★) and `THU-MAIC/OpenMAIC` (MIT, 42.2k★) are
@@ -1601,6 +1672,19 @@ jurisdiction with an education-*specific* accessibility code** (AICTE / RPwD ss.
 GIGW 3.0 at WCAG 2.1 AA), and `shravyamudra` is the first shelved component that lands
 against it.
 ### LATAM
+
+**p578 — 2026-10-31.** 🔴 **No movement, and the nil is specific: the five GitHub axes swept
+this pass — `topic:tutoring` (466), `topic:learning-path` (466), `topic:stem-education`
+(235), `topic:math-education` (152), `topic:literacy` (115) — returned `0` LATAM-placeable
+repositories between them.** `1,434` repositories, no row the region could claim. 🔵 That is
+consistent with what `p576` established the hard way: **this region is reachable on
+language axes (`topic:educacao`, `topic:educacion`) and on jurisdiction queries, and not on
+English-language capability axes.** Recorded so the next pass does not spend its budget
+here. **Opportunity unchanged** and still the strongest on this page: the `87 %`-use /
+`26 %`-strategy spread (UNESCO IESALC) and Colombia's `Ley 2626 de 2026` are demand that
+exists whether or not GitHub supplies a LATAM-origin agent — the components get imported,
+and the **curriculum alignment and the Spanish/Portuguese content pipeline** are the
+billable part.
 
 **p577 — 2026-10-31.** **ECLAC (Oct 2025)** ranks **Chile, Brazil and Mexico** as
 regional leaders across 100+ indicators of capability, research, adoption and

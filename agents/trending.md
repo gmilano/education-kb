@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `2026-10-31` — `p578` — **the mandated search legs went nil on BOTH halves for the first time, and five never-queried axes paid instead**
+
+🔴 **Fifteenth consecutive nil on the four global `WebSearch` legs**, and this time the
+**four regional legs went nil too — not just on addresses, but on intel.** Every fact they
+served was already in this base, checked by token before a word was written: the EU
+**Digital Omnibus** deferral to `2 December 2027`, Korea's **AI Basic Act** in force
+`22 January 2026`, Australia's **TEQSA** action plans, Dubai **KHDA** guidance, UNESCO
+**IESALC** `87 %` use against `26 %` strategy, **Cetic.br** `53 %` against `22 %`, the
+UNESCO **LAC Observatory** of `14 April 2026`, Universidad de los Andes' **`716`
+instruments**, North Carolina **Session Law 2026-41**, Maryland **SB 720**, **SUNY**'s
+autumn-2026 AI-literacy requirement, and the `USD 10.6 bn → 42.48 bn` sizing. 🔵 **That is
+new information about the instrument, not about the market:** `Gap 440-C` predicted the
+regulatory channel would saturate and four legs a pass would be spent confirming it. It has
+now happened. The legs are not broken — they are *finished*.
+
+🔴 **And the North America leg re-served "134 bills / 31 states", dated "as of March 2026"
+— the figure `p455` retired. Third consecutive pass to be handed it** (`p575`, `p576`,
+`p578`). The sighting counter in `Gap 417-A` should read **nine**.
+
+🟢 **Five GitHub axes, `1,434` repositories visible, none of them ever queried in `577`
+passes, and four agents qualified.**
+
+| axis | repositories | prior queries | top ★ | new shelved |
+| --- | --: | --: | --- | --: |
+| [`topic:tutoring`](https://github.com/search?q=topic%3Atutoring&type=repositories) | **466** | 🔴 `0` | `plastic-labs/tutor-gpt` **933** | 🟢 **3** |
+| [`topic:learning-path`](https://github.com/search?q=topic%3Alearning-path&type=repositories) | **466** | 🔴 `0` | `shovanch/fullstack-web-developer-path` 3.5k | 🟢 **1** |
+| [`topic:stem-education`](https://github.com/search?q=topic%3Astem-education&type=repositories) | **235** | 🔴 `0` | `goplus/xgo` 9.5k | 🔵 `1` → foundations |
+| [`topic:math-education`](https://github.com/search?q=topic%3Amath-education&type=repositories) | **152** | 🔴 `0` | `tiwe0/GeoChat` 125 | 🟢 **1** |
+| [`topic:literacy`](https://github.com/search?q=topic%3Aliteracy&type=repositories) | **115** | 🔴 `0` | `plastic-labs/tutor-gpt` **933** | 🟢 **1** |
+
+🟢 **The find of the week is EMEA, and this base has been short of exactly this.**
+[`vgwb/Antura`](https://github.com/vgwb/Antura) — **BSD-2-Clause** code, CC-BY-4.0 art and
+media, **`128★`** — an award-winning children's literacy and language-learning game in
+Unity 6.x, shipping **Arabic, Darija, English, French and Polish**, descended from the
+Antura *EduApp4Syria* game. 🟢 **It is 5.3× the largest EMEA row this shelf carried**
+(`feedbacksystem`, `24★`) and it is the first row here with a **non-Latin-script content
+pipeline** — which is the part a Gulf or North-African engagement cannot buy anywhere else
+on these shelves. 🔵 Placed EMEA on **subject matter and shipped languages**, the
+lower-confidence origin channel `574-F` was re-scoped to allow — *not* on the grant, whose
+holder line names no country.
+
+🟢 **`iwangjian/Coding-Tutor` (Apache-2.0, `92★`, ACL 2025 Findings) narrows the gap `p573`
+registered as absent.** Its **DICT** protocol pairs **simulated students** with pre- and
+post-tests, and the dialogues and verifier checkpoints are published. 🔴 Domain-bound: the
+tasks are code, from `EvoCodeBench-2403`, downloaded separately under its own terms. *Absent*
+→ *domain-bound*.
+
+🟢 **Two more shelved:** [`miuuyy/Clew`](https://github.com/miuuyy/Clew) (**MIT**, `214★`)
+builds an interactive **prerequisite graph** and proposes a path through it, desktop-local;
+and [`tiwe0/GeoChat`](https://github.com/tiwe0/GeoChat) (**Apache-2.0**, `125★`) drives
+**GeoGebra** from natural language, reads the live canvas, and keeps keys and history on the
+device. 🔵 GeoChat's grant covers **its own** source only — the GeoGebra engine inside it is
+a separate work whose terms were **not** read this pass.
+
+🔴 **The head of the biggest axis fails the bar, and that is the week's second real result.**
+`plastic-labs/tutor-gpt` tops **both** `topic:tutoring` and `topic:literacy` at `933★` — the
+largest dedicated tutoring agent this base has seen outside APAC — and it is **GPL-3.0**. A
+studio reaching for "the obvious open-source AI tutor" lands on an unshippable one.
+
+🔴 **A new instance of the licence-conflict class, and it costs the region this base most
+wants.** [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (`46★`, EMNLP
+2025 Oral) shows **`License: CC BY 4.0`** in its badge and **`Attribution-ShareAlike 4.0`**
+in its closing text — two statements, one page, different grants — and both are **content**
+licences on a code-and-benchmark repository. An EMEA pedagogical benchmark, unusable until
+the holder picks one.
+
+🔴 **Second instance of `p577`'s "size reads as credibility".** `goplus/xgo` heads
+`topic:stem-education` at `9.5k★` and is **a programming language**. The education artefact
+in that org is `goplus/spx` (Apache-2.0, `124★`, Scratch-compatible 2D engine) — shelved in
+[`../repos/foundations.md`](../repos/foundations.md), not here.
+
+🔵 **And the convention was honoured at a visible cost:**
+`SenmuuuuW/universal-diagnostic-tutor-skill` is **MIT** and **`254★`** — bigger than `13` of
+the `16` rows `p577` verified — and is **still not shelved**, because a skill bundle is a
+component, not an agent. Recorded so no later pass reads the absence as an oversight.
+
 ## 🆕 `2026-10-31` — `p577` — the shelf was audited instead of extended, and three rows were not education
 
 **This week's finding is a defect in what this base had already shipped, not a new agent.**

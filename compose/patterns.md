@@ -6,6 +6,85 @@ updated: 2026-10-31
 
 # Compose patterns — education
 
+## p578 — 2026-10-31 — two recipes, both built from rows verified this pass
+
+## P-580-A — 🟢 Arabic-first children's literacy programme, forkable end to end (8–10 weeks, EMEA)
+
+**Who it is for.** A ministry, a Gulf private-school group under KHDA guidance, or an NGO
+funder running an early-grade literacy programme in Arabic or a Maghrebi dialect — the
+engagement this base could not quote without greenfield game development until this pass.
+
+**Why it is now buildable.** [`vgwb/Antura`](https://github.com/vgwb/Antura) is
+**BSD-2-Clause** on its code (assets CC-BY-4.0), **128★**, Unity 6.x, already shipping
+**Arabic, Darija, English, French and Polish**, and descended from the *EduApp4Syria* game.
+BSD-2 means **fork, rebrand and ship** — no copyleft obligation anywhere in the chain.
+
+**Wire-up, concretely.**
+
+1. **Fork `vgwb/Antura`.** Keep the code under BSD-2 attribution; treat the CC-BY-4.0 art and
+   media as a **separate grant** and keep the attribution file intact in the shipped build —
+   this is the one compliance step teams skip, and it is in the assets, not the code.
+2. **Add the target dialect** as a new language pack rather than a fork of the content
+   pipeline, so upstream fixes keep merging. Budget the phoneme and grapheme work as
+   content, not engineering; it is the long pole.
+3. **Sequence the curriculum with [`miuuyy/Clew`](https://github.com/miuuyy/Clew) (MIT).**
+   Model the literacy skills as a prerequisite graph, export the ordering, and drive Antura's
+   mini-game progression from it instead of hand-ordering levels.
+4. **Instrument with xAPI out to [`openfun/potsie`](https://github.com/openfun/potsie)
+   (MIT)** — Grafana dashboards, production-ready. Use `potsie`, **not** `openfun/warren`,
+   whose own README states it is a proof of concept.
+5. **Evidence of effect:** if the funder wants a controlled claim, add
+   [`terracotta`](https://github.com/terracotta-education/terracotta) (Apache-2.0) on the
+   LMS side for randomised assignment of content variations.
+
+**Licence ledger:** BSD-2 (game) + CC-BY-4.0 (assets) + MIT (`Clew`, `potsie`) + Apache-2.0
+(`terracotta`). 🟢 **No copyleft, and the client can close the fork.**
+
+🔴 **Two things to tell the client before signing.** The EU AI Act's stand-alone Annex III
+obligations now apply from **`2 December 2027`** (secondary, twice-attested — the Official
+Journal is not reachable from this harness), so an EU deployment has a dated runway, not an
+exemption. And **there is no EMEA-origin pedagogical benchmark** to cite in the conformity
+file: `eth-lre/mathtutorbench` carries **two contradictory content licences on one page** and
+cannot be used as a dependency. Cite `AI-for-Education/pedagogy-benchmark` (MIT) instead and
+be explicit that its items are Chilean in origin.
+
+## P-580-B — 🟢 A tutor you can prove works before it meets a student (4–6 weeks, Global)
+
+**The problem this closes.** `p573` registered that this base had **no usable
+learner-simulation agent** — so every tutor engagement was sold on vibes and measured after
+go-live, in front of real children. That is now only **partly** true, and the partial answer
+is worth selling.
+
+**Wire-up, concretely.**
+
+1. **Take the evaluation harness, not the tutor.** From
+   [`iwangjian/Coding-Tutor`](https://github.com/iwangjian/Coding-Tutor) (**Apache-2.0**,
+   92★, ACL 2025 Findings) use **DICT**: simulated students paired with pre- and post-tests,
+   plus the published dialogue corpus (`output/dialogue.zip`) and the verifier checkpoints
+   (`jwanglvy/Verifier-7B`).
+2. **Keep its second idea too — turn-by-turn verification.** Traver traces what the simulated
+   learner knows and verifies each turn; that is the mechanism that makes the pre/post delta
+   attributable to the tutor rather than to the test.
+3. **Swap the domain.** 🔴 **DICT's tasks are code**, from `EvoCodeBench-2403`, downloaded
+   separately **under its own terms — read them.** For a maths engagement, replace the task
+   bank with items calibrated by `catsim` (BSD-3) and `girth` (MIT) — the permissive
+   psychometrics pair already on these shelves — and keep DICT's protocol shape.
+4. **Put the tutor under test.** `DeepTutor` (Apache-2.0) or `OATutor` (MIT) as the
+   system under test; `Clew` (MIT) supplying the prerequisite ordering the simulated learner
+   is walked through.
+5. **Ship the numbers as the deliverable.** Pre/post delta per simulated-learner profile, with
+   the profiles and the task bank handed over, so the client can re-run it on their own
+   content. 🟢 **That artefact is the differentiator** — it is what a district or a ministry
+   asks for and almost no bidder has.
+
+**Licence ledger:** Apache-2.0 (`Coding-Tutor`, `DeepTutor`) + MIT (`Clew`, `girth`,
+`OATutor`) + BSD-3 (`catsim`). 🔵 `EvoCodeBench-2403` is **outside** this ledger and is the
+one term to check.
+
+🔴 **State the limit in the proposal.** Simulated learners test the **tutoring loop**, not
+safeguarding, not accessibility, and not whether a child will use it twice. Sell it as the
+gate before a pilot, never as a substitute for one.
+
 ## p577 — 2026-10-31 — six recipes, every component verified
 
 Each pattern names the exact repositories, their licences, and how they wire

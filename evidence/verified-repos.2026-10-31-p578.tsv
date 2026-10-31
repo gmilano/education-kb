@@ -1,0 +1,12 @@
+slug	licence_shown	stars	region	verifier	disposition	note
+miuuyy/Clew	MIT	214	Global	WebFetch repo page	SHELVED	learning-path / prerequisite-graph harness; desktop app + ChatGPT plugin; graphs stored locally
+vgwb/Antura	BSD-2-Clause (code) + CC-BY-4.0 (art/media)	128	EMEA	WebFetch repo page	SHELVED	literacy and language-learning game for kids; Unity 6.x; Arabic, Darija, English, French, Polish; descends from the Antura EduApp4Syria game
+tiwe0/GeoChat	Apache-2.0	125	Global	WebFetch repo page	SHELVED	local-first AI maths visualisation over GeoGebra; Tauri + React + Bun desktop; native tool calling; BYO API key; keys and history on device
+iwangjian/Coding-Tutor	Apache-2.0	92	Global	WebFetch repo page	SHELVED	Traver (trace-and-verify) dialogue tutoring agent + DICT evaluation protocol pairing simulated students with coding tests; ACL 2025 Findings; arXiv 2502.13311
+t1112000/tutor-management-app	MIT	110	APAC	WebFetch repo page	SHELVED-VERTICALS	MyClass: self-hosted private-tutoring operations (students, schedules, billing); Next.js 15 + Postgres; Vietnamese localisation
+goplus/spx	Apache-2.0	124	Global	WebFetch repo page	SHELVED-FOUNDATIONS	Scratch-compatible Go/XGo 2D game engine for STEM education
+plastic-labs/tutor-gpt	GPL-3.0	933	Global	WebFetch repo page	REJECTED-COPYLEFT	head of both topic:tutoring and topic:literacy; largest dedicated tutoring agent found outside APAC, and copyleft
+eth-lre/mathtutorbench	CONFLICT: badge CC-BY-4.0 vs text CC-BY-SA-4.0	46	EMEA	WebFetch repo page	REJECTED-GRANT-CONFLICT	EMNLP 2025 Oral; a content licence applied to a code+benchmark repo, and the two statements on the page disagree
+Doenet/DoenetApps	AGPL-3.0	17	Global	WebFetch repo page	REJECTED-COPYLEFT-AND-SIZE	doenet.org website and apps; no funder or affiliation stated on the page
+SenmuuuuW/universal-diagnostic-tutor-skill	MIT	254	Global	WebFetch repo page	COMPONENT-NOT-SHELF	diagnosis-first tutor skill; bigger than 13 of the 16 p577 shelf rows and deliberately not shelved, per the standing skill-bundle convention
+goplus/xgo	not read	9500	Global	search listing only	REJECTED-NOT-EDUCATION	heads topic:stem-education and is a programming language, not an education tool
