@@ -4,6 +4,104 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (seventh pass · `p569`) — the star floor was hiding a whole field, and `13` new addresses came out of the band the sort cannot reach
+
+**`568-C` asked for one thing: a commit-count read on the shortlisting path, and
+a re-sweep at `stars:<50` where a star-sorted sweep is structurally blind.** 🟢
+**Both ran, and the result settles the question with a number.**
+
+| channel | addresses NEW to this base |
+| --- | --: |
+| 🔴 `WebSearch` × 8 legs (4 global, 4 regional), the mandated queries | 🔴 **`0`** — **sixth consecutive nil** |
+| 🟢 `github.com/search` at `stars:<50`, sorted `recently updated`, 3 axes × 10 rows | 🟢 **`13`** |
+
+🔴 **Eight search legs returned nothing this base did not already hold. Thirty
+rows off one search page returned thirteen.** 🔵 Every candidate the eight legs
+named — `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`,
+`rohitg00/ai-engineering-from-scratch`, Sakai, OpenEduCat, `irtorch`, OpenSIS,
+Fedena — was checked against the tree and **all eight were already shelved**.
+🟢 **The budget has now been moved; this is the sixth pass that justifies it and
+the first that acts on it.**
+
+### 🟢 The three axes, with denominators
+
+| axis (`stars:<50`, sorted by recently updated) | results | rows read | new |
+| --- | --: | --: | --: |
+| `topic:ai-tutor` | **793** | 10 | 🟢 **5** |
+| `topic:learning-analytics` | **382** | 10 | 🟢 **2** |
+| `topic:psychometrics` | **496** | 10 | 🟢 **6** |
+
+🔵 **Note the denominators against `p568`'s star-sorted equivalents:
+`topic:ai-tutor` answered `816` sorted by stars and `793` at `stars:<50` — the
+field is almost entirely BELOW the star floor.** The axis was never saturated;
+the sort was.
+
+### 🟢 Commit count separates the field, and recency alone does not
+
+🟢 **All 13 were read to the blob with `git clone --filter=blob:none` and counted
+with `git rev-list --count HEAD`** — an exact figure, not a rendered one.
+
+| address | ★ | commits | authors | window | grant |
+| --- | --: | --: | --: | --- | --- |
+| 🟢 [`swsgbl/ai-learning-os`](https://github.com/swsgbl/ai-learning-os) | 1 | 🟢 **1,313** | 4 | `2026-08-31` → `2026-10-31` | ⚠️ **MIT + AGPL-3.0 on `services/api`** |
+| 🟢 [`keweijun/throughline`](https://github.com/keweijun/throughline) | 2 | 🟢 **354** | 1 | `2026-10-13` → `2026-10-31` | 🟢 MIT |
+| 🟢 [`GenshinKings/voyage`](https://github.com/GenshinKings/voyage) | 1 | 🟢 **224** | 3 | `2026-10-14` → `2026-10-31` | 🟢 MIT |
+| 🟢 [`DaniyalMlk/calibrate`](https://github.com/DaniyalMlk/calibrate) | 0 | 🟢 **214** | 1 | `2026-09-07` → `2026-10-30` | 🟢 MIT |
+| [`sergeymeng/banxue`](https://github.com/sergeymeng/banxue) | 0 | 32 | 1 | `2026-10-30` → `2026-10-31` | 🟢 MIT |
+| [`kekistermann/Exploring-the-PsychometricToolbox`](https://github.com/kekistermann/Exploring-the-PsychometricToolbox) | 0 | 20 | 1 | `2026-10-30` | 🟢 MIT |
+| [`finite-sample/guess`](https://github.com/finite-sample/guess) | 3 | 19 | 2 | `2016-02-08` → `2026-10-30` | 🟢 **MIT via `DESCRIPTION`** |
+| [`smatilio/ic-tri-simulacao`](https://github.com/smatilio/ic-tri-simulacao) | 1 | 16 | 1 | `2026-10-29` → `2026-10-30` | 🔴 **NO GRANT** |
+| [`JaxisReal/Moodle-Reporte-Limpio`](https://github.com/JaxisReal/Moodle-Reporte-Limpio) | 0 | 9 | 2 | `2026-10-04` → `2026-10-29` | 🟢 MIT |
+| [`zeyu-chen-dev/calculus-tutor-skill`](https://github.com/zeyu-chen-dev/calculus-tutor-skill) | 0 | 5 | 1 | `2026-10-31` | 🟢 MIT |
+| [`Else1337/PhraseNest`](https://github.com/Else1337/PhraseNest) | 0 | 4 | 1 | `2026-10-31` | 🔴 **NO GRANT** |
+| [`verycoolapps/Statistica`](https://github.com/verycoolapps/Statistica) | 0 | 2 | 1 | `2026-10-30` | 🟢 MIT |
+| ⛔ [`rootcoder007/morie`](https://github.com/rootcoder007/morie) | 0 | — | — | — | ⛔ **AGPL-3.0** |
+
+🟢 **The separation is clean and stars do not produce it.** Sorted by stars these
+thirteen rows run `3, 2, 1, 1, 0, 0, …` — noise. Sorted by commits they split
+into **`4` repositories above `200` commits** and **`5` at or below `9`**, and the
+second group is announcement-shaped: `Statistica` is `2` commits, `PhraseNest`
+is `4`, `calculus-tutor-skill` is `5`, all first-committed within the last 48
+hours. 🔵 **Recency put all thirteen on the same page. Only the commit count told
+them apart.** `568-C` is closed on this evidence.
+
+🔴 **The honest risk `568-C` predicted is confirmed too:** this band is where the
+ungranted repositories concentrate — **`2 of 13` carry no licence at 5 filenames
+× 2 branches**, against `0 of 10` in `p568`'s star-sorted top-of-field. The
+licence gate must run first, and here it did.
+
+### 🟢 `finite-sample/guess` — the R tier's prescribed channel pays out again
+
+🔴 Its `master/LICENSE` is **52 bytes** and names no licence: `YEAR: 2015` /
+`COPYRIGHT HOLDER: Gaurav Sood and Ken Cor`. A LICENSE-file read — this base's
+primary instrument — returns **nothing usable**. 🟢 **`master/DESCRIPTION` answers
+`License: MIT + file LICENSE`**, which is the CRAN-mandated field and `ACTION RS`'s
+whole point. 🟢 **And a second field places the repository:** `Authors@R` carries
+`mcor@ualberta.ca` — **University of Alberta**, so **North America**, recovered
+from a manifest rather than from a grant. 🔵 **That is a placement channel this
+base has not used before:** for the R tier, `DESCRIPTION`'s author email domain
+places a package the copyright line cannot. Registered as `569-D`.
+
+🟢 Substance: *"latent class models that leverage informative **pre-post test
+transitions** to account for guessing behaviour"* — guessing-corrected learning
+gain, `Imports:` empty. It is the measurement counterpart to
+[`../repos/foundations.md`](../repos/foundations.md)'s new assessment layer.
+
+### 🔴 What this band does NOT contain
+
+🔴 **No learning-analytics dashboard appeared here either** — the two new
+`topic:learning-analytics` rows are a Moodle report plugin and a Brazilian IRT
+simulation study. 🟢 The dashboard claim is nonetheless **struck below** as false,
+because `openfun/warren` and `openfun/potsie` were always in the tree; the axis
+being thin and the claim being wrong are two different facts and this base
+conflated them for six passes.
+
+🔴 **`567-A`…`567-F` and `566-A`/`566-D` remain untouched.** No tool-surface
+instrument ran this pass either; this pass bought discovery and verification.
+
+---
+
+
 ## 2026-10-31 (sixth pass · `p568`) — the `topic:video` ask ran, and lecture video is a three-repo shelf whose shared engine is proprietary cloud TTS
 
 **This pass executed the fifth pass's closing instruction** — *"a `topic:video`
@@ -176,8 +274,16 @@ to every other industry KB in this collection, not only education.
   136,744★) surfaced incidentally and is **short-form social video, not lecture
   content** — it is deliberately not shelved and should not be offered as
   courseware tooling. A `topic:video` sweep is the next pass's job.
-- **No open-source learning-analytics dashboard** still, sixth pass — only the
-  LRS (`openfun/ralph`) that would feed one.
+- ~~**No open-source learning-analytics dashboard** still, sixth pass — only the
+  LRS (`openfun/ralph`) that would feed one.~~
+  🔴 **STRUCK `2026-10-31` (`p569`) — FALSE WHEN WRITTEN.** [`openfun/warren`](https://github.com/openfun/warren)
+  (MIT) and [`openfun/potsie`](https://github.com/openfun/potsie) (MIT) were
+  already in this repository, published by `ralph`'s own publisher. Refuted at
+  `p568` (`568-A`); **the sentence itself was left standing on this page for a
+  further pass**, which is what `569-A` is about. 🔵 **Append-only does not mean
+  uncorrectable:** a strike-through plus a dated note is an *addition*, so the
+  history survives and the claim stops reading as current. That is this base's
+  convention from here on.
 
 ---
 

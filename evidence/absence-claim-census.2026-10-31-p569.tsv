@@ -1,0 +1,19 @@
+tier	metric	value	note
+run	when	post-write	figures below are the FINAL run, after this pass's own sections were written
+broad	pages_scanned	11	live pages only, archive excluded
+broad	shelf_rows_indexed	10892	lines carrying a github.com address
+broad	distinct_addresses	3458	deduplicated owner/repo
+broad	absence_claims	1780	english + spanish triggers
+broad	undated	1337	75.1 pct carry no p-id and no ISO date
+broad	not_checkable	68	fewer than 2 content tokens
+broad	full_token_collision	86	all content tokens present on a shelf-row line
+broad	partial_collision	235	n-1 of n tokens
+narrow	supply_claims	569	absence sentence naming a buildable-on noun
+narrow	quoted_or_struck_excluded	11	quotation != claim; struck != live
+narrow	of_which_struck	3	strike-through recognised, p569 convention
+narrow	undated	417	73.3 pct
+narrow	full_token_collision	27	the gateable set
+validation	founding_case_isolated	yes	repos/trending.md:179 flagged pre-strike; agents/trending.md:95 (its refutation) excluded as blockquote
+validation	own_sections_clean	yes	0 flags inside any p569 section, verified by line range on 5 pages
+yield	gap_424B_closed	yes	instrument flagged a 145-pass-old gap this base was carrying as open
+yield	duplicate_registration_found	yes	568-A and Gap 424-B are the same gap registered 144 passes apart

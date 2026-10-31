@@ -166,6 +166,39 @@ an assessment component that answers its data politics.**
   heavily outnumbers enacted statute, and the picture is state-by-state. Canada
   remains provincial (see above); Mexico is covered under LATAM.
 
+
+#### 🆕 `p569` (`2026-10-31`) — one placed row, on a channel this base had not used
+
+🟢 **[`finite-sample/guess`](https://github.com/finite-sample/guess) (MIT) is
+placed North America, and the placement channel is new.** Its copyright line
+names only two individuals — which under this base's own instrument places
+nothing — but `master/DESCRIPTION`'s `Authors@R` field carries
+**`mcor@ualberta.ca`**: the **University of Alberta**. 🔵 **For the R tier, a
+CRAN manifest places a package where the grant cannot.** Registered `569-D`.
+
+🔵 **Regional read, this pass (secondary sources, treated as directional).**
+North America remains the largest regional market on every source that splits it
+out, at **36–38% share** (one vendor puts 2026 at **USD 3.68 bn**); the
+**USD 169 m** in FIPSE awards including responsible-AI use is the most concrete
+public funding signal. 🔴 **Governance is still state-by-state, not federal** —
+**134 bills across 31 states** tracked as of March 2026 — and a multi-country
+engagement must reconcile Canadian federal/provincial requirements with US state
+law. COPPA remains the binding constraint in the child-facing segment.
+
+🟢 **The opportunity this pass creates here is assurance work, not discovery.**
+`P-572-A` exists because certification and awarding bodies under accreditation
+review must defend how item parameters were estimated and how forms were
+equated. The permissive stack to do that is now complete (see
+[`../repos/foundations.md`](../repos/foundations.md)) and **every component of it
+is pre-adoption software** — which makes the cross-validation harness the
+billable deliverable rather than a caveat.
+
+🔴 **Declared gap, stated plainly: the `AI education North America 2026 adoption
+regulation players` leg returned ZERO repository-level assets.** It returned
+market-research summaries and vendor blogs only. That is the sixth consecutive
+pass in which the regional search legs produced no new address in any region —
+see the Global section.
+
 ### EMEA
 
 **The compliance calendar has two tracks, and only one of them is live.**
@@ -354,6 +387,45 @@ European, and it closes the region's provenance request.**
   component: `abogen` (**MIT**) produces synchronised captions, beside
   `opendataloader-pdf`'s `eaa` / `pdf-ua` tagged-PDF output.
 
+
+#### 🆕 `p569` (`2026-10-31`) — no new placed row, and the regulatory frame got more specific
+
+🔴 **The EMEA leg returned no repository-level asset this pass.** EMEA's placed
+institutional rows remain `p568`'s France Université Numérique stack
+(`ralph` / `warren` / `potsie`, all MIT) plus
+`thm-mni-ii/feedbacksystem` (Apache-2.0, Technische Hochschule Mittelhessen).
+🔴 **`567-A`'s ask — place the two EMEA Moodle MCP vendors — is still open and
+untouched for a third pass.**
+
+🟢 **What did sharpen is the demand side, and it is specific enough to sell
+against.** The **Council of Europe** has found a *lack of rigorous monitoring and
+regulation of AI in education* and its expert group is now working on **which
+aspects should be regulated** rather than whether. 🟢 **More concrete: the
+Council of the EU's agenda carries an AI literacy framework for primary and
+secondary education** inside the **2026–2030 European Education Area** work
+programme. 🔵 Net public support for stronger AI regulation in Europe moved
+**+61% (2025) → +78% (2026)**, so the direction of travel is tighter, not looser.
+UK, Germany and France lead adoption on the vendor reports that split by country.
+
+🟢 **Two distinct engagement shapes follow, and they are not the same sale:**
+
+1. **Conformity work** — the EU AI Act's **Annex III** *evaluation of learning
+   outcomes* category, obligations landing **2 December 2027**. `P-572-A` is
+   built for this: calibration provenance, DIF screening across accountable
+   splits, equating argument, full xAPI audit trail. 🔵 **The 2027 date is close
+   enough that an awarding body starting in 2027 is already late.**
+2. **AI literacy curriculum and assessment** — an EU-level framework for schools
+   implies instruments to assess literacy against it. 🟢 That is `itembank` +
+   `calibrate` + `ltijs` on a national curriculum, and it is a procurement that
+   does not exist yet.
+
+⚠️ **Licence note that bites hardest in EMEA:** the platforms of record here are
+copyleft, and `p569` adds a sharper case —
+[`swsgbl/ai-learning-os`](https://github.com/swsgbl/ai-learning-os) reads **MIT**
+at its licence file while owing **AGPL-3.0 §13** on the one service a hosted
+engagement would run. For a public-sector EMEA buyer with a hosting mandate,
+read `NOTICE.md` before the licence file (`P-572-B`).
+
 ### APAC
 
 **The region's evidence base improved sharply this pass and is no longer
@@ -513,6 +585,48 @@ institutional; no new placed address, and the reason is stated.**
   sources; treat as direction. Regional CAGR figures from market-research vendors
   remain unverified and should be quoted as direction only.
 
+
+#### 🆕 `p569` (`2026-10-31`) — a corporate holder named in a grant, and a second row placed on artefact evidence only
+
+🟢 **[`verycoolapps/Statistica`](https://github.com/verycoolapps/Statistica) is
+the cleanest APAC placement this base has recorded on the grant itself.** Its
+`main/LICENSE` (MIT, 1,096 B) reads *"Copyright (c) 2026 VeryCoolApps — **PT.
+Agra Karya Digital**"* — `PT.` is the Indonesian form for a limited company, so
+the holder is a **named corporate entity in a named jurisdiction**. 🔵 This base's
+placement instrument was built for *institutional* holders (universities,
+national operators); **a company name works identically and the rule should say
+so.** ⚠️ Substance is thin — an offline statistics desktop app, bilingual ID/EN,
+**2 commits** — so it is placed, not shelved as a foundation.
+
+🟡 **[`swsgbl/ai-learning-os`](https://github.com/swsgbl/ai-learning-os) is
+recorded APAC on a weaker footing, deliberately marked as such.** Its grant names
+*"AI Learning OS contributors"* — not an institution — so it is placed on
+**artefact evidence**: a **HarmonyOS / 深开鸿** client target, a `ChinaTextbook`
+catalogue integration, Chinese-language documentation throughout. 🔴 **Two grades
+of evidence, labelled, not blended** — `569-E`.
+
+🔵 **Regional read (secondary, directional).** APAC is the **fastest-growing**
+region for AI in education on the vendor reports that split it out
+(**USD 591.6 m in 2024 → ~USD 1.85 bn by 2029**, ~20.9% CAGR). 🔴 **The
+governance picture is the opposite of EMEA's: Forrester expects no APAC-wide
+legislative framework** — rules stay fragmented per country — and the 2026 theme
+across regional analysts is **sovereignty and "sovereign-by-design" execution**.
+IDC places most APAC countries at mid-stage AI maturity with Singapore leading.
+
+🟢 **That makes the self-hosted, measurement-first shape unusually well matched
+to this region.** `ai-learning-os` is server-authoritative, keeps **ASR/TTS
+local so voice audio never leaves the machine**, and holds LLM keys in a
+server-side encrypted BYOK store. 🔵 **Sovereignty is the APAC buying criterion
+and local inference is the answer to it** — which is also why the sub-floor tier
+matters here specifically: `4 of 5` of this pass's new tutor-class agents run
+locally or BYOK.
+
+🔴 **Declared gap: the APAC leg returned no education-specific regulation for
+China, Korea or Australia and no 2026 school adoption rate.** The only
+education-specific player list any source offered was dated 2019. The APAC
+governance rows on this page remain the Australian regulator exercise
+(**7 of 39** universities with documented operational governance).
+
 ### LATAM
 
 **The best-evidenced adoption-governance gap in the world, from the most
@@ -655,6 +769,53 @@ stronger than the supply-side one.**
   `Changochen/slide-to-video`'s local voice cloning) over hosted-model designs in
   less-resourced systems.
 
+
+#### 🆕 `p569` (`2026-10-31`) — two rows found, one unshelvable, and the region's structural disadvantage now has a measurement
+
+🟢 **[`JaxisReal/Moodle-Reporte-Limpio`](https://github.com/JaxisReal/Moodle-Reporte-Limpio)**
+— **MIT** (`main/LICENSE`, 1,086 B, *"Copyright (c) 2026 Jerry Anderson Carril
+Chávez"*), 9 commits, 2 authors. A Moodle plugin for generating, processing and
+visualising **course-completion reports**, Spanish-language. 🔵 The holder is an
+individual, so **by grant it is `Global`; by artefact it is LATAM.** Useful as a
+concrete starting point for a *secretaría* that already runs Moodle and wants
+completion reporting before it wants AI.
+
+🔴 **[`smatilio/ic-tri-simulacao`](https://github.com/smatilio/ic-tri-simulacao)
+cannot be shelved, and this is the most actionable gap on the page.** It is a
+Brazilian **TRI** (item response theory) simulation study — *"2PL longitudinal
+with a human-machine effect, estimated with `mirt` and Stan"*, R, 16 commits,
+pushed `2026-10-30`. 🔴 **It carries NO licence at 5 filenames × 2 branches**, so
+it is unusable regardless of quality. 🟢 **The remedy is a message, not an
+engagement:** this is a live academic repository whose author has very likely not
+considered the question, and a polite issue asking for a licence is the
+single highest-yield action available on LATAM supply this pass. 🔵 Registered as
+part of `569-F`.
+
+🟢 **And the structural point, now measured rather than asserted.** This base has
+recorded thin LATAM supply for many passes. 🔴 **Part of that thinness is an
+artefact of how it searched.** A star-sorted sweep systematically under-reports
+projects that are non-English, single-author and unlaunched — which describes
+most LATAM and APAC education supply. 🟢 **`topic:ai-tutor` holds `793` of its
+`816` results below 50 stars, and three of this pass's four high-commit finds
+are non-English-first.** 🔵 **The correction is `P-572-C`, and LATAM is where it
+pays most.**
+
+🔵 **Regional read (secondary, but the primary source here is strong).** The
+**UNESCO IESALC / UNU-IAS** working paper (**1 September 2026**) maps AI use
+across LAC universities on five dimensions — teaching, research, community
+engagement, administration, governance — and remains the best-evidenced regional
+item in this KB (the 87% / 26% / 55% figures above). **ECLAC/CEPAL's ILIA index**
+puts **Chile, Brazil and Mexico** ahead regionally with persistent gaps in data,
+training and regulation; Baker McKenzie confirms countries sit at **very
+different regulatory stages**, so a multi-country LATAM engagement cannot assume
+one compliance posture. Commercial actors named: **Platzi**, and a Huawei
+education alliance launched 2025. The **World Bank's WDR 2026** is on AI.
+
+🔴 **Declared gap: the LATAM leg returned no K-12 AI policy for any individual
+country and no repository-level asset.** Both country-level K-12 policy (Brazil,
+Mexico) and LATAM repository supply remain unmeasured by search; the two rows
+above came from the `stars:<50` band, not from the regional leg.
+
 ### Global
 
 - **The attachment layer is the product**, everywhere, for licence reasons that
@@ -669,6 +830,32 @@ stronger than the supply-side one.**
   overwhelmingly APAC-origin and mostly MIT, but the largest member is **CC BY-SA
   4.0** (share-alike). Licence-screen every skill bundle before it enters a
   client deliverable.
+
+
+#### 🆕 `p569` (`2026-10-31`) — the discovery channel, measured across all five regions at once
+
+🔴 **The eight mandated search legs — four global, four regional — returned `0`
+addresses new to this base. That is the SIXTH consecutive pass with that
+result.** Every candidate they named (`OPTIMETA/PAIDEIA`,
+`GarethManning/education-agent-skills`, `rohitg00/ai-engineering-from-scratch`,
+Sakai, OpenEduCat, `irtorch`, OpenSIS, Fedena) was checked against the tree and
+**all eight were already shelved.**
+
+🟢 **One sweep of `stars:<50` across three topic axes returned `13`.**
+
+| channel | legs / rows | new addresses | grants read |
+| --- | --: | --: | --: |
+| 🔴 `WebSearch`, the mandated queries | 8 legs | 🔴 **0** | — |
+| 🟢 `github.com/search`, `stars:<50`, sorted by recency | 3 axes × 10 rows | 🟢 **13** | 🟢 **11 of 13** |
+
+🔵 **What the regional legs ARE good for, since the nil result is now settled:**
+policy, calendar and funding intelligence — the Council of Europe's regulatory
+work, the EU's AI literacy framework, FIPSE's USD 169 m, ILIA's country ranking,
+UNESCO IESALC's survey. 🟢 **Every regional paragraph above is built from them.**
+🔴 **What they do not do is find code**, in any region, and six passes is enough
+evidence to stop spending the discovery budget there. 🟢 **Reallocated this pass;
+`P-572-C` is the replacement method and it is written to be run on every other
+industry on this harness.**
 
 ## Declared gaps — what was searched and not found
 

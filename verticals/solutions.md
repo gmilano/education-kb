@@ -91,6 +91,58 @@ publishing *"no open-source learning-analytics dashboard"*. The components were
 never missing; the index was wrong. See `568-A` in
 [`../intel/open-gaps.md`](../intel/open-gaps.md).
 
+## Self-hosted measurement-first learning platform (new in the seventh pass)
+
+🟢 **A platform class this page has never carried: one whose selling point is
+that it *audits whether learning happened*, not that it delivers content.**
+Found at `stars:<50` on the band `568-C` named — **1★, 1,313 commits, 4 authors**
+since `2026-08-31`, counted with `git rev-list`.
+
+| Platform | Repo | Licence | ★ | Region | What it runs |
+| --- | --- | --- | --: | --- | --- |
+| AI Learning OS (砚席) | [swsgbl/ai-learning-os](https://github.com/swsgbl/ai-learning-os) | ⚠️ **SPLIT — MIT root (`main/LICENSE`, 1,084 B) but `services/api/` carries AGPL-3.0 combination obligations.** See the carve-out below; **do not read this row as "MIT"** | 1 | **APAC** (by artefact, not by grant — see note) | Self-hosted, **server-authoritative** learning platform. Server owns timing, scoring and idempotent submission; **item projections exclude answers** (an "answer-isolation invariant"). An 11-stage learning-sprint state machine runs *contract → **equivalent pre/post test** → concept map → plan → core study → targeted practice → **transfer check** → post-test → report → spaced re-test*. Six-state mastery rule chain (3 independent pairs + 2 contextual + a delay/transfer pair) over **FSRS** scheduling. **Local ASR/TTS — the README states voice audio never leaves the machine.** BYOK multi-vendor LLM keystore (server-side encryption, last-4 display only, three-layer SSRF defence). Clients: Web PWA, Android, **HarmonyOS**. 🟢 **The part that matters for this KB:** a *learning-effect audit pipeline* with **CTT item analysis, mastery-simulation validity (publisher reports AUC 0.913), metacognitive calibration (gamma) and pre/post effect sizes — gated in CI.** |
+
+### ⚠️ The licence carve-out, read from the publisher's own `NOTICE.md`
+
+🔴 **A LICENSE-file read — this base's primary instrument — returns `MIT` for this
+repository and that answer is dangerously incomplete.** `main/NOTICE.md` states
+the split itself:
+
+| scope | licence |
+| --- | --- |
+| `apps/android/`, `apps/harmony/`, `apps/web/`, `services/console/`, docs | 🟢 **MIT** |
+| 🔴 **`services/api/`** | 🔴 **AGPL-3.0 combination obligation** |
+
+🔴 **The mechanism is a single dependency, not a publisher's choice.**
+`services/api` links **PyMuPDF (AGPL-3.0)** in-process to parse PDF textbooks.
+`NOTICE.md` spells out AGPL-3.0 §13: *offer the service over a network and you
+must give that service's users the complete corresponding source of your
+deployment, modifications included.* Private local use does not trigger it.
+
+🔴 **For Globant specifically this is a prohibition on the default path, not a
+threshold.** A studio that hosts and operates a client's deployment of
+`services/api` owes that deployment's source to its users — the same class of
+finding as `Arize-ai/phoenix`'s Elastic License (`p568`), reached by a completely
+different route.
+
+🟢 **And the remedy is named, costed and small**, which is why this row is shelved
+rather than rejected. `NOTICE.md` itself gives two exits: buy a commercial
+PyMuPDF licence from Artifex, or **replace the parser**. The rest of
+`services/api` is MIT-compatible by its own dependency table (FastAPI, SQLAlchemy,
+Alembic, `py-fsrs`, `onnxruntime` all MIT; `rapidocr-onnxruntime` and CosyVoice
+Apache-2.0; `httpx` BSD-3). **Swapping one PDF parser for a permissive one
+(`pypdf`, BSD-3; `pdfplumber`, MIT) removes the AGPL obligation from the whole
+platform.** That is a scoped engineering task, and it is the first thing to quote
+on an engagement that wants this stack. Wired as `P-572-B`.
+
+🔵 **On the region field, stated precisely.** The grant names *"AI Learning OS
+contributors"* — **not an institution**, so this base's licence-holder instrument
+(`p568`) does **not** place it. It is recorded **APAC on artefact evidence
+instead**: a HarmonyOS / 深开鸿 client target, a `ChinaTextbook` catalogue
+integration, and Chinese-language documentation throughout. 🔴 **Those are two
+different grades of evidence and this page does not pretend otherwise** — see
+`569-E`.
+
 ## How to read this page
 
 **The operations layer is copyleft almost without exception — but the exception

@@ -157,21 +157,54 @@ buys and the one the EU AI Act's Annex III evaluation category needs evidence of
 | [onionviolet/itembank](https://github.com/onionviolet/itembank) | **MIT** (`main/LICENSE`, 1,068 B, "Copyright (c) 2026 onionviolet") | 3 | Global | ✅ permissive | **The pick of this layer, and it would have been discarded by a star gate: 3★ against 1,175 commits on `main`.** "Author, validate and render exam-style question banks in markdown. A machine-checkable contract for LLM-authored questions." Local-first — nothing leaves the machine but an optional update check. `itembank lint` **blocks on error** per item number (each distractor must explain when it *would* be correct; answer-position skew; select-count against keyed-count; duplicate stems) and `itembank guard` **fails CI** if real banks are committed. **Scoring is deterministic with no model in the path**: short-answer items are *never* auto-graded and stay pending for rubric marking, `fill` is all-or-nothing, `check` runs learner code against hidden cases, and the README states model output is never accepted as a score. Retention is **FSRS** — the same scheduler as `fsrs4anki` below. Exports **Anki TSV, GIFT, answer-key TSV**; key-free JSON session protocol (`start`/`next`/`submit`/`report`/`teach`) built for agents. ⚠️ **Read the limits:** QTI/CASE/SCORM interchange is explicitly backburner — the README says it *"waits for a named consumer"* — the MCP surface is labelled "Phase 999.3" and unshipped, and the wider "course workspace" is not yet runnable. Python-dominant with a Rust `src-tauri/` shell. Holder is a handle; recorded Global. |
 | [sudazc/open-question-bank](https://github.com/sudazc/open-question-bank) | ⚠️ **split: code + docs MIT, bank content NOT granted** (1,063 B, "Copyright (c) 2026 sudazc") | 0 | Global | ⚠️ conditional | Schema, validation and rule-based test assembly (`组卷`), TypeScript, 108 commits. **Shelved for its licence shape rather than its traction**, which is near zero. The README is explicit that MIT covers **the framework code and its documentation only**: permission to use, modify or redistribute **a bank's content** is set by that bank's own `bank.yaml` and source-licence fields, and the framework grant conveys none of it. ⚠️ **The default licence for a new bank is a placeholder reading `"TBD - not for publication"`** — so a bank authored with this tool is unpublishable until someone sets it. README states online practice and learning records are not yet implemented. Chinese-language; the grant names a handle, so **not placed** — this page does not place an artefact on its language. |
 | [bigdata-ustc/EduCDM](https://github.com/bigdata-ustc/EduCDM) | **Apache-2.0** (11,346 B) | 203 | APAC | ✅ permissive | Model zoo of **cognitive diagnosis** models — IRT, MIRT, DINA, NCDM and others — from a named university group (USTC). **Be precise about what it does and does not do:** cognitive diagnosis infers *what a learner knows* from responses; it does **not calibrate items**. It is the live, permissive, education-specific half of the psychometrics layer, and the calibration half is the gap (see below). Last pushed 2024-10-25. |
+| 🆕 [DaniyalMlk/calibrate](https://github.com/DaniyalMlk/calibrate) | **MIT** (`main/LICENSE`, 1,064 B, "Copyright (c) 2026 Daniyal"); **`package.json` `"license": "MIT"` agrees** | 0 | Global | ✅ permissive | 🟢 **This row closes the calibration gap this layer published for six passes, and a star gate would have discarded it: 0★ against 214 commits** (`2026-09-07` → `2026-10-30`, single author, counted with `git rev-list`). A **dependency-free TypeScript** adaptive-testing engine — `dependencies` and `peerDependencies` are both **absent from the manifest**, verified, so there is **no transitive licence surface at all** (4 devDeps, all permissive). What it implements, from its own README and roadmap: dichotomous **and** polytomous response models (**graded response, partial credit, generalized partial credit**, mixed banks in one bank), ability estimators, **maximum-information item selection**, stopping rules, **item-parameter estimation two ways — joint and marginal maximum likelihood, with JML's structural bias named and demonstrated against MML on the same responses**, **four linking methods** for putting two calibrations of an anchor on one metric, **differential item functioning**, person-**misfit** scanning, and score→ability conversion tables with standard errors. A browser interface draws the posterior, response curves, information curves and bank coverage live. ⚠️ **Read the adoption risk and say it to a client: version `0.1.0`, not yet published to npm** (the README says phases 1–21 are complete *"bar the publish itself"*), **one author, 0 stars, no independent validation.** The code is the evidence; the project is eight weeks old. Holder is an individual, so **Global**. |
+| 🆕 [finite-sample/guess](https://github.com/finite-sample/guess) | **MIT** — 🔴 **not from the licence file**: `master/LICENSE` is **52 B** and names no licence (`YEAR: 2015` / `COPYRIGHT HOLDER: Gaurav Sood and Ken Cor`). 🟢 **`master/DESCRIPTION` reads `License: MIT + file LICENSE`** | 3 | **North America** | ✅ permissive | R package, `Imports:` **empty**. *"Adjust estimates of learning for guessing"* — standard guessing corrections plus **latent class models that use informative pre-post test transitions** to separate real learning from guessing on closed-ended items. 🟢 **The measurement counterpart to `calibrate`:** `calibrate` tells you what an item is worth, `guess` tells you whether an observed gain is real. Live (`2026-10-30`) on a 2016 codebase — 19 commits over ten years, so **stable rather than active**; read it as a method implementation, not a maintained platform. 🔵 **Placed `North America` on a channel new to this base:** `DESCRIPTION`'s `Authors@R` carries `mcor@ualberta.ca` — **University of Alberta** — where the copyright line names only two individuals. See `569-D`. |
 | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** (1,079 B) | 4,119 | Global | ✅ permissive | **FSRS** as an algorithm rather than an application — the modern spaced-repetition scheduler. Carried forward from the fifth pass's capability sweep and repeated here because it is the retention component both `itembank` and `braiinz-education` independently chose. |
 
-⚠️ **The honest statement of what is still missing, so nobody reads this layer as
-complete.** There is **no permissive, live, education-specific item *calibration*
-asset.** The two libraries that could calibrate an item bank —
-[`eribean/girth`](https://github.com/eribean/girth) (127★, MIT, last pushed
-**2022-09-09**) and [`inuyasha2012/pypsy`](https://github.com/inuyasha2012/pypsy)
-(242★, MIT, last pushed **2018-11-16**) — are both permissive, both capable and
-**both stale by years**. The most capable pure-psychometrics library on the axis,
-[`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) (114★, Java,
-classical test theory + IRT), carries **no licence file at any of five filenames
-across three branches**. The R options are copyleft (`lavaan` GPL-2+, `blavaan`
-GPL-3). **So: author and gate items permissively today; calibrating them means
-adopting a stale dependency, taking the Java library's licence risk, or building
-it.** Say that to a client rather than implying the layer is solved.
+🟢 **What this layer could not do six passes ago, and can now.** Every pass from
+the second to the sixth closed this section with the sentence *"there is no
+permissive, live, education-specific item **calibration** asset"*. 🔴 **That
+sentence is retired as of `2026-10-31` (`p569`), and it was retired by searching
+the one place the sort could not reach** — `topic:psychometrics` at `stars:<50`,
+where [`DaniyalMlk/calibrate`](https://github.com/DaniyalMlk/calibrate) sits at
+**0★ with 214 commits**. 🔵 **The gap was never a supply gap. It was a sort
+artefact**, and that is twice in two passes that this base's own shortlisting
+method, rather than the field, manufactured an absence (`568-A`, `568-C`).
+
+⚠️ **What is still genuinely missing, stated narrowly so it stays true.** The
+layer is now complete *in capability* and thin *in assurance*:
+
+- 🔴 **No calibration asset here has adoption evidence.** `calibrate` is `0.1.0`,
+  one author, 0★, unpublished to npm; `itembank` is 3★. **Both are credible on
+  their commit histories and neither is credible on its install base.** For a
+  high-stakes engagement — the EU AI Act Annex III evaluation category, or any
+  exam board — that is a real procurement objection and this page does not paper
+  over it. The mitigation is engineering, not more searching: wire `calibrate`'s
+  MML output against a known-good reference (the stale-but-MIT
+  [`eribean/girth`](https://github.com/eribean/girth), or R's `mirt`) and keep
+  the comparison as the evidence the stars cannot supply. Wired as `P-572-A`.
+- 🔴 **The stale permissive libraries are still stale** and are now useful as a
+  *baseline* rather than as a dependency:
+  [`eribean/girth`](https://github.com/eribean/girth) (127★, MIT, last pushed
+  **2022-09-09**), [`inuyasha2012/pypsy`](https://github.com/inuyasha2012/pypsy)
+  (242★, MIT, **2018-11-16**).
+  [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) (114★,
+  Java, CTT + IRT) still carries **no licence file at five filenames across three
+  branches**. The R options remain copyleft (`lavaan` GPL-2+, `blavaan` GPL-3) —
+  except `guess`, above, which is MIT and is now shelved.
+- 🟡 **[`joakimwallmark/irtorch`](https://github.com/joakimwallmark/irtorch) was
+  already read, and this base asked for it again.** `568-B`'s ask was *"probe
+  `irtorch` for liveness and grant"*;
+  [`../repos/trending.md`](../repos/trending.md) already recorded it as **MIT**
+  (`main/LICENSE.txt`, 1,073 B), **v0.5.5 · 2026-08-24 · 26 releases**, *"freshest
+  in tier"*, last commit `2026-10-19`. 🔴 **A second instance of `568-A`'s own
+  failure mode, inside the very pass that registered `568-A`** — see `569-A`.
+
+🟢 **So the sentence to give a client changed this pass.** Not *"you will have to
+build item calibration"* but *"item authoring, gating, calibration, equating and
+guessing-correction are all available permissively, and all of it is pre-adoption
+software you must validate before you stake an exam result on it."* Those are
+different engagements, and only one of them was true last pass.
 
 ## Lecture-video layer (new in the sixth pass — the fifth pass's `topic:video` ask)
 

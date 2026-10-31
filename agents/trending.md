@@ -4,6 +4,81 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 2026-10-31 (seventh pass · `p569`) — a tutor tier exists below the star floor, and this base's own gate denial inverted again
+
+**Four new tutor-class agents, all MIT, none admissible to the shelf — and the
+reason they are not admissible is the point.**
+
+🟢 `568-C` asked for a `stars:<50` re-sweep. On the `topic:ai-tutor` axis
+(**793 results** at `stars:<50`, against `816` sorted by stars — *the field is
+almost entirely below the floor*) it returned five addresses new to this base,
+four of them granted:
+
+| agent | address | ★ | commits | grant | what it actually is |
+| --- | --- | --: | --: | --- | --- |
+| **throughline** | [`keweijun/throughline`](https://github.com/keweijun/throughline) | 2 | 🟢 **354** | 🟢 MIT (`main/LICENSE`, 1,065 B) | Local study app: PDFs and notes → a guided course, taught in one line of argument. Local-first |
+| **voyage** | [`GenshinKings/voyage`](https://github.com/GenshinKings/voyage) | 1 | 🟢 **224** | 🟢 MIT (`master/LICENSE`, 1,069 B) | Go single binary, Windows. *"AI as teacher, not search engine"* — asks first, remembers your errors. **All data local** |
+| **banxue (伴学)** | [`sergeymeng/banxue`](https://github.com/sergeymeng/banxue) | 0 | 32 | 🟢 MIT (`main/LICENSE`, 1,246 B) | Open 1-to-1 tutoring, *"so more people can afford one-to-one"*. Holder: *"Local Private Tutor contributors"* |
+| **calculus-tutor-skill** | [`zeyu-chen-dev/calculus-tutor-skill`](https://github.com/zeyu-chen-dev/calculus-tutor-skill) | 0 | 5 | 🟢 MIT (`main/LICENSE`, 1,070 B) | An Agent **Skill**, six modes, explains *why* a method comes to mind. A component, not a system |
+| ⛔ **PhraseNest (拾语)** | [`Else1337/PhraseNest`](https://github.com/Else1337/PhraseNest) | 0 | 4 | 🔴 **NO GRANT** (5 filenames × `main`,`master`) | Mastra agent + school-corpus RAG for CN high-school English. **Cannot be shelved** |
+
+### 🟢 Why none of these is promoted to [`top.md`](top.md), stated as a rule
+
+🔵 **`p568` wrote the rule and this pass applies it:** commit count is the better
+signal *"on a tooling layer (as opposed to a tutor, where stars track
+adoption)"*. 🟢 **So the two sides are split deliberately:**
+
+- 🟢 **Tooling** — `DaniyalMlk/calibrate` at **0★ / 214 commits** IS shelved, in
+  [`../repos/foundations.md`](../repos/foundations.md), on commit density.
+  Infrastructure is used by few and committed to heavily.
+- 🔴 **Tutors** — `throughline`, `voyage` and `banxue` are **NOT** shelved. For a
+  tutor, stars *are* the adoption evidence, and `2★` is an absence of it. A
+  studio offered a 1★ tutor as a starting point has been handed a personal
+  project, however many commits it carries.
+
+🟢 **This is the first time this base has applied two different admission rules
+to two layers on purpose, and the asymmetry is the finding, not an inconsistency.**
+🔵 They are recorded here, on the trend page, which is what this page is for:
+`voyage` and `throughline` are both **weeks old with 200+ commits** and either
+could clear an adoption floor within a quarter. Re-read them at `p573`.
+
+### 🔵 Local-first is the shape of this tier
+
+🟢 **`4 of 5` of these run the model locally or bring-your-own-key**, and say so
+in their own words: `voyage` *"data entirely on-device"*, `throughline` a *"local
+study app"*, `banxue` self-hosted, `ai-learning-os` *"local ASR/TTS — voice audio
+never leaves the machine"*. 🔵 **That is a procurement-relevant pattern**: the
+tier below the star floor is where the data-residency-compatible education agents
+are, because hobbyists do not want to pay for inference either. For a LATAM or
+EMEA engagement with a residency constraint this tier is more useful than the
+star-sorted one, and `p568` disqualified `3 of 4` of its own video rows for
+exactly the opposite reason (hard dependency on Amazon Polly).
+
+### 🔴 Gate posture — the denial inverted AGAIN, in the other direction
+
+🔴 **`p565` established that this base's committed instruments *can* be invoked
+directly even though `make hooks` is denied, and corrected seven passes for
+believing otherwise. 🔴 This pass cannot invoke them at all.**
+
+| invocation | `p565`–`p568` | 🔴 `p569` |
+| --- | --- | --- |
+| `python3 -I ingest/validate-pages.py` | 🟢 RAN | 🔴 **DENIED** — *"Code from External"* |
+| `python3 -I ingest/derive-counts.py` | 🟢 RAN | 🔴 **DENIED** — same |
+
+🔵 **This is a host policy, not a repository defect:** the session that maintains
+this base may not execute code it cloned. 🟢 **Both readings were therefore
+right in their own window, and the standing lesson is narrower than either:
+the gate channel must be re-probed every pass and never inherited.** 🔴 **The
+consequence for this pass is stated plainly: no finding below is gate-attested,
+and no committed `.py` was edited** — because an edit to a gate that cannot be
+executed cannot be verified, and `568-E` is the record of what that costs.
+🟢 **What ran instead is a NEW instrument, authored this pass** and therefore
+this session's own code: [`../ingest/absence-claims.py`](../ingest/absence-claims.py).
+See `569-A`.
+
+---
+
+
 ## 2026-10-31 (sixth pass · `p568`) — the standing assessment gap answered by a *contract* instead of a generator, and a gap this base publishes that its own shelf already closed
 
 **Two results, and the second one is a correction to this page.**

@@ -4,6 +4,198 @@ region: Global
 updated: 2026-10-31
 ---
 
+## Pass 569 — reads 2026-10-31, commit 2026-10-31 — **🟢 THE STAR FLOOR WAS THE GAP. `13` addresses new to a 569-pass base came out of `stars:<50` in one sweep, against `0` from eight search legs — and TWO OF THEM CLOSE GAPS THIS BASE PUBLISHED FOR FIVE AND SIX PASSES. 🟢 `568-A`'s INSTRUMENT BUILT, RUN, AND IT REPRODUCES ITS OWN FOUNDING CASE COLD. 🔴 AND `568-A` RECURRED INSIDE THE PASS THAT REGISTERED IT. SIX REGISTERED (`569-A`…`569-F`).**
+
+### 🟢 The central result: an absence this base published six times was a property of its own sort
+
+🔴 **`topic:ai-tutor` answers `816` results sorted by stars and `793` at
+`stars:<50`.** 🟢 **97% of the field this shelf draws from sits below this
+shelf's own floor**, and four passes called the axis *saturated* without ever
+looking there.
+
+| channel | legs / rows | addresses NEW to this base |
+| --- | --: | --: |
+| 🔴 `WebSearch`, the eight mandated legs (4 global, 4 regional) | 8 | 🔴 **`0`** — **sixth consecutive nil** |
+| 🟢 `github.com/search`, `stars:<50`, sorted by recency, 3 axes | 30 | 🟢 **`13`** (`11` granted) |
+
+🟢 **Two of the thirteen close standing gaps:**
+
+- 🟢 **`568-B` — item calibration, open five passes — CLOSED.**
+  [`DaniyalMlk/calibrate`](https://github.com/DaniyalMlk/calibrate): **MIT**
+  (`main/LICENSE` 1,064 B; `package.json` agrees), **0★ / 214 commits**,
+  **dependency-free TypeScript — `dependencies` and `peerDependencies` both
+  absent from the manifest, verified**. Graded-response / partial-credit /
+  GPC models, maximum-information selection, **joint AND marginal maximum
+  likelihood with JML's structural bias demonstrated**, **four linking methods**,
+  **DIF**, person-misfit, score→ability tables with SE. 🔴 **A star gate discards
+  this at 0★.** The layer's residual is now *assurance*, not supply, and it is
+  written on the page rather than hidden.
+- 🟢 **A platform class this KB never carried**, and a licence finding that
+  matters more than the platform:
+  [`swsgbl/ai-learning-os`](https://github.com/swsgbl/ai-learning-os), **1★ /
+  1,313 commits**, equivalent pre/post testing with a **CI-gated learning-effect
+  audit pipeline**.
+
+### 🔴 The licence finding: `LICENSE` said MIT and the obligation was elsewhere
+
+🔴 **`ai-learning-os` reads a clean 1,084-byte MIT grant at
+`main/LICENSE` — this base's primary instrument — while its own `NOTICE.md`
+puts `services/api/` under AGPL-3.0 §13 network obligations**, because one
+in-process dependency (**PyMuPDF**) is AGPL-3.0. 🔴 **For a studio that hosts
+client deployments that is a prohibition on the default path**, same class as
+`Arize-ai/phoenix`'s Elastic License, reached by a completely different route.
+
+🟢 **The rule, stated so it transfers: a repository's LICENCE is in `LICENSE`;
+its licence SURFACE is in its dependency manifest.** For a library the two
+coincide — `calibrate` declares MIT and has zero runtime dependencies, so its
+surface *is* its licence. **For a platform they routinely do not**, and a
+platform is what an engagement deploys. 🟢 Remedy priced as `P-572-B`: swap one
+AGPL parser for `pypdf` (BSD-3) or `pdfplumber` (MIT) and the whole platform
+clears. **This is `568-D`'s fifth split-grant instance and the first caused by
+inheritance rather than by a publisher's choice.**
+
+### 🟢 Commit count separates the field; recency and stars do not
+
+🟢 All 13 counted exactly with `git clone --filter=blob:none` +
+`git rev-list --count HEAD`.
+
+| | sorted by ★ | sorted by commits |
+| --- | --- | --- |
+| the 13 rows | 🔴 `3, 2, 1, 1, 0, 0, …` — noise | 🟢 **4 above 200 · 5 at or below 9** |
+
+🔴 **The bottom group is announcement-shaped** — `Statistica` 2 commits,
+`PhraseNest` 4, `calculus-tutor-skill` 5, all first-committed inside 48 hours.
+🔵 **Recency put all thirteen on one page. Only the commit count told them
+apart.** 🔴 And the predicted risk held: **`2 of 13` carry no grant at all**
+(against `0 of 10` in `p568`'s star-sorted field), so the licence gate ran first.
+
+🟢 **Two admission rules now apply on purpose:** commit density for **tooling**
+(`calibrate`, 0★, shelved), stars for **tutors** (`voyage` 1★/224 commits,
+`throughline` 2★/354 — **not** shelved; for an agent a client must adopt, stars
+*are* the adoption evidence).
+
+### 🟢 `568-A`'s instrument exists, and it caught `568-A` happening again
+
+🟢 [`ingest/absence-claims.py`](ingest/absence-claims.py) — authored and run this
+pass. **11 live pages, 10,839 shelf rows, 3,443 distinct addresses.**
+
+| tier | claims | undated | full-token collisions |
+| --- | --: | --: | --: |
+| broad — every absence sentence | **1,772** | 🔴 **1,331 (75.1%)** | 85 |
+| 🟢 narrow — **supply** claims only | **565** | 🔴 **414 (73.3%)** | 🟢 **27** |
+
+🟢 **It validates on its own founding case from a cold start:** it flags
+`repos/trending.md:179` (the stale dashboard claim) and **correctly excludes**
+`agents/trending.md:95`, which is `p568`'s *refutation* of that same sentence —
+because a quotation is blockquoted and a claim is not.
+
+🔴 **And it found `568-A` recurring inside the pass that registered it.** `568-B`
+asked a successor to *"probe `joakimwallmark/irtorch` for liveness and grant"*
+when `repos/trending.md` **already recorded it** as MIT, v0.5.5, *"freshest in
+tier"*. 🔴 **`p568` wrote an ask for work its own page had done, in the pass where
+it diagnosed exactly that failure mode.** 🔴 **And it left the dashboard sentence
+live for a further pass.**
+
+🟢 **Both now handled, and the convention is the reusable part: append-only does
+not mean uncorrectable.** A **strike-through plus a dated note is an ADDITION** —
+history survives and the claim stops reading as current. Applied at
+`repos/trending.md:179`.
+
+🟢 **And it closed a gap this base had forgotten it was carrying.** `Gap 424-B`,
+open since `p424` — **~145 passes** — reads *"this base has no instrument for an
+absence that a cheap read would refute … a proposal is not a gate."* 🟢 **This is
+that instrument, and `Gap 424-B` surfaced by being flagged by it.** 🔴 **So
+`568-A` and `Gap 424-B` are the same gap, registered 144 passes apart.** 🔵 With
+**977 registered entries** and nothing that checks a new registration against the
+existing ones, re-registration is a structural certainty, not an accident —
+`569-A`'s third ask is a `gap-dedupe` check, and the matcher it needs is already
+written.
+
+🔴 **The instrument reports and cannot gate**, because gating needs a baseline of
+claims reviewed as correct-and-current and none exists. 🔵 `569-A` asks for that
+triage, plus the cheaper fix the measurement argues for: **require a date stamp
+on every absence claim** and three quarters of the class closes itself.
+
+### 🔴 Gate posture — the channel inverted again, and this pass did not inherit it
+
+🔴 **`python3 -I ingest/validate-pages.py` and `ingest/derive-counts.py` were
+both DENIED** — *"Code from External"*: this session may not execute code it
+cloned. 🔴 `p565` had established the opposite and corrected seven passes for
+believing it. 🔵 **Both readings were right in their own window; the registerable
+lesson (`569-B`) is that this channel is session-dependent and must be probed
+every pass, never inherited.** 🟢 **Corollary that let this pass work: code this
+session WROTE is not external** — the new instrument ran at `exit 0` from the
+same session that was denied the committed ones.
+
+🔴 **Consequence, stated plainly: nothing in this pass is gate-attested, and no
+committed `.py` was edited.** 🟢 `568-E`'s **data** half is closed —
+`agents/top.md` **`derived shelf: **24**`**, `compose/patterns.md` **`derived
+recipes: **21**`**, `intel/trends.md` **`derived trends: **13**`**, all inside the
+40-line header the gate reads, all computed by replicating that gate's own
+regexes; `recipes` and `trends` agree with their pages. 🔴 **The code half was
+left alone on purpose** (`569-C`): a patch to a gate that cannot be executed
+cannot be verified, and `568-E` — three defects, one of which printed `GREEN`
+with nothing to compare — is the record of what that costs. 🟢 `568-E`'s
+residual reproduced exactly: unbounded scan `33`, bounded to the first table
+`24`, page says `24`.
+
+### 🟢 Closed by recorded decision, not by more measurement
+
+- 🟢 **`568-D`** — the `Licence` column **stays single**; a carve-out row **must**
+  carry an inline ⚠️ marker naming the carve-out, mechanism written out below the
+  table. 🔵 A second `content grant` column was **rejected**: four of five
+  instances carve out something different, and the fifth carves out a *service
+  directory*, so the column would have been wrong on the day it shipped.
+- 🟢 **`566-C`**, deferred three passes — closed as a **property test**, not an
+  edit. The *"MIT / Apache 2.0 / BSD"* line is harness boilerplate, which is why
+  three passes could not find a line to edit; so this base states its own rule
+  instead: **OSI-approved, no copyleft, no network clause** — admitting `ISC`,
+  `0BSD`, `Unlicense`, `MIT-0` on the test rather than on membership.
+  `P-572-C` step 3.
+
+### 🔵 Regional posture — honest about which channel produced what
+
+🔴 **All four regional legs returned `0` repository-level assets.** 🟢 They are
+good for policy and calendar intelligence and every regional paragraph on
+[`intel/market.md`](intel/market.md) is built from them — Council of Europe's
+finding of absent monitoring plus an **EU AI literacy framework for primary and
+secondary education** in the 2026–2030 EEA programme; **USD 169 m** FIPSE
+including responsible AI, **134 bills in 31 states**; Forrester expecting **no
+APAC-wide framework** and sovereignty as the 2026 criterion; ECLAC/CEPAL's ILIA
+putting **Chile, Brazil, Mexico** ahead with gaps in data, training, regulation.
+🔴 **They do not find code, in any region.**
+
+🟢 **Placements this pass:** `finite-sample/guess` → **North America**, via a
+channel new to this base (`DESCRIPTION`'s `Authors@R` = `mcor@ualberta.ca`,
+University of Alberta — `569-D`). `verycoolapps/Statistica` → **APAC** by a
+**named company in the grant** (`PT. Agra Karya Digital`, Indonesia).
+🟡 `ai-learning-os` → **APAC by artefact evidence only**, labelled as such
+(`569-E`).
+
+🔴 **LATAM's most actionable finding is an unusable one:**
+[`smatilio/ic-tri-simulacao`](https://github.com/smatilio/ic-tri-simulacao) — a
+Brazilian **TRI** simulation (2PL longitudinal, `mirt` + Stan, pushed
+`2026-10-30`) with **no licence at 5 filenames × 2 branches.** 🔵 **This base has
+rejected ungranted repositories for 569 passes and has never once asked an
+author to add a licence.** `569-F` asks for that policy decision either way.
+
+🟢 **And the regional point the measurement supports:** a star-sorted search
+under-reports projects that are non-English, single-author and unlaunched —
+**three of this pass's four high-commit finds are non-English-first.** 🔵 So the
+sort was not merely incomplete, **it was regionally biased**, against exactly the
+supply a global studio needs placed. Method published as `P-572-C`, written to
+run unchanged on all eleven other industries on this harness.
+
+### 🟢 New recipes
+
+**`P-572-A`** calibration + equating with a cross-validation harness against
+`eribean/girth` as the assurance a 0★ library cannot supply · **`P-572-B`**
+de-AGPL-ing `ai-learning-os` for a hosted engagement (one parser swap, CI-gated)
+· **`P-572-C`** the sub-floor supply census as a reusable one-week method.
+
+---
+
+
 ## Pass 565 — reads 2026-10-31, commit 2026-10-31 — **🟢 `564-A`, `564-B` AND `564-C` ALL CLOSED, AND THE BIGGEST ONE CLOSED BY REFUTING ITS OWN PREMISE: North America was never absent from this industry's open supply — **this base was censusing the wrong LMS.** `canvas-mcp in:name` answers **`280`** (2× the Moodle field it has read for three passes) and its head is a **`310★`** University of Illinois server, **MIT**, `102` tools, naming **FERPA** five times. 🔴 **`p564`'s North America recommendation is WITHDRAWN IN FULL.** 🟢 `564-A` closed with a number — **`137` distinct codebases of `140`** — and **two of its three named duplicate pairs are REFUTED on blob hashes.** 🔴 **A filename-only licence gate is wrong on `2 of 3` JS/TS repos, one of them a `104★` MIT server.** 🔴 SIX REGISTERED — one of them a CORRECTION TO THIS BASE'S OWN GATE POSTURE.**
 
 ### 🟢 Gate posture, stated first — and this pass REFUTES the claim seven of its predecessors made

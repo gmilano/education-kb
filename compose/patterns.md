@@ -6,6 +6,10 @@ updated: 2026-10-31
 
 # Compose patterns — education
 
+<!-- machine-readable count claim, p569, for ingest/derive-counts.py -->
+`derived recipes: **21**` — recipe headings on this page, counted with that gate's
+own id regex (family-suffixed form, `P-572-A`).
+
 Concrete recipes. Every component is a repo verified first-hand on 2026-10-31
 with its licence named — and for everything added or re-read in the fourth pass,
 **the licence text itself was read, not GitHub's summary of it**. Every pattern
@@ -1138,3 +1142,211 @@ most likely asset to be mis-offered here as courseware tooling.
   verified components with stated licences; none has been executed on a client
   engagement by this KB. Durations are estimates, not measured delivery times,
   and should be presented as such.
+
+---
+
+## P-572-A — Item calibration and score equating, with the assurance a 0★ library cannot supply (6–8 weeks)
+
+**For:** any client in `P-571-A`'s position who has to defend a *score*, not just
+a marking process — awarding bodies issuing grades, universities with placement
+testing, certification programmes running multiple test forms a year.
+**Region:** **EMEA** first (EU AI Act **Annex III**, *evaluation of learning
+outcomes*, obligations landing **2 December 2027** — a conformity assessment will
+ask how item parameters were estimated and how two forms were made comparable),
+then **North America** for certification bodies under accreditation review.
+Applies in **APAC** and **LATAM** wherever a ministry equates a national test
+across sittings.
+
+**Why this pattern exists, and why it could not exist last pass.** `P-571-A`
+ships a defensible *marking* pipeline and closes with an admission: items could
+be authored and gated permissively but **not calibrated**. 🟢 That is no longer
+true — [`DaniyalMlk/calibrate`](https://github.com/DaniyalMlk/calibrate) (**MIT**,
+dependency-free TypeScript) implements the calibration, adaptive-administration
+and **equating** layer. 🔴 **But it is `0.1.0`, one author, 0★ and unpublished to
+npm, so this pattern is half library and half assurance work.** The assurance
+half is the billable, defensible part and it is specified here rather than left
+implied.
+
+**Components:**
+
+| Role | Component | Licence | Note |
+| --- | --- | --- | --- |
+| Item authoring + blocking gate | [onionviolet/itembank](https://github.com/onionviolet/itembank) | **MIT** (1,068 B) | Carried from `P-571-A`. Produces the gated bank this pattern calibrates. Exports **answer-key TSV** — that is the response-matrix interface. |
+| **Calibration + CAT + equating** | [DaniyalMlk/calibrate](https://github.com/DaniyalMlk/calibrate) | **MIT** (1,064 B) | 🟢 **Load-bearing.** 2PL/3PL **and** graded-response / partial-credit / generalized-partial-credit; **marginal maximum likelihood** (and joint, with its structural bias demonstrated); **four linking methods**; **DIF**; person-misfit; score→ability tables with SE. **Zero runtime dependencies** — verified from `package.json`. |
+| **Reference implementation (assurance, not runtime)** | [eribean/girth](https://github.com/eribean/girth) | **MIT** | 🔴 Stale since **2022-09-09** — and that is *fine for this role*. A frozen, independently written MIT estimator is exactly what you want to cross-check `calibrate`'s MML output against. **Pin it, do not ship it.** |
+| Gain validation | [finite-sample/guess](https://github.com/finite-sample/guess) | **MIT** (via `DESCRIPTION`) | R. Latent-class correction using **pre/post transitions** — answers "is this gain real or is it guessing?" after the scores are on one metric. |
+| Cognitive diagnosis | [bigdata-ustc/EduCDM](https://github.com/bigdata-ustc/EduCDM) | **Apache-2.0** | Mastery inference for reporting. ⚠️ Still **not** calibration — keep the roles distinct in the report you hand the client. |
+| Telemetry store | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | xAPI LRS. Every administered item, response and ability estimate, timestamped — the evidence trail the equating argument rests on. |
+| Dashboards | [openfun/warren](https://github.com/openfun/warren) · [openfun/potsie](https://github.com/openfun/potsie) | **MIT** · **MIT** | Item-parameter drift and form-comparability panels as reviewable Jsonnet. |
+| LMS attachment | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** | LTI 1.3 launch; the adaptive session runs beside Moodle/Canvas, never inside it. |
+
+**Wiring:**
+
+1. **Export the gated bank** from `itembank` as answer-key TSV, and hold a
+   pilot administration (paper or fixed-form) to get a response matrix. You
+   cannot calibrate without responses; budget this as a real data-collection
+   step, not a sprint task.
+2. **Calibrate twice, on purpose.** Run `calibrate`'s `fit` (joint) and `mml`
+   (marginal) over the same matrix. The library demonstrates JML's structural
+   bias itself; **record both and report MML.** Divergence beyond expectation is
+   a data problem, not a library problem, and you want it surfaced here.
+3. 🟢 **Build the assurance artefact — this is the step that answers the 0★
+   objection.** Estimate the *same* matrix with `girth` and diff the item
+   parameters. Keep the diff, the seed and the matrix in the repository as a
+   committed fixture. **Two independently written MIT estimators agreeing to a
+   stated tolerance is evidence; a star count never was.** Re-run it in CI on
+   every `calibrate` bump.
+4. **Screen for DIF** across the demographic splits the client is accountable
+   for before any item reaches a live form. Annex III conformity work will ask;
+   so will any North American bias-evaluation duty.
+5. **Equate the forms.** Use `calibrate`'s linking methods over a common anchor
+   set to put sittings on one metric, and publish the score→ability conversion
+   table *with its standard errors*. Run all four methods; if they disagree
+   materially your anchor set is too thin, which is a finding you want before
+   results day, not after.
+6. **Administer adaptively** through the LTI launch, with maximum-information
+   selection and a precision stopping rule. Stream every event to `ralph`.
+7. **Validate observed gains** with `guess` on the pre/post transitions, so a
+   reported improvement is net of guessing.
+8. **Panel it** in `warren`/`potsie`: item-parameter drift between sittings,
+   anchor stability, form comparability, DIF flags.
+
+**What to tell the client, in one sentence.** *The whole chain — authoring,
+gating, calibration, DIF, equating, gain validation — is permissively licensed
+and self-hosted, and the calibration engine is eight weeks old, so you are
+buying a cross-validation harness as part of the delivery.* 🔴 **Do not present
+this stack as mature.** The honest pitch is that the alternative is a per-seat
+psychometrics licence and a vendor who will not show you the estimator.
+
+**Effort:** 6–8 weeks on top of `P-571-A`. Roughly half of it is steps 3 and 5 —
+the cross-validation harness and the equating argument — and that split is the
+point.
+
+---
+
+## P-572-B — Adopting a measurement-first learning platform without inheriting its AGPL obligation (4–6 weeks)
+
+**For:** a client who wants `AI Learning OS`'s audit pipeline — equivalent
+pre/post testing, CTT item analysis, mastery validity, metacognitive calibration,
+effect sizes gated in CI — delivered as a **hosted** service by Globant.
+**Region:** **APAC** as found (HarmonyOS target, `ChinaTextbook` integration),
+but the pattern is region-neutral; the licence surgery is the same anywhere.
+
+**Why this pattern exists.** [`swsgbl/ai-learning-os`](https://github.com/swsgbl/ai-learning-os)
+is the only platform on these shelves whose selling point is **proving learning
+happened** rather than delivering content, and at **1★ / 1,313 commits** it is a
+real codebase. 🔴 **Its `main/LICENSE` says MIT and that answer is incomplete:**
+its own `NOTICE.md` puts `services/api/` under **AGPL-3.0 combination
+obligations**, because it links **PyMuPDF (AGPL-3.0)** in-process. Host that over
+a network and §13 obliges you to hand your deployment's source to its users.
+🟢 **The whole pattern is: remove one dependency, keep the platform.**
+
+**Components:**
+
+| Role | Component | Licence | Note |
+| --- | --- | --- | --- |
+| Platform | [swsgbl/ai-learning-os](https://github.com/swsgbl/ai-learning-os) | ⚠️ **MIT root; AGPL-3.0 on `services/api/`** | Clients (`apps/web`, `apps/android`, `apps/harmony`) and `services/console` are **MIT and untouched** by this work. |
+| ⛔ Dependency to remove | **PyMuPDF** | ⛔ **AGPL-3.0** | The single cause. Used for PDF textbook parsing — page anchors and outline. |
+| 🟢 Replacement parser | [py-pdf/pypdf](https://github.com/py-pdf/pypdf) | **BSD-3-Clause** | Outline and page-level extraction. First choice for structure. |
+| 🟢 Replacement parser | [jsvine/pdfplumber](https://github.com/jsvine/pdfplumber) | **MIT** | Better word/table geometry where page anchors must be precise. |
+| Scanned-book OCR | **rapidocr-onnxruntime** + **onnxruntime** | **Apache-2.0** · **MIT** | Already in the platform's dependency table and already permissive — **no change needed.** |
+| Retention | **py-fsrs** | **MIT** | Already permissive. Same FSRS algorithm as `itembank` and `fsrs4anki`. |
+| Local speech | **funasr** · **CosyVoice** | **MIT** · **Apache-2.0** | Already permissive. 🟢 **Keep these: local ASR/TTS is why voice audio never leaves the client's infrastructure.** |
+| Assessment upgrade (optional) | [onionviolet/itembank](https://github.com/onionviolet/itembank) · [DaniyalMlk/calibrate](https://github.com/DaniyalMlk/calibrate) | **MIT** · **MIT** | Its audit pipeline is **CTT**. Bolt `P-572-A` on where the client needs IRT and equating. |
+
+**Wiring:**
+
+1. **Read `NOTICE.md` first and put it in the engagement record**, not the
+   licence file. 🔴 **The lesson generalises past this repo: for a platform, the
+   licence surface is the dependency manifest, not `LICENSE`.** A
+   `raw.githubusercontent.com/.../LICENSE` read — the standard instrument —
+   returns `MIT` here and misses an AGPL network obligation entirely.
+2. **Fence the blast radius.** Everything except `services/api/` is MIT. Confirm
+   the client's hosted surface and check whether `services/api` is even in it;
+   if the deployment is private and single-tenant with no third-party users,
+   §13 may not trigger and the cheapest answer is a documented legal position
+   rather than code.
+3. **Swap the parser** where it does trigger. Isolate PyMuPDF behind the
+   existing parse interface, reimplement page-anchor and outline extraction on
+   `pypdf` (fall back to `pdfplumber` where geometry matters), and keep the
+   platform's own parser tests as the acceptance criterion.
+4. **Prove the removal.** `pip`-tree the service and assert no AGPL-licensed
+   package remains; make that assertion a **CI gate**, so a future dependency
+   bump cannot reintroduce the obligation silently. This is the deliverable the
+   client's counsel will ask for.
+5. **Keep the audit pipeline intact.** The mastery-simulation validity study,
+   metacognitive calibration (gamma) and pre/post effect sizes are the reason
+   for the engagement — regression-test them before and after the swap and show
+   the numbers unchanged.
+6. **Alternative, priced honestly:** `NOTICE.md`'s other exit is a **commercial
+   PyMuPDF licence from Artifex**. If the client's timeline is shorter than the
+   swap, buy it and say so. ⚠️ Per-deployment cost, forever, versus a bounded
+   one-off engineering task — that is the trade, and it is the client's call.
+
+**Effort:** 4–6 weeks. Step 3 dominates; steps 1, 2 and 4 are days and carry
+most of the risk reduction.
+
+---
+
+## P-572-C — Sub-floor supply census: find the open-source layer a star-sorted search cannot see (1 week, reusable across industries)
+
+**For:** Globant's own studio practice, at the start of any engagement where
+"we checked and there is no open-source option for X" would otherwise go in a
+deck.
+**Region:** **Global** — and it is the only pattern here whose value is highest
+in **LATAM**, **EMEA** and **APAC**, because non-English, non-US-institutional
+projects attract stars last and are therefore the most systematically hidden by
+a star sort.
+
+**Why this pattern exists.** This KB ran the same star-sorted discovery for six
+passes and concluded three axes were saturated. 🔴 **They were saturated at the
+floor, not in the field:** `topic:ai-tutor` answers **816** results sorted by
+stars and **793** at `stars:<50`. 🟢 **One sweep of the band produced 13
+addresses new to this base, against 0 from eight keyword search legs** — and two
+of those 13 closed gaps this KB had published for five and six passes
+respectively. The method, not the industry, was the limit.
+
+**Components (all standard tooling — this is a method, not a stack):**
+
+| Role | Tool | Note |
+| --- | --- | --- |
+| Discovery | `github.com/search?q=topic:<axis>+stars:<50&s=updated&o=desc` | 🔴 **Sort by `updated`, not stars** — inside the band, stars are pure noise (`3,2,1,1,0,0,…`). |
+| Licence gate (**runs first**) | `raw.githubusercontent.com/<r>/{main,master}/{LICENSE,LICENSE.md,LICENSE.txt,LICENCE,COPYING}` | 🔴 This band is where ungranted repos concentrate: **2 of 13** here carried no grant at 5 filenames × 2 branches. Gate before you read. |
+| Manifest gate (**second**) | `package.json` · `DESCRIPTION` · `pyproject.toml` · `NOTICE.md` | 🟢 Catches what `LICENSE` cannot: an R package's real grant (`guess`), and an AGPL obligation reaching one directory through one dependency (`ai-learning-os`). |
+| **Ranking signal** | `git clone --filter=blob:none` + `git rev-list --count HEAD` | 🟢 **The discriminator.** Blobless, so it is cheap; exact, so it is not a rendered figure. |
+| Absence-claim check | [`../ingest/absence-claims.py`](../ingest/absence-claims.py) | 🟢 Run it against your own findings page before publishing an absence. |
+
+**Wiring:**
+
+1. **Name the axes as topics, not keywords.** Keyword search legs returned **0**
+   new addresses six passes running; `topic:` + a star bound returned 13 in one.
+2. **Pull the band sorted by recency**, 10–30 rows per axis. Record the
+   `total_count` — a null with no denominator is not a finding.
+3. **Gate on licence before reading anything else.** Five filenames × two
+   branches over `raw.githubusercontent.com`. 🟢 Accept on a **property test** —
+   OSI-approved, no copyleft, no network clause — which admits `ISC`, `0BSD`,
+   `Unlicense`, `MIT-0`, and not on a name list.
+4. **Read the manifest even when `LICENSE` answered.** `ai-learning-os` reads MIT
+   at `LICENSE` and carries an AGPL-3.0 network obligation in `NOTICE.md`.
+5. **Rank by commits, and split the field.** Blobless-clone the survivors and
+   `rev-list --count`. Expect a clean separation: here, **4 above 200 commits**
+   and **5 at or below 9**, the latter first-committed within 48 hours.
+   🔴 **Recency puts a two-commit announcement and a 1,313-commit platform on the
+   same page; only the commit count tells them apart.**
+6. 🔴 **Apply the right floor per layer.** Commit density for **tooling**
+   (`calibrate`: 0★/214 commits, shelved). Stars for **tutors and agents**, where
+   stars *are* the adoption evidence (`voyage` 1★/224 commits, **not** shelved).
+   Promoting a 1★ tutor to a client deck is the failure mode this step prevents.
+7. **Re-check your own absence claims** with `absence-claims.py` before the deck
+   ships. It found this base publishing a gap its own shelf had closed.
+
+**What this buys an engagement.** Two closed gaps and thirteen addresses for
+about a week of one person's time — and, more valuable, it stops the studio
+telling a client to *build* something that already exists permissively.
+🟢 **Nothing in this pattern is education-specific; run it unchanged on gaming,
+legal, financial, healthcare, media, retail, travel, technology, automotive,
+energy and enterprise.**
+
+**Effort:** 1 week per industry, 3 axes. Repeat quarterly, not hourly — the band
+turns over fast but a quarter is the shortest interval over which a commit
+history means anything.

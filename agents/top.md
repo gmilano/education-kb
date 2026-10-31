@@ -6,6 +6,11 @@ updated: 2026-10-31
 
 # Top AI agents for education
 
+<!-- machine-readable count claim, p569, for ingest/derive-counts.py -->
+`derived shelf: **24**` — the shelf table below, counted with that gate's own row
+regex. 🔴 Not the same figure as an unbounded `## The shelf` → next-`##` scan, which
+derives **33** by swallowing the two `###` sub-tables; see `568-E` / `569-C`.
+
 Every row below was verified on 2026-10-31. **The fifth pass swept the axis the
 fourth pass named as blind: capability topics rather than industry topics.** The
 fourth pass closed with an explicit instruction — *"sweep by capability
@@ -37,6 +42,63 @@ different claim from the one the previous pass retracted. Re-running the fourth
 pass's own discovery query (`topic:ai-education stars:>150 pushed:>2026-10-20`)
 returns the **same 6 repositories**, all already shelved. The axis is exhausted;
 the population is not, and the capability sweep is the proof.
+
+## Seventh pass (`p569`, 2026-10-31) — no new agent qualified again, and this time the floor itself was tested
+
+🟢 **The shelf is unchanged at `24` rows. What changed is that this pass tested
+the admission rule instead of applying it**, because `568-C` showed the rule had
+discarded this base's own best new row.
+
+### 🟢 The band below the star floor was swept, and it is not empty
+
+🟢 `topic:ai-tutor` answers **793 results at `stars:<50`** against **816 sorted by
+stars** — 🔴 **so the field this shelf draws from is almost entirely below its own
+floor.** Five addresses new to this base came off that band, four of them MIT.
+They are recorded in [`trending.md`](trending.md), **not here**, and the reason is
+a rule this pass is adopting explicitly:
+
+| layer | admission signal | why |
+| --- | --- | --- |
+| 🟢 **Tooling / infrastructure** | 🟢 **commit count** | Used by few, committed to heavily. `DaniyalMlk/calibrate` is **0★ / 214 commits** and closes a six-pass gap; `onionviolet/itembank` is **3★ / 1,175 commits**. A star floor discards both |
+| 🔴 **Tutors / agents** | 🔴 **stars** | For an agent a client is asked to adopt, stars *are* the adoption evidence. `throughline` (2★), `voyage` (1★) and `banxue` (0★) all carry 200+ commits and **none is shelved** |
+
+🔵 **The two rules disagree on purpose.** `p568` wrote the distinction —
+commit count is the better signal *"on a tooling layer (as opposed to a tutor,
+where stars track adoption)"* — and this is the pass that acts on it. 🔴 **A
+studio handed a 1★ tutor as a starting point has been handed somebody's personal
+project**, however busy its history; a studio handed a 0★ psychometrics engine
+with 214 commits and no runtime dependencies has been handed a library. The
+asymmetry is the finding.
+
+### 🔴 So the honest statement about this shelf is narrower than "saturated"
+
+🔴 **Four passes called `topic:ai-education` and `topic:ai-tutor` saturated. The
+axes were saturated *at the floor this base sorts by*, and the floor was never
+examined.** 🟢 Both statements are now on record with denominators, and the
+second one is the useful one for a successor: **the next agent to qualify here
+will most likely come from the `stars:<50` band on an adoption trajectory, not
+from a star-sorted sweep.** `voyage` and `throughline` are the two to re-read at
+`p573`.
+
+### 🔴 Gate posture — not attested this pass, and the channel inverted
+
+🔴 **`python3 -I ingest/validate-pages.py` and `ingest/derive-counts.py` were both
+DENIED this pass** — *"Code from External"*: this session may not execute code it
+cloned. 🟢 `p565` had established the opposite (the instruments *can* be invoked
+even though `make hooks` is denied) and corrected seven passes on it. 🔵 **Both
+readings were right in their own window; the durable lesson is that the gate
+channel must be re-probed every pass and never inherited.**
+
+🟢 **The `derived shelf: **24**` claim above is the machine-readable form
+`568-E` asked this page for, and it is supplied now**, computed by replicating
+`derive-counts.py`'s own row regex against this page. 🔴 **Note what it does NOT
+fix:** that gate's shelf scan runs from `## The shelf` to the next `##` and
+swallows the two `###` sub-tables, so it derives **`33`** where the shelf proper
+is **`24`** — both figures reproduced this pass. 🔴 **The scan was deliberately
+not patched**, because a gate that cannot be executed cannot be verified, and
+`568-E` is the record of what shipping an unverified gate costs. See `569-C`.
+
+---
 
 ## Sixth pass (`p568`, 2026-10-31) — no new agent qualified, and the measurement says so
 

@@ -6,6 +6,9 @@ updated: 2026-10-31
 
 # Current trends — education AI
 
+<!-- machine-readable count claim, p569, for ingest/derive-counts.py -->
+`derived trends: **13**` — numbered trend headings on this page.
+
 Confidence is stated per trend. Where a trend was **measured first-hand** from
 GitHub's own index rather than read from a source, that is said explicitly —
 those are the most reliable items on this page and the least likely to appear
@@ -517,6 +520,70 @@ a date stamp that marks it stale or an instrument that re-checks it against the
 shelf. 🔴 Absence claims are the highest-value and highest-risk statements a KB
 makes — a client is told to build rather than adopt on the strength of one — and
 they are the only claims here that nothing verifies. Registered as `568-A`.
+
+## 12. The open-source education field is mostly below the star floor, and every search method in common use is blind to it (high confidence — measured first-hand)
+
+🟢 **Measured this pass, with denominators on both sides of the comparison.**
+
+| axis | results sorted by stars | results at `stars:<50` |
+| --- | --: | --: |
+| `topic:ai-tutor` | **816** | 🔴 **793** |
+| `topic:psychometrics` | **510** | 🔴 **496** |
+| `topic:learning-analytics` | **289** (`"learning analytics" dashboard`) | 🔴 **382** |
+
+🔴 **On every axis the sub-50-star band is nearly the whole field.** For
+`topic:ai-tutor` that is **97%** of results. 🟢 **And the band is not junk:** one
+sweep of 30 rows produced **13 addresses new to a base that has run 568 passes
+over this industry**, four of them with more than 200 commits, two of them
+closing gaps this base had published for five and six passes.
+
+🔵 **Why this is a trend and not a quirk of one KB.** The economics are
+structural: an education-AI project is typically one practitioner — a teacher, a
+graduate student, a psychometrician — solving their own problem, in their own
+language, with no launch and no audience. **It accrues commits before it accrues
+stars, and it may never accrue stars at all.** 🟢 **Three of this pass's four
+high-commit finds are non-English-first** (Chinese `砚席`/`伴学`, plus a Spanish
+Moodle plugin and a Portuguese IRT study in the tail). 🔴 **A star-sorted search
+is therefore not merely incomplete, it is regionally biased** — it systematically
+under-reports APAC and LATAM supply, which is precisely the supply a global
+studio needs placed.
+
+🔵 **The actionable form, for any industry on this harness:** stars measure
+adoption and nothing else. For **tooling**, rank by commits. For **agents a
+client must adopt**, stars remain the right floor. Recipe: `P-572-C`.
+
+## 13. "MIT" on a platform is now routinely false at the directory level, and the cause has shifted from publisher choice to dependency inheritance (high confidence — measured first-hand)
+
+🟢 **`568-D` recorded the split-grant shape at `4 of 4` instances. This pass makes
+it `5`, and the fifth has a different mechanism from the first four.**
+
+| instance | shape | mechanism |
+| --- | --- | --- |
+| `learning-commons-org/evaluators` | code MIT · prompts CC BY 4.0 · corpora CC BY-NC-SA 4.0 | publisher's choice |
+| `24kchengYe/human-skill-tree` | AGPL-3.0 platform · `skills/` MIT at adopter's option | publisher's choice |
+| `langfuse/langfuse` | MIT-Expat outside four `ee/` directories | publisher's choice (open-core) |
+| `sudazc/open-question-bank` | code + docs MIT · bank content per-`bank.yaml`, default *"TBD - not for publication"* | publisher's choice |
+| 🆕 **`swsgbl/ai-learning-os`** | 🔴 **MIT root · AGPL-3.0 obligations on `services/api/`** | 🔴 **a single in-process dependency (PyMuPDF, AGPL-3.0)** |
+
+🔴 **The fifth instance is the dangerous class, because the repository's own
+grant is MIT everywhere and the obligation is invisible to a licence-file read.**
+This base's primary instrument — `raw.githubusercontent.com/<repo>/main/LICENSE`,
+read byte-for-byte — returns a clean 1,084-byte MIT text for `ai-learning-os`.
+The AGPL-3.0 §13 network obligation lives in `NOTICE.md`. 🟢 **Nothing about the
+instrument is wrong; it is answering a narrower question than anyone was asking.**
+
+🔵 **The rule, stated so it transfers:** a repository's **licence** is in
+`LICENSE`; its **licence surface** is in its dependency manifest. For a library
+the two usually coincide. **For a platform they routinely do not**, and a platform
+is what an engagement deploys. 🟢 The contrast inside this one pass is the proof:
+`DaniyalMlk/calibrate` declares MIT and has **zero runtime dependencies**, so its
+licence surface *is* its licence; `ai-learning-os` declares MIT and drags a
+network-copyleft obligation onto the one directory a studio would host.
+
+🟢 **Operationally this is cheap to check and cheap to fix** — read the manifest
+and `NOTICE`, then price the swap. In this instance a BSD-3 or MIT PDF parser in
+place of one AGPL dependency clears the whole platform (`P-572-B`). 🔴 **What is
+expensive is finding out after deployment.**
 
 ## Declared gaps
 
