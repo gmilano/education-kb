@@ -4,6 +4,82 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p567` — `2026-10-31` — **🟢 THE PLATFORM CHOICE NOW CARRIES A MEASURED WRITE-POSTURE CONSEQUENCE: Canvas-targeting agents declare `23.9 %` mutating tools against Moodle's `15.5 %`, over complete populations rather than tiers.** 🔵 **And the vendor/institution layer is where the instrument still fails: `3 of 9` such servers yield nothing, one of them from `77` PHP files and one because it has no commits at all.**
+
+🔵 **Why this belongs on the verticals page rather than the agent page:** the figure is a property of
+the *platform's* surrounding ecosystem, and it is the first quantitative input this base has for the
+"which LMS do we build on" question.
+
+| | 🟢 Canvas LMS | 🟢 Moodle |
+| --- | :-: | :-: |
+| agent rows measured | `187` | `61` |
+| tool declarations | `5 023` | `566` |
+| 🔴 aggregate mutating share | 🔴 **`23.9 %`** | 🟢 **`15.5 %`** |
+| 🟢 median repository | 🟢 **`0.0 %`** | 🟢 **`0.0 %`** |
+| 🟢 rows declaring zero write tools | 🟢 **`51.4 %`** | 🟢 **`64.3 %`** |
+| 🔵 **instrument recall, over measurable rows** | 🟢 **`94.0 %`** | 🔵 **`82.4 %`** |
+| 🔴 empty repositories (zero commits) | `0` | 🔴 **`5` (`8.2 %` of the field)** |
+
+🔴 **Read the recall row before the share row.** The Moodle share rests on `42` readable rows of a
+`51`-row measurable population; the Canvas share on `173` of `184`. 🟢 **Moodle looks the safer
+platform on write posture AND is the worse-measured one**, and those two facts must travel together.
+🔴 **A third fact belongs with them: `5` of Moodle's `61` addresses are empty repositories** — so a
+census that counts addresses over-states Moodle's real supply by `8.2 %` before any licence or
+write-surface question is asked.
+
+### 🔵 Why Moodle's ecosystem is harder to read — and it is a platform property, not an accident
+
+🟢 **Moodle's extension model is a server-side plugin, not a client-side agent**, and the tool
+surface is declared in Moodle's own `db/services.php` web-service manifest rather than in any MCP
+idiom. 🟢 Demonstrated:
+[`Sergio-Oracle/moodle-local-mcp-quiz`](https://github.com/Sergio-Oracle/moodle-local-mcp-quiz)
+declares **`49` service entries** there and **zero** MCP tool declarations.
+
+🔴 **But the explanation is partial and is reported as such: it holds for `1 of 5` sampled zero-yield
+Moodle rows.** The others —
+[`eledia/moodle-webservice_eledia_mcp`](https://github.com/eledia/moodle-webservice_eledia_mcp),
+[`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper),
+[`onbirdev/moodle-webservice_mcp`](https://github.com/onbirdev/moodle-webservice_mcp) — carry no
+`db/services.php` either. 🔴 `567-A`, open.
+
+🟢 **Delivery consequence, and it is favourable:** a Moodle plugin's write surface is governed by
+**Moodle's own web-service capability system**, which predates agents and is already auditable by
+administrators. 🔵 **So on Moodle, the right place to constrain an agent is the platform's permission
+model, not the agent's tool list** — the opposite of the Canvas pattern, where the agent's tool
+declarations *are* the only gate.
+
+### 🟢 The vendor and institution layer, placed by region
+
+| row | region | basis for the placement | 🟢 tool surface |
+| --- | :-: | --- | :-: |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **North America** | UIUC; `310★` tier head | 🟢 **`129` tools, `49` mutating** |
+| [`edly-io/canvas-mcp`](https://github.com/edly-io/canvas-mcp) | 🟢 **North America** | Edly, Open edX vendor | 🟢 **`25` tools, `15` mutating (`60 %`)** |
+| [`Sedahoo/iiit-moodle-mcp`](https://github.com/Sedahoo/iiit-moodle-mcp) | 🟢 **APAC** | IIIT, named in the repo | 🟢 **`15` tools, `0` mutating** |
+| [`CarvalhoJeo/moodle-unisinos-mcp`](https://github.com/CarvalhoJeo/moodle-unisinos-mcp) | 🟢 **LATAM** | Unisinos (Brazil), named in the repo | 🟢 **`9` tools, `0` mutating** |
+| [`AlpETuna/MonashMoodleMCP`](https://github.com/AlpETuna/MonashMoodleMCP) | 🟢 **APAC** | Monash University, named in the repo | 🔴 **`0` — genuine instrument gap** |
+| [`Punyo/NITechMoodleMCPServer`](https://github.com/Punyo/NITechMoodleMCPServer) | 🟢 **APAC** | Nagoya Institute of Technology, named in the repo | 🔴 **`0` — written in Kotlin, a language no idiom covers** |
+| [`Sergio-Oracle/mcp-moodle`](https://github.com/Sergio-Oracle/mcp-moodle) | 🔵 **Global** | vendor-named; country not established in-repo | 🟢 **`117` tools, `45` mutating** |
+| [`eledia/moodle-webservice_eledia_mcp`](https://github.com/eledia/moodle-webservice_eledia_mcp) | 🔵 **Global** | 🔴 vendor-named; **region NOT established in-repo — recorded as a gap, not guessed** | 🔴 **`0` on `77` PHP files — the largest unread tree on the field** |
+| [`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper) | 🔵 **Global** | 🔴 same — vendor name only | 🔴 **EMPTY REPOSITORY — zero commits** |
+
+🔵 **The regional shape, corrected against this pass's own first draft:** `0 of 2` North American
+institutional rows are unreadable, `2 of 3` APAC ones are, and LATAM's single row reads cleanly.
+🔴 **EMEA has no placed institutional row at all** — its two vendor-shaped entries name no country
+in-repo, and this base declines to infer one from a company name. 🔵 Registered as `567-A`.
+
+### 🔵 Standing verticals shelf — unchanged this pass, re-stated for the platform decision
+
+🟢 Moodle (`GPL-3.0`) · Open edX (`AGPL-3.0`) · Canvas LMS community edition (`AGPL-3.0`) ·
+OpenOlat (`Apache-2.0`) · Frappe Learning (`MIT`) · OpenEduCat (`LGPL-3.0`) · Kolibri (`MIT`,
+offline-first) · Sakai (`Apache-2.0`) · BigBlueButton · H5P · ILIAS · `i-educar` (LATAM).
+🔵 **Unchanged by this pass**, which measured the agent layer above these platforms rather than the
+platforms themselves. 🔴 The four prescribed vertical legs returned no platform new to this shelf.
+
+🔵 **The permissive platform tier remains OpenOlat (`Apache-2.0`) and Frappe Learning (`MIT`)**, and
+it remains the shelf's standing anomaly that the two most-deployed systems — Moodle and Canvas — are
+both copyleft, so the platform is `LINK-ONLY` for delivery while the **agent** layer above it is
+where permissive supply actually lives.
+
 ## 🆕 `p566` — `2026-10-31` — **🟢 `565-C`'s ENDPOINT IS NAMED AT LAST — `https://download.moodle.org/api/1.3/pluglist.php`, Moodle's own versioned plugin-list API, found inside a repository this base did not hold.** 🔴 **And `p565`'s diagnosis of the blockage is CORRECTED: it is not name resolution, it is a proxy POLICY denial — `CONNECT tunnel failed, response 403`.**
 
 🔵 **Why this matters for a vertical engagement and not only for the gap register.** `563-C`,

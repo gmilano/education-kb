@@ -4,6 +4,179 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p567` — `2026-10-31` — **🔵 THE INSTITUTIONAL SUPPLY LAYER IS NOW PLACED BY REGION FROM FIRST-HAND REPOSITORY EVIDENCE: nine institution- and vendor-named LMS servers on the swept field, six readable, and the unreadable residue is APAC-specific rather than "non-US".** 🟢 **LATAM's one university row reads cleanly (`9` tools, `0` mutating) — a claim this pass had to CORRECT against itself before publishing.** 🔴 **The prose-demand channel NILS for a fourth consecutive pass across all four regions.**
+
+🔴 **Stated first, because it governs how much of this section to trust.** Eight prescribed legs ran
+(4 global, 4 per-region) and returned **zero addresses new to this base** — fourth consecutive nil
+([`../agents/trending.md`](../agents/trending.md#-p567--2026-10-31)). 🟢 **What paid this pass was
+first-hand supply measurement**, and the regional placements below separate what was *measured* from
+what was *read in secondary sources*.
+
+### 🔵 The institutional supply layer, placed by region — and a correction this pass owes itself
+
+🟢 **All `248` rows of the Canvas-LMS-plus-Moodle field were cloned and read this pass.** Nine rows
+carry an institution or vendor name:
+
+| row | region | basis for the placement | 🟢 tool surface |
+| --- | :-: | --- | :-: |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **North America** | UIUC; `310★` tier head | 🟢 **`129` tools, `49` mutating** |
+| [`edly-io/canvas-mcp`](https://github.com/edly-io/canvas-mcp) | 🟢 **North America** | Edly, Open edX vendor | 🟢 **`25` tools, `15` mutating (`60 %`)** |
+| [`Sedahoo/iiit-moodle-mcp`](https://github.com/Sedahoo/iiit-moodle-mcp) | 🟢 **APAC** | IIIT, named in the repo | 🟢 **`15` tools, `0` mutating** |
+| [`CarvalhoJeo/moodle-unisinos-mcp`](https://github.com/CarvalhoJeo/moodle-unisinos-mcp) | 🟢 **LATAM** | Unisinos (Brazil), named in the repo | 🟢 **`9` tools, `0` mutating** |
+| [`AlpETuna/MonashMoodleMCP`](https://github.com/AlpETuna/MonashMoodleMCP) | 🟢 **APAC** | Monash University, named in the repo | 🔴 **`0` — genuine instrument gap** |
+| [`Punyo/NITechMoodleMCPServer`](https://github.com/Punyo/NITechMoodleMCPServer) | 🟢 **APAC** | Nagoya Institute of Technology, named in the repo | 🔴 **`0` — written in Kotlin, a language no idiom covers** |
+| [`Sergio-Oracle/mcp-moodle`](https://github.com/Sergio-Oracle/mcp-moodle) | 🔵 **Global** | vendor-named; country not established in-repo | 🟢 **`117` tools, `45` mutating** |
+| [`eledia/moodle-webservice_eledia_mcp`](https://github.com/eledia/moodle-webservice_eledia_mcp) | 🔵 **Global** | 🔴 vendor-named; **region NOT established in-repo — recorded as a gap, not guessed** | 🔴 **`0` on `77` PHP files — the largest unread tree on the field** |
+| [`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper) | 🔵 **Global** | 🔴 same — vendor name only | 🔴 **EMPTY REPOSITORY — zero commits** |
+
+🔴 **A correction, stated plainly because this pass got it wrong first.** A draft of this section
+claimed *"three of four named APAC/LATAM institutional rows are unreadable"* and framed the gap as
+non-US. 🟢 **Both halves of that are false on measurement:** LATAM's Unisinos server reads **`9`
+tools**, and the unreadable institutional rows are **`2 of 3` in APAC and `0 of 1` in LATAM**. 🔵 The
+draft had inherited an earlier zero for Unisinos from a stale sweep and had not re-read it.
+
+🟢 **What survives, and it is narrower and more useful:**
+
+| region | institutional rows | readable | note |
+| --- | :-: | :-: | --- |
+| 🟢 **North America** | `2` | 🟢 **`2`** | both fully measured; the Open edX vendor row is the field's highest institutional write share at **`60 %`** |
+| 🔴 **APAC** | `3` | 🔴 **`1`** | IIIT reads; **Monash** is a genuine instrument gap; **Nagoya Inst. of Tech.** is Kotlin and uncovered |
+| 🟢 **LATAM** | `1` | 🟢 **`1`** | Unisinos (Brazil) — `9` tools, `0` mutating |
+| 🔴 **EMEA** | 🔴 **`0` placed** | — | 🔴 **two Moodle-partner-shaped vendors on the field name no country in-repo**, and one of those two is an empty repository |
+
+🔴 **The one regional gap this pass will state as a gap: EMEA has no placed institutional row.**
+Supply plainly exists — two vendor-named Moodle servers — but neither states a country anywhere in
+the repository, so this base **declines to place them** rather than inferring a region from a
+company name. 🔵 An informed gap, registered as part of `567-A`.
+
+### 🔵 Market-size figures — returned again, re-ranged, not re-adopted
+
+🔴 **The 2026 total still disagrees with itself by roughly `2 ×`**, and this base continues to publish
+the range rather than pick a number:
+
+| source | 2026 base | horizon |
+| --- | :-: | --- |
+| Research & Markets | `$10.6 B` | `$42.48 B` by 2030 (CAGR `41.5 %`) |
+| Precedence Research | `$9.58 B` | CAGR `34.52 %` to 2035 |
+| Trendx Insights | `$5.21 B` (2025) | `$61.26 B` by 2034 |
+| 🔵 Mordor — **agentic AI in education specifically** | 🔵 **`$2.37 B`** | `≈$11.83 B` by 2031 (`≈38 %`) |
+| Technavio — education-sector AI | — | `+$3 367.8 M` 2026→2030 |
+
+🔵 **The only figure this pass treats as decision-relevant is Mordor's agentic sub-segment**
+(`$2.37 B` of a `$9.6–10.6 B` whole, i.e. **roughly a quarter**), because it is the segment the
+shelf's `248`-row field actually sits in. 🔴 All of these are vendor or analyst estimates and none
+was verified against a primary filing.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Best-measured region on this shelf: both institutional rows read completely.** The `310★` tier
+head is a public-university build (UIUC, `129` tools) and an Open edX vendor ships a Canvas agent at
+**`60 %` mutating** — the highest write share of any institution-affiliated row on the field.
+
+- 🔴 **Regulatory surface is state-level and fragmenting fast:** secondary trackers report **`134+`
+  bills across `31` states** on AI in K-12 and higher education, with roughly **`34` states plus DC
+  and Puerto Rico** issuing guidance but only **`4`** mandating district AI policies. Enacted
+  examples: **Idaho SB 1227** (statewide K-12 AI framework, AI-literacy standards, educator
+  training) and **Maryland SB 720** (state guidance, professional development, tool evaluation).
+  🔵 Pending and directionally opposite: **New York A.9190** would bar most classroom AI below
+  grade 9; **Alabama HB 329** would require a CS-with-AI course to graduate.
+- 🔵 Federal layer is thin — the **K-12 AI Literacy and Readiness Act of 2026** advanced out of the
+  House Education and Workforce Committee; no binding federal AI curriculum standard exists.
+- 🟢 **Opportunity:** the regulatory patchwork *is* the engagement. A `50`-state policy matrix is
+  the deliverable a district or state system cannot build itself, and this shelf's write-surface
+  instrument maps directly onto the "which tools may touch a gradebook" question those policies
+  create. **FERPA remains the region's distinguishing technical constraint**, and the read-only
+  shelf (`16` repos at `≥20` tools and `0` mutating) is the FERPA-safe starting set.
+- 🔴 Adoption is lopsided: secondary reporting puts university-student use near **`92 %`** against
+  roughly **`54 %`** in K-12, and **`86 %`** of education organisations using generative AI without
+  a governing policy. 🔵 Unverified against primary instruments.
+
+### EMEA
+
+🔴 **The region where this pass can prove supply exists and cannot place it.** Two Moodle-vendor
+servers sit on the field; **neither names a country anywhere in the repository**, one yields nothing
+from `77` PHP files and the other has **zero commits**. 🔵 **That is the gap, stated rather than
+papered over — and it is the only region on this map with no placed institutional row.**
+
+- 🟢 **The regulatory clock is the clearest of any region, and it moved:** the **Digital Omnibus
+  (Regulation (EU) 2026/1744)** deferred the EU AI Act's **Annex III high-risk education
+  obligations to 2 December 2027** — about `16` additional months. 🔵 High-risk uses named:
+  admissions, learning-outcome evaluation, level placement, and exam or behaviour monitoring.
+- 🔴 **Already binding, and frequently misreported as deferred:** **Article 50** transparency
+  (telling a person they are dealing with an AI system) applies from **2 August 2026**, and the
+  **ban on emotion recognition in schools** has applied since **February 2025**.
+- 🟢 **Opportunity, and the deferral sharpens rather than softens it:** `16` months is exactly long
+  enough to build compliant assessment and placement systems *before* enforcement, and short enough
+  that work started in 2027 will be late. The concrete deliverables are **Fundamental Rights Impact
+  Assessments (FRIA)**, an AI-use inventory, and Article 50 disclosure plumbing — none of which the
+  deferral postpones.
+- 🔵 A Spanish-language source claiming a binding EU education framework approved April 2026 with
+  university audits due December 2026 **could not be corroborated** and is not carried.
+
+### APAC
+
+🟢 **The region with the most institutional repository evidence on this field — three named
+university servers (Monash, Nagoya Institute of Technology, IIIT) — and, measured rather than
+assumed, the region worst served by the instrument: `2 of the 3` yield nothing.**
+
+- 🟢 **Compulsory national AI curricula exist here and almost nowhere else:** China and the UAE are
+  reported as the only countries running them, since the 2025-26 school year. **India** plans AI and
+  computational thinking as compulsory **from Class 3, starting 2026-27**, backed by the IndiaAI
+  Mission.
+- 🔵 **Three distinct regulatory postures, which matters for a multi-country engagement:** China is
+  rule-specific (content-labelling measures since **1 September 2025**; an anthropomorphic-AI-services
+  measure effective **15 July 2026**); **Japan** is promotion-first (**AI Promotion Act**, May 2025 —
+  guidelines and school pilots, no penalties); **India** has no AI statute and an explicitly
+  innovation-first stance.
+- 🔵 Named commercial players: **TAL** (pivoted to AI learning hardware), ByteDance's **Gauth**,
+  **PhysicsWallah** (own AI tutor; IPO at `≈$5 B`, November 2025), with **Squirrel AI** and **Embibe**
+  as earlier entrants.
+- 🟢 **Opportunity:** compulsory curricula create a content-and-assessment pipeline at national
+  scale, and the three university servers already on this field show institutions building their own
+  LMS agents rather than buying. **The wedge is making those builds readable and auditable** —
+  precisely what `ingest/tool-surface.py` does, and precisely where it fails worst (`2 of 3`).
+
+### LATAM
+
+🟢 **One named institutional row, first-hand and fully readable: a Brazilian university Moodle
+server ([`moodle-unisinos-mcp`](https://github.com/CarvalhoJeo/moodle-unisinos-mcp)) at **`9` tools,
+`0` mutating** — TypeScript, read-only, built by the university itself.** 🔵 Supply here is real,
+Moodle-centric and university-built, and it is the **only** region outside North America whose
+institutional row this instrument reads completely.
+
+- 🔵 **Market:** HolonIQ's **2026 Latin America EdTech 100** reports AI-native positioning in product
+  descriptions **quadrupling since 2020**, naming Brazil's **Teachy** (AI lesson preparation, now
+  expanding outside the region) and Mexico's **Mattilda** (school payments). IMARC projects a
+  **`11.79 %` CAGR 2026-2034** to `$51.3 B` — 🔴 a single commercial projection, uncorroborated.
+- 🔴 **Regulatory state is genuinely unsettled and the sources conflict:** Brazil's *Marco Legal da
+  IA* is described by one source as approved in 2024 and by another as still pending with 2026
+  entry into force. 🔵 **This base does not pick between them.** Mexico has **no general AI
+  framework and no binding guidance for universities**, which multiple sources agree on.
+- 🔴 An academic study reports **significant regulatory fragmentation**, with institutions adopting
+  international frameworks **without the capacity to implement them**.
+- 🟢 **Opportunity, and it follows directly from that last sentence:** the regional gap is
+  *implementation capacity*, not framework availability. A studio that arrives with a working
+  Moodle-agent build plus a read-only-first governance posture is selling the scarce half — and
+  Unisinos is a working local precedent to point at. Portuguese and Spanish coverage remains the
+  differentiator.
+- 🔴 A widely-syndicated source claiming binding Chile/Colombia frameworks and a `$412 M`
+  MinEducación AI programme **contradicts itself internally and could not be verified**. Not carried.
+
+### Global
+
+- 🟢 **The field is drifting read-only, everywhere.** Median mutation share is **`0.0 %`** on both
+  the Canvas (`187` rows) and Moodle (`61` rows) populations; **`51.4 %`** and **`64.3 %`**
+  respectively declare no mutating tool at all. The aggregate `23.9 %` is produced by a head of
+  roughly ten repositories.
+- 🟢 **A region-independent procurement rule falls out of that:** the write risk on this field is
+  *addressable by exclusion list*, not by abstention.
+- 🔴 **The two largest agent rows remain split on licence**, and it governs delivery model
+  everywhere: [`DeepTutor`](https://github.com/HKUDS/DeepTutor) **`51 960★` Apache-2.0** (buildable),
+  [`learnharness`](https://github.com/amosblomqvist/learnharness) **`4 331★` AGPL-3.0** (not foldable
+  into a client deliverable), the latter at `15` days old with `670` forks.
+
 ## 🆕 `p566` — `2026-10-31` — **🟢 THE BUILDABLE FIELD IS `2.4 ×` WHAT THIS MAP SAID: `99` structurally-confirmed permissive Canvas LMS agents against the tier of `8` `p565` priced — and `24` of the `99` exist only if the licence gate reads manifests.** 🔴 **The prose-demand channel NILS for a third consecutive pass across all four regions.**
 
 🔴 **Stated first, because it governs how much of this section to trust.** Eight prescribed legs

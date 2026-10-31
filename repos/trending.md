@@ -4,6 +4,49 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p567` — `2026-10-31`
+
+> **🔴 `0` new addresses from the trending channel for a fourth consecutive pass — the GitHub
+> discovery legs on this field are a measured-saturated channel, not an untried one.** 🟢 **The
+> week's repository-level movement is a committed instrument and a `+56.9 %` correction to the
+> field's own tool-surface ledger — plus a quieter discovery: `5` named Moodle "implementations" on
+> this field are **empty repositories with zero commits**.** Append-only: history below is untouched.
+
+### 🟢 New in `ingest/` this week
+
+| artefact | what it is |
+| --- | --- |
+| 🟢 [`ingest/tool-surface.py`](../ingest/tool-surface.py) | **the first committed tool-declaration extractor in this base's history.** Five multi-line idioms, strict/relaxed bracket, mutation verdict from tool names with a verb set traceable to an author-declared ground truth |
+| 🟢 [`evidence/tool-surface-field…p567.tsv`](../evidence/tool-surface-field.2026-10-31-p567.tsv) | `248` rows — `p566`'s figure beside `p567`'s strict, relaxed and mutating counts, for row-by-row audit |
+| 🟢 [`evidence/tool-surface-zero-yield…p567.tsv`](../evidence/tool-surface-zero-yield.2026-10-31-p567.tsv) | the `33` rows that yield nothing, each with its CAUSE — `5` empty repositories, `8` uncovered-language trees, `20` real instrument gaps |
+
+### 🔵 Trending repos re-read first-hand, `2026-10-31`
+
+| repo | ★ | grant | this week |
+| --- | :-: | :-: | --- |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`51 960`** | 🟢 `Apache-2.0` | `+123` intra-day on `p566`; `6 369` forks; `297` open issues; pushed `2026-10-31`; arXiv [`2604.26962`](http://arxiv.org/abs/2604.26962) |
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | 🟢 **`4 331`** | 🔴 `AGPL-3.0` | `670` forks at `15` days — **fork-to-star ratio `1:6.5`, the highest on this shelf** |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | **`119`** | 🟢 `MIT` | `29` forks; read-only posture confirmed first-hand (`26` tools, `0` mutating) |
+| [`Fireiscoolsolo/canvas-lms-mcp-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server) | `1` | 🟢 `MIT` | pushed `2026-10-31`; `211` tools — 🔵 **a `211`-tool server at `1★` is this field's clearest star/substance decoupling** |
+
+🔵 **Worth naming as a trend because it recurs:** `p564` found the vendor and institution layers ship
+at `0★`, and this pass adds the same shape on the *agent* axis — Fireiscoolsolo carries more tool
+surface (`211`) than the `310★` tier head (`129`) and has one star. 🟢 **Star-ranked discovery is
+structurally blind to tool surface**, and the committed instrument is the only channel that sees it.
+
+### 🔴 Five addresses on this field are empty repositories
+
+🔴 **New this pass, and it is a caution about every address count this base publishes:** five named
+Moodle MCP repositories carry **zero commits** —
+[`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper),
+[`Marcus2012/MCP_Moodle`](https://github.com/Marcus2012/MCP_Moodle),
+[`OGjoyce/mcp-moodle`](https://github.com/OGjoyce/mcp-moodle),
+[`Hiroya-319/moodle-mcp-server`](https://github.com/Hiroya-319/moodle-mcp-server),
+[`DeepLearningHarness-Team/Moodle-MCP`](https://github.com/DeepLearningHarness-Team/Moodle-MCP).
+🔵 `8.2 %` of the Moodle field, `0 %` of the Canvas field. 🟢 **An address census cannot see this**,
+and one of the five is a named vendor — so the vendor layer `p564` found in the `0★` tail is partly
+an announcement layer.
+
 ## 🆕 `p566` — `2026-10-31`
 
 > **🟢 The shelf delta this week is `+44` buildable repositories and `+5` new addresses — recovered

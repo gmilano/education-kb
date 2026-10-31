@@ -4,6 +4,75 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p567` — `2026-10-31` — **🟢 THIS PAGE GAINS THE FIRST COMMITTED TOOL-DECLARATION INSTRUMENT THIS BASE HAS EVER HELD — [`ingest/tool-surface.py`](../ingest/tool-surface.py) — and its first population run corrects the field's tool surface by `+2 027` declarations (`+56.9 %`).** 🔴 **The reason a defect survived `119` passes is on this page's own axis: `p447`'s and `p566`'s extractors were never committed, so nothing could re-run them.**
+
+🔵 **The foundational point, and it generalises past this field:** an instrument that is quoted but
+not committed cannot be audited, and this base quoted a tool-declaration extractor across `119`
+passes without ever being able to re-run one. 🟢 **`ingest/tool-surface.py` is committed, calibrated
+in public against repositories that state their own tool counts, and publishes a bracket rather than
+a point.**
+
+### 🟢 Calibration, stated before any derived figure
+
+| repository | ground truth it states about itself | 🟢 instrument |
+| --- | :-: | :-: |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | `54 tools` | 🟢 **`54`** |
+| [`Fireiscoolsolo/canvas-lms-mcp-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server) | `211 tools` | 🟢 **`211`** |
+| [`rbrtlol/canvas-readonly-mcp`](https://github.com/rbrtlol/canvas-readonly-mcp) | read-only | 🟢 **`21` tools, `0` mutating** |
+| [`vkumar04/canvas-mcp-lite`](https://github.com/vkumar04/canvas-mcp-lite) | `READ_TOOLS` `51` + `WRITE_TOOLS` `52` | 🟢 **`100 %`** classification accuracy, **`0`** false positives |
+
+### 🔵 Five declaration idioms, and the one that defeats universal reading
+
+🟢 The committed instrument recognises, all multi-line tolerant:
+
+1. `@mcp.tool(…)` / `@app.tool(…)` — `name=` kwarg, else the decorated `def` within `40` lines
+2. `.tool(` / `.registerTool(` / `.addTool(` — first string literal, same line or continuation
+3. `Tool(name=…)` and `Tool.from_function(name=…)` — the low-level python MCP server form
+4. `{ name: "x", description|inputSchema … }` — JS/TS object literal in a tools array
+5. `X_TOOLS = [ pkg.fn, … ]` — a named registry listing bare function references
+
+🔴 **Idiom 6 does not exist and cannot be written.** [`Fireiscoolsolo`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server)
+declares `211` tools through **project-local wrapper functions** — `tool({…})`, `get({ name: 'whoami', … })` —
+`213` top-level wrapper calls, named by their author with no cross-repository convention. 🟢 **Hence
+the bracket:** `strict` `5 190` … `relaxed` `5 590` declarations over `248` rows, a **`7.2 %`** spread,
+with the two modes disagreeing on only **`26 of 248`** rows.
+
+### 🟢 The population run — `248` repositories, zero clone failures
+
+🟢 `git clone --depth 1 --filter=blob:limit=250k`, complete tree walked, `node_modules`/`dist`/
+`vendor`/test and fixture paths excluded by rule.
+
+| | Canvas LMS field | Moodle field | total |
+| --- | :-: | :-: | :-: |
+| rows | `187` | `61` | **`248`** |
+| 🔵 measurable (non-empty, covered language) | `184` | `51` | `235` |
+| 🟢 **recall over measurable rows** | 🟢 **`94.0 %`** | 🔵 **`82.4 %`** | 🟢 **`91.5 %`** |
+| tool declarations | `5 024` | `566` | **`5 590`** |
+
+🟢 Row lists committed: [`tool-surface-field`](../evidence/tool-surface-field.2026-10-31-p567.tsv)
+(all `248`, with `p566`'s figure beside each for audit) and
+[`tool-surface-zero-yield`](../evidence/tool-surface-zero-yield.2026-10-31-p567.tsv) (the `34`
+unread rows, named rather than summarised).
+
+🔴 **Two defects caught in this pass's own instrument before publication**, both disclosed: an
+`8`-line `def` window under-read `JohannsenLum/canvas-api-mcp` **`19 → 5`**, and test fixtures
+leaked a spurious tool name (`PS1`, from a Canvas API response object in `tests/test_grades.py`
+carrying both `name` and `description` — structurally indistinguishable from a tool spec).
+
+🔴 **Residual recall is named and PARTITIONED, not rounded away.** `33` rows yield zero, and only
+`20` are instrument failures:
+
+| cause | rows |
+| --- | :-: |
+| 🔵 empty repository, no commits — 🔴 **all `5` are Moodle** | `5` |
+| 🔵 no file in a covered language (incl. **Kotlin**, uncovered) | `8` |
+| 🔴 **genuine instrument gap** | 🔴 **`20`** |
+
+🔵 **This partition is the reusable lesson for this page:** an address census counts repositories,
+not commits, so `5` named Moodle "implementations" on this field are placeholder repositories with
+zero commits — `8.2 %` of the Moodle field. 🟢 Causes committed per row in
+[`tool-surface-zero-yield`](../evidence/tool-surface-zero-yield.2026-10-31-p567.tsv).
+
 ## 🆕 `p566` — `2026-10-31` — **🟢 `565-A` CLOSED BY A CLASSIFICATION THAT DOES NOT READ DESCRIPTIONS: of `p565`'s `280` Canvas rows, `187` (`66.8 %`) are structurally Canvas LMS — so its own headline was an upper bound by `1.5 ×`, exactly as it warned.** 🟢 **And the `101` rows `p565` said *"cannot be classified from metadata at all"* are now classified: `60` of them ARE Canvas LMS.**
 
 🔵 **Scope stated first.** Every figure below is first-hand: trees and manifests from blobless

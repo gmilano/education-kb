@@ -1,0 +1,34 @@
+full_name	platform	repo_state	covered_src_files	cause
+1alexandrer/moodle-mcp-2	moodle	NO_COVERED_SRC	0	no source file in a covered language
+AlpETuna/MonashMoodleMCP	moodle	MEASURABLE	1	INSTRUMENT GAP - covered source present, no tool name extracted
+awesome-town/canvas-mcp-skills	canvas	NO_COVERED_SRC	0	no source file in a covered language
+Canvas-LMS-MCP/canvas-teacher-mcp	canvas	MEASURABLE	93	INSTRUMENT GAP - covered source present, no tool name extracted
+ciaranqnexted/canvas-chat-mcp	canvas	MEASURABLE	25	INSTRUMENT GAP - covered source present, no tool name extracted
+CreveXTech/canvas-lms-mcp	canvas	MEASURABLE	22	INSTRUMENT GAP - covered source present, no tool name extracted
+daskol/canvas-mcp	canvas	MEASURABLE	8	INSTRUMENT GAP - covered source present, no tool name extracted
+DeepLearningHarness-Team/Moodle-MCP	moodle	EMPTY	0	no commits - nothing to measure
+EduardoKrausME/moodle-block_mcp	moodle	MEASURABLE	14	INSTRUMENT GAP - covered source present, no tool name extracted
+eledia/moodle-webservice_eledia_mcp	moodle	MEASURABLE	77	INSTRUMENT GAP - covered source present, no tool name extracted
+enkhbold470/canvas-lms-mcp	canvas	MEASURABLE	7	INSTRUMENT GAP - covered source present, no tool name extracted
+enovation/moodle-local_mcp_helper	moodle	EMPTY	0	no commits - nothing to measure
+FSPR2005/canvas-mcp-itam	canvas	NO_COVERED_SRC	0	no source file in a covered language
+GarthDB/rust-canvas-mcp	canvas	MEASURABLE	5	INSTRUMENT GAP - covered source present, no tool name extracted
+GodPuffin/canvas-mcp	canvas	MEASURABLE	36	INSTRUMENT GAP - covered source present, no tool name extracted
+Hiroya-319/moodle-mcp-server	moodle	EMPTY	0	no commits - nothing to measure
+hyusap/canvas-mcp-docker	canvas	NO_COVERED_SRC	0	no source file in a covered language
+judacas/CanvasMCP	canvas	MEASURABLE	12	INSTRUMENT GAP - covered source present, no tool name extracted
+lcrzhang/canvas-mcp	canvas	MEASURABLE	31	INSTRUMENT GAP - covered source present, no tool name extracted
+lucasbiz/moodle-mcp	moodle	MEASURABLE	39	INSTRUMENT GAP - covered source present, no tool name extracted
+Marcus2012/MCP_Moodle	moodle	EMPTY	0	no commits - nothing to measure
+OGjoyce/mcp-moodle	moodle	EMPTY	0	no commits - nothing to measure
+onbirdev/moodle-webservice_mcp	moodle	MEASURABLE	14	INSTRUMENT GAP - covered source present, no tool name extracted
+Punyo/NITechMoodleMCPServer	moodle	NO_COVERED_SRC	0	no source file in a covered language
+Sergio-Oracle/moodle-local-mcp-quiz	moodle	MEASURABLE	10	INSTRUMENT GAP - covered source present, no tool name extracted
+shabrej15/moodle-mcp-server	moodle	NO_COVERED_SRC	0	no source file in a covered language
+smirnovlad/moodle-mcp	moodle	NO_COVERED_SRC	0	no source file in a covered language
+ssdasari777/moodle-mcp-project	moodle	MEASURABLE	2	INSTRUMENT GAP - covered source present, no tool name extracted
+sultantemuruly/moodle-nu-mcp	moodle	MEASURABLE	22	INSTRUMENT GAP - covered source present, no tool name extracted
+tidely/moodle-mcp	moodle	MEASURABLE	22	INSTRUMENT GAP - covered source present, no tool name extracted
+UE2020/canvas-mcp	canvas	MEASURABLE	3	INSTRUMENT GAP - covered source present, no tool name extracted
+windshifter1/Moodle-MCP	moodle	NO_COVERED_SRC	0	no source file in a covered language
+yuziyang-dev/pm_canvas_mcp	canvas	MEASURABLE	14	INSTRUMENT GAP - covered source present, no tool name extracted

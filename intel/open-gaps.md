@@ -4,6 +4,59 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p567` — `2026-10-31` — **🟢 `566-B` AND `566-F` CLOSED BY ONE COMMITTED INSTRUMENT, and both close by REFUTING the figure that registered them: `566-B` was a `69`-row field defect, not a `3`-row tier bug, and `566-F`'s field rate is `23.9 %` against the tier's `28.0 %`.** 🟢 **AND `p566`'s `28.0 %` IS REPRODUCED AT `28.1 %` WITH FULL `9/9` RECALL — its arithmetic was right and only its SCOPE was wrong.** 🔴 **`566-E` RE-PROBED AND STILL SHUT (fresh `403`, timestamped).** 🔴 **`566-A`, `566-C`, `566-D` UNTOUCHED. FIVE REGISTERED (`567-A`…`567-E`). 🔴 ONE OF THIS PASS'S OWN REGIONAL FINDINGS RETRACTED BEFORE PUBLICATION.**
+
+🔵 **Channel table, run first.**
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `git clone` ×`248` (blobless, `blob:limit=250k`) | 🟢 **`248` OK, `0` clone failures** |
+| 🟢 `mcp__github__search_repositories` | 🟢 `6` head rows re-read — stars, forks, `spdx_id`, `pushed_at` |
+| 🔴 `WebSearch` | 🟢 8 legs (4 global, 4 regional) — 🔴 **`0` addresses new to this base**, fourth consecutive nil |
+| 🔴 `curl` → `download.moodle.org` | 🔴 **`CONNECT tunnel failed, response 403`**; proxy status names it `connect_rejected`, logged `2026-10-31T05:40:58Z` |
+| 🔴 `curl` → `moodle.org` | 🔴 same `403` — whole zone |
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+| --- | --- |
+| 🟢 **`566-B`** | **CLOSED, and RE-SIZED by an order of magnitude.** 🟢 Recall on the named tier is **`9 of 9`**, from `6 of 9`. 🟢 **One mechanism, not three idioms:** every one of `p566`'s four idioms was anchored to a single physical line, and this field registers tools across continuation lines. 🟢 Three of the three failures reproduce their own anchor counts exactly — `lucanardinocchi` **`19`/`19`**, `awesome-town` **`58`/`58`** (`server.registerTool`, a method name absent from the idiom set entirely), `r1ckyIn` **`49`→`50`**. 🔴 **And `566-B` understated itself: at field scale the retired extractor returned ZERO on `69 of 248` rows and under-counted the field by `2 027` declarations (`3 563` → `5 590`, `+56.9 %`); `40` of the `69` now yield.** 🟢 Instrument **committed** at [`../ingest/tool-surface.py`](../ingest/tool-surface.py) — the first tool-declaration extractor this base has ever held — calibrated exact against two repositories that state their own counts (`54`/`54`, `211`/`211`) and one that states read-only (`21` tools, `0` mutating). 🔴 Two defects caught in this pass's own instrument before publication and disclosed: an `8`-line `def` window under-read `JohannsenLum` `19`→`5`, and test fixtures leaked a spurious name (`PS1`) |
+| 🟢 **`566-F`** | **CLOSED over the exact `187`-row denominator it named, plus all `61` Moodle rows.** 🟢 **`p566`'s tier figure REPRODUCES: `28.1 %` (`770` tools, `216` mutating) with all `9` tier repos read, against its published `28.0 %` from `6 of 9` — a `0.1`-point reproduction.** 🔴 **What fails is its SCOPE: the field reads `23.9 %` (Canvas), `15.5 %` (Moodle), `23.0 %` (both), so a star-selected tier over-states its population by `4.2` points** — the selection bias `p564` predicted. 🟢 **The load-bearing finding is distributional, not aggregate: the median repository declares `0.0 %` mutating on BOTH populations, and `51.4 %` (Canvas) / `64.3 %` (Moodle) declare none at all.** The aggregate is manufactured by a head of ~`10` repositories, so write risk on this field is addressable by exclusion list rather than abstention; `16` repos carry `≥20` tools and zero mutating. 🔵 **Recall is reported over the MEASURABLE population and the gap is partitioned by cause:** `94.0 %` Canvas (`173/184`), `82.4 %` Moodle (`42/51`), `91.5 %` overall — of `33` zeros, 🔴 **`5` are empty repositories (all Moodle), `8` have no file in a covered language, and only `20` are instrument failures.** 🟢 Classifier validated to **`100 %`** against an author-declared `103`-tool `READ_TOOLS`/`WRITE_TOOLS` split ([`vkumar04/canvas-mcp-lite`](https://github.com/vkumar04/canvas-mcp-lite)), with **`0` false positives on both runs** — so every mutation figure is a LOWER BOUND. 🟢 Row lists committed: [`tool-surface-field`](../evidence/tool-surface-field.2026-10-31-p567.tsv) (`248`, with `p566`'s figure beside each) and [`tool-surface-zero-yield`](../evidence/tool-surface-zero-yield.2026-10-31-p567.tsv) (`34`) |
+
+### 🔵 Advanced, not closed
+
+| gap | movement |
+| --- | --- |
+| 🔴 **`566-E`** (← `565-C`/`564-D`/`563-C`) | 🔴 **Re-probed and still shut, with a fresh timestamp.** `download.moodle.org:443` → `403` on `CONNECT`; the proxy's own status endpoint attributes it to `connect_rejected` — *"gateway answered 403 to CONNECT (policy denial or upstream failure)"* — at `2026-10-31T05:40:58Z`. 🔵 Confirmed outside this session's power; the request stands unchanged |
+| 🔵 **`p566`'s platform-vs-manifest axis finding** | 🟢 **Extended, and the extension is a contrast worth holding.** `p566`: platform does **not** predict licence recovery (`19.7 %` vs `16.4 %`), the npm manifest does (`13.3 ×`). 🟢 This pass: platform **does** predict write posture (`23.9 %` vs `15.5 %`, `8.4` points). 🔵 Two axes, two mechanisms, neither inferable from the other |
+| 🟢 **`p566`'s manifest-recovery result** | 🟢 **Re-confirmed independently on the platform channel.** [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) (`104★`) returns **no `license` key at all** from the API, against `MIT` in its `package.json` — exactly the split `p566` measured |
+
+### 🔴 Still open, untouched by this pass
+
+| gap | state |
+| --- | --- |
+| 🔴 **`566-A`** | The `93` non-Canvas-LMS rows remain a measured population with no taxonomy. Untouched |
+| 🔴 **`566-C`** | This base's standing focus line still reads *"MIT / Apache 2.0 / BSD"* while `11` `ISC` and `1` `Unlicense` grants sit in measured permissive supply. 🔴 **A one-line policy edit, deferred for a second pass** |
+| 🔴 **`566-D`** | The licence root-scope rule is still adopted-but-unenforced; no committed instrument gates it. 🔵 **This pass committed a *tool-surface* instrument, not a licence-scope one — `566-D` is a different instrument and is NOT closed by it** |
+
+### 🔴 Retracted by this pass, before publication
+
+| claim | why it was withdrawn |
+| --- | --- |
+| 🔴 *"three of four named APAC/LATAM institutional rows are unreadable; the measurement gap is non-US"* | 🔴 **False on measurement, in both halves.** [`CarvalhoJeo/moodle-unisinos-mcp`](https://github.com/CarvalhoJeo/moodle-unisinos-mcp) (LATAM, Unisinos) reads **`9` tools, `0` mutating** — the draft had carried a stale zero for it from an earlier sweep and had not re-read the row. 🟢 Corrected to the narrower and still-useful claim: unreadable institutional rows are **`2 of 3` in APAC**, `0 of 1` in LATAM, `0 of 2` in North America |
+| 🔴 *"`6 of 9` institution- and vendor-named servers yield nothing"* | 🔴 **Wrong count and one wrong KIND.** The figure is `3 of 9`, and one of those three ([`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper)) is **an empty repository with zero commits** — not an unreadable tree. 🔵 "Unreadable" and "empty" had been collapsed into one bucket |
+
+### 🔴 Registered this pass
+
+| gap | statement |
+| --- | --- |
+| 🔴 **`567-A`** | **Moodle's genuine instrument gap is `9` rows, and the region it concentrates in is APAC — not "non-US", which this pass had to retract.** 🟢 Recall over measurable rows: `82.4 %` Moodle, `94.0 %` Canvas. Of the `19` Moodle zeros, **`5` are empty repositories** and **`5` carry no file in a covered language** (incl. [`Punyo/NITechMoodleMCPServer`](https://github.com/Punyo/NITechMoodleMCPServer), **Kotlin** — uncovered by any committed idiom); the real gap is `9`, headed by [`eledia/moodle-webservice_eledia_mcp`](https://github.com/eledia/moodle-webservice_eledia_mcp) at **`77` PHP files and zero names, the largest unread tree on the field.** 🔴 The `db/services.php` explanation holds for `1 of 5` sampled. 🔵 **Regional residue, measured:** `0 of 2` North American institutional rows unreadable, 🔴 **`2 of 3` APAC**, `0 of 1` LATAM, and 🔴 **EMEA has no placed institutional row at all** — two vendor-named Moodle servers name no country in-repo and this base declines to infer one. 🔵 Ask: read the `9`; add a PHP and a Kotlin idiom; place the two EMEA vendors |
+| 🔴 **`567-B`** | **No Rust idiom exists in any committed instrument.** [`GarthDB/rust-canvas-mcp`](https://github.com/GarthDB/rust-canvas-mcp) — `5` `.rs` files, the only Rust implementation measured on this field, and an `MIT` grant `p566` recovered from `Cargo.toml` — yields `0`. `rmcp`'s `#[tool]` macro form is unhandled. 🔵 Ask: add the macro idiom and re-run the one row |
+| 🔴 **`567-C`** | [`lcrzhang/canvas-mcp`](https://github.com/lcrzhang/canvas-mcp) carries `31` Python files and yields `0` under all five idioms. Its registration mechanism was not identified. 🔵 Ask: read it by hand and name the idiom or the reason there is none |
+| 🔴 **`567-F`** | **`5` of the `248` addresses on this field are EMPTY REPOSITORIES — zero commits — and all `5` are Moodle** (`8.2 %` of that platform's field, `0 %` of Canvas). 🔴 Every address-count figure this base publishes for Moodle is inflated by that much before any licence or write question is asked, and `address-count.py` cannot see it because it counts addresses. 🔵 Ask: add a has-commits predicate to the census and re-state the Moodle denominators |
+| 🔴 **`567-D`** | **An unexplained ENUMERATOR over-read on the one repository with ground truth.** The instrument reads `119` tools on `vkumar04/canvas-mcp-lite` against `103` author-declared (**`+15.5 %`**), and `129` on `vishalsachdev/canvas-mcp` against a README claiming `102`. 🟢 The *classifier* is exact (`100 %`, `0` FP); the *enumerator* is not. 🔴 So field totals carry an unquantified upward bias on list-idiom repositories, and the `5 590` figure is a ceiling in a way the `strict` bound (`5 190`) does not fully capture. 🔵 Ask: diff the instrument's `119` names against the author's `103` and attribute every extra |
+| 🔴 **`567-E`** | **The mutation share is a tool-COUNT share and is being read as a risk measure.** One `delete_course` and one `create_page` each count `1`; no severity weighting exists. 🔴 `23.9 %` is not a blast-radius figure and must not be sold as one. 🔵 Ask: define a severity band (irreversible / visible-to-others / self-scoped) and re-weight. 🟢 Note that some repositories already carry this distinction in their own code — `Fireiscoolsolo` flags `confirm: true` for *"irreversible/visible to others"* — so the band can be calibrated against author intent rather than invented |
+
 ## 🆕 `p566` — `2026-10-31` — **🟢 `565-A`, `565-B` AND `565-E` ALL CLOSED BY POPULATION MEASUREMENT — and all three close by REFUTING a figure a predecessor published from a three-repo sample. `234` rows read, `44` permissive recovered (`18.8 %`, not `p565`'s `66.7 %`); `280` Canvas rows classified structurally → `187`; Canvas write surface `28.0 %` against Moodle's `32.9 %`.** 🟢 **`565-C` NOT closed but its endpoint is NAMED and its cause RE-ATTRIBUTED from NXDOMAIN to a proxy `403`.** 🔴 **SIX REGISTERED (`566-A`…`566-F`).**
 
 🔵 **Registration check run first, per `P605`, and `p564`'s lesson applied as a precondition rather

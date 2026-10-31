@@ -4,6 +4,93 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p567` — `2026-10-31`
+
+> **🟢 The trend this pass can prove is a posture shift, not a product launch: the education-agent
+> field is drifting READ-ONLY, and it is now measured on two complete populations rather than
+> inferred from a tier.** 🔴 **The counter-trend is regulatory — EMEA's binding transparency duty
+> landed in August 2026 while its high-risk duties slid to December 2027, so the compliance
+> calendar and the capability calendar have come apart.**
+
+### 🟢 Trend 1 — the field is majority read-only, and the aggregate hides it
+
+🟢 **Measured over `248` repositories this pass**, median mutation share is **`0.0 %`** on both
+populations:
+
+| | Canvas LMS (`187`) | Moodle (`61`) |
+| --- | :-: | :-: |
+| aggregate share | `23.9 %` | `15.5 %` |
+| 🟢 median repository | 🟢 **`0.0 %`** | 🟢 **`0.0 %`** |
+| 🟢 declare zero write tools | 🟢 **`51.4 %`** | 🟢 **`64.3 %`** |
+
+🔵 **Why this is a trend and not a static fact:** the *newest* fast-moving entrant on the field is
+the most read-only. [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) went `0→119★`
+in under a fortnight on an explicitly read-only design, and enforces it in `CONTRIBUTING.md`
+(*"New tools must stay read-only"*) — confirmed first-hand at `26` tools, `0` mutating. 🟢 Meanwhile
+the `310★` incumbent head carries the tier's heaviest write surface. **Adoption is rewarding
+restraint.**
+
+### 🔵 Trend 2 — platform choice predicts write posture, but not licence
+
+🟢 Canvas `23.9 %` against Moodle `15.5 %` — **`8.4` points**, one instrument, one run, both at
+field scale. 🔴 This **reverses** the ordering published one pass ago (Moodle `32.9 %` vs Canvas
+`28.0 %`) — and the reason is that neither of those was a field: one was a Moodle *connector tier*,
+the other a star-selected Canvas tier. 🟢 **The Canvas tier figure itself reproduces at `28.1 %`**,
+so the ordering flipped because the populations changed, not because the earlier measurement was
+wrong.
+
+🔵 **Set against `p566`'s licence result, the pair is the useful observation:** the platform does
+**not** predict licence recovery (`19.7 %` vs `16.4 %`), where the **npm manifest** predicts it at
+`13.3 ×`. 🟢 **So "which LMS?" answers the write-risk question and tells you nothing about the
+licence question, and vice versa.** Two axes, two mechanisms, no shortcut between them.
+
+### 🔴 Trend 3 — the compliance calendar and the capability calendar have separated (EMEA)
+
+| duty | status |
+| --- | --- |
+| 🔴 emotion recognition in schools | **banned since February 2025** |
+| 🔴 **Article 50 transparency** | 🔴 **in force 2 August 2026** |
+| 🔵 Annex III high-risk education duties | 🔵 **deferred to 2 December 2027** — Digital Omnibus, Regulation (EU) 2026/1744 |
+
+🔵 **The trend is the divergence itself.** Vendors are reading the `16`-month high-risk deferral as
+breathing room while a *disclosure* duty is already live — and admissions, learning-outcome
+evaluation, placement and exam monitoring remain on the high-risk list regardless. 🟢 A studio's
+2027 work has to be designed in 2026.
+
+### 🔵 Trend 4 — national curriculum mandates are becoming the APAC demand driver
+
+🟢 China and the UAE are reported as the only countries with **compulsory national AI curricula**
+(since the 2025-26 school year); **India** has committed to AI and computational thinking as
+compulsory **from Class 3 in 2026-27** under the IndiaAI Mission. 🔵 Japan's **AI Promotion Act**
+(May 2025) sets a promotion-without-penalties posture with school pilots.
+
+🔵 **Consequence:** APAC demand is becoming *curricular* rather than *administrative* — content
+generation and assessment at national scale — which is a different buy from the LMS-connector work
+that dominates the open-source supply on this shelf.
+
+### 🟢 Trend 5 — star count has decoupled from tool surface
+
+🔴 **This pass's sharpest instance:** [`Fireiscoolsolo/canvas-lms-mcp-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server)
+ships **`211` tools at `1★`** — more tool surface than the `310★` tier head's `129`. 🔵 It joins
+`p564`'s finding that the vendor and institution layers ship at `0★`.
+
+🟢 **Trend statement: on this field, star-ranked discovery is structurally blind to capability.** The
+`0★`–`1★` tail holds vendor servers, university servers and the largest tool surfaces measured. Any
+2026 shortlist built by sorting on stars will miss them by construction.
+
+### 🔵 Counter-trend to watch — and a trend this pass RETRACTED before publishing it
+
+🔴 **A draft of this page carried a sixth trend — "the measurement gap is non-US" — and it does not
+survive measurement.** LATAM's one institutional row reads cleanly (`9` tools); the unreadable
+institutional rows are `2 of 3` in **APAC** specifically and `0 of 1` in LATAM. 🟢 **Retracted and
+replaced with the narrower claim**, which is still worth watching: **APAC's institutional builds are
+the least readable on the field**, one of them because it is written in Kotlin and no committed
+instrument covers that language.
+
+🔵 **A quieter structural trend, newly visible this pass:** `5` of the Moodle field's `61` addresses
+are **empty repositories with zero commits** — `8.2 %`. 🔴 Address counts are drifting away from code
+counts on this platform, and a census that counts names will keep over-stating Moodle supply.
+
 ## 🆕 `p566` — `2026-10-31`
 
 ### 🔴 T1 — A small-sample flip rate published as a property is the most expensive kind of wrong, and this base did it last pass

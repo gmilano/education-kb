@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p567` — `2026-10-31` — two recipes, both from this pass's first-hand measurement
+
+### 🟢 `P-567-A` — **Write-surface exclusion list for an LMS agent fleet** (2–4 days)
+
+🔵 **Supersedes `P-566-B`, whose triage step assumed a field-wide mutation rate that did not exist.**
+The field rate is now measured (`23.9 %` Canvas, `15.5 %` Moodle) and the recipe changes shape
+because of what the distribution turned out to be: **the median repository declares `0 %`**, so the
+job is not fleet-wide triage — it is building a short exclusion list.
+
+1. **Enumerate the candidate field.** Reuse `p566`'s census row lists
+   ([`null-licence-manifest-sweep`](../evidence/null-licence-manifest-sweep.2026-10-31-p566.tsv)) or
+   re-run the platform census. Classify Canvas-vs-homonym structurally, never from description text
+   (`p566`'s `565-A` closure: `93 of 280` "canvas" rows are a different product).
+2. **Clone blobless and read the tool surface.**
+   `git clone --depth 1 --filter=blob:limit=250k`, then
+   `python3 ingest/tool-surface.py TREE --relaxed --json` per repo.
+   🔵 Run **both** modes: `strict` and `relaxed` bracket the count, and a wide spread on one repo is
+   the signal that it uses a project-local registration wrapper (`Fireiscoolsolo`: `45` strict vs
+   `211` relaxed).
+3. **Rank by mutating share, descending, and cut the head.** On this field `10` repositories account
+   for the entire difference between the aggregate and the median. The exclusion list, not the
+   whitelist, is the cheap artefact.
+4. **Take the read-only shelf as the default starting set.** `16` repositories on this field carry
+   `≥20` tools and **zero** mutating declarations — e.g.
+   [`rbrtlol/canvas-readonly-mcp`](https://github.com/rbrtlol/canvas-readonly-mcp) (`21`/`0`),
+   [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) (`26`/`0`),
+   [`karilaa-dev/remote-canvas-mcp`](https://github.com/karilaa-dev/remote-canvas-mcp) (`39`/`0`),
+   [`KadhirTheEngineer/Canvas-MCP`](https://github.com/KadhirTheEngineer/Canvas-MCP) (`35`/`0`).
+5. **Intersect with the licence verdicts from `P-566-A`.** Permissive **and** read-only is the only
+   set that clears both gates; it is where a FERPA-constrained North American engagement should start.
+
+🟢 **Why the verdict is trustworthy in one direction:** the classifier scored **`0` false positives**
+on an author-declared `103`-tool read/write split, on both runs. A `0 %` verdict can be relied on; a
+non-zero one is a floor. 🔴 **What it does not give you:** severity. One `delete_course` counts the
+same as one `create_page` (`567-E`), so the head of the list still needs reading by a human.
+
+### 🟢 `P-567-B` — **Making an institution's own LMS agent auditable before you adopt it** (1 week)
+
+🔵 **Motivated by a measured regional asymmetry, not a hypothesis.** Universities on this field build
+their own servers — Monash, Nagoya Institute of Technology, IIIT, Unisinos (Brazil), UIUC — and
+**three of the four non-US ones cannot be read by any committed instrument.** For an APAC, LATAM or
+EMEA engagement, the institution's existing agent is both the incumbent and the blind spot.
+
+1. **Find the incumbent.** Search the institution's own GitHub org and the `0★` tail — these never
+   surface by stars (`p564`). Expect names of the form `<institution>-moodle-mcp`.
+2. **Try to read it, and check WHY a zero is a zero before concluding anything.** Run
+   `python3 ingest/tool-surface.py TREE --relaxed`. 🔴 On this field `33` rows read zero and only
+   `20` were instrument failures: **`5` were empty repositories with no commits** and `8` had no file
+   in a covered language. 🟢 **Three questions, in order:** does it have commits? does it have source
+   in a covered language? only then — is the idiom unread?
+3. **Diagnose which surface it actually declares**, in this order:
+   - **Kotlin, C# or another uncovered language** → no committed idiom reads it
+     ([`Punyo/NITechMoodleMCPServer`](https://github.com/Punyo/NITechMoodleMCPServer) is `7` `.kt`
+     files and reads `0`).
+   - a **Moodle plugin** (`db/services.php`) → count the service entries, not MCP tools.
+     [`Sergio-Oracle/moodle-local-mcp-quiz`](https://github.com/Sergio-Oracle/moodle-local-mcp-quiz)
+     declares **`49`** this way. 🔴 Holds for only `1 of 5` sampled, so do not assume it.
+   - a **project-local wrapper** → grep for `^\s*[A-Za-z_]+\(\{` and read the wrapper's own signature.
+   - **Rust `rmcp`** → `#[tool]` macros; no committed instrument reads these yet (`567-B`).
+4. **Write the missing idiom into `ingest/tool-surface.py` and commit it.** 🔵 This is the step the
+   base skipped for `119` passes: `p447`'s and `p566`'s extractors were never committed, so a
+   single-line-anchoring defect survived until it was measured at population scale.
+5. **Re-run and publish the bracket, with recall stated before the rate — and state recall over the
+   MEASURABLE population, not the address count.** The house figures this pass publishes are
+   `94.0 %` Canvas and `82.4 %` Moodle over measurable rows; quoted against raw address counts the
+   same measurement reads `92.5 %` and `68.9 %`, and the `13`-point Moodle difference is entirely
+   empty repositories and uncovered languages. 🔵 **Quoting the wrong denominator will make an
+   instrument look broken when the field is.**
+6. **Hand the institution the exclusion list from `P-567-A`** scoped to its own server. For a
+   university with `60 %` mutating tools exposed to an LLM client, that list *is* the engagement.
+
+🟢 **Concrete wiring for a client deliverable built from this shelf:** the permissive, read-only
+Canvas tier as the retrieval surface →
+[`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) (`Apache-2.0`, `51 960★`) as the tutoring
+loop → the institution's own Moodle plugin for anything that must write, kept behind the
+institution's existing web-service permissions rather than behind an agent.
+🔴 **Do not wire in [`learnharness`](https://github.com/amosblomqvist/learnharness)**: `AGPL-3.0`,
+re-confirmed this pass, and the fastest-growing education agent Globant cannot fold into a
+deliverable.
+
 ## 🆕 `p566` — `2026-10-31` — three recipes, all from this pass's first-hand measurement
 
 ### 🟢 `P-566-A` — **Permissive-supply recovery sweep before any build decision** (3–5 days)

@@ -1,0 +1,249 @@
+full_name	platform	canvas_marker	p566_tool_decls	p567_strict	p567_relaxed	p567_mutating	mutating_share	repo_state	covered_src_files
+1337isnot1337/canvas-lms-mcp	canvas	CANVAS_LMS:6	1	28	28	0	0.0	MEASURABLE	28
+1alexandrer/moodle-mcp-2	moodle	NONE	0	0	0	0		NO_COVERED_SRC	0
+1jehuang/canvas-cli-and-mcp	canvas	CANVAS_LMS:4	21	21	21	5	23.8	MEASURABLE	3
+443pablo/mcp-canvas	canvas	CANVAS_LMS:4	42	42	42	4	9.5	MEASURABLE	1
+a-ariff/canvas-mcp	canvas	CANVAS_LMS:6	1	12	12	0	0.0	MEASURABLE	3
+a-ariff/canvas-student-mcp-server	canvas	CANVAS_LMS:21	15	13	13	0	0.0	MEASURABLE	16
+Aadi-FTC-12868/canvas-mcp	canvas	CANVAS_LMS:2	0	10	10	2	20.0	MEASURABLE	4
+abhi-ashar/canvas-mcp	canvas	CANVAS_LMS:2	7	7	7	0	0.0	MEASURABLE	2
+AdityaPrakash-26/Canvas-MCP	canvas	CANVAS_LMS:54	11	11	11	0	0.0	MEASURABLE	40
+adityas0604/MCP-Canvas	canvas	CANVAS_LMS:2	14	14	14	1	7.1	MEASURABLE	6
+admin978/canvas-mcp	canvas	CANVAS_LMS:5	10	10	10	0	0.0	MEASURABLE	5
+ahnopologetic/canvas-lms-mcp	canvas	CANVAS_LMS:5	22	22	22	0	0.0	MEASURABLE	6
+Ait0u5hi/canvas-scholar-mcp	canvas	CANVAS_LMS:19	49	49	49	5	10.2	MEASURABLE	25
+akash0820/canvas-mcp-agent	canvas	CANVAS_LMS:7	84	80	80	22	27.5	MEASURABLE	43
+akassh9/canvas-mcp	canvas	CANVAS_LMS:5	15	15	15	1	6.7	MEASURABLE	6
+akmal2405/moodle-mcp	moodle	NONE	2	2	2	0	0.0	MEASURABLE	4
+Alejandro-Valadez/canvas-mcp	canvas	CANVAS_LMS:3	20	20	20	4	20.0	MEASURABLE	10
+AlejandroVallejo1/canvas-mcp	canvas	CANVAS_LMS:11	58	58	58	6	10.3	MEASURABLE	29
+alexherman11/Canvas_MCP	canvas	CANVAS_LMS:5	2	31	31	18	58.1	MEASURABLE	13
+AlpETuna/MonashMoodleMCP	moodle	NONE	0	0	0	0		MEASURABLE	1
+amzonmeeee/HKUST_Canvas_MCP	canvas	CANVAS_LMS:24	0	1	1	0	0.0	MEASURABLE	146
+anaylab/canvas-mcp	canvas	CANVAS_LMS:8	31	31	32	4	12.5	MEASURABLE	21
+andycjm17/canvas-mcp	canvas	CANVAS_LMS:2	0	11	11	0	0.0	MEASURABLE	11
+AnonymousOnyx22/canvas-lms-student-mcp	canvas	CANVAS_LMS:20	3	16	16	0	0.0	MEASURABLE	18
+ari310126/canvas_mcp	canvas	CANVAS_LMS:2	58	58	58	26	44.8	MEASURABLE	21
+arthurcuri/mcp-instructure-canvas	canvas	CANVAS_LMS:28	18	18	18	4	22.2	MEASURABLE	48
+aryankeluskar/canvas-mcp	canvas	CANVAS_LMS:6	8	20	20	0	0.0	MEASURABLE	9
+awesome-town/canvas-mcp-node	canvas	CANVAS_LMS:27	58	58	58	29	50.0	MEASURABLE	64
+awesome-town/canvas-mcp-skills	canvas	CANVAS_LMS:4	0	0	0	0		NO_COVERED_SRC	0
+Azur1337/moodle-mcp	moodle	NONE	0	5	5	0	0.0	MEASURABLE	20
+bhargava-gumpula/claude-canvas-mcp-files	canvas	CANVAS_LMS:2	9	9	9	0	0.0	MEASURABLE	1
+blanca-cg/canvas-mcp-http	canvas	CANVAS_LMS:11	50	50	50	21	42.0	MEASURABLE	16
+boyuchengz/canvas-mcp	canvas	CANVAS_LMS:9	26	26	26	0	0.0	MEASURABLE	17
+Brian-Two/canvas-mcp-assistance	canvas	CANVAS_LMS:13	0	23	24	6	25.0	MEASURABLE	124
+brilliant751/tongji-canvas-mcp	canvas	CANVAS_LMS:3	5	5	5	0	0.0	MEASURABLE	4
+brockcraft/canvas-mcp-for-claude	canvas	CANVAS_LMS:5	4	4	4	2	50.0	MEASURABLE	3
+bruchris/canvas-lms-mcp	canvas	CANVAS_LMS:25	0	204	204	62	30.4	MEASURABLE	372
+brynjar2605/canvas-mcp	canvas	CANVAS_LMS:21	2	15	15	1	6.7	MEASURABLE	69
+cabrt/canvas-mcp	canvas	CANVAS_LMS:2	23	23	23	0	0.0	MEASURABLE	1
+cal-poly-dxhub/canvas-mcp	canvas	CANVAS_LMS:3	17	17	17	5	29.4	MEASURABLE	3
+caleb-media-studio/canvas-mcp	canvas	CANVAS_LMS:7	3	2	2	0	0.0	MEASURABLE	19
+Canvas-LMS-MCP/canvas-teacher-mcp	canvas	CANVAS_LMS:4	0	0	0	0		MEASURABLE	93
+canvas-mcp/adaptive-card-research-canvas-ai	canvas	CANVAS_LMS:1	0	87	94	16	17.0	MEASURABLE	69
+carainc/canvas-medical-mcp	canvas	CANVAS_LMS:2	9	16	16	0	0.0	MEASURABLE	10
+CarlosLiberJesus/school-moodle-mcp	moodle	NONE	0	7	7	0	0.0	MEASURABLE	13
+CarvalhoJeo/moodle-unisinos-mcp	moodle	NONE	9	9	9	0	0.0	MEASURABLE	7
+casss20/UCF-Ops-Board-dashboard-study-planner-and-Canvas-MCP	canvas	CANVAS_LMS:6	16	16	16	2	12.5	MEASURABLE	7
+Charansai021/Moodle-MCP-Server	moodle	NONE	0	0	1	0	0.0	MEASURABLE	5
+CharityDEX/voiceos-canvas-mcp	canvas	CANVAS_LMS:13	20	20	20	0	0.0	MEASURABLE	13
+CharlieCardenasToledo/canvas-lms-mcp	canvas	CANVAS_LMS:27	0	130	130	38	29.2	MEASURABLE	181
+CharlieCardenasToledo/mcp-canvas-server	canvas	CANVAS_LMS:14	224	132	132	65	49.2	MEASURABLE	46
+chema9233/mcp-moodle	moodle	NONE	8	8	8	0	0.0	MEASURABLE	6
+chiptoe-svg/canvas-mcp	canvas	CANVAS_LMS:10	8	8	8	5	62.5	MEASURABLE	17
+chrischall/canvas-parent-mcp	canvas	CANVAS_LMS:26	18	18	18	0	0.0	MEASURABLE	56
+ciaranqnexted/canvas-chat-mcp	canvas	CANVAS_LMS:3	0	0	0	0		MEASURABLE	25
+colehollander10-netizen/canvas-student-mcp-server	canvas	CANVAS_LMS:3	14	14	14	1	7.1	MEASURABLE	3
+CorCvusRamboChen/canvas-session-mcp	canvas	CANVAS_LMS:4	1	17	17	1	5.9	MEASURABLE	12
+CreveXTech/canvas-lms-mcp	canvas	CANVAS_LMS:5	1	0	0	0		MEASURABLE	22
+DA0806/canvas-student-mcp	canvas	CANVAS_LMS:4	29	29	29	5	17.2	MEASURABLE	4
+darenhua/canvas-mcp	canvas	CANVAS_LMS:2	16	16	16	0	0.0	MEASURABLE	6
+daskol/canvas-mcp	canvas	CANVAS_LMS:4	0	0	0	0		MEASURABLE	8
+dddanielliu/NCCU-Moodle-MCP	moodle	NONE	16	13	13	1	7.7	MEASURABLE	17
+DeepLearningHarness-Team/Moodle-MCP	moodle	NONE	0	0	0	0		EMPTY	0
+dhruvbhambhani/canvas-mcp	canvas	CANVAS_LMS:4	16	16	16	0	0.0	MEASURABLE	9
+diegoadborges/canvas-mcp	canvas	CANVAS_LMS:3	5	5	5	0	0.0	MEASURABLE	2
+dinyorik/canvas-mcp	canvas	CANVAS_LMS:2	6	6	6	0	0.0	MEASURABLE	3
+DMontgomery40/mcp-canvas-lms	canvas	CANVAS_LMS:17	52	54	54	14	25.9	MEASURABLE	8
+dracero/moodle_cetec_mcp	moodle	NONE	4	4	4	1	25.0	MEASURABLE	5
+Drastixs/mcp-canvas-lms	canvas	CANVAS_LMS:16	54	56	56	14	25.0	MEASURABLE	13
+dsamborschi/moodle-mcp	moodle	NONE	0	30	30	0	0.0	MEASURABLE	1
+duggsha/canvas-mcp	canvas	CANVAS_LMS:1	0	0	1	0	0.0	MEASURABLE	10
+dwani-ai/moodle-mcp	moodle	NONE	9	18	18	6	33.3	MEASURABLE	19
+edly-io/canvas-mcp	canvas	CANVAS_LMS:9	25	25	25	15	60.0	MEASURABLE	11
+EduardoKrausME/moodle-block_mcp	moodle	NONE	0	0	0	0		MEASURABLE	14
+eledia/moodle-webservice_eledia_mcp	moodle	NONE	0	0	0	0		MEASURABLE	77
+enkhbold470/canvas-lms-mcp	canvas	CANVAS_LMS:2	0	0	0	0		MEASURABLE	7
+enkhbold470/mcp-server-canvas	canvas	CANVAS_LMS:3	1	2	2	0	0.0	MEASURABLE	1
+enovation/moodle-local_mcp_helper	moodle	NONE	0	0	0	0		EMPTY	0
+evanap003300/canvas-mcp	canvas	CANVAS_LMS:8	13	13	13	0	0.0	MEASURABLE	12
+F0rklift-Certified/Canvas-MCP-Server	canvas	CANVAS_LMS:1	9	9	9	0	0.0	MEASURABLE	13
+felisawiley/canvas-mcp-tool	canvas	CANVAS_LMS:5	5	5	5	0	0.0	MEASURABLE	3
+fireballff/canvas-mcp	canvas	CANVAS_LMS:13	2	12	12	0	0.0	MEASURABLE	38
+Fireiscoolsolo/canvas-lms-mcp-local	canvas	CANVAS_LMS:6	1	45	211	46	21.8	MEASURABLE	9
+Fireiscoolsolo/canvas-lms-mcp-server	canvas	CANVAS_LMS:8	1	45	211	46	21.8	MEASURABLE	15
+francis-vargas/mcp_agent_moodle	moodle	NONE	0	0	5	0	0.0	MEASURABLE	7
+franciscodngferreira/Moodle-MCP	moodle	NONE	6	6	6	0	0.0	MEASURABLE	12
+frazier-at-cpcc/CanvasMCP	canvas	CANVAS_LMS:3	0	33	33	12	36.4	MEASURABLE	3
+FSPR2005/canvas-mcp-itam	canvas	CANVAS_LMS:1	0	0	0	0		NO_COVERED_SRC	0
+garciavazquez/mcp-moodle	moodle	NONE	16	16	16	0	0.0	MEASURABLE	6
+GarthDB/rust-canvas-mcp	canvas	CANVAS_LMS:5	0	0	0	0		MEASURABLE	5
+gecitemre/moodle-mcp	moodle	NONE	11	11	11	1	9.1	MEASURABLE	1
+githubbzxs/unnc-moodle-mcp	moodle	NONE	17	17	17	0	0.0	MEASURABLE	18
+GodPuffin/canvas-mcp	canvas	CANVAS_LMS:4	1	0	0	0		MEASURABLE	36
+Gowindude/canvas-mcp	canvas	CANVAS_LMS:7	51	51	51	14	27.5	MEASURABLE	2
+guirguispierre/canvasMCP	canvas	CANVAS_LMS:1	0	18	19	0	0.0	MEASURABLE	6
+hakimjanov/Canvas-MCP	canvas	CANVAS_LMS:5	18	18	18	0	0.0	MEASURABLE	12
+hamid-vakilzadeh/CanvasMCP	canvas	CANVAS_LMS:28	0	1	2	0	0.0	MEASURABLE	126
+Haris320/canvas-mcp	canvas	CANVAS_LMS:6	1	9	10	0	0.0	MEASURABLE	22
+harl00/canvas-mcp-server	canvas	CANVAS_LMS:4	20	20	20	4	20.0	MEASURABLE	9
+Hiroya-319/moodle-mcp-server	moodle	NONE	0	0	0	0		EMPTY	0
+HrudithL/Canvas-MCP-Server	canvas	CANVAS_LMS:5	74	168	168	94	56.0	MEASURABLE	9
+hyusap/canvas-mcp-docker	canvas	CANVAS_LMS:1	0	0	0	0		NO_COVERED_SRC	0
+ichung32-rgb/canvas-mcp	canvas	CANVAS_LMS:2	19	19	19	0	0.0	MEASURABLE	1
+ink-waffle/moodle-mcp	moodle	NONE	40	39	39	12	30.8	MEASURABLE	20
+izhechev/CanvasMCP_KPIs	canvas	CANVAS_LMS:15	0	8	8	0	0.0	MEASURABLE	65
+jakobwennberg/canvas-mcp	canvas	CANVAS_LMS:4	9	9	9	0	0.0	MEASURABLE	3
+JamesWHomer/CanvasMCP	canvas	CANVAS_LMS:4	35	35	35	5	14.3	MEASURABLE	18
+jamubc/canvas-mcp-tool	canvas	CANVAS_LMS:21	0	12	12	1	8.3	MEASURABLE	16
+javohir73/mcp-server-canvas-lms	canvas	CANVAS_LMS:20	1	1	1	0	0.0	MEASURABLE	51
+jayabdulraman/canvas-mcp	canvas	CANVAS_LMS:5	0	40	40	24	60.0	MEASURABLE	8
+jctovar/mcp-moodle	moodle	NONE	0	0	1	0	0.0	MEASURABLE	23
+jeongjisung690/Moodle---MCP-server	moodle	NONE	5	5	5	0	0.0	MEASURABLE	3
+jmoskaliuk/moodle-runbot-mcp	moodle	NONE	28	14	14	2	14.3	MEASURABLE	33
+JohannsenLum/canvas-api-mcp	canvas	CANVAS_LMS:37	19	19	19	2	10.5	MEASURABLE	38
+jordanlein/Canvas_MCP	canvas	CANVAS_LMS:9	0	5	5	0	0.0	MEASURABLE	4
+joshrad-dev/canvas-mcp	canvas	CANVAS_LMS:4	9	9	9	0	0.0	MEASURABLE	1
+Joyanne05/canvas-mcp-server	canvas	CANVAS_LMS:3	6	6	6	0	0.0	MEASURABLE	3
+jpablomm/mcp-canvas-hackathon	canvas	CANVAS_LMS:2	12	12	12	1	8.3	MEASURABLE	1
+jpablomm/mcp-hackathon-canvas	canvas	CANVAS_LMS:3	17	17	17	0	0.0	MEASURABLE	3
+jqyyy23/Canvas-LMS-MCP-	canvas	CANVAS_LMS:3	8	8	8	0	0.0	MEASURABLE	21
+jsteezg/canvas-mcpay	canvas	CANVAS_LMS:1	13	13	13	0	0.0	MEASURABLE	1
+jtuttas/moodle-agent-mcp	moodle	NONE	18	24	24	4	16.7	MEASURABLE	9
+judacas/CanvasMCP	canvas	CANVAS_LMS:20	0	0	0	0		MEASURABLE	12
+JusticeRox98577/Canvas-Mcp	canvas	CANVAS_LMS:2	13	15	16	2	12.5	MEASURABLE	4
+KadhirTheEngineer/Canvas-MCP	canvas	CANVAS_LMS:9	35	35	35	0	0.0	MEASURABLE	34
+karilaa-dev/remote-canvas-mcp	canvas	CANVAS_LMS:12	39	39	39	0	0.0	MEASURABLE	13
+kaushikgunasekaren/canvas-grader-mcp	canvas	CANVAS_LMS:4	20	20	20	5	25.0	MEASURABLE	15
+kbates97/GoCanvas-Readonly-MCP	canvas	CANVAS_LMS:2	16	16	16	0	0.0	MEASURABLE	1
+Kdude43ver/Canvas-API-MCP	canvas	CANVAS_LMS:7	11	11	11	0	0.0	MEASURABLE	11
+Kuria-Mbatia/Canvas-MCP-server	canvas	CANVAS_LMS:33	0	112	118	21	17.8	MEASURABLE	59
+l4ent/moodle-mcp	moodle	NONE	2	1	2	0	0.0	MEASURABLE	4
+lcrzhang/canvas-mcp	canvas	CANVAS_LMS:2	0	0	0	0		MEASURABLE	31
+ldecasanova/canvas-mcp	canvas	CANVAS_LMS:6	10	10	10	0	0.0	MEASURABLE	19
+LeeJordan95/canvas-mcp	canvas	CANVAS_LMS:10	99	73	73	21	28.8	MEASURABLE	46
+lennyitb/canvas-viewer-mcp	canvas	CANVAS_LMS:13	17	17	17	1	5.9	MEASURABLE	35
+Linklee-sad/Canvas-Agent-MCP	canvas	CANVAS_LMS:6	14	14	14	0	0.0	MEASURABLE	26
+linomck/moodle-mcp	moodle	NONE	0	5	5	0	0.0	MEASURABLE	4
+looooonk/canvas-mcp	canvas	CANVAS_LMS:12	8	7	7	0	0.0	MEASURABLE	24
+loyaniu/moodle-mcp	moodle	NONE	24	25	25	1	4.0	MEASURABLE	7
+lucanardinocchi/canvas-mcp	canvas	CANVAS_LMS:3	19	19	19	4	21.1	MEASURABLE	9
+lucasbiz/moodle-mcp	moodle	NONE	1	0	0	0		MEASURABLE	39
+ludwigawra/canvas-mcp	canvas	CANVAS_LMS:4	25	25	25	0	0.0	MEASURABLE	1
+Lunar-arch/canvasMCP	canvas	CANVAS_LMS:3	3	19	20	15	75.0	MEASURABLE	50
+mandaza/mcp-canvas-lms-student	canvas	CANVAS_LMS:8	0	24	24	0	0.0	MEASURABLE	11
+Marcus2012/MCP_Moodle	moodle	NONE	0	0	0	0		EMPTY	0
+mateusferrao/canvas-mcp-server	canvas	CANVAS_LMS:9	35	10	10	5	50.0	MEASURABLE	75
+matthewghuang/canvas-sfu-mcp	canvas	CANVAS_LMS:6	8	8	8	0	0.0	MEASURABLE	5
+Mattlo0546/canvas-mcp	canvas	CANVAS_LMS:3	10	10	10	1	10.0	MEASURABLE	8
+mbcrosiersamuel/canvas-mcp	canvas	CANVAS_LMS:3	4	4	4	0	0.0	MEASURABLE	1
+mehdi6132/canvas-mcp	canvas	CANVAS_LMS:12	29	29	29	0	0.0	MEASURABLE	12
+mflynn326-collab/canvas-mcp	canvas	CANVAS_LMS:6	23	23	23	18	78.3	MEASURABLE	11
+mhadifilms/canvas-mcp	canvas	CANVAS_LMS:19	30	30	30	5	16.7	MEASURABLE	29
+micaherne/moodle-plugin-db-mcp	moodle	NONE	0	3	3	0	0.0	MEASURABLE	2
+MisterCommand/mcp-canvas-lms	canvas	CANVAS_LMS:9	0	3	3	0	0.0	MEASURABLE	7
+mk-imagine/canvas-mcp	canvas	CANVAS_LMS:9	19	19	19	9	47.4	MEASURABLE	77
+mklemos/canvas-mcp	canvas	CANVAS_LMS:2	0	0	18	0	0.0	MEASURABLE	1
+Mm4168/canvas-lms-mcp-server	canvas	CANVAS_LMS:6	17	25	25	6	24.0	MEASURABLE	9
+Moriz82/canvas-mcp	canvas	CANVAS_LMS:6	15	15	15	5	33.3	MEASURABLE	7
+mrchris-ai/codex_canvas_mcp	canvas	CANVAS_LMS:10	0	32	32	24	75.0	MEASURABLE	7
+mtgibbs/canvas-lms-mcp	canvas	CANVAS_LMS:7	5	26	29	2	6.9	MEASURABLE	91
+MuhammedAdel68/aiu-canvas-mcp-server	canvas	CANVAS_LMS:3	1	1	1	0	0.0	MEASURABLE	3
+nagalikith/easygrade-canvaslms-mcp	canvas	CANVAS_LMS:4	48	49	49	13	26.5	MEASURABLE	29
+Nainsi27/moodle-mcp-server	moodle	NONE	6	6	6	0	0.0	MEASURABLE	1
+Nasus20202/MoodleMCP	moodle	NONE	0	1	1	0	0.0	MEASURABLE	155
+nicolasmilic/CANVAS-MCP	canvas	CANVAS_LMS:3	13	13	13	0	0.0	MEASURABLE	3
+NicolasViruel/moodle-utn-mcp	moodle	NONE	0	10	10	0	0.0	MEASURABLE	273
+nintang/canvas-lms-mcp	canvas	CANVAS_LMS:19	16	16	16	2	12.5	MEASURABLE	21
+NoahWeiss123/CanvasMCP-Poke	canvas	CANVAS_LMS:1	0	18	19	0	0.0	MEASURABLE	4
+ntakei-sti/moodle-mcp-server	moodle	NONE	5	5	5	0	0.0	MEASURABLE	2
+OGjoyce/mcp-moodle	moodle	NONE	0	0	0	0		EMPTY	0
+oktayevin/moodle-student-mcp	moodle	NONE	19	19	19	3	15.8	MEASURABLE	2
+Omm2005/Canvas-LMS-MCP	canvas	CANVAS_LMS:2	3	3	3	0	0.0	MEASURABLE	3
+omniboyOK/siglo21-canvas-mcp	canvas	CANVAS_LMS:4	0	21	22	1	4.5	MEASURABLE	68
+onbirdev/moodle-webservice_mcp	moodle	NONE	0	0	0	0		MEASURABLE	14
+ONPUslop/el-moodle-mcp	moodle	NONE	11	11	11	0	0.0	MEASURABLE	7
+orionkabeza/canvas-mcp	canvas	CANVAS_LMS:2	19	19	19	5	26.3	MEASURABLE	1
+oskarcode/canvas-mcp-oskar	canvas	CANVAS_LMS:1	2	2	2	1	50.0	MEASURABLE	2
+overtimepog/CanvasMCP	canvas	CANVAS_LMS:6	20	20	20	2	10.0	MEASURABLE	8
+pablogventura/mcp-moodle	moodle	NONE	12	12	12	5	41.7	MEASURABLE	22
+plyght/canvas-mcp	canvas	CANVAS_LMS:9	2	30	30	7	23.3	MEASURABLE	4
+pranavkarthik10/canvas-mcp	canvas	CANVAS_LMS:4	19	19	19	4	21.1	MEASURABLE	10
+pratham-2097/canvas-mcp	canvas	CANVAS_LMS:5	12	12	12	0	0.0	MEASURABLE	24
+Punyo/NITechMoodleMCPServer	moodle	NONE	0	0	0	0		NO_COVERED_SRC	0
+PuttTim/canvas-mcp	canvas	CANVAS_LMS:15	79	129	129	36	27.9	MEASURABLE	73
+qns2/moodle-mcp	moodle	NONE	3	7	7	4	57.1	MEASURABLE	1
+r-huijts/canvas-mcp	canvas	CANVAS_LMS:13	69	69	69	28	40.6	MEASURABLE	20
+r1ckyIn/canvas-ed-mcp	canvas	CANVAS_LMS:3	49	49	50	10	20.0	MEASURABLE	2
+r1ckyIn/canvas-ed-mcp-remote	canvas	CANVAS_LMS:3	9	9	9	0	0.0	MEASURABLE	2
+rbrtlol/canvas-readonly-mcp	canvas	CANVAS_LMS:13	21	21	21	0	0.0	MEASURABLE	23
+rikhinkavuru/canvas-poke-mcp	canvas	CANVAS_LMS:2	8	8	8	0	0.0	MEASURABLE	1
+risnake/canvas-mcp-server	canvas	CANVAS_LMS:2	40	40	40	9	22.5	MEASURABLE	14
+riverpease15/canvas-mcp-server	canvas	CANVAS_LMS:1	5	5	5	0	0.0	MEASURABLE	1
+RoeeLanger/MoodleMCP	moodle	NONE	4	4	4	0	0.0	MEASURABLE	5
+RyK57/canvas-mcp-server	canvas	CANVAS_LMS:2	20	20	20	0	0.0	MEASURABLE	15
+sakudiff/DLSU_Canvas_MCP_Server	canvas	CANVAS_LMS:4	42	42	42	3	7.1	MEASURABLE	3
+salvadoracuna/canvas-mcp	canvas	CANVAS_LMS:5	10	10	10	0	0.0	MEASURABLE	6
+Sanchez244/canvas-lms-mcp	canvas	CANVAS_LMS:4	12	12	12	1	8.3	MEASURABLE	25
+Sarthak-Neupane/CanvasMCPServer	canvas	CANVAS_LMS:13	0	66	66	0	0.0	MEASURABLE	194
+saulyez/canvas-mcp	canvas	CANVAS_LMS:8	6	6	6	0	0.0	MEASURABLE	10
+Sedahoo/iiit-moodle-mcp	moodle	NONE	15	15	15	0	0.0	MEASURABLE	2
+semyonfox/canvas-mcp	canvas	CANVAS_LMS:30	121	134	134	61	45.5	MEASURABLE	59
+Sergio-Oracle/mcp-moodle	moodle	NONE	116	116	117	45	38.5	MEASURABLE	1
+Sergio-Oracle/moodle-local-mcp-quiz	moodle	NONE	0	0	0	0		MEASURABLE	10
+shabrej15/moodle-mcp-server	moodle	NONE	0	0	0	0		NO_COVERED_SRC	0
+Shashwatpog/poke-canvas-mcp	canvas	CANVAS_LMS:2	8	8	8	0	0.0	MEASURABLE	1
+shu-silc-osc/canvas-chaoxing-silc-mcp	canvas	CANVAS_LMS:13	5	5	5	2	40.0	MEASURABLE	19
+shuyuaw/moodle-mcp-explorer	moodle	NONE	18	18	18	1	5.6	MEASURABLE	116
+Siciy/CanvasMCP	canvas	CANVAS_LMS:11	0	14	16	0	0.0	MEASURABLE	14
+Slush97/canvas-mcp	canvas	CANVAS_LMS:2	40	40	40	8	20.0	MEASURABLE	9
+smirnovlad/moodle-mcp	moodle	NONE	0	0	0	0		NO_COVERED_SRC	0
+smrik/canvas-mcp-server	canvas	CANVAS_LMS:6	14	14	14	0	0.0	MEASURABLE	4
+sohumsuthar/canvas-mcp	canvas	CANVAS_LMS:2	1	16	16	0	0.0	MEASURABLE	3
+sophiath2005/canvas-mcp	canvas	CANVAS_LMS:1	5	5	5	0	0.0	MEASURABLE	1
+SOVRN144/canvas-mcp	canvas	CANVAS_LMS:4	1	0	8	0	0.0	MEASURABLE	40
+ssdasari777/moodle-mcp-project	moodle	NONE	0	0	0	0		MEASURABLE	2
+sultantemuruly/moodle-nu-mcp	moodle	NONE	0	0	0	0		MEASURABLE	22
+sweeden-ttu/canvas-lms-mcp	canvas	CANVAS_LMS:20	21	21	24	6	25.0	MEASURABLE	45
+tab11pm/moodle_math_mcp	moodle	NONE	6	6	6	0	0.0	MEASURABLE	5
+taciturnaxolotl/canvas-mcp	canvas	CANVAS_LMS:1	1	6	6	0	0.0	MEASURABLE	7
+tboy1128/moodle-mcp	moodle	NONE	1	5	5	0	0.0	MEASURABLE	1
+teejballa/Claude-for-Canvas-MCP	canvas	CANVAS_LMS:3	1	5	5	0	0.0	MEASURABLE	1
+temujinkz/canvas-poke-mcp	canvas	CANVAS_LMS:2	9	9	9	0	0.0	MEASURABLE	1
+terraceonhigh/Canvas-MCP-Server	canvas	CANVAS_LMS:2	7	7	7	0	0.0	MEASURABLE	7
+theatornqvist/canvas-mcp	canvas	CANVAS_LMS:3	18	18	18	0	0.0	MEASURABLE	2
+thesupersupersigma/canvas-mcp	canvas	CANVAS_LMS:8	17	17	17	0	0.0	MEASURABLE	18
+tidely/moodle-mcp	moodle	NONE	0	0	0	0		MEASURABLE	22
+toddbartholow/irq-canvas-mcp	canvas	CANVAS_LMS:5	81	81	81	47	58.0	MEASURABLE	21
+tosuki/moodle-mcp	moodle	NONE	8	8	8	1	12.5	MEASURABLE	13
+TylerFlar/claude-canvas-mcp	canvas	CANVAS_LMS:19	55	55	55	9	16.4	MEASURABLE	18
+tylergibbs1/canvas-mcp	canvas	CANVAS_LMS:1	11	11	11	3	27.3	MEASURABLE	9
+UE2020/canvas-mcp	canvas	CANVAS_LMS:2	1	0	0	0		MEASURABLE	3
+virgosfredianilorenzo-cyber/mcp_moodle_totara	moodle	NONE	7	7	7	1	14.3	MEASURABLE	13
+vishalsachdev/canvas-lms-mcp-extension	canvas	CANVAS_LMS:8	0	9	9	0	0.0	MEASURABLE	5
+vishalsachdev/canvas-mcp	canvas	CANVAS_LMS:15	1	129	129	49	38.0	MEASURABLE	211
+vkumar04/canvas-mcp-lite	canvas	CANVAS_LMS:16	0	119	119	68	57.1	MEASURABLE	41
+Willebrew/nql-canvas-mcp	canvas	CANVAS_LMS:6	0	16	16	0	0.0	MEASURABLE	13
+windshifter1/Moodle-MCP	moodle	NONE	0	0	0	0		NO_COVERED_SRC	0
+XiyaoWang0519/Canvas_MCP	canvas	CANVAS_LMS:6	26	15	15	0	0.0	MEASURABLE	29
+Yanis-Bouchelaghem/canvas-mcp-app-v2	canvas	CANVAS_LMS:1	4	4	4	0	0.0	MEASURABLE	50
+yhajjar/moodle-mcp-server	moodle	NONE	13	13	13	0	0.0	MEASURABLE	8
+yusufwib01/moodle-mcp-server	moodle	NONE	0	31	32	0	0.0	MEASURABLE	89
+yuziyang-dev/pm_canvas_mcp	canvas	CANVAS_LMS:7	0	0	0	0		MEASURABLE	14
+YYKKCC-kevin/Canvas-MCP-for-students	canvas	CANVAS_LMS:9	31	31	31	4	12.9	MEASURABLE	16
+zerob13/canvas-sketchpad-mcp	canvas	CANVAS_LMS:1	0	11	11	0	0.0	MEASURABLE	11
+zhenghh04/canvas-mcp	canvas	CANVAS_LMS:27	0	47	47	22	46.8	MEASURABLE	23
+zihan1997/canvas-mcp	canvas	CANVAS_LMS:6	10	10	10	0	0.0	MEASURABLE	5
+zwanner/canvas-mcp-server	canvas	CANVAS_LMS:8	4	2	2	0	0.0	MEASURABLE	10
+ZxZxZ143/canvas_mcp	canvas	CANVAS_LMS:6	15	15	15	1	6.7	MEASURABLE	116

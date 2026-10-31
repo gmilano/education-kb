@@ -4,6 +4,201 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p567` — `2026-10-31` — **🟢 `566-B` AND `566-F` BOTH CLOSED BY ONE COMMITTED INSTRUMENT, AND THEY CLOSE BY REFUTING THE FIGURE THIS BASE HAS BEEN SELLING: the LMS-agent field's write surface is `23.9 %`, not the tier's `28.0 %` — and the aggregate hides a field whose MEDIAN repository declares `0 %`.** 🔴 **`566-B` was never a three-repo recall bug: at field scale the retired extractor returned ZERO tool names on `69 of 248` rows and under-counted the field by `2 027` declarations (`+56.9 %`).** 🟢 **And `p566`'s `28.0 %` is REPRODUCED at `28.1 %` once all `9` tier repos are read — the tier figure was right; its SCOPE was wrong.**
+
+🔵 **One mechanism explains all three of `566-B`'s zeros, and it is not three idioms — it is one
+property of the instrument.** `p566`'s four idioms were **every one anchored to a single physical
+line**. The field writes registration calls across continuation lines, so the name sits on the
+line *after* the anchor and a line-oriented reader sees nothing:
+
+| `566-B` row | what it actually uses | anchors present | `p566` read | 🟢 `p567` reads |
+| --- | --- | :-: | :-: | :-: |
+| [`lucanardinocchi/canvas-mcp`](https://github.com/lucanardinocchi/canvas-mcp) (`26★`, MIT) | `server.tool(` → name on next line | `19` | 🔴 `0` | 🟢 **`19`** |
+| [`r1ckyIn/canvas-ed-mcp`](https://github.com/r1ckyIn/canvas-ed-mcp) (`18★`, APAC — Univ. of Sydney) | `@mcp.tool(` → `name=` kwarg on next line | `49` | 🔴 `0` | 🟢 **`50`** |
+| [`awesome-town/canvas-mcp-node`](https://github.com/awesome-town/canvas-mcp-node) | `server.registerTool(` — 🔴 **a method name absent from the idiom set entirely** | `58` | 🔴 `0` | 🟢 **`58`** |
+
+🟢 **Three of the four counts reproduce the repository's own anchor count exactly** (`19`/`19`,
+`58`/`58`, `49`→`50`). 🔵 **So `565-E`'s `6 of 9` was a true statement about a defect whose size it
+could not see.**
+
+### 🟢 The instrument, calibrated before any field figure — and it is COMMITTED this time
+
+🟢 [`ingest/tool-surface.py`](../ingest/tool-surface.py), **the first committed tool-declaration
+extractor this base has ever held** — `p447`'s and `p566`'s were both uncommitted, which is why a
+defect survived `119` passes. Five idioms, all multi-line tolerant, window `6` lines; the `def`
+fallback window is `40` lines, because a `@mcp.tool(description=(…), annotations=…)` decorator
+pushes its `def` past any tight bound.
+
+| calibration case | ground truth, stated by the repo itself | 🟢 this instrument |
+| --- | :-: | :-: |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **`54 tools`** (description) | 🟢 **`54`** — exact, both modes |
+| [`Fireiscoolsolo/canvas-lms-mcp-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server) | **`211 tools`** (description) | 🟢 **`211`** — exact |
+| [`rbrtlol/canvas-readonly-mcp`](https://github.com/rbrtlol/canvas-readonly-mcp) | **read-only**, by name | 🟢 **`21` tools, `0` mutating** |
+
+🔴 **Two defects were caught in this pass's own instrument before publication, and both are
+disclosed rather than quietly patched:** the `8`-line `def` window under-read
+`JohannsenLum/canvas-api-mcp` **`19 → 5`**, and test fixtures leaked into the relaxed idiom
+(a Canvas API response object carrying both `name` and `description` is indistinguishable from a
+tool spec — it contributed the spurious tool name `PS1` from `tests/test_grades.py`). 🟢 Test and
+fixture paths are now excluded by rule.
+
+### 🔵 Why `Fireiscoolsolo` needs a second mode, and what that says about the field
+
+🔴 **A universal extractor cannot read this field, and one repository proves it.** Fireiscoolsolo
+declares its `211` tools through **project-local wrapper functions** — `tool({ name: …})` and
+`get({ name: 'whoami', description: …})` — `213` top-level wrapper calls against a claimed `211`.
+🔵 There is no cross-repository convention to key on: the wrapper is named by its author.
+
+🟢 **So the instrument publishes a BRACKET, not a point.** `strict` anchors the name to the start of
+its line; `relaxed` accepts `name:` anywhere on a line whose neighbourhood looks like a tool spec.
+
+| | strict | relaxed | spread |
+| --- | :-: | :-: | :-: |
+| 🟢 field total, `248` rows | `5 190` | `5 590` | 🟢 **`7.2 %`** |
+| rows where the two modes disagree | — | — | 🟢 **`26 of 248`** |
+
+🟢 **The bracket is narrow because the wrapper idiom is rare**, and every figure below is the
+`relaxed` bound with the strict bound available in the committed TSV.
+
+### 🟢 `566-F` CLOSED — the field's write surface, over the `187` rows it named
+
+🟢 **`248` repositories cloned and read: the complete `187`-row structurally-confirmed Canvas LMS
+field from `p566`'s census, plus all `61` Moodle rows. 🔴 Zero clone failures.**
+
+🔵 **Recall is reported before any rate, and it is reported against the MEASURABLE population —
+because a third of the apparent recall gap turned out not to be an instrument failure at all.**
+Partitioning the `33` zero-yield rows by cause:
+
+| cause of a zero | Canvas | Moodle | total |
+| --- | :-: | :-: | :-: |
+| 🔵 **empty repository — no commits at all** | `0` | 🔴 **`5`** | 🔴 **`5`** |
+| 🔵 no source file in a covered language | `3` | `5` | `8` |
+| 🔴 **genuine instrument gap** — covered source present, no name extracted | 🔴 **`11`** | 🔴 **`9`** | 🔴 **`20`** |
+
+🔴 **All five empty repositories on the whole field are Moodle rows** — named placeholder
+repositories with zero commits ([`enovation/moodle-local_mcp_helper`](https://github.com/enovation/moodle-local_mcp_helper),
+[`Marcus2012/MCP_Moodle`](https://github.com/Marcus2012/MCP_Moodle), `OGjoyce/mcp-moodle`,
+`Hiroya-319/moodle-mcp-server`, `DeepLearningHarness-Team/Moodle-MCP`). 🔵 `8.2 %` of the Moodle
+field is an empty repository, and a census that counts addresses rather than commits cannot see it.
+
+| | 🟢 Canvas LMS field (`566-F`'s denominator) | Moodle field | whole swept field |
+| --- | :-: | :-: | :-: |
+| rows | **`187`** | `61` | `248` |
+| 🔵 measurable population | `184` | `51` | `235` |
+| 🟢 **recall over measurable rows** | 🟢 **`173` (`94.0 %`)** | 🔵 **`42` (`82.4 %`)** | 🟢 **`215` (`91.5 %`)** |
+| tool declarations | **`5 024`** | `566` | `5 590` |
+| mutating | `1 199` | `88` | `1 287` |
+| 🔴 **AGGREGATE MUTATION SHARE** | 🔴 **`23.9 %`** | 🟢 **`15.5 %`** | `23.0 %` |
+| 🟢 **per-repo MEDIAN share** | 🟢 **`0.0 %`** | 🟢 **`0.0 %`** | 🟢 **`0.0 %`** |
+| 🟢 repos declaring **zero** mutating tools | 🟢 **`89 of 173` (`51.4 %`)** | 🟢 **`27 of 42` (`64.3 %`)** | `116 of 215` (`54.0 %`) |
+
+🟢 **`566-F`'s suspicion is confirmed, and `p566`'s number survives in the nicest possible way.**
+The `9`-repo star-selected tier reads **`28.1 %`** when all `9` are finally read (`770` tools,
+`216` mutating) — against `p566`'s published **`28.0 %`** from only `6 of 9`. 🟢 **A `0.1`-point
+reproduction of a figure measured with a third of the tier missing.** 🔴 **What was wrong was its
+SCOPE, not its arithmetic:** the field reads **`23.9 %`**, so the star-selected tier over-states the
+population it was taken to represent by **`4.2` points** — exactly the selection bias `p564`
+predicted and `566-F` asked about.
+
+🔴 **The finding that matters is not the aggregate at all. It is that the aggregate describes
+almost no repository on this field.** The median LMS agent declares **`0 %`** mutating tools, and
+**more than half of the field declares none at all**. The `23.9 %` is manufactured by a short head:
+
+| mutating share | repo | mutating / tools |
+| :-: | --- | :-: |
+| 🔴 **`78.3 %`** | [`mflynn326-collab/canvas-mcp`](https://github.com/mflynn326-collab/canvas-mcp) | `18` / `23` |
+| 🔴 **`75.0 %`** | [`Lunar-arch/canvasMCP`](https://github.com/Lunar-arch/canvasMCP) | `15` / `20` |
+| 🔴 **`75.0 %`** | [`mrchris-ai/codex_canvas_mcp`](https://github.com/mrchris-ai/codex_canvas_mcp) | `24` / `32` |
+| 🔴 **`56.8 %`** | [`toddbartholow/irq-canvas-mcp`](https://github.com/toddbartholow/irq-canvas-mcp) | `46` / `81` |
+| 🔴 **`56.0 %`** | [`HrudithL/Canvas-MCP-Server`](https://github.com/HrudithL/Canvas-MCP-Server) | **`94`** / `168` |
+| 🔴 **`48.5 %`** | [`CharlieCardenasToledo/mcp-canvas-server`](https://github.com/CharlieCardenasToledo/mcp-canvas-server) | `64` / `132` |
+
+🟢 **Consequence for delivery, and it is the opposite of the cautious reading:** a studio does not
+need to treat the LMS-agent field as write-dangerous. It needs to avoid about **ten named
+repositories**. `16` repositories carry `≥20` tools and **zero** mutating declarations — a
+substantial read-only shelf that the aggregate figure hides completely.
+
+### 🟢 The mutation classifier, validated against a repository that declares its OWN read/write split
+
+🟢 **A rare piece of luck, and it is the strongest validation this axis has had.**
+[`vkumar04/canvas-mcp-lite`](https://github.com/vkumar04/canvas-mcp-lite) registers its tools in two
+named lists — `READ_TOOLS` (`51`) and `WRITE_TOOLS` (`52`) — so the author's own classification of
+`103` tools is readable ground truth.
+
+| against `vkumar04`'s author-declared split | first run | 🟢 after the fix it prescribed |
+| --- | :-: | :-: |
+| accuracy over `103` tools | `92.2 %` | 🟢 **`100.0 %`** |
+| 🟢 **false positives** (author `read`, instrument `mutating`) | 🟢 **`0`** | 🟢 **`0`** |
+| false negatives (author `write`, instrument `read`) | 🔴 `8` | 🟢 **`0`** |
+
+🔴 **The `8` misses named their own repair** — `reply`, `connect`, `comment`, `replace`, `copy`,
+`hide` were absent from the mutating-verb set (`reply_to_discussion_entry`, `hide_grades`,
+`replace_text_in_google_doc`, `copy_google_slides` …). 🟢 Added, and the list records where they
+came from.
+
+🟢 **The asymmetry is the load-bearing result: `0` false positives on both runs.** The instrument
+has never once called a read tool mutating. 🔵 **So every mutation figure on this page is a LOWER
+BOUND**, which is the correct direction for a procurement gate — it under-warns rather than
+over-blocks, and a studio can treat a `0 %` verdict as trustworthy.
+
+### 🔵 Platform predicts write posture — and `p566` showed it does NOT predict licence recovery
+
+🟢 **Canvas `23.9 %` against Moodle `15.5 %`** — `8.4` points apart, both measured at field scale by
+one instrument in one run. 🔴 **This REVERSES the ordering this base published one pass ago**, where
+Moodle read `32.9 %` against Canvas's `28.0 %`. 🔵 Stated precisely, because the populations are not
+the same: `32.9 %` was `p447`'s **Moodle connector tier** (`414` declarations), not the Moodle field;
+this pass reads the field (`566` declarations across all `61` rows).
+
+🔵 **And it sits exactly against `p566`'s own axis finding.** `p566` showed the platform does **not**
+predict licence recovery (Canvas `19.7 %`, Moodle `16.4 %` — `3.3` points) and that the npm manifest
+does (`13.3 ×`). 🟢 **Write posture behaves differently: there the platform DOES separate, by
+`8.4` points.** Two axes, two mechanisms — and neither can be inferred from the other.
+
+### 🟢 Head rows re-read first-hand this pass
+
+🟢 Platform API, `2026-10-31`.
+
+| repo | ★ | grant | note |
+| --- | :-: | :-: | --- |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`51 960`** (`+123` on `p566`) | 🟢 `Apache-2.0` | `6 369` forks · `297` open issues · pushed `2026-10-31` · arXiv [`2604.26962`](http://arxiv.org/abs/2604.26962) |
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | 🟢 **`4 331`** (`+100` on `p556`) | 🔴 **`AGPL-3.0`** | `670` forks at **`15` days old**; still the fastest mover this base cannot fold into a deliverable |
+| [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) | **`310`** | 🟢 `MIT` | tier head; `101` forks; description claims *"up to `102` tools"* against this pass's `129` → 🔵 `567-D` |
+| [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp) | **`119`** | 🟢 `MIT` | 🟢 **`26` tools, `0` mutating** — read-only claim CONFIRMED a second time, and `p566`'s `1` was a `26 ×` under-read |
+| [`DMontgomery40/mcp-canvas-lms`](https://github.com/DMontgomery40/mcp-canvas-lms) | **`104`** | 🔴 platform: **no `license` key at all** · 🟢 `package.json`: `MIT` | 🟢 **`p566`'s manifest-recovery finding re-confirmed independently** — the API response carries no licence field whatsoever |
+| [`Fireiscoolsolo/canvas-lms-mcp-server`](https://github.com/Fireiscoolsolo/canvas-lms-mcp-server) | `1` | 🟢 `MIT` | `211` tools — the wrapper-idiom case |
+
+### 🔴 `566-E` re-probed and still shut
+
+🔴 `download.moodle.org:443` → **`CONNECT tunnel failed, response 403`**, and the proxy's own status
+endpoint names it: `connect_rejected` — *"gateway answered 403 to CONNECT (policy denial or upstream
+failure)"*, logged `2026-10-31T05:40:58Z`. 🔵 The whole `*.moodle.org` zone remains outside the
+session's allowed domains. **`566-E` stays open and is not this base's to close.**
+
+### 🔴 Gaps registered by this pass
+
+- **`567-A`** — 🔴 **The Moodle field's residual gap is `9` rows, not `19`, and the difference is a
+  finding rather than a rounding.** Recall over measurable rows is **`82.4 %`** on Moodle against
+  **`94.0 %`** on Canvas; of the `19` Moodle zeros, **`5` are empty repositories** and **`5` carry no
+  file in a covered language** (including [`Punyo/NITechMoodleMCPServer`](https://github.com/Punyo/NITechMoodleMCPServer),
+  **Kotlin** — a language no committed idiom covers). 🔴 The genuine gap is `9`, headed by
+  [`eledia/moodle-webservice_eledia_mcp`](https://github.com/eledia/moodle-webservice_eledia_mcp) at
+  **`77` PHP files and zero extracted names — the largest unread tree on the field.** 🔴 The
+  `db/services.php` explanation holds for only `1 of 5` sampled. 🔵 Ask: read the `9`, and add a
+  Kotlin and a PHP idiom.
+- **`567-B`** — 🔴 **No Rust idiom.** [`GarthDB/rust-canvas-mcp`](https://github.com/GarthDB/rust-canvas-mcp)
+  (`5` `.rs` files, the only Rust implementation on this field) yields `0`; `rmcp`'s `#[tool]` macro
+  form is unhandled.
+- **`567-C`** — 🔴 [`lcrzhang/canvas-mcp`](https://github.com/lcrzhang/canvas-mcp) carries `31` Python
+  files and yields `0`. Its registration idiom was not identified.
+- **`567-D`** — 🔴 **An unexplained over-read on the one repository with ground truth.** The
+  instrument reads `119` tools on `vkumar04/canvas-mcp-lite` against `103` author-declared
+  (`+15.5 %`), and `129` on `vishalsachdev/canvas-mcp` against a README claiming `102`. The
+  *classifier* is exact; the *enumerator* is not, so field totals carry an unquantified upward bias
+  on list-idiom repositories.
+- **`567-E`** — 🔴 **The mutation share is a tool-COUNT share, not a blast-radius one.** One
+  `delete_course` and one `create_page` each count `1`. No severity weighting exists, so `23.9 %` is
+  not a risk measure and must not be sold as one.
+
 ## 🆕 `p566` — `2026-10-31` — **🟢 `565-B` CLOSED WITH THE NUMBER IT ASKED FOR: all `234` unknown-licence rows read, and `44` carry a permissive grant the platform never reported — `18.8 %` of the field this base has been treating as unusable.** 🔴 **And it closes by REFUTING `p565`'s own flip rate: `2 of 3` was a three-repo sample on the head; the population rate is `18.8 %`, not `66.7 %`.**
 
 🔵 **The axis is not the platform. It is the manifest.** `p565` read its `2 of 3` flip as

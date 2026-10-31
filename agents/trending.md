@@ -4,6 +4,72 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p567` — `2026-10-31`
+
+> **🔴 ZERO new addresses, and for once the pass says plainly why that is the right outcome: the
+> eight prescribed legs are a RETIRED channel on this field and were run anyway to keep the null
+> dated.** 🟢 **The week's movement is a `+2 027`-declaration correction to the shelf's own
+> write-surface ledger — `36 %` of this field's tool surface was invisible to the instrument that
+> measured it.** Append-only: history below is untouched.
+
+### 🔴 The discovery legs, run and nil — fourth consecutive pass
+
+| leg | result |
+| --- | --- |
+| `top open source AI agents education 2026 github MIT` | 🔴 returns general agent frameworks (OpenHands, CrewAI, Langflow); **no education-specific address new to this base** |
+| `github trending education AI 2026` | 🟢 one signal, already held: **`DeepTutor`** at `+2 282★` in a day on aggregator feeds |
+| `open source platform education LMS SIS MIT Apache` | 🔴 vendor listicles; OpenOlat / Frappe Learning / OpenEduCat all already on the verticals shelf |
+| `AI education industry trends 2026` | 🔴 market-size spread only, no supply |
+| 🔴 **4 × per-region legs** (NA, EMEA, APAC, LATAM) | 🔴 **`0` addresses.** Policy and demand facts only — recorded in [`../intel/market.md`](../intel/market.md) |
+
+🔵 **Why this null is informative rather than lazy:** `p561` measured saturation with a denominator
+(`topic:ai-tutor` `829` tagged, `topic:ai-education` `565` tagged — every repo clearing the bar was
+already held), and `p564` retired star-ranked re-reads of `moodle mcp in:name` outright. 🟢 **The
+four nils are a dated confirmation that a retired channel stayed retired**, not an unexamined shrug.
+
+### 🟢 What actually moved this week: the shelf's write-surface ledger
+
+🔵 **The trend worth recording is not a new project. It is that this shelf has been under-reporting
+its own field by a third**, and the correction is now measured over the whole population.
+
+| the field's tool surface | `p566` ledger | 🟢 `p567` re-read | delta |
+| --- | :-: | :-: | :-: |
+| tool declarations, `248` rows | `3 563` | 🟢 **`5 590`** | 🟢 **`+2 027` (`+56.9 %`)** |
+| rows the instrument could not read at all | 🔴 `69` | 🟢 **`33`** | 🟢 **`−36`** |
+| of those `69`, now yielding | — | 🟢 **`40`** | — |
+| 🔵 of the `33` remaining, actual instrument failures | — | 🔵 **`20`** | the rest are `5` empty repositories and `8` uncovered-language trees |
+
+🟢 **Cause, in one line:** every idiom the retired extractor knew was anchored to a single physical
+line, and this field registers tools across continuation lines.
+
+### 🔵 The week's *structural* trend — the field is bimodal and the aggregate hides it
+
+🟢 **New this pass, and it is a trend statement about the whole field rather than any repository:**
+
+| | Canvas LMS field (`187`) | Moodle field (`61`) |
+| --- | :-: | :-: |
+| aggregate mutation share | 🔴 `23.9 %` | 🟢 `15.5 %` |
+| 🟢 **median repository** | 🟢 **`0.0 %`** | 🟢 **`0.0 %`** |
+| 🟢 repos with **zero** write tools | 🟢 **`51.4 %`** | 🟢 **`64.3 %`** |
+
+🔵 **Read as a trend: the education-agent field is drifting read-only.** More than half of every
+population measured declares no mutating tool at all, and the fastest-growing Canvas agent of the
+last fortnight — [`boyuchengz/canvas-mcp`](https://github.com/boyuchengz/canvas-mcp), `119★` at six
+days, now `119★` at twelve — enforces read-only *in its contributing guide*. 🟢 Its claim is
+confirmed first-hand a second time: **`26` tools, `0` mutating.**
+
+### 🟢 Movement on the two largest rows, read first-hand `2026-10-31`
+
+| repo | ★ | grant | movement |
+| --- | :-: | :-: | --- |
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 **`51 960`** | 🟢 `Apache-2.0` | `+123` since `p566`, same calendar day; `6 369` forks; pushed `2026-10-31` |
+| [`amosblomqvist/learnharness`](https://github.com/amosblomqvist/learnharness) | 🟢 **`4 331`** | 🔴 `AGPL-3.0` | `+100` since `p556`; **`670` forks at `15` days old** — fork growth outpacing stars |
+
+🔴 **The licence story on the fastest mover has not changed and should not be allowed to fade:**
+`learnharness` is `AGPL-3.0`, confirmed again on the platform field this pass. The most
+energetically adopted new education agent on this shelf remains one Globant cannot fold into a
+client deliverable.
+
 ## 🆕 `p566` — `2026-10-31`
 
 > **🟢 `44` permissive agents recovered from a population this base had written off** — `18.8 %` of
