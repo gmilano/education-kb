@@ -1,0 +1,8 @@
+family	source	url	raw_B	sha12_raw	ws_B	sha12_ws	sha12_punct	stage5_B	sha12_stage5	appendix	patent_scope_clause
+ECL-2.0	spdx ECL-2.0	https://raw.githubusercontent.com/spdx/license-list-data/main/text/ECL-2.0.txt	11111	49831d277a9e	11029	453ff0b984e1	453ff0b984e1	9761	5f80831393bf	present	present
+ECL-2.0	sakaiproject/sakai master/LICENSE	https://raw.githubusercontent.com/sakaiproject/sakai/master/LICENSE	11120	0688f62d04f1	11079	11c0a5513d26	11c0a5513d26	9812	81167483650b	present	present
+ECL-2.0	opencast/opencast develop/LICENSE	https://raw.githubusercontent.com/opencast/opencast/develop/LICENSE	11340	76a975068930	11083	4953a2c03a07	4953a2c03a07	9824	dfb296d5e14b	present	present
+ECL-2.0	Apereo OpenLRW master/LICENSE	https://raw.githubusercontent.com/Apereo-Learning-Analytics-Initiative/OpenLRW/master/LICENSE	9878	f339063d2f60	9855	633e793280fb	633e793280fb	9755	89e7cc1f5390	ABSENT	present
+Apache-2.0	apache.org (control)	https://www.apache.org/licenses/LICENSE-2.0.txt	11358	cfc7749b96f6	10221	0ffddef9e48f	0ffddef9e48f	9032	68b43f228ea6	present	ABSENT
+Apache-2.0	spdx Apache-2.0 (control)	https://raw.githubusercontent.com/spdx/license-list-data/main/text/Apache-2.0.txt	10280	074e6e32c86a	10221	0ffddef9e48f	0ffddef9e48f	9032	68b43f228ea6	present	ABSENT
+Apache-2.0	oppia/oppia develop/LICENSE (control)	https://raw.githubusercontent.com/oppia/oppia/develop/LICENSE	11358	cfc7749b96f6	10221	0ffddef9e48f	0ffddef9e48f	9032	68b43f228ea6	present	ABSENT

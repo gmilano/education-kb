@@ -4,6 +4,131 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p562` — `2026-10-31` — **🟢 `p561`'s PINS REPRODUCE 14 OF 14 FROM AN INDEPENDENT RE-IMPLEMENTATION — the first time a successor has rebuilt this base's grant instrument from its own spec and landed on its predecessor's numbers. 🔴 AND THE SPEC IS NOT WHAT PINNED THEM: the committed stage-3 description omits the *direction* of its URL fold, and the faithful prose reading MISMATCHES 8 OF 14 (`562-B`). 🟢 `561-A` EXTENDED TO A SIXTH FAMILY — `ECL-2.0`, THE EDUCATION-SPECIFIC ONE — WHICH HAS NO CANONICAL DIGEST AT ANY OF FIVE STAGES (`562-C`).**
+
+### 🟢 The calibration, run before the sweep and reported whether or not it passed
+
+🟢 **`P561-A` re-implemented from scratch this pass** — not executed from the committed tree, which
+this host refuses as *Code from External* (`561`, sixth consecutive pass) — and run against all
+**14** pinned sources in
+[`../evidence/canonical-grant-normalisation.2026-10-30-p561.tsv`](../evidence/canonical-grant-normalisation.2026-10-30-p561.tsv),
+checking **five** quantities each (`raw_B`, `sha12_raw`, `ws_B`, `sha12_ws`, `sha12_punct`).
+
+🟢 **14 of 14 reproduce, 0 mismatch, 70 of 70 quantities exact.** 🔵 This is the measurement
+`560-A` and `560-B` were about — *"this base could not reproduce its own figures"* — taken on the
+pins themselves, and it comes back clean. 🟢 **`p561`'s pins are sound and may be relied on.**
+
+### 🔴 `562-B` — but the published *spec* does not pin them, and only the code does
+
+🔴 **The first calibration run mismatched 8 of 14**, and every mismatch was `sha12_punct` on the
+three GNU families. 🟢 The cause is in one sentence of
+[`../compose/code/p561-grant-normaliser/README.md`](../compose/code/p561-grant-normaliser/README.md):
+
+> `punct` — fold curly quotes/dashes to ASCII, `©`→`(C)`, **normalise the `fsf.org` and `gnu.org` URL schemes.**
+
+🔴 **"Normalise" does not state a direction.** The faithful reading — fold `https:` → `http:`,
+toward what the repositories ship — converges the families correctly **but lands on different
+digests**, because the committed instrument folds the *other* way (`http://` → `https://`) and
+additionally maps `http://www.fsf.org/` → `https://fsf.org/` and `®` → `(R)`, neither of which the
+prose mentions. 🟢 **Reading `normalise.py` settled it in one grep and the re-run went 14/14.**
+
+🔴 **The consequence is precise and it is not pedantic: the four-stage spec is not independently
+implementable, so the pins are reproducible only by the pass that holds the code** — and this base's
+standing finding is that its committed code **cannot be executed from the sessions that maintain
+it**. 🟢 **Remedy, one line:** state the direction and the full map in the README table. Registered
+as `562-B` with that remedy; 🔵 the stage table on this page now carries it.
+
+### 🟢 `562-C` — `ECL-2.0` pinned as *unpinnable*, and it is the family this industry actually runs on
+
+🟢 **`561-A`'s closure condition named ~10 families and listed none of them as `ECL-2.0`.** 🔴 It is
+on this shelf on three live rows, it is **what the Apereo stack ships**, and it is a **modified
+Apache 2.0 whose single operative change is the patent grant** — *"modified to change the scope of
+the patent grant in section 3 to be specific to the needs of the education communities using this
+license."* 🟢 Pin attempt, 4 sources:
+[`../evidence/ecl-2.0-pin-attempt.2026-10-31-p562.tsv`](../evidence/ecl-2.0-pin-attempt.2026-10-31-p562.tsv).
+
+| source | `raw` B | `ws` B | `sha12_punct` | appendix |
+| --- | --: | --: | --- | :-: |
+| 🟢 `spdx` `ECL-2.0` | 11 111 | 11 029 | `453ff0b984e1` | present |
+| 🟢 [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) `master` | **11 120** | 11 079 | `11c0a5513d26` | present |
+| 🟢 [`opencast/opencast`](https://github.com/opencast/opencast) `develop` | 11 340 | 11 083 | `4953a2c03a07` | present |
+| 🟢 [`Apereo…/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) `master` | 9 878 | 9 855 | `633e793280fb` | 🔴 **ABSENT** |
+
+🔴 **4 sources, 4 distinct digests at `raw`, `ws`, `punct` — and still 4 at a fifth stage.** 🟢 The
+residual is fully characterised and **none of it is operative**: a **pointer URL** that differs by
+publisher (`opensource.org/licenses/ECL-2.0` vs `www.osedu.org/licenses/`), **list-enumerator
+glyphs** (`a. b. c.` in SPDX, `1. 2. 3.` in `opencast`, inline in `sakai`), and **OpenLRW omitting
+the `APPENDIX` boilerplate** (9 sentence units). 🟢 **All four carry the patent-scope clause, so all
+four are substantively `ECL-2.0`.**
+
+🟢 **So the instrument for `ECL-2.0` is a clause test, not a hash** — and it is cheap and total on
+this evidence: the string `specific to the needs of the education` is present in **4 of 4** ECL
+sources and **0 of 3** Apache controls, and across the 100 payloads this pass read it fires on
+**exactly the 3 ECL rows, 0 false positives**. 🔵 `ECL-2.0` joins **class C** under `P561-A`:
+*no canonical digest exists.*
+
+### 🔵 `562-D` — a fifth stage, adopted for one family and rejected for the one it was built for
+
+🟢 **Stage 5, *operative-body isolation*:** cut at `END OF TERMS AND CONDITIONS`, replace every URL
+with `<URL>`, fold list enumerators. 🔴 **It does not converge `ECL-2.0`** (4 of 4 still distinct) —
+so it fails at its purpose and `562-C` stands. 🟢 **But on Apache-2.0 it converges 3 of 3 at a
+tighter pin than stage 3** — **9 032 B / `68b43f228ea6`**, against stage 3's 10 221 B /
+`0ffddef9e48f` — and it **separates `ECL-2.0` from `Apache-2.0` cleanly** (9 812 B vs 9 032 B,
+`+780 B`, distinct digests).
+
+🔵 **Recorded as a disposition, in `561-E`'s shape:** 🟢 adopted as an *optional tightening* for the
+Apache family, 🔴 **rejected as an ECL fix**, and published because a stage that fails its own
+motivating case while paying off elsewhere is a finding about the instrument. 🟢 Both results are in
+the TSV so the negative reproduces.
+
+### 🔴 `560-A` is NOT closed, and this pass found it live on a neighbouring page
+
+🟢 **The sweep measured `raw` on 91 rows under the convention `560-A` adopted 8-to-1.** 🔴 And
+[`../intel/market.md`](../intel/market.md)'s North America child still publishes
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) at **`11 119 B`** while this pass reads
+**`11 120 B`** — 🔵 the *old* `raw − 1 newline` convention, surviving on a page that was never part
+of the digest sweeps. 🟢 **Both figures are correct under their own convention and the page names
+neither**, which is exactly the defect `560-A` exists to retire. 🔴 Carried, with a named instance.
+
+### 🟢 `562-F` — `561-D` IS CLOSED, and the fold constant must be published as a DIGEST, never as a length
+
+🟢 **`561-D` asked for the fold constant's false-match rate on a filled template**, calling it
+*"the next instrument question"*. 🟢 **Measured, on 9 MIT payloads from this shelf plus three
+controls:**
+[`../evidence/fold-constant-false-match.2026-10-31-p562.tsv`](../evidence/fold-constant-false-match.2026-10-31-p562.tsv).
+
+| measurement | result |
+| --- | --- |
+| 🔴 distinct digests **before** the fold | **9 of 9** — `561-D`'s *"no canonical digest"*, reproduced |
+| 🟢 distinct digests **after** the fold | **3 of 9**, with **7 of 9 collapsing on `9045be9ab67f` / 1 062 B** |
+| 🔴 **false-match rate of the fold LENGTH** | 🔴 **2 of 2** on equal-length operative substitutions |
+| 🟢 false-match rate of the fold DIGEST | 🟢 **0 of 2** — it catches both |
+
+🔴 **The decisive test, and it is worse than a formatting question.** Substituting `permit` → `forbid`
+in *"and to permit persons to whom the Software is furnished to do so"* — **6 characters for 6** —
+**inverts the grant** and leaves the folded length at **exactly 1 062 B**. 🟢 The folded digest moves
+to `e89a73351a43`. 🔴 A second control, `Software` → `Hardware`, does the same. 🟢 **So the fold
+constant works, and the *constant* is the wrong thing to publish**: `560-F` proved a byte count
+cannot detect a licence change (`frappe/frappe`, three distinct blobs at exactly `1 118 B`), and this
+generalises it **to the fold itself**.
+
+🟢 **Adopted: publish the folded digest, name the fold, never gate on the folded length.**
+
+🔴 **And the fold's own failure modes are measured — 2 of 9 (22 %) do not collapse, both with named
+causes and one-line remedies:**
+
+- 🔴 **[`frappe/frappe`](https://github.com/frappe/frappe) — the fold never fired.** Its holder is
+  `Frappe Technologies Pvt. Ltd. <developers@frappe.io>`, and the span `[^.]{0,120}` **stops at the
+  period in `Pvt.`** 🟢 Remedy: match the holder span up to the grant clause rather than up to a
+  period.
+- 🔴 **[`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi) — the fold fired and still did not
+  collapse** (1 072 B vs 1 062 B). Its title is `MIT License (MIT)`, a **title variant** the fold does
+  not neutralise. 🟢 Remedy: a second fold span over the title line.
+
+🔵 Registered as `562-F` with both remedies, because the fold is now a **load-bearing** instrument —
+it is the only one that recovers a canonical MIT digest — and a load-bearing instrument with a
+measured 22 % non-fire rate should not be carried as though it were clean.
+
 ## 🆕 `p561` — `2026-10-31` — **🟢 `560-C` CLOSED, AND IT CLOSES BY RETIRING THE INSTRUMENT IT ASKED FOR: canonical digests are now pinned for **five** families from **14 sources** — but 🔴 **a byte digest is the wrong gate in four of the five**, and the proof is that the **stage at which a family's sources converge under normalisation is what classifies the family**. 🟢 Apache-2.0 converges at `ws` **3 of 3**; GPL-3.0 at `punct` **3 of 3**; 🔴 AGPL-3.0 **never converges** and its residual is edX Inc.'s RPC clause; 🔴 LGPL-3.0 never converges and its residual is a **form**; 🔴 BSD-3-Clause is **3 of 3 distinct at every stage** — no canonical digest exists. 🔴 **Stage 4 rejected by its own data.****
 
 🟢 **`560-C` asked for:** *"pin canonical digests for the other families this shelf grades

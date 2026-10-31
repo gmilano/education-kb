@@ -4,6 +4,47 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p562` — `2026-10-31` — **🟢 THE APEREO TIER'S GRANT IS `ECL-2.0` AND THIS PASS PINNED IT AS *UNPINNABLE* — 4 sources, 4 distinct digests at five normalisation stages, and the one thing all four share is the clause that matters: **the patent grant is narrowed to education**. 🟢 THAT IS A PROCUREMENT ADVANTAGE AND A DILIGENCE QUESTION IN THE SAME SENTENCE, AND THIS PAGE NOW STATES BOTH.**
+
+🔵 **Nothing about the three rows' *verdicts* changes.** [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai),
+[`opencast/opencast`](https://github.com/opencast/opencast) and
+[`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+were already graded `ECL-2.0` on this page and four others; 🔴 **a draft of this pass briefly
+reported them as mis-graded and that claim is retracted in full** (`562-A`, on
+[`../agents/top.md`](../agents/top.md#-p562--2026-10-31)). 🟢 What is new is the **measurement** and
+what it means for a client.
+
+### 🟢 What `ECL-2.0` buys, and what it costs
+
+🟢 **It is `Apache-2.0` with one operative edit**, stated in its own preamble: *"modified to change
+the scope of the patent grant in section 3 to be specific to the needs of the education communities
+using this license."* 🟢 **Everything else — the grant, the notice duties, the `NOTICE` file
+mechanics, the disclaimer — is Apache 2.0**, which is why this page's `BUILD-ON` posture for the
+Apereo tier is unchanged and why HE consortium procurement already recognises it.
+
+| consequence | read |
+| --- | --- |
+| 🟢 **Procurement** | `ECL-2.0` is an **OSI-approved, consortium-familiar** grant in North American higher education. A deliverable built on it can be **the client's property** — the `BUILD-ON` case this page already makes for the tier |
+| 🔴 **Diligence** | The **patent grant is narrower than Apache-2.0's**. A studio that tells a client *"it's basically Apache"* is right about the obligations and 🔴 **wrong about the patent peace**, which is the one clause a corporate legal review reads closely |
+| 🔴 **Tooling** | **No canonical digest exists** (`562-C`). A digest-based licence gate returns `NOASSERTION` on all three rows, every time, correctly-by-accident |
+| 🟢 **The instrument that works** | A **clause test**: `specific to the needs of the education` — **4 of 4** ECL sources, **0 of 3** Apache controls, **0 false positives** across the 100 payloads read this pass |
+
+🟢 **Practical rule for this tier, adopted:** grade the Apereo stack by the clause test, record the
+verdict as **`ECL-2.0`** and never as `Apache-2.0`, and put the patent-scope sentence **in the
+engagement's licence register with its citation** — so it is raised at week one rather than found in
+diligence. 🔵 This is `561-B`'s discipline applied to a second family: the clause is the vendor's
+own statement, not a court's, so the base records it and attaches the question rather than answering
+it.
+
+### 🔵 The variance, for whoever next reads one of these payloads
+
+🔴 **Do not expect two ECL copies to match.** Measured causes, none operative:
+**pointer URL** by publisher (`opensource.org/licenses/ECL-2.0` on `sakai`,
+`www.osedu.org/licenses/` on `opencast` and SPDX), **list-enumerator glyphs** (`a. b. c.` / `1. 2. 3.`
+/ inline), and 🔴 **`OpenLRW` ships no `APPENDIX`** — 9 sentence units shorter, `9 878 B` against
+`sakai`'s `11 120 B`. 🟢 Census:
+[`../evidence/ecl-2.0-pin-attempt.2026-10-31-p562.tsv`](../evidence/ecl-2.0-pin-attempt.2026-10-31-p562.tsv).
+
 ## 🆕 `p561` — `2026-10-31` — **🔴 `561-H`: OPENEDUCAT'S GRANT FILE CONTRADICTS ITSELF TWICE, AND ODOO'S IDENTICAL PREAMBLE IS ACCURATE ON BOTH POINTS. [`openeducat_erp`](https://github.com/openeducat/openeducat_erp) `19.0/LICENSE` says *"the text of the GPL is included at the bottom as well"* — 🔴 **`GNU GENERAL PUBLIC LICENSE` appears ZERO times in the file** — and *"please see the COPYRIGHT file"* — 🔴 **which 404s on that branch.** 🟢 [`odoo`](https://github.com/odoo/odoo) `20.0/LICENSE` ships the same five-sentence preamble and honours both: GPL body present, `COPYRIGHT` → `200`. 🟢 BOTH VERDICTS HOLD; the defect is in the paper trail, which is what an audit reads.**
 
 🟢 **Found by instrument, not by browsing.** `p561`'s normaliser

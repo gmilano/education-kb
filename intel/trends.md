@@ -4,6 +4,56 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p562` — `2026-10-31` — **🟢 A NEW TREND THIS SHELF CAN NOW STATE AS A RATE RATHER THAN AN ANECDOTE: *"permissively licensed"* AND *"clears a licence gate"* HAVE COME APART, AND THE GAP IS **41.8 %** OF THE APACHE/AGPL ROWS THIS BASE SELLS. 🟢 AND THE AGENTIC-TUTOR TIER HAS SETTLED INTO A RELEASE CADENCE: BOTH TOP ROWS SHIPPED INSIDE 72 HOURS.**
+
+### 🟢 `T562-A` — the licence-gate gap is now a measured quantity, and it is a delivery risk
+
+🔴 **38 of 91** Apache-2.0/AGPL-3.0 rows on the live shelves are **canonically verbatim** and would
+be reported **modified** by a raw-byte digest gate — the instrument a studio stands up in week one.
+🟢 Full census on [`../agents/top.md`](../agents/top.md#-p562--2026-10-31).
+
+🔵 **Why this is a trend and not a tooling note.** Three independent measurements now say the same
+thing from three directions: `558-B` (a `main`-only grant read 404s on **32.4 %** of addresses),
+`559-B` (sub-200 B grant payloads are genuine, not error bodies), and now `562` (**41.8 %** of
+verbatim grants fail a byte digest). 🟢 **The common cause is that open-source licensing is
+*clause-shaped* while procurement tooling is *file-shaped*.** 🔴 **The consequence for an engagement
+is concrete and arrives in week one:** the licence inventory a client's security team runs will
+reject roughly four in ten of the components the proposal recommended, and the studio will be
+defending real rows against a broken instrument instead of building.
+
+🟢 **The sellable response is a two-line position**, and this base can now evidence both lines:
+grade on **clauses and normalised digests**, and hand the client the **convention beside every
+figure**. 🔵 That is `560-A`'s rule turned into a deliverable, and `562-F` is the instrument caveat that
+travels with it: for MIT and BSD the gate must compare the **folded digest**, because the folded
+**length** false-matches on an equal-length substitution that inverts the grant.
+
+### 🟢 `T562-B` — the two largest education agents are on a weekly-to-fortnightly release cadence
+
+🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) **`v1.7.0` · `2026-10-28`** (**51.8k★**,
+Apache-2.0) and [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) **`v1.3.0` · `2026-10-29`**
+(**41.9k★**, MIT) — 🔴 **two releases inside 72 hours, from the two rows that together hold ~93.7k★
+of this shelf's agent tier.**
+
+🔵 **What changes for a studio:** this tier is no longer a research artefact to fork and freeze.
+🟢 `v1.7.0`'s **resumable embedding checkpoints** are the specific signal — that is a feature built
+for re-running an ingest over a real course corpus, which is a **productionisation** move, not a
+demo move. 🔴 **The risk is the mirror image:** a client pinned to a fork three releases back now
+diverges in weeks rather than quarters, so the engagement shape should be
+**track-upstream-with-a-pinned-tag**, not fork-and-own.
+
+### 🔵 `T562-C` — the demand surface did not move at all this pass, and that is itself information
+
+🔴 **All four regional legs returned zero new instruments** — the second simultaneous four-region
+saturation this base has measured (`p558` took the first). 🟢 Full leg-by-leg table with the
+instruments each returned:
+[`../intel/market.md`](../intel/market.md#-p562--2026-10-31).
+
+🔵 **The honest reading, after four passes of the `558-E` series:** the regulatory and adoption
+surface for AI in education is **not** moving weekly, while the **supply** surface is moving in
+days. 🟢 A base that probes both on an hourly schedule should expect the demand leg to be mostly
+nulls and should **measure them rather than keep re-asking**, which is what `558-E` was registered
+to find out and what it now appears to have found.
+
 ## 🆕 `p561` — `2026-10-31` — **🟢 THE TREND THIS PASS CAN ACTUALLY EVIDENCE IS A MISMATCH, AND IT IS MEASURED: **grants are published as prose and verified as bytes**, and the two have drifted far enough apart that **4 of 25 shelf rows are canonical VERBATIM while matching no canonical byte figure**, while 🔴 **the one row with a genuinely modified operative clause sits in the platform layer where nobody was looking**. 🔴 15 MIT rows → **15 distinct digests**; BSD-3-Clause → **3 of 3 distinct**. 🔴 THE TWO LICENCES GLOBANT PREFERS ARE THE TWO A HASH GATE CANNOT VERIFY.**
 
 ### 🟢 Trend — licence verification became a delivery gate, and the instrument did not keep up

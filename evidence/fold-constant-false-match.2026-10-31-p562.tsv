@@ -1,0 +1,13 @@
+specimen	raw_B	punct_B	sha12_punct	fold_B	sha12_fold	collapses_to_modal	note
+EduThemes/paper-lms	1071	1066	dbb226ba9e73	1062	9045be9ab67f	yes	holder "Michael Kocher"
+Selleo/mentingo	1062	1058	e7bd473b7af5	1062	9045be9ab67f	yes	
+mitodl/learn-ai	1070	1065	ce19e24f466e	1062	9045be9ab67f	yes	
+opensalt/opensalt	1080	1075	e1a7fb0c618f	1062	9045be9ab67f	yes	
+sonstellar969/open-moodle	1088	1083	995d0759a5fc	1062	9045be9ab67f	yes	
+theopenem/OneRoster.NET	1066	1061	643e9eb32156	1062	9045be9ab67f	yes	561-D's 1 066 B specimen
+vishalsachdev/canvas-mcp	1071	1066	7c4b6a60cc0f	1062	9045be9ab67f	yes	
+ucfopen/canvasapi	1130	1125	75ce26789524	1072	0f978e1cab85	NO	title variant "MIT License (MIT)" not neutralised by the fold
+frappe/frappe	1118	1113	55f07c9729bf	1113	55f07c9729bf	NO	fold DID NOT FIRE: holder "Frappe Technologies Pvt. Ltd. <developers@frappe.io>" — the span stops at the period in "Pvt."
+FALSE-MATCH permit->forbid	-	-	-	1062	e89a73351a43	length-identical	EQUAL-LENGTH substitution that INVERTS the grant; length gate false-matches, digest catches it
+FALSE-MATCH Software->Hardware	-	-	-	1062	6ed9991f0435	length-identical	EQUAL-LENGTH substitution; length gate false-matches, digest catches it
+CONTROL unmodified	-	-	-	1062	9045be9ab67f	yes	control reproduces the modal digest

@@ -4,6 +4,52 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p562` — `2026-10-31` — **🟢 THE WHOLE APACHE/AGPL SHELF WAS RE-READ BLIND — **91 in-family rows** — AND THE REPRODUCTION RATE IS THE HEADLINE: `p561`'s 14 pins came back **14 of 14 EXACT** from an independently re-implemented instrument. 🔴 AND A FIGURE *THIS PAGE'S NEIGHBOUR* PUBLISHES IS STILL ON THE RETIRED CONVENTION: `sakai` at `11 119 B` against this pass's `11 120 B`.**
+
+🔵 **This page is append-only**, so the reconciliations below are recorded here rather than rewritten
+into the rows above. 🟢 Where a figure is *confirmed* it says so; where it is *superseded*, both
+numbers and both conventions are named, per `560-A`.
+
+### 🟢 Reproductions — the pins, and the rows that were already published
+
+| figure | carried | read `p562` | verdict |
+| --- | --- | --- | --- |
+| 🟢 canonical Apache-2.0 `ws` | `10 221 B` / `0ffddef9e48f` | **10 221** / `0ffddef9e48f` | 🟢 **exact** |
+| 🟢 canonical GPL-3.0 `punct` | `cd83b5f465e5` | `cd83b5f465e5` | 🟢 **exact** |
+| 🟢 canonical AGPL-3.0 `punct` | `2cd0fb7883a3` | `2cd0fb7883a3` | 🟢 **exact** |
+| 🟢 `openedx` edX-rider `punct` | `de41de5bdd96` | `de41de5bdd96` | 🟢 **exact** |
+| 🟢 LGPL-3.0 rider-only / rider+GPL | `690578875bea` / `05e49932344e` | both | 🟢 **exact** |
+| 🟢 [`smolagents`](https://github.com/huggingface/smolagents) | `11 357` / `c71d239df917` | **11 357** / `c71d239df917` | 🟢 **exact** |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `11 408 B` | **11 408** | 🟢 **exact** |
+| 🟢 [`frappe/education`](https://github.com/frappe/education) `license.txt` | **19 B** / `1fcecf395312` | **19** / `1fcecf395312` | 🟢 **exact — `560-B` confirmed** |
+
+🟢 **70 of 70 quantities across the 14 pinned sources reproduced.** 🔵 Full calibration and the
+whole-shelf census:
+[`../evidence/apache-agpl-regrade-sweep.2026-10-31-p562.tsv`](../evidence/apache-agpl-regrade-sweep.2026-10-31-p562.tsv)
+(100 rows) and
+[`../evidence/ecl-2.0-pin-attempt.2026-10-31-p562.tsv`](../evidence/ecl-2.0-pin-attempt.2026-10-31-p562.tsv).
+
+### 🔴 One carried figure on the retired convention, and it is not on this page
+
+🔴 **[`../intel/market.md`](../intel/market.md)'s North America child publishes
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) at `11 119 B`.** 🟢 This pass reads
+**`11 120 B`** under the `raw` convention `560-A` adopted **8-to-1**. 🔵 `11 119` is
+`raw − 1 trailing newline` — **the convention `560-A` retired** — and both numbers are right under
+their own rule while the page names neither. 🟢 **Amended in place on that page this pass**, with the
+convention named beside the figure; recorded here because the digest sweeps never covered
+`intel/` and this is the first instance found outside them. 🔴 **`560-A` therefore stays open with a
+live instance**, which is more than it had an hour ago.
+
+### 🔵 What the sweep says about this page's own trade
+
+🔴 **38 of 91 in-family rows (41.8 %) are canonically verbatim at `ws`/`punct` while differing at
+`raw`.** 🔵 Every one of those is a row where **this page's byte figure is correct and a client's
+digest gate will still reject it** — so the byte figures this page exists to publish are *necessary
+and insufficient*, and the `ws`/`punct` columns are what make them decisive. 🟢 The census carries
+all three digests per row for exactly that reason. 🔵 The **36** rows that still carry a real residual
+are registered as `562-G`, and the two reader defects that hid grants from this pass's own probe are
+`562-A`'s companion — both are on [`../agents/top.md`](../agents/top.md#-p562--2026-10-31).
+
 ## 🆕 `p561` — `2026-10-31` — **🟢 TEN GRANT FIGURES THIS PAGE PUBLISHES WERE RE-READ BLIND AND **10 OF 10 REPRODUCED EXACTLY** — the first all-green independent reproduction of a grant block on this base, and it lands two passes after `560-B` proved two published digests were **manufactured**. 🔴 BUT THE SAME READ SHOWS THE FIGURES WERE NEVER THE PROBLEM: **4 rows whose raw digest matches nothing canonical are canonical VERBATIM**, and 🔴 **15 MIT rows produce 15 distinct digests at every normalisation stage**. 🔴 `561-E`: THIS PASS'S OWN STAGE 4 IS REJECTED BY ITS OWN DATA.**
 
 🔵 **This page is append-only**, so the reconciliations below are recorded here rather than

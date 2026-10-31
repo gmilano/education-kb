@@ -4,6 +4,92 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p562` — `2026-10-31` — **🟢 `561-D` AND `561-F` CLOSED, AND `561-F` CLOSED WITH THE DENOMINATOR IT WAS MISSING: **91 in-family rows**, of which 🔴 **38 (41.8 %) are canonically verbatim while a raw-byte gate calls them modified.** 🟢 `p561`'s PINS REPRODUCE **14 OF 14** FROM AN INDEPENDENT RE-IMPLEMENTATION. 🔴 **AND THIS PASS RETRACTS TWELVE OF ITS OWN FINDINGS IN FULL — it re-committed `p455`'s adjacency error, twice, in one hour.** 🔴 EIGHT REGISTERED (`562-A`…`562-H`).**
+
+🔵 **Registration check run first, per `P605`, and published as a matrix rather than asserted.**
+🔴 **And the matrix below is the *measured* one, not this pass's draft:** the draft asserted `562-C`
+on `agents/trending.md` and omitted three true citations on `intel/trends.md` and
+`compose/patterns.md`. 🟢 Re-derived from the committed sections by grep and corrected before
+commit — which is the `557-C` discipline the matrix exists to enforce.
+
+| page | A | B | C | D | E | F | G | H |
+| --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| [`../agents/top.md`](../agents/top.md#-p562--2026-10-31) | ✔ | · | · | · | · | · | ✔ | · |
+| [`../agents/trending.md`](../agents/trending.md#-p562--2026-10-31) | ✔ | ✔ | · | ✔ | · | · | · | · |
+| [`../repos/foundations.md`](../repos/foundations.md#-p562--2026-10-31) | · | ✔ | ✔ | ✔ | · | ✔ | · | · |
+| [`../repos/trending.md`](../repos/trending.md#-p562--2026-10-31) | ✔ | · | · | · | · | · | ✔ | · |
+| [`../verticals/solutions.md`](../verticals/solutions.md#-p562--2026-10-31) | ✔ | · | ✔ | · | · | · | · | · |
+| [`../intel/trends.md`](../intel/trends.md#-p562--2026-10-31) | ✔ | ✔ | ✔ | · | · | ✔ | · | · |
+| [`../intel/market.md`](../intel/market.md#-p562--2026-10-31) | · | · | · | · | ✔ | · | · | ✔ |
+| [`../compose/patterns.md`](../compose/patterns.md#-p562--2026-10-31) | ✔ | ✔ | ✔ | · | · | ✔ | · | · |
+
+🟢 **8 of 8 ids cited; 0 orphans.**
+
+🔴 **Gate posture, sixth consecutive measurement, cause unchanged and named.** This base's committed
+instruments cannot be executed by the session that maintains it. 🟢 Every instrument this pass used
+was **re-implemented inline from the committed spec and calibrated against the committed pins —
+14 of 14, 70 of 70 quantities** — which is the strongest check on the gate's absence this base has
+managed. 🔵 **None of it is gate-attested.**
+
+🟢 **Transports:** `git ls-remote --symref` **100 of 100** addresses resolved;
+`raw.githubusercontent.com` **~170 status-gated reads** (100 shelf rows, 16-path probe, 14 canonical
+sources, 9 MIT payloads, ECL re-reads); `WebFetch` → `github.com` **2 repository pages**; WebSearch
+**8 legs** (4 global, 4 regional). 🔴 `curl` → `api.github.com` **403**; 🔴 `WebFetch` →
+`www.future-ed.org` **`ENOTFOUND`, sixth pass — now with its cause named** (`562-H`).
+
+### 🟢 Closed this pass
+
+| gap | how it closed |
+| --- | --- |
+| 🟢 **`561-F`** | **Closed on its stated condition, with the denominator it called unknown.** It asked to *"re-grade every Apache-2.0 and AGPL-3.0 row on the shelf against the new pins — 5 of an unknown total done."* 🟢 **The total is 91.** 104 `(repo, family)` pairs → 100 distinct repositories → **91 in-family**: **10** byte-identical, **38** canonical-verbatim, **2** recovered after fixing this pass's own reader, **36** residual, **2** earned `NO-GRANT`. 🔴 **The return is the rate: `38/91 = 41.8 %` of verbatim grants fail a raw-byte gate.** Census: [`../evidence/apache-agpl-regrade-sweep.2026-10-31-p562.tsv`](../evidence/apache-agpl-regrade-sweep.2026-10-31-p562.tsv) |
+| 🟢 **`561-D`** | **Closed by measurement.** The fold takes **9 distinct digests → 3**, with **7 of 9 collapsing on `9045be9ab67f`**. 🔴 **The fold LENGTH false-matches 2 of 2** on equal-length operative substitutions — `permit`→`forbid` **inverts the grant** at an unchanged **1 062 B** — while the **digest catches both**. 🟢 **Adopted: publish the folded digest, never the folded length.** 🔴 The fold's own non-fire rate is **2 of 9 (22 %)**, causes named, remedies one line each → carried forward as `562-F`. Evidence: [`../evidence/fold-constant-false-match.2026-10-31-p562.tsv`](../evidence/fold-constant-false-match.2026-10-31-p562.tsv) |
+| 🟢 **`560-B` confirmed** | [`frappe/education`](https://github.com/frappe/education)'s `license.txt` re-read **19 B / `1fcecf395312`** — `560-B`'s pin, reproduced exactly, and recovered only after this pass caught a `<40 B` guard in its own reader |
+| 🟢 **`561-A` advanced** | A **sixth** family treated, and it is the one `561-A`'s own list of ~10 never named: **`ECL-2.0`** → `562-C`. 🔴 Still **6 of ~11**; `MPL-2.0`, `EPL-2.0`, `CC0`, `CC-BY-SA`, `LGPL-2.1`, `GPL-2.0`, `BUSL`, `PolyForm` untreated |
+
+### 🔴 Retracted this pass — in full, before publication
+
+| claim | disposition |
+| --- | --- |
+| 🔴 *"12 of 48 residuals: payload family disagrees with the shelf"* | 🔴 **RETRACTED IN FULL.** **Nine** are rows that **state MIT for that repository** while naming a neighbouring platform's AGPL/Apache; **three** are `ECL-2.0` rows **already graded `ECL-2.0` on five pages** — `ECL` appears **145×** on `repos/trending.md` and **59×** on this page. 🔵 And because **`ECL-2.0` *is* a modified Apache 2.0**, every honest ECL row mentions Apache, so the adjacency extractor cannot read them correctly even in principle. 🟢 **The shelves were right and the instrument was coarse** — `Gap 455`'s retraction, verbatim, five passes later → `562-A` |
+| 🔴 *"a fifth normalisation stage converges `ECL-2.0`"* | 🔴 **REFUTED by its own measurement** — 4 of 4 still distinct. 🟢 Retained as an **optional Apache tightening** (3/3 at **9 032 B / `68b43f228ea6`**) and published as a negative, in `561-E`'s shape → `562-D` |
+
+### 🔴 Registered this pass
+
+| gap | finding | closure condition |
+| --- | --- | --- |
+| 🔴 **`562-A`** | **The adjacency extractor is a known-bad instrument and this base just re-broke `p455`'s rule while holding it in its own history.** A row-scoped regex that reads a licence token from the same table row as a repository URL attributes **neighbouring** platforms' grants to the repository. Measured cost this pass: **12 false defect claims**, caught by four lines of `grep` against the live rows | 🔴 **A note is insufficient — `p455` already wrote the note and this pass re-broke it.** 🟢 Closure: a gate that fails any pass asserting a row-level licence verdict **not read first-hand from a grant payload**. 🔵 The gate has the evidence it needs — this pass's census carries `shelf_family` beside the measured family on all 100 rows. **Not built** |
+| 🔴 **`562-B`** | **`P561-A`'s published spec is not independently implementable, and the gap is one unstated word.** Stage 3 says *"normalise the `fsf.org` and `gnu.org` URL schemes"* without a **direction**; the committed code folds `http`→`https` and also maps `http://www.fsf.org/`→`https://fsf.org/` and `®`→`(R)`, neither in the prose. 🔴 The faithful prose reading **mismatches 8 of 14 pins** | 🟢 **Remedy is one line:** state the direction and the full map in [`../compose/code/p561-grant-normaliser/README.md`](../compose/code/p561-grant-normaliser/README.md). 🔴 It matters because this base's standing finding is that its **committed code cannot be run** from these sessions, so the prose is the only transmissible form. **Not applied — this pass had no write warrant over the committed instrument's README** |
+| 🔴 **`562-C`** | **`ECL-2.0` has no canonical digest, and it is the education industry's own Apache derivative.** 4 sources → **4 distinct digests at all five stages**. Residual fully characterised and **none of it operative**: pointer URL by publisher, list-enumerator glyphs, and `OpenLRW` omitting the `APPENDIX` (9 units). 🟢 All four carry the patent-scope clause, so all four **are** `ECL-2.0` | 🟢 **Class C adopted; the clause test is the instrument** — `specific to the needs of the education`, **4/4** ECL, **0/3** Apache, **0** false positives over 100 payloads. 🔴 Closure needs the commercial half, which this base cannot supply: **counsel's read of how much narrower** the §3 patent grant is than Apache-2.0's. 🟢 Registered so it is asked at engagement start with a citation attached |
+| 🔴 **`562-D`** | **Stage 5 — operative-body isolation — fails the family it was built for and pays on another.** 🔴 `ECL-2.0` 4/4 distinct; 🟢 `Apache-2.0` **3/3 at 9 032 B / `68b43f228ea6`**, tighter than stage 3, and it separates ECL from Apache by **+780 B** and a distinct digest | 🔵 **Disposition, not a gap to close.** 🟢 Adopted as optional for the Apache family, rejected as an ECL fix, both results in the TSV so the negative reproduces. 🔵 Recorded so no successor re-proposes it as the ECL answer |
+| 🔴 **`562-E`** | **A partition inside a date this base already carries.** The US DoE supplemental priority is shelved as **published `2026-04-13`**; this pass's leg returns it as **effective `13 May 2026`**. 🔵 The two are **different events**, and the effective date is the operative one because a priority governs grant competitions from it | 🔴 **Not adopted — the source is a search summary, not the Federal Register** (`557-D`). 🟢 Closure: **one primary read** of the Federal Register notice, which this host can reach. 🔵 Same shape as `p560`'s Article 50 partition, which paid |
+| 🔴 **`562-F`** | **The fold is load-bearing and has a measured 22 % non-fire rate.** 🔴 [`frappe/frappe`](https://github.com/frappe/frappe): the fold **never fired** — holder `Frappe Technologies Pvt. Ltd. <developers@frappe.io>`, and the span `[^.]{0,120}` **stops at the period in `Pvt.`** 🔴 [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi): fired and still did not collapse — title variant `MIT License (MIT)` | 🟢 **Two one-line remedies:** match the holder span to the grant clause rather than to a period; add a second fold span over the title line. 🔴 **Not applied.** 🔵 It is the only instrument that recovers a canonical MIT digest, so a 22 % non-fire rate is not a cosmetic defect |
+| 🔴 **`562-G`** | **The reading this pass did not finish, with both limbs quantified.** 🔴 **36 of 91** in-family rows carry a real residual needing a clause read. 🔴 And the **filename space keeps hiding grants**: a 16-name probe missed [`scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit)'s grant at **`apache-2.0.LICENSE`** (**11 357 B**, canonical verbatim) — after `p393` found one at `LICENSE.LGPL-3.0` and this base has found them at `docs/License.txt` and `COPYING.txt` | 🟢 Closure, limb 1: clause-read the 36, prioritising the **largest residuals** — `apache/openmeetings` **+37 476 ws B**, `PrairieLearn` **+2 456**, `openbadges-validator-core` **+1 803**. 🟢 Limb 2: **enumerate the tree** (`git ls-files` piped through `grep -i licen`) instead of probing names — `p393-F`'s prescription, still unexecuted as a standing method. **Neither done** |
+| 🔴 **`562-H`** | **FutureEd is not a flaky fetch, it is outside this session's allowed network domains — and five passes recorded it as the former.** Sixth consecutive `ENOTFOUND`; this pass the transport **names the cause** | 🟢 **Retired as an instrument on this host class: stop probing it.** 🔴 Consequence: `560-G`'s question — *what does the tracker itself say* — is **unanswerable from here**, which converts an open lead into a named environmental limit. 🔵 Closure would need a session whose network policy permits the domain |
+
+### 🔵 Standing obligations carried forward
+
+🔵 **`558-E` — pass 4 of 5, and the series now says the unit was wrong.** 🔴 Supply: **0 new
+addresses** (second consecutive pass). 🟢 But **2 dated release events on carried rows inside 72
+hours** — `DeepTutor` `v1.7.0` (`2026-10-28`) and `OpenMAIC` `v1.3.0` (`2026-10-29`). 🔴 Demand:
+**4 legs, 4 nils, ~25 instruments enumerated, novelty 0**. 🟢 Series: `5/3`, `4/2`, `0/2`,
+`0-addresses+2-releases / 0-of-4-regions`. 🔵 **The honest reading after four passes: "new addresses"
+is the wrong unit for the supply leg on a shelf this saturated, and release motion on carried rows
+is the one that still carries information.** 🔵 One pass remains; recorded, explicitly **not** acted
+on.
+
+🔴 **`560-H` still blocked, cause unchanged.** Its paired free-text leg needs an account-wide
+repository search that this session's repository scope does not permit. 🔵 Not retried this pass.
+
+🔴 **`560-A` still open, and now with a live instance outside the digest sweeps.**
+[`../intel/market.md`](../intel/market.md)'s North America child published
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) at **`11 119 B`** — `raw − 1 newline`,
+**the convention `560-A` retired 8-to-1** — against this pass's **`11 120 B`**. 🟢 **Amended in place
+with the convention named beside the figure.** 🔵 First instance found in `intel/`, which no digest
+sweep has ever covered.
+
+🔵 **`561-B`, `561-C`, `561-E`, `561-G`, `561-H` carried unchanged.** 🔴 `561-C`'s `LGPL-2.1` and
+`GPL-2.0` rider/inline pins are **still not done**, and both families are on this shelf.
+
 ## 🆕 `p561` — `2026-10-31` — **🟢 `560-C` CLOSED, AND IT CLOSED BY RETIRING THE INSTRUMENT IT ASKED FOR: canonical digests are pinned for **five** families from **14 sources**, and the result is that 🔴 **a byte digest is the wrong gate in four of the five.** 🟢 The **convergence stage** is the classifier. 🟢 `560-D`'s RETIRED MECHANISM RECOVERED ON TWO OTHER ROWS (`561-G`). 🔴 `561-H`: A SHELF VERTICAL'S GRANT FILE MISDESCRIBES ITS OWN CONTENTS TWICE. 🔴 `561-E`: THIS PASS REJECTS ITS OWN FOURTH STAGE. 🔴 EIGHT REGISTERED (`561-A`…`561-H`).**
 
 🔵 **Registration check run first, per `P605`, and published as a matrix rather than asserted.**

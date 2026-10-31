@@ -4,6 +4,51 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p562` — `2026-10-31` — **🔴 ZERO NEW ADDRESSES FOR A SECOND CONSECUTIVE PASS — but both of this shelf's two largest agents SHIPPED A RELEASE IN THE LAST 72 HOURS, and one of them refutes a licence claim being published about it right now. 🟢 `DeepTutor` **51.8k★ · v1.7.0 · 2026-10-28**; 🟢 `OpenMAIC` **41.9k★ · v1.3.0 · 2026-10-29**. 🔴 A trade blog is calling `DeepTutor` MIT; it is **Apache-2.0**, read first-hand this pass.**
+
+🔵 **This page is append-only.** The grading work this pass is on
+[`../agents/top.md`](../agents/top.md#-p562--2026-10-31) (`561-F` closed, `562-A`) and the pins on
+[`../repos/foundations.md`](../repos/foundations.md#-p562--2026-10-31) (`562-B`…`562-D`); what is
+recorded here is **supply, and what supply did**.
+
+### 🟢 Release movement on the two anchors — both dated, both first-hand
+
+| row | grant, read this pass | ★ / forks | release | branch |
+| --- | --- | --- | --- | :-: |
+| 🟢 [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | **Apache-2.0** · `main/LICENSE` **11 408 B** · residual **`+50 ws B`** | **51.8k** / 6.3k | 🆕 **`v1.7.0` · `2026-10-28`** · 3 155 commits | `main` |
+| 🟢 [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | **MIT** · `main/LICENSE` **1 065 B** · `ba2525637432` | **41.9k** / 6.5k | 🆕 **`v1.3.0` · `2026-10-29`** | `main` |
+
+🟢 **`v1.7.0` contents, from the repository's own page:** modular installation, a refreshed learning
+workspace, **block notebooks**, **narrated video lessons**, and **resumable embedding checkpoints**.
+🔵 The last of those is the one that matters to a studio: resumable embedding means an ingest of a
+client's course corpus can be **interrupted and resumed**, which is the difference between a
+demo-scale and a faculty-scale pilot.
+
+🟢 **`51.8k★` confirms rather than corrects.** This shelf carries **`51 571★`** from `p561` — *the
+figure `p554` refused* — and the independent read two days later is **higher, not lower**, so the
+refusal was the wrong call and `p561`'s adoption was right. 🔵 Recorded here because this page's
+history contains the refusal.
+
+### 🔴 A live licence error about this shelf's largest row, refuted first-hand
+
+🔴 **A trade post dated `2026-07-15` and still surfacing in `2026-10` search results describes
+`DeepTutor` as *"MIT-licensed"*.** 🟢 **It is `Apache-2.0`**: the repository page states Apache-2.0,
+and `main/LICENSE` reads **11 408 B** with a `ws`/`punct` residual of **`+50 B`** against the
+canonical Apache pin — the appendix-filled shape `561-G` characterised. 🔵 Not a correction to this
+base, which has carried Apache-2.0 for `DeepTutor` throughout; 🟢 **recorded because a client or a
+junior engineer searching *"DeepTutor licence"* will meet the wrong answer first**, and Apache-2.0
+vs MIT changes the notice duties a deliverable inherits.
+
+### 🔵 `558-E` — pass 4 of 5, and the supply leg leads on *motion* rather than arrivals
+
+🔴 **New addresses: 0.** 🟢 **Dated release events on carried rows: 2, both inside 72 hours.**
+🟢 Demand: **4 regional legs, 4 with new instruments** (see
+[`../intel/market.md`](../intel/market.md#-p562--2026-10-31)). 🔵 The series is now
+**5/3, 4/2, 0/2, 0-new-addresses/4-regions** — 🟢 and the honest reading after four passes is that
+**"new addresses" is the wrong unit for the supply leg on a shelf this saturated.** A carried row
+that ships a release is supply motion, and this pass is the first to measure it that way. 🔵 One
+pass remains; recorded, not acted on.
+
 ## 🆕 `p561` — `2026-10-31` — **🔴 ZERO NEW ADDRESSES, AND THE NULL IS FULLY INSTRUMENTED FOR ONCE: **40 repositories** enumerated off GitHub's own `topic:ai-tutor` (829 tagged) and `topic:ai-education` (565 tagged) pages, star counts and all — 🔴 **every single one that clears this shelf's bar is ALREADY ON IT.** 🟢 That is a saturation measurement with a denominator, not a shrug. 🟢 THE PASS SPENT ITS BUDGET ON GRADING INSTEAD: **25 rows re-read, 4 graded canonical-verbatim that a byte gate flags, 2 instances of `560-D`'s retired mechanism recovered.** 🔵 `560-E`'s DATED WATCHPOINTS ARE **NOT YET DUE**.**
 
 🔵 **This page is append-only.** The grading results live in

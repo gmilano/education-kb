@@ -4,6 +4,86 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p562` — `2026-10-31` — **🟢 `P562-A`: THE LICENCE GATE A STUDIO SHOULD ACTUALLY SHIP IN WEEK ONE — wired from four Apache-2.0 scanners this shelf already carries, plus the normalising comparator that stops it rejecting **41.8 %** of the components the proposal recommended. 🔵 Concrete because every component, pin and clause test in it was run first-hand this pass.**
+
+🔴 **The problem this pattern exists to solve is measured, not imagined.** A naive licence gate —
+hash the `LICENSE` file, compare to a known digest — reports **modified** on **38 of 91** Apache-2.0
+and AGPL-3.0 rows that are **canonically verbatim** (`561-F`, closed this pass on
+[`../agents/top.md`](../agents/top.md#-p562--2026-10-31)). 🔴 It also returns `NOASSERTION` on
+**32.4 %** of addresses if it reads only `main` (`558-B`), and on **all three** Apereo rows forever,
+because `ECL-2.0` has no canonical digest (`562-C`).
+
+### 🟢 The stack — all four scanners Apache-2.0, all four on this shelf's foundations tier
+
+| layer | component | grant, read first-hand | role |
+| --- | --- | --- | --- |
+| **1 · inventory** | [`anchore/syft`](https://github.com/anchore/syft) | **Apache-2.0**, canonical verbatim | SBOM from source tree or image — produces the component list |
+| **2 · grant extraction** | [`aboutcode-org/scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit) | **Apache-2.0** · `apache-2.0.LICENSE` **11 357 B** `c71d239df917` | reads grants **by enumerating the tree**, not a filename list — this is the layer that finds `LICENSE.LGPL-3.0`, `license.txt` and `apache-2.0.LICENSE` |
+| **3 · policy** | [`oss-review-toolkit/ort`](https://github.com/oss-review-toolkit/ort) | **Apache-2.0** | policy rules, curations, the `BLOCK` / `LINK-ONLY` / `BUILD-ON` decision |
+| **4 · exchange** | [`CycloneDX/cyclonedx-cli`](https://github.com/CycloneDX/cyclonedx-cli) | **Apache-2.0** | the artefact the client's security team actually ingests |
+
+🔵 **Why these four and not a vendor scanner:** every one is **Apache-2.0**, so the gate itself is
+`BUILD-ON` and the deliverable is the client's property — the same argument this base makes for the
+platform tier, applied to the tooling tier.
+
+### 🟢 The piece that is missing from all four, and that this base now has
+
+🔴 **None of layers 1-4 normalises before comparing.** 🟢 Insert a **comparator** between layers 2
+and 3, implementing `P561-A`'s stages — and this pass proves it is re-implementable in ~20 lines,
+because it was re-implemented from the spec and calibrated **14 of 14** against the committed pins:
+
+```
+grant bytes  ──► stage 1  raw     = wc -c, sha256/12            # what the client's scanner hashes
+             ──► stage 2  ws      = collapse whitespace runs, strip
+             ──► stage 3  punct   = curly quotes/dashes→ASCII, ©→(C), ®→(R),
+                                    http://fsf.org/→https://fsf.org/,
+                                    http://www.fsf.org/→https://fsf.org/,
+                                    http://www.gnu.org/→https://www.gnu.org/
+             ──► verdict: match any pinned digest at ANY stage  ⇒ VERBATIM
+                          no match                              ⇒ escalate to a clause read
+```
+
+🔴 **Mind the direction on stage 3** — it folds `http` → `https`, and the committed prose does not
+say so (`562-B`). 🟢 Pins to seed it with, all reproduced this pass:
+
+| family | pinned digest | stage |
+| --- | --- | --- |
+| Apache-2.0 | `0ffddef9e48f` *(10 221 B)* | `ws` |
+| GPL-3.0 | `cd83b5f465e5` | `punct` |
+| AGPL-3.0 stock | `2cd0fb7883a3` | `punct` |
+| AGPL-3.0 + edX rider | `de41de5bdd96` | `punct` |
+| LGPL-3.0 rider-only | `690578875bea` | `punct` |
+| LGPL-3.0 rider+GPL | `05e49932344e` | `punct` |
+
+### 🟢 Two clause tests that no digest can replace, and both are one `grep`
+
+- 🟢 **`ECL-2.0`** — `specific to the needs of the education` → **4 of 4** ECL sources, **0 of 3**
+  Apache controls, **0 false positives** over the 100 payloads read this pass. 🔴 Emit the verdict
+  **`ECL-2.0`, never `Apache-2.0`**, and carry the patent-scope sentence into the licence register
+  (`562-C`, [`../verticals/solutions.md`](../verticals/solutions.md#-p562--2026-10-31)).
+- 🔴 **AGPL-3.0 + edX rider** — `RPC or other inter-service communication` → the three sentence units
+  in which edX Inc. places a networked service **outside** the `Corresponding Source`. 🟢 It is an
+  **architecture** input, not a pass/fail (`561-B`), and the mirror warning travels with it: the same
+  architecture beside **stock** AGPL Canvas or Tutor is a different question.
+
+### 🔴 For MIT and BSD-3-Clause, gate on the FOLD DIGEST — and never on its length
+
+🟢 **MIT and BSD-3-Clause have no canonical digest by construction** (`561-D`): 15 MIT rows → 15
+distinct digests. 🟢 The **fold** recovers one — 9 shelf payloads → **7 collapse on `9045be9ab67f`**.
+🔴 **But gate on the digest, because the length false-matches at 2 of 2:** `permit` → `forbid` is six
+characters for six, **inverts the grant**, and holds the folded length at **exactly 1 062 B**
+(`562-F`). 🔵 Two known fold misses to curate around: a holder containing a period
+([`frappe/frappe`](https://github.com/frappe/frappe)) and the title variant `MIT License (MIT)`
+([`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi)).
+
+### 🔵 What this pattern is worth, stated plainly
+
+🟢 **Week one:** the gate clears **50 of 91** in-family rows with no human read, and escalates
+**36** with a named residual instead of a bare `NOASSERTION`. 🔴 **It does not remove the lawyer** —
+`561-B`'s edX clause and `561-H`'s bundled-dependency disclosure both still need counsel, and
+`561-H` means **the root grant is not the SBOM** for either ERP base. 🟢 What it removes is the
+four-in-ten false rejection that otherwise consumes the first sprint.
+
 ## 🆕 `p561` — `2026-10-31` — **🟢 `P561-A` SUPERSEDES `P560-A`'s LICENCE GATE ON THE AXIS THAT MATTERED MOST AND WAS MISSING: **comparison method**. `P560-A` was correct on branch, convention and staleness and still could not tell `+167 bytes of whitespace` from `+615 bytes of operative clause` — 🔴 and on this shelf it would have **flagged 4 verbatim rows and been mute on 18 more**. 🟢 `P561-A` grades by **convergence stage**, returns a **class** rather than a boolean, and routes the residual to a human only when a residual survives normalisation. 🟢 `P561-B` wires the Open edX RPC narrowing into an architecture decision.**
 
 ### 🟢 `P561-A` — the grant gate, graded by convergence stage

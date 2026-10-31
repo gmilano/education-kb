@@ -1,0 +1,101 @@
+repo	shelf_family	branch	grant_path	raw_B	sha12_raw	ws_B	sha12_ws	sha12_punct	class_p562	matched_pin	note
+GeminiLight/SocialCoach	Apache-2.0	main	LICENSE	11358	cfc7749b96f6	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-BYTE-IDENTICAL	Apache-2.0	raw digest identical to a pinned canonical source
+JuneYaooo/lineage-skill	Apache-2.0	main	LICENSE	11358	cfc7749b96f6	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-BYTE-IDENTICAL	Apache-2.0	raw digest identical to a pinned canonical source
+cortezaproject/corteza	Apache-2.0	2026.9.x	LICENSE	11358	cfc7749b96f6	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-BYTE-IDENTICAL	Apache-2.0	raw digest identical to a pinned canonical source
+h5p/h5p-php-library	Apache-2.0	master	LICENSE.txt	35146	c53a65c2fd56	34281	0366f6619935	cd83b5f465e5	CANONICAL-BYTE-IDENTICAL	GPL-3.0	raw digest identical to a pinned canonical source
+instructure/canvas-lms	AGPL-3.0	master	LICENSE	34520	57c8ff33c9c0	33687	0a7e77a9ebe3	2cd0fb7883a3	CANONICAL-BYTE-IDENTICAL	AGPL-3.0	raw digest identical to a pinned canonical source
+moodle/moodle	AGPL-3.0	main	COPYING.txt	35147	8ceb4b9ee5ad	34281	0366f6619935	cd83b5f465e5	CANONICAL-BYTE-IDENTICAL	GPL-3.0	raw digest identical to a pinned canonical source
+openedx/edx-platform	Apache-2.0	master	LICENSE	35136	e12d78569742	34302	186d8f7758cb	de41de5bdd96	CANONICAL-BYTE-IDENTICAL	AGPL-3.0-edX-rider	raw digest identical to a pinned canonical source
+openedx/openedx-platform	AGPL-3.0+Apache-2.0	master	LICENSE	35136	e12d78569742	34302	186d8f7758cb	de41de5bdd96	CANONICAL-BYTE-IDENTICAL	AGPL-3.0-edX-rider	raw digest identical to a pinned canonical source
+oppia/oppia	Apache-2.0	develop	LICENSE	11358	cfc7749b96f6	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-BYTE-IDENTICAL	Apache-2.0	raw digest identical to a pinned canonical source
+virtUOS/abstimmbar	Apache-2.0	main	LICENSE	11358	cfc7749b96f6	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-BYTE-IDENTICAL	Apache-2.0	raw digest identical to a pinned canonical source
+AIEd-Innovations/assessment_agent	Apache-2.0	main	LICENSE	11324	50e6751797c5	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+Dramoscuello/simic	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+Ed-Fi-Alliance-OSS/AI-Tools-for-Ed-Fi-SDLC	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+Ed-Fi-Alliance-OSS/Data-Management-Service	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+Ed-Fi-Alliance-OSS/Ed-Fi-AdminApp	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+Ed-Fi-Alliance-OSS/Fiona	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+HeyNina101/ai-agent-starter-kit	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+HugeCatLab/ChatTutor	AGPL-3.0	main	LICENSE	34522	20b067f86de3	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+Intelligent-Internet/ii-agent	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+Schlaflied/Plot-Ark	AGPL-3.0	master	LICENSE	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+UniTime/unitime	Apache-2.0	master	LICENSE	11357	58d1e17ffe51	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+adlnet/ADL_LRS	Apache-2.0	master	LICENSE	11357	58d1e17ffe51	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+adlnet/xAPI-Spec	Apache-2.0	master	LICENSE	11525	a1587287ff04	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+amosblomqvist/learnharness	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+anchore/syft	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+anthropics/k12-teacher-skills	Apache-2.0	main	LICENSE	11357	58d1e17ffe51	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+avps82/mentar	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+bayshores/godspeed	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+cjhenry/ourschool	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+classroomio/classroomio	AGPL-3.0	main	LICENSE	34523	8486a10c4393	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+csmediapro/moodle-mcp-server	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+echo-loop/Echo-Loop	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+exelearning/exelearning	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+frappe/flow_client	AGPL-3.0	develop	license.txt	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+frappe/lms	AGPL-3.0	develop	license.txt	33893	db1a87ba81e8	33687	0a7e77a9ebe3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+huggingface/smolagents	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+learnhouse/learnhouse	AGPL-3.0	dev	LICENSE	34523	8486a10c4393	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+mbzuai-oryx/groundingLMM	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+numbas/Numbas	Apache-2.0	master	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+open-learning-exchange/planet	AGPL-3.0	master	LICENSE	34520	76a97c878c9c	33687	0a7e77a9ebe3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+openedx/openedx-ai-extensions	AGPL-3.0+Apache-2.0	main	LICENSE	34523	8486a10c4393	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+overhangio/tutor	AGPL-3.0	release	LICENSE.txt	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+sitor-ai/frametell	AGPL-3.0	main	LICENSE	34523	0d96a4ff68ad	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+uPortal-Project/uPortal	Apache-2.0	master	LICENSE	11359	5d7a488448b2	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+webtech-network/autograder	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+xrandx/Student-Information-Management-System	AGPL-3.0	master	LICENSE	34523	8486a10c4393	33690	2cd0fb7883a3	2cd0fb7883a3	CANONICAL-VERBATIM	AGPL-3.0	clears the pin at punct; a raw-byte gate would flag it as modified
+yetanalytics/lrsql	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+yetanalytics/xapipe	Apache-2.0	main	LICENSE	11357	c71d239df917	10221	0ffddef9e48f	0ffddef9e48f	CANONICAL-VERBATIM	Apache-2.0	clears the pin at ws; a raw-byte gate would flag it as modified
+EduThemes/paper-lms	AGPL-3.0	main	LICENSE	1071	3df8d6baba56	1066	dbb226ba9e73	dbb226ba9e73	EXCLUDED-MIT-CO-MENTION		row states MIT for this repo; Apache/AGPL token names a neighbouring platform (p455 retraction shape)
+Selleo/mentingo	AGPL-3.0	main	LICENSE	1062	ceb97717de1f	1058	e7bd473b7af5	e7bd473b7af5	EXCLUDED-MIT-CO-MENTION		row states MIT for this repo; Apache/AGPL token names a neighbouring platform (p455 retraction shape)
+frappe/frappe	AGPL-3.0	develop	LICENSE	1118	bc6001a54ffc	1113	55f07c9729bf	55f07c9729bf	EXCLUDED-MIT-CO-MENTION		row states MIT for this repo; Apache/AGPL token names a neighbouring platform (p455 retraction shape)
+mitodl/learn-ai	Apache-2.0	main	LICENSE	1070	d1ea675aa9bb	1065	ce19e24f466e	ce19e24f466e	EXCLUDED-MIT-CO-MENTION		row states MIT for this repo; Apache/AGPL token names a neighbouring platform (p455 retraction shape)
+opensalt/opensalt	Apache-2.0	develop	LICENSE	1080	38e322d5ab06	1075	e1a7fb0c618f	e1a7fb0c618f	EXCLUDED-MIT-CO-MENTION		row states MIT for this repo; Apache/AGPL token names a neighbouring platform (p455 retraction shape)
+sonstellar969/open-moodle	AGPL-3.0	main	LICENSE	1088	2e0193644321	1083	995d0759a5fc	995d0759a5fc	EXCLUDED-MIT-CO-MENTION		row states MIT for this repo; Apache/AGPL token names a neighbouring platform (p455 retraction shape)
+theopenem/OneRoster.NET	Apache-2.0	master	LICENSE	1066	1dc50226c38a	1061	643e9eb32156	643e9eb32156	EXCLUDED-MIT-CO-MENTION		row states MIT for this repo; Apache/AGPL token names a neighbouring platform (p455 retraction shape)
+ucfopen/canvasapi	AGPL-3.0	develop	LICENSE	1130	f422adb6cde4	1125	75ce26789524	75ce26789524	EXCLUDED-MIT-CO-MENTION		row states MIT for this repo; Apache/AGPL token names a neighbouring platform (p455 retraction shape)
+vishalsachdev/canvas-mcp	AGPL-3.0	main	LICENSE	1071	5385a26e2fac	1066	7c4b6a60cc0f	7c4b6a60cc0f	EXCLUDED-MIT-CO-MENTION		row states MIT for this repo; Apache/AGPL token names a neighbouring platform (p455 retraction shape)
+Apereo-Learning-Analytics-Initiative/OpenLRW	Apache-2.0	master	LICENSE	9878	f339063d2f60	9855	633e793280fb	633e793280fb	FAMILY-MISGRADE-ECL-2.0		payload is Educational Community License 2.0 — modified Apache 2.0, patent grant narrowed to education
+opencast/opencast	Apache-2.0	develop	LICENSE	11340	76a975068930	11083	4953a2c03a07	4953a2c03a07	FAMILY-MISGRADE-ECL-2.0		payload is Educational Community License 2.0 — modified Apache 2.0, patent grant narrowed to education
+sakaiproject/sakai	Apache-2.0	master	LICENSE	11120	0688f62d04f1	11079	11c0a5513d26	11c0a5513d26	FAMILY-MISGRADE-ECL-2.0		payload is Educational Community License 2.0 — modified Apache 2.0, patent grant narrowed to education
+ByMehmetKURUDev/kaynaklar	Apache-2.0	main							NO-GRANT-EARNED		no grant payload at any probed path
+openedx/XBlock	AGPL-3.0+Apache-2.0	master							NO-GRANT-EARNED		no grant payload at any probed path
+aboutcode-org/scancode-toolkit	Apache-2.0	develop	apache-2.0.LICENSE	11357	c71d239df917				RECOVERED-ON-REPROBE		Apache-2.0 canonical verbatim at a non-standard filename
+frappe/education	AGPL-3.0	develop	license.txt	19	1fcecf395312				RECOVERED-ON-REPROBE		GPL-3.0 declaration, 19 B — reproduces 560-B's pin
+1EdTech/OpenCASE	Apache-2.0	main	LICENSE	11264	ccf5a4564e72	10109	82159880ed75	82159880ed75	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -112 ws B — needs a clause read
+1EdTech/lti-1-3-php-library	Apache-2.0	master	LICENSE	11343	78b49eeaddbf	10207	4cbc27106fb8	4cbc27106fb8	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -14 ws B — needs a clause read
+1EdTech/openbadges-validator-core	Apache-2.0	develop	LICENSE	13185	ba1f153bdba3	12024	75600f8e7bae	75600f8e7bae	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +1803 ws B — needs a clause read
+Crosstalk-Solutions/Project-NOMAD	Apache-2.0	main	LICENSE	10779	e4f125622d3c	9697	1fefd6b508e0	1fefd6b508e0	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -524 ws B — needs a clause read
+Cvmcosta/ltijs	Apache-2.0	master	LICENSE	11361	d5fcb264ff39	10225	56dd5c29ee96	56dd5c29ee96	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +4 ws B — needs a clause read
+CycloneDX/cyclonedx-cli	AGPL-3.0+Apache-2.0	main	LICENSE	11341	6c29f22a4a73	10205	b5865737c9f2	b5865737c9f2	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -16 ws B — needs a clause read
+Ed-Fi-Alliance-OSS/Ed-Fi-ODS	Apache-2.0	main	LICENSE.txt	10172	59899c6091b5	9129	59d8f0ba87ad	59d8f0ba87ad	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -1092 ws B — needs a clause read
+Ed-Fi-Alliance-OSS/edfi-oneroster	Apache-2.0	main	LICENSE	10173	a6cba85bc92e	9129	59d8f0ba87ad	59d8f0ba87ad	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -1092 ws B — needs a clause read
+HKUDS/DeepTutor	Apache-2.0	main	LICENSE	11408	cd2f54e1e506	10271	1b0a7e619445	1b0a7e619445	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +50 ws B — needs a clause read
+OpenOLAT/OpenOLAT	Apache-2.0	master	LICENSE	10982	6dbc5b605ed0	9767	6196b1cfa580	6196b1cfa580	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -454 ws B — needs a clause read
+Oriole-FDU/Wisepen	Apache-2.0	main	LICENSE	4539	7fc19489d6b2	4201	a2b66d58c505	a2b66d58c505	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -6020 ws B — needs a clause read
+PKulal/LMS	Apache-2.0	main	LICENSE	11362	a89039268428	10225	3289a510aee7	3289a510aee7	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +4 ws B — needs a clause read
+PrairieLearn/PrairieLearn	AGPL-3.0	master	LICENSE	36983	f3fba75145cf	36143	7f8f8886ffe2	06bf47c17fdd	RESIDUAL-IN-FAMILY		detected AGPL-3.0, residual +2456 ws B — needs a clause read
+UCL-INGI/INGInious	AGPL-3.0	main	LICENSE	34764	6d1ebe4ddf66	33923	51ead1191ffb	b9526d95cebe	RESIDUAL-IN-FAMILY		detected AGPL-3.0, residual +236 ws B — needs a clause read
+ai-shifu/ai-shifu	Apache-2.0	main	LICENSE.txt	11342	c00cbb6a47a7	10206	fc776eb27d42	fc776eb27d42	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -15 ws B — needs a clause read
+apache/ofbiz-framework	Apache-2.0	trunk	LICENSE	11906	cbac9a0fde05	10765	8405989a5a62	8405989a5a62	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +544 ws B — needs a clause read
+apache/openmeetings	Apache-2.0	master	LICENSE	51425	5fb291167ea0	47697	73202875c0e8	d15a1c8c4d13	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +37476 ws B — needs a clause read
+autolab/Autolab	Apache-2.0	master	LICENSE	11324	a8ad31b1c3f4	10221	958e28cd3f37	958e28cd3f37	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +0 ws B — needs a clause read
+beltromatti/get-it	Apache-2.0	main	LICENSE	11359	d0622ead9e49	10223	06ad38b2e679	06ad38b2e679	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +2 ws B — needs a clause read
+braiinz94/braiinz-education	Apache-2.0	main	LICENSE	11356	eee6f26f94bb	10219	446027abc9f5	446027abc9f5	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -2 ws B — needs a clause read
+comet-ml/opik	Apache-2.0	main	LICENSE	11391	0236cf0195e0	10235	143f3901b114	143f3901b114	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +14 ws B — needs a clause read
+frappe/erpnext	AGPL-3.0	develop	license.txt	35149	3972dc9744f6	34283	972a178adada	972a178adada	RESIDUAL-IN-FAMILY		detected AGPL-3.0, residual +596 ws B — needs a clause read
+judge0/judge0	AGPL-3.0	master	LICENSE	34526	e55f461dc7f4	34308	4f63b81d7a01	498925da7536	RESIDUAL-IN-FAMILY		detected AGPL-3.0, residual +621 ws B — needs a clause read
+learning-commons-org/agent-skills	Apache-2.0	main	LICENSE	10173	c4a2cd14eb3a	9129	59d8f0ba87ad	59d8f0ba87ad	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -1092 ws B — needs a clause read
+menthorlabs/menthor	Apache-2.0	main	LICENSE	11337	36d6788503b8	10201	47c4ea85642a	47c4ea85642a	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -20 ws B — needs a clause read
+open-edge-platform/education-ai-suite	Apache-2.0	main	LICENSE	11351	3f17cff4210f	10215	dcc69164ab2a	dcc69164ab2a	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -6 ws B — needs a clause read
+openeduhub/edu-sharing-python-client	Apache-2.0	main	LICENSE	11349	e54a97efb7d3	10212	9732fbcbe2c3	9732fbcbe2c3	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -9 ws B — needs a clause read
+oss-review-toolkit/ort	Apache-2.0	main	LICENSE	11358	f5070e490b88	10222	d278d2c15305	d278d2c15305	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +1 ws B — needs a clause read
+packbackbooks/lti-1-3-php-library	Apache-2.0	master	LICENSE.md	11343	78b49eeaddbf	10207	4cbc27106fb8	4cbc27106fb8	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -14 ws B — needs a clause read
+snflwr-ai/snflwr.ai	AGPL-3.0	main	LICENSE	2833	0f14d6b37818	2694	358ef30e6eda	1f9a8d703fbc	RESIDUAL-IN-FAMILY		detected AGPL-3.0, residual -30993 ws B — needs a clause read
+terracotta-education/terracotta	Apache-2.0	development	LICENSE	11323	6dc0e068dcf3	10221	958e28cd3f37	958e28cd3f37	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +0 ws B — needs a clause read
+thm-mni-ii/feedbacksystem	Apache-2.0	dev	LICENSE	10785	65125d9e480b	9697	bfb38505e013	bfb38505e013	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -524 ws B — needs a clause read
+tl-its-umich-edu/my-learning-analytics	Apache-2.0	master	LICENSE	11379	b89b380a589b	10243	c2f0727cd03b	e0c2f9626ca6	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +22 ws B — needs a clause read
+towardsai/ai-tutor-app	Apache-2.0	main	LICENSE	11386	7dc0f2a45a9e	10249	138ae1933e25	138ae1933e25	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual +28 ws B — needs a clause read
+tsugiproject/tsugi	Apache-2.0	master	LICENSE	10273	73ba74dfaa52	10204	d2439f4733f8	d2439f4733f8	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -17 ws B — needs a clause read
+wwrwbs/AI_AWE	Apache-2.0	main	LICENSE	1865	4b5296db216d	1662	6fc577a2fa60	ff0b844cedac	RESIDUAL-IN-FAMILY		detected Apache-2.0, residual -8559 ws B — needs a clause read

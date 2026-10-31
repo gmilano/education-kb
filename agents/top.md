@@ -4,6 +4,73 @@ region: Global
 updated: 2026-10-31
 ---
 
+## 🆕 `p562` — `2026-10-31` — **🟢 `561-F` CLOSED WITH THE DENOMINATOR IT LACKED: every Apache-2.0 and AGPL-3.0 row this base sells was re-graded against `p561`'s pins — **91 rows**, not *"5 of an unknown total"* — and 🔴 **38 of 91 (41.8 %) are canonically VERBATIM while a raw-byte gate reports them MODIFIED.** 🟢 `p561`'s pins REPRODUCE **14 of 14** from an independent re-implementation. 🔴 **AND THIS PASS'S OWN 12 APPARENT SHELF DEFECTS ARE RETRACTED IN FULL — it made `p455`'s adjacency error twice in one hour.**
+
+🟢 **The population is now named.** 104 `(repo, family)` pairs carrying `Apache-2.0` or `AGPL-3.0`
+across the three live shelves ([`top.md`](top.md), [`../repos/foundations.md`](../repos/foundations.md),
+[`../verticals/solutions.md`](../verticals/solutions.md)) → **100 distinct repositories**, of which
+🟢 **91 are genuinely in-family**. Census:
+[`../evidence/apache-agpl-regrade-sweep.2026-10-31-p562.tsv`](../evidence/apache-agpl-regrade-sweep.2026-10-31-p562.tsv)
+(100 rows, 12 columns).
+🔵 Convention: `raw` = `wc -c` per `560-A`; `ws`/`punct` are `P561-A` stages 2 and 3.
+
+| class | rows | what it means for a client's licence gate |
+| --- | :-: | --- |
+| 🟢 **`CANONICAL-BYTE-IDENTICAL`** | **10** | raw digest equals a pinned source. Any gate clears these |
+| 🟢 **`CANONICAL-VERBATIM`** | **38** | 🔴 **a raw-byte gate flags every one of these as modified, and all 38 are verbatim** |
+| 🟢 **`RECOVERED-ON-REPROBE`** | **2** | found only after fixing two defects in *this pass's* reader — see below |
+| 🔴 **`RESIDUAL-IN-FAMILY`** | **36** | a real residual; needs a clause read (`562-G`) |
+| 🔴 **`NO-GRANT-EARNED`** | **2** | [`openedx/XBlock`](https://github.com/openedx/XBlock) `master` (9 paths) and [`ByMehmetKURUDev/kaynaklar`](https://github.com/ByMehmetKURUDev/kaynaklar) |
+| 🔵 **`EXCLUDED`** | **9** | not in-family — **this pass's own extraction error**, retracted below |
+
+🟢 **The delivery sentence, and it is this pass's most reusable output: `41.8 %` of the permissive
+Apache/AGPL rows a studio would hand a client fail a byte-digest gate while being canonically
+verbatim.** `p561` demonstrated this on 4 rows and could not rate it. 🟢 **Rated now, on the whole
+shelf.** 🔴 A week-one licence gate built on digests therefore produces ~4-in-10 false
+`NOASSERTION`s on exactly the rows an engagement wants to build on — which is `559-B`'s and
+`558-B`'s delivery finding arriving a third time, by a third instrument.
+
+### 🔴 Twelve apparent shelf defects, RETRACTED IN FULL — and the retraction is the finding
+
+🔴 **The draft of this section reported `12 of 48 residuals` whose payload family *"disagrees with
+the shelf"*.** 🟢 **All twelve are this pass's extractor being coarse, and the shelves were right.**
+Four lines of `grep` against the live rows settled it, per `p557`'s standing rule:
+
+- 🔴 **Nine "MIT disagreements."** Every one of those rows **states MIT for that repository**; the
+  `Apache`/`AGPL` token in the row names a **neighbouring platform**. [`ucfopen/canvasapi`](https://github.com/ucfopen/canvasapi)
+  is *"🟢 MIT … Canvas itself is AGPL-3.0, so this is the process-"*; [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+  is `560-B`'s own MIT-in-front-of-AGPL bridge; [`opensalt/opensalt`](https://github.com/opensalt/opensalt)
+  even carries *"ledger carried `GPL-3.0|Apache-2.0`; corrected this pass"* — the row is a **record
+  of a previous correction**, which the extractor read as the grant.
+- 🔴 **Three "ECL-2.0 family misgrades."** 🟢 **Not novel, and not a defect.** `ECL-2.0` appears
+  **145×** on [`../repos/trending.md`](../repos/trending.md), **59×** on
+  [`../intel/open-gaps.md`](../intel/open-gaps.md) and **59×** on [`../README.md`](../README.md);
+  [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai), [`opencast/opencast`](https://github.com/opencast/opencast)
+  and [`Apereo-Learning-Analytics-Initiative/OpenLRW`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW)
+  are graded `ECL-2.0` on multiple pages already. 🔵 Because **ECL-2.0 *is* a modified Apache 2.0**,
+  every honest ECL row mentions Apache — so the adjacency extractor cannot help but mis-read them.
+
+🔴 **This is `Gap 455`'s retraction reproduced — *"adjacency is not attribution, and the shelves were
+more precise than the instrument"* — five passes later, by a successor that had that sentence in its
+own history.** 🟢 **So the lesson is re-registered as `562-A` with a gate rather than a note**,
+because a rule that a pass can re-break while reading it is not yet an instrument.
+
+### 🟢 Two defects in this pass's own reader, caught and repaired
+
+| defect | consequence | repair |
+| --- | --- | --- |
+| 🔴 a `len(payload) < 40 B` guard | discarded [`frappe/education`](https://github.com/frappe/education)'s **19 B** `license.txt` — the exact payload `560-B` pinned | 🟢 re-probed: **19 B**, `1fcecf395312`, **reproducing `560-B` exactly** |
+| 🔴 a 16-name filename probe | missed [`aboutcode-org/scancode-toolkit`](https://github.com/aboutcode-org/scancode-toolkit)'s grant at **`apache-2.0.LICENSE`** | 🟢 re-probed: **11 357 B**, `c71d239df917` — **canonical Apache-2.0, verbatim** |
+
+🔵 **Both are `Gap 393-F` again** — *"no pass has ever re-read the UNGRANTED rows with `ls-files`"* —
+and the second is the same shape as `p393`'s `LICENSE.LGPL-3.0` find. 🟢 A closed filename probe
+keeps costing this base real grants; `562-A`'s gate covers the first defect, the second is `562-G`.
+
+🟢 **`frappe/education`'s recovery also settles the sub-40-byte question in the useful direction:**
+a 19 B payload is a *grant declaration*, not a grant, and it is **convention-invariant** — one
+digest under all six byte conventions — so it is the one row on this shelf a digest gate grades
+correctly for the wrong reason.
+
 ## 🆕 `p561` — `2026-10-31` — **🟢 THE NEW PIN GRADES FOUR SHELF ROWS TO *CANONICAL-VERBATIM* THAT A BYTE GATE WOULD HAVE FLAGGED AS MODIFIED — [`smolagents`](https://github.com/huggingface/smolagents) at **11 357 raw**, [`xAPI-Spec`](https://github.com/adlnet/xAPI-Spec) at **11 525 raw**, [`ChatTutor`](https://github.com/HugeCatLab/ChatTutor) and [`tutor`](https://github.com/overhangio/tutor) at **34 522/34 523**. 🟢 `560-D`'s *"filled appendix"* MECHANISM IS REAL AND WAS PINNED TO THE WRONG ROW: it is [`ltijs`](https://github.com/Cvmcosta/ltijs) and [`EduNLP`](https://github.com/bigdata-ustc/EduNLP), one substitution each. 🔴 AND DeepTutor IS NOW MEASURED AS **THE ONLY** Apache-2.0 AGENT ROW ON THIS SHELF THAT FAILS THE PIN — 1 of 4, not an anecdote.**
 
 🟢 **25 shelf rows re-read first-hand and graded against `p561`'s canonical pins**
