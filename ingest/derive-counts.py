@@ -41,17 +41,34 @@ def claim_in(path, noun):
     return int(m.group(1)) if m else None
 
 
-# --- compose/patterns.md: recipes are '## [marks] P<n> — ...' -----------------------------
+# --- compose/patterns.md: recipes are '## [marks] P-<n>-<X> — ...' ------------------------
+# p568: the id scheme on the page is FAMILY-SUFFIXED -- 'P-571-A', not 'P571'. The original
+# pattern (r"P(\d+) —") matched none of the 17 headings present, so `ids` came back empty and
+# `ids[0]` raised IndexError at this line, ABORTING THE WHOLE GATE before agents/top.md and
+# intel/trends.md were ever reached. Two fixes, both deliberate:
+#   * accept the hyphenated, letter-suffixed form (and the bare 'P<n>' form, for history);
+#   * count RECIPE HEADINGS, not distinct family numbers -- 'P-571-A' and 'P-571-B' are two
+#     recipes, and counting families under-reported a page that carries several per family.
+# Contiguity is still checked over the FAMILY numbers, which is where a missing id is a signal.
 pat = os.path.join(root, "compose", "patterns.md")
 if os.path.exists(pat):
-    ids = sorted({int(m) for m in re.findall(r"^## [^A-Za-z0-9]*P(\d+) —", open(pat, encoding="utf-8").read(), re.M)})
-    n = len(ids)
-    gaps = [i for i in range(ids[0], ids[-1] + 1) if i not in ids] if ids else []
+    body = open(pat, encoding="utf-8").read()
+    found = re.findall(r"^## [^A-Za-z0-9]*P-?(\d+)(?:-([A-Z]))? —", body, re.M)
+    n = len(found)
+    fams = sorted({int(num) for num, _ in found})
+    gaps = [i for i in range(fams[0], fams[-1] + 1) if i not in fams] if fams else []
     claimed = claim_in(pat, "recipes")
-    print(f"compose/patterns.md   recipes: derived={n}  range=P{ids[0]}..P{ids[-1]}  claimed={claimed}")
+    if not found:
+        print("compose/patterns.md   recipes: ABSTAIN -- no recipe heading matched; id scheme changed?")
+        rc = 2
+    else:
+        rng = f"P-{fams[0]}..P-{fams[-1]}"
+        print(f"compose/patterns.md   recipes: derived={n}  families={len(fams)}  range={rng}  claimed={claimed}")
     if gaps:
-        print(f"  AMBER non-contiguous: missing {['P%d' % g for g in gaps]}")
-    if claimed is None:
+        print(f"  AMBER non-contiguous families: missing {['P-%d' % g for g in gaps]}")
+    if not found:
+        pass  # already abstained above; do not also grade a count we could not derive
+    elif claimed is None:
         print("  AMBER no 'derived recipes: **N**' claim in the header.")
     elif claimed != n:
         print(f"  RED  header claims {claimed}, page holds {n} -- rewrite the header, not the page.")
@@ -80,9 +97,13 @@ if os.path.exists(tre):
 top = os.path.join(root, "agents", "top.md")
 if os.path.exists(top):
     lines = open(top, encoding="utf-8").read().split("\n")
-    start = next((i for i, l in enumerate(lines) if l.startswith("## Shelf")), None)
+    # p568: the page's heading is '## The shelf', not '## Shelf', so the exact-prefix test
+    # abstained SILENTLY on p543's original case -- the gate built to catch a stale shelf
+    # count could not see the shelf. Matched case-insensitively, with or without the article.
+    start = next((i for i, l in enumerate(lines)
+                  if re.match(r"^## (the )?shelf\b", l, re.I)), None)
     if start is None:
-        print("agents/top.md         ABSTAIN no '## Shelf' heading.")
+        print("agents/top.md         ABSTAIN no shelf heading ('## Shelf' / '## The shelf').")
     else:
         end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith("## ")), len(lines))
         rows = [l for l in lines[start + 1:end]
@@ -92,7 +113,14 @@ if os.path.exists(top):
         claimed = re.search(r"(\d+)", lines[start])
         claimed = int(claimed.group(1)) if claimed else None
         print(f"agents/top.md         shelf:   derived={len(rows)}  claimed={claimed}")
-        if claimed is not None and claimed != len(rows):
+        if claimed is None:
+            # p568: was GREEN here, which reported agreement with a claim that does not
+            # exist -- the other two blocks AMBER in this case and this one now matches.
+            # NOTE the scan spans every table between this '##' and the next, so a page
+            # with '###' sub-tables (carried-with-defect, skill bundles) derives MORE than
+            # its shelf. See gap 568-E: the shelf count lives in BODY prose, unreachable here.
+            print("  AMBER no count in the shelf heading; nothing to compare against.")
+        elif claimed != len(rows):
             print(f"  RED  heading claims {claimed}, table holds {len(rows)}.")
             rc = 1
         else:

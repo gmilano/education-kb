@@ -3,6 +3,207 @@ industry: education
 region: Global
 updated: 2026-10-31
 ---
+
+## 2026-10-31 (sixth pass · `p568`) — the standing assessment gap answered by a *contract* instead of a generator, and a gap this base publishes that its own shelf already closed
+
+**Two results, and the second one is a correction to this page.**
+
+The fifth pass closed with two named asks: sweep `topic:video` for lecture
+tooling, and find education-specific agent observability. This pass swept three
+capability axes with measured denominators and **found one genuinely new usable
+asset in the assessment layer** — plus the discovery that **one of the gaps this
+base is still publishing was closed by its own shelf at least a pass ago.**
+
+### Channel table, run first
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `raw.githubusercontent.com` → `LICENSE` | 🟢 **33 grants read byte-for-byte**, 5 filenames × 3 branches per address |
+| 🟢 `WebFetch` → `github.com/search` | 🟢 Serves stars, update dates **and result denominators**; `p534`'s channel, used here for counts |
+| 🔴 `curl` → `api.github.com` | 🔴 **403**, re-probed and unchanged |
+| 🔴 `curl` → `github.com` | 🔴 **403**, re-probed and unchanged |
+| 🔴 `WebSearch` | 🟢 8 legs (4 global, 4 regional) — 🔴 **0 addresses new to this base, fifth consecutive nil** |
+
+🔴 **Every new row below came off a GitHub search page sorted by stars, not off
+WebSearch.** That is now a five-pass pattern and it should change where a
+successor spends its budget.
+
+### Denominators measured, so the nulls have a size
+
+| axis queried | results | new to this base |
+| --- | --: | --: |
+| `topic:ai-tutor`, sorted by stars | **816** (82 pages) | **0** |
+| `topic:psychometrics`, sorted by stars | **510** | **0 usable** |
+| `"learning analytics" dashboard`, sorted by stars | **289** | **0** (already shelved — see correction) |
+
+🟢 The `topic:ai-tutor` head re-read clean: all ten top rows are **already on the
+shelf**. 🔵 `DeepTutor` reads **52.4k★** on the topic page against
+[`top.md`](top.md)'s `52,208` — a ±drift inside the documented artefact class,
+not a finding.
+
+### 1. 🟢 `onionviolet/itembank` — the assessment-item gap, answered from the opposite end
+
+[`onionviolet/itembank`](https://github.com/onionviolet/itembank) — **MIT**
+(`main/LICENSE`, **1,068 B**, *"Copyright (c) 2026 onionviolet"*) — **3★**, 0
+forks, 6 open issues, **1,175 commits on `main`**.
+
+*"Author, validate and render exam-style question banks in markdown. A
+machine-checkable contract for LLM-authored questions."*
+
+🔴 **Three stars and eleven hundred commits.** This base shelves on stars by
+default and that gate would have discarded it; the commit count is the signal
+here, and it is the only reason this row was read at all.
+
+**Why it closes a gap four passes could not.** The standing gap was recorded as
+*"nothing permissive generates psychometrically defensible items"* — and every
+sweep went looking for a **generator**. `itembank` is not a generator. It is the
+**gate the generator has to pass**, which is the artefact an exam board actually
+buys:
+
+- `itembank lint` **blocks on error**, per item number — checks each distractor
+  explains when it *would* be correct, answer-position skew, select-count against
+  keyed-count, duplicate stems.
+- `itembank guard` **fails CI** if real banks are committed.
+- 🟢 **Scoring is deterministic and has no model in the path.** Short-answer items
+  are **never auto-graded** — they stay pending for rubric marking; `fill` is
+  all-or-nothing; `check` runs learner code against hidden cases. The README
+  states **model output is never accepted as a score**.
+- Retention is **FSRS** — the same scheduler this base already holds as
+  [`open-spaced-repetition/fsrs4anki`](https://github.com/open-spaced-repetition/fsrs4anki).
+- Exports **Anki TSV, GIFT, answer-key TSV**; key-free **JSON session protocol**
+  (`start`, `next`, `submit`, `report`, `teach`) built for agents.
+
+🟢 **The load-bearing property is regulatory, not pedagogical.** "No model in the
+scoring path, and short-answer never auto-graded" is a *design* that answers the
+EU AI Act **Annex III** evaluation-of-learning-outcomes category — the one this
+base has been pricing conformity work against for the **2 December 2027** date.
+An item bank that can prove a human marked every non-deterministic item is a
+conformity artefact, and it is MIT.
+
+🔴 **Read the limits, they are real.** QTI/CASE/SCORM interchange is explicitly
+**backburner** — the README says it *"waits for a named consumer"*, so the
+installed-courseware story this base tells elsewhere does **not** hold here yet.
+The MCP surface is labelled *"Phase 999.3"* and is **not shipped**. The broader
+"course workspace" is **not yet runnable**. Stack is Python-dominant with a Rust
+`src-tauri/` shell and bundled CodeMirror + KaTeX.
+
+### 2. 🔴 Correction — this base publishes a gap its own shelf already closed
+
+[`../repos/trending.md`](../repos/trending.md) still carries, in its fifth-pass
+section:
+
+> **No open-source learning-analytics dashboard** still, sixth pass — only the
+> LRS (`openfun/ralph`) that would feed one.
+
+🔴 **That is false, and it is falsified by two rows already in this repository.**
+
+| address | grant, read this pass | ★ | what it is |
+| --- | --- | --: | --- |
+| [`openfun/warren`](https://github.com/openfun/warren) | **MIT** | 17 | **xAPI learning-analytics dashboards** — already recorded on this page, pushed `2026-10-11` |
+| [`openfun/potsie`](https://github.com/openfun/potsie) | **MIT** (`main/LICENSE.md`, 1,094 B) | 11 | **Grafana dashboard suite for learning analytics**, Jsonnet |
+
+🟢 Both grants read byte-for-byte this pass, and **both name the same
+institution**: *"Copyright (c) 2021-present **France Université Numérique**"*
+(`potsie`), *"Copyright (c) 2020-present France Université Numérique"*
+(`ralph`). By the fifth pass's own institutional-copyright instrument that places
+all three in **EMEA**, held by a **national public operator**.
+
+🟢 **So the real finding is better than the gap closing.** `ralph` (LRS) →
+`potsie` / `warren` (dashboards) is a **complete, single-owner, all-MIT,
+EMEA-institutional learning-analytics stack**, and this base held every piece
+while publishing that the top of it did not exist. Wired up as a pattern in
+[`../compose/patterns.md`](../compose/patterns.md).
+
+🔴 **The mechanism of the error is worth more than the error.** The gap line was
+written in a *narrative summary at the top of an append-only page*. Nothing
+re-checks those lines against the shelf, so a claim can be closed on one page and
+still published on another. `crosspage-figure-claims.py` compares **figures**; it
+does not compare **existence claims**. Registered as `568-A`.
+
+### 3. 🟡 The video axis swept — thin, and one of its two engines is a cloud dependency
+
+The fifth pass's `topic:video` ask ran. Results in
+[`../repos/trending.md`](../repos/trending.md); the summary is that **lecture
+video is a three-repo shelf with no leader**, and the pipeline everything shares
+terminates in a **proprietary cloud TTS**.
+
+🔴 [`galaxyproject/video-lectures`](https://github.com/galaxyproject/video-lectures)
+(**MIT**, `master/LICENSE` 1,071 B, *"Copyright (c) 2024 Galaxy Project"*, 2★, 67
+commits) is the most institutionally credible of them and it runs Pandoc →
+`wkhtmltoimage` → [`jhudsl/ari`](https://github.com/jhudsl/ari) → **Amazon
+Polly**, which **requires AWS credentials**. 🔴 Every data-residency-constrained
+engagement this base tracks — EMEA public sector, Vietnam's Decision 33, Korea's
+AI Basic Act — is disqualified from the default configuration. The swap target is
+already on this base's shelf (`supertonic` MIT but archived, `mlx-audio`,
+`abogen`), so this is a wiring note, not a blocker.
+
+### Rejected, with the reason recorded so they are not re-found
+
+- [`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) — **114★**,
+  Java, classical test theory + IRT, last pushed 2024-10-03. 🔴 **No licence file
+  at any of 5 filenames × 3 branches.** The most capable pure-psychometrics
+  library the axis returned, and ungranted.
+- [`yrosseel/lavaan`](https://github.com/yrosseel/lavaan) — **515★**, R, updated
+  *2 hours* before reading. 🔴 **GPL (>= 2)** (`DESCRIPTION`; `LICENSE` is 35,149 B
+  of full GPL text). Copyleft — out.
+- [`ecmerkle/blavaan`](https://github.com/ecmerkle/blavaan) — 104★, R. 🔴 **GPL
+  (>= 3)**, and a method note: **its `LICENSE` 404s entirely** while
+  `DESCRIPTION` carries the grant. A licence-*file* probe returns
+  `NO-LICENCE-FILE-FOUND` on a repository that **declares a licence** — the
+  false-negative direction of the CRAN idiom this base already records.
+- [`inuyasha2012/pypsy`](https://github.com/inuyasha2012/pypsy) — 242★, **MIT**,
+  MIRT/IRT/GRM/CAT. 🔴 Last pushed **2018-11-16**. Granted, capable, **eight years
+  stale**; already on this base.
+- [`learnitr/learnitdashboard`](https://github.com/learnitr/learnitdashboard) — 2★,
+  **MIT** via `DESCRIPTION`, `LICENSE` a **47 B stub** (`YEAR: 2024` /
+  `COPYRIGHT HOLDER: Philippe Grosjean`). Usable, too small to shelve.
+
+### Regional placement, including the nils
+
+- 🟢 **EMEA** — strongest result this pass: the `ralph`/`potsie`/`warren` triple,
+  all MIT, all held by **France Université Numérique**, placed by named
+  institutional holder rather than inference.
+- 🟢 **North America** — [`jhudsl/ari`](https://github.com/jhudsl/ari) (**MIT** via
+  `DESCRIPTION`), the narration engine under the video axis, held by the **Johns
+  Hopkins Data Science Lab**.
+- 🔴 **APAC** — **no new placed address.** `sudazc/open-question-bank` has a
+  Chinese README (`组卷`, test assembly) but its grant names an individual handle,
+  and **this base does not place an artefact on its language.** Stays `Global`.
+- 🔴 **LATAM** — **no new address at all this pass.** Four regional WebSearch legs
+  returned nothing new; the LATAM supply picture is unchanged from the fifth
+  pass, where the only placed agent (`dio-agent`, 2,750★) remains **ungranted**.
+
+### Still missing, seventh pass running
+
+🔴 **Education-specific agent observability is still absent, and this pass can now
+say what the substitute costs.** The horizontal layer answers drift —
+`evidentlyai/evidently` (**Apache-2.0**, already shelved) is the regression
+baseline — but the two tools the listicles push hardest both carry grants that
+break a managed-delivery engagement:
+
+- 🔴 [`Arize-ai/phoenix`](https://github.com/Arize-ai/phoenix) is **Elastic License
+  2.0**, read in full this pass (3,794 B): *"You may not provide the software to
+  third parties as a hosted or managed service."* 🔴 **For a studio that hosts and
+  operates client solutions that is a direct prohibition**, not a threshold — and
+  it also forbids disabling the licence-key mechanism. It is widely listed as
+  "open source LLM observability" and it cannot go in a Globant-run engagement.
+- 🟡 [`langfuse/langfuse`](https://github.com/langfuse/langfuse) is MIT-Expat
+  **outside** `ee/`, `web/src/ee/`, `worker/src/ee/` and
+  `packages/shared/src/server/ee/` — already recorded here as Finding 6, holder
+  **ClickHouse, Inc.** Re-confirmed this pass; the carve-out is a build-config
+  requirement, not a lawyer's footnote.
+
+🔵 **Still genuinely open:** no education-specific drift detector, and **no
+assessment-item generator** — `itembank` gates items, it does not author
+psychometrically calibrated ones, and the two libraries that could calibrate them
+(`eribean/girth`, `inuyasha2012/pypsy`) are both **MIT and both stale**, while the
+one live education-specific model zoo (`bigdata-ustc/EduCDM`, **Apache-2.0**) does
+**cognitive diagnosis, not item calibration.** 🔵 Ask for the seventh pass: probe
+`joakimwallmark/irtorch` for liveness and wire the first calibration loop, or
+record the layer as structurally stale.
+
+---
+
 ## 2026-10-31 (fifth pass) — two unswept topic axes held a peer-reviewed tutor, the first EMEA-origin agent, and a CC0 grant
 
 **This pass did what the fourth pass told it to do, and the instruction was

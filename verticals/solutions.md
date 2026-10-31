@@ -48,6 +48,49 @@ or discovery agent is actually pointed.
 | DSpace | [DSpace/DSpace](https://github.com/DSpace/DSpace) | **BSD-3-Clause** | 1,100 | North America | The institutional repository — theses, datasets, faculty output, grey literature. **The only permissively licensed platform of record in this KB.** Java; LYRASIS (US non-profit). |
 | Koha | [Koha-Community/Koha](https://github.com/Koha-Community/Koha) | GPL-3.0 (or later) | 597 | Global | Integrated library system — catalogue, circulation, acquisitions. Contributions go through the project's **own bug tracker, not GitHub issues**. |
 
+## Learning-analytics stack — a vertical system in its own right (new in the sixth pass)
+
+**Every platform above is copyleft or near it, which is why this page's doctrine
+is *attach, do not fork*.** The sixth pass found that the attach target with the
+cleanest licence position is not an LMS at all — it is a **complete
+learning-analytics stack, all MIT, all from one national public operator**, that
+sits beside any of the platforms above and speaks a standard rather than touching
+their code.
+
+| Component | Repo | Licence | ★ | Region | What it runs |
+| --- | --- | --- | --: | --- | --- |
+| LRS (store) | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** (`main/LICENSE.md`, 1,094 B) | 51 | EMEA | Learning Record Store: ingests **xAPI** statements from any LMS, tutor or agent. The system of record for learner activity. |
+| Dashboards | [openfun/warren](https://github.com/openfun/warren) | **MIT** | 17 | EMEA | xAPI learning-analytics dashboards over the LRS. Pushed `2026-10-11` — the active component of the three. |
+| Dashboards-as-code | [openfun/potsie](https://github.com/openfun/potsie) | **MIT** (`main/LICENSE.md`, 1,094 B) | 11 | EMEA | **Grafana** dashboard suite written in **Jsonnet**, so dashboards are generated, diffable and code-reviewed rather than clicked together. Pushed `2024-12-18` — stable, not active. |
+
+🟢 **Why this belongs on a page about vertical systems.** All three grants were
+read byte-for-byte in the sixth pass and all three name the same holder —
+*"Copyright (c) 2020-present / 2021-present **France Université Numérique**"* —
+the French national public operator that also publishes `richie`. That makes this
+**the strongest institutionally placed EMEA row anywhere in this KB**: the region
+is read off the grant, not inferred from language or timezone.
+
+🟢 **The engagement shape.** A client on Moodle (GPL-3.0), Chamilo (GPL-3.0) or
+OpenEduCat (LGPL-3.0) cannot have a closed derivative of their platform. They
+*can* have a **closed, white-labelled analytics product** built on this stack,
+attached over xAPI, with no platform code touched and no copyleft reaching the
+deliverable. 🔵 `scorm-again` (MIT) and `ltijs` (Apache-2.0) are the other two legs
+of the same doctrine; this is the one that answers *"and what do the dean and the
+registrar actually look at?"*
+
+⚠️ **Two honest caveats before it is quoted.** `potsie`'s last push is
+**December 2024** — the Grafana suite is stable rather than maintained, and
+Grafana itself is **AGPL-3.0**, so the *dashboards* are MIT while the *runtime
+rendering them is copyleft*: ship it as a deployed service, not as a linked
+component in a closed product. And at 51/17/11★ this is a small-community stack —
+credible because of who publishes it, not because of its adoption numbers.
+
+🔴 **Recorded against this KB's own error.** This stack was already in the
+repository while [`../repos/trending.md`](../repos/trending.md) was still
+publishing *"no open-source learning-analytics dashboard"*. The components were
+never missing; the index was wrong. See `568-A` in
+[`../intel/open-gaps.md`](../intel/open-gaps.md).
+
 ## How to read this page
 
 **The operations layer is copyleft almost without exception — but the exception

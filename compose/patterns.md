@@ -919,6 +919,153 @@ opportunity in the industry.
 
 ---
 
+## P-571-A — Defensible assessment pipeline: model-authored items, human-provable marking (8–10 weeks)
+
+**For:** exam boards, awarding bodies, universities with central assessment
+units, and any client whose marking will be automated and audited.
+**Region:** **EMEA** primarily — the EU AI Act's **Annex III** category
+*evaluation of learning outcomes*, obligations landing **2 December 2027** — and
+**North America**, where the binding constraint is student-data law rather than
+conformity assessment (California's proposed A.B. 1159; Idaho's bias-evaluation
+and privacy duties). Applicable in **LATAM** wherever a *secretaría* must show a
+regulator what was marked and by whom.
+
+**Why this pattern exists.** Five passes of this KB recorded *"nothing permissive
+generates psychometrically defensible items"* and went looking for a generator.
+The sixth pass found that the buyable artefact is the **gate**, not the generator
+— and the gate is what the regulation actually demands evidence of. This pattern
+is the first in this KB that can answer *"prove a human marked everything a
+machine could not defensibly mark."*
+
+**Components:**
+
+| Role | Component | Licence | Note |
+| --- | --- | --- | --- |
+| Source-material ingestion | [docling-project/docling](https://github.com/docling-project/docling) | **MIT** | Client's own syllabus, textbooks and past papers → markdown/JSON with table structure. The items must be grounded in the client's curriculum, not the model's memory. |
+| STEM/handwriting ingestion | [opendatalab/MinerU](https://github.com/opendatalab/MinerU) | ⚠️ **Apache-2.0 + commercial thresholds** | Formulas and multi-column STEM papers. ⚠️ Its **prominent-attribution clause binds any online service** built with it — that reaches UX, not just legal. |
+| **Item authoring contract** | [onionviolet/itembank](https://github.com/onionviolet/itembank) | **MIT** (1,068 B) | 🟢 **The load-bearing component.** Markdown banks, `itembank lint` **blocking on error**, `itembank guard` failing CI on committed real banks, deterministic scoring, **short-answer never auto-graded**. |
+| Rubric quality gate | [learning-commons-org/evaluators](https://github.com/learning-commons-org/evaluators) | ⚠️ **code MIT · prompts CC BY 4.0 · corpora CC BY-NC-SA** | Scores generated content against research-backed rubrics. ⛔ **The two annotated corpora are non-commercial — bring your own corpus for a billable regression suite.** |
+| Cognitive diagnosis | [bigdata-ustc/EduCDM](https://github.com/bigdata-ustc/EduCDM) | **Apache-2.0** | Infers learner mastery from responses. ⚠️ **Not item calibration** — see the honest limit below. |
+| Retention scheduling | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** | FSRS, which `itembank` already implements — use the library form if you need it outside the bank. |
+| Telemetry store | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | xAPI LRS: every item served, every response, every human override, timestamped. **This is the audit trail.** |
+| Dashboards | [openfun/warren](https://github.com/openfun/warren) · [openfun/potsie](https://github.com/openfun/potsie) | **MIT** · **MIT** | What the assessment board looks at. `potsie` is Jsonnet, so dashboards ship as reviewable code. |
+| Drift baseline | [evidentlyai/evidently](https://github.com/evidentlyai/evidently) | **Apache-2.0** | Regression and drift on the authoring model's output distribution. 🔴 The **only** permissive option — see the licence warning below. |
+| LMS attachment | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | **Apache-2.0** | LTI 1.3 launch into Moodle/Canvas/Open edX without touching platform code. |
+
+**Wiring:**
+
+1. **Ingest the client's curriculum** with `docling` (and `MinerU` for STEM
+   papers). Every item must trace to a source document — provenance is the first
+   thing an auditor asks for.
+2. **Author items with the model into `itembank`'s markdown format**, never
+   straight into a database. The format is the contract.
+3. **Gate in CI, not in review.** `itembank lint` blocks the merge on error —
+   unexplained distractors, answer-position skew, select/key mismatch, duplicate
+   stems. `itembank guard` keeps live banks out of the repository. 🟢 **A model may
+   author; it may not merge.**
+4. **Score deterministically.** Objective items score in `itembank`'s own runtime
+   with **no model in the path**; `check` items run learner code against hidden
+   cases. **Short-answer items are routed to a human rubric marker and stay
+   pending** — this is the step that produces the conformity evidence, so
+   instrument it rather than optimising it away.
+5. **Layer rubric scoring as advisory only** (`evaluators`) on generated
+   *content*, never as a score of record.
+6. **Emit xAPI to `ralph` at every transition** — item served, response, lint
+   verdict, human override, final mark. Surface it in `warren`/`potsie`.
+7. **Baseline the authoring model in `evidently`** and re-run on every model or
+   prompt change, so "the item quality changed in March" is answerable.
+8. **Deliver a conformity pack**: the lint ruleset, the CI logs, the
+   human-marking record, the drift baselines, and a written statement of which
+   decisions were automated and which were not.
+
+🔴 **Honest limits — state all four to the client before quoting.**
+
+- **`itembank` gates items; it does not calibrate them.** There is **no live,
+  permissive, education-specific item-calibration asset** on this base:
+  `eribean/girth` (MIT) last shipped **2022**, `inuyasha2012/pypsy` (MIT)
+  **2018**, `meyerjp3/psychometrics` (the most capable, Java) has **no licence
+  file at all**, and the R options are copyleft. `EduCDM` does cognitive
+  diagnosis. **Difficulty parameters mean a stale dependency, a licence risk, or
+  a build.**
+- **`itembank` ships no QTI.** Interchange (QTI/CASE/SCORM) is explicitly
+  backburner — the README says it *"waits for a named consumer."* 🔵 If the client
+  needs QTI, this pattern needs a build step or `tremby/questionbank` (⚠️ **CC BY**),
+  and the engagement could be that named consumer.
+- **`itembank`'s MCP surface is unshipped** ("Phase 999.3") and its wider course
+  workspace is not yet runnable. Integrate over its **key-free JSON session
+  protocol** (`start`/`next`/`submit`/`report`/`teach`), which does work.
+- ⛔ **Do not reach for `Arize-ai/phoenix` for the observability slot.** It is
+  **Elastic License 2.0**: *"You may not provide the software to third parties as
+  a hosted or managed service."* For a studio that hosts and operates client
+  solutions that is a **prohibition, not a threshold**, and it also forbids
+  disabling its licence-key mechanism. ⚠️ `langfuse/langfuse` is usable but is
+  MIT-Expat **only outside** `ee/`, `web/src/ee/`, `worker/src/ee/` and
+  `packages/shared/src/server/ee/` — a build-configuration requirement. 🟢
+  `evidently` is the clean pick.
+
+## P-571-B — Lecture-video factory that never leaves the client's infrastructure (6–8 weeks)
+
+**For:** ministries, national operators and universities that must produce
+narrated courseware at volume **and** cannot send student or curriculum material
+to a third-party cloud.
+**Region:** **APAC** primarily — Vietnam's AI law duties by **1 March 2027**
+(grace for education systems operating before **15 August 2026**), Taiwan's **AI
+Basic Act** in force **14 January 2026**, Indonesia's **GR 71** data residency —
+and **LATAM**, where widening compute and connectivity gaps argue for local
+inference. In **EMEA** the driver is different: the **European Accessibility
+Act** makes captions a procurement gate.
+
+**Why this pattern exists.** The fifth pass asked for a `topic:video` sweep. The
+sixth ran it and found **no open-source lecture-video product to adopt** — but a
+well-understood four-stage pipeline (slides → page images → narration script →
+TTS and mux) with a permissive component at every stage. 🔴 **Three of the four
+pipelines found terminate in Amazon Polly and require AWS credentials**, which
+disqualifies them by default for exactly the clients who need this most. The
+pattern is the pipeline **with the TTS stage swapped**.
+
+**Components:**
+
+| Role | Component | Licence | Note |
+| --- | --- | --- | --- |
+| Reference pipeline | [galaxyproject/video-lectures](https://github.com/galaxyproject/video-lectures) | **MIT** (1,071 B, "Galaxy Project") | Pandoc → HTML slides → `wkhtmltoimage` page images → script extraction → mux. 🔴 **Replace its Polly stage.** |
+| Narration/assembly engine | [jhudsl/ari](https://github.com/jhudsl/ari) | **MIT** (declared in `DESCRIPTION`) | R package, **Johns Hopkins Data Science Lab**. ⚠️ Its grant is **not** in `LICENSE` — that file is a 40 B stub. |
+| Local-voice pipeline | [Changochen/slide-to-video](https://github.com/Changochen/slide-to-video) | **MIT** (1,070 B) | 🟢 **The sovereignty pick** — PDF deck + script, slides split on `NEWSLIDE`, with **optional local voice cloning**. The only row on this axis that needs no cloud TTS at all. |
+| Script drafting | [htlin222/slides-to-video](https://github.com/htlin222/slides-to-video) | **MIT** (1,065 B) | Drafts **speaker notes** from the slides, then TTS + `ffmpeg`. Use when the client has decks but no narration scripts. |
+| Captioned audio | [denizsafak/abogen](https://github.com/denizsafak/abogen) | **MIT** | 🟢 Emits **synchronised captions** — the EAA/WCAG deliverable, not an extra. |
+| On-device TTS | [Blaizzy/mlx-audio](https://github.com/Blaizzy/mlx-audio) | **MIT** | Apple Silicon. ⚠️ `supertonic` (MIT, on-device) is **archived** — grant perpetual, patches not. |
+| Source ingestion | [docling-project/docling](https://github.com/docling-project/docling) | **MIT** | Client's existing textbooks and decks → structured markdown to drive the slides. |
+| Lesson construction | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | **MIT** | Topic or documents → slides, quizzes, whiteboard; **exports PPTX and single-file offline HTML**, which feeds this pipeline directly. |
+| Delivery into the client LMS | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** (1,072 B) | SCORM 1.2 / 2004 runtime, `offline-first`. Ships the finished units into the incumbent LMS **without touching it**. |
+| Telemetry | [openfun/ralph](https://github.com/openfun/ralph) | **MIT** | xAPI record of what was delivered and watched. |
+
+**Wiring:**
+
+1. **Ingest** the client's existing material with `docling`; keep a
+   source-to-slide map so every claim on a slide is traceable.
+2. **Build the lesson** — `OpenMAIC` for interactive units (it exports PPTX and
+   offline single-file HTML), or author markdown slides directly for the
+   `galaxyproject` pipeline.
+3. **Render page images** (`wkhtmltoimage`, or ImageMagick on the
+   `slides-to-video` path).
+4. **Produce the narration script.** Have `htlin222/slides-to-video` draft
+   speaker notes where none exist, then **put them through human review** — this
+   is a content-accuracy gate, and in the EU the **transparency duty on
+   synthetic teaching material has been live since 2 August 2026**.
+5. 🟢 **Synthesise locally.** `Changochen/slide-to-video`'s local voice cloning,
+   or `mlx-audio`/`abogen`. **Do not configure Polly**; that single default is
+   what would otherwise breach the client's residency position.
+6. **Generate captions with `abogen`** as a first-class output, not a retrofit.
+7. **Package with `scorm-again`** and deliver into the incumbent LMS; emit xAPI
+   to `ralph` for what was actually watched.
+
+🔴 **Honest limits.** Every component on this axis is **tiny** — 2★ and single
+digits, against a document layer where five repositories clear 30,000★. 🔵 These
+are *scripts to assemble*, not products to adopt, and the estimate must say so:
+the engineering is in the integration and the voice quality, not in the
+components. ⛔ **`harry0703/MoneyPrinterTurbo` (MIT, 136,744★) is explicitly not
+in this pattern** — it is short-form social video, and its star count makes it the
+most likely asset to be mis-offered here as courseware tooling.
+
 ## Declared gaps
 
 - **No pattern for Blackboard, Brightspace or Google Classroom.** No agent

@@ -3,6 +3,109 @@ industry: education
 region: Global
 updated: 2026-10-31
 ---
+
+## 2026-10-31 (sixth pass · `p568`) — the `topic:video` ask ran, and lecture video is a three-repo shelf whose shared engine is proprietary cloud TTS
+
+**This pass executed the fifth pass's closing instruction** — *"a `topic:video`
+sweep is the next pass's job"* — together with sweeps of `topic:psychometrics`
+and the learning-analytics dashboard axis. 🔴 **The video result is thin, and the
+thinness is the finding.**
+
+🔴 **Correction to this page, stated before anything else.** The fifth-pass
+section above still reads *"**No open-source learning-analytics dashboard**
+still, sixth pass — only the LRS (`openfun/ralph`) that would feed one."* **That
+claim is false and was already false when written** — see the table in
+§3 below. This page is append-only, so the line stays where it is; it is
+**superseded here**, and the mechanism is registered as `568-A` in
+[`../intel/open-gaps.md`](../intel/open-gaps.md).
+
+### 1. 🟡 The lecture-video layer, swept and measured
+
+| Repo | Licence (read from file) | ★ | Role, and the catch |
+| --- | --- | --: | --- |
+| [`galaxyproject/video-lectures`](https://github.com/galaxyproject/video-lectures) | 🟢 **MIT** (`master/LICENSE`, 1,071 B, *"Copyright (c) 2024 Galaxy Project"*) | 2 | 🟢 **The reference pipeline**, and the only institutionally held one: Pandoc `src/*.md` → HTML slides + hands-on doc → `wkhtmltoimage` one image per slide → `extract-script-from-html.js` → `ari` → narrated video. Yarn/Jake. 67 commits on `master`; forked from `jxtx/covid-lessons`. 🔴 **Terminates in Amazon Polly and needs AWS credentials** |
+| [`jhudsl/ari`](https://github.com/jhudsl/ari) | 🟢 **MIT** — `DESCRIPTION`: `License: MIT + file LICENSE`; `LICENSE` is a **40 B stub** | — | 🟢 The narration-and-assembly **engine** under the row above. **North America** — Johns Hopkins Data Science Lab, an R package. 🔴 Its grant is **not readable from `LICENSE`**; the CRAN idiom applies |
+| [`Changochen/slide-to-video`](https://github.com/Changochen/slide-to-video) | 🟢 **MIT** (1,070 B, *"Copyright (c) 2024 Yongheng Chen"*) | — | PDF deck + plain-text script (slides split on a `NEWSLIDE` marker) → narrated video. 🟢 **Optional local voice cloning** — the one row here that can run without a cloud TTS |
+| [`htlin222/slides-to-video`](https://github.com/htlin222/slides-to-video) | 🟢 **MIT** (1,065 B, *"Copyright (c) 2026 htlin222"*) | — | ImageMagick page images → **model-generated speaker notes** → TTS → `ffmpeg`. The only row that drafts the narration rather than requiring a script |
+
+🔴 **No leader, and no star mass anywhere on the axis.** Against a shelf where the
+horizontal document layer runs to five repositories above 30,000★, lecture video
+tops out in the low single digits. 🟢 **The read: there is no open-source lecture-video
+product to adopt, and there is a well-understood four-stage pipeline to assemble** —
+slides → page images → script → TTS+mux. Every stage has a permissive component
+on this base already.
+
+🟢 **The substitution that makes the axis usable.** Three of the four rows above
+end in a proprietary cloud TTS (Polly). This base already holds the replacements:
+[`Blaizzy/mlx-audio`](https://github.com/Blaizzy/mlx-audio) (**MIT**),
+[`denizsafak/abogen`](https://github.com/denizsafak/abogen) (**MIT**, and it emits
+**synchronised captions**, which is an accessibility deliverable), and
+[`supertone-oss-archive/supertonic`](https://github.com/supertone-oss-archive/supertonic)
+(**MIT**, on-device, 🔴 **archived**). Swapping the TTS stage is what turns this
+axis into something a data-residency-constrained client can run.
+
+🔴 **Explicitly not shelved:** `harry0703/MoneyPrinterTurbo` stays rejected on the
+fourth pass's reasoning — short-form social video, not lecture content.
+
+### 2. 🟢 Assessment components — two new permissive rows, one with a split grant
+
+| Repo | Licence (read from file) | ★ | Commits | Role |
+| --- | --- | --: | --: | --- |
+| [`onionviolet/itembank`](https://github.com/onionviolet/itembank) | 🟢 **MIT** (1,068 B, *"Copyright (c) 2026 onionviolet"*) | **3** | **1,175** | 🟢 **The pass's main new row.** Markdown item banks with a **blocking linter**, deterministic scoring with **no model in the scoring path**, FSRS retention, Anki/GIFT export, key-free JSON agent protocol. Full write-up in [`../agents/trending.md`](../agents/trending.md) |
+| [`sudazc/open-question-bank`](https://github.com/sudazc/open-question-bank) | 🟡 **MIT for code and docs only** (1,063 B, *"Copyright (c) 2026 sudazc"*) | 0 | 108 | Schema + validation + rule-based test assembly (`组卷`), TypeScript. 🔴 **The grant does not reach the content** — see below |
+
+🔴 **`open-question-bank` is this base's fourth distinct instance of a
+code-vs-content split grant**, and it is the most explicit of the four. The
+README states the MIT grant covers **the framework code and its documentation
+only**; permission to use, modify or redistribute **a bank's content** is set by
+that bank's own `bank.yaml` and source-licence fields, and the framework licence
+**grants none of it automatically**. 🔴 **The default licence for a new bank is a
+placeholder reading `"TBD - not for publication"`.**
+
+🔵 Set beside the three shapes already catalogued — `learning-commons-org/evaluators`
+(MIT code / CC BY content / **CC BY-NC-SA** corpus), `24kchengYe/human-skill-tree`
+(AGPL-3.0 platform / **MIT-at-your-option** `skills/`), `langfuse/langfuse`
+(MIT-Expat outside four `ee/` directories) — **the pattern is now stable enough to
+state as a rule: on this shelf, an education repository's licence field describes
+its code and says nothing about its items, its corpus or its curriculum.** Those
+are the assets with pedagogical value, and they are separately granted more often
+than not. 🟢 A licence *column* cannot express any of the four.
+
+### 3. 🟢 The learning-analytics dashboard gap — closed, and it was closed already
+
+Axis queried: `"learning analytics" dashboard` sorted by stars — **289 results**.
+🔴 **Zero new to this base.** What the sweep returned instead is that the gap
+published above is contradicted by two rows this repository already holds:
+
+| Repo | Licence (read from file) | ★ | Region, by named holder | Role in the stack |
+| --- | --- | --: | --- | --- |
+| [`openfun/ralph`](https://github.com/openfun/ralph) | 🟢 **MIT** (`main/LICENSE.md`, 1,094 B) | — | 🟢 **EMEA** — *"Copyright (c) 2020-present **France Université Numérique**"* | **xAPI LRS** — the store. Already on [`foundations.md`](../repos/foundations.md) |
+| [`openfun/warren`](https://github.com/openfun/warren) | 🟢 **MIT** | 17 | 🟢 **EMEA** — same operator | **xAPI learning-analytics dashboards.** Pushed `2026-10-11` |
+| [`openfun/potsie`](https://github.com/openfun/potsie) | 🟢 **MIT** (`main/LICENSE.md`, 1,094 B) | 11 | 🟢 **EMEA** — *"Copyright (c) 2021-present France Université Numérique"* | **Grafana dashboard suite** for learning analytics, Jsonnet |
+
+🟢 **A complete, single-owner, all-MIT, EMEA-institutional analytics stack**:
+store → dashboards, from a **national public operator**, with every grant read
+byte-for-byte this pass. 🟢 It is also the cleanest answer this base has to the
+EMEA institutional-provenance request in `567-A`, because the holder names itself
+in all three grants. Wired in [`../compose/patterns.md`](../compose/patterns.md).
+
+🔴 **Nothing was missing. The index of what this base holds was wrong.**
+
+### Denominators, so the nulls have a size
+
+| axis | results | new to this base |
+| --- | --: | --: |
+| `topic:psychometrics` | **510** | 🔴 **0 usable** — head is `fchollet/ARC-AGI` (4.9k★, a reasoning benchmark, off-sector); best on-sector rows already shelved |
+| `"learning analytics" dashboard` | **289** | 🔴 **0** |
+| `topic:ai-tutor` | **816** (82 pages) | 🔴 **0** |
+
+🔴 **`WebSearch` returned 0 new addresses for a fifth consecutive pass** across 8
+legs. 🟢 Every row added this pass came off **GitHub search pages read through
+`WebFetch`, sorted by stars** — `curl` to `github.com` and `api.github.com` were
+both re-probed at **403** and remain shut.
+
+---
+
 ## 2026-10-31 (fifth pass) — the capability sweep ran, and the horizontal layer is bigger than all of education open source combined
 
 **The fourth pass left an instruction: *"sweep by capability (`topic:pptx`,

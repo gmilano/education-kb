@@ -38,6 +38,62 @@ pass's own discovery query (`topic:ai-education stars:>150 pushed:>2026-10-20`)
 returns the **same 6 repositories**, all already shelved. The axis is exhausted;
 the population is not, and the capability sweep is the proof.
 
+## Sixth pass (`p568`, 2026-10-31) — no new agent qualified, and the measurement says so
+
+🔴 **The shelf is unchanged at twenty-four agents.** This pass added nothing here,
+and that is reported as a measured null rather than a quiet absence:
+
+| axis queried | results | already shelved | new agents |
+| --- | --: | --: | --: |
+| `topic:ai-tutor`, sorted by stars | **816** (82 pages) | top 10 of 10 | **0** |
+| `topic:psychometrics`, sorted by stars | **510** | — | **0** |
+| `"learning analytics" dashboard` | **289** | — | **0** |
+
+🟢 The `topic:ai-tutor` head re-read clean: `DeepTutor`, `Study-Mate`,
+`human-skill-tree`, `anki-mcp-server`, `universal-examprep-skill`, `algo-sensei`,
+`Bloom`, `universal-diagnostic-tutor-skill`, `freelingo` and `kaogong-skill` —
+**all ten already on this page or already rejected with a reason.** 🔵 `DeepTutor`
+reads **52.4k★** on the topic page against the `52,208` in the table below; that is
+a ±drift inside the documented artefact class and not a correction.
+
+🔴 **`WebSearch` returned 0 addresses new to this base for a fifth consecutive
+pass**, across 8 legs (4 global, 4 regional). Every asset this pass did add came
+off a **GitHub search page read through `WebFetch`, sorted by stars** — `curl` to
+`github.com` and `api.github.com` were both re-probed at **403**. A successor
+should spend its discovery budget accordingly.
+
+**Where the pass did pay was one layer down**, in components rather than agents —
+an item-bank gate, a lecture-video pipeline and a learning-analytics stack, all in
+[`../repos/foundations.md`](../repos/foundations.md). 🟢 **Two standing gaps on
+this page moved as a result:**
+
+- 🟢 **The assessment gap is half-closed, from the end nobody swept.** Five passes
+  searched for an item *generator* and found nothing permissive.
+  [`onionviolet/itembank`](https://github.com/onionviolet/itembank) (**MIT**, 3★,
+  **1,175 commits**) is not a generator — it is the **gate a generator must pass**:
+  a blocking linter, deterministic scoring with **no model in the scoring path**,
+  and short-answer items that are *never* auto-graded. 🔵 That property is a
+  conformity artefact for the AI Act's **Annex III** evaluation-of-learning-outcomes
+  category, which this base prices against **2 December 2027**. 🔴 Item
+  *calibration* remains genuinely open — the permissive libraries are stale and
+  the capable one is ungranted.
+- 🔴 **A gap this base was publishing had already been closed by its own shelf.**
+  [`../repos/trending.md`](../repos/trending.md) still carried *"no open-source
+  learning-analytics dashboard"* while this repository already held
+  [`openfun/warren`](https://github.com/openfun/warren) and
+  [`openfun/potsie`](https://github.com/openfun/potsie), both **MIT**, both from
+  **France Université Numérique** — the same national public operator as
+  `openfun/ralph`. 🔵 The mechanism matters more than the miss: the claim lived in
+  a narrative summary on an append-only page, and nothing re-checks those against
+  the shelf. Registered as `568-A`.
+
+🟢 **And the EMEA institutional-provenance request in `567-A` has an answer**, from
+the instrument the fifth pass built rather than from a better search: `ralph`,
+`potsie` and `warren` all name *"France Université Numérique"* in the grant
+itself. 🔴 **LATAM gained no new address this pass** — the only placed LATAM agent
+on this page, `dio-agent` (2,750★), is still **ungranted**, so the region's
+local-supply story and its build-on-it story remain about different repositories.
+
 ## The shelf
 
 | Agent | Repo | Licence | ★ | Region | What it is |

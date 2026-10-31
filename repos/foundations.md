@@ -77,6 +77,8 @@ touches.
 | [h5p/h5p-php-library](https://github.com/h5p/h5p-php-library) | GPL-3.0 | 153 | EMEA | ⛔ copyleft | The H5P interactive-content runtime. **Licence correction carried forward:** earlier passes recorded H5P as MIT. It is **GPL-3.0**. Norway. |
 | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | **MIT** (file, 1,072 B, "Jonathan Putney") | 362 | Global | ✅ permissive | "A modern SCORM JavaScript runtime library" — **SCORM 1.2, SCORM 2004 and cross-frame**, tagged `offline-first`. 85 forks, pushed 2026-10-30. **New in the fourth pass, and it closes a hole this KB never named:** three passes built the attach doctrine on LTI, MCP and xAPI and omitted **the standard the installed base actually ingests**. xAPI is the better specification; SCORM is the incumbent, it is what corporate L&D procurement asks for by name, and it is what `Selleo/mentingo` ships alongside xAPI. A permissive, maintained SCORM runtime means Globant-built courseware can be delivered into a client's existing LMS **without touching the LMS and without an xAPI migration project first.** |
 | [openfun/ralph](https://github.com/openfun/ralph) | MIT | 51 | EMEA | ✅ permissive | Learning Record Store for learning analytics; consumes xAPI statements. The permissive LRS option. France Université Numérique — same publisher as `richie` above. |
+| [openfun/warren](https://github.com/openfun/warren) | **MIT** | 17 | EMEA | ✅ permissive | **xAPI learning-analytics dashboards — the layer this page spent five passes recording as absent.** Same operator as `ralph` and `potsie`; pushed `2026-10-11`. **Added in the sixth pass**, and not because it was found: it was already recorded in [`trending.md`](trending.md) while the fifth-pass summary on that same page was still publishing *"no open-source learning-analytics dashboard"*. France Université Numérique. |
+| [openfun/potsie](https://github.com/openfun/potsie) | **MIT** (`main/LICENSE.md`, 1,094 B) | 11 | EMEA | ✅ permissive | **Grafana dashboard suite for learning analytics**, written in Jsonnet — so the dashboards are generated, reviewable and diffable rather than clicked together in a UI, which is what makes them deliverable as code. Last pushed `2024-12-18`: stable rather than active. Grant read byte-for-byte in the sixth pass, *"Copyright (c) 2021-present **France Université Numérique**"*. |
 
 ## Content, standards and evaluation layer (new this pass)
 
@@ -142,6 +144,62 @@ served entirely by permissive horizontal tooling.
 | [collabora/WhisperLive](https://github.com/collabora/WhisperLive) | **MIT** (file, 1,085 B, "Vineet Suryan, **Collabora Ltd.**") | 4,339 | **EMEA** | ✅ permissive | Near-real-time Whisper: live transcription and captioning of lectures, with TensorRT and OpenVINO backends. **Region placed from the licence file's own copyright line** — Collabora Ltd. is a UK company. Live captioning is an accessibility obligation in most EMEA higher-education estates. |
 | [gradio-app/fastrtc](https://github.com/gradio-app/fastrtc) | **MIT** (file, 1,071 B) | 4,637 | Global | ✅ permissive | *"The python library for real-time communication."* The plumbing a **spoken** tutor needs — WebRTC audio in and out with STT/TTS hooks — rather than another model. The missing piece between a text tutor and a conversational one. |
 | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** (file, 1,079 B) | 4,119 | Global | ✅ permissive | The **Free Spaced Repetition Scheduler** — a modern, ML-fitted replacement for SM-2, used as Anki's scheduler. **The retention layer's algorithm, permissively licensed**, where `anki-mcp-server` on the agent shelf only gives an agent control of the Anki *application*. 165 forks, 8 open issues. Build FSRS in; do not invent a review schedule. |
+
+## Assessment and item-bank layer (new in the sixth pass)
+
+The layer that decides whether a generated question may be put in front of a
+student. **Five passes looked for an item *generator* and recorded a gap; the
+sixth found the *gate* instead**, which is the artefact an exam board actually
+buys and the one the EU AI Act's Annex III evaluation category needs evidence of.
+
+| Repo | Licence | ★ | Region | Build-on? | What it is |
+| --- | --- | --: | --- | --- | --- |
+| [onionviolet/itembank](https://github.com/onionviolet/itembank) | **MIT** (`main/LICENSE`, 1,068 B, "Copyright (c) 2026 onionviolet") | 3 | Global | ✅ permissive | **The pick of this layer, and it would have been discarded by a star gate: 3★ against 1,175 commits on `main`.** "Author, validate and render exam-style question banks in markdown. A machine-checkable contract for LLM-authored questions." Local-first — nothing leaves the machine but an optional update check. `itembank lint` **blocks on error** per item number (each distractor must explain when it *would* be correct; answer-position skew; select-count against keyed-count; duplicate stems) and `itembank guard` **fails CI** if real banks are committed. **Scoring is deterministic with no model in the path**: short-answer items are *never* auto-graded and stay pending for rubric marking, `fill` is all-or-nothing, `check` runs learner code against hidden cases, and the README states model output is never accepted as a score. Retention is **FSRS** — the same scheduler as `fsrs4anki` below. Exports **Anki TSV, GIFT, answer-key TSV**; key-free JSON session protocol (`start`/`next`/`submit`/`report`/`teach`) built for agents. ⚠️ **Read the limits:** QTI/CASE/SCORM interchange is explicitly backburner — the README says it *"waits for a named consumer"* — the MCP surface is labelled "Phase 999.3" and unshipped, and the wider "course workspace" is not yet runnable. Python-dominant with a Rust `src-tauri/` shell. Holder is a handle; recorded Global. |
+| [sudazc/open-question-bank](https://github.com/sudazc/open-question-bank) | ⚠️ **split: code + docs MIT, bank content NOT granted** (1,063 B, "Copyright (c) 2026 sudazc") | 0 | Global | ⚠️ conditional | Schema, validation and rule-based test assembly (`组卷`), TypeScript, 108 commits. **Shelved for its licence shape rather than its traction**, which is near zero. The README is explicit that MIT covers **the framework code and its documentation only**: permission to use, modify or redistribute **a bank's content** is set by that bank's own `bank.yaml` and source-licence fields, and the framework grant conveys none of it. ⚠️ **The default licence for a new bank is a placeholder reading `"TBD - not for publication"`** — so a bank authored with this tool is unpublishable until someone sets it. README states online practice and learning records are not yet implemented. Chinese-language; the grant names a handle, so **not placed** — this page does not place an artefact on its language. |
+| [bigdata-ustc/EduCDM](https://github.com/bigdata-ustc/EduCDM) | **Apache-2.0** (11,346 B) | 203 | APAC | ✅ permissive | Model zoo of **cognitive diagnosis** models — IRT, MIRT, DINA, NCDM and others — from a named university group (USTC). **Be precise about what it does and does not do:** cognitive diagnosis infers *what a learner knows* from responses; it does **not calibrate items**. It is the live, permissive, education-specific half of the psychometrics layer, and the calibration half is the gap (see below). Last pushed 2024-10-25. |
+| [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | **MIT** (1,079 B) | 4,119 | Global | ✅ permissive | **FSRS** as an algorithm rather than an application — the modern spaced-repetition scheduler. Carried forward from the fifth pass's capability sweep and repeated here because it is the retention component both `itembank` and `braiinz-education` independently chose. |
+
+⚠️ **The honest statement of what is still missing, so nobody reads this layer as
+complete.** There is **no permissive, live, education-specific item *calibration*
+asset.** The two libraries that could calibrate an item bank —
+[`eribean/girth`](https://github.com/eribean/girth) (127★, MIT, last pushed
+**2022-09-09**) and [`inuyasha2012/pypsy`](https://github.com/inuyasha2012/pypsy)
+(242★, MIT, last pushed **2018-11-16**) — are both permissive, both capable and
+**both stale by years**. The most capable pure-psychometrics library on the axis,
+[`meyerjp3/psychometrics`](https://github.com/meyerjp3/psychometrics) (114★, Java,
+classical test theory + IRT), carries **no licence file at any of five filenames
+across three branches**. The R options are copyleft (`lavaan` GPL-2+, `blavaan`
+GPL-3). **So: author and gate items permissively today; calibrating them means
+adopting a stale dependency, taking the Java library's licence risk, or building
+it.** Say that to a client rather than implying the layer is solved.
+
+## Lecture-video layer (new in the sixth pass — the fifth pass's `topic:video` ask)
+
+**The sweep ran and the result is thin, which is itself the finding:** there is no
+open-source lecture-video product to adopt, and there *is* a well-understood
+four-stage pipeline to assemble — slides → page images → narration script → TTS
+and mux. Every stage has a permissive component already on this page.
+
+| Repo | Licence | ★ | Region | Build-on? | What it is |
+| --- | --- | --: | --- | --- | --- |
+| [galaxyproject/video-lectures](https://github.com/galaxyproject/video-lectures) | **MIT** (`master/LICENSE`, 1,071 B, "Copyright (c) 2024 Galaxy Project") | 2 | Global | ✅ permissive | **The reference pipeline and the only institutionally held row on this axis.** Pandoc turns `src/*.md` into HTML slides plus a hands-on document; `wkhtmltoimage` extracts one image per slide; `extract-script-from-html.js` pulls the narration text; `ari` muxes images and script into a narrated video; Yarn/Jake orchestrates. 67 commits on `master`, forked from `jxtx/covid-lessons`. ⚠️ **It terminates in Amazon Polly and the Jakefile needs AWS credentials** — swap the TTS stage before quoting it to any data-residency-constrained client. |
+| [jhudsl/ari](https://github.com/jhudsl/ari) | **MIT** — declared in `DESCRIPTION` (`License: MIT + file LICENSE`); the `LICENSE` file is a **40 B stub** | — | North America | ✅ permissive | The narration-and-assembly **engine** under the row above, an R package from the **Johns Hopkins Data Science Lab** — a named institution, which is what places it. ⚠️ Its grant is **not readable from `LICENSE`**: the CRAN idiom this page already records puts the licence in `DESCRIPTION` and leaves `LICENSE` holding only a year and a holder. |
+| [Changochen/slide-to-video](https://github.com/Changochen/slide-to-video) | **MIT** (1,070 B, "Copyright (c) 2024 Yongheng Chen") | — | Global | ✅ permissive | PDF deck plus a plain-text script, slides split on a `NEWSLIDE` marker, out to a narrated video. **The one row on this axis that can run with no cloud TTS at all** — it supports optional local voice cloning, which makes it the default pick for an offline or sovereignty-constrained engagement. |
+| [htlin222/slides-to-video](https://github.com/htlin222/slides-to-video) | **MIT** (1,065 B, "Copyright (c) 2026 htlin222") | — | Global | ✅ permissive | ImageMagick page images → **model-generated speaker notes** → TTS → `ffmpeg`. The only row that *drafts* the narration rather than requiring a finished script, which is the stage a content team actually wants automated. |
+
+🟢 **The substitution that makes this layer deliverable.** Three of the four rows
+end in a proprietary cloud TTS. The permissive replacements are already shelved in
+the narration layer below: [`denizsafak/abogen`](https://github.com/denizsafak/abogen)
+(**MIT**, and it emits **synchronised captions** — an accessibility deliverable,
+and the European Accessibility Act is a procurement gate across EMEA public
+education), [`Blaizzy/mlx-audio`](https://github.com/Blaizzy/mlx-audio) (**MIT**,
+Apple Silicon), and [`supertone-oss-archive/supertonic`](https://github.com/supertone-oss-archive/supertonic)
+(**MIT**, on-device, ⚠️ **archived** — the grant is perpetual, the patches are not).
+
+⛔ **Explicitly not shelved:** `harry0703/MoneyPrinterTurbo` (MIT, 136,744★) stays
+rejected on the fourth pass's reasoning — it is short-form social video, not
+lecture content, and its star count makes it the most likely thing on this axis to
+be mis-offered as courseware tooling.
 
 ## Deck and document generation — extending the fourth pass's layer
 

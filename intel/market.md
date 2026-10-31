@@ -135,6 +135,37 @@ directive suspending AI assistants**; Ontario has no ministry memorandum and onl
 province-by-province policy and procurement work, and it does not generalise
 across the border.
 
+
+**Sixth pass (`p568`) — the state-mandate wave now has a delivery component, and
+an assessment component that answers its data politics.**
+
+- **The mandates are curriculum, and curriculum is a production problem.** The
+  2026 state wave is AI *literacy* instruction with dates attached — Illinois
+  requires it for grades 6–12 **effective 2026-08-01**; Idaho's SB 1227 embeds it
+  in general education for incoming undergraduates from **Fall 2026** and requires
+  institutions to evaluate AI tools for bias; Florida's State Board approved rules
+  covering K-12 **and its 28 state colleges**; Maryland's SB 720 requires
+  statewide K-12 guidelines. 🟢 The deliverable those buy is **narrated, captioned
+  courseware at volume**, and the sixth pass placed the engine for it:
+  [`jhudsl/ari`](https://github.com/jhudsl/ari) (**MIT**, Johns Hopkins Data
+  Science Lab) with [`galaxyproject/video-lectures`](https://github.com/galaxyproject/video-lectures)
+  (**MIT**) as the reference pipeline. 🔴 Swap its Amazon Polly stage for
+  `abogen` (**MIT**) if the district's procurement asks where the audio is
+  generated — and `abogen` emits **synchronised captions**, which is an
+  accessibility line item in US K-12 procurement.
+- **Student-data politics is the real gate, and `itembank` is built for it.**
+  California's proposed **A.B. 1159** would bar training models on student data
+  unless it directly benefits the school; Idaho's law adds bias evaluation and
+  privacy duties. 🟢 [`onionviolet/itembank`](https://github.com/onionviolet/itembank)
+  (**MIT**) is **local-first with nothing leaving the machine but an optional
+  update check**, and **no model sits in its scoring path** — short-answer items
+  are never auto-graded. That is a procurement answer, not a feature.
+- 🔵 **Federal position unchanged and still non-binding:** the April 2025 executive
+  order sets priorities, and a **K-12 AI Literacy and Readiness Act** has been
+  advanced in committee — a possible funding pathway, not law. Guidance still
+  heavily outnumbers enacted statute, and the picture is state-by-state. Canada
+  remains provincial (see above); Mexico is covered under LATAM.
+
 ### EMEA
 
 **The compliance calendar has two tracks, and only one of them is live.**
@@ -293,6 +324,36 @@ away, and it is not the high-risk one.**
   procurement gate across European public education that nothing else in this KB
   answers. See pattern `P-570-B`.
 
+
+**Sixth pass (`p568`) — the strongest institutionally placed supply in this KB is
+European, and it closes the region's provenance request.**
+
+- 🟢 **A complete, all-MIT, nationally published analytics stack.**
+  [`openfun/ralph`](https://github.com/openfun/ralph) (LRS) →
+  [`openfun/warren`](https://github.com/openfun/warren) (xAPI dashboards) →
+  [`openfun/potsie`](https://github.com/openfun/potsie) (Grafana dashboards as
+  Jsonnet). All three grants read byte-for-byte this pass; all three name
+  *"Copyright (c) 2020-present / 2021-present **France Université Numérique**"*.
+  🟢 **The region is read off the grant, not inferred** — which is the instrument
+  `567-A` asked for and the cleanest institutional placement on this base.
+- 🟢 **The sellable shape: a closed analytics product on top of a copyleft
+  platform.** A ministry or university on Moodle (GPL-3.0) or Chamilo (GPL-3.0)
+  cannot have a closed derivative of the platform. It *can* have a white-labelled
+  analytics layer attached over **xAPI**, with no platform code touched. ⚠️ Price
+  it as a deployed service: `potsie`'s dashboards are MIT but **Grafana itself is
+  AGPL-3.0**, and `potsie`'s last push is **2024-12-18** — stable, not active.
+- 🟢 **Annex III conformity gets its first concrete artefact.** The Digital
+  Omnibus moved the Annex III high-risk obligations — including **evaluation of
+  learning outcomes** — to **2 December 2027**, while the **transparency duties
+  have been live since 2 August 2026**. 🟢 `itembank`'s design — deterministic
+  scoring, **no model in the scoring path**, short-answer always routed to a human
+  rubric — is evidence that an automated marking pipeline kept a human in the
+  loop. That is a conformity *deliverable*, and it is MIT. 🔴 Do not sell the
+  Annex III date as 2026; a client told that has been misadvised.
+- 🔵 **Accessibility stays the EMEA-specific technical wedge** and now has a second
+  component: `abogen` (**MIT**) produces synchronised captions, beside
+  `opendataloader-pdf`'s `eaa` / `pdf-ua` tagged-PDF output.
+
 ### APAC
 
 **The region's evidence base improved sharply this pass and is no longer
@@ -418,6 +479,40 @@ scope work against, and one of them regulates RAG directly.**
   name Google, Microsoft, IBM, Pearson and Byju's as key players. Vendor-sourced;
   quote as direction, not as figures.
 
+
+**Sixth pass (`p568`) — the live permissive psychometrics layer is Chinese and
+institutional; no new placed address, and the reason is stated.**
+
+- 🟢 **[`bigdata-ustc/EduCDM`](https://github.com/bigdata-ustc/EduCDM)
+  (**Apache-2.0**, 203★) is the one live, permissive, education-specific
+  psychometrics asset on this base**, from a named university group (USTC). ⚠️ Be
+  precise in a pitch: it does **cognitive diagnosis** — inferring what a learner
+  knows from their responses — and **not item calibration**. The calibration half
+  of that layer is genuinely missing everywhere (see
+  [`../repos/foundations.md`](../repos/foundations.md)).
+- 🔴 **No new APAC-placed address this pass.**
+  [`sudazc/open-question-bank`](https://github.com/sudazc/open-question-bank) is
+  Chinese-language (`组卷`, test assembly) but its grant names an individual
+  handle, and **this base does not place an artefact on its language.** Recorded
+  `Global`. The gap is a provenance gap, not a supply gap.
+- 🟢 **Data residency is the regional wedge, and the sixth pass added the
+  component for it.** Vietnam's AI law obliges identified systems by
+  **1 March 2027**, with a grace position for education systems already operating
+  before **15 August 2026**; Taiwan's **AI Basic Act** took effect
+  **14 January 2026**; Indonesia's **GR 71** imposes data-residency duties that
+  bear directly on EdTech hosting. 🟢
+  [`Changochen/slide-to-video`](https://github.com/Changochen/slide-to-video)
+  (**MIT**) is the only lecture-video row that runs with **no cloud TTS at all** —
+  optional local voice cloning — which pairs with `PAIDEIA` and `WordLink`'s
+  in-browser model as a fully local courseware-and-tutor story.
+- 🔵 **A cautionary adoption datum worth carrying:** South Korea's AI digital
+  textbook initiative was **walked back to optional "educational material" status
+  within about a year** after objections over screen time and data. 🔴 It is the
+  clearest available evidence that a national mandate is not a durable demand
+  signal, and it should temper any roadmap built on one. Reported via secondary
+  sources; treat as direction. Regional CAGR figures from market-research vendors
+  remain unverified and should be quoted as direction only.
+
 ### LATAM
 
 **The best-evidenced adoption-governance gap in the world, from the most
@@ -517,6 +612,48 @@ to sell on.**
   for the **offline-first and local-inference** assets (`Kolibri`, `tesseract`,
   `PAIDEIA`, `WordLink`'s in-browser model) rather than hosted-model designs in
   the region's less-resourced systems.
+
+
+**Sixth pass (`p568`) — 🔴 zero new addresses, and the demand-side case is
+stronger than the supply-side one.**
+
+- 🔴 **Supply: nothing new this pass.** Four regional WebSearch legs returned no
+  address new to this base. The only LATAM-placed education agent on this base,
+  [`digitalinnovationone/dio-agent`](https://github.com/digitalinnovationone/dio-agent)
+  (2,750★), is still **ungranted** — verified by three methods — and the
+  `measured-unusable` register still holds `ceanjonnube-negra/docente-ia`
+  (Mexico, SEP-scoped, **no grant**). 🔴 **The region's local-supply story and its
+  build-on-it story remain about different repositories**, and that must not be
+  blurred in a market slide.
+- 🟢 **Demand: the governance gap is the engagement, and it is now measured by a
+  credible source.** UNESCO launched its **Observatory on AI in Education for
+  Latin America and the Caribbean** in **Santiago on 14 April 2026**, reporting
+  that in countries such as Chile and Brazil **more than 50% of teachers already
+  use these tools while fewer than 10% of institutions have formal guidelines**.
+  🟢 That asymmetry — adoption without policy — is precisely what a studio is paid
+  to close, and it is an advisory-plus-platform engagement rather than a licence
+  sale.
+- 🟢 **The assets that answer it are already on this base, and two are new this
+  pass.** An auditable assessment-and-telemetry trail a *secretaria* can show a
+  regulator: `itembank` (**MIT**, local-first, no model in the scoring path) for
+  defensible marking, plus `ralph` (**MIT**) for an xAPI record of what was
+  actually delivered, attached to `i-educar` (GPL-2.0) — the reference Brazilian
+  municipal platform — over a standard rather than a fork.
+- 🔵 **Funding and market shape:** Google.org committed **$4.6M** with the
+  Raspberry Pi Foundation to scale *Experience AI* across nine countries
+  (Argentina, Brazil, Chile, Colombia, Dominican Republic, El Salvador, Mexico,
+  Peru, Uruguay), targeting **1.25M students by 2028**; HolonIQ's **2026 LATAM
+  EdTech 100** has **Brazil at roughly half the cohort**. 🔵 Regulation: Brazil's
+  **PL 2338/2023** remains the anchor framework with an algorithmic-impact-assessment
+  duty for high-risk deployers and the **ANPD** coordinating the national AI
+  governance system; Mexico's bill carries a digital-rights chapter and no
+  explicit prohibition tier. 🔴 Bill status moves — confirm against the Senado and
+  the Mexican Congress before a client commitment.
+- 🔵 **Counterweight already on this page:** compute and adoption gaps are
+  *widening* in the region, which argues for the offline-first assets
+  (`Kolibri`, `tesseract`, `PAIDEIA`, `WordLink`, and now
+  `Changochen/slide-to-video`'s local voice cloning) over hosted-model designs in
+  less-resourced systems.
 
 ### Global
 

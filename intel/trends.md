@@ -441,6 +441,83 @@ are both recorded `Global`, deliberately: a personal name is not a country, and
 inventing a region to fill a closed-vocabulary column is how a filter starts
 lying.
 
+## 10. The defensible-assessment trend: the gate is becoming the product, not the generator (high confidence — measured first-hand)
+
+**Five passes of this KB looked for an AI that *writes* good exam questions and
+recorded a gap. The sixth found that the thing being built instead is the
+mechanism that *refuses* bad ones** — and on reflection that is the correct
+response to the regulatory calendar, not a consolation prize.
+
+🟢 [`onionviolet/itembank`](https://github.com/onionviolet/itembank) (**MIT**, 3★,
+**1,175 commits**) describes itself as *"a machine-checkable contract for
+LLM-authored questions"*. It assumes the items are model-written and spends its
+engineering on constraining them:
+
+- a **blocking linter** per item number — every distractor must explain when it
+  *would* be correct; answer-position skew; select-count against keyed-count;
+  duplicate stems;
+- a **CI guard** that fails the build if real banks are committed;
+- **deterministic scoring with no model in the path** — `fill` all-or-nothing,
+  `check` running learner code against hidden cases, and **short-answer items
+  never auto-graded**, held pending for rubric marking.
+
+🟢 **Why this is a trend and not one repository's taste.** The same inversion shows
+up independently across this base: `learning-commons-org/evaluators` scores
+generated instructional content against **research-backed rubrics**;
+`terracotta-education/terracotta` measures whether an intervention *worked* under
+randomisation, with consent hidden from the teacher and identifiers stripped from
+exports; `Claudemy` and `ZeKaiNie/universal-examprep-skill` both make **source
+citation and anti-hallucination** the headline feature rather than fluency. 🔵 Four
+unrelated authors, one pattern: **the differentiator has moved from generation
+quality to provable constraint.**
+
+🟢 **The commercial reading, which is the point.** The EU AI Act's Annex III
+high-risk category covers **evaluation of learning outcomes**, with obligations
+landing **2 December 2027**. The artefact that category demands is not a better
+question-writer — it is **evidence that a human marked everything a machine could
+not defensibly mark**. `itembank`'s architecture is that evidence, and it is MIT.
+🟢 The same property answers the US state-policy wave from a different direction:
+local-first operation with nothing leaving the machine is a direct response to
+proposals like California's A.B. 1159 on training against student data.
+
+🔴 **The half that is genuinely still missing, stated so this is not read as
+solved.** Gating items is not calibrating them. There is **no live, permissive,
+education-specific item-calibration asset**: `eribean/girth` (MIT) last shipped
+**2022**, `inuyasha2012/pypsy` (MIT) **2018**, `meyerjp3/psychometrics` (the most
+capable, Java) carries **no licence file at all**, and the R options are copyleft.
+`bigdata-ustc/EduCDM` (Apache-2.0, 203★) is live and permissive but does
+**cognitive diagnosis, not item calibration**. 🔵 So the honest client sentence is:
+*author and gate items permissively today; calibration means a stale dependency,
+a licence risk, or building it.*
+
+## 11. A KB-hygiene trend that generalises to every industry base here: a closed gap keeps being published (measured first-hand)
+
+🔴 **The sixth pass's second finding was an error in this base, and the mechanism
+is portable enough to be worth stating as a trend.**
+
+[`../repos/trending.md`](../repos/trending.md) was still publishing *"**No
+open-source learning-analytics dashboard** still, sixth pass — only the LRS
+(`openfun/ralph`) that would feed one"* while this same repository already held
+[`openfun/warren`](https://github.com/openfun/warren) (**MIT**, 17★, pushed
+2026-10-11, *"xAPI learning-analytics dashboards"*) and
+[`openfun/potsie`](https://github.com/openfun/potsie) (**MIT**, Grafana suite) —
+from the **same publisher as `ralph` itself**.
+
+🔵 **The mechanism, which is what transfers.** The false claim lived in a
+**narrative summary at the top of an append-only page**. Append-only is the right
+policy for trend history — it is what stops an hourly pass from destroying the
+record it exists to keep — but it has a failure mode nobody instrumented: *a
+prose claim written into history keeps being read as current.* This base has
+`crosspage-figure-claims.py` comparing **figures** across pages; it has nothing
+comparing **existence claims** against the shelf.
+
+🟢 **The generalisable rule for the other industry bases in this collection:**
+every *"no X exists"* sentence is a claim with an expiry date, and it needs either
+a date stamp that marks it stale or an instrument that re-checks it against the
+shelf. 🔴 Absence claims are the highest-value and highest-risk statements a KB
+makes — a client is told to build rather than adopt on the strength of one — and
+they are the only claims here that nothing verifies. Registered as `568-A`.
+
 ## Declared gaps
 
 - **Most trend sources are vendor blogs or market-research summaries.** The load-
