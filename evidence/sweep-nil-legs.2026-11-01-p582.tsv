@@ -1,0 +1,8 @@
+leg	channel	total_count	new_live_permissive	outcome
+topic:pptx	search/repositories	1736	59	works
+topic:ocr	search/repositories	18100	33	works
+topic:pdf	search/repositories	23852	26	works
+topic:speech-to-text	search/repositories	14006	47	works
+topic:diagrams	search/repositories	1469	45	works
+web:top open source AI agents education 2026 github MIT tutoring	WebSearch	n/a	1	3 new addresses, 2 dead/archived, 1 mis-categorised
+web:AI education industry trends 2026 market size forecast independent analyst	WebSearch	n/a	0	no independent estimate; 5 commercial publishers, 2026 spread USD 6.4-11.4bn

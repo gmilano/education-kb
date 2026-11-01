@@ -1,0 +1,501 @@
+topic	address	stars	licence_spdx	pushed_at	archived	forks	description
+pptx	opendatalab/MinerU	82901	NOASSERTION	2026-10-31	false	6861	Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.
+pptx	hugohe3/ppt-master	71706	MIT	2026-10-30	false	5600	AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on deman
+pptx	docling-project/docling	69935	MIT	2026-10-31	false	5229	Get your documents ready for gen AI
+pptx	iOfficeAI/OfficeCLI	32884	Apache-2.0	2026-10-30	false	2234	OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-so
+pptx	alchaincyf/huashu-design	28323	MIT	2026-10-30	false	3070	Huashu Design 3.0 · 在 agent 里打一句话，拿回能交付的设计：网页 / App 原型 / 可编辑 PPTX / 动画 / 信息图 · 六个候选挑三个方向 · 84 种带样张的风格库 · 越用越懂你的外观账本与设计体检 · HTML-native design skill fo
+pptx	dream-num/univer	22837	Apache-2.0	2026-10-31	false	1916	The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.
+pptx	tw93/Kami	12185	MIT	2026-11-01	false	574	👩‍🚒 Good content deserves good paper. Layout rules and templates that let AI agents export PDF, PNG and editable PowerPoint.
+pptx	genspark-ai/genoffice	11448	Apache-2.0	2026-10-30	false	1586	Free, open-source AI Office suite: Docs, Sheets, Slides, PDF, Markdown and HTML editors with a built-in AI agent, plus a `genoffice` CLI and agent ski
+pptx	chuspeeism/dashi-ppt-skill	10219	AGPL-3.0	2026-09-12	false	878	An AI-agent skill that generates browser-editable presentations from multiple visual themes, exportable to HTML, PDF, and PPTX.
+pptx	pipipi-pikachu/PPTist	9451	AGPL-3.0	2026-10-31	false	1780	PowerPoint-ist（/'pauəpɔintist/）, An online presentation application that replicates most of the commonly used features of MS PowerPoint, allowing for 
+pptx	ningzimu/codex-ppt-skill	7496	MIT	2026-10-13	false	349	GPT-Image-2 PPT Generator Skill for Creating Image-Based PowerPoint Presentations in Codex and Other Skill-Compatible Agents
+pptx	ONLYOFFICE/DocumentServer	7071	AGPL-3.0	2026-10-26	false	1326	ONLYOFFICE Docs is a free collaborative online office suite comprising viewers and editors for texts, spreadsheets and presentations, forms and PDF, f
+pptx	gitbrent/PptxGenJS	6339	MIT	2025-11-28	false	967	Build PowerPoint presentations with JavaScript. Works with Node, React, web browsers, and more.
+pptx	ONLYOFFICE/DesktopEditors	5678	AGPL-3.0	2026-10-22	false	571	Open-source office suite pack that comprises all the tools you need to work with documents, spreadsheets, presentations, PDFs, and PDF forms on Window
+pptx	unidoc/unioffice	4939	NOASSERTION	2026-09-21	false	510	Pure go library for creating and processing Office Word (.docx), Excel (.xlsx) and Powerpoint (.pptx) documents
+pptx	dotnet/Open-XML-SDK	4617	MIT	2026-10-27	false	608	Open XML SDK by Microsoft
+pptx	run-llama/llama_cloud_services	4270	MIT	2026-05-18	false	459	Knowledge Agents and Management in the Cloud
+pptx	Paper2Poster/Paper2Poster	4032	MIT	2026-10-23	false	288	[NeurIPS 2025] Open-source Multi-agent Poster Generation from Papers
+pptx	open-xml-templating/docxtemplater	3646	NOASSERTION	2026-10-15	false	385	Generate docx, pptx, and xlsx from templates (Word, Powerpoint and Excel documents), from Node.js or the browser. Demo: https://www.docxtemplater.com/
+pptx	ningzimu/image-to-editable-ppt-skill	3204	MIT	2026-09-16	false	171	Codex skill for converting slide images, PDFs, and image-based PPTX files into editable PowerPoint decks.
+pptx	flyfish-dev/file-viewer	2691	Apache-2.0	2026-10-31	false	280	Preview 275+ file formats in the browser: Office, PDF, OFD, CAD, 3D, archives. Pure frontend, no server conversion. Vue / React / Svelte / Web Compone
+pptx	Player-YN/BrowserKitten	2381	MIT	2026-09-18	false	10	Paw Work - selection-first web agent for Chrome: select on the live page, describe the outcome, take away an editable office file. BYOK, sandboxed, no
+pptx	apache/poi	2283	NONE	2026-10-30	false	853	Mirror of Apache POI gitbox. The Java API for Microsoft Documents.
+pptx	dream-num/univer-workspace	2264	Apache-2.0	2026-10-31	false	220	An open-source Office workspace where people and AI agents create, collaborate, and review together.
+pptx	ranuts/document	2013	AGPL-3.0	2026-10-28	false	225	Local-first browser editor for Word, Excel, PowerPoint and PDF, with an experimental AI assistant. No Office installation or account required.
+pptx	atomiechen/THU-PPT-Theme	1741	NOASSERTION	2025-11-16	false	108	清华主题PPT模板
+pptx	baotlake/office-website	1495	AGPL-3.0	2026-04-25	false	200	Web Office: Local-First & Private. Professional-grade Word, Excel, and PowerPoint editing powered by WebAssembly. Zero data uploads, 100% client-side 
+pptx	SmartSchoolAI/ai-to-pptx	1464	GPL-3.0	2026-06-12	false	187	前端后端同时开源。 Ai-to-pptx是一个使用AI技术(DeepSeek)制作PPTX的助手，支持在线生成和导出PPTX。 主要功能: 1 使用DeepSeek等大语言模型来生成大纲 2 生成PPTX的时候可以选择不同的模板 3 支持导出PPTX
+pptx	Gabberflast/academic-pptx-skill	1420	MIT	2026-07-14	false	137	A Claude Skill for creating academic presentations (conference talks, seminar slides, thesis defenses, grant briefings). Enforces action titles, struc
+pptx	PHPOffice/PHPPresentation	1369	NOASSERTION	2026-10-19	false	548	A pure PHP library for reading and writing presentations documents 
+pptx	mokshablr/gander	1347	MIT	2026-10-31	false	67	Take a gander at any file. Offline, zero-permission Android viewer for PDF, Word, Excel, PowerPoint, ODT, RTF, ZIP, STL, photos, video, audio, Markdow
+pptx	officecli/officedex	1062	GPL-3.0	2026-10-26	false	100	OfficeDex is the first Al-Native VibeOfficing platform  for documents, slides, and spreadsheets
+pptx	SylphxAI/anymd	1059	MIT	2026-10-31	false	93	Any file → clean Markdown for AI agents: PDF, Word, PowerPoint, Excel, EPUB, HTML and web pages, images (OCR), audio and video (metadata, subtitles, t
+pptx	MaxHu-xuan/artifactproof	983	Apache-2.0	2026-08-25	false	12	Verify that the PowerPoint you are about to deliver is exactly the PPTX that passed QA—locally, offline, and with tamper-evident evidence.
+pptx	nexu-io/codex-slides	966	MIT	2026-07-21	false	83	🎨 Open-source AI slide studio inside Codex: image-native decks, every slide a full visual canvas. ⚡ 10+ high-quality slides in ~4–5 minutes — Fast mod
+pptx	sunbigfly/ppt-agent-skills	920	NOASSERTION	2026-06-08	false	92	A code-driven presentation generation framework. 像构建软件工程一样生成演示文稿。
+pptx	yukiyokotani/office-open-xml-viewer	864	MIT	2026-11-01	false	54	A browser-based viewer for Office Open XML documents that renders to an HTML Canvas element.
+pptx	ai-ppt-template/free-ppt-template	785	NOASSERTION	2026-08-31	false	176	Free AI PPT Templates — 4,000+ AI-generated presentation templates for any deck. Works with PowerPoint, Google Slides, Keynote, LibreOffice Impress, W
+pptx	limaoyi1/Auto-PPT	755	MIT	2024-04-04	false	124	Auto generate pptx using gpt-3.5, Free to use online / 通过gpt-3.5生成PPT,免费在线使用
+pptx	EvotecIT/OfficeIMO	647	MIT	2026-11-01	false	80	MIT-licensed, COM-free .NET libraries for creating, reading, editing, converting, rendering, and extracting Office, PDF, email, OneNote, and text form
+pptx	addsumtech/slides_maker	645	MIT	2026-10-31	false	59	Turn papers, code, and docs into presentation-ready, natively editable PPTX in Codex / Claude Code. Native charts and equations, speaker notes, click-
+pptx	gen2brain/go-fitz	645	AGPL-3.0	2026-07-06	false	136	Golang wrapper for the MuPDF Fitz library
+pptx	nolze/msoffcrypto-tool	627	MIT	2026-10-11	false	92	Python tool and library for decrypting and encrypting MS Office files using passwords or other keys
+pptx	criptogus/HermesOffice	622	Apache-2.0	2026-10-31	false	83	Free, open-source AI Office suite (Word, Excel, PowerPoint, PDF, Markdown) — macOS build, one-click install
+pptx	nedlir/OfficerBreaker	597	NONE	2022-08-02	false	30	OOXML password remover
+pptx	harshankur/officeParser	564	MIT	2026-10-31	false	57	A robust, strictly-typed Node.js and Browser library for parsing office files into a rich Abstract Syntax Tree (AST) and generating high-fidelity outp
+pptx	pipipi-pikachu/pptxtojson	455	MIT	2026-09-19	false	125	Office PowerPoint(.pptx) file to JSON | 将 PPTX 文件转为可读的 JSON 数据
+pptx	sunchaokun/PPT-Design-Skill	444	MIT	2026-09-16	false	25	Precision PPT design skill for OpenCode/Claude Code/Codex, with 40,000+ styles, pixel-perfect Build Mode control, AI image generation, and fully edita
+pptx	ShapeCrawler/ShapeCrawler	444	MIT	2026-10-26	false	88	PowerPoint .NET library for reading, modifying, and generating PPTX presentations without Microsoft Office
+pptx	zhouwei713/luobo-ppt	431	MIT	2026-10-22	false	80	生成和美化可编辑原生 PPT 的 Agent Skill
+pptx	Chethan616/ClearPDF	427	MIT	2026-10-30	false	30	Open-source Android PDF and document toolkit with PDF tools, Office viewing, XLSX editing, scanning, and image editing. Built with Kotlin and Jetpack 
+pptx	gotenberg/gotenberg-php	403	MIT	2026-10-27	false	22	🐘 A PHP client for interacting with Gotenberg.
+pptx	ibisjp/ibis-office	401	AGPL-3.0	2026-10-30	false	23	The next-gen Office suite built with Rust & GPUI. Blazing-fast, memory-safe, and highly accurate editing for DOCX, XLSX, and PPTX with pixel-perfect r
+pptx	atharva9167j/dom-to-pptx	387	MIT	2026-10-18	false	76	A client-side library that converts any HTML element into a fully editable PowerPoint slide. **dom-to-pptx** transforms DOM structures into pixel-accu
+pptx	laihenyi/NBLM2PPTX	348	MIT	2026-10-28	false	76	NBLM2PPTX for macOS: turn NotebookLM PDFs into editable PowerPoint on your Mac — offline, no API key, nothing uploaded. (The earlier Gemini web versio
+pptx	openooxml/betteroffice	329	Apache-2.0	2026-11-01	false	32	Native OOXML engines in Rust - DOCX, XLSX & PPTX editing, rendering and real-time collaboration, compiled to WASM for the web.
+pptx	likaku/Mck-ppt-design-skill	327	Apache-2.0	2026-05-10	false	43	Consulting firm-style PowerPoint design system for AI agents. 70 layout patterns, flat design, python-pptx. 麦麸风格PPT设计系统。
+pptx	Aixio-AI/aixio-layer-v2	312	NONE	2026-10-09	false	22	Aixio Layer v2 recovers editable layers from flat designs where possible. 150-design benchmark vs Canva Magic Layers, Qwen-Image-Layer and GPT-6 Astra
+pptx	ferdinandobons/brand-docs	290	MIT	2026-07-10	false	35	BrandDocs is a set of agent skills that learn your existing Word, PowerPoint and Excel templates and generate new on-brand documents from them. Unlike
+pptx	zouchenzhen/thesis-defense-pptx-skill	281	Apache-2.0	2026-06-05	false	19	Codex / Claude Skill for editable thesis-defense PPTX from PDF or LaTeX while preserving a PowerPoint template. 从论文 PDF / LaTeX 生成可编辑答辩 PPTX，并保留指定 PPT
+pptx	corazzon/pptx-design-styles	252	NONE	2026-03-12	false	49	pptx-design-styles
+pptx	MrXujiang/pptx	229	Apache-2.0	2026-03-19	false	56	A PPT online editor based on the web terminal ｜ 一款基于web端的ppt在线编辑器
+pptx	EveryInc/hands-on-deck	223	MIT	2026-08-04	false	18	Agent-native PowerPoint manipulation — one CLI lets AI agents inspect, edit, create, and verify .pptx files through atomic JSON patches. Packaged as a
+pptx	ShZhao27208/Aut_Sci_Write	213	NOASSERTION	2026-08-13	false	28	 Academic research skills suite for AI Agent — literature search/download (WoS+Elsevier+Springer), PDF   extraction, figure cropping, review writing, 
+pptx	hiyeshu/codeck	199	MIT	2026-08-08	false	19	No Keynote. No dragging. No font sizes.
+pptx	w1163222589-coder/slide-image-to-editable-pptx	197	MIT	2026-06-17	false	17	A Codex skill for converting slide screenshots into editable PowerPoint decks.
+pptx	mujingquan835/Dawang-ppt	192	AGPL-3.0	2026-10-31	false	11	Dawang-PPT：内容驱动的中文演示技能，融合场景规划、风格构图、浏览器编辑与本地可编辑 PPTX 导出（实验版）
+pptx	giszzt/figedit	192	MIT	2026-09-24	false	17	Turn raster figures into editable SVG and native PowerPoint files.
+pptx	heavysixer/node-pptx	190	MIT	2025-11-21	false	46	Generate PPTX files on the server-side with JavaScript.
+pptx	appautomaton/document-SKILLs	179	MIT	2026-10-15	false	12	Claude Code and Codex SKILLs for PDF, Excel, Word, and PowerPoint manipulation — extraction, forms, formulas, tracked changes, adapted from Anthropic 
+pptx	solid-shuwen/shuttleslide	175	MIT	2026-08-20	false	6	Python toolkit for PowerPoint ↔ HTML, built for AI. Round-trip fidelity preserves formatting across every edit loop — ideal for RAG ingestion, LLM age
+pptx	ningzimu/awesome-ai-ppt	174	NOASSERTION	2026-10-31	false	11	A curated list of AI PPT, PowerPoint automation, PPTX editing, and slide workflow tools.
+pptx	helloo1568/slidemuse	172	MIT	2026-10-22	false	18	视觉优先的 AI PPT Skill｜适用于挑战杯（大挑/小挑）、中国国际大学生创新大赛、全国大学生交通运输科技大赛（交科赛）、三创赛、正大杯、大创等竞赛，也适合学术汇报、论文答辩、项目路演与课程展示｜4 套风格 → 高质量幻灯片 → 可编辑 PPTX
+pptx	cherfia/chromiumly	172	MIT	2026-10-28	false	15	A lightweight Typescript library that interacts with Gotenberg's different modules to convert a variety of document formats to PDF files.
+pptx	Akxan/ppt-agent-skill	170	MIT	2026-05-11	false	49	🎨 World-class AI presentation generator · 26 styles · 18 charts · benchmarked against Linear/Anthropic/Stripe/Apple/NYT — a Claude Code Skill that tur
+pptx	EvotecIT/PSWriteOffice	165	MIT	2026-10-18	true	14	Moved to OfficeIMO. Development, releases, issues and pull requests: https://github.com/EvotecIT/OfficeIMO
+pptx	yfedoseev/office_oxide	161	Apache-2.0	2026-10-30	false	24	The fastest Office document library for Python, Rust, Go, JS/TS, C# and WASM. DOCX, XLSX, PPTX, DOC, XLS, PPT. Up to 100× faster than python-docx/open
+pptx	leonid20000/odin-slides	154	MIT	2024-02-29	false	20	This is an advanced Python tool that empowers you to effortlessly draft customizable PowerPoint slides using the Generative Pre-trained Transformer (G
+pptx	Splines/pptypst	146	MIT	2026-09-02	false	3	Bring the power of Typst to PowerPoint
+pptx	developer0hye/office2pdf	146	Apache-2.0	2026-10-28	false	23	Pure-Rust library and CLI for converting DOCX, XLSX, and PPTX files to PDF.  No LibreOffice, no Chromium, no Docker — just a single binary powered by 
+pptx	dead8309/markitdown-ts	145	MIT	2026-02-07	false	13	Convert various file formats to Markdown for indexing, text analysis, and other applications that benefit from structured text. TS port of the python 
+pptx	xiaoranlingfeng/ppt-master-zit	144	MIT	2026-10-23	false	6	ppt-master v6.7.0 fork (ppt-master-comfyui): local ComfyUI image backend — Qwen-Image-2.1 default, MOSS-Image SFT and Z-Image Turbo selectable; grill-
+pptx	touying-typ/touying-exporter	143	MIT	2025-12-13	false	12	Export presentation slides in various formats for Touying.
+pptx	ONLYOFFICE/DocumentBuilder	141	AGPL-3.0	2026-10-19	false	63	ONLYOFFICE Document Builder is powerful text, spreadsheet, presentation and PDF generating tool
+pptx	aiden0z/pptx-renderer	136	Apache-2.0	2026-10-18	false	38	High-fidelity, browser-native PPTX renderer in TypeScript. Parses OOXML into HTML/SVG DOM with rich text, shapes, images, tables, 2D charts, SmartArt,
+pptx	erdos/stencil	133	EPL-2.0	2026-09-16	false	13	templating engine for DOCX and PPTX files
+pptx	zyl-ui/vue-file-viewer	131	NONE	2025-11-01	false	24	一个基于iframe提供跨框架、多格式、纯前端渲染的文件浏览解决方案（支持格式：pptx,docx,xlsx,pdf,mp4,纯文本和图片）
+pptx	software-ai-life/Awesome-PPT-Design-Skills	128	NONE	2026-04-28	false	9	Agent-agnostic PPT design skills for creating high-end, editable presentation styles.
+pptx	ShZhao27208/Aut_Sci_ppt	122	MIT	2026-07-14	false	6	Aut_Sci_PPt is an automated agent designed to convert academic papers (PDF) or structured text into professional, presentation-ready PowerPoint files 
+pptx	fangyuanopus/literature-report-ppt-builder	121	MIT	2026-07-11	false	6	Open-source Codex skill for academic literature-report PPT generation
+pptx	DemchaAV/GraphCompose	119	MIT	2026-11-01	false	8	Declarative Java engine for structured documents. Automatic layout, pagination, reusable templates and themes. Render print-ready PDF, export editable
+pptx	deckflow/deckprobe	114	Apache-2.0	2026-09-22	false	10	ffprobe for documents — probe PDF, Microsoft Office, and Apple iWork files without opening them. Rust CLI + browser WASM SDK returning structured JSON
+pptx	officecli/officecli	113	MIT	2026-08-10	false	8	OfficeCLI is AI document generation CLI for PPTX, DOCX, XLSX, Reports, and Images. Generate editable Office files from prompts with npm install, hoste
+pptx	deckflow/deckuse	107	AGPL-3.0	2026-10-23	false	8	💻 A local-first structural editing engine for PPTX files.
+pptx	ykuwai/ppt-mcp	106	NONE	2026-10-24	false	16	The world's best PowerPoint MCP server. Real-time control of a live PowerPoint on Windows and macOS, 156 tools for AI agents
+pptx	rodrigolourencofarinha/ProDeck	105	MIT	2026-06-25	false	13	PowerPoint toolbar to streamline slide creation and editing.
+pptx	QD-academia/PostEx	102	Apache-2.0	2026-08-11	false	0	Evidence-linked Palette Fusion for distinctive, editable, and print-ready academic posters.
+pptx	ONLYOFFICE/appimage-desktopeditors	98	AGPL-3.0	2026-10-19	false	12	Portable version of ONLYOFFICE Desktop Editors 
+pptx	shobhitsharma/pptx-compose	94	NONE	2023-01-06	false	10	Parser to convert PPTX to JSON format
+pptx	Hasasasa/html-to-editable-pptx	94	MIT	2026-07-07	false	10	Convert HTML slide decks to truly editable PPT / .pptx - text stays native PowerPoint textboxes, not screenshots. Agent Skill (Claude Code / Cursor / 
+ocr	PaddlePaddle/PaddleOCR	92046	Apache-2.0	2026-09-16	false	11601	Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs
+ocr	opendatalab/MinerU	82901	NOASSERTION	2026-10-31	false	6861	Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.
+ocr	tesseract-ocr/tesseract	77283	Apache-2.0	2026-10-28	false	10883	Tesseract Open Source OCR Engine (main repository)
+ocr	hiroi-sora/Umi-OCR	48320	MIT	2025-11-20	false	4719	OCR software, free and offline. 开源、免费的离线OCR软件。支持截屏/批量导入图片，PDF文档识别，排除水印/页眉页脚，扫描/生成二维码。内置多国语言库。
+ocr	paperless-ngx/paperless-ngx	47463	GPL-3.0	2026-11-01	false	3319	A community-supported supercharged document management system: scan, index and archive all your documents
+ocr	ShareX/ShareX	40556	GPL-3.0	2026-10-31	false	4017	ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also support
+ocr	naptha/tesseract.js	38803	Apache-2.0	2026-05-17	false	2403	Pure Javascript OCR for more than 100 Languages 📖🎉🖥
+ocr	ocrmypdf/OCRmyPDF	35200	MPL-2.0	2026-10-25	false	2440	OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched
+ocr	opendataloader-project/opendataloader-pdf	30131	Apache-2.0	2026-10-30	false	2881	PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.
+ocr	JaidedAI/EasyOCR	30127	Apache-2.0	2025-12-05	false	3614	Ready-to-use OCR with 80+ supported languages and all popular writing scripts including Latin, Chinese, Arabic, Devanagari, Cyrillic and etc.
+ocr	pot-app/pot-desktop	19347	GPL-3.0	2026-07-04	true	1076	🌈一个跨平台的划词翻译和OCR软件 | A cross-platform software for text translation and recognition.
+ocr	lukas-blecher/LaTeX-OCR	16600	MIT	2025-01-18	false	1305	pix2tex: Using a ViT to convert images of equations into LaTeX code.
+ocr	Unstructured-IO/unstructured	15655	Apache-2.0	2026-10-30	false	1378	Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured 
+ocr	yusufkaraaslan/Skill_Seekers	15262	MIT	2026-09-30	false	1546	Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection
+ocr	tisfeng/Easydict	15145	GPL-3.0	2026-11-01	false	800	一个简洁优雅的词典翻译 macOS App。开箱即用，支持离线 OCR 识别，支持有道词典，🍎 苹果系统词典，🍎 苹果系统翻译，OpenAI，Gemini，DeepL，Google，Bing，腾讯，百度，阿里，小牛，彩云和火山翻译。A concise and elegant Dictionary a
+ocr	sml2h3/ddddocr	14890	MIT	2026-03-10	false	2363	带带弟弟 通用验证码识别OCR pypi版
+ocr	HIllya51/LunaTranslator	13978	GPL-3.0	2026-10-31	false	1179	视觉小说翻译器 / Visual Novel Translator
+ocr	run-llama/liteparse	12965	Apache-2.0	2026-10-31	false	894	A fast, helpful, and open-source document parser
+ocr	datalab-to/chandra	12655	Apache-2.0	2026-10-22	false	1266	OCR model that handles complex tables, forms, handwriting with full layout.
+ocr	DayBreak-u/chineseocr_lite	12355	GPL-2.0	2026-05-18	false	2272	超轻量级中文ocr，支持竖排文字识别, 支持ncnn、mnn、tnn推理 ( dbnet(1.8M) + crnn(2.5M) + anglenet(378KB)) 总模型仅4.7M 
+ocr	getomni-ai/zerox	12249	MIT	2025-05-20	false	842	OCR & Document Extraction using vision models
+ocr	dataelement/bisheng	12098	Apache-2.0	2026-10-31	false	1991	BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and comprehensive features include: GenAI workflow, RA
+ocr	pymupdf/PyMuPDF	11036	AGPL-3.0	2026-10-31	false	829	PyMuPDF is a high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents.
+ocr	CVHub520/X-AnyLabeling	10852	GPL-3.0	2026-10-31	false	1200	X-AnyLabeling: A lightweight, efficient, and unified cross-platform desktop application for annotating text, image, video, point cloud and multimodal 
+ocr	zyddnys/manga-image-translator	10559	GPL-3.0	2026-10-11	false	1082	Translate manga/image 一键翻译各类图片内文字 https://cotrans.touhou.ai/ (no longer working)
+ocr	ripperhe/Bob	9756	NONE	2025-12-30	false	519	Bob 是一款 macOS 平台的翻译和 OCR 软件。
+ocr	YaoFANGUK/video-subtitle-extractor	9680	Apache-2.0	2026-04-09	false	982	视频硬字幕提取，生成srt文件。无需申请第三方API，本地实现文本识别。基于深度学习的视频字幕提取框架，包含字幕区域检测、字幕内容提取。A GUI tool for extracting hard-coded subtitle (hardsub) from videos and generating
+ocr	bytedance/Dolphin	9066	NOASSERTION	2026-03-25	false	773	The official repo for “Dolphin: Document Image Parsing via Heterogeneous Anchor Prompting”, ACL, 2025.
+ocr	STranslate/STranslate	8462	MIT	2026-09-24	false	448	A ready-to-go translation ocr tool developed with WPF/WPF 开发的一款即用即走的翻译、OCR工具
+ocr	RapidAI/RapidOCR	8400	Apache-2.0	2026-11-01	false	765	📄 Awesome OCR multiple programing languages toolkits based on ONNX Runtime, OpenVINO, MNN, PaddlePaddle, TensorRT and PyTorch.
+ocr	jev-chat/jev-chat-jarvis	8201	MIT	2026-10-16	false	1318	The chat decision assistant: before you reply, Jev reads the chat, judges intent and risk, and drafts replies you fill in with one tap. You press send
+ocr	adithya-s-k/omniparse	7933	GPL-3.0	2025-12-12	false	675	Ingest, parse, and optimize any data format ➡️ from documents to multimedia ➡️ for enhanced compatibility with GenAI frameworks
+ocr	the-paperless-project/paperless	7912	GPL-3.0	2021-04-06	true	496	Scan, index, and archive all of your paper documents
+ocr	microsoft/ailab	7847	MIT	2024-06-26	true	1385	Experience, Learn and Code the latest breakthrough innovations with Microsoft AI
+ocr	tesseract-ocr/tessdata	7686	Apache-2.0	2024-03-09	false	2429	Trained models with fast variant of the "best" LSTM models + legacy models
+ocr	zai-org/GLM-OCR	7564	Apache-2.0	2026-10-14	false	676	GLM-OCR: Accurate ×  Fast × Comprehensive
+ocr	Zipstack/unstract	7381	AGPL-3.0	2026-10-30	false	740	LLM-Driven Extraction of Unstructured Data — Built for API Deployments & ETL Pipeline Workflows
+ocr	xushengfeng/eSearch	7377	GPL-3.0	2026-10-24	false	526	截屏 离线OCR 搜索翻译 以图搜图 贴图 录屏 万向滚动截屏 屏幕翻译   Screenshot  Offline OCR   Search   Translate   Search for picture   Paste the picture on the screen   Screen re
+ocr	LaoFeng-mouse/flyingmouse-format	6977	NOASSERTION	2026-10-14	false	572	飞鼠格式 FlyingMouse Format - Windows 免费文件格式转换工具（离线可用，内置 FFmpeg/LibreOffice/Poppler/Tesseract）。图片/文档/表格/PPT/PDF/音视频/WPS 格式互转 + OCR + 批量转换；音频仅支持普通格式。作者：牢蜂（
+ocr	clovaai/donut	6927	MIT	2024-07-11	false	562	Official Implementation of OCR-free Document Understanding Transformer (Donut) and Synthetic Document Generator (SynthDoG), ECCV 2022
+ocr	mg-chao/snow-apps	6515	NOASSERTION	2026-10-31	false	420	Snow Apps repository, providing source code for Snow Shot and Snow Image Viewer.
+ocr	oomol-lab/pdf-craft	6470	MIT	2026-11-01	false	473	PDF craft can convert PDF files into various other formats. This project will focus on processing PDF files of scanned books.
+ocr	mindee/doctr	6407	Apache-2.0	2026-10-31	false	690	docTR (Document Text Recognition) - a seamless, high-performing & accessible library for OCR-related tasks powered by Deep Learning. Ongoing developme
+ocr	PaddlePaddle/PaddleX	6290	Apache-2.0	2026-10-20	false	1223	All-in-One Development Tool based on PaddlePaddle
+ocr	axa-group/Parsr	6178	Apache-2.0	2026-03-20	false	318	Transforms PDF, Documents and Images into Enriched Structured Data
+ocr	chineseocr/chineseocr	6110	MIT	2022-08-29	false	1695	yolo3+ocr
+ocr	Swift-AI/Swift-AI	6030	MIT	2017-05-03	false	550	The Swift machine learning library.
+ocr	ramjke/Translumo	5890	Apache-2.0	2026-09-22	false	364	Advanced real-time screen translator for games, hardcoded subtitles in videos, static text and etc.
+ocr	Layout-Parser/layout-parser	5781	Apache-2.0	2024-08-15	false	529	A Unified Toolkit for Deep Learning Based Document Image Analysis
+ocr	jonaswinkler/paperless-ng	5409	GPL-3.0	2023-02-14	true	343	A supercharged version of paperless: scan, index and archive all your physical documents
+ocr	dmMaze/BallonsTranslator	5251	GPL-3.0	2026-10-31	false	359	深度学习辅助漫画翻译工具, 支持一键机翻和简单的图像/文本编辑 | Yet another computer-aided comic/manga translation tool powered by deeplearning
+ocr	TheJoeFin/Text-Grab	5065	MIT	2026-10-27	false	335	Use OCR in Windows quickly and easily with Text Grab. With optional background process and notifications.
+ocr	JabRef/jabref	4861	MIT	2026-10-31	false	3692	Desktop app for managing BibTeX and BibLaTeX (.bib) libraries
+ocr	open-mmlab/mmocr	4747	Apache-2.0	2024-11-27	false	778	OpenMMLab Text Detection, Recognition and Understanding Toolbox
+ocr	cyanfish/naps2	4727	NOASSERTION	2026-10-30	false	484	Scan documents to PDF and more, as simply as possible.
+ocr	liustack/modlens	4684	MIT	2026-10-23	false	146	The first vision plugin for DeepSeek Harness, and the vision bridge for every text-only coding agent. Paste an image, get structured JSON evidence (OC
+ocr	Tencent/TNN	4664	NOASSERTION	2025-05-09	false	771	TNN: developed by Tencent Youtu Lab and Guangying Lab, a uniform deep learning inference framework for mobile、desktop and server. TNN is distinguished
+ocr	ruvnet/RuVector	4650	MIT	2026-10-31	false	624	RuVector provides High Performance, Real-Time decisions and agent memory , Self-Learning Ai, Vector GNN DB built in Rust.
+ocr	NMAC427/SwiftOCR	4627	Apache-2.0	2020-12-13	false	474	Fast and simple OCR library written in Swift
+ocr	umlx5h/LLPlayer	4438	GPL-3.0	2026-11-01	false	277	The media player for language learning, with dual subtitles, AI-generated subtitles, real-time translation, and more!
+ocr	SteveTheKiller/KillerPDF	4262	GPL-3.0	2026-10-31	false	341	Free and open-source PDF editor for Windows with a built-in PDF 2.0 engine. View, annotate, OCR, merge, split, crop, rotate, compare, edit text, draw,
+ocr	Sumanth077/Hands-On-AI-Engineering	4070	NONE	2026-10-29	false	980	A curated collection of practical AI projects implementing OCR systems, RAG, AI agents, and other AI use cases.
+ocr	clovaai/deep-text-recognition-benchmark	3938	Apache-2.0	2024-03-04	false	1128	Text recognition (optical character recognition) with deep learning methods, ICCV 2019
+ocr	Belval/TextRecognitionDataGenerator	3699	MIT	2024-07-18	false	1012	A synthetic data generator for text recognition
+ocr	aim-uofa/AdelaiDet	3479	NOASSERTION	2024-08-23	false	652	AdelaiDet is an open source toolbox for multiple instance-level detection and recognition tasks.
+ocr	eragonruan/text-detection-ctpn	3429	MIT	2023-10-03	false	1305	text detection mainly based on ctpn model in tensorflow, id card detect, connectionist text proposal network
+ocr	clovaai/CRAFT-pytorch	3410	MIT	2024-07-16	false	920	Official implementation of Character Region Awareness for Text Detection (CRAFT)
+ocr	InkTimeRecord/TTime	3385	NOASSERTION	2024-12-15	false	201	🚀 Screenshots, word marking, OCR, AI, translation software || 截图、划词、文字识别、AI、翻译软件
+ocr	breezedeus/Pix2Text	3281	MIT	2026-08-23	false	283	An Open-Source Python3 tool with SMALL models for recognizing layouts, tables, math formulas (LaTeX), and text in images, converting them into Markdow
+ocr	deepdoctection/deepdoctection	3269	Apache-2.0	2026-10-21	false	200	A Repo For Document AI
+ocr	kerlomz/captcha_trainer	3220	Apache-2.0	2025-11-09	false	820	[验证码识别-训练] This project is based on CNN/ResNet/DenseNet+GRU/LSTM+CTC/CrossEntropy to realize verification code identification. This project is only fo
+ocr	CatchTheTornado/text-extract-api	3188	MIT	2025-12-08	false	278	Document (PDF, Word, PPTX ...) extraction and parse API using state of the art modern OCRs + Ollama supported models. Anonymize documents. Remove PII.
+ocr	hgmzhn/manga-translator-ui	3166	GPL-3.0	2026-10-27	false	150	基于manga-image-translator 实现的开源漫画AI翻译桌面工具。支持日、韩、英文漫画自动处理，集成OpenAl、Gemini等多翻译引擎；实现OCR文字检测、原文擦除、AI翻译、图像修复、译文排版完整链路，自带可视化编辑器，支持自定义文本样式，一键部署开箱即用。
+ocr	otiai10/gosseract	3138	MIT	2026-01-16	false	304	Go package for OCR (Optical Character Recognition), by using Tesseract C++ library
+ocr	AnyListen/tools-ocr	3062	LGPL-3.0	2024-05-16	false	480	树洞 OCR 文字识别（一款跨平台的 OCR 小工具）
+ocr	argman/EAST	3058	GPL-3.0	2022-11-22	false	1035	A tensorflow implementation of EAST text detector
+ocr	thiagoalessio/tesseract-ocr-for-php	3042	MIT	2026-01-27	false	555	A wrapper to work with Tesseract OCR inside PHP.
+ocr	Dicklesworthstone/llm_aided_ocr	3008	NOASSERTION	2026-10-14	false	215	Enhances Tesseract OCR output using LLMs (local or API) for error correction, smart chunking, and markdown formatting of scanned PDFs
+ocr	zcaceres/markdownify-mcp	2999	MIT	2026-10-26	false	255	A Model Context Protocol server for converting almost anything to Markdown
+ocr	ogkalu2/comic-translate	2995	Apache-2.0	2026-10-26	false	352	AI comic and manga translator app/browser extension for automatically translating comics, manga, manhwa, BDs, fumetti, and more in multiple languages 
+ocr	openrecall/openrecall	2968	AGPL-3.0	2025-09-24	false	197	OpenRecall is a fully open-source, privacy-first alternative to proprietary solutions like Microsoft's Windows Recall. With OpenRecall, you can easily
+ocr	xiaofengShi/CHINESE-OCR	2961	NONE	2026-08-21	false	940	End-to-end Chinese scene-text detection and recognition with CTPN, CRNN, and CTC (legacy project).
+ocr	ciur/papermerge	2933	Apache-2.0	2026-09-05	true	309	Open Source Document Management System for Digital Archives (Scanned Documents)
+ocr	chrisryugj/kordoc	2879	MIT	2026-11-01	false	517	모두 파싱해버리겠다 — HWP·HWPX·PDF·Office 문서를 Markdown으로. 양식 자동 채우기와 신구대조를 갖춘 CLI·MCP 서버 | Convert Korean documents (HWP, HWPX, PDF, Office) to Markdown — CLI 
+ocr	alisen39/TrWebOCR	2877	Apache-2.0	2023-06-14	false	622	开源易用的中文离线OCR，识别率媲美大厂，并且提供了易用的web页面及web的接口，方便人类日常工作使用或者其他程序来调用~
+ocr	kha-white/manga-ocr	2822	Apache-2.0	2026-07-19	false	143	Optical character recognition for Japanese text, with the main focus being Japanese manga
+ocr	ypwhs/captcha_break	2821	MIT	2022-02-25	false	666	验证码识别
+ocr	icereed/paperless-gpt	2800	MIT	2026-10-27	false	229	Use LLMs and LLM Vision (OCR) to handle paperless-ngx - Document Digitalization powered by AI
+ocr	SoMarkAI/OXR	2773	NOASSERTION	2026-10-24	false	205	An open-source document parsing model with SOTA accuracy and speed, using an RSI loop during post-training.
+ocr	dynobo/normcap	2760	NOASSERTION	2026-10-31	false	126	OCR powered screen-capture tool to capture information instead of images
+ocr	CrossPaste/crosspaste-desktop	2684	AGPL-3.0	2026-10-30	false	135	Cross-device clipboard sync for macOS, Windows & Linux — end-to-end encrypted, LAN-only, no cloud. OCR, CLI and MCP server built in.
+ocr	wxyhgk/retain-pdf	2677	MIT	2026-10-25	false	296	在保留版面、公式与结构的前提下进行 PDF 翻译，适用于科研与技术文档
+ocr	sismics/docs	2573	GPL-2.0	2026-10-17	false	720	Lightweight document management system packed with all the features you can expect from big expensive solutions
+ocr	zhoubear/open-paperless	2560	NOASSERTION	2018-12-10	false	220	 Scan, index, and archive all of your paper documents (acquired by Mayan EDMS)
+ocr	hwalsuklee/awesome-deep-text-detection-recognition	2532	Apache-2.0	2021-08-10	false	502	A curated list of resources for text detection/recognition (optical character recognition ) with deep learning methods.
+ocr	ballerine-io/ballerine	2454	NOASSERTION	2026-10-09	false	315	Open-source infrastructure and data orchestration platform for risk decisioning
+ocr	openpaperwork/paperwork	2432	NONE	2026-03-26	true	144	Personal document manager (Linux/Windows) -- Moved to Gnome's Gitlab
+ocr	landing-ai/ade-cli	2423	Apache-2.0	2026-10-30	false	257	The official CLI for Agentic Document Extraction (ADE) by LandingAI — parse documents and extract schema-shaped data from your terminal
+ocr	KartikLabhshetwar/better-shot	2422	NOASSERTION	2026-10-24	false	147	Screenshot, screen recording, and video editor for macOS. Native SwiftUI app with capture deck, 75+ customizable shortcuts, URL scheme automation, and
+ocr	heshengtao/comfyui_LLM_party	2387	AGPL-3.0	2026-07-29	false	210	LLM Agent Framework in ComfyUI includes MCP sever, Omost,GPT-sovits, ChatTTS,GOT-OCR2.0, and FLUX prompt nodes,access to Feishu,discord,and adapts to 
+pdf	microsoft/markitdown	193266	MIT	2026-10-28	false	14477	Python tool for converting files and office documents to Markdown.
+pdf	justjavac/free-programming-books-zh_CN	119462	GPL-3.0	2026-07-29	false	28261	:books: 免费的计算机编程类中文书籍，欢迎投稿
+pdf	Stirling-Tools/Stirling-PDF	95483	NOASSERTION	2026-10-31	false	10002	#1 PDF Application on GitHub that lets you edit PDFs on any device anywhere
+pdf	opendatalab/MinerU	82901	NOASSERTION	2026-10-31	false	6861	Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.
+pdf	docling-project/docling	69935	MIT	2026-10-31	false	5229	Get your documents ready for gen AI
+pdf	paperless-ngx/paperless-ngx	47463	GPL-3.0	2026-11-01	false	3319	A community-supported supercharged document management system: scan, index and archive all your documents
+pdf	hehonghui/awesome-english-ebooks	38945	NONE	2026-10-30	false	3263	经济学人(含音频)、纽约客、卫报、连线、大西洋月刊等英语杂志免费下载,支持epub、mobi、pdf格式, 每周更新
+pdf	PDFMathTranslate/PDFMathTranslate	38076	AGPL-3.0	2026-11-01	false	3419	[EMNLP 2025 Demo] PDF scientific paper translation with preserved formats - 基于 AI 完整保留排版的 PDF 文档全文双语翻译，支持 Google/DeepL/Ollama/OpenAI 等服务，提供 CLI/GUI/MC
+pdf	ocrmypdf/OCRmyPDF	35200	MPL-2.0	2026-10-25	false	2440	OCRmyPDF adds an OCR text layer to scanned PDF files, allowing them to be searched
+pdf	koreader/koreader	30777	AGPL-3.0	2026-11-01	false	2010	An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats, running on Cervantes, Kindle, Kobo, PocketBook and Android devices
+pdf	opendataloader-project/opendataloader-pdf	30131	Apache-2.0	2026-10-30	false	2881	PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.
+pdf	posquit0/Awesome-CV	28846	LPPL-1.3c	2026-10-30	false	5284	:page_facing_up: Awesome CV is LaTeX template for your outstanding job application
+pdf	koodo-reader/koodo-reader	28680	AGPL-3.0	2026-11-01	false	2148	A modern ebook manager and reader with sync and backup capacities for Windows, macOS, Linux, Android, iOS and Web
+pdf	forthespada/CS-Books	27794	NONE	2025-11-06	false	4140	🔥🔥超过1000本的计算机经典书籍、个人笔记资料以及本人在各平台发表文章中所涉及的资源等。书籍资源包括C/C++、Java、Python、Go语言、数据结构与算法、操作系统、后端架构、计算机系统知识、数据库、计算机网络、设计模式、前端、汇编以及校招社招各种面经~
+pdf	readest/readest	25795	AGPL-3.0	2026-11-01	false	1792	Readest is a modern, feature-rich ebook reader designed for avid readers offering seamless cross-platform access, powerful tools, and an intuitive int
+pdf	dream-num/univer	22837	Apache-2.0	2026-10-31	false	1916	The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime.
+pdf	firecrawl/pdf-inspector	19796	MIT	2026-10-22	false	1333	Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing de
+pdf	docusealco/docuseal	18967	AGPL-3.0	2026-10-26	false	1924	Open source DocuSign alternative. Create, fill, and sign digital documents ✍️
+pdf	storytold/pdfcraft	18950	Apache-2.0	2026-10-31	false	7140	PdfCraft: An open-source PDF reader and editor written by scratch in pure Rust
+pdf	sumatrapdfreader/sumatrapdf	17900	GPL-3.0	2026-11-01	false	2077	SumatraPDF reader
+pdf	diegomura/react-pdf	16849	MIT	2026-10-31	false	1347	📄  Create PDF files using React
+pdf	mayooear/ai-pdf-chatbot-langchain	16584	MIT	2026-03-27	true	3229	AI PDF chatbot agent built with LangChain & LangGraph 
+pdf	salomonelli/best-resume-ever	16491	MIT	2024-06-11	false	2261	:necktie: :briefcase: Build fast :rocket: and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
+pdf	iamgio/quarkdown	16344	GPL-3.0	2026-10-31	false	522	🪐 Markdown with superpowers: from ideas to papers, presentations, websites, books, and knowledge bases.
+pdf	alam00000/bentopdf	16218	AGPL-3.0	2026-10-31	false	1447	The Privacy First PDF Toolkit
+pdf	Unstructured-IO/unstructured	15655	Apache-2.0	2026-10-30	false	1378	Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured 
+pdf	documenso/documenso	15623	AGPL-3.0	2026-11-01	false	3427	The Open Source DocuSign Alternative.
+pdf	xournalpp/xournalpp	15604	GPL-2.0	2026-10-27	false	1168	Xournal++ is a handwriting notetaking software with PDF annotation support. Written in C++ with GTK3, supporting Linux (e.g. Ubuntu, Debian, Arch, SUS
+pdf	T8RIN/ImageToolbox	15278	Apache-2.0	2026-10-31	false	658	🖼️ Image Toolbox is a powerful app for advanced image manipulation. It offers dozens of features, from basic tools like crop and draw to filters, OCR,
+pdf	yusufkaraaslan/Skill_Seekers	15262	MIT	2026-09-30	false	1546	Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection
+pdf	KAYOKG/BibliotecaDev	15241	MIT	2026-10-28	false	2404	📚 Biblioteca de livros essenciais da área da programação.
+pdf	kekingcn/kkFileView	14823	NONE	2026-10-08	false	3343	Universal File Online Preview Project based on Spring-Boot
+pdf	janishar/mit-deep-learning-book-pdf	14294	NONE	2026-02-03	false	2911	MIT Deep Learning Book in PDF format (complete and parts) by Ian Goodfellow, Yoshua Bengio and Aaron Courville
+pdf	QuestPDF/QuestPDF	14217	NOASSERTION	2026-10-29	false	775	QuestPDF is a modern library for PDF document generation. Its fluent C# API lets you design complex layouts with clean, readable code. Create document
+pdf	Zettlr/Zettlr	13844	GPL-3.0	2026-10-31	false	868	Your One-Stop Publication Workbench
+pdf	gotenberg/gotenberg	13491	MIT	2026-10-31	false	897	A developer-friendly API for converting many document formats into PDF files, and more!
+pdf	run-llama/liteparse	12965	Apache-2.0	2026-10-31	false	894	A fast, helpful, and open-source document parser
+pdf	0voice/expert_readed_books	12768	NONE	2025-06-20	false	3627	2021年最新总结，推荐工程师合适读本，计算机科学，软件技术，创业，思想类，数学类，人物传记书籍
+pdf	wmjordan/PDFPatcher	12760	NONE	2026-10-23	false	1583	PDF补丁丁——PDF工具箱，可以编辑书签、剪裁旋转页面、解除限制、提取或合并文档，探查文档结构，提取图片、转成图片等等
+pdf	getomni-ai/zerox	12249	MIT	2025-05-20	false	842	OCR & Document Extraction using vision models
+pdf	windingwind/zotero-pdf-translate	12198	AGPL-3.0	2026-10-03	false	539	Translate PDF, EPub, webpage, metadata, annotations, notes to the target language. Support 20+ translate services.
+pdf	tw93/Kami	12185	MIT	2026-11-01	false	574	👩‍🚒 Good content deserves good paper. Layout rules and templates that let AI agents export PDF, PNG and editable PowerPoint.
+pdf	Kareadita/Kavita	11987	GPL-3.0	2026-11-01	false	690	Kavita is a fast, feature rich, cross platform reading server. Built with the goal of being a full solution for all your reading needs. Setup your own
+pdf	h2oai/h2ogpt	11930	Apache-2.0	2025-10-09	true	1294	Private chat with local GPT with document, images, video, etc. 100% private, Apache 2.0. Supports oLLaMa, Mixtral, llama.cpp, and more. Demo: https://
+pdf	flxzt/rnote	11823	GPL-3.0	2026-10-29	false	528	Sketch and take handwritten notes.
+pdf	libvips/libvips	11775	LGPL-2.1	2026-10-31	false	801	A fast image processing library with low memory needs.
+pdf	hmemcpy/milewski-ctfp-pdf	11705	NOASSERTION	2026-07-10	false	645	Bartosz Milewski's 'Category Theory for Programmers' unofficial PDF and LaTeX source
+pdf	wojtekmaj/react-pdf	11194	MIT	2026-10-28	false	1005	Display PDFs in your React app as easily as if they were images.
+pdf	pymupdf/PyMuPDF	11036	AGPL-3.0	2026-10-31	false	829	PyMuPDF is a high performance Python library for data extraction, analysis, conversion & manipulation of PDF (and other) documents.
+pdf	jsvine/pdfplumber	10859	MIT	2026-10-15	false	941	Plumb a PDF for detailed information about each char, rectangle, line, et cetera — and easily extract text and tables.
+pdf	py-pdf/pypdf	10281	NOASSERTION	2026-10-31	false	1677	A pure-python PDF library capable of splitting, merging, cropping, and transforming the pages of PDF files
+pdf	tpn/pdfs	10231	NONE	2026-09-30	false	1913	Technically-oriented PDF Collection (Papers, Specs, Decks, Manuals, etc) — browse & search it at tpn.github.io/pdfs
+pdf	ahrm/sioyek	9976	GPL-3.0	2026-10-31	false	398	Sioyek is a PDF viewer with a focus on textbooks and research papers
+pdf	Kozea/WeasyPrint	9750	BSD-3-Clause	2026-10-30	false	901	The awesome document factory
+pdf	papermark/papermark	9283	NOASSERTION	2026-08-28	false	1416	Papermark is the open-source DocSend alternative  and secure data rooms with built-in analytics and custom domains.
+pdf	bytedance/Dolphin	9066	NOASSERTION	2026-03-25	false	773	The official repo for “Dolphin: Document Image Parsing via Heterogeneous Anchor Prompting”, ACL, 2025.
+pdf	pdfcpu/pdfcpu	8892	Apache-2.0	2026-10-28	false	643	PDF tooling for Go and the command line.
+pdf	Hopding/pdf-lib	8663	MIT	2024-07-17	false	931	Create and modify PDF documents in any JavaScript environment
+pdf	linsa-io/books	7751	NONE	2026-03-04	false	828	Awesome Books
+pdf	PHPOffice/PHPWord	7588	NOASSERTION	2026-10-26	false	2729	A pure PHP library for reading and writing word processing documents
+pdf	tabulapdf/tabula	7493	MIT	2025-03-14	false	698	Tabula is a tool for liberating data tables trapped inside PDF files
+pdf	The-Vibe-Company/megaparse	7416	Apache-2.0	2026-10-15	false	418	File Parser optimised for LLM Ingestion with no loss 🧠 Parse PDFs, Docx, PPTx in a format that is ideal for LLMs. 
+pdf	Wandmalfarbe/pandoc-latex-template	7298	BSD-3-Clause	2026-07-04	false	1021	A pandoc LaTeX template to convert markdown files to PDF or LaTeX.
+pdf	barryvdh/laravel-dompdf	7288	MIT	2026-07-09	false	975	A DOMPDF Wrapper for Laravel
+pdf	alvarcarto/url-to-pdf-api	7104	MIT	2024-01-18	false	780	Web page PDF/PNG rendering done right. Self-hosted service for rendering receipts, invoices, or any content.
+pdf	pdfminer/pdfminer.six	7047	MIT	2026-03-13	false	1054	Community maintained fork of pdfminer - we fathom PDF
+pdf	LaoFeng-mouse/flyingmouse-format	6977	NOASSERTION	2026-10-14	false	572	飞鼠格式 FlyingMouse Format - Windows 免费文件格式转换工具（离线可用，内置 FFmpeg/LibreOffice/Poppler/Tesseract）。图片/文档/表格/PPT/PDF/音视频/WPS 格式互转 + OCR + 批量转换；音频仅支持普通格式。作者：牢蜂（
+pdf	smuyyh/BookReader	6969	Apache-2.0	2023-04-24	false	1877	:closed_book:  "任阅" 网络小说阅读器，3D翻页效果、txt/pdf/epub书籍阅读、Wifi传书~
+pdf	oomol-lab/pdf-craft	6470	MIT	2026-11-01	false	473	PDF craft can convert PDF files into various other formats. This project will focus on processing PDF files of scanned books.
+pdf	axa-group/Parsr	6178	Apache-2.0	2026-03-20	false	318	Transforms PDF, Documents and Images into Enriched Structured Data
+pdf	pdfarranger/pdfarranger	6010	GPL-3.0	2026-11-01	false	325	Small python-gtk application, which helps the user to merge or split PDF documents and rotate, crop and rearrange their pages using an interactive and
+pdf	forthespada/InterviewGuide	5958	Apache-2.0	2025-08-02	false	1643	🔥🔥「InterviewGuide」是阿秀从校园->职场多年计算机自学过程的记录以及学弟学妹们计算机校招&秋招经验总结文章的汇总，包括但不限于C/C++ 、Golang、JavaScript、Vue、操作系统、数据结构、计算机网络、MySQL、Redis等学习总结，坚持学习，持续成长！
+pdf	ciromattia/kcc	5942	ISC	2026-10-31	false	367	KCC (a.k.a. Kindle Comic Converter) is a comic and manga converter for ebook readers.
+pdf	501351981/vue-office	5753	MIT	2025-10-09	false	617	支持word(.docx)、excel(.xlsx,.xls)、pdf、pptx等各类型office文件预览的vue组件集合，提供一站式office文件预览方案，支持vue2和3，也支持React等非Vue框架。Web-based pdf, excel, word, pptx preview lib
+pdf	ONLYOFFICE/DesktopEditors	5678	AGPL-3.0	2026-10-22	false	571	Open-source office suite pack that comprises all the tools you need to work with documents, spreadsheets, presentations, PDFs, and PDF forms on Window
+pdf	KaiserY/trpl-zh-cn	5658	MIT	2026-10-30	false	733	Rust 程序设计语言（2024 edition 施工完毕）
+pdf	pdf2htmlEX/pdf2htmlEX	5608	NOASSERTION	2025-07-17	false	525	Convert PDF to HTML without losing text or format.
+pdf	qpdf/qpdf	5540	Apache-2.0	2026-09-26	false	416	qpdf: A content-preserving PDF document transformer
+pdf	laochiangx/Common.Utility	5296	NONE	2022-12-08	false	2158	Various helper class
+pdf	Hufe921/canvas-editor	5248	MIT	2026-10-31	false	871	A Canvas/SVG-based rich text editor
+pdf	grobidOrg/grobid	5205	Apache-2.0	2026-11-01	false	571	A machine learning software for extracting information from scholarly documents
+pdf	pdfme/pdfme	4963	MIT	2026-10-23	false	541	Open-source PDF generation library built with TypeScript and React. Features a WYSIWYG template designer, PDF viewer, and powerful generation capabili
+pdf	GrindGold/pdf	4844	NONE	2024-01-09	false	521	📚 计算机经典编程书籍、大黑书、编程电子书、电子书、编程书籍，包括计算机基础、C/C++、Java、Python、面试题、架构设计、算法系列等经典电子书。
+pdf	hadyang/interview	4839	GPL-3.0	2022-07-17	false	1268	Java 笔试、面试 知识整理
+pdf	prawnpdf/prawn	4825	NOASSERTION	2026-04-18	false	701	Fast, Nimble PDF Writer for Ruby
+pdf	cyanfish/naps2	4727	NOASSERTION	2026-10-30	false	484	Scan documents to PDF and more, as simply as possible.
+pdf	mpdf/mpdf	4704	GPL-2.0	2026-10-26	false	1116	PHP library generating PDF files from UTF-8 encoded HTML
+pdf	danburzo/percollate	4695	MIT	2025-08-29	false	175	A command-line tool to turn web pages into readable PDF, EPUB, HTML, or Markdown docs.
+pdf	tangtangcoding/C-C-	4655	NONE	2024-04-04	false	1155	程序员相关电子书资料免费分享，欢迎关注个人微信公众号：编程与实战
+pdf	torakiki/pdfsam	4653	AGPL-3.0	2026-10-30	false	410	PDFsam, a desktop application to split, merge, mix, rotate PDF files and extract pages
+pdf	grimmory-tools/grimmory	4636	AGPL-3.0	2026-10-31	false	356	A self-hosted library for your ebooks, comics, and audiobooks
+pdf	embedpdf/embed-pdf-viewer	4581	NOASSERTION	2026-10-31	false	326	A PDF viewer that seamlessly integrates with any JavaScript project
+pdf	guanpengchn/awesome-books	4563	MIT	2020-03-30	false	1354	:books: 开发者推荐阅读的书籍
+pdf	tecnickcom/TCPDF	4523	NOASSERTION	2026-10-24	false	1577	Deprecated: PHP PDF library, superseded by tc-lib-pdf (https://github.com/tecnickcom/tc-lib-pdf)
+pdf	jonaslejon/malicious-pdf	4506	BSD-2-Clause	2026-10-17	false	596	💀 Generate malicious PDF test files for testing phone-home callbacks, SSRF, XSS, NTLM credential theft, and data exfiltration in PDF viewers, converte
+pdf	LibrePDF/OpenPDF	4385	NOASSERTION	2026-10-12	false	717	OpenPDF is an open-source Java library for creating, editing, rendering, and encrypting PDF documents, as well as generating PDFs from HTML. It is lic
+pdf	vslavik/diff-pdf	4334	GPL-2.0	2026-10-23	false	265	A simple tool for visually comparing two PDF files
+pdf	run-llama/llama_cloud_services	4270	MIT	2026-05-18	false	459	Knowledge Agents and Management in the Cloud
+pdf	SteveTheKiller/KillerPDF	4262	GPL-3.0	2026-10-31	false	341	Free and open-source PDF editor for Windows with a built-in PDF 2.0 engine. View, annotate, OCR, merge, split, crop, rotate, compare, edit text, draw,
+pdf	hcfyapp/crx-selection-translate	4139	NONE	2022-03-22	false	526	一站式划词 / 截图 / 网页全文 / 音视频 AI 翻译扩展。
+speech-to-text	debpalash/VoiceStudio	96971	AGPL-3.0	2026-11-01	false	10755	VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook 
+speech-to-text	ggml-org/whisper.cpp	54830	MIT	2026-10-30	false	6263	Port of OpenAI's Whisper model in C/C++
+speech-to-text	cjpais/Handy	35938	MIT	2026-10-27	false	3415	A free, open source, and extensible speech-to-text application that works completely offline.
+speech-to-text	Zackriya-Solutions/meetily	32348	MIT	2026-10-31	false	3551	Privacy first AI meeting note taker. Download Free and open source granola, otter ai, fireflies alternative. Parakeet / Whisper live transcription, on
+speech-to-text	mozilla/DeepSpeech	26776	MPL-2.0	2025-06-19	true	4071	DeepSpeech is an open source embedded (offline, on-device) speech-to-text engine which can run in real time on devices ranging from a Raspberry Pi 4 t
+speech-to-text	mozilla-ai/llamafile	26535	NOASSERTION	2026-10-12	false	1674	Distribute and run LLMs with a single file.
+speech-to-text	SYSTRAN/faster-whisper	26359	MIT	2026-10-31	false	2190	Faster Whisper transcription with CTranslate2
+speech-to-text	m-bain/whisperX	24984	BSD-2-Clause	2026-10-22	false	2514	WhisperX:  Automatic Speech Recognition with Word-level Timestamps (& Diarization)
+speech-to-text	screenpipe/screenpipe	22193	NOASSERTION	2026-11-01	false	2265	YC (S26) | Open Computer History | Continuously record your company computer work, map your workflows, help you find work worth automating, and power 
+speech-to-text	Evil0ctal/Douyin_TikTok_Download_API	21030	Apache-2.0	2026-11-01	false	2934	🚀 自托管的抖音、TikTok、B 站数据采集与无水印视频下载 API，支持 AI agent 通过 MCP 调用与离线语音转文字，Docker 一键部署。| Self-hosted TikTok, Douyin & Bilibili scraper and no-watermark video d
+speech-to-text	modelscope/FunASR	20895	MIT	2026-11-01	false	2101	Open-source speech recognition toolkit for training, inference, streaming ASR, VAD, punctuation, speaker diarization pipelines, and OpenAI-compatible/
+speech-to-text	jianchang512/pyvideotrans	19602	GPL-3.0	2026-10-31	false	2427	Translate the video from one language to another and embed dubbing & subtitles.
+speech-to-text	leon-ai/leon	17627	MIT	2026-10-31	false	1477	🧠 Leon is your open-source personal assistant.
+speech-to-text	k2-fsa/sherpa-onnx	15651	Apache-2.0	2026-10-29	false	1835	Speech-to-text, text-to-speech, speaker diarization, speech enhancement, source separation, and VAD using next-gen Kaldi with onnxruntime without Inte
+speech-to-text	kaldi-asr/kaldi	15508	NOASSERTION	2025-09-22	false	5345	kaldi-asr/kaldi is the official location of the Kaldi project.
+speech-to-text	alphacep/vosk-api	15223	Apache-2.0	2026-10-15	false	1769	Offline speech recognition API for Android, iOS, Raspberry Pi and servers with Python, Java, C# and Node
+speech-to-text	huggingface/speech-to-speech	13613	Apache-2.0	2026-10-31	false	1683	Build voice agents with open-source models
+speech-to-text	abus-aikorea/voice-pro	13386	GPL-3.0	2026-07-13	false	1930	Gradio WebUI for creators and developers, featuring key TTS (Edge-TTS, kokoro) and zero-shot Voice Cloning (E2 & F5-TTS, CosyVoice), with Whisper audi
+speech-to-text	speechbrain/speechbrain	11916	Apache-2.0	2026-10-14	false	1753	A PyTorch-based Speech Toolkit
+speech-to-text	QuentinFuxa/WhisperLiveKit	11196	Apache-2.0	2026-10-31	false	1158	Real-time, local speech-to-text with streaming ASR, speaker diarization, translation, and OpenAI/Deepgram-compatible APIs.
+speech-to-text	nexmoe/VidBee	11026	MIT	2026-10-31	false	863	Download video and audio from 1000+ sites, transcribe locally with speaker labels, and summarize, translate, or chat with your media using your prefer
+speech-to-text	OpenWhispr/openwhispr	10464	MIT	2026-10-31	false	1358	Voice-to-text dictation app with local (Nvidia Parakeet/Whisper) and cloud models (BYOK). Privacy-first and available cross-platform.
+speech-to-text	KoljaB/RealtimeSTT	10222	MIT	2026-10-30	false	864	A robust, efficient, low-latency speech-to-text library with advanced voice activity detection, wake word activation and instant transcription.
+speech-to-text	QwenAudio/SenseVoice	9651	MIT	2026-09-30	false	843	Open-source SenseVoiceSmall model for Mandarin, Cantonese, English, Japanese, and Korean ASR, language ID, emotion recognition, and audio event detect
+speech-to-text	Uberi/speech_recognition	8998	BSD-3-Clause	2026-09-02	false	2415	Speech recognition module for Python, supporting several engines and APIs, online and offline.
+speech-to-text	nl8590687/ASRT_SpeechRecognition	8394	GPL-3.0	2026-04-10	false	1894	A Deep-Learning-Based Chinese Speech Recognition System 基于深度学习的中文语音识别系统
+speech-to-text	Blaizzy/mlx-audio	8168	MIT	2026-10-31	false	780	A text-to-speech (TTS), speech-to-text (STT) and speech-to-speech (STS) library built on Apple's MLX framework, providing efficient speech analysis on
+speech-to-text	Osmantic/ODS	7727	Apache-2.0	2026-11-01	false	1101	ODS V3 Pre-Release: Public testing and refinement ahead of the official V3 launch. Turn your PC, Mac, or Linux box into a private AI server.
+speech-to-text	TalAter/annyang	6820	MIT	2026-10-29	false	1045	💬 Speech recognition for your site
+speech-to-text	modelscope/FunClip	6480	MIT	2026-11-01	false	769	FunASR-powered video transcription, subtitle generation, and LLM-assisted clipping tool with a local Gradio UI.
+speech-to-text	argmaxinc/argmax-oss-swift	6438	MIT	2026-10-27	false	624	On-device Speech AI for Apple Silicon
+speech-to-text	snakers4/silero-models	6155	NOASSERTION	2026-10-15	false	378	Silero Models: pre-trained text-to-speech models made embarrassingly simple
+speech-to-text	dograh-hq/dograh	6001	BSD-2-Clause	2026-10-31	false	1536	Open source voice AI platform. Self-hosted alternative to Vapi and Retell. On Prem, BYOK across  Speech to Speech or LLM/STT/TTS, with a visual workfl
+speech-to-text	liuzhao1225/YouDub-webui	5785	Apache-2.0	2026-10-30	false	624	Open-source AI video localization and dubbing for YouTube/Bilibili: speech recognition, subtitle translation, voice cloning, audio mixing and renderin
+speech-to-text	MahmoudAshraf97/whisper-diarization	5671	BSD-2-Clause	2026-08-15	false	504	Automatic Speech Recognition with Speaker Diarization based on OpenAI Whisper
+speech-to-text	getopenscreen/openscreen	5524	MIT	2026-10-31	false	376	Record your screen, ship a demo. Free and open-source, GPU-accelerated, no watermarks, no subscriptions. Windows, macOS, Linux. Actively maintained.
+speech-to-text	AhmadHassan-BTed/B	4902	MIT	2026-07-07	false	3	An autonomous, context-aware AI desktop companion. Built with Python, featuring real-time screen vision, custom ONNX voice synthesis, active window tr
+speech-to-text	jianchang512/stt	4840	GPL-3.0	2026-01-22	false	511	Voice Recognition to Text Tool / 一个离线运行的本地音视频转字幕工具，输出json、srt字幕、纯文字格式
+speech-to-text	sanchit-gandhi/whisper-jax	4679	Apache-2.0	2024-04-03	false	409	JAX implementation of OpenAI's Whisper model for up to 70x speed-up on TPU.
+speech-to-text	gradio-app/fastrtc	4637	MIT	2026-10-21	false	438	The python library for real-time communication
+speech-to-text	tmoroney/auto-subs	4491	MIT	2026-10-30	false	317	On-device subtitle generation that connects directly to DaVinci Resolve, Premiere, and After Effects.
+speech-to-text	Open-Less/openless	4015	AGPL-3.0	2026-10-31	false	378	Hold a key, speak, release — AI-polished text appears at your cursor in any app. Open-source voice input for macOS & Windows. (按住快捷键说话，松开即得润色后的文字)
+speech-to-text	SakiRinn/LiveCaptions-Translator	4003	Apache-2.0	2026-08-17	false	290	Lightweight and powerful real-time audio/speech translation tool based on Windows LiveCaptions.
+speech-to-text	0xShug0/audio.cpp	3905	NOASSERTION	2026-11-01	false	476	An all-in-one, pure C++ inference engine for audio models, powered by ggml. Supports TTS, STT, VAD, voice conversion, music generation, and more, with
+speech-to-text	ahmetoner/whisper-asr-webservice	3371	MIT	2026-10-01	false	580	OpenAI Whisper ASR Webservice API
+speech-to-text	FluidInference/FluidAudio	3242	Apache-2.0	2026-10-31	false	500	Frontier CoreML audio models in your apps — text-to-speech, speech-to-text, voice activity detection, and speaker diarization. In Swift, powered by SO
+speech-to-text	Purfview/whisper-standalone-win	3227	NONE	2025-11-07	false	169	Whisper & Faster-Whisper standalone executables for those who don't want to bother with Python. 
+speech-to-text	ictnlp/LLaMA-Omni	3146	Apache-2.0	2025-05-19	false	224	LLaMA-Omni is a low-latency and high-quality end-to-end speech interaction model built upon Llama-3.1-8B-Instruct, aiming to achieve speech capabiliti
+speech-to-text	HeyWillow/willow	3130	Apache-2.0	2026-11-01	false	130	Open source, local, and self-hosted Amazon Echo/Google Home competitive Voice Assistant alternative
+speech-to-text	pluja/whishper	3094	AGPL-3.0	2026-07-31	false	183	Transcribe any audio to text, translate and edit subtitles 100% locally with a web UI. Powered by whisper models!
+speech-to-text	Vexa-ai/vexa	2936	Apache-2.0	2026-11-01	false	534	Open-source meeting transcription API for Google Meet, Microsoft Teams & Zoom. Auto-join bots, real-time WebSocket transcripts, MCP server for AI agen
+speech-to-text	tensorflow/lingvo	2868	Apache-2.0	2026-10-29	false	453	Lingvo
+speech-to-text	linto-ai/whisper-timestamped	2856	AGPL-3.0	2026-09-28	false	212	Multilingual Automatic Speech Recognition with word-level timestamps and confidence
+speech-to-text	iamsrikanthnani/pluely	2771	GPL-3.0	2026-10-26	false	548	The Open Source Alternative to Cluely - A lightning-fast, privacy-first AI assistant that works seamlessly during meetings, interviews, and conversati
+speech-to-text	coqui-ai/STT	2604	MPL-2.0	2024-03-11	false	295	🐸STT - The deep learning toolkit for Speech-to-Text. Training and deploying STT models has never been so easy.
+speech-to-text	microsoft/foundry-local	2604	NOASSERTION	2026-11-01	false	381	
+speech-to-text	sindresorhus/awesome-whisper	2424	CC0-1.0	2026-09-17	false	215	🔊 Awesome list for Whisper — an open-source AI-powered speech recognition system developed by OpenAI
+speech-to-text	meizhong986/WhisperJAV	2413	MIT	2026-10-30	false	203	ASR/STT subtitle generator. Uses Qwen3-ASR, local LLM, Whisper, TEN-VAD. Noise-robust for JAV
+speech-to-text	yan5xu/ququ	2289	NOASSERTION	2025-10-08	false	231	开源免费的 Wispr Flow 替代方案 | 集成FunASR本地模型和可配置大语言模型的下一代中文桌面语音工作流
+speech-to-text	jarikomppa/soloud	2190	NOASSERTION	2024-08-13	false	351	Free, easy, portable audio engine for games
+speech-to-text	pannous/tensorflow-speech-recognition	2173	NOASSERTION	2024-01-17	false	628	🎙Speech recognition using the tensorflow deep learning framework, sequence-to-sequence neural networks
+speech-to-text	anomalyco/hex	2171	MIT	2026-11-01	false	135	Local-first voice dictation for macOS. Hold a shortcut, speak, and paste into any app. Native Rust, on-device speech recognition, and a Linux beta.
+speech-to-text	handy-computer/transcribe.cpp	2118	MIT	2026-10-27	false	140	 ggml speech-to-text inference for 16+ model families
+speech-to-text	ricky0123/vad	2075	NOASSERTION	2026-09-12	false	271	Voice activity detector (VAD) for the browser with a simple API
+speech-to-text	bugbakery/audapolis	1904	AGPL-3.0	2026-06-24	false	65	an editor for spoken-word audio with automatic transcription
+speech-to-text	TypeWhisper/typewhisper-mac	1894	GPL-3.0	2026-10-31	false	153	Local speech-to-text for macOS  on-device AI, fully private, optional cloud
+speech-to-text	kalliope-project/kalliope	1789	GPL-3.0	2023-07-02	false	231	Kalliope is a framework that will help you to create your own personal assistant.
+speech-to-text	software-mansion/react-native-executorch	1783	NOASSERTION	2026-10-30	false	99	High-performance, privacy-first on-device AI inference library for React Native, powered by PyTorch's ExecuTorch runtime
+speech-to-text	mesolitica/NLP-Models-Tensorflow	1779	MIT	2020-07-20	true	710	Gathers machine learning and Tensorflow deep learning models for NLP problems, 1.13 < Tensorflow < 2.0
+speech-to-text	HanyuanWang/LiveStream-Agent-Studio	1776	MIT	2026-08-24	false	203	面向抖音直播电商的 Windows 本地 AI Agent Studio，贯通主播发现、直播洞察、直播复盘与短视频内容编导的统一智能工作流。
+speech-to-text	peteonrails/voxtype	1727	MIT	2026-10-31	false	199	Voice-to-text with push-to-talk for Wayland compositors
+speech-to-text	mkiol/dsnote	1707	MPL-2.0	2026-10-30	false	76	Speech Note Linux app. Note taking, reading and translating with offline Speech to Text, Text to Speech and Machine translation.
+speech-to-text	techjarves/Portable-Local-Studio	1679	MIT	2026-11-01	false	412	Portable local AI studio for Windows, Linux, and macOS. Zero-setup GUI for Image Generation, GGUF LLMs, Text to Speech & Speech to Text
+speech-to-text	Olcmyk/HuChenFeng	1670	MIT	2026-02-17	false	188	收集户晨风的所有内容
+speech-to-text	royshil/obs-localvocal	1656	GPL-2.0	2026-10-15	false	130	OBS plugin for local speech recognition and captioning using AI
+speech-to-text	waybarrios/vllm-mlx	1644	Apache-2.0	2026-10-26	false	234	High-performance OpenAI and Anthropic compatible LLM inference server for Apple Silicon. Native MLX, continuous batching, multimodal models, MCP tool 
+speech-to-text	isaackogan/TikTokLive	1618	AGPL-3.0	2026-10-20	false	308	TikTok LIVE API for Python: The definitive 3rd-party library to receive livestream events (comments, gifts, etc.) in realtime from TikTok LIVE.
+speech-to-text	QwenAudio/Fun-ASR	1594	Apache-2.0	2026-10-12	false	158	Fun-ASR speech recognition models, with native Hugging Face Transformers support for Fun-ASR-Nano and separate FunASR, vLLM and llama.cpp deployment p
+speech-to-text	silverstein/minutes	1582	MIT	2026-10-31	false	180	Open-source, local-first Granola/Otter alternative that Claude Code, Codex, Cursor, and any MCP client can query. Meetings, calls, and voice memos tra
+speech-to-text	amicalhq/amical	1580	MIT	2026-10-27	false	144	🎙️ AI Dictation App - Open Source and Local-first ⚡ Type 3x faster, no keyboard needed. 🆓 Powered by open source models, works offline, fast and accur
+speech-to-text	NVIDIA/OpenSeq2Seq	1560	Apache-2.0	2021-05-11	true	372	Toolkit for efficient experimentation with Speech Recognition, Text2Speech and NLP
+speech-to-text	AlekPet/ComfyUI_Custom_Nodes_AlekPet	1535	MIT	2026-10-30	false	97	Custom nodes that extend the capabilities of Comfyui
+speech-to-text	Muesli-HQ/muesli	1511	MIT	2026-10-31	false	152	Muesli: agent-native local meeting transcription + dictation for macOS (Granola + WisprFlow alternative)
+speech-to-text	zackees/transcribe-anything	1482	MIT	2026-10-26	false	146	Multi-backend whisper app. Blazing fast. Mac-arm optimized. Easy install. Input a local file or url and this service will transcribe it using Whisper 
+speech-to-text	ARahim3/mlx-tune	1454	Apache-2.0	2026-06-23	false	101	Fine-tune LLMs on your Mac with Apple Silicon. SFT, DPO, GRPO, Vision, TTS, STT, Embedding, and OCR fine-tuning — natively on MLX. Unsloth-compatible 
+speech-to-text	R3gm/SoniTranslate	1422	Apache-2.0	2026-08-29	false	351	Synchronized Translation for Videos. Video dubbing
+speech-to-text	coqui-ai/open-speech-corpora	1410	MIT	2024-06-06	false	152	💎 A list of accessible speech corpora for ASR, TTS, and other Speech Technologies
+speech-to-text	DragonComputer/Dragonfire	1410	MIT	2022-11-21	false	207	the open-source virtual assistant for Ubuntu based Linux distributions
+speech-to-text	Softcatala/whisper-ctranslate2	1368	MIT	2026-10-05	false	126	Whisper command line client compatible with original OpenAI client based on CTranslate2.
+speech-to-text	Capsize-Games/airunner	1319	GPL-3.0	2026-11-01	false	103	Offline inference engine for art, real-time voice conversations, LLM powered chatbots and automated workflows
+speech-to-text	Robitx/gp.nvim	1317	MIT	2025-08-11	false	132	Gp.nvim (GPT prompt) Neovim AI plugin: ChatGPT sessions & Instructable text/code operations & Speech to text [OpenAI, Ollama, Anthropic, ..]
+speech-to-text	ictnlp/StreamSpeech	1294	MIT	2025-06-29	false	105	StreamSpeech is an “All in One” seamless model for offline and simultaneous speech recognition, speech translation and speech synthesis.
+speech-to-text	sdkcarlos/artyom.js	1269	MIT	2023-01-24	false	360	A voice control - voice commands - speech recognition and speech synthesis javascript library. Create your own siri,google now or cortana with Google 
+speech-to-text	goodroot/hyprwhspr	1267	MIT	2026-10-31	false	111	 Native speech-to-text for Linux - Fast, accurate, private, and hackable system-wide dictation
+speech-to-text	modal-labs/quillman	1212	MIT	2026-10-30	false	161	A voice chat app 
+speech-to-text	Kyubyong/dc_tts	1160	Apache-2.0	2023-04-14	false	359	A TensorFlow Implementation of DC-TTS: yet another text-to-speech model
+speech-to-text	Kieirra/murmure	1143	AGPL-3.0	2026-10-29	false	104	Fully local, private and cross platform Speech-to-Text with LLM Post-processing
+speech-to-text	ardha27/AI-Waifu-Vtuber	1122	NONE	2026-05-31	false	179	AI Vtuber for Streaming on Youtube/Twitch
+speech-to-text	Saik0s/Whisperboard	1110	GPL-3.0	2025-12-18	false	118	The open-source iOS app that's making quality voice transcription more accessible on mobile devices.
+speech-to-text	savbell/whisper-writer	1107	GPL-3.0	2024-08-24	false	201	💬📝 A small dictation app using OpenAI's Whisper speech recognition model.
+diagrams	excalidraw/excalidraw	134943	MIT	2026-10-31	false	15943	Virtual whiteboard for sketching hand-drawn like diagrams
+diagrams	tt-a1i/archify	92173	Apache-2.0	2026-10-31	false	6286	Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.
+diagrams	mermaid-js/mermaid	90955	MIT	2026-10-31	false	9441	Generation of diagrams like flowcharts or sequence diagrams from text in a similar manner as markdown
+diagrams	cathrynlavery/diagram-design	63521	MIT	2026-10-27	false	4170	Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No
+diagrams	AykutSarac/jsoncrack.com	44591	Apache-2.0	2026-09-14	false	3584	✨ Innovative and open-source visualization application that transforms various data formats, such as JSON, YAML, XML and CSV into interactive graphs.
+diagrams	DayuanJiang/next-ai-draw-io	36529	Apache-2.0	2026-11-01	false	3815	Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
+diagrams	d2lang/d2	25774	MPL-2.0	2026-10-11	false	777	D2 is a modern diagram scripting language that turns text to diagrams.
+diagrams	plantuml/plantuml	13390	LGPL-3.0	2026-10-31	false	1267	Generate diagrams from textual description
+diagrams	alyssaxuu/flowy	12150	MIT	2024-07-13	false	1045	The minimal javascript library to create flowcharts ✨
+diagrams	yizhiyanhua-ai/fireworks-tech-graph	11905	MIT	2026-10-21	false	935	Generate production-quality SVG+PNG technical diagrams from natural language. 7 styles, UML support, and AI/Agent workflow patterns.
+diagrams	projectstorm/react-diagrams	9436	MIT	2025-04-03	false	1178	a super simple, no-nonsense diagramming library written in react that just works
+diagrams	penrose/penrose	8010	MIT	2026-10-31	false	362	Create beautiful diagrams just by typing notation in plain text.
+diagrams	hedgedoc/hedgedoc	7501	AGPL-3.0	2026-10-29	false	611	HedgeDoc - Ideas grow better together
+diagrams	bcakmakoglu/vue-flow	6926	MIT	2026-07-14	false	410	A highly customizable Flowchart component for Vue 3. Features seamless zoom & pan 🔎, additional components like a Minimap 🗺 and utilities to interact 
+diagrams	mermaid-js/mermaid-live-editor	6885	MIT	2026-10-30	false	1185	Edit, preview and share mermaid charts/diagrams. New implementation of the live editor.
+diagrams	likec4/likec4	5998	MIT	2026-10-31	false	414	Visualize, collaborate, and evolve the software architecture with always actual and live diagrams from your code
+diagrams	apertureless/vue-chartjs	5718	MIT	2026-10-31	false	801	📊  Vue.js wrapper for Chart.js
+diagrams	alexlenail/NN-SVG	5693	MIT	2026-06-02	false	747	Publication-ready NN-architecture schematics. 
+diagrams	mermaid-js/mermaid-cli	5142	MIT	2026-10-28	false	395	Command line tool for the Mermaid library
+diagrams	yuzutech/kroki	4390	MIT	2026-10-30	false	325	Creates diagrams from textual descriptions!
+diagrams	obsidianmd/pele	3977	NOASSERTION	2026-10-31	false	120	Renders Mermaid diagrams faster than you'd run from a volcano! 🌋 
+diagrams	oh-my-mermaid/oh-my-mermaid	3369	MIT	2026-04-07	false	268	Turn complex codebases into clear, navigable architecture diagrams with Claude Code.
+diagrams	open-source-labs/Svelvet	2779	NONE	2025-02-13	false	179	🎛 A Svelte library for building dynamic, infinitely customizable node-based user interfaces and flowcharts
+diagrams	philippemerle/KubeDiagrams	2727	Apache-2.0	2026-10-28	false	178	Generate Kubernetes architecture diagrams from Kubernetes manifest files, kustomization files, Helm charts, helmfiles, and actual cluster state
+diagrams	antonioru/beautiful-react-diagrams	2724	MIT	2022-12-12	false	170	💎 A collection of lightweight React components and hooks to build diagrams with ease 💎
+diagrams	reaviz/reaflow	2495	Apache-2.0	2025-06-04	false	158	🎯 React library for building workflow editors, flow charts and diagrams. Maintained by @goodcodeus.
+diagrams	awslabs/diagram-maker	2420	Apache-2.0	2023-04-26	true	137	A library to display an interactive editor for any graph-like data.
+diagrams	dvgodoy/dl-visuals	1562	CC-BY-4.0	2021-07-11	false	129	Over 200 figures and diagrams of the most popular deep learning architectures and layers FREE TO USE in your blog posts, slides, presentations, or pap
+diagrams	gantFDT/icraft	1559	NOASSERTION	2025-12-31	false	138	iCraft Editor - Help you easily create excellent 3D architecture diagrams
+diagrams	MrBlenny/react-flow-chart	1555	MIT	2022-12-30	false	302	🌊 A flexible, stateless, declarative flow chart library for react.
+diagrams	mtolhuys/laravel-schematics	1482	MIT	2026-08-20	true	130	Archived Laravel package for visually designing Eloquent models and relationships.
+diagrams	icebird1998/drawio-scientific-illustrator	1464	MIT	2026-07-30	false	101	Live MCP control of the visible draw.io canvas for step-by-step scientific illustration in Codex.
+diagrams	Blazor-Diagrams/Blazor.Diagrams	1417	MIT	2026-03-02	false	262	A fully customizable and extensible all-purpose diagrams library for Blazor
+diagrams	kennethleungty/Neural-Network-Architecture-Diagrams	1199	MIT	2025-04-12	false	523	Diagrams for visualizing neural network architecture
+diagrams	jbyuki/venn.nvim	1194	MIT	2024-08-16	false	29	Draw ASCII diagrams in Neovim
+diagrams	casparwylie/cascii-core	1177	NONE	2026-02-17	false	26	A web-based ASCII and Unicode diagram builder written in vanilla Javascript
+diagrams	fletcher-package/fletcher	1148	MIT	2026-10-25	false	37	Typst package for drawing diagrams with arrows, built on top of CeTZ.
+diagrams	AlexeyBoiko/DgrmJS	1132	Apache-2.0	2026-10-08	false	113	Dgrm.net - flowchart editor. Works on desktop, phone and tablet. Has no dependency. Pure JavaScript.
+diagrams	algenty/grafana-flowcharting	1044	Apache-2.0	2023-04-12	false	151	Flowcharting, plugin for Grafana to create complexe visio's draws style like technical architectures, floorplan, diagrams, hierarchical schema based o
+diagrams	bhdicaire/visioStencils	1028	Unlicense	2025-04-07	false	413	4,486 visio :art: shapes, stencils, symbols, and icons collection to visually represent your IT infrastructure
+diagrams	eclipse-sprotty/sprotty	887	EPL-2.0	2026-10-31	false	85	A diagramming framework for the web
+diagrams	Cloud-Architects/cloudiscovery	828	Apache-2.0	2024-06-18	false	90	The tool to help you discover resources in the cloud environment
+diagrams	Enter-tainer/cxx2flow	823	MIT	2026-04-06	false	66	将 C/C++ 代码转换成流程图 / Turn your C/C++ code into flowchart
+diagrams	Aryanutkarsh/SeeCode	795	MIT	2026-10-26	false	49	Animated, explorable diagrams for Claude and other coding agents, from a short JSON spec.
+diagrams	rgleichman/glance	736	Apache-2.0	2022-03-20	false	18	A visual Haskell
+diagrams	PCGEx/PCGExtendedToolkit	709	MIT	2026-10-31	false	103	 The missing pieces for Unreal's PCG. Graph theory, advanced pathfinding, spatial ops, filtering, asset management, and more. 
+diagrams	jodigiordano/gg	699	MIT	2025-06-12	false	19	The diagramming tool for flowcharts, mindmaps, user flows, network & cloud diagrams, and more!
+diagrams	worktile/plait	699	MIT	2026-09-23	false	61	A completely customizable framework for building all-in-one drawing whiteboard
+diagrams	DucPhamNgoc08/CodeVisualizer	696	MIT	2026-09-13	false	67	CodeVisualizer is a powerful VS Code extension that provides two main visualization capabilities: function-level flowcharts for understanding code con
+diagrams	sparklabx/drawio-ai-kit	666	MIT	2026-10-12	false	126	Teach your AI to draw correct, beautiful draw.io diagrams — declarative layout engine, ground-truth stencils, structural validator, vision self-check.
+diagrams	MarcoEidinger/SwiftPlantUML	646	MIT	2024-05-07	false	45	A command-line tool and Swift Package for generating class diagrams powered by PlantUML
+diagrams	bybit-exchange/svg-diagram	641	MIT	2026-09-03	false	44	Agent skill that draws architecture, flowchart, sequence, data-flow and lifecycle diagrams as hand-placed SVG, to one linted house style.
+diagrams	JuliaGraphics/Luxor.jl	631	NOASSERTION	2026-10-26	false	71	Simple drawings using vector graphics; Cairo "for tourists!"
+diagrams	adrianvlupu/C4-Builder	627	MIT	2024-03-11	false	107	This is a documentation builder. You feed it .md and .puml and it exports a site, pdf, or a markdown with navigation.
+diagrams	3rd/tsdiagram	588	GPL-3.0	2026-10-14	false	24	Create diagrams and plan your code with TypeScript.
+diagrams	lucasepe/draft	578	MIT	2021-09-08	true	26	Generate High Level Cloud Architecture diagrams using YAML syntax.
+diagrams	philippemerle/Awesome-Kubernetes-Architecture-Diagrams	572	CC0-1.0	2026-06-30	false	49	Awesome Kubernetes Architecture Diagrams
+diagrams	fasouto/termaid	569	MIT	2026-10-29	false	31	Render Mermaid diagrams in your terminal or Python app
+diagrams	d2lang/text-to-diagram-site	563	GPL-3.0	2026-10-06	false	29	Compare syntax, layouts, outputs between languages for generating diagrams with text.
+diagrams	Cvaniak/NoteSH	489	MIT	2025-10-05	false	19	NoteSH fully functional sticky notes App in your Terminal! 
+diagrams	goadesign/model	467	MIT	2026-10-30	false	23	Create your software architecture models and diagrams in Go.
+diagrams	Sayhi-bzb/CharDesk	448	MIT	2026-10-22	false	5	A Unicode canvas for humans and AI. Draw diagrams, interfaces, and slides as editable text.
+diagrams	discopy/discopy	442	BSD-3-Clause	2026-10-29	false	79	The Python toolkit for computing with string diagrams.
+diagrams	negrinho/sane_tikz	432	MIT	2020-11-18	false	37	Reconquer the canvas: beautiful Tikz figures without clunky Tikz code
+diagrams	MerrimanInd/drawpyo	413	MIT	2026-10-16	false	59	A Python library for programmatically generating Draw.io charts.
+diagrams	mgaitan/sphinxcontrib-mermaid	412	NOASSERTION	2026-10-31	false	116	Mermaid diagrams in yours sphinx powered docs
+diagrams	dmytrostriletskyi/diagrams-as-code	403	MIT	2024-05-27	false	23	Diagrams as code: declarative configurations using YAML for drawing cloud system architectures.
+diagrams	ramortegui/e-commerce-db	376	GPL-3.0	2018-12-26	false	176	Database schema for e-commerce (webstores) sites.
+diagrams	yunshenwuchuxun/smart-drawio-next	367	MIT	2026-10-14	false	48	Editable Draw.io diagrams for research and architecture: Next.js web app, Agent Skill, and local MCP server.
+diagrams	nehalineogi/azure-networking	365	NONE	2026-05-20	false	163	Layered and Re-usable Azure Designs and Architectures
+diagrams	lukilabs/beautiful-mermaid-swift	365	MIT	2026-04-27	false	25	Native Mermaid diagram renderer for Swift
+diagrams	feluelle/airflow-diagrams	361	Apache-2.0	2026-10-26	false	32	Auto-generated Diagrams from Airflow DAGs. 🔮 🪄
+diagrams	d2lang/d2-vscode	331	BSD-3-Clause	2026-08-03	false	22	VSCode extension for D2 files.
+diagrams	vahidvdn/realworld-design-patterns	329	NONE	2026-03-15	false	22	Design Patterns with real world examples in TypeScript, practical diagrams and unit tests ✅
+diagrams	d2lang/d2-obsidian	319	MPL-2.0	2026-08-03	false	29	The official D2 plugin for Obsidian. D2 is a modern diagram scripting language thats turns text to diagrams.
+diagrams	terrastruct/TALA	304	NOASSERTION	2025-08-19	true	16	A diagram layout engine designed specifically for software architecture diagrams
+diagrams	soulspace-org/overarch	301	EPL-1.0	2026-10-31	false	9	Overarch provides a data model for the holistic description of a software system, opening multiple use cases on the model data. Supports C4 and UML di
+diagrams	NicklasVraa/Draw-io-ECE	296	GPL-3.0	2024-08-17	false	44	Custom-made draw.io-shapes - in the form of an importable library - for drawing circuits and conceptual drawings in draw.io.
+diagrams	d2lang/d2-docs	293	BSD-3-Clause	2026-10-06	false	41	Language documentation and blog for D2.
+diagrams	huytd/ascii-d	290	BSD-3-Clause	2023-04-06	false	13	A cross-platform ASCII diagram drawing app https://web.ascii-draw.com
+diagrams	HariSekhon/Diagrams-as-Code	283	MIT	2026-10-12	false	55	Cloud & DevOps Architecture Diagrams-as-Code in Python, D2 and MermaidJS languages
+diagrams	dcasati/kubernetes-PlantUML	280	MIT	2021-09-10	false	55	Kubernetes diagrams using VS Code
+diagrams	jihchi/mermaid.ink	253	MIT	2026-10-31	false	54	An open-source service that generates image URLs for diagrams based on the provided Mermaid code.
+diagrams	alnitak/flutter_flow_chart	244	MIT	2025-12-17	false	67	A #Flutter package that let you draw a flow chart diagram with different kind of customizable elements
+diagrams	yWorks/yfiles-jupyter-graphs	243	NOASSERTION	2026-08-10	false	22	The home of the Jupyter notebook graph visualization widget powered by yFiles for HTML
+diagrams	russellrosario/JavaScripter	238	NONE	2020-04-10	false	91	Helping junior developers navigate the complex world of software engineering without experiencing information overload.
+diagrams	asciitosvg/asciitosvg	226	MIT	2022-11-26	false	16	Create beautiful SVG renderings of ASCII diagrams.
+diagrams	rstudio/nomnoml	221	NOASSERTION	2024-12-11	false	17	Sassy 'UML' Diagrams for R
+diagrams	octo-technology/kubernetes-icons	215	Apache-2.0	2018-05-22	true	62	[obsolete] Set of icons for Kubernetes diagrams, has been merged into official k8s repo!!
+diagrams	FriendlyUser/LatexDiagrams	209	MIT	2024-09-03	false	28	Latex Diagrams that I have generated/taken from internet.
+diagrams	Rexeh/joystick-diagrams	208	GPL-2.0	2026-10-25	false	30	Automatically create hardware-accurate visual reference cards for your HOTAS bindings. Supports DCS World, MSFS, Star Citizen, IL-2, Joystick Gremlin,
+diagrams	keadex/keadex	204	MIT	2026-10-23	false	6	Monorepo containing Keadex applications and libraries.
+diagrams	TinyRetroWarehouse/Awesome-Retro-Docs	196	NONE	2021-03-05	false	24	A curated collection of technical documentation for Arcades, Handhelds, Consoles, Computers and MCU’s.
+diagrams	k1LoW/ndiag	195	MIT	2026-10-18	false	11	ndiag is a high-level architecture diagramming/documentation tool.
+diagrams	bollu/cellularAutomata	189	BSD-3-Clause	2019-05-28	false	13	a collection of cellular automata written in Haskell with Diagrams
+diagrams	giacomomarchioro/PyEnergyDiagrams	187	MIT	2025-07-25	false	64	This is a simple script to plot energy profile diagrams using Python and matplotlib.
+diagrams	tianfuzhibuyuci/readme-visual-kit	173	MIT	2026-10-28	false	2	把带源码依据的项目说明变成三张 README 图：功能流程、简化架构、快速上手。本地 SVG 渲染器 + Agent Skill，无需 API Key。
+diagrams	kamiazya/rediagram	172	MIT	2024-01-17	false	10	Markup and draw your system diagrams with React.
+diagrams	d2lang/d2-vim	171	BSD-3-Clause	2026-08-02	false	12	The Vim plugin for D2 files
+diagrams	kaminzo/c4-draw.io	162	NONE	2024-02-27	false	41	Draw.io template/diagram containing C4 Model shapes. Drawio Diagrams.net

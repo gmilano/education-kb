@@ -4,6 +4,87 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `2026-11-01` — `p582` — **the corrected query form, run across the five topics `p581` prescribed: `27` new permissive live rows — and the repo that dethrones this base's "largest permissive" claim is a Microsoft document converter at `193,266★`**
+
+🟢 **The sweep `p581` prescribed was run in full.** Five capability topics —
+`topic:pptx`, `topic:ocr`, `topic:pdf`, `topic:speech-to-text`, `topic:diagrams` — each
+queried singly with `sort=stars`, licence and `pushed_at` filtered client-side. 🟢 **Not
+one collapsed.** The corrected form is confirmed as the working instrument:
+
+| topic | `total_count` | fetched | new permissive + live |
+|---|--:|--:|--:|
+| `topic:pptx` | `1,736` | 100 | **59** |
+| `topic:ocr` | `18,100` | 100 | **33** |
+| `topic:pdf` | `23,852` | 100 | **26** |
+| `topic:speech-to-text` | `14,006` | 100 | **47** |
+| `topic:diagrams` | `1,469` | 100 | **45** |
+
+🔵 **Compare with `p581`'s six crossed forms, which returned `0` six times out of six.**
+Same base, same session, same endpoint — the only change is dropping the education topic
+from the intersection. **This is now settled method, not a hypothesis.**
+
+### 🔴 Correction this base must carry: the "largest permissive repository" claim is wrong
+
+This base states, in five places across four pages, that `hugohe3/ppt-master` (MIT,
+`71,498★`) is *"the largest permissively licensed repository anywhere in this knowledge
+base."* 🔴 **It is not, and the row that beats it came from `topic:pdf` on the first page
+of results:**
+
+| | repo | licence | stars | ratio |
+|---|---|---|--:|--:|
+| 🆕 | [microsoft/markitdown](https://github.com/microsoft/markitdown) | 🟢 **MIT** | **193,266** | — |
+| superseded | `hugohe3/ppt-master` | MIT | `71,498` | `2.7×` smaller |
+| for scale | `HKUDS/DeepTutor` | Apache-2.0 | `52,956` | `3.6×` smaller |
+
+🟢 **And unlike `ppt-master`, this row's provenance is attributable:** the owner is
+**Microsoft**, so it is placed **North America** on owner identity rather than left at
+"Global / provenance unknown" — the distinction this base drew in `p581`. 🔵 Note also
+that `DeepTutor` was re-measured at **`52,956★`** this pass, against `~24,000★` in the
+base's own cycle-3 notes: **the education agent tier has roughly doubled while the base
+was measuring other things.**
+
+### 🟢 New agent-shaped row — multi-agent, and academic by design
+
+| Repo | Licence | Stars | Forks | Last push | Region | What it is |
+|---|---|--:|--:|---|---|---|
+| [Paper2Poster/Paper2Poster](https://github.com/Paper2Poster/Paper2Poster) | 🟢 **MIT** | **4,032** | 288 | `2026-10-23` | Global | **NeurIPS 2025.** Multi-agent generation of conference posters from a paper; topics `agent`, `multi-agent-systems`, `pptx`, `task-automation` |
+
+🔵 **Why only one row reaches this page out of `27`.** The rest are libraries and
+capabilities, not agents, and they are shelved on
+[`../repos/foundations.md`](../repos/foundations.md) and
+[`../verticals/solutions.md`](../verticals/solutions.md) accordingly. `Paper2Poster` is
+here because it is genuinely agentic (a planner plus executors over a document) **and
+its task is an academic deliverable** — the first row this base has that automates
+scholarly *output* rather than tutoring input.
+
+### 🔴 The prescribed English listicle leg, run as the regression test it now is — and it failed
+
+🟢 `p581` ruled the mandated web legs *"a regression test, not a source."* The leg
+`top open source AI agents education 2026 github MIT tutoring` was run to test that
+ruling. **It returned three addresses this base did not hold. All three were measured
+first-hand, and all three are unusable:**
+
+| Repo | Licence | Stars | Last push | Verdict |
+|---|---|--:|---|---|
+| [Priyamakeshwari/TeachGPT](https://github.com/Priyamakeshwari/TeachGPT) | MIT | **27** | 🔴 `2023-12-24` | 🔴 **Dead ~35 months.** A Hacktoberfest-2023 stub |
+| [1111philo/learn](https://github.com/1111philo/learn) | 🔴 NOASSERTION | **1** | `2026-03-31` | 🔴 **`archived: true`**, licence unresolved |
+| [pguso/agents-from-scratch](https://github.com/pguso/agents-from-scratch) | 🟢 MIT | **1,065** | 🟢 `2026-07-25` | 🟡 **Live but mis-categorised** — carries `ai-education`, but it teaches agent internals; it is a curriculum, not a tutor |
+
+🔴 **One live permissive row from the listicle channel, and it is not an education agent.
+Twenty-seven from the index channel in the same pass.** The two channels are not
+comparable and this base should stop spending equal effort on them. 🔵 Recorded as a
+measured result rather than an opinion, because `p581` stated the ruling and this is the
+first pass to test it with controls.
+
+### 🔴 Non-finding, recorded: the listicle channel's own framing is wrong
+
+The leg's summary asserts *"DeepTutor … license is Apache 2.0, not MIT"* as a correction
+to **MIT-licensed** listings elsewhere. 🟢 **Apache-2.0 is correct and is what this base
+already carries** — but note the channel reported `DeepTutor` at *"1,400 stars within five
+days"* as its scale signal, against the `52,956★` measured here the same day. **Treat
+aggregator star counts as unusable, not merely stale.**
+
+
 ## 🆕 `2026-11-01` — `p581` — **the crossed-topic query form returns zero six times out of six, which explains four passes of empty capability sweeps**
 
 🟢 **Result of the pass, stated as method because that is what it is.** The capability
@@ -30,7 +111,7 @@ maintainer tagging, not the API:** education repositories carry pedagogy topics
 not exist.
 
 🟢 **So the standing note on [`../intel/trends.md`](../intel/trends.md)** — that
-`hugohe3/ppt-master` (MIT, `71,498★`, the largest permissive repo anywhere in this base)
+`hugohe3/ppt-master` (MIT, `71,498★`, then believed the largest permissive repo anywhere in this base — 🔴 **superseded `p582` by `microsoft/markitdown`, MIT, `193,266★`**)
 *"went unfound for four passes because every sweep filters on an education topic"* —
 **is now explained rather than just observed.** The sweeps were not unlucky; the query
 form guaranteed the miss. **Sweep one capability topic, filter licence and `pushed_at`

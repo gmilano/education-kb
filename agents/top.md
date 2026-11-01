@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p582 — 2026-11-01 — **one new agent row, the "largest permissive repository" claim withdrawn and replaced, and a dual-licence repository resolved from its bytes**
+
+🟢 **Instrument unchanged:** `q=repo:owner/name` against `search/repositories`, one call
+per row, returning licence, stars, forks, `pushed_at`, `archived`. Every number on this
+page section was measured this pass. Record: `evidence/verified-rows.2026-11-01-p582.tsv`.
+
+### 🟢 New agent row
+
+| Agent | Repo | Licence | Stars | Forks | Last push | Region | What it does |
+|---|---|---|--:|--:|---|---|---|
+| **Paper2Poster** | [Paper2Poster/Paper2Poster](https://github.com/Paper2Poster/Paper2Poster) | 🟢 **MIT** | **4,032** | 288 | `2026-10-23` | Global | **NeurIPS 2025.** Multi-agent pipeline turning a paper into a conference poster. Topics: `agent`, `multi-agent-systems`, `pptx`, `task-automation` |
+
+🔵 **Why this one is an agent and the other `26` rows from this pass are not.** It plans,
+decomposes and executes over a document with multiple cooperating roles. The rest of
+`p582`'s yield is capability libraries — OCR, ASR, parsers, renderers — and is shelved on
+[`../repos/foundations.md`](../repos/foundations.md) and
+[`../verticals/solutions.md`](../verticals/solutions.md). 🟢 **It is also the first row
+here that automates a scholarly *output*** rather than a learning input, which is a
+distinct engagement type: research-office and university-communications work.
+
+### 🔴 WITHDRAWN: "the largest permissively licensed repository anywhere in this knowledge base"
+
+This base asserts that of `hugohe3/ppt-master` in five places across four pages. 🔴 **The
+claim is false and is corrected here rather than merely supplemented:**
+
+| repo | licence | stars (`2026-11-01`) | status |
+|---|---|--:|---|
+| [microsoft/markitdown](https://github.com/microsoft/markitdown) | 🟢 **MIT** | **193,266** | 🆕 **the largest permissive repository in this base** |
+| [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | 🟢 MIT | `71,711` | 🔴 claim withdrawn — `2.7×` smaller |
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | `52,957` | largest *education-native* row |
+
+🟢 **The replacement row is also better evidence than the one it displaces.**
+`ppt-master` is carried with *"⚠️ Provenance unverified … no region is assigned."*
+`markitdown` is owned by **Microsoft**, so it places to **North America** on owner
+identity — the one region signal this base accepts as sound while `users/{login}` is
+`403`. 🔵 `ppt-master` is not demoted on quality: it moved `71,498 → 71,711★` this pass
+and remains live. Only the superlative was wrong.
+
+### 🔴 Licence resolved from bytes: `microsoft/autogen` is two licences, and both the API and this base's ledger were half right
+
+`autogen` is **not** a row on this page — it is referred to in prose as a general agent
+framework "with an education angle bolted on", and that placement stands. But the
+rotation ledger carries it as `AutoGen(MIT,~60k★)`, the API now returns something else,
+and the conflict is worth settling because studios reach for it:
+
+| source | licence reported |
+|---|---|
+| `search/repositories` API detector | 🔴 **CC-BY-4.0** |
+| this base's ledger | 🟢 MIT |
+| 🟢 **`LICENSE` bytes, `main` + `master`, `18,649 B`** | **CC-BY-4.0** — "Attribution 4.0 International" |
+| 🟢 **`LICENSE-CODE` bytes, `main` + `master`, `1,140 B`** | **MIT License, Copyright (c) Microsoft Corporation** |
+
+🟢 **Both are correct about different files, and neither is correct alone.** The
+repository ships **two** licence files: the code is **MIT** via `LICENSE-CODE`; the
+default `LICENSE` is **CC-BY-4.0**, which covers documentation, samples and content.
+🔵 **The practical consequence for a studio:** the library is MIT and shippable, but
+**material lifted from its docs, notebooks or samples carries an attribution
+obligation** — and GitHub's detector, reading only `LICENSE`, will label the whole
+repository CC-BY-4.0 in any automated compliance scan a client runs. 🟢 **Measured, not
+inferred** — four byte reads, two branches, two filenames.
+
+### 🟢 Agent shelf anchors, re-measured first-hand this pass
+
+| Agent | Repo | Licence | Stars | Forks | Last push | Region |
+|---|---|---|--:|--:|---|---|
+| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | **52,957** | 6,483 | 🟢 `2026-10-31` | APAC |
+| **smolagents** | [huggingface/smolagents](https://github.com/huggingface/smolagents) | 🟢 Apache-2.0 | **30,158** | 3,176 | 🟢 `2026-10-29` | EMEA |
+| **Paper2Poster** | [Paper2Poster/Paper2Poster](https://github.com/Paper2Poster/Paper2Poster) | 🟢 MIT | **4,032** | 288 | 🟢 `2026-10-23` | Global |
+| **learn-agentic-ai** | [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | 🟢 MIT | **4,393** | 1,006 | 🔴 `2025-10-26` | APAC |
+| **pykt-toolkit** | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 MIT | **456** | 141 | 🟢 `2026-10-18` | APAC |
+| **educhain** | [satvik314/educhain](https://github.com/satvik314/educhain) | 🟢 MIT | **387** | 76 | 🟡 `2026-05-29` | APAC |
+| **OATutor** | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 🟢 MIT | **274** | 164 | 🟢 `2026-10-31` | North America |
+
+🔴 **`panaversity/learn-agentic-ai` crossed the staleness line.** Last push
+`2025-10-26` — **just over 12 months** as of today, so it moves out of the live tier by
+this base's own `p580` criterion. It is a curriculum rather than a deployable agent, which
+softens the impact, but it should no longer be presented as maintained.
+
+🔵 **Scale note worth keeping, because it is a `2,000×` spread.** `DeepTutor` at
+`52,957★` and `educhain` at `387★` sit on the same shelf. **The education-agent tier is
+one large project and a long tail of small ones** — and `DeepTutor` alone grew from the
+`~24,000★` recorded in this base's cycle-3 notes to `52,957★` now. Any claim about "the
+open-source education agent ecosystem" is, numerically, a claim about `DeepTutor`.
+
+
 ## p581 — 2026-11-01 — **the lecture-media sweep `p580` prescribed, run: five new permissive rows, and the two crossed-topic query forms that made four passes of sweeps come back empty**
 
 🟢 **`Gap "lecture-video tooling remains unswept"` closes — it was the declared next-pass
@@ -1262,7 +1347,7 @@ could be mistaken for a finding:**
 - **But "query the index, not the listicles" was too strong, and this pass
   disproved it.** The prescribed `github trending education AI 2026` search
   surfaced [`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) — **MIT,
-  71,498★**, the largest permissively licensed repository anywhere in this KB —
+  71,498★**, formerly described here as the largest permissively licensed repository anywhere in this KB (🔴 **superseded `p582` by `microsoft/markitdown`, MIT, `193,266★`**) —
   which **no index sweep found**, because it carries no education topic. It is
   shelved in [`../repos/foundations.md`](../repos/foundations.md) as a
   content-production component rather than here, because it is not an education

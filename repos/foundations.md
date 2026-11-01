@@ -4,6 +4,106 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p582 — 2026-11-01 — **the document-ingestion and media tier, `20` new permissive foundations — and the psychometric axis this page endorses is confirmed dead end-to-end**
+
+🟢 **Source:** the five capability sweeps `p581` prescribed (`topic:pptx`, `ocr`, `pdf`,
+`speech-to-text`, `diagrams`), each run **singly** with `sort=stars`, licence and
+`pushed_at` filtered client-side. `500` rows fetched → `210` permissive-and-live → `27`
+selected for education applicability, all verified field-by-field with
+`q=repo:owner/name`. Record: `evidence/capability-sweep.2026-11-01-p582.tsv`.
+
+### 🟢 Document ingestion — new, and the tier this page most obviously lacked
+
+| Repo | Licence | Stars | Forks | Last push | Region | Why it belongs here |
+|---|---|--:|--:|---|---|---|
+| [microsoft/markitdown](https://github.com/microsoft/markitdown) | 🟢 **MIT** | **193,266** | 14,477 | `2026-10-28` | North America | **The largest permissive repository in this base.** Office formats + PDF → Markdown. Owner **Microsoft**, so region is placed on owner identity. This is the front door of every courseware RAG pipeline: institutions hold their material in `.docx`, `.pptx` and PDF, and nothing downstream works until it is text |
+| [run-llama/liteparse](https://github.com/run-llama/liteparse) | 🟢 **Apache-2.0** | **12,965** | 894 | `2026-10-31` | North America | Fast document parser from **LlamaIndex** — the alternative when `markitdown`'s fidelity is insufficient |
+| [The-Vibe-Company/megaparse](https://github.com/The-Vibe-Company/megaparse) | 🟢 **Apache-2.0** | **7,416** | 418 | `2026-10-15` | Global | Parses **PPTX** as a first-class format, which `markitdown` does but most parsers do not |
+| [grobidOrg/grobid](https://github.com/grobidOrg/grobid) | 🟢 **Apache-2.0** | **5,205** | 571 | `2026-11-01` | EMEA | **Scholarly**-document structuring and reference extraction. The higher-education research-office seam |
+| [oomol-lab/pdf-craft](https://github.com/oomol-lab/pdf-craft) | 🟢 **MIT** | **6,470** | 473 | `2026-11-01` | APAC | **Scanned-book digitisation** → ePub (`book-digitization` topic). Relevant wherever the curriculum exists only as a scanned textbook |
+
+### 🟢 OCR — and the two education-critical capabilities this page had no live row for
+
+| Repo | Licence | Stars | Forks | Last push | Region | Why it belongs here |
+|---|---|--:|--:|---|---|---|
+| [datalab-to/chandra](https://github.com/datalab-to/chandra) | 🟢 **Apache-2.0** | **12,655** | 1,266 | `2026-10-22` | North America | 🔵 **Handwriting, complex tables and forms with full layout.** Directly replaces this page's dead handwriting primitives |
+| [breezedeus/Pix2Text](https://github.com/breezedeus/Pix2Text) | 🟢 **MIT** | **3,281** | 283 | 🟡 `2026-08-23` | APAC | 🔵 **Maths formulae** + tables + layout → Markdown/LaTeX, with *small* models (deployable on modest hardware) |
+| [hiroi-sora/Umi-OCR](https://github.com/hiroi-sora/Umi-OCR) | 🟢 **MIT** | **48,320** | 4,719 | 🟡 `2025-11-20` | APAC | Fully **offline** batch OCR — the data-residency-safe option |
+| [naptha/tesseract.js](https://github.com/naptha/tesseract.js) | 🟢 **Apache-2.0** | **38,803** | 2,403 | 🟡 `2026-05-17` | Global | **100+ languages**, WebAssembly — OCR entirely in the browser, so no student image leaves the device |
+| [JaidedAI/EasyOCR](https://github.com/JaidedAI/EasyOCR) | 🟢 **Apache-2.0** | **30,127** | 3,614 | 🟡 `2025-12-05` | APAC | **80+ languages**, all major scripts |
+| [RapidAI/RapidOCR](https://github.com/RapidAI/RapidOCR) | 🟢 **Apache-2.0** | **8,400** | 765 | `2026-11-01` | APAC | ONNX Runtime / OpenVINO — **CPU-only deployment**, which is the constraint in most public-sector estates |
+| [mindee/doctr](https://github.com/mindee/doctr) | 🟢 **Apache-2.0** | **6,407** | 690 | `2026-10-31` | EMEA | Document text recognition library. Owner **Mindee**, Paris |
+
+### 🟢 Speech — capture, diarisation, cross-language delivery
+
+| Repo | Licence | Stars | Forks | Last push | Region | Why it belongs here |
+|---|---|--:|--:|---|---|---|
+| [ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp) | 🟢 **MIT** | **54,830** | 6,263 | `2026-10-30` | EMEA | **CPU-local ASR**, no GPU and no API call. Owner `ggml.ai`, Sofia |
+| [modelscope/FunASR](https://github.com/modelscope/FunASR) | 🟢 **MIT** | **20,895** | 2,101 | `2026-11-01` | APAC | **Streaming** ASR + VAD + punctuation; ships an `mcp-server` |
+| [QuentinFuxa/WhisperLiveKit](https://github.com/QuentinFuxa/WhisperLiveKit) | 🟢 **Apache-2.0** | **11,196** | 1,158 | `2026-10-31` | Global | 🔵 **Real-time** STT + **diarisation** + translation — live lecture captioning |
+| [QwenAudio/SenseVoice](https://github.com/QwenAudio/SenseVoice) | 🟢 **MIT** | **9,651** | 843 | 🟡 `2026-09-30` | APAC | **Mandarin, Cantonese, English, Japanese, Korean** in one model |
+| [liuzhao1225/YouDub-webui](https://github.com/liuzhao1225/YouDub-webui) | 🟢 **Apache-2.0** | **5,785** | 624 | `2026-10-30` | APAC | **Localisation + dubbing**: ASR → translate → TTS over existing lecture video |
+| [MahmoudAshraf97/whisper-diarization](https://github.com/MahmoudAshraf97/whisper-diarization) | 🟢 **BSD-2-Clause** | **5,671** | 504 | 🟡 `2026-08-15` | Global | Batch ASR + **speaker diarisation** |
+
+### 🟢 Authoring and rendering — the output side
+
+| Repo | Licence | Stars | Forks | Last push | Region | Why it belongs here |
+|---|---|--:|--:|---|---|---|
+| [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 🟢 **MIT** | **134,943** | 15,943 | `2026-10-31` | Global | Collaborative **whiteboard** — an embeddable live teaching surface, not just a diagram tool |
+| [mermaid-js/mermaid](https://github.com/mermaid-js/mermaid) | 🟢 **MIT** | **90,955** | 9,441 | `2026-10-31` | Global | Diagrams-as-code — the safe rendering target for LLM-generated courseware structure |
+| [Kozea/WeasyPrint](https://github.com/Kozea/WeasyPrint) | 🟢 **BSD-3-Clause** | **9,750** | 901 | `2026-10-30` | EMEA | HTML/CSS → **PDF**: worksheets, certificates, reports. Owner **Kozea**, France |
+| [penrose/penrose](https://github.com/penrose/penrose) | 🟢 **MIT** | **8,010** | 362 | `2026-10-31` | North America | 🔵 Compiles **mathematical notation** into diagrams. Carnegie Mellon origin |
+| [gitbrent/PptxGenJS](https://github.com/gitbrent/PptxGenJS) | 🟢 **MIT** | **6,339** | 967 | 🟡 `2025-11-28` | Global | Generate **`.pptx`** programmatically — the format institutions actually exchange |
+| [JabRef/jabref](https://github.com/JabRef/jabref) | 🟢 **MIT** | **4,861** | 3,692 | `2026-10-31` | EMEA | BibTeX/BibLaTeX management; `academia` + `ai` topics |
+| [dotnet/Open-XML-SDK](https://github.com/dotnet/Open-XML-SDK) | 🟢 **MIT** | **4,617** | 608 | `2026-10-27` | North America | Low-level `.docx`/`.pptx` manipulation. Owner **.NET / Microsoft** |
+| [alexlenail/NN-SVG](https://github.com/alexlenail/NN-SVG) | 🟢 **MIT** | **5,693** | 747 | 🟡 `2026-06-02` | Global | Publication-quality **neural-network schematics** for teaching material |
+
+### 🔴 The dead-row audit: this page's psychometric tier does not build
+
+🟢 **Run against the `p580` census — `265` first-hand measurements, no new calls.**
+Record: `evidence/shelf-dead-rows.2026-11-01-p582.tsv`.
+
+**`30` shelf addresses have not been pushed to in over two years. `19` are named as
+components in [`../compose/patterns.md`](../compose/patterns.md).**
+
+🔴 **The psychometric axis is dead in its entirety — all ten rows:**
+
+| Repo | Stars | Licence | Last push | Dead |
+|---|--:|---|---|--:|
+| `inuyasha2012/pypsy` | 242 | MIT | 🔴 `2018-11-16` | **96 mo** |
+| `Karel-Kroeze/ShadowCAT` | 12 | NONE | 🔴 `2017-11-20` | **108 mo** |
+| `CSLiJT/HCD-code` | 13 | NONE | 🔴 `2022-08-14` | 51 mo |
+| `eribean/girth` | 127 | MIT | 🔴 `2022-09-09` | 50 mo |
+| `inuyasha2012/vipsy` | 18 | NONE | 🔴 `2023-07-06` | 40 mo |
+| `17zuoye/pyirt` | 111 | MIT | 🔴 `2023-08-22` | 39 mo |
+| `Mr-nnng/ICD` | 8 | NONE | 🔴 `2024-03-04` | 32 mo |
+| `kervias/DCD` | 16 | NONE | 🔴 `2024-03-13` | 32 mo |
+| `psychmeta/psychmeta` | 70 | NONE | 🔴 `2024-06-19` | 29 mo |
+| `meyerjp3/psychometrics` | 114 | NONE | 🔴 `2024-10-03` | 25 mo |
+| `bigdata-ustc/EduCDM` | 203 | Apache-2.0 | 🔴 `2024-10-25` | 24 mo |
+
+🔴 **This withdraws `p581`'s reshaping of the item-generation gap.** `p581` concluded
+*"calibration ≠ generation"*, keeping calibration as the half that exists. **It does not
+exist either.** Eleven rows, zero maintained, the newest two years cold and five carrying
+**no licence at all**. 🟢 **The honest statement for this page:** psychometrically
+defensible assessment is **not** a composition problem in open source — there is nothing
+live to compose. It is a build, or it is a commercial dependency.
+
+🟢 **Two dead rows this pass does replace, directly:**
+
+| dead row | last push | 🟢 replacement from this pass |
+|---|---|---|
+| `githubharald/DeslantImg` (MIT, 156★) | 🔴 `2021-11-21` | `datalab-to/chandra` — Apache-2.0, `12,655★`, handwriting + layout |
+| `githubharald/WordDetector` (MIT, 276★) | 🔴 `2023-05-05` | `datalab-to/chandra` (same row covers both functions) |
+| `jhudsl/ari` (🔴 NOASSERTION, 149★) | 🔴 `2024-02-21` | the Tier-3 speech stack above, all permissive |
+
+🔴 **And four rows that are worse than stale.** `IronCountySchoolDistrict/iep-printing-php`
+(**1★, no licence, `2017-03-29` — 9.5 years**), `microsoftarchive/Learn-LTI` (owner
+namespace is literally `microsoftarchive`), `tc-imba/canvas-auto-rubric` (33★, no licence),
+`fotinikafida/text-to-moodle` (3★, CC0). **These should not be cited as options to a client
+at all**, and two of them are unlicensed, which makes them unusable regardless of recency.
+
+
 ## p581 — 2026-11-01 — **the lecture-media tier this page never had: three new permissive libraries, plus the drift-detection primitives the trends page has called the industry's clearest hole**
 
 🟢 **Instrument unchanged and working:** `q=repo:owner/name` against
@@ -948,7 +1048,7 @@ on an education topic and none of these carries one.**
 
 | Repo | Licence | ★ | Region | Build-on? | What it is |
 | --- | --- | --: | --- | --- | --- |
-| [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | **MIT** (file, 1,069 B, on both `main` and `master`) | **71,498** | Global | ✅ permissive | **The largest permissively licensed repository anywhere in this knowledge base** — 1.4× DeepTutor, 1.7× OpenMAIC. "AI turns documents or topics into real, native PowerPoint decks — with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own `.pptx` templates." Python, **5,578 forks**, created 2025-12-10, pushed 2026-10-30. **Why it belongs here:** `.pptx` is the format schools and universities actually exchange; *"support for your own `.pptx` templates"* is institutional branding compliance, which is what normally kills generated-content pilots; and audio narration from speaker notes is a lecture-capture path for free. Deliberately **not** on the agent shelf — it is not an education agent. ⚠️ **Provenance unverified:** 71,498★ and the owner profile cannot be read from this session, so **no region is assigned**. For a component this central, check it independently before client-facing use. |
+| [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | **MIT** (file, 1,069 B, on both `main` and `master`) | **71,498** | Global | ✅ permissive | 🔴 **Superseded `p582`: no longer the largest permissive repository in this base** — `microsoft/markitdown` (MIT) measures `193,266★`, `2.7×` larger. Still the largest permissive *presentation-generation* row, and re-measured `71,711★` on `2026-11-01`. "AI turns documents or topics into real, native PowerPoint decks — with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own `.pptx` templates." Python, **5,578 forks**, created 2025-12-10, pushed 2026-10-30. **Why it belongs here:** `.pptx` is the format schools and universities actually exchange; *"support for your own `.pptx` templates"* is institutional branding compliance, which is what normally kills generated-content pilots; and audio narration from speaker notes is a lecture-capture path for free. Deliberately **not** on the agent shelf — it is not an education agent. ⚠️ **Provenance unverified:** 71,498★ and the owner profile cannot be read from this session, so **no region is assigned**. For a component this central, check it independently before client-facing use. |
 | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | **MIT** (file, 1,069 B) | 1,034 | Global | ✅ permissive | "An AI skill that turns books into animated, narrated, interactive web experiences." JavaScript, 143 forks, created **2026-10-03** — 1,034★ in four weeks. Topics include **`scorm`** and `interactive-textbook`, so pair it with `scorm-again` to deliver into an existing LMS. Also shelved as an agent in [`../agents/top.md`](../agents/top.md). ⚠️ Copyright line is a pseudonym. |
 | [assafkip/claudemy](https://github.com/assafkip/claudemy) | **MIT** (file, 1,069 B, "Assaf Kipnis") | 557 | Global | ✅ permissive | Topic in, **course of 2-minute audio lessons with cited sources** out; web research plus ElevenLabs TTS. Python, 67 forks, created 2026-10-14. The only content generator in this KB that **starts** from citation provenance rather than retrofitting it. |
 

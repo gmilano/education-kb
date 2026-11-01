@@ -4,6 +4,113 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p582 — 2026-11-01 — **two recipes forced by this pass's measurements: the handwritten-assessment pipeline that finally has live components, and the compliance-shaped grader four regulators now require**
+
+Every component below was verified first-hand on `2026-11-01` with `q=repo:owner/name`
+(licence, stars, `pushed_at`, `archived`). 🔴 **Both recipes deliberately avoid the `19`
+dead addresses this pass found cited elsewhere on this page** — see
+`evidence/shelf-dead-rows.2026-11-01-p582.tsv`.
+
+## P-583-A — 🟢 **Handwritten assessment capture and feedback — the first version of this recipe whose components are actually maintained** (8–10 weeks, LATAM / APAC lead, portable)
+
+🔴 **Why this recipe is new rather than an update.** This base's handwriting primitives
+were `githubharald/DeslantImg` (MIT, `156★`, 🔴 last push `2021-11-21`) and
+`githubharald/WordDetector` (MIT, `276★`, 🔴 `2023-05-05`) — **dead for 5 and 3.5 years**.
+Any recipe naming them does not build. 🟢 **`datalab-to/chandra` replaces both in one
+component**, and adds the two things they never had: **table structure and full layout**.
+
+🟢 **The engagement.** A school system or university whose assessment is *paper*, graded by
+hand, photographed on a phone. This is the majority condition in LATAM, South and
+Southeast Asia and much of Africa — and the reason digital-assessment pilots stall is that
+the input was never digital.
+
+| # | Component | Licence | Stars | Role |
+|--:|---|---|--:|---|
+| 1 | [datalab-to/chandra](https://github.com/datalab-to/chandra) | 🟢 **Apache-2.0** | **12,655** | **Handwriting + tables + layout → structured text.** The load-bearing component |
+| 2 | [breezedeus/Pix2Text](https://github.com/breezedeus/Pix2Text) | 🟢 **MIT** | **3,281** | **Maths formulae** → LaTeX. Small models — runs where `chandra` is too heavy |
+| 3 | [naptha/tesseract.js](https://github.com/naptha/tesseract.js) | 🟢 **Apache-2.0** | **38,803** | Browser/WASM OCR fallback — **the image never leaves the device**, which is the data-protection answer for minors |
+| 4 | [microsoft/markitdown](https://github.com/microsoft/markitdown) | 🟢 **MIT** | **193,266** | Normalises the *reference* material (rubrics, answer keys, textbook extracts) into one text form |
+| 5 | [Kozea/WeasyPrint](https://github.com/Kozea/WeasyPrint) | 🟢 **BSD-3-Clause** | **9,750** | Renders the marked-up script + feedback back to **PDF** — what a parent or teacher actually receives |
+| 6 | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | **456** | Knowledge tracing over the extracted item-level outcomes |
+
+**Wiring.**
+1. Phone photo → **`chandra`** for layout + handwriting; route any region it flags as
+   mathematical to **`Pix2Text`** for LaTeX. Keep both outputs with per-region confidence.
+2. Where policy forbids upload (minors' data; France's *cadre d'usage* bars identifiable
+   student data in non-approved tools), run **`tesseract.js`** in-browser and send only
+   the extracted text. 🔵 **Build this path first, not as a fallback** — it is what makes
+   the product sellable in EMEA at all.
+3. Rubric and answer key through **`markitdown`** once, at ingest, into the same text form.
+4. An LLM scores *per item against the rubric*, emitting **item-level outcomes plus a
+   confidence and a rationale — never an aggregate mark.** (See `P-583-B`: the terminal
+   decision is barred.)
+5. Item outcomes → **`pykt-toolkit`** for the learner model; feedback + annotated script →
+   **`WeasyPrint`** → PDF.
+
+🟢 **Where the margin is.** Steps 1–2 are commodity; **step 4's rubric-anchored,
+item-level, confidence-bearing output is the product**, and step 2's on-device path is the
+regulatory moat. 🔴 **Do not promise psychometric validity** — this pass established that
+**every** open-source psychometric library is dead, so IRT-calibrated scoring is a build,
+not a dependency. Scope this as *formative* feedback and say so in the SOW.
+
+## P-583-B — 🔴 **A grader that is structurally incapable of deciding — because four regulators now require exactly that** (6–8 weeks, EMEA / LATAM, portable)
+
+🟢 **This recipe exists because of a convergence measured this pass across four
+jurisdictions queried in four languages** (see [`../intel/trends.md`](../intel/trends.md)):
+
+| jurisdiction | the binding requirement |
+|---|---|
+| 🟢 **Brazil** — CNE *parecer* (≈`1 Sep 2026`, homologation ≈`13 Oct 2026`, 12 months to comply) | AI may be a **first filter** on essays and open responses; **may not determine approval or failure**. Four risk tiers. **Total ban in early-childhood education** |
+| 🟢 **France** — *cadre d'usage* (Jun 2025) | AI use in submitted work **must be declared**; undeclared genAI is **fraud**; identifiable student data may not enter non-approved tools |
+| 🟢 **Germany** — Länder | **Hessen:** AI use **and prompts** must be labelled. **NRW:** all aids disclosed |
+| 🟢 **EU** — AI Act | **Art. 50** transparency from **`2 Aug 2026`**; grading is Annex III high-risk (Annex III timing contested — hedge it) |
+
+🔵 **The requirement is not "add a human review screen". It is that the system must be
+unable to emit a terminal decision**, and must carry provenance for every suggestion it
+did emit.
+
+| # | Component | Licence | Stars | Role |
+|--:|---|---|--:|---|
+| 1 | [microsoft/markitdown](https://github.com/microsoft/markitdown) | 🟢 **MIT** | **193,266** | Submission + rubric normalisation |
+| 2 | [ing-bank/popmon](https://github.com/ing-bank/popmon) | 🟢 **MIT** | **512** | Population-stability monitoring on the score and feature streams (**ING Bank N.V.**) |
+| 3 | [IFCA-Advanced-Computing/frouros](https://github.com/IFCA-Advanced-Computing/frouros) | 🟢 **BSD-3-Clause** | **260** | Concept/data drift detection (**Instituto de Física de Cantabria**) |
+| 4 | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | **456** | Knowledge-tracing predictions — the distribution worth monitoring |
+| 5 | [Kozea/WeasyPrint](https://github.com/Kozea/WeasyPrint) | 🟢 **BSD-3-Clause** | **9,750** | The auditable artefact: suggestion, rationale, model version, reviewer, timestamp |
+| 6 | [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 🟢 **MIT** | **134,943** | Teacher review surface for annotating a script in-place |
+
+**Wiring — the four constraints, implemented.**
+1. **Refusal by construction.** The scoring service's response schema has **no total-mark
+   field.** It returns per-criterion suggestions with confidence and a rationale. A mark
+   exists only after a teacher writes one. 🟢 *This is a schema decision, not a UI
+   decision* — it is what survives an audit.
+2. **Declaration and labelling by default.** Every artefact leaving the system carries the
+   AI-involvement label, the model version and — **for Hessen — the prompt**. Render via
+   **`WeasyPrint`** so the record is a fixed document, not a database row.
+3. **Age gating as a hard route, not a config flag.** Brazil bans AI in *educação
+   infantil* outright, teacher-mediated included. The tenant's age band must be able to
+   **disable the inference path entirely**.
+4. **Post-market monitoring, which the AI Act requires and nothing education-specific
+   provides.** **`frouros`** and **`popmon`** over **`pykt-toolkit`** outputs and the
+   score distribution; alert on drift. 🔴 **Neither is education-aware — that integration
+   is the billable work**, and it remains this base's clearest unmet build opportunity.
+
+🟢 **Why this sells.** Germany's measured condition — **`56` rule-sets, `16` from the
+Länder, and a teacher population that a Forsa survey finds has barely engaged with any of
+them** — is a buyer who needs the compliance encoded in the tool, because they will not
+read the rules. 🟢 **Spain is the cleanest entry:** a *real decreto* in preparation will
+require **every university** to hold an ethical code covering faculty, students,
+institution and research — a mandated artefact with no incumbent supplier.
+🔵 **Brazil is the largest and most urgent:** homologation reported for mid-October 2026
+starts a **12-month compliance clock** for schools *and* universities, and universities
+must additionally write AI-mediation teacher training into their **PDI and PPC**.
+
+🔴 **Known gap in both recipes, stated rather than hidden.** Attaching either to Moodle,
+Canvas or Open edX properly needs **LTI 1.3**, and this base's only shelved implementation
+(`dmitry-viskov/pylti1.3`, MIT) has been dead since 🔴 `2024-08-18`. **Until a maintained
+permissive LTI 1.3 library is found, budget the integration as custom work** — do not quote
+it as a connector.
+
+
 ## p581 — 2026-11-01 — **two new recipes: the lecture-archive pipeline, and the first buildable answer to this base's longest-standing gap**
 
 Both use only rows verified first-hand `2026-11-01` (licence, stars, `pushed_at`,
@@ -1623,8 +1730,9 @@ materially different.
 in [`../repos/foundations.md`](../repos/foundations.md) did not exist in this KB
 before the fourth pass, because every sweep filtered on an education topic and
 **the largest component carries none**. `hugohe3/ppt-master` is **MIT with
-71,498★** — the largest permissively licensed repository anywhere in this
-knowledge base, 1.4× DeepTutor — and it generates native PowerPoint from
+71,498★** — 🔴 *(described here as the largest permissively licensed repository
+anywhere in this knowledge base; **superseded `p582` by `microsoft/markitdown`,
+MIT, `193,266★`**)* — and it generates native PowerPoint from
 documents or topics, with the client's own template, data-backed charts, and
 **audio narration from speaker notes**. That last feature is a lecture-capture
 path for free.
@@ -2195,8 +2303,9 @@ re-reads matched exactly**.
   was built from the *integration* literature, where xAPI is the modern answer,
   rather than from what a buyer specifies.
 - **The content-production layer arrived late and the next pass should expect
-  more of it.** `ppt-master` (**MIT, 71,498★**) is the largest permissively
-  licensed repository in this KB and went unfound for four passes because every
+  more of it.** `ppt-master` (**MIT, 71,498★**) was believed the largest permissively
+  licensed repository in this KB — 🔴 **superseded `p582` by `microsoft/markitdown`
+  (MIT, `193,266★`)** — and went unfound for four passes because every
   sweep filters on an education topic and it carries none. **P-569-B** is built on
   it. Assume the same blind spot still hides document parsers, TTS pipelines,
   assessment-item generators and video tooling: sweep by **capability**

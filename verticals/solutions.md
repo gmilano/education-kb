@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p582 — 2026-11-01 — **the authoring and accessibility layers that bolt onto a copyleft LMS, and the four dead integration rows this page should stop offering**
+
+🔵 **The mandated vertical leg (`open source platform education ERP CRM MIT Apache`) was
+not re-run this pass.** `p581` ran it and returned nothing new, and
+[`../intel/trends.md`](../intel/trends.md) has ruled the mandated web legs *"a regression
+test, not a source"*. 🟢 **The structural fact this page carries is unchanged and was
+re-confirmed by `p580`'s census:** the platform tier — Moodle (GPL-3.0), Open edX
+(AGPL-3.0), Canvas (AGPL-3.0), OpenEduCat (LGPL-3.0), RosarioSIS (GPL-2.0), openSIS (GPL),
+Sakai (Apache-2.0 being the exception) — is **uniformly copyleft**, so the permissive
+opportunity is always the *layer on top*, never the platform.
+
+🟢 **That is exactly what this pass adds: `8` permissive layers**, every field verified
+first-hand `2026-11-01` with `q=repo:owner/name`.
+
+### 🟢 New customisable layers — all permissive, all live
+
+| Layer | Repo | Licence | Stars | Last push | Region | The seam it bolts onto |
+|---|---|---|--:|---|---|---|
+| **Courseware ingestion** | [microsoft/markitdown](https://github.com/microsoft/markitdown) | 🟢 **MIT** | **193,266** | `2026-10-28` | North America | Bulk-convert an institution's existing `.docx`/`.pptx`/PDF estate into text a Moodle or Open edX AI layer can index |
+| **Lesson-slide generation** | [gitbrent/PptxGenJS](https://github.com/gitbrent/PptxGenJS) | 🟢 **MIT** | **6,339** | 🟡 `2025-11-28` | Global | Emits real `.pptx` — teachers keep editing in the tool they already use, which is what kills most generated-courseware pilots |
+| **Document assembly** | [dotnet/Open-XML-SDK](https://github.com/dotnet/Open-XML-SDK) | 🟢 **MIT** | **4,617** | `2026-10-27` | North America | Institutional template compliance: inject generated content into the client's own branded `.docx`/`.pptx` |
+| **Print/PDF output** | [Kozea/WeasyPrint](https://github.com/Kozea/WeasyPrint) | 🟢 **BSD-3-Clause** | **9,750** | `2026-10-30` | EMEA | Worksheets, report cards, certificates, transcripts — from HTML/CSS the institution controls |
+| **Live classroom surface** | [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 🟢 **MIT** | **134,943** | `2026-10-31` | Global | Embeddable collaborative whiteboard — the synchronous layer an LMS does not provide |
+| **Live captioning / access** | [QuentinFuxa/WhisperLiveKit](https://github.com/QuentinFuxa/WhisperLiveKit) | 🟢 **Apache-2.0** | **11,196** | `2026-10-31` | Global | Real-time captions + diarisation + translation on a lecture stream — an accessibility obligation, not a feature |
+| **Lecture localisation** | [liuzhao1225/YouDub-webui](https://github.com/liuzhao1225/YouDub-webui) | 🟢 **Apache-2.0** | **5,785** | `2026-10-30` | APAC | Re-voice an existing course library into another language without re-recording it |
+| **Handwritten-work capture** | [datalab-to/chandra](https://github.com/datalab-to/chandra) | 🟢 **Apache-2.0** | **12,655** | `2026-10-22` | North America | Phone photo of a worksheet → structured text, incl. **handwriting and tables** |
+
+🔵 **The two rows that change what this page can promise.** `WeasyPrint` and `PptxGenJS`
+mean generated material can leave the system **in the institution's own formats and
+branding**. Every platform on this page is a web application; every institution
+communicates in PDF and PowerPoint. 🟢 **That gap was unbridged on this page until now**,
+and it is permissive at both ends.
+
+### 🔴 Four integration rows on this page's axis are dead, and two are unlicensed
+
+🟢 From the `p580` census, re-cut this pass (`evidence/shelf-dead-rows.2026-11-01-p582.tsv`):
+
+| Repo | Stars | Licence | Last push | Verdict |
+|---|--:|---|---|---|
+| `IronCountySchoolDistrict/iep-printing-php` | 1 | 🔴 **NONE** | 🔴 `2017-03-29` | **9.5 years, unlicensed.** Stop citing entirely |
+| `microsoftarchive/Learn-LTI` | 132 | MIT | 🔴 `2023-05-03` | Owner namespace is `microsoftarchive` — **abandoned by declaration** |
+| `tc-imba/canvas-auto-rubric` | 33 | 🔴 **NONE** | 🔴 `2022-12-27` | Unlicensed; not usable |
+| `fotinikafida/text-to-moodle` | 3 | CC0-1.0 | 🔴 `2023-08-24` | 3★; a sample, not a component |
+| `dmitry-viskov/pylti1.3` | 138 | MIT | 🔴 `2024-08-18` | 🟡 **LTI 1.3 is the live standard** — the dead row here is load-bearing and has no permissive replacement found yet |
+
+🔴 **`pylti1.3` is the one that matters.** LTI 1.3 is how any AI layer legitimately
+attaches to Moodle, Canvas or Open edX, and the base's only shelved implementation has
+been cold for 27 months. 🟢 **Declared as a gap rather than papered over:** a permissive,
+maintained LTI 1.3 library is a prerequisite for most of the recipes on
+[`../compose/patterns.md`](../compose/patterns.md), and this pass did not find one. **The
+next pass should sweep `topic:lti` and `topic:lti-provider` singly** — the corrected query
+form, on an axis never swept with it.
+
+
 ## p581 — 2026-11-01 — **the media and monitoring layers a vertical deployment needs, and the licence shape of the SIS/ERP tier re-confirmed as uniformly copyleft**
 
 🔵 **The mandated vertical leg (`open source platform education ERP CRM MIT Apache`) ran

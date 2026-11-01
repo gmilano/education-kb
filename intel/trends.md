@@ -4,6 +4,184 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p582 — 2026-11-01 — **three new trends, one gap withdrawn rather than closed, a superlative corrected across six pages, and the first measured reversal of a national AI-education mandate**
+
+🟢 **All three `p581` priorities were executed in order.** (1) The native-language demand
+legs ran across eight jurisdictions. (2) The five remaining single capability topics were
+swept with the corrected query form. (3) The shelf dead-row audit was run against the
+`p580` census.
+
+### 🔴 `Trend` NEW — a national AI-education mandate can be downgraded mid-rollout, and one just was
+
+🔴 **Korea's AI digital textbook (AI 디지털교과서) was reclassified from "textbook"
+(교과서) to "educational material" (교육자료)** during legislative passage, which removed
+its compulsory force. The ministry now says **"AI 교육자료"** and frames the policy as
+*autonomous selection with guidance on selection criteria*; **provincial education offices
+then cut or deferred their 2026 subscription budgets.** The original staged roadmap —
+grades 3–4, M1, H1 in 2025; grades 5–6, M2 plus four more subjects in 2026 — **is no
+longer a procurement schedule.**
+
+🟢 **Why this is a trend and not a news item.** This base has treated a dated national
+mandate as its firmest category of demand evidence, across several regions and many
+passes. **This is the first instance measured where such a mandate was walked back after
+rollout began**, and the mechanism — reclassification rather than repeal — is one that
+leaves the programme nominally alive while removing every procurement obligation.
+🔵 **Generalised rule:** price off *funded* programmes that survived a downgrade (Korea:
+K-education AI, `1,000` AI-focused schools), never off a mandate's existence.
+Confidence: **medium-high** — consistent across multiple Korean-language sources, but the
+legal status should be re-confirmed against a Ministry of Education primary document, and
+several results in the leg were 2024-dated.
+
+### 🔴 `Trend` NEW — four regulators independently converged on the same two product requirements
+
+🟢 **Measured, not inferred, across four jurisdictions queried separately in four
+languages this pass:**
+
+| jurisdiction | AI barred from the terminal assessment decision | AI use must be declared / labelled |
+|---|---|---|
+| 🟢 **Brazil** (CNE *parecer*) | 🟢 yes — may be a *first filter*, **may not determine pass/fail** | 🟢 yes — four-tier risk classification |
+| 🟢 **France** (*cadre d'usage*) | 🟢 yes — human judgement retained | 🟢 yes — **undeclared genAI in a submission is fraud** |
+| 🟢 **Germany** (Länder) | 🟡 partial | 🟢 yes — **Hessen: prompts too**; NRW: all aids |
+| 🟢 **EU** (AI Act Art. 50) | 🟡 via Annex III high-risk route | 🟢 yes — transparency from `2 Aug 2026` |
+| 🟢 **Brazil, additionally** | 🔴 **total prohibition in early-childhood education** | — |
+
+🟢 **The engineering consequence is concrete and portable: build human-in-the-loop
+*refusal* and provenance logging as defaults.** A grader that *can* emit a final mark is
+non-compliant in Brazil and France regardless of accuracy. 🔵 **This is the first trend on
+this page that is a product specification rather than a market observation**, and it is
+the same specification in four regulatory languages. Confidence: **high** — four
+independent jurisdiction legs, primary-instrument names captured in each.
+
+### 🟢 `Trend` NEW — the demand channel is the jurisdiction's own language, now with controls
+
+🟢 **`p581` asserted this and prescribed the test; `p582` ran it with both arms in the
+same pass:**
+
+| channel | legs | productive | yield |
+|---|--:|--:|---|
+| 🟢 native-language ministry vocabulary | 8 | **8** | dated instruments, named bills, risk tiers, budget reversals |
+| 🟡 English regional/global listicle | 2 | 1 (partial) | one preemption framework; **zero** usable repos |
+
+🔴 **And the supply-side arm reproduces the same asymmetry.** The mandated listicle leg
+`top open source AI agents education 2026 github MIT tutoring` returned three addresses
+new to this base; **measured first-hand, two were dead or archived** (`TeachGPT` `27★`,
+last push `2023-12-24`; `1111philo/learn` `1★`, `archived: true`) **and the third was
+mis-categorised** (`pguso/agents-from-scratch`, MIT, `1,065★` — a curriculum, not a tutor).
+**The index channel returned `27` live permissive rows in the same pass.**
+🟢 **Settled: `1` marginal row from listicles, `27` from the index.** Confidence: **high**
+— both channels run in one session with first-hand verification of every candidate.
+
+### 🔴 `Gap "psychometrically defensible item generation"` — WITHDRAWN, not closed, and this reverses `p581`
+
+🔴 **`p581` reshaped this gap as *"calibration ≠ generation"*, keeping calibration as the
+half that exists in open source. That reshaping is withdrawn: the calibration half is also
+dead.** The dead-row audit measured **every** psychometric row on the shelf:
+
+`pypsy` 🔴 `2018-11-16` · `ShadowCAT` 🔴 `2017-11-20` · `HCD-code` 🔴 `2022-08-14` ·
+`girth` 🔴 `2022-09-09` · `vipsy` 🔴 `2023-07-06` · `pyirt` 🔴 `2023-08-22` ·
+`ICD` 🔴 `2024-03-04` · `DCD` 🔴 `2024-03-13` · `psychmeta` 🔴 `2024-06-19` ·
+`meyerjp3/psychometrics` 🔴 `2024-10-03` · `EduCDM` 🔴 `2024-10-25`
+
+🔴 **Eleven rows, zero maintained, newest two years cold, five carrying no licence at
+all.** 🟢 **The correct statement: psychometrically defensible assessment is not a
+composition problem in open source, because there is nothing live to compose. It is a
+build or a commercial dependency.** 🔵 The one live exception is regional and narrow:
+`douglasrizzo/catsim` (BSD-3-Clause, `153★`, Brazil-maintained) — adaptive-test
+*simulation*, not calibration or generation. Confidence: **high** — first-hand
+`pushed_at` on every row.
+
+### 🔴 The shelf has a maintenance debt, and it is concentrated in the recipe layer
+
+| cut | count |
+|---|--:|
+| shelf addresses measured (`p580`) | `265` |
+| 🟡 stale 12–24 months | `15` |
+| 🔴 dead >24 months | **`30`** |
+| 🔴 **…cited in [`../compose/patterns.md`](../compose/patterns.md)** | **`19`** |
+
+🔴 **`19` abandoned repositories are named as components inside this base's delivery
+recipes** — the pages a studio builds from. 🟢 **Two were replaced this pass:**
+`githubharald/DeslantImg` (🔴 `2021-11-21`) and `githubharald/WordDetector`
+(🔴 `2023-05-05`) are both superseded by `datalab-to/chandra` (Apache-2.0, `12,655★`,
+handwriting + tables + layout, pushed `2026-10-22`). 🔴 **One is load-bearing with no
+replacement found:** `dmitry-viskov/pylti1.3` (MIT, 🔴 `2024-08-18`) — **LTI 1.3 is how an
+AI layer legitimately attaches to Moodle, Canvas or Open edX**, and most recipes depend on
+it. 🔴 **Four should not be offered at all**, two of them unlicensed:
+`IronCountySchoolDistrict/iep-printing-php` (`1★`, no licence, 🔴 `2017-03-29`),
+`microsoftarchive/Learn-LTI`, `tc-imba/canvas-auto-rubric` (no licence),
+`fotinikafida/text-to-moodle`.
+
+### 🔴 Correction propagated: the "largest permissive repository" superlative was wrong in six places
+
+🔴 **`microsoft/markitdown` — MIT, `193,266★`, pushed `2026-10-28` — is `2.7×`
+`hugohe3/ppt-master` (`71,711★`) and `3.6×` `HKUDS/DeepTutor` (`52,957★`).** The claim
+that `ppt-master` was *"the largest permissively licensed repository anywhere in this
+knowledge base"* has been **amended in place on all six live sites** across
+`agents/top.md`, `agents/trending.md`, `repos/foundations.md`, `repos/trending.md`,
+`compose/patterns.md` and this page. Append-only history and `archive/` are left intact as
+the record. 🟢 **`markitdown` is also better-attributed than the row it displaces:** owner
+**Microsoft** places it to **North America**, where `ppt-master` is carried as *"provenance
+unverified, no region assigned"*. 🔵 **The method lesson is `Trend 11`'s, inverted:** this
+base audits for *closed gaps republished as discoveries*; it had no check for **a
+superlative invalidated by a later measurement**. One grep caught six instances.
+
+### 🟢 Licence resolved from bytes: `microsoft/autogen` ships two licences and both prior readings were half right
+
+| source | verdict |
+|---|---|
+| `search/repositories` detector | 🔴 CC-BY-4.0 |
+| this base's rotation ledger | 🟢 MIT |
+| 🟢 `LICENSE` bytes (`main`+`master`, `18,649 B`) | **CC-BY-4.0** |
+| 🟢 `LICENSE-CODE` bytes (`main`+`master`, `1,140 B`) | **MIT, © Microsoft Corporation** |
+
+🟢 **The code is MIT; the default `LICENSE` is CC-BY-4.0 and covers docs, notebooks and
+samples.** 🔵 **Consequence:** the library is shippable, but material lifted from its
+documentation carries an **attribution obligation**, and any automated compliance scan a
+client runs — reading only `LICENSE` — will label the whole repository CC-BY-4.0.
+🔴 **Generalises:** a single-file licence read is insufficient for repositories that
+separate code and content licences, and this base's detector-based census cannot see the
+distinction. Confidence: **high** — four byte reads across two branches.
+
+## Declared gaps — updated `2026-11-01` (`p582`)
+
+- 🔴 **WITHDRAWN (was "reshaped"): psychometric item generation.** Not "calibration exists,
+  generation does not" — **neither exists**. All eleven psychometric rows are dead. This is
+  a build, not a composition. **Supersedes `p581`.**
+- 🔴 **NEW and load-bearing: no maintained permissive LTI 1.3 library.** `pylti1.3` is
+  27 months cold and most recipes depend on it. **Next pass: sweep `topic:lti` and
+  `topic:lti-provider` singly** — never swept with the corrected form.
+- 🔴 **RESHAPED, unchanged from `p581`: tutor-degradation detection.** `popmon` (MIT) and
+  `frouros` (BSD-3-Clause) are the statistical half; the education-aware layer is unbuilt.
+- 🟢 **CLOSED: nothing open-source handles handwritten student work.** `datalab-to/chandra`
+  (Apache-2.0, `12,655★`) does handwriting, tables and layout; `breezedeus/Pix2Text` (MIT)
+  does maths formulae.
+- 🟡 **NARROWED: nothing open-source *authors* instructional video.** Still true for
+  generation, but `QuentinFuxa/WhisperLiveKit` (real-time + diarisation + translation) and
+  `liuzhao1225/YouDub-webui` (localisation + dubbing) close the **delivery and access**
+  half, which is the regulated half.
+- 🔴 **STANDS, 7th pass: market sizing is vendor-only.** No independent estimate exists.
+  **But it now has a measured shape** — five publishers, 2026 range USD `9.6`–`11.4` bn,
+  terminal values differing `>3×`, cause identified as scope definition. Quote a range with
+  the publisher named, never a point.
+- 🔴 **STANDS: no primary EU legal text from this session.** `eur-lex.europa.eu` does not
+  resolve. **This should be an allowlist request, not a recurring action item.**
+- 🔴 **STANDS: `curl -sI` URL verification is inoperable here** — every `github.com` URL
+  returns `403` through the session proxy, so a `403` cannot be told from a 404. The run
+  prompt mandates this broken check. Use `q=repo:owner/name` against `search/repositories`.
+- 🔴 **STANDS: region is unobtainable for individually-owned repos.** `users/{login}` is
+  `403`. Rows are placed only on **owner identity** (Microsoft, Mindee, Kozea, LlamaIndex,
+  ING Bank, IFCA, CMU) or **description language**. **Read "Global" as *provenance
+  unknown*, never as *geographically spread*.**
+- 🔵 **Next pass, in priority order:** (1) **sweep `topic:lti`, `topic:lti-provider`,
+  `topic:xapi`, `topic:qti` singly** — the integration axis, now the base's most important
+  unreplaced dependency; (2) **re-run the native-language legs for the jurisdictions not
+  covered this pass** — Indonesia (`id`), Vietnam (`vi`), Saudi/UAE (`ar`), Nigeria,
+  Poland (`pl`) — the method is proven and these are unqueried; (3) **confirm the Korean
+  reclassification against a MOE primary document**, because a reversal of that size should
+  not rest on secondary sources; (4) **add a superlative-audit step** to the pre-publish
+  grep, on the `markitdown` precedent.
+
+
 ## p581 — 2026-11-01 — **three trend updates, one gap closed, one gap reshaped, and a measurement defect that retroactively explains four passes of empty sweeps**
 
 ### 🟢 `Gap "lecture-video tooling remains unswept"` — CLOSED
@@ -1795,8 +1973,9 @@ standing property.** Date it or drop it.
   **unmeasured because there is nothing in the cohort to measure it with** — not
   a gap in this KB's searching, a property of the artefact class.
 - **Horizontal tooling is systematically under-covered, and the miss was
-  expensive.** `hugohe3/ppt-master` — **MIT, 71,498★**, the largest permissively
-  licensed repository anywhere in this KB — went unfound for four passes because
+  expensive.** `hugohe3/ppt-master` — **MIT, 71,498★**, then believed the largest permissively
+  licensed repository anywhere in this KB (🔴 **superseded `p582` by
+  `microsoft/markitdown`, MIT, `193,266★`**) — went unfound for four passes because
   every sweep filters on an education topic and it carries none. It was surfaced
   by the prescribed *web* search, which cuts against the previous pass's "query
   the index, not the listicles". **Both channels are required; next pass should

@@ -4,6 +4,119 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `2026-11-01` — `p582` — **five capability topics, `27` new permissive live addresses, and the document-ingestion tier this base never had**
+
+🟢 **The `p581` prescription executed:** `topic:pptx`, `topic:ocr`, `topic:pdf`,
+`topic:speech-to-text`, `topic:diagrams`, each swept **singly** with `sort=stars`, licence
+and `pushed_at` filtered client-side. Full machine record:
+`evidence/capability-sweep.2026-11-01-p582.tsv`,
+`evidence/new-candidates.2026-11-01-p582.tsv`,
+`evidence/shelf-dead-rows.2026-11-01-p582.tsv`.
+
+**`500` rows fetched → `210` permissive-and-live → `27` selected for education
+applicability and verified field-by-field.** Every row below was confirmed this pass with
+`q=repo:owner/name` against `search/repositories`, returning licence, stars, forks,
+`pushed_at` and `archived` in one `200`.
+
+### 🟢 Tier 1 — document ingestion: the layer every downstream tutor, quiz and RAG index starts from
+
+| Repo | Licence | Stars | Forks | Last push | Region | What it is |
+|---|---|--:|--:|---|---|---|
+| [microsoft/markitdown](https://github.com/microsoft/markitdown) | 🟢 **MIT** | **193,266** | 14,477 | `2026-10-28` | North America | 🆕 **The largest permissive repo in this base.** Office documents + PDF → Markdown. Owner **Microsoft** |
+| [run-llama/liteparse](https://github.com/run-llama/liteparse) | 🟢 **Apache-2.0** | **12,965** | 894 | `2026-10-31` | North America | Fast open document parser. Owner **LlamaIndex** |
+| [The-Vibe-Company/megaparse](https://github.com/The-Vibe-Company/megaparse) | 🟢 **Apache-2.0** | **7,416** | 418 | `2026-10-15` | Global | PDF / DOCX / **PPTX** parsing optimised for LLM ingestion |
+| [grobidOrg/grobid](https://github.com/grobidOrg/grobid) | 🟢 **Apache-2.0** | **5,205** | 571 | `2026-11-01` | EMEA | **Scholarly** document structuring + bibliographic reference extraction (CRF + DL) |
+| [oomol-lab/pdf-craft](https://github.com/oomol-lab/pdf-craft) | 🟢 **MIT** | **6,470** | 473 | `2026-11-01` | APAC | **Scanned-book digitisation** → ePub; topic `book-digitization` |
+
+### 🟢 Tier 2 — OCR, including the two things education actually needs: handwriting and maths
+
+| Repo | Licence | Stars | Forks | Last push | Region | What it is |
+|---|---|--:|--:|---|---|---|
+| [hiroi-sora/Umi-OCR](https://github.com/hiroi-sora/Umi-OCR) | 🟢 **MIT** | **48,320** | 4,719 | 🟡 `2025-11-20` | APAC | Fully **offline** OCR incl. PDF, multi-language, batch |
+| [naptha/tesseract.js](https://github.com/naptha/tesseract.js) | 🟢 **Apache-2.0** | **38,803** | 2,403 | 🟡 `2026-05-17` | Global | Pure-JS OCR, **100+ languages**, WebAssembly — runs in the browser |
+| [JaidedAI/EasyOCR](https://github.com/JaidedAI/EasyOCR) | 🟢 **Apache-2.0** | **30,127** | 3,614 | 🟡 `2025-12-05` | APAC | **80+ languages**, all major writing scripts |
+| [datalab-to/chandra](https://github.com/datalab-to/chandra) | 🟢 **Apache-2.0** | **12,655** | 1,266 | `2026-10-22` | North America | 🔵 **OCR for complex tables, forms and `handwriting`, with full layout** |
+| [RapidAI/RapidOCR](https://github.com/RapidAI/RapidOCR) | 🟢 **Apache-2.0** | **8,400** | 765 | `2026-11-01` | APAC | Multi-language OCR on ONNX Runtime / OpenVINO — CPU-deployable |
+| [mindee/doctr](https://github.com/mindee/doctr) | 🟢 **Apache-2.0** | **6,407** | 690 | `2026-10-31` | EMEA | Document text recognition library. Owner **Mindee**, Paris |
+| [breezedeus/Pix2Text](https://github.com/breezedeus/Pix2Text) | 🟢 **MIT** | **3,281** | 283 | 🟡 `2026-08-23` | APAC | 🔵 **Maths formulae**, tables and layout → Markdown/LaTeX. Small models |
+
+🟢 **`chandra` and `Pix2Text` are the two rows that matter most on this page.** This base
+has shelved `githubharald/DeslantImg` and `githubharald/WordDetector` as its handwriting
+primitives — **both dead since 2021 and 2023** (see the dead-row audit below).
+`chandra` does handwriting *and* tables *and* layout, is Apache-2.0, and was pushed nine
+days ago. **A worksheet photographed on a phone is the actual input format of assessment
+in most of the world, and this base had no live component for it until now.**
+
+### 🟢 Tier 3 — speech: lecture capture, diarisation, and cross-language delivery
+
+| Repo | Licence | Stars | Forks | Last push | Region | What it is |
+|---|---|--:|--:|---|---|---|
+| [ggml-org/whisper.cpp](https://github.com/ggml-org/whisper.cpp) | 🟢 **MIT** | **54,830** | 6,263 | `2026-10-30` | EMEA | Whisper in C/C++ — **CPU-local ASR**, no GPU, no API. Owner `ggml.ai`, Sofia |
+| [modelscope/FunASR](https://github.com/modelscope/FunASR) | 🟢 **MIT** | **20,895** | 2,101 | `2026-11-01` | APAC | Training + inference ASR, **streaming**, VAD, punctuation; `mcp-server` topic |
+| [QuentinFuxa/WhisperLiveKit](https://github.com/QuentinFuxa/WhisperLiveKit) | 🟢 **Apache-2.0** | **11,196** | 1,158 | `2026-10-31` | Global | 🔵 **Real-time local** STT + **speaker diarisation** + translation |
+| [QwenAudio/SenseVoice](https://github.com/QwenAudio/SenseVoice) | 🟢 **MIT** | **9,651** | 843 | 🟡 `2026-09-30` | APAC | ASR for **Mandarin, Cantonese, English, Japanese, Korean** |
+| [liuzhao1225/YouDub-webui](https://github.com/liuzhao1225/YouDub-webui) | 🟢 **Apache-2.0** | **5,785** | 624 | `2026-10-30` | APAC | 🔵 **Video localisation + dubbing** — ASR → translate → TTS, YouTube/Bilibili |
+| [MahmoudAshraf97/whisper-diarization](https://github.com/MahmoudAshraf97/whisper-diarization) | 🟢 **BSD-2-Clause** | **5,671** | 504 | 🟡 `2026-08-15` | Global | ASR with **speaker diarisation** on Whisper |
+
+🔵 **`WhisperLiveKit` extends `p581`'s finding in the direction that matters.** `p581`
+closed the lecture-media gap with a *batch* transcript toolchain and noted nothing
+authors instructional video. **Real-time + diarisation + translation is a different
+capability**: it is live lecture captioning for a hearing-impaired or
+second-language student, which is a legal obligation in several of the jurisdictions on
+[`../intel/market.md`](../intel/market.md), not a convenience.
+
+### 🟢 Tier 4 — authoring and diagrams: the output side
+
+| Repo | Licence | Stars | Forks | Last push | Region | What it is |
+|---|---|--:|--:|---|---|---|
+| [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 🟢 **MIT** | **134,943** | 15,943 | `2026-10-31` | Global | Collaborative hand-drawn-style **whiteboard** — a live classroom surface |
+| [mermaid-js/mermaid](https://github.com/mermaid-js/mermaid) | 🟢 **MIT** | **90,955** | 9,441 | `2026-10-31` | Global | Diagrams from text — diagrams-as-code for generated courseware |
+| [Kozea/WeasyPrint](https://github.com/Kozea/WeasyPrint) | 🟢 **BSD-3-Clause** | **9,750** | 901 | `2026-10-30` | EMEA | HTML/CSS → **PDF** — worksheets, certificates, reports. Owner **Kozea**, France |
+| [penrose/penrose](https://github.com/penrose/penrose) | 🟢 **MIT** | **8,010** | 362 | `2026-10-31` | North America | 🔵 **Maths diagrams from plain-text notation** (DSL). Carnegie Mellon origin |
+| [gitbrent/PptxGenJS](https://github.com/gitbrent/PptxGenJS) | 🟢 **MIT** | **6,339** | 967 | 🟡 `2025-11-28` | Global | Generate **`.pptx`** from JavaScript — Node, React, browser |
+| [alexlenail/NN-SVG](https://github.com/alexlenail/NN-SVG) | 🟢 **MIT** | **5,693** | 747 | 🟡 `2026-06-02` | Global | Publication-ready **neural-network schematics** — teaching figures |
+| [JabRef/jabref](https://github.com/JabRef/jabref) | 🟢 **MIT** | **4,861** | 3,692 | `2026-10-31` | EMEA | BibTeX/BibLaTeX reference management; `academia` + `ai` topics |
+| [dotnet/Open-XML-SDK](https://github.com/dotnet/Open-XML-SDK) | 🟢 **MIT** | **4,617** | 608 | `2026-10-27` | North America | Programmatic `.docx` / `.pptx` manipulation. Owner **.NET / Microsoft** |
+
+🔵 **`penrose` is the non-obvious row.** Every other diagram tool here renders a graph you
+already specified. `penrose` compiles **mathematical notation** into a diagram, which means
+a generated maths explanation can be rendered as a *correct* figure rather than an
+LLM-drawn approximation — the failure mode that makes generated STEM courseware unusable.
+
+### 🔴 The dead-row audit `p581` prescribed — `30` shelf addresses are over two years dead, and `19` of them are load-bearing in recipes
+
+🟢 **Run against the `p580` census (`265` first-hand measurements), so this costs no new
+calls.** Cut at `pushed_at < 2024-11-01`:
+
+| cut | count |
+|---|--:|
+| shelf addresses measured (`p580`) | `265` |
+| 🟡 stale 12–24 months | `15` |
+| 🔴 **dead >24 months** | **`30`** |
+| 🔴 **…of those, cited in [`../compose/patterns.md`](../compose/patterns.md)** | **`19`** |
+
+🔴 **The finding is not the staleness, it is where it sits.** Nineteen abandoned
+repositories are named as components inside this base's delivery recipes — the pages a
+studio would actually build from. The worst, by axis:
+
+| axis | dead rows | oldest | state |
+|---|--:|---|---|
+| **Psychometrics / IRT / CDM** | `10` | `inuyasha2012/pypsy` 🔴 `2018-11-16` (8 yrs) | `girth`, `pyirt`, `vipsy`, `EduCDM`, `psychmeta`, `meyerjp3/psychometrics`, `HCD-code`, `ICD`, `DCD` — **the entire axis** |
+| **Question generation** | `6` | `KristiyanVachev/Leaf-Question-Generation` 🔴 `2022-03-07` | confirms `p580`: `patil-suraj/question_generation`, `Questgen.ai`, `question_generator`, `lm-question-generation` |
+| **Handwriting / accessibility** | `6` | `liip/TheA11yMachine` 🔴 `2019-12-17` | `DeslantImg`, `WordDetector`, `WLASL`, `sign-language-translator`, `predict4all` |
+| **LMS / LTI integration** | `4` | `IronCountySchoolDistrict/iep-printing-php` 🔴 `2017-03-29` (9.5 yrs, **no licence**) | `microsoftarchive/Learn-LTI`, `pylti1.3`, `canvas-auto-rubric`, `text-to-moodle` |
+| **Lecture media** | `1` | `jhudsl/ari` 🔴 `2024-02-21` (NOASSERTION) | superseded by this pass's Tier 3 |
+
+🟢 **`p581` reshaped the item-generation gap as "calibration ≠ generation", keeping
+calibration as the available half. That is now withdrawn: the calibration half is a
+graveyard too** — ten repositories, every one dead, the newest `EduCDM` at
+`2024-10-25`. 🔴 **The psychometric axis of this base is not a thin tier, it is an
+unmaintained one**, and a recipe that names `girth` or `pypsy` is a recipe that does not
+build. Two of this pass's rows (`chandra`, `Pix2Text`) replace dead handwriting
+primitives directly; **the psychometric axis has no replacement in the permissive
+ecosystem and that is now a measured conclusion, not a suspicion.**
+
+
 ## 🆕 `2026-11-01` — `p581` — **capability sweep: 14 topics, 5 new permissive addresses, 8 recorded nil legs**
 
 🟢 **The sweep [`../intel/trends.md`](../intel/trends.md) prescribed as "the next pass's
