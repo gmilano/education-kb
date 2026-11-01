@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p599` — `2026-11-01` — the foundational tier is `100 %` held on every star-ranked channel, and `2 of 7` components re-read this pass do not live on `main`
+
+### 🟢 `0` additions, and the `0` is measured rather than asserted
+
+Three topic heads that feed this page were walked star-ranked and every address on each first page
+was checked against this whole base before being called new: **`topic:lms` (`2,615` repos) → `13`
+addresses, `13` held; `topic:knowledge-tracing` (`102`) → `7`, `7` held; `topic:grading` (`283`) →
+`9`, `9` held.** 🔴 **`29 of 29`, `0` new.** Full tables, with per-address hit counts, in
+[`trending.md`](trending.md).
+
+🔵 **The result is not that the tier is complete; it is that the star ranking returns this base.**
+Re-ordering the same channel by push date (`?o=desc&s=updated`) served `3` addresses never held here —
+all `≤ 4★`, none shelvable, `1` carrying a bespoke non-commercial grant (`599-B`, `599-C`).
+🟢 **For this page specifically that is a clean result: the foundational tier *is* the high-star band,
+so a channel that only reaches the sub-`5★` tail genuinely has nothing to add here.** The nil on
+`repos/foundations.md` is real; the nil on `agents/*` was an artefact.
+
+### 🔴 Branch resolution is now a majority problem, not an edge case
+
+`7` components were byte-read at their real default branch this pass to support the new recipes in
+[`../compose/patterns.md`](../compose/patterns.md). 🔴 **`2 of 7` are not on `main`:**
+
+| repo | real default branch | grant byte-read `2026-11-01` | what a `main`-only probe reports |
+| --- | --- | --- | --- |
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🔴 **`master`** | 🟢 Apache-2.0 (`11,361 B`) | 🔴 no licence file |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **`master`** | 🔴 AGPL-3.0 (`35,136 B`) | 🔴 no licence file |
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | `main` | 🟢 MIT (`1,141 B`) | correct |
+| [pguso/agents-from-scratch](https://github.com/pguso/agents-from-scratch) | `main` | 🟢 MIT (`1,091 B`) | correct |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | `main` | 🟢 MIT (`1,071 B`) | correct |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | `main` | 🟢 BSD-3-Clause (`1,512 B`) | correct |
+| [inducer/relate](https://github.com/inducer/relate) | `main` | 🟢 MIT/X Consortium (`1,145 B`) | correct |
+
+🔵 **Add `EduPilot` (`master`) and `openeducat_erp` (`19.0`) from this same pass and the rate is
+`4 of 9`.** `p593`'s finding that a branch-hardcoding instrument *"fails silently on exactly the rows
+it exists to rescue"* is not a rare failure mode in this industry — education's platforms are old
+enough that `master` is still the norm among them. 🟢 **Mandatory order of operations, re-affirmed:
+`git ls-remote --symref` first, grant second.**
+
+### 🟡 A small correction to this page's own citation rule
+
+This page records that `openedx/edx-platform` *"is the pre-rename name and the API rejects it with
+`422`"*. 🟢 **True of `api.github.com` and still worth the warning** — but measured this pass,
+`git ls-remote` on the **old** address resolves normally (GitHub follows the rename) and
+`raw.githubusercontent.com` served its `35,136 B` AGPL-3.0 grant from it. 🔵 **Which explains why the
+dead address keeps being cited: the git-layer oracles never punish it.** The warning should read
+*"the API rejects it; git does not"*, so a reader does not conclude the old slug is broken everywhere
+and trust a citation that happens to work.
+
+### 🔴 `Gap 372` re-tested from a new direction and it does not move
+
+*No permissive, production-grade library for automated essay grading.* Approached this pass through
+`topic:essay-grading` (`17` repos, **all held**, `129` files) and a dedicated search leg. 🔴 The one
+address the leg advertised as *"an open-source solution for automated essay evaluation"* —
+[`Jatin-Mehra119/Essay-Scoring-Modeling`](https://github.com/Jatin-Mehra119/Essay-Scoring-Modeling) —
+has **no grant file on `6` path variants**, byte-read `2026-11-01` at `main`. 🟢 The permissive
+option remains [`wwrwbs/AI_AWE`](https://github.com/wwrwbs/AI_AWE) (Apache-2.0, `1,865 B`, the
+`arXiv:2608.17356` system), already held here. 🔵 **Unchanged conclusion, now triangulated: the
+activity the AI Act names as high-risk most explicitly is the one with the thinnest open supply, and
+what supply exists is research-grade or unlicensed.**
+
+---
+
+
 🆕 **`p598` — `4` foundational rows promoted, every grant byte-read at the repository's real default
 branch (`3 of 4` are not `main`), and one of them is permissive under a licence the GitHub API
 reports as `NOASSERTION`.**

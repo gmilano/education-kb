@@ -1,0 +1,10 @@
+# p599 2026-11-01 — topic-channel yield by ordering. held = appears anywhere in this repo (*.md,*.tsv) per 597-D gate.
+channel	ordering	topic_size	addresses_taken	already_held	new	yield_pct
+topic:ai-tutor	stars (default)	843	14	14	0	0.0
+topic:lms	stars (default)	2615	13	13	0	0.0
+topic:knowledge-tracing	stars (default)	102	7	7	0	0.0
+topic:grading	stars (default)	283	8	8	0	0.0
+topic:essay-grading	stars (default)	17	17	17	0	0.0
+topic:intelligent-tutoring-system	stars (default)	44	8	8	0	0.0
+TOTAL-STARS	stars (default)	3904	39	39	0	0.0
+topic:ai-tutor	recency (?o=desc&s=updated)	843	20	17	3	15.0

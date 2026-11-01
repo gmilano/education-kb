@@ -1,0 +1,12 @@
+# p599 2026-11-01 — control pair for the run prompt's mandated verification instruction.
+probe	target	target_is_real	result	discriminates
+curl -sI https://github.com/<slug>	HKUDS/DeepTutor	yes	403	no
+curl -sI https://github.com/<slug>	zzz-not-a-real-org-xyz/nope-nope	no	403	no
+curl -s https://api.github.com/repos/<slug>	HKUDS/DeepTutor	yes	403	no
+git ls-remote --symref https://github.com/<slug> HEAD	HKUDS/DeepTutor	yes	ref: refs/heads/main + SHA	yes
+git ls-remote --symref https://github.com/<slug> HEAD	zzz-not-a-real-org-xyz/nope-nope	no	fatal: could not read Username	yes
+raw.githubusercontent.com/<slug>/<SHA>/LICENSE	HKUDS/DeepTutor	yes	200, 11408 B	yes
+raw.githubusercontent.com/<slug>/<SHA>/NOPEFILE	HKUDS/DeepTutor	n/a	404, 14 B body	yes (code, not body)
+DNS	digital-strategy.ec.europa.eu	yes	ENOTFOUND	egress allowlist
+DNS	eur-lex.europa.eu	yes	ENOTFOUND	egress allowlist
+DNS	artificialintelligenceact.eu	yes	ENOTFOUND	egress allowlist

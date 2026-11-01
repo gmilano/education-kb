@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p599` — `2026-11-01` — the most-starred Creative Commons row on this page is reciprocal, not a dedication, and `0` rows were added
+
+### 🔴 The correction, which changes an instruction this page gave the reader
+
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) —
+`939★` — was carried on this page as a **CC0 dedication** and as *"usable as reference material"*.
+Byte-read at `main` (`135d6275`, `LICENSE`, `1,230 B`) it is **`CC BY-SA 4.0` — reciprocal** — its
+grant covers only *"educational skills, documentation, examples, and curriculum materials"* (the repo
+is **TypeScript**, so the code is granted nothing), and the committed file says of itself *"This is a
+human-readable notice"* and points at the legalcode for the real terms. 🔴 **Both affected rows in
+the block table below are corrected**, and `cybercussion/SCOBot` is no longer this base's *first*
+reciprocal CC case. Full working in [`trending.md`](trending.md) — **`599-A`**.
+
+### 🔴 Measured this pass and NOT shelved — recorded so a later pass does not re-find them
+
+`3` addresses this base has never held were served by a channel that pays (`topic:ai-tutor` re-ranked
+by push date instead of stars — `599-B`). Every grant byte-read at the real default branch. 🔴 **None
+is shelvable**, and the reason is the same for all three:
+
+| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Disposition |
+| --- | --: | --- | --- | --- |
+| [baney75/myelinate](https://github.com/baney75/myelinate) | `4` | 🟢 **MIT** (`1,070 B`) | `main` | **NOT SHELVED — star floor.** A `14`-skill Socratic-tutor plugin suite; grant is clean, adopters are absent |
+| [Ethos6/masterly](https://github.com/Ethos6/masterly) | `2` | 🟢 **MIT** (`1,064 B`), manifest agrees | `main` | **NOT SHELVED — star floor.** Lessons from the learner's own material, source-quoted questions, FSRS review |
+| [2092372408-pixel/EduPilot](https://github.com/2092372408-pixel/EduPilot) | `2` | 🔴 **"EduPilot Noncommercial Source License 1.0"** (`1,951 B`, *"All rights reserved"*) | 🔴 **`master`** | **BLOCK — not open source.** Manifest reads `"SEE LICENSE IN LICENSE"` |
+
+🔵 **The `0` is the finding, and it has a shape.** The channel that reaches supply this base lacks
+reaches it **only below `5★`** — so what is missing is not simultaneously findable and shippable.
+🔴 **And `1 of 3` of that tail carries a bespoke non-commercial grant**, the same shape as
+[`PageLM`](https://github.com/CaviraOSS/PageLM) at `2,057★` (re-graded `p594`). 🔵 **Consequence for a
+reader: the star floor on this page is not only a quality filter, it is accidentally a licence
+filter** — the hand-written "looks open" grant concentrates where nobody is auditing.
+
+🟢 **Two held rows re-read and confirmed:** [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA)
+— 🟢 **MIT** (`1,068 B`), `91★`, `4` forks, `88` commits, local-first per-course exam prep as plain
+markdown; and [`ArturoNereu/AI-Study-Group`](https://github.com/ArturoNereu/AI-Study-Group) —
+🔴 **no grant file on `6` path variants**, BLOCK confirmed.
+
+---
+
+
 🆕 **`p598` — scope stated before its result: `8` mandated legs run (`4` global, `4` regional),
 `6` `gh api` topic axes swept, `12` grants byte-read, `16` existing 🔴 BLOCK rows re-audited on a
 channel this base had never read, `5` agent rows promoted.**
@@ -522,7 +562,7 @@ repository's own licence file.
 | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 🟢 **Apache-2.0 (text)** | **64,724** | `2026-10-27` | APAC | 🆕 Trains a ~64M-parameter language model from scratch in ~2 hours on modest hardware. **The cheapest credible "we trained our own model" teaching artefact in this base.** Standard Apache-2.0, no carve-out. 🔵 Default branch is `master`. |
 | [karpathy/nanochat](https://github.com/karpathy/nanochat) | 🟢 **MIT (text)** | **59,308** | 🟡 `2026-09-07` | Global | 🆕 The full ChatGPT-style stack — tokeniser, pretraining, fine-tuning, inference, web UI — trainable end-to-end. © 2025 Andrej Karpathy, standard MIT. 🟡 ~2 months since last push; pin it. 🔵 Default branch is `master`. |
 | [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🟢 **MIT (text)** | **39,206** | 🟡 `2026-07-27` | Global | 🆕 Catalogue of agent use cases by industry, **with education entries of its own** (Virtual AI Tutor, Study Partner, Research Scholar). Use it as a **brief generator** in pre-sales, not as a dependency. 🟡 ~3 months stale. Standard MIT, © 2025. |
-| [ARUNAGIRINATHAN-K/awesome-ai-agents-2026](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | 🟡 **CC0-1.0 (text)** | **353** | `2026-10-23` | Global | 🆕 Searchable directory comparing agent frameworks and tools; 770 commits, a real application rather than a README list. 🔴 **CC0 is a public-domain dedication for *content*, not a software licence — no patent grant.** Same trap as `education-agent-skills` in the block table below. API said `NOASSERTION`. |
+| [ARUNAGIRINATHAN-K/awesome-ai-agents-2026](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | 🟡 **CC0-1.0 (text)** | **353** | `2026-10-23` | Global | 🆕 Searchable directory comparing agent frameworks and tools; 770 commits, a real application rather than a README list. 🔴 **CC0 is a public-domain dedication for *content*, not a software licence — no patent grant.** 🔵 **This row is the genuine CC0 case; `education-agent-skills`, which earlier passes paired with it, is `CC BY-SA 4.0` and reciprocal (`599-A`) — a different and worse trap.** API said `NOASSERTION`. |
 | [rphilipzhang/AI-PhD-S26](https://github.com/rphilipzhang/AI-PhD-S26) | 🟢 **MIT (text)** | **91** | 🟡 `2026-07-28` | **APAC** | 🆕 **The first institution-accountable row in this tier, and the first with a course code.** `DOTE 6635 Artificial Intelligence for Business Research`, Spring 2026, **CUHK Business School**, Dept. of Decisions, Operations and Technology; instructor Renyu (Philip) Zhang, with a named TA and tutorial instructor. Mono-repo: scribed lecture notes, per-session slides on ML / deep learning / RL / **agentic AI**, CoLab demos, problem sets (Kaggle competition, neural-net implementation, GPT-2 training), reading lists, plus the 2024 and 2025 offerings. 🔵 **This is the tier's answer to a university client rather than to a corporate one.** 🟡 ~3.1 months since last push. |
 
 🔵 **Two members of this class are already on the shelf above** —
@@ -674,10 +714,10 @@ base cannot describe is not a row it can recommend.
 | [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 🔴 **BLOCK — no grant** | 64★. Twelve probes all 404; API `spdx_id: NONE`. Unlicensed = all rights reserved. Last push `2025-11-04`. |
 | [bigdata-ustc/Agent4Edu](https://github.com/bigdata-ustc/Agent4Edu) | 🔴 **BLOCK — no grant** | 100★, AAAI-grade learner simulation. 🆕 **Re-probed `p586`: ten paths (`LICENSE`/`.md`/`.txt`/`COPYING`/`LICENCE` × `main`+`master`) all 404.** Still pushing code (`2026-09-29`) and still granting nothing. |
 | [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **Do not gate on "MIT"** | `package.json` declares MIT and references a `LICENSE` that does not exist at 8 paths × 2 branches. A question for counsel. 🟢 Use [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (real MIT, 310★) instead — same job. |
-| [cybercussion/SCOBot](https://github.com/cybercussion/SCOBot) | 🔴 **CC BY-SA 4.0 on software — RECIPROCAL** | 🆕 `165★`, pushed `2026-10-29`, the most-starred *live* artefact on `topic:scorm` after `scorm-again`. API said `NOASSERTION`; the `837`-byte `LICENSE` is **Creative Commons Attribution-ShareAlike 4.0**. 🔴 **This is the base's third CC-on-software case and the first *reciprocal* one** — unlike the CC0 dedications at `education-agent-skills` and `awesome-ai-agents-2026`, ShareAlike propagates an obligation into whatever you build on it, and CC still grants no patent rights. Do not vendor. See `589-F`. |
+| [cybercussion/SCOBot](https://github.com/cybercussion/SCOBot) | 🔴 **CC BY-SA 4.0 on software — RECIPROCAL** | 🆕 `165★`, pushed `2026-10-29`, the most-starred *live* artefact on `topic:scorm` after `scorm-again`. API said `NOASSERTION`; the `837`-byte `LICENSE` is **Creative Commons Attribution-ShareAlike 4.0**. 🔴 **This is the base's third CC-on-software case and the *second* reciprocal one** — 🔴 **`p599` CORRECTS `p589` HERE: the first was [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) at `939★`, which this row used to call a CC0 dedication and which is byte-read `CC BY-SA 4.0`.** `awesome-ai-agents-2026` really is `CC0-1.0`. ShareAlike propagates an obligation into whatever you build on it, and CC still grants no patent rights either way. Do not vendor. See `589-F`, `599-A`. |
 | [adlnet/SCORM-to-xAPI-Wrapper](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **BLOCK — no grant AND archived** | 🆕 `99★`. Published by **ADL — the body that authored SCORM** — and it carries no licence, is `archived: true`, and was last pushed **`2017-10-02`**. 🔵 Recorded because it is the strongest single piece of evidence for `Trend 41`: a specification's own authors abandoned their own tooling, which is why generators now fill that layer. |
 | [aneelv75/github-trending](https://github.com/aneelv75/github-trending) | 🔴 **BLOCK — no grant, and the secondary source oversold it** | 🆕 Served by the mandated `github trending education AI {year}` leg and described there as *"a curated list of trending and high-impact GitHub repositories in AI, GenAI and engineering"*. Measured: 🔴 **`3★`**, last pushed `2026-03-25`, and **`10` licence probes (`LICENSE`/`.md`/`.txt`/`COPYING`/`LICENCE` × `main`+`master`) all `404`.** 🔵 A reminder with a number on it: the leg's descriptions are not calibrated to size. |
-| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🟡 **Creative Commons on software** | 936★, 165 teacher-facing skills, pushed `2026-10-22`. `LICENSE` is a Creative Commons text, not a software licence — no patent grant, and CC is not designed for code. Usable as *reference material*; do not vendor it into a product without counsel. |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🔴 **`599-A` RE-GRADED FROM 🟡 — `CC BY-SA 4.0`, RECIPROCAL, AND THE CODE HAS NO GRANT AT ALL** | 🆕 **`939★`** (was `936`), `165` teacher-facing skills, `main`, byte-read `2026-11-01` at `135d6275`: `LICENSE`, **`1,230 B`**, opening line `Creative Commons Attribution-ShareAlike 4.0 International`. `3` occurrences of `ShareAlike`, **`0` of `CC0`**. 🔴 **Three defects, each independently disqualifying.** (1) **Reciprocal** — *"If you remix, transform, or build upon the material, you must distribute your contributions under the same licence"*, so this is not the harmless CC0 case this page asserted for ten passes. (2) **The grant names only content**: *"The educational skills, documentation, examples, and curriculum materials in this repository are licensed under…"* — the repository is **TypeScript**, so 🔴 **the code is covered by nothing.** This is [`nextgen-ai`](https://github.com/aaryansamanta/nextgen-ai)'s *"MIT License (Code)"* defect inverted. (3) **The file disclaims itself**: *"This is a human-readable notice. The full legal terms are available at …/legalcode"* — 🔵 **so the operative terms are not in the repository and no byte-read of this file can reach them.** 🔵 **New screen rung: a grant file that points elsewhere for its own terms is a pointer, not a grant** — rank it with `598-B`'s manifest field. Not reference material either, without counsel. |
 
 ---
 

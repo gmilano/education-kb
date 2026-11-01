@@ -4,6 +4,103 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p599` — `2026-11-01` — the market-size disagreement is in the GROWTH RATE, not in the 2026 base, and that reverses the deck rule this base has been carrying
+
+### 🟢 Five firms measured this pass, and the `2026` bases agree
+
+| firm | `2026` base | endpoint | CAGR | grade |
+| --- | --: | --- | --: | --- |
+| Trend X Insights | **`$7.30 B`** | `$61.26 B` by `2034` | `31.5 %` | secondary |
+| Precedence Research | **`$9.58 B`** | `$136.79 B` by `2035` | `34.52 %` | secondary |
+| Resourcera (citing) | **`$10.4 B`** | `$32.27 B` by `2030` | `31.2 %` | tertiary |
+| Research and Markets | **`$10.6 B`** | `$42.48 B` by `2030` | `41.5 %` | secondary, report dated `2026-02` |
+| Grand View Research | **`$11.4 B`** | `$57.2 B` by `2033` | `25.9 %` | secondary, already carried |
+
+🟢 **Every one of the five falls inside the `$7 B–$11.4 B` band this page already publishes.** The
+band is `5` passes old and it survived a fresh five-firm sweep without moving — which is a stronger
+result than a revision would have been.
+
+🔴 **The endpoints do not agree, and the spread is `4.3×`**: `$32.27 B` (Resourcera, `2030`) against
+`$136.79 B` (Precedence, `2035`). 🔵 **So the disagreement between firms is a disagreement about the
+growth rate, not about today's market.** Precedence states the mechanism itself — its figures
+*"depend on market boundaries and the treatment of embedded AI revenues"*.
+
+🔵 **This refines, and partly reverses, the rule this base adopted at `p93`.** That rule
+(*"never put a market size in an education deck without naming the scope"*) was derived from the
+MarketsandMarkets regional series summing to `≈ $2.07 B` against a `$7–11.4 B` band — a **scope**
+failure. Measured here, scope is not the whole story: 🟢 **the `2026` base is robust across firms and
+safe to quote; it is the forecast endpoint that is firm-specific and must never be quoted alone.**
+New rule, additive rather than replacing: **quote the `2026` base (five firms agree inside `±22 %` of
+the midpoint); if an endpoint is required, name the firm, the year and the CAGR in the same
+sentence.** Registered as **`599-E`**.
+
+### 🔴 A `$12.5 B` figure was served this pass and is NOT banked
+
+A trends-leg source reports the market *"surged past the `$12.5 billion` milestone in `2026`"*, and a
+second reports `$12.3 B`. 🔴 **Neither is corroborated by any of the five research firms above, and
+both exceed the highest of them (`$11.4 B`).** Both are vendor/aggregator blogs. 🟢 **Rejected, not
+averaged in** — and recorded here so a later pass does not re-find them and read two mutually
+citing blogs as two sources. 🔵 **The band's ceiling does not move on blog evidence.**
+
+### 🔴 The LATAM provenance trap this pass caught before filing
+
+The LATAM leg served: *"la PUC firmó con Microsoft el programa **ConectIA**, que busca una
+integración completa de la IA a nivel institucional para el año **2026**"* — a clean,
+quotable, region-placed engagement reference. 🔴 **`ConectIA` was `0`-hits in this entire base**, so
+it would have been filed as new regional intelligence.
+
+🟢 **Checked against the primary institution first.** `uc.cl`'s own newsroom dates the UC
+Chile–Microsoft ConectIA launch to **`2024`** (*"the first step … was taken at the end of last
+year"*, under rector Ignacio Sánchez, who left office in March `2025`), and `2026` UC AI coverage —
+the Chile–California AI mission — **does not mention ConectIA at all**. 🔴 **So the aggregator
+re-dated a `2024` initiative as a `2026` target.** `ConectIA` stays unshelved as `2026` supply and is
+filed here as a caution. 🔵 **The general shape, worth more than the instance: a secondary LATAM
+aggregator will carry a real programme with a *forward* date attached, and the forward date is where
+the fabrication lives — not in the programme name.** Registered as **`599-F`**.
+
+### 🔴 Three primary legal hosts unreachable, so the Annex III date is STILL secondary-only
+
+| host | result | consequence |
+| --- | --- | --- |
+| `digital-strategy.ec.europa.eu` | 🔴 `ENOTFOUND` (DNS) | Commission's own AI Act timeline unread |
+| `eur-lex.europa.eu` | 🔴 `ENOTFOUND` (DNS) | Regulation (EU) `2026/1744` primary text unread |
+| `artificialintelligenceact.eu` | 🔴 `ENOTFOUND` (DNS) | the standard third-party tracker unread |
+
+🟢 **Re-corroborated at secondary grade, and the dates this base carries did not move**: the Digital
+Omnibus — **Regulation (EU) `2026/1744` of `2026-07-08`, in force `2026-07-27`** — moved stand-alone
+Annex III high-risk obligations to **`2027-12-02`** and AI embedded in regulated products to
+**`2028-08-02`**, while **Article 4 AI literacy has applied since `2025-02-02`** and is unaffected.
+Source grade: a guide updated `2026-09-01`. Enforcement by the AI Office and national authorities
+**began `2026-08-02`** — 🔵 **which is precisely the date that keeps being misread as the Annex III
+deadline.**
+
+🔴 **And the wrong reading was served for the SIXTH consecutive pass**, in the same sweep: *"several
+guides say high-risk education obligations start in August 2026"*. 🔵 **Six instances in six passes
+is no longer an error to correct; it is the market's majority reading** — so an EMEA education client
+has probably been given `2026-08-02` by their installed advisor, and the first deliverable of an
+EMEA engagement is the corrected clock, with the `2026-08-02` enforcement date explained as the
+thing their advisor actually saw.
+
+### 🔴 The regional legs: `4 of 4` paid, `0 of 4` served a token this base lacks
+
+Eighth consecutive pass at `4 of 4` paid. Tokens served and already held: North America — `134`
+bills / `31` states, the four states mandating both state guidance and district policy
+(Maryland, Idaho, Oklahoma, Virginia), the `K-12 AI Literacy and Readiness Act of 2026`, the
+April `2026` ADA Title II accessibility deadline, the `~70 %` Europe-and-North-America guidance
+composite; EMEA — Reg. `2026/1744`, Article 4, the `Apply AI Alliance`, deployer classification;
+APAC — Korea's `AI Basic Act` (in force `2026-01-22`, high-risk grace to `2027`), India's
+compulsory AI from `Class 3` in `2026-27`, China's mandatory content labelling, Japan's promotion-only
+`AI Promotion Act`; LATAM — UNESCO IESALC/UNU `200` institutions / `19` countries, Brazil's
+`PL 2338/2023`, Chile's `2021` national AI policy, Mexico's absent federal AI law.
+🔴 **Every one already carried.** The one *apparently* new token was `ConectIA`, refuted above.
+
+🔵 **Saturation on the demand side is now the stable result, not the news** — and `599-B` explains
+why it coexists with a live supply channel: this base's demand legs and its supply legs are
+*differently* exhausted, and only the supply side responds to a change of ordering.
+
+---
+
+
 ## 🆕 `p598` — `2026-11-01` — the legs pay `4 of 4` regionally for a seventh consecutive pass, and this pass states the evidence *grade* of every figure it publishes
 
 🟢 **`4 of 4` regional legs paid.** Every region below carries at least one token this base has not
@@ -76,6 +173,15 @@ they are now separate measurements and must stay separate.
 
 ### North America
 
+🆕 **`p599` — the buyer's clock, not the buyer's budget, is what moved.** Two `2026` deadlines now
+sit in the same fiscal year and both are *compliance* spend a studio can attach to: the **April `2026`
+ADA Title II accessibility deadline** for large public institutions, and the four states that mandate
+**both** state guidance and district-level AI policy (**Maryland, Idaho, Oklahoma, Virginia**).
+🔵 **Read together with the `134` bills / `31` states figure this page already carries, the North
+American sale is a *policy-and-accessibility remediation* engagement that happens to need AI, not an
+AI engagement that happens to need policy.** 🔴 **Declared gap, unchanged:** still no primary-source
+instrument for **Canada or Mexico** — `583-E` holds, no government host resolves from this session.
+
 🆕 **`p598` — the region's own figures disagree by `3.9×` and that spread is the finding.** The
 legs served three 2026 sizings of the North American AI-in-education market this pass: **`$3.68 B`
 at a `31.1 %` CAGR to `$32 B` by 2030** (marketsandmarkets), **`$951 M` in 2024 at `15.9 %` to
@@ -122,6 +228,16 @@ quantified instrument this channel produces: `134` bills across `31` states.
 
 ### EMEA
 
+🆕 **`p599` — the clock was re-corroborated and the market's wrong reading is now at six instances in
+six passes.** Annex III stand-alone obligations: **`2027-12-02`**; embedded in regulated products:
+**`2028-08-02`**; Article 4 AI literacy: **live since `2025-02-02`**; AI Office and national-authority
+**enforcement began `2026-08-02`**. 🔴 **`2026-08-02` is the date the market keeps quoting as the
+Annex III deadline**, and it was served that way again this pass. 🔵 **The engagement consequence:
+the first EMEA deliverable is the corrected timeline plus an Article 4 literacy programme that is
+already overdue — the only obligation here that is in force today.** 🔴 **Declared gap, unchanged:**
+no EMEA-only education adoption rate exists; the `~70 %` figure is a Europe-**and**-North-America
+composite and must not be presented as an EMEA number.
+
 🆕 **`p598` — EMEA is the one region where the binding instrument is a *statute*, not a budget.**
 The EU AI Act's **AI-literacy obligation has been in force since `2025-02-02`** and it reaches
 schools, universities and training providers directly — not as guidance but as a duty. 🟢 The
@@ -159,6 +275,20 @@ commitment are **cross-sector** envelopes, and this page continues to refuse to 
 education budgets.
 
 ### APAC
+
+🆕 **`p599` — the region's regulatory asymmetry is now datable, and one national rollout already
+failed in public.** Korea's **`AI Basic Act` took effect `2026-01-22`** — the region's first
+comprehensive AI statute — with a **grace period for legacy high-risk systems in health, education
+and finance running to `2027`**; India makes **AI compulsory from `Class 3` in the `2026-27` academic
+year** under the IndiaAI Mission with no standalone AI statute yet; China runs mandatory generative-AI
+filing and **content labelling since `2025-09`**; Japan's `AI Promotion Act` carries no penalties.
+🔴 **The cautionary datum, and it is the most useful thing in this subsection:** Korea's mandatory
+**AI textbooks reached under `30 %` adoption** and the National Assembly **removed their official
+status** after teacher unions said the rollout had outrun teacher preparation. 🔵 **A national mandate
+is not a national deployment — in APAC the binding constraint is teacher readiness, which is the
+service line, and Korea is the reference failure to cite when a ministry proposes a content mandate.**
+🔴 **Declared gap, unchanged:** no APAC ministry-level adoption *rate* — named programmes only, never
+a denominator.
 
 🆕 **`p598` — APAC's 2026 organising idea is sovereignty, and it has a concrete education shape.**
 Forrester expects **`60 %` of firms and governments in major markets such as India and China to run
@@ -203,6 +333,16 @@ not a dependency to track. 🔵 In-language supply grows again with
 `10,227 B`, K-12, Chinese), joining DeepTutor, OpenMAIC and pupilfirst.
 
 ### LATAM
+
+🆕 **`p599` — this region produced this pass's one disconfirmed finding, and the disconfirmation is
+the deliverable.** The leg served `ConectIA` (UC Chile + Microsoft) as a `2026` institutional-AI
+programme; UC Chile's own newsroom dates it to **`2024`** and `2026` UC AI coverage never mentions it
+(`599-F`, full working above). 🔴 **Not filed.** 🔵 **So the standing LATAM rule gets sharper: the
+aggregators in this region report real institutions with invented forward dates — verify the *date*
+against the institution's own site, not the programme name.** 🟢 The region's best evidence is still
+the **UNESCO IESALC / UNU survey — `200` institutions, `19` countries** — carried at snippet grade
+because `unu.edu` and `unesco.org` do not resolve here. 🔴 **Declared gap, unchanged:** no LATAM
+education-specific capital figure beyond one forecast.
 
 🆕 **`p598` — LATAM now has a *primary* evidence base for higher education, and this environment
 cannot open it.** A UNU working paper reports a survey of **`200` institutions across `19`
@@ -258,6 +398,11 @@ consequence for a LATAM engagement is concrete: **attach over APIs, do not fork*
 platform layer as integration rather than customisation.
 
 ### Global
+
+🆕 **`p599` — the `2026` market base is now the only figure on this page that five independent firms
+agree on, and the forecast endpoints disagree by `4.3×`.** Quote the base (`$7 B–$11.4 B`); never
+quote an endpoint without naming the firm, the year and the CAGR beside it (`599-E`). 🔴 A `$12.5 B`
+`2026` figure circulating in vendor blogs exceeds every research firm measured and is **rejected**.
 
 🆕 **`p598` — the global market sizings span `3.1×` for the same year, so this base will not quote
 one.** 2026 estimates served by the legs: **`$3.7 B`** (Persistence), **`$6.4 B`** for 2025

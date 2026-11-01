@@ -4,6 +4,100 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p599` — `2026-11-01` — a discovery nil can be an artefact of the RANKING FUNCTION, and the bespoke non-commercial licence lives in the band nobody audits
+
+## 62. A star-ranked view of a market returns the history of whoever built the index, so twenty-eight passes of "nil" measured this base and not the industry (high confidence — same channel, two orderings, `0 %` against `15 %`, measured in the same minute)
+
+Six `github.com/topics/<t>` heads were walked star-ranked (the default ordering) and every address on
+each first page was checked against this entire base before being called new: **`39` addresses,
+`39` already held, `0` new — `0.0 %`.** The *same* topic page, re-requested with
+`?o=desc&s=updated` so it ranks by push date instead of stars, served **`20` addresses of which `3`
+this base has never held — `15 %`.**
+
+🔵 **The two numbers differ by one query string.** This base has been assembled from star-ranked
+views for `598` passes, so a star-ranked view is a query against its own history; the nil it returns
+is a *self-measurement*. 🔴 **Twenty-eight prior passes read that nil as a property of the market
+("the industry is saturated") or of the channel ("search is broken"). Both readings are refuted by
+the `15 %`.**
+
+🔴 **And the qualifier that stops this becoming an over-correction:** all `3` new addresses are
+`≤ 4★`. The ordering that reaches unheld supply reaches it **only below this base's shelf floor**.
+🟢 **So the defensible statement is the narrow one: what this base lacks is not simultaneously
+findable and shippable.** Neither "saturated market" nor "broken channel" is true; the index and the
+shelf floor are measuring the same boundary from opposite sides.
+
+**Operative consequence.** 🔵 **Discovery budget should be spent on orderings, not on more queries.**
+A nil must name its ordering before it is recorded, and a nil reported from a single ordering
+certifies nothing. Registered as **`599-B`**.
+
+## 63. The hand-written "looks open" licence concentrates in the sub-`5★` tail, which means a star floor acts as an accidental licence filter — and removes the audit that would catch it (high confidence — `1 of 3` on the only unheld cohort this base has measured, and the matching instance at `2,057★` took five passes to catch)
+
+Of the `3` genuinely-unheld addresses measured this pass, **`1` carries a bespoke non-commercial
+grant**: `2092372408-pixel/EduPilot`, `2★`, `LICENSE` byte-read `1,951 B`, titled
+*"EduPilot Noncommercial Source License 1.0"* and opening *"All rights reserved"*. Its build manifest
+reads `"license": "SEE LICENSE IN LICENSE"`.
+
+🔵 **The mechanism is attention, not intent.** A `2★` repository has no downstream consumers, so
+nobody has ever had a commercial reason to read its grant; a hand-written licence with a plausible
+title survives there indefinitely. At scale the same shape gets caught — but slowly:
+[`PageLM`](https://github.com/CaviraOSS/PageLM) carried a *"PageLM Community License"* that opens
+with MIT's permission sentence verbatim, and this base published it as **MIT** for five passes at
+`2,057★` before `p594` re-graded it.
+
+🟢 **The counter-intuitive consequence for a shelf policy.** A star floor is normally justified as a
+*quality* filter. Measured here it is also doing **licence** work: it excludes the band where
+bespoke non-commercial grants live. 🔴 **But the same floor removes the only population that would
+generate an audit trail**, so the shape re-enters the shelf the moment a repository of this kind
+grows. 🔵 **The rule that follows: the licence screen must be hardest at the *top* of the shelf, not
+the bottom** — exactly inverse to where a star floor concentrates scrutiny — because a high-star
+bespoke grant has already passed every social check that would have caught it.
+
+**Corollary, measured.** 🔴 **A build manifest cannot close this gap.** `p598` added the manifest as
+a fourth grant channel; on this instance it returns `"SEE LICENSE IN LICENSE"` — 🟢 an *honest*
+pointer, so the channel does not mis-grade, but its yield on the unheld tail is `0 of 1`.
+Registered as **`599-C`**.
+
+## 64. Between firms, a market forecast's `2026` base is reproducible and its endpoint is not — so the quotable number and the impressive number are different numbers (high confidence — five firms, bases inside a `1.56×` range, endpoints spread `4.3×`)
+
+Five research firms sized AI-in-education for `2026` this pass: `$7.30 B`, `$9.58 B`, `$10.4 B`,
+`$10.6 B`, `$11.4 B` — a `1.56×` spread, and **every one inside the `$7–11.4 B` band this base has
+published for five passes.** Their endpoints: `$32.27 B` (`2030`) to `$136.79 B` (`2035`) — a
+**`4.3×`** spread, with CAGRs from `25.9 %` to `41.5 %`.
+
+🔵 **The base is an observation and the endpoint is an assumption**, and only the assumption is
+proprietary to the firm. One of them (Precedence) states the mechanism in its own methodology note:
+the figures *"depend on market boundaries and the treatment of embedded AI revenues"* — and
+*embedded* revenue is the term that compounds, so boundary choices that barely move `2026` dominate
+`2035`.
+
+🔴 **This partially reverses a rule this base adopted at `p93`** ("never quote a market size without
+naming the scope"), which was derived from a scope failure — a regional series summing to `$2.07 B`
+against the same band. 🟢 **Both are true at different time horizons: scope breaks the comparison
+*across* a firm's own products; growth assumption breaks it *between* firms at the endpoint.**
+🔵 **Deck rule: quote the `2026` base and cite two firms; if an endpoint is unavoidable, name the
+firm, year and CAGR in the same sentence.** 🔴 **And reject the `$12.5 B` `2026` figure now
+circulating in vendor blogs — it exceeds every research firm measured.** Registered as **`599-E`**.
+
+## 65. A classification gate fails on transposed tables unless it requires that EVERY cell be header vocabulary, not that one cell is (high confidence — `23` false positives against `0`, same base, same minute)
+
+The header-as-data gate — the run prompt's one explicit quality bar — was re-derived this pass.
+`p590`'s form (a header-vocabulary row not followed by a `|---|` separator) returns **`23` hits on
+this base and all `23` are false positives**: every one a *transposed* key-value table whose
+left-hand column is a row label (`| Licencia | MIT |`, `| Repo | [slug] |`).
+
+🔵 **The discriminator `p590` was missing is arity.** A genuine header-as-data defect is a row in
+which **every** cell is drawn from header vocabulary (`| Nombre | Repo | Licencia |`); a transposed
+row has **exactly one** such cell and the rest are values. Requiring `cells >= 2 AND
+cells == header-vocabulary cells` returns **`0` hits and `0` false positives** across all `9` pages.
+
+🔵 **The general law, which is why this is a trend and not a chore:** a gate written against the
+*shape* of a defect will fire on any structure that shares that shape. `p590` published its gate
+*with* its false-positive count, which is what made this correction cheap — 🟢 **so the practice
+worth keeping is publishing the false-positive count, not the gate.** Registered as **`599-D`**.
+
+---
+
+
 ## 🆕 `p598` — `2026-11-01` — the sector's own licence is the one the tooling cannot read, and the unit of sale is becoming the country
 
 ## 58. A licence screen built on `spdx_id` rejects the education sector's own licence, and therefore most of its institution-grade software

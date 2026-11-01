@@ -4,6 +4,122 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p599` — `2026-11-01` — **🔴 A `939★` ROW THIS BASE CALLS A "CC0 DEDICATION" IS `CC BY-SA 4.0` — RECIPROCAL — AND THE FILE IT CARRIES IS A HUMAN-READABLE NOTICE, NOT THE LEGAL CODE. 🔴 THAT ALSO REFUTES THIS BASE'S OWN *"FIRST RECIPROCAL CC CASE"* CLAIM, FILED `p589`. 🟢 AND SATURATION WAS MEASURED WITH A DENOMINATOR FOR THE FIRST TIME: THE STAR-RANKED VIEW OF THE TOPIC CHANNEL IS `0 of 39` NEW (`0 %`), THE RECENCY-RANKED VIEW OF THE SAME TOPIC IS `3 of 20` NEW (`15 %`) — SO THE CHANNEL IS NOT EXHAUSTED, THE *ORDERING* IS. 🔴 AND `1 of the 3` IS A BESPOKE NON-COMMERCIAL LICENCE.**
+
+### 🔴 The central correction — a reciprocal grant filed in this base as a non-reciprocal one
+
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) —
+`939★`, `main`, byte-read `2026-11-01` at `135d6275`, `LICENSE`, `1,230 B`:
+
+| what this base said | what the bytes say |
+| --- | --- |
+| `agents/top.md:677` — *"unlike the **CC0 dedications** at `education-agent-skills` and `awesome-ai-agents-2026`"* | 🔴 **`Creative Commons Attribution-ShareAlike 4.0 International`** — `3` occurrences of `ShareAlike`, **`0` of `CC0`** |
+| `agents/top.md:677` — `cybercussion/SCOBot` is *"the base's third CC-on-software case and **the first reciprocal one**"* | 🔴 **Refuted.** `education-agent-skills` was already reciprocal and is `5.7×` its stars |
+| `agents/top.md:680` — *"`LICENSE` is a Creative Commons text"* (variant not named) | 🟡 True but under-specified; the unnamed variant is the whole risk |
+
+🔵 **Why it matters in a deliverable, not in a footnote.** This base's own words for ShareAlike are
+that it *"propagates an obligation into whatever you build on it"*. The same page then tells a reader
+`education-agent-skills` is *"usable as reference material"* and contrasts it with the reciprocal
+case — so the page simultaneously carries the correct general rule and an instance filed on the wrong
+side of it. **A studio that read only the contrast sentence would vendor `165` teacher-facing skills
+under a reciprocal grant.**
+
+### 🔴 Two further defects in the same `1,230` bytes, both new
+
+1. 🔴 **The grant is scoped to content and never mentions code.** Verbatim: *"The **educational
+   skills, documentation, examples, and curriculum materials** in this repository are licensed
+   under…"*. The repository's primary language is **TypeScript**. 🔵 **So the code in it has no
+   grant at all** — this is `nextgen-ai`'s *"MIT License (Code)"* defect inverted: there, the grant
+   covered code and not content; here it covers content and not code.
+2. 🔴 **The committed file is not the licence.** It closes: *"This is a **human-readable notice**. The
+   full legal terms are available at `creativecommons.org/licenses/by-sa/4.0/legalcode`"* — so the
+   operative terms are **not in the repository** and a byte-read of this file, however careful,
+   never reaches them. 🔵 **New screen rung: a grant file that disclaims itself is a pointer, not a
+   grant** — rank it with `598-B`'s manifest field, below a real grant file.
+
+Registered as **`599-A`**. Corrections applied to `agents/top.md` this pass.
+
+### 🟢 Saturation, measured with a denominator — and the result is that the ORDERING is exhausted, not the channel
+
+Every address on the first page of `5` `github.com/topics/<t>` heads, ranked by stars (the default),
+checked against this whole base (`grep -ril` over `*.md` + `*.tsv`) before being called new:
+
+| channel | topic size | addresses taken | already held | 🆕 new |
+| --- | --: | --: | --: | --: |
+| `topic:ai-tutor` (stars) | `843` | `14` | `14` | **`0`** |
+| `topic:lms` (stars) | `2,615` | `13` | `13` | **`0`** |
+| `topic:knowledge-tracing` (stars) | `102` | `7` | `7` | **`0`** |
+| `topic:grading` (stars) | `283` | `8` | `8` | **`0`** |
+| `topic:essay-grading` (stars) | `17` | — | all held (`129` files) | **`0`** |
+| `topic:intelligent-tutoring-system` (stars) | `44` | `8` | `8` | **`0`** |
+| **total, star-ranked** | | **`39`** | **`39`** | **`0` (`0.0 %`)** |
+| 🆕 **`topic:ai-tutor?o=desc&s=updated` (recency)** | `843` | **`20`** | `17` | 🟢 **`3` (`15 %`)** |
+
+🔵 **The finding is the contrast between the last two rows, and it retires a prescription rather than
+a channel.** `28` consecutive passes have reported a "nil" on discovery. Measured here, the nil is
+**not** a property of the topic channel — the same topic, re-ordered by push date instead of stars,
+served `3` addresses this base has never held. 🔴 **What the star ordering shows is this base's own
+history**, because this base has been built from star-ranked views for `598` passes.
+
+🔴 **And the catch, which is why the nil was never wrong in practice:** all `3` new addresses are
+**`≤ 4★`**. The recency ordering reaches genuinely unheld supply and that supply is **entirely below
+this base's star floor**. 🔵 **So the honest statement is narrower and more useful than either "the
+market is saturated" or "the channel is broken": what this base is missing is not simultaneously
+findable and shippable.** Registered as **`599-B`**.
+
+### 🟢 The `3` new addresses, every grant byte-read at the real default branch — and `1` is a block
+
+| repo | ★ | grant (byte-read `2026-11-01`) | branch | manifest field | disposition |
+| --- | --: | --- | --- | --- | --- |
+| [baney75/myelinate](https://github.com/baney75/myelinate) | `4` | 🟢 **MIT** (`1,070 B`, holder `Donovan Baney`) | `main` | — | **NOT SHELVED — star floor.** `14`-skill Socratic-tutor plugin suite; clean grant, no adopters |
+| [Ethos6/masterly](https://github.com/Ethos6/masterly) | `2` | 🟢 **MIT** (`1,064 B`, holder `Ethos 6`) | `main` | 🟢 `"license": "MIT"` — agrees | **NOT SHELVED — star floor.** Lessons from your own material, source-quoted questions, FSRS |
+| [2092372408-pixel/EduPilot](https://github.com/2092372408-pixel/EduPilot) | `2` | 🔴 **"EduPilot Noncommercial Source License 1.0"** (`1,951 B`, *"All rights reserved"*) | 🔴 **`master`** | 🔴 `"license": "SEE LICENSE IN LICENSE"` | **BLOCK — not open source** |
+
+🔴 **`1 of 3` of the genuinely-new supply is a bespoke non-commercial licence.** Same failure shape as
+`PageLM` (`2,057★`, re-graded `p594`): a hand-written grant with a plausible title that a screen
+reads as open. 🔵 **At `2★` nobody is auditing it, which is exactly why the tail is where this shape
+lives** — and the base's floor has been protecting it from the tail by accident rather than by design.
+
+🔴 **And `p598`'s brand-new fourth grant channel returns a non-answer on it.** The build manifest —
+added last pass as the channel that proved a repo with no `LICENSE` on `16` path variants was
+permissively licensed — here reads `"SEE LICENSE IN LICENSE"`. 🟢 **That is an *honest* pointer, not
+a wrong answer**, so the channel does not mis-grade; its yield on this instance is simply `0 of 1`.
+Registered as **`599-C`**.
+
+🔴 **`master`, again.** `EduPilot`'s default branch is `master`; a `main`-only probe reports **no
+grant file** on a repo that has one, and would have filed a block row as a blank. Third instance in
+this base (`book-to-skill`, `openeducat_erp` at `19.0`, now this).
+
+### 🟢 Licence re-reads on two addresses the mandated legs served, both already held, both still worth the bytes
+
+| repo | ★ | grant (byte-read `2026-11-01`) | disposition |
+| --- | --: | --- | --- |
+| [OPTIMETA/PAIDEIA](https://github.com/OPTIMETA/PAIDEIA) | `91` (`4` forks) | 🟢 **MIT** (`1,068 B`, holder `Taewoo Park`, `2026`) | 🟢 Grade confirmed. Local-first Claude Code plugin: per-course exam prep as plain markdown on disk. `88` commits |
+| [ArturoNereu/AI-Study-Group](https://github.com/ArturoNereu/AI-Study-Group) | — | 🔴 **no grant file on `6` path variants** (`LICENSE`, `LICENSE.md`, `LICENCE`, `LICENSE.txt`, `COPYING`, `license`) | **BLOCK** confirmed |
+
+### 🔴 The twenty-ninth nil on the mandated legs, and this time with the instrument's own failure measured alongside it
+
+All `8` mandated legs were run (`4` global + `4` regional, `year = 2026` computed, not hardcoded).
+🔴 **`0` new repo addresses.** Every repo-shaped address served was already held — `25` of them
+checked individually, listed in [`../repos/trending.md`](../repos/trending.md).
+
+🔴 **And the run prompt's own verification instruction was re-measured and still does not work here.**
+`curl -sI https://github.com/<slug>`:
+
+| probe | result |
+| --- | --- |
+| `HKUDS/DeepTutor` (real) | `403` |
+| `zzz-not-a-real-org-xyz/nope-nope` (invented) | `403` |
+| `api.github.com/repos/HKUDS/DeepTutor` | `403` |
+
+🔵 **A control pair returning the same code means the instruction *"verify every URL before writing
+it (`curl -sI`)"* certifies nothing in this sandbox** — a `403` is not a `404`, and a pass that
+treated it as pass/fail would shelve invented slugs. 🟢 **What discriminates, re-confirmed this
+pass:** `git ls-remote --symref` (invented slug → `fatal: could not read Username`) and
+`raw.githubusercontent.com/<slug>/<SHA>/<file>` **with the HTTP code read, not the body** (a `404`
+returns `14 B`). Every grant in this section was read that way.
+
+
 ## 🆕 `p598` — `2026-11-01` — **🟢 A FOURTH GRANT CHANNEL FOUND — THE BUILD MANIFEST — AND IT PROVES A REPO WITH NO `LICENSE` FILE ON `16` PATH VARIANTS IS PERMISSIVELY LICENSED. 🔴 `591-B`, THIS BASE'S CLEANEST LAW, IS REFUTED ON ONE ARM BY THAT SAME REPO. 🔵 AND THE NEW CHANNEL'S YIELD ON `16` EXISTING BLOCK ROWS IS `1 of 16` — THE GAP WAS REAL AND PUT NO WRONG DATA ON THESE PAGES. 🔴 TWENTY-EIGHTH NIL, GATED ON BOTH CHANNELS SEPARATELY.**
 
 ### 🟢 Promoted to a shelf this pass — agent rows, every grant byte-read at the real default branch

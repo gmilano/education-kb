@@ -3,6 +3,187 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+
+## Pass 599 — reads 2026-11-01, commit 2026-11-01 — **🟢 THE TWENTY-EIGHT-PASS DISCOVERY NIL IS AN ARTEFACT OF THE RANKING FUNCTION, AND THE PROOF IS ONE QUERY STRING: THE SAME TOPIC PAGE RETURNS `0 of 39` NEW ADDRESSES RANKED BY STARS AND `3 of 20` RANKED BY PUSH DATE. 🔴 BUT ALL `3` ARE `≤ 4★`, SO WHAT THIS BASE LACKS IS NOT SIMULTANEOUSLY FINDABLE AND SHIPPABLE — NEITHER "SATURATED MARKET" NOR "BROKEN CHANNEL" WAS TRUE. 🔴 AND `1 of the 3` IS A BESPOKE NON-COMMERCIAL LICENCE, WHICH MAKES THE STAR FLOOR AN ACCIDENTAL LICENCE FILTER. 🔴 THE PASS'S WORST FINDING IS ON THESE PAGES, NOT IN THE MARKET: A `939★` ROW THIS BASE CALLED A "CC0 DEDICATION" IS `CC BY-SA 4.0` — RECIPROCAL — ITS GRANT COVERS NO CODE, AND THE FILE SAYS OF ITSELF THAT IT IS NOT THE LICENCE. FIVE REGISTERED (`599-A`…`599-F`).**
+
+### 🔴 The correction, which inverts an instruction this base gave the reader ten passes ago
+
+[`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) —
+`939★`, `165` teacher-facing skills — byte-read at `main` (`135d6275`, `LICENSE`, `1,230 B`):
+
+| what `agents/top.md` said | what the bytes say |
+| --- | --- |
+| *"the **CC0 dedications** at `education-agent-skills` and `awesome-ai-agents-2026`"* | 🔴 **`Creative Commons Attribution-ShareAlike 4.0 International`** — `3×` `ShareAlike`, **`0×` `CC0`** |
+| `cybercussion/SCOBot` is *"the **first reciprocal** one"* (`p589`) | 🔴 **Refuted** — this row was already reciprocal, at `5.7×` SCOBot's stars |
+
+🔵 **Why it reached a recommendation.** The same page states the correct general rule — ShareAlike
+*"propagates an obligation into whatever you build on it"* — and then files this instance on the
+wrong side of it and calls it *"usable as reference material"*. 🔴 **A studio reading only the
+contrast sentence would have vendored `165` skills under a reciprocal grant.**
+
+🔴 **Two further defects in the same `1,230` bytes, both new.** (1) **The grant names only content** —
+*"The educational **skills, documentation, examples, and curriculum materials** … are licensed
+under…"* — and the repository is **TypeScript**, so 🔴 **the code is granted nothing.** That is
+`nextgen-ai`'s *"MIT License (Code)"* defect exactly inverted. (2) **The file disclaims itself** —
+*"This is a **human-readable notice**. The full legal terms are available at …/legalcode"* — 🔵 **so
+the operative terms are not in the repository and no byte-read of this file, however careful, can
+reach them.** 🔵 **New screen rung: a grant file that points elsewhere for its own terms is a
+pointer, not a grant** — rank it with `598-B`'s manifest field. **`599-A`**; both affected rows
+corrected on `agents/top.md`.
+
+### 🟢 Saturation measured with a denominator for the first time, and the finding is the ORDERING
+
+| ordering | addresses taken | already held | 🆕 new | yield |
+| --- | --: | --: | --: | --: |
+| `github.com/topics/<t>` — **stars** (default), `6` topics | **`39`** | **`39`** | `0` | **`0.0 %`** |
+| 🆕 **same topic, `?o=desc&s=updated` — push date** | `20` | `17` | 🟢 **`3`** | 🟢 **`15 %`** |
+
+Topics walked: `ai-tutor` (`843` repos), `lms` (`2,615`), `knowledge-tracing` (`102`), `grading`
+(`283`), `essay-grading` (`17`), `intelligent-tutoring-system` (`44`). Every address checked with
+`grep -ril` over every `*.md` and `*.tsv` in this repository — the `597-D` gate — **before** being
+called new.
+
+🔵 **One query string separates a `0 %` channel from a `15 %` one, on the same page, in the same
+minute.** This base has been assembled from star-ranked views for `598` passes, so a star-ranked view
+is a query against its own history and the nil it returns is a self-measurement. 🔴 **Twenty-eight
+passes read that nil as a fact about the industry or about search. Both readings are refuted.**
+
+🔴 **And the qualifier that keeps the old nil honest in practice:** all `3` new addresses are `≤ 4★`.
+🟢 **The defensible statement is the narrow one — what this base lacks is not simultaneously findable
+and shippable** — and it is more useful than either thing it replaces, because it says where to spend
+budget: **on orderings, not on more queries.** A nil must now name its ordering to be recorded.
+**`599-B`**.
+
+### 🔴 The three new addresses, and the `1 in 3` that makes the star floor a licence filter
+
+| repo | ★ | grant (byte-read) | branch | disposition |
+| --- | --: | --- | --- | --- |
+| [baney75/myelinate](https://github.com/baney75/myelinate) | `4` | 🟢 MIT (`1,070 B`) | `main` | NOT SHELVED — star floor |
+| [Ethos6/masterly](https://github.com/Ethos6/masterly) | `2` | 🟢 MIT (`1,064 B`) | `main` | NOT SHELVED — star floor |
+| [2092372408-pixel/EduPilot](https://github.com/2092372408-pixel/EduPilot) | `2` | 🔴 **"EduPilot Noncommercial Source License 1.0"** (`1,951 B`) | 🔴 `master` | **BLOCK — not open source** |
+
+🔵 **The mechanism is attention, not intent.** A `2★` repository has no downstream consumers, so
+nobody has ever had a commercial reason to read its grant, and a hand-written licence with a
+plausible title survives there indefinitely. At scale the shape gets caught, but slowly —
+[`PageLM`](https://github.com/CaviraOSS/PageLM) was published here as **MIT** for five passes at
+`2,057★`. 🟢 **Counter-intuitive consequence for shelf policy: a star floor is doing licence work as
+well as quality work, and it removes the population that would generate the audit** — so the licence
+screen must be hardest at the **top** of the shelf, inverse to where a star floor puts scrutiny.
+🔴 **`p598`'s new fourth grant channel cannot help here:** `EduPilot`'s manifest reads
+`"SEE LICENSE IN LICENSE"` — 🟢 an *honest* pointer, so no mis-grade, but yield `0 of 1`.
+**`599-C`**.
+
+### 🟢 The run prompt's own verification instruction, re-measured, still certifies nothing
+
+| probe | result |
+| --- | --- |
+| `curl -sI github.com/HKUDS/DeepTutor` (real) | `403` |
+| `curl -sI github.com/zzz-not-a-real-org-xyz/nope-nope` (invented) | `403` |
+| `curl -s api.github.com/repos/HKUDS/DeepTutor` | `403` |
+
+🔵 **A control pair returning the same code means *"verify every URL before writing it (`curl -sI`)"*
+is inert in this sandbox** — a `403` is not a `404`, and a pass that read it as pass/fail would shelve
+invented slugs. 🟢 **What discriminates, used for every grant this pass:** `git ls-remote --symref`
+(invented slug → `fatal: could not read Username`) and `raw.githubusercontent.com/<slug>/<SHA>/<file>`
+**with the HTTP code read, not the body** (a `404` returns `14 B`).
+
+🔴 **Branch resolution is a majority problem now, not an edge case: `4 of 9` repositories resolved
+this pass are not on `main`** — `ltijs` (`master`), `openedx-platform` (`master`), `EduPilot`
+(`master`), `openeducat_erp` (`19.0`). A `main`-only probe reports *no licence file* on each.
+
+### 🟢 The gate the run prompt mandates was re-derived, and `p590`'s form is `23`-for-`23` false positives
+
+`p590` prescribed: a header-vocabulary row not followed by a `|---|` separator. 🔴 **On this base that
+returns `23` hits and all `23` are false positives** — every one a *transposed* key-value table whose
+left column is a row label (`| Licencia | MIT |`). 🔵 **The missing discriminator is arity:** a real
+header-as-data defect has **every** cell drawn from header vocabulary; a transposed row has exactly
+one. Requiring `cells >= 2 AND cells == header-vocabulary cells` returns **`0` hits, `0` false
+positives, across all `9` pages**. 🟢 **The practice worth keeping from `p590` is not its gate but its
+habit of publishing the false-positive count** — that is what made this correction cheap. **`599-D`**.
+
+🟢 **Gates run inline this pass (the only form that executes here — `p590`):** header-as-data **`0`**;
+region vocabulary + frontmatter **`9 of 9` pages clean**, every `region:` inside the closed set;
+`## Opportunities by region` heading count **`1`** (`595-B` stays closed); no non-canonical region
+used as a heading.
+
+### 🟢 Market size: the disagreement is in the GROWTH RATE, not in the 2026 base
+
+Five firms measured: **`$7.30 B`** (Trend X), **`$9.58 B`** (Precedence), **`$10.4 B`** (Resourcera),
+**`$10.6 B`** (Research and Markets), **`$11.4 B`** (Grand View) — a `1.56×` spread, and 🟢 **every one
+inside the `$7–11.4 B` band this base has published for five passes.** Their endpoints spread
+**`4.3×`**: `$32.27 B` (`2030`) to `$136.79 B` (`2035`), CAGRs `25.9 %`–`41.5 %`. 🔵 **The base is an
+observation; the endpoint is an assumption, and only the assumption is proprietary** — Precedence says
+so itself (*"depend on market boundaries and the treatment of embedded AI revenues"*). 🔵 **This
+refines `p93`'s scope rule rather than replacing it: scope breaks comparisons inside one firm's
+products, growth assumption breaks them between firms at the endpoint.** New rule: **quote the `2026`
+base and cite two firms; if an endpoint is unavoidable, name firm, year and CAGR in the same
+sentence.** 🔴 **A `$12.5 B` / `$12.3 B` `2026` figure circulating in vendor blogs exceeds every
+research firm measured — rejected, not averaged in.** **`599-E`**.
+
+### 🔴 The LATAM finding is a disconfirmation, and the disconfirmation is the deliverable
+
+The LATAM leg served **`ConectIA`** (UC Chile + Microsoft) as a `2026` programme for *"integración
+completa de la IA a nivel institucional"*. 🔴 **`ConectIA` was `0`-hits in this entire base** — it
+would have been filed as new regional intelligence. 🟢 **Checked at the institution first:** `uc.cl`'s
+own newsroom dates the launch to **`2024`** (*"the first step … at the end of last year"*, under a
+rector who left office in March `2025`), and `2026` UC AI coverage never mentions it. 🔴 **The
+aggregator re-dated a `2024` initiative as a `2026` target.** Not filed. 🔵 **The transferable shape:
+LATAM aggregators carry real institutions with invented *forward* dates — verify the date against the
+institution's own site, not the programme name.** **`599-F`**.
+
+### 🔴 Three primary legal hosts unreachable, so the EU clock is still secondary-only — and the wrong date reached six-in-six
+
+`digital-strategy.ec.europa.eu`, `eur-lex.europa.eu` and `artificialintelligenceact.eu` **all failed
+at DNS** (`ENOTFOUND`) — the signature of the egress allowlist, not of a dead host. 🔴 **So the
+Annex III date, which this base has corrected five times, still cannot be closed on a primary
+source.** 🟢 Re-corroborated at secondary grade and unmoved: Digital Omnibus **Reg. (EU) `2026/1744`**
+(`2026-07-08`, in force `2026-07-27`) moved stand-alone Annex III to **`2027-12-02`** and embedded to
+**`2028-08-02`**; **Article 4 literacy live since `2025-02-02`**; AI Office enforcement **began
+`2026-08-02`**. 🔴 **And `2026-08-02` was served as the Annex III deadline again — sixth instance in
+six passes.** 🔵 **Six-in-six is not an error to correct, it is the market's majority reading**, so an
+EMEA client's installed advisor has probably given them a deadline that has already passed.
+
+### 🟢 Regional legs `4 of 4` paid for a ninth pass, and all four regions got placed intelligence
+
+All five `###` subsections under the single `## Opportunities by region` heading were amended, so no
+region is served by silence: **North America** — the April `2026` ADA Title II deadline and the four
+states mandating both state guidance and district policy (Maryland, Idaho, Oklahoma, Virginia) make
+this a *compliance remediation* sale, not an AI sale; **EMEA** — the corrected clock plus an Article 4
+programme that is already overdue; **APAC** — Korea's `AI Basic Act` (in force `2026-01-22`,
+education grace to `2027`) against its mandatory AI textbooks reaching **under `30 %` adoption before
+the National Assembly stripped their official status**, so 🔵 **a national mandate is not a national
+deployment and teacher readiness is the service line**; **LATAM** — the `ConectIA` disconfirmation
+plus the unchanged IESALC/UNU base. 🔴 **`0` demand-side tokens this base lacked.** Declared gaps
+restated per region rather than left implicit.
+
+### 🟢 Two patterns added, both keyed to obligations that are ALREADY in force
+
+[`P-599-A`](compose/patterns.md) — the **Article 4 AI-literacy programme** (4–6 weeks, EMEA): the only
+EMEA deliverable that is overdue today. Spine from `ai-agents-for-beginners` (MIT, `1,141 B`) and
+`agents-from-scratch` (MIT, `1,091 B`), delivered as an LTI 1.3 tool via `ltijs` (Apache-2.0,
+`master`) so no LMS is forked, with `relate` (MIT) holding the per-learner audit record. 🔴 **Names
+the trap it must avoid: not `education-agent-skills`, for the reason above.**
+[`P-599-B`](compose/patterns.md) — **ADA Title II remediation with the AI attached** (8–12 weeks,
+North America): `canvas-mcp` (MIT, FERPA-aware, university-authored) to inventory the estate,
+`nbgrader` (BSD-3) for auditable assessment alternatives, named human sign-off per fix, and the
+resulting ledger billed again against the state AI-policy mandate. 🔵 **Both bid against appropriated
+compliance budget rather than discretionary AI budget.** Every component grant byte-read this pass.
+
+### 🔴 Open after this pass
+
+- 🔴 **`Gap 372` unmoved**, now triangulated from a third direction: `topic:essay-grading` is `17`
+  repos and **all held**, and the one address a search leg advertised as open
+  (`Jatin-Mehra119/Essay-Scoring-Modeling`) has **no grant on `6` path variants**. The permissive
+  option stays `wwrwbs/AI_AWE` (Apache-2.0), research-grade.
+- 🔴 **`586-D` unmoved**: no permissive education ERP/SIS at any size. The dedicated leg returned
+  OpenEduCat (LGPL-3.0), Kuali, Open Admin and Centre — not one permissive.
+- 🔴 **No primary-source regulatory instrument for Canada or Mexico**; `583-E` holds at `22` hosts.
+- 🔴 **No EMEA-only education adoption rate** — the `~70 %` figure is a Europe-**and**-North-America
+  composite and must never be shown as an EMEA number.
+- 🆕 🟡 **`599-G` opened**: the recency ordering paid `15 %` on *one* topic. Whether that holds across
+  topics is unmeasured — a later pass should run `?o=desc&s=updated` on `lms`, `grading` and
+  `intelligent-tutoring-system` before the finding is generalised.
+
 ## Pass 590 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE CENTRAL FINDING IS THAT `589-B`'s OWN PRESCRIPTION WAS UNEXECUTABLE: IT RECOMMENDED PORTING THE GATES TO PURE `grep`/`awk` BECAUSE THAT *"NEEDS NO PERMISSION"*, AND `bash ingest/claim-role.sh` — A COMMITTED SHELL SCRIPT, NO PYTHON — IS **DENIED EXACTLY AS `make` IS**. THE DENIAL IS ON EXECUTING REPOSITORY CODE IN ANY LANGUAGE, SO A PORTED `gate-*.sh` WOULD HAVE BEEN A SECOND GENERATION OF THE SAME INERT GATE. 🟢 THE FORM THAT RUNS IS AN **INLINE COMMAND BLOCK**, AND THREE GATES WERE RUN THAT WAY AND ALL THREE PASS. 🟢 `589-E` CLOSED BY REFUTATION ON BOTH ARMS UNDER A PREDICTION REGISTERED BEFORE THE MEASUREMENT: xAPI HAS `6` LIVE PERMISSIVE EMITTERS AND QTI HAS `8` AGAINST A PREDICTED `<= 2`, AND RE-WALKING SCORM REFUTED `p589`'s OWN *"EXACTLY TWO ALIVE"* AT `>= 6` — WITH TWO OF THE MISSES ALREADY SHELVED IN THIS BASE, ONE OF THEM `66` LINES ABOVE THE CLAIM. 🔴 `589-A`'s `120`-ID BACKLOG IS `10 %` HOMONYM (`P-NNN-X` PATTERN IDS) AND ITS READER-FACING PART IS `6` IDS, ALL `6` PAID — DANGLING SHELF CITATIONS NOW `0`. 🟢 `15` ROWS FILED (`10` PREVIOUSLY ABSENT FROM THE WHOLE BASE), `16` GRANTS BYTE-READ, `10 of 10` API/TEXT AGREEMENT. 🟢 THE TWENTY-PASS SEARCH NIL IS BROKEN BY ONE ADDRESS AND IT IS UNLICENSED. FIVE REGISTERED (`590-A`…`590-E`).**
 
 ### 🔴 The enforcement finding, which corrects the previous pass rather than repeating it

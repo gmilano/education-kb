@@ -4,6 +4,111 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p599` — `2026-11-01` — **🟢 THE `0 %` NIL AND THE `15 %` YIELD CAME FROM THE SAME TOPIC PAGE, DIFFERING ONLY IN THE `?o=desc&s=updated` QUERY STRING. 🔴 `39 of 39` STAR-RANKED ADDRESSES WERE ALREADY HELD; `3 of 20` RECENCY-RANKED ONES WERE NOT, AND ALL `3` ARE `≤ 4★`. 🔵 SIX TOPIC HEADS WALKED, EVERY ADDRESS CHECKED INDIVIDUALLY AGAINST THIS WHOLE BASE BEFORE BEING CALLED NEW.**
+
+### 🟢 The six topic heads, star-ranked — every address taken, every one checked
+
+Method: `WebFetch` on `github.com/topics/<t>` (the one GitHub surface that renders under this
+session's egress proxy), then `grep -ril '<owner>/<repo>'` over every `*.md` and `*.tsv` in this
+repository. An address counts as held if it appears **anywhere**, shelf or append-only log — the
+`597-D` gate.
+
+| `topic:knowledge-tracing` (`102` repos) | ★ | held? |
+| --- | --: | --- |
+| [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | `456` | held (`shelf`) |
+| [bigdata-ustc/EduData](https://github.com/bigdata-ustc/EduData) | `316` | held (`80` files) |
+| [hcnoh/knowledge-tracing-collection-pytorch](https://github.com/hcnoh/knowledge-tracing-collection-pytorch) | `194` | held (`72`) |
+| [jhljx/GKT](https://github.com/jhljx/GKT) | `141` | held (`66`) |
+| [jilljenn/ktm](https://github.com/jilljenn/ktm) | `140` | held (`66`) |
+| [ZhijieXiong/pyedmine](https://github.com/ZhijieXiong/pyedmine) | `82` | held (`112`) |
+| [HFUT-LEC/EduStudio](https://github.com/HFUT-LEC/EduStudio) | `81` | held (`86`) |
+| [yxonic/DTransformer](https://github.com/yxonic/DTransformer) | `46` | held (`72`) |
+
+| `topic:lms` (`2,615` repos) | ★ | held? |
+| --- | --: | --- |
+| [frappe/lms](https://github.com/frappe/lms) | `3.4k` | held (`412` files) |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | `2.4k` | held (`255`) |
+| [classroomio/classroomio](https://github.com/classroomio/classroomio) | `1.7k` | held (`251`) |
+| [codelitdev/courselit](https://github.com/codelitdev/courselit) | `1.3k` | held (`171`) |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | `1.1k` | held (`313`) |
+| [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | `981` | held (`226`) |
+| [gazpachu/hypatia](https://github.com/gazpachu/hypatia) | `651` | held (`41`) |
+| [Automattic/sensei](https://github.com/Automattic/sensei) | `596` | held (`13`) |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | `449` | held (`429`) |
+| [academico-sis/academico](https://github.com/academico-sis/academico) | `410` | held (`251`) |
+
+| `topic:grading` (`283` repos) | ★ | held? |
+| --- | --: | --- |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | `1.4k` | held (`shelf`) |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | `243` | held (`219` files) |
+| [five-plus-one/AI-Marker-Suite](https://github.com/five-plus-one/AI-Marker-Suite) | `112` | held (`57`) |
+| [GatorEducator/gatorgrader](https://github.com/GatorEducator/gatorgrader) | `85` | held (`132`) |
+| [jaltekruse/Free-Math](https://github.com/jaltekruse/Free-Math) | `74` | held (`68`) |
+| [zmievsa/autograder](https://github.com/zmievsa/autograder) | `48` | held (`99`) |
+| [ai-lingnan/econai-agent-platform](https://github.com/ai-lingnan/econai-agent-platform) | `39` | held (`57`) |
+| [sourcegrade/jagr](https://github.com/sourcegrade/jagr) | `33` | held (`57`) |
+| [pedal-edu/pedal](https://github.com/pedal-edu/pedal) | `33` | held (`51`) |
+
+| `topic:intelligent-tutoring-system` (`44` repos) | ★ | held? |
+| --- | --: | --- |
+| [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | `4.1k` | held (`219` files) |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | `939` | held — 🔴 **and mis-graded; corrected this pass, see `../agents/trending.md`** |
+| [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | `135` | held (`160`) |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | `67` | held (`329`) |
+| [luffycodes/Tutorbot-Spock](https://github.com/luffycodes/Tutorbot-Spock) | `56` | held (`95`) |
+| [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | `24` | held (`155`) |
+| [brownplt/LTLTutor](https://github.com/brownplt/LTLTutor) | `12` | held (`103`) |
+
+`topic:ai-tutor` (`843`) and `topic:essay-grading` (`17`) were walked the same way;
+`14` and all-of-`17` addresses respectively, **all held** — `essay-grading` at `129` files,
+including `wwrwbs/AI_AWE` (`130` files), the Apache-2.0 essay-scoring system behind
+`arXiv:2608.17356`. 🔵 **So `Gap 372` (*no permissive production-grade essay-grading library*) was
+re-tested from a different direction this pass and the answer did not move.**
+
+### 🟢 Totals, and the one ordering that pays
+
+| ordering | addresses taken | already held | 🆕 new | yield |
+| --- | --: | --: | --: | --: |
+| `github.com/topics/<t>` — **stars** (default), `6` topics | **`39`** | **`39`** | `0` | **`0.0 %`** |
+| 🆕 `github.com/topics/ai-tutor?o=desc&s=updated` — **recency** | `20` | `17` | 🟢 **`3`** | 🟢 **`15 %`** |
+
+🔵 **One query string separates a `0 %` channel from a `15 %` one, on the same topic, in the same
+minute.** The `28`-pass nil was measuring the ranking function, not the industry: this base has been
+assembled from star-ranked views for `598` passes, so a star-ranked view returns this base.
+🔴 **The qualifier that keeps the nil honest in practice:** all `3` new addresses are `≤ 4★`, under
+the shelf floor — detail and grants in [`../agents/trending.md`](../agents/trending.md).
+**`599-B`.**
+
+### 🔴 The mandated legs — `25` repo-shaped addresses served, `0` new
+
+`8` legs run (`4` global + `4` per-region), `year = 2026` computed. Addresses served and checked:
+`OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`, `ArturoNereu/AI-Study-Group`,
+`openeducat/openeducat_erp`, `rohitg00/ai-engineering-from-scratch`, `aneelv75/github-trending`,
+`speedyapply/2026-AI-College-Jobs`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026`,
+`ashishpatel26/500-AI-Agents-Projects`, `wwrwbs/AI_AWE`, `Jatin-Mehra119/Essay-Scoring-Modeling`,
+plus the `14` from the `ai-tutor` head. 🔴 **All held.** Twenty-ninth consecutive nil.
+
+🟡 **One of them is worth a line anyway:** [`Jatin-Mehra119/Essay-Scoring-Modeling`](https://github.com/Jatin-Mehra119/Essay-Scoring-Modeling)
+— `main`, byte-read `2026-11-01`: 🔴 **no grant file on `6` path variants**. A Kaggle-AES notebook
+estate presented in search results as *"an open-source solution for automated essay evaluation"*.
+🔵 **"Open-source" in a README is not a grant** — and in the one gap this base has declared loudest,
+the supply that advertises itself is unlicensed.
+
+### 🔴 Hosts unreachable this pass, with the primary-source consequence stated
+
+| host | result | what it was for |
+| --- | --- | --- |
+| `digital-strategy.ec.europa.eu` | 🔴 `ENOTFOUND` (DNS) | the Commission's own AI Act timeline |
+| `eur-lex.europa.eu` | 🔴 `ENOTFOUND` (DNS) | Regulation (EU) `2026/1744` primary text |
+| `artificialintelligenceact.eu` | 🔴 `ENOTFOUND` (DNS) | the standard third-party timeline tracker |
+
+🔵 **All three failed at DNS resolution, not at HTTP**, which is the signature of the egress
+allowlist rather than of a dead host. 🔴 **Consequence, stated rather than hidden: the Annex III
+application date — the figure this base has had to correct five times — still cannot be closed on a
+primary source from this harness.** It was re-corroborated from a secondary source this pass; see
+[`../intel/market.md`](../intel/market.md). Running total of blocked hosts rises by `3`.
+
+
 ## 🆕 `p598` — `2026-11-01` — **🔴 THE GITHUB API IS WRONG ABOUT THE EDUCATION SECTOR'S OWN LICENCE IN `6 of 8` MEASURED CASES, AND THE DISCRIMINATOR IS COSMETIC: A PARENTHETICAL `(ECL-2.0)` IN THE TITLE LINE. 🟢 `4` FOUNDATIONAL AND `3` PLATFORM ROWS PROMOTED OFF THE `596-C` BACKLOG. 🔴 ONE ROW SHIPS A BSD GRANT NAMING A DIFFERENT PROJECT AS COPYRIGHT HOLDER.**
 
 ### 🔴 `598-D` — the ECL-2.0 census: the API's `spdx_id` against a byte-read, `9` Apereo-family rows

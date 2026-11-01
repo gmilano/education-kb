@@ -1,0 +1,20 @@
+# p599 2026-11-01 — every grant byte-read via raw.githubusercontent.com/<slug>/<SHA>/<file>, HTTP code checked (404 body = 14 B).
+# Branch resolved first with: git ls-remote --symref https://github.com/<slug> HEAD
+slug	default_branch	grant_file	bytes	licence	verdict	note
+GarethManning/education-agent-skills	main	LICENSE	1230	CC-BY-SA-4.0	BLOCK-reciprocal	599-A re-grade from CC0; grant scoped to content only, repo is TypeScript; file self-declares "human-readable notice"
+baney75/myelinate	main	LICENSE	1070	MIT	NOT-SHELVED-star-floor	4 stars
+Ethos6/masterly	main	LICENSE	1064	MIT	NOT-SHELVED-star-floor	2 stars; package.json agrees "MIT"
+2092372408-pixel/EduPilot	master	LICENSE	1951	EduPilot-Noncommercial-Source-1.0	BLOCK-not-open-source	"All rights reserved"; manifest "SEE LICENSE IN LICENSE"
+OPTIMETA/PAIDEIA	main	LICENSE	1068	MIT	CONFIRMED	91 stars, 4 forks, 88 commits
+ArturoNereu/AI-Study-Group	main	NONE	0	none	BLOCK-no-grant	6 path variants all 404
+Jatin-Mehra119/Essay-Scoring-Modeling	main	NONE	0	none	BLOCK-no-grant	6 path variants all 404; search leg called it "open-source"
+openeducat/openeducat_erp	19.0	LICENSE	8241	LGPL-3.0	INTEGRATE-never-fork	default branch is 19.0, not main
+wwrwbs/AI_AWE	main	LICENSE	1865	Apache-2.0	HELD	arXiv:2608.17356 essay-scoring system
+microsoft/ai-agents-for-beginners	main	LICENSE	1141	MIT	PATTERN-COMPONENT	holder Microsoft Corporation
+pguso/agents-from-scratch	main	LICENSE	1091	MIT	PATTERN-COMPONENT	
+Cvmcosta/ltijs	master	LICENSE	11361	Apache-2.0	PATTERN-COMPONENT	default branch master
+vishalsachdev/canvas-mcp	main	LICENSE	1071	MIT	PATTERN-COMPONENT	FERPA-aware, Univ of Illinois
+jupyter/nbgrader	main	LICENSE	1512	BSD-3-Clause	PATTERN-COMPONENT	Project Jupyter Contributors
+inducer/relate	main	LICENSE	1145	MIT/X-Consortium	PATTERN-COMPONENT	
+openedx/openedx-platform	master	LICENSE	35136	AGPL-3.0	INTEGRATE-never-fork	old slug openedx/edx-platform still resolves at the git layer
+HKUDS/DeepTutor	main	LICENSE	11408	Apache-2.0	HELD-oracle-control	used as the live control for the curl -sI test

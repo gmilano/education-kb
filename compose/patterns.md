@@ -4,6 +4,122 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p599` — `2026-11-01` — two recipes keyed to the only two education AI deadlines that are *already* in force, and every component grant byte-read this pass
+
+🔵 **Why these two and not another tutor.** Both `p598` and `p597` built recipes around capability.
+This pass builds around **obligation**, because two deadlines are live *today* while every other date
+in this base is in the future: the EU AI Act's **Article 4 AI-literacy duty (in force since
+`2025-02-02`)** and the **April `2026` ADA Title II accessibility deadline** for large US public
+institutions. 🔵 **A live obligation is a funded buyer**; a deferred one is a pipeline entry.
+
+### 🟢 Component grants, all byte-read `2026-11-01` at the real default branch
+
+| component | branch | grant (bytes) |
+| --- | --- | --- |
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | `main` | 🟢 **MIT** (`1,141 B`, holder *Microsoft Corporation*) |
+| [pguso/agents-from-scratch](https://github.com/pguso/agents-from-scratch) | `main` | 🟢 **MIT** (`1,091 B`) |
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🔴 **`master`** | 🟢 **Apache-2.0** (`11,361 B`) |
+| [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | `main` | 🟢 **MIT** (`1,071 B`) |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | `main` | 🟢 **BSD-3-Clause** (`1,512 B`, *Project Jupyter Contributors*) |
+| [inducer/relate](https://github.com/inducer/relate) | `main` | 🟢 **MIT/X Consortium** (`1,145 B`) |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **`master`** | 🔴 **AGPL-3.0** (`35,136 B`) — integrate, never fork |
+
+🔴 **`ltijs` is on `master`.** Fourth `master` default branch measured this pass (with `book-to-skill`,
+`EduPilot`, `openedx-platform`); `openeducat_erp` is on `19.0`. 🔵 **Any licence step in either recipe
+below must resolve the branch from `git ls-remote --symref` before it reads a grant** — a `main`-only
+probe reports *no licence* on `2 of the 7` components above.
+
+---
+
+## 🆕 P-599-A — 🟢 **The Article 4 AI-literacy programme: the one EMEA deliverable that is already overdue** (4–6 weeks, EMEA)
+
+**Who buys it.** Any EMEA school, university or training provider — they are **deployers** under the
+AI Act, and Article 4 has bound them since `2025-02-02`. 🔵 **The sales motion is not "adopt AI"; it
+is "you are non-compliant now, and the fix is a training programme, not a procurement."**
+
+**The wedge, and why it closes.** 🔴 **Six of the last six passes have seen the market quote
+`2026-08-02` as the Annex III high-risk deadline.** That date is real but it is the date **AI Office
+and national-authority enforcement began** — the Annex III obligations themselves moved to
+**`2027-12-02`** (stand-alone) and **`2028-08-02`** (embedded in regulated products) under the Digital
+Omnibus, **Regulation (EU) `2026/1744`**, in force `2026-07-27`. 🟢 **So the client's installed
+advisor has probably given them a deadline that passed and a scope that is wrong in both directions:
+too urgent on high-risk, and silent on the duty that is actually live.** Lead with the corrected
+clock; it is free, it is checkable, and it reframes you as the one who read the amendment.
+
+**Build.**
+
+1. **Curriculum spine — don't write one.** Fork [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners)
+   (MIT, `78,576★`, `18` lessons) for the staff cohort that will *operate* AI, and
+   [`pguso/agents-from-scratch`](https://github.com/pguso/agents-from-scratch) (MIT, `1,065★`,
+   local-LLM, no cloud keys) for the technical cohort. 🟢 **Both MIT, both byte-read above** — a
+   studio may rebrand, translate and ship them closed.
+   🔴 **Do NOT use [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+   for this, despite it being the obvious fit at `939★` and `165` teacher-facing skills:** it is
+   **`CC BY-SA 4.0`** — reciprocal — and its grant covers only the *content*, not the TypeScript it
+   ships (`599-A`). Translating it would publish your translation under the same licence.
+2. **Delivery seam into whatever LMS they run.** [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs)
+   (Apache-2.0, `master`) makes the programme an **LTI 1.3 tool provider**, so it drops into Moodle,
+   Open edX, Canvas or ILIAS **without forking any of them** — which is the only way to touch
+   `openedx-platform` (AGPL-3.0) without inheriting network copyleft.
+3. **Evidence of completion, because Article 4 is a duty you must be able to *show* you met.**
+   [`inducer/relate`](https://github.com/inducer/relate) (MIT) holds the versioned course content and
+   auto-graded checks; its per-learner records are the audit artefact. 🔵 **This is the part the
+   client cannot buy from a MOOC vendor: a defensible record keyed to named staff.**
+4. **Role-scoped tracks.** Article 4 asks for literacy *proportionate to role*. Three tracks —
+   teaching staff, administrative staff, and anyone touching an Annex III use case (admissions,
+   assessment, learning-path decisions). 🔵 **Track 3 is also the Annex III readiness inventory**,
+   which is how a `4`-week literacy engagement becomes the `2027-12-02` conformance engagement.
+
+**What to refuse.** 🔴 Do not promise Annex III conformance inside this scope — the harmonised
+standards are not settled and `p592` recorded that the clock no longer waits for them. Sell literacy
+plus the inventory; price conformance separately once the inventory exists.
+
+---
+
+## 🆕 P-599-B — 🟢 **ADA Title II remediation with the AI attached to it** (8–12 weeks, North America)
+
+**Who buys it, and with whose money.** US **large public institutions** faced an **April `2026`**
+deadline for updated ADA Title II digital-accessibility requirements. 🔵 **That is remediation budget,
+already appropriated, in a line item that is not "AI".** Meanwhile `134` AI-in-education bills across
+`31` states, and four states (**Maryland, Idaho, Oklahoma, Virginia**) mandating *both* state guidance
+*and* district-level AI policy, create a second, parallel compliance line. 🟢 **The engagement sells
+once and bills against both.**
+
+**The reframe that wins it.** 🔵 **An accessibility remediation is a content-transformation problem,
+and content transformation is what these models are good at** — alt text, captions, reading-level
+variants, structured navigation, assessment alternatives. A studio that bids "accessibility
+remediation, AI-accelerated" competes on a funded line; one that bids "AI for education" competes
+against every other AI vendor for discretionary budget.
+
+**Build.**
+
+1. **Attach to the estate, don't replace it.** [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp)
+   (MIT, `310★`, **FERPA-aware**, up to `102` tools, Univ. of Illinois) exposes Canvas — the dominant
+   North American HE LMS — to an agent over MCP. 🟢 **MIT and university-authored**: the two things
+   procurement asks about. For Open edX estates use `XBlock` + `codejail` (both Apache-2.0) instead,
+   and **never fork `openedx-platform`** (AGPL-3.0, byte-read above).
+2. **Inventory before remediation.** Walk every course through the MCP server and emit a per-asset
+   accessibility ledger: missing alt text, uncaptioned media, un-navigable structure, assessments with
+   no alternative form. 🔵 **The ledger is the first deliverable and it is what the institution's
+   counsel actually needs** — a dated, complete, per-asset record of known defects and their status.
+3. **Remediate the assessable layer with something auditable.** [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader)
+   (BSD-3-Clause) for technical coursework: notebook assignments get alternative forms and
+   deterministic autograding, so an accommodation does not become a second, unequal assessment.
+4. **Human sign-off is a build requirement, not a courtesy.** Every AI-generated alt text, caption or
+   reading-level variant lands in a review queue attributed to a named member of staff. 🔴 **An
+   accessibility remediation that cannot name who approved each fix has not reduced the institution's
+   exposure** — it has moved it.
+5. **Close the state-policy line with the artefact you already built.** The ledger from step `2` plus
+   the sign-off trail from step `4` is most of what a district-level AI policy has to assert. 🟢 **Bill
+   it as the second deliverable rather than a second project.**
+
+**What to refuse.** 🔴 Do not let AI make the *accommodation decision* for an individual learner —
+that is an Annex III-shaped decision in the EU and a disability-determination in the US. The agent
+produces candidate artefacts; a human decides who gets what.
+
+---
+
+
 ## 🆕 `p598` — `2026-11-01` — three recipes, every component byte-read this pass, and the first one exists because a permissive replacement for a GPL-3.0 row was finally found
 
 🔴 **Instrument note that governs every address below (`597-A`, re-measured this pass).**

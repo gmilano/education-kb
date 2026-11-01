@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p599` — `2026-11-01` — the vertical tier is fully held, and the one new platform-shaped address this pass is not open source
+
+### 🟢 `topic:lms` walked star-ranked — `13 of 13` already held
+
+Every address on the first page of [`github.com/topics/lms`](https://github.com/topics/lms)
+(`2,615` repos) was checked against this whole base: `frappe/lms` (`3.4k★`), `learnhouse`,
+`classroomio`, `courselit`, `overhangio/tutor`, `pupilfirst`, `hypatia`, `Automattic/sensei`,
+`OpenOLAT`, `academico-sis/academico`, plus `sakai`, `chamilo-lms` and `ILIAS` already on this page.
+🔴 **`0` new.** 🟢 **For a platform-of-record tier this is the expected and correct result** — a
+system a ministry runs does not appear in a topic head for the first time in `2026`.
+
+### 🔴 The one new platform-shaped address, and it is a block
+
+[`2092372408-pixel/EduPilot`](https://github.com/2092372408-pixel/EduPilot) — a local-first desktop
+platform that builds courses, exercises and review schedules from Chinese and English textbooks.
+Served by the recency-ordered channel (`599-B`), never held here.
+
+| field | measured `2026-11-01` |
+| --- | --- |
+| stars | `2` |
+| default branch | 🔴 **`master`** |
+| grant | 🔴 **"EduPilot Noncommercial Source License 1.0"**, `LICENSE`, **`1,951 B`**, opens *"All rights reserved"* |
+| build manifest | 🔴 `"license": "SEE LICENSE IN LICENSE"` |
+| verdict | **BLOCK — not open source.** Source-available, non-commercial |
+
+🔵 **Why it belongs on this page rather than only in the log.** This tier is where a studio looks for
+*something it can stand up for a client*, and "source-available, non-commercial" is the licence class
+that most resembles open source to a non-specialist reader. 🔴 **At `2★` nobody has had a commercial
+reason to read its grant** — which is the shape `Trend 63` generalises, and the same shape that let
+[`PageLM`](https://github.com/CaviraOSS/PageLM) sit on this base's shelves as *MIT* for five passes at
+`2,057★`.
+
+### 🟢 Re-reads on two platforms this page already recommends, both confirmed, both off `main`
+
+| platform | real default branch | grant byte-read `2026-11-01` | consequence |
+| --- | --- | --- | --- |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🔴 **`19.0`** | 🔴 **LGPL-3.0** (`8,241 B`, *"OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3"*) | 🟡 Weak copyleft confirmed a third time. **AI as a separate Odoo module calling the API keeps its own licence; edits to its own files must be published.** Never fork |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **`master`** | 🔴 **AGPL-3.0** (`35,136 B`) | Unchanged: integrate through `XBlock` / `codejail` (both Apache-2.0). Never fork |
+
+🔵 **Both are off `main`, and so is [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0,
+`master`) — the LTI 1.3 seam this page's integration advice depends on.** `4 of 9` repositories
+branch-resolved this pass are not on `main`; see [`../repos/foundations.md`](../repos/foundations.md).
+🟢 **This page's integration advice is only as good as the branch its licence was read at.**
+
+### 🔴 The ERP/SIS gap is unchanged, and it is now the oldest open gap on this page
+
+`586-D` — *no permissive option exists in the education ERP/SIS tier at any size* — survived a fresh
+`topic:lms` walk and a dedicated `open source platform education ERP SIS MIT Apache {year}` leg. The
+leg returned **`OpenEduCat` (LGPL-3.0), Kuali (licence unstated in the source), Open Admin (GPL) and
+Centre (GPL)**. 🔴 **Not one permissive ERP.** 🟢 The only permissive row remains
+[`academico-sis/academico`](https://github.com/academico-sis/academico) (MIT, `410★`) and it is
+school management, not an ERP. 🔵 **Stable, usable conclusion: in this tier the play is an AI
+side-car against an LGPL or GPL system of record — never a fork, and never a greenfield ERP.**
+
+---
+
+
 ## 🆕 `p598` — `2026-11-01` — two customisable platforms promoted, and the licence screen that would have rejected the Apereo consortium
 
 🔵 **Why the Apereo finding belongs on this page and not only in a methods note.** This page's job is
