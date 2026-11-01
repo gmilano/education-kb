@@ -4,6 +4,68 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p598` — `2026-11-01` — **🟢 A FOURTH GRANT CHANNEL FOUND — THE BUILD MANIFEST — AND IT PROVES A REPO WITH NO `LICENSE` FILE ON `16` PATH VARIANTS IS PERMISSIVELY LICENSED. 🔴 `591-B`, THIS BASE'S CLEANEST LAW, IS REFUTED ON ONE ARM BY THAT SAME REPO. 🔵 AND THE NEW CHANNEL'S YIELD ON `16` EXISTING BLOCK ROWS IS `1 of 16` — THE GAP WAS REAL AND PUT NO WRONG DATA ON THESE PAGES. 🔴 TWENTY-EIGHTH NIL, GATED ON BOTH CHANNELS SEPARATELY.**
+
+### 🟢 Promoted to a shelf this pass — agent rows, every grant byte-read at the real default branch
+
+| repo | ★ | grant (byte-read) | branch | last push | promoted to |
+| --- | --: | --- | --- | --- | --- |
+| [DilawarShafiq/nietzschian-debugger](https://github.com/DilawarShafiq/nietzschian-debugger) | **539** | 🟢 **MIT** `1,071 B` | `main` | `2026-10-27` | `agents/top.md` |
+| [ChenChenyaqi/learn-anything](https://github.com/ChenChenyaqi/learn-anything) | **500** | 🟢 **MIT** `1,069 B` | `main` | `2026-08-29` | `agents/top.md` |
+| [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | **348** | 🟢 **MIT** `1,084 B` | `main` | `2026-09-26` | `agents/top.md` |
+| [ERRRC/kaogong-shuati](https://github.com/ERRRC/kaogong-shuati) | **151** | 🟢 **MIT** `1,062 B` | `main` | `2026-09-24` | `agents/top.md` |
+| [PrepLabsAI/InterviewMentor](https://github.com/PrepLabsAI/InterviewMentor) | **116** | 🟢 **MIT** `1,071 B` | `main` | `2026-10-19` | `agents/top.md` |
+
+### 🔴 The twenty-eighth nil, gated on the shelf and the log separately (`597-D`)
+
+`8` repo-shaped addresses were served by the `8` mandated legs. 🔴 **`0` are new.**
+
+| address served | on shelf today | in append-only log | verdict |
+| --- | --: | --: | --- |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | `25` | `141` | ON SHELF |
+| [pguso/agents-from-scratch](https://github.com/pguso/agents-from-scratch) | `11` | `154` | ON SHELF |
+| [OPTIMETA/PAIDEIA](https://github.com/OPTIMETA/PAIDEIA) | `10` | `25` | ON SHELF |
+| [anandpatikat/guru-latihan-dinamis](https://github.com/anandpatikat/guru-latihan-dinamis) | `9` | `22` | ON SHELF |
+| [aneelv75/github-trending](https://github.com/aneelv75/github-trending) | `4` | `24` | ON SHELF |
+| [ArturoNereu/AI-Study-Group](https://github.com/ArturoNereu/AI-Study-Group) | `1` | `8` | ON SHELF |
+| [avinash201199/free-ai-agents-resources](https://github.com/avinash201199/free-ai-agents-resources) | `1` | `40` | ON SHELF |
+| [speedyapply/2026-AI-College-Jobs](https://github.com/speedyapply/2026-AI-College-Jobs) | `0` | `41` | 🔴 **LOG ONLY** — `596-C` backlog, never shelved in `41` sightings |
+
+🔴 **And the one log-only row was measured rather than assumed, which turned up a second instance of
+`597-F`.** [`speedyapply/2026-AI-College-Jobs`](https://github.com/speedyapply/2026-AI-College-Jobs)
+🔴 **`422`s on the search channel** — "cannot be searched… do not exist or you do not have
+permission" — exactly as `DaRL-GenAI/instructional_agents` did at `p597`. 🟢 **It is live**:
+`README.md` returns `200` on both `main` and `master`. 🔴 **And it has no grant file** (`404` on
+`LICENSE` on both branches), so it is **not promotable** — which is why `41` sightings never
+produced a shelf row. 🔵 **Two independent cases now**: a search-channel `422` or `total_count 0`
+says nothing about whether a repository exists. The byte-read is the only liveness test here.
+
+🟢 **The `gh api` topic axis paid in the same sitting**: `6` axes, `47` candidates, `1` address this
+base has never held in **either** channel — [`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed)
+(MIT, `1,115 B`) — plus `11` recoverable backlog rows. 🔵 `594-G`'s standing recommendation to demote
+the four global repo legs to a formality is now carried by `p594`, `p597` and `p598`.
+
+### 🟢 `598-F` — `597-E`'s placeholder control passes, and the gate that reports it is wrong
+
+```
+# the gate as written reports the documentation of the rule as a violation of it (547-I)
+grep -c "owner/repo" <shelf pages>      # 17  -> reads as 17 shelved placeholders
+# all 17 are prose; 0 are table-cell data. The usable gate is cell-scoped:
+grep -oE '\| *\[?owner/repo' <shelf pages>   # 0  -> correct
+```
+
+### 🔴 `591-B` refuted on the `NOASSERTION` arm, after the branch was proved readable first
+
+[`Apereo-LAI/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider)
+is `NOASSERTION` with **no grant file on `16` path variants**. 🟢 `591-B` closed at `p594` claiming
+`NOASSERTION` → `32 of 32` carry a grant file; this is counter-example one. 🔵 **Measured in the
+`597-F` order** — readability before absence: `pom.xml` and `.gitignore` return `200` on `master`,
+while `main` and `trunk` return `404`, so the branch is live and the absence is real. 🟡 The
+`license: null` arm survives: `16 of 16` of this pass's BLOCK rows are `null` and none has a grant
+file.
+
+---
+
 ## 🆕 `p597` — `2026-11-01` — **🔴 THE VERIFICATION INSTRUMENT THIS HARNESS MANDATES IS BLIND: `curl -sI https://github.com/…` RETURNS `403` FOR EVERY UNATTACHED REPO — LIVE OR DEAD — SO EXECUTED LITERALLY IT REJECTS ALL `20` REAL ROWS PROMOTED THIS PASS. 🟢 `raw.githubusercontent.com` ANSWERED CORRECTLY `18/18`. 🔴 THE SEARCH API `422`s ON A LIVE REPO. 🔴 `microsoft/autogen` IS `CC-BY-4.0` BY API AND **MIT BY `LICENSE-CODE`** — THIS BASE HAS CALLED IT "MIT" FOR TWO CYCLES WITHOUT OPENING THE FILE. 🟢 THE "NIL" SPLIT IN TWO: MARKET TOKENS GENUINELY SATURATED (`22/24` HELD ON SHELF, 28th NIL), ADDRESSES NOT (`2,049` GATE-BLIND, `20` PROMOTED).**
 
 ### 🟢 Promoted to a shelf this pass — agent and agent-adjacent rows, every grant byte-read

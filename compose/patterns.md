@@ -4,6 +4,105 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p598` — `2026-11-01` — three recipes, every component byte-read this pass, and the first one exists because a permissive replacement for a GPL-3.0 row was finally found
+
+🔴 **Instrument note that governs every address below (`597-A`, re-measured this pass).**
+`curl -sI https://github.com/…` returns `403` here for all of them — live or dead, with a
+fabricated control also returning `403`. 🟢 Verify at `raw.githubusercontent.com/<repo>/<branch>/LICENSE`,
+which returned `200` for real grants and `404` for a fabricated one on every probe this pass.
+🔴 **`4 of the 11` components below do not default to `main`** — a recipe that hardcodes the branch
+name fails on more than a third of this stack (`594-B`).
+
+🟢 **New this pass (`598-A`):** before marking any component "unlicensed", read its **build
+manifest**. `pom.xml`, `package.json`, `pyproject.toml` and `Cargo.toml` can carry the only licence
+declaration a project has.
+
+🔴 **One branch claim of this pass's own was wrong and was caught before publishing.** The Kolibri
+row below was first drafted as branch `release-v0.18.x`; that path returns **`404`**. Kolibri's real
+`default_branch` is 🔴 **`develop`** (`main` → `404`, `master` → `200` but not the default). 🔵
+`594-B` names exactly this failure and it still happened while writing the note that cites it —
+which is the argument for resolving `default_branch` from the API *before* composing a row, not
+after.
+
+## 🆕 P-598-A — 🟢 **Fully permissive auto-graded programming course** (6–10 weeks, North America / EMEA)
+
+🔵 **Why this recipe did not exist until this pass.** The auto-grading seam in this base was anchored
+by [`infomark-org/infomark`](https://github.com/infomark-org/infomark), which this pass byte-read as
+🔴 **GPL-3.0** (`35,149 B`) — unusable in a closed client deliverable. `topic:autograder` returned
+the permissive replacement.
+
+| Component | Repo | Grant (byte-read `2026-11-01`) | Branch | Role |
+| --- | --- | --- | --- | --- |
+| Course + feedback server | [quickfeed/quickfeed](https://github.com/quickfeed/quickfeed) | 🟢 MIT `1,115 B` | 🔴 `master` | Go/TS server + web frontend; instant automated feedback on programming assignments, GitHub-org-per-course enrolment |
+| Grader harness | [gradescope/gradescope-utils](https://github.com/gradescope/gradescope-utils) | 🟢 MIT `1,070 B` | 🔴 `master` | Python package for writing autograders; use it to author graders portable between QuickFeed and Gradescope |
+| Socratic feedback side-car | [DilawarShafiq/nietzschian-debugger](https://github.com/DilawarShafiq/nietzschian-debugger) | 🟢 MIT `1,071 B` | `main` | Returns the **question**, not the fix — attach to failing submissions so the agent coaches instead of completing the work |
+| Record store | [Apereo-LAI/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 ECL-2.0 `9,878 B` | 🔴 `master` | 🟡 Stale (`2025-09-12`) — lift the **xAPI/Caliper schema**, do not take it as a runtime dependency |
+
+**Wiring.** QuickFeed owns enrolment and the run loop; graders are authored against
+`gradescope-utils` so they are not locked to one host. On a failed submission QuickFeed's webhook
+calls the debugger agent with the diff, the failing test name and the student's last three
+attempts — **never the reference solution** — and the agent returns one Socratic prompt. Emit an
+xAPI statement per attempt on OpenLRW's schema into any store.
+🟢 **Why it sells in North America:** the OECD's 2026 reading — AI helps only where pedagogy stays
+in control — plus the measured decline in district appetite for tools that bypass the teacher. This
+recipe is auditable by construction: the agent **cannot** hand over an answer it is never given.
+🔴 Do not substitute `infomark` to save integration time; it is GPL-3.0.
+
+## 🆕 P-598-B — 🟢 **Multi-tenant Spanish/English school platform with the tutor on MCP** (8–12 weeks, LATAM / EMEA)
+
+🔵 **Why LATAM gets a real adopt-path for once.** `591-C` has held for four passes: Spanish- and
+Portuguese-language *tutors* in this base are unlicensed almost without exception, so LATAM work has
+meant building rather than adopting. [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front)
+is the first row that breaks the pattern at the **platform** layer.
+
+| Component | Repo | Grant (byte-read `2026-11-01`) | Branch | Role |
+| --- | --- | --- | --- | --- |
+| Platform of record | [guillermoscript/lms-front](https://github.com/guillermoscript/lms-front) | 🟢 MIT `1,072 B` | 🔴 `master` | Multi-tenant LMS: subdomain per school, Supabase row-level security, Stripe Connect, certificates, gamification, **i18n `en`/`es`**, **AI tutor already exposed over MCP** |
+| Courseware generation | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | 🟢 MIT `1,084 B` | `main` | Ministry PDFs / lecture video → `12`-section study guide + quizzes + flashcards + spaced repetition, one command |
+| Citation-preserving authoring | [juneyaooo/lineage-skill](https://github.com/juneyaooo/lineage-skill) | 🟢 Apache-2.0 `11,358 B` | `main` | Keeps each generated item traceable to its source document — the review seam a ministry will ask for |
+| Offline reach | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 MIT `1,097 B` | 🔴 `develop` | Sync to low-connectivity schools; infrastructure is a stated LATAM constraint, not an edge case |
+
+**Wiring.** `lms-front` is the tenant and billing boundary — one subdomain per school, RLS per
+tenant, so a ministry pilot and a private network can run on one deployment. Run `Skill-Anything`
+as a batch job over the official curriculum corpus, then pass every generated item through
+`lineage-skill` so each question carries its source citation. Publish approved packages into Kolibri
+channels for offline schools and serve them online through `lms-front`. The tutor stays on the
+platform's existing **MCP** interface, so swapping the model is configuration.
+🟢 **Governance is the first deliverable, not the last** — `45 %` of LAC institutions have AI
+guidance against `~70 %` in Europe and North America, so build the policy layer as **configuration**
+(retention windows, allowed uses, escalation) because regional policy changes with administrations.
+
+## 🆕 P-598-C — 🟢 **Sovereign university estate: agents inside Apereo, nothing leaving the campus** (10–14 weeks, APAC / EMEA)
+
+🔵 **Why now.** `598-D` establishes that the Apereo consortium is permissive — ECL-2.0 and
+Apache-2.0 — and that an `spdx_id` licence screen rejects most of it as unlicensed. 🔴 Any studio
+that ran such a screen concluded this stack was unavailable. It is available, and it is the natural
+host for agents under a sovereignty requirement: Forrester expects `60 %` of firms and governments in
+markets such as India and China to run **local** models alongside global ones.
+
+| Component | Repo | Grant (byte-read `2026-11-01`) | Branch | Role |
+| --- | --- | --- | --- | --- |
+| LMS of record | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 ECL-2.0 `11,120 B` | 🔴 `master` | Courses, assignments, gradebook |
+| Single sign-on | [apereo/cas](https://github.com/apereo/cas) | 🟢 Apache-2.0 | 🔴 `master` | 🔵 Put the agent **behind CAS** — identity and entitlement are solved before the agent sees a request |
+| Portal shell | [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | 🟢 Apache-2.0 | 🔴 `master` | Where the agent surfaces to students and staff |
+| Learning records | [Apereo-LAI/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 ECL-2.0 `9,878 B` | 🔴 `master` | 🟡 Schema reference for the xAPI/Caliper store |
+| In-language study agent | [ERRRC/kaogong-shuati](https://github.com/ERRRC/kaogong-shuati) | 🟢 MIT `1,062 B` | `main` | Chinese-language exam practice with error notebook — **APAC in-language supply is reliably permissive**, unlike LATAM's |
+| Service desk entry point | [edmozley/freeitsm](https://github.com/edmozley/freeitsm) | 🟢 MIT `1,066 B` | `main` | 🔵 **Start here.** Triage and KB answers touch no student data and no pedagogy — the lowest-governance place to land the first agent |
+
+**Wiring.** Phase 1 lands the agent on `freeitsm` — IT triage, routing, knowledge-base answers — to
+earn operational trust with nothing sensitive in scope. Phase 2 moves it behind CAS and surfaces it
+in uPortal, reading Sakai through its own APIs and writing xAPI statements on OpenLRW's schema.
+Phase 3 adds the in-language study agent for exam cohorts. Every model call terminates at a
+locally hosted endpoint, which is what makes the stack answerable to a sovereignty requirement.
+🔴 **Budget for the licence screen itself as a deliverable.** If the client's OSS intake process
+reads `spdx_id`, it will reject Sakai's own analytics stack, uPortal portlets and CAS clients as
+unlicensed, and the engagement stalls on procurement rather than on engineering. 🟡 Also flag
+[`uPortal-Project/CoursesPortlet`](https://github.com/uPortal-Project/CoursesPortlet): BSD-3-Clause
+terms, but the grant names *"News Reader Portlet Development Team"* as holder — counsel reads it
+before it ships.
+
+---
+
 ## 🆕 p597 — 2026-11-01 — three recipes assembled entirely from rows this base had already found and dropped; every grant below byte-read this pass at the repository's real branch
 
 🔴 **Why these are writable only now.** `596-C`, re-measured this pass, finds `2,640` of `3,366`

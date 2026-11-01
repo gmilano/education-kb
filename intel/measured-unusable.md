@@ -4,6 +4,30 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p598` — `2026-11-01` — `4` dispositions, and one of them is a repository this base would have called unlicensed that is in fact permissively licensed
+
+🔵 **The rule this pass changes (`598-A`).** A row is only "no grant" once its **build manifest** has
+been read as well as its grant filenames. Probing `13`–`16` filename variants and `0` manifests is
+not a finished measurement. 🟢 The full re-audit of every 🔴 BLOCK row on these pages is at
+[`../evidence/manifest-channel-audit.2026-11-01-p598.tsv`](../evidence/manifest-channel-audit.2026-11-01-p598.tsv):
+**`15 of 16` survived**, so the rule changes without the shelf changing.
+
+| Repo | ★ | Measured `2026-11-01` | Disposition |
+| --- | --: | --- | --- |
+| [infomark-org/infomark](https://github.com/infomark-org/infomark) | 36 | 🔴 **GPL-3.0**, byte-read `35,149 B`, `main`, live `2026-10-31` | **BLOCK** for a closed deliverable. 🟢 A permissive replacement now exists — [`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed) (MIT, `1,115 B`) — so the auto-grading seam no longer depends on a copyleft row |
+| [uPortal-Project/CoursesPortlet](https://github.com/uPortal-Project/CoursesPortlet) | 12 | 🟡 **BSD-3-Clause** (`1,529 B`) — 🔴 copyright holder reads *"News Reader Portlet Development Team"*, a different project; byte-identical to [`NewsReaderPortlet`](https://github.com/uPortal-Project/NewsReaderPortlet)'s grant | **REVIEW** — permissive terms, mismatched holder. Not a licence screen's call; counsel reads it |
+| [Apereo-LAI/SakaiXAPI-Provider](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | 11 | 🟢 **ECL-2.0** via `pom.xml` `<licenses>`; 🔴 no grant file on `16` variants; last push `2021-03-25`; `42 KB` | 🟢 **NOT UNUSABLE — and not supply either.** Filed here because it is the evidence for `598-A` and the counter-example to `591-B`. `5` years stale and effectively empty: cite the finding, do not depend on the code |
+| [s64965264-code/nexo-ia](https://github.com/s64965264-code/nexo-ia) | **0** | 🟡 `"license": "MIT"` in `package.json`; 🔴 no grant file, no licence text, no named holder | **REVIEW, NOT PROMOTED.** The only one of `16` BLOCK rows the new manifest channel recovered — and a manifest string is intent, not a grant. `0★` fails the star floor regardless |
+| [speedyapply/2026-AI-College-Jobs](https://github.com/speedyapply/2026-AI-College-Jobs) | — | 🟢 **live** (`README.md` `200` on `main` and `master`); 🔴 **no grant file** (`404` both branches); 🔴 **`422`s on the GitHub search channel** | **BLOCK — and the explanation for `41` sightings with no shelf row.** 🔵 Second confirmed instance of `597-F`: a search-channel `422` is not a dead address. It is a job-listing index rather than education software, and it is ungranted |
+
+🟢 **Instrument note governing all four rows (`597-A`, re-measured and unchanged).** None of these
+dispositions could be reached with the verifier this run prompt mandates: `curl -sI
+https://github.com/<owner>/<repo>` returned **`403`** for every address above **and** for a
+fabricated control. Liveness and grant were established at `raw.githubusercontent.com`
+(`200` real / `404` fabricated) and, for `SakaiXAPI-Provider`, in its `pom.xml`.
+
+---
+
 ## 🆕 `p597` — `2026-11-01` — `9` dispositions registered (a tenth was drafted and **withdrawn** — see `597-F`), so the `596-C` backlog shrinks by refusal as well as by promotion
 
 🔵 **Why these are filed here rather than left in a log.** `596-C` established that a row sitting

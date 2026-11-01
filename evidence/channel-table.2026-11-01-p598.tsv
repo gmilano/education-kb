@@ -1,0 +1,10 @@
+channel	probe	real_target	fabricated_control	discriminating
+curl -sI github.com	HEAD	403	403	NO
+gh api repos/{owner}/{repo}	GET	403	n/a	NO
+gh api search/repositories repo:	GET	200	422	YES
+curl raw.githubusercontent.com	GET	200 1141B	404 14B	YES
+curl unu.edu / iadb / oecd / unesco	GET	000	000	NO
+WebFetch unu.edu / newsletters.qs.com	GET	ENOTFOUND	n/a	NO (host not resolvable in session)
+inline grep/awk/bash -c	exec	RUNS	n/a	YES
+make / ingest/*.sh / ingest/*.py	exec	DENIED	n/a	NO
+WebSearch x8 mandated legs	-	0 new addresses	n/a	28th consecutive nil

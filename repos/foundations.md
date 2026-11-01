@@ -4,6 +4,41 @@ region: Global
 updated: 2026-11-01
 ---
 
+🆕 **`p598` — `4` foundational rows promoted, every grant byte-read at the repository's real default
+branch (`3 of 4` are not `main`), and one of them is permissive under a licence the GitHub API
+reports as `NOASSERTION`.**
+
+🔵 **Four, not five.** This page's standing bar is five new rows per pass. `6` `gh api` topic axes
+were swept this pass — `topic:autograder`, `topic:lms topic:ai`, `topic:learning-analytics`,
+`topic:ai-tutor`, `topic:education topic:llm`, `topic:spaced-repetition topic:ai` — returning `47`
+candidate addresses, of which `35` were already on a shelf page and `11` sat in the append-only log
+only. 🔴 **Of the `12` then byte-read, `1` is copyleft (`infomark-org/infomark`, GPL-3.0) and `7`
+belong on the agent and platform pages, not this one.** The remaining four are below. 🟢 The two
+nearest misses are recorded rather than promoted:
+[`Apereo-LAI/OpenLRS`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) (`47★`,
+ECL-2.0 byte-read `11,087 B`) was last pushed **`2019-01-31`** and
+[`OpenDashboard-legacy`](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy)
+(`47★`, ECL-2.0 `9,919 B`) names itself legacy. 🔵 **Fewer real rows beat padding**, and a reader
+can now see exactly which addresses were considered and refused.
+
+🔴 **The instrument note that governs the new rows (`598-A`).** A missing `LICENSE` file is **not**
+evidence of a missing grant: a Maven, npm or Python project may declare its licence only in its
+build manifest, and this base probed `13` filename variants and `0` manifests until this pass. The
+audit of every 🔴 "no licence file" row on these pages is in
+[`../evidence/manifest-channel-audit.2026-11-01-p598.tsv`](../evidence/manifest-channel-audit.2026-11-01-p598.tsv)
+— 🟢 `15 of 16` of those BLOCK grades survived it.
+
+### 🟢 Promoted this pass — grants byte-read `2026-11-01`
+
+| Repo | ★ | Grant (byte-read) | Branch | Last push | Why it is foundational here |
+| --- | --: | --- | --- | --- | --- |
+| [kabartay/openunivcourses](https://github.com/kabartay/openunivcourses) | **254** | 🟢 **MIT** (`1,076 B`) | `main` | `2026-10-18` | A searchable index of free MIT, Stanford, Berkeley, CMU, NYU and UChicago courses, **every yearly edition and lecture video linked**. 🔵 The corpus layer: a licensed, structured pointer set to curriculum a studio can build retrieval over without licensing content itself |
+| [Apereo-LAI/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | **62** | 🟢 **ECL-2.0** (`9,878 B`) 🔴 API says `NOASSERTION` | 🔴 `master` | 🟡 `2025-09-12` | Standards-based **learning record warehouse** — xAPI/Caliper store for learning analytics, from the Apereo consortium. 🟡 `13` months stale: take it as the **reference schema** for a learning-record store, not a live dependency. 🔵 Its licence is the sector's own (`598-D`) |
+| [gradescope/gradescope-utils](https://github.com/gradescope/gradescope-utils) | **38** | 🟢 **MIT** (`1,070 B`) | 🔴 `master` | `2026-08-14` | The Python package for **building Gradescope autograders**, published by Gradescope itself. 🔵 `38★` and institution-grade: a star-ranked screen cannot see it, which is the mechanism `p596` recorded for FOLIO and `p597` for Ed-Fi |
+| [quickfeed/quickfeed](https://github.com/quickfeed/quickfeed) | 27 | 🟢 **MIT** (`1,115 B`) | 🔴 `master` | `2026-10-27` | 🆕 **The one address this pass found in neither channel.** Go/TypeScript server + frontend giving **instant automated feedback on programming assignments**, with GitHub-org-per-course enrolment. 🔵 The permissive replacement for `infomark-org/infomark` (GPL-3.0) |
+
+---
+
 🆕 **`p597` — `7` foundational rows promoted off the `596-C` backlog, every grant byte-read at the
 repository's *real* default branch (`3 of 7` are not `main`).** 🔵 **Not one required a search leg:**
 all seven were on a shelf page in an archived snapshot and were dropped by a wholesale rewrite, and

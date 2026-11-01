@@ -4,6 +4,38 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p598` — `2026-11-01` — the legs pay `4 of 4` regionally for a seventh consecutive pass, and this pass states the evidence *grade* of every figure it publishes
+
+🟢 **`4 of 4` regional legs paid.** Every region below carries at least one token this base has not
+previously recorded, and all four are policy- or programme-shaped rather than vendor-shaped.
+
+🔴 **`598-G` — and all of it is snippet-grade, which is now stated rather than implied.** The
+primary sources these figures come from cannot be opened in this environment **on either
+transport**:
+
+| host | `curl` | fabricated control | `WebFetch` | discriminating |
+| --- | --- | --- | --- | --- |
+| `unu.edu` | `000` | 🔴 `000` | 🔴 `ENOTFOUND` | **NO** |
+| `publications.iadb.org` | `000` | 🔴 `000` | — | **NO** |
+| `oecd.org` | `000` | 🔴 `000` | — | **NO** |
+| `unesco.org` | `000` | 🔴 `000` | — | **NO** |
+| `newsletters.qs.com` | — | — | 🔴 `ENOTFOUND` | **NO** |
+
+🔵 **Why this matters more than it looks.** `583-E` has recorded these hosts as `000` for `15`
+passes, but a `000` with a `000` control certifies nothing — the host may be blocked, slow or
+fictional and the probe cannot tell. `WebFetch` resolves it: `ENOTFOUND` means the host is outside
+this session's allowed network domains. 🟢 So the channel is **closed, not flaky**, and no future
+pass should spend legs trying to re-open it. 🔴 **Every regional figure on this page is therefore
+search-snippet-grade with its source named, and cannot be raised to primary-source grade here.**
+They are published with the grade attached rather than dropped, because an attributed number a
+reader can discount is information and a silent omission looks exactly like coverage.
+
+🔴 **The twenty-eighth consecutive nil on new addresses** — `8` legs, `8` repo-shaped addresses
+served, `7` on a shelf page and `1` in the append-only log only, `0` new. Gated on the two channels
+*separately*, per `597-D`. Detail on [`../agents/trending.md`](../agents/trending.md).
+
+---
+
 ## 🆕 p597 — 2026-11-01 — the legs pay `4 of 4` for a sixth consecutive pass and the nil is now *proven* rather than assumed, because the gate that reported it was rebuilt first
 
 ### 🔵 The gate was wrong before the legs were run, so the legs were re-gated
@@ -44,6 +76,34 @@ they are now separate measurements and must stay separate.
 
 ### North America
 
+🆕 **`p598` — the region's own figures disagree by `3.9×` and that spread is the finding.** The
+legs served three 2026 sizings of the North American AI-in-education market this pass: **`$3.68 B`
+at a `31.1 %` CAGR to `$32 B` by 2030** (marketsandmarkets), **`$951 M` in 2024 at `15.9 %` to
+2029** (technavio), and a regional **share of `36 %`–`41.7 %`** depending on source. 🔴 **Do not
+put any one of these in a client deck as the market size.** 🟢 **What is safely sayable**: North
+America is the largest regional share on every source, and the dispersion between vendor sizings
+is wider than the growth any of them forecasts.
+
+🟢 **The governance figure is the usable one, because it is comparative.** `~70 %` of institutions
+in Europe *and* North America have or are developing AI guidance, against `45 %` in Latin America
+and the Caribbean. 🔵 A `25`-point governance gap is a procurement fact: a North American
+engagement starts inside an existing policy and must comply with it; a LATAM engagement is often
+asked to *write* it (see LATAM, below). 🟢 Public money has turned: the US Department of Education
+released **`$169 M`** in FIPSE awards including responsible AI use in higher education.
+
+🔴 **Regulation unchanged in shape and still the only quantified instrument here:** `134` bills
+across `31` states, no comprehensive federal statute, **COPPA** governing K-12 product design, and
+Canada as a second regime multinationals must reconcile. 🔵 The OECD's *Digital Education Outlook
+2026* is cited as arguing AI helps learning **only where pedagogy stays in control** — which is the
+demand-side reading behind this pass's
+[`nietzschian-debugger`](https://github.com/DilawarShafiq/nietzschian-debugger) promotion.
+
+🟢 **Supply added this pass for this region.** [`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed)
+(MIT, byte-read `1,115 B`) and [`gradescope/gradescope-utils`](https://github.com/gradescope/gradescope-utils)
+(MIT, `1,070 B`) give the auto-graded-coursework seam a **permissive** stack where the base
+previously had `infomark-org/infomark` (🔴 GPL-3.0). 🔵 Both are under `40★` — institution-grade
+code a star-ranked screen cannot see.
+
 🆕 **`p597` — the one new demand-side token in `24` legs is a *shape* change, and it is commercially
 load-bearing.** District adoption of tools that **bypass the teacher** is in significant decline.
 🔵 Read against this base's standing North American reading — governance-plus-integration against
@@ -62,6 +122,29 @@ quantified instrument this channel produces: `134` bills across `31` states.
 
 ### EMEA
 
+🆕 **`p598` — EMEA is the one region where the binding instrument is a *statute*, not a budget.**
+The EU AI Act's **AI-literacy obligation has been in force since `2025-02-02`** and it reaches
+schools, universities and training providers directly — not as guidance but as a duty. 🟢 The
+Commission added the operational layer this year: **updated ethical guidelines on AI in education**
+(`9 June`) and **three Advanced Digital Skills grant agreements worth `€25.4 M`**. 🔵 For a studio
+this inverts the usual sales motion: in EMEA the client has a **compliance deadline**, so an
+AI-literacy and governance workstream is the entry point and the tutor is the follow-on.
+
+🟢 **The UK is funding adoption rather than regulating it:** `£200 M+` committed at its first **AI
+Adoption Summit** (`8 June`). 🔴 The sources place that money in workplaces, **not schools** —
+recorded as adjacent, not as an education budget.
+
+🔵 **Readiness, enterprise-wide rather than education-specific:** Workday puts `56 %` of EMEA CEOs
+as prepared for AI adoption against `48 %` in the Americas and `45 %` in APJ — EMEA leads on
+self-reported readiness. CompTIA has `94 %` of organisations at least somewhat likely to invest in
+AI-specific training in 2026. 🔴 Both are enterprise samples; neither is a school or university
+adoption rate, and this pass could not find one.
+
+🟢 **Supply note.** The Apereo consortium (`598-D`) is disproportionately **European university**
+infrastructure — Sakai, uPortal and CAS run in EMEA estates — and a licence screen reading the
+GitHub API's `spdx_id` rejects most of it as unlicensed. 🔵 Fixing that screen is worth more to an
+EMEA engagement than any new repository found this pass.
+
 🔵 **The `p593` reading stands unamended: regulation ahead of capability, so the deliverable is
 capability.** 🆕 **What `p597` adds is that the UK's open-curriculum tier is already
 agent-addressable.** [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem)
@@ -77,6 +160,36 @@ education budgets.
 
 ### APAC
 
+🆕 **`p598` — APAC's 2026 organising idea is sovereignty, and it has a concrete education shape.**
+Forrester expects **`60 %` of firms and governments in major markets such as India and China to run
+locally developed LLMs alongside global ones**, naming **education** among the target sectors, and
+regional commentary frames 2026 as the year *"AI sovereignty sets the pace"*. 🔵 Read as a
+procurement constraint this is the strongest argument in any region for the **self-hosted,
+permissively licensed** stack this KB curates: a sovereignty requirement rules out a hosted
+US tutor and rules **in** an on-premise assembly.
+
+🟢 **The largest concrete education programme served by any leg this pass is APAC's.** The
+Philippines' **Department of Education with Google — Project S.I.N.A.G. — is certifying more than
+`1 million` teachers** in Gemini. 🔵 Note what it is: a **teacher-capability** programme at national
+scale, not a student tutor. 🔴 It is also a closed-stack national commitment, which is the
+competitive fact a studio should plan around rather than bid against.
+
+🔴 **Regulation is early-stage and per-country.** The expectation on offer is harmonisation on
+**principles** — safety, transparency, accountability — *executed differently in each market*, so
+compliance cost scales with the number of jurisdictions rather than with the size of the
+deployment. 🔵 This is why `P-597-C`'s policy-node pattern is an APAC pattern.
+
+🟢 **In-language supply added this pass.** [`ERRRC/kaogong-shuati`](https://github.com/ERRRC/kaogong-shuati)
+(MIT, byte-read `1,062 B`, `151★`) — Chinese civil-service exam practice with an error notebook and
+AI explanations — joins [`SimonsTang/feifei-companion`](https://github.com/SimonsTang/feifei-companion)
+(Apache-2.0) and [`KeWang0622/kaogong-skill`](https://github.com/KeWang0622/kaogong-skill) (MIT).
+🔵 **APAC is the only region whose in-language education supply is reliably permissive** — the
+contrast with LATAM below is now four passes old and stable.
+
+🔴 **Declared gap, unchanged:** the legs again returned **no APAC school or university adoption
+rate**. The APAC numbers available are enterprise surveys (Omdia/Boomi, `1,100+` decision-makers
+across Australia, New Zealand, Singapore, Malaysia and the Philippines), not education ones.
+
 🔴 **Nothing new for this region this pass, stated explicitly rather than left as silence.** The
 legs returned Project S.I.N.A.G., the ASEAN Guide, Australia/NZ's National AI Plan and Forrester's
 local-LLM figure — all four already held on the shelf.
@@ -90,6 +203,44 @@ not a dependency to track. 🔵 In-language supply grows again with
 `10,227 B`, K-12, Chinese), joining DeepTutor, OpenMAIC and pupilfirst.
 
 ### LATAM
+
+🆕 **`p598` — LATAM now has a *primary* evidence base for higher education, and this environment
+cannot open it.** A UNU working paper reports a survey of **`200` institutions across `19`
+countries**, run **August–October 2025**, mapping AI adoption across teaching, research,
+administration and governance in Latin America and the Caribbean — the single most relevant
+document served by any leg this pass. 🔴 `unu.edu` returns `000` on `curl` and `ENOTFOUND` on
+`WebFetch` (`598-G`): **it is cited here at snippet grade and flagged as unread**, not paraphrased
+as if measured. 🟢 Same for the IDB's **fAIr Tech Radar** (November 2025).
+
+🔴 **The region's defining number is a deficit, and it is comparative.** `45 %` of LAC institutions
+have or are developing AI guidance against `~70 %` in Europe and North America — a **`25`-point
+governance gap**. 🟢 **This is the LATAM engagement thesis and it should be sold as such**: the
+first deliverable is frequently the *policy and governance scaffold*, which North American and EMEA
+clients already own. Baker McKenzie's reading supports it — **no Latin American country has a fully
+mature, harmonised AI regime**, and regional policy is a patchwork of pilots *"vulnerable to being
+tossed out with each new administration"*. 🔵 Policy instability is itself a design requirement:
+build the governance layer as configuration, not as code.
+
+🔴 **Two constraints that bound any LATAM proposal.** Infrastructure — reliable internet and devices
+remain uneven, so **offline-first is a requirement, not a feature** (which is why
+[`learningequality/kolibri`](https://github.com/learningequality/kolibri) anchors `P-597-B`). And
+UNESCO's flagged **severe teacher shortage**, which argues for teacher-multiplier tooling over
+student-facing tutors. 🟢 Investment is rising: `~$2.5 B` of AI investment expected in the region in
+2026.
+
+🟢 **Supply, and the four-pass-old asymmetry is unchanged.** [`guillermoscript/lms-front`](https://github.com/guillermoscript/lms-front)
+(MIT, byte-read `1,072 B`, pushed `2026-11-01`) is promoted this pass and is the **first row on
+[`../verticals/solutions.md`](../verticals/solutions.md) that is multi-tenant, MCP-ready and ships
+an `es` locale** — a genuine LATAM-ready starting point. 🔴 Against that: the Spanish- and
+Portuguese-language *tutors* this base has measured remain **unlicensed almost without exception**
+(`591-C`), and this pass adds the exam-prep counterpart —
+[`rodrigoborgesmachado/questoesConcursos`](https://github.com/rodrigoborgesmachado/questoesConcursos)
+(`31★`, Brazilian public-exam practice, 🔴 no grant) against APAC's MIT-licensed
+[`kaogong-shuati`](https://github.com/ERRRC/kaogong-shuati). 🔵 **Identical demand, opposite
+licensing culture** — so in LATAM the studio builds; it does not adopt.
+
+🟢 **Named players served this pass:** Ednova (Chile), Platzi, and Universidad Autónoma de
+Guadalajara, which has published `15` AI-use guidelines for its students.
 
 🔵 **The demand-side reading is unchanged and was re-gated, not re-argued:** `92 %` of students and
 `79 %` of faculty already using AI against almost no institutional governance, now with the
@@ -107,6 +258,28 @@ consequence for a LATAM engagement is concrete: **attach over APIs, do not fork*
 platform layer as integration rather than customisation.
 
 ### Global
+
+🆕 **`p598` — the global market sizings span `3.1×` for the same year, so this base will not quote
+one.** 2026 estimates served by the legs: **`$3.7 B`** (Persistence), **`$6.4 B`** for 2025
+(IMARC), **`$11.4 B`** rising to `$57.2 B` by 2033. 🔴 A `$3.7 B`-to-`$11.4 B` spread for a single
+year is not a forecast disagreement, it is a definitional one — the sources are not measuring the
+same market. 🟢 **Use the structural facts instead**, which agree across sources: **K-12 is the
+largest segment at `~34 %` of 2026 share**, and the growth is in adaptive learning built **into**
+the LMS rather than sold alongside it.
+
+🔴 **The structural change worth more than any sizing: the unit of sale is becoming the country.**
+OpenAI launched a country-level education programme with **eight national partners** in Q1 2026, and
+the Philippines–Google teacher-certification programme (APAC, above) is the same shape. 🔵 If
+national infrastructure deals displace school-by-school and district-by-district sales, a studio's
+addressable work shifts from *building the product* to **integrating and governing a national stack
+it did not choose** — which favours interop, policy and migration capability over tutor-building.
+
+🟢 **And the demand-side shift this base has now recorded for three passes:** the question has moved
+from policing academic integrity to whether AI can be designed **into** pedagogy. 🔵 That is the
+commercial reason
+[`DilawarShafiq/nietzschian-debugger`](https://github.com/DilawarShafiq/nietzschian-debugger) —
+an agent whose entire product is *refusing to give the answer* — is on
+[`../agents/top.md`](../agents/top.md) this pass rather than in a curiosity list.
 
 🔵 **Market frame, re-gated and unchanged:** `$8.3bn` (2025) → `$11.4bn` (2026) → `$57.2bn` (2033)
 on one reading, with K-12 at **`~34 %`** of 2026 spend; this base continues to carry the range rather

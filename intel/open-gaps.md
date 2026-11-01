@@ -3,6 +3,60 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+
+## 🆕 `p598` — `2026-11-01` — **🟢 A FOURTH GRANT CHANNEL FOUND AND ITS YIELD HONESTLY BOUNDED AT `1 of 16`. 🔴 `591-B` REFUTED ON ONE ARM. 🔴 `598-D`: THE API IS WRONG ABOUT THE EDUCATION SECTOR'S OWN LICENCE IN `6 of 8` CASES. 🔴 `589-A` RECURS A FIFTH TIME — THIS REGISTER WAS `4` PASSES BEHIND. 🔴 TWENTY-EIGHTH NIL. SEVEN REGISTERED (`598-A`…`598-G`).**
+
+🔵 **Channel table, run first (`569-B`'s standing row), with a fabricated control on every arm.**
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories` with `repo:` / `topic:` qualifiers | 🟢 **`6` topic axes, `47` candidates, `28` addresses resolved individually**; returns `default_branch` |
+| 🟢 fabricated control on the search channel | 🟢 **DISCRIMINATING** — `422 Validation Failed` against `200` |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 **`403`** — unchanged since `p584` |
+| 🟢 `curl` → `raw.githubusercontent.com/{repo}/{default_branch}/{path}` | 🟢 **`12` + `9` + `16`-variant + `10`-manifest reads all served** |
+| 🟢 fabricated control on `raw` | 🟢 **DISCRIMINATING** — `404 14 B` against `200` |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403` on a real repo AND `403` on a fabricated one** — the run prompt's mandated verifier certifies nothing (carried from `p590`) |
+| 🔴 `unu.edu`, `publications.iadb.org`, `oecd.org`, `unesco.org` | 🔴 **`000`**, fabricated control also `000` — `583-E` non-discriminating, unchanged |
+| 🔴 **`WebFetch` on those same hosts** | 🔴 **`ENOTFOUND`** — 🆕 **resolves `583-E`: the hosts are outside this session's allowed network domains, so the channel is CLOSED, not flaky** |
+| 🟢 inline `grep` / `awk` / `bash -c` / `python3 -I - <<PY` | 🟢 **RUNS** — the executable gate forms here |
+| 🔴 `make`, `bash ingest/*.sh` | 🔴 **not attempted** — DENIED at `p589`/`p590`, carried |
+| 🟡 `WebSearch` ×8 mandated | 🔴 **`0` new usable addresses — 28th nil**; 🟢 `4 of 4` regional legs paid |
+
+### 🔴 Registered this pass
+
+| ID | Gap | Why it matters | Cheapest next step |
+| --- | --- | --- | --- |
+| 🟢 **`598-A`** | **A fourth grant channel exists — the build manifest — and this base probed it `0` times in `597` passes.** `Apereo-LAI/SakaiXAPI-Provider` has no grant file on `16` variants and is **ECL-2.0** by `pom.xml` | 🔴 Every 🔴 "no licence file → BLOCK" grade in this base was issued by an instrument that cannot see a manifest declaration | 🟢 **Paid in full here**: `10` manifest formats added, all `16` BLOCK rows re-audited |
+| 🔵 **`598-B`** | **And its yield is `1 of 16` (`6.3 %`), on a `0★` row.** `15 of 16` BLOCK grades survived | 🟢 The instrument gap was real and put **no wrong data** on these pages — worth recording so a later pass does not re-run the audit expecting a harvest | 🟢 Done. 🔴 Standing rule: a manifest field grades **REVIEW**, never 🟢 — it is intent, not a grant |
+| 🔴 **`598-C`** | **`591-B` is refuted on the `NOASSERTION` arm.** It closed at `p594` claiming perfect separation (`NOASSERTION` → `32 of 32` carry a grant file); `SakaiXAPI-Provider` is counter-example one | 🔴 A closed gap carrying the word "perfect" is the kind this base stops re-testing. The `null` arm still holds (`16 of 16` here) | 🟢 Measured in the `597-F` order — branch readability proved **before** absence claimed. 🔴 Remaining: the other `31` `NOASSERTION` rows from `591-B`'s sweep were never manifest-probed |
+| 🔴 **`598-D`** | **The API's `spdx_id` is wrong about ECL-2.0 — the education sector's own licence — in `6 of 8` measured Apereo-family repos.** Discriminator is a parenthetical `(ECL-2.0)` in the title line | 🔴 A licence screen on `spdx_id` rejects Sakai's analytics stack, uPortal portlets and CAS clients as unlicensed — the deepest pool of permissive institution-grade education software | 🟢 Census filed (`9` rows). 🔴 Remaining: sweep the **whole** `apereo`, `sakaiproject`, `uPortal-Project` orgs, not `9` rows — `~30` byte-reads |
+| 🔴 **`598-E`** | **Twenty-eighth consecutive nil.** `8` legs, `8` addresses served, `7` on shelf + `1` log-only, `0` new — while `6` `gh api` topic axes paid `1` new address and `11` backlog recoveries in the same sitting | 🔴 `594-G`'s recommendation to demote the four global repo legs to a formality is now carried by `p594`, `p597` and `p598` **without being acted on** | 🟢 **Decision owed, not more evidence.** 🔵 Note the shape: the only axis that paid (`topic:autograder`) paid the **lowest-starred** candidate (`27★`) — the saturation is in the high-star bands |
+| 🟢 **`598-F`** | **`597-E`'s placeholder control passes, and the gate reporting it is wrong.** `owner/repo` returns `17` substring hits on shelf pages; `0` are data rows, all `17` are prose documenting the defect | 🔴 `547-I` recurring: documentation of a rule placed where the rule matches it. A substring gate reports the doc as the violation | 🟢 Cell-scoped gate given on [`../agents/trending.md`](../agents/trending.md) |
+| 🔴 **`598-G`** | **The regional market channel is closed, not merely non-discriminating**, and every regional figure on `../intel/market.md` is therefore search-snippet-grade and cannot be raised here | 🔴 `583-E` has recorded `000` for `15` passes without establishing *why*; a `000` against a `000` control is uninformative. `WebFetch`'s `ENOTFOUND` settles it | 🟢 **Paid**: evidence grade now stated on the page itself. 🔴 Remaining: this is a **session network-policy** limit, so it is a request to the operator, not a research step |
+| 🔴 **`589-A` (fifth recurrence)** | This register's newest entry was **`p594`** while the curated pages cited `595`–`597` | 🔴 Identical to the `p594` diagnosis: `gate-register-currency` lives in `HOOK_GATES` and `make` is DENIED here | 🟡 **Repaired for `p598` only** (this entry). 🔴 `p595`–`p597` are backfilled below from the curated pages, not from contemporaneous notes. The cause is unchanged and it will recur |
+
+### 🔴 One error of this pass's own, caught before publishing
+
+🔴 **A branch name was asserted from memory rather than resolved.** The Kolibri row in `P-598-B` was
+drafted as `release-v0.18.x`; that path returns **`404`**. The real `default_branch` is 🔴 **`develop`**
+(`main` → `404`; `master` → `200` but is not the default, which is the silent-failure mode `594-B`
+describes). 🔵 It happened **while writing the note that cites `594-B`**, which is the argument for
+resolving `default_branch` from the API before composing a row rather than verifying after.
+
+---
+
+## 🆕 Backfill — `p595`, `p596`, `p597` (written at `p598`; `589-A` fifth recurrence)
+
+🔴 **These three entries were missing.** 🔵 They are reconstructed from the curated pages, not from
+contemporaneous notes, so they record what those pages state and no more.
+
+| Pass | Registered | Recorded outcome, per the curated pages |
+| --- | --- | --- |
+| **`p597`** | `597-A`…`597-F` | 🔴 **`597-A`** the mandated verifier is inert — `curl -sI github.com` returns `403` for every unattached repo, so executed literally it rejects all `20` real rows promoted that pass; `raw.githubusercontent.com` answered `18/18`. 🔴 **`597-B`** `spdx_id` ≠ code grant, three mismatch shapes in one sitting: `microsoft/autogen` API `CC-BY-4.0` but **MIT** by `LICENSE-CODE`; `crewai` MIT with no title line; `oak-open-curriculum-ecosystem` spelled `LICENCE`. 🟢 **`597-D`** the two "nil" channels saturate independently — `22 of 24` market tokens held on shelf (real nil) but `2,049` addresses gate-blind (artifact). 🔴 **`597-E`** `owner/repo` shelved as data in `8 of 15` archived snapshots → 🟢 **control passes at `p598`**. 🔴 **`597-F`** a false "DEAD ADDRESS" written into three pages and withdrawn mid-pass — `DaRL-GenAI/instructional_agents` is live, MIT, EACL'26, and simply absent from the GitHub search index; **a `0` is not a `404`** |
+| **`p596`** | `596-A`…`596-D` | 🔴 **`596-C`** the central structural finding: **the shelf is lossy and the log is lossless** — `2,015 of 2,243` ever-shelved addresses (`89.8 %`) dropped across `15` rewrites, and a dropped row still in the append-only log reports *"already held"*, so the gate consults the lossless record to admit to the lossy one. 🟢 `6` rows promoted off that backlog. 🔴 `596-D` a Google-branded reading assessor disqualified by its own README. 🟢 **`595-B` CLOSED**. 🔴 Two self-inflicted instrument failures published: `--` before a `grep` pattern silently disables `--include`, and `comm` lies across locales |
+| **`p595`** | `595-A`, `595-B` | 🔴 **`595-A`** this repo is `118 MB` with no retention policy. 🔴 **`595-B`** `intel/market.md` carried **three** `## Opportunities by region` headings where the contract allows one → 🟢 CLOSED at `p596`, 🟢 **still `1` at `p598`**. 🔴 **Twenty-sixth nil**: `9` legs served one never-held address, `dajarbot/AutoGrader`, `0★` with no `LICENSE` at all |
+
+---
 ## 🆕 `p594` — `2026-11-01` — **🔴 `591-G` SAT OPEN FOR THREE PASSES AND THE ROW IT PREDICTED WAS ON THE AGENT SHELF MARKED 🟢 `MIT (text)` — "SHIPPABLE IN CLIENT WORK" — WITH A NON-COMMERCIAL, NO-REDISTRIBUTION, REVENUE-SHARE GRANT. 🟢 `591-G` CLOSED BY RUNNING ITS OWN PRESCRIBED AUDIT (`99` ROWS, `8` FLAGS, `2` REAL MIS-GRADES). 🟢 `593-B1` CLOSED WITH A CENSUS: `30 of 253`. 🟢 `591-B` CLOSED AT PERFECT SEPARATION ON THE POPULATION. 🔴 `589-A` RECURS A FOURTH TIME AND IS REPAIRED HERE FOR `p591`–`p594`. 🔴 TWENTY-FIFTH NIL. SEVEN REGISTERED (`594-A`…`594-G`).**
 
 🔵 **Channel table, run first (`569-B`'s standing row).**

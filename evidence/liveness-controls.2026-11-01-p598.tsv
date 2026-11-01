@@ -1,0 +1,4 @@
+probe	real_target	fabricated_control	discriminating
+raw.githubusercontent.com	200	404	YES
+curl -sI github.com	403	403	NO
+gh api search/repositories	200 (23/24)	422	YES but 1 FALSE NEGATIVE (597-F)

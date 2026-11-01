@@ -1,0 +1,10 @@
+repo	api_spdx_id	grant_path	bytes	byte_read_title	real_licence	api_verdict
+sakaiproject/sakai	ECL-2.0	LICENSE	11120	Educational Community License, Version 2.0 (ECL-2.0)	ECL-2.0	CORRECT
+Apereo-Learning-Analytics-Initiative/OpenLRW	NOASSERTION	LICENSE	9878	Educational Community License / Version 2.0, April 2007	ECL-2.0	WRONG
+Apereo-Learning-Analytics-Initiative/OpenLRS	NOASSERTION	LICENSE	11087	Educational Community License, Version 2.0	ECL-2.0	WRONG
+Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy	NOASSERTION	LICENSE	9919	Educational Community License	ECL-2.0	WRONG
+apereo/java-cas-client	NOASSERTION	LICENSE	2321	====	Apache-2.0 (by declaration, 594-F stage 2)	WRONG
+uPortal-Project/CoursesPortlet	NOASSERTION	LICENSE	1529	Copyright (c) 2008, News Reader Portlet Development Team	BSD-3-Clause (holder names the WRONG project)	WRONG
+uPortal-Project/NewsReaderPortlet	NOASSERTION	LICENSE	1529	Copyright (c) 2008, News Reader Portlet Development Team	BSD-3-Clause	WRONG
+Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider	NOASSERTION	NONE-16-variants	0	-	ECL-2.0 (pom.xml <licenses>, manifest channel)	WRONG; and 591-B COUNTER-EXAMPLE
+Apereo-Learning-Analytics-Initiative/Larissa	Apache-2.0	LICENSE	11358	Apache License, Version 2.0	Apache-2.0	CORRECT

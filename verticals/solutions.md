@@ -4,6 +4,44 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p598` — `2026-11-01` — two customisable platforms promoted, and the licence screen that would have rejected the Apereo consortium
+
+🔵 **Why the Apereo finding belongs on this page and not only in a methods note.** This page's job is
+*platforms of record a studio can customise*. The Apereo consortium — **Sakai** (LMS), **uPortal**
+(institutional portal), **CAS** (the single-sign-on almost every university estate runs), **OpenLRW**
+(learning-record warehouse) — is the deepest pool of institution-grade, permissively licensed
+education software in existence. 🔴 **A licence screen reading the GitHub API's `spdx_id` rejects
+most of it**: `6 of 8` Apereo-family repositories measured this pass report `NOASSERTION`, and `3`
+of those are plain **ECL-2.0** (`598-D`, census on
+[`../repos/trending.md`](../repos/trending.md)). 🟢 ECL-2.0 is Apache-2.0 with a narrowed,
+education-specific patent grant — permissive and shippable. 🔵 **The one Apereo row this base
+already carries, Sakai, passed the screen only because its title line happens to carry the
+parenthetical tag `(ECL-2.0)`.** That is the whole discriminator.
+
+### 🟢 Promoted this pass — grants byte-read `2026-11-01` at the real default branch
+
+| Platform | Repo | ★ | Grant (byte-read) | Branch | Last push | What you customise |
+| --- | --- | --: | --- | --- | --- | --- |
+| **lms-front** | [guillermoscript/lms-front](https://github.com/guillermoscript/lms-front) | **44** | 🟢 **MIT** (`1,072 B`) | 🔴 `master` | 🟢 `2026-11-01` | 🆕 **A multi-tenant, self-hostable LMS with the AI tutor already on MCP.** Next.js 16 + React 19 + Supabase with row-level security + Stripe Connect; subdomain-per-school, gamification, certificates, **i18n `en`/`es`**. 🔵 The only row on this page that ships *both* the tenancy model and an MCP tutor seam — and the `es` locale makes it the LATAM-ready starting point this page has been short of |
+| **FreeITSM** | [edmozley/freeitsm](https://github.com/edmozley/freeitsm) | **119** | 🟢 **MIT** (`1,066 B`) | `main` | 🟢 `2026-10-31` | Service-desk / ITSM — ticketing, assets, change. 🔵 Adjacent, not an LMS: every university and district runs an **IT help desk**, and it is the least-contested place to put a first agent (triage, routing, knowledge-base answers) because no student data and no pedagogy are in scope. 🟡 Judge it as an ITSM tool, not an education product |
+
+### 🟢 Standing Apereo tier — permissive, institution-grade, and invisible to an `spdx_id` screen
+
+| Platform | Repo | ★ | Grant (byte-read `2026-11-01`) | Last push | Role in an education estate |
+| --- | --- | --: | --- | --- | --- |
+| **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | **1,240** | 🟢 **ECL-2.0** (`11,120 B`) | 🟢 `2026-10-30` | Full LMS of record; the API grades it correctly |
+| **CAS** | [apereo/cas](https://github.com/apereo/cas) | **11,392** | 🟢 **Apache-2.0** | 🟢 `2026-11-01` | Single sign-on. 🔵 The largest repo in the consortium and the one an agent integration meets first |
+| **uPortal** | [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | **287** | 🟢 **Apache-2.0** | 🟢 `2026-10-30` | Institutional portal / student dashboard shell |
+| **OpenLRW** | [Apereo-LAI/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | **62** | 🟢 **ECL-2.0** (`9,878 B`) 🔴 API `NOASSERTION` | 🟡 `2025-09-12` | Learning-record warehouse (xAPI/Caliper). 🟡 Stale — reference schema, not a live dependency |
+
+🔴 **One row measured and held back.** [`uPortal-Project/CoursesPortlet`](https://github.com/uPortal-Project/CoursesPortlet)
+(`12★`) ships a **BSD-3-Clause** grant (`1,529 B`) whose copyright holder is *"News Reader Portlet
+Development Team"* — a different project — and the file is byte-identical to
+[`NewsReaderPortlet`](https://github.com/uPortal-Project/NewsReaderPortlet)'s. 🟡 **REVIEW, not
+shippable on sight**: the terms are permissive but the named holder does not match the work.
+
+---
+
 ## 🆕 p597 — 2026-11-01 — four customisable platforms of record recovered off the `596-C` backlog, and one of them is a `12,149★` MIT ERP this base had dropped
 
 ### 🔵 Why these arrive as promotions rather than discoveries

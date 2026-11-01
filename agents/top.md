@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-01
 ---
 
+🆕 **`p598` — scope stated before its result: `8` mandated legs run (`4` global, `4` regional),
+`6` `gh api` topic axes swept, `12` grants byte-read, `16` existing 🔴 BLOCK rows re-audited on a
+channel this base had never read, `5` agent rows promoted.**
+
+🟢 **`598-A` — a fourth grant channel exists, and this base was blind to it: the build manifest.**
+[`Apereo-LAI/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider)
+has **no grant file on any of `16` path variants** at its real default branch, and the API reports
+`NOASSERTION`. By this base's established instrument it is 🔴 BLOCK, "no licence". 🟢 **It is
+ECL-2.0** — declared in `pom.xml` as `<license><name>ECL 2.0</name>` with the canonical OSI URL.
+🔵 **A missing `LICENSE` file is not evidence of a missing grant**, and every 🔴 "no licence file"
+row in this base was graded by an instrument that cannot see a manifest declaration.
+
+🔵 **`598-B` — and the honest yield of `598-A` is small, which is the finding's other half.** All
+`16` of this base's 🔴 "no grant" BLOCK rows were re-probed across `10` manifest formats:
+**`1 of 16` (`6.3 %`)** carries a manifest licence declaration
+([`s64965264-code/nexo-ia`](https://github.com/s64965264-code/nexo-ia), `"license": "MIT"` in
+`package.json`) — and it is `0★`, so it fails the star floor anyway. 🟢 **`15 of 16` BLOCK grades
+were right.** The instrument gap is real and it did **not** put wrong data on these pages.
+🔴 A manifest field is also *weaker* evidence than a grant file — a bare `"license": "MIT"` string
+carries no licence text and no copyright holder — so it grades **REVIEW**, never 🟢.
+
+🔴 **`598-C` — `591-B` is refuted, and it was this base's cleanest law.** `591-B` closed at `p594`
+claiming **perfect separation**: `license: null` → `0 of 14` carry a grant file, `NOASSERTION` →
+`32 of 32` do. `SakaiXAPI-Provider` is the first counter-example — `NOASSERTION` with no grant file
+at all. 🟢 The branch was proved readable first (`pom.xml` and `.gitignore` both `200`, `main` and
+`trunk` both `404`), which is `597-F`'s discipline: a `404` on one path is not a dead repository.
+🟡 The `null` arm still holds — `16 of 16` of this pass's BLOCK rows are `null` and none has a grant
+file. 🔵 **One arm of the law survived; the other was a sample, not a law.**
+
+🔴 **`598-D` — the education sector's own licence is the one the API is worst at.** ECL-2.0
+(Apache-2.0 with a narrowed, education-specific patent grant) is OSI-approved and permissive, and
+this page's legend already admits it. The API reports it correctly for
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) and 🔴 **wrong for `6 of 8` measured
+Apereo-family siblings**. The discriminator is cosmetic: Sakai's title carries the parenthetical
+SPDX tag `(ECL-2.0)`; the three that do not are reported `NOASSERTION`. 🔵 In *this* industry,
+`NOASSERTION` means "probably permissive, read it" far more often than "no grant" — the census is in
+[`../evidence/ecl-apereo-census.2026-11-01-p598.tsv`](../evidence/ecl-apereo-census.2026-11-01-p598.tsv).
+
+🔴 **`598-E` — twenty-eighth consecutive nil on the mandated legs, and this pass gated it on both
+channels separately** (the `597-D` correction). `8` repo-shaped addresses were served; `7` are on a
+shelf page today and `1` ([`speedyapply/2026-AI-College-Jobs`](https://github.com/speedyapply/2026-AI-College-Jobs))
+sits in the append-only log only. 🔴 **`0` new.** 🟢 **The `gh api` topic axis paid in the same
+sitting**: `6` axes returned one address this base has never held in either channel —
+[`quickfeed/quickfeed`](https://github.com/quickfeed/quickfeed) (MIT, byte-read `1,115 B`) — plus
+`11` recoverable `596-C` backlog rows. 🔵 **`594-G`'s standing recommendation is now carried by
+three independent passes** and should be acted on, not re-registered.
+
+🟢 **`598-F` — `597-E`'s placeholder control passes, and the gate that reported it was wrong.** The
+placeholder `owner/repo` returns **`17` substring hits** across the shelf pages — and all `17` are
+prose documenting the defect, `0` are data rows. 🔵 A substring gate on a placeholder reports the
+documentation of the rule as a violation of it, which is `547-I` recurring in a new place. 🟢 The
+usable form is a table-cell gate.
+
+🔴 **`598-G` — the regional market channel is capped at snippet grade in this environment, and that
+caps every regional figure on [`../intel/market.md`](../intel/market.md).** `unu.edu`,
+`publications.iadb.org`, `oecd.org` and `unesco.org` return `000` on `curl` **and so does a
+fabricated control** (`583-E`, unchanged for `15` passes); on `WebFetch` the same hosts fail
+`ENOTFOUND` — outside the session's allowed network domains. 🔵 So the regional legs' numbers are
+**search-snippet-grade and cannot be raised here**. They are published with that grade stated rather
+than dropped, because an unverifiable number attributed to its source is information and a silent
+omission is not.
+
+### 🟢 Agent rows promoted off the `596-C` backlog — every grant byte-read `2026-11-01` at the real default branch
+
+| Agent | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+| --- | --- | --: | --- | --- | --- | --- |
+| **Nietzschian Debugger** | [DilawarShafiq/nietzschian-debugger](https://github.com/DilawarShafiq/nietzschian-debugger) | **539** | 🟢 **MIT** (`1,071 B`) | `main` | `2026-10-27` | A debugger that **hands the question back instead of the answer** — Socratic method as an agent. 🔵 The clearest OSS instance of *pedagogy as the product* rather than answer-generation, and the direct counter to the declining bypass-the-teacher category |
+| **Learn Anything** | [ChenChenyaqi/learn-anything](https://github.com/ChenChenyaqi/learn-anything) | **500** | 🟢 **MIT** (`1,069 B`) | `main` | `2026-08-29` | Recursive learning system — Socratic deep-dives plus TDD-style exercises, embedded **inside the coding assistant** rather than in an LMS |
+| **Skill-Anything** | [SYuan03/Skill-Anything](https://github.com/SYuan03/Skill-Anything) | **348** | 🟢 **MIT** (`1,084 B`) | `main` | `2026-09-26` | Any source (PDF, video, web, audio, text) → an interactive learning package: `12`-section study guide, quizzes, flashcards, spaced repetition. 🔵 The courseware-generation seam in one command |
+| **kaogong-shuati** | [ERRRC/kaogong-shuati](https://github.com/ERRRC/kaogong-shuati) | **151** | 🟢 **MIT** (`1,062 B`) | `main` | `2026-09-24` | Chinese civil-service exam practice (行测 / 申论): question bank, error notebook, AI explanations. 🔵 **APAC in-language supply**, and the permissive counterpart to the LATAM exam-prep gap below |
+| **InterviewMentor** | [PrepLabsAI/InterviewMentor](https://github.com/PrepLabsAI/InterviewMentor) | **116** | 🟢 **MIT** (`1,071 B`) | `main` | `2026-10-19` | AI mock interviews for technical hiring — the employability/placement end of the education funnel |
+
+### 🔴 Measured this pass and NOT shippable — recorded so a later pass does not re-find them
+
+| Repo | ★ | Measured `2026-11-01` | Disposition |
+| --- | --: | --- | --- |
+| [infomark-org/infomark](https://github.com/infomark-org/infomark) | 36 | 🔴 **GPL-3.0** (`35,149 B`, byte-read) — live `2026-10-31` | **BLOCK** for a closed deliverable. A complete course-management system with auto-testing of programming assignments; the permissive alternative is `quickfeed/quickfeed` on [`../repos/foundations.md`](../repos/foundations.md) |
+| [uPortal-Project/CoursesPortlet](https://github.com/uPortal-Project/CoursesPortlet) | 12 | 🟡 **BSD-3-Clause** (`1,529 B`) — 🔴 the grant's copyright holder is **"News Reader Portlet Development Team"**, a *different project*, and the file is byte-identical to [`NewsReaderPortlet`](https://github.com/uPortal-Project/NewsReaderPortlet)'s | **REVIEW** — permissive terms, but the named holder does not match the work. Counsel must read it before shipping |
+| [Apereo-LAI/SakaiXAPI-Provider](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | 11 | 🟢 **ECL-2.0** by `pom.xml` (`598-A`) — 🔴 no grant file, last push `2021-03-25`, `42 KB` | **NOT SHELVED** — permissive and genuinely licensed, but `5` years stale and effectively empty. Filed as the instrument finding, not as supply |
+| [s64965264-code/nexo-ia](https://github.com/s64965264-code/nexo-ia) | **0** | 🟡 `"license": "MIT"` in `package.json`; 🔴 no grant file, no licence text, no holder | **REVIEW, NOT PROMOTED** — `598-B`. A manifest field is weaker than a grant file, and `0★` fails the star floor regardless |
+
+---
+
 🆕 **`p597` — scope stated before its result: `8` mandated legs run (`4` global, `4` regional),
 `20` backlog addresses promoted, `21` grants byte-read, `9` rows recorded unusable with a reason.**
 🔴 **`597-A`: the verification step this run prompt mandates is inert in this environment, and

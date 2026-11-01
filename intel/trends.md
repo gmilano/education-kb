@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p598` — `2026-11-01` — the sector's own licence is the one the tooling cannot read, and the unit of sale is becoming the country
+
+## 58. A licence screen built on `spdx_id` rejects the education sector's own licence, and therefore most of its institution-grade software
+
+🟢 **Measured this pass, `9` repositories, every grant byte-read.** ECL-2.0 — the **Educational
+Community License**, Apache-2.0 with the patent grant narrowed to the needs of education consortia —
+is OSI-approved and permissive. The GitHub API reports it correctly for
+[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) and 🔴 **wrong for `6 of 8` measured
+Apereo-family siblings**, which come back `NOASSERTION`.
+
+🔵 **The discriminator is cosmetic.** Sakai's licence title line carries the parenthetical SPDX tag
+`(ECL-2.0)`; `OpenLRW`, `OpenLRS` and `OpenDashboard-legacy` carry the same licence without the
+parenthesis and are graded as having no assertion at all.
+
+🔴 **Why this is a trend and not a trivia item.** Apereo is where universities put their shared
+infrastructure — Sakai (LMS), uPortal (portal), CAS (the SSO a large share of university estates
+run), OpenLRW (learning-record warehouse). It is the deepest pool of **permissively licensed,
+institution-grade** education software that exists, and an automated licence gate throws most of it
+out. 🟢 **The sector-specific inference:** in education, `NOASSERTION` means *"probably permissive,
+open the file"* far more often than *"no grant"*. 🔵 Any studio running an OSS intake screen on
+`spdx_id` alone is systematically under-counting exactly the software an education engagement needs.
+
+## 59. A missing `LICENSE` file is not evidence of a missing grant — but the correction is worth less than it looks
+
+🟢 **The finding.** [`Apereo-LAI/SakaiXAPI-Provider`](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider)
+has **no grant file on `16` filename variants** at its real default branch, and the API says
+`NOASSERTION`. It is nonetheless **ECL-2.0**, declared in `pom.xml`. Maven, npm, Cargo and Python
+projects can carry their only licence declaration in the **build manifest** — a channel this base
+probed `0` times in `597` passes.
+
+🔵 **And the measured yield, which is the half a trend report usually omits.** All `16` of this
+base's 🔴 "no grant" BLOCK rows were re-probed across `10` manifest formats: **`1 of 16` (`6.3 %`)**
+declares a licence, and that one is `0★`. 🟢 **`15 of 16` BLOCK grades were correct.** The
+instrument gap was real and it had put **no wrong data** on these pages.
+
+🔴 **The asymmetry that keeps it from being a promotion rule.** A manifest field is *weaker*
+evidence than a grant file: `"license": "MIT"` is a metadata string with no licence text and no
+copyright holder. It establishes **intent**, not a grant. 🟡 Correct disposition: **REVIEW**, never
+🟢. 🔵 The honest summary — *a new channel worth adopting for the rows where it is the only channel,
+not a reason to re-grade a shelf.*
+
+## 60. The unit of sale in education AI is shifting from the school to the country
+
+🔵 **Three independent 2026 signals of one shape.** OpenAI launched a country-level education
+programme with **eight national partners** in Q1 2026. The Philippines' Department of Education,
+with Google, is certifying **more than `1 million` teachers** in Gemini under Project S.I.N.A.G.
+Forrester expects **`60 %` of firms and governments in markets such as India and China** to run
+locally developed LLMs alongside global ones, naming education among the target sectors.
+
+🔴 **What it changes for a studio.** If national infrastructure deals displace school-by-school and
+district-by-district procurement, the addressable work moves away from *building the tutor* and
+toward **integrating, governing and migrating a national stack the client did not choose**. 🟢 That
+favours interop capability (roster and LMS standards, MCP attach points), policy and governance
+scaffolding, and migration tooling — and it devalues a bespoke student-facing tutor, which is also
+the category North American district demand is **declining** in (`p597`).
+
+🟡 **Grade:** snippet-level sourcing on all three signals (`598-G`); the *shape* is corroborated
+three ways, the individual figures are not primary-verified.
+
+## 61. In education the governance gap is the engagement, and it is a 25-point regional spread
+
+🟢 **The comparative figure, served this pass:** `~70 %` of institutions in Europe and North America
+have or are developing AI guidance, against `45 %` in Latin America and the Caribbean.
+
+🔵 **Read as sales motion rather than as a statistic**, this is three different first deliverables
+in three regions. **EMEA** has a statutory deadline — the EU AI Act's AI-literacy duty, in force
+since `2025-02-02` — so the entry point is literacy and compliance. **North America** starts inside
+an existing institutional policy and a `134`-bill, `31`-state patchwork, so the entry point is
+integration that survives audit. **LATAM** frequently has no policy at all, and Baker McKenzie finds
+**no Latin American country with a fully mature harmonised AI regime** plus pilot policies *"tossed
+out with each new administration"* — so the entry point is **writing the governance scaffold**, and
+it should be built as configuration rather than code because the policy will change.
+
+🔴 **APAC does not fit the spread**, and the gap is declared rather than filled: the legs have now
+failed across several passes to return an APAC school or university adoption rate. Its organising
+constraint is measured instead on the sovereignty axis — which, usefully, is the strongest argument
+in any region for the self-hosted permissive stack this KB curates.
+
+---
+
 ## p597 — 2026-11-01 — the verification instrument this harness is told to use cannot distinguish a live repository from a dead one, and the two "nil" channels it reports are independent
 
 ## 55. The host you verify at decides the answer, and the host named in the instructions is the one that cannot answer

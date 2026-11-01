@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p598` — `2026-11-01` — **🔴 THE GITHUB API IS WRONG ABOUT THE EDUCATION SECTOR'S OWN LICENCE IN `6 of 8` MEASURED CASES, AND THE DISCRIMINATOR IS COSMETIC: A PARENTHETICAL `(ECL-2.0)` IN THE TITLE LINE. 🟢 `4` FOUNDATIONAL AND `3` PLATFORM ROWS PROMOTED OFF THE `596-C` BACKLOG. 🔴 ONE ROW SHIPS A BSD GRANT NAMING A DIFFERENT PROJECT AS COPYRIGHT HOLDER.**
+
+### 🔴 `598-D` — the ECL-2.0 census: the API's `spdx_id` against a byte-read, `9` Apereo-family rows
+
+ECL-2.0 is the **Educational Community License** — Apache-2.0 with the patent grant narrowed to the
+needs of education consortia. It is OSI-approved and permissive, and this base's own legend admits
+it as 🟢. The API sees it only when the licence title carries the parenthetical SPDX tag.
+
+| repo | API `spdx_id` | byte-read title | bytes | real grant | API |
+| --- | --- | --- | --: | --- | --- |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | `Educational Community License, Version 2.0 (ECL-2.0)` | `11,120` | 🟢 **ECL-2.0** | ✅ |
+| [Apereo-LAI/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🔴 `NOASSERTION` | `Educational Community License` / `Version 2.0, April 2007` | `9,878` | 🟢 **ECL-2.0** | ❌ |
+| [Apereo-LAI/OpenLRS](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 🔴 `NOASSERTION` | `Educational Community License, Version 2.0` | `11,087` | 🟢 **ECL-2.0** | ❌ |
+| [Apereo-LAI/OpenDashboard-legacy](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 🔴 `NOASSERTION` | `Educational Community License` | `9,919` | 🟢 **ECL-2.0** | ❌ |
+| [apereo/java-cas-client](https://github.com/apereo/java-cas-client) | 🔴 `NOASSERTION` | `====` | `2,321` | 🟢 **Apache-2.0** — by the *declaration* line, `594-F` stage 2 | ❌ |
+| [uPortal-Project/CoursesPortlet](https://github.com/uPortal-Project/CoursesPortlet) | 🔴 `NOASSERTION` | `Copyright (c) 2008, News Reader Portlet Development Team` | `1,529` | 🟡 **BSD-3-Clause**, holder names the **wrong project** | ❌ |
+| [uPortal-Project/NewsReaderPortlet](https://github.com/uPortal-Project/NewsReaderPortlet) | 🔴 `NOASSERTION` | same file, byte-identical | `1,529` | 🟡 **BSD-3-Clause** | ❌ |
+| [Apereo-LAI/SakaiXAPI-Provider](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | 🔴 `NOASSERTION` | 🔴 no grant file, `16` variants | `0` | 🟢 **ECL-2.0** via `pom.xml` (`598-A`) | ❌ |
+| [Apereo-LAI/Larissa](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | 🟢 `Apache-2.0` | `Apache License, Version 2.0` | `11,358` | 🟢 **Apache-2.0** | ✅ |
+
+🔵 **Why this matters commercially and not just methodologically.** A licence screen reading
+`spdx_id` rejects the Apereo consortium — Sakai's own analytics stack, uPortal, CAS — as
+"unlicensed" while admitting Sakai itself. 🔴 In this industry `NOASSERTION` means *"probably
+permissive, open the file"*, not *"no grant"*. Census:
+[`../evidence/ecl-apereo-census.2026-11-01-p598.tsv`](../evidence/ecl-apereo-census.2026-11-01-p598.tsv).
+
+### 🟢 `598-A` — a fourth grant channel: the build manifest
+
+| probe | result |
+| --- | --- |
+| `16` grant-filename variants on `SakaiXAPI-Provider@master` | 🔴 all `404` |
+| branch readability control (`pom.xml`, `.gitignore`) | 🟢 both `200`; `main`/`trunk` both `404` |
+| `pom.xml` `<licenses>` block | 🟢 `<name>ECL 2.0</name>`, `url` = canonical OSI `osedu.org/licenses/ECL-2.0/` |
+
+🔵 **And its measured yield, which is the other half of the finding.** All `16` of this base's 🔴 "no
+grant" BLOCK rows re-probed across `10` manifest formats (`package.json`, `pyproject.toml`,
+`setup.py`, `setup.cfg`, `composer.json`, `pom.xml`, `Cargo.toml`, `go.mod`, `build.gradle`,
+`DESCRIPTION`): 🟡 **`1 of 16` (`6.3 %`)** declares a licence, and it is `0★`. 🟢 **`15 of 16` BLOCK
+grades were correct.** 🔴 The channel is still worth adopting — it is the only instrument that would
+have graded `SakaiXAPI-Provider` correctly — but it grades **REVIEW**, never 🟢: a bare
+`"license": "MIT"` string carries no licence text and no copyright holder.
+
+### 🟢 Promoted to a shelf this pass — every grant byte-read at the real default branch
+
+| repo | ★ | grant (byte-read) | branch | last push | promoted to |
+| --- | --: | --- | --- | --- | --- |
+| [kabartay/openunivcourses](https://github.com/kabartay/openunivcourses) | **254** | 🟢 **MIT** `1,076 B` | `main` | `2026-10-18` | `repos/foundations.md` |
+| [edmozley/freeitsm](https://github.com/edmozley/freeitsm) | **119** | 🟢 **MIT** `1,066 B` | `main` | 🟢 `2026-10-31` | `verticals/solutions.md` |
+| [Apereo-LAI/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | **62** | 🟢 **ECL-2.0** `9,878 B` | 🔴 `master` | 🟡 `2025-09-12` | `repos/foundations.md` |
+| [guillermoscript/lms-front](https://github.com/guillermoscript/lms-front) | **44** | 🟢 **MIT** `1,072 B` | 🔴 `master` | 🟢 `2026-11-01` | `verticals/solutions.md` |
+| [gradescope/gradescope-utils](https://github.com/gradescope/gradescope-utils) | **38** | 🟢 **MIT** `1,070 B` | 🔴 `master` | `2026-08-14` | `repos/foundations.md` |
+| [quickfeed/quickfeed](https://github.com/quickfeed/quickfeed) | 27 | 🟢 **MIT** `1,115 B` | 🔴 `master` | `2026-10-27` | `repos/foundations.md` |
+| [infomark-org/infomark](https://github.com/infomark-org/infomark) | 36 | 🔴 **GPL-3.0** `35,149 B` | `main` | `2026-10-31` | `agents/top.md` (BLOCK row) |
+
+🔴 **`4 of 7` do not default to `main`** — `594-B` again, and the figure is now stable across three
+passes at roughly a third of the platform tier.
+
+### 🔴 The `6` topic axes swept, and what each paid
+
+| axis | candidates | already held | new to this base |
+| --- | --: | --: | --: |
+| `topic:ai-tutor stars:>20` | `20` | `20` | `0` |
+| `topic:education topic:llm stars:>50 pushed:>2026-06-01` | `20` | `20` | `0` |
+| `topic:edtech topic:ai stars:>30` | `9` | `9` | `0` |
+| `topic:autograder stars:>10` | `15` | `14` | 🟢 `1` — `quickfeed/quickfeed` |
+| `topic:lms topic:ai stars:>20` | `8` | `8` | `0` |
+| `topic:learning-analytics stars:>30` | `6` | `6` | `0` |
+
+🔵 **`topic:autograder` is the only axis that paid a new address**, and it paid the lowest-starred
+one (`27★`). 🔴 The high-star axes are saturated; the institution-grade long tail is not.
+
+---
+
 ## 🆕 `p597` — `2026-11-01` — **🟢 `11` FOUNDATIONAL AND PLATFORM ROWS RECOVERED OFF THE `596-C` BACKLOG WITHOUT A SINGLE NEW SEARCH LEG, INCLUDING `jupyterhub/jupyterhub` (BSD-3, `8,360★`, SHELVED IN `13 OF 15` SNAPSHOTS THEN DROPPED) AND `aureuserp/aureuserp` (MIT, `12,149★`) — THE PERMISSIVE ERP THIS INDUSTRY'S PLATFORM TIER WAS SAID NOT TO HAVE. 🔴 CENSUS RE-MEASURED: `2,640 / 3,366` EVER-SHELVED ADDRESSES (`78.4 %`) HAVE NO DISPOSITION; `2,049` ARE GATE-BLIND. 🔴 ONE FIGURE OF THIS PASS'S OWN WITHDRAWN BEFORE PUBLICATION.**
 
 ### 🟢 Promoted to a shelf this pass — every grant byte-read at the repository's real default branch
