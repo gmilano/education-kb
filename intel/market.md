@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p593 — 2026-11-01 — the regional legs pay `4 of 4` again and serve `2` tokens this base has never held; both are EMEA, and together they say the regulation is ahead of the capability
+
+### 🔵 The legs, measured against this base rather than described
+
+| leg | tokens served | already held | 🟢 new |
+|---|--:|--:|--:|
+| North America | `5` | `5` | 🔴 **`0`** |
+| EMEA | `6` | `4` | 🟢 **`2`** |
+| APAC | `5` | `5` | 🔴 **`0`** |
+| LATAM | `6` | `6` | 🔴 **`0`** |
+
+🟢 **`4 of 4` legs paid.** 🟡 `2 of 22` tokens new — the lowest demand-side yield yet recorded, and
+consistent with `p591`–`p592`'s saturation finding rather than contradicting it.
+
+## Opportunities by region
+
+### 🟢 North America
+
+- 36 % of the global AI-education market, ≈**$3.68 B in 2026** (MarketsandMarkets); a second
+  house gives 38 % share for 2025. 🔵 Both already held — restated for provenance, not as new.
+- 🔴 **No federal statute**; a patchwork of state law governs. In K-12 the purchasing driver is
+  **child privacy (COPPA)**, where compliance has become a *sales argument* rather than a cost.
+- 🟡 ≈$169 M US federal commitment to "responsible AI" in higher education, Q1 2026 — **still
+  without a primary source** after four passes. Retained as a signal, never as a figure.
+- 🟢 **Engagement shape:** migration off Canvas/Blackboard onto Open edX plus an agentic layer,
+  with the COPPA/FERPA compliance dossier as a first-class deliverable. With no single federal
+  rule, that dossier is work only an integrator can absorb.
+
+### 🟢 EMEA — both new tokens landed here, and they point opposite ways
+
+- 🟢 **NEW `593-F`:** the European Commission maintains an **AI literacy framework for primary and
+  secondary education**, before the Council under the **European Education Area 2026–2030**
+  cooperation agenda, titled **"Empowering learners for the age of AI"**. 🔵 Significance: the
+  entry point in EMEA is **curriculum**, not platform — a literacy programme is the doorway to
+  the stack modernisation behind it. The Council of Europe's AI & Education expert group
+  separately reports a **lack of rigorous monitoring and regulation** and asks for coordinated
+  national and European action.
+- 🔴 **NEW `593-G`:** **Allianz Pulse 2026** finds Europe adopting AI **less extensively and far
+  less work-adjacently than the US**, with wide internal spread and an explicit "preparedness
+  gap".
+- 🔵 **Read the two together:** EMEA has the most developed *regulation* and a lagging *capability*.
+  🟢 So the risk on an EMEA engagement is not compliance — it is that the client cannot operate
+  what is delivered. **Budget training, not just software.** This is a shift in emphasis from the
+  compliance-first framing this page has carried since `p586`.
+- UK, Germany and France hold **>60 %** of regional value; higher education is 45.7 % of share
+  (2025). Already held.
+
+### 🟢 APAC
+
+- MarketsandMarkets: **$591.6 M (2024) → $1,848.1 M (2029), CAGR 20.9 %**, with the region
+  described as fastest-growing. 🔴 **Internal contradiction, declared:** a 20.9 % CAGR is *half*
+  the global 40.9 % while the same narrative calls it fastest-growing. The APAC series runs off a
+  2024 baseline and is **not comparable** to the global figure. Never cite the two side by side.
+- 🔴 **Regulatory fragmentation is structural, not transitional** — Forrester holds a common APAC
+  framework unlikely, unlike the EU. 2026 regional priority is **sovereignty**. No
+  education-*specific* AI regulation surfaced on this leg.
+- 🟢 **Engagement shape:** per-jurisdiction policy nodes from day one; the fragmentation is the
+  functional requirement, not the obstacle.
+- 🔴 **Gap held open:** no credible 2026 ranking of APAC education-AI players (the only list found
+  dates from 2019), and no country-level classroom data.
+
+### 🟢 LATAM
+
+- **92 % of students and 79 % of faculty actively using AI** (Digital Education Council ×
+  Tecnológico de Monterrey, *AI in Higher Education LATAM Survey 2026*). Already held since
+  `p58x`; reconfirmed on this leg.
+- 🔴 **The gap is governance, not adoption:** UNESCO IESALC (200 institutions, 19 countries)
+  reports a pronounced split between adoption and institutional governance, with formal AI-use
+  policy largely absent, and adoption "neither uniform nor evenly distributed" between public and
+  private universities.
+- Policy actors: UNESCO IESALC, UNU-IAS, Digital Education Council, Tec de Monterrey, IDB (**ILIA**
+  index, 19 countries), ECLAC. Brookings frames the region as a natural **rights-based sandbox**.
+- 🟢 **Engagement shape:** with usage already near-universal, the sellable work is **not
+  evangelising adoption — it is governing it**. AI governance for universities: use policy,
+  traceability, detection, LGPD / Ley 1581 evidence. 🔵 The only region where institutional demand
+  *precedes* institutional supply.
+
+### 🔴 Declared regional gaps (a nil in prose reads like coverage)
+
+| region | missing |
+|---|---|
+| APAC | 2026 player ranking; per-country education policy; classroom data |
+| North America | primary source for the $169 M commitment; concrete state education-AI rules |
+| EMEA | authoritative 2026 vendor list; **applied** high-risk AI Act practice in education |
+| LATAM | 2026 national education-specific AI regulation; K-12 deployment data |
+
+---
+
 ## 🆕 p592 — 2026-11-01 — the regional legs are saturated at `4 of 4` paid / `0 of 4` new, and the single operative fact they added is that the EU high-risk clock no longer waits for standards
 
 ### 🔴 The demand-side legs, measured against this base rather than described

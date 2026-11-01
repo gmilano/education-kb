@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p593` — `2026-11-01` — **🟢 THE BYTE-READ CHANNEL WORKS HERE AND THE BRANCH ASSUMPTION IS WHAT BREAKS IT: `LGPL-3.0` RECOVERED FROM A `NOASSERTION` ROW ON BRANCH `19.0`**
+
+### 🟢 What this pass measured, with the denominator first
+
+`25` curated addresses in the sister `globant-kb/education/` copy, resolved `23` by
+`gh api -X GET search/repositories` (`repo:` qualifiers, batched `7`) and the remaining `2` by
+first-hand page read. **Denominator: `25 of 25`.** Then `5` licence byte-reads against
+`raw.githubusercontent.com`.
+
+| channel | verdict |
+|---|---|
+| 🟢 `search/repositories` with `repo:` | works — `23 of 25` |
+| 🔴 `gh api repos/{owner}/{repo}` | **`403`**, session-scoped. Not a substitute |
+| 🟢 `raw.githubusercontent.com/.../LICENSE` | 🟢 **works, not blocked** — unlike `api.github.com` (`587-C`) |
+| 🔴 `curl -sI github.com` | **`403`** |
+
+### 🟢 `593-D` — A `NOASSERTION` row is not a dead row, and the proof is an ERP base
+
+| repo | API | byte-read | stars | verdict |
+|---|---|---|--:|---|
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | `NOASSERTION` | 🟢 **`LGPL-3.0`** (branch `19.0`) | `903` | 🟢 **usable** — weak copyleft; new Odoo modules link without being forced open |
+| [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills) | `NOASSERTION` | 🔴 `CC-BY-SA-4.0` | `937` | 🔴 content licence, **unusable as a code base** |
+
+🔴 **Same API value, opposite instruction.** This is the strongest single demonstration of
+Trend `44` this base has produced, because one arm *recovers* an address rather than condemning it.
+
+🔴 **New sub-gap `593-B1` — the branch assumption.** `openeducat_erp`'s default branch is **`19.0`**.
+A byte-read probe that walks `main`/`master` only gets `404` on every filename and would file the
+repo as `license: null` — i.e. **as a hard block on a perfectly usable `LGPL-3.0` ERP.** Any
+licence instrument in this base must read `default_branch` from the API before probing paths.
+🔵 This is a *silent* failure mode: it produces a confident wrong answer, not an error.
+
+### 🟢 Verified rows, exact API values (`2026-11-01`)
+
+| Repo | Licence | Stars | Last push |
+|------|---------|------:|-----------|
+| [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | `Apache-2.0` | **`53,424`** | `2026-10-31` |
+| [`THU-MAIC/OpenMAIC`](https://github.com/THU-MAIC/OpenMAIC) | `MIT` | **`42,364`** | `2026-11-01` |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | **`LGPL-3.0`** (byte-read) | `903` | `2026-10-29` |
+| [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) | `ECL-2.0` | `1,240` | `2026-10-30` |
+| [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms) | `GPL-3.0` | `1,019` | `2026-11-01` |
+| [`moodle/moodle`](https://github.com/moodle/moodle) | `GPL-3.0` | `7,569` | `2026-10-30` |
+| [`ILIAS-eLearning/ILIAS`](https://github.com/ILIAS-eLearning/ILIAS) | `GPL-3.0` | `507` | `2026-10-31` |
+| [`openedx/XBlock`](https://github.com/openedx/XBlock) | 🟢 `Apache-2.0` | `471` | `2026-11-01` |
+| [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | `MIT` | `456` | `2026-10-18` |
+| [`openfun/richie`](https://github.com/openfun/richie) | `MIT` | `318` | `2026-11-01` |
+| [`CAHLR/OATutor`](https://github.com/CAHLR/OATutor) | `MIT` | `274` | `2026-11-01` |
+| [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | `BSD-3-Clause` | `115` | 🟡 `2026-06-26` |
+| [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) | `MIT` | `91` | 🟡 `2026-07-11` |
+
+### 🔴 `593-E` — `openedx/edx-platform` is a renamed address AND a mis-stated licence
+
+The sister copy published `openedx/edx-platform` as **`Apache-2.0`**. First-hand page read:
+the repo is now **`openedx/openedx-platform`** (README: *"Formerly known as edx-platform"*) and
+the licence is **`AGPL-3.0`**, `8.2k` stars (UI-rounded, so not written as an exact cell per
+`569-B`).
+
+🔵 **Why the error is durable rather than careless:** `openedx/XBlock` genuinely *is*
+`Apache-2.0`. One repo in the family is permissive and the platform is not, so a wrong cell looks
+right. 🟢 **The operative rule, now stated:** extend Open edX **through XBlock** and the plugin
+may stay proprietary; fork the platform and network-served modifications must be published.
+**Same family, opposite commercial outcome** — the single most actionable licence fact in this
+industry.
+
+### 🔴 Nil declared
+
+`github trending education AI 2026` served `5` repo-shaped names; **all `5` already held.**
+24th consecutive pass with `0` new addresses. 🔴 The constraint on this base is not research —
+see `593-C` on [`../agents/trending.md`](../agents/trending.md).
+
+---
+
 ## 🆕 `p592` — `2026-11-01` — **🟢 THE FIRST FULL-SHELF LICENCE CENSUS: `130 of 192` PERMISSIVE BY THE API CHANNEL, `20` COPYLEFT, AND `42` THAT THE API CANNOT ANSWER AT ALL**
 
 ### 🟢 The sweep, with its denominators first

@@ -4,6 +4,90 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p593` — `2026-11-01` — **🔴 THE 24TH CONSECUTIVE RESEARCH NIL, AND A SISTER COPY OF THIS INDUSTRY WAS PUBLISHING `3` FALSE LICENCES THE WHOLE TIME**
+
+### 🔵 Channel table (`569-B`'s standing row)
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories` with `repo:` qualifiers | 🟢 **`23 of 25` addresses resolved**, batched `7` per query |
+| 🔴 `gh api repos/{owner}/{repo}` (direct) | 🔴 **`403` — session-scoped to `gmilano/globant-kb`.** Only the `search/*` endpoints reach outside it. Worth recording: the direct path is *not* a substitute for the search channel in this environment |
+| 🟢 `WebFetch` → `github.com/{owner}/{name}` | 🟢 **`4` rows read first-hand**, resolving every address the search API returned `422`/`total=0` for |
+| 🟢 `curl` → `raw.githubusercontent.com/{repo}/{branch}/LICENCE` | 🟢 **`5` repos byte-read, `2` licences resolved.** This channel works here and is **not** blocked, unlike `api.github.com` |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403`** — gap `587-C` holds; the run prompt's mandated verifier still certifies nothing |
+| 🟡 `WebSearch`, `4` global + `4` regional | 🔴 **`0` new repo addresses — 24th consecutive nil**; 🟢 `4 of 4` regional legs paid |
+
+### 🔴 The mandated legs, reported in full because a nil in prose reads like coverage
+
+| leg | repo-shaped names served | already held | 🟢 new |
+|---|---|--:|--:|
+| `top open source AI agents education 2026 github MIT` | `microsoft/ai-agents-for-beginners`, `pguso/agents-from-scratch`, browser-use, AutoGen, OpenClaw, Hermes Agent | `6` | 🔴 **`0`** |
+| `github trending education AI 2026` | `OPTIMETA/PAIDEIA`, `ArturoNereu/AI-Study-Group`, `GarethManning/education-agent-skills`, `rohitg00/ai-engineering-from-scratch`, `aneelv75/github-trending` | `5` | 🔴 **`0`** |
+| `open source platform education ERP CRM SIS MIT Apache` | OpenEduCat, Odoo, Chamilo, RosarioSIS, Kuali KFS, `.LRN` | `6` | 🔴 **`0`** |
+| `AI education industry trends 2026` | — | — | 🔴 **`0`** |
+| `AI education {NA / EMEA / APAC / LATAM} 2026 adoption regulation players` ×4 | — on all four | — | 🔴 **`0`** |
+
+🟢 **`4 of 4` regional legs paid intel** (see [`../intel/market.md`](../intel/market.md)); `0 of 4`
+served a repo this base did not hold.
+
+### 🟢 `593-A` — The finding: this base is correct, and the *other* copy of this industry was not
+
+`gmilano/globant-kb` carries its own `education/` directory — a second, independently written copy
+of this industry, last touched `2026-07-14` at `v6`, **never once verified**. Census of its `20`
+addresses this pass:
+
+| defect | rows | detail |
+|---|--:|---|
+| 🔴 licence published **false** | `3` | `openedx/edx-platform` as `Apache-2.0` → **`AGPL-3.0`**; `awesome-ai-llm4education` and `eduadapt-ai` as `MIT` → **no LICENCE file at all** |
+| 🔴 URL returns `404` | `2` | `OpenEduCat-Inc/OpenEduCat`; `Vacademy-io/vacademy_platform` |
+| 🟡 licence wrong but still permissive | `1` | `instructional_agents` `Apache-2.0` → `MIT` |
+| 🟡 stars inflated ≥`2×` | `5` | vacademy `22×`, Open TutorAI CE `7×`, awesome-ai-llm4education `7×`, eduadapt-ai `6×`, pyKT `2.6×` |
+| 🔴 row with **no repo URL** | `1` | `openedx-ai-extensions \| openedx org` — not an address |
+| 🔴 **no YAML frontmatter** | `8 of 8` | **`0` `region` fields in the whole directory** — the region filter could not work for education at all |
+
+🔴 **The `Apache-2.0` → `AGPL-3.0` error is the expensive one**, and it is the one a reader cannot
+catch: `openedx/XBlock` *is* `Apache-2.0`, so the wrong cell is plausible. The consequence only
+surfaces once a client has designed closed SaaS on a base that obliges them to publish.
+All `8` files are now frontmattered, re-verified and corrected at `globant-kb@aa68bc1`.
+
+### 🟢 `593-B` — `p591`'s Trend `44` reproduced independently, and it recovered a base
+
+This base's own Trend `44` (`p591`) holds that `license: null` and `NOASSERTION` are **distinct**
+blank states carrying opposite instructions. Reproduced this pass on `5` fresh repos, by
+`raw.githubusercontent.com` byte-read against each repo's **actual default branch**:
+
+| repo | API field | byte-read verdict | instruction |
+|---|---|---|---|
+| `openeducat/openeducat_erp` | `NOASSERTION` | 🟢 **`LGPL-3.0`** — stated plainly in `LICENSE` on branch **`19.0`** | **usable**; weak copyleft, new Odoo modules may link |
+| `GarethManning/education-agent-skills` | `NOASSERTION` | 🔴 **`CC-BY-SA-4.0`** | **unusable as code**; share-alike content licence |
+| `GeminiLight/awesome-ai-llm4education` | `license: null` | 🔴 no `LICENSE` at any common name | block |
+| `mwasifanwar/eduadapt-ai` | `license: null` | 🔴 no `LICENSE` at any common name | block |
+| `ArturoNereu/AI-Study-Group` | `license: null` | 🔴 no `LICENSE` at any common name | block |
+
+🟢 **Two `NOASSERTION` rows, opposite conclusions** — which is the operative half of Trend `44`
+and the reason a blanket block is as wrong as a blanket pass. 🔵 **Mechanism, newly identified:**
+OpenEduCat's matcher fails because the `LICENSE` file *prepends prose* ("For copyright
+information, please see the COPYRIGHT file.") before the licence text. 🔴 **New sub-gap `593-B1`:**
+its default branch is **`19.0`**, not `main`/`master`, so a byte-read probe hardcoding the usual
+branch names returns `404` and would be misfiled as `license: null`. Any byte-read instrument in
+this base must read `default_branch` from the API first.
+
+### 🔴 `593-C` — The binding constraint, restated with proof rather than inference
+
+`p592` asserted the rotation pointer has been stuck since `2026-08-02`. 🟢 **Now verified at the
+git level, not inferred:** `rotation.json` is **byte-identical on `origin/main` and on the
+session's working branch**, both reading `{"next": 8, "last_updated": "2026-08-02",
+"last_industry": "technology"}`, with **`0` commits** separating the two refs.
+
+🔵 **Mechanism identified this pass.** Each run is assigned its own session-specific branch
+(`claude/<random-name>`), and is instructed never to push elsewhere. A run that advances
+`rotation.json` therefore lands it on a branch **nobody merges**, while the next container clones
+`main` and reads `next: 8` again. The pointer is not failing to be written — it is being written
+`592` times to `592` dead ends. 🔴 **This cannot be closed from inside a run**: it needs the
+branch merged to `main`, which is outside a run's permission. Recorded as the top blocker.
+
+---
+
 ## 🆕 `p592` — `2026-11-01` — **🟢 THE SHELF IS CLEAN AT `192/192` AND `0` UNFLAGGED DEFECTS. 🔴 THE BINDING CONSTRAINT ON THIS BASE IS NOT RESEARCH — IT IS THE ROTATION SCHEDULER, STUCK ON `education` SINCE `2026-08-02`**
 
 ### 🔵 Channel table, run first (`569-B`'s standing row)
