@@ -4,6 +4,51 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p584` — `2026-11-01` — **🔴 `FILED = 0`: NOT ONE AGENT-SHAPED SIS / GRADEBOOK / PROCTORING ARTEFACT HAD EVER REACHED A CURATED PAGE IN `583` PASSES — `9` WERE IN THIS FILE'S OWN HISTORY, ONE RE-FOUND `36×`. 🟢 `583-F` REFUTED AT `41×`: `7.9 %` AGENT-SHAPED HERE AGAINST `0.19 %` ON THE INTEGRATION AXES, SO "THE AGENT IS ALWAYS THE BUILD" IS A PROPERTY OF ONE LAYER, NOT OF THE INDUSTRY. 🟢 `583-A`'s GATE CLEARED A SWEEP FOR THE FIRST TIME (`29` NEW > `9` UNFILED). 🔴 NINETEENTH NIL ON THE MANDATED LEGS.**
+
+🔵 **Token-check published before any claim (`583-A`), on `38` agent-shaped addresses:**
+
+| disposition | addresses | worst re-find |
+|---|--:|---|
+| 🟢 FILED on a curated page | **`0`** | — |
+| 🔴 UNFILED — this file's history only | **`9`** | `yukazakiri/koakademy` **`36×`** |
+| 🆕 NEW to this base | **`29`** | — |
+
+🟢 **Promoted to `agents/top.md` this pass** — all six grants byte-read, `pushed_at`
+carried, zero `NONE`:
+
+| agent | grant (byte-read) | ★ | pushed | region | note |
+|---|---|--:|---|---|---|
+| [PsychQuant/che-ntucool-mcp](https://github.com/PsychQuant/che-ntucool-mcp) | 🟢 **MIT** (`1,066 B`) | 1 | `2026-10-18` | APAC | 🔴 unfiled `19×`. MCP server over **NTU COOL** (National Taiwan University's Canvas), `10` tools |
+| [timdrichards/canvas-lms-skill](https://github.com/timdrichards/canvas-lms-skill) | 🟢 **MIT** (`1,069 B`) | 1 | `2026-07-30` | Global | 🔴 unfiled `11×`. Claude Code skill for the Canvas LMS API |
+| [wongcyrus/Google-AI-Classroom](https://github.com/wongcyrus/Google-AI-Classroom) | 🟢 **MIT** (`1,062 B`) | 0 | `2026-10-28` | Global | 🆕 Edge-to-cloud multimodal agent: classroom sensing **and exam invigilation** in one artefact |
+| [noestudios/lastbell](https://github.com/noestudios/lastbell) | 🟢 **MIT** (`1,067 B`) | 1 | `2026-10-16` | North America | 🔴 unfiled `10×`. **ParentVUE + Canvas** monitor — 🟢 **the first guardian-facing row in this base** |
+| [amirtds/cubite-mcp](https://github.com/amirtds/cubite-mcp) | 🟢 **MIT** (`1,063 B`) | 0 | `2026-09-23` | Global | 🆕 MCP server for Cubite LMS (hosted Open edX) |
+| [a8naaijetvi2lunk/carreau](https://github.com/a8naaijetvi2lunk/carreau) | 🟢 **MIT** (`1,069 B`) | 0 | `2026-10-01` | EMEA | 🆕 Phone-based proctored MCQ with a **rotating QR code**; region placed from the artefact's language |
+
+🔴 **Rejected, and why it matters that they were rejected.** The most architecturally
+interesting proctoring artefacts on the axis carry **no grant at all**:
+`aryashinod/Multi-Agent-Online-Exam-Invigilation-System` (`5` specialised agents — identity,
+gaze, phone detection) and `umair801/sis-agent` (FastAPI + LangGraph + Claude + Supabase).
+🔵 **Reference architecture to read, never dependencies to ship** — which is why the
+`7.9 %` agent-shaped figure must not be read as `7.9 %` *shippable*.
+
+🔴 **Still UNFILED after this pass, carried as explicit debt** (`4` of the `9`):
+`api-evangelist/powerschool` (`6×`), `ldsalud/school-management-system` (`3×`, Philippine
+elementary schools), `fderyckel/ifitwala_ed` (`4×`), `kadusic1/e-gradebook-platform` (`2×`,
+shelved to `verticals/` instead). 🔵 With `p583`'s `18`, the known filing debt is now
+**`27` addresses across two passes**, and the instrument to enumerate it exists
+(`ingest/address-disposition.sh`, committed this pass).
+
+🔴 **Mandated legs — nineteenth consecutive nil.** `4` global + `3` regional → **`0` new
+addresses.** Every candidate already filed, checked by token first:
+`GarethManning/education-agent-skills` (**NOASSERTION**, `935★`, `2026-10-22`) FILED with
+`398` history mentions; `OPTIMETA/PAIDEIA` (MIT, `91★`) and
+`rohitg00/ai-engineering-from-scratch` (MIT, `76,126★`) both already shelved. 🟢 The legs
+did yield `9` usable **intel** tokens — see `intel/market.md` — which is why they are now
+reclassified as a demand channel rather than a supply channel.
+
+
 ## 🆕 `2026-11-01` — `p583` — **the integration axis swept, and the agent-shaped supply on it is ONE repository out of `538`**
 
 🟢 **The sweep `p582` prescribed was run in full** — `topic:lti` (`184`),

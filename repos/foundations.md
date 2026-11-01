@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p584 — 2026-11-01 — **the lockdown-browser and LTI-maintenance tier, `8` permissive foundations promoted — and the row that refutes `Trend 36` was already on this page, `158` lines above the trend that denies it exists**
+
+🔵 **Token-check first (`583-A`).** Of `15` addresses measured on this page's axes:
+**`5` FILED**, **`6` UNFILED** (append-only history only), **`4` NEW**. Published before
+any row was written, and it stopped two false "new" claims — `Selleo/mentingo` (`689`
+history mentions) and `dmitry-viskov/pylti1.3` (`297`) are both long since filed.
+
+### 🔴 WITHDRAWN from the trend series: "every platform of record is copyleft without exception"
+
+`Trend 36`, filed by `p583` **one pass ago**, states that the platform tier is *"copyleft
+without exception"* and lists Moodle, Open edX, Chamilo, ILIAS, OpenEduCat, Gibbon and
+ERPNext. 🟢 It also states its own falsifier: *"a maintained, permissively licensed
+platform of record — an LMS or SIS above `1,000★`, pushed within a year."*
+
+🔴 **The falsifier was already satisfied, by a row on this page:**
+
+| clause of the falsifier | `sakaiproject/sakai` | verdict |
+|---|---|---|
+| platform of record | Apereo Foundation LMS, research universities | 🟢 yes |
+| above `1,000★` | **`1,240★`** | 🟢 yes |
+| pushed within a year | **`2026-10-30`** | 🟢 yes |
+| permissively licensed | **ECL-2.0** — byte-read `11,120 B`, `master/LICENSE`, *"Educational Community License, Version 2.0"* | 🟢 yes — **and this page already says so** |
+
+🔴 **This page's line 426 reads *"The only permissive seats at this table are Sakai
+(ECL-2.0)…"* and its line 416 states *"ECL-2.0 is an Apache-2.0 derivative."*** The trend
+that denies a permissive platform of record exists was filed onto a base that had been
+publishing one, with the licence correctly identified, on this very page.
+
+🔵 **Narrowed restatement, which survives measurement.** Across `13` platform rows above
+`1,000★` on five axes (`topic:lms`, `topic:learning-management-system`, `topic:elearning`,
+`topic:school-management`, `topic:education-platform`), all denominators first-hand:
+**`6` AGPL-3.0, `3` GPL-3.0, `1` GPL-2.0, `1` ECL-2.0, `2` MIT.** 🟢 **The accurate claim
+is: the platform tier is copyleft with exactly one permissive exception, and the exception
+is licensed under education's own licence** (ECL-2.0, written for Apereo/Sakai), **not
+under MIT or Apache.** That is a sharper and more sellable fact than the original — it
+names the one platform a studio may fork.
+
+🔴 **And the nearest MIT falsifier, which fails on one clause only:**
+[`4jean/lav_sms`](https://github.com/4jean/lav_sms) — **MIT** (byte-read `1,072 B`),
+**`1,161★`**, a Laravel School Management System — 🔴 **pushed `2024-03-06`**, so it fails
+*only* recency. 🔵 **Price it as a fork-and-adopt base, never as a dependency**: it is the
+largest permissive school-management codebase located, and it is cold.
+
+### 🟢 Promoted to this page
+
+| repo | grant (byte-read) | ★ | pushed | region | why it is a foundation |
+|---|---|--:|---|---|---|
+| [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟢 **MPL-2.0** (`16,726 B`, `master/LICENSE.txt`) | **361** | `2026-10-30` | EMEA | 🔴 **UNFILED `65×` before this pass** — the single largest filing miss this pass found. **Safe Exam Browser** is the sector-standard exam lockdown client (ETH Zürich), deployed by universities worldwide. 🟡 **MPL-2.0 is file-level weak copyleft** — shippable, with per-file reciprocity on files you modify. 🟢 **The only credible open lockdown client at the proctoring boundary** |
+| [academic-innovation/django-lti](https://github.com/academic-innovation/django-lti) | 🟢 **MIT** (`1,098 B`, *"The Regents of the University of Michigan"*) | 26 | `2026-10-28` | North America | 🔴 **UNFILED `63×`.** LTI Advantage (1.3) for Django, **maintained**. 🟢 **Region placed from the licence text.** See the correction below — this row narrows a gap this base has published four ways |
+| [sakaicontrib/attendance](https://github.com/sakaicontrib/attendance) | 🟢 **ECL-2.0** (`11,120 B`) | 14 | `2026-09-01` | North America | 🔴 **UNFILED `16×`.** Sakai attendance tool integrating with the gradebook — the worked example of extending the one permissive platform of record without forking it |
+| [openHPI/LRS-Moodle](https://github.com/openHPI/LRS-Moodle) | 🟢 **MIT** (`1,122 B`, *"Hasso Plattner Institute"*) | 2 | `2025-10-16` | EMEA | 🆕 A **Learning Record Store for H5P exercises in Moodle**. 🟢 **Region placed from the licence text.** The one permissive artefact found anywhere near the Moodle→LRS boundary — see the gap note below |
+| [utfpr-cm-dacom-bcc/learning-analytics](https://github.com/utfpr-cm-dacom-bcc/learning-analytics) | 🟢 **MIT** (`1,075 B`) | 1 | `2026-05-22` | **LATAM** | 🆕 xAPI-compatible learning-analytics application from **UTFPR Campo Mourão** (Universidade Tecnológica Federal do Paraná, Brazil). 🟢 **Region placed from the owning institution** — and LATAM-origin rows are the scarcest class on these shelves |
+| [moehrlii/bitsygrader](https://github.com/moehrlii/bitsygrader) | 🟢 **BSD-3-Clause** (`1,494 B`) | 4 | `2026-09-29` | Global | 🆕 Automated grading for **Jupyter notebooks over LTI 1.3** — the autograding-plus-LTI combination this base had no permissive row for |
+| [openfun/marsha](https://github.com/openfun/marsha) | 🟢 **MIT** | 151 | `2026-11-01` | EMEA | 🔵 Already filed; re-measured. LTI **Learning Content Management System** from **France Université Numérique**, pushed today |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🟡 **NOASSERTION** — a queue, not a verdict (`Trend 31`) | 243 | `2026-10-30` | EMEA | 🔵 Already filed; re-measured. Secure automated exercise assessment (UCLouvain). The highest-starred LTI-tagged Python platform |
+
+### 🔴 The Python LTI 1.3 gap STANDS, and the apparent counterexample is a detached copy of the dead library
+
+`p583` reshaped this base's load-bearing integration gap to **"no permissive, maintained,
+framework-independent LTI 1.3 library for *Python*."** This pass attacked it on four query
+forms and found one candidate that appeared to close it — then disposed of it first-hand:
+
+| claim | measurement | verdict |
+|---|---|---|
+| `CNIT-Organization/ltitoolkit` is a maintained MIT framework-independent Python LTI 1.3 toolkit | **MIT** byte-read `1,070 B` — 🔴 but the copyright line reads **"Copyright (c) 2019 Dmitry Viskov"**, the author of the cold `pylti1.3`. `fork = false`, created `2026-06-04`. `pyproject.toml` renames the package **`ff-ltitoolkit`**; the `README` says *"Published via Git (no PyPI required)"* while the repository **description** advertises *"PYPI Package"* | 🔴 **REJECTED — a detached copy of the dead upstream**, renamed, git-only, `0★`, with a description that contradicts its own README |
+| `pymsglobal/pylti1.3` is a second re-homing | `fork = false`, **created and last pushed `2025-09-19`** — the same day — `2★` | 🔴 **REJECTED — abandoned on the day it was published** |
+| upstream `dmitry-viskov/pylti1.3` | **MIT**, `138★`, 🔴 `2024-08-18`, not archived | 🔴 cold `26.5` months, as this base already records |
+
+🟢 **So the gap not only stands, it is now evidenced as a *failed re-homing*: the ecosystem
+has tried twice to re-publish this library and both copies are deader than the original.**
+That is much stronger engagement evidence than an absence — it is a demonstrated,
+repeatedly attempted, unmet maintenance need. 🔵 **Highest-value contribution a studio can
+make back to this ecosystem, and the cheapest: adopt and maintain `pylti1.3`**, which has
+`138★` of existing dependents, rather than writing a fourth implementation.
+
+🔴 **One correction this pass owes to its own pages.** `verticals/solutions.md` line 103
+says `pylti1.3` *"has no permissive replacement found yet"* and `compose/patterns.md` line
+215 says *"until a maintained [replacement]"*. 🟢 **That is too strong for the Django
+case:** `academic-innovation/django-lti` (MIT, `26★`, `2026-10-28`, University of Michigan)
+is permissive **and** maintained, and it has been in this base's history **`63` times
+without reaching a shelf.** 🟢 **The gap is correct only for the framework-independent
+slot.** Corrected on both pages this pass.
+
+🔵 **Channel note, new this pass.** `gh api search/repositories` is open, but
+`gh api repos/{owner}/{name}` returns **`403` — "GitHub access to this repository is not
+enabled for this session"**. The `fork` boolean is available from the *search* payload;
+`parent` and `source` are not available at all. 🔵 Lineage must therefore be established
+from licence-text provenance and package identity, as it was above. This extends this
+base's standing `users/{login}` `403` gap to the per-repository endpoint.
+
+
 ## p583 — 2026-11-01 — **the integration layer shelved after being re-found up to `15` times: `12` permissive rows promoted out of the discard, a superlative on this page refuted, and `580-C` closed at `1` defect rather than `40`**
 
 🔵 **Source:** the four axes `p582` prescribed — `topic:lti` (`184`), `topic:xapi` (`280`),

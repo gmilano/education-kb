@@ -4,6 +4,63 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p584 — 2026-11-01 — **the SIS / gradebook / proctoring platform tier, measured with denominators — and the licence rule for this page rewritten: the platform tier is copyleft with exactly ONE permissive exception, and that exception is licensed under education's own licence**
+
+🔵 **`583-A` token-check, published first.** Of `11` platform addresses measured:
+**`3` FILED** (`openSIS-Classic`, `academico`, `rosariosis`), **`7` UNFILED**, **`1` NEW`**.
+
+### 🔴 The licence rule on this page was stated too strongly, and the counterexample was already on it
+
+This page says *"No permissive production LMS"* (line ~296) and *"uniformly copyleft"*
+(line ~68); `intel/trends.md` `Trend 36`, filed last pass, says the platform tier is
+*"copyleft without exception."*
+
+🟢 **Measured this pass across `13` platform rows above `1,000★` on five axes:**
+
+| grant | rows | rows named |
+|---|--:|---|
+| 🔴 AGPL-3.0 | **`6`** | `frappe/lms` `3,360★` · `learnhouse` `2,438★` · `classroomio` `1,736★` · `courselit` `1,291★` · `overhangio/tutor` `1,131★` · `hrshadhin/school-management-system` `1,152★` |
+| 🔴 GPL-3.0 | `3` | `Unifiedtransform` `3,003★` · `chamilo/chamilo-lms` `1,019★` · (+1 off-axis) |
+| 🔴 GPL-2.0 | `1` | `course-tencent-cloud` `1,175★` |
+| 🟢 **ECL-2.0 — permissive** | **`1`** | **`sakaiproject/sakai` `1,240★`, pushed `2026-10-30`** |
+| 🟡 MIT | `2` | `SWE-agent` (🔴 **not an education platform** — `Trend 29`) · `4jean/lav_sms` (🔴 cold `2024-03-06`) |
+
+🟢 **The corrected rule, which is what a studio actually needs to hear:** *the education
+platform tier is copyleft everywhere except Sakai, and Sakai is permissive under
+**ECL-2.0** — the Educational Community License, an Apache-2.0 derivative written for this
+sector — not under MIT or Apache.* **Sakai is the one platform of record a studio may fork
+and ship.** Byte-read `11,120 B`, `master/LICENSE`, this pass.
+
+🔵 **Why this matters more than the licence trivia:** every delivery rule on this page has
+been shaped by "you may not ship a modified platform." That rule is still right **six times
+out of seven**, and now it has a named exception, so an engagement that genuinely needs a
+forked platform of record has exactly one legal starting point instead of none.
+
+### 🟢 The platform and gradebook tier, shelved
+
+| platform | address | grant | ★ | pushed | tier | note |
+|---|---|---|--:|---|---|---|
+| **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** (`11,120 B` ✅) | 1,240 | `2026-10-30` | LMS of record | 🟢 **The one forkable platform of record.** Apereo Foundation; research universities |
+| **RosarioSIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | 649 | `2026-10-28` | SIS of record | The head of the SIS axis. 🔵 Client-owned code, never shippable IP |
+| **Academico** | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** (`1,094 B`) | 410 | `2026-10-28` | SIS, small/medium | 🔵 Already filed. **Below Trend 36's `1,000★` bar**, which is why it does not carry the exception — Sakai does |
+| **openSIS Classic** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🟡 **NOASSERTION** by API — a queue, not a verdict | 347 | `2026-10-26` | SIS of record | 🔵 Already filed; re-measured |
+| **Koakademy** | [yukazakiri/koakademy](https://github.com/yukazakiri/koakademy) | 🔴 **AGPL-3.0** | 9 | `2026-11-01` | academic management | 🔴 **UNFILED `36×` — the highest re-find count this base has recorded.** Pushed today. Student-lifecycle platform |
+| **e-gradebook-platform** | [kadusic1/e-gradebook-platform](https://github.com/kadusic1/e-gradebook-platform) | 🔴 **AGPL-3.0** | 0 | `2026-03-28` | gradebook | 🆕 **Multi-tenant with database-per-tenant isolation** — the only row on these shelves that solves the multi-district tenancy problem explicitly |
+| **Safe Exam Browser** | [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟡 **MPL-2.0** (`16,726 B` ✅) | 361 | `2026-10-30` | exam lockdown | 🔴 **UNFILED `65×`.** ETH Zürich; the sector-standard lockdown client. 🟡 File-level reciprocity — shippable with care |
+| **Eloom LMS** | [eloompty/Eloom-LMS-International](https://github.com/eloompty/Eloom-LMS-International) | 🟢 **MIT** | 0 | `2026-10-06` | LMS, training providers | 🔴 **UNFILED `8×`.** For training providers and colleges |
+| **WalnutEdu SIS** | [laveshparyani/walnutedu-student-management](https://github.com/laveshparyani/walnutedu-student-management) | 🟢 **MIT** | 3 | `2026-09-26` | SIS module | 🆕 A **Frappe v15** app — i.e. it inherits the ERPNext/Frappe framework stack this page already tracks |
+| **Sakai attendance** | [sakaicontrib/attendance](https://github.com/sakaicontrib/attendance) | 🟢 **ECL-2.0** (`11,120 B` ✅) | 14 | `2026-09-01` | LMS extension | 🔴 **UNFILED `16×`.** The worked example of extending Sakai through its own contrib channel |
+
+🔴 **The proctoring tier is where the licensing collapses.** `MyProctor.ai` (`236★`),
+`GodsEye`, `sanket2000/proctoring` and the bulk of the `150`-row `topic:proctoring` axis
+carry **no licence at all**; `eLearning-BS23/moodle-quizaccess_proctoring` (`30★`) is
+`NOASSERTION`; `meefik/ITMOproctor` is GPL-3.0 and cold since `2023`. 🟢 **The only
+shippable artefacts at the proctoring boundary are `SafeExamBrowser` (MPL-2.0) and the two
+MIT agent rows shelved on `agents/top.md` this pass.** 🔵 **Delivery consequence:** quote
+proctoring as *integration with SEB plus a custom agent*, never as "adopt an open-source
+proctoring platform" — there is no licensed one to adopt.
+
+
 ## p583 — 2026-11-01 — **the interchange layer that bolts a copyleft LMS to anything else, and the licence rule that decides what a studio may ship**
 
 🔵 **Source:** `538` repositories across `topic:lti`, `topic:xapi`, `topic:qti`,
@@ -100,7 +157,7 @@ and it is permissive at both ends.
 | `microsoftarchive/Learn-LTI` | 132 | MIT | 🔴 `2023-05-03` | Owner namespace is `microsoftarchive` — **abandoned by declaration** |
 | `tc-imba/canvas-auto-rubric` | 33 | 🔴 **NONE** | 🔴 `2022-12-27` | Unlicensed; not usable |
 | `fotinikafida/text-to-moodle` | 3 | CC0-1.0 | 🔴 `2023-08-24` | 3★; a sample, not a component |
-| `dmitry-viskov/pylti1.3` | 138 | MIT | 🔴 `2024-08-18` | 🟡 **LTI 1.3 is the live standard** — the dead row here is load-bearing and has no permissive replacement found yet |
+| `dmitry-viskov/pylti1.3` | 138 | MIT | 🔴 `2024-08-18` | 🟡 **LTI 1.3 is the live standard** — the dead row here is load-bearing. 🟢 **CORRECTED `p584`:** a maintained permissive replacement exists for the **Django** case — [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti) (MIT, `26★`, `2026-10-28`). The gap is real only for the **framework-independent** slot |
 
 🔴 **`pylti1.3` is the one that matters.** LTI 1.3 is how any AI layer legitimately
 attaches to Moodle, Canvas or Open edX, and the base's only shelved implementation has

@@ -4,6 +4,224 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p584 — 2026-11-01 — **a trend filed one pass ago is withdrawn by a row that was already on the shelf below it, `583-F` is refuted at `41×`, and three trends are filed at the counter's form**
+
+🔴 **`Trend 36` is withdrawn and restated.** Filed by `p583`, it claimed the education
+platform tier is *"copyleft without exception"* and supplied its own falsifier: a
+maintained permissive platform of record above `1,000★`. 🔴 **That falsifier was already
+satisfied by `sakaiproject/sakai` — ECL-2.0 (byte-read `11,120 B`), `1,240★`, pushed
+`2026-10-30` — which `repos/foundations.md` has been describing as a permissive platform
+seat, with ECL-2.0 correctly identified as an Apache-2.0 derivative, on the same page.**
+🟢 Restated below as `Trend 36` (revised) and generalised as `Trend 38`.
+
+🟢 **`583-G` satisfied:** all three trends below are filed at the counter's `^## <n>. `
+form, so the derived count includes them. The series now ends at **`40`**.
+
+## 38. The cheapest refutation of a published superlative is the base's own shelf, not the search channel — and a prescription that says "re-measure against search" will systematically miss the refutations that are already in hand (high confidence — measured first-hand, three claims, two channels)
+
+🔵 **`583-B` prescribed re-measuring `50`+ superlative claims *"against the search
+channel."*** This pass audited three claims and the result splits cleanly by channel:
+
+| claim | channel that settled it | cost | verdict |
+|---|---|--:|---|
+| *"every platform of record is copyleft without exception"* (`Trend 36`) | 🟢 **`grep` of this base's own curated pages** | **one command** | 🔴 **REFUTED** — Sakai, ECL-2.0, `1,240★`, already shelved |
+| *"no permissive, maintained, framework-independent LTI 1.3 library for Python"* | 🟡 search, then **licence-text provenance** | 4 queries + 3 byte-reads | 🟢 **STANDS** — the one candidate is a detached copy of the dead upstream |
+| *"no permissive Moodle→LRS event bridge"* | 🟡 search | 4 queries | 🟢 **STANDS** — all GPL-3.0 or unlicensed |
+
+🔴 **The one claim that fell, fell to `grep`.** The two that survived needed the search
+channel, and survived it. 🟢 **So the audit has a cheap first stage that `583-B` omitted:
+check whether the base already shelves a counterexample, *before* spending any search
+budget.** A superlative is a claim about a population, and this base's own shelves are the
+part of that population it is already holding — and the part it is most likely to have
+forgotten, because `Trend 16` says findings do not propagate from history to shelf. 🔵 **This
+pass adds the sharper form: they also fail to propagate from one shelf to another.** The
+Sakai row and the trend denying it sat in the same repository, `158` lines apart, both
+written by passes of this base.
+
+🟢 **Operational rule, replacing `583-B`'s prescription:** for each superlative, (1) `grep`
+the curated pages for the claim's own subject vocabulary and check every hit against every
+clause of the claim; (2) only then query the search channel. **Stage (1) is free and it
+caught the only false claim of the three.**
+
+🔴 **Falsifier:** a superlative refuted by search that could not have been refuted from the
+shelves — i.e. a case where stage (1) was genuinely wasted effort. None found in three
+audits, but three is a small sample and this trend should be re-tested at `10`.
+
+## 39. Agent-shaped open-source supply appears where the layer has no wire standard to conform to, and collapses to libraries where one exists — so "is this a build or a buy?" is answered by asking whether the task has a spec (high confidence — `1,124` repositories across eight axes, denominators first-hand)
+
+🟢 **Measured, two layers, same method, one pass apart:**
+
+| layer | axes | repositories | agent-shaped | share |
+|---|---|--:|--:|--:|
+| assessment interchange (`lti`, `lti-provider`, `xapi`, `qti`) | 4 | `538` | **`1`** | **`0.19 %`** |
+| school operations (`sis`, `student-information-system`, `gradebook`, `proctoring`) | 4 | `586` (`483` education-relevant) | **`38`** | **`7.9 %`** |
+
+🔴 **A `41×` difference between two layers of the same industry, measured the same way.**
+`583-F` was right to demand the test before generalising: *"assessment interchange is a
+library tier and the agent is always the build"* is true, and **does not generalise one
+layer sideways.**
+
+🟢 **The mechanism, which is what makes this a trend rather than two numbers.** The
+interchange layer has **specifications** — LTI 1.3, xAPI, QTI 3.0 — and a specification
+makes conformance the whole job. Conformance is deterministic, testable and shared, so it
+is written once as a library and depended on. **School operations have no spec**: what
+"detect that this student is cheating", "flag an at-risk gradebook pattern" or "reconcile
+an enrolment exception" means is institution-specific, unformalised, and judgement-shaped —
+which is exactly the shape an agent fits.
+
+🔵 **Delivery rule, and it is the most directly sellable thing in this pass:** **ask whether
+the task has a published specification.** If it does, **buy the glue permissively and do not
+build it** — the library exists and conformance evidence matters more than code. If it does
+not, **the agent is the deliverable**, and the open-source supply will be numerous, tiny,
+and mostly unlicensed, so it is reference architecture rather than dependency. 🔴 **The
+proctoring axis proves the second half: `150` repositories, the most agent-shaped of the
+eight axes, and the credible artefacts (`MyProctor.ai` at `236★`, `GodsEye`, the five-agent
+invigilation system) carry no licence at all.** `7.9 %` agent-shaped is not `7.9 %`
+shippable.
+
+🔴 **Falsifier:** a specified layer with abundant agent supply, or an unspecified
+operational layer whose supply is predominantly libraries. `topic:iep` (`7★` ceiling,
+`p575`) is a weak confirming case — unspecified and with almost no supply of either kind —
+and should be re-read as a third point.
+
+## 40. An acronym topic axis must be measured for homonyms before its denominator is quoted, and the long form of a tag can be both cleaner AND larger than the short form (high confidence — measured first-hand, `321` rows across one tag pair)
+
+🟢 **Measured:**
+
+| axis | repositories | education-relevant | pollution |
+|---|--:|--:|--:|
+| `topic:sis` | `141` | `64` | 🔴 **`77` (`55 %`)** |
+| `topic:student-information-system` | `180` | **`180`** | 🟢 **`0`** |
+
+🔴 **`55 %` of `topic:sis` is not education at all** — *Sovereign Intelligence System*,
+*Starlight Intelligence System*, **Safety Instrumented System** (industrial AI safety
+testing), epidemic simulation on networks, and a NetLogo social model. Had the raw
+denominator been quoted, `141` would have entered this base as education supply and `77` of
+those rows are a different industry wearing the same three letters.
+
+🔵 **`Trend 17` of this base states that tag variants split a capability's population *and
+the short form is the empty one*.** 🟢 **This is a different failure and the opposite
+shape: the short form is neither empty nor smaller — it is polluted, and the long form is
+simultaneously clean and `28 %` larger.** The two trends are compatible; what they share is
+that **a tag is not a population and must be measured before it is counted.**
+
+🟢 **Rule: when an axis is an acronym, measure its education-relevance share first and quote
+the filtered denominator, naming the filter.** 🔵 Every denominator this pass published for
+`sis` and `proctoring` is the filtered one, with the raw figure shown beside it.
+
+🔴 **Falsifier:** an acronym axis whose pollution is negligible, or a spelled-out variant
+that is dirtier than its acronym. `topic:gradebook` (`0 %` pollution, `125` rows) shows a
+non-acronym axis can be clean; the pair to test next is `topic:lrs` against
+`topic:learning-record-store`.
+
+## 36. (REVISED `p584`) The licence shape of open-source education is a property of the LAYER, not of the industry — and the platform tier is copyleft with exactly ONE permissive exception, licensed under education's own licence (high confidence — revised after refutation; `13` platform rows above `1,000★` on five axes, every grant byte-read)
+
+🔴 **The original form of this trend said the platform tier is "copyleft without
+exception". That is false and is withdrawn.** The gradient it describes is real; the
+universal was not.
+
+🟢 **The platform tier above `1,000★`, measured on five axes this pass:**
+
+| grant | rows | note |
+|---|--:|---|
+| 🔴 AGPL-3.0 | `6` | `frappe/lms` · `learnhouse` · `classroomio` · `courselit` · `overhangio/tutor` · `hrshadhin/school-management-system` |
+| 🔴 GPL-3.0 | `3` | `Unifiedtransform` · `chamilo/chamilo-lms` · +1 |
+| 🔴 GPL-2.0 | `1` | `course-tencent-cloud` |
+| 🟢 **ECL-2.0 — permissive** | **`1`** | **`sakaiproject/sakai`, `1,240★`, `2026-10-30`** |
+| 🟡 MIT | `2` | `SWE-agent` (not education — `Trend 29`) · `4jean/lav_sms` (`1,161★`, 🔴 cold `2024-03-06`) |
+
+🟢 **The gradient stands and is now exact: permissive at the wire protocol (`66.7 %` across
+`33` integration rows), copyleft at the platform `6` times in `7`, and the seventh is
+Sakai under ECL-2.0** — the Educational Community License, an Apache-2.0 derivative written
+for this sector by Apereo. 🔵 **Delivery rule, corrected:** *ship the glue; do not ship a
+modified platform — unless the platform is Sakai, which is the one you may fork.*
+🔴 **And the nearest MIT near-miss is a fork-and-adopt candidate, not a dependency:**
+`4jean/lav_sms`, MIT, `1,161★`, cold `2024-03-06` — it fails the recency clause only.
+
+🔴 **Revised falsifier:** a **second** permissive platform of record above `1,000★`, pushed
+within a year. One exists; a second would make "exception" the wrong word and turn this
+into a genuine split.
+
+## Declared gaps — updated `2026-11-01` (`p584`)
+
+- 🔴 **WITHDRAWN: "every platform of record is copyleft without exception"** (`Trend 36`,
+  filed `p583`). Refuted by `sakaiproject/sakai` (ECL-2.0, `1,240★`, `2026-10-30`), which
+  was **already on `repos/foundations.md`**. 🟢 **Reshaped: copyleft `6` times in `7`, with
+  Sakai the one forkable platform of record.**
+- 🔴 **WITHDRAWN: `583-F`'s generalisation** that education integration is a library tier
+  where the agent is always the build. 🟢 **Reshaped: true of the assessment-interchange
+  layer only** — `0.19 %` agent-shaped there against `7.9 %` on school operations, a `41×`
+  difference. Filed as `Trend 39`.
+- 🔴 **STANDS and now evidenced as a FAILED RE-HOMING: no permissive, maintained,
+  framework-independent LTI 1.3 library for Python.** `pylti1.3` (MIT, `138★`) is cold
+  since `2024-08-18`; **two attempts to re-publish it have both died** —
+  `CNIT-Organization/ltitoolkit` (`fork = false`, carries Viskov's 2019 copyright, renamed
+  `ff-ltitoolkit`, git-only despite advertising a PyPI package, `0★`) and
+  `pymsglobal/pylti1.3` (created and abandoned the same day, `2025-09-19`). 🟢 **Highest-
+  value and cheapest contribution available: adopt and maintain `pylti1.3`**, which already
+  has `138★` of dependents. 🟢 **NARROWED: for Django the gap is closed** —
+  `academic-innovation/django-lti` (MIT, `26★`, `2026-10-28`, U. Michigan), **unfiled here
+  after `63` history mentions.**
+- 🔴 **STANDS: no permissive Moodle→LRS event bridge.** All logstore options are GPL-3.0
+  (`davidpesce/moodle-logstore_xapi`, `82★`, the maintained one of record) or unlicensed.
+  🟢 One narrow MIT exception found and shelved: `openHPI/LRS-Moodle` (Hasso Plattner
+  Institute) — **H5P-scoped, `2★`**, not a general bridge. 🔵 Structural, not accidental:
+  Moodle's plugin rule makes any replacement GPL. Price as client-owned code.
+- 🔴 **NEW: there is no licensed open-source proctoring platform.** `150` repositories on
+  `topic:proctoring`; the credible ones (`MyProctor.ai` `236★`, `GodsEye`, the five-agent
+  invigilation system) carry **no licence at all**, and the Moodle plugin is `NOASSERTION`.
+  🟢 **The only shippable artefacts at that boundary are `SafeExamBrowser` (MPL-2.0, ETH
+  Zürich, `361★` — unfiled here `65×`) and two MIT agent rows.** 🔵 Quote proctoring as
+  *SEB integration plus a custom agent*, never as "adopt an open-source proctoring platform".
+- 🔴 **NEW: `FILED = 0` on an entire `586`-address tier.** Not one agent-shaped SIS,
+  gradebook or proctoring artefact had ever reached a curated page; `9` were in the
+  append-only history, one re-found **`36×`** (`yukazakiri/koakademy`) and one **`63×`**
+  (`academic-innovation/django-lti`) — a new high-water mark for `Trend 16`.
+- 🟢 **CLOSED: `583-D`.** Publisher set enumerated at **seven**, each with its scope;
+  current-year spread **`3.0×`** (USD `3.7`–`11` bn). 🔵 Quote **USD `3.7`–`11.4` bn, 2026,
+  publisher named**. The floor-truncation mechanism is identified: aggregator compilations
+  are **derived, not publishers**.
+- 🟢 **CLOSED: `583-C`, second branch.** `ingest/address-disposition.sh` committed — a
+  shell-only replica of the ledger's FILED/UNFILED/NEW disposition logic. 🔴 The Python
+  instrument is **still denied** (`"Code from External"`); the shell replica **runs**, and
+  it produced every token-check in this pass.
+- 🟢 **CLOSED: `583-G`.** Three trends filed this pass at the `^## <n>. ` form; series ends
+  at `40`.
+- 🔴 **STANDS, 9th pass: market sizing is vendor-only.** All seven enumerated publishers
+  are commercial. The only non-commercial source located is the **OECD Digital Education
+  Outlook 2026**, which is qualitative.
+- 🔴 **STANDS: no primary legal text from this session, in any jurisdiction** (`583-E`).
+  🔵 **This should be an allowlist request, not a recurring action item**, and it now
+  constrains the Philippines, Türkiye, Thailand and Bangladesh findings as well — every
+  2026 instrument named in this pass rests on secondary reporting.
+- 🔴 **STANDS: `curl -sI` URL verification is inoperable here.** Every `github.com` URL
+  returns `403` through the session proxy; the run prompt mandates this broken check.
+  🟢 Use `gh api -X GET search/repositories -f q='repo:owner/name'`, which answers `200`
+  and `422` discriminably against a fabricated control.
+- 🔴 **STANDS and now WIDER: region is unobtainable from the API.** `users/{login}` is
+  `403` and 🆕 **`repos/{owner}/{name}` is `403` as of this pass** — so `fork` is available
+  only from the *search* payload, and `parent`/`source` not at all. **Read "Global" as
+  *provenance unknown*.** 🔵 Lineage must be established from licence-text provenance and
+  package identity, as it was for `ltitoolkit` this pass.
+- 🔴 **STANDS: nineteenth consecutive nil on the mandated supply legs**, fourth on the
+  regional ones. 🟢 **But they produced `9` usable intel tokens against `0` addresses** —
+  🔵 **reclassify them as a demand-intelligence channel being graded as a supply channel.**
+  Native-language legs: **`17 of 17` productive across three passes.**
+
+- 🔵 **Next pass, in priority order:** (1) 🟢 **Execute `Trend 38`'s stage-one audit across
+  the remaining superlatives** — `grep` the curated pages for each claim's own subject
+  vocabulary before spending any search budget; the one false claim of three fell to a
+  single `grep`, and `50`+ remain unswept; (2) 🔴 **shelve the `18` UNFILED integration-axis
+  addresses from `p583` and the `9` from this pass** — the debt is now `27` known addresses
+  across two passes and the replica to find them exists; (3) **test `Trend 39`'s mechanism
+  on a third layer** — pick one specified (`topic:scorm`, `topic:onerostr`) and one
+  unspecified (`topic:iep`, `topic:truancy`) and predict the agent share *before*
+  measuring; (4) **run native-language legs for the jurisdictions still unqueried** —
+  Vietnam (`vi`) first-hand, Morocco/Maghreb (`fr`/`ar`), Pakistan (`ur`), Nigeria —
+  the method is `17 of 17`; (5) **request a network allowlist for primary legal hosts**
+  (`583-E`), which now constrains eight findings rather than four.
+
+
 ## p583 — 2026-11-01 — **a load-bearing gap withdrawn by the base's own history, two new trends, and the first pass whose central finding came from grepping itself before searching**
 
 🟢 **All four `p582` priorities executed in order.** (1) The integration axis swept singly —
@@ -33,7 +251,7 @@ the sweep's own first step — `grep` the shelves — refuted the claim that com
 `579-F` prescribed the token-check for *findings* and `580-G` extended it to
 *instruments*; this pass shows it must also cover **the premises of prescriptions.**
 
-## 36. The licence shape of open-source education is a property of the LAYER, not of the industry, and the integration layer is the permissive one (high confidence — measured first-hand across 33 rows on four axes, every grant byte-read)
+### 🔴 WITHDRAWN `p584` — the original form of Trend 36 ("copyleft WITHOUT EXCEPTION"), superseded by the revised `Trend 36` above — refuted by `sakaiproject/sakai`, ECL-2.0, `1,240★`, which was already shelved on `repos/foundations.md`. Retained for the record; **the gradient it describes is right, the universal was not.** Original text follows.
 
 🟢 **Measured, on the four integration axes:**
 

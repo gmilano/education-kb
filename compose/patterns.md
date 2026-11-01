@@ -4,6 +4,159 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p584 — 2026-11-01 — **five recipes the school-operations sweep makes buildable, including the first forkable-platform recipe this base has ever been able to write and a contribution play that costs less than any of them**
+
+🔵 **Every repository named below was measured first-hand this pass:** grant byte-read via
+`raw.githubusercontent.com` with byte counts, stars and `pushed_at` from
+`gh api search/repositories`. 🔴 **No recipe here uses an unlicensed repository as a
+dependency** — the unlicensed proctoring artefacts are cited as reference architecture only,
+and said to be so.
+
+## P-584-A — 🟢 **Shippable proctoring, which means SEB plus an agent — because there is no licensed proctoring platform to adopt** (8–10 weeks, EMEA or North America)
+
+🔴 **The premise, measured:** `150` repositories on `topic:proctoring`; the credible
+platforms (`narender-rk10/MyProctor.ai` `236★`, `AgnellusX1/GodsEye`,
+`aryashinod/Multi-Agent-Online-Exam-Invigilation-System`) carry **no licence at all**, and
+the Moodle plugin `eLearning-BS23/moodle-quizaccess_proctoring` (`30★`) is `NOASSERTION`.
+🟢 **So the only lawful composition is a licensed lockdown client plus custom agent code.**
+
+**Wiring:**
+1. **Lockdown client — [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring)**
+   (🟡 **MPL-2.0**, `16,726 B` byte-read, `361★`, `2026-10-30`, ETH Zürich). Deploy as-is;
+   configure, do not fork. 🟡 **MPL-2.0 is file-level reciprocity** — any SEB source file
+   you modify must be published, so **keep all custom logic in separate files/processes.**
+   That constraint is the whole licence plan.
+2. **Exam launch — [`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti)**
+   (🟢 MIT, `1,098 B`, `26★`, `2026-10-28`, U. Michigan) if the tool is Django, so the exam
+   launches from Canvas/Moodle as an **LTI 1.3 tool** rather than a parallel login.
+   🔴 **If it is not Django, budget LTI as custom work** — see `P-584-D`.
+3. **Integrity agent — build**, using
+   [`wongcyrus/Google-AI-Classroom`](https://github.com/wongcyrus/Google-AI-Classroom)
+   (🟢 MIT, `1,062 B`, `2026-10-28`) as the starting point: it already combines classroom
+   multimodal sensing with exam invigilation, which is the exact shape needed.
+4. **Low-infrastructure fallback —
+   [`a8naaijetvi2lunk/carreau`](https://github.com/a8naaijetvi2lunk/carreau)**
+   (🟢 MIT, `1,069 B`, `2026-10-01`, francophone): phone-based proctored MCQ with a
+   **rotating QR code**. 🟢 Use where lockdown clients cannot be installed — BYOD
+   classrooms and most LATAM/EMEA public-sector estates.
+5. **Evidence trail —** `adlnet/lrs-conformance-test-suite` (MIT) for the xAPI statements,
+   so the integrity decisions are auditable rather than asserted (`Trend 22`).
+
+🔵 **Read, do not depend on:** the five-agent invigilation split (identity, gaze, phone
+detection, …) in `aryashinod/Multi-Agent-Online-Exam-Invigilation-System` is the best
+published decomposition of this problem and is **unlicensed** — reimplement the
+decomposition, take no code.
+🔴 **Regulatory gate before quoting:** Indonesia's SKB 7 Menteri and the Philippines'
+DepEd Order `003` both constrain *runtime behaviour*; a proctoring agent in APAC needs
+per-age-band limits and an incident-handling path, which is `P-583-B`'s pipeline.
+
+## P-584-B — 🟢 **The forkable platform of record: Sakai, which is the only one a studio may lawfully modify and ship** (10–14 weeks, North America / EMEA)
+
+🟢 **This recipe could not be written before this pass**, because this base published that
+every platform of record was copyleft. It is not:
+**[`sakaiproject/sakai`](https://github.com/sakaiproject/sakai)** is **ECL-2.0** (byte-read
+`11,120 B`, *"Educational Community License, Version 2.0"*), **`1,240★`**, pushed
+**`2026-10-30`**, and ECL-2.0 is an **Apache-2.0 derivative** — permissive.
+
+**Wiring:**
+1. **Fork Sakai.** This is the sentence this base has not previously been able to say about
+   any platform of record. Moodle (GPL-3.0), Open edX (AGPL-3.0), Chamilo, ILIAS,
+   OpenEduCat, Gibbon and ERPNext all remain **client-owned code, never shippable IP**.
+2. **Extend through the contrib channel, not the core —
+   [`sakaicontrib/attendance`](https://github.com/sakaicontrib/attendance)**
+   (🟢 ECL-2.0, `11,120 B`, `14★`, `2026-09-01`) is the worked example: a tool that
+   integrates with the Sakai gradebook without touching core.
+3. **Add the agent tier** from `agents/top.md` — the MCP/skill rows
+   (`PsychQuant/che-ntucool-mcp`, `timdrichards/canvas-lms-skill`, `amirtds/cubite-mcp`,
+   all MIT) show the attach pattern against three different LMS tenancies; the same shape
+   targets Sakai's REST surface.
+4. **Where the client is small-to-medium and wants an SIS rather than an LMS**, use
+   **[`academico-sis/academico`](https://github.com/academico-sis/academico)** (🟢 MIT,
+   `1,094 B`, `410★`, `2026-10-28`, Laravel/Filament) instead — permissive, and explicitly
+   scoped to small and medium institutions.
+
+🔴 **Do not quote this as "we fork your LMS".** Sakai is an Apereo research-university
+platform; the fork play is right for an institution already on Sakai or willing to migrate,
+and wrong everywhere Moodle is incumbent — which is most of the market.
+🔴 **The MIT near-miss is a trap worth naming to the client:**
+[`4jean/lav_sms`](https://github.com/4jean/lav_sms) is MIT at `1,161★` and **cold since
+`2024-03-06`** — a fork-and-adopt base, never a dependency.
+
+## P-584-C — 🟢 **The guardian-facing tier, which nobody has shipped** (5–7 weeks, North America)
+
+🟢 **The gap is positional, not technical.** This base holds tutor agents, grading agents,
+and institutional agents. **It had no row facing the parent** until this pass.
+
+**Wiring:**
+1. **[`noestudios/lastbell`](https://github.com/noestudios/lastbell)** (🟢 MIT, `1,067 B`,
+   `1★`, `2026-10-16`) — self-hosted **ParentVUE + Canvas** grade and assignment monitor
+   with whole-family alerting. 🟢 Region placed from the product: **ParentVUE is a US K-12
+   parent portal**, so this is a North America artefact by construction.
+2. **Attach via LTI 1.3** (`academic-innovation/django-lti`, MIT) so the district sees one
+   integration, not a scraper.
+3. **Add a summarisation agent** that converts gradebook deltas into plain-language
+   guardian updates — and gate it behind the **human-final-decision** architecture
+   `Trend 28` describes, because a parent-facing claim about a child's performance is the
+   highest-liability output in the whole stack.
+4. **Evidence:** log every guardian-facing statement with provenance (`Trend 14`), because
+   `134` bills across `31` states (March 2026) are converging on exactly this surface.
+
+🔵 **Why it sells:** Ohio `HB 96`, Florida `SB 1194` and Tennessee require districts to
+hold formal AI policies, and **Gallup (April 2026) measured > `60 %` of college students
+using AI weekly against ~half of institutions discouraging it.** The parent is the
+stakeholder nobody has given a legible interface, and Delaware's **AI Assurance Lab**
+means "passes a state assurance review" is a shippable property.
+
+## P-584-D — 🟢 **The contribution play: adopt `pylti1.3` instead of building a fourth implementation** (3–4 weeks, Global; cheapest item in this file)
+
+🔴 **Measured this pass:** `dmitry-viskov/pylti1.3` is **MIT, `138★`, cold since
+`2024-08-18`** — and the ecosystem has tried to re-home it **twice, unsuccessfully**:
+
+| attempt | measurement | state |
+|---|---|---|
+| `CNIT-Organization/ltitoolkit` | `fork = false`, created `2026-06-04`; LICENSE byte-read `1,070 B` carries 🔴 **"Copyright (c) 2019 Dmitry Viskov"**; `pyproject.toml` renames to `ff-ltitoolkit`; README says *"Published via Git (no PyPI required)"* while the description advertises *"PYPI Package"* | 🔴 detached copy, `0★` |
+| `pymsglobal/pylti1.3` | `fork = false`, **created and last pushed `2025-09-19`** | 🔴 abandoned same day, `2★` |
+
+🟢 **So the cheapest high-leverage action available to a studio in this whole knowledge base
+is maintenance, not construction:** adopt `pylti1.3`, which already carries `138★` of
+dependents and is the framework-independent Python LTI 1.3 implementation of record.
+
+**Wiring:** fork upstream → re-establish CI → publish to PyPI under a clearly derived name
+with attribution → upstream the Django/Flask example repos (`31★` and `23★`, both MIT, both
+cold) as adapters. 🔵 **Deliverable to the client:** every Python LTI integration they buy
+afterwards becomes a connector line rather than custom work, which is the difference
+`verticals/solutions.md` line 103 has been pricing for four passes.
+🔴 **Scope honestly:** this closes the *framework-independent* gap. For Django it is already
+closed by `academic-innovation/django-lti` (MIT, `26★`, `2026-10-28`) — **which sat in this
+base's history `63` times without being shelved**, so check the shelves before quoting this
+as custom work.
+
+## P-584-E — 🟢 **The Philippines reference engagement: a graduated-latitude obligation with a one-million-seat capability programme already funded** (10–12 weeks, APAC)
+
+🟢 **Why this one and not another APAC jurisdiction:** the Philippines is the first in this
+base where the **obligation** and the **capability funding** are both specified and both
+current.
+
+| element | what it forces into the build |
+|---|---|
+| **DepEd Order No. `003`, s. `2026`** (Feb 2026), *Foundational Guidelines on AI in Basic Education* | **human-centred** and 🟢 **graduated by learner independence** — more independent learners get greater latitude. **This is a per-learner policy engine**, not a global setting: the product must carry a learner-autonomy attribute and vary affordances by it |
+| DepEd's stated motive — use **outpaced** enforceable policy | the deliverable is **enforcement surface**: logging, policy versioning, and the ability to show what a given learner was permitted on a given date |
+| **Google for Education, June 2026** — > `1` M educators, tiers incl. **"AI Mastery"** (Gemini + prompt engineering), > `1` M with Gemini access | 🔴 **the teacher base is being trained on Gemini**, so an agent that assumes a different model surface fights the installed skill base |
+| **Project AGAP.AI** — ASEAN Foundation + Google.org, up to **`1.5` M participants in 2026** | the budget is **programme-shaped and partly donor-funded** — bid into the programme, not the school |
+| **Aug 2026: master plan still in preparation** | 🟢 the window where a vendor's architecture can become the default (the Poland pattern) |
+
+**Wiring:** `P-583-B`'s incident pipeline and per-age-band enforcement (built for Vietnam
+and Indonesia) **transfers directly** — the Philippines adds a *learner-independence* band
+to the age bands already required. Compose with `openfun/marsha` (MIT, LTI content
+management) or a Moodle estate, the attach-boundary MCP pattern for the LMS, and the
+`adlnet` conformance suites as the evidence trail.
+🔴 **Declared, not hidden:** every figure above is **secondary-sourced** — `583-E` means no
+primary legal text was obtainable from this session, and a "`40`-hour ECAIR / < `18 %`
+completion" claim and a "$`3` bn" figure were **rejected as unverifiable single-source
+developer-blog material.** Re-confirm DepEd Order `003` against a DepEd primary document
+before it goes in a proposal.
+
+
 ## p583 — 2026-11-01 — **three recipes the integration sweep makes buildable, and the one it turns into a build**
 
 🔵 All components below are byte-read this pass with `pushed_at` recorded
@@ -212,9 +365,13 @@ must additionally write AI-mediation teacher training into their **PDI and PPC**
 
 🔴 **Known gap in both recipes, stated rather than hidden.** Attaching either to Moodle,
 Canvas or Open edX properly needs **LTI 1.3**, and this base's only shelved implementation
-(`dmitry-viskov/pylti1.3`, MIT) has been dead since 🔴 `2024-08-18`. **Until a maintained
-permissive LTI 1.3 library is found, budget the integration as custom work** — do not quote
-it as a connector.
+(`dmitry-viskov/pylti1.3`, MIT) has been dead since 🔴 `2024-08-18`.
+🟢 **CORRECTED `p584`:** if the tool is a **Django** application, use
+[`academic-innovation/django-lti`](https://github.com/academic-innovation/django-lti)
+(MIT, `26★`, `2026-10-28`, University of Michigan) and quote the integration as a
+connector. **For any other framework the gap stands** — budget it as custom work, and do
+not reach for `CNIT-Organization/ltitoolkit`, which `p584` established is a detached,
+renamed copy of the same dead upstream.
 
 
 ## p581 — 2026-11-01 — **two new recipes: the lecture-archive pipeline, and the first buildable answer to this base's longest-standing gap**

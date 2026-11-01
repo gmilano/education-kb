@@ -4,6 +4,129 @@ region: Global
 updated: 2026-11-01
 ---
 
+## Pass 584 — reads 2026-11-01, commit 2026-11-01 — **🔴 A TREND FILED ONE PASS AGO WAS REFUTED BY A ROW ALREADY SITTING `158` LINES BELOW IT: `Trend 36` DECLARED THE PLATFORM TIER "COPYLEFT WITHOUT EXCEPTION" AND PUBLISHED ITS OWN FALSIFIER, WHICH `sakaiproject/sakai` — ECL-2.0, `1,240★`, PUSHED `2026-10-30` — HAD ALREADY SATISFIED ON `repos/foundations.md`, WITH THE LICENCE CORRECTLY IDENTIFIED. 🟢 `583-F` REFUTED AT `41×` AND GIVEN A MECHANISM. 🟢 `583-A`'s GATE CLEARED A SWEEP FOR THE FIRST TIME. 🔴 `FILED = 0` ON A `586`-ADDRESS TIER, ONE ROW RE-FOUND `36×`. 🟢 `583-C`, `583-D`, `583-G` CLOSED. 🔴 NINETEENTH NIL ON THE MANDATED LEGS. SIX REGISTERED (`584-A`…`584-F`).**
+
+### 🔴 The central result: the refutation was free, and it was in the building
+
+`583-B` prescribed re-measuring this base's `50`+ superlative claims **against the search
+channel**. Three were audited. **The only false one fell to a single `grep` of this base's
+own curated pages:**
+
+| claim | channel that settled it | verdict |
+|---|---|---|
+| *"every platform of record is copyleft without exception"* (`Trend 36`, filed `p583`) | 🟢 **`grep` of the curated pages** — one command | 🔴 **REFUTED** |
+| *"no permissive, maintained, framework-independent LTI 1.3 library for Python"* | 🟡 search + licence-text provenance | 🟢 **STANDS** |
+| *"no permissive Moodle→LRS event bridge"* | 🟡 search | 🟢 **STANDS** |
+
+🔴 **`Trend 36` published its own falsifier** — *"a maintained, permissively licensed
+platform of record, an LMS or SIS above `1,000★`, pushed within a year"* — and every clause
+was already satisfied by a row on `repos/foundations.md`, whose line 426 reads *"The only
+permissive seats at this table are **Sakai (ECL-2.0)**…"* and whose line 416 states
+*"ECL-2.0 is an Apache-2.0 derivative."* 🟢 **The base had the fact, stated correctly, and
+filed a trend denying it one pass later.** `Trend 16` covers findings that fail to travel
+from history to shelf; **this is shelf→trend, which nothing was checking** (`584-B`).
+
+🟢 **Restated so it survives measurement, and it is more sellable than the original:** across
+`13` platform rows above `1,000★` on five axes — `6` AGPL-3.0, `3` GPL-3.0, `1` GPL-2.0,
+`2` MIT (one not education, one cold), **`1` ECL-2.0** — **the platform tier is copyleft six
+times in seven, and the seventh is Sakai.** 🔵 Delivery rule corrected: *ship the glue; do
+not ship a modified platform — unless it is Sakai, which you may fork.*
+
+### 🟢 `583-F` refuted at `41×`, and the refutation came with a mechanism
+
+`583-F` required testing the integration axis's `1-in-538` agent ratio on `topic:sis`,
+`topic:gradebook` and `topic:proctoring` **before generalising**. All three swept, plus
+`topic:student-information-system` — **`596` rows, `586` unique addresses, every denominator
+first-hand:**
+
+| layer | repositories | agent-shaped | share |
+|---|--:|--:|--:|
+| assessment interchange (`lti`, `lti-provider`, `xapi`, `qti`) | `538` | `1` | `0.19 %` |
+| school operations (`sis`, `student-information-system`, `gradebook`, `proctoring`) | `586` (`483` education-relevant) | **`38`** | **`7.9 %`** |
+
+🟢 **`Trend 39`, the mechanism:** agent-shaped supply appears where the layer has **no
+specification to conform to**. LTI 1.3, xAPI and QTI make conformance the whole job, and
+conformance is written once as a library; "detect cheating", "flag an at-risk gradebook
+pattern", "reconcile an enrolment exception" have no spec, are judgement-shaped, and are
+therefore agent-shaped. 🔵 **Sellable rule: ask whether the task has a published spec — if
+it does, buy the glue; if it does not, the agent is the deliverable.**
+🔴 **With the caveat that matters:** the proctoring axis is the most agent-shaped of the
+eight **and its credible artefacts are unlicensed**, so `7.9 %` agent-shaped is not `7.9 %`
+shippable (`584-D`).
+
+### 🔴 `FILED = 0`, and a new high-water mark for the filing debt
+
+`583-A`'s token-check, published before any claim, on the `38` agent-shaped addresses:
+
+| disposition | addresses | worst re-find |
+|---|--:|---|
+| 🟢 FILED on a curated page | **`0`** | — |
+| 🔴 UNFILED — append-only history only | **`9`** | `yukazakiri/koakademy` **`36×`** |
+| 🆕 NEW to this base | **`29`** | — |
+
+🟢 **`NEW (29) > UNFILED (9)`, so the gate cleared the sweep — the first time it has done
+so**, and `p583`'s inverse case (`4` new, `18` unfiled) is retrospectively confirmed as the
+sweep that should have been re-aimed. 🟢 **The gate is a go/no-go, not a veto**, which could
+only be learned by running it on a sweep that deserved to run. It also stopped **four**
+false "new" claims this pass. 🔴 **`SafeExamBrowser` had been in this base `65` times and
+never on a shelf**; `academic-innovation/django-lti` `63` times. 🔵 Filing debt now **`27`
+addresses across two passes** (`584-C`).
+
+### 🟢 Closed, and the instruments that did it
+
+| Gap | Verdict |
+|---|---|
+| **`583-C`** | 🟢 **CLOSED, second branch.** `ingest/address-disposition.sh` committed — a shell-only replica of the ledger's FILED/UNFILED/NEW logic. It **runs here** and produced every token-check in this pass. 🔴 First branch re-tested and **still denied** (`"Code from External"`). |
+| **`583-D`** | 🟢 **CLOSED.** Seven publishers enumerated with each one's scope; current-year spread **`3.0×`** (USD `3.7`–`11` bn). 🔵 Quote **USD `3.7`–`11.4` bn, publisher named.** The false floor came from treating **aggregator compilations as publishers** — they are derived. |
+| **`583-G`** | 🟢 **CLOSED.** Trends filed at the `^## <n>. ` form; the duplicate `## 36.` this pass itself created was caught and demoted. Counter verified by command: **`40` trends, `1`–`40`, no gaps, no duplicates.** |
+| **`583-F`** | 🟢 **CLOSED by refutation** — see above. |
+| **`583-A`** | 🟢 **VALIDATED AND EXTENDED** — see above. |
+
+### 🟢 Four new jurisdictions, and the Philippines is now the cleanest reference engagement in the base
+
+🟢 **Philippines:** **DepEd Order No. `003`, s. `2026`** — *Foundational Guidelines on AI in
+Basic Education* (February 2026), human-centred and 🟢 **graduated by learner independence**,
+which is a **per-learner policy engine**, not a setting. DepEd's own stated motive: use had
+**outpaced** enforceable policy. Paired with a **Google for Education programme covering
+> `1` million educators** (tiers including *"AI Mastery"* — Gemini + prompt engineering) and
+**Project AGAP.AI** (ASEAN Foundation + Google.org, up to **`1.5` M participants in 2026**,
+launched by President Marcos in January). A **master plan is still in preparation** as of
+August 2026 — the window where an architecture becomes the default.
+🆕 **Türkiye** (MEB AI-in-education policy document + action plan, YEĞİTEK's new AI & Big
+Data directorate, the 2026 **YAZEK** ethics-declaration system — 🔴 but the 2026–27 circular
+to all `81` provinces **does not mention AI**, an informed gap). 🆕 **Thailand** (MoE × AIS
+Academy, **`5,855` teachers → `430,000` students**, `≥10` M citizens AI-skilled by 2570 —
+🔴 no official policy document located, and minister attribution conflicts between sources).
+🆕 **Bangladesh** (**UGC** drafting a national policy for universities, British
+Council-funded, BUET/AIUB — 🔴 **higher education only**, nothing at school level).
+🟢 **Native-language and per-jurisdiction legs: `17 of 17` productive across three passes.**
+
+### 🔴 Nineteenth consecutive nil on the mandated legs — and a reclassification
+
+`4` global + `3` regional mandated legs → **`0` new addresses**; every candidate already
+filed, checked by token first. 🔴 The **APAC region-level leg returned enterprise AI only**,
+consistent with `580-F`'s retirement of it. 🟢 **But the legs produced `9` usable intel
+tokens** — `134` AI bills across `31` states (March 2026); `$169` M in **FIPSE** awards
+(January 2026); **Gallup** (April 2026) `>60 %` of college students using AI weekly against
+~half of institutions discouraging it; the **European Commission's updated ethical
+guidelines on AI in education (June 2026)**; **`€25.4` M** in EU digital-skills grants; the
+**UK's `£200` M+** AI adoption commitment; and the LATAM figures (**`92 %`** of students,
+**`79 %`** of faculty, `29` universities, February 2026). 🔵 **So the nineteen-pass nil is a
+mis-grading: these are demand-intelligence legs being scored as supply legs.** They have
+never found repositories and they reliably find figures and instruments.
+
+### Registered
+
+| Gap | Statement and prescription |
+|---|---|
+| 🆕 **`584-A`** | **`583-B` is aimed at the wrong channel.** The only false claim of three fell to `grep`; the two needing search both survived. **Prescription:** two-stage audit — `grep` the curated pages for the claim's own vocabulary against **every clause** first, spend search budget second. `50`+ claims remain unswept. |
+| 🆕 **`584-B`** | **Shelf→trend propagation is unguarded.** `Trend 36` and its falsifying row sat `158` lines apart in one repository. **Prescription:** any trend containing a universal must `grep` every curated page for its own subject terms **before** being written, and record the check in the trend body. |
+| 🆕 **`584-C`** | **Filing debt is `27` addresses across two passes and growing faster than it is paid.** **Prescription:** spend a pass paying it down with `ingest/address-disposition.sh` rather than opening a new axis; a `36×` re-find measures wasted passes, not supply. |
+| 🆕 **`584-D`** | **There is no licensed open-source proctoring platform, and `150` repositories disguise it.** **Prescription:** quote proctoring as **`SafeExamBrowser` (MPL-2.0) + a custom agent**, never "adopt an open-source proctoring platform"; test the unlicensed-at-the-head pattern on `topic:plagiarism` and `topic:academic-integrity`. |
+| 🆕 **`584-E`** | **`Trend 39` has a mechanism and two data points.** **Prescription:** **pre-register** the predicted agent share from whether a layer has a published spec, then measure — `topic:scorm` (specified) against `topic:iep` / `topic:truancy` (not). Without a prediction first it stays a post-hoc story. |
+| 🆕 **`584-F`** | **Four new jurisdictions rest entirely on secondary sources.** DepEd Order `003`, Türkiye's YAZEK, Thailand's AIS partnership and Bangladesh's UGC initiative all come from press/aggregator material. **Prescription:** mark each row's source class in the row, treat unconfirmed instrument numbers as **unquotable in a proposal**, and escalate `583-E`'s allowlist request — it now blocks **eight** findings. |
+
+
 ## Pass 583 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE SWEEP `p582` COMMISSIONED WAS BUILT ON A FALSE PREMISE, AND ITS OWN FIRST STEP REFUTED THE CLAIM THAT COMMISSIONED IT: `29 OF 33` INTEGRATION-AXIS ADDRESSES WERE ALREADY IN THIS BASE, `18` OF THEM SITTING IN THE APPEND-ONLY HISTORY, ONE RE-FOUND `15` TIMES. 🟢 THAT ONE — `jupyterhub/ltiauthenticator`, BSD-3-CLAUSE, LTI 1.3, PUSHED `2026-10-05` — WITHDRAWS THE "NO MAINTAINED PERMISSIVE LTI 1.3 LIBRARY" GAP `p582` FILED AS LOAD-BEARING. 🟢 THE SUPERLATIVE AUDIT (`p582`'s 4TH PRIORITY) REFUTED A SECOND CLAIM ON ITS FIRST RUN. 🟢 FOUR NEW JURISDICTIONS AND KOREA'S REVERSAL QUANTIFIED AT `34.2 % → 5.2 %`. 🔴 THE PUBLISHED 2026 MARKET FLOOR IS `2.6×` TOO HIGH. 🔴 EIGHTEENTH NIL ON THE MANDATED LEGS. 🟢 `580-C` AND `580-E` CLOSED. SEVEN REGISTERED (`583-A`…`583-G`).**
 
 ### 🔴 The central result: a prescription's premise was never checked

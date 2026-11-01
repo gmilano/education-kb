@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p584` — `2026-11-01` — **🔴 THE SECTOR-STANDARD EXAM LOCKDOWN CLIENT HAS BEEN IN THIS FILE `65` TIMES AND NEVER ON A SHELF: `SafeExamBrowser` (MPL-2.0, `361★`, ETH ZÜRICH). 🔴 `Trend 36` WITHDRAWN ONE PASS AFTER IT WAS FILED — `sakaiproject/sakai` (ECL-2.0, `1,240★`) SATISFIES ITS OWN STATED FALSIFIER AND WAS ALREADY ON `repos/foundations.md`. 🟢 THE PYTHON LTI 1.3 GAP STANDS AND IS NOW A MEASURED *FAILED RE-HOMING* — TWO DETACHED COPIES, BOTH DEADER THAN THE ORIGINAL.**
+
+🔵 **Token-check first (`583-A`), `15` addresses:** **`5` FILED**, **`6` UNFILED**,
+**`4` NEW**. It stopped two false "new" claims — `Selleo/mentingo` (`689` history mentions)
+and `dmitry-viskov/pylti1.3` (`297`).
+
+🟢 **Promoted to `repos/foundations.md`:**
+
+| repo | grant (byte-read) | ★ | pushed | region | note |
+|---|---|--:|---|---|---|
+| [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🟡 **MPL-2.0** (`16,726 B`) | **361** | `2026-10-30` | EMEA | 🔴 **UNFILED `65×` — the largest filing miss this pass found.** ETH Zürich; sector-standard exam lockdown. 🟡 File-level reciprocity: keep custom logic in separate files |
+| [academic-innovation/django-lti](https://github.com/academic-innovation/django-lti) | 🟢 **MIT** (`1,098 B`, *"Regents of the University of Michigan"*) | 26 | `2026-10-28` | North America | 🔴 **UNFILED `63×`.** Maintained LTI Advantage for Django — **narrows a gap this base published four ways** |
+| [sakaicontrib/attendance](https://github.com/sakaicontrib/attendance) | 🟢 **ECL-2.0** (`11,120 B`) | 14 | `2026-09-01` | North America | 🔴 unfiled `16×`. Extending the one permissive platform of record via its contrib channel |
+| [openHPI/LRS-Moodle](https://github.com/openHPI/LRS-Moodle) | 🟢 **MIT** (`1,122 B`, *"Hasso Plattner Institute"*) | 2 | `2025-10-16` | EMEA | 🆕 LRS for **H5P** exercises in Moodle — the one permissive artefact near the Moodle→LRS boundary |
+| [utfpr-cm-dacom-bcc/learning-analytics](https://github.com/utfpr-cm-dacom-bcc/learning-analytics) | 🟢 **MIT** (`1,075 B`) | 1 | `2026-05-22` | **LATAM** | 🆕 xAPI learning analytics from **UTFPR Campo Mourão, Brazil**. 🟢 Second live permissive LATAM-maintained component in this base |
+| [moehrlii/bitsygrader](https://github.com/moehrlii/bitsygrader) | 🟢 **BSD-3-Clause** (`1,494 B`) | 4 | `2026-09-29` | Global | 🆕 Autograding **Jupyter notebooks over LTI 1.3** |
+
+🔴 **The platform tier above `1,000★`, five axes, measured with denominators** — this is
+what withdrew `Trend 36`:
+
+`6` AGPL-3.0 (`frappe/lms` `3,360★` · `learnhouse` `2,438★` · `classroomio` `1,736★` ·
+`courselit` `1,291★` · `overhangio/tutor` `1,131★` · `hrshadhin/school-management-system`
+`1,152★`) · `3` GPL-3.0 (`Unifiedtransform` `3,003★` · `chamilo/chamilo-lms` `1,019★`) ·
+`1` GPL-2.0 (`course-tencent-cloud` `1,175★`) · 🟢 **`1` ECL-2.0 — `sakaiproject/sakai`
+`1,240★`, `2026-10-30`, permissive** · `2` MIT (`SWE-agent`, 🔴 not education — `Trend 29`;
+`4jean/lav_sms` `1,161★`, 🔴 cold `2024-03-06`).
+
+🔴 **The Python LTI 1.3 candidate, disposed of first-hand.**
+`CNIT-Organization/ltitoolkit` advertises *"PYPI Package — LTI 1.3 Advantage toolkit for
+Python"*, MIT, pushed `2026-08-05` — and is **a detached copy of the cold upstream**:
+`fork = false`, created `2026-06-04`, LICENSE byte-read `1,070 B` carrying 🔴 **"Copyright
+(c) 2019 Dmitry Viskov"**, `pyproject.toml` renamed **`ff-ltitoolkit`**, README stating
+*"Published via Git (no PyPI required)"* against its own description, `0★`.
+`pymsglobal/pylti1.3` is a second copy, **created and abandoned the same day**
+(`2025-09-19`, `2★`). 🟢 **Two failed re-homings make this a demonstrated unmet maintenance
+need, which is stronger evidence than an absence** — see `compose/patterns.md` `P-584-D`.
+
+🔵 **Channel note:** `gh api search/repositories` answers `200`; 🔴 **`gh api
+repos/{owner}/{name}` answers `403`** in this session, so `fork` is readable only from the
+*search* payload and `parent`/`source` not at all. Lineage above was therefore established
+from **licence-text provenance and package identity**, not from the fork graph.
+
+
 ## 🆕 `2026-11-01` — `p583` — **`538` repositories on the four integration axes: `4` new, `18` promotable out of this file, and the whole world's `lti-provider` topic is `22` repositories**
 
 🟢 **Axes swept singly** with the corrected form (`p582`'s first priority), each with its

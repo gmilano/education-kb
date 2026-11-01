@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p584` — `2026-11-01` — **🔴 A TREND FILED ONE PASS AGO IS WITHDRAWN BY A ROW THAT WAS ALREADY ON THE SHELF BELOW IT: `Trend 36` SAID THE PLATFORM TIER IS "COPYLEFT WITHOUT EXCEPTION" AND SUPPLIED ITS OWN FALSIFIER, WHICH `sakaiproject/sakai` (ECL-2.0, `1,240★`) HAD ALREADY SATISFIED ON `repos/foundations.md`. 🟢 `583-F` REFUTED AT `41×`. 🟢 `583-A`'s GATE CLEARED A SWEEP FOR THE FIRST TIME. 🟢 `583-C`, `583-D`, `583-G` CLOSED. 🔴 NINETEENTH NIL. SIX REGISTERED (`584-A`…`584-F`).**
+
+🔵 **Channel table, run first (`569-B`'s standing row).**
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories -f q='topic:…'` ×8 axes | 🟢 **`1,124` repositories with denominators** — `sis` `141`, `student-information-system` `180`, `gradebook` `125`, `proctoring` `150`, plus `5` platform axes above `1,000★` |
+| 🟢 `gh api` search, `repo:owner/name` | 🟢 resolves `license.spdx_id` + `stargazers_count` + `pushed_at` + `archived` + **`fork`** in one call |
+| 🔴 `gh api repos/{owner}/{name}` | 🔴 **`403` — "GitHub access to this repository is not enabled for this session"**, 🆕 **new this pass**; `parent`/`source` therefore unobtainable, and lineage must come from licence text + package identity |
+| 🟢 fabricated control on the search channel | 🟢 **DISCRIMINATING** — `422 Validation Failed` against `200`, so "absent" is a usable signal |
+| 🟢 `curl` → `raw.githubusercontent.com`, grants | 🟢 **`15` grants byte-read**, every byte figure piped to `wc -c`; **zero `NONE`** among shelved rows |
+| 🟢 `ingest/address-disposition.sh` (**committed this pass**) | 🟢 **RUNS** — `64` addresses dispositioned across three batches; this is `583-C`'s second branch and it is the instrument behind every token-check below |
+| 🔴 `python3 -I ingest/address-ledger.py --debt` | 🔴 **DENIED again — *"Reason: [Code from External]"***, the `576-G` per-invocation denial. Reproduced deliberately to confirm `583-C`'s first branch remains closed |
+| 🟢 `WebSearch`, native-language / per-jurisdiction ×4 | 🟢 **`4` new jurisdictions** (Türkiye, Thailand, Bangladesh, + Philippines deepened) — **`17 of 17` legs productive across three passes** |
+| 🔴 `WebSearch`, `4` mandated global + `3` mandated regional | 🔴 **`0` new addresses — NINETEENTH consecutive nil**; 🟢 but **`9` usable intel tokens**, which reclassifies the channel |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403`**, real and fabricated alike — the run prompt's mandated verifier still **certifies nothing** |
+| 🔴 primary legal / ministry hosts | 🔴 not attempted this pass; `583-E` stands and now constrains **eight** findings |
+
+### 🟢 Closed this pass
+
+| Gap | Verdict |
+|---|---|
+| **`583-F`** | 🟢 **CLOSED BY REFUTATION.** Its own prescription ("test before generalising") was correct and the generalisation failed: `38 / 483` education-relevant addresses are agent-shaped on the school-operations axes (`7.9 %`) against `1 / 538` on the integration axes (`0.19 %`) — **`41×`**. Filed as `Trend 39` with a mechanism: agent supply appears where the layer has **no specification**. |
+| **`583-C`** | 🟢 **CLOSED, second branch.** `ingest/address-disposition.sh` committed — shell-only FILED/UNFILED/NEW disposition, no Python. 🔴 First branch (execution permission for `ingest/*.py`) **remains denied**, re-tested this pass. |
+| **`583-D`** | 🟢 **CLOSED.** Publisher set enumerated at **seven** with each one's scope; current-year spread **`3.0×`** (USD `3.7`–`11` bn). 🔵 Quote **USD `3.7`–`11.4` bn, publisher named**. Mechanism of the false floor identified: aggregator compilations are **derived, not publishers**. |
+| **`583-G`** | 🟢 **CLOSED.** Three trends filed at the `^## <n>. ` form; the duplicate `## 36.` this pass created was caught and demoted, so the counter reads **`40` trends, `1`–`40`, no gaps, no duplicates** — verified by command. |
+| **`583-A`** | 🟢 **VALIDATED AND EXTENDED.** Run before every sweep this pass. 🟢 **First pass where the gate *cleared* a sweep** (`29` NEW > `9` UNFILED) rather than aborting one — so it is a **go/no-go, not a veto**. It also stopped **four** false "new" claims (`academico`, `mentingo`, `pylti1.3`, `education-agent-skills`). |
+| `Trend 36` (`p583`) | 🔴 **WITHDRAWN and restated.** Refuted from this base's own shelf, not from search. |
+
+### 🔴 Registered this pass
+
+| Gap | Statement and prescription |
+|---|---|
+| 🆕 **`584-A`** | **`583-B`'s prescription is aimed at the wrong channel.** It says re-measure superlatives *"against the search channel"*; of three claims audited, **the only false one fell to a single `grep` of this base's own curated pages**, while the two that needed search both survived. **Prescription:** make the audit two-stage — (1) `grep` the curated pages for the claim's own subject vocabulary and test every hit against **every clause** of the claim; (2) only then spend search budget. Stage (1) is free. `50`+ claims remain unswept. |
+| 🆕 **`584-B`** | **A trend can be refuted by a shelf in the same repository, and nothing checks that direction.** `Trend 36` and the `sakaiproject/sakai` row that falsifies it sat `158` lines apart. `Trend 16` covers history→shelf propagation; **shelf→trend is unguarded.** **Prescription:** when filing a trend that contains a universal ("without exception", "none exists", "only"), `grep` every curated page for the trend's own subject terms **before** the trend is written, and record the check in the trend body. |
+| 🆕 **`584-C`** | **The filing debt is now `27` known addresses across two passes and is growing faster than it is being paid.** `p583` left `18` UNFILED integration-axis addresses; this pass adds `9`, of which `4` are still unshelved. **Prescription:** spend one pass paying the debt down with `ingest/address-disposition.sh` rather than opening a new axis — the instrument exists now, and a `36×` re-find is a measurement of wasted passes, not of supply. |
+| 🆕 **`584-D`** | **There is no licensed open-source proctoring platform, and `150` repositories disguise that.** The credible platforms are unlicensed; the Moodle plugin is `NOASSERTION`. **Prescription:** state in engagement material that proctoring is **`SafeExamBrowser` (MPL-2.0) integration plus a custom agent**, and never quote "adopt an open-source proctoring platform". Test whether the same unlicensed-at-the-head pattern holds on `topic:plagiarism` and `topic:academic-integrity`. |
+| 🆕 **`584-E`** | **`Trend 39` has a mechanism and only two data points.** Agent share tracks the **absence of a specification** (`0.19 %` where LTI/xAPI/QTI exist, `7.9 %` where nothing is specified). **Prescription:** before the next sweep, **predict** the agent share from whether the layer has a published spec, then measure — one specified axis (`topic:scorm`) and one unspecified (`topic:iep`, `topic:truancy`). A pre-registered prediction is the only way this stops being a post-hoc story. |
+| 🆕 **`584-F`** | **Every 2026 instrument this pass named is secondary-sourced, and four jurisdictions now rest on news reporting.** DepEd Order `003` s. `2026`, Türkiye's YAZEK system, Thailand's AIS partnership and Bangladesh's UGC initiative were all obtained from press and aggregator material; `583-E` means no primary host is reachable. **Prescription:** mark every such row with its source class in the row itself, and treat an unconfirmed instrument number as **unquotable in a proposal** until a primary document is obtained — the allowlist request in `583-E` is now the blocking dependency for eight findings. |
+
+### 🟡 Carried, and declared rather than hidden
+
+| Gap | Note |
+|---|---|
+| `583-B` | 🟡 **Advanced, not closed.** Three claims audited of `50`+; two channels compared; re-aimed by `584-A`. The remaining claims are untouched. |
+| `583-E` | 🔴 **STANDS and widened** — now the binding constraint on **eight** findings (Korea's dates, Indonesia's article text, Vietnam's periods, the EU high-risk date, plus the four new jurisdictions). 🔵 Should be a network-allowlist request, not a recurring action item. |
+| `gate-census-currency` / `gate-union-currency` | 🔴 Not re-derived this pass; this pass writes to all eight shelves plus the register, so their published triples are further stale. Declared. |
+| `make hooks` / `ingest/validate-pages.py` | 🔴 **Not run — same `"Code from External"` denial.** Frontmatter, table-shape, placeholder-row and trend-counter checks were replicated **by hand/shell** and are marked as replicas. 🟢 The trend-counter replica is now a real command and it caught a real duplicate. |
+| the `83 %` EDUCAUSE figure · UAE standalone AI subject · *"Students First Act"* | 🔴 All remain **unusable**. 🆕 Joined by the **"ECAIR `40`-hour / `<18 %` completion"** and **"$`3` bn bet"** Philippines figures — single-source developer-blog, rejected. |
+| LATAM 2026 regulatory instrument | 🔴 **Informed gap, declared:** no 2026 education-specific AI *regulatory* instrument found for any LATAM jurisdiction this pass, and nothing on national K-12 policy or the regional vendor landscape. The region's intelligence is adoption-and-governance-gap shaped, which is itself the sales thesis. |
+| APAC region-level leg | 🔴 **Nil again on education** (enterprise AI only) — consistent with `580-F`'s retirement of the leg. Declared rather than left silent. |
+
+
 ## 🆕 `p583` — `2026-11-01` — **🔴 THE PREMISE OF A PRESCRIPTION IS AN UNCHECKED CLAIM: `p582` COMMISSIONED A FOUR-AXIS SWEEP BECAUSE THE INTEGRATION AXIS WAS "NEVER SWEPT", AND `29 OF 33` ADDRESSES WERE ALREADY HERE — `18` IN THE APPEND-ONLY HISTORY, ONE RE-FOUND `15` TIMES. 🟢 THAT ONE WITHDRAWS A GAP `p582` FILED AS LOAD-BEARING. 🟢 THE SUPERLATIVE AUDIT REFUTED A SECOND CLAIM ON ITS FIRST RUN. 🟢 `580-C` CLOSED AT `1` DEFECT RATHER THAN `40`; `580-E` CLOSED. 🔴 EIGHTEENTH NIL ON THE MANDATED LEGS. SEVEN REGISTERED (`583-A`…`583-G`).**
 
 🔵 **Channel table, run first (`569-B`'s standing row).**

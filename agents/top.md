@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p584 — 2026-11-01 — **`583-F` refuted at `41×`: the "education integration is a library tier, the agent is always the build" rule does NOT generalise — `38` agent-shaped artefacts in `483` education-relevant addresses on four axes never queried in `583` passes, against `1 in 538` on the integration axes. And `FILED = 0`: not one of the `38` had ever reached a curated page, one after `36` history mentions.**
+
+🔵 **`583-A` was run first, as it now requires, and this is the first pass where its gate
+*cleared* a sweep instead of aborting one.** The token-check published before any claim:
+
+| disposition | addresses | note |
+|---|--:|---|
+| 🟢 FILED on a curated page | **`0`** | 🔴 the entire tier was unshelved |
+| 🔴 UNFILED — append-only history only | **`9`** | re-found up to **`36×`** |
+| 🆕 NEW to this base | **`29`** | |
+
+🟢 **`NEW (29) > UNFILED (9)`, so the sweep was correctly aimed and proceeded.** `p583`'s
+case was the inverse (`4` new against `18` unfiled) and its sweep should have been
+re-aimed. 🟢 **The gate is therefore two-sided — it is a go/no-go, not a veto** — which is
+new information about `583-A` itself and could only be learned by running it on a sweep
+that deserved to run.
+
+### 🔴 The central measurement: `583-F`'s generalisation is refuted
+
+`583-F` prescribed testing the integration axis's `1-in-538` agent ratio on `topic:sis`,
+`topic:gradebook` and `topic:proctoring` **before generalising it**. All three were swept,
+plus `topic:student-information-system`. **`596` rows, `586` unique addresses, every
+denominator first-hand:**
+
+| axis | repositories | education-relevant | agent-shaped |
+|---|--:|--:|--:|
+| `topic:sis` | `141` | `64` | `11` |
+| `topic:student-information-system` | `180` | **`180`** | `13` |
+| `topic:gradebook` | `125` | **`125`** | `7` |
+| `topic:proctoring` | `150` | `114` | `19` |
+| **total (deduplicated)** | **`586`** | **`483`** | **`38`** |
+
+🔴 **`38 / 483` = `7.9 %` against `1 / 538` = `0.19 %` on the integration axes — a `41×`
+difference.** The "assessment-interchange is a library tier and the agent is always the
+build" rule is **not a property of education integration**. It is a property of the
+*assessment-interchange layer alone*, and `583-F`'s instruction to test before
+generalising was correct to the point of saving a published rule from being wrong in
+engagement material.
+
+### 🟢 Shelved — the agent tier of the SIS / gradebook / proctoring layer
+
+Every grant below **byte-read first-hand** this pass (`curl` → `raw.githubusercontent.com`,
+byte counts piped to `wc -c`); **zero `NONE`** among the shelved rows. `pushed_at` carried
+on every row per `580-E`.
+
+| agent | address | grant (byte-read) | ★ | pushed | region | what it is |
+|---|---|---|--:|---|---|---|
+| **NTU COOL MCP** | [PsychQuant/che-ntucool-mcp](https://github.com/PsychQuant/che-ntucool-mcp) | 🟢 **MIT** (`1,066 B`) | 1 | `2026-10-18` | APAC | 🔴 **UNFILED `19×` before this pass.** MCP server over **NTU COOL** (National Taiwan University's Canvas): `10` tools reading courses, assignments and submissions. 🟢 The attach-boundary pattern applied to a *named national university's* LMS tenancy |
+| **Canvas LMS skill** | [timdrichards/canvas-lms-skill](https://github.com/timdrichards/canvas-lms-skill) | 🟢 **MIT** (`1,069 B`) | 1 | `2026-07-30` | Global | 🔴 **UNFILED `11×`.** A Claude Code skill for the Canvas LMS API — rosters, assignments, quizzes. The skill-shaped sibling of the MCP row above |
+| **Google AI Classroom** | [wongcyrus/Google-AI-Classroom](https://github.com/wongcyrus/Google-AI-Classroom) | 🟢 **MIT** (`1,062 B`) | 0 | `2026-10-28` | Global | 🆕 Edge-to-cloud **multimodal** agent for smart classrooms **and exam invigilation** — the first row in this base that puts invigilation and classroom sensing in one agent |
+| **LastBell** | [noestudios/lastbell](https://github.com/noestudios/lastbell) | 🟢 **MIT** (`1,067 B`) | 1 | `2026-10-16` | North America | 🔴 **UNFILED `10×`.** Self-hosted **ParentVUE + Canvas** grade and assignment monitor with whole-family alerts. 🟢 **Region placed from the product** — ParentVUE is a US K-12 parent portal. 🟢 **A guardian-facing agent, a tier this base had no row for** |
+| **Cubite MCP** | [amirtds/cubite-mcp](https://github.com/amirtds/cubite-mcp) | 🟢 **MIT** (`1,063 B`) | 0 | `2026-09-23` | Global | 🆕 MCP server for Cubite LMS (hosted Open edX). Third attach-boundary row, third distinct LMS |
+| **Carreau** | [a8naaijetvi2lunk/carreau](https://github.com/a8naaijetvi2lunk/carreau) | 🟢 **MIT** (`1,069 B`) | 0 | `2026-10-01` | EMEA | 🆕 **Region placed from the language of the artefact** — *"QCM surveillés sur téléphone pour la classe : QR code renouvelé"*. Phone-based proctored multiple-choice with a rotating QR code; a low-infrastructure invigilation design |
+
+🔴 **Declared and not shelved — the unshippable half of the tier.** The most
+*architecturally* interesting proctoring artefacts carry no grant at all:
+`aryashinod/Multi-Agent-Online-Exam-Invigilation-System` (**no licence**, `5` specialised
+agents — identity, gaze, phone detection) and `umair801/sis-agent` (**no licence**,
+FastAPI + LangGraph + Claude + React + Supabase). 🔵 Both are **reference architectures to
+read, never dependencies to ship** — and they are why the `7.9 %` figure must not be read
+as `7.9 %` of *shippable* supply.
+
+### 🔴 `topic:sis` is a homonym axis, and the long form is the clean one
+
+`77 of 141` `topic:sis` rows are **not education at all**: *Sovereign Intelligence System*,
+*Starlight Intelligence System*, **Safety Instrumented System** (industrial AI testing),
+plus epidemic simulation and a NetLogo model. **`55 %` pollution.**
+🟢 **`topic:student-information-system` is `0 %` polluted and `180` rows — larger than the
+short form.**
+
+🔵 `Trend 17` of this base says tag variants split a capability's population *and the short
+form is the empty one*. 🟢 **Here the short form is neither empty nor smaller — it is
+polluted**, and the long form is both clean and bigger. Filed as `Trend 40`; the practical
+rule is that an acronym axis must be measured for homonyms before its denominator is
+quoted, because `141` would have been reported as education supply and `55 %` of it is not.
+
+
 ## p583 — 2026-11-01 — **the integration axis was never unswept, it was unshelved: `538` repositories on the four axes `p582` called never-swept, `29 of 33` already in this base, and the one agent artefact on the axis**
 
 🔵 **Method note (unchanged channel, re-attested per `580-G` before use).** Every figure
