@@ -4,6 +4,47 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p581 — 2026-11-01 — **the media and monitoring layers a vertical deployment needs, and the licence shape of the SIS/ERP tier re-confirmed as uniformly copyleft**
+
+🔵 **The mandated vertical leg (`open source platform education ERP CRM MIT Apache`) ran
+and returned nothing new** — `OpenEduCat` (LGPL-3.0), `RosarioSIS` (GPL-2.0), `openSIS`
+(GPL), `Gibbon`, `ERPNext`/`frappe/education` (GPL-3.0), `OpenOLAT`. 🔴 **All already
+shelved, and the structural fact this page has recorded for many passes reproduces
+exactly: there is no permissively licensed student-information system.** The administrative
+tier of education software is copyleft end to end; `Fedena`-as-Apache-2.0 appears in one
+vendor comparison table and **is not corroborated** — do not quote it.
+
+🟢 **What that means for a studio engagement, unchanged and worth restating:** you do not
+replace the SIS. You **integrate against it** and keep proprietary work on the permissive
+side of a seam — `openedx/XBlock` and `openedx/codejail` (both Apache-2.0) inside Open edX
+(AGPL-3.0), `tsugiproject/tsugi` (Apache-2.0) over LTI into Moodle (GPL-3.0),
+`jcputney/scorm-again` (MIT) as the SCORM runtime.
+
+### 🟢 New customisable layers, verified first-hand `2026-11-01`
+
+| Platform / library | Licence | Stars | Region | Where it sits in a vertical deployment |
+|---|---|--:|---|---|
+| [YaoFANGUK/video-subtitle-extractor](https://github.com/YaoFANGUK/video-subtitle-extractor) | 🟢 **Apache-2.0** | **9,680** | APAC | 🟢 **Lecture-archive ingestion.** Institutions sitting on years of recorded lectures with **captions burned into the video** have no caption file to fetch; this is the only permissive route to text. The precondition for search, tutoring or quiz generation over an existing archive. |
+| [nexmoe/VidBee](https://github.com/nexmoe/VidBee) | 🟢 **MIT** | **11,026** | APAC | Transcription + **speaker diarisation** — separates lecturer from student contributions, which is what makes seminar and viva recordings usable rather than just lectures. |
+| [smacke/ffsubsync](https://github.com/smacke/ffsubsync) | 🟢 **MIT** | **7,929** | North America | Caption re-alignment. Required for **accessibility compliance** on a re-encoded archive, where timings drift and a misaligned caption track fails audit. |
+| [ing-bank/popmon](https://github.com/ing-bank/popmon) | 🟢 **MIT** | **512** | EMEA | 🟢 **Monitoring layer for a deployed tutor or grader.** ING Bank provenance means it was built to be shown to a supervisor — the posture an exam board or ministry needs. |
+| [IFCA-Advanced-Computing/frouros](https://github.com/IFCA-Advanced-Computing/frouros) | 🟢 **BSD-3-Clause** | **260** | EMEA | Drift detection on learner-model outputs. Public-institution provenance (Instituto de Física de Cantabria). |
+
+🔵 **Why the monitoring rows belong on a *verticals* page and not only on a repos page.**
+Under the EU AI Act timetable this base tracks, stand-alone education systems that grade
+work, screen applicants or supervise exams are Annex III high-risk with obligations from
+**2 December 2027** (embedded systems **2 August 2028**), and Article 50 transparency
+duties from **2 August 2026**. 🟢 **Post-market monitoring is a named obligation, and
+until this pass this base had no permissive component to satisfy it with.** `popmon` and
+`frouros` are not education-aware — that is the honest limit — but they are the
+statistical half, and they are MIT and BSD-3-Clause.
+
+🔴 **Still genuinely absent at the vertical layer**, searched and not found: an
+open-source **psychometrically defensible item generator** (calibration tooling exists —
+`catsim`, `EduCDM` — generation does not), and any **education-specific** runtime
+regression harness for a deployed tutor.
+
+
 # Vertical education platforms (customisable with AI on top)
 
 ## p580 — 2026-11-01 — **every platform on this page re-measured first-hand, and `5 of 10` have no usable licence verdict from the new channel**

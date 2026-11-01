@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p581 — 2026-11-01 — **the lecture-media tier this page never had: three new permissive libraries, plus the drift-detection primitives the trends page has called the industry's clearest hole**
+
+🟢 **Instrument unchanged and working:** `q=repo:owner/name` against
+`search/repositories` returns `license.spdx_id`, `stargazers_count`, `pushed_at`,
+`forks_count` and `archived` in one call. 🔴 **Correction to the sweep form, which is
+this pass's main result:** crossing two topics (`topic:X+topic:education`) returns
+`total_count = 0` — **six times out of six**. Education repos carry pedagogy topics,
+capability repos carry capability topics, and essentially nothing carries both. **Sweep
+one topic; filter licence and recency client-side.** See
+[`../agents/trending.md`](../agents/trending.md) for the full nil table.
+
+### 🟢 New: the lecture-media tier — transcript and caption infrastructure
+
+| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+|---|---|--:|---|---|---|---|
+| [YaoFANGUK/video-subtitle-extractor](https://github.com/YaoFANGUK/video-subtitle-extractor) | 🟢 **Apache-2.0** | **9,680** | 🟡 `2026-04-09` | APAC | 🟢 **yes** | 🟢 **Reads subtitles burned into the pixels** and emits SRT, fully local, no third-party API. **The only route into archived lecture and MOOC footage published with hard-burned captions** — where a caption-API fetch returns nothing. `982` forks. |
+| [jdepoix/youtube-transcript-api](https://github.com/jdepoix/youtube-transcript-api) | 🟢 **MIT** | **8,543** | `2026-10-30` | EMEA | 🟢 **yes** | Transcript and caption retrieval with translation. The cheapest path to text for any lecture already published with captions. `855` forks. |
+| [smacke/ffsubsync](https://github.com/smacke/ffsubsync) | 🟢 **MIT** | **7,929** | 🟡 `2026-07-24` | North America | 🟢 **yes** | FFT-based **re-alignment** of subtitles against audio. 🔵 The unglamorous row that makes the other two usable: a transcript whose timings drift is useless for seek-to-concept or clip extraction. |
+
+🔵 **Three libraries here, two agents on [`../agents/top.md`](../agents/top.md)** — the
+sweep returned five addresses and they are split by what they actually are, not padded
+to a quota on each page.
+
+### 🟢 New: drift detection — and the gap turns out to be specificity, not absence
+
+[`../intel/trends.md`](../intel/trends.md) has carried, for six passes, that *"a tutor in
+production still has no open-source way to detect that it has degraded"* and called it
+**the clearest unmet build opportunity in the industry**. A `topic:drift-detection` sweep
+(`1,308` repos) returns three addresses new to this base:
+
+| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+|---|---|--:|---|---|---|---|
+| [ing-bank/popmon](https://github.com/ing-bank/popmon) | 🟢 **MIT** | **512** | 🟡 `2026-01-09` | **EMEA** | 🟢 **yes** | Population-stability monitoring over Pandas/Spark frames. 🟢 **Owner is ING Bank N.V.** — built for a regulator-facing use, which is the posture an exam board needs. |
+| [IFCA-Advanced-Computing/frouros](https://github.com/IFCA-Advanced-Computing/frouros) | 🟢 **BSD-3-Clause** | **260** | 🟡 `2026-04-23` | **EMEA** | 🟢 **yes** | Concept- and data-drift detection library for ML systems. 🟢 **Instituto de Física de Cantabria** (Spain) — public research institution. |
+| [SeldonIO/alibi-detect](https://github.com/SeldonIO/alibi-detect) | 🔴 **NOASSERTION** | **2,554** | 🔴 `2025-12-11` | **EMEA** | 🔴 **no** | Outlier/adversarial/drift algorithms, Seldon Technologies (London). 🔴 **Highest-starred and the one to avoid**: licence unresolved by the detector *and* ~11 months stale. |
+
+🔵 **How to read this against the standing gap.** The gap was stated as *absence* and is
+really *education-specificity*: **nothing here knows what a learner model is**, so none of
+it detects "this tutor's explanations got worse". What `popmon` and `frouros` do give is
+the statistical layer — distribution shift on the feature and outcome streams a tutor
+already emits — which is the measurable half. 🟢 **Composed with `pykt-team/pykt-toolkit`
+(MIT, `456★`), whose knowledge-tracing predictions are exactly the distribution to
+monitor, this is the first buildable answer this base has recorded to its own hardest
+question.** Recipe on [`../compose/patterns.md`](../compose/patterns.md).
+
+🔵 **Regional note worth keeping:** all three drift rows are **EMEA-origin and two are
+named institutions** (a central bank subsidiary and a public physics institute). Region
+here is assigned from **owner identity**, not README language — the strongest placement
+signal available in this session, since `users/{login}` is `403` and maintainer
+`location` is unreachable.
+
+🔴 **Non-finding, recorded.** `topic:item-response-theory`, `topic:psychometrics` and
+`topic:computerized-adaptive-testing` returned **no rows not already on these shelves** —
+`catsim` (BSD-3-Clause, `153★`, live `2026-10-30`), `EduCDM` (Apache-2.0, `203★`, stale
+`2024-10-25`), `girth` (MIT, `127★`, stale `2022`), `pypsy` (MIT, `242★`, **dead since
+2018**). The psychometric-**item-generation** gap stands; psychometric *calibration* is
+shelved and permissive. These are different holes and the next pass should not merge them.
+
+
 # Foundational open source repos for education
 
 ## p580 — 2026-11-01 — **the foundations re-measured first-hand, and the field this page never had is the one that disqualifies rows: `42 of 265` shelf addresses are over a year stale**

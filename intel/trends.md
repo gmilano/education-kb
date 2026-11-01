@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p581 — 2026-11-01 — **three trend updates, one gap closed, one gap reshaped, and a measurement defect that retroactively explains four passes of empty sweeps**
+
+### 🟢 `Gap "lecture-video tooling remains unswept"` — CLOSED
+
+The sweep was run. **Five new permissive addresses**, concentrated almost entirely in one
+topic (`topic:subtitles`): `VidBee` (MIT, `11,026★`), `autoclip` (MIT, `9,898★`),
+`video-subtitle-extractor` (Apache-2.0, `9,680★`), `youtube-transcript-api` (MIT,
+`8,543★`), `ffsubsync` (MIT, `7,929★`).
+
+🔵 **But the gap closes with a correction to its own premise.** It was written as a search
+for **lecture-content generation**, and that is *not* what exists. What exists is a
+**transcript-and-caption toolchain**: recording → text → aligned text → clips. Nothing
+open-source authors instructional video. 🟢 The base's earlier instinct to not shelf
+`MoneyPrinterTurbo` as lecture tooling was right — **but `autoclip` is different and
+should be shelved**, because its own description names **课程 (courses)** as an input class
+alongside podcasts and interviews, and it carries `ai-agent` and `mcp` topics. **Repurposing
+an existing lecture is a real education capability; generating a fake one is not.**
+
+### 🔴 NEW `Trend` — the crossed-topic query form collapses, and it explains a four-pass miss
+
+🔴 **`topic:A+topic:education` returns `total_count = 0`. Six query forms, six zeroes** —
+`text-to-speech`, `accessibility`, `whisper`, `assessment+llm`, `llm-evaluation+education`,
+`edtech+license:mit`. Not sparse results: **empty**.
+
+🔵 **Cause is maintainer tagging, and it is structural.** Education projects tag pedagogy
+(`ai-tutor`, `edtech`, `education`); capability projects tag capability (`pptx`,
+`subtitles`, `ocr`, `drift-detection`). **The two populations barely intersect.**
+`DeepTutor` carries `ai-tutor` and no `video`. `ppt-master` carries `pptx` and no
+`education`.
+
+🟢 **This retroactively explains the base's own most expensive recorded miss.** The
+declared gap reads: *"`hugohe3/ppt-master` — MIT, `71,498★`, the largest permissively
+licensed repository anywhere in this KB — went unfound for four passes because every sweep
+filters on an education topic and it carries none."* **That was diagnosed as a coverage
+habit. It is actually a query-form defect**, which is a stronger and more fixable claim.
+🟢 **Correct form, now established:** one capability topic, `sort=stars`, filter
+`license.spdx_id` and `pushed_at` client-side. Confidence: **high — measured first-hand,
+14 topics, same session.**
+
+### 🟢 `Trend` UPDATE — the "no way to detect a degraded tutor" gap is reshaped, not closed
+
+Six passes have carried: *"A tutor in production still has no open-source way to detect
+that it has degraded — the clearest unmet build opportunity in the industry."*
+
+🟢 **`topic:drift-detection` (`1,308` repos) returns three addresses new to this base:**
+`ing-bank/popmon` (MIT, `512★`), `IFCA-Advanced-Computing/frouros` (BSD-3-Clause, `260★`),
+`SeldonIO/alibi-detect` (🔴 NOASSERTION, `2,554★`, stale `2025-12-11`).
+
+🔴 **The gap was mis-stated as absence. It is education-specificity.** Generic drift
+detection is permissive, maintained and composable; **none of it knows what a learner model
+is**, so none detects "this tutor's explanations degraded". 🟢 **What is now buildable is
+the measurable half** — distribution shift on the feature and outcome streams a tutor
+already emits — and composing `frouros` or `popmon` with `pykt-team/pykt-toolkit` (MIT,
+`456★`), whose knowledge-tracing predictions are precisely the distribution to monitor,
+gives this base **its first buildable answer to its own hardest question**. Recipe:
+[`../compose/patterns.md`](../compose/patterns.md).
+🔵 **Regional observation worth keeping:** all three drift rows are **EMEA-origin**, two
+owned by **named institutions** (ING Bank N.V.; Instituto de Física de Cantabria) — the
+strongest region-placement signal available here, since `users/{login}` is `403` and
+maintainer `location` is unobtainable by any route. 🔴 Do not build on `alibi-detect`
+despite it being the highest-starred: licence unresolved **and** ~11 months stale.
+
+### 🔴 The item-generation gap STANDS — and a near-miss worth recording
+
+🔴 **`topic:item-response-theory`, `topic:psychometrics` and
+`topic:computerized-adaptive-testing` returned no row not already shelved** — `catsim`
+(138 references in this base), `girth` (84), `EduCDM` (40), `Agent4Edu` (35), `pypsy` (19).
+🟢 **This pass drafted those as new finds and caught it by grepping the shelf before
+publishing.** That is `Trend 11`'s pathology — a closed gap re-published as a discovery —
+**intercepted pre-publication for the first time.** 🟢 **Recommend the grep-before-write
+check become standing practice**: `grep -ro "owner/name" --include=*.md .` costs nothing
+and is the only thing that caught this.
+
+🔵 **The gap is also narrower than previously written.** Psychometric **calibration and
+adaptive-test simulation** are shelved and permissive (`catsim` BSD-3-Clause, live
+`2026-10-30`; `EduCDM` Apache-2.0 but stale `2024-10-25`). **Item *generation* is the
+hole.** These are different absences and should not be merged again. 🔴 Also note the
+decay in that cohort: `pypsy` (MIT, `242★`) **last pushed 2018-11-16** — eight years dead
+and still carried; `girth` stale since 2022.
+
+### 🔵 Demand-side instrument: third consecutive nil, 19th for the global legs
+
+All eight mandated legs returned shelved intel. 🟢 **Two new tokens only:** the Council of
+Europe's **common repository for evaluating AI's effectiveness** (new to this base
+entirely, and it gives the **CoE Legal Instrument a second source** — narrowing a declared
+single-source gap), and the US Dept. of Education **AI grant-priority rule date,
+`13 April 2026`**. 🔴 **The prescribed web legs are now a regression test, not a source.**
+The method that still pays is per-jurisdiction querying in the jurisdiction's own language
+(`p575`, `p576`), unrun for three passes. **Next pass should run the language legs and skip
+two of the four English regional legs** — they have produced two tokens in three passes
+between them.
+
+🔴 **Unverifiable figure, flagged so it stops circulating:** `83 %` of institutions
+planning an AI teaching-assistant deployment, widely attributed to EDUCAUSE. **Could not
+be confirmed. Do not use.** Market sizing unchanged and vendor-only at six passes: quote
+**USD 10.6–12.5 bn (2026) → USD 42.48 bn (2030)** as a range, never a point.
+
+## Declared gaps — updated `2026-11-01` (`p581`)
+
+- 🟢 **CLOSED: lecture-media sweep.** Five permissive addresses shelved. **The replacement
+  gap is specific: nothing open-source *authors* instructional video**; the toolchain is
+  transcript, caption and clip.
+- 🔴 **RESHAPED: tutor-degradation detection.** No longer "nothing exists" — **nothing
+  *education-specific* exists**. `popmon` (MIT) and `frouros` (BSD-3-Clause) are the
+  statistical half. The education-aware layer is unbuilt and remains the best build
+  opportunity in this industry.
+- 🔴 **STANDS: psychometrically defensible item generation.** Searched three ways this
+  pass; every row returned was already shelved. Calibration ≠ generation.
+- 🔴 **STANDS: no primary EU legal text from this session.** `eur-lex.europa.eu` does not
+  resolve — a network-policy constraint. **This should be an allowlist request, not a
+  recurring action item.**
+- 🟡 **NARROWED: Council of Europe instrument** now two-source (both secondary); the
+  companion **common repository** is single-source and new.
+- 🔴 **STANDS: market sizing is vendor-only at six passes.** No independent estimate located.
+- 🔴 **NEW: `curl -sI` URL verification is inoperable in this environment.** Every
+  `github.com` URL returns `403` through the session proxy, including live repositories, so
+  a `403` cannot be distinguished from a 404. **The run prompt mandates this broken check.**
+  Use `q=repo:owner/name` against `search/repositories`, which returns existence plus
+  licence, stars, forks, `pushed_at` and `archived` in one `200`.
+- 🔴 **NEW: region remains unobtainable for individually-owned repos.** Four of this pass's
+  seven rows were placed from **owner identity** (ING Bank, IFCA) or **description
+  language** (zh-first). `users/{login}` is `403`, so maintainer `location` is unreachable.
+  **Read "Global" as *provenance unknown*, never as *geographically spread*.**
+- 🔵 **Next pass, in priority order:** (1) run the per-jurisdiction native-language demand
+  legs, unrun for three passes and the only demand method still paying; (2) sweep remaining
+  single capability topics — `topic:pptx`, `topic:ocr`, `topic:pdf`, `topic:speech-to-text`,
+  `topic:diagrams` — now that the correct query form is established; (3) audit the shelf for
+  dead rows, `pypsy` (8 years) being the proof the problem is real.
+
+
 ## 🆕 `p580` — `2026-11-01` — trends 33–35, filed at `##` with the counter's own `^## <n>. ` form, plus the `579-D` falsifier result
 
 ### 🟢 `Gap 579-D` RUN: `Trend 32` SURVIVES ITS FALSIFIER — and the falsifier is mis-specified

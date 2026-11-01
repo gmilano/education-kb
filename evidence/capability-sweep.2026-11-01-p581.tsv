@@ -1,0 +1,15 @@
+repo	licence_spdx	stars	forks	pushed_at	archived	region	region_basis	shelf_status	sweep_topic
+nexmoe/VidBee	MIT	11026	863	2026-10-31	false	APAC	bilingual zh/en description; douyin/xiaohongshu-class target set absent but zh-first README	NEW	topic:subtitles
+zhouxiaoka/autoclip	MIT	9898	1758	2026-10-31	false	APAC	zh-only description; douyin/xiaohongshu/bilibili target platforms	NEW	topic:subtitles
+YaoFANGUK/video-subtitle-extractor	Apache-2.0	9680	982	2026-04-09	false	APAC	zh-first description; hardsub OCR for CJK subtitle burn-in	NEW	topic:subtitles
+jdepoix/youtube-transcript-api	MIT	8543	855	2026-10-30	false	EMEA	maintainer handle jdepoix, de-locale project history	NEAR-NEW (1 prior mention)	topic:subtitles
+smacke/ffsubsync	MIT	7929	329	2026-07-24	false	North America	maintainer Stephen Macke, US academic provenance	NEW	topic:subtitles
+ing-bank/popmon	MIT	512	35	2026-01-09	false	EMEA	ING Bank N.V., Netherlands — institutional owner	NEW	topic:drift-detection
+IFCA-Advanced-Computing/frouros	BSD-3-Clause	260	21	2026-04-23	false	EMEA	Instituto de Fisica de Cantabria, Spain — institutional owner	NEW	topic:drift-detection
+SeldonIO/alibi-detect	NOASSERTION	2554	-	2025-12-11	false	EMEA	Seldon Technologies, London	NEW but STALE+licence-unresolved	topic:drift-detection
+douglasrizzo/catsim	BSD-3-Clause	153	37	2026-10-30	false	LATAM	maintainer Douglas De Rizzo Meneghetti, Brazil	ALREADY SHELVED (138 refs)	topic:computerized-adaptive-testing
+bigdata-ustc/EduCDM	Apache-2.0	203	66	2024-10-25	false	APAC	Univ. of Science and Technology of China	ALREADY SHELVED (40 refs)	topic:item-response-theory
+bigdata-ustc/Agent4Edu	NONE	100	17	2026-09-29	false	APAC	Univ. of Science and Technology of China	ALREADY SHELVED (35 refs)	topic:computerized-adaptive-testing
+inuyasha2012/pypsy	MIT	242	-	2018-11-16	false	Global	provenance unknown	ALREADY SHELVED (19 refs) + DEAD 8yr	topic:item-response-theory
+eribean/girth	MIT	127	-	2022-09-09	false	Global	provenance unknown	ALREADY SHELVED (84 refs) + STALE 4yr	topic:item-response-theory
+DozenTwelve/Papermorph	MIT	1039	143	2026-11-01	false	Global	provenance unknown	ALREADY SHELVED (95 refs)	topic:scorm

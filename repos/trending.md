@@ -4,6 +4,58 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `2026-11-01` — `p581` — **capability sweep: 14 topics, 5 new permissive addresses, 8 recorded nil legs**
+
+🟢 **The sweep [`../intel/trends.md`](../intel/trends.md) prescribed as "the next pass's
+job" was run.** Full results in `evidence/capability-sweep.2026-11-01-p581.tsv` and
+`evidence/sweep-nil-legs.2026-11-01-p581.tsv`.
+
+### 🟢 New this week — verified first-hand `2026-11-01`
+
+| Repo | Licence | Stars | Forks | Last push | Region | What it is |
+|---|---|--:|--:|---|---|---|
+| [nexmoe/VidBee](https://github.com/nexmoe/VidBee) | 🟢 **MIT** | **11,026** | 863 | `2026-10-31` | APAC | Media fetch + local Whisper transcription, **speaker diarisation**, AI summary |
+| [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) | 🟢 **MIT** | **9,898** | 1,758 | `2026-10-31` | APAC | Agentic long→short clipping (`ai-agent`, `mcp`); **names 课程/courses as input** |
+| [YaoFANGUK/video-subtitle-extractor](https://github.com/YaoFANGUK/video-subtitle-extractor) | 🟢 **Apache-2.0** | **9,680** | 982 | 🟡 `2026-04-09` | APAC | **Hard-burned subtitle OCR** → SRT, local |
+| [jdepoix/youtube-transcript-api](https://github.com/jdepoix/youtube-transcript-api) | 🟢 **MIT** | **8,543** | 855 | `2026-10-30` | EMEA | Transcript/caption retrieval + translation |
+| [smacke/ffsubsync](https://github.com/smacke/ffsubsync) | 🟢 **MIT** | **7,929** | 329 | 🟡 `2026-07-24` | North America | FFT subtitle↔audio re-alignment |
+| [ing-bank/popmon](https://github.com/ing-bank/popmon) | 🟢 **MIT** | **512** | 35 | 🟡 `2026-01-09` | EMEA | Population-stability / drift monitoring (**ING Bank N.V.**) |
+| [IFCA-Advanced-Computing/frouros](https://github.com/IFCA-Advanced-Computing/frouros) | 🟢 **BSD-3-Clause** | **260** | 21 | 🟡 `2026-04-23` | EMEA | Concept/data drift detection (**Inst. de Física de Cantabria**) |
+
+🔵 **Seven rows, five of them from one topic (`topic:subtitles`).** That concentration is
+itself the finding: **the media sweep this base deferred for four passes was the densest
+unexplored seam it had.**
+
+### 🔴 Recorded nil legs — an unrecorded nil looks exactly like coverage
+
+| query | `total_count` | outcome |
+|---|--:|---|
+| `topic:text-to-speech+topic:education` | **0** | 🔴 crossed-topic collapse |
+| `topic:accessibility+topic:education` | **0** | 🔴 crossed-topic collapse |
+| `topic:whisper+topic:education` | **0** | 🔴 crossed-topic collapse |
+| `topic:assessment+topic:llm` | **0** | 🔴 crossed-topic collapse |
+| `topic:llm-evaluation+topic:education` | **0** | 🔴 crossed-topic collapse |
+| `topic:edtech+license:mit` | **0** | 🔴 crossed-topic collapse |
+| `topic:sign-language` | 827 | 🔵 **0 new live permissive** — best row already shelved, rest 2019–2025 |
+| `topic:knowledge-tracing` | 96 | 🔵 **0 new** — `pykt-toolkit` shelved; every other row dead 2019–2022 |
+| `topic:item-response-theory` / `topic:psychometrics` / `topic:computerized-adaptive-testing` | 151 / 511 / 24 | 🔵 **0 new** — all five rows already shelved |
+| `topic:scorm` / `topic:lecture` | 235 / 547 | 🔵 **0 new** — `Papermorph`, `Numbas`, `scorm-again`, `adapt_framework` all shelved |
+
+🔴 **The six zeroes are a defect in the query form, not a statement about the ecosystem.**
+`topic:A+topic:B` intersects two tag populations that barely overlap: education projects
+tag pedagogy, capability projects tag capability. **This is why `hugohe3/ppt-master` (MIT,
+`71,498★`) survived four sweeps unfound.** Correct form: one capability topic, `sort=stars`,
+filter licence and `pushed_at` client-side.
+
+🔵 **Method note on verification.** The run prompt mandates `curl -sI` per URL. **That
+check is inoperable here** — every `github.com` URL returns `403` through this session's
+proxy, including repositories confirmed to exist, so `curl` cannot separate a live repo
+from a 404. All rows above were verified with `q=repo:owner/name` against
+`search/repositories`, which returns `200` plus licence, stars, forks, `pushed_at` and
+`archived`. 🟢 **Strictly stronger than a `HEAD` request**: it confirms existence *and*
+four fields in the same call.
+
+
 ## 🆕 `2026-11-01` — `p580` — **the whole live shelf re-measured first-hand: `42 of 265` addresses have not been pushed to in over a year, and the assessment-generation tier this base calls "the reference implementation" is abandoned upstream**
 
 🟢 **The census.** Every GitHub address cited on the six non-append-only shelf pages was

@@ -4,6 +4,60 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p581 — 2026-11-01 — **the lecture-media sweep `p580` prescribed, run: five new permissive rows, and the two crossed-topic query forms that made four passes of sweeps come back empty**
+
+🟢 **`Gap "lecture-video tooling remains unswept"` closes — it was the declared next-pass
+job on [`../intel/trends.md`](../intel/trends.md) and it paid.** Five addresses enter the
+shelf, the largest at **`11,026★` MIT**. 🔴 **But the headline finding is a method defect,
+not a repo:** the sweep form this base has been using crosses two topics
+(`topic:tts+topic:education`), and **every crossed form returns `total_count = 0`** — not
+few results, *zero*. That is why `hugohe3/ppt-master` (MIT, `71,498★`) went unfound for
+four passes and had to be surfaced by web search instead.
+
+```
+gh api -X GET search/repositories -f q="topic:X" -f sort=stars -f order=desc
+  then filter licence/recency client-side        ← WORKS
+gh api -X GET search/repositories -f q="topic:X+topic:education"
+  → total_count = 0, six times out of six        ← COLLAPSES
+```
+
+🔵 **Why: education repositories do not carry capability topics.** `DeepTutor` carries
+`ai-tutor`, not `video`. `ppt-master` carries `pptx`, not `education`. The intersection is
+empty as a property of how maintainers tag, so **sweep single capability topics and filter
+by licence — never cross two topics.** Six nil legs recorded in
+`evidence/sweep-nil-legs.2026-11-01-p581.tsv`.
+
+### 🟢 New agent rows, every field first-hand `2026-11-01`
+
+| Agent | Repo | Licence (first-hand) | Stars | Last push | Region | Note |
+|---|---|---|--:|---|---|---|
+| **autoclip** | [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) | 🟢 **MIT** | **9,898** | `2026-10-31` | APAC | 🟢 **The one genuinely agentic row here** — topics include `ai-agent` and `mcp`. Cuts long-form video into clips with subtitles, covers and captions. 🟢 **Its own description names 课程 (courses) as an input class**, alongside podcasts and interviews — so unlike `MoneyPrinterTurbo` this is lecture-shaped, not only social-shaped. `1,758` forks. |
+| **VidBee** | [nexmoe/VidBee](https://github.com/nexmoe/VidBee) | 🟢 **MIT** | **11,026** | `2026-10-31` | APAC | 🟢 **Largest permissive addition this pass.** Fetch + local Whisper transcription with **speaker diarisation** (`speaker-diarization` topic) and AI summary. The diarisation is what makes it a seminar/panel tool rather than a download utility. `863` forks. |
+
+🔵 **Two rows, not five, on *this* page** — the other three are libraries, not agents, and
+are shelved on [`../repos/foundations.md`](../repos/foundations.md) where they belong. **Three
+real agent-shelf rows would have been padding; two is what the sweep actually produced.**
+
+### 🔴 A non-finding recorded so the next pass does not re-publish it as a discovery
+
+The same sweep ran `topic:item-response-theory`, `topic:psychometrics` and
+`topic:computerized-adaptive-testing` against the standing gap *"abundant permissive
+tooling for generating content and none for generating psychometrically defensible items"*.
+🔴 **Every row returned was already on these shelves** — `catsim` (138 references),
+`eribean/girth` (84), `EduCDM` (40), `Agent4Edu` (35), `pypsy` (19). **The gap stands
+exactly as written**, and it is narrower than "no psychometric tooling": calibration and
+adaptive-test *simulation* are shelved and permissive; **item *generation* is the hole.**
+🔵 This is `Trend 11`'s pathology — a closed gap re-published — caught before publication
+rather than after, by grepping the shelf before writing the row.
+
+🔵 **Method correction, because the run prompt mandates the broken form.** `curl -sI
+https://github.com/owner/name` returns **`403` for every GitHub URL** through this
+session's proxy — including addresses confirmed to exist. **A `403` here is the proxy, not
+a dead link, and `curl` cannot distinguish a live repo from a 404.** URL verification must
+use `q=repo:owner/name` against the search endpoint, which returns `200` with licence,
+stars, forks, `pushed_at` and `archived` in one call. Every row above was verified that way.
+
+
 # Top AI agents for education
 
 ## p580 — 2026-11-01 — **every agent row on this page re-measured first-hand in one sitting, `579-C` blocked, `579-E` placed — and the licence field that made it cheap is the one field it gets wrong**

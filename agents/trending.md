@@ -4,6 +4,82 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `2026-11-01` — `p581` — **the crossed-topic query form returns zero six times out of six, which explains four passes of empty capability sweeps**
+
+🟢 **Result of the pass, stated as method because that is what it is.** The capability
+sweep `p580` prescribed was run. It produced **five new permissive addresses** and **one
+defect in the instrument this base has been sweeping with**:
+
+| query form | `total_count` | verdict |
+|---|--:|---|
+| `topic:scorm` | `235` | 🟢 works |
+| `topic:drift-detection` | `1308` | 🟢 works |
+| `topic:sign-language` | `827` | 🟢 works |
+| `topic:text-to-speech+topic:education` | **`0`** | 🔴 collapses |
+| `topic:accessibility+topic:education` | **`0`** | 🔴 collapses |
+| `topic:whisper+topic:education` | **`0`** | 🔴 collapses |
+| `topic:assessment+topic:llm` | **`0`** | 🔴 collapses |
+| `topic:llm-evaluation+topic:education` | **`0`** | 🔴 collapses |
+| `topic:edtech+license:mit` | **`0`** | 🔴 collapses |
+
+🔴 **Six crossed forms, six zeroes.** Not thin results — *empty*. 🔵 **The cause is
+maintainer tagging, not the API:** education repositories carry pedagogy topics
+(`ai-tutor`, `edtech`) and capability repositories carry capability topics (`pptx`,
+`subtitles`); **almost nothing carries both.** `DeepTutor` has `ai-tutor` and no `video`.
+`ppt-master` has `pptx` and no `education`. The intersection this base kept querying does
+not exist.
+
+🟢 **So the standing note on [`../intel/trends.md`](../intel/trends.md)** — that
+`hugohe3/ppt-master` (MIT, `71,498★`, the largest permissive repo anywhere in this base)
+*"went unfound for four passes because every sweep filters on an education topic"* —
+**is now explained rather than just observed.** The sweeps were not unlucky; the query
+form guaranteed the miss. **Sweep one capability topic, filter licence and `pushed_at`
+client-side.**
+
+### 🟢 What the working form found — the lecture-media tier, all verified first-hand today
+
+| Repo | Licence | Stars | Last push | Region | Capability |
+|---|---|--:|---|---|---|
+| [nexmoe/VidBee](https://github.com/nexmoe/VidBee) | 🟢 **MIT** | **11,026** | `2026-10-31` | APAC | Fetch + local Whisper transcription with **speaker diarisation** |
+| [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) | 🟢 **MIT** | **9,898** | `2026-10-31` | APAC | Agentic long→short clipping; **names 课程 (courses) as input**; `mcp` topic |
+| [YaoFANGUK/video-subtitle-extractor](https://github.com/YaoFANGUK/video-subtitle-extractor) | 🟢 **Apache-2.0** | **9,680** | 🟡 `2026-04-09` | APAC | **Hard-burned** subtitle OCR → SRT, local, no third-party API |
+| [jdepoix/youtube-transcript-api](https://github.com/jdepoix/youtube-transcript-api) | 🟢 **MIT** | **8,543** | `2026-10-30` | EMEA | Transcript/caption retrieval + translation |
+| [smacke/ffsubsync](https://github.com/smacke/ffsubsync) | 🟢 **MIT** | **7,929** | 🟡 `2026-07-24` | North America | FFT-based subtitle↔audio **re-alignment** |
+
+🔵 **Read this tier honestly: it is a *transcript and caption* toolchain, not a lecture
+*authoring* one.** Nothing here generates instructional video. What it does give a studio
+is the pipeline from an existing recording to aligned, searchable, translatable text —
+which is the input every downstream tutor, quiz generator and retrieval index needs.
+🟢 **`video-subtitle-extractor` is the non-obvious one:** it reads subtitles *burned into
+the pixels*, which is how a large share of archived lecture and MOOC footage outside
+North America was published, and where an API-based caption fetch returns nothing.
+
+### 🔴 A second gap narrows, and all three answers are EMEA-origin
+
+The base's own clearest declared build opportunity: *"A tutor in production still has no
+open-source way to detect that it has degraded."* `topic:drift-detection` (`1,308` repos)
+returns **three addresses new to this base**:
+
+| Repo | Licence | Stars | Last push | Region | Owner |
+|---|---|--:|---|---|---|
+| [ing-bank/popmon](https://github.com/ing-bank/popmon) | 🟢 **MIT** | **512** | 🟡 `2026-01-09` | EMEA | **ING Bank N.V.**, Netherlands |
+| [IFCA-Advanced-Computing/frouros](https://github.com/IFCA-Advanced-Computing/frouros) | 🟢 **BSD-3-Clause** | **260** | 🟡 `2026-04-23` | EMEA | **Instituto de Física de Cantabria**, Spain |
+| [SeldonIO/alibi-detect](https://github.com/SeldonIO/alibi-detect) | 🔴 **NOASSERTION** | **2,554** | 🔴 `2025-12-11` | EMEA | **Seldon Technologies**, London |
+
+🟢 **The gap's shape changes: it is education-*specificity* that is missing, not drift
+detection.** `popmon` and `frouros` are permissive, live and composable. 🔵 **And note
+the regional fact** — all three are EMEA-origin, and two are **named public/financial
+institutions**, which is the base's strongest region-placement signal (owner identity, not
+README language). 🔴 `alibi-detect` is the highest-starred and the one not to build on:
+licence unresolved by the detector *and* eleven months stale.
+
+🔵 **Non-finding, recorded deliberately.** `topic:sign-language` returns `827` repos and
+**zero new live permissive rows** — the best (`sign/translate`) is already shelved and the
+rest were last pushed 2019–2025. `topic:knowledge-tracing` (`96`): `pykt-toolkit` already
+shelved, every other row dead since 2019–2022. **Two capability sweeps that found nothing,
+written down, because an unrecorded nil leg looks identical to coverage.**
+
+
 ## 🆕 `2026-11-01` — `p580` — **the first whole-shelf census: `265` of `271` addresses re-measured in one sitting — with the instrument this base has had since `p577` and has now announced three times**
 
 🔴 **`Gap 579-A` closes, but NOT with a discovery — and this file should carry the

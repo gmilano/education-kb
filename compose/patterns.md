@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p581 — 2026-11-01 — **two new recipes: the lecture-archive pipeline, and the first buildable answer to this base's longest-standing gap**
+
+Both use only rows verified first-hand `2026-11-01` (licence, stars, `pushed_at`,
+`archived`) and name every component with its licence, because the licence is what decides
+whether a studio can ship the result.
+
+### 🟢 Pattern P-A — Lecture archive → searchable, tutorable, accessible corpus
+
+**Who buys it:** a university system or ministry sitting on years of recorded lectures that
+are undiscoverable and non-compliant. 🟢 **North America** buys the accessibility-audit
+framing (captions that fail alignment audit); 🟢 **APAC** buys the ingestion framing (CJK
+archives with captions burned into pixels, where no caption file exists to fetch).
+
+**Wiring, in order:**
+
+1. **Get text out of the recording — two routes, pick by what the archive is.**
+   - Captions exist as a track → [`jdepoix/youtube-transcript-api`](https://github.com/jdepoix/youtube-transcript-api) (🟢 **MIT**, `8,543★`, `2026-10-30`). Cheapest path; also translates.
+   - 🟢 **Captions are burned into the pixels** → [`YaoFANGUK/video-subtitle-extractor`](https://github.com/YaoFANGUK/video-subtitle-extractor) (🟢 **Apache-2.0**, `9,680★`). OCR over the subtitle region, fully local, no third-party API. **This is the only permissive route into hard-subbed archives and the reason this pattern exists.**
+   - No captions at all → [`nexmoe/VidBee`](https://github.com/nexmoe/VidBee) (🟢 **MIT**, `11,026★`): local Whisper plus **speaker diarisation**. 🔵 Use VidBee specifically for **seminars, panels and vivas** — diarisation is what separates lecturer from student turns; for a single-speaker lecture it is overkill.
+2. **Fix the timings** → [`smacke/ffsubsync`](https://github.com/smacke/ffsubsync) (🟢 **MIT**, `7,929★`). FFT alignment of the caption track against the audio. 🔴 **Do not skip this step.** A transcript with drifted timings cannot support seek-to-concept, clip extraction or a caption audit — and re-encoded archives drift as a rule.
+3. **Cut it into teachable units** → [`zhouxiaoka/autoclip`](https://github.com/zhouxiaoka/autoclip) (🟢 **MIT**, `9,898★`, topics `ai-agent` + `mcp`). Long→short segmentation with subtitles and titles. 🟢 **Its description names 课程 (courses) as an input class**, so this is lecture-shaped, not only social-shaped. 🔵 Its `mcp` topic is the integration seam — drive it from your own agent rather than its desktop UI.
+4. **Deliver inside the institution's LMS** on the permissive side of the licence seam:
+   [`openedx/XBlock`](https://github.com/openedx/XBlock) (🟢 **Apache-2.0**) into Open edX
+   (🔴 AGPL-3.0), or [`tsugiproject/tsugi`](https://github.com/tsugiproject/tsugi)
+   (🟢 **Apache-2.0**) over LTI into Moodle (🔴 GPL-3.0), with
+   [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (🟢 **MIT**) if the
+   deliverable must be SCORM. 🟢 **Proprietary studio code stays out of the copyleft
+   boundary.**
+5. **Emit learning records** → [`adlnet/xAPI-Spec`](https://github.com/adlnet/xAPI-Spec)
+   (🟢 **Apache-2.0**) so step 2 of P-B has a stream to monitor.
+
+🔴 **What this pattern does *not* do:** generate instructional video. Nothing open-source
+does. Scope it as *archive activation*, never as content production.
+
+### 🟢 Pattern P-B — Post-market monitoring for a deployed tutor or grader
+
+🟢 **This is the first concrete recipe this base has for the gap it has called, for six
+passes, the clearest unmet build opportunity in education AI.** It is assembled, not found:
+the components are generic and the education-aware glue is the billable work.
+
+**Who buys it:** 🟢 **EMEA first**, and on a dated clock — under the timetable this base
+tracks, stand-alone education systems that grade work, screen applicants or supervise exams
+carry Annex III obligations from **`2 December 2027`** (embedded products **`2 August
+2028`**), with Article 50 transparency from **`2 August 2026`**, and **post-market
+monitoring is a named duty**. 🔵 Also sells in **LATAM** as the evaluation half of a
+governance engagement — note the `55 %`-no-AI-budget constraint, which is an argument for
+composing permissive parts rather than licensing a platform.
+
+**Wiring:**
+
+1. **Model what the learner knows** → [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) (🟢 **MIT**, `456★`, `2026-10-18`). 🟢 **Its per-skill mastery predictions are the distribution to monitor** — that is the whole trick: you do not monitor the LLM's text, you monitor the learner-model outputs the tutor is supposed to be moving.
+2. **Detect drift on those streams** — pick one:
+   - [`IFCA-Advanced-Computing/frouros`](https://github.com/IFCA-Advanced-Computing/frouros) (🟢 **BSD-3-Clause**, `260★`): concept- and data-drift detectors. 🟢 **Default choice** — purpose-built for drift, permissive, public-institution provenance (Instituto de Física de Cantabria).
+   - [`ing-bank/popmon`](https://github.com/ing-bank/popmon) (🟢 **MIT**, `512★`): population-stability over Pandas/Spark frames. 🟢 **Choose this when the deliverable is a report for a regulator or exam board** — ING Bank built it to be shown to a supervisor, and it produces stability reports rather than just alerts.
+   - 🔴 **Not `SeldonIO/alibi-detect`** (`2,554★`) despite it being the highest-starred: licence reads **NOASSERTION** and it is stale since `2025-12-11`.
+3. **Measure whether the intervention actually worked** → [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) (🟢 **Apache-2.0**): randomised controlled trials inside LMS assignments, consent handling built in, identifiers stripped on export. 🔵 **Efficacy, which is a different question from drift** — pair them, do not substitute one for the other.
+4. **Run untrusted learner code safely** if the subject is programming → [`openedx/codejail`](https://github.com/openedx/codejail) (🟢 **Apache-2.0**).
+5. **Calibrate the assessment itself** → [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) (🟢 **BSD-3-Clause**, `153★`, live `2026-10-30`, 🟢 **Brazil-maintained — a LATAM-origin psychometric anchor**) for adaptive-test simulation. 🔴 **Do not promise item *generation*** from this: `catsim` simulates and calibrates, and no permissive item generator exists — searched three ways this pass and not found.
+
+🔴 **State the limit to the client explicitly.** `frouros` and `popmon` **do not know what
+a learner model is.** They will tell you a distribution moved; they will not tell you the
+tutor's explanations got worse. **The education-aware layer — deciding which shifts are
+pedagogically meaningful — is the engagement**, and it is unbuilt anywhere in open source.
+🟢 Priced honestly, that is the strongest position: the commodity half is free and
+permissive, the judgment half is the work.
+
+### 🔵 Component licence ledger for both patterns
+
+| Component | Licence | Shippable alongside proprietary code? |
+|---|---|---|
+| `youtube-transcript-api`, `ffsubsync`, `VidBee`, `autoclip`, `scorm-again`, `pykt-toolkit`, `popmon` | 🟢 MIT | 🟢 yes |
+| `video-subtitle-extractor`, `XBlock`, `codejail`, `tsugi`, `terracotta`, `xAPI-Spec` | 🟢 Apache-2.0 | 🟢 yes |
+| `frouros`, `catsim` | 🟢 BSD-3-Clause | 🟢 yes |
+| Open edX platform | 🔴 AGPL-3.0 | 🟡 only across the `XBlock`/`codejail` seam |
+| Moodle | 🔴 GPL-3.0 | 🟡 only across the LTI/`tsugi` seam |
+| `alibi-detect` | 🔴 NOASSERTION | 🔴 **no — and stale** |
+
+🟢 **Every permissive row above was licence-verified first-hand on `2026-11-01`** via
+`q=repo:owner/name` against `search/repositories`. 🔵 `curl -sI` was **not** used: it
+returns `403` for every `github.com` URL through this session's proxy, live repositories
+included.
+
+
 # Compose patterns — education
 
 ## p580 — 2026-11-01 — two recipes, both forced by this pass's measurements rather than chosen

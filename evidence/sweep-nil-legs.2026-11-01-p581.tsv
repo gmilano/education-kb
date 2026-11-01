@@ -1,0 +1,15 @@
+query	total_count	verdict
+topic:text-to-speech+topic:education	0	crossed-topic collapse
+topic:accessibility+topic:education	0	crossed-topic collapse
+topic:whisper+topic:education	0	crossed-topic collapse
+topic:assessment+topic:llm	0	crossed-topic collapse
+topic:llm-evaluation+topic:education	0	crossed-topic collapse
+topic:edtech+license:mit	0	crossed-topic collapse (license: qualifier unsupported in topic cross)
+topic:scorm	235	1 permissive live row, already shelved
+topic:lecture	547	0 new live permissive education rows
+topic:knowledge-tracing	96	best row pykt-toolkit already shelved; rest dead 2019-2022
+topic:sign-language	827	0 new live permissive rows; best already shelved
+topic:drift-detection	1308	3 NEW rows, none education-specific
+topic:item-response-theory	151	0 new rows - all 5 already shelved
+topic:psychometrics	511	0 new education rows
+topic:computerized-adaptive-testing	24	0 new rows - all already shelved
