@@ -3,6 +3,105 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+## 🆕 p590 — 2026-11-01 — the courseware-emit recipe is rewritten around a generator this base already held, and the xAPI telemetry leg gets named libraries instead of a bare "send statements" step
+
+🔵 **Why these two patterns change.** `p589` told a courseware engagement to **build the
+generator** because only two permissive SCORM emitters were alive. 🔴 **That is refuted**
+(`589-E`, [`../repos/trending.md`](../repos/trending.md)): there are at least six, one of
+them a finished multi-format exporter under BSD-3-Clause. 🟢 **Every component named below
+was measured first-hand `2026-11-01` and every grant byte-read.**
+
+---
+
+## P-590-A — Courseware emit pipeline, buy-first (3–5 weeks)
+
+**Problem it solves.** A client needs AI-generated courseware delivered **into their
+existing LMS**, which means a conformant SCORM package, not a web app.
+
+🔴 **What `p589`'s version of this recipe said:** add `scorm-again`, then *build the
+generator*. 🟢 **What it should say:** the generator largely exists.
+
+| Step | Component | Licence | Why this one |
+|---|---|---|---|
+| 1. Author | [course-code-framework/coursecode](https://github.com/course-code-framework/coursecode) **or** [kemalyy/edumints-scorm-skill](https://github.com/kemalyy/edumints-scorm-skill) | 🟢 MIT / MIT | Agent-native authoring. `coursecode` is framework-shaped (MCP-capable tools); `edumints-scorm-skill` is the skill half of an MCP pair. |
+| 2. **Emit — buy, do not build** | [LiaScript/LiaScript-Exporter](https://github.com/LiaScript/LiaScript-Exporter) | 🟢 **BSD-3-Clause** | 🆕 **One Markdown-shaped source → SCORM 1.2, SCORM 2004, IMS, xAPI, H5P, PDF, ePub, Web**, with Moodle / ILIAS / OPAL presets. README read first-hand. 🔵 This is the step that was being budgeted as a build. |
+| 2b. Emit, agent-driven alternative | [kemalyy/edumints-scorm-mcp](https://github.com/kemalyy/edumints-scorm-mcp) **or** [giacomomaria81/scorm-mcp-server](https://github.com/giacomomaria81/scorm-mcp-server) | 🟢 MIT / MIT | Use when the pipeline is already an agent loop and HTML/design bundles are the input rather than Markdown. |
+| 3. Runtime | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 MIT | The content↔LMS API bridge. Still the first dependency; `362★`, pushed `2026-10-28`. |
+| 4. If the deliverable is assessment | [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 | Newcastle University's engine, with its own `23,811`-byte SCORM storage runtime. Replaces steps 1–3 for assessment work. |
+| 5. If sources are H5P | [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 MIT | Packs H5P into SCORM objects. `58★`, pushed `2026-10-29`. |
+| 6. **Review before ship** | [savvides/idstack](https://github.com/savvides/idstack) | 🟢 MIT | 🆕 `11` instructional-design skills checking alignment, accessibility and assessment validity. 🔵 The only reviewer component on these shelves — without it the pipeline ships unaudited pedagogy. |
+
+**Wiring.** `coursecode` writes LiaScript-flavoured Markdown → `LiaScript-Exporter` emits
+every required target in one run → `scorm-again` is bundled inside the package for runtime
+API calls → `idstack` runs as a gate on the authored source **before** export, so a failed
+pedagogy check costs one re-author and not one re-package.
+
+🔴 **Where to stop.** Do **not** add `Didask/scol-r` to a pipeline whose target LMS ingests
+SCORM only — it is a SCORM *successor* format (MIT, live, French) and the client's LMS will
+not take it. Offer it as the modern path, never as the compatible one.
+
+🔴 **Validate, do not trust.** `SCORMShield-Admin/scorm-package-validator` and
+`jowinjohnchemban/scormite` (both MIT, both live) will tell you whether the emitted package
+is conformant. 🔵 Budget a validation step: `60.0 %` of the `topic:scorm` axis carries no
+licence at all, so most of what a search surfaces here cannot be vendored anyway.
+
+---
+
+## P-590-B — Learning telemetry leg with named libraries, per runtime (2–3 weeks)
+
+**Problem it solves.** The client wants learning events out of the courseware and into
+something they can query — and `589-E` established that **xAPI is a conformance target you
+SPEAK, so you buy the client library rather than writing one.**
+
+| Client estate | Library | Licence | Measured |
+|---|---|---|---|
+| **JVM / Java** (most university back-offices) | [BerryCloud/xapi-java](https://github.com/BerryCloud/xapi-java) | 🟢 Apache-2.0 (`11,350 B`) | `20★`, `2026-10-30` |
+| **PHP / Laravel** (the Moodle estate) | [ijeffro/laralocker](https://github.com/ijeffro/laralocker) | 🟢 MIT (`1,072 B`) | `9★`, `2026-10-03` |
+| **Flutter / Dart** (mobile-native) | [jblough/TinCanDart](https://github.com/jblough/TinCanDart) | 🟢 Apache-2.0 (`11,358 B`) | `5★`, `2026-08-06` |
+| **.NET** | [nurullahturkoglu/xapi-dotnet](https://github.com/nurullahturkoglu/xapi-dotnet) | 🟢 Apache-2.0 | `1★`, `2026-10-30` — 🔴 one-star, treat as reference |
+| **Store (LRS)** | [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) **or** [openfun/ralph](https://github.com/openfun/ralph) | 🟢 Apache-2.0 / MIT | `144★` / `51★`, both pushed within a week |
+| **Endpoint only, no full LRS** | [LearningLocker/xapi-service](https://github.com/LearningLocker/xapi-service) | 🟢 MIT (`1,070 B`, lowercase `license`) | `42★`, `2026-10-26` |
+| **Validate at your own boundary** | [LearningLocker/xapi-validation](https://github.com/LearningLocker/xapi-validation) | 🟢 MIT (`1,070 B`) | `12★`, `2026-10-26` |
+| **Validate the profile itself** | [yetanalytics/project-pan](https://github.com/yetanalytics/project-pan) | 🟢 Apache-2.0 (`11,356 B`) | `5★`, `2026-10-16` |
+| **Dashboards** | [openfun/warren](https://github.com/openfun/warren) | 🟢 MIT | `17★`, `2026-10-31` |
+
+**Wiring.** Emit with the library matching the client's runtime → validate statements with
+`xapi-validation` **inside the studio's own boundary**, before anything reaches the client's
+store → persist to `lrsql` (or `xapi-service` when the client refuses to host a full LRS) →
+`warren` for dashboards. 🟢 **Validate the profile with `project-pan` and statements against
+it with `project-persephone`** — two different jobs that are easy to conflate.
+
+🔵 **The `pushed_at` dates above are the point.** `27` distinct owners hold the `35` live
+permissive xAPI repositories, so this leg is a **real ecosystem**: if one library stalls,
+another exists. 🔴 **That is not true one spec over** — see the QTI warning below.
+
+---
+
+## 🔴 P-590-C — QTI assessment interchange: a supplier, not an ecosystem (scoping note, not a recipe)
+
+🔴 **Do not treat the QTI tooling list as a menu.** `8` of QTI's `14` live permissive
+repositories belong to **one account** (`metyatech`), all pushed inside a six-day window in
+September `2026`, **none above `2★`** (`Trend 42`). 🔵 **A liveness check passes this axis;
+an owner count fails it.**
+
+🟢 **How to scope a QTI engagement honestly:**
+
+1. 🟢 **Stand on the two third-party rows** if a dependency is required:
+   [feyst/qti3-validator](https://github.com/feyst/qti3-validator) (MIT, validates against
+   the 1EdTech schemas) and [Citolab/qti-playground](https://github.com/Citolab/qti-playground)
+   (MIT, preview/convert/modify).
+2. 🟡 **Or speak QTI 3.0 directly** — the schemas are published, the XML is tractable, and
+   this avoids a single-maintainer dependency entirely. 🔵 Budget the XML work explicitly
+   instead of discovering it.
+3. 🔴 **If the `metyatech` set is used, price it as vendoring one supplier's code**, with
+   takeover budgeted. Treat the eight repositories as **one** dependency.
+
+🔵 **Generalise the check, not the verdict:** before any interchange dependency, compute
+**live repos ÷ distinct owners** over the axis. Near `1.0` is an ecosystem; `2.0` or one
+owner above `50 %` is a supplier. The data comes free with the sweep.
+
+---
+
 
 ## p589 — 2026-11-01 — two recipes this pass's rows make buildable: the courseware factory whose output crosses the copyleft boundary as *content*, and the university enablement engagement with a real course to copy
 
@@ -1802,7 +1901,7 @@ certification startups, ed-tech product teams.
    it: simulate examinees at known ability levels, check that the policy recovers
    their θ within tolerance and respects content constraints. 🟢 **This is the
    step that substitutes for the learner-simulation agent this KB cannot legally
-   ship** (`573-A` in [`../agents/top.md`](../agents/top.md)).
+   ship** — the gap is registered as `573-A` in [`../intel/open-gaps.md`](../intel/open-gaps.md). 🔴 **Pointer corrected `p590`:** this line cited `../agents/top.md` as `573-A`'s home and that page contains **no** occurrence of the id, so the reference was dangling at its destination, not merely unregistered.
 4. **Skill profiles with `EduCDM`** → "mastered / not mastered" per named
    competency, which is what a certification report has to say.
 5. **Re-estimate on live data** with `pyedmine` or `pykt-toolkit` for drift.

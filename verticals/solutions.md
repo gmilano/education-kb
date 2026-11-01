@@ -3,6 +3,60 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+## 🆕 p590 — 2026-11-01 — the delivery tier's build-vs-buy answer is rewritten: `p589` told a client to buy one dependency and build the generator, and there are at least six permissive generators — plus the first measured instrument for telling an ecosystem from a single supplier
+
+### 🔴 What this page's sibling got wrong, and why a vertical page has to care
+
+🔵 **The commercial question this tier answers** is *"do we build the courseware generator
+or buy it?"* 🔴 **`p589` answered "build it": buy `scorm-again`, add `scorm-h5p-wrapper`,
+build the generator, depend on nothing else.** Re-walked `2026-11-01` that is wrong, and
+the correction changes a scope estimate rather than a footnote.
+
+| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+|---|---|--:|---|---|---|
+| [LiaScript/LiaScript-Exporter](https://github.com/LiaScript/LiaScript-Exporter) | 🟢 **BSD-3-Clause** | **29** | `2026-10-30` | EMEA | 🟢 **Yes — and it removes most of the generator.** One Markdown-shaped source exports to **SCORM 1.2, SCORM 2004, IMS, xAPI, H5P, PDF, ePub and Web**, with presets for Moodle, ILIAS and OPAL. 🔵 README read first-hand. The AI layer authors the LiaScript source; the exporter handles every target format. |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 | **216** | `2026-10-28` | EMEA | 🟢 **Yes.** Newcastle University's browser-based assessment engine, with its own `23,811`-byte SCORM storage runtime. 🔵 The buy answer whenever the deliverable is assessment rather than narrative courseware. |
+| [erseco/python-moodle](https://github.com/erseco/python-moodle) | 🟢 **MIT (text, 1,071 B)** | **10** | `2026-10-22` | EMEA | 🟢 **Yes — and it is the attach-over-API handle for the AGPL LMS of record.** Pythonic CLI and library that drives a Moodle instance over web sessions. 🔵 Exactly `573-B`'s rule made concrete: **automate the client's Moodle, do not fork it.** |
+| [kemalyy/edumints-scorm-mcp](https://github.com/kemalyy/edumints-scorm-mcp) | 🟢 **MIT (text, 1,069 B)** | **9** | `2026-10-14` | Global | 🟢 **Yes.** Self-hostable MCP server that assembles SCORM-compliant courses — the emit step as agent tools. |
+| [Didask/scol-r](https://github.com/Didask/scol-r) | 🟢 **MIT (text, 1,063 B)** | **15** | `2026-10-27` | EMEA | 🟡 **Yes, with a caveat.** Shareable Cross-Origin Learning Resources, a SCORM successor from a French vendor. 🔵 Permissive and live, but a client LMS that only ingests SCORM will not take it — offer it as the modern path, not the compatible one. |
+
+🟢 **The corrected answer to give a client:** buy `scorm-again` for the runtime, **buy
+`LiaScript-Exporter` if the source is Markdown-shaped courseware**, buy `Numbas` if the
+deliverable is assessment, add `scorm-h5p-wrapper` for H5P sources and the two MCP servers
+if the pipeline is agent-driven — **and build the generator only after those five are ruled
+out.** 🔴 `p589`'s answer put a generator build in every courseware scope; this one does not.
+
+### 🆕 The procurement instrument this page did not have: distinct owners
+
+🔴 **A liveness count cannot tell an ecosystem from one prolific publisher, and this page
+has only ever published liveness.** Measured across the three interchange axes
+`2026-11-01`:
+
+| axis | live permissive repos | 🆕 distinct owners | 🆕 live ÷ owners | verdict for a procurement decision |
+|---|--:|--:|--:|---|
+| `topic:scorm` | `42` | 🟢 `39` | 🟢 `1.08` | 🟢 Real ecosystem — a dead dependency can be swapped |
+| `topic:xapi` | `35` | 🟢 `27` | 🟢 `1.30` | 🟢 Real ecosystem — buy the client library, do not write one |
+| `topic:qti` | `14` | 🔴 **`7`** | 🔴 **`2.00`** | 🔴 **One supplier.** `8 of 14` are `metyatech`, all pushed in one six-day window, none above `2★` |
+
+🔵 **So for a QTI engagement the honest advice is:** treat the `metyatech` set as **one
+supplier, not eight options**; stand on `feyst/qti3-validator` or `Citolab/qti-playground`
+if a third-party dependency is required; otherwise **speak QTI 3.0 directly** — the schemas
+are published by 1EdTech and the XML is tractable — and carry the maintenance yourself
+knowingly. 🟢 Full measurement on [`../repos/trending.md`](../repos/trending.md); the trend
+is `Trend 42`.
+
+### 🟢 `573-B` restated, because this page is where it is load-bearing
+
+🔵 **`573-B` (registered by `p573`, and until `p590` it was cited here without ever being
+registered in the gap register):** *there is no permissively licensed, university-scale
+open-source SIS; the one MIT option (`academico`) is scoped to "small and medium
+institutions"; therefore a registrar-scale SIS engagement attaches to the client's existing
+system over its API — it does not fork one.* 🟢 **Unchanged this pass, and
+`erseco/python-moodle` is the first row on this page that implements the rule for the LMS
+tier as well as asserting it for the SIS tier.**
+
+---
+
 
 ## p589 — 2026-11-01 — the courseware *delivery* tier, measured: every engagement that hands material to a client's existing LMS is an EMIT job, and the emit tier has exactly two live permissive dependencies out of `235` repositories
 

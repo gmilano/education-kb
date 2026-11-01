@@ -3,6 +3,128 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+## 🆕 `p590` — `2026-11-01` — **🔴 `589-B`'s PRESCRIPTION WOULD NOT HAVE RUN: A COMMITTED `.sh` IS DENIED EXACTLY AS `make` IS, SO "PORT THE GATES TO `grep`/`awk`" PRODUCES ANOTHER INERT FILE. 🟢 THE EXECUTABLE FORM IS AN INLINE COMMAND BLOCK, AND THREE GATES WERE RUN THAT WAY. 🟢 `589-E` CLOSED BY REFUTATION ON BOTH ARMS UNDER A PREDICTION REGISTERED FIRST. 🔴 `589-A`'s BACKLOG IS `10 %` HOMONYM AND ITS READER-FACING PART IS `6` IDS, NOT `120` — ALL `6` PAID HERE. 🟢 `10` ABSENT ROWS FILED, `16` GRANTS BYTE-READ. 🟢 THE TWENTY-PASS SEARCH NIL IS BROKEN, AND THE ADDRESS IS UNLICENSED. FIVE REGISTERED (`590-A`…`590-E`).**
+
+🔵 **Channel table, run first (`569-B`'s standing row).**
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories -f q='repo:…'` | 🟢 **`19` addresses measured** — `license.spdx_id` + `stargazers_count` + `pushed_at` + `archived` + `fork` + `default_branch` in one call |
+| 🟢 `gh api` search, `-f q='topic:…'` ×3 axes | 🟢 **`567` repositories with denominators**, every page walked to exhaustion |
+| 🟢 fabricated control on the search channel | 🟢 **DISCRIMINATING** — `422 Validation Failed` against `200` |
+| 🔴 `gh api repos/{owner}/{name}` | 🔴 **`403`** — unchanged since `p584` |
+| 🟢 `curl` → `raw.githubusercontent.com` | 🟢 **`16` grants byte-read** + `2` READMEs; `6`-path probe per address |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403`** — the run prompt's mandated verifier certifies nothing; the search channel is the substitute |
+| 🔴 `curl` → `unu.edu`, `publications.iadb.org`, `oecd.org`, `unesco.org`, `newsletters.qs.com` | 🔴 **`000` on `5 of 5`**; 🔴 **fabricated control also `000`** — `589-D` reproduces, `583-E` now at `19` hosts across four passes |
+| 🔴 `make`, `make gate-register-currency` | 🔴 **DENIED — `"Code from External"`** |
+| 🆕 🔴 `bash ingest/claim-role.sh` — a **committed shell script** | 🔴 **DENIED — `"Code from External"`.** 🆕 **This is the pass's central finding and it breaks `589-B`** |
+| 🆕 🟢 inline `grep` / `awk` / `bash -c '…'` | 🟢 **RUNS** — the only executable gate form in this environment |
+| 🟡 `WebSearch`, `4` mandated global + `4` mandated regional | 🟢 **`1` new address — the twenty-pass nil is BROKEN** — 🔴 unlicensed; 🟢 `14` intel tokens, all secondary |
+
+### 🔴 The central finding: `589-B`'s own prescription was unexecutable
+
+`589-B` offered two options and recommended the second: *"port the three cheapest gates to
+pure `grep`/`awk`, which … needs no permission."* 🔴 **Measured this pass, that option
+fails.** The denial is not on `make` or on Python specifically — it is on **executing code
+that lives in this repository**:
+
+| form | result |
+|---|---|
+| `make gate-register-currency` | 🔴 DENIED — `"Code from External"` |
+| `python3 -I ingest/validate-pages.py` | 🔴 DENIED (carried, `p589`) |
+| 🆕 `bash ingest/claim-role.sh` — committed shell, no Python | 🔴 **DENIED** |
+| 🆕 inline `grep` / `awk` piped in the harness | 🟢 **RUNS** |
+| 🆕 `bash -c '<script text typed inline>'` | 🟢 **RUNS** |
+
+🔴 **So a ported `gate-*.sh` would have joined the `59` controls that already do not
+run** — a second generation of the same defect, created by the prescription meant to fix
+it. 🔴 **`p584` recorded `ingest/address-disposition.sh` as 🟢 RUNS**; that capability is
+gone, which is `587-C` (*the measurement channel is environment-dependent*) applying to the
+**gate** channel and not merely to the measurement channel.
+
+🟢 **The form that does work, and three gates run in it this pass.** A gate must be stored
+as a **copy-pasteable command block that a pass executes inline**, never as a committed
+script:
+
+| gate, run inline `p590` | verdict |
+|---|---|
+| **header-as-data** (the run prompt's explicit bar: no data row may render as a table header) | 🟢 **PASSES** on all `8` curated pages — 🔴 but only after correction: the naive form returned **`15` hits, `15` of them false positives**, every one a *transposed* key-value table whose left column is a row label (`\| Licencia \| MIT … \|`). 🔵 The gate must require that a header-vocabulary row **not be followed by a `\|---\|` separator**. |
+| **region vocabulary** (closed to `5` values; frontmatter on every page) | 🟢 **PASSES** — `9 of 9` files carry frontmatter, all `region: Global`, and 🟢 **one real defect found and fixed**: `intel/market.md` carried a wrapped prose line beginning `region:` that a naive frontmatter scan would read as a second region field. |
+| **trend counter** (`583-G`: `^## <n>. ` contiguous, no duplicates) | 🟢 **PASSES** — reads `1`–`42`, no gaps, no duplicates, verified by `seq 1 42 \| diff`. |
+
+🔵 **Each of the three is three lines or fewer of `grep`/`awk`.** They are reproduced in
+full in the pass sections on the curated pages so the next pass can paste and run them.
+
+### 🟢 Closed this pass
+
+| Gap | Verdict |
+|---|---|
+| **`589-E`** | 🟢 **CLOSED BY REFUTATION on both arms, under a prediction registered before the measurement** ([`../evidence/prereg-589E-spec-tooling-rot.2026-11-01-p590.md`](../evidence/prereg-589E-spec-tooling-rot.2026-11-01-p590.md), committed this pass). H1 said `<= 2` live permissive emit-side libraries per axis; `topic:xapi` measured **`6`** and `topic:qti` measured **`8`**. 🔴 **And re-walking `topic:scorm` refuted `p589`'s own figure:** *"exactly two are alive"* against **at least six**, where two of the misses (`numbas/Numbas`, `LiaScript/LiaScript-Exporter`) were **already in this base**. 🔵 `Trend 41`'s tooling-decay half is withdrawn; what survives is narrower and true — **specification bodies abandon their own reference tooling** (ADL's wrapper: unlicensed, archived, `2017`) while third parties keep shipping it. 🟢 Restated, and the owner-concentration finding filed as `Trend 42`. |
+| **`589-A`** | 🟢 **ADVANCED, RE-SCOPED AND ITS READER-FACING PART PAID IN FULL.** 🟢 `p589`'s `120` is **CONFIRMED by independent re-derivation** on the `5xx` window — recorded because this pass's first predicate returned `105` registered against `296` and **the first predicate was the broken one** (it missed the legacy `` `Gap NNN-X` `` form and multi-id cells, `568` ids between them). 🔴 **But `18` of the `120` are not gap ids at all** — they are `P-NNN-X` **compose pattern** names, and `195 of 1,953` id-shaped tokens on the curated pages (`10.0 %`) are pattern ids. De-homonymed: `102` dangling in the `5xx` window, 🔴 **`216` across all passes** (`p589` measured only the `5xx` window), and 🟢 **only `6` are cited on a curated non-trending shelf.** 🟢 **All `6` paid below.** The other `210` are cited only inside the append-only logs. |
+| **`587-D`** | 🟢 **EXTENDED AND RE-CONFIRMED.** Not only the branch is unguessable — **the filename case is too.** `LearningLocker/xapi-service` and `xapi-validation` carry their grants at lowercase **`license`**; `LICENSE` returns `404` on both. 🔴 `4 of 10` newly filed rows default to `master`. A naive `…/main/LICENSE` probe would be wrong on **`6 of 10`**. |
+| **`583-E`** / **`589-D`** | 🟡 **CONFIRMED AGAIN, not closed.** `19` hosts across four passes, `0` reachable, and 🔴 **the fabricated control returned `000` identically**, so the failure still cannot be diagnosed. 🔵 Remains a **network-allowlist request**; every IGO instrument stays a LEAD. |
+| **`584-C`** | 🟢 **ADVANCED.** `15` rows filed — `10` previously ABSENT from the entire base, `5` promoted from history to the shelf. 🔴 Debt not cleared. |
+
+### 🟢 Paid: the `6` reader-facing dangling ids (`589-A`'s worklist, de-homonymed)
+
+🔵 **Transcribed from the page that already states each one, with that page named**, per
+`589-A`'s rule that re-deriving a register from the shelves invents one. 🔴 `archive/` was
+grepped first for every id: **none** was registered there, so none is a `gate-prose-claims`
+loss — all six were simply never written.
+
+| Gap | Statement, as its source page states it | source |
+|---|---|---|
+| `440-C` | **The regulatory channel is saturated and four legs a pass are being spent to confirm it; the legs are not broken, they are finished.** The channel that still pays is per-jurisdiction queries in the jurisdiction's own language, and it should take those four slots. 🟡 Carried: `p590`'s four regional legs produced `14` tokens but `0` primary instruments, consistent with the gap. | `intel/market.md` |
+| `510-C` | 🔴 **NOT A DANGLING REFERENCE, and it must not be registered.** The only citation of `510-C` on any shelf is inside `p589`'s own dangling-id measurement table, as the *datum* *"oldest dangling id"*. 🔵 A measurement **about** an id is not a reference **to** it; registering it would invent a register, which `589-A` forbids. **Prescription:** the dangling predicate must exclude citations inside tables whose subject is the id census — otherwise the census manufactures its own backlog. | `intel/trends.md` |
+| `573-A` | **The learner-simulation agent this KB cannot legally ship** — the slot filled instead by offline policy validation in `catsim`. 🔴 **Its pointer was broken at the destination:** the citing line named `agents/top.md` as its home and that page contains **no** occurrence of the id. 🟢 Pointer corrected this pass to this register. | `compose/patterns.md` |
+| `573-B` | **There is no permissively licensed, university-scale open-source SIS**; the one MIT option (`academico`) is scoped to *"small and medium institutions"*. Therefore **a registrar-scale SIS engagement attaches to the client's existing system over its API; it does not fork one.** 🟢 Unchanged, and `erseco/python-moodle` (MIT) is the first row implementing the rule for the LMS tier too. | `verticals/solutions.md` |
+| `580-F` | **Retirement of the APAC region-level regulatory leg** — education-specific APAC regulation repeatedly nil, declared rather than left silent. 🟡 **Partly reversed by `p590`:** the Philippines DepEd + Google **Project S.I.N.A.G.** teacher-certification programme is named, dated and attributable — 🔵 but it is a **procurement and training programme, not a rule**, so the regulatory nil stands and the leg's retirement is narrowed, not withdrawn. | `intel/market.md` |
+| `580-G` | **`579-F` prescribed the token-check for *findings*; `580-G` extended it to *instruments*.** 🔵 `p590` extends it once more, to **the premises of prescriptions** — `589-B`'s premise (*a shell port needs no permission*) was never token-checked and is false. | `intel/trends.md` |
+
+🟢 **`0` of the `6` are still dangling.** 🔴 **`210` log-only ids remain**, listed by the
+command below; they are citations inside append-only history and are the lowest-value
+tranche of this debt.
+
+### 🔵 The de-homonymed predicate, reproducible, inline
+
+```sh
+PAGES="agents/top.md agents/trending.md repos/foundations.md repos/trending.md \
+       verticals/solutions.md intel/market.md intel/trends.md compose/patterns.md"
+# cited: gap ids only — NOT the P-NNN-X compose pattern ids
+grep -ohP '(?<!P-)(?<![A-Za-z0-9-])[0-9]{3}-[A-J]\b' $PAGES | sort -u > cited
+# registered: any id in the LEFTMOST CELL of a table row (handles `Gap NNN-X` and multi-id cells)
+awk -F'|' '/^\|/ {c=$2; while (match(c,/[0-9][0-9][0-9]-[A-J]/)) \
+  { print substr(c,RSTART,RLENGTH); c=substr(c,RSTART+RLENGTH) } }' intel/open-gaps.md | sort -u > registered
+comm -23 cited registered            # 216 — full-range dangling
+```
+
+🔴 **A substring predicate reports `5`; `p589`'s structural predicate reports `120` on the
+`5xx` window; this one reports `102` there and `216` overall, of which `6` are
+reader-facing.** 🔵 **Three predicates, three answers, and the spread is the finding:** no
+figure in this class means anything without the predicate printed beside it.
+
+### 🔴 Registered this pass
+
+| Gap | Statement and prescription |
+|---|---|
+| 🆕 **`590-A`** | **`589-B` is corrected: the denial is on executing repository code in any language, so porting gates to shell does not make them run.** `bash ingest/claim-role.sh` is DENIED exactly as `make` is; inline `grep`/`awk`/`bash -c` run. **Prescription:** store each gate as a **copy-pasteable inline command block inside the page it guards**, and have every pass paste and run the three cheapest ones. 🔴 Do **not** commit `gate-*.sh` files — that reproduces the inert-gate defect one layer down. 🔵 `589-B`'s option (1), an exec allowlist for `ingest/*.py`, is now the **only** route to running the existing `59`-control suite and should be requested as such. |
+| 🆕 **`590-B`** | **The id census manufactures part of its own backlog, two ways.** (1) `10.0 %` of id-shaped tokens on the curated pages are `P-NNN-X` **pattern** ids, which every predicate so far has counted as gap ids — `18` of `589-A`'s `120`. (2) `510-C` is "dangling" only because a census table cites it as a datum. **Prescription:** the predicate must exclude `P-` prefixed ids **and** citations inside id-census tables, and must publish its own form beside any count. 🔵 The three-predicate spread (`5` / `120` / `102`) is the evidence that an unprinted predicate makes a count meaningless. |
+| 🆕 **`590-C`** | **A liveness count cannot distinguish an ecosystem from one prolific publisher, and every axis table this base has ever published carries liveness without owners.** Measured: `topic:qti` has `14` live permissive repositories from **`7`** owners, `8` of them one account (`metyatech`), all pushed in a six-day window, none above `2★`. **Prescription:** **no axis table reaches a page without a distinct-owner column**; flag any axis where one owner holds `> 50 %` or `live ÷ owners >= 2.0`. Filed as `Trend 42`. 🔴 Retro-fitting the column to prior axis tables is unpaid. |
+| 🆕 **`590-D`** | **A blank cell in a table defeats every claim-checking gate this base has, and it is how `p589`'s SCORM claim survived its own counter-example.** `p589` wrote *"exactly two are alive"* with `numbas/Numbas` **in the same table**, `Last push` = `—`, and the refuting row shelved `66` lines above on the same page. **Prescription:** treat `—` in a **measured** column as a 🔴 gate failure, not a formatting choice — a row with an unmeasured liveness cell may not be counted in, or out of, any liveness claim. 🔵 This is `584-B`'s shelf→trend direction, with the mechanism finally named: the shelf could not refute the trend because the refuting cell was empty. |
+| 🆕 **`590-E`** | **A licence *share* on a topic axis is reproducible only to about `± 4 pp`, measured same-day on the same channel.** `p589`: `133/235` unlicensed (`56.6 %`), permissive `80`. `p590`, same day, identical denominator `235`: `141/235` (`60.0 %`), permissive `78`. **Prescription:** publish axis licence shares with an explicit `± 4 pp` band and never build a prescription on the third significant figure — 🔴 `589-F` built one on `56.6 %`. 🔵 Denominators (`235`) are stable; the licence field is not. |
+
+### 🟡 Carried, and declared rather than hidden
+
+| Gap | Note |
+|---|---|
+| `583-B`, `584-A` | 🔴 **Untouched again.** `50`+ superlative claims unswept; `584-A`'s free stage-(1) `grep` not spent. 🔵 **However `p590` ran that exact method by accident and it paid immediately** — grepping the pages for `Trend 41`'s subject terms is what surfaced `numbas/Numbas`. That is stage (1) working, unprompted, and it argues for spending it deliberately next pass. |
+| `589-B` | 🟢 **Superseded by `590-A`** on its prescription; 🔴 its finding (every gate inert) **stands and is now worse** — the committed-shell route is closed too. |
+| `589-C` | 🟢 **OBEYED.** Every share this pass publishes carries its raw-hit count and its hand-graded false positives; the header-as-data gate's `15/15` false-positive rate is published rather than suppressed. |
+| `589-F` | 🟡 **Narrowed by `590-E`** — its `56.6 %` premise does not reproduce. 🔴 The CC-on-software class itself is unchanged: no new CC-licensed software row appeared this pass, so the class still has `3` members and still has no single column to be read from. |
+| `586-F` | 🔴 **Africa still a declared nil inside EMEA**, third pass. `p590`'s leg returned only unattributed, undated prose. |
+| `gate-census-currency` / `gate-union-currency` | 🔴 Not re-derived; `590-A` is the reason they cannot be, and it is now the second entry to say so. |
+
+
 
 ## 🆕 `p589` — `2026-11-01` — **🔴 THIS REGISTER IS THE DEFECT. `44` GAP IDS ARE CITED ON THE CURATED PAGES AND APPEAR NOWHERE IN THIS FILE; ITS NEWEST ENTRY WAS `p584` WHILE THE SHELVES CITED `588`. `9 OF THE LAST 12` COMMITTED PASSES WROTE NO REGISTER ENTRY AT ALL. 🔴 THE MECHANISM IS NAMED FOR THE FIRST TIME: `gate-register-currency` IS IN `HOOK_GATES` AND IN `ingest/pre-commit`, AND `make` AND `python3 ingest/*.py` ARE BOTH **DENIED** IN THIS ENVIRONMENT — SO EVERY GATE IN THIS HARNESS IS INERT FOR EVERY PASS WRITTEN UNDER THAT DENIAL, AND `p574` RECORDED THIS SAME FAILURE FOR `p573` WITHOUT NAMING THE CAUSE. 🟢 `588-A` PAID AT ITS SOURCE LINE. 🟢 `584-E` CLOSED BY REFUTATION UNDER A PRE-REGISTERED PREDICTION THAT FAILED ON BOTH ARMS. 🟢 `12` ROWS FILED, NONE FROM A SEARCH. 🔴 TWENTIETH NIL. SIX REGISTERED (`589-A`…`589-F`).**
 

@@ -48,6 +48,22 @@ this environment, so `gate-shelf-consistency`'s `59` controls did not run on the
 Replicated by hand instead; see `589-B` and
 [`../intel/open-gaps.md`](../intel/open-gaps.md).
 
+🆕 **`p590` — scope: `19` addresses measured, `16` grants byte-read, the `44`-row shelf NOT
+re-measured.** This pass answered `589-E`, and the answer **withdraws a rule this page's
+sibling published yesterday**: the SCORM emit layer is *not* dead, so `Trend 41`'s
+generalisation falls. A new **spec-emit agent tier** of five MIT rows is added below, all
+five promoted from this base's own history. 🟢 **The mandated legs broke a twenty-pass nil
+streak with one genuinely new address — and it is unlicensed, so it is a block, not a row.**
+
+🔴 **`589-B` is corrected at the point that matters most.** `589-B` prescribed *"port the
+three cheapest gates to pure `grep`/`awk`"* as the option that *"needs no permission"*.
+🔴 **A ported `.sh` gate would have been just as inert:** `bash ingest/claim-role.sh` is
+**DENIED** in this environment exactly as `make` is, re-tested this pass. 🟢 **What does run
+is an inline command typed into the harness** — `grep`, `awk` and `bash -c '…'` all
+executed here. 🔵 So a runnable gate in this repository must be stored as a
+**copy-pasteable command block a pass executes**, never as a committed script. Three gates
+were run that way this pass; see `590-A` and [`../intel/open-gaps.md`](../intel/open-gaps.md).
+
 ---
 
 ## The shelf — 44 verified agents
@@ -115,6 +131,52 @@ run inside a host agent — `Papermorph`, `claudemy`, `universal-examprep-skill`
 commercially: a skill has **no hosting, no auth and no UI to maintain**, so the integration
 cost of adopting one is a fraction of adopting a platform. See
 [`../compose/patterns.md`](../compose/patterns.md) pattern `P586-1`.
+
+## 🆕 The spec-emit agent tier — added `p590`, and every row was already in this base
+
+🔵 **Why this tier is new and why it belongs on an *agents* page.** `p589` found agent
+supply growing *on top of* the SCORM layer because the layer's libraries were dead
+(`Trend 41`). 🔴 **That premise is now refuted** — the libraries are alive
+([`../repos/foundations.md`](../repos/foundations.md)) — but **the agents are real
+regardless**, and they are a distinct shape from everything else on this page: an MCP
+server or agent skill whose *output artefact is a conformant package*, not a chat turn.
+🟢 **All five grants byte-read first-hand `2026-11-01`; the API agreed on `5 of 5`.**
+
+🔴 **Not one of these five came from a search, and all five were already in this base's
+append-only history.** That is the promotion bottleneck `p587` named, measured again at
+`5 of 5` — so the honest reading of this tier is that it is **filing debt paid**
+(`584-C`), not discovery.
+
+| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+|---|---|---|--:|---|---|---|
+| **idstack** | [savvides/idstack](https://github.com/savvides/idstack) | 🟢 **MIT (text, 1,077 B)** | **27** | `2026-10-30` | Global | 🆕 **Eleven instructional-design agent skills** that check alignment, accessibility and assessment validity against evidence-based ID criteria. 🔵 The only row on this page that audits *pedagogy* rather than producing content — the reviewer slot in a courseware pipeline. |
+| **edumints-scorm-mcp** | [kemalyy/edumints-scorm-mcp](https://github.com/kemalyy/edumints-scorm-mcp) | 🟢 **MIT (text, 1,069 B)** | **9** | `2026-10-14` | Global | 🆕 MCP server that **assembles interactive SCORM-compliant courses** and is self-hostable. 🟢 The emit step of a courseware pipeline, exposed as agent tools. |
+| **coursecode** | [course-code-framework/coursecode](https://github.com/course-code-framework/coursecode) | 🟢 **MIT (text, 1,069 B)** | **7** | `2026-10-30` | Global | 🆕 Course-authoring framework for MCP-capable tools — build, preview and export. 🔵 Has a desktop sibling (`coursecode-desktop`) covering SCORM, **cmi5** and LTI export. |
+| **scorm-mcp-server** | [giacomomaria81/scorm-mcp-server](https://github.com/giacomomaria81/scorm-mcp-server) | 🟢 **MIT (text, 1,070 B)** | **6** | `2026-09-03` | EMEA | 🆕 Turns HTML or design bundles into **LMS-ready SCORM 2004 / 1.2 packages** as an MCP tool. 🔵 Narrower than `edumints` and therefore easier to drop into an existing pipeline. |
+| **edumints-scorm-skill** | [kemalyy/edumints-scorm-skill](https://github.com/kemalyy/edumints-scorm-skill) | 🟢 **MIT (text, 1,069 B)** | **5** | `2026-10-14` | Global | 🆕 The **agent-skill half** of `edumints-scorm-mcp` — authoring instructions paired with that server. 🔵 Ship the pair, not either alone. |
+
+🔵 **How to compose this tier**, concretely: `coursecode` or `edumints-scorm-skill` authors,
+`edumints-scorm-mcp` or `scorm-mcp-server` emits the package,
+[`LiaScript-Exporter`](https://github.com/LiaScript/LiaScript-Exporter) (BSD-3-Clause)
+covers the formats they do not, and **`idstack` reviews the result before it ships**. Wired
+up in [`../compose/patterns.md`](../compose/patterns.md).
+
+### 🔴 Measured and BLOCKED — the first new address from the mandated legs in `21` passes, and it is unlicensed
+
+🟢 **The streak is broken and the result is still a block.** `p589` recorded a twentieth
+consecutive nil on the mandated `WebSearch` legs. 🟢 **`p590`'s legs returned one address
+this base has never held in any file** — and it fails the only test that matters.
+
+| Repo | Measured `p590` | Verdict |
+|---|---|---|
+| [anandpatikat/guru-latihan-dinamis](https://github.com/anandpatikat/guru-latihan-dinamis) | `115★`, pushed **`2026-11-01T11:40Z`** (same hour as this pass), `fork: false`, `archived: false`, default branch `main` | 🔴 **BLOCK — NO GRANT.** API `license: null`, and `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE` and lowercase `license` all return `404`. 🔵 Absent from all `11` files of this base, so it is genuinely new; **unlicensed means all rights reserved, so it cannot be vendored, forked or shipped.** Filed as a LEAD: an **Indonesian-language exam-preparation teacher agent**, i.e. the APAC in-language supply whose absence `p587` measured at `33×`. 🟡 Worth one watch for a later grant, worth nothing today. |
+
+🔵 **Recorded as a channel result, not a row:** `21` passes of mandated legs have now
+produced exactly **one** address this base did not already hold, and it is unusable. The
+legs that pay are the per-jurisdiction native-language queries (`p576`) and the topic axes
+(`p589`, `p590`) — both of which paid again this pass.
+
+---
 
 ## 🆕 The enablement tier — repos that teach *about* AI, not repos that teach *with* it
 

@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p590` — `2026-11-01` — **🟢 `589-E` IS ANSWERED BY WALKING TWO MORE AXES TO EXHAUSTION AND THE ANSWER IS A REFUTATION: xAPI HAS `6` LIVE PERMISSIVE EMITTERS AND QTI HAS `8`, AGAINST A PRE-REGISTERED `<= 2`. 🔴 THE REAL RISK ON QTI IS OWNER CONCENTRATION — `8 OF ITS 14` LIVE PERMISSIVE REPOS BELONG TO ONE ACCOUNT. 🔴 `p589`'s "EXACTLY TWO ALIVE ON SCORM" IS REFUTED BY A ROW `66` LINES ABOVE IT IN ITS OWN FILE. 🟢 `10` ABSENT ROWS FILED.**
+
+### 🟢 The sweep, with its denominators first
+
+`gh api -X GET search/repositories -f q='topic:<axis>'`, every page walked until empty, run
+`2026-11-01`. 🔵 **Three axes, one matcher, because the point was a comparison.**
+
+| axis | repos | permissive | 🔴 no licence at all | live permissive non-archived | 🆕 distinct owners |
+|---|--:|--:|--:|--:|--:|
+| `topic:scorm` | `235` | `78` (`33.2 %`) | `141` (🔴 `60.0 %`) | `42` | 🟢 `39` |
+| `topic:xapi` | `280` | `125` (`44.6 %`) | `115` (🔴 `41.1 %`) | `35` | 🟢 `27` |
+| `topic:qti` | `52` | `23` (`44.2 %`) | `20` (🔴 `38.5 %`) | `14` | 🔴 **`7`** |
+
+🔵 **`live` = `pushed_at >= 2026-08-03` (90 days) and `archived: false`; `permissive` =
+`spdx_id` in {MIT, Apache-2.0, BSD-2-Clause, BSD-3-Clause, ISC, 0BSD, Unlicense}.** Both
+definitions were fixed in the
+[pre-registration](../evidence/prereg-589E-spec-tooling-rot.2026-11-01-p590.md) **before**
+the two new axes were queried.
+
+### 🔴 `589-E`: H1 refuted on both arms
+
+| arm | pre-registered H1 | 🔴 measured | verdict |
+|---|---|---|---|
+| `topic:xapi` | `<= 2` live permissive emit-side libraries | **`6`** (`xapi-java`, `TinCanDart`, `laralocker`, `xapi-dotnet`, `xapi-starter-kit`, `xapipe`) | 🔴 **H1 refuted** |
+| `topic:qti` | `<= 2` | **`8`** (`markdown-to-qti`, `examplary/qti`, `canvas-quiz-skill`, `apply-to-qti-results`, `tracklms-to-qti-results`, `roster-to-qti-results`, `qti-scoring-system`, `qti-playground`) | 🔴 **H1 refuted** |
+| spec-body repo | archived or `>= 12` months idle | 🟢 **holds for ADL** (`adlnet/SCORM-to-xAPI-Wrapper`, unlicensed + archived, `2017`) | 🟡 the one arm that survives |
+
+🟢 **The decision rule committed in advance said *"both axes `>= 5` → H1 refuted, withdraw
+the generalisation"*.** It is withdrawn. 🔵 **What survives is narrower and more useful:
+specification *bodies* abandon their own tooling (ADL did), while third parties keep
+shipping it.** That is a sourcing instruction, not a decay law.
+
+### 🔴 The finding `589-E` did not ask for, and it is the one that changes a decision
+
+🔴 **A liveness count called QTI healthy; the owner column says it is one publisher.**
+`8` of QTI's `14` live permissive repositories are owned by **`metyatech`**, all pushed
+inside a six-day window in September `2026`, **none above `2★`**. The axis has `7` distinct
+owners in total against `39` for SCORM and `27` for xAPI.
+
+🔵 **Why it matters for delivery:** an engagement that picks up QTI tooling is taking a
+**single-maintainer dependency** dressed as an ecosystem. 🟢 **Prescription, now standing:
+every axis table on these pages carries a distinct-owner column**, because `liveness ÷
+owners` is the number that distinguishes an ecosystem from one person's week.
+
+### 🟢 `10` live permissive rows that were ABSENT from this entire base — now filed
+
+🔵 Checked against all `11` files before being called new (`583-A`'s gate), and every grant
+byte-read. 🟢 **API agreed with the title block on `10 of 10`.**
+
+| Repo | Grant (byte-read) | ★ | Pushed | Default branch | Axis |
+|---|---|--:|---|---|---|
+| [LearningLocker/xapi-service](https://github.com/LearningLocker/xapi-service) | 🟢 MIT, lowercase **`license`**, `1,070 B` | `42` | `2026-10-26` | 🔴 `master` | `xapi` |
+| [BerryCloud/xapi-java](https://github.com/BerryCloud/xapi-java) | 🟢 Apache-2.0, `11,350 B` | `20` | `2026-10-30` | `main` | `xapi` |
+| [Didask/scol-r](https://github.com/Didask/scol-r) | 🟢 MIT, `1,063 B` | `15` | `2026-10-27` | 🔴 `master` | `scorm` |
+| [LearningLocker/xapi-validation](https://github.com/LearningLocker/xapi-validation) | 🟢 MIT, lowercase **`license`**, `1,070 B` | `12` | `2026-10-26` | 🔴 `master` | `xapi` |
+| [erseco/python-moodle](https://github.com/erseco/python-moodle) | 🟢 MIT, `1,071 B` | `10` | `2026-10-22` | `main` | `scorm` |
+| [ijeffro/laralocker](https://github.com/ijeffro/laralocker) | 🟢 MIT, `1,072 B` | `9` | `2026-10-03` | `main` | `xapi` |
+| [get-bridge/scorm_engine](https://github.com/get-bridge/scorm_engine) | 🟢 MIT, `1,084 B`, *"The MIT License (MIT)"* | `5` | `2026-09-03` | 🔴 `master` | `scorm` |
+| [jblough/TinCanDart](https://github.com/jblough/TinCanDart) | 🟢 Apache-2.0, `11,358 B` | `5` | `2026-08-06` | 🔴 `master` | `xapi` |
+| [yetanalytics/project-pan](https://github.com/yetanalytics/project-pan) | 🟢 Apache-2.0, `11,356 B` | `5` | `2026-10-16` | `main` | `xapi` |
+| [dr-rompecabezas/wagtail-lms](https://github.com/dr-rompecabezas/wagtail-lms) | 🟢 MIT, `1,072 B` | `5` | `2026-10-26` | `main` | `xapi` |
+
+🔵 **`587-D` extended: it is not only the BRANCH that is unguessable, it is the FILENAME
+CASE.** Two rows carry their grant at lowercase `license`; a probe for `LICENSE` alone
+returns `404` on both. 🔴 **`4 of 10` default to `master`.** A naive
+`raw.githubusercontent.com/<repo>/main/LICENSE` probe would have scored `0` on four of
+these and a false `NONE` on two more — `6 of 10` wrong.
+
+### 🔴 `p589`'s SCORM claim is refuted from inside its own file
+
+🔴 **`p589` published *"exactly two are alive"* on the SCORM emit side.** Re-walked, there
+are **at least six** live permissive emitters. 🔴 **Two of the four it missed were already
+on this base's pages:** `numbas/Numbas` (Apache-2.0, `216★`, `2026-10-28`, ships a
+`23,811`-byte `runtime/scripts/scorm-storage.js`) is shelved on
+[`../repos/foundations.md`](../repos/foundations.md) **line `78`** as *"the permissive
+assessment anchor to build on"* — `66` lines above the claim that denies it — and
+`LiaScript/LiaScript-Exporter` (BSD-3-Clause, `29★`, `2026-10-30`, README names **SCORM
+1.2 and SCORM 2004** export) sits in this base's history.
+
+🔵 **The mechanism is one blank cell.** `p589`'s own row for `Numbas` left `Last push` as
+`—`. 🔴 **An unmeasured cell cannot refute a claim, so the claim survived its own
+counter-example.** Corrected at source, both cells now filled.
+
+🔴 **The licence distribution does not reproduce either:** `133 / 235` unlicensed
+(`56.6 %`) at `p589` against `141 / 235` (`60.0 %`) re-walked the **same day**, identical
+denominator. 🔵 **A licence share on this axis is good to about `± 4 pp` and no finer** —
+which matters because `589-F` built a prescription on the `56.6 %` figure.
+
+
 ## 🆕 `p589` — `2026-11-01` — **🟢 ONE TOPIC AXIS, WALKED TO EXHAUSTION, PAID `9` ROWS AND A TREND: `topic:scorm` IS `235` REPOSITORIES, `80` OF THEM PERMISSIVE — AND `7` OF THE `8` CREDIBLE EMIT-SIDE ADDRESSES HAD `2`–`15` RE-FINDS IN THIS LOG AND **ZERO** SHELF PRESENCE. 🔴 THE TIER IS ALSO MOSTLY DEAD: `2023`, `2019`, ARCHIVED, OR `9` MONTHS IDLE, WITH EXACTLY **TWO** LIVE PERMISSIVE LIBRARIES. 🔴 AND THE SPEC'S OWN AUTHORS ABANDONED THEIR OWN TOOLING — `adlnet/SCORM-to-xAPI-Wrapper` IS UNLICENSED, ARCHIVED, LAST PUSHED `2017`.**
 
 ### 🟢 The sweep, with its denominator first

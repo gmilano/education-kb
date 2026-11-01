@@ -69,7 +69,7 @@ before its denominator is quoted; this is the same hazard one layer up, in the m
 false positives, and the token that fired. Anything else is an upper bound dressed as a
 measurement.
 
-## 41. A specification does not predict whether a layer is built by libraries or by agents — what predicts it is whether the spec is something you must SPEAK or something you must EMIT, and whether its tooling is still alive (high confidence — pre-registered prediction, falsified on both arms; `545` repositories across four axes, one matcher, every hit hand-graded)
+## 41. A specification does not predict whether a layer is built by libraries or by agents — what predicts it is whether the spec is something you must SPEAK or something you must EMIT, and — 🔴 `p590`: NOT whether its tooling is alive, that half is withdrawn — whether the spec BODY still maintains its own (high confidence — pre-registered prediction, falsified on both arms; `545` repositories across four axes, one matcher, every hit hand-graded)
 
 🟢 **This trend exists because a prediction was written down before the measurement and
 then failed.** `584-E` asked for exactly that; the pre-registration is committed verbatim at
@@ -114,16 +114,39 @@ they **produce** it as an output format.
 | **conformance target** | *speak* it, to interoperate at runtime | 🟢 **libraries** — conformance is deterministic, testable, written once, depended on | LTI 1.3, xAPI |
 | **export target** | *emit* it, to hand a deliverable to someone else's system | 🔴 **agents and generators** — the generation is judgement-shaped, only the container is fixed | SCORM 1.2 / 2004 |
 
-🔴 **And the second half, which is why the agents appeared now.** Of the `80` permissive
-repositories on `topic:scorm`, the emit-side library tier is **dead**: `react-scorm-provider`
-(MIT, `67★`) last pushed **`2023-01-06`**, `gamestdio/scorm` (MIT, `38★`)
-**`2019-02-14`**, `raccoongang/edx_xblock_scorm` (Apache-2.0) **archived**, and
-🔴 **`adlnet/SCORM-to-xAPI-Wrapper` — published by ADL, the body that authored SCORM — is
-unlicensed *and* archived, last pushed `2017`.** Exactly **two** are alive:
-[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT, `362★`, pushed
-`2026-10-28`) and [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper)
-(MIT, `58★`, pushed `2026-10-29`). 🔵 **The spec is stable, its tooling rotted, and agents
-grew into the vacancy.**
+🔴 **WITHDRAWN `p590` — the "tooling rotted" half of this trend is REFUTED, and with it the
+clause in this trend's own title.** `p589` wrote that the emit-side library tier is dead and
+that *"exactly two are alive"*. `589-E` asked for that to be tested on `topic:xapi` and
+`topic:qti` before it generalised. 🟢 **It was tested under a
+[prediction registered first](../evidence/prereg-589E-spec-tooling-rot.2026-11-01-p590.md),
+and it failed on both arms.**
+
+| axis | H1 predicted | 🔴 measured (live permissive emit-side) | verdict |
+|---|---|--:|---|
+| `topic:xapi` | `<= 2` | **`6`** | 🔴 H1 refuted |
+| `topic:qti` | `<= 2` | **`8`** | 🔴 H1 refuted |
+| `topic:scorm`, re-walked | `2` (`p589`'s own figure) | 🔴 **`>= 6`** | 🔴 `p589` refuted |
+
+🔴 **The SCORM figure was wrong at source, and its counter-example was `66` lines above it
+in the same file.** `numbas/Numbas` (Apache-2.0, `216★`, pushed `2026-10-28`, ships a
+`23,811`-byte `runtime/scripts/scorm-storage.js`) is shelved on
+[`../repos/foundations.md`](../repos/foundations.md) line `78` as *"the permissive assessment
+anchor to build on"*; `LiaScript/LiaScript-Exporter` (BSD-3-Clause, `29★`, pushed
+`2026-10-30`) exports **SCORM 1.2 and SCORM 2004** per its own README and was already in
+this base's history. 🔵 **`p589`'s row for `Numbas` left `Last push` blank — and an
+unmeasured cell cannot refute a claim, which is exactly how the claim survived its own
+counter-example.** `584-B`'s failure mode, one pass after `584-B` was registered.
+
+🟢 **What survives, stated narrowly enough to be true.** The dead repositories `p589` listed
+are all genuinely dead — `react-scorm-provider` (MIT, `67★`) last pushed `2023-01-06`,
+`gamestdio/scorm` (MIT, `38★`) `2019-02-14`, `raccoongang/edx_xblock_scorm` archived, and
+🔴 **`adlnet/SCORM-to-xAPI-Wrapper`, published by ADL — the body that authored SCORM — is
+unlicensed *and* archived, last pushed `2017`.** 🔵 **So the surviving claim is about
+STEWARDSHIP, not about tooling in general: specification bodies abandon their own
+reference tooling, while third parties keep shipping it.** That is a sourcing instruction
+(*do not depend on the spec author's repo*) and it is supported on all three axes. 🔴 The
+general *"a spec's tooling rots"* law is withdrawn: on the same three axes there are `42`,
+`35` and `14` live permissive repositories respectively.
 
 🔵 **Delivery rule — this replaces `Trend 39`'s, and it is the sellable half.** Do not ask
 *"does this task have a specification?"* Ask **two** questions:
@@ -142,6 +165,48 @@ permissive tooling is maintained *and* whose agent share is low, or a conformanc
 spec with high agent share once its libraries have rotted. `589-E` prescribes the test —
 `topic:xapi` and `topic:qti`, where the roles differ and the decay may not.
 
+
+## 42. A liveness count cannot tell an ecosystem from one person's week — the number that can is live repos ÷ distinct owners, and on one of education's three interchange specs it is 2.0 (high confidence — `567` repositories across three axes walked to exhaustion, owners counted, `2026-11-01`)
+
+🟢 **Measured, same sweep, same matcher, three axes walked to exhaustion.** The first four
+columns are the ones this base has always published. 🆕 **The fifth is the one that changes
+a decision.**
+
+| axis | repos | permissive | live permissive, non-archived | 🆕 distinct owners | 🆕 **live ÷ owners** |
+|---|--:|--:|--:|--:|--:|
+| `topic:scorm` | `235` | `78` | `42` | 🟢 `39` | 🟢 **`1.08`** |
+| `topic:xapi` | `280` | `125` | `35` | 🟢 `27` | 🟢 **`1.30`** |
+| `topic:qti` | `52` | `23` | `14` | 🔴 **`7`** | 🔴 **`2.00`** |
+
+🔴 **QTI's apparent health is one account.** `8` of its `14` live permissive repositories
+belong to **`metyatech`** — `markdown-to-qti`, `apply-to-qti-results`,
+`tracklms-to-qti-results`, `roster-to-qti-results`, `qti-xml-core`, `qti-scoring-system`,
+`qti-reporter`, `qti-html-renderer` — **all pushed inside a six-day window in September
+`2026`, none above `2★`.** 🔵 Remove that one owner and the axis has `6` live permissive
+repositories from `6` owners, which is a different procurement fact entirely.
+
+🔵 **Why `liveness` alone misleads, mechanically.** A single prolific publisher produces the
+same `pushed_at` distribution as a healthy community: recent dates, plural repositories,
+permissive licences. 🔴 **Every signal this base grades on is satisfied by one person
+having a productive week.** The owner count is the cheapest available discriminator and it
+costs nothing — it is a `split` and a `sort -u` over data the sweep already fetched.
+
+🟢 **Delivery rule.** Before an engagement takes a dependency on an interchange layer, ask
+**who** maintains it, not just **when** it was last touched:
+
+- 🟢 **`live ÷ owners` near `1.0`** → a real ecosystem; a dead dependency can be swapped.
+- 🔴 **`live ÷ owners` at `2.0` or above, or one owner holding `> 50 %`** → a
+  single-maintainer dependency dressed as an ecosystem. Vendor the code, budget for taking
+  it over, or speak the spec directly and skip the libraries.
+- 🔵 **For QTI specifically:** `feyst/qti3-validator` and `Citolab/qti-playground` are the
+  two live permissive QTI rows from owners other than `metyatech` that a studio can
+  reasonably stand on; treat the `metyatech` set as one supplier, not eight options.
+
+🔴 **This trend also constrains this base's own history.** Every axis table published before
+`p590` carries liveness without owners, so none of them distinguishes these two cases.
+🔵 **Standing prescription: no axis table reaches a page without a distinct-owner column.**
+
+---
 
 ## p588 — 2026-11-01 — the defect class with no instrument is TAXONOMY, not licence; `pushed_at` overstates liveness and every staleness verdict in this base inherits that; and the education-specific licence shape is a CONTENT carve-out inside a permissive CODE grant
 

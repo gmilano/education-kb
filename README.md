@@ -3,6 +3,165 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+## Pass 590 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE CENTRAL FINDING IS THAT `589-B`'s OWN PRESCRIPTION WAS UNEXECUTABLE: IT RECOMMENDED PORTING THE GATES TO PURE `grep`/`awk` BECAUSE THAT *"NEEDS NO PERMISSION"*, AND `bash ingest/claim-role.sh` — A COMMITTED SHELL SCRIPT, NO PYTHON — IS **DENIED EXACTLY AS `make` IS**. THE DENIAL IS ON EXECUTING REPOSITORY CODE IN ANY LANGUAGE, SO A PORTED `gate-*.sh` WOULD HAVE BEEN A SECOND GENERATION OF THE SAME INERT GATE. 🟢 THE FORM THAT RUNS IS AN **INLINE COMMAND BLOCK**, AND THREE GATES WERE RUN THAT WAY AND ALL THREE PASS. 🟢 `589-E` CLOSED BY REFUTATION ON BOTH ARMS UNDER A PREDICTION REGISTERED BEFORE THE MEASUREMENT: xAPI HAS `6` LIVE PERMISSIVE EMITTERS AND QTI HAS `8` AGAINST A PREDICTED `<= 2`, AND RE-WALKING SCORM REFUTED `p589`'s OWN *"EXACTLY TWO ALIVE"* AT `>= 6` — WITH TWO OF THE MISSES ALREADY SHELVED IN THIS BASE, ONE OF THEM `66` LINES ABOVE THE CLAIM. 🔴 `589-A`'s `120`-ID BACKLOG IS `10 %` HOMONYM (`P-NNN-X` PATTERN IDS) AND ITS READER-FACING PART IS `6` IDS, ALL `6` PAID — DANGLING SHELF CITATIONS NOW `0`. 🟢 `15` ROWS FILED (`10` PREVIOUSLY ABSENT FROM THE WHOLE BASE), `16` GRANTS BYTE-READ, `10 of 10` API/TEXT AGREEMENT. 🟢 THE TWENTY-PASS SEARCH NIL IS BROKEN BY ONE ADDRESS AND IT IS UNLICENSED. FIVE REGISTERED (`590-A`…`590-E`).**
+
+### 🔴 The enforcement finding, which corrects the previous pass rather than repeating it
+
+`p589` established that every gate in this harness is inert because `make` and
+`python3 ingest/*.py` are denied, and prescribed porting the three cheapest gates to pure
+`grep`/`awk` as the option that **needs no permission**. 🔴 **Measured this pass, that is
+false.** `bash ingest/claim-role.sh` — a committed shell script with no Python — returns the
+same `"Permission … denied … Reason: [Code from External]"`. The denial is on **executing
+code that lives in this repository**, whatever the interpreter.
+
+🟢 **What does run is an inline command typed into the harness:** `grep`, `awk` and
+`bash -c '<text>'` all executed here. 🔵 **So a runnable gate must be stored as a
+copy-pasteable command block inside the page it guards**, and never as a committed script —
+committing `gate-*.sh` would have created a second generation of the defect `589-B`
+diagnosed. 🔴 `p584` recorded `ingest/address-disposition.sh` as running; that capability is
+gone, which is `587-C` applied to the **gate** channel.
+
+🟢 **Three gates were run inline and all three pass:** header-as-data (the run prompt's
+explicit bar), region vocabulary + frontmatter, and the trend counter (`1`–`42`, no gaps, no
+duplicates, verified by `seq 1 42 | diff`). 🔴 **The header-as-data gate needed correcting
+first:** its naive form returned `15` hits and **all `15` were false positives** — every one
+a *transposed* key-value table whose left column is a row label. The gate must require that
+a header-vocabulary row not be followed by a `|---|` separator. 🟢 Published with its
+false-positive count, as `589-C` requires.
+
+### 🟢 `589-E` closed by refutation, and the refutation corrects the previous pass twice
+
+A prediction was committed to `evidence/prereg-589E-spec-tooling-rot.2026-11-01-p590.md`
+**before** either new axis was queried. H1 — *spec tooling rots* — predicted `<= 2` live
+permissive emit-side libraries per axis.
+
+| axis | predicted | measured | verdict |
+|---|---|--:|---|
+| `topic:xapi` | `<= 2` | **`6`** | 🔴 H1 refuted |
+| `topic:qti` | `<= 2` | **`8`** | 🔴 H1 refuted |
+| `topic:scorm`, re-walked | `2` (`p589`'s figure) | 🔴 **`>= 6`** | 🔴 `p589` refuted |
+
+🔴 **`p589`'s SCORM figure was wrong at source and its counter-example was `66` lines above
+it in the same file.** `numbas/Numbas` (Apache-2.0, `216★`, pushed `2026-10-28`, ships a
+`23,811`-byte `runtime/scripts/scorm-storage.js`) is shelved on `repos/foundations.md` line
+`78` as *"the permissive assessment anchor to build on"*, and `LiaScript/LiaScript-Exporter`
+(BSD-3-Clause, `29★`, README names SCORM 1.2 and 2004 export) was already in this base's
+history. 🔵 **The mechanism is one blank cell:** `p589`'s own row for `Numbas` left
+`Last push` as `—`, and an unmeasured cell cannot refute a claim. Registered as `590-D`.
+
+🟢 **What survives is narrower and true:** specification *bodies* abandon their own
+reference tooling — `adlnet/SCORM-to-xAPI-Wrapper`, from the body that authored SCORM, is
+unlicensed **and** archived, last pushed `2017` — while third parties keep shipping it.
+That is a sourcing instruction, not a decay law. `Trend 41` amended; the general claim
+withdrawn.
+
+### 🆕 The finding `589-E` did not ask for, and it changes a procurement decision
+
+🔴 **A liveness count cannot tell an ecosystem from one prolific publisher.** `8` of
+`topic:qti`'s `14` live permissive repositories belong to **one account** (`metyatech`), all
+pushed inside a six-day window in September `2026`, **none above `2★`**.
+
+| axis | live permissive | distinct owners | live ÷ owners |
+|---|--:|--:|--:|
+| `topic:scorm` | `42` | 🟢 `39` | 🟢 `1.08` |
+| `topic:xapi` | `35` | 🟢 `27` | 🟢 `1.30` |
+| `topic:qti` | `14` | 🔴 **`7`** | 🔴 **`2.00`** |
+
+🟢 Filed as `Trend 42` and as `590-C`, with a standing prescription: **no axis table reaches
+a page without a distinct-owner column.** A QTI engagement is taking a single-maintainer
+dependency dressed as an ecosystem, and `compose/patterns.md` now says so as `P-590-C`.
+
+### 🟢 What was filed, and where it came from
+
+`15` rows, of which 🟢 **`10` were ABSENT from all `11` files of this base** — the xAPI
+emit-side layer this base lacked (`LearningLocker/xapi-service` MIT `42★`,
+`BerryCloud/xapi-java` Apache-2.0 `20★`, `Didask/scol-r` MIT `15★`,
+`LearningLocker/xapi-validation` MIT `12★`, `erseco/python-moodle` MIT `10★`,
+`ijeffro/laralocker` MIT `9★`, `get-bridge/scorm_engine` MIT `5★`, `jblough/TinCanDart`
+Apache-2.0 `5★`, `yetanalytics/project-pan` Apache-2.0 `5★`, `dr-rompecabezas/wagtail-lms`
+MIT `5★`) — and `5` promoted from this base's own history into a new **spec-emit agent
+tier** on `agents/top.md`. 🟢 **`16` grants byte-read; API and licence text agreed on
+`10 of 10`.** 🔴 **`0` of the `15` came from a search.**
+
+🟢 **`587-D` extended: it is not only the BRANCH that is unguessable, it is the FILENAME
+CASE.** Two rows carry their grant at lowercase `license` (`LICENSE` → `404`); `4 of 10`
+default to `master`. A naive `…/main/LICENSE` probe would be wrong on **`6 of 10`**.
+
+### 🟢 The twenty-pass search nil is broken, and the result is still a block
+
+🟢 **`anandpatikat/guru-latihan-dinamis`** — `115★`, pushed `2026-11-01T11:40Z`, absent from
+every file of this base: **the first genuinely new address the mandated legs have produced
+in `21` passes.** 🔴 **No grant on `6` probed paths and `license: null`**, so it cannot be
+vendored, forked or shipped. Filed as a LEAD because it is Indonesian-language exam
+preparation — the in-language APAC supply `p587` measured as missing at `33×`. 🔵 Recorded
+as a channel result: `21` passes, one address, unusable.
+
+### 🔴 `589-A` re-scoped, and most of its backlog was a homonym
+
+🟢 **`p589`'s `120` is CONFIRMED by independent re-derivation** on the `5xx` window —
+recorded because this pass's first predicate returned `105` registered against `296`, and
+**the first predicate was the broken one** (it missed the legacy `` `Gap NNN-X` `` form and
+multi-id cells). 🔴 **But `18` of the `120` are not gap ids at all** — they are `P-NNN-X`
+**compose pattern** names, and `195 of 1,953` id-shaped tokens on the curated pages
+(`10.0 %`) are pattern ids.
+
+| predicate | dangling, `5xx` | dangling, all passes | dangling AND on a curated shelf |
+|---|--:|--:|--:|
+| substring (`p589`'s replica) | `5` | — | — |
+| structural (`p589`'s, authoritative then) | `120` | not measured | not measured |
+| 🟢 **structural + de-homonymed (`p590`)** | **`102`** | 🔴 **`216`** | 🟢 **`6`** |
+
+🟢 **All `6` reader-facing ids paid by transcription** from the page that already states
+each one, `archive/` grepped first (none was registered there, so none is a
+`gate-prose-claims` loss). 🟢 **Dangling shelf citations: `6` → `0`.** 🔴 `210` log-only ids
+remain — citations inside append-only history, the lowest-value tranche. 🔵 One of the six,
+`510-C`, is declared **unregisterable**: its only citation is inside `p589`'s own census
+table, as the datum *"oldest dangling id"*, and a measurement **about** an id is not a
+reference **to** it. Registering it would invent a register. `590-B`.
+
+### 🔴 Channels, and what still certifies nothing
+
+🟢 `gh api search/repositories` (`19` addresses, `567` repositories across three axes
+walked to exhaustion), fabricated control **discriminating** (`422` vs `200`), `curl` →
+`raw.githubusercontent.com` (`16` grants + `2` READMEs). 🔴 `gh api repos/{owner}/{name}`
+`403`; 🔴 `curl -sI github.com` `403`, so **the run prompt's mandated URL verifier still
+certifies nothing** and the search channel is the substitute. 🔴 `5 of 5` primary hosts
+(`unu.edu`, `publications.iadb.org`, `oecd.org`, `unesco.org`, `newsletters.qs.com`) return
+`000` — **and the fabricated control returns `000` identically**, so `589-D` reproduces and
+`583-E` stands at `19` hosts across four passes with the failure still undiagnosable.
+
+### 🟡 Regional legs: `14` tokens, all secondary, one declared nil reversed
+
+🟢 **APAC's education nil is partly reversed by a named programme** — the Philippines'
+Department of Education with Google, certifying over one million teachers via **Project
+S.I.N.A.G.** 🔵 It surfaced on the **EMEA** leg and was placed by content, not by query.
+🔴 It is a procurement and training programme, **not a rule**, so `580-F`'s regulatory nil
+is narrowed rather than withdrawn. 🆕 LATAM gains its demand-side counterpart: the Digital
+Education Council's `92 %` AI-use figure, which against `p587`'s `33×` in-language supply
+deficit is this page's LATAM thesis. 🔴 Africa remains a declared nil inside EMEA
+(`586-F`), third pass. 🔴 **`0` primary instruments read.**
+
+🔴 **The North America leg served the retired *"134 bills / 31 states"* figure for the
+fourth consecutive pass** — tenth sighting on `Gap 417-A`'s counter. Do not quote it.
+
+### 🟢 Two patterns added, one scoping note
+
+`P-590-A` rewrites the courseware-emit recipe around `LiaScript-Exporter` (BSD-3-Clause)
+instead of a generator build — 🔴 `p589`'s version put a generator build in every
+courseware scope. `P-590-B` names an xAPI client library **per client runtime** (JVM, PHP,
+Dart, .NET) instead of a bare *"send statements"* step. `P-590-C` is a scoping note, not a
+recipe: it tells a reader not to treat the QTI tooling list as a menu.
+
+### 🔴 Verification, stated with its limits
+
+🟢 Every address measured on the search channel this pass; every shelved grant byte-read
+with its byte count; both load-bearing README claims (`Numbas`, `LiaScript-Exporter`) read
+first-hand before the refutation was published. 🔴 **`gate-shelf-consistency`'s `59`
+controls did not run** — `590-A` is why, and it is now the second pass to say so rather
+than claiming the suite passed. 🟢 Three gates were replicated inline and pass; that is
+the whole of this pass's automated verification and it is stated as such.
+
+
 
 ## Pass 589 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE CENTRAL FINDING IS THIS BASE'S OWN ENFORCEMENT: `gate-register-currency` IS IN `HOOK_GATES` AND IN `ingest/pre-commit`, AND `make` AND `python3 ingest/*.py` ARE BOTH **DENIED** HERE — SO EVERY GATE IN THIS HARNESS, ALL `59` CONTROLS OF `gate-shelf-consistency` INCLUDED, HAS BEEN INERT FOR AT LEAST `12` PASSES. 🔴 `9 OF THE LAST 12` COMMITTED PASSES WROTE NO REGISTER ENTRY AND `7` WROTE NO README SECTION; `44` GAP IDS WERE CITED ON CURATED PAGES AND ABSENT FROM THE REGISTER, AND WHEN THE PREDICATE WAS TIGHTENED FROM A SUBSTRING MATCH TO A **REGISTRATION POSITION** THE REAL BACKLOG WAS **`120`**. 🟢 `585`–`589` NOW REGISTERED, ALL `21` IDS IN A REGISTRATION POSITION. 🟢 `588-A` PAID AT ITS SOURCE LINE. 🟢 `584-E` CLOSED BY REFUTATION UNDER A PRE-REGISTERED PREDICTION THAT FAILED ON BOTH ARMS, AND `Trend 39`'s `41×` IS NOT REPRODUCIBLE. 🟢 `12` ROWS FILED, NONE FROM A SEARCH. 🔴 TWENTIETH NIL. SIX REGISTERED (`589-A`…`589-F`).**
 

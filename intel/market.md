@@ -3,6 +3,125 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+## 🆕 p590 — 2026-11-01 — all four regional legs run, `14` intel tokens recovered and every one secondary; the North America leg served the retired "134 bills" figure for the FOURTH consecutive pass, the APAC education-regulation nil is reversed by a NAMED national programme, and `583-E` now stands at `19` hosts with its control still non-discriminating
+
+🔵 **Source class declared first (`584-F`'s rule).** 🔴 **`14 of 14` tokens this pass are
+SECONDARY** — market-research marketing pages, vendor blogs, law-firm summaries and
+newsletters. 🔴 **`0` primary instruments were read**, because the hosts that publish them
+do not resolve from this harness.
+
+🔴 **`583-E` re-tested and extended to `19` hosts across four passes, `0` reachable.**
+`unu.edu`, `publications.iadb.org`, `oecd.org`, `unesco.org` and `newsletters.qs.com` all
+return `HTTP 000`. 🔴 **And `589-D`'s control pair reproduces exactly:** a deliberately
+fabricated host (`zzz-fabricated-control-7f3q.org`) returns **`000`, byte-identical to the
+real ones**. 🔵 So *blocked* and *nonexistent* remain indistinguishable; only the set
+{blocked, nonexistent} is identified, and **every IGO instrument below is a LEAD, not a
+fact.**
+
+### 🟢 North America
+
+- 🔴 **The retired figure was served again, and this is the fourth consecutive pass.**
+  *"`134` bills in `31` states, as of March `2026`"* — the figure **`p455` retired** — came
+  back from the global trends leg. 🔵 Per `Gap 417-A`'s counter this sighting should read
+  **ten**. 🔴 **Do not quote it.**
+- **Regional share is published at two incompatible values by two vendors** (SECONDARY):
+  `38 %` of the AI-in-education market for `2025`, and `36 %` *"valued at USD `3.68` bn in
+  `2026`"*. 🔵 Both sit inside the **USD `3.7`–`11.4` bn, publisher-named** spread this page
+  already publishes (`583-D`), so neither is new information — they are a **restatement at
+  regional granularity**, and the `3.1×` publisher spread makes a regional split
+  unquotable.
+- **`86 %` of educational organisations in the region have adopted generative AI**
+  (SECONDARY, single vendor, no instrument shown). 🔴 Treat as directional only.
+- 🟢 **Regulatory shape, and this one is consistent across sources:** US AI regulation
+  remains **state-led, with no comprehensive federal statute**; education-specific
+  constraints arrive through **COPPA** alignment for under-13 products. 🔵 That is the
+  actionable fact for a US engagement: *the compliance surface is per-state plus COPPA*.
+- **USD `169` m in US Department of Education awards including responsible AI in higher
+  education** (Q1 `2026`, SECONDARY, blog-class source — 🔴 LEAD).
+- **Players named:** IBM, Microsoft, Google at platform level; Embodied and Miko in the
+  AI-for-children segment.
+
+### 🟢 EMEA
+
+- 🟢 **Two dated EU instruments, and they are the most useful tokens of the pass**
+  (SECONDARY, but specific): the **European Commission updated its ethical guidelines on AI
+  in education on `9 June`**, and signed **three Advanced Digital Skills grant agreements
+  worth EUR `25.4` m**. 🔴 Primary text unreadable (`583-E`), so both are LEADS — but they
+  are *named, dated and attributable*, which is more than the market-size tokens offer.
+- **UK: over GBP `200` m committed at the AI Adoption Summit** (GBP `100` m to expand
+  Bridge AI, GBP `53` m regional). 🔴 **Adoption generally, not schools** — recorded with
+  that limit stated, because the leg served it as an education fact and it is not one.
+- **England: Ofqual has published principles for AI in high-stakes marking** (SECONDARY).
+  🟢 This is the most directly deliverable-relevant EMEA token: assessment-integrity work in
+  England now has a named regulator position to design against.
+- 🔴 **`586-F` (Africa as a persistent nil inside EMEA) is NOT closed and barely moved.**
+  The leg returned only that startups and public agencies are *"exploring AI for … education,
+  identity services, and local-language engagement"* — unattributed, undated, no instrument.
+  🔵 **Declared as a nil rather than dressed as coverage.**
+- **Enterprise-wide, not education:** `56 %` of EMEA CEOs report readiness for AI adoption
+  against `48 %` in the Americas and `45 %` in APJ (Workday). 🔴 Not an education figure;
+  recorded only to stop a later pass filing it as one.
+
+### 🟢 APAC — the declared nil is REVERSED, by a named national programme
+
+- 🟢 **`580-F` retired the APAC region-level regulatory leg, and `p589` recorded
+  education-specific APAC regulation as nil. This pass reverses that with a named,
+  attributable programme:** the **Philippines' Department of Education has partnered with
+  Google to certify more than one million teachers** in Gemini AI through **Project
+  S.I.N.A.G.** 🔵 **It surfaced on the EMEA leg and was placed here** — a reminder that the
+  regional legs do not partition cleanly and a token must be placed by its content, not by
+  the query that returned it.
+- 🟢 **Forrester: `60 %` of firms and governments in major markets such as India and China
+  will integrate locally developed LLMs alongside global ones, with education named a
+  target sector.** 🔵 Consistent with what `p589` recorded; this is the second independent
+  sighting, so it is the APAC token this base should actually plan against — **in-language,
+  locally-hosted models are the regional default, not an option.**
+- 🔴 **ASEAN Guide on AI Governance and Ethics remains early-stage**, so compliance is
+  **per-country**. **Australia: a National AI Plan with Chief AI Officers** (SECONDARY),
+  public-sector-wide rather than education-specific.
+- 🟡 **Still nil:** no APAC *education-specific binding regulation* was found. 🔵 The
+  Philippines item is a **procurement and training programme, not a rule** — stated so the
+  reversal is not oversold.
+
+### 🟢 LATAM — two IGO instruments, both unreadable, and one implausible market figure
+
+- 🟡 **UNESCO IESALC + UNU-IAS working paper, dated September `2026`**, mapping AI across
+  Latin American and Caribbean universities on five dimensions (teaching, research,
+  community engagement, administration, governance). 🔴 **`unu.edu` returns `000`** — LEAD,
+  carried from `p589` and still unread.
+- 🆕 **Digital Education Council, "AI in Higher Education LATAM Survey `2026`": `92 %` of
+  respondents report using AI tools, and the region is described as more positive toward AI
+  in higher education than any other** (SECONDARY). 🔵 **New this pass**, and it is the
+  demand-side counterpart to `p587`'s supply finding — the region has **the highest
+  reported appetite and the thinnest in-language supply**, measured at `33×` against APAC.
+  🟢 **That asymmetry is the LATAM commercial thesis of this page.**
+- **ECLAC (October `2025`)** ranks Chile, Brazil and Mexico across `100`+ indicators;
+  **IDB fAIr Tech Radar (November `2025`)** describes adoption against structural gaps.
+  🔴 Both hosts `000` — LEADS.
+- 🔴 **One figure is rejected rather than published:** a *"Rest of Latin America"* AI-in-
+  education segment at **USD `18` m (`2024`) → USD `36` m (`2029`)**. 🔵 Three orders of
+  magnitude below this page's global spread for a region of ~`650` m people; the segment
+  definition is doing all the work. 🔴 **Not quotable at any confidence.**
+- 🟢 **Colombia's `Ley 2626 de 2026` (`p576`) remains the only BINDING education-AI
+  instrument on these shelves**, in any region. Unchanged.
+
+### 🔵 Global tokens, and what they reconfirm rather than add
+
+- **Market size, `2025`–`2026`: USD `6.4` bn (IMARC, via a reseller page) to USD `8.3` bn**;
+  CAGRs from **`21 %`** (Persistence) to **`40.9 %`** (The Business Research Company).
+  🟢 **Inside the published USD `3.7`–`11.4` bn, publisher-named spread (`583-D`)** — so
+  `583-D`'s `3.1×` spread is reconfirmed a third time and **the spread, not any single
+  figure, is the quotable object.**
+- **K-12 is the largest segment at roughly `34 %` share in `2026`** (SECONDARY) — 🆕 the
+  first segment split this page has carried.
+- **OpenAI launched a country-level education programme with eight national partners in
+  Q1 `2026`; Microsoft released a broad AI education toolset in January; the OECD's `2026`
+  Digital Education Outlook argues AI helps only where pedagogy stays in control.** 🔴 All
+  SECONDARY; the OECD host returns `000`, so the Outlook is a LEAD — and it is the one
+  instrument on this list whose primary text would change how a proposal is written.
+
+---
+
 
 ## p589 — 2026-11-01 — all eight mandated legs run, `19` intel tokens recovered and every one of them secondary: the `3×` publisher spread this page already publishes is reconfirmed at `3.1×`, LATAM returns its first IGO instrument in three passes and it is unreadable, and `5 of 5` primary hosts are unreachable with a control pair proving the failure cannot be diagnosed
 
@@ -317,6 +436,15 @@ because an informed gap is information and silence looks exactly like coverage.
 
 ### North America
 
+🆕 **`p590` — the compliance surface is the sellable artefact, not the model.** US AI
+regulation remains **state-led with no federal statute**, plus **COPPA** for under-13
+products. 🟢 So a North America engagement's first deliverable is a **per-state
+constraint matrix** the client's own counsel can sign off, wired to
+[`yetanalytics/project-pan`](https://github.com/yetanalytics/project-pan) (Apache-2.0) and
+[`get-bridge/scorm_engine`](https://github.com/get-bridge/scorm_engine) (MIT) for the
+evidence trail. 🔴 **Do not price against the "134 bills / 31 states" figure** — retired at
+`p455`, served again this pass, tenth sighting.
+
 **Regulatory posture: the most legislatively active region in the world, and the activity
 is restrictive rather than enabling.**
 
@@ -355,6 +483,16 @@ fork** (AGPL-3.0, and ~6 months since its last public push).
 
 ### EMEA
 
+🆕 **`p590` — assessment integrity in England now has a named regulator position to design
+against.** **Ofqual has published principles for AI in high-stakes marking**, and the
+**Commission updated its AI-in-education ethical guidelines on `9 June`** (EUR `25.4` m of
+Advanced Digital Skills grants signed). 🟢 **EMEA is also where the permissive emit tooling
+actually lives:** `LiaScript-Exporter` (BSD-3-Clause, Germany), `numbas/Numbas` (Apache-2.0,
+Newcastle University), `scorm-h5p-wrapper` (MIT), `Didask/scol-r` (MIT, France),
+`erseco/python-moodle` (MIT), `BerryCloud/xapi-java` (Apache-2.0) — 🟢 **`6` of the `10`
+newly filed permissive rows this pass are EMEA-origin.** 🔴 Africa remains a declared nil
+(`586-F`): no dated instrument, third pass running.
+
 **Regulatory posture: the strictest *in principle*, and the least certain *in date*.**
 
 🆕 **`p588`:** 🟡 **Two leads, neither verifiable here.** An **AUDA-NEPAD** guideline reportedly urging open datasets, open models and African-language content plus registries of approved AI education tools, and the **AU Continental Education Strategy 2026–2035**. 🔴 `www.nepad.org` does not resolve from this environment, so **both are recorded as leads, not facts** — see the `p588` section at the top of this page. 🔴 The contested Annex III dates (**2 Dec 2027** / **2 Aug 2028**) arrived again from a secondary source: **`586-E` is narrowed, not closed.**
@@ -391,6 +529,17 @@ contractually — which is what a high-risk classification rewards.
 🆕 **`p587`:** EU AI Act **AI-literacy obligations in force since `2025-02-02`**; EC **updated ethical guidelines on AI in education**; UK **AI Adoption Summit, £200 m+**. 🟡 **56 %** of EMEA CEOs report AI readiness vs **48 %** Americas (Workday) — enterprise-wide, not education, and directional only. 🔴 **The EMEA-origin tutor-evaluation benchmark has no grant:** [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (ETH Zürich, EMNLP, 46★, `2026-08-27`) has **no licence file at 5 paths** — the region produces the evaluation science and licenses none of it.
 
 ### APAC
+
+🆕 **`p590` — in-language, locally-hosted models are the regional default, and the first
+named education programme lands.** **Philippines DepEd + Google are certifying over one
+million teachers** via **Project S.I.N.A.G.**, and Forrester's `60 %` locally-developed-LLM
+finding is now at its **second independent sighting** with education named a target sector.
+🟢 **Pair that with the supply gap:** the only genuinely new address the mandated legs
+produced in `21` passes is
+[`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis)
+— Indonesian-language exam preparation, `115★` — and 🔴 **it is unlicensed, so the
+in-language APAC supply is still not something a studio can build on.** 🔵 That is the
+opportunity: **build it, in-language, permissively licensed.**
 
 🟢 **Reversed from `p585`'s declared nil, and it is now the region with the most binding
 education-specific law.** The nil was an artefact of asking about adoption; the statutes
@@ -433,6 +582,16 @@ not just a market.
 🆕 **`p587`:** 🔴 **Forrester expects no common APAC-wide AI law**; the 2026 regional frame is **sovereignty, security, responsible deployment**. 🟢 Market series **$591.6 M (2024) → $1,848.1 M (2029), 20.9 % CAGR** — the only internally consistent regional series the legs returned this pass, and the slowest CAGR on this page. 🟢 **The in-language repository supply is real and measured: 67 repos above 10★** (`教育 AI`), 42 above 20★ (`教育 智能`) — which is why APAC engagements can **adopt** rather than build (see the `p587` section above).
 
 ### LATAM
+
+🆕 **`p590` — the demand-side number that completes this page's LATAM thesis.** The
+**Digital Education Council's "AI in Higher Education LATAM Survey `2026`" reports `92 %`
+of respondents using AI tools**, and describes the region as more positive toward AI in
+higher education than any other (SECONDARY). 🟢 **Set against `p587`'s measured `33×`
+in-language supply deficit, LATAM is the region with the highest appetite and the thinnest
+Spanish/Portuguese supply** — which is an opening, not a risk. 🔴 The two IGO instruments
+that would corroborate it (UNESCO IESALC + UNU-IAS, September `2026`; ECLAC, October `2025`)
+are LEADS: both hosts return `000` (`583-E`, now `19` hosts). 🔴 The *"Rest of Latin
+America"* USD `18` m → `36` m segment figure is **rejected as unquotable**.
 
 🟢 **The region with the widest adoption-governance gap in the world, measured twice by
 independent instruments that agree.**
@@ -1261,9 +1420,9 @@ jurisdictional variation, do not bet on one statute.
 
 🔵 **Cross-regional, not region-less.** The licence structure holds everywhere: **both
 LMSs of record are copyleft** (Open edX AGPL-3.0, Moodle GPL-3.0) and **there is no
-permissive student-information system anywhere**. The portable play is the same in every
-region: build proprietary AI components against permissive extension points rather than
-forking a platform.
+permissive student-information system anywhere**. The portable play is the same in
+every region: build proprietary AI components against permissive extension points
+rather than forking a platform.
 🟢 **This pass adds a second portable layer, and it is bigger than the platform question.**
 Document ingestion — `microsoft/markitdown` (MIT, `193,266★`), `run-llama/liteparse`
 (Apache-2.0), `The-Vibe-Company/megaparse` (Apache-2.0) — is region-neutral, permissive,

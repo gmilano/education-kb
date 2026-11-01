@@ -4,6 +4,90 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p590` — `2026-11-01` — **🟢 THE TWENTY-PASS NIL IS BROKEN: THE MANDATED LEGS RETURNED ONE ADDRESS THIS BASE HAS NEVER HELD IN ANY OF ITS `11` FILES — AND IT IS UNLICENSED, SO IT IS A BLOCK. 🟢 `589-E` ANSWERED AND REFUTED UNDER A PRE-REGISTERED PREDICTION. 🔴 `589-A`'s `120`-ID BACKLOG IS `75 %` HOMONYM AT THE SHELF LEVEL: `24` HIGH-SEVERITY IDS BECOME `6` ONCE `P-NNN-X` PATTERN IDS ARE EXCLUDED. 🔴 `589-B`'s OWN PRESCRIPTION WOULD NOT HAVE RUN. FIVE REGISTERED (`590-A`…`590-E`).**
+
+### 🔵 Channel table, run first (`569-B`'s standing row)
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories -f q='repo:…'` | 🟢 **`19` addresses measured** — `license.spdx_id` + `stargazers_count` + `pushed_at` + `archived` + `fork` + `default_branch` in one call |
+| 🟢 `gh api` search, `-f q='topic:…'` ×3 axes | 🟢 **`567` repositories with denominators** (`scorm` `235`, `xapi` `280`, `qti` `52`), every page walked to exhaustion |
+| 🟢 fabricated control on the search channel | 🟢 **DISCRIMINATING** — `422 Validation Failed` against `200` |
+| 🔴 `gh api repos/{owner}/{name}` | 🔴 **`403`** — unchanged since `p584` |
+| 🟢 `curl` → `raw.githubusercontent.com` | 🟢 **`16` grants byte-read**, every byte figure from `curl -w '%{size_download}'`; a `6`-path probe on each |
+| 🟢 `curl` → `raw.githubusercontent.com`, README bodies | 🟢 **READS** — `LiaScript-Exporter` and `Numbas` characterised first-hand, which is what refuted `589-E` |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403`** — the run prompt's mandated verifier still certifies nothing; the search channel is the substitute |
+| 🔴 `make`, `make gate-register-currency` | 🔴 **DENIED — `"Code from External"`** |
+| 🆕 🔴 `bash ingest/claim-role.sh` (a **committed shell** script) | 🔴 **DENIED — `"Code from External"`.** 🆕 **New this pass and it breaks `589-B`'s prescription**; `p584` had recorded a committed `.sh` as RUNNING |
+| 🆕 🟢 inline `grep` / `awk` / `bash -c '…'` | 🟢 **RUNS.** This is the only executable gate form in this environment |
+| 🟡 `WebSearch`, `4` mandated global + `4` mandated regional | 🟢 **`1` new address — THE NIL IS BROKEN AT TWENTY** — 🔴 but it is unlicensed; 🟢 `14` usable intel tokens, all secondary |
+
+### 🟢 The legs, run in full and reported in full
+
+🔵 **Reported as a table because a nil described in prose reads like coverage.**
+
+| leg | repo-shaped candidates served | already in this base | 🟢 new |
+|---|---|---|--:|
+| `top open source AI agents education 2026 github MIT` | `ai-agents-for-beginners`, `generative-ai-for-beginners`, `browser-use`, `agents-from-scratch` | `4 of 4` FILED | `0` |
+| `github trending education AI 2026` | `rohitg00/ai-engineering-from-scratch`, `rphilipzhang/AI-PhD-S26`, `aneelv75/github-trending`, 🟢 **`anandpatikat/guru-latihan-dinamis`** | `3 of 4` FILED | 🟢 **`1`** |
+| `open source platform education ERP CRM MIT Apache` | `OpenEduCat`, `CK-ERP`, `Krayin`, `Huly`, `NextCRM`, `ChurchCRM`, `ERPNext`, `Odoo` | `OpenEduCat`/`ERPNext`/`Odoo` FILED; the CRMs are **out of family** (not education) | `0` |
+| `AI education industry trends 2026` | — (no repo-shaped results; market-research and vendor pages only) | — | `0` |
+| `AI education North America 2026 adoption regulation players` | — | — | `0` |
+| `AI education EMEA 2026 adoption regulation players` | — | — | `0` |
+| `AI education APAC 2026 adoption regulation players` | — | — | `0` |
+| `AI education LATAM 2026 adoption regulation players` | — | — | `0` |
+
+🔴 **`7 of 8` legs returned zero new addresses, and `4 of 8` returned no repository of any
+kind.** 🟢 **The eighth returned `anandpatikat/guru-latihan-dinamis`** — `115★`, pushed
+`2026-11-01T11:40:20Z`, `fork: false`, absent from all `11` files of this base. 🔴 **No
+grant on `6` probed paths**, so it is blocked; filed on
+[`./top.md`](./top.md) as a LEAD because it is **Indonesian-language exam preparation**,
+the in-language APAC supply `p587` measured as missing at `33×`.
+
+🔵 **Standing conclusion, now with a `21`-pass denominator:** the mandated legs have
+produced **one** address this base did not hold, and it is unusable. 🟢 **The channels that
+pay are the topic axes and the per-jurisdiction native-language queries.** Both paid again.
+
+### 🟢 Promoted to the shelf this pass — `5 of 5` from this base's own history
+
+| Agent | Grant, byte-read `p590` | ★ | Pushed | Role |
+|---|---|--:|---|---|
+| [savvides/idstack](https://github.com/savvides/idstack) | 🟢 MIT, `LICENSE` **1,077 B**, title block *"MIT License"* | `27` | `2026-10-30` | `11` instructional-design audit skills — the reviewer slot |
+| [kemalyy/edumints-scorm-mcp](https://github.com/kemalyy/edumints-scorm-mcp) | 🟢 MIT, `LICENSE` **1,069 B** | `9` | `2026-10-14` | MCP server assembling SCORM-compliant courses |
+| [course-code-framework/coursecode](https://github.com/course-code-framework/coursecode) | 🟢 MIT, `LICENSE` **1,069 B** | `7` | `2026-10-30` | Course-authoring framework for MCP-capable tools |
+| [giacomomaria81/scorm-mcp-server](https://github.com/giacomomaria81/scorm-mcp-server) | 🟢 MIT, `LICENSE` **1,070 B** | `6` | `2026-09-03` | HTML / design bundles → SCORM 2004 + 1.2 |
+| [kemalyy/edumints-scorm-skill](https://github.com/kemalyy/edumints-scorm-skill) | 🟢 MIT, `LICENSE` **1,069 B** | `5` | `2026-10-14` | The agent-skill half of `edumints-scorm-mcp` |
+
+🔵 **`5 of 5` were already in this base and none had reached a curated page** — the
+promotion bottleneck, measured again. 🔴 **`0 of 5` came from a search.**
+
+### 🔴 `589-A` re-measured, and most of its backlog is a homonym
+
+🔴 **`589-A` registered `120` dangling gap ids and prescribed working them from the oldest
+end. Re-measured with its own structural predicate, `18` of those `120` are not gap ids at
+all** — they are `P-NNN-X` **compose pattern** names (`P-568-F`, `P-571-A`, `P-573-A` …)
+whose pattern number the predicate reads as a gap id. 🔵 **`195` of the `1,953` id-shaped
+tokens on the curated pages (`10.0 %`) are pattern ids.**
+
+| measurement | `p589` published | 🟢 `p590`, de-homonymed |
+|---|--:|--:|
+| dangling, `5xx` window | `120` | `102` |
+| dangling, **all** passes | not measured | 🔴 **`216`** |
+| dangling **and cited on a curated non-trending shelf** | not measured | 🟢 **`6`** |
+| dangling but cited only in these append-only logs | not measured | `210` |
+
+🟢 **`p589`'s `120` is otherwise CONFIRMED, not corrected.** An independent re-derivation of
+the structural predicate reproduced `120` exactly on the `5xx` window before de-homonyming
+— 🔵 recorded because this pass's first predicate returned `105` registered against
+`p589`'s `296`, and **the first predicate was the broken one**: it missed the legacy
+`` `Gap NNN-X` `` form and multi-id cells (`568` ids between them).
+
+🔵 **The actionable consequence:** the reader-facing backlog is **`6` ids**, not `120` and
+not `216`. The `210` log-only ids are citations inside append-only history, where a dangling
+reference is an artefact of the log, not a broken shelf. 🟢 **All `6` are paid in
+[`../intel/open-gaps.md`](../intel/open-gaps.md) this pass.**
+
+
 ## 🆕 `p589` — `2026-11-01` — **🔴 THE MANDATED LEGS RETURNED THEIR TWENTIETH CONSECUTIVE NIL AND THIS PASS STOPPED CALLING THAT A RESULT: EVERY REPO-SHAPED CANDIDATE THE EIGHT LEGS SERVED WAS ALREADY IN THIS BASE — `14` TO `23` FILES DEEP — AND THE ONLY GENUINELY ABSENT TOKEN WAS A GPL SYSADMIN TOOL. 🟢 SO THE PASS FILED FROM THE HISTORY INSTEAD AND THE TWO ROWS IT PROMOTED ARE BOTH REAL: `OPTIMETA/PAIDEIA` (MIT, `91★`), THE FIRST SHELF ROW THAT SHIPS FOR **FOUR** AGENT RUNTIMES, AND `rphilipzhang/AI-PhD-S26` (MIT, `91★`), THE ENABLEMENT TIER'S FIRST ROW WITH A UNIVERSITY AND A COURSE CODE. 🔴 AND ONE LEG'S OWN DESCRIPTION WAS OVERSOLD BY A FACTOR OF A HUNDRED: A "CURATED LIST OF TRENDING AND HIGH-IMPACT REPOSITORIES" MEASURES `3★` WITH NO LICENCE AT `10` PROBED PATHS.**
 
 ### 🔴 The legs, run in full and reported in full

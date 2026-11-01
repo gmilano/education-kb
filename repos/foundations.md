@@ -139,25 +139,109 @@ permissive is the exception. 🔴 **But liveness, not licence, is what disqualif
 
 | Repo | Licence | Stars | Last push | Region | Shippable? | Role |
 |---|---|--:|---|---|---|---|
-| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT (text)** | **362** | `2026-10-28` | Global | 🟢 **yes** | 🟢 **The one live, maintained, permissive SCORM runtime — the single safe dependency on this entire axis.** Modern JS runtime implementing SCORM 1.2 and 2004 API signatures. `1,072`-byte verbatim MIT, no carve-out. 🔵 Already shelved before `p589`; re-confirmed here as the tier's anchor. |
-| [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 **MIT (text)** | **58** | `2026-10-29` | EMEA | 🟢 **yes** | 🆕 **The only other live permissive row.** NodeJS service that packs **H5P** interactive content into SCORM objects — i.e. the bridge from an open authoring format into the LMS container. `1,073`-byte verbatim MIT. 🔵 Small, single-purpose, and exactly the shape a pipeline step should be. Unshelved until now despite 3 history re-finds. |
-| [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 | **216** | — | EMEA | 🟢 yes | Browser-based e-assessment with a real maths engine; SCORM-packageable output. 🔵 Already shelved; listed here for the tier's shape. |
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT (text)** | **362** | `2026-10-28` | Global | 🟢 **yes** | 🟢 **A live, maintained, permissive SCORM runtime (one of six — corrected `p590`) — the single safe dependency on this entire axis.** Modern JS runtime implementing SCORM 1.2 and 2004 API signatures. `1,072`-byte verbatim MIT, no carve-out. 🔵 Already shelved before `p589`; re-confirmed here as the tier's anchor. |
+| [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 **MIT (text)** | **58** | `2026-10-29` | EMEA | 🟢 **yes** | 🆕 **Another live permissive row.** NodeJS service that packs **H5P** interactive content into SCORM objects — i.e. the bridge from an open authoring format into the LMS container. `1,073`-byte verbatim MIT. 🔵 Small, single-purpose, and exactly the shape a pipeline step should be. Unshelved until now despite 3 history re-finds. |
+| [LiaScript/LiaScript-Exporter](https://github.com/LiaScript/LiaScript-Exporter) | 🟢 **BSD-3-Clause** | **29** | `2026-10-30` | EMEA | 🟢 **yes** | 🆕 **Exports one source into SCORM 1.2, SCORM 2004, IMS, xAPI, H5P, PDF, ePub and Web** — README read first-hand `p590`. 🔴 **Absent from `p589`'s table although this base already held it**, and it is the row that refutes the *"exactly two alive"* claim. 🔵 Closest thing on this axis to a finished generator.
+| [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 | **216** | 🆕 `2026-10-28` (measured `p590`; `p589` left this cell blank) | EMEA | 🟢 yes | Browser-based e-assessment with a real maths engine; SCORM-packageable output. 🔵 Already shelved; listed here for the tier's shape. |
 | [dhodges47/SCORM-LearningManagementSystem](https://github.com/dhodges47/SCORM-LearningManagementSystem) | 🟢 MIT | **184** | 🟡 `2026-01-24` | Global | 🟡 reference only | 🆕 Open-source SCORM LMS **demo**. 🟡 ~9 months idle, and its own description calls it a demo — a reading of how SCORM hosting works, not a platform to adopt. |
 | [cybercussion/SCOBot](https://github.com/cybercussion/SCOBot) | 🔴 **CC BY-SA 4.0 (text) — reciprocal** | **165** | `2026-10-29` | Global | 🔴 **no** | 🆕 **The trap on this axis.** Live, well-regarded SCORM API for content with QUnit tests — and the `837`-byte `LICENSE` is **Creative Commons Attribution-ShareAlike**, not a software licence. API said `NOASSERTION`. ShareAlike propagates; CC grants no patent. See `589-F` and the block table on [`../agents/top.md`](../agents/top.md). |
-| [adaptlearning/adapt_framework](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL-3.0** | **632** | — | EMEA | 🔴 copyleft | 🆕 The most-starred **authoring** toolkit on the axis — responsive, accessible, multilanguage HTML5 courseware with SCORM output. 🔴 Copyleft, so it is a reference architecture rather than a dependency. Unshelved despite 10 history re-finds. |
+| [adaptlearning/adapt_framework](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL-3.0** | **632** | 🆕 `2026-10-26` (measured `p590`) | EMEA | 🔴 copyleft | 🆕 The most-starred **authoring** toolkit on the axis — responsive, accessible, multilanguage HTML5 courseware with SCORM output. 🔴 Copyleft, so it is a reference architecture rather than a dependency. Unshelved despite 10 history re-finds. |
 | [S4-NetQuest/react-scorm-provider](https://github.com/S4-NetQuest/react-scorm-provider) | 🟢 MIT | **67** | 🔴 `2023-01-06` | Global | 🔴 **no — dead** | 🆕 React components wrapping the SCORM API. 🔴 **~3.8 years without a push.** Would be the obvious choice for a React courseware front end; it is not maintained. Default branch `master`. |
 | [gamestdio/scorm](https://github.com/gamestdio/scorm) | 🟢 MIT | **38** | 🔴 `2019-02-14` | Global | 🔴 **no — dead** | 🆕 SCORM 1.2 / 2004 wrapper for JavaScript/TypeScript. 🔴 **~7.7 years without a push.** |
 | [raccoongang/edx_xblock_scorm](https://github.com/raccoongang/edx_xblock_scorm) | 🟢 Apache-2.0 | **32** | 🔴 **ARCHIVED** | EMEA | 🔴 **no — archived** | 🆕 XBlock to display SCORM content inside Open edX. 🔴 `archived: true`, last push `2023-05-26`. 🔵 The seam between the two LMSs of record on this page, and it is read-only. |
 | [adlnet/SCORM-to-xAPI-Wrapper](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **BLOCK — no grant + ARCHIVED** | **99** | 🔴 `2017-10-02` | North America | 🔴 **no** | 🆕 🔴 **Published by ADL — the body that authored SCORM — and it is unlicensed and archived.** 🔵 The strongest single datum behind `Trend 41`: the specification's own authors abandoned their own tooling, which is why generators grew on top of this layer instead of libraries. |
 
-🔵 **The honest build-vs-buy answer for an emit engagement**, which is what a client
-actually asks: **buy exactly one dependency — `scorm-again` — add `scorm-h5p-wrapper` if the
-source content is H5P, build the generator, and depend on nothing else on this axis.** 🔴
-Nine of the ten rows above are dead, archived, copyleft, CC-encumbered or a demo. 🔴 And
-`589-E` is the open question that could widen this: the same decay has **not** been tested
-on `topic:xapi` or `topic:qti`.
+🔴 **WITHDRAWN `p590` — "buy exactly one dependency … and depend on nothing else on this
+axis" was wrong, and the row that refutes it is `66` lines above it in THIS FILE.** The
+paragraph read that `scorm-again` is *"the one live, maintained, permissive SCORM
+runtime"* and that nine of ten rows here are unusable. 🔴 **`numbas/Numbas` is Apache-2.0,
+`216★`, pushed `2026-10-28`, ships a `23,811`-byte `runtime/scripts/scorm-storage.js`, and
+this page already shelves it at line `78` as *"the permissive assessment anchor to build
+on"*** — while `p589`'s own row for it in the table above left `Last push` as `—`. 🔵 **The
+unmeasured cell is the whole mechanism: the claim was safe only because the refuting cell
+was blank.** This is `584-B`'s failure mode (*shelf refutes claim, nothing checks that
+direction*) recurring **one pass after `584-B` was registered**, and `584-B`'s own
+prescription — `grep` the pages for the claim's subject terms before writing a universal —
+would have caught it for free.
+
+🟢 **The corrected build-vs-buy answer for an emit engagement.** There are **at least six**
+live permissive SCORM emitters, not two:
+
+| Repo | Licence | Stars | Last push | Emit role |
+|---|---|--:|---|---|
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 MIT | **362** | `2026-10-28` | The runtime — content↔LMS API. **Still the first dependency to add.** |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 | **216** | `2026-10-28` | 🆕 Assessment engine with a SCORM runtime of its own. Newcastle University. |
+| [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 MIT | **58** | `2026-10-29` | Packs H5P into SCORM objects. |
+| [LiaScript/LiaScript-Exporter](https://github.com/LiaScript/LiaScript-Exporter) | 🟢 **BSD-3-Clause** | **29** | `2026-10-30` | 🆕 **Exports to SCORM 1.2, SCORM 2004, IMS, xAPI, H5P and Web from one source** — README read first-hand. 🔵 The closest thing on this axis to a finished generator, and `p589` missed it although this base already held it. |
+| [kemalyy/edumints-scorm-mcp](https://github.com/kemalyy/edumints-scorm-mcp) | 🟢 MIT | **9** | `2026-10-14` | 🆕 MCP server that assembles SCORM-compliant courses — agent-native emit. |
+| [giacomomaria81/scorm-mcp-server](https://github.com/giacomomaria81/scorm-mcp-server) | 🟢 MIT | **6** | `2026-09-03` | 🆕 HTML / design bundles → SCORM 2004 + 1.2 packages, as an MCP tool. |
+
+🔵 **So the answer a client should be given is:** `scorm-again` for the runtime,
+**`LiaScript-Exporter` if the source is Markdown-shaped courseware** (it removes most of
+the generator), `Numbas` if the deliverable is assessment, `scorm-h5p-wrapper` if the source
+is H5P — and the two MCP servers if the pipeline is agent-driven. 🔴 **Build the generator
+only after those five are ruled out**, which is a materially different instruction from the
+one this page published yesterday.
+
+🟢 **`589-E` is CLOSED BY REFUTATION** — see the `p590` tiers below. 🔴 The licence
+distribution table above also does not reproduce: `p589` published `133 / 235` unlicensed
+(`56.6 %`); re-walked the **same day** the axis gives `141 / 235` (`60.0 %`) on an identical
+denominator of `235`, and permissive `78`, not `80`. 🔵 **Same-day, same channel, different
+answer — so a licence *share* on this axis is good to about `± 4 pp` and no finer**, which
+is recorded here because `589-F` built a prescription on the `56.6 %` figure.
 
 ---
+
+## 🆕 The xAPI and QTI emit-side tiers — measured `p590`, and `589-E` is ANSWERED: the decay is NOT general
+
+🔵 **What `589-E` asked and what the answer costs this page.** `p589` found the SCORM
+emit-side dead and asked whether the same holds on `topic:xapi` and `topic:qti` **before**
+`Trend 41` generalised. Both axes were walked to exhaustion `2026-11-01` against a
+[prediction registered before the measurement](../evidence/prereg-589E-spec-tooling-rot.2026-11-01-p590.md).
+🔴 **H1 — "spec tooling rots" — is REFUTED on both axes.** The pre-registered decision rule
+said `>= 5` live permissive emitters on an axis refutes it; xAPI has `6` and QTI has `8`.
+
+| axis | repos | permissive | 🔴 no licence at all | live permissive, non-archived | distinct owners among them |
+|---|--:|--:|--:|--:|--:|
+| `topic:scorm` | `235` | `78` (`33.2 %`) | `141` (🔴 `60.0 %`) | `42` | 🟢 **`39`** |
+| `topic:xapi` | `280` | `125` (`44.6 %`) | `115` (🔴 `41.1 %`) | `35` | 🟢 **`27`** |
+| `topic:qti` | `52` | `23` (`44.2 %`) | `20` (🔴 `38.5 %`) | `14` | 🔴 **`7`** |
+
+🔴 **The real risk on QTI is not decay, it is CONCENTRATION — and only the owner column
+shows it.** `8 of QTI's 14` live permissive repositories belong to **one owner**
+(`metyatech`), all pushed inside a six-day window in September `2026`, none above `2★`.
+🔵 **A liveness count alone would have called QTI healthy.** It is one publisher: if that
+publisher stops, the axis stops. SCORM (`39` owners) and xAPI (`27` owners) are genuinely
+diffuse. 🟢 **This is the column that should have been on `p589`'s SCORM table and was not.**
+
+### 🟢 The xAPI emit-side tier — buy, do not build
+
+🔵 Unlike SCORM, xAPI is a **conformance target you speak**, and the client libraries are
+alive, permissive and plural. Every grant below was **byte-read** from the repository's own
+`LICENSE` this pass; the API's field agreed on `10 of 10`.
+
+| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+|---|---|--:|---|---|---|---|
+| [LearningLocker/xapi-service](https://github.com/LearningLocker/xapi-service) | 🟢 **MIT (text, `license`, 1,070 B)** | **42** | `2026-10-26` | EMEA | 🟢 **yes** | 🆕 Standalone xAPI service — the statement endpoint itself. 🔵 Stands in for an LRS when the client will not host Learning Locker whole. |
+| [BerryCloud/xapi-java](https://github.com/BerryCloud/xapi-java) | 🟢 **Apache-2.0 (text, 11,350 B)** | **20** | `2026-10-30` | EMEA | 🟢 **yes** | 🆕 **The Java xAPI model, client and tools.** 🟢 The one permissive route for a JVM client estate, which is most university back-offices. |
+| [Didask/scol-r](https://github.com/Didask/scol-r) | 🟢 **MIT (text, 1,063 B)** | **15** | `2026-10-27` | EMEA | 🟢 **yes** | 🆕 Shareable Cross-Origin Learning Resources — a SCORM successor format from a French vendor. 🔵 Emit-side, and the only permissive *alternative* to a SCORM package on these shelves. |
+| [LearningLocker/xapi-validation](https://github.com/LearningLocker/xapi-validation) | 🟢 **MIT (text, `license`, 1,070 B)** | **12** | `2026-10-26` | EMEA | 🟢 **yes** | 🆕 Validates xAPI statements. 🔵 The cheapest way to stop malformed statements at the studio's own boundary instead of the client's LRS. |
+| [ijeffro/laralocker](https://github.com/ijeffro/laralocker) | 🟢 **MIT (text, 1,072 B)** | **9** | `2026-10-03` | Global | 🟢 **yes** | 🆕 Laravel package that emits to Learning Locker. 🔵 Matches the PHP estate that Moodle engagements already run. |
+| [yetanalytics/project-pan](https://github.com/yetanalytics/project-pan) | 🟢 **Apache-2.0 (text, 11,356 B)** | **5** | `2026-10-16` | North America | 🟢 **yes** | 🆕 xAPI **Profile** validation library. 🔵 Pairs with `project-persephone` (statement-vs-profile); this one validates the profile itself. |
+| [jblough/TinCanDart](https://github.com/jblough/TinCanDart) | 🟢 **Apache-2.0 (text, 11,358 B)** | **5** | `2026-08-06` | Global | 🟢 **yes** | 🆕 xAPI wrapper for **Dart** — i.e. the Flutter path. 🔵 The only permissive mobile-native emitter on these shelves. |
+
+### 🟡 Adjacent permissive rows the same sweep resolved
+
+| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+|---|---|--:|---|---|---|---|
+| [erseco/python-moodle](https://github.com/erseco/python-moodle) | 🟢 **MIT (text, 1,071 B)** | **10** | `2026-10-22` | EMEA | 🟢 **yes** | 🆕 Pythonic CLI and library driving a Moodle instance over web sessions. 🔵 The automation handle for the AGPL LMS of record **without forking it** — exactly `573-B`'s attach-over-API rule. |
+| [get-bridge/scorm_engine](https://github.com/get-bridge/scorm_engine) | 🟢 **MIT (text, 1,084 B)** | **5** | `2026-09-03` | North America | 🟡 **client only** | 🆕 Ruby client for **Rustici's commercial** SCORM Engine. 🔵 Permissive client, 🔴 proprietary server — shippable as glue, never as the engine. |
+| [dr-rompecabezas/wagtail-lms](https://github.com/dr-rompecabezas/wagtail-lms) | 🟢 **MIT (text, 1,072 B)** | **5** | `2026-10-26` | Global | 🟡 **small scale** | 🆕 LMS extension for Wagtail CMS. 🔵 Useful when the client already runs Wagtail; not a platform in its own right. |
+
+🔵 **`587-D` extended by this pass: it is not only the BRANCH that is unguessable — it is the
+FILENAME CASE.** `LearningLocker/xapi-service` and `xapi-validation` both carry their grant
+at lowercase **`license`**; a probe for `LICENSE` alone returns `404` on both, and `4 of 10`
+rows here default to `master`, not `main`.
 
 ## 🔴 Tiers not to start from
 
