@@ -4,6 +4,87 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p585` — `2026-11-01` — **🔴 THE WHOLE-BASE FILING RATE, MEASURED: `3,094` OF `3,415` DISCOVERED ADDRESSES HAVE NEVER REACHED A CURATED PAGE (`~90 %`). 🟢 NEW LICENCE CHANNEL (`raw.githubusercontent.com`) RECOVERS `6` ROWS FROM `NOASSERTION` AND RESOLVES A SPLIT LICENCE NO API FIELD CAN REPRESENT. 🔴 `agents/top.md` CONSOLIDATED FROM `1,615` NARRATIVE LINES TO A `27`-ROW TABLE. 🔴 TWENTIETH NIL ON THE MANDATED GLOBAL LEGS; `3 OF 4` REGIONAL LEGS PAID.**
+
+🔴 **`p584` measured `FILED = 0` on one tier. This is the figure for the whole base:**
+
+| population | addresses |
+|---|--:|
+| on a curated page | **`352`** |
+| in append-only trending history | **`3,415`** |
+| 🔴 **discovered and never filed** | **`3,094`** |
+
+🔴 **The discovery machinery works and the filing step does not exist.** Four fresh topic
+sweeps this pass (`topic:intelligent-tutoring-system`, `topic:ai-tutor`, `topic:lms`,
+`topic:edtech`, plus `topic:open-educational-resources`, `topic:spaced-repetition`,
+`topic:student-engagement`, `topic:grading`) produced **26 candidates of which 26 were
+already somewhere in this base**. 🟢 **Conclusion recorded for the next pass: for education,
+discovery has low marginal value and filing has high marginal value.** Stop sweeping; file.
+
+### 🟢 Filed onto `agents/top.md` this pass — rows that existed only in history
+
+| Agent | Licence | Stars | Last push | Region |
+|---|---|--:|---|---|
+| [designfuchen/word-atlas](https://github.com/designfuchen/word-atlas) | 🟢 **MIT (text)** ⬅️ API said `NOASSERTION` | **3,594** | `2026-10-31` | APAC |
+| [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🟢 **MIT (text)** ⬅️ API said `NOASSERTION` | **2,057** | `2026-10-29` | Global |
+| [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT (text)** ⬅️ API said `NOASSERTION` | **437** | `2026-11-01` | North America |
+| [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | 🟢 MIT | **300** | `2026-10-02` | Global |
+| [nichochar/ari](https://github.com/nichochar/ari) | 🟢 MIT | **217** | `2026-11-01` | Global |
+| [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT | **61** | `2026-10-31` | Global |
+| [pedal-edu/pedal](https://github.com/pedal-edu/pedal) | 🟢 MIT | **32** | `2026-10-18` | Global |
+
+### 🟢 The new licence channel, with its controls
+
+`curl -sL https://raw.githubusercontent.com/{repo}/{default_branch}/{LICENSE}` is the only
+probe tested here that both discriminates **and** returns the authoritative licence text:
+
+| probe | real repo + real file | real repo + absent file | repo that does not exist |
+|---|---|---|---|
+| `raw.githubusercontent.com` | 🟢 `200` + text | `404` | `404` |
+| `github.com` HTML (the mandated `curl -sI`) | `403` | — | `403` |
+
+🔴 **Re-confirmed: the prescribed `curl -sI` verifier certifies nothing** — `moodle/moodle`
+and a fabricated control both return `403`.
+
+🔴 **Two trap conditions found this pass.** (1) The path is **case-sensitive** and the
+default branch is often neither `main` nor `master`: `frappe/education` reported "no licence
+file" across 9 filenames × 2 branches, and its grant is at **`develop/license.txt`**. Take
+`default_branch` from the same `search/repositories` call. (2) A `404` here means *"not at
+this path"* — **never** "no licence", **never** "no repository".
+
+### 🔴 `585-C` closed: a licence that cannot be written in one field
+
+[`andymatuschak/orbit`](https://github.com/andymatuschak/orbit) (`1,838★`), which the API
+reports as plain `NOASSERTION`: all sources **Apache-2.0** *except* `packages/app` and
+`packages/backend`, which are **AGPL-3.0-or-later _or_ BUSL-1.1** at the licensee's choice.
+🔴 **BUSL-1.1 is not an open-source licence.** Verdict: **libraries buildable, application
+not shippable.**
+
+### 🔴 Rejected or flagged this pass
+
+- [`GarethManning/education-agent-skills`](https://github.com/GarethManning/education-agent-skills)
+  — `936★`, 165 teacher-facing skills, and its `LICENSE` is a **Creative Commons** text, not
+  a software licence. No patent grant. Usable as reference material; do not vendor it.
+- [`kantord/LibreLingo`](https://github.com/kantord/LibreLingo) — `2,631★`, AGPL-3.0, and
+  **`archived: true`** measured `2026-11-01`. Read-only upstream.
+- [`eribean/girth`](https://github.com/eribean/girth) — MIT, `127★`, last pushed
+  **`2022-09-09`** (~4 years). Still on the shelf, now marked stale.
+- 🔴 **`topic:lms` is a homonym axis** — `snapcast` (audio), `AmpliPi` (audio),
+  `Colourful` (colour library) and `SWE-agent` all rank above real LMSs on it. Do not
+  compile that axis without an education-relevance filter.
+
+### 🔴 Twentieth nil on the mandated global legs — and the regional legs paid
+
+🔴 `top open source AI agents education 2026 github MIT`, `github trending education AI 2026`
+and `open source platform education ERP CRM MIT Apache` again returned content farms,
+unverified star claims and vendor glossary pages — **no new verifiable agent**. The topic
+sweeps above are what produced rows.
+🟢 **`3 of 4` regional legs paid** (North America, EMEA, LATAM), recorded on
+[`../intel/market.md`](../intel/market.md); 🔴 **the APAC education leg is a declared nil** —
+the regional query form returns enterprise AI material only, because APAC education
+regulation is promulgated per jurisdiction, not per region.
+
+
 ## 🆕 `p584` — `2026-11-01` — **🔴 `FILED = 0`: NOT ONE AGENT-SHAPED SIS / GRADEBOOK / PROCTORING ARTEFACT HAD EVER REACHED A CURATED PAGE IN `583` PASSES — `9` WERE IN THIS FILE'S OWN HISTORY, ONE RE-FOUND `36×`. 🟢 `583-F` REFUTED AT `41×`: `7.9 %` AGENT-SHAPED HERE AGAINST `0.19 %` ON THE INTEGRATION AXES, SO "THE AGENT IS ALWAYS THE BUILD" IS A PROPERTY OF ONE LAYER, NOT OF THE INDUSTRY. 🟢 `583-A`'s GATE CLEARED A SWEEP FOR THE FIRST TIME (`29` NEW > `9` UNFILED). 🔴 NINETEENTH NIL ON THE MANDATED LEGS.**
 
 🔵 **Token-check published before any claim (`583-A`), on `38` agent-shaped addresses:**

@@ -4,6 +4,74 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p585` — `2026-11-01` — **🟢 FOUR PLATFORMS OF RECORD ARE PERMISSIVE AND FORKABLE, NOT ONE: `Sakai` (ECL-2.0), `OpenOLAT` (Apache-2.0), `Kolibri` (MIT), `relate` (MIT) — ALL FOUR READ FROM THEIR OWN LICENCE FILES. 🔴 THIS BASE WAS PUBLISHING TWO CONTRADICTORY LICENCES FOR `OpenOLAT` ON DIFFERENT CURATED PAGES SIMULTANEOUSLY. 🔴 `repos/foundations.md` CONSOLIDATED FROM `1,646` NARRATIVE LINES TO A `51`-ROW TABLE AND THE `40` DEAD `openedx/edx-platform` CITATIONS ARE GONE.**
+
+### 🔴 The licence contradiction — worse than a missing value
+
+| row | `repos/foundations.md` carried | `verticals/solutions.md` + `intel/trends.md` carried | licence file says |
+|---|---|---|---|
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `NOASSERTION` | 🟢 `Apache-2.0` | 🟢 **`Apache-2.0`** |
+
+🔴 **Both verdicts were live, on curated pages, for multiple passes.** A licence belongs to
+a repository, not to a page. Nothing in the pipeline detects the disagreement.
+
+### 🟢 Six licences recovered from `NOASSERTION` by reading the licence file
+
+| Repo | API said | Licence file says | Consequence |
+|---|---|---|---|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | `NOASSERTION` | 🟢 **Apache-2.0** | 🟢 A **second forkable platform of record** |
+| [inducer/relate](https://github.com/inducer/relate) | `NOASSERTION` | 🟢 **MIT** | 🟢 A **fourth forkable platform**, pushed `2026-11-01` |
+| [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | `NOASSERTION` | 🟢 **MIT** | 🟢 Permissive LMS, `981★` — 🔴 but `~11 months` stale |
+| [claroline/Claroline](https://github.com/claroline/Claroline) | `NOASSERTION` | 🔴 **AGPL-3.0** | 🔴 Confirmed copyleft — attach, do not fork |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | `NOASSERTION` | 🔴 **AGPL-3.0** | 🔴 Confirmed copyleft (UCLouvain) |
+| [frappe/education](https://github.com/frappe/education) | `NOASSERTION` | 🔴 **GPL-3.0** | 🟢 Confirms this base's `p572` byte-read; grant is at **`develop/license.txt`** |
+
+### 🟢 Filed onto `repos/foundations.md` this pass — rows that existed only in history
+
+| Repo | Licence | Stars | Last push | Role |
+|---|---|--:|---|---|
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 MIT | **1,163** | `2026-11-01` | 🟢 **Offline-first platform** — the right base where connectivity, not features, is the constraint |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 ECL-2.0 | **1,240** | `2026-10-30` | 🟢 The forkable platform of record |
+| [st3v3nmw/obsidian-spaced-repetition](https://github.com/st3v3nmw/obsidian-spaced-repetition) | 🟢 MIT | **2,605** | `2026-10-05` | Review scheduling over existing notes |
+| [open-spaced-repetition/free-spaced-repetition-scheduler](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 MIT | **731** | `2026-04-21` | FSRS as a library — depend on this, not the Anki plug-in |
+| [tsugiproject/tsugi](https://github.com/tsugiproject/tsugi) | 🟢 Apache-2.0 | **377** | `2026-11-01` | LTI tool framework (PHP), IMS/Sakai lineage |
+| [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 MIT | **410** | `2026-10-28` | 🟢 **The only permissive SIS of any size** |
+| [Halleck45/OpenPronounce](https://github.com/Halleck45/OpenPronounce) | 🟢 MIT | **174** | `2026-08-15` | Phoneme-level pronunciation assessment |
+| [iblai/lms](https://github.com/iblai/lms) | 🟢 MIT | **208** | `2026-10-30` | Competencies and credentials |
+| [openfun/richie](https://github.com/openfun/richie) | 🟢 MIT | **318** | `2026-11-01` | Education portal CMS in front of an LMS |
+
+### 🔴 The `openedx/edx-platform` citation defect — closed on this page
+
+`p580` prescribed migrating the dead pre-rename address; `p584` recorded it still appearing
+**`40` times** across shelf pages against `28` for the live
+[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (🔴 AGPL-3.0,
+`8,213★`, pushed `2026-11-01`). 🟢 **`repos/foundations.md` now contains the dead address
+exactly twice, both as explicit "do not cite this" warnings.** 🔵 The mechanism, worth
+keeping: a **renamed** repository returns `422` from `repo:` search — indistinguishable from
+one that never existed. Resolve by searching the org for the name.
+
+### 🔴 The stale tier re-confirmed — do not start an assessment-generation build here
+
+`topic:question-generation`'s five reference rows, all fine-tuned T5 pipelines for a task
+instruction-following models now do zero-shot: `patil-suraj/question_generation` (`1,138★`,
+`2024-04-05`), `ramsrigouthamg/Questgen.ai` (`952★`, `2023-12-08`),
+`KristiyanVachev/Question-Generation` (`495★`, `2024-02-14`),
+`asahi417/lm-question-generation` (`366★`, `2024-08-20`),
+`AMontgomerie/question_generator` (`298★`, `2024-02-06`, **archived**).
+🟢 Start at [`numbas/Numbas`](https://github.com/numbas/Numbas) (Apache-2.0, Newcastle),
+[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT) and
+[`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) (BSD-3-Clause) — all measured
+current.
+
+### 🔴 `585-E` — the Python LTI 1.3 gap, re-measured and now costed
+
+[`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (🟢 MIT, `138★`) was
+last pushed **`2024-08-18`** — `~26 months`. Node is served
+([`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs), Apache-2.0, `373★`, `2026-10-31`);
+Python is not. 🟢 **Recorded as the cheapest contribution play in this industry** — see
+`P-585-C` on [`../compose/patterns.md`](../compose/patterns.md).
+
+
 ## 🆕 `p584` — `2026-11-01` — **🔴 THE SECTOR-STANDARD EXAM LOCKDOWN CLIENT HAS BEEN IN THIS FILE `65` TIMES AND NEVER ON A SHELF: `SafeExamBrowser` (MPL-2.0, `361★`, ETH ZÜRICH). 🔴 `Trend 36` WITHDRAWN ONE PASS AFTER IT WAS FILED — `sakaiproject/sakai` (ECL-2.0, `1,240★`) SATISFIES ITS OWN STATED FALSIFIER AND WAS ALREADY ON `repos/foundations.md`. 🟢 THE PYTHON LTI 1.3 GAP STANDS AND IS NOW A MEASURED *FAILED RE-HOMING* — TWO DETACHED COPIES, BOTH DEADER THAN THE ORIGINAL.**
 
 🔵 **Token-check first (`583-A`), `15` addresses:** **`5` FILED**, **`6` UNFILED**,

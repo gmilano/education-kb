@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p585 — 2026-11-01 — the forkable tier: four platforms of record a studio may lawfully modify and ship, two of them recovered from a licence field this base had wrong
+
+🔴 **This page's standing licence rule — *"every platform of record is copyleft"* — is
+false, and the two corrections in the body of this file are marked in place.** Four
+platforms of record are permissive. Each licence below was read from the repository's own
+licence file on **2026-11-01**, not taken from the GitHub API.
+
+### 🟢 The forkable platform tier — adopt, modify, ship
+
+| Platform | Repo | Licence | Stars | Last push | Region | What you may do with it |
+|---|---|---|--:|---|---|---|
+| **Sakai** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0 (text)** | **1,240** | `2026-10-30` | North America | 🟢 **Fork, modify, ship closed.** ECL-2.0 is Apache-2.0 with the patent grant narrowed for education — its own text says so. Higher-ed consortium governance, 1,020 forks. **The default choice when a client wants to own the platform.** |
+| **Kolibri** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT (text)** | **1,163** | `2026-11-01` | Global | 🟢 **Fork, modify, ship closed.** Offline-first by design — built for low-connectivity deployment. 1,016 forks. **The right base for LATAM, African and rural APAC engagements**, where a cloud LMS fails on infrastructure rather than on features. |
+| **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0 (text)** | **449** | `2026-10-30` | EMEA | 🟢 **Fork, modify, ship closed.** Swiss-governed, used across DACH higher education. 🔴 This page already said Apache-2.0 while `repos/foundations.md` carried `NOASSERTION` — the contradiction is resolved in favour of this page. |
+| **relate** | [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT (text)** | **437** | `2026-11-01` | North America | 🟢 **Fork, modify, ship closed.** Git-backed, versioned course content with auto-graded work — the only platform here whose content model is a repository, which makes it the natural fit for engineering and CS curricula. UIUC. |
+
+### 🟢 The permissive operations tier — SIS, portals and credentials
+
+| Platform | Repo | Licence | Stars | Last push | Region | Role |
+|---|---|---|--:|---|---|---|
+| **academico** | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** | **410** | `2026-10-28` | Global | 🟢 **The only permissive SIS of any size found.** School management for small/medium institutions; Laravel + Filament. Everything larger in this tier is copyleft. |
+| **richie** | [openfun/richie](https://github.com/openfun/richie) | 🟢 **MIT** | **318** | `2026-11-01` | EMEA | CMS for the education **portal** in front of an LMS — catalogue, enrolment funnel, marketing. France Université Numérique. |
+| **iblai/lms** | [iblai/lms](https://github.com/iblai/lms) | 🟢 **MIT** | **208** | `2026-10-30` | Global | Skills-intelligence layer: competency tracking and credentials over existing course delivery. |
+| **pupilfirst** | [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | 🟢 **MIT (text)** | **981** | 🔴 `2025-12-09` | APAC | Asynchronous online school with reviewed submissions. 🟢 Permissive and the API hid it. 🔴 **~11 months without a push** — adopt deliberately, not by default. |
+
+### 🔴 The copyleft platforms — attach to, do not fork
+
+Still the larger half of the market by deployment, and the correct posture is **attachment
+via a permissive extension point**, never a fork.
+
+| Platform | Licence | Stars | Attach how |
+|---|---|--:|---|
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 AGPL-3.0 | **8,213** | 🟢 **`XBlock`** (Apache-2.0) for components, **`codejail`** (Apache-2.0) for untrusted learner code, **`tutor`** to stand it up. Proprietary AI lives in the XBlock, not in a fork. |
+| [moodle/moodle](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | **7,567** | 🟢 **LTI 1.3** via `ltijs` (Node, Apache-2.0) or `pylti1.3` (Python, MIT). The agent stays outside the GPL boundary. |
+| [frappe/lms](https://github.com/frappe/lms) · [frappe/education](https://github.com/frappe/education) | 🔴 AGPL-3.0 · GPL-3.0 | 3,360 · 688 | 🟢 Frappe REST API. 🔵 `frappe/education`'s grant is at `develop/license.txt` — lowercase, non-default branch. |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🔴 GPL-3.0 | **1,019** | 🟢 LTI. Strong LATAM and francophone install base — worth knowing for regional engagements. |
+| [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 GPL-3.0 | 507 | 🟢 LTI; strong native assessment module, so compete on AI feedback rather than on item delivery. |
+| [claroline/Claroline](https://github.com/claroline/Claroline) | 🔴 AGPL-3.0 (text) | 349 | 🟢 LTI. API reported `NOASSERTION`; resolved from licence text this pass. |
+| [INGInious/INGInious](https://github.com/INGInious/INGInious) | 🔴 AGPL-3.0 (text) | 243 | 🟢 Containerised secure grading — a reference design for sandboxing, not a fork target. UCLouvain. |
+
+🔵 **The rule this page should carry going forward**, replacing the withdrawn one:
+**the platform tier splits — four forkable permissive platforms of record, the rest
+copyleft — while the extension and interchange tier (`XBlock`, `codejail`, `ltijs`,
+`pylti1.3`, `scorm-again`, `Numbas`) is almost entirely permissive.** A studio's licence
+exposure is therefore a *choice*, not a constraint imposed by the industry.
+
+
 ## p584 — 2026-11-01 — **the SIS / gradebook / proctoring platform tier, measured with denominators — and the licence rule for this page rewritten: the platform tier is copyleft with exactly ONE permissive exception, and that exception is licensed under education's own licence**
 
 🔵 **`583-A` token-check, published first.** Of `11` platform addresses measured:
@@ -247,6 +294,9 @@ the vertical-platform tier is the healthiest tier in this base, in sharp contras
 question-generation tier, which is entirely abandoned (trend 35).
 
 ## p579 — 2026-11-01 — two additions, both MIT, and the operations tier is where the permissive licences are
+
+🔴 **CORRECTED `p585` (2026-11-01):** the claim *"every platform of record is copyleft"* is **false** and was withdrawn as `Trend 36`. Four platforms of record are permissive and forkable: **Sakai** (ECL-2.0, 1,240★), **OpenOLAT** (Apache-2.0, 449★), **Kolibri** (MIT, 1,163★) and **relate** (MIT, 437★) — all four read from their own licence files. See [`../repos/foundations.md`](../repos/foundations.md). The statement below is retained as written for history.
+
 
 🟢 The pattern `p578` noticed holds and strengthens: **every permissive platform on this
 page is an operations system, and every platform of record is copyleft.** The two rows
@@ -793,7 +843,9 @@ Permissive rows above: **Academico** (MIT, SIS), **ULEARN** (MIT, stale stack),
 **TutorLoom** (Apache-2.0, 3 weeks old), **Euron Open LMS** (MIT, 5 days old),
 **OpenOlat** (Apache-2.0), **Mentingo** (MIT) and **DSpace** (BSD-3-Clause). Two
 more permit linking from closed code (Odoo, OpenEduCat, LGPL-3.0). Everything
-else — and every platform of record — is GPL or AGPL. Note what the permissive
+else — and every platform of record — is GPL or AGPL. 🔴 **CORRECTED `p585`: false — Sakai
+(ECL-2.0), OpenOLAT (Apache-2.0), Kolibri (MIT) and relate (MIT) are permissive platforms
+of record.** Note what the permissive
 list is made of: **one row above 700★, three created in the last eight weeks, and
 one on an end-of-life framework.** Permissive and *ready* are different claims. The AI-on-top strategy is therefore
 not a matter of taste — it is forced by licensing:

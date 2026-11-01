@@ -4,6 +4,126 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p585 — 2026-11-01 — three recipes the licence resolutions make buildable, and the one the LATAM governance gap turns into the clearest offer in this file
+
+Every component named below was verified first-hand on `2026-11-01` — existence and
+recency from `search/repositories`, licence from the repository's own licence file.
+
+---
+
+## P-585-A — 🟢 **The forkable-platform engagement: own the LMS, ship it closed** (10–14 weeks, North America / EMEA)
+
+**Why this is newly writable.** Every attachment pattern in this file exists because the
+platform tier was believed to be uniformly copyleft. It is not: **four platforms of record
+are permissive**, so "the client owns and ships a modified platform" is now a licit option
+rather than a licence violation.
+
+**Components**
+
+| Role | Component | Licence | Stars |
+|---|---|---|--:|
+| Platform base — North America / higher ed | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 ECL-2.0 | 1,240 |
+| Platform base — EMEA / DACH | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 Apache-2.0 | 449 |
+| Platform base — git-backed / CS curricula | [inducer/relate](https://github.com/inducer/relate) | 🟢 MIT | 437 |
+| Tutoring engine | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | 53,084 |
+| Knowledge tracing | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 MIT | 456 |
+| Mastery diagnosis | [bigdata-ustc/EduCDM](https://github.com/bigdata-ustc/EduCDM) | 🟢 Apache-2.0 | 203 |
+| Untrusted code execution | [openedx/codejail](https://github.com/openedx/codejail) | 🟢 Apache-2.0 | 477 |
+| Retention scheduling | [open-spaced-repetition/free-spaced-repetition-scheduler](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 MIT | 731 |
+
+**Wiring.** Fork the platform base. Expose `pyKT` and `EduCDM` behind one internal
+"learner state" service — `pyKT` answers *what has this learner mastered*, `EduCDM` answers
+*which specific skills are weak*; they are complementary, not alternatives. `DeepTutor`
+consumes that state as context and generates the next interaction. `FSRS` schedules review
+of anything marked mastered so it is not re-taught. Route any learner-submitted code
+through `codejail` — never the application runtime.
+
+🔴 **The one hard constraint:** `EduCDM` has not been pushed since `2024-10-25` (~24
+months). It is Apache-2.0 and the models are sound, but **vendor it and own it** — do not
+plan on upstream fixes.
+
+---
+
+## P-585-B — 🟢 **The LATAM institutional AI-governance offer: the gap is measured, the buyers are named** (8–12 weeks, LATAM)
+
+**Why this is the clearest fit in this file.** The demand and the gap are both quantified
+by third parties, not inferred: **92% of students and 79% of faculty** in LATAM higher
+education are actively using AI (Digital Education Council / Tec de Monterrey, 29
+universities, 2026), while **UNESCO IESALC** (200 institutions, 19 countries) finds a
+**particularly wide gap between adoption and institutional governance**, and Tec de
+Monterrey commentary states that formal institutional AI policies are simply lacking.
+🟢 **Universities are already using AI and cannot evidence how.** That is a services sale,
+not a licence sale.
+
+**Components**
+
+| Role | Component | Licence | Stars |
+|---|---|---|--:|
+| Pedagogical-quality baseline | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 MIT | 13 |
+| Controlled rollout + consent/anonymisation | [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | 🟢 Apache-2.0 | 21 |
+| Learning-record capture | [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | 🟢 Apache-2.0 | 956 |
+| Analytics surface | [openfun/warren](https://github.com/openfun/warren) | 🟢 MIT | 17 |
+| Low-connectivity delivery | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 MIT | 1,163 |
+| Adaptive assessment | [douglasrizzo/catsim](https://github.com/douglasrizzo/catsim) | 🟢 BSD-3-Clause | 153 |
+
+**Wiring.** `pedagogy-benchmark` first, as the **acceptance gate**: score the candidate
+model on exams built by Chile's Agencia de la Calidad de la Educación and CPEIP *before*
+any pilot, so the institution has a defensible pedagogical baseline rather than a vendor
+claim. Deploy the tutor through `terracotta` so the rollout is a controlled comparison with
+consent handling and identifier stripping built in — this is what converts a pilot into
+evidence a rectorate can publish. Emit xAPI statements for every interaction;
+`warren` renders them. Where connectivity is the binding constraint, deliver on `kolibri`.
+Use `catsim` to simulate item exposure before any adaptive assessment touches students.
+
+🔵 **Deliverable set, which is what is actually being bought:** an AI-use policy, an
+auditable tutor, a staff capability programme, and an **ILIA-aligned** readiness baseline
+(Latin American AI Index, with IDB and CEPAL) so the institution can benchmark itself
+regionally. 🔵 Note `ILIA` (the index) is unrelated to `ILIAS` (the LMS) — they are
+routinely confused in this industry's literature.
+🔴 **`warren`'s own README still calls it a proof of concept** — ship dashboards on it only
+with that stated, or render xAPI in the client's existing BI tool instead.
+🔴 **Do not substitute `potsie` on recency grounds**: measured `2026-11-01`, `potsie` was
+last pushed `2024-12-18` (~23 months) against `warren`'s `2026-10-31`.
+
+---
+
+## P-585-C — 🟢 **The contribution play: revive `pylti1.3` instead of writing a fourth Python LTI implementation** (3–4 weeks, Global — cheapest item in this file)
+
+**The situation, measured.** Python LTI 1.3 has exactly one maintainable permissive
+option, [`dmitry-viskov/pylti1.3`](https://github.com/dmitry-viskov/pylti1.3) (🟢 MIT,
+138★) — and it was **last pushed `2024-08-18`, ~26 months ago**. Node has a maintained
+option ([`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs), 🟢 Apache-2.0, 373★, pushed
+`2026-10-31`); Python does not.
+
+**Why contribute rather than build.** LTI 1.3 is the seam every Moodle, Canvas, Open edX
+and Chamilo engagement passes through. A fourth private implementation is unbillable
+plumbing that must then be certified and maintained forever. 🟢 **Reviving the existing
+MIT library costs less, and buys standing in the 1EdTech community that every subsequent
+education engagement benefits from.**
+
+**Scope.** Bring `pylti1.3` current against the 1EdTech LTI 1.3 Advantage certification
+suite; validate credential handling against
+[`1EdTech/openbadges-validator-core`](https://github.com/1EdTech/openbadges-validator-core)
+(🟢 Apache-2.0) where badges are in scope; keep `ltijs` as the Node-side reference for
+behaviour parity. 🔵 Pair it with [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again)
+(🟢 MIT, 362★) when the client's legacy content is SCORM rather than LTI.
+
+---
+
+## 🔴 Licence ledger for all three recipes
+
+Every component above is MIT, Apache-2.0, BSD-3-Clause or ECL-2.0 — **no recipe in this
+section requires a copyleft component**, and none requires forking a copyleft platform.
+
+🔴 **Two standing cautions that apply across all three:** (1) `EduCDM` (`2024-10-25`),
+`girth` (`2022-09-09`), `pylti1.3` (`2024-08-18`) and `pupilfirst` (`2025-12-09`) are
+permissive **and stale** — budget to own them. (2) **Never gate a build on the GitHub API's
+licence field.** It reported `NOASSERTION` for six rows used above or alongside them, and it
+cannot represent a split licence at all — [`andymatuschak/orbit`](https://github.com/andymatuschak/orbit)
+is Apache-2.0 except for `packages/app` and `packages/backend`, which are AGPL-3.0-or-later
+or **BUSL-1.1 (not an open-source licence)**. Read the licence file.
+
+
 ## p584 — 2026-11-01 — **five recipes the school-operations sweep makes buildable, including the first forkable-platform recipe this base has ever been able to write and a contribution play that costs less than any of them**
 
 🔵 **Every repository named below was measured first-hand this pass:** grant byte-read via
@@ -1818,6 +1938,9 @@ should be raised early rather than discovered at security review.
 learning platform they can **own, rebrand and keep closed** — not an attachment
 to someone else's copyleft LMS.
 **Region:** EMEA.
+
+🔴 **CORRECTED `p585` (2026-11-01):** the claim *"every platform of record is copyleft"* is **false** and was withdrawn as `Trend 36`. Four platforms of record are permissive and forkable: **Sakai** (ECL-2.0, 1,240★), **OpenOLAT** (Apache-2.0, 449★), **Kolibri** (MIT, 1,163★) and **relate** (MIT, 437★) — all four read from their own licence files. See [`../repos/foundations.md`](../repos/foundations.md). The statement below is retained as written for history.
+
 
 **Why this is newly possible.** Every previous pattern in this file is an
 *attachment*, because every platform of record is copyleft. [`Selleo/mentingo`](https://github.com/Selleo/mentingo)

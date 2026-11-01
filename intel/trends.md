@@ -4,6 +4,87 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p585 — 2026-11-01 — the licence field was the wrong thing to distrust: the base was publishing *contradictory* licences for the same repository, and a split-licence repo is invisible to any single-value field
+
+🟢 **New instrument, controlled, and it changes what this base can assert.** Licences are
+now read from the repository's own licence file via
+`raw.githubusercontent.com/{repo}/{default_branch}/{LICENSE}`, which is the only ground
+truth available in this environment. Controls: real repo + real file → `200` and the licence
+text; real repo + absent file → `404`; repo that does not exist → `404`; and
+`github.com/...` HTML → `403` for everything, real or fabricated.
+
+### 🔴 Trend 37 — the licence *contradiction* rate, not the licence *unknown* rate, is the defect
+
+This base has recorded for several passes that the GitHub API's `license.spdx_id` is
+unreliable (`67 of 265` rows returning `NONE`/`NOASSERTION`). 🔴 **That framing understated
+the problem.** The failure found this pass is worse than a missing value:
+
+| row | `repos/foundations.md` carried | `verticals/solutions.md` + `intel/trends.md` carried | licence text says |
+|---|---|---|---|
+| `OpenOLAT/OpenOLAT` | 🔴 `NOASSERTION` | 🟢 `Apache-2.0` | 🟢 **`Apache-2.0`** |
+
+🔴 **Both verdicts were published simultaneously, for multiple passes, on curated pages of
+the same knowledge base.** A per-page licence field with no reconciliation step produces
+this indefinitely and nothing in the pipeline detects it. 🟢 **The fix is structural, not
+editorial:** a licence belongs to a repository, not to a page, and must be resolved once
+from bytes and referenced everywhere.
+
+### 🔴 Trend 38 — a single-value licence field cannot represent a real repository
+
+`andymatuschak/orbit` (1,838★) resolved this pass, and its grant cannot be written in one
+field. Its licence file states: all sources **Apache-2.0**, *except* `packages/app` and
+`packages/backend`, which are **AGPL-3.0-or-later _or_ BUSL-1.1 at the licensee's choice**.
+
+🔴 **BUSL-1.1 is not an open-source licence** — it is source-available with a time-delayed
+conversion. So the correct verdict is **"libraries buildable, application not shippable"**,
+which no `spdx_id` can express, and which the API reported as plain `NOASSERTION`.
+🟢 **Consequence for this base:** any row whose licence matters at component granularity
+needs a *scope* alongside the identifier. Six rows recovered from `NOASSERTION` this pass
+(OpenOLAT, relate, pupilfirst, Claroline, INGInious, frappe/education) were all whole-repo
+grants; `orbit` is the counterexample that shows the field shape is wrong.
+
+### 🔴 Trend 39 — the probe path is case-sensitive and the default branch is frequently neither `main` nor `master`
+
+`frappe/education` returned "no licence file" against nine filenames across `main` and
+`master`. Its grant is at **`develop/license.txt`** — lowercase filename, third branch
+name. 🔴 **A `404` from the raw channel means "not at this path", never "no licence" and
+never "no repository."** 🟢 The resolver must take `default_branch` from the same
+`search/repositories` call that confirms existence, then probe case variants. Without that,
+the channel manufactures false no-grant verdicts — the most expensive error class this base
+makes, because a no-grant verdict blocks a row permanently.
+
+### 🟢 Trend 36 withdrawal, now propagated
+
+`Trend 36` (*"every platform of record is copyleft without exception"*) was refuted at
+`p584` by `sakaiproject/sakai` (ECL-2.0). 🔴 **The withdrawal did not propagate:** the claim
+was still published as live fact in **four** places on three curated pages
+(`verticals/solutions.md` ×2, `compose/patterns.md`, `intel/trends.md` ×2) while being
+marked withdrawn elsewhere. All four are now corrected in place.
+
+🟢 **And the refutation is stronger than one counterexample.** Four platforms of record are
+permissive, each read from its own licence file this pass: **Sakai** (ECL-2.0, 1,240★),
+**OpenOLAT** (Apache-2.0, 449★), **Kolibri** (MIT, 1,163★), **relate** (MIT, 437★).
+🔵 **The surviving, defensible form of the trend:** *the agent layer is overwhelmingly
+permissive (26 of 27 rows), the platform layer is predominantly copyleft but has four
+forkable exceptions, and the component/extension layer is almost entirely permissive.*
+
+### 🔴 Trend 40 — this base's discovery rate vastly exceeds its filing rate
+
+Measured first-hand on the repository this pass:
+
+| population | addresses |
+|---|--:|
+| on a curated page (`top`, `foundations`, `solutions`, `market`, `trends`, `patterns`) | **352** |
+| in the append-only trending history | **3,415** |
+| 🔴 **in trending history and never on any curated page** | **3,094** |
+
+🔴 **~90% of everything this base has ever discovered sits only in append-only logs.** The
+discovery machinery works; the filing step does not exist. `p584` measured this on one tier
+and found `FILED = 0`; this is the whole-base figure. 🟢 **The useful consequence: for this
+industry, further discovery has low marginal value and filing has high marginal value.**
+Every candidate from four fresh topic sweeps this pass was already somewhere in the base.
+
+
 ## p584 — 2026-11-01 — **a trend filed one pass ago is withdrawn by a row that was already on the shelf below it, `583-F` is refuted at `41×`, and three trends are filed at the counter's form**
 
 🔴 **`Trend 36` is withdrawn and restated.** Filed by `p583`, it claimed the education
@@ -260,6 +341,9 @@ the sweep's own first step — `grep` the shelves — refuted the claim that com
 | 🟢 permissive (MIT / Apache-2.0 / BSD-3-Clause) | **`22`** | **`66.7 %`** |
 | 🔴 copyleft (GPL-2.0 / GPL-3.0) | `8` | `24.2 %` |
 | 🟡 `NOASSERTION` — a work queue, not a verdict | `3` | `9.1 %` |
+
+🔴 **CORRECTED `p585` (2026-11-01):** the claim *"every platform of record is copyleft"* is **false** and was withdrawn as `Trend 36`. Four platforms of record are permissive and forkable: **Sakai** (ECL-2.0, 1,240★), **OpenOLAT** (Apache-2.0, 449★), **Kolibri** (MIT, 1,163★) and **relate** (MIT, 437★) — all four read from their own licence files. See [`../repos/foundations.md`](../repos/foundations.md). The statement below is retained as written for history.
+
 
 🔴 **Against every platform of record, which is copyleft without exception:** Moodle
 GPL-3.0 · Open edX **AGPL-3.0** · Chamilo GPL-2.0 · ILIAS GPL-3.0 · OpenEduCat LGPL-3.0 ·
@@ -1026,6 +1110,9 @@ the search layer was unusable (see *On the evidence* below).
   engagement, administration and governance.
 
 ### The technical trend, from the repository evidence rather than commentary
+
+🔴 **CORRECTED `p585` (2026-11-01):** the claim *"every platform of record is copyleft"* is **false** and was withdrawn as `Trend 36`. Four platforms of record are permissive and forkable: **Sakai** (ECL-2.0, 1,240★), **OpenOLAT** (Apache-2.0, 449★), **Kolibri** (MIT, 1,163★) and **relate** (MIT, 437★) — all four read from their own licence files. See [`../repos/foundations.md`](../repos/foundations.md). The statement below is retained as written for history.
+
 
 1. **The agent layer is permissive; the platform layer is copyleft.** 15 of 16
    verified education agents are MIT/Apache/BSD, while every LMS of record is

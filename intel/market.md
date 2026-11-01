@@ -4,6 +4,168 @@ region: Global
 updated: 2026-11-01
 ---
 
+# Education market intelligence
+
+## p585 — 2026-11-01 — the mandated regional legs paid for the first time in 20 passes, and the APAC education leg is a declared nil
+
+🟢 **Three of the four mandated regional legs returned usable, dated, attributable
+intelligence this pass** — after a long run of nils recorded on this page. The one that did
+not is written down as a nil below rather than left as silence, because an undeclared gap
+is indistinguishable from coverage.
+
+### Market sizing — the spread is the finding, not the midpoint
+
+🔴 **Do not quote a single number for this market.** Six publishers reachable this pass
+disagree by more than **3×** on the *current* year, which means the methodologies are
+measuring different things (tutoring software only, vs. all institutional AI spend, vs.
+consumer edtech included).
+
+| Publisher / source | Current-year figure | Forward figure | Implied CAGR |
+|---|---|---|---|
+| Persistence Market Research | **US$3.7B (2026)** | US$14.1B by 2033 | ~21% |
+| "AI in Education" aggregator (yoursocial) | **US$11.4B (2026)** | US$57.2B by 2033 | ~26% |
+| Market-update secondary | **~US$11B (2026)** | — | — |
+| Technavio / secondary | — | — | ~15.9% through 2029 |
+| MarketsandMarkets (North America cut) | **US$3.68B (2026)**, 36% of global | — | ~31.1% through 2030 |
+| Earlier baseline (various) | US$6.4B (2025) | — | — |
+
+🔵 **The usable reading:** the global market is **single-digit to low-double-digit billions
+USD in 2026**, growing in the **20–31%** range depending on scope, with **North America at
+roughly 36–38% of it**. 🔴 **The vendor-only gap on this page does not close**: every figure
+above is a vendor or market-research publication. No national statistics office or
+multilateral body publishes a comparable series, so there is no independent anchor.
+
+🟢 **One segment figure with a consistent source:** **K-12 is the largest segment at ~34%
+share in 2026**.
+
+### 🔴 Declared nil: the APAC education-specific leg
+
+The mandated leg `AI education APAC 2026 adoption regulation players` returned **enterprise**
+AI material almost exclusively — Boomi, TechRepublic, Forrester, OneTrust, Omdia — with no
+education-specific regulation or market-player data. Written down explicitly:
+
+- 🔴 **No APAC education-specific regulatory instrument was recoverable from the regional
+  query form.** The only education-adjacent signal: Forrester expects **60% of firms and
+  governments in major markets including India and China to run locally developed LLMs
+  alongside global ones, naming education as a target sector**; and the **ASEAN Guide on AI
+  Governance and Ethics** exists but is characterised as early-stage and non-binding.
+- 🟢 **The reason, and the fix:** education regulation in APAC is promulgated **per
+  jurisdiction**, not per region. The regional query form is the wrong instrument. This
+  base's own earlier passes closed APAC coverage by querying *jurisdictions* (China, Japan,
+  Korea, Philippines) in their own languages, which worked. **Future passes should run the
+  per-jurisdiction form for APAC and treat the regional form as known-barren.**
+
+---
+
+## Opportunities by region
+
+### North America
+
+🟢 **The largest and best-funded market, and the one with the most fragmented rule set.**
+
+- **Size:** ~**36% of global share, US$3.68B in 2026** (MarketsandMarkets), or 38% of 2025
+  share by another cut. Growth ~31.1% CAGR through 2030 on the more aggressive estimate.
+- **Public money is moving:** the **US Department of Education released US$169M in FIPSE
+  awards** including support for responsible AI use (Q1 2026).
+- 🔴 **Regulatory shape — this is the engagement risk:** there is **no comprehensive federal
+  statute**. Policymakers were tracking **134 bills across 31 states** as of March 2026, and
+  **Canada adds a separate layer** that must be reconciled with US state law. **COPPA** governs
+  anything touching under-13 learners.
+- 🟢 **What to sell:** a **per-jurisdiction compliance posture as a product feature**, not a
+  disclaimer. A tutor that can evidence which state's rules it is operating under, and log
+  it, is differentiated. Build on **Sakai** (ECL-2.0) where the client wants to own a
+  forkable platform, or **XBlock + codejail** against an existing Open edX estate.
+- 🔵 **Constraint to price in:** budgets are tight in public K-12 and **most institutions are
+  still in pilot mode** — expect to sell a pilot, not an estate rollout.
+
+### EMEA
+
+🟢 **The most clearly regulated market, which makes compliance a differentiator rather than
+an obstacle.**
+
+- **Public commitment:** the **UK's first AI Adoption Summit committed £200M+**, of which
+  **£100M expands Bridge AI** and **£53M goes to regional initiatives**.
+- **The EU moved on education specifically:** the **European Commission updated its ethical
+  guidelines on AI in education (9 June)**, and the **Council of Europe** has a standing
+  working-conference track on the *regulatory* dimensions of AI in education.
+- **Readiness leads other regions:** **56% of EMEA CEOs** report their organisation prepared
+  for AI adoption, vs **48% Americas** and **45% APJ** (Workday). 🔵 Cross-sector, not
+  education-specific — do not cite it as an education figure.
+- 🔴 **The friction is fragmentation, not prohibition:** regulatory uncertainty produces
+  **fragmented strategies across markets** (Bandwidth/Cavell, Feb 2026), so a single EU-wide
+  product posture will not survive contact with member-state procurement.
+- 🟢 **What to sell:** **evidence-producing AI**. The EU guidance and the AI Act's
+  transparency duties make an auditable tutor/grader — one that emits records of its
+  reasoning and its human-override points — the saleable artefact. Strong permissive
+  anchors here: **Numbas** (Newcastle), **OpenOLAT** (Apache-2.0, DACH higher ed),
+  **OpenPronounce**, **richie** (France Université Numérique).
+
+### APAC
+
+🟡 **The largest supply-side region and the thinnest demand-side intelligence this pass.**
+
+- 🟢 **Supply is dominant and permissive.** The two largest education agents in the world are
+  both APAC and both permissive: **DeepTutor** (Apache-2.0, 53,084★, Univ. of Hong Kong) and
+  **OpenMAIC** (MIT, 42,277★, Tsinghua). Also APAC: **pyKT**, **EduCDM**, **educhain**
+  (India), **word-atlas**, **BCTK**, **Study-Mate**, **frappe/lms** and **frappe/education**
+  (India).
+- 🔴 **Demand-side regulation and market sizing: see the declared nil above.** The regional
+  query form does not reach it; the per-jurisdiction form does.
+- 🟢 **The one durable signal:** **sovereign/local-LLM preference**. Forrester's expectation
+  that 60% of firms and governments in India and China will run locally developed models
+  alongside global ones, with education named as a target sector, converges with
+  "AI sovereignty will set the pace for Asia Pacific in 2026" commentary.
+- 🟢 **What to sell:** **deployments that do not depend on a US frontier API.** On-premise and
+  offline-capable architectures are not a downgrade here, they are the requirement —
+  **Kolibri** (MIT, offline-first), **Lama Loca**, **BCTK** and **Open TutorAI CE** (local
+  LLMs via Ollama) are the composable evidence that this is buildable.
+
+### LATAM
+
+🟢 **The strongest demand-side evidence of any region this pass, and a governance vacuum
+that is a services opportunity.**
+
+- **Adoption outpaces the global trend:** the **Digital Education Council's AI in Higher
+  Education LATAM Survey 2026**, run with **Tecnológico de Monterrey across 29
+  universities**, found **92% of students and 79% of faculty actively engaging with AI**.
+  Teacher optimism rose **57% → 72%** in 2026, while **88% of teachers report only moderate
+  use** — i.e. willingness is ahead of capability.
+- 🔴 **Governance lags adoption, measurably:** **UNESCO IESALC surveyed 200 institutions
+  across 19 countries** (Aug–Oct 2025) and describes a **particularly wide gap between
+  adoption and institutional governance**. UNESCO IESALC and **UNU-IAS** published a mapping
+  paper on AI in LATAM higher education (Sept 2026). Tec de Monterrey commentary states
+  plainly that **formal institutional AI policies are lacking**.
+- **Instruments exist but are mostly academic/analytical:** Ibero-American comparative work
+  on regulating AI in higher education; **Brookings** argues the region can be a testing
+  ground for rights-based AI governance and flags education as a place where flawed design
+  **reinforces inequality**; the **Latin American AI Index (ILIA)** with **IDB** and **CEPAL**
+  tracks readiness, adoption and governance across 19 countries.
+- 🟢 **What to sell — and this is the clearest fit in this file:** **the institutional AI
+  governance layer itself.** Demand is already there (92%/79%), policy is not, and the
+  named conveners (UNESCO IESALC, DEC, Tec de Monterrey, IDB, CEPAL) are reachable
+  institutional buyers. A packaged offer — AI-use policy, an auditable tutor, staff
+  capability, and an ILIA-aligned readiness baseline — matches the measured gap exactly.
+- 🟢 **Permissive LATAM-origin anchors to build with:** **catsim** (BSD-3-Clause, Brazil),
+  **libro-3d-interactivo** (MIT, Chile), **pedagogy-benchmark** (MIT, built from Chilean
+  Agencia de la Calidad / CPEIP exams), plus **Kolibri** (MIT) for low-connectivity
+  deployment and **Chamilo** where a client already runs it.
+
+### Global / provenance unknown
+
+- **K-12 is ~34% of the market in 2026** — the largest segment, placement not broken out by
+  region in the source.
+- **The OECD 2026 Digital Education Outlook** reportedly warns that **AI helps learning only
+  when pedagogy stays in control** — the single most useful line to quote in a pitch,
+  because it reframes the sale from tooling to instructional design.
+- **Vendor landscape named consistently but without shares:** IBM, Microsoft, Google across
+  institutional AI; Embodied and Miko in AI-for-kids hardware. 🔴 Big tech, publishers, LMS
+  incumbents and startups are all competing for the same budget — no reliable share split
+  was recoverable.
+- 🔴 **Standing provenance caveat for this whole page:** the market-size series is
+  **vendor-only**. Treat every dollar figure as directional.
+
+---
+
 ## p584 — 2026-11-01 — **`583-D` closed: the publisher set enumerated at SEVEN, and the current-year spread is `3.0×` — plus four new jurisdictions, and the Philippines turns out to hold the most completely specified AI-in-education programme in this base**
 
 ### 🟢 `583-D` CLOSED — the publisher set, enumerated, with each one's scope beside its figure
@@ -119,7 +281,7 @@ leg, and nothing on national K-12 policy or on the regional edtech vendor landsc
 That absence is itself the sales thesis — the region buys **policy capability**, because it
 has adoption without governance.
 
-## Opportunities by region
+### (historical) Opportunities by region — superseded, retained for history
 
 ### North America
 
@@ -326,7 +488,7 @@ Omnibus, the emotion-recognition prohibition, Ohio `HB 96`, Florida `SB 1194`, C
 `AB 2876`/`AB 1159`, the `134`-bill count, UNESCO IESALC's `200` institutions, the Digital
 Education Council LATAM survey, the `55 %`-no-AI-budget figure.
 
-## Opportunities by region
+### (historical) Opportunities by region — superseded, retained for history
 
 ### North America
 
@@ -522,7 +684,7 @@ point**, and attribute it. One widely repeated figure — `83 %` of institutions
 AI teaching-assistant deployment, attributed to EDUCAUSE — **could not be verified** and
 should not be used.
 
-## Opportunities by region
+### (historical) Opportunities by region — superseded, retained for history
 
 ### North America
 
@@ -1140,7 +1302,7 @@ Europe *with* North America. 🔵 **Only the LATAM row is a genuine multi-countr
 regional measurement** — which inverts this table's apparent balance and should be
 said out loud before any of it reaches a client deck.
 
-## Opportunities by region
+### (historical) Opportunities by region — superseded, retained for history
 
 ### North America
 
