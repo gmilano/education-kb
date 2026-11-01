@@ -4,6 +4,140 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `2026-11-01` — `p580` — **the first whole-shelf census: `265` of `271` addresses re-measured in one sitting — with the instrument this base has had since `p577` and has now announced three times**
+
+🔴 **`Gap 579-A` closes, but NOT with a discovery — and this file should carry the
+correction before the result.** The `repo:` qualifier inside the search endpoint returns
+everything the `403`'d per-repo endpoint would, and **`p577` already documented and used
+exactly that**, on `agents/top.md` under "Method note": *"Every repository URL on this page
+was confirmed by `search_repositories` with `repo:owner/name`, which returns id, licence
+determination, star count, fork count and push date in one call."* `p579` then published
+that a first-hand star count was *"still none"*, and this pass drafted the qualifier as its
+central result. 🔴 **Three passes, one instrument, three claims of novelty** — `Trend 11`
+and `Trend 16` landing on the measurement apparatus itself.
+
+🟢 **So what follows is offered as scale, not as discovery:** the call is per-row in
+`p577`; this is the first time it has been run across the whole shelf.
+
+```
+gh api -X GET search/repositories -f q="repo:HKUDS/DeepTutor"
+  → stargazers_count, license.spdx_id, archived, pushed_at, forks_count,
+    topics, description, size, default_branch
+```
+
+🔵 **What this replaces.** `p579` counted `303` `raw.githubusercontent` reads and `252`
+`git ls-remote` calls built to work around a channel that answers directly. Those were
+built for **stars and recency**, which this call returns, and they remain necessary for
+**licence bytes**, which it does not (see below).
+
+### 🔴 The `403` is a harness boundary, not a GitHub property — and it has a second arm
+
+The `403` body says it plainly: *"sessions are bound to their configured repositories."*
+It is this session's repository allowlist, not rate limiting and not authentication.
+Two consequences this base should stop re-testing:
+
+| endpoint | status | cause |
+|---|---|---|
+| `search/repositories` (incl. `repo:` qualifier) | 🟢 `200` | not repo-scoped |
+| `repos/{owner}/{repo}` | 🔴 `403` | allowlist — **permanent, no retry will fix it** |
+| 🆕 `users/{login}` | 🔴 `403` | allowlist — **same boundary** |
+
+🔵 **The diagnosis is `p515`'s, not this pass's** — *"not a rate limit and not an outage —
+it is per-repository session scope, and the body says so and names `add_repo`"*
+(`repos/trending.md`, `2026-10-28`). 🔴 It was then lost for ~65 passes. The only new row
+is `users/{login}`; its **consequence** (owner location unobtainable, region inferred from
+text) was published by `p577` via `search_users`.
+
+🔵 **The regional consequence is `p577`'s and still holds:** owner `location` and
+`company` are unreachable, so region must be placed from **description language, topics and
+institutional names in prose** — which is how both `579-E` rows below are placed.
+
+### 🔴 A new false-zero failure mode: one bad `repo:` qualifier `422`s the whole batch
+
+OR-ing `repo:` qualifiers batches cheaply — `8` addresses per call, `30` calls/minute.
+🔴 **But a single unresolvable qualifier makes GitHub reject the entire query:**
+
+```
+{"message":"Validation Failed","errors":[{"message":"The listed users and
+repositories cannot be searched either because the resources do not exist or
+you do not have permission to view them.","resource":"Search", ...,"status":"422"}]}
+```
+
+🔴 **Every good address in that batch returns nothing, and the failure looks exactly like
+"not found".** On this pass's first run it cost **`tw93/Kami` — `12,185★`, MIT, pushed
+the same day** — which a naive reading would have filed as a dead address. This is
+`p576`'s false-zero family recurring in a new form, and it is the second time a
+**disjunctive query form** has manufactured an absence here (`Trend 25`).
+
+🟢 **The fix, and it is cheap:** detect `422` on the batch and fall back to one call per
+address. `evidence/shelf-census.2026-11-01-p580.tsv` was built that way —
+`265` resolved, `6` nil, zero false zeros.
+
+### 🟢 `Gap 579-C` CLOSED COLD — the row is unlicensed and must be blocked
+
+`A-R007/Multi-Agent-Study-Assistant` was cited in three files as `unstated`.
+
+| probe | result |
+|---|---|
+| `license.spdx_id` (API) | 🔴 `NONE` |
+| `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `license` × `main`, `master` | 🔴 **`404` on all 12** |
+| `stargazers_count` | `64` |
+| `pushed_at` | 🔴 **`2025-11-04` — 12 months stale** |
+
+🔴 **Verdict: no grant exists. Unlicensed is all-rights-reserved.** `BLOCK` — moved to the
+unusable register. This also satisfies `Trend 24`'s standard: the ungranted verdict is
+stated with its path set, so it is a finding and not an upper bound.
+
+### 🟢 `Gap 579-E` CLOSED — both addresses above `50★` read and placed
+
+`p579` registered five addresses added on search metadata alone. The two above `50★`
+are now read first-hand and **placed by description language**, since `users/{login}`
+is unreachable:
+
+| address | stars | licence | pushed | region | evidence for the placement |
+|---|--:|---|---|---|---|
+| `emil-a-dev/lama-loca` | `59` | 🟢 **MIT** | `2026-03-04` | **EMEA** | Description is **Russian** — *"локальный ИИ-ассистент для учёбы… Полностью офлайн"*. Python; topics `education`, `rag`, `local-ai`, `qwen`, `chromadb`, `gradio`. Learns from the user's own books, produces reports, slides and notes, fully offline. |
+| `BBkjdayup/BCTK` | `53` | 🟢 **MIT** | `2026-09-28` | **APAC** | Description is **Chinese** — `TK试题题库`, a Windows desktop question-bank and paper-composition tool for individual teachers and institutions, **local-offline-first, data stays on the machine**. Tauri 2 + Vue 3 + TypeScript + Rust + SQLite; Tiptap and canvas-editor for item entry; Word import/export **without Microsoft Office**. |
+
+🔵 **Both are offline-first and data-stays-local**, which is exactly the posture
+`Trend 32` predicts for institution-accountable artefacts — and `BCTK` was already named
+in that trend's text as a permissive head on `topic:exam-generator`. It is now **measured
+and placed** rather than cited.
+
+The three below `50★` are recorded and left unshelved:
+`ZelinZhou-THU/lecture-notes-creator` (`8★`, Apache-2.0, `2026-05-27`),
+`alexfdez1010/exam-generator` (`24★`, MIT, 🔴 `2024-10-21` — two years stale),
+`dbosk/examgen` (`5★`, MIT, `2026-08-31`).
+
+### 🔴 Seventeenth consecutive nil on the mandated legs, third on the regional ones
+
+All four global legs and all four regional legs were run. **Every token they returned is
+already on a shelf page**, checked by `grep` against all eight pages *before* drafting —
+`579-F`'s prescription, executed as the first step rather than the last.
+
+| leg | returned | shelf status |
+|---|---|---|
+| `top open source AI agents education 2026 github MIT` | OpenClaw, OpenHands, CrewAI, Langflow, `rasbt/LLMs-from-scratch` | 🔴 all present; none is an education agent except the last, which is a textbook |
+| `github trending education AI 2026` | `HKUDS/DeepTutor`, `HKUDS/Vibe-Trading` | 🔴 both present |
+| `open source platform education LMS SIS MIT Apache` | OpenEduCat (LGPL-3.0), SCORM/xAPI/LTI 1.3/OneRoster/Ed-Fi | 🔴 all present |
+| `AI education industry trends 2026` | `134` state bills, `$169M` FIPSE, OECD *Digital Education Outlook 2026* | 🔴 all present |
+| 🔵 North America | state-by-state fragmentation, COPPA, `$169M` FIPSE | 🔴 present |
+| 🔵 EMEA | EU AI Act, Council of Europe conference, Europe EdTech 200 | 🔴 present |
+| 🔵 APAC | 🔴 **nothing education-specific at all** — only generic "AI sovereignty" commentary and 2018–19 vendor lists | 🔴 informed gap, declared |
+| 🔵 LATAM | Digital Education Council × Tec de Monterrey `92%`/`79%`, UNESCO IESALC, ILIA/ECLAC | 🔴 present except two denominator details |
+
+🟢 **The only two tokens new to this base from eight legs** are the denominator and venue
+of a survey it already publishes: the Digital Education Council × Tec de Monterrey study
+covers **`29` universities** and was presented at **IFE Conference 2026**. That is a
+footnote, not a finding, and it is recorded here so the nil is honest rather than silent.
+
+🔴 **The APAC leg is the one to declare loudest:** three passes running, the region-level
+APAC query has produced no education-specific policy or vendor. `Trend 23` already
+explains why — regulation is promulgated by jurisdiction, not by region — and `p574`
+closed APAC *by jurisdiction* (Korea's AI Basic Act, Singapore, Japan, Australia). The
+region-level leg should be retired for APAC, not re-run a fourth time.
+
+
 ## 🆕 `2026-11-01` — `p579` — **the sixteenth nil on the mandated legs, and a `403` this base had attributed to the wrong endpoint**
 
 🔴 **Sixteenth consecutive nil on the four global `WebSearch` legs; second consecutive nil

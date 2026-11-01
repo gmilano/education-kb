@@ -1,0 +1,6 @@
+axis	total_repos	head_address	head_stars	head_licence	head_is_education_artefact
+topic:accreditation	44	NUWCDIVNPT/stig-manager	236	NOASSERTION	no (US DoD STIG compliance manager)
+topic:safeguarding	27	Brainhub24/TitanShield	6	Apache-2.0	no (generic security toolkit)
+topic:proctoring	150	vardanagarwal/Proctoring-AI	633	MIT	YES (exam proctoring)
+topic:transcript	929	jdepoix/youtube-transcript-api	8543	MIT	no (YouTube API wrapper - vocabulary collision)
+topic:credential	85	git-ecosystem/git-credential-manager	9420	NOASSERTION	no (git auth - vocabulary collision)

@@ -6,6 +6,87 @@ updated: 2026-11-01
 
 # Compose patterns — education
 
+## p580 — 2026-11-01 — two recipes, both forced by this pass's measurements rather than chosen
+
+## P-582-A — 🔴 **Safeguarding accountability for an EMEA school group — a BUILD, because the open supply is `6★`** (10–14 weeks, EMEA)
+
+🔵 **Why this is a build and not an integration.** `Gap 579-D`'s falsifier run measured
+`topic:safeguarding` at **`27` repositories with a `6★` head**, and that head
+(`Brainhub24/TitanShield`, Apache-2.0) is a generic security toolkit, not an education
+tool. Meanwhile safeguarding is a **statutory duty** for schools in England under *Keeping
+Children Safe in Education*, with a named Designated Safeguarding Lead and audit
+obligations. 🔴 **There is nothing to adopt.** Charge for the accountability.
+
+**Components — every licence and star count read first-hand `2026-11-01`:**
+
+| Layer | Component | Licence | Stars | Why this one |
+|---|---|---|--:|---|
+| LMS host | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0** (byte-read) | `449` | 🟢 **The permissive EMEA LMS.** Swiss-origin, DACH university install base. Avoids Moodle's GPL-3.0 and Open edX's AGPL-3.0 — which matters because the safeguarding module itself will hold proprietary policy logic. |
+| Evidence store | [DSpace/DSpace](https://github.com/DSpace/DSpace) | 🟢 **BSD-3-Clause** | `1,105` | Versioned, permissioned record store with durable identifiers. A safeguarding audit trail needs immutability and retention, not a database table. |
+| Learning records | [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** | `956` | The interchange format for "who did what, when". 🔵 Last pushed `2025-07-03` — **a ratified spec, legitimately static** (trend 35). |
+| Agent runtime | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | `52,849` | Only if a learner-facing tutor is in scope; its three-layer memory is the component that creates the safeguarding exposure in the first place. |
+
+**Wiring:**
+1. 🔴 **Classification runs out-of-process.** The disclosure detector (self-harm, abuse,
+   grooming signals in tutor transcripts) is a separate service behind an OpenOLAT REST
+   hook — never an in-tree plugin, so the policy logic stays out of Apache-2.0 scope and
+   can be audited independently.
+2. 🟢 **Human-final-decision by architecture, not policy.** Every classification writes an
+   xAPI statement to DSpace and raises a case to the Designated Safeguarding Lead; the
+   system **cannot close a case itself**. 🔵 This is the carve-out `Trend 28` identified:
+   where a regulator exempts human-final-decision systems, compliance stops being
+   paperwork and becomes an architecture choice. `Submitty/Submitty`'s explicit TA-grading
+   stage is the same pattern shipped as a product feature.
+3. 🟢 **The deliverable is the evidence trail**, per `Trend 22`: retention schedule,
+   immutable case history, reviewer identity, model version per decision. The classifier
+   will be replaced within a year; the trail is what the school is actually buying.
+4. 🔴 **Do not promise EU AI Act Annex III conformity artefacts off the shelf** — `p577`
+   recorded that no EMEA-origin open conformity component exists, and this pass found none
+   either. Scope it as bespoke.
+
+## P-582-B — 🟢 **Assessment generation after the T5 tier died — the generator is a prompt, the product is everything around it** (8–10 weeks, Global)
+
+🔴 **Why the obvious starting point is wrong.** This base shelved
+`topic:question-generation` with correct licence bytes and called
+`patil-suraj/question_generation` the axis's *"reference implementation"*. This pass
+measured recency for the first time: **all five rows last pushed between `2023-12` and
+`2024-08`, one archived.** Every one is a fine-tuned T5 pipeline for a task
+instruction-following models now do zero-shot (trend 35). 🔴 **Starting there inherits a
+dead dependency and builds the one layer that is no longer scarce.**
+
+**Components — all measured current `2026-11-01`:**
+
+| Layer | Component | Licence | Stars | Last push |
+|---|---|---|--:|---|
+| Item authoring & delivery | [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | `216` | `2026-10-28` |
+| Autograded notebooks | [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** ⬅️ *settled this pass* | `1,370` | `2026-10-28` |
+| Untrusted code execution | [openedx/codejail](https://github.com/openedx/codejail) | 🟢 **Apache-2.0** | `477` | `2026-10-27` |
+| Psychometric calibration | [bigdata-ustc/EduCDM](https://github.com/bigdata-ustc/EduCDM) | 🟢 **Apache-2.0** ⬅️ *was filed `no-grant`* | `203` | 🔴 `2024-10-25` |
+| Offline item-bank reference | [BBkjdayup/BCTK](https://github.com/BBkjdayup/BCTK) | 🟢 **MIT** | `53` | `2026-09-28` |
+| LMS seam | [openedx/XBlock](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** | `471` | `2026-11-01` |
+
+**Wiring:**
+1. 🟢 **Generate with a frontier model, store in Numbas' own item format.** No fine-tuned
+   generator, no model to maintain. The generator is a prompt plus a schema validator.
+2. 🟢 **Calibrate with `EduCDM`.** Adopt the DINA/IRT/MIRT/NCDM implementations —
+   permissive, and this base had them wrongly filed as ungranted for most of `580` passes.
+   🔴 Vendor the code; it has not been pushed to in a year.
+3. 🟢 **Grade code submissions through `nbgrader` over `codejail`.** `codejail` is the
+   component that makes "run the learner's program" safe, and it is Apache-2.0 inside an
+   AGPL platform — so it can be lifted out and used alone.
+4. 🟢 **Ship through `XBlock`** into Open edX, or over **LTI 1.3** into Moodle. Both keep
+   the studio's generator out of the platform's copyleft scope.
+5. 🔵 **Take the offline posture from `BCTK` where the buyer is liability-bearing.** It
+   keeps the item bank and the data on the institution's own machine — the posture
+   `Trend 32` says institution-accountable buyers actually want, and the reason that tier
+   never produces popular repositories.
+6. 🔴 **Do not use `asahi417/lm-question-generation` for pt-BR work** — nine languages, no
+   Portuguese, and abandoned since `2024-08-20`.
+
+🟢 **What the client is buying:** item banking, interchange (`scorm-again`, MIT),
+calibration and a defensibility trail. 🔴 **Not the generator** — that is the part that
+stopped being scarce, and the part whose open-source tier died proving it.
+
 ## p579 — 2026-11-01 — two recipes, every component licence read from its file this pass
 
 ## P-581-A — 🟢 Student-facing analytics and advising on Canvas, FERPA-scoped (6–8 weeks, North America)

@@ -1,0 +1,6 @@
+address	api_licence_spdx	DESCRIPTION_License_field	api_correct
+Wenchao-Ma/GDINA	NONE	GPL-3	no
+philchalmers/mirt	NONE	GPL (>= 3)	no
+patriciamar/ShinyItemAnalysis	NONE	GPL-3	no
+dexter-psychometrics/dexter	LGPL-3.0	LGPL-3	yes
+DMontgomery40/mcp-canvas-lms	NONE	package.json -> "license": "MIT" (and lists a LICENSE file that does not exist); no licence file at 8 paths x 2 branches	no (opposite direction: manifest declares, no grant text)

@@ -6,6 +6,91 @@ updated: 2026-11-01
 
 # Top AI agents for education
 
+## p580 — 2026-11-01 — **every agent row on this page re-measured first-hand in one sitting, `579-C` blocked, `579-E` placed — and the licence field that made it cheap is the one field it gets wrong**
+
+🔴 **`Gap 579-A` closes, and the correction belongs on this page above all others, because
+the instrument was already documented here.** The "Method note" further down this file
+records, from `p577`: *"Every repository URL on this page was confirmed by
+`search_repositories` with `repo:owner/name`, which returns id, licence determination, star
+count, fork count and push date in one call."* 🔴 **`p579` nonetheless published that a
+first-hand star count was "still none", and this pass drafted the qualifier as a
+discovery.** Three passes, one instrument. 🟢 **What is new below is scale — the first
+census across the whole shelf rather than one page — and the `422` guard that makes
+batching safe.** The call, for the record:
+
+```
+gh api -X GET search/repositories -f q="repo:HKUDS/DeepTutor"
+  → stargazers_count · license.spdx_id · archived · pushed_at · forks_count · topics
+```
+
+🔵 **The `403` is this harness's repository allowlist** — its body says *"sessions are
+bound to their configured repositories"*. 🔵 **That diagnosis is `p515`'s** (`2026-10-28`),
+not this pass's, and it was lost for ~65 passes. `users/{login}` is blocked by the same
+boundary, so owner `location` is unreachable — the consequence this page already records
+under "Method note" via `search_users`. Every placement below is therefore made from
+**description language, topics and institutional names**, and says so.
+
+### 🟢 The agent shelf, re-measured first-hand `2026-11-01` — stars, licence, recency, all one call each
+
+| Agent | Repo | Licence (first-hand) | Stars | Last push | Region | Note |
+|---|---|---|--:|---|---|---|
+| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0** | **52,849** | `2026-10-31` | APAC | Lifelong personalised tutoring; `6,469` forks. 🟢 Still the field's only education agent at frontier scale. Topics include `ai-tutor`, `multi-agent-systems`, `rag`. |
+| **nbgrader** | [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** ⬅️ *was `unstated` in the ledger* | **1,370** | `2026-10-28` | North America | Assign, autograde and release Jupyter notebooks. 🟢 **The licence settled this pass** — Project Jupyter governance, `346` forks. The autograding row to build on. |
+| **Proctoring-AI** | [vardanagarwal/Proctoring-AI](https://github.com/vardanagarwal/Proctoring-AI) | 🟢 **MIT** | **633** | — | Global | 🟢 **The highest-starred genuinely institution-accountable education artefact found anywhere in this base** (see the `579-D` falsifier on [`../intel/trends.md`](../intel/trends.md)). Gaze/face/phone detection for exam proctoring. |
+| **pyKT** | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | **456** | `2026-10-18` | APAC | PyTorch knowledge-tracing library; the reference for modelling what a learner knows. 🔴 *Note: this base previously carried `1.2k★` for this row from a secondary source; the first-hand figure is `456`.* |
+| **educhain** | [satvik314/educhain](https://github.com/satvik314/educhain) | 🟢 **MIT** ⬅️ *was `unstated`* | **387** | `2026-05-29` | APAC | LLM content generation for education — MCQs, lesson plans, flashcards. India-origin (Build Fast with AI). |
+| **canvas-mcp** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 🟢 **MIT** ⬅️ *was `unstated` across 6 pages* | **310** | `2026-11-01` | North America | MCP server for Canvas LMS, `102` tools, **University of Illinois**, FERPA-aware. 🟢 Pushed the day of this census. |
+| **OATutor** | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 🟢 **MIT** | **274** | `2026-10-31` | North America | Intelligent tutoring with Bayesian Knowledge Tracing; **UC Berkeley CAHLR**. React + Firebase. |
+| **EduCDM** | [bigdata-ustc/EduCDM](https://github.com/bigdata-ustc/EduCDM) | 🟢 **Apache-2.0** ⬅️ 🔴 *the ledger had this `no-grant`* | **203** | 🔴 `2024-10-25` | APAC | Cognitive diagnosis models (DINA, IRT, MIRT, NCDM). 🟢 **Shippable, and this base had it filed as unusable.** 🔴 Stale ~12 months. |
+| **Open TutorAI CE** | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 **BSD-3-Clause** ⬅️ *was `unstated`* | **114** | `2026-06-26` | EMEA | Tutoring platform with voice, video and 3D avatars; Docker-first, local LLMs via Ollama. |
+| 🆕 **Lama Loca** | [emil-a-dev/lama-loca](https://github.com/emil-a-dev/lama-loca) | 🟢 **MIT** | **59** | `2026-03-04` | **EMEA** | 🆕 **Placed this pass** (`579-E`). Russian-language, **fully offline** study assistant: learns from the user's own books, produces reports, slides and notes. Python, `qwen`, `chromadb`, `gradio`. |
+| 🆕 **BCTK / TK试题题库** | [BBkjdayup/BCTK](https://github.com/BBkjdayup/BCTK) | 🟢 **MIT** | **53** | `2026-09-28` | **APAC** | 🆕 **Placed this pass** (`579-E`). Chinese-language Windows item-bank and paper-composition desktop app for teachers, **local-offline-first**. Tauri 2 + Vue 3 + Rust + SQLite; Word import/export without Microsoft Office. |
+
+🔵 **Eleven rows, every figure measured first-hand today.** Five licences marked ⬅️ were
+`unstated` or wrong in this base's ledger before this pass.
+
+### 🔴 `Gap 579-C` CLOSED — the row is unlicensed and is now blocked
+
+`A-R007/Multi-Agent-Study-Assistant` (`64★`) was cited in three files as `unstated`.
+Twelve probes — `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING`, `LICENCE`, `license`
+across both `main` and `master` — **all `404`**, and the API reports `spdx_id: NONE`.
+Last pushed **`2025-11-04`**, twelve months stale.
+
+🔴 **No grant exists. Unlicensed is all-rights-reserved → `BLOCK`.** Moved to the unusable
+register, and stated with its full path set so it is a finding rather than `Trend 24`'s
+upper bound.
+
+### 🔴 Two rows to stop recommending, both for recency rather than licence
+
+| row | licence | stars | last push | why |
+|---|---|--:|---|---|
+| `DMontgomery40/mcp-canvas-lms` | 🟡 **`MIT\|no-grant`** — declared, not shipped | `104` | `2026-05-31` | 🔴 **No licence file at 8 paths × 2 branches**, API says `NONE` — but `package.json` declares `"license": "MIT"` and lists a `LICENSE` that does not exist. 🔴 **Do not gate on this as MIT**; it is a question for counsel. 🟢 `vishalsachdev/canvas-mcp` (MIT, `310★`, real licence file) does the same job — prefer it. |
+| `bigdata-ustc/Agent4Edu` | 🔴 **`NONE`** | `100` | `2026-09-29` | 🔴 Unlicensed learner-simulation agent. Confirms the gap `p573` named: **learner simulation is still unlicensed**, now re-checked first-hand. |
+
+### 🔴 Method correction this page should carry: the licence field is the one field to distrust
+
+🟢 The new channel is authoritative for existence, stars, forks, `archived` and
+`pushed_at`. 🔴 **It is wrong about licences for any project that declares its grant in a
+package manifest** — `3 of 4` R/CRAN packages tested report `spdx_id: NONE` while
+declaring GPL in `DESCRIPTION` (trend 33). Base-wide, **`67 of 265` shelf rows
+(`25.3 %`) return `NONE` or `NOASSERTION`**, and `NONE` must not be read as *ungranted*
+until the manifest has been checked.
+
+🔴 **And a new false-zero to avoid:** OR-batching `repo:` qualifiers is cheap but **one
+unresolvable qualifier returns `422` for the whole batch**, zeroing every good address in
+it. On this pass's first run it cost `tw93/Kami` (`12,185★`, MIT) — which would have been
+filed as dead. Detect the `422` and fall back to single calls.
+
+🔵 **`curl -sI` remains noise, and now the mechanism is named:** every
+`https://github.com/...` request from this harness returns **`403`** through the agent
+proxy — real repositories and fabricated controls alike. That is why `p575` found the
+prescribed verifier certifies nothing. 🟢 **The replacement is `q=repo:owner/name`**,
+which returned a record for all `265` live addresses and nothing for both deliberate
+controls (`gmilano/nonexistent-repo-xyz`, `this-does-not-exist-xyz123/nope`).
+🔴 **With one caveat that needs the org listing to resolve: a *renamed* repository is
+indistinguishable from a deleted one by `repo:` search, and indistinguishable from a live
+one by an HTML check.**
+
 ## p579 — 2026-11-01 — **two additions, and the channel this base registered as unreachable is live: first-hand stars and licences, 30 calls a minute**
 
 🟢 **`Gap 464-D` and `Gap 505-B` are REFUTED.** Both record the GitHub **search** API as

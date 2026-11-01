@@ -6,6 +6,41 @@ updated: 2026-11-01
 
 # Vertical education platforms (customisable with AI on top)
 
+## p580 — 2026-11-01 — **every platform on this page re-measured first-hand, and `5 of 10` have no usable licence verdict from the new channel**
+
+🟢 **Instrument.** `q=repo:owner/name` returns licence, stars, `archived` and `pushed_at`
+in one call — a call this base has had since `p577` and applied at shelf scale for the
+first time this pass (`Gap 579-A`). All figures below are first-hand, `2026-11-01`.
+
+| Platform | Repo | Licence | Stars | Last push | Region | AI layer it accepts |
+|---|---|---|--:|---|---|---|
+| **Open edX** | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** | **8,213** | `2026-10-31` | North America | 🟢 **Via `XBlock` (Apache-2.0) and `codejail` (Apache-2.0)** — permissive seams that keep a studio's own AI component out of the network-copyleft duty. The single most important structural fact on this page. |
+| **Moodle** | [moodle/moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | **7,567** | `2026-10-30` | EMEA | Plugins + **LTI 1.3** external tools; keep the AI service out-of-process and talk LTI. |
+| **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | **6,951** | `2026-10-31` | Global | 🟢 **The permissive platform.** Misconception-aware interactive lessons — the natural host for an adaptive-hinting agent with no licence friction at all. |
+| **DSpace** | [DSpace/DSpace](https://github.com/DSpace/DSpace) | 🟢 **BSD-3-Clause** | **1,105** | `2026-10-30` | EMEA | 🟢 Institutional repository. Permissive — the place to put RAG over a university's own research and theses. |
+| **openeducat** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0** (byte-read; 🔴 API says `NOASSERTION`) | **903** | `2026-10-29` | APAC | The **Odoo-pattern** row: LMS **and** SIS in one PostgreSQL schema — admissions, fees, library, hostel. SCORM 1.2/2004, xAPI, LTI 1.3, OneRoster, Ed-Fi. India-origin. |
+| **Submitty** | [Submitty/Submitty](https://github.com/Submitty/Submitty) | 🟢 **BSD-3-Clause** | **807** | `2026-10-31` | North America | 🟢 Homework submission + autograding + **explicit TA grading stage** — a human-in-the-loop checkpoint shipped as a product feature. **Rensselaer Polytechnic.** |
+| **frappe/education** | [frappe/education](https://github.com/frappe/education) | 🟡 **GPL-3.0** (byte-read; 🔴 API `NOASSERTION`) | **687** | `2026-10-30` | APAC | School ERP on the Frappe/ERPNext stack. |
+| **Gibbon** | [GibbonEdu/core](https://github.com/GibbonEdu/core) | 🔴 **GPL-3.0** ⬅️ *was `unstated`* | **636** | `2026-10-30` | EMEA | 🟢 **Licence settled first-hand this pass.** School management for the K-12 tier; UK/HK-origin. |
+| **OpenOLAT** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟡 **Apache-2.0** (byte-read; 🔴 API `NOASSERTION`) | **449** | `2026-10-30` | **EMEA** | 🟢 **The permissive EMEA LMS** — Swiss-origin, used across DACH universities. The row to reach for when AGPL is a blocker in Europe. |
+| **openSIS** | [OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) | 🔴 **`NONE`** | **347** | `2026-10-26` | North America | 🔴 **Actively maintained and unlicensed.** A student information system with no grant is `BLOCK` regardless of how current it is. |
+
+### 🔴 The measurement caveat this page must carry
+
+🔴 **`5 of 10` rows above return `NOASSERTION` or `NONE` from the new channel** —
+`openeducat_erp`, `frappe/education`, `OpenOLAT`, `INGInious` and `openSIS`. Four of those
+five have a real grant that this base read byte-for-byte in earlier passes;
+**only `openSIS` is genuinely ungranted.** 🔵 `NOASSERTION` means GitHub's detector found
+a licence file it could not match to an SPDX id — frequently because the project ships a
+modified or multi-part grant — and it is **not** evidence of a missing licence.
+
+🟢 **So the rule for this page: the cheap channel sets stars and recency; the licence
+column stays byte-for-byte.** See trend 33 on [`../intel/trends.md`](../intel/trends.md).
+
+🟢 **Nothing on this page is archived and only `INGInious` is near the staleness line** —
+the vertical-platform tier is the healthiest tier in this base, in sharp contrast to the
+question-generation tier, which is entirely abandoned (trend 35).
+
 ## p579 — 2026-11-01 — two additions, both MIT, and the operations tier is where the permissive licences are
 
 🟢 The pattern `p578` noticed holds and strengthens: **every permissive platform on this

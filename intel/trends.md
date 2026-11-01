@@ -4,6 +4,173 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p580` — `2026-11-01` — trends 33–35, filed at `##` with the counter's own `^## <n>. ` form, plus the `579-D` falsifier result
+
+### 🟢 `Gap 579-D` RUN: `Trend 32` SURVIVES ITS FALSIFIER — and the falsifier is mis-specified
+
+`Trend 32` states that education's **institution-accountable** layers have no popular open
+anchor, and declared its falsifier in advance: *"a single education axis whose artefact is
+institution-accountable and whose head exceeds `1,000★`."* All five prescribed axes were
+measured this pass (`evidence/trend32-falsifier.2026-11-01-p580.tsv`):
+
+| axis | repos | head | stars | licence | is it an education artefact? |
+|---|--:|---|--:|---|---|
+| `topic:accreditation` | `44` | `NUWCDIVNPT/stig-manager` | `236` | NOASSERTION | 🔴 no — US DoD STIG compliance |
+| `topic:safeguarding` | `27` | `Brainhub24/TitanShield` | 🔴 **`6`** | Apache-2.0 | 🔴 no — generic security toolkit |
+| `topic:proctoring` | `150` | `vardanagarwal/Proctoring-AI` | `633` | 🟢 **MIT** | 🟢 **yes** |
+| `topic:transcript` | `929` | `jdepoix/youtube-transcript-api` | 🟢 `8,543` | MIT | 🔴 no — YouTube API wrapper |
+| `topic:credential` | `85` | `git-ecosystem/git-credential-manager` | 🟢 `9,420` | NOASSERTION | 🔴 no — git authentication |
+
+🔴 **Two axes cross the `1,000★` threshold and neither is an education tool.** Both are
+**vocabulary collisions**: "transcript" means a speech-to-text artefact far more often
+than an academic record, and "credential" means a secret far more often than a
+qualification. 🟢 **The highest genuinely institution-accountable education head in the
+whole sweep is `633★`** — `Proctoring-AI`, MIT, already on this base's trending pages.
+**`Trend 32` holds.**
+
+🔴 **But the falsifier as written cannot do its job.** Its threshold is crossable *only*
+by a collision, because `Trend 29` already established that the head of an education
+`topic:` axis is usually not an education tool. A falsifier that only a false positive can
+trip is not a test. 🟢 **Restated so it can be run:** *a single axis whose head **is an
+education artefact**, is institution-accountable, and exceeds `1,000★`.* On that form the
+margin is now measured: **`633★` against `1,000★`** — the closest this base has come, and
+it comes from proctoring, the most liability-bearing axis of the five.
+
+🔵 **`topic:safeguarding` topping out at `6★` is the commercially loudest number here.**
+Safeguarding is a **statutory duty** for schools in England (*Keeping Children Safe in
+Education*), with named accountable persons and audit obligations, and the entire open
+supply is one `6★` repository that is not even an education tool. This is a **BUILD**
+recommendation of the same shape `p575` reached for `topic:iep` at `7★`, and it is
+EMEA-anchored rather than US-anchored.
+
+## 33. The GitHub licence field is blind to manifest-declared grants, so the cheapest new channel is the one that must not be trusted on the one question that gates delivery (high confidence — measured first-hand, 4 of 4, against byte-for-byte reads)
+
+🔵 **The claim.** `p579`/`p580` opened a channel that returns `license.spdx_id` in one
+call. It is authoritative for existence, stars, forks, `archived` and `pushed_at`. 🔴 **It
+is structurally wrong, in both directions, for languages that declare their licence in a
+package manifest rather than a `LICENSE` file**, because GitHub's detector only reads the
+file.
+
+🟢 **Measured, `5 of 5`** (`evidence/manifest-licence-blindness.2026-11-01-p580.tsv`):
+
+| address | API `spdx_id` | `DESCRIPTION` → `License:` | API correct? |
+|---|---|---|---|
+| `Wenchao-Ma/GDINA` | 🔴 `NONE` | 🟢 `GPL-3` | 🔴 no |
+| `philchalmers/mirt` | 🔴 `NONE` | 🟢 `GPL (>= 3)` | 🔴 no |
+| `patriciamar/ShinyItemAnalysis` | 🔴 `NONE` | 🟢 `GPL-3` | 🔴 no |
+| `dexter-psychometrics/dexter` | 🟢 `LGPL-3.0` | `LGPL-3` | 🟢 yes |
+
+🔴 **Three of four R/CRAN packages report `NONE` — "no licence at all" — while declaring
+GPL in `DESCRIPTION`.** This base already reads R grants from `DESCRIPTION` (`p573`, and
+`agents/top.md` records that CRAN enforces the field); what is new is that **the new
+channel contradicts those reads**, and in the most dangerous direction: `NONE` reads as
+*all rights reserved*, which would wrongly **BLOCK** a GPL package, or — run the other
+way — wrongly inflate this base's published "ungranted" count.
+
+🔴 **And it runs the other way too, which is the half that bites a licence gate.**
+`DMontgomery40/mcp-canvas-lms` (`104★`) has **no licence file at any of 8 paths on either
+branch** — yet its `package.json` declares `"license": "MIT"` and lists a `LICENSE` file
+that does not exist. So `spdx_id: NONE` can mean *"a grant is declared but no grant text
+was shipped"*, which is neither "MIT" nor "all rights reserved". 🟢 **An ambiguous ledger
+value (`MIT|no-grant`) is the honest record for that state**, and this pass restored one
+it had drafted as an error.
+
+🔵 **Why it generalises past R.** The same shape is waiting in `Cargo.toml`,
+`pyproject.toml`, `package.json` and `.csproj`, all of which carry a `license` field the
+file-based detector ignores. 🔴 **The scope is already visible in this pass's own census:
+`67 of 265` shelf rows (`25.3 %`) return `NONE` or `NOASSERTION`** — and `NONE` cannot be
+read as "ungranted" until the manifest has been checked.
+
+🟢 **The division of labour, stated so it can be reused:**
+
+| question | channel | status |
+|---|---|---|
+| does it exist / stars / forks / `archived` / `pushed_at` / topics | 🟢 `search?q=repo:owner/name` | authoritative, one call |
+| what is the grant | 🔴 **byte-for-byte read** of `LICENSE*`, `COPYING`, **and the language's manifest** | the API's `spdx_id` is a hint only |
+| is a nil a death or a rename | 🟢 **org listing** (`q=org:owner`) | neither of the other two can tell |
+
+## 34. A base's own address ledger decays far less than it looks, and the instrument that seems to fix it would make it worse (high confidence — measured first-hand on 153 rows, with equivalence classes)
+
+🔵 **The claim.** `Gap 579-B` registered that this base's ledger licence column "is not
+gate-safe", on the evidence of two contradicting rows, and prescribed re-deriving the
+column from the search endpoint. Both halves needed testing. 🟢 **The decay is small;
+🔴 the prescription is harmful.**
+
+🟢 **Measured on all `153` shelf addresses present in the `3,175`-row ledger**
+(`evidence/ledger-licence-classify.2026-11-01-p580.tsv`):
+
+| class | rows | share |
+|---|--:|--:|
+| 🟢 substantive agreement | `103` | `67.3 %` |
+| 🟢 ledger `unstated` → **settled first-hand this pass** | `18` | `11.8 %` |
+| 🟡 ledger `unstated`, still open (API also blank) | `8` | `5.2 %` |
+| 🔴 **API weaker** — ledger has a real SPDX, API says `NOASSERTION` | **`17`** | **`11.1 %`** |
+| 🔴 **API blind** — manifest-declared grant, both directions (trend 33) | `4` | `2.6 %` |
+| 🟡 ledger imprecise — API gives the exact variant (`BSD` → `BSD-3-Clause`) | `1` | `0.7 %` |
+| 🔴 **genuine ledger error** | **`2`** | **`1.3 %`** |
+
+🔴 **So `579-B`'s prescription, executed literally, would have overwritten `21` correct
+byte-for-byte reads — including `opendatalab/MinerU` at `82,893★`, Apache-2.0, which the
+API reports as `NOASSERTION` — in order to fix `2`.** A **`10.5:1`** loss ratio. 🟢 **The
+ledger was updated instead under a rule that only ever adopts a *real* SPDX or a
+byte-read manifest truth, never `NONE`/`NOASSERTION` over an existing verdict: `23` rows
+changed, none degraded.**
+
+🔵 **The generalisable part, and it is a KB-hygiene law rather than an education one:**
+an apparent disagreement rate between two instruments is **not** a decay rate until the
+classes are separated. Here the raw disagreement looked like `20.3 %`; after separating
+*"the new instrument is weaker"* from *"the old record is wrong"*, the real error rate is
+`1.3 %` — more than an order of magnitude lower. **Before re-deriving a column from a cheaper
+channel, measure which channel is wrong on the rows where they differ.** Two of this
+base's own "no-grant" verdicts also turned out to be a *vocabulary* mismatch with the
+API's `NONE` rather than a conflict, which inflated the raw figure further.
+
+🟢 **The two genuine errors, both now corrected in the ledger:**
+
+| address | was | is | why it matters |
+|---|---|---|---|
+| `bigdata-ustc/EduCDM` | 🔴 `no-grant` | 🟢 **Apache-2.0**, `203★` | A **shippable** cognitive-diagnosis library was filed as unusable — the error direction that silently removes supply |
+| `nuwa-skills/montessori-skill` | 🔴 `CC-BY-SA\|CC-BY` | 🟢 **MIT**, `78★` | Filed as share-alike, actually permissive |
+
+🔴 **A third was drafted as an error and is withdrawn by this pass's own byte-read.**
+`DMontgomery40/mcp-canvas-lms` (`104★`) has **no licence file at 8 paths × 2 branches**
+and the API reports `NONE` — but its `package.json` declares `"license": "MIT"`, and even
+lists a `LICENSE` file that does not exist. 🟢 **The ledger's `MIT|no-grant` was the most
+accurate record available and has been restored.** 🔵 Treat the row as *declared MIT with
+no grant text* — weaker than a licence file, and a question for counsel rather than a
+gate, which is exactly what the ambiguous ledger value said.
+
+## 35. A specialised open-source layer dies when a general model absorbs its task, and the licence audit that keeps the layer on the shelf cannot see it happening (high confidence — measured first-hand, 5 of 5 on one axis, 42 of 265 base-wide)
+
+🔵 **The claim.** This base grades supply on **licence** and **stars**. Neither moves when
+a repository stops being maintained, so a tier can be fully audited, correctly licensed,
+accurately starred — and dead.
+
+🟢 **The clean case is `topic:question-generation`**, shelved here with first-hand licence
+bytes and described as the axis's *"reference implementation"* tier. Measured recency:
+**`5 of 5` rows last pushed between `2023-12` and `2024-08`**, one of them archived
+(full table on `repos/trending.md`). 🔵 **The cause is identifiable and it is not
+neglect: every row is a fine-tuned T5 pipeline for answer-aware question generation**, a
+task instruction-following models now do zero-shot. The capability did not disappear; it
+**moved up the stack**, and the specialised repositories stopped earning maintenance.
+
+🔴 **Base-wide, `42 of 265` live-shelf addresses (`15.8 %`) have not been pushed to in
+over twelve months**, against `4` (`1.5 %`) carrying the `archived` flag — so
+**staleness is ten times more common than the one condition this base was already
+checking for.** `archived` is a deliberate act by a maintainer; abandonment is the
+default, and it is invisible unless `pushed_at` is a shelf field.
+
+🔵 **What to do with it commercially, which is the useful half.** Staleness is not
+disqualifying on its own — a stable spec or a finished library can sit still legitimately
+(`adlnet/xAPI-Spec`, Apache-2.0, `956★`, last pushed `2025-07-03`, is a **specification**
+and is fine). 🔴 **It is disqualifying for anything that tracks a moving target:** a
+model wrapper, a provider SDK, a format converter, or anything whose task a frontier model
+now performs. 🟢 **The rule: pair `pushed_at` with the question "is this repository's task
+still scarce?"** Where the answer is no, the row belongs in the history, not in a client
+recommendation — and the deliverable moves to the layers around the absorbed task
+(item banking, interchange, defensibility), exactly where `Trend 32` already points.
+
+
 # Current trends — education AI
 
 ## 🆕 `p579` — `2026-11-01` — trends 31–32

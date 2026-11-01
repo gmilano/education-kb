@@ -421,6 +421,28 @@ said out loud before any of it reaches a client deck.
 
 ### North America
 
+#### 🆕 `p580` — `2026-11-01` — the region's supply is permissive and current, and its only institution-accountable anchor is `633★`
+
+🟢 **Re-measured first-hand this pass:** `vishalsachdev/canvas-mcp` (**MIT**, `310★`,
+pushed `2026-11-01`, University of Illinois, `102` Canvas tools, FERPA-aware — 🟢 **licence
+settled this pass; the ledger had it `unstated` across six pages**),
+`jupyter/nbgrader` (**BSD-3-Clause**, `1,370★` — 🟢 also settled this pass),
+`Submitty/Submitty` (**BSD-3-Clause**, `807★`, Rensselaer, with an explicit TA-grading
+checkpoint), `openedx/codejail` and `openedx/XBlock` (**Apache-2.0**, `477★` / `471★`).
+
+🟢 **The opportunity, sharpened by this pass's falsifier run:** the highest-starred
+genuinely institution-accountable education artefact in this entire base is
+`vardanagarwal/Proctoring-AI` at **`633★`, MIT** — against `134` AI bills tracked across
+`31` states and `$169M` in US Department of Education FIPSE awards. 🔴 **The accountability
+tier is where the money is and where the open supply runs out.** Build the defensibility
+layer — audit trail, human-final-decision architecture, state-bill conformance — on
+permissive North American components (`XBlock` + `codejail` + `nbgrader` + `canvas-mcp`)
+and charge for the accountability, not the generator.
+
+🔴 **One row to block:** `OS4ED/openSIS-Classic` (`347★`, pushed `2026-10-26`) is an
+actively maintained student information system with **no licence file at all**. Current is
+not the same as usable.
+
 
 **p579 — 2026-11-01.**
 
@@ -819,6 +841,30 @@ WCAG 2.1 AA). 🔴 **`574-E` stays open**: `ada.gov` and `federalregister.gov` a
 outside this session's egress allow-list, so the one dated obligation on these shelves
 remains **secondary-only for a fourth pass.**
 ### EMEA
+
+#### 🆕 `p580` — `2026-11-01` — a permissive LMS and a permissive assessment anchor, both EMEA-origin — and a statutory duty with a `6★` supply
+
+🟢 **Re-measured first-hand this pass:** `OpenOLAT/OpenOLAT` (**Apache-2.0** by byte-read,
+`449★`, pushed `2026-10-30`, Swiss-origin) is 🟢 **the permissive LMS to reach for whenever
+AGPL is a procurement blocker in Europe**; `numbas/Numbas` (**Apache-2.0**, `216★`,
+Newcastle University) is the permissive assessment-authoring anchor; `moodle/moodle`
+(**GPL-3.0**, `7,567★`) and `GibbonEdu/core` (**GPL-3.0**, `636★` — 🟢 licence settled
+this pass) remain copyleft; `DSpace/DSpace` (**BSD-3-Clause**, `1,105★`) is the permissive
+institutional-repository row for RAG over a university's own theses.
+
+🆕 **A new EMEA-origin agent, placed this pass** (`Gap 579-E`): `emil-a-dev/lama-loca`
+(**MIT**, `59★`) — a Russian-language, **fully offline** study assistant that learns from
+the user's own books and produces reports, slides and notes. Placed by description
+language and topics, since `users/{login}` is unreachable from this harness.
+
+🔴 **The opportunity, and it is this pass's loudest number.** `topic:safeguarding` holds
+**`27` repositories and its head has `6★`** — and that head is a generic security toolkit,
+not an education tool. Safeguarding is a **statutory duty** for schools in England under
+*Keeping Children Safe in Education*, with named accountable persons and audit
+obligations. 🟢 **There is no open supply to adopt: this is a BUILD**, the same shape
+`p575` reached for `topic:iep` at `7★`, but EMEA-anchored and paired with the EU AI Act's
+Annex III classification of education systems as high-risk — for which `p577` recorded
+there is still no EMEA-origin open conformity component.
 
 
 **p579 — 2026-11-01.**
@@ -1281,6 +1327,37 @@ ministry-level education AI adoption figures for any single EMEA state.** The
 regional leg returns EU-level policy and cross-sector enterprise surveys; it does not
 reach a national education ministry.
 ### APAC
+
+#### 🆕 `p580` — `2026-11-01` — the region holds the field's only frontier-scale education agent, one newly shippable library, and one newly placed offline item bank
+
+🟢 **Re-measured first-hand this pass:** `HKUDS/DeepTutor` (**Apache-2.0**, **`52,849★`**,
+`6,469` forks, pushed `2026-10-31`) — 🟢 **still the only education agent anywhere near
+frontier scale**; `dream-num/univer` (**Apache-2.0**, `22,837★`) as the courseware document
+substrate; `pykt-team/pykt-toolkit` (**MIT**, `456★` — 🔴 *note: this base had been
+carrying `1.2k★` from a secondary source*); `satvik314/educhain` (**MIT**, `387★` — 🟢
+licence settled this pass, India-origin); `openeducat/openeducat_erp` (**LGPL-3.0**,
+`903★`) and `frappe/education` (**GPL-3.0**, `687★`) as the Odoo-pattern LMS+SIS rows.
+
+🟢 **A correction that adds supply:** `bigdata-ustc/EduCDM` (**Apache-2.0**, `203★`) —
+cognitive diagnosis models (DINA, IRT, MIRT, NCDM) — **was filed in this base's ledger as
+`no-grant`**. It is permissive and shippable. 🔴 Caveat: last pushed `2024-10-25`, so
+adopt the algorithms, not the maintenance.
+
+🆕 **Newly placed this pass** (`Gap 579-E`): `BBkjdayup/BCTK` / `TK试题题库`
+(**MIT**, `53★`, pushed `2026-09-28`) — a Chinese-language Windows item-bank and
+paper-composition desktop app for teachers, **local-offline-first with data on the
+machine**, built on Tauri 2 + Vue 3 + Rust + SQLite, with Word import/export that does not
+require Microsoft Office. 🔵 It is the clearest instance of the posture `Trend 32`
+describes: institution-accountable artefacts ship as offline desktop tools, which is what
+a liability-bearing buyer wants and what cannot scale into a popular repository.
+
+🔴 **Declared gap, and a recommendation to retire a leg.** The region-level APAC search
+query returned **nothing education-specific for the third consecutive pass** — only
+generic "AI sovereignty" commentary and vendor lists built on 2018–19 data. `Trend 23`
+explains why: regulation is promulgated **by jurisdiction**, not by region, and `p574`
+closed APAC that way (Korea's AI Basic Act naming education a high-impact sector, plus
+Singapore, Japan and Australia). 🟢 **The region-level APAC leg should be retired rather
+than run a fourth time.**
 
 
 **p579 — 2026-11-01.**
@@ -1774,6 +1851,37 @@ jurisdiction with an education-*specific* accessibility code** (AICTE / RPwD ss.
 GIGW 3.0 at WCAG 2.1 AA), and `shravyamudra` is the first shelved component that lands
 against it.
 ### LATAM
+
+#### 🆕 `p580` — `2026-11-01` — adoption is the highest measured anywhere and the open supply is still one AGPL row
+
+🟢 **Re-measured first-hand this pass:** `portabilis/i-diario` (**AGPL-3.0** by byte-read,
+`117★`, pushed `2026-10-14`, Brazil) and `portabilis/pre-matricula-digital`
+(**AGPL-3.0**, `21★`) remain the region's only platform-tier rows on this base's shelf.
+🔴 **Both are network copyleft, and neither has a permissive alternative of LATAM origin.**
+
+🔵 **Demand evidence, re-confirmed and now with its denominator:** the Digital Education
+Council survey run with **Tecnológico de Monterrey's Institute for the Future of
+Education** reports **`92 %` of students and `79 %` of faculty** engaging with AI, with
+`67 %` of students using it at least weekly — across **`29` universities**, presented at
+**IFE Conference 2026**. (The `29`-university denominator and the venue are the only two
+tokens any of this pass's eight mandated search legs returned that this base did not
+already hold.) UNESCO IESALC's survey of **`200` institutions across `19` countries**
+records the region's adoption-versus-governance gap as unusually wide; ILIA, with the IDB
+and ECLAC, puts Chile, Brazil and Mexico ahead on readiness.
+
+🟢 **The instrument position is settled from earlier passes and stands:** six LATAM
+jurisdictions have dated education-AI instruments and **Colombia's `Ley 2626 de 2026` is a
+statute**, not guidance.
+
+🔴 **The opportunity, stated as the arbitrage it is.** The region has the **highest
+measured adoption** in this base and the **thinnest open supply** — one AGPL platform
+family, no permissive LATAM-origin education component found in `580` passes, and an
+explicit absence of institutional AI policy at the university level. 🟢 **Governance and
+policy tooling is therefore the entry point, not platform build**: an institutional AI-use
+policy engine with an audit trail, built on permissive non-LATAM components
+(`Numbas` Apache-2.0, `nbgrader` BSD-3-Clause, `scorm-again` MIT) and localised
+pt-BR/es-419. 🔴 **Note for assessment work: `asahi417/lm-question-generation` covers nine
+languages and has no Portuguese** — and it is abandoned anyway (trend 35).
 
 
 **p579 — 2026-11-01.**
@@ -2275,6 +2383,27 @@ corrects it, so **no LATAM market *size* figure is published on this page** — 
 adoption and governance measurements above, which are first-party survey outputs
 rather than vendor extrapolations.
 ### Global
+
+#### 🆕 `p580` — `2026-11-01` — the unplaceable rows, and why region placement got harder this pass
+
+🟢 **Re-measured first-hand:** `oppia/oppia` (**Apache-2.0**, `6,951★`, `sdg-4`) — 🟢 the
+largest permissive education platform in this base; `DSpace/DSpace` (**BSD-3-Clause**,
+`1,105★`); `adlnet/xAPI-Spec` (**Apache-2.0**, `956★`, last pushed `2025-07-03` — 🔵 stale
+by date and legitimately so, because a ratified specification should sit still);
+`vardanagarwal/Proctoring-AI` (**MIT**, `633★`).
+
+🔴 **A channel limit that bears directly on this page's regional discipline.** The GitHub
+`users/{login}` endpoint returns **`403`** from this harness — the same repository-allowlist
+boundary that blocks `repos/{owner}/{repo}` — so owner `location` and `company`, the
+natural way to place a repository by region, are **unreachable**. Every placement this
+pass made was derived from **description language, topics and institutional names in
+prose**, and the two new rows (`lama-loca` → EMEA from Russian; `BCTK` → APAC from
+Chinese) are placed on that basis and labelled as such.
+
+🔵 **What this means for the `region` field going forward:** it is an inference from text,
+not a lookup, for any repository without an institutional name. Rows that cannot be placed
+belong here under `Global` **with the reason stated**, rather than being guessed into a
+region — which is the failure mode that makes a region filter stop working.
 
 
 **p579 — 2026-11-01.**

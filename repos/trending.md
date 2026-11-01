@@ -4,6 +4,94 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `2026-11-01` — `p580` — **the whole live shelf re-measured first-hand: `42 of 265` addresses have not been pushed to in over a year, and the assessment-generation tier this base calls "the reference implementation" is abandoned upstream**
+
+🟢 **The census.** Every GitHub address cited on the six non-append-only shelf pages was
+re-measured through the `repo:` qualifier — `271` addresses, `265` resolved, `6` nil, in
+one sitting. Full record: `evidence/shelf-census.2026-11-01-p580.tsv`. This is the first
+time this base has had **recency** on its own shelf.
+
+### 🔴 Recency was never a shelf field, and it changes verdicts
+
+| cut | count | share |
+|---|--:|--:|
+| measured first-hand | `265` | — |
+| 🔴 **not pushed since `2025-11-01`** (>12 months) | **`42`** | **`15.8 %`** |
+| 🔴 **`archived: true`** | `4` | `1.5 %` |
+
+🔵 All four archived rows were already known — `supertone-oss-archive/supertonic`
+(`13,757★`) is carried with an explicit ⚠️ ARCHIVED warning on `repos/foundations.md`, and
+that row remains the model for how to shelve one. 🔴 **Staleness, by contrast, was not
+recorded anywhere**, and it is the more common condition by a factor of ten.
+
+### 🔴 The finding that costs a deliverable: `topic:question-generation` is a graveyard
+
+This base shelves the question-generation axis with first-hand licence bytes and calls
+`patil-suraj/question_generation` *"the axis's reference implementation"*. The licences are
+correct. 🔴 **The tier is dead:**
+
+| address | stars | licence | last push | age |
+|---|--:|---|---|---|
+| `patil-suraj/question_generation` | `1,138` | MIT | 🔴 `2024-04-05` | ~19 months |
+| `ramsrigouthamg/Questgen.ai` | `952` | MIT | 🔴 `2023-12-08` | ~23 months |
+| `KristiyanVachev/Question-Generation` | `495` | GPL-3.0 | 🔴 `2024-02-14` | ~21 months |
+| `asahi417/lm-question-generation` | `366` | MIT | 🔴 `2024-08-20` | ~14 months |
+| `AMontgomerie/question_generator` | `298` | MIT | 🔴 `2024-02-06` + **archived** | ~21 months |
+
+🔵 **Why, and it is not neglect.** Every one of these is a **fine-tuned T5 pipeline** —
+answer-aware QG trained before instruction-following models could do the task zero-shot.
+General LLMs absorbed the capability, so the specialised repositories stopped being worth
+maintaining. 🔴 **The consequence for a client engagement is concrete: do not build
+assessment generation on this tier.** The generator is now a prompt; what is scarce is
+everything around it — item banking, interchange, and the defensibility gate that
+`Trend 10` and `Trend 32` describe.
+
+🟢 **What to use instead, all measured this pass and all current:**
+`Numbas` (Apache-2.0) for assessment authoring, `scorm-again` (MIT) for interchange,
+`jupyter/nbgrader` (**BSD-3-Clause**, `1,370★` — 🟢 licence settled first-hand this pass,
+the ledger had it `unstated`) for autograded notebooks, and `BBkjdayup/BCTK` (MIT, `53★`,
+APAC) as the offline item-bank reference.
+
+### 🟢 The shelf's licence distribution, measured rather than inferred
+
+| class | count | share |
+|---|--:|--:|
+| 🟢 shippable (MIT `116`, Apache-2.0 `35`, BSD `6`) | **`157`** | **`59.2 %`** |
+| 🔴 copyleft (GPL-3.0 `18`, AGPL-3.0 `10`, GPL-2.0 `7`, LGPL-3.0 `2`) | `37` | `14.0 %` |
+| 🔴 `NONE` — API found no licence file | `37` | `14.0 %` |
+| 🟡 `NOASSERTION` — a file exists, the detector could not match it | `30` | `11.3 %` |
+| other (`CC0-1.0` `2`, `ECL-2.0` `2`) | `4` | `1.5 %` |
+
+🔴 **A quarter of the shelf (`67` rows, `25.3 %`) has no usable verdict from this channel**,
+which is the single most important caveat on the new instrument and the reason the next
+section exists.
+
+### 🔴 The six nil addresses — and the one that matters is a rename this base already caught
+
+| address | org live? | verdict |
+|---|---|---|
+| `openedx/edx-platform` | 🟢 `175` repos | 🔴 **renamed** → `openedx/openedx-platform`, AGPL-3.0, `8,213★` |
+| `bigdata-ustc/EduData` | 🟢 `31` repos | 🔴 not in the org listing — renamed or removed |
+| `packbackbooks/lti-1-3-php-library` | 🟢 `10` repos | 🔴 not in the org listing |
+| `galaxyproject/video-lectures` | 🟢 `162` repos | 🔴 not in the org listing |
+| `Changochen/slide-to-video` | 🟢 `20` repos | 🔴 not in the org listing |
+| `AFRICAN-AI-NETWORK/learnhouse` | 🔴 **`0` repos** | 🔴 **owner gone** |
+
+🟢 **The Open edX rename is already published here** — `agents/top.md` records the `422`
+and the new name, and `repos/foundations.md` carries
+`openedx/openedx-platform` at AGPL-3.0 / `8,213★` with a rename note. **This pass claims no
+discovery there.** 🔴 **What it does add is the cleanup measurement:** the dead address
+still appears **`40` times** across the shelf pages against **`28`** for the live one.
+The rename was documented and the citations were never migrated, so the majority of this
+base's Open edX links still point at a name the API rejects.
+
+🔵 **And the reusable part:** a renamed repository is **indistinguishable from a live one
+by an HTML check** (GitHub 301-redirects the old name in a browser) and
+**indistinguishable from a deleted one by `repo:` search** (which does not follow
+renames). Only the **org listing** separates the two. Any audit that uses one channel
+alone will mis-file renames in one direction or the other.
+
+
 ## 🆕 `2026-11-01` — `p579` — **the assessment-generation axis has 73 repositories and no anchor above 93 stars**
 
 🔴 **`topic:exam-generator`: `73` repositories, `0` prior queries in `578` passes, and the

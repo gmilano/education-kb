@@ -6,6 +6,76 @@ updated: 2026-11-01
 
 # Foundational open source repos for education
 
+## p580 — 2026-11-01 — **the foundations re-measured first-hand, and the field this page never had is the one that disqualifies rows: `42 of 265` shelf addresses are over a year stale**
+
+🟢 **Instrument, with its provenance stated.** `q=repo:owner/name` inside the search
+endpoint returns `stargazers_count`, `license.spdx_id`, `archived`, `pushed_at`,
+`forks_count` and `topics` in one call. 🔴 **This base has had that call since `p577`**,
+where it is documented on [`../agents/top.md`](../agents/top.md); `Gap 579-A` closes on
+*applying* it at shelf scale rather than on finding it. `271` addresses, `265` resolved —
+`evidence/shelf-census.2026-11-01-p580.tsv`. **This is the first time this page has had
+recency on its own rows.**
+
+### 🟢 The foundational tier, re-measured `2026-11-01`
+
+| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+|---|---|--:|---|---|---|---|
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** | **8,213** | `2026-10-31` | North America | 🔴 network copyleft | The LMS of record. 🔴 **Cite this name — `openedx/edx-platform` is the old one and the API rejects it.** |
+| [moodle/moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | **7,567** | `2026-10-30` | EMEA | 🔴 copyleft | The other LMS of record; `7,691` forks. Australia-origin, EMEA-anchored governance. |
+| [oppia/oppia](https://github.com/oppia/oppia) | 🟢 **Apache-2.0** | **6,951** | `2026-10-31` | Global | 🟢 **yes** | 🟢 **The largest permissive education platform on this page.** Interactive lessons with built-in misconception handling; non-profit, `sdg-4` tagged. |
+| [dream-num/univer](https://github.com/dream-num/univer) | 🟢 **Apache-2.0** | **22,837** | `2026-10-31` | APAC | 🟢 **yes** | Sheets/docs/slides SDK. The document substrate for courseware and worksheets without an Office dependency. |
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** | **956** | 🟡 `2025-07-03` | North America | 🟢 **yes** | The learning-record interchange **specification**. 🔵 Stale by date and **legitimately so** — a ratified spec should sit still (see trend 35). |
+| [openedx/codejail](https://github.com/openedx/codejail) | 🟢 **Apache-2.0** | **477** | `2026-10-27` | North America | 🟢 **yes** | 🟢 **Sandboxed execution of untrusted learner code** — the component every "run the student's program" feature needs and almost nobody builds correctly. Permissive inside an AGPL platform. |
+| [openedx/XBlock](https://github.com/openedx/XBlock) | 🟢 **Apache-2.0** | **471** | `2026-11-01` | North America | 🟢 **yes** | The component SDK for Open edX. 🟢 **Permissive extension point into an AGPL platform** — the seam an AI component plugs into without inheriting the network-copyleft duty. |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** ⬅️ *was `unstated`* | **1,370** | `2026-10-28` | North America | 🟢 **yes** | Assign/autograde/release notebooks. 🟢 Licence settled first-hand this pass. |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 **Apache-2.0** | **216** | `2026-10-28` | **EMEA** | 🟢 **yes** | Assessment authoring and delivery, **Newcastle University**. 🟢 The permissive assessment anchor `Trend 32` recommends building on — and an EMEA-origin one. |
+| [frappe/education](https://github.com/frappe/education) | 🟡 **GPL-3.0** (byte-read, `p572`) | **687** | `2026-10-30` | APAC | 🔴 copyleft | School ERP on Frappe. 🔴 **The API reports `NOASSERTION` here** — a detector miss, not a licence change; the byte-for-byte read stands (trend 33). |
+
+🔵 **Ten rows, all first-hand today.** The permissive/copyleft split on the *platform*
+tier remains the structural fact this page has recorded since `p577`: **both LMSs of
+record are copyleft, and every permissive anchor is a component or a spec.**
+🟢 **`XBlock` and `codejail` are the practical answer** — Apache-2.0 extension points that
+let a studio ship proprietary AI components against an AGPL platform without the
+network-copyleft duty reaching their own code.
+
+### 🔴 Recency, added as a shelf field for the first time — and it kills a tier this page endorses
+
+| cut | count | share |
+|---|--:|--:|
+| 🔴 not pushed since `2025-11-01` | **`42`** | **`15.8 %`** |
+| 🔴 `archived: true` | `4` | `1.5 %` |
+
+🔴 **The casualty is `topic:question-generation`**, which this page shelves with correct
+licence bytes and calls the axis's *"reference implementation"* tier. **All five rows were
+last pushed between `2023-12` and `2024-08`**, one of them archived:
+`patil-suraj/question_generation` (`1,138★`, `2024-04-05`),
+`ramsrigouthamg/Questgen.ai` (`952★`, `2023-12-08`),
+`KristiyanVachev/Question-Generation` (`495★`, `2024-02-14`),
+`asahi417/lm-question-generation` (`366★`, `2024-08-20`),
+`AMontgomerie/question_generator` (`298★`, `2024-02-06`, **archived**).
+
+🔵 **Every one is a fine-tuned T5 pipeline** for a task instruction-following models now
+do zero-shot — so the tier was absorbed, not neglected (trend 35). 🔴 **Do not start an
+assessment-generation engagement here.** 🟢 Start at `numbas/Numbas` (Apache-2.0) for
+authoring, `scorm-again` (MIT) for interchange and `jupyter/nbgrader` (BSD-3-Clause) for
+autograding — all three measured current this pass.
+
+### 🟢 Licence corrections to rows this page carries
+
+| row | was | is (first-hand) | consequence |
+|---|---|---|---|
+| `bigdata-ustc/EduCDM` | 🔴 `no-grant` | 🟢 **Apache-2.0**, `203★` | 🟢 **Shippable cognitive-diagnosis models (DINA/IRT/MIRT/NCDM) were filed as unusable.** 🔴 Stale since `2024-10-25` — usable, not maintained. |
+| `jupyter/nbgrader` | `unstated` | 🟢 **BSD-3-Clause**, `1,370★` | 🟢 Permissive autograding anchor confirmed. |
+| `Wenchao-Ma/GDINA` | `GPL-3.0` | 🟢 **`GPL-3` confirmed** in `DESCRIPTION` | 🟢 **The ledger was right and the API is wrong** — `spdx_id: NONE`. The R/CRAN tier this page shelved in `p573` is invisible to the new channel (trend 33). |
+
+### 🔴 Declared gap, unchanged and now re-measured
+
+`openedx/edx-platform` — the dead pre-rename address — still appears **`40` times** across
+the shelf pages against **`28`** for the live `openedx/openedx-platform`. The rename is
+documented on this page and on [`../agents/top.md`](../agents/top.md); **the citations were
+never migrated.** Any client document generated from this base's majority spelling will
+hand over a link the API rejects.
+
 ## p579 — 2026-11-01 — four additions: the student-modelling layer, a North America analytics row, and a permissive accessibility component
 
 🟢 Three of the four had been **inside this base since `p80`** — seen, logged to the address

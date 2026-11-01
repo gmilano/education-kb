@@ -4,6 +4,191 @@ region: Global
 updated: 2026-11-01
 ---
 
+## Pass 580 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE PASS'S CENTRAL RESULT IS ABOUT THIS BASE, NOT ABOUT GITHUB: THE INSTRUMENT `579-A` ASKED FOR HAS BEEN DISCOVERED THREE TIMES — `p577` DOCUMENTED AND USED IT, `p579` CALLED THE CHANNEL UNKNOWN, AND THIS PASS DRAFTED IT AS NEW. 🟢 WHAT IS ACTUALLY NEW IS SCALE AND A GUARD: THE FIRST WHOLE-SHELF CENSUS, `271` ADDRESSES IN ONE SITTING, PLUS THE `422` FALLBACK THAT MAKES BATCHING SAFE. 🟢 `579-B` ANSWERED AT `1.3 %` AND ITS PRESCRIPTION REFUTED: RE-DERIVING THE LICENCE COLUMN FROM THE NEW CHANNEL WOULD HAVE DESTROYED `21` CORRECT BYTE-READS TO FIX `2`. 🟢 `579-C`, `579-D`, `579-E` ALL CLOSED. 🔴 `42 OF 265` SHELF ROWS ARE OVER A YEAR STALE AND RECENCY WAS NEVER A SHELF FIELD. 🔴 SEVENTEENTH NIL ON THE MANDATED LEGS. SEVEN REGISTERED (`580-A`…`580-G`).**
+
+### 🔴 The central result: one instrument, three discoveries, and this pass was the third
+
+`579-A` asked what else the `403` map got wrong. The answer is that **the instrument it
+was reaching for has been in this base since `p577`**, and has now been announced as a
+discovery three times:
+
+| pass | what it recorded | status |
+|---|---|---|
+| `p577` | 🟢 *"Every repository URL on this page was confirmed by `search_repositories` with `repo:owner/name`, which returns id, licence determination, star count, fork count and push date **in one call**"* — on `agents/top.md`, under "Method note" | 🟢 **the instrument, documented and used** |
+| `p579` | 🟢 refuted `464-D`/`505-B` (search answers `200`), but published that *"a first-hand star count is still none"* had been the standing position, and re-measured `47` addresses | 🔴 **called the channel newly available — `p577` had already used it** |
+| `p580` (this pass) | drafted *"the `repo:` qualifier is a full substitute for the `403`'d endpoint"* as its central result | 🔴 **withdrawn — `p577` published exactly that** |
+
+🔴 **Three passes, one instrument, each claiming novelty.** This is `Trend 11` (a closed
+gap keeps being published) and `Trend 16` (a finding in this base's history does not reach
+its shelf) landing on the base's **measurement apparatus** rather than on a repository row
+— which is the most expensive place for it to land, because every figure this base
+publishes depends on which channel it believes it has.
+
+🟢 **What this pass genuinely adds is scale and a guard, and that is worth stating plainly
+rather than dressed as a discovery:**
+
+1. 🟢 **The first whole-shelf census.** `p577` used the call per row on one page; nobody had
+   run it across the shelf. `271` live-shelf addresses, `265` resolved, `6` nil, in one
+   sitting at `8` per call and `30` calls/minute
+   (`evidence/shelf-census.2026-11-01-p580.tsv`). This is the first time this base has had
+   **recency** on its own shelf at all.
+2. 🟢 **The `422` guard** (below) — without which batching silently drops good addresses.
+
+🔵 **On the `403` itself this pass claims nothing either:** `p515` already diagnosed it, in
+those words — *"it is not a rate limit and not an outage — it is **per-repository session
+scope**, and the body says so and names `add_repo`"* — on `repos/trending.md`,
+`2026-10-28`. 🔴 **That correct diagnosis was then lost for ~65 passes**, which is the same
+mechanism as the table above. The only marginal addition here is that `users/{login}`
+returns `403` from the same boundary; the **consequence** — that owner location is
+unobtainable and region must be inferred from text — `p577` had already published via
+`search_users`.
+
+### 🔴 A new false-zero, and it cost a `12,185★` row inside this pass
+
+OR-batching `repo:` qualifiers is what makes the census cheap. 🔴 **But one unresolvable
+qualifier returns `422 Validation Failed` for the whole batch**, and every good address in
+it comes back empty — indistinguishable from "not found". On the first run it zeroed
+`tw93/Kami` (`12,185★`, MIT, pushed that day), which a naive reading would have filed as
+dead. 🟢 Guarded by detecting the `422` and falling back to single calls; the committed
+census has zero false zeros. This is the **third** instance of a disjunctive query form
+manufacturing an absence here (`Trend 25`, `p576`).
+
+### 🟢 `579-B` answered at `1.3 %`, and its prescription refuted on a `10.5:1` loss ratio
+
+`579-B` feared the ledger's licence column was "not gate-safe" and prescribed re-deriving
+it from the search endpoint. Measured on all `153` shelf addresses present in the
+`3,175`-row ledger (`evidence/ledger-licence-classify.2026-11-01-p580.tsv`):
+
+| class | rows | share |
+|---|--:|--:|
+| 🟢 substantive agreement | `103` | `67.3 %` |
+| 🟢 `unstated` → settled first-hand this pass | `18` | `11.8 %` |
+| 🟡 `unstated`, still open | `8` | `5.2 %` |
+| 🔴 **API weaker** (ledger has a real SPDX, API says `NOASSERTION`) | **`17`** | **`11.1 %`** |
+| 🔴 **API blind** (manifest-declared grant, both directions) | `4` | `2.6 %` |
+| 🟡 ledger imprecise (`BSD` → `BSD-3-Clause`) | `1` | `0.7 %` |
+| 🔴 **genuine ledger error** | **`2`** | **`1.3 %`** |
+
+🔴 **The literal prescription would have overwritten `21` correct byte-for-byte reads —
+including `opendatalab/MinerU` at `82,893★`, Apache-2.0, which the API reports
+`NOASSERTION` — to fix `2`.** 🟢 The ledger was updated instead under a rule that only
+adopts a real SPDX or a byte-read manifest truth and never writes `NONE`/`NOASSERTION`
+over an existing verdict: **`23` rows changed, none degraded.**
+
+🔵 **The generalisable law, filed as trend 34:** a disagreement rate between two
+instruments is not a decay rate until the classes are separated. Raw disagreement looked
+like `20.3 %`; the real error rate is `1.3 %`. Two of this base's own `no-grant` verdicts
+were a **vocabulary** mismatch with the API's `NONE`, not a conflict, inflating it further.
+
+🟢 **The two genuine errors:** `bigdata-ustc/EduCDM` (`no-grant` → **Apache-2.0**,
+`203★` — shippable supply filed as unusable) and `nuwa-skills/montessori-skill`
+(`CC-BY-SA` → **MIT**, `78★`).
+
+🔴 **A third was drafted and is withdrawn, by this pass's own byte-read.**
+`DMontgomery40/mcp-canvas-lms` (`104★`) has **no licence file at 8 paths × 2 branches**
+and the API says `NONE` — but its `package.json` declares `"license": "MIT"` and even
+lists a `LICENSE` file that does not exist. 🟢 **The ledger's ambiguous `MIT|no-grant` was
+therefore the most accurate record of the situation, and it is restored.** This is
+trend 33's mechanism running in the **opposite** direction, and it is the reason that
+trend is stated as bidirectional.
+
+### 🔴 The licence field is the one field the cheap channel gets wrong
+
+`3 of 4` R/CRAN packages report `spdx_id: NONE` while declaring GPL in `DESCRIPTION`
+(`evidence/manifest-licence-blindness.2026-11-01-p580.tsv`). `Wenchao-Ma/GDINA` reads
+`NONE` and is `GPL-3`; **the ledger was right and the API is wrong.** This base already
+reads R grants from `DESCRIPTION` (`p573`) — what is new is that **the new channel
+contradicts those reads, in the direction that would wrongly `BLOCK` a GPL package**.
+🔴 Base-wide, **`67 of 265` rows (`25.3 %`) return `NONE` or `NOASSERTION`**, so `NONE`
+cannot be read as *ungranted* until the manifest has been checked. Filed as trend 33 with
+the division of labour stated: **search for existence/stars/recency, byte-reads for
+grants, org listing to tell a rename from a death.**
+
+### 🟢 `579-C`, `579-D` and `579-E` closed
+
+🔴 **`579-C` closed cold.** `A-R007/Multi-Agent-Study-Assistant` (`64★`): `spdx_id: NONE`,
+and `LICENSE`/`LICENSE.md`/`LICENSE.txt`/`COPYING`/`LICENCE`/`license` across both `main`
+and `master` — **`404` on all twelve.** Last pushed `2025-11-04`. **No grant exists →
+`BLOCK`**, stated with its full path set per `Trend 24`.
+
+🟢 **`579-D` run: `Trend 32` SURVIVES — and its falsifier is mis-specified.** Five axes
+measured (`evidence/trend32-falsifier.2026-11-01-p580.tsv`). Two cross `1,000★` and
+**neither is an education tool**: `topic:transcript`'s head is `youtube-transcript-api`
+(`8,543★`) and `topic:credential`'s is `git-credential-manager` (`9,420★`) — both
+**vocabulary collisions**, the fourth instance of `Trend 29`. 🟢 **The highest genuinely
+institution-accountable education head anywhere in this base is `633★`**
+(`vardanagarwal/Proctoring-AI`, MIT). 🔴 **A falsifier only a false positive can trip is
+not a test**; restated to require the head *be an education artefact*, the margin is now
+`633★` against `1,000★`. 🔴 **`topic:safeguarding` tops out at `6★`** against a statutory
+duty in England — a BUILD of the same shape `p575` found at `topic:iep` (`7★`), but
+EMEA-anchored.
+
+🟢 **`579-E` closed.** Both addresses above `50★` read and **placed by description
+language**, since `users/{login}` is unreachable: `emil-a-dev/lama-loca` (`59★`, **MIT**,
+Russian, fully offline → **EMEA**) and `BBkjdayup/BCTK` (`53★`, **MIT**, Chinese, Windows
+offline item bank on Tauri/Rust → **APAC**). Both are offline-first and data-stays-local —
+exactly `Trend 32`'s predicted posture.
+
+### 🔴 Recency was never a shelf field, and it kills a tier this base endorses
+
+| cut | count | share |
+|---|--:|--:|
+| 🔴 not pushed since `2025-11-01` | **`42`** | **`15.8 %`** |
+| 🔴 `archived: true` | `4` | `1.5 %` |
+
+🔴 **`topic:question-generation` is a graveyard.** This base shelves it with correct licence
+bytes and calls `patil-suraj/question_generation` the axis's *"reference implementation"*.
+All five rows were last pushed between `2023-12` and `2024-08`, one archived. 🔵 Every one
+is a fine-tuned T5 pipeline for a task instruction-following models now do zero-shot — the
+tier was **absorbed, not neglected** (trend 35). 🔴 Staleness is **ten times** more common
+than the `archived` flag this base was already checking.
+
+### 🔴 Seventeenth consecutive nil on the mandated legs, third on the regional ones
+
+All eight legs run; **every token already on a shelf page**, checked by `grep` against all
+eight pages *before* drafting — `579-F`'s prescription executed as the first step. The only
+two new tokens in eight legs are the denominator (`29` universities) and venue (IFE
+Conference 2026) of a survey this base already publishes.
+
+🔴 **APAC returned nothing education-specific for the third pass running** — only generic
+"AI sovereignty" commentary and vendor lists built on 2018–19 data. `Trend 23` already
+explains it and `p574` closed APAC *by jurisdiction*. 🟢 **Retire the region-level APAC
+leg** (`580-F`).
+
+### 🟢 `579-F`'s prescription works, and it caught this pass twice
+
+🔴 **Two findings were drafted as new and both were already published.** The Open edX
+rename (`openedx/edx-platform` → `openedx/openedx-platform`, AGPL-3.0, `8,213★`) is on
+`agents/top.md` and `repos/foundations.md` with identical figures; the archived
+`supertone-oss-archive/supertonic` row (`13,757★`, MIT) is on `repos/foundations.md` with
+a fuller treatment than the draft had. 🟢 **Both were caught by grepping the shelves
+first** — the token-check as step one, not step last. Neither is claimed here.
+
+🟢 **What survived from the rename work is additive and is a cleanup measurement, not a
+discovery:** the dead address still appears **`40` times** across the shelf pages against
+**`28`** for the live one. The rename was documented and the citations were never
+migrated. 🔵 And the reusable mechanism: **a renamed repository is indistinguishable from
+a live one by an HTML check and from a deleted one by `repo:` search — only the org
+listing separates them.**
+
+🔵 **`curl -sI` is still noise, and now the cause is named:** every `https://github.com/...`
+request from this harness returns **`403`** through the agent proxy — real repositories and
+fabricated controls alike. That is why `p575` found the prescribed verifier certifies
+nothing. 🟢 The replacement, `q=repo:owner/name`, resolved all `265` live addresses and
+returned nothing for both deliberate controls.
+
+### Registered
+
+| Gap | Statement and prescription |
+|---|---|
+| 🆕 **`580-A`** | **Every disjunctive query form in this base needs a false-zero guard.** A single bad `repo:` qualifier `422`s an entire OR-batch and the good addresses return empty; it cost `tw93/Kami` (`12,185★`) inside this pass. Third instance of `Trend 25`'s mechanism. Prescription: enumerate every batched or disjunctive form this base uses and add a `422`/error-detect-and-fall-back to each, then re-run the forms whose past results were nil. |
+| 🆕 **`580-B`** | **`67 of 265` shelf rows (`25.3 %`) have no usable licence verdict from the new channel**, and `NONE` is not `ungranted` until the language's manifest is read. The published ungranted count is therefore still an upper bound (`Trend 24`), now with a measured denominator. Prescription: for every `NONE`/`NOASSERTION` row, read `LICENSE*`, `COPYING` **and** the manifest for its language (`DESCRIPTION`, `Cargo.toml`, `pyproject.toml`, `package.json`, `.csproj`), and publish the corrected count. |
+| 🆕 **`580-C`** | **The dead `openedx/edx-platform` address outnumbers the live one `40` to `28` across the shelf pages.** The rename is documented on two pages and the citations were never migrated, so this base's majority Open edX spelling is a link the API rejects. Prescription: migrate all `40`, keeping the dead form only where a pass explicitly discusses the rename. |
+| 🆕 **`580-D`** | **`Trend 32`'s falsifier is mis-specified and must be replaced, not just re-run.** Its `1,000★` threshold is crossable only by a vocabulary collision, which `Trend 29` already predicts. Restated form: *an axis whose head **is an education artefact**, is institution-accountable, and exceeds `1,000★`*. Current margin `633★`. Prescription: run the restated form on `topic:attendance`, `topic:grading`, `topic:plagiarism`, `topic:sis` and `topic:lti`, classifying each head as education artefact or collision before reading its stars. |
+| 🆕 **`580-E`** | **Recency is not a shelf field, and `42 of 265` rows (`15.8 %`) are over a year stale.** The shelf tables carry licence, stars and region but not `pushed_at`, so an abandoned tier can be fully audited and still recommended — as `topic:question-generation` was. Prescription: add `pushed_at` to every shelf table, and pair it with the question "is this repository's task still scarce?" rather than treating staleness as disqualifying on its own. |
+| 🆕 **`580-G`** | **A measurement channel has been announced as a discovery three times (`p577` used it, `p579` called it absent, `p580` drafted it as new), and the shelf's own "Method note" held the answer throughout.** `579-F` prescribed a token-check against the shelves before drafting *findings*; it was not applied to *instruments*, which is the more expensive class because every published figure depends on which channel the base believes it has. Prescription: before any pass claims, re-probes or laments a measurement channel, `grep` the "Method note" and gate-posture sections of all eight shelf pages for that channel's name — and record the result in the pass section even when it is nil. Apply the same check to the remaining rows of the unusable register before re-probing them under `580-A`. |
+| 🆕 **`580-F`** | **Retire the region-level APAC search leg.** Three consecutive passes have returned nothing education-specific from it, and `Trend 23` plus `p574`'s jurisdiction-level closure explain why. Prescription: replace the APAC region leg with per-jurisdiction queries (Korea, Singapore, Japan, Australia, India, China), and apply the same test to the other three regional legs before a nineteenth nil. |
+
 ## Pass 579 — reads 2026-11-01, commit 2026-11-01 — **🟢 `Gap 464-D` AND `Gap 505-B` REFUTED: THE GITHUB SEARCH API ANSWERS `200` ON ALL FOUR FORMS TRIED, INCLUDING THE EXACT ONE `464-D` RECORDS AS `403` AND INCLUDING PLAIN `curl` WITH NO TOKEN — SO THIS BASE HAS HAD A FIRST-HAND STAR-AND-LICENCE CHANNEL WHILE PUBLISHING THAT IT HAD NONE. `47` ADDRESSES RE-MEASURED, `8` LEDGER LICENCES SETTLED, `7` ADDRESSES NEW TO A `3,168`-ADDRESS LEDGER, `6` SHELVED AFTER `378`–`499` PASSES IN THE DISCARD. 🔴 THE PASS'S OWN FIRST DRAFT CLAIMED TWO LICENCE DISCOVERIES THIS BASE HAD ALREADY PUBLISHED, AND IS RETRACTED. 🔴 SIXTEENTH NIL ON THE MANDATED LEGS. SIX REGISTERED (`579-A`…`579-F`).**
 
 ### 🟢 The central result: the `403` was attributed to the wrong endpoint
