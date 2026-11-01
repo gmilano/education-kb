@@ -4,6 +4,203 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p583 — 2026-11-01 — **a sixth publisher lands `2.6×` BELOW this page's published floor, five native-language legs add four jurisdictions, and Korea's reversal finally has a number**
+
+🟢 **Ten legs run: five native-language per-jurisdiction, four mandated global, three
+mandated regional** (APAC region-level **retired** under `580-F` and replaced by
+per-jurisdiction queries). Records:
+[`native-language-legs`](../evidence/native-language-legs.2026-11-01-p583.tsv),
+[`host-reachability`](../evidence/host-reachability.2026-11-01-p583.tsv).
+
+### 🔴 The market-sizing range on this page has a floor that is `2.6×` too high
+
+This page prescribes: *"quote **USD `9.6`–`11.4` bn for 2026** as a publisher range, always
+name the publisher"*. 🔴 **A sixth publisher sits below that floor:**
+
+| publisher | 2026 | terminal | CAGR |
+|---|--:|---|--:|
+| Grand View Research | USD 11.4 bn | USD 57.2 bn (2033) | 25.9 % |
+| Research and Markets | USD 10.6 bn | USD 42.48 bn (2030) | 41.5 % |
+| Precedence Research | USD 9.58 bn | USD 136.79 bn (2035) | 34.52 % |
+| IMARC | 🆕 **USD 9.0 bn** | USD 79.6 bn (2034) | 31.35 % |
+| 🆕 **Straits Research** | — | 🆕 **USD 98.71 bn (2034)** | 🆕 **36.4 %** (2026–34) |
+| 🆕 🔴 **Persistence Market Research** | 🔴 **USD 3.7 bn** | USD 14.1 bn (2033) | — |
+
+🔴 **The current-year publisher range is therefore USD `3.7`–`11.4` bn — a `3.1×` spread
+in 2026 itself**, not the `1.19×` the standing guidance implies. 🔵 The base's own
+headline was *"terminal values differ by over `3×`"*; the **near-year** figures now differ
+by as much, which is the more damaging fact, because a near-year number is the one quoted
+in a proposal.
+🟢 **Revised guidance, replacing the `9.6`–`11.4` prescription:** quote **USD `3.7`–`11.4`
+bn for 2026**, name the publisher, and state the scope caveat — the cause remains the one
+this page already identified, that an *"AI-core"* scope excludes general-purpose AI tools
+and back-office systems, which is most of what an institution deploys.
+🔴 **Unverified first-hand:** `persistencemarketresearch.com` **does not resolve from this
+session** (`getaddrinfo ENOTFOUND`), so the `3.7` figure rests on a search-result summary
+and is marked accordingly. It is reported because **excluding it is what produced a
+falsely narrow range**, not because it is the better estimate.
+🔴 **Still barred:** the `83 %`-of-institutions figure attributed to EDUCAUSE remains
+**unusable**. 🔴 **New to the barred list:** a *"Students First Act"* described as a
+national K-12 AI policy passed by students from all 50 states — one headline-only source,
+no instrument, **unconfirmable → unusable**.
+
+### 🟢 Demand evidence: four new jurisdictions with dated instruments
+
+🟢 **The native-language channel paid for the fourth pass running.** `8` of `8` legs were
+productive in `p582`; `5` legs this pass returned **4 instruments and 2 informed gaps**.
+
+| jurisdiction | region | instrument | date | the procurement-relevant term |
+|---|---|---|---|---|
+| 🆕 **Indonesia** | **APAC** | **SKB 7 Menteri** (joint decree of seven ministers) **No. 400.1-492 Tahun 2026** | signed `2026-03-12`, issued `2026-03-16` | national guidance across **formal, non-formal and informal** education, early-childhood to higher ed; AI **may not replace the teacher**; 🔴 **age-tiered limits on both duration and content type**, aligned to **PP TUNAS** |
+| 🆕 **Vietnam** | **APAC** | **Công văn 5588/BGDĐT-GDPT** with **Quyết định 2422/QĐ-BGDĐT** | `2026-08-19` / `2026-08-18` | AI content **nationwide from school year 2026-27**, `12` periods/class/year core; schools must vet age-appropriateness, comply with personal-data, IP and infosec rules, and 🔴 **stand up an AI incident-handling process**; implements Politburo Resolution **71-NQ/TW** (`2025-08-22`) |
+| 🆕 **Saudi Arabia** | **EMEA** | National Curriculum Center with Ministry of Education, **MCIT** and **SDAIA** — AI curriculum, all general-education stages | announced `2025-07`, effective SY **2025-26** | age-tiered units to model design, AI ethics and ML; 🟢 **learning outcomes counted in overall student assessment** — so assessment integration is in scope, not optional |
+| 🆕 **Korea** | **APAC** | Aug 2025 statutory amendment + Nov 2025 State Council amendment to the Regulation on Textbooks | `2025-08` / `2025-11` | see the quantified reversal below |
+
+🔴 **Two informed gaps — written down because silence looks like coverage:**
+
+- 🔴 **Poland (EMEA) — no instrument exists.** MEN has **not** issued AI guidance.
+  Responsible AI use and digital hygiene sit in the **2026/2027 education-policy
+  directions** (direction 4) beside the **Kompas Jutra** curriculum reform; spokesperson
+  **Ewelina Gorczyca** announced guidelines "still this year"; the reform reaches primary
+  schools `2026-09-01` and upper-secondary a year later; **12,000 "AI labs"** are to be
+  distributed. 🔵 **Poland explicitly diverged from the Danish school-AI blocking model** —
+  so the posture is permissive-with-guidance, and the guidance is the thing not yet
+  written. **A vendor arriving before the guidance sets the default.**
+- 🔴 **Nigeria (EMEA) — no federal instrument found.** Governance is fragmented across the
+  Federal Ministry of Education and other bodies; a 2025 curriculum reform reportedly made
+  AI, robotics and digital literacy core (secondary source, body unnamed); a National AI
+  policy and **3MTT** exist but education coordination is assessed as weak; a **Draft
+  National Higher Education AI Framework** and an **NERDC** curriculum-revision
+  recommendation are reported without status. 🟢 **The live channel is programmatic, not
+  regulatory:** **Experience AI** (NerdzFactory with the Raspberry Pi Foundation and Google
+  DeepMind) trained **1,142** public secondary educators across **five south-western
+  states** in year one and expands in 2026, with state-ministry backing.
+- 🔴 **UAE — DECLARED UNUSABLE.** The only source for a standalone KG–12 "AI and
+  Technology" subject in SY 2026-27 is a **vendor marketing page**. No ministry or
+  news-agency confirmation. Not carried as intelligence.
+
+### 🟢 Korea: the first measured magnitude of a mandate reversal
+
+🟢 **`p582`'s third priority, executed — and it is confirmed with numbers this base did not
+have.** `p582` recorded the reclassification and that provincial budgets were cut; it had
+**no adoption figure**. Measured this pass:
+
+| semester | schools using AI digital textbooks | share |
+|---|--:|--:|
+| 1H 2025 | **4,095** | **34.2 %** |
+| 1H 2026 | 🔴 **622** | 🔴 **5.2 %** |
+
+🔴 **An `85 %` collapse in adoption in one year, after roughly `₩1.4` trillion over three
+years.** 🟢 **The mechanism, now specific:** the August 2025 amendment narrowed 교과용 도서
+(textbook) to books and e-books, reclassifying AI learning-support software as 교육자료
+(educational material); the certification and approval provisions were **deleted from the
+enforcement decree**; a November 2025 State Council amendment moved the definition and
+scope out of the decree and into the statute. 🔴 **The procurement consequence is the
+funding route, not the label:** schools now subscribe **from existing school operating
+budgets**, choosing against every other material — so there is no line item to win.
+🔴 **The primary document is still not obtained**, and the reason is measured, not a
+research failure: `law.go.kr` and `moe.go.kr` return `000`, **as does a fabricated control
+host**, so the probe is non-discriminating. Effective dates differ between sources and the
+gap is carried, not closed.
+
+### 🔵 The mandated legs, and what they were worth
+
+| leg class | legs | new addresses | new intel tokens |
+|---|--:|--:|--:|
+| 🔴 mandated global (listicle) | 4 | **0** | `1` (unusable) |
+| 🔴 mandated regional | 3 | **0** | **`2`** |
+| 🟢 native-language per-jurisdiction | 5 | n/a | **`10+`** |
+
+🔴 **Eighteenth consecutive nil on the mandated supply legs.** The two usable tokens from
+three regional legs: **Delaware's AI Assurance Lab**, which tests AI tools for K-12 inside
+state-set guardrails before recommending them to districts — 🟢 **a state acting as the
+evaluation authority, which is a procurement gate a vendor must pass**; and **GENIAL**, an
+EU-funded project standing up AI units in higher-education institutions in **Guatemala,
+Ecuador and Colombia** — 🟢 EU money building LATAM institutional capacity, i.e. an EMEA
+budget with a LATAM delivery surface. 🔵 Everything else the regional legs returned was
+already on these shelves: Regulation (EU) `2026/1744` and `2 December 2027`, the Digital
+Omnibus, the emotion-recognition prohibition, Ohio `HB 96`, Florida `SB 1194`, California
+`AB 2876`/`AB 1159`, the `134`-bill count, UNESCO IESALC's `200` institutions, the Digital
+Education Council LATAM survey, the `55 %`-no-AI-budget figure.
+
+## Opportunities by region
+
+### North America
+
+🟢 **The buying unit is the state, and the gate is an evaluation lab.** More than `28`
+states plus DC have K-12 AI guidance; Ohio (`HB 96`) and Florida (`SB 1194`) **require
+districts to adopt formal AI policies by July 2026**; Tennessee extends the duty to every
+public higher-education governing body, LEA and charter school. 🆕 **Delaware's AI
+Assurance Lab tests tools against state guardrails before districts may be advised to buy**
+— so "passes a state assurance review" is becoming a shippable property, not a marketing
+line. 🟢 **Offer:** a **conformance-and-assurance package** — `adlnet/lrs-conformance-test-suite`
+(MIT) and `adlnet/CATAPULT` (Apache-2.0) as the technical evidence, the four-jurisdiction
+refusal-and-provenance defaults as the policy evidence, bundled as the artefact a district
+files. 🔵 Region is also the largest market at **`36`–`37.5 %`** of global spend, and
+**K-12 is the leading segment at ~`34 %` (2026)** — the segment where the binding duties
+actually landed.
+
+### EMEA
+
+🟢 **Two distinct motions, and one of them is a land-grab before the rules are written.**
+(1) 🆕 **Poland: no AI guidance exists yet**, the curriculum reform lands `2026-09-01`,
+and **12,000 AI labs** are being distributed — 🟢 **a vendor present before MEN publishes
+sets the de-facto default**, and Poland has already rejected the Danish blocking model.
+(2) 🆕 **Saudi Arabia has a curriculum in force since SY 2025-26** with **learning outcomes
+counted in overall assessment** and MCIT/SDAIA co-sponsorship — 🟢 so the engagement is
+**assessment integration**, not awareness training, and it has a national sponsor.
+🆕 **Nigeria is a programmatic market, not a regulatory one**: Experience AI's `1,142`
+educators across five states with state-ministry backing is the channel; the federal
+instrument does not exist. 🔵 EU: `2 August 2026` transparency duties are live and the
+education high-risk route moves to `2 December 2027` under Regulation (EU) `2026/1744`, so
+EMEA engagements price **provenance logging now, high-risk conformity later**.
+🔴 Note the permissive-licence consequence for this region specifically: the maintained
+QTI **renderer** (`Citolab/qti-components`, Netherlands) and the maintained LTI 1.3 PHP
+core (`oat-sa/lib-lti1p3-core`, France) are both **copyleft** — the two EMEA-origin
+components a client is most likely to already run are the two a studio cannot ship.
+
+### APAC
+
+🟢 **The region with the firmest instruments and the sharpest cautionary tale.**
+🆕 **Vietnam is the cleanest near-term engagement in the base:** AI content nationwide from
+**SY 2026-27**, `12` periods/class/year, and **three named build obligations** — age-
+appropriateness vetting, personal-data/IP/infosec compliance, and **an AI incident-handling
+process**. 🟢 That last one is a product, not a policy: logging, triage, escalation and
+audit trail. 🆕 **Indonesia's SKB 7 Menteri covers formal, non-formal *and* informal
+education** with **age-tiered limits on duration and content type** — so a single product
+needs **per-age-band enforcement**, which is a build requirement most vendors do not have.
+🔴 **And Korea is the price of selling to a mandate:** `34.2 % → 5.2 %` adoption in one
+year, `₩1.4` tn spent, because the instrument was **reclassified rather than repealed** and
+the funding moved into general school budgets. 🟢 **Rule for the region: price off funded
+programmes that survived a downgrade** (Korea's K-education AI and its `1,000`
+AI-focused schools), **never off a mandate's existence.**
+
+### LATAM
+
+🟢 **Adoption is high, governance is absent, and the money is increasingly external.**
+Already on these shelves: `92 %` of students using AI regularly and `67 %` weekly against
+**only `30 %` of universities with a published AI policy**; `55 %` of institutions with no
+AI budget and public universities at `4 %`; UNESCO IESALC across `200` institutions in `19`
+countries. 🆕 **The new fact is the funding route: GENIAL, EU-funded, is standing up AI
+units inside higher-education institutions in Guatemala, Ecuador and Colombia** — so the
+buyer of institutional AI capability in LATAM may be a **European development programme**,
+not the university. 🟢 **Offer:** the **policy-and-capability package** — a published AI
+policy, an assessment-integrity posture, and the interchange layer on the Moodle/Chamilo
+estate the region already runs — sold into donor-funded programmes and consortium
+procurement rather than single-institution budgets. 🔵 `douglasrizzo/catsim`
+(BSD-3-Clause, Brazil-maintained) remains the one live regional psychometric component.
+
+### Global / provenance unknown
+
+🔵 **Read "Global" on any row in this base as *provenance unknown*, never as
+*geographically spread*** — `users/{login}` returns `403`, so region is placed only on
+owner identity or description language. 🔴 Of the `4` new addresses this pass, `3` are
+Global for exactly that reason. 🔵 The cross-region opportunity is the one the licence
+measurement names: **the interchange layer is `66.7 %` permissive while every platform of
+record is copyleft**, so the shippable artefact is the same in every region even where the
+regulation is not.
+
+
 ## p582 — 2026-11-01 — **the native-language demand legs run after three passes deferred: eight jurisdictions, seven of them new intelligence, and one national mandate found to have been downgraded mid-rollout**
 
 🟢 **`p581` ruled: *"The method that still pays is per-jurisdiction querying in the

@@ -1,0 +1,10 @@
+repo	branch	licence_file	bytes	first_line
+LtiLibrary/LtiLibrary	master	LICENSE	11325	Apache License
+swisnl/laravel-lti-provider	master	LICENSE.md	1108	# The MIT License (MIT)
+ewels/starlight-quiz	main	LICENSE	11357	                                 Apache License
+rikardroitto/canvas-quiz-skill	main	LICENSE	1070	MIT License
+examplary/qti	main	LICENSE	1069	MIT License
+metyatech/markdown-to-qti	main	LICENSE	1066	MIT License
+sonyccd/qti-playground	main	LICENSE	1070	MIT License
+jupyterhub/ltiauthenticator	main	LICENSE	1528	BSD 3-Clause License
+StevenWeathers/peregrine-lti	main	LICENSE	11357	                                 Apache License

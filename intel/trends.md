@@ -4,6 +4,147 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p583 — 2026-11-01 — **a load-bearing gap withdrawn by the base's own history, two new trends, and the first pass whose central finding came from grepping itself before searching**
+
+🟢 **All four `p582` priorities executed in order.** (1) The integration axis swept singly —
+and its premise refuted. (2) The five remaining native-language legs run. (3) The Korean
+reclassification confirmed and, for the first time, **quantified**. (4) The superlative
+audit added to the pre-publish check — **and it refuted two claims on these shelves.**
+
+### 🟢 `Gap "no maintained permissive LTI 1.3 library"` — WITHDRAWN, by this base's own discard pile
+
+🔴 **`p582` filed this as NEW and load-bearing**, with the note that *"most recipes depend
+on"* the cold `pylti1.3`. It is refuted, and the refutation required no discovery:
+
+| repo | licence (byte-read) | ★ | `pushed_at` | LTI version | where it already was |
+|---|---|--:|---|---|---|
+| `jupyterhub/ltiauthenticator` | 🟢 BSD-3-Clause (`1,528 B`) | 73 | `2026-10-05` | 🟢 **1.3 + 1.1** | 🔴 **`15` mentions in this base's history, `0` on any curated page** |
+| `StevenWeathers/peregrine-lti` | 🟢 Apache-2.0 (`11,357 B`) | 7 | `2025-11-20` | 🟢 **1.3** (Go) | 🔴 `4` history mentions, `0` curated |
+| `swisnl/laravel-lti-provider` | 🟢 MIT (`1,108 B`) | 4 | `2026-08-28` | 1.x (Laravel) | 🆕 new |
+
+🟢 **The accurate, narrower statement:** there is **no permissive, maintained,
+framework-independent LTI 1.3 library for Python**. `pylti1.3` (MIT, `138★`) is the
+most-starred Python option at `26.5` months cold — not `27`, and the rounding was carried
+rather than measured. The maintained permissive options are **Go**,
+**Laravel/PHP** and **JupyterHub-bound**; the maintained framework-independent PHP option,
+`oat-sa/lib-lti1p3-core` (`37★`, `2026-10-24`), is 🔴 **GPL-2.0**.
+🔵 **Why the error matters more than its size:** the claim was used to justify a sweep, and
+the sweep's own first step — `grep` the shelves — refuted the claim that commissioned it.
+`579-F` prescribed the token-check for *findings* and `580-G` extended it to
+*instruments*; this pass shows it must also cover **the premises of prescriptions.**
+
+## 36. The licence shape of open-source education is a property of the LAYER, not of the industry, and the integration layer is the permissive one (high confidence — measured first-hand across 33 rows on four axes, every grant byte-read)
+
+🟢 **Measured, on the four integration axes:**
+
+| class | rows | share |
+|---|--:|--:|
+| 🟢 permissive (MIT / Apache-2.0 / BSD-3-Clause) | **`22`** | **`66.7 %`** |
+| 🔴 copyleft (GPL-2.0 / GPL-3.0) | `8` | `24.2 %` |
+| 🟡 `NOASSERTION` — a work queue, not a verdict | `3` | `9.1 %` |
+
+🔴 **Against every platform of record, which is copyleft without exception:** Moodle
+GPL-3.0 · Open edX **AGPL-3.0** · Chamilo GPL-2.0 · ILIAS GPL-3.0 · OpenEduCat LGPL-3.0 ·
+Gibbon GPL-3.0 · ERPNext GPL-3.0. 🟢 The one permissive platform seat is OpenOlat, and
+only by byte-read — the API reports `NOASSERTION`.
+
+🔵 **`p574` measured the accessibility and assessment-interchange layer at `10` shippable
+against `11` copyleft and concluded the layer's licensing "runs backwards". On the four
+integration axes the ratio runs the other way, `22:8`.** 🟢 **Both are right, and that is
+the trend:** licence shape must be measured **per layer** and may not be inferred for
+"education open source" as a whole — the field has no characteristic licence, it has a
+characteristic *gradient*, permissive at the wire protocol and copyleft at the platform.
+🟢 **The delivery rule this yields is unusually clean:** a studio may ship the glue and may
+not ship a modified platform, in every region, regardless of the regulation.
+🔴 **Falsifier:** a maintained, permissively licensed platform of record — an LMS or SIS
+above `1,000★`, pushed within a year, under MIT/Apache/BSD — would break the gradient. None
+exists on these shelves; OpenOlat at `449★` is the closest and is `NOASSERTION` by API.
+
+## 37. Education AI regulation has moved from decision rights to operational obligations — regulators now specify runtime behaviour a product must implement (high confidence — two new jurisdictions measured in their own languages, naming three build obligations between them)
+
+🟢 **`p582` measured four jurisdictions converging on two *decision-rights* requirements:
+AI barred from the terminal assessment decision, and AI use declared or labelled. Two new
+jurisdictions extend the convergence to six — and they add a different kind of
+requirement.**
+
+| jurisdiction | instrument | the obligation, and what it is |
+|---|---|---|
+| 🆕 **Vietnam** | Công văn **5588/BGDĐT-GDPT** (`2026-08-19`) | 🔴 **"establish a process for handling AI-related incidents"** — an *operational* duty: logging, triage, escalation, audit trail. Plus age-appropriateness vetting of every tool, and personal-data/IP/infosec compliance |
+| 🆕 **Indonesia** | **SKB 7 Menteri** No. 400.1-492/2026 (`2026-03-16`) | 🔴 **age-tiered limits on duration *and* content type**, aligned to **PP TUNAS** — per-age-band enforcement inside one product, across formal, non-formal **and informal** education |
+| 🟢 Brazil · France · Germany · EU (`p582`) | CNE parecer · cadre d'usage · Länder · AI Act Art. 50 | decision rights and declaration |
+| 🟢 **Saudi Arabia** | National Curriculum Center with MoE, MCIT, SDAIA (SY 2025-26) | 🟢 **learning outcomes counted in overall student assessment** — so assessment integration is mandated scope, not an upsell |
+
+🟢 **Why this is a distinct trend and not an extension of `p582`'s.** A decision-rights
+rule constrains **what the model may conclude**; an operational rule constrains **what the
+system must do when it goes wrong**. The second cannot be satisfied by prompt design,
+model choice, or a human-in-the-loop checkbox — it requires incident state, retention, and
+an audit surface, which is architecture. 🔵 **Engineering consequence:** the portable
+default set is now **refusal + provenance logging + an incident pipeline + per-age-band
+policy enforcement**. A product with the first two and not the last two is non-compliant
+in Vietnam and Indonesia regardless of accuracy.
+🔴 **Falsifier:** a jurisdiction adopting education-AI rules that specify *outcomes only*
+with no operational or age-banding duty, published after `2026-08`, would show the move is
+not directional. 🔵 **Confidence caveat:** both instruments are read through
+legal-database and ministry-adjacent secondary sources; the primaries are unobtainable
+because every government host returns `000` from this harness, **including a fabricated
+control**.
+
+### 🔵 Counter note on the trend counter
+
+🔴 **`p582` filed three trends as `### Trend NEW` without numbers**, so the numbered series
+still ends at **`35`** and the derived trend count excludes them. This pass files at the
+counter's own `^## <n>. ` form (**36**, **37**). 🔵 Recorded so the next pass does not
+conclude the count regressed.
+
+## Declared gaps — updated `2026-11-01` (`p583`)
+
+- 🟢 **WITHDRAWN: "no maintained permissive LTI 1.3 library."** Refuted by
+  `jupyterhub/ltiauthenticator` (BSD-3-Clause, `2026-10-05`), which was in this base's
+  history `15×`. 🔴 **RESHAPED to the true, narrower gap: no permissive, maintained,
+  framework-independent LTI 1.3 library for *Python*.** Highest-value contribution a studio
+  could make back to this ecosystem. **Supersedes `p582`.**
+- 🟢 **WITHDRAWN: "the only permissively licensed QTI tool."** Six exist, all byte-read;
+  three were already in this base's history.
+- 🔴 **NEW: there is no agent-shaped supply on the integration axis.** `538` repositories
+  across four axes, **one** agent artefact (`rikardroitto/canvas-quiz-skill`, `1★`). The
+  assessment-interchange tier is a library tier; the agent is always the build.
+- 🔴 **NEW: no permissive Moodle→LRS event bridge.** `moodle-logstore_xapi` (GPL-3.0) is
+  the maintained option of record, and Moodle's plugin rule makes any replacement GPL
+  anyway. 🔵 Price this as client-owned code, never as shippable IP.
+- 🔴 **NEW: the published 2026 market floor was `2.6×` too high.** A sixth publisher
+  (Persistence, USD `3.7` bn) sits below the prescribed `9.6`–`11.4` bn range; the
+  current-year spread is **`3.1×`**. Quote **USD `3.7`–`11.4` bn**, publisher named.
+  🔴 Unverifiable first-hand — `persistencemarketresearch.com` does not resolve here.
+- 🔴 **STANDS, and now with a measured price: selling to a mandate is not selling to a
+  budget.** Korea `34.2 % → 5.2 %` adoption in one year after reclassification, `₩1.4` tn
+  spent. Price off funded programmes that survived a downgrade.
+- 🔴 **STANDS, 8th pass: market sizing is vendor-only.** No independent estimate exists.
+- 🔴 **STANDS: no primary legal text from this session, in any jurisdiction.**
+  `law.go.kr`, `moe.go.kr`, `eur-lex.europa.eu`, `kemendikdasmen.go.id` all return `000`
+  — **and so does a fabricated control.** 🔵 **This should be an allowlist request, not a
+  recurring action item**, and it is now the binding constraint on four separate findings.
+- 🔴 **STANDS: `curl -sI` URL verification is inoperable here.** Every `github.com` URL
+  returns `403` through the session proxy. The run prompt mandates this broken check. Use
+  `q=repo:owner/name`.
+- 🔴 **STANDS: region is unobtainable for individually-owned repos** (`users/{login}` is
+  `403`). **Read "Global" as *provenance unknown*.**
+- 🟢 **CLOSED: `580-C`.** At **`1`** real defect, not `40` — `168 of 179` dead citations
+  are in append-only history and must not be migrated.
+- 🟢 **CLOSED: `580-E`.** `pushed_at` now carried on every table this pass writes.
+
+- 🔵 **Next pass, in priority order:** (1) 🔴 **Audit the remaining `18` UNFILED
+  integration-axis addresses and the `50`+ "the largest"/"the only"/"the first" superlative
+  claims on the curated pages** — two of the first three audited were false, so the class
+  has a measured failure rate and no pass has swept it; (2) **run the native-language legs
+  for the jurisdictions still unqueried** — Türkiye (`tr`), Egypt (`ar`), Thailand (`th`),
+  Philippines, Bangladesh (`bn`) — the method is `13 of 13` productive across two passes;
+  (3) 🔴 **re-measure `ingest/address-ledger.py --debt` properly** — it is the instrument
+  that would have pre-empted this pass's central finding and it **could not be executed
+  here** (`"Code from External"`, the `576-G` per-invocation denial), so the `18`-row debt
+  was found by a hand replica; (4) **request a network allowlist for primary legal hosts**,
+  which now blocks four findings rather than one.
+
+
 ## p582 — 2026-11-01 — **three new trends, one gap withdrawn rather than closed, a superlative corrected across six pages, and the first measured reversal of a national AI-education mandate**
 
 🟢 **All three `p581` priorities were executed in order.** (1) The native-language demand

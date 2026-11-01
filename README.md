@@ -4,6 +4,108 @@ region: Global
 updated: 2026-11-01
 ---
 
+## Pass 583 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE SWEEP `p582` COMMISSIONED WAS BUILT ON A FALSE PREMISE, AND ITS OWN FIRST STEP REFUTED THE CLAIM THAT COMMISSIONED IT: `29 OF 33` INTEGRATION-AXIS ADDRESSES WERE ALREADY IN THIS BASE, `18` OF THEM SITTING IN THE APPEND-ONLY HISTORY, ONE RE-FOUND `15` TIMES. 🟢 THAT ONE — `jupyterhub/ltiauthenticator`, BSD-3-CLAUSE, LTI 1.3, PUSHED `2026-10-05` — WITHDRAWS THE "NO MAINTAINED PERMISSIVE LTI 1.3 LIBRARY" GAP `p582` FILED AS LOAD-BEARING. 🟢 THE SUPERLATIVE AUDIT (`p582`'s 4TH PRIORITY) REFUTED A SECOND CLAIM ON ITS FIRST RUN. 🟢 FOUR NEW JURISDICTIONS AND KOREA'S REVERSAL QUANTIFIED AT `34.2 % → 5.2 %`. 🔴 THE PUBLISHED 2026 MARKET FLOOR IS `2.6×` TOO HIGH. 🔴 EIGHTEENTH NIL ON THE MANDATED LEGS. 🟢 `580-C` AND `580-E` CLOSED. SEVEN REGISTERED (`583-A`…`583-G`).**
+
+### 🔴 The central result: a prescription's premise was never checked
+
+`p582`'s first priority was to sweep `topic:lti`, `topic:lti-provider`, `topic:xapi` and
+`topic:qti` singly, because the integration axis — *"the base's most important unreplaced
+dependency"* — had **never been swept with the corrected form**. All four were swept.
+`538` repositories, `33` addresses measured first-hand:
+
+| disposition | addresses |
+|---|--:|
+| 🟢 FILED on a curated page | **`11`** |
+| 🔴 UNFILED — append-only history only, re-found up to `15×` | **`18`** |
+| 🆕 NEW to this base | **`4`** (at `80★`, `10★`, `4★`, `1★`) |
+
+🔴 **The axis was never unswept. It was unshelved.** `579-F` prescribed the token-check for
+*findings*; `580-G` extended it to *instruments*; this pass shows the gap is wider than
+either — **the premise of a prescription is itself an unchecked claim**, and this one cost
+a whole pass's stated priority. 🔵 `Trend 16` again, now landing on the base's own
+work-planning rather than on a row.
+
+### 🟢 Two superlatives refuted, on the first run of the audit `p582` asked for
+
+| claim | page | verdict |
+|---|---|---|
+| *"no maintained permissive LTI 1.3 library"* | `intel/trends.md` | 🔴 **WITHDRAWN.** `jupyterhub/ltiauthenticator` — BSD-3-Clause (`1,528 B` byte-read), `LTI13Authenticator` + `LTI11Authenticator`, `73★`, `2026-10-05`. 🔴 **`15` history mentions, `0` curated.** Plus `peregrine-lti` (Apache-2.0, Go) and `laravel-lti-provider` (MIT) |
+| *"the only permissively licensed QTI tool found"* | `repos/foundations.md` | 🔴 **WITHDRAWN.** **Six** exist, all byte-read; **three were already in this base's history** |
+| *"the largest permissive repository in this base"* (`markitdown`, `193,266★`) | `agents/top.md` | 🟢 **NOT refuted** — nothing larger on the four axes swept |
+
+🔴 **Two of the first three superlatives audited were false**, so the class has a measured
+failure rate and `50`+ such claims on the curated pages have never been swept (`583-B`).
+🟢 **The accurate narrower gap**, which is the useful one: no permissive, maintained,
+framework-independent LTI 1.3 library for **Python**. The permissive maintained options are
+Go, Laravel and JupyterHub-bound; the framework-independent PHP option is **GPL-2.0**. A
+*language* gap, not an ecosystem gap.
+
+### 🟢 Trend 36 — licence shape is a property of the layer, not the industry
+
+`22 of 33` integration-axis rows are permissive (`66.7 %`) against `8` copyleft, while
+**every platform of record is copyleft without exception** (Moodle GPL-3.0, Open edX
+AGPL-3.0, Chamilo, ILIAS, OpenEduCat, Gibbon, ERPNext). 🔵 `p574` measured the
+accessibility/assessment layer running the other way (`10` shippable : `11` copyleft) and
+called the licensing "backwards". 🟢 **Both are right — the field has no characteristic
+licence, it has a gradient: permissive at the wire protocol, copyleft at the platform.**
+Delivery rule: **ship the glue, never a modified platform.**
+
+### 🟢 Trend 37 — regulators moved from decision rights to operational obligations
+
+`p582` measured four jurisdictions converging on *who may decide*. Two new ones specify
+*what the system must do*: 🔴 **Vietnam** (Công văn `5588/BGDĐT-GDPT`, `2026-08-19`)
+requires **an AI incident-handling process**; 🔴 **Indonesia** (SKB 7 Menteri No.
+`400.1-492/2026`, `2026-03-16`) requires **age-tiered limits on duration and content type**
+across formal, non-formal **and informal** education. 🟢 Neither is satisfiable by prompt
+design — they require incident state, retention, audit surface and per-age-band
+enforcement. **Architecture, not configuration.**
+
+### 🟢 Korea quantified, and the market floor corrected
+
+🟢 **`p582`'s third priority closed to the limit of the channel.** Adoption of the AI
+digital textbook fell **`4,095` schools (`34.2 %`) in 1H-2025 → `622` (`5.2 %`) in
+1H-2026** — an `85 %` collapse after roughly **`₩1.4` trillion over three years** —
+because the instrument was **reclassified, not repealed**, and funding moved into general
+school operating budgets. 🔴 **Primary still unobtained:** `law.go.kr` and `moe.go.kr`
+return `000`, **as does a fabricated control**, so the probe is non-discriminating.
+
+🔴 **A sixth market publisher sits `2.6×` below this base's published floor.** The standing
+prescription is *"quote USD `9.6`–`11.4` bn for 2026"*; Persistence Market Research
+publishes **USD `3.7` bn (2026)**. The current-year publisher spread is therefore **`3.1×`**
+— as wide as the terminal spread the base already headlines. 🔴 Unverifiable first-hand
+(`persistencemarketresearch.com` does not resolve here) and reported because **excluding it
+is what produced a falsely narrow range**.
+
+### 🔴 Eighteenth consecutive nil on the mandated legs
+
+`4` global + `3` regional legs (APAC region-level **retired** under `580-F`, substituted
+per-jurisdiction) → **`0` new addresses**; every candidate already in this base, checked by
+token first. **`2` usable intel tokens** from three regional legs (Delaware's **AI
+Assurance Lab**; **GENIAL**, EU-funded AI units in Guatemala, Ecuador and Colombia) and one
+declared **unusable** (a *"Students First Act"*, headline-only). 🟢 Against **`10`+** new
+tokens from `5` native-language legs — `13 of 13` productive across two passes.
+
+### 🟢 Closed this pass
+
+| Gap | Verdict |
+|---|---|
+| **`580-C`** — migrate `40` dead `openedx/edx-platform` citations | 🟢 **CLOSED at `1` defect, not `40`.** Across all eight pages: `179` dead vs `89` live — but **`168` are in append-only history and must not be migrated**, and `10` of the `11` curated ones deliberately discuss the rename. **Exactly one** was a live shelf row linking a `422` address. Migrated. 🔵 A count taken without separating curated from history turned a one-line fix into a `179`-line instruction. |
+| **`580-E`** — recency is not a shelf field | 🟢 **CLOSED.** `pushed_at` carried on every table written this pass. Paired with `580-E`'s own question: `adlnet/xAPIWrapper` and `RusticiSoftware/TinCanPython` are **superseded, not merely stale**, and are shelved with that warning. |
+| **`580-A`** on single qualifiers | 🟢 **NARROWED.** A **single** unresolvable `repo:` qualifier returns `422`, which is a usable "absent" signal, verified against a fabricated control. The false-zero hazard is **OR-batches only**. |
+
+### Registered
+
+| Gap | Statement and prescription |
+|---|---|
+| 🆕 **`583-A`** | **The premise of a prescription is an unchecked claim, and this base spends whole passes on them.** `p582` commissioned a four-axis sweep because the axis was "never swept"; `29 of 33` addresses were already here. **Prescription:** before executing any prescribed sweep, `grep` the shelves for the axis's own vocabulary and publish the FILED/UNFILED/NEW split **first**, and abandon or re-aim the sweep if the unfiled count exceeds the expected new count. |
+| 🆕 **`583-B`** | **The superlative class has a measured `2-in-3` failure rate and has never been swept.** `50`+ claims of the form "the largest", "the only", "the first", "nothing open-source" and "does not exist" sit on the curated pages; two of the first three audited were false. **Prescription:** enumerate every such claim with its page and line, and re-measure each against the search channel, retiring or narrowing it. |
+| 🆕 **`583-C`** | **The one instrument that would have pre-empted this pass's central finding cannot be executed here.** `ingest/address-ledger.py --debt` reports exactly the owned-but-unfiled debt that cost `p582` its first priority, and it is **denied** in this harness (`"Code from External"`, the `576-G` per-invocation denial) — so the `18`-row debt was recovered by a hand `grep` replica of its `CURATED`/`HISTORY` split. **Prescription:** either obtain execution permission for `ingest/*.py`, or commit a shell-only replica of the ledger's disposition logic that any pass can run. |
+| 🆕 **`583-D`** | **The published market range was floor-truncated because no pass has enumerated publishers.** Five were carried; a sixth (Persistence, USD `3.7` bn 2026) and a seventh (Straits, `36.4 %` CAGR to USD `98.71` bn 2034) were found in one leg. **Prescription:** enumerate the publisher set explicitly, record each one's scope definition beside its figure, and treat the range as open until the enumeration is stated. |
+| 🆕 **`583-E`** | **Unreachable primary legal hosts now block four findings, not one.** `law.go.kr`, `moe.go.kr`, `eur-lex.europa.eu` and `kemendikdasmen.go.id` all return `000` — **and so does a fabricated control**, so the probe certifies nothing in either direction. Korea's effective dates, Indonesia's article text, Vietnam's periods figure and the EU high-risk date all rest on secondary sources because of it. **Prescription:** raise this as a network-allowlist request rather than carrying it as a recurring action item. |
+| 🆕 **`583-F`** | **There is no agent-shaped supply on the integration axis, and that is the sellable fact.** `538` repositories across four axes contain **one** agent artefact (`rikardroitto/canvas-quiz-skill`, MIT, `1★`). **Prescription:** state in engagement material that assessment-interchange is a *library* tier where the glue is bought permissively and the agent is always the build — and test the same ratio on `topic:sis`, `topic:gradebook` and `topic:proctoring` before generalising it. |
+| 🆕 **`583-G`** | **`p582` filed three trends without numbers**, so the numbered series still ends at `35` and the derived count excludes them; this pass files `36` and `37` at the counter's `^## <n>. ` form. **Prescription:** make the trend-number form part of the pre-commit check, since the counter is the only consumer that would notice. |
+
+
 ## Pass 580 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE PASS'S CENTRAL RESULT IS ABOUT THIS BASE, NOT ABOUT GITHUB: THE INSTRUMENT `579-A` ASKED FOR HAS BEEN DISCOVERED THREE TIMES — `p577` DOCUMENTED AND USED IT, `p579` CALLED THE CHANNEL UNKNOWN, AND THIS PASS DRAFTED IT AS NEW. 🟢 WHAT IS ACTUALLY NEW IS SCALE AND A GUARD: THE FIRST WHOLE-SHELF CENSUS, `271` ADDRESSES IN ONE SITTING, PLUS THE `422` FALLBACK THAT MAKES BATCHING SAFE. 🟢 `579-B` ANSWERED AT `1.3 %` AND ITS PRESCRIPTION REFUTED: RE-DERIVING THE LICENCE COLUMN FROM THE NEW CHANNEL WOULD HAVE DESTROYED `21` CORRECT BYTE-READS TO FIX `2`. 🟢 `579-C`, `579-D`, `579-E` ALL CLOSED. 🔴 `42 OF 265` SHELF ROWS ARE OVER A YEAR STALE AND RECENCY WAS NEVER A SHELF FIELD. 🔴 SEVENTEENTH NIL ON THE MANDATED LEGS. SEVEN REGISTERED (`580-A`…`580-G`).**
 
 ### 🔴 The central result: one instrument, three discoveries, and this pass was the third

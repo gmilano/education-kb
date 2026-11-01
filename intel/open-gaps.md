@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p583` — `2026-11-01` — **🔴 THE PREMISE OF A PRESCRIPTION IS AN UNCHECKED CLAIM: `p582` COMMISSIONED A FOUR-AXIS SWEEP BECAUSE THE INTEGRATION AXIS WAS "NEVER SWEPT", AND `29 OF 33` ADDRESSES WERE ALREADY HERE — `18` IN THE APPEND-ONLY HISTORY, ONE RE-FOUND `15` TIMES. 🟢 THAT ONE WITHDRAWS A GAP `p582` FILED AS LOAD-BEARING. 🟢 THE SUPERLATIVE AUDIT REFUTED A SECOND CLAIM ON ITS FIRST RUN. 🟢 `580-C` CLOSED AT `1` DEFECT RATHER THAN `40`; `580-E` CLOSED. 🔴 EIGHTEENTH NIL ON THE MANDATED LEGS. SEVEN REGISTERED (`583-A`…`583-G`).**
+
+🔵 **Channel table, run first (`569-B`'s standing row).**
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories -f q='repo:owner/name'` | 🟢 **`33` addresses resolved**, `license.spdx_id` + `stargazers_count` + `pushed_at` + `archived` + `topics` in one call; `rate_limit.search` `limit: 30`, `remaining: 30` |
+| 🟢 `gh api` search, `topic:` axes ×4 | 🟢 **`538` repositories with denominators** — `lti` `184`, `xapi` `280`, `qti` `52`, `lti-provider` **`22`** |
+| 🟢 single-qualifier `422` as an absence signal | 🟢 **VERIFIED against a fabricated control** — `580-A`'s false-zero hazard is **OR-batches only** |
+| 🟢 `curl` → `raw.githubusercontent.com`, grants | 🟢 **`9` grants byte-read**, every byte figure piped to `wc -c`; **zero `NONE`** |
+| 🟢 `git ls-remote --symref` ×3 | 🟢 `0` failures; caught `master` defaults on `tsugi` and `laravel-lti-provider` |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403`**, real and fabricated alike — the run prompt's mandated verifier **certifies nothing** |
+| 🟢 `WebSearch`, native-language per-jurisdiction ×5 | 🟢 **`4` instruments + `2` informed gaps**; `13 of 13` legs productive across `p582`+`p583` |
+| 🔴 `WebSearch`, `4` mandated global + `3` mandated regional | 🔴 **`0` new addresses — EIGHTEENTH consecutive nil**; `2` usable intel tokens, `1` declared unusable |
+| 🔴 `curl` → government / primary-law hosts ×4 | 🔴 **`000` on all four**, 🔴 **and on a fabricated control** — non-discriminating (`583-E`) |
+| 🔴 `WebFetch` → `persistencemarketresearch.com` | 🔴 `getaddrinfo ENOTFOUND` — the `USD 3.7 bn` figure stays secondary-sourced |
+| 🔴 `python3 -I ingest/address-ledger.py` | 🔴 **DENIED — *"Reason: [Code from External]"***, the `576-G` per-invocation denial. 🔴 **This is the instrument that would have pre-empted the pass's central finding**; its `CURATED`/`HISTORY` split was replicated by hand `grep` and is marked as a replica (`583-C`) |
+
+### 🟢 Closed this pass
+
+| Gap | Verdict |
+|---|---|
+| **`580-C`** | 🟢 **CLOSED at `1` defect, not `40`.** `179` dead vs `89` live across eight pages — but **`168` sit in append-only history and must not be migrated**, and `10 of 11` curated citations deliberately discuss the rename. One live shelf row linked a `422` address; migrated to `openedx/openedx-platform`. |
+| **`580-E`** | 🟢 **CLOSED.** `pushed_at` on every table written this pass, paired with "is the task still scarce?" — which retires `xAPIWrapper` and `TinCanPython` as **superseded**, not merely stale. |
+| **`580-A`** | 🟢 **NARROWED** to OR-batches, with a control. |
+| gap *"no maintained permissive LTI 1.3 library"* (`p582`) | 🟢 **WITHDRAWN** → reshaped to **Python-only**, which is a language gap and cheap to fix. |
+| gap *"the only permissively licensed QTI tool"* (`repos/foundations.md`) | 🟢 **WITHDRAWN** — six exist, three already in this base's history. |
+
+### 🔴 Registered this pass
+
+| Gap | Statement and prescription |
+|---|---|
+| 🆕 **`583-A`** | **The premise of a prescription is never checked.** **Prescription:** before executing a prescribed sweep, publish the FILED/UNFILED/NEW split for the axis first, and re-aim the sweep if unfiled exceeds expected-new. |
+| 🆕 **`583-B`** | **The superlative class has a `2-in-3` measured failure rate and `50`+ unswept claims.** **Prescription:** enumerate every "the largest"/"the only"/"the first"/"nothing open-source"/"does not exist" claim with page and line, and re-measure each. |
+| 🆕 **`583-C`** | **`ingest/address-ledger.py --debt` is denied in this harness and it is the control that belongs in front of every pass.** **Prescription:** obtain execution permission for `ingest/*.py`, or commit a shell-only replica of its disposition logic. |
+| 🆕 **`583-D`** | **The published market range was floor-truncated because the publisher set was never enumerated.** **Prescription:** enumerate publishers explicitly with each one's scope definition, and treat the range as open until stated. |
+| 🆕 **`583-E`** | **Unreachable primary-law hosts now block four findings**, and the probe fails on a fabricated control too. **Prescription:** raise a network-allowlist request instead of carrying a recurring action item. |
+| 🆕 **`583-F`** | **No agent-shaped supply on the integration axis** — `1` artefact in `538` repositories. **Prescription:** test the same ratio on `topic:sis`, `topic:gradebook`, `topic:proctoring` before generalising. |
+| 🆕 **`583-G`** | **`p582`'s three trends carry no numbers**, so the derived count excludes them. **Prescription:** make the `^## <n>. ` trend form part of the pre-commit check. |
+
+### 🟡 Carried, and declared rather than hidden
+
+| Gap | Note |
+|---|---|
+| `gate-census-currency` / `gate-union-currency` | 🔴 Not re-derived this pass; this pass writes to all eight shelves, so their published triples are further stale. Declared. |
+| `make hooks` / `ingest/validate-pages.py` | 🔴 **Not run — same `"Code from External"` denial as the ledger.** Frontmatter, table-shape and placeholder-row checks were replicated by hand and are marked as replicas. |
+| the `83 %` EDUCAUSE figure | 🔴 Remains **unusable**. 🆕 Joined by a *"Students First Act"* (headline-only, no instrument). |
+| UAE standalone AI subject | 🔴 **Declared unusable** — vendor marketing page is the only source. |
+
+
 ## 🆕 `p579` — `2026-11-01` — **🟢 `Gap 464-D` AND `Gap 505-B` REFUTED: THE GITHUB SEARCH API ANSWERS `200` ON ALL FOUR FORMS TRIED — INCLUDING THE EXACT INLINE FORM `464-D` RECORDS AS `403`, AND INCLUDING PLAIN `curl` WITH NO TOKEN. THE `403` BELONGS TO `/repos/{owner}/{repo}` ALONE, AND THE TWO WERE COLLAPSED INTO ONE GAP — SO THIS BASE HAS HAD A FIRST-HAND STAR-AND-LICENCE CHANNEL WHILE PUBLISHING THAT IT HAD NONE. `47` ADDRESSES RE-MEASURED, `8` LEDGER LICENCES SETTLED, `7` NEW ADDRESSES, `6` SHELVED AFTER `378`–`499` PASSES IN THE DISCARD. 🔴 THIS PASS'S OWN FIRST DRAFT CLAIMED TWO LICENCE DISCOVERIES THIS BASE HAD ALREADY PUBLISHED, AND IS RETRACTED. 🔴 SIXTEENTH NIL ON THE MANDATED LEGS. SIX REGISTERED (`579-A`…`579-F`).**
 
 ### 🟢 Closed this pass

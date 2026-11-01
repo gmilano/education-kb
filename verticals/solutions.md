@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p583 — 2026-11-01 — **the interchange layer that bolts a copyleft LMS to anything else, and the licence rule that decides what a studio may ship**
+
+🔵 **Source:** `538` repositories across `topic:lti`, `topic:xapi`, `topic:qti`,
+`topic:lti-provider`, grants byte-read. Records:
+[`integration-axis-sweep`](../evidence/integration-axis-sweep.2026-11-01-p583.tsv),
+[`grants-byte-read`](../evidence/grants-byte-read.2026-11-01-p583.tsv).
+🔵 **The SIS/ERP platform leg was not re-run this pass** — `p581` ran it and returned
+nothing new, and `p582` re-confirmed the tier as uniformly copyleft.
+
+### 🟢 The delivery rule, measured: the glue is permissive, the platform is not
+
+| layer | licence shape | what a studio may do |
+|---|---|---|
+| 🔴 **platform of record** | Moodle **GPL-3.0** · Open edX **AGPL-3.0** · Chamilo **GPL-2.0** · ILIAS **GPL-3.0** · OpenEduCat **LGPL-3.0** · Gibbon **GPL-3.0** | 🔴 **Deploy and configure; do not ship a modified fork as a product.** AGPL on Open edX reaches network use. |
+| 🟢 **interchange / integration layer** | **`22 of 33`** measured rows permissive (`66.7 %`) — MIT, Apache-2.0, BSD-3-Clause | 🟢 **Build on, embed, relicense-compatible, ship.** This is where the billable artefact lives. |
+| 🟡 **the one permissive platform seat** | OpenOlat — **Apache-2.0 by byte-read**, `NOASSERTION` by API (`Trend 31`) | 🟢 The option when the client is *choosing* rather than remediating. |
+
+🟢 **So the vertical recipe is not "replace the LMS".** It is: leave the copyleft platform
+in place, and deliver a permissive interchange layer plus the agent on top of it. That is
+the shape every pattern on `compose/patterns.md` now assumes.
+
+### 🟢 The bolt-on layer, by what a client actually asks for
+
+| the ask | the permissive component | licence (byte-read) | ★ | `pushed_at` | region |
+|---|---|---|--:|---|---|
+| "launch our tool from inside Canvas/Moodle/Open edX" | [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** (`1,528 B`) | 73 | `2026-10-05` | North America |
+| same, but our stack is **Go** | [StevenWeathers/peregrine-lti](https://github.com/StevenWeathers/peregrine-lti) | 🟢 **Apache-2.0** (`11,357 B`) | 7 | `2025-11-20` | Global |
+| same, but our stack is **Laravel/PHP** | [swisnl/laravel-lti-provider](https://github.com/swisnl/laravel-lti-provider) | 🟢 **MIT** (`1,108 B`) | 4 | `2026-08-28` | EMEA |
+| "store and query what learners did" | [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) · [yetanalytics/lrsql](https://github.com/yetanalytics/lrsql) | 🟢 **Apache-2.0** | 334 · 144 | `2025-11-14` · `2026-10-27` | North America |
+| "prove the integration is conformant" | [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) · [adlnet/CATAPULT](https://github.com/adlnet/CATAPULT) | 🟢 **MIT** · **Apache-2.0** | 78 · 59 | `2025-09-04` · `2026-01-20` | North America |
+| "move our item bank in and out" | [examplary/qti](https://github.com/examplary/qti) · [metyatech/markdown-to-qti](https://github.com/metyatech/markdown-to-qti) · [rolfis/qti-convert](https://github.com/rolfis/qti-convert) | 🟢 **MIT** · **MIT** · **Apache-2.0** | 2 · 2 · 22 | `2026-10-12` · `2026-09-19` · `2026-06-08` | Global |
+| "render items in our own front end" | 🔴 [Citolab/qti-components](https://github.com/Citolab/qti-components) | 🔴 **GPL-3.0** | 18 | `2026-10-30` | EMEA |
+| "pipe Moodle events into the LRS" | 🔴 [davidpesce/moodle-logstore_xapi](https://github.com/davidpesce/moodle-logstore_xapi) | 🔴 **GPL-3.0** | 82 | `2026-10-29` | Global |
+
+🔴 **The two rows a studio cannot ship are the two closest to the UI.** Item *rendering*
+(`Citolab/qti-components`, GPL-3.0) and the Moodle *event bridge*
+(`moodle-logstore_xapi`, GPL-3.0) are both copyleft, and both are the maintained option of
+record on their axis. 🟢 **Renderer alternative:** `ewels/starlight-quiz` (Apache-2.0,
+`10★`, `2026-09-08`) renders Markdown-authored items — a different authoring contract, but
+permissive. 🔵 **Moodle-bridge alternative: none measured.** A Moodle plugin is GPL by the
+platform's own plugin rule regardless of the axis's shape, so this is a *build-in-place*,
+not a *ship*, and it should be priced as client-owned code.
+
+### 🔴 The gap this layer still has, stated rather than left silent
+
+🔴 **No permissive, framework-independent LTI 1.3 library for Python.**
+`dmitry-viskov/pylti1.3` (MIT, `138★`) is the most-starred Python option and was last
+pushed **`2024-08-18`** — `26.5` months. The maintained permissive options are Go,
+Laravel and JupyterHub-bound. 🔵 **This is a language gap, not an ecosystem gap** (see
+`intel/trends.md`, where the broader claim is withdrawn), and for a Python-stack client it
+is the single highest-value thing a studio could contribute back.
+
+
 ## p582 — 2026-11-01 — **the authoring and accessibility layers that bolt onto a copyleft LMS, and the four dead integration rows this page should stop offering**
 
 🔵 **The mandated vertical leg (`open source platform education ERP CRM MIT Apache`) was

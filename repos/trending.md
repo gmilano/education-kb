@@ -4,6 +4,48 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `2026-11-01` — `p583` — **`538` repositories on the four integration axes: `4` new, `18` promotable out of this file, and the whole world's `lti-provider` topic is `22` repositories**
+
+🟢 **Axes swept singly** with the corrected form (`p582`'s first priority), each with its
+denominator. Record:
+[`integration-axis-sweep`](../evidence/integration-axis-sweep.2026-11-01-p583.tsv),
+[`grants-byte-read`](../evidence/grants-byte-read.2026-11-01-p583.tsv).
+
+| axis | repositories | permissive head | 🔴 note |
+|---|--:|---|---|
+| `topic:lti` | **184** | `tsugiproject/tsugi` — Apache-2.0, `377★`, `2026-11-01` | head is Apereo-incubating and pushed daily |
+| `topic:xapi` | **280** | `adlnet/xAPI-Spec` — Apache-2.0, `956★`, `2025-07-03` | 🔴 top three by stars are **vocabulary collisions**: `xcp-ng/xcp` (`1,621★`, virtualisation), `vatesfr/xo`, `peterszombati/xapi-node` (a **trading** API) — fourth instance of `Trend 29` |
+| `topic:qti` | **52** | `OpenOLAT/OpenOLAT` — `NOASSERTION`/Apache-2.0, `449★` | 🔴 `CERN-QTI/QuASK` and `1alice0bob/qutree` are **quantum** computing — collisions again |
+| `topic:lti-provider` | **22** | `LtiLibrary/LtiLibrary` — Apache-2.0, `80★`, `2025-06-02` | 🔴 **twenty-two repositories worldwide**, `11` of them at `≤2★`, head is LTI **1.1.1** not 1.3 |
+
+🆕 **New to this base (`4`)**, every grant byte-read:
+
+| repo | licence | ★ | `pushed_at` | region | note |
+|---|---|--:|---|---|---|
+| [LtiLibrary/LtiLibrary](https://github.com/LtiLibrary/LtiLibrary) | 🟢 Apache-2.0 (`11,325 B`) | 80 | `2025-06-02` | Global | 🔴 LTI **1.1.1** only |
+| [ewels/starlight-quiz](https://github.com/ewels/starlight-quiz) | 🟢 Apache-2.0 (`11,357 B`) | 10 | `2026-09-08` | Global | Markdown quizzes for Astro/Starlight |
+| [swisnl/laravel-lti-provider](https://github.com/swisnl/laravel-lti-provider) | 🟢 MIT (`1,108 B`) | 4 | `2026-08-28` | EMEA | owner SWIS, Netherlands |
+| [rikardroitto/canvas-quiz-skill](https://github.com/rikardroitto/canvas-quiz-skill) | 🟢 MIT (`1,070 B`) | 1 | `2026-08-07` | Global | the axis's **only** agent artefact |
+
+🔴 **`18` addresses were in this file already and had never reached a curated page** — the
+promotion is recorded on `repos/foundations.md` this pass. The most expensive of them:
+`jupyterhub/ltiauthenticator` (BSD-3-Clause, `73★`, **`15` history mentions**), which
+refutes a claim `intel/trends.md` published as load-bearing; `adlnet/ADL_LRS`
+(Apache-2.0, `334★`, `15` mentions); `Apereo-Learning-Analytics-Initiative/OpenLRW`
+(`NOASSERTION`, `62★`, `15` mentions); `LearningLocker/learninglocker` (GPL-3.0, `585★`,
+`11` mentions, 🔴 `2024-05-30` — stale).
+
+🔵 **`580-E` applied:** `pushed_at` is now carried on every row this pass writes. Two
+Apache-2.0 rows on the axis are **over three years cold and superseded**, not merely
+stale — `adlnet/xAPIWrapper` (`2022-12-04`) and `RusticiSoftware/TinCanPython`
+(`2021-11-08`).
+
+🔴 **GitHub-trending leg: nil.** The mandated `github trending education AI 2026` leg
+returned only third-party aggregators (Trendshift, gittrend) with inconsistent dates, and
+every education repository it named was already in this base. **This is the eighteenth
+consecutive nil on the mandated legs.**
+
+
 ## 🆕 `2026-11-01` — `p582` — **five capability topics, `27` new permissive live addresses, and the document-ingestion tier this base never had**
 
 🟢 **The `p581` prescription executed:** `topic:pptx`, `topic:ocr`, `topic:pdf`,

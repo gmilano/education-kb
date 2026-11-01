@@ -4,6 +4,56 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `2026-11-01` — `p583` — **the integration axis swept, and the agent-shaped supply on it is ONE repository out of `538`**
+
+🟢 **The sweep `p582` prescribed was run in full** — `topic:lti` (`184`),
+`topic:lti-provider` (`22`), `topic:xapi` (`280`), `topic:qti` (`52`). 🔴 **Its premise
+was wrong**: `29 of 33` measured addresses were already in this base (`11` filed on a
+curated page, `18` in this history and never shelved). Record:
+[`integration-axis-sweep`](../evidence/integration-axis-sweep.2026-11-01-p583.tsv).
+
+🔴 **The agent signal on the axis is a single artefact**, and it is worth recording as a
+measured absence rather than a find:
+[`rikardroitto/canvas-quiz-skill`](https://github.com/rikardroitto/canvas-quiz-skill) —
+🟢 **MIT** (`1,070 B` byte-read), `1★`, `pushed 2026-08-07`, Global. An **agent skill**:
+Markdown in, QTI 1.2 package for Canvas out. 🔵 `538` repositories, one agent artefact —
+the assessment-interchange layer is a **library** tier and the agent is the thing a client
+has to have built.
+
+### 🟢 The address that refutes a load-bearing claim, found in this file's own history
+
+[`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator) —
+🟢 **BSD-3-Clause** (`1,528 B`), `73★`, `pushed 2026-10-05`, North America. Implements
+**`LTI13Authenticator`** and `LTI11Authenticator`; `ltiauthenticator/lti13/auth.py` read
+first-hand. 🔴 **This address appears `15` times in this file and `repos/trending.md` and
+had never reached a curated page**, while `intel/trends.md` published *"no maintained
+permissive LTI 1.3 library"* as **NEW and load-bearing**. 🔵 The finding was in the base
+the whole time; what was missing was the promotion.
+
+### 🔴 Eighteenth consecutive nil on the mandated supply legs
+
+All four global legs and three regional legs run (APAC region-level **retired** under
+`580-F`, substituted per-jurisdiction). 🔴 **`0` new addresses.** Every candidate served
+was already in this base, checked by token before anything was drafted:
+`OPTIMETA/PAIDEIA` (filed) · `rohitg00/ai-engineering-from-scratch` (filed) ·
+`GarethManning/education-agent-skills` (filed) · `OS4ED/openSIS-Classic` (filed) ·
+`microsoft/ai-agents-for-beginners` (history) · `pguso/agents-from-scratch` (history) ·
+`speedyapply/2026-AI-College-Jobs` (history, and not an education tool).
+🔵 **Yield comparison, same session:** `7` mandated listicle legs → **`0`** addresses;
+`4` single-topic index axes → **`4`** new addresses and `18` promotable ones.
+
+### 🔵 Still-true postures, re-attested not rediscovered (per `580-G`)
+
+- 🔴 `curl -sI` against `github.com` returns `403` for real and fabricated addresses alike
+  — the run prompt's mandated verifier **certifies nothing**. Channel used instead:
+  `q=repo:owner/name` against `search/repositories`, `30` calls/minute.
+- 🟢 A **single** unresolvable `repo:` qualifier returns `422`, which is a usable "absent"
+  signal. `580-A`'s false-zero hazard applies to **OR-batches only** — confirmed with a
+  fabricated control this pass.
+- 🔴 `users/{login}` is `403`, so region is placed on **owner identity** or **description
+  language** only. "Global" on these rows means *provenance unknown*.
+
+
 ## 🆕 `2026-11-01` — `p582` — **the corrected query form, run across the five topics `p581` prescribed: `27` new permissive live rows — and the repo that dethrones this base's "largest permissive" claim is a Microsoft document converter at `193,266★`**
 
 🟢 **The sweep `p581` prescribed was run in full.** Five capability topics —

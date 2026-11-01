@@ -1,0 +1,7 @@
+host	class	http_code	discriminating
+https://www.law.go.kr	Korean primary law portal	000	NO
+https://www.moe.go.kr	Korean Ministry of Education	000	NO
+https://eur-lex.europa.eu	EU primary law	000	NO
+https://www.kemendikdasmen.go.id	Indonesian education ministry	000	NO
+https://this-host-is-fabricated-zz99.gov	FABRICATED CONTROL	000	NO
+https://www.persistencemarketresearch.com	market-research publisher (WebFetch)	ENOTFOUND	n/a

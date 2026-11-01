@@ -4,6 +4,73 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p583 — 2026-11-01 — **the integration axis was never unswept, it was unshelved: `538` repositories on the four axes `p582` called never-swept, `29 of 33` already in this base, and the one agent artefact on the axis**
+
+🔵 **Method note (unchanged channel, re-attested per `580-G` before use).** Every figure
+below comes from `gh api -X GET search/repositories -f q='repo:owner/name'`, which returns
+`license.spdx_id`, `stargazers_count`, `pushed_at`, `archived`, `forks_count` and `topics`
+in one call at `30` calls/minute. 🔴 **`curl -sI` against `github.com` is still inoperable
+here** — the run prompt mandates it, and it returns `403` for real and fabricated
+addresses alike. 🔵 Grants are byte-read from `raw.githubusercontent.com`; a single
+unresolvable `repo:` qualifier returns `422`, which for a **single** qualifier is a usable
+"absent" signal (the `422` false-zero hazard of `580-A` applies only to OR-batches).
+Records: [`integration-axis-sweep`](../evidence/integration-axis-sweep.2026-11-01-p583.tsv),
+[`grants-byte-read`](../evidence/grants-byte-read.2026-11-01-p583.tsv).
+
+### 🔴 The central result: `p582`'s first priority rested on a false premise
+
+`p582` prescribed sweeping `topic:lti`, `topic:lti-provider`, `topic:xapi` and `topic:qti`
+singly, on the stated ground that the integration axis — *"the base's most important
+unreplaced dependency"* — had **never been swept with the corrected query form**. All four
+were swept this pass. The axis is not unswept:
+
+| disposition | addresses | meaning |
+|---|--:|---|
+| 🟢 **FILED** on a curated page | **`11`** | already recommended to a reader |
+| 🔴 **UNFILED** — in the append-only history only | **`18`** | owned, re-found up to `15×`, never shelved |
+| 🆕 **NEW** to the base | **`4`** | and all four are marginal: `80★`, `10★`, `4★`, `1★` |
+
+🔴 **`29 of 33` measured addresses were already in this base.** The axis was never a
+discovery problem; it is `Trend 16` — a finding in this base's history not reaching its
+shelf — landing on the dependency the base itself calls most load-bearing. Denominators:
+`topic:lti` `184`, `topic:xapi` `280`, `topic:qti` `52`, `topic:lti-provider` **`22`**
+(the whole world's LTI-provider topic is twenty-two repositories).
+
+### 🟢 WITHDRAWN: "no maintained permissive LTI 1.3 library"
+
+🔴 `intel/trends.md` carries this as **NEW and load-bearing**. It is **refuted**, and the
+refuting address has been in this base's own history **`15` times** without ever reaching a
+shelf:
+
+| repo | licence (byte-read) | ★ | `pushed_at` | region | what it is |
+|---|---|--:|---|---|---|
+| [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** (`1,528 B`) | 73 | `2026-10-05` | North America | 🟢 **Implements `LTI13Authenticator` and `LTI11Authenticator`** for JupyterHub against Canvas, Moodle and Open edX. Module `ltiauthenticator/lti13/auth.py` read first-hand. Owner **Project Jupyter** → region on owner identity. 🔴 **`15` history mentions, `0` curated.** |
+| [StevenWeathers/peregrine-lti](https://github.com/StevenWeathers/peregrine-lti) | 🟢 **Apache-2.0** (`11,357 B`) | 7 | `2025-11-20` | Global | LTI 1.3 launch library in **Go**; topics `lti1p3`, `ltiadvantage`. 🟡 Inside the one-year recency cut but only just. Provenance unknown. |
+| [swisnl/laravel-lti-provider](https://github.com/swisnl/laravel-lti-provider) | 🟢 **MIT** (`1,108 B`) | 4 | `2026-08-28` | EMEA | 🆕 **NEW.** Laravel LTI provider. Owner **SWIS** (Netherlands) → region on owner identity. |
+| [LtiLibrary/LtiLibrary](https://github.com/LtiLibrary/LtiLibrary) | 🟢 **Apache-2.0** (`11,325 B`) | 80 | `2025-06-02` | Global | 🆕 **NEW**, and 🔴 **LTI 1.1.1 only, not 1.3** — recorded so the next pass does not mistake it for a 1.3 option. .NET. |
+
+🔵 **The accurate restatement, which is narrower and still useful:** there is no
+permissive, maintained, *framework-independent* LTI 1.3 library for **Python**.
+`dmitry-viskov/pylti1.3` (MIT, `138★`) remains the most-starred Python option and was last
+pushed `2024-08-18` — `26.5` months, not the `27` the base rounds to. The maintained
+permissive options exist in **Go**, **PHP-on-Laravel** and **JupyterHub**, and the
+maintained PHP option of record, `oat-sa/lib-lti1p3-core` (`37★`, `2026-10-24`), is
+🔴 **GPL-2.0**. That is a *language* gap, not an *ecosystem* gap, and it is a far cheaper
+thing to fix.
+
+### 🆕 The one agent artefact on the axis
+
+| agent | repo | licence (byte-read) | ★ | `pushed_at` | region | what it does |
+|---|---|---|--:|---|---|---|
+| **canvas-quiz-skill** | [rikardroitto/canvas-quiz-skill](https://github.com/rikardroitto/canvas-quiz-skill) | 🟢 **MIT** (`1,070 B`) | 1 | `2026-08-07` | Global | 🆕 An **agent skill**: author a quiz in Markdown, get a QTI 1.2 package importable into Canvas. 🔵 Shelved at `1★` not for its traction but because it is the **only agent-shaped artefact** on four axes and `538` repositories — which is itself the measurement. Provenance unknown. |
+
+🔵 **What the absence means for a studio.** The assessment-interchange layer is a
+**library** layer, not an agent layer: `538` repositories and exactly one agent artefact.
+A client asking for "an AI agent that writes assessments into our LMS" is asking for a
+build, where the QTI/LTI plumbing is bought (permissively, see `repos/foundations.md`) and
+the agent is the deliverable.
+
+
 ## p582 — 2026-11-01 — **one new agent row, the "largest permissive repository" claim withdrawn and replaced, and a dual-licence repository resolved from its bytes**
 
 🟢 **Instrument unchanged:** `q=repo:owner/name` against `search/repositories`, one call

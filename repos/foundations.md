@@ -4,6 +4,112 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p583 — 2026-11-01 — **the integration layer shelved after being re-found up to `15` times: `12` permissive rows promoted out of the discard, a superlative on this page refuted, and `580-C` closed at `1` defect rather than `40`**
+
+🔵 **Source:** the four axes `p582` prescribed — `topic:lti` (`184`), `topic:xapi` (`280`),
+`topic:qti` (`52`), `topic:lti-provider` (`22`) — `538` repositories, every grant below
+byte-read from `raw.githubusercontent.com` and piped to `wc -c`. Records:
+[`integration-axis-sweep`](../evidence/integration-axis-sweep.2026-11-01-p583.tsv),
+[`grants-byte-read`](../evidence/grants-byte-read.2026-11-01-p583.tsv),
+[`superlative-audit`](../evidence/superlative-audit.2026-11-01-p583.tsv).
+🟢 **`580-E` executed: every row below carries `pushed_at`.**
+
+### 🟢 The assessment-and-integration layer, promoted from the discard
+
+🔴 **None of the first nine rows is new to this base — all were sitting in the append-only
+history**, several re-found `15` times, while this page described the axis as the base's
+*"most important unreplaced dependency"*. 🟢 All `12` are permissive and byte-verified.
+
+| repo | licence (byte-read) | ★ | `pushed_at` | region | what it is, and why it belongs on a shelf |
+|---|---|--:|---|---|---|
+| [adlnet/ADL_LRS](https://github.com/adlnet/ADL_LRS) | 🟢 **Apache-2.0** | 334 | `2025-11-14` | North America | 🟢 **The reference Learning Record Store**, from **ADL** — the body that authors xAPI. Where learner-activity data lands before analytics. Region on owner identity (US DoD ADL Initiative). |
+| [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) | 🟢 **Apache-2.0** | 956 | `2025-07-03` | North America | 🔵 Already filed; repeated here for the tier's shape. The specification itself — the contract every row in this table implements. |
+| [adlnet/lrs-conformance-test-suite](https://github.com/adlnet/lrs-conformance-test-suite) | 🟢 **MIT** | 78 | `2025-09-04` | North America | 🟢 **The acceptance test for a delivery.** Tests the MUST requirements of the xAPI spec against any LRS. A studio that ships an LRS integration without running this is shipping an unverified claim. |
+| [adlnet/CATAPULT](https://github.com/adlnet/CATAPULT) | 🟢 **Apache-2.0** | 59 | `2026-01-20` | North America | 🟢 **cmi5** test application and player — the profile that makes xAPI work for formal course launch. |
+| [jupyterhub/ltiauthenticator](https://github.com/jupyterhub/ltiauthenticator) | 🟢 **BSD-3-Clause** (`1,528 B`) | 73 | `2026-10-05` | North America | 🟢 **LTI 1.3 and LTI 1.1 authenticators** for JupyterHub against Canvas, Moodle and Open edX. 🔴 **Refutes this base's "no maintained permissive LTI 1.3 library" claim** (see `intel/trends.md`). `15` history mentions, `0` curated until now. |
+| [StevenWeathers/peregrine-lti](https://github.com/StevenWeathers/peregrine-lti) | 🟢 **Apache-2.0** (`11,357 B`) | 7 | `2025-11-20` | Global | LTI 1.3 launch library in **Go**; topics `lti1p3`, `ltiadvantage`. 🟡 Just inside the one-year recency cut. |
+| [swisnl/laravel-lti-provider](https://github.com/swisnl/laravel-lti-provider) | 🟢 **MIT** (`1,108 B`) | 4 | `2026-08-28` | EMEA | 🆕 **NEW.** LTI provider for Laravel. Owner **SWIS**, Netherlands → region on owner identity. |
+| [LtiLibrary/LtiLibrary](https://github.com/LtiLibrary/LtiLibrary) | 🟢 **Apache-2.0** (`11,325 B`) | 80 | `2025-06-02` | Global | 🆕 **NEW**, and 🔴 **LTI 1.1.1 only — NOT 1.3.** Shelved with that warning attached so the next pass does not spend a budget discovering it is the wrong version. .NET. |
+| [xapijs/xapi](https://github.com/xapijs/xapi) | 🟢 **MIT** | 51 | `2026-04-29` | Global | Maintained TypeScript/JavaScript xAPI client. The browser-side half of a statement pipeline. |
+| [examplary/qti](https://github.com/examplary/qti) | 🟢 **MIT** (`1,069 B`) | 2 | `2026-10-12` | Global | Generates **and parses** QTI IMS content packages — the round-trip, which the converters below do not do. |
+| [metyatech/markdown-to-qti](https://github.com/metyatech/markdown-to-qti) | 🟢 **MIT** (`1,066 B`) | 2 | `2026-09-19` | Global | Markdown specification → **QTI 3.0** XML. The only QTI **3.0** permissive emitter measured on the axis. |
+| [sonyccd/qti-playground](https://github.com/sonyccd/qti-playground) | 🟢 **MIT** (`1,070 B`) | 4 | `2025-09-11` | Global | Web app to view, edit and inspect QTI files. The debugging surface for the two rows above. |
+| [ewels/starlight-quiz](https://github.com/ewels/starlight-quiz) | 🟢 **Apache-2.0** (`11,357 B`) | 10 | `2026-09-08` | Global | 🆕 **NEW.** Markdown-authored interactive quizzes for Astro/Starlight with progress tracking — the *delivery* end, where the others are interchange. |
+
+🔴 **Shelved with a staleness warning, per `580-E`:**
+[`adlnet/xAPIWrapper`](https://github.com/adlnet/xAPIWrapper) (Apache-2.0, `224★`,
+`2022-12-04`) and
+[`RusticiSoftware/TinCanPython`](https://github.com/RusticiSoftware/TinCanPython)
+(Apache-2.0, `54★`, `2021-11-08`) are both **over three years cold**. 🔵 They are listed
+because `580-E`'s paired question — *"is this repository's task still scarce?"* — answers
+**no**: `xapijs/xapi` and `adlnet/ADL_LRS` cover the same ground and are maintained. These
+two are **superseded, not merely stale**, and should not be recommended.
+
+### 🔴 WITHDRAWN from this page: "the only permissively licensed QTI tool found"
+
+This page states that `rolfis/qti-convert` is *"the only permissively licensed QTI tool
+found"*. 🔴 **Refuted — five more, all byte-read this pass**, and **three of the five were
+already in this base's own history** (`examplary/qti`, `metyatech/markdown-to-qti`, and
+`Citolab/qti-convert` which is GPL-3.0 and so not a counter-example). The permissive QTI
+tier is **six tools**, not one:
+`rolfis/qti-convert` (Apache-2.0) · `examplary/qti` (MIT) · `metyatech/markdown-to-qti`
+(MIT) · `sonyccd/qti-playground` (MIT) · `ewels/starlight-quiz` (Apache-2.0) ·
+`rikardroitto/canvas-quiz-skill` (MIT).
+🔵 **This is the second superlative on these shelves refuted in two passes** (`p582`
+withdrew "the largest permissive repository"), which is why `580-G`'s token-check is now
+run against **superlatives** as well as findings — `p582`'s fourth priority, executed.
+
+### 🟢 The licence shape of this axis inverts the platform tier, and that is the delivery rule
+
+| class | rows | share |
+|---|--:|--:|
+| 🟢 permissive (MIT / Apache-2.0 / BSD) | **`22`** | **`66.7 %`** |
+| 🔴 copyleft (GPL-2.0 / GPL-3.0) | `8` | `24.2 %` |
+| 🟡 `NOASSERTION` — work queue, not a verdict (`Trend 31`) | `3` | `9.1 %` |
+
+🟢 **The generalisable rule, and it is the opposite of what this page records for
+platforms:** the *integration layer is permissive* while the *platforms it integrates are
+copyleft* — Moodle GPL-3.0, Open edX AGPL-3.0, OpenOlat Apache-2.0 by byte-read but
+`NOASSERTION` by API. 🔵 **So a studio can ship the glue and cannot ship a modified
+platform.** `p574` measured the accessibility and assessment-interchange layer running
+`10` shippable against `11` copyleft; on the four integration axes the ratio runs the
+other way at `22:8`. 🔵 The two measurements are of different axes and do not conflict —
+together they say the licence shape is **per-layer**, and must be measured per layer
+rather than inferred for "education open source" as a whole.
+
+🔴 **The copyleft rows that matter anyway**, because they are the maintained platform-grade
+implementations and a client may already run them:
+[`oat-sa/lib-lti1p3-core`](https://github.com/oat-sa/lib-lti1p3-core) (GPL-2.0, `37★`,
+`2026-10-24`) · [`oat-sa/qti-sdk`](https://github.com/oat-sa/qti-sdk) (GPL-2.0, `86★`,
+`2026-10-28`) · [`Citolab/qti-components`](https://github.com/Citolab/qti-components)
+(GPL-3.0, `18★`, `2026-10-30`) ·
+[`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework)
+(GPL-3.0, `632★`, `2026-10-26`) ·
+[`davidpesce/moodle-logstore_xapi`](https://github.com/davidpesce/moodle-logstore_xapi)
+(GPL-3.0, `82★`, `2026-10-29`).
+
+### 🟢 `580-C` closed — at `1` defect, not `40`
+
+`580-C` prescribed migrating all `40` dead `openedx/edx-platform` citations. 🔴 **The
+prescription is unexecutable as written, and measuring it first is what showed why.**
+Across all eight pages the dead address appears **`179`** times against **`89`** for the
+live one — but:
+
+| where | dead citations | disposition |
+|---|--:|---|
+| 🔴 `agents/trending.md` + `repos/trending.md` | **`168`** | **must NOT be migrated** — append-only history; rewriting them destroys the record of what was true when written |
+| 🟡 curated pages, discussing the rename itself | `10` | **keep** — `422` tables, linking-defect audits, redirect notes. `580-C`'s own carve-out |
+| 🟢 curated pages, a live shelf row linking the dead address | **`1`** | 🟢 **MIGRATED this pass** |
+
+🟢 **The one real defect was on this page**: the shelf row whose stated purpose was *"to
+close a linking defect"* linked `github.com/openedx/edx-platform`, which returns `422` —
+so the row that existed to supply a working address supplied a broken one. Now
+[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (AGPL-3.0,
+`8,213★`, `2026-11-01`). 🔵 **The transferable lesson: a count taken across "the shelf
+pages" without separating curated from append-only turns a `1`-line fix into a `179`-line
+instruction**, and the `40` in `580-C` was neither number.
+
+
 ## p582 — 2026-11-01 — **the document-ingestion and media tier, `20` new permissive foundations — and the psychometric axis this page endorses is confirmed dead end-to-end**
 
 🟢 **Source:** the five capability sweeps `p581` prescribed (`topic:pptx`, `ocr`, `pdf`,
@@ -829,7 +935,7 @@ reads and the instrument at the same time.
 | [arthurflor23/handwritten-text-recognition](https://github.com/arthurflor23/handwritten-text-recognition) | **MIT** (1,074 B ✅ first-hand, `master/LICENSE`) | 308 | Global | ✅ permissive | Handwritten Text Recognition — **3,645 commits over a 2,700-day span**, by far the most substantial history in this tier. 🔵 Deps include `tensorflow`, `mlflow` (both Apache-2.0) and `openai` (MIT) — permissive, but the `openai` dependency means the default path calls a **paid external API**, which is a data-residency question in schools, not a licence one. |
 | [githubharald/DeslantImg](https://github.com/githubharald/DeslantImg) | ⚠️ **MIT grant (1,071 B) / GPL-3.0 SURFACE** — see note | 156 | EMEA | ⚠️ **link-only** | Deslanting: sets slanted handwriting upright before recognition. 🔴 **`master/LICENSE.md` is a clean 1,071 B MIT — and `requirements.txt` pins `Py-BOBYQA>=1.3`, which is GPL-3.0 (verified first-hand: 35,147 B, title "GNU GENERAL PUBLIC LICENSE", Version 3).** Py-BOBYQA is imported in-process for the deslanting optimisation, so **distributing a combined work triggers GPL-3.0 on it**. GPL-3.0 has no §13 network clause, so *hosting* a service is not itself the trigger — *shipping client code* is. 🟢 **Third instance of this mechanism in this KB** (after `ai-learning-os`/PyMuPDF and `text2text`), reached by a third independent route. 🔵 Use `WordDetector` + `CTCDecoder` instead: same author, same pipeline, permissive all the way down. |
 | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🔴 **BSD-3-Clause** (1,531 B ✅ first-hand; sidebar agrees) — **CORRECTION** | 114 | Global † | ✅ permissive | "An open-source project designed to provide an educational and collaborative AI-powered platform." 195 forks. 🔴 **This base's own rotation history recorded this project as `Apache2` (`education_cycle3`). It is not: the grant is BSD-3-Clause** — "All rights reserved" plus the three numbered conditions including non-endorsement — and **two independent reads agree** (grant body + GitHub sidebar). 🔵 **Why the correction has commercial weight rather than being pedantry: BSD-3-Clause carries no express patent grant, Apache-2.0 does.** For a studio taking procurement questions from a university, that is the difference between two answers. Holder is an individual ("Mohamed El hajji On behalf of all R2D-dev"), so region stays `Global †` under `569-E`'s grade convention. |
-| [openedx/edx-platform](https://github.com/openedx/edx-platform) | **AGPL-3.0** (35,136 B ✅ first-hand, title reads "GNU AFFERO GENERAL PUBLIC LICENSE") | 8,200 | North America | ⚠️ **network copyleft** | "The Open edX LMS & Studio, powering education sites around the world!" 4,400 forks. 🔴 **Shelved here to close a linking defect, not because the platform is new to this KB: it is named `15×` across shelf prose and this is the first time its address appears on any shelf page.** The harness's own bar is that every row carry a real repo URL; a project named in prose without one cannot be checked, cloned or licence-probed by anyone downstream. 🔴 AGPL-3.0 §13 means a hosted deployment must offer source to its users — the reason this KB routes integrations through LTI/XBlock rather than forks. |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) 🔴 *(renamed; the former `openedx/edx-platform` now returns `422` — migrated `p583`)* | **AGPL-3.0** (35,136 B ✅ first-hand, title reads "GNU AFFERO GENERAL PUBLIC LICENSE") | 8,200 | North America | ⚠️ **network copyleft** | "The Open edX LMS & Studio, powering education sites around the world!" 4,400 forks. 🔴 **Shelved here to close a linking defect, not because the platform is new to this KB: it is named `15×` across shelf prose and this is the first time its address appears on any shelf page.** The harness's own bar is that every row carry a real repo URL; a project named in prose without one cannot be checked, cloned or licence-probed by anyone downstream. 🔴 AGPL-3.0 §13 means a hosted deployment must offer source to its users — the reason this KB routes integrations through LTI/XBlock rather than forks. |
 | [patil-suraj/question_generation](https://github.com/patil-suraj/question_generation) | **MIT** (1,068 B ✅ re-read, *"Copyright (c) 2020 Suraj Patil"*) | 1,100 | Global | ✅ permissive | The axis's **reference implementation** — answer-aware and multitask QA-QG as a HuggingFace `pipeline`. The most-starred permissive generator; recorded *"unplaced"* at pass 85. |
 | [ramsrigouthamg/Questgen.ai](https://github.com/ramsrigouthamg/Questgen.ai) | **MIT** (1,077 B ✅ re-read, *"Copyright (c) 2020 Ramsri Goutham Golla"*) | 952 | ⚠️ see note | ✅ permissive | 🟢 **Ships item *types*, not one task**: MCQ with distractors, boolean (yes/no), FAQ, paraphrase, answer prediction. T5 + sense2vec. Closest to what an assessment unit orders. |
 | [asahi417/lm-question-generation](https://github.com/asahi417/lm-question-generation) | **MIT** (1,065 B ✅ re-read, *"Copyright (c) 2024 asahi417"*) | 366 | Global | ✅ permissive | 🟢 **The multilingual row.** `pip install lmqg`; question **and answer** generation in **9 languages** (`en/fr/ja/ko/ru/it/es/de/zh`), HuggingFace checkpoints, **ACL 2023** system-demonstration paper, 385 commits. ⚠️ **No Portuguese.** |

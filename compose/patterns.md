@@ -4,6 +4,112 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p583 — 2026-11-01 — **three recipes the integration sweep makes buildable, and the one it turns into a build**
+
+🔵 All components below are byte-read this pass with `pushed_at` recorded
+([`grants-byte-read`](../evidence/grants-byte-read.2026-11-01-p583.tsv),
+[`integration-axis-sweep`](../evidence/integration-axis-sweep.2026-11-01-p583.tsv)).
+🟢 **The rule every recipe here now obeys (`Trend 36`): the interchange layer is permissive
+and shippable; the platform of record is copyleft and is deployed, not forked.**
+
+## P-583-A — 🟢 **Put the agent inside the client's LMS and ship the conformance evidence with it** (6–8 weeks, North America)
+
+🔵 **Why this is now a composition rather than a build:** `p582` published that no
+maintained permissive LTI 1.3 library existed. One does, and the conformance suites are
+permissive too — so the *proof* is a deliverable, which is what Delaware's AI Assurance
+Lab and the Ohio/Florida district-policy duties actually buy.
+
+**Wiring, concretely:**
+
+1. 🟢 **Launch** — [`jupyterhub/ltiauthenticator`](https://github.com/jupyterhub/ltiauthenticator)
+   (BSD-3-Clause, `1,528 B`, `73★`, `2026-10-05`). Use `LTI13Authenticator` against the
+   client's Canvas / Moodle / Open edX as **Platform**. 🔵 Non-Python stacks:
+   [`StevenWeathers/peregrine-lti`](https://github.com/StevenWeathers/peregrine-lti)
+   (Apache-2.0, Go) or
+   [`swisnl/laravel-lti-provider`](https://github.com/swisnl/laravel-lti-provider) (MIT).
+   🔴 **Do not start from `pylti1.3`** (MIT, `138★`) — `26.5` months cold.
+2. 🟢 **Record** — statements to
+   [`yetanalytics/lrsql`](https://github.com/yetanalytics/lrsql) (Apache-2.0, `144★`,
+   `2026-10-27`) for a SQL-backed LRS, or
+   [`adlnet/ADL_LRS`](https://github.com/adlnet/ADL_LRS) (Apache-2.0, `334★`) when the
+   client wants the ADL reference implementation by name.
+3. 🟢 **Emit from the browser** — [`xapijs/xapi`](https://github.com/xapijs/xapi) (MIT,
+   `51★`, `2026-04-29`).
+4. 🟢 **Prove it** — this is the step that is the product:
+   [`adlnet/lrs-conformance-test-suite`](https://github.com/adlnet/lrs-conformance-test-suite)
+   (MIT, `78★`) for the xAPI MUST requirements, and
+   [`adlnet/CATAPULT`](https://github.com/adlnet/CATAPULT) (Apache-2.0, `59★`) for **cmi5**
+   course-launch conformance. 🟢 **Ship the two reports as the artefact a district files**
+   under Ohio `HB 96` / Florida `SB 1194`.
+5. 🟢 **Agent layer** — the tutor/grader itself, wired behind the LTI launch with the
+   refusal and provenance defaults from `P-582-B` and `Trend 37`.
+
+🔴 **The copyleft boundary to state in the SOW:** if the client wants Moodle *events*
+pushed into the LRS, that is
+[`davidpesce/moodle-logstore_xapi`](https://github.com/davidpesce/moodle-logstore_xapi)
+(**GPL-3.0**) — and any Moodle plugin is GPL by the platform's own rule. **Price it as
+client-owned code, not shippable IP.**
+
+## P-583-B — 🔴 **The APAC compliance-shaped deployment: an incident pipeline and per-age-band enforcement, because two jurisdictions now require them** (10–12 weeks, APAC)
+
+🔵 **Forced by `Trend 37`.** Vietnam's Công văn 5588/BGDĐT-GDPT (`2026-08-19`) requires an
+**AI incident-handling process**; Indonesia's SKB 7 Menteri No. 400.1-492/2026 requires
+**age-tiered limits on duration and content type** across formal, non-formal and informal
+education. 🔴 **Neither is satisfiable by prompt design or a human-in-the-loop checkbox.**
+
+**Wiring:**
+
+1. 🟢 **Policy enforcement point, per age band.** One service in front of the model holding
+   `(age_band, subject, max_minutes, allowed_content_classes)`. Indonesia's bands run from
+   early childhood upward with *stricter duration and content limits for younger children*,
+   so the band — not the user — is the policy key. 🔵 Vietnam's `12` periods/class/year
+   core gives the duration budget a concrete denominator to meter against.
+2. 🟢 **Tool-vetting register.** Công văn 5588 makes the **school** responsible for
+   selecting and reviewing age-appropriate tools, so the deliverable includes a reviewable
+   record per tool: version, data flows, age bands cleared, reviewer, date. 🔵 This is the
+   same artefact Delaware's Assurance Lab wants in North America — **build it once**.
+3. 🟢 **Incident pipeline.** Detect → classify → retain → escalate → audit. Minimum store:
+   the prompt, the output, the policy decision, the age band, the human who was notified.
+   🔵 Statements belong in the LRS from `P-583-A` (`lrsql`, Apache-2.0) — the incident log
+   and the learning record are the same substrate, which is the cost saving.
+4. 🟢 **Refusal by default on terminal decisions**, per `p582`: the grader may **filter**
+   and may not **determine** pass/fail. Brazil and France already require this; it costs
+   nothing to carry into APAC.
+5. 🔴 **Do not price off the mandate.** Korea's AI digital textbook went `34.2 % → 5.2 %`
+   adoption in one year after reclassification. Price off **funded** programmes.
+
+## P-583-C — 🟢 **Item-bank round-trip for a national assessment mandate** (8–10 weeks, EMEA)
+
+🔵 **Why now:** Saudi Arabia's AI curriculum has been in force since SY 2025-26 **with
+learning outcomes counted in overall student assessment** — so assessment interchange is
+mandated scope. 🟢 And the permissive QTI tier is **six tools, not one**, which this pass
+established by refuting this page's own superlative.
+
+**Wiring:**
+
+1. 🟢 **Author** — [`metyatech/markdown-to-qti`](https://github.com/metyatech/markdown-to-qti)
+   (MIT, `1,066 B`, `2026-09-19`): Markdown spec → **QTI 3.0** XML. The only permissive
+   QTI **3.0** emitter measured.
+2. 🟢 **Round-trip and validate** — [`examplary/qti`](https://github.com/examplary/qti)
+   (MIT, `1,069 B`, `2026-10-12`) generates **and parses** IMS content packages. Parsing is
+   what the converters below cannot do, and it is what makes the pipeline testable.
+3. 🟢 **Inspect when it breaks** — [`sonyccd/qti-playground`](https://github.com/sonyccd/qti-playground)
+   (MIT, `1,070 B`) as the debugging surface.
+4. 🟢 **Ingest the legacy Canvas estate** — [`rolfis/qti-convert`](https://github.com/rolfis/qti-convert)
+   (Apache-2.0, `11,357 B`, `22★`) for QTI → Word/JSON, and
+   [`rikardroitto/canvas-quiz-skill`](https://github.com/rikardroitto/canvas-quiz-skill)
+   (MIT, `1★`) for the reverse — Markdown → QTI 1.2 package for Canvas. 🔵 The latter is an
+   **agent skill**, and the only agent artefact on `538` repositories.
+5. 🟢 **Deliver** — [`ewels/starlight-quiz`](https://github.com/ewels/starlight-quiz)
+   (Apache-2.0, `10★`, `2026-09-08`) renders the items permissively. 🔴 **Avoid
+   [`Citolab/qti-components`](https://github.com/Citolab/qti-components) if the renderer
+   must ship** — it is the maintained option of record and it is **GPL-3.0**.
+6. 🔴 **The psychometric half is still a build.** Per `p582`, all eleven psychometric rows
+   on these shelves are dead; `douglasrizzo/catsim` (BSD-3-Clause, Brazil) does adaptive-
+   test *simulation* only. 🟢 **State plainly in the proposal that defensible calibration
+   is bespoke or a commercial dependency** — it is not a composition.
+
+
 ## p582 — 2026-11-01 — **two recipes forced by this pass's measurements: the handwritten-assessment pipeline that finally has live components, and the compliance-shaped grader four regulators now require**
 
 Every component below was verified first-hand on `2026-11-01` with `q=repo:owner/name`
