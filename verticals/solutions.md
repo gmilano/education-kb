@@ -4,6 +4,28 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p595 — 2026-11-01 — the platform tier was not re-measured this pass; the grading axis was, and it yielded one unlicensed address rather than a platform
+
+### The one new address, and why it is not promotable
+
+🆕 [`dajarbot/AutoGrader`](https://github.com/dajarbot/AutoGrader) — the only address the
+nine legs served that this base has **never** held (`0` files). Local-first grading
+workspace: student writing scored against versioned rubrics by a local Ollama model, no API
+key, human approval before export.
+
+🔴 **It is 🔴 BLOCK, not 🟢.** Measured first-hand this pass: `0`★, `0` forks, `0`
+watchers, `8` commits, no description — and
+**`10` grant probes (`LICENSE` / `.md` / `.txt` / `COPYING` / `LICENCE` × `main`+`master`) all
+answer `404`**, against a `200` control on `main/README.md` that proves the branch exists and
+the absences are real rather than a wrong-branch artefact. **No grant of any kind.** It cannot
+be forked into client work, and it is filed here so a twenty-seventh pass does not spend a leg
+rediscovering it.
+
+🔵 The five other autograder addresses the topic axis served were all already held:
+`webtech-network/autograder` (`14` files), `johnswyou/autograder` (`11`),
+`scaleapi/researchrubrics` (`8`), `alphadl/AdaRubrics` (`6`), `alphadl` (`5`).
+
+---
 ## 🆕 p594 — 2026-11-01 — the licence-probe defect `p593` inferred from one row is a property of THIS page's tier: `30 of 253` curated addresses default to neither `main` nor `master`, and they are the platforms of record almost without exception
 
 🔵 **Why this census belongs on the verticals page and not on an agent page.** `p593` found one

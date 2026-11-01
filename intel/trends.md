@@ -4,6 +4,65 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p595 — 2026-11-01 — twenty-six passes of nil is no longer a research result about the industry; it is a measurement of the channel, and the cost of the record is now itself the finding
+
+### The legs, measured against this base before being called new
+
+All four mandated regional legs ran, plus the four global legs and one topic axis
+(`grading / autograder / rubric`). Every token was grepped against this base before being
+called new — `569-B`'s standing requirement.
+
+| token served | region | already in this base? |
+| --- | --- | --- |
+| Digital Omnibus **Regulation (EU) 2026/1744** — high-risk education duties slip `2026-08-02` → `2027-12-02` | EMEA | 🔴 held — `55` files |
+| EU AI Act **Art. 50** transparency duties live `2026-08-02`; emotion-recognition ban live since `2025-02-02` | EMEA | 🔴 held — `46` files |
+| **South Korea AI Basic Act** in force Jan 2026 (grace year, guidance-first) | APAC | 🔴 held — `45` files |
+| **Vietnam** 2026 AI law — education named among six high-risk sectors | APAC | 🔴 held — `78` files |
+| **TEQSA** (Australia) mandatory university gen-AI action plans | APAC | 🔴 held — `11` files |
+| UNESCO **IESALC / UNU** study — 200 HEIs, 19 countries | LATAM | 🔴 held — `57` files |
+| **87 %** of LAC institutions use AI in ≥1 area; **26 %** hold a formal strategy; **74 %** in teaching | LATAM | 🔴 held — `39` files |
+| **716** AI regulatory instruments across 23 countries (U. de los Andes) | LATAM | 🔴 held — `27` files |
+| UNESCO **Observatory on AI in Education for LAC**, Santiago, `2026-04-14` | LATAM | 🔴 held — `11` files |
+| US **134 bills in 31 states** | North America | 🔴 held — `37` files, **sixth** consecutive pass |
+| **NY A 9190** (grade-9 floor), **MD SB 720 / HB 1057** | North America | 🔴 held — `10` / `22` files |
+| **K-12 AI Literacy and Readiness Act of 2026** advanced in committee | North America | 🔴 held — `23` files |
+| Mandatory district AI policy in **ID, OK, VA, MD** | North America | 🔴 held — `23` files |
+
+🔴 **`13 of 13` already held — no region returned a token this base lacks.** This is the
+**twenty-sixth** consecutive nil on the mandated legs, and it is now a measured property of
+the channel rather than a run of bad luck. 🟢 **Stated as the prompt requires: the gap is
+not regional silence.** Every region answered, and every region answered with this base's
+existing picture. The four global legs returned `DeepTutor`, `OpenMAIC`/`MAIC` (held, `148`
+files), `ai-agents-for-beginners`, `CrewAI` and `AutoGen` — **zero new addresses**.
+
+### 🔴 `595-A` — a standing defect nothing in this base has ever recorded: it has no retention policy
+
+Measured this pass with `du`, and grepped first to confirm it is unrecorded
+(`repo size` → `0` files, `bloat` → `0`, `archive policy` → `0`):
+
+| path | size |
+| --- | --: |
+| `compose/` | **53 MB** |
+| `archive/` | **31 MB** |
+| `evidence/` | **17 MB** |
+| `agents/trending.md` | **5.3 MB** (`65,414` lines) |
+| `repos/trending.md` | **4.0 MB** (`50,386` lines) |
+| `README.md` | **2.7 MB** |
+| `Makefile` | **144 KB** |
+| **working tree total** | **118 MB** |
+
+🔴 **The append-only rule that protects the trend record has no counterpart that bounds
+it.** At `~595` passes the two trending pages are `115,800` lines between them; a reader
+looking for this week's signal pages through fifty thousand lines of history to find it, and
+a `git clone` of a single-industry KB now moves `118 MB`.
+
+🔵 **This is a finding, not an action.** Pruning history would destroy the trend record the
+append-only rule exists to preserve, so this pass did **not** truncate anything. What is
+needed is a *retention decision* — most plausibly: keep the newest `N` passes inline and
+roll older sections into `archive/` with an index — and that decision belongs to whoever
+owns this KB, not to pass `595`.
+
+---
 ## p594 — 2026-11-01 — a licence rule adopted mid-life does not re-grade the shelf behind it, and the two rules this base adopted three passes apart are mutually destructive
 
 ## 50. In an append-only curated base, adopting a classification rule silently creates two cohorts — rows graded under the new rule and rows still carrying the old grade — and the old cohort is where the dangerous errors live (high confidence — mechanism identified and one live instance found at `2,057★`)

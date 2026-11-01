@@ -4,6 +4,20 @@ region: Global
 updated: 2026-11-01
 ---
 
+🆕 **`p595` — scope stated before its result: `9` legs run, `3` shelf rows re-measured on a
+second instrument, `4` grants byte-read. The shelf was NOT re-swept.** 🟢 **No row on this
+page changed except `DeepTutor`**, which shipped `v1.7.1` today and reads `53.5k`★. 🟢 The
+three largest rows were re-measured with `WebFetch` rather than the API and **all three
+agree** with what `p592` recorded — `ai-agents-for-beginners` `78.6k`, `ai-engineering-from-scratch`
+`76.2k`, `DeepTutor` `53.5k`. 🔴 **Twenty-sixth consecutive nil**: the nine legs served one
+address this base has never held, [`dajarbot/AutoGrader`](https://github.com/dajarbot/AutoGrader),
+and it is `0`★ with **no `LICENSE` file at all** (`404` on `main`) — 🔴 BLOCK, not shelved.
+🔴 Two structural defects registered this pass and both are on
+[`./trending.md`](./trending.md): `595-A` this repo is **`118 MB` with no retention policy**,
+`595-B` [`../intel/market.md`](../intel/market.md) carries **three** `## Opportunities by region`
+headings where the contract allows one.
+
+---
 # Top AI agents for education
 
 **What this page is.** A curated, verified table of open-source AI agents for education
@@ -200,7 +214,7 @@ placement (institution, org, or language of the project); otherwise it reads `Gl
 | **ai-agents-for-beginners** | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT (text)** | **78,576** | `2026-10-31` | Global | 🆕 **The largest row this base has ever shelved, and it was in the history log 26 times before it reached a page.** 18 lessons that build agents from first principles — the reskilling curriculum a studio hands a client's engineering org on day one. Microsoft. |
 | **ai-engineering-from-scratch** | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **MIT (text)** | **76,170** | `2026-10-29` | Global | 🆕 **Second-largest, also re-found 26× and never shelved.** Learn-it / build-it / ship-it AI-engineering curriculum. Pairs with the row above: one teaches agents, this one teaches shipping them. |
 | **ppt-master** | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | 🟢 **MIT (text)** | **71,973** | `2026-10-30` | Global | 🆕 Documents or a bare topic → **native** PowerPoint decks: real shapes, transitions, charts, narration. The courseware-generation layer. **Largest row on this shelf**; API reported MIT and the licence file confirms it. |
-| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | **53,385** | `2026-10-31` | APAC | Lifelong personalised tutoring. The field's only *purpose-built* education agent at frontier scale. HKUDS (Univ. of Hong Kong). |
+| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 **Apache-2.0 (text, 11,408 B)** | **53,500** | `2026-11-01` | APAC | Lifelong personalised tutoring. The field's only *purpose-built* education agent at frontier scale. HKUDS (Univ. of Hong Kong). 🆕 **`v1.7.1` dated `2026.11.1` — shipped today**, `+1.5k`★ in four days over two point releases. 🔵 **Pin a tag, not `main`.** |
 | **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT | **42,360** | `2026-11-01` | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent learning. Tsinghua. |
 | **book-to-skill** | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT (text, `LICENSE.md`)** | **36,686** | `2026-10-28` | Global | 🆕 Any technical book PDF → a ready Claude Code skill: study, reference and use. **The courseware-ingestion half of the pair with `ppt-master`** (which is the generation half). 🔴 Default branch is `master`; re-found 19× in history and never shelved. |
 | **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | **6,954** | `2026-11-01` | Global | Free online learning platform built on interactive "explorations". Both a platform and an authoring model. |

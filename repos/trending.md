@@ -4,6 +4,71 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p595` — `2026-11-01` — **🔴 THE TOPIC AXIS (`grading`/`autograder`/`rubric`) SERVED `6` ADDRESSES AND `5` WERE ALREADY HELD; THE SIXTH HAS NO LICENCE FILE (`404` ON `main`). 🟢 `curl -sI` RE-CONFIRMED NON-DISCRIMINATING (`403` FOR A FABRICATED REPO AND FOR `moodle/moodle` ALIKE); `raw.githubusercontent.com` DISCRIMINATES `200`/`404` AND REMAINS THE ONLY GRANT GROUND TRUTH. 🔴 `595-A`: THIS REPO IS `118 MB` WITH NO RETENTION POLICY.**
+
+### The one new address, and why it is not promotable
+
+🆕 [`dajarbot/AutoGrader`](https://github.com/dajarbot/AutoGrader) — the only address the
+nine legs served that this base has **never** held (`0` files). Local-first grading
+workspace: student writing scored against versioned rubrics by a local Ollama model, no API
+key, human approval before export.
+
+🔴 **It is 🔴 BLOCK, not 🟢.** Measured first-hand this pass: `0`★, `0` forks, `0`
+watchers, `8` commits, no description — and
+**`10` grant probes (`LICENSE` / `.md` / `.txt` / `COPYING` / `LICENCE` × `main`+`master`) all
+answer `404`**, against a `200` control on `main/README.md` that proves the branch exists and
+the absences are real rather than a wrong-branch artefact. **No grant of any kind.** It cannot
+be forked into client work, and it is filed here so a twenty-seventh pass does not spend a leg
+rediscovering it.
+
+🔵 The five other autograder addresses the topic axis served were all already held:
+`webtech-network/autograder` (`14` files), `johnswyou/autograder` (`11`),
+`scaleapi/researchrubrics` (`8`), `alphadl/AdaRubrics` (`6`), `alphadl` (`5`).
+
+### 🟢 The shelf's star figures were independently re-measured and they AGREE
+
+`p592` published a `192 of 192` sweep. This pass did not take it on trust — it re-measured
+three of the largest rows on a **different instrument** (`WebFetch` on the repo page, not
+the API):
+
+| row | this base recorded | re-measured `p595` | verdict |
+| --- | --: | --- | --- |
+| `microsoft/ai-agents-for-beginners` | **78,576** | `78.6k` · MIT | 🟢 agrees |
+| `rohitg00/ai-engineering-from-scratch` | **76,170** | `76.2k` · MIT | 🟢 agrees |
+| `HKUDS/DeepTutor` | **53,385** | `53.5k` · Apache-2.0 | 🟢 agrees |
+
+🟢 **No defect found. The shelf's numbers are sound**, and the `Apache-2.0` verdict on
+`DeepTutor` — which `p562` defended against a trade blog calling it MIT — was re-confirmed
+by byte-reading the grant (`11,408 B`, `Apache License Version 2.0`).
+
+### 🔴 `595-A` — a standing defect nothing in this base has ever recorded: it has no retention policy
+
+Measured this pass with `du`, and grepped first to confirm it is unrecorded
+(`repo size` → `0` files, `bloat` → `0`, `archive policy` → `0`):
+
+| path | size |
+| --- | --: |
+| `compose/` | **53 MB** |
+| `archive/` | **31 MB** |
+| `evidence/` | **17 MB** |
+| `agents/trending.md` | **5.3 MB** (`65,414` lines) |
+| `repos/trending.md` | **4.0 MB** (`50,386` lines) |
+| `README.md` | **2.7 MB** |
+| `Makefile` | **144 KB** |
+| **working tree total** | **118 MB** |
+
+🔴 **The append-only rule that protects the trend record has no counterpart that bounds
+it.** At `~595` passes the two trending pages are `115,800` lines between them; a reader
+looking for this week's signal pages through fifty thousand lines of history to find it, and
+a `git clone` of a single-industry KB now moves `118 MB`.
+
+🔵 **This is a finding, not an action.** Pruning history would destroy the trend record the
+append-only rule exists to preserve, so this pass did **not** truncate anything. What is
+needed is a *retention decision* — most plausibly: keep the newest `N` passes inline and
+roll older sections into `archive/` with an index — and that decision belongs to whoever
+owns this KB, not to pass `595`.
+
+---
 ## 🆕 `p594` — `2026-11-01` — **🟢 `593-B1` CLOSED WITH A POPULATION, AND THE BRANCH DEFECT IS A PROPERTY OF THE PLATFORM TIER RATHER THAN AN ACCIDENT: `30 of 253` CURATED ADDRESSES DEFAULT TO NEITHER `main` NOR `master`, AND `11` OF THEM HAVE A `main` THAT ANSWERS `200` WITH A GRANT THE PROJECT DOES NOT SHIP. 🔴 AN UNANCHORED LICENCE ABBREVIATION FALSE-MATCHES `65 of 65` GRANTS READ. 🔴 TWENTY-FIFTH NIL.**
 
 ### 🟢 The sweep — scope stated before the result

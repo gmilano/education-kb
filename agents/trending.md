@@ -4,6 +4,109 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p595` — `2026-11-01` — **🔴 TWENTY-SIXTH CONSECUTIVE NIL: `13 of 13` REGIONAL TOKENS AND `0 of 5` GLOBAL ADDRESSES WERE ALREADY HELD, AND THE ONE ADDRESS NINE LEGS SERVED THAT THIS BASE HAS NEVER HELD IS `0`★ WITH **NO LICENCE FILE AT ALL** (`404`). 🟢 `DeepTutor` SHIPPED `v1.7.1` TODAY AT `53.5k`★ — THE PASS'S ONLY NEW SHELF FACT. 🟢 THREE SHELF FIGURES RE-MEASURED ON A SECOND INSTRUMENT, ALL AGREE. 🔴 TWO STRUCTURAL DEFECTS REGISTERED (`595-A` NO RETENTION POLICY, `118 MB`; `595-B` TRIPLICATED REGION HEADING).**
+
+### The legs, measured against this base before being called new
+
+All four mandated regional legs ran, plus the four global legs and one topic axis
+(`grading / autograder / rubric`). Every token was grepped against this base before being
+called new — `569-B`'s standing requirement.
+
+| token served | region | already in this base? |
+| --- | --- | --- |
+| Digital Omnibus **Regulation (EU) 2026/1744** — high-risk education duties slip `2026-08-02` → `2027-12-02` | EMEA | 🔴 held — `55` files |
+| EU AI Act **Art. 50** transparency duties live `2026-08-02`; emotion-recognition ban live since `2025-02-02` | EMEA | 🔴 held — `46` files |
+| **South Korea AI Basic Act** in force Jan 2026 (grace year, guidance-first) | APAC | 🔴 held — `45` files |
+| **Vietnam** 2026 AI law — education named among six high-risk sectors | APAC | 🔴 held — `78` files |
+| **TEQSA** (Australia) mandatory university gen-AI action plans | APAC | 🔴 held — `11` files |
+| UNESCO **IESALC / UNU** study — 200 HEIs, 19 countries | LATAM | 🔴 held — `57` files |
+| **87 %** of LAC institutions use AI in ≥1 area; **26 %** hold a formal strategy; **74 %** in teaching | LATAM | 🔴 held — `39` files |
+| **716** AI regulatory instruments across 23 countries (U. de los Andes) | LATAM | 🔴 held — `27` files |
+| UNESCO **Observatory on AI in Education for LAC**, Santiago, `2026-04-14` | LATAM | 🔴 held — `11` files |
+| US **134 bills in 31 states** | North America | 🔴 held — `37` files, **sixth** consecutive pass |
+| **NY A 9190** (grade-9 floor), **MD SB 720 / HB 1057** | North America | 🔴 held — `10` / `22` files |
+| **K-12 AI Literacy and Readiness Act of 2026** advanced in committee | North America | 🔴 held — `23` files |
+| Mandatory district AI policy in **ID, OK, VA, MD** | North America | 🔴 held — `23` files |
+
+🔴 **`13 of 13` already held — no region returned a token this base lacks.** This is the
+**twenty-sixth** consecutive nil on the mandated legs, and it is now a measured property of
+the channel rather than a run of bad luck. 🟢 **Stated as the prompt requires: the gap is
+not regional silence.** Every region answered, and every region answered with this base's
+existing picture. The four global legs returned `DeepTutor`, `OpenMAIC`/`MAIC` (held, `148`
+files), `ai-agents-for-beginners`, `CrewAI` and `AutoGen` — **zero new addresses**.
+
+### The one new address, and why it is not promotable
+
+🆕 [`dajarbot/AutoGrader`](https://github.com/dajarbot/AutoGrader) — the only address the
+nine legs served that this base has **never** held (`0` files). Local-first grading
+workspace: student writing scored against versioned rubrics by a local Ollama model, no API
+key, human approval before export.
+
+🔴 **It is 🔴 BLOCK, not 🟢.** Measured first-hand this pass: `0`★, `0` forks, `0`
+watchers, `8` commits, no description — and
+**`10` grant probes (`LICENSE` / `.md` / `.txt` / `COPYING` / `LICENCE` × `main`+`master`) all
+answer `404`**, against a `200` control on `main/README.md` that proves the branch exists and
+the absences are real rather than a wrong-branch artefact. **No grant of any kind.** It cannot
+be forked into client work, and it is filed here so a twenty-seventh pass does not spend a leg
+rediscovering it.
+
+🔵 The five other autograder addresses the topic axis served were all already held:
+`webtech-network/autograder` (`14` files), `johnswyou/autograder` (`11`),
+`scaleapi/researchrubrics` (`8`), `alphadl/AdaRubrics` (`6`), `alphadl` (`5`).
+
+### 🆕 The only genuinely new fact on the shelf: `DeepTutor` shipped again, today
+
+🟢 **`DeepTutor v1.7.1`, dated `2026.11.1` — released today, and `0` files in this base.**
+This base holds `v1.7.0` (`2026-10-28`) at `51.8k`–`52.0k`★. Re-measured this pass:
+**`53.5k`★**, i.e. **`+1.5k` in four days** across two point releases. 🔵 The field's only
+purpose-built education agent at frontier scale is still accelerating, and its release
+cadence is now sub-weekly — a studio pinning it in client work should pin a **tag**, not
+`main`.
+
+### 🟢 The shelf's star figures were independently re-measured and they AGREE
+
+`p592` published a `192 of 192` sweep. This pass did not take it on trust — it re-measured
+three of the largest rows on a **different instrument** (`WebFetch` on the repo page, not
+the API):
+
+| row | this base recorded | re-measured `p595` | verdict |
+| --- | --: | --- | --- |
+| `microsoft/ai-agents-for-beginners` | **78,576** | `78.6k` · MIT | 🟢 agrees |
+| `rohitg00/ai-engineering-from-scratch` | **76,170** | `76.2k` · MIT | 🟢 agrees |
+| `HKUDS/DeepTutor` | **53,385** | `53.5k` · Apache-2.0 | 🟢 agrees |
+
+🟢 **No defect found. The shelf's numbers are sound**, and the `Apache-2.0` verdict on
+`DeepTutor` — which `p562` defended against a trade blog calling it MIT — was re-confirmed
+by byte-reading the grant (`11,408 B`, `Apache License Version 2.0`).
+
+### 🔴 `595-A` — a standing defect nothing in this base has ever recorded: it has no retention policy
+
+Measured this pass with `du`, and grepped first to confirm it is unrecorded
+(`repo size` → `0` files, `bloat` → `0`, `archive policy` → `0`):
+
+| path | size |
+| --- | --: |
+| `compose/` | **53 MB** |
+| `archive/` | **31 MB** |
+| `evidence/` | **17 MB** |
+| `agents/trending.md` | **5.3 MB** (`65,414` lines) |
+| `repos/trending.md` | **4.0 MB** (`50,386` lines) |
+| `README.md` | **2.7 MB** |
+| `Makefile` | **144 KB** |
+| **working tree total** | **118 MB** |
+
+🔴 **The append-only rule that protects the trend record has no counterpart that bounds
+it.** At `~595` passes the two trending pages are `115,800` lines between them; a reader
+looking for this week's signal pages through fifty thousand lines of history to find it, and
+a `git clone` of a single-industry KB now moves `118 MB`.
+
+🔵 **This is a finding, not an action.** Pruning history would destroy the trend record the
+append-only rule exists to preserve, so this pass did **not** truncate anything. What is
+needed is a *retention decision* — most plausibly: keep the newest `N` passes inline and
+roll older sections into `archive/` with an index — and that decision belongs to whoever
+owns this KB, not to pass `595`.
+
+---
 ## 🆕 `p594` — `2026-11-01` — **🔴 A ROW THIS PAGE'S SHELF PUBLISHED AS 🟢 `MIT (text)` — SHIPPABLE IN CLIENT WORK — IS NON-COMMERCIAL WITH A REVENUE-SHARE CLAUSE, AND THE RULE THAT CATCHES IT WAS ADOPTED THREE PASSES AGO AND NEVER APPLIED BACKWARDS. 🟢 `593-B1` CLOSED WITH A POPULATION: `30 of 253` CURATED ADDRESSES DEFAULT TO NEITHER `main` NOR `master`, CONCENTRATED IN THE VERTICAL LAYER. 🟢 `591-B` SETTLES AT PERFECT SEPARATION ON ALL `46` BLANK ROWS. 🔴 TWENTY-FIFTH NIL. SEVEN REGISTERED (`594-A`…`594-G`).**
 
 ### 🔵 Channel table (`569-B`'s standing row)

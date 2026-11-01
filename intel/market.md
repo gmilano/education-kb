@@ -4,6 +4,49 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p595 — 2026-11-01 — the four regional legs pay `4 of 4` and the demand side is saturated at `13 of 13` tokens already held; no region returned a token this base lacks, and the region heading this file keys on is triplicated
+
+### The legs, measured against this base before being called new
+
+All four mandated regional legs ran, plus the four global legs and one topic axis
+(`grading / autograder / rubric`). Every token was grepped against this base before being
+called new — `569-B`'s standing requirement.
+
+| token served | region | already in this base? |
+| --- | --- | --- |
+| Digital Omnibus **Regulation (EU) 2026/1744** — high-risk education duties slip `2026-08-02` → `2027-12-02` | EMEA | 🔴 held — `55` files |
+| EU AI Act **Art. 50** transparency duties live `2026-08-02`; emotion-recognition ban live since `2025-02-02` | EMEA | 🔴 held — `46` files |
+| **South Korea AI Basic Act** in force Jan 2026 (grace year, guidance-first) | APAC | 🔴 held — `45` files |
+| **Vietnam** 2026 AI law — education named among six high-risk sectors | APAC | 🔴 held — `78` files |
+| **TEQSA** (Australia) mandatory university gen-AI action plans | APAC | 🔴 held — `11` files |
+| UNESCO **IESALC / UNU** study — 200 HEIs, 19 countries | LATAM | 🔴 held — `57` files |
+| **87 %** of LAC institutions use AI in ≥1 area; **26 %** hold a formal strategy; **74 %** in teaching | LATAM | 🔴 held — `39` files |
+| **716** AI regulatory instruments across 23 countries (U. de los Andes) | LATAM | 🔴 held — `27` files |
+| UNESCO **Observatory on AI in Education for LAC**, Santiago, `2026-04-14` | LATAM | 🔴 held — `11` files |
+| US **134 bills in 31 states** | North America | 🔴 held — `37` files, **sixth** consecutive pass |
+| **NY A 9190** (grade-9 floor), **MD SB 720 / HB 1057** | North America | 🔴 held — `10` / `22` files |
+| **K-12 AI Literacy and Readiness Act of 2026** advanced in committee | North America | 🔴 held — `23` files |
+| Mandatory district AI policy in **ID, OK, VA, MD** | North America | 🔴 held — `23` files |
+
+🔴 **`13 of 13` already held — no region returned a token this base lacks.** This is the
+**twenty-sixth** consecutive nil on the mandated legs, and it is now a measured property of
+the channel rather than a run of bad luck. 🟢 **Stated as the prompt requires: the gap is
+not regional silence.** Every region answered, and every region answered with this base's
+existing picture. The four global legs returned `DeepTutor`, `OpenMAIC`/`MAIC` (held, `148`
+files), `ai-agents-for-beginners`, `CrewAI` and `AutoGen` — **zero new addresses**.
+
+### 🔴 `595-B` — `intel/market.md` carries **three** `## Opportunities by region` headings
+
+The standing instruction is **one** such heading with one `###` per region. This file has it
+at lines `62`, `161` and `925`, each from a different pass prepending its own copy, with
+`### North America` / `### EMEA` / `### APAC` / `### LATAM` repeating under several of them.
+
+🔴 **A compiler keying opportunities off that heading buckets them three ways**, and which
+bucket wins depends on read order. 🟢 **This pass did not add a fourth.** Its regional
+findings are carried in the table above with an explicit `region` column drawn from the
+closed vocabulary, so nothing new is mis-bucketed while the defect stands.
+
+---
 ## 🆕 p594 — 2026-11-01 — the regional legs pay `4 of 4` and the demand side is now measurably saturated at `15 of 16` tokens already held; the one new token is a LATAM *capital* figure, it is cross-sector rather than education-specific, and two outlets disagree on it
 
 ### 🔵 The legs, measured against this base rather than described

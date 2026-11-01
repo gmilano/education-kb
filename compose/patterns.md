@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p595 — 2026-11-01 — one new recipe, built only from grants read byte-for-byte this pass
+
+### `P595-1` — Rubric-graded coursework on a client's existing LMS, no student data leaving the estate
+
+🔵 **Why this recipe and not another.** The grading axis was the only leg of nine that
+returned anything this pass, and the three usable addresses on it were all already in this
+base, unshelved and unwired. This recipe is the wiring.
+
+**The parts, each with the grant read this pass rather than taken from the API:**
+
+| part | address | grant (byte-read `p595`) | role |
+| --- | --- | --- | --- |
+| LMS of record | [`moodle/moodle`](https://github.com/moodle/moodle) | 🔴 GPL-3.0 | submissions + roster + gradebook; **deploy alongside, do not fork into client IP** |
+| Rubric engine | [`webtech-network/autograder`](https://github.com/webtech-network/autograder) | 🟢 Apache-2.0 (`11,357 B`) | tree-structured rubrics — base / bonus / penalty, weighted subjects — and report generation |
+| Handwriting → text + review queue | [`johnswyou/autograder`](https://github.com/johnswyou/autograder) | 🟢 MIT (`1,065 B`) | locates answers on scanned work, transcribes, applies rubric, emits a **focused human review queue** |
+| Grader-quality harness | [`scaleapi/researchrubrics`](https://github.com/scaleapi/researchrubrics) | 🟢 MIT (`1,078 B`) | ICLR 2026 rubric benchmark — use it to score *the grader*, not the student |
+| Tutor loop (optional) | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 (`11,408 B`) | turns a failed rubric criterion into targeted remediation; **pin `v1.7.1`, not `main`** |
+
+**How they wire together**
+
+1. Moodle's **Assignment** web service (`mod_assign_get_submissions`) is the only integration
+   point — poll it, do not patch Moodle. This keeps the GPL-3.0 boundary clean: the client
+   runs Moodle as shipped and the studio's code talks to it over HTTP.
+2. Scanned or typed submissions go to `johnswyou/autograder` for localisation + transcription.
+   Typed submissions skip this hop entirely.
+3. Transcribed text + the course's rubric YAML go to `webtech-network/autograder`. Its
+   base/bonus/penalty tree is the thing a faculty committee can actually review and sign off,
+   which is what makes the output defensible.
+4. **Nothing is written back automatically.** Every criterion lands in the review queue; a
+   human approves, and only then does the score go back through `mod_assign_save_grade`.
+5. `scaleapi/researchrubrics` runs offline against a held-out set of human-graded work to
+   produce the grader-agreement number the client's academic board will ask for **before** any
+   of this touches a real cohort.
+6. Approved failures fan out to `DeepTutor` as remediation prompts, closing the loop.
+
+**Regional fit, from this pass's own regional legs**
+
+- 🔴 **EMEA — read the delay correctly before you quote it.** Regulation (EU) 2026/1744
+  moved **stand-alone high-risk** education duties to `2027-12-02`, but **Art. 50 transparency
+  duties are live `2026-08-02`** and the emotion-recognition ban has applied since
+  `2025-02-02`. Automated grading is the Annex III use-case this recipe sits closest to, so the
+  human-approval gate in step 4 is **not optional polish — it is the control that keeps the
+  deployment out of the stand-alone high-risk class**.
+- 🟢 **LATAM — the strongest fit, and the numbers say why.** `87 %` of LAC institutions
+  already use AI somewhere, `74 %` in teaching, but only `26 %` hold a formal strategy. The
+  governance artefact this recipe produces at step 5 is the scarce thing, not the model.
+- 🔵 **North America — jurisdiction decides whether this is sellable at all.** One DC policy
+  **bans AI from grading outright**; `ID`, `OK`, `VA`, `MD` mandate district-level AI policy.
+  Qualify the district's rule before scoping, not after.
+- 🔵 **APAC — Vietnam names education a high-risk sector** in its 2026 law and Australia's
+  **TEQSA** requires university gen-AI action plans; step 5's agreement number is the artefact
+  both regimes ask for.
+
+🔴 **One honest limit.** `webtech-network/autograder` and `johnswyou/autograder` are small
+projects. Their grants are clean and byte-verified, but neither carries the contributor base
+to be load-bearing without the studio taking maintenance ownership — **price that in.**
+
+---
 ## 🆕 p594 — 2026-11-01 — one recipe that is now mandatory rather than optional, because this pass proved the base's own licence verdicts can be confidently wrong; and the Brazilian LATAM engagement that `594-D` makes writable for the first time
 
 ## 🆕 P-594-A — The pre-engagement licence gate: clear the stack before a line of code is written (2–3 days, run once per engagement)

@@ -4,6 +4,19 @@ region: Global
 updated: 2026-11-01
 ---
 
+🆕 **`p595` — this page was not re-measured and no row changed.** The pass spent its
+legs on the four mandated regions (`13 of 13` tokens already held), the four global legs
+(`0` new addresses) and one topic axis (`grading`/`autograder`/`rubric`), which returned
+`6` addresses of which `5` were already held and the sixth is unlicensed. 🟢 **Three
+grants on the grading axis were byte-read this pass and are recorded here for the recipe on
+[`../compose/patterns.md`](../compose/patterns.md)**: `webtech-network/autograder`
+**Apache-2.0** (`11,357 B`), `johnswyou/autograder` **MIT** (`1,065 B`),
+`scaleapi/researchrubrics` **MIT** (`1,078 B`). 🔴 **No new foundational platform was
+found**, and the honest reason is stated rather than padded: the platform tier of this
+industry — Moodle, Open edX, Canvas, OpenOlat, Sakai — is mature and does not turn over
+weekly, so a weekly leg against it is expected to return nil and did.
+
+---
 # Foundational open source repos for education
 
 **What this page is.** The platform and component tier an education engagement is built
