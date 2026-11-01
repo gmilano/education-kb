@@ -4,6 +4,70 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p600` — `2026-11-01` — a permissive, self-hostable retention platform tier finally exists on this page, and the ERP/SIS gap moves for the first time in many passes
+
+### 🟢 The spaced-repetition / retention tier — new on this page
+
+🔵 **Why it belongs here rather than on [`../agents/top.md`](../agents/top.md):** these are *systems*
+a client runs, with their own storage, scheduling and UI — the same category as Moodle or Kolibri,
+one layer down. Every grant byte-read `2026-11-01` at the real default branch; every repo's
+fabricated-path control returned `404`.
+
+| Platform | Repo | ★ | Grant (byte-read) | Branch | Customisable with AI on top? |
+| --- | --- | --: | --- | --- | --- |
+| **flashcards-obsidian** | [reuseman/flashcards-obsidian](https://github.com/reuseman/flashcards-obsidian) | **1,113** | 🟢 **MIT** (`1,069 B`) | `main` | 🟢 **Yes** — notes→cards pipeline; an agent writes the markdown, the plugin schedules it. Pushed `2026-10-31` |
+| **memcode** | [lakesare/memcode](https://github.com/lakesare/memcode) | **408** | 🟢 **MIT** (`1,080 B`) | 🔴 **`master`** | 🟢 **Yes** — hostable web SRS with public decks; the multi-tenant option |
+| **repeater** | [shaankhosla/repeater](https://github.com/shaankhosla/repeater) | **442** | 🟢 **Apache-2.0** (`11,357 B`) | `main` | 🟢 **Yes** — terminal-native, so it embeds in a CLI tutor with **no hosting, no auth, no UI** |
+| **memo** | [olmps/memo](https://github.com/olmps/memo) | **1,871** | 🟢 **BSD-3-Clause** (`1,515 B`) | `main` | 🟡 **Reference only** — Flutter mobile SRS, last push `2024-07-29` |
+| **scholarsome** | [hwgilbert16/scholarsome](https://github.com/hwgilbert16/scholarsome) | **793** | 🔴 **AGPL-3.0** (`34,523 B`) | 🔴 **`develop`** | 🔴 **Reciprocal — do not vendor into a client product.** The most feature-complete of the set, which is exactly why the grant matters |
+| **mnemosyne** | [mnemosyne-proj/mnemosyne](https://github.com/mnemosyne-proj/mnemosyne) | **605** | 🔴 **pointer, not a grant** (`156 B`) | `master` | 🔴 **BLOCK** — the file says only *"Different parts of the software use different licenses:"*. `600-G` |
+
+🔵 **The commercially useful shape of this tier:** `4 of 6` are permissive and `2 of 6` are not, and
+🔴 **the two that are not are the two a feature comparison would pick first** (`scholarsome` is the
+most complete web app; `mnemosyne` the most mature desktop one). That is `599-C`'s pattern inverted —
+here the licence risk sits at the *top* of the quality ranking, not in the unaudited tail.
+
+### 🟢 The ERP / SIS gap moves — the oldest open gap on this page, narrowed and NOT closed
+
+This page has carried *"no permissive education ERP/SIS of record"* as its oldest unclosed gap. The
+field measured again this pass:
+
+| Platform | Grant | Branch | Verdict |
+| --- | --- | --- | --- |
+| [frappe/education](https://github.com/frappe/education) | 🔴 **`19 B` pointer** — `license.txt`, in full: `License: GNU GPL V3` | 🔴 **`develop`** | 🔴 **Reciprocal, and the grant names a licence without granting one** (`600-H`). 🔴 Only the **lowercase** path resolves |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🔴 LGPL-3.0 | 🔴 **`19.0`** | 🔴 Reciprocal; and the branch is a *version number*, which no `main`/`master` probe resolves |
+| [RosarioSIS](https://www.rosariosis.org/) | 🔴 GPL-2.0 | — | 🔴 Reciprocal |
+| GegoK12 | 🟡 MIT claimed by vendor site | — | 🟡 **Unverified — no canonical repo address resolved this pass**; recorded as a lead, not a row |
+| 🆕 [weidonglang/EduNexus-AI](https://github.com/weidonglang/EduNexus-AI) | 🟢 **MIT** (byte-read, `1,071 B`) | `main` | 🟢 **First permissive address this page has ever held in this category** — and it is `5★`, a graduation-project-scale Spring Boot + Vue 3 teaching-administration system |
+
+🔵 **So the gap narrows in a specific and limited way:** 🟢 a permissively-licensed education
+administration system now *exists* on this page, 🔴 **and it is nowhere near institution-grade.** The
+honest statement for a proposal is that **the permissive SIS must still be built, not adopted** —
+but `EduNexus-AI` is now a readable reference for the data model rather than a blank sheet. 🔴 **Gap
+re-registered as narrowed, not closed.**
+
+### 🟢 `600-D` — an `81`-repo permissive curriculum estate, relevant here as *content* for the platforms above
+
+[`MathWorks-Teaching-Resources`](https://github.com/MathWorks-Teaching-Resources) — `81` repos, mostly
+**BSD-3-Clause**, undergraduate STEM courseware. 🔵 **It is not a platform, so it is not a row in the
+tables above** — it is the thing a studio *loads into* Moodle, Open edX or Kolibri when the client is
+an engineering faculty. 🟡 **MATLAB/Simulink runtime is commercial**; the course content is
+permissive. 🔴 `59 of 81` default to branch `release`, which is why `599` passes never saw it. Census:
+[`../evidence/mathworks-curriculum-census.2026-11-01-p600.tsv`](../evidence/mathworks-curriculum-census.2026-11-01-p600.tsv).
+
+### 🔴 `600-E` — a warning that applies to every row on this page
+
+A `200` from `raw.githubusercontent.com/<repo>/<branch>/LICENSE` proves **the branch exists**, not
+that it is the default. Measured on `8` platform-tier repos: 🔴 **`master` returned `200` on `6`, and
+on `4 of those 6` the real default branch is `main`, `develop` or `19.0`.** 🟢 Fabricated-branch
+controls returned `404` on `8 of 8`, so the channel discriminates — these are real files on real
+non-default branches. 🔵 **Every grant on this page must be resolved by
+`git ls-remote --symref` first** (now cross-checkable against `search/repositories`, which agreed
+`16 of 16` — `600-A`). Census:
+[`../evidence/branch-probe-asymmetry.2026-11-01-p600.tsv`](../evidence/branch-probe-asymmetry.2026-11-01-p600.tsv).
+
+---
+
 ## 🆕 `p599` — `2026-11-01` — the vertical tier is fully held, and the one new platform-shaped address this pass is not open source
 
 ### 🟢 `topic:lms` walked star-ranked — `13 of 13` already held

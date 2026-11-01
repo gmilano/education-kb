@@ -1,0 +1,25 @@
+repo	stars	api_spdx_id	api_default_branch	pushed	forks	ls_remote_symref	branch_used	grant_path	grant_bytes	grant_text_head	fabricated_path_ctl
+TerraByte-Dev/OpenEdu	6	MIT	master	2026-10-08	1	symref=master	branch=master	LICENSE	1080	MIT License	ctl=404
+Rayhaan1345/socratic-tutor	5	MIT	main	2026-10-23	0	symref=main	branch=main	LICENSE	1070	MIT License	ctl=404
+fcescob/understand	5	MIT	main	2026-10-13	1	symref=main	branch=main	LICENSE	1075	MIT License	ctl=404
+LearnAIHubC/LearnDeck	26	MIT	main	2026-07-15	3	symref=main	branch=main	LICENSE.txt	1068	MIT License	ctl=404
+sizwinz/StudySage-Offline-Online-AI-Note-Assistant	12	MIT	main	2026-07-05	2	symref=main	branch=main	LICENSE	1083	MIT License	ctl=404
+agenticfabriq/beacon	5	Apache-2.0	main	2026-10-25	0	symref=main	branch=main	LICENSE	11358	Apache License	ctl=404
+youngman2007/courseware-cn-annotator	5	MIT	main	2026-10-27	0	symref=main	branch=main	LICENSE	1093	MIT License	ctl=404
+selftune-dev/selftune	18	MIT	main	2026-10-24	3	symref=main	branch=main	LICENSE	1067	MIT License	ctl=404
+MathWorks-Teaching-Resources/Thermodynamics	43	BSD-3-Clause	release	2026-05-06	11	symref=release	branch=release	LICENSE.md	1528	Copyright (c) 2022, The MathWorks, Inc. All rights reserved.  Redistribution and use in so	ctl=404
+MathWorks-Teaching-Resources/Robotic-Manipulators	37	BSD-3-Clause	release	2026-05-12	7	symref=release	branch=release	LICENSE.md	1528	Copyright (c) 2023, The MathWorks, Inc. All rights reserved.  Redistribution and use in so	ctl=404
+weidonglang/EduNexus-AI	5	MIT	main	2026-07-01	1	symref=main	branch=main	LICENSE	1071	MIT License	ctl=404
+shaankhosla/repeater	442	Apache-2.0	main	2026-09-28	25	symref=main	branch=main	LICENSE	11357	Apache License	ctl=404
+Refloow/Exam-Quiz-Test	8	MIT	main	2026-02-07	4	symref=main	branch=main	LICENSE	1091	MIT License	ctl=404
+shshwtkhr/ScienceQuiz-Android-App	18	MIT	master	2026-10-25	3	symref=master	branch=master	LICENSE	1072	MIT License	ctl=404
+MathWorks-Teaching-Resources/Computational-Fluid-Dynamics	210	BSD-3-Clause	main	2025-04-03		sym=main	br=main	LICENSE	1527	BSD 3-Clause	ctl=404
+MathWorks-Teaching-Resources/Fourier-Analysis	143	BSD-3-Clause	release	2026-05-08		sym=release	br=release	LICENSE.md	1528	Copyright (c) 2024, The MathWorks, Inc. All rights reserved.	ctl=404
+MathWorks-Teaching-Resources/Virtual-Controls-Laboratory	109	BSD-3-Clause	release	2026-05-12		sym=release	br=release	LICENSE.md	1528	Copyright (c) 2023, The MathWorks, Inc. All rights reserved.	ctl=404
+MathWorks-Teaching-Resources/Fundamentals-of-Programming	37	BSD-3-Clause	release	2026-05-06		sym=release	br=release	LICENSE.md	1528	Copyright (c) 2023, The MathWorks, Inc. All rights reserved.	ctl=404
+MathWorks-Teaching-Resources/Fluid-Mechanics	30	BSD-3-Clause	release	2026-10-28		sym=release	br=release	LICENSE.md	1528	Copyright (c) 2024, The MathWorks, Inc. All rights reserved.	ctl=404
+mnemosyne-proj/mnemosyne	605	NOASSERTION	master	2026-04-18		sym=master	br=master	LICENSE	156	Different parts of the software use different licenses:  -op	ctl=404
+lakesare/memcode	408	MIT	master	2026-10-23		sym=master	br=master	LICENSE	1080	MIT License	ctl=404
+hwgilbert16/scholarsome	793	AGPL-3.0	develop	2026-06-24		sym=develop	br=develop	LICENSE	34523	GNU AFFERO GENERAL PUBLIC LICENSE	ctl=404
+reuseman/flashcards-obsidian	1113	MIT	main	2026-10-31		sym=main	br=main	LICENSE	1069	MIT License	ctl=404
+olmps/memo	1871	BSD-3-Clause	main	2024-07-29		sym=main	br=main	LICENSE	1515	BSD 3-Clause	ctl=404

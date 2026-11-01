@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p600` — `2026-11-01` — an `81`-repo BSD-3-Clause university curriculum estate was invisible for `599` passes, and the thing hiding it was a branch name
+
+### 🟢 `600-D` — the find, and both mechanisms that concealed it
+
+[`MathWorks-Teaching-Resources`](https://github.com/MathWorks-Teaching-Resources) — **`81`
+repositories**, overwhelmingly **BSD-3-Clause**, institution-targeted undergraduate courseware
+(fluid dynamics, thermodynamics, Fourier analysis, control systems, robotics, numerical methods,
+programming fundamentals). 🔴 **`0 of 81` held in this base before this pass.**
+
+| default branch | repos | share |
+| --- | --: | --: |
+| 🔴 **`release`** | **`59`** | 🔴 **`72.8 %`** |
+| `main` | `21` | `25.9 %` |
+| `master` | `1` | `1.2 %` |
+
+🔴 **Mechanism 1 — the branch.** A probe that tries `main`, then `master`, resolves **nothing** for
+`59 of 81` of this org and reports them as having no licence file. This page's own `p599` census found
+`master` was the surprise in education (*"education's platforms are old enough that `master` is still
+the norm"*). 🔵 **`release` is a third pattern, and it is the majority one inside the largest
+permissive curriculum publisher this base has found.**
+
+🔴 **Mechanism 2 — the axis set.** These repos are tagged with MATLAB and subject-matter topics and
+🔴 **carry no education topic at all**, so no `topic:lms` / `topic:ai-tutor` / `topic:courseware` query
+reaches them. They were found through a subject-keyword axis, which is `600-C`'s point made concrete.
+
+🟡 **The caveat is published with the find, not after it.** These are **MATLAB/Simulink** modules:
+🟢 the *content* is BSD-3-Clause and freely redistributable, 🔴 the *runtime* is commercial. 🔵 **So
+they are curriculum assets for an engineering-faculty engagement, not an open software stack** — and
+they are the strongest answer this base holds to *"we need accredited-quality STEM course content we
+are allowed to modify and rebrand"*, which no agent on these pages supplies.
+
+### 🟢 Promoted to the enablement tier — grants byte-read `2026-11-01` at the real default branch
+
+| repo | ★ | grant (byte-read) | branch | fab-path control |
+| --- | --: | --- | --- | --: |
+| [Computational-Fluid-Dynamics](https://github.com/MathWorks-Teaching-Resources/Computational-Fluid-Dynamics) | **210** | 🟢 **BSD-3-Clause** (`LICENSE`, `1,527 B`) | `main` | 🟢 `404` |
+| [Fourier-Analysis](https://github.com/MathWorks-Teaching-Resources/Fourier-Analysis) | **143** | 🟢 **BSD-3-Clause** (`LICENSE.md`, `1,528 B`) | 🔴 **`release`** | 🟢 `404` |
+| [Virtual-Controls-Laboratory](https://github.com/MathWorks-Teaching-Resources/Virtual-Controls-Laboratory) | **109** | 🟢 **BSD-3-Clause** (`1,528 B`) | 🔴 **`release`** | 🟢 `404` |
+| [Thermodynamics](https://github.com/MathWorks-Teaching-Resources/Thermodynamics) | **43** | 🟢 **BSD-3-Clause** (`1,528 B`) | 🔴 **`release`** | 🟢 `404` |
+| [Robotic-Manipulators](https://github.com/MathWorks-Teaching-Resources/Robotic-Manipulators) | **37** | 🟢 **BSD-3-Clause** (`1,528 B`) | 🔴 **`release`** | 🟢 `404` |
+| [Fundamentals-of-Programming](https://github.com/MathWorks-Teaching-Resources/Fundamentals-of-Programming) | **37** | 🟢 **BSD-3-Clause** (`1,528 B`) | 🔴 **`release`** | 🟢 `404` |
+| [Fluid-Mechanics](https://github.com/MathWorks-Teaching-Resources/Fluid-Mechanics) | **30** | 🟢 **BSD-3-Clause** (`1,528 B`) | 🔴 **`release`** | 🟢 `404` |
+
+🔵 **The `1,527 B` vs `1,528 B` split is the copyright year line**, not a licence difference — all
+seven are the three-clause BSD text with *The MathWorks, Inc.* as holder. `74` further repos in the
+org carry the same grant shape and are listed in the census rather than individually promoted:
+[`../evidence/mathworks-curriculum-census.2026-11-01-p600.tsv`](../evidence/mathworks-curriculum-census.2026-11-01-p600.tsv).
+
+### 🟢 The spaced-repetition component tier — concepts held, implementations missing
+
+🔵 **`FSRS` appears in `318` files of this base and `anki` in `485`**, so this base has argued about
+retention scheduling for hundreds of passes while holding almost none of the software that implements
+it. Grants byte-read this pass:
+
+| repo | ★ | grant (byte-read) | branch | disposition |
+| --- | --: | --- | --- | --- |
+| [reuseman/flashcards-obsidian](https://github.com/reuseman/flashcards-obsidian) | **1,113** | 🟢 **MIT** (`1,069 B`) | `main` | 🟢 **Promote** — pushed `2026-10-31`, live |
+| [shaankhosla/repeater](https://github.com/shaankhosla/repeater) | **442** | 🟢 **Apache-2.0** (`11,357 B`) | `main` | 🟢 **Promote** — terminal-native, trivially embeddable |
+| [lakesare/memcode](https://github.com/lakesare/memcode) | **408** | 🟢 **MIT** (`1,080 B`) | 🔴 **`master`** | 🟢 **Promote** — live; a `600-E` row |
+| [olmps/memo](https://github.com/olmps/memo) | **1,871** | 🟢 **BSD-3-Clause** (`1,515 B`) | `main` | 🟡 **Reference only** — last push `2024-07-29` |
+| [hwgilbert16/scholarsome](https://github.com/hwgilbert16/scholarsome) | **793** | 🔴 **AGPL-3.0** (`34,523 B`) | 🔴 **`develop`** | 🔴 **Flagged** — reciprocal |
+| [mnemosyne-proj/mnemosyne](https://github.com/mnemosyne-proj/mnemosyne) | **605** | 🔴 **pointer, not a grant** (`156 B`) | `master` | 🔴 **BLOCK** — `600-G` |
+
+🔴 **`3 of 6` of this tier are not on `main`** (`master`, `master`, `develop`), which is `600-E` once
+more and the reason every branch above was resolved with `git ls-remote --symref` **and**
+cross-checked against `search/repositories` before any byte was read.
+
+### 🟢 `600-A` — this page gets a second branch oracle, and `p599`'s branch calls are confirmed
+
+`p599` recorded `Cvmcosta/ltijs` and `openedx/openedx-platform` as `master`. 🟢 **Independently
+confirmed this pass by a channel this base believed was unavailable:**
+`search/repositories?q=repo:<owner>/<name>` returns `default_branch`, `stargazers_count`,
+`license.spdx_id`, `forks_count` and `pushed_at`, and it **agrees with `git ls-remote --symref` on
+`16 of 16` repositories measured.** 🔴 The per-repo endpoint `repos/<owner>/<repo>` is unusable here —
+it returns `403` for real addresses **and for a fabricated control**, so it carries no information.
+🔵 **`git ls-remote --symref` stays the mandated first step** (it is the git-layer truth and needs no
+API quota); the search channel is now the cheap cross-check, and it caught nothing wrong this pass.
+
+---
+
 ## 🆕 `p599` — `2026-11-01` — the foundational tier is `100 %` held on every star-ranked channel, and `2 of 7` components re-read this pass do not live on `main`
 
 ### 🟢 `0` additions, and the `0` is measured rather than asserted
@@ -537,6 +617,10 @@ alive, permissive and plural. Every grant below was **byte-read** from the repos
 | [erseco/python-moodle](https://github.com/erseco/python-moodle) | 🟢 **MIT (text, 1,071 B)** | **10** | `2026-10-22` | EMEA | 🟢 **yes** | 🆕 Pythonic CLI and library driving a Moodle instance over web sessions. 🔵 The automation handle for the AGPL LMS of record **without forking it** — exactly `573-B`'s attach-over-API rule. |
 | [get-bridge/scorm_engine](https://github.com/get-bridge/scorm_engine) | 🟢 **MIT (text, 1,084 B)** | **5** | `2026-09-03` | North America | 🟡 **client only** | 🆕 Ruby client for **Rustici's commercial** SCORM Engine. 🔵 Permissive client, 🔴 proprietary server — shippable as glue, never as the engine. |
 | [dr-rompecabezas/wagtail-lms](https://github.com/dr-rompecabezas/wagtail-lms) | 🟢 **MIT (text, 1,072 B)** | **5** | `2026-10-26` | Global | 🟡 **small scale** | 🆕 LMS extension for Wagtail CMS. 🔵 Useful when the client already runs Wagtail; not a platform in its own right. |
+| [MathWorks-Teaching-Resources/Computational-Fluid-Dynamics](https://github.com/MathWorks-Teaching-Resources/Computational-Fluid-Dynamics) | 🟢 **BSD-3-Clause (text, 1,527 B)** | **210** | `2025-04-03` | Global | 🟢 **content yes, runtime no** | 🆕 Head of an **`81`-repo** BSD-3-Clause undergraduate STEM curriculum estate (`600-D`). 🟡 MATLAB/Simulink runtime is commercial, so the modules are **course content a studio may modify and rebrand**, not an open stack. 🔴 `59 of 81` siblings default to branch `release` and are invisible to a `main`/`master` probe. |
+| [reuseman/flashcards-obsidian](https://github.com/reuseman/flashcards-obsidian) | 🟢 **MIT (text, 1,069 B)** | **1,113** | `2026-10-31` | Global | 🟢 **yes** | 🆕 Markdown notes → Anki cards. The retention layer this base has cited (`FSRS` in `318` files) without ever holding an implementation. |
+| [shaankhosla/repeater](https://github.com/shaankhosla/repeater) | 🟢 **Apache-2.0 (text, 11,357 B)** | **442** | `2026-09-28` | Global | 🟢 **yes** | 🆕 Terminal-native spaced repetition — embeds in a CLI tutor with no UI to maintain. |
+| [lakesare/memcode](https://github.com/lakesare/memcode)  | 🟢 **MIT (text, 1,080 B)** | **408** | `2026-10-23` | Global | 🟢 **yes** | 🆕 Web SRS, live. 🔴 Default branch `master` — a `600-E` row. |
 
 🔵 **`587-D` extended by this pass: it is not only the BRANCH that is unguessable — it is the
 FILENAME CASE.** `LearningLocker/xapi-service` and `xapi-validation` both carry their grant

@@ -1,0 +1,9 @@
+repo	real_default_branch	main_http	master_http	develop_http	fabricated_branch_ctl	verdict
+sakaiproject/sakai	master	404	200	404	404	consistent
+openedx/edx-platform	{"message":"Validation Failed","errors":[{"message":"The listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them.","resource":"Search","field":"q","code":"invalid"}],"documentation_url":"https://docs.github.com/v3/search/","status":"422"}	404	200	404	404	consistent
+moodle/moodle	main	404	404	404	404	consistent
+oppia/oppia	develop	404	200	200	404	consistent
+cybercussion/SCOBot	main	200	200	404	404	master-200-but-default-is-main
+GarethManning/education-agent-skills	main	200	200	404	404	master-200-but-default-is-main
+openeducat/openeducat_erp	19.0	404	200	404	404	consistent
+frappe/education	develop	404	404	404	404	consistent

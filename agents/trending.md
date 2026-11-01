@@ -4,6 +4,207 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p600` — `2026-11-01` — **🔴 `p599`'S CENTRAL FINDING IS REFUTED, AND NOT IN THE DIRECTION IT GUESSED: THE STAR-RANKED CHANNEL IS NOT EXHAUSTED AND THE *ORDERING* WAS NEVER THE BINDING CONSTRAINT — **PER-AXIS DEPTH** WAS. `p599` DREW `39` ADDRESSES FROM `6` AXES AND GENERALISED; THIS PASS DREW `334` FROM THE *SAME `6`* AND `138` ARE NEW (`41.3 %`), STAR-RANKED. 🔴 ONLY `2 of 6` OF ITS AXES ARE ACTUALLY SATURATED. 🟢 AND THE PER-REPO GITHUB API, RECORDED AS "BLOCKED" FOR MANY PASSES, HAS A WORKING SUBSTITUTE THAT AGREES WITH `git ls-remote --symref` ON `16 of 16`. 🔴 `678` UNHELD ADDRESSES FOUND; ONLY `~15` ARE SHIPPABLE, WHICH IS THE OTHER HALF OF THE FINDING.**
+
+### 🟢 `600-A` — the per-repo API is status-masking in this environment, and the substitute was there all along
+
+`gh api repos/<owner>/<repo>` returns 🔴 **`403`** for every address not attached to this session —
+**and `403` for a fabricated control** (`gmilano/zzz-fabricated-control-p600`). 🔵 **A channel that
+returns the same status for a real repository and an invented one carries no information**, which is
+why passes before this one recorded the API as simply "blocked" and stopped there.
+
+🟢 **`search/repositories?q=repo:<owner>/<name>` serves the same object** — `stargazers_count`,
+`license.spdx_id`, `default_branch`, `pushed_at`, `forks_count` — and 🟢 **its control fails loudly**
+(`422 Validation Failed`, "the listed users and repositories cannot be searched"). The channel
+discriminates, so its `200`s mean something.
+
+| oracle | `ltijs` | `openedx-platform` | `oppia` | `SCOBot` | `openeducat_erp` | `moodle` | agreement |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `git ls-remote --symref` | `master` | `master` | `develop` | `main` | `19.0` | `main` | — |
+| 🆕 `search/repositories` | `master` | `master` | `develop` | `main` | `19.0` | `main` | 🟢 **`6 of 6`** |
+
+🟢 **Across every repo this pass measured the two oracles agree `16 of 16`.** 🔵 **Consequence: this
+base now has a second, independent branch oracle and recovers star counts and `spdx_id` at scale** —
+and `p599`'s `ltijs`/`openedx-platform` `master` calls are 🟢 **independently confirmed, not corrected.**
+
+### 🔴 `600-B` — the nil was a sampling artefact, and `p599`'s own experiment confounded two variables
+
+`p599` closed that the star-ranked topic channel is exhausted (`0 of 39`) and the recency ordering is
+not (`3 of 20`). 🟢 **The measurement reproduces exactly where it is true:** `topic:ai-tutor`
+star-ranked returns **`0 of 30` new** here too. 🔴 **The generalisation does not.**
+
+| axis (star-ranked, `30`/axis) | taken | 🆕 new | yield |
+| --- | --: | --: | --: |
+| `topic:ai-tutor` | `30` | `0` | 🔴 **`0.0 %`** — saturated, as claimed |
+| `topic:lms` | `30` | `1` | 🔴 `3.3 %` — saturated |
+| `topic:intelligent-tutoring-system` | `30` | `6` | 🟢 `20.0 %` |
+| `topic:knowledge-tracing` | `30` | `7` | 🟢 `23.3 %` |
+| `topic:grading` | `30` | `14` | 🟢 `46.7 %` |
+| `topic:essay-grading` | `17` | `11` | 🟢 **`64.7 %`** |
+| **`p599`'s six axes, both orderings** | **`334`** | **`138`** | 🟢 **`41.3 %`** |
+
+🔴 **`p599` drew `39` addresses from these six axes — about `6` per axis, the first page.** This pass
+drew `334` from the same six. 🔵 **So the variable that moved was never the ranking function; it was
+how deep each axis was read.** `p599` changed the ordering *and* re-sampled in the same step, so its
+`0 % → 15 %` result cannot separate the two. 🔴 **Only `2 of its 6` axes are genuinely saturated.**
+
+🔵 **A nil must now name its ordering *and its per-axis depth*** to be recorded. `599-B`'s
+"record the ordering" rule is kept and superseded.
+
+### 🟢 `600-C` — and the axes this base had never walked at all
+
+| cohort | taken | 🆕 new | yield |
+| --- | --: | --: | --: |
+| `p599`'s `6` known axes | `334` | `138` | `41.3 %` |
+| 🆕 **`28` axes never walked by this base** (`18` topics + `10` keyword) | `1,646` | `1,322` | 🟢 **`80.3 %`** |
+| **union, de-duplicated** | **`1,014`** | **`678`** | 🟢 **`66.9 %`** |
+
+Axes returning `100 %` unheld: `kw:teacher+copilot`, `kw:learning+path+agent`, `kw:curriculum+agent`,
+`kw:ai+grading+agent`, `kw:lesson+plan+generator`, `kw:student+agent`, `topic:courseware`,
+`topic:homework-helper`, `topic:education-platform`. 🔵 **Nine axes that name the actual job a studio
+is hired for, and this base had queried none of them in `599` passes.**
+Census: [`../evidence/axis-ordering-census.2026-11-01-p600.tsv`](../evidence/axis-ordering-census.2026-11-01-p600.tsv).
+
+### 🔴 `600-D` — the other half, stated with the same denominator: `678` found, `~15` shippable
+
+| screen | surviving |
+| --- | --: |
+| unheld addresses found | `678` |
+| permissive grant (`MIT`/`Apache-2.0`/`BSD`/`ISC`/`MPL`/`Unlicense`) **and** `≥ 5★` **and** pushed in `2026` | `66` |
+| 🔴 **…and actually education-AI rather than education-adjacent** | 🔴 **`~15`** |
+
+🔴 **`245 of 678` carry `license: null` and `65` carry `NOASSERTION`** — `310` of the find is
+ungraded supply. 🔵 **So `p599`'s *practical* sentence survives its own refutation**: what this base
+lacks is still not simultaneously findable, permissive, maintained and on-topic. 🔴 **But it was filed
+as a property of discovery when it was a property of six shallow queries**, and that distinction is
+the difference between "stop looking" and "look differently".
+
+### 🔴 `600-E` — a `200` on a branch path proves the branch exists, NOT that it is the default
+
+`597-F` established that a `404` on one path is not a dead repository. 🔵 **The mirror case was never
+screened, and it is the one that silently mis-grades:**
+
+| repo | real default | `main` | `master` | `develop` | fabricated-branch control |
+| --- | --- | --: | --: | --: | --: |
+| `sakaiproject/sakai` | `master` | `404` | `200` | `404` | 🟢 `404` |
+| `oppia/oppia` | 🔴 **`develop`** | `404` | 🔴 **`200`** | `200` | 🟢 `404` |
+| `cybercussion/SCOBot` | 🔴 **`main`** | `200` | 🔴 **`200`** | `404` | 🟢 `404` |
+| `GarethManning/education-agent-skills` | 🔴 **`main`** | `200` | 🔴 **`200`** | `404` | 🟢 `404` |
+| `openeducat/openeducat_erp` | 🔴 **`19.0`** | `404` | 🔴 **`200`** | `404` | 🟢 `404` |
+| `moodle/moodle` | `main` | 🔴 `404` | `404` | `404` | 🟢 `404` |
+| `frappe/education` | `develop` | `404` | `404` | 🔴 `404` | 🟢 `404` |
+
+🔴 **`master` served `200` on `6 of 8`; on `4 of those 6` the real default branch is something else.**
+🟢 **The fabricated-branch control `404`s on `8 of 8`**, so the channel is not blindly permissive —
+these `200`s are real files on real, *non-default* branches. 🔴 **And `moodle/moodle` serves `404` at
+`LICENSE` on its own default branch**, which is `598-A` again from the other side.
+
+🟢 **Honest yield, stated as `598-B` requires:** this base has used `git ls-remote --symref` first
+since `p593`, so 🟢 **no wrong branch data reached these pages.** This is a **guard against a cheaper
+method**, not a correction — and the guard matters because `600-A` just made the cheap method
+attractive again.
+
+### 🔴 `600-F` — a gate written with `\b` in this environment returns a silent false nil
+
+This pass's first relevance filter reported 🔴 **`0 of 678`** candidates and it was wrong. The cause:
+`awk` here does not implement `\b`. Control, run before the result was believed:
+
+```
+$ echo "ai tutor" | awk '/\bai\b/{print "BSUPPORTED"}'     # → (nothing)
+$ echo "ai tutor" | awk '/ai/{print "PLAIN-OK"}'           # → PLAIN-OK
+```
+
+🔵 **The same filter re-run without `\b` returned `66`.** A word-boundary metacharacter that is not
+implemented does not error — it simply never matches, so the gate reports an empty world. 🔴 **This is
+`547-I`'s class once more** (a gate whose failure is indistinguishable from a clean result), and it
+nearly put a twenty-ninth "nil" on these pages in the same pass that refuted the twenty-eighth.
+🟢 **Rung: a filter that returns `0` must be proved able to return non-`0` before the `0` is recorded.**
+
+### 🟢 `600-G` — a `605★` pointer grant, the second instance of `599-A`'s new rung
+
+[`mnemosyne-proj/mnemosyne`](https://github.com/mnemosyne-proj/mnemosyne) — `605★`, API reports
+🔴 `NOASSERTION`. Byte-read at its real default branch (`master`, `LICENSE`, **`156 B`**) the entire
+file reads *"Different parts of the software use different licenses:"* and then points elsewhere.
+🔴 **It is a pointer, not a grant** — 🔴 **BLOCK** until a per-component read is done.
+
+🟡 **Correction to this base's own bookkeeping, found while filing the above.** `599-A` registered
+"a grant file that points elsewhere for its own terms" as a **new** screen rung. 🔴 **It is not new:**
+`p305` already filed [`w3c/vc-data-model`](https://github.com/w3c/vc-data-model) (`167 B`, one URL to
+the W3C Software and Document License) as a *"POINTER GRANT — a NEW fourth licence class"*, and that
+grade is still on these pages and still correct. 🔵 **So the class has now been independently
+discovered at least twice, ~295 passes apart**, which means it belongs in the **method section as a
+standing screen**, not re-registered as a finding by whichever pass next trips over it.
+
+### 🟡 `600-H` — grant paths are case-sensitive, and the thinnest grant this base has measured is `19` bytes
+
+[`frappe/education`](https://github.com/frappe/education) (`688★`, API `NOASSERTION`, branch
+🔴 **`develop`**) was carried as having no grant file. 🔴 **It has one, and no uppercase probe can see it:**
+
+| path tried at `develop` | result |
+| --- | --: |
+| `LICENSE` | `404` |
+| `LICENSE.txt` | `404` |
+| `License.txt` | `404` |
+| `license` | `404` |
+| 🟢 **`license.txt`** | 🟢 **`200`** |
+
+🔵 **A third axis of probe blindness**, alongside `598-A` (the grant can live in a build manifest) and
+`600-E` (the branch is not `main`): **the path is case-sensitive and this base probes uppercase.**
+
+🔴 **And the file itself is `19` bytes, in full:** `License: GNU GPL V3` — no licence text, no
+copyright holder, no version URL, no newline. 🔵 **It names a licence rather than granting one**, so
+it is the thinnest instance of the pointer class on these pages and it is **reciprocal**, which is the
+worst combination: a studio skim-reading `"GPL V3"` gets the obligation without ever seeing terms.
+
+🟢 **Honest yield, as `598-B` requires — and it is zero.** All `8` of this base's existing
+"no grant file" BLOCK rows were re-probed across `7` lowercase path variants at their real default
+branches: 🟢 **`0 of 8` are rescued**, every fabricated-path control returned `404`, and the one row
+that does serve a grant ([`w3c/vc-data-model`](https://github.com/w3c/vc-data-model)) was 🟢 **already
+graded correctly** as a pointer. 🔵 **The defect is real and it has put no wrong data on these pages** —
+`frappe/education` is a platform-tier row, not one of the agent BLOCK rows. Census:
+[`../evidence/grant-path-casing.2026-11-01-p600.tsv`](../evidence/grant-path-casing.2026-11-01-p600.tsv).
+
+### 🟢 Agent rows promoted this pass — every grant byte-read `2026-11-01` at the real default branch
+
+| Agent | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+| --- | --- | --: | --- | --- | --- | --- |
+| **LearnDeck** | [LearnAIHubC/LearnDeck](https://github.com/LearnAIHubC/LearnDeck) | **26** | 🟢 **MIT** (`LICENSE.txt`, `1,068 B`) | `main` | `2026-07-15` | Topics, notes and course material → generated slide decks. 🔵 The courseware-generation seam, agent-side |
+| **selftune** | [selftune-dev/selftune](https://github.com/selftune-dev/selftune) | **18** | 🟢 **MIT** (`1,067 B`) | `main` | `2026-10-24` | Skill observability and self-improvement for agent skills. 🔵 The missing **eval/observability** layer this base has declared absent for many passes — first permissive candidate |
+| **StudySage** | [sizwinz/StudySage-Offline-Online-AI-Note-Assistant](https://github.com/sizwinz/StudySage-Offline-Online-AI-Note-Assistant) | **12** | 🟢 **MIT** (`1,083 B`) | `main` | `2026-07-05` | **Offline-first** AI note/summarisation assistant for students. 🔵 Offline is the LATAM/low-connectivity axis |
+| **OpenEdu** | [TerraByte-Dev/OpenEdu](https://github.com/TerraByte-Dev/OpenEdu) | **6** | 🟢 **MIT** (`1,080 B`) | 🔴 **`master`** | `2026-10-08` | Open-source AI tutoring platform, beginner→mastery. 🔵 A `600-E` row: a `main`-only probe reports it grantless |
+| **beacon** | [agenticfabriq/beacon](https://github.com/agenticfabriq/beacon) | **5** | 🟢 **Apache-2.0** (`11,358 B`) | `main` | `2026-10-25` | Grader + results tracker (exact-match and "got-the-facts" grading). 🔵 Grading *harness*, reusable beyond text-to-SQL |
+| **understand** | [fcescob/understand](https://github.com/fcescob/understand) | **5** | 🟢 **MIT** (`1,075 B`) | `main` | `2026-10-13` | **Mastery-gated** tutor skill: will not advance until transfer is demonstrated |
+| **socratic-tutor** | [Rayhaan1345/socratic-tutor](https://github.com/Rayhaan1345/socratic-tutor) | **5** | 🟢 **MIT** (`1,070 B`) | `main` | `2026-10-23` | Teaches by asking rather than answering. 🔵 Second instance of *pedagogy-as-product* after `nietzschian-debugger` |
+| **courseware-cn-annotator** | [youngman2007/courseware-cn-annotator](https://github.com/youngman2007/courseware-cn-annotator) | **5** | 🟢 **MIT** (`1,093 B`) | `main` | `2026-10-27` | Courseware PDF → Chinese-language study pack. 🔵 **APAC in-language supply**, alongside `kaogong-shuati` |
+| **EduNexus-AI** | [weidonglang/EduNexus-AI](https://github.com/weidonglang/EduNexus-AI) | **5** | 🟢 **MIT** (`1,071 B`) | `main` | `2026-07-01` | Spring Boot + Vue 3 academic/teaching administration system. 🔵 Touches the standing **ERP/SIS gap**, permissively — the first row that does |
+
+🔵 **All nine sit between `5★` and `26★`** — exactly the band `599-C` warned is unaudited, so every
+grant above was byte-read rather than taken from `spdx_id`, and each repo's fabricated-path control
+returned `404`. Full table:
+[`../evidence/grants-byteread.2026-11-01-p600.tsv`](../evidence/grants-byteread.2026-11-01-p600.tsv).
+
+### 🔴 The thirtieth nil on the mandated legs — this time with a per-token denominator
+
+`8` legs run (`4` global, `4` regional). 🔴 **`20 of 20` substantive tokens served were already held**,
+checked individually with `grep -ril` over every `*.md` and `*.tsv`: `134` bills / `31` states,
+Maryland `SB 720`, New York `A 9190`, the `K-12 AI Literacy and Readiness Act of 2026`, Berkeley Law's
+exam ban, the Digital Omnibus (`Regulation (EU) 2026/1744`) Annex III deferral to `2027-12-02`,
+Article 50's `2 August 2026` transparency date, the Digital Education Council's `76 % → 67 %` faculty
+intent drop, South Korea's `AI Basic Act`, Vietnam's AI Law and its longer education transition,
+India's `2026-02-20` labelling rule, Ipsos Education Monitor `2026`, UNESCO IESALC's `87 % / 26 %`
+over `200` institutions in `19` countries, the LAC Observatory (Santiago, `2026-04-14`), and the `716`
+instruments across `23` countries. 🔵 **A nil with a denominator is a measurement; the previous
+twenty-nine were assertions.** Token-by-token:
+[`../evidence/mandated-leg-tokens.2026-11-01-p600.tsv`](../evidence/mandated-leg-tokens.2026-11-01-p600.tsv).
+
+🔴 **Primary-host status unchanged (`583-E`, sixteenth consecutive pass):** `unesco.org`,
+`iesalc.unesco.org`, `oecd.org`, `publications.iadb.org` and `unu.edu` are outside this session's
+allowed network. 🔴 **Every regional figure on [`../intel/market.md`](../intel/market.md) is therefore
+search-snippet-grade and cannot be raised here** — published with that grade stated, because an
+unverifiable number attributed to its source is information and a silent omission is not.
+
+---
+
 ## 🆕 `p599` — `2026-11-01` — **🔴 A `939★` ROW THIS BASE CALLS A "CC0 DEDICATION" IS `CC BY-SA 4.0` — RECIPROCAL — AND THE FILE IT CARRIES IS A HUMAN-READABLE NOTICE, NOT THE LEGAL CODE. 🔴 THAT ALSO REFUTES THIS BASE'S OWN *"FIRST RECIPROCAL CC CASE"* CLAIM, FILED `p589`. 🟢 AND SATURATION WAS MEASURED WITH A DENOMINATOR FOR THE FIRST TIME: THE STAR-RANKED VIEW OF THE TOPIC CHANNEL IS `0 of 39` NEW (`0 %`), THE RECENCY-RANKED VIEW OF THE SAME TOPIC IS `3 of 20` NEW (`15 %`) — SO THE CHANNEL IS NOT EXHAUSTED, THE *ORDERING* IS. 🔴 AND `1 of the 3` IS A BESPOKE NON-COMMERCIAL LICENCE.**
 
 ### 🔴 The central correction — a reciprocal grant filed in this base as a non-reciprocal one

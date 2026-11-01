@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p600` — `2026-11-01` — a saturated index is usually a saturated *query*, and the thing that hides supply is a branch name
+
+## 66. A discovery nil measures the index you built, and the variable that decides it is per-axis depth — not the ranking function (high confidence — same six axes, same ordering, `39` addresses against `334`, `0 %` against `41.3 %`)
+
+`p599` walked `6` topic axes star-ranked, took `39` addresses, found `0` new, and concluded the
+star-ranked channel was exhausted. It then switched to recency ordering, found `3 of 20` new, and
+filed the ordering as the cause. 🔴 **The experiment confounded two variables**: changing the ordering
+also re-samples the axis. This pass separated them — **same six axes, same star ordering, `334`
+addresses instead of `39`: `138` new, `41.3 %`.**
+
+🔵 **And only `2 of the 6` axes are genuinely saturated** (`topic:ai-tutor` `0.0 %`, `topic:lms`
+`3.3 %`); the other four pay `20 %`–`65 %`. 🔴 **The saturated axis is the one that sorts first in
+every sweep and has been mined hardest for `599` passes** — so a shallow read of a list that *begins*
+with the exhausted axis manufactures a convincing nil.
+
+**What to do with it commercially:** when an index reports a market as "covered", the cheap test is
+not a different search engine or a different ranking — it is **the same query read deeper, and more
+query *shapes***. `28` axes this base had never walked returned `80.3 %` unheld
+(`1,322 of 1,646`). 🔵 **Nine of those axes returned `100 %` unheld, and every one of them is phrased
+as a job rather than a technology**: `teacher+copilot`, `learning+path+agent`, `lesson+plan+generator`,
+`curriculum+agent`, `student+agent`, `ai+grading+agent`, `topic:courseware`, `topic:homework-helper`,
+`topic:education-platform`. 🔴 **An index built on technology nouns goes blind to the verbs**, and the
+verbs are what a client actually names in a brief.
+
+## 67. Supply can be hidden by a default branch name, and the biggest permissive estates are the likeliest to hide that way (high confidence — `81` repos, `59` on `release`, `0` held in `599` passes)
+
+[`MathWorks-Teaching-Resources`](https://github.com/MathWorks-Teaching-Resources) publishes **`81`**
+BSD-3-Clause undergraduate STEM curriculum modules. 🔴 **`59 of 81` (`72.8 %`) default to a branch
+named `release`** — not `main`, not `master`. A grant probe that tries `main` then `master` resolves
+nothing for `72.8 %` of the org and reports it as unlicensed; a discovery sweep keyed to education
+topics never reaches it at all, because the repos carry subject and tooling topics instead.
+
+🔵 **Two independent concealment mechanisms stacked on the same asset**, which is why `599` passes
+missed it. 🟡 **And the asset has a real limit that belongs in the same sentence as the find:** the
+content is permissive, the MATLAB/Simulink runtime is commercial — these are **course materials a
+studio may modify and rebrand, not an open software stack.**
+
+**Generalisation worth carrying:** branch-name diversity tracks *publisher type*, not repo age.
+Consortium and vendor-education publishers release from `release`, `19.0`, `develop` or a version
+number because their branch model follows a product release train. 🔴 **A `main`/`master`-only
+instrument is therefore biased precisely against institution-grade publishers** — the ones an
+enterprise engagement most wants to cite.
+
+## 68. A `200` on a branch path is evidence the branch exists and no evidence it is the default — and the mirror rule was never screened (high confidence — `master` returned `200` on `6 of 8`, wrong default on `4 of those 6`, fabricated-branch control `404` on `8 of 8`)
+
+This base established long ago that a `404` on one path is not a dead repository. 🔵 **The inverse was
+assumed rather than tested.** Measured: `master` served a real `LICENSE` on `6 of 8` education
+platform repos, and on `4 of those 6` the actual default branch is `main`, `develop` or `19.0`. Stale
+`master` branches survive renames, so they answer `200` indefinitely.
+
+🟢 **The controls are what make this usable**: a fabricated branch name returned `404` on `8 of 8`, so
+the channel is not blindly permissive — it really is serving files from real, non-default branches.
+🔵 **Operational rule: resolve the branch with an oracle that reports the default (`git ls-remote
+--symref`, or `search/repositories`.`default_branch`), then read the grant. Never infer the branch
+from which path answered.**
+
+## 69. A gate that returns zero is indistinguishable from a world that contains nothing, so a zero must be proved reachable before it is recorded (high confidence — one unimplemented metacharacter turned `66` candidates into `0`, in the same pass that refuted a twenty-eight-pass nil)
+
+This pass's first relevance filter over `678` new addresses reported **`0`**. The cause was a
+word-boundary metacharacter that `awk` in this environment does not implement: `/\bai\b/` matches
+nothing and raises nothing. Re-run without it: **`66`**.
+
+🔴 **The failure mode is that a broken filter and a saturated market produce byte-identical output** —
+and this base had just spent twenty-eight passes misreading exactly that kind of output as a fact
+about the industry (trend `66`). 🔵 **So the rung is not "test your regexes"; it is structural: any
+screen whose result is `0` must first be shown capable of returning non-`0` on a known positive.**
+A nil is a measurement only when the instrument has been demonstrated to be able to fail to produce it.
+
+**Commercial reading:** this is the cheapest possible due-diligence step on any "we found nothing"
+report — vendor, internal or automated. 🔵 **Ask what the instrument returns on a case that is known
+to be present.** If nobody ran that control, the finding is not a finding.
+
+---
+
 ## 🆕 `p599` — `2026-11-01` — a discovery nil can be an artefact of the RANKING FUNCTION, and the bespoke non-commercial licence lives in the band nobody audits
 
 ## 62. A star-ranked view of a market returns the history of whoever built the index, so twenty-eight passes of "nil" measured this base and not the industry (high confidence — same channel, two orderings, `0 %` against `15 %`, measured in the same minute)

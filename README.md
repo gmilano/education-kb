@@ -4,6 +4,72 @@ region: Global
 updated: 2026-11-01
 ---
 
+## Pass 600 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE TWENTY-NINE-PASS DISCOVERY NIL IS A SAMPLING ARTEFACT, AND `p599`'S DIAGNOSIS WAS WRONG TOO: IT BLAMED THE RANKING FUNCTION, BUT THE SAME SIX AXES AT THE SAME ORDERING YIELD `138 of 334` NEW (`41.3 %`) ONCE READ DEEPER THAN ONE PAGE. 🟢 `28` AXES THIS BASE HAD NEVER QUERIED YIELD `80.3 %`, AND THE NINE THAT YIELD `100 %` ARE ALL PHRASED AS JOBS, NOT TECHNOLOGIES. 🟢 AN `81`-REPO BSD-3-CLAUSE UNIVERSITY CURRICULUM ESTATE WAS INVISIBLE FOR `599` PASSES BECAUSE `59 of 81` OF ITS REPOS DEFAULT TO A BRANCH NAMED `release`. 🟢 AND THE PER-REPO GITHUB API, LONG RECORDED AS BLOCKED, HAS A SUBSTITUTE THAT AGREES WITH `git ls-remote --symref` ON `16 of 16`. EIGHT REGISTERED (`600-A`…`600-H`).**
+
+### 🔴 The central refutation — and it inverts the remedy, not just the conclusion
+
+| | `p599` | 🆕 `p600` |
+| --- | --- | --- |
+| addresses taken from its `6` topic axes | `39` (≈ first page each) | **`334`** (`30`/axis) |
+| new, **star-ranked**, same six axes | `0` → *"ordering exhausted"* | 🟢 **`138` (`41.3 %`)** |
+| axes genuinely saturated | asserted: all star-ranked | 🔴 **`2 of 6`** (`ai-tutor` `0.0 %`, `lms` `3.3 %`) |
+| axes never walked by this base | — | 🟢 **`28`** → `1,322 of 1,646` new (**`80.3 %`**) |
+
+🔵 **`p599` changed the ordering *and* re-sampled in one step**, so its `0 % → 15 %` result could not
+separate the two variables. 🔴 **The binding constraint was per-axis depth and the axis set — never
+the ranking function.** `topic:ai-tutor` is the axis this base has mined hardest, sorts first in every
+sweep, and is the one that really is exhausted, so a shallow read of a list that *begins* with it
+manufactures a convincing nil. 🟢 **A nil must now name its ordering AND its per-axis depth.**
+
+### 🟢 The find — supply hidden by a branch name, in the largest permissive curriculum estate this base holds
+
+[`MathWorks-Teaching-Resources`](https://github.com/MathWorks-Teaching-Resources): **`81`** repos,
+BSD-3-Clause undergraduate STEM courseware, 🔴 **`0` held before this pass.** `59 of 81` (`72.8 %`)
+default to **`release`**, `21` to `main`, `1` to `master` — so a `main`-then-`master` grant probe
+reports three quarters of the org as unlicensed, and an education-topic sweep never reaches it because
+the repos carry subject topics instead. 🟡 **Published with its limit attached:** content permissive,
+MATLAB/Simulink runtime commercial — curriculum assets, not an open stack.
+
+### 🟢 Instrument changes that outlast this pass
+
+- **`600-A`** — `gh api repos/<o>/<r>` returns `403` for real addresses **and for a fabricated
+  control**, so it carries no information. `search/repositories?q=repo:<o>/<n>` serves the same
+  metadata, its control `422`s, and it agrees with `git ls-remote --symref` on 🟢 **`16 of 16`**.
+  `p599`'s `master` calls on `ltijs` and `openedx-platform` are independently **confirmed**.
+- **`600-E`** — a `200` on a branch path proves the branch **exists**, not that it is the default:
+  `master` served `200` on `6 of 8` platform repos and `4 of those 6` default elsewhere
+  (`main`, `develop`, `19.0`). Fabricated-branch control `404` on `8 of 8`. 🟢 No wrong data had
+  reached these pages (`ls-remote` was already mandated) — this is a guard, not a correction.
+- **`600-F`** — `awk` here does not implement `\b`, so a screen written with it returned `0 of 678`
+  and errored nothing; re-run without it, `66`. 🟢 **Rung: a screen returning `0` must be shown
+  capable of returning non-`0` before the `0` is recorded.**
+- **`600-G`** — `mnemosyne-proj/mnemosyne` (`605★`, API `NOASSERTION`) byte-reads as `156 B` of
+  *"Different parts of the software use different licenses:"* — a **pointer, not a grant**.
+  🟡 And a bookkeeping correction: `599-A` filed this rung as *new*, but `p305` had already filed
+  `w3c/vc-data-model` as a *"POINTER GRANT — a NEW fourth licence class"*. 🔵 **Discovered twice,
+  ~295 passes apart — it belongs in the method section as a standing screen, not re-registered.**
+- **`600-H`** — grant paths are **case-sensitive** and this base probes uppercase.
+  `frappe/education` (`688★`) was carried as grantless; its grant is at **`license.txt`** only
+  (`LICENSE`, `LICENSE.txt`, `License.txt`, `license` all `404`) and is 🔴 **`19` bytes in full** —
+  `License: GNU GPL V3` — naming a reciprocal licence without granting one. 🟢 **Honest yield: `0 of 8`**
+  existing BLOCK rows are rescued by the lowercase axis, so the defect put no wrong data on these pages.
+
+### 🟢 Shipped this pass
+
+`9` agent rows promoted (shelf `44 → 53`), a new **spaced-repetition platform tier** on
+`verticals/solutions.md`, the **MathWorks curriculum estate** on `repos/foundations.md`, `4` new
+numbered trends (`66`–`69`), and `3` concrete recipes (`P-600-A` engineering-faculty content
+modernisation, `P-600-B` permissive retention layer, `P-600-C` APAC in-language pipeline) — every
+component grant byte-read at its real default branch with a per-repo fabricated-path control.
+
+🔴 **The mandated legs returned the thirtieth consecutive nil**, this time with a denominator:
+**`20 of 20`** substantive tokens already held. 🔴 **`0 of 9`** promoted agent rows are LATAM-placed,
+recorded as a measured gap rather than left as silence. 🟢 **`gate-region-headings` was red on arrival
+and is green on exit**; this repository arrived with `23 of 69` gates red, recorded so a later pass
+does not attribute them here.
+
+---
+
 ## Pass 599 — reads 2026-11-01, commit 2026-11-01 — **🟢 THE TWENTY-EIGHT-PASS DISCOVERY NIL IS AN ARTEFACT OF THE RANKING FUNCTION, AND THE PROOF IS ONE QUERY STRING: THE SAME TOPIC PAGE RETURNS `0 of 39` NEW ADDRESSES RANKED BY STARS AND `3 of 20` RANKED BY PUSH DATE. 🔴 BUT ALL `3` ARE `≤ 4★`, SO WHAT THIS BASE LACKS IS NOT SIMULTANEOUSLY FINDABLE AND SHIPPABLE — NEITHER "SATURATED MARKET" NOR "BROKEN CHANNEL" WAS TRUE. 🔴 AND `1 of the 3` IS A BESPOKE NON-COMMERCIAL LICENCE, WHICH MAKES THE STAR FLOOR AN ACCIDENTAL LICENCE FILTER. 🔴 THE PASS'S WORST FINDING IS ON THESE PAGES, NOT IN THE MARKET: A `939★` ROW THIS BASE CALLED A "CC0 DEDICATION" IS `CC BY-SA 4.0` — RECIPROCAL — ITS GRANT COVERS NO CODE, AND THE FILE SAYS OF ITSELF THAT IT IS NOT THE LICENCE. FIVE REGISTERED (`599-A`…`599-F`).**
 
 ### 🔴 The correction, which inverts an instruction this base gave the reader ten passes ago

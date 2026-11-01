@@ -4,6 +4,76 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p600` — `2026-11-01` — the regional legs return a nil with a per-token denominator for the first time, and this page's own "market is covered" instinct is refuted
+
+### 🔴 The legs: `8` run, `20 of 20` substantive tokens already held — thirtieth consecutive nil
+
+🔵 **Every previous nil on this page was an assertion; this one is a measurement.** Each token served
+by the four global and four regional legs was checked individually with `grep -ril` across every
+`*.md` and `*.tsv` in this repository before being called held.
+
+| region | tokens served | 🆕 new | already held |
+| --- | --: | --: | --: |
+| North America | `5` | `0` | `5` |
+| EMEA | `3` | `0` | `3` |
+| APAC | `4` | `0` | `4` |
+| LATAM | `3` | `0` | `3` |
+| Global (4 legs) | `5` | `0` | `5` |
+| **total** | **`20`** | 🔴 **`0`** | **`20`** |
+
+Held tokens include: `134` bills / `31` states, Maryland `SB 720`, New York `A 9190`, the
+`K-12 AI Literacy and Readiness Act of 2026`, Berkeley Law's exam ban; the Digital Omnibus
+(`Regulation (EU) 2026/1744`) Annex III deferral to `2027-12-02`, Article 50 transparency from
+`2 August 2026`, the Digital Education Council's `76 % → 67 %` faculty-intent drop; South Korea's
+`AI Basic Act`, Vietnam's AI Law and its longer education transition, India's `2026-02-20` labelling
+rule, Ipsos Education Monitor `2026`; UNESCO IESALC's `87 % / 26 %` across `200` institutions in
+`19` countries, the LAC Observatory (Santiago, `2026-04-14`), and the `716` instruments across
+`23` countries. Token-by-token:
+[`../evidence/mandated-leg-tokens.2026-11-01-p600.tsv`](../evidence/mandated-leg-tokens.2026-11-01-p600.tsv).
+
+🔵 **`4 of 4` regional legs paid** (every leg returned relevant material); 🔴 **`0 of 4` served a token
+this base lacks.** Those are different statements and this page keeps them separate.
+
+### 🔴 Evidence grade, restated because it caps every regional figure on this page
+
+`unesco.org`, `iesalc.unesco.org`, `oecd.org`, `publications.iadb.org` and `unu.edu` are outside this
+session's allowed network — 🔴 **sixteenth consecutive pass** (`583-E`). 🔵 **So every regional number
+here is search-snippet-grade and cannot be raised in this environment.** They are published with that
+grade stated rather than dropped, because an unverifiable number attributed to its source is
+information and a silent omission is not.
+
+🟡 **Market-size band unchanged and still carried as a range, not a point:** the `2026` base clusters
+near **`$10.4 B`–`$11.4 B`** across firms while `2030`/`2034` endpoints spread far wider — `599-C`'s
+finding that the base is reproducible and the endpoint is not. A `$12.5 B` figure served again this
+pass remains 🔴 **not banked**.
+
+### 🔴 The correction this page needs most, and it is methodological
+
+This page has repeatedly reported the education-AI supply market as effectively mapped, on the
+strength of a star-ranked discovery nil. 🔴 **That nil was a sampling artefact.** `p599` drew `39`
+addresses from `6` topic axes and generalised; this pass drew `334` from the **same six at the same
+ordering** and `138` were new (`41.3 %`), then `1,646` from `28` axes never walked, of which `1,322`
+were new (`80.3 %`) — `678` unheld addresses in total (`600-B`, `600-C`).
+
+🔵 **The market-intelligence consequence is direct:** 🔴 **a coverage claim built on one page of one
+ordering is not a coverage claim.** 🟢 **And the honest limit in the same breath** — of `678` unheld
+addresses only `66` were permissive *and* `≥ 5★` *and* active in `2026`, and `310` carry
+`license: null` or `NOASSERTION`. 🔵 **The supply is findable and mostly not shippable**, which is a
+far more useful sentence for a proposal than either "the market is covered" or "the market is wide
+open", and it is the first time this page can state it with denominators on both sides.
+
+### 🟢 Gate state recorded with the pass, as `598`-era practice requires
+
+🔴 **This repository arrived at `p600` with `23 of 69` standing gates red** (`46` green) — pre-existing,
+and recorded so a later pass does not attribute them to this one. 🟢 **`gate-region-headings` was
+red on arrival and is green on exit:** the `## Opportunities by region` block carried an out-of-vocab
+`###` heading (*"Declared regional gaps"*), which made a cross-regional gap register look like a
+sixth region to the compiler. 🔵 It is now a `##` sibling of the block, the five `###` subsections are
+exactly the closed vocabulary, and the declared gaps for each region live **inside** that region's
+subsection where a region filter will actually reach them.
+
+---
+
 ## 🆕 `p599` — `2026-11-01` — the market-size disagreement is in the GROWTH RATE, not in the 2026 base, and that reverses the deck rule this base has been carrying
 
 ### 🟢 Five firms measured this pass, and the `2026` bases agree
@@ -173,6 +243,21 @@ they are now separate measurements and must stay separate.
 
 ### North America
 
+🆕 **`p600` — the supply side moved here, not the regulation.** The largest permissively-licensed
+**STEM curriculum estate** this base has ever found is a US publisher's:
+[`MathWorks-Teaching-Resources`](https://github.com/MathWorks-Teaching-Resources), **`81` repos**,
+BSD-3-Clause, undergraduate engineering and mathematics modules (`600-D`). 🟢 **The engagement it
+unlocks is content modernisation for an engineering faculty** — recipe `P-600-A` in
+[`../compose/patterns.md`](../compose/patterns.md) — and it pairs with the **April `2026` ADA Title II**
+deadline this page already carries, because remediating course content and modernising it is one
+project, not two. 🟡 **Priced caveat:** the content is permissive, the MATLAB/Simulink runtime is not.
+
+🔵 **And a mapped-demand finding:** of `34` discovery axes walked this pass, the nine that returned
+`100 %` unheld supply are all phrased as **jobs** — `teacher+copilot`, `lesson+plan+generator`,
+`learning+path+agent`, `ai+grading+agent`, `student+agent`, `curriculum+agent` (`600-C`). 🔴 **The
+North American buyer names the job; this base had indexed only the technology.** Those nine axes are
+where an unmapped competitive field sits.
+
 🆕 **`p599` — the buyer's clock, not the buyer's budget, is what moved.** Two `2026` deadlines now
 sit in the same fiscal year and both are *compliance* spend a studio can attach to: the **April `2026`
 ADA Title II accessibility deadline** for large public institutions, and the four states that mandate
@@ -228,6 +313,19 @@ quantified instrument this channel produces: `134` bills across `31` states.
 
 ### EMEA
 
+🆕 **`p600` — no new regulatory token was served; the opportunity is in sequencing what is already
+known.** All EMEA tokens returned this pass were already held: the **Digital Omnibus**
+(`Regulation (EU) 2026/1744`) deferral of stand-alone Annex III education systems to **`2027-12-02`**,
+**Article 50** transparency from **`2 August 2026`**, and the Digital Education Council's faculty-intent
+drop **`76 % → 67 %`**. 🔴 **All secondary-source grade** — `eur-lex`, `oecd.org` and `unesco.org` are
+outside this session's network (`583-E`, sixteenth consecutive pass).
+
+🟢 **The commercially live item is the one that is NOT deferred:** the **Article 4 AI-literacy duty**
+applies now, so staff-capability work bills this fiscal year while conformity-assessment work has
+moved to the next. 🔵 **Read with the falling faculty-intent figure, the EMEA engagement is
+enablement-and-governance, not deployment** — and `MathWorks-Teaching-Resources` (`600-D`) applies
+equally to EMEA technical universities, which is the content half of the same programme.
+
 🆕 **`p599` — the clock was re-corroborated and the market's wrong reading is now at six instances in
 six passes.** Annex III stand-alone obligations: **`2027-12-02`**; embedded in regulated products:
 **`2028-08-02`**; Article 4 AI literacy: **live since `2025-02-02`**; AI Office and national-authority
@@ -275,6 +373,21 @@ commitment are **cross-sector** envelopes, and this page continues to refuse to 
 education budgets.
 
 ### APAC
+
+🆕 **`p600` — APAC is where this pass's new permissive supply actually landed.** **`4 of the 9`** agent
+rows promoted this pass are APAC-placed and **in-language rather than translated**:
+[`courseware-cn-annotator`](https://github.com/youngman2007/courseware-cn-annotator) (MIT, courseware
+PDF → Chinese study pack), [`socratic-tutor`](https://github.com/Rayhaan1345/socratic-tutor) (MIT,
+Mumbai AI Lab), [`EduNexus-AI`](https://github.com/weidonglang/EduNexus-AI) (MIT, teaching
+administration), alongside the held `kaogong-shuati` and `word-atlas`. 🟢 **Recipe `P-600-C`** composes
+them into an in-language courseware and exam-prep pipeline.
+
+🔴 **The honest qualifier:** every one of these is `5★`–`151★` with a **bus factor of `1`**. 🔵 **Price
+them as forkable reference code the studio takes ownership of, not as upstream dependencies.**
+🟡 Binding instruments in region — South Korea's **AI Basic Act** (in force `2026-01-22`), **Vietnam's
+AI Law** (`2026-03-01`, longer education transition), India's synthetic-content labelling
+(`2026-02-20`) — all already held, all search-snippet-grade here. 🔴 **Still no APAC
+ministry-of-education adoption *rate* with a denominator.**
 
 🆕 **`p599` — the region's regulatory asymmetry is now datable, and one national rollout already
 failed in public.** Korea's **`AI Basic Act` took effect `2026-01-22`** — the region's first
@@ -333,6 +446,23 @@ not a dependency to track. 🔵 In-language supply grows again with
 `10,227 B`, K-12, Chinese), joining DeepTutor, OpenMAIC and pupilfirst.
 
 ### LATAM
+
+🆕 **`p600` — recorded as a nil, with the denominator that makes it a measurement.** 🔴 **`0 of the 9`**
+agent rows promoted this pass are LATAM-placed, and 🔴 **`0 of the 11`** platform/curriculum rows are.
+The widened discovery sweep (`34` axes, `1,014` addresses, `678` unheld — `600-B`/`600-C`) returned
+**no LATAM-originated education-AI project** that cleared a byte-read permissive grant and the `5★`
+floor. 🔵 **This is the strongest-evidenced statement of this gap the base has made**, because for the
+first time the sweep behind it was wide enough that the silence means something.
+
+🟢 **What is actionable anyway, from this pass's supply:** the **offline-first** axis.
+[`StudySage`](https://github.com/sizwinz/StudySage-Offline-Online-AI-Note-Assistant) (MIT,
+offline-first study assistant) joins Kolibri as the second component that works without a session —
+recipe `P-600-B` routes low-connectivity cohorts through it. 🔵 **Offline capability, not language, is
+the LATAM technical differentiator**, and it is now supplied permissively.
+
+🔴 **Gaps re-registered, unclosed:** no education-specific LATAM capital figure beyond the
+`$4.2bn by 2030 (~45 % CAGR)` forecast; no permissive LATAM platform of record; no primary-source
+regulatory instrument for **Canada or Mexico** reachable from this session.
 
 🆕 **`p599` — this region produced this pass's one disconfirmed finding, and the disconfirmation is
 the deliverable.** The leg served `ConectIA` (UC Chile + Microsoft) as a `2026` institutional-AI
@@ -399,6 +529,23 @@ platform layer as integration rather than customisation.
 
 ### Global
 
+🆕 **`p600` — a new permissive tier, and a licence risk that sits at the TOP of the quality ranking.**
+The **spaced-repetition / retention** category is now held as software rather than as a concept
+(`FSRS` appears in `318` files of this base; the implementations were absent until this pass):
+`flashcards-obsidian` (MIT, `1,113★`), `repeater` (Apache-2.0, `442★`), `memcode` (MIT, `408★`).
+
+🔴 **The finding a buyer needs:** the two most feature-complete systems in the category are the two
+that cannot be vendored — `scholarsome` is **AGPL-3.0** (`793★`) and `mnemosyne` ships **no usable
+grant at all** (`156 B`, *"Different parts of the software use different licenses"* — `600-G`).
+🔵 **So a feature-led selection in this category walks into a licence problem**, which is `599-C`
+exactly inverted: the risk is not in the unaudited `5★` tail here, it is in the market leaders.
+
+🟢 **And the supply-discovery correction that reframes every "market is covered" claim on this page:**
+`p599`'s twenty-eight-pass discovery nil was a **sampling artefact** — same six axes, same ordering,
+`39` addresses against `334`, `0 %` against `41.3 %` (`600-B`). 🔴 **A saturated index usually means a
+saturated query**, and this page should not again report an industry as covered on the strength of one
+page of one ordering.
+
 🆕 **`p599` — the `2026` market base is now the only figure on this page that five independent firms
 agree on, and the forecast endpoints disagree by `4.3×`.** Quote the base (`$7 B–$11.4 B`); never
 quote an endpoint without naming the firm, the year and the CAGR beside it (`599-E`). 🔴 A `$12.5 B`
@@ -437,7 +584,7 @@ Autolab/Anubis (course delivery + autograding), JupyterHub (compute), Kolibri St
 packaging), FSRS-rs (retention), Learner Credential Wallet (credentialing). 🔵 **That was true before
 this pass and unstatable, because `78.4 %` of what this base had found was dropped.**
 
-### 🔴 Declared regional gaps — a nil in prose reads like coverage
+## 🔴 Declared regional gaps — a nil in prose reads like coverage
 
 | gap | status this pass |
 | --- | --- |

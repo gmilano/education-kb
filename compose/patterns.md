@@ -4,6 +4,134 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p600` — `2026-11-01` — three recipes built from supply that did not exist on these pages yesterday, and every component grant byte-read this pass
+
+🔵 **Why these three and not more.** `600-B`/`600-C` widened the axis set and produced `678` unheld
+addresses, of which `9` agents and `11` platform/curriculum rows survived a byte-read licence screen
+and a `≥ 5★` floor. The recipes below are the compositions those rows make possible that the previous
+`599` passes could not state. 🔴 **Each names its weakest component explicitly** — a recipe whose
+risks are implicit is a sales sheet, not a plan.
+
+### 🟢 Component grants, all byte-read `2026-11-01` at the real default branch, every fabricated-path control `404`
+
+| component | grant (bytes) | branch | role |
+| --- | --- | --- | --- |
+| [MathWorks-Teaching-Resources](https://github.com/MathWorks-Teaching-Resources) (`81` repos) | 🟢 **BSD-3-Clause** (`1,527`/`1,528 B`) | 🔴 **`release`** on `59 of 81` | STEM course content |
+| [LearnAIHubC/LearnDeck](https://github.com/LearnAIHubC/LearnDeck) | 🟢 **MIT** (`LICENSE.txt`, `1,068 B`) | `main` | material → slide decks |
+| [agenticfabriq/beacon](https://github.com/agenticfabriq/beacon) | 🟢 **Apache-2.0** (`11,358 B`) | `main` | free-text grading harness |
+| [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | 🟢 **BSD-3-Clause** (`1,512 B`) | `main` | notebook autograding |
+| [fcescob/understand](https://github.com/fcescob/understand) | 🟢 **MIT** (`1,075 B`) | `main` | mastery gate |
+| [Rayhaan1345/socratic-tutor](https://github.com/Rayhaan1345/socratic-tutor) | 🟢 **MIT** (`1,070 B`) | `main` | question-first tutoring |
+| [reuseman/flashcards-obsidian](https://github.com/reuseman/flashcards-obsidian) | 🟢 **MIT** (`1,069 B`) | `main` | notes → scheduled cards |
+| [shaankhosla/repeater](https://github.com/shaankhosla/repeater) | 🟢 **Apache-2.0** (`11,357 B`) | `main` | terminal-native SRS |
+| [lakesare/memcode](https://github.com/lakesare/memcode) | 🟢 **MIT** (`1,080 B`) | 🔴 **`master`** | hosted multi-tenant SRS |
+| [sizwinz/StudySage…](https://github.com/sizwinz/StudySage-Offline-Online-AI-Note-Assistant) | 🟢 **MIT** (`1,083 B`) | `main` | offline study assistant |
+| [youngman2007/courseware-cn-annotator](https://github.com/youngman2007/courseware-cn-annotator) | 🟢 **MIT** (`1,093 B`) | `main` | PDF → zh study pack |
+| [selftune-dev/selftune](https://github.com/selftune-dev/selftune) | 🟢 **MIT** (`1,067 B`) | `main` | skill eval / observability |
+| [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** (`11,361 B`) | 🔴 **`master`** | LTI 1.3 into any LMS |
+
+🔴 **Do not vendor:** `hwgilbert16/scholarsome` (AGPL-3.0), `mnemosyne-proj/mnemosyne` (pointer, not a
+grant — `600-G`), `CaviraOSS/PageLM` (bespoke non-commercial), `GarethManning/education-agent-skills`
+(CC BY-SA 4.0, content only — `599-A`).
+
+---
+
+## 🆕 P-600-A — 🟢 **Engineering-faculty course modernisation on BSD-3-Clause content** (8–12 weeks, EMEA / North America)
+
+🔵 **The brief this answers:** *"We need accredited-quality STEM course material we are allowed to
+modify and rebrand, with AI assistance on top, and we cannot wait for a content licensing
+negotiation."* 🟢 **Nothing else on these pages answers it** — every agent row generates material from
+the client's own inputs; this is the only tier that *supplies* subject content under a permissive grant.
+
+**Wiring:**
+1. **Content base** — select modules from `MathWorks-Teaching-Resources` (`81` repos: Fourier analysis,
+   thermodynamics, fluid mechanics, control systems, robotic manipulators, numerical methods,
+   programming fundamentals). 🔴 **Clone with the branch resolved first:**
+   `git ls-remote --symref <url> HEAD` → `release` for `59 of 81`. A `git clone -b main` script will
+   fail on three quarters of the estate (`600-D`).
+2. **Delivery** — Open edX or Moodle as the LMS; attach the agent layer through
+   `Cvmcosta/ltijs` (LTI 1.3) so no LMS fork is needed. 🔴 `ltijs` is on `master`.
+3. **Courseware generation** — `LearnDeck` turns each module's notes into lecture decks;
+   keep the BSD-3-Clause attribution block in the generated deck footer.
+4. **Assessment** — `nbgrader` for anything notebook-shaped; `beacon` for free-text and
+   derivation answers, which `nbgrader` cannot score.
+5. **Progression** — `understand` as a mastery gate between modules; `repeater` or
+   `flashcards-obsidian` for retention between lectures.
+6. **Agent QA** — `selftune` to measure whether the tutoring skills are actually improving
+   outcomes rather than just running.
+
+🔴 **Weakest component, named:** the MathWorks runtime is **commercial MATLAB/Simulink**. 🟢 The
+*content* is BSD-3-Clause and rebrandable; 🔴 the client needs MATLAB licences, or the modules must be
+ported (Python/Octave) — which is real work and must be priced, not assumed. 🔵 **Say this in week 1,
+not week 9.**
+
+🟡 **EMEA regulatory note:** assessment that affects progression is Annex III high-risk under the EU AI
+Act, and the Digital Omnibus (`Regulation (EU) 2026/1744`) moved that compliance date to
+`2027-12-02` — **secondary-source grade on these pages, hosts unreachable (`583-E`)**. 🟢 The
+Article 4 AI-literacy duty applies *now*, so the staff-training element is not deferrable.
+
+---
+
+## 🆕 P-600-B — 🟢 **A permissive retention layer bolted onto an LMS the client already runs** (4–6 weeks, Global / LATAM)
+
+🔵 **The brief:** *"Completion is fine, retention is terrible, and we are not replacing the LMS."*
+🟢 This base has argued retention science for hundreds of passes (`FSRS` in `318` files) while holding
+no permissive implementation. `600-D`'s SRS tier closes that.
+
+**Wiring:**
+1. **Capture** — an agent (`Skill-Anything`, or `courseware-cn-annotator` for Chinese) converts each
+   existing course unit into atomic question/answer pairs as markdown.
+2. **Schedule** — `flashcards-obsidian` (MIT) for the notes-native path, or `memcode` (MIT, 🔴 branch
+   `master`) when the client needs a **hosted multi-tenant** deck server with per-cohort decks.
+3. **Low-connectivity cohorts** — `StudySage` (MIT, offline-first) so review works without a
+   session; sync on reconnect. 🔵 **This is the LATAM and rural-APAC path**, and it is the reason
+   `memcode` alone is not the answer.
+4. **CLI/engineering cohorts** — `repeater` (Apache-2.0) embeds in a terminal workflow with
+   **no hosting, no auth, no UI to maintain**.
+5. **Integration** — surface review prompts back into the LMS via `ltijs`; no LMS fork.
+
+🔴 **Weakest component, named:** the two most feature-complete systems in this category are the two
+you cannot use — `scholarsome` is **AGPL-3.0** and `mnemosyne` carries **no usable grant**
+(`600-G`). 🔵 **So a feature-led tool selection in this category walks straight into a licence
+problem**, which is `599-C` inverted: here the risk sits at the top of the quality ranking, not in
+the unaudited tail. 🟡 `olmps/memo` (BSD-3-Clause, `1,871★`) is a clean **reference implementation**
+for the mobile UX — last push `2024-07-29`, so read it, do not depend on it.
+
+---
+
+## 🆕 P-600-C — 🟢 **In-language courseware and exam-prep pipeline for APAC** (6–8 weeks, APAC)
+
+🔵 **The brief:** *"Our material is in English, our learners are not, and translation alone produces
+unusable study material."* 🟢 Every component here is permissive and in-language rather than
+translated, which is the distinction that decides whether the output is usable.
+
+**Wiring:**
+1. **Ingest** — `courseware-cn-annotator` (MIT) converts courseware PDFs into Chinese-language study
+   packages; it ships as an **agent skill**, so there is no service to stand up.
+2. **Tutoring** — `socratic-tutor` (MIT) for question-first delivery, with `understand` (MIT) gating
+   advancement on demonstrated transfer rather than completion.
+3. **Exam-track** — `ERRRC/kaogong-shuati` (MIT) for civil-service practice (行测 / 申论);
+   `designfuchen/word-atlas` (MIT) for IELTS vocabulary with FSRS scheduling already built in.
+4. **Retention** — `repeater` or `flashcards-obsidian`, seeded from step 1's output.
+5. **Frontier tutor option** — `HKUDS/DeepTutor` (Apache-2.0, `53.5k★`, HKU) where the client wants a
+   persistent learner model. 🔴 **Pin a tag, not `main`** — it shipped `v1.7.1` on `2026-11-01` and
+   moved `+1.5k★` in four days.
+6. **Agent QA** — `selftune` (MIT) for skill-level observability across the pipeline.
+
+🔴 **Weakest component, named:** every row in steps 1–3 is **`5★`–`151★`** — single-maintainer
+projects with no adopter base. 🟢 Their grants are clean and byte-read; 🔴 **their bus factor is `1`.**
+🔵 **Price them as forkable reference code the studio takes ownership of, not as upstream dependencies
+to track** — that is the honest commercial framing, and it is why the `5★` floor rows are shelved at
+all (`599-C`).
+
+🟡 **Regulatory note:** South Korea's AI Basic Act (in force `2026-01-22`) and Vietnam's AI Law
+(`2026-03-01`, with a longer transition for education) are the two binding instruments in region;
+India's synthetic-content labelling rule (`2026-02-20`) applies to generated study material.
+🔴 **All three are search-snippet-grade here** — primary legal hosts are outside this session's
+network (`583-E`).
+
+---
+
 ## 🆕 `p599` — `2026-11-01` — two recipes keyed to the only two education AI deadlines that are *already* in force, and every component grant byte-read this pass
 
 🔵 **Why these two and not another tutor.** Both `p598` and `p597` built recipes around capability.

@@ -4,6 +4,116 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p600` — `2026-11-01` — **🔴 THE `0 %` NIL WAS A SAMPLING ARTEFACT, NOT AN ORDERING ONE: `p599` TOOK `39` ADDRESSES FROM `6` AXES, THIS PASS TOOK `334` FROM THE SAME `6` AND `138` ARE NEW (`41.3 %`) AT THE SAME ORDERING. 🟢 `34` AXES WALKED IN BOTH ORDERINGS, `1,246` ROWS, `1,014` UNIQUE ADDRESSES, `678` NEVER HELD. 🟢 AND AN `81`-REPO BSD-3-CLAUSE UNIVERSITY CURRICULUM ORG WAS INVISIBLE FOR `599` PASSES BECAUSE `59 of 81` OF ITS REPOS DEFAULT TO A BRANCH NAMED `release`.**
+
+### 🟢 The axis census — `34` axes, both orderings, every address checked against this whole base
+
+Gate applied before any address was called new: `grep -ril` over **every** `*.md` and `*.tsv` in this
+repository (`2,839` files, `4,645` distinct addresses held), the `597-D` discipline.
+
+| cohort | taken | 🆕 new | yield |
+| --- | --: | --: | --: |
+| star-ranked, all `34` axes | `588` | `304` | 🟢 **`51.7 %`** |
+| recency-ranked (`?sort=updated`), all `34` axes | `548` | `424` | 🟢 **`77.4 %`** |
+| **union, de-duplicated** | **`1,014`** | **`678`** | 🟢 **`66.9 %`** |
+
+🔴 **`p599` reported `0 of 39` star-ranked and concluded the star ordering was exhausted.** Both of
+its numbers reproduce where they apply — but the conclusion does not survive a denominator:
+
+| `p599` axis, star-ranked, `30` taken each | taken | 🆕 new | yield | verdict |
+| --- | --: | --: | --: | --- |
+| `topic:ai-tutor` | `30` | `0` | `0.0 %` | 🔴 genuinely saturated |
+| `topic:lms` | `30` | `1` | `3.3 %` | 🔴 genuinely saturated |
+| `topic:intelligent-tutoring-system` | `30` | `6` | `20.0 %` | 🟢 pays |
+| `topic:knowledge-tracing` | `30` | `7` | `23.3 %` | 🟢 pays |
+| `topic:grading` | `30` | `14` | `46.7 %` | 🟢 pays |
+| `topic:essay-grading` | `17` | `11` | `64.7 %` | 🟢 pays well |
+
+🔵 **`p599` read roughly the first page of each axis.** `topic:ai-tutor` is the axis this base has
+mined hardest, it sits first in every sweep, and it is the one axis that really is exhausted — so a
+shallow read of a six-axis list that *begins* with the exhausted axis produces a persuasive `0 %`.
+🔴 **The remedy it proposed — change the ordering — worked only because changing the ordering also
+re-samples.** The two variables were never separated until this pass.
+
+### 🟢 The `28` axes this base had never queried, and the nine that are `100 %` unheld
+
+| axis | ordering | taken | 🆕 new | yield |
+| --- | --- | --: | --: | --: |
+| `kw:teacher+copilot` | both | `60` | `60` | 🟢 **`100 %`** |
+| `kw:learning+path+agent` | both | `60` | `60` | 🟢 **`100 %`** |
+| `topic:homework-helper` | both | `60` | `60` | 🟢 **`100 %`** |
+| `kw:curriculum+agent` | updated | `30` | `30` | 🟢 **`100 %`** |
+| `kw:ai+grading+agent` | updated | `30` | `30` | 🟢 **`100 %`** |
+| `kw:lesson+plan+generator` | updated | `30` | `30` | 🟢 **`100 %`** |
+| `kw:student+agent` | updated | `30` | `30` | 🟢 **`100 %`** |
+| `topic:courseware` | updated | `30` | `30` | 🟢 **`100 %`** |
+| `topic:education-platform` | updated | `30` | `30` | 🟢 **`100 %`** |
+| **`28` unwalked axes, both orderings** | — | **`1,646`** | **`1,322`** | 🟢 **`80.3 %`** |
+
+🔵 **Every one of the nine `100 %` axes is phrased as a job rather than a technology** — "teacher
+copilot", "lesson plan generator", "learning path agent", "homework helper", "courseware". 🔴 **This
+base has been indexed by technology nouns (`lms`, `knowledge-tracing`, `ai-tutor`) for `599` passes**,
+which is why it was saturated on the nouns and blind to the verbs. 🟢 **Standing recommendation: the
+axis set is the budget line, not the query count.**
+Full census: [`../evidence/axis-ordering-census.2026-11-01-p600.tsv`](../evidence/axis-ordering-census.2026-11-01-p600.tsv).
+
+### 🟢 The find of the pass — an `81`-repo permissive curriculum estate, hidden behind a branch name
+
+[`MathWorks-Teaching-Resources`](https://github.com/MathWorks-Teaching-Resources) — **`81` repos**,
+🔴 **`0` held in this base across `599` passes.**
+
+| default branch | repos | share |
+| --- | --: | --: |
+| 🔴 **`release`** | **`59`** | 🔴 **`72.8 %`** |
+| `main` | `21` | `25.9 %` |
+| `master` | `1` | `1.2 %` |
+
+🔴 **A probe that tries `main`, then `master`, reports "no licence file" for `59 of 81` of this org.**
+That is `600-E` at organisation scale, and it is the mechanism by which an institution-grade,
+permissively-licensed curriculum estate stayed invisible to `599` consecutive passes. 🔵 **The second
+mechanism is the axis set: these repos carry MATLAB and subject topics, never education topics**, so
+no `topic:lms`-shaped query reaches them.
+
+Top of the estate, grants byte-read `2026-11-01` at the real default branch:
+
+| repo | ★ | grant (byte-read) | branch |
+| --- | --: | --- | --- |
+| [Computational-Fluid-Dynamics](https://github.com/MathWorks-Teaching-Resources/Computational-Fluid-Dynamics) | **210** | 🟢 **BSD-3-Clause** (`LICENSE`, `1,527 B`) | `main` |
+| [Fourier-Analysis](https://github.com/MathWorks-Teaching-Resources/Fourier-Analysis) | **143** | 🟢 **BSD-3-Clause** (`LICENSE.md`, `1,528 B`) | 🔴 **`release`** |
+| [Virtual-Controls-Laboratory](https://github.com/MathWorks-Teaching-Resources/Virtual-Controls-Laboratory) | **109** | 🟢 **BSD-3-Clause** (`1,528 B`) | 🔴 **`release`** |
+| [Thermodynamics](https://github.com/MathWorks-Teaching-Resources/Thermodynamics) | **43** | 🟢 **BSD-3-Clause** (`1,528 B`) | 🔴 **`release`** |
+| [Robotic-Manipulators](https://github.com/MathWorks-Teaching-Resources/Robotic-Manipulators) | **37** | 🟢 **BSD-3-Clause** (`1,528 B`) | 🔴 **`release`** |
+| [Fundamentals-of-Programming](https://github.com/MathWorks-Teaching-Resources/Fundamentals-of-Programming) | **37** | 🟢 **BSD-3-Clause** (`1,528 B`) | 🔴 **`release`** |
+| [Fluid-Mechanics](https://github.com/MathWorks-Teaching-Resources/Fluid-Mechanics) | **30** | 🟢 **BSD-3-Clause** (`1,528 B`) | 🔴 **`release`** |
+
+🟡 **Caveat recorded with the find:** the modules are **MATLAB/Simulink** courseware, so the content
+is permissive but the *runtime* is commercial. 🔵 **That makes them curriculum assets, not a software
+stack** — valuable for the content layer of an engineering-faculty engagement, and not a substitute
+for an open runtime. Full `81`-row census:
+[`../evidence/mathworks-curriculum-census.2026-11-01-p600.tsv`](../evidence/mathworks-curriculum-census.2026-11-01-p600.tsv).
+
+### 🟢 The spaced-repetition tier, which this base holds as a *concept* and lacked as *addresses*
+
+`FSRS` appears in `318` files of this base and `anki` in `485` — 🔵 **so the retention science was
+never missing; the implementations were.** Four addresses, grants byte-read this pass:
+
+| repo | ★ | grant (byte-read) | branch | note |
+| --- | --: | --- | --- | --- |
+| [reuseman/flashcards-obsidian](https://github.com/reuseman/flashcards-obsidian) | **1,113** | 🟢 **MIT** (`1,069 B`) | `main` | Pushed `2026-10-31` — live |
+| [olmps/memo](https://github.com/olmps/memo) | **1,871** | 🟢 **BSD-3-Clause** (`1,515 B`) | `main` | 🟡 last push `2024-07-29` — stale |
+| [lakesare/memcode](https://github.com/lakesare/memcode) | **408** | 🟢 **MIT** (`1,080 B`) | 🔴 **`master`** | Live (`2026-10-23`); a `600-E` row |
+| [shaankhosla/repeater](https://github.com/shaankhosla/repeater) | **442** | 🟢 **Apache-2.0** (`11,357 B`) | `main` | Terminal-native SRS |
+| [hwgilbert16/scholarsome](https://github.com/hwgilbert16/scholarsome) | **793** | 🔴 **AGPL-3.0** (`34,523 B`) | 🔴 **`develop`** | 🔴 Reciprocal — flagged, not shelved |
+| [mnemosyne-proj/mnemosyne](https://github.com/mnemosyne-proj/mnemosyne) | **605** | 🔴 **pointer, not a grant** (`156 B`) | `master` | 🔴 BLOCK — `600-G` |
+
+### 🔴 The mandated legs — `20 of 20` tokens already held, thirtieth consecutive nil
+
+Measured per token this pass rather than asserted; see
+[`../evidence/mandated-leg-tokens.2026-11-01-p600.tsv`](../evidence/mandated-leg-tokens.2026-11-01-p600.tsv)
+and the full working in [`../agents/trending.md`](../agents/trending.md) — **`600-B`**…**`600-G`**.
+
+---
+
 ## 🆕 `p599` — `2026-11-01` — **🟢 THE `0 %` NIL AND THE `15 %` YIELD CAME FROM THE SAME TOPIC PAGE, DIFFERING ONLY IN THE `?o=desc&s=updated` QUERY STRING. 🔴 `39 of 39` STAR-RANKED ADDRESSES WERE ALREADY HELD; `3 of 20` RECENCY-RANKED ONES WERE NOT, AND ALL `3` ARE `≤ 4★`. 🔵 SIX TOPIC HEADS WALKED, EVERY ADDRESS CHECKED INDIVIDUALLY AGAINST THIS WHOLE BASE BEFORE BEING CALLED NEW.**
 
 ### 🟢 The six topic heads, star-ranked — every address taken, every one checked

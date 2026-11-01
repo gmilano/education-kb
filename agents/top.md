@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p600` — `2026-11-01` — `9` agent rows promoted, the shelf goes `44 → 53`, and the discovery nil this page has reported for twenty-nine passes was a sampling artefact
+
+### 🟢 The reason `9` rows were available at all, stated before the rows
+
+This page has recorded a discovery nil for twenty-nine consecutive passes, and `p599` concluded the
+star-ranked channel was exhausted. 🔴 **That conclusion was wrong, and not in a subtle way.** `p599`
+took `39` addresses from `6` topic axes; this pass took `334` from the **same six** and `138` were new
+(`41.3 %`) **at the same ordering** — then `1,646` more from `28` axes this base had never queried, of
+which `1,322` were new (`80.3 %`). 🔵 **The binding constraint was per-axis depth and the axis set,
+never the ranking function.** Full working in [`trending.md`](trending.md) — **`600-B`**, **`600-C`**.
+
+🔵 **And the half of that finding which keeps this page honest:** `678` unheld addresses yielded
+**`66`** that are permissive *and* `≥ 5★` *and* pushed in `2026`, and **`9`** that are also actually
+education-AI rather than education-adjacent. 🔴 **`310 of 678` are `license: null` or `NOASSERTION`.**
+So the supply is findable; it is mostly not shippable. The rows below are the `9`.
+
+### 🟢 Promoted to the shelf — every grant byte-read `2026-11-01` at the real default branch, every fabricated-path control `404`
+
+| Agent | ★ | Grant (byte-read) | Branch | Why it earns a row |
+| --- | --: | --- | --- | --- |
+| [LearnAIHubC/LearnDeck](https://github.com/LearnAIHubC/LearnDeck) | **26** | 🟢 **MIT** (`LICENSE.txt`, `1,068 B`) | `main` | Courseware generation from notes/material; grant is at `LICENSE.txt`, which a `LICENSE`-only probe misses |
+| [selftune-dev/selftune](https://github.com/selftune-dev/selftune) | **18** | 🟢 **MIT** (`1,067 B`) | `main` | 🟢 **First permissive candidate against this base's standing "no OSS agent eval/observability" gap** |
+| [sizwinz/StudySage…](https://github.com/sizwinz/StudySage-Offline-Online-AI-Note-Assistant) | **12** | 🟢 **MIT** (`1,083 B`) | `main` | Offline-first study assistant — the low-connectivity axis |
+| [TerraByte-Dev/OpenEdu](https://github.com/TerraByte-Dev/OpenEdu) | **6** | 🟢 **MIT** (`1,080 B`) | 🔴 **`master`** | AI tutoring platform; a `600-E` row — `main`-only probe reports it grantless |
+| [agenticfabriq/beacon](https://github.com/agenticfabriq/beacon) | **5** | 🟢 **Apache-2.0** (`11,358 B`) | `main` | Free-text grading harness — the scoring seam `nbgrader` leaves open |
+| [fcescob/understand](https://github.com/fcescob/understand) | **5** | 🟢 **MIT** (`1,075 B`) | `main` | Mastery-gated advancement, not completion-gated |
+| [Rayhaan1345/socratic-tutor](https://github.com/Rayhaan1345/socratic-tutor) | **5** | 🟢 **MIT** (`1,070 B`) | `main` | Third pedagogy-as-product instance — the category is established |
+| [youngman2007/courseware-cn-annotator](https://github.com/youngman2007/courseware-cn-annotator) | **5** | 🟢 **MIT** (`1,093 B`) | `main` | APAC in-language courseware conversion |
+| [weidonglang/EduNexus-AI](https://github.com/weidonglang/EduNexus-AI) | **5** | 🟢 **MIT** (`1,071 B`) | `main` | 🟢 **First permissive row on this page touching the ERP/SIS gap** |
+
+🔵 **All nine sit in the `5–26★` band.** `599-C` established that the hand-written "looks open" grant
+concentrates exactly there, so 🟢 **not one of these licences was taken from `spdx_id`** — every one
+was byte-read, and every repo's fabricated-path control returned `404`. The band is still the
+riskiest on this page; it is now audited rather than avoided.
+Evidence: [`../evidence/grants-byteread.2026-11-01-p600.tsv`](../evidence/grants-byteread.2026-11-01-p600.tsv).
+
+### 🔴 Measured this pass and NOT shelved — recorded so a later pass does not re-find them
+
+| Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Disposition |
+| --- | --: | --- | --- | --- |
+| [mnemosyne-proj/mnemosyne](https://github.com/mnemosyne-proj/mnemosyne) | **605** | 🔴 **pointer, not a grant** — `156 B`, *"Different parts of the software use different licenses:"* | `master` | 🔴 **BLOCK.** API says `NOASSERTION`. Second instance of `599-A`'s rung, at `6.4×` the stars of the case that established it — **`600-G`** |
+| [hwgilbert16/scholarsome](https://github.com/hwgilbert16/scholarsome) | **793** | 🔴 **AGPL-3.0** (`34,523 B`) | 🔴 **`develop`** | 🔴 **Reciprocal — flagged, not shipped.** Listed because it is the most-adopted permissive-adjacent SRS web app and a later pass will re-find it |
+| [olmps/memo](https://github.com/olmps/memo) | **1,871** | 🟢 **BSD-3-Clause** (`1,515 B`) | `main` | 🟡 **NOT SHELVED — abandonment.** Grant is clean and stars are real; last push `2024-07-29`, so it is a reference implementation, not a dependency |
+| [zagortenay333/cronomix](https://github.com/zagortenay333/cronomix) | **657** | 🟢 **MIT** | `master` | 🔴 **NOT SHELVED — off-domain.** A GNOME desktop timer that happens to include flashcards; it reached the candidate set through `topic:flashcards` and is not education software |
+
+🔵 **Why the last row is recorded rather than dropped:** widening the axis set (`600-C`) widens the
+*noise* too. `topic:flashcards` and `topic:spaced-repetition` return desktop utilities and language
+apps alongside real education tooling, so the new axes need the domain screen that the old
+technology-noun axes got for free.
+
+### 🔴 `600-F` — a filter on this page's own candidate set returned a false `0`, and the control caught it
+
+The first relevance screen over the `678` new addresses reported 🔴 **`0` candidates**. Cause: `awk`
+in this environment does not implement `\b`, so `/\bai\b/` matches nothing and errors nothing.
+🟢 **Re-run without `\b`: `66`.** 🔵 **Rung now standing on this page: a screen that returns `0` must
+be shown capable of returning non-`0` before the `0` is written down** — otherwise a broken filter and
+a saturated market produce identical pages, which is the exact confusion `600-B` just unwound.
+
+---
+
 ## 🆕 `p599` — `2026-11-01` — the most-starred Creative Commons row on this page is reciprocal, not a dedication, and `0` rows were added
 
 ### 🔴 The correction, which changes an instruction this page gave the reader
@@ -420,7 +480,7 @@ eight ran. Every repo-shaped name they served — `ai-agents-for-beginners`,
 🟢 **The four regional legs paid `4 of 4`** ([`../intel/market.md`](../intel/market.md)).
 ---
 
-## The shelf — 44 verified agents, of which `1` is now a block
+## The shelf — 53 verified agents, of which `1` is now a block
 
 🔴 **`PageLM` stays listed and is NOT shippable** — a row removed silently is a row a later pass re-discovers and re-files as 🟢 MIT. It is kept in place, re-graded, with the reason in the cell (`594-A`).
 
@@ -473,6 +533,15 @@ placement (institution, org, or language of the project); otherwise it reads `Gl
 | **Lama Loca** | [emil-a-dev/lama-loca](https://github.com/emil-a-dev/lama-loca) | 🟢 MIT | **59** | 🟡 `2026-03-04` | EMEA | Fully offline Russian-language study assistant: learns from the user's own books, emits reports and slides. |
 | **BCTK** (TK试题题库) | [BBkjdayup/BCTK](https://github.com/BBkjdayup/BCTK) | 🟢 MIT | **53** | `2026-09-28` | APAC | Offline-first Windows item-bank and paper-composition app for teachers. Word/Excel round-trip without Office. |
 | **ai-tutor-app** | [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | 🟢 Apache-2.0 | **34** | `2026-10-22` | Global | 🆕 Agentic **RAG** tutor for applied AI/LLM/Python built on **LangGraph** — the only shelf row that is an explicit retrieval-grounded tutor over a fixed corpus, which is the shape a client asks for when the answer must come from *their* materials. |
+| **LearnDeck** | [LearnAIHubC/LearnDeck](https://github.com/LearnAIHubC/LearnDeck) | 🟢 **MIT (text, `LICENSE.txt`, 1,068 B)** | **26** | `2026-07-15` | Global | 🆕 Topics, notes and raw course material → generated slide decks. The **courseware-generation** seam on the agent side; pairs with `ppt-master` (native PPTX) and `book-to-skill` (ingestion). 🔵 Grant lives at `LICENSE.txt`, not `LICENSE`. |
+| **selftune** | [selftune-dev/selftune](https://github.com/selftune-dev/selftune) | 🟢 **MIT (text, 1,067 B)** | **18** | `2026-10-24` | Global | 🆕 **Skill observability and self-improvement for agent skills.** 🔵 This base has carried "no dominant OSS agent eval/observability layer" as a declared gap for many passes — this is the **first permissive candidate against it**, and it is small, so the gap narrows rather than closes. |
+| **StudySage** | [sizwinz/StudySage-Offline-Online-AI-Note-Assistant](https://github.com/sizwinz/StudySage-Offline-Online-AI-Note-Assistant) | 🟢 **MIT (text, 1,083 B)** | **12** | `2026-07-05` | Global | 🆕 **Offline-first** AI note-taking and summarisation assistant for students; runs online or fully local. 🔵 Offline operation is the axis that matters for low-connectivity LATAM and rural APAC deployments, alongside Kolibri. |
+| **OpenEdu** | [TerraByte-Dev/OpenEdu](https://github.com/TerraByte-Dev/OpenEdu) | 🟢 **MIT (text, 1,080 B)** | **6** | `2026-10-08` | Global | 🆕 Open-source AI tutoring platform, absolute-beginner → mastery. 🔴 **Default branch is `master`** — a `600-E` row: a `main`-only probe reports this repo as having no licence file at all. |
+| **beacon** | [agenticfabriq/beacon](https://github.com/agenticfabriq/beacon) | 🟢 **Apache-2.0 (text, 11,358 B)** | **5** | `2026-10-25` | Global | 🆕 Grader and results tracker — exact-match plus "got-the-facts" grading with run history. 🔵 Written for text-to-SQL, but the **grading harness** is the reusable part: it is the scoring half that `nbgrader` does not cover for free-text answers. |
+| **understand** | [fcescob/understand](https://github.com/fcescob/understand) | 🟢 **MIT (text, 1,075 B)** | **5** | `2026-10-13` | Global | 🆕 **Mastery-gated** tutor skill for agents: teaches a topic or a codebase and will not advance until durable transfer is demonstrated. 🔵 The explicit counter to completion-as-progress. |
+| **socratic-tutor** | [Rayhaan1345/socratic-tutor](https://github.com/Rayhaan1345/socratic-tutor) | 🟢 **MIT (text, 1,070 B)** | **5** | `2026-10-23` | APAC | 🆕 Teaches by asking questions rather than answering them. Mumbai AI Lab. 🔵 **Third instance of pedagogy-as-product** after `nietzschian-debugger` and `learn-anything` — the category is now established, not anecdotal. |
+| **courseware-cn-annotator** | [youngman2007/courseware-cn-annotator](https://github.com/youngman2007/courseware-cn-annotator) | 🟢 **MIT (text, 1,093 B)** | **5** | `2026-10-27` | APAC | 🆕 Courseware PDF → a Chinese-language study package, packaged as an agent skill. 🔵 **APAC in-language supply**, alongside `kaogong-shuati` and `word-atlas`. |
+| **EduNexus-AI** | [weidonglang/EduNexus-AI](https://github.com/weidonglang/EduNexus-AI) | 🟢 **MIT (text, 1,071 B)** | **5** | `2026-07-01` | APAC | 🆕 Spring Boot + Vue 3 academic/teaching administration system (教务管理系统). 🔵 **The first permissively-licensed row on this page that touches the standing ERP/SIS gap** — it is a graduation-project-scale system, so it narrows the gap by proving the shape, not by filling it. |
 
 **44 rows. 43 are unreservedly permissive**, and the 44th (`nextgen-ai`) is permissive for
 its code with the content grant unstated. The agent layer licenses permissively, which
