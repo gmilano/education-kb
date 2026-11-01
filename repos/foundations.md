@@ -24,6 +24,7 @@ file rather than the GitHub API, which is wrong for ~25% of rows here.
 | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0 (text)** | **8,213** | `2026-11-01` | North America | 🔴 network copyleft | The LMS of record. 🔴 **Cite this address** — `openedx/edx-platform` is the pre-rename name and the API rejects it with `422`. |
 | [moodle/moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | **7,567** | `2026-10-30` | EMEA | 🔴 copyleft | The other LMS of record; 7,690 forks. Australia-origin, EMEA-anchored governance. |
 | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0 (text)** | **9,262** | `2026-10-31` | Global | 🔴 lesser copyleft | 🆕 **The virtual-classroom platform of record** — web conferencing purpose-built for teaching (breakouts, whiteboard, polls, recordings). 🟡 LGPL-3.0 is the mildest copyleft on this tier: a studio may **link** proprietary code against it, but modifications to BBB itself carry back. 🔴 **Default branch is `v4.0.x-develop`** — a licence probe on `main` returns `404` (see `587-D`). Re-found 18× in history and never filed. |
+| [apache/openmeetings](https://github.com/apache/openmeetings) | 🟡 **Apache-2.0 + a declared third-party block (text)** | **688** | `2026-10-26` | EMEA | 🟡 **yes, with one read** | 🆕 **The PERMISSIVE virtual-classroom platform — the tier this base recorded as copyleft-only.** Video conferencing, whiteboard, polls, recording and collaborative docs under ASF governance. 🔴 Its `LICENSE` carries an in-payload dependency block (MIT, BSD, EPL, EDL, some `NOASSERTION`, and **Oracle Free Use Terms** — not an open-source grant) exactly as `P1024` predicts; the **ASF's own code is Apache-2.0**, the bundle is the question. 🔵 API said `NOASSERTION`; default branch `master`; carried unfiled since `p525`. |
 | [frappe/lms](https://github.com/frappe/lms) | 🔴 **AGPL-3.0** | **3,360** | `2026-10-30` | APAC | 🔴 network copyleft | Frappe's LMS. India-origin, 1,566 forks. |
 | [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🔴 **AGPL-3.0** | **2,438** | `2026-11-01` | EMEA | 🔴 network copyleft | Next-gen self-hostable learning platform; very active. |
 | [classroomio/classroomio](https://github.com/classroomio/classroomio) | 🔴 **AGPL-3.0** | **1,736** | `2026-11-01` | Global | 🔴 network copyleft | Customer-training-oriented platform. |
@@ -86,6 +87,28 @@ reconciliation step will do this indefinitely.
 the component and extension tier is permissive. **`XBlock` + `codejail` + `ltijs` /
 `pylti1.3` + `scorm-again`** let a studio ship proprietary AI against an AGPL platform
 without the copyleft duty reaching its own code.
+
+---
+
+## 🆕 The enablement tier — the curricula a studio hands a client's own engineers
+
+🔵 **Not a platform tier and not an agent tier.** These are the teaching artefacts for a
+reskilling or enablement engagement, and they are listed here because the brief *"train our
+people to build this"* arrives in the same conversation as *"and build it for us"*. Full
+rows, licence reasoning and the taxonomy argument are on
+[`../agents/top.md`](../agents/top.md) under *the enablement tier*; this is the index.
+
+| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+|---|---|--:|---|---|---|---|
+| [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) | 🟢 **MIT (text)** | **122,693** | `2026-11-01` | Global | 🟢 **yes** | 🆕 **The largest education-adjacent repo on GitHub.** 21 lessons on building with generative AI. The default day-one hand-off. |
+| [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | 🟡 **Apache-2.0 — code only (text)** | **107,625** | `2026-10-30` | Global | 🟡 **code yes, book no** | 🆕 GPT-class model built one stage at a time. 🔴 **The licence text excludes the books and images from "Source"** — the deepest curriculum here and the one with a carve-out. |
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT (text)** | **78,550** | `2026-10-31` | Global | 🟢 **yes** | Agents from first principles, 18 lessons. Shelved `p587`; re-measured `p588`. |
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **MIT (text)** | **76,144** | `2026-10-29` | Global | 🟢 **yes** | The build-and-ship half. Shelved `p587`; re-measured `p588`. |
+| [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 🟢 **Apache-2.0 (text)** | **64,710** | `2026-10-27` | APAC | 🟢 **yes** | 🆕 A ~64M-parameter model trained from scratch in ~2 hours. 🔵 Chinese-language project; branch `master`. |
+| [karpathy/nanochat](https://github.com/karpathy/nanochat) | 🟢 **MIT (text)** | **59,252** | 🟡 `2026-09-07` | Global | 🟢 **yes** | 🆕 The whole ChatGPT-style stack, trainable end-to-end. 🟡 ~2 months — pin it. |
+
+🟢 **All six are permissive and five are unreserved**, so an enablement engagement has **no
+licence blocker at all** — which is not true of any platform tier on this page.
 
 ---
 

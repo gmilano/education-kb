@@ -4,6 +4,110 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p588 — 2026-11-01 — the defect class with no instrument is TAXONOMY, not licence; `pushed_at` overstates liveness and every staleness verdict in this base inherits that; and the education-specific licence shape is a CONTENT carve-out inside a permissive CODE grant
+
+### 🔴 Trend A — a knowledge base's inclusion rule drifts silently, and every gate it owns is blind to it
+
+This base runs a blocking gate suite over **licences**, **numeric claims** and **cross-page
+token agreement**. Measured this pass: **not one of them can detect that a row does not
+belong on the page it is on.**
+
+The specimen is `p587`'s own. [`../intel/open-gaps.md`](../intel/open-gaps.md) retired a
+whole discovery query on the finding that *"in a trending feed 'education' means teaching
+people about AI, not AI for teaching"* and named
+[`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch)
+as a specimen of the class to exclude. `p587` then shelved that exact repository as **the
+second-largest row on [`../agents/top.md`](../agents/top.md)**. Both pages passed every
+gate, because every gate asks *"is this licence right?"* and none asks *"is this the same
+kind of thing as its neighbours?"*
+
+| | before `p588` | after |
+|---|---|--:|
+| members of the *learning-about-AI* class on a curated page | **2** | **8** |
+| of the class's five largest members, how many were filed | **1 of 5** | **5 of 5** |
+| pages asserting the class is out of family | **1** (`open-gaps.md`) | **1 — still open** |
+
+🟢 **The generalisable claim.** A base that measures its *facts* and never its *categories*
+accumulates taxonomy debt invisibly, and taxonomy debt is the kind a **client** notices
+first: a shelf that mixes "an agent that tutors a student" with "a curriculum that teaches
+an engineer" cannot be handed to anyone without a sentence of explanation, and that
+sentence was never written. 🔴 **Confidence: high — measured on this base, one specimen
+class, two contradicting pages, both passing all gates.** 🔵 **What would instrument it: a
+gate that requires every shelf row to declare a `class`, and fails when a page holds more
+than one undeclared class.**
+
+### 🔴 Trend B — `pushed_at` is not "last commit", and every staleness verdict on these pages inherits the error
+
+This base marks rows 🟡 and 🔴 for staleness off the API's `pushed_at`. Measured against the
+default-branch commit feed (`https://github.com/{repo}/commits/{branch}.atom`):
+
+| Repo | API `pushed_at` | default-branch feed | gap |
+|---|---|---|--:|
+| [apache/openmeetings](https://github.com/apache/openmeetings) | `2026-11-01` | `2026-10-26` | 🔴 **6 days** |
+| [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | `2026-10-30` | `2026-10-30` | 🟢 0 |
+| [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | `2026-10-27` | `2026-10-27` | 🟢 0 |
+| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | `2026-07-27` | `2026-07-27` | 🟢 0 |
+
+🔴 **The error is one-directional.** `pushed_at` records a push to *any* ref — a tag, a
+release branch, a bot branch — so it can only ever be **newer** than the default branch's
+last commit, never older. 🟢 **Every "last push" column in this base is therefore an
+upper bound, and the 🟡/🔴 staleness marks are optimistic by an unknown margin.** 🔵 **The
+margin was 0 in 3 of 4 probes, so this is a tail risk, not a systematic bias** — but the
+tail is exactly where a "pushed today" row turns out to be a tag on dormant code.
+🟢 **Operational rule: for any row a studio would actually fork, read the feed.**
+🔴 **Confidence: high for the mechanism, low for the rate — `n=4`.**
+
+### 🟡 Trend C — education's licence shape is a CONTENT carve-out inside a permissive CODE grant, and it appears at the very top of the size distribution
+
+[`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) — **107,625★**, the
+second-largest education-adjacent repository on GitHub — ships Apache-2.0 text whose
+definition of **"Source" is modified** to exclude *"any books specific to this software and
+any related images"*. 🔴 **Neither channel alone shows it:** GitHub's API says
+`NOASSERTION`, and the file says "Apache License, Version 2.0" in its first line. Only
+reading the *body* of the grant finds the carve-out.
+
+It is not a one-off. Collected across this base:
+
+| Repo | Grant | What is carved out of it |
+|---|---|---|
+| [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | 🟡 Apache-2.0 (modified) | 🆕 the **books and images** |
+| [aaryansamanta/nextgen-ai](https://github.com/aaryansamanta/nextgen-ai) | 🟡 "MIT License (Code)" | the **curriculum content** |
+| [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | 🟡 ODbL-1.0 | it is a **data** licence; share-alike on derived databases |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🟡 Creative Commons | it is a **content** licence on software; no patent grant |
+| [ARUNAGIRINATHAN-K/awesome-ai-agents-2026](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | 🟡 CC0-1.0 | 🆕 public-domain dedication for **content**, not a software licence |
+
+🟢 **The claim, and it is specific to this industry: in education the content *is* the
+product, so publishers grant the code and withhold the material.** In a technology or
+infrastructure base the licence question is "may we ship this binary?"; here it is **"may we
+ship the lesson?"** — and the answer is routinely different from the answer about the code
+sitting beside it. 🔴 **The commercial consequence is direct.** A deliverable that reuses a
+client-facing *course*, *textbook*, *item bank* or *taxonomy* needs its grant checked
+separately from the repository that carries it, and an SOW drafted off the repository's
+licence badge will be wrong about the part the client actually paid for.
+🔵 **Confidence: high — five specimens, every grant read first-hand, spanning `107,625★` to
+`353★`.** 🟢 **It extends `p587`'s split-grant trend rather than repeating it:** `p587`
+measured grants that split *by directory*; this is a grant that splits **by kind of
+work**, and no SPDX identifier can express it.
+
+### 🔵 Two smaller results, recorded without a trend number
+
+🔴 **The secondary-source licence error rate this pass was `2 of 4`, both in the dangerous
+direction.** A comparison article described [`frappe/lms`](https://github.com/frappe/lms) as
+*"MIT (no restrictions)"* — it is **AGPL-3.0** — and asserted `OpenOLAT` as Apache-2.0 with
+no verification. 🟢 This base was right on both. 🔵 It extends `p586`'s *Trend 4* (licence
+metadata as a sourcing risk) to a channel that matters differently: **the API misleads this
+base, but comparison articles mislead the client's own team**, and they arrive in the
+engagement as "we read that this is MIT".
+
+🔴 **The intel channel is saturated at `20 of 24`.** `83 %` of everything six regional legs
+returned this pass was already filed, and **none of the remaining four is verifiable from
+this environment** — `7 of 7` non-GitHub hosts returned no connection. See
+[`./market.md`](./market.md) `p588` and `588-B`. 🟢 **The honest reading is a scheduling
+one: education's intel pages have reached the ceiling of this channel, while the GitHub
+channel still pays** — this pass added six rows there from it.
+
+---
+
 ## p587 — 2026-11-01 — the split grant is a class, not an anomaly; the data licence arrives in an education repo big enough to matter; and the discovery/promotion asymmetry is now a measured property of this base rather than a complaint
 
 ### 🔴 Trend A — the split grant is a CLASS, and a one-value licence field cannot represent it

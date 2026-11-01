@@ -25,6 +25,17 @@ is **76,141★ MIT**, both pushed within three days, both sitting in
 [`./trending.md`](./trending.md) 26 times each. 🔵 **The shelf was never discovery-limited.
 It was promotion-limited**, and the measurement is on [`../repos/trending.md`](../repos/trending.md).
 
+🆕 **`p588` — the scope of this pass, stated before its result: `9` addresses measured, not
+`43`.** This pass did **not** re-measure the shelf. It measured nine addresses — the
+largest members of one class, three platform rows that secondary sources described, and one
+permissive candidate this base has carried **unfiled since `p525`** — and the finding is a
+**rule this page changed at `p587` and never wrote down**. See `588-A` and the new
+*enablement tier* below.
+
+🔵 **Two `p587` rows were re-measured and AGREED:** `ai-agents-for-beginners` **78,550**
+(was `78,542`) and `ai-engineering-from-scratch` **76,144** (was `76,141`). 🟢 **That is one
+day of growth, not a contradiction** — recorded here so a later pass does not file one.
+
 ---
 
 ## The shelf — 43 verified agents
@@ -92,6 +103,47 @@ commercially: a skill has **no hosting, no auth and no UI to maintain**, so the 
 cost of adopting one is a fraction of adopting a platform. See
 [`../compose/patterns.md`](../compose/patterns.md) pattern `P586-1`.
 
+## 🆕 The enablement tier — repos that teach *about* AI, not repos that teach *with* it
+
+🔴 **This page admitted this class at `p587` without naming it, while
+[`../intel/open-gaps.md`](../intel/open-gaps.md) still records it as out of family.** That
+page retired the `github trending education AI {year}` query on the finding that *"in a
+trending feed 'education' means **teaching people about AI**, not **AI for teaching**"* —
+and it named [`rasbt/LLMs-from-scratch`](https://github.com/rasbt/LLMs-from-scratch) and
+[`rohitg00/ai-engineering-from-scratch`](https://github.com/rohitg00/ai-engineering-from-scratch)
+as its specimens. `p587` then shelved the second of those two as **the second-largest row
+on this shelf**. 🔴 **Both statements cannot stand.**
+
+🟢 **Resolved in favour of admitting the class — because the studio already sells it.**
+[`../compose/patterns.md`](../compose/patterns.md) `P-587-B` is a reskilling engagement
+whose curriculum components are exactly this class. What was missing was not the revenue:
+it was the **label**, and the rest of the class. 🔴 **The two tiers answer different briefs
+and must never be read as one shelf** — a client asking for a tutor cannot deploy a
+curriculum, and a client reskilling its engineers cannot deploy a tutor.
+
+Measured first-hand **2026-11-01** (`p588`). Every licence below read from the
+repository's own licence file.
+
+| Repo | Licence | Stars | Last push | Region | What it is |
+|---|---|--:|---|---|---|
+| [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) | 🟢 **MIT (text)** | **122,693** | `2026-11-01` | Global | 🆕 **The largest education-adjacent repository on GitHub, and this base had never filed it at any size.** 21 lessons on building with generative AI; 65,526 forks. Licence text is verbatim MIT, © Microsoft Corporation, **no content carve-out**. |
+| [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | 🟡 **Apache-2.0 — code only (text)** | **107,625** | `2026-10-30` | Global | 🆕 Build a GPT-class model in PyTorch one stage at a time; 16,610 forks. 🔴 **The licence text MODIFIES Apache-2.0's definition of "Source"** to exclude *"any books specific to this software and any related images"*. **Vendor the code; the book is not granted.** API said `NOASSERTION` — so neither channel alone shows this. © 2023–2026 Sebastian Raschka. |
+| [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 🟢 **Apache-2.0 (text)** | **64,710** | `2026-10-27` | APAC | 🆕 Trains a ~64M-parameter language model from scratch in ~2 hours on modest hardware. **The cheapest credible "we trained our own model" teaching artefact in this base.** Standard Apache-2.0, no carve-out. 🔵 Default branch is `master`. |
+| [karpathy/nanochat](https://github.com/karpathy/nanochat) | 🟢 **MIT (text)** | **59,252** | 🟡 `2026-09-07` | Global | 🆕 The full ChatGPT-style stack — tokeniser, pretraining, fine-tuning, inference, web UI — trainable end-to-end. © 2025 Andrej Karpathy, standard MIT. 🟡 ~2 months since last push; pin it. 🔵 Default branch is `master`. |
+| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🟢 **MIT (text)** | **39,200** | 🟡 `2026-07-27` | Global | 🆕 Catalogue of agent use cases by industry, **with education entries of its own** (Virtual AI Tutor, Study Partner, Research Scholar). Use it as a **brief generator** in pre-sales, not as a dependency. 🟡 ~3 months stale. Standard MIT, © 2025. |
+| [ARUNAGIRINATHAN-K/awesome-ai-agents-2026](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | 🟡 **CC0-1.0 (text)** | **353** | `2026-10-23` | Global | 🆕 Searchable directory comparing agent frameworks and tools; 770 commits, a real application rather than a README list. 🔴 **CC0 is a public-domain dedication for *content*, not a software licence — no patent grant.** Same trap as `education-agent-skills` in the block table below. API said `NOASSERTION`. |
+
+🔵 **Two members of this class are already on the shelf above** —
+`microsoft/ai-agents-for-beginners` (**78,550**, MIT) and
+`rohitg00/ai-engineering-from-scratch` (**76,144**, MIT), both shelved at `p587`. With the
+six rows here the class has **eight** members, and **four of its five largest were unfiled
+before this pass**. 🔴 **Only `minimind` carries a region**, and it carries it because the
+project is Chinese-language; the rest are English-language and genuinely `Global`. That is
+the one property that makes this tier travel to LATAM — see
+[`../compose/patterns.md`](../compose/patterns.md) `P-588-A`.
+
+---
+
 ### Smaller but institution-accountable — worth citing in a proposal
 
 These are small by stars and real by provenance. Size is not the only form of credibility.
@@ -134,6 +186,7 @@ Three channels, in this order. Each one exists because the obvious one does not 
 | **Licence (ground truth)** | `curl -sL https://raw.githubusercontent.com/{repo}/{default_branch}/{LICENSE}` | 🔴 The search API's `license.spdx_id` is wrong for ~25% of this base's rows. `p586` recovered six more rows this way. |
 | Discovery of rows the base does not hold | 🆕 `search/repositories -f q="topic:ai-tutor"` / `topic:ai-education` + `sort=stars` | 🔴 Name and description search misses the field. **Eleven of the 38 rows above came from two topic queries** — including the largest. Topic facets are how this industry self-labels. |
 | Description, README claims, maturity warnings | `WebFetch` on the repo page | Slower, and it often declines to name a licence it can see — but it reads prose the API does not expose. |
+| 🆕 **Last commit on the DEFAULT BRANCH** | `WebFetch https://github.com/{repo}/commits/{default_branch}.atom` | 🔴 **`pushed_at` is not "last commit" — it counts a push to *any* ref.** Measured `p588`: [`apache/openmeetings`](https://github.com/apache/openmeetings) reports `pushed_at` `2026-11-01` while its default-branch feed ends `2026-10-26` — a **6-day** overstatement. The other three probes agreed exactly. 🟢 **Judge the staleness of the code you would actually fork on the feed, not on `pushed_at`.** |
 
 🆕 **`NOASSERTION` is not a proxy for "probably permissive", and `p586` is the pass that
 proves it.** `p585` recovered six `NOASSERTION` rows and most came back permissive, which
@@ -166,6 +219,8 @@ and `OpenEduCat/OpenEduCat` → [`openeducat/openeducat_erp`](https://github.com
 
 | Gap | Status | What would close it |
 |---|---|---|
+| `588-A` 🔴 **This page's inclusion rule changed at `p587` and was never written down** | 🆕 **Opened and resolved `p588`** | `p587` shelved two *learning-about-AI* repos as the shelf's two largest rows, while [`../intel/open-gaps.md`](../intel/open-gaps.md) still retires a whole discovery query on the ground that such repos are **not education software** and names one of them as the specimen. 🟢 **Resolved by naming the class** (*enablement tier*, above) **and completing it** — four of its five largest members were unfiled. 🔴 **What is still open: `open-gaps.md`'s retirement row now contradicts this page and needs the same edit.** |
+| `588-B` 🔴 **Every non-GitHub fact in this base is second-hand by channel necessity, not by sloppiness** | 🆕 Opened `p588` | Probed `2026-11-01`: **7 of 7** non-GitHub hosts returned **no connection at all** — `www.nepad.org`, `link.springer.com`, `www.unesco.org`, `www.iesalc.unesco.org`, `www.linuxfoundation.org`, `digital-strategy.ec.europa.eu`, `www.future-ed.org`. In the same minute `api.github.com` returned `200` and `raw.githubusercontent.com` `301`. 🔵 **WebSearch snippets still arrive, so intel keeps flowing** — but **no primary document behind any intel page can be read first-hand here**, which is why this base's two unverifiable leads this pass stayed unwritten (see [`../intel/market.md`](../intel/market.md) `p588`). 🟢 Closing it needs those hosts allowed in the session's network policy — a configuration change, not a research step. |
 | `586-A` 🔴 **REFUTED — the step exists, is wired as a blocking gate, and has since `p308`** | 🔴 **REFUTED `p587`. The gap was false when filed.** | `586-A` stated *"the step itself still does not exist — a `grep` of every curated page for each repo address, run before commit, would close it."* 🔴 **That step is `gate-shelf-consistency`** (`Makefile:660`, *"no slug may carry disagreeing licence cells across the live shelves"*), it has **59 controls**, and it is in `HOOK_GATES` (`Makefile:128`) — so it runs on every `make hooks` and blocks via `ingest/pre-commit`. Two more exist: `compose/code/p121-stale-token-crosspage/crosspage.py` (`p121`, keys on licence tokens) and `ingest/crosspage-figure-claims.py` (`p538`, keys on figures). 🔵 **`p587` wrote a fourth one before looking** — the fourth rediscovery of this instrument in this base, after `p121`, `p538` and `p586`'s gap. |
 | `587-A` 🔴 **A naive cross-page sweep reports ~10 contradictions and ALL of them are false. `p308`'s control list names every trap in advance.** | 🆕 Opened and closed `p587` | `p587`'s own sweep flagged 10 addresses as carrying disagreeing licence tokens. **Hand-audited: 0 were base defects, 10 of 10 were the instrument's false positives**, every one of a single shape — *a row that names one repo URL and a second licence belonging to a different subject named in the same row.* `compose/patterns.md:1647` reads `\| Canvas (AGPL-3.0) \| bruchris/canvas-lms-mcp \| **MIT** \|`: the AGPL-3.0 is **Canvas**, the MIT is the MCP server, and both are correct. `patterns.md:1648` does the same with Open edX (AGPL-3.0) beside `openedx/XBlock` (Apache-2.0) — and labels it *"the key fact"*. 🔴 **Three "corrections" were drafted and withdrawn before publication.** 🟢 `gate-shelf-consistency`'s 59 controls are listed in the `Makefile` as covering *"comparators, possessives, quoted claims, dual grants, paired rows"* — **the exact four classes this pass fell into.** The lesson is not about licences: **read the instrument index before building an instrument.** |
 | `587-B` 🔴 **`README.md` is excluded from the blocking licence gate by design, and nothing says so on the shelves** | 🆕 Opened `p587` | `compose/code/p308-shelf-consistency/shelf_consistency.py:63-71` splits `carried_index.SHELVES` into `LIVE_SHELVES` and `DATED_SHELVES`, and `README.md` — **2.7 MB, the largest document in this base** — lands in `DATED`, whose disagreements are reported by `make shelf-census` as *"a backlog, never a failure."* So a wrong licence token on `README.md` cannot turn the gate red. 🟡 **Read from source, not from a run** — this pass could not execute the suite (see `587-C`), so whether `README.md` *currently* carries a disagreeing token is **unmeasured**, and this gap is about the design, not about a known defect. |

@@ -4,6 +4,92 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p588` — `2026-11-01` — **🟢 THE PROMOTION BOTTLENECK `p587` MEASURED IS NOW ACTED ON RATHER THAN RE-MEASURED: SIX ROWS FILED, EVERY ONE OF THEM ALREADY IN THIS BASE — FIVE IN THIS LOG, ONE ON A `p525` PERMISSIVE-UNSHELVED LIST THAT HAS SAT UNREAD FOR `63` PASSES. 🔴 AND A MEASURED CHANNEL DEFECT THAT TOUCHES EVERY STALENESS MARK ON EVERY PAGE: `pushed_at` IS NOT "LAST COMMIT" — IT OVERSTATED `apache/openmeetings` BY `6` DAYS, AND IT CAN ONLY EVER OVERSTATE.**
+
+### 🟢 The promotion, with its provenance — none of it came from a search
+
+`p587` established that this base is **promotion-limited, not discovery-limited**
+(`2,831` logged addresses on no curated page). 🔵 **This pass spent its budget on the
+backlog instead of on another census of it.**
+
+| Row | ★ | Where it already was in this base | Passes unfiled |
+|---|--:|---|--:|
+| [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) | **122,693** | named in `intel/open-gaps.md`'s query-retirement row as a specimen to **exclude** | — |
+| [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | **107,625** | this log (`33×`) + `agents/trending.md` (`15×`) + a fetched README in `compose/code/p371-backlog-grade/trees/` | many |
+| [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | **64,710** | this log (`1×`) | — |
+| [karpathy/nanochat](https://github.com/karpathy/nanochat) | **59,252** | named in the same retirement row | — |
+| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | **39,200** | `agents/trending.md` (`56×`) + this log (`17×`) | many |
+| [apache/openmeetings](https://github.com/apache/openmeetings) | **688** | 🔴 **`compose/code/p525-title-anchored-grant/permissive_unshelved.txt`** — a list whose entire purpose is to name permissive repos not yet on a shelf | **≈63** |
+
+🔴 **The `openmeetings` case is the sharpest specimen this base has of its own
+bottleneck.** `p525` ran a sweep *specifically* to find permissive unshelved repositories,
+wrote this address into a file named `permissive_unshelved.txt`, and no pass since has read
+that file. 🟢 **It is the only permissive platform in a tier
+[`../verticals/solutions.md`](../verticals/solutions.md) filled with a copyleft row at
+`p587`** — so the cost of not reading it was a whole tier recorded as copyleft-only for
+`63` passes while an Apache-2.0 answer sat in this repository.
+
+🔵 **Generalisable, and cheap:** this base writes instrument **outputs** to
+`compose/code/*/` and then forgets them. `p587` counted the backlog in the two logs
+(`2,831`). 🔴 **It did not count the backlog sitting in instrument output files**, and
+`openmeetings` shows that pile is not empty either.
+
+### 🔴 The channel defect: `pushed_at` is an upper bound, and every page here inherits it
+
+New channel read this pass: `WebFetch https://github.com/{repo}/commits/{default_branch}.atom`,
+which returns the default branch's own commit feed.
+
+| Repo | API `pushed_at` | default-branch feed | Δ |
+|---|---|---|--:|
+| [apache/openmeetings](https://github.com/apache/openmeetings) | `2026-11-01` | `2026-10-26` — *"[OPENMEETINGS-2824] logback and surefire"* | 🔴 **6 days** |
+| [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | `2026-10-30` | `2026-10-30` | 🟢 0 |
+| [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | `2026-10-27` | `2026-10-27` | 🟢 0 |
+| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | `2026-07-27` | `2026-07-27` | 🟢 0 |
+
+🔴 **The error is one-directional by construction.** `pushed_at` counts a push to *any*
+ref — tag, release branch, bot branch — so it is **≥** the default branch's last commit,
+never below it. 🟢 **Consequence: every "last push" column in this base is an upper
+bound and every 🟡/🔴 staleness mark is optimistic by an unknown margin.**
+🔵 `3 of 4` probes showed Δ = 0, so this is a **tail risk, not a systematic bias**
+— but the tail is precisely the case that matters: a row that reads "pushed today" and is
+a tag on dormant code. 🟢 **Rule adopted: for any row a studio would fork, read the
+feed.** Recorded in the *Method* table on [`../agents/top.md`](../agents/top.md).
+
+### 🔵 Channel reachability, measured — and it bounds what the intel pages can ever contain
+
+Probed `2026-11-01`, same minute:
+
+| Host | Result |
+|---|---|
+| `api.github.com` | 🟢 `200` |
+| `raw.githubusercontent.com` | 🟢 `301` |
+| `github.com` (plain `curl`) | 🔴 `400`/`403` — as `p586` and `p587` recorded |
+| `www.nepad.org` · `link.springer.com` · `www.unesco.org` · `www.iesalc.unesco.org` · `www.linuxfoundation.org` · `digital-strategy.ec.europa.eu` · `www.future-ed.org` | 🔴 **`7 of 7`: no connection at all** |
+
+🔴 **So `587-C`'s environment-dependence finding extends to the whole non-GitHub web,
+and it is a configuration fact, not a research failure.** 🟢 **The GitHub channel pays
+— this pass filed six rows from it. The primary-document channel cannot be made to pay
+from here at all**, which is why three real leads this pass (an AUDA-NEPAD guideline on
+open models and African-language content, the AU education strategy, and a Piaí state AI
+curriculum with Creative-Commons materials) are filed as **leads, not facts**, on
+[`../intel/market.md`](../intel/market.md). 🔵 **An informed gap is information;
+silence would have read as coverage.**
+
+### 🟡 Nine platform/component addresses measured, four of them as a control on this base
+
+| Address | ★ | API SPDX | Verdict |
+|---|--:|---|---|
+| [apache/openmeetings](https://github.com/apache/openmeetings) | **688** | `NOASSERTION` | 🟢 **FILED** — Apache-2.0 (text) + third-party block |
+| [frappe/lms](https://github.com/frappe/lms) | **3,360** | `AGPL-3.0` | 🔵 **control — base already right.** A comparison article called it *"MIT (no restrictions)"* |
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | **449** | `NOASSERTION` | 🔵 **control — base already right** (Apache-2.0, text-read at `p574`) |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | **649** | `GPL-2.0` | 🔵 **control — base already right**, including the 🔴 `mobile` default branch |
+| `chamilo/chamilo` | — | — | 🔴 **no result — and it is NOT dead.** The address is wrong; the real one is [`chamilo/chamilo-lms`](https://github.com/chamilo/chamilo-lms), already carried. 🔵 `p586`'s trap verbatim: **a wrong address is indistinguishable from a deleted repository** |
+
+🔴 **Secondary-source licence error rate: `2 of 4`, both in the dangerous direction**
+(copyleft reported as permissive). 🟢 **The base was right on all four.**
+
+---
+
 ## 🆕 `p587` — `2026-11-01` — **🟢 THE PROMOTION CENSUS, RE-RUN AND RE-SCOPED: `3,483` ADDRESSES IN THIS LOG, `679` ON CURATED PAGES, `2,841` (`81.6 %`) NEVER FILED ANYWHERE. 🔴 AND THE RANKING IS WORTHLESS AS A QUALITY SIGNAL — THE `#2` AND `#3` UNFILED ADDRESSES ARE MIT REPOS AT `76,141★` AND `78,542★`, WHILE AN `18×` RE-FOUND ROW HAS **ZERO STARS** AND A `17×` ROW DOES NOT EXIST. 🔵 `p533` SAID THIS IN WORDS; THIS PASS HAS THE SPECIMENS. 🟢 NINE PLATFORM/COMPONENT ROWS MEASURED, FOUR FILED.**
 
 ### 🟡 First, the honest provenance of this census

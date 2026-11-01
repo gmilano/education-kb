@@ -4,6 +4,57 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p588 — 2026-11-01 — the virtual-classroom tier gets a PERMISSIVE platform of record, carried unfiled in this base since `p525`; and two platform licences that secondary sources got wrong, which this page already had right
+
+### 🟢 The tier `p587` filled with a copyleft platform has a permissive one
+
+`p587` placed the virtual-classroom tier with [`bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton)
+(**9,262★**, 🔴 LGPL-3.0, *"link, don't modify"*). That was the right row and an incomplete
+tier: **there is an Apache-2.0 platform in the same tier**, and this base has been carrying
+its address on a *permissive-unshelved candidate list* since `p525`
+(`compose/code/p525-title-anchored-grant/permissive_unshelved.txt`) without ever filing it.
+
+| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+|---|---|---|--:|---|---|---|
+| 🆕 **Virtual classroom — permissive option** | [apache/openmeetings](https://github.com/apache/openmeetings) | 🟡 **Apache-2.0** for the project's own code, **plus an in-payload third-party block** (MIT, BSD variants, EPL, EDL, some `NOASSERTION`, and **Oracle Free Use Terms**) | **688** | `2026-10-26` | 🟡 **Yes for the ASF code — read the bundle first.** Apache-2.0 permits fork, modify and closed redistribution; the declared dependencies do not all share that grant | 🟢 **Same raw material as BigBlueButton — recordings, whiteboard events, chat, collaborative docs — without the LGPL boundary to engineer around.** Conferencing, whiteboard, polls and document collaboration on Kurento. ASF governance, so the trademark and release process are predictable |
+
+🔴 **Why it is 🟡 and not 🟢, precisely.** The licence payload is Apache-2.0 followed by a
+dependency enumeration — the exact shape `P1024` predicts, and the tell is that the file is
+far above pristine Apache-2.0 length. Most entries are permissive. **At least one is not an
+open-source grant at all (Oracle Free Use Terms), and several read `NOASSERTION`.** 🟢 **The
+consequence is narrow and worth stating so nobody over-reads it:** forking and shipping
+OpenMeetings' *own* code is clean; shipping a *binary distribution* that bundles those
+dependencies is a build-configuration question for counsel, not a platform-choice question.
+
+🔵 **Against BigBlueButton, for an engagement.** BBB is **13× larger** and purpose-built for
+teaching (breakouts, learning-analytics-grade recording). OpenMeetings is smaller and more
+general. 🟢 **Pick BBB when the client wants the pedagogy and will accept linking; pick
+OpenMeetings when the deliverable must be forkable, re-branded and shipped closed** — which
+is the one thing BBB's LGPL makes awkward and the reason this row matters at all.
+
+### 🔵 Two platform licences this page already had right, and the secondary channel got wrong
+
+This pass's search leg described [`frappe/lms`](https://github.com/frappe/lms) as
+**MIT-licensed and self-hostable**, and asserted [`OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT)
+as Apache-2.0 with no verification. Re-measured against the platform API and this page:
+
+| Row | What the secondary source said | Measured `2026-11-01` | This page already said |
+|---|---|---|---|
+| `frappe/lms` | 🔴 **"MIT (no restrictions)"** | 🔴 **AGPL-3.0**, 3,360★, branch `develop` | 🟢 **AGPL-3.0** — correct, on three tables |
+| `OpenOLAT/OpenOLAT` | 🟡 "Apache 2.0", unsourced | 🟢 **Apache-2.0** (API `NOASSERTION`; licence text read) | 🟢 **Apache-2.0 (text)** — correct |
+| `francoisjacquet/rosariosis` | — | 🔴 **GPL-2.0**, default branch **`mobile`** | 🟢 **GPL-2.0**, and it already flags the `mobile` branch |
+| `chamilo` | — | 🟡 `repo:chamilo/chamilo` returns **no result** | 🟢 **`chamilo/chamilo-lms`** — the correct address, already carried |
+
+🔴 **So the measured error rate of the secondary channel on platform licences this pass was
+`2 of 4`, and both errors ran in the dangerous direction** — reporting a network-copyleft
+platform as MIT is the mistake that puts a client's proprietary work at risk. 🟢 **The base
+was right on all four, including the address that looks dead.** The `chamilo` miss is `p586`'s
+own trap verbatim: **a wrong address is indistinguishable from a deleted repository**, and
+the fix was an org search, not a deletion. 🔵 **Nothing on this page needed correcting; this
+is a control that passed, recorded so the next pass does not re-run it.**
+
+---
+
 ## p587 — 2026-11-01 — the virtual-classroom and assessment tiers, placed; and the unlicensed SIS re-confirmed rather than re-discovered
 
 Every licence below read from the repository's own licence file on **2026-11-01**. Two tiers

@@ -4,6 +4,90 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p588` — `2026-11-01` — **🔴 THE DEFECT THIS PASS FOUND IS NOT A LICENCE, A FIGURE OR A DEAD LINK — IT IS THE INCLUSION RULE. `p587` SHELVED TWO REPOS FROM A CLASS THAT [`../intel/open-gaps.md`](../intel/open-gaps.md) STILL DECLARES OUT OF FAMILY, NAMING ONE OF THEM AS ITS SPECIMEN, AND BOTH PAGES PASS EVERY GATE THIS BASE OWNS BECAUSE NO GATE ASKS WHETHER A ROW BELONGS. 🟢 RESOLVED BY NAMING THE CLASS AND COMPLETING IT: `4 OF ITS 5 LARGEST MEMBERS WERE UNFILED`, INCLUDING `microsoft/generative-ai-for-beginners` AT `122,693★` — THE LARGEST EDUCATION-ADJACENT REPO ON GITHUB, NEVER FILED AT ANY SIZE. 🔴 AND THE SECOND-LARGEST, `rasbt/LLMs-from-scratch` AT `107,625★`, CARRIES AN APACHE-2.0 WHOSE "SOURCE" DEFINITION EXCLUDES THE BOOKS AND IMAGES — A CARVE-OUT NEITHER THE API NOR THE FILE'S FIRST LINE SHOWS.**
+
+### 🟡 Scope, before the result: `9` addresses, not `43`
+
+This pass did **not** re-measure the shelf. It measured **nine** addresses and read **seven
+licence files**. 🔵 **Stated up front because `p587`'s headline was a withdrawal of an
+over-claimed instrument, and the cheapest way not to repeat that is to bound the claim
+first.**
+
+### 🔴 The finding: a rule changed at `p587` and nothing recorded it
+
+[`../intel/open-gaps.md`](../intel/open-gaps.md) retired the mandated query
+`github trending education AI {year}` on this finding, verbatim: *"In a trending feed
+'education' means **teaching people about AI**, not **AI for teaching** — a CHANNEL
+property, and it explains six passes of thin returns."* It listed
+`rasbt/LLMs-from-scratch`, `microsoft/generative-ai-for-beginners`,
+`rohitg00/ai-engineering-from-scratch`, `karpathy/nanochat` and `developer-roadmap` as the
+specimens of what to exclude.
+
+🔴 **`p587` then shelved `rohitg00/ai-engineering-from-scratch` as the second-largest row
+on [`./top.md`](./top.md), and `microsoft/ai-agents-for-beginners` as the largest.**
+🔵 **Neither page is wrong about its own facts.** Every licence is right, every star
+count is right, the cross-page licence gate is green and the figure-claim sweep is green.
+🔴 **The contradiction is categorical, and this base has no instrument that can see a
+categorical contradiction.**
+
+### 🟢 Resolved in favour of admitting the class — and the reason is commercial, not taxonomic
+
+[`../compose/patterns.md`](../compose/patterns.md) `P-587-B` is a reskilling engagement whose
+curriculum components are *exactly* this class. 🟢 **The class was already generating
+recipes; what it lacked was a label and its own largest members.** Filed this pass as the
+**enablement tier** on [`./top.md`](./top.md), explicitly separated from the agent shelf,
+because a client asking for a tutor cannot deploy a curriculum and a client reskilling its
+engineers cannot deploy a tutor.
+
+| | before | after |
+|---|--:|--:|
+| members of the class on a curated page | **2** | **8** |
+| of the class's 5 largest, filed | **1** | **5** |
+| pages still asserting the class is out of family | **1** | **1 — `588-A` left open deliberately** |
+
+### 🟢 The nine addresses measured this pass, in full
+
+Every star count, SPDX field, `pushed_at`, `archived` flag and default branch from
+`gh api -X GET search/repositories` on **2026-11-01**, one call per repo. Licence column
+read from the repository's own licence file where marked **(text)**.
+
+| # | Address | ★ | API SPDX | Licence (text) | `pushed_at` | branch | Disposition |
+|--:|---|--:|---|---|---|---|---|
+| 1 | [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) | **122,693** | `MIT` | 🟢 **MIT (text)**, © Microsoft, no carve-out | `2026-11-01` | `main` | 🟢 **FILED — enablement tier** |
+| 2 | [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | **107,625** | 🔴 `NOASSERTION` | 🟡 **Apache-2.0, "Source" EXCLUDES books + images** | `2026-10-30` | `main` | 🟢 **FILED 🟡** |
+| 3 | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | **78,550** | `MIT` | 🟢 MIT | `2026-10-31` | `main` | 🔵 already shelved `p587`; **re-measured, AGREES** (was `78,542`) |
+| 4 | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | **76,144** | `MIT` | 🟢 MIT | `2026-10-29` | `main` | 🔵 already shelved `p587`; **re-measured, AGREES** (was `76,141`) |
+| 5 | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | **64,710** | `Apache-2.0` | 🟢 **Apache-2.0 (text)**, standard, no carve-out | `2026-10-27` | `master` | 🟢 **FILED — APAC** |
+| 6 | [karpathy/nanochat](https://github.com/karpathy/nanochat) | **59,252** | `MIT` | 🟢 **MIT (text)**, © 2025 Andrej Karpathy | 🟡 `2026-09-07` | `master` | 🟢 **FILED 🟡 ~2 months** |
+| 7 | [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | **39,200** | `MIT` | 🟢 **MIT (text)**, © 2025 | 🟡 `2026-07-27` | `main` | 🟢 **FILED 🟡 ~3 months** |
+| 8 | [apache/openmeetings](https://github.com/apache/openmeetings) | **688** | 🔴 `NOASSERTION` | 🟡 **Apache-2.0 + in-payload third-party block incl. Oracle Free Use Terms** | `2026-11-01` | `master` | 🟢 **FILED — [`../verticals/solutions.md`](../verticals/solutions.md)** |
+| 9 | [ARUNAGIRINATHAN-K/awesome-ai-agents-2026](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | **353** | 🔴 `NOASSERTION` | 🟡 **CC0-1.0 (text)** — a content dedication, not a software licence | `2026-10-23` | `main` | 🟢 **FILED 🟡** |
+
+🔴 **Three of nine returned `NOASSERTION` and all three resolved to something a one-value
+field cannot express** — a modified Apache-2.0, an Apache-2.0 wrapping a mixed bundle, and a
+public-domain dedication for content. 🔵 **`p586`'s rule holds and this is the third
+independent confirmation: read the file, in both directions.**
+
+### 🟡 Two of this pass's four discovery legs returned material the base already held
+
+| Leg | Yield |
+|---|---|
+| `top open source AI agents education 2026 github MIT` | 🔴 **Nil education-specific**, fourth consecutive pass. Returned general frameworks (CrewAI, OpenHands, Langflow) — all known. 🔵 **`open-gaps.md` already retired this leg; confirmed retired.** |
+| `github trending education AI 2026` | 🟢 **Paid, and it paid the thing the retirement row said it could not** — `DeepTutor` (already shelved, reported `+2,282★` in one day by a community radar), `OpenMAIC` (shelved), and the enablement class above. 🔴 **The retirement was right about the channel and wrong about the value**: what it returns is not AI-for-teaching, and this base sells it anyway |
+| `open source platform education LMS SIS MIT Apache self-hosted 2026` | 🟡 **Nil new platforms, and `2 of 4` licences WRONG** — see [`../verticals/solutions.md`](../verticals/solutions.md) `p588` |
+| 4 regional legs + 2 country legs | 🔴 **`20 of 24` facts already filed; `0 of 4` remainder verifiable here.** See [`../intel/market.md`](../intel/market.md) `p588` |
+
+### 🔵 What the next pass should NOT do
+
+🔴 **Do not run another education regional intel sweep.** Saturated at `83 %`, and the
+remainder is blocked by network policy, not by effort (`588-B`: `7 of 7` non-GitHub hosts
+unreachable). 🔴 **Do not rebuild a cross-page instrument** — `p587` lost a pass to that
+and there are three already. 🟢 **Do: close `588-A` by editing `open-gaps.md`'s retirement
+row to match [`./top.md`](./top.md), and promote off the backlog**, which is where this
+pass's six rows came from and where `2,831` addresses still sit.
+
+---
+
 ## 🆕 `p587` — `2026-11-01` — **🔴 THE CENTRAL RESULT IS A WITHDRAWAL: THIS PASS BUILT A CROSS-PAGE LICENCE RECONCILIATION INSTRUMENT, IT REPORTED `10` CONTRADICTIONS, AND A HAND AUDIT FOUND `0` BASE DEFECTS AND `10 OF 10` FALSE POSITIVES — WHILE THE INSTRUMENT IT DUPLICATES HAS BEEN A BLOCKING GATE SINCE `p308` WITH `59` CONTROLS NAMING EVERY TRAP IT FELL INTO. 🔴 `586-A` WAS FALSE WHEN FILED. 🟢 FIVE NEW SHELF ROWS, NONE FROM A SEARCH: ALL FIVE WERE ALREADY IN THIS LOG, RE-FOUND `19`–`26` TIMES, INCLUDING TWO MIT REPOS AT `78,542★` AND `76,141★` THAT WITHDRAW `p586`'s "LARGEST ROW" CLAIM. 🟢 ALL FOUR REGIONAL LEGS PAID; THE LATAM LEG IS A QUANTIFIED GAP WITH AN APAC CONTROL AT `33×`.**
 
 ### 🔴 The withdrawal, in full, because it is the most useful thing this pass produced

@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p588 — 2026-11-01 — the regional intel legs are SATURATED and the number is `20 of 24`; the four facts this pass did not already hold are all blocked by network policy rather than by research, which makes further intel passes on this industry close to worthless until that changes
+
+### 🔴 The measurement, stated first, because it is a decision and not a finding
+
+This pass ran all four mandated regional legs plus two country-level legs, then checked
+**every** substantive fact they returned against the three intel pages already in this base.
+
+| | count |
+|---|--:|
+| substantive regional facts returned by this pass's legs | **24** |
+| 🔵 **already filed** on `market.md` / `trends.md` / `open-gaps.md` / `policy-matrix.tsv` | **20** (`83 %`) |
+| 🟡 not filed | **4** |
+| 🔴 of those 4, **verifiable from this environment** | **0** |
+
+🔴 **So the yield of a regional intel leg in this base is now zero, and it is zero for a
+reason no amount of research effort changes.** The four unfiled facts sit behind
+`www.nepad.org` and `link.springer.com`, and **7 of 7** non-GitHub hosts probed this pass
+returned no connection at all (`588-B` on [`../agents/top.md`](../agents/top.md)). 🟢 **The
+useful consequence for whoever schedules this base: spend the next passes on the GitHub
+channel, which still pays, or on an industry that is not already saturated — not on
+another regional sweep of education.** 🔵 `p585` found these legs paying "for the first
+time in 20 passes"; three passes later they are exhausted.
+
+### 🟡 The four unfiled facts, named so the next pass does not re-find them
+
+🔴 **These are LEADS, not data.** Each is a WebSearch snippet whose primary document this
+environment cannot open. **None is written onto the regional sections below as a figure**,
+and none should be quoted to a client until the host is reachable.
+
+| # | Lead | Region | Primary source | Why it is not filed as fact |
+|---|---|---|---|---|
+| 1 | An **AUDA-NEPAD guideline on responsible AI in education** reportedly urging member states to back **open datasets, open models and educational content in African languages**, and to keep **registries of approved AI education tools** | EMEA | `www.nepad.org` | 🔴 Host does not resolve. 🟢 **The highest-value lead in this table** — a continental body asking for exactly the open-weights/open-content posture a studio can build on |
+| 2 | The **AU Continental Education Strategy for Africa, 2026–2035**, reportedly treating digitalisation and AI as cross-cutting themes with a dedicated teacher strand | EMEA | `au.int` / `www.nepad.org` | 🔴 Host does not resolve. 🔵 This base holds the AU **Continental AI Strategy** but no education strategy |
+| 3 | **Piauí, Brazil**: a reportedly **mandatory weekly AI subject in state public high schools**, with the teacher-support textbook and video lessons released under **Creative Commons** | LATAM | `link.springer.com` (AIED 2026) | 🔴 Host does not resolve. 🟡 **If true it is the first LATAM state-level AI curriculum with openly licensed materials in this base** — and `p587`'s standing LATAM finding is precisely that in-language openly licensed supply is ~zero, so this would bear on it directly |
+| 4 | A **Google.org** AI-education commitment across nine LATAM countries targeting **1.25 M students by 2028** | LATAM | vendor/press | 🟡 Funding announcement, not an instrument. Filed here for completeness; it changes no regional verdict |
+
+🔵 **Lead 3 is the one worth a retry.** It is dateable, it is state-level, and it would be
+the first counter-specimen to this base's LATAM in-language supply finding. 🟢 **Retry route
+that does not need Springer: search the Piauí state education secretariat (SEDUC-PI) and
+the AIED 2026 programme listing directly, and look for the materials' own repository or
+portal** — an openly licensed textbook usually has a host that is not a paywalled publisher.
+
+### 🔵 What each leg returned — all four, including the ones that returned nothing new
+
+| Leg | Returned | Verdict |
+|---|---|---|
+| **North America** | 2026 state-bill volume, North Carolina SL 2026-41, Maryland SB 720, the NYC traffic-light playbook, SUNY's gen-ed AI-literacy requirement, UC Berkeley Law's prohibition, EO 14277 | 🔴 **Nil new — every item already filed.** The most saturated region in this base |
+| **EMEA** | EU AI Act enforcement from 2 Aug 2026; the Digital Omnibus; the contested high-risk dates (**2 Dec 2027** standalone Annex III / **2 Aug 2028** embedded); KHDA Dubai; Nigeria's EdTech strategy; Rwanda's localisation posture; South Africa's draft policy and its abrogation | 🟡 **Two new leads (1, 2 above), both unreachable.** 🔴 The Annex III dates arrived again from a *secondary* source, so **`586-E` is NARROWED, not closed** — it asks for the Official Journal text, and `digital-strategy.ec.europa.eu` does not resolve here either |
+| **APAC** | Korea's AI Basic Act; Vietnam's AI Law from 1 Mar 2026 with the 18-month education transition; Japan's voluntary posture; Australia on existing law; China/Japan/Korea/Singapore curriculum integration; Ipsos Education Monitor 2026 | 🔴 **Nil new — all filed** |
+| **LATAM** | UNESCO IESALC (200 institutions, 19 countries, 87 % use / 26 % strategy); Chile and Brazil teacher-use figures; Cetic.br; Ceibal's 75 %; Universidad de los Andes' 716 instruments; the UNESCO Observatory at ECLAC; Tecnológico de Monterrey | 🟡 **Two new leads (3, 4 above).** 🔴 The whole measured core was already filed |
+
+🟢 **No figure on this page changed this pass, and that is the result.** The regional
+sections below are left exactly as `p587` left them, with one dated line added to each
+recording the nil or the lead — because a region whose leg returned nothing must say so,
+or silence reads as coverage.
+
+---
+
 ## p587 — 2026-11-01 — the LATAM leg returns a measured `33×` asymmetry against APAC in the same instrument, and the regional market legs are reconciled against a spread this page already publishes
 
 ### 🟢 The region finding that is actionable: LATAM has no in-language supply to adopt
@@ -132,6 +190,8 @@ because an informed gap is information and silence looks exactly like coverage.
 **Regulatory posture: the most legislatively active region in the world, and the activity
 is restrictive rather than enabling.**
 
+🆕 **`p588`:** 🔴 **Nil new.** Seven instruments returned by this pass's leg (state-bill volume, NC SL 2026-41, MD SB 720, the NYC playbook, SUNY, UC Berkeley Law, EO 14277) were **all already filed**. 🔵 This region is saturated on this channel; the next North America addition will have to come from a primary document, which this environment cannot open (`588-B`).
+
 | Signal | Detail | Source type |
 |---|---|---|
 | Volume | **134 AI-in-education bills introduced across 31 states in 2026** | legislative tracker |
@@ -166,6 +226,8 @@ fork** (AGPL-3.0, and ~6 months since its last public push).
 ### EMEA
 
 **Regulatory posture: the strictest *in principle*, and the least certain *in date*.**
+
+🆕 **`p588`:** 🟡 **Two leads, neither verifiable here.** An **AUDA-NEPAD** guideline reportedly urging open datasets, open models and African-language content plus registries of approved AI education tools, and the **AU Continental Education Strategy 2026–2035**. 🔴 `www.nepad.org` does not resolve from this environment, so **both are recorded as leads, not facts** — see the `p588` section at the top of this page. 🔴 The contested Annex III dates (**2 Dec 2027** / **2 Aug 2028**) arrived again from a secondary source: **`586-E` is narrowed, not closed.**
 
 - Most consequential education AI is **Annex III high-risk** under the **EU AI Act**.
   🔴 **The compliance date is contested across EU-facing sources — August 2026 vs
@@ -203,6 +265,8 @@ contractually — which is what a high-risk classification rewards.
 🟢 **Reversed from `p585`'s declared nil, and it is now the region with the most binding
 education-specific law.** The nil was an artefact of asking about adoption; the statutes
 were there.
+
+🆕 **`p588`:** 🔴 **Nil new.** Korea's AI Basic Act, Vietnam's AI Law and its 18-month education transition, Japan's voluntary posture, Australia on existing law, the China/Japan/Korea/Singapore curriculum integration and the Ipsos Education Monitor 2026 were **all already filed**. 🔵 Saturated on this channel.
 
 | Jurisdiction | Instrument | Status | Education-specific? |
 |---|---|---|---|
@@ -243,6 +307,8 @@ not just a market.
 🟢 **The region with the widest adoption-governance gap in the world, measured twice by
 independent instruments that agree.**
 
+🆕 **`p588`:** 🟡 **Two leads, neither verifiable here, and one of them would bear on this region's load-bearing finding.** **Piaí, Brazil** reportedly runs a *mandatory* weekly AI subject in state public high schools and released its teacher textbook and video lessons under **Creative Commons** — which, if it holds, is the first LATAM state-level AI curriculum with **openly licensed** materials in this base, against `p587`'s finding that in-language openly licensed supply is ≈ zero. 🔴 `link.springer.com` (AIED 2026) does not resolve here, so it is **a lead, not a fact**; the retry route that avoids the publisher is SEDUC-PI and the materials' own host. 🔵 Also noted: a Google.org commitment across nine LATAM countries targeting **1.25 M students by 2028** — a funding announcement, not an instrument, and it changes no verdict here.
+
 | Measure | Figure | Source |
 |---|---|---|
 | Student AI use | **92%** (up from 86% global, 2024) | Digital Education Council **2026 LATAM survey**: >30,000 responses, 29 institutions, with Tecnológico de Monterrey / Institute for the Future of Education |
@@ -275,6 +341,8 @@ not fork.
 🆕 **`p587`:** 🔴 **The in-language open-source supply is effectively zero and now measured:** two Iberian-language education-AI repositories above 10★, **neither adoptable** (`SophIA` 15★ unlicensed and stale; `FM849` 14★ `NOASSERTION`, a course repo), against **67** in the Chinese-language control — a ~**33×** asymmetry. **A LATAM delivery is a localisation or a BUILD, never an in-language adopt.** 🟢 Demand evidence is strong and dated: **UNESCO IESALC / UNU-IAS working paper (`2026-09-01`, Valentini)**, **ILIA 2025** (ECLAC, published 2026), **AI in Higher Education LATAM Survey 2026** (Tec de Monterrey, Feb 2026) reporting the region as more positive on AI in higher education than any other. 🔴 Do **not** quote the *"Rest of Latin America"* market figure ($18.2 M → ~$36 M) as a LATAM total: its scope excludes Brazil and Mexico.
 
 ### Global / provenance unknown
+
+🆕 **`p588`:** 🔴 **This page's regional legs are saturated at `20 of 24`** — `83 %` of everything this pass's six legs returned was already filed, and **none of the remaining four can be verified from this environment**. 🟢 **Operational reading: the marginal value of another education regional sweep is ≈ zero**, and the binding constraint is network policy (`588-B`), not research effort. See the `p588` section at the top of this page.
 
 - 🟢 **Direction of travel, consistent across every source this pass:** from
   experimentation to **governance**. The question has moved from *whether* to use AI to

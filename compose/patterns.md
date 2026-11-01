@@ -4,6 +4,107 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p588 — 2026-11-01 — two recipes this pass's rows make buildable: the virtual classroom with NO copyleft boundary at all, and the enablement engagement whose deliverable is a model the client trained themselves
+
+## P-588-A — 🟢 **The white-label virtual classroom a studio may fork, re-brand and ship closed** (10–14 weeks, EMEA / North America / LATAM)
+
+**The client problem.** A ministry, university group or training provider wants *their own*
+branded live-teaching platform — their domain, their look, their data residency — not a
+reseller skin over someone else's SaaS. They expect to own the result.
+
+🔴 **Why this recipe could not be written before this pass.** `P-587-A` solves the same
+brief on [`bigbluebutton`](https://github.com/bigbluebutton/bigbluebutton) (**9,262★**),
+which is **LGPL-3.0**: the studio may *link* to it but changes to BBB itself carry back, so
+"fork it and ship it as ours" is exactly the thing that brief asks for and that licence
+withholds. 🟢 **[`apache/openmeetings`](https://github.com/apache/openmeetings) is
+Apache-2.0 and in the same tier**, and this base has carried its address on a
+permissive-unshelved list since `p525` without filing it.
+
+| Role | Component | Licence (text) | Stars | Note |
+|---|---|---|--:|---|
+| Live classroom platform | [apache/openmeetings](https://github.com/apache/openmeetings) | 🟡 **Apache-2.0** + declared third-party block | **688** | 🟢 **Fork, modify, re-brand, ship closed.** 🔴 Read the bundle first — one entry is **Oracle Free Use Terms**, which is not an open-source grant |
+| LMS seam | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🟢 **Apache-2.0** | **373** | 🟢 Makes the platform a full LTI 1.3 tool provider — it drops into the client's existing Moodle/Canvas/Open edX without forking *that* |
+| Courseware out of recordings | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | 🟢 **MIT** | **71,880** | 🟢 Session transcript → native decks with real shapes and narration. 🔵 Re-measured `p588`: **71,880** against `p587`'s `71,803` — growth, not a contradiction |
+| Revision material | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🟢 **MIT** | **2,057** | 🟢 Notes, quizzes and flashcards from the session's own material |
+| Learning-record store | [openfun/ralph](https://github.com/openfun/ralph) | 🟢 **MIT** | **51** | 🟢 xAPI LRS, EMEA-origin (France Université Numérique) |
+| Mastery model | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | **456** | 🟢 Turns attendance and quiz streams into mastery estimates |
+
+**How to wire it.** Fork OpenMeetings → re-brand and deploy in the client's own tenancy
+(Kurento handles media, so residency is a deployment choice, not a vendor negotiation) →
+expose it to the client's existing LMS as an LTI 1.3 tool via `ltijs`, so nothing in the
+LMS is forked → each session's recording and transcript feed `ppt-master` for revision
+decks and `PageLM` for quizzes and flashcards → `ralph` collects xAPI statements → `pykt`
+converts the stream into per-learner mastery that drives what the next session revisits.
+
+🟢 **The licence ledger has no copyleft row in it.** Apache-2.0 + Apache-2.0 + MIT × 4.
+🔵 **That is the whole point of the recipe** and the sentence to put in the SOW: the
+client owns a modified platform they may redistribute closed, which `P-587-A` cannot
+promise them.
+
+🔴 **The one thing to sequence first.** Enumerate OpenMeetings' bundled dependencies in
+week one and decide, with counsel, which ship in the client's distribution. The ASF's own
+code is clean; the bundle is where the question lives, and it is a build-configuration
+question — cheap in week one, expensive in week twelve.
+
+🟡 **Honest comparison, not a replacement.** BBB is **13× larger**, purpose-built for
+teaching, and has the richer pedagogy surface. 🟢 **Choose on the deliverable: if the
+client needs to *own and redistribute* the platform, this recipe; if they need the best
+teaching features and will accept linking, `P-587-A`.**
+
+---
+
+## P-588-B — 🟢 **The enablement engagement whose deliverable is a model the client trained themselves** (6–8 weeks, Global — travels to every region, including LATAM)
+
+**The client problem.** An enterprise or public-sector buyer has been told to "build AI
+capability" and does not want another slide deck or vendor workshop. Their engineers want to
+have *built* the thing, and their risk function wants evidence that a model can run inside
+their own boundary.
+
+🔵 **How this differs from `P-587-B`.** That recipe maps a workforce's skill gaps onto a
+taxonomy and assembles a learning path — it answers *"what should these people learn?"*
+This one answers *"can these people build it, and can it run in here?"* 🟢 **The two
+compose: `P-587-B` selects the cohort, this one is what the cohort does.**
+
+| Role | Component | Licence (text) | Stars | Note |
+|---|---|---|--:|---|
+| Foundations curriculum | [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) | 🟢 **MIT** | **122,693** | 🟢 21 lessons; the largest education-adjacent repo on GitHub. Week-one hand-off |
+| Agent curriculum | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** | **78,550** | 🟢 18 lessons on agents from first principles |
+| Depth, mechanism | [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | 🟡 **Apache-2.0 — code only** | **107,625** | 🔴 **Vendor the code, not the book.** The grant's "Source" definition **excludes the books and images**; buy copies for the cohort rather than reproducing chapters in courseware |
+| The capstone: a model they trained | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 🟢 **Apache-2.0** | **64,710** | 🟢 **A ~64M-parameter model from scratch in ~2 hours on modest hardware** — the whole reason this recipe produces an artefact instead of a certificate |
+| The full stack, end to end | [karpathy/nanochat](https://github.com/karpathy/nanochat) | 🟢 **MIT** | **59,252** | 🟢 Tokeniser → pretrain → fine-tune → inference → web UI. 🟡 ~2 months since last push — **pin the commit** at kickoff |
+| Use-case bank for the brief | [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🟢 **MIT** | **39,200** | 🟢 Agent use cases by industry, education among them — use it in pre-sales to turn "build AI capability" into three named candidate projects. 🟡 ~3 months stale; a catalogue, not a dependency |
+| Mastery evidence | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | **456** | 🟢 Converts exercise completion into mastery estimates — what the sponsor reports upward |
+| Delivery surface | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | **1,240** | 🟢 The one platform of record a studio may lawfully fork and ship; or the client's own LMS over LTI 1.3 |
+
+**How to wire it.** Weeks 1–2: the two Microsoft curricula run as a cohort on the client's
+LMS, with `pykt` instrumenting completion as mastery rather than attendance. Weeks 3–4:
+`LLMs-from-scratch` supplies the mechanism — **its code**, with the book bought per seat.
+Weeks 5–6: the capstone — the cohort trains `minimind` end-to-end **inside the client's own
+infrastructure**, then stands up `nanochat` to see the full serving path. Weeks 7–8: the
+three candidate projects drawn from `500-AI-Agents-Projects` are scoped against what the
+cohort now knows how to build.
+
+🟢 **The two deliverables are what make this sellable.** (1) A cohort that has trained
+and served a model, not watched one being trained. (2) 🔵 **A dated, reproducible record
+that a language model was trained and served entirely within the client's boundary** —
+which is the artefact a risk or data-protection function actually asks for, and it is a
+by-product of the teaching rather than a separate engagement.
+
+🟢 **Why it travels to LATAM, EMEA and APAC without modification.** Every row is
+permissive and **English-language**, so there is no in-language-supply dependency —
+`p587`'s measured binding constraint in LATAM. 🔵 **Localisation is a translation line
+item on known, openly licensed content**, except `LLMs-from-scratch`'s book, which is not
+granted and must be bought. 🟢 `minimind` is a Chinese-language project, which makes it
+an easier sell in APAC, not a harder one.
+
+🔴 **The two licence facts to settle before the SOW.** (1) `LLMs-from-scratch`: the book
+and images are outside the grant — reproducing chapters in client courseware is the
+mistake this recipe is designed to avoid. (2) Pin `nanochat` and
+`500-AI-Agents-Projects`; both are months stale and both are teaching artefacts, where a
+silent upstream change mid-cohort is worse than an old commit.
+
+---
+
 ## p587 — 2026-11-01 — two recipes the new rows make buildable, both built on the LGPL *link* boundary and the permissive curriculum tier
 
 Every component below was verified first-hand on **2026-11-01**: existence, stars and
