@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p592 — 2026-11-01 — a deferred deadline is not a reprieve when it stops waiting for standards, and the shelf's permissive majority is in the wrong layer
+
+🔵 **Two trends filed at `##` with the counter's own `^## <n>. ` form (46–47).** Trend 46 is
+a regulatory reading carried by secondary sources and labelled as such; Trend 47 is measured
+first-hand this pass across **`192 of 192`** curated addresses and is the first
+licence-composition census in this base.
+
+## 46. The EU deferral removed the escape hatch it looked like it granted — the high-risk clock now runs on the calendar, not on standards readiness
+
+🔵 **The headline everyone took from the Digital Omnibus was *16 more months*.** Stand-alone
+Annex III high-risk obligations — which is where education sits, alongside grading,
+admissions and proctoring — moved from `2 August 2026` to **`2 December 2027`**, and
+product-embedded Annex I systems from `2 August 2027` to **`2 August 2028`**.
+
+🔴 **The part that matters more got less attention: the new dates apply whether or not the
+harmonised standards are ready.** The Commission's original proposal would have tied the
+start of high-risk obligations to the *availability* of those standards. The adopted
+instrument does not. 🔵 **Those are different kinds of deadline.** A standards-linked
+trigger is open-ended, and a vendor can rationally plan to sit behind it, because the
+obligation cannot begin until someone else finishes work that is visibly unfinished. A fixed
+calendar date arrives on an education product on schedule, conformity toolkit or not.
+
+🟢 **What this changes in a proposal.** Annex III education work scoped for the EU should
+treat `2 December 2027` as firm and budget conformity assessment, human-oversight design and
+technical documentation against it — rather than treating the deferral as a signal that the
+regime keeps slipping. 🔵 **And the transparency duties were never deferred at all:**
+Article 50 has applied since **`2 August 2026`**, with a **`2 December 2026`** backstop for
+machine-readable marking of systems already on the market. A studio shipping generated
+feedback or synthetic content into the EU has a live obligation *now* and a firm one in 2027
+— not one distant deadline.
+
+🟡 **Provenance:** secondary. Six independent professional sources agree on the dates and the
+instrument (**Regulation (EU) 2026/1744**, OJ `24 July 2026`); the decoupling is carried by
+the European Parliament's legislative-train entry and one law-firm commentary. 🔴 No primary
+Official Journal text has been read in this environment — `eur-lex.europa.eu`,
+`digital-strategy.ec.europa.eu` and `www.europarl.europa.eu` are all unreachable here. See
+gap `586-E` on [`./market.md`](./market.md), which stays open for that reason alone.
+
+## 47. The open-source education shelf is permissive where a studio builds and copyleft where a client already runs — measured at `130 of 192` against every large LMS
+
+🟢 **Measured `2026-11-01` across all `192` curated addresses** in
+[`../agents/top.md`](../agents/top.md) and [`../repos/foundations.md`](../repos/foundations.md):
+
+| layer | licence posture | evidence |
+|---|---|---|
+| Agents, components, skills, MCP servers | 🟢 **permissive majority** | `MIT` alone is **`100 of 192`** (`52.1 %`); permissive subtotal **`130`** (`67.7 %`) counting `Apache-2.0` (`24`), `BSD-3-Clause` (`4`), `ECL-2.0` and `CC0-1.0` |
+| LMS / platform of record | 🔴 **share-alike, without exception at scale** | `bigbluebutton` `LGPL-3.0` (`9,262★`), `openedx-platform` `AGPL-3.0` (`8,214★`), `dolibarr` `GPL-3.0` (`7,814★`), `moodle` `GPL-3.0` (`7,569★`), plus `frappe/lms`, `chamilo-lms`, `ILIAS`, `tutor`, `classroomio`, `learnhouse`, `courselit`, `rosariosis` |
+| Permissive platform alternatives | 🟡 **they exist, at a fraction of the reach** | `sakaiproject/sakai` `ECL-2.0` (`1,240★`), `pupilfirst` `MIT` (`981★`, 🔴 last push `2025-12-09`), `mentingo` `MIT` (`103★`) |
+
+🔵 **So the licence question in an education engagement is not "can we find permissive
+software" — it is "which layer are we touching".** Two-thirds of this shelf is shippable in
+client work. But the system the client already runs is almost certainly copyleft, and every
+permissive substitute for it is at most **`~13 %`** of the incumbents' reach, with the
+largest-but-one of those substitutes stale for `~11` months.
+
+🟢 **This is a census confirming advice this base previously held on examples:** extend the
+platform over a documented seam — LTI 1.3, xAPI, SCORM, an MCP server against the LMS API —
+and keep the studio's own code in the permissive agent layer. 🔴 **The failure mode it rules
+out is the tempting one**: forking Moodle or Open edX to embed an agent produces a modified
+AGPL/GPL platform and a distribution obligation, for a capability that the seam would have
+delivered without one.
+
+🔵 **One honest limit on the `130`.** It is the API channel's count, and the API cannot answer
+for **`42 of 192`** addresses (`29` `NOASSERTION`, `13` `null`). That set is mixed — it holds
+rows with a real `MIT` grant in their `LICENSE` text (`relate`, `word-atlas`,
+`LLMs-from-scratch`, `pupilfirst`) *and* rows with no grant at all (`Agent4Edu`,
+`Multi-Agent-Study-Assistant`). 🔴 **`NOASSERTION` is therefore not evidence in either
+direction**, and for one row in five the licence on these shelves rests entirely on a text
+read — which is why `p591` made the text channel the authority.
+
+---
+
 ## p591 — 2026-11-01 — a byte-read is not a verified licence if the matcher reads the body; the API's two licence blanks carry opposite instructions; and the in-language supply gap is a LICENSING gap in LATAM and an ABSENCE in EMEA
 
 🔵 **Three trends filed at `##` with the counter's own `^## <n>. ` form (43–45), plus one

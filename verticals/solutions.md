@@ -3,6 +3,71 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+
+## 🆕 p592 — 2026-11-01 — this page's standing advice is no longer argued from examples: every platform of record on this shelf was re-measured, and the licence split is structural
+
+### 🟢 The measurement, stated before the conclusion
+
+`gh api -X GET search/repositories`, `2026-11-01`, **`192 of 192`** curated addresses across
+[`../agents/top.md`](../agents/top.md) and [`../repos/foundations.md`](../repos/foundations.md)
+— the first full-shelf sweep in this base. The composition census is on
+[`../repos/trending.md`](../repos/trending.md); what this page needs from it is the
+**platform tier**, re-measured row by row.
+
+| platform of record | licence, measured | stars | last push | forkable by a studio? |
+|---|---|--:|---|---|
+| [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 🔴 `LGPL-3.0` | **`9,262`** | `2026-10-30` | 🔴 no — integrate |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 `AGPL-3.0` | **`8,214`** | `2026-11-01` | 🔴 no — integrate |
+| [Dolibarr/dolibarr](https://github.com/Dolibarr/dolibarr) | 🔴 `GPL-3.0` | **`7,814`** | `2026-10-30` | 🔴 no — integrate |
+| [moodle/moodle](https://github.com/moodle/moodle) | 🔴 `GPL-3.0` | **`7,569`** | `2026-10-30` | 🔴 no — integrate |
+| [frappe/lms](https://github.com/frappe/lms) | 🔴 `AGPL-3.0` | **`3,361`** | `2026-10-30` | 🔴 no — integrate |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | 🔴 `AGPL-3.0` | **`2,440`** | `2026-11-01` | 🔴 no — integrate |
+| [classroomio/classroomio](https://github.com/classroomio/classroomio) | 🔴 `AGPL-3.0` | **`1,736`** | `2026-11-01` | 🔴 no — integrate |
+| [codelitdev/courselit](https://github.com/codelitdev/courselit) | 🔴 `AGPL-3.0` | **`1,292`** | `2026-11-01` | 🔴 no — integrate |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **`ECL-2.0`** | **`1,240`** | `2026-10-30` | 🟢 **yes** — Apache-derived, no share-alike |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 `AGPL-3.0` | **`1,131`** | `2026-10-29` | 🔴 no — but it is the *supported* way to operate Open edX |
+| [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🔴 `GPL-3.0` | **`1,019`** | `2026-11-01` | 🔴 no — integrate |
+| [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | 🟢 **`MIT`** (text) | **`981`** | 🔴 `2025-12-09` | 🟡 **yes, but** ~11 months stale |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 `GPL-2.0` | **`649`** | `2026-10-28` | 🔴 no — integrate |
+| [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 `GPL-3.0` | **`507`** | `2026-10-31` | 🔴 no — integrate |
+| [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 **`MIT`** | **`103`** | `2026-11-01` | 🟢 yes — but small |
+
+### 🟢 The conclusion this page can now assert rather than illustrate
+
+🔵 **The platform tier is copyleft and the agent tier is permissive, and that is not a
+coincidence of sampling — it is `192 of 192`.** `MIT` alone accounts for **`100`** rows of
+the whole shelf and the permissive subtotal is **`130`** (`67.7 %`), yet **not one** of the
+four largest platforms of record carries a permissive licence.
+
+🟢 **So the build-vs-integrate rule is settled, and it is a licence rule before it is an
+architecture rule:**
+
+- 🟢 **Integrate, never fork**, at the platform layer — over **LTI 1.3**
+  ([`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs), `Apache-2.0`, `373★`), **xAPI**,
+  **SCORM**, or an MCP server against the LMS API
+  ([`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp), `MIT`, `310★`).
+  🔵 The seam keeps studio code permissive because it never links into the GPL/AGPL work.
+- 🟡 **Fork only Sakai**, if a fork is genuinely required. `ECL-2.0` is the only permissive
+  licence at institution scale on this shelf. 🔴 Weigh it honestly: Sakai is `1,240★` against
+  Moodle's `7,569★` and Open edX's `8,214★`, so a fork buys licence freedom at a real cost in
+  ecosystem, plugins and client familiarity.
+- 🔴 **Do not propose `pupilfirst` as a default.** It is genuinely `MIT` (by text — the API
+  reports `NOASSERTION` and hides it), but it has not been pushed since **`2025-12-09`**.
+  Adopt it deliberately, with a maintenance position stated in the proposal, or not at all.
+- 🔴 **Do not promise a proctoring platform.** `SafeExamBrowser` is `MPL-2.0` and current
+  (`361★`, `2026-10-30`); `Proctoring-AI` is a stale component. Gap `585-B`/`585-G` is still
+  open: a studio ships SEB plus an agent.
+
+🔵 **Three archived rows remain on this page's wider tier lists and all three stay flagged**
+rather than deleted, because an archived repo is still the answer to *"why are we building
+this?"*: `adlnet/SCORM-to-xAPI-Wrapper` (unlicensed **and** archived, last push `2017-10-02`,
+published by the body that authored SCORM), `raccoongang/edx_xblock_scorm` (`Apache-2.0`,
+archived, `2023-05-26`), and `kantord/LibreLingo` (`AGPL-3.0`, archived). 🟢 **`3 of 3` were
+already correctly marked before this pass** — the full sweep found **`0`** unflagged defects
+anywhere on the curated shelves.
+
+---
+
 ## 🆕 p591 — 2026-11-01 — the systems-of-record question this page has never answered: the permissive ERP/CRM tier is `24,087★` large and none of it is education-specific, while every education-specific ERP is copyleft — plus a mandated-leg licence claim that is false
 
 ### 🔴 The claim this page must not repeat

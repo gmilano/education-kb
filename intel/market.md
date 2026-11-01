@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p592 — 2026-11-01 — the regional legs are saturated at `4 of 4` paid / `0 of 4` new, and the single operative fact they added is that the EU high-risk clock no longer waits for standards
+
+### 🔴 The demand-side legs, measured against this base rather than described
+
+All four mandated regional legs ran in full. 🔵 **Every distinctive token each one served was
+already held by this base**, so the honest headline is *saturation*, not nil: the legs are
+working and the base has caught up with them.
+
+| mandated regional leg | distinctive tokens served | already held | 🟢 new to this base |
+|---|--:|--:|--:|
+| `AI education North America 2026 adoption regulation players` | `134` bills / `31` states; `35+` states with guidance; NC Session Law `2026-41` and its three dates; Maryland's package; SUNY AI-literacy gen-ed from autumn `2026`; UC Berkeley Law genAI prohibition; ED grant-priority rule; the student-authored *STUDENTS FIRST Act of 2026* | `8` | 🔴 **`0`** |
+| `AI education EMEA Europe Middle East Africa 2026 adoption regulation players` | EU AI Act Annex III high-risk status; Digital Omnibus deferral to `2 December 2027` / `2 August 2028`; Article 50 live from `2 August 2026`; KHDA Dubai guidance; UNESCO generative-AI guidance; OECD *Digital Education Outlook 2026*; European market `$2.64 bn` | `7` | 🔴 **`0`** |
+| `AI education APAC Asia Pacific 2026 adoption regulation players` | Korea AI Basic Act (`22 January 2026`); Vietnam AI law (`1 March 2026`) and its `18`-month education transition; Ipsos *Education Monitor 2026* ban-support figures; Japan's voluntary posture; Australia's National AI Plan; China's targeted measures | `6` | 🔴 **`0`** |
+| `AI education LATAM Latin America 2026 adoption regulation players` | UNESCO IESALC / UNU-IAS (`200` institutions, `19` countries, `87 %` use, `26 %` strategy); Universidad de los Andes `716` instruments across `23` jurisdictions, `>80 %` since 2023; UNESCO Observatory launched `14 April 2026` in Santiago with CAF, CENIA, Cetic.br, ECLAC, Ceibal, Santillana, Tec de Monterrey, ProFuturo, IRCAI | `3` | 🔴 **`0`** |
+
+🔵 **`24` distinctive tokens, `24` already held.** `p588` declared these legs saturated at
+`20 of 24` and `p591` measured `15 of 16`; this pass is the first to run them and recover
+**nothing at all**, which — read together with `592-A` on
+[`../agents/trending.md`](../agents/trending.md) — is what three months of pointing the
+rotation at a single industry looks like from the demand side.
+
+### 🟢 The one operative fact this pass adds: the EU high-risk clock is decoupled from standards
+
+🆕 **The deferred Annex III and Annex I dates apply on the calendar, whether or not the
+supporting harmonised standards are finished.** This differs from the Commission's original
+omnibus proposal, which would have tied the start of high-risk obligations to the
+*availability* of those standards. 🔵 **Why this is operationally different from a date
+slipping:** a standards-linked trigger is an open-ended extension a vendor can plan to sit
+behind; a fixed date is a deadline that arrives on an education product whether the
+conformity toolkit exists or not. 🔴 **For a studio shipping grading, admissions or
+proctoring into the EU, `2 December 2027` should therefore be planned as firm**, and the
+conformity-assessment work scoped without assuming a standards-driven reprieve.
+
+🟡 **Provenance, stated plainly:** this is a **secondary** reading, carried by the European
+Parliament's legislative-train entry for the Digital Omnibus on AI and by one law-firm
+commentary. 🔴 Both were served through `WebSearch` result text; `www.europarl.europa.eu`
+returned **`ENOTFOUND`** to a direct fetch in this environment, so the wording of the
+operative article has **not** been read here.
+
+### 🟡 `586-E` — not closed, but the corroboration count is now six and the spread is gone
+
+| element | value now corroborated | sources agreeing this pass |
+|---|---|--:|
+| Instrument | **Regulation (EU) 2026/1744**, OJ **`24 July 2026`**, in force **`27 July 2026`** | `2` |
+| Stand-alone Annex III high-risk (education, grading, admissions) | **`2 December 2027`** — a `16`-month deferral from `2 August 2026` | `6` |
+| Annex I product-embedded high-risk | **`2 August 2028`** — a `12`-month deferral from `2 August 2027` | `3` |
+| Article 50 transparency | 🔴 **not deferred** — applies from **`2 August 2026`** | `2` |
+| Article 50(2) machine-readable marking, systems already on the market | **`2 December 2026`** backstop | `1` |
+
+🟢 **The `16`-month spread `586-E` was opened over is no longer a disagreement between
+sources.** Six independent professional sources — a cloud-security research note, Orrick,
+DLA Piper, Pinsent Masons, a consent-management vendor's knowledge hub, and a dedicated AI
+Act tracker — now all give **`2 December 2027`** for stand-alone Annex III. The earlier
+*"August 2026"* readings are **superseded guides written before the omnibus**, not a live
+contest. 🔴 **The gap stays OPEN regardless**, and the reason is a channel limit, not a
+doubt: `eur-lex.europa.eu`, `digital-strategy.ec.europa.eu` and `www.europarl.europa.eu` are
+all unreachable from this environment, so **no primary text has been read**. 🔵 Closing it
+requires one Official Journal read from a network that can reach the EU domains — it does
+not require more search.
+
+### 🟢 North America
+
+🔴 **Nil new.** The leg reconfirmed the state-level picture this base already holds: `134`
+AI-in-education bills across `31` states in the 2026 session, `35+` state education
+departments with published guidance, and North Carolina's Session Law `2026-41` staging a
+state model policy by **`2026-12-31`**, local school-unit policies by **`2027-06-30`** and
+teacher professional development by **`2028-06-30`**. 🔵 Federal action remains indirect —
+an ED rule prioritising grant applications that advance understanding or ethical use of AI.
+🟢 Higher education is where the datable commitments are: **SUNY** requires AI literacy in
+general education for undergraduates entering from autumn `2026`; **UC Berkeley School of
+Law** prohibits generative AI for most graded work from summer `2026`. 🔵 **The two postures
+are opposite and both are procurement signals** — a system-wide literacy mandate buys
+curriculum and assessment work, a prohibition buys detection and academic-integrity work.
+
+### 🟢 EMEA
+
+🟢 **The EU remains the structural fact and it is now a fixed-date one** — see the
+decoupling finding above. Education uses sit in Annex III, enforcement machinery has been
+live since `2 August 2026`, and the compliance clock runs to `2 December 2027`.
+🔵 Gulf policy stays government-led, with Dubai's **KHDA** issuing explicit responsible-AI
+guidance to private schools. 🔵 **OECD's *Digital Education Outlook 2026*** recommends moving
+past general-purpose assistants toward purpose-built educational AI — which is the same
+movement [`./trends.md`](./trends.md) tracks on the supply side.
+
+🔴 **AFRICA IS A DECLARED GAP, AND IT IS A MEASURED ABSENCE RATHER THAN AN OMISSION.** The
+mandated EMEA leg names Africa in the query string and returned **no substantive coverage of
+African AI-in-education regulation or adoption at all** — not a thin result, a nil. 🔵 This
+base's two standing African leads, an **AUDA-NEPAD** guideline and the **AU Continental
+Education Strategy**, remain unverifiable here: `www.nepad.org` is among the hosts returning
+no connection. 🔴 **So EMEA coverage in this base is in practice EU + Gulf**, and a
+Sub-Saharan engagement would start without regional intelligence. Closing this needs a
+channel that reaches African IGO domains, or a named local source — not another run of the
+same leg, which has now failed to serve Africa across multiple passes.
+
+### 🟢 APAC
+
+🔴 **Nil new.** Korea's **AI Basic Act** (in force `22 January 2026`, the region's first
+comprehensive AI statute) and **Vietnam's** AI law (effective `1 March 2026`, with a
+**`18`-month** transition for systems already operating in education, health and finance)
+are both already held, as are Japan's light-touch voluntary model, Australia's reliance on
+existing law under its National AI Plan, and China's targeted measures on generative
+services and AI-content labelling. 🔵 The **Ipsos Education Monitor 2026** attitude figures
+are also held, and they move *against* adoption: support for banning AI in schools rose from
+`21 %` to `29 %` in Japan, `47 %` to `52 %` in Australia and `27 %` to `31 %` in South
+Korea, with Indonesia lowest at `23 %`. 🔴 **Public opinion in APAC is hardening while the
+statutes are liberalising** — a delivery risk that belongs in an APAC proposal, not a
+market-size slide.
+
+### 🟢 LATAM
+
+🔴 **Nil new**, and the region's defining asymmetry is unchanged: **adoption is near-universal
+and governance is not.** UNESCO **IESALC**/UNU-IAS, across `200` institutions in `19`
+countries — **`87 %`** report using AI in at least one area, **`26 %`** have a formal AI
+strategy, and uptake is bottom-up, driven by individual academics, researchers and students
+rather than institutional plans. 🔵 Regulation is voluminous and fragmented: Universidad de
+los Andes counts **`716`** AI-related instruments, rules and proposals across `23`
+jurisdictions, **over `80 %`** initiated since 2023. 🟢 The institutional counterpart is the
+**UNESCO Observatory on AI in Education for Latin America and the Caribbean**, launched
+`14 April 2026` in Santiago with CAF and a named partner set (CENIA, Cetic.br, ECLAC,
+Fundação Ceibal, Fundación Santillana, Tecnológico de Monterrey, ProFuturo, IRCAI).
+🔴 **The `87 %` / `26 %` pair is the LATAM engagement thesis**: the buying need is
+governance, policy and AI-literacy scaffolding over tools institutions have *already*
+adopted without a strategy — not greenfield deployment.
+
+🟡 **One figure this base continues to refuse:** a trading blog's claim that Latin America
+is the fastest-growing AI-adoption region in 2026 is promotional, unsourced, and is **not**
+recorded as a fact here.
+
+---
+
 ## 🆕 p591 — 2026-11-01 — all four regional legs run and the demand-side saturation is now measurable at `15 of 16` tokens already held; the genuinely new regional intelligence this pass produced is SUPPLY-side, and it is a `5.5×` asymmetry between APAC and EMEA in adoptable in-language artefacts
 
 ### 🔴 The demand-side legs, measured against this base rather than described
@@ -819,7 +949,13 @@ not fork.
 
 🆕 **`p587`:** 🔴 **The in-language open-source supply is effectively zero and now measured:** two Iberian-language education-AI repositories above 10★, **neither adoptable** (`SophIA` 15★ unlicensed and stale; `FM849` 14★ `NOASSERTION`, a course repo), against **67** in the Chinese-language control — a ~**33×** asymmetry. **A LATAM delivery is a localisation or a BUILD, never an in-language adopt.** 🟢 Demand evidence is strong and dated: **UNESCO IESALC / UNU-IAS working paper (`2026-09-01`, Valentini)**, **ILIA 2025** (ECLAC, published 2026), **AI in Higher Education LATAM Survey 2026** (Tec de Monterrey, Feb 2026) reporting the region as more positive on AI in higher education than any other. 🔴 Do **not** quote the *"Rest of Latin America"* market figure ($18.2 M → ~$36 M) as a LATAM total: its scope excludes Brazil and Mexico.
 
-### Global / provenance unknown
+### Global
+
+🟡 **Provenance note:** rows in this subsection are `Global` by scope; where an individual
+figure's provenance is unknown or secondary it is labelled on the row itself. 🆕 `p592`
+renamed this heading from *"Global / provenance unknown"*, which was outside the closed
+region vocabulary and caused `gate-region-headings` to report both an `OUT-OF-VOCAB` finding
+and a `MISSING-REGION` finding for `Global` on the same block.
 
 🆕 **`p588`:** 🔴 **This page's regional legs are saturated at `20 of 24`** — `83 %` of everything this pass's six legs returned was already filed, and **none of the remaining four can be verified from this environment**. 🟢 **Operational reading: the marginal value of another education regional sweep is ≈ zero**, and the binding constraint is network policy (`588-B`), not research effort. See the `p588` section at the top of this page.
 
@@ -840,7 +976,7 @@ not fork.
   LATAM enterprise article found to contain unfilled `[VERIFY]` placeholders. Every figure
   above carries its instrument.
 
-### 🔴 Open gaps on this page
+## 🔴 Open gaps on this page
 
 | Gap | Status | What would close it |
 |---|---|---|

@@ -4,6 +4,156 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p592` — `2026-11-01` — **🟢 THE SHELF IS CLEAN AT `192/192` AND `0` UNFLAGGED DEFECTS. 🔴 THE BINDING CONSTRAINT ON THIS BASE IS NOT RESEARCH — IT IS THE ROTATION SCHEDULER, STUCK ON `education` SINCE `2026-08-02`**
+
+### 🔵 Channel table, run first (`569-B`'s standing row)
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories` with `repo:` qualifiers | 🟢 **`192 of 192` curated addresses measured**, batched `8` per query, every row returning `stargazers_count` + `license.spdx_id` + `pushed_at` + `archived` + `fork` |
+| 🟢 `WebFetch` → `github.com/{owner}/{name}` | 🟢 **`9` rows read first-hand.** 🔴 **Precision caveat:** the page UI serves *rounded* stars (`78.6k`, `7.0k`), so it can corroborate a licence and an archive state but must not be used to write an exact cell |
+| 🔴 `curl` → `api.github.com` | 🔴 **`403`** — unchanged since `p584`; gap `587-C` holds in this environment |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403`** — the run prompt's mandated URL verifier still certifies nothing here |
+| 🔴 `curl` → `www.unesco.org`, `www.iesalc.unesco.org`, `digital-strategy.ec.europa.eu`, `www.oecd.org`, `www.future-ed.org`, `artificialintelligenceact.eu` | 🔴 **`6 of 6` returned no connection at all** (`000`) — gap `588-B` re-confirmed, now at `13 of 13` across two passes |
+| 🔴 `WebFetch` → `www.europarl.europa.eu` | 🔴 **`ENOTFOUND`** — outside the session's allowed network domains. 🔵 The Official Journal remains unreadable here, which is why gap `586-E` cannot be *closed*, only corroborated |
+| 🟡 `WebSearch`, `4` mandated global + `4` mandated regional | 🔴 **`0` new repo addresses — 23rd consecutive nil**; 🟢 `4 of 4` regional intel legs paid, and `0 of 4` served anything this base did not already hold |
+
+### 🔴 The mandated legs, reported in full because a nil described in prose reads like coverage
+
+| leg | repo-shaped names served | already in this base | 🟢 new |
+|---|---|--:|--:|
+| `top open source AI agents education 2026 github MIT` | Agenta, OpenHands, Langflow, LibreChat, Hermes Agent, OpenClaw, CrewAI, AutoGen, OpenAI Agents SDK, HF Agents Course, `microsoft/ai-agents-for-beginners`, `ashishpatel26/500-AI-Agents-Projects`, `ARUNAGIRINATHAN-K/awesome-ai-agents-2026` | `13` | 🔴 **`0`** |
+| `github trending education AI 2026` | `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC` | `2` | 🔴 **`0`** |
+| `open source platform education ERP CRM SIS MIT Apache 2026` | Apache OFBiz, OpenEduCat, ERPNext, Dolibarr, Sakai, eduTrac SIS, Twenty, Atomic CRM, Krayin, Open edX | `10` | 🔴 **`0`** |
+| `AI education industry trends 2026` | — (no repo-shaped results) | — | 🔴 **`0`** |
+| `AI education {North America / EMEA / APAC / LATAM} 2026 adoption regulation players` ×4 | — (no repo-shaped results on any of the four) | — | 🔴 **`0`** |
+| 🆕 `new open source AI tutor grading repo github October November 2026 release` (unmandated probe) | `Gchism94/ai-tutor`, `KamoliddinS/AI-Assignment-Grader`, `laurauguc/grading_assistant`, `Open-TutorAi/open-tutor-ai-CE`, `rohitg00/ai-engineering-from-scratch`, `HKUDS/DeepTutor` | `6` | 🔴 **`0`** |
+
+🔵 **`592-B` — the unmandated probe reproduced `p587`'s finding exactly, and that is the point.**
+All three grading-shaped names it served — `Gchism94/ai-tutor`, `KamoliddinS/AI-Assignment-Grader`,
+`laurauguc/grading_assistant` — are **already in this base's append-only history** and have
+**never reached a curated shelf**. 🟢 **And for one of them the non-promotion is now justified
+with a number:** `laurauguc/grading_assistant` was read first-hand and is **`4★`, MIT, `260`
+commits** — correctly below any promotion bar. 🔵 So `p587`'s *"promotion-limited, not
+discovery-limited"* is the right diagnosis for the tier **above** the bar, and is **not** a
+backlog of missed shelf rows: the unpromoted grading tier is unpromoted because it is tiny.
+
+### 🟢 The whole curated shelf re-measured — `192 of 192`, and it holds
+
+| check | denominator | result |
+|---|--:|---|
+| addresses measured | `192` | 🟢 **`192`** — every address on [`./top.md`](./top.md) and [`../repos/foundations.md`](../repos/foundations.md) |
+| `archived: true` found | `192` | 🟡 **`3`** — `adlnet/SCORM-to-xAPI-Wrapper`, `kantord/LibreLingo`, `raccoongang/edx_xblock_scorm` |
+| archived rows **already flagged** on the shelf | `3` | 🟢 **`3 of 3`** — all three already carry an explicit `ARCHIVED` / `BLOCK` marker |
+| `fork: true` found | `192` | 🟢 **`0`** |
+| pushed before `2026-01-01` | `192` | 🟡 **`12`**, and **`12 of 12`** already carry a 🔴 or 🟡 staleness marker |
+| licence **downgrades** vs the recorded cell | `145` comparable | 🟢 **`0`** |
+| star cells that **moved** | `145` comparable | `30` moved, **`115`** unchanged |
+| direction of movement | `30` | 🟢 **`30` up, `0` down** |
+
+🟢 **`0` unflagged defects.** This is the first pass in this base to re-measure the *entire*
+curated shelf in one sweep rather than a sample, and the shelf survived it: every archived
+repo was already marked archived, every stale repo already marked stale, every unlicensed
+repo already marked `BLOCK`. 🔵 **The `NOASSERTION` mass is not a defect and was not treated
+as one** — **`42` of the `192`** return `NOASSERTION` or `null` from the API, and that set
+is **mixed**: it contains rows carrying a real permissive grant in their `LICENSE` text
+(`inducer/relate`, `designfuchen/word-atlas`, `rasbt/LLMs-from-scratch`,
+`pupilfirst/pupilfirst` — all MIT by text) **and** rows that genuinely have no grant at all
+(`bigdata-ustc/Agent4Edu`, `A-R007/Multi-Agent-Study-Assistant`). 🔴 **That mix is the whole
+point:** `NOASSERTION` is evidence of *nothing* in either direction. `p591`'s finding,
+re-confirmed at full shelf scale — **the API licence field is unusable as a negative, and a
+text read is the only channel that settles a grant.**
+
+### 🟢 Star drift, `2026-11-01` — the ten largest movers
+
+| repo | recorded | measured `p592` | Δ | licence (SPDX channel) |
+|---|--:|--:|--:|---|
+| [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | `53,128` | **`53,385`** | 🟢 `+257` | Apache-2.0 |
+| [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | `71,803` | **`71,973`** | 🟢 `+170` | MIT |
+| [designfuchen/word-atlas](https://github.com/designfuchen/word-atlas) | `3,604` | **`3,668`** | 🟢 `+64` | `NOASSERTION` (MIT by text) |
+| [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | `42,297` | **`42,360`** | 🟢 `+63` | MIT |
+| [karpathy/nanochat](https://github.com/karpathy/nanochat) | `59,252` | **`59,308`** | 🟢 `+56` | MIT |
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | `78,542` | **`78,576`** | 🟢 `+34` | MIT |
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | `76,141` | **`76,170`** | 🟢 `+29` | MIT |
+| [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) | `122,693` | **`122,716`** | 🟢 `+23` | MIT |
+| [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | `64,710` | **`64,724`** | 🟢 `+14` | Apache-2.0 |
+| [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | `36,673` | **`36,686`** | 🟢 `+13` | MIT |
+
+🔵 **DeepTutor is still the fastest-moving purpose-built education row** (`+257` in the
+interval), and **no row on this shelf lost stars**. All `36` moved cells on the two shelves
+were rewritten to the measured value in this pass.
+
+### 🟢 `585-A` — the evidence is upgraded from `10` failed probes to a positive enumeration
+
+[`bigdata-ustc/Agent4Edu`](https://github.com/bigdata-ustc/Agent4Edu) re-measured
+`2026-11-01`: **`100★`**, `archived: false`, API licence **`null`**, last push **`2026-09-29`**
+— unchanged since `p586`. 🟢 **What is new is the *kind* of evidence.** Earlier passes probed
+ten *guessed* licence paths and recorded ten `404`s, which can only ever support *"not at the
+paths we guessed."* This pass read the repository's **own top-level file listing**:
+
+> `Code/`, `data/demo/`, `docs/assets/`, `Agent4Edu-Slide_web.pdf`, `Agent4Edu-poster.pdf`,
+> `Agent4Edu-poster.png`, `README.md`, `requirements.txt`
+
+🔴 **There is no licence file at any path, because the enumeration is complete.** The gap is
+no longer *"we cannot find a grant"* but *"the repository has none."* 🔵 Learner simulation
+remains unavailable to a client engagement, across `15+` passes — and the remedy is upstream
+(open an issue asking the authors to add a licence), not another probe.
+
+### 🔴 `592-A` — THE FINDING OF THIS PASS, AND IT IS NOT ABOUT EDUCATION
+
+This base is researched on an hourly rotation of `12` industries driven by `rotation.json`
+in the `globant-kb` repository. Read `2026-11-01`:
+
+| field | value on read | what it implies |
+|---|---|---|
+| `next` | `8` → `education` | this pass was pointed at `education`, correctly |
+| `last_industry` | `technology` | the last industry the rotation *recorded* finishing |
+| `last_updated` | **`2026-08-02`** | 🔴 **the rotation pointer has not advanced in ~3 months** |
+| `last_status` (tail) | `…technology-kb-push-BLOCKED-access-restriction(session-scoped-to-globant-kb-only)` | 🔴 the cause: the `technology` pass could not write its own industry repo, and the rotation never advanced past it |
+
+🔴 **So `education` has been the rotation target for every run since `2026-08-02`, and the
+other `11` industries have not been rotated to at all in that window.** That is the real
+explanation for the `23`-pass repo-discovery nil this page keeps recording: **this industry
+is not under-researched, it is over-researched**, and the mandated legs are nil because they
+have been run against the same industry `23` times. 🟢 **Fixed in this pass**: `rotation.json`
+advanced to `next: 9` (`automotive`) with `last_industry: education`, so the next scheduled
+run leaves this industry.
+
+### 🟢 Gate accounting for this pass, measured both ways
+
+`make hooks` was run against `HEAD` **before** this pass's edits and again after, because a
+gate count asserted without a baseline is not evidence:
+
+| run | gates green | gates red |
+|---|--:|--:|
+| `HEAD` (`p591`'s commit), before any `p592` edit | `46 / 69` | `23` |
+| after this pass | 🟢 **`48 / 69`** | `21` |
+
+🟢 **`+2` recovered, `0` broken** — and the red set after this pass is *exactly* the baseline
+red set minus the two gates below, so no sibling was masked and nothing new went red.
+
+| gate | was | fixed by |
+|---|---|---|
+| `gate-tables` | 🔴 `1` defect: `agents/top.md` `BLANK-SPLITS-TABLE` at the `rphilipzhang/AI-PhD-S26` row | 🟢 Removing a stray blank line that split the enablement-tier table, which was making the row after it render as a **new table's header** — the exact hazard the run prompt warns about, found by the base's own gate rather than by reading |
+| `gate-region-headings` | 🔴 `3` findings in `intel/market.md`: `OUT-OF-VOCAB` ×2, `MISSING-REGION` ×1 | 🟢 `### Global / provenance unknown` → `### Global` (the closed vocabulary admits five values, and that heading was outside it **and** left `Global` reported missing), and `### 🔴 Open gaps on this page` promoted to `##` so a non-region subsection no longer sits inside the `## Opportunities by region` block |
+
+🔵 **Both failures pre-dated this pass** — confirmed by running each gate against a stashed
+tree — and both were in files this pass was already editing. 🔴 **The remaining `21` red
+gates also pre-date this pass and are NOT addressed here**; `p591` committed in the same
+state. 🔵 They are a standing debt (`gate-shelf-consistency`, `gate-dates`,
+`gate-promotion-ledger` at `110` findings, `gate-cell-reproduction` reporting a parser fault
+rather than a clean shelf) and they want a pass budgeted to *them*, not a side-effect of an
+ingest run.
+
+🔵 **`592-C` — the standing recommendation this base has earned.** The mandated repo legs
+should be budgeted as a **reconfirmation instrument at one-run-in-N**, not as discovery, and
+the per-pass budget moved to (a) full-shelf re-measurement, which is now demonstrably cheap
+(`192` addresses in `24` batched queries) and which caught the drift above, and (b) the
+in-language and unrun-axis sweeps that `591-D` measured at **`~33 %`** yield against
+**`~9 %`** for the canonical axes.
+
+---
+
 ## 🆕 `p591` — `2026-11-01` — **🔴 BYTE-READING A LICENCE IS NOT ENOUGH: A BODY MATCHER FILED `BSL-1.1` AS `MIT` BECAUSE BSL NAMES `MIT` AS ITS OWN FUTURE LICENCE. 🟢 `NOASSERTION` IS `0-FOR-12` AS A NEGATIVE AND `license: null` IS `10-FOR-10` — TWO FLAGS, OPPOSITE INSTRUCTIONS. 🟢 THE LATAM IN-LANGUAGE GAP IS REFINED: `12 OF 12` COURSEWARE REPOS PERMISSIVE, `6 OF 6` TUTORS UNLICENSED. 🔴 MANDATED LEGS NIL FOR THE 22nd PASS. `35` ROWS SHELVED. FIVE REGISTERED (`591-A`…`591-E`).**
 
 ### 🔵 Channel table, run first (`569-B`'s standing row)

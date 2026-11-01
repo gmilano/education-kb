@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p592` — `2026-11-01` — **🟢 THE FIRST FULL-SHELF LICENCE CENSUS: `130 of 192` PERMISSIVE BY THE API CHANNEL, `20` COPYLEFT, AND `42` THAT THE API CANNOT ANSWER AT ALL**
+
+### 🟢 The sweep, with its denominators first
+
+`gh api -X GET search/repositories` with `repo:` qualifiers, batched `8` per query, run
+`2026-11-01`. 🔵 **`192` addresses in `24` queries — the entire curated shelf, not a sample.**
+
+| scope | addresses | measured | 🟢 complete |
+|---|--:|--:|---|
+| [`../agents/top.md`](../agents/top.md) + [`./foundations.md`](./foundations.md), de-duplicated | `192` | `192` | 🟢 **`100 %`** |
+
+🔵 This is the first pass to re-measure every curated address in one sweep. The per-row
+verdicts are on [`../agents/trending.md`](../agents/trending.md); what follows is the
+**composition** finding, which is new and which only a full sweep can produce.
+
+### 🟢 Licence census of the curated shelf — `192` addresses, API channel
+
+| SPDX as reported | rows | share |
+|---|--:|--:|
+| `MIT` | **`100`** | `52.1 %` |
+| `Apache-2.0` | `24` | `12.5 %` |
+| `BSD-3-Clause` | `4` | `2.1 %` |
+| `ECL-2.0` | `1` | `0.5 %` |
+| `CC0-1.0` | `1` | `0.5 %` |
+| 🟢 **permissive subtotal** | **`130`** | **`67.7 %`** |
+| `AGPL-3.0` | `10` | `5.2 %` |
+| `GPL-3.0` | `6` | `3.1 %` |
+| `MPL-2.0` | `1` | `0.5 %` |
+| `LGPL-3.0` | `1` | `0.5 %` |
+| `GPL-2.0` | `1` | `0.5 %` |
+| `ODbL-1.0` | `1` | `0.5 %` |
+| 🔴 **copyleft / share-alike subtotal** | **`20`** | **`10.4 %`** |
+| 🟡 `NOASSERTION` | `29` | `15.1 %` |
+| 🟡 `null` | `13` | `6.8 %` |
+| 🟡 **API cannot answer** | **`42`** | **`21.9 %`** |
+
+🟢 **`592-D` — two numbers a client engagement can be planned against.** `MIT` alone is
+**over half** this shelf, and the permissive subtotal is **`130 of 192`**, so the shelf is
+genuinely buildable-on: the run prompt's *focus on MIT / Apache-2.0 / BSD* is not a filter
+this base has to strain to satisfy, it is what the base already mostly is. 🔴 **And the
+`21.9 %` that the API cannot answer is the cost of that confidence**: for one row in five,
+*every* licence statement on these shelves rests on a text read, which is why `p591` wired
+the text channel as the authority and why `gate-template-identity` exists.
+
+🔴 **The copyleft `20` are not noise — they are the platforms.** The share-alike block is
+concentrated in exactly the layer a studio would want to sit on. **Every LMS of record on
+this shelf is copyleft**: `openedx/openedx-platform` (`AGPL-3.0`, `8,214★`),
+`bigbluebutton/bigbluebutton` (`LGPL-3.0`, `9,262★`), `moodle/moodle` (`GPL-3.0`,
+`7,569★`), `Dolibarr/dolibarr` (`GPL-3.0`, `7,814★`), `frappe/lms` (`AGPL-3.0`),
+`chamilo/chamilo-lms` (`GPL-3.0`), `ILIAS-eLearning/ILIAS` (`GPL-3.0`),
+`overhangio/tutor` (`AGPL-3.0`), `classroomio/classroomio` (`AGPL-3.0`),
+`learnhouse/learnhouse` (`AGPL-3.0`), `codelitdev/courselit` (`AGPL-3.0`),
+`francoisjacquet/rosariosis` (`GPL-2.0`), `kantord/LibreLingo` (`AGPL-3.0`, archived).
+🟢 **Permissive LMS options exist, and the honest statement is about *size*, not
+existence.** `sakaiproject/sakai` (`ECL-2.0`, `1,240★`, the Apache-derived Educational
+Community Licence) is the largest institution-grade LMS here a studio could fork without a
+share-alike obligation, and below it sit `pupilfirst/pupilfirst` (`MIT` by text, `981★`,
+🔴 last push `2025-12-09`) and `Selleo/mentingo` (`MIT`, `103★`). 🔴 **So the trade at the
+platform layer is scale against licence**: the three largest LMSs on this shelf
+(`bigbluebutton` `9,262★`, `openedx` `8,214★`, `moodle` `7,569★`) are all share-alike, and
+every permissive alternative is at most `~13 %` of their reach — one of them stale. 🔵 That
+is the real reason the standing advice is *extend over a documented seam*: it is not that
+permissive platforms do not exist, it is that the ones clients already run are copyleft. 🔵 **So the shelf's permissive majority sits at
+the agent and component layer, while the LMS/platform layer it has to integrate with is
+copyleft** — the standing conclusion on [`../verticals/solutions.md`](../verticals/solutions.md)
+that a studio *extends over a documented seam and does not ship a modified platform* is now
+backed by a census rather than by examples.
+
+### 🟡 Health of the shelf, same sweep
+
+| check | rows | detail |
+|---|--:|---|
+| 🟢 `fork: true` | **`0`** | no curated address is a fork |
+| 🟡 `archived: true` | `3` | `adlnet/SCORM-to-xAPI-Wrapper`, `kantord/LibreLingo`, `raccoongang/edx_xblock_scorm` — 🟢 **`3 of 3` already flagged** on the shelves |
+| 🟡 pushed before `2026-01-01` | `12` | 🟢 **`12 of 12` already carry a staleness marker.** Oldest: `adlnet/SCORM-to-xAPI-Wrapper` (`2017-10-02`), `gamestdio/scorm` (`2019-02-14`), `eribean/girth` (`2022-09-09`) |
+| 🟢 licence downgrades vs recorded cells | **`0`** | across the `145` rows carrying a comparable recorded figure |
+| star cells rewritten to the measured value | `36` | `30` distinct repos moved, **all upward** |
+
+🔵 **The stale `12` are almost entirely the standards layer, and that is expected rather
+than alarming**: `adlnet/xAPI-Spec`, `1EdTech/lti-1-3-php-library`,
+`1EdTech/openbadges-validator-core`, `dmitry-viskov/pylti1.3`, `gamestdio/scorm`,
+`S4-NetQuest/react-scorm-provider`. 🟢 **A conformance library tracks a frozen
+specification**; a two-year-old push on `xAPI-Spec` is the spec being stable, not the repo
+being abandoned. 🔴 The genuine casualties in that set are `eribean/girth` (IRT, `2022`) and
+`bigdata-ustc/EduCDM` (cognitive diagnosis, `2024`) — both psychometrics, both still the
+best permissive option in their niche, which is the open `585`-series concern.
+
+---
+
 ## 🆕 `p591` — `2026-11-01` — **🟢 THE PERMISSIVE ERP/CRM TIER IS MEASURED AND THE MANDATED LEG'S LICENCE CLAIM ABOUT IT IS FALSE: iDURAR IS `AGPL-3.0`, NOT `MIT`. 🟢 A NEW READ CHANNEL IS CONFIRMED (`git clone --depth 1` ON THIRD-PARTY REPOS, EXIT `0`). 🔴 THE CANONICAL AGENT AXES ARE `91.1 %` SATURATED WHILE IN-LANGUAGE AXES RETURN `33 %` NEW. `45` ABSENT ADDRESSES FILED.**
 
 ### 🟢 The sweep, with its denominators first

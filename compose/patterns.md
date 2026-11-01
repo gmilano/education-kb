@@ -3,6 +3,80 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+
+## 🆕 p592 — 2026-11-01 — one recipe the EU decoupling finding makes urgent, and it is a deadline-driven variant of a seam this base already recommends
+
+🔵 **Why one and not three.** `p592` added no new repository rows — the mandated discovery
+legs returned their `23rd` consecutive nil (`592-A`). What it added is a **date that is now
+firm** (Trend `46`) and a **licence census** (Trend `47`), and exactly one recipe follows from
+those: the pattern a studio needs when an Annex III education product has to be conformant
+on a fixed calendar rather than whenever harmonised standards land. 🔵 Every repository
+figure below was measured first-hand on `2026-11-01` through the `gh api` channel.
+
+## 🆕 P-592-A — The Annex III-ready tutor over a copyleft LMS: conformant by `2 December 2027`, without forking the platform (8–10 weeks)
+
+🔴 **When to reach for this.** The client runs Moodle or Open edX, operates in the EU, and
+wants an AI tutor or grading assistant touching **grading, admissions or progression** —
+which places it in **Annex III** of the EU AI Act. 🔵 The obligations start **`2 December
+2027` on the calendar, whether or not the standards are finished** (Trend `46`), and
+Article 50 transparency is **already live** since `2 August 2026`.
+
+### The wiring, layer by layer
+
+| layer | what to use | licence, measured `2026-11-01` | why this one |
+|---|---|---|---|
+| Platform of record | `moodle/moodle` **`7,569★`** `GPL-3.0` or [openedx/openedx-platform](https://github.com/openedx/openedx-platform) **`8,214★`** `AGPL-3.0` | 🔴 copyleft | 🔴 **Do not fork either.** Integrate only. Forking creates a modified AGPL/GPL platform and a distribution obligation for capability the seam delivers free |
+| The seam | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) **`373★`** | 🟢 `Apache-2.0` | Turns the studio's service into a full **LTI 1.3** tool provider. The agent becomes an external tool the LMS launches — no platform code is modified, so no copyleft reaches the studio's code |
+| Tutoring agent | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) **`53,385★`** or [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) **`160★`** | 🟢 `Apache-2.0` / `MIT` | DeepTutor for lifelong-memory tutoring at scale; OpenTutor when the deployment must run locally and block-based authoring matters more than reach |
+| Tutor-as-tool | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) **`62★`** | 🟢 `MIT` | MCP server exposing tutoring moves, so the Annex III decision surface is **one auditable service** rather than prompt text scattered across a UI |
+| Mastery model — the audit substrate | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) **`456★`** + [CAHLR/OATutor](https://github.com/CAHLR/OATutor) **`274★`** | 🟢 `MIT` | 🟢 **This is the conformity-critical choice.** Knowledge tracing and Bayesian Knowledge Tracing produce an *inspectable* mastery estimate, so a progression decision can be explained to a regulator as a model state rather than as an LLM opinion |
+| Autograding | [jupyter/nbgrader](https://github.com/jupyter/nbgrader) **`1,370★`** | 🟢 `BSD-3-Clause` | Deterministic autograding for code and notebooks. 🟢 Keep the deterministic grader authoritative and the LLM advisory — the human-oversight requirement is far cheaper to satisfy when the grade has a reproducible source |
+| Telemetry | [adlnet/xAPI-Spec](https://github.com/adlnet/xAPI-Spec) **`956★`** | 🟢 `Apache-2.0` | 🟡 Last push `2025-07-03` — **that is a frozen specification, not an abandoned repo** (`p592` census). Emit xAPI statements for every agent action; this is also the evidence trail Article 14 human oversight is argued from |
+| Proctoring, only if asked | [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) **`361★`** | 🟡 `MPL-2.0` | 🔴 There is still **no permissive proctoring platform** (gap `585-B`/`585-G`). Ship SEB plus an agent; do not promise a platform |
+
+### The conformity work, scoped against the firm date
+
+1. **Weeks 1–2 — classify and write it down.** Decide in writing whether the deployment
+   touches grading, admissions or progression. 🔵 If yes it is Annex III and the rest of
+   this list is mandatory; if it is pure study support with no consequential decision, it is
+   not, and saying so in a dated memo is what stops scope creep from silently creating an
+   Annex III system later.
+2. **Weeks 2–4 — the seam, not the fork.** Stand up `ltijs`, launch the agent as an external
+   LTI 1.3 tool, confirm no platform file has been modified. 🟢 This is also the licence
+   boundary from Trend `47`: studio code stays permissive because it never links into the
+   GPL/AGPL platform.
+3. **Weeks 3–6 — make the decision inspectable.** Put `pykt-toolkit` or `OATutor` behind
+   every progression or mastery claim, and keep `nbgrader` authoritative for anything
+   scored. 🔴 An LLM may explain a grade; it should not *be* the grade in an Annex III
+   deployment.
+4. **Weeks 5–8 — Article 50 now, not in 2027.** Mark generated feedback and synthetic
+   content as machine-readable AI output. 🔵 This duty has applied since `2 August 2026`,
+   with a `2 December 2026` backstop for systems already on the market — it is the one
+   obligation that is **late**, not upcoming. 🔴 `p591` measured that **no third-party
+   component on this shelf marks generated content**: this is studio code every time.
+5. **Weeks 6–10 — the Annex III file.** Technical documentation, logging via the xAPI
+   stream, a named human able to override any agent decision, and a conformity assessment
+   route chosen (internal vs third-party). 🟢 Scope it to complete **before `2 December
+   2027`** and do not plan around a standards-driven reprieve — there is no longer one.
+
+🟢 **Why this is `8–10` weeks and not `4`.** The agent layer is the cheap part; this base has
+`130` permissive rows to build it from. The cost is the inspectable-decision substrate and
+the Annex III file, and both are schedule-driven work that cannot be compressed into the
+last month before a fixed date.
+
+🔵 **Regional variants of the same wiring.** **North America:** drop the Annex III file;
+substitute the state obligation that actually binds — e.g. North Carolina's local
+school-unit policy deadline of `2027-06-30` — and for a Canvas estate swap the seam for
+[vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) **`310★`** `MIT`.
+**APAC:** keep the whole structure and add the Ipsos finding to the delivery plan — public
+support for banning AI in schools is *rising* in Japan, Australia and South Korea, so
+consent, opt-out and parent-facing transparency are launch requirements, not polish.
+**LATAM:** invert the emphasis. UNESCO IESALC measured `87 %` adoption against `26 %` with a
+strategy, so the first deliverable is usually **governance over tools already in use** — the
+inspectable-mastery and telemetry layers land first, and the tutor second.
+
+---
+
 ## 🆕 p591 — 2026-11-01 — two recipes this base could not write before this pass: a data-residency study pipeline that never leaves the learner's machine, and the LATAM in-language engagement whose tutor half has to be built because `6 of 6` candidates are unlicensed
 
 🔵 **Why these two and not more.** `p591` added `35` rows across three tiers
