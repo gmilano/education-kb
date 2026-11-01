@@ -3,6 +3,64 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+## 🆕 p591 — 2026-11-01 — the systems-of-record question this page has never answered: the permissive ERP/CRM tier is `24,087★` large and none of it is education-specific, while every education-specific ERP is copyleft — plus a mandated-leg licence claim that is false
+
+### 🔴 The claim this page must not repeat
+
+🔵 **The mandated vertical leg** (`open source platform education ERP CRM MIT Apache`) ran
+in full this pass. 🔴 **It asserted that iDURAR ERP/CRM is *"fully open-source under the MIT
+license"*.** Byte-read `2026-11-01`:
+[`idurar/idurar-erp-crm`](https://github.com/idurar/idurar-erp-crm) carries a `34,230`-byte
+**GNU AFFERO GENERAL PUBLIC LICENSE** and the GitHub API agrees. 🔵 **Recorded here because
+this is the page a scope estimate is built from**, and a permissive ERP that is actually
+network copyleft changes a delivery model, not a footnote.
+
+### 🟢 The tier, measured — every grant title-anchored per `591-A`
+
+| Platform / component | Licence | Stars | Last push | Region | Customisable with AI on top? |
+|---|---|--:|---|---|---|
+| [krayin/laravel-crm](https://github.com/krayin/laravel-crm) | 🟢 **MIT (text, 1,078 B)** | **24,087** | `2026-11-01` | APAC | 🟢 **Yes — and this is the recommendation when the client wants admissions and enquiry management.** Laravel/PHP CRM, permissive, pushed the day of measurement. An AI layer attaches as a Laravel package: lead scoring, enquiry triage, applicant Q&A. 🔵 Default branch `master`. |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0 (text, 11,906 B)** | **1,148** | `2026-11-01` | Global | 🟢 **Yes, and it is the governance-safe choice.** ASF top-level project; accounting, HR, manufacturing, CRM. 🔵 Pick this when the client's procurement cares more about foundation governance than about velocity. Java. |
+| [cortezaproject/corteza](https://github.com/cortezaproject/corteza) | 🟢 **Apache-2.0 (text, 11,358 B)** | **2,183** | `2026-10-20` | EMEA | 🟢 **Yes — the low-code option.** Go-based CRM/application platform. 🔵 The permissive analogue of the Odoo-module pattern `openeducat` uses: model the education domain as Corteza modules instead of forking an LMS. |
+| [marmelab/atomic-crm](https://github.com/marmelab/atomic-crm) | 🟢 **MIT (text, 1,105 B)** | **1,420** | `2026-10-30` | EMEA | 🟢 **Yes — the fastest start.** React/TypeScript on Supabase. 🔵 Use when the deliverable is a bespoke student-lifecycle CRM the studio owns outright, not a configured product. |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0 (text)** | **903** | `2026-10-29` | APAC | 🟡 **Yes, from the outside.** The education ERP — admissions, fees, attendance, library, exams. 🟢 **LGPL-3.0 is the friendliest copyleft on this page:** a *separate* AI module that calls its API keeps its own licence. 🔴 Edits to its own files carry back. 🔵 Default branch `19.0`. |
+| [frappe/education](https://github.com/frappe/education) | 🔴 **GPL-3.0 (text)** | **688** | `2026-10-30` | APAC | 🔴 **Attach over the API only.** School ERP on Frappe. |
+| [idurar/idurar-erp-crm](https://github.com/idurar/idurar-erp-crm) | 🔴 **AGPL-3.0 (text, 34,230 B)** | **8,931** | 🟡 `2026-08-14` | Global | 🔴 **No.** 🔴 The leg claimed MIT; it is network copyleft. See above. |
+| [Dolibarr/dolibarr](https://github.com/Dolibarr/dolibarr) | 🔴 **GPL-3.0 (text, 35,151 B at `COPYING`)** | **7,814** | `2026-11-01` | EMEA | 🔴 **Attach, do not fork.** Broad module coverage, strong francophone and LATAM install base — so it is the system a LATAM client may already be running. |
+| [idempiere/idempiere](https://github.com/idempiere/idempiere) | 🔴 **GPL-2.0 (text, 15,057 B)** | **675** | `2026-10-30` | Global | 🔴 **Attach, do not fork.** 🔵 API said `NOASSERTION`; its `LICENSE.md` opens with `<center>` — HTML-wrapped (`591-B`). |
+
+### 🟢 The build-vs-buy answer, in one paragraph
+
+🔵 **The education-specific ERP tier is copyleft without exception** — `openeducat_erp`
+(LGPL-3.0) and `frappe/education` (GPL-3.0) are the only two, and this page has now
+confirmed there is no permissive education ERP at any size. 🟢 **So there are exactly two
+honest delivery models.** (1) **Attach**: take the client's existing education ERP as the
+system of record and build the AI as a *separate* service over its API — lawful under
+LGPL-3.0 and the only option under GPL-3.0/AGPL-3.0, and it is what
+[`erseco/python-moodle`](https://github.com/erseco/python-moodle) does for the LMS tier.
+(2) **Build the domain**: start from `krayin`, `corteza`, `atomic-crm` or
+`ofbiz-framework` — all permissive, all pushed within two weeks of measurement — and model
+admissions/fees/attendance yourself, which the studio then owns. 🔴 **What is not available
+is the middle path**: forking a ready education ERP and shipping it as a proprietary
+product. Nobody licenses that.
+
+### 🔵 The customise-with-AI-on-top set, restated with this pass's additions
+
+🟢 The pattern this page exists to document — **real systems that take AI on top** — now
+reads, by tier:
+
+| Tier | Buy / adopt | Grant | Attach AI how |
+|---|---|---|---|
+| LMS of record | **Moodle** (GPL-3.0), **Open edX** (AGPL-3.0) | 🔴 copyleft | Over the API — [`erseco/python-moodle`](https://github.com/erseco/python-moodle) (MIT) or [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) (Apache-2.0) as an LTI 1.3 tool |
+| LMS, **forkable** | **Sakai** (ECL-2.0), **OpenOLAT** (Apache-2.0), **Kolibri** (MIT, offline-first) | 🟢 permissive | Fork and embed directly |
+| Student-lifecycle CRM | 🆕 **krayin** (MIT), 🆕 **atomic-crm** (MIT), 🆕 **corteza** (Apache-2.0) | 🟢 permissive | Build the education domain on top |
+| Education ERP | **openeducat_erp** (LGPL-3.0), **frappe/education** (GPL-3.0) | 🔴 copyleft | Separate module over the API |
+| Courseware emit | **LiaScript-Exporter** (BSD-3-Clause), **scorm-again** (MIT), **Numbas** (Apache-2.0) | 🟢 permissive | See `P-590-A` |
+| Assessment review | **idstack** (MIT), 🆕 **blind-review-skill** (MIT) | 🟢 permissive | Gate before ship |
+| 🆕 Figures for STEM courseware | 🆕 **geometry-dsl** (MIT) | 🟢 permissive | Compile the diagram instead of generating it |
+
+---
+
 ## 🆕 p590 — 2026-11-01 — the delivery tier's build-vs-buy answer is rewritten: `p589` told a client to buy one dependency and build the generator, and there are at least six permissive generators — plus the first measured instrument for telling an ecosystem from a single supplier
 
 ### 🔴 What this page's sibling got wrong, and why a vertical page has to care

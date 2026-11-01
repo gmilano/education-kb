@@ -4,6 +4,95 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p591` — `2026-11-01` — **🟢 THE PERMISSIVE ERP/CRM TIER IS MEASURED AND THE MANDATED LEG'S LICENCE CLAIM ABOUT IT IS FALSE: iDURAR IS `AGPL-3.0`, NOT `MIT`. 🟢 A NEW READ CHANNEL IS CONFIRMED (`git clone --depth 1` ON THIRD-PARTY REPOS, EXIT `0`). 🔴 THE CANONICAL AGENT AXES ARE `91.1 %` SATURATED WHILE IN-LANGUAGE AXES RETURN `33 %` NEW. `45` ABSENT ADDRESSES FILED.**
+
+### 🟢 The sweep, with its denominators first
+
+`gh api -X GET search/repositories`, run `2026-11-01`. 🔵 **`37` axes across two sweeps,
+one matcher, because the comparison between them is the finding.**
+
+| sweep | axes | live non-fork rows | already held | 🟢 new | already-held rate |
+|---|--:|--:|--:|--:|--:|
+| Canonical agent axes | `10` | `112` | `102` | 🔴 `10` | 🔴 **`91.1 %`** |
+| Niche institutional + in-language axes | `27` | `137` | `92` | 🟢 **`45`** | `67.2 %` |
+
+🔵 `live` = `pushed_at ≥ 2026-01-01`, `archived: false`, `fork: false`. `already held` = the
+address appears in at least one of this base's `11` curated files, `archive/` excluded.
+
+🔴 **`591-D`:** re-running `topic:ai-tutor` and its nine siblings buys a **`~9 %`** yield.
+Running a jurisdiction's own language buys **`~33 %`**. 🟢 **The instrument that pays is the
+axis nobody has run, and language is the cheapest unrun axis there is.**
+
+### 🆕 Channel news — a read capability this base has never recorded
+
+| probe | result | what it means |
+|---|---|---|
+| 🆕 🟢 `git clone --depth 1 --filter=blob:none https://github.com/{third-party-repo}` | 🟢 **exit `0`** | 🟢 **A full working tree of any public repo is readable here.** Not previously recorded; `p584`–`p590` treated `raw.githubusercontent.com` as the only content channel. 🔵 Use it when a licence sits at a path a `6`-filename probe misses, or when a manifest-declared grant must be confirmed (`Trend 33`). |
+| 🆕 🟢 controls on `raw.githubusercontent.com` | 🟢 nonexistent repo / branch / file all `404` against `200` | 🟢 **The channel discriminates.** `p590` published `16` byte-reads on it with no control; this pass establishes one. |
+| 🔴 `curl` → `codeload.github.com` tarballs | 🔴 `403` | Not a substitute. |
+| 🔴 `gh api repos/{owner}/{name}` | 🔴 `403` | Unchanged since `p584`. The licence **field** must come from `search`. |
+
+### 🔴 `591-E` — the mandated ERP/CRM leg's licence claims, byte-read
+
+The `open source platform education ERP CRM MIT Apache` leg named nine systems. 🔴 **It
+asserted MIT for one that is network copyleft.** Every grant below read first-hand
+`2026-11-01`, title-anchored per `591-A`:
+
+| Repo | Leg claimed | 🔵 Byte-read title | Stars | Last push | Verdict |
+|---|---|---|--:|---|---|
+| [idurar/idurar-erp-crm](https://github.com/idurar/idurar-erp-crm) | 🔴 *"fully open-source under the MIT license"* | 🔴 **`GNU AFFERO GENERAL PUBLIC LICENSE`** (`34,230 B`) | **8,931** | `2026-08-14` | 🔴 **FALSE CLAIM. AGPL-3.0** — the API agrees. Do not scope this as permissive. |
+| [krayin/laravel-crm](https://github.com/krayin/laravel-crm) | MIT | 🟢 `MIT License` (`1,078 B`) | **24,087** | `2026-11-01` | 🟢 **Confirmed MIT.** Laravel/PHP; default branch `master`. The largest permissive CRM here. |
+| [cortezaproject/corteza](https://github.com/cortezaproject/corteza) | Apache-2.0 | 🟢 `Apache License` (`11,358 B`) | **2,183** | `2026-10-20` | 🟢 **Confirmed Apache-2.0.** Low-code CRM/platform in Go. |
+| [marmelab/atomic-crm](https://github.com/marmelab/atomic-crm) | MIT | 🟢 `The MIT License (MIT)` (`1,105 B`, `LICENSE.md`) | **1,420** | `2026-10-30` | 🟢 **Confirmed MIT.** React/TypeScript, Supabase-backed. |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | Apache-2.0 | 🟢 `Apache License` (`11,906 B`) | **1,148** | `2026-11-01` | 🟢 **Confirmed Apache-2.0.** 🔵 Default branch `master`; the leg cited "version 24.09.07" — the repo itself is the citable artefact. |
+| [Dolibarr/dolibarr](https://github.com/Dolibarr/dolibarr) | (named, no claim) | 🔴 `GNU GENERAL PUBLIC LICENSE` (`35,151 B`, `COPYING`) | **7,814** | `2026-11-01` | 🔴 **GPL-3.0.** 🔵 Grant lives at `COPYING`, not `LICENSE` — a `LICENSE`-only probe files a false absence. |
+| [idempiere/idempiere](https://github.com/idempiere/idempiere) | (named, no claim) | 🔴 `GNU General Public License`, Version 2 (`15,057 B`, `LICENSE.md`) | **675** | `2026-10-30` | 🔴 **GPL-2.0, and the API said `NOASSERTION`** — `591-B` again. 🔵 The file's **first line is `<center>`**: it is HTML-wrapped, which is exactly why the parser blanked and why a title read must strip tags. |
+
+🟢 **The usable conclusion for a vertical engagement:** the permissive general ERP/CRM tier
+is **real and large** — `krayin` (`24,087★`, MIT), `corteza` (`2,183★`, Apache-2.0),
+`atomic-crm` (`1,420★`, MIT), `ofbiz-framework` (`1,148★`, Apache-2.0). 🔴 **None is
+education-specific**, and the education-specific ERP tier remains copyleft
+(`openeducat_erp` LGPL-3.0, `frappe/education` GPL-3.0). 🔵 Written up as a build-vs-buy
+decision on [`../verticals/solutions.md`](../verticals/solutions.md).
+
+### 🟢 `45` absent addresses filed — the in-language half
+
+🔵 Full table with grants and placements on [`../agents/top.md`](../agents/top.md); the
+counts are `591-C`. **Permissive in-language courseware `12 of 12`; conversational
+in-language tutors `0 of 6`.**
+
+| Repo | Licence (byte-read) | Stars | Last push | Language signal |
+|---|---|--:|---|---|
+| [lucianoon/llm-course](https://github.com/lucianoon/llm-course) | 🟢 Apache-2.0 (`11,355 B`) | **19** | `2026-10-29` | Portuguese |
+| [Tongether/espanol-scenario-learn](https://github.com/Tongether/espanol-scenario-learn) | 🟢 MIT (`1,066 B`) | **15** | `2026-09-03` | Chinese → Spanish |
+| [tacianosilva/engenharia-software](https://github.com/tacianosilva/engenharia-software) | 🟢 MIT (`1,077 B`) | **15** | `2026-10-02` | Portuguese, **BSI-UFRN** |
+| [PedroseleT/macacodev-5-projetos-python](https://github.com/PedroseleT/macacodev-5-projetos-python) | 🟢 MIT (`1,079 B`) | **11** | `2026-10-19` | Portuguese |
+| [CristobalSantana/ai-ml-questions](https://github.com/CristobalSantana/ai-ml-questions) | 🟢 MIT (`1,074 B`) | **10** | `2026-10-30` | English + Spanish |
+| [dimelim/miniout](https://github.com/dimelim/miniout) | 🟢 Apache-2.0 (`11,343 B`) | **7** | `2026-09-29` | Spanish-only UI |
+| [angelapaia/tutor-de-skills](https://github.com/angelapaia/tutor-de-skills) | 🟢 MIT (`1,188 B`) | **6** | `2026-06-07` | Spanish; API said `NOASSERTION` |
+| [Sae-l/tutor](https://github.com/Sae-l/tutor) | 🟢 MIT (`1,065 B`) | **6** | `2026-11-01` | German (*MINT*) |
+| [kenzofujimoto/mackseguro](https://github.com/kenzofujimoto/mackseguro) | 🟢 MIT (`1,129 B`) | **4** | `2026-10-30` | Portuguese, **Mackenzie** |
+| [Escama-Code/jacarEV3](https://github.com/Escama-Code/jacarEV3) | 🟢 MIT (`1,086 B`) | **4** | `2026-10-29` | Portuguese |
+| [belentani7/lingua-aberta](https://github.com/belentani7/lingua-aberta) | 🟢 MIT (`1,074 B`) | **0** | `2026-10-31` | Spanish/Catalan, Brazilian learners |
+| [marcoskoo/poliglota-master](https://github.com/marcoskoo/poliglota-master) | 🟢 MIT (`1,066 B`) | **0** | `2026-10-27` | Spanish-first |
+| [smartfoods1/tutor-vibe-coding](https://github.com/smartfoods1/tutor-vibe-coding) | 🟢 MIT (`1,081 B`) | **0** | `2026-09-29` | Spanish |
+| [EverKrypton/tutorial-dev](https://github.com/EverKrypton/tutorial-dev) | 🟢 MIT (`1,068 B`) | **0** | `2026-10-22` | Spanish |
+
+### 🟢 The enablement-tier additions — repos that teach *about* AI and technology
+
+🔵 The class `p588` named. These are curriculum artefacts, not deployable tutors, and they
+answer a **reskilling** brief rather than a teaching-platform one.
+
+| Repo | Licence (byte-read) | Stars | Last push | Region | What it is |
+|---|---|--:|---|---|---|
+| [beihaili/Get-Started-with-Web3](https://github.com/beihaili/Get-Started-with-Web3) | 🟢 MIT (`1,071 B`) | **615** | `2026-10-26` | Global | 🆕 Bilingual **AI-native** Web3 curriculum — wallets, Bitcoin, Ethereum, DeFi, L2, DAO, smart accounts, **and it ships `llms.txt` and MCP**. 🔵 The only curriculum in this base built to be consumed by an agent as well as a human. |
+| [ATOM00blue/machine-learning-library](https://github.com/ATOM00blue/machine-learning-library) | 🟢 MIT (`1,517 B`) | **260** | 🟡 `2026-08-10` | Global | 🆕 A NumPy classifier/regressor **plus a curated knowledge base of `923` papers, lectures and explainers** with provenance. API said `NOASSERTION`. 🟡 ~2.7 months stale. |
+| [timothywarner-org/prompt-pro](https://github.com/timothywarner-org/prompt-pro) | 🟢 MIT (`1,088 B`) | **50** | 🟡 `2026-06-16` | North America | 🆕 O'Reilly Live Learning course materials on enterprise prompt engineering, **with MCP implementations**. 🔵 Publisher-backed courseware under a permissive grant is rare — most is all-rights-reserved. |
+| [arturseo-geo/llm-knowledge-base](https://github.com/arturseo-geo/llm-knowledge-base) | 🟢 MIT (`1,088 B`) | **41** | 🔴 `2026-04-06` | Global | 🆕 A **schema standard** for LLM-compiled personal knowledge bases: `AGENTS.md` spec, templates, worked example, spaced-repetition layer. 🔴 ~7 months stale — read the spec, do not depend on the repo. |
+
+---
+
+
 ## 🆕 `p590` — `2026-11-01` — **🟢 `589-E` IS ANSWERED BY WALKING TWO MORE AXES TO EXHAUSTION AND THE ANSWER IS A REFUTATION: xAPI HAS `6` LIVE PERMISSIVE EMITTERS AND QTI HAS `8`, AGAINST A PRE-REGISTERED `<= 2`. 🔴 THE REAL RISK ON QTI IS OWNER CONCENTRATION — `8 OF ITS 14` LIVE PERMISSIVE REPOS BELONG TO ONE ACCOUNT. 🔴 `p589`'s "EXACTLY TWO ALIVE ON SCORM" IS REFUTED BY A ROW `66` LINES ABOVE IT IN ITS OWN FILE. 🟢 `10` ABSENT ROWS FILED.**
 
 ### 🟢 The sweep, with its denominators first

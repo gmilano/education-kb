@@ -59,6 +59,51 @@ reconciliation step will do this indefinitely.
 
 ---
 
+## 🆕 The general ERP/CRM systems-of-record tier — added `p591`
+
+🔵 **Why this tier belongs on an education foundations page.** An institution's systems of
+record are admissions, fees, attendance, HR and alumni CRM — and
+[`openeducat_erp`](https://github.com/openeducat/openeducat_erp) (LGPL-3.0) and
+[`frappe/education`](https://github.com/frappe/education) (GPL-3.0) are the only
+*education-specific* options, both copyleft. 🟢 **The permissive tier exists, it is large,
+and it is general-purpose** — so the real decision is *"customise a general ERP into
+education, or attach to a copyleft education ERP from the outside?"* 🟢 Every grant below
+byte-read `2026-11-01`, **title-anchored** per `591-A`.
+
+| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+|---|---|--:|---|---|---|---|
+| [krayin/laravel-crm](https://github.com/krayin/laravel-crm) | 🟢 **MIT (text, 1,078 B)** | **24,087** | `2026-11-01` | APAC | 🟢 **yes** | 🆕 **The largest permissive CRM in this base by an order of magnitude.** Laravel/PHP. The admissions-and-enquiry pipeline an institution actually runs on. 🔵 Default branch `master`. |
+| [Dolibarr/dolibarr](https://github.com/Dolibarr/dolibarr) | 🔴 **GPL-3.0 (text, 35,151 B)** | **7,814** | `2026-11-01` | EMEA | 🔴 copyleft | 🆕 ERP/CRM with very broad module coverage; strong francophone and LATAM base. 🔵 **Grant is at `COPYING`, not `LICENSE`** — a `LICENSE`-only probe files a false absence. |
+| [cortezaproject/corteza](https://github.com/cortezaproject/corteza) | 🟢 **Apache-2.0 (text, 11,358 B)** | **2,183** | `2026-10-20` | EMEA | 🟢 **yes** | 🆕 **Low-code** CRM and application platform in Go. 🔵 The build-your-own-module option: closest permissive analogue to what `openeducat` does on top of Odoo. |
+| [marmelab/atomic-crm](https://github.com/marmelab/atomic-crm) | 🟢 **MIT (text, 1,105 B, `LICENSE.md`)** | **1,420** | `2026-10-30` | EMEA | 🟢 **yes** | 🆕 React/TypeScript CRM on Supabase. **The fastest permissive starting point** when the deliverable is a custom student-lifecycle CRM rather than a configured product. France (marmelab). |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | 🟢 **Apache-2.0 (text, 11,906 B)** | **1,148** | `2026-11-01` | Global | 🟢 **yes** | 🆕 Java ERP/CRM suite under ASF governance — accounting, manufacturing, HR, CRM. 🔵 The most conservative permissive choice: foundation-governed, decade-plus top-level project. Default branch `master`. |
+| [idurar/idurar-erp-crm](https://github.com/idurar/idurar-erp-crm) | 🔴 **AGPL-3.0 (text, 34,230 B)** | **8,931** | 🟡 `2026-08-14` | Global | 🔴 **no — network copyleft** | 🔴 **The mandated vertical leg asserted this one is *"fully open-source under the MIT license"*. It is AGPL-3.0** — byte-read, and the API agrees. See `591-E`. 🟡 ~2.7 months since last push. |
+| [idempiere/idempiere](https://github.com/idempiere/idempiere) | 🔴 **GPL-2.0 (text, 15,057 B, `LICENSE.md`)** | **675** | `2026-10-30` | Global | 🔴 copyleft | 🆕 Java ERP, community fork lineage. 🔵 **API said `NOASSERTION` and the licence file's first line is `<center>`** — it is HTML-wrapped, which is both why the parser blanked (`591-B`) and why a title-anchored read must strip tags before matching. |
+
+🟢 **The build-vs-buy answer to give an institutional client**, stated plainly: if the
+requirement is *configured education ERP* (admissions, fees, attendance, exams on one
+database out of the box), the only real options are **copyleft** — `openeducat_erp`
+(LGPL-3.0, so a *separate* AI module calling its API keeps its own licence) or
+`frappe/education` (GPL-3.0). 🟢 If the requirement is *a custom student-lifecycle system
+the studio owns*, start from **`krayin`**, **`corteza`**, **`atomic-crm`** or
+**`ofbiz-framework`** and build the education domain on top — all four are permissive and
+all four were pushed within the last two weeks. 🔵 **Do not scope `idurar` as permissive.**
+
+---
+
+## 🆕 Component additions — `p591`
+
+| Repo | Licence | Stars | Last push | Region | Role |
+|---|---|--:|---|---|---|
+| [shand001/geometry-dsl](https://github.com/shand001/geometry-dsl) | 🟢 **MIT (text, 1,082 B)** | **6** | `2026-09-15` | Global | 🆕 **Deterministic** geometry-diagram DSL for agents: text in, exact SVG/PNG figures out. Zero-dependency compiler **plus** a Claude/Codex agent skill. 🔵 **The missing piece in every STEM courseware pipeline on these shelves** — an LLM asked to draw a labelled triangle produces a plausible-looking wrong one; this makes the figure a compile step instead. Small, and it does one thing correctly. |
+| [major7apps/pensyve](https://github.com/major7apps/pensyve) | 🟢 **Apache-2.0 (text, 9,488 B)** | **97** | `2026-10-29` | Global | 🆕 Universal **memory runtime** for AI agents, in Rust. 🔵 Not education software — it is the cross-session memory layer that `universal-examprep-skill` and `empty` implement privately, available as a dependency. API said `NOASSERTION`. 🟡 `24` open issues; young. |
+
+🔵 **Why these two and not the other `43` addresses this pass filed:** a *foundation* row has
+to be something other rows stand on. These are. The rest are tutors and curricula, and they
+are on [`../agents/top.md`](../agents/top.md).
+
+---
+
 ## The component and spec tier — permissive, and where the real leverage is
 
 | Repo | Licence | Stars | Last push | Region | Role |

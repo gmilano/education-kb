@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p591` — `2026-11-01` — **🔴 BYTE-READING A LICENCE IS NOT ENOUGH: A BODY MATCHER FILED `BSL-1.1` AS `MIT` BECAUSE BSL NAMES `MIT` AS ITS OWN FUTURE LICENCE. 🟢 `NOASSERTION` IS `0-FOR-12` AS A NEGATIVE AND `license: null` IS `10-FOR-10` — TWO FLAGS, OPPOSITE INSTRUCTIONS. 🟢 THE LATAM IN-LANGUAGE GAP IS REFINED: `12 OF 12` COURSEWARE REPOS PERMISSIVE, `6 OF 6` TUTORS UNLICENSED. 🔴 MANDATED LEGS NIL FOR THE 22nd PASS. `35` ROWS SHELVED. FIVE REGISTERED (`591-A`…`591-E`).**
+
+### 🔵 Channel table, run first (`569-B`'s standing row)
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories -f q='topic:…'` / free-text | 🟢 **`37` axes swept, `249` rows returned with `license.spdx_id` + `stargazers_count` + `pushed_at` + `archived` + `fork` in one call** |
+| 🟢 `curl` → `raw.githubusercontent.com` | 🟢 **`65` grants byte-read**; `6` filenames × `2` branches probed per address |
+| 🆕 🟢 controls on the `raw` channel | 🟢 **DISCRIMINATING** — nonexistent repo `404`, nonexistent branch `404`, nonexistent file `404`, against `200` for a real one. 🔵 Recorded because `p590` read `16` grants on this channel **without** publishing a control, and a `200` means nothing until a `404` is demonstrated |
+| 🔴 `gh api repos/{owner}/{name}` | 🔴 **`403` — "GitHub access to this repository is not enabled for this session"**, unchanged since `p584`. 🔵 This is why the licence *field* comes from `search`, not from `repos` |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403`** — the run prompt's mandated URL verifier still certifies nothing |
+| 🔴 `curl` → `api.github.com` | 🔴 **`403`** |
+| 🔴 `curl` → `codeload.github.com` | 🔴 **`403`** — new probe this pass; tarball reads are not an available substitute |
+| 🆕 🟢 `git clone --depth 1 --filter=blob:none` on a third-party public repo | 🟢 **EXIT `0`** — new capability, not previously recorded in this base. 🔵 A full working-tree read is available where `raw` is ambiguous; unused this pass because `raw` sufficed |
+| 🟡 `WebSearch`, `4` mandated global + `4` mandated regional | 🔴 **`0` new repo addresses — 22nd consecutive nil**; 🟢 `4 of 4` regional intel legs paid; 🔴 **one leg served a false licence claim** |
+
+### 🔴 The mandated legs, reported in full because a nil described in prose reads like coverage
+
+| leg | repo-shaped names served | already in this base | 🟢 new |
+|---|---|--:|--:|
+| `top open source AI agents education {year} github MIT` | Agenta, OpenHands, Langflow, LibreChat, Hermes Agent, CrewAI, AutoGen, HF Agents Course, `microsoft/ai-agents-for-beginners`, `500-AI-Agents-Projects` | `10` | 🔴 **`0`** |
+| `github trending education AI {year}` | `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC`, `rasbt/LLMs-from-scratch`, `jingyaogong/minimind` | `4` | 🔴 **`0`** |
+| `open source platform education ERP CRM MIT Apache` | Apache OFBiz, Corteza, iDURAR, Krayin, Atomic CRM, ERPNext, Frappe Education, iDempiere, Dolibarr | `9` | 🔴 **`0`** |
+| `AI {industry} industry trends {year}` | — (no repo-shaped results) | — | 🔴 **`0`** |
+| `AI education {North America / EMEA / APAC / LATAM} {year} adoption regulation players` ×4 | — (no repo-shaped results on any of the four) | — | 🔴 **`0`** |
+
+🔵 **Twenty-two passes, and the conclusion is now a scheduling one rather than a research
+one:** the mandated repo legs are a **reconfirmation instrument**, and should be budgeted as
+one. 🟢 **What paid this pass:** `gh api` topic and free-text axes (`45` new addresses) and
+the in-language axes (`18`). 🟢 **The regional intel legs also paid `4 of 4`** —
+[`../intel/market.md`](../intel/market.md).
+
+🔴 **`591-E` — one mandated leg served a licence claim that is false.** The
+`open source platform education ERP CRM MIT Apache` leg stated *"**iDURAR ERP/CRM** is
+fully open-source under the MIT license."* Measured: `idurar/idurar-erp-crm`, `8,931★`, and
+its `34,230`-byte grant is **AGPL-3.0** — the API agrees. 🔵 Recorded as a channel
+property: **the vertical leg's licence assertions are not usable without a byte-read**, and
+this is the first time this base has caught one wrong with a number on it.
+
+### 🟢 Discovery, with denominators
+
+`gh api search/repositories`, `2026-11-01`. 🔵 **Two sweeps, because the first one's result
+was itself the finding.**
+
+| sweep | axes | live non-fork rows `pushed_at ≥ 2026` | already in this base | 🟢 new | already-held rate |
+|---|--:|--:|--:|--:|--:|
+| Agent axes (`ai-tutor`, `intelligent-tutoring-system`, `edtech`+`ai`, `education`+`llm`, `learning-management-system`, `autograding`, `education`+`mcp`, `education`+`agent`, `tutoring`, `adaptive-learning`) | `10` | `112` | `102` | 🔴 `10` | 🔴 **`91.1 %`** |
+| Niche + institutional + in-language axes (`school-management`, `student-information-system`, `knowledge-tracing`, `spaced-repetition`+`ai`, `language-learning`+`ai`, `quiz-generator`, `grading`, `open-educational-resources`, `lti`, `xapi`, `k12`+`ai`, `education`+`rag`, `education`+`claude-skill`, `educacion`, `educacao`, + `12` free-text Spanish/Portuguese queries) | `27` | `137` | `92` | 🟢 **`45`** | `67.2 %` |
+
+🔴 **`591-D` — the canonical agent axes are saturated at `91.1 %`.** 🟢 **The axes that are
+not saturated are the ones no previous pass ran**: niche institutional topics and
+in-language free text. 🔵 **The actionable form:** a pass that re-runs
+`topic:ai-tutor` is buying a `~9 %` yield; a pass that runs a jurisdiction's own language
+is buying `~33 %`.
+
+### 🟢 `591-C` — the LATAM in-language measurement, in full
+
+`12` in-language axes (`educación inteligencia artificial tutor`,
+`profesor inteligencia artificial alumnos`, `aprendizaje adaptativo IA español`,
+`ensino professor IA brasil`, `educação IA aluno português`, `topic:educacion`,
+`topic:educacao`, `topic:spanish`+`topic:education`, `topic:portuguese`+`topic:education`,
+`ENEM vestibular IA`, `topic:enem`, `topic:k12`+`topic:ai`). **`18` addresses this base did
+not hold**, every grant byte-read:
+
+| in-language artefact type | addresses | 🟢 permissive grant | 🔴 no grant at all |
+|---|--:|--:|--:|
+| Courseware, curriculum, exercise sets, notes apps | `12` | 🟢 **`12` (MIT ×10, Apache-2.0 ×2)** | `0` |
+| **Conversational AI tutors** | `6` | 🔴 **`0`** | 🔴 **`6`** |
+
+🔵 **`p587`'s claim was *"LATAM has no in-language supply to adopt"*. The measured claim is
+narrower and more useful: LATAM has in-language supply, and the half an engagement would
+want to deploy is the unlicensed half.** 🔴 Scale caveat, stated so nobody over-reads
+this: the **largest** in-language row found is `19★`
+([`lucianoon/llm-course`](https://github.com/lucianoon/llm-course), Apache-2.0,
+Portuguese), and `3` of the `12` permissive rows sit at `0★`. 🟢 Both halves are tabled on
+[`./top.md`](./top.md).
+
+### 🆕 `591-A` — the defect that would have put two non-OSI rows on a permissive shelf
+
+🔴 **This pass wrote a licence classifier, ran it on `48` addresses, and it was wrong
+twice — in the permissive direction, which is the direction that ships.**
+
+- [`ximing/aimo`](https://github.com/ximing/aimo) — classified **MIT**, is
+  **Business Source License 1.1**. 🔵 **Mechanism:** BSL declares a `Change License` inside
+  its own body, and this repository's is `MIT`. A matcher looking for `MIT License`
+  anywhere in the text finds the *promise* and files it as the *grant*.
+- [`SethRobinson/UGTLive`](https://github.com/SethRobinson/UGTLive) — classified **MIT**,
+  is **the Proton SDK License**, XFree86 1.1-derived. 🔵 **Mechanism:** it embeds MIT's
+  permission sentence verbatim inside a longer bespoke licence.
+
+🟢 **Fix, and it is one line:** classify on the **first non-empty line** of the file.
+Re-run title-anchored, both invert, and `63` of `65` reads are unchanged — so the
+correction is cheap and the base's existing `(text)` marks are **mostly** safe. 🔴 **But
+"mostly" is the problem**: no previous pass published its matcher, so no previous pass's
+`(text)` mark can be audited for this defect. 🔵 Byte size is a usable second signal — a
+standard MIT file is `~1,050–1,100 B`; both false positives were `2,483 B` and `5,643 B`.
+
+### 🔵 Blocks measured this pass — recorded so later passes do not re-find them
+
+| Repo | Measured | Verdict |
+|---|---|---|
+| [bpwhelan/GameSentenceMiner](https://github.com/bpwhelan/GameSentenceMiner) | `902★`, pushed `2026-11-01` | 🔴 **GPL-3.0.** Immersion language learning through games and visual media — the largest new address this pass and copyleft. |
+| [Orenoid/BabelDuck](https://github.com/Orenoid/BabelDuck) | `692★`, `37,739 B` grant | 🔴 **Bespoke "Time-Limited Competition Protection License v1.1, AGPL Future".** Beginner-friendly AI conversation practice. API said `NOASSERTION`. |
+| [ximing/aimo](https://github.com/ximing/aimo) | `27★`, `5,643 B` | 🔴 **BSL-1.1.** See `591-A` — this is the row the classifier got wrong. |
+| [hongyuan007/tapword-translator](https://github.com/hongyuan007/tapword-translator) | `272★` | 🔴 **AGPL-3.0 (text, 34,523 B).** Subtitle-style inline translation. |
+| [brycewang-stanford/Auto-Empirical-Research-Skills](https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills) | `4,864★`, `620 B` | 🔴 **CC-BY-SA-4.0 on software — RECIPROCAL.** The base's fourth CC-on-software case and second reciprocal one, after `SCOBot`. API said `NOASSERTION`. |
+| [Zafer-Liu/book-learning](https://github.com/Zafer-Liu/book-learning) | `45★` | 🔴 **GPL-3.0.** Multi-account textbook RAG assistant with dual-citation verification — a shape this base wants and cannot ship. |
+| [quizfreely/quizfreely](https://github.com/quizfreely/quizfreely) | `23★`, `34,523 B` | 🔴 **AGPL-3.0.** |
+| [SethRobinson/UGTLive](https://github.com/SethRobinson/UGTLive) | `118★`, `2,483 B` | 🟡 **Proton SDK License (XFree86 1.1-derived)** — permissive-family, non-standard, not MIT. Counsel question, not a shelf row. |
+| [nirholas/lyra-web3-playground](https://github.com/nirholas/lyra-web3-playground) | `28★`, `860 B` | 🔴 **Bespoke, no recognisable grant.** |
+| [EasyRoc/edu-rag](https://github.com/EasyRoc/edu-rag) | `60★`, pushed `2026-10-18` | 🔴 **BLOCK — no grant.** K-12 subject-education RAG teaching assistant built to suppress hallucination against textbook knowledge bases. 🔵 **The most directly relevant unlicensed address this pass** — exactly the grounded-tutor shape clients ask for. Worth one watch. |
+| [Lxiny-zy/SparkOffer](https://github.com/Lxiny-zy/SparkOffer) | `20★` | 🔴 **BLOCK — no grant.** LangGraph + Mem0-style profile + RAG + SM-2 interview-training system. |
+| [zero-nnkn/video-quiz-generator](https://github.com/zero-nnkn/video-quiz-generator) | `21★` | 🔴 **BLOCK — no grant.** |
+| [ALLENYEUNG365/AI-GO-Community-English-Learning](https://github.com/ALLENYEUNG365/AI-GO-Community-English-Learning) | `47★` | 🔴 **BLOCK — no grant.** |
+| [minicoohei/ai-agent-camp](https://github.com/minicoohei/ai-agent-camp) | `345★` | 🔴 **BLOCK — `license: null`.** Agent-building camp curriculum. |
+| `6` LATAM in-language tutors — `Parlo`, `fluir`, `nexo-ia`, `linguaai-coach`, `OSAPHLA`, `questoesConcursos` | see `591-C` | 🔴 **BLOCK — `6 of 6` no grant.** Tabled on [`./top.md`](./top.md). |
+
+### 🔵 Registered this pass
+
+| ID | Claim |
+|---|---|
+| `591-A` | 🔴 A licence byte-read classified on the **body** produces false permissive positives; BSL-1.1 and XFree86-derived licences both read as MIT. Title-anchored classification fixes both; `2 of 65` inverted. |
+| `591-B` | 🟢 `NOASSERTION` (`0-for-12` as a negative) and `license: null` (`10-for-10`) are different flags carrying opposite instructions. Refines `Trend 31`. |
+| `591-C` | 🟢 LATAM in-language supply exists; it is `12 of 12` permissive for courseware and `6 of 6` unlicensed for conversational tutors. Refines `p587`'s "no in-language supply". |
+| `591-D` | 🔴 Canonical agent topic axes are `91.1 %` saturated; niche institutional + in-language axes return `~33 %` new. A yield figure for scheduling, not a complaint. |
+| `591-E` | 🔴 The mandated vertical leg served a false licence claim (iDURAR "MIT", actually AGPL-3.0). Its licence assertions require a byte-read. |
+
+---
+
+
 ## 🆕 `p590` — `2026-11-01` — **🟢 THE TWENTY-PASS NIL IS BROKEN: THE MANDATED LEGS RETURNED ONE ADDRESS THIS BASE HAS NEVER HELD IN ANY OF ITS `11` FILES — AND IT IS UNLICENSED, SO IT IS A BLOCK. 🟢 `589-E` ANSWERED AND REFUTED UNDER A PRE-REGISTERED PREDICTION. 🔴 `589-A`'s `120`-ID BACKLOG IS `75 %` HOMONYM AT THE SHELF LEVEL: `24` HIGH-SEVERITY IDS BECOME `6` ONCE `P-NNN-X` PATTERN IDS ARE EXCLUDED. 🔴 `589-B`'s OWN PRESCRIPTION WOULD NOT HAVE RUN. FIVE REGISTERED (`590-A`…`590-E`).**
 
 ### 🔵 Channel table, run first (`569-B`'s standing row)

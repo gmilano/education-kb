@@ -4,6 +4,123 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p591 — 2026-11-01 — a byte-read is not a verified licence if the matcher reads the body; the API's two licence blanks carry opposite instructions; and the in-language supply gap is a LICENSING gap in LATAM and an ABSENCE in EMEA
+
+🔵 **Three trends filed at `##` with the counter's own `^## <n>. ` form (43–45), plus one
+standing gap re-measured.** Every repository figure below was measured first-hand
+`2026-11-01` via `gh api search/repositories`; every grant was byte-read via
+`raw.githubusercontent.com` with `404` controls established on that channel for the first
+time in this base.
+
+## 43. A licence read from the repository's own file is still wrong if the classifier matches the licence BODY — because a non-OSI licence can name a permissive one inside its own text (high confidence — `65` grants byte-read, `2` inverted under a title-anchored re-read, mechanism identified in both)
+
+🔴 **This base's `(text)` mark means "read from the repository's own licence file rather
+than the GitHub API", and since `p585` that mark has been treated as ground truth.** 🔴 **It
+is not sufficient, and this pass produced the counter-examples by committing the error.**
+
+A classifier matching `MIT License` anywhere in the fetched text reported two non-OSI
+licences as MIT:
+
+| Repo | Body says | 🔴 Title says | Mechanism |
+|---|---|---|---|
+| [ximing/aimo](https://github.com/ximing/aimo) (`27★`) | `MIT` | 🔴 `Business Source License 1.1` | 🔴 **BSL declares a `Change License` inside its own body** — the permissive licence it will *become* after the Change Date. Here that value is MIT. The matcher read the promise and filed it as the grant. |
+| [SethRobinson/UGTLive](https://github.com/SethRobinson/UGTLive) (`118★`) | MIT's full permission sentence, verbatim | 🔴 `The Proton SDK License (based on the XFree86 1.1 license…)` | 🔴 A bespoke licence that **embeds MIT's operative sentence** inside additional terms. |
+
+🟢 **Fix: classify on the first non-empty line of the file.** Both invert; `63 of 65`
+reads are unchanged, so the error rate is `3.1 %` — low, 🔴 **and both errors ran in the
+permissive direction, which is the direction that ships.**
+
+🔵 **Two cheap secondary signals, since a title read can still be defeated by an
+HTML-wrapped file** (as [`idempiere/idempiere`](https://github.com/idempiere/idempiere)'s
+`LICENSE.md` is, opening literally with `<center>`): **(1) byte size** — a standard MIT
+file is `~1,050–1,100 B`, and both false positives were `2,483 B` and `5,643 B`;
+**(2) a marker grep** for `Change License`, `Change Date`, `Commons Clause` or
+`Competition Protection`, any of which means counsel rather than a shelf row.
+
+🔴 **Why this generalises beyond two rows:** no previous pass in this base published its
+matcher. So every `(text)` mark filed before `p591` is **unauditable for this defect** —
+not wrong, but not verifiable either. 🟢 The remedy is forward-looking and costs one line:
+record the licence **title** beside the byte count, as the `p591` tiers on
+[`../agents/top.md`](../agents/top.md) now do.
+
+## 44. The GitHub licence API has two distinct blank states and they carry OPPOSITE instructions — `license: null` is a reliable block, `NOASSERTION` is a parser failure that never once meant "no licence" (high confidence — `22` rows byte-read at `6` filenames × `2` branches, both arms, `2026-11-01`)
+
+🔴 **This base has graded the API's licence blank as one thing since `p579`.** `Trend 31`
+records a `NOASSERTION` false-negative rate of *"about one in two"* and prescribes queuing
+the flag rather than grading on it. 🟢 **That prescription is right for `NOASSERTION` and
+wrong for `null`, and the two have never been separated here.** Measured:
+
+| API state | byte-read | 🔴 had **no** licence file | 🟢 permissive OSI grant | something else |
+|---|--:|--:|--:|--:|
+| `NOASSERTION` | `12` | 🔴 **`0`** | 🟢 `6` — MIT ×4, Apache-2.0 ×2 | `6` — CC-BY-SA-4.0, BSL-1.1, GPL-2.0, XFree86-derived, `2` bespoke |
+| `license: null` | `10` | 🟢 **`10`** | `0` | `0` |
+
+🟢 **`null` is `10-for-10` as a block** and can be acted on without a read — which is a
+genuine saving, because unlicensed repositories are the single largest class this base
+rejects. 🔴 **`NOASSERTION` is `0-for-12` as a negative**: it has never once meant absence,
+and it concealed a shippable grant half the time.
+
+🔵 **The mechanism, which is why the asymmetry should be stable rather than a sampling
+artefact:** GitHub's licence field is populated by a *classifier over a file it found*.
+`null` means **no file was found** — a filesystem fact. `NOASSERTION` means **a file was
+found and could not be classified** — and the reasons it cannot be classified are
+non-standard filename, HTML wrapper, dual or split grant, or a modified preamble, **all of
+which presuppose a licence exists.** 🟢 So `NOASSERTION` is positive evidence of a grant
+whose *identity* is unknown, and treating it as evidence of absence inverts its meaning.
+
+🔴 **The cost of the conflation, concretely:** this pass recovered
+[`angelapaia/tutor-de-skills`](https://github.com/angelapaia/tutor-de-skills) — MIT,
+`1,188 B` — from `NOASSERTION`, and it is **the Spanish-language row whose absence this
+base had been publishing as a LATAM supply gap for five passes** (`591-C`, `Trend 45`).
+
+## 45. "No in-language supply" is two different market failures wearing one label — in LATAM the supply exists and is UNLICENSED, in EMEA it is simply ABSENT, and the two need different engagements (high confidence — `27` niche and in-language axes, `45` addresses, every grant byte-read; `5.5×` asymmetry measured in one instrument)
+
+🔴 **`p587` measured a `33×` LATAM/APAC asymmetry and this base has since carried *"LATAM
+has no in-language supply to adopt"*.** 🟢 **The claim is too coarse in both directions.**
+
+**Arm 1 — LATAM: the supply exists, and it splits by artefact type.** `12` in-language
+axes, `18` addresses this base did not hold:
+
+| in-language artefact type | addresses | 🟢 permissive | 🔴 no grant |
+|---|--:|--:|--:|
+| Courseware, curriculum, exercise sets, notes apps | `12` | 🟢 **`12`** (MIT ×10, Apache-2.0 ×2) | `0` |
+| **Conversational AI tutors** | `6` | 🔴 **`0`** | 🔴 **`6`** |
+
+🔵 **In LATAM the courseware licenses and the tutors do not** — a clean split at `12/12`
+against `0/6`. 🟢 **Engagement shape: adopt the curriculum, build the tutor.**
+
+**Arm 2 — EMEA, which no pass had measured.** `2` adoptable in-language artefacts, against
+APAC's `11` — a **`5.5×`** asymmetry in the same instrument, 🔴 **and EMEA is thinner than
+LATAM, which this base has treated as the deficient region for five passes.** 🔴 **But the
+deficiency is a different kind:** in EMEA there is no unlicensed supply either. There is
+**nothing**, in a region with 24 official EU languages.
+
+🟢 **Why the distinction is commercial and not pedantic.** An unlicensed-supply gap and an
+absent-supply gap have different costs and different first moves:
+
+| | LATAM | EMEA |
+|---|---|---|
+| Diagnosis | 🔴 supply exists, no grant | 🔴 supply absent |
+| First move | Negotiate a grant, or rebuild `6` **known, specified** artefacts | Localise the `Global` tier — there is nothing to negotiate for |
+| Risk | Rebuilding something a client can see already exists | No local reference implementation to validate against |
+| Cheapest evidence | The `6` block rows on [`../agents/top.md`](../agents/top.md) | 🔴 An unrun measurement — see the gap below |
+
+🔵 **Scale caveat on both arms, so neither is over-read:** the largest in-language row found
+in any region is `19★` ([`lucianoon/llm-course`](https://github.com/lucianoon/llm-course),
+Apache-2.0, Portuguese) and three permissive in-language rows sit at `0★`. 🟢 **This is
+reference-implementation supply, not dependency supply** — which is exactly why the
+licensing question decides whether it is worth anything.
+
+### 🔴 Declared gaps — added `p591`
+
+| Gap | Status | What would close it |
+|---|---|---|
+| `591-F` 🔴 **The EMEA in-language supply measurement is one axis deep and the conclusion rests on it** | 🆕 Opened `p591` | `Trend 45`'s EMEA arm rests on `2` artefacts found via Spanish/Portuguese-oriented axes plus general topic axes — 🔴 **no pass has ever run EMEA-language free-text discovery.** `p576`'s native-language legs were per-**jurisdiction regulation**, not per-language **supply**. 🟢 Closing it is cheap and specified: free-text `gh api` axes in **German, French, Spanish-of-Spain, Italian, Polish, Dutch, Arabic and Turkish**, with the same `pushed_at ≥ 2026` / `fork:false` filter and byte-read grants. 🔴 **Until that runs, `5.5×` is a floor on the asymmetry, not a measurement of it** — the honest reading is "EMEA supply is thin on every axis tried", not "EMEA supply is `2`". |
+| `591-G` 🔴 **Every `(text)` licence mark filed before `p591` is unauditable for the `Trend 43` defect** | 🆕 Opened `p591` | No previous pass published the matcher behind its byte-reads, so none can be checked for body-vs-title misclassification. 🟢 **Cheap partial close:** re-read only the rows at risk — any `(text)` row whose recorded byte size falls outside `~1,050–1,100 B` for a claimed MIT, or outside `~11,340–11,360 B` for a claimed Apache-2.0. 🔵 On this pass's own data that filter would have caught **both** false positives and flagged `~4` rows for a `~3 %` true-positive rate, so the audit is small. 🔴 Not run this pass — `35` new rows were the budget. |
+
+---
+
+
 ## p589 — 2026-11-01 — a gate that cannot run is not a gate, and `Trend 39`'s headline figure does not survive one classifier held constant: the specified axis carries the HIGHEST agent share of the four measured, and the mechanism is tooling decay rather than the absence of a specification
 
 ### 🔴 Trend A — a blocking gate suite is worth nothing in the environment that cannot execute it, and this base has been publishing as though it ran

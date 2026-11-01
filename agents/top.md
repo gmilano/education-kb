@@ -66,6 +66,48 @@ were run that way this pass; see `590-A` and [`../intel/open-gaps.md`](../intel/
 
 ---
 
+🆕 **`p591` — scope: `73` addresses measured across `37` discovery axes, `65` grants
+byte-read, the `44`-row shelf NOT re-measured.** 🟢 **Three new tiers are added below —
+`35` rows, every grant byte-read first-hand `2026-11-01`** — and the headline is a
+**method correction that affects every `(text)` mark in this base**: 🔴 **byte-reading a
+licence is not enough if the classifier reads the licence *body*.** Two of this pass's
+`65` reads would have been filed as permissive and are not: `ximing/aimo` is
+**Business Source License 1.1**, whose own text names `MIT` as its future *Change
+License*, and `SethRobinson/UGTLive` is the **Proton SDK licence** (XFree86 1.1-derived)
+while containing MIT's full permission sentence verbatim. 🟢 **Both are caught by
+classifying on the licence's TITLE — its first non-empty line — and neither is caught by a
+body match.** See `591-A`.
+
+🆕 **`591-B` splits a flag this base has graded as one thing since `p579`.** `NOASSERTION`
+and `license: null` are **not** the same API state and must not be treated alike.
+Byte-read this pass: **`12` `NOASSERTION` rows → `0` had no licence file** (`6` resolved to
+a permissive OSI grant, the rest to CC-BY-SA-4.0, BSL-1.1, GPL-2.0 and two bespoke
+licences), while **`10` `license: null` rows → `10` had no licence file** at `6` filenames ×
+`2` branches. 🟢 **So `null` can be trusted to block a row; `NOASSERTION` is `0-for-12` as
+a negative and must always be read.** `Trend 31`'s "about one in two" conflated the two
+states.
+
+🟢 **`591-C` — the LATAM in-language gap is REFINED, not confirmed and not simply
+refuted.** `p587` measured a `33×` asymmetry and this base has since carried *"LATAM has no
+in-language supply to adopt"*. 🟢 **Spanish- and Portuguese-language education supply
+exists** — `18` addresses on `12` in-language axes this pass — 🔴 **but it splits by
+artefact type, and the split is the finding: of the in-language repos whose primary
+artefact is a conversational AI tutor, `6 of 6` carry no licence at all, while `12 of 12`
+in-language courseware/curriculum repos are permissive.** 🔵 **In LATAM the courseware
+licenses and the tutors do not** — so an in-language engagement adopts the curriculum and
+**builds** the tutor. Scale caveat: every in-language row found is `≤ 19★`.
+
+🔴 **`591-D` — the mandated legs are now `22` consecutive passes with no new usable
+address.** All eight ran. Every repo-shaped name they served — `minimind`,
+`LLMs-from-scratch`, `OFBiz`, `Corteza`, `iDURAR`, `Krayin`, `Atomic CRM`, `iDempiere`,
+`Dolibarr`, `Frappe Education`, `ERPNext` — **was already in this base**. 🟢 **The four
+regional intel legs paid `4 of 4`** ([`../intel/market.md`](../intel/market.md)), and one
+of them served a **licence claim that is false**: the vertical leg stated iDURAR ERP/CRM is
+*"fully open-source under the MIT license"*; its `34,230`-byte grant is **AGPL-3.0**
+([`../repos/foundations.md`](../repos/foundations.md)).
+
+---
+
 ## The shelf — 44 verified agents
 
 Ordered by size. Region is assigned only where the repository itself supports a
@@ -237,6 +279,112 @@ These are small by stars and real by provenance. Size is not the only form of cr
 
 ---
 
+## 🆕 The local-first study-OS tier — added `p591`
+
+🔵 **Why this is a tier and not eight loose rows.** Each row takes the learner's *own*
+material — slides, PDFs, lecture video, a book — and produces study artefacts
+(cheatsheets, flashcards, quizzes, cited answers) **on the learner's machine**. 🟢 That is
+the shape a client asks for whenever pupil work or licensed courseware **cannot leave the
+building**, and this base previously had one answer for it (`Claw-ED`, `63★`). It now has
+nine. 🟢 **All eight grants byte-read `2026-11-01`, title-anchored per `591-A`.**
+
+| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+|---|---|---|--:|---|---|---|
+| **bilibili-digest** | [biuworks/bilibili-digest](https://github.com/biuworks/bilibili-digest) | 🟢 **MIT (text, 1,169 B)** | **179** | `2026-10-18` | APAC | 🆕 Browser extension turning Bilibili video into study material: subtitle reading, bilingual pairing, AI chapter overviews, click-to-explain and **timestamped notes**. Shipped on the Chrome and Edge stores. 🔵 API said `NOASSERTION` — see `591-B`. Chinese-language. |
+| **cortex** | [PndaMan/cortex](https://github.com/PndaMan/cortex) | 🟢 **Apache-2.0 (text, 11,357 B)** | **48** | `2026-10-26` | Global | 🆕 **The most complete local-first NotebookLM alternative on these shelves** — a desktop study OS turning slides, PDFs and lectures into cheatsheets, flashcards, quizzes and **citation-grounded chat**. Svelte. 🟢 The only Apache-2.0 row in this tier. |
+| **CoursePilot** | [wansui976/CoursePilot](https://github.com/wansui976/CoursePilot) | 🟢 **MIT (text, 1,066 B)** | **35** | `2026-10-28` | APAC | 🆕 Local-first workbench for **video** courses: subtitles, notes, mind maps, courseware **OCR**, provenance-carrying Q&A and spaced review. 🔵 The only row here that OCRs slide decks out of a recording. Chinese + English. |
+| **yidu-english-reader** | [martinachain/yidu-english-reader](https://github.com/martinachain/yidu-english-reader) | 🟢 **MIT (text, 1,064 B)** | **34** | `2026-09-15` | APAC | 🆕 AI reader for English-language originals: double-click lookup, selection-based sentence breakdown, spaced-repetition review. EPUB/PDF, **all data local**. |
+| **veynrel** | [zinverno/veynrel](https://github.com/zinverno/veynrel) | 🟢 **MIT (text, 1,066 B)** | **29** | `2026-10-31` | Global | 🆕 Vault health, connection review and **Recall** for Obsidian — the review layer for a knowledge base a learner already keeps. 🟡 `2.3.0` is a release candidate at time of measurement. |
+| **insight-engine** | [inbeomheo/insight-engine](https://github.com/inbeomheo/insight-engine) | 🟢 **MIT (text, 1,067 B)** | **22** | `2026-09-08` | APAC | 🆕 YouTube video, documents and text → study notes **and a searchable knowledge wiki**; four output styles, **ko/en/ja**, RAG, spaced review, team workspaces. Korea. 🔵 Default branch is `master`. |
+| **empty** | [DaviRain-Su/empty](https://github.com/DaviRain-Su/empty) | 🟢 **MIT (text, 1,064 B)** | **21** | `2026-06-21` | Global | 🆕 **Spoiler-free** EPUB/PDF reading companion with local AI, notes, vocabulary and **cross-book memory**. SwiftUI for macOS, iOS and iPadOS — the only native-Apple row on these shelves. |
+| **quizzer** | [suncloudsmoon/quizzer](https://github.com/suncloudsmoon/quizzer) | 🟢 **MIT (text, 1,070 B)** | **21** | 🟡 `2026-04-06` | Global | 🆕 PDFs → Duolingo-style quiz courses with spaced repetition, adaptive difficulty and tutor chat. 🟡 ~7 months since last push; pin it. |
+
+---
+
+## 🆕 The in-language tier — added `p591`, and it is the evidence for `591-C`
+
+🔴 **This base has carried *"LATAM has no in-language supply to adopt"* since `p587`.** 🟢
+**It does — and the useful statement is narrower and more actionable:** the in-language
+*courseware* licenses permissively and the in-language *tutors* carry no grant at all
+(`591-C`, measured below and on [`./trending.md`](./trending.md)).
+
+🔵 **How region is assigned here, stated because language is weak evidence.** A row is
+placed only where there is a **named institution, a country-specific target population, or
+a country-bound idiom** — not on language alone. Rows whose only signal is "written in
+Spanish" read `Global`, because Spanish is also Spain, and a wrong placement is worse than
+an honest one. The signal is named in every row.
+
+| Agent | Repo | Licence | Stars | Last push | Region | What it is — and what places it |
+|---|---|---|--:|---|---|---|
+| **Subify** | [mobinbiback/Subify](https://github.com/mobinbiback/Subify) | 🟢 **MIT (text, 1,082 B)** | **46** | `2026-11-01` | EMEA | 🆕 AI subtitles, real-time translation, bilingual captions and dubbing for the web. **Placed by language: the README and UI are Persian.** Pushed the day of measurement. |
+| **llm-course** | [lucianoon/llm-course](https://github.com/lucianoon/llm-course) | 🟢 **Apache-2.0 (text, 11,355 B)** | **19** | `2026-10-29` | LATAM | 🆕 **The largest in-language row this pass found.** Open course on LLM engineering and customisation **in Portuguese**, from scratch to production, with **reproducible labs**. 🔵 Placed by language; no institution named. The in-language answer to a reskilling brief. |
+| **espanol-scenario-learn** | [Tongether/espanol-scenario-learn](https://github.com/Tongether/espanol-scenario-learn) | 🟢 **MIT (text, 1,066 B)** | **15** | `2026-09-03` | APAC | 🆕 Scenario-based **Spanish** learning built **for Chinese speakers** (面向中文用户). 🔵 **Placed APAC, not LATAM** — the target learner is Chinese; the taught language is Spanish. The distinction matters when sourcing for a LATAM engagement. |
+| **engenharia-software** | [tacianosilva/engenharia-software](https://github.com/tacianosilva/engenharia-software) | 🟢 **MIT (text, 1,077 B)** | **15** | `2026-10-02` | LATAM | 🆕 Documentation, tutorial, task and project hub for software-engineering courses. 🟢 **Placed by named institution: BSI-UFRN, Universidade Federal do Rio Grande do Norte, Brazil** — the strongest placement in this tier. |
+| **macacodev-5-projetos-python** | [PedroseleT/macacodev-5-projetos-python](https://github.com/PedroseleT/macacodev-5-projetos-python) | 🟢 **MIT (text, 1,079 B)** | **11** | `2026-10-19` | LATAM | 🆕 Five Python projects to get a learner past tutorial stage: terminal applications, **tutoriais em português**, challenges and offline tests. 🔵 Placed by language. |
+| **miniout** | [dimelim/miniout](https://github.com/dimelim/miniout) | 🟢 **Apache-2.0 (text, 11,343 B)** | **7** | `2026-09-29` | Global | 🆕 University notes and tasks, **Spanish-only UI**, React Native + Expo. 🔵 **Deliberately `Global`** — Spanish UI with no country signal, and `591-C` says not to guess. |
+| **tutor-de-skills** | [angelapaia/tutor-de-skills](https://github.com/angelapaia/tutor-de-skills) | 🟢 **MIT (text, 1,188 B)** | **6** | 🟡 `2026-06-07` | Global | 🆕 **The row that broke the "no in-language supply" claim.** Interactive **Spanish-language** tutor teaching Claude skill authoring on a five-level ladder; by Luis Salgado · SalgadoIA, shared by IA Masters Academy. 🔵 **API said `NOASSERTION`; the grant is MIT** — `591-B`. Placed `Global`: Spanish, no country named. 🟡 ~4.8 months stale. |
+| **tutor** (MINT-Lern-Tutor) | [Sae-l/tutor](https://github.com/Sae-l/tutor) | 🟢 **MIT (text, 1,065 B)** | **6** | `2026-11-01` | EMEA | 🆕 **German** STEM tutor (*MINT*) shipped as a Claude skill **plus** its system prompt. 🟢 Placed by language — *MINT* is the German-language acronym for STEM, so the artefact is country-bound. Pushed the day of measurement. |
+| **mackseguro** | [kenzofujimoto/mackseguro](https://github.com/kenzofujimoto/mackseguro) | 🟢 **MIT (text, 1,129 B)** | **4** | `2026-10-30` | LATAM | 🆕 Open-source **digital-security** education platform in Portuguese. 🟢 **Placed by named institution: a Mackenzie Presbyterian University extension project, São Paulo, Brazil.** 🔵 The only security-curriculum row in this base. |
+| **jacarEV3** | [Escama-Code/jacarEV3](https://github.com/Escama-Code/jacarEV3) | 🟢 **MIT (text, 1,086 B)** | **4** | `2026-10-29` | LATAM | 🆕 **Portuguese** library driving LEGO EV3 over Bluetooth/USB — the Direct Commands protocol implemented from zero, **no dependencies**. 🔵 Placed by language and Brazilian idiom (*jacaré*). **The only physical-robotics teaching row on these shelves**, and the one to reach for in a K-12 STEM brief. |
+| **lingua-aberta** | [belentani7/lingua-aberta](https://github.com/belentani7/lingua-aberta) | 🟢 **MIT (text, 1,074 B)** | **0** | `2026-10-31` | LATAM | 🆕 Free, open platform teaching Spanish, Catalan and English to **young Brazilians living in Catalonia**, with a voice-ready AI tutor. 🟢 **Placed by named target population**, not by language — the project sits in EMEA and serves a LATAM diaspora, which is worth saying out loud. 🔴 `0★` and `35` open issues: a live project, not a dependency. |
+| **poliglota-master** | [marcoskoo/poliglota-master](https://github.com/marcoskoo/poliglota-master) | 🟢 **MIT (text, 1,066 B)** | **0** | `2026-10-27` | Global | 🆕 Free five-language platform taught **from Spanish** — Italian, English, Portuguese, French, German, A1–C2, 66 units. 🔵 Placed `Global`: Spanish-first, no country. 🔴 `0★`; read it as a reference implementation. |
+| **tutor-vibe-coding** | [smartfoods1/tutor-vibe-coding](https://github.com/smartfoods1/tutor-vibe-coding) | 🟢 **MIT (text, 1,081 B)** | **0** | `2026-09-29` | Global | 🆕 Free **Spanish** course taking someone who has never programmed to a published page, with a text-**or-voice** AI tutor. FastAPI + React. 🔵 Placed `Global`. 🔴 `0★`. |
+
+🔴 **The other half of `591-C`, and the half that changes a scope estimate.** The
+in-language repos whose primary artefact is a **conversational AI tutor** are
+systematically unlicensed — `6 of 6` measured, every one probed at `6` filenames × `2`
+branches:
+
+| Repo | Measured `p591` | Verdict |
+|---|---|---|
+| [andresmancilla08/Parlo](https://github.com/andresmancilla08/Parlo) | Spanish-language English tutor that corrects and converses; PWA (Next.js 16) | 🔴 **BLOCK — no grant** |
+| [corleone000000/fluir](https://github.com/corleone000000/fluir) | "practica inglés y español con un tutor de IA" | 🔴 **BLOCK — no grant** |
+| [s64965264-code/nexo-ia](https://github.com/s64965264-code/nexo-ia) | Spanish study tutor with chat, images and voice practice | 🔴 **BLOCK — no grant** |
+| [jccastel12-ctrl/linguaai-coach](https://github.com/jccastel12-ctrl/linguaai-coach) | Spanish-language AI language-learning platform with real-time translation | 🔴 **BLOCK — no grant** |
+| [CryptoJones/OSAPHLA](https://github.com/CryptoJones/OSAPHLA) | `12★` — "Open-Source, Accessible & Pan-Hispanic Language Academy", bilingual | 🔴 **BLOCK — no grant.** 🔵 Calls itself open source in its own name and grants nothing. |
+| [rodrigoborgesmachado/questoesConcursos](https://github.com/rodrigoborgesmachado/questoesConcursos) | `31★` — Portuguese platform for practising Brazilian public-exam questions | 🔴 **BLOCK — no grant.** 🔵 The LATAM counterpart to `kaogong-skill` (APAC, MIT) — same demand, no grant. |
+
+🔵 **So the honest advice for an in-language engagement:** adopt `llm-course`,
+`engenharia-software`, `macacodev` and `jacarEV3` as curriculum; **build the tutor**, using
+`tutor-de-skills` and `Sae-l/tutor` as the only permissive in-language references that
+exist. Wired up in [`../compose/patterns.md`](../compose/patterns.md) `P-591-B`.
+
+---
+
+## 🆕 The agent-skill and tutor tier — added `p591`
+
+🔵 **`p586` measured that education AI had started shipping as agent skills rather than
+applications and counted `11` such rows.** 🟢 **This tier adds `16` more**, which puts the
+count past `27` and makes the packaging shift the dominant shape on these shelves rather
+than a noted trend. 🟢 Every grant byte-read, title-anchored.
+
+| Agent | Repo | Licence | Stars | Last push | Region | What it is |
+|---|---|---|--:|---|---|---|
+| **ahadiff** | [AGI-is-going-to-arrive/ahadiff](https://github.com/AGI-is-going-to-arrive/ahadiff) | 🟢 **MIT (text, 1,077 B)** | **244** | `2026-09-08` | Global | 🆕 **Turns each AI code diff into a code-verified lesson, quiz and review** instead of a clicked Accept. 🔵 The only row in this base that teaches **from an agent's own output** — the retention layer for a client whose engineers now read more AI code than they write. |
+| **speakeasy** | [bob798/speakeasy](https://github.com/bob798/speakeasy) | 🟢 **Apache-2.0 (text, 10,877 B)** | **75** | `2026-09-29` | Global | 🆕 Conversational English practice with **no corrections and no scores** — a deliberate pedagogical stance, and the opposite of every scoring row here. 🔵 API said `NOASSERTION`. |
+| **algotutor** | [zuzuleinen/algotutor](https://github.com/zuzuleinen/algotutor) | 🟢 **MIT (text, 1,068 B)** | **84** | `2026-07-10` | Global | 🆕 AI-powered training for **Go** developers. Pairs with `algo-sensei` (DSA) as the language-specific half of technical coaching. |
+| **word-teacher** | [vancece/word-teacher](https://github.com/vancece/word-teacher) | 🟢 **MIT (text, 1,070 B)** | **46** | `2026-07-09` | APAC | 🆕 Web app for English reading and spoken practice with AI. Chinese-language. |
+| **IELTS-Speaking-AI** | [1599570912/IELTS-Speaking-AI](https://github.com/1599570912/IELTS-Speaking-AI) | 🟢 **MIT (text, 1,088 B)** | **32** | `2026-07-28` | APAC | 🆕 IELTS **speaking** practice: real-time speech recognition, scoring, 210+ questions, local history. 🔵 High-stakes exam prep as open source again — the same pattern `kaogong-skill` showed for Chinese civil-service exams. |
+| **inklish** | [fahreziadh/inklish](https://github.com/fahreziadh/inklish) | 🟢 **MIT (text, 1,069 B)** | **30** | `2026-07-20` | Global | 🆕 **Practise English where you actually write it** — realistic email, Slack, GitHub and chat rooms with an AI persona and a coach on every message. **BYOK** (your own OpenRouter key), so there is no vendor dependency to novate. |
+| **smart-learn** | [HYH926/smart-learn](https://github.com/HYH926/smart-learn) | 🟢 **MIT (text, 1,063 B)** | **24** | `2026-06-11` | Global | 🆕 Claude Code skill running a **Feynman-technique five-step pipeline**: concept map → Feynman explanation → self-test → association → summary. **Zero dependencies.** |
+| **AdaptEd** | [IdkwhatImD0ing/AdaptEd](https://github.com/IdkwhatImD0ing/AdaptEd) | 🟢 **MIT (text, 1,067 B)** | **20** | 🟡 `2026-05-10` | North America | 🆕 "Lectures that talk back" — real-time **voice** tutor with dynamically generated slides and **emotion-aware pacing**. LA Hacks Gemini Challenge winner. 🟡 ~5.7 months stale; the pacing model is the idea worth lifting. |
+| **attocode** | [eren23/attocode](https://github.com/eren23/attocode) | 🟢 **MIT (text, 1,068 B)** | **17** | `2026-11-01` | Global | 🆕 Zero-to-hero lesson series on **building an AI coding agent**. Pushed the day of measurement. |
+| **Knowledge-Teacher** | [m1908293028-boop/Knowledge-Teacher](https://github.com/m1908293028-boop/Knowledge-Teacher) | 🟢 **MIT (text, 1,056 B)** | **17** | `2026-07-12` | APAC | 🆕 Adapts explanation **depth** to the learner's existing level and emits a complete teaching document on a textbook-style framework (intuition → derivation). Chinese-language. |
+| **mentor** | [ayhammouda/mentor](https://github.com/ayhammouda/mentor) | 🟢 **MIT (text, 1,071 B)** | **9** | `2026-06-21` | Global | 🆕 Claude skill building **official-first, dependency-ordered** learning paths for technical topics. 🔵 "Official-first" is a citation-grounding stance: it sequences the vendor's own docs rather than blog posts. |
+| **teachme** | [beret21/teachme](https://github.com/beret21/teachme) | 🟢 **MIT (text, 1,064 B)** | **7** | `2026-07-19` | Global | 🆕 `/teachme` turns any topic into a themed, searchable handbook **in the learner's language**, verified and published to GitHub Pages. |
+| **blind-review-skill** | [Jerryyy985/blind-review-skill](https://github.com/Jerryyy985/blind-review-skill) | 🟢 **MIT (text, 1,056 B)** | **5** | 🟡 `2026-04-30` | APAC | 🆕 Claude skill acting as an **undergraduate thesis blind-review examiner**: six weighted dimensions, seven-section structured report. 🔵 **The assessment-side counterpart to `idstack`** — and `p586` measured assessment as the regulated surface, so this is the tier that carries compliance weight. 🟡 ~6 months stale. |
+| **ai-pm-atom-lesson** | [uimarch123-arch/ai-pm-atom-lesson](https://github.com/uimarch123-arch/ai-pm-atom-lesson) | 🟢 **MIT (text, 1,072 B)** | **5** | `2026-07-08` | APAC | 🆕 Claude skill expanding **one atomic concept** into a single-file, **offline-capable** interactive HTML lesson: authoritative definition, worked project case, practice judgements, visual demo. Chinese-language. |
+| **smartedu-textbook** | [DanielHuang-ning/smartedu-textbook](https://github.com/DanielHuang-ning/smartedu-textbook) | 🟢 **MIT (text, 1,442 B)** | **5** | `2026-07-31` | APAC | 🆕 Claude Code skill **plus** CLI that fetches Chinese K-12 **statutory e-textbooks**. 🔵 The corpus-acquisition step a grounded K-12 tutor needs, and the only row here that targets a national textbook set. API said `NOASSERTION`. |
+| **agentic-learning-skill** | [APareek89/agentic-learning-skill](https://github.com/APareek89/agentic-learning-skill) | 🟢 **MIT (text, 1,069 B)** | **4** | `2026-06-30` | Global | 🆕 Topic → self-contained interactive HTML lesson, **or** a brief → an installable Agent Skill. Runs on the client's own Claude, **no server** — the zero-hosting shape `P586-1` is built on. |
+
+🔵 **Measured and shelved nowhere, recorded so it is not re-found:**
+[`CabinServer39/quiz-gen`](https://github.com/CabinServer39/quiz-gen) is real (`23★`, MIT
+byte-read at `1,077 B`, pushed `2026-10-18`, C#) but its **entire description is
+`"Published: 2026-10-18"`** and it carries no README claims to characterise. 🔴 A row this
+base cannot describe is not a row it can recommend.
+
+---
+
 ## 🔴 Do not ship these — and why
 
 | Repo | Verdict | Evidence |
@@ -282,6 +430,38 @@ It does not. This pass:
 | `DozenTwelve/Papermorph`, `assafkip/claudemy`, `ZeKaiNie/universal-examprep-skill`, `orionsheep/wordlink` | `MIT`/`NOASSERTION` | 🟢 MIT | Confirmed |
 | `artcc/freelingo` (222★) | `AGPL-3.0` | 🔴 AGPL-3.0 | Confirmed |
 | `aaryansamanta/ai-ethos` (498★) | *none* | 🔴 **no file at 6 paths** | Confirmed no grant |
+
+🆕 **`p591` adds the step that a byte-read alone does not give you: classify on the
+licence's TITLE.** Reading the file is necessary and **not sufficient** — a licence body can
+name a *different* licence than the one it grants. Measured `2026-11-01` over `65` reads:
+
+| Repo | Body match says | 🔴 Title says | What it actually is |
+|---|---|---|---|
+| [ximing/aimo](https://github.com/ximing/aimo) | `MIT` | 🔴 `Business Source License 1.1` | 🔴 **Source-available, not open source.** BSL names a future permissive licence as its `Change License` **inside its own text**, and here that value is MIT. A body matcher reads the promise, not the grant. `5,643 B`. |
+| [SethRobinson/UGTLive](https://github.com/SethRobinson/UGTLive) | `MIT` (full permission sentence, verbatim) | 🔴 `The Proton SDK License (based on the XFree86 1.1 license…)` | 🟡 Permissive-family but **not MIT and not a standard SPDX id**; XFree86 1.1 carries an endorsement/advertising-style clause MIT does not. `2,483 B` at `LICENSE.md`. |
+| [Orenoid/BabelDuck](https://github.com/Orenoid/BabelDuck) | contains `MIT`, `AGPL`, `GPL` | 🔴 `Time-Limited Competition Protection License, Version 1.1, AGPL Future License` | 🔴 **Bespoke non-OSI licence with a delayed AGPL conversion.** `37,739 B` — size alone was the first clue. |
+| [nirholas/lyra-web3-playground](https://github.com/nirholas/lyra-web3-playground) | no match | 🔴 `Copyright 2026 nirholas` | 🔴 Bespoke; `860 B`, no recognisable grant. |
+
+🟢 **The rule, in one line:** take the **first non-empty line** of the licence file as the
+grant's identity, treat a `≠ ~1,050–1,100 B` "MIT" as suspect until the title is read, and
+flag any file containing `Change License`, `Change Date`, `Commons Clause` or
+`Competition Protection` for counsel. 🔵 **Two of this pass's `65` reads (`3.1 %`) invert
+under this rule** — low as a rate, and both would have shipped as permissive.
+
+🆕 **`591-B` — `NOASSERTION` and `license: null` are different flags.** This base has
+graded them together since `p579` (`Trend 31`, *"about one in two"*). Byte-read
+`2026-11-01`:
+
+| API state | rows byte-read | had **no** licence file | resolved to a permissive OSI grant | resolved to something else |
+|---|--:|--:|--:|--:|
+| `NOASSERTION` | `12` | 🔴 **`0`** | 🟢 `6` (MIT ×4, Apache-2.0 ×2) | `6` — CC-BY-SA-4.0, BSL-1.1, GPL-2.0, XFree86-derived, 2× bespoke |
+| `license: null` | `10` | 🟢 **`10`** | `0` | `0` |
+
+🟢 **So the two states carry opposite instructions.** `null` is a **reliable block** — `10
+of 10`, each probed at `6` filenames × `2` branches. `NOASSERTION` is **`0-for-12` as a
+negative**: it never once meant "no licence", and half the time it hid a grant a studio
+could ship. 🔵 `NOASSERTION` is a *parser* failure (non-standard filename, HTML wrapper,
+dual grant, modified preamble), not an absence.
 
 🔴 **So the rule is: read the file in both directions.** A blank API field is an *unknown*,
 and an unknown resolved 587 stars deep turned out to be network copyleft.
