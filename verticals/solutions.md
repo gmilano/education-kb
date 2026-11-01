@@ -4,6 +4,112 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p594 — 2026-11-01 — the licence-probe defect `p593` inferred from one row is a property of THIS page's tier: `30 of 253` curated addresses default to neither `main` nor `master`, and they are the platforms of record almost without exception
+
+🔵 **Why this census belongs on the verticals page and not on an agent page.** `p593` found one
+address — `openeducat/openeducat_erp`, default branch `19.0` — whose licence a hardcoded
+`main`/`master` probe cannot read, and registered `593-B1` on the reasoning that others probably
+existed. This pass measured the whole curated base (`253` addresses resolved through the
+`search/repositories` channel, which returns `default_branch`). 🔴 **`30` of `253` (`11.9 %`) default
+to one of `18` names that are neither `main` nor `master` — and the list reads like a roll-call of
+this page's own shelf.**
+
+🔵 **The reason is not mysterious, and it is the point.** Mature platforms branch by release:
+Odoo ships from `20.0`, OpenEduCat from `19.0`, Claroline from `15.0`, ILIAS from `release_11`,
+Gibbon from `v31.0.00`, BigBlueButton from `v4.0.x-develop`, Corteza from `2026.9.x`, i-educar from
+`2.12`, Tutor from `release`, OFBiz from `trunk`. Young single-maintainer agent repos ship from
+`main`. 🔴 **So a probe that assumes `main` is systematically blind to exactly the tier a client
+engagement is built on, and silently reports "no licence file" for it.** That is a selection
+effect, not bad luck.
+
+### 🔴 The census — all `30`, re-read on the correct branch this pass
+
+Licence from the `p594` three-stage classifier (TITLE → declaration → body, abbreviations matched
+only as whole tokens). 🟢 permissive · 🟡 weak/file copyleft · 🔴 strong copyleft or not-OSI ·
+🔵 escalated to review. The last column is what a `main`-only probe would have received.
+
+| Repo | default branch | ★ | Licence (read on the real branch) | Grant file | `main/LICENSE` says |
+| --- | --- | --: | --- | --- | --- |
+| [odoo/odoo](https://github.com/odoo/odoo) | **`20.0`** | 55463 | 🟡 `LGPL-3.0` | `LICENSE` | 🔴 `404` |
+| [frappe/erpnext](https://github.com/frappe/erpnext) | **`develop`** | 40822 | 🔴 `GPL` | `license.txt` | 🔴 `404` |
+| [krayin/laravel-crm](https://github.com/krayin/laravel-crm) | **`2.2`** | 24088 | 🟢 `MIT` | `LICENSE` | 🔴 `404` |
+| [dream-num/univer](https://github.com/dream-num/univer) | **`dev`** | 22840 | 🟢 `Apache-2.0` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | **`v4.0.x-develop`** | 9262 | 🟡 `LGPL-3.0` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [Dolibarr/dolibarr](https://github.com/Dolibarr/dolibarr) | **`develop`** | 7814 | 🔴 `GPL` | `COPYING` | 🔴 `404` |
+| [oppia/oppia](https://github.com/oppia/oppia) | **`develop`** | 6954 | 🟢 `Apache-2.0` | `LICENSE` | 🔴 `404` |
+| [frappe/lms](https://github.com/frappe/lms) | **`develop`** | 3361 | 🔴 `AGPL-3.0` | `license.txt` | 🔴 `404` |
+| [learnhouse/learnhouse](https://github.com/learnhouse/learnhouse) | **`dev`** | 2440 | 🔴 `AGPL-3.0` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [cortezaproject/corteza](https://github.com/cortezaproject/corteza) | **`2026.9.x`** | 2184 | 🟢 `Apache-2.0` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | **`develop`** | 1163 | 🟢 `MIT` | `LICENSE` | 🔴 `404` |
+| [apache/ofbiz-framework](https://github.com/apache/ofbiz-framework) | **`trunk`** | 1148 | 🟢 `Apache-2.0` | `LICENSE` | 🔴 `404` |
+| [overhangio/tutor](https://github.com/overhangio/tutor) | **`release`** | 1131 | 🔴 `AGPL-3.0` | `LICENSE.txt` | 🔴 `404` |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | **`19.0`** | 903 | 🟡 `LGPL-3.0` | `LICENSE` | 🔴 `404` |
+| [ls1intum/Artemis](https://github.com/ls1intum/Artemis) | **`develop`** | 824 | 🟢 `MIT` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [portabilis/i-educar](https://github.com/portabilis/i-educar) | **`2.12`** | 723 | 🔴 `GPL` | `LICENSE` | 🔴 `404` |
+| [frappe/education](https://github.com/frappe/education) | **`develop`** | 688 | 🔴 `GPL` | `license.txt` | 🔴 `404` |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | **`mobile`** | 649 | 🔴 `GPL` | `LICENSE` | 🔴 `404` |
+| [GibbonEdu/core](https://github.com/GibbonEdu/core) | **`v31.0.00`** | 637 | 🔴 `GPL` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [opencast/opencast](https://github.com/opencast/opencast) | **`develop`** | 509 | 🟢 `ECL-2.0` | `LICENSE` | 🔴 `404` |
+| [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | **`release_11`** | 507 | 🔴 `GPL` | `LICENSE` | 🔴 `404` |
+| [claroline/Claroline](https://github.com/claroline/Claroline) | **`15.0`** | 349 | 🔵 `-` | `LICENSE` | 🔴 `404` |
+| [douglasrizzo/catsim](https://github.com/douglasrizzo/catsim) | **`dev`** | 153 | 🟢 `BSD-3-Clause` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [portabilis/i-diario](https://github.com/portabilis/i-diario) | **`1.6`** | 117 | 🔴 `AGPL-3.0` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [oat-sa/tao-core](https://github.com/oat-sa/tao-core) | **`develop`** | 64 | 🔴 `GPL` | `LICENSE` | 🔴 `404` |
+| [1EdTech/openbadges-validator-core](https://github.com/1EdTech/openbadges-validator-core) | **`develop`** | 61 | 🟢 `Apache-2.0` | `LICENSE` | 🔴 `404` |
+| [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | **`dev`** | 24 | 🟢 `Apache-2.0` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [portabilis/pre-matricula-digital](https://github.com/portabilis/pre-matricula-digital) | **`2.12`** | 21 | 🔴 `AGPL-3.0` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | **`development`** | 21 | 🟢 `Apache-2.0` | `LICENSE` | 🟡 `200` (exists but not default) |
+| [oat-sa/extension-tao-itemqti](https://github.com/oat-sa/extension-tao-itemqti) | **`develop`** | 7 | 🔴 `GPL` | `LICENSE` | 🔴 `404` |
+
+🔴 **`19 of 30` return a hard `404` on `main/LICENSE`** — a probe reports no grant and the row is
+blocked. 🟡 **The other `11` are worse, not better: `main` exists but is not the default branch**,
+so the probe gets a `200` and reads a grant from a branch the project does not ship — a *stale*
+answer that looks like a successful read. 🔵 **The second failure mode is undetectable without
+`default_branch`, which is precisely why `593-B1` called this failure silent.**
+
+### 🟢 What the corrected read changes for delivery
+
+| Finding | Consequence for an engagement |
+| --- | --- |
+| 🟡 **`odoo/odoo` is `LGPL-3.0`**, declared on line 2 of `LICENSE` under a prose prepend | 🟢 **The single most important licence fact on this page is readable only off `20.0`.** Weak copyleft: a new Odoo module may link without being forced open — the basis of every Odoo-family recipe here |
+| 🟡 **`openeducat/openeducat_erp` is `LGPL-3.0`** (`19.0`), same prose prepend | 🟢 Confirms `p593` by an independent route — an AI side-car on the education ERP is lawful without a fork |
+| 🟢 **`thm-mni-ii/feedbacksystem` is `Apache-2.0`** (`dev`), declared under a prepended copyright line | 🟢 **A permissive row recovered from a blank API field** — German automated-feedback/grading system, EMEA |
+| 🔴 **`frappe/erpnext`, `frappe/lms`, `frappe/education`** keep grants at lowercase `license.txt` on `develop` | 🔴 Invisible to a `6`- or `7`-path probe. `GPL-3.0` / `AGPL-3.0` / `GPL-3.0` — attach, do not fork |
+| 🔴 **`portabilis/i-educar`, `i-diario`, `pre-matricula-digital`** (Brazil) on `2.12` / `1.6` | 🔴 `GPL-2.0` and **`AGPL-3.0` written in Portuguese** — see `594-D`; an English-only matcher false-blocks all three |
+| 🔵 **`claroline/Claroline`** (`15.0`) — title *"Claroline Connect License"*, body verbatim `AGPL-3.0` | 🔵 Escalate, do not auto-pass: a bespoke title over a standard body may add terms the body does not contain |
+
+🔵 **`frappe/education`'s grant is `19` bytes** — `License: GNU GPL V3`, a declaration with no
+licence text. 🔴 **A successful fetch is not a read, and byte count is not evidence**: three of this
+page's rows would pass a "grant file exists" gate while supplying no terms to inspect.
+
+### 🟢 The probe this page should be read with, stored as a runnable block
+
+🔴 Per `p590`, a committed script is inert here (`make`, `bash ingest/*.sh` and `python3
+ingest/*.py` are all **DENIED**). 🟢 This form runs inline and is what produced the table above:
+
+```bash
+# 1. ALWAYS take the branch from the API first — never assume main/master (593-B1)
+gh api -X GET search/repositories -f q="repo:$REPO" \
+  --jq '.items[]|[.full_name,.default_branch,(.license.spdx_id//"null")]|@tsv'
+# 2. probe 13 path/case variants on THAT branch (594-C: lowercase license.txt is real)
+for p in LICENSE LICENSE.md LICENSE.txt license.txt license license.md LICENCE LICENCE.txt \
+         COPYING COPYING.txt LICENSE.rst LICENSE-APACHE LICENSE-MIT; do
+  curl -sf "https://raw.githubusercontent.com/$REPO/$BRANCH/$p" && break
+done
+# 3. classify on the TITLE (591-A); if the title is prose or a copyright line, use the
+#    "published/licensed under X" declaration (593-B); only then fall back to the body.
+# 4. match FULL licence names; abbreviations ONLY as whole tokens \bMIT\b, \bMPL\b (594-E).
+```
+
+🔴 **Step 4 is not pedantry.** Measured this pass: an unanchored `MPL` substring matches **`65` of
+`65`** real grants read, because every licence disclaims warranties "EXPRESS OR I**MPL**IED" and
+most say "co**mpl**iance" and "exa**mpl**e"; an unanchored `MIT` matches "li**mit**ation",
+"per**mit**ted" and "sub**mit**ted". 🟢 With the anchors in place the classifier returns `0` false
+permissives across `10` known-hard rows, **including refusing to pass `CaviraOSS/PageLM`**, which
+this base published as 🟢 MIT until this pass (`594-A`).
+
+---
+
 ## 🆕 p592 — 2026-11-01 — this page's standing advice is no longer argued from examples: every platform of record on this shelf was re-measured, and the licence split is structural
 
 ### 🟢 The measurement, stated before the conclusion

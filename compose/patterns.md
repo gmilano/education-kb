@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p594 — 2026-11-01 — one recipe that is now mandatory rather than optional, because this pass proved the base's own licence verdicts can be confidently wrong; and the Brazilian LATAM engagement that `594-D` makes writable for the first time
+
+## 🆕 P-594-A — The pre-engagement licence gate: clear the stack before a line of code is written (2–3 days, run once per engagement)
+
+🔴 **Why this is a recipe and not a checklist item.** `594-A` found a row published on this base's
+own agent shelf as 🟢 `MIT (text)` — *"shippable in client work"* — whose grant is **non-commercial,
+no-redistribution, revenue-share**. A studio that read this KB and shipped
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) in a client product would have been in
+breach. 🔵 **The lesson is not "this KB had a bug". It is that a licence verdict carried in any
+table — including this one — is a claim with an age, and the stack a client ships must be
+re-verified against its own branches at engagement start.**
+
+**Inputs:** the repo list for the proposed stack. **Output:** a signed-off licence register with a
+grant file, byte count, branch and classification per dependency, plus an escalation list for
+counsel.
+
+| step | what you run | why it is not optional |
+| --- | --- | --- |
+| **1. Resolve the branch first** | `gh api -X GET search/repositories -f q="repo:$R" --jq '.items[]\|[.full_name,.default_branch,(.license.spdx_id//"null")]\|@tsv'` | 🔴 `30 of 253` of this base's curated addresses default to neither `main` nor `master` (`594-B`), and they are the **platform** rows — Odoo `20.0`, OpenEduCat `19.0`, ILIAS `release_11`, BigBlueButton `v4.0.x-develop`, Claroline `15.0` |
+| **2. Trust `null`, never trust `NOASSERTION`** | branch on the field from step 1 | 🟢 Measured on the full base (`594-F`): `null` → `0 of 14` have a grant file; `NOASSERTION` → `32 of 32` do. 🔴 Blocking a `NOASSERTION` row is wrong `32` times out of `32` |
+| **3. Probe `13` path/case variants on that branch** | `LICENSE LICENSE.md LICENSE.txt license.txt license license.md LICENCE LICENCE.txt COPYING COPYING.txt LICENSE.rst LICENSE-APACHE LICENSE-MIT` | 🔴 `frappe/erpnext`, `frappe/lms` and `frappe/education` keep grants at **lowercase `license.txt`** and are invisible to a `6`- or `7`-path probe (`594-C`) |
+| **4. Classify title → declaration → body** | title first; if it is prose or a copyright line, take the *"published/licensed under X"* line in the first 40 lines; body last | 🔴 `odoo/odoo` and `openeducat_erp` prepend prose and declare `LGPL-3.0` on **line 2**; a body match on Odoo can return the **stricter** `GPL-3.0` and kill the recipe (`Trend 51`) |
+| **5. Anchor every abbreviation** | full licence names, or `\bMIT\b` / `\bMPL\b` only | 🔴 An unanchored `MPL` matches **`65 of 65`** real grants via *"EXPRESS OR I`MPL`IED"*; unanchored `MIT` matched a German university's name (`594-E`) |
+| **6. Escalate disagreement, do not resolve it** | title verdict ≠ body verdict → counsel | 🔴 `claroline/Claroline` is *"Claroline Connect License"* over verbatim AGPL-3.0; `PageLM` is a bespoke grant over MIT's opening sentence. 🟢 One escalates to copyleft, the other to **not open source** — the shape is identical and the outcomes are not |
+| **7. Reject a short grant file** | flag any grant under ~`400 B` | 🔴 `frappe/education`'s grant is **`19` bytes** — `License: GNU GPL V3` — a declaration with no terms. A successful fetch is not a read |
+
+🟢 **Validated, not asserted:** run against `10` rows chosen because they defeated earlier
+instruments, this gate returns **zero false permissives** and correctly refuses `PageLM`,
+`ximing/aimo` (BSL-1.1), `SethRobinson/UGTLive` (Proton SDK) and
+`nirholas/lyra-web3-playground` (proprietary).
+
+🔴 **Per `p590`, store this as a pasteable command block, never as a committed script** —
+`make`, `bash ingest/*.sh` and `python3 ingest/*.py` are all **DENIED** in this environment.
+
+## 🆕 P-594-B — The Brazilian school-system engagement: three copyleft platforms of record, an AI side-car, and a licence read that has to be done in Portuguese (8–11 weeks)
+
+🟢 **This recipe could not be written before this pass.** `591-C` established that LATAM's
+in-language *tutors* are unlicensed while its *courseware* is permissive, and `P-591-B` built on
+that. 🔴 What neither could see is that the region's largest **platforms of record** were being
+mis-read by this base's instrument for a reason unrelated to licensing: their grants are written
+in Portuguese on version branches.
+
+**The stack, all three measured first-hand `2026-11-01`:**
+
+| component | repo | grant, read on the real branch | role |
+| --- | --- | --- | --- |
+| Student information system | [portabilis/i-educar](https://github.com/portabilis/i-educar) | 🔴 **GPL-2.0** (text, `18,091 B`, branch **`2.12`**) | `723★`. The SIS of record in Brazilian municipal education |
+| Class diary / gradebook | [portabilis/i-diario](https://github.com/portabilis/i-diario) | 🔴 **AGPL-3.0** — `LICENÇA PÚBLICA GERAL AFFERO GNU` (text, `35,325 B`, branch **`1.6`**) | `117★`. Teacher-facing daily record |
+| Enrolment intake | [portabilis/pre-matricula-digital](https://github.com/portabilis/pre-matricula-digital) | 🔴 **AGPL-3.0**, byte-identical Portuguese grant (branch **`2.12`**) | `21★`. Pre-enrolment pipeline |
+
+🔴 **All three are strong copyleft, and one is network copyleft.** 🟢 **So the architecture is
+forced and that is useful information, not a limitation: attach, never fork.**
+
+1. **Weeks 1–2 — licence gate (`P-594-A`) in Portuguese.** 🔴 Do not run an English-only matcher:
+   it returns *unknown* on `i-diario` and `pre-matricula-digital` and false-blocks the engagement
+   before it starts. Read the title, accept `LICENÇA PÚBLICA GERAL AFFERO GNU` as AGPL-3.0, and
+   record the branch (`1.6`, `2.12`) in the register.
+2. **Weeks 2–4 — integrate over the API boundary, not the source.** Stand the AI side-car in its
+   own process and speak to all three over HTTP. 🔴 **AGPL-3.0 on `i-diario` is the binding
+   constraint:** if your service and theirs are one program, the network-copyleft obligation
+   reaches your code. A separate process consuming a published API does not combine.
+3. **Weeks 4–7 — the tutor half is still a build.** `591-C` stands: in-language conversational
+   tutors in Spanish and Portuguese are `6 of 6` unlicensed, every candidate `≤ 19★`. 🟢 Build on
+   a permissive agent base from [`../agents/top.md`](../agents/top.md) — and 🔴 **not** on
+   `PageLM`, which this pass re-graded (`594-A`).
+4. **Weeks 6–9 — courseware in-language, adopted not built.** `591-C`'s other arm holds: `12 of 12`
+   in-language courseware/curriculum repos are permissive. Adopt the curriculum, wrap it.
+5. **Weeks 9–11 — governance, because that is the actual LATAM deliverable.** `92 %` of students
+   and `79 %` of faculty already use AI with almost no institutional governance
+   ([`../intel/market.md`](../intel/market.md)). Ship an acceptable-use policy, an audit trail on
+   the side-car, and a teacher-facing disclosure in the `i-diario` workflow. 🔵 Colombia's **Ley
+   2626 de 2026** is the region's first binding education-AI instrument and the template to track
+   even on a Brazilian engagement.
+
+🔵 **Scale caveat, stated:** `i-diario` and `pre-matricula-digital` are `117★` and `21★`. These are
+real municipal deployments, not large open-source communities — bus-factor and support are
+engagement risks and should be priced as such.
+
+---
+
 ## 🆕 p592 — 2026-11-01 — one recipe the EU decoupling finding makes urgent, and it is a deadline-driven variant of a seam this base already recommends
 
 🔵 **Why one and not three.** `p592` added no new repository rows — the mandated discovery

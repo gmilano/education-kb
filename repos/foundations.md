@@ -17,6 +17,66 @@ file rather than the GitHub API, which is wrong for ~25% of rows here.
 
 ---
 
+## 🆕 `p594` — the blank-licence field is settled on the whole base, and one permissive row is recovered from it
+
+🟢 **`591-B` was measured on a sample and is now measured on the population.** All `46` curated
+addresses whose GitHub licence field is blank were byte-read this pass, each on **its own default
+branch** (`594-B`) across **`13` path/case variants** (`594-C`):
+
+| API licence state | rows | have a grant file | verdict for an instrument |
+| --- | --: | --- | --- |
+| `license: null` | `14` | 🔴 **`0 of 14`** | 🟢 **may be trusted to block a row** |
+| `NOASSERTION` | `32` | 🟢 **`32 of 32`** | 🔴 **must never block; always byte-read** |
+
+🔵 **Perfect separation, no counter-example.** `591-B` reported `10/10` and `0/12`; the population
+reproduces it exactly. 🔴 **`Trend 31`'s "about one in two" conflated the two states and is
+superseded** — the two fields are not two grades of the same signal, they are opposite
+instructions.
+
+**The `32` `NOASSERTION` rows resolve to:** `13` permissive · `6` strong copyleft · `2` weak
+copyleft · `2` not-OSI · `2` content-not-code · `7` bespoke or split-scope → review.
+
+### 🟢 Recovered from a blank field this pass
+
+| Repo | API | Real grant, byte-read | Why it was blank |
+| --- | --- | --- | --- |
+| [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | `NOASSERTION` | 🟢 **Apache-2.0 (text, `10,784 B`, branch `dev`)** | 🆕 A **copyright line is prepended** — `Copyright 2021 Technische Hochschule Mittelhessen` — so the title is not the licence; the grant is declared on line 2. `24★`, EMEA (Germany), automated programming-exercise feedback and grading |
+| [frappe/education](https://github.com/frappe/education) | `NOASSERTION` | 🔴 **GPL-3.0 (`19 B`, `develop/license.txt`)** | 🆕 Grant at **lowercase `license.txt`** on a `develop` default branch, and only `19` bytes long — `License: GNU GPL V3`, a declaration with no licence text |
+| [portabilis/i-diario](https://github.com/portabilis/i-diario) | `NOASSERTION` | 🔴 **AGPL-3.0 (text, `35,325 B`, branch `1.6`)** | 🆕 Grant written **in Portuguese** — `LICENÇA PÚBLICA GERAL AFFERO GNU` |
+| [portabilis/pre-matricula-digital](https://github.com/portabilis/pre-matricula-digital) | `NOASSERTION` | 🔴 **AGPL-3.0 (text, `35,325 B`, branch `2.12`)** | 🆕 Same Portuguese grant, byte-identical |
+| [odoo/odoo](https://github.com/odoo/odoo) | `NOASSERTION` | 🟡 **LGPL-3.0 (text, `43,529 B`, branch `20.0`)** | Prose prepend; declared on line 2. 🟢 Agrees with the value this page already published |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | `NOASSERTION` | 🟡 **LGPL-3.0 (text, `8,240 B`, branch `19.0`)** | Prose prepend; confirms `p593` independently |
+
+🔵 **The four Brazilian/German rows above are the whole of `594-D` in practice:** three of them were
+unreadable by this base's previous instrument for a reason that has nothing to do with the project
+being unlicensed — branch, filename case, or the language the grant is written in.
+
+### 🔴 The `14` genuine blocks — `license: null`, no grant file at `13` paths on the default branch
+
+[A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) ·
+[CryptoJones/OSAPHLA](https://github.com/CryptoJones/OSAPHLA) ·
+[DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) ·
+[OS4ED/openSIS-Classic](https://github.com/OS4ED/openSIS-Classic) ·
+[aaryansamanta/ai-ethos](https://github.com/aaryansamanta/ai-ethos) ·
+[adlnet/SCORM-to-xAPI-Wrapper](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) ·
+[anandpatikat/guru-latihan-dinamis](https://github.com/anandpatikat/guru-latihan-dinamis) ·
+[andresmancilla08/Parlo](https://github.com/andresmancilla08/Parlo) ·
+[aneelv75/github-trending](https://github.com/aneelv75/github-trending) ·
+[bigdata-ustc/Agent4Edu](https://github.com/bigdata-ustc/Agent4Edu) ·
+[corleone000000/fluir](https://github.com/corleone000000/fluir) ·
+[jccastel12-ctrl/linguaai-coach](https://github.com/jccastel12-ctrl/linguaai-coach) ·
+[rodrigoborgesmachado/questoesConcursos](https://github.com/rodrigoborgesmachado/questoesConcursos) ·
+[s64965264-code/nexo-ia](https://github.com/s64965264-code/nexo-ia)
+
+🔴 **`BLOCK` — no grant means no permission**, regardless of stars or how useful the artefact looks.
+🔵 Three of these are notable as *informed* gaps rather than oversights:
+`adlnet/SCORM-to-xAPI-Wrapper` (`99★`) is from **ADL**, the body that authored SCORM and xAPI, and
+is still unlicensed; `bigdata-ustc/Agent4Edu` (`100★`) is the education-agent *simulation*
+benchmark this base has wanted a licence on since `p568`; and
+`anandpatikat/guru-latihan-dinamis` (`115★`, Indonesian exam practice) is the **one address the
+mandated legs surfaced this pass** — and it has no grant, so the nil stands either way (`594-G`).
+
+
 ## The platform tier — LMSs and systems of record
 
 | Repo | Licence | Stars | Last push | Region | Shippable? | Role |
@@ -36,7 +96,7 @@ file rather than the GitHub API, which is wrong for ~25% of rows here.
 | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL-3.0** | **1,019** | `2026-11-01` | EMEA | 🔴 copyleft | LMS focused on ease of use and accessibility; strong LATAM and francophone deployment base. |
 | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0 (text)** | **903** | `2026-10-29` | APAC | 🟡 weak copyleft | 🆕 **The education ERP tier — admissions, fees, attendance, library, hostel, exams on one database.** Built as Odoo modules; India-origin. 🔴 **Cite this address**: `OpenEduCat/OpenEduCat` returns `422` and the live repo is lowercase with an `_erp` suffix, on default branch **`19.0`** (not `main`/`master`). 🟡 **LGPL-3.0 is weak copyleft** — a *separate* AI module that calls its API keeps its own licence; edits to its own files must be published. API reported `NOASSERTION`. |
 | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | **649** | `2026-10-28` | Global | 🔴 copyleft | 🆕 Student Information System (scheduling, grades, attendance, billing). Strong francophone and LATAM deployment base. 🔵 Default branch is **`mobile`**. Relevant to gap `585-F`: the SIS tier is real but copyleft. |
-| [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | 🟢 **MIT (text)** | **981** | 🔴 `2025-12-09` | APAC | 🟡 licence yes, **stale** | 🆕 LMS for asynchronous online schools with reviewed submissions. **Permissive, and the API hid it** (`NOASSERTION`). 🔴 ~11 months without a push — adopt with eyes open. |
+| [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | 🟡 **MIT on the code, split grant (text, `1,683 B`) — refined `p594`** | **981** | 🔴 `2025-12-09` | APAC | 🟡 licence yes, **stale** | 🆕 LMS for asynchronous online schools with reviewed submissions. **Permissive, and the API hid it** (`NOASSERTION`). 🟡 **`p594` (`591-G` audit): the grant is NOT flat MIT.** Its `LICENSE` reads *"Portions of this software are licensed as follows"* — everything under `docs/` is **CC-BY-SA-4.0**, client-side JavaScript is MIT, third-party components keep their own licences, and only *"content outside of the above"* is MIT. 🟢 **The code is still usable permissively**; 🔴 **the documentation is share-alike and must not be lifted into client deliverables.** Caught by `591-G`'s byte-size filter: `1,683 B` against a canonical MIT grant of `~1,050–1,100 B`. 🔴 ~11 months without a push — adopt with eyes open. |
 | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **GPL-3.0** | **507** | `2026-10-31` | EMEA | 🔴 copyleft | Long-standing German university LMS; strong assessment module. |
 | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0 (text)** | **449** | `2026-10-30` | EMEA | 🟢 **yes** | **A second permissive platform of record.** Swiss-governed LMS used across DACH higher education, forkable and shippable. 🔴 **This base held two contradictory verdicts for this row** — `verticals/solutions.md` and `intel/trends.md` already called it Apache-2.0, while this page carried the API's `NOASSERTION`. The licence text settles it: **Apache-2.0**. |
 | [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT (text)** | **437** | `2026-11-01` | North America | 🟢 **yes** | 🆕 Learning environment with versioned (git-backed) course content and auto-graded work. UIUC. |

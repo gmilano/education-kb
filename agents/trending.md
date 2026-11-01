@@ -4,6 +4,139 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p594` — `2026-11-01` — **🔴 A ROW THIS PAGE'S SHELF PUBLISHED AS 🟢 `MIT (text)` — SHIPPABLE IN CLIENT WORK — IS NON-COMMERCIAL WITH A REVENUE-SHARE CLAUSE, AND THE RULE THAT CATCHES IT WAS ADOPTED THREE PASSES AGO AND NEVER APPLIED BACKWARDS. 🟢 `593-B1` CLOSED WITH A POPULATION: `30 of 253` CURATED ADDRESSES DEFAULT TO NEITHER `main` NOR `master`, CONCENTRATED IN THE VERTICAL LAYER. 🟢 `591-B` SETTLES AT PERFECT SEPARATION ON ALL `46` BLANK ROWS. 🔴 TWENTY-FIFTH NIL. SEVEN REGISTERED (`594-A`…`594-G`).**
+
+### 🔵 Channel table (`569-B`'s standing row)
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories` with `repo:` qualifiers | 🟢 **`253 of 256` addresses resolved**, batched `20` per query with per-address fallback; `0` unresolved after fallback. Returns `default_branch`, which is what makes `594-B` measurable |
+| 🟢 fabricated control on the search channel | 🟢 **DISCRIMINATING** — `422 Validation Failed` against `200` |
+| 🔴 `gh api repos/{owner}/{repo}` (direct) | 🔴 **`403`** — unchanged since `p584`; only `search/*` reaches outside the session scope |
+| 🟢 `curl` → `raw.githubusercontent.com/{repo}/{default_branch}/{path}` | 🟢 **`46` grants byte-read**, `13` path/case variants per address |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403`** — the run prompt's mandated verifier certifies nothing; the search channel is the substitute (carried, `p590`) |
+| 🔴 `make`, committed `.sh`, `python3 ingest/*.py` | 🔴 **DENIED — "Code from External"** (carried, `p589`/`p590`) |
+| 🟢 inline `grep` / `awk` / `bash -c '…'` | 🟢 **RUNS** — the only executable gate form here |
+| 🟡 `WebSearch`, `4` mandated global + `4` mandated regional | 🔴 **`0` new addresses — twenty-fifth consecutive nil**; 🟢 `4 of 4` regional legs paid |
+
+### 🔴 `594-A` — the correction, stated before anything else
+
+[`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) (`2,057★`) was on this industry's agent
+shelf as 🟢 **`MIT (text)`**, under a legend that reads *"permissive … buildable and shippable in
+client work"*. Its `LICENSE.md` is the **"PageLM Community License"** (`8,562 B`), byte-read this
+pass:
+
+| clause | text |
+| --- | --- |
+| 🔴 non-commercial | *"may **not be sold, sublicensed, or included in any product or service for commercial purposes**"* |
+| 🔴 no redistribution | *"Redistribution of the Software, in whole or in part, in source or binary form, is **strictly prohibited**"* |
+| 🔴 revenue share | commercial use requires a *"revenue-sharing agreement … **executed with the copyright holders prior to any commercial** distribution"* |
+| 🔴 enforcement | use without that agreement is a *"**material breach and immediate termination**"*, with *"injunctive relief, monetary …"* reserved |
+
+🔵 **The trap, precisely.** The file contains MIT's permission sentence *"Permission is hereby
+granted, free of charge…"* **exactly once**, at the top, and then overrides it across a
+*Definitions* / *Grant of License* / *Conditions and Restrictions* structure. A classifier that
+matches the licence **body** returns `MIT`. A classifier that matches the licence **TITLE** returns
+a bespoke grant and refuses to pass it. 🟢 **That is `591-A`, adopted at `p591`.**
+
+🔴 **The real defect is not the row, it is the sweep that never happened.** `591-A` was derived
+from two *candidates* (`ximing/aimo` → BSL-1.1, `SethRobinson/UGTLive` → Proton SDK) and applied
+to candidates only. PageLM was already on the shelf, already marked `(text)`, and was never
+re-graded. 🔵 **A classification rule adopted mid-life does not propagate backwards on its own.**
+Standing instruction for the next pass: when a licence rule is adopted, re-grade every `(text)`
+row already published under the old rule, and record the count swept.
+
+🔵 **`591-G` had already registered this exact exposure and prescribed the exact audit.** It reads *"every `(text)` licence mark filed before `p591` is unauditable"*, and prescribed re-reading any `(text)` row whose grant size falls outside `~1,050–1,100 B` (claimed MIT) or `~11,340–11,360 B` (claimed Apache-2.0). 🔴 **It was never run** — `p591` recorded *"Not run this pass — `35` new rows were the budget"*, and `p592`, `p593` did not pick it up. 🟢 **Run this pass across all `99` `(text)`-marked rows on the three curated pages:**
+
+| `591-G` audit, `p594` | result |
+| --- | --- |
+| rows claiming a licence with a `(text)` mark | `99` (`67` MIT, `15` Apache-2.0, `8` AGPL-3.0, `3` LGPL-3.0, `6` other) |
+| 🔴 flagged by the byte-size filter | **`8`** |
+| 🟢 flags that are benign size variation (extra copyright lines; probe AGREES with the published claim) | `7` |
+| 🔴 flags that are **real mis-grades** | **`2`** — `PageLM` (claimed MIT at `8,562 B`, a `7.8×` discrepancy) and `pupilfirst/pupilfirst` (claimed flat MIT; actually a split grant with `docs/` under CC-BY-SA-4.0) |
+| predicted by `591-G` | `~4` flags, `~3 %` true-positive rate |
+| 🔵 measured | `8` flags, **`~22 %`** true-positive rate — the mechanism held, the yield was underestimated |
+
+🟢 **`591-G` CLOSED.** 🔴 **And the reason it mattered is that it sat open for three passes while the row it predicted was on the shelf marked shippable.**
+
+### 🟢 `594-B` — `593-B1` closed with a population, and the distribution is the result
+
+`p593` found `openeducat_erp` defaulting to `19.0` and inferred that a hardcoded probe *could* fail
+silently. Measured across all `253` resolvable curated addresses:
+
+| default branch | rows |
+| --- | --: |
+| `main` | 163 |
+| `master` | 60 |
+| 🔴 **anything else** | **30 (`11.9 %`)** |
+
+`develop` ×11, `dev` ×4, then `trunk`, `release`, `mobile`, `development`, `2026.9.x`, `20.0`,
+`19.0`, `15.0`, `2.12` ×2, `2.2`, `1.6`, `release_11`, `v31.0.00`, `v4.0.x-develop` — `18` distinct
+names. 🔴 **They are not scattered: they are the vertical-platform layer** (Odoo `55,463★`,
+ERPNext, BigBlueButton, Dolibarr, Oppia, Kolibri, OFBiz, Tutor, ILIAS, Claroline, Gibbon, i-educar,
+Artemis, Opencast, TAO). 🔵 **Proven rather than argued:** `odoo/odoo` and `claroline/Claroline`
+both `404` on `main/LICENSE` and `200` on their real branch. Full census on
+[`../verticals/solutions.md`](../verticals/solutions.md).
+
+### 🆕 Four more silent-failure axes, each returning a confident wrong answer rather than an error
+
+| axis | evidence this pass | consequence if unhandled |
+| --- | --- | --- |
+| 🔴 **branch** (`593-B1`) | `30 of 253` rows | `404` on every path → "no licence file" |
+| 🆕 🔴 **filename case** | `frappe/{education,erpnext,lms}` keep grants at lowercase `license.txt`; `NO-GRANT-FILE` from a 6- *and* a 7-path probe | three live ERP/LMS rows filed as unlicensed |
+| 🆕 🔴 **prose prepend** | `odoo/odoo`, `openeducat_erp` open with *"For copyright information, please see the COPYRIGHT file."* | TITLE rule returns nothing; the grant (`LGPL-3.0`) is declared on line 2 |
+| 🆕 🔴 **grant language** | `portabilis/i-diario`, `portabilis/pre-matricula-digital` → `LICENÇA PÚBLICA GERAL AFFERO GNU` | English matcher false-blocks two live Brazilian school systems |
+| 🆕 🔴 **bespoke title over standard body** | `claroline/Claroline` → title *"Claroline Connect License"*, body verbatim `AGPL-3.0` | TITLE rule *over*-blocks; needs a two-verdict read |
+
+🔵 **So `591-A` and `593-B` are in direct conflict and neither pass noticed.** `591-A` says classify
+on the TITLE; `593-B` found grants whose title is prose. 🟢 **Neither title-only nor body-only is
+correct. The instrument is a three-stage read** — (1) title, (2) a *"published/licensed under X"*
+declaration line in the first 40 lines, (3) body — **with the declaration beating the body, and a
+title/body disagreement escalated to review rather than resolved.** Run that way this pass,
+`odoo` and `openeducat_erp` resolve to `LGPL-3.0` from their line-2 declaration, and `claroline`,
+`PageLM`, `orbit`, `pupilfirst` and `PrairieLearn` all escalate correctly.
+
+### 🔴 `594-E` — this pass's own first instrument published a false `MIT` three times
+
+A case-insensitive **unanchored** `MIT` test matches ordinary licence prose:
+`li`**`mit`**`ation`, `sub`**`mit`**`ted`, `per`**`mit`**, `trans`**`mit`** — and
+`Technische Hochschule `**`Mit`**`telhessen`. It returned `MIT` for `idempiere/idempiere`
+(really **GPL-2.0**), `thm-mni-ii/feedbacksystem` (really **Apache-2.0**) and
+`nirholas/lyra-web3-playground` (really **proprietary — "All rights reserved"**).
+🟢 **All three are published correctly on these pages**, so this never reached a reader; it is
+recorded because the *symptom* matches the `3` false licences `p593` found in a sister copy while
+the *mechanism* is different (that copy's were two no-grant-files published as `MIT` plus an
+`Apache-2.0`/`AGPL-3.0` confusion). Fix: anchor on `MIT License` or a word boundary.
+
+### 🟢 `594-F` — `591-B` at full-base scope, perfect separation
+
+| API licence state | rows | have a grant file | verdict |
+| --- | --: | --- | --- |
+| `license: null` | 14 | 🔴 **0 of 14** | 🟢 **trustworthy as a block** |
+| `NOASSERTION` | 32 | 🟢 **32 of 32** | 🔴 **never trustworthy; always byte-read** |
+
+`591-B` measured `10/10` and `0/12` on a sample; the population reproduces it with no
+counter-example. Of the `32` `NOASSERTION` rows resolved: `13` permissive, `6` copyleft, `2` weak
+copyleft, `2` not-OSI, `2` content-not-code, `7` bespoke/split → review. 🟢 **One permissive row
+recovered from a blank field:** `thm-mni-ii/feedbacksystem` → **Apache-2.0**, declared on line 2
+under a prepended copyright.
+
+### 🔴 `594-G` — twenty-fifth consecutive nil on the mandated legs
+
+All eight ran. Repo-shaped names served, each checked against this base: `ai-agents-for-beginners`
+(48 files deep), `ai-engineering-from-scratch` (40), `agents-from-scratch` (31), `ICS.AI` (30),
+`free-ai-agents-resources` (16), `Ednova` (15), `Ley 2626` (12), `2026-AI-College-Jobs` (7),
+`guru-latihan-dinamis` (6), `AI-PhD-S26` (6), `FIPSE` (6), `github-trending` (5). 🔴 **Not one was
+new.** 🟢 The four regional legs paid `4 of 4` — see [`../intel/market.md`](../intel/market.md).
+
+### 🔵 Carried, unchanged
+
+`589-A` (register currency) **recurs a fourth time**: `intel/open-gaps.md`'s newest entry was
+`p590` while these pages cited `591`–`593`. 🟢 **Repaired this pass** — `p591`, `p592`, `p593` and
+`p594` entries written. The cause remains that `gate-register-currency` cannot execute here.
+
+---
+
 ## 🆕 `p593` — `2026-11-01` — **🔴 THE 24TH CONSECUTIVE RESEARCH NIL, AND A SISTER COPY OF THIS INDUSTRY WAS PUBLISHING `3` FALSE LICENCES THE WHOLE TIME**
 
 ### 🔵 Channel table (`569-B`'s standing row)

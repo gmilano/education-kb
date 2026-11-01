@@ -4,6 +4,86 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p594 — 2026-11-01 — a licence rule adopted mid-life does not re-grade the shelf behind it, and the two rules this base adopted three passes apart are mutually destructive
+
+## 50. In an append-only curated base, adopting a classification rule silently creates two cohorts — rows graded under the new rule and rows still carrying the old grade — and the old cohort is where the dangerous errors live (high confidence — mechanism identified and one live instance found at `2,057★`)
+
+`p591` adopted `591-A`: classify a licence on its **title**, not its body, because two candidates
+(`ximing/aimo` → Business Source License 1.1, `SethRobinson/UGTLive` → Proton SDK licence) contained
+MIT's permission sentence verbatim while being something else entirely. The rule was correct. 🔴 **It
+was applied to candidates arriving after it and never to rows already published.**
+
+**The live instance.** [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) (`2,057★`) sat on
+this industry's agent shelf marked 🟢 **`MIT (text)`** — under a legend reading *"permissive …
+buildable and shippable in client work"*. Byte-read this pass, its `LICENSE.md` is the **"PageLM
+Community License"**: non-commercial use only, redistribution *"strictly prohibited"*, commercial
+use conditional on a **signed revenue-sharing agreement**, breach of which is *"a material breach
+and immediate termination"*. 🔴 **It is not MIT and it is not open source.** The `(text)` mark means
+a pass did byte-read the file — and read MIT's opening sentence and stopped.
+
+**Why this generalises past one row.** A curated base that is append-only in its *history* is
+mutable in its *pages*, and a rule change touches only what a pass happens to look at. The cohort
+boundary is invisible because both cohorts render identically: a 🟢 from `p560` and a 🟢 from `p594`
+are the same glyph carrying different amounts of evidence. 🔵 **And this base predicted it in writing.** `591-G`, registered the same pass the rule was
+adopted, states that *every `(text)` licence mark filed before `p591` is unauditable* and prescribes
+the audit that catches it — a byte-size filter on the claimed licence. 🔴 **It was never run, for
+three passes.** 🟢 Run at `p594` over all `99` `(text)` rows it flags `8`, of which `2` are real
+mis-grades, `PageLM` among them at a `7.8×` size discrepancy. 🔵 **So the failure was not a blind
+spot — it was a known, documented, costed exposure that no pass spent its budget on.** That is the
+more uncomfortable finding and the more generalisable one.
+
+🔵 **Three instances of one pattern,
+across three passes, with only the two newest caught**, is the signature of rule-without-sweep —
+and the signature is visible only from outside the pass that introduced the rule.
+
+**The operative consequence.** 🟢 **When a pass adopts or revises a licence rule it must re-grade
+every row already published under the old rule and record the count swept.** A rule with no sweep
+attached is a rule that protects future rows and abandons present ones, which is the wrong way
+round: the published rows are the ones a reader is acting on today. Falsifiable: a sweep of the
+remaining `(text)` rows finding no further mis-grade would bound the damage at one row, and that
+sweep has not been run.
+
+## 51. A licence probe has at least five independent axes on which it returns a confident wrong answer instead of an error, and the two corrections this base adopted three passes apart cancel each other out (high confidence — all five demonstrated first-hand on live rows, `2026-11-01`)
+
+`593-B1` named one axis — a probe that hardcodes `main`/`master` receives `404` on every filename
+and concludes "no licence file exists". This pass measured that axis across the whole curated base
+and found four more beside it. 🔵 **What the five have in common is the only property that matters:
+none of them fails loudly.** Each returns a well-formed wrong answer, so none appears in a channel
+table as a failure.
+
+| axis | measured this pass | wrong answer produced |
+| --- | --- | --- |
+| 🔴 **default branch** | **`30 of 253`** curated addresses (`11.9 %`) on `18` names other than `main`/`master`; `19` give `404`, and `11` give a **`200` from a branch the project does not ship** | "no grant" — or worse, a stale grant that reads as success |
+| 🔴 **filename case** | `frappe/erpnext`, `frappe/lms`, `frappe/education` keep grants at lowercase **`license.txt`**; `NO-GRANT-FILE` from both a `6`- and a `7`-path probe | three live ERP/LMS rows filed unlicensed |
+| 🔴 **prose prepend** | `odoo/odoo` (`55,463★`) and `openeducat_erp` open *"For copyright information, please see the COPYRIGHT file."*; the grant (`LGPL-3.0`) is declared on **line 2** | a title-based rule returns nothing |
+| 🔴 **grant language** | `portabilis/i-diario`, `portabilis/pre-matricula-digital` → **`LICENÇA PÚBLICA GERAL AFFERO GNU`** | English matcher false-blocks two live Brazilian school systems |
+| 🔴 **unanchored abbreviation** | an unanchored `MPL` substring matches **`65 of 65`** grants read, because every licence disclaims warranties *"EXPRESS OR I`MPL`IED"*; `MIT` matches `li`**`mit`**`ation`, `sub`**`mit`**`ted`, and `Technische Hochschule `**`Mit`**`telhessen` | false **permissive** — the worst direction to be wrong in |
+
+**🔴 The collision, which is the finding.** `591-A` says *classify on the TITLE*. `593-B` found
+grants **whose title is prose**. Run `591-A` on `odoo/odoo` and it resolves nothing; run a body
+match on it and the appended GPL text can return `GPL-3.0` when the actual grant is the **weaker**
+`LGPL-3.0` — an answer that is wrong in the restrictive direction and would retire the Odoo-family
+recipes this KB is built on. 🔵 **Two corrections adopted three passes apart, each sound on its own
+evidence, are jointly insufficient, and neither pass could have seen it** — `591-A`'s cases had
+clean titles and `593-B`'s case had prose.
+
+**🟢 The instrument that survives all five.** A three-stage read, in order: **(1) the licence
+title; (2) a *"published / licensed / released under X"* declaration in the first 40 lines, which
+beats the body; (3) the body, last.** Plus: branch from the API before any path probe, `13`
+path/case variants, full licence names or whole-token abbreviations only, and **a title/body
+disagreement escalated to review rather than resolved**. 🟢 Run that way against `10` known-hard
+rows it returns **zero false permissives**, resolves `odoo` and `openeducat_erp` to `LGPL-3.0` from
+their line-2 declaration, resolves the Portuguese AGPL rows, recovers
+`thm-mni-ii/feedbacksystem` as **Apache-2.0** from a blank field, and **refuses to pass `PageLM`**.
+
+🔵 **Why high confidence:** every axis is demonstrated on a named live row rather than hypothesised,
+the `30`-row figure is a census and not a sample, and the corrected instrument was validated
+against the cases that defeated its predecessors — including the one that defeated this pass's own
+first draft (`594-E`). Falsifiable: a sixth axis, or any row where the three-stage read returns a
+false permissive.
+
+---
+
 ## p593 — 2026-11-01 — the EMEA risk is capability, not compliance; and a licence instrument that assumes the branch name fails silently on the exact rows it exists to rescue
 
 ## 48. In EMEA the regulation is ahead of the capability, which inverts where the delivery risk sits — the binding constraint on an EMEA education engagement is the client's ability to operate what is shipped, not its ability to comply (medium confidence — two independent `2026` instruments pointing opposite ways, one new this pass)

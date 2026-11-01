@@ -112,9 +112,85 @@ of them served a **licence claim that is false**: the vertical leg stated iDURAR
 *"fully open-source under the MIT license"*; its `34,230`-byte grant is **AGPL-3.0**
 ([`../repos/foundations.md`](../repos/foundations.md)).
 
+
 ---
 
-## The shelf — 44 verified agents
+🆕 **`p594` — scope: `253` curated addresses re-measured for `default_branch`, `46` grants byte-read,
+the `44`-row shelf NOT re-starred.** 🔴 **The headline is a correction to this page, and it is the
+most consequential class of error this base can make: a row published 🟢 `MIT (text)` — "buildable
+and shippable in client work" — forbids commercial use.**
+
+🔴 **`594-A` — [`CaviraOSS/PageLM`](https://github.com/CaviraOSS/PageLM) (`2,057★`) is re-graded
+from 🟢 MIT to 🔴 NOT OPEN SOURCE.** Its `LICENSE.md` is the **"PageLM Community License"**:
+non-commercial use only, redistribution *"strictly prohibited"*, and commercial use conditioned on
+a **signed revenue-sharing agreement**. 🔵 **The mechanism is the one `591-A` named three passes
+ago:** the file opens with MIT's permission sentence *verbatim* and then overrides it under a
+bespoke title, so a body match returns `MIT` while the TITLE returns a bespoke grant. 🔴 **What is
+new is not the mechanism but the scope of the omission: `591-A` was adopted and never applied
+backwards to rows already on the shelf.** PageLM is the **third** instance of this exact pattern in
+this base — after `SethRobinson/UGTLive` (Proton SDK) and `ximing/aimo` (BSL-1.1), both caught at
+`p591` *as new candidates*, neither triggering a re-grade sweep of the rows already published.
+🟢 **A rule adopted mid-life does not re-grade the shelf behind it, and nobody swept.** `594-A`.
+
+🔵 **Credit where it is due: `p591` SAW THIS COMING and registered it as `591-G`** — *"every `(text)` licence mark filed before `p591` is unauditable for the `Trend 43` defect"* — and prescribed the cheap audit: re-read any `(text)` row whose grant size falls outside `~1,050–1,100 B` for a claimed MIT or `~11,340–11,360 B` for a claimed Apache-2.0. 🔴 **It recorded `Not run this pass — 35 new rows were the budget`, and no pass ran it since.** 🟢 **`p594` ran it: `99` `(text)` rows audited, `8` flagged.** `PageLM` claimed MIT at **`8,562 B`** against a canonical `~1,050–1,100 B` — a `7.8×` discrepancy its filter catches on sight. 🔵 **So `591-G` was right about the mechanism and wrong only about the yield**: it predicted `~4` flags at a `~3 %` true-positive rate; the measured result is `8` flags of which `2` are real mis-grades (`PageLM`, and `pupilfirst`'s split grant — see [`../repos/foundations.md`](../repos/foundations.md)), a true-positive rate near `22 %`. 🟢 **`591-G` CLOSED.**
+
+🆕 **`594-B` — `593-B1` is closed with a population instead of an inference, and the distribution is
+the finding.** `p593` found one row whose default branch was neither `main` nor `master`
+(`openeducat_erp` at `19.0`) and reasoned that a hardcoded probe *could* fail silently. Measured
+across all `253` curated addresses this pass: 🔴 **`30` of `253` (`11.9 %`) default to one of `18`
+branch names that are neither `main` nor `master`** — `develop` (11), `dev` (4), `trunk`, `release`,
+`mobile`, `development`, and nine version branches (`20.0`, `19.0`, `15.0`, `2.12`, `2.2`, `1.6`,
+`release_11`, `v31.0.00`, `v4.0.x-develop`, `2026.9.x`). 🔴 **They are not randomly distributed: they
+concentrate in the vertical-platform layer** — Odoo (`55,463★`), ERPNext, BigBlueButton, Dolibarr,
+Oppia, Kolibri, OFBiz, Tutor, ILIAS, Claroline, Gibbon, i-educar, Artemis, Opencast, TAO. 🔵 **The
+rows most likely to carry a client engagement are precisely the rows a hardcoded probe cannot
+read.** Proven live, not argued: `odoo/odoo` and `claroline/Claroline` both return `404` on
+`main/LICENSE` and `200` on their real branch. The census is on
+[`../verticals/solutions.md`](../verticals/solutions.md).
+
+🆕 **`594-C` — a fourth silent axis, and it is filename case.** `frappe/education`, `frappe/erpnext`
+and `frappe/lms` returned **`NO-GRANT-FILE` on all three** from `p593`'s 6-path probe *and* from
+this pass's first 7-path probe. Their grants sit at lowercase **`license.txt`**. 🔴 **And
+`frappe/education`'s grant is `19` bytes long** — `License: GNU GPL V3`, a declaration with no
+licence text at all — so neither a byte count nor a successful fetch is evidence that a grant was
+*read*. `13` path/case variants resolve all three.
+
+🆕 **`594-D` — the LATAM in-language gap reaches the instrument, not just the supply.** `591-C`
+measured LATAM's in-language *supply*. This pass found the classifier itself is English-only:
+[`portabilis/i-diario`](https://github.com/portabilis/i-diario) and
+[`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) (both
+Brazilian, both `NOASSERTION`) carry **AGPL-3.0 in Portuguese** — `LICENÇA PÚBLICA GERAL AFFERO
+GNU`. An English title match returns unknown and **false-blocks two live LATAM school systems**.
+
+🔴 **`594-E` — this pass's own instrument produced a false `MIT` three times, and the cause is a
+substring.** A case-insensitive unanchored `MIT` test matches ordinary licence prose —
+`li`**`mit`**`ation`, `sub`**`mit`**`ted`, `per`**`mit`** — and even a German university's name,
+`Technische Hochschule `**`Mit`**`telhessen`. It returned `MIT` for `idempiere/idempiere`
+(**GPL-2.0**), `thm-mni-ii/feedbacksystem` (**Apache-2.0**) and `nirholas/lyra-web3-playground`
+(**proprietary, "All rights reserved"**). 🟢 **All three are published *correctly* on these pages,
+so this is an instrument defect caught before publication, not a live page defect** — recorded
+because the symptom is identical to the false licences `p593` found in a sister copy, while the
+mechanism is **different** (that copy's three were two no-grant-files published as MIT plus an
+`Apache-2.0`/`AGPL-3.0` confusion). Fix: require `MIT License` or a word-boundary token.
+
+🟢 **`594-F` — `591-B` settles on the whole base with perfect separation.** All `46` blank-licence
+rows byte-read with the branch-aware `13`-path probe: 🟢 **`license: null` → `14` of `14` have no
+grant file; `NOASSERTION` → `32` of `32` have one.** `591-B` measured `10/10` and `0/12` on a
+sample; the population agrees exactly and adds no counter-example. 🔵 **So `null` may be trusted to
+block a row, and `NOASSERTION` must never be.** Of the `32` resolved: `13` permissive, `6`
+copyleft, `2` weak copyleft, `2` not-OSI, `2` content-not-code, `7` bespoke or split → review.
+
+🔴 **`594-G` — the mandated legs are now `25` consecutive passes with no new usable address.** All
+eight ran. Every repo-shaped name they served — `ai-agents-for-beginners`,
+`ai-engineering-from-scratch`, `AI-PhD-S26`, `browser-use`, `OpenClaw`, `agents-from-scratch`,
+`free-ai-agents-resources`, `github-trending`, `2026-AI-College-Jobs`, `guru-latihan-dinamis`,
+`OpenEduCat` — **was already in this base**, each re-found between `5` and `48` files deep.
+🟢 **The four regional legs paid `4 of 4`** ([`../intel/market.md`](../intel/market.md)).
+---
+
+## The shelf — 44 verified agents, of which `1` is now a block
+
+🔴 **`PageLM` stays listed and is NOT shippable** — a row removed silently is a row a later pass re-discovers and re-files as 🟢 MIT. It is kept in place, re-graded, with the reason in the cell (`594-A`).
 
 Ordered by size. Region is assigned only where the repository itself supports a
 placement (institution, org, or language of the project); otherwise it reads `Global`.
@@ -129,7 +205,7 @@ placement (institution, org, or language of the project); otherwise it reads `Gl
 | **book-to-skill** | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT (text, `LICENSE.md`)** | **36,686** | `2026-10-28` | Global | 🆕 Any technical book PDF → a ready Claude Code skill: study, reference and use. **The courseware-ingestion half of the pair with `ppt-master`** (which is the generation half). 🔴 Default branch is `master`; re-found 19× in history and never shelved. |
 | **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | **6,954** | `2026-11-01` | Global | Free online learning platform built on interactive "explorations". Both a platform and an authoring model. |
 | **word-atlas** (词光) | [designfuchen/word-atlas](https://github.com/designfuchen/word-atlas) | 🟢 **MIT (text)** | **3,668** | `2026-10-31` | APAC | Illustrated IELTS vocabulary — 7,298 words, UK/US audio, FSRS review scheduling. API reports `NOASSERTION`. |
-| **PageLM** | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🟢 **MIT (text)** | **2,057** | `2026-10-29` | Global | Community-driven NotebookLM: turns study material into notes, quizzes and flashcards. API reports `NOASSERTION`. |
+| **PageLM** | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🔴 **NOT OPEN SOURCE — "PageLM Community License" (text, `LICENSE.md`, 8,562 B)** | **2,057** | `2026-10-29` | Global | 🔴 **`p594` RE-GRADED FROM 🟢 MIT — DO NOT SHIP.** Community-driven NotebookLM: study material → notes, quizzes, flashcards. 🔴 Its grant is **non-commercial only** ("may **not be sold, sublicensed, or included in any product or service for commercial purposes**"), **redistribution is "strictly prohibited"**, and any commercial use requires a **signed revenue-sharing agreement** with the copyright holders, breach of which is a "material breach and immediate termination". 🔵 **Why this base published MIT:** the file opens with MIT's permission sentence *verbatim* (once) and only then overrides it under a bespoke title — so a body match returns MIT and the `(text)` byte-read that filed this row read the first sentence and stopped. Caught by `591-A` (classify on the licence TITLE). See `594-A`. |
 | **nbgrader** | [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | 🟢 BSD-3-Clause | **1,370** | `2026-10-28` | Global | Assign, autograde and release Jupyter notebooks. The autograding seam for technical coursework. Project Jupyter governance. |
 | **Study-Mate** | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 🟢 MIT | **1,291** | `2026-10-21` | APAC | AI study partner that plans a route through a subject, teaches it and sets projects. Chinese-language. |
 | **agents-from-scratch** | [pguso/agents-from-scratch](https://github.com/pguso/agents-from-scratch) | 🟢 MIT | **1,065** | 🟡 `2026-07-25` | Global | 🆕 Build agents from first principles on a **local** LLM — no frameworks, no cloud APIs. The teaching curriculum for an agent-engineering cohort. 🟡 ~3 months since last push. |

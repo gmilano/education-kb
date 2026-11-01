@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p594` — `2026-11-01` — **🟢 `593-B1` CLOSED WITH A POPULATION, AND THE BRANCH DEFECT IS A PROPERTY OF THE PLATFORM TIER RATHER THAN AN ACCIDENT: `30 of 253` CURATED ADDRESSES DEFAULT TO NEITHER `main` NOR `master`, AND `11` OF THEM HAVE A `main` THAT ANSWERS `200` WITH A GRANT THE PROJECT DOES NOT SHIP. 🔴 AN UNANCHORED LICENCE ABBREVIATION FALSE-MATCHES `65 of 65` GRANTS READ. 🔴 TWENTY-FIFTH NIL.**
+
+### 🟢 The sweep — scope stated before the result
+
+`253 of 256` curated addresses resolved through `gh api -X GET search/repositories` with `repo:`
+qualifiers, batched `20` per query with a per-address fallback on `422`; **`0` unresolved after
+fallback**. The `3` unaccounted names differ from GitHub's canonical casing or have been renamed.
+🔵 This pass did **not** re-star the shelf; it measured one field — `default_branch` — plus `46`
+grants. The fabricated control answered `422` against `200`, so the channel discriminates.
+
+| default branch | rows | share |
+| --- | --: | --: |
+| `main` | `163` | `64.4 %` |
+| `master` | `60` | `23.7 %` |
+| `develop` | `11` | `4.3 %` |
+| `dev` | `4` | `1.6 %` |
+| `2.12` | `2` | `0.8 %` |
+| `trunk` · `release` · `mobile` · `development` · `2026.9.x` · `20.0` · `19.0` · `15.0` · `2.2` · `1.6` · `release_11` · `v31.0.00` · `v4.0.x-develop` | `1` each | `5.1 %` |
+
+🔴 **`30` rows (`11.9 %`) on `18` branch names other than `main`/`master`.**
+
+### 🔴 The two failure modes, and the second is the dangerous one
+
+| what a `main`-only probe receives | rows | why it is wrong |
+| --- | --: | --- |
+| 🔴 `404` on every path | `19` | Reports **"no licence file exists"** — a confident block on a licensed project |
+| 🟡 `200`, grant read successfully | `11` | 🔴 **`main` exists but is not the default branch.** The read *succeeds* and returns a grant from a branch the project does not ship — a stale answer that appears in no channel table as a failure |
+
+🔵 **The second mode is why `593-B1` called this failure silent.** It cannot be detected without
+reading `default_branch` first, which is exactly the step `593-B1` prescribed and this pass
+confirms is necessary. 🟢 `593-B1` **CLOSED**.
+
+### 🔵 The distribution is a selection effect, not noise
+
+Mature platforms branch by release; young single-maintainer agent repos do not. The `30` are
+therefore **the platforms of record**: Odoo (`55,463★`, `20.0`), ERPNext (`develop`), Krayin CRM
+(`2.2`), Univer (`dev`), BigBlueButton (`v4.0.x-develop`), Dolibarr (`develop`), Oppia (`develop`),
+Frappe LMS (`develop`), LearnHouse (`dev`), Corteza (`2026.9.x`), Kolibri (`develop`), OFBiz
+(`trunk`), Tutor (`release`), OpenEduCat (`19.0`), Artemis (`develop`), i-educar (`2.12`), Frappe
+Education (`develop`), RosarioSIS (`mobile`), Gibbon (`v31.0.00`), Opencast (`develop`), ILIAS
+(`release_11`), Claroline (`15.0`), catsim (`dev`), i-diario (`1.6`), TAO (`develop`),
+openbadges-validator-core (`develop`), feedbacksystem (`dev`), pre-matricula-digital (`2.12`),
+Terracotta (`development`), extension-tao-itemqti (`develop`).
+
+🔴 **So the tier a client engagement is actually built on is the tier a hardcoded probe cannot
+read.** Full census with licences on
+[`../verticals/solutions.md`](../verticals/solutions.md).
+
+### 🔴 `594-E` — an unanchored licence abbreviation is a `100 %` false-positive test
+
+Measured on the grants read this pass: an unanchored, case-insensitive **`MPL`** substring matches
+**`65` of `65`** real grant files — none of them Mozilla-licensed. The cause is single words that
+appear in essentially every licence:
+
+| abbreviation | ordinary words that contain it | observed in |
+| --- | --- | --- |
+| 🔴 `MPL` | `I`**`MPL`**`IED` (the warranty disclaimer), `co`**`mpl`**`iance`, `co`**`mpl`**`ete`, `exa`**`mpl`**`e`, `i`**`mpl`**`ementation`, `e`**`mpl`**`oyer`, `te`**`mpl`**`ates` | `65 / 65` |
+| 🔴 `MIT` | `li`**`mit`**`ation`, `LI`**`MIT`**`ED`, `per`**`mit`**`ted`, `sub`**`mit`**`ted`, `trans`**`mit` | `idempiere` (GPL-2.0), `ofbiz-framework` (Apache-2.0), `feedbacksystem` (Apache-2.0) |
+| 🔴 `MIT` in a proper noun | `Technische Hochschule `**`Mit`**`telhessen` | `thm-mni-ii/feedbacksystem` |
+
+🔴 **It produced three false `MIT` verdicts inside this pass** — `idempiere/idempiere` (really
+`GPL-2.0`), `thm-mni-ii/feedbacksystem` (really `Apache-2.0`) and `nirholas/lyra-web3-playground`
+(really **proprietary, "All rights reserved"**). 🟢 **All three are published correctly on these
+pages**, so nothing reached a reader; the defect was in this pass's own instrument and is recorded
+because the *symptom* is identical to the `3` false licences `p593` found in a sister copy — while
+the *mechanism* is different (that copy's were two missing grant files published as `MIT` plus an
+`Apache-2.0`/`AGPL-3.0` confusion). 🟢 **Fixed by requiring a full licence name or a whole-token
+match (`\bMIT\b`), after which the classifier returns `0` false permissives on `10` known-hard
+rows.**
+
+### 🔴 Twenty-fifth consecutive nil on the mandated legs
+
+All eight ran, global and regional. Repo-shaped names served, each with the number of files deep
+it already sits in this base: `ai-agents-for-beginners` `48` · `ai-engineering-from-scratch` `40` ·
+`agents-from-scratch` `31` · `ICS.AI` `30` · `free-ai-agents-resources` `16` · `Ednova` `15` ·
+`Ley 2626` `12` · `2026-AI-College-Jobs` `7` · `guru-latihan-dinamis` `6` · `AI-PhD-S26` `6` ·
+`FIPSE` `6` · `github-trending` `5`. 🔴 **Not one new.** 🟡 `anandpatikat/guru-latihan-dinamis`
+(`115★`, Indonesian exam practice) was the nearest thing to a find and **has no licence file**, so
+it is a block either way. 🟢 The four regional legs paid `4 of 4` —
+[`../intel/market.md`](../intel/market.md).
+
+---
+
 ## 🆕 `p593` — `2026-11-01` — **🟢 THE BYTE-READ CHANNEL WORKS HERE AND THE BRANCH ASSUMPTION IS WHAT BREAKS IT: `LGPL-3.0` RECOVERED FROM A `NOASSERTION` ROW ON BRANCH `19.0`**
 
 ### 🟢 What this pass measured, with the denominator first

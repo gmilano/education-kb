@@ -3,6 +3,59 @@ industry: education
 region: Global
 updated: 2026-11-01
 ---
+## 🆕 `p594` — `2026-11-01` — **🔴 `591-G` SAT OPEN FOR THREE PASSES AND THE ROW IT PREDICTED WAS ON THE AGENT SHELF MARKED 🟢 `MIT (text)` — "SHIPPABLE IN CLIENT WORK" — WITH A NON-COMMERCIAL, NO-REDISTRIBUTION, REVENUE-SHARE GRANT. 🟢 `591-G` CLOSED BY RUNNING ITS OWN PRESCRIBED AUDIT (`99` ROWS, `8` FLAGS, `2` REAL MIS-GRADES). 🟢 `593-B1` CLOSED WITH A CENSUS: `30 of 253`. 🟢 `591-B` CLOSED AT PERFECT SEPARATION ON THE POPULATION. 🔴 `589-A` RECURS A FOURTH TIME AND IS REPAIRED HERE FOR `p591`–`p594`. 🔴 TWENTY-FIFTH NIL. SEVEN REGISTERED (`594-A`…`594-G`).**
+
+🔵 **Channel table, run first (`569-B`'s standing row).**
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories` with `repo:` qualifiers | 🟢 **`253 of 256` curated addresses resolved**, batched `20`/query with per-address fallback; `0` unresolved. Returns `default_branch` — the field `593-B1` needs |
+| 🟢 fabricated control on the search channel | 🟢 **DISCRIMINATING** — `422 Validation Failed` against `200` |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 **`403`** — unchanged since `p584` |
+| 🟢 `curl` → `raw.githubusercontent.com/{repo}/{default_branch}/{path}` | 🟢 **`46` + `99` + `30` grant reads**, `13` path/case variants each |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403`** — the run prompt's mandated verifier certifies nothing (carried `p590`) |
+| 🔴 `make`, `bash ingest/*.sh`, `python3 ingest/*.py` | 🔴 **DENIED — "Code from External"** (carried `p589`/`p590`) |
+| 🟢 inline `grep` / `awk` / `bash -c '…'` | 🟢 **RUNS** — the only executable gate form here |
+| 🔴 `unu.edu`, `publications.iadb.org`, `oecd.org`, `unesco.org` | 🔴 **`000`**, fabricated control also `000` — `583-E` non-discriminating, unchanged |
+| 🟡 `WebSearch` ×8 mandated | 🔴 **`0` new usable addresses — 25th nil**; 🟢 `4 of 4` regional legs paid, `1 of 16` tokens new |
+
+### 🟢 Closed this pass
+
+| Gap | Verdict |
+| --- | --- |
+| 🟢 **`591-G`** — *every `(text)` licence mark filed before `p591` is unauditable* | 🟢 **CLOSED by running the audit it prescribed.** `99` `(text)`-marked rows swept across the three curated pages. **`8` flagged** by the byte-size filter; `7` are benign size variation where the probe agrees with the published claim; 🔴 **`2` are real mis-grades** — `CaviraOSS/PageLM` (claimed MIT at `8,562 B` vs canonical `~1,050–1,100 B`, a `7.8×` discrepancy; actually a non-commercial bespoke grant) and `pupilfirst/pupilfirst` (claimed flat MIT; actually a split grant, `docs/` under CC-BY-SA-4.0). 🔵 `591-G` predicted `~4` flags at `~3 %`; measured `8` at `~22 %` — **mechanism right, yield underestimated**. 🔴 It was registered at `p591` and recorded *"Not run this pass — `35` new rows were the budget"*; `p592` and `p593` did not pick it up |
+| 🟢 **`593-B1`** — *a licence probe that hardcodes the branch name fails silently* | 🟢 **CLOSED with a census, and the distribution is the result.** `30 of 253` curated addresses (`11.9 %`) default to one of `18` names other than `main`/`master`. 🔴 Two failure modes, and the second is undetectable without `default_branch`: `19` rows give `404` on `main/LICENSE` (reported as "no grant"), and 🔴 **`11` give `200` from a branch the project does not ship** — a stale grant that reads as a successful read. 🔵 Not random: the `30` are the **platform tier** (Odoo `55,463★`, ERPNext, BigBlueButton, Dolibarr, Oppia, Kolibri, OFBiz, Tutor, OpenEduCat, ILIAS, Claroline, Gibbon, i-educar, Artemis, Opencast, TAO) |
+| 🟢 **`591-B`** — `NOASSERTION` vs `license: null` | 🟢 **CLOSED at full-base scope with perfect separation.** All `46` blank rows byte-read: `null` → **`0 of 14`** have a grant file; `NOASSERTION` → **`32 of 32`** do. `591-B`'s sample (`10/10`, `0/12`) reproduces with no counter-example. 🔴 `Trend 31`'s "about one in two" **superseded** |
+| 🟢 **`589-A`** — register currency | 🟡 **Repaired, not fixed.** This file's newest entry was `p590` while the curated pages cited `591`–`593`; entries for `p591`–`p594` are written below. 🔴 **The cause is unchanged** — `gate-register-currency` is in `HOOK_GATES` and `make` is DENIED here — so this will recur unless each pass writes its entry by hand |
+
+### 🔴 Registered this pass
+
+| ID | Gap | Why it matters | Cheapest next step |
+| --- | --- | --- | --- |
+| 🔴 **`594-A`** | A licence rule adopted mid-life does not re-grade the shelf behind it; `591-A` (`p591`) was applied to new candidates only, and `PageLM` carried a 🟢 MIT grade for three passes | 🔴 The two cohorts render identically — a 🟢 from `p560` and a 🟢 from `p594` are the same glyph carrying different evidence | 🟢 **Partly paid here** via `591-G`'s filter. 🔴 Remaining: the `91` `(text)` rows the filter passed were checked on *size*, not re-classified on *title* — re-read titles for the `67` claimed-MIT rows (`~15 min` of `curl`) |
+| 🔴 **`594-B`** | `30 of 253` addresses default to a non-`main`/`master` branch, concentrated in the platform tier | 🔴 Any instrument in this base that probes paths before reading `default_branch` is wrong on the rows that carry engagements | 🟢 Done for the curated pages. 🔴 The append-only history's `~3,455` seen addresses were never swept this way |
+| 🔴 **`594-C`** | Grant filename **case** is a fourth silent axis: `frappe/{erpnext,lms,education}` keep grants at lowercase `license.txt`, invisible to a `6`- or `7`-path probe; `frappe/education`'s grant is `19` bytes with no licence text | 🔴 A successful fetch is not a read, and byte count is not evidence of terms | 🟢 `13`-variant path list adopted; 🔴 add a minimum-length gate (`< ~400 B` → review) |
+| 🔴 **`594-D`** | Grant **language**: `portabilis/i-diario` and `pre-matricula-digital` carry AGPL-3.0 as `LICENÇA PÚBLICA GERAL AFFERO GNU`; an English matcher false-blocks two live Brazilian school systems | 🔴 Extends `591-C` from LATAM *supply* to the *instrument*. The classifier's blind spot and the region's gap were being confused | 🟡 Portuguese AGPL/GPL titles added. 🔴 Spanish (`LICENCIA PÚBLICA GENERAL`), French, German titles untested |
+| 🔴 **`594-E`** | An **unanchored** licence abbreviation is a near-total false-positive test: `MPL` matches `65 of 65` grants read (via *"EXPRESS OR I`MPL`IED"*, "co`mpl`iance", "exa`mpl`e"); `MIT` matches "li`mit`ation", "sub`mit`ted", and `Hochschule `**`Mit`**`telhessen` | 🔴 It fails toward **false permissive** — the worst direction. It produced `3` false MITs inside this pass (`idempiere` GPL-2.0, `feedbacksystem` Apache-2.0, `lyra-web3-playground` **proprietary**) | 🟢 **Fixed and validated** — whole-token matching, `0` false permissives on `10` known-hard rows. 🔵 All three were published *correctly* on these pages, so nothing reached a reader |
+| 🔴 **`594-F`** | `591-A` (classify on TITLE) and `593-B` (grants whose title is prose) are **mutually destructive**, and neither pass could have seen it | 🔴 Title-only resolves nothing on `odoo/odoo`; body-only can return the **stricter** `GPL-3.0` where the grant is `LGPL-3.0`, which would retire every Odoo-family recipe in this KB | 🟢 **Resolved**: three-stage read — title → *"published/licensed under X"* declaration (beats body) → body, with title/body disagreement **escalated, not resolved** |
+| 🔴 **`594-G`** | Twenty-fifth consecutive nil on the eight mandated legs | 🔴 At `25` passes this is a property of the channel, not variance. Every repo-shaped name served was already here, `5`–`48` files deep; the one nearest-to-new address (`guru-latihan-dinamis`, `115★`) has **no grant file** | 🔵 Decision owed: the global repo legs have paid `0` new usable addresses in `25` passes while the `gh api` topic axes keep paying. 🟢 Propose demoting the four global legs to a `5`-minute formality and reallocating the budget to topic/stars-band sweeps |
+
+---
+
+## 🆕 Backfill — `p591`, `p592`, `p593` (written at `p594`; `589-A`)
+
+🔴 **These three entries were missing.** The passes committed to the curated pages and cited gap IDs
+that appeared nowhere in this register — `589-A` exactly. 🔵 **They are reconstructed from the
+curated pages, not from contemporaneous notes**, so they record what those pages state and no more.
+
+| Pass | Registered | Recorded outcome, per the curated pages |
+| --- | --- | --- |
+| **`p593`** | `593-A`…`593-G` (+ sub-gap `593-B1`) | `593-A` this base correct where a sister copy of this industry published **`3` false licences** (`edx-platform` Apache-2.0 → **AGPL-3.0**; `awesome-ai-llm4education` and `eduadapt-ai` as MIT → **no grant file**). `593-B`/`593-D` a `NOASSERTION` row is not a dead row — `openeducat_erp` recovered as **LGPL-3.0** behind a prose prepend. 🔴 **`593-B1`** the branch-name defect → 🟢 **CLOSED at `p594`**. `593-E` `edx-platform` is a renamed address *and* a mis-stated licence. `593-F`/`593-G` EMEA: EU AI-literacy framework vs Allianz Pulse "preparedness gap" → `Trend 48`. 🔴 **`24`th nil** |
+| **`p592`** | `592-A`…`592-D` | `592-A` the pass's finding is **not about education** — the EU deferral removed the escape hatch it appeared to grant (`Trend 46`). `592-B` an unmandated probe reproduced `p587`'s finding exactly. `592-C` standing recommendation on the mandated repo legs. `592-D` first licence-composition census of this base — **`192 of 192`** curated addresses, `30` moved (all upward), `0` licences downgraded (`Trend 47`) |
+| **`p591`** | `591-A`…`591-G` | `591-A` classify on the licence **TITLE**, not the body (`ximing/aimo` → BSL-1.1; `UGTLive` → Proton SDK). `591-B` `NOASSERTION` ≠ `null` → 🟢 **CLOSED at `p594`**. `591-C` LATAM in-language gap **refined**: `6 of 6` tutors unlicensed, `12 of 12` courseware permissive. `591-D` 22nd nil; one mandated-leg licence claim **false** (iDURAR "MIT" → **AGPL-3.0**). `591-E`, `591-F` recorded on the curated pages only. 🔴 **`591-G`** pre-`p591` `(text)` marks unauditable → 🟢 **CLOSED at `p594`**, and it was the pass's most expensive omission |
+
+---
+
 ## 🆕 `p590` — `2026-11-01` — **🔴 `589-B`'s PRESCRIPTION WOULD NOT HAVE RUN: A COMMITTED `.sh` IS DENIED EXACTLY AS `make` IS, SO "PORT THE GATES TO `grep`/`awk`" PRODUCES ANOTHER INERT FILE. 🟢 THE EXECUTABLE FORM IS AN INLINE COMMAND BLOCK, AND THREE GATES WERE RUN THAT WAY. 🟢 `589-E` CLOSED BY REFUTATION ON BOTH ARMS UNDER A PREDICTION REGISTERED FIRST. 🔴 `589-A`'s BACKLOG IS `10 %` HOMONYM AND ITS READER-FACING PART IS `6` IDS, NOT `120` — ALL `6` PAID HERE. 🟢 `10` ABSENT ROWS FILED, `16` GRANTS BYTE-READ. 🟢 THE TWENTY-PASS SEARCH NIL IS BROKEN, AND THE ADDRESS IS UNLICENSED. FIVE REGISTERED (`590-A`…`590-E`).**
 
 🔵 **Channel table, run first (`569-B`'s standing row).**

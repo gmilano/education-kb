@@ -4,6 +4,146 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p594 — 2026-11-01 — the regional legs pay `4 of 4` and the demand side is now measurably saturated at `15 of 16` tokens already held; the one new token is a LATAM *capital* figure, it is cross-sector rather than education-specific, and two outlets disagree on it
+
+### 🔵 The legs, measured against this base rather than described
+
+All four mandated regional legs ran. Every token they served was checked against this base before
+being called new — `569-B`'s standing requirement.
+
+| token served | region | already in this base? |
+| --- | --- | --- |
+| EU Commission updated **ethical guidelines on AI in education** (9 June) | EMEA | 🔴 held — `20` files |
+| **€25.4m** Advanced Digital Skills grant agreements | EMEA | 🔴 held — `22` / `9` files |
+| UK **£200m+** AI adoption commitment | EMEA | 🔴 held — `10` files |
+| **ICS.AI** national higher-education AI model (UK) | EMEA | 🔴 held — `30` files |
+| Allianz Pulse 2026 **"preparedness gap"** | EMEA | 🔴 held — filed `p593` |
+| US **134 bills in 31 states** | North America | 🔴 held — `37` files, **fifth** consecutive pass |
+| US DoE **$169m FIPSE** awards | North America | 🔴 held — `6` files |
+| Philippines **Project S.I.N.A.G.** / 1m teachers on Gemini | APAC | 🔴 held — `2` files |
+| Australia **National AI Plan**, Chief AI Officers | APAC | 🔴 held — `16` / `3` files |
+| **ASEAN Guide on AI Governance and Ethics** | APAC | 🔴 held — `11` files |
+| Forrester: **60 %** of firms/governments in India and China to run local LLMs | APAC | 🔴 held |
+| **Omdia** 2026 survey, 1,100+ decision-makers, 5 APAC markets | APAC | 🔴 held — `5` files |
+| UNU working paper, **200 HEIs across 19 countries** | LATAM | 🟡 held thinly — `1` file; restated below with provenance |
+| IDB **fAIr LAC / fAIr Tech Radar** | LATAM | 🔴 held — `74` files |
+| **Ednova** (Chile), Platzi | LATAM | 🔴 held — `15` files |
+| 🆕 **$2.5bn** AI startup investment in LATAM by end-2026 | LATAM | 🟢 **NEW — `0` files** |
+
+🔴 **`15 of 16` already held. The demand-side saturation `p591` and `p592` measured is holding at
+the same rate for a fourth pass**, and it is now a stable property of this channel rather than a
+run of bad luck: the mandated regional legs reliably recover this base's existing picture and
+reliably do not extend it.
+
+### 🟡 The one new token, with its provenance stated rather than assumed
+
+🟢 **New:** total AI startup investment in Latin America is projected at **$2.5bn by end-2026**
+(Emerging Markets Insights, report dated 3 Oct 2026, reached via secondary coverage), with Sequoia
+Capital and Lightspeed named as increasing regional AI activity.
+
+🔴 **Three caveats, all load-bearing, and the first is the one that matters for this KB:**
+
+1. 🔴 **It is cross-sector AI capital, not education capital.** It does not measure edtech and must
+   not be cited as an education figure. This base's education-specific LATAM number remains
+   **$4.2bn by 2030 at ~45 % CAGR** (carried, `p565`).
+2. 🔴 **Two outlets disagree on scope.** A competing tally puts LATAM AI startups at **$2bn raised
+   year-to-date in 2026** — a count, not a full-year projection. The two are not comparable and
+   neither was verified at source.
+3. 🟡 **The structural direction is corroborated independently**, which is worth more than the
+   point estimate: Crunchbase reports **LATAM startup funding up 26 % in Q3 2026** with **$757m**
+   into late-stage and growth deals (**+74 % year on year**), and Endeavor reports international
+   VCs more active in the region across the first three quarters of 2026 than in 2024 and 2025
+   combined.
+
+🔵 **So the usable finding is a direction, not a figure:** LATAM capital availability is rising
+sharply from a low base, which changes what a studio can propose there — but it says nothing
+specific about education budgets, and this page should not let it.
+
+## Opportunities by region
+
+### 🟢 North America
+
+🔵 **Unchanged this pass; restated so a nil does not read as coverage.** Largest regional share of
+AI-in-education spend (**~36–38 %**, `$3.68bn` in 2026 on the `36 %` reading), the densest
+regulatory activity at **state** level (`134` bills across `31` states — served for a fifth pass
+and still the only quantified instrument this channel produces), and **$169m** in FIPSE awards
+with a responsible-AI component. 🟢 **The engagement shape stays governance-plus-integration**
+against Canvas and PowerSchool estates.
+
+🆕 **What `p594` adds here is supply-side, not demand-side.**
+[`PrairieLearn/PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) (`527★`, North America,
+pushed `2026-11-01`) is confirmed again as a **split grant** — AGPL-3.0 community edition plus a
+proprietary `ee/` tree — and this pass's classifier now escalates that shape to review instead of
+resolving it, which is the correct behaviour for a row a studio must not fork casually.
+
+### 🟢 EMEA
+
+🔵 **The `p593` reading stands and is not re-argued:** regulation ahead of capability, so the
+deliverable is **capability** and the failure mode is a compliant system nobody can operate. The
+AI literacy framework under the European Education Area 2026–2030 remains the commercial opening,
+and enablement should be scoped and budgeted, not offered as courtesy.
+
+🆕 **`p594`'s contribution is a permissive EMEA row recovered from a blank licence field.**
+[`thm-mni-ii/feedbacksystem`](https://github.com/thm-mni-ii/feedbacksystem) (Technische Hochschule
+Mittelhessen, Germany) reported `NOASSERTION` and is **Apache-2.0** — automated programming-exercise
+feedback and grading, directly on the capability-building seam this region's opening calls for.
+🔵 Small (`24★`), so it is a component to adopt, not a platform to stand on. 🟡 Also EMEA and
+already shelved: `apache/openmeetings` (Apache-2.0 + a declared third-party block),
+`claroline/Claroline` (AGPL-3.0, Belgian), `ILIAS` (GPL-3.0, German), `OpenOLAT` (Apache-2.0,
+Swiss) — and `19` of the `30` branch-defect rows on
+[`../verticals/solutions.md`](../verticals/solutions.md) are European platforms, which is where the
+`594-B` census bites hardest in practice.
+
+### 🟢 APAC
+
+🔵 **Restated, carried.** Policy is moving nationally rather than regionally: Australia's **National
+AI Plan** and Chief AI Officers; the **ASEAN Guide on AI Governance and Ethics** still early-stage
+and per-country; Singapore regulating sector by sector; the Philippines' **Project S.I.N.A.G.**
+certifying ~1m teachers on Gemini — the one *named* national education programme this channel has
+produced. Forrester's expectation that **60 %** of firms and governments in India and China will run
+locally developed LLMs alongside global ones remains the sovereignty driver.
+
+🔵 **Supply side, this pass:** APAC continues to hold the largest in-language education supply on
+these shelves — `DeepTutor` (HKUDS), `OpenMAIC` (Tsinghua), `word-atlas`, `Study-Mate`,
+`pupilfirst` (India, MIT with a `docs/` CC-BY-SA carve-out this pass refined). 🔴 **The one address
+the global legs surfaced is APAC and unusable:**
+[`anandpatikat/guru-latihan-dinamis`](https://github.com/anandpatikat/guru-latihan-dinamis)
+(`115★`, Indonesian exam practice) has **no licence file at `13` paths** — `BLOCK`.
+
+### 🟢 LATAM
+
+🟡 **New capital signal, bounded:** `$2.5bn` cross-sector AI investment projected for 2026 (single
+report, contested at `$2bn` YTD by another outlet), corroborated in *direction* by Crunchbase's
+`+26 %` Q3 and Endeavor's three-quarter comparison. 🔴 **Not an education figure.** The
+education-specific picture is unchanged: **$4.2bn by 2030 (~45 % CAGR)**, with `92 %` of students
+and `79 %` of faculty already using AI against almost no institutional governance — so the
+deliverable here remains **governance for usage that already exists**, the mirror image of EMEA.
+🔵 Colombia's **Ley 2626 de 2026** remains the region's first binding education-AI instrument on
+these shelves (`p576`).
+
+🆕 **`p594` adds the supply-side half, and it is a correction to this base's own instrument.**
+`591-C` found LATAM's in-language tutors unlicensed while its courseware was permissive. This pass
+found that two live **Brazilian** school systems were being mis-read for a different reason
+entirely: [`portabilis/i-diario`](https://github.com/portabilis/i-diario) and
+[`portabilis/pre-matricula-digital`](https://github.com/portabilis/pre-matricula-digital) carry
+**AGPL-3.0 written in Portuguese** — `LICENÇA PÚBLICA GERAL AFFERO GNU` — on branches `1.6` and
+`2.12`. 🔴 **An English-only licence matcher on a `main`-only probe false-blocks both**, and
+`portabilis/i-educar` (`723★`, `GPL-2.0`, branch `2.12`) with them. 🔵 **These are the largest
+LATAM-origin education platforms on these shelves and all three are copyleft** — attach an AI
+side-car over their APIs, do not fork. See `594-D`.
+
+### 🔴 Declared regional gaps (a nil in prose reads like coverage)
+
+| gap | status this pass |
+| --- | --- |
+| 🔴 No primary-source regulatory instrument for **Canada or Mexico** | Unclosed. `583-E` stands: **no government or IGO host is reachable from this harness** — `unu.edu`, `publications.iadb.org`, `oecd.org`, `unesco.org` all `000`, and the fabricated control also `000`, so the channel is non-discriminating and the failure is indistinguishable from a typo |
+| 🔴 No **APAC** ministry-of-education adoption *rate* | Unclosed; named programmes only, never denominators |
+| 🔴 No **EMEA** education-sector AI adoption rate | Unclosed — `593-G`'s Allianz figure is cross-sector, and this pass found nothing education-specific |
+| 🔴 No **LATAM** education-specific capital figure | Unclosed, and now explicitly so: this pass's new token is cross-sector and must not be substituted for one |
+| 🟡 **No region-placed agent row added this pass** | By design — this pass measured one field across `253` addresses and `46` grants rather than hunting rows |
+
+---
+
 ## 🆕 p593 — 2026-11-01 — the regional legs pay `4 of 4` again and serve `2` tokens this base has never held; both are EMEA, and together they say the regulation is ahead of the capability
 
 ### 🔵 The legs, measured against this base rather than described
