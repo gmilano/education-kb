@@ -4,6 +4,59 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p597 — 2026-11-01 — four customisable platforms of record recovered off the `596-C` backlog, and one of them is a `12,149★` MIT ERP this base had dropped
+
+### 🔵 Why these arrive as promotions rather than discoveries
+
+`596-C` established that this base's shelves are rewritten wholesale while its trending logs are
+append-only, so a dropped row answers *"already held"* forever. 🟢 **Re-measured this pass under a
+corrected gate:** `3,366` addresses have reached a shelf page across `15` snapshots plus today,
+`767` carry a disposition now, so 🔴 **`2,640` (`78.4 %`) were dropped** — and 🔴 **`2,049` of those
+are reported "held" by a log-grepping gate**. 🟢 Both figures reproduced on two instruments (`comm`
+and `awk`) under forced `LC_ALL=C`, per `p596`'s locale warning. 🔵 `p596` measured `2,015` of
+`2,243` (`89.8 %`); **the gate-blind count replicates almost exactly** (`2,049` vs `2,015`) and the
+denominator was the only real difference.
+
+🔴 **A withdrawn figure of this pass's own, published per `589-C`.** The first run of this census
+returned `614` dropped of `1,130` (`54.3 %`) and that is **wrong**: the filter restricted archive
+files to the basenames `top.md`, `foundations.md`, `solutions.md`, … which exist in 🔴 **`1` of
+`15`** snapshots, because the other `14` store the same pages as `agents-top.md`,
+`repos-foundations.md`, `verticals-solutions.md`. A basename filter silently became a
+single-snapshot filter. 🔵 Corrected before publication; recorded because the same mistake is
+available to the next pass.
+
+### 🟢 Promoted — platforms a studio can fork, customise and attach AI to
+
+| Platform | Repo | ★ | Grant (byte-read `2026-11-01`) | Branch | Last push | Tier it serves |
+| --- | --: | --: | --- | --- | --- | --- |
+| **Aureus ERP** | [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) | **12,149** | 🟢 **MIT** (`1,077 B`) | 🔴 `master` | `2026-10-30` | The institution **back office** — Laravel/Filament ERP. 🟢 The permissive answer to OpenEduCat's LGPL-3.0 and ERPNext's GPL-3.0; a studio may ship it closed |
+| **Agora Flat** | [netless-io/flat](https://github.com/netless-io/flat) | **6,443** | 🟢 **MIT** (`1,062 B`) | `main` | `2026-10-30` | The **synchronous classroom** — Web, Windows and macOS clients, interactive whiteboard. 🔵 Replaces a BigBlueButton deployment where the client, not the server, is the product |
+| **Kolibri Studio** | [learningequality/studio](https://github.com/learningequality/studio) | **211** | 🟢 **MIT** (`1,115 B`) | 🔴 **`unstable`** | 🟢 `2026-11-01` | **Content curation and packaging** for Kolibri's offline-first delivery. 🔴 Its default branch is `unstable` — pin a SHA, never track the branch |
+| **Sunbird** | [sunbird-ed/sunbirded-portal](https://github.com/sunbird-ed/sunbirded-portal) | **41** | 🟢 **MIT** (`1,072 B`) | 🔴 `master` | 🟡 `2026-02-21` | **National-scale platform of record** (India's DPG stack, the portal tier). 🔵 APAC; 🔴 `334 MB` and `8` months since a push — a reference architecture, not a live dependency |
+
+🟢 **Also promoted and platform-adjacent:** [`autolab/autolab`](https://github.com/autolab/autolab)
+(Apache-2.0, `808★`) and [`anubislms/anubis`](https://github.com/anubislms/anubis) (MIT, `382★`) are
+both **complete course-delivery systems**, shelved on
+[`../repos/foundations.md`](../repos/foundations.md) this pass because an engagement builds *on* them
+rather than replacing them. 🔵 Together with Aureus and Flat, this page now carries a **fully
+permissive stack** — back office, synchronous classroom, course delivery, autograding, content
+packaging — which it has never previously been able to state.
+
+### 🔴 The platform rows that are not usable, measured and named
+
+| Platform | Repo | Measured | Disposition |
+| --- | --- | --- | --- |
+| **Forma LMS** | [formalms/formalms](https://github.com/formalms/formalms) | 🔴 **no licence file**, `37★`, live `2026-07-17`, `112 MB` | **BLOCK** — a complete LMS with no grant at all |
+| **Menthor** | [menthorlabs/menthor](https://github.com/menthorlabs/menthor) | 🟢 Apache-2.0, `582★` — 🔴 **ARCHIVED**, last push `2024-04-21` | **DEAD.** 🔵 A Brazilian (LATAM) open programming-education platform, and the largest LATAM-origin permissive row this base has found — it has been read-only for `2.5` years. Recorded so it is never proposed |
+
+🔵 **The LATAM reading this forces.** `594-D` found LATAM's largest school platforms
+(`portabilis/i-educar`, `i-diario`, `pre-matricula-digital`) to be copyleft; Menthor was the
+permissive counter-example and it is **archived**. 🔴 **So the region's permissive platform tier is
+genuinely empty, not merely unmeasured** — an informed gap, carried to
+[`../intel/market.md`](../intel/market.md) rather than left silent.
+
+---
+
 ## 🆕 p596 — 2026-11-01 — a SECOND permissive platform of record for this page, carried unfiled in this base's logs, and it serves a tier this page has never covered: the academic library
 
 ### 🔴 Why it arrives as a promotion rather than a discovery

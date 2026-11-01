@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-01
 ---
 
+🆕 **`p597` — `7` foundational rows promoted off the `596-C` backlog, every grant byte-read at the
+repository's *real* default branch (`3 of 7` are not `main`).** 🔵 **Not one required a search leg:**
+all seven were on a shelf page in an archived snapshot and were dropped by a wholesale rewrite, and
+[`jupyterhub/jupyterhub`](https://github.com/jupyterhub/jupyterhub) — the largest of them — had been
+shelved in 🔴 **`13` of `15`** snapshots before vanishing.
+
+🔴 **The instrument note that governs this page.** `curl -sI https://github.com/...` returns `403`
+here for any repository not attached to the session, so it is **not** a liveness test (`597-A`).
+Every row below was established at `raw.githubusercontent.com`, which served `200` and the full
+licence bytes in all cases. Rows marked **(bytes)** had their grant read as text, not taken from the
+GitHub API's `spdx_id` field — which `597-B` measured wrong in three different ways in one pass.
+
+### 🟢 Promoted this pass — the platform and component tier, recovered
+
+| Repo | ★ | Grant (byte-read) | Branch | Last push | Size | Role in an education engagement |
+| --- | --: | --- | --- | --- | --: | --- |
+| [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | **8,360** | 🟢 **BSD-3-Clause** (`1,475 B`, bytes) | `main` | 🟢 `2026-11-01` | `37.8 MB` | Multi-user notebook server — **the compute substrate for every CS/data course**. Per-student isolated environments, pluggable auth. Shelved `13×`, dropped |
+| [autolab/autolab](https://github.com/autolab/autolab) | **808** | 🟢 **Apache-2.0** (`11,324 B`, bytes) | 🔴 `master` | `2026-10-27` | `11.6 MB` | Carnegie Mellon's course-management service with **auto-graded programming assignments** — the grading system of record a studio attaches to, not replaces |
+| [anubislms/anubis](https://github.com/anubislms/anubis) | **382** | 🟢 **MIT** (`1,083 B`, bytes) | `main` | `2026-09-15` | `21.7 MB` | NYU's distributed LMS for automating computing-science courses — per-student cloud IDE + autograding pipeline |
+| [open-spaced-repetition/fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) | **455** | 🟢 **BSD-3-Clause** (`1,509 B`, bytes) | `main` | `2026-10-28` | `2.3 MB` | FSRS optimiser **and** scheduler in Rust — the retention engine. 🔵 A real algorithm with published parameters, not a prompt |
+| [ed-fi-alliance-oss/edfi-oneroster](https://github.com/ed-fi-alliance-oss/edfi-oneroster) | **6** | 🟢 **Apache-2.0** (`10,173 B`, bytes) | `main` | `2026-10-31` | `1.0 MB` | Serves a **OneRoster 1.2 API from an Ed-Fi ODS** — the roster seam for US K-12 districts. 🔵 `6★` and institution-grade; a star screen cannot see it |
+| [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | **8** | 🟢 **MIT** — file spelled **`LICENCE`** (`1,086 B`, bytes) | `main` | 🟢 `2026-11-01` | `201 MB` | Oak National Academy's open curriculum via **API, SDK and a shipped MCP app**. 🔵 **EMEA/UK, and already agent-addressable** |
+| [open-edge-platform/education-ai-suite](https://github.com/open-edge-platform/education-ai-suite) | **2** | 🟢 **Apache-2.0** (`11,351 B`, bytes) | `main` | `2026-10-30` | `102 MB` | Intel's education reference applications and libraries — edge/on-prem inference where data cannot leave the institution |
+
+### 🔴 Rows measured this pass and deliberately NOT promoted
+
+| Repo | ★ | Measured | Why not |
+| --- | --: | --- | --- |
+| [formalms/formalms](https://github.com/formalms/formalms) | 37 | 🔴 **no licence field**, live `2026-07-17`, `112 MB` | A full LMS with **no grant** — `BLOCK`. The largest unlicensed platform this base has measured |
+| [1edtech/caliper-spec](https://github.com/1edtech/caliper-spec) | 22 | 🔴 `NOASSERTION`, pushed `2025-10-07` | The learning-analytics spec itself; **stale `>12` months** and no open grant. Read it, do not vendor it |
+| [sunbird-ed/sunbirded-portal](https://github.com/sunbird-ed/sunbirded-portal) | 41 | 🟢 **MIT** (`1,072 B`, bytes), 🟡 pushed `2026-02-21`, 🔴 **`334 MB`** | Promoted to [`../verticals/solutions.md`](../verticals/solutions.md) instead — it is a national platform (India DPG), not a component. 🔴 Its size is `595-A`'s problem again, `2.8×` over |
+
+🔵 **`595-A` restated with this pass's measurements.** Repository size is a delivery constraint this
+page must carry, because a shallow clone through this session's proxy is the only way in: the
+promoted set includes `334 MB` (Sunbird), `232 MB` (Kolibri Studio), `201 MB` (Oak), `148 MB`
+(AutoGen) and `102 MB` (Intel suite). 🔴 **Five of eighteen rows exceed `100 MB`** — so "clone it and
+look" is not a free operation on this shelf, and a recipe that assumes it will stall in CI.
+
+---
+
 🆕 **`p595` — this page was not re-measured and no row changed.** The pass spent its
 legs on the four mandated regions (`13 of 13` tokens already held), the four global legs
 (`0` new addresses) and one topic axis (`grading`/`autograder`/`rubric`), which returned

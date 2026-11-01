@@ -4,6 +4,89 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p597` — `2026-11-01` — **🔴 THE VERIFICATION INSTRUMENT THIS HARNESS MANDATES IS BLIND: `curl -sI https://github.com/…` RETURNS `403` FOR EVERY UNATTACHED REPO — LIVE OR DEAD — SO EXECUTED LITERALLY IT REJECTS ALL `20` REAL ROWS PROMOTED THIS PASS. 🟢 `raw.githubusercontent.com` ANSWERED CORRECTLY `18/18`. 🔴 THE SEARCH API `422`s ON A LIVE REPO. 🔴 `microsoft/autogen` IS `CC-BY-4.0` BY API AND **MIT BY `LICENSE-CODE`** — THIS BASE HAS CALLED IT "MIT" FOR TWO CYCLES WITHOUT OPENING THE FILE. 🟢 THE "NIL" SPLIT IN TWO: MARKET TOKENS GENUINELY SATURATED (`22/24` HELD ON SHELF, 28th NIL), ADDRESSES NOT (`2,049` GATE-BLIND, `20` PROMOTED).**
+
+### 🟢 Promoted to a shelf this pass — agent and agent-adjacent rows, every grant byte-read
+
+| repo | ★ | grant (byte-read) | branch | last push | promoted to |
+| --- | --: | --- | --- | --- | --- |
+| [microsoft/autogen](https://github.com/microsoft/autogen) | 61,661 | 🟢 **MIT** `LICENSE-CODE` `1,141 B` (🔴 `LICENSE` = CC-BY-4.0 `18,650 B`) | `main` | `2026-10-28` | `agents/top.md` |
+| [crewaiinc/crewai](https://github.com/crewaiinc/crewai) | 60,385 | 🟢 **MIT** `1,055 B` (untitled) | `main` | `2026-11-01` | `agents/top.md` |
+| [juneyaooo/lineage-skill](https://github.com/juneyaooo/lineage-skill) | 466 | 🟢 **Apache-2.0** `11,358 B` | `main` | `2026-07-23` | `agents/top.md` + `compose/patterns.md` |
+| [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | 12 | 🟢 **MIT** `1,065 B` | `main` | `2026-09-21` | `agents/top.md` + `compose/patterns.md` |
+| [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | 45 | 🟢 **MIT** `1,064 B` | `main` | `2026-02-22` | `agents/top.md` (🔴 `8 KB` of source) |
+| [simonstang/feifei-companion](https://github.com/simonstang/feifei-companion) | 110 | 🟢 **Apache-2.0** `10,227 B` | `main` | `2026-04-19` | `agents/top.md` (APAC in-language) |
+| [digitalcredentials/learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) | 🟡 API `422` | 🟢 **MIT** `1,092 B` | `main` | — | `compose/patterns.md` |
+
+### 🔴 Measured and blocked this pass — recorded so the next pass does not re-find them
+
+| repo | ★ | measured | disposition |
+| --- | --: | --- | --- |
+| [anonymousonyx22/brightspace-d2l-mcp](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 29 | 🔴 `NOASSERTION`, live `2026-11-01` | **REVIEW** — custom terms |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | 1 | 🔴 **AGPL-3.0** | **BLOCK** |
+| [loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) | 54 | 🔴 no licence file | **BLOCK** |
+| [onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) | 18 | 🔴 no licence file | **BLOCK** |
+| [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | 4,393 | 🟢 MIT, 🔴 pushed `2025-10-26` — **13 months stale**, `213 MB` | **DEMOTED** — carried as live supply in `cycle 2`/`cycle 3` |
+| [DaRL-GenAI/instructional_agents](https://github.com/DaRL-GenAI/instructional_agents) | **490** | 🟢 **MIT** `1,067 B` byte-read; `106` forks; EACL'26; 🔴 **not in the search index** | 🟢 **PROMOTED — `597-F`.** Recorded DEAD ADDRESS earlier in this same pass on a `total_count 0`; **withdrawn** |
+| [littlecookie0722/ai-teaching-agent](https://github.com/littlecookie0722/ai-teaching-agent) | **0** | 🟢 MIT, live | **NOT SHELVED** — `0★`; fewer real rows beat padding |
+
+### 🔴 `597-E` — this base shelved the placeholder `owner/repo` as data in `8` of `15` snapshots
+
+The run prompt warns that a row reading `| Nombre | Repo | Licencia |` has been compiled into a KB
+entity more than once. 🔴 **Confirmed in this base's own archive:** the literal string `owner/repo`
+reached a canonical shelf page in `8` of the `15` archived snapshots. 🟢 It is absent from today's
+shelf, and the gate below now tests for it.
+
+### 🟢 The corrected "already held?" gate — inline, because committed scripts do not execute here (`589-B`/`590`)
+
+```bash
+cd /path/to/education-kb && export LC_ALL=C
+SHELF="agents/top.md repos/foundations.md verticals/solutions.md intel/market.md intel/trends.md compose/patterns.md intel/measured-unusable.md intel/open-gaps.md"
+LOGS="agents/trending.md repos/trending.md"
+# A log hit is NOT a disposition. Print both answers; never collapse them.
+held(){ s=$(grep -ilF "$1" $SHELF | wc -l); l=$(grep -ilF "$1" $LOGS | wc -l);
+        printf '%-50s shelf:%-3s log:%-3s %s\n' "$1" "$s" "$l" \
+        "$([ "$s" -gt 0 ] && echo HELD || { [ "$l" -gt 0 ] && echo 'LOG-ONLY(gate-blind)' || echo NEW; })"; }
+held "owner/repo"   # 597-E: must print NEW on both counts
+```
+
+### 🔴 The header-as-data gate took three formulations, and two of them were wrong in opposite directions
+
+🔵 **Published with its false-positive count, as `589-C` requires.** `p590` ran this gate with an
+English-only vocabulary, got `15` hits and found **all `15`** were false positives — transposed
+key-value tables whose left column is a row label. 🔴 **This pass reproduced that and made it worse
+twice before getting it right:**
+
+| formulation | rule | result |
+| --- | --- | --: |
+| 1 — naive | row matches the header vocabulary | 🔴 **`26` hits, all `26` false positives.** Adding Spanish (`Nombre`, `Licencia`, `Plataforma`) to `p590`'s vocabulary raises `15` → `26` |
+| 2 — "separator above" | vocabulary row with no `\|---\|` earlier in its table | 🔴 **Flags every genuine header in the base.** A header row legitimately *precedes* its separator, so testing only upwards condemns exactly the rows that are correct |
+| 3 — 🟢 correct | vocabulary row **and** next line is not `\|---\|` **and** no `\|---\|` earlier in the same table | 🟢 **`0` violations across all `9` pages** |
+
+🔴 **A column count does not discriminate, and this pass's first classifier assumed it did.** It
+labelled `12` rows "TRUE-VIOLATION" on the theory that a transposed row has two columns — but
+`| Licencia | 🟢 MIT — 1.066 B | raw…/HEAD/LICENSE |` is a three-column transposed row and is
+indistinguishable by shape from a three-column header. 🟢 The only discriminator is the position of
+the separator relative to the row.
+
+```bash
+cd /path/to/education-kb && export LC_ALL=C
+FILES="agents/top.md agents/trending.md repos/foundations.md repos/trending.md verticals/solutions.md intel/market.md intel/trends.md compose/patterns.md intel/measured-unusable.md"
+for f in $FILES; do
+  awk -v F="$f" '
+    { lines[NR]=$0 } END { sep=0
+      for (i=1;i<=NR;i++) { L=lines[i]
+        if (L ~ /^[[:space:]]*$/) { sep=0; continue }
+        if (L ~ /^\|[-: |]+\|$/)  { sep=1; continue }
+        if (L ~ /^\|[[:space:]]*(Nombre|Repo|repo|Agent|Agente|Licence|License|Licencia|Name|Platform|Plataforma|Component|Componente)[[:space:]]*\|/) {
+          nxt = (i<NR ? lines[i+1] : "")
+          if (nxt !~ /^\|[-: |]+\|$/ && sep==0) print "VIOLATION "F":"i": "substr(L,1,95)
+        } } }' "$f"
+done   # p597: 0 violations
+```
+
+---
+
 ## 🆕 `p596` — `2026-11-01` — **🔴 THE SHELF IS LOSSY AND THE LOG IS LOSSLESS, AND THE GATE THAT DECIDES WHAT GETS SHELVED CONSULTS THE LOG: `2,015` OF `2,243` EVER-SHELVED ADDRESSES (`89.8 %`) WERE **DROPPED** ACROSS `15` REWRITES, AND BECAUSE A DROPPED ROW STILL SITS IN THE APPEND-ONLY LOG IT IS REPORTED *"ALREADY HELD"* AND NEVER RE-SHELVED — WHICH IS WHAT TWENTY-SEVEN PASSES OF "NIL" HAS BEEN MEASURING. 🟢 `6` PROMOTED THIS PASS FROM THE BACKLOG, EVERY GRANT BYTE-READ. 🔴 `1` BLOCKED: A GOOGLE-BRANDED READING ASSESSOR WHOSE OWN README FORBIDS UNDER-13 DATA. 🟢 `595-B` CLOSED. 🔴 TWO INSTRUMENT FAILURES INSIDE THIS PASS, BOTH SELF-INFLICTED AND BOTH PUBLISHED.**
 
 ### 🔴 `596-C` — the finding that reframes twenty-seven passes of nil

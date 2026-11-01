@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p597 — 2026-11-01 — the verification instrument this harness is told to use cannot distinguish a live repository from a dead one, and the two "nil" channels it reports are independent
+
+## 55. The host you verify at decides the answer, and the host named in the instructions is the one that cannot answer
+
+🔴 **Measured this pass:** `curl -sI https://github.com/<owner>/<repo>` returns **`403`** for every
+repository not attached to this session — not `404` for a dead address and `200` for a live one, but
+`403` for both. 🔵 The run prompt's standing instruction is *"verify every URL before writing it
+(`curl -sI`). A 404 is not a finding."* 🔴 **Executed literally in this environment that instruction
+rejects every true row**, because it never sees a `404` *or* a `200`; `20` live, permissive,
+institution-grade repositories were promoted this pass and all `20` answer `403` at that host.
+
+| instrument | `jupyterhub/jupyterhub` (live) | `DaRL-GenAI/instructional_agents` (live, **unindexed**) | `nonexistent-org-xyz99/nope-12345` (truly dead) | separates live from dead? |
+| --- | --- | --- | --- | --- |
+| `curl -sI github.com/…` | 🔴 `403` | 🔴 `403` | 🔴 `403` | 🔴 **no — one answer for all three** |
+| GitHub search API, `repo:` qualifier | 🟢 full record | 🔴 **`total_count 0`** | 🟢 `total_count 0` | 🔴 **no — live-but-unindexed is indistinguishable from dead** |
+| GitHub search API, `user:` listing | 🟢 listed | 🔴 **absent from all `15` indexed repos of that owner** | 🟢 absent | 🔴 **no** |
+| `curl raw.githubusercontent.com/…` | 🟢 `200`, `1,475 B` | 🟢 `200`, `1,067 B` | 🔴 `404` | 🟢 **yes — `28/28` live, `404` on the control** |
+| `WebFetch https://github.com/…` | 🟢 page renders | 🟢 `490★`, `106` forks, MIT | 🔴 no page | 🟢 **yes** (and it works where `curl` gets `403`) |
+
+🔴 **`597-F` — the correction this pass had to make against itself, mid-pass.**
+[`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents) was written
+into three pages of this base **as a dead address** on the strength of `total_count 0`. 🟢 It is
+live: `490★`, `106` forks, MIT (`1,067 B`, byte-read), an **EACL'26 Main** peer-reviewed multi-agent
+instructional-design system, with its package published on PyPI. 🔴 **It is simply absent from the
+GitHub search index** — `user:darl-genai` lists `15` repositories and this is not one of them, while
+four *siblings* (`instructional_agents-skills`, `instructional_agents_studio`,
+`instructional_agents_homepage`, `MASkills`) **are** indexed. 🔵 Search-index membership is not
+existence, and a `0` is not a `404`.
+
+🔵 **A wrong explanation was also drafted and withdrawn.** The first hypothesis was case-sensitivity
+in the `repo:` qualifier, since the canonical owner is `DaRL-GenAI` and this base's census
+lower-cases every address. 🔴 **Refuted by measurement:** `repo:DaRL-GenAI/instructional_agents`,
+`repo:darl-genai/instructional_agents` and `repo:DARL-GENAI/INSTRUCTIONAL_AGENTS` all return
+`total_count 0`. 🟢 Had it been published, it would have sent the next pass to re-case `1,449`
+addresses for nothing.
+
+🔴 **The search API has its own false negative:** it returns `422 "cannot be searched either because
+the resources do not exist or you do not have permission"` for
+[`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet),
+which is alive and served a `1,092 B` MIT grant from `raw.githubusercontent.com` on the same pass.
+🔵 **A `422` reads as "dead" to any screen that only checks for success.**
+
+🟢 **The standing prescription:** liveness and grant are established at `raw.githubusercontent.com`
+or they are not established. The GitHub API is a metadata *enrichment* (stars, push date, default
+branch, archived flag), never the existence test, and `github.com` itself is not an instrument here
+at all.
+
+## 56. A repository's declared licence field and its actual code grant are different objects, and they diverge in at least three structurally different ways at once
+
+🔴 This pass byte-read `21` grants and found the API's `spdx_id` wrong in **three distinct shapes**
+inside a single sitting — not three instances of one bug:
+
+| shape | instance | API says | the code grant is | the trap |
+| --- | --- | --- | --- | --- |
+| **Two grant files, one for prose and one for code** | [microsoft/autogen](https://github.com/microsoft/autogen) | 🔴 `CC-BY-4.0` | 🟢 **MIT** — `LICENSE-CODE`, `1,141 B`, root + `7` package trees | The API is *correct* about `LICENSE` (`18,650 B`, genuinely Creative Commons) and *useless* for reuse. A compliant screen **rejects** a `61,661★` MIT framework |
+| **A grant with no title line** | [crewaiinc/crewai](https://github.com/crewaiinc/crewai) | 🟢 `MIT` | 🟢 **MIT** — `1,055 B`, opens `Copyright (c) 2025 crewAI, Inc.` | A title-matching byte-reader returns `UNRECOGNISED`; the grant must be identified by its **operative clause** (`Permission is hereby granted, free of charge…`), not its heading |
+| **A grant filed under a national spelling** | [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 `MIT` | 🟢 **MIT** — the file is **`LICENCE`**, `1,086 B` | A probe enumerating `LICENSE`/`LICENSE.md`/`LICENSE.txt` reports **no licence** for a national body's MIT repository |
+
+🔵 **The three failures point in opposite directions**, which is why no single fix covers them: the
+first needs the *file set* enumerated, the second needs the *contents* parsed rather than the title,
+the third needs the *filename* spelled both ways. 🟢 A probe must do all three and must report which
+file it read and how many bytes, so a later pass can tell a measurement from an assumption. 🔴 **This
+base recorded "AutoGen (MIT)" in two earlier cycles and was right by luck**, never having opened the
+file.
+
+## 57. Saturation is a per-channel property, and an undifferentiated "nil" cannot tell a saturated channel from a broken gate
+
+🔴 For `27` consecutive passes this base reported "nil" across its search legs and read that as a
+fact about the education industry. `596-C` then found the gate was consulting append-only logs that
+never forget. 🟢 **Rebuilt this pass to read the shelf and the logs as separate answers, the single
+"nil" split into two opposite results:**
+
+| channel | measurement | verdict |
+| --- | --- | --- |
+| **Market / demand-side tokens** | `22 of 24` tokens held **on the shelf itself**; `1` new; `1` log-only | 🔴 **The nil is real** — twenty-eighth consecutive pass. A genuinely saturated channel |
+| **Addresses / supply-side** | `2,640 of 3,366` ever-shelved addresses (`78.4 %`) carry no current disposition; **`2,049`** are reported "held" by a log-grepping gate | 🟢 **The nil was an artifact** — `18` real rows promoted this pass without running a single new search leg |
+
+🔵 **The two channels of one industry saturated independently**, and the aggregate statistic was the
+average of a true finding and a false one. 🟢 **The prescription is that a nil must name its
+channel** and must state which page class it was gated against; a bare "no new findings" is not a
+measurement. 🔴 It also means the fix for one channel buys nothing in the other: correcting the gate
+recovered `20` supply-side rows and changed the demand-side result by **one token**.
+
+---
+
 ## p596 — 2026-11-01 — twenty-seven passes of "nil" was not measuring the industry or the search channel; it was measuring this base's own refusal to file what it had already found
 
 ## 52. In education's platform-of-record tier the binding rule is not "copyleft with one exception" but "permissive platforms exist and are invisible to a star-based screen", because the permissive ones are microservice estates whose weight is spread across hundreds of repositories (high confidence — one platform measured at organisation level, `456` repositories, `0` copyleft)

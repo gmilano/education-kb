@@ -4,6 +4,133 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p597 — 2026-11-01 — the legs pay `4 of 4` for a sixth consecutive pass and the nil is now *proven* rather than assumed, because the gate that reported it was rebuilt first
+
+### 🔵 The gate was wrong before the legs were run, so the legs were re-gated
+
+`596-C` found that this base's "already held?" check greps the **append-only trending logs**, which
+never forget, while the shelves are rewritten wholesale — so a dropped row reads as held. 🔴 **That
+defect also contaminated this channel's nil**: a market token found only in a log was being counted
+as coverage. 🟢 **The corrected gate reads the shelf and the logs as separate answers**, and it was
+run against all `24` tokens the eight legs served before any of them was called new.
+
+| token served | region | shelf | log | verdict |
+| --- | --- | --: | --: | --- |
+| **`134` bills across `31` states**; NA share **`36–38 %`**, **`$3.68bn`** 2026 | North America | `2` | `2` | 🔴 held — **eighth** consecutive pass |
+| Gallup: **`>60 %`** of college students use AI weekly; ~half of institutions discourage or prohibit | North America | `4` | `1` | 🔴 held |
+| **`$169m`** FIPSE awards with a responsible-AI component | North America | `3` | `2` | 🔴 held |
+| 🆕 **District adoption of tools that *bypass the teacher* is in significant decline** | North America | 🟢 `0` | 🟢 `0` | 🟢 **NEW — the only new token of `24`** |
+| Commission ethical guidelines on AI in education updated; **€25.4m** Advanced Digital Skills grants | EMEA | `2` | `1` | 🔴 held |
+| UK **AI Adoption Summit**, **£200m+** (£100m Bridge AI, £53m regional) | EMEA | `2` | `1` | 🔴 held |
+| EU AI Act **AI-literacy duties in force `2025-02-02`**; Annex III high-risk `2027-12-02` | EMEA | `2` | `2` | 🔴 held — `55`+ files |
+| **`~70 %`** of institutions in Europe and North America have or are drafting AI guidance | EMEA | `4` | `2` | 🔴 held |
+| **Project S.I.N.A.G.** — Philippines DepEd + Google, `>1m` teachers certified on Gemini | APAC | `2` | `0` | 🔴 held |
+| Australia/NZ **National AI Plan** and **Chief AI Officers**; **ASEAN Guide** still early-stage | APAC | `1–2` | `0–1` | 🔴 held |
+| Forrester: **`60 %`** of firms/governments in India and China to run local LLMs alongside global | APAC | `3` | `1` | 🔴 held |
+| Digital Education Council × Tec de Monterrey: **`92 %`** students / **`79 %`** faculty using AI | LATAM | `4` | `2` | 🔴 held |
+| Teachers' positive opinion **`57 % → 72 %`** in 2026; **`88 %`** use it only moderately | LATAM | `4` | `2` | 🔴 held |
+| UNESCO **IESALC / UNU** working paper, `200` HEIs across `19` countries | LATAM | `7` | `2` | 🔴 held — `57` files |
+| **IDB / CEPAL** — the Latin American AI Index (**ILIA**), `19` countries | LATAM | `3→0` | `1` | 🟡 **ILIA held `7×`; "Inter-American Development Bank" is 🔴 log-only — gate-blind** |
+| Market frame: **`$8.3bn` (2025) → `$11.4bn` (2026) → `$57.2bn` (2033)**; K-12 **`~34 %`** share | Global | `3` | `2` | 🔴 held |
+
+🟢 **`22 of 24` tokens are held on the shelf itself, `1` is new, `1` is log-only.** 🔴 **So the
+market-intel nil is real, and this is its twenty-eighth consecutive pass** — it is a property of a
+saturated demand-side channel, not of a broken gate. 🔵 **That is the opposite of what the same
+correction did to the *address* channel, where `2,049` addresses turned out to be gate-blind and
+`20` were promoted this pass.** `27` passes of undifferentiated "nil" could not tell these apart;
+they are now separate measurements and must stay separate.
+
+## Opportunities by region
+
+### North America
+
+🆕 **`p597` — the one new demand-side token in `24` legs is a *shape* change, and it is commercially
+load-bearing.** District adoption of tools that **bypass the teacher** is in significant decline.
+🔵 Read against this base's standing North American reading — governance-plus-integration against
+Canvas and PowerSchool estates — it narrows the proposal: **the buyer is the teacher's workflow, not
+the student's**, and a studio pitching a direct-to-student tutor into a US district in 2026 is
+pitching into a declining category.
+
+🟢 **Supply recovered this pass, and it is the roster seam.**
+[`ed-fi-alliance-oss/edfi-oneroster`](https://github.com/ed-fi-alliance-oss/edfi-oneroster)
+(Apache-2.0, byte-read `10,173 B`, pushed `2026-10-31`) serves a **OneRoster 1.2 API from an Ed-Fi
+ODS** — the US K-12 data standard — at `6★`. 🔵 **A star-ranked screen cannot see institution-grade
+interop code**, which is the same mechanism `p596` recorded for FOLIO. Paired with
+[`r-huijts/canvas-mcp`](https://github.com/r-huijts/canvas-mcp) (MIT, `1,065 B`) the region now has
+both halves of an agent attach point: roster data and LMS actions. 🔴 Unchanged and still the only
+quantified instrument this channel produces: `134` bills across `31` states.
+
+### EMEA
+
+🔵 **The `p593` reading stands unamended: regulation ahead of capability, so the deliverable is
+capability.** 🆕 **What `p597` adds is that the UK's open-curriculum tier is already
+agent-addressable.** [`oaknational/oak-open-curriculum-ecosystem`](https://github.com/oaknational/oak-open-curriculum-ecosystem)
+(MIT — grant file spelled **`LICENCE`**, byte-read `1,086 B`, pushed `2026-11-01`) ships **API, SDK
+*and* an MCP app** over Oak National Academy's curriculum data. 🟢 **So an EMEA engagement does not
+have to build the curriculum-grounding layer; it can consume one that a national body maintains**,
+which is exactly the "capability, not compliance theatre" deliverable this region's opening calls
+for. 🔴 Note the spelling: a licence screen probing `LICENSE` only would have blocked this row.
+
+🟡 **Demand-side, carried:** €25.4m Advanced Digital Skills grants and the UK's £200m+ adoption
+commitment are **cross-sector** envelopes, and this page continues to refuse to read them as
+education budgets.
+
+### APAC
+
+🔴 **Nothing new for this region this pass, stated explicitly rather than left as silence.** The
+legs returned Project S.I.N.A.G., the ASEAN Guide, Australia/NZ's National AI Plan and Forrester's
+local-LLM figure — all four already held on the shelf.
+
+🟢 **Supply side did move.** [`sunbird-ed/sunbirded-portal`](https://github.com/sunbird-ed/sunbirded-portal)
+(MIT, `1,072 B`) is recovered to [`../verticals/solutions.md`](../verticals/solutions.md) — India's
+DPG platform tier, the only **national-scale** permissive platform of record on these shelves. 🔴 It
+has not been pushed since `2026-02-21` and is `334 MB`, so it is a reference architecture to mine,
+not a dependency to track. 🔵 In-language supply grows again with
+[`simonstang/feifei-companion`](https://github.com/simonstang/feifei-companion) (Apache-2.0,
+`10,227 B`, K-12, Chinese), joining DeepTutor, OpenMAIC and pupilfirst.
+
+### LATAM
+
+🔵 **The demand-side reading is unchanged and was re-gated, not re-argued:** `92 %` of students and
+`79 %` of faculty already using AI against almost no institutional governance, now with the
+direction that **teachers' positive opinion moved `57 % → 72 %` during 2026** while `88 %` still use
+it only moderately. 🟢 The deliverable remains **governance for usage that already exists** — the
+mirror image of EMEA — and the moving teacher sentiment makes enablement sellable alongside it.
+
+🔴 **The supply-side finding of this pass is a closed door, and it is worth more than another
+adoption statistic.** [`menthorlabs/menthor`](https://github.com/menthorlabs/menthor) (Apache-2.0,
+`582★`) — the largest LATAM-origin **permissive** education platform this base has ever found — is
+🔴 **ARCHIVED, last pushed `2024-04-21`**. With `594-D`'s finding that the live Brazilian school
+systems (`portabilis/i-educar`, `i-diario`, `pre-matricula-digital`) are all copyleft, 🔴 **the
+region's permissive platform-of-record tier is empty by measurement, not by omission.** 🔵 The
+consequence for a LATAM engagement is concrete: **attach over APIs, do not fork**, and budget the
+platform layer as integration rather than customisation.
+
+### Global
+
+🔵 **Market frame, re-gated and unchanged:** `$8.3bn` (2025) → `$11.4bn` (2026) → `$57.2bn` (2033)
+on one reading, with K-12 at **`~34 %`** of 2026 spend; this base continues to carry the range rather
+than a point estimate, because the published figures disagree by more than `3×` at the 2026 node.
+🟡 Every one of these is a market-research marketing page; none is audited.
+
+🟢 **The global supply finding is this pass's own:** a **fully permissive education stack** can now be
+assembled from rows on these shelves — Aureus ERP (back office), Agora Flat (synchronous classroom),
+Autolab/Anubis (course delivery + autograding), JupyterHub (compute), Kolibri Studio (offline
+packaging), FSRS-rs (retention), Learner Credential Wallet (credentialing). 🔵 **That was true before
+this pass and unstatable, because `78.4 %` of what this base had found was dropped.**
+
+### 🔴 Declared regional gaps — a nil in prose reads like coverage
+
+| gap | status this pass |
+| --- | --- |
+| 🔴 No primary-source regulatory instrument for **Canada or Mexico** | Unclosed. `583-E` stands: no government or IGO host is reachable from this session |
+| 🔴 No **APAC** ministry-of-education adoption *rate* | Unclosed — named programmes only, never denominators |
+| 🔴 No **EMEA** education-sector AI adoption rate | 🟡 Partially addressed and **not** closed: `~70 %` of institutions "in Europe and North America" have or are drafting guidance is a **two-region composite**, not an EMEA rate |
+| 🔴 No **LATAM** education-specific capital figure | Unclosed; `$4.2bn by 2030 (~45 % CAGR)` remains the only education-specific number and it is a forecast |
+| 🆕 🔴 **No permissive LATAM platform of record exists** | 🟢 **Newly closed as a gap, negatively**: measured this pass, the one candidate is archived. This is now a finding, not a hole |
+
+---
+
 ## 🆕 p596 — 2026-11-01 — the four regional legs pay `4 of 4` for a fifth consecutive pass and return `0` new tokens; `595-B` is closed; and the twenty-seventh nil was tested as an instrument artefact rather than accepted as a channel property
 
 ### The legs, measured against this base before being called new
@@ -186,7 +313,7 @@ Capital and Lightspeed named as increasing regional AI activity.
 sharply from a low base, which changes what a studio can propose there — but it says nothing
 specific about education budgets, and this page should not let it.
 
-## Opportunities by region
+### (historical) Opportunities by region — superseded, retained for history
 
 ### 🟢 North America
 

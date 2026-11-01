@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p597` — `2026-11-01` — **🟢 `11` FOUNDATIONAL AND PLATFORM ROWS RECOVERED OFF THE `596-C` BACKLOG WITHOUT A SINGLE NEW SEARCH LEG, INCLUDING `jupyterhub/jupyterhub` (BSD-3, `8,360★`, SHELVED IN `13 OF 15` SNAPSHOTS THEN DROPPED) AND `aureuserp/aureuserp` (MIT, `12,149★`) — THE PERMISSIVE ERP THIS INDUSTRY'S PLATFORM TIER WAS SAID NOT TO HAVE. 🔴 CENSUS RE-MEASURED: `2,640 / 3,366` EVER-SHELVED ADDRESSES (`78.4 %`) HAVE NO DISPOSITION; `2,049` ARE GATE-BLIND. 🔴 ONE FIGURE OF THIS PASS'S OWN WITHDRAWN BEFORE PUBLICATION.**
+
+### 🟢 Promoted to a shelf this pass — every grant byte-read at the repository's real default branch
+
+| repo | ★ | grant (byte-read) | branch | last push | size | promoted to |
+| --- | --: | --- | --- | --- | --: | --- |
+| [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | **8,360** | 🟢 **BSD-3-Clause** `1,475 B` | `main` | 🟢 `2026-11-01` | `37.8 MB` | `repos/foundations.md` |
+| [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) | **12,149** | 🟢 **MIT** `1,077 B` | 🔴 `master` | `2026-10-30` | `51.3 MB` | `verticals/solutions.md` |
+| [netless-io/flat](https://github.com/netless-io/flat) | **6,443** | 🟢 **MIT** `1,062 B` | `main` | `2026-10-30` | `81.6 MB` | `verticals/solutions.md` |
+| [autolab/autolab](https://github.com/autolab/autolab) | **808** | 🟢 **Apache-2.0** `11,324 B` | 🔴 `master` | `2026-10-27` | `11.6 MB` | `repos/foundations.md` |
+| [open-spaced-repetition/fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) | **455** | 🟢 **BSD-3-Clause** `1,509 B` | `main` | `2026-10-28` | `2.3 MB` | `repos/foundations.md` |
+| [anubislms/anubis](https://github.com/anubislms/anubis) | **382** | 🟢 **MIT** `1,083 B` | `main` | `2026-09-15` | `21.7 MB` | `repos/foundations.md` |
+| [learningequality/studio](https://github.com/learningequality/studio) | **211** | 🟢 **MIT** `1,115 B` | 🔴 **`unstable`** | 🟢 `2026-11-01` | `232 MB` | `verticals/solutions.md` |
+| [sunbird-ed/sunbirded-portal](https://github.com/sunbird-ed/sunbirded-portal) | **41** | 🟢 **MIT** `1,072 B` | 🔴 `master` | 🟡 `2026-02-21` | 🔴 `334 MB` | `verticals/solutions.md` |
+| [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | **8** | 🟢 **MIT** — file is **`LICENCE`** `1,086 B` | `main` | 🟢 `2026-11-01` | `201 MB` | `repos/foundations.md` |
+| [ed-fi-alliance-oss/edfi-oneroster](https://github.com/ed-fi-alliance-oss/edfi-oneroster) | **6** | 🟢 **Apache-2.0** `10,173 B` | `main` | `2026-10-31` | `1.0 MB` | `repos/foundations.md` |
+| [open-edge-platform/education-ai-suite](https://github.com/open-edge-platform/education-ai-suite) | **2** | 🟢 **Apache-2.0** `11,351 B` | `main` | `2026-10-30` | `102 MB` | `repos/foundations.md` |
+
+🔵 **The star distribution is the point.** This set runs from `12,149★` to `2★`, and the `6★` and
+`8★` rows — Ed-Fi's OneRoster bridge and Oak National Academy's curriculum ecosystem — are
+maintained by **institutional bodies** and are the two most strategically placed rows in it. 🔴 **A
+screen ranked by stars sees neither.** Same mechanism `p596` recorded for FOLIO at `134★`.
+
+### 🔴 Blocked / not promoted, with the reason recorded
+
+| repo | ★ | measured | disposition |
+| --- | --: | --- | --- |
+| [formalms/formalms](https://github.com/formalms/formalms) | 37 | 🔴 **no licence file**, live `2026-07-17`, `112 MB` | **BLOCK** — the largest unlicensed complete LMS this base has measured |
+| [menthorlabs/menthor](https://github.com/menthorlabs/menthor) | 582 | 🟢 Apache-2.0 — 🔴 **ARCHIVED**, last push `2024-04-21` | **DEAD.** The largest LATAM-origin *permissive* education platform ever found here |
+| [1edtech/caliper-spec](https://github.com/1edtech/caliper-spec) | 22 | 🔴 `NOASSERTION`, pushed `2025-10-07` | **READ-ONLY REFERENCE** — stale `>12` months, no open grant |
+
+### 🔴 The census, re-measured — and one figure of this pass withdrawn before publication
+
+| quantity | `p596` | `p597` (two instruments, `LC_ALL=C`) |
+| --- | --: | --: |
+| ever-shelved addresses | `2,243` | **`3,366`** |
+| carrying a disposition today | — | **`767`** |
+| dropped, no disposition | `2,015` (`89.8 %`) | **`2,640`** (`78.4 %`) |
+| 🔴 **dropped AND a log reports "held"** | `2,015` | **`2,049`** |
+
+🟢 **The gate-blind count replicates to within `1.7 %`** (`2,049` vs `2,015`); the denominator was
+the only real disagreement, so `596-C` is **confirmed, not corrected** — only re-sized.
+
+🔴 **Withdrawn figure, published per `589-C`.** This pass first measured `614` dropped of `1,130`
+(`54.3 %`). That is wrong. The archive filter restricted filenames to `top.md`,
+`foundations.md`, `solutions.md`, `market.md`, `trends.md`, `patterns.md` — which exist in 🔴 **`1`
+of `15`** snapshots, because the other `14` store the same pages as `agents-top.md`,
+`repos-foundations.md`, `verticals-solutions.md`, `intel-market.md`, `intel-trends.md`,
+`compose-patterns.md`. 🔵 **A basename filter silently became a single-snapshot filter**, and it
+produced a plausible number — `54.3 %` would have read as a reasonable correction to `89.8 %`. The
+tell was that *every* dropped address had frequency exactly `1`, which is impossible across `15`
+snapshots of a shelf that is largely stable. 🟢 Both figures recomputed and cross-checked with `awk`
+before anything was written.
+
+### 🔴 `595-A` restated with this pass's measurements
+
+`5` of the `20` rows promoted this pass exceed `100 MB`: Sunbird `334 MB`, Kolibri Studio `232 MB`,
+Oak `201 MB`, AutoGen `148 MB`, Intel suite `102 MB`. 🔵 So "clone it and look" is not a free
+operation on this shelf, and a compose recipe that assumes it will stall in CI. 🔴 Still no retention
+policy on this base's own `archive/` tree.
+
+---
+
 ## 🆕 `p596` — `2026-11-01` — **🔴 THIS PAGE NEVER FORGETS AND THE SHELVES DO: `2,015` OF `2,243` EVER-SHELVED ADDRESSES (`89.8 %`) WERE DROPPED ACROSS `15` REWRITES, AND BECAUSE THE "ALREADY HELD?" GATE GREPS **THIS** PAGE, A DROPPED ROW READS AS HELD AND IS NEVER RE-SHELVED — THAT IS WHAT TWENTY-SEVEN PASSES OF "NIL" ACTUALLY MEASURES. 🟢 `5` REPOS PROMOTED OFF THIS BACKLOG, EVERY GRANT BYTE-READ, TWO WITH NON-FLAT LICENCE STRUCTURE. 🆕 `OpenMAIC` AT `42,265`★ — THE ADDRESS WAS HELD IN `243` FILES AND ITS STAR FIGURE IN `0`.**
 
 ### 🔴 `596-C` — the shelf is lossy, this page is not, and the gate reads the wrong one

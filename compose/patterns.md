@@ -4,6 +4,96 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p597 — 2026-11-01 — three recipes assembled entirely from rows this base had already found and dropped; every grant below byte-read this pass at the repository's real branch
+
+🔴 **Why these are writable only now.** `596-C`, re-measured this pass, finds `2,640` of `3,366`
+ever-shelved addresses (`78.4 %`) carrying no current disposition, `2,049` of them reported "already
+held" by a gate that greps the append-only logs. 🟢 **Not one component below required a new search
+leg.** 🔴 **`3` of the `11` components do not default to `main`** (`master`, `master`, `unstable`) —
+a recipe that hardcodes `main` fails on a third of this stack, which is `590-D`/`594-D` applied to
+the compose layer.
+
+🔴 **Before using any address below, note `597-A`:** `curl -sI https://github.com/…` returns `403`
+here for all of them, live or dead. Verify at `raw.githubusercontent.com`.
+
+## 🆕 P-597-A — 🟢 **The auto-graded computing course with an AI feedback side-car** (8–12 weeks, North America / EMEA)
+
+🔵 **Why this shape.** The one new demand-side token in `24` legs this pass is that district
+adoption of tools which **bypass the teacher** is in significant decline. 🟢 **So the agent grades
+*into a queue the instructor approves*, and the system of record stays the autograder** — the
+commercial opening is the teacher's workflow, not the student's.
+
+| component | repo | grant (byte-read `2026-11-01`) | branch | role |
+| --- | --- | --- | --- | --- |
+| Course + autograder of record | [autolab/autolab](https://github.com/autolab/autolab) | 🟢 **Apache-2.0** (`11,324 B`) | 🔴 `master` | `808★`, CMU. Assignments, submissions, autograding, gradebook. **This owns the grade** |
+| Per-student compute | [jupyterhub/jupyterhub](https://github.com/jupyterhub/jupyterhub) | 🟢 **BSD-3-Clause** (`1,475 B`) | `main` | `8,360★`, pushed `2026-11-01`. Isolated per-student environments; the sandbox the agent reads, never writes |
+| Reference alternative | [anubislms/anubis](https://github.com/anubislms/anubis) | 🟢 **MIT** (`1,083 B`) | `main` | `382★`, NYU. Take its **pipeline design** where Autolab's Ruby stack is a poor fit for the client's estate |
+| Agent runtime | [crewaiinc/crewai](https://github.com/crewaiinc/crewai) | 🟢 **MIT** (`1,055 B`, untitled) | `main` | Reviewer/explainer/moderator roles over one submission |
+| or | [microsoft/autogen](https://github.com/microsoft/autogen) | 🟢 **MIT** via **`LICENSE-CODE`** (`1,141 B`) | `main` | 🔴 Vendor `LICENSE-CODE`, **not** `LICENSE` — the latter is CC-BY-4.0 and does not grant code rights |
+| LMS attach point | [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | 🟢 **MIT** (`1,065 B`) | `main` | Only where Canvas is the institution's LMS of record; the agent reaches rosters/assignments over MCP |
+
+**Wiring.** Autolab's autograder emits the objective result; the agent runs **after** it, reads the
+failing test output plus the student's diff from the JupyterHub workspace, and writes a *draft*
+comment. 🔴 **The draft never becomes a grade** — reuse this base's existing `grading-draft-gate`
+recipe: agent proposes → Autolab stores as unpublished → instructor approves. 🟢 The teacher-approval
+step is the feature, not the friction.
+
+🔴 **Licence boundary to brief counsel on:** Autolab is Apache-2.0 and JupyterHub BSD-3-Clause, so
+the deliverable may ship closed; but if AutoGen is the runtime, the `LICENSE`/`LICENSE-CODE` split
+must be recorded in the bill of materials or an audit will read CC-BY-4.0 on a code dependency.
+
+## 🆕 P-597-B — 🟢 **Offline-first credentialed skills programme with a real retention engine** (10–14 weeks, LATAM / APAC / EMEA)
+
+🔵 **Why this shape.** LATAM's binding constraint on these shelves is **delivery**, not licence, and
+its permissive platform-of-record tier was measured empty this pass. 🟢 This recipe therefore owns
+nothing platform-shaped: it packages content, schedules retention and issues a credential.
+
+| component | repo | grant (byte-read `2026-11-01`) | branch | role |
+| --- | --- | --- | --- | --- |
+| Retention engine | [open-spaced-repetition/fsrs-rs](https://github.com/open-spaced-repetition/fsrs-rs) | 🟢 **BSD-3-Clause** (`1,509 B`) | `main` | `455★`. FSRS **optimiser and scheduler** — fits per-learner parameters from real review logs. 🟢 A published algorithm, not a prompt |
+| Content packaging | [learningequality/studio](https://github.com/learningequality/studio) | 🟢 **MIT** (`1,115 B`) | 🔴 **`unstable`** | `211★`, pushed `2026-11-01`. Curate and export channels for Kolibri's offline delivery. 🔴 **Pin a SHA — the default branch is `unstable`** |
+| Credential issuance | [digitalcredentials/learner-credential-wallet](https://github.com/digitalcredentials/learner-credential-wallet) | 🟢 **MIT** (`1,092 B`) | `main` | Digital Credentials Consortium wallet — verifiable credentials on completion. 🔴 The search API `422`s on this address; it is alive |
+| Source → teachable unit | [juneyaooo/lineage-skill](https://github.com/juneyaooo/lineage-skill) | 🟢 **Apache-2.0** (`11,358 B`) | `main` | `466★`. Distils videos, PDFs and transcripts into **source-backed** Agent Skills — every generated item keeps its citation |
+| Edge inference (optional) | [open-edge-platform/education-ai-suite](https://github.com/open-edge-platform/education-ai-suite) | 🟢 **Apache-2.0** (`11,351 B`) | `main` | Intel reference apps for on-prem inference where learner data cannot leave the institution |
+
+**Wiring.** `lineage-skill` ingests the client's existing material and emits items **with citations
+attached**; Kolibri Studio packages them into an offline channel; `fsrs-rs` schedules review from
+the learner's actual grade history; completion mints a credential into the DCC wallet. 🟢 **The
+citation chain is what makes this defensible in a region whose institutions have adoption without
+governance** — every generated question points back to a source document the institution owns.
+
+🔴 **Do not let the agent set the schedule.** FSRS is a fitted model with published parameters; an
+LLM "deciding when to review" discards the only part of this stack with an error bound.
+
+## 🆕 P-597-C — 🟢 **District/ministry interop layer where both ends already speak MCP** (6–10 weeks, North America + EMEA)
+
+🔵 **Why this shape.** Two rows recovered this pass are *interop* rather than application code, and
+both are maintained by institutional bodies rather than vendors — so the agent never touches the SIS
+directly.
+
+| component | repo | grant (byte-read `2026-11-01`) | branch | role |
+| --- | --- | --- | --- | --- |
+| Roster seam (NA) | [ed-fi-alliance-oss/edfi-oneroster](https://github.com/ed-fi-alliance-oss/edfi-oneroster) | 🟢 **Apache-2.0** (`10,173 B`) | `main` | Serves a **OneRoster 1.2 API from an Ed-Fi ODS** — US K-12's data standard. `6★`, pushed `2026-10-31`: institution-grade and invisible to a star screen |
+| Curriculum seam (EMEA) | [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 **MIT** — file spelled **`LICENCE`** (`1,086 B`) | `main` | Oak National Academy curriculum via API, SDK **and a shipped MCP app**. 🟢 A national body maintains the grounding layer |
+| Institution back office | [aureuserp/aureuserp](https://github.com/aureuserp/aureuserp) | 🟢 **MIT** (`1,077 B`) | 🔴 `master` | `12,149★`. The permissive alternative to OpenEduCat (LGPL-3.0) and ERPNext (GPL-3.0) — **forkable and shippable closed** |
+| Synchronous classroom | [netless-io/flat](https://github.com/netless-io/flat) | 🟢 **MIT** (`1,062 B`) | `main` | `6,443★`. Web/Windows/macOS classroom client where the **client** is the deliverable |
+
+**Wiring.** The agent is an MCP client only: Oak's MCP app supplies curriculum grounding, the
+OneRoster API supplies who-is-in-which-class, and Aureus holds the administrative record. 🟢 **No
+component writes to the SIS** — the agent proposes, the back office records, a human commits. 🔵 For
+an EMEA engagement this inverts the usual build: curriculum grounding is *consumed* from a national
+body instead of constructed, which is the "capability, not compliance theatre" deliverable
+`p593`'s EMEA reading calls for.
+
+🔴 **Known gap in this recipe, stated rather than papered over.** There is **no equivalent
+institutional curriculum seam for LATAM or APAC** on these shelves: Sunbird
+([`sunbird-ed/sunbirded-portal`](https://github.com/sunbird-ed/sunbirded-portal), MIT, `1,072 B`) is
+the closest national-scale permissive platform but has not been pushed since `2026-02-21` and is
+`334 MB`. 🔵 Treat it as a reference architecture to mine, not a dependency — and price the
+curriculum layer as **build** in those regions, not **integrate**.
+
+---
+
 ## 🆕 p596 — 2026-11-01 — three recipes built entirely from rows this base had already found and never filed; every grant below was byte-read this pass
 
 🔴 **Why these are writable now.** `596-C` measured that **`2,015` of `2,243` ever-shelved

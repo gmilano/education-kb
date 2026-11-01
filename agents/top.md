@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-01
 ---
 
+🆕 **`p597` — scope stated before its result: `8` mandated legs run (`4` global, `4` regional),
+`20` backlog addresses promoted, `21` grants byte-read, `9` rows recorded unusable with a reason.**
+🔴 **`597-A`: the verification step this run prompt mandates is inert in this environment, and
+executed literally it would have rejected every real repository below.** `curl -sI
+https://github.com/<owner>/<repo>` returns 🔴 **`403`** for every repository not attached to this
+session — not `404`, not `200` — so it cannot separate a live address from a dead one. The GitHub
+search API adds a second failure mode: it returns 🔴 **`422` "cannot be searched"** for
+[`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet),
+which is **alive** and served its MIT grant on request. 🟢 **One instrument answered correctly in
+every one of the `28` addresses tested: a byte-read at `raw.githubusercontent.com`**, which returned `200` and full licence
+bytes every time. Liveness and grant are established there or not at all.
+
+🔴 **`597-B`: a repository's `spdx_id` and its code grant are different objects, and this pass
+measured three distinct mismatch shapes in one sitting** — see the table below. The sharpest is
+[`microsoft/autogen`](https://github.com/microsoft/autogen): the API reports **`CC-BY-4.0`**, and
+that is correct about the repository's `LICENSE` (`18,650 B`, Creative Commons Attribution) — but
+the **code** grant is `LICENSE-CODE`, **MIT**, `1,141 B`, present at the root and in `7` of the
+`python/packages/*` trees. 🔵 **This base recorded "AutoGen (MIT)" in its `cycle 2` and `cycle 3`
+summaries. That was the right answer arrived at without measurement**, and a licence screen trusting
+the API would now *reject* AutoGen as a content licence.
+
+🟢 **`597-D` — the two channels of this base saturate independently, and `27` passes of
+undifferentiated "nil" concealed which one was real.** With a gate that reads the shelf and the
+append-only logs *separately* (the correction `596-C` asked for), `22` of `24` market tokens served
+by the legs are held **on the shelf itself** — so the market-intel nil is 🔴 **real, and this is its
+twenty-eighth consecutive pass**. The *address* nil was 🟢 **an artifact**: `2,049` ever-shelved
+addresses are invisible to the old gate. One finding does not transfer to the other channel.
+
+🔴 **`597-E`, from this base's own history:** the placeholder `owner/repo` was shelved as data in
+**`8` of `15`** archived snapshots — the exact header-as-data defect this run prompt warns about,
+
+🔴 **`597-F` — this pass wrote a false "DEAD ADDRESS" into three pages and caught it before
+publishing.** [`DaRL-GenAI/instructional_agents`](https://github.com/DaRL-GenAI/instructional_agents)
+was recorded as dead on the strength of the search API's `total_count 0`. 🟢 **It is live** — `490★`,
+`106` forks, MIT (`1,067 B`, byte-read), an **EACL'26 Main** peer-reviewed multi-agent
+instructional-design system with its package on PyPI — and it is simply **absent from the GitHub
+search index**, while four of its siblings are indexed. 🔵 **A `0` is not a `404`.** The claim was
+reversed in `agents/top.md`, `agents/trending.md` and `intel/measured-unusable.md`, and the row is
+promoted below. 🔴 **A wrong explanation was drafted and withdrawn too** — case-sensitivity in the
+`repo:` qualifier — refuted because all three spellings return `0`; publishing it would have sent
+the next pass to re-case `1,449` addresses for nothing.
+confirmed to have happened here. 🟢 It is absent from today's shelf.
+
+### 🟢 The three licence-screen failure shapes, each measured by byte-read this pass
+
+| repo | API `spdx_id` | byte-read at the real branch | why a screen gets it wrong |
+| --- | --- | --- | --- |
+| [microsoft/autogen](https://github.com/microsoft/autogen) | 🔴 `CC-BY-4.0` | 🟢 **MIT** — `LICENSE-CODE`, `1,141 B` (root + `7` packages) | Two grant files; the API reads the **content** one. `LICENSE` really is CC-BY-4.0 (`18,650 B`) |
+| [crewaiinc/crewai](https://github.com/crewaiinc/crewai) | 🟢 `MIT` | 🟢 **MIT** — `1,055 B`, **no title line** | File opens `Copyright (c) 2025 crewAI, Inc.`; a title-matching screen returns `UNRECOGNISED` |
+| [oaknational/oak-open-curriculum-ecosystem](https://github.com/oaknational/oak-open-curriculum-ecosystem) | 🟢 `MIT` | 🟢 **MIT** — spelled **`LICENCE`**, `1,086 B` | British spelling; a probe of `LICENSE` only calls a real MIT repo unlicensed |
+
+### 🟢 Agent and agent-adjacent rows promoted off the `596-C` backlog — every grant byte-read `2026-11-01`
+
+| Agent / framework | Repo | ★ | Grant (byte-read) | Branch | Last push | What it does |
+| --- | --: | --: | --- | --- | --- | --- |
+| **AutoGen** | [microsoft/autogen](https://github.com/microsoft/autogen) | **61,661** | 🟢 **MIT** (`LICENSE-CODE`, `1,141 B`) 🔴 repo `LICENSE` is CC-BY-4.0 | `main` | `2026-10-28` | Agentic framework; multi-agent conversation + tool use. Shelved in `6` snapshots, dropped |
+| **CrewAI** | [crewaiinc/crewai](https://github.com/crewaiinc/crewai) | **60,385** | 🟢 **MIT** (`1,055 B`, untitled) | `main` | 🟢 `2026-11-01` | Role-playing multi-agent orchestration. Shelved in `6` snapshots, dropped |
+| **Lineage Skill** | [juneyaooo/lineage-skill](https://github.com/juneyaooo/lineage-skill) | **466** | 🟢 **Apache-2.0** (`11,358 B`) | `main` | `2026-07-23` | Distills videos, PDFs, transcripts and notes into **source-backed teacher Agent Skills** — the citation-preserving authoring seam |
+| **Canvas MCP** | [r-huijts/canvas-mcp](https://github.com/r-huijts/canvas-mcp) | **12** | 🟢 **MIT** (`1,065 B`) | `main` | `2026-09-21` | MCP server for **Canvas LMS** — the attach point for the dominant North American HE estate |
+| **Moodle MCP** | [peancor/moodle-mcp-server](https://github.com/peancor/moodle-mcp-server) | **45** | 🟢 **MIT** (`1,064 B`) | `main` | 🟡 `2026-02-22` | MCP server for Moodle. 🔴 **`8 KB` of source** — a reference, not a dependency |
+| **FeiFei Companion** | [simonstang/feifei-companion](https://github.com/simonstang/feifei-companion) | **110** | 🟢 **Apache-2.0** (`10,227 B`) | `main` | 🟡 `2026-04-19` | K-12 study-companion system, Chinese-language. 🔵 **APAC in-language supply** |
+| **Instructional Agents** | [DaRL-GenAI/instructional_agents](https://github.com/DaRL-GenAI/instructional_agents) | **490** | 🟢 **MIT** (`1,067 B`) | `main` | — | **EACL'26 Main**, peer-reviewed. ADDIE-model multi-agent instructional design — syllabus, slides and assessment from a course brief; package on PyPI. 🔴 Absent from the GitHub search index (`597-F`) |
+| **Instructional Agents Studio** | [DaRL-GenAI/instructional_agents_studio](https://github.com/DaRL-GenAI/instructional_agents_studio) | 0 | 🟢 **MIT** (`1,093 B`) | `main` | `2026-09-24` | The UI/orchestration layer over the above. 🔵 `0★` — take it as a reference implementation, not a dependency |
+
+### 🔴 Measured and NOT shippable — recorded so the next pass does not re-find them
+
+| Repo | ★ | Measured | Disposition |
+| --- | --: | --- | --- |
+| [anonymousonyx22/brightspace-d2l-mcp](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 29 | 🔴 `NOASSERTION` — custom terms, pushed `2026-11-01` | **REVIEW** — live and useful (Brightspace MCP), but counsel must read the terms |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | 1 | 🔴 **AGPL-3.0** | **BLOCK** for a closed deliverable |
+| [loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) | 54 | 🔴 **no licence file** | **BLOCK** |
+| [onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) | 18 | 🔴 **no licence file** | **BLOCK** |
+| [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | 4,393 | 🟢 MIT, 🔴 **pushed `2025-10-26` — `13` months stale**, `213 MB` | **DEMOTED.** This base's `cycle 2`/`cycle 3` summaries carried it as live supply; it is a frozen curriculum |
+| [littlecookie0722/ai-teaching-agent](https://github.com/littlecookie0722/ai-teaching-agent) | **0** | 🟢 MIT, live `2026-08-23` | **NOT SHELVED** — `0★`, no adopters. Fewer real rows beat padding |
+
+---
+
 🆕 **`p596` — scope stated before its result: `8` mandated legs run (`4` global, `4` regional), `0`
 new addresses, **twenty-seventh consecutive nil** — and this pass stopped treating that as a
 property of the search channel. 🔴 `596-C`: **the shelf is lossy and the log is lossless.**

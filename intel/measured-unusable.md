@@ -1,7 +1,45 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
+---
+
+## 🆕 `p597` — `2026-11-01` — `9` dispositions registered (a tenth was drafted and **withdrawn** — see `597-F`), so the `596-C` backlog shrinks by refusal as well as by promotion
+
+🔵 **Why these are filed here rather than left in a log.** `596-C` established that a row sitting
+only in an append-only trending log reads as *"already held"* to the gate and is therefore never
+re-examined **or** rejected — it is simply invisible. 🟢 Re-measured this pass: `2,049` addresses are
+in exactly that state. 🔴 **A promotion is only half the fix.** A measured refusal is also a
+disposition, and without one the same dead or ungranted address costs a future pass its legs again.
+Each row below was measured `2026-11-01` and is now greppable on a **shelf-class** page.
+
+| repo | ★ | measured `2026-11-01` | class | disposition |
+| --- | --: | --- | --- | --- |
+| [formalms/formalms](https://github.com/formalms/formalms) | 37 | 🔴 **no licence file**; live `2026-07-17`; `112 MB`; branch `master` | ungranted platform | 🔴 **BLOCK** — a complete, live LMS with no grant whatever. The largest unlicensed platform measured here |
+| [loyaniu/moodle-mcp](https://github.com/loyaniu/moodle-mcp) | 54 | 🔴 **no licence file**; live `2026-06-29` | ungranted component | 🔴 **BLOCK** |
+| [onbirdev/moodle-webservice_mcp](https://github.com/onbirdev/moodle-webservice_mcp) | 18 | 🔴 **no licence file**; live `2026-07-23` | ungranted component | 🔴 **BLOCK** |
+| [csmediapro/moodle-mcp-server](https://github.com/csmediapro/moodle-mcp-server) | 1 | 🔴 **AGPL-3.0**; live `2026-10-22` | copyleft | 🔴 **BLOCK** for a closed deliverable; usable only as a hosted service with source offer |
+| [anonymousonyx22/brightspace-d2l-mcp](https://github.com/anonymousonyx22/brightspace-d2l-mcp) | 29 | 🔴 `NOASSERTION` — custom terms; live `2026-11-01` | non-standard grant | 🟡 **REVIEW** — genuinely useful (the only Brightspace MCP found) but counsel must read the terms before any engagement |
+| [1edtech/caliper-spec](https://github.com/1edtech/caliper-spec) | 22 | 🔴 `NOASSERTION`; pushed `2025-10-07` — **stale `>12` months** | spec, no open grant | 🟡 **READ-ONLY REFERENCE** — cite it, never vendor it |
+| [menthorlabs/menthor](https://github.com/menthorlabs/menthor) | 582 | 🟢 Apache-2.0 — 🔴 **ARCHIVED**; last push `2024-04-21`; `26 MB` | abandoned | 🔴 **DEAD.** The largest LATAM-origin *permissive* education platform this base has found; read-only for `2.5` years |
+| [panaversity/learn-agentic-ai](https://github.com/panaversity/learn-agentic-ai) | 4,393 | 🟢 MIT — 🔴 pushed `2025-10-26`, **`13` months stale**; `213 MB` | frozen curriculum | 🔴 **DEMOTED.** This base's `cycle 2` and `cycle 3` summaries carried it as live supply; it is course material, not a maintained dependency |
+| [DaRL-GenAI/instructional_agents](https://github.com/DaRL-GenAI/instructional_agents) | **490** | 🟢 **MIT** (`1,067 B`, byte-read `2026-11-01`); `106` forks; EACL'26 Main; 🔴 absent from the GitHub search index | 🟢 **NOT UNUSABLE — ENTRY WITHDRAWN.** Listed here earlier in this pass as a dead address on a `total_count 0`. It is live, permissive and peer-reviewed; promoted to [`../agents/top.md`](../agents/top.md). See `597-F` |
+| [littlecookie0722/ai-teaching-agent](https://github.com/littlecookie0722/ai-teaching-agent) | **0** | 🟢 MIT `1,064 B`-class grant; live `2026-08-23` | real but unadopted | 🟡 **NOT SHELVED** — `0★`, no adopters, no third-party validation. Recorded so it is not re-found; **fewer real rows beat padding** |
+
+🔴 **Two of these were demotions of rows this base previously presented as supply**
+(`panaversity/learn-agentic-ai`, and `menthorlabs/menthor` as a LATAM permissive example). 🔵 **A
+register of refusals has to be able to demote**, or a stale shelf row outlives the measurement that
+contradicts it.
+
+🟢 **Instrument note (`597-A`), which governs every row above.** None of these dispositions could be
+reached with the verification this harness's run prompt prescribes: `curl -sI
+https://github.com/<owner>/<repo>` returns **`403`** here for every repository not attached to the
+session, live or dead. Liveness and grant were established by byte-read at
+`raw.githubusercontent.com` (`200` + full licence bytes), with the GitHub search API used only for
+stars, push date, size and the `archived` flag — and it 🔴 **`422`s on at least one live repository**
+([`digitalcredentials/learner-credential-wallet`](https://github.com/digitalcredentials/learner-credential-wallet)),
+so a `422` must never be recorded as "dead".
+
 ---
 
 # Measured / Unusable — the ungranted-domestic-supply register
