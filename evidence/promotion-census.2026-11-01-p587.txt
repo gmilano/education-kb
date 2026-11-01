@@ -1,0 +1,38 @@
+addresses in append-only logs      : 3483
+addresses on curated pages         : 689
+in logs but on NO curated page     : 2831
+  of those, re-found 10+ times     : 29
+  of those, re-found 20+ times     : 1
+
+=== TOP 30 UNPROMOTED BY RE-FIND COUNT ===
+refinds	address
+36	openedx/edx-platform
+18	littlecookie0722/AI-Teaching-Agent
+17	beltromatti/get-it
+17	foradian/fedena
+16	huggingface/smolagents
+15	ashishpatel26/500-AI-Agents-Projects
+15	RohanMuppa/brightspace-mcp-server
+15	SimonsTang/feifei-companion
+15	jdolny/OneRoster.NET
+14	mitodl/open-learning-ai-tutor
+14	loyaniu/moodle-mcp
+14	menthorlabs/menthor
+14	formalms/formalms
+13	codeXsidd/Studivexa
+13	Apereo-Learning-Analytics-Initiative/OpenLRW
+12	rasbt/LLMs-from-scratch
+12	projectfedena/fedena
+11	echo-loop/Echo-Loop
+11	theopenem/OneRoster.NET
+11	Dymayo/moodler-mcp
+11	kvnloo/tutor-mcp
+11	MarcosNahuel/moodle-mcp
+11	ably-labs/realtime-quiz-framework
+11	LearningLocker/learninglocker
+10	biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent
+10	cortega26/chile-hub
+10	Jawadh-Salih/moodle-mcp-server
+10	Ed-Fi-Alliance-OSS/edfi-oneroster
+10	LongsightGroup/qti3
+9	freeCodeCamp/freeCodeCamp

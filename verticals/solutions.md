@@ -4,6 +4,32 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p587 — 2026-11-01 — the virtual-classroom and assessment tiers, placed; and the unlicensed SIS re-confirmed rather than re-discovered
+
+Every licence below read from the repository's own licence file on **2026-11-01**. Two tiers
+this page had named but not filled now have a platform of record each.
+
+| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+|---|---|---|--:|---|---|---|
+| 🆕 **Virtual classroom** | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** | **9,262** | `2026-10-31` | 🟡 **Link, don't modify.** LGPL permits proprietary code to *link* against it; changes to BBB itself carry back | 🟢 **The richest AI surface on this page and the least contested**: recordings, transcripts and whiteboard events are the raw material for lecture summarisation, participation analytics and auto-generated revision material. The AI sits **beside** BBB consuming its recordings — no fork, no copyleft exposure. 🔴 Default branch is `v4.0.x-develop`, not `main`. |
+| 🆕 **Assessment / problem-driven courses** | [PrairieLearn/PrairieLearn](https://github.com/PrairieLearn/PrairieLearn) | 🔴 **Split grant** — AGPL-3.0 CE **+** proprietary `apps/prairielearn/src/ee/` **+** AGPL-3.0 on *all* client-side JS **+** MIT portions | **527** | `2026-11-01` | 🔴 **No** | 🟡 **Read it, do not ship it.** Its question-generation and auto-grading model is the best open reference for problem-driven assessment, and its licence file is the reason a studio builds its own: the AGPL reaches the compiled client JavaScript, which is the part a client would want branded. |
+| 🆕 **Skills / competency taxonomy** | [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | 🟡 **ODbL-1.0** — a **data** licence, not a software one | **7,489** | `2026-10-30` | 🟡 **Counsel question** — share-alike attaches to *derived databases* | 🟢 The spine for competency mapping, course-to-job alignment and reskilling paths. Build a **produced work** on it freely; 🔴 publishing an *enriched taxonomy* means publishing the enrichment. See `587-E`. |
+| 🆕 **LTI 1.3 interchange (PHP)** | [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 **Apache-2.0** | **124** | 🔴 `2024-08-20` | 🟢 **Yes** | 🟢 The reference implementation **under the standards body's own org** — 1EdTech writes LTI. 🔴 ~26 months stale, so pin and test. 🔵 Same codebase as the `packbackbooks` address this page already carries: **1EdTech is where it moved.** |
+
+### 🔵 The unlicensed SIS: re-confirmed, and this page was already right
+
+[`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) — **347★, pushed
+`2026-10-26`, no licence file at five paths on `master`, API licence `NONE`.**
+
+🟢 **This page's existing row already says exactly that** — *"Actively maintained and
+unlicensed. A student information system with no grant is `BLOCK` regardless of how current
+it is."* 🔵 It is recorded here because `p587` re-measured it from a different channel and
+reached the identical verdict, which is **confirmation, not a finding** — and because a
+naive sweep this pass flagged this row as self-contradictory when it is not. Full account at
+`587-A` on [`../agents/top.md`](../agents/top.md).
+
+---
+
 ## p586 — 2026-11-01 — the education ERP tier, found and licence-resolved: what a studio may customise, and the one licence that makes an AI side-car legal without a fork
 
 🟢 **The question this page exists to answer** — *which real education systems can a studio

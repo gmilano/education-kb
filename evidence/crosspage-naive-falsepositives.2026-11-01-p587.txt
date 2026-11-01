@@ -1,0 +1,47 @@
+addresses on curated pages: 689
+addresses appearing on more than one curated page: 175
+
+=== CONTRADICTIONS: one address, different licence tokens on different pages ===
+
+24kchengYe/human-skill-tree
+   AGPL-3.0       <- README.md, agents/top.md, intel/trends.md
+   NOASSERTION    <- intel/trends.md
+
+OS4ED/openSIS-Classic
+   GPL-2.0        <- README.md, verticals/solutions.md
+   NOASSERTION    <- verticals/solutions.md
+   Unlicense      <- verticals/solutions.md
+
+OpenOLAT/OpenOLAT
+   Apache-2.0     <- compose/patterns.md, intel/market.md, repos/foundations.md, verticals/solutions.md
+   NOASSERTION    <- intel/trends.md
+
+aaryansamanta/nextgen-ai
+   MIT            <- agents/top.md
+   NOASSERTION    <- intel/trends.md
+
+andymatuschak/orbit
+   Apache-2.0     <- intel/trends.md, repos/foundations.md
+   NOASSERTION    <- agents/top.md
+
+bruchris/canvas-lms-mcp
+   AGPL-3.0       <- compose/patterns.md
+   MIT            <- README.md
+
+okpy/ok
+   Apache-2.0     <- README.md
+   MIT            <- README.md
+
+openeducat/openeducat_erp
+   LGPL-3.0       <- compose/patterns.md, repos/foundations.md, verticals/solutions.md
+   NOASSERTION    <- intel/trends.md
+
+openedx/XBlock
+   AGPL-3.0       <- compose/patterns.md
+   Apache-2.0     <- compose/patterns.md, repos/foundations.md, verticals/solutions.md
+
+thm-mni-ii/feedbacksystem
+   Apache-2.0     <- agents/top.md
+   MIT            <- README.md
+
+contradictory addresses: 10

@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-01
 ---
 
+## Pass 587 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE CENTRAL RESULT IS THIS PASS'S OWN WITHDRAWAL: IT BUILT A CROSS-PAGE LICENCE RECONCILIATION SWEEP TO CLOSE `586-A`, THE SWEEP REPORTED `10` CONTRADICTIONS ACROSS `679` ADDRESSES, AND A HAND AUDIT FOUND `0` BASE DEFECTS AND `10 OF 10` FALSE POSITIVES. 🔴 `586-A` WAS FALSE WHEN FILED — THE STEP IS `gate-shelf-consistency`, `59` CONTROLS, IN `HOOK_GATES`, BLOCKING COMMITS SINCE `p308`, AND ITS CONTROL LIST NAMES ALL FOUR TRAPS THE REBUILD FELL INTO. 🟢 FIVE NEW SHELF ROWS, `38 → 43`, AND NOT ONE FROM A SEARCH: ALL FIVE WERE IN THE APPEND-ONLY LOGS, RE-FOUND `19`–`26` TIMES, INCLUDING MIT REPOS AT `78,542★` AND `76,141★` THAT WITHDRAW `p586`'s "LARGEST ROW" CLAIM. 🟢 LATAM IS A MEASURED `33×` GAP AGAINST AN APAC CONTROL, NOT A NIL. 🔴 `p579`'s MEASUREMENT CHANNEL DOES NOT EXIST IN THIS ENVIRONMENT. SIX REGISTERED (`587-A`…`587-F`).**
+
+### 🔴 The withdrawal, because it is worth more than the rows
+
+`586-A` asserted *"the step itself still does not exist — a `grep` of every curated page for
+each repo address, run before commit, would close it."* This pass wrote that `grep` instead
+of looking for it. **It exists three times:**
+
+| instrument | pass | keys on | wired? |
+|---|---|---|---|
+| `gate-shelf-consistency` → `compose/code/p308-shelf-consistency/` | `p308` | licence cells across the live shelves | 🟢 **`HOOK_GATES` (`Makefile:128`), blocks via `ingest/pre-commit`** |
+| `compose/code/p121-stale-token-crosspage/crosspage.py` | `p121` | licence tokens vs a measured truth | 🟡 standalone |
+| `ingest/crosspage-figure-claims.py` | `p538` | numeric claims | 🟡 standalone |
+
+🔴 **`p538`'s docstring states it in its ninth line** — *"This base already has a cross-page
+contradiction sweep … It keys on LICENCE TOKENS."* One `ls ingest/` would have prevented
+both the gap and the rebuild. **Fourth rediscovery of the same instrument.**
+
+🔴 **And the rebuild produced three corrections that were drafted and withdrawn.** All ten
+of its hits share one shape — a row naming **one** repo URL and **two** licences, the second
+belonging to a platform or comparator in the same row. `compose/patterns.md:1647` reads
+`| Canvas (AGPL-3.0) | bruchris/canvas-lms-mcp | **MIT** |`: the AGPL-3.0 is **Canvas**, and
+the row is correct. `patterns.md:1648` does the same with Open edX beside `openedx/XBlock`
+and calls the distinction *"the key fact"*. `verticals/solutions.md:336` already reads
+🔴 `NONE … BLOCK` for `openSIS-Classic`, which this pass re-measured identically.
+🟢 **`Makefile:661` lists `p308`'s controls as covering "comparators, possessives, quoted
+claims, dual grants, paired rows" — the four classes, enumerated ~280 passes earlier.**
+The instrument is retained as a **negative control** at `ingest/p587-crosspage-naive.py`
+with its own failure written into the docstring.
+
+### 🟢 Five rows, `38 → 43`, every one already in this base
+
+| Repo | Licence (text) | Stars | Last push | Re-finds before filing |
+|---|---|--:|---|--:|
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** | **78,542** | `2026-10-31` | **26** |
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **MIT** | **76,141** | `2026-10-29` | **26** |
+| [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT** | **36,673** | `2026-10-28` | **19** |
+| [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** | **63** | `2026-09-19` | **19** |
+| [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | 🟢 Apache-2.0 | **34** | `2026-10-22` | — |
+
+🔴 **`p586`'s claim that `ppt-master` (71,803★) is "larger than every other row on this page
+combined" is WITHDRAWN.** Four platform/component rows were also filed on
+`repos/foundations.md`: `bigbluebutton` (LGPL-3.0, 9,262★), `os-taxonomy` (**ODbL-1.0**,
+7,489★), `PrairieLearn` (**split grant**, 527★) and `1EdTech/lti-1-3-php-library`
+(Apache-2.0, 124★, stale).
+
+### 🟢 Promotion, not discovery — measured three times now, and the rank has no signal
+
+`3,483` addresses in the append-only logs, `679` on curated pages, **`2,841` (`81.6 %`)
+never filed**. 🔴 `p539` (`4,144 / 240`) and `p585` (`3,094 / 3,415`) measured the same
+quantity on wider scopes; **this is the third measurement, taken before either was read.**
+🟢 What is new is that the obvious fix fails: the top thirteen of the ranked backlog holds
+two MIT repos above `76,000★`, **two addresses that do not exist** (`foradian/fedena`,
+`mitodl/open-learning-ai-tutor`), three with no licence grant, and one with **`0★` after
+eighteen sightings**. Gate on grant and liveness, *then* rank — `p533`'s rule, now with
+specimens.
+
+### 🟢 All four regional legs paid; LATAM is a number
+
+Iberian-language education-AI repositories above `10★`: **2**, neither adoptable. Chinese
+control, same instrument, same hour: **67**. A ~**`33×`** asymmetry. 🔵 **An APAC engagement
+can adopt in-language; a LATAM engagement is a localisation or a BUILD** — an estimate line
+item, now measured. Regulatory movement dated per region on `intel/market.md`: 134 bills /
+31 states and `$169 M` in US awards (North America); EU AI-literacy duties live since
+`2025-02-02` and £200 m+ at the UK AI Adoption Summit (EMEA); Forrester's no-common-law,
+sovereignty-first frame (APAC); UNESCO IESALC/UNU-IAS (`2026-09-01`), ILIA 2025 and the Tec
+de Monterrey LATAM survey (LATAM).
+
+### 🔴 Channel: `p579`'s finding does not hold here
+
+`p579` recorded that `api.github.com` answers `200` *"including plain `curl` with no token"*.
+🔴 In this environment **every** `api.github.com/repos/{owner}/{name}` call failed
+authorisation, five for five. 🟢 Substitute used for every figure in this pass:
+`gh api -X GET search/repositories -f q='repo:owner/name'` — stars, `license.spdx_id`,
+`pushed_at` **and `default_branch`** — plus `raw.githubusercontent.com` for licence text.
+🟢 **`default_branch` matters:** `book-to-skill` = `master`, `feedbacksystem` = `dev`,
+`bigbluebutton` = `v4.0.x-develop`, `openeducat_erp` = `19.0`. Probing `main` would have
+filed four false absences.
+
+### Registered
+
+`587-A` (the naive sweep's 10 false positives, and `p308`'s control list naming them —
+**closed**), `587-B` (`README.md` is outside the blocking gate by design; unmeasured whether
+it currently carries a bad token), `587-C` (channel is environment-dependent),
+`587-D` (default branches are not guessable), `587-E` (no slot for a **data** licence —
+ODbL-1.0 — nor for the split grant, now a two-instance class), `587-F` (two addresses
+re-found 31 times between them do not exist). `585-A` re-probed and **still open**:
+`Agent4Edu`, 100★, ten paths `404`, last push unchanged at `2026-09-29`.
+
+---
+
 ## Pass 584 — reads 2026-11-01, commit 2026-11-01 — **🔴 A TREND FILED ONE PASS AGO WAS REFUTED BY A ROW ALREADY SITTING `158` LINES BELOW IT: `Trend 36` DECLARED THE PLATFORM TIER "COPYLEFT WITHOUT EXCEPTION" AND PUBLISHED ITS OWN FALSIFIER, WHICH `sakaiproject/sakai` — ECL-2.0, `1,240★`, PUSHED `2026-10-30` — HAD ALREADY SATISFIED ON `repos/foundations.md`, WITH THE LICENCE CORRECTLY IDENTIFIED. 🟢 `583-F` REFUTED AT `41×` AND GIVEN A MECHANISM. 🟢 `583-A`'s GATE CLEARED A SWEEP FOR THE FIRST TIME. 🔴 `FILED = 0` ON A `586`-ADDRESS TIER, ONE ROW RE-FOUND `36×`. 🟢 `583-C`, `583-D`, `583-G` CLOSED. 🔴 NINETEENTH NIL ON THE MANDATED LEGS. SIX REGISTERED (`584-A`…`584-F`).**
 
 ### 🔴 The central result: the refutation was free, and it was in the building

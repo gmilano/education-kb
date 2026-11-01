@@ -4,6 +4,80 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p587 — 2026-11-01 — the LATAM leg returns a measured `33×` asymmetry against APAC in the same instrument, and the regional market legs are reconciled against a spread this page already publishes
+
+### 🟢 The region finding that is actionable: LATAM has no in-language supply to adopt
+
+The repository-level in-language leg — the channel `p586` used to place its APAC rows —
+run in Spanish and Portuguese, with a Chinese control in the same hour:
+
+| leg | query | repos | best row |
+|---|---|--:|---|
+| LATAM | `educación ia stars:>20` | **0** | — |
+| LATAM | `tutor educacion stars:>10` | **0** | — |
+| LATAM | `educacao inteligencia artificial stars:>5` | **0** | — |
+| LATAM | `educacao ia stars:>10` | **1** | `kaledbarreto/SophIA` — 15★, **no licence**, last push `2024-05-12` |
+| LATAM | `escuela ia stars:>10` | **1** | `maxfloresv/FM849` — 14★, `NOASSERTION`, a **course repo** |
+| 🟢 APAC control | `教育 AI stars:>10` | **67** | — |
+| 🟢 APAC control | `教育 智能 stars:>20` | **42** | — |
+
+🔴 **Two Iberian-language repositories above 10★ and neither is adoptable, against 67 in the
+Chinese-language control — a ~`33×` asymmetry measured with one instrument in one hour.**
+The 104 hits on `educacion inteligencia artificial` are coursework repositories at 1–2★
+with no licence file.
+
+🔵 **What follows for delivery, concretely.** An APAC engagement can **adopt in-language**
+(`kaogong-skill`, `cram-engine`, `cn-math-taxonomy`, `OpenMAIC`, `DeepTutor` are all on
+this base's shelves and all APAC-origin). A LATAM engagement **cannot** — it is a
+localisation of a Global/English shelf row, or a BUILD. 🟢 That is not a lament: it is the
+estimate line item that separates a LATAM proposal from an APAC one, and it is now measured
+rather than assumed.
+
+🟡 **Method caveat, quantified:** `educación` returns **5,929** and `educacion` **11,175** —
+the unaccented form finds **1.9×** more. An accented-only query under-reports by half, so
+both forms are required. (This base holds accent-control evidence from `p476`–`p477`; this
+is the figure at a star floor.)
+
+### 🟡 The regional market legs — what they returned, and why no figure here is new
+
+All four mandated regional legs ran. 🔴 **Not one returned a figure this page can adopt
+without widening its own published spread**, which `p583` already set at `2.6×` and `p584`
+at `3.0×`:
+
+| region | what the leg returned | disposition |
+|---|---|---|
+| North America | 36–38 % of global share; **$3.68 B (2026)** on a 36 % basis; a third source gives ~$951 M (2024) | 🔴 **Inconsistent with itself** — a 36 % share and a $951 M regional total cannot both hold. Not adopted. |
+| EMEA | **56 %** of EMEA CEOs report AI readiness vs **48 %** Americas (Workday); **94 %** likely to invest in AI training in 2026 (CompTIA) | 🟡 **Enterprise-wide, not education.** Directional only, and labelled as such. |
+| APAC | **$591.6 M (2024) → $1,848.1 M (2029), 20.9 % CAGR** (MarketsandMarkets) | 🟢 **The only internally consistent regional series the leg returned**, and the slowest CAGR on this page — notable against the 41 %+ global figures. |
+| LATAM | *"Rest of Latin America"* **$18.2 M (2024) → ~$36 M (2029)** | 🔴 **Scope-incoherent**: "Rest of" excludes Brazil and Mexico, so it is not a LATAM total and must never be quoted as one. |
+
+🔵 **The repo-level LATAM finding above is worth more than any of these four figures**,
+because it was measured first-hand rather than purchased, and it changes an estimate.
+
+### 🟢 Regulatory movement by region, dated
+
+- **North America** — **134 bills across 31 states** tracked on AI in education as of
+  **March 2026** (privacy, classroom use, curriculum); **$169 M** in US Department of
+  Education awards released **January 2026** including responsible-AI-in-higher-ed support.
+  🔴 Still no federal statute: the posture remains state-by-state, which is what makes
+  `canvas-mcp`-style **attachment** rather than forking the right architecture here.
+- **EMEA** — EU AI Act **AI-literacy obligations in force since `2025-02-02`**; the European
+  Commission has **updated its ethical guidelines on AI in education**; the UK's first **AI
+  Adoption Summit** committed **£200 m+**. 🔴 The Annex III high-risk compliance date
+  remains contested across EU-facing sources (see the `p586` section) — unchanged this pass.
+- **APAC** — 🔴 **Forrester: no common APAC-wide AI law is expected**, and the 2026 regional
+  frame is **sovereignty, security and responsible deployment**. 🟢 This is why the APAC
+  shelf rows that run **offline or on local weights** (`wordlink`'s fine-tuned 1.5B,
+  `Kolibri`) are the strategically valuable ones, not the API-bound tutors.
+- **LATAM** — a **UNESCO IESALC / UNU-IAS working paper (`2026-09-01`, Arianna Valentini)**
+  maps AI use across LAC universities on five axes; **ILIA 2025** (ECLAC/CEPAL) published
+  **2026**; the **AI in Higher Education LATAM Survey 2026** (Tec de Monterrey, February
+  2026) reports the region as *more positive about AI in higher education than any other*.
+  🔵 **Enthusiasm high, in-language open-source supply ~zero** — those two facts sit
+  together and together they describe the opportunity.
+
+---
+
 ## p586 — 2026-11-01 — all four mandated regional legs paid, APAC reversed from a declared nil, and the EU's own high-risk date for education AI is contradicted by the EU's own sources
 
 🟢 **Four of four regional legs returned dated, attributable intelligence this pass.**
@@ -49,7 +123,7 @@ not be verified against HolonIQ directly and is **not** adopted here. Treat the 
 
 ## Opportunities by region
 
-Refreshed **2026-11-01** (`p586`). One subsection per region, closed vocabulary. Figures
+Refreshed **2026-11-01** (`p587`). One subsection per region, closed vocabulary. Figures
 carry their source; where a region returned nothing on an axis, that nil is written down,
 because an informed gap is information and silence looks exactly like coverage.
 
@@ -86,6 +160,9 @@ Canvas is the higher-ed default: attach via
 [`canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, FERPA-aware), **never a
 fork** (AGPL-3.0, and ~6 months since its last public push).
 
+
+🆕 **`p587`:** **134 bills across 31 states** tracked on AI in education (March 2026) and **$169 M** in US Dept. of Education awards (January 2026). 🟢 Two assessment-tier rows measured here this pass: [`PrairieLearn`](https://github.com/PrairieLearn/PrairieLearn) (527★, UIUC, pushed `2026-11-01`) is 🔴 **split-grant — AGPL-3.0 CE, proprietary `ee/` subtree, AGPL client JS**, so it is a reference and not a shippable base; [`OS4ED/openSIS-Classic`](https://github.com/OS4ED/openSIS-Classic) is re-confirmed 🔴 **unlicensed** (no grant at 5 paths, 347★, pushed `2026-10-26`) — maintained and still `BLOCK`.
+
 ### EMEA
 
 **Regulatory posture: the strictest *in principle*, and the least certain *in date*.**
@@ -117,6 +194,9 @@ outside the copyleft boundary. For data residency,
 and [`Open TutorAI CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)'s Ollama-local
 stack are the two shelf rows that answer the residency question *structurally* rather than
 contractually — which is what a high-risk classification rewards.
+
+
+🆕 **`p587`:** EU AI Act **AI-literacy obligations in force since `2025-02-02`**; EC **updated ethical guidelines on AI in education**; UK **AI Adoption Summit, £200 m+**. 🟡 **56 %** of EMEA CEOs report AI readiness vs **48 %** Americas (Workday) — enterprise-wide, not education, and directional only. 🔴 **The EMEA-origin tutor-evaluation benchmark has no grant:** [`eth-lre/mathtutorbench`](https://github.com/eth-lre/mathtutorbench) (ETH Zürich, EMNLP, 46★, `2026-08-27`) has **no licence file at 5 paths** — the region produces the evaluation science and licenses none of it.
 
 ### APAC
 
@@ -155,6 +235,9 @@ Study-Mate, educhain, pyKT, EduCDM, gen-mentor, `kaogong-skill`, `cram-engine`, 
 `universal-examprep-skill` are all APAC-origin — a partnering and contribution opportunity,
 not just a market.
 
+
+🆕 **`p587`:** 🔴 **Forrester expects no common APAC-wide AI law**; the 2026 regional frame is **sovereignty, security, responsible deployment**. 🟢 Market series **$591.6 M (2024) → $1,848.1 M (2029), 20.9 % CAGR** — the only internally consistent regional series the legs returned this pass, and the slowest CAGR on this page. 🟢 **The in-language repository supply is real and measured: 67 repos above 10★** (`教育 AI`), 42 above 20★ (`教育 智能`) — which is why APAC engagements can **adopt** rather than build (see the `p587` section above).
+
 ### LATAM
 
 🟢 **The region with the widest adoption-governance gap in the world, measured twice by
@@ -187,6 +270,9 @@ the computing-inequality headwind, [`Kolibri`](https://github.com/learningequali
 assessment weakness is exactly where `catsim` (BSD-3, **Brazil**) and `nbgrader` apply.
 🔴 Moodle and `rosariosis` dominate the installed base and are both copyleft — attach, do
 not fork.
+
+
+🆕 **`p587`:** 🔴 **The in-language open-source supply is effectively zero and now measured:** two Iberian-language education-AI repositories above 10★, **neither adoptable** (`SophIA` 15★ unlicensed and stale; `FM849` 14★ `NOASSERTION`, a course repo), against **67** in the Chinese-language control — a ~**33×** asymmetry. **A LATAM delivery is a localisation or a BUILD, never an in-language adopt.** 🟢 Demand evidence is strong and dated: **UNESCO IESALC / UNU-IAS working paper (`2026-09-01`, Valentini)**, **ILIA 2025** (ECLAC, published 2026), **AI in Higher Education LATAM Survey 2026** (Tec de Monterrey, Feb 2026) reporting the region as more positive on AI in higher education than any other. 🔴 Do **not** quote the *"Rest of Latin America"* market figure ($18.2 M → ~$36 M) as a LATAM total: its scope excludes Brazil and Mexico.
 
 ### Global / provenance unknown
 

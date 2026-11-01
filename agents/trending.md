@@ -4,6 +4,135 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p587` — `2026-11-01` — **🔴 THE CENTRAL RESULT IS A WITHDRAWAL: THIS PASS BUILT A CROSS-PAGE LICENCE RECONCILIATION INSTRUMENT, IT REPORTED `10` CONTRADICTIONS, AND A HAND AUDIT FOUND `0` BASE DEFECTS AND `10 OF 10` FALSE POSITIVES — WHILE THE INSTRUMENT IT DUPLICATES HAS BEEN A BLOCKING GATE SINCE `p308` WITH `59` CONTROLS NAMING EVERY TRAP IT FELL INTO. 🔴 `586-A` WAS FALSE WHEN FILED. 🟢 FIVE NEW SHELF ROWS, NONE FROM A SEARCH: ALL FIVE WERE ALREADY IN THIS LOG, RE-FOUND `19`–`26` TIMES, INCLUDING TWO MIT REPOS AT `78,542★` AND `76,141★` THAT WITHDRAW `p586`'s "LARGEST ROW" CLAIM. 🟢 ALL FOUR REGIONAL LEGS PAID; THE LATAM LEG IS A QUANTIFIED GAP WITH AN APAC CONTROL AT `33×`.**
+
+### 🔴 The withdrawal, in full, because it is the most useful thing this pass produced
+
+`586-A` said: *"the step itself still does not exist — a `grep` of every curated page for
+each repo address, run before commit, would close it."* So this pass wrote that `grep`.
+
+It should have read `ingest/` first. **The step exists three times over:**
+
+| instrument | pass | what it keys on | wired? |
+|---|---|---|---|
+| `gate-shelf-consistency` → `compose/code/p308-shelf-consistency/` | `p308` | **licence cells across the live shelves** | 🟢 **yes — in `HOOK_GATES` (`Makefile:128`), blocks via `ingest/pre-commit`** |
+| `compose/code/p121-stale-token-crosspage/crosspage.py` | `p121` | licence **tokens** vs a measured truth | 🟡 standalone |
+| `ingest/crosspage-figure-claims.py` | `p538` | **numeric** claims (stars, counts) | 🟡 standalone |
+
+🔴 **`p121`'s own successor says so in its docstring, nine lines in:** *"This base already
+has a cross-page contradiction sweep … It keys on LICENCE TOKENS."* A pass that opened one
+file in `ingest/` would not have filed `586-A`, and this pass would not have rebuilt it.
+**This is the fourth rediscovery of this instrument.**
+
+### 🔴 And the rebuild was not merely redundant — it was wrong, three times, nearly in print
+
+The naive sweep ran over `679` addresses on the curated pages and reported `10` carrying
+disagreeing licence tokens. **Three corrections were drafted.** All three were withdrawn at
+the audit step, and the remaining seven failed the same way:
+
+| what the sweep reported | what the row actually says | verdict |
+|---|---|---|
+| `bruchris/canvas-lms-mcp` — AGPL-3.0 on `patterns.md` vs MIT on `README.md` | `patterns.md:1647` = `\| Canvas (AGPL-3.0) \| bruchris/canvas-lms-mcp \| **MIT** \|` — **the AGPL-3.0 is Canvas**, the MIT is the MCP server. Licence text confirms MIT. | 🔴 **false positive** |
+| `openedx/XBlock` — AGPL-3.0 vs Apache-2.0, same page | `patterns.md:1648` pairs *Open edX (AGPL-3.0)* with *XBlock (Apache-2.0)* and calls the distinction **"the key fact"** | 🔴 **false positive — the row is the point** |
+| `okpy/ok` — MIT vs Apache-2.0, both on `README.md` | `README.md:5282` is the `397-A` **correction narrative**; the MIT in that sentence belongs to `gradethis`. The shelf row at `17299` reads **Apache-2.0**, which the licence text confirms. | 🔴 **false positive** |
+| `OS4ED/openSIS-Classic` — GPL-2.0 / Unlicense / NOASSERTION | `verticals/solutions.md:336` already reads 🔴 **`NONE`** — *"Actively maintained and unlicensed. A student information system with no grant is `BLOCK`."* **Measured identically this pass:** no licence text at 5 paths on `master`, API `NONE`, 347★, pushed `2026-10-26`. | 🔴 **false positive — the base was already right** |
+
+🟢 **Every single one has one shape:** a table row that names **one** repo URL and **two**
+licences, the second belonging to a *platform or comparator named in the same row*.
+
+🔴 **`gate-shelf-consistency`'s control list, verbatim from `Makefile:661`, covers
+"comparators, possessives, quoted claims, dual grants, paired rows"** — the four classes
+above, enumerated at `p308`, roughly `280` passes before this pass re-met them one by one.
+**The finding is not about licences. It is: read the instrument index before writing an
+instrument.**
+
+### 🟢 Five new rows — and not one of them came from a search
+
+Every row added to [`./top.md`](./top.md) this pass was **already in this log**:
+
+| Repo | Licence (text) | Stars | Last push | Re-finds in history | Region |
+|---|---|--:|---|--:|---|
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** | **78,542** | `2026-10-31` | **26** | Global |
+| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **MIT** | **76,141** | `2026-10-29` | **26** | Global |
+| [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT** (`LICENSE.md`) | **36,673** | `2026-10-28` | **19** | Global |
+| [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT** | **63** | `2026-09-19` | **19** | Global |
+| [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | 🟢 Apache-2.0 | **34** | `2026-10-22` | — | Global |
+
+🔴 **`p586` wrote that `ppt-master` (71,803★) is *"larger than every other row on this page
+combined by star count"*. WITHDRAWN:** two MIT rows above it were in this log, 26 times
+each, when that sentence was written.
+
+### 🟢 The LATAM leg is a measured gap, with a control — not a nil
+
+The mandated regional legs ran at the **repository** level in-language, which is the channel
+`p586` used to place its APAC rows. The Iberian-language result is a number, not an absence:
+
+| query | total | best row |
+|---|--:|---|
+| `educación ia stars:>20` | **0** | — |
+| `tutor educacion stars:>10` | **0** | — |
+| `educacao inteligencia artificial stars:>5` | **0** | — |
+| `educacao ia stars:>10` | **1** | `kaledbarreto/SophIA` — 15★, licence **`NONE`**, last push `2024-05-12` |
+| `escuela ia stars:>10` | **1** | `maxfloresv/FM849` — 14★, `NOASSERTION`, a **course repository**, not a product |
+| 🟢 **control:** `教育 AI stars:>10` | **67** | — |
+| 🟢 **control:** `教育 智能 stars:>20` | **42** | — |
+
+🔴 **Above 10★, Iberian-language education AI is two repositories and neither is adoptable;
+the Chinese-language control returns 67.** That is a **~33×** asymmetry in the same
+instrument, in the same hour. 🔵 **The consequence for a LATAM engagement is concrete: there
+is nothing in-language to adopt.** A LATAM delivery is a localisation of a Global/English
+row or a BUILD — whereas an APAC delivery can adopt in-language. 🟡 The accent trap is live
+and quantified: `educación` returns **5,929**, `educacion` **11,175** — the unaccented form
+finds **1.9×** more, so an accented query alone under-reports by half.
+
+### 🔴 Channel correction — `p579`'s finding does not hold in this environment
+
+`p579` recorded that `api.github.com` answers `200` *"including plain `curl` with no token"*.
+🔴 **Here, every `api.github.com/repos/{owner}/{name}` call returned an authorisation error
+— five for five.** 🟢 The substitute, which every measurement on this page used:
+`gh api -X GET search/repositories -f q='repo:owner/name'` → `stargazers_count`,
+`license.spdx_id`, `pushed_at` **and `default_branch`**; `raw.githubusercontent.com` serves
+licence text normally. 🔵 **A channel claim without its environment is a false capability
+handed to the next pass.**
+
+🔴 **A third channel is also unusable here, and it is the one the task description names:**
+`curl -sI https://github.com/{owner}/{repo}` returns **`403` for every address tried —
+fourteen for fourteen**, including addresses the search API confirms at 78,000★. 🟢 **So an
+HTML status code cannot verify existence in this environment, and a `404`-vs-`200` check
+would have graded every real repository as dead.** Existence here is established by two
+channels that do work: a `search/repositories` row (which only exists if the repository
+does) **and** `raw.githubusercontent.com` returning licence text. All fourteen addresses
+written this pass were confirmed on both.
+
+🟡 **Live-measurement drift, recorded rather than chased:** re-confirming at the end of the
+pass returned `78,545★` for `ai-agents-for-beginners` (filed at `78,542`) and `36,674★` for
+`book-to-skill` (filed at `36,673`). **A star count is a reading with a timestamp, not a
+fact**, and a later pass finding a 3-star difference has found nothing.
+
+🟢 **`default_branch` is why that matters.** Four rows measured this pass live on a branch no
+ladder would guess: `book-to-skill` = `master`, `feedbacksystem` = `dev`, `bigbluebutton` =
+`v4.0.x-develop`, `openeducat_erp` = `19.0`. Probing `main` would have filed four false
+absences.
+
+### Carried forward
+
+- `585-A` **still open**, re-probed: `bigdata-ustc/Agent4Edu`, 100★, ten paths, all `404`,
+  API `NONE`, **last push unchanged at `2026-09-29`** — the repository has not moved, so
+  neither has the gap.
+- 🔴 **Two addresses re-found 31 times between them do not exist:** `foradian/fedena` (17×)
+  and `mitodl/open-learning-ai-tutor` (14×). Resolved by org search — see `587-F` on
+  [`../repos/foundations.md`](../repos/foundations.md).
+
+### Registered this pass
+
+`587-A` (a naive sweep's 10 false positives, and `p308`'s control list naming them in
+advance — **closed**), `587-B` (`README.md` is outside the blocking gate by design),
+`587-C` (channel is environment-dependent), `587-D` (default branches are not guessable),
+`587-E` (no slot in the licence vocabulary for a **data** licence — ODbL-1.0),
+`587-F` (two non-existent addresses re-found 31 times).
+
+---
+
 ## 🆕 `p586` — `2026-11-01` — **🟢 ELEVEN NEW PERMISSIVE ROWS FROM TWO TOPIC QUERIES, INCLUDING A `71,803★` MIT REPO THIS BASE HAD NEVER SEEN — AND THE STRUCTURAL FINDING: EDUCATION AI IS SHIPPING AS *AGENT SKILLS*, NOT APPLICATIONS. 🔴 `NOASSERTION` IS NOT A PROXY FOR "PROBABLY PERMISSIVE": A `587★` ROW RESOLVED TO AGPL-3.0. 🔴 `p585` PUBLISHED TWO CONTRADICTORY VERDICTS FOR `orbit` ON TWO PAGES IN THE SAME PASS. 🟢 ALL FOUR REGIONAL LEGS PAID, INCLUDING APAC — WHICH WAS A DECLARED NIL AT `p585`.**
 
 ### 🟢 The discovery channel this base was missing for twenty passes

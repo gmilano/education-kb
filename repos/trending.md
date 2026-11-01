@@ -4,6 +4,90 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p587` — `2026-11-01` — **🟢 THE PROMOTION CENSUS, RE-RUN AND RE-SCOPED: `3,483` ADDRESSES IN THIS LOG, `679` ON CURATED PAGES, `2,841` (`81.6 %`) NEVER FILED ANYWHERE. 🔴 AND THE RANKING IS WORTHLESS AS A QUALITY SIGNAL — THE `#2` AND `#3` UNFILED ADDRESSES ARE MIT REPOS AT `76,141★` AND `78,542★`, WHILE AN `18×` RE-FOUND ROW HAS **ZERO STARS** AND A `17×` ROW DOES NOT EXIST. 🔵 `p533` SAID THIS IN WORDS; THIS PASS HAS THE SPECIMENS. 🟢 NINE PLATFORM/COMPONENT ROWS MEASURED, FOUR FILED.**
+
+### 🟡 First, the honest provenance of this census
+
+🔴 **This is not a new instrument.** `ingest/history-backlog.py` (`p539`) is HISTORY-minus-FILED
+and `ingest/backlog-gate.py` (`p539`) runs grant and liveness gates over it in bulk;
+`ingest/promotion-rank.py` (`p533`) established that promotion needs *two gates and one
+rank*, not a count. `p539` measured **4,144** history addresses against **240** filed — a
+**5.8 %** filing rate.
+
+🔴 **Nor is it a new measurement.** `p585`, two passes ago, published **`3,094` of `3,415`
+discovered addresses have never reached a curated page (`~90 %`)** — in the headline of this
+very log, `231` lines below this entry. This pass's `2,841 / 3,483` is the **third**
+measurement of the same quantity, and it was taken before that headline was read.
+
+🟢 **What this pass actually adds is the specimens that settle the ranking question** — and
+a denominator narrow enough to audit by hand. Scope here is the two append-only logs
+against the seven curated pages only — no `evidence/`, no `archive/` — so `2,841 / 3,483`
+is **not** a correction to `p539`'s `4,144 / 240` or `p585`'s `3,094 / 3,415`; the three
+count different sets and all three agree on the finding:
+
+| | 🔵 **before** this pass filed | 🟢 **after** |
+|---|--:|--:|
+| distinct addresses in `agents/trending.md` + `repos/trending.md` | **3,483** | 3,483 |
+| distinct addresses on the seven curated pages | **679** | **689** |
+| 🔴 in the logs, on **no** curated page | **2,841** (`81.6 %`) | **2,831** (`81.3 %`) |
+| of those, re-found **10+** times | **39** | **29** |
+| of those, re-found **20+** times | **4** | **1** |
+
+🔴 **Both columns are published deliberately.** `ingest/p587-promotion-census.py` reads the
+live pages, so re-running it after this pass's filings returns the **right-hand** column —
+and a later pass comparing its own run against the left-hand figure would file a
+contradiction that is not one. 🟢 **The left column is the state this pass measured; the
+right column is the state it left.** The ten-address delta is this pass's filings, and the
+drop from `4` to `1` in the `20+` band is the three giants coming off the backlog.
+
+### 🔴 The result that matters: re-find count predicts nothing
+
+`p533` wrote that a recall count *"cannot notice that an address has died"*. Here is that
+claim with its specimens — the head of the unfiled list, measured first-hand this pass:
+
+| re-finds | address | measured `2026-11-01` | verdict |
+|--:|---|---|---|
+| **36** | `openedx/edx-platform` | 🟡 pre-rename address; `p586` resolved it to `openedx/openedx-platform`, **which is filed** | 🟢 **correctly unfiled** |
+| **26** | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **MIT (text), 76,141★, `2026-10-29`** | 🔴 **missed gem — filed this pass** |
+| **26** | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT (text), 78,542★, `2026-10-31`** | 🔴 **missed gem — filed this pass** |
+| **24** | [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | 🟡 **ODbL-1.0 (text)** — a *data* licence, **7,489★**, `2026-10-30` | 🟡 **filed this pass, flagged — see `587-E`** |
+| **19** | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT (text), 36,673★**, branch `master` | 🔴 **missed gem — filed this pass** |
+| **19** | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT (text), 63★**, `2026-09-19` | 🟢 **filed this pass** |
+| **18** | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0 (text), 9,262★**, branch `v4.0.x-develop` | 🟢 **filed this pass** (copyleft, stated) |
+| **18** | `littlecookie0722/AI-Teaching-Agent` | 🟡 MIT, **`0★`**, `2026-08-23` | 🔴 **noise — re-found 18 times at zero stars** |
+| **17** | `foradian/fedena` | 🔴 **does not exist.** Live org is `projectfedena`; its `fedena` is 547★, licence **`NONE`**, last push **`2020-05-18`** | 🔴 **dead address** |
+| **16** | `eth-lre/mathtutorbench` | 🔴 **no grant** at 5 paths, 46★, `2026-08-27`, ETH Zürich (EMNLP) | 🔴 **not adoptable — EMEA** |
+| **16** | `1EdTech/lti-1-3-php-library` | 🟢 **Apache-2.0 (text)**, 124★, 🔴 stale `2024-08-20` | 🟢 **filed this pass** |
+| **14** | `mitodl/open-learning-ai-tutor` | 🔴 **does not exist.** Nearest live: `mitodl/tutor-mentor`, **0★**, `2023-10-20` | 🔴 **dead address** |
+| **14** | `loyaniu/moodle-mcp` | 🔴 **no grant**, 54★, `2026-06-29` | 🔴 **the Moodle-MCP gap persists** |
+
+🟢 **So the backlog is not a queue of missed gems, and it is not noise either — it is both,
+interleaved, and the re-find count does not separate them.** Of the thirteen head rows:
+**four were genuine finds**, **two were correctly skipped**, **two do not exist**, **three
+have no licence grant**, and **one has zero stars after eighteen sightings**.
+
+🔵 **Which is exactly `p533`'s rule, now with evidence: gate on grant, gate on liveness,
+then rank — and the three inputs are all free in the `search/repositories` row that
+measures the address anyway** (`license.spdx_id`, `pushed_at`, `stargazers_count`, plus
+`default_branch`). Nothing here needed a new channel; it needed the gates run.
+
+### 🟢 Platform and component rows filed on `foundations.md` this pass
+
+| Repo | Licence (text) | Stars | Last push | Tier | Shippable |
+|---|---|--:|---|---|---|
+| [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** | **9,262** | `2026-10-31` | virtual classroom of record | 🟡 linkable, modifications carry back |
+| [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | 🟡 **ODbL-1.0** | **7,489** | `2026-10-30` | skills/occupation taxonomy | 🟡 **data licence — counsel, see `587-E`** |
+| [PrairieLearn/PrairieLearn](https://github.com/PrairieLearn/PrairieLearn) | 🔴 **split: AGPL-3.0 CE + proprietary EE subtree + AGPL client JS + MIT portions** | **527** | `2026-11-01` | assessment engine | 🔴 **no** |
+| [1EdTech/lti-1-3-php-library](https://github.com/1EdTech/lti-1-3-php-library) | 🟢 **Apache-2.0** | **124** | 🔴 `2024-08-20` | LTI 1.3 reference impl. | 🟢 yes, but stale |
+
+🔴 **`PrairieLearn` is this base's second confirmed split-grant row after `orbit`**, and the
+same shape: permissive at the edges, copyleft-or-closed where the product is. Its licence
+file puts **all client-side JavaScript** under AGPL-3.0 *however it is served or compiled*,
+and reserves `apps/prairielearn/src/ee/` as a proprietary Enterprise Edition. 🔵 **Two
+instances make it a class, not an anomaly** — a split-grant column is now worth having.
+
+---
+
 ## 🆕 `p586` — `2026-11-01` — **🟢 THE EDUCATION **ERP** TIER FOUND AND LICENCE-RESOLVED: `openeducat_erp` IS LGPL-3.0, NOT THE `NOASSERTION` THE API REPORTS — AND IT WAS INVISIBLE TO THIS BASE BECAUSE ITS EXPECTED ADDRESS RETURNS `422`. 🔴 THE ERP/SIS TIER HAS **NO** PERMISSIVE OPTION AT ANY SIZE. 🟢 TOPIC-FACET DISCOVERY FINDS A `71,803★` MIT REPO TWENTY PASSES OF NAME SEARCH MISSED.**
 
 ### 🟢 The ERP tier — the "Odoo for education" this base never held

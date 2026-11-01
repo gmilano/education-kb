@@ -4,6 +4,83 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p587 — 2026-11-01 — two recipes the new rows make buildable, both built on the LGPL *link* boundary and the permissive curriculum tier
+
+Every component below was verified first-hand on **2026-11-01**: existence, stars and
+recency from `gh api search/repositories`, **licence from the repository's own licence
+file**. 🔴 Note the channel: `api.github.com/repos/{owner}/{name}` was unreachable in this
+environment, so `search/repositories` is the authority for every figure here (`587-C`).
+
+---
+
+## P-587-A — 🟢 **The lecture-to-courseware loop: BigBlueButton recordings in, revision material out, no fork and no copyleft exposure** (8–10 weeks, EMEA / North America / APAC)
+
+**The client problem.** An institution already runs virtual classes and already has
+thousands of hours of recordings nobody can use. They want revision material, summaries and
+assessment items generated from their *own* teaching, and they will not accept their
+lectures leaving the estate.
+
+**Why this is the cleanest offer in this file.** Every licence boundary falls the right way:
+
+| Role | Component | Licence (text) | Stars | Boundary that makes it legal |
+|---|---|---|--:|---|
+| Virtual classroom + recordings | [bigbluebutton/bigbluebutton](https://github.com/bigbluebutton/bigbluebutton) | 🔴 **LGPL-3.0** | **9,262** | 🟢 **LGPL permits *linking*.** The studio deploys BBB **unmodified** and consumes its recordings and events from outside. No derivative work, no carry-back. 🔴 Default branch `v4.0.x-develop`. |
+| Transcript → deck | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | 🟢 **MIT** | **71,803** | 🟢 Native PPTX with real shapes and narration — the deliverable a lecturer will actually accept |
+| Reading → study skill | [virgiliojr94/book-to-skill](https://github.com/virgiliojr94/book-to-skill) | 🟢 **MIT** | **36,673** | 🟢 Course reading list → a queryable skill, so generated material is grounded in the set text, not the model's memory. 🔴 branch `master` |
+| Retrieval-grounded tutor | [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | 🟢 Apache-2.0 | **34** | 🟢 LangGraph agentic RAG over a fixed corpus — answers come from *their* materials |
+| Spacing schedule | [open-spaced-repetition/fsrs4anki](https://github.com/open-spaced-repetition/fsrs4anki) | 🟢 **MIT** | **4,121** | 🟢 Turns generated items into a revision schedule instead of a dump |
+| Local inference | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT** | **1,163** | 🟢 Offline delivery where connectivity or residency rules bite |
+
+**How to wire it.** BBB's post-publish hook drops a recording manifest → transcribe locally
+→ `book-to-skill` indexes the course reading list as the grounding corpus →
+`ai-tutor-app`'s LangGraph retrieval answers and drafts items **against that corpus only**
+→ `ppt-master` renders the lecturer-facing revision deck → `fsrs4anki` schedules the items
+for students → `Kolibri` serves it offline.
+
+🔴 **The one thing not to do:** do not patch BBB. The moment the studio modifies BBB source,
+LGPL-3.0 carry-back attaches to the modification and the clean story is gone. Everything
+above consumes BBB's **outputs**.
+
+🟡 **Honest gap:** transcription is not specified here because this base has not measured a
+permissive education-grade ASR row. Declared rather than filled.
+
+---
+
+## P-587-B — 🟢 **The reskilling-path engagement: a skills taxonomy with a curriculum attached** (6–8 weeks, Global; LATAM-viable because it needs no in-language repo)
+
+**The client problem.** A corporate-learning or workforce-development buyer wants to know
+which skills their people lack, what to put in front of them, and whether it worked. This
+is the commonest corporate-learning brief and this base could not previously answer it,
+because the taxonomy spine was missing.
+
+| Role | Component | Licence (text) | Stars | Note |
+|---|---|---|--:|---|
+| Skills / occupation spine | [withmarbleapp/os-taxonomy](https://github.com/withmarbleapp/os-taxonomy) | 🟡 **ODbL-1.0** | **7,489** | 🔴 **A data licence.** Build a *produced work* on it freely; publishing an **enriched taxonomy** means publishing the enrichment — settle this before the SOW (`587-E`) |
+| Agent curriculum | [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | 🟢 **MIT** | **78,542** | 🟢 18 lessons, MIT — hand it to the client's engineers on day one |
+| Shipping curriculum | [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | 🟢 **MIT** | **76,141** | 🟢 The build-and-ship half; pairs with the row above |
+| Hands-on labs | [Fazmin/AILearningGuide](https://github.com/Fazmin/AILearningGuide) | 🟢 MIT | **242** | 🟢 51 labs: ML, transformers, RAG, agents |
+| Mastery model | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 **MIT** | **456** | 🟢 Knowledge tracing — turns completion into *evidence of mastery*, which is what the buyer is actually paying for |
+| Learning-record store | [openfun/ralph](https://github.com/openfun/ralph) | 🟢 **MIT** | **51** | 🟢 xAPI LRS, EMEA-origin (France Université Numérique), pushed `2026-10-31` |
+| Delivery seam | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** | **1,240** | 🟢 The one platform of record a studio may lawfully fork and ship |
+
+**How to wire it.** `os-taxonomy` supplies the skill graph → the client's role definitions
+are mapped onto it → gaps per person drive a path assembled from the three MIT curriculum
+rows → `ralph` collects xAPI statements as learners move → `pykt` converts that stream into
+mastery estimates that re-rank the path → `Sakai` (or the client's LMS over LTI 1.3) is the
+delivery surface.
+
+🟢 **Why this one travels to LATAM.** Nothing in it requires an in-language repository —
+which, per `p587`'s measurement, is the binding constraint in that region: **two
+Iberian-language education-AI repos above 10★, neither adoptable, against 67 in the Chinese
+control.** The curriculum rows are English-language and MIT, so localisation is a
+translation line item on known content rather than a build.
+
+🔴 **Sequence the licence question first.** ODbL's share-alike on derived databases is the
+only thing in this recipe that can surprise a client, and it surprises them *after* the
+enrichment work is done. Settle it in week one.
+
+---
+
 ## p586 — 2026-11-01 — four recipes the new rows make buildable, and the one the LGPL module boundary turns into the cleanest ERP offer in this file
 
 Every component named below was verified first-hand on **2026-11-01**: existence, stars and

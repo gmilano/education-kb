@@ -4,6 +4,81 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p587 — 2026-11-01 — the split grant is a class, not an anomaly; the data licence arrives in an education repo big enough to matter; and the discovery/promotion asymmetry is now a measured property of this base rather than a complaint
+
+### 🔴 Trend A — the split grant is a CLASS, and a one-value licence field cannot represent it
+
+**The measurement.** This base now holds **two** confirmed split-grant repositories, both
+measured from licence text:
+
+| Repo | Stars | The split |
+|---|--:|---|
+| [andymatuschak/orbit](https://github.com/andymatuschak/orbit) | 1,838 | Apache-2.0 everywhere **except** `packages/app` + `packages/backend` → **AGPL-3.0-or-later *or* BUSL-1.1** at the licensee's choice. 🔴 BUSL-1.1 is not an open-source licence. |
+| 🆕 [PrairieLearn/PrairieLearn](https://github.com/PrairieLearn/PrairieLearn) | 527 | **AGPL-3.0** for the Community Edition; **AGPL-3.0 for all client-side JavaScript** *however served or compiled*; `apps/prairielearn/src/ee/` is a **proprietary Enterprise Edition**; **MIT** only for portions copyright UIUC and outside contributors. |
+
+**Why it is a trend and not a coincidence.** Both are the same commercial shape: permissive
+at the library edges, copyleft-or-closed exactly where the product is. That is the standard
+open-core defence against a vendor reselling the product, and education software — sold to
+institutions with procurement departments — is where it should be expected.
+
+🔵 **The consequence for this base is structural, not editorial:** every shelf here has one
+licence column, and a one-value field **cannot express "Apache-2.0 except two directories"**.
+`p585` found this for `orbit` and `p586` reconciled it in prose. With a second instance the
+prose workaround stops scaling: a *split-grant* flag belongs in the schema. Registered as
+part of `587-E`.
+
+### 🟡 Trend B — the licence vocabulary meets a DATA licence, in a 7,489★ education-relevant repo
+
+[`withmarbleapp/os-taxonomy`](https://github.com/withmarbleapp/os-taxonomy) — **7,489★**,
+pushed `2026-10-30`, an open skills/occupation taxonomy — is **ODbL-1.0**: the Open Database
+License. 🔴 **Every grading rule in this base assumes the token governs code.** ODbL
+governs a *database*: share-alike attaches to **derived databases**, with a separate
+*produced work* clause for things built from it.
+
+**Why it matters commercially.** Competency mapping, course-to-job alignment and reskilling
+paths are what a corporate-learning client actually buys, and the taxonomy is the spine of
+all three. 🟢 A product built **on** the data is a produced work; 🔴 publishing an
+*enriched taxonomy* means publishing the enrichment. **That is a counsel question, and the
+answer is different from the answer for code** — which is precisely why grading it with a
+code rule would be wrong in either direction.
+
+🔵 This base already holds two **content**-grant anomalies alongside it — `nextgen-ai`'s
+licence file reads *"MIT License (Code)"* with the content grant unstated, and `gen-mentor`
+is CC0-1.0. Three rows, three grant *kinds*, one column.
+
+### 🔴 Trend C — this base's constraint is promotion, not discovery, and the rank has no signal
+
+**The measurement** (`p587`, scope: two append-only logs vs seven curated pages): **3,483**
+discovered addresses, **679** curated, **2,841 (81.6 %) never filed**. 🔴 **Three passes
+have now measured this** — `p539` at `4,144 / 240`, `p585` at `3,094 / 3,415`, this pass at
+`2,841 / 3,483` — on different scopes, with the same conclusion.
+
+🟢 **What `p587` adds is that the obvious fix does not work.** Ranking the backlog by
+re-find count puts, in its top thirteen: two MIT repos at **76,141★** and **78,542★**
+(genuine finds, filed this pass), **two addresses that do not exist**, **three with no
+licence grant**, and one with **zero stars after eighteen sightings**. A recall count
+cannot tell a 78,000★ repository from a dead address.
+
+🔵 **The trend statement, then, is narrow and testable:** the supply constraint in an
+open-source intelligence base of this age is not finding addresses, it is **grading** them —
+and the three inputs needed to grade (grant, liveness, size) arrive free in the same API row
+that confirms the address exists. `p533` specified this; `p587` is the evidence that nothing
+cheaper will do.
+
+### 🟢 Trend D — APAC can adopt in its own language; LATAM cannot. Measured, with a control.
+
+Iberian-language education-AI repositories above 10★: **2**, neither adoptable. Chinese
+language, same instrument, same hour: **67**. A ~**33×** asymmetry.
+
+**Why this is a trend and not a search artefact.** It is consistent with what is already on
+this base's shelves: the APAC rows (`DeepTutor`, `OpenMAIC`, `cn-math-taxonomy`,
+`kaogong-skill`, `cram-engine`) are in-language, origin-placed and maintained, while the
+LATAM rows are localisations. 🔵 **The delivery consequence is a line item:** an APAC
+engagement can start from an in-language asset; a LATAM engagement pays for localisation or
+a build. Full figures in the `p587` section of [`./market.md`](./market.md).
+
+---
+
 ## p586 — 2026-11-01 — the unit of shipping changed from the application to the *skill*, and the regulated surface in education AI is now assessment, not tutoring
 
 ### 🟢 Trend 1 — education AI ships as an agent skill, not an application
