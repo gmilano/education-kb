@@ -1,8 +1,120 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
 ---
+
+## 🆕 `2026-11-01` — `p579` — **the sixteenth nil on the mandated legs, and a `403` this base had attributed to the wrong endpoint**
+
+🔴 **Sixteenth consecutive nil on the four global `WebSearch` legs; second consecutive nil
+on all four regional legs, on intel as well as addresses.** Every fact the eight legs served
+was already on these shelves, checked by token before anything was written: UNESCO
+**IESALC** (`200` institutions, `19` countries, `87 %` using AI, `26 %` with a strategy,
+`9 %` evaluating; published `9 September 2026`, Digital Learning Week, with UNU-IAS); the
+**Observatory on AI in Education for LAC** and its partners (CAF, **CENIA**, Cetic.br,
+ECLAC, **Santillana**, Tec de Monterrey, **ProFuturo**, **Ceibal**, IRCAI); the Universidad
+de los Andes count of **`716`** instruments across `23` jurisdictions; **`Ley 2626 de
+2026`**; the **Digital Omnibus** / **Regulation (EU) 2026/1744** deferral to
+**`2 December 2027`** and `2 August 2028` for embedded systems; Korea's **AI Basic Act**;
+**Vietnam**'s AI law; Maryland **SB 720**; New York **A 9190**; the **K-12 AI Literacy and
+Readiness Act of 2026**; the **Gallup** teacher figure; `$10.6B` / `$42.48B`. Nothing new.
+🔵 The legs are a regression test on this base's coverage, not a source of it — second pass
+running to say so, and worth saying plainly rather than leaving the silence to look like
+coverage.
+
+### 🟢 The pass's result: `Gap 464-D` and `Gap 505-B` are refuted, and the base has had a first-hand star channel all along
+
+Both gaps record the GitHub **search** API as `403` here; `464-D` adds that "its failure
+looks like an empty result"; the figure register concluded a first-hand star count was
+**"still none"**. Four forms tried, **all `200`** — including the exact inline form `464-D`
+cites, and including **plain `curl` with no `gh` and no token**. The `403` is real but
+belongs to **`/repos/{owner}/{repo}`**, the per-repo endpoint, which was collapsed into the
+same gap.
+
+| Endpoint | Status here | Carries |
+|---|---|---|
+| `search/repositories` (all four forms) | 🟢 **200**, `30`/min | `license.spdx_id`, `stargazers_count`, `pushed_at`, `archived`, `forks_count`, `topics` |
+| `repos/{owner}/{repo}` | 🔴 **403** | — |
+| `curl -sI https://github.com/…` | 🔴 **403** on all 50 tried | nothing — as `p571`/`P914` already established |
+
+🔵 **Why it compounds.** The ledger's `unstated` and two-valued licence entries exist
+*because* the base believed no authoritative channel existed. Eight resolved this pass in
+one call each, `DeepTutor`'s `unstated`-since-`p2` among them (**Apache-2.0, `52,811★`**).
+The `repo:` qualifier also gives a liveness test with three distinguishable answers —
+`FOUND`, `422` (renamed/moved), `0` (owner resolves, repo gone) — where `curl` returns
+`403` for all three and for every live address too.
+
+### 🔴 What is NOT new, stated so the register stays honest
+
+Two rows this pass re-read were already correctly published, and the pass's first draft
+overstated them:
+
+- **`CaviraOSS/PageLM` is non-commercial** — already `BLOCK`/`REFUSED` on these shelves, with
+  `LICENSE.md` read at `8,563 B` and the key nuance already recorded: *"MIT's body verbatim,
+  then commercial-use, SaaS and resale restrictions."* 🔴 The defect is narrower: the
+  **address-ledger licence column says `MIT`**, contradicting the pages.
+- **`xiaoyang111222/cn-math-taxonomy` is CC BY-NC 4.0** — already published, already declared
+  as `Gap 572-C`. 🔴 The **ledger column says `CC-BY`**, dropping the **NC** term.
+- **`NOASSERTION` means "a licence file exists and the detector could not match it"** — already
+  recorded. What this pass adds is a measured rate, below.
+
+### 🔵 The `NOASSERTION` false-negative rate, measured on four rows
+
+| Row | File reads | `NOASSERTION` was |
+|---|---|---|
+| `CaviraOSS/PageLM` | CaviraOSS / PageLM Community License | 🔴 true positive |
+| `xiaoyang111222/cn-math-taxonomy` | Attribution-NonCommercial 4.0 International | 🔴 true positive |
+| `OpenOLAT/OpenOLAT` | **byte-verbatim Apache License 2.0** | 🟢 **false negative** — base confirmed |
+| `openeducat/openeducat_erp` | **GNU LESSER GENERAL PUBLIC LICENSE Version 3** | 🟢 **false negative** — base confirmed |
+
+**Two of four.** A rule of "reject on `NOASSERTION`" would have struck OpenOlat — the only
+permissive platform of record on the verticals page — and OpenEduCat. `NOASSERTION` is a
+priority queue for file reads, never a verdict, and `curl -sL raw.githubusercontent.com/…/LICENSE | head`
+settles each in one call.
+
+### 🟢 Two never-queried axes, and the shape of the one that matters
+
+| Axis | Repositories | Prior queries in `578` passes | Head | Head ★ | Head licence |
+|---|---|---|---|---|---|
+| `topic:exam-generator` | **73** | **0** | `heshengtao/exameow` | **93** | Apache-2.0 |
+| `topic:study-assistant` | **205** | **0** | `liuliu667/cram-engine` | **176** | MIT |
+| `topic:open-source-erp` | 6 | **0** | `aureuserp/aureuserp` | 12,145 | MIT |
+
+🔴 **The whole assessment-generation axis tops out at `93★`** — `73` repositories, none
+above a hundred, against `topic:flashcards` at `3,274` and `topic:language-learning` at
+`4,721`. Filed as trend 32: open source builds what learners use and skips what
+institutions are accountable for. Third instance in two passes, after `p578`'s `topic:iep`
+at `7★`.
+
+### Seven addresses new to a `3,168`-address ledger
+
+| Address | Licence | ★ | Disposition |
+|---|---|---|---|
+| `Hyan-Yao/instructional_agents` | **MIT** | 22 | 🟢 shelved — [`agents/top.md`](top.md) |
+| `evoluteur/braille-tools` | **MIT** | 43 | 🟢 shelved — [`repos/foundations.md`](../repos/foundations.md) |
+| `emil-a-dev/lama-loca` | MIT | 59 | registered — **first Russian-language address on this register**; not read first-hand, region not placed |
+| `BBkjdayup/BCTK` | MIT | 53 | registered — offline Windows question bank, Word/Excel import, duplicate-item detection |
+| `ZelinZhou-THU/lecture-notes-creator` | Apache-2.0 | 8 | registered — Tsinghua; MinerU → structured notes |
+| `alexfdez1010/exam-generator` | MIT | 24 | 🔴 registered **stale** — last push `2024-10-21` |
+| `dbosk/examgen` | MIT | 5 | registered — LaTeX `exam` document class |
+
+### Six addresses seen long ago and never shelved
+
+First seen `p80`–`p201`, carried in the discard **378–499 passes**, read first-hand this
+pass and filed: `HFUT-LEC/EduStudio` (MIT, `80★`, APAC), `ZhijieXiong/pyedmine` (MIT,
+`82★`, APAC), `tl-its-umich-edu/my-learning-analytics` (Apache-2.0, `37★`, **North
+America**), `heshengtao/exameow` (Apache-2.0, `93★`, APAC), `openfun/marsha` (MIT, `151★`,
+EMEA), `yungifez/skuul` (MIT, `468★`, unplaced). **Four MIT, two Apache-2.0 — six
+shippable rows already inside this base.** 🔵 `p572` found the LTI/xAPI layer sitting in the
+discard after being re-found 70–123 times each. Same defect, measured again: the discard is
+still where the yield is.
+
+### 🟡 One flag raised, not closed
+
+`A-R007/Multi-Agent-Study-Assistant` (`64★`) carries **no licence file** by GitHub's
+reading, and this base cites it in three files with a ledger licence of `unstated`.
+Unlicensed is not permissive — it is all rights reserved by default. Not resolved this pass.
+
 
 ## 🆕 `2026-10-31` — `p578` — **the mandated search legs went nil on BOTH halves for the first time, and five never-queried axes paid instead**
 

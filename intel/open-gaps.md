@@ -1,8 +1,37 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
 ---
+
+## 🆕 `p579` — `2026-11-01` — **🟢 `Gap 464-D` AND `Gap 505-B` REFUTED: THE GITHUB SEARCH API ANSWERS `200` ON ALL FOUR FORMS TRIED — INCLUDING THE EXACT INLINE FORM `464-D` RECORDS AS `403`, AND INCLUDING PLAIN `curl` WITH NO TOKEN. THE `403` BELONGS TO `/repos/{owner}/{repo}` ALONE, AND THE TWO WERE COLLAPSED INTO ONE GAP — SO THIS BASE HAS HAD A FIRST-HAND STAR-AND-LICENCE CHANNEL WHILE PUBLISHING THAT IT HAD NONE. `47` ADDRESSES RE-MEASURED, `8` LEDGER LICENCES SETTLED, `7` NEW ADDRESSES, `6` SHELVED AFTER `378`–`499` PASSES IN THE DISCARD. 🔴 THIS PASS'S OWN FIRST DRAFT CLAIMED TWO LICENCE DISCOVERIES THIS BASE HAD ALREADY PUBLISHED, AND IS RETRACTED. 🔴 SIXTEENTH NIL ON THE MANDATED LEGS. SIX REGISTERED (`579-A`…`579-F`).**
+
+### 🟢 Closed this pass
+
+| Gap | Verdict |
+|---|---|
+| **`464-D`** — *"the GitHub search API is unreachable from the `gh` CLI here and its failure looks like an empty result"* | 🟢 **REFUTED.** Four forms, all `200`, `total_count` `96` on the control axis: inline query string (the cited form), `-X GET` with `-f` fields, inline percent-encoded, and bare `curl` to `api.github.com/search/repositories` with no `gh` and no token. `gh api rate_limit` reports `.resources.search` `limit: 30`, `remaining: 30`. Evidence: [`search-endpoint-live`](../evidence/search-endpoint-live.2026-11-01-p579.tsv) |
+| **`505-B`**, the row *"`/search/repositories` returns 403"* | 🟢 **REFUTED on that row.** Its companion row — `/repos/{owner}/{repo}` returns `403` — is **re-attested** and is where the `403` actually lives |
+| the figure-register conclusion *"a first-hand star count — still none"* | 🟢 **SUPERSEDED.** `stargazers_count`, `license.spdx_id`, `pushed_at`, `archived`, `forks_count` and `topics` arrive on every search hit |
+
+### 🔴 Registered this pass
+
+| Gap | Statement and prescription |
+|---|---|
+| 🆕 **`579-A`** | **The `403` map is wrong in this base, and may be wrong in other directions.** `464-D`/`505-B` show a *per-endpoint* failure recorded as a whole-API one, and the cost was the measurement posture built around it — `303` `raw.githubusercontent` reads and `252` `git ls-remote` calls to work around a channel that answers directly. **Prescription:** re-probe every row of [`measured-unusable.md`](measured-unusable.md) and every `403` claim in this register **one endpoint at a time**, and record the endpoint, not the host. |
+| 🆕 **`579-B`** | **The address-ledger licence column is not gate-safe.** Two rows contradict this base's own published verdict: `CaviraOSS/PageLM` reads `MIT` in the column against `BLOCK`/bespoke-non-commercial on the pages, and `xiaoyang111222/cn-math-taxonomy` reads `CC-BY` against the published `CC BY-NC 4.0` — the column drops the **NC** term, which is the term that decides commercial use. Unknown how many of `3,174` rows do the same. **Prescription:** re-derive the column from the search endpoint plus a file read and publish the disagreement rate against the pages. |
+| 🆕 **`579-C`** | **`A-R007/Multi-Agent-Study-Assistant` (`64★`) carries no licence file** by GitHub's reading, and is cited in `agents/top.md`, `compose/patterns.md` and `intel/trends.md` with a ledger licence of `unstated`. Unlicensed is all-rights-reserved, not permissive. **Prescription:** read its tree; grant it or move it to the unusable register. |
+| 🆕 **`579-D`** | **Trend 32's falsifier is stated but not run.** One institution-accountable education axis with a head above `1,000★` refutes the mechanism. **Prescription:** measure the head of `topic:accreditation`, `topic:safeguarding`, `topic:proctoring`, `topic:transcript` and `topic:credential`. |
+| 🆕 **`579-E`** | **Five of seven new addresses were registered on search metadata alone** — `emil-a-dev/lama-loca`, `BBkjdayup/BCTK`, `ZelinZhou-THU/lecture-notes-creator`, `alexfdez1010/exam-generator`, `dbosk/examgen`. None is shelved, and `lama-loca`'s region is deliberately **unplaced** despite being the first Russian-language address here. **Prescription:** read the two above `50★` first-hand and place or discard them. |
+| 🆕 **`579-F`** | **This pass drafted two findings this base had already published**, and only caught them by grepping the shelves before committing. **Prescription:** make the token-check against the live pages the *first* step of a supply pass, not the last — the same check, run earlier, would have redirected the pass's whole budget. |
+
+### 🟡 Carried, and made worse by this pass
+
+| Gap | Note |
+|---|---|
+| `gate-census-currency` / `gate-union-currency` | 🔴 Both were already red at `HEAD` and this pass writes to the shelves, so their published triples are further stale. Not re-derived this pass — declared, not hidden. |
+| `gate-offline` (`compose/code/p512-cell-frame/cell_frame.py:39`) | 🔴 Red at pristine `HEAD` with an identical single finding, verified in a detached worktree. Inherited, not caused here; the commit is made with `SKIP_COMMIT_GATES=1` for that reason. |
+
 
 ## 🆕 `p576` — `2026-10-31` — **🟢 `575-E` CLOSED ON THE FIRST ATTEMPT: SIX LATAM JURISDICTIONS, AND COLOMBIA'S `Ley 2626 de 2026` IS THE FIRST BINDING EDUCATION-AI INSTRUMENT IN THE REGION ON THESE SHELVES. 🟢 `575-D` CLOSED: CHINA FOUND ON THE FIRST CHINESE-LANGUAGE QUERY, AND THE JAPAN `JIS` DISPUTE RESOLVES AS A CATEGORY ERROR. 🔴 `575-C`'s PRESCRIBED REMEDY IS UNEXECUTABLE — NO GOVERNMENT OR IGO HOST IS REACHABLE FROM THIS HARNESS, ON ANY CONTINENT, AND THE FAILURE IS INDISTINGUISHABLE FROM A TYPO — 🟢 BUT A SUBSTITUTE CHANNEL WAS FOUND AND PROVEN. 🔴 AND A QUERY FORM THIS BASE USED SIX TIMES RETURNS A FALSE ZERO. SIX REGISTERED (`576-A`…`576-F`).**
 

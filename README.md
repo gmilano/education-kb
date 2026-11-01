@@ -1,8 +1,108 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
 ---
+
+## Pass 579 — reads 2026-11-01, commit 2026-11-01 — **🟢 `Gap 464-D` AND `Gap 505-B` REFUTED: THE GITHUB SEARCH API ANSWERS `200` ON ALL FOUR FORMS TRIED, INCLUDING THE EXACT ONE `464-D` RECORDS AS `403` AND INCLUDING PLAIN `curl` WITH NO TOKEN — SO THIS BASE HAS HAD A FIRST-HAND STAR-AND-LICENCE CHANNEL WHILE PUBLISHING THAT IT HAD NONE. `47` ADDRESSES RE-MEASURED, `8` LEDGER LICENCES SETTLED, `7` ADDRESSES NEW TO A `3,168`-ADDRESS LEDGER, `6` SHELVED AFTER `378`–`499` PASSES IN THE DISCARD. 🔴 THE PASS'S OWN FIRST DRAFT CLAIMED TWO LICENCE DISCOVERIES THIS BASE HAD ALREADY PUBLISHED, AND IS RETRACTED. 🔴 SIXTEENTH NIL ON THE MANDATED LEGS. SIX REGISTERED (`579-A`…`579-F`).**
+
+### 🟢 The central result: the `403` was attributed to the wrong endpoint
+
+`Gap 464-D` records *"the GitHub search API is unreachable from the `gh` CLI here and its
+failure looks like an empty result"*; `Gap 505-B` re-attests that `/search/repositories`
+returns `403`; the figure register concluded that **a first-hand star count is "still
+none"**. Four invocation forms were tried this pass:
+
+| Form | Status |
+|---|---|
+| `gh api "search/repositories?q=…&per_page=2"` — 🔵 the exact form `464-D` cites | 🟢 **200** |
+| `gh api -X GET search/repositories -f q='…'` | 🟢 **200** |
+| inline with `%3A` percent-encoding | 🟢 **200** |
+| `curl -s https://api.github.com/search/repositories?q=…` — no `gh`, no token | 🟢 **200** |
+| `gh api repos/{owner}/{repo}` | 🔴 **403** |
+
+🔴 **The `403` is real and belongs to `/repos/{owner}/{repo}` alone.** The per-repo endpoint
+and the search endpoint were collapsed into one gap, and the cost of that conflation is the
+whole measurement posture that followed from it: `303` `raw.githubusercontent` reads and
+`252` `git ls-remote` calls built to work around a channel that answers directly, carrying
+`license.spdx_id`, `stargazers_count`, `pushed_at`, `archived`, `forks_count` and `topics`
+at **`30` calls a minute**.
+
+🟢 **What it bought immediately.** `47` addresses re-measured in one pass; **eight ledger
+licence entries** that stood as `unstated` or two-valued settled in one call each, including
+`HKUDS/DeepTutor` — `unstated` since `p2` across `126` mentions, and in fact
+**Apache-2.0 at `52,811★`**. Plus a liveness test with three distinguishable answers:
+`FOUND`, `422` (renamed — `openedx/edx-platform`, `OpenEduCat-Inc/OpenEduCat`) and
+`0` (owner resolves, repository gone — `DaRL-GenAI/instructional_agents`), where `curl -sI`
+returns `403` for all three and for every live address too.
+
+### 🔴 This pass's own first draft is retracted in part
+
+The draft led on two "discoveries" that these shelves had already published, and the
+retraction is recorded rather than quietly edited:
+
+- **`CaviraOSS/PageLM` is non-commercial** — already `BLOCK`/`REFUSED` here, `LICENSE.md`
+  already read at `8,563 B`, and the decisive nuance already recorded: *"MIT's body verbatim,
+  then commercial-use, SaaS and resale restrictions."*
+- **`xiaoyang111222/cn-math-taxonomy` is CC BY-NC 4.0** — already published, already declared
+  as `Gap 572-C`.
+- **`NOASSERTION` semantics** — already recorded as *"a licence file EXISTS and the detector
+  could not match it"*.
+
+🟢 **What survives, narrowed to what is true:** the **address-ledger licence column** says
+`MIT` for PageLM and `CC-BY` for the NC knowledge graph, contradicting the pages in the one
+artefact the gates read; and the `NOASSERTION` **false-negative rate** was unmeasured — it
+is **2 of 4** (`OpenOLAT/OpenOLAT` is byte-verbatim Apache-2.0 and
+`openeducat/openeducat_erp` is LGPL-3.0, both as published), which is what makes the flag a
+work queue and never a verdict. Filed as trend 31.
+
+### 🔴 Sixteenth consecutive nil on the mandated legs, second on the regional ones
+
+All eight legs returned intel already on these shelves, checked by token before anything was
+written: IESALC `87 %`/`26 %`/`9 %` (`200` institutions, `19` countries, `9 September 2026`),
+the LAC Observatory and its partner list, the Universidad de los Andes `716`, `Ley 2626 de
+2026`, Regulation (EU) `2026/1744` and `2 December 2027`, Korea's AI Basic Act, Vietnam's AI
+law, Maryland `SB 720`, New York `A 9190`, the K-12 AI Literacy and Readiness Act, the
+Gallup figure, `$10.6B`/`$42.48B`. 🔵 The legs are a regression test on coverage, not a
+source of it. The per-jurisdiction method that paid in `p575`/`p576` was not re-run; this
+pass spent its budget on supply.
+
+### 🟢 Supply added
+
+**Two never-queried axes:** `topic:exam-generator` (**`73`** repositories, head **`93★`**)
+and `topic:study-assistant` (**`205`**, head `176★`), plus `topic:open-source-erp` (`6`).
+🔴 **The entire assessment-generation axis tops out at `93★`** against `topic:flashcards` at
+`3,274` — filed as trend 32, third instance in two passes after `p578`'s `topic:iep` at
+`7★`: *open source builds what learners use and skips what institutions are accountable
+for.*
+
+**Seven addresses new to the ledger**, two shelved — `Hyan-Yao/instructional_agents` (MIT,
+`22★`, the live EACL 2026 ADDIE system, `120` forks against `22` stars) and
+`evoluteur/braille-tools` (MIT, `43★`, a permissive row in the copyleft-heavy accessibility
+layer `p574` measured) — and five registered, including `emil-a-dev/lama-loca`, the **first
+Russian-language address on this register**.
+
+**Six addresses shelved after `378`–`499` passes in the discard:** `HFUT-LEC/EduStudio`
+(MIT, APAC), `ZhijieXiong/pyedmine` (MIT, APAC), `tl-its-umich-edu/my-learning-analytics`
+(Apache-2.0, **North America**, Canvas), `heshengtao/exameow` (Apache-2.0, APAC),
+`openfun/marsha` (MIT, EMEA), `yungifez/skuul` (MIT). Four MIT, two Apache-2.0. 🔵 `p572`
+found the LTI/xAPI layer in the same place; the discard is still where the yield is.
+
+**Two patterns:** `P-581-A` student-facing analytics and advising on Canvas (6–8 wk, North
+America, Apache/MIT throughout); `P-581-B` assessment generation as a service (10–12 wk,
+Global) — a build, because the axis measurement says there is nothing to adopt.
+
+### Registered
+
+| Gap | Statement |
+|---|---|
+| 🆕 **`579-A`** | **The `403` map is wrong in this base and may be wrong in other directions.** Search answers; `/repos/{owner}/{repo}` does not. Every other channel this base has marked `403` or unusable needs re-probing one endpoint at a time, because `464-D`/`505-B` show a per-endpoint failure can be recorded as a whole-API one. Prescription: re-probe each row of the unusable register individually. |
+| 🆕 **`579-B`** | **The address-ledger licence column is not gate-safe.** Two rows contradict the published verdict (`MIT` for a `BLOCK`ed row, `CC-BY` for a `CC BY-NC` row). Unknown how many of `3,168` do. Prescription: re-derive the column from the search endpoint plus a file read, and measure the disagreement rate against the pages. |
+| 🆕 **`579-C`** | **`A-R007/Multi-Agent-Study-Assistant` (`64★`) has no licence file** and is cited in three files as `unstated`. Unlicensed is all-rights-reserved. Prescription: read its tree and either grant it or move it to the unusable register. |
+| 🆕 **`579-D`** | **Trend 32 needs its falsifier run, not just stated.** One institution-accountable education axis with a head above `1,000★` refutes it. Prescription: enumerate candidate axes (`topic:accreditation`, `topic:safeguarding`, `topic:proctoring`, `topic:transcript`, `topic:credential`) and measure each head. |
+| 🆕 **`579-E`** | **Five of seven new addresses were registered on search metadata alone**, not read first-hand — `lama-loca`, `BCTK`, `lecture-notes-creator`, `alexfdez1010/exam-generator`, `dbosk/examgen`. None is shelved, and `lama-loca`'s region is deliberately unplaced. Prescription: read the two above `50★` and place or discard them. |
+| 🆕 **`579-F`** | **This pass drafted two findings this base had already published.** The draft was caught by grepping the shelves before committing, which is also how it should have started. Prescription: make the token-check against the pages the *first* step of a supply pass, not the last. |
+
 
 ## Pass 576 — reads 2026-10-31, commit 2026-10-31 — **🟢 `575-E` CLOSED ON THE FIRST ATTEMPT: SIX LATAM JURISDICTIONS HAVE DATED EDUCATION-AI INSTRUMENTS AND COLOMBIA'S IS A STATUTE, AFTER THIRTEEN PASSES IN WHICH THE REGION-LEVEL LEG REACHED NONE. 🟢 `575-D` CLOSED: CHINA ON THE FIRST CHINESE-LANGUAGE QUERY, AND JAPAN'S `JIS` DISPUTE WAS A CATEGORY ERROR. 🔴 `575-C`'s PRESCRIPTION IS UNEXECUTABLE — `16` GOVERNMENT AND IGO HOSTS, FOUR CONTINENTS, ALL UNREACHABLE AND INDISTINGUISHABLE FROM A TYPO — 🟢 BUT THE SUBSTITUTE CHANNEL WAS FOUND. 🔴 AND A QUERY FORM THIS BASE USED SIX TIMES RETURNS A FALSE ZERO. SIX REGISTERED (`576-A`…`576-F`).**
 

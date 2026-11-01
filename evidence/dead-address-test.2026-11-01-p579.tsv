@@ -1,0 +1,4 @@
+address	repo_qualifier_response	org_searchable	canonical_replacement	replacement_licence	replacement_stars	verdict
+openedx/edx-platform	422 Validation Failed	yes (org:openedx = 175 repos)	openedx/openedx-platform	AGPL-3.0	8213	MOVED — base already carries the replacement since p28
+OpenEduCat-Inc/OpenEduCat	422 Validation Failed	no (user:OpenEduCat-Inc also 422)	openeducat/openeducat_erp	LGPL-3.0 (file-read)	903	MOVED — base already carries the replacement since p2
+DaRL-GenAI/instructional_agents	0 results	yes (user:DaRL-GenAI = 15 repos, none by this name)	Hyan-Yao/instructional_agents	MIT	22	DEAD — org kept only -skills (1 star), _studio (0), _homepage (0)

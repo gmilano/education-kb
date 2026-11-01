@@ -1,10 +1,54 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
 ---
 
 # Vertical education platforms (customisable with AI on top)
+
+## p579 — 2026-11-01 — two additions, both MIT, and the operations tier is where the permissive licences are
+
+🟢 The pattern `p578` noticed holds and strengthens: **every permissive platform on this
+page is an operations system, and every platform of record is copyleft.** The two rows
+below were first seen at `p188` and `p200` and sat unshelved for **391** and **379** passes.
+
+| Platform | Repo | Licence | Stars | Category | Where it is strong | AI layer to add on top |
+|---|---|---|---|---|---|---|
+| Skuul | https://github.com/yungifez/skuul | **MIT** | 468 | **Multi-school operations (SIS)** | School groups and networks — it models **organisations and campuses** as first-class, so one install runs many schools. Covers student records, academic calendars, attendance, gradebooks, timetables, fees, family access, staff, programmes, facilities, boarding and library | Attendance and fee-payment risk scoring; timetable generation under constraints; parent-facing progress and absence summaries from the gradebook. 🔵 **The permissive alternative to the GPL SIS tier** — `RosarioSIS` (GPL-2.0, `649★`), `Unifiedtransform` (GPL-3.0, `3,003★`), `GibbonEdu/core` (GPL-3.0, `636★`). Laravel 13 / Livewire 4 / PHP 8.4 / MySQL 8 / Redis. 🔴 **Read the README before quoting a plan:** V3 is still being prepared, and the project warns that a V2 → V3 upgrade can lose data. Pin V2 or wait |
+| Marsha | https://github.com/openfun/marsha | **MIT** | 151 | **Media delivery for courses, via LTI** | The layer between an LMS and video that institutions usually buy. Self-hosted video and document host with transcoding, adaptive-bitrate playback and subtitles; plugs into **Open edX and Moodle over LTI**, so it needs no fork of either | Subtitle and transcript generation, lecture summarisation and chaptering, and search across spoken course content. Django + React + video.js; PeerTube runners for transcoding; S3/Celery; Terraform + Docker. 🔵 **The media seam the AGPL platform question does not touch** — LTI integration means the AGPL of Open edX never reaches your code. Region EMEA on the `openfun` org, placed as on these shelves since `p6` (`richie`, `warren`, `potsie`); the page itself states no affiliation |
+
+### 🔴 The licence map of this page, re-measured this pass
+
+| Platform | Licence | Stars | Shippable without copyleft obligation? |
+|---|---|---|---|
+| **Skuul** | **MIT** | 468 | 🟢 yes |
+| **Marsha** | **MIT** | 151 | 🟢 yes |
+| MyClass (`tutor-management-app`) | MIT | 110 | 🟢 yes |
+| `academico-sis/academico` | MIT | 410 | 🟢 yes |
+| OpenOlat | **Apache-2.0** (file-verified) | 449 | 🟢 yes |
+| Sakai | **ECL-2.0** | 1,240 | 🟡 Apache-derived, read it |
+| OpenEduCat | **LGPL-3.0** (file-verified) | 903 | 🟡 weak copyleft, linking permitted |
+| Moodle | GPL-3.0 | 7,567 | 🔴 no |
+| Open edX | **AGPL-3.0** | 8,213 | 🔴 no — network copyleft |
+| Chamilo | GPL-3.0 | 1,019 | 🔴 no |
+| Frappe LMS / Education | AGPL-3.0 / **GPL-3.0** | 3,358 / 687 | 🔴 no |
+| RosarioSIS | GPL-2.0 | 649 | 🔴 no |
+
+🔵 **The decision this table actually makes.** The teaching platform is copyleft almost
+everywhere, and that is survivable — you deploy Moodle or Open edX unmodified and integrate
+over **LTI / xAPI**, which is what `Marsha` demonstrates and what keeps your own code
+yours. The **operations** tier (SIS, tutoring businesses, media, media delivery) is where
+permissive licences exist, and it is therefore where a customised, resellable Globant asset
+can actually live. 🔴 Building a *fork* of the LMS is the one shape to refuse: on Open edX
+it is AGPL, so hosting it obliges you to publish the modifications.
+
+### 🔴 Two addresses on this page that have moved
+
+| Cited as | Response | Live address |
+|---|---|---|
+| `OpenEduCat-Inc/OpenEduCat` | **`422`** — the owner no longer resolves | `openeducat/openeducat_erp` (**LGPL-3.0**, `903★`) |
+| `openedx/edx-platform` | **`422`** — moved | `openedx/openedx-platform` (**AGPL-3.0**, `8,213★`) |
+
 
 ## p578 — 2026-10-31 — one addition, and it is the first *permissive* operations system on this page
 

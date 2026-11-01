@@ -1,10 +1,119 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
 ---
 
 # Compose patterns — education
+
+## p579 — 2026-11-01 — two recipes, every component licence read from its file this pass
+
+## P-581-A — 🟢 Student-facing analytics and advising on Canvas, FERPA-scoped (6–8 weeks, North America)
+
+**Who it is for.** A US university or college system already on **Canvas** that wants
+learners to see their own progress — and wants it without a per-seat contract with
+Instructure, and without shipping student records to a vendor.
+
+**Why these parts.** Both halves of the Canvas seam are permissive and both were written
+*by universities*, which is what makes the FERPA conversation tractable: the code already
+assumes a US institutional data posture.
+
+| Part | Repo | Licence | Stars | Role |
+|---|---|---|---|---|
+| Learner-facing analytics | `tl-its-umich-edu/my-learning-analytics` | **Apache-2.0** | 37 | The product surface: Resources Accessed, Assignment Planning, Grade Distribution. Django + MySQL, Docker. University of Michigan ITS |
+| Canvas tool surface | the `canvas-mcp` field — head is a `310★` MIT University of Illinois server, `102` tools, naming FERPA five times (`p565`) | **MIT** | 310 | Read/write access to Canvas for the agent, without a bespoke integration |
+| Student model | `pykt-team/pykt-toolkit` | **MIT** | 456 | Knowledge tracing over the Canvas activity stream — turns "accessed" into "likely knows" |
+| Diagnosis + path | `ZhijieXiong/pyedmine` | **MIT** | 82 | Cognitive diagnosis and **learning-path recommendation** (`4` LPR models) for the advising suggestion |
+| LMS integration without a fork | `dmitry-viskov/pylti1.3` | **MIT** | 138 | LTI 1.3 so the tool launches from Canvas as a tool, not a parallel login |
+
+**How it wires together.**
+
+1. **Weeks 1–2 — stand up MyLA against a Canvas sandbox.** Its three views are the whole
+   product-market question answered for you: ship them first, unmodified, and get a
+   registrar and a privacy officer to look at them. Do not build a new UI yet.
+2. **Weeks 2–4 — attach the MCP server as the write side.** MyLA reads; the Canvas MCP
+   server lets an agent act (nudge, schedule, draft a message). Keep the two apart: the
+   analytics path stays deterministic and auditable, the agent path is advisory and logged.
+3. **Weeks 4–6 — fit `pykt-toolkit` on the activity stream, then `pyedmine` on top.** KT
+   gives a per-skill mastery estimate; `pyedmine`'s LPR models turn that into "do this
+   next". 🔵 Train on the institution's own term-over-term data — the public KT datasets
+   will not match a Canvas course shape.
+4. **Weeks 6–8 — launch as an LTI 1.3 tool via `pylti1.3`.** Launching from inside Canvas
+   is what makes it a feature rather than another login, and LTI keeps every integration
+   boundary at a standard.
+
+🔴 **The two things that will actually hold this up**, neither of them technical. **(a)
+FERPA review**: student-facing analytics show a student *their own* record, which is the
+easy case — but the advising agent generates new inferences about them, and that is a new
+record. Budget a privacy review as a deliverable, not an afterthought. **(b) Grade
+Distribution is politically live**: showing a learner where they sit in a cohort is a
+decision the faculty senate makes, not the delivery team. Ship it switchable per course.
+
+🟢 **Why it is sellable:** `134` AI-in-education bills across `31` states in 2026, and four
+states (MD, ID, OK, VA) requiring state guidance **and** district-level policy. The
+conformance documentation is billable alongside the build, and it is the part the client
+cannot download.
+
+---
+
+## P-581-B — 🟢 Assessment generation as a service, because there is nothing to adopt (10–12 weeks, Global)
+
+**Who it is for.** Any institution or awarding body that must *produce* assessments at
+volume — a university assessment office, a vocational awarding body, a ministry
+examinations unit, a corporate certification programme.
+
+🔴 **Start from the honest finding: this layer has no open anchor.**
+`topic:exam-generator` holds **`73` repositories and its head is `93★`**, measured this
+pass on an axis no prior pass had queried. The two permissive heads are both **offline-first
+desktop applications** — `heshengtao/exameow` (Apache-2.0, `93★`) and `BBkjdayup/BCTK`
+(MIT, `53★`) — not libraries you embed. So this pattern is a **build**, and the recipe is
+about which parts you do *not* build.
+
+| Part | Repo | Licence | Stars | Role |
+|---|---|---|---|---|
+| Item model and maths assessment engine | `numbas/Numbas` | **Apache-2.0** | 216 | Browser-based e-assessment with real mathematics: randomised items, algebraic answer marking. **Do not rebuild this** — item types and marking are where assessment software goes to die |
+| Interchange / LMS delivery | `jcputney/scorm-again` | **MIT** | 362 | Modern SCORM runtime — gets generated assessments into any LMS that already accepts SCORM |
+| QTI interchange | `Citolab/qti-components` | 🔴 **GPL-3.0** | 18 | QTI item rendering. Copyleft — **keep it behind a service boundary**, or export QTI and render elsewhere |
+| Generation reference | `heshengtao/exameow` | **Apache-2.0** | 93 | Read its prompt and item-type handling: MCQ, true/false, fill-in-the-blank, short answer, with offline bank storage and wrong-answer history. Apache-2.0, so you may lift code, not just ideas |
+| Teacher-side reference | `BBkjdayup/BCTK` | **MIT** | 53 | Duplicate-item detection and Word/Excel bulk import — the two unglamorous features an assessment office asks for first |
+| Course-material generation | `Hyan-Yao/instructional_agents` | **MIT** | 22 | ADDIE pipeline: syllabus → slides (`.tex`/`.pdf`/`.pptx`) → scripts → **assessments**, so the assessment is generated against the stated learning outcomes rather than against a PDF. EACL 2026 Main, arXiv:2508.19611 |
+| Item calibration | `douglasrizzo/catsim` + `eribean/girth` | **BSD-3-Clause** / **MIT** | 153 / 127 | IRT calibration and CAT simulation — simulate item exposure *before* a generated item reaches a candidate |
+
+**How it wires together.**
+
+1. **Weeks 1–3 — Numbas first, generation second.** Model three real item types from the
+   client's actual past papers in Numbas by hand. If Numbas cannot express them, the project
+   scope is wrong and you have learned it in week two for the price of three items.
+2. **Weeks 3–6 — generation against outcomes, not documents.** Drive
+   `instructional_agents`' ADDIE pipeline from the syllabus so each generated item carries
+   the learning outcome it tests. 🔵 This is the difference between an item bank and a pile
+   of questions: without the outcome link there is no blueprint and no defensible coverage
+   claim.
+3. **Weeks 6–9 — calibration gate.** Every generated item goes through `girth` for IRT
+   parameters and `catsim` for exposure simulation before any candidate sees it. **This is
+   the gate that makes the service defensible** — a generated item with unknown difficulty
+   cannot be used to certify anyone, and an awarding body's regulator will ask.
+4. **Weeks 9–12 — delivery.** `scorm-again` for LMS delivery; export QTI for anything that
+   needs it. Keep `qti-components` (GPL-3.0) out of your own binary — behind a service, or
+   swapped for export-only.
+
+🔴 **What this pattern must refuse, and this base already knew both.**
+`CaviraOSS/PageLM` generates quizzes and flashcards and is widely treated as MIT —
+**it is not**. Its `LICENSE.md` is MIT's body verbatim followed by commercial-use, SaaS and
+resale restrictions, so it cannot go into a paid assessment deliverable without written
+permission from CaviraOSS; these shelves have carried it as `BLOCK` for several passes.
+Likewise `xiaoyang111222/cn-math-taxonomy` (`5,654★`) is the obvious blueprint source for a
+maths assessment programme and is **CC BY-NC 4.0** — fine for a ministry or non-profit
+engagement with attribution, unusable commercially, and already declared as `Gap 572-C`.
+🔵 Both are re-confirmed here from their licence files rather than newly found; what this
+pass corrected was the **ledger column**, which said `MIT` and `CC-BY` respectively.
+
+🟢 **Why the economics work.** The client cannot download this layer — measured, not
+asserted: `73` repositories, head `93★`. The parts worth buying (`Numbas`, `scorm-again`,
+calibration) are permissive and mature; the part that must be built is the blueprint,
+generation and calibration pipeline, which is also the part that carries the accountability
+the client is actually paying to transfer.
+
 
 ## p578 — 2026-10-31 — two recipes, both built from rows verified this pass
 

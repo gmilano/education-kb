@@ -1,8 +1,66 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
 ---
+
+## 🆕 `2026-11-01` — `p579` — **the assessment-generation axis has 73 repositories and no anchor above 93 stars**
+
+🔴 **`topic:exam-generator`: `73` repositories, `0` prior queries in `578` passes, and the
+head of the ladder is `93★`.** Set that against the neighbouring axes this base has
+measured — `topic:flashcards` `3,274`, `topic:language-learning` `4,721`, `topic:edtech`
+`4,980` — and the shape is unmistakable. **Assessment generation is the artefact every
+education engagement must produce and the one layer with no open anchor at all.**
+
+| Repo | Licence | Stars | Pushed | Signal |
+|---|---|---|---|---|
+| https://github.com/heshengtao/exameow | Apache-2.0 | **93** | 2026-10-27 | 🟢 **Axis head, and shippable.** Offline-first: banks, practice records and wrong-answer history stay on the device; the network is only the model call, and it takes any OpenAI-compatible endpoint (DeepSeek, Qwen, GLM) or Ollama locally. Rust/Tauri + Vue 3 + SQLite. Shelved in [`agents/top.md`](../agents/top.md) this pass after **378 passes** in the discard |
+| https://github.com/BBkjdayup/BCTK | MIT | 53 | 2026-09-28 | 🟢 New to the ledger. Windows desktop question bank and paper composition, **offline by design, data stays local**; rich text + maths formulae, Word/Excel bulk import/export, duplicate-item detection. The teacher-side counterpart to `exameow` |
+| https://github.com/alexfdez1010/exam-generator | MIT | 24 | **2024-10-21** | 🔴 New to the ledger and **stale by two years**. Registered as stale, not shelved |
+| https://github.com/dbosk/examgen | MIT | 5 | 2026-08-31 | 🟢 New to the ledger. Generator for the LaTeX `exam` document class — the narrow, durable kind of tool that outlives the model wrappers above it |
+| https://github.com/ccccsssssyyyyyy/xiaochen-math-treasure | AGPL-3.0 | 16 | 2026-09-21 | 🔴 Copyleft. Local maths bank with PDF/Word item splitting and LaTeX rendering; derived from MathBank |
+
+🔵 **The reading for a delivery team:** on this axis there is nothing to adopt and
+everything to assemble. The two permissive heads (`exameow`, `BCTK`) are both
+**offline-first desktop applications**, which is the deployment posture a school with a
+data-residency constraint actually wants — and neither is a library you can embed. An
+engagement that needs assessment generation *as a service* builds it, on `Numbas`
+(Apache-2.0, `216★`) for the item model and `scorm-again` (MIT, `362★`) or
+`qti-components` (GPL-3.0, `18★`) for interchange.
+
+### `topic:study-assistant` — `205` repositories, `0` prior queries, and a language this register had never seen
+
+| Repo | Licence | Stars | Signal |
+|---|---|---|---|
+| https://github.com/liuliu667/cram-engine | MIT | **176** | Axis head. A four-stage interactive teaching skill built on learning-science principles for time-boxed exam preparation. First seen `p442`, never shelved |
+| https://github.com/emil-a-dev/lama-loca | MIT | 59 | 🟢 **The first Russian-language address on this register.** Local AI study assistant that learns from the user's own books and generates reports. Registered, not read first-hand this pass — region not placed |
+| https://github.com/HumphreySun98/Smart-Study-Agent | MIT | 57 | **RL picks the action, FSRS picks the timing, the LLM only writes.** A clean separation of policy, scheduling and generation. Ledger carried it as `unstated`; it is MIT |
+| https://github.com/ZelinZhou-THU/lecture-notes-creator | Apache-2.0 | 8 | 🟢 New to the ledger. Tsinghua. Course PDF → MinerU extraction → structured self-study notes |
+| https://github.com/A-R007/Multi-Agent-Study-Assistant | **NONE** | 64 | 🔴 **No licence at all**, and this base shelves it in three files. Flagged for a licence read |
+
+🔴 **One flag raised, not closed:** `A-R007/Multi-Agent-Study-Assistant` carries **no
+licence file** by GitHub's reading and is cited in [`agents/top.md`](../agents/top.md),
+[`compose/patterns.md`](../compose/patterns.md) and
+[`intel/trends.md`](../intel/trends.md) with a ledger licence of `unstated`. Unlicensed is
+not permissive — it is *all rights reserved* by default. Not resolved this pass.
+
+### Re-measurement of the platforms of record
+
+| Repo | Licence | Stars now | Note |
+|---|---|---|---|
+| `moodle/moodle` | GPL-3.0 | **7,567** | — |
+| `openedx/openedx-platform` | **AGPL-3.0** | **8,213** | 🔴 not Apache-2.0, however often that is repeated |
+| `frappe/lms` | AGPL-3.0 | 3,358 | — |
+| `sakaiproject/sakai` | **ECL-2.0** | 1,240 | 🔵 Educational Community License, an Apache-2.0 derivative — **not** plain Apache-2.0 |
+| `chamilo/chamilo-lms` | GPL-3.0 | 1,019 | Strong LATAM install base |
+| `openeducat/openeducat_erp` | **LGPL-3.0** | 903 | `LICENSE` file read this pass; GitHub's `NOASSERTION` was a false negative |
+| `frappe/education` | **GPL-3.0** | 687 | `license.txt` reads `License: GNU GPL V3`; resolved from `NOASSERTION` |
+| `GibbonEdu/core` | GPL-3.0 | 636 | — |
+| `OpenOLAT/OpenOLAT` | **Apache-2.0** | 449 | 🟢 `LICENSE` is byte-verbatim Apache 2.0 — base **confirmed** against a false `NOASSERTION` |
+
+🔴 **Every platform of record on this page is copyleft except OpenOlat.** That has been the
+standing finding since `p574`; this pass measured it again and it did not move.
+
 
 ## 🆕 `2026-10-31` — `p578` — **the STEM axis's 9.5k-star head is a programming language, and its small sibling is the real education engine**
 

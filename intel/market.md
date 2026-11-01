@@ -1,10 +1,66 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
 ---
 
 # Education AI — market map and opportunities
+
+## p579 — 2026-11-01 — **the regional legs went nil a second consecutive pass, and the pass's two findings are both licence corrections on rows this base called shippable**
+
+🔴 **All four mandated regional `WebSearch` legs and all four global legs returned intel
+already on these shelves — the second consecutive pass on this register, and the sixteenth
+consecutive nil for the global legs.** Checked by token before anything was written: UNESCO
+**IESALC** (`200` institutions, `19` countries, `87 %` using AI in at least one area,
+`26 %` with a formal strategy, `9 %` evaluating implementation; published `9 September
+2026` at Digital Learning Week, Paris, with UNU-IAS); the **Observatory on AI in Education
+for LAC** and its partner list (CAF, CENIA, Cetic.br, ECLAC, Santillana, Tec de Monterrey,
+ProFuturo, Universidad del Desarrollo, **Ceibal**, IRCAI); the Universidad de los Andes
+count of **`716`** instruments across `23` jurisdictions, `>80 %` since 2023; **`Ley 2626
+de 2026`**; the **Digital Omnibus**, **Regulation (EU) 2026/1744**, and the deferral of
+stand-alone Annex III obligations to **`2 December 2027`** with embedded systems at
+`2 August 2028`; Korea's **AI Basic Act** (in force `22 January 2026`); **Vietnam**'s AI law
+(`1 March 2026`, with an `18`-month transition for education against `12` general);
+Maryland **SB 720**; New York **A 9190**; the **K-12 AI Literacy and Readiness Act of
+2026**; the **Gallup** teacher-use figure; the `$10.6B` 2026 / `$42.48B` 2030 pair.
+
+🔵 **This is now a result about the instrument, not the market.** The eight mandated legs
+function as a regression test confirming this page's coverage is current; they have stopped
+being a source of it. The method that does still pay — per-jurisdiction querying in the
+jurisdiction's own language (`p575`, `p576`) — was not re-run this pass; the pass spent its
+budget on the supply side instead, and that is where both findings came from.
+
+### 🟢 The pass's supply-side result: a first-hand star-and-licence channel this base had registered as unreachable
+
+🟢 **`Gap 464-D` and `Gap 505-B` are refuted.** Both record the GitHub **search** API as
+`403` from this session, and the figure register concluded a first-hand star count was
+**"still none"**. Four invocation forms were tried this pass and all four returned `200`,
+including the exact inline form `464-D` cites and including plain `curl` with no `gh` and
+no token. 🔴 The `403` is real but belongs to **`/repos/{owner}/{repo}`** — the per-repo
+endpoint — which had been collapsed into the same gap. Search carries `license.spdx_id`,
+`stargazers_count`, `pushed_at` and `archived` for any public repository at **30 calls a
+minute**; `47` addresses were re-measured with it this pass, and eight ledger licence
+entries that stood as `unstated` or two-valued were settled in one call each.
+
+🔵 **Why that is a market fact and not just an instrument fact.** Every licence and star
+figure this page quotes to a client had, until this pass, no authoritative channel behind
+it. It has one now, and the figures below are measured rather than carried.
+
+### 🔴 Two ledger rows that contradict this page — and are *not* new licence findings
+
+Both licences were read and correctly published passes ago. The defect is in the
+machine-readable ledger column, which is what the gates read:
+
+| Row | Ledger column | What these pages already say | Commercial reality |
+|---|---|---|---|
+| `CaviraOSS/PageLM` — `2,057★` | **`MIT`** | `BLOCK` / `REFUSED`, *"bespoke non-commercial"*, `LICENSE.md` read at `8,563 B`, recorded as *"MIT's body verbatim, then commercial-use, SaaS and resale restrictions"* | 🔴 unusable in a paid deliverable without written permission — **already this page's position** |
+| `xiaoyang111222/cn-math-taxonomy` — `5,654★` | **`CC-BY`** | **CC BY-NC 4.0** (`19,347 B`); `Gap 572-C` declares the NonCommercial block on the prerequisite-graph layer | 🔴 NonCommercial — fine for a ministry or non-profit engagement with attribution, unusable commercially. **Already this page's position** |
+
+🔵 **The transferable warning for a procurement conversation is the one this base already
+holds and this pass re-confirms:** in education the code is given away and the *content* is
+withheld — wordlists, knowledge graphs, item banks, audio. **Read the content licence
+before the code licence**, and treat a NonCommercial or source-available grant as the live
+risk rather than copyleft, which at least announces itself.
 
 ## p578 — 2026-10-31 — **the regional legs returned nothing this page did not already hold, and that is the finding**
 
@@ -364,6 +420,22 @@ said out loud before any of it reaches a client deck.
 ## Opportunities by region
 
 ### North America
+
+
+**p579 — 2026-11-01.**
+
+🟢 **The learner-facing analytics seam on Canvas is open and under-built.**
+`tl-its-umich-edu/my-learning-analytics` (Apache-2.0, `37★`, University of Michigan ITS) is
+a *student*-facing analytics product — Resources Accessed, Assignment Planning, Grade
+Distribution — not an administrator dashboard, and it integrates with **Canvas**. Set
+against the `canvas-mcp` field (`280` repositories, head a `310★` MIT University of
+Illinois server naming FERPA five times, `p565`), the two halves of a Canvas engagement are
+both permissive and both institutionally authored. **Opportunity:** a FERPA-scoped,
+student-facing analytics and advising layer on Canvas, assembled from Apache/MIT
+institutional code rather than licensed from Instructure. 🔵 The regulatory frame is
+settled enough to quote: `134` AI-in-education bills across `31` states in 2026, four
+states (MD, ID, OK, VA) requiring both state guidance **and** mandatory district policy —
+which makes *policy-conformance tooling* a sellable deliverable in its own right.
 
 **p578 — 2026-10-31.** 🔴 No movement. The leg re-served the retired **"134 bills / 31
 states (as of March 2026)"** figure for the third consecutive pass — treat the number above
@@ -747,6 +819,20 @@ WCAG 2.1 AA). 🔴 **`574-E` stays open**: `ada.gov` and `federalregister.gov` a
 outside this session's egress allow-list, so the one dated obligation on these shelves
 remains **secondary-only for a fourth pass.**
 ### EMEA
+
+
+**p579 — 2026-11-01.**
+
+🟢 **Media delivery is the clean seam, and it is MIT.** `openfun/marsha` (MIT, `151★`)
+hosts video and documents for courses and plugs into Open edX and Moodle **over LTI** — so
+the AGPL of the Open edX platform never reaches the integrator's code. For a European
+ministry or university group already on Moodle or Open edX, this is the shape that keeps
+delivered code proprietary without forking anything. **Opportunity:** transcript,
+subtitle, chaptering and cross-course spoken-content search on top of Marsha, delivered as
+an LTI tool. 🔵 Timing is favourable rather than urgent: stand-alone Annex III obligations
+now bind from **`2 December 2027`**, but the **Article 4 AI-literacy duty has applied since
+`2025-02-02`** and the Article 50 transparency duties since `2026-08-02` — both already
+overdue wherever nobody has acted, and both small, immediate engagements.
 
 **p578 — 2026-10-31.** 🟢 **The region's supply gap narrowed for the first time in this
 base's history.** [`vgwb/Antura`](https://github.com/vgwb/Antura) — **BSD-2-Clause** code,
@@ -1195,6 +1281,22 @@ ministry-level education AI adoption figures for any single EMEA state.** The
 regional leg returns EU-level policy and cross-sector enterprise surveys; it does not
 reach a national education ministry.
 ### APAC
+
+
+**p579 — 2026-11-01.**
+
+🟢 **The student-modelling layer is APAC-authored, permissive, and now complete on these
+shelves.** `HFUT-LEC/EduStudio` (MIT, `80★`, Hefei University of Technology, *Frontiers of
+Computer Science* 2025) unifies cognitive diagnosis and knowledge tracing;
+`ZhijieXiong/pyedmine` (MIT, `82★`) adds exercise recommendation and
+**learning-path recommendation** — `28` KT models, `7` CD, `3` ER, `4` LPR over `14`
+datasets. With `pykt-toolkit` (MIT, `456★`) that is three MIT libraries covering the whole
+modelling stack, all APAC in origin. **Opportunity:** adaptive-learning engagements in
+Korea, Japan, Singapore and China can be built on MIT research code rather than licensed
+adaptive engines — and Korea's **AI Basic Act** names education a high-impact sector, so
+the model-governance documentation is itself billable. 🔴 **But the curriculum-structure
+artefact that would anchor such a build — `cn-math-taxonomy` — is NonCommercial.** A
+commercial APAC engagement needs its own knowledge graph; budget for building one.
 
 **p578 — 2026-10-31.** 🟢 **The region keeps supplying the permissive tier, and this pass it
 supplied the *operations* layer rather than the model layer.**
@@ -1672,6 +1774,23 @@ jurisdiction with an education-*specific* accessibility code** (AICTE / RPwD ss.
 GIGW 3.0 at WCAG 2.1 AA), and `shravyamudra` is the first shelved component that lands
 against it.
 ### LATAM
+
+
+**p579 — 2026-11-01.**
+
+🟢 **The offline-first and operations tiers are where permissive code exists, and both fit
+the region's constraints.** `learningequality/kolibri` (MIT, `1,163★`) is the offline-first
+platform of record; `yungifez/skuul` (MIT, `468★`) models organisations and campuses as
+first-class, which is the shape of a secretaría or a school network, and
+`academico-sis/academico` (MIT, `410★`) covers the small-to-medium institution.
+`chamilo/chamilo-lms` (GPL-3.0, `1,019★`) holds the regional install base but is copyleft —
+integrate, do not fork. **Opportunity:** a multi-campus operations layer with attendance and
+fee-risk scoring and parent-facing summaries, built MIT-throughout and therefore resellable
+across ministries. 🔵 The demand signal is already on this page and unchanged: `87 %` of
+LAC higher-education institutions use AI, **`26 %`** have a strategy and **`9 %`** evaluate
+it — the gap is governance and evaluation capacity, not enthusiasm, and
+**`Ley 2626 de 2026`** in Colombia makes curricular delivery a statutory obligation rather
+than an aspiration.
 
 **p578 — 2026-10-31.** 🔴 **No movement, and the nil is specific: the five GitHub axes swept
 this pass — `topic:tutoring` (466), `topic:learning-path` (466), `topic:stem-education`
@@ -2156,6 +2275,20 @@ corrects it, so **no LATAM market *size* figure is published on this page** — 
 adoption and governance measurements above, which are first-party survey outputs
 rather than vendor extrapolations.
 ### Global
+
+
+**p579 — 2026-11-01.**
+
+🔴 **Assessment generation has no anchor anywhere.** `topic:exam-generator`: `73`
+repositories, head `93★`. Against `topic:flashcards` at `3,274` and `topic:edtech` at
+`4,980`, the layer every engagement must deliver is the one open source has not built. Both
+permissive heads (`exameow` Apache-2.0 `93★`, `BCTK` MIT `53★`) are offline-first **desktop
+applications**, not embeddable libraries. **Opportunity, and it is a build:** assessment
+generation as a service, on `Numbas` (Apache-2.0, `216★`) for the item model and
+`scorm-again` (MIT, `362★`) for interchange. 🔵 This is the second pass running to find the
+gap at the artefact closest to an institution's obligations — `p578` found `topic:iep`
+topping out at `7★`. The pattern is becoming a thesis: **open source builds what learners
+use and skips what institutions are accountable for.**
 
 **p577 — 2026-10-31.** 2026 global market estimates span **≈US$3.7B to ≈US$11.4B**
 across research firms — a ~3× spread of incompatible methodologies, not a

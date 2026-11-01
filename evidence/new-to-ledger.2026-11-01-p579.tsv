@@ -1,0 +1,8 @@
+address	licence	licence_source	stars	axis	disposition	note
+Hyan-Yao/instructional_agents	MIT	repository page	22	instructional_agents in:name	SHELVED-AGENTS	the live EACL 2026 Main ADDIE system (arXiv:2508.19611); 120 forks against 22 stars; the canonical DaRL-GenAI address is dead
+evoluteur/braille-tools	MIT	repository page (LICENSE.md)	43	topic:accessibility topic:education	SHELVED-FOUNDATIONS	English Grade 1 Braille as CSS + JS, zero dependencies; permissive row in a copyleft-heavy accessibility layer
+emil-a-dev/lama-loca	MIT	search endpoint	59	topic:study-assistant	REGISTERED-NOT-SHELVED	Russian-language local study assistant; first Russian-language address on this register — not read first-hand this pass
+BBkjdayup/BCTK	MIT	search endpoint	53	topic:exam-generator	REGISTERED-NOT-SHELVED	Windows desktop question bank, offline-first, Word/Excel import; not read first-hand this pass
+ZelinZhou-THU/lecture-notes-creator	Apache-2.0	search endpoint	8	topic:study-assistant	REGISTERED-NOT-SHELVED	Tsinghua; MinerU extraction to structured self-study notes
+alexfdez1010/exam-generator	MIT	search endpoint	24	topic:exam-generator	REGISTERED-STALE	last pushed 2024-10-21
+dbosk/examgen	MIT	search endpoint	5	topic:exam-generator	REGISTERED-NOT-SHELVED	LaTeX exam document class generator

@@ -1,21 +1,21 @@
 address	first_seen_pass	last_verdict	filed_on	last_measured	mentions	distinct_passes
-HKUDS/DeepTutor	p2	unstated	agents/top.md,compose/patterns.md,intel/market.md,intel/trends.md	2026-10-29	126	89
+HKUDS/DeepTutor	p2	Apache-2.0	agents/top.md,compose/patterns.md,intel/market.md,intel/trends.md	2026-11-01	126	89
 vishalsachdev/canvas-mcp	p2	unstated	agents/top.md,compose/patterns.md,intel/market.md,intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-10-29	73	46
 Selleo/mentingo	p3	MIT	intel/market.md,intel/trends.md,verticals/solutions.md	2026-10-29	64	44
-OpenOLAT/OpenOLAT	p11	Apache-2.0	compose/patterns.md,intel/market.md,intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-10-29	61	45
+OpenOLAT/OpenOLAT	p11	Apache-2.0	compose/patterns.md,intel/market.md,intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-11-01	61	45
 THU-MAIC/OpenMAIC	p2	MIT	agents/top.md,compose/patterns.md,intel/market.md,intel/trends.md	2026-10-29	61	36
 moodle/moodle	p17	GPL-3.0	compose/patterns.md,repos/foundations.md,verticals/solutions.md	2026-10-29	55	41
-openeducat/openeducat_erp	p2	LGPL	repos/foundations.md,verticals/solutions.md	2026-10-29	53	44
+openeducat/openeducat_erp	p2	LGPL-3.0	repos/foundations.md,verticals/solutions.md	2026-11-01	53	44
 GarethManning/education-agent-skills	p2	CC-BY-SA|CC-BY	agents/top.md,compose/patterns.md,intel/trends.md	-	51	35
 zijinz456/OpenTutor	p3	MIT	agents/top.md,intel/market.md	2026-10-29	50	37
-frappe/education	p23	GPL-3.0	compose/patterns.md,intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-10-29	48	34
+frappe/education	p23	GPL-3.0	compose/patterns.md,intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-11-01	48	34
 Open-TutorAi/open-tutor-ai-CE	p13	unstated	agents/top.md,intel/market.md	2026-10-29	48	33
 sakaiproject/sakai	p11	ECL-2.0	compose/patterns.md,intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-10-29	45	35
 ArnaudGuiovanna/tutor-mcp	p31	MIT	agents/top.md,compose/patterns.md	2026-10-29	44	30
 frappe/lms	p2	AGPL-3.0	compose/patterns.md,intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-10-29	44	35
 learningequality/kolibri	p24	MIT	compose/patterns.md,intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-10-29	44	35
 oppia/oppia	p24	Apache-2.0	intel/trends.md,repos/foundations.md,verticals/solutions.md	2026-10-29	42	30
-Li-Evan/Bloom	p2	unstated	agents/top.md,intel/trends.md	2026-10-29	41	33
+Li-Evan/Bloom	p2	MIT	agents/top.md,intel/trends.md	2026-11-01	41	33
 openfun/ralph	p6	MIT	compose/patterns.md,intel/market.md,repos/foundations.md,verticals/solutions.md	2026-10-29	40	23
 Miaotofu01/Study-Mate	p3	MIT	agents/top.md	2026-10-29	39	32
 openedx/edx-platform	p17	AGPL-3.0|Apache-2.0	-	2026-10-29	38	31
@@ -34,12 +34,12 @@ bruchris/canvas-lms-mcp	p32	MIT	agents/top.md,compose/patterns.md	2026-10-29	29	
 CAHLR/OATutor	p2	MIT	agents/top.md,compose/patterns.md,repos/foundations.md	-	29	19
 dodona-edu/dolos	p84	unstated	agents/top.md,compose/patterns.md,intel/market.md,repos/foundations.md,verticals/solutions.md	2026-10-29	29	14
 JuneYaooo/lineage-skill	p2	Apache-2.0	agents/top.md,compose/patterns.md,intel/market.md,intel/trends.md,verticals/solutions.md	-	28	15
-openedx/XBlock	p12	AGPL-3.0|Apache-2.0	agents/top.md,intel/market.md,repos/foundations.md	-	28	17
+openedx/XBlock	p12	Apache-2.0	agents/top.md,intel/market.md,repos/foundations.md	2026-11-01	28	17
 anthropics/k12-teacher-skills	p17	unstated	agents/top.md,compose/patterns.md,intel/market.md,intel/trends.md	2026-10-28	27	14
 artcc/freelingo	p3	AGPL-3.0	intel/trends.md	2026-10-29	27	24
-CaviraOSS/PageLM	p12	MIT	agents/top.md,compose/patterns.md,intel/trends.md	2026-10-29	27	17
+CaviraOSS/PageLM	p12	BESPOKE-NONCOMMERCIAL	agents/top.md,compose/patterns.md,intel/trends.md	2026-11-01	27	17
 jcputney/scorm-again	p61	MIT	compose/patterns.md,intel/market.md,repos/foundations.md	-	27	22
-xiaoyang111222/cn-math-taxonomy	p355	CC-BY	agents/top.md,compose/patterns.md,intel/trends.md	2026-10-29	27	18
+xiaoyang111222/cn-math-taxonomy	p355	CC-BY-NC-4.0	agents/top.md,compose/patterns.md,intel/trends.md	2026-11-01	27	18
 opencast/opencast	p2	ECL-2.0	compose/patterns.md,verticals/solutions.md	-	26	21
 canyongbs/advisingapp	p12	unstated	agents/top.md,compose/patterns.md,intel/trends.md,repos/foundations.md,verticals/solutions.md	-	25	16
 csmediapro/moodle-mcp-server	p2	AGPL-3.0	agents/top.md,compose/patterns.md,repos/foundations.md	2026-10-29	25	18
@@ -51,7 +51,7 @@ ZeKaiNie/universal-examprep-skill	p3	unstated	-	2026-10-29	25	19
 AI-for-Education/pedagogy-benchmark	p4	unstated	agents/top.md,compose/patterns.md,intel/market.md,intel/trends.md	2026-10-29	24	7
 DavidLMS/learnmcp-xapi	p6	unstated	-	2026-10-28	24	17
 pguso/agents-from-scratch	p47	unstated	-	2026-10-29	24	20
-SirhanMacx/Claw-ED	p2	Apache-2.0|MIT	agents/top.md,compose/patterns.md,intel/market.md,intel/trends.md	2026-10-29	24	17
+SirhanMacx/Claw-ED	p2	MIT	agents/top.md,compose/patterns.md,intel/market.md,intel/trends.md	2026-11-01	24	17
 withmarbleapp/os-taxonomy	p326	CC-BY-SA|CC-BY	-	2026-10-27	24	20
 24kchengYe/human-skill-tree	p3	unstated	-	2026-10-29	23	19
 academico-sis/academico	p90	MIT	agents/top.md,compose/patterns.md,intel/market.md,verticals/solutions.md	-	23	18
@@ -62,7 +62,7 @@ plastic-labs/tutor-gpt	p7	GPL-3.0	-	2026-10-27	23	16
 SenmuuuuW/universal-diagnostic-tutor-skill	p3	unstated	-	2026-10-29	23	22
 Zenglian990/AI_Tutor_Release	p3	unstated	-	2026-10-29	23	21
 classroomio/classroomio	p37	unstated	-	2026-10-29	22	21
-GeminiLight/gen-mentor	p11	CC0-1.0|MIT	agents/top.md	2026-10-29	22	15
+GeminiLight/gen-mentor	p11	CC0-1.0	agents/top.md	2026-11-01	22	15
 DMontgomery40/mcp-canvas-lms	p2	MIT|no-grant	-	2026-10-22	21	16
 ILIAS-eLearning/ILIAS	p90	GPL-3.0	compose/patterns.md,intel/market.md,repos/foundations.md,verticals/solutions.md	2026-10-29	21	17
 oat-sa/tao-core	p9	GPL-2.0	compose/patterns.md,repos/foundations.md,verticals/solutions.md	2026-10-29	21	14
@@ -204,7 +204,7 @@ facebookresearch/seamless_communication	p6	CC-BY	-	2026-10-07	8	4
 frappe/frappe	p69	MIT	-	2026-10-27	8	7
 FWU-DE/ais-chat	p63	AGPL-3.0	-	2026-10-17	8	7
 henriquebotelhogomes/educacao	p32	unstated	agents/top.md	2026-10-29	8	4
-HumphreySun98/Smart-Study-Agent	p14	unstated	-	2026-10-29	8	7
+HumphreySun98/Smart-Study-Agent	p14	MIT	-	2026-11-01	8	7
 iblai/os	p73	MIT	-	2026-10-17	8	4
 kaushal0494/UnifyingAITutorEvaluation	p4	unstated	-	2026-10-10	8	4
 krayin/laravel-crm	p46	unstated	-	2026-10-24	8	6
@@ -212,7 +212,7 @@ learning-commons-org/knowledge-graph	p91	CC-BY|MIT	-	2026-10-29	8	7
 nichochar/ari	p365	unstated	-	2026-10-29	8	8
 nirholas/ai-tutor-mcp	p87	Apache-2.0	-	2026-10-29	8	7
 opetushallitus/koski	p17	unstated	-	2026-10-11	8	6
-tl-its-umich-edu/my-learning-analytics	p80	Apache-2.0	-	2026-10-27	8	7
+tl-its-umich-edu/my-learning-analytics	p80	Apache-2.0	repos/foundations.md	2026-11-01	8	7
 tosuki/moodle-mcp	p527	no-grant	agents/top.md,compose/patterns.md,intel/trends.md,repos/foundations.md	2026-10-29	8	2
 ucbds-infra/ottr	p86	unstated	-	2026-10-25	8	4
 webtech-network/autograder	p67	Apache-2.0	-	2026-10-23	8	7
@@ -437,7 +437,7 @@ celtic-project/LTI-PHP	p92	unstated	-	2026-10-10	4	3
 CharlieCardenasToledo/mcp-canvas-server	p2	MIT	-	2026-10-11	4	3
 Chloris-Blaxk/inno-agent-hub	p395	no-grant	-	2026-10-27	4	3
 Chocobozzz/PeerTube	p390	unstated	-	2026-10-27	4	3
-Citolab/qti-components	p18	GPL-3.0|GPL-2.0	-	2026-10-07	4	3
+Citolab/qti-components	p18	GPL-3.0	-	2026-11-01	4	3
 Citolab/qti-convert	p12	GPL-3.0	-	2026-10-22	4	4
 Community-Access/accessibility-agents	p8	MIT	-	2026-10-10	4	3
 conform-ed/conform-ed	p14	MIT	-	2026-10-09	4	3
@@ -525,7 +525,7 @@ open-webui/open-webui	p383	BSD	-	2026-10-25	4	2
 openedx/tutor-contrib-aspects	p22	Apache-2.0	-	2026-10-20	4	3
 OpenEMIS/OpenEMIS-Core	p277	unstated	-	2026-10-19	4	3
 openfun/django-lti-toolbox	p330	MIT	-	2026-10-22	4	3
-openfun/marsha	p188	MIT	-	2026-10-21	4	4
+openfun/marsha	p188	MIT	verticals/solutions.md	2026-11-01	4	4
 OpenOLAT/qtiworks	p35	BSD	-	2026-10-25	4	3
 Opetushallitus/aoe	p17	unstated	-	2026-10-07	4	2
 OS4ED/openSIS-Responsive-Design	p26	GPL-2.0	-	2026-10-14	4	3
@@ -570,7 +570,7 @@ wwlwgo/cn-primary-math-knowledge-graph	p175	unstated	-	2026-10-28	4	4
 xgabrielcv/auto-matricula-sigaa-unb	p106	unstated	-	2026-10-13	4	4
 yukazakiri/koakademy	p104	AGPL-3.0	-	2026-10-19	4	3
 ZelinZhou-THU/stem-tutor-agent	p80	AGPL-3.0	-	2026-10-12	4	2
-ZhijieXiong/pyedmine	p80	unstated	-	2026-10-21	4	3
+ZhijieXiong/pyedmine	p80	MIT	repos/foundations.md	2026-11-01	4	3
 098765d/ai_tutor	p60	MIT	-	2026-10-26	3	3
 19otherrsh-dot/Opencred	p64	unstated	-	2026-10-09	3	2
 1alexandrer/moodle-mcp	p14	MIT	-	2026-10-29	3	3
@@ -684,7 +684,7 @@ H1bertto/professor-agent	p2	MIT	agents/top.md	2026-10-29	3	2
 haolpku/K12-KGraph	p60	Apache-2.0|CC-BY	-	2026-10-21	3	3
 Harvard-University-iCommons/django-lti	p23	MIT	-	2026-10-07	3	2
 heronerar/OpenGaokao	p240	unstated	-	2026-10-18	3	2
-HFUT-LEC/EduStudio	p80	MIT	-	2026-10-17	3	2
+HFUT-LEC/EduStudio	p80	MIT	repos/foundations.md	2026-11-01	3	2
 Hiepler/EuConform	p246	MIT	-	2026-10-25	3	2
 HKUDS/ClawTeam	p13	MIT	-	2026-10-06	3	1
 hpi-schul-cloud/schulcloud-server	p267	unstated	-	2026-10-19	3	3
@@ -2222,7 +2222,7 @@ HendrikStrobelt/detecting-fake-text	p97	Apache-2.0|MIT	-	2026-10-10	1	1
 hendrycks/test	p390	MIT	-	2026-10-22	1	1
 henryyu333/assignment-check	p201	MIT	-	2026-10-14	1	1
 HernanDiaz/moodle-local_aigrader	p359	GPL-3.0	-	2026-10-21	1	1
-heshengtao/exameow	p201	Apache-2.0	-	2026-10-14	1	1
+heshengtao/exameow	p201	Apache-2.0	agents/top.md	2026-11-01	1	1
 HetviBarot21/SmartAttend	p243	no-grant	-	2026-10-16	1	1
 hicsail/opencat-pro	p38	MIT	-	2026-10-07	1	1
 Hieub26/IELTS-Writing-Part-1-Scoring	p59	unstated	-	2026-10-08	1	1
@@ -3144,7 +3144,7 @@ ystemsrx/mini-nanoGPT	p196	MIT	-	2026-10-14	1	1
 YTFL/AttendMate-Bunk-Calculator-Attendance-Tracker	p243	AGPL-3.0	-	2026-10-16	1	1
 yukunou703/studyproof	p464	MIT	-	2026-10-26	1	1
 yunfenglong/learning-mcp	p529	unstated	-	2026-10-29	1	1
-yungifez/skuul	p200	MIT	-	2026-10-14	1	1
+yungifez/skuul	p200	MIT	verticals/solutions.md	2026-11-01	1	1
 YuriMatsumotoSantos/CorrecaoRedacao	p42	no-grant	-	2026-10-07	1	1
 yves-chevallier/quiz-ai	p86	unstated	-	2026-10-09	1	1
 yxonic/DTransformer	p80	no-grant	-	2026-10-09	1	1
@@ -3166,3 +3166,10 @@ open-learning-exchange/planet	p535	AGPL-3.0 (title block, master)	verticals/solu
 py-why/dowhy	p535	MIT (title block)	repos/foundations.md,compose/patterns.md	2026-10-29	1	1
 py-why/EconML	p535	MIT (title block; page labels none)	repos/foundations.md,compose/patterns.md	2026-10-29	1	1
 comet-ml/opik	p535	Apache-2.0 (title block)	repos/foundations.md,compose/patterns.md	2026-10-29	1	1
+Hyan-Yao/instructional_agents	p579	MIT	agents/top.md	2026-11-01	1	1
+evoluteur/braille-tools	p579	MIT	repos/foundations.md	2026-11-01	1	1
+emil-a-dev/lama-loca	p579	MIT	-	2026-11-01	1	1
+BBkjdayup/BCTK	p579	MIT	repos/trending.md	2026-11-01	1	1
+ZelinZhou-THU/lecture-notes-creator	p579	Apache-2.0	repos/trending.md	2026-11-01	1	1
+alexfdez1010/exam-generator	p579	MIT	repos/trending.md	2026-11-01	1	1
+dbosk/examgen	p579	MIT	repos/trending.md	2026-11-01	1	1

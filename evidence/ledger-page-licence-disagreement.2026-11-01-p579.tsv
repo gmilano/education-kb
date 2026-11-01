@@ -1,0 +1,5 @@
+address	address_ledger_licence_column	what_the_PAGES_already_say	pages_correct	defect
+CaviraOSS/PageLM	MIT	BLOCK / REFUSED / "bespoke non-commercial"; LICENSE.md 8563 B read at p?; "MIT's body verbatim, then commercial-use, SaaS and resale restrictions"	yes	LEDGER ONLY — the machine-readable column contradicts the published verdict
+xiaoyang111222/cn-math-taxonomy	CC-BY	CC BY-NC 4.0 (19347 B); Gap 572-C declares the NonCommercial block	yes	LEDGER ONLY — the NC term is absent from the ledger column
+openeducat/openeducat_erp	LGPL	LGPL-3.0 on foundations and verticals	yes	none — confirmed from LICENSE file this pass
+OpenOLAT/OpenOLAT	Apache-2.0	Apache-2.0 across five pages	yes	none — confirmed byte-verbatim from LICENSE file this pass

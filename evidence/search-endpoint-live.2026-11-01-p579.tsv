@@ -1,0 +1,7 @@
+form	invocation	response	total_count	verdict
+A	gh api "search/repositories?q=topic:knowledge-tracing&per_page=2"	200 full JSON	96	WORKS — this is the form Gap 464-D recorded as 403
+B	gh api -X GET search/repositories -f q='topic:knowledge-tracing' -f per_page=2	200	96	WORKS
+C	gh api "search/repositories?q=topic%3Aknowledge-tracing&per_page=2"	200	96	WORKS — encoding is not the variable
+D	curl -s https://api.github.com/search/repositories?q=topic:knowledge-tracing	200	96	WORKS UNAUTHENTICATED — no gh, no token
+E	gh api repos/pykt-team/pykt-toolkit	403 "GitHub access to this repository is not enabled for this session"	-	BLOCKED — the 403 belongs to the PER-REPO endpoint only
+F	gh api rate_limit --jq .resources.search	200	-	search budget limit=30 remaining=30 per minute

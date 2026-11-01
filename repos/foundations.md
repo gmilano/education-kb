@@ -1,10 +1,45 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
 ---
 
 # Foundational open source repos for education
+
+## p579 — 2026-11-01 — four additions: the student-modelling layer, a North America analytics row, and a permissive accessibility component
+
+🟢 Three of the four had been **inside this base since `p80`** — seen, logged to the address
+ledger, and never filed on a page. They sat in the discard for **499 passes**. The fourth is
+new to a `3,168`-address ledger.
+
+| Repo | Licence | Stars | Region | Layer | Why it is here |
+|---|---|---|---|---|---|
+| https://github.com/HFUT-LEC/EduStudio | MIT | 80 | APAC | Student cognitive modelling | **Unified PyTorch library for Cognitive Diagnosis (CD) *and* Knowledge Tracing (KT)** — the two halves of student modelling in one configuration surface, where `pykt-toolkit` covers KT alone. *EduStudio: towards a unified library for student cognitive modeling*, Le Wu et al., **Frontiers of Computer Science** 19(8) 2025, article 198342, DOI 10.1007/s11704-024-40372-3. Region placed on the `HFUT` org handle (Hefei University of Technology) and the journal; the page itself states no country. |
+| https://github.com/ZhijieXiong/pyedmine | MIT | 82 | APAC | Student modelling + recommendation | **Four task families under one experimental workflow:** `28` knowledge-tracing models, `7` cognitive-diagnosis models, `3` exercise-recommendation models and `4` **learning-path-recommendation** models, over `14` educational-data-mining datasets. 🔵 The learning-path family is the part this base has had no library for — `Clew` (MIT) builds a path for one learner interactively; this trains and benchmarks the policy. Credits pyKT, EduKTM, EduCDM and RecBole as antecedents. `README_zh.md` present; no institution stated. **Ledger carried it as `unstated`; the licence is MIT, read first-hand.** |
+| https://github.com/tl-its-umich-edu/my-learning-analytics | Apache-2.0 | 37 | **North America** | Learner-facing analytics on Canvas | **MyLA — learning analytics built for the student to read, not the administrator.** Three views: Resources Accessed, Assignment Planning, Grade Distribution. Integrates with **Canvas**; Django + MySQL + Docker. Support links resolve to `its.umich.edu` (University of Michigan ITS Teaching & Learning). 🔵 A **North America** row on a page that is thin there, and it sits on Canvas — the LMS `p565` established this base had been censusing the wrong way round. Pairs with the `canvas-mcp` field (`280` repositories) as the read-side of the same integration. |
+| https://github.com/evoluteur/braille-tools | MIT | 43 | Global | Accessibility rendering | **English Grade 1 (uncontracted) Braille in a web page** — one CSS class per Braille cell from an image sprite, plus a JS text-to-Braille-HTML function; three visual styles. **Zero dependencies**, vanilla JS + CSS, copy two files in. 🟢 **New to a `3,168`-address ledger, and permissive.** `p574` found the accessibility layer running backwards on licensing — `10` shippable against `11` copyleft, `2` noncommercial and `6` unlicensed, every platform of record GPL. This is a permissive component in that layer. 🔵 Scope is honest and narrow: it renders Braille for sighted readers; it is **not** a transcription engine and not a screen-reader substitute. |
+
+### 🔴 Open edX, stated correctly: the platform is copyleft and the extension seam is not
+
+This base carries `openedx/openedx-platform` at **AGPL-3.0** and has since `p28`. It is
+worth stating plainly on this page, because the widely-repeated claim that Open edX is
+"Apache-2.0" is false and it changes what can be delivered:
+
+| Repo | Licence | Stars | What it means for delivery |
+|---|---|---|---|
+| `openedx/openedx-platform` | **AGPL-3.0** | 8,213 | The platform. Network copyleft — a hosted modification must offer its source |
+| `openedx/XBlock` | **Apache-2.0** | 471 | 🟢 The extension API. Permissive — this is the seam to build on |
+| `openedx/xblock-sdk` | **Apache-2.0** | 69 | 🟢 XBlock scaffolding |
+| `openedx/codejail` | **Apache-2.0** | 477 | 🟢 Sandboxed untrusted-code execution — reusable well outside Open edX |
+| `openedx/paragon` | **Apache-2.0** | 141 | 🟢 Design system / React components |
+| `openedx/edx-lint` | **Apache-2.0** | 52 | 🟢 Lint configuration |
+
+🔵 **The deliverable shape this implies:** an engagement ships *XBlocks and services against
+the AGPL platform*, not a fork of it. The `XBlock` ledger entry was two-valued
+(`AGPL-3.0 | Apache-2.0`) until this pass; it is Apache-2.0, which is what makes that shape
+available at all. 🔴 `openedx/edx-platform` — the address most citations use — returns `422`:
+it has moved, and anything resolving it by that name is reading a rename.
+
 
 ## p578 — 2026-10-31 — one addition, from an axis never queried in 577 passes
 

@@ -1,10 +1,97 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
 ---
 
 # Current trends — education AI
+
+## 🆕 `p579` — `2026-11-01` — trends 31–32
+
+## 31. The `NOASSERTION` false-negative rate is about one in two, so the flag can never be graded on — it can only be queued (high confidence — four rows read byte-for-byte this pass; the *semantics* of the flag were already established, the *rate* was not)
+
+🔵 **What was already established, and is not claimed here as new.** This base already
+records that `NOASSERTION` means *a licence file exists and the detector could not match
+it* — not that a licence is absent. 🟢 **What this pass adds is the rate**, which changes
+how the flag may be used. Of four `NOASSERTION` rows whose licence files were then read
+directly:
+
+| Row | Stars | File reads | `NOASSERTION` was |
+|---|---|---|---|
+| `CaviraOSS/PageLM` | 2,057 | **CaviraOSS / PageLM Community License** — commercial use needs written permission | 🔴 **true positive** |
+| `xiaoyang111222/cn-math-taxonomy` | 5,654 | **Attribution-NonCommercial 4.0 International** | 🔴 **true positive** |
+| `OpenOLAT/OpenOLAT` | 449 | **byte-verbatim Apache License 2.0** | 🟢 **false negative** |
+| `openeducat/openeducat_erp` | 903 | **GNU LESSER GENERAL PUBLIC LICENSE Version 3** | 🟢 **false negative** |
+
+**Two of four — and the two false negatives are both platforms of record.** A rule of
+"reject on `NOASSERTION`" would have removed OpenOlat, the only permissive platform of
+record on the verticals page, and OpenEduCat, the education ERP — both of which this base
+had licensed correctly all along from its own file reads. 🔵 At roughly one in two, the
+flag carries no decision value in either direction: it is a **work queue**, and the file
+read is the verdict.
+
+🟢 **The operative rule, which is cheap:** `NOASSERTION` is a *priority queue for file
+reads*, nothing more. `curl -sL raw.githubusercontent.com/OWNER/REPO/BRANCH/LICENSE | head`
+settles each case in one call, and it settled four this pass. 🔵 The corollary matters for
+how this base records licences at all: the ledger's two-valued entries
+(`Apache-2.0 | MIT`, `AGPL-3.0 | Apache-2.0`, `CC0-1.0 | MIT`, `GPL-3.0 | GPL-2.0`) and its
+`unstated` entries are not uncertainty about the world — they are uncertainty about which
+channel was believed. One authoritative channel plus one file read removes both.
+
+🔴 **Where this bites hardest: licences that encode a *commercial* restriction rather than a
+copyleft one.** A GPL row is visibly copyleft and gets handled. `CC BY-NC` and a bespoke
+"Community License" both *look* open — they permit use, sharing and modification — and fail
+only at the point of sale. Both true positives here were of that kind. 🔵 This base had
+already read and published both correctly; what it carried wrong was its own **ledger
+licence column** (`MIT` for PageLM, `CC-BY` for the NC knowledge graph). A column that
+drops a NonCommercial term is worse than an empty one, because a gate reading it passes the
+row.
+
+## 32. Open source builds what learners use and skips what institutions are accountable for — so the artefacts closest to a legal obligation are the ones an engagement has to build (high confidence — third independent axis measurement in two passes)
+
+🔵 **The claim.** Ranking education `topic:` axes by the star count of their head separates
+them cleanly into two populations, and the dividing line is not technical difficulty — it is
+who bears the consequence of the artefact being wrong.
+
+| Axis | Repositories | Head stars | Who the artefact serves |
+|---|---|---|---|
+| `topic:language-learning` | 4,721 | thousands | the learner, directly |
+| `topic:edtech` | 4,980 | thousands | mixed |
+| `topic:flashcards` | 3,274 | `4,120` (`fsrs4anki`) | the learner, directly |
+| `topic:spaced-repetition` | 3,217 | thousands | the learner, directly |
+| `topic:study-assistant` | 205 | **176** | the learner, directly |
+| `topic:exam-generator` | **73** | **93** | 🔴 **the institution — it certifies** |
+| `topic:iep` (`p578`) | — | **7** | 🔴 **the institution — it is a legal document** |
+
+🔴 **Assessment generation: `73` repositories, nothing above `93★`.** Individual-use
+artefacts — flashcards, spaced repetition, study companions — have anchors in the thousands.
+The artefacts an institution is *accountable* for — an exam that certifies, an
+individualised education programme that is a legal instrument, an accessibility conformance
+report — top out in the tens. 🔵 `p574` found the same shape in licensing rather than size:
+the accessibility and assessment-interchange layer ran `10` shippable against `11` copyleft,
+`2` noncommercial and `6` unlicensed.
+
+🟢 **The mechanism, which makes the prediction testable.** Individual-use software is
+adopted by individuals, who star it. Institutional artefacts carry liability, are
+jurisdiction-specific, and need a named accountable party — conditions under which a
+volunteer project does not accumulate stars and often does not start. Hence the two
+permissive heads on `topic:exam-generator` are both **offline-first desktop applications**
+(`exameow`, `BCTK`): single-institution, data-stays-local tools, not services. That is the
+posture a liability-bearing buyer wants and the posture that cannot scale into a popular
+repository.
+
+🔵 **What it means commercially, and it is the better half of the finding.** The layers
+with no open anchor are exactly the layers a client cannot download instead of buying.
+Adopt the learner-facing tier — it is mature, permissive and free. **Build the
+institutional tier, and charge for the accountability**: assessment generation on `Numbas`
+(Apache-2.0) with `scorm-again` (MIT) interchange, policy-conformance tooling against the
+`134` US state bills and the EU Article 4 duty, and Annex III conformity files for which
+`p577` recorded there is still no EMEA-origin open component.
+
+🔴 **The falsifier, stated in advance:** a single education axis whose artefact is
+institution-accountable and whose head exceeds `1,000★` would refute the mechanism. Three
+axes measured across two passes have not produced one.
+
 
 ## 🆕 `p578` — `2026-10-31` — trends 29–30, filed at `##` with the counter's own `^## <n>. ` form
 

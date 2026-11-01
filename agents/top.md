@@ -1,10 +1,90 @@
 ---
 industry: education
 region: Global
-updated: 2026-10-31
+updated: 2026-11-01
 ---
 
 # Top AI agents for education
+
+## p579 — 2026-11-01 — **two additions, and the channel this base registered as unreachable is live: first-hand stars and licences, 30 calls a minute**
+
+🟢 **`Gap 464-D` and `Gap 505-B` are REFUTED.** Both record the GitHub **search** API as
+`403` from this session — `464-D` adds that "its failure looks like an empty result", and
+[`open-gaps.md`](../intel/open-gaps.md) concluded at the figure-claim register that **a
+first-hand star count is "still none"**. Four invocation forms were tried this pass and
+**all four answered `200`**:
+
+| Form | Invocation | Response |
+|---|---|---|
+| A | `gh api "search/repositories?q=topic:knowledge-tracing&per_page=2"` — 🔵 *the exact form `464-D` recorded as 403* | 🟢 **200**, `total_count` `96` |
+| B | `gh api -X GET search/repositories -f q='…'` | 🟢 **200**, `96` |
+| C | inline with `%3A` percent-encoding | 🟢 **200**, `96` |
+| D | `curl -s https://api.github.com/search/repositories?q=…` — 🔵 no `gh`, no token | 🟢 **200**, `96` |
+| E | `gh api repos/pykt-team/pykt-toolkit` | 🔴 **403** *"GitHub access to this repository is not enabled for this session"* |
+| F | `gh api rate_limit` → `.resources.search` | 🟢 `limit: 30`, `remaining: 30` per minute |
+
+🔴 **The `403` belongs to the per-repo endpoint `/repos/{owner}/{repo}`, not to search.** The
+two were collapsed into one gap, and the consequence is large: every search hit carries
+`license.spdx_id`, `stargazers_count`, `pushed_at` and `archived` **straight from GitHub**,
+for any public repository, at 30 calls a minute. This pass re-measured **47 addresses** with
+it. 🔵 This does not resurrect `curl -sI`, which remains uninformative — `403` on all 50
+addresses tried here, `moodle/moodle` among them, exactly as `p571`/`P914` already
+established.
+
+| Agent | Repo | Licence | Stars | Region | What it is |
+|---|---|---|---|---|---|
+| Instructional Agents | https://github.com/Hyan-Yao/instructional_agents | MIT | 22 | Global | **ADDIE-model instructional-design system — and the live address for a paper this base has cited at a dead one.** Generates a course end to end: syllabus, slide decks (`.tex`, `.pdf`, `.pptx`), lecture scripts and assessments. *Instructional Agents: Reducing Teaching Faculty Workload through Multi-Agent Instructional Design* — **EACL 2026 Main**, arXiv:2508.19611. 🔵 **`120` forks against `22` stars** — a fork-to-star ratio of `5.5`, the inverted shape of a repository being *run on courses* rather than bookmarked. New to a `3,168`-address ledger. |
+| exameow (过了喵) | https://github.com/heshengtao/exameow | Apache-2.0 | 93 | APAC | **Assessment generation, offline-first.** Upload material, get multiple-choice, true/false, fill-in-the-blank and short-answer items. Banks, practice records and wrong-answer history stay **on the device**; the network is only the model call, and that takes any OpenAI-compatible endpoint — DeepSeek, Qwen, GLM — or Ollama locally. Rust (Tauri + Axum) + Vue 3 + SQLite. Simplified and Traditional Chinese READMEs. 🔵 First seen `p201`, carried in the discard **378 passes**, read first-hand this pass. |
+
+### 🟢 Eight licence resolutions the new channel settles in one call each
+
+These are not new licences in the world — they are entries this base's **address ledger**
+carried as `unstated` or two-valued *because it believed it had no authoritative channel*.
+That belief was the gap refuted above.
+
+| Row | Ledger carried | Resolves to | Stars |
+|---|---|---|---|
+| `HKUDS/DeepTutor` | `unstated` since `p2`, across `126` mentions | **Apache-2.0** | **52,811** |
+| `SirhanMacx/Claw-ED` | `Apache-2.0 \| MIT` | **MIT** | 63 |
+| `openedx/XBlock` | `AGPL-3.0 \| Apache-2.0` | **Apache-2.0** | 471 |
+| `GeminiLight/gen-mentor` | `CC0-1.0 \| MIT` | **CC0-1.0** | 135 |
+| `Citolab/qti-components` | `GPL-3.0 \| GPL-2.0` | **GPL-3.0** | 18 |
+| `Li-Evan/Bloom` | `unstated` | **MIT** | 295 |
+| `ZhijieXiong/pyedmine` | `unstated` | **MIT** (also read first-hand) | 82 |
+| `HumphreySun98/Smart-Study-Agent` | `unstated` | **MIT** | 57 |
+
+🟢 **`DeepTutor` re-measured at `52,811★`** — the `p577` shelf figure of `52.7k` holds — and
+independent daily trend reports put it as GitHub's **largest single-day star gainer on both
+2026-10-30 and 2026-10-31** (≈`1,930` and ≈`2,280` in a day).
+
+### 🔴 Two ledger rows that contradict this base's own published verdict
+
+Neither is a new licence finding. Both licences were read and published passes ago. What is
+new is that the **machine-readable ledger column disagrees with the pages**, and the ledger
+is what the gates read:
+
+| Address | Ledger column | What the pages already say | Defect |
+|---|---|---|---|
+| `CaviraOSS/PageLM` | **`MIT`** | `BLOCK` / `REFUSED` / "bespoke non-commercial"; `LICENSE.md` read at `8,563 B`; recorded as *"MIT's body verbatim, then commercial-use, SaaS and resale restrictions"* | 🔴 ledger only — and the verbatim-MIT body is exactly why a body-matching reader says MIT |
+| `xiaoyang111222/cn-math-taxonomy` | **`CC-BY`** | **CC BY-NC 4.0** (`19,347 B`), with `Gap 572-C` declaring the NonCommercial block | 🔴 ledger only — the **NC** term, the one that decides commercial use, is absent from the column |
+
+🔵 **The pages are right and were right.** The lesson is about instrument hygiene: a
+licence column that drops a NonCommercial term is worse than an empty one, because a gate
+reading it will pass the row.
+
+### 🔴 The dead-address test — `422` and `0` mean different things
+
+| Address | Response | Reading | Live address |
+|---|---|---|---|
+| `openedx/edx-platform` | **`422`** | name no longer resolves — look for a rename | `openedx/openedx-platform`, **AGPL-3.0**, `8,213★` (this base has carried it since `p28`) |
+| `OpenEduCat-Inc/OpenEduCat` | **`422`** | the *owner* no longer resolves either | `openeducat/openeducat_erp`, **LGPL-3.0**, `903★` (carried since `p2`) |
+| `DaRL-GenAI/instructional_agents` | **`0` results** | owner resolves, repository does not exist | `Hyan-Yao/instructional_agents`, **MIT**, `22★` — shelved above |
+
+🔵 `422` says *the name is wrong*; `0` says *the name is right and the thing is gone*. The
+`DaRL-GenAI` org still exists with `15` repositories, of which the only survivors of this
+work are `instructional_agents-skills` (`1★`), `_studio` (`0★`) and `_homepage` (`0★`) —
+which is why the `0` rather than a `422`.
+
 
 ## p578 — 2026-10-31 — **four agents added, every one from an axis never queried in 577 passes, and the head of the largest of those axes is GPL-3.0**
 
