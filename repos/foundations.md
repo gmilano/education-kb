@@ -112,6 +112,53 @@ licence blocker at all** — which is not true of any platform tier on this page
 
 ---
 
+## 🆕 The SCORM emit-side tier — measured `p589`, and most of it is dead
+
+🔵 **Why this tier is on this page at all.** `Trend 41` splits specifications into two
+roles: a **conformance target** you must *speak* (LTI 1.3, xAPI → buy a library) and an
+**export target** you must *emit* (SCORM → build the generator). Every engagement that
+delivers courseware into a client's existing LMS is an **emit** job, so this is the tier a
+studio reaches for — and 🔴 **it is almost entirely abandoned.**
+
+Whole axis measured first-hand `2026-11-01` via `gh api search/repositories -f
+q='topic:scorm'`, **`235` repositories, every page walked**. Licence distribution, which is
+the first thing to know about it:
+
+| licence (API) | repos | share |
+|---|--:|--:|
+| 🔴 **none at all** | **`133`** | 🔴 **`56.6 %`** |
+| 🟢 MIT | `65` | `27.7 %` |
+| 🟢 Apache-2.0 | `12` | `5.1 %` |
+| 🔴 GPL-3.0 | `12` | `5.1 %` |
+| 🟡 `NOASSERTION` | `8` | `3.4 %` |
+| 🟡 CC0-1.0 | `2` | `0.9 %` |
+| 🟢 BSD-3-Clause / 🔴 LGPL-2.1 / 🔴 EUPL-1.2 | `1` each | `1.3 %` |
+
+🟢 **`80 of 235` (`34.0 %`) are permissive** — far better than the platform tier above, where
+permissive is the exception. 🔴 **But liveness, not licence, is what disqualifies this tier.**
+
+| Repo | Licence | Stars | Last push | Region | Shippable? | Role |
+|---|---|--:|---|---|---|---|
+| [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 **MIT (text)** | **362** | `2026-10-28` | Global | 🟢 **yes** | 🟢 **The one live, maintained, permissive SCORM runtime — the single safe dependency on this entire axis.** Modern JS runtime implementing SCORM 1.2 and 2004 API signatures. `1,072`-byte verbatim MIT, no carve-out. 🔵 Already shelved before `p589`; re-confirmed here as the tier's anchor. |
+| [sr258/scorm-h5p-wrapper](https://github.com/sr258/scorm-h5p-wrapper) | 🟢 **MIT (text)** | **58** | `2026-10-29` | EMEA | 🟢 **yes** | 🆕 **The only other live permissive row.** NodeJS service that packs **H5P** interactive content into SCORM objects — i.e. the bridge from an open authoring format into the LMS container. `1,073`-byte verbatim MIT. 🔵 Small, single-purpose, and exactly the shape a pipeline step should be. Unshelved until now despite 3 history re-finds. |
+| [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 | **216** | — | EMEA | 🟢 yes | Browser-based e-assessment with a real maths engine; SCORM-packageable output. 🔵 Already shelved; listed here for the tier's shape. |
+| [dhodges47/SCORM-LearningManagementSystem](https://github.com/dhodges47/SCORM-LearningManagementSystem) | 🟢 MIT | **184** | 🟡 `2026-01-24` | Global | 🟡 reference only | 🆕 Open-source SCORM LMS **demo**. 🟡 ~9 months idle, and its own description calls it a demo — a reading of how SCORM hosting works, not a platform to adopt. |
+| [cybercussion/SCOBot](https://github.com/cybercussion/SCOBot) | 🔴 **CC BY-SA 4.0 (text) — reciprocal** | **165** | `2026-10-29` | Global | 🔴 **no** | 🆕 **The trap on this axis.** Live, well-regarded SCORM API for content with QUnit tests — and the `837`-byte `LICENSE` is **Creative Commons Attribution-ShareAlike**, not a software licence. API said `NOASSERTION`. ShareAlike propagates; CC grants no patent. See `589-F` and the block table on [`../agents/top.md`](../agents/top.md). |
+| [adaptlearning/adapt_framework](https://github.com/adaptlearning/adapt_framework) | 🔴 **GPL-3.0** | **632** | — | EMEA | 🔴 copyleft | 🆕 The most-starred **authoring** toolkit on the axis — responsive, accessible, multilanguage HTML5 courseware with SCORM output. 🔴 Copyleft, so it is a reference architecture rather than a dependency. Unshelved despite 10 history re-finds. |
+| [S4-NetQuest/react-scorm-provider](https://github.com/S4-NetQuest/react-scorm-provider) | 🟢 MIT | **67** | 🔴 `2023-01-06` | Global | 🔴 **no — dead** | 🆕 React components wrapping the SCORM API. 🔴 **~3.8 years without a push.** Would be the obvious choice for a React courseware front end; it is not maintained. Default branch `master`. |
+| [gamestdio/scorm](https://github.com/gamestdio/scorm) | 🟢 MIT | **38** | 🔴 `2019-02-14` | Global | 🔴 **no — dead** | 🆕 SCORM 1.2 / 2004 wrapper for JavaScript/TypeScript. 🔴 **~7.7 years without a push.** |
+| [raccoongang/edx_xblock_scorm](https://github.com/raccoongang/edx_xblock_scorm) | 🟢 Apache-2.0 | **32** | 🔴 **ARCHIVED** | EMEA | 🔴 **no — archived** | 🆕 XBlock to display SCORM content inside Open edX. 🔴 `archived: true`, last push `2023-05-26`. 🔵 The seam between the two LMSs of record on this page, and it is read-only. |
+| [adlnet/SCORM-to-xAPI-Wrapper](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **BLOCK — no grant + ARCHIVED** | **99** | 🔴 `2017-10-02` | North America | 🔴 **no** | 🆕 🔴 **Published by ADL — the body that authored SCORM — and it is unlicensed and archived.** 🔵 The strongest single datum behind `Trend 41`: the specification's own authors abandoned their own tooling, which is why generators grew on top of this layer instead of libraries. |
+
+🔵 **The honest build-vs-buy answer for an emit engagement**, which is what a client
+actually asks: **buy exactly one dependency — `scorm-again` — add `scorm-h5p-wrapper` if the
+source content is H5P, build the generator, and depend on nothing else on this axis.** 🔴
+Nine of the ten rows above are dead, archived, copyleft, CC-encumbered or a demo. 🔴 And
+`589-E` is the open question that could widen this: the same decay has **not** been tested
+on `topic:xapi` or `topic:qti`.
+
+---
+
 ## 🔴 Tiers not to start from
 
 | Tier | Verdict | Evidence |

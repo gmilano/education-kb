@@ -4,6 +4,126 @@ region: Global
 updated: 2026-11-01
 ---
 
+## Pass 589 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE CENTRAL FINDING IS THIS BASE'S OWN ENFORCEMENT: `gate-register-currency` IS IN `HOOK_GATES` AND IN `ingest/pre-commit`, AND `make` AND `python3 ingest/*.py` ARE BOTH **DENIED** HERE — SO EVERY GATE IN THIS HARNESS, ALL `59` CONTROLS OF `gate-shelf-consistency` INCLUDED, HAS BEEN INERT FOR AT LEAST `12` PASSES. 🔴 `9 OF THE LAST 12` COMMITTED PASSES WROTE NO REGISTER ENTRY AND `7` WROTE NO README SECTION; `44` GAP IDS WERE CITED ON CURATED PAGES AND ABSENT FROM THE REGISTER, AND WHEN THE PREDICATE WAS TIGHTENED FROM A SUBSTRING MATCH TO A **REGISTRATION POSITION** THE REAL BACKLOG WAS **`120`**. 🟢 `585`–`589` NOW REGISTERED, ALL `21` IDS IN A REGISTRATION POSITION. 🟢 `588-A` PAID AT ITS SOURCE LINE. 🟢 `584-E` CLOSED BY REFUTATION UNDER A PRE-REGISTERED PREDICTION THAT FAILED ON BOTH ARMS, AND `Trend 39`'s `41×` IS NOT REPRODUCIBLE. 🟢 `12` ROWS FILED, NONE FROM A SEARCH. 🔴 TWENTIETH NIL. SIX REGISTERED (`589-A`…`589-F`).**
+
+### 🔴 The enforcement finding, because it reframes the history above
+
+`p587` closed a gap by discovering that a cross-page reconciliation instrument **exists**.
+That was true. 🔴 **This pass measured the other half: it has never run.** `make` and
+`python3 ingest/*.py` both return `"Permission … denied … Reason: [Code from External]"`,
+re-tested individually rather than as a batch.
+
+🔵 **A gate's value is `P(it runs) × P(it catches)`.** This base has spent many passes raising
+the second term and never measured the first, which is **zero** in the environment that
+writes these passes. 🔴 **`p574` recorded the identical symptom for `p573`** — *"committed
+`841` insertions and wrote neither a register entry nor a README section"* — and charged it
+to the pass rather than to the harness. Two passes, `15` apart, same symptom, cause unnamed
+both times. 🆕 **This section is itself the countermeasure:** the pass whose finding is that
+`7 of 12` passes skipped the README does not get to skip the README.
+
+🟢 **And the cheap remedy is demonstrated, not prescribed.** The register check this pass ran
+is a few lines of `grep`/`awk` and needs no permission at all. 🔴 **But the first version of
+it was wrong in an instructive way:** it counted an id as registered if the id appeared
+*anywhere* in the register, so `589-A`'s own worklist of **unpaid** ids read as payment, and
+the answer came back `5`. Keyed on a **registration position** instead, it came back
+**`120`**. 🔵 **A gate that measures the wrong relation is worse than one that cannot run,
+because it reports green.** `589-B`.
+
+### 🟢 `584-E` closed by refutation — and the refutation is better than the claim
+
+🟢 **The prediction was written and committed before the measurement**
+(`evidence/prereg-trend39-test.2026-11-01-p589.md`), which is exactly what `584-E` asked for.
+
+| axis | spec status | denominator | audited agent share | predicted |
+|---|---|--:|--:|---|
+| `topic:scorm` | 🟢 **SPECIFIED** | `235` | 🔴 **`5.53 %`** | `≤ 1 %` — 🔴 **failed, `5.5×`** |
+| `topic:gradebook` | 🔴 unspecified *(control)* | `125` | `2.40 %` | — |
+| `topic:lti` | 🟢 SPECIFIED *(control)* | `184` | `1.63 %` | — |
+| `topic:truancy` | 🔴 unspecified | 🔴 **`1`** | 🔴 unmeasurable | `≥ 5 %` — 🔴 **failed** |
+
+🔴 **The specified axis carries the highest agent share of the four, `2.3×` the unspecified
+control — the sign `Trend 39` predicts is inverted**, and the widest spread under one matcher
+is `3.4×`, not `41×`. 🔴 **`topic:truancy`, the axis `584-E` named, has one repository on all
+of GitHub.** 🟢 **The replacement mechanism is sharper and sellable:** a specification is
+either a **conformance target** you must *speak* (→ libraries) or an **export target** you
+must *emit* (→ generators), and SCORM is the latter — then its permissive tooling **rotted**
+(`2023`, `2019`, archived, and ADL's own wrapper unlicensed since `2017`), so agents grew
+into the vacancy. Filed as `Trend 41`; the delivery rule changes from *"does the task have a
+spec?"* to *"must I speak it or emit it, and is its tooling alive?"*
+
+🔴 **`10` of `29` raw matcher hits were false positives (`34.5 %`), hand-graded row by row** —
+including a homonym inside the classifier rather than the tag: `eloompty/Eloom-LMS-International`
+advertises *"agents and certificates"*, meaning the human education-recruitment agents of
+the admissions trade. `589-C`.
+
+### 🟢 What was filed, and where it came from
+
+🔴 **Twentieth consecutive nil** on new addresses from the eight mandated legs: every
+repo-shaped candidate they served was already in this base, `14`–`23` files deep. 🟢 **So the
+pass filed from the history and from one topic axis instead — `12` rows, none from a
+search.**
+
+- 🟢 [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) — MIT (byte-read, `1,068` B),
+  `91★`. **The first shelf row that ships for four agent runtimes** (Claude Code, Codex,
+  opencode, hermes-agent); grades handwritten answers; keeps a per-course study graph as
+  editable markdown.
+- 🟢 [`rphilipzhang/AI-PhD-S26`](https://github.com/rphilipzhang/AI-PhD-S26) — MIT (byte-read,
+  `1,069` B), `91★`, **APAC**. `DOTE 6635`, **CUHK Business School** — the enablement tier's
+  first row with a university, a course code, a named teaching team and **three years of
+  delivery history**.
+- 🟢 **Nine rows of the SCORM emit-side tier**, now a named section on `repos/foundations.md`.
+  🔴 Seven were unshelved despite `2`–`15` history re-finds; `adlnet/SCORM-to-xAPI-Wrapper`
+  alone had been re-found **`15` times**.
+- 🔴 **Three blocks:** `cybercussion/SCOBot` (**CC BY-SA 4.0** on software — the base's first
+  *reciprocal* CC case, API said `NOASSERTION`), `adlnet/SCORM-to-xAPI-Wrapper` (no grant +
+  archived, from SCORM's own authoring body), `aneelv75/github-trending` (**`3★`**, `10`
+  licence probes all `404`, described by its source as a notable curated list).
+
+### 🔴 Channels, and the one that is now proven undiagnosable
+
+🟢 `gh api search/repositories` `200` with a discriminating `422` control · 🟢
+`raw.githubusercontent.com` `200`, `6` grants byte-read · 🆕 🟢 `WebFetch` on
+`raw.githubusercontent.com` reads READMEs this base had never characterised · 🔴
+`gh api repos/{owner}/{name}` `403` · 🔴 `curl -sI github.com` `403`, so the run prompt's
+mandated verifier still certifies nothing · 🔴 `make` and `ingest/*.py` denied.
+
+🔴 **`583-E` re-tested at five more primary / IGO hosts — `5 of 5` return `000`** (`unu.edu`,
+`publications.iadb.org`, `oecd.org`, `education.ec.europa.eu`, `unesco.org`). 🆕 **`WebFetch`
+names the session allowlist in its error, which looked like the discriminator `p576` wanted
+— and the control pair kills it: a fabricated hostname returns byte-identical text.** Blocked
+and nonexistent remain indistinguishable. 🔵 `583-E` is a network-allowlist request, not a
+research task. `589-D`.
+
+🟡 **`19` intel tokens recovered, every one SECONDARY or LEAD, `0` raised to primary.** 🟢
+**LATAM was not a nil** — a UNESCO IESALC + UNU-IAS working paper (September 2026) and ECLAC
+(October 2025) are real, dated and named, and both hosts are unreachable, so both are LEADS.
+🟡 `p588`'s conclusion that further regional sweeps have *"~zero yield"* is **too strong**:
+the legs are saturated on **addresses** and still productive on **intel**.
+
+### 🟢 Two patterns added
+
+`P-589-A` — the courseware factory whose output crosses the copyleft boundary as **content**:
+one MIT dependency (`scorm-again`), everything else generated, nothing shipped carries a
+copyleft or ShareAlike obligation. `P-589-B` — the university enablement engagement with
+`AI-PhD-S26` as a spine that has actually run, `PAIDEIA` as the per-student loop, and
+🔴 `rasbt/LLMs-from-scratch` explicitly **excluded** as course material because its
+Apache-2.0 redefines *"Source"* to carve out the books and images.
+
+### 🔴 Verification, stated with its limits
+
+Strictly additive on the eight curated pages and both append-only logs (`+79 / -0` and
+`+72 / -0`, history intact). `23 of 23` GitHub addresses re-resolved at the end of the pass;
+`6` grants byte-read with every byte figure piped to `wc -c`. 🔴 **`make` is denied, so
+`ingest/validate-pages.py`, `gate-tables`, `gate-shelf-consistency` and
+`gate-register-currency` did not run.** A replica was written instead and is reported with
+its own failures: its first two checks produced **~`100 %` false positives** on this base's
+key-value tables and ragged-but-rendering tables, were hand-audited, discarded and
+reimplemented; its currency metric was wrong and is corrected above. 🔵 The replica now
+passes on frontmatter, the run prompt's header-as-data rule, empty cells in new rows, the
+region-heading contract, the trend counter, register currency, append-only preservation and
+new-link resolution.
+
+
 ## Pass 587 — reads 2026-11-01, commit 2026-11-01 — **🔴 THE CENTRAL RESULT IS THIS PASS'S OWN WITHDRAWAL: IT BUILT A CROSS-PAGE LICENCE RECONCILIATION SWEEP TO CLOSE `586-A`, THE SWEEP REPORTED `10` CONTRADICTIONS ACROSS `679` ADDRESSES, AND A HAND AUDIT FOUND `0` BASE DEFECTS AND `10 OF 10` FALSE POSITIVES. 🔴 `586-A` WAS FALSE WHEN FILED — THE STEP IS `gate-shelf-consistency`, `59` CONTROLS, IN `HOOK_GATES`, BLOCKING COMMITS SINCE `p308`, AND ITS CONTROL LIST NAMES ALL FOUR TRAPS THE REBUILD FELL INTO. 🟢 FIVE NEW SHELF ROWS, `38 → 43`, AND NOT ONE FROM A SEARCH: ALL FIVE WERE IN THE APPEND-ONLY LOGS, RE-FOUND `19`–`26` TIMES, INCLUDING MIT REPOS AT `78,542★` AND `76,141★` THAT WITHDRAW `p586`'s "LARGEST ROW" CLAIM. 🟢 LATAM IS A MEASURED `33×` GAP AGAINST AN APAC CONTROL, NOT A NIL. 🔴 `p579`'s MEASUREMENT CHANNEL DOES NOT EXIST IN THIS ENVIRONMENT. SIX REGISTERED (`587-A`…`587-F`).**
 
 ### 🔴 The withdrawal, because it is worth more than the rows

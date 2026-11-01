@@ -4,6 +4,145 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p589 — 2026-11-01 — a gate that cannot run is not a gate, and `Trend 39`'s headline figure does not survive one classifier held constant: the specified axis carries the HIGHEST agent share of the four measured, and the mechanism is tooling decay rather than the absence of a specification
+
+### 🔴 Trend A — a blocking gate suite is worth nothing in the environment that cannot execute it, and this base has been publishing as though it ran
+
+🔴 **Measured this pass, and it is about this repository.** `gate-register-currency`
+(`p418`, `Makefile:483`) exists, is in `HOOK_GATES`, and `HOOK_GATES` is invoked by
+`ingest/pre-commit`. 🔴 **It has never fired.** `make` and `python3 ingest/*.py` both return
+`"Permission … denied … Reason: [Code from External]"` in the environment that writes these
+passes — re-tested individually this pass, not only as a batch.
+
+| consequence | measurement |
+|---|--:|
+| gap ids cited on a curated page, absent from the register *(substring predicate, on arrival)* | 🔴 **`44`** |
+| 🔴 **same, with a STRUCTURAL predicate — an id in a registration position** | 🔴 **`120`** |
+| of the last `12` committed passes, those with no register entry | 🔴 **`9 of 12`** |
+| oldest dangling id | 🔴 **`510-C`** (~`79` passes) |
+| controls in `gate-shelf-consistency` alone that have not run | 🔴 **`59`** |
+
+🔵 **The generalisable lesson, which is the trend and not the incident.** A gate's value is
+`P(it runs) × P(it catches)`. This base has spent many passes raising the second term —
+`59` controls on one gate — and **never measured the first**, which is zero here. `p587`
+closed a gap by discovering that an instrument *exists*; existence and execution are
+different claims, and only the first was published. 🔴 **`p574` recorded the identical
+failure for `p573` (*"committed `841` insertions and wrote neither a register entry nor a
+README section"*) and attributed it to the pass rather than to the harness.** Two passes,
+`15` apart, same symptom, cause unnamed both times.
+
+🔴 **And the second lesson, which this pass learned on itself.** Its own first replica
+counted an id as registered if it appeared **anywhere** in the register file, so a worklist
+of unpaid ids read as payment. Tightening the predicate to a **registration position** moved
+the answer from `5` to `120`. 🔵 **A gate that measures the wrong relation is worse than a
+gate that cannot run, because it reports green.**
+
+🟢 **The cheap fix, demonstrated rather than prescribed.** The register check this pass ran
+is **a few lines of `grep`/`awk`** and needs no execution permission at all — it is
+published in [`./open-gaps.md`](./open-gaps.md) under the central finding. 🔵 **Any gate
+whose predicate is a string relation can be ported to `grep` and will then actually run.**
+That is `589-B`.
+
+### 🔴 Trend B — the false-positive rate of an unaudited name-and-description classifier is about a third, and one of its errors is a homonym inside the *classifier* rather than inside the tag
+
+🔴 **Measured by hand-grading every hit this pass produced**, published row-by-row with the
+token that fired at
+[`../evidence/matcher-hand-audit.2026-11-01-p589.tsv`](../evidence/matcher-hand-audit.2026-11-01-p589.tsv).
+
+| axis | raw hits | false positives | FP rate |
+|---|--:|--:|--:|
+| `topic:scorm` | `18` | `5` | `27.8 %` |
+| `topic:lti` | `5` | `2` | `40.0 %` |
+| `topic:gradebook` | `6` | `3` | `50.0 %` |
+| 🔴 **all three** | **`29`** | **`10`** | 🔴 **`34.5 %`** |
+
+🔴 **The error classes are systematic, not random.** Three of the ten are *material about
+agents* rather than agents — `secure-code-training` ("SCORM training … around agents"),
+`Copilot-Chat-Safe-AI-Learning-Path`, `api-evangelist/ispring`. Two are a token in a **name**
+with no AI behind it (`scorm-slide-assistant` is a Chrome playback helper). 🔴 **And one is a
+homonym the classifier cannot see:** `eloompty/Eloom-LMS-International` advertises *"agents
+and certificates"*, where **agents are the human education-recruitment agents of the
+admissions trade.** `Trend 40` established that a topic *tag* must be checked for homonyms
+before its denominator is quoted; this is the same hazard one layer up, in the matcher.
+
+🔵 **Rule:** a share figure reaches a page with three numbers, never one — raw hits, graded
+false positives, and the token that fired. Anything else is an upper bound dressed as a
+measurement.
+
+## 41. A specification does not predict whether a layer is built by libraries or by agents — what predicts it is whether the spec is something you must SPEAK or something you must EMIT, and whether its tooling is still alive (high confidence — pre-registered prediction, falsified on both arms; `545` repositories across four axes, one matcher, every hit hand-graded)
+
+🟢 **This trend exists because a prediction was written down before the measurement and
+then failed.** `584-E` asked for exactly that; the pre-registration is committed verbatim at
+[`../evidence/prereg-trend39-test.2026-11-01-p589.md`](../evidence/prereg-trend39-test.2026-11-01-p589.md).
+
+**Predicted** (from `Trend 39`): `topic:scorm` is **specified** (SCORM 1.2 / 2004, ADL) →
+agent share `≤ 1 %`. `topic:truancy` is **unspecified** → agent share `≥ 5 %`.
+
+**Measured**, one matcher held constant across all four axes, every hit hand-graded:
+
+| axis | spec status | denominator | raw hits | FPs | audited agent share |
+|---|---|--:|--:|--:|--:|
+| `topic:scorm` | 🟢 **SPECIFIED** | `235` | `18` | `5` | 🔴 **`5.53 %`** |
+| `topic:gradebook` | 🔴 unspecified *(control)* | `125` | `6` | `3` | **`2.40 %`** |
+| `topic:lti` | 🟢 SPECIFIED *(control)* | `184` | `5` | `2` | **`1.63 %`** |
+| `topic:truancy` | 🔴 unspecified | 🔴 **`1`** | `1` | — | 🔴 **unmeasurable** |
+
+🔴 **Both arms of the prediction failed.** `scorm` was predicted at `≤ 1 %` and came in at
+`5.53 %` — **`5.5×` over** — and it is **`2.3×` the unspecified control**, so the sign
+`Trend 39` predicts is **inverted**. 🔴 **`topic:truancy`, the axis `584-E` named itself, has
+one repository on all of GitHub** and cannot carry a share at all: a prescription can name
+an axis that does not exist, and the denominator must be read before a prediction is
+registered.
+
+🔴 **`Trend 39`'s `41×` is not reproducible under a single matcher.** The widest spread
+here, same pass, same matcher, same hand audit, is **`3.4×`** (`scorm` / `lti`) — and that
+spread is **between two specified axes**, which spec-status cannot order at all. 🔵
+`Trend 39`'s two figures were taken one pass apart; this pass cannot tell whether its own
+replica matcher or the original method is at fault, and says so rather than choosing. 🟢
+**What survives is the delivery intuition; what is withdrawn is the number.**
+
+🟢 **The mechanism, and it is better than the one it replaces.** Look at *what* the `13`
+genuine `scorm` agents are: `edumints-scorm-mcp`, `scorm-mcp-server`, `edumints-scorm-skill`,
+`cubite-mcp`, `mcp-learning-server`, `CourseForge`, `elabora-core`, `GenOVA` — almost every
+one **emits** SCORM packages. Nothing here *conforms* to SCORM in order to interoperate;
+they **produce** it as an output format.
+
+🔵 **A specification plays one of two roles, and they pull in opposite directions:**
+
+| role | what the spec is for | who builds it | education examples |
+|---|---|---|---|
+| **conformance target** | *speak* it, to interoperate at runtime | 🟢 **libraries** — conformance is deterministic, testable, written once, depended on | LTI 1.3, xAPI |
+| **export target** | *emit* it, to hand a deliverable to someone else's system | 🔴 **agents and generators** — the generation is judgement-shaped, only the container is fixed | SCORM 1.2 / 2004 |
+
+🔴 **And the second half, which is why the agents appeared now.** Of the `80` permissive
+repositories on `topic:scorm`, the emit-side library tier is **dead**: `react-scorm-provider`
+(MIT, `67★`) last pushed **`2023-01-06`**, `gamestdio/scorm` (MIT, `38★`)
+**`2019-02-14`**, `raccoongang/edx_xblock_scorm` (Apache-2.0) **archived**, and
+🔴 **`adlnet/SCORM-to-xAPI-Wrapper` — published by ADL, the body that authored SCORM — is
+unlicensed *and* archived, last pushed `2017`.** Exactly **two** are alive:
+[`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) (MIT, `362★`, pushed
+`2026-10-28`) and [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper)
+(MIT, `58★`, pushed `2026-10-29`). 🔵 **The spec is stable, its tooling rotted, and agents
+grew into the vacancy.**
+
+🔵 **Delivery rule — this replaces `Trend 39`'s, and it is the sellable half.** Do not ask
+*"does this task have a specification?"* Ask **two** questions:
+
+1. **Must I speak it or emit it?** Speak → buy the permissive library, conformance evidence
+   matters more than code. Emit → **the generator is the deliverable** and the spec is only
+   the container contract.
+2. **Is the spec's tooling alive?** Check `pushed_at` and `archived` on the top permissive
+   rows *before* quoting a build-vs-buy answer. 🔴 On SCORM the honest answer is
+   *"buy `scorm-again` for the runtime, build the generator, and do not depend on anything
+   else on this axis"* — because `56.6 %` of the axis (`133 of 235`) carries **no licence at
+   all**.
+
+🔴 **Falsifier, stated so the next pass can kill this too:** an export-target spec whose
+permissive tooling is maintained *and* whose agent share is low, or a conformance-target
+spec with high agent share once its libraries have rotted. `589-E` prescribes the test —
+`topic:xapi` and `topic:qti`, where the roles differ and the decay may not.
+
+
 ## p588 — 2026-11-01 — the defect class with no instrument is TAXONOMY, not licence; `pushed_at` overstates liveness and every staleness verdict in this base inherits that; and the education-specific licence shape is a CONTENT carve-out inside a permissive CODE grant
 
 ### 🔴 Trend A — a knowledge base's inclusion rule drifts silently, and every gate it owns is blind to it

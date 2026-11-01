@@ -4,6 +4,136 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p589 — 2026-11-01 — all eight mandated legs run, `19` intel tokens recovered and every one of them secondary: the `3×` publisher spread this page already publishes is reconfirmed at `3.1×`, LATAM returns its first IGO instrument in three passes and it is unreadable, and `5 of 5` primary hosts are unreachable with a control pair proving the failure cannot be diagnosed
+
+🔵 **Source class is marked on every row below, per `584-F`.** `SECONDARY` = press,
+vendor blog or aggregator. `LEAD` = a real, dated, named instrument whose primary host is
+**unreachable from this harness**, so it is quotable only as *"reported"* and never as a
+figure in a proposal. 🔴 **Nothing on this page acquired `PRIMARY` status this pass.**
+
+### 🔴 The reachability constraint, re-tested and now proven undiagnosable
+
+| host | `curl` | `WebFetch` |
+|---|---|---|
+| `unu.edu` | 🔴 `000` | 🔴 `getaddrinfo ENOTFOUND` |
+| `publications.iadb.org` | 🔴 `000` | — |
+| `www.oecd.org` | 🔴 `000` | — |
+| `education.ec.europa.eu` | 🔴 `000` | — |
+| `www.unesco.org` | 🔴 `000` | — |
+| 🆕 **fabricated control host** | — | 🔴 **`getaddrinfo ENOTFOUND` — byte-identical** |
+
+🔴 **`5 of 5`, and the control pair kills the obvious workaround.** `WebFetch`'s error text
+*names the session allowlist* as a possible cause, which looked like the discriminator
+`p576` wanted. It is not: a deliberately fabricated hostname returns the **same bytes**. 🔵
+**So "blocked" and "does not exist" remain indistinguishable, and `583-E` is a
+network-allowlist request, not a research task.** Registered as `589-D`.
+
+### 🟡 The market floor, reconfirmed rather than revised
+
+| publisher (via secondary) | 2026 figure | class |
+|---|---|---|
+| Grand View–lineage | USD `11.4` bn | SECONDARY |
+| TBRC-lineage | USD `~10.6` bn | SECONDARY |
+| Persistence-lineage | USD `3.7` bn | SECONDARY |
+
+🟡 **Spread `3.1×`** — 🟢 **this reconfirms `583-D`'s finding of a `3.0×` publisher spread
+(USD `3.7`–`11.4` bn) and adds nothing.** 🔵 **Quote the range with the publisher named, never
+a point estimate**; the standing instruction on this page is unchanged. 🆕 One new structural
+token: **K-12 is the largest segment at `~34 %` of the 2026 market** (SECONDARY).
+
+### 🔵 Global tokens, all SECONDARY
+
+- **OECD *Digital Education Outlook 2026*** — AI aids learning *"only when pedagogy stays in
+  control"*. 🔴 LEAD: `oecd.org` unreachable.
+- **OpenAI country-level education programme, `8` national partners, Q1 2026.** 🔵 If it holds,
+  the sales motion shifts from district-by-district to **national infrastructure deals** —
+  which is a Globant-shaped opportunity and a procurement risk at the same time. Unverified.
+- **`~70 %` of institutions across Europe and North America have, or are developing, AI
+  guidance.** 🔵 Guidance is not capability: this is the gap the studio sells into.
+
+### 🟢 North America
+
+- **`36 %` of the global market, USD `3.68` bn in 2026** (MarketsandMarkets, SECONDARY);
+  a second source says `38 %` for 2025. 🟡 Directionally consistent, one share point apart.
+- **`134` AI bills tracked across `31` states as of March 2026**, covering privacy,
+  classroom use and curriculum (SECONDARY). 🔵 **The actionable read: there is no single US
+  rule to build to, so the deliverable is a policy-parameterised product, not a compliant
+  one.** This is the same conclusion `Trend 37` reached from the other direction.
+- **USD `169` m in FIPSE awards released January 2026**, including support for responsible AI
+  use (SECONDARY). 🔴 LEAD — `ed.gov` not attempted; `583-E` class.
+- **Gallup, April 2026: `>60 %` of college students use AI weekly for coursework while
+  roughly half their institutions discourage or prohibit it** (SECONDARY). 🔵 A measured
+  policy-practice gap, and the most quotable single sentence in this pass for a
+  higher-education pitch.
+- 🔴 **REJECTED:** Technavio's *"`86 %` of educational organizations in the region have
+  adopted generative AI"*. Method unverifiable and implausibly high; joins the unusable list
+  with the `83 %` EDUCAUSE figure.
+
+### 🟢 EMEA
+
+- **European Commission updated its ethical guidelines on AI in education, 9 June** and
+  signed **three Advanced Digital Skills grant agreements worth `€25.4` m** (SECONDARY, QS
+  EdTech newsletter). 🔴 LEAD: `education.ec.europa.eu` unreachable, so the guideline's text
+  and the grants' scope are both unread.
+- **UK first AI Adoption Summit committed `>£200` m**, including **`£100` m to expand Bridge
+  AI** and **`£53` m regional** (SECONDARY). 🟡 **Cross-sector, not education-only** — marked
+  because a proposal that implies otherwise is wrong.
+- 🔵 **The EU AI Act remains the structural fact**: education uses are high-risk, which is why
+  the EMEA deliverable is an auditable pipeline rather than a model. Unchanged from `p586`.
+
+### 🟢 APAC
+
+- **Forrester: `60 %` of firms and governments in major markets including India and China to
+  integrate locally developed LLMs, with education named a target sector** (SECONDARY). 🟢
+  **This is the strongest APAC token this base has recorded for the sovereign-model thesis**,
+  and it aligns with what [`../agents/top.md`](./../agents/top.md) already shows: `wordlink`
+  ships a fine-tuned 1.5B model, `minimind` trains a ~64M one from scratch.
+- **"Sovereign-by-design" execution** and **Australia's National AI Plan with Chief AI
+  Officers** (SECONDARY).
+- 🔴 **ASEAN Guide on AI Governance and Ethics remains early-stage**, so compliance is
+  per-country. 🔴 **Education-specific APAC regulation: still nil this pass** — declared, not
+  silent. Consistent with `580-F`'s retirement of the leg.
+
+### 🟢 LATAM — not a nil, and not a fact either
+
+🟢 **The leg returned real, dated, named instruments for the first time in three passes:**
+
+- **UNESCO IESALC + UNU-IAS working paper, September 2026** — maps AI implementation across
+  Latin American and Caribbean universities on **five dimensions** (teaching, research,
+  community engagement, administration, governance). 🔴 **LEAD** — `unu.edu` unreachable, so
+  the five dimensions are the only content this base holds.
+- **ECLAC, October 2025** — ranks **Chile, Brazil and Mexico** as regional leaders across
+  **`100`+ indicators** of capability, research, adoption and governance; finds gaps in data,
+  training and regulation. 🔴 **LEAD**.
+- **IDB *fAIr Tech Radar*, November 2025** — adoption advancing amid structural gaps,
+  developing regulatory frameworks, heterogeneous digital capability. 🔴 **LEAD** —
+  `publications.iadb.org` unreachable.
+- 🔵 **A survey finding worth the pitch deck if it can be primary-sourced:** the region is
+  reported as *"overwhelmingly more positive than any other region"* toward AI in higher
+  education, alongside very high student use (SECONDARY).
+- 🔴 **REJECTED:** *"Rest of Latin America"* AI-in-education at USD `18.2` m (2024) → `36` m
+  (2029). The region is undefined in the source and the figure is three orders of magnitude
+  below the regional shares other publishers imply. Unusable.
+- 🔵 **Regulatory position unchanged:** Colombia's **`Ley 2626 de 2026`** (`p576`) is still the
+  only binding education-AI instrument on these shelves for the region. 🔴 No 2026
+  education-specific regulatory instrument was found for any other LATAM jurisdiction.
+
+🔵 **The LATAM thesis is therefore unchanged and now better evidenced: three IGOs
+independently describe the same shape — high enthusiasm, high student use, weak governance
+and thin in-language supply.** That gap *is* the engagement, and `p587`'s measured `33×`
+in-language supply asymmetry against APAC is the number to carry into the room.
+
+### 🔴 Leg saturation — and a scheduling conclusion this pass will not repeat
+
+`p588` recorded the intel legs saturated at `20 of 24` and concluded further education
+regional sweeps have *"~zero yield"*. 🟢 **This pass ran all eight anyway and recovered `19`
+tokens** — so the conclusion was too strong: 🔵 **the legs are saturated on *addresses* and
+still productive on *intel*.** 🔴 **But `0` of the `19` could be raised above SECONDARY or
+LEAD**, and the binding constraint is `589-D`, not research effort. 🔵 **Scheduling
+conclusion: keep the intel legs, drop the expectation of addresses, and spend the saved
+budget on the allowlist request.**
+
+
 ## p588 — 2026-11-01 — the regional intel legs are SATURATED and the number is `20 of 24`; the four facts this pass did not already hold are all blocked by network policy rather than by research, which makes further intel passes on this industry close to worthless until that changes
 
 ### 🔴 The measurement, stated first, because it is a decision and not a finding

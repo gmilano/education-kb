@@ -4,6 +4,99 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p589 — 2026-11-01 — two recipes this pass's rows make buildable: the courseware factory whose output crosses the copyleft boundary as *content*, and the university enablement engagement with a real course to copy
+
+## P-589-A — 🟢 **The courseware factory that ships into a client's copyleft LMS without touching it** (6–8 weeks, Global; strongest in LATAM / EMEA where Moodle and Chamilo dominate)
+
+**The brief it answers.** *"We have Moodle. We have 400 hours of material in PDFs, slides and
+lecture recordings. Modernise it — and do not touch our LMS."*
+
+🔵 **Why this is a pattern and not a project.** `Trend 41` establishes that SCORM is an
+**export target**, not a conformance target: nothing needs to *speak* it at runtime, so there
+is no integration to build. A SCORM package crosses into the platform as **content**. 🟢
+**That is the cleanest licence boundary in this base** — Moodle's GPL-3.0 and Open edX's
+AGPL-3.0 reach linked code, not uploaded course material.
+
+**The wiring, every component measured first-hand `2026-11-01`:**
+
+| step | component | licence | why this one |
+|---|---|---|---|
+| 1 — ingest source material | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) `1,040★` · [`virgiliojr94/book-to-skill`](https://github.com/virgiliojr94/book-to-skill) `36,673★` | 🟢 MIT (text) | books and PDFs → structured, narrated, interactive material |
+| 2 — generate decks and lessons | [`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) `71,803★` | 🟢 MIT (text) | native PowerPoint with real shapes and narration, not screenshots |
+| 3 — build the course shell | [`assafkip/claudemy`](https://github.com/assafkip/claudemy) `574★` | 🟢 MIT (text) | topic → researched course structure |
+| 4 — assessments | [`numbas/Numbas`](https://github.com/numbas/Numbas) `216★` · [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) `1,370★` | 🟢 Apache-2.0 · 🟢 BSD-3-Clause | real maths engine; autograded notebooks for technical content |
+| 5 — 🆕 **package for the LMS** | [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) `58★` | 🟢 **MIT (text)** | H5P interactions → SCORM objects; the only live permissive packer |
+| 6 — 🆕 **the runtime contract** | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) `362★` | 🟢 **MIT (text)** | SCORM 1.2 / 2004 API; **the single external dependency the deliverable carries** |
+| 7 — retention loop | [`ankimcp/anki-mcp-server`](https://github.com/ankimcp/anki-mcp-server) `540★` | 🟢 MIT | spaced repetition over the generated material |
+
+🔴 **The three traps, each one measured rather than assumed:**
+
+1. 🔴 **Do not reach for `S4-NetQuest/react-scorm-provider`, `gamestdio/scorm` or
+   `raccoongang/edx_xblock_scorm`** — they are the obvious choices by name and they are
+   `2023`, `2019` and **archived**. Budget the React layer as build, not integrate.
+2. 🔴 **Do not vendor `cybercussion/SCOBot`** (`165★`, live, API says `NOASSERTION`): its
+   licence is **CC BY-SA 4.0**, reciprocal, and propagates into client code. `589-F`.
+3. 🔴 **Do not quote "an open-source SCORM stack"** — `56.6 %` of the axis has no licence.
+
+🔵 **What to say in the room.** *"One MIT dependency. Everything else we generate. The output
+is a file your LMS already accepts, so there is no integration, no fork, and no copyleft
+obligation anywhere in what you receive."* 🟢 **And the generator is the billable artefact** —
+the client keeps a pipeline, not a pile of courses.
+
+**Shape.** 6–8 weeks: `1`–`2` ingest and taxonomy, `3`–`5` generation loop with the client's
+own material, `6` packaging and LMS smoke test, `7`–`8` hand-over of the pipeline.
+🟡 **Prerequisite:** the client's LMS version must be confirmed to accept SCORM 2004 — Moodle,
+Open edX, Chamilo and Canvas all do, but the *version* decides which profile.
+
+## P-589-B — 🟢 **The university enablement engagement, with a real graduate course as the template** (6–8 weeks, APAC-first, Global-portable)
+
+**The brief it answers.** *"We are a business school. We must teach AI to our own faculty and
+MBA cohort next term. We are not building a product."*
+
+🔵 **Why this pattern changed this pass.** `P-587-B` and `P-588-B` sell the enablement tier to
+a **corporate** engineering org. 🔴 **A university asks a different question — "show us a
+course that has actually run"** — and until `p589` this base's enablement tier was five
+English-language mega-repos with no institution attached to any of them.
+
+🟢 **The template now exists and is permissively licensed:**
+[`rphilipzhang/AI-PhD-S26`](https://github.com/rphilipzhang/AI-PhD-S26) — **MIT, byte-read,
+`91★`** — is `DOTE 6635 Artificial Intelligence for Business Research`, Spring 2026, **CUHK
+Business School**, Dept. of Decisions, Operations and Technology, with a named instructor,
+TA and tutorial instructor, and **the 2024 and 2025 offerings of the same course in the same
+repository**. 🔵 **Three years of a real course, and the licence permits adaptation.**
+
+| layer | component | licence | role |
+|---|---|---|---|
+| course spine | [`rphilipzhang/AI-PhD-S26`](https://github.com/rphilipzhang/AI-PhD-S26) `91★` | 🟢 **MIT (text)** | 🆕 syllabus, per-session slides through to agentic AI, CoLab demos, problem sets, reading lists — **and three years of delivery history** |
+| foundations module | [`microsoft/generative-ai-for-beginners`](https://github.com/microsoft/generative-ai-for-beginners) `122,693★` | 🟢 MIT (text) | 21 lessons, no content carve-out |
+| agents module | [`microsoft/ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) `78,550★` | 🟢 MIT (text) | 18 lessons from first principles |
+| "we trained our own model" artefact | [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind) `64,710★` | 🟢 Apache-2.0 (text) | ~64M params in ~2 h on modest hardware |
+| 🆕 per-student study loop | [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) `91★` | 🟢 **MIT (text)** | ingests *the cohort's own* lectures and homework; emits drills, **graded handwritten answers**, weakness reports. 🔵 Ships for **Claude Code, Codex, opencode and hermes-agent** — so the institution is not locked to one agent vendor |
+| assessment integrity | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) `21★` | 🟢 Apache-2.0 | randomised-experiment LMS plug-in; consent hidden from the instructor, identifiers stripped |
+
+🔴 **The one hard constraint, and it is a licence, not a schedule.**
+🔴 **`rasbt/LLMs-from-scratch` (`107,625★`) must not be used as course material.** Its
+Apache-2.0 **modifies the definition of "Source"** to exclude *"any books specific to this
+software and any related images"*. 🟢 The code is grantable; the book is not. 🔵 Cite it as a
+reading recommendation students buy, never as a vendored handout.
+
+🟡 **Second constraint:** `PAIDEIA` and `AI-PhD-S26` were last pushed `2026-07-11` and
+`2026-07-28`. **Pin both commits** at kick-off; neither is abandoned, but neither is
+weekly-active.
+
+🔵 **Why APAC-first and why it travels.** The spine is a Hong Kong business-school course, so
+the reference is credible to an APAC buyer and the delivery calendar matches. 🟢 **It travels
+to LATAM and EMEA** for the reason `P-588-A` identified: every component here is
+English-language and `Global`, so there is **no in-language supply dependency** — which is
+exactly the `33×` gap `p587` measured and the thing that normally blocks LATAM delivery.
+🔴 Translation of the spine is therefore in scope and should be priced; it is the single
+largest LATAM line item.
+
+**Shape.** 6–8 weeks: `1` audit of the cohort's existing material, `2`–`3` adapt the spine to
+the client's discipline, `4`–`5` stand up `PAIDEIA` over the client's own lectures, `6` dry
+run with faculty, `7`–`8` assessment-integrity setup and hand-over.
+
+
 ## p588 — 2026-11-01 — two recipes this pass's rows make buildable: the virtual classroom with NO copyleft boundary at all, and the enablement engagement whose deliverable is a model the client trained themselves
 
 ## P-588-A — 🟢 **The white-label virtual classroom a studio may fork, re-brand and ship closed** (10–14 weeks, EMEA / North America / LATAM)

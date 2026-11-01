@@ -4,6 +4,165 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p589` — `2026-11-01` — **🔴 THIS REGISTER IS THE DEFECT. `44` GAP IDS ARE CITED ON THE CURATED PAGES AND APPEAR NOWHERE IN THIS FILE; ITS NEWEST ENTRY WAS `p584` WHILE THE SHELVES CITED `588`. `9 OF THE LAST 12` COMMITTED PASSES WROTE NO REGISTER ENTRY AT ALL. 🔴 THE MECHANISM IS NAMED FOR THE FIRST TIME: `gate-register-currency` IS IN `HOOK_GATES` AND IN `ingest/pre-commit`, AND `make` AND `python3 ingest/*.py` ARE BOTH **DENIED** IN THIS ENVIRONMENT — SO EVERY GATE IN THIS HARNESS IS INERT FOR EVERY PASS WRITTEN UNDER THAT DENIAL, AND `p574` RECORDED THIS SAME FAILURE FOR `p573` WITHOUT NAMING THE CAUSE. 🟢 `588-A` PAID AT ITS SOURCE LINE. 🟢 `584-E` CLOSED BY REFUTATION UNDER A PRE-REGISTERED PREDICTION THAT FAILED ON BOTH ARMS. 🟢 `12` ROWS FILED, NONE FROM A SEARCH. 🔴 TWENTIETH NIL. SIX REGISTERED (`589-A`…`589-F`).**
+
+🔵 **Channel table, run first (`569-B`'s standing row).**
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories -f q='repo:…'` | 🟢 **`13` addresses measured** — resolves `license.spdx_id` + `stargazers_count` + `pushed_at` + `archived` + `fork` + `default_branch` in one call |
+| 🟢 `gh api` search, `-f q='topic:…'` ×4 axes | 🟢 **`545` repositories with denominators**, every page walked to exhaustion |
+| 🟢 fabricated control on the search channel | 🟢 **DISCRIMINATING** — `422 Validation Failed` against `200` |
+| 🔴 `gh api repos/{owner}/{name}` | 🔴 **`403`** — re-tested, unchanged since `p584` |
+| 🟢 `curl` → `raw.githubusercontent.com` | 🟢 **`6` grants byte-read**, every byte figure piped to `wc -c`; `10`-path probe on one address |
+| 🆕 🟡 `WebFetch` → `raw.githubusercontent.com` | 🟢 **READS** — recovered two READMEs this base had never characterised (`PAIDEIA`'s runtime set, `AI-PhD-S26`'s institution) |
+| 🆕 🔴 `WebFetch` → primary / IGO hosts | 🔴 **`ENOTFOUND`**, and 🔴 **its control pair is NOT DISCRIMINATING** — see `589-D` |
+| 🔴 `curl` → `unu.edu`, `publications.iadb.org`, `oecd.org`, `education.ec.europa.eu`, `unesco.org` | 🔴 **`000` on `5 of 5`** — `583-E` holds, now at `13` hosts across three passes |
+| 🔴 `make hooks`, `make gate-register-currency`, `python3 -I ingest/validate-pages.py` | 🔴 **ALL DENIED — `"Code from External"`.** Re-tested individually, not only as a batch. 🆕 **This is the pass's central finding, not a carried note** |
+| 🔴 `WebSearch`, `4` mandated global + `4` mandated regional | 🔴 **`0` new addresses — TWENTIETH consecutive nil**; 🟢 `19` usable intel tokens, all secondary |
+| 🔴 `curl -sI` → `github.com` | 🔴 **`403`** — the run prompt's mandated verifier still certifies nothing; the search channel is the substitute |
+
+### 🔴 The central finding, measured before it was described
+
+The command, reproducible from the repository root:
+
+```sh
+grep -ohE '\b5[0-9]{2}-[A-J]\b' agents/*.md repos/*.md verticals/*.md intel/{market,trends}.md compose/patterns.md | sort -u > cited
+grep -ohE '\b5[0-9]{2}-[A-J]\b' intel/open-gaps.md | sort -u > registered
+comm -23 cited registered    # 44 lines
+```
+
+| measurement | value |
+|---|--:|
+| gap IDs cited on the eight curated pages | `320` |
+| gap IDs present anywhere in this register | `405` |
+| 🔴 **cited on a curated page, absent from this register** | 🔴 **`44`** |
+| highest pass number with a register entry | `584` |
+| highest pass number cited on a curated page | `588` |
+| 🔴 of the last `12` committed passes (`p577`–`p588`), passes with **no** register entry | 🔴 **`9`** (`577`, `578`, `580`, `581`, `582`, `585`, `586`, `587`, `588`) |
+| 🔴 same window, passes with **no** `README.md` entry | 🔴 **`7`** |
+
+🔴 **The `44` are dangling references, not bookkeeping.** `agents/top.md` cites `588-A` and
+`586-A` as the authority for its own inclusion rule; a reader who follows either finds
+nothing in this file. The oldest dangling id is **`510-C`** — roughly `79` passes — so this
+is **chronic, not a four-pass lapse**: `510-C`, `515-B`–`515-D`, `516-C`, `516-D`, `517-C`,
+`523-C`, `538-C`, `568-F`–`568-J`, `578-A`–`578-C`, `580-B`, `580-G`, `581-A`, `581-B`,
+`582-A`, `582-B`, then `585-A`–`589` entire.
+
+🔴 **The mechanism, which no prior pass named.** `gate-register-currency` exists (`p418`,
+`Makefile:483`), it is in `HOOK_GATES`, and `HOOK_GATES` is invoked by `ingest/pre-commit`.
+It has never fired, because **the environment that writes these passes denies the only two
+ways to run it** — `make` and `python3 ingest/*.py` both return
+`"Permission … denied … Reason: [Code from External]"`, re-tested individually this pass.
+🔵 **Therefore every gate in this harness — all `59` controls of `gate-shelf-consistency`
+included — is inert for every pass written under this denial.** `p587` was right that the
+instrument exists; it is also true that it has not run. Both statements are needed, and
+only the first was published.
+
+🟢 **Paid here:** this entry plus the catch-up section below restores currency through
+`p589` — 🟢 **`0` of the `21` `p585`–`p588` ids are still dangling.** 🔴 **It does not pay the
+`23` older ids** (`510-C` … `582-B`); `589-A` carries those, with the list above as its
+worklist.
+
+🔴 **This pass's own first metric was wrong, and correcting it made the finding five times
+worse.** The `grep` replica counts an id as *registered* if it appears **anywhere** in this
+file. 🔴 **A mention is not a registration** — and `589-A` above *lists* older ids as its
+worklist, which a substring match cannot tell apart from registering them. Re-measured with
+a **structural** predicate — an id in the **leftmost cell** of a table row, i.e. in an
+actual registration position — the two predicates disagree badly:
+
+| predicate | registered | 🔴 dangling | `p585`–`p588` dangling |
+|---|--:|--:|--:|
+| substring, anywhere in this file | `434` | `5` | 🟢 `0` |
+| 🟢 **structural, leftmost cell (authoritative)** | **`296`** | 🔴 **`120`** | 🟢 **`0`** |
+
+🔴 **The real debt is `120` ids, not `44` and not `5`.** 🟢 **All `21` `p585`–`p588` ids pass
+*both* predicates**, because the catch-up table below puts each one in a registration
+position — so this pass's own work is sound and it is the **historical** backlog that is
+`~5×` larger than the arrival measurement suggested. 🔵 Both measurements and the full
+worklist are in
+[`../evidence/register-dangling-ids.2026-11-01-p589.txt`](../evidence/register-dangling-ids.2026-11-01-p589.txt).
+
+🔴 **Prescription, which supersedes the one in `589-A`:** the ported gate must key on the
+**registration structure**, never on a substring. 🔵 **A substring gate would have passed
+`p585`–`p588` silently** — it is the kind of check that makes a base feel measured while
+measuring nothing, which is the same failure as a gate that cannot run.
+
+### 🟢 Closed this pass
+
+| Gap | Verdict |
+|---|---|
+| **`588-A`** | 🟢 **PAID AT ITS SOURCE LINE.** `p588` named the contradiction and left the edit; the edit is made. The offending row is `intel/open-gaps.md:25753`, the retired-query table, and it is sharper than `p588` reported: the row's verdict is *"ZERO education SOFTWARE"* and it **names its own five specimens** — `rasbt/LLMs-from-scratch`, `microsoft/generative-ai-for-beginners`, `rohitg00/ai-engineering-from-scratch`, `karpathy/nanochat`, `developer-roadmap`. 🔴 **Four of those five are now shelved on `agents/top.md`**, three of them in the top five by stars. 🟢 The row is amended in place with a dated withdrawal, the **enablement tier** is declared in family, and the mandated query `github trending education AI {year}` is **restored to the roster** with that tier as its target class. 🔵 The channel was never barren — the inclusion rule was wrong. |
+| **`584-E`** | 🟢 **CLOSED BY REFUTATION, under a prediction registered before the measurement** ([`../evidence/prereg-trend39-test.2026-11-01-p589.md`](../evidence/prereg-trend39-test.2026-11-01-p589.md), committed in this pass). `584-E` asked for a pre-registered test of `Trend 39` on one specified and one unspecified axis. 🔴 **Both arms failed.** `topic:scorm` (**specified**) predicted `≤1 %` agent-shaped, measured **`5.53 %`** — and that is **`2.3×` the unspecified control** `topic:gradebook` (**`2.40 %`**), so the sign is **inverted**. 🔴 `topic:truancy`, which `584-E` named itself, has a denominator of **`1`** on all of GitHub and cannot be measured. 🟢 Restated with a mechanism as `Trend 41`. |
+| **`584-C`** | 🟢 **ADVANCED AND PARTLY PAID.** `584-C` asked for a pass spent paying filing debt rather than opening an axis. **`12` rows filed, not one from a search** — `3` from the mandated legs' own history-only candidates, `9` from the `topic:scorm` axis. 🔴 The debt is not cleared: `7` of the `8` SCORM emit-side addresses found had `2`–`15` history re-finds and **zero** shelf presence before this pass. |
+| **`583-E`** | 🟡 **CONFIRMED AND GIVEN A CONTROL PAIR — not closed.** See `589-D`: the diagnostic branch is now settled (negatively) even though the capability branch stands. |
+
+### 🔴 Registered this pass
+
+| Gap | Statement and prescription |
+|---|---|
+| 🆕 **`589-A`** | **`120` dangling gap ids remain after this entry, measured with the structural predicate** (the substring replica says `5`; it is wrong — see the correction above). The oldest is `~79` passes old. This entry restores `585`–`589`; `510-C` … `582-B` are still cited on curated pages and absent here. **Prescription:** work the list in the central-finding section above from the **oldest** end, one pass, `grep` each id in `archive/` first — several will be entries that were written and then lost in a rewrite, which is a `gate-prose-claims` failure and a different defect from never having been written. Do **not** re-derive them from the shelves: that invents a register. |
+| 🆕 **`589-B`** | **Every gate in this harness is inert in the environment that writes the passes, and no page says so.** `make` and `python3 ingest/*.py` are denied; `59` controls in `gate-shelf-consistency` alone have not run for at least `12` passes. **Prescription:** either (1) request execution permission for `ingest/*.py` as a one-line network/exec allowlist item — the same class of request as `583-E` — or (2) accept it and **port the three cheapest gates to pure `grep`/`awk`**, which this pass proved is possible by replicating the register check in three shell lines. 🔵 Option (2) is strictly better than the status quo and needs no permission. 🔴 Until one is done, every *"all gates pass"* sentence in this base's history is unsupported for passes written here. |
+| 🆕 **`589-C`** | **An unaudited classifier share is inflated by about a third, measured.** Hand-grading this pass's `29` raw matcher hits found **`10` false positives — `34.5 %`** (`27.8 %` on `scorm`, `40 %` on `lti`, `50 %` on `gradebook`). One is a **homonym inside the classifier, not the tag**: `eloompty/Eloom-LMS-International` says *"agents and certificates"*, where *agents* are the human education-recruitment agents of the admissions trade. `Trend 40` warned about homonyms in topic tags; this is the same hazard one layer up. **Prescription:** no share figure reaches a page without its raw-hit count, its false-positive count and the token that fired, as `Trend 41` now publishes. |
+| 🆕 **`589-D`** | **`583-E`'s *"indistinguishable from a typo"* property is now proven, and the proof closes off the obvious workaround.** `WebFetch` fails on blocked hosts with `getaddrinfo ENOTFOUND` plus prose that **names the session allowlist as a cause** — which looked like the discriminator `576` wanted. 🔴 **The control pair refutes it:** a deliberately fabricated host returns **byte-identical** error text to `unu.edu`. Blocked and nonexistent are still indistinguishable; only the *set* {blocked, nonexistent} is identified. **Prescription:** stop spending budget on channel hunts for primary hosts. `583-E` is a **network-allowlist request** — `unu.edu`, `publications.iadb.org`, `oecd.org`, `education.ec.europa.eu`, `unesco.org` — and until it is granted, every IGO instrument is a **LEAD** under `584-F`'s source-class rule. |
+| 🆕 **`589-E`** | **The specification layer's permissive tooling is dead, and that is why agents appeared on top of it.** Of the `80` permissive repositories on `topic:scorm`, the emit-side libraries are **`2023`, `2019`, archived, or `9` months idle**; exactly **two** are alive (`jcputney/scorm-again` MIT `362★` pushed `2026-10-28`, `sr258/scorm-h5p-wrapper` MIT `58★` pushed `2026-10-29`). 🔴 **`adlnet/SCORM-to-xAPI-Wrapper` — from ADL, the body that authored SCORM — is unlicensed AND archived, last pushed `2017`.** **Prescription:** test whether the same rot holds on `topic:xapi` and `topic:qti` before `Trend 41` is generalised. If it does, the trend is about **tooling decay**, not about specifications, and the delivery rule changes from *"ask whether the task has a spec"* to *"ask whether the spec's tooling is maintained"*. |
+| 🆕 **`589-F`** | **`56.6 %` of the `topic:scorm` axis carries no licence at all (`133 of 235`), and the two most credible live artefacts on it are CC-licensed software.** `cybercussion/SCOBot` (`165★`, pushed `2026-10-29`) is **CC BY-SA 4.0** — 🔴 *reciprocal*, unlike the CC0 traps at `education-agent-skills` and `awesome-ai-agents-2026`, so vendoring it propagates a ShareAlike obligation into client code. API said `NOASSERTION`. **Prescription:** add a **CC-on-software** column to the block table rather than a per-row note — this is the base's **third** instance and the first reciprocal one, so it is a class, and the class needs one place to be read from. |
+
+### 🟢 Catch-up register — `p585`–`p588`, reconstructed by TRANSCRIPTION, `p589`
+
+🔴 **Why this section exists and what it is not.** `p585`–`p588` registered `23` gaps on
+their curated pages and wrote **no register entry**, so `16` of those ids were dangling even
+after `p589`'s entry above was written — caught by `p589`'s own replica check, which is the
+only reason this section exists. 🔵 **Every statement below is transcribed from the page that
+already states it, with that page named.** `589-A` forbids *re-deriving* a register from the
+shelves, because that invents one; transcribing a statement the shelf already publishes,
+and saying where it came from, is the opposite operation. 🔴 **No verdict, priority or
+prescription has been added where the source page gave none** — those cells read
+`not stated by the source`.
+
+| Gap | Statement, as its source page states it | source |
+|---|---|---|
+| `585-A` | Registered and already cited in the body above (`589`'s entry). | `agents/top.md` |
+| `585-B` | **No permissive proctoring *platform*.** 🔴 Also the specimen for `586-B`: this gap carries **two ids** — `585-B` on `agents/top.md` and `585-G` on `repos/foundations.md` — *"two IDs, one gap. Allocate gap IDs once per base, not once per page."* | `agents/top.md` |
+| `585-C` | **`andymatuschak/orbit` licence unresolved.** 🟢 Resolved at `p586` (split grant: Apache-2.0 except `packages/app` and `packages/backend`, which are AGPL-3.0-or-later **or** BUSL-1.1) and reconciled across pages. | `agents/top.md` |
+| `585-D` | **The `potsie` vs `warren` recommendation was backwards on recency.** 🟢 Corrected. | `repos/foundations.md` |
+| `585-E` | **Python LTI 1.3 has no maintained permissive option.** 🔴 Partly withdrawn at `p583` — `jupyterhub/ltiauthenticator` (BSD-3-Clause, LTI 1.3, pushed `2026-10-05`) satisfies it for the JupyterHub path; the general Python-library claim was not re-tested. | `repos/foundations.md` |
+| `585-F` | **The SIS tier is thin on permissive options** — *"the SIS tier is real but copyleft."* 🟡 Narrowed by `p584`'s denominators and by `apache/openmeetings` at `p588` (a *virtual-classroom*, not SIS, so the SIS claim stands). | `repos/foundations.md`, `verticals/solutions.md` |
+| `585-G` | 🔴 **Duplicate of `585-B`** — same gap, second id. Retained here so a reader who follows the citation on `repos/foundations.md` lands somewhere. | `repos/foundations.md` |
+| `586-A` | **No cross-page licence reconciliation step exists.** 🔴 **FALSE WHEN FILED** and withdrawn at `p587`: `gate-shelf-consistency` (`p308`, `59` controls, in `HOOK_GATES`) is that step, plus two standalone instruments. 🔴 `p589` adds the part `p587` omitted — the gate **has never run here**, because `make` is denied (`589-B`). | `intel/open-gaps.md` (`p587`), `agents/top.md` |
+| `586-B` | **Duplicate gap IDs are being allocated for one gap, once per page instead of once per base.** Specimen: `585-B` / `585-G`. 🔵 Prescription as stated: allocate ids once per base. | `agents/top.md` |
+| `586-C` | **Language learning is an entirely copyleft niche.** Specimens: `artcc/freelingo` (AGPL-3.0, live successor to the archived `LibreLingo`, itself AGPL-3.0). | `agents/top.md` |
+| `586-D` | **The ERP / SIS tier has no permissive option at any size.** 🟡 Narrowed at `p586` to LGPL-3.0 (`openeducat/openeducat_erp`, weak copyleft, so a separate AI module keeps its own licence). | `verticals/solutions.md` |
+| `586-E` | **The EU high-risk date for education AI needs the Official Journal text.** 🔴 **NARROWED, NOT CLOSED** — `digital-strategy.ec.europa.eu` does not resolve from this harness. 🔵 Now a dependant of `583-E` / `589-D`. | `intel/market.md` |
+| `586-F` | **Africa is a persistent evidence nil inside the EMEA leg.** 🟡 `p588` added three LEADS (an AUDA-NEPAD guideline on open models and African-language content, the AU education strategy) — 🔴 none primary-sourced. | `intel/market.md` |
+| `587-A` | **A naive cross-page sweep produced `10` false positives out of `10`, and `p308`'s control list already named all four traps it fell into.** 🔵 The methodological ancestor of `589-C`. | `intel/open-gaps.md` (`p587` body), `agents/top.md` |
+| `587-B` | Registered and cited in the body above. | `agents/top.md` |
+| `587-C` | **The measurement channel is environment-dependent** — a channel proven in one pass is not available in the next. 🟢 Confirmed again by `p589`: `gh api search` `200`, `gh api repos/{}` `403`, `curl -sI github.com` `403`, `make` denied. | `agents/top.md` |
+| `587-D` | **Default branches are not guessable, and four of `p587`'s rows prove it.** Specimens since: `bigbluebutton` on `v4.0.x-develop`, `openeducat_erp` on `19.0`, `rosariosis` on `mobile`, and `p589` adds four more `master` defaults. 🔵 A licence probe on `main` returns `404` on all of them. | `repos/foundations.md` |
+| `587-E` | **The licence vocabulary has no slot for a *data* licence** — ODbL-1.0 arrived in an education repo large enough to matter and the shelves cannot express it. | `agents/top.md`, `intel/trends.md` |
+| `587-F` | **Two non-existent addresses were re-found `31` times** across the append-only logs. 🔵 The discovery-side twin of the promotion bottleneck: the logs re-find both real and imaginary rows. | `repos/trending.md` |
+| `588-A` | 🟢 **PAID by `p589`** — see *Closed this pass* above. | `agents/top.md` |
+| `588-B` | **Every non-GitHub fact in this base is second-hand by channel necessity, not by sloppiness** — `7 of 7` non-GitHub hosts returned no connection at `p588`. 🟢 `p589` re-tested at `5` more hosts (`5 of 5` nil) and added the control pair; this gap is now the general case of which `589-D` is the proof. | `agents/top.md`, `intel/market.md` |
+
+🔵 **`585`–`589` are now registered, and all `21` ids sit in a registration position** so
+they pass the structural predicate, not merely a substring one. 🔴 **`120` older dangling
+ids remain** (`510-C` … `582-B` and earlier), listed in
+[`../evidence/register-dangling-ids.2026-11-01-p589.txt`](../evidence/register-dangling-ids.2026-11-01-p589.txt)
+as measured **before** this section was written. That list is `589-A`'s worklist and it is
+not shortened by this section.
+
+### 🟡 Carried, and declared rather than hidden
+
+| Gap | Note |
+|---|---|
+| `583-B` | 🟡 **Untouched this pass.** `50`+ superlative claims remain unswept. 🔵 `584-A`'s stage-(1) `grep` is free and this pass did not spend it. |
+| `583-E` | 🔴 **STANDS** on capability; 🟢 its diagnostic branch is settled by `589-D`. `13` hosts now tested across three passes, `0` reachable. |
+| `584-A`, `584-B`, `584-D`, `584-F` | 🔴 **Carried unchanged.** 🟢 `584-F`'s source-class rule was **obeyed** by this pass: all `19` intel tokens are marked secondary on `intel/market.md`, and the IGO instruments are filed as LEADS. |
+| `gate-census-currency` / `gate-union-currency` | 🔴 Not re-derived; this pass writes to all eight shelves plus this register, so their published triples are further stale. 🔵 `589-B` is the reason they cannot be re-derived here, and is the first entry to say so. |
+| LATAM 2026 regulatory instrument | 🟡 **Not a nil this pass, and not a fact either.** A **UNESCO IESALC + UNU-IAS working paper dated September 2026** maps AI across LAC universities on five dimensions, and **ECLAC (October 2025)** ranks Chile, Brazil and Mexico on `100`+ indicators. 🔴 Both hosts are unreachable (`589-D`), so both are **LEADS**. Colombia's `Ley 2626 de 2026` (`p576`) remains the only binding instrument on these shelves. |
+| APAC region-level leg | 🟡 Education-specific APAC regulation still nil; 🟢 one usable token (Forrester: `60 %` of firms and governments in India and China to integrate locally developed LLMs, education named a target sector). Consistent with `580-F`'s retirement of the leg. |
+
+
 ## 🆕 `p584` — `2026-11-01` — **🔴 A TREND FILED ONE PASS AGO IS WITHDRAWN BY A ROW THAT WAS ALREADY ON THE SHELF BELOW IT: `Trend 36` SAID THE PLATFORM TIER IS "COPYLEFT WITHOUT EXCEPTION" AND SUPPLIED ITS OWN FALSIFIER, WHICH `sakaiproject/sakai` (ECL-2.0, `1,240★`) HAD ALREADY SATISFIED ON `repos/foundations.md`. 🟢 `583-F` REFUTED AT `41×`. 🟢 `583-A`'s GATE CLEARED A SWEEP FOR THE FIRST TIME. 🟢 `583-C`, `583-D`, `583-G` CLOSED. 🔴 NINETEENTH NIL. SIX REGISTERED (`584-A`…`584-F`).**
 
 🔵 **Channel table, run first (`569-B`'s standing row).**
@@ -25750,7 +25909,7 @@ re-checked against this repository's archive before it is quoted as unbuyable (`
 | enquiry | result |
 |---|---|
 | `top open source AI agents education {year} github MIT` | 🔴 **ZERO education-specific results.** Returned CrewAI, LangGraph, OpenHands, OpenCode — general frameworks, all known. 🟢 **Retire: the education axis of this query is exhausted.** |
-| `github trending education AI {year}` | 🔴 **ZERO education SOFTWARE.** Returned learning material: `rasbt/LLMs-from-scratch`, `microsoft/generative-ai-for-beginners`, `rohitg00/ai-engineering-from-scratch`, `karpathy/nanochat`, `developer-roadmap`. 🔵 **In a trending feed "education" means *teaching people about AI*, not *AI for teaching* — a CHANNEL property, and it explains six passes of thin returns.** 🟢 **Retire in favour of technique-named queries (`P955`).** |
+| `github trending education AI {year}` | 🔴 **ZERO education SOFTWARE.** Returned learning material: `rasbt/LLMs-from-scratch`, `microsoft/generative-ai-for-beginners`, `rohitg00/ai-engineering-from-scratch`, `karpathy/nanochat`, `developer-roadmap`. 🔵 **In a trending feed "education" means *teaching people about AI*, not *AI for teaching* — a CHANNEL property, and it explains six passes of thin returns.** 🟢 **Retire in favour of technique-named queries (`P955`).** 🆕 🔴 **WITHDRAWN `p589` (`2026-11-01`) — `588-A` paid here.** The verdict *"ZERO education SOFTWARE"* is refuted by **four of this row's own five specimens**, now shelved on [`../agents/top.md`](../agents/top.md): `microsoft/generative-ai-for-beginners` (`122,693★` MIT), `rasbt/LLMs-from-scratch` (`107,625★` Apache-2.0, code-only carve-out), `rohitg00/ai-engineering-from-scratch` (`76,144★` MIT) and `karpathy/nanochat` (`59,252★` MIT) — three of them in this base's **top five rows by stars**. 🟢 **The distinction this row drew is real and its conclusion was wrong:** *teaching people about AI* is the **enablement tier**, it is **in family**, and the studio already sells it ([`../compose/patterns.md`](../compose/patterns.md) `P-587-B`, `P-588-B`, `P-589-B`). 🟢 **The query is RESTORED to the mandated roster** with the enablement tier as its target class; `P955`'s technique-named queries stand alongside it, not instead of it. 🔵 The two tiers must never be read as one shelf — see `agents/top.md`'s *enablement tier* heading. |
 | a LATAM national programme publishing a LICENSED education platform | 🔴 **ZERO measured** — 🟡 **and not probed**, which is a different statement. 🟢 **Pre-registered below.** |
 | a non-GitHub primary source, any host | 🔴 **ZERO, twelfth consecutive pass**, cause quoted (`CONNECT tunnel failed, 403`). |
 

@@ -1,0 +1,13 @@
+host	channel	result	class
+unu.edu	curl	000	no connection
+publications.iadb.org	curl	000	no connection
+www.oecd.org	curl	000	no connection
+education.ec.europa.eu	curl	000	no connection
+www.unesco.org	curl	000	no connection
+unu.edu	WebFetch	getaddrinfo ENOTFOUND	blocked-or-nonexistent
+this-host-does-not-exist-zzz9-globant.org	WebFetch	getaddrinfo ENOTFOUND	CONTROL: byte-identical to the real blocked host, so NOT discriminating
+raw.githubusercontent.com	curl	200	reachable
+raw.githubusercontent.com	WebFetch	200	reachable
+api.github.com (search/repositories)	gh api	200	reachable
+api.github.com (repos/{owner}/{repo})	gh api	403	denied for this session
+github.com	curl -sI	403	mandated verifier certifies nothing

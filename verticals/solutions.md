@@ -4,6 +4,53 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p589 — 2026-11-01 — the courseware *delivery* tier, measured: every engagement that hands material to a client's existing LMS is an EMIT job, and the emit tier has exactly two live permissive dependencies out of `235` repositories
+
+### 🔴 The tier this page never named, and why it matters commercially
+
+Every tier on this page below is about the platform a client **runs**. 🔵 **This one is about
+the format a client's platform **accepts** — and it is the tier most engagements actually
+touch**, because a studio is far more often asked to put courseware *into* Moodle, Open edX
+or Canvas than to replace them.
+
+🟢 **The format is SCORM** (1.2 and 2004) and it is a published ADL specification.
+🔴 **Its open-source tooling is dead.** Measured `2026-11-01`, `topic:scorm` walked to
+exhaustion — `235` repositories, full table on
+[`../repos/foundations.md`](../repos/foundations.md):
+
+| what a studio needs | what exists | verdict |
+|---|---|---|
+| a SCORM **runtime** (the API a package talks to) | [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) — MIT, `362★`, pushed `2026-10-28` | 🟢 **adopt — the one safe dependency on the axis** |
+| an **authoring source format** → SCORM | [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) — MIT, `58★`, pushed `2026-10-29` | 🟢 **adopt if the source is H5P** |
+| a **React** front end for SCORM content | [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider) — MIT, `67★` | 🔴 **build it** — last push `2023-01-06` |
+| an **Open edX** SCORM block | [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) — Apache-2.0 | 🔴 **build it** — `archived: true` |
+| a SCORM → **xAPI** bridge | [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) — `99★` | 🔴 **build it** — **unlicensed and archived, last push `2017`, and ADL authored SCORM** |
+| a courseware **authoring toolkit** | [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) — `632★` | 🔴 **reference only** — GPL-3.0 |
+| a SCORM **content API** | [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) — `165★`, live | 🔴 **do not vendor** — **CC BY-SA 4.0**, reciprocal, no patent grant |
+
+### 🔵 The customisation rule for this tier, stated the way the other tiers are
+
+🟢 **Buy the runtime, build the generator.** 🔴 **`56.6 %` of the axis (`133 of 235`) carries no
+licence at all**, so "adopt an open-source SCORM stack" is not a sentence a proposal may
+contain. 🔵 **The defensible position** — and it is a *better* commercial position than
+adopting, because the generator is the billable artefact:
+
+> *"We depend on one MIT library for the runtime contract, we generate the packages, and the
+> packages open in the LMS you already own. Nothing we ship carries a copyleft or
+> ShareAlike obligation."*
+
+🟢 **This composes cleanly with the platform tiers above:** the client keeps its copyleft
+LMS of record (Moodle GPL-3.0, Open edX AGPL-3.0, Chamilo GPL-3.0 — all strong in LATAM and
+EMEA), and the studio never touches it. 🔵 **A SCORM package is the cleanest licence
+boundary in this whole file** — it crosses into the platform as *content*, not as linked
+code, which is the one seam no copyleft licence reaches through.
+
+🔴 **The open question, declared:** `589-E`. The same decay has **not** been tested on
+`topic:xapi` or `topic:qti`. If xAPI's tooling is alive, the rule above is specific to
+SCORM; if it is dead too, this page's whole interchange layer needs re-grading and
+`Trend 41` becomes a statement about **maintenance**, not about specifications.
+
+
 ## p588 — 2026-11-01 — the virtual-classroom tier gets a PERMISSIVE platform of record, carried unfiled in this base since `p525`; and two platform licences that secondary sources got wrong, which this page already had right
 
 ### 🟢 The tier `p587` filled with a copyleft platform has a permissive one

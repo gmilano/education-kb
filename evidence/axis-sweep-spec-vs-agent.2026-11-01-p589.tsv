@@ -1,0 +1,546 @@
+axis	repo	stars	licence_api	description
+scorm	DozenTwelve/Papermorph	1043	MIT	An AI skill that turns books into animated, narrated, interactive web experiences
+scorm	adaptlearning/adapt_framework	632	GPL-3.0	A toolkit for creating responsive, accessible, multilanguage HTML5 e-learning courses.
+scorm	OpenOLAT/OpenOLAT	449	NOASSERTION	Learning Management System OpenOlat
+scorm	jcputney/scorm-again	362	MIT	A modern SCORM JavaScript runtime library.
+scorm	numbas/Numbas	216	Apache-2.0	A completely browser-based e-assessment/e-learning system, with an emphasis on mathematics
+scorm	dhodges47/SCORM-LearningManagementSystem	184	MIT	Open Source SCORM Learning Management System demo
+scorm	cybercussion/SCOBot	165	NOASSERTION	SCORM API for Content. JavaScript library, QUnit tests and examples.
+scorm	edmozley/freeitsm	119	MIT	A completely free ITSM tool
+scorm	Selleo/mentingo	103	MIT	Open-source AI-native LMS with AI Mentor & role-play. Self-hosted alternative to Moodle, Docebo, TalentLMS, Thinkific, Teachable and Open edX.
+scorm	adlnet/SCORM-to-xAPI-Wrapper	99	NULL	APIWrapper.js file commonly used with SCORM with xAPI calls embedded
+scorm	skfriese/simple-scorm-api	70	NULL	A simple SCORM1.2 SCO run-time test environment in one file (NOT MAINTAINED)
+scorm	S4-NetQuest/react-scorm-provider	67	MIT	Components to easily enable SCORM API communication in React projects.
+scorm	sr258/scorm-h5p-wrapper	58	MIT	A NodeJS application that packs H5P content into SCORM objects
+scorm	adlnet/xAPI-SCORM-Profile	42	Apache-2.0	Document describing how to report SCORM data to the Experience API.
+scorm	gamestdio/scorm	38	MIT	SCORM 1.2/2004 Wrapper for JavaScript/TypeScript
+scorm	raccoongang/edx_xblock_scorm	32	Apache-2.0	XBlock to display SCORM content within the Open edX LMS. Editable within Open edx Studio. Will save student state and report scores to the progress tab of the course. Currently supports SCORM 1.2 and SCORM 2004 standard.
+scorm	greenpeace/gpes-html5-scorm-presentation	29	MIT	Create a presentation using html5. Use it independently or upload it as an elearning SCORM package.
+scorm	LiaScript/LiaScript-Exporter	29	BSD-3-Clause	Export LiaScript courses into SCORM, IMS, PDF, Android APK, xAPI, ePub or a standalone WEB project ...
+scorm	savvides/idstack	27	MIT	Evidence-based instructional design skills for Claude Code. 11 AI skills that check alignment, accessibility, cognitive load, and evidence strength. Import from any LMS or authoring tool.
+scorm	Totsukawaii/writeup-on-scorm-cheat	24	NULL	A writeup on cheating SCORM packages using Chrome Developer Tools and TamperMonkey
+scorm	frumbert/scorm_debug	22	NULL	Scorm 1.2 & Scorm 2004 runtime test environment (php)
+scorm	arisjulio/scorm-api-adapter	20	NULL	Simple SCORM API Adapter.
+scorm	swestmoreland/scormcloud-api-wrapper	19	MIT	Node.js client for the SCORM Cloud API.
+scorm	adlnet/SCORM-2004-4ed-Test-Suite	18	NULL	A collection of tests designed to validate software conforming to the SCORM 2004 4th Edition
+scorm	Didask/scol-r	15	MIT	Shareable Cross-Origin Learning Resources
+scorm	catalyst/moodle-mod_scormremote	12	NOASSERTION	A Moodle activity for serving SCORM packages remotely to another LMS across domains
+scorm	edflex-tech/moodle-mod_edflex	12	GPL-3.0	A plug-and-play connector that brings Edflex’s curated catalog, SSO, and activity sync directly to your Moodle instance.
+scorm	souperstition/JavaScript-Snippets-for-Articulate-Storyline	12	NULL	A collection of helpful JavaScript snippets for Articulate Storyline.
+scorm	erseco/python-moodle	10	MIT	Pythonic CLI and library to manage Moodle instances via web sessions
+scorm	kemalyy/edumints-scorm-mcp	9	MIT	Open-source MCP server that assembles interactive, SCORM-compliant e-learning courses. Self-hostable. By edumints.com.
+scorm	edly-io/pxc	9	Apache-2.0	A new standard for learning activities to replace SCORM, H5P, LTI
+scorm	szenadam/scorm-api-wrapper	8	MIT	SCORM API wrapper written in TypeScript
+scorm	RichardoC/secure-code-training	8	NOASSERTION	SCORM training for organisations, around secure coding around agents
+scorm	adlnet/SCORM-to-TLA-Roadmap	7	NULL	Guidance on transitioning from a SCORM environment to a TLA environment
+scorm	course-code-framework/coursecode	7	MIT	Open-source course authoring framework for Claude Code, Codex, and MCP-capable AI tools. Build, preview, and test SCORM 1.2, SCORM 2004, cmi5, and LTI 1.3 courses.
+scorm	giacomomaria81/scorm-mcp-server	6	MIT	Turn HTML, Claude Design bundles or mobile-learning exports into LMS-ready SCORM 2004/1.2 packages — and validate any SCORM zip. Offline, tracked, MIT.
+scorm	andre-wojtowicz/elearning-scorm-exam-template	6	NULL	Minimalistic SCORM-based exam template for e-learning.
+scorm	xapicohort/team-captivate-jslibrary	6	NULL	Our team repository
+scorm	get-bridge/scorm_engine	5	MIT	Ruby client for Rustici's SCORM Engine 2017.1 and 20.1 API
+scorm	TeamMaestro/stencil-scorm-viewer	5	GPL-3.0	Stencil component for viewing SCORM e-learning courses offline.
+scorm	abalvet/ACE	5	LGPL-2.1	ACE, Annotated Corpora for online Exercises 
+scorm	kemalyy/edumints-scorm-skill	5	MIT	Claude Agent Skill for authoring interactive SCORM courses with edumints-scorm-mcp. By edumints.com.
+scorm	dr-rompecabezas/wagtail-lms	5	MIT	LMS extension for Wagtail
+scorm	PixlRainbow/scormy-editor-2	5	MIT	SCORM course creator/editor
+scorm	EscolaLMS/headless-format	5	NULL	e-learning headless format description 
+scorm	e-Fuse/Claude-SCORM-Skill	5	NULL	A Claude Code skill that packages HTML eLearning modules into SCORM-compliant zips. Supports SCORM 1.2, 2004 2nd, 3rd, and 4th Edition. Drop it into your .claude/commands/ folder and run /package-scorm.
+scorm	eurekos/h5p-scorm	5	MIT	H5P SCORM/xAPI
+scorm	henriqgoncalvs/react-scorm	5	NULL	Custom Hook made for use SCORM API Wrapper with React.
+scorm	jcputney/elearning-module-parser	5	Apache-2.0	A library for parsing eLearning module configuration files and packages
+scorm	eurekos/h5p-editor-scorm	4	MIT	H5PEditor SCORM
+scorm	adlnet/flash-finder	4	Apache-2.0	Set of scripts intended to locate SCORM-based Flash and determine the oncoming Flash Deprecation's effects for existing training materials.
+scorm	redmodd/tessera	4	MIT	A JavaScript framework for building interactive eLearning courses,  designed for AI-assisted authoring.
+scorm	PerfectlyNormal/scorm	4	MIT	Parse and create SCORM packages
+scorm	boytchev/scorm	4	GPL-3.0	A collection of SCORM modules
+scorm	andre-wojtowicz/learn-git-branching-scorm	4	NULL	LearnGitBranching as SCORM package with grading
+scorm	arahenda/scorm-godot-plugin	3	MIT	A Godot plugin that offers SCORM integration
+scorm	drakakisgeo/scorm-demo	3	NULL	A scorm example
+scorm	course-code-framework/coursecode-desktop	3	MIT	Open-source desktop app for building SCORM, cmi5, and LTI courses with local preview, LMS export, AI-assisted authoring, and optional Cloud deployment.
+scorm	sergiors/scorm-cli	3	NOASSERTION	Build SCORM 1.2 or SCORM 2004 packages from authored MDX content.
+scorm	numbas/blackboard-scorm-analysis	3	NULL	A tool to analyse data about SCORM attempts from a Blackboard course archive
+scorm	gobito/wowslides.com	2	NULL	Discover, Share, and Present interactive & animated presentations and infographics with the worlds #1 slide sharing platform with awesome html5 convertion capabilities.Get detailed insights from your wow presentations.
+scorm	jaiminnair-hub/orbit-learning	2	MIT	Free, open-source learning platform: course authoring, SCORM/xAPI/cmi5, assessments, certificates, skills and 360-degree feedback.
+scorm	digitalnsw/fundamentals-of-digital-accessibility	2	NULL	Fundamentals of Digital Accessibility: a Digital NSW accessibility e-learning module, packaged as SCORM and published on GitHub Pages.
+scorm	alexwest1981/EduFlex	2	NULL	EduFlex 2.0 är ett molnbaserat, containeriserat LMS byggt med React 19 och Spring Boot 3.4, optimerat för skalbarhet, gamification och enterprise-funktioner.  Plattformen stödjer SCORM/xAPI, Skolverket-integration, flerspråkigt UI (svenska, engelska m.fl.), AI-kursgenerator (Gemini), kursutvärderingar med AI-analys, forum med realtids-WebSocket, e-
+scorm	PixlRainbow/scormy-editor	2	MIT	SCORM course creator/editor
+scorm	psyanite/scorm-parser	2	Apache-2.0	🍰 Scala library to parse and validate SCORM 1.2 packages
+scorm	fotinikafida/artteacherscurriculum	2	NULL	Contains interactive SCORM packages, primarily created in 2022 for the MOOC teacher training in the  New Arts- curriculum for the Junior high school, in Greece. Upload  content to SCORM preview Ninja to test those objects. .
+scorm	parthdhanani/scorm-kit	2	MIT	SCORM 1.2 packaging, validation, and runtime toolkit
+scorm	tkosminov/lms-lrs	2	MIT	Allows you to upload and run courses (scorm, tincan, cmi5). THIS SOLUTION IS NOT OPTIMIZED FOR PRODUCTION. But it can be used as reference material.
+scorm	greenpeace/gpes-activism-school-elearning-template	1	NULL	School of Activism e-learning template/example (SCORM)
+scorm	ahmo14/TeinGo-editor	1	MIT	Modern and interactive WYSIWYG editor designed for creating physics educational content, simulations, and academic materials for TeinGo.
+scorm	parthdhanani/storycraft	1	MIT	Markdown storyboard to SCORM 1.2 package compiler
+scorm	JaysonBucket/Copilot-Chat-Safe-AI-Learning-Path	1	MIT	Foundational learning path on Microsoft 365 Copilot Chat for end users — basics, responsible-AI considerations, and how to actually use Copilot Chat well. Browser preview + SCORM export ready for any LMS. Fully customizable source files included.
+scorm	luukverhoeven/scorm-testing-ldesign-2004-4	1	NULL	SCORM Tester can be used to test the implementation of SCORM 2004 4th Edition in LMS.
+scorm	studiolxd/skills	1	MIT	AI agent skills for Studio LXD libraries — Claude Code, Cursor, Codex/ChatGPT and generic agents (@studiolxd/scorm, @studiolxd/xapi)
+scorm	realjck/web2scorm	1	GPL-3.0	🛠 Generate SCORM packages with any web content
+scorm	Mosadag/ScormCloudAPI-dotnet-core-taghelper	1	NULL	ASP.NET Core tag helper for embedding SCORM Cloud (API v2) courses in MVC apps
+scorm	mobilemind/moat-lms-blocker	1	MIT	Block communication between elearning and an LMS or LRS.
+scorm	jesposito/exeunt	1	MIT	Browser extension to force-complete SCORM eLearning courses. For testers, developers, and learners who believe their time is not a compliance metric.
+scorm	aziyan99/scorm-creator	1	NULL	
+scorm	api-evangelist/adobe-captivate	1	NULL	Adobe Captivate — independent third-party profile of a public API surface, by API Evangelist. Adobe Captivate is an eLearning authoring tool used to create responsive eLearning content, software demonstrations, and interactive training modules.
+scorm	joelrkohlman/instructional-design	1	MIT	A Claude skill for instructional designers — ADDIE, SAM, learning objectives, assessment design, and e-learning development
+scorm	musicm122/ScormExtensions	1	MIT	Extension methods for working with SCORM Cloud Service .Net Library
+scorm	scormflow/scorm-engine	1	MIT	Open-source infrastructure for SCORM, xAPI, and cmi5 — with built-in LRS, webhooks, and AI analytics. Pluggable storage and auth, vendor-neutral REST API, works with any player or our @scorm-engine/client SDK. End-to-end typed.
+scorm	gfebs-dev-team/template-launcher-vanillajs	1	NULL	Boilerplate for creating GFEBs launchers. Intended for legacy browsers.
+scorm	sumaro2101/LMSsystem	1	NULL	LMS system for corporate MOS METRO 
+scorm	LiaPlayground/Automating-LiaScript-Transformations	1	CC0-1.0	Demo automation project for the LiaScript exporter
+scorm	joseluissaorin/andarama	1	EUPL-1.2	¡anda! andarama me deja andar por panoramas. Recorridos virtuales 360 de código abierto: editor visual, visor WebGL con realidad virtual y exportación abierta, sobre Cloudflare o Docker (EUPL-1.2)
+scorm	anarosiris/moodle-local_efscorm	1	GPL-3.0	Direct SCORM player for Moodle: students go straight into SCORM content, full screen in the same tab. Free, by eLearning Fácil.
+scorm	NexPort-Solutions/iscorm	1	MIT	The iSCORM Spec is a Super Set of the ADL SCORM 1.2 Specification. iSCORM is designed to provide a few missing features to the SCORM 1.2 API while still mostly supporting the original SCORM 1.2 specification.
+scorm	HT2-Labs/elucidat-scorm-wrapper	1	NULL	Elucidat SCORM API Javascript interface
+scorm	nareshgandi999/naresh-elearning	1	NULL	Interactive eLearning portfolio projects built using Articulate Storyline 360, Rise 360, and multimedia tools.
+scorm	parthdhanani/sb-translation-tool	1	NULL	Flask web app to update Storyline 360 question text from a PPTX storyboard — supports Word doc and .story file methods
+scorm	gabrielgiussi/cappio	1	NULL	
+scorm	AssociateRemedy/adobe-captivate-workflow-automation	1	NULL	Technical configuration utility for Adobe Captivate environment automation.
+scorm	nathanpitman/SCORM-to-PDF-Transformer	1	NULL	A tool built with Claude to extract text from SCORM files and tranpose this into text with optional prose rewrite using the Claude API 
+scorm	alfredang/learnify-childcare	1	NULL	Corporate e-learning platform for childcare professionals in Singapore. Built with Next.js 16, TypeScript, Prisma, PostgreSQL, and Stripe.
+scorm	digitalnsw/creating-accessible-documents	1	NULL	Creating Accessible Documents: a Digital NSW accessibility e-learning module, packaged as SCORM and published on GitHub Pages.
+scorm	digitalnsw/accessibility-testing-basics	1	NULL	Accessibility Testing Basics: a Digital NSW accessibility e-learning module, packaged as SCORM and published on GitHub Pages.
+scorm	Coursesuite/pdf.to-scorm.com	1	NOASSERTION	PDF to SCORM web site.
+scorm	GenOVA-UPAO/GenOVA	1	NULL	Generación asistida por IA de Objetos Virtuales de Aprendizaje con metodología 5E. Exporta a SCORM 1.2/2004, IMS, HTML, EPUB, H5P y eXeLearning, e integra con Moodle, Canvas y Chamilo vía LTI 1.3. React 19 + FastAPI + Supabase/pgvector, con RAG multimodal y agentes LangGraph.
+scorm	gitalm/scorm-game	1	GPL-3.0	A learning game as scorm package
+scorm	musicm122/ScormToolkit	1	NULL	Scorm Toolkit
+scorm	alfredang/workplacesafety-scorm	1	NULL	Self-contained SCORM 1.2 e-learning demo: a narrated captioned security-awareness video, four interactive topics with knowledge checks, and a scored assessment reporting status, score, bookmark, session time and suspend data. Includes a browser-based SCORM 1.2 LMS simulator for testing online.
+scorm	ABK1-Kuul/SinqAuthoringTool	1	GPL-3.0	SINQ AUTHORING TOOL Portable Electron desktop application for Adapt Framework course authoring.  Standalone Windows build with embedded MongoDB, GUI setup wizard, and zero CLI dependencies.  Perfect for non-technical users who need a self-contained eLearning authoring solution. 
+scorm	ka1ku/scorm-slide-assistant	0	MIT	Chrome extension: optional Storyline SCORM auto-advance, playback speed, and background-tab playback helper.
+scorm	Ifi-DiAgnostiK-Project/tischlerei-oberflaeche-tso12-einfach	0	NULL	LiaScript-Kurs Oberflächenveredelung TSO 1+2/24, einfache Fragen
+scorm	josh-stoner/rise-demo-ew-s1	0	NULL	Email Writing series 1
+scorm	mdpdiazp/pelis2	0	NULL	pelis2
+scorm	LiaPlayground/SCORM-Progress	0	CC0-1.0	Little observer example for visualizing SCORM progress
+scorm	owenvoke/scorm-reload-manager	0	MIT	A selection of classes for managing the SCORM Reload toolkit.
+scorm	harshitaponna/ai-course-generator-scorm	0	NULL	AI-assisted course generation workflow built with Python, Django, Rasa, REST APIs and SCORM packaging.
+scorm	Ifi-DiAgnostiK-Project/zahntechnik-zahn-1-23-kieferorthopaedie	0	NULL	LiaScript-Kurs: ZAHN 1-23 Kieferorthopädische Geräte und temporäre Interimsprothesen.
+scorm	Ifi-DiAgnostiK-Project/zahntechnik-zahn-3-23-totaler-zahnersatz	0	NULL	LiaScript-Kurs: ZAHN 3-23 Totalen Zahnersatz nach System herstellen.
+scorm	Ifi-DiAgnostiK-Project/arbeitsschutz-leitern-1	0	NULL	LiaScript-Kurs zu Leitern I im Arbeits- und Gesundheitsschutz.
+scorm	docxology/course	0	NULL	Curriculum Repository System: a FastAPI platform for authoring and delivering courses, modules and lessons in Markdown, HTML, LaTeX, PDF and SCORM, backed by PostgreSQL, MongoDB, Redis and Elasticsearch, with auto-graded assessments, xAPI analytics, Dublin Core metadata and JWT role-based access.
+scorm	ishandutta2007/Awesome-E-Learning-Authoring-Software	0	MIT	Top E Learning Authoring Software (Opensource)  Star if you like it! 
+scorm	gfebs-dev-team/template-assessment	0	NULL	Boilerplate for creating GFEBs assessments.
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-untertapete-quiz	0	NULL	Verarbeitung von Untertapeten im Maler-/Lackiererhandwerk und in der Raumausstattung
+scorm	Ifi-DiAgnostiK-Project/raumausstattung-untertapeten	0	NULL	Grundkurs Raumausstatter, R2-Wand Raumausstatter
+scorm	Ifi-DiAgnostiK-Project/tischlerei-oberflaeche-tso12-schwer	0	NULL	LiaScript-Kurs Oberflächenveredelung TSO 1+2/24, schwere Fragen
+scorm	akirasakamiyo/GrowthLab	0	NULL	Multimedia interaktif berbasis web untuk melatih soft skill siswa SMK dan fresh graduate: materi, kuis, drag & drop, simulasi bercabang adaptif, dan gamifikasi. Berjalan offline, SCORM 1.2.
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-wdvs-ablauf	0	NULL	Lerneinheit - WDVS Arbeitsablauf von Untergrundvorbereitung bis Schlussbeschichtung
+scorm	Ifi-DiAgnostiK-Project/zahntechnik-zahn-2-23-kurztest-mogu	0	NULL	LiaScript-Kurztest: ZAHN 2-23 Partielle Prothese und Modellguss.
+scorm	Ifi-DiAgnostiK-Project/tischlerei-holzarten-quiz-05	0	NULL	LiaScript-Quiz zu Holzarten im Tischlerhandwerk, Teil 5
+scorm	lmsable/lmsable-skill	0	MIT	Teach your AI chat (Claude, ChatGPT, Gemini) how LMSable works, so the course outlines, lessons, quizzes and scenarios it writes import without rework.
+scorm	djoudi/laravel-h5p-xapi	0	MIT	This package interfaces between the H5P package and an xAPI compatible learning record store (LRS)
+scorm	oKelvinCosta/a12-alimentacao-6ano-choices	0	NULL	Veja o site aqui:
+scorm	anthonykellyjr/storyline-to-scorm	0	MIT	Package Articulate Storyline / HTML5 course exports into SCORM 1.2 zips for any LMS. One command, no Storyline license, pure standard-library Python.
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-grundkurs-g-ml-24	0	NULL	Grundkurs Maler/Lackierer
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-tapetensymbole-quiz	0	NULL	Kurs mit Piktogrammen zur Kennzeichnung von Tapeten
+scorm	timinh/webpack-scorm-wrapper	0	NULL	A scorm 2004 to 1.2 wrapper
+scorm	happinessisreal/scormplayer	0	MIT	SCORM 1.2 / 2004 player and debugger: validate packages against the ADL schemas and watch every LMS API call live.
+scorm	Ifi-DiAgnostiK-Project/zahntechnik-zahn-5-23-aesthetischer-zahnersatz	0	NULL	LiaScript-Kurs: ZAHN 5-23 Funktionellen ästhetischen Zahnersatz herstellen.
+scorm	MSBeni/kinetry	0	Apache-2.0	Narrated, on-brand videos from learning content: brand from a website, script as animated scenes, free local voices, SCORM packages, many languages.
+scorm	Ifi-DiAgnostiK-Project/arbeitsschutz-brandschutzzeichen	0	NULL	LiaScript-Kurs zu Brandschutzzeichen im Arbeits- und Gesundheitsschutz.
+scorm	amirtds/cubite-mcp	0	MIT	MCP server for Cubite LMS, a hosted learning management system (SCORM, xAPI, certificates, cohorts). Run your LMS from Claude, ChatGPT, Gemini CLI or Cursor: 137 tools, OAuth sign-in.
+scorm	first-coder-1/response-parsing-javaScript	0	NULL	A JavaScript port of Response Parsing (Python) for use with SCORM files.
+scorm	Ifi-DiAgnostiK-Project/shk-grundkurs-g-ih-1	0	NULL	LiaScript-Kurs: Grundkurs SHK-Anlagenmechaniker G-IH 1.
+scorm	Ifi-DiAgnostiK-Project/arbeitsschutz-arbeits-und-gesundheitsschutz	0	NULL	LiaScript-Kurs zum Arbeits- und Gesundheitsschutz: allgemeine Fragen.
+scorm	Popescu-Victor/ERQL-CLI	0	NULL	CLI version of the ERQL tool.
+scorm	digitalnsw/accessibility-in-digital-procurement	0	NULL	Accessibility in Digital Procurement: a Digital NSW accessibility e-learning module, packaged as SCORM and published on GitHub Pages.
+scorm	Ifi-DiAgnostiK-Project/tischlerei-holzarten-quiz-03	0	NULL	LiaScript-Quiz zu Holzarten im Tischlerhandwerk, Teil 3
+scorm	neiltucker/free-scorm-wrapper	0	NULL	Production-ready HTML5 SCORM 1.2 and SCORM 2004 wrapper template for packaging web apps, slides, and simulations into LMS packages.
+scorm	Ali-Sdg90/Learning-XAPI-	0	MIT	Learning Storyline 360 and connect it to LRS via xAPI
+scorm	oKelvinCosta/SST-02-Aplica-o-da-NR7-principais-aspectos	0	NULL	Veja o site aqui:
+scorm	Ifi-DiAgnostiK-Project/arbeitsschutz-sicherheitszeichen	0	NULL	LiaScript-Kurs zu Sicherheitszeichen im Arbeits- und Gesundheitsschutz.
+scorm	t4zxxx1/ncpack-studio	0	NULL	Compress videos to AV1 with quality measured on every frame (VMAF). macOS & Windows. Free 7-day trial.
+scorm	Chaoscent/coursecraft	0	Apache-2.0	Self-hosted tool to build interactive online courses and run them in a built-in LMS
+scorm	shastripranav/scorm-content-validator	0	MIT	CLI tool for validating SCORM 1.2 and 2004 e-learning packages
+scorm	NoeliaOviedo/curso-noruego	0	NULL	Microcurso autoformativo de noruego bokmål A0→A1 a través de la cultura nórdica, dirigido a adolescentes hispanohablantes. Proyecto final del Máster en Letras Digitales (UCM, curso 2025-2026).
+scorm	superjavibros/pelis2	0	NULL	
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-mgi-1-04-wdvs	0	NULL	Verarbeitung von Wärme-Dämm-Verbund-Systemen im Maler- und Lackiererhandwerk
+scorm	Ifi-DiAgnostiK-Project/raumausstattung-goldener-schnitt	0	NULL	Goldener Schnitt -- Raumausstatter
+scorm	Ifi-DiAgnostiK-Project/tischlerei-holzverbindungen	0	NULL	LiaScript-Kurs zu Holzverbindungen im Tischlerhandwerk
+scorm	shastripranav/mcp-learning-server	0	MIT	Model Context Protocol server for learning analytics and SCORM/xAPI integration
+scorm	Ifi-DiAgnostiK-Project/zahntechnik-zahn-4-23-cad-cam	0	NULL	LiaScript-Kurs: ZAHN 4-23 CAD-/CAM-Techniken in der Zahntechnik.
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-werkzeuge-grundlagen	0	NULL	Lerneinheit - Werkzeuge im Maler- und Lackiererhandwerk: Pinsel, Rollen, Spachtel, Rakel, Bürsten und Strichzieher
+scorm	fjflima75/scorm-qwen-app	0	NULL	AI-powered SCORM course builder with Qwen-assisted content generation and xAPI export
+scorm	WilliamEbong/CourseForge	0	MIT	Agent harness that turns a course idea or existing material into a tested, accessible, single-file e-learning course, with sourced claims, specialist AI reviewers and human approval gates.
+scorm	fedebarra/papermorph-courseware	0	MIT	Proof of concept: from PDF/Markdown course material to animated, narrated, interactive e-learning lessons (Papermorph engine), with multi-user web app, local or online LLMs and voices, and SCORM 1.2 export.
+scorm	neiltucker/courseware-samples	0	NULL	Free downloadable enterprise courseware packages, syllabi, student manuals, and lab files generated with Courseware Studio.
+scorm	groundworklms/cartridge	0	Apache-2.0	Course JSON → a SCORM 1.2/2004 cartridge that drops into any LMS and reports scores.
+scorm	samuelcaldas/scorm-tools	0	MIT	Universal SCORM 1.2 & 2004 package parser, multi-tier content extractor, and CMI runtime bridge
+scorm	Ifi-DiAgnostiK-Project/zahntechnik-zahn-2-23-partielle-prothese	0	NULL	LiaScript-Kurs: ZAHN 2-23 Zahnersatz als partielle Prothese.
+scorm	Ifi-DiAgnostiK-Project/tischlerei-holzarten-quiz-04	0	NULL	LiaScript-Quiz zu Holzarten im Tischlerhandwerk, Teil 4
+scorm	neiltucker/scorm-lms-test-harness	0	NULL	Free offline single-page SCORM 1.2 and SCORM 2004 LMS API test harness and debugging console.
+scorm	AEMSabbirRifat/Practice-Course	0	NULL	Minimal LiaScript course template with one-click GitHub Actions export to PDF and SCORM (Moodle/ILIAS). Fork it to publish your own interactive course.
+scorm	syahladfa/SmartEmailing	0	NULL	📧 Smart Emailing · Media pembelajaran interaktif menulis email lamaran kerja untuk fresh graduate. Bisa online, offline, dan siap LMS (SCORM 1.2).
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-wdvs-berechnung	0	NULL	Lerneinheit - WDVS Materialbedarf, Flächen und Mengen berechnen
+scorm	fjflima75/qwen_scorm	0	NULL	Qwen-powered SCORM content generator — experiment repo for AI course authoring
+scorm	jarrettdustinqq/coursezip-check	0	MIT	Free offline SCORM ZIP packaging preflight. Local processing; batch edition under validation.
+scorm	Praxity/prax-format	0	NOASSERTION	The .prax format: plain-text eLearning courses, used by Praxity Studio.
+scorm	BenjaminWard-Python/simple-lms	0	MIT	A small SCORM learning management system for non-profits that need to prove staff completed required training.
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-gestaltungstechniken	0	NULL	Lerneinheit - Gestaltungstechniken im Malerhandwerk
+scorm	Popescu-Victor/ERQL	0	NULL	Education, Reporting & Query Language
+scorm	studiolxd/scorm	0	NULL	Headless SCORM 1.2/2004 runtime — framework-agnostic core with React, Vue, Angular, Svelte & Web Component adapters
+scorm	Yousef0hanafy/elhokma-story	0	MIT	رحلة الحوكمة — Premium Arabic story-based e-learning experience on healthcare governance (SCORM 1.2 compatible)
+scorm	artem-nikiforov/whopper-progenitor	0	NULL	Интерактивный курс «Воппер Прародитель» (промо «Атака Титанов») на дизайн-системе KU: две ветки для АУП и ЧБР, тренажёры сборки и упаковки, SCORM 1.2
+scorm	Ifi-DiAgnostiK-Project/raumausstattung-goldener-schnitt-kurz	0	NULL	Goldener Schnitt -- Kurzversion
+scorm	api-evangelist/branchtrack	0	NULL	Branchtrack — independent third-party profile of a public API surface, by API Evangelist. BranchTrack is a browser-based authoring platform for building interactive branching scenarios and conversation simulations used in corporate learning and development. Instructional designers and L&D teams create decision-tree simulations with no coding or des
+scorm	aline-gomes/mystical_rituals	0	NULL	E‑learning adaptativo em HTML/CSS/JS com animações SVG via GSAP/CSS e interações dinâmicas em JavaScript.
+scorm	Ifi-DiAgnostiK-Project/zahntechnik-grundkurs-g-zahn-23	0	NULL	LiaScript-Kurs: Grundkurs G-ZAHN 23 Krone und CAD-Schiene.
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-arbeitsablauf-innen	0	NULL	Lerneinheit - Arbeitsabläufe bei der Wand- und Deckengestaltung
+scorm	Ifi-DiAgnostiK-Project/shk-grundkurs-g-ih-2	0	NULL	LiaScript-Kurs: Grundkurs SHK-Anlagenmechaniker G-IH 2.
+scorm	primoco/elearning-auto-scroller	0	NOASSERTION	Automatically complete eLearning SCORM lessons on Moodle platforms
+scorm	S4-NetQuest/cra-template-s4netquest-scorm	0	MIT	S4 NetQuest scorm CRA template. Absolute imports, sass, bulma, SCORM API connector, SCORM packager, and our preferred directory structure.
+scorm	nvadeveloper/scorm-framework	0	NULL	A simple framework for creating longreads based on React and Tailwind CSS
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-raumausstatter-tapezierwerkzeuge	0	NULL	Typische Tapezierwerkzeuge - Raumausstatter: GR-06 | Maler/Lackiererhandwerk
+scorm	Ifi-DiAgnostiK-Project/raumausstattung-tapezierwerkzeuge	0	NULL	Typische Tapezierwerkzeuge - Raumausstatter: GR-06 | Maler/Lackiererhandwerk
+scorm	Ifi-DiAgnostiK-Project/raumausstattung-polster-naehmaschine	0	NULL	Überprüfungsfragen Kurs GR-06 Grundstufe Nähmaschine | Kurs R3-03 Polstertechniken
+scorm	Ifi-DiAgnostiK-Project/raumausstattung-polstergestelle	0	NULL	Holzverarbeitung im Raumausstatter-Handwerk (Polsterei)
+scorm	tsevindik/scorm	0	NULL	Simple SCORM Demo for e-learning system
+scorm	marcorcau/custom_scorm	0	NULL	Demonstration of how to interact with SCORM commit data in Drupal 9
+scorm	Ifi-DiAgnostiK-Project/raumausstattung-tapetensymbole	0	NULL	Kurs mit den Piktogrammen zur Kennzeichnung von Tapeten im Raumausstatter- und Maler-/Lackiererhandwerk
+scorm	parthdhanani/eaa-tool	0	NULL	WCAG 2.2 / EAA accessibility checker for SCORM packages (Flask + scorm-kit)
+scorm	e-Fuse/elearning-device-detective	0	NULL	Built for the e-Fuse internal eLearning platform. Extracted here as a standalone utility because the problem it solves comes up constantly in SCORM/xAPI authoring and HTML-based courseware.
+scorm	Ifi-DiAgnostiK-Project/arbeitsschutz-leitern-2	0	NULL	LiaScript-Kurs zu Leitern II im Arbeits- und Gesundheitsschutz.
+scorm	tkawen/developer-platform	0	MIT	TKAWEN OS developer platform — OpenAPI v1 spec, certificate verification widget, TypeScript SDK and MCP server. MIT.
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-untergrundpruefung	0	NULL	Lerneinheit - Untergrundprüfung im Malerhandwerk vor Beschichtung und Tapezieren
+scorm	Ifi-DiAgnostiK-Project/tischlerei-oberflaeche-tso12-mittel	0	NULL	LiaScript-Kurs Oberflächenveredelung TSO 1+2/24, mittelschwere Fragen
+scorm	Ifi-DiAgnostiK-Project/tischlerei-oberflaeche-tso12-spezial	0	NULL	LiaScript-Kurs Oberflächenveredelung TSO 1+2/24, Spezialfragen
+scorm	chrisfalvey/chrisfalvey.github.io	0	NULL	Educator transitioning into Learning Design, building projects in instructional design, Python, and data modelling.
+scorm	api-evangelist/ispring	0	NULL	iSpring Learn — independent third-party profile of a public API surface, by API Evangelist. iSpring Learn is an eLearning platform and LMS that provides a REST API for managing courses, users, groups, departments, enrollments, learning paths, and accessing detailed learner progress reports. The API supports content management, assignment grading, 3
+scorm	robertkotsch/kw-asset-skill	0	MIT	Knowledgeworker Create HTML5 embedded learning asset toolkit — Claude Code / Antigravity skill + playbook (Vite + Vanilla JS).
+scorm	polygontwist/makescorm	0	MIT	erzeugen von imsmanifest.xml nach SCORM 1.2
+scorm	Ifi-DiAgnostiK-Project/raumausstattung-grundstufe-gr-06	0	NULL	Grundkurs Raumausstatter
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-wdvs-aufbau	0	NULL	Lerneinheit - WDVS Aufbau: die 7 Schichten eines Wärmedämm-Verbundsystems
+scorm	ateeducacion/OmekaS-LearningObject	0	GPL-3.0	Module for Omeka-S for view and download learning objects in various formats
+scorm	com-digi-s/adapt-lxp	0	GPL-3.0	Adapt LXP is an application template designed to integrate SCORM 1.2-based courses, that were developed using the Adapt Framework, into a feature-rich Learning Experience Platform (LXP).
+scorm	Ifi-DiAgnostiK-Project/raumausstattung-textilpflegesymbole	0	NULL	Kurs mit den Piktogrammen zur Textilpflege für Raumausstatter.
+scorm	LaelaZorana/scorm-qa-validator	0	MIT	Python QA testing tool for SCORM 1.2 / 2004 e-learning packages: manifest parsing, defect detection, structured defect logs
+scorm	cognisparkai/moodle-local_authoringtool	0	GPL-3.0	The CogniSpark Authoring Tool Plugin integrates the AI-powered CogniSpark platform with Moodle, allowing users to create interactive eLearning content directly within Moodle. Features include automated content creation, multimedia integration, and translation, streamlining course development and enhancing engagement for educators and learners. 
+scorm	runestowasser-prog/LearningTheater	0	GPL-3.0	An E-learning development tool, which also functions as html5 animation software
+scorm	worldmanager/scormicron	0	Apache-2.0	A SCORM manifest parser in Scala.
+scorm	Ifi-DiAgnostiK-Project/tischlerei-holzarten-quiz-02	0	NULL	LiaScript-Quiz zu Holzarten im Tischlerhandwerk, Teil 2
+scorm	Ifi-DiAgnostiK-Project/zahntechnik-zahn-2-23-einbettmassen	0	NULL	LiaScript-Kurs: ZAHN 2-23 Berechnung von Mischungen bei Einbettmassen.
+scorm	alfredang/ai-learnify	0	NULL	Learnify: self-paced multi-tenant LMS (IESA spec) on Next.js 16, Prisma and PostgreSQL 17. Stripe payments with an immutable revenue ledger, auto-issued certificates, AI authoring on OpenAI gpt-6.1-sol with DeepSeek fallback, and a SCORM Studio that turns lecture videos into validated SCORM 1.2 packages. Docker on Coolify.
+scorm	aureliendossantos/elabora-core	0	Apache-2.0	Open e-learning source format, validator, SCORM compiler, player, editing engine and agent tooling
+scorm	SCORMShield-Admin/scorm-package-validator	0	MIT	Fast, zero-dependency SCORM package & imsmanifest.xml validator CLI. Detects missing resources, broken schema tags, and LMS compatibility issues.
+scorm	Ifi-DiAgnostiK-Project/shk-grundkurs-g-ih-3	0	NULL	LiaScript-Kurs: Grundkurs SHK-Anlagenmechaniker G-IH 3.
+scorm	Ifi-DiAgnostiK-Project/shk-arbeitsschutz-loeten-schweissen	0	NULL	LiaScript-Kurs: Arbeits- und Gesundheitsschutz beim Löten und Schweißen im SHK-Handwerk.
+scorm	Ifi-DiAgnostiK-Project/raumausstattung-holzverbindungen	0	NULL	Kurs zu den im Gestellbau für Polstermöbel übliche Holzverbindungen
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-untertapete-lernlektion	0	NULL	Lerneinheit - Untertapeten: Arten, Funktion und Arbeitsablauf
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-tapezierwerkzeuge-lernlektion	0	NULL	Lerneinheit - Tapezierwerkzeuge: Überblick über alle wichtigen Werkzeuge für das Tapezieren
+scorm	neiltucker/markdown-to-scorm	0	NULL	Free in-browser Markdown to SCORM 2004 e-learning package compiler. Zero dependencies, pure client-side conversion.
+scorm	AEMSabbirRifat/liascript-export-week02	0	NULL	One-click course export: GitHub Actions turns a LiaScript Markdown lesson into a PDF handout and a SCORM package for Moodle/ILIAS (QuRM Week 02).
+scorm	andre-wojtowicz/openvim-scorm	0	NULL	Interactive tutorial for Vim as SCORM package with grading 
+scorm	Ifi-DiAgnostiK-Project/malerhandwerk-tapetensymbole-lernlektion	0	NULL	Lerneinheit - Tapetenkennzeichnung nach DIN EN 235
+scorm	Ifi-DiAgnostiK-Project/arbeitsschutz-rettungszeichen	0	NULL	LiaScript-Kurs zu Rettungszeichen im Arbeits- und Gesundheitsschutz.
+scorm	Ifi-DiAgnostiK-Project/tischlerei-holzarten-quiz-01	0	NULL	LiaScript-Quiz zu Holzarten im Tischlerhandwerk
+scorm	sheikhsulaiman/scorm-player	0	NULL	A browser-only SCORM 1.2 conformant course player and run-time environment inspector: parses imsmanifest.xml, launches SCOs, implements the full LMS API adapter, and shows every LMSGetValue/LMSSetValue call live.
+scorm	AEMSabbirRifat/liascript-export-week03	0	NULL	One-click course export: GitHub Actions turns a LiaScript lesson on research design & sampling into a PDF handout and a SCORM package (QuRM Week 03).
+scorm	neiltucker/neiltucker	0	NULL	Technical Instructor & Curriculum Architect. Personal website, enterprise training courses, and open-source L&D tools.
+scorm	jowinjohnchemban/scormite	0	MIT	Test, debug, and validate SCORM 1.2 and 2004 packages in your browser — an LMS-faithful player, API log, CMI inspector, validation, and QA reports. Nothing is uploaded.
+truancy	BBC-Data-Unit/school-holiday-fines	0	NULL	Parents fined £24m for children's truancy and term time holidays
+lti	csev/py4e	3111	NULL	Web site for www.py4e.com and source to the Python 3.0 textbook
+lti	tsugiproject/tsugi	377	Apache-2.0	Tsugi Admin, Developer, and Management Console (pls join the dev list)
+lti	INGInious/INGInious	243	NOASSERTION	INGInious is a secure and automated exercises assessment platform using your own tests, also providing a pluggable interface with your existing LMS.
+lti	csev/wa4e	216	BSD-2-Clause	Course materials for www.wa4e.com
+lti	jrgenerative/fixed-wing-sim	164	GPL-3.0	Matlab implementation to simulate the non-linear dynamics of a fixed-wing unmanned areal glider. Includes tools to calculate aerodynamic coefficients using a vortex lattice method implementation, and to extract longitudinal and lateral linear systems around the trimmed gliding state.
+lti	openfun/marsha	151	MIT	:clapper: An opensource LTI Learning Content Management System (LCMS)
+lti	dmitry-viskov/pylti1.3	138	MIT	LTI 1.3 Advantage Tool
+lti	ucfopen/UDOIT	117	GPL-3.0	The Universal Design Online content Inspection Tool, or UDOIT (pronounced, “You Do It”) enables faculty to identify accessibility issues in their Learning Management System. It will scan a course, generate a report, and provide resources on how to address common accessibility issues.
+lti	kmilo17pet/qlibs	104	MIT	A collection of useful libraries for embedded systems : signal smoothing, PID control, Fuzzy Logic, fixed-point math and more...
+lti	loowid/loowid	92	MIT	Webconference solution based on webrtc
+lti	scollovati/awesome-lti	79	CC-BY-SA-4.0	List of awesome resources for learning and developing tools according to the Learning Tools Interoperability (LTI ©) standard created by the 1EdTech Consortium.
+lti	jupyterhub/ltiauthenticator	73	BSD-3-Clause	A JupyterHub authenticator for LTI
+lti	ucfopen/Obojobo	72	AGPL-3.0	Next generation course content for your LMS. Easy for beginners, but powerful enough for researchers.
+lti	ucfopen/Materia	52	AGPL-3.0	Engage students with easily embedded apps for online courses. Supercharge your course with compelling experiences and game mechanics.
+lti	ucfopen/lti-template-flask	47	MIT	DEPRECATED - LTI template written in Python using the Flask framework.  Quickly create a new application that can be launched through your Learning Management System using the LTI protocol.  Uses standard configurable Key & Secret to launch.
+lti	cerpus/Edlib	46	GPL-3.0	Edlib is an application for creating, sharing, storing and using rich interactive learning resources.
+lti	WebPA/WebPA	37	GPL-3.0	Web PA - open source online peer assessment tool
+lti	oat-sa/lib-lti1p3-core	37	GPL-2.0	PHP library for LTI 1.3 Core implementations as platforms and / or as tools.
+lti	dmitry-viskov/pylti1.3-django-example	31	MIT	PyLTI1p3 Django usage example
+lti	doldsimo/lti-1.3-canvas-lms	29	MIT	lti-1.3-canvas-lms
+lti	kmilo17pet/qlibs-cpp	27	MIT	C++ version of qlibs, a collection of useful libraries for embedded systems : signal smoothing, PID control, Fuzzy Logic, fixed-point math and more...
+lti	academic-innovation/django-lti	26	MIT	LTI Advantage support for Django projects.
+lti	frabjous/logicpenguin	26	GPL-3.0	🐧 Logic Penguin 🐧 aims to be a flexible, extensible, open source, and self-hostable framework for online exercises for introductory logic problems, and interfaces with LMS systems.
+lti	js-kyle/nodejs-lti-provider	26	MIT	A minimal LTI provider example using Node.js.
+lti	dimigeorgiou/Python-Digital-Signal-Processing-Basics	24	NULL	📶 Python Scripts for the basics of Digital Signal Processing (DSP). Updating on a regular basis.
+lti	dmitry-viskov/pylti1.3-flask-example	23	MIT	PyLTI1p3 Flask usage example
+lti	oat-sa/devkit-lti1p3	20	GPL-2.0	LTI 1.3 development kit, acting as platform and / or tool.
+lti	Harvard-University-iCommons/django-auth-lti	20	NOASSERTION	
+lti	ucfopen/lti-template-rails	18	MIT	LTI template written in Ruby on Rails.  Quickly create a new application that can be launched through your Learning Management System using the LTI protocol.
+lti	ictinnovations/ictexam-mcp	17	MIT	MCP server for ICTExam — read exams, gradebooks and item analysis; parse papers with AI and publish exams. By ICT Innovations.
+lti	ucfopen/quiz-extensions	16	MIT	A self-service LTI for faculty to easily extend time for multiple users for all quizzes at once.
+lti	kstateome/lti-attendance	16	LGPL-3.0	LTI application for keeping track of student attendance in Canvas courses
+lti	DefactoSoftware/lti	14	NULL	Launch and receive LTI requests
+lti	cisstech/platon	14	NOASSERTION	Platform for Learning and Teaching Online
+lti	ucfopen/lti-template-flask-oauth-tokens	14	MIT	DEPRECATED - LTI template written in Python using the Flask framework.  Uses Instructure's oAuth login to generate an API Key.  Quickly create a new application that can be launched through your Learning Management System using the LTI protocol.
+lti	kstateome/lti-launch	14	LGPL-3.0	Java framework for authenticating LTI launch requests from the Canvas LMS
+lti	uoe-dlam/ed-lti	12	GPL-3.0	Provides a Learning Tools Interoperability (LTI) integration for creating WordPress blogs with appropriate user roles based on roles set within the Virtual Learning Environment (VLE)
+lti	loventures/loplatform	12	AGPL-3.0	An authoring, teaching and learning environment: An AGPL-licensed open source LMS.
+lti	franzliedke/lti	11	LGPL-3.0	LTI Tool Provider library for PHP
+lti	numbas/numbas-lti-provider	11	NOASSERTION	An LTI tool provider to run Numbas exams
+lti	ucfopen/faculty-tools	10	MIT	Faculty Tools - A tool to launch other tools
+lti	ucfopen/lti-template-php	10	MIT	
+lti	oat-sa/bundle-lti1p3	9	LGPL-2.1	Symfony bundle for LTI 1.3 implementations, as platforms and / or as tools.
+lti	ucfopen/due-date-changer	9	MIT	An LTI that allows a user to easily change due dates for multiple assignments simultaneously.
+lti	edly-io/pxc	9	Apache-2.0	A new standard for learning activities to replace SCORM, H5P, LTI
+lti	lti-tool/lti-tool	8	MIT	Serverless-native LTI 1.3 toolkit for Node.js (Lambda, Workers, Hono).
+lti	KishanMaurya/JavaScript-Interview-Coding-Question-and-Answers-	8	NULL	JavaScript Interview Coding Question and Answers , And DSA with JS Programming 
+lti	kltn-moolde/moodle-adaptive-learning-plugin	7	MIT	Adaptive STEM learning system using Q-learning to personalize educational pathways. Integrated with Moodle via LTI 1.3. Achieves 22.5% score improvement and 51% reduction in weak skills through AI-driven recommendations and explainable decisions (SHAP).
+lti	StevenWeathers/peregrine-lti	7	Apache-2.0	LTI 1.3 launch library written in Go
+lti	fhswf/Jupyterhub-K8s	7	MIT	Jupyterhub on Kubernetes with GPU support and Multiauthentication
+lti	konimarti/lti	7	MIT	General state-space representation of linear, time-invariant systems in Golang
+lti	course-code-framework/coursecode	7	MIT	Open-source course authoring framework for Claude Code, Codex, and MCP-capable AI tools. Build, preview, and test SCORM 1.2, SCORM 2004, cmi5, and LTI 1.3 courses.
+lti	ikovac/lti-tool-example	7	NULL	LTI 1.3 Tool example 🔧
+lti	kstateome/lti-launch-example-webapp	7	LGPL-3.0	A minimal example of how to use the code in lti-launch
+lti	snap-cloud/lambda	6	NULL	An LTI backed server for auto grading Snap! code
+lti	FachschaftMathPhysInfo/ostseee	6	Apache-2.0	Evaluating online courses (Moodle,e.g.) like a breeze. 💨 
+lti	tk1/doatask	6	MIT	An extensible learning tool
+lti	EduThemes/paper-lms	6	MIT	The fastest LMS that's fully backwards compatible with Canvas-LMS. Designed for low-cost hosting and ease of modification.  
+lti	Harvard-University-iCommons/canvas_account_admin_tools	6	NULL	
+lti	Pearson-Advance/openedx-lti-tool-plugin	5	Apache-2.0	Open edX  LTI 1.3 tool.
+lti	dhyanamgit/nodemeet	5	NOASSERTION	Embed live video meetings and scheduling in your Python app. Self-hosted, LTI 1.3, free for noncommercial use.
+lti	pressbooks/pressbooks-lti-provider	5	GPL-3.0	A plugin which turns Pressbooks into an LTI provider.
+lti	Harvard-University-iCommons/lti_emailer	4	NULL	LTI tool that provides mailing-list capabilities for courses
+lti	ilios/lti-dashboard	4	MIT	LTI Application for the Ilios dashboard.
+lti	uPortal-Project/basiclti-portlet	4	Apache-2.0	A portlet for connecting to Basic LTI enabled applications
+lti	RossSmyth/spectrum.py	4	NOASSERTION	An attempt to reverse-engineer and make an API wrapper for Robert Space Industries' Spectrum chat
+lti	swisnl/laravel-lti-provider	4	MIT	Laravel LTI provider
+lti	AlgoJudge/AlgoJudge-Server	4	MIT	Persistent state, REST API and authorization for AlgoJudge. ASP.NET Core on .NET 10 with PostgreSQL — and it never compiles or executes a submitted solution.
+lti	tl-its-umich-edu/canvas-lti-redirect-tool	3	Apache-2.0	Canvas LTI Redirect Tool
+lti	oat-sa/lib-lti1p3-ags	3	GPL-2.0	PHP library for LTI 1.3 Assignment and Grade Services implementations as platforms and / or as tools.
+lti	oat-sa/lib-lti1p3-proctoring	3	GPL-2.0	PHP library for LTI 1.3 proctoring implementations as platforms and / or as tools
+lti	ClassCube/wordpress-lti-consumer	3	NULL	WordPress plugin that will allow you to insert LTI tools into your pages and posts
+lti	oat-sa/lib-lti1p3-deep-linking	3	GPL-2.0	PHP library for LTI 1.3 Deep Linking implementations as platforms and / or as tools.
+lti	course-code-framework/coursecode-desktop	3	MIT	Open-source desktop app for building SCORM, cmi5, and LTI courses with local preview, LMS export, AI-assisted authoring, and optional Cloud deployment.
+lti	TSG405/TSG405	3	BSD-3-Clause	INTRO 🔥
+lti	andyfmiller/gc2lti-poc	3	Apache-2.0	Proof of concept to use LTI Tools as assignments in Google Classroom.
+lti	DecoyLex/ltix	2	MIT	Ltix is an Elixir library for building LTI 1.3 applications.
+lti	paurushrai/lti-1.3-node-nextjs-starter	2	MIT	Production-ready full-stack LTI 1.3 Advantage tool template — Node.js (ltijs) backend + Next.js 14 frontend, with Dynamic Registration, PostgreSQL, and Docker.
+lti	AlexandreRiff/reilti-web-app	2	NULL	Repositório Educacional Interoperável Utilizando o Padrão LTI
+lti	wachjose88/django-lti-provider-auth	2	MIT	This is a highly confirgurable LTI provider for Django projects.
+lti	virtUOS/abstimmbar	2	Apache-2.0	Open-source audience response system for universities — live quizzes & polls, anonymous participation via QR/short code, LTI 1.3 & OIDC, optional self-hostable AI helpers. Successor to Cliqr, by virtUOS.
+lti	UNEDLabs/moodle-mod_lti_enlarge	2	GPL-3.0	An LTI moodle subplugin for connecting to ENLARGE systems
+lti	rsm-hcd/Common-Cartridge	2	Apache-2.0	Library encapsulating the XDT files provided by IMS to convert XML Common Cartridge files into structured classes
+lti	openfun/moodle-atto_lti	2	MIT	Moodle Atto plugin which allows to embed LTI resources through Deep Linking.
+lti	fhswf/jupyterhub	2	MIT	Multi-user server for Jupyter notebooks
+lti	scorpion/lms	2	Apache-2.0	🧑‍🏫 Scorpion LMS + Docker Hub automation and infrastructure provisioner. NGDLE precursor.
+lti	RevolutionIndustries/lti-launcher	2	AGPL-3.0	Open Source Browser based LTI Launch Tool that helps you simulate LTI launches from a tool consumer.
+lti	LTIaaS/ltiaas-node-sdk	2	NULL	The LTIAAS Launch™ Node.js SDK is a comprehensive client library that provides easy integration with the LTIAAS platform for managing LTI (Learning Tools Interoperability) connections between learning platforms and tools.
+lti	lti-lab/LTI-1.3-Sandbox	2	NULL	A developer sandbox for building and testing Learning Tools Interoperability (LTI) 1.3 tools and integrations. Use this repository to implement, debug, and demo LTI 1.3 features (tool deployments, IMS Advantage services like Names & Roles, Deep Linking, and more)
+lti	KaioFelps/experimental-learning-tool	2	NULL	An LTI experiment
+lti	christophse/django-lti-tool	2	BSD-3-Clause	LTI 1.3 tool integration for Django
+lti	rohitjose/django-lti-auth	2	MIT	Django LTI Authentication Made Easy. Easily integrate with your LTI provider for Django projects
+lti	rpatrik96/lti-ica	2	MIT	Independent Component Analysis in Linear Time-Invariant Systems
+lti	ictinnovations/moodle-mod_ictexam	2	GPL-3.0	ICTEXAM assessment activity for Moodle: launches an ICTEXAM paper over LTI 1.3 in a course and writes the score back to the gradebook
+lti	pfgray/yaltt	1	NULL	Yet Another LTI Test Tool
+lti	api-evangelist/turnitin-iparadigms	1	NULL	Turnitin (iParadigms) — independent third-party profile of a public API surface, by API Evangelist. Turnitin (iParadigms) is an education-technology company providing academic integrity, similarity checking, and grading products used by schools, universities, researchers, and publishers worldwide.
+lti	Izumi-kun/yii2-lti-tool-provider	1	BSD-3-Clause	LTI Tool Provider library for Yii2
+lti	gaetanoimprota/LTI-Analysis-Control-Design-MATLAB	1	MIT	Analysis and Optimal Control 
+lti	jupyter-fumihax/lticontainerspawner	1	BSD-3-Clause	LTIContainerSpawners for Integration System of Moodle(LMS) and JupyterHub
+lti	iamlucasb/lti-core	1	MIT	Framework-agnostic TypeScript library for LTI 1.3 tools: OIDC launch, Deep Linking 2.0, JWKS
+lti	andyfmiller/consumer-rp	1	NULL	Sample LTI Consumer using LtiLibrary.NetCore, LtiLibrary.AspNetCore, and Razor Pages
+lti	azusapacificuniversity/lti-gmeet	1	GPL-3.0	Canvas LTI integration with Google Meet.
+lti	GenOVA-UPAO/GenOVA	1	NULL	Generación asistida por IA de Objetos Virtuales de Aprendizaje con metodología 5E. Exporta a SCORM 1.2/2004, IMS, HTML, EPUB, H5P y eXeLearning, e integra con Moodle, Canvas y Chamilo vía LTI 1.3. React 19 + FastAPI + Supabase/pgvector, con RAG multimodal y agentes LangGraph.
+lti	slashssab/piecewise-smooth-ode	1	NULL	Introduction to analyze piecewise-smooth systems using python
+lti	oat-sa/lib-lti1p3-nrps	1	GPL-2.0	PHP library for LTI 1.3 Names and Role Provisioning Services implementations as platforms and / or as tools.
+lti	tl-its-umich-edu/tool-migration	1	NULL	App for migrating external (LTI) tools in Instructure's Canvas LMS.
+lti	indiana-university/lms-canvas-multiclassmessenger	1	BSD-3-Clause	LTI tool which allows instructors to post an announcement/message to multiple courses at the same time.
+lti	paurushrai/lti-1p3-nextjs-starter	1	MIT	LTI 1.3 Advantage tool starter — Next.js 14 (App Router) + MongoDB. Dynamic registration, OIDC launch, NRPS, AGS, grade-passback webhook.
+lti	cmu-mlsp/11-775	1	MIT	[website] Large-Scale Multimedia Analysis
+lti	api-evangelist/canvas	1	NULL	Canvas — independent third-party profile of a public API surface, by API Evangelist. Canvas is Instructure's open-source learning management system (LMS) used by K-12, higher education, and corporate training organizations to deliver courses, assessments, and learner communication.
+lti	KaioFelps/lti-consumer-poc	1	MIT	Proof of Concept of a Moodle-as-learning-tool consumer.
+lti	indiana-university/lms-canvas-rivet	1	BSD-3-Clause	Bundle of rivet UI things that are useful to lms-canvas LTI tools
+lti	carsonhung/lti-moodle-integration	1	Apache-2.0	LTI 1.3 tool provider for Express with Vue 3 and React 18 UI - Moodle launch to app session, Deep Linking, and AGS grade passback.
+lti	api-evangelist/lingco-language-labs	0	NULL	Lingco Language Labs — independent third-party profile of a public API surface, by API Evangelist. Lingco Language Labs, Inc. is a Delaware-incorporated education technology company operating Lingco Classroom, a cloud language-learning platform used by schools and universities. Lingco pairs a library of pre-built, customizable world-language conten
+lti	ChalmersLibrary/canvas-kth-scanned-exams	0	MIT	Imports written exams scanned with Aldoc into Canvas assignment
+lti	groton-school/planner-lti	0	GPL-3.0	A more planner-oriented Canvas calendar view for students and teachers
+lti	tkawen/developer-platform	0	MIT	TKAWEN OS developer platform — OpenAPI v1 spec, certificate verification widget, TypeScript SDK and MCP server. MIT.
+lti	NoelisTired/canvas-portflow-cli	0	MIT	Sync a folder of evidence into your Fontys Canvas / Portflow portfolio. Playwright ADFS login + LTI 1.3 launch, idempotent add/version/skip.
+lti	Izumi-kun/yii2-lti-tool-provider-sample	0	BSD-3-Clause	
+lti	oat-sa/lib-lti1p3-submission-review	0	GPL-2.0	PHP library for LTI 1.3 Submission Review implementations as platforms and / or as tools. 
+lti	hurak/StructuredSingularValues.jl	0	MIT	Computing the Structured Singular Value of a matrix.
+lti	lsloan/mwrite-peer-review-backup	0	NULL	MWrite Peer Review is an LTI for Canvas to enable peer reviews.
+lti	brdebr/AttndCtrl	0	Apache-2.0	LTI Tool Provider to manage the attendance of students in an LMS, developed using Ruby on Rails
+lti	ilios/lti-course-manager	0	MIT	LTI Application for the Ilios couse manager.
+lti	sebastianspicker/practice-relay	0	Apache-2.0	Local-first workspace for policy-aware WorkRecord handoffs: evidence, participants and permitted uses exported as RO-Crate packages. Includes the MvEI movement schema.
+lti	shaheeranser/exam-proctor	0	Apache-2.0	LTI 1.3 exam proctoring platform that runs inside Moodle — React/TS client, Express + MongoDB API, in-browser proctoring with TensorFlow.js + MediaPipe, Dockerized with MinIO and Caddy.
+lti	adam-elharouchi/AnalytIQ	0	NOASSERTION	AI-powered analytics learning platform. Generates coursework from a professor's own material and grades student code by executing it — Python, R, JS, SQL, Java. Flask, PostgreSQL, Celery, Gemini, LTI 1.3.
+lti	antonia173/lti-bridge	0	MIT	
+lti	oselin/gradient_ML_LTI	0	MIT	A gentle introduction to custom gradient propagation for ML application in which parameters of LTI systems have to be optimized. This example enables the integration of control theory with machine learning, for the development of Physical-Informed Neural Networks (PINNs)
+lti	groton-school/slim-lti-shim	0	GPL-3.0	Shim to use packbackbooks/lti-1p3-tool in a Slim Skeleton app
+lti	shaklain125/NexusLTI	0	NULL	Nexus LTI integration
+lti	parkersiddall/LTI_blogs	0	NULL	A blog app that demonstrates how third-party tools can integrate with learning management systems via the LTI 1.1 standard.
+lti	rayuruno/ltirun	0	NULL	lti tool proxy
+lti	groton-school/slim-lti-infrastructure-gae	0	GPL-3.0	Shim to implement packbackbooks/lti-1p3-tool storage interfaces in Firestore
+lti	robertjndw/go-lti-tool	0	MIT	Go SDK for building LTI 1.3 tools, including LTI Advantage services
+lti	frautn/owui-lti1.1	0	NULL	Minimal Django project that acts as Middleware, accepts an LTI 1.1 launch from Moodle and opens OpenWebUI chat inside an iframe.
+lti	api-evangelist/proctorio	0	NULL	Proctorio — independent third-party profile of a public API surface, by API Evangelist. Proctorio is a remote proctoring and learning-integrity platform that secures online exams with automated recording (video, audio, screen, web traffic), identity verification, lockdown-browser behavior controls, and post-exam suspicion scoring with behavioral fl
+lti	Shuregg/math-modeling-with-py	0	NULL	Math, DSP, Modeling
+lti	topic-allocator/topic-allocator	0	NULL	Moodle plugin used for project allocation at my university
+lti	leeds-beckett-digital-learning/lbu-lti-demo	0	Apache-2.0	A demonstration LTI 1.3 tool written in Java conforming with Java Web Application specifications.
+lti	api-evangelist/labster	0	NULL	Labster — independent third-party profile of a public API surface, by API Evangelist. Labster is a virtual laboratory simulation platform for universities, colleges and high schools, delivering more than 300 immersive 3D science simulations across Biology, Chemistry, Physics and Health Sciences.
+lti	yuttie/rust-mini-lti-app	0	MIT	Minimal LTI tool provider implementation written in Rust with axum
+lti	RyanGravetteIDLA/qualtrics-lti-connector	0	MIT	LTI 1.3 connector bridging Agilix Buzz LMS with Qualtrics for survey integration and automated grade passback
+lti	api-evangelist/turnitin	0	NULL	Turnitin — independent third-party profile of a public API surface, by API Evangelist. Turnitin is an academic and research integrity company that for more than 20 years has provided plagiarism/similarity detection, AI-writing detection, online grading, and feedback tools for educators, researchers, and publishers.
+lti	offset-smoker/edu-standards	0	MIT	PHP library for Open Badges 3.0, OneRoster and LTI 1.3
+lti	api-evangelist/instructure	0	NULL	Instructure — independent third-party profile of a public API surface, by API Evangelist. Instructure is an EdTech company best known for Canvas LMS, a widely adopted learning management system used by thousands of educational institutions and organizations worldwide. The platform provides a comprehensive REST API and GraphQL API enabling developer
+lti	nmerm/AppMed-LTI-Tutorial	0	NULL	Un tutoriel pour tester l'implémentation de LTI (Learning Tools Interoperability) avec Moodle (https://moodle.org/) et Rating (http://www.spvsoftwareproducts.com/php/rating/)
+lti	cgrevisse/slidelti	0	NULL	Histology slide viewer via LTI
+lti	oxctl/calendar-import	0	MIT	An LTI tool to allow calendar events to be imported into a Canvas calendar from a CSV.
+lti	oxctl/account-reports	0	MIT	An LTI tool which presents links to generate and view useful Canvas reports
+lti	ransomleak/moodle-local_ransomleak	0	GPL-3.0	Moodle local plugin: registers RansomLeak as a preconfigured LTI 1.3 external tool (Deep Linking, AGS, NRPS) from a single tenant URL.
+lti	Naou95/moodle-local_memovia	0	GPL-3.0	MEMOVIA for Moodle: course files adapted for the whole class
+lti	api-evangelist/respondus	0	NULL	Respondus — independent third-party profile of a public API surface, by API Evangelist. Respondus builds assessment-integrity tools for online exams - most notably LockDown Browser, a custom browser that locks down the testing environment, and Respondus Monitor, an automated webcam-based online proctoring service that adds AI-assisted review on top
+lti	alejlatorre/lti-provider	0	Apache-2.0	A FastAPI-based Learning Tools Interoperability (LTI) 1.3 provider implementation
+lti	LongsightGroup/lantern	0	Apache-2.0	
+lti	UOC/slack-lti-commands	0	LGPL-3.0	Slack commands for managing LTI provided apps
+lti	indiana-university/lms-canvas-redis-config	0	BSD-3-Clause	Configuration bits for lms-canvas LTI tools using redis
+lti	glenn-watt/lti-1p3-reference-tool	0	MIT	A working LTI 1.3 / LTI Advantage reference tool in Python + Flask — OIDC, JWKS validation, AGS, NRPS, and Deep Linking implemented from first principles.
+lti	oxctl/sub-account-browse	0	NULL	An LTI tool for viewing Canvas Sub-accounts – navigates around a limitation in the Canvas permissions model
+lti	indiana-university/lms-canvas-lti-framework	0	BSD-3-Clause	Shared services for the lms-canvas LTI tools around the LTI tool launch
+lti	api-evangelist/classlink	0	NULL	ClassLink — independent third-party profile of a public API surface, by API Evangelist. ClassLink is an EdTech identity and access management platform purpose-built for K-12 school districts, providing single sign-on (SSO) to over 6,000 digital learning resources through its LaunchPad portal.
+lti	api-evangelist/packback	0	NULL	Packback — independent third-party profile of a public API surface, by API Evangelist. Packback is an AI-powered instructional platform for higher education and K-12 that delivers real-time, formative feedback on student discussion and writing. Its products - Questions/Discussions, Writing and Deep Dives, and Originality - embed into a school's LMS
+lti	amirtds/amirtds	0	NULL	LMS Engineer · Open edX & Moodle Developer · Canvas LTI 1.3 · Founder of Cubite. Building educational platforms since 2013.
+lti	api-evangelist/honorlock	0	NULL	Honorlock — independent third-party profile of a public API surface, by API Evangelist. Honorlock is an online exam proctoring and academic integrity platform for higher education and professional certification. Its primary integration path is LTI 1.3, installed natively into LMS platforms - Canvas, Blackboard, Moodle, D2L Brightspace, Open LMS, Do
+lti	api-evangelist/gradescope	0	NULL	Gradescope — independent third-party profile of a public API surface, by API Evangelist. Gradescope, a Turnitin company, is an assessment and grading platform for paper-based, digital, and code assignments used across higher education and K-12. It does not publish a generally available public REST API; programmatic integration is delivered through
+lti	api-evangelist/newsela	0	NULL	Newsela — independent third-party profile of a public API surface, by API Evangelist. Newsela is a K-12 content and assessment platform that provides research-backed, engaging, differentiated reading content and AI-powered tools across ELA, social studies, STEM, and writing to support educators and drive student growth in grades 3-12.
+lti	kiranmahajan-ansrsource/mam-plugin-test-3.0	0	NULL	Demonstrate how to integrate a Node.js-based LTI 1.3 tool using ltijs with Brightspace LMS. The final result enables a static HTML UI to be launched via "Insert Stuff" using Deep Linking, hosted on Google Cloud Run {GCP} with MongoDB Atlas.
+lti	iturgeon/turnkey-materia	0	NULL	A sample project for running a production ready Materia Server
+lti	jonculau/dc-motor-control	0	NULL	Control synthesis of a dc servo motor
+lti	laszlokorte/lti	0	NULL	
+lti	api-evangelist/d2l	0	NULL	D2L Brightspace — independent third-party profile of a public API surface, by API Evangelist. D2L Brightspace is a leading cloud-based learning management system (LMS) used by educational institutions and organizations worldwide to deliver, manage, and personalize learning experiences.
+lti	ashcroft08/oa-inclusivos-auditiva	0	MIT	Plataforma web de Objetos de Aprendizaje inclusivos para estudiantes con discapacidad auditiva. Integración con Moodle vía LTI 1.1 · React + Express + Docker.
+lti	groton-school/slim-lti-partitioned-session	0	GPL-3.0	Negotiate CHIPS partitioned third party session cookies from an embedded LTI Tool
+lti	antonia173/lti-demo-tool	0	NULL	
+lti	oat-sa/lib-lti1p3-basic-outcome	0	GPL-2.0	PHP library for LTI 1.3 Basic Outcome implementations as platforms and / or as tools.
+lti	NDLANO/ndla	0	GPL-3.0	Monorepo containing code related to ndla.no
+lti	api-evangelist/canvas-lms	0	NULL	Canvas LMS — independent third-party profile of a public API surface, by API Evangelist. Canvas is the open, AGPLv3-licensed learning management system created and maintained by Instructure, Inc. and used by more than 30 million students, teachers, and administrators across higher education, K-12, business, and government.
+lti	apachler/MINTforge	0	NULL	MINT-Lernplattform für Oberstufe und HTL: Quests mit Lehrplanbezug in der Blockwelt, Reflexion und Bewertung in der Lernplattform der Schule.
+lti	Haihaisoft/drm-x6-platform-bridges	0	MIT	DRM-X 6.0 LTI / hosted LMS / Shopify: protected-video integration source and setup guides in English, Chinese and Spanish. Keep your existing login and access rules.
+lti	api-evangelist/piazza	0	NULL	Piazza — independent third-party profile of a public API surface, by API Evangelist. Piazza is an online question-and-answer platform for higher education that connects students, teaching assistants, and professors in a single wiki-style collaborative space for each class.
+lti	jamataran/moodleshield	0	AGPL-3.0	Dynamic Watermarking Moodle System
+lti	apui-avignon-university/warren-tdbp	0	NOASSERTION	A warren plugin for moodle learning analytics dashboard
+lti	api-evangelist/itslearning	0	NULL	itslearning — independent third-party profile of a public API surface, by API Evangelist. itslearning is a Norwegian learning management system (LMS) founded in 1999 and headquartered in Bergen, Norway, now part of the Sanoma Learning group. Its cloud platform serves primary, secondary, vocational, higher education, lifelong-learning and internatio
+lti	oxctl/visit-subaccount	0	MIT	An LTI tool which presents a link to a course's parent subaccount from within the Settings page
+gradebook	francoisjacquet/rosariosis	649	GPL-2.0	RosarioSIS Student Information System for school management. GitLab mirror: https://gitlab.com/francoisjacquet/rosariosis/
+gradebook	OS4ED/openSIS-Classic	348	NULL	openSIS is a commercial grade, secure, scalable & intuitive Student Information System, School Management Software from OS4ED. Has all functionalities to run single or multiple institutions in one installation. Web based, php code, MySQL database.
+gradebook	sakaicontrib/attendance	14	ECL-2.0	A simple Sakai tool for tracking attendance that integrates with the Gradebook.
+gradebook	Bonfire/OptiGrader	13	NULL	OptiGrader is an optical mark recognition (OMR) application that serves as both a scantron grader and an online gradebook.
+gradebook	jacksonrakena/gradekeeper	12	NULL	A free, open-source grade tracking site used by 800+ learners at 15+ universities and colleges around the world
+gradebook	14flavius/GradeShelf	12	NULL	Self-hosted, multi-user grade tracker and exam planner. Manage subjects, weighted averages, notes and attachments with private accounts, 2FA and PDF/ZIP exports. Runs with Docker and SQLite. English and German. No cloud services or telemetry.
+gradebook	HeliumEdu/platform	11	Apache-2.0	Django backend for Helium - Student Planner
+gradebook	igweze/fobrain	10	Apache-2.0	Open source school management system
+gradebook	HeliumEdu/frontend	7	Apache-2.0	Flutter frontend for Helium - Student Planner
+gradebook	letired/eduassist	6	NULL	Mobile-first education software for teachers.
+gradebook	remzh/RemchiLegacy	6	AGPL-3.0	The gradebook that you wish you had in high school.
+gradebook	jlouisbru/grade-tracking-Canvas-API	6	MIT	Google Sheets integration with Canvas LMS for fetching and uploading student grades via the Canvas API
+gradebook	yyrichy/Summit	6	MIT	iOS/Android mobile app for students with StudentVue
+gradebook	mx2rel/VulcanForWindows	5	NULL	Przestarzałe (Projekt nie działa z powodu wycofania API przez Vulcan) | Szybki, intuicyjny i zaawansowany klient dziennika Vulcan dla systemu Windows. 
+gradebook	scribium/scribium_app	5	Apache-2.0	A gradebook mobile application made using flutter
+gradebook	bigdawgsfootball/HomeschoolGradesAndTranscripts	4	MIT	Windows application to track homeschool grades and create high school transcripts.
+gradebook	pepememe1/The-first-project-Student-Journal-	4	NULL	GradeBookAI — grade and attendance journal for colleges. One Vue 3 app runs as a website, a Windows desktop app (offline-first: encrypted local copy, syncs when online) and an Android app. FastAPI server, SQLite under SQLCipher. Roles for admin, teacher, student, parent. AI assistant «Vector» answers only from real data. Russian 152-FZ.
+gradebook	benjcal/Grades	3	NULL	Easy to use gradebook
+gradebook	mattlyons0/Java-Grader	3	GPL-3.0	Fully Fledged Computer Science Homework Grading System designed to store files in Dropbox in order to remain serverless. Supporting Gradebook Reports, Emailing Grade Change Events, Assignments with Libraries, JUnit Tests, Simple Unit Tests and more.
+gradebook	krzysztofbury/librus-python-api	3	MIT	Librus Synergia Polish based gradebook, custom API written in Python.
+gradebook	zooksman/unichain	3	BSD-3-Clause	An academic blockchain database project
+gradebook	gbowne1/gradebook-management-system	3	MIT	This is a C++ Gradebook Management System
+gradebook	tpt-solutions/tpt-school	3	MIT	A self-hostable school management platform built with Next.js, covering student enrolment, staff & HR, timetabling, attendance, gradebook, behaviour tracking, parent portal, finance, and report card generation. Packaged with Docker and an Electron installer for Windows/Mac.
+gradebook	bobb34/QST	3	GPL-2.0	Quiz/Survey/Test QST - Complete Open Source Assessment/Exam Software
+gradebook	AlakhiarovSalekh/Marks-Manager	2	MIT	Marks management system for teachers
+gradebook	FastPix/moodle-mod_fastpix	2	NOASSERTION	The FastPix Video activity for Moodle (mod_fastpix): add FastPix-hosted videos to courses as graded, completion-tracked activities, with watch analytics, DRM, and auto captions. Builds on local_fastpix. Moodle 4.5+, GPL-3.0.
+gradebook	lengelhardt/bb-offline-interactive-dashboard	2	MIT	Local tool for faculty that downloads Blackboard student submissions and builds an interactive offline grading dashboard (submitted / late / missing) via the official Blackboard REST API over OAuth 2.0. No scraping, no cloud.
+gradebook	ivanimmanuel-dev/Student-Grade-Manager	1	NULL	Student Grade Manager
+gradebook	Samuel11s/school-management-system	1	NULL	School management system built with Laravel 13, Livewire 4 and Bootstrap 5: students, courses, classes, enrollment, grading, attendance, role-based access and a versioned REST API. Dockerized with PostgreSQL, Redis and CI.
+gradebook	ldsalud/school-management-system	1	NULL	Full-featured School Management System for Philippine elementary schools — online enrollment, attendance, gradebook, push notifications, and multi-role portals (Admin / Teacher / Student / Parent). Built with Next.js 16, Supabase, and TypeScript. Demo uses sample data only — no real records.
+gradebook	purysho/EduBoard	1	AGPL-3.0	Local-first teacher operating system: gradebook, rubrics, attendance, lesson plans and reports in one offline desktop app. No account, no server.
+gradebook	vangef/BBGradebookOrganiser	1	NULL	Blackboard Gradebook Organiser
+gradebook	SaulBrenes/GradeNote	1	NULL	Desktop System for regist classrooms, students, subject and their grades
+gradebook	nastydadde/Student-Management-System	1	MIT	📚 Manage student records, track attendance, and monitor results efficiently with this web-based Student Management System designed for educational institutions.
+gradebook	anamariaow/gradebook	1	NULL	Grade Book
+gradebook	owbezick/Mastery-System-Gradebook	1	NULL	Open source software for the mastery grading system.
+gradebook	enviGit/GradeBookApplication	1	NULL	Zadanie wprowadzające do laboratoriów (podsumowanie kursu podstawowego / powtórka materiału przed kursem zaawansowanym)
+gradebook	sxnnyside-scholarships/promediatum	1	MIT	Promediatum is a local-first academic desktop workspace designed for independent educators who manage attendance, weighted grading, observations, and exports with zero cognitive friction.
+gradebook	ericz1803/CreswellGrades	1	MIT	Gradebook
+gradebook	dulan-nimnaka/student-gradebook-cli	1	NULL	A simple Java based CLI Student Gradebook System built with Object-Oriented Programming principles. Supports adding, removing, searching students, calculating averages, finding top students, and saving data to CSV for persistence.
+gradebook	timdrichards/canvas-lms-skill	1	MIT	A Claude Code skill for working with the Canvas LMS API — rosters, assignments, quizzes, pages, rubrics, groups, submissions, and grades — safely.
+gradebook	costa-developer/freecodecamp-build-Gradebook-App-solution	1	NULL	JavaScript Gradebook app for calculating averages, assigning grades, and determining pass/fail status. Built for a FreeCodeCamp certification project.
+gradebook	harlanw/Ogr	1	Apache-2.0	👹 Ogr is an anonymous, static, gradebook generator.
+gradebook	Samu-Kiss/UniApp	1	GPL-3.0	Lightweight university planner for curriculum visualization, GPA tracking, grade simulation, schedule generation, and prerequisite management.
+gradebook	PsychQuant/che-ntucool-mcp	1	MIT	NTU COOL (Canvas LMS) MCP server for macOS — 10 tools. Reads courses, assignments, submissions, announcements, files and roster; posts grades and announcements only behind a two-layer human confirmation (MCP elicitation dialog + single-use token bound to the previewed payload). Swift, Developer ID signed, token in the keychain.
+gradebook	marharita08/Gradebook	1	NULL	Gradebook is an online journal web-application. It serves as a digital gradebook for school students.(Java, Spring Framework)
+gradebook	Dillax/Di-rio-de-Classe-Avalia-es-	1	MIT	Diário de Classe: aplicativo (PWA) para professores lançarem e acompanharem notas por turma e trimestre. Cadastro de avaliações, recuperação substitutiva, relatórios em PDF e Excel e backup. Funciona offline e os dados ficam só no aparelho do professor. HTML, CSS e JavaScript.
+gradebook	Samu-Kiss/Aula	1	NOASSERTION	Web platform for solo teachers to create public class pages, manage modules, publish content, schedule quizzes, track students, and organize grades.
+gradebook	agiacalone/lectern	1	MIT	The Registrar of a self-hosted, open-format teaching LMS — terms, gradebook, exam build/verify, GitHub Classroom binding, archival. (Lectern · Scriptorium · Oracle)
+gradebook	noestudios/lastbell	1	MIT	Self-hosted ParentVUE + Canvas grade & assignment monitor — alerts for the whole family, on the devices they already use
+gradebook	UnknownSilence/H2-Echo	0	NULL	A grade analysis system developed for Klein Hacks 2019 Hackathon
+gradebook	mezbaur2004/moodle-leaderboard	0	NULL	Moodle activity that ranks students by points from their visible grades, with Zoom attendance and Moodle app support.
+gradebook	Jared-Gross/Gradebook	0	MIT	A gradebook for teachers.
+gradebook	ali-ghanem/Grade-Book	0	NULL	
+gradebook	clmmakers/tipe2xxx	0	NULL	Gradebook written by teachers for teachers using Xojo
+gradebook	marnbs/moodle-mod_classjournal	0	GPL-3.0	Lesson-based grading activity for Moodle with one aggregate Gradebook item and REST API support.
+gradebook	AlekseiLopatin/school-website	0	MIT	Multilingual school website with a teacher gradebook. Next.js · TypeScript · Supabase · Tailwind CSS.
+gradebook	dancockrell/magi-reader-classroom-toolkit	0	MIT	Historical Magi Reader classroom toolkit: check-in, marking and Apps Script components retained as reference. Current reader direction is solo literary reading.
+gradebook	Modzeleczek/Gradebook	0	NULL	Grade book web application
+gradebook	jelazi/Classification	0	NULL	Android app for teacher - classification by points (Czech language)
+gradebook	AParise1217/GradingStudents	0	NULL	C++ - Grade book rounding application
+gradebook	ali-ghanem/Grade-Book-GUI	0	NULL	
+gradebook	DevelopFlasher/student-gradebook-php	0	NULL	Dockerized PHP, MySQL, Apache, and nginx student gradebook application
+gradebook	kushagrarai2005-debug/student-grade-management	0	NULL	Student Grade Management System - Java console app for VIT Build Your Own Project. OOP concepts, CSV persistence, weighted CGPA, validation tests, full UML docs.
+gradebook	erkinefendiev/aula-magna-community	0	MIT	Aula Magna Community Edition — the free, self-hosted system of record for schools (attendance, gradebook, courses, calendar). Next.js + SQLite, runs with one docker compose command.
+gradebook	drakulic-goran/e-SchoolRegister	0	NULL	Complete functional school diary
+gradebook	eloompty/Eloom-LMS-International	0	MIT	Open source learning management system for training providers and colleges worldwide: admissions, offer letters, enrolment, timetabling, assessment, fees, agents and certificates, with five portals and a REST API. Built with Laravel.
+gradebook	nickihysterics/Student-GradeBook	0	NULL	Учебно-демонстрационный электронный журнал на C++17 и SQLite: оценки, попытки, отчёты, CSV, CMake и автотесты
+gradebook	BreraDMR/calculating_student_grades	0	NOASSERTION	Desktop app that scans an Excel class gradebook and builds debt / failing-grade reports in seconds, replacing a hand-pasted VBA macro (pywebview + openpyxl)
+gradebook	zakolaczek/Electronic-grade-book	0	NULL	My first project published on github. Electronic Grade Book made in C++. I know that code is really messy, but that was my first ambitious project
+gradebook	lisayinr/Java-Script	0	NULL	Gradebook Manager in JavaScript
+gradebook	jrodal98/grade-manager	0	NULL	Fully featured PyQT5 application for tracking grades across multiple courses.
+gradebook	AkshobyaRaoSWE/studentvue-glowup	0	MIT	Chrome/Edge extension that restyles the Indian Prairie SD 204 StudentVUE grade book into a clean dashboard and color-codes grades. Look-only, no data collection.
+gradebook	mayunqing1230/Cloud-Score	0	MIT	Cloud-Score: 基于 Cloudflare Pages + R2 的极简无服务器班级积分管理系统 | A lightweight, zero-framework, serverless classroom score management ledger built on Cloudflare Pages and R2.
+gradebook	team-llambda/gradebook-backend	0	NULL	The official backend of GradeBook
+gradebook	lms-edtech-data/lms-edtech-data	0	NULL	Production-grade, FERPA-aligned engineering guides for LMS data pipelines across Canvas, Moodle & Blackboard — gradebook, attendance & engagement.
+gradebook	masefa11/2023-Projects	0	NULL	A collection of projects from January 2023-May 2023
+gradebook	ajuia-m/artjournal	0	NULL	Журнал Художественной Школы (Art Journal App) — это специализированное приложение для преподавателей и администрации художественных школ и студий, предназначенное для учета успеваемости, посещаемости, работы с учебными группами и расписанием.
+gradebook	jonjanelle/java-gradebook	0	NULL	School gradebook application
+gradebook	DrewBritt/Synapse	0	MIT	Grade-book webapp that placed 2nd in the 2019 US Congressional App Challenge for TX31.
+gradebook	sigmondkukla/dashboard-api	0	NULL	
+gradebook	kadusic1/e-gradebook-platform	0	AGPL-3.0	Multi-tenant electronic gradebook platform with database-per-tenant isolation, role-based access control, and an AI-powered RAG chatbot.
+gradebook	MihaiTudorP/StudentManager	0	GPL-3.0	Free Student Activity Management System
+gradebook	muralikrishnatirumalsetty/student-gradebook	0	NULL	A simple Python console project to manage student records.
+gradebook	pentarix1996/grad-master-pro	0	MIT	A modern application for educators to manage courses, students, and weighted grades with real-time statistics. Built with React, TypeScript, and Tailwind CSS.
+gradebook	itmir913/score-reporter	0	NOASSERTION	모의고사 성적표 엑셀을 서버로 보내지 않고 브라우저에서 바로 분석하는 웹 앱
+gradebook	MarwanAbdellah/OOP_library_managment_-_Student_Gradebook	0	NULL	Tkinter desktop applications for library management and student gradebooks built with OOP design, CSV persistence, and .exe builds.
+gradebook	peterwzhang/Zybooks-Gradebook	0	NULL	This program has nine main functions and several other helper functions in order to make a functional Zybooks gradebook using linked lists.
+gradebook	bopho/GradebookDB-CS	0	NULL	Database assignment to test basic understanding
+gradebook	lukashecke/simplygrade	0	MIT	This is a little iOS app for managing school grades.
+gradebook	foziaShareen/c-code	0	NULL	c++ complete code guidance with examples accounts employee
+gradebook	deepak-tiwari-dt/Gradebook-App	0	NULL	A Gradebook App made using JavaScript.
+gradebook	kssush/School_management_system	0	MIT	School Management System - web app for school administration with performance analytics
+gradebook	saifhussain01/gradebook	0	NULL	Computing project which sorts grades using SSMS and phpMyAdmin
+gradebook	omarolivo/Gradebook	0	MIT	
+gradebook	rkatelyn13/SQL	0	NULL	Khan Academy database challenges, creating SQL and queries for visual tables
+gradebook	mooncake39/Waypoint	0	MIT	StudentVUE grade viewer and calculator
+gradebook	AParise1217/Gradebook	0	NULL	JAVA implementation of a gradebook application
+gradebook	Jhr-4/GradeCalculator	0	NULL	An user-friendly Grade Calculator web application made utilizing HTML, CSS, and JS. Unlike other grade calculator, your grades will save making it easy to track grades and modify upon getting more assignments.  (First Project)
+gradebook	DevelopFlasher/student-gradebook-flask	0	NULL	Dockerized Flask and PostgreSQL gradebook application with SQL schema assets
+gradebook	DOMCDONALD001/opengrade	0	NULL	Opengrade is a K-12 student information system and gradebook by Denim Technologies LLC (2016-2026). Manage schools, classes, grades, and timed tests in the browser.
+gradebook	JerrickHuang/java-gradebook-analyzer	0	NULL	A small Java 21 command-line gradebook analyzer built to practice object-oriented programming, arrays, numeric calculations, and safe input handling.
+gradebook	sabastar/Python	0	NULL	
+gradebook	leslie-alldridge/GradeBook	0	NULL	GradeBook - PluralSight C# Development Fundamentals
+gradebook	michaelfromyeg/Gradebook	0	NULL	Student gradebook, built in Java.
+gradebook	FordJ1/Gradebook-Automations	0	MIT	A script to automate the creation of gradebooks using Apps Script by Google
+gradebook	BenjaminRaison/Notli	0	NULL	
+gradebook	RobertBuchananAk/Quaff	0	MIT	Import LMS data into Queue Gradebook
+gradebook	Vaibhav0221/Gradebook	0	NULL	Gradebook application Portal
+gradebook	arthur5775/ISEN_Bulletin_Excel	0	MIT	Excel simulation bulletins ISEN
+gradebook	Sternfast/moodle-report_gradelookup	0	GPL-3.0	Grade Lookup — a Moodle site report to look up any learner's grades across every course, with a per-item breakdown, certificates, and Excel export. GPLv3.
+gradebook	zoeabinet-dot/yeneta-ai-school	0	NULL	AI-powered, curriculum-aligned school platform for Ethiopia with role-based dashboards, AI tutoring, smart grading, engagement analytics, and real-time communication.
+gradebook	abujalancej/edutrack	0	NULL	Local desktop app for teachers and tutors to record continuous assessment, exchange subject data, and generate multilingual student progress PDFs.
+gradebook	amahjoor/canvas-to-google-sheets	0	MIT	Google Apps Script that imports Canvas LMS assignments into a spreadsheet and builds a dashboard. Default domain is canvas.gmu.edu.
+gradebook	vugarfamiloglu/gradetrack-pro	0	Apache-2.0	Student & employee performance tracker — Django gradebook with weighted averages, ranks with movement, at-risk detection, low-grade alerts, improvement plans, and PDF/Excel report cards.
+gradebook	raoulnormand/easygrader	0	NULL	A library to easily calculate course grades.
+gradebook	francoisjacquet/centresis	0	GPL-2.0	Centre/SIS Student Information System: versions 4.5.7 (2016, MySQL) & 3.1 (2011, PostgreSQL)
+gradebook	Norky101/Student-GradeBook-Tracker	0	NULL	Student Grade Book Tracker for Professors, Teachers and TAs. Offers user the functionality of 13 different methods such as 'updating grades,' 'search for student,' 'find highest grade,' 'median class score,' 'mean class letter grade,' and so much more!
+gradebook	thejosephantony/Projeto-de-Caderno-de-Notas	0	MIT	
+gradebook	olivierluethy/IntelliGrade	0	MIT	An efficient app which can be used for school grades. #javascript
+gradebook	didactika/moodle-local_autograder	0	GPL-3.0	Moodle local plugin that automatically grades completed activities a teacher hasn't graded after the deadline.
+gradebook	xuhaosl/overachievers	0	MIT	家庭自用的孩子成绩管理工具：多孩子、多班级、成长曲线可视化，Docker 一键部署
+gradebook	ralucafritz/Gradebook-AOOP-Project-Year-2	0	NULL	Project - 'Advanced Object Oriented Programming' class - Java - 2nd Year
+gradebook	GageAllenCarpenter/Spring-Gradebook	0	MIT	School gradebook application built using the Spring Framework. 
+gradebook	the-sudipta/gradia	0	NOASSERTION	Gradia, a local-first gradebooks, attendance, assessment logic, analytics, and fidelity-preserving Excel export for teachers.

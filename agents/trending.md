@@ -4,6 +4,99 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p589` — `2026-11-01` — **🔴 THE MANDATED LEGS RETURNED THEIR TWENTIETH CONSECUTIVE NIL AND THIS PASS STOPPED CALLING THAT A RESULT: EVERY REPO-SHAPED CANDIDATE THE EIGHT LEGS SERVED WAS ALREADY IN THIS BASE — `14` TO `23` FILES DEEP — AND THE ONLY GENUINELY ABSENT TOKEN WAS A GPL SYSADMIN TOOL. 🟢 SO THE PASS FILED FROM THE HISTORY INSTEAD AND THE TWO ROWS IT PROMOTED ARE BOTH REAL: `OPTIMETA/PAIDEIA` (MIT, `91★`), THE FIRST SHELF ROW THAT SHIPS FOR **FOUR** AGENT RUNTIMES, AND `rphilipzhang/AI-PhD-S26` (MIT, `91★`), THE ENABLEMENT TIER'S FIRST ROW WITH A UNIVERSITY AND A COURSE CODE. 🔴 AND ONE LEG'S OWN DESCRIPTION WAS OVERSOLD BY A FACTOR OF A HUNDRED: A "CURATED LIST OF TRENDING AND HIGH-IMPACT REPOSITORIES" MEASURES `3★` WITH NO LICENCE AT `10` PROBED PATHS.**
+
+### 🔴 The legs, run in full and reported in full
+
+All four mandated global legs and all four regional legs were run. 🔵 **Reported as a table
+because a nil that is described in prose reads like coverage.**
+
+| leg | repo-shaped candidates served | already in this base | new |
+|---|---|---|--:|
+| `top open source AI agents education 2026 github MIT` | `ai-agents-for-beginners`, `generative-ai-for-beginners`, `agents-from-scratch`, `500-AI-Agents-Projects`, `browser-use`, `mem0`, `CrewAI`, `AutoGen`, `LangGraph` | 🔴 **all** | **`0`** |
+| `github trending education AI 2026` | `OPTIMETA/PAIDEIA`, `GarethManning/education-agent-skills`, `rohitg00/ai-engineering-from-scratch`, `rphilipzhang/AI-PhD-S26`, `aneelv75/github-trending` | 🔴 **all** | **`0`** |
+| `open source platform education ERP CRM … MIT Apache` | `OpenEduCat`, `openSIS`, Kuali KFS, Compiere, Openbravo, **Open Admin** | 🟡 all but one | **`0`** |
+| `AI education industry trends 2026` | — *(intel only, no addresses)* | — | **`0`** |
+| 4 × regional (`North America`, `EMEA`, `APAC`, `LATAM`) | — *(intel only, no addresses)* | — | **`0`** |
+
+🔴 **Twentieth consecutive nil.** 🟢 **The one absent token is recorded rather than dropped:
+`Open Admin`** — a school-administration system described by its secondary source as
+GPL-licensed, `0` occurrences anywhere in this base. 🔵 Not pursued: copyleft, and the
+source gives no repository address. Logged so the twenty-first pass does not spend a leg
+rediscovering that it was considered.
+
+### 🟢 The two promotions, with their provenance
+
+🔵 **Both were in this base before this pass and neither had reached a curated page** — the
+promotion-limited pattern `p585` measured at `90 %` and `p587` demonstrated at `19`–`26`
+re-finds. Measured `2026-11-01` via `gh api search/repositories`; both grants byte-read from
+`raw.githubusercontent.com`.
+
+| row | measured | licence (byte-read) | history re-finds | now on |
+|---|---|---|--:|---|
+| [`OPTIMETA/PAIDEIA`](https://github.com/OPTIMETA/PAIDEIA) | `91★`, pushed `2026-07-11`, `main`, `4` forks | 🟢 **MIT**, `1,068` bytes verbatim, © 2026 Taewoo Park, **`0`** carve-out hits | `11` here + `2` on [`../repos/trending.md`](../repos/trending.md) + `3` on [`../intel/market.md`](../intel/market.md) | [`./top.md`](./top.md) main shelf |
+| [`rphilipzhang/AI-PhD-S26`](https://github.com/rphilipzhang/AI-PhD-S26) | `91★`, pushed `2026-07-28`, `main`, `9` forks | 🟢 **MIT**, `1,069` bytes verbatim, © 2025 Philip Zhang, **`0`** carve-out hits | `2` here + `1` on [`../repos/trending.md`](../repos/trending.md) | [`./top.md`](./top.md) enablement tier |
+
+🟢 **`PAIDEIA` is the first row on this shelf that is runtime-portable.** Its README states
+editions for **Claude Code, OpenAI Codex, opencode and hermes-agent**. 🔵 Every other skill
+row on [`./top.md`](./top.md) targets one host. `p586` filed the shift from applications to
+skills as a trend; **portability across hosts is the next move in that same direction**, and
+it changes the commercial read: a four-runtime skill is not hostage to one vendor's
+packaging decisions. Its substance is unusually concrete for a `91★` repo — it grades
+**handwritten** answers and keeps a per-course study graph as editable markdown, so the
+artefact the client keeps is theirs and not a vendor's database.
+
+🟢 **`AI-PhD-S26` gives the enablement tier what `p588` said it lacked.** `p588` closed with
+*"only `minimind` carries a region … that is the one property that makes this tier travel"*.
+This row carries **APAC** on the strongest form of evidence this base accepts — a named
+institution: `DOTE 6635`, Spring 2026, **CUHK Business School**, Department of Decisions,
+Operations and Technology, with a named instructor, TA and tutorial instructor. 🔵 The
+mono-repo holds scribed lecture notes, per-session slides through to **agentic AI**, CoLab
+demos, problem sets (Kaggle, neural-net implementation, GPT-2 training), and the 2024 and
+2025 offerings — i.e. **three years of the same course**, which is the thing a university
+client asks to see and no mega-repo in this tier can show.
+
+### 🔴 The leg that oversold its own result by `~100×`
+
+[`aneelv75/github-trending`](https://github.com/aneelv75/github-trending) was served by the
+`github trending education AI {year}` leg and described there as *"a curated list of
+trending and high-impact GitHub repositories in AI, GenAI and engineering."*
+
+| claim | measurement |
+|---|---|
+| implied standing | 🔴 **`3★`** |
+| maintained | 🔴 last push `2026-03-25` (~7 months) |
+| licence | 🔴 **`10` probes — `LICENSE`/`.md`/`.txt`/`COPYING`/`LICENCE` × `main`+`master` — all `404`** |
+
+🔵 **Recorded with its number because the lesson is cheap and recurring:** the mandated legs
+describe repositories in language calibrated to nothing. 🟢 The `583-A` gate — check the base
+before claiming new — caught all five of this leg's candidates as already-present; it does
+not grade size, and `589-C` is where that now sits.
+
+### 🔵 Re-measure agreement, recorded so a later pass does not file a contradiction
+
+🔵 **Every address this pass cited was re-resolved at the end of the pass.** `23 of 23`
+resolved. 🟢 **The two new rows matched their own measurements exactly** (`PAIDEIA` `91`,
+`AI-PhD-S26` `91`), and eight figures quoted **from the existing shelf** had grown by one
+day: `generative-ai-for-beginners` `122,693` → `122,701`, `ai-agents-for-beginners` `78,550`
+→ `78,557`, `ppt-master` `71,803` → `71,911`, `minimind` `64,710` → `64,713`,
+`book-to-skill` `36,673` → `36,679`, `Papermorph` `1,040` → `1,043`, `claudemy` `574` → `577`,
+`anki-mcp-server` `540` → `541`. 🟢 **That is growth, not disagreement** — same direction,
+same order of magnitude, hours apart. 🔴 **No licence disagreed with what this base
+publishes**, including the three where the API reports `NOASSERTION` or nothing and the
+licence file says otherwise (`SCOBot` → CC BY-SA 4.0, `SCORM-to-xAPI-Wrapper` → no grant,
+`github-trending` → no grant).
+
+### 🔴 What this pass cannot tell you about its own rows
+
+`make` and `python3 ingest/*.py` are **denied** in this environment, re-tested individually.
+🔴 **So `gate-tables`, `gate-shelf-consistency` and `gate-register-currency` did not run on
+anything written above.** The table-shape and placeholder checks were replicated by hand;
+the register check was replicated in `grep` and **found `44` dangling gap ids on arrival** —
+🔴 then, re-measured with a **structural** predicate rather than a substring one,
+**`120`**. 🔵 The weaker metric understated the backlog by `~5×`. See [`../intel/open-gaps.md`](../intel/open-gaps.md) and `589-B`.
+
+
 ## 🆕 `p588` — `2026-11-01` — **🔴 THE DEFECT THIS PASS FOUND IS NOT A LICENCE, A FIGURE OR A DEAD LINK — IT IS THE INCLUSION RULE. `p587` SHELVED TWO REPOS FROM A CLASS THAT [`../intel/open-gaps.md`](../intel/open-gaps.md) STILL DECLARES OUT OF FAMILY, NAMING ONE OF THEM AS ITS SPECIMEN, AND BOTH PAGES PASS EVERY GATE THIS BASE OWNS BECAUSE NO GATE ASKS WHETHER A ROW BELONGS. 🟢 RESOLVED BY NAMING THE CLASS AND COMPLETING IT: `4 OF ITS 5 LARGEST MEMBERS WERE UNFILED`, INCLUDING `microsoft/generative-ai-for-beginners` AT `122,693★` — THE LARGEST EDUCATION-ADJACENT REPO ON GITHUB, NEVER FILED AT ANY SIZE. 🔴 AND THE SECOND-LARGEST, `rasbt/LLMs-from-scratch` AT `107,625★`, CARRIES AN APACHE-2.0 WHOSE "SOURCE" DEFINITION EXCLUDES THE BOOKS AND IMAGES — A CARVE-OUT NEITHER THE API NOR THE FILE'S FIRST LINE SHOWS.**
 
 ### 🟡 Scope, before the result: `9` addresses, not `43`

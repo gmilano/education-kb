@@ -4,6 +4,78 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p589` — `2026-11-01` — **🟢 ONE TOPIC AXIS, WALKED TO EXHAUSTION, PAID `9` ROWS AND A TREND: `topic:scorm` IS `235` REPOSITORIES, `80` OF THEM PERMISSIVE — AND `7` OF THE `8` CREDIBLE EMIT-SIDE ADDRESSES HAD `2`–`15` RE-FINDS IN THIS LOG AND **ZERO** SHELF PRESENCE. 🔴 THE TIER IS ALSO MOSTLY DEAD: `2023`, `2019`, ARCHIVED, OR `9` MONTHS IDLE, WITH EXACTLY **TWO** LIVE PERMISSIVE LIBRARIES. 🔴 AND THE SPEC'S OWN AUTHORS ABANDONED THEIR OWN TOOLING — `adlnet/SCORM-to-xAPI-Wrapper` IS UNLICENSED, ARCHIVED, LAST PUSHED `2017`.**
+
+### 🟢 The sweep, with its denominator first
+
+`gh api -X GET search/repositories -f q='topic:<axis>'`, every page walked until empty, run
+`2026-11-01`. 🔵 **Four axes, one matcher, because the point was a comparison** — the
+pre-registered test `584-E` asked for. Raw data:
+[`../evidence/axis-sweep-spec-vs-agent.2026-11-01-p589.tsv`](../evidence/axis-sweep-spec-vs-agent.2026-11-01-p589.tsv).
+
+| axis | repositories | sampled | role of its spec |
+|---|--:|--:|---|
+| `topic:scorm` | `235` | `235` | 🟢 **export target** — you *emit* it |
+| `topic:lti` | `184` | `184` | 🟢 conformance target — you *speak* it |
+| `topic:gradebook` | `125` | `125` | 🔴 no spec |
+| `topic:truancy` | 🔴 **`1`** | `1` | 🔴 no spec, and **no supply either** |
+| **total** | **`545`** | **`545`** | 🔵 two of each kind, so the comparison is internally valid |
+
+🔴 **`topic:truancy` has one repository on all of GitHub.** `584-E` named it as a measurement
+axis. 🔵 **Read the denominator before registering a prediction** — the axis was never
+measurable, and that is a defect in the prescription, not a finding about education.
+
+### 🔴 The licence and liveness shape of `topic:scorm`
+
+| licence (API) | repos | share |
+|---|--:|--:|
+| 🔴 **none at all** | **`133`** | 🔴 **`56.6 %`** |
+| 🟢 MIT | `65` | `27.7 %` |
+| 🟢 Apache-2.0 | `12` | `5.1 %` |
+| 🔴 GPL-3.0 | `12` | `5.1 %` |
+| 🟡 `NOASSERTION` | `8` | `3.4 %` |
+| 🟡 CC0-1.0 | `2` | `0.9 %` |
+| 🟢 BSD-3-Clause · 🔴 LGPL-2.1 · 🔴 EUPL-1.2 | `1` each | `1.3 %` |
+
+🟢 **`34.0 %` permissive** — materially better than the platform tier. 🔴 **And it does not
+help, because liveness disqualifies the tier instead:**
+
+| address | stars | licence | last push | verdict |
+|---|--:|---|---|---|
+| [`jcputney/scorm-again`](https://github.com/jcputney/scorm-again) | `362` | 🟢 MIT (`1,072` B, text) | `2026-10-28` | 🟢 **LIVE — the one safe dependency** |
+| [`sr258/scorm-h5p-wrapper`](https://github.com/sr258/scorm-h5p-wrapper) | `58` | 🟢 MIT (`1,073` B, text) | `2026-10-29` | 🟢 **LIVE** — H5P → SCORM packer |
+| [`cybercussion/SCOBot`](https://github.com/cybercussion/SCOBot) | `165` | 🔴 **CC BY-SA 4.0** (`837` B, text) | `2026-10-29` | 🔴 live but **reciprocal CC on software**; API said `NOASSERTION` |
+| [`dhodges47/SCORM-LearningManagementSystem`](https://github.com/dhodges47/SCORM-LearningManagementSystem) | `184` | 🟢 MIT | 🟡 `2026-01-24` | 🟡 a **demo**, by its own description |
+| [`adaptlearning/adapt_framework`](https://github.com/adaptlearning/adapt_framework) | `632` | 🔴 GPL-3.0 | — | 🔴 copyleft; the axis's biggest authoring toolkit |
+| [`S4-NetQuest/react-scorm-provider`](https://github.com/S4-NetQuest/react-scorm-provider) | `67` | 🟢 MIT | 🔴 `2023-01-06` | 🔴 **~3.8 y dead** |
+| [`gamestdio/scorm`](https://github.com/gamestdio/scorm) | `38` | 🟢 MIT | 🔴 `2019-02-14` | 🔴 **~7.7 y dead** |
+| [`raccoongang/edx_xblock_scorm`](https://github.com/raccoongang/edx_xblock_scorm) | `32` | 🟢 Apache-2.0 | 🔴 `2023-05-26` | 🔴 **ARCHIVED** — and it is the Open edX seam |
+| [`adlnet/SCORM-to-xAPI-Wrapper`](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | `99` | 🔴 **no grant** | 🔴 `2017-10-02` | 🔴 **ARCHIVED + unlicensed, and published by ADL — SCORM's own authoring body** |
+
+🔵 **All nine are now filed on [`../repos/foundations.md`](../repos/foundations.md)** as a
+named tier. 🔴 **Seven of them were unshelved before this pass** despite `2`–`15` re-finds in
+this log — `adlnet/SCORM-to-xAPI-Wrapper` alone was re-found **`15` times**. That is
+`584-C`'s filing debt, partly paid.
+
+### 🔴 The `583-A` gate cleared this sweep, and the honesty check it enforces
+
+Run before the sweep, as `584-A` requires: `9` of the `11` addresses graded were **absent
+from every curated page** while present in the history. 🟢 **`NEW-TO-SHELF (9) > ALREADY
+SHELVED (2)`, so the sweep was worth filing** — `scorm-again`, `numbas` and `OpenOLAT` were
+already shelved and are not claimed as discoveries here. 🔵 The gate is a go/no-go, not a
+veto, exactly as `p584` concluded.
+
+### 🔴 What did not run
+
+`make` and `python3 ingest/*.py` are **denied** (`"Code from External"`), re-tested
+individually this pass. 🔴 **No gate judged the tables above.** `gate-tables`' placeholder
+and header-row checks were replicated by hand; the register check was replicated in `grep`
+and **returned `44` dangling gap ids on arrival — `120` once the predicate was tightened to
+a registration position rather than a substring match**. That is this pass's central
+finding. See
+[`../intel/open-gaps.md`](../intel/open-gaps.md), `589-B`.
+
+
 ## 🆕 `p588` — `2026-11-01` — **🟢 THE PROMOTION BOTTLENECK `p587` MEASURED IS NOW ACTED ON RATHER THAN RE-MEASURED: SIX ROWS FILED, EVERY ONE OF THEM ALREADY IN THIS BASE — FIVE IN THIS LOG, ONE ON A `p525` PERMISSIVE-UNSHELVED LIST THAT HAS SAT UNREAD FOR `63` PASSES. 🔴 AND A MEASURED CHANNEL DEFECT THAT TOUCHES EVERY STALENESS MARK ON EVERY PAGE: `pushed_at` IS NOT "LAST COMMIT" — IT OVERSTATED `apache/openmeetings` BY `6` DAYS, AND IT CAN ONLY EVER OVERSTATE.**
 
 ### 🟢 The promotion, with its provenance — none of it came from a search

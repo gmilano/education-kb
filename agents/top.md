@@ -36,9 +36,21 @@ permissive candidate this base has carried **unfiled since `p525`** — and the 
 (was `78,542`) and `ai-engineering-from-scratch` **76,144** (was `76,141`). 🟢 **That is one
 day of growth, not a contradiction** — recorded here so a later pass does not file one.
 
+🆕 **`p589` — scope: `13` addresses measured, `6` grants byte-read, the shelf NOT
+re-measured.** Two rows added and three blocks. 🔵 **Neither new row came from a search.**
+`PAIDEIA` was served by the mandated legs and was already in this base `15` files deep;
+`AI-PhD-S26` likewise. 🔴 **Twentieth consecutive nil on new addresses from the mandated
+legs**, and this pass stopped treating that as a research result: the three rows it filed
+came from the **history**, and nine more came from one topic axis
+([`../repos/foundations.md`](../repos/foundations.md)). 🔴 **What this page cannot tell you
+is whether it passes its own gates** — `make` and `python3 ingest/*.py` are both denied in
+this environment, so `gate-shelf-consistency`'s `59` controls did not run on these rows.
+Replicated by hand instead; see `589-B` and
+[`../intel/open-gaps.md`](../intel/open-gaps.md).
+
 ---
 
-## The shelf — 43 verified agents
+## The shelf — 44 verified agents
 
 Ordered by size. Region is assigned only where the repository itself supports a
 placement (institution, org, or language of the project); otherwise it reads `Global`.
@@ -83,13 +95,14 @@ placement (institution, org, or language of the project); otherwise it reads `Gl
 | **girth** | [eribean/girth](https://github.com/eribean/girth) | 🟢 MIT | **127** | 🔴 `2022-09-09` | Global | Item Response Theory package for Python (item calibration). 🔴 **~4 years stale** — use `catsim` or `pyKT` first. |
 | **Open TutorAI CE** | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 BSD-3-Clause | **114** | 🟡 `2026-06-26` | EMEA | Tutoring platform with voice, video and 3D avatars. Docker-first, local LLMs via Ollama. |
 | **mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 MIT | **102** | `2026-10-31` | EMEA | AI-native LMS with AI mentor and role-play; self-hosted. Selleo (Poland). |
+| **PAIDEIA** | [OPTIMETA/PAIDEIA](https://github.com/OPTIMETA/PAIDEIA) | 🟢 **MIT (text)** | **91** | 🟡 `2026-07-11` | Global | 🆕 Exam-prep study system for maths, physics and engineering: ingests the learner's *own* lectures, textbooks, homework and solutions and emits solution patterns, drill problems, **graded handwritten answers**, weakness reports and cheatsheets, all as editable markdown in the course folder. 🔵 **Ships for four agent runtimes — Claude Code, Codex, opencode and hermes-agent** — the first row on this shelf that is portable across hosts rather than tied to one. Re-found 11× in [`./trending.md`](./trending.md) and 3× on [`../intel/market.md`](../intel/market.md) before it reached a page. 🟡 ~3.7 months since last push; pin it. |
 | **Claw-ED** | [SirhanMacx/Claw-ED](https://github.com/SirhanMacx/Claw-ED) | 🟢 **MIT (text)** | **63** | `2026-09-19` | Global | 🆕 **Local-first** teaching assistant: editable lesson drafts, student materials and feedback with no cloud dependency. The data-residency answer for a school that cannot send pupil work to an API. Re-found 19× in history before reaching this page. |
 | **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT | **61** | `2026-10-31` | Global | MCP server that turns any LLM into an Intelligent Tutoring System, grounded in ITS research. |
 | **Lama Loca** | [emil-a-dev/lama-loca](https://github.com/emil-a-dev/lama-loca) | 🟢 MIT | **59** | 🟡 `2026-03-04` | EMEA | Fully offline Russian-language study assistant: learns from the user's own books, emits reports and slides. |
 | **BCTK** (TK试题题库) | [BBkjdayup/BCTK](https://github.com/BBkjdayup/BCTK) | 🟢 MIT | **53** | `2026-09-28` | APAC | Offline-first Windows item-bank and paper-composition app for teachers. Word/Excel round-trip without Office. |
 | **ai-tutor-app** | [towardsai/ai-tutor-app](https://github.com/towardsai/ai-tutor-app) | 🟢 Apache-2.0 | **34** | `2026-10-22` | Global | 🆕 Agentic **RAG** tutor for applied AI/LLM/Python built on **LangGraph** — the only shelf row that is an explicit retrieval-grounded tutor over a fixed corpus, which is the shape a client asks for when the answer must come from *their* materials. |
 
-**43 rows. 42 are unreservedly permissive**, and the 43rd (`nextgen-ai`) is permissive for
+**44 rows. 43 are unreservedly permissive**, and the 44th (`nextgen-ai`) is permissive for
 its code with the content grant unstated. The agent layer licenses permissively, which
 remains the single most useful structural fact for a studio: **the AI can be built
 permissively and attached to a copyleft LMS from the outside.**
@@ -133,12 +146,15 @@ repository's own licence file.
 | [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | 🟢 **MIT (text)** | **39,200** | 🟡 `2026-07-27` | Global | 🆕 Catalogue of agent use cases by industry, **with education entries of its own** (Virtual AI Tutor, Study Partner, Research Scholar). Use it as a **brief generator** in pre-sales, not as a dependency. 🟡 ~3 months stale. Standard MIT, © 2025. |
 | [ARUNAGIRINATHAN-K/awesome-ai-agents-2026](https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026) | 🟡 **CC0-1.0 (text)** | **353** | `2026-10-23` | Global | 🆕 Searchable directory comparing agent frameworks and tools; 770 commits, a real application rather than a README list. 🔴 **CC0 is a public-domain dedication for *content*, not a software licence — no patent grant.** Same trap as `education-agent-skills` in the block table below. API said `NOASSERTION`. |
 
+| [rphilipzhang/AI-PhD-S26](https://github.com/rphilipzhang/AI-PhD-S26) | 🟢 **MIT (text)** | **91** | 🟡 `2026-07-28` | **APAC** | 🆕 **The first institution-accountable row in this tier, and the first with a course code.** `DOTE 6635 Artificial Intelligence for Business Research`, Spring 2026, **CUHK Business School**, Dept. of Decisions, Operations and Technology; instructor Renyu (Philip) Zhang, with a named TA and tutorial instructor. Mono-repo: scribed lecture notes, per-session slides on ML / deep learning / RL / **agentic AI**, CoLab demos, problem sets (Kaggle competition, neural-net implementation, GPT-2 training), reading lists, plus the 2024 and 2025 offerings. 🔵 **This is the tier's answer to a university client rather than to a corporate one.** 🟡 ~3.1 months since last push. |
+
 🔵 **Two members of this class are already on the shelf above** —
 `microsoft/ai-agents-for-beginners` (**78,550**, MIT) and
 `rohitg00/ai-engineering-from-scratch` (**76,144**, MIT), both shelved at `p587`. With the
 six rows here the class has **eight** members, and **four of its five largest were unfiled
-before this pass**. 🔴 **Only `minimind` carries a region**, and it carries it because the
-project is Chinese-language; the rest are English-language and genuinely `Global`. That is
+before this pass**. 🔴 **`p588` wrote that only `minimind` carries a region** — 🆕 `p589` adds a
+second, `AI-PhD-S26`, placed **APAC** by a **named university** rather than by language,
+which is the stronger form of placement, and it is the first such row in this tier. That is
 the one property that makes this tier travel to LATAM — see
 [`../compose/patterns.md`](../compose/patterns.md) `P-588-A`.
 
@@ -172,6 +188,9 @@ These are small by stars and real by provenance. Size is not the only form of cr
 | [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 🔴 **BLOCK — no grant** | 64★. Twelve probes all 404; API `spdx_id: NONE`. Unlicensed = all rights reserved. Last push `2025-11-04`. |
 | [bigdata-ustc/Agent4Edu](https://github.com/bigdata-ustc/Agent4Edu) | 🔴 **BLOCK — no grant** | 100★, AAAI-grade learner simulation. 🆕 **Re-probed `p586`: ten paths (`LICENSE`/`.md`/`.txt`/`COPYING`/`LICENCE` × `main`+`master`) all 404.** Still pushing code (`2026-09-29`) and still granting nothing. |
 | [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **Do not gate on "MIT"** | `package.json` declares MIT and references a `LICENSE` that does not exist at 8 paths × 2 branches. A question for counsel. 🟢 Use [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (real MIT, 310★) instead — same job. |
+| [cybercussion/SCOBot](https://github.com/cybercussion/SCOBot) | 🔴 **CC BY-SA 4.0 on software — RECIPROCAL** | 🆕 `165★`, pushed `2026-10-29`, the most-starred *live* artefact on `topic:scorm` after `scorm-again`. API said `NOASSERTION`; the `837`-byte `LICENSE` is **Creative Commons Attribution-ShareAlike 4.0**. 🔴 **This is the base's third CC-on-software case and the first *reciprocal* one** — unlike the CC0 dedications at `education-agent-skills` and `awesome-ai-agents-2026`, ShareAlike propagates an obligation into whatever you build on it, and CC still grants no patent rights. Do not vendor. See `589-F`. |
+| [adlnet/SCORM-to-xAPI-Wrapper](https://github.com/adlnet/SCORM-to-xAPI-Wrapper) | 🔴 **BLOCK — no grant AND archived** | 🆕 `99★`. Published by **ADL — the body that authored SCORM** — and it carries no licence, is `archived: true`, and was last pushed **`2017-10-02`**. 🔵 Recorded because it is the strongest single piece of evidence for `Trend 41`: a specification's own authors abandoned their own tooling, which is why generators now fill that layer. |
+| [aneelv75/github-trending](https://github.com/aneelv75/github-trending) | 🔴 **BLOCK — no grant, and the secondary source oversold it** | 🆕 Served by the mandated `github trending education AI {year}` leg and described there as *"a curated list of trending and high-impact GitHub repositories in AI, GenAI and engineering"*. Measured: 🔴 **`3★`**, last pushed `2026-03-25`, and **`10` licence probes (`LICENSE`/`.md`/`.txt`/`COPYING`/`LICENCE` × `main`+`master`) all `404`.** 🔵 A reminder with a number on it: the leg's descriptions are not calibrated to size. |
 | [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🟡 **Creative Commons on software** | 936★, 165 teacher-facing skills, pushed `2026-10-22`. `LICENSE` is a Creative Commons text, not a software licence — no patent grant, and CC is not designed for code. Usable as *reference material*; do not vendor it into a product without counsel. |
 
 ---

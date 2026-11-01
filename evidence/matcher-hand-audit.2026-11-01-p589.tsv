@@ -1,0 +1,30 @@
+axis	repo	token_fired	hand_verdict	reason
+scorm	kemalyy/edumints-scorm-mcp	mcp	GENUINE	MCP server that assembles SCORM courses
+scorm	RichardoC/secure-code-training	agent	FALSE-POSITIVE	SCORM training content ABOUT agents, not an agent
+scorm	course-code-framework/coursecode	MCP	GENUINE	course authoring framework for MCP-capable agents
+scorm	giacomomaria81/scorm-mcp-server	mcp	GENUINE	MCP server, HTML to SCORM 2004/1.2
+scorm	kemalyy/edumints-scorm-skill	agent,mcp	GENUINE	Claude Agent Skill
+scorm	JaysonBucket/Copilot-Chat-Safe-AI-Learning-Path	copilot	FALSE-POSITIVE	learning path ABOUT Copilot
+scorm	studiolxd/skills	gpt,agent	GENUINE	AI agent skills for SCORM/xAPI libraries
+scorm	GenOVA-UPAO/GenOVA	agent	GENUINE	RAG multimodal + agentes LangGraph
+scorm	ka1ku/scorm-slide-assistant	assistant	FALSE-POSITIVE	name only; Chrome playback helper, no AI
+scorm	lmsable/lmsable-skill	gpt	GENUINE	agent skill teaching an LLM an LMS schema
+scorm	amirtds/cubite-mcp	gpt,mcp	GENUINE	MCP server for Cubite LMS
+scorm	shastripranav/mcp-learning-server	mcp	GENUINE	MCP server for learning analytics + SCORM/xAPI
+scorm	WilliamEbong/CourseForge	agent	GENUINE	agent harness, course idea to e-learning course
+scorm	fedebarra/papermorph-courseware	llm	GENUINE	local or online LLMs drive generation
+scorm	tkawen/developer-platform	MCP	FALSE-POSITIVE	general dev platform; MCP server is one component
+scorm	api-evangelist/ispring	llm	FALSE-POSITIVE	third-party API profile, not an artefact
+scorm	alfredang/ai-learnify	gpt	GENUINE	AI authoring on an LLM + SCORM Studio
+scorm	aureliendossantos/elabora-core	agent	GENUINE	SCORM compiler plus agent tooling
+lti	ictinnovations/ictexam-mcp	mcp	GENUINE	MCP server for exams and gradebooks
+lti	course-code-framework/coursecode	MCP	GENUINE	same artefact as on the scorm axis
+lti	GenOVA-UPAO/GenOVA	agent	GENUINE	same artefact as on the scorm axis
+lti	tkawen/developer-platform	MCP	FALSE-POSITIVE	general dev platform
+lti	api-evangelist/piazza	llm	FALSE-POSITIVE	third-party API profile
+gradebook	pepememe1/The-first-project-Student-Journal	assistant	GENUINE	AI assistant Vector, answers from real data only
+gradebook	Samuel11s/school-management-system	-	FALSE-POSITIVE	Laravel SMS, no AI in description
+gradebook	ldsalud/school-management-system	-	FALSE-POSITIVE	Next.js SMS, no AI in description
+gradebook	PsychQuant/che-ntucool-mcp	mcp	GENUINE	Canvas/NTU COOL MCP server, human-confirm gated
+gradebook	eloompty/Eloom-LMS-International	agent	FALSE-POSITIVE	HOMONYM: education recruitment agents (people)
+gradebook	kadusic1/e-gradebook-platform	chatbot	GENUINE	AI-powered RAG chatbot
