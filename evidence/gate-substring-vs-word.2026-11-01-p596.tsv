@@ -1,0 +1,19 @@
+token	md_substring_files	md_wordboundary_files	real_pct	verdict
+anki	105	82	78	substring over-reports
+AGS	131	46	35	substring over-reports badly
+CLR	26	20	76	substring over-reports
+OMR	14	9	64	substring over-reports
+Caliper	63	63	100	agrees
+Advantage	57	53	92	agrees
+CASE	259	229	88	substring over-reports
+dyslex	19	0	0	WORD-BOUNDARY under-reports to zero (stem)
+pronunciation	25	25	100	agrees
+timetabl	62	2	3	WORD-BOUNDARY under-reports (stem)
+dropout	33	33	100	agrees
+plagiari	51	0	0	WORD-BOUNDARY under-reports to zero (stem)
+OneRoster	78	78	100	agrees
+Ed-Fi	72	71	98	agrees
+edfi	62	60	96	agrees
+competency	59	59	100	agrees
+IEP	58	48	82	substring over-reports
+MAIC	71	60	84	substring over-reports

@@ -1,0 +1,9 @@
+address	stars	licence_api	grant_bytes	grant_title_read	default_branch	last_push	archived	disposition
+openpatch/hyperbook	74	MIT	1069	MIT License	main	2026-11-01	false	PROMOTE repos/foundations.md
+missing-elements/h5p-offline-player	6	MIT	1073	MIT License	main	2026-11-01	false	PROMOTE repos/foundations.md (split: player MIT, H5P runtime GPL-3.0 separate)
+OpenMined/PySyft	10049	Apache-2.0	11941	Apache License 2.0 + 584B PSF carve-out on 7 test files	dev	2026-10-30	false	PROMOTE repos/foundations.md
+Cvmcosta/ltijs-sequelize	5	Apache-2.0	11357	Apache License 2.0	master	2026-09-29	false	PROMOTE repos/foundations.md
+edanalytics/earthmover_edfi_bundles	14	Apache-2.0	11357	Apache License 2.0	main	2026-10-30	false	PROMOTE repos/foundations.md
+folio-org/platform-complete	15	Apache-2.0	11357	Apache License 2.0	master	2026-10-05	false	PROMOTE verticals/solutions.md (FOLIO library services platform)
+GoogleCloudPlatform/aira	24	Apache-2.0	11357	Apache License 2.0	main	2026-07-23	false	BLOCK agents/top.md - self-declared proof-of-concept, not a supported Google product, README forbids under-13 data
+3iPunt/wordpress-lti-1-3	6	Apache-2.0	-	not read	master	2023-07-11	false	HOLD - 3 years without a push

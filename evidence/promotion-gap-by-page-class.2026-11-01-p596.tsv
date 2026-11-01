@@ -1,0 +1,13 @@
+measure	count	note
+ledger_addresses_total	3174	evidence/address-ledger.tsv
+present_in_trending_log	3143	agents/trending.md + repos/trending.md (append-only, lossless)
+present_on_CURRENT_shelf	234	agents/top.md + repos/foundations.md + verticals/solutions.md + compose/patterns.md
+present_on_ANY_shelf_ever	2243	current shelves + 15 archived shelf snapshots under archive/
+DROPPED_from_shelf	2015	was on an archived shelf page, absent from every current shelf (89.8 pct of ever-shelved)
+logged_not_currently_shelved	2909	of which 1988 were PREVIOUSLY shelved and dropped
+never_shelved_anywhere	921	2909 minus 1988
+present_on_intel_page	138	intel/market.md + intel/trends.md
+archive_snapshots	15	named pre-reset / pre-rewrite / pre-trim / pre-consolidation
+shelf_page_lines	6516	top 603 + foundations 434 + solutions 1444 + patterns 4035 (pre-p596)
+log_page_lines	115968	trending 65517 + 50451 (pre-p596)
+log_lines_per_shelf_line	17.8	ratio

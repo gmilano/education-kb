@@ -4,6 +4,79 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p596 — 2026-11-01 — a SECOND permissive platform of record for this page, carried unfiled in this base's logs, and it serves a tier this page has never covered: the academic library
+
+### 🔴 Why it arrives as a promotion rather than a discovery
+
+`596-C`, measured this pass: **`2,015` of `2,243` ever-shelved addresses (`89.8 %`) were
+dropped** across the `15` wholesale rewrites recorded under `archive/`, while the append-only
+trending logs lost nothing — and because the "already held?" gate greps those logs, a dropped
+row answers *"held"* forever and is never re-shelved. 🔴 **FOLIO is in that population**, and
+`folio-org/platform-complete` was specifically on `repos-foundations.md` at
+`archive/2026-10-06-pre-reset` before being dropped. 🟢 `folio-org/okapi` — the gateway, and
+the actual AI seam — is the one component here that was **genuinely never shelved**. `folio-org` appears in `3` sections of
+[`../agents/trending.md`](../agents/trending.md) and `4` of
+[`../repos/trending.md`](../repos/trending.md), and in 🔴 **`0`** of this page, `agents/top.md`,
+`repos/foundations.md`, `intel/market.md` or `intel/trends.md`. 🔴 So it was shelved, dropped, and then permanently invisible to search.
+
+### 🟢 FOLIO — the Library Services Platform, and it is Apache-2.0 end to end
+
+| Repo | ★ | Licence (byte-read on the real branch) | Branch | Last push | Role |
+|---|--:|---|---|---|---|
+| [folio-org/okapi](https://github.com/folio-org/okapi) | **134** | 🟢 **Apache-2.0** (`11,357 B`) | 🔴 `master` | `2026-10-29` | The API gateway and module registry — the seam every FOLIO module is mounted on, and the natural attachment point for an AI side-car |
+| [folio-org/stripes](https://github.com/folio-org/stripes) | **21** | 🟢 **Apache-2.0** (`11,357 B`) | `main` | `2026-10-13` | The UI framework for front-end modules |
+| [folio-org/platform-complete](https://github.com/folio-org/platform-complete) | **15** | 🟢 **Apache-2.0** (`11,357 B`) | 🔴 `master` | `2026-10-05` | The "complete" platform build — a `package.json` pinning `@folio/stripes-core` and the module set, plus module-descriptor generation. This is the **build entry point**, not the product |
+| [folio-org/mod-inventory](https://github.com/folio-org/mod-inventory) | **4** | 🟢 **Apache-2.0** (`11,357 B`) | 🔴 `master` | 🟢 `2026-11-01` | Instance/holdings/item inventory — the system-of-record domain module |
+| [folio-org/mod-users](https://github.com/folio-org/mod-users) | **1** | 🟢 Apache-2.0 (API) | 🔴 `master` | `2026-10-26` | Patron identity and user domain model |
+
+### 🟢 The licence shape, measured across the whole organisation rather than sampled
+
+| `org:folio-org` | repos |
+| --- | --: |
+| total | **456** |
+| 🟢 `license:apache-2.0` | **398** (`87.3 %`) |
+| 🔴 **any copyleft** (`gpl-3.0`, `agpl-3.0`, `lgpl-3.0`) | 🟢 **`0`** |
+| `mit` | `1` |
+| 🟡 no licence field (`NULL` / `NOASSERTION`) | `57` |
+
+🟢 **This page's standing rule has a second exception, and this is it.** `p584` established
+that the education platform-of-record tier is *"copyleft with exactly ONE permissive
+exception"*, and `p588` added a permissive virtual classroom. 🟢 **FOLIO is a full
+system-of-record platform — patrons, inventory, circulation, acquisitions, ERM — with
+`0` copyleft repositories in `456`.** A studio may fork it, modify it and ship it closed.
+
+🔴 **And the caveat that matters operationally, because it sits on the deployment path:** the
+`57` unlicensed repositories are not platform code — they are auxiliary tooling: the website
+(`folio-org.github.io`), CI (`folio-tools`, `pipelines-shared-library`), test suites
+(`folio-api-tests`, `container-perf-tests`, archived), governance (`tech-council`) — and
+🔴 **`folio-org/folio-helm`, the Helm chart set, is among them (`NULL` licence, `5★`).** 🔵 **So
+the platform is permissively licensed and the most common way to deploy it is not.** A client
+deployment that vendors the Helm charts is vendoring an unlicensed artefact; the fix is cheap
+(write your own charts against the Apache-2.0 modules, or get a grant in writing) but it has
+to be known before procurement, not after.
+
+### 🔴 Why a star-based screen was always going to miss this
+
+🔴 **FOLIO is a `456`-repository microservice platform, so no single repo carries the
+platform's weight.** Its largest component is `okapi` at `134★`; its system-of-record
+inventory module is `4★` and was pushed **today**. 🔵 **Any screen that ranks platforms of
+record by stars on a single address will rate FOLIO below a `2,000★` single-repo demo**, which
+is how a live, Apache-2.0, institution-grade platform stayed in this base's logs for passes
+without reaching a shelf. 🟢 **Standing instruction: for the platform tier, screen on
+organisation-level liveness and licence uniformity, not on one repository's stars.**
+
+### 🔵 What it is for — the tier this page has never carried
+
+Every platform on this page so far serves teaching (LMS), administration (SIS/ERP) or
+delivery (virtual classroom). 🟢 **FOLIO serves the academic library**, which in a university
+engagement is a separate budget, a separate buyer and a separate system of record — and one
+with an unusually clean AI attachment surface, because discovery, metadata enrichment and
+collection analytics are exactly the problems an agent is good at and are already exposed as
+Okapi modules. 🔵 Strongest in **North America** and **EMEA**, where FOLIO's institutional
+adoption sits; LATAM and APAC deployments exist but this pass did not measure them and does
+not claim them.
+
+---
 ## 🆕 p595 — 2026-11-01 — the platform tier was not re-measured this pass; the grading axis was, and it yielded one unlicensed address rather than a platform
 
 ### The one new address, and why it is not promotable

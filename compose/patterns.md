@@ -4,6 +4,116 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p596 — 2026-11-01 — three recipes built entirely from rows this base had already found and never filed; every grant below was byte-read this pass
+
+🔴 **Why these are writable now.** `596-C` measured that **`2,015` of `2,243` ever-shelved
+addresses (`89.8 %`) were dropped** across `15` wholesale rewrites, while the append-only logs
+lost nothing — and because the "already held?" gate greps the logs, a dropped row answers
+*"held"* forever and is never re-shelved. 🟢 **Not one component below required a search leg**:
+all but `folio-org/okapi` were on a shelf page in an archived snapshot before being dropped, and
+every grant below was read at the repo's **real** default branch (`3 of 6` are not `main`).
+
+## 🆕 P-596-A — 🟢 **The academic-library AI engagement: a permissive system of record a studio may fork and ship closed** (10–14 weeks, North America / EMEA)
+
+🟢 **This recipe could not be written before this pass**, because this base's platform tier was
+recorded as copyleft with one or two exceptions and had never carried the library tier at all.
+
+**The stack — every grant byte-read `2026-11-01`:**
+
+| component | repo | grant | branch | role |
+| --- | --- | --- | --- | --- |
+| API gateway / module registry | [folio-org/okapi](https://github.com/folio-org/okapi) | 🟢 **Apache-2.0** (`11,357 B`) | 🔴 `master` | `134★`. Every module mounts here — **this is the AI attachment seam** |
+| System of record | [folio-org/mod-inventory](https://github.com/folio-org/mod-inventory) | 🟢 **Apache-2.0** (`11,357 B`) | 🔴 `master` | `4★`, pushed `2026-11-01`. Instances, holdings, items |
+| Patron identity | [folio-org/mod-users](https://github.com/folio-org/mod-users) | 🟢 Apache-2.0 | 🔴 `master` | User domain model |
+| UI framework | [folio-org/stripes](https://github.com/folio-org/stripes) | 🟢 **Apache-2.0** (`11,357 B`) | `main` | Front-end module framework |
+| Build entry point | [folio-org/platform-complete](https://github.com/folio-org/platform-complete) | 🟢 **Apache-2.0** (`11,357 B`) | 🔴 `master` | Pins `@folio/stripes-core` + the module set; generates module descriptors |
+| Agent runtime | client's choice | — | — | The AI side-car, registered to Okapi as an ordinary module |
+
+1. **Weeks 1–2 — licence gate (`P-594-A`), and run step 1 properly.** 🔴 **Four of the five
+   FOLIO repos default to `master`, not `main`.** A probe hardcoding `main` reports "no licence
+   file" on the entire platform. 🟢 Organisation-level check, measured this pass:
+   `org:folio-org` is **`456` repos, `398` Apache-2.0, `0` copyleft**.
+2. 🔴 **Week 2 — settle the deployment artefact before architecture, because it is the one
+   unlicensed thing on the path.** The `57` FOLIO repos without a licence field are tooling,
+   and **`folio-org/folio-helm` is one of them.** 🔴 Do not vendor those charts into a client
+   deliverable. 🟢 Either write your own charts against the Apache-2.0 modules, or get a grant
+   in writing. Cheap at week 2, expensive at procurement.
+3. **Weeks 3–6 — stand up the platform from `platform-complete`** and generate module
+   descriptors. 🔵 Resist forking a module: everything below attaches instead.
+4. **Weeks 6–11 — build the agent as an Okapi module.** 🟢 **The whole point of this recipe:
+   because the platform is Apache-2.0, the module you write is yours** — ship it closed, charge
+   for it, no copyleft duty anywhere in the estate. Three problems the library already has and
+   an agent is genuinely good at: **metadata enrichment** on `mod-inventory` records,
+   **discovery** over holdings, and **collection analytics** across circulation.
+5. **Weeks 11–14 — hand over.** Deliverable: a running FOLIO estate, your proprietary module,
+   and the licence register from step 1 naming the Helm decision explicitly.
+
+🔵 **Why it sells:** in a university the library is a **separate buyer with a separate budget**
+from the LMS, and this page has been offering that university nothing but LMS work.
+
+## 🆕 P-596-B — 🟢 **Offline-first interactive courseware: authored as a static site, delivered to a school with no reliable network** (6–8 weeks, LATAM-first, portable to rural APAC and EMEA public sector)
+
+🔴 **The constraint this recipe takes seriously.** Every other delivery recipe on this page
+assumes the LMS is reachable. 🟢 Both halves below were pushed on `2026-11-01` and need **no
+server at all**.
+
+| component | repo | grant | role |
+| --- | --- | --- | --- |
+| Authoring | [openpatch/hyperbook](https://github.com/openpatch/hyperbook) | 🟢 **MIT** (`1,069 B`) | `75★`, EMEA/Germany. CLI + markdown engine, `30+` directives → interactive workbook as a **static site** |
+| Delivery | [missing-elements/h5p-offline-player](https://github.com/missing-elements/h5p-offline-player) | 🟡 **MIT** (`1,073 B`) — 🔴 **split artefact** | `6★`, stable since `2026-10-18`. Plays `.h5p` with **no H5P server, no Moodle, no backend**; PWA runs with **no network** |
+| Reconnection seam | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) + [Cvmcosta/ltijs-sequelize](https://github.com/Cvmcosta/ltijs-sequelize) | 🟢 **Apache-2.0** (`11,357 B`) | `373★` / `5★`. **LTI Advantage Complete Certified by 1EdTech**; the `-sequelize` plugin puts state on Postgres/MySQL instead of Mongo |
+
+1. 🔴 **Week 1 — price the GPL boundary, because it is the one thing that can sink this.**
+   README verbatim: *"The player is MIT; the H5P runtime it loads is GPL-3.0 and published
+   separately."* 🟢 **Ship the player as MIT and load the runtime as a separate, unmodified
+   artefact.** 🔴 Bundle them into one distributable and you have taken a GPL-3.0 obligation
+   nobody priced. 🔵 This is a packaging decision, not a legal opinion — make it in week 1.
+2. **Weeks 1–3 — author in `hyperbook`.** Content is markdown in git, so the client's own
+   teachers can maintain it after handover, which is the difference between a deliverable and a
+   dependency.
+3. **Weeks 3–5 — build the offline tier.** Static site + the PWA, on an SD card, a school
+   server or any static host. 🟢 **No LMS, no backend, no connectivity assumption.**
+4. **Weeks 5–7 — add the LTI seam for schools that *do* have a network.** `ltijs` for the
+   certified LTI 1.3 path, **`ltijs-sequelize` so state lands on the SQL database the client's
+   DBA already runs** — 🔵 the practical reason this gets through institutional review, and the
+   reason the `5★` adapter matters more than its stars suggest.
+5. **Weeks 7–8 — grading and sync.** Scores queue locally and reconcile over LTI AGS when a
+   connection appears.
+
+🔵 **Region note, placed rather than implied:** strongest in **LATAM**, where `596`'s market
+read is that connectivity, not licensing, is the binding constraint; portable to **rural APAC**
+and **EMEA** public sector. 🔴 This pass did not measure deployment counts in any of the three
+and claims none.
+
+## 🆕 P-596-C — 🟡 **Cross-institution learning analytics where the student records never leave the institution** (8–10 weeks, North America first)
+
+| component | repo | grant | role |
+| --- | --- | --- | --- |
+| Privacy layer | [OpenMined/PySyft](https://github.com/OpenMined/PySyft) | 🟡 **Apache-2.0** (`11,941 B`) 🔴 **+ PSF carve-out** | `10,049★`, branch 🔴 **`dev`**. Remote execution over data the analyst never sees |
+| Interchange | [edanalytics/earthmover_edfi_bundles](https://github.com/edanalytics/earthmover_edfi_bundles) | 🟢 **Apache-2.0** (`11,357 B`) | `14★`. Assessment-vendor formats → **Ed-Fi** API, with automatic student-ID matching |
+| Records spine | Ed-Fi ODS (client-side) | — | The district's existing system of record |
+
+1. 🔴 **Week 1 — record PySyft's grant correctly, do not flatten it.** `11,941 B` is `584 B`
+   over canonical Apache-2.0 and `591-G`'s byte filter flags it. Three-stage read: title
+   `Apache License 2.0`, body canonical, then an **appended carve-out placing `7` named test
+   files under the PSF licence**, copied from CPython. 🟢 **Shippable** — the carve-out never
+   leaves `packages/syft/tests/`. 🔴 Also note the default branch is **`dev`**: pin a tag.
+2. **Weeks 1–3 — land the data.** 🔵 `earthmover_edfi_bundles` exists because **most assessment
+   vendors ship no native Ed-Fi integration**; its student-ID auto-detection is the part that
+   actually consumes the budget on real district data.
+3. **Weeks 3–7 — the analysis runs where the data lives.** Each participating district keeps
+   its ODS; PySyft executes the query remotely and returns results, not records. 🟢 **This is
+   what makes a multi-district study legally writable** when no district may export student
+   records to a partner.
+4. **Weeks 7–10 — governance pack.** Which queries ran, against whose data, with what
+   approvals — the artefact the district files, not an appendix.
+
+🔴 **Stated as a limit, not sold as a feature:** this pass verified licences, branches,
+liveness and scope first-hand. 🔴 **It did not benchmark PySyft at district data volumes**, and
+a `10–14`-week version of this recipe should spend two of those weeks on exactly that before
+anyone signs a performance commitment.
+
+---
 ## 🆕 p595 — 2026-11-01 — one new recipe, built only from grants read byte-for-byte this pass
 
 ### `P595-1` — Rubric-graded coursework on a client's existing LMS, no student data leaving the estate

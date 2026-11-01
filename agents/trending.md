@@ -4,6 +4,163 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p596` — `2026-11-01` — **🔴 THE SHELF IS LOSSY AND THE LOG IS LOSSLESS, AND THE GATE THAT DECIDES WHAT GETS SHELVED CONSULTS THE LOG: `2,015` OF `2,243` EVER-SHELVED ADDRESSES (`89.8 %`) WERE **DROPPED** ACROSS `15` REWRITES, AND BECAUSE A DROPPED ROW STILL SITS IN THE APPEND-ONLY LOG IT IS REPORTED *"ALREADY HELD"* AND NEVER RE-SHELVED — WHICH IS WHAT TWENTY-SEVEN PASSES OF "NIL" HAS BEEN MEASURING. 🟢 `6` PROMOTED THIS PASS FROM THE BACKLOG, EVERY GRANT BYTE-READ. 🔴 `1` BLOCKED: A GOOGLE-BRANDED READING ASSESSOR WHOSE OWN README FORBIDS UNDER-13 DATA. 🟢 `595-B` CLOSED. 🔴 TWO INSTRUMENT FAILURES INSIDE THIS PASS, BOTH SELF-INFLICTED AND BOTH PUBLISHED.**
+
+### 🔴 `596-C` — the finding that reframes twenty-seven passes of nil
+
+Every pass since `p569` has reported the mandated legs returning nothing this base lacks,
+and `p595` concluded the nil "is now a measured property of the channel." 🔴 **Measured
+this pass, the channel is not the bottleneck. Filing is.**
+
+| population | count |
+| --- | --: |
+| addresses in `evidence/address-ledger.tsv` | `3,174` |
+| 🔵 present in a **trending log** (append-only, **lossless**) | `3,143` |
+| 🟢 present on a **current shelf** (`agents/top.md`, `repos/foundations.md`, `verticals/solutions.md`, `compose/patterns.md`) | **`234`** |
+| 🔵 present on **any shelf ever** (current + `15` archived snapshots under `archive/`) | `2,243` |
+| 🔴 **dropped from the shelf** — shelved once, absent from every current shelf | 🔴 **`2,015`** (`89.8 %` of ever-shelved) |
+| of the `2,909` logged-but-not-currently-shelved, **previously shelved then dropped** | 🔴 **`1,988`** |
+| never shelved anywhere | `921` |
+
+🔴 **The shelf is lossy; the log is lossless; and the gate that decides what gets shelved
+consults the log.** `archive/` holds **`15`** snapshots named `pre-reset`, `pre-rewrite`,
+`pre-trim` and `pre-consolidation` — the shelf pages are periodically rewritten wholesale, and
+every rewrite drops rows. The two trending pages, being append-only, drop nothing, ever.
+
+🔴 **That is the mechanism of the nil, stated exactly.** `569-B` requires every token to be
+grepped against this base before being called new — and that grep hits the **logs**. A row
+dropped from a shelf is still in the log forever, so it is reported **"already held"** and is
+never re-shelved. 🔴 **The gate consults the lossless record to decide admission to the lossy
+one**, which makes a dropped row permanently unrecoverable by search. 🟢 **Twenty-seven passes
+of "nothing new" is that mechanism, not a saturated market.**
+
+🔴 **These two pages hold `115,968` lines; the four shelf pages hold `6,516`** — `17.8` lines
+of log per line of shelf.
+
+🔵 **This is the mechanism under `595-A`.** `p595` registered the `118 MB` and no retention
+policy as a size problem and correctly declined to prune. 🟢 **It is better understood as a
+conversion problem**, and that reading suggests an action that destroys nothing: promote
+from the backlog instead of truncating it.
+
+### 🟢 `6` promoted from the backlog this pass — every one verified first-hand
+
+🔴 **Corrected mid-pass, because the first reading of this was wrong and the correction is the
+better finding:** these were not *never* filed. 🔴 **Six of the seven addresses below were on a
+shelf page in an archived snapshot and were dropped in a rewrite** —
+`openpatch/hyperbook` across **three** snapshots (`p351`, `p355`, `p383`),
+`missing-elements/h5p-offline-player` across two, `PySyft` and `folio-org/platform-complete` at
+`2026-10-06-pre-reset`, `ltijs-sequelize` and `earthmover_edfi_bundles` at
+`2026-10-17-pre-rewrite`. 🟢 Only `folio-org/okapi` was genuinely never shelved. 🔵 **So this is
+recovery, not discovery.** Stars and default branch from `gh api search/repositories`; **every grant
+byte-read** on `raw.githubusercontent.com` at the repo's **real** default branch.
+
+| address | ★ | grant (bytes read) | branch | last push | shelved to |
+| --- | --: | --- | --- | --- | --- |
+| [`OpenMined/PySyft`](https://github.com/OpenMined/PySyft) | `10,049` | 🟢 Apache-2.0 (`11,941 B`) **+ PSF carve-out** | 🔴 `dev` | `2026-10-30` | `repos/foundations.md` |
+| [`openpatch/hyperbook`](https://github.com/openpatch/hyperbook) | `75` | 🟢 MIT (`1,069 B`) | `main` | 🟢 `2026-11-01` | `repos/foundations.md` |
+| [`edanalytics/earthmover_edfi_bundles`](https://github.com/edanalytics/earthmover_edfi_bundles) | `14` | 🟢 Apache-2.0 (`11,357 B`) | `main` | `2026-10-30` | `repos/foundations.md` |
+| [`folio-org/platform-complete`](https://github.com/folio-org/platform-complete) | `15` | 🟢 Apache-2.0 (`11,357 B`) | 🔴 `master` | `2026-10-05` | `verticals/solutions.md` |
+| [`missing-elements/h5p-offline-player`](https://github.com/missing-elements/h5p-offline-player) | `6` | 🟢 MIT (`1,073 B`) **split grant** | `main` | 🟢 `2026-11-01` | `repos/foundations.md` |
+| [`Cvmcosta/ltijs-sequelize`](https://github.com/Cvmcosta/ltijs-sequelize) | `5` | 🟢 Apache-2.0 (`11,357 B`) | 🔴 `master` | `2026-09-29` | `repos/foundations.md` |
+
+🔵 **Two of the six carry a licence structure a flat classifier gets wrong**, which is
+`594`'s three-stage read earning its keep:
+
+- 🔴 **`PySyft` is not flat Apache-2.0.** Its grant is `11,941 B` — `584 B` above the
+  canonical `11,357 B`, so `591-G`'s byte-size filter flags it. Read in three stages: the
+  title is `Apache License 2.0`, the body is canonical, and an **appended carve-out** places
+  `7` named test files under the **PSF licence** (`packages/syft/tests/syft/lib/python/…`,
+  copied from CPython). 🟢 **Shippable** — the carve-out is confined to tests and does not
+  touch the library — but it must be recorded, not flattened.
+- 🔴 **`h5p-offline-player` is a two-licence artefact by design.** The player is MIT; **the
+  H5P runtime it loads is GPL-3.0 and published separately.** 🟢 A studio may ship the
+  player closed; 🔴 it may not assume the runtime travels on the same terms.
+
+### 🔴 `596-D` — the one address this pass BLOCKED, and it is the most dangerous kind
+
+🔴 [`GoogleCloudPlatform/aira`](https://github.com/GoogleCloudPlatform/aira) — *Artificial
+Intelligence Reading Assessor*, Apache-2.0 (`11,357 B`, byte-read), `24★`, last push
+`2026-07-23`. A reading-fluency assessor that scores a learner as *Pré-reader / Reader /
+Advanced* and rolls results up per class, per school, per region.
+
+🟢 **On every signal this base normally screens on, it passes:** permissive grant, real
+organisation, education-core, live. 🔴 **Its own README disqualifies it**, and nothing in
+this base recorded that:
+
+| README text | consequence |
+| --- | --- |
+| 🔴 *"an open-source **demo experiment**"*, *"**proof-of-concept only**"* | not a buildable base |
+| 🔴 *"does not reflect a completed system nor a finalized design"* | no production path |
+| 🔴 *"**not an officially supported Google product**"* | the Google brand carries no support |
+| 🔴 *"Please do not use any personal or sensitive data"* | cannot touch learner records |
+| 🔴 *"should not be used by children under 13 or to process data from children under 13"* | 🔴 **excludes K-12, the exact population a reading assessor is for** |
+
+🔵 **The lesson is a screen this base does not run.** Licence, liveness and stars all said
+yes; the *self-declared scope* said no. 🟢 **Filed as `596-D` with a standing instruction:
+read the README's own status and audience declarations before promoting, and treat a
+PoC/under-13 disclaimer as a 🔴 BLOCK regardless of grant and provenance.** Recorded here so
+pass `597` does not promote it on the strength of the Apache-2.0 header.
+
+🟡 **Also held back:** [`3iPunt/wordpress-lti-1-3`](https://github.com/3iPunt/wordpress-lti-1-3)
+(Apache-2.0, `6★`) — last push `2023-07-11`, **three years and three months stale**. Not
+blocked, not promoted; parked with the date stated.
+
+### 🔴 Twenty-seventh consecutive nil on the mandated legs — and it is real, not an artefact
+
+All four regional legs and all four global legs ran. 🟢 **`4 of 4` regional legs paid: every
+region answered.** 🔴 **`0` new tokens, `0` new addresses.**
+
+| leg | served | verdict |
+| --- | --- | --- |
+| North America | `134` bills / `31` states; NY `A 9190`; MD/ID/OK/VA mandatory district policy; `K-12 AI Literacy and Readiness Act`; `36 %` / `$3.68bn` | 🔴 all held |
+| EMEA | Digital Omnibus → `2027-12-02` stand-alone and 🔵 `2028-08-02` embedded; in force `2026-07-27`; Annex III; UAE **KHDA** school guidance | 🔴 all held (`KHDA` on `3` curated pages, `Annex III` on `6`, `2028-08-02` on `5`) |
+| APAC | Korea AI Basic Act in force `2026-01-22`; Vietnam high-risk list incl. education, pre-existing systems from `2026-08-15`; TEQSA action plans; Singapore consultation; China labelling; Japan voluntary | 🔴 all held |
+| LATAM | UNESCO IESALC/UNU `200` HEIs in `19` countries; `87 %` use / `26 %` strategy; Observatory, Santiago `2026-04-14`; `716` instruments across `23` countries | 🔴 all held |
+| global ×4 | `DeepTutor`, `OpenMAIC`/`THU-MAIC`, `rasbt/LLMs-from-scratch`, `CrewAI`, `AutoGen`, `OpenHands`, `Langflow` | 🔴 `0` new addresses |
+
+🟢 **Written down as the prompt requires: no region was silent.** Each of the four returned
+substantive 2026 material; each returned this base's existing picture. 🔵 **And the nil was
+tested rather than assumed** — `596-A` pre-registered the hypothesis that substring `grep`
+was manufacturing false "already held" verdicts. 🔴 **Refuted for the regional legs:** these
+tokens are long multi-word phrases that cannot collide by substring, and each was
+re-verified on the curated pages individually.
+
+### 🆕 One new shelf fact the global legs did produce
+
+🟢 **`OpenMAIC` / `THU-MAIC` (Tsinghua MAIC lab) was reported at `42,265★` on `2026-11-01`.**
+This base holds the project in `243` files but 🔴 **held no star figure at all** — `42,265`
+and `42265` both return `0` files across every `.md` in this repo. The address was held; its
+scale was not. Filed on [`../repos/trending.md`](../repos/trending.md).
+
+### 🔴 Two instrument failures inside this pass, both self-inflicted, both published
+
+1. 🔴 **`--` before a `grep` pattern silently disables `--include`.**
+   `grep -ril -- "$t" --include=*.md .` makes `--include=*.md` a **file operand**, not an
+   option — the sweep covers all `118 MB` instead of the `639` `.md` files, inflating counts
+   `2–5×` (`dropout` `33` → `197`). No error.
+2. 🔴 **`comm` lies across locales.** A first cut of `596-C` used `comm -12` and reported a
+   `94.7 %` false-negative rate on the ledger's `filed_on` column and `159` unshelved
+   addresses. 🔴 **Both numbers were wrong and are withdrawn** — a spot check found
+   `folio-org/platform-complete` on a curated page that `comm` called absent. Re-measured
+   with `grep -oFf`, which is what `596-C` reports.
+
+🟢 **Standing instruction for `p597`: never `comm` for a set difference in this base — use
+`grep -oFf` or `awk` membership — and never place `--` before a `grep` pattern.** Both
+return a confident wrong number rather than an error.
+
+### 🟢 `595-B` CLOSED
+
+[`../intel/market.md`](../intel/market.md) carried **three** `## Opportunities by region`
+headings; the file's own convention for a superseded copy already existed at four other
+places. 🟢 **Applied to both duplicates: one canonical `##` heading now remains** (verified
+`grep -c` → `1`), and the two superseded copies read
+`### (historical) … superseded, retained for history`.
+
+🔵 **`595-A` carried, not actioned.** The `118 MB` and the absent retention policy stand.
+🟢 This pass did not truncate anything, and now says why in a sharper form: the backlog is
+an asset with `2,909` entries, so the answer is promotion, not deletion.
+
+---
 ## 🆕 `p595` — `2026-11-01` — **🔴 TWENTY-SIXTH CONSECUTIVE NIL: `13 of 13` REGIONAL TOKENS AND `0 of 5` GLOBAL ADDRESSES WERE ALREADY HELD, AND THE ONE ADDRESS NINE LEGS SERVED THAT THIS BASE HAS NEVER HELD IS `0`★ WITH **NO LICENCE FILE AT ALL** (`404`). 🟢 `DeepTutor` SHIPPED `v1.7.1` TODAY AT `53.5k`★ — THE PASS'S ONLY NEW SHELF FACT. 🟢 THREE SHELF FIGURES RE-MEASURED ON A SECOND INSTRUMENT, ALL AGREE. 🔴 TWO STRUCTURAL DEFECTS REGISTERED (`595-A` NO RETENTION POLICY, `118 MB`; `595-B` TRIPLICATED REGION HEADING).**
 
 ### The legs, measured against this base before being called new

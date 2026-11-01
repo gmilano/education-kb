@@ -4,6 +4,90 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 p596 — 2026-11-01 — the four regional legs pay `4 of 4` for a fifth consecutive pass and return `0` new tokens; `595-B` is closed; and the twenty-seventh nil was tested as an instrument artefact rather than accepted as a channel property
+
+### The legs, measured against this base before being called new
+
+All four mandated regional legs ran, plus the four mandated global legs. Every token was
+grepped against this base before being called new — `569-B`'s standing requirement.
+
+| token served | region | already in this base? |
+| --- | --- | --- |
+| **`134` bills across `31` states**; mandatory district policy in **ID, OK, VA, MD** | North America | 🔴 held — **seventh** consecutive pass |
+| **NY A 9190** (grade-9 floor, diagnostics/special-ed carve-out) | North America | 🔴 held |
+| **K-12 AI Literacy and Readiness Act of 2026** advanced in committee | North America | 🔴 held |
+| **`36 %`** regional share, **`$3.68bn`** 2026 | North America | 🔴 held |
+| 🔵 Canada: AI disclosure rules cover **workplaces, not schools**; Ontario hiring rules pending | North America | 🔴 held as a gap — still no school-sector instrument |
+| Digital Omnibus: stand-alone Annex III high-risk duties **`2027-12-02`** | EMEA | 🔴 held — `55`+ files |
+| 🔵 embedded-in-product high-risk duties **`2028-08-02`**; amendments in force **`2026-07-27`** | EMEA | 🔴 held — `5` and `4` curated pages respectively |
+| UAE **KHDA** guidance to private schools on responsible AI | EMEA | 🔴 held — `3` curated pages |
+| UK sector-specific guidance rather than a single statute | EMEA | 🔴 held |
+| **South Korea AI Basic Act** in force `2026-01-22`, education named high-impact, grace year | APAC | 🔴 held — `45` files |
+| **Vietnam** high-risk list incl. education; applies to systems running before `2026-08-15` | APAC | 🔴 held — `78` files |
+| **TEQSA** mandatory university gen-AI action plans | APAC | 🔴 held — `11` files |
+| Singapore consultation; China registration + labelling; Japan voluntary | APAC | 🔴 held |
+| UNESCO **IESALC / UNU** — `200` HEIs, `19` countries | LATAM | 🔴 held — `57` files |
+| **`87 %`** of LAC institutions use AI in ≥1 area; **`26 %`** hold a formal strategy | LATAM | 🔴 held — `39` files |
+| UNESCO **Observatory on AI in Education for LAC**, Santiago, `2026-04-14` | LATAM | 🔴 held — `11` files |
+| **`716`** AI regulatory instruments across `23` countries (U. de los Andes) | LATAM | 🔴 held — `27` files |
+
+🔴 **`0 of 17` new. Twenty-seventh consecutive nil.** 🟢 **Stated as the prompt requires: no
+region was silent.** Each of the four returned substantive 2026 material; each returned this
+base's existing picture.
+
+### 🟢 This pass tested the nil instead of accepting it, and the test refuted the easy explanation
+
+`p595` concluded the nil "is now a measured property of the channel." 🔵 Before accepting
+that, this pass pre-registered the competing hypothesis — that this base's own "already
+held?" gate is a **substring** `grep` and manufactures false "held" verdicts — in
+[`../evidence/prereg-596A-held-gate-substring.2026-11-01-p596.md`](../evidence/prereg-596A-held-gate-substring.2026-11-01-p596.md),
+**before measuring**.
+
+🔴 **Refuted for the regional legs, and the reason is structural:** every token in the table
+above is a long multi-word phrase (`Digital Omnibus`, `K-12 AI Literacy`, `Annex III`,
+`KHDA`), and phrases of that length cannot collide by substring. Each was additionally
+re-verified on the curated pages one at a time. 🟢 **The demand-side nil is real.**
+
+🔵 **What the test did find is a gate hazard worth carrying:** substring and word-boundary
+`grep` fail in *opposite* directions. Substring over-reports `held` (`AGS` `131` → `46`);
+word-boundary collapses to **zero** on stems (`dyslex` `19` → `0`, `plagiari` `51` → `0`,
+`timetabl` `62` → `2`), so a word-boundary "fix" would make this base re-file material it has
+held all along. 🔴 **Neither is a valid gate on its own**; full table in
+[`../evidence/gate-substring-vs-word.2026-11-01-p596.tsv`](../evidence/gate-substring-vs-word.2026-11-01-p596.tsv).
+
+### 🔴 `596-C` — where this pass's value actually came from, and it is not the demand side
+
+🔴 **The shelf is lossy, the log is lossless, and the gate that decides what gets shelved
+consults the log.** `archive/` holds **`15`** snapshots named `pre-reset`, `pre-rewrite`,
+`pre-trim`, `pre-consolidation`: the shelf pages are rewritten wholesale and lose rows each
+time, while the two append-only trending pages lose nothing.
+
+| population | count |
+| --- | --: |
+| ledger addresses | `3,174` |
+| 🔵 logged on the trending pages (lossless) | `3,143` |
+| 🟢 on a **current** shelf | **`234`** |
+| 🔵 on **any** shelf ever (incl. `15` archived snapshots) | `2,243` |
+| 🔴 **dropped** — shelved once, absent from every current shelf | 🔴 **`2,015`** (`89.8 %`) |
+| never shelved anywhere | `921` |
+
+🔴 **That is the mechanism of the nil.** `569-B` requires a token to be grepped against this
+base before being called new, and that grep hits the logs — so a row dropped from a shelf
+answers *"already held"* forever and is never re-shelved. 🟢 **`6` addresses were recovered
+from that population this pass**, every grant byte-read, placed by region below. 🔵 **And it
+reframes `595-A`:** the `118 MB` is not the problem — the `118 MB` is the only part of this
+base that never loses anything. The problem is the rewrite.
+
+### 🟢 `595-B` CLOSED
+
+This file carried **three** `## Opportunities by region` headings at lines `105`, `204` and
+`968`, so a compiler keying opportunities off that heading bucketed them three ways and read
+order decided the winner. 🟢 **The file's own convention for a superseded copy already
+existed** at four other places — `### (historical) … superseded, retained for history`. It is
+now applied to both duplicates. 🟢 **Verified: `grep -c "^## Opportunities by region"` → `1`.**
+No prose was deleted.
+
+---
 ## 🆕 p595 — 2026-11-01 — the four regional legs pay `4 of 4` and the demand side is saturated at `13 of 13` tokens already held; no region returned a token this base lacks, and the region heading this file keys on is triplicated
 
 ### The legs, measured against this base before being called new
@@ -106,6 +190,8 @@ specific about education budgets, and this page should not let it.
 
 ### 🟢 North America
 
+🆕 **`p596` — supply, recovered rather than discovered.** [`edanalytics/earthmover_edfi_bundles`](https://github.com/edanalytics/earthmover_edfi_bundles) (Apache-2.0, `14★`, pushed `2026-10-30`) ships pre-built mappings from assessment-vendor formats into the **Ed-Fi** API with automatic student-ID matching. 🔵 **It exists because most assessment vendors ship no native Ed-Fi integration** — which is the unglamorous integration work a US K-12 district engagement is actually billed for, and it is now on [`../repos/foundations.md`](../repos/foundations.md). 🟢 **Also new to this region's shelf: FOLIO**, a `456`-repository Apache-2.0 Library Services Platform with `0` copyleft repos — a separate university buyer and budget this page had never covered. See [`../verticals/solutions.md`](../verticals/solutions.md).
+
 🔵 **Unchanged this pass; restated so a nil does not read as coverage.** Largest regional share of
 AI-in-education spend (**~36–38 %**, `$3.68bn` in 2026 on the `36 %` reading), the densest
 regulatory activity at **state** level (`134` bills across `31` states — served for a fifth pass
@@ -120,6 +206,8 @@ proprietary `ee/` tree — and this pass's classifier now escalates that shape t
 resolving it, which is the correct behaviour for a row a studio must not fork casually.
 
 ### 🟢 EMEA
+
+🆕 **`p596` — supply, recovered rather than discovered.** [`openpatch/hyperbook`](https://github.com/openpatch/hyperbook) (MIT, `75★`, Germany, pushed `2026-11-01`) builds interactive workbooks as static sites from a markdown engine with `30+` directives — needing no LMS and no server to deliver. 🔵 **It lands precisely on this region's stated opening**, which `p593` established is *capability* rather than compliance: a client that cannot operate what is shipped is the failure mode, and courseware that is a static site is the lowest-operating-burden artefact this page can offer. 🟢 FOLIO (above) is strong here too, on institutional library adoption.
 
 🔵 **The `p593` reading stands and is not re-argued:** regulation ahead of capability, so the
 deliverable is **capability** and the failure mode is a compliant system nobody can operate. The
@@ -139,6 +227,8 @@ Swiss) — and `19` of the `30` branch-defect rows on
 
 ### 🟢 APAC
 
+🔴 **`p596` — nothing new for this region, stated explicitly.** The legs returned Korea, Vietnam, TEQSA, Singapore, China and Japan, all held; and **none of the `6` addresses promoted this pass is APAC-origin**. 🔵 This region's supply position is unchanged and remains the strongest on these shelves (`DeepTutor`, `OpenMAIC`) — 🆕 **and `OpenMAIC` finally has a measured size: `42,265★` as of `2026-11-01`**, a figure this base held in `0` files before this pass despite holding the address in `243`. 🔴 The standing APAC gap — no ministry-level adoption *rate*, only named programmes — is **unclosed**.
+
 🔵 **Restated, carried.** Policy is moving nationally rather than regionally: Australia's **National
 AI Plan** and Chief AI Officers; the **ASEAN Guide on AI Governance and Ethics** still early-stage
 and per-country; Singapore regulating sector by sector; the Philippines' **Project S.I.N.A.G.**
@@ -154,6 +244,8 @@ the global legs surfaced is APAC and unusable:**
 (`115★`, Indonesian exam practice) has **no licence file at `13` paths** — `BLOCK`.
 
 ### 🟢 LATAM
+
+🆕 **`p596` — an offline delivery route, which is this region's binding constraint rather than its licence position.** [`missing-elements/h5p-offline-player`](https://github.com/missing-elements/h5p-offline-player) (MIT, stable since `2026-10-18`) plays `.h5p` packages **with no H5P server, no Moodle and no backend**, and ships a PWA that runs with no network at all. 🔵 **Interactive content delivered to a school with intermittent connectivity, off static hosting**, is a different engagement from one that assumes an LMS is reachable. 🔴 **Licence caveat that must be priced:** the player is MIT, **the H5P runtime it loads is GPL-3.0 and published separately** — ship them as one artefact and you have taken a copyleft obligation. 🔴 The LATAM education-specific *capital* gap stays unclosed, and this pass added nothing to it.
 
 🟡 **New capital signal, bounded:** `$2.5bn` cross-sector AI investment projected for 2026 (single
 report, contested at `$2bn` YTD by another outlet), corroborated in *direction* by Crunchbase's
@@ -201,7 +293,7 @@ side-car over their APIs, do not fork. See `594-D`.
 🟢 **`4 of 4` legs paid.** 🟡 `2 of 22` tokens new — the lowest demand-side yield yet recorded, and
 consistent with `p591`–`p592`'s saturation finding rather than contradicting it.
 
-## Opportunities by region
+### (historical) Opportunities by region — superseded, retained for history
 
 ### 🟢 North America
 
@@ -965,7 +1057,7 @@ not be verified against HolonIQ directly and is **not** adopted here. Treat the 
 
 ---
 
-## Opportunities by region
+### (historical) Opportunities by region — superseded, retained for history
 
 Refreshed **2026-11-01** (`p587`). One subsection per region, closed vocabulary. Figures
 carry their source; where a region returned nothing on an axis, that nil is written down,

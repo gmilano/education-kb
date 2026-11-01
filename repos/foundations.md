@@ -177,6 +177,50 @@ are on [`../agents/top.md`](../agents/top.md).
 
 ---
 
+## 🆕 `p596` — `5` rows promoted off the trending backlog, not discovered
+
+🔴 **Why these rows arrive now, when the search legs returned nothing — and the honest version
+of it.** `596-C` measured that **`2,015` of `2,243` ever-shelved addresses (`89.8 %`) were
+dropped** across `15` wholesale rewrites recorded under `archive/`, while the append-only
+trending logs lost nothing. 🔴 **Because the "already held?" gate greps the logs, a row dropped
+from this page still answers *"held"* forever and is never re-shelved.** 🟢 **All five rows below
+were on a shelf page in an archived snapshot and were dropped** — `hyperbook` in three
+snapshots (`p351`, `p355`, `p383`), `h5p-offline-player` in two, `PySyft` at
+`2026-10-06-pre-reset`, `ltijs-sequelize` and `earthmover_edfi_bundles` at
+`2026-10-17-pre-rewrite`. 🔵 **This is recovery, not discovery.** Every one was re-verified first-hand this pass:
+stars and `default_branch` from `gh api -X GET search/repositories`, and **every grant
+byte-read** on `raw.githubusercontent.com` at the branch the API reported.
+
+🔵 **`3 of 5` default to something other than `main`** — `dev`, `master`, `master`. A probe
+hardcoding `main` would have filed all three as unlicensed, which is `594-B` in practice.
+
+| Repo | Licence | Stars | Last push | Region | Role |
+|---|---|--:|---|---|---|
+| [OpenMined/PySyft](https://github.com/OpenMined/PySyft) | 🟡 **Apache-2.0 (text, `11,941 B`, branch `dev`) + PSF carve-out** | **10,049** | `2026-10-30` | Global | 🆕 **Remote execution over data the analyst never sees** — the privacy layer for cross-institution learning analytics, where the obstacle is never the model but the fact that student records cannot leave the institution. 🔴 **Not flat Apache-2.0:** the grant is `584 B` over canonical and `591-G`'s byte filter flags it. Three-stage read — title `Apache License 2.0`, body canonical, then an **appended carve-out placing `7` named test files under the PSF licence**, copied from CPython. 🟢 Shippable: the carve-out never leaves `packages/syft/tests/`. |
+| [openpatch/hyperbook](https://github.com/openpatch/hyperbook) | 🟢 **MIT (text, `1,069 B`)** | **75** | 🟢 `2026-11-01` | EMEA | 🆕 **Interactive workbooks as static sites** — a CLI plus a markdown engine with `30+` custom directives, building courseware that needs no LMS and no server to deliver. 🔵 The authoring half of a courseware factory whose delivery half this base already holds; Germany (OpenPatch). Pushed the day it was measured. |
+| [edanalytics/earthmover_edfi_bundles](https://github.com/edanalytics/earthmover_edfi_bundles) | 🟢 **Apache-2.0 (text, `11,357 B`)** | **14** | `2026-10-30` | North America | 🆕 **Pre-built mappings from assessment-vendor formats into the Ed-Fi API** — CSV seeds, JSON templates and YAML transforms, with two packages that auto-detect the right student-ID configuration to maximise matching against an Ed-Fi roster. 🔵 **It exists because most assessment vendors ship no native Ed-Fi integration**, which is precisely the unglamorous work a US K-12 district engagement is actually billed for. |
+| [missing-elements/h5p-offline-player](https://github.com/missing-elements/h5p-offline-player) | 🟡 **MIT (text, `1,073 B`) — split artefact** | **6** | 🟢 `2026-11-01` | Global | 🆕 **Plays `.h5p` packages with no H5P server, no Moodle and no backend** — one web component on static hosting, plus a PWA that runs with no network at all. Stable since `1.0` (`2026-10-18`); library pack checked weekly against the H5P hub. 🔴 **Two licences by design, README verbatim:** *"The player is MIT; the H5P runtime it loads is GPL-3.0 and published separately."* 🟢 The player may be forked and shipped closed; 🔴 the runtime may not. 🔵 The offline PWA is the strongest low-connectivity delivery route this page carries. |
+| [Cvmcosta/ltijs-sequelize](https://github.com/Cvmcosta/ltijs-sequelize) | 🟢 **Apache-2.0 (text, `11,357 B`, branch `master`)** | **5** | `2026-09-29` | Global | 🆕 **SQL persistence for `ltijs`**, which this page already carries at `373★` and which is **LTI Advantage Complete Certified by 1EdTech**. 🔵 Low stars because it is a database adapter, not a product: it is what lets the certified LTI path run on Postgres or MySQL instead of the default Mongo, which is the difference between a demo and something a university's DBA will accept. |
+
+### 🔴 Not promoted, and the reasons are on the record
+
+- 🔴 [`GoogleCloudPlatform/aira`](https://github.com/GoogleCloudPlatform/aira) — *AI Reading
+  Assessor*, Apache-2.0 (`11,357 B`, byte-read), `24★`. 🟢 Passes every screen this page
+  normally runs: permissive, real organisation, education-core, live. 🔴 **BLOCKED on its
+  own README**: *"demo experiment"*, *"proof-of-concept only"*, *"not an officially supported
+  Google product"*, *"do not use any personal or sensitive data"* and *"should not be used by
+  children under 13 or to process data from children under 13"* — which excludes K-12, the
+  population a reading assessor exists for. 🔵 **`596-D`: a self-declared scope can
+  disqualify a row that licence, liveness and provenance all clear.** Read the README's
+  status and audience claims before promoting.
+- 🟡 [`3iPunt/wordpress-lti-1-3`](https://github.com/3iPunt/wordpress-lti-1-3) — Apache-2.0,
+  `6★`, last push `2023-07-11`. Parked, not blocked: **three years and three months stale.**
+- 🔵 `adap/flower` and `digitalcredentials/did-io` — both returned `422 Validation Failed`
+  on the search channel. 🟢 **Recorded as UNRESOLVED, not as findings.** The channel failing
+  loudly is the control working.
+
+---
+
 ## The component and spec tier — permissive, and where the real leverage is
 
 | Repo | Licence | Stars | Last push | Region | Role |

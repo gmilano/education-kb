@@ -4,6 +4,100 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p596` — `2026-11-01` — **🔴 THIS PAGE NEVER FORGETS AND THE SHELVES DO: `2,015` OF `2,243` EVER-SHELVED ADDRESSES (`89.8 %`) WERE DROPPED ACROSS `15` REWRITES, AND BECAUSE THE "ALREADY HELD?" GATE GREPS **THIS** PAGE, A DROPPED ROW READS AS HELD AND IS NEVER RE-SHELVED — THAT IS WHAT TWENTY-SEVEN PASSES OF "NIL" ACTUALLY MEASURES. 🟢 `5` REPOS PROMOTED OFF THIS BACKLOG, EVERY GRANT BYTE-READ, TWO WITH NON-FLAT LICENCE STRUCTURE. 🆕 `OpenMAIC` AT `42,265`★ — THE ADDRESS WAS HELD IN `243` FILES AND ITS STAR FIGURE IN `0`.**
+
+### 🔴 `596-C` — the shelf is lossy, this page is not, and the gate reads the wrong one
+
+| population | count |
+| --- | --: |
+| addresses in `evidence/address-ledger.tsv` | `3,174` |
+| 🔵 logged on the two trending pages (append-only, **lossless**) | `3,143` |
+| 🟢 on a **current** shelf page | **`234`** |
+| 🔵 on **any** shelf ever (current + `15` archived snapshots) | `2,243` |
+| 🔴 **dropped** — shelved once, absent from every current shelf | 🔴 **`2,015`** (`89.8 %`) |
+| of the `2,909` logged-but-unshelved, previously shelved then dropped | 🔴 **`1,988`** |
+| never shelved anywhere | `921` |
+| lines on the two trending pages | `115,968` |
+| lines on the four shelf pages | `6,516` |
+
+🔴 **`17.8` lines of log per line of shelf — and `archive/` holds `15` snapshots named
+`pre-reset`, `pre-rewrite`, `pre-trim` and `pre-consolidation`.** The shelves are rewritten
+wholesale and lose rows each time; this page drops nothing, ever. 🔴 **So when `569-B` greps
+this base to ask "already held?", it hits this page — and a row dropped from a shelf answers
+*yes* forever.** That is why a dropped row can never be recovered by searching. 🟢 Measured with `grep -oFf` over the literal
+ledger addresses — collation-free, after a first attempt using `comm` produced two wrong
+figures that were withdrawn before publication (see
+[`../evidence/prereg-596A-held-gate-substring.2026-11-01-p596.md`](../evidence/prereg-596A-held-gate-substring.2026-11-01-p596.md)).
+
+🔵 **Validation of the instrument, stated rather than assumed:** the four known shelf
+anchors — `HKUDS/DeepTutor`, `moodle/moodle`, `openedx/edx-platform`, `numbas/Numbas` — all
+resolve into the shelf set, and all `6` promotion candidates resolve into the
+logged-never-shelved set. Full counts in
+[`../evidence/promotion-gap-by-page-class.2026-11-01-p596.tsv`](../evidence/promotion-gap-by-page-class.2026-11-01-p596.tsv).
+
+### 🟢 `5` repos RECOVERED off this page onto `repos/foundations.md` and `verticals/solutions.md`
+
+🔴 **Recovered, not discovered — and this correction was made mid-pass.** All five were on a
+shelf page in an archived snapshot before being dropped: `hyperbook` in **three**
+(`p351`, `p355`, `p383`), `h5p-offline-player` in two, `PySyft` at `2026-10-06-pre-reset`,
+`ltijs-sequelize` and `earthmover_edfi_bundles` at `2026-10-17-pre-rewrite`.
+
+| repo | ★ | grant, byte-read | branch | last push | what it is |
+| --- | --: | --- | --- | --- | --- |
+| [`OpenMined/PySyft`](https://github.com/OpenMined/PySyft) | `10,049` | 🟢 Apache-2.0 `11,941 B` + PSF carve-out | 🔴 `dev` | `2026-10-30` | remote execution on data you cannot see — the privacy layer for cross-institution learning analytics |
+| [`openpatch/hyperbook`](https://github.com/openpatch/hyperbook) | `75` | 🟢 MIT `1,069 B` | `main` | 🟢 `2026-11-01` | CLI + markdown engine with `30+` directives that builds interactive workbooks as static sites |
+| [`edanalytics/earthmover_edfi_bundles`](https://github.com/edanalytics/earthmover_edfi_bundles) | `14` | 🟢 Apache-2.0 `11,357 B` | `main` | `2026-10-30` | pre-built mappings from assessment-vendor formats into the Ed-Fi API, with student-ID matching |
+| [`missing-elements/h5p-offline-player`](https://github.com/missing-elements/h5p-offline-player) | `6` | 🟢 MIT `1,073 B`, 🔴 split | `main` | 🟢 `2026-11-01` | plays `.h5p` packages with **no H5P server, no Moodle, no backend**; PWA runs offline |
+| [`Cvmcosta/ltijs-sequelize`](https://github.com/Cvmcosta/ltijs-sequelize) | `5` | 🟢 Apache-2.0 `11,357 B` | 🔴 `master` | `2026-09-29` | SQL persistence for `ltijs`, which is **LTI Advantage Complete Certified by 1EdTech** |
+
+🔵 **`3 of 5` default to something other than `main`** (`dev`, `master`, `master`), which is
+`594-B`'s silent-failure class: a grant probe hardcoding `main` would have filed all three
+as unlicensed. Every grant above was read at the branch the API reported.
+
+### 🔴 Two promotions carry a licence structure a flat classifier gets wrong
+
+- 🔴 **`PySyft` is `584 B` over canonical Apache-2.0** and is flagged by `591-G`'s byte-size
+  filter. Three-stage read: 🟢 title `Apache License 2.0`, 🟢 body canonical, 🔴 **appended
+  carve-out placing `7` named test files under the PSF licence**, copied from CPython.
+  🟢 Shippable — the carve-out never leaves `packages/syft/tests/` — but it is a split grant
+  and this page records it as one.
+- 🔴 **`h5p-offline-player` is two licences by design.** README, verbatim: *"The player is
+  MIT; the H5P runtime it loads is GPL-3.0 and published separately."* 🟢 The player may be
+  forked and shipped closed; 🔴 the runtime may not, and a studio that ships them as one
+  artefact has taken a GPL-3.0 obligation it did not price.
+
+### 🆕 `OpenMAIC` — the address was held, the scale was not
+
+🟢 **`OpenMAIC` / `THU-MAIC` (Tsinghua MAIC lab), reported `42,265★` on `2026-11-01`** — a
+one-click multi-agent classroom that turns a document or topic into an interactive class.
+
+🔴 **This base holds the project in `243` `.md` files and held no star figure for it at
+all:** both `42,265` and `42265` return `0` files repo-wide. 🔵 It is the second-largest
+education-specific project this base tracks, behind `DeepTutor` (`53.5k★`, `v1.7.1`,
+carried from `p595`), and until this pass nothing here said so.
+
+### 🔴 The `curl -sI` verifier remains non-discriminating — carried, unchanged
+
+🔴 `curl -sI https://github.com/…` returns `403` for real and fabricated repositories
+alike, so the run prompt's mandated URL check certifies nothing. 🟢
+`raw.githubusercontent.com` discriminates `200`/`404` and stays the only grant ground
+truth; `gh api -X GET search/repositories` with a `repo:` qualifier stays the only channel
+that returns stars and `default_branch` (direct `gh api repos/{owner}/{repo}` is still
+`403`). 🟢 Control held this pass: `adap/flower` and `digitalcredentials/did-io` both
+returned `422 Validation Failed` rather than a fabricated `200`, so the channel still
+fails loudly — **both are therefore recorded as UNRESOLVED, not as findings.**
+
+### 🔴 A `grep` hazard that silently widened every sweep in this harness
+
+🔴 `grep -ril -- "$t" --include=*.md .` — with `--` before the pattern, `--include=*.md`
+becomes a **file operand rather than an option**, so the sweep silently covers all `118 MB`
+instead of `639` `.md` files. Counts inflate `2–5×` (`dropout` `33` → `197`, `anki` `105` →
+`613`) and **no error is raised**. 🟢 Any "held — `N` files" figure in this base's history
+that looks large should be re-read with this in mind: the shelf ceiling is `8` files,
+because there are only eight curated pages, so **every count above `8` is counting
+`evidence/` and `archive/`** — this base's own working notes — as coverage.
+
+---
 ## 🆕 `p595` — `2026-11-01` — **🔴 THE TOPIC AXIS (`grading`/`autograder`/`rubric`) SERVED `6` ADDRESSES AND `5` WERE ALREADY HELD; THE SIXTH HAS NO LICENCE FILE (`404` ON `main`). 🟢 `curl -sI` RE-CONFIRMED NON-DISCRIMINATING (`403` FOR A FABRICATED REPO AND FOR `moodle/moodle` ALIKE); `raw.githubusercontent.com` DISCRIMINATES `200`/`404` AND REMAINS THE ONLY GRANT GROUND TRUTH. 🔴 `595-A`: THIS REPO IS `118 MB` WITH NO RETENTION POLICY.**
 
 ### The one new address, and why it is not promotable

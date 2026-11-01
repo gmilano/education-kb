@@ -1,0 +1,43 @@
+# Addresses that were on a shelf page in an archived snapshot and are absent from every
+# current shelf page. Measured p596 2026-11-01 with grep -oFf (collation-free).
+# 2015 rows; first 40 shown here, full set reproducible from archive/ + the ledger.
+0awei0/kt
+0voice/Awesome-CS-OpenCourse
+0xnavarro/IA-PARA-TODOS
+100205ivan/EyeEP
+1024XEngineer/XE3-ESL
+1111philo/learn
+12britz/awesome-free-models
+19otherrsh-dot/Opencred
+1EdTech/OpenCASE
+1EdTech/caliper-java
+1EdTech/caliper-js
+1EdTech/caliper-ontology
+1EdTech/caliper-spec
+1EdTech/digital-credentials-public-validator
+1EdTech/lti-1-3-php-example-tool
+1EdTech/ltibootcamp
+1EdTech/openbadges-specification
+1alexandrer/moodle-mcp
+1edtech/caliper-php
+2022764025/Lecture-Hunter
+3121n/nor-data-udir-mcp
+37743/Classroom-VR
+3iPunt/wordpress-lti-1-3
+3yangyang9/DeepTutor-AILearning
+443pablo/mcp-powerschool
+503496348-ops/herpeakgem
+54yyyu/school-mcp
+5mdld/anki-jlpt-decks
+6a6179/myschoolapp-mcp
+8bitprodigy/kolibri_engine
+9mtm/WCAG-Checker
+AFLucas-UOM/AI-Early-Detection-System-for-Dyslexia-ADHD
+AI-Matrix-Engine/aidream
+AI-for-Education/edu-qurating
+AI-for-Education/fabdata-llm
+AI-for-Education/fabdata-parsedoc
+AI-for-Education/voice-ai-evaluation-framework
+AI123-cmd/education-agent
+AI4Bharat/Anudesh-Backend
+AI4Bharat/IndicIFEval

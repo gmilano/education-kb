@@ -4,6 +4,24 @@ region: Global
 updated: 2026-11-01
 ---
 
+🆕 **`p596` — scope stated before its result: `8` mandated legs run (`4` global, `4` regional), `0`
+new addresses, **twenty-seventh consecutive nil** — and this pass stopped treating that as a
+property of the search channel. 🔴 `596-C`: **the shelf is lossy and the log is lossless.**
+`2,015` of `2,243` ever-shelved addresses (`89.8 %`) were **dropped** across `15` rewrites, and
+because a dropped row still sits in the append-only log it is reported *"already held"* and
+never re-shelved — the gate consults the lossless record to decide admission to the lossy one. 🟢 **`6` rows promoted off that backlog this pass** — `5` onto
+[`../repos/foundations.md`](../repos/foundations.md) and `1` onto
+[`../verticals/solutions.md`](../verticals/solutions.md) — every grant byte-read, `2` with a
+non-flat licence structure. 🔴 **`1` new BLOCK on this page** (`596-D`, below): a Google-branded
+reading assessor that clears licence, liveness and provenance and is disqualified by its own
+README. 🟢 **`595-B` CLOSED** — `../intel/market.md` now carries exactly one
+`## Opportunities by region` heading. 🔴 `595-A` (`118 MB`, no retention policy) carried, and
+re-read as a conversion problem rather than a size one. 🔴 **Two instrument failures inside this
+pass, both self-inflicted and both published** — `--` before a `grep` pattern silently disables
+`--include`, and `comm` lies across locales; it cost two withdrawn figures.
+
+---
+
 🆕 **`p595` — scope stated before its result: `9` legs run, `3` shelf rows re-measured on a
 second instrument, `4` grants byte-read. The shelf was NOT re-swept.** 🟢 **No row on this
 page changed except `DeepTutor`**, which shipped `v1.7.1` today and reads `53.5k`★. 🟢 The
@@ -486,6 +504,7 @@ base cannot describe is not a row it can recommend.
 
 | Repo | Verdict | Evidence |
 |---|---|---|
+| [GoogleCloudPlatform/aira](https://github.com/GoogleCloudPlatform/aira) | 🔴 **`596-D` BLOCK — disqualified by its own README, not by its licence** | 🆕 *Artificial Intelligence Reading Assessor* — scores a learner as *Pré-reader / Reader / Advanced* and rolls results up per class, per school, per region. `24★`, last push `2026-07-23`, **Apache-2.0 byte-read at `11,357 B`** on `main`. 🟢 **It clears every screen this page runs**: permissive grant, real organisation, education-core, live, not archived. 🔴 **Its README disqualifies it**: *"an open-source **demo experiment**"*, *"**proof-of-concept only**"*, *"does not reflect a completed system nor a finalized design"*, *"**not an officially supported Google product**"*, *"Please do not use any personal or sensitive data"*, and *"should not be used by children under 13 or to process data from children under 13"* — 🔴 **which excludes K-12, the exact population a reading assessor exists for.** 🔵 **The screen this base was missing:** read the README's own *status and audience* declarations before promoting, and treat a PoC or under-13 disclaimer as a BLOCK regardless of grant and provenance. Filed so `p597` does not promote it on the strength of the Apache-2.0 header. |
 | [andymatuschak/orbit](https://github.com/andymatuschak/orbit) | 🔴 **Split licence — partly non-OSI** | 1,838★, pushed `2026-10-20`, API `NOASSERTION`. 🟢 **Resolved and now reconciled across pages** (see `586-A`). `LICENSE` reads: all sources **Apache-2.0** *except* `packages/app` and `packages/backend`, which are **AGPL-3.0-or-later *or* BUSL-1.1** at the licensee's choice. 🔴 **BUSL-1.1 is not an open-source licence.** 🟢 Its spaced-repetition *libraries* are buildable; 🔴 its app and backend are not shippable without AGPL or BUSL compliance. |
 | [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0 + stale** | 🆕 1,317★ visual/interactive AI tutor — the second-largest tutoring repo after DeepTutor, and unusable in client work. Network copyleft, and last pushed `2026-01-09` (**~10 months**). |
 | [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🔴 **AGPL-3.0 (text)** | 🆕 587★ lifelong skill-tree, K-12 → career. **API said `NOASSERTION`; the licence file says AGPL-3.0.** 🔴 This is the correction that runs the *other* way — see *Method*. Last pushed `2026-03-25` (~7 months). |

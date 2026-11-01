@@ -4,6 +4,97 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p596 — 2026-11-01 — twenty-seven passes of "nil" was not measuring the industry or the search channel; it was measuring this base's own refusal to file what it had already found
+
+## 52. In education's platform-of-record tier the binding rule is not "copyleft with one exception" but "permissive platforms exist and are invisible to a star-based screen", because the permissive ones are microservice estates whose weight is spread across hundreds of repositories (high confidence — one platform measured at organisation level, `456` repositories, `0` copyleft)
+
+`p584` established this industry's platform tier as *copyleft with exactly one permissive
+exception*, and `p588` added a second. 🔵 **Both were found by looking at repositories.** This
+pass looked at an **organisation** and the rule weakened again.
+
+| `org:folio-org` | repos |
+| --- | --: |
+| total | **456** |
+| 🟢 `license:apache-2.0` | **398** (`87.3 %`) |
+| 🔴 any copyleft (`gpl`/`agpl`/`lgpl`) | 🟢 **`0`** |
+| 🟡 no licence field — auxiliary tooling, CI, docs, Helm | `57` |
+
+🟢 **FOLIO is a full system of record** — patrons, inventory, circulation, acquisitions, ERM —
+and a studio may fork it, modify it and ship it closed. 🔴 **Its largest single repository is
+`okapi` at `134★`, and its inventory module — the actual system of record — is `4★`.** 🔵 **So
+any screen that ranks platforms by stars on one address rates a live, Apache-2.0,
+institution-grade platform below a `2,000★` single-repo demo.** That is how FOLIO sat in this
+base's trending logs across several passes without ever reaching a shelf.
+
+🔴 **The operational sting is on the deployment path.** The `57` unlicensed repositories are
+not platform code, but **`folio-org/folio-helm` is among them** — so the platform is
+permissively licensed and the most common way to deploy it carries no grant at all. 🔵 Cheap
+to fix, and it has to be known before procurement rather than after.
+
+🟢 **Instruction this trend carries:** for the platform tier, screen on **organisation-level
+licence uniformity and liveness**, never on one repository's stars.
+
+## 53. A permissive licence and a real corporate owner are now jointly insufficient to clear an education repository, because the major clouds publish education AI as explicitly disclaimed proof-of-concept work — and the disclaimer excludes the population the tool is built for (high confidence — one instance measured first-hand, and it clears every other screen this base runs)
+
+🔴 [`GoogleCloudPlatform/aira`](https://github.com/GoogleCloudPlatform/aira) — *Artificial
+Intelligence Reading Assessor*, Apache-2.0 byte-read at `11,357 B`, `24★`, live, not archived,
+authored by Google Cloud education engineers. 🟢 **It clears licence, liveness, provenance and
+relevance — every screen this base runs.**
+
+🔴 **Its README disqualifies it**, and the terms are not boilerplate:
+
+| declaration | consequence |
+| --- | --- |
+| 🔴 *"an open-source **demo experiment**"* / *"**proof-of-concept only**"* | not a base to build on |
+| 🔴 *"**not an officially supported Google product**"* | the brand carries no support obligation |
+| 🔴 *"Please do not use any personal or sensitive data"* | cannot touch learner records |
+| 🔴 *"should not be used by children under **13**"* | 🔴 **excludes K-12 — the population a reading assessor exists for** |
+
+🔵 **Why this is a trend and not an anecdote.** A permissive licence on a cloud vendor's
+education demo is a *marketing* artefact, not a support commitment, and the gap between the
+two is widening as the clouds publish more education AI reference work. 🔴 **A licence screen
+cannot see it.** The disqualifying text is in the README, in prose, and an under-13 exclusion
+on an education tool is categorical rather than a caveat.
+
+🟢 **Instruction: read the README's own status and audience declarations before promoting any
+row, and treat a PoC or under-13 disclaimer as a `BLOCK` regardless of grant and
+provenance.** Registered as `596-D`.
+
+## 54. When a knowledge base pairs an append-only discovery log with periodically rewritten curated pages, and gates new findings against the log, every row the rewrite drops becomes permanently unrecoverable — and the base reports a saturated market (high confidence — `3,174` addresses classified against `15` archived shelf snapshots, `2026-11-01`)
+
+🔴 Measured this pass with a collation-free instrument, against the `15` shelf snapshots under
+`archive/` named `pre-reset`, `pre-rewrite`, `pre-trim` and `pre-consolidation`:
+
+| population | count |
+| --- | --: |
+| addresses in the ledger | `3,174` |
+| 🔵 logged on the two append-only trending pages | `3,143` |
+| 🟢 on a **current** shelf page | **`234`** |
+| 🔵 on **any** shelf page ever | `2,243` |
+| 🔴 **dropped** — shelved once, absent from every current shelf | 🔴 **`2,015`** (`89.8 %` of ever-shelved) |
+| never shelved anywhere | `921` |
+| lines on the trending pages vs the shelf pages | `115,968` vs `6,516` |
+
+🔴 **Two storage disciplines with opposite loss behaviour, and the base treats them as one.**
+The trending log is append-only and forgets nothing. The shelves are rewritten wholesale and
+have lost `89.8 %` of everything ever placed on them.
+
+🔴 **The failure is in the coupling, not in either half.** `569-B` requires every candidate to
+be grepped against this base before being called new — and that grep hits the **log**. 🔴 **So
+a row dropped by a rewrite still answers *"already held"*, forever, and can never be recovered
+by searching.** The row is simultaneously absent from the shelf and permanently ineligible for
+re-entry.
+
+🟢 **The symptom is indistinguishable from market saturation**, which is how this base read it
+for twenty-six passes. 🔵 **The diagnostic that separates them is cheap**: compare the curated
+pages against the archived snapshots, not against the log. `6` rows were recovered that way
+this pass, none of which needed a search leg.
+
+🟢 **It also corrects `595-A`.** `p595` registered `118 MB` and no retention policy as a size
+problem. 🔴 **The `118 MB` is the only part of this base that never loses anything**; the
+expensive defect is the rewrite that trims the shelf. 🔵 A retention policy that prunes the log
+would remove the one durable record and leave the lossy half untouched.
+
 ## p595 — 2026-11-01 — twenty-six passes of nil is no longer a research result about the industry; it is a measurement of the channel, and the cost of the record is now itself the finding
 
 ### The legs, measured against this base before being called new
