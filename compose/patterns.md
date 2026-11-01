@@ -4,6 +4,143 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p586 — 2026-11-01 — four recipes the new rows make buildable, and the one the LGPL module boundary turns into the cleanest ERP offer in this file
+
+Every component named below was verified first-hand on **2026-11-01**: existence, stars and
+recency from `search/repositories`, **licence from the repository's own licence file**. No
+component is named here that is not on [`../agents/top.md`](../agents/top.md) or
+[`../repos/foundations.md`](../repos/foundations.md) with a measured licence.
+
+---
+
+### `P586-1` — Courseware factory: topic → deck → course → graded labs
+
+🟢 **Why now.** `p586` found the generation tier moved up a layer: the unit of output is the
+artefact a teacher hands over, not a question-bank item. All four generators are **MIT**.
+
+| Step | Component | Licence | Stars | Role |
+|---|---|---|--:|---|
+| 1. Course skeleton | [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | 🟢 MIT (text) | 574 | Topic in → researched course outline and materials out |
+| 2. Slides | [`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) | 🟢 MIT (text) | **71,803** | **Native** PPTX: real shapes, transitions, charts, narration — editable by the instructor afterwards |
+| 3. Rich reading | [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 MIT (text) | 1,040 | Source text → animated, narrated, interactive web experience |
+| 4. Assessment items | [`numbas/Numbas`](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 (text) | 216 | Browser e-assessment with real maths handling |
+| 5. Graded practical work | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 BSD-3-Clause | 1,370 | Assign → autograde → release notebooks |
+| 6. Code feedback | [`pedal-edu/pedal`](https://github.com/pedal-edu/pedal) | 🟢 MIT | 32 | Static + dynamic analysis of learner Python — *why* it failed, not just that it did |
+| 7. Safe execution | [`openedx/codejail`](https://github.com/openedx/codejail) | 🟢 Apache-2.0 | 477 | Sandbox untrusted learner code — **do not skip this** |
+| 8. Delivery into the client LMS | [`Cvmcosta/ltijs`](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 | 373 | LTI 1.3 tool provider — works against Moodle, Canvas, Sakai, Open edX without forking any of them |
+
+**Wiring.** `claudemy` produces the outline and prose; `ppt-master` renders each module to
+PPTX and `Papermorph` renders the readings; `Numbas` and `nbgrader` own assessment;
+`codejail` wraps every execution of learner code; `ltijs` publishes the whole thing as one
+LTI 1.3 tool so the LMS handles roster, SSO and grade passback.
+🔴 **The one thing to get right:** keep generation **offline and human-reviewed** — generate
+to artefacts an instructor edits, never into a live learner-facing surface. That single
+boundary is what keeps the pipeline out of the "automated assessment" high-risk
+classification in Vietnam's Decision 33/2026 and off the DC prohibited-use list.
+**Estimate: 6–8 weeks** for a faculty-facing pilot in one department.
+
+---
+
+### `P586-2` — AI side-car for an education ERP, without forking it (the LGPL play)
+
+🟢 **Why this is the cleanest offer in this file.** `p586` resolved
+[`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (903★, pushed
+`2026-10-29`) to **LGPL-3.0 from its own licence file** — the API reports `NOASSERTION`.
+LGPL-3.0 is **weak copyleft**: a *separate module* calling the API **keeps its own
+licence**. And because OpenEduCat is built as **Odoo modules**, that side-car is the
+platform's own standard extension pattern rather than a bespoke integration.
+
+| Step | Component | Licence | Role |
+|---|---|---|---|
+| 1. System of record | [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0 (text)** | Admissions, fees, attendance, library, hostel, exams on one database. 🔴 Default branch **`19.0`**; owner is lowercase; repo has an **`_erp`** suffix |
+| 2. The studio's AI module | *new, proprietary* | 🟢 **stays proprietary** | A separate Odoo module calling OpenEduCat's API — **never a patch to its files** |
+| 3. At-risk-learner modelling | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 MIT | Knowledge tracing over attendance + assessment history |
+| 4. Diagnosis | [`bigdata-ustc/EduCDM`](https://github.com/bigdata-ustc/EduCDM) | 🟢 Apache-2.0 | IRT/DINA/NCDM cognitive diagnosis. 🔴 **~24 months stale** — vendor the algorithms, do not depend on the package |
+| 5. Staff-facing analytics | [`openfun/warren`](https://github.com/openfun/warren) | 🟢 MIT | xAPI learning analytics. 🔴 Self-described **proof of concept** — reference only |
+| 6. Counselling agent | [`ArnaudGuiovanna/tutor-mcp`](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT | Turns the LLM into an ITS over the learner record |
+
+🔴 **The hard rule that makes the whole pattern legal: the boundary is the module, and the
+module must not be a fork.** Add a module; call the API; never edit OpenEduCat's own files.
+If the client needs OpenEduCat's own behaviour changed, that change is LGPL-3.0 and must be
+published — which is a contribution decision, not an accident to discover at delivery.
+🔵 **Do not substitute `warren`'s stablemate `potsie` here.** This base previously
+recommended `potsie` as "the production-ready alternative"; re-measured `2026-11-01`,
+**`potsie` last pushed `2024-12-18` (~23 months)** against **`warren` `2026-10-31`**. The
+recommendation was backwards and is withdrawn.
+**Estimate: 8–10 weeks** for admissions + at-risk-learner scoring on one campus.
+
+---
+
+### `P586-3` — Assessment assurance for a regulated jurisdiction (APAC-first, EU-ready)
+
+🟢 **Why now.** Vietnam's **Decision 33/2026/QD-TTg** names education a high-risk sector
+citing **automated assessment** explicitly; South Korea's **AI Basic Act** (in force
+22 January 2026) imposes **human-oversight** duties; Australia's **TEQSA** requires
+generative-AI risk action plans. The sellable work is the **oversight layer around
+assessment**, not the assessment — and the whole stack is permissive.
+
+| Step | Component | Licence | Role |
+|---|---|---|---|
+| 1. Simulate before exposing learners | [`douglasrizzo/catsim`](https://github.com/douglasrizzo/catsim) | 🟢 BSD-3-Clause | Computerised Adaptive Testing simulator — item-exposure and fairness analysis **before** a learner sees an item |
+| 2. Defensible learner model | [`pykt-team/pykt-toolkit`](https://github.com/pykt-team/pykt-toolkit) | 🟢 MIT | Knowledge tracing with published, inspectable models rather than an opaque score |
+| 3. Pedagogical competence of the model itself | [`AI-for-Education/pedagogy-benchmark`](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 MIT | Benchmark built from **Chile's Agencia de la Calidad de la Educación / CPEIP** exams — evidence the model knows how to *teach*, not just answer |
+| 4. Auditable autograding | [`jupyter/nbgrader`](https://github.com/jupyter/nbgrader) | 🟢 BSD-3-Clause | Per-submission grading trail under Jupyter governance |
+| 5. Controlled-experiment plumbing | [`terracotta-education/terracotta`](https://github.com/terracotta-education/terracotta) | 🟢 Apache-2.0 | Consent hidden from the instructor, identifiers stripped from exports — **the human-subjects posture, built in** |
+| 6. Lockdown, if the client insists | [`SafeExamBrowser/seb-win-refactoring`](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🔴 **MPL-2.0** | Sector standard. 🔴 File-level copyleft — **compose alongside; do not modify its files** |
+
+🔴 **State the gap in the proposal rather than papering over it.** There is **no permissive
+proctoring platform**: the only permissive component, `Proctoring-AI` (MIT, 633★), last
+pushed `2024-12-10` (~23 months). The honest architecture is **SEB + an agent**, with the
+AI doing anomaly review under human sign-off — never autonomous invigilation.
+🟢 **This stack ports to the EU unchanged**, which is the commercial point: Annex III
+high-risk obligations ask for exactly these artefacts (risk management, logging, human
+oversight), so one build serves APAC statute and EU compliance.
+**Estimate: 10–12 weeks**, including the oversight documentation.
+
+---
+
+### `P586-4` — Offline-first tutoring where connectivity and data residency both bite (LATAM, rural APAC, EU public sector)
+
+🟢 **Why now.** `p586`'s structural finding cuts both ways: a skill inherits the host
+agent's model and data path, so residency becomes a *contract* question. These components
+answer it **structurally** instead — the stack runs with **no frontier API call**.
+
+| Step | Component | Licence | Role |
+|---|---|---|---|
+| 1. Platform | [`learningequality/kolibri`](https://github.com/learningequality/kolibri) | 🟢 **MIT (text)** | Offline-first learning platform, 1,016 forks, built for low-connectivity deployment. Branch `develop` |
+| 2. On-device model | [`orionsheep/wordlink`](https://github.com/orionsheep/wordlink) | 🟢 **MIT (text)** | A shipped **fine-tuned 1.5B model (SFT+DPO)** that runs offline — the proof the pattern works at useful quality |
+| 3. Local tutoring stack | [`Open-TutorAi/open-tutor-ai-CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 BSD-3-Clause | Voice, video and 3D avatars, Docker-first, local LLMs via **Ollama**. 🟡 Last push `2026-06-26` |
+| 4. Local-first adaptive workspace | [`zijinz456/OpenTutor`](https://github.com/zijinz456/OpenTutor) | 🟢 MIT | Block-based adaptive learning that runs locally; 10+ providers incl. local |
+| 5. Retention scheduling | [`open-spaced-repetition/free-spaced-repetition-scheduler`](https://github.com/open-spaced-repetition/free-spaced-repetition-scheduler) | 🟢 MIT | FSRS as a library — depend on this, not the Anki plug-in |
+| 6. Speaking assessment | [`Halleck45/OpenPronounce`](https://github.com/Halleck45/OpenPronounce) | 🟢 MIT | Phoneme-level pronunciation scoring (Wav2Vec2 + DTW), self-hosted |
+| 7. Curriculum-aligned content, LATAM | [`csepulvedai/libro-3d-interactivo`](https://github.com/csepulvedai/libro-3d-interactivo) | 🟢 MIT | Interactive 3D books with Chilean-Spanish narration, aligned to curriculum objective **OA 13**. Universidad de Los Lagos |
+
+🟢 **Why this is the right LATAM answer specifically.** Adoption there is already
+near-universal (92% of students, 79% of faculty, 87% of institutions), so the missing piece
+is not AI — it is institutional capability under a **widening computing-inequality**
+headwind reported in October 2026. An offline stack on a **permissive, forkable** platform
+with **curriculum-aligned local content** is deliverable to a ministry without a
+data-transfer argument. 🔴 Moodle and `rosariosis` dominate the regional installed base and
+are GPL — **attach via LTI, never fork**.
+🔴 **And for a language-learning brief, say the gap out loud:** `LibreLingo` (2,631★) is
+**archived** and its live successor `freelingo` is **AGPL-3.0**, so there is no permissive
+general language-learning platform. Composing rows 2, 5 and 6 above (plus
+[`word-atlas`](https://github.com/designfuchen/word-atlas), MIT, 3,604★) is a **BUILD** —
+price it as one. Gap `586-C`.
+**Estimate: 8–10 weeks** for a pilot across a district or a ministry programme.
+
+---
+
+🔵 **One rule shared by all four patterns.** Not one of them forks a platform of record.
+The AI attaches through a boundary that keeps the studio's code its own — an **LGPL module
+boundary** (`P586-2`), a **permissive extension point** inside a copyleft platform
+(`XBlock`, `codejail`), or **LTI 1.3** as a separate service (`ltijs`, every pattern).
+🟢 Fork only when the client needs the platform itself changed, and then only **Sakai**
+(ECL-2.0), **OpenOLAT** (Apache-2.0), **Kolibri** (MIT) or **relate** (MIT) — the four
+platforms of record that permit it.
+
+---
+
 ## p585 — 2026-11-01 — three recipes the licence resolutions make buildable, and the one the LATAM governance gap turns into the clearest offer in this file
 
 Every component named below was verified first-hand on `2026-11-01` — existence and

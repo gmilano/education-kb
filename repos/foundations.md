@@ -9,7 +9,7 @@ updated: 2026-11-01
 **What this page is.** The platform and component tier an education engagement is built
 *on* — LMSs of record, interchange specs, assessment engines and the extension points that
 let a studio attach proprietary AI to someone else's platform. Every row measured
-first-hand **2026-11-01** (`p585`).
+first-hand **2026-11-01** (`p586`).
 
 🟢 = permissive, shippable in client work. 🔴 = copyleft / no grant / source-available —
 not shippable without counsel. **(text)** = licence read from the repository's own licence
@@ -31,6 +31,8 @@ file rather than the GitHub API, which is wrong for ~25% of rows here.
 | [overhangio/tutor](https://github.com/overhangio/tutor) | 🔴 **AGPL-3.0** | **1,131** | `2026-10-29` | Global | 🔴 network copyleft | The Docker-based Open edX distribution. **The practical way to stand Open edX up** — the operational entry point, not a fork target. |
 | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT (text)** | **1,163** | `2026-11-01` | Global | 🟢 **yes** | 🟢 **The offline-first learning platform for low-connectivity deployments** — 1,016 forks, built for exactly the infrastructure conditions that defeat cloud LMSs. Learning Equality. **The highest-leverage permissive platform on this page for LATAM, Africa and rural APAC.** |
 | [chamilo/chamilo-lms](https://github.com/chamilo/chamilo-lms) | 🔴 **GPL-3.0** | **1,019** | `2026-11-01` | EMEA | 🔴 copyleft | LMS focused on ease of use and accessibility; strong LATAM and francophone deployment base. |
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🔴 **LGPL-3.0 (text)** | **903** | `2026-10-29` | APAC | 🟡 weak copyleft | 🆕 **The education ERP tier — admissions, fees, attendance, library, hostel, exams on one database.** Built as Odoo modules; India-origin. 🔴 **Cite this address**: `OpenEduCat/OpenEduCat` returns `422` and the live repo is lowercase with an `_erp` suffix, on default branch **`19.0`** (not `main`/`master`). 🟡 **LGPL-3.0 is weak copyleft** — a *separate* AI module that calls its API keeps its own licence; edits to its own files must be published. API reported `NOASSERTION`. |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | **649** | `2026-10-28` | Global | 🔴 copyleft | 🆕 Student Information System (scheduling, grades, attendance, billing). Strong francophone and LATAM deployment base. 🔵 Default branch is **`mobile`**. Relevant to gap `585-F`: the SIS tier is real but copyleft. |
 | [pupilfirst/pupilfirst](https://github.com/pupilfirst/pupilfirst) | 🟢 **MIT (text)** | **981** | 🔴 `2025-12-09` | APAC | 🟡 licence yes, **stale** | 🆕 LMS for asynchronous online schools with reviewed submissions. **Permissive, and the API hid it** (`NOASSERTION`). 🔴 ~11 months without a push — adopt with eyes open. |
 | [ILIAS-eLearning/ILIAS](https://github.com/ILIAS-eLearning/ILIAS) | 🔴 **GPL-3.0** | **507** | `2026-10-31` | EMEA | 🔴 copyleft | Long-standing German university LMS; strong assessment module. |
 | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0 (text)** | **449** | `2026-10-30` | EMEA | 🟢 **yes** | **A second permissive platform of record.** Swiss-governed LMS used across DACH higher education, forkable and shippable. 🔴 **This base held two contradictory verdicts for this row** — `verticals/solutions.md` and `intel/trends.md` already called it Apache-2.0, while this page carried the API's `NOASSERTION`. The licence text settles it: **Apache-2.0**. |
@@ -89,7 +91,7 @@ without the copyleft duty reaching its own code.
 |---|---|---|
 | `topic:question-generation` — the fine-tuned T5 generation tier | 🔴 **Absorbed, not neglected. Do not start here.** | All five reference rows last pushed `2023-12`–`2024-08`, one archived: `patil-suraj/question_generation` (1,138★, `2024-04-05`), `ramsrigouthamg/Questgen.ai` (952★, `2023-12-08`), `KristiyanVachev/Question-Generation` (495★, `2024-02-14`), `asahi417/lm-question-generation` (366★, `2024-08-20`), `AMontgomerie/question_generator` (298★, `2024-02-06`, **archived**). Every one is a fine-tuned T5 pipeline for a task instruction-following models now do zero-shot. 🟢 Start instead at **Numbas** (authoring), **scorm-again** (interchange), **nbgrader** (autograding) — all measured current. |
 | [kantord/LibreLingo](https://github.com/kantord/LibreLingo) | 🔴 **ARCHIVED + AGPL-3.0** | 2,631★, genuinely good, `archived: true` measured `2026-11-01`. Read-only upstream: no security fixes. |
-| [andymatuschak/orbit](https://github.com/andymatuschak/orbit) | 🔴 **Split licence — partly non-OSI** | 1,838★. 🆕 **Resolved this pass, and the API could not see it.** Its licence file says: most sources **Apache-2.0**; but `packages/app` and `packages/backend` are **AGPL-3.0-or-later *or* BUSL-1.1** at the licensee's choice. **BUSL-1.1 is not an open-source licence** (source-available, time-delayed conversion). 🟢 Its libraries are buildable; 🔴 its app and backend are not shippable without AGPL or BUSL compliance. |
+| [andymatuschak/orbit](https://github.com/andymatuschak/orbit) | 🔴 **Split licence — partly non-OSI** | 1,838★. 🆕 **Resolved this pass, and the API could not see it.** Its licence file says: most sources **Apache-2.0**; but `packages/app` and `packages/backend` are **AGPL-3.0-or-later *or* BUSL-1.1** at the licensee's choice. **BUSL-1.1 is not an open-source licence** (source-available, time-delayed conversion). 🟢 Its libraries are buildable; 🔴 its app and backend are not shippable without AGPL or BUSL compliance. 🆕 **`p586`: re-read first-hand and now reconciled with [`../agents/top.md`](../agents/top.md)**, which was simultaneously publishing this row as *"licence unresolved"* while this page called it resolved — see gap `586-A`. |
 
 ---
 
@@ -107,6 +109,12 @@ This recovered **six** rows this pass that the API reported as `NONE`/`NOASSERTI
 OpenOLAT (Apache-2.0), relate (MIT), pupilfirst (MIT), Claroline (AGPL-3.0),
 INGInious (AGPL-3.0) and frappe/education (GPL-3.0) — plus `orbit`'s split licence, which
 no single-value API field could have represented.
+
+🆕 **`p586` added a third channel: topic facets.** `search/repositories -f q="topic:ai-education"` and
+`topic:ai-tutor`, sorted by stars, surfaced rows that name/description search had missed across
+twenty passes — including `hugohe3/ppt-master` (MIT, **71,803★**), which is larger than any repo this
+base held. 🔴 **A base that only re-measures what it already holds cannot find what it is missing**;
+topic facets are how this industry self-labels, and they are cheap.
 
 🔴 **Trap 1 — the path is case-sensitive and the branch is often neither `main` nor
 `master`.** `frappe/education` reported "no licence file" against nine filenames on
@@ -126,6 +134,9 @@ makes one bad qualifier zero the whole batch. Use single calls, and resolve an u
 
 | Gap | Status | What would close it |
 |---|---|---|
+| `586-A` 🆕 **No cross-page reconciliation step — and it produced a contradiction at `p585`** | 🆕 Opened `p586` | This page resolved `orbit`'s split licence at `p585`; `agents/top.md` opened `585-C` calling the same repo *unresolved* **in the same pass**. `p585` correctly named the missing reconciliation step as the cause of contradictory licence fields, then produced another instance of it. 🟢 Reconciled by re-reading the licence text. 🔴 **The step still does not exist**: a pre-commit `grep` of every curated page for each repo address would close it. |
+| `586-B` 🆕 **Duplicate gap IDs across pages** | 🆕 Opened `p586` | The proctoring gap is `585-G` here and `585-B` on `agents/top.md` — two IDs, one gap. Allocate gap IDs once per base, not once per page. |
+| `586-D` 🆕 **The ERP/SIS tier has no permissive option at any size** | 🆕 Opened `p586` | Measured `2026-11-01`: `openeducat_erp` **LGPL-3.0** (903★), `frappe/education` **GPL-3.0** (688★), `rosariosis` **GPL-2.0** (649★). The only permissive row is `academico-sis/academico` (MIT, 410★) and it is school-management, not an ERP. 🟢 **The usable consequence**: LGPL-3.0 on `openeducat_erp` means a studio's AI module stays proprietary **provided it is a separate module calling the API** — so the play here is an AI side-car, never a fork. |
 | `585-E` **Python LTI 1.3 has no maintained permissive option** | Open, re-measured | `pylti1.3` (MIT, 138★) is ~26 months stale and is still the best option. 🟢 This is the cheapest **contribution play** available in this industry: reviving it costs less than a fourth implementation and buys standing with the standards community. |
 | `585-F` **The SIS tier is thin on permissive options** | Open | `academico-sis/academico` (MIT, 410★) is the only permissive SIS of any size found. Everything larger is copyleft. |
 | `585-G` **No permissive proctoring platform exists** | Open | SafeExamBrowser is MPL-2.0 and is the sector standard; there is no permissive equivalent. A studio composes SEB + an agent rather than adopting a platform. |

@@ -4,6 +4,143 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p586 — 2026-11-01 — the unit of shipping changed from the application to the *skill*, and the regulated surface in education AI is now assessment, not tutoring
+
+### 🟢 Trend 1 — education AI ships as an agent skill, not an application
+
+**The measurement.** Of the 38 verified rows on [`../agents/top.md`](../agents/top.md),
+**eleven are skills or MCP servers that run inside a host agent** rather than deployable
+applications: `Papermorph`, `claudemy`, `universal-examprep-skill`,
+`universal-diagnostic-tutor-skill`, `kaogong-skill`, `cram-engine`, `algo-sensei`,
+`tutor-mcp`, `anki-mcp-server`, `canvas-mcp`, `libro-3d-interactivo`. Six of the eleven
+were **discovered this pass**, and the category barely existed in this base's earlier
+narrative.
+
+🟢 **Why it is commercially material.** A skill has **no hosting, no auth, no UI and no
+upgrade path**. The integration cost of adopting one is days rather than the weeks a
+platform costs, so the *adopt-vs-build* line in an education engagement has moved
+measurably toward **adopt**.
+
+🔴 **And the risk moved the other way, which is the part a proposal must say out loud.** A
+skill inherits the host agent's **model, data path and tenancy**. The data-residency
+question that a self-hosted platform answers *structurally* becomes a **contract** question
+instead. For an EU Annex III high-risk deployment or a LATAM public-sector engagement, that
+is the harder answer, not the easier one.
+
+🟢 **Which is why the smallest rows matter most here.**
+[`wordlink`](https://github.com/orionsheep/wordlink) (MIT, 266★) ships a **fine-tuned 1.5B
+model (SFT+DPO) that runs offline**, and [`Open TutorAI CE`](https://github.com/Open-TutorAi/open-tutor-ai-CE)
+(BSD-3) runs local LLMs via Ollama. They are the two shelf rows that answer residency
+without a contract clause. **Star count is the wrong way to rank a shelf against a
+regulatory constraint.**
+
+### 🟢 Trend 2 — the regulated surface is assessment, and tutoring is comparatively free
+
+Three regions converged on the same line this pass, from different legal traditions:
+
+| Region | Instrument | What it regulates |
+|---|---|---|
+| **Vietnam** | Decision **33/2026/QD-TTg** | Names education among six high-risk sectors, citing **automated assessment** explicitly |
+| **South Korea** | **AI Basic Act** (in force 22 Jan 2026) | High-impact AI: **transparency and human oversight** duties |
+| **United States (DC)** | 2026-27 district policy | **Bars** AI from **grading, discipline, IEP decisions, teacher evaluation** |
+| **Australia** | **TEQSA** | Higher-ed providers must file **generative-AI risk action plans** |
+
+🟢 **The pattern: judging a learner is regulated; helping a learner is not.** Tutoring,
+content generation, practice and feedback-for-the-learner sit largely outside these
+instruments. Grading, progression decisions, proctoring and anything feeding a personnel or
+disciplinary record sit inside them.
+
+🟢 **So the sellable work is the oversight layer around assessment, not the assessment.**
+That makes the psychometric tier — [`catsim`](https://github.com/douglasrizzo/catsim)
+(BSD-3), [`pyKT`](https://github.com/pykt-team/pykt-toolkit) (MIT),
+[`nbgrader`](https://github.com/jupyter/nbgrader) (BSD-3),
+[`Numbas`](https://github.com/numbas/Numbas) (Apache-2.0) — a **compliance requirement
+rather than an academic nicety**, and all four are permissive.
+
+🔴 **The gap this exposes.** There is still **no permissive proctoring platform**:
+`Proctoring-AI` (MIT, 633★) is a component last pushed `2024-12-10` (~23 months), and
+`SafeExamBrowser` (361★, current) is **MPL-2.0**. The most heavily regulated surface in the
+industry has no permissive platform to build on. Gaps `585-B`/`585-G`.
+
+### 🟢 Trend 3 — generation moved up a layer: from question generation to whole courseware
+
+`p585` recorded that the fine-tuned T5 **question-generation** tier is dead — absorbed by
+instruction-following models, every reference repo last pushed 2023–2024. `p586` found what
+replaced it, and it is not a better question generator:
+
+| Repo | Licence | Stars | Output |
+|---|---|--:|---|
+| [`hugohe3/ppt-master`](https://github.com/hugohe3/ppt-master) | 🟢 MIT (text) | **71,803** | **Native** PPTX — real shapes, transitions, charts, narration |
+| [`assafkip/claudemy`](https://github.com/assafkip/claudemy) | 🟢 MIT (text) | 574 | A researched course from a bare topic |
+| [`DozenTwelve/Papermorph`](https://github.com/DozenTwelve/Papermorph) | 🟢 MIT (text) | 1,040 | A book as an animated, narrated, interactive experience |
+| [`Fazmin/AILearningGuide`](https://github.com/Fazmin/AILearningGuide) | 🟢 MIT | 242 | 51 hands-on labs as a shipped curriculum |
+
+🟢 **The unit of generation is now the artefact a teacher actually hands over** — a deck, a
+course, a lab sequence — not an item in a question bank. `ppt-master` at **71,803 stars**
+makes this the largest single pool of adoptable permissive code in or adjacent to this
+industry, and it is **not education-specific**, which is precisely why a base searching for
+"education" repos missed it for twenty passes.
+
+### 🔴 Trend 4 — the quality of licence *metadata* is now a sourcing risk in its own right
+
+🔴 **`NOASSERTION` is not a proxy for "probably permissive".** `p585` recovered six blank
+API licence fields and most resolved permissive, which invited that inference. `p586`
+refutes it:
+
+| Row | API | Licence file | Direction |
+|---|---|---|---|
+| [`24kchengYe/human-skill-tree`](https://github.com/24kchengYe/human-skill-tree) (587★) | `NOASSERTION` | 🔴 **AGPL-3.0** | 🔴 Against |
+| [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) (903★) | `NOASSERTION` | 🟡 **LGPL-3.0** | 🟡 Weak copyleft |
+| [`aaryansamanta/nextgen-ai`](https://github.com/aaryansamanta/nextgen-ai) (492★) | `NOASSERTION` | 🟡 **MIT — code only** | 🟡 Partial |
+| [`OpenOLAT/OpenOLAT`](https://github.com/OpenOLAT/OpenOLAT) (449★) | `NOASSERTION` | 🟢 **Apache-2.0** | 🟢 For |
+| [`aaryansamanta/ai-ethos`](https://github.com/aaryansamanta/ai-ethos) (498★) | *none* | 🔴 **no file, 6 paths** | 🔴 No grant |
+
+🔴 **A blank field is an unknown, and unknowns resolve in both directions.** `ai-ethos` is
+the row to remember: a 501(c)(3) nonprofit, 498 stars, multilingual tutoring aimed at
+underserved learners, and **no licence at all**. Reach and good intentions do not create a
+grant.
+
+🔴 **And a single-value licence field cannot represent the truth for some repositories.**
+[`andymatuschak/orbit`](https://github.com/andymatuschak/orbit) (1,838★) is **Apache-2.0
+for most sources but AGPL-3.0-or-later *or* BUSL-1.1 for `packages/app` and
+`packages/backend`** — and **BUSL-1.1 is not an open-source licence**. Its libraries are
+buildable; its app and backend are not shippable.
+
+### 🔴 Trend 5 — whole niches are copyleft-locked, and language learning is the clearest
+
+| Niche | Largest option | Licence | Verdict |
+|---|---|---|---|
+| Language learning (general) | [`LibreLingo`](https://github.com/kantord/LibreLingo) 2,631★ | 🔴 AGPL-3.0 | 🔴 **ARCHIVED** `2026-11-01` |
+| Language learning (general) | [`artcc/freelingo`](https://github.com/artcc/freelingo) 222★ | 🔴 **AGPL-3.0 (text)** | 🆕 Live successor — and copyleft |
+| Vocabulary only | [`word-atlas`](https://github.com/designfuchen/word-atlas) 3,604★ | 🟢 MIT (text) | 🟢 Permissive, **narrow scope** |
+| Tutoring (2nd largest) | [`HugeCatLab/ChatTutor`](https://github.com/HugeCatLab/ChatTutor) 1,317★ | 🔴 AGPL-3.0 | 🔴 Also ~10 months stale |
+| Education ERP / SIS | `openeducat_erp` 903★ / `frappe/education` 688★ / `rosariosis` 649★ | 🔴 LGPL-3.0 / GPL-3.0 / GPL-2.0 | 🔴 **No permissive option at any size** |
+
+🟢 **The one that is survivable, and why.** `openeducat_erp`'s **LGPL-3.0 is weak
+copyleft**: a separate module calling its API keeps its own licence, and because OpenEduCat
+is built as **Odoo modules**, that side-car is the platform's standard extension pattern.
+🔴 **Language learning has no equivalent escape** — AGPL-3.0 is network copyleft with no
+module boundary, so a language engagement either accepts AGPL or composes `word-atlas` +
+`wordlink` + [`OpenPronounce`](https://github.com/Halleck45/OpenPronounce) (MIT) over FSRS
+scheduling, which is a **BUILD**. Gap `586-C`.
+
+### 🟢 Trend 6 — adoption is universal, governance is not, and the gap *is* the market
+
+| Region | Adoption | Governance |
+|---|---|---|
+| **LATAM** | 92% students, 79% faculty, 87% of institutions use AI in ≥1 area | 🔴 Driven by faculty and students, **not** institutional policy; only **Brazil and Colombia** budget for it nationally |
+| **North America** | ~60% of teachers, ~86% of higher-ed students | 🔴 **55% of high-school principals** say AI is *not* blocked or restricted; 134 bills in 31 states racing to catch up |
+| **EMEA** | ~70% of institutions have or are developing guidance | 🔴 EU AI Act high-risk date **contested across EU sources, 16-month spread** |
+| **APAC** | China, India, Japan lead; fastest-growing region | 🟢 **The most binding education-specific law** — Korea in force, Vietnam naming automated assessment |
+
+🟢 **Nobody needs to be sold AI in education any more.** Every region reports adoption
+ahead of policy, which is why the durable offer is **governance, assurance and
+enablement** rather than tooling — and why the specificity of the US prohibited-use lists
+and Vietnam's high-risk classification are *assets* to an engagement, not obstacles: they
+make scope auditable.
+
+---
+
 ## p585 — 2026-11-01 — the licence field was the wrong thing to distrust: the base was publishing *contradictory* licences for the same repository, and a split-licence repo is invisible to any single-value field
 
 🟢 **New instrument, controlled, and it changes what this base can assert.** Licences are

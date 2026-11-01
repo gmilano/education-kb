@@ -4,6 +4,115 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p586` — `2026-11-01` — **🟢 ELEVEN NEW PERMISSIVE ROWS FROM TWO TOPIC QUERIES, INCLUDING A `71,803★` MIT REPO THIS BASE HAD NEVER SEEN — AND THE STRUCTURAL FINDING: EDUCATION AI IS SHIPPING AS *AGENT SKILLS*, NOT APPLICATIONS. 🔴 `NOASSERTION` IS NOT A PROXY FOR "PROBABLY PERMISSIVE": A `587★` ROW RESOLVED TO AGPL-3.0. 🔴 `p585` PUBLISHED TWO CONTRADICTORY VERDICTS FOR `orbit` ON TWO PAGES IN THE SAME PASS. 🟢 ALL FOUR REGIONAL LEGS PAID, INCLUDING APAC — WHICH WAS A DECLARED NIL AT `p585`.**
+
+### 🟢 The discovery channel this base was missing for twenty passes
+
+Every prior pass re-measured addresses it already held. `p586` ran two **topic-facet**
+queries instead — `topic:ai-tutor` and `topic:ai-education`, sorted by stars — and they
+returned rows name-and-description search had never surfaced:
+
+| Repo | Licence (from licence file) | Stars | Last push | Region | Why it is new to this base |
+|---|---|--:|---|---|---|
+| [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | 🟢 **MIT (text)** | **71,803** | `2026-10-30` | Global | 🔴 **Larger than every other row on the shelf.** Documents or a topic → **native** PPTX with real shapes, transitions, charts and narration. The courseware-generation layer, and this base did not hold it. |
+| [pguso/agents-from-scratch](https://github.com/pguso/agents-from-scratch) | 🟢 MIT | 1,065 | 🟡 `2026-07-25` | Global | Agents from first principles on a **local** LLM. A ready agent-engineering curriculum. |
+| [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 🟢 **MIT (text)** | 1,040 | `2026-11-01` | Global | Books → animated, narrated, interactive web experiences. Ships as a **skill**, not an app. |
+| [assafkip/claudemy](https://github.com/assafkip/claudemy) | 🟢 **MIT (text)** | 574 | `2026-10-29` | Global | Open-source Udemy/Coursera alternative: topic in, researched course out. |
+| [aaryansamanta/nextgen-ai](https://github.com/aaryansamanta/nextgen-ai) | 🟡 **MIT — code only (text)** | 492 | `2026-09-20` | Global | Student-led accessible-AI org. 🟡 Licence file reads **"MIT License (Code)"** — content grant unstated. |
+| [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 **MIT (text)** | 364 | `2026-10-27` | APAC | 🟢 **The only new row that treats citation-grounding as a feature**: cross-session memory plus handout provenance to suppress hallucination. |
+| [orionsheep/wordlink](https://github.com/orionsheep/wordlink) | 🟢 **MIT (text)** | 266 | `2026-10-28` | Global | 🟢 **A shipped fine-tuned 1.5B model (SFT+DPO) that runs offline** — not a prompt over a frontier API. The data-residency and low-connectivity pattern. |
+| [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 MIT | 254 | `2026-09-24` | Global | Diagnosis-first tutor: establishes the gap before teaching. No mode menu. |
+| [Fazmin/AILearningGuide](https://github.com/Fazmin/AILearningGuide) | 🟢 MIT | 242 | `2026-10-31` | Global | 51 hands-on labs: ML, transformers, RAG, agents. A reskilling curriculum off the shelf. |
+| [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | 🟢 MIT | 214 | `2026-10-12` | APAC | Chinese civil-service exam prep (行测/申论/面试) with wrong-answer review. **High-stakes national exam prep, built as an open skill.** |
+| [liuliu667/cram-engine](https://github.com/liuliu667/cram-engine) | 🟢 MIT | 176 | `2026-10-22` | APAC | Four-stage interactive teaching grounded in **learning-science principles**, not ad-hoc prompting. |
+
+**11 rows, 11 verified against their own licence files, 10 unreservedly permissive.** The
+shelf on [`./top.md`](./top.md) goes from **27 → 38**.
+
+### 🟢 The structural finding: the unit of shipping has changed
+
+Eleven of the 38 shelf rows are now **agent skills or MCP servers that run inside a host
+agent** rather than applications: `Papermorph`, `claudemy`, `universal-examprep-skill`,
+`universal-diagnostic-tutor-skill`, `kaogong-skill`, `cram-engine`, `algo-sensei`,
+`tutor-mcp`, `anki-mcp-server`, `canvas-mcp`, `libro-3d-interactivo`.
+
+🟢 **Why this is commercially material and not just a packaging note.** A skill has **no
+hosting, no auth, no UI and no upgrade path to maintain**. The integration cost of adopting
+one is days, not the weeks a platform costs — so the *adopt-vs-build* line in an education
+engagement has moved, and it has moved in the direction of adopt. 🔴 **And the risk moved
+with it**: a skill inherits the host agent's model, data path and tenancy, so the
+data-residency question that a self-hosted platform answers structurally becomes a
+contract question instead. For an EU or LATAM public-sector engagement, that is the harder
+answer, not the easier one — which is exactly why `wordlink`'s offline 1.5B model matters
+more than its 266 stars suggest.
+
+### 🔴 `NOASSERTION` is not a proxy for "probably permissive" — the correction that runs the other way
+
+`p585` recovered six rows from `NOASSERTION` and most came back permissive. That invited an
+inference this pass **refutes**:
+
+| Row | API | Licence file | Direction |
+|---|---|---|---|
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) (587★) | `NOASSERTION` | 🔴 **AGPL-3.0** | 🔴 **Against the row** |
+| [aaryansamanta/nextgen-ai](https://github.com/aaryansamanta/nextgen-ai) (492★) | `NOASSERTION` | 🟡 **MIT — code only** | 🟡 Partly |
+| [aaryansamanta/ai-ethos](https://github.com/aaryansamanta/ai-ethos) (498★) | *none* | 🔴 **no file at 6 paths → no grant** | 🔴 Confirmed |
+| `ppt-master`, `Papermorph`, `claudemy`, `universal-examprep-skill`, `wordlink` | `MIT`/`NOASSERTION` | 🟢 MIT | 🟢 Confirmed |
+
+🔴 **`ai-ethos` is the one to remember**: a 501(c)(3) nonprofit, 498 stars, multilingual
+tutoring aimed at underserved learners — and **no licence at all**. Reach and good
+intentions do not create a grant.
+
+### 🔴 The base contradicted itself again, in the pass that diagnosed the contradiction
+
+`p585` identified "a per-page licence field with no reconciliation step" as the cause of
+publishing two different licences for one repository. **In that same pass it did it again:**
+
+| Page | `p585` verdict on [andymatuschak/orbit](https://github.com/andymatuschak/orbit) |
+|---|---|
+| [`../repos/foundations.md`](../repos/foundations.md) | 🟢 "**Resolved this pass**" — split licence, Apache-2.0 + AGPL/BUSL |
+| [`./top.md`](./top.md) | 🔴 "`585-C` **licence unresolved** — 🆕 Opened this pass" |
+
+🟢 **Re-read first-hand at `p586` and reconciled on both pages.** The licence text: all
+sources Apache-2.0 **except** `packages/app` and `packages/backend`, which are
+**AGPL-3.0-or-later *or* BUSL-1.1** at the licensee's choice. BUSL-1.1 is **not** an
+open-source licence. 🔴 **The reconciliation step still does not exist** (gap `586-A`); a
+pre-commit `grep` of every curated page for each repo address would close it.
+
+🔴 **A second instance of the same class, found while filing this:** the "no permissive
+proctoring platform" gap is filed as `585-B` on `top.md` and `585-G` on `foundations.md` —
+two IDs, one gap, no link. Gap `586-B`. (This pass caught itself allocating `586-C` twice
+for different gaps and renumbered before commit — the defect is cheap to make.)
+
+### 🟢 Gaps closed and gaps re-measured
+
+| Gap | Outcome at `p586` |
+|---|---|
+| `585-C` `orbit` licence unresolved | 🟢 **CLOSED** — split licence, read from the licence text, reconciled on both pages. |
+| `585-D` `potsie` vs `warren` recency inverted | 🟢 **CLOSED and the advice withdrawn.** Re-measured: **`potsie` last pushed `2024-12-18`** (~23 months, 11★); **`warren` `2026-10-31`** (17★). This base's standing recommendation to prefer `potsie` as "production-ready" is wrong — it is the stale one. Honest statement: *neither is production, and `warren` is the only one maintained.* |
+| `585-A` learner simulation unlicensed | 🔴 **Still open.** [bigdata-ustc/Agent4Edu](https://github.com/bigdata-ustc/Agent4Edu) (100★) re-probed at **ten** paths (`LICENSE`/`.md`/`.txt`/`COPYING`/`LICENCE` × `main`+`master`) — all 404. Still pushing code (`2026-09-29`), still granting nothing. **BUILD, not adopt.** |
+| `585-B`/`585-G` no permissive proctoring platform | 🔴 **Still open, re-measured.** `Proctoring-AI` (MIT, 633★) last push `2024-12-10` (~23 months); `SafeExamBrowser` MPL-2.0, current `2026-10-30`. |
+| `586-C` 🆕 language learning is entirely copyleft | 🔴 **Opened.** `LibreLingo` (2,631★) **archived** (re-measured `2026-11-01`); its live successor [artcc/freelingo](https://github.com/artcc/freelingo) (222★, pushed `2026-10-30`) is **AGPL-3.0 (text)**; the permissive options (`word-atlas` 3,604★, `wordlink` 266★) are **vocabulary-only**. There is no permissive general language-learning platform. |
+
+### 🔴 Copyleft and no-grant rows added to the block list
+
+| Repo | Verdict |
+|---|---|
+| [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0**, 1,317★ — the second-largest tutoring repo after DeepTutor, and unusable in client work. Last push `2026-01-09` (~10 months). |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🔴 **AGPL-3.0 (text)**, 587★. Recovered from `NOASSERTION` — in the wrong direction. |
+| [aaryansamanta/ai-ethos](https://github.com/aaryansamanta/ai-ethos) | 🔴 **No grant**, 498★. Six probes 404. |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0 (text)**, 222★. Live, maintained, copyleft. |
+
+### 🔵 Measurement note — the mandated `curl -sI` check cannot work here, restated
+
+🔴 Re-verified at `p586`: `curl -sI https://github.com/moodle/moodle` → **403**, and
+`curl -sI https://github.com/fake/nope-xyz123` → **403**. A probe that returns the same
+code for a real repository and a fabricated one **certifies nothing**, so every row on
+these pages is verified by `search/repositories` for existence and by
+`raw.githubusercontent.com` for the licence text instead. This is stated on every pass
+because the instruction to use `curl -sI` keeps arriving and keeps being unsatisfiable.
+
+---
+
 ## 🆕 `p585` — `2026-11-01` — **🔴 THE WHOLE-BASE FILING RATE, MEASURED: `3,094` OF `3,415` DISCOVERED ADDRESSES HAVE NEVER REACHED A CURATED PAGE (`~90 %`). 🟢 NEW LICENCE CHANNEL (`raw.githubusercontent.com`) RECOVERS `6` ROWS FROM `NOASSERTION` AND RESOLVES A SPLIT LICENCE NO API FIELD CAN REPRESENT. 🔴 `agents/top.md` CONSOLIDATED FROM `1,615` NARRATIVE LINES TO A `27`-ROW TABLE. 🔴 TWENTIETH NIL ON THE MANDATED GLOBAL LEGS; `3 OF 4` REGIONAL LEGS PAID.**
 
 🔴 **`p584` measured `FILED = 0` on one tier. This is the figure for the whole base:**

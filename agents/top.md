@@ -8,54 +8,79 @@ updated: 2026-11-01
 
 **What this page is.** A curated, verified table of open-source AI agents for education
 that Globant AI Studios can adopt, compose or customise. Every row was measured
-first-hand on **2026-11-01** (pass `p585`): existence, stars, licence, last push.
+first-hand on **2026-11-01** (pass `p586`): existence, stars, licence, last push.
 
-**How to read the licence column.** 🟢 = permissive (MIT / Apache-2.0 / BSD / ECL-2.0),
-buildable and shippable in client work. 🔴 = copyleft or no grant — do not ship without
-counsel. Licences marked **(text)** were read out of the repository's own `LICENSE` file,
-not taken from the GitHub API, because the API's licence field is wrong for a quarter of
-this base's rows (see *Method* below).
+**How to read the licence column.** 🟢 = permissive (MIT / Apache-2.0 / BSD / ECL-2.0 /
+CC0), buildable and shippable in client work. 🟡 = permissive with a stated limit. 🔴 =
+copyleft or no grant — do not ship without counsel. Licences marked **(text)** were read
+out of the repository's own `LICENSE` file, not taken from the GitHub API, because the
+API's licence field is wrong for roughly a quarter of this base's rows (see *Method*).
+
+🆕 **`p586` added 11 verified permissive rows and raised the shelf from 27 to 38.** The
+largest of them, `ppt-master`, is **bigger than every other row on this page combined by
+star count** and was not on the shelf at all.
 
 ---
 
-## The shelf — 27 verified agents
+## The shelf — 38 verified agents
 
 Ordered by size. Region is assigned only where the repository itself supports a
 placement (institution, org, or language of the project); otherwise it reads `Global`.
 
 | Agent | Repo | Licence | Stars | Last push | Region | What it is |
 |---|---|---|--:|---|---|---|
-| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | **53,084** | `2026-10-31` | APAC | Lifelong personalised tutoring. The field's only education agent at frontier scale; 6,499 forks. HKUDS (Univ. of Hong Kong). |
-| **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT | **42,277** | `2026-10-31` | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent learning. Tsinghua. 6,521 forks. |
-| **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | **6,952** | `2026-11-01` | Global | Free online learning platform built on interactive "explorations". Both a platform and an authoring model. |
-| **word-atlas** (词光) | [designfuchen/word-atlas](https://github.com/designfuchen/word-atlas) | 🟢 **MIT (text)** | **3,594** | `2026-10-31` | APAC | 🆕 Illustrated IELTS vocabulary — 7,298 words, UK/US audio, FSRS review scheduling. API reported `NOASSERTION`. |
-| **PageLM** | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🟢 **MIT (text)** | **2,057** | `2026-10-29` | Global | 🆕 Community-driven NotebookLM: turns study material into notes, quizzes and flashcards. API reported `NOASSERTION`. |
-| **Study-Mate** | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 🟢 MIT | **1,286** | `2026-10-21` | APAC | AI study partner that plans a route through a subject, teaches it and sets projects. Chinese-language. |
+| **ppt-master** | [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | 🟢 **MIT (text)** | **71,803** | `2026-10-30` | Global | 🆕 Documents or a bare topic → **native** PowerPoint decks: real shapes, transitions, charts, narration. The courseware-generation layer. **Largest row on this shelf**; API reported MIT and the licence file confirms it. |
+| **DeepTutor** | [HKUDS/DeepTutor](https://github.com/HKUDS/DeepTutor) | 🟢 Apache-2.0 | **53,128** | `2026-10-31` | APAC | Lifelong personalised tutoring. The field's only *purpose-built* education agent at frontier scale. HKUDS (Univ. of Hong Kong). |
+| **OpenMAIC** | [THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) | 🟢 MIT | **42,297** | `2026-11-01` | APAC | Open Multi-Agent Interactive Classroom — one-click immersive multi-agent learning. Tsinghua. |
+| **Oppia** | [oppia/oppia](https://github.com/oppia/oppia) | 🟢 Apache-2.0 | **6,953** | `2026-11-01` | Global | Free online learning platform built on interactive "explorations". Both a platform and an authoring model. |
+| **word-atlas** (词光) | [designfuchen/word-atlas](https://github.com/designfuchen/word-atlas) | 🟢 **MIT (text)** | **3,604** | `2026-10-31` | APAC | Illustrated IELTS vocabulary — 7,298 words, UK/US audio, FSRS review scheduling. API reports `NOASSERTION`. |
+| **PageLM** | [CaviraOSS/PageLM](https://github.com/CaviraOSS/PageLM) | 🟢 **MIT (text)** | **2,057** | `2026-10-29` | Global | Community-driven NotebookLM: turns study material into notes, quizzes and flashcards. API reports `NOASSERTION`. |
 | **nbgrader** | [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | 🟢 BSD-3-Clause | **1,370** | `2026-10-28` | Global | Assign, autograde and release Jupyter notebooks. The autograding seam for technical coursework. Project Jupyter governance. |
+| **Study-Mate** | [Miaotofu01/Study-Mate](https://github.com/Miaotofu01/Study-Mate) | 🟢 MIT | **1,286** | `2026-10-21` | APAC | AI study partner that plans a route through a subject, teaches it and sets projects. Chinese-language. |
+| **agents-from-scratch** | [pguso/agents-from-scratch](https://github.com/pguso/agents-from-scratch) | 🟢 MIT | **1,065** | 🟡 `2026-07-25` | Global | 🆕 Build agents from first principles on a **local** LLM — no frameworks, no cloud APIs. The teaching curriculum for an agent-engineering cohort. 🟡 ~3 months since last push. |
+| **Papermorph** | [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 🟢 **MIT (text)** | **1,040** | `2026-11-01` | Global | 🆕 Turns books into animated, narrated, interactive web experiences. Ships as an **agent skill**, not an application. |
+| **claudemy** | [assafkip/claudemy](https://github.com/assafkip/claudemy) | 🟢 **MIT (text)** | **574** | `2026-10-29` | Global | 🆕 Open-source Udemy/Coursera alternative: give the agent a topic, it researches and builds the course. The course-construction counterpart to `ppt-master`. |
 | **anki-mcp-server** | [ankimcp/anki-mcp-server](https://github.com/ankimcp/anki-mcp-server) | 🟢 MIT | **540** | `2026-10-22` | Global | MCP server exposing Anki to an LLM agent. The retention layer any tutor can bolt onto. |
+| **nextgen-ai** | [aaryansamanta/nextgen-ai](https://github.com/aaryansamanta/nextgen-ai) | 🟡 **MIT — code only (text)** | **492** | `2026-09-20` | Global | 🆕 Student-led org expanding accessible AI: seminars, ambassadors, curriculum. 🟡 **Licence file reads "MIT License (Code)"** — the grant is scoped to code and says nothing about the curriculum content. Vendor the code, not the materials. API reported `NOASSERTION`. |
 | **pyKT** | [pykt-team/pykt-toolkit](https://github.com/pykt-team/pykt-toolkit) | 🟢 MIT | **456** | `2026-10-18` | APAC | PyTorch knowledge-tracing library — the reference for modelling what a learner knows. |
-| **relate** | [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT (text)** | **437** | `2026-11-01` | North America | 🆕 Full learning/teaching environment with versioned course content and auto-graded work. API reported `NOASSERTION`; `LICENSE` is verbatim MIT. |
-| **educhain** | [satvik314/educhain](https://github.com/satvik314/educhain) | 🟢 MIT | **387** | `2026-05-29` | APAC | Generates educational content with LLMs — MCQs, lesson plans, flashcards. India (Build Fast with AI). |
+| **relate** | [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT (text)** | **437** | `2026-11-01` | North America | Full learning/teaching environment with versioned course content and auto-graded work. API reports `NOASSERTION`; `LICENSE` is verbatim MIT. |
+| **educhain** | [satvik314/educhain](https://github.com/satvik314/educhain) | 🟢 MIT | **387** | 🟡 `2026-05-29` | APAC | Generates educational content with LLMs — MCQs, lesson plans, flashcards. India (Build Fast with AI). 🟡 ~5 months since last push. |
 | **ltijs** | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 | **373** | `2026-10-31` | Global | Turns an application into a full LTI 1.3 tool provider — the seam into any LMS without forking it. |
-| **vishalsachdev/canvas-mcp** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT | **310** | `2026-11-01` | North America | MCP server for Canvas LMS: up to 102 tools, 8 agent skills, FERPA-aware. Univ. of Illinois. |
-| **algo-sensei** | [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | 🟢 MIT | **300** | `2026-10-02` | Global | 🆕 LeetCode/DSA mentor for Claude Code and claude.ai. Guided practice rather than answers. |
+| **universal-examprep-skill** | [ZeKaiNie/universal-examprep-skill](https://github.com/ZeKaiNie/universal-examprep-skill) | 🟢 **MIT (text)** | **364** | `2026-10-27` | APAC | 🆕 Exam-cram coach with **cross-session memory and handout provenance to suppress hallucination** — the only new row that treats citation-grounding as a first-class feature. Runs as a skill in Claude Code / Cursor / Codex. |
+| **canvas-mcp** | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT | **310** | `2026-11-01` | North America | MCP server for Canvas LMS: up to 102 tools, 8 agent skills, FERPA-aware. Univ. of Illinois. |
+| **algo-sensei** | [karanb192/algo-sensei](https://github.com/karanb192/algo-sensei) | 🟢 MIT | **300** | `2026-10-02` | Global | LeetCode/DSA mentor for Claude Code and claude.ai. Guided practice rather than answers. |
 | **Bloom** | [Li-Evan/Bloom](https://github.com/Li-Evan/Bloom) | 🟢 MIT | **295** | `2026-10-20` | Global | Private AI tutor that reads how the learner actually learns and sequences the next lesson. |
 | **OATutor** | [CAHLR/OATutor](https://github.com/CAHLR/OATutor) | 🟢 MIT | **274** | `2026-10-31` | North America | Intelligent tutoring with Bayesian Knowledge Tracing. UC Berkeley CAHLR; React + Firebase. |
-| **ari** | [nichochar/ari](https://github.com/nichochar/ari) | 🟢 MIT | **217** | `2026-11-01` | Global | 🆕 Pen-and-paper-first learning companion. Deliberately low-tech interaction model. |
+| **wordlink** | [orionsheep/wordlink](https://github.com/orionsheep/wordlink) | 🟢 **MIT (text)** | **266** | `2026-10-28` | Global | 🆕 Vocabulary learning on a **fine-tuned 1.5B model (SFT+DPO) that runs offline**. The only new row that is a shipped small model rather than a prompt over a frontier API — the pattern for data-residency and low-connectivity work. |
+| **universal-diagnostic-tutor-skill** | [SenmuuuuW/universal-diagnostic-tutor-skill](https://github.com/SenmuuuuW/universal-diagnostic-tutor-skill) | 🟢 MIT | **254** | `2026-09-24` | Global | 🆕 Diagnosis-first tutor for STEM and CS: no mode menu, it establishes what the learner is missing before teaching. |
+| **AILearningGuide** | [Fazmin/AILearningGuide](https://github.com/Fazmin/AILearningGuide) | 🟢 MIT | **242** | `2026-10-31` | Global | 🆕 Desktop app with 51 hands-on labs: ML fundamentals, transformers, RAG, agents. A ready reskilling curriculum. |
+| **ari** | [nichochar/ari](https://github.com/nichochar/ari) | 🟢 MIT | **218** | `2026-11-01` | Global | Pen-and-paper-first learning companion. Deliberately low-tech interaction model. |
+| **kaogong-skill** | [KeWang0622/kaogong-skill](https://github.com/KeWang0622/kaogong-skill) | 🟢 MIT | **214** | `2026-10-12` | APAC | 🆕 Chinese civil-service and public-institution exam prep (行测/申论/面试) with wrong-answer review. Evidence that **high-stakes national exam prep is being built as open skills**. |
 | **EduCDM** | [bigdata-ustc/EduCDM](https://github.com/bigdata-ustc/EduCDM) | 🟢 Apache-2.0 | **203** | 🔴 `2024-10-25` | APAC | Cognitive diagnosis model zoo (IRT, MIRT, DINA, NCDM). Shippable, but **~24 months stale**. |
+| **cram-engine** | [liuliu667/cram-engine](https://github.com/liuliu667/cram-engine) | 🟢 MIT | **176** | `2026-10-22` | APAC | 🆕 Four-stage interactive teaching skill grounded in **learning-science principles** rather than ad-hoc prompting. Chinese-language. |
 | **OpenTutor** | [zijinz456/OpenTutor](https://github.com/zijinz456/OpenTutor) | 🟢 MIT | **160** | `2026-10-31` | Global | Block-based adaptive learning workspace that runs locally; 10+ LLM providers. |
 | **catsim** | [douglasrizzo/catsim](https://github.com/douglasrizzo/catsim) | 🟢 BSD-3-Clause | **153** | `2026-10-30` | **LATAM** | Computerised Adaptive Testing simulator — simulate item selection before exposing learners. Brazil. |
 | **gen-mentor** | [GeminiLight/gen-mentor](https://github.com/GeminiLight/gen-mentor) | 🟢 CC0-1.0 | **135** | `2026-10-23` | APAC | WWW '25 oral — LLM multi-agent framework for goal-oriented learning-path generation. Public-domain dedication. |
 | **girth** | [eribean/girth](https://github.com/eribean/girth) | 🟢 MIT | **127** | 🔴 `2022-09-09` | Global | Item Response Theory package for Python (item calibration). 🔴 **~4 years stale** — use `catsim` or `pyKT` first. |
-| **Open TutorAI CE** | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 BSD-3-Clause | **114** | `2026-06-26` | EMEA | Tutoring platform with voice, video and 3D avatars. Docker-first, local LLMs via Ollama. |
+| **Open TutorAI CE** | [Open-TutorAi/open-tutor-ai-CE](https://github.com/Open-TutorAi/open-tutor-ai-CE) | 🟢 BSD-3-Clause | **114** | 🟡 `2026-06-26` | EMEA | Tutoring platform with voice, video and 3D avatars. Docker-first, local LLMs via Ollama. |
 | **mentingo** | [Selleo/mentingo](https://github.com/Selleo/mentingo) | 🟢 MIT | **102** | `2026-10-31` | EMEA | AI-native LMS with AI mentor and role-play; self-hosted. Selleo (Poland). |
-| **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT | **61** | `2026-10-31` | Global | 🆕 MCP server that turns any LLM into an Intelligent Tutoring System, grounded in ITS research. |
-| **Lama Loca** | [emil-a-dev/lama-loca](https://github.com/emil-a-dev/lama-loca) | 🟢 MIT | **59** | `2026-03-04` | EMEA | Fully offline Russian-language study assistant: learns from the user's own books, emits reports and slides. |
+| **tutor-mcp** | [ArnaudGuiovanna/tutor-mcp](https://github.com/ArnaudGuiovanna/tutor-mcp) | 🟢 MIT | **61** | `2026-10-31` | Global | MCP server that turns any LLM into an Intelligent Tutoring System, grounded in ITS research. |
+| **Lama Loca** | [emil-a-dev/lama-loca](https://github.com/emil-a-dev/lama-loca) | 🟢 MIT | **59** | 🟡 `2026-03-04` | EMEA | Fully offline Russian-language study assistant: learns from the user's own books, emits reports and slides. |
 | **BCTK** (TK试题题库) | [BBkjdayup/BCTK](https://github.com/BBkjdayup/BCTK) | 🟢 MIT | **53** | `2026-09-28` | APAC | Offline-first Windows item-bank and paper-composition app for teachers. Word/Excel round-trip without Office. |
 
-**27 rows. 26 of 27 are permissive** — MIT, Apache-2.0, BSD-3-Clause or CC0. The agent
-layer licenses permissively, which is the single most useful structural fact for a studio:
-**the AI can be built permissively and attached to a copyleft LMS from the outside.**
+**38 rows. 37 are unreservedly permissive**, and the 38th (`nextgen-ai`) is permissive for
+its code with the content grant unstated. The agent layer licenses permissively, which
+remains the single most useful structural fact for a studio: **the AI can be built
+permissively and attached to a copyleft LMS from the outside.**
+
+🆕 **The structural change `p586` measured: education AI has started shipping as *agent
+skills*, not applications.** Eleven rows on this shelf are now skills or MCP servers that
+run inside a host agent — `Papermorph`, `claudemy`, `universal-examprep-skill`,
+`universal-diagnostic-tutor-skill`, `kaogong-skill`, `cram-engine`, `algo-sensei`,
+`tutor-mcp`, `anki-mcp-server`, `canvas-mcp`, `libro-3d-interactivo`. The packaging matters
+commercially: a skill has **no hosting, no auth and no UI to maintain**, so the integration
+cost of adopting one is a fraction of adopting a platform. See
+[`../compose/patterns.md`](../compose/patterns.md) pattern `P586-1`.
 
 ### Smaller but institution-accountable — worth citing in a proposal
 
@@ -63,12 +88,12 @@ These are small by stars and real by provenance. Size is not the only form of cr
 
 | Agent | Repo | Licence | Stars | Last push | Region | Why it matters |
 |---|---|---|--:|---|---|---|
-| **feedbacksystem** | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0 (text)** | 24 | `2026-10-28` | EMEA | Personalised automated feedback. Technische Hochschule Mittelhessen. 🟢 **Licence corrected this pass** — the API says `NOASSERTION`; `LICENSE` says "Apache-2.0 © 2023 Technischen Hochschule Mittelhessen". |
+| **pedal** | [pedal-edu/pedal](https://github.com/pedal-edu/pedal) | 🟢 MIT | 32 | `2026-10-18` | Global | Static and dynamic analysis of student Python code — feedback generation, not just pass/fail. |
+| **feedbacksystem** | [thm-mni-ii/feedbacksystem](https://github.com/thm-mni-ii/feedbacksystem) | 🟢 **Apache-2.0 (text)** | 24 | `2026-10-28` | EMEA | Personalised automated feedback. Technische Hochschule Mittelhessen. Licence recovered from `NOASSERTION` at `p585`. |
 | **Terracotta** | [terracotta-education/terracotta](https://github.com/terracotta-education/terracotta) | 🟢 Apache-2.0 | 21 | `2026-10-29` | North America | LMS plug-in for randomised controlled education experiments — consent hidden from the instructor, identifiers stripped from exports. The only research-ethics-aware row here. |
 | **warren** | [openfun/warren](https://github.com/openfun/warren) | 🟢 MIT | 17 | `2026-10-31` | EMEA | Learning-analytics visualisation (xAPI). 🔴 Its README still calls itself a proof of concept — do not put it in front of a client as production. France Université Numérique. |
 | **libro-3d-interactivo** | [csepulvedai/libro-3d-interactivo](https://github.com/csepulvedai/libro-3d-interactivo) | 🟢 MIT | 15 | `2026-10-27` | **LATAM** | Claude Code skill producing interactive 3D pop-up books (Three.js) with Chilean-Spanish narration, aligned to curriculum objective OA 13. Universidad de Los Lagos, Chile. |
 | **pedagogy-benchmark** | [AI-for-Education/pedagogy-benchmark](https://github.com/AI-for-Education/pedagogy-benchmark) | 🟢 MIT | 13 | `2026-10-09` | **LATAM** | Benchmark of LLMs' *pedagogical* knowledge, built from exams by Chile's Agencia de la Calidad de la Educación and CPEIP. The only evaluation instrument on this shelf. |
-| **pedal** | [pedal-edu/pedal](https://github.com/pedal-edu/pedal) | 🟢 MIT | 32 | `2026-10-18` | Global | Static and dynamic analysis of student Python code — feedback generation, not just pass/fail. |
 
 ---
 
@@ -76,12 +101,16 @@ These are small by stars and real by provenance. Size is not the only form of cr
 
 | Repo | Verdict | Evidence |
 |---|---|---|
-| [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 🔴 **BLOCK — no grant** | 64★. Twelve probes (`LICENSE`/`.md`/`.txt`/`COPYING`/`LICENCE` × `main`+`master`) all 404; API `spdx_id: NONE`. Unlicensed = all rights reserved. Last push `2025-11-04`. |
-| [bigdata-ustc/Agent4Edu](https://github.com/bigdata-ustc/Agent4Edu) | 🔴 **BLOCK — no grant** | 100★, AAAI-grade work, no licence file. Academically real, legally unusable. Learner simulation remains an unlicensed layer. |
+| [andymatuschak/orbit](https://github.com/andymatuschak/orbit) | 🔴 **Split licence — partly non-OSI** | 1,838★, pushed `2026-10-20`, API `NOASSERTION`. 🟢 **Resolved and now reconciled across pages** (see `586-A`). `LICENSE` reads: all sources **Apache-2.0** *except* `packages/app` and `packages/backend`, which are **AGPL-3.0-or-later *or* BUSL-1.1** at the licensee's choice. 🔴 **BUSL-1.1 is not an open-source licence.** 🟢 Its spaced-repetition *libraries* are buildable; 🔴 its app and backend are not shippable without AGPL or BUSL compliance. |
+| [HugeCatLab/ChatTutor](https://github.com/HugeCatLab/ChatTutor) | 🔴 **AGPL-3.0 + stale** | 🆕 1,317★ visual/interactive AI tutor — the second-largest tutoring repo after DeepTutor, and unusable in client work. Network copyleft, and last pushed `2026-01-09` (**~10 months**). |
+| [24kchengYe/human-skill-tree](https://github.com/24kchengYe/human-skill-tree) | 🔴 **AGPL-3.0 (text)** | 🆕 587★ lifelong skill-tree, K-12 → career. **API said `NOASSERTION`; the licence file says AGPL-3.0.** 🔴 This is the correction that runs the *other* way — see *Method*. Last pushed `2026-03-25` (~7 months). |
+| [aaryansamanta/ai-ethos](https://github.com/aaryansamanta/ai-ethos) | 🔴 **BLOCK — no grant** | 🆕 498★. A 501(c)(3) nonprofit shipping multilingual AI tutoring for underserved learners — with **no licence at all**: six probes (`LICENSE`/`.md`/`.txt`/`COPYING`/`LICENCE`/`LICENSE-MIT`) all 404 and the API reports no licence. Reach and goodwill do not create a grant. Last push `2026-09-20`. |
+| [artcc/freelingo](https://github.com/artcc/freelingo) | 🔴 **AGPL-3.0 (text)** | 🆕 222★, pushed `2026-10-30`. Self-hosted AI language learning with CEFR levels and local-or-cloud LLMs. 🔵 **It is the live successor to the archived `LibreLingo`** — and it is copyleft too. See gap `586-C`. |
+| [kantord/LibreLingo](https://github.com/kantord/LibreLingo) | 🔴 **ARCHIVED + AGPL-3.0** | 2,631★, `archived: true` re-measured `2026-11-01`; last push `2026-06-19`. Read-only upstream, no security fixes. 🟢 For a live alternative see `freelingo` — but it is AGPL-3.0 as well. |
+| [A-R007/Multi-Agent-Study-Assistant](https://github.com/A-R007/Multi-Agent-Study-Assistant) | 🔴 **BLOCK — no grant** | 64★. Twelve probes all 404; API `spdx_id: NONE`. Unlicensed = all rights reserved. Last push `2025-11-04`. |
+| [bigdata-ustc/Agent4Edu](https://github.com/bigdata-ustc/Agent4Edu) | 🔴 **BLOCK — no grant** | 100★, AAAI-grade learner simulation. 🆕 **Re-probed `p586`: ten paths (`LICENSE`/`.md`/`.txt`/`COPYING`/`LICENCE` × `main`+`master`) all 404.** Still pushing code (`2026-09-29`) and still granting nothing. |
 | [DMontgomery40/mcp-canvas-lms](https://github.com/DMontgomery40/mcp-canvas-lms) | 🔴 **Do not gate on "MIT"** | `package.json` declares MIT and references a `LICENSE` that does not exist at 8 paths × 2 branches. A question for counsel. 🟢 Use [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) (real MIT, 310★) instead — same job. |
-| [kantord/LibreLingo](https://github.com/kantord/LibreLingo) | 🔴 **ARCHIVED + AGPL-3.0** | 2,631★ and genuinely good, but `archived: true` as of this pass — read-only upstream, no security fixes. Measured `2026-11-01`. |
-| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🟡 **Creative Commons on software** | 936★, 165 teacher-facing skills. `LICENSE` is a Creative Commons text, not a software licence — no patent grant, and CC is not designed for code. Usable as *reference material*; do not vendor it into a product without counsel. |
-| [andymatuschak/orbit](https://github.com/andymatuschak/orbit) | 🟡 **Licence unresolved** | 1,838★ spaced-repetition research platform. `LICENSE` exists but its text matches no standard licence this pass could identify. Self-described experimental. 🔴 Unresolved ≠ permissive. |
+| [GarethManning/education-agent-skills](https://github.com/GarethManning/education-agent-skills) | 🟡 **Creative Commons on software** | 936★, 165 teacher-facing skills, pushed `2026-10-22`. `LICENSE` is a Creative Commons text, not a software licence — no patent grant, and CC is not designed for code. Usable as *reference material*; do not vendor it into a product without counsel. |
 
 ---
 
@@ -91,32 +120,35 @@ Three channels, in this order. Each one exists because the obvious one does not 
 
 | Need | Channel | Why not the obvious one |
 |---|---|---|
-| Existence, stars, forks, `archived`, `pushed_at` | `gh api -X GET search/repositories -f q="repo:owner/name"` | 🔴 `curl -sI https://github.com/...` returns **403 for every URL**, real or fabricated — verified again this pass against `moodle/moodle` (403) and a control that does not exist (403). It certifies nothing. `gh api repos/{owner}/{name}` is 403 too: this session's GitHub access is scoped to `gmilano/globant-kb`. |
-| **Licence (ground truth)** | 🆕 `curl -sL https://raw.githubusercontent.com/{repo}/{branch}/LICENSE` | 🔴 The search API's `license.spdx_id` is **wrong for ~25% of this base's rows** — it reports `NONE`/`NOASSERTION` for any project that declares its grant in a manifest or ships a non-standard filename. Five rows on this page were recovered from `NOASSERTION` to a real permissive licence this way. |
+| Existence, stars, forks, `archived`, `pushed_at`, `default_branch` | `gh api -X GET search/repositories -f q="repo:owner/name"` | 🔴 `curl -sI https://github.com/...` returns **403 for every URL**, real or fabricated — re-verified again at `p586` against `moodle/moodle` (403) and a control that does not exist (403). **It certifies nothing**, and the standing instruction to verify URLs with `curl -sI` cannot be satisfied in this environment. `gh api repos/{owner}/{name}` is 403 too: this session's GitHub access is scoped. |
+| **Licence (ground truth)** | `curl -sL https://raw.githubusercontent.com/{repo}/{default_branch}/{LICENSE}` | 🔴 The search API's `license.spdx_id` is wrong for ~25% of this base's rows. `p586` recovered six more rows this way. |
+| Discovery of rows the base does not hold | 🆕 `search/repositories -f q="topic:ai-tutor"` / `topic:ai-education` + `sort=stars` | 🔴 Name and description search misses the field. **Eleven of the 38 rows above came from two topic queries** — including the largest. Topic facets are how this industry self-labels. |
 | Description, README claims, maturity warnings | `WebFetch` on the repo page | Slower, and it often declines to name a licence it can see — but it reads prose the API does not expose. |
 
-🆕 **The `raw.githubusercontent.com` channel is new to this base as of `p585`, and it is
-controlled.** It is the only probe tested here that both discriminates *and* returns the
-authoritative licence text:
+🆕 **`NOASSERTION` is not a proxy for "probably permissive", and `p586` is the pass that
+proves it.** `p585` recovered six `NOASSERTION` rows and most came back permissive, which
+invited the inference that the API's blank means "permissive but non-standard filename".
+It does not. This pass:
 
-| probe | real repo + real file | real repo + absent file | repo that does not exist |
+| Row | API said | Licence file says | Direction |
 |---|---|---|---|
-| `raw.githubusercontent.com/...` | 🟢 **`200` + licence text** | `404` | `404` |
-| `github.com/...` (HTML) | `403` | — | `403` |
+| `24kchengYe/human-skill-tree` (587★) | `NOASSERTION` | 🔴 **AGPL-3.0** | **Against** the row |
+| `aaryansamanta/nextgen-ai` (492★) | `NOASSERTION` | 🟡 **MIT — code only** | Partly |
+| `hugohe3/ppt-master` (71,803★) | `MIT` | 🟢 MIT | Confirmed |
+| `DozenTwelve/Papermorph`, `assafkip/claudemy`, `ZeKaiNie/universal-examprep-skill`, `orionsheep/wordlink` | `MIT`/`NOASSERTION` | 🟢 MIT | Confirmed |
+| `artcc/freelingo` (222★) | `AGPL-3.0` | 🔴 AGPL-3.0 | Confirmed |
+| `aaryansamanta/ai-ethos` (498★) | *none* | 🔴 **no file at 6 paths** | Confirmed no grant |
 
-🔴 **Its one limit, stated so the next pass does not over-trust it:** a `404` conflates
-"no `LICENSE` at this path or branch" with "repository does not exist". So it resolves
-licences but must never be used to test existence — pair it with `repo:` search, which
-answers existence and nothing about licences.
+🔴 **So the rule is: read the file in both directions.** A blank API field is an *unknown*,
+and an unknown resolved 587 stars deep turned out to be network copyleft.
 
-🔴 **Two traps that produce false zeros.** (1) OR-batching `repo:` qualifiers is cheap,
-but **one unresolvable qualifier returns `422` for the whole batch**, zeroing every good
-address in it — use single calls. (2) A **renamed** repository is indistinguishable from a
-deleted one by `repo:` search. This pass hit exactly that: `openedx/edx-platform` returns
-`422`, and the live address is
-[`openedx/openedx-platform`](https://github.com/openedx/openedx-platform) (AGPL-3.0,
-8,213★, pushed `2026-11-01`). Resolve a `422` on a repo you expect to exist by searching
-the org for the name before recording it as dead.
+🔴 **Two traps that produce false zeros.** (1) OR-batching `repo:` qualifiers is cheap, but
+**one unresolvable qualifier returns `422` for the whole batch** — use single calls.
+(2) A **renamed** repository is indistinguishable from a deleted one by `repo:` search.
+`p586` hit this twice and resolved both by searching the org for the name:
+`openedx/edx-platform` → [`openedx/openedx-platform`](https://github.com/openedx/openedx-platform),
+and `OpenEduCat/OpenEduCat` → [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp)
+(LGPL-3.0, 903★, default branch `19.0`). **Never record a `422` as dead without an org search.**
 
 ---
 
@@ -124,10 +156,13 @@ the org for the name before recording it as dead.
 
 | Gap | Status | What would close it |
 |---|---|---|
-| `585-A` **Learner simulation is still unlicensed** | Open across 12+ passes | The only real artefact (`Agent4Edu`) has no grant. This is a **BUILD**, not an adopt. |
-| `585-B` **No permissive proctoring *platform*** | Open | `Proctoring-AI` (MIT, 633★) is a component and **~23 months stale** (`2024-12-10`); SafeExamBrowser is MPL-2.0. A studio ships SEB + an agent, not a platform. |
-| `585-C` **`orbit`'s licence is unresolved** | 🆕 Opened this pass | Read `andymatuschak/orbit`'s `LICENSE` in full and identify the instrument, or mark it no-grant. 1,838★ turns on the answer. |
-| `585-D` **`potsie` vs `warren` recommendation is backwards on recency** | 🆕 Opened this pass | This base has recommended `potsie` as "the production-ready alternative to `warren`". Measured `2026-11-01`: **`potsie` last pushed `2024-12-18`** (~23 months), **`warren` `2026-10-31`**. The *maturity* warning on `warren` may still be right, but the recency ranking is inverted and should be restated. |
+| `586-A` **This base has no cross-page reconciliation step, and it is still producing contradictions** | 🆕 **Opened and partly closed this pass** | At `p585`, [`../repos/foundations.md`](../repos/foundations.md) recorded `orbit`'s split licence as *resolved* while this page simultaneously opened `585-C` calling it *unresolved*. **One repo, one pass, two verdicts.** `p585` named the missing reconciliation step as the cause of exactly this class of defect and then committed another instance of it. 🟢 Reconciled here by re-reading the licence text first-hand. 🔴 **The step itself still does not exist** — a `grep` of every curated page for each repo address, run before commit, would close it. |
+| `586-B` **Duplicate gap IDs for one gap** | 🆕 Opened this pass | The absence of a permissive proctoring platform is filed as `585-B` on this page and `585-G` on `foundations.md`. Two IDs, one gap, no link between them. Gap IDs need to be allocated once per base, not once per page. |
+| `586-C` 🆕 **Language learning is an entirely copyleft niche** | 🆕 Opened this pass | Measured `2026-11-01`: `LibreLingo` (2,631★) **archived**, `freelingo` (222★) **AGPL-3.0**, `word-atlas` (3,604★, MIT) is vocabulary-only, `wordlink` (266★, MIT) is vocabulary-only. **There is no permissive general language-learning platform.** A language engagement either accepts AGPL or composes `word-atlas` + `wordlink` + `OpenPronounce` (MIT, pronunciation) over `fsrs` scheduling — which is a **BUILD**. |
+| `585-A` **Learner simulation is still unlicensed** | Open across 13+ passes; re-probed `p586` | The only real artefact (`Agent4Edu`, 100★) has no grant at ten probed paths and is still being pushed. This is a **BUILD**, not an adopt. |
+| `585-B` / `585-G` **No permissive proctoring *platform*** | Open, re-measured `p586` | `Proctoring-AI` (MIT, 633★) is a component and last pushed `2024-12-10` (**~23 months stale**); `SafeExamBrowser` is MPL-2.0 and current (`2026-10-30`). A studio ships SEB + an agent, not a platform. 🔵 Merge these two IDs — see `586-B`. |
+| `585-C` 🟢 **`orbit`'s licence** | 🟢 **CLOSED `p586`** | Licence text read first-hand: Apache-2.0 core, AGPL-3.0-or-later/BUSL-1.1 for `packages/app` + `packages/backend`. Recorded in the block table above and on `foundations.md`. |
+| `585-D` 🟢 **`potsie` vs `warren` recommendation was backwards on recency** | 🟢 **CLOSED `p586` — corrected in place** | Re-measured `2026-11-01`: **`potsie` last pushed `2024-12-18` (~23 months, 11★)**; **`warren` `2026-10-31` (17★)**. This base's standing advice to prefer `potsie` as "the production-ready alternative" is **withdrawn**: it is the stale one. 🔵 `warren`'s own proof-of-concept warning still stands — the honest statement is *neither is production, and `warren` is the only one still maintained*. |
 
 ---
 
@@ -138,8 +173,3 @@ produced the rows above — is preserved at
 [`../archive/2026-11-01-p585-pre-consolidation/agents-top.md`](../archive/2026-11-01-p585-pre-consolidation/agents-top.md).
 Earlier history is in the other `archive/` directories, and the append-only discovery log
 is [`./trending.md`](./trending.md).
-
-🔴 **Why this page was consolidated at `p585`.** It had become a 1,615-line reverse
-chronological changelog of eight passes. The table above is what the page is for; the
-narrative is history and now lives in `archive/`. An engagement lead needs the shelf in one
-screen, not an archaeology of how it was assembled.

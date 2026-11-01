@@ -4,6 +4,93 @@ region: Global
 updated: 2026-11-01
 ---
 
+## 🆕 `p586` — `2026-11-01` — **🟢 THE EDUCATION **ERP** TIER FOUND AND LICENCE-RESOLVED: `openeducat_erp` IS LGPL-3.0, NOT THE `NOASSERTION` THE API REPORTS — AND IT WAS INVISIBLE TO THIS BASE BECAUSE ITS EXPECTED ADDRESS RETURNS `422`. 🔴 THE ERP/SIS TIER HAS **NO** PERMISSIVE OPTION AT ANY SIZE. 🟢 TOPIC-FACET DISCOVERY FINDS A `71,803★` MIT REPO TWENTY PASSES OF NAME SEARCH MISSED.**
+
+### 🟢 The ERP tier — the "Odoo for education" this base never held
+
+The vertical-platform leg has asked for an education ERP for many passes. It exists, and
+the reason it was never filed is that **its expected address is dead**:
+
+| Probe | Result |
+|---|---|
+| `repo:OpenEduCat/OpenEduCat` | 🔴 `422` — indistinguishable from "does not exist" |
+| org search for `openeducat` | 🟢 [`openeducat/openeducat_erp`](https://github.com/openeducat/openeducat_erp) — **903★**, pushed `2026-10-29`, default branch **`19.0`** |
+| API `license.spdx_id` | 🔴 `NOASSERTION` |
+| `raw.githubusercontent.com/openeducat/openeducat_erp/19.0/LICENSE` | 🟢 **`200`** — "OpenEduCat is published under the GNU LESSER GENERAL PUBLIC LICENSE, Version 3" |
+
+🟢 **LGPL-3.0 is the most commercially useful answer this row could have returned.** It is
+**weak copyleft**: a studio's AI module that calls OpenEduCat's API across a module
+boundary **keeps its own licence**, while edits to OpenEduCat's own files must be
+published. So the play is an **AI side-car, never a fork** — and because OpenEduCat is
+built as Odoo modules, that side-car is the standard Odoo extension pattern, not a bespoke
+integration. It covers admissions, fees, attendance, library, hostel and exams on one
+database.
+
+🔵 **Three address traps in one row** — all three were recorded so the next pass does not
+re-pay for them: the owner is **lowercase**, the repo carries an **`_erp` suffix**, and the
+default branch is **`19.0`**, not `main` or `master`. A licence probe against `main` would
+have returned 404 and this row would have been filed as "no grant".
+
+### 🔴 The ERP/SIS tier has no permissive option at any size — measured
+
+| Repo | Licence (from licence file) | Stars | Last push | Tier |
+|---|---|--:|---|---|
+| [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0 (text)** | 903 | `2026-10-29` | Education ERP |
+| [frappe/education](https://github.com/frappe/education) | 🔴 **GPL-3.0 (text)** | 688 | `2026-10-30` | School ERP |
+| [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | 649 | `2026-10-28` | SIS (branch `mobile`) |
+| [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** | 410 | `2026-10-28` | School management — **not** an ERP |
+
+🔴 **So an engagement that needs a system of record for *students and money* has no
+permissive platform to fork.** Gap `586-D`. 🟢 **The usable consequence is still good
+news**: LGPL-3.0 and the Odoo module boundary mean the AI layer stays proprietary without
+a fork — which is the same conclusion the platform tier reached via `XBlock` and `ltijs`,
+arrived at from a different direction.
+
+### 🟢 Topic facets — the discovery channel, and what it returned
+
+Twenty passes of name-and-description search never surfaced the largest education-adjacent
+repo in this field. Two topic queries did:
+
+| Repo | Licence | Stars | Last push | Role |
+|---|---|--:|---|---|
+| [hugohe3/ppt-master](https://github.com/hugohe3/ppt-master) | 🟢 **MIT (text)** | **71,803** | `2026-10-30` | 🔴 **Larger than any repo this base held.** Native PPTX generation — real shapes, transitions, charts, narration. The courseware-generation substrate. |
+| [DozenTwelve/Papermorph](https://github.com/DozenTwelve/Papermorph) | 🟢 **MIT (text)** | 1,040 | `2026-11-01` | Books → animated, narrated, interactive web experiences. |
+| [pguso/agents-from-scratch](https://github.com/pguso/agents-from-scratch) | 🟢 MIT | 1,065 | 🟡 `2026-07-25` | Agents from first principles on a local LLM — a reskilling curriculum. |
+| [Fazmin/AILearningGuide](https://github.com/Fazmin/AILearningGuide) | 🟢 MIT | 242 | `2026-10-31` | 51 hands-on labs: ML, transformers, RAG, agents. |
+| [orionsheep/wordlink](https://github.com/orionsheep/wordlink) | 🟢 **MIT (text)** | 266 | `2026-10-28` | 🟢 A shipped **fine-tuned 1.5B model (SFT+DPO) that runs offline** — the data-residency pattern. |
+
+🔴 **The lesson for this base is procedural, not topical.** A pass that only re-measures
+addresses it already holds cannot find what it is missing, and `p585` measured that 90% of
+discovered addresses had never been filed. **Topic facets cost two API calls.**
+
+### 🟢 Platform-tier licence confirmations — re-read, not re-asserted
+
+`p585` corrected several platform licences; `p586` re-read the licence files rather than
+trusting the correction:
+
+| Repo | API | Licence file | Verdict |
+|---|---|---|---|
+| [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🔴 `NOASSERTION` | 🟢 "Apache License, Version 2.0" | 🟢 **Confirmed Apache-2.0** — permissive platform of record |
+| [learningequality/kolibri](https://github.com/learningequality/kolibri) | `MIT` | 🟢 "MIT License … Learning Equality" | 🟢 **Confirmed MIT** (branch `develop`) |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | `ECL-2.0` | — | 🟢 Confirmed, 1,240★, `2026-10-30` |
+| [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | `AGPL-3.0` | — | 🔴 Confirmed copyleft. **8,213★**, pushed `2026-11-01`. Cite *this* address — the pre-rename `openedx/edx-platform` returns `422`. |
+| [moodle/moodle](https://github.com/moodle/moodle) | `GPL-3.0` | — | 🔴 Confirmed. 7,567★, `2026-10-30` |
+| [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | `AGPL-3.0` | — | 🔴 Confirmed. 6,893★ — 🟡 last push `2026-04-30`, **~6 months**, the slowest of the platforms of record |
+
+🟢 **Four permissive platforms of record stand after re-reading**: Sakai (ECL-2.0),
+OpenOLAT (Apache-2.0), Kolibri (MIT), relate (MIT). `p585`'s correction holds.
+
+### 🔵 Stale-component re-measurements
+
+| Repo | Last push | Age | Note |
+|---|---|---|---|
+| [vardanagarwal/Proctoring-AI](https://github.com/vardanagarwal/Proctoring-AI) | `2024-12-10` | ~23 months | 🔴 MIT, 633★ — still the only permissive proctoring *component*, still stale. Gap `585-B`/`585-G`. |
+| [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) | `2026-10-30` | current | 🔴 MPL-2.0, 361★ — sector standard, file-level copyleft. |
+| [openfun/potsie](https://github.com/openfun/potsie) | `2024-12-18` | ~23 months | 🔴 MIT, 11★ — **this base recommended it over `warren` as "production-ready". Withdrawn.** |
+| [openfun/warren](https://github.com/openfun/warren) | `2026-10-31` | current | 🟡 MIT, 17★ — maintained, but still self-described proof of concept. |
+
+---
+
 ## 🆕 `p585` — `2026-11-01` — **🟢 FOUR PLATFORMS OF RECORD ARE PERMISSIVE AND FORKABLE, NOT ONE: `Sakai` (ECL-2.0), `OpenOLAT` (Apache-2.0), `Kolibri` (MIT), `relate` (MIT) — ALL FOUR READ FROM THEIR OWN LICENCE FILES. 🔴 THIS BASE WAS PUBLISHING TWO CONTRADICTORY LICENCES FOR `OpenOLAT` ON DIFFERENT CURATED PAGES SIMULTANEOUSLY. 🔴 `repos/foundations.md` CONSOLIDATED FROM `1,646` NARRATIVE LINES TO A `51`-ROW TABLE AND THE `40` DEAD `openedx/edx-platform` CITATIONS ARE GONE.**
 
 ### 🔴 The licence contradiction — worse than a missing value

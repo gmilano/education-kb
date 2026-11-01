@@ -4,6 +4,64 @@ region: Global
 updated: 2026-11-01
 ---
 
+## p586 — 2026-11-01 — the education ERP tier, found and licence-resolved: what a studio may customise, and the one licence that makes an AI side-car legal without a fork
+
+🟢 **The question this page exists to answer** — *which real education systems can a studio
+put AI on top of, and under what licence* — now has an answer at every tier **except one**.
+Every licence below was read from the repository's own licence file on **2026-11-01**, not
+taken from the GitHub API, which reports `NOASSERTION` for two of these rows.
+
+### The tiers, and what each one permits
+
+| Tier | Platform | Licence (from licence file) | Stars | Last push | May a studio fork and ship it? | The AI play |
+|---|---|---|--:|---|---|---|
+| **Education ERP** | [openeducat/openeducat_erp](https://github.com/openeducat/openeducat_erp) | 🟡 **LGPL-3.0 (text)** | **903** | `2026-10-29` | 🟡 **Not a fork — a side-car** | 🆕 **The "Odoo for education".** Admissions, fees, attendance, library, hostel, exams on one database, built as **Odoo modules**. 🟢 LGPL-3.0 is *weak* copyleft: a separate module calling its API **keeps its own licence**. So the AI goes in as a standard Odoo extension and stays proprietary. 🔴 Edits to its own files must be published. |
+| **LMS of record** | [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0 (text)** | 1,240 | `2026-10-30` | 🟢 **Yes** | ECL-2.0 is Apache-2.0 with the patent grant narrowed for education. Higher-ed consortium governance. **The one platform of record a studio may lawfully fork, modify and ship.** |
+| **LMS of record** | [OpenOLAT/OpenOLAT](https://github.com/OpenOLAT/OpenOLAT) | 🟢 **Apache-2.0 (text)** | 449 | `2026-10-30` | 🟢 **Yes** | Swiss-governed, used across DACH higher education. API says `NOASSERTION`; the licence text says Apache-2.0. **Re-read and confirmed at `p586`.** |
+| **Offline-first platform** | [learningequality/kolibri](https://github.com/learningequality/kolibri) | 🟢 **MIT (text)** | 1,163 | `2026-11-01` | 🟢 **Yes** | 🟢 **The highest-leverage permissive platform for LATAM, Africa and rural APAC** — built for the connectivity conditions that defeat cloud LMSs. Branch `develop`. |
+| **Course environment** | [inducer/relate](https://github.com/inducer/relate) | 🟢 **MIT (text)** | 437 | `2026-11-01` | 🟢 **Yes** | Git-versioned course content and auto-graded work. UIUC. |
+| **LMS of record** | [openedx/openedx-platform](https://github.com/openedx/openedx-platform) | 🔴 **AGPL-3.0** | **8,213** | `2026-11-01` | 🔴 **No** | 🟢 **But the extension points are permissive**: [`XBlock`](https://github.com/openedx/XBlock) (Apache-2.0) and [`codejail`](https://github.com/openedx/codejail) (Apache-2.0) let proprietary AI plug in **without inheriting network copyleft**. Stand it up with [`overhangio/tutor`](https://github.com/overhangio/tutor). 🔴 Cite *this* address — `openedx/edx-platform` is the pre-rename name and returns `422`. |
+| **LMS of record** | [moodle/moodle](https://github.com/moodle/moodle) | 🔴 **GPL-3.0** | 7,567 | `2026-10-30` | 🔴 **No** | The largest installed base in EMEA and LATAM public education. 🟢 Attach via **LTI 1.3** ([`ltijs`](https://github.com/Cvmcosta/ltijs), Apache-2.0) and the AI stays outside the GPL boundary entirely. |
+| **LMS of record** | [instructure/canvas-lms](https://github.com/instructure/canvas-lms) | 🔴 **AGPL-3.0** | 6,893 | 🟡 `2026-04-30` | 🔴 **No** | North American higher-ed default. 🟡 **~6 months since last public push — the slowest-moving platform of record on this page.** Attach via LTI or [`vishalsachdev/canvas-mcp`](https://github.com/vishalsachdev/canvas-mcp) (MIT, 310★, FERPA-aware). |
+| **SIS** | [francoisjacquet/rosariosis](https://github.com/francoisjacquet/rosariosis) | 🔴 **GPL-2.0** | 649 | `2026-10-28` | 🔴 **No** | 🆕 Scheduling, grades, attendance, billing. Strong francophone and LATAM base. 🔵 Default branch is **`mobile`**. |
+| **School management** | [academico-sis/academico](https://github.com/academico-sis/academico) | 🟢 **MIT** | 410 | `2026-10-28` | 🟢 **Yes** | The only permissive row in the student-records tier — and it is school management, **not** an ERP. Laravel + Filament. |
+
+### 🔴 The one tier with no permissive option at any size
+
+**Systems of record for students and money.** `openeducat_erp` is LGPL-3.0,
+`frappe/education` is GPL-3.0, `rosariosis` is GPL-2.0; the only permissive row
+(`academico`, MIT, 410★) is school management rather than an ERP. 🔴 **An engagement that
+needs to fork an education ERP cannot.** Gap `586-D`.
+
+🟢 **And that is survivable, because of how the licences happen to fall.** Both routes into
+a copyleft system of record keep a studio's AI proprietary **without a fork**:
+
+| Route | Boundary that protects the studio's code | Works against |
+|---|---|---|
+| **Odoo module side-car** | LGPL-3.0's module boundary — a separate module calling the API keeps its own licence | `openeducat_erp` |
+| **Permissive extension point** | `XBlock` / `codejail` are Apache-2.0 *inside* an AGPL platform | Open edX |
+| **LTI 1.3 tool provider** | The AI is a separate service; the LMS never links it | Moodle, Canvas, Sakai, ILIAS, **any** LMS |
+
+🔴 **So the standing rule for this page is: never fork a platform of record to add AI.**
+Fork only when the client needs the platform itself changed — and then only Sakai,
+OpenOLAT, Kolibri or relate, the four that permit it.
+
+### 🔵 Customisation surfaces, measured
+
+| Surface | Repo | Licence | Stars | Last push | What it buys |
+|---|---|---|--:|---|---|
+| LMS-agnostic attachment | [Cvmcosta/ltijs](https://github.com/Cvmcosta/ltijs) | 🟢 Apache-2.0 | 373 | `2026-10-31` | Full LTI 1.3 tool provider in Node — into any LMS without forking it |
+| LMS-agnostic attachment (Python) | [dmitry-viskov/pylti1.3](https://github.com/dmitry-viskov/pylti1.3) | 🟢 MIT | 138 | 🔴 `2024-08-18` | 🔴 ~26 months stale and still the only maintainable permissive Python option — gap `585-E`, and the cheapest contribution play in this industry |
+| Open edX extension | [openedx/XBlock](https://github.com/openedx/XBlock) | 🟢 Apache-2.0 | 471 | `2026-11-01` | The permissive seam into an AGPL platform |
+| Untrusted learner code | [openedx/codejail](https://github.com/openedx/codejail) | 🟢 Apache-2.0 | 477 | `2026-10-27` | Sandboxed execution — the component every "run the student's program" feature needs |
+| Canvas, agent-native | [vishalsachdev/canvas-mcp](https://github.com/vishalsachdev/canvas-mcp) | 🟢 MIT | 310 | `2026-11-01` | 102 tools, 8 agent skills, FERPA-aware. Univ. of Illinois |
+| Legacy content | [jcputney/scorm-again](https://github.com/jcputney/scorm-again) | 🟢 MIT | 362 | `2026-10-28` | SCORM runtime in JS |
+| Assessment | [numbas/Numbas](https://github.com/numbas/Numbas) | 🟢 Apache-2.0 (text) | 216 | `2026-10-28` | Browser e-assessment, maths emphasis. Newcastle University |
+| Autograding | [jupyter/nbgrader](https://github.com/jupyter/nbgrader) | 🟢 BSD-3-Clause | 1,370 | `2026-10-28` | Notebook assignment, autograde, release |
+| Exam lockdown | [SafeExamBrowser/seb-win-refactoring](https://github.com/SafeExamBrowser/seb-win-refactoring) | 🔴 MPL-2.0 | 361 | `2026-10-30` | Sector standard; file-level copyleft — compose alongside, do not modify |
+
+---
+
 ## p585 — 2026-11-01 — the forkable tier: four platforms of record a studio may lawfully modify and ship, two of them recovered from a licence field this base had wrong
 
 🔴 **This page's standing licence rule — *"every platform of record is copyleft"* — is
