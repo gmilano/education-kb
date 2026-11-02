@@ -4,6 +4,120 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p604` — `2026-11-02` — **APPEND-ONLY. 🟢 THE FULL FOUR-ORG APEREO SWEEP, ROW BY ROW: `91` REPOSITORIES ENUMERATED VIA `search/repositories`, `61` GRANTS BYTE-READ AT THE REAL DEFAULT BRANCH, EVERY FABRICATED CONTROL AT `404`. 🟢 STAR COUNTS ARE BACK — THE SEARCH CHANNEL SERVES `stargazers_count` AND `default_branch` WHERE `repos/{owner}/{repo}` RETURNS `403`. 🔴 `30` ROWS HAVE NO GRANT FILE AT ANY RUNG AND ARE NAMED AS SUCH.**
+
+### 🟢 The channel table, run before anything was composed
+
+| channel | result `2026-11-02` |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories` with `org:` / `topic:` | 🟢 **serves `stargazers_count`, `default_branch`, `license.spdx_id`** — `91` org rows + `316` topic candidates |
+| 🟢 fabricated control on the search channel | 🟢 **DISCRIMINATING** — `total_count: 0` against `313` |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 **blocked for this session** — *"GitHub access to this repository is not enabled"* |
+| 🟢 `curl` → `raw.githubusercontent.com/{repo}/{default_branch}/{path}` | 🟢 **`61` grants + `12` READMEs served** |
+| 🟢 fabricated control on `raw` | 🟢 **DISCRIMINATING** — `404 14 B` against `200` |
+| 🔴 **`curl -sI https://github.com/{repo}`** (the run prompt's mandated verifier) | 🔴 **`403` on a real repo AND `403` on a fabricated one** — 🔴 **certifies nothing; carried from `p590`, re-measured today** |
+| 🟢 `git ls-remote --symref` / `git clone --bare --depth 1 --filter=blob:none` | 🟢 **RUNS** — resolves `HEAD` symref **and** gives the committer tz offset, which is this base's region channel |
+| 🟢 fabricated control on the git channel | 🟢 **DISCRIMINATING** — `fatal: could not read Username` against a resolved symref |
+| 🔴 `bash compose/code/**/*.sh` (this base's own controls) | 🔴 🆕 **DENIED** — `[Code from External]`; reimplemented inline |
+| 🟡 `WebSearch` ×8 mandated | 🔴 `1 of 56` tokens new, and it fails the relevance gate — **34th nil** |
+
+🔵 **The mandated verifier is still the weakest instrument in the run prompt.** `curl -sI`
+against `github.com` cannot distinguish a live repository from an invented one in this
+session. 🟢 Every existence claim below rests on `raw` (`200` vs `404 14 B`) and the git
+protocol instead.
+
+### 🟢 `Apereo-Learning-Analytics-Initiative` — all `21` rows, byte-read
+
+| Repo | API `spdx_id` | Grant title line as read | Bytes | Byte-read verdict | API right? |
+| --- | --- | --- | --: | --- | --- |
+| [OpenLRS](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 🔴 `NOASSERTION` | `Educational Community License, Version 2.0` | `11,085` | 🟢 **ECL-2.0** | ❌ |
+| [LAP-Sakai-Extractor](https://github.com/Apereo-Learning-Analytics-Initiative/LAP-Sakai-Extractor) | 🔴 `NOASSERTION` | `Educational Community License, Version 2.0` | `11,085` | 🟢 **ECL-2.0** | ❌ |
+| [OpenDashboard-legacy](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-legacy) | 🔴 `NOASSERTION` | `Educational Community License` | `9,919` | 🟢 **ECL-2.0** | ❌ |
+| [LearningAnalyticsProcessor](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | 🔴 `NOASSERTION` | `Educational Community License` | `9,919` | 🟢 **ECL-2.0** | ❌ |
+| [OpenDashboard-api](https://github.com/Apereo-Learning-Analytics-Initiative/OpenDashboard-api) | 🔴 `NOASSERTION` | `Educational Community License` | `9,919` | 🟢 **ECL-2.0** | ❌ |
+| [OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🔴 `NOASSERTION` | `Educational Community License` | `9,877` | 🟢 **ECL-2.0** | ❌ |
+| [OpenLRW-python-api-client](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW-python-api-client) | 🔴 `NOASSERTION` | `Educational Community License` | `9,877` | 🟢 **ECL-2.0** | ❌ |
+| [lai-event](https://github.com/Apereo-Learning-Analytics-Initiative/lai-event) | 🔴 `NOASSERTION` | `Educational Community License` (🔵 at `LICENSE.md`) | `9,877` | 🟢 **ECL-2.0** | ❌ |
+| [lai-model](https://github.com/Apereo-Learning-Analytics-Initiative/lai-model) | 🔴 `NOASSERTION` | `Educational Community License` | `9,877` | 🟢 **ECL-2.0** | ❌ |
+| [Larissa](https://github.com/Apereo-Learning-Analytics-Initiative/Larissa) | 🟢 `Apache-2.0` | `Apache License` | `11,357` | 🟢 **Apache-2.0** | ✅ |
+| [maven-repo](https://github.com/Apereo-Learning-Analytics-Initiative/maven-repo) | 🟢 `Apache-2.0` | `Apache License` | `11,356` | 🟢 **Apache-2.0** | ✅ |
+| [canvas-matthews-data-loader](https://github.com/Apereo-Learning-Analytics-Initiative/canvas-matthews-data-loader) | 🟢 `Apache-2.0` | `Apache License` | `11,356` | 🟢 **Apache-2.0** | ✅ |
+| [data-loader-library](https://github.com/Apereo-Learning-Analytics-Initiative/data-loader-library) | 🟢 `Apache-2.0` | `Apache License` | `11,356` | 🟢 **Apache-2.0** | ✅ |
+| [LRSLoadTest](https://github.com/Apereo-Learning-Analytics-Initiative/LRSLoadTest) | 🟢 `Apache-2.0` | `Apache License` | `11,323` | 🟢 **Apache-2.0** | ✅ |
+| [SakaiXAPI-Provider](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | 🔴 `NOASSERTION` | 🔴 no grant file, `6` rungs | `0` | 🟡 **ECL-2.0 via `pom.xml`** (`598-A`) — REVIEW | ❌ |
+| `OpenLRW-php-api-client`, `OpenDashboard-ux`, `SakaiXAPI`, `community-dataloaders`, `lai-config`, `SNAPPSociogram-jar` | 🔴 `NOASSERTION` / `-` | 🔴 no grant file at any rung | `0` | 🔴 **NO-PAYLOAD** — `6` rows, named not counted | 🟡 n/a |
+
+### 🔴 `sakaiproject` — the dual grant, and why `3 of 14` is the real payload count
+
+| Repo | API `spdx_id` | Grant title line as read | Bytes | Byte-read verdict | API right? |
+| --- | --- | --- | --: | --- | --- |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 `ECL-2.0` | `Educational Community License, Version 2.0 (ECL-2.0)` | `11,120` | 🟢 **ECL-2.0** | ✅ |
+| [sakaiproject/genericdao](https://github.com/sakaiproject/genericdao) | 🔴 `NOASSERTION` | 🟢 `Licensed using ECL 2.0 and ASL 2.0` | `22,589` | 🟢 **ECL-2.0 AND Apache-2.0** — both full texts | ❌ |
+| [sakaiproject/reflectutils](https://github.com/sakaiproject/reflectutils) | 🟢 `Apache-2.0` | `Apache License` | `11,356` | 🟢 **Apache-2.0** | ✅ |
+| `11` others incl. `sakai-reference`, `sakai-translations`, `nightly-config`, `ecl-license` | 🔴 `-` | 🔴 no grant file at any rung | `0` | 🔴 **NO-PAYLOAD** | 🟡 n/a |
+
+🔵 **`sakaiproject/ecl-license` is itself `NO-PAYLOAD`** — the repository named for the licence
+does not ship one at its root. 🟢 Recorded because it is exactly the row a future pass would
+reach for as a canonical ECL source.
+
+### 🔴 `uPortal-Project` — where the unusable payloads are
+
+🟡 `23 of 26` carry a grant and most are clean `Apache-2.0`. 🔴 The exceptions are the
+instructive part, and two were already held:
+
+| Repo | API | Grant as read | Bytes | Verdict |
+| --- | --- | --- | --: | --- |
+| [FeedbackPortlet](https://github.com/uPortal-Project/FeedbackPortlet) | 🔴 `NOASSERTION` | 🔴 **HTML** — `<!-- saved from url=…Jasig/CalendarPortlet/master/LICENSE -->` | `11,620` | 🔴 🆕 **`604-B` — not a grant. REVIEW** |
+| [CoursesPortlet](https://github.com/uPortal-Project/CoursesPortlet) | 🔴 `NOASSERTION` | `Copyright (c) 2008, News Reader Portlet Development Team` | `1,529` | 🟡 **BSD-3-Clause**, holder names the wrong project (held since `p594`) |
+| [NewsReaderPortlet](https://github.com/uPortal-Project/NewsReaderPortlet) | 🔴 `NOASSERTION` | byte-identical to the above (`sha256 fb028d0d…`) | `1,529` | 🟡 **BSD-3-Clause** (held) |
+
+### 🟡 `apereo` — `30` rows, `0` ECL, and the one row that carries two grants
+
+🔵 The consortium org is the **Apache-2.0 heartland**: `21` payloads read, **`18`** opening
+`Apache License`, including [`apereo/cas`](https://github.com/apereo/cas) (`11,392★`, pushed
+`2026-11-02`), [`apereo/phpCAS`](https://github.com/apereo/phpCAS) (`800★`) and
+[`apereo/dotnet-cas-client`](https://github.com/apereo/dotnet-cas-client) (`230★`, 🔵 whose
+payload is `10,352 B` and begins with a **UTF-8 BOM** before the title — a third way a
+title-anchored reader can miss, after `604-C`'s `====` and `h5pxapikatchu`'s absent title).
+🟢 **The API is right about all `18`.** The three that are not plain:
+
+| Repo | API | Grant as read | Bytes | Verdict |
+| --- | --- | --- | --: | --- |
+| [apereo/java-cas-client](https://github.com/apereo/java-cas-client) | 🔴 `NOASSERTION` | 🔴 opens `====`; **two** grants — Apache-2.0 by reference (Apereo), then `License for Use` BSD-3-Clause (`JA-SIG, Inc.`, 2007) | `2,321` | 🟢 **Apache-2.0 AND BSD-3-Clause** — 🔴 `604-C`: this base recorded only the first |
+| [apereo/oss-rubric](https://github.com/apereo/oss-rubric) | 🟡 `CC-BY-4.0` | `Attribution 4.0 International` — a **content** licence, not a software grant | `18,650` | 🟡 Correct as read; flagged so it is never counted as permissive *software* |
+| [apereo/apereo.github.io](https://github.com/apereo/apereo.github.io) | 🟢 `MIT` | 🔵 `Copyright (c) 2014-2018 **John Otander**` — a third-party holder, not Apereo | `1,228` | 🟢 **MIT**, and a reminder that an org's site repo often carries an **inherited theme's** grant |
+
+### 🟡 Topic axes — `316` candidates, and the honest yield
+
+🔵 `12` topic axes ran (`intelligent-tutoring-system`, `autograder`, `learning-analytics`,
+`lti-tool`, `moodle-plugin`, `edtech`, `education-ai`, `ai-tutor`, `qti`, `xapi`,
+`student-information-system`, `grading`). 🔴 **`316` candidates produced `5` promotable rows.**
+
+🔵 **The shape of the miss is the finding, and it confirms `598-B`.** The permissive,
+recently-pushed, not-yet-held set is dominated by **coursework and one-off student
+projects** — `0★`–`2★` repos named `piscine-dotnet`, `oop-json-viewer`, `lab-autograder`,
+`premoulinette`. 🟢 They are real repositories with real MIT grants and they are **not
+findings**; padding this shelf with them would be the exact failure the run prompt names.
+🔴 **Saturation is in the high-star bands**: no axis returned an unheld repository above
+`28★`.
+
+### 🔴 LATAM, stated as a gap rather than left silent
+
+🔴 **No LATAM row was promoted this pass.** The region's legs paid `8/8` tokens and the
+Spanish/Portuguese axes (`topic:educacion`, `topic:educacao`, `educación inteligencia
+artificial`, `educacao IA professor`) returned **`~60` repositories of which essentially all
+are student coursework, portfolios and course notes.** 🟢 The one substantial platform family
+they surfaced — [`portabilis/i-educar`](https://github.com/portabilis/i-educar) (GPL-2.0,
+`723★`) and [`portabilis/i-diario`](https://github.com/portabilis/i-diario) (AGPL-3.0,
+`117★`) — is **already held**, including the `p319` finding that `i-diario`'s grant is written
+in Portuguese (`LICENÇA PÚBLICA GERAL AFFERO GNU`), which is why the API reports
+`NOASSERTION` for it.
+
+🔵 **So the informed gap is specific:** LATAM's open-source education supply is **deployed
+platforms under copyleft**, not permissive agent components, and this base already holds the
+important ones. 🟢 The next LATAM yield will come from **national/official data sources**
+(the `bncc-dev/bncc-pacotes` shape) rather than from repository search.
+
 ## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE WEEK'S SUPPLY SIGNAL IS NOT ON THE WEB, IT IS IN THIS BASE'S OWN `evidence/` DIRECTORY: A `167`-PASS-OLD PROMOTION BACKLOG RE-PROBED REPO-BY-REPO — `108` REAL ADDRESSES, `86` GRANT-CLEAN, `46` PROMOTED ACROSS THREE SHELVES. 🔴 `p602` SIZED THAT BACKLOG AT `44`. 🔴 AND `2` OF ITS ROWS ARE NOT REPOSITORIES AT ALL — THEY ARE THIS BASE'S OWN FILE PATHS, CARRIED AS WORK-TO-DO SINCE `p436`. 🔴 `603-C`: THE SHARED PROBE LIBRARY READS THE README AT **ONE SPELLING**, AND `5.7 %` OF REPOSITORIES ARE INVISIBLE TO IT.**
 
 ### 🔴 The ledger admitted two of this base's own file paths as repository addresses

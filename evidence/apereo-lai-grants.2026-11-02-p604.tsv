@@ -1,0 +1,22 @@
+repo	api_spdx	branch	grant_path	bytes	stars	ecl_hits	apache_hits	title_line
+OpenLRW	NOASSERTION	master	LICENSE	9877	62	ECL=2	APA=0	Educational Community License
+OpenDashboard-legacy	NOASSERTION	master	LICENSE	9919	47	ECL=2	APA=0	Educational Community License
+OpenLRS	NOASSERTION	master	LICENSE	11085	47	ECL=6	APA=0	Educational Community License, Version 2.0
+LearningAnalyticsProcessor	NOASSERTION	master	LICENSE	9919	23	ECL=2	APA=0	Educational Community License
+SakaiXAPI-Provider	NOASSERTION	master	NO-PAYLOAD	0	11	ECL=0	APA=0	-
+Larissa	Apache-2.0	master	LICENSE	11357	8	ECL=0	APA=4	                                 Apache License
+LAP-Sakai-Extractor	NOASSERTION	master	LICENSE	11085	2	ECL=6	APA=0	Educational Community License, Version 2.0
+OpenLRW-php-api-client	-	master	NO-PAYLOAD	0	2	ECL=0	APA=0	-
+OpenLRW-python-api-client	NOASSERTION	master	LICENSE	9877	1	ECL=2	APA=0	Educational Community License
+LRSLoadTest	Apache-2.0	master	LICENSE	11323	1	ECL=0	APA=4	Apache License
+lai-event	NOASSERTION	master	LICENSE.md	9877	1	ECL=2	APA=0	Educational Community License
+OpenDashboard-ux	-	master	NO-PAYLOAD	0	1	ECL=0	APA=0	-
+SakaiXAPI	-	master	NO-PAYLOAD	0	1	ECL=0	APA=0	-
+maven-repo	Apache-2.0	master	LICENSE	11356	0	ECL=0	APA=4	                                 Apache License
+community-dataloaders	-	master	NO-PAYLOAD	0	0	ECL=0	APA=0	-
+OpenDashboard-api	NOASSERTION	master	LICENSE	9919	0	ECL=2	APA=0	Educational Community License
+lai-model	NOASSERTION	master	LICENSE	9877	0	ECL=2	APA=0	Educational Community License
+SNAPPSociogram-jar	-	master	NO-PAYLOAD	0	0	ECL=0	APA=0	-
+canvas-matthews-data-loader	Apache-2.0	master	LICENSE	11356	0	ECL=0	APA=4	                                 Apache License
+data-loader-library	Apache-2.0	master	LICENSE	11356	0	ECL=0	APA=4	                                 Apache License
+lai-config	-	master	NO-PAYLOAD	0	0	ECL=0	APA=0	-

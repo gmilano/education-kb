@@ -4,6 +4,61 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p604` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PLATFORM FINDING OF THIS PASS IS A LICENCE ONE: THE APEREO STACK — SAKAI, uPORTAL, CAS, AND THE WHOLE LEARNING-ANALYTICS TIER — IS THE DEEPEST POOL OF **INSTITUTION-GRADE PERMISSIVE** EDUCATION SOFTWARE, AND A DEPENDENCY SCREEN READING `spdx_id` REJECTS `10 of 11` OF ITS ECL-2.0 REPOSITORIES AS UNLICENSED. 🟢 MEASURED ACROSS `91` REPOSITORIES, `61` GRANTS BYTE-READ.**
+
+### 🟢 Why this is a platform row and not only a methodology note
+
+🔵 The platforms on this shelf are the systems a client **already runs**. 🟢 The Apereo
+family is the part of that estate that is *permissively licensed*, which makes it the part
+Globant can extend and redistribute rather than merely integrate with:
+
+| Platform | Grant (byte-read `2026-11-02`) | What an institution runs it for |
+| --- | --- | --- |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | 🟢 **ECL-2.0** (`11,120 B`, `master`) | A full LMS — the open alternative to Canvas/Blackboard in higher ed |
+| [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | 🟢 **Apache-2.0** (`11,359 B`, `master`, `287★`) | The campus portal layer — where a student actually lands |
+| [apereo/cas](https://github.com/apereo/cas) | 🟢 **Apache-2.0** (`11,358 B`, `11,392★`, pushed `2026-11-02`) | 🟢 **Single sign-on.** The most actively maintained row in the family and the one every AI feature must authenticate through |
+| [Apereo-LAI/OpenLRS](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 🟢 **ECL-2.0** (`11,085 B`) 🔴 API: `NOASSERTION` | An **xAPI learning-record store** — the system of record for learner interaction data |
+| [Apereo-LAI/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🟢 **ECL-2.0** (`9,877 B`) 🔴 API: `NOASSERTION` | The learning-record **warehouse** above the LRS |
+| [Apereo-LAI/LearningAnalyticsProcessor](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | 🟢 **ECL-2.0** (`9,919 B`) 🔴 API: `NOASSERTION` | The batch **processing tier** that turns records into risk/engagement signals |
+
+🔴 **The commercial consequence, stated plainly.** 🟢 **ECL-2.0 is Apache-2.0 with the patent
+grant narrowed to education use** — permissive, commercially usable, and written by this
+sector for itself. 🔴 But it is rare enough that licence scanners do not model it: the GitHub
+API returns `NOASSERTION` for `10 of the 11` ECL-2.0 repositories in the Apereo orgs, and a
+procurement or OSS-review gate wired to `spdx_id` will therefore mark **Sakai's entire
+analytics stack as unlicensed and block it.** 🟡 The fix is a one-line allowlist entry, and
+the cost of not having it is an engagement losing access to the only open learning-analytics
+tier that exists at institutional grade.
+
+### 🟡 The dormancy caveat, because the shelf should not oversell it
+
+| | |
+| --- | --- |
+| 🟢 live and actively maintained | `apereo/cas` (`2026-11-02`), `sakaiproject/sakai` (`2026-10-30`), the `uPortal-Project` portlets (most pushed `2026-10`) |
+| 🟡 reference-grade, not live | the **Learning Analytics Initiative** tier — newest HEAD in the org is `2025-09-12`, most rows `2017`–`2020` |
+
+🔵 So the honest recipe is: **run the live tier, read the dormant one.** The LAI repositories
+are the best available specification of the education-analytics data model (`lai-event`,
+`lai-model`) and should be treated as a schema source rather than an upstream dependency.
+
+### 🟢 New platform-adjacent rows this pass
+
+| Platform / tool | Grant (byte-read) | Branch | Region | Role |
+| --- | --- | --- | --- | --- |
+| [cloudpedagogy/cloudpedagogy-moodle-course-auditor](https://github.com/cloudpedagogy/cloudpedagogy-moodle-course-auditor) | 🟢 **MIT** (`1,069 B`) | `main` | EMEA | 🟢 Audits **Moodle `.mbz` backups** offline. 🔵 The migration/quality tool for the single most-deployed LMS on this shelf, and it needs **no credentials on the live instance** |
+| [ucfopen/quiz-extensions](https://github.com/ucfopen/quiz-extensions) | 🟢 **MIT** (`1,129 B`) | `master` | North America | A **Canvas** LTI tool for bulk quiz-time accommodations — published by a university, in production at one |
+| [tl-its-umich-edu/instructor-tools](https://github.com/tl-its-umich-edu/instructor-tools) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | North America | LTI-launched instructor tooling from **University of Michigan** — the pattern for adding a tool to an LMS an institution already runs |
+| [otacke/h5pxapikatchu](https://github.com/otacke/h5pxapikatchu) | 🟢 **MIT** (`1,051 B`) | `master` | EMEA | Turns a **WordPress + H5P** estate into an xAPI data source — the cheapest on-ramp from content to measurement |
+
+🔵 **A note on `ucfopen` as a publisher.** The org holds `65` repositories, and its licence
+posture splits sharply: 🟢 the **LTI tooling and API clients are MIT**
+([`canvasapi`](https://github.com/ucfopen/canvasapi), `681★`), while 🔴 the **learning-content
+platforms are copyleft** — [`Obojobo`](https://github.com/ucfopen/Obojobo) and
+[`Materia`](https://github.com/ucfopen/Materia) are **AGPL-3.0**, and
+[`UDOIT`](https://github.com/ucfopen/UDOIT) (the accessibility checker, `117★`) is
+**GPL-3.0**. 🟢 **The same split this base has recorded globally holds inside a single
+university's org: the integration layer is permissive, the platform is copyleft.**
+
 ## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `11` PLATFORMS PROMOTED OUT OF THE `p436` BACKLOG, EVERY GRANT BYTE-READ AT THE REAL DEFAULT BRANCH, EVERY CONTROL AT `404`. 🟢 THE BEST OF THEM IS A **LATAM** ROW THIS BASE HAD CLAIMED IN `trending` AND NEVER SHELVED: BRAZIL'S **BNCC NATIONAL CURRICULUM** AS AN `npm` PACKAGE, A `PyPI` PACKAGE AND AN **MCP SERVER** — `1,721` VERIFIED LEARNING OBJECTIVES. 🔴 AND IT CARRIES A **SPLIT-SCOPE GRANT WHOSE SECOND HALF IS IN A SUBDIRECTORY**: A ROOT-ONLY READ PUBLISHES "MIT" FOR A PAYLOAD THAT IS CC BY 4.0. 🔴 `603-E`: THE `14` BACKLOG REPOS WITH **NO GRANT AT ALL** ARE NOT RANDOM — `9` OF THEM ARE FRANCOPHONE OR INDONESIAN SCHOOL APPS.**
 
 ### 🔴 The BNCC split-scope grant, read to the bottom because the top is misleading

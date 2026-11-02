@@ -4,6 +4,156 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p604` — reads `2026-11-02`, commit `2026-11-02` — four recipes (`P-604-A`…`P-604-D`), every component grant byte-read at its real default branch with a fabricated-path control at `404`
+
+🔵 **What is new about this pass's recipes.** `p603`'s patterns wired agents *into* an LMS
+through connectors. 🟢 **These four sit on the layers underneath**: the identity tier an AI
+feature must authenticate through, the analytics tier that already holds the learner data, and
+the assessment-interchange format that makes a question bank portable. 🔴 They exist because
+this pass's supply is an **institutional stack** (`11` ECL-2.0 repos, `5` Apereo-LAI Apache
+rows, a `4`-repo QTI toolchain), not a set of standalone agents.
+
+### 🟢 Component grants, all byte-read `2026-11-02` at the real default branch
+
+| component | grant | bytes | branch | control |
+| --- | --- | --: | --- | --- |
+| [apereo/cas](https://github.com/apereo/cas) | Apache-2.0 | `11,358` | `master` | `404` |
+| [uPortal-Project/uPortal](https://github.com/uPortal-Project/uPortal) | Apache-2.0 | `11,359` | `master` | `404` |
+| [sakaiproject/sakai](https://github.com/sakaiproject/sakai) | ECL-2.0 | `11,120` | `master` | `404` |
+| [Apereo-LAI/OpenLRS](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRS) | 🔴 ECL-2.0 (API: `NOASSERTION`) | `11,085` | `master` | `404` |
+| [Apereo-LAI/OpenLRW](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW) | 🔴 ECL-2.0 (API: `NOASSERTION`) | `9,877` | `master` | `404` |
+| [Apereo-LAI/LearningAnalyticsProcessor](https://github.com/Apereo-Learning-Analytics-Initiative/LearningAnalyticsProcessor) | 🔴 ECL-2.0 (API: `NOASSERTION`) | `9,919` | `master` | `404` |
+| [Apereo-LAI/lai-event](https://github.com/Apereo-Learning-Analytics-Initiative/lai-event) | 🔴 ECL-2.0 (API: `NOASSERTION`) | `9,877` | `master` (`LICENSE.md`) | `404` |
+| [Apereo-LAI/lai-model](https://github.com/Apereo-Learning-Analytics-Initiative/lai-model) | 🔴 ECL-2.0 (API: `NOASSERTION`) | `9,877` | `master` | `404` |
+| [Apereo-LAI/data-loader-library](https://github.com/Apereo-Learning-Analytics-Initiative/data-loader-library) | Apache-2.0 | `11,356` | `master` | `404` |
+| [Apereo-LAI/canvas-matthews-data-loader](https://github.com/Apereo-Learning-Analytics-Initiative/canvas-matthews-data-loader) | Apache-2.0 | `11,356` | `master` | `404` |
+| [sakaiproject/genericdao](https://github.com/sakaiproject/genericdao) | ECL-2.0 **AND** Apache-2.0 | `22,589` | `master` | `404` |
+| [LtiLibrary/LtiAdvantageTool](https://github.com/LtiLibrary/LtiAdvantageTool) | MIT | `1,067` | `master` | `404` |
+| [ucfopen/quiz-extensions](https://github.com/ucfopen/quiz-extensions) | MIT | `1,129` | `master` | `404` |
+| [tl-its-umich-edu/instructor-tools](https://github.com/tl-its-umich-edu/instructor-tools) | Apache-2.0 | `11,356` | `main` | `404` |
+| [cloudpedagogy/cloudpedagogy-moodle-course-auditor](https://github.com/cloudpedagogy/cloudpedagogy-moodle-course-auditor) | MIT | `1,069` | `main` | `404` |
+| [otacke/h5pxapikatchu](https://github.com/otacke/h5pxapikatchu) | MIT | `1,051` | `master` | `404` |
+| [metyatech/markdown-to-qti](https://github.com/metyatech/markdown-to-qti) | MIT | `1,065` | `main` | `404` |
+| [metyatech/qti-xml-core](https://github.com/metyatech/qti-xml-core) | MIT | `1,056` | `main` | `404` |
+| [metyatech/apply-to-qti-results](https://github.com/metyatech/apply-to-qti-results) | MIT | `1,070` | `main` | `404` |
+| [metyatech/qti-reporter](https://github.com/metyatech/qti-reporter) | ISC | `740` | `main` | `404` |
+| [UKGovernmentBEIS/inspect_ai](https://github.com/UKGovernmentBEIS/inspect_ai) | MIT | `1,081` | `main` | `404` |
+
+---
+
+### 🟢 `P-604-A` — Learning analytics on data the institution already has, on a stack its own compliance tool calls unlicensed
+
+🔵 **The situation.** A university runs Sakai or Canvas and has years of interaction data it
+does not analyse. 🔴 The open analytics tier for exactly this exists — and the client's
+OSS-review gate blocks it, because the GitHub API reports `NOASSERTION` for every repository
+in it (`604-A`).
+
+**Wiring.**
+
+1. 🟢 **Clear the licence first — it is a one-day deliverable.** Byte-read the grants and hand
+   the client the census: `OpenLRS`, `OpenLRW`, `LearningAnalyticsProcessor`, `lai-event`,
+   `lai-model` are **ECL-2.0** = *Apache-2.0 with the patent grant narrowed to education use*.
+   🔵 Use [`../evidence/api-vs-byteread-ecl.2026-11-02-p604.tsv`](../evidence/api-vs-byteread-ecl.2026-11-02-p604.tsv)
+   as the artifact. 🔴 Add `ECL-2.0` to the dependency allowlist; without this step the rest
+   of the recipe cannot be deployed.
+2. 🟢 **Model the events against `lai-event` + `lai-model`** rather than inventing a schema.
+   🟡 These are `2019`–`2020` and dormant — treat them as a **specification**, not an upstream.
+3. 🟢 **Ingest** via `data-loader-library`, using `canvas-matthews-data-loader` as the worked
+   example of the SIS/LMS-extract seam.
+4. 🟢 **Store** xAPI statements in `OpenLRS`; warehouse them in `OpenLRW` (there is a Python
+   client, `OpenLRW-python-api-client`, so an agent can read learner records directly).
+5. 🟢 **Authenticate every surface through [`apereo/cas`](https://github.com/apereo/cas)** —
+   Apache-2.0, `11,392★`, pushed `2026-11-02`, the liveliest row in the family. An analytics
+   dashboard that bypasses campus SSO will not pass review.
+6. 🔴 **Gate the model's accuracy** with [`UKGovernmentBEIS/inspect_ai`](https://github.com/UKGovernmentBEIS/inspect_ai)
+   before any risk score reaches an advisor. A "student at risk" claim is a high-stakes output.
+
+🟡 **The honest caveat.** The LAI tier's newest commit is `2025-09-12`. 🟢 Globant's value here
+is **carrying it forward** — the schema and the loaders are sound and the licence is
+permissive, so forking is both legal and sensible. 🔴 Do not sell it as a live upstream.
+
+---
+
+### 🟢 `P-604-B` — A portable assessment pipeline: Markdown in, QTI 3.0 out, human releases the marks
+
+🔵 **The situation.** AI item generation is easy and the output is usually trapped in one
+vendor's quiz format. **QTI 3.0** is the 1EdTech interchange standard that makes an item bank
+portable between an LMS, a proctoring tool and a generator — and open tooling for it is scarce.
+
+**Wiring.**
+
+1. 🟢 **Author** items as Markdown; `markdown-to-qti` emits a QTI package.
+2. 🟢 **Generate** candidate items with an LLM *into that Markdown shape* — the model never
+   touches XML, which removes the whole class of malformed-package failures.
+3. 🟢 **Validate / manipulate** with `qti-xml-core`, the library the rest of the chain uses.
+4. 🟢 **Deliver** through the LMS, which consumes standard QTI — no bespoke integration.
+5. 🟢 **Mark**: an AI grader writes scores via `apply-to-qti-results` into
+   `assessmentResult` XML. 🔴 **Write them as drafts.** Pair this with the
+   `toshieji/moodle-grading-mcp` posture this base already holds — *the LLM decides, a human
+   releases* — because Ofqual's marking principles (EMEA) make an unreviewed automated grade a
+   regulatory problem, not just a quality one.
+6. 🟢 **Report** with `qti-reporter`: per-respondent HTML plus an aggregate `report.csv`,
+   honouring `qti-time-limits@max-time`.
+7. 🟢 **Adapt** an existing LMS's exports in with `tracklms-to-qti-results`.
+
+🟡 **The honest caveat, stated once.** The whole `metyatech` chain is **one small org at
+`0`–`2★`**. 🟢 It is worth building on because the **standard** is the durable asset and the
+code is MIT/ISC and byte-read — but assume you will maintain a fork, and budget for it.
+
+---
+
+### 🟢 `P-604-C` — An instructor-facing agent that launches from inside the LMS, built from two university reference implementations
+
+🔵 **The situation.** Faculty will not adopt a separate tool with a separate login. The
+integration contract is **LTI 1.3 / LTI Advantage**, and getting its security framework wrong
+is the usual reason a pilot dies in review.
+
+**Wiring.**
+
+1. 🟢 **Start from [`LtiLibrary/LtiAdvantageTool`](https://github.com/LtiLibrary/LtiAdvantageTool)**
+   (MIT, ASP.NET Core 10) — it demonstrates dynamic registration, OIDC third-party login
+   initiation, resource-link launch validated against the **LTI 1.3 Security Framework**, and
+   signed deep-linking responses. 🔵 Read it before writing launch code, whatever your stack.
+2. 🟢 **Copy the product shape from `ucfopen/quiz-extensions`** — a *single*, self-service
+   faculty job (bulk quiz-time accommodations) done completely. 🔵 It is in production at a
+   university, which is why it is a better template than a demo.
+3. 🟢 **Copy the app skeleton from `tl-its-umich-edu/instructor-tools`** (Apache-2.0,
+   Django + compiled frontend, Docker dev mode) — and note its posture: **LTI-launch only**.
+   That is the integration decision, not a limitation.
+4. 🟢 **Add the agent** behind an explicit tool surface, and keep the agent's repository
+   **separate and permissive** from any copyleft platform you read.
+5. 🔴 **Scope the LTI service claims to the minimum** (names-and-roles, assignment-and-grade)
+   and write grades back **as drafts** per `P-604-B` step `5`.
+6. 🔴 **Before building a connector, check it does not already exist and is not deprecated.**
+   `604-G`: `ucfopen/lti-template-flask-oauth-tokens` looks live on every metric and its README
+   line `1` is `# DEPRECATED`, naming `ucfopen/cookiecutter-python-lti` as successor.
+
+---
+
+### 🟢 `P-604-D` — Audit and instrument a Moodle estate without credentials on the live instance
+
+🔵 **The situation.** The fastest way to stall an engagement is to ask for admin access to a
+production LMS in week one. 🟢 Both halves of this recipe avoid that entirely.
+
+**Wiring.**
+
+1. 🟢 **Audit offline.** `cloudpedagogy/cloudpedagogy-moodle-course-auditor` (MIT) reads Moodle
+   **`.mbz` course backups** — a file the client can already export — and produces audit
+   reports, dashboards, content maps, settings reports and before/after comparisons.
+   🟢 **It reads the backup without modifying it**, so there is no write path to argue about.
+2. 🟢 **Use the audit as the engagement's baseline**: which courses are thin, which are
+   inconsistent, where AI content support actually pays.
+3. 🟢 **Instrument what is already emitting data.** Where the estate includes WordPress + H5P,
+   `otacke/h5pxapikatchu` (MIT) captures the **xAPI statements H5P already sends** into a
+   database with filtering and CSV export. 🔵 H5P is pervasive in European schools and this
+   data is normally discarded.
+4. 🟢 **Route those statements into `OpenLRS`** (`P-604-A`) so content interaction and course
+   structure land in one model.
+5. 🔴 **Only then** ask for live access, with a measured case for what it buys.
+
+🔵 **Why this one is the usual opener.** It needs a file export and nothing else, it produces a
+client-legible artifact in days, and it ends with the data foundation `P-604-A` requires.
+
 ## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — four recipes (`P-603-A`…`P-603-D`), every component grant byte-read at its real default branch with a per-repo fabricated-path control at `404`
 
 🔵 **What is new about this pass's recipes.** `p602`'s patterns wrote *into* systems an

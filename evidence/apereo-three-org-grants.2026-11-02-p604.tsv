@@ -1,0 +1,71 @@
+repo	api_spdx	branch	grant_path	bytes	stars	pushed	title_line
+apereo/apereo-redirector	-	master	NO-PAYLOAD	0	0	2020-03-30	-
+apereo/apereo.github.io	MIT	master	LICENSE.txt	1228	11	2026-10-24	Copyright (c) 2014-2018 John Otander
+apereo/cas	Apache-2.0	master	LICENSE	11358	11392	2026-11-02	                                 Apache License
+apereo/cas-bootadmin-overlay	Apache-2.0	master	LICENSE	11357	20	2021-02-09	                                 Apache License
+apereo/cas-configserver-overlay	Apache-2.0	master	LICENSE.txt	11358	33	2026-11-01	                                 Apache License
+apereo/cas-discoveryserver-overlay	-	master	NO-PAYLOAD	0	3	2021-02-15	-
+apereo/cas-gradle-overlay-template	Apache-2.0	master	LICENSE	11357	71	2018-07-27	                                 Apache License
+apereo/cas-initializr	Apache-2.0	master	LICENSE.txt	11358	22	2026-11-01	                                 Apache License
+apereo/cas-management	Apache-2.0	7.0.x	LICENSE	11358	59	2025-03-19	                                 Apache License
+apereo/cas-management-gradle-overlay	Apache-2.0	master	LICENSE	11357	6	2018-11-01	                                 Apache License
+apereo/cas-sample-java-webapp	-	master	NO-PAYLOAD	0	4	2022-06-26	-
+apereo/cas-sample-python-webapp	Apache-2.0	master	LICENSE	11357	13	2022-06-26	                                 Apache License
+apereo/cas-server-security-filter	Apache-2.0	master	LICENSE	11358	15	2019-08-10	                                 Apache License
+apereo/cas-webapp-docker	Apache-2.0	master	LICENSE	11357	114	2019-05-06	                                 Apache License
+apereo/dotnet-cas-client	Apache-2.0	master	LICENSE.txt	10352	230	2022-05-09	﻿                                 Apache License
+apereo/dotnet-cas-client-memcached	Apache-2.0	master	LICENSE.txt	11357	0	2021-04-29	                                 Apache License
+apereo/dotnet-cas-client-mssql	Apache-2.0	master	LICENSE.txt	11357	1	2019-04-17	                                 Apache License
+apereo/dotnet-cas-client-redis	Apache-2.0	master	LICENSE.txt	11357	2	2021-07-02	                                 Apache License
+apereo/heosat	-	main	NO-PAYLOAD	0	0	2026-09-30	-
+apereo/java-cas-client	NOASSERTION	master	LICENSE	2321	948	2026-10-30	====
+apereo/mod_auth_cas	-	master	NO-PAYLOAD	0	150	2026-05-27	-
+apereo/oauth2-sample-java-webapp	-	master	NO-PAYLOAD	0	11	2022-06-26	-
+apereo/oidc-sample-java-webapp	-	master	NO-PAYLOAD	0	2	2022-12-16	-
+apereo/openid-sample-java-webapp	-	master	NO-PAYLOAD	0	0	2022-06-26	-
+apereo/oss-rubric	CC-BY-4.0	main	LICENSE	18650	3	2024-02-01	Attribution 4.0 International
+apereo/person-directory	Apache-2.0	master	LICENSE	11358	29	2024-03-29	                                 Apache License
+apereo/phpCAS	Apache-2.0	master	LICENSE	11357	800	2026-06-30	                                 Apache License
+apereo/saml2-sample-java-webapp	Apache-2.0	master	LICENSE	11357	9	2023-02-24	                                 Apache License
+apereo/springsecurity-bootiful-cas-client	-	master	NO-PAYLOAD	0	7	2022-06-26	-
+apereo/wsfed-sample-java-webapp	Apache-2.0	master	LICENSE	11357	3	2025-04-23	                                 Apache License
+sakaiproject/.github	-	master	NO-PAYLOAD	0	0	2020-04-28	-
+sakaiproject/ecl-license	-	master	NO-PAYLOAD	0	0	2015-06-26	-
+sakaiproject/genericdao	NOASSERTION	master	LICENSE	22589	4	2025-10-01	Licensed using ECL 2.0 and ASL 2.0
+sakaiproject/nightly-config	-	master	NO-PAYLOAD	0	5	2026-10-28	-
+sakaiproject/reflectutils	Apache-2.0	master	LICENSE	11356	0	2026-06-11	                                 Apache License
+sakaiproject/sakai	ECL-2.0	master	LICENSE	11120	1240	2026-10-30	Educational Community License, Version 2.0 (ECL-2.0)
+sakaiproject/sakai-documentation	-	master	NO-PAYLOAD	0	11	2023-07-02	-
+sakaiproject/sakai-maven-plugin	-	master	NO-PAYLOAD	0	0	2020-10-20	-
+sakaiproject/sakai-reference	-	master	NO-PAYLOAD	0	16	2026-10-27	-
+sakaiproject/sakai-release	-	master	NO-PAYLOAD	0	3	2018-07-26	-
+sakaiproject/sakai-stress-test	-	master	NO-PAYLOAD	0	11	2017-11-29	-
+sakaiproject/sakai-translations	-	master	NO-PAYLOAD	0	0	2025-11-10	-
+sakaiproject/sakai-wicket-maven-archetype	-	master	NO-PAYLOAD	0	2	2021-04-12	-
+sakaiproject/www.sakailms.org	-	main	NO-PAYLOAD	0	0	2026-10-22	-
+uPortal-Project/AnnouncementsPortlet	Apache-2.0	master	LICENSE	11357	6	2026-10-26	                                 Apache License
+uPortal-Project/BookmarksPortlet	Apache-2.0	master	LICENSE	11359	4	2026-09-21	                                 Apache License
+uPortal-Project/CalendarPortlet	Apache-2.0	master	LICENSE	11358	15	2026-10-16	                                 Apache License
+uPortal-Project/CardWebComponents	Apache-2.0	master	LICENSE	11357	3	2026-10-30	                                 Apache License
+uPortal-Project/CoursesPortlet	NOASSERTION	master	LICENSE	1529	12	2026-10-29	Copyright (c) 2008, News Reader Portlet Development Team
+uPortal-Project/FeedbackPortlet	NOASSERTION	master	LICENSE	11620	2	2026-10-22	<!-- saved from url=(0059)https://raw.github.com/Jasig/CalendarPortlet/master/LICENSE -->
+uPortal-Project/JasigWidgetPortlets	Apache-2.0	master	LICENSE	11359	6	2026-10-30	                                 Apache License
+uPortal-Project/NewsReaderPortlet	NOASSERTION	master	LICENSE	1529	11	2026-10-25	Copyright (c) 2008, News Reader Portlet Development Team
+uPortal-Project/NotificationPortlet	Apache-2.0	master	LICENSE	10175	3	2026-10-29	                                 Apache License
+uPortal-Project/SimpleContentPortlet	Apache-2.0	master	LICENSE	11359	3	2026-10-30	                                 Apache License
+uPortal-Project/WebproxyPortlet	Apache-2.0	master	LICENSE	11358	17	2026-10-26	                                 Apache License
+uPortal-Project/basiclti-portlet	Apache-2.0	master	LICENSE	11324	4	2026-10-23	 Apache License
+uPortal-Project/community	-	main	NO-PAYLOAD	0	0	2026-07-31	-
+uPortal-Project/esup-filemanager	Apache-2.0	master	LICENSE	11358	13	2026-10-19	                                 Apache License
+uPortal-Project/fbms	Apache-2.0	master	LICENSE	11357	3	2026-10-19	                                 Apache License
+uPortal-Project/form-builder	Apache-2.0	master	LICENSE	11357	5	2026-06-21	                                 Apache License
+uPortal-Project/navigation-web-components	Apache-2.0	master	LICENSE	11357	1	2026-10-30	                                 Apache License
+uPortal-Project/notification-web-components	Apache-2.0	master	LICENSE	11357	1	2026-10-27	                                 Apache License
+uPortal-Project/resource-server	Apache-2.0	master	LICENSE	11358	6	2026-10-30	                                 Apache License
+uPortal-Project/soffit-samples	Apache-2.0	master	LICENSE	11359	2	2023-12-15	                                 Apache License
+uPortal-Project/uPortal	Apache-2.0	master	LICENSE	11359	287	2026-10-30	                                 Apache License
+uPortal-Project/uPortal-start	Apache-2.0	master	LICENSE	11359	16	2026-10-21	                                 Apache License
+uPortal-Project/uPortal-web-components	Apache-2.0	master	LICENSE	11357	23	2026-10-26	                                 Apache License
+uPortal-Project/uPortal-website	-	main	NO-PAYLOAD	0	0	2026-10-20	-
+uPortal-Project/uportal-portlet-parent	Apache-2.0	main	LICENSE	11357	0	2026-08-20	                                 Apache License
+uPortal-Project/uportal-project.github.io	-	master	NO-PAYLOAD	0	2	2026-10-14	-

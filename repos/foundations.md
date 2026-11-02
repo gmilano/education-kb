@@ -4,6 +4,69 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p604` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `11` FOUNDATION REPOS PROMOTED, EVERY GRANT BYTE-READ AT THE REAL DEFAULT BRANCH WITH A PER-REPO FABRICATED CONTROL AT `404`. 🟢 `3` OF THEM ARE **ECL-2.0 REPOS THE API CALLS `NOASSERTION`** — RECOVERED BY THE `604-A` SWEEP, NOT BY SEARCH. 🟢 A COMPLETE **QTI 3.0 TOOLCHAIN** (`4` REPOS, ONE MAINTAINER, FLAGGED AS SUCH) AND THE **xAPI CAPTURE LAYER** FOR H5P. 🔴 `1` REPO IN THE SWEEP IS NOT SHELVED BECAUSE ITS GRANT PAYLOAD IS A SAVED WEB PAGE (`604-B`).**
+
+### 🟢 The Apereo Learning Analytics Initiative — the ECL-2.0 pool, and why it is worth shelving
+
+🔵 `604-A` on [`../agents/top.md`](../agents/top.md) establishes that this org holds **`9`
+ECL-2.0 repositories and the API calls all nine `NOASSERTION`**. 🟢 That matters here and not
+only methodologically: **ECL-2.0 is Apache-2.0 with a narrowed patent grant**, written by and
+for the education sector, and it is a licence Globant can build on. 🔴 A dependency screen
+reading `spdx_id` rejects this entire stack as unlicensed.
+
+🔵 **What the stack is:** a learning-record warehouse (`OpenLRW`), an xAPI learning-record
+store (`OpenLRS`), a processing pipeline (`LearningAnalyticsProcessor`), dashboards, and the
+loaders and shared models between them. 🟡 **Dormancy stated plainly** — the newest HEAD in
+the org is `2025-09-12` and most rows below are `2017`–`2020`. These are shelved as **reference
+implementations of the education-analytics data model**, not as live upstreams.
+
+| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | tz | Region | Why it is a foundation |
+| --- | --- | --: | --- | --- | --: | --- | --- | --- |
+| [Apereo-LAI/OpenLRW-python-api-client](https://github.com/Apereo-Learning-Analytics-Initiative/OpenLRW-python-api-client) | 🟢 **ECL-2.0** 🔴 (API: `NOASSERTION`) | `9,877` | `master` | `2019-07-19` | `1` | `+02:00` | EMEA | Python client for the OpenLRW learning-record warehouse — the shortest path from an agent to a standards-shaped learner record |
+| [Apereo-LAI/lai-event](https://github.com/Apereo-Learning-Analytics-Initiative/lai-event) | 🟢 **ECL-2.0** 🔴 (API: `NOASSERTION`) | `9,877` | `master` | `2020-02-03` | `1` | `+01:00` | EMEA | 🔵 Grant at `LICENSE.md`, not `LICENSE`. The shared **event model** across the LAI stack — the vocabulary a new analytics producer has to match |
+| [Apereo-LAI/lai-model](https://github.com/Apereo-Learning-Analytics-Initiative/lai-model) | 🟢 **ECL-2.0** 🔴 (API: `NOASSERTION`) | `9,877` | `master` | `2019-12-09` | `0` | `+01:00` | EMEA | The shared **data model** beside `lai-event`; read the two together before modelling learner events |
+| [Apereo-LAI/data-loader-library](https://github.com/Apereo-Learning-Analytics-Initiative/data-loader-library) | 🟢 **Apache-2.0** | `11,356` | `master` | `2019-11-07` | `0` | `-07:00` | North America | Shared loader library for LAI ingest — the seam where an institution's SIS/LMS extract becomes analytics input |
+| [Apereo-LAI/canvas-matthews-data-loader](https://github.com/Apereo-Learning-Analytics-Initiative/canvas-matthews-data-loader) | 🟢 **Apache-2.0** | `11,356` | `master` | `2017-03-08` | `0` | `-05:00` | North America | A worked **Canvas** loader against that library — the concrete example of the seam above |
+| [Apereo-LAI/LRSLoadTest](https://github.com/Apereo-Learning-Analytics-Initiative/LRSLoadTest) | 🟢 **Apache-2.0** | `11,323` | `master` | `2015-03-17` | `1` | `-07:00` | North America | 🟡 Oldest row here. A load-test harness for an **LRS** — the capacity question nobody asks until an xAPI pipeline is already in production |
+| [sakaiproject/genericdao](https://github.com/sakaiproject/genericdao) | 🟢 **ECL-2.0 AND Apache-2.0** (dual, both texts) 🔴 (API: `NOASSERTION`) | `22,589` | `master` | `2024-12-17` | `4` | `-05:00` | North America | 🟢 `0` prior occurrences in this base. Sakai's DAO library, and the clearest **dual-grant** specimen in the education corpus — `604-A` |
+
+### 🟢 A complete QTI 3.0 toolchain — `4` repos, and the honest caveat
+
+🔵 **Why it is worth a shelf at `0★`.** **QTI 3.0** is the 1EdTech interchange format for
+assessment items and results, and open tooling for it is genuinely scarce — it is the format
+that makes a question bank portable between an LMS, a proctoring tool and an AI item
+generator. 🟡 **The caveat, stated once and applying to all four rows:** these come from a
+**single small org** (`metyatech`, `+09:00`), carry `0`–`2★`, and sit beside that org's
+unrelated Unreal Engine and VRChat plugins. 🟢 They are shelved for the **standard** they
+implement and because every grant was byte-read today — **not** as established infrastructure.
+
+| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | Region | Role in the chain |
+| --- | --- | --: | --- | --- | --: | --- | --- |
+| [metyatech/markdown-to-qti](https://github.com/metyatech/markdown-to-qti) | 🟢 **MIT** | `1,065` | `main` | `2026-09-19` | `2` | APAC | 🔵 Already held. **Authoring** — Markdown item source becomes a QTI package |
+| [metyatech/qti-xml-core](https://github.com/metyatech/qti-xml-core) | 🟢 **MIT** | `1,056` | `main` | `2026-09-20` | `0` | APAC | 🟢 The **XML core** the rest of the chain depends on |
+| [metyatech/apply-to-qti-results](https://github.com/metyatech/apply-to-qti-results) | 🟢 **MIT** | `1,070` | `main` | `2026-09-20` | `1` | APAC | 🟢 Applies marks into QTI `assessmentResult` XML — the **write** step an AI grader needs |
+| [metyatech/tracklms-to-qti-results](https://github.com/metyatech/tracklms-to-qti-results) | 🟢 **MIT** | `1,065` | `main` | `2026-09-25` | `0` | APAC | 🟢 Converts **TrackLMS** exports into QTI results — the adapter from a real LMS's export shape |
+
+### 🟢 The xAPI capture layer for H5P
+
+| Repo | Grant (byte-read) | Bytes | Branch | Pushed | ★ | tz | Region | Why it is a foundation |
+| --- | --- | --: | --- | --- | --: | --- | --- | --- |
+| [otacke/h5pxapikatchu](https://github.com/otacke/h5pxapikatchu) | 🟢 **MIT** (🔵 body-anchored — see below) | `1,051` | `master` | `2026-06-16` | `10` | `+02:00` | EMEA | 🟢 Captures the **xAPI statements H5P content already emits** into a WordPress database, with filtering and CSV export. 🔵 H5P is everywhere in European schools and its interaction data is usually thrown away; this is the cheapest place to start measuring |
+
+🔵 **A small grant-reading note worth keeping.** `h5pxapikatchu`'s `LICENSE` has **no title
+line** — it opens `Permission is hereby granted, free of charge`. 🔴 A title-anchored reader
+(`p525-title-anchored-grant`) returns nothing; the body token settles it as **MIT**. 🟢 Same
+shape as `604-C`'s `====` opener: **the first line of a grant file is not reliably its name.**
+
+### 🔴 Not shelved from this sweep, with the reason
+
+| Not shelved | Grant as read | Reason |
+| --- | --- | --- |
+| [uPortal-Project/FeedbackPortlet](https://github.com/uPortal-Project/FeedbackPortlet) | 🔴 `11,620 B` of **HTML** | 🔴 `604-B`: the payload is a **saved web page of `Jasig/CalendarPortlet`'s licence**, not a grant from this repository's titleholder. A grep reader grades it `Apache-2.0`; the correct verdict is 🟡 **REVIEW** |
+| [Apereo-LAI/SakaiXAPI-Provider](https://github.com/Apereo-Learning-Analytics-Initiative/SakaiXAPI-Provider) | 🔴 `NO-PAYLOAD` on `6` ladder rungs | 🟡 Already held with its `598-A` verdict (**ECL-2.0** via `pom.xml`). 🔴 A manifest field grades `REVIEW`, never 🟢 — unchanged, and re-confirmed as `NO-PAYLOAD` today |
+| `Apereo-LAI/maven-repo` | 🟢 Apache-2.0 `11,356 B` | 🟡 Grant is clean, but the repository is an **artifact store**, not software to build on. Verified and deliberately not padded onto this shelf |
+| `Apereo-LAI/OpenDashboard-ux`, `SakaiXAPI`, `community-dataloaders`, `lai-config`, `SNAPPSociogram-jar` | 🔴 `NO-PAYLOAD` | 🔴 No grant file at any ladder rung at the real default branch. `5` repos, named rather than counted |
+
 ## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `21` FOUNDATION REPOS PROMOTED OUT OF THE `p436` BACKLOG, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, EVERY FABRICATED-PATH CONTROL AT `404`. 🟢 THE ADDITION IS A WHOLE LAYER THIS PAGE WAS THIN ON: THE **INTEROP-STANDARDS SUBSTRATE** — QTI, xAPI, CASE, OneRoster, Open Badges AND LEARNER CREDENTIALS, `9 of 21` ROWS, MOSTLY FROM THE STANDARDS BODIES THEMSELVES (`1EdTech`, `adlnet`, `instructure`, OpenWallet Foundation). 🔴 `603-C`: THE LIBRARY EVERY PASS SOURCES READS THE README AT **ONE SPELLING**, AND `5.7 %` OF REPOSITORIES ARE INVISIBLE TO IT — THE SAME ERROR CLASS THE LICENCE LADDER ALREADY PAID TO FIX.**
 
 ### 🔴 `603-C` — `lib/probe_payload.sh` line `155` is a single-spelling README probe

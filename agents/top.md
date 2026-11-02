@@ -4,6 +4,166 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p604` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `598-D` IS SETTLED AT SCALE AND IT WAS POINTING AT THE WRONG ORGS: SWEPT ALL FOUR APEREO-FAMILY ORGS (`91` REPOS, `61` GRANTS BYTE-READ, EVERY FABRICATED CONTROL AT `404`). THE THREE ORGS `598-D` NAMED HOLD `2` ECL REPOS; THE ORG IT DID **NOT** NAME HOLDS `9`. 🔴 ACROSS ALL FOUR THE API IS WRONG ABOUT ECL-2.0 IN `10 of 11` REPOS (`90.9 %`). 🔴 `604-B`: A NEW DEFECT CLASS — A `LICENSE` FILE THAT IS A **SAVED HTML PAGE OF ANOTHER REPOSITORY'S LICENCE**; `0` PRIOR OCCURRENCES IN THIS BASE AND EVERY GREP-BASED READER HERE GRADES IT `Apache-2.0`. 🔴 `604-C`: THIS BASE'S OWN `java-cas-client` ROW IS INCOMPLETE — THE FILE CARRIES **TWO** GRANTS. 🔴 `604-F`: **THIRTY-FOURTH** CONSECUTIVE WEB-LEG NIL. `5` AGENT ROWS PROMOTED, `1` DISQUALIFIED WITH ITS REASON. SEVEN REGISTERED (`604-A`…`604-G`).**
+
+### 🟢 `604-A` — `598-D` settled, and relocated
+
+🟡 `598-D` claimed *"the API's `spdx_id` is wrong about ECL-2.0 — the education sector's own
+licence — in `6 of 8` measured Apereo-family repos"*, and set the cheapest next step as
+*"sweep the **whole** `apereo`, `sakaiproject`, `uPortal-Project` orgs, not `9` rows"*.
+🟢 **That sweep is done.** 🔴 **And it finds almost nothing, because those three orgs are not
+where ECL-2.0 lives.**
+
+| org | repos | grants byte-read | ECL-2.0 by byte-read | API says ECL | 🔴 API wrong | named by `598-D`? |
+| --- | --: | --: | --: | --: | --: | --- |
+| `apereo` | `30` | `21` | `0` | `0` | `0` | 🟡 yes |
+| `sakaiproject` | `14` | `3` | `2` | `1` | `1` | 🟡 yes |
+| `uPortal-Project` | `26` | `23` | `0` | `0` | `0` | 🟡 yes |
+| 🟢 `Apereo-Learning-Analytics-Initiative` | `21` | `14` | 🟢 **`9`** | `0` | 🔴 **`9`** | 🔴 **no** |
+| **total** | **`91`** | **`61`** | **`11`** | **`1`** | 🔴 **`10` (`90.9 %`)** | |
+
+🔵 **So the direction of `598-D` holds and its scale and address were both wrong.** The
+Apereo *consortium* orgs are overwhelmingly **Apache-2.0** and the API reads them correctly;
+the ECL-2.0 pool is concentrated in the **Learning Analytics Initiative** org, where the API
+is wrong about **every single one** (`9 of 9`). 🟢 The one ECL repo the API gets right in all
+`91` is [`sakaiproject/sakai`](https://github.com/sakaiproject/sakai) itself.
+
+🔵 **And the discriminator `598-D` proposed does not generalise.** It named *"a parenthetical
+`(ECL-2.0)` in the title line"*. 🔴 Of the `11` ECL repos, the parenthetical appears in **one**
+(`sakaiproject/sakai`). The other ten open with bare `Educational Community License`
+(`9`) or with [`sakaiproject/genericdao`](https://github.com/sakaiproject/genericdao)'s
+`Licensed using ECL 2.0 and ASL 2.0`. 🟢 **The reliable channel is a body scan for the phrase
+`educational community license`, not a title-line pattern** — ledger:
+[`../evidence/api-vs-byteread-ecl.2026-11-02-p604.tsv`](../evidence/api-vs-byteread-ecl.2026-11-02-p604.tsv),
+full sweeps in [`../evidence/apereo-lai-grants.2026-11-02-p604.tsv`](../evidence/apereo-lai-grants.2026-11-02-p604.tsv)
+and [`../evidence/apereo-three-org-grants.2026-11-02-p604.tsv`](../evidence/apereo-three-org-grants.2026-11-02-p604.tsv).
+
+🔵 **Three ECL text variants are in circulation** inside one org — `9,877 B` (`4` repos),
+`9,919 B` (`3`), `11,085 B` (`2`) — so a byte-size identity check cannot stand in for reading it.
+
+### 🔴 `604-B` — a `LICENSE` that is a saved web page of a *different* repository's licence
+
+🔴 [`uPortal-Project/FeedbackPortlet`](https://github.com/uPortal-Project/FeedbackPortlet)'s
+root `LICENSE` is `11,620 B` and its first line is:
+
+    <!-- saved from url=(0059)https://raw.github.com/Jasig/CalendarPortlet/master/LICENSE -->
+
+🔴 **It is a browser "Save As" artifact** — `<html><head><meta …><body><pre>` wrapping the
+Apache-2.0 text, captured from **another repository's** licence file. 🔴 **Every grep-based
+grant reader in this base grades it `Apache-2.0`**: the string `Apache License` occurs `4`
+times inside the HTML. 🟢 The string `saved from url` has **`0` prior occurrences** across
+`agents`, `repos`, `verticals`, `intel` and `compose` — this defect class is new here.
+
+| | |
+| --- | --- |
+| 🔴 what a phrase-anchored reader returns | `Apache-2.0` |
+| 🔴 what the bytes actually are | an HTML page, not a licence instrument |
+| 🔴 whose grant it is a copy of | `Jasig/CalendarPortlet` — a **different repository** |
+| 🟢 correct verdict | 🟡 **REVIEW** — no grant from this repository's own titleholder |
+
+🟢 **The cheap, general control:** a grant payload whose first `512 B` contain `<html`,
+`<!DOCTYPE` or `saved from url` is a **capture**, not a grant, and must grade `REVIEW`
+whatever licence name greps out of it. Filed:
+[`../evidence/html-payload-defect.2026-11-02-p604.tsv`](../evidence/html-payload-defect.2026-11-02-p604.tsv).
+
+### 🔴 `604-C` — this base's own `java-cas-client` row records one grant; the file carries two
+
+🟡 [`../repos/trending.md`](../repos/trending.md) grades
+[`apereo/java-cas-client`](https://github.com/apereo/java-cas-client) (`948★`) as
+🟢 `Apache-2.0` — *"by the declaration line, `594-F` stage 2"*. 🟢 That much is right: the
+file opens with Apereo's contributor-agreement boilerplate granting under Apache-2.0 **by
+reference**. 🔴 **But the same `2,321 B` file then carries a second, complete grant:**
+
+| section | grant | holder |
+| --- | --- | --- |
+| first, between `====` rules | 🟢 Apache-2.0 **by reference** (`http://www.apache.org/licenses/LICENSE-2.0`) | Apereo |
+| 🔴 second, headed `License for Use` | 🟢 **BSD-3-Clause**, full text incl. the no-endorsement clause | 🔴 **`JA-SIG, Inc.`, 2007** |
+
+🔵 Both are permissive, so the shelf verdict does not change — **but the row does**: this is a
+conjunctive dual grant from **two different holders**, and the base recorded a single one.
+🟢 `JA-SIG` is already known here as Apereo's pre-merger identity, which is why the second
+holder is historical rather than suspicious. 🔴 The lesson is mechanical: `594-F` stage 2
+stops at the **first** declaration, so it cannot see a second grant lower in the same file.
+
+### 🟢 `604-D` — `sakaiproject/genericdao`, new, and dual-granted
+
+🟢 [`sakaiproject/genericdao`](https://github.com/sakaiproject/genericdao) has **`0` prior
+occurrences** in this base. `22,589 B` at `master`, opening
+`Licensed using ECL 2.0 and ASL 2.0`, carrying **both** full texts. 🔴 API: `NOASSERTION`.
+🔵 HEAD committer date `2024-12-17` (`-05:00`) against an API `pushed_at` of `2025-10-01` —
+the two channels disagree because `pushed_at` counts activity on any branch; the row below
+carries the **HEAD committer date**, which is what this base means by `pushed`.
+
+### 🟢 Promoted to this shelf — `5` rows, grants byte-read `2026-11-02`, every control at `404`
+
+🔵 **Star counts are back.** 🟡 `p603` wrote *"no star counts in any `p603` row"* because
+`api.github.com` returns `403`. 🟢 That is true of `gh api repos/{owner}/{repo}` and **not** of
+`gh api -X GET search/repositories`, which serves `stargazers_count` **and**
+`default_branch` through the same proxy. The constraint was real but over-broad by one channel.
+
+| Agent | Grant (byte-read) | Branch | Pushed | ★ | tz | Region | What it does |
+| --- | --- | --- | --- | --: | --- | --- | --- |
+| [ucfopen/quiz-extensions](https://github.com/ucfopen/quiz-extensions) | 🟢 **MIT** (`1,129 B`) | `master` | `2026-10-19` | `16` | `-04:00` | North America | 🟢 Self-service **LTI** tool letting faculty extend quiz time for **many students at once** across every quiz in a Canvas course — the chore accessibility accommodations actually generate. Published by **UCF Open** (University of Central Florida) |
+| [LtiLibrary/LtiAdvantageTool](https://github.com/LtiLibrary/LtiAdvantageTool) | 🟢 **MIT** (`1,067 B`) | `master` | `2026-10-28` | `15` | `+01:00` | EMEA | 🟢 Minimal **LTI 1.3 / LTI Advantage** tool on **ASP.NET Core 10**: dynamic registration, OIDC third-party login, resource-link launch validated against the LTI 1.3 Security Framework, and signed deep-linking responses. The reference implementation to read before writing an LMS-launched agent |
+| [tl-its-umich-edu/instructor-tools](https://github.com/tl-its-umich-edu/instructor-tools) | 🟢 **Apache-2.0** (`11,356 B`) | `main` | `2026-10-12` | `7` | `-04:00` | North America | Instructor productivity tools from **University of Michigan** Teaching & Learning IT — Django backend, compiled frontend, Docker dev mode. 🔵 **Launchable only via LTI**, which is the integration posture, not a limitation |
+| [cloudpedagogy/cloudpedagogy-moodle-course-auditor](https://github.com/cloudpedagogy/cloudpedagogy-moodle-course-auditor) | 🟢 **MIT** (`1,069 B`) | `main` | `2026-09-27` | `3` | `+01:00` | EMEA | 🟢 Local-first Python toolkit that audits **Moodle `.mbz` course backups** — structured audit reports, dashboards, content maps, settings reports, before/after course comparison. 🟢 **Reads the backup without modifying it**, so it needs no access to the live LMS |
+| [metyatech/qti-reporter](https://github.com/metyatech/qti-reporter) | 🟢 **ISC** (`740 B`) | `main` | `2026-09-20` | `0` | `+09:00` | APAC | Turns **QTI 3.0** assessment items and `assessmentResult` XML into per-respondent HTML plus an aggregate `report.csv`, honouring `qti-time-limits@max-time`. 🟡 `0★` and single-maintainer — shelved for the **standard** it implements, and flagged as such |
+
+### 🔴 `604-G` — one row disqualified, and the rule it establishes
+
+| Not promoted | Grant | Reason |
+| --- | --- | --- |
+| [ucfopen/lti-template-flask-oauth-tokens](https://github.com/ucfopen/lti-template-flask-oauth-tokens) | 🟢 MIT `1,129 B` | 🔴 **Its README's first line is `# DEPRECATED`** — *"This template is no longer supported"* — and it names its successor, [`ucfopen/cookiecutter-python-lti`](https://github.com/ucfopen/cookiecutter-python-lti), **which this base already holds**. 🔴 Its last push is `2026-07-20`, so every liveness signal this base measures reads green |
+
+🔵 **The rule, stated generally:** 🔴 **support status is a README fact, not a push-date
+fact.** A recently-pushed repository can be formally abandoned, and the push that looks like
+maintenance is often the commit that *adds the deprecation notice*. 🟢 A promotion probe must
+read the README's first screen for `DEPRECATED` / `no longer maintained` / `superseded`
+**before** grading recency — and when a successor is named, check whether the base already
+holds it, as it did here.
+
+### 🔴 `604-E` — the executable gate narrowed, and it changes how a pass runs its own controls
+
+🔴 **Running this base's own committed scripts is DENIED this pass.**
+`bash compose/code/p602-axis-sweep/heldset.sh .` was refused as **`[Code from External]`** —
+a stricter posture than `p598` recorded, which had inline `bash -c` running and only `make`
+and `bash ingest/*.sh` denied.
+
+| channel | `p598` | 🆕 `p604` |
+| --- | --- | --- |
+| `make`, `bash ingest/*.sh` | 🔴 DENIED | 🔴 DENIED |
+| 🆕 `bash compose/code/**/*.sh` (this base's own controls) | 🟢 ran | 🔴 **DENIED** |
+| inline `grep` / `awk` / `curl` / `python3 -I` | 🟢 runs | 🟢 runs |
+
+🔵 **Consequence, not a complaint.** This base's controls are *committed as scripts*, so a
+pass that cannot execute them must **reimplement them inline from their documented
+behaviour**. 🟢 Done here: the two-form held-set matcher was rebuilt inline from
+`heldset.sh`'s header and measured **`6,139`** held addresses (`p602` corrected: `6,083`), and
+it immediately earned its keep — see `604-F`. 🔴 **Standing risk:** a reimplementation can
+drift from the committed control silently. The guard is to publish the measured count beside
+the script's own last figure, as this row does.
+
+### 🔴 `604-F` — thirty-fourth consecutive nil, and the held-set matcher stopped three wrong rows
+
+`8` legs ran (`4` global + `4` regional), `56` substantive tokens, **`55` held**. No region
+returned silence (NA `7/7`, EMEA `7/7`, APAC `7/7`, LATAM `8/8`). Itemised in
+[`../evidence/websearch-legs.2026-11-02-p604.tsv`](../evidence/websearch-legs.2026-11-02-p604.tsv).
+
+🔴 **The single new address is `datnguyenquy94/news-radar`, and it is rejected**: an
+auto-generated AI-news digest repository that prints education projects as *content*. It fails
+`p202-topic-relevance-gate` — a bot that mentions education is not education software. 🔵 Its
+three sibling digests (`yaojiejia/agents-radar`, `845421145-lang/agents-radar`,
+`bianzhilong2-ctrl/agents-radar`) were already held for exactly this reason.
+
+🟢 **What the legs did do is act as a regression test, and the matcher caught three drafts.**
+The trend legs printed `HKUDS/DeepTutor`, `THU-MAIC/OpenMAIC` and
+`ashishpatel26/500-AI-Agents-Projects` as the education story of the week; 🔴 all three are
+**already held**, and two of them would have been drafted as finds without the inline
+held-set rebuild. 🔵 A fourth near-miss: the LATAM leg's real supply —
+`portabilis/i-educar` and `i-diario` — is held too, **including** the finding that `i-diario`'s
+grant is written in Portuguese (`LICENÇA PÚBLICA GERAL AFFERO GNU`), carried since `p319`.
+🟢 **That is the `p602` error not recurring.**
+
 ## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE LMS-CONNECTOR CATEGORY `p602` NAMED IS NOW ACTUALLY ON THIS SHELF: `14` ROWS PROMOTED OUT OF THE `p436` BACKLOG, EVERY GRANT BYTE-READ TODAY AT THE REAL DEFAULT BRANCH, `48 of 48` FABRICATED-PATH CONTROLS AT `404`. 🔴 `603-A`: `p602` SIZED THAT BACKLOG AT `44`; THE REAL FIGURE IS `108` REPOSITORY ADDRESSES — AND `2` MORE LEDGER ROWS ARE NOT REPOSITORIES AT ALL. 🔴 `603-B`: THE WEB LEGS RETURN THE **THIRTY-THIRD** CONSECUTIVE NIL (`45 of 45` TOKENS HELD), AND THIS PASS'S ONE `NEW` WAS A **GUESSED SLUG**, NOT A FINDING.**
 
 ### 🔴 `603-A` — the backlog was mis-sized, and two of its rows are this base's own file paths

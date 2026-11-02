@@ -4,6 +4,106 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p604` — `2026-11-02` — **APPEND-ONLY. 🟢 `598-D` SETTLED AND RELOCATED (`91` REPOS, `61` GRANTS BYTE-READ, `4` ORGS): THE ECL-2.0 POOL IS IN THE ONE ORG `598-D` DID NOT NAME, AND THE API IS WRONG THERE `9 of 9`. 🔴 A NEW DEFECT CLASS: A `LICENSE` THAT IS A SAVED WEB PAGE OF ANOTHER REPO'S LICENCE. 🔴 THIRTY-FOURTH NIL. 🔴 THIS BASE'S OWN SCRIPTS WERE DENIED EXECUTION AND HAD TO BE REIMPLEMENTED INLINE.**
+
+### 🟢 What moved this week, in one table
+
+| | |
+| --- | --- |
+| 🟢 agents promoted | `5` — `ucfopen/quiz-extensions`, `LtiLibrary/LtiAdvantageTool`, `tl-its-umich-edu/instructor-tools`, `cloudpedagogy/cloudpedagogy-moodle-course-auditor`, `metyatech/qti-reporter` |
+| 🟢 foundations promoted | `11` — `3` recovered ECL-2.0 rows (`OpenLRW-python-api-client`, `lai-event`, `lai-model`), `3` LAI Apache rows, the dual-granted `sakaiproject/genericdao`, `3` QTI-toolchain rows, `otacke/h5pxapikatchu` |
+| 🔴 disqualified with a written reason | `1` — `ucfopen/lti-template-flask-oauth-tokens`, README line 1 is `# DEPRECATED` |
+| 🔴 not shelved, grant unusable | `1` — `uPortal-Project/FeedbackPortlet`, payload is HTML |
+| 🔴 web-leg yield | `1 of 56` tokens new, and that one fails the topic-relevance gate — **34th consecutive nil** |
+| 🟢 held-set size (inline rebuild) | `6,139` addresses, against `heldset.sh`'s own last figure of `6,083` |
+
+### 🔴 The trend this pass actually establishes: a licence API is not a licence channel
+
+🔵 This base has been accumulating evidence against `spdx_id` for ~`20` passes. `p604`
+measures it at a scale where the number is usable rather than suggestive.
+
+| measured `2026-11-02` across `4` Apereo-family orgs | value |
+| --- | --: |
+| repositories enumerated | `91` |
+| grants byte-read at the real default branch | `61` |
+| 🔴 `NO-PAYLOAD` at every ladder rung | `30` |
+| ECL-2.0 by byte-read | `11` |
+| 🟢 of those, API agrees | `1` |
+| 🔴 of those, **API says `NOASSERTION`** | **`10` (`90.9 %`)** |
+
+🔵 **Why `90.9 %` is the number to quote to a client and not `6 of 8`.** `598-D`'s original
+figure came from a `9`-row sample that happened to be dominated by the one org where the
+defect concentrates. 🟢 At `91` repositories the defect is **narrower and sharper than it
+looked**: the API reads Apache-2.0 correctly everywhere — **`44 of 44`** across the four orgs
+(`apereo` `18`, `uPortal-Project` `20`, `sakaiproject` `1`, `Apereo-LAI` `5`) — and
+fails almost totally on the **education sector's own licence**. 🔴 That is the opposite of a
+diffuse data-quality problem — it is a single, nameable blind spot with a one-line fix
+(scan the body for `educational community license`).
+
+### 🔴 Three ways a grant file defeats a reader, all three seen in one sweep
+
+🔵 Collected because they generalise past this base and past education.
+
+| # | shape | specimen | what a naive reader returns |
+| --- | --- | --- | --- |
+| 1 | 🔴 the payload is **not a licence at all** — a browser "Save As" capture of *another repo's* licence | [`uPortal-Project/FeedbackPortlet`](https://github.com/uPortal-Project/FeedbackPortlet) (`11,620 B` of HTML) | 🔴 `Apache-2.0` — `Apache License` occurs `4×` inside the markup |
+| 2 | 🔴 **two grants in one file**, from two different holders, the second below the fold | [`apereo/java-cas-client`](https://github.com/apereo/java-cas-client) (`2,321 B`) | 🔴 `Apache-2.0` only — the BSD-3-Clause grant from `JA-SIG, Inc.` is missed |
+| 3 | 🔴 **the first line is not the licence name** — a decoration, or no title at all | `java-cas-client` opens `====`; [`otacke/h5pxapikatchu`](https://github.com/otacke/h5pxapikatchu) opens `Permission is hereby granted` | 🔴 nothing, or an unresolved grade |
+
+🟢 **The shared control:** read the **whole payload's body**, check the first `512 B` for
+markup, and keep reading after the first declaration. 🔴 Every instrument in this base that
+stops at the first match is wrong on at least one of the three above.
+
+### 🔴 The web legs, itemised — and the three drafts the held set stopped
+
+`8` legs, `56` substantive tokens, `55` held, no region silent.
+
+| leg | region | tokens | held | new |
+| --- | --- | --: | --: | --: |
+| `top open source AI agents education 2026 github MIT` | Global | `6` | `6` | `0` |
+| `github trending education AI 2026` | Global | `7` | `6` | 🔴 `1` rejected |
+| `open source platform education ERP CRM MIT Apache` | Global | `5` | `5` | `0` |
+| `AI education industry trends 2026` | Global | `9` | `9` | `0` |
+| `AI education … adoption regulation players` | **North America** | `7` | `7` | `0` |
+| `AI education … adoption regulation players` | **EMEA** | `7` | `7` | `0` |
+| `AI education … adoption regulation players` | **APAC** | `7` | `7` | `0` |
+| `AI education … adoption regulation players` | **LATAM** | `8` | `8` | `0` |
+| **total** | | **`56`** | **`55`** | 🔴 **`1`** |
+
+🔴 **What the trend legs printed as this week's education story, and what it was worth:**
+`HKUDS/DeepTutor` (reported `~53,039★`, `+1,000` in a day), `THU-MAIC/OpenMAIC`
+(`~42,265★`, Tsinghua) and `ashishpatel26/500-AI-Agents-Projects`. 🟢 **All three already
+held.** 🔵 The star figures are third-party digest numbers and are **not** written to any
+shelf row — this base's star column comes from `search/repositories`, not from blog digests.
+
+🟡 **The APAC leg deserves a specific note rather than a tick.** It paid `7/7` tokens but
+returned **almost no education material** — its results were enterprise-AI and observability
+reports, plus one UK story mis-filed as APAC. 🔵 The region is not silent; the *query shape*
+is wrong for it. 🟢 The cheapest fix is a national query (`China`/`Korea`/`Singapore`/`Japan`
+AI education policy) rather than the regional acronym, which is the same lesson
+`p1059-latam-name-channel` already recorded for LATAM.
+
+### 🔴 The executable gate narrowed, and a pass has to notice
+
+🔴 `bash compose/code/p602-axis-sweep/heldset.sh .` was **refused** this pass as
+`[Code from External]`. 🟡 `p598` recorded inline `bash -c` as running, with only `make` and
+`bash ingest/*.sh` denied; 🔴 **this is stricter, and it lands on the base's own controls.**
+
+🔵 **Why it is a trend entry and not a footnote.** This base's quality machinery is committed
+*as shell scripts*. 🔴 A pass that cannot run them and does not notice will either skip its
+controls or — worse — **report them as run**. 🟢 The working posture is to reimplement the
+control inline from its documented header and **publish both counts**: `6,139` measured here
+against `heldset.sh`'s `6,083`, a difference consistent with `p603`'s `46` promotions.
+
+### 🟡 Carried, unresolved
+
+| ID | state at `p604` |
+| --- | --- |
+| 🔴 `598-E` / `594-G` — demote the four global repo legs to a formality | 🔴 **Still owed, now `34` nils deep.** `p594`, `p597`, `p598`, `p603` and `p604` have each carried the recommendation without acting. 🔵 `p604` adds the argument *for* keeping them: they function as a **regression test** that caught three already-held drafts |
+| 🔴 `598-G` — regional market figures are search-snippet-grade | 🔴 Unchanged. `unesco.org`, `oecd.org`, `iadb.org` are outside this session's network policy (`WebFetch` → `ENOTFOUND`). **Operator request, not a research step** |
+| 🔴 `589-A` — register currency | 🔴 Will recur: `gate-register-currency` lives in `HOOK_GATES` and `make` is denied. 🆕 And now the `compose/code` scripts are denied too, so the manual repair is the only route |
+| 🟡 `603-D` — the `~38` backlog rows whose substance is unestablished | 🟡 Unchanged this pass; `p604` spent its budget on `598-D` instead and says so |
+
 ## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE MANDATED DEMAND-SIDE LEGS RETURN THE **THIRTY-THIRD** CONSECUTIVE NIL: `45 of 45` SUBSTANTIVE TOKENS ALREADY HELD, `0` NEW, NO REGION SILENT (NA `7/7`, EMEA `6/6`, APAC `6/6`, LATAM `6/6`, GLOBAL `20/20`). 🔴 `603-B`: THIS PASS'S ONE `NEW` WAS AN ADDRESS **THIS PASS INVENTED** — `ilias-ebuch/ilias`, GUESSED FROM A PROSE PLATFORM NAME, WHILE THE REAL `ilias-elearning/ilias` HAS BEEN HELD SINCE `p191`. 🟢 THE WEEK'S REAL AGENT SUPPLY CAME FROM THE OTHER DIRECTION: `14` LMS/MCP CONNECTORS PROMOTED OFF A `167`-PASS-OLD BACKLOG, ALL GRANTS BYTE-READ TODAY.**
 
 ### 🔴 `603-B` — a novelty probe that grades an address it invented

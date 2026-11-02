@@ -1,0 +1,17 @@
+repo	grant	bytes	grant_path	branch	head_committer_date	tz	region	stars	shelf	substance
+ucfopen/quiz-extensions	MIT	1129	LICENSE	master	2026-10-19	-04:00	North America	16	agents/top	self-service LTI for faculty to extend quiz time for many users at once
+LtiLibrary/LtiAdvantageTool	MIT	1067	LICENSE	master	2026-10-28	+01:00	EMEA	15	agents/top	minimal LTI 1.3/Advantage tool, ASP.NET Core 10, dynamic registration + deep linking
+tl-its-umich-edu/instructor-tools	Apache-2.0	11356	LICENSE	main	2026-10-12	-04:00	North America	7	agents/top	U-Michigan instructor productivity tools, Django, LTI-launch only
+metyatech/qti-reporter	ISC	740	LICENSE	main	2026-09-20	+09:00	APAC	0	agents/top	QTI 3.0 items+results to per-respondent HTML and aggregate CSV
+cloudpedagogy/cloudpedagogy-moodle-course-auditor	MIT	1069	LICENSE	main	2026-09-27	+01:00	EMEA	3	agents/top	local-first analyser of Moodle .mbz backups, read-only on the source
+otacke/h5pxapikatchu	MIT	1051	LICENSE	master	2026-06-16	+02:00	EMEA	10	repos/foundations	WordPress plugin capturing H5P xAPI statements to DB with CSV export
+metyatech/qti-xml-core	MIT	1056	LICENSE	main	2026-09-20	+09:00	APAC	0	repos/foundations	QTI XML core library under the metyatech QTI toolchain
+metyatech/apply-to-qti-results	MIT	1070	LICENSE	main	2026-09-20	+09:00	APAC	1	repos/foundations	applies marks to QTI assessmentResult XML
+metyatech/tracklms-to-qti-results	MIT	1065	LICENSE	main	2026-09-25	+09:00	APAC	0	repos/foundations	converts TrackLMS exports into QTI results XML
+Apereo-LAI/OpenLRW-python-api-client	ECL-2.0	9877	LICENSE	master	2019-07-19	+02:00	EMEA	1	repos/foundations	Python client for OpenLRW learning-record warehouse
+Apereo-LAI/lai-event	ECL-2.0	9877	LICENSE.md	master	2020-02-03	+01:00	EMEA	1	repos/foundations	shared event model for the Apereo LAI stack
+Apereo-LAI/lai-model	ECL-2.0	9877	LICENSE	master	2019-12-09	+01:00	EMEA	0	repos/foundations	shared data model for the Apereo LAI stack
+Apereo-LAI/LRSLoadTest	Apache-2.0	11323	LICENSE	master	2015-03-17	-07:00	North America	1	repos/foundations	load-test harness for an LRS
+Apereo-LAI/canvas-matthews-data-loader	Apache-2.0	11356	LICENSE	master	2017-03-08	-05:00	North America	0	repos/foundations	Canvas data loader for the LAI pipeline
+Apereo-LAI/data-loader-library	Apache-2.0	11356	LICENSE	master	2019-11-07	-07:00	North America	0	repos/foundations	shared loader library for LAI data ingest
+sakaiproject/genericdao	ECL-2.0 AND Apache-2.0	22589	LICENSE	master	2025-10-01	-05:00	North America	4	repos/foundations	dual-granted DAO library; API reports NOASSERTION

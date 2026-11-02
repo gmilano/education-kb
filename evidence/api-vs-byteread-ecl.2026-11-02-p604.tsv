@@ -1,0 +1,12 @@
+repo	api_spdx	byteread_verdict	why_api_is_wrong
+Apereo-LAI/OpenLRW	NOASSERTION	ECL-2.0 (9877 B)	grant title line reads "Educational Community License"; API classifier returns NOASSERTION
+Apereo-LAI/OpenDashboard-legacy	NOASSERTION	ECL-2.0 (9919 B)	grant title line reads "Educational Community License"; API classifier returns NOASSERTION
+Apereo-LAI/OpenLRS	NOASSERTION	ECL-2.0 (11085 B)	grant title line reads "Educational Community License"; API classifier returns NOASSERTION
+Apereo-LAI/LearningAnalyticsProcessor	NOASSERTION	ECL-2.0 (9919 B)	grant title line reads "Educational Community License"; API classifier returns NOASSERTION
+Apereo-LAI/LAP-Sakai-Extractor	NOASSERTION	ECL-2.0 (11085 B)	grant title line reads "Educational Community License"; API classifier returns NOASSERTION
+Apereo-LAI/OpenLRW-python-api-client	NOASSERTION	ECL-2.0 (9877 B)	grant title line reads "Educational Community License"; API classifier returns NOASSERTION
+Apereo-LAI/lai-event	NOASSERTION	ECL-2.0 (9877 B)	grant title line reads "Educational Community License"; API classifier returns NOASSERTION
+Apereo-LAI/OpenDashboard-api	NOASSERTION	ECL-2.0 (9919 B)	grant title line reads "Educational Community License"; API classifier returns NOASSERTION
+Apereo-LAI/lai-model	NOASSERTION	ECL-2.0 (9877 B)	grant title line reads "Educational Community License"; API classifier returns NOASSERTION
+sakaiproject/genericdao	NOASSERTION	ECL-2.0 AND Apache-2.0 (22,589 B)	title line reads "Licensed using ECL 2.0 and ASL 2.0" - a dual grant, not a single SPDX id
+sakaiproject/sakai	ECL-2.0	ECL-2.0 (11,120 B)	API CORRECT - the one ECL repo of 11 it gets right

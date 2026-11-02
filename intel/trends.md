@@ -4,6 +4,91 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p604` — reads `2026-11-02`, commit `2026-11-02` — three numbered trends (`80`–`82`), each with the measurement that produced it
+
+## 80. A licence API is not a licence channel, and the gap is concentrated in sector-specific licences (high confidence — `91` repositories, `61` grants byte-read, `90.9 %` failure on one licence)
+
+🔴 **The claim.** Automated licence detection is accurate on the licences it was built around
+and **near-totally blind to sector-specific ones**. The failure is not diffuse data quality —
+it is a narrow, nameable blind spot, which makes it both more dangerous and far cheaper to fix.
+
+🟢 **The measurement.** All four Apereo-family GitHub orgs, enumerated via
+`search/repositories`, every grant byte-read at the real default branch with a fabricated-path
+control at `404`:
+
+| | Apache-2.0 rows | ECL-2.0 rows |
+| --- | --: | --: |
+| repositories carrying this grant (byte-read) | `44` | `11` |
+| 🟢 API `spdx_id` agrees | 🟢 **`44` (`100 %`)** | `1` (`9.1 %`) |
+| 🔴 API returns `NOASSERTION` | 🟢 `0` | 🔴 **`10` (`90.9 %`)** |
+
+🔵 **The two columns are the finding.** The same classifier, in the same orgs, on the same
+day, is **perfect** on the mainstream licence and **wrong nine times out of ten** on the
+sector's own — which is a blind spot, not a reliability problem.
+
+🔵 **Why it generalises past education.** **ECL-2.0 is Apache-2.0 with the patent grant
+narrowed to education use** — a sector rewriting a mainstream licence for its own needs. Every
+regulated sector does this. 🔴 The lesson is that the *more* a sector has invested in its own
+legal instruments, the *less* an off-the-shelf licence scanner can see its software. 🟡 For a
+services firm this inverts the usual assumption: the sector-specialist stack is the one most
+likely to be wrongly blocked by the client's own compliance tooling.
+
+🟢 **What to do with it.** A dependency gate reading `spdx_id` should treat `NOASSERTION` as
+**"read the file"**, never as "unlicensed". The body-scan phrase (`educational community
+license`) is one line and recovers `9` repositories here. 🔴 A title-line pattern does **not**
+work: of `11` ECL repos the parenthetical `(ECL-2.0)` appears in one.
+
+## 81. A grant file is a payload, not a fact, and it fails in at least four distinguishable ways (high confidence — four specimens, one sweep)
+
+🔴 **The claim.** Treating "has a LICENSE file naming X" as equivalent to "is licensed X" is
+unsafe, and the failure modes are enumerable rather than endless. One `91`-repo sweep produced
+four distinct ones.
+
+| # | failure mode | specimen | what a naive reader returns |
+| --- | --- | --- | --- |
+| 1 | 🔴 the payload is **not a licence** — a saved HTML page of *another repo's* licence | [`uPortal-Project/FeedbackPortlet`](https://github.com/uPortal-Project/FeedbackPortlet) (`11,620 B`) | 🔴 `Apache-2.0` (`Apache License` ×`4` inside the markup) |
+| 2 | 🔴 **two grants, two holders**, the second below the first | [`apereo/java-cas-client`](https://github.com/apereo/java-cas-client) (`2,321 B`) | 🔴 `Apache-2.0` only; misses BSD-3-Clause from `JA-SIG, Inc.` |
+| 3 | 🔴 **the first line is not the licence name** — a rule, a BOM, or no title | `java-cas-client` (`====`), [`apereo/dotnet-cas-client`](https://github.com/apereo/dotnet-cas-client) (UTF-8 BOM), [`otacke/h5pxapikatchu`](https://github.com/otacke/h5pxapikatchu) (no title) | 🔴 nothing, or unresolved |
+| 4 | 🔴 the grant is **someone else's project**, copied verbatim | [`uPortal-Project/CoursesPortlet`](https://github.com/uPortal-Project/CoursesPortlet) — byte-identical to `NewsReaderPortlet`'s, holder names the wrong project | 🔴 `BSD-3-Clause`, as if granted by this repo's owner |
+
+🔵 **The unifying control is cheap:** check the first `512 B` for markup, keep reading past the
+first declaration, and compare the holder named in the grant against the repository's owner.
+🟢 **Three of the four were caught by reading bytes this base had never read**; the fourth was
+already held, which is how it could be used as a positive control.
+
+🔵 **And one shape is worth separating out because it is not a defect at all:** a grant written
+in the **language of its region**. `portabilis/i-diario`'s licence opens `LICENÇA PÚBLICA
+GERAL AFFERO GNU` and the API returns `NOASSERTION` for it. 🔴 An English-anchored matcher
+(`GNU Affero General Public License`) does not match it either. 🟢 Held here since `p319`, and
+re-confirmed this pass — it is the clearest case that **licence detection has a regional bias**,
+and that the bias falls on exactly the regions a global firm is trying to serve.
+
+## 82. Support status is a README fact, not a push-date fact (medium-high confidence — one clean specimen, one general mechanism)
+
+🔴 **The claim.** Recency metrics — `pushed_at`, last commit date, commit frequency — do not
+measure whether software is *supported*, and the discrepancy is systematic rather than random:
+**the commit that makes a repository look maintained is often the commit that deprecates it.**
+
+🟢 **The specimen.** [`ucfopen/lti-template-flask-oauth-tokens`](https://github.com/ucfopen/lti-template-flask-oauth-tokens):
+
+| signal | reads |
+| --- | --- |
+| last push | 🟢 `2026-07-20` — recent |
+| grant | 🟢 MIT, `1,129 B`, byte-read |
+| publisher | 🟢 a university open-source org with `65` repositories |
+| 🔴 README line 1 | 🔴 **`# DEPRECATED` — *"This template is no longer supported"*** |
+| 🔴 named successor | [`ucfopen/cookiecutter-python-lti`](https://github.com/ucfopen/cookiecutter-python-lti) — **already held by this base** |
+
+🔵 **Every quantitative signal was green.** 🟢 The only channel that carried the truth was the
+**first screen of prose**, and it also named the replacement — so reading it both prevented a
+false row and pointed at the correct one.
+
+🟢 **What to do with it.** Read the README's first screen for
+`DEPRECATED` / `no longer maintained` / `superseded` / `archived in favour of` **before**
+grading recency, and when a successor is named, check whether it is already held. 🔵 This is
+the inverse of the usual worry about stale repositories: the risk is not that an old repo looks
+dead, it is that a **dead repo looks alive**.
+
 ## 🆕 `p603` — reads `2026-11-02`, commit `2026-11-02` — three numbered trends (`77`–`79`), each with the measurement that produced it
 
 ## 77. A mature knowledge base's web-search legs become a regression test, and its own backlog becomes the discovery channel (high confidence — 33 consecutive nils against 46 promotions from one re-probe)

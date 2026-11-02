@@ -1,0 +1,10 @@
+leg	region	tokens	held	new	verdict
+top open source AI agents education 2026 github MIT	Global	6	6	0	HELD-ALL
+github trending education AI 2026	Global	7	6	1	NEW=datnguyenquy94/news-radar REJECTED-topic-relevance
+open source platform education ERP CRM MIT Apache	Global	5	5	0	HELD-ALL
+AI education industry trends 2026	Global	9	9	0	HELD-ALL claims-only-no-addresses
+AI education North America 2026 adoption regulation players	North America	7	7	0	HELD-ALL
+AI education EMEA 2026 adoption regulation players	EMEA	7	7	0	HELD-ALL
+AI education APAC 2026 adoption regulation players	APAC	7	7	0	HELD-ALL region-returned-non-education-material
+AI education LATAM 2026 adoption regulation players	LATAM	8	8	0	HELD-ALL
+TOTAL	-	56	55	1	34th-consecutive-nil-on-education-relevant-addresses

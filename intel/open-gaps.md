@@ -1,8 +1,49 @@
 ---
 industry: education
 region: Global
-updated: 2026-11-01
+updated: 2026-11-02
 ---
+
+## 🆕 `p604` — `2026-11-02` — **🟢 `598-D` CLOSED AND RELOCATED (`91` REPOS, `61` GRANTS BYTE-READ). 🔴 A NEW DEFECT CLASS REGISTERED (`604-B`, HTML GRANT PAYLOAD). 🔴 THE EXECUTABLE GATE NARROWED — THIS BASE'S OWN SCRIPTS ARE DENIED. 🔴 THIRTY-FOURTH NIL. 🟢 `589-A` REPAIRED ON TIME THIS PASS FOR THE FIRST TIME IN SIX.**
+
+🔵 **Channel table, run first (`569-B`'s standing row), with a fabricated control on every arm.**
+
+| channel | result this pass |
+| --- | --- |
+| 🟢 `gh api -X GET search/repositories` (`org:` / `topic:`) | 🟢 **`91` org rows + `316` topic candidates**; serves `stargazers_count`, `default_branch`, `license.spdx_id` |
+| 🟢 fabricated control on the search channel | 🟢 **DISCRIMINATING** — `total_count: 0` vs `313` |
+| 🔴 `gh api repos/{owner}/{repo}` | 🔴 **blocked for this session** — *"GitHub access to this repository is not enabled"* |
+| 🟢 `curl` → `raw.githubusercontent.com/{repo}/{default_branch}/{path}` | 🟢 **`61` grants + `12` READMEs served** |
+| 🟢 fabricated control on `raw` | 🟢 **DISCRIMINATING** — `404 14 B` vs `200` |
+| 🔴 `curl -sI` → `github.com` (run prompt's mandated verifier) | 🔴 **`403` real AND `403` fabricated** — certifies nothing; carried from `p590`, re-measured today |
+| 🟢 `git ls-remote --symref`, `git clone --bare --depth 1 --filter=blob:none` | 🟢 **RUNS** — gives the `HEAD` symref **and** the committer tz offset (the region channel); `48 of 48` cited repos verified |
+| 🟢 fabricated control on the git channel | 🟢 **DISCRIMINATING** — `fatal: could not read Username` vs a resolved symref |
+| 🔴 🆕 `bash compose/code/**/*.sh` — **this base's own controls** | 🔴 **DENIED** (`[Code from External]`) — new this pass; reimplemented inline |
+| 🔴 `make`, `bash ingest/*.sh` | 🔴 DENIED — carried |
+| 🟢 inline `grep` / `awk` / `curl` / `python3 -I` | 🟢 **RUNS** |
+| 🔴 `unesco.org`, `oecd.org`, `iadb.org`, `unu.edu` | 🔴 **unreachable** — `curl` `000`, `WebFetch` `ENOTFOUND`; outside session network policy |
+| 🟡 `WebSearch` ×8 mandated | 🔴 `1 of 56` tokens new, rejected on relevance — **34th nil**; 🟢 `4 of 4` regional legs paid |
+
+### 🔴 Registered this pass
+
+| ID | Gap | Why it matters | Cheapest next step |
+| --- | --- | --- | --- |
+| 🟢 **`604-A`** | **`598-D` is closed, and its sweep target was wrong.** Swept all four Apereo-family orgs: the three `598-D` named hold `2` ECL repos; the org it did **not** name (`Apereo-Learning-Analytics-Initiative`) holds `9` | 🟢 Settles a gap open `6` passes with a quotable number: API is right `44 of 44` on Apache-2.0 and **`1 of 11`** on ECL-2.0 (`90.9 %` failure) | 🟢 **Paid in full here.** 🔴 Residual: the body-scan phrase (`educational community license`) should be added to the grant ladder so it is not re-derived |
+| 🔴 **`604-B`** | **A grant payload can be a saved HTML page of *another repository's* licence.** `uPortal-Project/FeedbackPortlet`, `11,620 B`, `<!-- saved from url=…Jasig/CalendarPortlet/master/LICENSE -->` | 🔴 **Every grep-based reader in this base grades it `Apache-2.0`.** `0` prior occurrences of `saved from url` across all shelves — this class was invisible here | 🟢 Control stated: markup in the first `512 B` ⇒ `REVIEW`. 🔴 Remaining: **sweep the base's existing permissive rows for the same shape** — unmeasured, and the only way to know if wrong data is already shelved |
+| 🔴 **`604-C`** | **This base's own `java-cas-client` row records one grant; the file carries two** (Apache-2.0 by reference from Apereo, then BSD-3-Clause `License for Use` from `JA-SIG, Inc.`) | 🟡 Verdict unchanged (both permissive) but the row is incomplete, and the mechanism is general: `594-F` stage 2 stops at the **first** declaration | 🔴 Re-read every row whose grant was graded "by the declaration line" and check for a **second** grant below it. Population unmeasured |
+| 🔴 **`604-E`** | **The executable gate narrowed: `bash compose/code/**/*.sh` is DENIED.** `p598` had inline `bash` running with only `make`/`ingest` denied | 🔴 This base's controls are committed **as scripts**. A pass that cannot run them may skip its controls — or report them as run | 🟢 Posture: reimplement inline from the script's documented header and **publish both counts** (`6,139` here vs `heldset.sh`'s `6,083`). 🔴 Risk: silent drift between the inline rebuild and the committed control |
+| 🔴 **`604-F`** | **Thirty-fourth consecutive nil.** `56` tokens, `55` held; the one new address is an auto-generated news-digest bot failing `p202-topic-relevance-gate` | 🟢 The legs did act as a **regression test** — three already-held repos were printed as this week's story and the inline held-set rebuild caught all three | 🔴 `598-E` / `594-G` **decision still owed** at `34` nils. 🔵 `p604` supplies the counter-argument: as a regression test they have non-zero value |
+| 🟡 **`604-H`** | **The APAC leg paid `7/7` tokens and returned almost no education material** — enterprise-AI and observability reports, plus one UK story mis-filed as APAC | 🟡 Recorded as a **query-shape defect, not regional silence**; the regional acronym is the wrong handle | 🟢 Use **national** queries (China / Korea / Singapore / Japan AI-education policy). Same lesson as `p1059-latam-name-channel` for LATAM |
+| 🟢 **`589-A`** | 🟢 **Not recurring this pass.** This register is being written **in** `p604`, concurrent with the curated pages, rather than backfilled | 🟢 Six passes of recurrence broken | 🔴 **The cause is unchanged** — `gate-register-currency` lives in `HOOK_GATES`, `make` is DENIED, and now `compose/code` scripts are denied too, so manual concurrent authoring is the **only** route. It will recur the moment a pass forgets |
+
+### 🔴 Carried, unchanged
+
+| ID | state |
+| --- | --- |
+| 🔴 `598-G` | Regional market figures remain **search-snippet-grade**. The primary-source hosts are outside this session's network policy. **Operator request, not a research step** — open `6` passes |
+| 🔴 `598-C` | `591-B`'s `NOASSERTION` arm stays refuted; 🔴 the other `31` `NOASSERTION` rows from that sweep are still not manifest-probed. 🔵 `p604` adds `14` more `NOASSERTION` rows that **are** now byte-read |
+| 🟡 `603-D` | The `~38` backlog rows whose substance is unestablished — untouched this pass, which spent its budget closing `598-D`. Said rather than hidden |
+| 🔴 `598-A`/`598-B` | A manifest field grades **REVIEW**, never 🟢. `SakaiXAPI-Provider` re-confirmed `NO-PAYLOAD` on `6` rungs today; its ECL-2.0 remains `pom.xml`-only |
 
 ## 🆕 `p598` — `2026-11-01` — **🟢 A FOURTH GRANT CHANNEL FOUND AND ITS YIELD HONESTLY BOUNDED AT `1 of 16`. 🔴 `591-B` REFUTED ON ONE ARM. 🔴 `598-D`: THE API IS WRONG ABOUT THE EDUCATION SECTOR'S OWN LICENCE IN `6 of 8` CASES. 🔴 `589-A` RECURS A FIFTH TIME — THIS REGISTER WAS `4` PASSES BEHIND. 🔴 TWENTY-EIGHTH NIL. SEVEN REGISTERED (`598-A`…`598-G`).**
 

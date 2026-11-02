@@ -1,0 +1,2 @@
+repo	grant_path	bytes	defect	saved_from	what_a_grep_reader_grades
+uPortal-Project/FeedbackPortlet	LICENSE	11620	payload is a saved HTML page, not licence text	https://raw.github.com/Jasig/CalendarPortlet/master/LICENSE	Apache-2.0 (4 "Apache License" hits inside the HTML)
