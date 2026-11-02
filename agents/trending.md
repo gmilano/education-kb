@@ -4,6 +4,88 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p619` — `2026-11-02` — **the forty-ninth consecutive global-leg nil, proven against a `3,902`-slug oracle — and three named tiers that paid `20` new head names, `0` held**
+
+🔴 **The mandated nil, and this pass it is a measurement rather than an impression.** Legs `1`–`4`
+(`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`,
+`open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026`) surfaced
+`10` head names. **All `10` are already held** — checked against an index of **`3,902`** distinct
+`github.com/owner/repo` addresses extracted this pass from the seven shelf files, matched
+case-insensitively, not against recall:
+
+`rohitg00/ai-engineering-from-scratch` · `pguso/agents-from-scratch` · `MadsLorentzen/ai-job-search` ·
+`aneelv75/github-trending` · `OPTIMETA/PAIDEIA` · `GarethManning/education-agent-skills` ·
+`microsoft/ai-agents-for-beginners` · `hcengineering/platform` · `krayin/laravel-crm` · `m98/fluent`
+
+🔵 **Why the oracle matters more than the nil.** `618-C` reported the 48th nil by naming candidates it
+recognised. A reader could not tell *recognised* from *held*. This pass the two are the same claim:
+`10 of 10` returned a match in the index. 🔴 The ERP/CRM leg's fourth nil is inside that count — see
+`619-B` in `repos/foundations.md`; **the leg is retired.**
+
+### 🟢 `619-C` — where the yield came from: three tiers, chosen by measuring the shelf's own holes
+
+🔵 **The selection was a census, not a hunch.** Keyword counts across the seven shelf files:
+`phonics` **`0`** · `early literacy` **`0`** · `speech therapy` **`0`** · `sign language` **`4`** ·
+`screen reader` **`4`** · `exam integrity` **`1`** — against `proctor` `382` · `rubric` `334` ·
+`accessib` `161` · `IEP` `105` · `psychometr` `80`. **The zeroes became the budget.**
+
+| Tier named | Leg | Head names | Held | **New** | Shipped as rows |
+|---|---|---|---|---|---|
+| Early literacy / phonics | `open source reading fluency phonics early literacy tutor github MIT Apache` | `7` | `0` | 🟢 **`7`** | `3` |
+| Speech & language practice | `open source speech therapy speech-language pathology practice app github MIT` | `7` | `0` | 🟢 **`7`** | `3` |
+| Sign language / Deaf education | `open source sign language learning recognition education github MIT Apache` | `6` | `0` | 🟢 **`6`** | `6` |
+| **Total** | | **`20`** | **`0`** | 🟢 **`20`** | 🟢 **`12`** |
+
+🟢 **Largest single-pass supply yield on this base's record**, and the third consecutive confirmation of
+`617-K`'s operative: *spend the budget on a named tier, not on the mandated shape.*
+
+### 🟢 The `12` rows that shipped, by tier
+
+| Repo | Grant | Bytes | ★ | Forks | Branch | Tier | Shelf |
+|---|---|---|---|---|---|---|---|
+| [`Arshad221b/Sign-Language-Recognition`](https://github.com/Arshad221b/Sign-Language-Recognition) | 🟢 `Apache-2.0` | `11,357` | **`265`** | **`106`** | `master` | sign language | `foundations` |
+| [`imRishabhGupta/Indian-Sign-Language-Recognition`](https://github.com/imRishabhGupta/Indian-Sign-Language-Recognition) | 🟢 `MIT` | `1,070` | **`221`** | `79` | `master` | sign language | `foundations` |
+| [`Anmol-Singh-Jaggi/Sign-Language-Recognition`](https://github.com/Anmol-Singh-Jaggi/Sign-Language-Recognition) | 🟢 `MIT` | `1,084` | `129` | `43` | `master` | sign language | `foundations` |
+| [`FrederikSchorr/sign-language`](https://github.com/FrederikSchorr/sign-language) | 🟢 `MIT` | `1,071` | `107` | `33` | `master` | sign language | `foundations` |
+| [`AvishakeAdhikary/Realtime-Sign-Language-Detection-Using-LSTM-Model`](https://github.com/AvishakeAdhikary/Realtime-Sign-Language-Detection-Using-LSTM-Model) | 🟢 `MIT` | `1,074` | `93` | `25` | `main` | sign language | `agents` |
+| [`JaspreetSingh-exe/Sign-Language-Recognition-System`](https://github.com/JaspreetSingh-exe/Sign-Language-Recognition-System) | 🟢 `MIT` | `1,071` | `11` | `7` | `main` | sign language | `agents` |
+| [`future-finder/speech-practice`](https://github.com/future-finder/speech-practice) | 🟢 `MIT` | `1,085` | `3` | `0` | `main` | speech | `agents` |
+| [`tanner-griffith/phono-storyforge`](https://github.com/tanner-griffith/phono-storyforge) | 🟢 `Apache-2.0` | `10,760` | `1` | `0` | `main` | early literacy | `agents` |
+| [`valueforvalue/OpenPhonograms`](https://github.com/valueforvalue/OpenPhonograms) | 🟢 `MIT` | `1,070` | `0` | `0` | `main` | early literacy | `foundations` |
+| [`alpharigel/phonics-font`](https://github.com/alpharigel/phonics-font) | 🟢 `Apache-2.0` | `11,357` | `0` | `0` | `master` | early literacy | `foundations` |
+| [`developerali123/speech_therapy_app`](https://github.com/developerali123/speech_therapy_app) | 🟢 `MIT` | `1,075` | `0` | `0` | `main` | speech | `agents` |
+| [`sunnydev07/Open-Speech`](https://github.com/sunnydev07/Open-Speech) | 🟢 `MIT` | `1,072` | `0` | `0` | `main` | speech | `agents` |
+
+🟡 **`12 of 12` permissive**, `9` `MIT` + `3` `Apache-2.0`, no copyleft and no `NULL` among the shipped
+rows — the first pass on this base where a tier search returned **no copyleft at all**. 🔵 That is a
+property of *hobby-scale pedagogical tooling*, not of the sector: `619-B`'s administrative leg remains
+copyleft by default.
+
+### 🔴 The rejection ledger — `8` of `20` did not ship, each with a named cause
+
+| Rejected | Cause |
+|---|---|
+| `jonajinga/open-phonics` | Channel asserted `MIT`; **no payload at `8` probes**, no sidebar licence, README carries the bare word `MIT` — `619-G` |
+| `crowdproj/opentutor` | README asserts `Apache-2.0`; **no payload at `9` probes, no `NOTICE`** — `619-H` |
+| `nader-ld/SpeechTherapyApp` | 🔴 **Address unreachable** — `404` on `6` probes, both branches — `619-I` |
+| `LangTieu/reading-project` | Channel claimed *"dual-licensed"*; README contains **no occurrence of `licen`** |
+| `paulynnat/phonics-sonics` | No licence string (`976 B` README) |
+| `ManilMehta/SpeechMe` | No licence string (`7,644 B` README) |
+| `rachelcconrad/ctt-home-practice-V1` | No licence string (`2,316 B` README) |
+| `surajkumarsingh179/speech-therapy` | No licence string (`3,588 B` README) |
+
+🔴 **Five of eight rejections are plain absence of any grant** — the dominant failure mode in a
+hobby-scale tier, and a thing to expect rather than be surprised by next time this base names one.
+
+### 🔴 `619-E` — and a defect in how this base has been filling its own `Branch` column
+
+`main` and `master` return **byte-identical payloads** for a `main`-default repo through this session's
+channel, while an invented ref `404`s. Calibrated `4 of 4` on knowns, and the discriminating rule —
+*`main` `404` + `master` `200` ⇒ `master`; both `200` ⇒ `main`* — agrees with the `github.com` sidebar
+**`12 of 12`**. 🔵 Full statement in `agents/top.md`. **A column with no failing case is not a
+measurement.**
+
+
 ## 🆕 `p618` — `2026-11-02` — **the forty-eighth consecutive global-leg nil, and the second consecutive pass whose entire yield came from naming a *tier***
 
 🟢 **The mandated nil, with candidates named so the nil is auditable.** Legs `1`–`4`

@@ -4,6 +4,132 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p619` — reads `2026-11-02` — **five recipes, every component byte-read today, plus the control debt this pass could not discharge**
+
+### `P619-0` 🔴 Discharge the control debt first — `1` wk, and nothing else in `p618`/`p619` is trusted until it is done
+
+**The gap:** `619-L` is the **third** consecutive pass refused `[Code from External]`. Two gates are
+now owed a green run they have never had: `gate-declared-gap` (wired at `618-A`, never executed) and
+`gate-region-headings` (wired, and **red-then-repaired** at `618-L`).
+
+**Wire it, in a session that can execute code from this clone:**
+1. `make gate-region-headings` — must be green on `intel/market.md`. 🟢 `p619` left **exactly one**
+   canonical `## Opportunities by region` block with exactly the five closed-vocabulary `###` children
+   (`North America`, `EMEA`, `APAC`, `LATAM`, `Global`), and retitled `p618`'s to
+   `— `p618` (archived)`. **Verified by reading, not by running.**
+2. `make gate-declared-gap` — the suite is authoritative; `make declared-gap-sweep` is a
+   **measurement, never a failure** (`618-A`).
+3. 🔴 **Unblock the masking before trusting either:** `recount`'s inherited red (`Gap 534-J`) halts the
+   runner before later gates are judged, so a green line from `hooks` today proves nothing about the
+   gates behind it (`618-L`).
+4. Then `619-E`'s generalisation, which is cheaper than it sounds: for **every** column this base
+   claims to verify, write down **the observation that would make it fail**. The `Branch` column had
+   none for `246`+ rows. Start with `★`, `Pushed` and `Region`.
+
+**Done when:** both gates print green once, and `recount`'s red is either fixed or explicitly excluded
+with a reason in the `Makefile`.
+
+### `P619-1` 🟢 Read-aloud fluency assessment as an `LTI 1.3` tool — `6`–`8` wk — the pass's strongest recipe
+
+**Who buys it:** a US district or state under `IDEA` / `Section 504`, or any system with a mandated
+early-reading screener. 🔵 `T619-4`: this is a **statutory** purchase, not a pilot, which is why it
+survives a budget freeze.
+
+**Wire it:**
+1. **Corpus** — [`valueforvalue/OpenPhonograms`](https://github.com/valueforvalue/OpenPhonograms)
+   (`MIT`, `1,070 B`): `248` lessons, `25` decodable readers, Pre-K→G3+. 🔴 Keep the bundled **`OFL`**
+   font in its own lane; it is separately licensed.
+2. **Assessment loop** — [`tanner-griffith/phono-storyforge`](https://github.com/tanner-griffith/phono-storyforge)
+   (`Apache-2.0`, `10,760 B` — complete, `619-F`): per-child mastery model, next skill chosen **from
+   reading evidence**, decodable book generated, read-aloud heard, **every miscue attributed to its
+   grapheme**. 🟡 Its own sweep claims it beats static but *"does not reliably win past a `0.95`
+   mastery bar"* — **the author's claim; treat the bar as an open question, not a spec.**
+3. **Rendering** — [`alpharigel/phonics-font`](https://github.com/alpharigel/phonics-font)
+   (`Apache-2.0`, stock `11,357 B`) for the decodable glyphs neither component ships.
+4. **Scheduling** — carried `FSRS-6`/`SM-2` layer (`618-M`); the scheduler, not the model, is what
+   retains a learner.
+5. **Boundary** — ship as an **`LTI 1.3` external tool** (`619-M2`), not a Moodle plugin or an
+   `XBlock`. Roster and grade passback over `LTI`; **no studio code inside the `GPL`/`AGPL` LMS.**
+6. 🔴 **`NOTICE` discipline:** two `Apache-2.0` components means attribution and a `NOTICE` file
+   (`618-E`). Do this at week one, not at delivery.
+
+**Delivery note:** `phono-storyforge` is `1★` and `41` commits. 🔴 This is an **adoption of a design**,
+not of a maintained dependency — budget a fork and an owner.
+
+### `P619-2` 🟢 A Deaf-access channel for live instruction — `8`–`10` wk
+
+**Who buys it:** a ministry or university with a Deaf-access obligation; in APAC specifically, an
+**Indian** institution, because two of the components target **Indian Sign Language** (`619-M`'s
+by-subject placement).
+
+**Wire it:**
+1. **Pose path** — [`imRishabhGupta/Indian-Sign-Language-Recognition`](https://github.com/imRishabhGupta/Indian-Sign-Language-Recognition)
+   (`MIT`, `221★`, `79` forks) or [`Arshad221b/Sign-Language-Recognition`](https://github.com/Arshad221b/Sign-Language-Recognition)
+   (`Apache-2.0`, `265★`, **`106` forks**, ships a `PyTorch` port). 🟢 Pick on **forks, not stars** —
+   `106` forks is the tier's real reuse signal.
+2. **Motion path** — [`AvishakeAdhikary/…-LSTM-Model`](https://github.com/AvishakeAdhikary/Realtime-Sign-Language-Detection-Using-LSTM-Model)
+   (`MIT`) or [`FrederikSchorr/sign-language`](https://github.com/FrederikSchorr/sign-language)
+   (`MIT`) for **continuous** signing, which the pose classifiers cannot do.
+3. **Feature extraction** — [`JaspreetSingh-exe/Sign-Language-Recognition-System`](https://github.com/JaspreetSingh-exe/Sign-Language-Recognition-System)
+   (`MIT`, holder year `2025`, the freshest grant here) for the `MediaPipe`→`MLP` pipeline, and because
+   it names **text-to-sign** as a direction.
+4. **Baseline you must beat before funding a `GPU`** — [`Anmol-Singh-Jaggi/Sign-Language-Recognition`](https://github.com/Anmol-Singh-Jaggi/Sign-Language-Recognition)
+   (`MIT`, classical `kNN`/`SVM`). 🟢 **Run this first.** If it is close enough, the whole engagement
+   gets cheaper and deployable on classroom hardware.
+5. **Media** — **BigBlueButton** (`LGPL-3.0`) as the `WebRTC` classroom the channel rides on; the
+   recogniser stays a separate service, **outside** the `LGPL` boundary.
+
+🔴 **Scope honestly:** all five models are **finger-spelling / alphabet or short-gesture** classifiers.
+None is a translation system. The deliverable is an **access channel and a dataset flywheel**, and
+promising interpretation would be misrepresenting every component.
+
+### `P619-3` 🟢 Offline articulation practice for a zero-budget public system — `4`–`6` wk — LATAM-shaped, not LATAM-only
+
+**Who buys it:** a public university or school system in `619-N`'s segment — **`4%`** dedicated AI
+funding, **`55%`** no AI budget at all, **`90%`** already using general tools. 🔵 The bid must have **no
+recurring per-seat cost**.
+
+**Wire it:**
+1. **Runtime** — [`developerali123/speech_therapy_app`](https://github.com/developerali123/speech_therapy_app)
+   (`MIT`, `1,075 B`): frontend-only `PWA`, recordings in **`IndexedDB`**, therapist-review flow.
+   🟢 It **states its own clinical boundary** (non-diagnostic, alongside an `SLP`) — keep that wording;
+   it is a liability feature, not modesty.
+2. **Host** — **Kolibri** (`MIT`) for offline-first distribution where there is **no LMS to attach
+   to**. 🔵 The only permissive incumbent on the shelf (`619-M2`).
+3. **Content** — `OpenPhonograms`' corpus for the articulation targets.
+4. 🔴 **Explicitly excluded:** [`sunnydev07/Open-Speech`](https://github.com/sunnydev07/Open-Speech)'s
+   real-time **`CEFR`** rating. The feature is good and the grant is clean `MIT` — but it depends on a
+   **hosted model**, and in this segment that is a **disqualifier**, not a line item (`T619-5`).
+5. 🟢 Where connectivity exists, [`future-finder/speech-practice`](https://github.com/future-finder/speech-practice)
+   (`MIT`) adds timed drills. Treat it as an upsell, never as the base.
+
+**Done when:** the whole thing installs from a `Kolibri` channel on a device that never reaches the
+internet, and a teacher can export a learner's progress by file.
+
+### `P619-4` 🟡 Disclosure-based academic-integrity workflow — `6`–`8` wk — the product the instruments are asking for
+
+**Who buys it:** the **`53%`** restrictive bloc in `619-K`'s US figures — **`42%`** discourage +
+**`11%`** prohibit — facing **`57%`** weekly student use regardless. Also any Philippine institution
+under **DepEd Order `003`, s. `2026`**, which **mandates student disclosure**.
+
+**Wire it:**
+1. **Policy surface** — an `LTI 1.3` tool that attaches a **structured disclosure** to each submission:
+   which tool, which step, what the student did themselves. 🔵 `T619-1`: every instrument that landed
+   this pass asks for **accountability**, not detection.
+2. **Grade boundary** — disclosure travels with grade passback over `LTI`; **no studio code in the
+   `AGPL` LMS** (Canvas dominates the US buyer).
+3. **Rubric layer** — the shelf's carried `rubric` material (`334` mentions) is the one tier this base
+   is **over**-supplied in; spend nothing new here, reuse it.
+4. 🔴 **Build no detector.** Not as a feature, not as a fallback. It is the thing the sector is moving
+   away from, it is unreliable, and it converts a compliance sale into an adversarial one.
+
+🔴 **Carried caveat, and it governs the EMEA version of this recipe:** whether the **AI Act's**
+high-risk obligations bite on education from **`2 August 2026`** is **unverified** (`619-K` is exactly
+why that date is not being treated as settled). 🔵 Scope the EU variant against the **March `2026`
+ethical guidelines**, which are dated and confirmed, and put the AI Act date behind a verification
+task rather than inside a statement of work.
+
+
 ## 🆕 `p618` — reads `2026-11-02` — **four recipes, each wired from rows byte-read today**
 
 ### `P618-0` 🔴 Finish the control that `618-A` wired, and sweep for the others like it — `1` wk

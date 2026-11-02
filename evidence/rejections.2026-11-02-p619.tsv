@@ -1,0 +1,11 @@
+slug	cause	probes_failed	class
+jonajinga/open-phonics	channel asserted MIT; no payload; README bare token "MIT"; no sidebar licence	8	619-G bare-token
+crowdproj/opentutor	README prose "Apache License Version 2.0"; no payload; no NOTICE	9	619-H prose-only
+nader-ld/SpeechTherapyApp	address unreachable on raw channel	6	619-I dead address
+LangTieu/reading-project	channel claimed dual-licensed; README contains no occurrence of "licen"	8	no grant
+paulynnat/phonics-sonics	no licence string in 976 B README	8	no grant
+ManilMehta/SpeechMe	no licence string in 7644 B README	8	no grant
+rachelcconrad/ctt-home-practice-V1	no licence string in 2316 B README	8	no grant
+surajkumarsingh179/speech-therapy	no licence string in 3588 B README	8	no grant
+hcengineering/platform	619-U: channel said Apache-2.0; github sidebar says EPL-2.0 (weak copyleft); HELD slug, licence corrected not rejected	n/a	619-U wrong family on held row
+NextCRM	channel-only MIT, not byte-read; marked unverified, not cited as supply	n/a	619-U unverified

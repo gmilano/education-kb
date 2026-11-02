@@ -4,6 +4,85 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p619` — reads `2026-11-02` — **the recognition model is this sector's missing accessibility primitive, and the ERP/CRM leg pays nothing a fourth time**
+
+### 🟢 `619-D2` — six foundational rows, and the layer they add is one this shelf had `4` mentions of
+
+🔵 **Split criterion** (the companion to `619-D` in `agents/top.md`): a row lands **here** if it is a
+reusable **model, corpus or asset** rather than a learner-facing runtime. No row appears on both
+shelves. All `12` grants were byte-read today and cross-checked against the `github.com` sidebar,
+**`12 of 12` agreeing**; branches by `619-E`'s calibrated rule, **`12 of 12`** agreeing.
+
+| Repo | Grant | Title line | Bytes | Holder | ★ | Forks | Branch | Region | Why foundational |
+|---|---|---|---|---|---|---|---|---|---|
+| [`Arshad221b/Sign-Language-Recognition`](https://github.com/Arshad221b/Sign-Language-Recognition) | 🟢 **`Apache-2.0`** | `Apache License` | `11,357` (stock) | stock Apache header | **`265`** | **`106`** | `master` | 🟢 **APAC — by subject** (Indian Sign Language); holder not placed | **The tier's head name by adoption.** `OpenCV` pipeline for **Indian Sign Language**, shipping `ASL` notebooks and a `PyTorch` port beside it. 🟢 `106` forks is the strongest reuse signal on either shelf this pass — people are *building on* this one, not just starring it |
+| [`imRishabhGupta/Indian-Sign-Language-Recognition`](https://github.com/imRishabhGupta/Indian-Sign-Language-Recognition) | 🟢 **`MIT`** | `MIT License` | `1,070` | `Rishabh Gupta` (`2017`) | **`221`** | **`79`** | `master` | 🟢 **APAC — by subject** (Indian Sign Language); holder not placed | `OpenCV` + `TensorFlow` `ISL` alphabet recognition, written for **blind and Deaf** accessibility. 🟡 `2017` holder year — the oldest row this pass, and `79` forks say it is still the one people start from |
+| [`Anmol-Singh-Jaggi/Sign-Language-Recognition`](https://github.com/Anmol-Singh-Jaggi/Sign-Language-Recognition) | 🟢 **`MIT`** | 🟡 `The MIT License (MIT)` | `1,084` | `Anmol Singh Jaggi` (`2017`) | **`129`** | `43` | `master` | 🔵 Global — holder not placed | `ASL` finger-spelling with **classical** `ML` (nearest-neighbour, logistic regression, `SVM`). 🟢 **Foundational precisely because it is not deep learning**: it is the only row here a studio can run on a classroom machine with no accelerator, and it is the right baseline to beat before anyone funds a `GPU` |
+| [`FrederikSchorr/sign-language`](https://github.com/FrederikSchorr/sign-language) | 🟢 **`MIT`** | `MIT License` | `1,071` | `Frederik Schorr` (`2018`) | **`107`** | `33` | `master` | 🔵 Global — holder not placed | Deep-learning prototype for **live** sign prediction. 🔵 Pairs with `AvishakeAdhikary`'s `LSTM` row as the **continuous-signing** half of the tier, against the pose-classifier half |
+| [`valueforvalue/OpenPhonograms`](https://github.com/valueforvalue/OpenPhonograms) | 🟢 **`MIT`** | `MIT License` | `1,070` | `Jeremy Morris` (`2026`) | `0` | `0` | `main` | 🔵 Global — holder not placed | **A corpus, not an app**: `248` lessons and `25` decodable readers, Pre-K→Grade 3+, on the phonogram methodology of *Uncovering the Logic of English*. 🟢 This is the **item bank** `618-M` said the sector's schedulers have nothing to schedule without. 🔴 Its README states the bundled **font is `OFL`, separately licensed** — a mixed-grant tree, so a derivative must keep the font's lane distinct |
+| [`alpharigel/phonics-font`](https://github.com/alpharigel/phonics-font) | 🟢 **`Apache-2.0`** | `Apache License` | `11,357` (stock) | stock Apache header | `0` | `0` | `master` | 🔵 Global — holder not placed | **An asset layer, and the only one on this shelf**: phonetic-character fonts for generating personalised decodable story material. 🔵 Named foundational because `phono-storyforge`'s *"guaranteed-decodable book"* and `OpenPhonograms`' readers both need **rendering** they do not ship |
+
+### 🟢 `619-K2` — the layer this adds, named, because it is not "more tutors"
+
+🔵 All six rows are **upstream** of a tutor. Stacked, they are a complete pipeline this base could not
+previously assemble from permissive parts:
+
+```
+asset        phonics-font (Apache-2.0)        → decodable glyphs / personalised story text
+corpus       OpenPhonograms (MIT)             → 248 lessons + 25 graded readers  ← the item bank
+input        MediaPipe landmarks / LSTM       → sign or speech captured as features
+model        4 recognition models (MIT/Ap-2)  → pose classifier OR sequence classifier
+scheduler    FSRS-6 / SM-2 (618-M, carried)   → what makes any of it retain a learner
+```
+
+🟢 **The gap this closes is an accessibility gap, and it was measurable.** Before this pass the shelf
+mentioned `sign language` **`4`** times and `screen reader` **`4`** times, against `proctor` `382` and
+`rubric` `334`. 🔴 **A knowledge base that is `95×` better supplied on invigilation than on Deaf
+access is describing a priority, not a market** — and it was this base's own priority, not the
+sector's.
+
+### 🔴 `619-B` — the ERP/CRM leg pays nothing a **fourth** time; `618-N`'s retirement is confirmed
+
+`open source platform education ERP CRM MIT Apache` returned **no education-specific permissive
+system** for a fourth consecutive pass. Measured, so the retirement stays auditable:
+
+| Returned | Grant | Education-specific? |
+|---|---|---|
+| `Huly Platform` ([`hcengineering/platform`](https://github.com/hcengineering/platform)) | 🔴 **`EPL-2.0`** — **not** `Apache-2.0`, see `619-U` | 🔴 **No** — a general data/relationship framework; already held (`28.0k★`) |
+| `Krayin CRM` ([`krayin/laravel-crm`](https://github.com/krayin/laravel-crm)) | 🟢 `MIT` — sidebar-confirmed, `24.1k★` | 🔴 **No** — general CRM; already held |
+| `NextCRM` | 🟡 `MIT` — channel-only, **not byte-read** | 🔴 **No** — general CRM on `Next.js` |
+| `OpenEduCat` | 🔴 `LGPL-3.0` | 🟢 Yes — unchanged from `p618` |
+| `ERPNext` | 🔴 `GPL-3.0` | 🔴 No — unchanged from `p617` |
+| `CK-ERP` | 🟡 not stated | 🟢 Yes — 🔴 but its latest release in channel is **`2010`**; stale, not supply |
+
+🔵 **Operative, now from four nils rather than three: the leg is retired.** `618-N` asked for it to be
+re-aimed at a named subsystem; `619-C` did exactly that with three *pedagogical* tiers and paid `20`
+new names. 🟢 **The re-aim is the finding** — the query shape was the constraint, not the sector.
+🟡 And `618-N`'s sector-level conclusion stands untouched and is worth repeating because it bounds
+delivery: **the administrative tier of education is copyleft by default.** Permissive supply in this
+sector sits in *pedagogy*, not in *administration*.
+
+
+
+### 🔴 `619-U` — the channel got the licence **family** wrong again, on a repo this base already **held**, and this pass nearly re-published it
+
+The ERP/CRM leg described `Huly Platform` as *"fully open-source under the Apache License 2.0"*. 🔴
+**The `github.com` sidebar says `EPL-2.0`** — the **Eclipse Public License**, which is **weak
+copyleft**, not permissive. 🟡 It was caught only because this pass checked a second channel for a row
+it was about to write down as `🟢 Apache-2.0`.
+
+🔵 **Why this one matters more than `618-E`.** `618-E` was a channel wrong about a **new**
+candidate, caught at intake. This is a channel wrong about a slug **already in the index**, arriving
+through a leg whose nil result made it feel like a formality — and `EPL-2.0` carries a **reciprocity
+obligation on modified source files** that `Apache-2.0` does not. 🔴 A studio told *"Apache"* would
+have planned a closed derivative on a weak-copyleft base.
+
+🟢 **Rule, and it tightens `618-E` rather than repeating it:** a **nil** leg still writes rows —
+its rejection table *is* data — so **grade the licences in a nil result to the same standard as the
+licences in a yield.** 🔴 `NextCRM`'s `MIT` in the table above is channel-only and is marked 🟡
+accordingly; it has **not** been byte-read, and it is not cited anywhere as permissive supply.
+
+
 ## 🆕 `p618` — reads `2026-11-02` — **the scheduling layer named as a foundational primitive, and the ERP/CRM leg retired after a third nil**
 
 ### 🟢 `618-M` — `FSRS`/`SM-2` is this sector's load-bearing primitive and this base had never named it as one

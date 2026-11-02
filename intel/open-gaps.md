@@ -4,6 +4,84 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p619` — `2026-11-02` — **🔴 CONTROL DEBT UNCHANGED AND NOW THREE PASSES OLD: THE EXECUTION DENIAL REPRODUCED A THIRD TIME, SO BOTH GATES WIRED SINCE `618` ARE STILL OWED A GREEN RUN. 🔴 FOUR NEW DECLARED GAPS, EACH MEASURED RATHER THAN ASSUMED. 🟢 AND ONE GAP CLOSES: THE ACCESSIBILITY SUPPLY HOLE, `12` PERMISSIVE ROWS. FIVE REGISTERED (`619-L`, `619-P`, `619-Q`, `619-R`, `619-S`).**
+
+### 🔴 `619-L` — OPEN (control debt, third consecutive pass): no instrument in this repository can be executed here
+
+`make gate-region-headings` and a direct `python3 compose/code/p370-gap-gate/gap_gate.py --self-test`
+are both refused `[Code from External]`, reproducing `617-J` and `618-B` exactly. 🟢 The agent's own
+**inline** interpreter runs normally — every edit and every probe this pass used it — so `618-B`'s
+mechanism stands: **the restriction is keyed on code provenance, not on Python.**
+
+🔴 **Consequently owed a green run, by a session that can execute code from this clone:**
+`gate-declared-gap` (wired `618-A`, **never executed**) and `gate-region-headings` (wired, red at
+`618-L`, **repaired structurally this pass by reading**). 🟡 `p619` left `intel/market.md` with exactly
+**one** canonical `## Opportunities by region` block and exactly the five closed-vocabulary `###`
+children, and archived `p618`'s as `— `p618` (archived)` — **verified by reading, not by running.**
+🔴 **This commit is not gate-verified and does not imply that it is.**
+
+### 🔴 `619-P` — NEW (declared gap, measured): Australia has no dated `2026` education-AI instrument in channel
+
+`619-M`'s national leg returned dated instruments for **Singapore** (MOE age-gated `SLS` rollout; new
+higher-education AI committee `2 April 2026`; ASEAN education chair `2026`–`2027` with `AIEd`
+programmes) and the **Philippines** (DepEd **Department Order No. `003`, s. `2026`**, mandating student
+disclosure). 🔴 **Australia returned only an undated *"Framework for AI in Schools"*.** No `2026`
+instrument, no issuing date, no ministry citation.
+
+🔵 Written down because **silence looks exactly like coverage**: a reader scanning the APAC subsection
+would otherwise take Australia as covered by the Singapore and Philippines entries. 🟢 **Next leg:**
+query the Australian Education Ministers' council and `ACARA` by name, as `605`–`607` did for China,
+Korea and Japan.
+
+### 🔴 `619-Q` — NEW (declared gap): no permissive **platform of record** exists in the accessibility / special-education tier
+
+`619-C` landed `12` permissive rows and **not one is a platform** (`619-M2`). Searched and not found:
+an `IEP` management system, an `AAC` platform, a Deaf-education LMS — none returned a permissive grant.
+🟢 The components are permissive and already built; **the platform is not.**
+
+🔵 This is simultaneously the best-shaped **opportunity** on `intel/market.md` and a 🔴 **risk in any
+estimate** that assumes a platform can be adopted rather than built. Stated in both places on purpose.
+
+### 🔴 `619-R` — NEW (declared gap, and it supersedes a claim this base would have made): no verified date for the **AI Act's** education obligations
+
+A blog in channel asserts the AI Act's high-risk obligations apply to education from
+**`2 August 2026`**. 🔴 **Not verified this pass**, and given `619-K` — where the same class of channel
+dated a real EU instrument **three months wrong** — it is recorded as **an unverified claim with its
+source characterised**, never as a date.
+
+🟢 What *is* dated and confirmed: the Commission's revised *Guidelines on the ethical use of artificial
+intelligence and data in teaching and learning for educators*, announced **`5 March 2026`**, launch
+coverage **`17 March 2026`**, listed by **Cedefop**. 🔵 `P619-4` scopes the EU recipe against **that**
+instrument and puts the AI Act date behind a verification task rather than inside a statement of work.
+
+### 🔴 `619-S` — CARRIED and unchanged: `598-G`, seventeenth pass — no primary source resolves from this environment
+
+Every demand figure on `intel/market.md` remains **search-snippet-grade**; every supply figure remains
+**byte-read**. 🔴 Market sizing conflicts by multiples and is kept only as a **named range**
+(`$3.7B`–`$8.3B` global for `2026`; North America at `$3.68B`/`36%` by one source and `38%` by another;
+Technavio's `41.7%` is **contribution to growth, not share, and is not comparable**).
+
+🔴 **Africa gap stands** (`607`): the education-specific leg returned nothing confirmable again — only a
+macro roundup naming AI-for-education exploration among African startups and public agencies, with no
+dated instrument behind it.
+
+🔴 **LATAM:** no new dated national education-AI instrument resolved for any country this pass.
+🟢 But the region's constraint is no longer only a gap — `619-N` gives it a number: **`4%`** of public
+universities fund AI, **`55%`** of universities have no AI budget (UNU/UNESCO IESALC, `1 Sep 2026`,
+`200` institutions, `19` countries).
+
+### 🟢 `619-T` — CLOSED: the accessibility supply gap this base carried in its own index
+
+🔴 Before `p619` the shelf mentioned `sign language` **`4`** times, `screen reader` **`4`**,
+`speech therapy` **`0`**, `phonics` **`0`** — against `proctor` **`382`** and `rubric` **`334`**.
+🟢 **`12` permissive rows now close part of it**, four of them above `100★` and one at `265★` with
+`106` forks.
+
+🔵 **The lesson is about the index, not the tier.** The artefacts existed the whole time; this base had
+never named the tier. `619-C`'s method — **census the shelf's own keyword holes, then spend the budget
+on a zero** — is the reusable part, and it has now paid three passes running.
+
+
 ## 🆕 `p617` — `2026-11-02` — **🔴 A GATE BUILT AT PASS `115`, WITH A SUITE AND A NAMED COUNTER-EXAMPLE, WAS NEVER WIRED INTO THE `Makefile` — AND `p616` PUBLISHED THE CLAIM IT EXISTS TO REFUSE. 🟢 THE LATAM **INDEX** GAP IS WITHDRAWN; THE **CHANNEL** GAP STANDS. 🔴 AND NO INSTRUMENT IN THIS REPOSITORY CAN BE EXECUTED IN THIS SESSION, SO THIS COMMIT IS NOT GATE-VERIFIED. FOUR REGISTERED (`617-B`, `617-I`, `617-J`, `617-H`).**
 
 ### 🔴 `617-B` — OPEN (control debt, diagnosed and priced): `p370-gap-gate` has never run

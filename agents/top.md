@@ -4,6 +4,189 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p619` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE NAMED-TIER OPERATIVE PAYS A THIRD TIME AND THIS IS THE LARGEST YIELD ON RECORD: THREE TIERS NAMED, `20` NEW HEAD NAMES, `0` HELD, `12` PERMISSIVE PAYLOADS BYTE-READ. 🔴 AND THE **BRANCH** FIELD `p618` SAID IT "RESOLVED FIRST" WAS NEVER DISCRIMINATING — `main` AND `master` BOTH RETURN THE SAME BYTES FOR A `main`-DEFAULT REPO. NOW CALIBRATED, AND AGREEING WITH A SECOND CHANNEL `12 of 12`. 🔴 AN `Apache-2.0` PAYLOAD `597 B` SHORT OF STOCK TURNS OUT TO BE **COMPLETE**, NOT TRUNCATED. 🔴 AND A FOURTH CHANNEL-FAILURE SHAPE: A LISTING ASSERTING A LICENCE FOR A TREE THAT SHIPS **NO GRANT AT ALL**. ELEVEN REGISTERED (`619-A`…`619-N`).**
+
+### 🟢 `619-C` — read this first: the operative from `617-K`/`618-D` is now confirmed three passes running, and the yield is not marginal
+
+`618-D` spent its whole budget on **one** named tier (language learning / spaced repetition) and paid
+`3` rows. This pass named **three** tiers chosen the same way — by measuring which tiers this shelf
+carries **nothing** in — and the result is the largest single-pass supply yield this base has recorded.
+
+🔵 **How the tiers were chosen, so the method is reusable and not a hunch.** A keyword census over the
+seven shelf files (`agents/*`, `repos/*`, `verticals/solutions.md`, `compose/patterns.md`) returned:
+`phonics` **`0`**, `early literacy` **`0`**, `speech therapy` **`0`**, `sign language` **`4`**,
+`screen reader` **`4`** — against `proctor` `382`, `rubric` `334`, `accessib` `161`, `IEP` `105`.
+🟢 **The zeroes were the budget.** Three tiers named: **early literacy / phonics**, **speech &
+language practice**, **sign language / Deaf education**.
+
+| Leg | Head names returned | Already held | **New** |
+|---|---|---|---|
+| The `4` mandated global legs | `10` | **`10`** | 🔴 **`0`** (`619-A`, the **49th** consecutive nil) |
+| `open source reading fluency phonics early literacy tutor github MIT Apache` | `7` | `0` | 🟢 **`7`** |
+| `open source speech therapy speech-language pathology practice app github MIT` | `7` | `0` | 🟢 **`7`** |
+| `open source sign language learning recognition education github MIT Apache` | `6` | `0` | 🟢 **`6`** |
+
+🟢 **`20` new, `0` held** — and the dedup is an **oracle**, not recall: a `3,902`-slug index built this
+pass by extracting every `github.com/owner/repo` address from the seven shelf files, matched
+case-insensitively. 🔴 The mandated legs scored `10 of 10` **held** against that same index, which is
+why `619-A`'s nil is now a measurement rather than an impression.
+
+### 🟢 `619-D` — the six agent-shaped rows, every grant byte-read today
+
+🔵 **The split criterion, stated so it is auditable:** a row lands here if it is a **learner-facing
+runtime** — something that takes a learner's input and adapts. A row that is a reusable **model,
+corpus or asset** went to `repos/foundations.md` instead (`6` more rows there). No row appears twice.
+
+Each payload fetched at `raw.githubusercontent.com` today, branch resolved by `619-E`'s calibrated
+rule, title graded in `p612`'s three-non-blank-line window, residual read to the last byte, and
+cross-checked against the `github.com` HTML sidebar — **`12 of 12` agreeing** on licence family and
+**`12 of 12`** on branch, to pool with `618-D`'s `4 of 4` and `614`/`612`/`613`'s `110 of 110`.
+
+| Repo | Grant | Title line | Bytes | Holder | ★ | Forks | Branch | Region | What it is |
+|---|---|---|---|---|---|---|---|---|---|
+| [`tanner-griffith/phono-storyforge`](https://github.com/tanner-griffith/phono-storyforge) | 🟢 **`Apache-2.0`** | `Apache License` | `10,760` | `Tanner Griffith` (`2026`) | `1` | `0` | `main` | 🔵 Global — holder not placed | **The pass's most interesting artefact.** A closed-loop, dyslexia-aware reading tutor on Google's **ADK**: keeps a per-child mastery model, picks the next phonics skill **from real reading evidence**, generates a guaranteed-**decodable** book, listens to the read-aloud, attributes every miscue **to its grapheme**, and adapts session over session. 🟡 Its README's own parameter sweep claims it beats a static baseline on accuracy, mastery and fluency but *"does not reliably win past a `0.95` mastery bar"* — **the author's claim, and recorded as theirs**. 🔴 Its grant is `597 B` short of stock and is nonetheless **complete** — see `619-F` |
+| [`AvishakeAdhikary/Realtime-Sign-Language-Detection-Using-LSTM-Model`](https://github.com/AvishakeAdhikary/Realtime-Sign-Language-Detection-Using-LSTM-Model) | 🟢 **`MIT`** | `MIT License` | `1,074` | `Avhishek Adhikary` (`2023`) | **`93`** | `25` | `main` | 🔵 Global — holder not placed | Real-time sign-gesture recognition, `LSTM` over `TensorFlow`. The tier's **sequence-model** representative: it classifies *motion*, where the landmark-`MLP` rows classify a *pose* |
+| [`JaspreetSingh-exe/Sign-Language-Recognition-System`](https://github.com/JaspreetSingh-exe/Sign-Language-Recognition-System) | 🟢 **`MIT`** | `MIT License` | `1,071` | `Jaspreet Singh` (`2025`) | `11` | `7` | `main` | 🔵 Global — holder not placed | `MediaPipe` landmarks → `MLP` letter classifier, with `MobileNetV2` explored and **text-to-sign generation** stated as a goal. 🟢 The freshest holder year in the sign-language tier and the cleanest **landmark-feature** pipeline to lift |
+| [`future-finder/speech-practice`](https://github.com/future-finder/speech-practice) | 🟢 **`MIT`** | `MIT License` | `1,085` | `speech-practice contributors` (`2026`) | `3` | `0` | `main` | 🔵 Global — holder not placed | Timed speaking drills as a desktop app. 🔵 Holder is a **project collective**, not a slug — so `618-F`'s "holder names the slug ⇒ canonical" test simply **does not apply** here, and saying so is the point |
+| [`developerali123/speech_therapy_app`](https://github.com/developerali123/speech_therapy_app) | 🟢 **`MIT`** | `MIT License` | `1,075` | `Muhammad Ali Mirza` (`2026`) | `0` | `0` | `main` | 🔵 Global — holder not placed | Frontend-only **PWA** for at-home articulation exercises: recordings in `IndexedDB`, therapist-review flow, and a README that positions it **alongside** an `SLP` rather than instead of one. 🟢 That self-limitation is the row's main value — it is the only artefact in this tier that states a clinical boundary |
+| [`sunnydev07/Open-Speech`](https://github.com/sunnydev07/Open-Speech) | 🟢 **`MIT`** | `MIT License` | `1,072` | `Sunny Kumar Dev` (`2026`) | `0` | `0` | `main` | 🔵 Global — holder not placed | Android/**Jetpack Compose** speaking coach: timed drills, real-time **`CEFR`** rating, phonetic modelling, sentence re-drills. 🔵 The tier's only **native-mobile** row, and `CEFR` gives it a scoring rubric the others lack. 🔴 Depends on a hosted model for rating — not an offline artefact |
+
+🟡 **`93★`, `11★`, `3★`, `1★`, `0★`, `0★` — and the four low rows are shelved for their shape, not
+their adoption**, said that way round as `617-D` requires. `phono-storyforge` at `1★` is the row this
+pass would keep if it could keep only one: it is the sole artefact on this shelf that closes the loop
+from **miscue → grapheme → next book**.
+
+### 🔴 `619-E` — the `Branch` column was never resolved by the method `p618` claimed, and now it has a calibrated rule
+
+`618-D` published its rows as *"branch resolved first"*. 🔴 **The probe that was doing the resolving
+cannot discriminate.** Measured this pass on `m98/fluent` — the very row `p618` labelled `main`:
+
+```
+main                          200 1100
+master                        200 1100
+p619-definitely-not-a-branch  404
+zzz                           404
+```
+
+🔵 An invented ref **does** `404`, so the channel is not simply answering `200` to everything — which
+is exactly what made the defect invisible. 🔴 But `master` returns the **same `1,100` bytes** as `main`,
+so a `200` on `master` is **not** evidence that `master` is the branch. Calibrated on four knowns
+(`microsoft/ai-agents-for-beginners`, `openai/codex`, `langchain-ai/langgraph`, `crewAIInc/crewAI`) —
+**`4 of 4`** answered `200` on both.
+
+🟢 **The rule that does discriminate**, and it is the asymmetry rather than the `200`:
+
+> `main` `404` **and** `master` `200` ⇒ default branch is **`master`**.
+> **Both** `200` ⇒ default branch is **`main`**, and the `master` hit is an alias, not a ref.
+
+🟢 **Checked against an independent channel `12 of 12`:** the `github.com` HTML sidebar names `master`
+for exactly the five rows whose `main` returned `404` (`Arshad221b`, `alpharigel`, `imRishabhGupta`,
+`Anmol-Singh-Jaggi`, `FrederikSchorr`) and `main` for the other seven. 🔵 **The lesson is not about
+branches.** A field that is *populated* on every row looks verified; this one was populated by a probe
+that could not have falsified it. **A column with no failing case is not a measurement.**
+
+### 🔴 `619-F` — an `Apache-2.0` payload `597 B` short of stock, and it is **complete**
+
+Two rows this pass return the **stock** Apache text at exactly **`11,357 B`** — `alpharigel/phonics-font`
+and `Arshad221b/Sign-Language-Recognition` — the same figure `618-E` recorded for `morphcards`. 🔴
+`phono-storyforge` returns **`10,760 B`**, and on this base's byte-band habit that is an off-band
+payload a careful pass would hold back.
+
+🟢 **Diffed against the stock, the `597 B` is fully accounted for and entirely benign:**
+
+1. **Three body rewraps** — identical words, different line breaks (`Derivative Works`,
+   `"Contribution"`, and the trademark paragraph).
+2. **The `APPENDIX: How to apply the Apache License to your work` instruction block is removed**, and
+   its boilerplate is **filled in**: `Copyright {yyyy} {name of copyright owner}` →
+   `Copyright 2026 Tanner Griffith`.
+
+The terms are intact through `END OF TERMS AND CONDITIONS`, and the tail carries the standard
+`AS IS` paragraph. 🟢 **So the short payload is the *more* finished one** — the stock `11,357 B` still
+contains instructions telling the author to do what this author did.
+
+🔵 **Rule, and it supersedes the byte-band reflex for this family:** grade an `Apache-2.0` on the
+**terms text plus a filled boilerplate**, never on the byte count. A payload *below* stock may be
+completed; one *above* stock is the one to read for added clauses (`p1054-mit-plus-clause`'s class).
+
+### 🔴 `619-G` — a fourth channel-failure shape: a listing asserting a licence for a tree with **no grant at all**
+
+This base already names three ways a channel gets a licence wrong: a README **over-claiming**
+(`616-C`), **under-claiming** (`617-E`), and a third-party listing wrong about the **family**
+(`618-E`). 🔴 **Here is a fourth, and it is the one that would have shipped.**
+
+The search channel reported of [`jonajinga/open-phonics`](https://github.com/jonajinga/open-phonics):
+*"Its repo is listed as MIT-licensed"* — twice, with a date stamp. Measured:
+
+| Probe | Result |
+|---|---|
+| `LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` × `main` + `master` | 🔴 **`404` — `8 of 8`** |
+| `README.md` on `main` | 🟢 `200`, `3,542 B` — the repo is real and active |
+| `github.com` sidebar | 🔴 **no license shown** |
+| README `## License` section | 🔴 the single word **`MIT`**, and nothing else |
+
+🔴 **A bare token is not a grant.** There is no copyright holder, no permission text, no warranty
+disclaimer — nothing a downstream recipient could rely on, and nothing to attribute to. This is
+`p1049-bare-token-grant`'s class arriving from the **channel** rather than from the shelf.
+🟢 **Rejected on grant form, not on relevance** — and it is a genuine loss: `100` Direct-Instruction
+lessons with a teacher script, student profiles and an offline `PWA` is the best-shaped early-literacy
+artefact the three legs surfaced. 🔵 **The action is an ask, not a fix:** a one-line issue to the
+author requesting a `LICENSE` file would convert the best row in the tier.
+
+### 🔴 `619-H` — and a prose-only `Apache` claim, which is the worse half of `618-E`
+
+[`crowdproj/opentutor`](https://github.com/crowdproj/opentutor)'s README states
+*"Apache License Version 2.0"* under a `#### License & Privacy Policy:` heading. 🔴 **No payload at `9`
+probed paths** (`LICENSE`, `LICENSE.md`, `LICENSE.txt`, `COPYING` × both branches, plus
+`licenses/LICENSE`, `LICENSE-2.0.txt`, `legal/LICENSE`) — **and no `NOTICE` either**.
+
+🔵 Why this is worse than a missing `MIT` file: `618-E` established that `Apache-2.0` carries
+**attribution and `NOTICE`** obligations `MIT` does not. An `Apache` claim with **no `NOTICE` to
+propagate** leaves a downstream studio unable to comply with the licence it is being told it has.
+🔴 Rejected.
+
+### 🔴 `619-I` — an address the second channel cannot confirm exists at all
+
+The search channel surfaced `nader-ld/SpeechTherapyApp` with a full feature description (*"installable
+web app with recording, timers, and a synced practice log"*). 🔴 **`404` on `README.md`, `README` and
+`index.html`, on both `main` and `master`.** The raw channel cannot confirm the repository exists.
+
+🟢 **Not a row, and recorded only so the leg is auditable** — `618`'s `huidadou/mindsweeper` class, now
+with a **second** instance, which makes it a pattern rather than an incident: **this channel will
+describe the contents of an address it cannot reach.**
+
+### 🟢 `619-J` — the full rejection ledger, because `20` candidates did not become `20` rows
+
+🔵 `12` shipped, `8` rejected, **every rejection with a named cause** — stated so no later pass
+re-finds one of these and mistakes it for new supply.
+
+| Rejected | Cause | Class |
+|---|---|---|
+| `jonajinga/open-phonics` | Bare token `MIT` in README, no payload at `8` probes, no sidebar licence | `619-G` |
+| `crowdproj/opentutor` | Prose `Apache-2.0`, no payload at `9` probes, no `NOTICE` | `619-H` |
+| `nader-ld/SpeechTherapyApp` | Address unreachable — `404` on `6` probes | `619-I` |
+| `LangTieu/reading-project` | 🔴 **No licence string anywhere** in a `3,204 B` README; channel claimed *"dual-licensed"* | all-rights-reserved |
+| `paulynnat/phonics-sonics` | No licence string in a `976 B` README | all-rights-reserved |
+| `ManilMehta/SpeechMe` | No licence string in a `7,644 B` README | all-rights-reserved |
+| `rachelcconrad/ctt-home-practice-V1` | No licence string in a `2,316 B` README | all-rights-reserved |
+| `surajkumarsingh179/speech-therapy` | No licence string in a `3,588 B` README | all-rights-reserved |
+
+🔴 **`LangTieu/reading-project` is the sharpest of these.** The channel reported it as *"Apache-2.0 or
+MIT… its code and original content are dual-licensed"*. The README contains **no occurrence of the
+string `licen`** in any case. 🔵 A **dual**-licence claim invented by a channel is worse than a single
+wrong family, because it reads as though someone had thought carefully about it.
+
+### 🔴 `619-L` — the execution denial reproduces for a **third** consecutive pass
+
+`make gate-region-headings` and a direct `python3` of `compose/code/p370-gap-gate/gap_gate.py
+--self-test` are both refused `[Code from External]`, exactly as at `617-J` and `618-B`. 🟢 The agent's
+own **inline** interpreter runs normally — every edit and every probe in this pass used it — so
+`618-B`'s diagnosis stands unchanged: **the restriction is keyed on code provenance, not on Python.**
+
+🔴 **`gate-declared-gap`, wired at `618-A`, is still owed its one green run, and so is
+`gate-region-headings` after `618-L`'s structural repair.** This commit is **not** gate-verified and
+does not imply that it is.
+
+
 ## 🆕 `p618` — reads `2026-11-02`, commit `2026-11-02` — **🟢 `p617`'s ACTION IS DONE: `p370-gap-gate` IS WIRED INTO `HOOK_GATES` AFTER `246` PASSES IN NO TARGET — 🔴 AND LANDED **UNVERIFIED**, BECAUSE THE DENIAL THAT STOPPED `p617` REPRODUCED AND NOW HAS A MECHANISM: IT IS KEYED ON CODE **PROVENANCE**, NOT ON THE INTERPRETER. 🟢 THREE NEW PERMISSIVE ROWS IN A TIER THIS BASE DID NOT HOLD AT ALL (LANGUAGE LEARNING / SPACED REPETITION), ONE AT `445★`. 🔴 A SECONDARY CHANNEL CALLED AN `Apache-2.0` PAYLOAD `MIT`. 🔴 AND A `0★` COPY, PUSHED FOUR MONTHS AFTER ITS `445★` CANONICAL WENT QUIET, THAT THE PLATFORM FIELD CALLS **NEITHER** A FORK. ELEVEN REGISTERED (`618-A`…`618-K`).**
 
 ### 🟢 `618-A` — read this first: `p617`'s load-bearing action is closed, and the fix is four lines of `Makefile`

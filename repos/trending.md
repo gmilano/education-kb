@@ -4,6 +4,46 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p619` — `2026-11-02` — **a `265★`/`106`-fork repo this base had never seen, in a tier it held `4` mentions of — and the `Apache` payload that is short *because* it is finished**
+
+🔵 **What is actually new this week is not a repo, it is a shelf hole closing.** The sign-language /
+Deaf-education tier returned **six** permissive repos, four of them above `100★`, and this base had
+`4` total mentions of the phrase. 🔴 Nothing trended into existence; the base had simply never looked.
+
+| Repo | Grant | Bytes | ★ | Forks | Branch | Signal | Why it matters |
+|---|---|---|---|---|---|---|---|
+| [`Arshad221b/Sign-Language-Recognition`](https://github.com/Arshad221b/Sign-Language-Recognition) | 🟢 `Apache-2.0` | `11,357` (stock) | **`265`** | **`106`** | `master` | new to this base | **Indian Sign Language** on `OpenCV`, with `ASL` notebooks and a `PyTorch` port. 🟢 `106` forks — the strongest **reuse** signal either shelf saw this pass, and reuse beats stars for a studio picking a base |
+| [`imRishabhGupta/Indian-Sign-Language-Recognition`](https://github.com/imRishabhGupta/Indian-Sign-Language-Recognition) | 🟢 `MIT` | `1,070` | **`221`** | `79` | `master` | new to this base | `ISL` alphabet recognition written explicitly for **Deaf and blind** accessibility. 🟡 Holder year `2017` — old, and `79` forks say people still start here |
+| [`Anmol-Singh-Jaggi/Sign-Language-Recognition`](https://github.com/Anmol-Singh-Jaggi/Sign-Language-Recognition) | 🟢 `MIT` | `1,084` | `129` | `43` | `master` | 🟡 title variant `The MIT License (MIT)` | `ASL` finger-spelling on **classical `ML`** — `kNN`, logistic regression, `SVM`. 🟢 The only row here that runs on a classroom machine with **no accelerator** |
+| [`FrederikSchorr/sign-language`](https://github.com/FrederikSchorr/sign-language) | 🟢 `MIT` | `1,071` | `107` | `33` | `master` | new to this base | Live **continuous-signing** prototype, holder year `2018` |
+| [`AvishakeAdhikary/Realtime-Sign-Language-Detection-Using-LSTM-Model`](https://github.com/AvishakeAdhikary/Realtime-Sign-Language-Detection-Using-LSTM-Model) | 🟢 `MIT` | `1,074` | `93` | `25` | `main` | new to this base | `LSTM` over `TensorFlow` — classifies **motion**, not a pose |
+| [`JaspreetSingh-exe/Sign-Language-Recognition-System`](https://github.com/JaspreetSingh-exe/Sign-Language-Recognition-System) | 🟢 `MIT` | `1,071` | `11` | `7` | `main` | new to this base | `MediaPipe` → `MLP`; holder year **`2025`**, the freshest grant in the tier, and states **text-to-sign** as a goal |
+| [`tanner-griffith/phono-storyforge`](https://github.com/tanner-griffith/phono-storyforge) | 🟢 **`Apache-2.0`** | 🔴 **`10,760`** | `1` | `0` | `main` | 🔴 off-band payload, **and complete** | Closed-loop dyslexia-aware reading tutor on Google's **ADK**: miscue → grapheme → next decodable book. 🟢 `619-F`: the `597 B` deficit is three rewraps plus a **removed `APPENDIX` with the boilerplate filled in** — `Copyright 2026 Tanner Griffith` |
+| [`valueforvalue/OpenPhonograms`](https://github.com/valueforvalue/OpenPhonograms) | 🟢 `MIT` | `1,070` | `0` | `0` | `main` | new to this base | `248` lessons + `25` decodable readers, Pre-K→G3+. 🔴 Bundled font is **`OFL`, separately licensed** — a mixed-grant tree |
+| [`alpharigel/phonics-font`](https://github.com/alpharigel/phonics-font) | 🟢 `Apache-2.0` | `11,357` (stock) | `0` | `0` | `master` | new to this base | Phonetic-character fonts for personalised decodable text — the **asset** layer neither tutor ships |
+| [`future-finder/speech-practice`](https://github.com/future-finder/speech-practice) | 🟢 `MIT` | `1,085` | `3` | `0` | `main` | new to this base | Timed speaking drills, desktop. 🔵 Holder is `speech-practice contributors` — a **collective**, so `618-F`'s slug-in-holder canonicity test does not apply |
+| [`developerali123/speech_therapy_app`](https://github.com/developerali123/speech_therapy_app) | 🟢 `MIT` | `1,075` | `0` | `0` | `main` | new to this base | At-home articulation `PWA`, `IndexedDB` recordings, therapist review. 🟢 The only artefact in the tier that **states a clinical boundary** (*non-diagnostic, works alongside an `SLP`*) |
+| [`sunnydev07/Open-Speech`](https://github.com/sunnydev07/Open-Speech) | 🟢 `MIT` | `1,072` | `0` | `0` | `main` | new to this base | Android / **Jetpack Compose** speaking coach with real-time **`CEFR`** rating. 🔴 Rating depends on a hosted model — not offline |
+
+🔴 **`huidadou/mindsweeper`'s class has a second member: `nader-ld/SpeechTherapyApp`.** The search
+channel described its features in detail; the raw channel returns `404` for `README.md`, `README` and
+`index.html` on both branches. **Not a finding** — recorded only so the leg is auditable, and now a
+**pattern** rather than an incident: *this channel will describe the contents of an address it cannot
+reach.*
+
+🔴 **`jonajinga/open-phonics` is the week's near-miss and is worth a standing note.** `100`
+Direct-Instruction lessons, teacher script, student profiles, offline `PWA` — the best-*shaped*
+early-literacy artefact the legs surfaced, and **unshippable**: no `LICENSE` at `8` probes, no sidebar
+licence, and the bare word `MIT` under a README heading. 🟢 **Action, one line:** open an issue asking
+the author for a `LICENSE` file. This is the cheapest conversion available to this base.
+
+🟢 **Carried-row sanity, `2 of 2` current:** `m98/fluent` re-read today at **`1,100 B`** `MIT`, title
+`MIT License`, holder line naming `github.com/m98/fluent` — byte-for-byte what `618-D` recorded, which
+is also the control that exposed `619-E`'s branch defect. `alpharigel/phonics-font` and `Arshad221b`
+both return exactly **`11,357 B`**, the same stock `Apache-2.0` figure `618-E` measured on
+`morphcards` — so the stock constant now has **three** independent confirmations on this base.
+
+
 ## 🆕 `p618` — `2026-11-02` — **a `445★` canonical and its `0★` copy, and the copy is the one that looks fresh**
 
 | Repo | Grant | Bytes | ★ | Pushed | Signal | Why it matters |

@@ -4,6 +4,66 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p619` — reads `2026-11-02` — **the accessibility tier has no platform of record, and that is the vertical finding: the incumbents expose the hook but ship nothing behind it**
+
+### 🔴 `619-B` (companion) — the ERP/CRM leg's fourth nil, and the leg is now retired
+
+`619-B` in `repos/foundations.md` carries the measurement. What belongs **here** is the consequence:
+after four passes the administrative tier of education has produced **no permissive platform of
+record**, and the table below is unchanged from `p618` except for three additions, all of which fail
+on *being education software at all* rather than on licence.
+
+| Platform | Grant | Shape | Studio consequence |
+|---|---|---|---|
+| [`OpenEduCat`](https://openeducat.org/open-source-education-erp/) | 🔴 `LGPL-3.0` | Education ERP on **Odoo** | Carried: usable, but the AI layer belongs **beside** it, not inside it |
+| `RosarioSIS` · `Open Admin` | 🔴 GPL-family | School `SIS` / family information | Carried: attach-only for a client that must not relicense |
+| `Kuali` (KFS) | 🟡 not stated in channel | Java enterprise ERP | Carried: 🔴 still **ungraded** — needs a byte read before any citation |
+| `.LRN` | 🟡 not permissive-confirmed | LMS, **MIT-originated** | Carried, and still this base's best trap: *"developed at MIT"* is an **institutional provenance**, not a grant |
+| [`hcengineering/platform`](https://github.com/hcengineering/platform) (Huly) | 🔴 **`EPL-2.0`** — the channel said `Apache-2.0`; the sidebar says **Eclipse Public License**, which is **weak copyleft** (`619-U`) | General data/relationship framework | 🔴 **Not education software, and not permissive.** `EPL-2.0`'s reciprocity bites on **modified source files**, so a closed derivative is not available — a studio told *"Apache"* would have planned the wrong delivery model |
+| [`krayin/laravel-crm`](https://github.com/krayin/laravel-crm) | 🟢 `MIT` — sidebar-confirmed, `24.1k★` | General `CRM` (Laravel) | 🔴 Not education software. Relevant only to the **admissions/enrolment** funnel, where a generic `CRM` is in fact the honest answer |
+| `NextCRM` | 🟡 `MIT` — **channel-only, not byte-read** | General `CRM` (`Next.js`) | 🔴 Not education software, and not verified. Not cited as supply anywhere (`619-U`) |
+| `CK-ERP` | 🟡 not stated | Edu/`ERP`/`CRM`/`MRP` | 🔴 Latest release in channel is **`2010`**. Stale, not supply |
+
+🟢 **The one honest re-aim the leg produced:** for **admissions and enrolment**, a permissive general
+`CRM` (`Krayin`, `MIT`) genuinely beats waiting for an education-specific permissive `SIS` that four
+passes say does not exist. 🔴 For **student records**, there is no permissive answer; the studio
+attaches to a `GPL`-family `SIS` and keeps its own work on the other side of the boundary.
+
+### 🔴 `619-M2` — the vertical gap this pass actually found, and it is a *platform* gap, not a repo gap
+
+`619-C` landed `12` permissive accessibility and early-literacy artefacts. 🔴 **Not one of them is a
+platform, and no platform of record exists for this tier.** Every row is a model, a corpus, an asset
+or a single-purpose app. The incumbents expose the integration point and ship nothing behind it:
+
+| Incumbent | Grant | The hook it exposes | 🔴 What it does **not** ship |
+|---|---|---|---|
+| **Moodle** | 🔴 `GPL-3.0` | Plugin API; `H5P` content types; `SCORM`; accessibility toolkit | No read-aloud **assessment**, no miscue analysis, no sign-language channel |
+| **Open edX** | 🔴 `AGPL-3.0` | `XBlock` component API; `Tutor` (CLI) deployment | Same — and `AGPL` makes a hosted derivative a licensing decision, not a technical one |
+| **Canvas LMS** | 🔴 `AGPL-3.0` | `LTI 1.3` / **LTI Advantage**; Canvas `API` | Same. 🟢 `LTI 1.3` is the **cleanest boundary of the three**: an external tool, no code in the LMS, no copyleft reach |
+| **Kolibri** | 🟢 `MIT` | Offline-first content distribution, device-local | 🟢 The **only permissive** incumbent, and the natural host for offline artefacts — but it distributes content, it does not assess reading |
+| **H5P** | 🔴 `MIT` core / mixed | Interactive content types inside any LMS | Authoring, not measurement |
+| **BigBlueButton** | 🔴 `LGPL-3.0` | Live classroom, `WebRTC` media | 🔵 The media pipe a **sign-language** channel would ride on; no recognition of its own |
+
+🟢 **The pattern that follows, and it is this base's standing LMS advice applied to a new tier:** build
+the accessibility layer as an **`LTI 1.3` external tool**, not as a Moodle plugin or an `XBlock`. The
+tool holds the permissive stack (`619-D`'s runtimes + `619-D2`'s models and corpora); the LMS holds
+roster, grade passback and nothing else. 🔵 **This is what keeps the studio's work permissive beside a
+`GPL`/`AGPL` incumbent** — and it is the same boundary `618-N` drew for the ERP tier, which is why it
+is worth stating as one rule rather than two.
+
+🟡 **For offline and low-connectivity delivery — and `619-N` in `intel/market.md` says LATAM public
+universities fund AI at `4%`** — the host is **Kolibri** (`MIT`), not an `LTI` tool, because there is
+no LMS to attach to. 🟢 `Anmol-Singh-Jaggi`'s classical-`ML` recognizer and `developerali123`'s
+`IndexedDB` `PWA` are the two rows that actually run in that setting; the hosted-model rows
+(`sunnydev07/Open-Speech`'s `CEFR` rating) do not.
+
+🔴 **Stated gap, so the silence is not mistaken for coverage:** this pass searched for a permissive
+**platform** in the accessibility / special-education tier and found none. No `IEP` management system,
+no `AAC` platform, no Deaf-education LMS returned a permissive grant. The `12` rows are **components
+for a platform that does not exist** — which is an opportunity in `intel/market.md` and a risk in any
+estimate that assumes one can be adopted rather than built.
+
+
 ## 🆕 `p618` — reads `2026-11-02` — **the administrative tier is copyleft by default, and that is a delivery-model constraint rather than a licensing footnote**
 
 ### 🔴 `618-N` (companion) — what the ERP/CRM leg actually measured, third pass running

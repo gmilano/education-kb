@@ -4,6 +4,103 @@ region: Global
 updated: 2026-11-02
 ---
 
+## 🆕 `p619` — reads `2026-11-02` — **current trends**
+
+🟡 **Secondary by construction** (`598-G`): no primary source resolved from this environment for the
+**seventeenth** consecutive pass. Supply claims below are byte-read; demand claims are
+search-snippet-grade, and `619-K` is new evidence that the demand channel drifts.
+
+### `T619-1` 🔴 The sector is buying **accountability**, not detection — and every instrument this pass agrees
+
+Four regions, four dated instruments, one direction. The **Philippines** (DepEd Order `003`, s. `2026`)
+requires students to **disclose** AI use. The **EU**'s March `2026` revised guidelines are *ethical
+use* guidance tied to AI Act compliance. **Singapore** supervises and **age-gates** rather than bans.
+The **US** has `134` state bills about privacy, policy duties and curriculum. 🟢 **Not one of them is a
+detection mandate.**
+
+🔵 Why this is the pass's most commercially load-bearing trend: `619-K`'s corrected US figures show
+**`57%`** weekly student use against **`42%` discourage + `11%` prohibit**. 🔴 An institution in that
+restrictive `53%` has the usage anyway. **Detection is the product it cannot buy its way out of the
+problem with; disclosure workflow is.** A studio pitching integrity-detection in `2026` is selling
+against every instrument that landed this pass.
+
+### `T619-2` 🔴 A citation can be right about everything except **when**, and nothing in this base was checking that
+
+`616`–`619` catalogued four ways a channel gets a **licence** wrong, all settled by a byte read. 🔴
+`619-K` is the first catalogued **demand-side** drift, and it is worse-behaved: the digest dated the EU
+guidelines **`9 June`** when the revision is **March `2026`** — right body, right instrument, right
+subject, wrong month — and inflated a Lumina–Gallup **`57%`** to *">`60%`"*, across the round number.
+
+🔵 **A licence error has a payload to check against. A date error has nothing** — which is why this one
+survived every control this base owns. 🟢 Operative, cheap and now standing: **any dated instrument
+entering the KB from a digest gets its own search leg first.** Two for two this pass.
+
+🟡 And the second half of the Gallup drift is the subtler one: *"roughly half discourage or prohibit"*
+collapsed **`42%` discourage** and **`11%` prohibit** into one number. The sum is about right; **the
+two populations behave differently and only one of them is a ban.** A merged statistic can be accurate
+and still unusable.
+
+### `T619-3` 🟢 The sector's permissive supply lives in **pedagogy**; its **administration** is copyleft — and that bounds the delivery model
+
+Measured across four passes rather than argued: the ERP/CRM leg has now returned **no education-specific
+permissive system four times** (`619-B`). `OpenEduCat` `LGPL-3.0`, `RosarioSIS`/`Open Admin` GPL-family,
+`ERPNext` `GPL-3.0`, `.LRN` unconfirmed, `Kuali` ungraded. 🟢 Meanwhile the three *pedagogical* tiers
+named this pass returned **`12 of 12` permissive rows, `9` `MIT` + `3` `Apache-2.0`, zero copyleft.**
+
+🔵 **The split is structural, not accidental**: administrative software is institutional, funded and
+licensed defensively; pedagogical tooling is hobby-scale, individual and licensed permissively — which
+is also why `5 of 8` rejections this pass were **no grant at all** rather than a wrong one.
+🟢 **Consequence for a studio:** own the pedagogy layer, **attach** to the administration layer across
+an `LTI 1.3` boundary (`619-M2`), and never plan to relicense a derivative of the records system.
+
+### `T619-4` 🟢 Accessibility is this sector's **under-supplied** tier, and the asymmetry was in this base's own index
+
+🔴 Before this pass: `sign language` **`4`** mentions, `screen reader` **`4`**, `speech therapy`
+**`0`**, `phonics` **`0`** — against `proctor` **`382`** and `rubric` **`334`**. A **`95×`** asymmetry
+on **invigilation versus Deaf access**.
+
+🟢 The tier is not short of artefacts — it was short of **looking**: one leg returned four permissive
+sign-language models above `100★`, one at **`265★` with `106` forks**. 🔵 **Forks matter more than
+stars here**: `106` and `79` forks mean these are **bases people build on**, which is exactly the
+property a studio needs and the property a star count does not measure.
+
+🔴 **But the tier has no platform** (`619-M2`): `12` components, **no permissive platform of record** —
+no `IEP` system, no `AAC` platform, no Deaf-education LMS. 🟢 In the US that is a **statutory**
+purchase (`IDEA` / `Section 504`), which is the one education-AI budget that survives a freeze a
+tutoring pilot does not.
+
+### `T619-5` 🔴 LATAM's limit is a **procurement** limit, and `4%` is the number that says so
+
+`619-N`: UNU/UNESCO IESALC (`1 Sep 2026`; `200` institutions, `19` countries) — **`55%`** of
+universities have **no specific AI budget**; **public** universities fund AI at **`4%`**; **`90%`** of
+those teaching with AI use **general tools** (`ChatGPT`/`Copilot`/`Gemini`).
+
+🔵 **Read together, those three numbers describe one thing**: demand exists, usage exists, and the line
+item does not. 🔴 So the binding constraint is **not** adoption and **not** literacy — it is that the
+public-segment buyer **cannot sign a recurring per-seat bill**. 🟢 The supply shape that matches is
+permissive, **offline-capable**, thin over tools already in place: `Anmol-Singh-Jaggi`'s
+no-accelerator recognizer, `developerali123`'s `IndexedDB`-only `PWA`, `OpenPhonograms`' corpus,
+`Kolibri` (`MIT`) as host. 🔴 **A hosted-model dependency disqualifies a bid in this segment**, which
+reclassifies `sunnydev07/Open-Speech`'s `CEFR` rating from a feature to a blocker.
+
+🟡 And the discipline: the `92%`/`67%` student-use figures circulating for LATAM are a **different
+survey of a different population**. Quoting them beside the `4%` as one instrument is how a
+hundred-point contradiction gets published.
+
+### `T619-6` 🟡 A verification field with no failing case is decoration — measured on this base's own shelf
+
+`619-E`: the `Branch` column `618-D` published as *"resolved first"* was filled by a probe that
+**could not falsify it** — `main` and `master` return identical bytes for a `main`-default repo
+(`4 of 4` on knowns), while only an invented ref `404`s.
+
+🔵 The fix was cheap (the asymmetry rule, now agreeing with an independent channel `12 of 12`). 🔴 **The
+generalisable part is not about branches.** A populated column reads as a verified one. 🟢 Standing
+test for any field this base claims to verify: **name the observation that would have made it fail.**
+If there isn't one, the field is decoration — and `619-F` is the same lesson from the other side, where
+a byte-band reflex would have **rejected a correct `Apache-2.0`** for being `597 B` short of stock when
+the deficit was a removed instruction block and a filled-in boilerplate.
+
+
 ## 🆕 `p618` — reads `2026-11-02` — **current trends**
 
 🟡 **Secondary by construction** (`618-K`): no primary source resolved from this environment for the

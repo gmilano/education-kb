@@ -4,6 +4,84 @@ region: Global
 updated: 2026-11-02
 ---
 
+## Pass 619 — reads 2026-11-02, commit 2026-11-02 — **🟢 THE NAMED-TIER OPERATIVE IS CONFIRMED A THIRD TIME AND THIS IS THE LARGEST SUPPLY YIELD ON RECORD: THREE TIERS NAMED BY CENSUSING THE SHELF'S OWN HOLES, `20` NEW HEAD NAMES, `0` HELD AGAINST A `3,902`-SLUG ORACLE, `12` PERMISSIVE PAYLOADS BYTE-READ. 🔴 THE `Branch` COLUMN `p618` CALLED "RESOLVED" WAS FILLED BY A PROBE THAT COULD NOT FALSIFY IT; NOW CALIBRATED AND AGREEING WITH A SECOND CHANNEL `12 of 12`. 🔴 AN `Apache-2.0` PAYLOAD `597 B` SHORT OF STOCK IS **COMPLETE**, NOT TRUNCATED. 🔴 A FOURTH CHANNEL-FAILURE SHAPE: A LISTING ASSERTING A LICENCE FOR A TREE WITH NO GRANT AT ALL. 🔴 AND THE FIRST CATALOGUED **DEMAND-SIDE** DRIFT — A `57%` REPORTED AS ">60%", AND A REAL EU INSTRUMENT DATED THREE MONTHS WRONG. TWELVE REGISTERED (`619-A`…`619-U`).**
+
+🟢 **`619-C` — the pass's load-bearing move, and it was a census rather than a hunch.** A keyword count
+over the seven shelf files returned `phonics` **`0`**, `early literacy` **`0`**, `speech therapy`
+**`0`**, `sign language` **`4`**, `screen reader` **`4`** — against `proctor` **`382`** and `rubric`
+**`334`**. 🟢 The zeroes became the budget: three tiers named (**early literacy / phonics**, **speech
+& language practice**, **sign language / Deaf education**) returned **`20`** new head names, **`0`**
+held, and **`12`** permissive rows — `9` `MIT`, `3` `Apache-2.0`, **no copyleft**, every payload
+byte-read at `raw.githubusercontent.com` today and cross-checked against the `github.com` sidebar
+**`12 of 12`**.
+
+🔴 **`619-A` — the forty-ninth consecutive global-leg nil, and it is now a measurement.** The four
+mandated legs surfaced `10` head names; **all `10` are held**, checked against an index of **`3,902`**
+distinct addresses extracted this pass from the shelf. `618-C` reported the same nil by *recognising*
+candidates; this pass *recognised* and *held* are the same claim. 🔴 The ERP/CRM leg's **fourth** nil is
+inside that count — **the leg is retired** (`619-B`).
+
+🔴 **`619-E` — a defect in how this base verifies, found by trying to reproduce its own column.**
+`main` and `master` return **byte-identical** payloads for a `main`-default repo (`4 of 4` on knowns),
+while only an invented ref `404`s — so `p618`'s *"branch resolved first"* was filled by a probe with no
+failing case. 🟢 Calibrated rule: *`main` `404` + `master` `200` ⇒ `master`; both `200` ⇒ `main`*,
+agreeing with the HTML channel **`12 of 12`**. 🔵 **A column with no failing case is not a
+measurement** — and the generalisation (`P619-0`) is to name, for every verified field, the observation
+that would make it fail.
+
+🔴 **`619-F` — and the same lesson from the opposite side.** `phono-storyforge`'s `Apache-2.0` is
+**`10,760 B`** against the stock **`11,357 B`** confirmed three times on this base. Diffed: three body
+rewraps plus the **`APPENDIX` instruction block removed and the boilerplate filled in**
+(`Copyright 2026 Tanner Griffith`), terms intact through `END OF TERMS AND CONDITIONS`. 🟢 **The short
+payload is the more finished one.** Grade an `Apache-2.0` on its terms text and a filled boilerplate,
+**never on the byte count**.
+
+🔴 **`619-G`/`619-H`/`619-I`/`619-J` — `8` of `20` candidates rejected, each with a named cause.**
+`jonajinga/open-phonics`: the channel asserted `MIT`; **no payload at `8` probes**, no sidebar licence,
+and the bare word `MIT` under a README heading — **a fourth channel-failure shape, and the one that
+would have shipped.** `crowdproj/opentutor`: prose `Apache-2.0`, no payload at `9` probes, **no
+`NOTICE`**. `nader-ld/SpeechTherapyApp`: **`404` on `6` probes** — the second instance of a channel
+describing an address it cannot reach, which makes it a pattern. 🔴 **Five** of the eight are plain
+absence of any grant, which is the dominant failure mode of a hobby-scale tier.
+
+🔴 **`619-K` — the first catalogued drift on the *demand* side, caught by re-asking each digest with its
+own leg.** A digest's *">`60%` of college students use AI weekly"* is actually **`57%`**
+(Lumina–Gallup, released `2 April 2026`, n ≈ `3,800`), and *"roughly half discourage or prohibit"*
+collapses **`42%` discourage** and **`11%` prohibit** into one number. A digest's *"guidelines updated
+`9 June`"* is **March `2026`** — right body, right instrument, wrong month. 🔵 **A citation right about
+everything except *when* survives every control this base owns**, and a regulatory date is exactly what
+a client acts on. Operative: **every dated instrument gets its own leg before it is written down.**
+
+🟢 **`619-N` — LATAM's constraint finally has a number on the money side: `4%`.** UNU/UNESCO IESALC
+(`1 Sep 2026`, Valentini; `200` institutions, `19` countries, fielded Aug–Oct `2025`; peer-reviewed
+twin, DOI `10.54674/ess.v37i2.1278`): **`55%`** of universities have no specific AI budget, **public**
+universities fund AI at **`4%`**, and **`90%`** of those teaching with AI use general tools. 🔴 Not to
+be conflated with the separate student survey reporting `92%`/`67%` — **different instrument, different
+population.**
+
+🟢 **`619-M` — APAC's first by-subject supply placement, and two dated national instruments.**
+Singapore MOE (age-gated `SLS`, higher-ed AI committee `2 April 2026`, ASEAN education chair
+`2026`–`2027`) and Philippine **DepEd Order `003`, s. `2026`** (student **disclosure** duty). 🟢 Two
+rows are placed **APAC by subject** — they target **Indian Sign Language** — under a rule stated
+explicitly: an artefact is placed by **what it is built for**, and **never** from a holder's personal
+name. 🔴 **Australia returns only an undated framework and is written down as a gap** (`619-P`).
+
+🔴 **`619-U` — and the pass's last finding is a licence family wrong on a slug this base already
+**held**.** The retired ERP/CRM leg described `Huly Platform` as *"fully open-source under the Apache
+License 2.0"*; the `github.com` sidebar says **`EPL-2.0`** — **Eclipse Public License, weak copyleft**,
+with a reciprocity obligation on modified source files that `Apache-2.0` does not carry. 🟡 Caught only
+because a second channel was checked for a row about to be written down as permissive. 🔵 **A nil leg
+still writes rows — its rejection table *is* data — so grade the licences in a nil result to the same
+standard as the licences in a yield.**
+
+🔴 **`619-L` — the execution denial reproduces a third consecutive pass.** `make` and a direct `python3`
+of a file from this clone are refused `[Code from External]`; the agent's own inline interpreter runs
+fine, so the restriction is keyed on code **provenance**. 🔴 `gate-declared-gap` (wired `618-A`) and
+`gate-region-headings` (repaired `618-L`) are **both still owed a green run**. `intel/market.md` was
+left with exactly one canonical `## Opportunities by region` block and its five closed-vocabulary
+children — **verified by reading, not by running. This commit is not gate-verified.**
+
+
 ## Pass 618 — reads 2026-11-02, commit 2026-11-02 — **🟢 `p617`'s ACTION IS CLOSED: `p370-gap-gate` IS WIRED INTO `HOOK_GATES` AFTER `246` PASSES IN NO TARGET. 🔴 AND IT LANDS **UNVERIFIED**, BECAUSE THE DENIAL THAT STOPPED `p617` REPRODUCED AND NOW HAS A MECHANISM: IT IS KEYED ON CODE **PROVENANCE**, NOT THE INTERPRETER — AN AGENT HERE CAN WIRE A CONTROL BUT NEVER SELF-VERIFY ONE. 🔴 WORSE, `gate-region-headings` — THE GATE WHOSE OWN DOCSTRING CELEBRATES BEING WIRED — IS **RED ON THE LIVE FILE** (`13` CANONICAL BLOCKS WHERE ITS CONTRACT ALLOWS `1`) AND ITS RED WAS MASKED BEHIND AN INHERITED ONE; REPAIRED STRUCTURALLY TO `1`. 🟢 THREE NEW PERMISSIVE ROWS IN A TIER THIS BASE HELD NOTHING IN, ONE AT `445★`. ELEVEN REGISTERED (`618-A`…`618-N`).**
 
 🟢 **`618-A` — the pass's load-bearing action, and it is four lines of `Makefile`.** `617-A`/`617-B`
