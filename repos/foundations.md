@@ -3,6 +3,52 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+
+## 🆕 `p617` — reads `2026-11-02`, commit `2026-11-02` — **🔴 THE FOUNDATIONAL FINDING IS ABOUT THIS REPOSITORY'S OWN CONTROLS: A GATE BUILT AT PASS `115`, WITH A TEST SUITE AND A NAMED COUNTER-EXAMPLE, WAS **NEVER REFERENCED BY THE `Makefile`** — AND THE CLAIM IT EXISTS TO REFUSE WAS PUBLISHED AGAIN AT `p616`.**
+
+### 🔴 `617-B` — an uninstalled gate, and what it costs
+
+🟢 `compose/code/p370-gap-gate/` ships `gap_gate.py` and `test_gap_gate.py`. Its docstring states the
+problem exactly: `p311-duplicate-alta-gate` answers *"is this already here?"* for what **enters**, and
+**nothing answered the symmetric question for what is declared ABSENT** — a declared gap is a claim
+about the base's own content, so it is falsifiable against the base's own index, and it was published
+with no control.
+
+🟢 It even carries the discrimination that keeps it honest instead of making it a counter of the word
+*"CERO"*: a **channel** gap (*"this channel finds no LATAM code"*) cannot be contradicted by index
+rows; an **index** gap (*"the LATAM code layer is still open"*) can. Its mandatory suite case is that
+**the two real sentences in the tree come out with opposite verdicts**.
+
+🔴 **Grepped this pass: the `Makefile` never mentions it.** Not in `HOOK_GATES` (the `p370` entries
+that *are* wired are `gate-refset-register` and `gate-domain-check`), not in `DECLARED_RED`, not in any
+target. 🔴 **It has never run as a gate on any commit.** `246` passes later, `616-H` published an
+index-form LATAM gap that `LabSirius/TutorIA` refutes (`617-A`).
+
+🔵 **The foundational lesson, and it sharpens this base's own maxim.** *"Una regla que hay que recordar
+no es un control"* — true, and insufficient. 🔴 **An instrument that is built, tested and never wired
+is also not a control**; it is a rule with a test suite attached, and it is *more* dangerous than a
+bare rule because the repository looks like it has coverage. 🟢 The audit this implies is cheap and
+has never been run: **every directory under `compose/code/` that ships a `test_*.py` and is not named
+by the `Makefile`.** `483` directories exist; `p370-gap-gate` is one confirmed instance, found by
+following a citation rather than by sweeping.
+
+🟡 **Not landed here, deliberately.** `617-J` denied every execution in this clone, so a new
+`gate-declared-gap` could not be shown green; landing an unrunnable gate is how `DECLARED_RED` grows
+quietly. 🟢 **The next pass with execution rights should wire it first** — the code and its suite
+already exist, so the cost is a `Makefile` edit, not an implementation.
+
+### 🟢 `617-D` — foundational tier addition: the grading/assessment layer gets a platform
+
+🔵 This base held assessment through **specifications** (`adlnet/xAPI-Spec`, `LongsightGroup/qti3`,
+`AICC/CMI-5_Spec_Current`) and **exam delivery** (`SafeExamBrowser/seb-server`), with grading itself
+present only as near-zero-star scripts. [`azapg/FAIR`](https://github.com/azapg/FAIR) (🟢 `MIT`,
+`main`, © `2026 Allan Zapata`, stock text, `572` commits, `6★`) is the first **platform-shaped** row
+in that layer: a grading engine *and* an LMS in one tree, built around rubrics, pluggable
+agent-based graders and research datasets.
+
+🟡 At `6★` it is a **starting point, not a dependency** — it is recorded here because the layer had a
+structural hole, and a hole filled by a `6★` repository is still a hole worth naming accurately.
+
 ## 🆕 `p616` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE STOCK-`MIT` BYTE BAND, ESTABLISHED AS A POPULATION: `8` INDEPENDENT PUBLISHERS, `1,056`–`1,097 B`, A `41`-BYTE SPREAD — WHICH IS WHAT MAKES `616-A`'s `2,254 B` DEFECT VISIBLE WITHOUT RE-COMMITTING `p312`.**
 
 ### 🟢 `616-I` — the foundational measurement this pass contributes

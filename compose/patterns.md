@@ -3,6 +3,100 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+
+## 🆕 `p617` — reads `2026-11-02` — **three recipes, each wired from rows byte-read today**
+
+### 🟢 `P617-0` — the declared-gap gate: install the control this repository already owns
+
+🔵 **The defect it fixes is `617-B`**, and the code already exists — this is a wiring recipe, not an
+implementation.
+
+1. `make install-hooks` — `ingest/pre-commit` is **per working copy**; `git clone` does not carry it
+   (`Gap 423-B`). A fresh clone has **no** commit gate at all.
+2. Add a `gate-declared-gap` target that runs
+   `compose/code/p370-gap-gate/test_gap_gate.py` (its suite, including the mandatory case that the two
+   real sentences in the tree come out with **opposite** verdicts), then
+   `gap_gate.py --sweep .` over the published pages.
+3. Add `gate-declared-gap` to `HOOK_GATES`. 🔴 **Not** to `DECLARED_RED` — a gate that cannot block is
+   `617-B` again under a new name.
+4. Re-run `make commit-gates` and expect it to **refuse** a commit that declares an index-form gap the
+   index refutes.
+
+🔵 **Generalise before moving on — this is the step that pays twice.** Sweep `compose/code/` for every
+directory shipping a `test_*.py` that the `Makefile` never names. `483` directories exist;
+`p370-gap-gate` was found by following a citation, not by sweeping, so the population is unmeasured.
+🟡 Cost: hours. 🟢 Applies unchanged to a client's AI-governance estate, where the same audit finds
+written policies with no enforcement point.
+
+### 🟢 `P617-1` — the composition gate for a scaffolded `MIT` repository, in both directions (`1` wk)
+
+🔵 Wired from `616-A`, `617-E` and `617-F` together, because each of the three bounds the others.
+
+1. **Resolve the branch** with `ls-remote --symref`. Never assume `main` — `616-K` measured `2` of `7`
+   reads on `develop`/`master`, and `617-E`'s row would have read ungranted on a wrong branch.
+2. **Grade the title line** over the first **three non-blank** lines (`ingest/p612-grade-title-line.py`).
+   🔴 Do not narrow it to line `1`: `617-H` measured `LabSirius/TutorIA` opening with `---`, so a
+   line-1 grader files this base's strongest LATAM row as `UNCLASSIFIED-NEEDS-HUMAN`.
+3. **Check the residual.** A stock titled `MIT` is `1,056`–`1,097 B` (`616-B`, `8` publishers). Outside
+   that band, **read the whole file** — `616-A`'s `2,254 B` payload excluded `26` of its own
+   directories `1,157` bytes below a stock `MIT` title.
+4. **Enumerate every sibling `*-LICENSE.*` and the vendored tree, and grade each on its bytes.**
+   🔴 Never on the filename, **in either direction**: `616-A`'s vendored tree was fatal
+   (`CC BY-NC-SA 4.0` plus directories the publisher states were *"included without authorization"*),
+   and `617-F`'s `GEMMA-LICENSE.txt` is merely an `Apache-2.0` **attribution notice**.
+5. **Read the README last, and give it no authority.** 🟢 It is evidence of author **intent** only
+   (`617-E`): it may claim more than the payload (`616-C`) or **less** (`GradeMateAI` disowning its own
+   stock `MIT`). The payload governs both ways.
+
+### 🟢 `P617-2` — a permissive, audit-first assessment surface beside an incumbent LMS (`4`–`6` wk)
+
+🔵 Built for the shape `T617-3` measures and the `2027-12-02` Annex III band rewards: **recommend with
+an audit trail**, never decide. Every component named here was byte-read by this base.
+
+- **Assessment platform** — [`azapg/FAIR`](https://github.com/azapg/FAIR) (`MIT`): rubrics, pluggable
+  agent graders, research datasets. 🟡 `6★` — run it as the **assessment service beside** the client's
+  LMS, not as an LMS migration.
+- **Recommend-not-decide grader** — [`sirithreddy175-boop/GradeMateAI`](https://github.com/sirithreddy175-boop/GradeMateAI)
+  (`MIT`) for rubric-driven handwritten work, or
+  [`Osarodion843/EduGrade-AI`](https://github.com/Osarodion843/EduGrade-AI) (`MIT`) for batch sheets
+  with written feedback.
+- **Confidence routing** — `Keshav0141/Auto-Assessment-Agent` (`MIT`): low-confidence gradings go to a
+  human queue. 🟢 This is the component that makes the band's "human oversight" requirement a
+  mechanism instead of a claim.
+- **Local-only integrity** — `biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent` (`MIT`): no
+  external AI APIs, emits an **evidence breakdown** rather than a verdict. 🟢 Clears a strict
+  data-residency brief.
+- **Record of record** — `adlnet/ADL_LRS` or `EscolaLMS/LRS` over `adlnet/xAPI-Spec`: every
+  recommendation, its confidence, its rubric criterion and the human's final mark as xAPI statements.
+  🟢 **This is the deliverable.** The graders above are commodity and `MIT` at `0★`; the queryable
+  decision record is what no row on this shelf ships well.
+- **Stay inside the LMS** — `Cvmcosta/ltijs` or `academic-innovation/django-lti`, so the surface
+  attaches to `Moodle`/`Open edX` instead of replacing them and the copyleft question never reaches
+  the new code.
+
+🔴 **Build-vs-adopt, stated honestly:** at `6★`/`0★`, treat `FAIR` and the graders as **reference
+implementations to fork**, not as upstreams to depend on. The durable asset is the LRS schema and the
+confidence-routing policy.
+
+### 🟢 `P617-3` — a LATAM tutoring engagement that adds to the estate instead of migrating it (`3`–`4` wk)
+
+🔵 Wired from `617-A`, and it exists because the index-form LATAM gap was false.
+
+- **Tutor** — [`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (`MIT`, © `Grupo Sirius`,
+  Universidad Tecnológica de Pereira): autonomous tutor agent for **rural** higher education, Spanish,
+  with TTS audio replies, an animated avatar, cross-session context and a **teacher statistics panel**.
+- **Attach, do not replace** — it runs **inside Open edX** as an XBlock-shaped surface. 🟢 The client
+  keeps its `AGPL-3.0` estate; the permissive code sits beside it, so copyleft never reaches the new
+  work. This is the property that makes it the most reusable LATAM row on this base.
+- **Offline/low-connectivity half** — `learningequality/kolibri` (🔵 default branch **`develop`**,
+  `616-K`) where the rural brief needs it.
+- **Bilingual learner surface** — `Hainrixz/maia-skill` (`MIT`) is this base's only bilingual
+  `EN`/`ES` learner-facing row.
+- 🔴 **Upstream contribution as a deliverable, not a courtesy:** `616-H` measured `7 of 8` LATAM
+  repositories with **no `LICENSE` file at all**. Budget one engagement day to open `LICENSE` pull
+  requests on the repositories the project actually uses. 🟢 It converts the region's measured cause
+  into reusable supply, and it is the cheapest line item in the plan.
+
 ## 🆕 `p616` — `2026-11-02` — patterns wired from rows byte-read today, led by **one control that this pass proved is missing from the gate it belongs in**
 
 ### 🟢 `P616-0` — the composition gate — **prerequisite to every pattern below**

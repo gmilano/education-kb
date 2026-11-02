@@ -3,6 +3,54 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+
+## 🆕 `p617` — reads `2026-11-02` — **three trends, and the first is about control debt rather than the sector**
+
+### 🔴 `T617-1` — the sector's own pattern, reproduced inside this repository: coverage that looks installed and is not
+
+🔵 The regulatory story in every region this base tracks is the same one: **adoption leads governance**,
+and institutions hold *policies* that were written and never wired into anything that blocks an action
+(`87 %` LATAM HEI use against `26 %` with a strategy; `60 %` US teacher use against absent school
+policy). 🔴 `617-B` is that exact pathology **in this base's own controls**:
+`compose/code/p370-gap-gate/` was built at pass `115` with a test suite and a named counter-example,
+and the `Makefile` never referenced it. It has never run. `246` passes later the claim it exists to
+refuse was published again.
+
+🟢 **The trend statement, and it generalises to client work:** in `2026` the scarce thing is not the
+policy or the detector — it is the **wiring**. An AI-governance deliverable that ends in a document is
+the same artefact as an uninstalled gate. 🔵 Globant's defensible position in an education engagement
+is therefore the **enforcement surface**, not the policy text: the gate in the pipeline, the audit
+record in the LMS, the refusal that fires before a mark reaches a student.
+
+### 🟡 `T617-2` — the README is now a licence *risk surface in both directions*, and only one direction had a rule
+
+🔵 `616-C` established the over-claiming trap (a `CC BY-NC-SA 4.0` **badge** over an empty grant
+ladder). 🔴 `617-E` is the inverse, measured today: `sirithreddy175-boop/GradeMateAI` carries a **stock
+`MIT` `LICENSE` file** and a README that says *"No project-wide software license is declared here"* and
+*"do not assume that others have permission to reuse."*
+
+🟢 **Trend, not anecdote:** as scaffolded and agent-generated repositories become the sector's dominant
+new supply — which this base has recorded for several passes — the README and the `LICENSE` are
+**generated at different times by different tools** and drift apart in *both* directions. 🔴 The
+under-claiming direction has no rule anywhere in this base before `617-E`, and it is the direction that
+**discards usable supply** instead of shipping unusable supply. 🟡 Cost asymmetry stated: over-claiming
+is a legal risk, under-claiming is an opportunity cost. Both are now covered.
+
+### 🟢 `T617-3` — the compliant product shape is converging on "recommend, with an audit trail"
+
+🔵 Independent of region, the systems that survive the regulatory bands this base tracks share one
+posture: they **produce evidence for a human decision-maker** rather than a verdict. 🟢 Measured across
+this base's assessment tier: `biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent` emits an
+evidence breakdown rather than a cheating verdict; `azapg/FAIR` is built around transparent and
+contestable grading; `sirithreddy175-boop/GradeMateAI` **recommends** marks and leaves the teacher in
+control; `Keshav0141/Auto-Assessment-Agent` flags low-confidence gradings for human review.
+
+🟢 **Four independent publishers, no shared lineage, same posture** — that is a convergence, and it
+lines up exactly with what the EU Annex III band (`2027-12-02`), Vietnam's high-risk list and TEQSA's
+action plans each ask for. 🔵 **Operative for a studio:** the differentiator to build is the
+**decision record**, not the grader. The grader is now commodity and `MIT`-licensed at `0★`; the
+auditable record of why a learner received a mark is what no row on this shelf ships well.
+
 ## 🆕 `p616` — `2026-11-02` — trends, each with the evidence that would refute it
 
 ### 🔴 `T616-1` — New permissive education supply now arrives as a **tree of other people's directories**, so licence risk has moved from the *row* to the *composition*

@@ -3,6 +3,30 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+
+## 🆕 `p617` — reads `2026-11-02` — **the grading/assessment vertical acquires a permissive platform row, and the LATAM platform row is confirmed as an Open edX *attachment* rather than a replacement**
+
+🟢 **New vertical row, byte-read this pass:**
+
+| Platform | Repo | Grant | What it replaces or attaches to | Fit |
+| --- | --- | --- | --- | --- |
+| **FAIR** | [`azapg/FAIR`](https://github.com/azapg/FAIR) | 🟢 **`MIT`** (`main/LICENSE`, title `MIT License`, © `2026 Allan Zapata`, no additional clause) | A **grading platform *and* LMS in one tree** — so it competes with the LMS tier (`Moodle`, `Open edX`, `ILIAS`, `OpenOLAT`) rather than attaching to it | 🟡 `6★`, `572` commits. 🔴 **Not** an LMS migration target at this maturity. 🟢 Worth running as the **assessment service beside** an incumbent LMS, which is the deployment its rubric/grader model actually supports |
+
+🔵 **Why it is shelved at all, at `6★`.** The permissive LMS tier is `GPL`/`AGPL`-dominated — `Moodle`
+`GPL-3.0`, `Open edX` `AGPL-3.0`, `ILIAS` `GPL-3.0` — and the copyleft question is the single most
+frequent procurement objection in this sector. 🟢 A permissively licensed assessment platform, however
+early, is a different answer to that objection than *"fork Moodle"*. 🟡 Stated plainly: that is an
+argument for **watching** it, not for proposing it.
+
+### 🟢 `617-A` — the LATAM platform row, confirmed and correctly typed
+
+[`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) (🟢 `MIT`, © `2026 Grupo Sirius`,
+Universidad Tecnológica de Pereira, Colombia) **runs inside Open edX** — an **XBlock-shaped
+attachment**, not a platform replacement. 🔵 That is the property that makes it the most reusable
+LATAM row this base holds: an engagement keeps the client's `AGPL-3.0` Open edX estate and adds a
+permissive tutoring surface to it, so the copyleft question never reaches the new code. 🟢 It is also
+the row that refutes `616-H`'s index-form gap (`617-A`).
+
 ## 🆕 `p616` — reads `2026-11-02`, commit `2026-11-02` — **🟢 THE PERMISSIVE VERTICAL SUBSTRATE IS SETTLED AND RE-MEASURED: `OpenOLAT` (`Apache-2.0`, `p615`) FOR A FULL LMS, `Kolibri` (`MIT`, `1,097 B`, BRANCH `develop`) FOR OFFLINE-FIRST DELIVERY. 🔴 AND THE SKILL-PACKAGE LAYER THAT SITS ON TOP OF THEM IS WHERE THE LICENCE RISK NOW LIVES.**
 
 ### 🟢 `616-M` — the vertical stack, as this base can actually defend it today

@@ -3,6 +3,96 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+
+## Pass 617 — reads 2026-11-02, commit 2026-11-02 — **🔴 A GATE WITH A TEST SUITE AND A NAMED COUNTER-EXAMPLE WAS BUILT AT PASS `115` AND **NEVER WIRED INTO THE `Makefile`**, SO `246` PASSES LATER `p616` RE-PUBLISHED THE EXACT CLAIM IT EXISTS TO REFUSE. 🟢 THE LATAM **INDEX** GAP IS WITHDRAWN — `LabSirius/TutorIA` IS `MIT`, COLOMBIAN, EDUCATION-SPECIFIC AND RE-READ TODAY; THE **CHANNEL** GAP AND ITS CAUSE STAND. 🟢 THREE NEW PERMISSIVE GRADING ROWS, AND A README THAT **DISOWNS** ITS OWN STOCK `MIT` GRANT — THE INVERSE OF `616-C`, A DIRECTION THIS BASE HAD NO RULE FOR. 🔴 AND NO INSTRUMENT IN THIS REPOSITORY COULD BE EXECUTED IN THIS SESSION, SO THIS COMMIT IS **NOT GATE-VERIFIED** AND SAYS SO. TWELVE REGISTERED (`617-A`…`617-L`).**
+
+🔴 **`617-A`/`617-B` — the pass's load-bearing finding, and it is control debt, not research debt.**
+`616-H` did real work converting the LATAM supply gap from a count of nils into a measured **cause**
+(`1 of 8` permissive across `latam-gpt`, `7 of 8` with no licence file). 🟢 That half stands. 🔴 It
+then restated the gap in the one form falsifiable against this base's own index — *"still no
+LATAM-published, permissive, education-specific row"* — and
+[`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) refutes it: re-read first-hand today at
+`main/LICENSE`, title `MIT License`, © `2026 Grupo Sirius`, no clause beyond stock MIT, published by
+the **Grupo Sirius** group of the **Universidad Tecnológica de Pereira** for rural higher education in
+**Risaralda, Colombia**, running **inside Open edX**. 🔵 Earlier passes had already recorded it as
+*"Closes pass 31's LATAM gap."*
+
+🔴 **And the mechanism is the harsh part.** `compose/code/p370-gap-gate/` was written at pass `115` for
+exactly this class, ships `gap_gate.py` **and** `test_gap_gate.py`, implements the
+**channel-vs-index** discrimination that keeps such a gate honest, and names `TutorIA` as its mandatory
+counter-example. 🔴 **The `Makefile` never references it** — not in `HOOK_GATES`, not in
+`DECLARED_RED`, not in any target. It has never run. 🔵 This base's maxim *"una regla que hay que
+recordar no es un control"* needs its sharper form: **an instrument built, tested and never wired is
+also not a control** — and it is worse than a bare rule, because the repository looks covered.
+
+🟢 **`617-C` — so the gap is re-typed rather than restated.** Index form: **withdrawn**. Channel form
+(*"these legs do not reliably find LATAM supply"*): **open, and well-measured**. Cause (*"the region
+publishes; the `LICENSE` file is what is missing"*): **stands**, and so does `616-H`'s remedy — open
+`LICENSE` pull requests upstream instead of waiting for new repositories.
+
+🟢 **`617-D` — three new permissive rows, in a tier this base held only at its edges**
+(specifications and near-zero-star scripts). Each byte-read at `raw.githubusercontent.com`,
+title-graded per `p612`, residual-checked: [`azapg/FAIR`](https://github.com/azapg/FAIR) (`MIT`, `6★`,
+`572` commits — a grading platform **and** LMS built around contestable assessment, the tier's only
+platform-shaped row), [`Osarodion843/EduGrade-AI`](https://github.com/Osarodion843/EduGrade-AI) (`MIT`,
+`0★`) and [`sirithreddy175-boop/GradeMateAI`](https://github.com/sirithreddy175-boop/GradeMateAI)
+(`MIT`, `0★`). 🟡 **`6★`, `0★`, `0★` — shelved for their shape, not their adoption**, and said that
+way round.
+
+🔴 **`617-E` — the inverse of `616-C`, and only one direction had a rule.** `616-C` caught a README
+**badge** asserting `CC BY-NC-SA 4.0` over an **empty** grant ladder. `GradeMateAI` runs the other way:
+the platform field says `MIT`, a real `LICENSE` exists and is **stock MIT** on a full read — and the
+README says *"No project-wide software license is declared here"* and *"do not assume that others have
+permission to reuse."* 🟢 **The payload governs; the row is `MIT`.** 🔵 Revision to `p288`'s README
+channel, for both directions: *the README is evidence of author **intent**, never of the **grant**.*
+🔴 The asymmetry matters — over-claiming ships unusable supply, under-claiming **discards usable
+supply**, and only the first had ever been ruled on.
+
+🟢 **`617-F` — and the sibling in that same tree is not a bar either.** `GEMMA-LICENSE.txt` reads as
+*"Gemma 4 model license notice"*: an **attribution notice** stating Gemma 4 is `Apache-2.0`, with no
+field-of-use, prohibited-use or commercial clause. 🔵 So `616-A` and `617-F` bound each other —
+**enumerate the siblings and the vendored tree, then grade each on its bytes, never on its filename, in
+either direction.**
+
+🟡 **`617-G` — `613-A` bounded.** `EduGrade AI contributors` / `GradeMate AI contributors` is one
+templated holder shape under **two unrelated owners**. Byte-identity indicates an owner convention;
+**holder-line similarity does not**.
+
+🔵 **`617-H` — a near-miss worth keeping.** `TutorIA`'s `LICENSE` opens with `---`, so the title sits on
+line `2`; `p612`'s **three-non-blank-line** window is what returns `MIT` instead of
+`UNCLASSIFIED-NEEDS-HUMAN`. 🔴 Do not narrow that window. 🟡 And the base publishes that one payload at
+both `1,069 B` and `1068 B` — registered, not resolved, because this pass had no byte channel.
+
+🔴 **`617-I` — fifteenth consecutive pass without a primary source.** `eur-lex.europa.eu`,
+`moodledev.io`, `docs.openedx.org`, `www.oecd.org` all `getaddrinfo ENOTFOUND` again. 🟢 New: the
+channel's own error text now **names the remedy** (*"has to be allowed in the session's network
+settings"*), so the ask is tool-stated rather than inferred. `614-C` stays unpayable and every figure
+in `intel/` is secondary **by construction**. 🟢 This pass also re-confirmed, independently, that the
+secondary channel serves the **superseded** August-`2026` Annex III date alongside the correct
+`2027-12-02`.
+
+🔴 **`617-J` — NEW: no instrument in this repository can be executed in this session.**
+`make commit-gates` → **DENIED** `[Code from External]`; one offline, network-free
+`gap_gate.py --self-test` → **DENIED**, same reason. Reading, `git` and `WebFetch` are unrestricted.
+🔴 This **supersedes** `lib/README.md`'s pass-`74` measurement that *"an offline Python instrument from
+the same clone 🟢 runs"*. 🔴 **Therefore this commit is not gate-verified, and it says so rather than
+implying the suite was green.** Structural conventions were met by hand and checked by nobody.
+
+🟢 **`617-K` — the discovery budget, measured.** The four mandated global legs returned **`0` new
+rows** (`47`th consecutive nil; every candidate already held, and the ERP/CRM leg has now paid nothing
+twice). 🟢 Both yields came from **unmandated** legs that named a **tier** (`grading assessment`) or a
+**language** (`español … universidad latinoamérica`). 🔵 Operative: the
+`top open source AI agents {industry}` shape is **exhausted on this base** — spend the budget on a
+named tier.
+
+🔵 **Three patterns, each wired from rows read today:** `P617-0` **install the gate this repository
+already owns** (plus the unmeasured sweep for other uninstalled instruments), `P617-1` the
+**two-direction composition gate** for a scaffolded `MIT` repository, `P617-2` a permissive
+**audit-first assessment surface** beside an incumbent LMS where the deliverable is the xAPI **decision
+record**, not the grader (`4`–`6` wk), `P617-3` a LATAM tutoring engagement that **attaches** to the
+client's Open edX estate instead of migrating it, with upstream `LICENSE` contributions as a budgeted
+line item (`3`–`4` wk).
+
 ## Pass 616 — reads 2026-11-02, commit 2026-11-02 — **🔴 A STOCK `MIT License` TITLE LINE IS NOT A PERMISSIVE GRANT OVER THE TREE IT SHIPS. 🟢 THE STOCK-`MIT` BYTE BAND, MEASURED ON `8` INDEPENDENT PUBLISHERS TODAY (`1,056`–`1,097 B`, `41 B` SPREAD), CATCHES A `2,254 B` COMPOSITION DEFECT THAT `p612`'s TITLE-LINE RULE CANNOT SEE — WITHOUT RE-COMMITTING `p312`. 🔴 THE SECTOR'S RICHEST EDUCATION-SPECIFIC SKILL CORPUS (`111★`, `217 MB`, ACTIVELY MAINTAINED) HAS **NO GRANT PAYLOAD** AND IS ALREADY VENDORED DOWNSTREAM. 🟢 AND THE LATAM SUPPLY GAP HAS A **CAUSE** FOR THE FIRST TIME: `1 of 8` PERMISSIVE ACROSS THE REGION'S FLAGSHIP ORG, `7 of 8` WITH NO LICENCE FILE AT ALL. TWELVE REGISTERED (`616-A`…`616-O`).**
 
 🔴 **`616-A` — the pass's load-bearing finding.** `p611-B`/`p612` moved this base to grading on the

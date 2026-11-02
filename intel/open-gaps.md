@@ -3,6 +3,107 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+
+## 🆕 `p617` — `2026-11-02` — **🔴 A GATE BUILT AT PASS `115`, WITH A SUITE AND A NAMED COUNTER-EXAMPLE, WAS NEVER WIRED INTO THE `Makefile` — AND `p616` PUBLISHED THE CLAIM IT EXISTS TO REFUSE. 🟢 THE LATAM **INDEX** GAP IS WITHDRAWN; THE **CHANNEL** GAP STANDS. 🔴 AND NO INSTRUMENT IN THIS REPOSITORY CAN BE EXECUTED IN THIS SESSION, SO THIS COMMIT IS NOT GATE-VERIFIED. FOUR REGISTERED (`617-B`, `617-I`, `617-J`, `617-H`).**
+
+### 🔴 `617-B` — OPEN (control debt, diagnosed and priced): `p370-gap-gate` has never run
+
+🟢 `compose/code/p370-gap-gate/` ships `gap_gate.py` **and** `test_gap_gate.py`. Written at pass `115`
+(`2026-10-05`) for the symmetric question `p311` does not cover — *a declared gap is a claim about the
+base's own content, therefore falsifiable against the base's own index* — carrying the
+**channel-vs-index** discrimination that stops it being a counter of the word *"CERO"*, and naming
+`LabSirius/TutorIA` as its mandatory counter-example.
+
+🔴 **The `Makefile` never references it.** Grepped this pass: absent from `HOOK_GATES`, from
+`DECLARED_RED`, and from every target. The wired `p370` gates are `gate-refset-register` and
+`gate-domain-check`. **It has never run on any commit.**
+
+🔴 **The cost, realised:** `616-H` published *"still no LATAM-published, permissive, education-specific
+row"* — an index-form gap — and `617-A` refutes it from this base's own shelf.
+
+🟢 **Remedy (code exists; this is a `Makefile` edit):** `gate-declared-gap` → `test_gap_gate.py`, then
+`gap_gate.py --sweep .`; add to `HOOK_GATES`, **not** to `DECLARED_RED`. 🟡 **Not landed this pass**
+because `617-J` prevented showing it green, and landing an unrunnable gate is how `DECLARED_RED` grows
+quietly. 🔵 **Generalisation, unmeasured and cheap:** sweep `compose/code/` for every directory with a
+`test_*.py` the `Makefile` never names. `483` directories; `1` confirmed instance, found by following a
+citation.
+
+### 🟢 `617-A` — CLOSED (refuted): the LATAM **index** gap. 🔴 The **channel** gap stays OPEN
+
+🟢 `LabSirius/TutorIA` re-read first-hand at `main/LICENSE`: title `MIT License`, © `2026 Grupo
+Sirius`, no clause beyond stock MIT. Universidad Tecnológica de Pereira, Risaralda, **Colombia**;
+autonomous tutor for rural higher education; runs **inside Open edX**. 🟢 LATAM-published, permissive,
+education-specific — so the index form of the gap is **withdrawn**.
+
+🔴 **Still open, correctly typed:** *this base's discovery legs do not reliably find LATAM education
+supply.* `616-H`'s enumeration (`1 of 8` permissive, `0 of 8` education-specific, `7 of 8` with no
+licence file) is the evidence, and its **cause and remedy stand unchanged** — the region publishes, the
+`LICENSE` file does not, so contribute one upstream. 🔵 Only the falsifiable half is withdrawn.
+
+### 🔴 `617-I` — OPEN, **fifteenth consecutive pass**: the primary-source hosts still do not resolve
+
+🔴 Probed again this pass via the independent `WebFetch` channel: `eur-lex.europa.eu`, `moodledev.io`,
+`docs.openedx.org`, `www.oecd.org` → **`getaddrinfo ENOTFOUND`**, all four.
+
+🟢 **New, and it changes the ask from inference to quotation.** The channel's own error text now states
+the remedy: *"a host fails to resolve like this when it is outside the session's allowed network
+domains"* and *"has to be allowed in the session's network settings."* 🔵 `614-H` inferred the
+allow-list diagnosis from two channels agreeing on a DNS failure; it is now **tool-stated**.
+
+🔴 **Consequence, unchanged and worth restating because it bounds every figure this base publishes:**
+`614-C` is **unpayable** — the EU Annex III primary text (`Reg. (EU) 2026/1744`) has never been read
+here — and every market and regulatory number in `intel/` is **secondary by construction**. 🟢 This
+pass added a second independent confirmation that the secondary channel serves the **superseded**
+August-`2026` Annex III date alongside the correct `2027-12-02`, which is exactly why a primary read
+matters. 🟢 **Ask:** add those hosts to the environment's network allow-list. It is a permission
+decision, not a research problem.
+
+### 🔴 `617-J` — NEW, OPEN: **no instrument in this repository can be executed in this session**
+
+🔴 Measured this pass, twice, on deliberately different targets:
+
+| attempted | result |
+| --- | --- |
+| `make commit-gates` (the `p423` blocking suite) | 🔴 **DENIED** — `[Code from External]` |
+| `python3 -I compose/code/p370-gap-gate/gap_gate.py --self-test` (one offline script, no network) | 🔴 **DENIED** — `[Code from External]` |
+| reading any file in the clone (`grep`, `sed`, `ls`) | 🟢 unrestricted |
+| `git clone`, `git commit`, `git push` | 🟢 permitted |
+| `WebFetch` on `raw.githubusercontent.com` and repository pages | 🟢 permitted — the pass's only first-hand channel |
+
+🔴 **This supersedes a recorded assumption.** `compose/code/lib/README.md` (pass `74`,
+`2026-10-09`) measured the seam as *"`. probe_payload.sh` 🔴 DENEGADO `[Code from External]` … y un
+instrumento Python offline del mismo clon 🟢 **corre**."* 🔴 **The offline-Python half no longer
+holds.** The seam is no longer *network vs no-network*; it is **this repository's code vs any code at
+all**.
+
+🔴 **Stated plainly, because the alternative is implying otherwise: this pass's commit is NOT
+gate-verified.** `make commit-gates` did not run. The sections were written to the structural
+conventions by hand — frontmatter intact, `## Opportunities by region` with one `###` per region of the
+closed vocabulary, no header or example row left as data — and **none of that was checked by a gate**.
+🟡 A fresh clone has no `pre-commit` hook anyway (`Gap 423-B`), so the commit was not blocked; it was
+simply unverified.
+
+🔵 **Consequences for the next pass:** (1) `617-B`'s `Makefile` edit is deferred to a pass with
+execution rights; (2) no byte figure is published by this pass — `617-H`'s two conflicting values for
+one payload are **registered, not resolved**; (3) if execution stays denied, the base should expect
+structural drift it cannot detect, and the honest response is to say so each pass rather than to let
+silence imply green. 🟢 **Ask:** permission to run the repository's own offline test suites.
+
+### 🟡 `617-H` — OPEN (minor, byte channel required): one payload published at two byte values
+
+🔴 `LabSirius/TutorIA`'s `main/LICENSE` appears on this base's shelves as **`1,069 B`** on one row and
+**`1068 B`** on another. One is wrong.
+
+🔵 Also recorded, from re-reading it: the payload is **not stock** — line `1` is `---` and the title
+`MIT License` is line `2`. 🟢 `ingest/p612-grade-title-line.py` returns `MIT` correctly because it
+joins the first **three non-blank** lines; traced in source. 🟡 **A line-1 grader would return
+`UNCLASSIFIED-NEEDS-HUMAN`** on this base's strongest LATAM row, so the 3-line window is load-bearing
+and must not be narrowed as an optimisation.
+
+🔴 **Why it is registered and not fixed:** `617-J` left this pass with no byte channel — `curl` is
+denied and `WebFetch` returns text, not a byte count. A pass with `lib/measure` available should
+resolve it in one read.
+
 ## 🆕 `p614` — `2026-11-02` — **🟢 TWO INHERITED RED BLOCKING GATES FIXED, ONE OF THEM WITH THE SPECIMEN THAT TURNS A LONG-STANDING LINT FINDING INTO A MEASURED DEFECT (`Sobeston/zig.guide` → `Sobeston/zig`, BOTH REAL, SAME OWNER). 🔴 `HEAD` WAS RED ON **FOUR** BLOCKING GATES BEFORE THIS PASS WROTE A WORD, AND EACH FIX REVEALED THE NEXT. 🟢 `613-E`'s OPEN LIMIT MEASURED ON A POPULATION: `NULL` AND `NOASSERTION` MEAN OPPOSITE THINGS (`4 of 4` vs `6 of 6`). 🔴 `614-F`: A `121`-BYTE `LICENSE.md` THAT IS A CROSS-REPO POINTER TO `AGPL-3.0`. 🔴 FORTY-FOURTH LEG NIL — AND `614-I` ARGUES THE STATISTIC IS MEASURING THE LEGS, NOT THE SECTOR. NINE REGISTERED (`614-A`…`614-I`).**
 
 ### 🟢 `614-A` — CLOSED (fixed): `p308`'s per-row narrowing was built for pipe tables only, and a bullet list is the structure the gate most needed it on

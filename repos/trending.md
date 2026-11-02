@@ -3,6 +3,33 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+
+## 🆕 `p617` — `2026-11-02` — **the grading/assessment tier, promoted from its edges to three byte-read rows; and a `*-LICENSE.*` sibling that is a notice, not a bar**
+
+🟢 **New this window**, each title-graded per `p612` and residual-checked for clauses beyond stock MIT
+at `raw.githubusercontent.com`:
+
+| Repo | Grant | Signal | Why it matters |
+| --- | --- | --- | --- |
+| [`azapg/FAIR`](https://github.com/azapg/FAIR) | 🟢 `MIT` · `main` · © `Allan Zapata` | `6★`, `572` commits | **Grading platform + LMS in one tree**, designed around transparent and contestable assessment (rubrics, agent-based graders, research datasets). 🟢 The tier's only platform-shaped row; everything else in it is a script |
+| [`Osarodion843/EduGrade-AI`](https://github.com/Osarodion843/EduGrade-AI) | 🟢 `MIT` · `main` · © `EduGrade AI contributors` | `0★`, `15` commits | Batch answer-sheet grading with analytics and written feedback; Gemma via the GenAI SDK |
+| [`sirithreddy175-boop/GradeMateAI`](https://github.com/sirithreddy175-boop/GradeMateAI) | 🟢 `MIT` · `main` · © `GradeMate AI contributors` | `0★`, `2` commits | Rubric-driven handwritten-exam evaluation that **recommends** marks, teacher decides. 🔴 README disowns the grant its own `LICENSE` makes (`617-E`); 🟢 ships `GEMMA-LICENSE.txt`, which is an `Apache-2.0` **attribution notice** and not a restriction (`617-F`) |
+
+🟡 **Star counts stated because they bound the claim:** `6`, `0`, `0`. These are shelved for **shape**,
+not adoption — `FAIR`'s contestable-assessment posture and `GradeMateAI`'s recommend-not-decide
+posture are the two shapes that survive the EU high-risk band opening `2027-12-02`, where an
+explainable record for a human decision-maker is what the rule asks for. 🔵 Same argument this base
+already recorded for `biswal-prem-5677/Autonomous-Exam-Proctoring-Grading-Agent`; these rows extend
+that tier rather than opening it.
+
+🔴 **Not promoted, and why:** nothing from legs `1`–`4`. `ERPNext` (`GPL-3.0`) and Apache `OFBiz` (no
+education module) were the ERP/CRM leg's only substance and neither is education-specific permissive
+supply. `fair-platform` on PyPI is **unverified** — the page would not render in this session.
+
+🔵 **Carried rows reproduced free this window:** `THU-MAIC/OpenMAIC` → stock `MIT` re-read at `main`;
+`LabSirius/TutorIA` → stock `MIT` body re-read at `main`, holder `Grupo Sirius`, with the non-stock
+`---` first line that `617-H` registers.
+
 ## 🆕 `p616` — `2026-11-02` — the **agent-skill supply chain**, enumerated upstream for the first time: a `111★` corpus with no licence is feeding packages that are published as `MIT`
 
 🟢 **The pass's one genuinely new surface.** Previous passes enumerated publisher orgs (`p615`: ADL and

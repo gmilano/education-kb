@@ -3,6 +3,62 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+
+## 🆕 `p617` — `2026-11-02` — **the forty-seventh consecutive global-leg nil, and the first pass where the new rows came from naming a *tier* instead of naming the industry**
+
+🟢 **The mandated nil, with the candidates named so the nil is auditable.** Legs `1`–`4`
+(`top open source AI agents education 2026 github MIT`, `github trending education AI 2026`,
+`open source platform education ERP CRM MIT Apache`, `AI education industry trends 2026`) returned
+**`0` new head names**. Every candidate they surfaced is **already held**: `HKUDS/DeepTutor`,
+`THU-MAIC/OpenMAIC`, `patchy631/ai-engineering-hub`, `rasbt/LLMs-from-scratch`,
+`ARUNAGIRINATHAN-K/awesome-ai-agents-2026`, `microsoft/ai-agents-for-beginners`. 🔴 The ERP/CRM leg
+returned **no education-specific permissive system at all** — `ERPNext` is `GPL-3.0`, Apache `OFBiz`
+has no education module, `Krayin`/`iDURAR` are general CRMs. That leg has now paid nothing twice.
+
+🔵 **Two independent confirmations of carried rows came free**, and are recorded because a reproduction
+is cheaper than a re-read: `THU-MAIC/OpenMAIC` re-read at `main/LICENSE` → stock **`MIT`**, holder
+`THU-MAIC`, no additional clause; quoted by the trend-digest channel at *"42K"*, against the
+`42,470★` this base carries. `HKUDS/DeepTutor` quoted at `51,771★` → `52,783★` across two digest
+dates, against the `54,089★` carried — 🔴 the digest channel lags, as `p615` already recorded.
+
+### 🟢 `617-K` — where the yield actually came from, measured
+
+| leg | mandated? | new rows | what it returned |
+| --- | --- | --: | --- |
+| `top open source AI agents education 2026 github MIT` | 🟢 yes | 🔴 `0` | general-purpose agent lists; no education-specific permissive head |
+| `github trending education AI 2026` | 🟢 yes | 🔴 `0` | `DeepTutor`, `OpenMAIC`, `ai-engineering-hub` — all held |
+| `open source platform education ERP CRM MIT Apache` | 🟢 yes | 🔴 `0` | `ERPNext` `GPL-3.0`, `OFBiz` no education module |
+| `AI education industry trends 2026` | 🟢 yes | 🔴 `0` | secondary trend prose, no addresses |
+| 🆕 `open source AI grading assessment agent 2026 github MIT license education` | 🔴 **no** | 🟢 **`3`** | `azapg/FAIR`, `Osarodion843/EduGrade-AI`, `sirithreddy175-boop/GradeMateAI` |
+| 🆕 `repositorio open source educación IA tutor español licencia MIT github 2026 universidad latinoamérica` | 🔴 **no** | 🟢 **`1` recovered** | surfaced `LabSirius/TutorIA`, which `617-A` then used to refute `616-H` |
+
+🔵 **Operative, and it is a budget instruction rather than an observation:** the
+`top open source AI agents {industry}` shape is **exhausted** on this base — `47` consecutive nils is
+no longer a sector statement, it is a statement about the query. 🟢 Both yields this pass came from
+naming a **tier** (`grading assessment`) or a **language** (`español … universidad latinoamérica`).
+🟡 `614-I` argued the statistic measures the legs and not the sector; this pass is the first to beat
+the nil twice by changing the legs, which is that argument landing rather than being restated.
+
+🔴 **A new-row count is not a quality claim.** The three new rows are `6★`, `0★` and `0★`. The
+honest summary of this pass's supply work is: *one false gap withdrawn, three early rows added, two
+licence rules bounded* — not *three agents found*.
+
+### 🔵 `617-H` — a near-miss on the base's strongest LATAM row, found while re-reading it
+
+🔴 `LabSirius/TutorIA`'s `LICENSE` is **not stock**: line `1` is `---`, and the title `MIT License`
+is on line `2`.
+
+🟢 The base's grader survives it. `ingest/p612-grade-title-line.py` joins the first **three non-blank**
+lines before matching, so the title string begins `--- MIT License Copyright (c) 2026 Grupo Sirius`
+and `MIT` is returned correctly — traced in source this pass. 🟡 **A line-1 grader would return
+`UNCLASSIFIED-NEEDS-HUMAN` on it**, filing this base's strongest LATAM row as ungraded. The 3-line
+window is **load-bearing** and must not be narrowed to a single line as an optimisation.
+
+🔴 **And a small defect registered, not resolved:** this base publishes that one payload at **two**
+byte values — `1,069 B` on one shelf row and `1068 B` on another. One is wrong. 🟡 This pass **cannot
+measure bytes** (`617-J`: no `curl`, and the `WebFetch` channel returns text, not a byte count), so it
+is registered for a pass with a byte channel rather than guessed.
+
 ## 🆕 `p616` — `2026-11-02` — **the forty-sixth consecutive global-leg nil on new head names, and the first pass where the yield came from a *licence* channel rather than a discovery one**
 
 🟢 **The nil is unchanged.** Legs `1`–`4` (`top open source AI agents education 2026 github MIT`,

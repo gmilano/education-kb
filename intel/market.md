@@ -3,6 +3,144 @@ industry: education
 region: Global
 updated: 2026-11-02
 ---
+
+## 🆕 `p617` — reads `2026-11-02` — market map and regional placement, **and the LATAM entry is a withdrawal: this base's own index refutes the gap it published yesterday**
+
+🟢 **Channel note first, because it bounds every figure below.** Every market and regulatory number in
+this section is **secondary** — survey bodies, regulators, market-research firms, trade press. 🔴
+`614-H` is now in its **fifteenth consecutive pass**: `eur-lex.europa.eu`, `moodledev.io`,
+`docs.openedx.org` and `www.oecd.org` were each probed again this pass and each returned
+`getaddrinfo ENOTFOUND`. **No primary text was read, again.** 🟢 New this pass: the channel's own error
+text now **names the remedy** — *"has to be allowed in the session's network settings"* — so the ask
+is **tool-stated rather than inferred** (`617-I`). 🟢 The only first-hand channel this pass had was the
+grant channel (`raw.githubusercontent.com` + repository pages), and `617-A`/`617-D` are what it bought.
+
+### 🔴 `617-A` — the LATAM supply gap: the index form is WITHDRAWN
+
+🔵 `616-H` converted this gap from a count of nils into a measured **cause**, which was real progress
+and **stands**. 🔴 It then restated the gap as *"still no LATAM-published, permissive,
+education-specific row"* — an **index** claim, and the index refutes it.
+[`LabSirius/TutorIA`](https://github.com/LabSirius/TutorIA) is **`MIT`** (re-read first-hand this pass:
+title `MIT License`, © `2026 Grupo Sirius`, no clause beyond stock), published by the **Grupo Sirius**
+group of the **Universidad Tecnológica de Pereira** for rural higher education in **Risaralda,
+Colombia**, and it runs **inside Open edX**. 🟢 LATAM-published, permissive, education-specific.
+
+🟢 **The channel gap stands and is the one to carry forward:** this base's discovery legs do not find
+LATAM education supply reliably — `616-H`'s `latam-gpt` enumeration returned `1 of 8` permissive and
+`0 of 8` education-specific, and `7 of 8` had no licence file at all. 🔵 **The cause and its remedy are
+unchanged: the region publishes; the `LICENSE` file is what is missing, so contribute one upstream
+rather than wait for new repositories.** See `617-B` for why the gate that would have caught the false
+half has never run.
+
+## Opportunities by region
+
+### North America
+
+🟢 **Scale, publisher named.** MarketsandMarkets places North America at **`36 %`** of the
+AI-in-education market, **`$3.68 B`** in `2026`; a separate estimate puts the region at `38 %` of
+`2025` share. 🔴 Not reconcilable from available material; carried as a range, unchanged this pass.
+
+🟡 **Regulatory surface, re-probed and consistent with the carried figure.** The legislative channel
+returns **`134` bills across `31` states** in the `2026` session, favouring research, transparency and
+guardrails over mandated rollout. 🟢 Four states — **Maryland, Idaho, Oklahoma, Virginia** — now
+require **both** state guidance **and** mandatory district-level AI policy adoption, which is the
+sharpest procurement trigger in the region: a district under a policy mandate needs an auditable system
+before it needs a better tutor. 🔵 Federal: a **K-12 AI Literacy and Readiness Act of 2026** advanced
+out of the House Education and Workforce Committee; **not enacted**, recorded as a signal only.
+
+🔴 **The operative asymmetry remains institutional.** Teacher adoption reported at **`60 %`** (Gallup,
+secondary), while most US public schools still lack a formal student AI policy. 🟢 That gap is the
+region's most reliable near-term demand, and it is a **governance** engagement, not a model engagement.
+
+🔵 **Supply placement this pass:** `0` new North America rows. The three `617-D` rows could **not** be
+placed — no holder location was recoverable through this environment's channel — and are shelved
+`🔵 Global — holder not placed` rather than guessed into a region.
+
+### EMEA
+
+🟢 **The region's differentiator is still the regulatory calendar, and this pass's leg re-confirmed
+the base's settled value from an independent source.** High-risk obligations for **stand-alone Annex
+III** systems — the band that covers systems evaluating learners, assigning them to programmes,
+detecting prohibited behaviour during assessment, or influencing access to qualifications — apply
+**`2027-12-02`**, with **`2028-08-02`** for AI embedded in regulated products. 🟢 Both values are
+already carried and both reproduced.
+
+🔴 **And `614-C`'s dual-serving reproduced too, which is the finding.** The same leg also served the
+**superseded August-`2026`** date as current. 🔵 That is now an independently re-confirmed property of
+this channel, not an anomaly: **the secondary channel serves both forms simultaneously**, so any date
+taken from it without the Digital Omnibus revision in hand has roughly even odds of being `16` months
+early. 🔴 The primary text (`Reg. (EU) 2026/1744`) has **still never been read here** — `614-C` is
+unpayable while `eur-lex.europa.eu` does not resolve.
+
+🟡 **Non-EU EMEA, thin as usual:** the UK remains principle-based through existing regulators
+(consultation); Dubai's **KHDA** has issued explicit responsible-AI guidance to private schools. 🔴 The
+leg returned **no EMEA-specific adoption rate** — an informed gap, not coverage.
+
+🔵 **Supply placement:** `0` new EMEA rows this pass.
+
+### APAC
+
+🟢 **Fragmentation is the structural fact, and it is a delivery cost rather than a barrier.** Korea's
+**AI Basic Act** in force **`2026-01-22`** (enforcement decrees still being finalised, guidance-first
+grace period through `2026`); **Vietnam's** risk-based AI law effective **`2026-03-01`**, with
+education — automated assessment and behavioural systems — named in its **high-risk list**; **Japan**
+voluntary and innovation-first; **Singapore** testing-toolkit based (**AI Verify**). 🟢 All already
+carried; all reproduced this pass.
+
+🟢 **Australia is the region's cleanest engagement trigger:** **TEQSA** requires *every* higher
+education provider to submit an institutional action plan addressing generative-AI risk. 🔵 That is a
+mandated deliverable with a named regulator — the APAC analogue of the four US states' policy mandate.
+
+🔵 **Extraterritorial pressure:** APAC edtech vendors selling into EU schools fall inside the Annex III
+band above, so the `2027-12-02` date is an **APAC** date for any exporter.
+
+🔵 **Supply placement:** `0` new APAC rows this pass. 🟡 The carried APAC tier is this base's
+best-populated (`THU-MAIC/OpenMAIC`, `mcxiaoxiao/kaoyan-navigator-skill`, `shigella520/MindTrain`,
+`zhangl1001/civil-ai`, `xiaoyang111222/cn-math-taxonomy`) and `OpenMAIC`'s `MIT` was reproduced today.
+
+### LATAM
+
+🟢 **The supply position is better than this base said yesterday.** The index-form gap is **withdrawn**
+(`617-A`): `LabSirius/TutorIA` is `MIT`, Colombian, education-specific, and attaches to Open edX. 🔴
+The **channel** gap stands — the legs do not find this supply reliably, and `616-H`'s cause holds: the
+region publishes and the `LICENSE` file is missing (`7 of 8` across `latam-gpt`).
+
+🟢 **Demand, secondary but unusually well-sourced.** UNESCO IESALC surveyed **`200` higher education
+institutions across `19` countries**: **`87 %`** use AI in at least one area, while only **`26 %`**
+have a formal AI strategy. School-level, Brazil: **`53 %`** of administrators report AI use,
+**`22 %`** report institutional guidelines (Cetic.br). 🔵 All carried already; reproduced here.
+
+🔴 **The governance deficit is the engagement, and it is now quantified on both axes** — `87 %` use
+against `26 %` strategy at HEI level, `53 %` against `22 %` at school level. 🟢 That is the same shape
+as North America's teacher-adoption gap, with a wider spread and far less vendor presence.
+
+🟡 **Regulatory map stays fragmented:** Universidad de los Andes counts **`716` AI-related instruments
+and proposals across `23` countries and territories**, most since `2023`; Brazil's **PL 2.338/2023**
+still in progress; Colombia policy-first via **CONPES 4144**. 🟢 UNESCO's regional **Observatory on AI
+in Education for LAC** (launched April `2026`) is the named convening body.
+
+🔵 **Delivery note that follows from `617-A` rather than from market data:** the reusable LATAM asset is
+an **Open edX attachment**, so a LATAM engagement adds a permissive tutoring surface to the client's
+existing `AGPL-3.0` estate instead of migrating it. That is a materially cheaper first engagement than
+anything the demand figures alone would suggest.
+
+### Global
+
+🟢 **The cross-regional constant is unchanged and this pass sharpened its supply-side half:** adoption
+leads governance everywhere the legs reach (`87 %`/`26 %` LATAM HEIs, `60 %` US teachers against absent
+school policy, `134` US state bills, `716` LATAM instruments), and the scarce input is **not** a model —
+it is an **auditable record of how a decision about a learner was made**.
+
+🟢 **Which is why `617-D`'s shapes matter more than their star counts.** `azapg/FAIR` is built around
+contestable assessment; `sirithreddy175-boop/GradeMateAI` **recommends** a mark and leaves the decision
+with the teacher. 🔵 Both are the posture the `2027-12-02` Annex III band rewards, and both are `MIT`.
+🟡 At `6★` and `0★` they are starting points, not dependencies — stated so the shape argument is not
+mistaken for an adoption claim.
+
+🔴 **Standing structural limit on this whole section:** `614-H`/`617-I`. Fifteen passes without a
+primary source. Every figure above is secondary **by construction**, and the remedy is an allow-list
+entry, not more research.
+
 ## 🆕 `p616` — reads `2026-11-02` — market map and regional placement, **and the LATAM supply gap finally has a cause instead of a count**
 
 🟢 **Channel note first, because it bounds everything below.** Every market and regulatory figure in
